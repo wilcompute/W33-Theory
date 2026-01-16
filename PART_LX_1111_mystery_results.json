@@ -1,0 +1,9 @@
+{
+  "1111_factorization": "11 \u00d7 101",
+  "1111_repunit": "(10^4 - 1)/9",
+  "1111_from_37": "37 \u00d7 30 + 1 = 999 + 111 + 1",
+  "1111_from_W33": "40 \u00d7 27 + 31",
+  "40/1111": 0.036003600360036005,
+  "alpha_inverse_formula": "81 + 56 + 40/1111",
+  "interpretation": "Vacuum constraint count from generation hierarchy"
+}
