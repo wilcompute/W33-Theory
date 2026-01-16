@@ -1,0 +1,16 @@
+{
+  "alpha_formula": "81 + 56 + 40/1111",
+  "alpha_inv_exact": 137.03600360036003,
+  "connections": {
+    "81": "H1(W33) = 3^4",
+    "56": "dim(E7 fundamental)",
+    "40": "|W33 points|",
+    "173": "dim(E7) + |W33| = 133 + 40",
+    "229": "173 + 56",
+    "1728": "12^3 = (W33 degree)^3"
+  },
+  "E8_parallel": {
+    "formula": "81 + 56 + 111 = 248",
+    "verified": true
+  }
+}

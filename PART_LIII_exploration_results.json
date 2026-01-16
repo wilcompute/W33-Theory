@@ -1,0 +1,16 @@
+{
+  "pg32_points": 15,
+  "pg32_lines": 35,
+  "sp4f3_vertices": 40,
+  "sp4f3_edges": 240,
+  "doily_points": 15,
+  "doily_lines": 15,
+  "key_numbers": {
+    "W33_points": 40,
+    "W33_lines": 40,
+    "automorphisms": 25920,
+    "h1_rank": 81,
+    "alpha_numerator": 173,
+    "alpha_denominator": 1728
+  }
+}
