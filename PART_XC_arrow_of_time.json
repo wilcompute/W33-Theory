@@ -1,0 +1,25 @@
+{
+  "part": "XC",
+  "title": "Arrow of Time",
+  "eigenvalue_asymmetry": {
+    "positive_content": 60,
+    "negative_content": -60,
+    "ratio": 1.0
+  },
+  "dominant_eigenvalue": {
+    "value": 12,
+    "sign": "positive",
+    "multiplicity": 1
+  },
+  "time_cycle": {
+    "automorphisms": 51840,
+    "planck_times_per_cycle": 51840,
+    "cycle_duration_seconds": 2.7941759999999998e-39
+  },
+  "predictions": [
+    "Time is discrete at Planck scale",
+    "CPT symmetry is exact",
+    "Initial entropy was minimal",
+    "Arrow is universal"
+  ]
+}

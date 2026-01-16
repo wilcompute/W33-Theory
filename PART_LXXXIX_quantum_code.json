@@ -1,0 +1,20 @@
+{
+  "part": "LXXXIX",
+  "title": "Quantum Error Correcting Code",
+  "code_parameters": {
+    "physical_qubits": 40,
+    "logical_qubits": 24,
+    "code_rate": 0.6
+  },
+  "automorphism_weyl": {
+    "aut_w33": 51840,
+    "weyl_E6": 51840,
+    "match": true
+  },
+  "implications": [
+    "Spacetime stability from error correction",
+    "Decoherence from exceeding code distance",
+    "Quantum gravity as error correction",
+    "Black hole information preserved"
+  ]
+}
