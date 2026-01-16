@@ -1,0 +1,50 @@
+{
+  "w33_vertices": 40,
+  "w33_edges": 240,
+  "srg_parameters": [
+    40,
+    12,
+    2,
+    4
+  ],
+  "eigenvalues": {
+    "12": {
+      "multiplicity": 1
+    },
+    "2": {
+      "multiplicity": 24
+    },
+    "-4": {
+      "multiplicity": 15
+    }
+  },
+  "triangles": 160,
+  "four_cliques": 40,
+  "key_verifications": {
+    "81 = 3^4": true,
+    "40 vertices": true,
+    "240 edges = E8 roots": true,
+    "173 = 133 + 40": true,
+    "229 = 173 + 56": true,
+    "248 = 81 + 56 + 111": true,
+    "137 \u2248 81 + 56": true,
+    "1111 = 11 \u00d7 101": true,
+    "1111 = 37 \u00d7 30 + 1": true,
+    "37 = 7 + 13 + 17": true
+  },
+  "generated_files": [
+    "w33_sage_sp4_3_verification.sage",
+    "w33_pysymmetry_analysis.sage",
+    "w33_comprehensive_verification.sage"
+  ],
+  "physical_interpretation": {
+    "multiplicity_24": "SU(5) adjoint dimension",
+    "multiplicity_15": "SU(4) adjoint dimension",
+    "spectral_gap": 10,
+    "eigenvalue_ratios": {
+      "12/2": 6,
+      "12/-4": -3,
+      "2/-4": -0.5
+    }
+  }
+}

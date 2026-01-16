@@ -1,0 +1,22 @@
+{
+  "eigenvalues": {
+    "12": 1,
+    "2": 24,
+    "-4": 15
+  },
+  "eigenspace_dimensions": {
+    "trivial": 1,
+    "SU5_adjoint": 24,
+    "SU4_adjoint": 15
+  },
+  "trace_A2": 480,
+  "trace_A3": 960,
+  "triangles": 160,
+  "alpha_formula": {
+    "formula": "degree^2 - e2*|e3| + 1 + 40/1111",
+    "value": 137.03600360036003,
+    "experimental": 137.035999,
+    "error_ppm": 0.03357044909722473
+  },
+  "key_insight": "12^2 - 2*4 + 1 = 137"
+}
