@@ -1,0 +1,26 @@
+{
+  "Cabibbo_angle": {
+    "formula": "sin(theta_C) = 9/40",
+    "prediction": 0.225,
+    "experimental": 0.22501,
+    "error_percent": 0.0
+  },
+  "PMNS_theta_12": {
+    "formula": "sin^2(theta_12) = 12/40",
+    "prediction": 0.3,
+    "experimental": 0.307,
+    "error_percent": 2.3
+  },
+  "PMNS_theta_23": {
+    "formula": "sin^2(theta_23) = 15/27",
+    "prediction": 0.556,
+    "experimental": 0.545,
+    "error_percent": 2.0
+  },
+  "generation_count": {
+    "formula": "dim(F_3) = 3",
+    "prediction": 3,
+    "experimental": 3,
+    "error_percent": 0.0
+  }
+}
