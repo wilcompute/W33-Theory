@@ -1,0 +1,24 @@
+{
+  "mechanism": "Froggatt-Nielsen with epsilon = 1/3",
+  "generation_charges": [
+    4,
+    2,
+    0
+  ],
+  "koide_parameter": {
+    "formula": "K = e2/|F3| = 2/3",
+    "predicted": 0.6666666666666666,
+    "experimental": 0.66663234501809,
+    "error_percent": 0.005148512344643178
+  },
+  "neutrino_ratio": {
+    "dm31_dm21": 33,
+    "formula": "v - 7 = 40 - 7",
+    "experimental": 33.333333333333336,
+    "error_percent": 1.0101010101010173
+  },
+  "seesaw_scale": {
+    "M_R": "3^20",
+    "value_GeV": 3486784401
+  }
+}

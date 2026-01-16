@@ -1,0 +1,19 @@
+{
+  "GUT_scale": {
+    "formula": "M_GUT = 3^33",
+    "value_GeV": 5559060566555523,
+    "derivation": "M_Planck \u00d7 (M_W/M_Planck)^(7/40)"
+  },
+  "proton_lifetime": {
+    "prediction_years": 4.397023005937319e+36,
+    "experimental_bound": 2.4e+34,
+    "consistent": true
+  },
+  "significance_of_33": [
+    "v - 7 = 40 - 7 = 33",
+    "Interpolation between Planck and weak scales",
+    "Natural GUT scale emergence"
+  ],
+  "B_minus_L": "Exactly conserved in W33",
+  "baryogenesis": "Compatible with thermal leptogenesis"
+}

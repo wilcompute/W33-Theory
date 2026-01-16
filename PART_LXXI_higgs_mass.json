@@ -1,0 +1,24 @@
+{
+  "Higgs_mass": {
+    "formula": "3^4 + v + mu = 81 + 40 + 4",
+    "prediction": 125,
+    "experimental": 125.25,
+    "error_percent": 0.2
+  },
+  "top_mass": {
+    "formula": "M_H + 2*m2 = 125 + 48",
+    "prediction": 173,
+    "experimental": 172.69,
+    "error_percent": 0.2
+  },
+  "Higgs_quartic": {
+    "formula": "M_H^2 / (2*v^2)",
+    "value": 0.12909808976138543,
+    "approx": "1/8 = 1/(e2 \u00d7 |e3|)"
+  },
+  "mass_ratios": {
+    "M_H/M_W": 1.5432098765432098,
+    "M_t/M_H": 1.384,
+    "M_t/M_W": 2.1358024691358026
+  }
+}
