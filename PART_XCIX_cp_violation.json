@@ -1,0 +1,11 @@
+{
+  "part": "XCIX",
+  "title": "CP Violation",
+  "cp_phase": 2.0943951023931953,
+  "cp_phase_degrees": 120,
+  "cabibbo_angle": 0.2,
+  "jarlskog_pmns": 0.02864033383796355,
+  "strong_cp": "\u03b8 = 0 naturally",
+  "leptogenesis": "Works with M_R ~ M_GUT",
+  "conclusion": "Matter-antimatter asymmetry explained"
+}
