@@ -1,0 +1,50 @@
+{
+  "theory": "W33",
+  "part": "LXXX",
+  "title": "Grand Consolidation",
+  "date": "2026-01-16T17:13:20.887834",
+  "parameters": {
+    "v": 40,
+    "k": 12,
+    "lambda": 2,
+    "mu": 4,
+    "e1": 12,
+    "e2": 2.0,
+    "e3": -4.0,
+    "m1": 1,
+    "m2": 24,
+    "m3": 15
+  },
+  "alpha_formula": {
+    "base": "k\u00b2 - 2\u03bc + 1",
+    "correction": "v/1111",
+    "value": 137.03600360036003,
+    "experimental": 137.035999084,
+    "error_ppb": 32.95747151381058
+  },
+  "verified_predictions": 13,
+  "testable_predictions": 4,
+  "key_connections": [
+    "40 = 1 + 24 + 15 = SU(5) decomposition",
+    "240 edges = E\u2088 non-zero roots",
+    "Sp(4, F\u2083) \u2192 symplectic quantum mechanics",
+    "3 generations = 15/5 from eigenvalue multiplicities"
+  ],
+  "testable_predictions_list": [
+    {
+      "quantity": "M_\u03c7 (dark matter)",
+      "value": "77 GeV",
+      "experiment": "Direct detection"
+    },
+    {
+      "quantity": "\u03c4_proton",
+      "value": "4.6\u00d710\u00b3\u2076 years",
+      "experiment": "Hyper-Kamiokande"
+    },
+    {
+      "quantity": "Majorana phases",
+      "value": "\u03b1\u2081=30\u00b0, \u03b1\u2082=60\u00b0",
+      "experiment": "0\u03bd\u03b2\u03b2 decay"
+    }
+  ]
+}
