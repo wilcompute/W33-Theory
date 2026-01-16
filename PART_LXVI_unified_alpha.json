@@ -1,0 +1,22 @@
+{
+  "formulas": {
+    "eigenvalue": "12^2 - 2*4 + 1 + 40/1111",
+    "E7": "81 + 56 + 40/1111",
+    "SU8": "81 + dim(SU8 3-form) + 40/1111"
+  },
+  "key_numbers": {
+    "81": "3^4 = |F_3^4|",
+    "56": "E_7 fundamental = SU(8) 3-form",
+    "63": "SU(8) adjoint = 8^2 - 1",
+    "144": "12^2 = degree^2",
+    "8": "2*4 = SU(3) dimension",
+    "1": "U(1) dimension"
+  },
+  "exact_value": {
+    "numerator": 152247,
+    "denominator": 1111,
+    "decimal": 137.036004
+  },
+  "experimental": 137.035999,
+  "error_ppb": 5
+}
