@@ -1,0 +1,23 @@
+{
+  "theory": "W33",
+  "part": "LXXXVII",
+  "title": "Emergence of Spacetime",
+  "decomposition": {
+    "total": 40,
+    "spacetime": 4,
+    "internal": 36,
+    "formula": "40 = 4 + 36 = 1 + 3 + 36"
+  },
+  "why_3_plus_1": {
+    "time": "m\u2081 = 1 (unique trivial eigenspace)",
+    "space": "d = p = 3 (dimension of base field F\u2083)"
+  },
+  "emergence_mechanism": [
+    "Graph structure at Planck scale",
+    "Eigenvalue decomposition",
+    "Compactification of 36 dimensions",
+    "Continuum limit",
+    "Lorentz symmetry emerges"
+  ],
+  "prediction": "Tiny Lorentz violations at Planck energies"
+}

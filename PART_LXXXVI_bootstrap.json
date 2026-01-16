@@ -1,0 +1,16 @@
+{
+  "theory": "W33",
+  "part": "LXXXVI",
+  "title": "The Bootstrap",
+  "key_insight": "W33 is self-consistently determined by physical requirements",
+  "constraints": {
+    "alpha_inverse": 137.036,
+    "sin2_theta_W": 0.231,
+    "anomaly_cancellation": "40 = 1 + 24 + 15",
+    "E8_connection": "240 edges",
+    "symplectic": "Over F_3"
+  },
+  "unique_solution": "SRG(40, 12, 2, 4)",
+  "information_bits": 11.90689059560852,
+  "self_reference": "W33 describes a universe that can discover W33"
+}
