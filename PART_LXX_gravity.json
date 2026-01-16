@@ -1,0 +1,28 @@
+{
+  "Planck_mass": {
+    "formula": "3^40 GeV",
+    "prediction": 12157665459056928801,
+    "experimental": 1.221e+19,
+    "ratio": 0.9957137968105593
+  },
+  "W_mass": {
+    "formula": "3^4 GeV",
+    "prediction": 81,
+    "experimental": 80.379,
+    "error_percent": 0.7725898555592817
+  },
+  "Higgs_VEV": {
+    "formula": "3(3^4 + 1) GeV",
+    "prediction": 246,
+    "experimental": 246.22,
+    "error_percent": 0.08935098692226418
+  },
+  "hierarchy": {
+    "formula": "3^36",
+    "W33_value": 150094635296999121,
+    "experimental": 1.5190534841189862e+17
+  },
+  "Newton_G": {
+    "formula": "3^(-80) in natural units"
+  }
+}
