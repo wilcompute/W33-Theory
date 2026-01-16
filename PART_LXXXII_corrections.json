@@ -1,0 +1,27 @@
+{
+  "theory": "W33",
+  "part": "LXXXII",
+  "title": "Higher-Order Corrections",
+  "1111_derivation": {
+    "formula": "(k-1) \u00d7 ((k-\u03bb)\u00b2 + 1)",
+    "k": 12,
+    "lambda": 2,
+    "result": 1111,
+    "components": {
+      "factor1": 11,
+      "factor2": 101
+    }
+  },
+  "alpha_formula": {
+    "complete": "k\u00b2 - 2\u03bc + 1 + v/[(k-1)\u00d7((k-\u03bb)\u00b2+1)]",
+    "base": 137,
+    "denominator": 1111,
+    "result": 137.03600360036003
+  },
+  "alternative_derivations": [
+    "1111 = v \u00d7 3\u00b3 + 31 = 40 \u00d7 27 + 31",
+    "1111 = 11 \u00d7 101 (prime factorization)",
+    "1111 = (10\u2074 - 1)/9 (repunit)"
+  ],
+  "second_order": -4.516360036003601e-06
+}

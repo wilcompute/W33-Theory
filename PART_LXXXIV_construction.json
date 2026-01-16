@@ -1,0 +1,29 @@
+{
+  "theory": "W33",
+  "part": "LXXXIV",
+  "title": "SageMath Graph Construction",
+  "construction": "Symplectic graph on 1-dim subspaces of F_3^4",
+  "verified_parameters": {
+    "v": 40,
+    "k": 12,
+    "lambda": 2,
+    "mu": 4
+  },
+  "eigenvalues": {
+    "e1": 12,
+    "e2": 2,
+    "e3": -4,
+    "multiplicities": [
+      1,
+      24,
+      15
+    ]
+  },
+  "alpha_inverse": 137.03600360036003,
+  "alpha_experimental": 137.035999084,
+  "files_generated": [
+    "W33_adjacency_matrix.txt",
+    "W33_lines.txt",
+    "w33_sage_construction.sage"
+  ]
+}

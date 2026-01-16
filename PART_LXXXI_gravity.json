@@ -1,0 +1,26 @@
+{
+  "theory": "W33",
+  "part": "LXXXI",
+  "title": "Gravitational Sector",
+  "planck_mass": {
+    "formula": "M_W \u00d7 3^(v-4)",
+    "predicted": 1.206760867787873e+19,
+    "experimental": 1.22e+19,
+    "ratio": 0.9891482522851419
+  },
+  "hierarchy": {
+    "formula": "3^(v-4) = 3^36",
+    "value": 1.5009463529699914e+17,
+    "experimental": 5e+16
+  },
+  "dimensions": {
+    "total": 40,
+    "spacetime": 4,
+    "internal": 36
+  },
+  "speculations": [
+    "Graviton in 5 \u2282 15 eigenspace",
+    "Extra dimensions: 36 internal",
+    "1111 may encode Planck physics"
+  ]
+}

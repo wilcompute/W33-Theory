@@ -1,0 +1,22 @@
+{
+  "theory": "W33",
+  "part": "LXXXIII",
+  "title": "Cosmology",
+  "key_number": {
+    "value": 122,
+    "formula": "k\u00b2 - m\u2082 + \u03bb",
+    "appears_in": [
+      "cosmological constant",
+      "age of universe",
+      "holographic entropy"
+    ]
+  },
+  "predictions": {
+    "cosmological_constant_exponent": -122,
+    "e_folds_inflation": 60,
+    "age_exponent": 61,
+    "H0_CMB": 67,
+    "H0_local": 73
+  },
+  "speculative": true
+}
