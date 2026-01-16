@@ -1,0 +1,27 @@
+{
+  "WIMP_candidate": {
+    "formula": "M_\u03c7 = 3^4 - mu = 81 - 4",
+    "mass_GeV": 77,
+    "stability": "Z_2 parity from Sp(4, F_3)"
+  },
+  "dark_sector": {
+    "total_vertices": 10,
+    "composition": [
+      "\u03c7 (77 GeV)",
+      "\u03c7' (85 GeV)",
+      "3 right-handed \u03bd",
+      "\u03b3'",
+      "2 dark scalars"
+    ]
+  },
+  "DM_to_baryon": {
+    "formula": "v / (mu + lambda + 2) = 40/8",
+    "prediction": 5,
+    "experimental": 5.428571428571429,
+    "error_percent": 7.894736842105267
+  },
+  "predictions": {
+    "gamma_line_energy": "77 GeV",
+    "direct_detection": "Below current limits, within reach"
+  }
+}
