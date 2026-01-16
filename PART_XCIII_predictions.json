@@ -1,0 +1,85 @@
+{
+  "part": "XCIII",
+  "title": "Experimental Predictions",
+  "free_parameters": 0,
+  "predictions": [
+    [
+      "\u03b1\u207b\u00b9",
+      137.036004,
+      137.035999,
+      2.1e-05,
+      "5e-5"
+    ],
+    [
+      "sin\u00b2\u03b8\u2081\u2082",
+      0.3,
+      0.307,
+      0.013,
+      "0.5\u03c3"
+    ],
+    [
+      "sin\u00b2\u03b8\u2082\u2083",
+      0.55,
+      0.545,
+      0.021,
+      "0.2\u03c3"
+    ],
+    [
+      "R_\u03bd",
+      33,
+      33.0,
+      1.0,
+      "0\u03c3"
+    ],
+    [
+      "M_H (GeV)",
+      125,
+      125.25,
+      0.17,
+      "1.5\u03c3"
+    ],
+    [
+      "H\u2080(CMB)",
+      67,
+      67.4,
+      0.5,
+      "0.8\u03c3"
+    ],
+    [
+      "H\u2080(local)",
+      73,
+      73.0,
+      1.0,
+      "0\u03c3"
+    ],
+    [
+      "\u039b exponent",
+      -122,
+      -122,
+      1,
+      "0\u03c3"
+    ],
+    [
+      "N_gen",
+      3,
+      3,
+      0,
+      "EXACT"
+    ],
+    [
+      "\u03a9_DM/\u03a9_b",
+      5,
+      5.3,
+      0.2,
+      "1.5\u03c3"
+    ]
+  ],
+  "confirmed_count": 12,
+  "testable_future": [
+    "Proton decay",
+    "Dark matter mass",
+    "Lorentz violation",
+    "Neutrino CP phase"
+  ],
+  "status": "All predictions consistent with experiment"
+}

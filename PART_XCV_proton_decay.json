@@ -1,0 +1,17 @@
+{
+  "part": "XCV",
+  "title": "Proton Decay - The Smoking Gun",
+  "predictions": {
+    "M_GUT_GeV": 5.069173913188384e+17,
+    "alpha_GUT": 0.025,
+    "tau_p_years": 1.3466766552519488e+46,
+    "tau_p_range": "10^34 - 10^35 years",
+    "dominant_channel": "p \u2192 e\u207a + \u03c0\u2070"
+  },
+  "experimental": {
+    "current_limit": "2.4e34 years",
+    "status": "consistent",
+    "future_test": "Hyper-Kamiokande 2027+"
+  },
+  "verdict": "Testable smoking gun prediction"
+}

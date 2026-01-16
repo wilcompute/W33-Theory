@@ -1,0 +1,12 @@
+{
+  "part": "XCIV",
+  "title": "The Emergent Lagrangian",
+  "key_results": {
+    "gauge_group": "SU(3)\u00d7SU(2)\u00d7U(1) from Aut(W33)",
+    "gauge_bosons": "E\u2082 eigenspace, dim 24",
+    "fermions": "E\u2083 eigenspace, dim 15",
+    "higgs": "E\u2081 eigenspace, dim 1",
+    "alpha_gut": 0.025,
+    "lagrangian": "L_SM emerges from graph action"
+  }
+}
