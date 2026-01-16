@@ -1,0 +1,10 @@
+{
+  "w33_points": 40,
+  "pauli_space_dim": 81,
+  "e7_fundamental": 56,
+  "137_base3": "12002",
+  "137_binary": "0b10001001",
+  "137_decomposition": "81 + 56 = 137 exactly",
+  "qec_interpretation": "W33 encodes 2-qutrit Pauli structure",
+  "contextuality": "W33 may encode KS-type proof for qutrits"
+}
