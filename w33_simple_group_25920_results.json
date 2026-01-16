@@ -1,0 +1,130 @@
+{
+  "timestamp": "2026-01-14T15:48:27.921013",
+  "title": "The Simple Group of Order 25920 and W33",
+  "groups": {
+    "PSU_4_2": {
+      "name": "PSU\u2084(2)",
+      "description": "Projective Special Unitary group over GF(4)",
+      "n": 4,
+      "q": 2,
+      "gcd_factor": 1,
+      "power": 6,
+      "base": 64,
+      "product_terms": 405,
+      "order": 25920
+    },
+    "PSp_4_3": {
+      "name": "PSp\u2084(3)",
+      "description": "Projective Symplectic group over GF(3)",
+      "2n": 4,
+      "q": 3,
+      "gcd_factor": 2,
+      "power": 4,
+      "base": 81,
+      "product_terms": 640,
+      "order": 25920
+    },
+    "PSOmega_5_3": {
+      "name": "PS\u03a9\u2085(3)",
+      "description": "Simple orthogonal group over GF(3) (odd dimension)",
+      "dimension": 5,
+      "q": 3,
+      "order": 25920,
+      "isomorphism_note": "PS\u03a9\u2085(3) \u2245 PSp\u2084(3) by exceptional isomorphism"
+    },
+    "PSOmega_6_minus_2": {
+      "name": "PS\u03a9\u2086\u207b(2)",
+      "description": "Simple orthogonal group (minus type) over GF(2)",
+      "dimension": 6,
+      "q": 2,
+      "order": 25920,
+      "qn_plus_1_term": 9
+    }
+  },
+  "connections": {},
+  "automorphism_analysis": {
+    "simple_group_order": 25920,
+    "inner_automorphisms": 25920,
+    "outer_automorphism_order": 2,
+    "total_automorphisms": 51840,
+    "weyl_E6_order": 51840,
+    "match": true,
+    "explanation": "W(E6) = Aut(PSp\u2084(3)) = PSp\u2084(3) \u22ca C\u2082"
+  },
+  "w33_connection": {
+    "w33_points": 40,
+    "pg_3_3_points": 40,
+    "match": true,
+    "field": "GF(3)",
+    "projective_dimension": 3,
+    "underlying_dimension": 4,
+    "symplectic_action": "PSp\u2084(3) acts on PG(3,3) preserving symplectic structure",
+    "key_insight": "W33 \u2245 PG(3, GF(3)) carries natural PSp\u2084(3) action!"
+  },
+  "exceptional_isomorphisms": [
+    {
+      "pair": [
+        "PSU\u2084(2)",
+        "PS\u03a9\u2086\u207b(2)"
+      ],
+      "field_connection": "Both over GF(2), one unitary over extension",
+      "type": "Steinberg triality"
+    },
+    {
+      "pair": [
+        "PSp\u2084(3)",
+        "PS\u03a9\u2085(3)"
+      ],
+      "field_connection": "Both over GF(3)",
+      "type": "B\u2082 \u2245 C\u2082 isomorphism",
+      "note": "sp\u2084 \u2245 so\u2085 as Lie algebras"
+    },
+    {
+      "pair": [
+        "PSU\u2084(2)",
+        "PSp\u2084(3)"
+      ],
+      "field_connection": "GF(4) vs GF(3)",
+      "type": "Exceptional cross-field isomorphism",
+      "note": "This is the most mysterious one!"
+    }
+  ],
+  "27_lines_connection": {
+    "e6_fundamental_dim": 27,
+    "27_lines": "Lines on cubic surface",
+    "w33_cycles": 81,
+    "relation": "81 = 3 \u00d7 27",
+    "interpretation": "W33 cycles = 3 copies of 27 lines",
+    "e6_roots": 72,
+    "root_factorization": "72 = 8 \u00d7 9 = 2\u00b3 \u00d7 3\u00b2"
+  },
+  "grand_synthesis": {
+    "w33_structure": {
+      "points": 40,
+      "cycles": 81,
+      "K4s": 90,
+      "total": 121
+    },
+    "automorphism_group": {
+      "order": 51840,
+      "name": "W(E6)",
+      "structure": "PSp\u2084(3) \u22ca C\u2082"
+    },
+    "simple_core": {
+      "order": 25920,
+      "names": [
+        "PSU\u2084(2)",
+        "PS\u03a9\u2086\u207b(2)",
+        "PSp\u2084(3)",
+        "PS\u03a9\u2085(3)"
+      ],
+      "index_in_W_E6": 2
+    },
+    "physics_connections": {
+      "weinberg_angle": "40/173",
+      "fine_structure": "81 + 56 = 137",
+      "key": "173 = |W33| + dim(F4) = 121 + 52"
+    }
+  },
+  "master_summary": "\n    THE CHAIN OF INSIGHT:\n    \n    W33 = Witting configuration in PG(3, GF(3))\n    \n    Aut(W33) = W(E6) = 51840\n    \n    W(E6) = Aut(S) where S = PSp\u2084(3) \u2245 PSU\u2084(2) \u2245 PS\u03a9\u2085(3) \u2245 PS\u03a9\u2086\u207b(2)\n    \n    |S| = 25920 = 2\u2076 \u00d7 3\u2074 \u00d7 5 = 64 \u00d7 81 \u00d7 5\n    \n    Note: 81 = 3\u2074 = |cycles in W33|\n          64 = 2\u2076 (and 40 + 24 = 64)\n          5 is the index of A\u2085 in S\u2085\n    \n    |W(E6)| = 2 \u00d7 |S| = 51840 = 2\u2077 \u00d7 3\u2074 \u00d7 5\n    \n    The doubling (2\u00d7) comes from the outer automorphism of S.\n    \n    PHYSICS IMPLICATIONS:\n    \n    sin\u00b2\u03b8_W = 40/173 where:\n        40 = |points in W33| = |points in PG(3,3)|\n        173 = 40th prime\n        173 = 121 + 52 = |W33| + dim(F4)\n        173 = 40 + 133 = |points| + dim(E7)\n    \n    \u03b1\u207b\u00b9 \u2248 137 where:\n        137 = 81 + 56 = |cycles| + dim(E7 fundamental)\n        137 = 33rd prime\n        33 = 40 - 7 = |points| - rank(E7)\n    "
+}

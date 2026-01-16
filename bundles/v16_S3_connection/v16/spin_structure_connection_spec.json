@@ -1,0 +1,29 @@
+{
+  "base_gq42_point": 41,
+  "base_quad_id": 64,
+  "target_gq42_point": 7,
+  "target_quad_id": 7,
+  "canonical_shortest_path": [
+    41,
+    7
+  ],
+  "canonical_Z2_voltage_along_path": 0,
+  "S3_port_connection_along_path": {
+    "perm": [
+      0,
+      2,
+      1
+    ],
+    "mapping": {
+      "0": "0",
+      "1": "2",
+      "2": "1"
+    },
+    "parity": 1
+  },
+  "reference_cycles": {
+    "base_cycle_index": 0,
+    "target_cycle_index": 1,
+    "condition": "Clifford pseudoscalar sign matches after transporting ports along the path."
+  }
+}

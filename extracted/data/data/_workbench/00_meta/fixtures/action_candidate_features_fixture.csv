@@ -1,0 +1,6 @@
+line_id,native_mean_abs_delta,prior_score,fit_score,k12_entropy,k12_kl_global,tau_shift_similarity,var_q_r,var_q_class
+1,0.5,0.2,0.25,0.1,0.05,0.2,0.1,A
+2,0.1,0.15,0.05,0.2,0.02,0.1,0.0,B
+3,0.2,0.12,0.18,0.15,0.01,0.05,0.0,A
+4,0.3,0.05,0.06,0.12,0.03,0.07,0.0,B
+5,0.8,0.6,0.5,0.5,0.1,0.4,0.2,C

@@ -1,0 +1,22 @@
+{
+  "n_nodes": 90,
+  "n_edges": 1440,
+  "degree": 32,
+  "intersection_pair_histogram": {
+    "1": 1440,
+    "0": 2565
+  },
+  "common_neighbors_adjacent": 13,
+  "common_neighbors_nonadjacent_hist": {
+    "0": 45,
+    "9": 1440,
+    "12": 1080
+  },
+  "aut_action_transitive_on_nodes": true,
+  "adjacency_spectrum": {
+    "32": 1,
+    "8": 15,
+    "2": 24,
+    "-4": 50
+  }
+}

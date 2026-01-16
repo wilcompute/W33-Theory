@@ -1,0 +1,42 @@
+﻿{
+  "created": "2026-01-10",
+  "out_dir": "/mnt/data/_toe/take_it_all_way_20260110",
+  "files": {
+    "incidence_aut_group_points_D6.csv": {
+      "sha256": "6eea08ab98928370af64659cb44dda5399da687ba38759ce1f50aa64a8515c5d",
+      "bytes": 962
+    },
+    "incidence_aut_group_lines.csv": {
+      "sha256": "d699028d5b904135baf2bbc43f6d43884eae56734d0f71c825537b76ea64f4da",
+      "bytes": 674
+    },
+    "tomotope15_lines_table.csv": {
+      "sha256": "a1a51d4dcfd115466db43d9b79a841991a4cb1ab7a741d6826a7a0595a67bc7d",
+      "bytes": 1008
+    },
+    "tomotope15_line_orbits_under_D6.csv": {
+      "sha256": "fc11ada0971701ed813fd11ea632d96e1a163c533793ca5494c357a6a5f6bf83",
+      "bytes": 123
+    },
+    "hyperplane27_phasefunctions.csv": {
+      "sha256": "f8e47d96e4a32217fad1fd934c5385672bbe79cd76bf398ee9a1ab575dec43f1",
+      "bytes": 1473
+    },
+    "generators_on_27.txt": {
+      "sha256": "7c7d0fde065b1170660f1ee4c0338e1aa784bc189457db38b897d2f36223f917",
+      "bytes": 400
+    },
+    "combined_group_order_distribution.csv": {
+      "sha256": "67b6efc89d624bb6acd0496a43154f925de53edfa985be1fbd7ea204ef2e56ce",
+      "bytes": 52
+    },
+    "combined_group_size.txt": {
+      "sha256": "03064d489da94509f0624767b9f9c6dff4dd2a52c2daa987a8d1016e454672e5",
+      "bytes": 292
+    },
+    "toe_take_it_all_way_report.md": {
+      "sha256": "95c4ac3445bb903c673963714d74ee8aae781a2f87655d9470d522c21953e1d4",
+      "bytes": 2114
+    }
+  }
+}

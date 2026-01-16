@@ -1,0 +1,9 @@
+{
+  "num_base_mappings": 10,
+  "aut_conjugates_per_mapping": 5,
+  "total_variants_tested": 60,
+  "all_matched": true,
+  "w33_aut_group_order_from_bundle": 51840,
+  "aut_word_len": 30,
+  "ref_keys": 14
+}

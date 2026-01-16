@@ -1,0 +1,254 @@
+﻿{
+  "timestamp_utc": "20260109T034512Z",
+  "purpose": "Reassign suit partition (within fixed rank spread) to match Vlasov/Witting 'quantum cards' property: 28 rainbow bases + 12 monochrome bases; store suit permutations per rank and resulting monochrome line IDs.",
+  "inputs": {
+    "checkpoint_W33_cards_bases_20260108T235000Z.json": "/mnt/data/_checkpoints/checkpoint_w33_cards_bases_20260108t235000z.json",
+    "N12_58_W33_point_to_card.csv": "/mnt/data/_n12/n12_58_w33_point_to_card.csv",
+    "N12_58_W33_bases_as_cards.csv": "/mnt/data/_n12/n12_58_w33_bases_as_cards.csv",
+    "witting_p5.png": "/mnt/data/witting_p5.png"
+  },
+  "results": {
+    "rank_spread_line_ids": {
+      "1": 17,
+      "2": 26,
+      "3": 6,
+      "4": 23,
+      "5": 30,
+      "6": 7,
+      "7": 2,
+      "8": 15,
+      "9": 10,
+      "10": 19
+    },
+    "suit_permutation_per_rank_on_ordered_rank_line_points": {
+      "1": [
+        "S",
+        "H",
+        "D",
+        "C"
+      ],
+      "2": [
+        "D",
+        "C",
+        "H",
+        "S"
+      ],
+      "3": [
+        "C",
+        "S",
+        "D",
+        "H"
+      ],
+      "4": [
+        "H",
+        "D",
+        "S",
+        "C"
+      ],
+      "5": [
+        "C",
+        "D",
+        "H",
+        "S"
+      ],
+      "6": [
+        "D",
+        "S",
+        "C",
+        "H"
+      ],
+      "7": [
+        "H",
+        "D",
+        "S",
+        "C"
+      ],
+      "8": [
+        "S",
+        "C",
+        "H",
+        "D"
+      ],
+      "9": [
+        "H",
+        "C",
+        "D",
+        "S"
+      ],
+      "10": [
+        "S",
+        "H",
+        "D",
+        "C"
+      ]
+    },
+    "monochrome_line_ids": [
+      0,
+      9,
+      12,
+      24,
+      25,
+      27,
+      29,
+      31,
+      33,
+      34,
+      37,
+      38
+    ],
+    "monochrome_bases_as_cards": [
+      {
+        "line_id": 0,
+        "cards_sorted": [
+          "2\u2663",
+          "3\u2663",
+          "8\u2663",
+          "9\u2663"
+        ]
+      },
+      {
+        "line_id": 9,
+        "cards_sorted": [
+          "6\u2660",
+          "7\u2660",
+          "8\u2660",
+          "9\u2660"
+        ]
+      },
+      {
+        "line_id": 12,
+        "cards_sorted": [
+          "6\u2662",
+          "7\u2662",
+          "8\u2662",
+          "9\u2662"
+        ]
+      },
+      {
+        "line_id": 24,
+        "cards_sorted": [
+          "2\u2660",
+          "4\u2660",
+          "9\u2660",
+          "10\u2660"
+        ]
+      },
+      {
+        "line_id": 25,
+        "cards_sorted": [
+          "1\u2662",
+          "3\u2662",
+          "5\u2662",
+          "9\u2662"
+        ]
+      },
+      {
+        "line_id": 27,
+        "cards_sorted": [
+          "1\u2661",
+          "4\u2661",
+          "7\u2661",
+          "9\u2661"
+        ]
+      },
+      {
+        "line_id": 29,
+        "cards_sorted": [
+          "2\u2661",
+          "3\u2661",
+          "8\u2661",
+          "9\u2661"
+        ]
+      },
+      {
+        "line_id": 31,
+        "cards_sorted": [
+          "1\u2660",
+          "3\u2660",
+          "5\u2660",
+          "9\u2660"
+        ]
+      },
+      {
+        "line_id": 33,
+        "cards_sorted": [
+          "5\u2661",
+          "6\u2661",
+          "9\u2661",
+          "10\u2661"
+        ]
+      },
+      {
+        "line_id": 34,
+        "cards_sorted": [
+          "1\u2663",
+          "4\u2663",
+          "7\u2663",
+          "9\u2663"
+        ]
+      },
+      {
+        "line_id": 37,
+        "cards_sorted": [
+          "5\u2663",
+          "6\u2663",
+          "9\u2663",
+          "10\u2663"
+        ]
+      },
+      {
+        "line_id": 38,
+        "cards_sorted": [
+          "2\u2662",
+          "4\u2662",
+          "9\u2662",
+          "10\u2662"
+        ]
+      }
+    ],
+    "suit_multiplicity_histogram_over_all_40_lines": {
+      "(4,)": 12,
+      "(1, 1, 1, 1)": 28
+    },
+    "within_suit_induced_edge_degree_hist": {
+      "S": {
+        "hub_card": "9\u2660",
+        "degree_hist": {
+          "3": 9,
+          "9": 1
+        }
+      },
+      "H": {
+        "hub_card": "9\u2661",
+        "degree_hist": {
+          "3": 9,
+          "9": 1
+        }
+      },
+      "D": {
+        "hub_card": "9\u2662",
+        "degree_hist": {
+          "3": 9,
+          "9": 1
+        }
+      },
+      "C": {
+        "hub_card": "9\u2663",
+        "degree_hist": {
+          "3": 9,
+          "9": 1
+        }
+      }
+    },
+    "exports_written": {
+      "point_to_card_vlasov": "/mnt/data/_n12/n12_58_w33_point_to_card_vlasov_suits_20260109t034512z.csv",
+      "bases_as_cards_vlasov": "/mnt/data/_n12/n12_58_w33_bases_as_cards_vlasov_suits_20260109t034512z.csv"
+    }
+  },
+  "notes": [
+    "Under this suit assignment, every non-spread line is either perfectly transversal (one of each suit) or monochrome (all four cards same suit), matching the two-block layout in Vlasov Table III'.",
+    "The search fixed rank=1 suit order (S,H,D,C) on the rank-1 spread line and then hill-climbed by swapping suit labels within ranks 2..10 to maximize monochrome lines; it reached 12 monochrome lines.",
+    "Rank labels may still differ from Vlasov's printed face-values; a rank relabeling (spread-line permutation) can be solved by matching a few monochrome bases from the scanned table if desired."
+  ]
+}
+

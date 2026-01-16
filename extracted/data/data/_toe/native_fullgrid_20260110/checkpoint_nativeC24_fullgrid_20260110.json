@@ -1,0 +1,68 @@
+﻿{
+  "created_utc": "2026-01-10",
+  "outdir": "/mnt/data/_toe/native_fullgrid_20260110",
+  "bundle": "/mnt/data/_toe/native_fullgrid_20260110_bundle.zip",
+  "grid": {
+    "lambda_min": 0.4,
+    "lambda_max": 0.56,
+    "lambda_step": 0.01,
+    "mu": [
+      0.75,
+      1.25,
+      1.75
+    ],
+    "times": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      1.75,
+      2.0
+    ]
+  },
+  "manifest": {
+    "nativeC24_fullgrid_line_stabilities_flux_noflux.csv": {
+      "path": "/mnt/data/_toe/native_fullgrid_20260110/nativeC24_fullgrid_line_stabilities_flux_noflux.csv",
+      "sha256": "bc568ffc2f69171a7574d5e87e8d15618b29a0f7b039723e24a9d6df385422bf",
+      "bytes": 346936
+    },
+    "nativeC24_fullgrid_winners_flux_vs_noflux.csv": {
+      "path": "/mnt/data/_toe/native_fullgrid_20260110/nativeC24_fullgrid_winners_flux_vs_noflux.csv",
+      "sha256": "a306d1e0247f32681c984dd316673669cd49d6af37d36aae3052146620c2d79d",
+      "bytes": 5038
+    },
+    "nativeC24_line_flux_response_ranking_summary.csv": {
+      "path": "/mnt/data/_toe/native_fullgrid_20260110/nativeC24_line_flux_response_ranking_summary.csv",
+      "sha256": "a7e2cbe6815a8bc4660e4deaef795436b457e412b71b29f4de4842fd09440906",
+      "bytes": 5525
+    },
+    "winner_surface_flux_lineid.csv": {
+      "path": "/mnt/data/_toe/native_fullgrid_20260110/winner_surface_flux_lineid.csv",
+      "sha256": "85cd7a24ac5ad42c1f6467d6af9b7459d03c0a702bd1b1e79e259bf5d48257e0",
+      "bytes": 251
+    },
+    "winner_surface_noflux_lineid.csv": {
+      "path": "/mnt/data/_toe/native_fullgrid_20260110/winner_surface_noflux_lineid.csv",
+      "sha256": "ff704b97e95e9e87671d762ae52fc3586cbcef9af4370bed62fcf57ace237286",
+      "bytes": 215
+    },
+    "winner_changed_points.csv": {
+      "path": "/mnt/data/_toe/native_fullgrid_20260110/winner_changed_points.csv",
+      "sha256": "a306d1e0247f32681c984dd316673669cd49d6af37d36aae3052146620c2d79d",
+      "bytes": 5038
+    },
+    "README.md": {
+      "path": "/mnt/data/_toe/native_fullgrid_20260110/README.md",
+      "sha256": "c4d7d9fe9b80685781f78baddb440778b2fa851926f4123774b4332f325a2578",
+      "bytes": 762
+    }
+  },
+  "notes": {
+    "embedding": "C4 rays -> C24 via u_- parity mode over Z6; phi[state]=ray[sector]*u[pos]",
+    "score": "stability of dominant basis outcome, aggregated over nodes",
+    "winner_changed_count": 51
+  }
+}

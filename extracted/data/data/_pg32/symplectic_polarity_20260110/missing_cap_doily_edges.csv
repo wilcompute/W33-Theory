@@ -1,0 +1,6 @@
+set,p,q
+missing,0011,0100
+missing,0011,1000
+missing,1000,0001
+missing,0100,0001
+missing,0100,0110

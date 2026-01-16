@@ -1,0 +1,49 @@
+edge_elem_2T,src_projective,dst_projective
+(0 1 2),sec0_m0,sec0_m1
+(0 1 2),sec0_m1,sec0_m2
+(0 1 2),sec0_m2,sec0_m0
+(0 1 2),sec1_m0,sec3_m1
+(0 1 2),sec1_m1,sec3_m2
+(0 1 2),sec1_m2,sec3_m0
+(0 1 2),sec2_m0,sec1_m1
+(0 1 2),sec2_m1,sec1_m2
+(0 1 2),sec2_m2,sec1_m0
+(0 1 2),sec3_m0,sec2_m1
+(0 1 2),sec3_m1,sec2_m2
+(0 1 2),sec3_m2,sec2_m0
+(0 2 1),sec0_m0,sec0_m2
+(0 2 1),sec0_m1,sec0_m0
+(0 2 1),sec0_m2,sec0_m1
+(0 2 1),sec1_m0,sec2_m2
+(0 2 1),sec1_m1,sec2_m0
+(0 2 1),sec1_m2,sec2_m1
+(0 2 1),sec2_m0,sec3_m2
+(0 2 1),sec2_m1,sec3_m0
+(0 2 1),sec2_m2,sec3_m1
+(0 2 1),sec3_m0,sec1_m2
+(0 2 1),sec3_m1,sec1_m0
+(0 2 1),sec3_m2,sec1_m1
+e,sec0_m0,sec0_m0
+e,sec0_m1,sec0_m1
+e,sec0_m2,sec0_m2
+e,sec1_m0,sec1_m0
+e,sec1_m1,sec1_m1
+e,sec1_m2,sec1_m2
+e,sec2_m0,sec2_m0
+e,sec2_m1,sec2_m1
+e,sec2_m2,sec2_m2
+e,sec3_m0,sec3_m0
+e,sec3_m1,sec3_m1
+e,sec3_m2,sec3_m2
+e*,sec0_m0,sec0_m0
+e*,sec0_m1,sec0_m1
+e*,sec0_m2,sec0_m2
+e*,sec1_m0,sec1_m0
+e*,sec1_m1,sec1_m1
+e*,sec1_m2,sec1_m2
+e*,sec2_m0,sec2_m0
+e*,sec2_m1,sec2_m1
+e*,sec2_m2,sec2_m2
+e*,sec3_m0,sec3_m0
+e*,sec3_m1,sec3_m1
+e*,sec3_m2,sec3_m2

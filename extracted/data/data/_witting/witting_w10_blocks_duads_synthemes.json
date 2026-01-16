@@ -1,0 +1,369 @@
+{
+  "type_to_family": {
+    "single": "duad",
+    "double": "syntheme"
+  },
+  "blocks": [
+    {
+      "block_ranks": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "type(Pi)": "single",
+      "family(S6)": "duad",
+      "S6 label": "(1, 2)",
+      "lift_count": 2
+    },
+    {
+      "block_ranks": [
+        0,
+        1,
+        3,
+        6
+      ],
+      "type(Pi)": "double",
+      "family(S6)": "syntheme",
+      "S6 label": "(1, 5) (2, 6) (3, 4)",
+      "lift_count": 4
+    },
+    {
+      "block_ranks": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "type(Pi)": "double",
+      "family(S6)": "syntheme",
+      "S6 label": "(1, 6) (2, 5) (3, 4)",
+      "lift_count": 4
+    },
+    {
+      "block_ranks": [
+        0,
+        1,
+        8,
+        9
+      ],
+      "type(Pi)": "single",
+      "family(S6)": "duad",
+      "S6 label": "(5, 6)",
+      "lift_count": 2
+    },
+    {
+      "block_ranks": [
+        0,
+        2,
+        3,
+        9
+      ],
+      "type(Pi)": "double",
+      "family(S6)": "syntheme",
+      "S6 label": "(1, 4) (2, 6) (3, 5)",
+      "lift_count": 4
+    },
+    {
+      "block_ranks": [
+        0,
+        2,
+        4,
+        8
+      ],
+      "type(Pi)": "double",
+      "family(S6)": "syntheme",
+      "S6 label": "(1, 6) (2, 4) (3, 5)",
+      "lift_count": 4
+    },
+    {
+      "block_ranks": [
+        0,
+        2,
+        6,
+        7
+      ],
+      "type(Pi)": "single",
+      "family(S6)": "duad",
+      "S6 label": "(4, 6)",
+      "lift_count": 2
+    },
+    {
+      "block_ranks": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "type(Pi)": "single",
+      "family(S6)": "duad",
+      "S6 label": "(4, 5)",
+      "lift_count": 2
+    },
+    {
+      "block_ranks": [
+        0,
+        3,
+        7,
+        8
+      ],
+      "type(Pi)": "single",
+      "family(S6)": "duad",
+      "S6 label": "(1, 3)",
+      "lift_count": 2
+    },
+    {
+      "block_ranks": [
+        0,
+        4,
+        6,
+        9
+      ],
+      "type(Pi)": "single",
+      "family(S6)": "duad",
+      "S6 label": "(2, 3)",
+      "lift_count": 2
+    },
+    {
+      "block_ranks": [
+        0,
+        5,
+        6,
+        8
+      ],
+      "type(Pi)": "double",
+      "family(S6)": "syntheme",
+      "S6 label": "(1, 5) (2, 4) (3, 6)",
+      "lift_count": 4
+    },
+    {
+      "block_ranks": [
+        0,
+        5,
+        7,
+        9
+      ],
+      "type(Pi)": "double",
+      "family(S6)": "syntheme",
+      "S6 label": "(1, 4) (2, 5) (3, 6)",
+      "lift_count": 4
+    },
+    {
+      "block_ranks": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "type(Pi)": "single",
+      "family(S6)": "duad",
+      "S6 label": "(3, 6)",
+      "lift_count": 2
+    },
+    {
+      "block_ranks": [
+        1,
+        2,
+        6,
+        9
+      ],
+      "type(Pi)": "double",
+      "family(S6)": "syntheme",
+      "S6 label": "(1, 3) (2, 6) (4, 5)",
+      "lift_count": 4
+    },
+    {
+      "block_ranks": [
+        1,
+        2,
+        7,
+        8
+      ],
+      "type(Pi)": "double",
+      "family(S6)": "syntheme",
+      "S6 label": "(1, 6) (2, 3) (4, 5)",
+      "lift_count": 4
+    },
+    {
+      "block_ranks": [
+        1,
+        3,
+        5,
+        8
+      ],
+      "type(Pi)": "double",
+      "family(S6)": "syntheme",
+      "S6 label": "(1, 5) (2, 3) (4, 6)",
+      "lift_count": 4
+    },
+    {
+      "block_ranks": [
+        1,
+        3,
+        7,
+        9
+      ],
+      "type(Pi)": "single",
+      "family(S6)": "duad",
+      "S6 label": "(2, 4)",
+      "lift_count": 2
+    },
+    {
+      "block_ranks": [
+        1,
+        4,
+        5,
+        9
+      ],
+      "type(Pi)": "double",
+      "family(S6)": "syntheme",
+      "S6 label": "(1, 3) (2, 5) (4, 6)",
+      "lift_count": 4
+    },
+    {
+      "block_ranks": [
+        1,
+        4,
+        6,
+        8
+      ],
+      "type(Pi)": "single",
+      "family(S6)": "duad",
+      "S6 label": "(1, 4)",
+      "lift_count": 2
+    },
+    {
+      "block_ranks": [
+        1,
+        5,
+        6,
+        7
+      ],
+      "type(Pi)": "single",
+      "family(S6)": "duad",
+      "S6 label": "(3, 5)",
+      "lift_count": 2
+    },
+    {
+      "block_ranks": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "type(Pi)": "double",
+      "family(S6)": "syntheme",
+      "S6 label": "(1, 4) (2, 3) (5, 6)",
+      "lift_count": 4
+    },
+    {
+      "block_ranks": [
+        2,
+        3,
+        6,
+        8
+      ],
+      "type(Pi)": "single",
+      "family(S6)": "duad",
+      "S6 label": "(2, 5)",
+      "lift_count": 2
+    },
+    {
+      "block_ranks": [
+        2,
+        4,
+        5,
+        6
+      ],
+      "type(Pi)": "double",
+      "family(S6)": "syntheme",
+      "S6 label": "(1, 3) (2, 4) (5, 6)",
+      "lift_count": 4
+    },
+    {
+      "block_ranks": [
+        2,
+        4,
+        7,
+        9
+      ],
+      "type(Pi)": "single",
+      "family(S6)": "duad",
+      "S6 label": "(1, 5)",
+      "lift_count": 2
+    },
+    {
+      "block_ranks": [
+        2,
+        5,
+        8,
+        9
+      ],
+      "type(Pi)": "single",
+      "family(S6)": "duad",
+      "S6 label": "(3, 4)",
+      "lift_count": 2
+    },
+    {
+      "block_ranks": [
+        3,
+        4,
+        6,
+        7
+      ],
+      "type(Pi)": "double",
+      "family(S6)": "syntheme",
+      "S6 label": "(1, 2) (3, 4) (5, 6)",
+      "lift_count": 4
+    },
+    {
+      "block_ranks": [
+        3,
+        4,
+        8,
+        9
+      ],
+      "type(Pi)": "double",
+      "family(S6)": "syntheme",
+      "S6 label": "(1, 2) (3, 5) (4, 6)",
+      "lift_count": 4
+    },
+    {
+      "block_ranks": [
+        3,
+        5,
+        6,
+        9
+      ],
+      "type(Pi)": "single",
+      "family(S6)": "duad",
+      "S6 label": "(1, 6)",
+      "lift_count": 2
+    },
+    {
+      "block_ranks": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "type(Pi)": "single",
+      "family(S6)": "duad",
+      "S6 label": "(2, 6)",
+      "lift_count": 2
+    },
+    {
+      "block_ranks": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "type(Pi)": "double",
+      "family(S6)": "syntheme",
+      "S6 label": "(1, 2) (3, 6) (4, 5)",
+      "lift_count": 4
+    }
+  ],
+  "notes": "W10 blocks split into 15 duad-blocks and 15 syntheme-blocks (outer automorphism of S6 geometry)."
+}

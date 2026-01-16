@@ -1,0 +1,48 @@
+﻿{
+  "created_utc": "2026-01-10T19:52:28.658656Z",
+  "outdir": "/mnt/data/_pg32/continue_20260110",
+  "inputs": {
+    "tomotope_triangle_to_W33_rainbow_line_completion_20260110T043900Z.csv": "/mnt/data/_tomotope/tomotope_triangle_to_w33_rainbow_line_completion_20260110t043900z.csv",
+    "tomotope_triangles_to_projective_triples_and_rainbow_lines_20260110T043900Z.csv": "/mnt/data/_tomotope/tomotope_triangles_to_projective_triples_and_rainbow_lines_20260110t043900z.csv",
+    "tomotope_points_to_N12_58_projective_classes_bestfit_20260110T043900Z.csv": "/mnt/data/_tomotope/tomotope_points_to_n12_58_projective_classes_bestfit_20260110t043900z.csv"
+  },
+  "key_results": {
+    "hyperplane_size": 27,
+    "tomotope_realized": 15,
+    "pg32_points": 15,
+    "tomotope_support_points_used": 10,
+    "missing_support_points": 5,
+    "missing_support_points_bits": [
+      "0001",
+      "0011",
+      "0100",
+      "0110",
+      "1000"
+    ],
+    "sec0m2_completion_support_points_bits": [
+      "1001",
+      "1011",
+      "1100",
+      "1110",
+      "1111"
+    ],
+    "sec0m2_completion_count": 6,
+    "canonical_lift_size": 15
+  },
+  "sha256": {
+    "phase_functions_hyperplane_27_with_pg32_shadow.csv": "6185c8700e5b2a4658c23853ed7ce1810c8cac59839007daa773acfb262d8da2",
+    "tomotope15_phase_functions_with_pg32_shadow.csv": "9d31e1face4f1b1d9e794a373dc88285be48c029ca19470e666b3df9ea0159cf",
+    "missing12_phase_functions.csv": "8579a9d4e1040a634eb8035178b939858654a64e19c372e4fb4ff9d5361251f3",
+    "PG32_points_15.csv": "f7f734a688f87ff902ddc25dd52cbdd3ca7f4af3842e519aa3c47c2f4c108578",
+    "PG32_lines_35.csv": "465e9cde1c7cde4746e8592053d08bdcd62356519ba3f640480b7e280738ad7e",
+    "W32_doily_isotropic_lines_15_standard_symplectic.csv": "7ad9723f5215574416b3a7eb5e77c6b8edd9b5e740d89fa49c9ab43f7c1f9413",
+    "ovoid_missing_support_points.csv": "8a92260a91e6d28fb791d5c547786e8010b72e6c99d9d40f5e7f3a9be53fb16f",
+    "ovoid_sec0m2_completion_support_points.csv": "90894efa3cee522446c7e0b7ee76b7110d152f083a48247fa56ef73f3a255a74",
+    "ovoid_intersections_with_PG32_lines.csv": "21780a9c293ce1342bd38e1873f878f75ae91c21e8d039372aac4f75a80dd24f",
+    "ovoid_line_intersection_summary.csv": "cf7af4d983b7e073fdcf4683e7135d27cd8397cf9f56fd5a03569a66de2c5a76",
+    "pg32_continuation_report.md": "6030f95ecf548b795735fa40d3e985dd5f104eb7e0f4ade264dae5955f4a8b28",
+    "canonical_PG32_lift_one_phase_function_per_support_point.csv": "bc6e8866b687e96b8b8eca8e7fe0d35b29670e244661578b831f76ed84bf8af4",
+    "tomotope_support_point_multiplicities.csv": "8e4d78c0f16d04df36825440d8f5d18083be80de55dd160295867e00dbb0d2eb",
+    "sec0m2_completion_support_multiplicities.csv": "c1a1afcdf631324b5dd92ef9bad6ccd61afdebc78a416ecec5a723d26543199a"
+  }
+}

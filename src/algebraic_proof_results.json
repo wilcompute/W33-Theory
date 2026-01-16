@@ -1,0 +1,26 @@
+{
+  "field": true,
+  "automorphisms": 155520,
+  "holonomy": true,
+  "mass_formula": {
+    "m0": 172.76,
+    "alpha": 0.8332557484298088,
+    "entropies": {
+      "identity_only": 0.0,
+      "with_3cycles": 0.9182958340544896,
+      "all_elements": 1.4591479170272446
+    }
+  },
+  "baryon_asymmetry": {
+    "epsilon_B": 0.0001,
+    "epsilon_CP": 0.9205048534524403,
+    "f_thermal": 0.045454545454545456,
+    "eta_B": 4.184112970238365e-06,
+    "eta_B_obs": 6.1e-10
+  },
+  "dark_energy": {
+    "f_dark": 0.045454545454545456,
+    "rho_Lambda": 7.272727272727273e+63,
+    "rho_Lambda_obs": 2.3e-47
+  }
+}

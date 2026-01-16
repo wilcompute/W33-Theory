@@ -1,0 +1,19 @@
+{
+  "node_constraints": {
+    "delta=2": "triad_hol_mod12 must equal 9",
+    "delta=6": "triad_hol_mod12 must equal 3",
+    "delta in {0,4}": "no node holonomy constraint"
+  },
+  "transition_constraints": {
+    "delta_prev=0": [
+      "holonomy must stay same",
+      "if removed_sum=added_sum=0 then next hol=9",
+      "if removed_sum=added_sum=4 then next hol=3"
+    ],
+    "delta_prev=4": [
+      "holonomy must flip",
+      "if (removed_sum,added_sum)=(6,2) then direction must be 3->9"
+    ]
+  },
+  "global_cocycle_constraint": "Cycle K4 component must be on canonical sheet 0 (quad in quad0 list) for its quotient point; rejects sheet-1 solutions."
+}

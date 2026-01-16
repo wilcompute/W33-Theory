@@ -1,0 +1,62 @@
+{
+  "construction": {
+    "source_bundle": "W33_Q_global_S3_connection_triangle_holonomy_bundle_v17_20260113.zip",
+    "edgewise_cost_minimization": "choose perm on each undirected edge minimizing disagreement with original directed labels; enforce inverse on reverse direction",
+    "tie_breaking": "randomized among minimal-cost perms; selected best of 5000 samples by maximizing MI(parity, holonomy conjugacy class)",
+    "orientation_for_triangle_holonomy": "u->v->w->u using triangle rows (u,v,w)"
+  },
+  "bestMI": {
+    "mutual_information_parity_class_nats": 0.014797060187657286,
+    "id_fraction_difference_parity0_minus_parity1": 0.1596153846153846,
+    "counts_by_parity_class": {
+      "3-cycle": {
+        "0": 697,
+        "1": 573
+      },
+      "id": {
+        "0": 1187,
+        "1": 477
+      },
+      "transposition": {
+        "0": 1236,
+        "1": 1110
+      }
+    },
+    "counts_by_parity_sign": {
+      "0": {
+        "0": 1884,
+        "1": 1050
+      },
+      "1": {
+        "0": 1236,
+        "1": 1110
+      }
+    }
+  },
+  "lexicographic_baseline": {
+    "mutual_information_parity_class_nats": 0.005765921609267838,
+    "id_fraction_difference_parity0_minus_parity1": 0.10623219373219372,
+    "counts_by_parity_class": {
+      "3-cycle": {
+        "0": 523,
+        "1": 450
+      },
+      "id": {
+        "0": 1396,
+        "1": 737
+      },
+      "transposition": {
+        "0": 1201,
+        "1": 973
+      }
+    }
+  },
+  "gauge_invariance_test": {
+    "random_gauge_trials": 3,
+    "per_triangle_conjugacy_class_invariant": true
+  },
+  "non_uniqueness_note": {
+    "random_alt_seed_1_gauge_equivalent_to_best": false,
+    "meaning": "S3 lift is not uniquely determined by current per-edge labels; conjugacy classes of holonomy are gauge-invariant once a connection is fixed."
+  }
+}

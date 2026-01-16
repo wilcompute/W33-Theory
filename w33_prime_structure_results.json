@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-01-14T15:30:58.098702",
+  "prime_indices": {
+    "p_5": 11,
+    "p_33": 137,
+    "p_40": 173,
+    "p_81": 419,
+    "p_121": 661
+  },
+  "formulas": {
+    "sin2_theta_W": "40/p_40 = 40/173",
+    "alpha_inverse": "p_33 = 137",
+    "33_origin": "|points| - rank(E7) = 40 - 7 = 33"
+  },
+  "special_primes": {
+    "11": {
+      "index": 5,
+      "note": "11\u00b2 = |W33|"
+    },
+    "137": {
+      "index": 33,
+      "note": "\u03b1\u207b\u00b9"
+    },
+    "173": {
+      "index": 40,
+      "note": "sin\u00b2\u03b8_W denominator"
+    }
+  }
+}

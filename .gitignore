@@ -1,0 +1,18 @@
+﻿# Ignore problematic Windows reserved names
+nul
+NUL
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.class
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+
+# Temp files
+tmpclaude-*
+*.tmp

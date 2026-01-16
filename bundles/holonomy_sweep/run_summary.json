@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-01-12",
+  "source_files": {
+    "W33_line_phase_map.csv": "/mnt/data/work2/data/_workbench/02_geometry/W33_line_phase_map.csv",
+    "W33_point_rays_C4_complex.csv": "/mnt/data/work2/data/_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv",
+    "n12_58_candidate_w33_points_40_from_tau_cycles_and_fixed_complements.csv": "/mnt/data/work2/data/_n12/n12_58_candidate_w33_points_40_from_tau_cycles_and_fixed_complements_20260109t134000z.csv",
+    "n12_58_candidate_lines_from_size12_orbits_tau_cycle_sets.csv": "/mnt/data/work2/data/_n12/n12_58_candidate_lines_from_size12_orbits_tau_cycle_sets_20260109t134000z.csv",
+    "n12_58_2t_holonomy_nontrivial_cycles.csv": "/mnt/data/work2/data/_n12/n12_58_2t_holonomy_nontrivial_cycles.csv"
+  },
+  "objective": {
+    "primary": "maximize number of W33 four-center triads whose mapped N12 triple covers all 12 vertex symbols {0..9,a,b}",
+    "secondary": "on defect triads only, maximize weighted inclusion of N12 2T support-4sets (weights = frequency across the 5 nontrivial 2T cycles)"
+  },
+  "results": {
+    "W33_four_center_triads": 360,
+    "cover12_count": 302,
+    "defect_count": 58,
+    "defect_missing_size_hist": {
+      "3": 56,
+      "6": 2
+    },
+    "holonomy_hist_mod12": {
+      "9": 180,
+      "3": 180
+    },
+    "note": "hol12 is computed from ray overlaps (quantized to Z12) and equals 3 or 9 (= \u00b13) for all four-center triads."
+  }
+}

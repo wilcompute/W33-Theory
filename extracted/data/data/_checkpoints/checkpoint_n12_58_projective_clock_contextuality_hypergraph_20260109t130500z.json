@@ -1,0 +1,49 @@
+﻿{
+  "timestamp_local": "2026-01-09T08:05:00-05:00",
+  "purpose": "Construct the N12_58 projective-clock contextuality hypergraph on 12 projective classes using size-12 missing-triangle orbits as contexts; export incidence, co-occurrence matrix, and bipartite graph; compute invariants.",
+  "universe_classes": [
+    "sec0_m0",
+    "sec0_m1",
+    "sec0_m2",
+    "sec1_m0",
+    "sec1_m1",
+    "sec1_m2",
+    "sec2_m0",
+    "sec2_m1",
+    "sec2_m2",
+    "sec3_m0",
+    "sec3_m1",
+    "sec3_m2"
+  ],
+  "contexts_count": 14,
+  "context_size_hist": {
+    "12": 10,
+    "6": 4
+  },
+  "class_degree_counts": {
+    "sec0_m0": 13,
+    "sec0_m1": 13,
+    "sec0_m2": 13,
+    "sec1_m0": 13,
+    "sec1_m1": 13,
+    "sec1_m2": 13,
+    "sec2_m0": 11,
+    "sec2_m1": 11,
+    "sec2_m2": 11,
+    "sec3_m0": 11,
+    "sec3_m1": 11,
+    "sec3_m2": 11
+  },
+  "observations": [
+    "There are 14 contexts: 10 full contexts containing all 12 classes, and 4 half-sector contexts containing 6 classes.",
+    "Class degrees are not uniform: classes in sectors 0 and 1 appear in 13 contexts, sectors 2 and 3 appear in 11 contexts; this reflects the three collapsed contexts restricted to sectors {0,1} and one restricted to {2,3}.",
+    "The co-occurrence graph on 12 classes is complete (K12) with three distinct co-occurrence weights (10,11,13) structured by within-sector vs cross-sector relations."
+  ],
+  "exports": {
+    "incidence_csv": "/mnt/data/_n12/n12_58_projective_clock_context_incidence_20260109t130500z.csv",
+    "contexts_csv": "/mnt/data/_n12/n12_58_projective_clock_context_hyperedges_orbits_20260109t130500z.csv",
+    "cooccurrence_matrix_csv": "/mnt/data/_n12/n12_58_projective_class_cooccurrence_matrix_12x12_20260109t130500z.csv",
+    "bipartite_gexf": "/mnt/data/_n12/n12_58_projective_clock_bipartite_hypergraph_12classes_14contexts_20260109t130500z.gexf",
+    "invariants_json": "/mnt/data/_n12/n12_58_projective_clock_hypergraph_invariants_20260109t130500z.json"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "cover12_four_center_triads": 296,
+  "cycle_costs": [
+    1,
+    3,
+    5,
+    9,
+    10
+  ],
+  "loop_total_min_cover12": 28
+}

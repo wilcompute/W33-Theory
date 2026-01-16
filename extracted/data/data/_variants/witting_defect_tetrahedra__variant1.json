@@ -1,0 +1,3707 @@
+{
+  "counts": {
+    "defect_tetrahedra": 90,
+    "rank_blocks": 30,
+    "block_type_counts": {
+      "single": 15,
+      "double": 15
+    },
+    "triangle_holonomy_counts": {
+      "1": 1440,
+      "5": 1440,
+      "3": 360
+    }
+  },
+  "tetrahedra": [
+    {
+      "tetra_id": 0,
+      "points": [
+        0,
+        5,
+        21,
+        37
+      ],
+      "labels": [
+        "e0",
+        "(0,0;t1)",
+        "(1,1;t1)",
+        "(2,2;t1)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 0
+        },
+        {
+          "rank": 1,
+          "suit": 1
+        },
+        {
+          "rank": 4,
+          "suit": 1
+        },
+        {
+          "rank": 7,
+          "suit": 1
+        }
+      ],
+      "rank_block": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 1,
+      "points": [
+        0,
+        6,
+        22,
+        38
+      ],
+      "labels": [
+        "e0",
+        "(0,0;t2)",
+        "(1,1;t2)",
+        "(2,2;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 0
+        },
+        {
+          "rank": 1,
+          "suit": 2
+        },
+        {
+          "rank": 3,
+          "suit": 2
+        },
+        {
+          "rank": 6,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        0,
+        1,
+        3,
+        6
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 2,
+      "points": [
+        0,
+        7,
+        23,
+        39
+      ],
+      "labels": [
+        "e0",
+        "(0,0;t3)",
+        "(1,1;t3)",
+        "(2,2;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 0
+        },
+        {
+          "rank": 1,
+          "suit": 3
+        },
+        {
+          "rank": 2,
+          "suit": 3
+        },
+        {
+          "rank": 5,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 3,
+      "points": [
+        0,
+        9,
+        25,
+        29
+      ],
+      "labels": [
+        "e0",
+        "(0,1;t1)",
+        "(1,2;t1)",
+        "(2,0;t1)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 0
+        },
+        {
+          "rank": 3,
+          "suit": 1
+        },
+        {
+          "rank": 2,
+          "suit": 1
+        },
+        {
+          "rank": 9,
+          "suit": 1
+        }
+      ],
+      "rank_block": [
+        0,
+        2,
+        3,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 4,
+      "points": [
+        0,
+        10,
+        26,
+        30
+      ],
+      "labels": [
+        "e0",
+        "(0,1;t2)",
+        "(1,2;t2)",
+        "(2,0;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 0
+        },
+        {
+          "rank": 4,
+          "suit": 2
+        },
+        {
+          "rank": 2,
+          "suit": 2
+        },
+        {
+          "rank": 8,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        0,
+        2,
+        4,
+        8
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 5,
+      "points": [
+        0,
+        11,
+        27,
+        31
+      ],
+      "labels": [
+        "e0",
+        "(0,1;t3)",
+        "(1,2;t3)",
+        "(2,0;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 0
+        },
+        {
+          "rank": 4,
+          "suit": 3
+        },
+        {
+          "rank": 9,
+          "suit": 3
+        },
+        {
+          "rank": 6,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        0,
+        4,
+        6,
+        9
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 6,
+      "points": [
+        0,
+        13,
+        17,
+        33
+      ],
+      "labels": [
+        "e0",
+        "(0,2;t1)",
+        "(1,0;t1)",
+        "(2,1;t1)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 0
+        },
+        {
+          "rank": 6,
+          "suit": 1
+        },
+        {
+          "rank": 8,
+          "suit": 1
+        },
+        {
+          "rank": 5,
+          "suit": 1
+        }
+      ],
+      "rank_block": [
+        0,
+        5,
+        6,
+        8
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 7,
+      "points": [
+        0,
+        14,
+        18,
+        34
+      ],
+      "labels": [
+        "e0",
+        "(0,2;t2)",
+        "(1,0;t2)",
+        "(2,1;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 0
+        },
+        {
+          "rank": 7,
+          "suit": 2
+        },
+        {
+          "rank": 9,
+          "suit": 2
+        },
+        {
+          "rank": 5,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        0,
+        5,
+        7,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 8,
+      "points": [
+        0,
+        15,
+        19,
+        35
+      ],
+      "labels": [
+        "e0",
+        "(0,2;t3)",
+        "(1,0;t3)",
+        "(2,1;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 0
+        },
+        {
+          "rank": 7,
+          "suit": 3
+        },
+        {
+          "rank": 3,
+          "suit": 3
+        },
+        {
+          "rank": 8,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        0,
+        3,
+        7,
+        8
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 9,
+      "points": [
+        1,
+        4,
+        20,
+        36
+      ],
+      "labels": [
+        "e1",
+        "(0,0;t0)",
+        "(1,1;t0)",
+        "(2,2;t0)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 1
+        },
+        {
+          "rank": 1,
+          "suit": 0
+        },
+        {
+          "rank": 4,
+          "suit": 0
+        },
+        {
+          "rank": 7,
+          "suit": 0
+        }
+      ],
+      "rank_block": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 10,
+      "points": [
+        1,
+        6,
+        18,
+        30
+      ],
+      "labels": [
+        "e1",
+        "(0,0;t2)",
+        "(1,0;t2)",
+        "(2,0;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 1
+        },
+        {
+          "rank": 1,
+          "suit": 2
+        },
+        {
+          "rank": 9,
+          "suit": 2
+        },
+        {
+          "rank": 8,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        0,
+        1,
+        8,
+        9
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 11,
+      "points": [
+        1,
+        7,
+        19,
+        31
+      ],
+      "labels": [
+        "e1",
+        "(0,0;t3)",
+        "(1,0;t3)",
+        "(2,0;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 1
+        },
+        {
+          "rank": 1,
+          "suit": 3
+        },
+        {
+          "rank": 3,
+          "suit": 3
+        },
+        {
+          "rank": 6,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        0,
+        1,
+        3,
+        6
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 12,
+      "points": [
+        1,
+        8,
+        24,
+        28
+      ],
+      "labels": [
+        "e1",
+        "(0,1;t0)",
+        "(1,2;t0)",
+        "(2,0;t0)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 1
+        },
+        {
+          "rank": 2,
+          "suit": 0
+        },
+        {
+          "rank": 9,
+          "suit": 0
+        },
+        {
+          "rank": 3,
+          "suit": 0
+        }
+      ],
+      "rank_block": [
+        0,
+        2,
+        3,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 13,
+      "points": [
+        1,
+        10,
+        22,
+        34
+      ],
+      "labels": [
+        "e1",
+        "(0,1;t2)",
+        "(1,1;t2)",
+        "(2,1;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 1
+        },
+        {
+          "rank": 4,
+          "suit": 2
+        },
+        {
+          "rank": 3,
+          "suit": 2
+        },
+        {
+          "rank": 5,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 14,
+      "points": [
+        1,
+        11,
+        23,
+        35
+      ],
+      "labels": [
+        "e1",
+        "(0,1;t3)",
+        "(1,1;t3)",
+        "(2,1;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 1
+        },
+        {
+          "rank": 4,
+          "suit": 3
+        },
+        {
+          "rank": 2,
+          "suit": 3
+        },
+        {
+          "rank": 8,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        0,
+        2,
+        4,
+        8
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 15,
+      "points": [
+        1,
+        12,
+        16,
+        32
+      ],
+      "labels": [
+        "e1",
+        "(0,2;t0)",
+        "(1,0;t0)",
+        "(2,1;t0)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 1
+        },
+        {
+          "rank": 5,
+          "suit": 0
+        },
+        {
+          "rank": 6,
+          "suit": 0
+        },
+        {
+          "rank": 8,
+          "suit": 0
+        }
+      ],
+      "rank_block": [
+        0,
+        5,
+        6,
+        8
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 16,
+      "points": [
+        1,
+        14,
+        26,
+        38
+      ],
+      "labels": [
+        "e1",
+        "(0,2;t2)",
+        "(1,2;t2)",
+        "(2,2;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 1
+        },
+        {
+          "rank": 7,
+          "suit": 2
+        },
+        {
+          "rank": 2,
+          "suit": 2
+        },
+        {
+          "rank": 6,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        0,
+        2,
+        6,
+        7
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 17,
+      "points": [
+        1,
+        15,
+        27,
+        39
+      ],
+      "labels": [
+        "e1",
+        "(0,2;t3)",
+        "(1,2;t3)",
+        "(2,2;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 1
+        },
+        {
+          "rank": 7,
+          "suit": 3
+        },
+        {
+          "rank": 9,
+          "suit": 3
+        },
+        {
+          "rank": 5,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        0,
+        5,
+        7,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 18,
+      "points": [
+        2,
+        4,
+        16,
+        28
+      ],
+      "labels": [
+        "e2",
+        "(0,0;t0)",
+        "(1,0;t0)",
+        "(2,0;t0)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 2
+        },
+        {
+          "rank": 1,
+          "suit": 0
+        },
+        {
+          "rank": 6,
+          "suit": 0
+        },
+        {
+          "rank": 3,
+          "suit": 0
+        }
+      ],
+      "rank_block": [
+        0,
+        1,
+        3,
+        6
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 19,
+      "points": [
+        2,
+        5,
+        17,
+        29
+      ],
+      "labels": [
+        "e2",
+        "(0,0;t1)",
+        "(1,0;t1)",
+        "(2,0;t1)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 2
+        },
+        {
+          "rank": 1,
+          "suit": 1
+        },
+        {
+          "rank": 8,
+          "suit": 1
+        },
+        {
+          "rank": 9,
+          "suit": 1
+        }
+      ],
+      "rank_block": [
+        0,
+        1,
+        8,
+        9
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 20,
+      "points": [
+        2,
+        7,
+        11,
+        15
+      ],
+      "labels": [
+        "e2",
+        "(0,0;t3)",
+        "(0,1;t3)",
+        "(0,2;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 2
+        },
+        {
+          "rank": 1,
+          "suit": 3
+        },
+        {
+          "rank": 4,
+          "suit": 3
+        },
+        {
+          "rank": 7,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 21,
+      "points": [
+        2,
+        8,
+        20,
+        32
+      ],
+      "labels": [
+        "e2",
+        "(0,1;t0)",
+        "(1,1;t0)",
+        "(2,1;t0)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 2
+        },
+        {
+          "rank": 2,
+          "suit": 0
+        },
+        {
+          "rank": 4,
+          "suit": 0
+        },
+        {
+          "rank": 8,
+          "suit": 0
+        }
+      ],
+      "rank_block": [
+        0,
+        2,
+        4,
+        8
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 22,
+      "points": [
+        2,
+        9,
+        21,
+        33
+      ],
+      "labels": [
+        "e2",
+        "(0,1;t1)",
+        "(1,1;t1)",
+        "(2,1;t1)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 2
+        },
+        {
+          "rank": 3,
+          "suit": 1
+        },
+        {
+          "rank": 4,
+          "suit": 1
+        },
+        {
+          "rank": 5,
+          "suit": 1
+        }
+      ],
+      "rank_block": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 23,
+      "points": [
+        2,
+        12,
+        24,
+        36
+      ],
+      "labels": [
+        "e2",
+        "(0,2;t0)",
+        "(1,2;t0)",
+        "(2,2;t0)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 2
+        },
+        {
+          "rank": 5,
+          "suit": 0
+        },
+        {
+          "rank": 9,
+          "suit": 0
+        },
+        {
+          "rank": 7,
+          "suit": 0
+        }
+      ],
+      "rank_block": [
+        0,
+        5,
+        7,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 24,
+      "points": [
+        2,
+        13,
+        25,
+        37
+      ],
+      "labels": [
+        "e2",
+        "(0,2;t1)",
+        "(1,2;t1)",
+        "(2,2;t1)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 2
+        },
+        {
+          "rank": 6,
+          "suit": 1
+        },
+        {
+          "rank": 2,
+          "suit": 1
+        },
+        {
+          "rank": 7,
+          "suit": 1
+        }
+      ],
+      "rank_block": [
+        0,
+        2,
+        6,
+        7
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 25,
+      "points": [
+        2,
+        19,
+        23,
+        27
+      ],
+      "labels": [
+        "e2",
+        "(1,0;t3)",
+        "(1,1;t3)",
+        "(1,2;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 2
+        },
+        {
+          "rank": 3,
+          "suit": 3
+        },
+        {
+          "rank": 2,
+          "suit": 3
+        },
+        {
+          "rank": 9,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        0,
+        2,
+        3,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 26,
+      "points": [
+        2,
+        31,
+        35,
+        39
+      ],
+      "labels": [
+        "e2",
+        "(2,0;t3)",
+        "(2,1;t3)",
+        "(2,2;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 2
+        },
+        {
+          "rank": 6,
+          "suit": 3
+        },
+        {
+          "rank": 8,
+          "suit": 3
+        },
+        {
+          "rank": 5,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        0,
+        5,
+        6,
+        8
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 27,
+      "points": [
+        3,
+        4,
+        8,
+        12
+      ],
+      "labels": [
+        "e3",
+        "(0,0;t0)",
+        "(0,1;t0)",
+        "(0,2;t0)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 3
+        },
+        {
+          "rank": 1,
+          "suit": 0
+        },
+        {
+          "rank": 2,
+          "suit": 0
+        },
+        {
+          "rank": 5,
+          "suit": 0
+        }
+      ],
+      "rank_block": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 28,
+      "points": [
+        3,
+        5,
+        9,
+        13
+      ],
+      "labels": [
+        "e3",
+        "(0,0;t1)",
+        "(0,1;t1)",
+        "(0,2;t1)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 3
+        },
+        {
+          "rank": 1,
+          "suit": 1
+        },
+        {
+          "rank": 3,
+          "suit": 1
+        },
+        {
+          "rank": 6,
+          "suit": 1
+        }
+      ],
+      "rank_block": [
+        0,
+        1,
+        3,
+        6
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 29,
+      "points": [
+        3,
+        6,
+        10,
+        14
+      ],
+      "labels": [
+        "e3",
+        "(0,0;t2)",
+        "(0,1;t2)",
+        "(0,2;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 3
+        },
+        {
+          "rank": 1,
+          "suit": 2
+        },
+        {
+          "rank": 4,
+          "suit": 2
+        },
+        {
+          "rank": 7,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 30,
+      "points": [
+        3,
+        16,
+        20,
+        24
+      ],
+      "labels": [
+        "e3",
+        "(1,0;t0)",
+        "(1,1;t0)",
+        "(1,2;t0)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 3
+        },
+        {
+          "rank": 6,
+          "suit": 0
+        },
+        {
+          "rank": 4,
+          "suit": 0
+        },
+        {
+          "rank": 9,
+          "suit": 0
+        }
+      ],
+      "rank_block": [
+        0,
+        4,
+        6,
+        9
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 31,
+      "points": [
+        3,
+        17,
+        21,
+        25
+      ],
+      "labels": [
+        "e3",
+        "(1,0;t1)",
+        "(1,1;t1)",
+        "(1,2;t1)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 3
+        },
+        {
+          "rank": 8,
+          "suit": 1
+        },
+        {
+          "rank": 4,
+          "suit": 1
+        },
+        {
+          "rank": 2,
+          "suit": 1
+        }
+      ],
+      "rank_block": [
+        0,
+        2,
+        4,
+        8
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 32,
+      "points": [
+        3,
+        18,
+        22,
+        26
+      ],
+      "labels": [
+        "e3",
+        "(1,0;t2)",
+        "(1,1;t2)",
+        "(1,2;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 3
+        },
+        {
+          "rank": 9,
+          "suit": 2
+        },
+        {
+          "rank": 3,
+          "suit": 2
+        },
+        {
+          "rank": 2,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        0,
+        2,
+        3,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 33,
+      "points": [
+        3,
+        28,
+        32,
+        36
+      ],
+      "labels": [
+        "e3",
+        "(2,0;t0)",
+        "(2,1;t0)",
+        "(2,2;t0)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 3
+        },
+        {
+          "rank": 3,
+          "suit": 0
+        },
+        {
+          "rank": 8,
+          "suit": 0
+        },
+        {
+          "rank": 7,
+          "suit": 0
+        }
+      ],
+      "rank_block": [
+        0,
+        3,
+        7,
+        8
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 34,
+      "points": [
+        3,
+        29,
+        33,
+        37
+      ],
+      "labels": [
+        "e3",
+        "(2,0;t1)",
+        "(2,1;t1)",
+        "(2,2;t1)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 3
+        },
+        {
+          "rank": 9,
+          "suit": 1
+        },
+        {
+          "rank": 5,
+          "suit": 1
+        },
+        {
+          "rank": 7,
+          "suit": 1
+        }
+      ],
+      "rank_block": [
+        0,
+        5,
+        7,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 35,
+      "points": [
+        3,
+        30,
+        34,
+        38
+      ],
+      "labels": [
+        "e3",
+        "(2,0;t2)",
+        "(2,1;t2)",
+        "(2,2;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 0,
+          "suit": 3
+        },
+        {
+          "rank": 8,
+          "suit": 2
+        },
+        {
+          "rank": 5,
+          "suit": 2
+        },
+        {
+          "rank": 6,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        0,
+        5,
+        6,
+        8
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 36,
+      "points": [
+        4,
+        9,
+        14,
+        27
+      ],
+      "labels": [
+        "(0,0;t0)",
+        "(0,1;t1)",
+        "(0,2;t2)",
+        "(1,2;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 0
+        },
+        {
+          "rank": 3,
+          "suit": 1
+        },
+        {
+          "rank": 7,
+          "suit": 2
+        },
+        {
+          "rank": 9,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        1,
+        3,
+        7,
+        9
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 37,
+      "points": [
+        4,
+        10,
+        13,
+        35
+      ],
+      "labels": [
+        "(0,0;t0)",
+        "(0,1;t2)",
+        "(0,2;t1)",
+        "(2,1;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 0
+        },
+        {
+          "rank": 4,
+          "suit": 2
+        },
+        {
+          "rank": 6,
+          "suit": 1
+        },
+        {
+          "rank": 8,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        1,
+        4,
+        6,
+        8
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 38,
+      "points": [
+        4,
+        11,
+        29,
+        34
+      ],
+      "labels": [
+        "(0,0;t0)",
+        "(0,1;t3)",
+        "(2,0;t1)",
+        "(2,1;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 0
+        },
+        {
+          "rank": 4,
+          "suit": 3
+        },
+        {
+          "rank": 9,
+          "suit": 1
+        },
+        {
+          "rank": 5,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        1,
+        4,
+        5,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 39,
+      "points": [
+        4,
+        15,
+        17,
+        26
+      ],
+      "labels": [
+        "(0,0;t0)",
+        "(0,2;t3)",
+        "(1,0;t1)",
+        "(1,2;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 0
+        },
+        {
+          "rank": 7,
+          "suit": 3
+        },
+        {
+          "rank": 8,
+          "suit": 1
+        },
+        {
+          "rank": 2,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        1,
+        2,
+        7,
+        8
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 40,
+      "points": [
+        4,
+        18,
+        25,
+        31
+      ],
+      "labels": [
+        "(0,0;t0)",
+        "(1,0;t2)",
+        "(1,2;t1)",
+        "(2,0;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 0
+        },
+        {
+          "rank": 9,
+          "suit": 2
+        },
+        {
+          "rank": 2,
+          "suit": 1
+        },
+        {
+          "rank": 6,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        1,
+        2,
+        6,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 41,
+      "points": [
+        4,
+        19,
+        30,
+        33
+      ],
+      "labels": [
+        "(0,0;t0)",
+        "(1,0;t3)",
+        "(2,0;t2)",
+        "(2,1;t1)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 0
+        },
+        {
+          "rank": 3,
+          "suit": 3
+        },
+        {
+          "rank": 8,
+          "suit": 2
+        },
+        {
+          "rank": 5,
+          "suit": 1
+        }
+      ],
+      "rank_block": [
+        1,
+        3,
+        5,
+        8
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 42,
+      "points": [
+        5,
+        8,
+        14,
+        35
+      ],
+      "labels": [
+        "(0,0;t1)",
+        "(0,1;t0)",
+        "(0,2;t2)",
+        "(2,1;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 1
+        },
+        {
+          "rank": 2,
+          "suit": 0
+        },
+        {
+          "rank": 7,
+          "suit": 2
+        },
+        {
+          "rank": 8,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        1,
+        2,
+        7,
+        8
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 43,
+      "points": [
+        5,
+        10,
+        12,
+        27
+      ],
+      "labels": [
+        "(0,0;t1)",
+        "(0,1;t2)",
+        "(0,2;t0)",
+        "(1,2;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 1
+        },
+        {
+          "rank": 4,
+          "suit": 2
+        },
+        {
+          "rank": 5,
+          "suit": 0
+        },
+        {
+          "rank": 9,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        1,
+        4,
+        5,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 44,
+      "points": [
+        5,
+        11,
+        26,
+        28
+      ],
+      "labels": [
+        "(0,0;t1)",
+        "(0,1;t3)",
+        "(1,2;t2)",
+        "(2,0;t0)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 1
+        },
+        {
+          "rank": 4,
+          "suit": 3
+        },
+        {
+          "rank": 2,
+          "suit": 2
+        },
+        {
+          "rank": 3,
+          "suit": 0
+        }
+      ],
+      "rank_block": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 45,
+      "points": [
+        5,
+        15,
+        16,
+        34
+      ],
+      "labels": [
+        "(0,0;t1)",
+        "(0,2;t3)",
+        "(1,0;t0)",
+        "(2,1;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 1
+        },
+        {
+          "rank": 7,
+          "suit": 3
+        },
+        {
+          "rank": 6,
+          "suit": 0
+        },
+        {
+          "rank": 5,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        1,
+        5,
+        6,
+        7
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 46,
+      "points": [
+        5,
+        22,
+        32,
+        39
+      ],
+      "labels": [
+        "(0,0;t1)",
+        "(1,1;t2)",
+        "(2,1;t0)",
+        "(2,2;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 1
+        },
+        {
+          "rank": 3,
+          "suit": 2
+        },
+        {
+          "rank": 8,
+          "suit": 0
+        },
+        {
+          "rank": 5,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        1,
+        3,
+        5,
+        8
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 47,
+      "points": [
+        5,
+        23,
+        24,
+        38
+      ],
+      "labels": [
+        "(0,0;t1)",
+        "(1,1;t3)",
+        "(1,2;t0)",
+        "(2,2;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 1
+        },
+        {
+          "rank": 2,
+          "suit": 3
+        },
+        {
+          "rank": 9,
+          "suit": 0
+        },
+        {
+          "rank": 6,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        1,
+        2,
+        6,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 48,
+      "points": [
+        6,
+        8,
+        13,
+        27
+      ],
+      "labels": [
+        "(0,0;t2)",
+        "(0,1;t0)",
+        "(0,2;t1)",
+        "(1,2;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 2
+        },
+        {
+          "rank": 2,
+          "suit": 0
+        },
+        {
+          "rank": 6,
+          "suit": 1
+        },
+        {
+          "rank": 9,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        1,
+        2,
+        6,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 49,
+      "points": [
+        6,
+        9,
+        12,
+        35
+      ],
+      "labels": [
+        "(0,0;t2)",
+        "(0,1;t1)",
+        "(0,2;t0)",
+        "(2,1;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 2
+        },
+        {
+          "rank": 3,
+          "suit": 1
+        },
+        {
+          "rank": 5,
+          "suit": 0
+        },
+        {
+          "rank": 8,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        1,
+        3,
+        5,
+        8
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 50,
+      "points": [
+        6,
+        19,
+        20,
+        25
+      ],
+      "labels": [
+        "(0,0;t2)",
+        "(1,0;t3)",
+        "(1,1;t0)",
+        "(1,2;t1)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 2
+        },
+        {
+          "rank": 3,
+          "suit": 3
+        },
+        {
+          "rank": 4,
+          "suit": 0
+        },
+        {
+          "rank": 2,
+          "suit": 1
+        }
+      ],
+      "rank_block": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 51,
+      "points": [
+        6,
+        21,
+        24,
+        39
+      ],
+      "labels": [
+        "(0,0;t2)",
+        "(1,1;t1)",
+        "(1,2;t0)",
+        "(2,2;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 2
+        },
+        {
+          "rank": 4,
+          "suit": 1
+        },
+        {
+          "rank": 9,
+          "suit": 0
+        },
+        {
+          "rank": 5,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        1,
+        4,
+        5,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 52,
+      "points": [
+        6,
+        23,
+        32,
+        37
+      ],
+      "labels": [
+        "(0,0;t2)",
+        "(1,1;t3)",
+        "(2,1;t0)",
+        "(2,2;t1)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 2
+        },
+        {
+          "rank": 2,
+          "suit": 3
+        },
+        {
+          "rank": 8,
+          "suit": 0
+        },
+        {
+          "rank": 7,
+          "suit": 1
+        }
+      ],
+      "rank_block": [
+        1,
+        2,
+        7,
+        8
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 53,
+      "points": [
+        6,
+        31,
+        33,
+        36
+      ],
+      "labels": [
+        "(0,0;t2)",
+        "(2,0;t3)",
+        "(2,1;t1)",
+        "(2,2;t0)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 2
+        },
+        {
+          "rank": 6,
+          "suit": 3
+        },
+        {
+          "rank": 5,
+          "suit": 1
+        },
+        {
+          "rank": 7,
+          "suit": 0
+        }
+      ],
+      "rank_block": [
+        1,
+        5,
+        6,
+        7
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 54,
+      "points": [
+        7,
+        16,
+        26,
+        29
+      ],
+      "labels": [
+        "(0,0;t3)",
+        "(1,0;t0)",
+        "(1,2;t2)",
+        "(2,0;t1)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 3
+        },
+        {
+          "rank": 6,
+          "suit": 0
+        },
+        {
+          "rank": 2,
+          "suit": 2
+        },
+        {
+          "rank": 9,
+          "suit": 1
+        }
+      ],
+      "rank_block": [
+        1,
+        2,
+        6,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 55,
+      "points": [
+        7,
+        17,
+        28,
+        34
+      ],
+      "labels": [
+        "(0,0;t3)",
+        "(1,0;t1)",
+        "(2,0;t0)",
+        "(2,1;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 3
+        },
+        {
+          "rank": 8,
+          "suit": 1
+        },
+        {
+          "rank": 3,
+          "suit": 0
+        },
+        {
+          "rank": 5,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        1,
+        3,
+        5,
+        8
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 56,
+      "points": [
+        7,
+        18,
+        20,
+        33
+      ],
+      "labels": [
+        "(0,0;t3)",
+        "(1,0;t2)",
+        "(1,1;t0)",
+        "(2,1;t1)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 3
+        },
+        {
+          "rank": 9,
+          "suit": 2
+        },
+        {
+          "rank": 4,
+          "suit": 0
+        },
+        {
+          "rank": 5,
+          "suit": 1
+        }
+      ],
+      "rank_block": [
+        1,
+        4,
+        5,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 57,
+      "points": [
+        7,
+        21,
+        32,
+        38
+      ],
+      "labels": [
+        "(0,0;t3)",
+        "(1,1;t1)",
+        "(2,1;t0)",
+        "(2,2;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 3
+        },
+        {
+          "rank": 4,
+          "suit": 1
+        },
+        {
+          "rank": 8,
+          "suit": 0
+        },
+        {
+          "rank": 6,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        1,
+        4,
+        6,
+        8
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 58,
+      "points": [
+        7,
+        22,
+        24,
+        37
+      ],
+      "labels": [
+        "(0,0;t3)",
+        "(1,1;t2)",
+        "(1,2;t0)",
+        "(2,2;t1)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 3
+        },
+        {
+          "rank": 3,
+          "suit": 2
+        },
+        {
+          "rank": 9,
+          "suit": 0
+        },
+        {
+          "rank": 7,
+          "suit": 1
+        }
+      ],
+      "rank_block": [
+        1,
+        3,
+        7,
+        9
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 59,
+      "points": [
+        7,
+        25,
+        30,
+        36
+      ],
+      "labels": [
+        "(0,0;t3)",
+        "(1,2;t1)",
+        "(2,0;t2)",
+        "(2,2;t0)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 1,
+          "suit": 3
+        },
+        {
+          "rank": 2,
+          "suit": 1
+        },
+        {
+          "rank": 8,
+          "suit": 2
+        },
+        {
+          "rank": 7,
+          "suit": 0
+        }
+      ],
+      "rank_block": [
+        1,
+        2,
+        7,
+        8
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 60,
+      "points": [
+        8,
+        11,
+        33,
+        38
+      ],
+      "labels": [
+        "(0,1;t0)",
+        "(0,1;t3)",
+        "(2,1;t1)",
+        "(2,2;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 2,
+          "suit": 0
+        },
+        {
+          "rank": 4,
+          "suit": 3
+        },
+        {
+          "rank": 5,
+          "suit": 1
+        },
+        {
+          "rank": 6,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        2,
+        4,
+        5,
+        6
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 61,
+      "points": [
+        8,
+        15,
+        18,
+        21
+      ],
+      "labels": [
+        "(0,1;t0)",
+        "(0,2;t3)",
+        "(1,0;t2)",
+        "(1,1;t1)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 2,
+          "suit": 0
+        },
+        {
+          "rank": 7,
+          "suit": 3
+        },
+        {
+          "rank": 9,
+          "suit": 2
+        },
+        {
+          "rank": 4,
+          "suit": 1
+        }
+      ],
+      "rank_block": [
+        2,
+        4,
+        7,
+        9
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 62,
+      "points": [
+        8,
+        17,
+        22,
+        31
+      ],
+      "labels": [
+        "(0,1;t0)",
+        "(1,0;t1)",
+        "(1,1;t2)",
+        "(2,0;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 2,
+          "suit": 0
+        },
+        {
+          "rank": 8,
+          "suit": 1
+        },
+        {
+          "rank": 3,
+          "suit": 2
+        },
+        {
+          "rank": 6,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        2,
+        3,
+        6,
+        8
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 63,
+      "points": [
+        8,
+        19,
+        34,
+        37
+      ],
+      "labels": [
+        "(0,1;t0)",
+        "(1,0;t3)",
+        "(2,1;t2)",
+        "(2,2;t1)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 2,
+          "suit": 0
+        },
+        {
+          "rank": 3,
+          "suit": 3
+        },
+        {
+          "rank": 5,
+          "suit": 2
+        },
+        {
+          "rank": 7,
+          "suit": 1
+        }
+      ],
+      "rank_block": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 64,
+      "points": [
+        9,
+        11,
+        18,
+        32
+      ],
+      "labels": [
+        "(0,1;t1)",
+        "(0,1;t3)",
+        "(1,0;t2)",
+        "(2,1;t0)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 3,
+          "suit": 1
+        },
+        {
+          "rank": 4,
+          "suit": 3
+        },
+        {
+          "rank": 9,
+          "suit": 2
+        },
+        {
+          "rank": 8,
+          "suit": 0
+        }
+      ],
+      "rank_block": [
+        3,
+        4,
+        8,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 65,
+      "points": [
+        9,
+        15,
+        20,
+        38
+      ],
+      "labels": [
+        "(0,1;t1)",
+        "(0,2;t3)",
+        "(1,1;t0)",
+        "(2,2;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 3,
+          "suit": 1
+        },
+        {
+          "rank": 7,
+          "suit": 3
+        },
+        {
+          "rank": 4,
+          "suit": 0
+        },
+        {
+          "rank": 6,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        3,
+        4,
+        6,
+        7
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 66,
+      "points": [
+        9,
+        16,
+        23,
+        30
+      ],
+      "labels": [
+        "(0,1;t1)",
+        "(1,0;t0)",
+        "(1,1;t3)",
+        "(2,0;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 3,
+          "suit": 1
+        },
+        {
+          "rank": 6,
+          "suit": 0
+        },
+        {
+          "rank": 2,
+          "suit": 3
+        },
+        {
+          "rank": 8,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        2,
+        3,
+        6,
+        8
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 67,
+      "points": [
+        9,
+        26,
+        36,
+        39
+      ],
+      "labels": [
+        "(0,1;t1)",
+        "(1,2;t2)",
+        "(2,2;t0)",
+        "(2,2;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 3,
+          "suit": 1
+        },
+        {
+          "rank": 2,
+          "suit": 2
+        },
+        {
+          "rank": 7,
+          "suit": 0
+        },
+        {
+          "rank": 5,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 68,
+      "points": [
+        10,
+        16,
+        25,
+        39
+      ],
+      "labels": [
+        "(0,1;t2)",
+        "(1,0;t0)",
+        "(1,2;t1)",
+        "(2,2;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 4,
+          "suit": 2
+        },
+        {
+          "rank": 6,
+          "suit": 0
+        },
+        {
+          "rank": 2,
+          "suit": 1
+        },
+        {
+          "rank": 5,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        2,
+        4,
+        5,
+        6
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 69,
+      "points": [
+        10,
+        17,
+        19,
+        24
+      ],
+      "labels": [
+        "(0,1;t2)",
+        "(1,0;t1)",
+        "(1,0;t3)",
+        "(1,2;t0)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 4,
+          "suit": 2
+        },
+        {
+          "rank": 8,
+          "suit": 1
+        },
+        {
+          "rank": 3,
+          "suit": 3
+        },
+        {
+          "rank": 9,
+          "suit": 0
+        }
+      ],
+      "rank_block": [
+        3,
+        4,
+        8,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 70,
+      "points": [
+        10,
+        23,
+        29,
+        36
+      ],
+      "labels": [
+        "(0,1;t2)",
+        "(1,1;t3)",
+        "(2,0;t1)",
+        "(2,2;t0)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 4,
+          "suit": 2
+        },
+        {
+          "rank": 2,
+          "suit": 3
+        },
+        {
+          "rank": 9,
+          "suit": 1
+        },
+        {
+          "rank": 7,
+          "suit": 0
+        }
+      ],
+      "rank_block": [
+        2,
+        4,
+        7,
+        9
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 71,
+      "points": [
+        10,
+        28,
+        31,
+        37
+      ],
+      "labels": [
+        "(0,1;t2)",
+        "(2,0;t0)",
+        "(2,0;t3)",
+        "(2,2;t1)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 4,
+          "suit": 2
+        },
+        {
+          "rank": 3,
+          "suit": 0
+        },
+        {
+          "rank": 6,
+          "suit": 3
+        },
+        {
+          "rank": 7,
+          "suit": 1
+        }
+      ],
+      "rank_block": [
+        3,
+        4,
+        6,
+        7
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 72,
+      "points": [
+        11,
+        12,
+        30,
+        37
+      ],
+      "labels": [
+        "(0,1;t3)",
+        "(0,2;t0)",
+        "(2,0;t2)",
+        "(2,2;t1)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 4,
+          "suit": 3
+        },
+        {
+          "rank": 5,
+          "suit": 0
+        },
+        {
+          "rank": 8,
+          "suit": 2
+        },
+        {
+          "rank": 7,
+          "suit": 1
+        }
+      ],
+      "rank_block": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 73,
+      "points": [
+        11,
+        13,
+        22,
+        36
+      ],
+      "labels": [
+        "(0,1;t3)",
+        "(0,2;t1)",
+        "(1,1;t2)",
+        "(2,2;t0)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 4,
+          "suit": 3
+        },
+        {
+          "rank": 6,
+          "suit": 1
+        },
+        {
+          "rank": 3,
+          "suit": 2
+        },
+        {
+          "rank": 7,
+          "suit": 0
+        }
+      ],
+      "rank_block": [
+        3,
+        4,
+        6,
+        7
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 74,
+      "points": [
+        12,
+        15,
+        22,
+        25
+      ],
+      "labels": [
+        "(0,2;t0)",
+        "(0,2;t3)",
+        "(1,1;t2)",
+        "(1,2;t1)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 5,
+          "suit": 0
+        },
+        {
+          "rank": 7,
+          "suit": 3
+        },
+        {
+          "rank": 3,
+          "suit": 2
+        },
+        {
+          "rank": 2,
+          "suit": 1
+        }
+      ],
+      "rank_block": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 75,
+      "points": [
+        12,
+        19,
+        29,
+        38
+      ],
+      "labels": [
+        "(0,2;t0)",
+        "(1,0;t3)",
+        "(2,0;t1)",
+        "(2,2;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 5,
+          "suit": 0
+        },
+        {
+          "rank": 3,
+          "suit": 3
+        },
+        {
+          "rank": 9,
+          "suit": 1
+        },
+        {
+          "rank": 6,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        3,
+        5,
+        6,
+        9
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 76,
+      "points": [
+        12,
+        21,
+        26,
+        31
+      ],
+      "labels": [
+        "(0,2;t0)",
+        "(1,1;t1)",
+        "(1,2;t2)",
+        "(2,0;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 5,
+          "suit": 0
+        },
+        {
+          "rank": 4,
+          "suit": 1
+        },
+        {
+          "rank": 2,
+          "suit": 2
+        },
+        {
+          "rank": 6,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        2,
+        4,
+        5,
+        6
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 77,
+      "points": [
+        13,
+        15,
+        24,
+        30
+      ],
+      "labels": [
+        "(0,2;t1)",
+        "(0,2;t3)",
+        "(1,2;t0)",
+        "(2,0;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 6,
+          "suit": 1
+        },
+        {
+          "rank": 7,
+          "suit": 3
+        },
+        {
+          "rank": 9,
+          "suit": 0
+        },
+        {
+          "rank": 8,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 78,
+      "points": [
+        13,
+        18,
+        28,
+        39
+      ],
+      "labels": [
+        "(0,2;t1)",
+        "(1,0;t2)",
+        "(2,0;t0)",
+        "(2,2;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 6,
+          "suit": 1
+        },
+        {
+          "rank": 9,
+          "suit": 2
+        },
+        {
+          "rank": 3,
+          "suit": 0
+        },
+        {
+          "rank": 5,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        3,
+        5,
+        6,
+        9
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 79,
+      "points": [
+        13,
+        20,
+        23,
+        34
+      ],
+      "labels": [
+        "(0,2;t1)",
+        "(1,1;t0)",
+        "(1,1;t3)",
+        "(2,1;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 6,
+          "suit": 1
+        },
+        {
+          "rank": 4,
+          "suit": 0
+        },
+        {
+          "rank": 2,
+          "suit": 3
+        },
+        {
+          "rank": 5,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        2,
+        4,
+        5,
+        6
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 80,
+      "points": [
+        14,
+        16,
+        19,
+        21
+      ],
+      "labels": [
+        "(0,2;t2)",
+        "(1,0;t0)",
+        "(1,0;t3)",
+        "(1,1;t1)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 7,
+          "suit": 2
+        },
+        {
+          "rank": 6,
+          "suit": 0
+        },
+        {
+          "rank": 3,
+          "suit": 3
+        },
+        {
+          "rank": 4,
+          "suit": 1
+        }
+      ],
+      "rank_block": [
+        3,
+        4,
+        6,
+        7
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 81,
+      "points": [
+        14,
+        17,
+        20,
+        39
+      ],
+      "labels": [
+        "(0,2;t2)",
+        "(1,0;t1)",
+        "(1,1;t0)",
+        "(2,2;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 7,
+          "suit": 2
+        },
+        {
+          "rank": 8,
+          "suit": 1
+        },
+        {
+          "rank": 4,
+          "suit": 0
+        },
+        {
+          "rank": 5,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 82,
+      "points": [
+        14,
+        23,
+        28,
+        33
+      ],
+      "labels": [
+        "(0,2;t2)",
+        "(1,1;t3)",
+        "(2,0;t0)",
+        "(2,1;t1)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 7,
+          "suit": 2
+        },
+        {
+          "rank": 2,
+          "suit": 3
+        },
+        {
+          "rank": 3,
+          "suit": 0
+        },
+        {
+          "rank": 5,
+          "suit": 1
+        }
+      ],
+      "rank_block": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 83,
+      "points": [
+        14,
+        29,
+        31,
+        32
+      ],
+      "labels": [
+        "(0,2;t2)",
+        "(2,0;t1)",
+        "(2,0;t3)",
+        "(2,1;t0)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 7,
+          "suit": 2
+        },
+        {
+          "rank": 9,
+          "suit": 1
+        },
+        {
+          "rank": 6,
+          "suit": 3
+        },
+        {
+          "rank": 8,
+          "suit": 0
+        }
+      ],
+      "rank_block": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 84,
+      "points": [
+        16,
+        18,
+        35,
+        37
+      ],
+      "labels": [
+        "(1,0;t0)",
+        "(1,0;t2)",
+        "(2,1;t3)",
+        "(2,2;t1)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 6,
+          "suit": 0
+        },
+        {
+          "rank": 9,
+          "suit": 2
+        },
+        {
+          "rank": 8,
+          "suit": 3
+        },
+        {
+          "rank": 7,
+          "suit": 1
+        }
+      ],
+      "rank_block": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 85,
+      "points": [
+        17,
+        27,
+        36,
+        38
+      ],
+      "labels": [
+        "(1,0;t1)",
+        "(1,2;t3)",
+        "(2,2;t0)",
+        "(2,2;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 8,
+          "suit": 1
+        },
+        {
+          "rank": 9,
+          "suit": 3
+        },
+        {
+          "rank": 7,
+          "suit": 0
+        },
+        {
+          "rank": 6,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 86,
+      "points": [
+        20,
+        22,
+        29,
+        35
+      ],
+      "labels": [
+        "(1,1;t0)",
+        "(1,1;t2)",
+        "(2,0;t1)",
+        "(2,1;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 4,
+          "suit": 0
+        },
+        {
+          "rank": 3,
+          "suit": 2
+        },
+        {
+          "rank": 9,
+          "suit": 1
+        },
+        {
+          "rank": 8,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        3,
+        4,
+        8,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 87,
+      "points": [
+        21,
+        27,
+        28,
+        30
+      ],
+      "labels": [
+        "(1,1;t1)",
+        "(1,2;t3)",
+        "(2,0;t0)",
+        "(2,0;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 4,
+          "suit": 1
+        },
+        {
+          "rank": 9,
+          "suit": 3
+        },
+        {
+          "rank": 3,
+          "suit": 0
+        },
+        {
+          "rank": 8,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        3,
+        4,
+        8,
+        9
+      ],
+      "block_type": "double",
+      "block_lift_count": 4
+    },
+    {
+      "tetra_id": 88,
+      "points": [
+        24,
+        26,
+        33,
+        35
+      ],
+      "labels": [
+        "(1,2;t0)",
+        "(1,2;t2)",
+        "(2,1;t1)",
+        "(2,1;t3)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 9,
+          "suit": 0
+        },
+        {
+          "rank": 2,
+          "suit": 2
+        },
+        {
+          "rank": 5,
+          "suit": 1
+        },
+        {
+          "rank": 8,
+          "suit": 3
+        }
+      ],
+      "rank_block": [
+        2,
+        5,
+        8,
+        9
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    },
+    {
+      "tetra_id": 89,
+      "points": [
+        25,
+        27,
+        32,
+        34
+      ],
+      "labels": [
+        "(1,2;t1)",
+        "(1,2;t3)",
+        "(2,1;t0)",
+        "(2,1;t2)"
+      ],
+      "rank_suit": [
+        {
+          "rank": 2,
+          "suit": 1
+        },
+        {
+          "rank": 9,
+          "suit": 3
+        },
+        {
+          "rank": 8,
+          "suit": 0
+        },
+        {
+          "rank": 5,
+          "suit": 2
+        }
+      ],
+      "rank_block": [
+        2,
+        5,
+        8,
+        9
+      ],
+      "block_type": "single",
+      "block_lift_count": 2
+    }
+  ]
+}

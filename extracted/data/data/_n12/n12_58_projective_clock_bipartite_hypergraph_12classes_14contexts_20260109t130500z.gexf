@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-01-09">
+    <creator>NetworkX 2.8.8</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="kind" type="string" />
+      <attribute id="1" title="size" type="long" />
+    </attributes>
+    <nodes>
+      <node id="cls_sec0_m0" label="cls_sec0_m0">
+        <attvalues>
+          <attvalue for="0" value="class" />
+        </attvalues>
+      </node>
+      <node id="cls_sec0_m1" label="cls_sec0_m1">
+        <attvalues>
+          <attvalue for="0" value="class" />
+        </attvalues>
+      </node>
+      <node id="cls_sec0_m2" label="cls_sec0_m2">
+        <attvalues>
+          <attvalue for="0" value="class" />
+        </attvalues>
+      </node>
+      <node id="cls_sec1_m0" label="cls_sec1_m0">
+        <attvalues>
+          <attvalue for="0" value="class" />
+        </attvalues>
+      </node>
+      <node id="cls_sec1_m1" label="cls_sec1_m1">
+        <attvalues>
+          <attvalue for="0" value="class" />
+        </attvalues>
+      </node>
+      <node id="cls_sec1_m2" label="cls_sec1_m2">
+        <attvalues>
+          <attvalue for="0" value="class" />
+        </attvalues>
+      </node>
+      <node id="cls_sec2_m0" label="cls_sec2_m0">
+        <attvalues>
+          <attvalue for="0" value="class" />
+        </attvalues>
+      </node>
+      <node id="cls_sec2_m1" label="cls_sec2_m1">
+        <attvalues>
+          <attvalue for="0" value="class" />
+        </attvalues>
+      </node>
+      <node id="cls_sec2_m2" label="cls_sec2_m2">
+        <attvalues>
+          <attvalue for="0" value="class" />
+        </attvalues>
+      </node>
+      <node id="cls_sec3_m0" label="cls_sec3_m0">
+        <attvalues>
+          <attvalue for="0" value="class" />
+        </attvalues>
+      </node>
+      <node id="cls_sec3_m1" label="cls_sec3_m1">
+        <attvalues>
+          <attvalue for="0" value="class" />
+        </attvalues>
+      </node>
+      <node id="cls_sec3_m2" label="cls_sec3_m2">
+        <attvalues>
+          <attvalue for="0" value="class" />
+        </attvalues>
+      </node>
+      <node id="ctx_0" label="ctx_0">
+        <attvalues>
+          <attvalue for="0" value="context" />
+          <attvalue for="1" value="12" />
+        </attvalues>
+      </node>
+      <node id="ctx_1" label="ctx_1">
+        <attvalues>
+          <attvalue for="0" value="context" />
+          <attvalue for="1" value="12" />
+        </attvalues>
+      </node>
+      <node id="ctx_2" label="ctx_2">
+        <attvalues>
+          <attvalue for="0" value="context" />
+          <attvalue for="1" value="12" />
+        </attvalues>
+      </node>
+      <node id="ctx_3" label="ctx_3">
+        <attvalues>
+          <attvalue for="0" value="context" />
+          <attvalue for="1" value="12" />
+        </attvalues>
+      </node>
+      <node id="ctx_4" label="ctx_4">
+        <attvalues>
+          <attvalue for="0" value="context" />
+          <attvalue for="1" value="12" />
+        </attvalues>
+      </node>
+      <node id="ctx_5" label="ctx_5">
+        <attvalues>
+          <attvalue for="0" value="context" />
+          <attvalue for="1" value="6" />
+        </attvalues>
+      </node>
+      <node id="ctx_6" label="ctx_6">
+        <attvalues>
+          <attvalue for="0" value="context" />
+          <attvalue for="1" value="12" />
+        </attvalues>
+      </node>
+      <node id="ctx_7" label="ctx_7">
+        <attvalues>
+          <attvalue for="0" value="context" />
+          <attvalue for="1" value="6" />
+        </attvalues>
+      </node>
+      <node id="ctx_8" label="ctx_8">
+        <attvalues>
+          <attvalue for="0" value="context" />
+          <attvalue for="1" value="6" />
+        </attvalues>
+      </node>
+      <node id="ctx_9" label="ctx_9">
+        <attvalues>
+          <attvalue for="0" value="context" />
+          <attvalue for="1" value="12" />
+        </attvalues>
+      </node>
+      <node id="ctx_10" label="ctx_10">
+        <attvalues>
+          <attvalue for="0" value="context" />
+          <attvalue for="1" value="12" />
+        </attvalues>
+      </node>
+      <node id="ctx_11" label="ctx_11">
+        <attvalues>
+          <attvalue for="0" value="context" />
+          <attvalue for="1" value="6" />
+        </attvalues>
+      </node>
+      <node id="ctx_12" label="ctx_12">
+        <attvalues>
+          <attvalue for="0" value="context" />
+          <attvalue for="1" value="12" />
+        </attvalues>
+      </node>
+      <node id="ctx_13" label="ctx_13">
+        <attvalues>
+          <attvalue for="0" value="context" />
+          <attvalue for="1" value="12" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="cls_sec0_m0" target="ctx_0" id="0" />
+      <edge source="cls_sec0_m0" target="ctx_1" id="1" />
+      <edge source="cls_sec0_m0" target="ctx_2" id="2" />
+      <edge source="cls_sec0_m0" target="ctx_3" id="3" />
+      <edge source="cls_sec0_m0" target="ctx_4" id="4" />
+      <edge source="cls_sec0_m0" target="ctx_5" id="5" />
+      <edge source="cls_sec0_m0" target="ctx_6" id="6" />
+      <edge source="cls_sec0_m0" target="ctx_8" id="7" />
+      <edge source="cls_sec0_m0" target="ctx_9" id="8" />
+      <edge source="cls_sec0_m0" target="ctx_10" id="9" />
+      <edge source="cls_sec0_m0" target="ctx_11" id="10" />
+      <edge source="cls_sec0_m0" target="ctx_12" id="11" />
+      <edge source="cls_sec0_m0" target="ctx_13" id="12" />
+      <edge source="cls_sec0_m1" target="ctx_0" id="13" />
+      <edge source="cls_sec0_m1" target="ctx_1" id="14" />
+      <edge source="cls_sec0_m1" target="ctx_2" id="15" />
+      <edge source="cls_sec0_m1" target="ctx_3" id="16" />
+      <edge source="cls_sec0_m1" target="ctx_4" id="17" />
+      <edge source="cls_sec0_m1" target="ctx_5" id="18" />
+      <edge source="cls_sec0_m1" target="ctx_6" id="19" />
+      <edge source="cls_sec0_m1" target="ctx_8" id="20" />
+      <edge source="cls_sec0_m1" target="ctx_9" id="21" />
+      <edge source="cls_sec0_m1" target="ctx_10" id="22" />
+      <edge source="cls_sec0_m1" target="ctx_11" id="23" />
+      <edge source="cls_sec0_m1" target="ctx_12" id="24" />
+      <edge source="cls_sec0_m1" target="ctx_13" id="25" />
+      <edge source="cls_sec0_m2" target="ctx_0" id="26" />
+      <edge source="cls_sec0_m2" target="ctx_1" id="27" />
+      <edge source="cls_sec0_m2" target="ctx_2" id="28" />
+      <edge source="cls_sec0_m2" target="ctx_3" id="29" />
+      <edge source="cls_sec0_m2" target="ctx_4" id="30" />
+      <edge source="cls_sec0_m2" target="ctx_5" id="31" />
+      <edge source="cls_sec0_m2" target="ctx_6" id="32" />
+      <edge source="cls_sec0_m2" target="ctx_8" id="33" />
+      <edge source="cls_sec0_m2" target="ctx_9" id="34" />
+      <edge source="cls_sec0_m2" target="ctx_10" id="35" />
+      <edge source="cls_sec0_m2" target="ctx_11" id="36" />
+      <edge source="cls_sec0_m2" target="ctx_12" id="37" />
+      <edge source="cls_sec0_m2" target="ctx_13" id="38" />
+      <edge source="cls_sec1_m0" target="ctx_0" id="39" />
+      <edge source="cls_sec1_m0" target="ctx_1" id="40" />
+      <edge source="cls_sec1_m0" target="ctx_2" id="41" />
+      <edge source="cls_sec1_m0" target="ctx_3" id="42" />
+      <edge source="cls_sec1_m0" target="ctx_4" id="43" />
+      <edge source="cls_sec1_m0" target="ctx_5" id="44" />
+      <edge source="cls_sec1_m0" target="ctx_6" id="45" />
+      <edge source="cls_sec1_m0" target="ctx_8" id="46" />
+      <edge source="cls_sec1_m0" target="ctx_9" id="47" />
+      <edge source="cls_sec1_m0" target="ctx_10" id="48" />
+      <edge source="cls_sec1_m0" target="ctx_11" id="49" />
+      <edge source="cls_sec1_m0" target="ctx_12" id="50" />
+      <edge source="cls_sec1_m0" target="ctx_13" id="51" />
+      <edge source="cls_sec1_m1" target="ctx_0" id="52" />
+      <edge source="cls_sec1_m1" target="ctx_1" id="53" />
+      <edge source="cls_sec1_m1" target="ctx_2" id="54" />
+      <edge source="cls_sec1_m1" target="ctx_3" id="55" />
+      <edge source="cls_sec1_m1" target="ctx_4" id="56" />
+      <edge source="cls_sec1_m1" target="ctx_5" id="57" />
+      <edge source="cls_sec1_m1" target="ctx_6" id="58" />
+      <edge source="cls_sec1_m1" target="ctx_8" id="59" />
+      <edge source="cls_sec1_m1" target="ctx_9" id="60" />
+      <edge source="cls_sec1_m1" target="ctx_10" id="61" />
+      <edge source="cls_sec1_m1" target="ctx_11" id="62" />
+      <edge source="cls_sec1_m1" target="ctx_12" id="63" />
+      <edge source="cls_sec1_m1" target="ctx_13" id="64" />
+      <edge source="cls_sec1_m2" target="ctx_0" id="65" />
+      <edge source="cls_sec1_m2" target="ctx_1" id="66" />
+      <edge source="cls_sec1_m2" target="ctx_2" id="67" />
+      <edge source="cls_sec1_m2" target="ctx_3" id="68" />
+      <edge source="cls_sec1_m2" target="ctx_4" id="69" />
+      <edge source="cls_sec1_m2" target="ctx_5" id="70" />
+      <edge source="cls_sec1_m2" target="ctx_6" id="71" />
+      <edge source="cls_sec1_m2" target="ctx_8" id="72" />
+      <edge source="cls_sec1_m2" target="ctx_9" id="73" />
+      <edge source="cls_sec1_m2" target="ctx_10" id="74" />
+      <edge source="cls_sec1_m2" target="ctx_11" id="75" />
+      <edge source="cls_sec1_m2" target="ctx_12" id="76" />
+      <edge source="cls_sec1_m2" target="ctx_13" id="77" />
+      <edge source="cls_sec2_m0" target="ctx_0" id="78" />
+      <edge source="cls_sec2_m0" target="ctx_1" id="79" />
+      <edge source="cls_sec2_m0" target="ctx_2" id="80" />
+      <edge source="cls_sec2_m0" target="ctx_3" id="81" />
+      <edge source="cls_sec2_m0" target="ctx_4" id="82" />
+      <edge source="cls_sec2_m0" target="ctx_6" id="83" />
+      <edge source="cls_sec2_m0" target="ctx_7" id="84" />
+      <edge source="cls_sec2_m0" target="ctx_9" id="85" />
+      <edge source="cls_sec2_m0" target="ctx_10" id="86" />
+      <edge source="cls_sec2_m0" target="ctx_12" id="87" />
+      <edge source="cls_sec2_m0" target="ctx_13" id="88" />
+      <edge source="cls_sec2_m1" target="ctx_0" id="89" />
+      <edge source="cls_sec2_m1" target="ctx_1" id="90" />
+      <edge source="cls_sec2_m1" target="ctx_2" id="91" />
+      <edge source="cls_sec2_m1" target="ctx_3" id="92" />
+      <edge source="cls_sec2_m1" target="ctx_4" id="93" />
+      <edge source="cls_sec2_m1" target="ctx_6" id="94" />
+      <edge source="cls_sec2_m1" target="ctx_7" id="95" />
+      <edge source="cls_sec2_m1" target="ctx_9" id="96" />
+      <edge source="cls_sec2_m1" target="ctx_10" id="97" />
+      <edge source="cls_sec2_m1" target="ctx_12" id="98" />
+      <edge source="cls_sec2_m1" target="ctx_13" id="99" />
+      <edge source="cls_sec2_m2" target="ctx_0" id="100" />
+      <edge source="cls_sec2_m2" target="ctx_1" id="101" />
+      <edge source="cls_sec2_m2" target="ctx_2" id="102" />
+      <edge source="cls_sec2_m2" target="ctx_3" id="103" />
+      <edge source="cls_sec2_m2" target="ctx_4" id="104" />
+      <edge source="cls_sec2_m2" target="ctx_6" id="105" />
+      <edge source="cls_sec2_m2" target="ctx_7" id="106" />
+      <edge source="cls_sec2_m2" target="ctx_9" id="107" />
+      <edge source="cls_sec2_m2" target="ctx_10" id="108" />
+      <edge source="cls_sec2_m2" target="ctx_12" id="109" />
+      <edge source="cls_sec2_m2" target="ctx_13" id="110" />
+      <edge source="cls_sec3_m0" target="ctx_0" id="111" />
+      <edge source="cls_sec3_m0" target="ctx_1" id="112" />
+      <edge source="cls_sec3_m0" target="ctx_2" id="113" />
+      <edge source="cls_sec3_m0" target="ctx_3" id="114" />
+      <edge source="cls_sec3_m0" target="ctx_4" id="115" />
+      <edge source="cls_sec3_m0" target="ctx_6" id="116" />
+      <edge source="cls_sec3_m0" target="ctx_7" id="117" />
+      <edge source="cls_sec3_m0" target="ctx_9" id="118" />
+      <edge source="cls_sec3_m0" target="ctx_10" id="119" />
+      <edge source="cls_sec3_m0" target="ctx_12" id="120" />
+      <edge source="cls_sec3_m0" target="ctx_13" id="121" />
+      <edge source="cls_sec3_m1" target="ctx_0" id="122" />
+      <edge source="cls_sec3_m1" target="ctx_1" id="123" />
+      <edge source="cls_sec3_m1" target="ctx_2" id="124" />
+      <edge source="cls_sec3_m1" target="ctx_3" id="125" />
+      <edge source="cls_sec3_m1" target="ctx_4" id="126" />
+      <edge source="cls_sec3_m1" target="ctx_6" id="127" />
+      <edge source="cls_sec3_m1" target="ctx_7" id="128" />
+      <edge source="cls_sec3_m1" target="ctx_9" id="129" />
+      <edge source="cls_sec3_m1" target="ctx_10" id="130" />
+      <edge source="cls_sec3_m1" target="ctx_12" id="131" />
+      <edge source="cls_sec3_m1" target="ctx_13" id="132" />
+      <edge source="cls_sec3_m2" target="ctx_0" id="133" />
+      <edge source="cls_sec3_m2" target="ctx_1" id="134" />
+      <edge source="cls_sec3_m2" target="ctx_2" id="135" />
+      <edge source="cls_sec3_m2" target="ctx_3" id="136" />
+      <edge source="cls_sec3_m2" target="ctx_4" id="137" />
+      <edge source="cls_sec3_m2" target="ctx_6" id="138" />
+      <edge source="cls_sec3_m2" target="ctx_7" id="139" />
+      <edge source="cls_sec3_m2" target="ctx_9" id="140" />
+      <edge source="cls_sec3_m2" target="ctx_10" id="141" />
+      <edge source="cls_sec3_m2" target="ctx_12" id="142" />
+      <edge source="cls_sec3_m2" target="ctx_13" id="143" />
+    </edges>
+  </graph>
+</gexf>

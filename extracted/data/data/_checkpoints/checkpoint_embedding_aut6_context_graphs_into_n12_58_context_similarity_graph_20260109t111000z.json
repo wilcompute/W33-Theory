@@ -1,0 +1,113 @@
+﻿{
+  "timestamp_local": "2026-01-09T06:10:00-05:00",
+  "purpose": "Construct N12_58 context similarity graphs from its 14 size-12 missing-triangle orbits using dot-pairing scores between 12 H1 vectors per orbit; search for subgraph embeddings of aut=6 context geometries (N12_54, N12_57).",
+  "N12_58_context_nodes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "context_orbit_unique_class_counts": {
+    "0": 12,
+    "1": 12,
+    "2": 12,
+    "3": 12,
+    "4": 12,
+    "5": 6,
+    "6": 12,
+    "7": 6,
+    "8": 6,
+    "9": 12,
+    "10": 12,
+    "11": 6,
+    "12": 12,
+    "13": 12
+  },
+  "similarity_score_definition": "For two orbits A,B, score = sum_{v in A} sum_{w in B} (v\u00b7w mod 2), where v,w are 12-bit H1 vectors of missing triangles (with multiplicity). Range 0..144.",
+  "score_stats": {
+    "min": 36,
+    "max": 82,
+    "mean": 65.53846153846153,
+    "quantiles": {
+      "10%": 56.0,
+      "25%": 60.0,
+      "50%": 66.0,
+      "75%": 70.0,
+      "90%": 80.0
+    }
+  },
+  "threshold_scan_results": [
+    {
+      "threshold": 60,
+      "N58_edges": 77,
+      "N58_avg_deg": 11.0,
+      "embed_N54": true,
+      "embed_N57": false
+    },
+    {
+      "threshold": 62,
+      "N58_edges": 62,
+      "N58_avg_deg": 8.857142857142858,
+      "embed_N54": true,
+      "embed_N57": false
+    },
+    {
+      "threshold": 64,
+      "N58_edges": 60,
+      "N58_avg_deg": 8.571428571428571,
+      "embed_N54": true,
+      "embed_N57": false
+    },
+    {
+      "threshold": 66,
+      "N58_edges": 51,
+      "N58_avg_deg": 7.285714285714286,
+      "embed_N54": true,
+      "embed_N57": false
+    },
+    {
+      "threshold": 68,
+      "N58_edges": 36,
+      "N58_avg_deg": 5.142857142857143,
+      "embed_N54": false,
+      "embed_N57": false
+    }
+  ],
+  "embedding_results": {
+    "N12_54_embeds": true,
+    "thresholds_with_embedding_N12_54": [
+      60,
+      62,
+      64,
+      66
+    ],
+    "N12_57_embeds": false,
+    "chosen_threshold_for_export": 64,
+    "embedding_csv": "/mnt/data/_embeddings/embedding_n12_54_context_graph_into_n12_58_similarity_graph_threshold64_20260109t111000z.csv"
+  },
+  "exports": {
+    "N12_58_edges_threshold64_csv": "/mnt/data/_n12/n12_58_context_graph_edges_threshold64_20260109t111000z.csv",
+    "N12_58_stats_thresholds_csv": "/mnt/data/_n12/n12_58_context_graph_stats_thresholds60_62_64_66_20260109t111000z.csv",
+    "N12_58_gexf_thresholds": {
+      "60": "/mnt/data/_n12/n12_58_context_graph_similarity_dot12x12_threshold60_20260109t111000z.gexf",
+      "62": "/mnt/data/_n12/n12_58_context_graph_similarity_dot12x12_threshold62_20260109t111000z.gexf",
+      "64": "/mnt/data/_n12/n12_58_context_graph_similarity_dot12x12_threshold64_20260109t111000z.gexf",
+      "66": "/mnt/data/_n12/n12_58_context_graph_similarity_dot12x12_threshold66_20260109t111000z.gexf"
+    }
+  },
+  "notes": [
+    "The aut=6 context graphs are dense (dot-score>=3 among their 3x3 class vectors). To enable embedding, the N12_58 similarity threshold must be low enough to yield a sufficiently dense graph.",
+    "N12_54 embeds as a subgraph of N12_58 for thresholds 60-66 under this similarity definition; N12_57 did not embed in this scan, suggesting either a different thresholding or a need for a refined similarity (e.g., symplectic pairing / weighted class treatment)."
+  ]
+}
+

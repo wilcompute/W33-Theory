@@ -1,0 +1,17 @@
+{
+  "quotient_graph": {
+    "v": 45,
+    "k": 32,
+    "lambda": 22,
+    "mu": 24,
+    "edges": 720
+  },
+  "quotient_complement": {
+    "v": 45,
+    "k": 12,
+    "lambda": 3,
+    "mu": 3,
+    "edges": 270
+  },
+  "interpretation": "quotient_complement has parameters (45,12,3,3); an example of srg(45,12,3,3) is the point graph of the generalized quadrangle GQ(4,2)."
+}

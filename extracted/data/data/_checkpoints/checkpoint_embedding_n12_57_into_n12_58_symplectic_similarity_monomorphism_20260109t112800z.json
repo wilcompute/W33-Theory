@@ -1,0 +1,36 @@
+﻿{
+  "timestamp_local": "2026-01-09T06:28:00-05:00",
+  "purpose": "Use symplectic (intersection-form) pairing similarity on N12_58 contexts to embed the aut=6 (N12_57) context geometry; distinguish induced-subgraph embedding vs monomorphism embedding.",
+  "symplectic_similarity": {
+    "definition": "score(A,B)=sum_{v in A} sum_{w in B} (v^T J w mod 2), where v,w are 12-bit H1 vectors (with multiplicity) and J is the 12x12 intersection form over GF(2).",
+    "score_stats": {
+      "min": 0,
+      "max": 72,
+      "mean": 46.417582417582416,
+      "quantiles": {
+        "10%": 24.0,
+        "25%": 48.0,
+        "50%": 48.0,
+        "75%": 48.0,
+        "90%": 72.0
+      }
+    }
+  },
+  "embedding_results": {
+    "pattern_graph": "N12_57_context_graph_dot_score_ge3 (10 nodes, 36 edges)",
+    "host_graph_family": "N12_58_symplectic_similarity_threshold_graphs on 14 size-12 orbits",
+    "induced_isomorphism": "No induced-subgraph embedding found (as expected for dense host graphs with extra edges).",
+    "monomorphism_embedding": "Yes for thresholds 24-48; chosen threshold=44 for export.",
+    "embedding_csv": "/mnt/data/_embeddings/embedding_n12_57_context_graph_monomorphism_into_n12_58_symplectic_similarity_th44_20260109t112800z.csv"
+  },
+  "exports": {
+    "scan_csv": "/mnt/data/_embeddings/embedding_scan_n12_57_into_n12_58_symplectic_similarity_thresholds_20260109t112800z.csv",
+    "host_graph_gexf": "/mnt/data/_n12/n12_58_context_graph_symplectic_similarity_threshold44_20260109t112800z.gexf",
+    "host_graph_edges_csv": "/mnt/data/_n12/n12_58_context_graph_symplectic_edges_threshold44_20260109t112800z.csv"
+  },
+  "notes": [
+    "The earlier failure under subgraph_isomorphisms_iter was because that routine checks induced subgraph isomorphism; dense host graphs introduce extra edges and break induced matching.",
+    "Monomorphism is the correct notion for 'subkernel inclusion' here: pattern edges must exist in host, extra host edges are allowed."
+  ]
+}
+

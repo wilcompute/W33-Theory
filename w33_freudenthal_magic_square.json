@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-01-14T16:01:13.209780",
+  "title": "Freudenthal Magic Square and W33",
+  "division_algebras": {
+    "R": {
+      "name": "Real numbers",
+      "dim": 1,
+      "associative": true,
+      "commutative": true
+    },
+    "C": {
+      "name": "Complex numbers",
+      "dim": 2,
+      "associative": true,
+      "commutative": true
+    },
+    "H": {
+      "name": "Quaternions",
+      "dim": 4,
+      "associative": true,
+      "commutative": false
+    },
+    "O": {
+      "name": "Octonions",
+      "dim": 8,
+      "associative": false,
+      "commutative": false
+    }
+  },
+  "magic_square": {
+    

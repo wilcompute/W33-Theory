@@ -1,0 +1,13 @@
+{
+  "vertices": 12,
+  "contexts": 14,
+  "context_size_hist": {
+    "12": 10,
+    "6": 4
+  },
+  "class_degree_hist": {
+    "13": 6,
+    "11": 6
+  },
+  "wl_hash_bipartite": "f28cd5efd335019bf736908668b51691"
+}

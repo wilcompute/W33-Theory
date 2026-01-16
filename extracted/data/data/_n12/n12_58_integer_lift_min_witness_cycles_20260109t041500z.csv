@@ -1,0 +1,3 @@
+cycle,nodes_order,cycle_edges,delta4_edge,const_sum_noncentral,requires_x_0-20
+C1 (chord 20-38),0 -> 20 -> 38 -> 6 -> 0,"0-20,20-38,38-6,6-0",0-20,4,-1
+C2 (chord 26-44),20 -> 0 -> 26 -> 44 -> 20,"0-20,0-26,26-44,44-20",0-20,-4,1

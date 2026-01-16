@@ -1,0 +1,7 @@
+{
+  "AutW33_induced_on_center_quads_order": 51840,
+  "antipodal_swap_is_automorphism": true,
+  "extended_group_generated_order": 103680,
+  "extended_group_is_transitive": true,
+  "note": "Extended group = < induced Aut(W33) action, antipodal swap >. We did not prove it is the full automorphism group."
+}

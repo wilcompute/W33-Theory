@@ -1,0 +1,2 @@
+from_gq42_point,to_gq42_point,Z2_voltage_canonical,S3_perm_to_map_ports_from_from_to_to,S3_perm_tuple,S3_perm_parity
+41,7,0,"0->0,1->2,2->1","(0, 2, 1)",1

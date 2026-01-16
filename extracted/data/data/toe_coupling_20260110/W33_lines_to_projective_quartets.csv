@@ -1,0 +1,41 @@
+line_id,line_type,type,w33_cards,proj_list,rainbow_m_tuple_SHDC,equation,special_tag,proj_quartet_str
+0,monochrome12,monochrome,2♡ 3♠ 8♡ 9♡,"['sec3_m0', 'sec3_m1', 'sec3_m2']",,"fixed (sector=3, m=0)",,sec3_m0 sec3_m1 sec3_m2
+1,other,rainbow,1♡ 3♠ 6♠ 10♠,"['sec0_m1', 'sec1_m0', 'sec2_m0', 'sec3_m0']","1,0,0,0",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m1 sec1_m0 sec2_m0 sec3_m0
+2,rank_spread,rainbow,7♠ 7♡ 7♢ 7♣,"['sec0_m0', 'sec1_m0', 'sec2_m0', 'sec3_m1']","0,0,0,1",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m0 sec1_m0 sec2_m0 sec3_m1
+3,other,rainbow,3♢ 4♣ 8♠ 10♡,"['sec0_m0', 'sec1_m2', 'sec2_m1', 'sec3_m1']","0,2,1,1",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m0 sec1_m2 sec2_m1 sec3_m1
+4,other,rainbow,2♣ 3♢ 6♢ 7♠,"['sec0_m1', 'sec1_m0', 'sec2_m1', 'sec3_m2']","1,0,1,2",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m1 sec1_m0 sec2_m1 sec3_m2
+5,other,rainbow,5♡ 7♣ 8♢ 10♠,"['sec0_m1', 'sec1_m1', 'sec2_m1', 'sec3_m1']","1,1,1,1",mS+mH+mD+mC ≡ 1 (mod 3),pure_phase_sector_mixer,sec0_m1 sec1_m1 sec2_m1 sec3_m1
+6,rank_spread,rainbow,3♠ 3♡ 3♢ 3♣,"['sec0_m2', 'sec1_m1', 'sec2_m1', 'sec3_m0']","2,1,1,0",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m2 sec1_m1 sec2_m1 sec3_m0
+7,rank_spread,rainbow,6♠ 6♡ 6♢ 6♣,"['sec0_m0', 'sec1_m2', 'sec2_m0', 'sec3_m2']","0,2,0,2",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m0 sec1_m2 sec2_m0 sec3_m2
+8,other,rainbow,3♡ 4♠ 8♣ 10♣,"['sec0_m2', 'sec1_m0', 'sec2_m0', 'sec3_m2']","2,0,0,2",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m2 sec1_m0 sec2_m0 sec3_m2
+9,monochrome12,monochrome,6♡ 7♢ 8♠ 9♣,"['sec0_m0', 'sec0_m1', 'sec0_m2']",,"fixed (sector=0, m=0)",,sec0_m0 sec0_m1 sec0_m2
+10,rank_spread,hub_transversal,9♠ 9♡ 9♢ 9♣,"['sec0_m0', 'sec0_m1', 'sec0_m2', 'sec1_m0', 'sec1_m1', 'sec1_m2', 'sec2_m0', 'sec2_m1', 'sec2_m2', 'sec3_m0', 'sec3_m1', 'sec3_m2']",,contains all four hub points; intersects all 12 projective classes,hub_identity_operator,sec0_m0 sec0_m1 sec0_m2 sec1_m0 sec1_m1 sec1_m2 sec2_m0 sec2_m1 sec2_m2 sec3_m0 sec3_m1 sec3_m2
+11,other,rainbow,2♡ 4♠ 5♡ 6♡,"['sec0_m0', 'sec1_m0', 'sec2_m1', 'sec3_m0']","0,0,1,0",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m0 sec1_m0 sec2_m1 sec3_m0
+12,monochrome12,monochrome,6♠ 7♡ 8♣ 9♢,"['sec2_m0', 'sec2_m1', 'sec2_m2']",,"fixed (sector=2, m=0)",,sec2_m0 sec2_m1 sec2_m2
+13,other,rainbow,3♠ 4♡ 5♢ 7♢,"['sec0_m0', 'sec1_m2', 'sec2_m2', 'sec3_m0']","0,2,2,0",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m0 sec1_m2 sec2_m2 sec3_m0
+14,other,rainbow,2♢ 4♣ 5♣ 6♠,"['sec0_m2', 'sec1_m1', 'sec2_m0', 'sec3_m1']","2,1,0,1",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m2 sec1_m1 sec2_m0 sec3_m1
+15,rank_spread,rainbow,8♠ 8♡ 8♢ 8♣,"['sec0_m0', 'sec1_m1', 'sec2_m0', 'sec3_m0']","0,1,0,0",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m0 sec1_m1 sec2_m0 sec3_m0
+16,other,rainbow,3♣ 4♢ 5♠ 7♡,"['sec0_m1', 'sec1_m1', 'sec2_m0', 'sec3_m2']","1,1,0,2",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m1 sec1_m1 sec2_m0 sec3_m2
+17,rank_spread,rainbow,1♠ 1♡ 1♢ 1♣,"['sec0_m2', 'sec1_m0', 'sec2_m1', 'sec3_m1']","2,0,1,1",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m2 sec1_m0 sec2_m1 sec3_m1
+18,other,rainbow,1♡ 2♠ 5♠ 8♠,"['sec0_m0', 'sec1_m0', 'sec2_m2', 'sec3_m2']","0,0,2,2",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m0 sec1_m0 sec2_m2 sec3_m2
+19,rank_spread,rainbow,10♠ 10♡ 10♢ 10♣,"['sec0_m1', 'sec1_m2', 'sec2_m2', 'sec3_m2']","1,2,2,2",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m1 sec1_m2 sec2_m2 sec3_m2
+20,other,rainbow,1♠ 4♡ 6♢ 8♢,"['sec0_m2', 'sec1_m1', 'sec2_m2', 'sec3_m2']","2,1,2,2",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m2 sec1_m1 sec2_m2 sec3_m2
+21,other,rainbow,1♢ 2♢ 7♢ 10♣,"['sec0_m0', 'sec1_m1', 'sec2_m1', 'sec3_m2']","0,1,1,2",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m0 sec1_m1 sec2_m1 sec3_m2
+22,other,rainbow,5♣ 7♠ 8♡ 10♢,"['sec0_m2', 'sec1_m0', 'sec2_m2', 'sec3_m0']","2,0,2,0",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m2 sec1_m0 sec2_m2 sec3_m0
+23,rank_spread,rainbow,4♠ 4♡ 4♢ 4♣,"['sec0_m1', 'sec1_m0', 'sec2_m2', 'sec3_m1']","1,0,2,1",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m1 sec1_m0 sec2_m2 sec3_m1
+24,monochrome12,monochrome,2♣ 4♢ 9♣ 10♠,"['sec0_m0', 'sec0_m1', 'sec0_m2']",,"fixed (sector=0, m=1)",,sec0_m0 sec0_m1 sec0_m2
+25,monochrome12,monochrome,1♢ 3♢ 5♡ 9♢,"['sec2_m0', 'sec2_m1', 'sec2_m2']",,"fixed (sector=2, m=1)",,sec2_m0 sec2_m1 sec2_m2
+26,rank_spread,rainbow,2♠ 2♡ 2♢ 2♣,"['sec0_m1', 'sec1_m1', 'sec2_m2', 'sec3_m0']","1,1,2,0",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m1 sec1_m1 sec2_m2 sec3_m0
+27,monochrome12,monochrome,1♡ 4♠ 7♠ 9♠,"['sec1_m0', 'sec1_m1', 'sec1_m2']",,"fixed (sector=1, m=0)",,sec1_m0 sec1_m1 sec1_m2
+28,other,rainbow,1♠ 2♡ 7♡ 10♡,"['sec0_m2', 'sec1_m2', 'sec2_m0', 'sec3_m0']","2,2,0,0",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m2 sec1_m2 sec2_m0 sec3_m0
+29,monochrome12,monochrome,2♢ 3♣ 8♢ 9♠,"['sec1_m0', 'sec1_m1', 'sec1_m2']",,"fixed (sector=1, m=1)",,sec1_m0 sec1_m1 sec1_m2
+30,rank_spread,rainbow,5♠ 5♡ 5♢ 5♣,"['sec0_m2', 'sec1_m2', 'sec2_m1', 'sec3_m2']","2,2,1,2",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m2 sec1_m2 sec2_m1 sec3_m2
+31,monochrome12,monochrome,1♠ 3♡ 5♣ 9♣,"['sec0_m0', 'sec0_m1', 'sec0_m2']",,"fixed (sector=0, m=2)",,sec0_m0 sec0_m1 sec0_m2
+32,other,rainbow,1♢ 4♢ 6♣ 8♡,"['sec0_m1', 'sec1_m2', 'sec2_m1', 'sec3_m0']","1,2,1,0",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m1 sec1_m2 sec2_m1 sec3_m0
+33,monochrome12,monochrome,5♢ 6♣ 9♠ 10♡,"['sec1_m0', 'sec1_m1', 'sec1_m2']",,"fixed (sector=1, m=2)",,sec1_m0 sec1_m1 sec1_m2
+34,monochrome12,monochrome,1♣ 4♣ 7♣ 9♡,"['sec3_m0', 'sec3_m1', 'sec3_m2']",,"fixed (sector=3, m=1)",,sec3_m0 sec3_m1 sec3_m2
+35,other,rainbow,1♣ 2♣ 5♢ 8♣,"['sec0_m1', 'sec1_m2', 'sec2_m0', 'sec3_m1']","1,2,0,1",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m1 sec1_m2 sec2_m0 sec3_m1
+36,other,rainbow,1♣ 3♣ 6♡ 10♢,"['sec0_m0', 'sec1_m1', 'sec2_m2', 'sec3_m1']","0,1,2,1",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m0 sec1_m1 sec2_m2 sec3_m1
+37,monochrome12,monochrome,5♠ 6♢ 9♡ 10♣,"['sec3_m0', 'sec3_m1', 'sec3_m2']",,"fixed (sector=3, m=2)",,sec3_m0 sec3_m1 sec3_m2
+38,monochrome12,monochrome,2♠ 4♡ 9♢ 10♢,"['sec2_m0', 'sec2_m1', 'sec2_m2']",,"fixed (sector=2, m=2)",,sec2_m0 sec2_m1 sec2_m2
+39,other,rainbow,2♠ 3♡ 6♣ 7♣,"['sec0_m2', 'sec1_m2', 'sec2_m2', 'sec3_m1']","2,2,2,1",mS+mH+mD+mC ≡ 1 (mod 3),,sec0_m2 sec1_m2 sec2_m2 sec3_m1

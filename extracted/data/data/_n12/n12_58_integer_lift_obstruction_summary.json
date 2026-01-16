@@ -1,0 +1,18 @@
+﻿{
+  "delta4_edges": [
+    "0-20",
+    "10-12",
+    "26-27",
+    "27-45"
+  ],
+  "num_constraints": 67,
+  "num_solutions": 0,
+  "witness": {
+    "min_unsat_constraints": 2,
+    "constraint_ids": [
+      0,
+      3
+    ],
+    "witness_csv": "/mnt/data/_n12/n12_58_integer_lift_unsat_witness.csv"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "distinct_missing_H1_classes": 110,
+  "tau_cycle_length_histogram": {
+    "3": 36,
+    "1": 2
+  },
+  "num_cycles": 38,
+  "fixed_points": [
+    {
+      "rep_triangle": "678",
+      "tau_image_rep_triangle": "678"
+    },
+    {
+      "rep_triangle": "012",
+      "tau_image_rep_triangle": "012"
+    }
+  ]
+}

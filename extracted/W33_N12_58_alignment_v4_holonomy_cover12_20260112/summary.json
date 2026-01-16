@@ -1,0 +1,59 @@
+{
+  "timestamp_utc": "2026-01-12T20:30:44.610926Z",
+  "input_files": {
+    "w33_line_phase_map": "/mnt/data/work/data/_workbench/02_geometry/W33_line_phase_map.csv",
+    "w33_rays_complex": "/mnt/data/work/data/_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv",
+    "n12_candidate_points": "/mnt/data/work/data/_n12/n12_58_candidate_w33_points_40_from_tau_cycles_and_fixed_complements_20260109t134000z.csv",
+    "n12_candidate_lines": "/mnt/data/work/data/_n12/n12_58_candidate_lines_from_size12_orbits_tau_cycle_sets_20260109t134000z.csv"
+  },
+  "w33_invariants": {
+    "num_points": 40,
+    "num_lines": 40,
+    "point_degree_collinearity": 12,
+    "noncollinear_degree": 27,
+    "num_noncollinear_triads": 3240,
+    "noncollinear_triad_centers_hist": {
+      "4": 360,
+      "1": 2880
+    },
+    "num_four_center_triads": 360,
+    "ray_overlap_abs": {
+      "collinear_max": 6.482314685030133e-13,
+      "noncollinear_value_mean": 0.5773502691900748,
+      "noncollinear_value_min": 0.5773502691897193,
+      "noncollinear_value_max": 0.5773502691905614
+    },
+    "triad_holonomy_hist_mod12": {
+      "9": 180,
+      "3": 180,
+      "1": 1440,
+      "11": 1440
+    },
+    "holonomy_by_center_count": {
+      "4,9": 180,
+      "4,3": 180,
+      "1,1": 1440,
+      "1,11": 1440
+    }
+  },
+  "alignment_objective": {
+    "name": "cover12_on_four_center_triads",
+    "definition": "Map W33 four-center triads (360) to N12 candidate points; score counts triads whose union of N12 vertex symbols equals all 12 symbols {0..9,a,b}."
+  },
+  "best_found": {
+    "cover12_score": 307,
+    "cover_size_hist": {
+      "12": 307,
+      "9": 49,
+      "6": 4
+    },
+    "leftover_points": [
+      "C34",
+      "C37",
+      "F35",
+      "F36",
+      "X35",
+      "X36"
+    ]
+  }
+}

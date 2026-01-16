@@ -1,0 +1,13 @@
+tomotope_point,X,sign,projective_class
+12+,12,+,sec1_m0
+12-,12,-,sec1_m2
+13+,13,+,sec3_m1
+13-,13,-,sec3_m0
+14+,14,+,sec2_m2
+14-,14,-,sec0_m1
+23+,23,+,sec2_m1
+23-,23,-,sec2_m0
+24+,24,+,sec3_m2
+24-,24,-,sec0_m2
+34+,34,+,sec1_m1
+34-,34,-,sec0_m0

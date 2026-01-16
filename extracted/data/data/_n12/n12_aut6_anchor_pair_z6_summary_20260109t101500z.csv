@@ -1,0 +1,3 @@
+id,name,anchor_triangles,anchor_same_H1,anchor_H1_bits,tau_fixes_each,g2_swaps
+54,N12_54,"(6, 7, 8)|(9, 10, 11)",1,011110001110,1,1
+57,N12_57,"(0, 1, 2)|(3, 4, 5)",1,100000000000,1,1

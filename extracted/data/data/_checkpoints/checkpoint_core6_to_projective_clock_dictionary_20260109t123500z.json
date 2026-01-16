@@ -1,0 +1,76 @@
+﻿{
+  "timestamp_local": "2026-01-09T07:35:00-05:00",
+  "purpose": "Define a canonical mapping from N12_58 size-12 missing-triangle orbits to V4\u00d7Z3 projective clock classes using \u03c4-cycle coordinates on missing H1 classes; apply it to the 6-node backbone and to collapsed orbits.",
+  "definition": {
+    "projective_class": "sec{s}_m{p}",
+    "sector_s": "cycle_id mod 4 from N12_58_tau_on_missing_H1_classes.csv (\u03c4 3-cycle index)",
+    "phase_p": "pos_in_cycle in {0,1,2}"
+  },
+  "results": {
+    "full_coverage_orbits_count": 10,
+    "half_coverage_orbits_count": 4,
+    "collapsed_orbits": [
+      {
+        "orbit_id": 5,
+        "rep_triangle": "037",
+        "projective_classes": "sec0_m0,sec0_m1,sec0_m2,sec1_m0,sec1_m1,sec1_m2"
+      },
+      {
+        "orbit_id": 7,
+        "rep_triangle": "01b",
+        "projective_classes": "sec2_m0,sec2_m1,sec2_m2,sec3_m0,sec3_m1,sec3_m2"
+      },
+      {
+        "orbit_id": 8,
+        "rep_triangle": "019",
+        "projective_classes": "sec0_m0,sec0_m1,sec0_m2,sec1_m0,sec1_m1,sec1_m2"
+      },
+      {
+        "orbit_id": 11,
+        "rep_triangle": "045",
+        "projective_classes": "sec0_m0,sec0_m1,sec0_m2,sec1_m0,sec1_m1,sec1_m2"
+      }
+    ],
+    "core6_orbits": [
+      {
+        "orbit_id": 0,
+        "rep_triangle": "047",
+        "projective_classes_count": 12
+      },
+      {
+        "orbit_id": 1,
+        "rep_triangle": "01a",
+        "projective_classes_count": 12
+      },
+      {
+        "orbit_id": 3,
+        "rep_triangle": "058",
+        "projective_classes_count": 12
+      },
+      {
+        "orbit_id": 4,
+        "rep_triangle": "016",
+        "projective_classes_count": 12
+      },
+      {
+        "orbit_id": 12,
+        "rep_triangle": "03a",
+        "projective_classes_count": 12
+      },
+      {
+        "orbit_id": 13,
+        "rep_triangle": "017",
+        "projective_classes_count": 12
+      }
+    ],
+    "core6_all_full_coverage": true
+  },
+  "exports": {
+    "coverage_summary_csv": "/mnt/data/_n12/n12_58_size12_orbits_projective_class_coverage_20260109t123500z.csv",
+    "coverage_detail_csv": "/mnt/data/_n12/n12_58_projective_class_assignments_for_triangles_in_size12_orbits_20260109t123500z.csv",
+    "core6_dictionary_csv": "/mnt/data/_n12/n12_58_core6_orbits_full_projective_clock_dictionary_20260109t123500z.csv",
+    "collapsed_half_sector_csv": "/mnt/data/_n12/n12_58_collapsed_orbits_half_sector_projective_coverage_20260109t123500z.csv",
+    "pdf_note": "/mnt/data/_toe/core_to_projective_clock_dictionary_20260109_pdf"
+  }
+}
+

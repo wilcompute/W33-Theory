@@ -1,0 +1,16 @@
+coeffs,binary_support_pg32_point,m_tuple_sec0_sec1_sec2_sec3,quartet,is_in_tomotope15
+"(0, 0, 2, 0)",0010,"(0, 0, 2, 2)",sec0_m0 sec1_m0 sec2_m2 sec3_m2,True
+"(0, 1, 0, 2)",0101,"(0, 1, 0, 0)",sec0_m0 sec1_m1 sec2_m0 sec3_m0,True
+"(0, 2, 1, 1)",0111,"(0, 2, 1, 1)",sec0_m0 sec1_m2 sec2_m1 sec3_m1,True
+"(2, 0, 0, 2)",1001,"(2, 2, 2, 1)",sec0_m2 sec1_m2 sec2_m2 sec3_m1,True
+"(2, 0, 1, 0)",1010,"(2, 2, 0, 0)",sec0_m2 sec1_m2 sec2_m0 sec3_m0,True
+"(1, 0, 2, 2)",1011,"(1, 1, 0, 2)",sec0_m1 sec1_m1 sec2_m0 sec3_m2,True
+"(2, 0, 2, 1)",1011,"(2, 2, 1, 2)",sec0_m2 sec1_m2 sec2_m1 sec3_m2,True
+"(2, 1, 0, 0)",1100,"(2, 0, 2, 0)",sec0_m2 sec1_m0 sec2_m2 sec3_m0,True
+"(1, 1, 0, 1)",1101,"(1, 2, 1, 0)",sec0_m1 sec1_m2 sec2_m1 sec3_m0,True
+"(2, 2, 0, 1)",1101,"(2, 1, 2, 2)",sec0_m2 sec1_m1 sec2_m2 sec3_m2,True
+"(1, 2, 1, 0)",1110,"(1, 0, 2, 1)",sec0_m1 sec1_m0 sec2_m2 sec3_m1,True
+"(2, 2, 2, 0)",1110,"(2, 1, 1, 0)",sec0_m2 sec1_m1 sec2_m1 sec3_m0,True
+"(2, 1, 1, 1)",1111,"(2, 0, 0, 2)",sec0_m2 sec1_m0 sec2_m0 sec3_m2,True
+"(2, 1, 2, 2)",1111,"(2, 0, 1, 1)",sec0_m2 sec1_m0 sec2_m1 sec3_m1,True
+"(2, 2, 1, 2)",1111,"(2, 1, 0, 1)",sec0_m2 sec1_m1 sec2_m0 sec3_m1,True

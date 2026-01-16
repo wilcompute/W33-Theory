@@ -1,0 +1,92 @@
+{
+  "timestamp": "2026-01-14T15:29:27.312924",
+  "exceptional_algebras": {
+    "G2": {
+      "dim": 14,
+      "rank": 2,
+      "roots": 12
+    },
+    "F4": {
+      "dim": 52,
+      "rank": 4,
+      "roots": 48
+    },
+    "E6": {
+      "dim": 78,
+      "rank": 6,
+      "roots": 72,
+      "fundamental_rep": 27
+    },
+    "E7": {
+      "dim": 133,
+      "rank": 7,
+      "roots": 126,
+      "fundamental_rep": 56,
+      "smallest_reps": [
+        1,
+        56,
+        133,
+        912,
+        1463,
+        1539
+      ]
+    },
+    "E8": {
+      "dim": 248,
+      "rank": 8,
+      "roots": 240,
+      "adjoint_rep": 248
+    }
+  },
+  "w33_structure": {
+    "points": 40,
+    "cycles": 81,
+    "k4s": 90,
+    "total": 121
+  },
+  "master_equations": {
+    "sin2_theta_W": {
+      "value": "40/173",
+      "formula_1": "|points| / (|W33| + dim(F4))",
+      "formula_2": "|points| / (|points| + dim(E7))",
+      "formula_3": "|points| / p_{|points|}"
+    },
+    "alpha_inverse": {
+      "value": 137,
+      "formula": "|cycles| + dim(E7 fund) = 81 + 56"
+    },
+    "cycles_bridge": {
+      "value": 81,
+      "formula": "dim(E7) - dim(F4) = 133 - 52"
+    }
+  },
+  "prime_indices": {
+    "137": 33,
+    "173": 40,
+    "note": "40 = |points| = index of 173"
+  },
+  "weyl_groups": {
+    "W(G2)": 12,
+    "W(F4)": 1152,
+    "W(E6)": 51840,
+    "W(E7)": 2903040,
+    "W(E8)": 696729600
+  },
+  "physics_connections": {
+    "N8_supergravity": "E7(7) global symmetry, 56-dim rep contains charges",
+    "heterotic_string_K3": "E8 \u00d7 E7 gauge group, K3 has b_2 = 22 = 2 \u00d7 11",
+    "del_pezzo": "W(E6) = Aut(W33) connects to dP_6 with 27 lines"
+  },
+  "verifications": {
+    "121 + 52 = 173": true,
+    "40 + 133 = 173": true,
+    "133 - 52 = 81": true,
+    "121 - 40 = 81": true,
+    "81 + 56 = 137": true,
+    "137 = 33rd prime": true,
+    "173 = 40th prime": true,
+    "40 = |points|": true,
+    "51840 = 2^7 \u00d7 3^4 \u00d7 5": true,
+    "81 = 3^4": true
+  }
+}

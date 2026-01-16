@@ -1,0 +1,73 @@
+{
+  "date": "2026-01-12",
+  "inputs": {
+    "w33_line_phase_map": "/mnt/data/proj_data/data/_workbench/02_geometry/W33_line_phase_map.csv",
+    "w33_rays": "/mnt/data/proj_data/data/_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv",
+    "n12_candidate_points": "/mnt/data/proj_data/data/_n12/n12_58_candidate_w33_points_40_from_tau_cycles_and_fixed_complements_20260109t134000z.csv",
+    "n12_candidate_blocks": "/mnt/data/proj_data/data/_n12/n12_58_candidate_lines_from_size12_orbits_tau_cycle_sets_20260109t134000z.csv",
+    "n12_2t_cycles": "/mnt/data/proj_data/data/_n12/n12_58_2t_holonomy_nontrivial_cycles.csv",
+    "n12_flip_delta_audit": "/mnt/data/proj_data/data/_n12/n12_58_flip_delta_audit_all_edges.csv"
+  },
+  "lambda": 0.5,
+  "delta_phase_map": {
+    "0": "-i",
+    "2": "1",
+    "4": "1",
+    "6": "-1"
+  },
+  "phase_predicate_v3": {
+    "node_constraints": {
+      "delta=2": "triad_hol_mod12 must equal 9",
+      "delta=6": "triad_hol_mod12 must equal 3"
+    },
+    "transition_constraints_by_prev_edge": {
+      "delta=0": {
+        "always": "hol(prev)==hol(curr)",
+        "subtype_constraints": {
+          "removed=add=0": "hol(curr)=9",
+          "removed=add=4": "hol(curr)=3",
+          "removed=add=6": "no extra constraint"
+        }
+      },
+      "delta=4": {
+        "always": "hol(prev)!=hol(curr)",
+        "subtype_constraints": {
+          "(removed,add)=(6,2)": "direction 3->9 only",
+          "(removed,add)=(0,4)": "no direction constraint"
+        }
+      }
+    },
+    "notes": "These subtype constraints were selected by brute-search over (delta0_subtype -> hol requirement) and (delta4_subtype -> direction) to ensure feasibility of all 5 nontrivial 2T cycles with minimal cover12 usage."
+  },
+  "best_mapping_metrics": {
+    "total_min_cover12_cost": 45,
+    "per_cycle_costs": [
+      2,
+      6,
+      8,
+      14,
+      15
+    ],
+    "cover12_four_center_triads": 286,
+    "four_center_cover_hist": {
+      "12": 286,
+      "9": 70,
+      "6": 4
+    },
+    "global_coherence_abs_sum_cycle_amps": 0.43634094602344714,
+    "cycle_amp_magnitudes": [
+      0.36787944117144233,
+      0.049787068367863944,
+      0.01831563888873418,
+      0.000911881965554516,
+      0.0005530843701478335
+    ],
+    "cycle_amp_phases_arg": [
+      1.5707963267948961,
+      1.5707963267948957,
+      1.5707963267948952,
+      1.5707963267948943,
+      -1.570796326794899
+    ]
+  }
+}

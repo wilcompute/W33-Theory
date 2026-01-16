@@ -1,0 +1,20 @@
+﻿{
+  "timestamp_utc": "2026-01-10T04:40:00Z",
+  "purpose": "Derived completion map: each matched tomotope triangle (Reye line) corresponds to a unique W33 rainbow line whose projective quartet contains the mapped triple; record the missing class that completes the quartet.",
+  "inputs": {
+    "bestfit_checkpoint": "/mnt/data/_checkpoints/checkpoint_tomotope_to_n12_58_projective_bestfit_20260110t043900z.json",
+    "w33_masks_csv": "/mnt/data/W33_line_clock_projector_masks_20260109T210928Z.csv"
+  },
+  "outputs": {
+    "tomotope_triangle_to_w33_completion_csv": "/mnt/data/_tomotope/tomotope_triangle_to_w33_rainbow_line_completion_20260110t043900z.csv"
+  },
+  "notes": {
+    "matched_triangles": 15,
+    "unmatched_triangle": "(4,-4) -> triple sec0_m0 sec0_m1 sec0_m2 (pure sector-phase triple, not appearing in any rainbow quartet)",
+    "key_wedge_lines": {
+      "22": "triangle (1,-3) + missing sec0_m2",
+      "8": "triangle (2,-3) + missing sec0_m2",
+      "17": "triangle (2,-4) + missing sec3_m1"
+    }
+  }
+}

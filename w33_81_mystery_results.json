@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-01-14T15:45:07.656194",
+  "81_origins": {
+    "geometric": "81 = |GF(3)^4| vectors",
+    "homological": "dim H1(W33) = 81",
+    "group": "|W(E6)| = 128 \u00d7 81 \u00d7 5",
+    "exceptional": "dim(E7) - dim(F4) = 81",
+    "moonshine": "729 = 9 \u00d7 81",
+    "physics": "\u03b1\u207b\u00b9 = 81 + 56"
+  },
+  "weyl_omega_connection": {
+    "W_E6": 51840,
+    "Omega_5_3": 25920,
+    "relation": "W(E6) = 2 \u00d7 \u03a9(5,3)"
+  },
+  "decompositions_81": [
+    "3^4",
+    "1 + 80",
+    "3 \u00d7 27",
+    "9 \u00d7 9",
+    "133 - 52"
+  ]
+}
