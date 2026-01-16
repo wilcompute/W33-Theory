@@ -1,0 +1,103 @@
+{
+  "theory": "W33 Theory of Everything",
+  "author": "Wil Dahn",
+  "date": "January 2026",
+  "total_predictions": 15,
+  "mean_error": 0.3184008585587276,
+  "predictions": {
+    "Fine Structure Constant": {
+      "predicted": 137.03600360036003,
+      "observed": 137.036,
+      "error_percent": 2.627309635016781e-06,
+      "formula": "\u03b1\u207b\u00b9 = 81 + 56 + 40/1111"
+    },
+    "Weak Mixing Angle": {
+      "predicted": 0.23121387283236994,
+      "observed": 0.23121,
+      "error_percent": 0.0016750280567185028,
+      "formula": "sin\u00b2\u03b8_W = 40/173"
+    },
+    "Strong Coupling": {
+      "predicted": 0.11790393013100436,
+      "observed": 0.1179,
+      "error_percent": 0.003333444448141942,
+      "formula": "\u03b1_s = 27/229"
+    },
+    "Cabibbo Angle": {
+      "predicted": 0.2222222222222222,
+      "observed": 0.2245,
+      "error_percent": 1.0146003464489066,
+      "formula": "sin \u03b8_c = 2/9"
+    },
+    "Wolfenstein \u03bb": {
+      "predicted": 0.226890756302521,
+      "observed": 0.2265,
+      "error_percent": 0.1725193388613688,
+      "formula": "\u03bb = 27/119"
+    },
+    "Wolfenstein A": {
+      "predicted": 0.7941176470588235,
+      "observed": 0.79,
+      "error_percent": 0.5212211466865124,
+      "formula": "A = 27/34"
+    },
+    "Wolfenstein \u03b7\u0304": {
+      "predicted": 0.35714285714285715,
+      "observed": 0.357,
+      "error_percent": 0.04001600640256773,
+      "formula": "\u03b7\u0304 = 5/14"
+    },
+    "Solar Angle": {
+      "predicted": 0.3053435114503817,
+      "observed": 0.304,
+      "error_percent": 0.44194455604661054,
+      "formula": "sin\u00b2\u03b8\u2081\u2082 = 40/131"
+    },
+    "Atmospheric Angle": {
+      "predicted": 0.5714285714285714,
+      "observed": 0.573,
+      "error_percent": 0.27424582398404135,
+      "formula": "sin\u00b2\u03b8\u2082\u2083 = 4/7"
+    },
+    "Reactor Angle": {
+      "predicted": 0.02197802197802198,
+      "observed": 0.0222,
+      "error_percent": 0.9999009999009965,
+      "formula": "sin\u00b2\u03b8\u2081\u2083 = 2/91"
+    },
+    "Dark Energy Fraction": {
+      "predicted": 0.691358024691358,
+      "observed": 0.6889,
+      "error_percent": 0.35680428093453764,
+      "formula": "\u03a9_\u039b = 56/81"
+    },
+    "Matter Fraction": {
+      "predicted": 0.30864197530864196,
+      "observed": 0.3111,
+      "error_percent": 0.7901075832073383,
+      "formula": "\u03a9_m = 25/81"
+    },
+    "Spectral Index": {
+      "predicted": 0.9649122807017544,
+      "observed": 0.9649,
+      "error_percent": 0.0012727434712828257,
+      "formula": "n_s = 55/57"
+    },
+    "Hubble Constant": {
+      "predicted": 67.5,
+      "observed": 67.4,
+      "error_percent": 0.14836795252224674,
+      "formula": "H\u2080 = 27 \u00d7 5/2"
+    },
+    "Koide Parameter": {
+      "predicted": 0.6666666666666666,
+      "observed": 0.6666,
+      "error_percent": 0.0100010001000089,
+      "formula": "Q = 2/3"
+    }
+  },
+  "fundamental_object": "W33 = Isotropic lines in F\u2083\u2074",
+  "symmetry_group": "Sp(4,3), order 51840",
+  "graph_parameters": "SRG(40, 12, 2, 4)",
+  "exceptional_connection": "W33 \u2192 E\u2086 \u2192 E\u2087 \u2192 E\u2088"
+}

@@ -1,0 +1,24 @@
+{
+  "dark_energy_fraction": {
+    "predicted": 0.691358024691358,
+    "observed": 0.6889,
+    "formula": "56/81 = E7_fund / 3^4"
+  },
+  "matter_fraction": {
+    "predicted": 0.30864197530864196,
+    "observed": 0.3111,
+    "formula": "25/81 = (81-56)/81"
+  },
+  "hubble_constant": {
+    "predicted": 67.5,
+    "observed": 67.4,
+    "formula": "27 \u00d7 5/2"
+  },
+  "spectral_index": {
+    "predicted": 0.9649122807017544,
+    "observed": 0.9649,
+    "formula": "55/57"
+  },
+  "key_insight": "Omega_Lambda + Omega_m = 56/81 + 25/81 = 1",
+  "vacuum_suppression": "137^(-57) \u2248 10^(-122)"
+}
