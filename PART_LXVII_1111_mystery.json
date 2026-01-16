@@ -1,0 +1,15 @@
+{
+  "1111_formula": {
+    "main_term": "(e1 \u00d7 m2 \u00d7 m3) / |e3| = 12 \u00d7 24 \u00d7 15 / 4 = 1080",
+    "correction": "lambda + mu + m2 + 1 = 2 + 4 + 24 + 1 = 31",
+    "total": 1111
+  },
+  "alpha_complete_formula": {
+    "integer_part": "e1^2 - e2*|e3| + 1 = 144 - 8 + 1 = 137",
+    "denominator_D": "(e1 \u00d7 m2 \u00d7 m3)/|e3| + lambda + mu + m2 + 1 = 1111",
+    "numerator": "v = 40",
+    "result": "137 + 40/1111 = 137.036004"
+  },
+  "factorization": "1111 = 11 \u00d7 101",
+  "geometric_meaning": "1111 encodes eigenvalue products and SRG parameters"
+}
