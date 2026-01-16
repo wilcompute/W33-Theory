@@ -1,0 +1,38 @@
+{
+  "predictions": {
+    "pmns_cp_phase": {
+      "value": "206 degrees",
+      "experiment": "DUNE/HK"
+    },
+    "proton_lifetime": {
+      "value": "10^34-36 years",
+      "experiment": "Hyper-K"
+    },
+    "dark_matter_mass": {
+      "value": "28-40 GeV",
+      "experiment": "XENONnT"
+    },
+    "heavy_higgs": {
+      "H2": "250-280 GeV",
+      "H3": "375-420 GeV",
+      "experiment": "HL-LHC"
+    },
+    "fourth_generation": {
+      "exists": false,
+      "status": "confirmed"
+    },
+    "alpha_s": {
+      "value": "27/229 = 0.1179",
+      "experiment": "LHC"
+    },
+    "omega_lambda": {
+      "value": "56/81 = 0.6914",
+      "experiment": "Euclid"
+    },
+    "spectral_index": {
+      "value": "55/57 = 0.9649",
+      "experiment": "CMB-S4"
+    }
+  },
+  "key_statement": "W33 makes falsifiable predictions testable in the next 10 years"
+}
