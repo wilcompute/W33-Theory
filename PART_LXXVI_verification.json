@@ -1,0 +1,23 @@
+{
+  "W33_verified": true,
+  "parameters": {
+    "v": 40,
+    "k": 12,
+    "lambda": 2,
+    "mu": 4
+  },
+  "eigenvalues": {
+    "e1": 12,
+    "e2": 2,
+    "e3": -4
+  },
+  "multiplicities": {
+    "m1": 1,
+    "m2": 24,
+    "m3": 15
+  },
+  "alpha_inv": 137.03600360036003,
+  "sin2_theta_W": 0.21621621621621623,
+  "alpha_s": 0.1210762331838565,
+  "sage_available": false
+}

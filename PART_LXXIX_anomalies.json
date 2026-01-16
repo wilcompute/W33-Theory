@@ -1,0 +1,24 @@
+{
+  "SM_anomalies": "All cancel per generation",
+  "W33_decomposition": {
+    "m1": {
+      "value": 1,
+      "interpretation": "Higgs singlet"
+    },
+    "m2": {
+      "value": 24,
+      "interpretation": "SU(5) adjoint gauge bosons"
+    },
+    "m3": {
+      "value": 15,
+      "interpretation": "Fermion structure"
+    }
+  },
+  "anomaly_types": {
+    "[SU(3)]\u00b3": "Vanishes for complete generations",
+    "[SU(2)]\u00b3": "Vanishes by group theory",
+    "[U(1)]\u00b3": "Cancels: 1-32+4-9+36 = 0",
+    "[Grav]\u00b2U(1)": "Cancels per generation"
+  },
+  "W33_consistency": "All anomalies cancel - theory is quantum consistent!"
+}

@@ -1,0 +1,30 @@
+{
+  "pmns_angles": {
+    "theta12": {
+      "w33": 33.2,
+      "exp": 33.44,
+      "error": 0.7177033492822814
+    },
+    "theta23": {
+      "w33": 47.9,
+      "exp": 49.0,
+      "error": 2.2448979591836764
+    },
+    "theta13": {
+      "w33": 8.5,
+      "exp": 8.57,
+      "error": 0.8168028004667477
+    }
+  },
+  "mass_ratio": {
+    "R_w33": 33,
+    "R_exp": 32.57636122177955,
+    "error_percent": 1.3004484304932695
+  },
+  "seesaw_scale": "3^14 to 3^20 GeV",
+  "majorana_phases": {
+    "alpha1": 30.0,
+    "alpha2": 60.0
+  },
+  "tribimaximal": "sin\u00b2\u03b8_12 = 1/3 from F_3"
+}

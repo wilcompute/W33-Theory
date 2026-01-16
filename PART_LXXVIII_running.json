@@ -1,0 +1,23 @@
+{
+  "boundary_conditions": {
+    "alpha_inv": 137.036,
+    "sin2_theta_W": 0.23121387283236994,
+    "alpha_s": 0.11790393013100436,
+    "alpha1_inv_MZ": 63.21082543352601,
+    "alpha2_inv_MZ": 31.684624277456646,
+    "alpha3_inv_MZ": 8.481481481481481
+  },
+  "gut_scale": {
+    "M_GUT": "3^33",
+    "value_GeV": 5559060566555523,
+    "alpha_GUT_inv": 40.84988742057914
+  },
+  "unification": {
+    "MSSM_required": true,
+    "threshold_corrections": "From W33 eigenvalues"
+  },
+  "proton_lifetime": {
+    "prediction_years": 4.5858567377577304e+36,
+    "consistent": true
+  }
+}
