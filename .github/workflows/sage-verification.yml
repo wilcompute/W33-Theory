@@ -35,6 +35,16 @@ jobs:
         path: PART_*.json
         if-no-files-found: warn
 
+    - name: Download PART_*.json artifacts (for collection)
+      uses: actions/download-artifact@v4
+      with:
+        name: sage-part-jsons
+        path: artifacts/sage-part-jsons
+
+    - name: Collect SUMMARY_RESULTS and run extractor
+      run: |
+        python scripts/collect_results_from_artifact.py artifacts/sage-part-jsons || true
+
     - name: Upload SUMMARY_RESULTS.json
       uses: actions/upload-artifact@v4
       with:
