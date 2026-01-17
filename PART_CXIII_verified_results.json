@@ -1,0 +1,37 @@
+{
+  "sp4_f3_order": 51840,
+  "w_e6_order": 51840,
+  "e6_roots": 72,
+  "orders_match": true,
+  "e8_roots": 240,
+  "w_e8_order": 696729600,
+  "d4_roots": 24,
+  "vertices": 40,
+  "edges": 240,
+  "srg_params": [
+    40,
+    12,
+    2,
+    4
+  ],
+  "aut_order": 51840,
+  "triple_match": true,
+  "e8_match": true,
+  "eigenvalues": [
+    [
+      12,
+      1
+    ],
+    [
+      2,
+      24
+    ],
+    [
+      -4,
+      15
+    ]
+  ],
+  "timestamp": "2026-01-16T20:23:20.913315",
+  "part": "CXIII",
+  "verified_with": "SageMath 10.7"
+}
