@@ -1,0 +1,18 @@
+{
+  "w_d4_order": 192,
+  "d4_roots": 24,
+  "tomotope_flags": 192,
+  "connection": "tomotope_flags = |W(D4)| = 192",
+  "24cell_symmetry": 1152,
+  "quotient": 270,
+  "hierarchy": {
+    "W_D4": 192,
+    "W_E6": 51840,
+    "W_E8": 696729600,
+    "E6_over_D4": 270
+  },
+  "timestamp": "2026-01-16T20:29:12.660525",
+  "part": "CXIV",
+  "part_number": 114,
+  "key_insight": "Tomotope 192 flags = |W(D4)| = triality origin of 3 generations"
+}
