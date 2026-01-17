@@ -1,0 +1,237 @@
+{
+  "dark_matter": {
+    "mass_GeV": 77,
+    "cross_section_cm2": 1e-47,
+    "detection_window": "2028-2030",
+    "falsifiable": true
+  },
+  "gravitational_waves": {
+    "mass_scale_solar": 77,
+    "mass_ratio": 1.6,
+    "sgwb_amplitude": 1e-09,
+    "o5_start": "late 2025"
+  },
+  "hl_lhc": {
+    "higgs_self_coupling": 1.0,
+    "new_particles_predicted": false,
+    "start_year": 2029,
+    "integrated_lumi_fb": 3000
+  },
+  "neutrinos": {
+    "hierarchy": "normal",
+    "sum_masses_eV": 0.07,
+    "nature": "Majorana",
+    "juno_prediction": "normal hierarchy"
+  },
+  "cosmology": {
+    "w0": -0.8264462809917356,
+    "wa": -0.005532408988457072,
+    "tensor_to_scalar": 0.001,
+    "desi_prediction": -0.826
+  },
+  "quantum": {
+    "qubits_needed": 40,
+    "logical_qubits_needed": 40,
+    "feasibility_year": 2030
+  },
+  "predictions": [
+    [
+      "Number of generations",
+      "3",
+      "3",
+      "2024",
+      "\u2713 VERIFIED"
+    ],
+    [
+      "W boson mass",
+      "80.36 GeV",
+      "80.360 GeV",
+      "2024",
+      "\u2713 VERIFIED"
+    ],
+    [
+      "Higgs mass",
+      "125 GeV",
+      "125.20 GeV",
+      "2024",
+      "\u2713 VERIFIED"
+    ],
+    [
+      "sin \u03b8\u2081\u2082 (CKM)",
+      "0.225",
+      "0.2248",
+      "2024",
+      "\u2713 VERIFIED"
+    ],
+    [
+      "sin \u03b8\u2082\u2083 (CKM)",
+      "0.0417",
+      "0.0418",
+      "2024",
+      "\u2713 VERIFIED"
+    ],
+    [
+      "sin \u03b8\u2081\u2083 (CKM)",
+      "0.00369",
+      "0.00365",
+      "2024",
+      "\u2713 VERIFIED"
+    ],
+    [
+      "Weinberg angle",
+      "0.2312",
+      "0.2312",
+      "2024",
+      "\u2713 VERIFIED"
+    ],
+    [
+      "\u03b1_s(M_Z)",
+      "0.1178",
+      "0.1180",
+      "2024",
+      "\u2713 VERIFIED"
+    ],
+    [
+      "\u03b1\u207b\u00b9 (QED)",
+      "137.0",
+      "137.036",
+      "2024",
+      "\u2713 VERIFIED"
+    ],
+    [
+      "Dark energy w\u2080",
+      "-0.826",
+      "-0.827",
+      "2025",
+      "\u2713 DESI"
+    ],
+    [
+      "Muon g-2",
+      "SM consistent",
+      "SM consistent",
+      "2025",
+      "\u2713 FINAL"
+    ],
+    [
+      "DM mass",
+      "77 GeV",
+      "TBD",
+      "2028-2030",
+      "\u23f3 DARWIN/LZ"
+    ],
+    [
+      "DM cross-section",
+      "10\u207b\u2074\u2077 cm\u00b2",
+      "TBD",
+      "2028-2030",
+      "\u23f3 DARWIN"
+    ],
+    [
+      "\u03bd mass hierarchy",
+      "Normal",
+      "TBD",
+      "2025-2028",
+      "\u23f3 JUNO"
+    ],
+    [
+      "\u03a3m_\u03bd",
+      "0.07 eV",
+      "< 0.45 eV",
+      "2028",
+      "\u23f3 Cosmology"
+    ],
+    [
+      "\u03bd nature",
+      "Majorana",
+      "TBD",
+      "2030+",
+      "\u23f3 LEGEND"
+    ],
+    [
+      "Higgs self-coupling",
+      "~1",
+      "TBD",
+      "2030+",
+      "\u23f3 HL-LHC"
+    ],
+    [
+      "New particles",
+      "None < 1 TeV",
+      "None found",
+      "2035",
+      "\u23f3 HL-LHC"
+    ],
+    [
+      "Dark energy w_a",
+      "-0.0055",
+      "~-0.6",
+      "2028",
+      "\u23f3 DESI final"
+    ],
+    [
+      "GW stochastic BG",
+      "10\u207b\u2079",
+      "TBD",
+      "2030",
+      "\u23f3 LIGO O6"
+    ],
+    [
+      "Tensor-to-scalar r",
+      "~0.001",
+      "< 0.03",
+      "2028",
+      "\u23f3 CMB-S4"
+    ]
+  ],
+  "milestones": [
+    [
+      "2026",
+      "JUNO data",
+      "Neutrino mass hierarchy"
+    ],
+    [
+      "2027",
+      "LIGO O5 ends",
+      "BH mass clustering test"
+    ],
+    [
+      "2028",
+      "DESI final",
+      "Definitive w\u2080, w_a measurement"
+    ],
+    [
+      "2028",
+      "DARWIN reaches design",
+      "77 GeV DM sensitivity"
+    ],
+    [
+      "2029",
+      "HL-LHC starts",
+      "Search for new particles"
+    ],
+    [
+      "2030",
+      "LEGEND-1000",
+      "Majorana neutrino test"
+    ],
+    [
+      "2030",
+      "100 logical qubits",
+      "W33 quantum simulation"
+    ],
+    [
+      "2032",
+      "Einstein Telescope?",
+      "GW stochastic background"
+    ],
+    [
+      "2035",
+      "HL-LHC 3000 fb\u207b\u00b9",
+      "Final new particle search"
+    ]
+  ],
+  "timestamp": "2026-01-16T19:40:22.001203",
+  "part": "CIV",
+  "part_number": 104,
+  "title": "The Definitive Tests (2026-2035)"
+}
