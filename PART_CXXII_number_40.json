@@ -1,0 +1,41 @@
+{
+  "part": "CXXII",
+  "analysis": {
+    "factorizations": [
+      [
+        1,
+        40
+      ],
+      [
+        2,
+        20
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        5,
+        8
+      ]
+    ],
+    "D5_connection": {
+      "D5_root_count": 40,
+      "formula": "2n(n-1) where n=5",
+      "match": true
+    },
+    "interpretation": {
+      "40_as_D5_roots": true,
+      "E6_contains_D5": true,
+      "symplectic_formula": "(q\u00b2+1)(q+1) for q=3",
+      "8_meaning": "octonion dimension via exceptional structure",
+      "5_meaning": "rank of D5 = SO(10)"
+    },
+    "E6_decomposition": {
+      "E6_roots": 72,
+      "D5_roots": 40,
+      "spinor_weights": 32,
+      "decomposition": "72 = 40 + 32"
+    }
+  }
+}
