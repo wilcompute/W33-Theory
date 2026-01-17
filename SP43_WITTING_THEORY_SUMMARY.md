@@ -202,8 +202,10 @@ The 40 Witting states cannot be consistently labeled for all 40 bases - this is 
 
 ## VERSION HISTORY
 
-- **Part CXXXVIII**: Verified Vlasov's explicit 40 Witting states
-- **Part CXXXIX**: Verified triflection generators, G₃₄ presentation
+- **Part CXLIII**: Unified nomenclature established
+- **Part CXLII**: 27-coclique structure (tripartite 9+9+9, NOT Schläfli graph)
+- **Part CXL**: Quantum contextuality, Kochen-Specker obstruction (6/40 bases)
+- **Part CXXXVIII-CXXXIX**: Verified Vlasov's 40 Witting states and triflection generators
 - **Parts CXXXIII-CXXXVII**: Naming convention, F₃ ↔ ℂ analysis
 - **Parts CXXVII-CXXXII**: Witting connection, 27 lines, stabilizer structure
 
