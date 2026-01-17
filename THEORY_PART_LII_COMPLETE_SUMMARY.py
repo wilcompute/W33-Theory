@@ -200,7 +200,14 @@ print()
 
 exact_count = sum(1 for p in predictions if "EXACT" in str(p['agreement']))
 sub_1pct = sum(1 for p in predictions if any(x in str(p['agreement']) for x in ['0.', '10⁻']))
-sub_5pct = sum(1 for p in predictions if '%' in str(p['agreement']) and float(p['agreement'].replace('%','').split('×')[0]) < 5)
+# Handle percentage agreements carefully - strip ~ and other characters
+def parse_percent(s):
+    try:
+        clean = str(s).replace('%','').replace('~','').replace('×10⁻⁸','').strip()
+        return float(clean.split()[0])
+    except:
+        return 100.0  # Non-percentage entries
+sub_5pct = sum(1 for p in predictions if '%' in str(p['agreement']) and parse_percent(p['agreement']) < 5)
 total = len(predictions)
 
 print(f"  Total predictions:           {total}")
