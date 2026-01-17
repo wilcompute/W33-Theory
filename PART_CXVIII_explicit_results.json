@@ -1,0 +1,51 @@
+{
+  "part": "CXVIII",
+  "title": "Explicit Construction - The 40 = 1 + 12 + 27 Decomposition",
+  "timestamp": "2026-01-16T20:51:33.984171",
+  "verified_claims": {
+    "decomposition": {
+      "formula": "40 = 1 + 12 + 27",
+      "vertex": 1,
+      "neighbors": 12,
+      "non_neighbors": 27,
+      "verified": true
+    },
+    "neighbor_subgraph": {
+      "type": "SRG(12, 2, 1, 0)",
+      "vertices": 12,
+      "edges": 12,
+      "regular_degree": 2,
+      "structure": "6 disjoint edges (cocktail party complement)"
+    },
+    "eigenvalues": {
+      "spectrum": [
+        [
+          12,
+          1
+        ],
+        [
+          2,
+          24
+        ],
+        [
+          -4,
+          15
+        ]
+      ],
+      "d4_multiplicity": 24,
+      "matches_d4_roots": true
+    },
+    "automorphism": {
+      "order": 51840,
+      "factorization": "192 \u00d7 270",
+      "d4_factor": 192,
+      "e6_quotient": 270
+    }
+  },
+  "interpretation": {
+    "1": "singlet / origin / identity",
+    "12": "Reye configuration / D4 triality / neighbors",
+    "27": "Albert algebra J\u00b3(\ud835\udd46) / E6 fundamental / non-neighbors"
+  },
+  "conclusion": "W33 explicitly encodes Albert + Reye + singlet structure"
+}
