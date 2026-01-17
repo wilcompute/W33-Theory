@@ -1,0 +1,37 @@
+{
+  "part": "CXXI",
+  "synthesis": {
+    "number_table": {
+      "vertices": {
+        "n": 40,
+        "decomposition": "1+12+27"
+      },
+      "edges": {
+        "total": 240,
+        "h12": 12,
+        "h27": 108,
+        "cross": 108
+      },
+      "automorphisms": {
+        "aut": 51840,
+        "stab_v": 1296,
+        "stab_v_n": 108,
+        "stab_v_nn": 48
+      },
+      "eigenvalues": [
+        [
+          12,
+          1
+        ],
+        [
+          2,
+          24
+        ],
+        [
+          -4,
+          15
+        ]
+      ]
+    }
+  }
+}
