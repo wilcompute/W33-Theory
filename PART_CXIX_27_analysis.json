@@ -1,0 +1,26 @@
+{
+  "part": "CXIX",
+  "findings": {
+    "srg_params": [
+      40,
+      12,
+      2,
+      4
+    ],
+    "decomposition": "40 = 1 + 12 + 27",
+    "cross_edges": 108,
+    "h27_regular_degree": 8,
+    "h27_edges": 108,
+    "stab_order": 1296,
+    "albert_decompositions": {
+      "natural": "3 + 24 = 3 + 3\u00d78",
+      "SO9": "1 + 9 + 9 + 8",
+      "SO10_U1": "16 + 10 + 1"
+    },
+    "number_108": {
+      "cross_edges": 108,
+      "h27_edges": 108,
+      "total_216": 216
+    }
+  }
+}
