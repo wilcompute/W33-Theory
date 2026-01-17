@@ -22,11 +22,11 @@ jobs:
 
     - name: Collect PART_*.json results (Sage)
       run: |
-        docker run --rm -v "${{ github.workspace }}:/work" -w /work sagemath/sagemath:10.7 bash -lc "python claude_workspace/scripts/collect_results.py"
+        docker run --rm -v "${{ github.workspace }}:/work" -w /work sagemath/sagemath:10.7 bash -lc "bash claude_workspace/run_sage.sh claude_workspace/scripts/collect_results.py"
 
     - name: Extract numeric comparisons
       run: |
-        docker run --rm -v "${{ github.workspace }}:/work" -w /work sagemath/sagemath:10.7 bash -lc "python claude_workspace/scripts/make_numeric_comparisons_from_summary.py"
+        docker run --rm -v "${{ github.workspace }}:/work" -w /work sagemath/sagemath:10.7 bash -lc "bash claude_workspace/run_sage.sh claude_workspace/scripts/make_numeric_comparisons_from_summary.py"
 
     - name: Upload PART_*.json artifacts
       uses: actions/upload-artifact@v4
