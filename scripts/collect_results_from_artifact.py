@@ -29,13 +29,20 @@ out.write_text(json.dumps(summary, indent=2, sort_keys=True))
 print(f"Wrote {out} (collected {len(json_files)} PART_*.json files)")
 
 # Run numeric comparisons extractor if available
-extractor = Path('claude_workspace/scripts/make_numeric_comparisons_from_summary.py')
-if extractor.exists():
-    try:
-        import subprocess
-        subprocess.check_call(['python', str(extractor)])
-        print('Ran numeric comparisons extractor')
-    except Exception as e:
-        print('Numeric extractor failed:', e)
-else:
+extractor_candidates = [
+    Path('scripts/make_numeric_comparisons_from_summary.py'),
+    Path('claude_workspace/scripts/make_numeric_comparisons_from_summary.py')
+]
+found_extractor = False
+for extractor in extractor_candidates:
+    if extractor.exists():
+        found_extractor = True
+        try:
+            import subprocess
+            subprocess.check_call([sys.executable, str(extractor)])
+            print('Ran numeric comparisons extractor:', extractor)
+        except Exception as e:
+            print('Numeric extractor failed:', e)
+        break
+if not found_extractor:
     print('Numeric extractor not found; skipping')
