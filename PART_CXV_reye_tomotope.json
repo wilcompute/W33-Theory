@@ -1,0 +1,44 @@
+{
+  "tomotope": {
+    "rank": 4,
+    "vertices": 4,
+    "edges": 12,
+    "faces": 16,
+    "cells": 8,
+    "flags": 192,
+    "symmetry_order": 96,
+    "flag_orbits": 2
+  },
+  "reye": {
+    "points": 12,
+    "lines": 16,
+    "points_per_line": 3,
+    "lines_per_point": 4,
+    "flags": 48,
+    "symmetry_order": 576
+  },
+  "connection": {
+    "tomotope_edges": 12,
+    "reye_points": 12,
+    "tomotope_faces": 16,
+    "reye_lines": 16,
+    "incidence_match": true
+  },
+  "flag_analysis": {
+    "tomotope_flags": 192,
+    "w_d4_order": 192,
+    "24cell_symmetry": 1152,
+    "triality_factor": 6,
+    "reye_symmetry": 576
+  },
+  "timestamp": "2026-01-16T20:32:35.248440",
+  "part": "CXV",
+  "part_number": 115,
+  "key_insight": "Tomotope edges-faces = Reye config, both from 24-cell/D4",
+  "references": [
+    "Monson, Pellicer & Williams (2012), \"The Tomotope\", Ars Mathematica Contemporanea",
+    "Aravind (2000), \"How Reye's configuration helps in proving Bell-Kochen-Specker\"",
+    "Manivel (2006), \"Configurations of lines and models of Lie algebras\"",
+    "Reye (1882), \"Das Problem der Configurationen\""
+  ]
+}
