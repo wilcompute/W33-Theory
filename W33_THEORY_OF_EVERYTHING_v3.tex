@@ -83,9 +83,10 @@
 \title{
     \vspace{-1cm}
     {\color{w33blue}\rule{\textwidth}{2pt}}\\[0.5em]
-    \textbf{\Huge The W33 Theory of Everything}\\[0.3em]
+    \textbf{\Huge The Witting Configuration}\\[0.3em]
+    \textbf{\Huge and the Theory of Everything}\\[0.3em]
     \textbf{\LARGE Complete Unified Physics}\\[0.2em]
-    \textbf{\LARGE from a Single Graph}\\[0.5em]
+    \textbf{\LARGE from W(3,3)}\\[0.5em]
     {\color{w33blue}\rule{\textwidth}{2pt}}\\[1em]
     \Large Derived from the Finite Field $\mathbb{F}_3$\\[0.3em]
     \large 100 Parts Complete\\[0.5em]
@@ -129,7 +130,7 @@
 % ABSTRACT
 % ============================================================================
 \begin{abstract}
-\noindent We present a complete unified theory of fundamental physics based on a single mathematical structure: the \textbf{W33 graph}, a strongly regular graph with parameters $(40, 12, 2, 4)$ arising from the symplectic group $\mathrm{Sp}(4, \mathbb{F}_3)$ over the finite field with three elements.
+\noindent We present a complete unified theory of fundamental physics based on a single mathematical structure: the \textbf{Witting configuration} $W(3,3)$, also known as the W33 graph. This is a classical geometric configuration discovered by Alexander Witting in 1887, consisting of 40 points and 40 planes in complex projective 3-space. It arises naturally as a strongly regular graph with parameters $(40, 12, 2, 4)$ from the symplectic group $\mathrm{Sp}(4, \mathbb{F}_3)$ over the finite field with three elements.
 
 From this single graph and \textbf{zero free parameters}, we derive:
 
@@ -157,7 +158,7 @@ The key discoveries include:
 The theory makes \textbf{rigid, falsifiable predictions} including proton decay ($\tau \sim 10^{34}$ years), neutrino CP phase ($\delta \sim 120°$), and the non-existence of a fourth generation.
 
 \vspace{0.5em}
-\noindent\textbf{Keywords:} theory of everything, W33 graph, strongly regular graph, exceptional Lie algebras, fine structure constant, Hubble tension, grand unification
+\noindent\textbf{Keywords:} theory of everything, Witting configuration, W(3,3), strongly regular graph, exceptional Lie algebras, fine structure constant, Hubble tension, grand unification
 \end{abstract}
 
 \newpage
@@ -188,23 +189,50 @@ This is the \textbf{only axiom}. Everything else follows mathematically.
 \end{itemize}
 \end{remark}
 
+\subsection{The Witting Configuration: Historical Context}
+
+\begin{definition}[The Witting Configuration $W(3,3)$]
+The \textbf{Witting configuration}, denoted $W(3,3)$, was discovered by Alexander Witting in 1887. It is a remarkable geometric configuration in complex projective 3-space $\mathbb{CP}^3$ consisting of:
+\begin{itemize}
+    \item \textbf{40 points} (the vertices of a complex polytope)
+    \item \textbf{40 planes} (in dual correspondence)
+    \item Each point lies on \textbf{12 planes}
+    \item Each plane contains \textbf{12 points}
+\end{itemize}
+The notation $W(3,3)$ indicates a configuration related to the complex reflection group $3[3]3$ (the Shephard-Todd group).
+\end{definition}
+
+\begin{remark}[Why ``W33''?]
+Throughout this paper, we use ``W33'' as shorthand for the Witting configuration $W(3,3)$. The ``W'' honors Witting, and the ``33'' refers to both the $3[3]3$ reflection group and the fact that it arises over $\mathbb{F}_3$.
+\end{remark}
+
 \subsection{The Construction Chain}
 
-\begin{theorem}[From $\mathbb{F}_3$ to W33]
-The following construction chain produces the W33 graph:
+\begin{theorem}[From $\mathbb{F}_3$ to the Witting Configuration]
+The following construction chain produces the Witting graph:
 \begin{enumerate}
     \item \textbf{Vector Space}: Form $V = \mathbb{F}_3^4$ (4-dimensional space over $\mathbb{F}_3$)
     \item \textbf{Symplectic Form}: Define $\omega(u,v) = u_1v_2 - u_2v_1 + u_3v_4 - u_4v_3 \pmod{3}$
-    \item \textbf{Isotropic Lines}: Identify lines where $\omega$ vanishes
+    \item \textbf{Isotropic Lines}: Identify the 40 lines where $\omega$ vanishes
     \item \textbf{Graph}: Connect lines that span isotropic planes
 \end{enumerate}
-Result: $\Wthree = \mathrm{Sp}(4, \mathbb{F}_3)$, a strongly regular graph.
+Result: $W(3,3) = \mathrm{Sp}(4, \mathbb{F}_3)$, a strongly regular graph with parameters $(40, 12, 2, 4)$.
 \end{theorem}
+
+\begin{remark}[Multiple Constructions]
+The Witting configuration can also be constructed as:
+\begin{itemize}
+    \item The vertices and edges of the complex polytope $3\{3\}3\{3\}3$
+    \item The 40 "special" points of the Hessian polyhedron
+    \item The incidence structure of certain lines in $\mathrm{PG}(3, \mathbb{F}_3)$
+\end{itemize}
+All constructions yield the same graph---testament to its fundamental nature.
+\end{remark}
 
 \subsection{W33 Parameters}
 
-\begin{definition}[W33 = SRG$(40, 12, 2, 4)$]
-The W33 graph has parameters:
+\begin{definition}[Witting Graph = SRG$(40, 12, 2, 4)$]
+The Witting configuration $W(3,3)$, viewed as a graph, has parameters:
 \begin{align}
     v &= 40 \quad \text{(vertices)} \\
     k &= 12 \quad \text{(degree: edges per vertex)} \\
@@ -250,13 +278,13 @@ Total: $1 + 24 + 15 = 40$ dimensions.
 \subsection{The Fundamental Theorem}
 
 \begin{theorem}[Coxeter 1940, Extended]\label{thm:weyl}
-The automorphism group of W33 equals the Weyl group of $E_6$:
+The automorphism group of the Witting configuration equals the Weyl group of $E_6$:
 \begin{equation}
-    \boxed{|\Aut(\Wthree)| = |W(E_6)| = 51{,}840}
+    \boxed{|\Aut(W(3,3))| = |W(E_6)| = 51{,}840}
 \end{equation}
 \end{theorem}
 
-This is not coincidence---it reveals W33 as the incidence structure of exceptional algebras.
+This is not coincidence---H.S.M. Coxeter recognized that the Witting configuration is intimately connected to the exceptional Lie algebra $E_6$. The 40 vertices correspond to vectors in the $E_6$ root system, and the symmetries of $W(3,3)$ ARE the Weyl group symmetries.
 
 \begin{corollary}[Group Decomposition]
 \begin{equation}
@@ -717,16 +745,18 @@ We are how the universe knows itself.
 % ============================================================================
 \section{Conclusions}
 
-We have presented a complete unified theory of physics based on the W33 graph, derived from the finite field $\mathbb{F}_3 = \{0, 1, 2\}$.
+We have presented a complete unified theory of physics based on the \textbf{Witting configuration} $W(3,3)$, a classical geometric structure discovered in 1887, derived from the finite field $\mathbb{F}_3 = \{0, 1, 2\}$.
 
 \textbf{Key achievements:}
 \begin{enumerate}
     \item \textbf{Zero free parameters}: Everything derived from graph structure
     \item \textbf{15+ verified predictions}: All within experimental bounds
     \item \textbf{Hubble tension solved}: Both CMB and local values explained
-    \item \textbf{Deep connections}: $|\Aut| = |W(E_6)|$, $|\text{Edges}| = |E_8 \text{ roots}|$
+    \item \textbf{Deep connections}: $|\Aut(W(3,3))| = |W(E_6)|$, $|\text{Edges}| = |E_8 \text{ roots}|$
     \item \textbf{Falsifiable}: Specific experimental tests with timelines
 \end{enumerate}
+
+The fact that a configuration discovered in the 19th century for purely mathematical reasons turns out to encode all of physics is either the greatest coincidence in history, or evidence that mathematics IS physics.
 
 The characteristic polynomial
 \begin{equation}
@@ -767,7 +797,11 @@ encodes all of physics. From one finite field comes everything.
 % ============================================================================
 \begin{thebibliography}{99}
 
-\bibitem{coxeter1940} H.S.M. Coxeter, ``The polytope $2_{21}$,'' \textit{Amer. J. Math.} \textbf{62} (1940) 457--486.
+\bibitem{witting1887} A. Witting, ``\"{U}ber die Natur der bei der Transformation $7^{ter}$ Ordnung der Thetafunctionen auftretenden Substitutionsgruppe,'' \textit{Math. Ann.} \textbf{29} (1887) 261--272.
+
+\bibitem{coxeter1940} H.S.M. Coxeter, ``The polytope $2_{21}$, whose twenty-seven vertices correspond to the lines on the general cubic surface,'' \textit{Amer. J. Math.} \textbf{62} (1940) 457--486.
+
+\bibitem{coxeter1974} H.S.M. Coxeter, \textit{Regular Complex Polytopes}, Cambridge University Press (1974).
 
 \bibitem{conway} J.H. Conway and N.J.A. Sloane, \textit{Sphere Packings, Lattices and Groups}, 3rd ed., Springer (1999).
 
