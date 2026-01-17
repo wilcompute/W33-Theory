@@ -18,9 +18,7 @@ jobs:
         chmod +x scripts/run_all_sage.sh || true
 
     - name: Run all Sage verification scripts in Docker
-      run: |
-        # Use the official SageMath Docker image to run the verification scripts so checkout runs on the runner and avoids permission issues
-        docker run --rm -v "${{ github.workspace }}":/work -w /work sagemath/sagemath:10.7 bash -lc "chmod +x claude_workspace/run_sage.sh && scripts/run_all_sage.sh"
+      run: docker run --rm -v "${{ github.workspace }}:/work" -w /work sagemath/sagemath:10.7 bash -lc 'chmod +x claude_workspace/run_sage.sh && scripts/run_all_sage.sh'
 
     - name: Collect PART_*.json results (Sage)
       run: |
