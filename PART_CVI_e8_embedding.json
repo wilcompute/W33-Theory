@@ -1,0 +1,39 @@
+{
+  "e8_roots": 240,
+  "requirements": {
+    "vertices": 40,
+    "neighbors": 12,
+    "root_norm": 1.4142135623730951
+  },
+  "spherical": {
+    "eigenvalues": [
+      12,
+      2,
+      -4
+    ],
+    "multiplicities": [
+      1,
+      24,
+      15
+    ]
+  },
+  "automorphism": {
+    "aut_w33": 51840,
+    "w_e6": 51840,
+    "sp4_f3": 51840,
+    "factorization": "2^7 \u00d7 3^4 \u00d7 5"
+  },
+  "e6_27": {
+    "e6_fund": 27,
+    "w33_vertices": 40,
+    "decomposition": "27 + 12 + 1",
+    "e8_e6_81": 81
+  },
+  "e6_roots": 60,
+  "heterotic": {
+    "w33_squared_vertices": 1600,
+    "w33_squared_edges_cart": 19200,
+    "w33_squared_edges_tens": 115200,
+    "e8_e8_roots": 480
+  }
+}

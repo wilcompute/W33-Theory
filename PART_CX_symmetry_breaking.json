@@ -1,0 +1,68 @@
+{
+  "sm_gauge": {
+    "group": "SU(3) x SU(2) x U(1)",
+    "bosons": {
+      "gluons": 8,
+      "weak": 3,
+      "hypercharge": 1
+    },
+    "total": 12
+  },
+  "e8": {
+    "dim": 248,
+    "rank": 8,
+    "roots": 240
+  },
+  "breaking_chain": [
+    "E8 --> E6 x SU(3)",
+    "E6 --> SO(10) x U(1)",
+    "SO(10) --> SU(5) x U(1)",
+    "SU(5) --> SU(3) x SU(2) x U(1)"
+  ],
+  "vertex_decomposition": {
+    "total": 40,
+    "e6_fund": 27,
+    "gauge": 12,
+    "singlet": 1
+  },
+  "eigenvalues": {
+    "values": [
+      12,
+      2,
+      -4
+    ],
+    "multiplicities": [
+      1,
+      24,
+      15
+    ],
+    "sum": 40
+  },
+  "pati_salam": {
+    "gauge_group": "SU(4) x SU(2) x SU(2)",
+    "dimension": 21,
+    "w33_connection": "multiplicity 15"
+  },
+  "generations": {
+    "number": 3,
+    "source": "81 = 27 x 3 from F_3^4",
+    "one_gen_in_so10": 16
+  },
+  "scales": {
+    "planck": "10^19 GeV",
+    "gut": "10^16 GeV",
+    "electroweak": "246 GeV"
+  },
+  "predictions": [
+    "3 generations (confirmed)",
+    "12 gauge bosons (confirmed)",
+    "Pati-Salam intermediate stage",
+    "E6 GUT structure",
+    "77 GeV dark matter scalar",
+    "Extra Z' bosons from E6"
+  ],
+  "timestamp": "2026-01-16T20:07:42.528643",
+  "part": "CX",
+  "part_number": 110,
+  "key_finding": "Complete E8 --> SM breaking encoded in W33"
+}

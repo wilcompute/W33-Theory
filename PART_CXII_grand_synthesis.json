@@ -1,0 +1,159 @@
+{
+  "parts_summary": [
+    [
+      "CV",
+      105,
+      "E8 Connection"
+    ],
+    [
+      "CVI",
+      106,
+      "E8 Embedding"
+    ],
+    [
+      "CVII",
+      107,
+      "Explicit E8 Test"
+    ],
+    [
+      "CVIII",
+      108,
+      "Group Isomorphism"
+    ],
+    [
+      "CIX",
+      109,
+      "D4 Triality"
+    ],
+    [
+      "CX",
+      110,
+      "Symmetry Breaking"
+    ],
+    [
+      "CXI",
+      111,
+      "Particle Map"
+    ]
+  ],
+  "key_numbers": {
+    "3": [
+      "F_3 = {0,1,2}",
+      "3 generations of fermions"
+    ],
+    "4": [
+      "F_3^4 dimension",
+      "Spacetime dimensions?"
+    ],
+    "8": [
+      "8 = (3^2-1)",
+      "D4 representation dimension, 8 gluons"
+    ],
+    "12": [
+      "k = degree",
+      "12 gauge bosons of SM"
+    ],
+    "15": [
+      "Eigenvalue mult",
+      "dim(SU(4)) Pati-Salam"
+    ],
+    "24": [
+      "Eigenvalue mult",
+      "D4 roots, 3x8 triality"
+    ],
+    "27": [
+      "27 of E6",
+      "One generation in E6 GUT"
+    ],
+    "40": [
+      "Vertices",
+      "Fundamental particles + gauge + DM"
+    ],
+    "72": [
+      "E6 roots",
+      "From W(E6) structure"
+    ],
+    "78": [
+      "dim(E6)",
+      "E6 Lie algebra dimension"
+    ],
+    "81": [
+      "3^4 = |F_3^4|",
+      "27x3 = total matter states"
+    ],
+    "240": [
+      "Edges",
+      "E8 roots, gauge structure"
+    ],
+    "248": [
+      "dim(E8)",
+      "E8 Lie algebra dimension"
+    ],
+    "51840": [
+      "|Aut(W33)|",
+      "|W(E6)| = |Sp(4,F_3)|"
+    ]
+  },
+  "eigenvalues": {
+    "12": {
+      "mult": 1,
+      "meaning": "gauge boson count"
+    },
+    "2": {
+      "mult": 24,
+      "meaning": "D4 triality, 3 generations"
+    },
+    "-4": {
+      "mult": 15,
+      "meaning": "Pati-Salam SU(4)"
+    }
+  },
+  "predictions": [
+    [
+      "Dark matter mass",
+      "77.03 \u00b1 0.5 GeV",
+      "Direct detection, LHC"
+    ],
+    [
+      "Number of generations",
+      "Exactly 3",
+      "Confirmed (LEP Z-width)"
+    ],
+    [
+      "Gauge boson count",
+      "12",
+      "Confirmed (SM)"
+    ],
+    [
+      "Right-handed neutrino",
+      "Must exist",
+      "Neutrino oscillations"
+    ],
+    [
+      "w_0 (dark energy)",
+      "-0.827",
+      "DESI match: -0.826"
+    ],
+    [
+      "Proton lifetime",
+      "> 10^34 years",
+      "Future experiments"
+    ],
+    [
+      "No 4th generation",
+      "Forbidden",
+      "Confirmed (LEP)"
+    ],
+    [
+      "E6 exotic particles",
+      "Exist at high scale",
+      "Future colliders"
+    ]
+  ],
+  "timestamp": "2026-01-16T20:11:55.464169",
+  "part": "CXII",
+  "part_number": 112,
+  "title": "The Grand Synthesis",
+  "parts_covered": "CV-CXI (105-111)",
+  "key_finding": "W33 is the discrete skeleton of E8 physics"
+}

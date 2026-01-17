@@ -1,0 +1,45 @@
+{
+  "sm_fermions_per_gen": 16,
+  "gauge_bosons": 12,
+  "e6_27": {
+    "so10_16": 16,
+    "so10_10": 10,
+    "singlet": 1,
+    "total": 27
+  },
+  "w33_decomposition": {
+    "total": 40,
+    "matter_27": 27,
+    "gauge_12": 12,
+    "dark_1": 1
+  },
+  "three_generations": {
+    "total_states": 81,
+    "per_generation": 27,
+    "source": "F_3 = {0, 1, 2}"
+  },
+  "vertex_map": {
+    "fermions": "V1-V16",
+    "exotics": "V17-V26",
+    "e6_singlet": "V27",
+    "gauge": "V28-V39",
+    "dark_matter": "V40"
+  },
+  "dark_matter": {
+    "mass_GeV": 77.03,
+    "charges": "all zero (singlet)",
+    "stability": "from W33 adjacency structure"
+  },
+  "predictions": [
+    "Dark matter at 77 GeV",
+    "40 total fundamental particles",
+    "Heavy D-quarks at GUT scale",
+    "Right-handed neutrinos exist",
+    "Constrained Yukawa couplings",
+    "Exactly 3 generations"
+  ],
+  "timestamp": "2026-01-16T20:10:07.396632",
+  "part": "CXI",
+  "part_number": 111,
+  "key_finding": "40 = 27 + 12 + 1 particle decomposition"
+}

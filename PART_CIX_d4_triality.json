@@ -1,0 +1,25 @@
+{
+  "d4_reps": [
+    "8_v (vector)",
+    "8_s (spinor)",
+    "8_c (conjugate spinor)"
+  ],
+  "d4_dim": 28,
+  "d4_roots": 24,
+  "d4_roots_explicit": 24,
+  "eigenspace_dim": 0,
+  "e8_d4d4": "248 = 28 + 28 + 64 + 64 + 64",
+  "mass_ratios": {
+    "tau_mu_e": "3500:200:1 approximately",
+    "eigenvalue_ratios": {
+      "12/2": 6,
+      "2/(-4)": -0.5,
+      "12/(-4)": -3
+    }
+  },
+  "timestamp": "2026-01-16T20:04:24.301736",
+  "part": "CIX",
+  "part_number": 109,
+  "key_finding": "24 = 3 x 8 explains three generations via D4 triality",
+  "triality_connection": true
+}

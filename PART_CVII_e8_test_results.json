@@ -1,0 +1,26 @@
+{
+  "vertices": 40,
+  "edges": 240,
+  "eigenvalues": {
+    "-4": 15,
+    "2": 24,
+    "12": 1
+  },
+  "automorphism_order": 51840,
+  "e8_roots": 240,
+  "e6_e8": {
+    "e8_roots": 240,
+    "e6_roots": 72,
+    "w_e8": 696729600,
+    "w_e6": 51840,
+    "ratio": 13440,
+    "27_times_3": 81
+  },
+  "triangles": 160,
+  "timestamp": "2026-01-16T19:59:16.282786",
+  "part": "CVII",
+  "part_number": 107,
+  "w33_confirmed": true,
+  "e8_edge_match": true,
+  "w_e6_match": true
+}
