@@ -7,10 +7,7 @@ on:
 
 jobs:
   sage-verify:
-    # Use official SageMath Docker image so Sage is available in CI
     runs-on: ubuntu-latest
-    container:
-      image: sagemath/sagemath:10.7
 
     steps:
     - uses: actions/checkout@v4
@@ -20,9 +17,10 @@ jobs:
         chmod +x claude_workspace/run_sage.sh || true
         chmod +x scripts/run_all_sage.sh || true
 
-    - name: Run all Sage verification scripts
+    - name: Run all Sage verification scripts in Docker
       run: |
-        scripts/run_all_sage.sh
+        # Use the official SageMath Docker image to run the verification scripts so checkout runs on the runner and avoids permission issues
+        docker run --rm -v "${{ github.workspace }}":/work -w /work sagemath/sagemath:10.7 bash -lc "chmod +x claude_workspace/run_sage.sh && scripts/run_all_sage.sh"
 
     - name: Collect PART_*.json results (Sage)
       run: |
