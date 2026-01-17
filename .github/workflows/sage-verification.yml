@@ -45,6 +45,29 @@ jobs:
       run: |
         python scripts/collect_results_from_artifact.py artifacts/sage-part-jsons || true
 
+    - name: List generated files
+      run: |
+        echo "Listing generated files:"
+        ls -la SUMMARY_RESULTS.json || true
+        ls -la NUMERIC_COMPARISONS.json || true
+        echo "\nSUMMARY_RESULTS.json preview:"
+        head -n 60 SUMMARY_RESULTS.json || true
+        echo "\nNUMERIC_COMPARISONS.json preview:"
+        head -n 60 NUMERIC_COMPARISONS.json || true
+
+    - name: Run artifact tests (pytest)
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install test dependencies
+      run: |
+        python -m pip install --upgrade pip pytest
+
+    - name: Run artifact validation tests
+      run: |
+        pytest -q tests/test_summary.py::test_summary_and_numeric_comparisons
+
     - name: Upload SUMMARY_RESULTS.json
       uses: actions/upload-artifact@v4
       with:
