@@ -1,0 +1,24 @@
+{
+  "part": "CXXIII",
+  "analysis": {
+    "E6_roots": {
+      "total": 72,
+      "D5_part": 40,
+      "spinor_part": 32,
+      "decomposition": "72 = 40 + 32"
+    },
+    "weyl_groups": {
+      "W_E6": 51840,
+      "W_D5": 1920,
+      "quotient": 27,
+      "interpretation": "27 = Albert algebra dimension"
+    },
+    "summary": {
+      "E6_decomposition": "72 = 40 + 32",
+      "40_meaning": "D5 roots = W33 vertices = gauge",
+      "32_meaning": "spinors = matter generations",
+      "27_meaning": "Weyl quotient = Albert = E6 fund = non-neighbors",
+      "chain": "E8 > E6 > D5 > D4 encoded in W33"
+    }
+  }
+}
