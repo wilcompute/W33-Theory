@@ -1,0 +1,96 @@
+{
+  "part": "CXVII",
+  "title": "Exceptional Jordan Algebras and the Number 27",
+  "timestamp": "2026-01-16T20:38:34.588977",
+  "findings": {
+    "jordan_definition": {
+      "axioms": [
+        "commutativity",
+        "jordan_identity"
+      ],
+      "product": "a \u2218 b = \u00bd(ab + ba)",
+      "quantum_significance": "algebra of observables"
+    },
+    "classification": {
+      "types": [
+        "real",
+        "spin",
+        "symmetric",
+        "hermitian",
+        "quaternionic",
+        "octonionic"
+      ],
+      "exceptional": "H_3(O)",
+      "dimension": 27,
+      "maximum_n": 3
+    },
+    "albert_structure": {
+      "matrix_size": "3\u00d73",
+      "base_field": "octonions",
+      "diagonal_entries": 3,
+      "off_diagonal_entries": "3 octonions = 24 real",
+      "total_dimension": 27
+    },
+    "e_series": {
+      "F4": {
+        "action": "automorphisms of J\u00b3(\ud835\udd46)",
+        "dim": 52
+      },
+      "E6": {
+        "action": "preserves cubic form",
+        "dim": 78,
+        "fund_rep": 27
+      },
+      "E7": {
+        "dim": 133,
+        "fund_rep": 56
+      },
+      "E8": {
+        "dim": 248,
+        "roots": 240
+      }
+    },
+    "e6_27": {
+      "rep_dimension": 27,
+      "decomposition_SO10": "16 + 10 + 1",
+      "16": "spinor = one generation",
+      "10": "vector = Higgs",
+      "1": "singlet"
+    },
+    "factorization": {
+      "main": "192 \u00d7 270",
+      "detailed": "192 \u00d7 27 \u00d7 10",
+      "e_series": "8 \u00d7 27 \u00d7 240",
+      "symmetric": "720 \u00d7 72",
+      "all_equal_51840": true
+    },
+    "cubic_form": {
+      "degree": 3,
+      "variables": 27,
+      "preserved_by": "E6",
+      "applications": [
+        "supergravity",
+        "black_hole_entropy",
+        "Yukawa_couplings"
+      ]
+    },
+    "vertex_40": {
+      "decomposition_1": "27 + 12 + 1",
+      "decomposition_2": "27 + 13",
+      "decomposition_3": "16 + 16 + 8",
+      "interpretation": {
+        "27": "Albert algebra / E6 fundamental",
+        "12": "Reye configuration / triality",
+        "1": "identity / singlet"
+      }
+    }
+  },
+  "summary": {
+    "main_factorization": "51,840 = 192 \u00d7 27 \u00d7 10",
+    "192_meaning": "W(D4), quantum contextuality, triality",
+    "27_meaning": "Albert algebra J\u00b3(\ud835\udd46), E6 fundamental",
+    "10_meaning": "SO(10) vector, GUT structure",
+    "octonion_central": true,
+    "unification_complete": true
+  }
+}
