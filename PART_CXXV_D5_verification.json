@@ -1,0 +1,14 @@
+{
+  "part": "CXXV",
+  "findings": {
+    "D5_root_count": 40,
+    "inner_product_distribution": {
+      "0": 14,
+      "-2": 1,
+      "1": 12,
+      "-1": 12
+    },
+    "W33_built": true,
+    "correspondence_found": false
+  }
+}
