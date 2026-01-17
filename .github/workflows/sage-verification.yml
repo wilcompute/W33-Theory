@@ -1,0 +1,54 @@
+name: sage-verification
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [ main, master ]
+
+jobs:
+  sage-verify:
+    # Use official SageMath Docker image so Sage is available in CI
+    runs-on: ubuntu-latest
+    container:
+      image: sagemath/sagemath:10.7
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Make helper scripts executable
+      run: |
+        chmod +x claude_workspace/run_sage.sh || true
+        chmod +x scripts/run_all_sage.sh || true
+
+    - name: Run all Sage verification scripts
+      run: |
+        scripts/run_all_sage.sh
+
+    - name: Collect PART_*.json results (Sage)
+      run: |
+        python scripts/collect_results.py || true
+
+    - name: Extract numeric comparisons
+      run: |
+        python scripts/make_numeric_comparisons_from_summary.py || true
+
+    - name: Upload PART_*.json artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: sage-part-jsons
+        path: PART_*.json
+        if-no-files-found: warn
+
+    - name: Upload SUMMARY_RESULTS.json
+      uses: actions/upload-artifact@v4
+      with:
+        name: summary-results
+        path: SUMMARY_RESULTS.json
+        if-no-files-found: warn
+
+    - name: Upload NUMERIC_COMPARISONS.json
+      uses: actions/upload-artifact@v4
+      with:
+        name: numeric-comparisons
+        path: NUMERIC_COMPARISONS.json
+        if-no-files-found: warn
