@@ -1,1 +1,0 @@
-no direct cycle matches between A4 perms and stabilizer cycles

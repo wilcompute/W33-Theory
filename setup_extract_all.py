@@ -8,8 +8,9 @@ import zipfile
 from pathlib import Path
 import shutil
 
-ROOT = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold")
-EXTRACT_BASE = ROOT / "claude_workspace" / "extracted"
+# Use the directory where this script is located as the ROOT
+ROOT = Path(__file__).parent.resolve()
+EXTRACT_BASE = ROOT / "extracted"
 
 # Create extraction directory
 EXTRACT_BASE.mkdir(parents=True, exist_ok=True)

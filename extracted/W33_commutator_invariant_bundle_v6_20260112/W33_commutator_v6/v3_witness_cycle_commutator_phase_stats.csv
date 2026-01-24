@@ -1,6 +1,0 @@
-cycle_index,length,moves,n_hol9,base_phase,comm_phase,combined_phase
-0,4,2,3,(-1+0j),1,(-1+0j)
-1,9,6,3,(-0-1j),1,-1j
-2,11,6,6,-1j,1,-1j
-3,17,11,10,1j,-1,(-0-1j)
-4,19,11,10,-1j,-1,1j
