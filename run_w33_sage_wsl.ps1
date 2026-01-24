@@ -28,14 +28,14 @@ if (-not $wslRepo) {
 # Use single quotes so PowerShell does not expand bash's `$?`.
 $sageOk = & wsl.exe -d Ubuntu -e bash -lc 'command -v sage >/dev/null 2>&1; echo $?' 2>$null
 if ($sageOk -ne '0') {
-  throw "Sage is not available inside WSL (command 'sage' not found). Install in WSL, e.g.: sudo apt install -y sagemath  OR micromamba create -n sage -c conda-forge sagemath"
+  throw "Sage is not available inside WSL (command 'sage' not found). Install in WSL, e.g.: sudo apt install -y sagemath  OR micromamba create -n sage -c conda-forge sage"
 }
 
-$sageArgs = "claude_workspace/w33_sage_incidence_and_h1.py"
+$sageArgs = "w33_sage_incidence_and_h1.py"
 if ($PySymmetry) { $sageArgs += " --pysymmetry" }
 if ($Field -eq 'GF') { $sageArgs += " --field=GF --prime=$Prime" }
 
-$cmd = "cd '$wslRepo'; bash ./claude_workspace/run_sage.sh $sageArgs"
+$cmd = "cd '$wslRepo'; bash ./run_sage.sh $sageArgs"
 
 Write-Host "Running in WSL:" $cmd
 & wsl.exe -d Ubuntu -e bash -lc $cmd

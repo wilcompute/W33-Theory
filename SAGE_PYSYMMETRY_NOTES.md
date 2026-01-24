@@ -2,8 +2,19 @@
 
 This repo includes:
 
-- `external/sage/` — a SageMath tree whose launcher is a **bash script** (`external/sage/bin/sage`).
-- `external/pysymmetry/` — **PySymmetry**, which is a SageMath-based package (it expects `sage.all`).
+- `external/sage/` — an optional SageMath tree whose launcher is a **bash script** (`external/sage/bin/sage`).
+- `external/pysymmetry/` — **PySymmetry**, a SageMath-based package (it expects `sage.all`).
+
+## Linux/container quickstart
+
+From the repo root:
+
+```bash
+./scripts/setup_sage_pysymmetry.sh
+```
+
+That script installs micromamba + Sage (conda-forge) and clones PySymmetry into
+`external/pysymmetry`, then runs a smoke test.
 
 ## Why `external/sage/bin/sage` won’t run in PowerShell
 
@@ -17,11 +28,11 @@ So from plain PowerShell you’ll typically need either:
 
 ## New Sage script added
 
-- `claude_workspace/w33_sage_incidence_and_h1.py`
+- `w33_sage_incidence_and_h1.py`
 
 What it does under Sage:
 
-1. Loads W33 lines from `claude_workspace/data/_workbench/02_geometry/W33_line_phase_map.csv`.
+1. Loads W33 lines from `data/_workbench/02_geometry/W33_line_phase_map.csv` (or `claude_workspace/data/...` if you keep a separate workspace layout).
 2. Builds the **bipartite incidence graph** (40 points + 40 lines).
 3. Computes the **bipartition-preserving automorphism group** using Sage/nauty.
 4. Builds the simplicial complex (edges + triangles + tetrahedra from each line).
@@ -30,26 +41,26 @@ What it does under Sage:
 
 Output:
 
-- `claude_workspace/data/w33_sage_incidence_h1.json`
+- `data/w33_sage_incidence_h1.json` (or `claude_workspace/data/...` if you keep a separate workspace layout)
 
 ## How to run (recommended: WSL + Sage)
 
 Inside WSL, from the repo root:
 
 ```bash
-bash ./claude_workspace/run_sage.sh claude_workspace/w33_sage_incidence_and_h1.py
+bash ./run_sage.sh w33_sage_incidence_and_h1.py
 ```
 
 Optional flags:
 
 ```bash
-bash ./claude_workspace/run_sage.sh claude_workspace/w33_sage_incidence_and_h1.py --pysymmetry
-bash ./claude_workspace/run_sage.sh claude_workspace/w33_sage_incidence_and_h1.py --field=GF --prime=1000003
+bash ./run_sage.sh w33_sage_incidence_and_h1.py --pysymmetry
+bash ./run_sage.sh w33_sage_incidence_and_h1.py --field=GF --prime=1000003
 ```
 
 If you prefer launching from Windows (PowerShell), you can use:
 
-- `claude_workspace/run_w33_sage_wsl.ps1`
+- `run_w33_sage_wsl.ps1`
 
 Or run the VS Code tasks:
 
@@ -62,7 +73,7 @@ From WSL, you can try running the repo’s launcher directly:
 
 ```bash
 ./external/sage/bin/sage -v
-./external/sage/bin/sage -python claude_workspace/w33_sage_incidence_and_h1.py
+./external/sage/bin/sage -python w33_sage_incidence_and_h1.py
 ```
 
 (If it fails, your best path is installing Sage inside WSL and using that `sage`.)
@@ -81,7 +92,7 @@ Option B (conda/mamba inside WSL):
 If you’re already using micromamba/mamba/conda in WSL, installing Sage from conda-forge is often easier to manage:
 
 ```bash
-micromamba create -n sage -c conda-forge sagemath
+micromamba create -n sage -c conda-forge sage
 micromamba activate sage
 sage -v
 ```
