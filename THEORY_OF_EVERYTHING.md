@@ -357,6 +357,37 @@ Z₄ = 2 → Weak isospin central element
 
 ---
 
+## PART XIII: Concrete Derivations to Close the Loop
+
+### 1) Explicit Q45 Label Assignment
+- Construct the Q45 quotient map from W33 automorphisms.
+- Assign each Q45 vertex its inherited $(\mathbb{Z}_4, \mathbb{Z}_3)$ label.
+- Verify universal $Z_4 = 2$ across all fibers.
+- Export the labeling table for downstream mass/coupling extraction.
+
+### 2) Holonomy → Mass Eigenvalues
+- Compute holonomy frequency spectrum for each Q45 fiber.
+- Map holonomy entropy to relative mass weights.
+- Normalize using a single experimental anchor (e.g., electron mass).
+- Predict full charged lepton and quark mass hierarchy.
+
+### 3) Coupling Constants from Symmetry Counts
+- Derive $g_1, g_2, g_3$ from orbit sizes in Aut(W33).
+- Check unification via geometric 12× enhancement.
+- Convert to low-energy values using discrete RG flow steps.
+
+### 4) Neutrino Sector and Mixing
+- Identify tricentric triangle sector contribution to neutral states.
+- Compute mixing matrix from V23 adjacency transitions.
+- Predict $\theta_{12}, \theta_{23}, \theta_{13}$ and mass splittings.
+
+### 5) Consistency Checks (No Adjustable Parameters)
+- Charge quantization: all U(1) charges from Z₃ ports.
+- Anomaly cancellation: verify by incidence parity alone.
+- Proton decay channels: fiber transitions restricted by holonomy class.
+
+---
+
 ## Conclusion
 
 **W33 is not just elegant mathematics—it is PHYSICAL REALITY.**
