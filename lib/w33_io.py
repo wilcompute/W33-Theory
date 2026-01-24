@@ -21,11 +21,17 @@ class W33DataPaths:
         for parent in [p] + list(p.parents):
             if parent.name == "claude_workspace":
                 return W33DataPaths(repo_root=parent.parent)
-        raise ValueError(f"Could not locate claude_workspace above: {p}")
+        # Fallback: locate the git repo root if present.
+        for parent in [p] + list(p.parents):
+            if (parent / ".git").exists():
+                return W33DataPaths(repo_root=parent)
+        # Final fallback: assume the file lives under the repo root.
+        return W33DataPaths(repo_root=p.parent)
 
     @property
     def claude_workspace(self) -> Path:
-        return self.repo_root / "claude_workspace"
+        candidate = self.repo_root / "claude_workspace"
+        return candidate if candidate.exists() else self.repo_root
 
     @property
     def data_root(self) -> Path:

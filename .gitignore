@@ -23,3 +23,7 @@ artifacts/
 
 # Extracted bundles (redundant with bundles/ directory)
 extracted/
+
+# Optional external dependencies
+external/pysymmetry/
+external/sage/
