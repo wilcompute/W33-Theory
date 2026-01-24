@@ -20,7 +20,8 @@ claude_workspace/
 import shutil
 from pathlib import Path
 
-ROOT = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace")
+# Use the directory where this script is located as the ROOT
+ROOT = Path(__file__).parent.resolve()
 EXTRACTED = ROOT / "extracted"
 
 # Create new structure

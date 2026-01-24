@@ -1,5 +1,0 @@
-Combined group <D8 lifts, D6 incidence> acting on 27 phase-functions has size 1296.
-Transitive on 27: True
-Stabilizer of tomotope15 subset size: 12 (equals incidence D6).
-Orbit size of tomotope15 subset (as set) under combined group: 108.
-Stabilizer of apex6 subset size: 36; orbit size: 36.
