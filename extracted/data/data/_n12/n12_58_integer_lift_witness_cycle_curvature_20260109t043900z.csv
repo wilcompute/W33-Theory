@@ -1,3 +1,0 @@
-cycle,cycle_nodes,holonomy_2T,holonomy_order,Z2_center,A4_projection,label_counts,delta4_edge
-C1 (chord 20-38),0-20-38-6,(0 2 1),6,e*,(0 2 1),"{(1, 4): 1, (-1, 2): 1, (-1, 6): 1, (1, 0): 1}",0-20
-C2 (chord 26-44),20-0-26-44,(0 1 2),6,e*,(0 1 2),"{(1, 4): 1, (-1, 6): 1, (1, 0): 1, (-1, 2): 1}",0-20
