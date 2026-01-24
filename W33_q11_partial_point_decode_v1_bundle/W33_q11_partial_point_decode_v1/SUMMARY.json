@@ -1,0 +1,72 @@
+{
+  "point": 933,
+  "within_point_f_edges": 46,
+  "majority_posmap_size": 46,
+  "fixed_positions": [
+    30,
+    4,
+    58,
+    11,
+    53
+  ],
+  "two_cycles": [
+    [
+      34,
+      44
+    ],
+    [
+      33,
+      43
+    ],
+    [
+      18,
+      24
+    ],
+    [
+      36,
+      40
+    ],
+    [
+      45,
+      48
+    ],
+    [
+      46,
+      49
+    ],
+    [
+      52,
+      64
+    ],
+    [
+      59,
+      61
+    ],
+    [
+      51,
+      63
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      54,
+      57
+    ],
+    [
+      14,
+      23
+    ],
+    [
+      7,
+      10
+    ]
+  ],
+  "partial_decode_positions": 31,
+  "notes": [
+    "This is a partial decode using only fixed and 2-cycle constraints from the majority within-point f map.",
+    "It assigns pair indices to 31 positions (5 fixed positions + 13 two-cycles = 31 positions).",
+    "Full 66-position decode still underconstrained under the 60s cap, but this partial mapping is exact and can be used to seed a repair solver."
+  ]
+}
