@@ -1,0 +1,10 @@
+[
+  {
+    "file": "PART_CIII_precision_frontier.json",
+    "name": "DESI w0",
+    "measured": -0.827,
+    "predicted": -0.826,
+    "diff": 0.0010000000000000009,
+    "pct": 0.12091898428053217
+  }
+]
