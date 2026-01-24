@@ -4,6 +4,11 @@ Test script for SageMath + PySymmetry environment.
 Run with: wsl -e bash run_sage.sh src/test_sage_pysymmetry.py
 """
 
+import pytest
+
+pytest.importorskip("sage")
+pytest.importorskip("pysymmetry")
+
 from sage.all import *
 from pysymmetry import FiniteGroup, MapRepresentation
 import numpy as np

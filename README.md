@@ -230,9 +230,20 @@ m_g ~ ε^(2(3-g))  gives 12 orders of magnitude from GEOMETRY!
 ## Requirements
 
 - Python 3.8+
-- NumPy, SciPy
-- Optional: SageMath for verification
+- NumPy, SymPy, Pandas
+- Optional: SageMath + PySymmetry for verification
 - LaTeX for paper compilation
+
+### Testing
+
+Run the lightweight checks with:
+
+```
+pytest -q
+```
+
+Some research scripts depend on private datasets (for example, V23/W33 CSVs) or
+SageMath; those tests automatically skip if the data or tooling is not present.
 
 ---
 
