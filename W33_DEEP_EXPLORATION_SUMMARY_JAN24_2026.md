@@ -402,5 +402,19 @@ If this structure is correct, then:
 
 -----
 
+## Agent Verification Notes (Quick Checks)
+
+These are lightweight numerical cross-checks based on the formulas stated above. They are **not** independent derivations, but they do confirm internal arithmetic consistency.
+
+|Quantity|Formula|Computed Value|Note|
+|---|---|---|---|
+|α⁻¹|81 + 56 + 40/(1080 + 31 + 1/7)|137.0359989715|Matches the stated value to rounding.|
+|Cabibbo λ|√(1/20)|0.2236067977|Aligns with the stated 0.2236.|
+|Wolfenstein A|31/40|0.775|Matches the stated value.|
+|3³⁶|3^36|1.5009463529699912 × 10^17|Matches the stated 1.5 × 10^17 scale.|
+|Top mass (if v = 246 GeV)|v√(40/81)|172.87 GeV|Consistent with the stated 173.0 GeV (rounding).|
+
+-----
+
 *Document: January 24, 2026*
 *Exploration: 5 deep dives, ~400 lines of code*
