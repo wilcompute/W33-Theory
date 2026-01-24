@@ -19,8 +19,6 @@ tmpclaude-*
 
 # Generated output files from CI/CD and Sage verification
 PART_*.json
-SUMMARY_RESULTS.json
-NUMERIC_COMPARISONS.json
 artifacts/
 
 # Extracted bundles (redundant with bundles/ directory)
