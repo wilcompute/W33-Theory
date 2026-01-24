@@ -1,7 +1,0 @@
-triangle,tomotope_vertices,triple_classes,missing_class,missing_point,full_quartet_classes,full_quartet_points,w33_line_id
-"(1,-2)",12- 13+ 14+,sec1_m2 sec2_m2 sec3_m1,sec0_m2,24-,sec0_m2 sec1_m2 sec2_m2 sec3_m1,24- 12- 14+ 13+,39
-"(1,-3)",12+ 13- 14+,sec1_m0 sec2_m2 sec3_m0,sec0_m2,24-,sec0_m2 sec1_m0 sec2_m2 sec3_m0,24- 12+ 14+ 13-,22
-"(2,-1)",12- 23+ 24+,sec1_m2 sec2_m1 sec3_m2,sec0_m2,24-,sec0_m2 sec1_m2 sec2_m1 sec3_m2,24- 12- 23+ 24+,30
-"(2,-3)",12+ 23- 24+,sec1_m0 sec2_m0 sec3_m2,sec0_m2,24-,sec0_m2 sec1_m0 sec2_m0 sec3_m2,24- 12+ 23- 24+,8
-"(3,-1)",13- 23+ 34+,sec1_m1 sec2_m1 sec3_m0,sec0_m2,24-,sec0_m2 sec1_m1 sec2_m1 sec3_m0,24- 34+ 23+ 13-,6
-"(3,-2)",13+ 23- 34+,sec1_m1 sec2_m0 sec3_m1,sec0_m2,24-,sec0_m2 sec1_m1 sec2_m0 sec3_m1,24- 34+ 23- 13+,14

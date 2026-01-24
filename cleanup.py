@@ -4,7 +4,8 @@
 from pathlib import Path
 import shutil
 
-ROOT = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace")
+# Use the directory where this script is located as the ROOT
+ROOT = Path(__file__).parent.resolve()
 ARCHIVE = ROOT / "archive"
 ARCHIVE.mkdir(exist_ok=True)
 

@@ -3,16 +3,16 @@ set -euo pipefail
 
 # Run a Python script inside Sage (recommended: Sage installed in WSL).
 #
-# Usage (from WSL, at repo root):
-#   ./claude_workspace/run_sage.sh claude_workspace/w33_sage_incidence_and_h1.py [args...]
+# Usage (from repo root):
+#   ./run_sage.sh w33_sage_incidence_and_h1.py [args...]
 #
 # Or from Windows PowerShell:
-#   wsl.exe -e bash -lc "cd \"$(wslpath 'C:\\path\\to\\repo')\"; ./claude_workspace/run_sage.sh ..."
+#   wsl.exe -e bash -lc "cd \"$(wslpath 'C:\\path\\to\\repo')\"; ./run_sage.sh ..."
 
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 REPO_ROOT=$(cd "${SCRIPT_DIR}/.." && pwd)
 
-PYSYM_ROOT="${REPO_ROOT}/external/pysymmetry"
+PYSYM_ROOT="${REPO_ROOT}/lib/pysymmetry_deck_z2_integration_patch"
 
 # Prefer micromamba sage env, then system sage
 if [ -x "$HOME/bin/micromamba" ]; then
@@ -28,7 +28,7 @@ else
     exit 1
 fi
 
-export PYTHONPATH="${PYSYM_ROOT}:${REPO_ROOT}/claude_workspace:${PYTHONPATH:-}"
+export PYTHONPATH="${PYSYM_ROOT}:${REPO_ROOT}:${PYTHONPATH:-}"
 cd "${REPO_ROOT}"
 
 if [ $# -eq 0 ]; then
