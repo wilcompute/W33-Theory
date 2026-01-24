@@ -1,0 +1,334 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!55!black,
+  urlcolor=blue!55!black,
+  citecolor=blue!55!black
+}
+
+\usepackage[most]{tcolorbox}
+\tcbset{
+  colback=white,
+  colframe=black!70,
+  boxrule=0.6pt,
+  arc=2pt,
+  left=6pt,right=6pt,top=6pt,bottom=6pt
+}
+
+\newtcolorbox{keyresult}[1][]{colback=black!2,colframe=black!70,title=\textbf{Key Result}#1}
+\newtcolorbox{definitionbox}[1][]{colback=blue!2,colframe=blue!60!black,title=\textbf{Definition}#1}
+\newtcolorbox{remarkbox}[1][]{colback=orange!2,colframe=orange!60!black,title=\textbf{Remark}#1}
+\newtcolorbox{proofsketch}[1][]{colback=green!2,colframe=green!55!black,title=\textbf{Proof sketch / audit trail}#1}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\title{\textbf{The W33 Tower as a Kernel for Algebra, Topology, and Computation}\\
+\large Sections 3--7 (Theorem-Forward Draft)}
+\author{Wil Dahn \quad\&\quad Sage}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This document is a theorem-forward draft of Sections 3--7 of the W33 ``tower'' program. The objective here is not speculative physics claims but a rigorous kernel: a finite symplectic phase space over $\mathbb{F}_3$, the symplectic generalized quadrangle $W(3,3)$, its point graph $\mathrm{W33}=\mathrm{SRG}(40,12,2,4)$, and the derived structures that are forced from it---a square-zero adjacency differential over $\mathbb{F}_2$, a canonical code and homology space $H=\ker(A)/\mathrm{im}(A)$ of dimension $8$, a nonsingular orbit of size $120$ inducing $\mathrm{SRG}(120,56,28,24)$ with an $E_8$ Dynkin subgraph, and a signed lift admitting global gauge fixing. Collapsing the globally gauge-fixed signed lift yields a 40-vertex quotient equal to $\overline{\mathrm{W33}}$ whose triangular holonomy is $\mathbb{Z}_3$-valued, with the flat faces classified exactly by the 90 non-isotropic projective lines in $PG(3,3)$.
+\end{abstract}
+
+\begin{remarkbox}
+\textbf{Computation provenance.} Each theorem below is either a standard fact from finite geometry / SRG theory or was verified by direct computation from explicit data files and bundles produced in the accompanying work session. When a statement is computationally certified, we include a brief audit note and refer to a named artifact bundle.
+\end{remarkbox}
+
+\tableofcontents
+\newpage
+
+% ------------------------------------------------------------
+\section{The W33 Object}
+
+\begin{definitionbox}
+Let $V=\mathbb{F}_3^4$ equipped with a nondegenerate alternating (symplectic) form $\omega$. Let $W(3,3)$ denote the symplectic generalized quadrangle arising from totally isotropic points and lines in $PG(3,3)$ with respect to $\omega$. The \emph{W33 point graph} is the graph whose vertices are the 40 isotropic points and whose edges connect collinear pairs (i.e., pairs lying on a common isotropic line). We denote its adjacency matrix by $A$ and the graph by $\mathrm{W33}$.
+\end{definitionbox}
+
+\begin{theorem}[SRG parameters]
+\label{thm:srg40}
+$\mathrm{W33}$ is a strongly regular graph with parameters
+\[
+(v,k,\lambda,\mu)=(40,12,2,4).
+\]
+Equivalently, each vertex has degree 12; adjacent pairs have exactly 2 common neighbors; non-adjacent pairs have exactly 4 common neighbors.
+\end{theorem}
+
+\begin{proofsketch}
+This is a standard property of the point graph of the symplectic generalized quadrangle $W(3,3)$. It was also verified computationally by explicit incidence construction of $W(3,3)$ and counting common neighbors in the point graph (audit bundle: \texttt{W33\_symplectic\_audit\_bundle.zip}).
+\end{proofsketch}
+
+\begin{theorem}[Adjacency spectrum]
+\label{thm:spectrum}
+The adjacency spectrum of $\mathrm{W33}$ is
+\[
+\mathrm{spec}(A)=12^{(1)},\quad 2^{(24)},\quad (-4)^{(15)}.
+\]
+Equivalently, the characteristic polynomial is
+\[
+P(x)=(x-12)(x-2)^{24}(x+4)^{15}.
+\]
+\end{theorem}
+
+\begin{proofsketch}
+For SRG$(v,k,\lambda,\mu)$, the nontrivial eigenvalues are roots of a quadratic determined by $(k,\lambda,\mu)$, with multiplicities forced by trace identities. Here this yields eigenvalues $2$ and $-4$ with multiplicities 24 and 15. Verified directly by eigen-computation on the explicit adjacency matrix (audit bundle: \texttt{W33\_symplectic\_audit\_bundle.zip}).
+\end{proofsketch}
+
+\begin{theorem}[Automorphism group order]
+\label{thm:aut}
+$\lvert \mathrm{Aut}(\mathrm{W33})\rvert = 51840$.
+\end{theorem}
+
+\begin{proofsketch}
+In the symplectic model, $\mathrm{Aut}(\mathrm{W33})$ is realized as the projective symplectic similitude group acting on isotropic points. A concrete generating set (symplectic transvections, a block-swap, and a multiplier-2 similitude) was used to generate the full permutation group on the 40 vertices, yielding order 51840. (Audit bundle: \texttt{W33\_orbits\_squarezero\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{keyresult}
+The W33 point graph is not merely a convenient combinatorial object; it is the \emph{canonical} SRG arising from the symplectic quadrangle $W(3,3)$. The entire tower below is forced from $(40,12,2,4)$ together with the induced group action.
+\end{keyresult}
+
+% ------------------------------------------------------------
+\section{Differential Structure over \texorpdfstring{$\mathbb{F}_2$}{F2}}
+
+\begin{theorem}[Square-zero adjacency over $\mathbb{F}_2$]
+\label{thm:squarezero}
+Let $A$ be the adjacency matrix of $\mathrm{W33}$. Over $\mathbb{F}_2$, one has
+\[
+A^2 \equiv 0 \pmod 2.
+\]
+\end{theorem}
+
+\begin{proofsketch}
+For any SRG$(v,k,\lambda,\mu)$ with adjacency $A$ and all-ones matrix $J$,
+\[
+A^2 = kI + \lambda A + \mu(J-I-A).
+\]
+Plugging $(k,\lambda,\mu)=(12,2,4)$ yields $A^2 = 8I - 2A + 4J$. Reducing mod 2 gives $A^2\equiv 0$. Verified directly by matrix multiplication mod 2 in the audit bundle.
+\end{proofsketch}
+
+\begin{definitionbox}
+Define a differential $d:\mathbb{F}_2^{40}\to \mathbb{F}_2^{40}$ by $d(x)=Ax$ (mod 2). Since $d^2=0$, we can form:
+\[
+C := \ker(d)\subset \mathbb{F}_2^{40}, \qquad H := \ker(d)/\mathrm{im}(d).
+\]
+\end{definitionbox}
+
+\begin{theorem}[Dimensions]
+\label{thm:dimensions}
+Over $\mathbb{F}_2$,
+\[
+\mathrm{rank}(A)=16,\qquad \dim \ker(A)=24,\qquad \dim H = 8.
+\]
+\end{theorem}
+
+\begin{proofsketch}
+Rank was computed by mod-2 row reduction on the explicit 40$\times$40 adjacency matrix. Nullity follows by rank-nullity. Since $\mathrm{im}(A)\subseteq \ker(A)$ (square-zero), $\dim H=\dim\ker(A)-\dim\mathrm{im}(A)=24-16=8$.
+\end{proofsketch}
+
+\begin{theorem}[Canonical local generators and code distance]
+\label{thm:code}
+The kernel $C=\ker(A)\subset \mathbb{F}_2^{40}$ is a $[40,24,6]$ linear code. Moreover, there are exactly 240 canonical weight-6 codewords obtained as XORs of pairs of isotropic lines through a common point, and these 240 codewords generate $C$.
+\end{theorem}
+
+\begin{proofsketch}
+Each point lies on 4 isotropic lines; choosing 2 lines yields $\binom{4}{2}=6$ line-pairs per point, hence $40\cdot 6=240$ codewords. Each is weight 6 and lies in $\ker(A)$; exhaustive search up to weight 5 found none in $\ker(A)$, so $d_{\min}=6$. A row-reduced basis extracted from the 240 generators spans a 24-dimensional space, matching $\dim\ker(A)$. (Audit bundle: \texttt{W33\_GF2\_kernel\_code\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{keyresult}
+The identity $A^2\equiv 0$ is the first ``TOE hinge'': it turns a finite SRG into a genuine chain complex, producing (i) a stabilizer-like code and (ii) an 8-dimensional homology state space $H$.
+\end{keyresult}
+
+% ------------------------------------------------------------
+\section{Orthogonal Geometry on \texorpdfstring{$H$}{H} and the 120-Root Structure}
+
+\begin{theorem}[Quadratic form and orbit split]
+\label{thm:qform}
+The induced action of $\mathrm{Aut}(\mathrm{W33})$ on $H$ preserves a nontrivial quadratic form $q:H\to\mathbb{F}_2$ of minus type. Consequently, the nonzero vectors in $H$ split into exactly two orbits:
+\[
+\{x\in H\setminus\{0\}: q(x)=0\}\ \text{of size }135,\qquad 
+\{x\in H\setminus\{0\}: q(x)=1\}\ \text{of size }120.
+\]
+\end{theorem}
+
+\begin{proofsketch}
+A concrete basis of $H$ was chosen by splitting $\ker(A)=\mathrm{im}(A)\oplus K$ with $\dim K=8$. The group action on points induces an action on $H$, from which an invariant quadratic polynomial of degree 2 was solved. Enumerating values of $q$ gives the $(135,120)$ split, and orbit computation confirms exactly two nonzero orbits. (Audit bundle: \texttt{W33\_H8\_quadratic\_form\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{theorem}[240 $\to$ 120 projection]
+\label{thm:240to120}
+Projecting the 240 canonical weight-6 code generators (Theorem~\ref{thm:code}) from $\ker(A)$ to $H=\ker(A)/\mathrm{im}(A)$ yields exactly 120 distinct nonzero elements, each appearing with multiplicity 2. All 120 satisfy $q=1$ (the nonsingular orbit).
+\end{theorem}
+
+\begin{proofsketch}
+Each of the 240 generators was mapped to an 8-bit $H$ coordinate; 120 distinct values occur, each exactly twice. All map to the $q=1$ orbit. (Audit bundle: \texttt{W33\_to\_H\_to\_120root\_SRG\_bundle.zip} and \texttt{W33\_root\_preimage\_pairing\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{definitionbox}
+Define the associated bilinear form
+\[
+b(x,y)=q(x+y)+q(x)+q(y)\in \mathbb{F}_2.
+\]
+On the 120-element nonsingular orbit, define adjacency by $b(x,y)=1$.
+\end{definitionbox}
+
+\begin{theorem}[The 120-root SRG]
+\label{thm:srg120}
+The graph on the 120 nonsingular elements with adjacency $b=1$ is strongly regular:
+\[
+\mathrm{SRG}(120,56,28,24).
+\]
+\end{theorem}
+
+\begin{proofsketch}
+Adjacency counts were computed directly from the bilinear form on the explicit 120-root list; all vertices have degree 56, adjacent pairs have 28 common neighbors, and nonadjacent pairs have 24. (Audit bundle: \texttt{W33\_to\_H\_to\_120root\_SRG\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{theorem}[An $E_8$ Dynkin subgraph and reflection generation]
+\label{thm:e8}
+Inside $\mathrm{SRG}(120,56,28,24)$ there exists an induced subgraph isomorphic to the $E_8$ Dynkin diagram. The corresponding 8 nonsingular elements $\{r_i\}$ define involutions
+\[
+s_{r}(x)=x + b(x,r)\,r,
+\]
+and the group generated by these involutions acts transitively on the 120-root set.
+\end{theorem}
+
+\begin{proofsketch}
+An induced $E_8$ configuration was found and canonically chosen (lexicographically minimal under a fixed branching constraint). Coxeter relations were verified on $H$ (order 3 on adjacent nodes, order 2 otherwise), and orbit generation under reflections yields the full 120-root orbit. (Audit bundle: \texttt{W33\_E8\_simple\_root\_system\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{keyresult}
+The nonsingular orbit of the intrinsic homology $H$ behaves as a finite ``root shell'' with SRG$(120,56,28,24)$ adjacency and an embedded $E_8$ Dynkin skeleton. This is the precise point where Lie-type structure emerges from the W33 tower.
+\end{keyresult}
+
+% ------------------------------------------------------------
+\section{Signed Lift, Cocycle, and Global Gauge Fixing}
+
+\begin{definitionbox}
+Each of the 120 roots has two preimages among the 240 generators. A \emph{section} $s$ selects one lift for each root. For adjacent roots $h_1,h_2$ (so $b(h_1,h_2)=1$), define $h_3=h_1\oplus h_2$ and the defect (cocycle candidate)
+\[
+g(h_1,h_2):= s(h_1)+s(h_2)+s(h_3)\ \in\ \mathrm{im}(A)\subset \mathbb{F}_2^{40},
+\]
+where addition is XOR of the corresponding 40-bit supports.
+\end{definitionbox}
+
+\begin{theorem}[Two-weight defect]
+\label{thm:two-weight}
+For the canonical section (choosing the smaller preimage index), the defect $g(h_1,h_2)$ takes only two Hamming weights:
+\[
+\lvert g(h_1,h_2)\rvert \in \{12,16\}.
+\]
+Across all 3360 edges of $\mathrm{SRG}(120,56,28,24)$, weight 12 occurs 1560 times and weight 16 occurs 1800 times.
+\end{theorem}
+
+\begin{proofsketch}
+Computed exhaustively over all edges using the explicit 240 generator supports and the canonical section. Verified that $g(h_1,h_2)$ always projects to $0$ in $H$, hence lies in $\mathrm{im}(A)$. (Audit bundle: \texttt{W33\_signed\_root\_cocycle\_and\_lift\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{theorem}[Steiner triples]
+\label{thm:steiner}
+Edges of $\mathrm{SRG}(120,56,28,24)$ partition into 1120 Steiner triples $\{a,b,a\oplus b\}$, and for a fixed section $s$, the defect value is constant on the three edges of each triple.
+\end{theorem}
+
+\begin{proofsketch}
+If $b(a,b)=1$ then $q(a\oplus b)=1$; hence $a\oplus b$ is again a root. Each edge $(a,b)$ has a unique third root $a\oplus b$, and the unordered triple partitions edges into 1120 groups. The defect $s(a)+s(b)+s(a\oplus b)$ is symmetric in $(a,b,a\oplus b)$, hence constant on the triple edges. Verified by enumeration.
+\end{proofsketch}
+
+\begin{theorem}[Global gauge fix (no-16)]
+\label{thm:n016}
+There exists a global choice of signs (i.e., a section $s$ selecting one of the two lifts at every root) such that all defects of weight 16 are eliminated. In this gauge-fixed section, all edge defects have weight in $\{0,12\}$, with exactly 120 edges of weight 0 and 3240 edges of weight 12.
+\end{theorem}
+
+\begin{proofsketch}
+A greedy local-flip optimization over the 120 root vertices (flipping lift choice at a vertex updates the defects on incident edges) yields a configuration with no 16-weight defects. This configuration was reproduced across random restarts. (Audit bundle: \texttt{W33\_global\_gaugefix\_no16\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{theorem}[40 flat triples]
+\label{thm:flat40}
+The 120 roots partition into 40 disjoint triples (one per original W33 point) such that exactly those 40 triples have defect weight 0 under the globally gauge-fixed section. Equivalently, the 120 weight-0 edges form 40 disjoint triangles that partition the root set.
+\end{theorem}
+
+\begin{proofsketch}
+From the gauge-fixed edge list, the weight-0 edges were found to group into 40 triangles. Each triangle's three vertices share the same base point in the original 40-point geometry, yielding a partition of the 120 roots into 40 fibers of size 3. (Audit bundle: \texttt{W33\_global\_gaugefix\_no16\_bundle.zip}.)
+\end{proofsketch}
+
+% ------------------------------------------------------------
+\section{Quotient Closure and \texorpdfstring{$\mathbb{Z}_3$}{Z3} Holonomy}
+
+\begin{definitionbox}
+Collapse each of the 40 flat triples (Theorem~\ref{thm:flat40}) to a meta-vertex labeled by its base point $p\in\{0,\dots,39\}$. Define the quotient graph $Q$ on these 40 meta-vertices by connecting $p\neq q$ if there exists a defect-12 edge between the fibers over $p$ and $q$.
+\end{definitionbox}
+
+\begin{theorem}[Quotient graph is the complement]
+\label{thm:quotient}
+The quotient graph $Q$ is regular of degree 27 on 40 vertices and is exactly the complement of the original W33 point graph:
+\[
+Q = \overline{\mathrm{W33}}.
+\]
+\end{theorem}
+
+\begin{proofsketch}
+For each pair of base points $(p,q)$, the number of defect-12 edges between the 3-element fibers is either 0 or 6. Adjacency in $Q$ occurs exactly for multiplicity 6. The resulting 40-vertex graph is 27-regular; direct comparison of neighbor sets confirms $Q$ equals the complement of the W33 adjacency. (Audit bundle: \texttt{W33\_quotient\_closure\_complement\_and\_noniso\_line\_curvature\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{theorem}[Edge decoration is a 6-cycle]
+\label{thm:6cycle}
+For every edge $p\sim q$ in $Q$, the induced bipartite graph between the 3 roots over $p$ and the 3 roots over $q$ has exactly 6 edges and is 2-regular on each side. Equivalently, it is $K_{3,3}$ minus a perfect matching, i.e.\ a 6-cycle. The missing perfect matching defines a canonical transport bijection between the two 3-element fibers.
+\end{theorem}
+
+\begin{proofsketch}
+Verified by explicit enumeration for all 540 quotient edges: the 3$\times$3 adjacency matrix always has three zeros (a perfect matching) and six ones, with row and column sums all equal to 2. Connectivity check confirms a single 6-cycle.
+\end{proofsketch}
+
+\begin{definitionbox}
+Define the holonomy of a quotient triangle $(p,q,r)$ as the permutation of the fiber over $p$ obtained by composing the three transport bijections along $p\to q\to r\to p$. This holonomy lies in $A_3\cong \mathbb{Z}_3$.
+\end{definitionbox}
+
+\begin{theorem}[90 non-isotropic lines classify flat holonomy]
+\label{thm:90}
+Among the 3240 triangles of $Q$, exactly 360 have identity holonomy and 2880 have 3-cycle holonomy. Moreover, the identity-holonomy triangles are \emph{exactly} the triples of points lying on the 90 non-isotropic projective lines in $PG(3,3)$ (each such line contains 4 points and contributes $\binom{4}{3}=4$ triples, hence $90\cdot 4=360$).
+\end{theorem}
+
+\begin{proofsketch}
+Holonomy was computed for all quotient triangles from the edge matchings. Independently, all non-isotropic lines in $PG(3,3)$ were enumerated (90 lines), and the set of their 3-subsets was computed (360 triples). These match exactly the identity-holonomy triangle set. (Audit bundle: \texttt{W33\_quotient\_closure\_complement\_and\_noniso\_line\_curvature\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{keyresult}
+The W33 tower closes: after global gauge fixing and collapsing flat triples, the induced 40-vertex quotient is $\overline{\mathrm{W33}}$ with a canonical $\mathbb{Z}_3$ connection. The set of flat faces is classified precisely by the 90 non-isotropic projective lines in $PG(3,3)$.
+\end{keyresult}
+
+% ------------------------------------------------------------
+\section*{Artifact Index (computational)}
+\addcontentsline{toc}{section}{Artifact Index (computational)}
+\begin{longtable}{@{}p{0.36\textwidth}p{0.58\textwidth}@{}}
+\toprule
+\textbf{Bundle} & \textbf{Contents / Purpose}\\
+\midrule
+\texttt{W33\_symplectic\_audit\_bundle.zip} & Explicit construction of $W(3,3)$, point graph edges, incidence, 8-cycles; verifies SRG parameters and spectrum.\\
+\texttt{W33\_orbits\_squarezero\_bundle.zip} & Aut(W33) generators and orbit facts; verifies group order 51840 and transitivity on core objects.\\
+\texttt{W33\_GF2\_kernel\_code\_bundle.zip} & The $[40,24,6]$ kernel code; 240 weight-6 generators; basis extraction.\\
+\texttt{W33\_H8\_quadratic\_form\_bundle.zip} & $H=\ker(A)/\mathrm{im}(A)$ basis; invariant quadratic form $q$; orbit split 135/120.\\
+\texttt{W33\_to\_H\_to\_120root\_SRG\_bundle.zip} & 240$\to$120 projection; SRG(120,56,28,24) edges/adjacency.\\
+\texttt{W33\_E8\_simple\_root\_system\_bundle.zip} & Canonical induced $E_8$ configuration; Coxeter checks; reflection orbit generation.\\
+\texttt{W33\_signed\_root\_cocycle\_and\_lift\_bundle.zip} & Defect cocycle on edges and Steiner triples; weights 12/16; Dynkin-edge gauge studies.\\
+\texttt{W33\_global\_gaugefix\_no16\_bundle.zip} & Global sign assignment eliminating all 16-weight defects; identifies 40 flat triples partition.\\
+\texttt{W33\_quotient\_closure\_complement\_and\_noniso\_line\_curvature\_bundle.zip} & Quotient graph $Q=\overline{\mathrm{W33}}$; edge matchings; triangle holonomy classification; non-isotropic line correspondence.\\
+\bottomrule
+\end{longtable}
+
+\end{document}
