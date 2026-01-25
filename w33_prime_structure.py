@@ -304,5 +304,5 @@ results = {
 
 output_file = os.path.join(OUTPUT_DIR, "w33_prime_structure_results.json")
 with open(output_file, 'w') as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 print(f"\nResults saved to: {output_file}")

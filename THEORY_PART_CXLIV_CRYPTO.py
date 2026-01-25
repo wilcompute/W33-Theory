@@ -78,21 +78,22 @@ print("\n" + "="*70)
 print("THE MAXIMALLY ENTANGLED STATE")
 print("="*70)
 
-print("""
-THE WITTING ENTANGLED STATE:
-============================
+if __name__ == "__main__":
+    print("""
+    THE WITTING ENTANGLED STATE:
+    ============================
 
-For the cryptographic protocol, Alice and Bob share the maximally
-entangled state in ℂ⁴ ⊗ ℂ⁴:
+    For the cryptographic protocol, Alice and Bob share the maximally
+    entangled state in ℂ⁴ ⊗ ℂ⁴:
 
-    |Σ⟩ = (1/2)(|00⟩ + |11⟩ + |22⟩ + |33⟩)
+        |Σ⟩ = (1/2)(|00⟩ + |11⟩ + |22⟩ + |33⟩)
 
-This has the property:
-- If both measure in the SAME Witting basis → perfectly correlated
-- If measured in DIFFERENT bases → bounded correlation
+    This has the property:
+    - If both measure in the SAME Witting basis → perfectly correlated
+    - If measured in DIFFERENT bases → bounded correlation
 
-The 40 Witting bases provide the measurement settings.
-""")
+    The 40 Witting bases provide the measurement settings.
+    """)
 
 # Build the entangled state
 Sigma = np.zeros((16,), dtype=complex)
@@ -139,8 +140,8 @@ def compute_correlation(basis1, basis2):
     probs = np.zeros((4, 4))
     for i, psi_A in enumerate(basis1_states):
         for j, psi_B in enumerate(basis2_states):
-            # |⟨ψ_A ⊗ ψ_B|Σ⟩|²
-            proj = np.kron(psi_A, psi_B)
+            # |⟨ψ_A ⊗ ψ_B|Σ⟩|²  (conjugate Bob's vector so complex bases correlate correctly)
+            proj = np.kron(psi_A, psi_B.conj())
             probs[i, j] = abs(np.vdot(proj, Sigma))**2
     
     return probs
@@ -177,34 +178,35 @@ print("\n" + "="*70)
 print("WITTING-BASED QKD PROTOCOL")
 print("="*70)
 
-print("""
-PROTOCOL (Following Vlasov):
-============================
+if __name__ == "__main__":
+    print("""
+    PROTOCOL (Following Vlasov):
+    ============================
 
-1. SETUP:
-   - Alice and Bob share many copies of |Σ⟩
-   - They agree on the 40 Witting bases
+    1. SETUP:
+       - Alice and Bob share many copies of |Σ⟩
+       - They agree on the 40 Witting bases
 
-2. MEASUREMENT:
-   - For each entangled pair:
-     * Alice randomly selects a basis from the 40
-     * Bob randomly selects a basis from the 40
-     * Both measure and record their outcomes (0,1,2,3)
+    2. MEASUREMENT:
+       - For each entangled pair:
+         * Alice randomly selects a basis from the 40
+         * Bob randomly selects a basis from the 40
+         * Both measure and record their outcomes (0,1,2,3)
 
-3. SIFTING:
-   - They publicly announce which BASES they used (not outcomes)
-   - Keep only rounds where they used the SAME basis
-   - These rounds have perfectly correlated outcomes → raw key
+    3. SIFTING:
+       - They publicly announce which BASES they used (not outcomes)
+       - Keep only rounds where they used the SAME basis
+       - These rounds have perfectly correlated outcomes → raw key
 
-4. SECURITY TEST:
-   - From rounds with DIFFERENT bases, estimate correlations
-   - Kochen-Specker theorem: eavesdropper MUST disturb correlations
-   - If correlations match quantum predictions → no eavesdropper
+    4. SECURITY TEST:
+       - From rounds with DIFFERENT bases, estimate correlations
+       - Kochen-Specker theorem: eavesdropper MUST disturb correlations
+       - If correlations match quantum predictions → no eavesdropper
 
-5. KEY DISTILLATION:
-   - Apply error correction and privacy amplification
-   - Output secure shared key
-""")
+    5. KEY DISTILLATION:
+       - Apply error correction and privacy amplification
+       - Output secure shared key
+    """)
 
 # Simulate success probability
 def qkd_statistics(n_rounds=10000):

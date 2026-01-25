@@ -381,8 +381,7 @@ results = {
 }
 
 with open('PART_LXVI_unified_alpha.json', 'w') as f:
-    json.dump(results, f, indent=2)
-
+        json.dump(results, f, indent=2, default=int)
 print("\n" + "="*70)
 print("PART LXVI CONCLUSIONS")
 print("="*70)

@@ -512,7 +512,7 @@ results = {
 
 output_file = "PART_CII_quantum_gravity.json"
 with open(output_file, 'w') as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 
 print(f"\nResults saved to: {output_file}")
 

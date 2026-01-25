@@ -70,6 +70,17 @@ ALL OF PHYSICS           (Everything)
 
 ## ✅ Master Predictions (ALL VERIFIED)
 
+---
+
+## Development & Repository Hygiene 🔧
+
+- Use `utils.json_safe.dump_json` to write result files (handles Sage/numpy types).
+- Quick checks:
+  - Run `make check-json` to validate JSON serialization policy.
+  - CI workflow `json-serialization-check` runs `tests/test_json_serialization.py` and `tests/test_json_safe.py` on pushes/PRs.
+
+---
+
 ### Electroweak Sector
 
 | Quantity | W33 Formula | Predicted | Observed | Status |
@@ -233,6 +244,32 @@ m_g ~ ε^(2(3-g))  gives 12 orders of magnitude from GEOMETRY!
 - NumPy, SciPy
 - Optional: SageMath for verification
 - LaTeX for paper compilation
+
+---
+
+## Developer — Running Tests Locally 🔧
+
+**Windows (recommended)**
+- From a **Command Prompt** at the repository root (the folder that contains this README):
+  - `scripts\run_local_tests.bat` — runs pytest and prints output
+  - `scripts\run_all_tests.bat` — runs the full suite and writes `logs\pytest_all.log`
+  - `scripts\generate_summary.ps1` — generate `SUMMARY_RESULTS.json` and `NUMERIC_COMPARISONS.json` locally
+- From **PowerShell** run:
+  - `cmd.exe /c "scripts\run_all_tests.bat"` (avoids PowerShell's `Activate.ps1` ExecutionPolicy issues)
+  - `& .\scripts\generate_summary.ps1` — PowerShell generator (works with default python in PATH)
+
+**Unix / macOS**
+- `./scripts/generate_summary.sh` — generate `SUMMARY_RESULTS.json` and `NUMERIC_COMPARISONS.json` locally
+- `make generate-summary` — uses the Makefile to generate artifacts
+
+**PowerShell (optional)**
+- `scripts\run_local_tests.ps1` — runs tests without activating the venv script (use only if your ExecutionPolicy allows it)
+
+**Notes**
+- Prefer running from the repository root (`claude_workspace`) so pytest discovers tests and paths resolve correctly.
+- If you see `No log produced`, run `type logs\pytest_all.log` to inspect the result or run `scripts\run_local_tests.bat` for immediate console output.
+- To reproduce tests that depend on generated summary artifacts, run `make generate-summary` (or the platform-specific script) before `pytest`.
+
 
 ---
 

@@ -106,15 +106,16 @@ print("="*70)
 # This is exactly when s ⊥ v
 # So each state appears in as many MUB systems as it has neighbors = 12!
 
-print("""
-THEOREM: Each state appears in exactly 12 MUB systems.
+if __name__ == "__main__":
+    print("""
+    THEOREM: Each state appears in exactly 12 MUB systems.
 
-PROOF:
-- State s appears in the MUB system at vertex v iff s ∈ neighbors(v)
-- This happens iff s ⊥ v
-- Each state has exactly 12 neighbors (degree = 12)
-- Therefore each state appears in exactly 12 MUB systems ✓
-""")
+    PROOF:
+    - State s appears in the MUB system at vertex v iff s ∈ neighbors(v)
+    - This happens iff s ⊥ v
+    - Each state has exactly 12 neighbors (degree = 12)
+    - Therefore each state appears in exactly 12 MUB systems ✓
+    """)
 
 # Verify
 all_have_12 = all(c == 12 for c in counts)

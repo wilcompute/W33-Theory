@@ -270,6 +270,7 @@ for tag,m in mappings:
         rows.append({'mapping':tag,'variant':f'aut{j+1}','match':int(okg)})
 pd.DataFrame(rows).to_csv('aut_conjugate_law_match_check.csv', index=False)
 stable.to_csv('stable_port_law.csv', index=False)
-with open('summary.json','w') as f:
-    json.dump({'tested':len(rows),'all_matched':all(r['match'] for r in rows)}, f, indent=2)
+from utils.json_safe import dump_json
+summary_file = 'summary.json'
+dump_json({'tested':len(rows),'all_matched':all(r['match'] for r in rows)}, summary_file, indent=2)
 print('Wrote aut_conjugate_law_match_check.csv, stable_port_law.csv, summary.json')

@@ -484,8 +484,7 @@ results = {
 }
 
 with open('PART_LXIV_eigenvector_results.json', 'w') as f:
-    json.dump(results, f, indent=2)
-
+        json.dump(results, f, indent=2, default=int)
 print("\n" + "="*70)
 print("PART LXIV CONCLUSIONS")
 print("="*70)

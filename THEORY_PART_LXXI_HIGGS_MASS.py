@@ -404,8 +404,7 @@ results = {
 }
 
 with open('PART_LXXI_higgs_mass.json', 'w') as f:
-    json.dump(results, f, indent=2)
-
+        json.dump(results, f, indent=2, default=int)
 print("\n" + "="*70)
 print("PART LXXI CONCLUSIONS")
 print("="*70)

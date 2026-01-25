@@ -490,7 +490,7 @@ results = {
 }
 
 with open("PART_C_manifesto.json", "w") as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 
 print("\nThe manifesto has been written.")
 print("W33 Theory: 100 parts complete.")

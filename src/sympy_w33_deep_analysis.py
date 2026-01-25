@@ -576,7 +576,7 @@ def main():
             results_json[key] = str(val)
     
     with open('sympy_w33_results.json', 'w') as f:
-        json.dump(results_json, f, indent=2)
+        json.dump(results_json, f, indent=2, default=int)
     
     print("✓ Results saved to sympy_w33_results.json")
     

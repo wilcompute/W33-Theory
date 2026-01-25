@@ -1,0 +1,14 @@
+{
+  "vertices": 40,
+  "edges": 240,
+  "eigenvalues": {
+    "12": 1,
+    "-4": 15,
+    "2": 24
+  },
+  "automorphism_order": 51840,
+  "triangles": 160,
+  "e8_roots": 240,
+  "w_e6_order": 51840,
+  "match": true
+}

@@ -382,7 +382,7 @@ for name, data in predictions.items():
 # =============================================================================
 
 with open('PART_LXVIII_why_F3.json', 'w') as f:
-    json.dump(predictions, f, indent=2)
+    json.dump(predictions, f, indent=2, default=int)
 
 print("="*70)
 print("PART LXVIII CONCLUSIONS")

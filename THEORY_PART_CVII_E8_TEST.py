@@ -558,10 +558,6 @@ def main():
     results = convert_numpy(results)
     
     with open("PART_CVII_e8_test_results.json", "w") as f:
-        json.dump(results, f, indent=2)
-    
-    print()
-    print("Results saved to: PART_CVII_e8_test_results.json")
-
+        json.dump(results, f, indent=2, default=int)
 if __name__ == "__main__":
     main()

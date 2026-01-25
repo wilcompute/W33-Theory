@@ -557,7 +557,7 @@ results = {
 }
 
 with open('PART_LV_exceptional_results.json', 'w') as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 
 print("\nResults saved to PART_LV_exceptional_results.json")
 print("="*70)

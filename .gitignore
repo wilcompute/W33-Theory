@@ -16,3 +16,17 @@ __pycache__/
 # Temp files
 tmpclaude-*
 *.tmp
+
+# Local artifacts & CI outputs
+artifacts/
+artifacts/*
+sage-part-jsons*
+SUMMARY_RESULTS.json
+NUMERIC_COMPARISONS.json
+
+# Local virtual env
+.venv/
+
+# Editor / OS files
+.DS_Store
+Thumbs.db

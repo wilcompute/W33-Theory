@@ -247,8 +247,8 @@ def main():
         per_cycle_min_cover12_steps=per_cycle,
         total_min_cover12_steps=int(total),
     )
-    with open(f"{args.outdir}/phase_aware_run_summary.json","w") as f:
-        json.dump(summary,f,indent=2)
+    from utils.json_safe import dump_json
+    dump_json(summary, f"{args.outdir}/phase_aware_run_summary.json", indent=2)
     print("total min cover12 steps:", total, "per cycle:", per_cycle)
 
 if __name__=="__main__":

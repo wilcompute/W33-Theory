@@ -704,7 +704,7 @@ class W33DeepExploration:
         
         filename = f"{data_dir}/w33_unified_theory.json"
         with open(filename, 'w') as f:
-            json.dump(theory, f, indent=2)
+            json.dump(theory, f, indent=2, default=int)
         print(f"  ✓ Saved: {filename}")
         
         # Save markdown summary

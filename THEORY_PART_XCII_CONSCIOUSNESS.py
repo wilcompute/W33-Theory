@@ -438,6 +438,6 @@ results = {
 }
 
 with open("PART_XCII_consciousness.json", "w") as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 
 print("\nResults saved to PART_XCII_consciousness.json")

@@ -230,7 +230,8 @@ def main():
         "total_cover12_steps_across_5_cycles": total,
         "outer_quad_components_used": outer_used,
     }
-    Path("phase_aware_v2_run_summary.json").write_text(json.dumps(summary,indent=2))
+    from utils.json_safe import dumps
+    Path("phase_aware_v2_run_summary.json").write_text(dumps(summary,indent=2))
 
 if __name__ == "__main__":
     main()

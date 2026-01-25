@@ -466,7 +466,7 @@ def convert_sage(obj):
 results = convert_sage(results)
 
 with open('PART_CXIII_sagemath_verification.json', 'w') as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 
 print("\nResults saved to: PART_CXIII_sagemath_verification.json")
 print("\n" + "=" * 70)

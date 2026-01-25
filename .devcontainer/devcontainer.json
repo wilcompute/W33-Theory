@@ -1,0 +1,9 @@
+{
+  "name": "W33 Sage Dev",
+  "image": "sagemath/sagemath:10.7",
+  "workspaceFolder": "/work/claude_workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/work,type=bind,consistency=cached",
+  "extensions": ["ms-python.python"],
+  "postCreateCommand": "pip install --upgrade pip && pip install -r requirements-dev.txt",
+  "remoteUser": "root"
+}

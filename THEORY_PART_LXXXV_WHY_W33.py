@@ -360,7 +360,7 @@ results = {
 }
 
 with open("PART_LXXXV_why_w33.json", "w") as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 
 print("\n" + "=" * 70)
 print("PART LXXXV CONCLUSIONS")

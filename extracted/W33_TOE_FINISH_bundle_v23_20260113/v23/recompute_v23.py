@@ -91,8 +91,8 @@ def build():
     df.to_csv(out/'Q_triangles_core.csv', index=False)
 
     counts=collections.Counter((int(x.centers),int(x.z2_parity),x.fiber6_cycle_type) for x in df.itertuples(index=False))
-    with open(out/'counts.json','w') as f:
-        json.dump({str(k):int(v) for k,v in counts.items()},f,indent=2)
+    from utils.json_safe import dump_json
+    dump_json({str(k):int(v) for k,v in counts.items()}, out/'counts.json', indent=2)
 
 if __name__=='__main__':
     build()

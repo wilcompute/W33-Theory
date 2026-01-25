@@ -421,6 +421,6 @@ results = {
 }
 
 with open("PART_XCVII_corrections.json", "w") as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 
 print("\nResults saved to PART_XCVII_corrections.json")

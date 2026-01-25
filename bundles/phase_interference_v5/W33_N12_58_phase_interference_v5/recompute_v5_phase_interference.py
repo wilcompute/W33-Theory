@@ -157,8 +157,8 @@ def main():
                 "Z_adj_arg_deg": float(math.degrees(cmath.phase(zadj))),
             })
     pd.DataFrame(records).to_csv("per_cycle_partition_functions_and_adjusted.csv", index=False)
-    with open("best_delta_phase_maps_by_lambda.json","w") as f:
-        json.dump(best_records,f,indent=2)
+    from utils.json_safe import dump_json
+    dump_json(best_records, "best_delta_phase_maps_by_lambda.json", indent=2)
 
 if __name__=="__main__":
     main()

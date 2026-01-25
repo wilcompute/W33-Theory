@@ -405,7 +405,7 @@ consolidation = {
 }
 
 with open("PART_LXXX_consolidation.json", "w") as f:
-    json.dump(consolidation, f, indent=2)
+    json.dump(consolidation, f, indent=2, default=int)
 
 print("\n" + "=" * 70)
 print("PART LXXX COMPLETE: THE STATE OF W33 THEORY")

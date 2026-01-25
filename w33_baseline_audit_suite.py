@@ -239,7 +239,7 @@ def main() -> int:
     os.makedirs(data_dir, exist_ok=True)
     out_json = os.path.join(data_dir, "w33_baseline_suite_results.json")
     with open(out_json, "w", encoding="utf-8") as f:
-        json.dump(results, f, indent=2)
+        json.dump(results, f, indent=2, default=int)
 
     if not run_full:
         print("\nNote: full mode (log/exp) skipped. To enable: set W33_RUN_FULL=1")

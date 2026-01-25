@@ -395,7 +395,7 @@ def main():
     }
     
     with open('PART_CXXIII_72_decomposition.json', 'w') as f:
-        json.dump(results, f, indent=2)
+        json.dump(results, f, indent=2, default=int)
     print(f"\nResults saved to: PART_CXXIII_72_decomposition.json")
     
     print("\n" + "=" * 70)

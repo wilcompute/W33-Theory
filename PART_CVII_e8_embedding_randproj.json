@@ -1,0 +1,11 @@
+{
+  "best": {
+    "trial": 68,
+    "matches": 0,
+    "mean_err": 0.5697198630154102,
+    "icp_matches": 0,
+    "icp_mean_err": 0.508390565211876
+  },
+  "trials": 400,
+  "elapsed_seconds": 12.143959760665894
+}

@@ -98,7 +98,7 @@ for root, mult in roots:
 
 # Save results
 with open('PART_CXVIII_verified.json', 'w') as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 print("\nResults saved to: PART_CXVIII_verified.json")
 
 print("\n" + "=" * 60)

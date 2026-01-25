@@ -275,8 +275,8 @@ def main():
     pd.DataFrame(cycle_summary).to_csv("phase_aware_v3_cycle_summary.csv", index=False)
     pd.DataFrame(witness_rows).to_csv("phase_aware_v3_2T_cycle_witness_walks.csv", index=False)
 
-    with open("phase_aware_v3_run_summary.json","w") as f:
-        json.dump({"R0":R0,"Dir":{str(k):v for k,v in Dir.items()}, "cycle_summary":cycle_summary}, f, indent=2)
+    from utils.json_safe import dump_json
+    dump_json({"R0":R0,"Dir":{str(k):v for k,v in Dir.items()}, "cycle_summary":cycle_summary}, "phase_aware_v3_run_summary.json", indent=2)
 
 if __name__=="__main__":
     main()

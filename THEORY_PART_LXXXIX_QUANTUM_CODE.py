@@ -436,6 +436,6 @@ results = {
 }
 
 with open("PART_LXXXIX_quantum_code.json", "w") as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 
 print("\nResults saved to PART_LXXXIX_quantum_code.json")

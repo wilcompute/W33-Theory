@@ -735,7 +735,7 @@ def main():
             results_json[key] = str(val) if isinstance(val, Fraction) else val
     
     with open('algebraic_proof_results.json', 'w') as f:
-        json.dump(results_json, f, indent=2)
+        json.dump(results_json, f, indent=2, default=int)
     
     print("✓ Results saved to algebraic_proof_results.json")
     

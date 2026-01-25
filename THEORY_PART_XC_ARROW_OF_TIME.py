@@ -430,6 +430,6 @@ results = {
 }
 
 with open("PART_XC_arrow_of_time.json", "w") as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 
 print("\nResults saved to PART_XC_arrow_of_time.json")

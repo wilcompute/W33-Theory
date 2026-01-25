@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "NUMERIC_COMPARISONS",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["file","name","measured","predicted","diff"],
+    "properties": {
+      "file": { "type": "string" },
+      "name": { "type": "string" },
+      "measured": { "type": "number" },
+      "predicted": { "type": "number" },
+      "diff": { "type": "number" },
+      "pct": { "type": ["number","null"] }
+    },
+    "additionalProperties": true
+  }
+}

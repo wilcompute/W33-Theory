@@ -518,7 +518,7 @@ results = {
 }
 
 with open('PART_CIII_precision_frontier.json', 'w') as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 
 print("\n" + "=" * 80)
 print("PART CIII COMPLETE - THE PRECISION FRONTIER")

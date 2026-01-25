@@ -642,7 +642,7 @@ def main():
     results = convert_numpy(results)
     
     with open("PART_CXI_particle_map.json", "w") as f:
-        json.dump(results, f, indent=2)
+        json.dump(results, f, indent=2, default=int)
     
     print()
     print("Results saved to: PART_CXI_particle_map.json")

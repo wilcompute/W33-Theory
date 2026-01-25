@@ -271,7 +271,7 @@ def main() -> int:
     data_dir.mkdir(parents=True, exist_ok=True)
     out_json = data_dir / "w33_group_topology_results.json"
     with open(out_json, "w", encoding="utf-8") as f:
-        json.dump(out, f, indent=2)
+        json.dump(out, f, indent=2, default=int)
 
     print("\nSaved:")
     print(f"  {out_json}")

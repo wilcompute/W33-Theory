@@ -551,7 +551,7 @@ OF FUNDAMENTAL PHYSICS.
     results = convert_numpy(results)
     
     with open("PART_CXII_grand_synthesis.json", "w") as f:
-        json.dump(results, f, indent=2)
+        json.dump(results, f, indent=2, default=int)
     
     print()
     print("Results saved to: PART_CXII_grand_synthesis.json")

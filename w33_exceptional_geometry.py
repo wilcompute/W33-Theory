@@ -788,7 +788,7 @@ class W33ExceptionalGeometry:
         # Save results
         try:
             with open("w33_exceptional_geometry.json", "w") as f:
-                json.dump(results, f, indent=2)
+                json.dump(results, f, indent=2, default=int)
             print("Results saved to w33_exceptional_geometry.json")
         except Exception as e:
             print(f"Note: {e}")

@@ -597,7 +597,7 @@ def main():
     results = convert_numpy(results)
     
     with open("PART_CIX_d4_triality.json", "w") as f:
-        json.dump(results, f, indent=2)
+        json.dump(results, f, indent=2, default=int)
     
     print()
     print("Results saved to: PART_CIX_d4_triality.json")

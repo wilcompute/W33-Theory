@@ -440,7 +440,7 @@ results = {
 }
 
 with open("PART_LXXXVII_spacetime.json", "w") as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 
 print("\n" + "=" * 70)
 print("PART LXXXVII CONCLUSIONS")

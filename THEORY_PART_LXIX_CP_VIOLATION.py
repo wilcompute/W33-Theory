@@ -394,7 +394,7 @@ results = {
 }
 
 with open('PART_LXIX_CP_violation.json', 'w') as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 
 print("\n" + "="*70)
 print("PART LXIX CONCLUSIONS")

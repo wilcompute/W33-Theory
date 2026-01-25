@@ -90,6 +90,7 @@ stats={
     'common_neighbors_adjacent': dict(lam),
     'common_neighbors_nonadjacent_hist': dict(mu),
 }
-with open('stats.json','w') as f:
-    json.dump(stats, f, indent=2)
+from utils.json_safe import dump_json
+# Write stats using safe JSON serializer
+dump_json(stats, 'stats.json', indent=2)
 print('Wrote nodes/edges/gexf/stats')

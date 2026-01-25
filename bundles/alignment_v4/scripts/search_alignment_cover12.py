@@ -219,7 +219,8 @@ def main(seed: int = 0, samples: int = 2000, anneal_steps: int = 80000) -> None:
     out_n12=pd.DataFrame({"n12_point": n12_pts, "w33_point": [n2w[lbl] for lbl in n12_pts]})
     out_w33.to_csv("best_w33_to_n12_mapping.csv", index=False)
     out_n12.to_csv("best_n12_to_w33_mapping.csv", index=False)
-    print(json.dumps({"best_cover12_score": best_sc, "out_files": ["best_w33_to_n12_mapping.csv","best_n12_to_w33_mapping.csv"]}, indent=2))
+    from utils.json_safe import dumps
+    print(dumps({"best_cover12_score": best_sc, "out_files": ["best_w33_to_n12_mapping.csv","best_n12_to_w33_mapping.csv"]}, indent=2))
 
 if __name__ == "__main__":
     main()

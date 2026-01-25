@@ -139,7 +139,7 @@ results = {
 
 # Save
 with open('PART_CXVIII_explicit_results.json', 'w') as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 
 print("=" * 70)
 print(" W33 THEORY - PART CXVIII: EXPLICIT CONSTRUCTION VERIFIED")

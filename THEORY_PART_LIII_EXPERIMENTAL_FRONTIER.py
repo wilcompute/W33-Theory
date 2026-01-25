@@ -822,7 +822,7 @@ results = {
 }
 
 with open('PART_LIII_exploration_results.json', 'w') as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 
 print("\nResults saved to PART_LIII_exploration_results.json")
 print("\n" + "="*70)

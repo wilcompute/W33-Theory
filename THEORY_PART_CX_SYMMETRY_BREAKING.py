@@ -585,7 +585,7 @@ def main():
     results = convert_numpy(results)
     
     with open("PART_CX_symmetry_breaking.json", "w") as f:
-        json.dump(results, f, indent=2)
+        json.dump(results, f, indent=2, default=int)
     
     print()
     print("Results saved to: PART_CX_symmetry_breaking.json")

@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SUMMARY_RESULTS",
+  "type": "object",
+  "required": ["total_part_json_files", "summaries"],
+  "properties": {
+    "total_part_json_files": { "type": "integer", "minimum": 0 },
+    "files_sampled": { "type": "array", "items": { "type": "string" } },
+    "file_list": { "type": "array", "items": { "type": "string" } },
+    "summaries": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "part": { "type": "string" },
+          "part_number": { "type": "integer" },
+          "timestamp": { "type": "string" },
+          "key_results": { "type": ["object", "null"] }
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

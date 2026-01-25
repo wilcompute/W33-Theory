@@ -477,7 +477,7 @@ results = {
 }
 
 with open("PART_XCVI_complete_derivation.json", "w") as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 
 print("\nThe complete derivation saved to PART_XCVI_complete_derivation.json")
 print("\n" + "=" * 70)

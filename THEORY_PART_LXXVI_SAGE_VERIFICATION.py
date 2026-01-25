@@ -382,7 +382,7 @@ results = {
 }
 
 with open('PART_LXXVI_verification.json', 'w') as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 
 print("""
 VERIFICATION COMPLETE!

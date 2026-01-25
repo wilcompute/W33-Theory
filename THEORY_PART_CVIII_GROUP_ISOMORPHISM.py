@@ -547,7 +547,7 @@ def main():
     results = convert_numpy(results)
     
     with open("PART_CVIII_group_isomorphism.json", "w") as f:
-        json.dump(results, f, indent=2)
+        json.dump(results, f, indent=2, default=int)
     
     print()
     print("Results saved to: PART_CVIII_group_isomorphism.json")

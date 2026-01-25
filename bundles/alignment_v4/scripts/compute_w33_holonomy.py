@@ -81,7 +81,8 @@ def main() -> None:
         "holonomy_hist_mod12": {str(k): v for k,v in hol_hist.items()},
         "holonomy_by_center_count": {f"{cc},{h}": v for (cc,h),v in hol_by_center.items()},
     }
-    print(json.dumps(out, indent=2))
+    from utils.json_safe import dumps
+    print(dumps(out, indent=2))
 
 if __name__ == "__main__":
     main()

@@ -403,7 +403,7 @@ results['references'] = [
 ]
 
 with open('PART_CXV_reye_tomotope.json', 'w') as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 
 print("Results saved to: PART_CXV_reye_tomotope.json")
 print("\n" + "=" * 70)

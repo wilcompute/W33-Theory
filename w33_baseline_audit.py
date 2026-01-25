@@ -350,7 +350,7 @@ def main() -> int:
     out_csv = os.path.join(data_dir, "w33_baseline_audit_top.csv")
 
     with open(out_json, "w", encoding="utf-8") as f:
-        json.dump(results, f, indent=2)
+        json.dump(results, f, indent=2, default=int)
 
     write_csv_top(results, out_csv, per_target=25)
 

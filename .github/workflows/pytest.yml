@@ -1,0 +1,51 @@
+name: pytest
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements-dev.txt
+    - name: Generate SUMMARY_RESULTS.json (local)
+      run: |
+        python scripts/collect_results.py || true
+        python scripts/make_numeric_comparisons_from_summary.py || true
+
+    - name: Run pytest
+      run: |
+        pytest -q
+
+    - name: Collect PART_*.json results
+      run: |
+        python scripts/collect_results.py
+
+    - name: Extract numeric comparisons
+      run: |
+        python scripts/make_numeric_comparisons_from_summary.py || true
+
+    - name: Upload SUMMARY_RESULTS.json
+      uses: actions/upload-artifact@v4
+      with:
+        name: summary-results
+        path: SUMMARY_RESULTS.json
+
+    - name: Upload NUMERIC_COMPARISONS.json (if present)
+      uses: actions/upload-artifact@v4
+      with:
+        name: numeric-comparisons
+        path: NUMERIC_COMPARISONS.json
+        if-no-files-found: ignore

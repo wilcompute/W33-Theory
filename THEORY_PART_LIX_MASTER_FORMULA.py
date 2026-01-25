@@ -455,7 +455,7 @@ final_results = {
 }
 
 with open('PART_LIX_master_formula_results.json', 'w') as f:
-    json.dump(final_results, f, indent=2)
+    json.dump(final_results, f, indent=2, default=int)
 
 print("\n" + "="*70)
 print("PART LIX: THE MASTER FORMULA - COMPLETE")

@@ -367,7 +367,7 @@ results = {
 # Save JSON
 json_file = os.path.join(OUTPUT_DIR, "w33_exceptional_synthesis_results.json")
 with open(json_file, 'w') as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 print(f"JSON saved to: {json_file}")
 
 # Save comprehensive markdown report

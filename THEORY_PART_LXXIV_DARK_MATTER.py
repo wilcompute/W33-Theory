@@ -375,8 +375,7 @@ results = {
 }
 
 with open('PART_LXXIV_dark_matter.json', 'w') as f:
-    json.dump(results, f, indent=2)
-
+        json.dump(results, f, indent=2, default=int)
 print("""
 DARK MATTER FROM W33!
 

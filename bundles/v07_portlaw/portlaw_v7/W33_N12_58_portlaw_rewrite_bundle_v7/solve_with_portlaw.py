@@ -324,8 +324,8 @@ def main() -> None:
     law_out={str(k): {"delta":k[0],"rem_idx":k[1],"add_idx":k[2],
                       "move_edge_idxs":sorted(list(v["move_idxs"])),
                       "allow_stay":v["allow_stay"]} for k,v in law.items()}
-    with open(OUT/"port_law_reduced_key.json","w") as f:
-        json.dump(law_out, f, indent=2)
+    from utils.json_safe import dump_json
+    dump_json(law_out, OUT/"port_law_reduced_key.json", indent=2)
 
     # Solve again using ONLY the port-law
     def solve_with_portlaw():
@@ -442,8 +442,8 @@ def main() -> None:
         "total_cost": int(sum(p["cost"] for p in port_paths)),
         "cover12_count_360": int(cover12.sum()),
     }
-    with open(OUT/"run_summary.json","w") as f:
-        json.dump(summary, f, indent=2)
+    from utils.json_safe import dump_json
+    dump_json(summary, OUT/"run_summary.json", indent=2)
 
     print("Wrote outputs to:", OUT)
 

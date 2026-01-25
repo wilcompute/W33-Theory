@@ -1,0 +1,9 @@
+{
+  "n_vertices": 40,
+  "n_edges": 240,
+  "embedding_dim": 8,
+  "icp_matches": 0,
+  "icp_mean_err": 0.5100497952079556,
+  "assignment_matches": 0,
+  "assignment_mean_err": 0.5933947876933684
+}

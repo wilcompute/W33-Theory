@@ -172,7 +172,7 @@ results['part'] = 'CXIII'
 results['verified_with'] = 'SageMath 10.7'
 
 with open('PART_CXIII_sagemath_verification.json', 'w') as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 
 print("Results saved to: PART_CXIII_sagemath_verification.json")
 print("=" * 70)

@@ -464,6 +464,6 @@ results = {
 }
 
 with open("PART_XCVIII_mass_hierarchy.json", "w") as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 
 print("\nResults saved to PART_XCVIII_mass_hierarchy.json")

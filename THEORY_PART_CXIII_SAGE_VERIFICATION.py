@@ -286,7 +286,7 @@ if __name__ == "__main__":
     
     # Save results
     with open('PART_CXIII_verified_results.json', 'w') as f:
-        json.dump(SAGEMATH_RESULTS, f, indent=2)
+        json.dump(SAGEMATH_RESULTS, f, indent=2, default=int)
     
     print("\nResults saved to: PART_CXIII_verified_results.json")
     print("\n" + "=" * 70)

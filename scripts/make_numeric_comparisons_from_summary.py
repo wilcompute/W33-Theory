@@ -9,7 +9,17 @@ if summary_path is None:
 summary = json.load(open(summary_path))
 print('Using SUMMARY_RESULTS at:', summary_path)
 res = []
-for fname, meta in summary.get('summaries', {}).items():
+# Collect candidate filenames robustly from different summary formats
+file_list = []
+if isinstance(summary.get('summaries'), dict) and summary.get('summaries'):
+    file_list = list(summary.get('summaries').keys())
+elif isinstance(summary.get('collected_files'), list) and summary.get('collected_files'):
+    file_list = [entry.get('file') for entry in summary.get('collected_files') if entry.get('file')]
+else:
+    # fallback to scanning PART_*.json in the repo
+    file_list = [p.name for p in ROOT.glob('PART_*.json')]
+
+for fname in file_list:
     # DESI
     kr = None
     # try reading original PART file to get numeric values precisely
@@ -59,5 +69,5 @@ out = summary_path.parent / 'NUMERIC_COMPARISONS.json'
 print('Found numeric comparisons entries:', len(res))
 print('Writing to:', out)
 with open(out, 'w') as f:
-    json.dump(res, f, indent=2)
+    json.dump(res, f, indent=2, default=int)
 print('Wrote', out, 'entries:', len(res))

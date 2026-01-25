@@ -519,7 +519,7 @@ results = {
 }
 
 with open('PART_LVI_quantum_codes_results.json', 'w') as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 
 print("\n" + "="*70)
 print("CONCLUSIONS OF PART LVI")

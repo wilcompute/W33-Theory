@@ -275,7 +275,7 @@ results['part_number'] = 114
 results['key_insight'] = 'Tomotope 192 flags = |W(D4)| = triality origin of 3 generations'
 
 with open('PART_CXIV_tomotope_connection.json', 'w') as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 
 print("Results saved to: PART_CXIV_tomotope_connection.json")
 print("\n" + "=" * 70)

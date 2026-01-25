@@ -535,7 +535,7 @@ def main():
     # Save results
     output_file = "PART_CXVII_jordan_algebras.json"
     with open(output_file, 'w') as f:
-        json.dump(results, f, indent=2)
+        json.dump(results, f, indent=2, default=int)
     print(f"\nResults saved to: {output_file}")
     
     print("\n" + "=" * 70)

@@ -334,7 +334,7 @@ def main() -> int:
 
     out_json = os.path.join(data_dir, "w33_baseline_control_experiment.json")
     with open(out_json, "w", encoding="utf-8") as f:
-        json.dump(out, f, indent=2)
+        json.dump(out, f, indent=2, default=int)
 
     out_csv = os.path.join(data_dir, "w33_baseline_control_replicates.csv")
     # Flatten CSV columns

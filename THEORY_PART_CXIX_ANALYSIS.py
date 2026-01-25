@@ -354,7 +354,7 @@ def main():
     
     # Save results
     with open('PART_CXIX_27_analysis.json', 'w') as f:
-        json.dump(results, f, indent=2)
+        json.dump(results, f, indent=2, default=int)
     print(f"\nResults saved to: PART_CXIX_27_analysis.json")
     
     print("\n" + "=" * 70)

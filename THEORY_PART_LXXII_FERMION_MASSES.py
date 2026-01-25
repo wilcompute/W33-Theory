@@ -427,8 +427,7 @@ results = {
 }
 
 with open('PART_LXXII_fermion_masses.json', 'w') as f:
-    json.dump(results, f, indent=2)
-
+        json.dump(results, f, indent=2, default=int)
 print("""
 FERMION MASS HIERARCHY FROM W33!
 

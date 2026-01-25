@@ -452,7 +452,7 @@ class W33FinalVerification:
         }
         
         with open(f"{data_dir}/w33_verification_results.json", 'w') as f:
-            json.dump(results, f, indent=2)
+            json.dump(results, f, indent=2, default=int)
         
         print(f"Results saved to {data_dir}/w33_verification_results.json")
         print()

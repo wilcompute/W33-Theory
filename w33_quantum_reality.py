@@ -699,7 +699,7 @@ class W33QuantumReality:
         
         # Save JSON
         with open(f"{data_dir}/w33_quantum_reality.json", 'w') as f:
-            json.dump(results, f, indent=2)
+            json.dump(results, f, indent=2, default=int)
         print(f"  ✓ Saved: {data_dir}/w33_quantum_reality.json")
         
         # Save summary

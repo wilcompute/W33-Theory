@@ -413,6 +413,6 @@ results = {
 }
 
 with open("PART_XCIV_lagrangian.json", "w") as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=int)
 
 print("\nResults saved to PART_XCIV_lagrangian.json")
