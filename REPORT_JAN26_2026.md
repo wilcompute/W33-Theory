@@ -777,6 +777,7 @@ These 9 tuples form an **affine F3^2 plane** (rank‑2 span), with:
 
 - 12 affine lines inside the 9‑point set
 - 1 affine 2‑plane (the set itself)
+- Automorphism size **432**, matching |AGL(2,3)| (inference from count)
 
 The 3‑fold fibers are **independent sets** (no edges), and every pair of
 distinct fibers has **exactly 3 edges** (a perfect matching across the 3×3).
