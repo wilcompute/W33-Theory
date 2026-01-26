@@ -1,0 +1,596 @@
+[
+  {
+    "id": 1,
+    "name": "N12_1",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 2,
+    "name": "N12_2",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 3,
+    "name": "N12_3",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 4,
+    "name": "N12_4",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 5,
+    "name": "N12_5",
+    "automorphism_group_order": 2,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 88,
+    "missing_triangle_orbit_size_counts": {
+      "2": 88
+    }
+  },
+  {
+    "id": 6,
+    "name": "N12_6",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 7,
+    "name": "N12_7",
+    "automorphism_group_order": 4,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 44,
+    "missing_triangle_orbit_size_counts": {
+      "4": 44
+    }
+  },
+  {
+    "id": 8,
+    "name": "N12_8",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 9,
+    "name": "N12_9",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 10,
+    "name": "N12_10",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 11,
+    "name": "N12_11",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 12,
+    "name": "N12_12",
+    "automorphism_group_order": 2,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 88,
+    "missing_triangle_orbit_size_counts": {
+      "2": 88
+    }
+  },
+  {
+    "id": 13,
+    "name": "N12_13",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 14,
+    "name": "N12_14",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 15,
+    "name": "N12_15",
+    "automorphism_group_order": 2,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 88,
+    "missing_triangle_orbit_size_counts": {
+      "2": 88
+    }
+  },
+  {
+    "id": 16,
+    "name": "N12_16",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 17,
+    "name": "N12_17",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 18,
+    "name": "N12_18",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 19,
+    "name": "N12_19",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 20,
+    "name": "N12_20",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 21,
+    "name": "N12_21",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 22,
+    "name": "N12_22",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 23,
+    "name": "N12_23",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 24,
+    "name": "N12_24",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 25,
+    "name": "N12_25",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 26,
+    "name": "N12_26",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 27,
+    "name": "N12_27",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 28,
+    "name": "N12_28",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 29,
+    "name": "N12_29",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 30,
+    "name": "N12_30",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 31,
+    "name": "N12_31",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 32,
+    "name": "N12_32",
+    "automorphism_group_order": 2,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 88,
+    "missing_triangle_orbit_size_counts": {
+      "2": 88
+    }
+  },
+  {
+    "id": 33,
+    "name": "N12_33",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 34,
+    "name": "N12_34",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 35,
+    "name": "N12_35",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 36,
+    "name": "N12_36",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 37,
+    "name": "N12_37",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 38,
+    "name": "N12_38",
+    "automorphism_group_order": 4,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 44,
+    "missing_triangle_orbit_size_counts": {
+      "4": 44
+    }
+  },
+  {
+    "id": 39,
+    "name": "N12_39",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 40,
+    "name": "N12_40",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 41,
+    "name": "N12_41",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 42,
+    "name": "N12_42",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 43,
+    "name": "N12_43",
+    "automorphism_group_order": 4,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 44,
+    "missing_triangle_orbit_size_counts": {
+      "4": 44
+    }
+  },
+  {
+    "id": 44,
+    "name": "N12_44",
+    "automorphism_group_order": 2,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 88,
+    "missing_triangle_orbit_size_counts": {
+      "2": 88
+    }
+  },
+  {
+    "id": 45,
+    "name": "N12_45",
+    "automorphism_group_order": 2,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 88,
+    "missing_triangle_orbit_size_counts": {
+      "2": 88
+    }
+  },
+  {
+    "id": 46,
+    "name": "N12_46",
+    "automorphism_group_order": 2,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 88,
+    "missing_triangle_orbit_size_counts": {
+      "2": 88
+    }
+  },
+  {
+    "id": 47,
+    "name": "N12_47",
+    "automorphism_group_order": 3,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 60,
+    "missing_triangle_orbit_size_counts": {
+      "1": 2,
+      "3": 58
+    }
+  },
+  {
+    "id": 48,
+    "name": "N12_48",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 49,
+    "name": "N12_49",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 50,
+    "name": "N12_50",
+    "automorphism_group_order": 4,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 44,
+    "missing_triangle_orbit_size_counts": {
+      "4": 44
+    }
+  },
+  {
+    "id": 51,
+    "name": "N12_51",
+    "automorphism_group_order": 4,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 44,
+    "missing_triangle_orbit_size_counts": {
+      "4": 44
+    }
+  },
+  {
+    "id": 52,
+    "name": "N12_52",
+    "automorphism_group_order": 1,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 176,
+    "missing_triangle_orbit_size_counts": {
+      "1": 176
+    }
+  },
+  {
+    "id": 53,
+    "name": "N12_53",
+    "automorphism_group_order": 2,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 88,
+    "missing_triangle_orbit_size_counts": {
+      "2": 88
+    }
+  },
+  {
+    "id": 54,
+    "name": "N12_54",
+    "automorphism_group_order": 6,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 30,
+    "missing_triangle_orbit_size_counts": {
+      "2": 1,
+      "6": 29
+    }
+  },
+  {
+    "id": 55,
+    "name": "N12_55",
+    "automorphism_group_order": 2,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 88,
+    "missing_triangle_orbit_size_counts": {
+      "2": 88
+    }
+  },
+  {
+    "id": 56,
+    "name": "N12_56",
+    "automorphism_group_order": 4,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 44,
+    "missing_triangle_orbit_size_counts": {
+      "4": 44
+    }
+  },
+  {
+    "id": 57,
+    "name": "N12_57",
+    "automorphism_group_order": 6,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 30,
+    "missing_triangle_orbit_size_counts": {
+      "2": 1,
+      "6": 29
+    }
+  },
+  {
+    "id": 58,
+    "name": "N12_58",
+    "automorphism_group_order": 12,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 16,
+    "missing_triangle_orbit_size_counts": {
+      "4": 2,
+      "12": 14
+    }
+  },
+  {
+    "id": 59,
+    "name": "N12_59",
+    "automorphism_group_order": 4,
+    "missing_triangles_count": 176,
+    "missing_triangle_orbit_count": 44,
+    "missing_triangle_orbit_size_counts": {
+      "4": 44
+    }
+  }
+]

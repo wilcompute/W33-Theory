@@ -1,0 +1,50 @@
+﻿{
+  "timestamp_local": "2026-01-09T03:45:00-05:00",
+  "purpose": "Extend the N12_58 clock/anchor picture to the aut=6 class (N12_54, N12_57) and identify the distinguished missing-triangle orbit that plays the role of the tau-fixed anchors.",
+  "finding": "For aut=6 manifolds, missing triangles split into 29 full orbits of size 6 and one special orbit of size 2. The order-3 generator fixes the two special triangles individually, while an order-2 generator swaps them, realizing a Z6 clock action on a distinguished anchor pair.",
+  "manifolds": {
+    "N12_54": {
+      "special_orbit_size2": [
+        [
+          6,
+          7,
+          8
+        ],
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "disjoint": true,
+      "tau_cycle_notation": "(0 12)(34 5)(6 7 8)(9 ab)",
+      "swap_cycle_notation": "(0 3)(15)(2 4)(6 b)(7 a)(8 9)"
+    },
+    "N12_57": {
+      "special_orbit_size2": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "disjoint": true,
+      "tau_cycle_notation": "(0 12)(34 5)(6 7 8)(9 ab)",
+      "swap_cycle_notation": "(0 3)(15)(2 4)(6 b)(7 a)(8 9)"
+    }
+  },
+  "interpretation_notes": [
+    "This aut=6 kernel is the reduced analogue of the N12_58 story: a Z3 action (tau) with distinguished fixed anchors, and a Z2 action that exchanges the anchors, combining to a Z6 clock on the anchor subsystem.",
+    "Unlike N12_58, there is no V4 refinement visible in the missing-triangle orbit structure; the natural sector layer is Z2 (the swapped pair) rather than Z2\u00d7Z2.",
+    "These aut=6 manifolds are strong candidates for a 'subkernel' embedding into the N12_58 kernel by restricting to a single defect-family bit and its associated Z3."
+  ],
+  "outputs": {
+    "aut6_anchor_pair_report_csv": "/mnt/data/_n12/n12_aut6_manifolds_anchor_pair_orbit_analysis_20260109t084500z.csv",
+    "aut6_orbit_size_and_special_members_csv": "/mnt/data/_n12/n12_aut6_manifolds_missing_orbit_size_summary_and_special_members_20260109t084500z.csv"
+  }
+}

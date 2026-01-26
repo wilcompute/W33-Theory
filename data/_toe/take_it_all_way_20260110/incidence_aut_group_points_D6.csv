@@ -1,0 +1,13 @@
+auto_id,order,sector_swap_1_2,cycles
+0,1,0,()
+1,2,1,(sec1_m0 sec2_m2) (sec1_m1 sec2_m0) (sec1_m2 sec2_m1)
+2,3,0,(sec1_m0 sec1_m2 sec1_m1) (sec2_m0 sec2_m2 sec2_m1) (sec3_m0 sec3_m2 sec3_m1)
+3,6,1,(sec1_m0 sec2_m1 sec1_m1 sec2_m2 sec1_m2 sec2_m0) (sec3_m0 sec3_m2 sec3_m1)
+4,3,0,(sec1_m0 sec1_m1 sec1_m2) (sec2_m0 sec2_m1 sec2_m2) (sec3_m0 sec3_m1 sec3_m2)
+5,6,1,(sec1_m0 sec2_m0 sec1_m2 sec2_m2 sec1_m1 sec2_m1) (sec3_m0 sec3_m1 sec3_m2)
+6,2,0,(sec0_m0 sec0_m1) (sec1_m1 sec1_m2) (sec2_m0 sec2_m1) (sec3_m1 sec3_m2)
+7,2,1,(sec0_m0 sec0_m1) (sec1_m0 sec2_m2) (sec1_m1 sec2_m1) (sec1_m2 sec2_m0) (sec3_m1 sec3_m2)
+8,2,0,(sec0_m0 sec0_m1) (sec1_m0 sec1_m2) (sec2_m1 sec2_m2) (sec3_m0 sec3_m2)
+9,2,1,(sec0_m0 sec0_m1) (sec1_m0 sec2_m1) (sec1_m1 sec2_m0) (sec1_m2 sec2_m2) (sec3_m0 sec3_m2)
+10,2,0,(sec0_m0 sec0_m1) (sec1_m0 sec1_m1) (sec2_m0 sec2_m2) (sec3_m0 sec3_m1)
+11,2,1,(sec0_m0 sec0_m1) (sec1_m0 sec2_m0) (sec1_m1 sec2_m2) (sec1_m2 sec2_m1) (sec3_m0 sec3_m1)

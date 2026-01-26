@@ -13,6 +13,14 @@ The finite incidence geometry **W33** (the generalized quadrangle GQ(3,3)) encod
 
 ---
 
+## Final Summary (Jan 25, 2026)
+
+A consolidated, computation-backed summary lives in `FINAL_THEORY_SUMMARY.md`, with
+auto-generated tables in `artifacts/final_summary_table.md` and
+`artifacts/final_summary_table.json` (generated 2026-01-26).
+
+---
+
 ## PART I: The W33 Geometry
 
 ### What is W33?

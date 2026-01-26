@@ -1,0 +1,100 @@
+﻿{
+  "timestamp_local": "2026-01-09T01:19:00-05:00",
+  "purpose": "Construct Z6-character-weighted adjacency operators A_m induced by the 2T/Z6 edge connection; compute exact spectra; derive lift spectra; correlate leading eigenvectors with matching invariants; define a sector-mixing V4 coin operator to extend the dynamics beyond superselection sectors.",
+  "base_graph": "N12_58 orbit0 flipgraph (59 nodes, 125 edges)",
+  "voltage_counts": {
+    "0": 63,
+    "3": 4,
+    "5": 27,
+    "1": 31
+  },
+  "weighted_operator_definition": {
+    "A_m": "Hermitian 59x59 matrix with entries sum over edges u-v of exp(2\u03c0 i m s/6) (u->v) and conjugate for reverse, where s\u2208{0,1,3,5} is the Z6 shift of the edge label (e,e*,tau,tau^{-1})."
+  },
+  "spectral_summary": [
+    {
+      "m": 0,
+      "top1": 4.802493312043019,
+      "top2": 3.6952759303397835,
+      "bottom1": -4.641975938161361,
+      "bottom2": -3.695275930339779,
+      "trace": 8.881784197001252e-15,
+      "fro2": 250.00000000000009,
+      "spectral_radius": 4.802493312043019
+    },
+    {
+      "m": 1,
+      "top1": 4.7705312559774224,
+      "top2": 3.70544123059467,
+      "bottom1": -4.611247727579837,
+      "bottom2": -3.757930325072964,
+      "trace": 0.0,
+      "fro2": 249.99999999999991,
+      "spectral_radius": 4.7705312559774224
+    },
+    {
+      "m": 2,
+      "top1": 4.704072668327491,
+      "top2": 3.7015892187557586,
+      "bottom1": -4.547719917050898,
+      "bottom2": -3.805445086109569,
+      "trace": -4.440892098500626e-15,
+      "fro2": 249.99999999999991,
+      "spectral_radius": 4.704072668327491
+    },
+    {
+      "m": 3,
+      "top1": 4.669576639044021,
+      "top2": 3.695995880997439,
+      "bottom1": -4.514932249374896,
+      "bottom2": -3.822207825049789,
+      "trace": 7.105427357601002e-15,
+      "fro2": 249.9999999999999,
+      "spectral_radius": 4.669576639044021
+    },
+    {
+      "m": 4,
+      "top1": 4.704072668327499,
+      "top2": 3.7015892187557564,
+      "bottom1": -4.5477199170509035,
+      "bottom2": -3.8054450861095654,
+      "trace": -9.769962616701378e-15,
+      "fro2": 250.00000000000009,
+      "spectral_radius": 4.704072668327499
+    },
+    {
+      "m": 5,
+      "top1": 4.7705312559774224,
+      "top2": 3.70544123059467,
+      "bottom1": -4.611247727579837,
+      "bottom2": -3.757930325072964,
+      "trace": 0.0,
+      "fro2": 249.99999999999991,
+      "spectral_radius": 4.7705312559774224
+    }
+  ],
+  "symmetry_checks": {
+    "Hermitian_all": true,
+    "spectrum_m_equals_6_minus_m": true
+  },
+  "sector_lift": {
+    "size": 354,
+    "spectrum_csv": "/mnt/data/_n12/n12_58_orbit0_sector_lift_spectrum_size354_20260109t061900z.csv",
+    "note": "Lift for one sector is the Z6-voltage cover; full 2T lift is four disjoint copies (sector superselection), hence multiplicity 4."
+  },
+  "outputs": {
+    "weighted_spectra_eigs_csv": "/mnt/data/_n12/n12_58_orbit0_weighted_spectra_z6_characters_m0to5_20260109t061900z.csv",
+    "weighted_spectra_summary_csv": "/mnt/data/_n12/n12_58_orbit0_weighted_spectra_summary_m0to5_20260109t061900z.csv",
+    "sector_lift_spectrum_csv": "/mnt/data/_n12/n12_58_orbit0_sector_lift_spectrum_size354_20260109t061900z.csv",
+    "full_2Tlift_spectrum_csv": "/mnt/data/_n12/n12_58_orbit0_full_2tlift_spectrum_size1416_20260109t061900z.csv",
+    "top_eigenvectors_by_m_csv": "/mnt/data/_n12/n12_58_orbit0_weighted_spectrum_top_eigenvectors_by_m_20260109t061900z.csv",
+    "top_eigenvector_correlations_csv": "/mnt/data/_n12/n12_58_orbit0_weighted_spectrum_top_eigenvector_correlations_20260109t061900z.csv",
+    "sector_mixing_coin_csv": "/mnt/data/_n12/n12_58_internal_sector_mixing_coin_v4_cayley_on_24_states_20260109t061900z.csv",
+    "sector_mixing_coin_spectrum_csv": "/mnt/data/_n12/n12_58_internal_sector_mixing_coin_spectrum_20260109t061900z.csv"
+  },
+  "key_observations": [
+    "m=0 (unweighted adjacency) top eigenvector correlates strongly with degree, as expected.",
+    "m=3 (character detecting the center shift) produces a leading eigenvector strongly correlated with sigma_Z2 and anti-correlated with sum_phases_mod8, indicating a natural 'spin/phase' mode.",
+    "Because all edge labels lie in <tau> (Z6), left-coset sector index is conserved by transport; sector mixing must be introduced by additional operations (coin) corresponding to V4 generators (defect-family toggles / complement moves)."
+  ]
+}

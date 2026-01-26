@@ -12,6 +12,8 @@ This is the computational verification of our theoretical claims.
 """
 
 import subprocess
+import shutil
+import os
 import json
 from datetime import datetime
 
@@ -20,11 +22,13 @@ SAGE_SCRIPT = '''
 # Using SageMath to find the Reye/24-cell structure in W33
 
 import os, sys
-SAGE_DIR = "/mnt/c/Users/wiljd/OneDrive/Documents/GitHub/WilsManifold/external/sage"
-os.environ["PATH"] = f"{SAGE_DIR}/bin:" + os.environ.get("PATH", "")
-sys.path.insert(0, f"{SAGE_DIR}/lib/python3.12/site-packages")
+SAGE_DIR = os.environ.get("SAGE_DIR", "")
+if SAGE_DIR and os.path.isdir(SAGE_DIR):
+    os.environ["PATH"] = f"{SAGE_DIR}/bin:" + os.environ.get("PATH", "")
+    sys.path.insert(0, f"{SAGE_DIR}/lib/python3.12/site-packages")
 
 from sage.all import *
+VERBOSE = os.environ.get("W33_VERBOSE", "0").strip() == "1"
 print("SageMath loaded!")
 
 print("=" * 70)
@@ -304,6 +308,7 @@ from itertools import combinations
 print(f"\\n  Searching for 12-vertex subgraphs with Reye-like structure...")
 
 found_reye = False
+edge_24_hits = 0
 for subset in combinations(G.vertices(), 12):
     H = G.subgraph(subset)
     if H.is_regular():
@@ -317,11 +322,15 @@ for subset in combinations(G.vertices(), 12):
             break
     # Check for specific edge counts
     if H.num_edges() == 24:  # 12 × 4 / 2 = 24 edges for 4-regular
-        print(f"  Found subgraph with 24 edges: regularity = {H.is_regular()}")
+        edge_24_hits += 1
+        if VERBOSE:
+            print(f"  Found subgraph with 24 edges: regularity = {H.is_regular()}")
 
 if not found_reye:
     print(f"  No exact Reye substructure found in vertex subsets")
     print(f"  (May need to look in dual or quotient structures)")
+    if not VERBOSE and edge_24_hits:
+        print(f"  (Suppressed {edge_24_hits} subgraph hits with 24 edges)")
 
 # ============================================================================
 # SECTION 10: THE 27 AND JORDAN ALGEBRA
@@ -458,28 +467,41 @@ def main():
     with open(script_file, 'w', encoding='utf-8') as f:
         f.write(SAGE_SCRIPT)
     
-    # Run with SageMath via WSL
-    # Convert Windows path to WSL path
-    wsl_script_path = "/mnt/c/Users/wiljd/OneDrive/Documents/GitHub/WilsManifold/claude_workspace/" + script_file
-    sage_dir = "/mnt/c/Users/wiljd/OneDrive/Documents/GitHub/WilsManifold/external/sage"
-    
-    # WSL command to run sage
-    wsl_cmd = f'''cd "{sage_dir}" && export PATH="{sage_dir}/bin:$PATH" && export PYTHONPATH="{sage_dir}/lib/python3.12/site-packages" && python3 "{wsl_script_path}"'''
-    
+    # Run with SageMath (preferred), fallback to WSL if present
     try:
-        result = subprocess.run(
-            ["wsl", "bash", "-c", wsl_cmd],
-            capture_output=True,
-            text=True,
-            timeout=300
-        )
+        sage_cmd = shutil.which("sage")
+        if sage_cmd:
+            env = dict(os.environ)
+            env.setdefault("W33_VERBOSE", "0")
+            result = subprocess.run(
+                [sage_cmd, "-python", script_file],
+                capture_output=True,
+                text=True,
+                timeout=300,
+                env=env
+            )
+        elif shutil.which("wsl"):
+            # Fallback for legacy WSL-only setups
+            wsl_script_path = "/mnt/c/Users/wiljd/OneDrive/Desktop/Theory of Everything/" + script_file
+            wsl_cmd = f'''python3 "{wsl_script_path}"'''
+            result = subprocess.run(
+                ["wsl", "bash", "-c", wsl_cmd],
+                capture_output=True,
+                text=True,
+                timeout=300
+            )
+        else:
+            raise FileNotFoundError("SageMath not found and WSL unavailable")
+
         print(result.stdout)
         if result.stderr:
             print("STDERR:", result.stderr[:500])
-        
+
         results["sage_output"] = result.stdout
-        results["success"] = True
-        
+        results["success"] = result.returncode == 0
+        if result.returncode != 0:
+            results["error"] = f"nonzero exit ({result.returncode})"
+
     except subprocess.TimeoutExpired:
         print("SageMath computation timed out after 5 minutes")
         results["success"] = False

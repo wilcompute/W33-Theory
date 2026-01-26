@@ -1,0 +1,5 @@
+edge,in_tree,is_chord
+0-20,True,False
+10-12,True,False
+26-27,False,True
+27-45,False,True

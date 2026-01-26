@@ -1,0 +1,5 @@
+# Repro code (abridged): toe_flux_toggle_node0_20260110
+# - Loads H_transport, H_total(lam=0.5), reconstructs H_coin
+# - Builds V_defect7 diagonal
+# - Reconstructs H_transport_noflux by replacing delta4 edges e*->e using state_id<->2T element mapping
+# - Scans lambda,mu for best stability among lines 22/8/17 for (a) global clock marginal and (b) node0-local marginal

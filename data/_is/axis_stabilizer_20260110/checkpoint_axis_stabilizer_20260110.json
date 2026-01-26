@@ -1,0 +1,18 @@
+﻿{
+  "created": "2026-01-10",
+  "outdir": "/mnt/data/_is/axis_stabilizer_20260110",
+  "files": {
+    "D8_lift_elements_axis_and_tomotope_stabilizers.csv": {
+      "path": "/mnt/data/_is/axis_stabilizer_20260110/D8_lift_elements_axis_and_tomotope_stabilizers.csv",
+      "sha256": "65e4dd55658c54a9ba0295af301f6084688e5920c51e1f53e134c0f31650fcdd"
+    },
+    "axis_stabilizer_summary.json": {
+      "path": "/mnt/data/_is/axis_stabilizer_20260110/axis_stabilizer_summary.json",
+      "sha256": "46c2420093aea77315caace1b0a65ead76f2a21f68aa08c2d569dadfe2b08916"
+    },
+    "axis_stabilizer_report.md": {
+      "path": "/mnt/data/_is/axis_stabilizer_20260110/axis_stabilizer_report.md",
+      "sha256": "1e4c90c7edb9805c997eeb1bca833e42237a9a079018af56090af38c07ac7b16"
+    }
+  }
+}

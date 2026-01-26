@@ -1,0 +1,5 @@
+partition,group_size,nodes
+coocc_weight_multiset,6,sec0_m0 sec0_m1 sec0_m2 sec1_m0 sec1_m1 sec1_m2
+coocc_weight_multiset,6,sec2_m0 sec2_m1 sec2_m2 sec3_m0 sec3_m1 sec3_m2
+refined_by_sector_phase,6,sec0_m0 sec0_m1 sec0_m2 sec1_m0 sec1_m1 sec1_m2
+refined_by_sector_phase,6,sec2_m0 sec2_m1 sec2_m2 sec3_m0 sec3_m1 sec3_m2

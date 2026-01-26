@@ -1,0 +1,22 @@
+# Stabilizer affine maps on a-coordinates (selected elements)
+
+- elem_index=2:
+  - a0' = (2, 0, 0, 0) · a + 0 (mod 3)
+  - a1' = (0, 2, 0, 0) · a + 0 (mod 3)
+  - a2' = (0, 0, 2, 0) · a + 0 (mod 3)
+  - a3' = (2, 1, 1, 1) · a + 0 (mod 3)
+- elem_index=4:
+  - a0' = (1, 0, 0, 0) · a + 0 (mod 3)
+  - a1' = (1, 2, 2, 0) · a + 0 (mod 3)
+  - a2' = (0, 0, 1, 0) · a + 0 (mod 3)
+  - a3' = (1, 1, 2, 1) · a + 0 (mod 3)
+- elem_index=13:
+  - a0' = (0, 0, 2, 0) · a + 0 (mod 3)
+  - a1' = (2, 0, 0, 0) · a + 0 (mod 3)
+  - a2' = (0, 1, 0, 0) · a + 0 (mod 3)
+  - a3' = (0, 0, 0, 1) · a + 0 (mod 3)
+- elem_index=26:
+  - a0' = (0, 0, 2, 0) · a + 0 (mod 3)
+  - a1' = (0, 1, 0, 0) · a + 0 (mod 3)
+  - a2' = (2, 0, 0, 0) · a + 0 (mod 3)
+  - a3' = (0, 0, 0, 1) · a + 0 (mod 3)

@@ -37,8 +37,8 @@ if SAGE_AVAILABLE:
     G = Sp(4, GF(3))
     print(f"Sp(4,3) constructed")
     print(f"Order: {G.order()}")
-    print(f"Expected: 25920")
-    print(f"Match: {G.order() == 25920}")
+    print(f"Expected: 51840")
+    print(f"Match: {G.order() == 51840}")
     
     # Factor the order
     print(f"Factorization: {factor(G.order())}")
@@ -56,14 +56,14 @@ if SAGE_AVAILABLE:
         # Dimensions of irreps
         dims = [ct[i,0] for i in range(ct.nrows())]
         print(f"Irrep dimensions: {sorted(dims)}")
-        print(f"Sum of squares: {sum(d^2 for d in dims)} (should equal {G.order()})")
+        print(f"Sum of squares: {sum(d**2 for d in dims)} (should equal {G.order()})")
     except Exception as e:
         print(f"Character table computation failed: {e}")
 
 else:
     print("\n--- Sp(4,3) Properties (from literature) ---")
-    print("Order: 25920 = 2^6 × 3^4 × 5")
-    print("This is half the Weyl group of E6")
+    print("Order: 51840 = 2^7 × 3^4 × 5")
+    print("This equals the Weyl group of E6")
     print("Number of conjugacy classes: 24")
     print("Irrep dimensions include: 1, 4, 5, 6, 10, 15, 20, 24, 30, 36, 40, 45, 60, 64, 80, 81")
 
@@ -76,16 +76,16 @@ print("SECTION 2: W33 AS STRONGLY REGULAR GRAPH (40, 12, 2, 4)")
 print("="*70)
 
 def build_w33_graph():
-    """Build W33 as symplectic graph over F3."""
+    """Build W33 as symplectic graph over F3 (pure Python)."""
     F3 = [0, 1, 2]
-    
+
     def symplectic(p, q):
         return (p[0]*q[1] - p[1]*q[0] + p[2]*q[3] - p[3]*q[2]) % 3
-    
-    # Find isotropic 1-spaces
+
+    # Find projective points (1-spaces) in PG(3,3)
     vertices = []
     seen = set()
-    
+
     for a in F3:
         for b in F3:
             for c in F3:
@@ -93,34 +93,38 @@ def build_w33_graph():
                     v = (a, b, c, d)
                     if v == (0, 0, 0, 0):
                         continue
-                    if symplectic(v, v) != 0:
-                        continue
-                    
-                    # Normalize
+
+                    # Normalize to first nonzero entry = 1
                     for i, x in enumerate(v):
                         if x != 0:
-                            inv = pow(x, 2, 3)  # x^{-1} mod 3
+                            inv = pow(x, -1, 3)
                             normalized = tuple((c * inv) % 3 for c in v)
                             if normalized not in seen:
                                 seen.add(normalized)
                                 vertices.append(normalized)
                             break
-    
+
     n = len(vertices)
-    
-    # Build adjacency
+
+    # Build adjacency (orthogonality)
     adj = [[0]*n for _ in range(n)]
     for i in range(n):
         for j in range(i+1, n):
             if symplectic(vertices[i], vertices[j]) == 0:
                 adj[i][j] = 1
                 adj[j][i] = 1
-    
+
     return vertices, adj
 
-vertices, adj_matrix = build_w33_graph()
-n = len(vertices)
-print(f"W33 graph: {n} vertices")
+if SAGE_AVAILABLE:
+    G_graph = graphs.SymplecticPolarGraph(4, 3)
+    print(f"W33 graph (Sage built-in): {G_graph.order()} vertices, {G_graph.size()} edges")
+    adj_matrix = [list(row) for row in G_graph.adjacency_matrix().rows()]
+    n = G_graph.order()
+else:
+    vertices, adj_matrix = build_w33_graph()
+    n = len(vertices)
+    print(f"W33 graph: {n} vertices")
 
 # Verify strongly regular parameters
 def verify_srg_params(adj, n, k_expected, lam_expected, mu_expected):
@@ -347,10 +351,9 @@ print("="*70)
 
 print("""
 Key relationship:
-  |W(E₆)| = 51840 = 2 × 25920 = 2 × |Sp(4,3)|
+  |W(E₆)| = 51840 = |Sp(4,3)|
   
-This means Sp(4,3) is an index-2 subgroup of W(E₆).
-The "extra" factor of 2 corresponds to outer automorphism.
+This means Sp(4,3) has the same order as W(E₆) (a known sporadic isomorphism).
 
 E₆ root system has:
   - 72 roots
@@ -393,7 +396,7 @@ def analyze_w33_numbers():
         'lines': 40,
         'pts_per_line': 4,
         'lines_per_pt': 4,
-        'automorphisms': 25920,
+        'automorphisms': 51840,
         'h1_rank': 81,
         'srg_k': 12,
         'srg_lambda': 2,
@@ -411,8 +414,8 @@ def analyze_w33_numbers():
     print(f"  240 / 40 = 6 (triangles per vertex? No, it's edges)")
     print(f"  81 = 40 + 41 (40 points + 40 lines + 1?)")
     print(f"  81 = 27 × 3")
-    print(f"  25920 = 40 × 648 = 40 × 8 × 81")
-    print(f"  25920 / 40 = 648 = 8 × 81 (stabilizer order)")
+    print(f"  51840 = 40 × 1296 = 40 × 16 × 81")
+    print(f"  51840 / 40 = 1296 = 16 × 81 (stabilizer order)")
     print(f"  1728 = 12³ = (k)³ where k is degree")
     print(f"  1728 / 173 ≈ 9.988 ≈ 10")
     print(f"  173 + 1728 = 1901 (prime!)")
@@ -511,8 +514,8 @@ VERIFIED IN THIS SESSION:
 ✓ W33 is a strongly regular graph with parameters (40, 12, 2, 4)
 ✓ Complement is SRG(40, 27, 18, 18)  
 ✓ 4-cliques = lines of W33 = 40 total
-✓ |Aut(W33)| = |Sp(4,3)| = 25920 = 2⁶ × 3⁴ × 5
-✓ Sp(4,3) is index-2 subgroup of W(E₆)
+✓ |Aut(W33)| = |Sp(4,3)| = 51840 = 2⁷ × 3⁴ × 5
+✓ |Sp(4,3)| = |W(E₆)| (sporadic order coincidence)
 ✓ Key number 1728 = 12³ = (graph degree)³
 ✓ The formula α⁻¹ = 81 + 56 + 40/1111 is confirmed
 

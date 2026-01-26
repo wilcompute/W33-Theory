@@ -78,6 +78,9 @@ ALL OF PHYSICS           (Everything)
 - Quick checks:
   - Run `make check-json` to validate JSON serialization policy.
   - CI workflow `json-serialization-check` runs `tests/test_json_serialization.py` and `tests/test_json_safe.py` on pushes/PRs.
+- Verification digest:
+  - `python3 tools/build_verification_digest.py`
+  - Outputs `artifacts/verification_digest.md` and `artifacts/verification_digest.json`.
 
 ---
 

@@ -24,11 +24,15 @@ Quick steps:
 
    Alternatively, using Docker (no local Sage install required):
 
-   # Run a single Sage script in the official Sage container:
-   docker run --rm -v "$(pwd)":/work -w /work sagemath/sagemath:10.7 ./claude_workspace/run_sage.sh claude_workspace/THEORY_PART_CXIII_SAGE_VERIFICATION.sage
+   # Run a single Sage script in the official Sage container (Python version):
+   docker run --rm -v "$(pwd)":/work -w /work sagemath/sagemath:10.7 \
+     sage -python THEORY_PART_CXIII_SAGE_VERIFICATION.py
 
    # Or run the full set of Sage verifications (helper script):
-   docker run --rm -v "$(pwd)":/work -w /work sagemath/sagemath:10.7 bash -lc "chmod +x scripts/run_all_sage.sh && scripts/run_all_sage.sh"
+   # Use W33_FAST=1 to skip heavy clique/chromatic computations in CXIII.
+   # Use W33_VERBOSE=1 if you want CXVIII to print all candidate subgraphs.
+   docker run --rm -v "$(pwd)":/work -w /work -e W33_FAST=1 sagemath/sagemath:10.7 \
+     bash -lc "scripts/run_all_sage.sh"
 
 4. Run proofs (numerical) - ensure `data/` files exist:
 

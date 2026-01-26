@@ -491,7 +491,7 @@ results = {
 
 import json
 with open("PART_CVII_sage_results.json", "w") as f:
-    json.dump(results, f, indent=_sage_const_2, default=int)
+    json.dump(results, f, indent=_sage_const_2 , default=int)
 
 print("Results saved to: PART_CVII_sage_results.json")
 

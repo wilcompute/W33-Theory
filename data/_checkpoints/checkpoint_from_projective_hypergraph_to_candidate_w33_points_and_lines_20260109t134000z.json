@@ -1,0 +1,17 @@
+﻿{
+  "timestamp_local": "2026-01-09T08:40:00-05:00",
+  "purpose": "Push the projective-class hypergraph toward a full W(3,3)-like incidence by proposing a 40-point candidate set from \u03c4 3-cycles + fixed complements, and extracting initial line candidates from size-12 orbit \u03c4-cycle sets; compute symmetry partitions of the 12-class co-occurrence structure.",
+  "candidate_points": {
+    "definition": "36 \u03c4-3cycles -> 36 points, plus 2 \u03c4-fixed points and their 2 complements -> total 40",
+    "csv": "/mnt/data/_n12/n12_58_candidate_w33_points_40_from_tau_cycles_and_fixed_complements_20260109t134000z.csv"
+  },
+  "candidate_lines_from_size12_orbits": {
+    "note": "Each size-12 orbit induces a set of \u03c4 cycle_ids; for full orbits this yields 4-point lines (blocks of 4 consecutive \u03c4 cycles). Collapsed orbits yield 2-point sets (insufficient for W(3,3) lines but informative as degenerate contexts).",
+    "csv": "/mnt/data/_n12/n12_58_candidate_lines_from_size12_orbits_tau_cycle_sets_20260109t134000z.csv"
+  },
+  "symmetry_partition_on_12_projective_classes": {
+    "finding": "Weighted co-occurrence matrix partitions the 12 classes into two indistinguishable blocks of size 6: sectors {0,1} vs {2,3}.",
+    "csv": "/mnt/data/_n12/n12_58_projective_class_cooccurrence_symmetry_partitions_20260109t134000z.csv"
+  },
+  "next_step": "Use the 40-point candidate set and search for additional 4-point lines beyond the 10 obvious 4-cycle blocks, likely via flip/support dynamics or orbit-rank6 adjacency constraints, to reach the full 40-line W(3,3) incidence."
+}

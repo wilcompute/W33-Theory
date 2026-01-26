@@ -1,0 +1,535 @@
+﻿{
+  "timestamp_utc": "20260108T220955Z",
+  "purpose": "Push tomotope M2 edge-action onto N12_58 vertex/triangle universe; locate hole tetrads; derive imprimitivity pairing and complement involution; export summaries.",
+  "inputs": {
+    "checkpoint_connect12": {
+      "path": "/mnt/data/_checkpoints/checkpoint_connect12_20260108t214845z.json",
+      "sha256": "d88beadde54bfc88c9514c627ebeb39c7441e22770472be5abe07eda984bda67"
+    },
+    "N12_neighborly_2manifolds_json_zip": {
+      "path": "/mnt/data/_n12/n12_neighborly_2manifolds_json.zip",
+      "sha256": "fa24efab2afe549e97b85fb2589fa1ca50c03343ac22c582a46bb2c84bfcf629"
+    },
+    "N12_58_source": {
+      "zip_member": "N12_58.json"
+    }
+  },
+  "results": {
+    "tomotope_generators_edge_action": {
+      "p0": {
+        "transpositions": [
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            11
+          ]
+        ],
+        "order": 2
+      },
+      "p1": {
+        "transpositions": [
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "order": 2
+      },
+      "p2": {
+        "transpositions": [
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            12
+          ]
+        ],
+        "order": 2
+      },
+      "p3": {
+        "transpositions": [
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "order": 2
+      },
+      "group_order": 96,
+      "element_order_histogram": {
+        "3": 32,
+        "4": 36,
+        "2": 27,
+        "1": 1
+      }
+    },
+    "edge_to_vertex_bijection_used": {
+      "1": "0",
+      "2": "b",
+      "3": "7",
+      "4": "4",
+      "5": "1",
+      "6": "9",
+      "7": "8",
+      "8": "5",
+      "9": "6",
+      "10": "3",
+      "11": "2",
+      "12": "a"
+    },
+    "tomotope_induced_vertex_generators_cycles": {
+      "q0": [
+        [
+          "1",
+          "3"
+        ],
+        [
+          "2",
+          "5"
+        ],
+        [
+          "6",
+          "9"
+        ],
+        [
+          "8",
+          "a"
+        ]
+      ],
+      "q1": [
+        [
+          "0",
+          "9"
+        ],
+        [
+          "1",
+          "b"
+        ],
+        [
+          "4",
+          "8"
+        ],
+        [
+          "5",
+          "7"
+        ]
+      ],
+      "q2": [
+        [
+          "1",
+          "6"
+        ],
+        [
+          "2",
+          "8"
+        ],
+        [
+          "3",
+          "9"
+        ],
+        [
+          "5",
+          "a"
+        ]
+      ],
+      "q3": [
+        [
+          "1",
+          "5"
+        ],
+        [
+          "2",
+          "3"
+        ],
+        [
+          "6",
+          "a"
+        ],
+        [
+          "8",
+          "9"
+        ]
+      ],
+      "group_order": 96
+    },
+    "N12_58_triangulation_counts": {
+      "num_vertices": 12,
+      "num_faces": 44,
+      "num_all_triangles": 220,
+      "num_missing_triangles": 176
+    },
+    "tomotope_triangle_orbits": [
+      {
+        "tomotope_triangle_orbit": 0,
+        "size": 16,
+        "faces_in_orbit": 4,
+        "missing_in_orbit": 12,
+        "example_triangle": "78a"
+      },
+      {
+        "tomotope_triangle_orbit": 1,
+        "size": 48,
+        "faces_in_orbit": 12,
+        "missing_in_orbit": 36,
+        "example_triangle": "689"
+      },
+      {
+        "tomotope_triangle_orbit": 2,
+        "size": 48,
+        "faces_in_orbit": 12,
+        "missing_in_orbit": 36,
+        "example_triangle": "036"
+      },
+      {
+        "tomotope_triangle_orbit": 3,
+        "size": 48,
+        "faces_in_orbit": 12,
+        "missing_in_orbit": 36,
+        "example_triangle": "037"
+      },
+      {
+        "tomotope_triangle_orbit": 4,
+        "size": 16,
+        "faces_in_orbit": 4,
+        "missing_in_orbit": 12,
+        "example_triangle": "17a"
+      },
+      {
+        "tomotope_triangle_orbit": 5,
+        "size": 16,
+        "faces_in_orbit": 0,
+        "missing_in_orbit": 16,
+        "example_triangle": "1ab"
+      },
+      {
+        "tomotope_triangle_orbit": 6,
+        "size": 16,
+        "faces_in_orbit": 0,
+        "missing_in_orbit": 16,
+        "example_triangle": "05a"
+      },
+      {
+        "tomotope_triangle_orbit": 7,
+        "size": 12,
+        "faces_in_orbit": 0,
+        "missing_in_orbit": 12,
+        "example_triangle": "236"
+      }
+    ],
+    "A4_subgroup_matches_N12_58_aut": {
+      "N12_58_aut_order": 12,
+      "N12_58_aut_element_order_histogram": {
+        "1": 1,
+        "3": 8,
+        "2": 3
+      },
+      "N12_58_aut_generators_are_in_tomotope_group": true
+    },
+    "A4_missing_triangle_orbits_mapped_to_tomotope_orbits": [
+      {
+        "A4_orbit_id": 0,
+        "size": 12,
+        "tomotope_triangle_orbit": 0,
+        "example": "038"
+      },
+      {
+        "A4_orbit_id": 1,
+        "size": 12,
+        "tomotope_triangle_orbit": 1,
+        "example": "6ab"
+      },
+      {
+        "A4_orbit_id": 2,
+        "size": 12,
+        "tomotope_triangle_orbit": 2,
+        "example": "136"
+      },
+      {
+        "A4_orbit_id": 3,
+        "size": 12,
+        "tomotope_triangle_orbit": 3,
+        "example": "259"
+      },
+      {
+        "A4_orbit_id": 4,
+        "size": 12,
+        "tomotope_triangle_orbit": 5,
+        "example": "29b"
+      },
+      {
+        "A4_orbit_id": 5,
+        "size": 12,
+        "tomotope_triangle_orbit": 1,
+        "example": "789"
+      },
+      {
+        "A4_orbit_id": 6,
+        "size": 12,
+        "tomotope_triangle_orbit": 2,
+        "example": "25a"
+      },
+      {
+        "A4_orbit_id": 7,
+        "size": 12,
+        "tomotope_triangle_orbit": 3,
+        "example": "246"
+      },
+      {
+        "A4_orbit_id": 8,
+        "size": 4,
+        "tomotope_triangle_orbit": 6,
+        "example": "25b"
+      },
+      {
+        "A4_orbit_id": 9,
+        "size": 12,
+        "tomotope_triangle_orbit": 1,
+        "example": "123"
+      },
+      {
+        "A4_orbit_id": 10,
+        "size": 12,
+        "tomotope_triangle_orbit": 7,
+        "example": "236"
+      },
+      {
+        "A4_orbit_id": 11,
+        "size": 12,
+        "tomotope_triangle_orbit": 3,
+        "example": "59b"
+      },
+      {
+        "A4_orbit_id": 12,
+        "size": 12,
+        "tomotope_triangle_orbit": 2,
+        "example": "02a"
+      },
+      {
+        "A4_orbit_id": 13,
+        "size": 12,
+        "tomotope_triangle_orbit": 4,
+        "example": "17a"
+      },
+      {
+        "A4_orbit_id": 14,
+        "size": 12,
+        "tomotope_triangle_orbit": 6,
+        "example": "05a"
+      },
+      {
+        "A4_orbit_id": 15,
+        "size": 4,
+        "tomotope_triangle_orbit": 5,
+        "example": "38b"
+      }
+    ],
+    "two_holes_location": {
+      "hole_tetrad1_triangles": [
+        "012",
+        "38b",
+        "469",
+        "57a"
+      ],
+      "hole_tetrad2_triangles": [
+        "678",
+        "039",
+        "14a",
+        "25b"
+      ],
+      "tomotope_orbit_index_hole_tetrad1": 5,
+      "tomotope_orbit_index_hole_tetrad2": 6,
+      "A4_orbit_of_triangle_012": [
+        "012",
+        "38b",
+        "469",
+        "57a"
+      ]
+    },
+    "tomotope_imprimitivity_block_system_on_12_edges": {
+      "blocks_edge_labels": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          11,
+          12
+        ]
+      ],
+      "induced_vertex_pairs": [
+        [
+          "0",
+          "b"
+        ],
+        [
+          "7",
+          "4"
+        ],
+        [
+          "1",
+          "9"
+        ],
+        [
+          "8",
+          "5"
+        ],
+        [
+          "6",
+          "3"
+        ],
+        [
+          "2",
+          "a"
+        ]
+      ],
+      "block_action_group_order": 24,
+      "block_action_element_order_histogram": {
+        "1": 1,
+        "2": 9,
+        "4": 6,
+        "3": 8
+      },
+      "kernel_fixing_all_blocks_order": 4
+    },
+    "complement_involution_from_blocks": {
+      "vertex_pairing": {
+        "0": "b",
+        "b": "0",
+        "7": "4",
+        "4": "7",
+        "1": "9",
+        "9": "1",
+        "8": "5",
+        "5": "8",
+        "6": "3",
+        "3": "6",
+        "2": "a",
+        "a": "2"
+      },
+      "triangle_orbit_complement_map": {
+        "0": 5,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 6,
+        "5": 0,
+        "6": 4,
+        "7": 7
+      },
+      "hole_to_face_tetrad_map": [
+        {
+          "hole_tetrad": "H1",
+          "hole_triangle": "012",
+          "complement_triangle": "9ab"
+        },
+        {
+          "hole_tetrad": "H1",
+          "hole_triangle": "38b",
+          "complement_triangle": "056"
+        },
+        {
+          "hole_tetrad": "H1",
+          "hole_triangle": "469",
+          "complement_triangle": "137"
+        },
+        {
+          "hole_tetrad": "H1",
+          "hole_triangle": "57a",
+          "complement_triangle": "248"
+        },
+        {
+          "hole_tetrad": "H2",
+          "hole_triangle": "678",
+          "complement_triangle": "345"
+        },
+        {
+          "hole_tetrad": "H2",
+          "hole_triangle": "039",
+          "complement_triangle": "16b"
+        },
+        {
+          "hole_tetrad": "H2",
+          "hole_triangle": "14a",
+          "complement_triangle": "279"
+        },
+        {
+          "hole_tetrad": "H2",
+          "hole_triangle": "25b",
+          "complement_triangle": "08a"
+        }
+      ],
+      "note": "Complement swaps within each of the 6 vertex-pairs; it maps hole tetrads to face tetrads and swaps tomotope triangle orbits 0<->5 and 4<->6; it fixes the three size-48 triangle orbits and the size-12 orbit."
+    },
+    "artifacts_written": {
+      "tomotope_triangle_orbit_face_missing_summary_csv": "/mnt/data/_n12/n12_58_tomotope_triangle_orbit_face_missing_summary.csv",
+      "A4_missing_orbits_to_tomotope_orbits_csv": "/mnt/data/_n12/n12_58_a4_missing_orbits_mapped_to_tomotope_triangle_orbits.csv",
+      "tomotope_induced_vertex_pairing_csv": "/mnt/data/_n12/n12_58_tomotope_induced_vertex_pairing_blocks.csv",
+      "hole_to_face_tetrad_complement_csv": "/mnt/data/_n12/n12_58_hole_tetrads_complement_to_face_tetrads.csv",
+      "tomotope_triangle_orbit_complement_map_csv": "/mnt/data/N12_58_tomotope_triangle_orbits_complement_map.csv"
+    }
+  },
+  "code_used": "# See full_code_used for complete runnable script; key steps:\n# 1) Load N12_58 triangulation faces from N12_neighborly_2manifolds_json.zip\n# 2) Build tomotope edge-action generators p0..p3 (as transposition products) on 12 points\n# 3) Conjugate tomotope action to N12 vertex labels using edge_to_vertex mapping\n# 4) Compute induced orbits on 220 triangles; compute intersection with faces/missing\n# 5) Compute A4 subgroup from N12_58 automorphism generators; map missing triangle orbits to tomotope orbits\n# 6) Compute block system (imprimitivity) on 12 tomotope edges: (1,2)(3,4)(5,6)(7,8)(9,10)(11,12)\n# 7) Translate that to a vertex pairing on N12 labels; define complement involution swapping within each pair\n# 8) Show complement maps hole tetrads to face tetrads, and swaps tomotope triangle orbits 0<->5 and 4<->6",
+  "full_code_used": "import json, zipfile, itertools, math\nimport numpy as np, pandas as pd\nfrom collections import deque, Counter\n\n# Load mapping from checkpoint_connect12\ncheckpoint_path=r'''/mnt/data/_checkpoints/checkpoint_connect12_20260108t214845z.json'''\nchk=json.load(open(checkpoint_path,'r'))\nedge_to_vertex=chk['results']['A4_regular_subgroup_embedding']['edgeLabel_to_N12_vertexLabel_mapping']\nvertex_to_edge={v:int(k) for k,v in edge_to_vertex.items()}\nlabels=['0','1','2','3','4','5','6','7','8','9','a','b']\norder={lab:i for i,lab in enumerate(labels)}\ndef canon_tri(tri): return tuple(sorted(tri, key=lambda x: order[x]))\n\n# Tomotope edge generators (user-provided)\ndef perm_from_transpositions(n, transpositions):\n    p=list(range(n+1))\n    for i,j in transpositions:\n        p[i],p[j]=p[j],p[i]\n    return tuple(p[1:])\ndef perm_comp(p,q): return tuple(p[q[i]-1] for i in range(len(p)))\ndef perm_order(p):\n    n=len(p); seen=[False]*(n+1); lcm=1\n    for i in range(1,n+1):\n        if not seen[i]:\n            j=i; l=0\n            while not seen[j]:\n                seen[j]=True; l+=1; j=p[j-1]\n            lcm=lcm*l//math.gcd(lcm,l)\n    return lcm\ndef generate_group(gens):\n    n=len(gens[0]); idp=tuple(range(1,n+1)); G={idp}; dq=deque([idp])\n    while dq:\n        g=dq.popleft()\n        for h in gens:\n            gh=perm_comp(h,g)\n            if gh not in G:\n                G.add(gh); dq.append(gh)\n    return G\np0=perm_from_transpositions(12, [(5,10),(6,9),(7,12),(8,11)])\np1=perm_from_transpositions(12, [(1,6),(2,5),(3,8),(4,7)])\np2=perm_from_transpositions(12, [(5,9),(6,10),(7,11),(8,12)])\np3=perm_from_transpositions(12, [(5,8),(6,7),(9,12),(10,11)])\nG_edge=generate_group([p0,p1,p2,p3])\n\n# Conjugate to N12 vertex labels (index-perms)\nlabel_to_pos={lab:i for i,lab in enumerate(labels)}\ndef edgeperm_to_labelperm(p_edge):\n    img=[]\n    for lab in labels:\n        e=vertex_to_edge[lab]\n        e_img=p_edge[e-1]\n        lab_img=edge_to_vertex[str(e_img)]\n        img.append(label_to_pos[lab_img])\n    return tuple(img)\nq0=edgeperm_to_labelperm(p0); q1=edgeperm_to_labelperm(p1)\nq2=edgeperm_to_labelperm(p2); q3=edgeperm_to_labelperm(p3)\n\ndef comp_idx(p,q): return tuple(p[q[i]] for i in range(len(p)))\ndef order_idx(p):\n    n=len(p); seen=[False]*n; lcm=1\n    for i in range(n):\n        if not seen[i]:\n            j=i; l=0\n            while not seen[j]:\n                seen[j]=True; l+=1; j=p[j]\n            lcm=lcm*l//math.gcd(lcm,l)\n    return lcm\ndef group_idx(gens):\n    n=len(gens[0]); idp=tuple(range(n)); G={idp}; dq=deque([idp])\n    while dq:\n        g=dq.popleft()\n        for h in gens:\n            gh=comp_idx(h,g)\n            if gh not in G:\n                G.add(gh); dq.append(gh)\n    return G\nG_tomo_idx=group_idx([q0,q1,q2,q3])\n\n# Load N12_58 triangulation faces\nzip_path=r'''/mnt/data/_n12/n12_neighborly_2manifolds_json.zip'''\nzf=zipfile.ZipFile(zip_path,'r')\nn58=json.load(zf.open('N12_58.json'))\nfaces=set(canon_tri(list(s)) for s in n58['faces'])\nall_tris=set(itertools.combinations(labels,3))\nmissing=all_tris - faces\n\ndef apply_idxperm_to_tri(p, tri):\n    return canon_tri([labels[p[label_to_pos[v]]] for v in tri])\ndef orbit_of_tri(tri, G):\n    return set(apply_idxperm_to_tri(g, tri) for g in G)\ndef orbit_partition(tris, G):\n    un=set(tris); out=[]\n    while un:\n        t=next(iter(un))\n        orb=orbit_of_tri(t,G)\n        out.append(orb)\n        un -= orb\n    return out\n\n# Tomotope orbits on triangles\ntomo_orbits = orbit_partition(all_tris, G_tomo_idx)\n\n# N12_58 A4 subgroup from provided generators; confirm included in tomotope group\ngens_n58=[tuple(g['perm']) for g in n58['automorphism_group']['generators']]\nG_n58=group_idx(gens_n58)\n\n# A4 orbits of missing triangles mapped to tomotope orbits\nA4_missing_orbits=orbit_partition(missing, G_n58)\n\n# Block system on 12 tomotope edges: orbit of {1,2} under G_edge gives 6 blocks\ndef apply_edgeperm(p,i): return p[i-1]\ndef orbit_of_subset(B,G):\n    Bs=set(); B=set(B)\n    for g in G:\n        img=tuple(sorted(apply_edgeperm(g,i) for i in B))\n        Bs.add(img)\n    return Bs\nblocks=orbit_of_subset({1,2}, list(G_edge))  # 6 pairs\n\n# Translate blocks to vertex pairing and define complement on vertices\nblocks_pairs=[(edge_to_vertex[str(a)], edge_to_vertex[str(b)]) for a,b in sorted(blocks)]\npairing={}\nfor u,v in blocks_pairs:\n    pairing[u]=v; pairing[v]=u\ndef complement_tri(tri):\n    return canon_tri([pairing[v] for v in tri])\n"
+}
+

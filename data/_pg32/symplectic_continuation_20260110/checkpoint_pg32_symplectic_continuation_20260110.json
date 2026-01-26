@@ -1,0 +1,40 @@
+﻿{
+  "outdir": "/mnt/data/_pg32/symplectic_continuation_20260110",
+  "generated_files": [
+    {
+      "file": "hyperplane_Z3_phase_functions_27.csv",
+      "sha256": "e8b83392f9d585fabb36f1eeee94bda821b11b41c1715527f61c726731faf051",
+      "bytes": 576
+    },
+    {
+      "file": "pg32_points_fiber_and_tomotope_counts.csv",
+      "sha256": "921d81cf1758f95140417225663cc3b62b44e15602d394e8f08f05d427b833e8",
+      "bytes": 170
+    },
+    {
+      "file": "tomotope_15_rainbow_lines_coeffs_and_pg32_shadow.csv",
+      "sha256": "ed5f98191c61d2cba84ffd0695aeef432b649b65ccfeef603335f4039ae4a63a",
+      "bytes": 1123
+    },
+    {
+      "file": "pg32_symplectic_doily_isotropic_lines_15_with_tomotope_coverage.csv",
+      "sha256": "c23ef6e3f6250438dcba9480c5d992c6bf13bcd06f8f133fac9cd591d9b33bd8",
+      "bytes": 797
+    },
+    {
+      "file": "missing_pg_points_incidence_in_doily.csv",
+      "sha256": "f103faac3f3e47fea9808d52e11815cd6243640de7badc6f4ea5ef8d81516eaf",
+      "bytes": 567
+    },
+    {
+      "file": "missing_pg_points_induced_edges.csv",
+      "sha256": "56edd93f16ed11da4b07aae2bb4e8fe878575dd7c097fd4d590d17f0a24275d6",
+      "bytes": 54
+    },
+    {
+      "file": "pg32_symplectic_continuation_report.md",
+      "sha256": "123f6f753f200e3f1c173736efa53f0f3f7dd710a2a58dd0971acc3946465059",
+      "bytes": 1693
+    }
+  ]
+}

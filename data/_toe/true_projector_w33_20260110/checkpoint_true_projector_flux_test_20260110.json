@@ -1,0 +1,97 @@
+﻿{
+  "created": "2026-01-10",
+  "outdir": "/mnt/data/_toe/true_projector_w33_20260110",
+  "files": {
+    "W33_line_rank1_projector_vectors_phi_realimag.csv": {
+      "sha256": "aa3f8354927fe900001b948459d79112584d897d96b0076c479d4de625586b70",
+      "bytes": 11738
+    },
+    "flux_scan_rank1_projector_global_stability.csv": {
+      "sha256": "35a88cb3f00e3d5be8a4e04e79115c6e8c3fbc1b0ea14b85ae1565f747120549",
+      "bytes": 3528
+    },
+    "noflux_scan_rank1_projector_global_stability.csv": {
+      "sha256": "9f27a3e5167a3a3f915d7c70f6954ae38266ede7297f80c7896706257b340f76",
+      "bytes": 3527
+    },
+    "winner_differences_flux_vs_noflux_rank1_projector.csv": {
+      "sha256": "9473fe623a0989c7fa2fa0ffea3a3b1508853efc09064d3df27deea453f974a0",
+      "bytes": 146
+    },
+    "switchpoints_flux_rank1_projector.csv": {
+      "sha256": "fec6edcc311446feb89e5a0a5e1684078213a3e7d62155b835c7ed60cc24fa66",
+      "bytes": 41
+    },
+    "switchpoints_noflux_rank1_projector.csv": {
+      "sha256": "32fc81f270f886e5c0c9d81543630a67789e141269792cafe55fe40460d98e18",
+      "bytes": 41
+    },
+    "README_true_projector_flux_test.md": {
+      "sha256": "026640829deb0a29fe7ffe6014fedfbb1426be3e40ea441904a58ae11d930da0",
+      "bytes": 1379
+    }
+  },
+  "key_results": {
+    "winner_diff_points": 7,
+    "diff_points_preview": [
+      {
+        "mu": 0.75,
+        "lambda": 0.4,
+        "winner_flux": 17,
+        "winner_noflux": 22
+      },
+      {
+        "mu": 1.75,
+        "lambda": 0.4,
+        "winner_flux": 22,
+        "winner_noflux": 17
+      },
+      {
+        "mu": 1.75,
+        "lambda": 0.41,
+        "winner_flux": 22,
+        "winner_noflux": 17
+      },
+      {
+        "mu": 1.75,
+        "lambda": 0.42,
+        "winner_flux": 22,
+        "winner_noflux": 17
+      },
+      {
+        "mu": 1.75,
+        "lambda": 0.43,
+        "winner_flux": 22,
+        "winner_noflux": 17
+      },
+      {
+        "mu": 1.75,
+        "lambda": 0.44,
+        "winner_flux": 22,
+        "winner_noflux": 17
+      },
+      {
+        "mu": 1.75,
+        "lambda": 0.45,
+        "winner_flux": 22,
+        "winner_noflux": 17
+      }
+    ],
+    "switchpoints_flux": [
+      {
+        "mu": 1.75,
+        "lambda_switch": 0.46,
+        "from": 22,
+        "to": 17
+      }
+    ],
+    "switchpoints_noflux": [
+      {
+        "mu": 0.75,
+        "lambda_switch": 0.41,
+        "from": 22,
+        "to": 17
+      }
+    ]
+  }
+}

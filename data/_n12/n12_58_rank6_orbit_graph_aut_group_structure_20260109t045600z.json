@@ -1,0 +1,57 @@
+{
+  "group_order": 96,
+  "order_hist": {
+    "2": 63,
+    "6": 30,
+    "3": 2,
+    "1": 1
+  },
+  "center_order": 16,
+  "center_order_hist": {
+    "2": 15,
+    "1": 1
+  },
+  "center_simple_swaps": [
+    [
+      0,
+      13
+    ],
+    [
+      1,
+      12
+    ],
+    [
+      3,
+      9
+    ],
+    [
+      14,
+      15
+    ]
+  ],
+  "s3_generator_3cycle": [
+    [
+      5,
+      11,
+      7
+    ]
+  ],
+  "s3_generator_transposition_like": [
+    [
+      1,
+      12
+    ],
+    [
+      3,
+      9
+    ],
+    [
+      7,
+      11
+    ],
+    [
+      14,
+      15
+    ]
+  ]
+}

@@ -1,0 +1,12 @@
+threshold,N58_edges,N58_min_deg,N58_max_deg,mono_embed_N57
+24,89,12,13,True
+32,69,7,12,True
+40,69,7,12,True
+44,69,7,12,True
+48,69,7,12,True
+52,18,1,7,False
+56,18,1,7,False
+60,18,1,7,False
+64,18,1,7,False
+68,18,1,7,False
+72,18,1,7,False

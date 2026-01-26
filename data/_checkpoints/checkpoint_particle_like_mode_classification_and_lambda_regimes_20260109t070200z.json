@@ -1,0 +1,49 @@
+﻿{
+  "timestamp_local": "2026-01-09T02:02:00-05:00",
+  "purpose": "Classify eigenmodes of the Z6-character operators A_m by defect localization and by spin/phase correlation; provide a mode catalog usable for sector-mixed Hamiltonian H(\u03bb)=A_m\u2297I4 + \u03bb I\u2297C4.",
+  "defect_nodes": [
+    0,
+    10,
+    12,
+    20,
+    26,
+    27,
+    45
+  ],
+  "defect_edges": [
+    {
+      "edge": "0-20",
+      "family": "O12"
+    },
+    {
+      "edge": "10-12",
+      "family": "O6"
+    },
+    {
+      "edge": "26-27",
+      "family": "O6"
+    },
+    {
+      "edge": "27-45",
+      "family": "O12"
+    }
+  ],
+  "metrics": {
+    "defect_mass_frac": "sum_{nodes incident to delta4} |psi|^2",
+    "defect_energy_frac": "sum_{delta4 edges} |psi[v]-omega^s psi[u]|^2 / sum_{all edges} same",
+    "aligned_corr": "choose global phase to maximize alignment with feature direction and correlate real part with feature"
+  },
+  "key_findings": [
+    "Strongest spin/phase-carrying modes are the top eigenvectors in m=2 and m=3, with corr_sigma\u22480.80-0.84 and corr_sumph\u22480.77-0.85.",
+    "Defect-localized modes exist in multiple m sectors; m=3 contains the highest concentration of defect-localized modes under the threshold defect_mass>0.20.",
+    "Because sector-mixing adds \u00b1\u03bb slopes, eigenvalue ordering across \u03bb is dominated by the symmetric (+3\u03bb) branch at large \u03bb; the catalog provides tags to interpret which base modes populate which branches."
+  ],
+  "outputs": {
+    "full_mode_catalog_csv": "/mnt/data/_n12/n12_58_mode_catalog_all_a_m_eigenmodes_with_defect_metrics_and_aligned_correlations_20260109t070200z.csv",
+    "tag_counts_csv": "/mnt/data/_n12/n12_58_mode_tag_counts_by_m_20260109t070200z.csv",
+    "top30_by_defect_mass_csv": "/mnt/data/_n12/n12_58_top30_modes_by_defect_mass_20260109t070200z.csv",
+    "spin_phase_modes_csv": "/mnt/data/_n12/n12_58_spin_phase_modes_threshold06_20260109t070200z.csv",
+    "dominant_modes_across_lambda_csv": "/mnt/data/_n12/n12_58_dominant_modes_across_lambda_regimes_top25_candidates_20260109t070200z.csv",
+    "key_mode_report_csv": "/mnt/data/_n12/n12_58_mode_report_key_modes_defect_vs_spin_phase_20260109t070200z.csv"
+  }
+}

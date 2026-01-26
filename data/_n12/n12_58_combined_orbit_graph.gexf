@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-01-07">
+    <creator>NetworkX 2.8.8</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <attributes mode="static" class="edge">
+      <attribute id="0" title="kind" type="string" />
+    </attributes>
+    <nodes>
+      <node id="0" label="0" />
+      <node id="1" label="1" />
+      <node id="2" label="2" />
+      <node id="3" label="3" />
+      <node id="4" label="4" />
+      <node id="5" label="5" />
+      <node id="6" label="6" />
+      <node id="7" label="7" />
+      <node id="8" label="8" />
+      <node id="9" label="9" />
+      <node id="10" label="10" />
+      <node id="11" label="11" />
+      <node id="12" label="12" />
+      <node id="13" label="13" />
+      <node id="14" label="14" />
+      <node id="15" label="15" />
+    </nodes>
+    <edges>
+      <edge source="1" target="2" id="0">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="1" target="4" id="1">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="1" target="8" id="2">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="1" target="10" id="3">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="1" target="12" id="4">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="1" target="14" id="5">
+        <attvalues>
+          <attvalue for="0" value="E4" />
+        </attvalues>
+      </edge>
+      <edge source="1" target="15" id="6">
+        <attvalues>
+          <attvalue for="0" value="E4" />
+        </attvalues>
+      </edge>
+      <edge source="2" target="3" id="7">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="2" target="6" id="8">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="2" target="9" id="9">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="2" target="12" id="10">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="2" target="14" id="11">
+        <attvalues>
+          <attvalue for="0" value="E4" />
+        </attvalues>
+      </edge>
+      <edge source="2" target="15" id="12">
+        <attvalues>
+          <attvalue for="0" value="E4" />
+        </attvalues>
+      </edge>
+      <edge source="3" target="4" id="13">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="3" target="5" id="14">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="3" target="6" id="15">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="3" target="7" id="16">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="3" target="8" id="17">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="3" target="9" id="18">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="3" target="11" id="19">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="4" target="5" id="20">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="4" target="7" id="21">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="4" target="9" id="22">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="4" target="10" id="23">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="4" target="11" id="24">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="4" target="12" id="25">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="4" target="15" id="26">
+        <attvalues>
+          <attvalue for="0" value="E4" />
+        </attvalues>
+      </edge>
+      <edge source="5" target="6" id="27">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="5" target="8" id="28">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="5" target="9" id="29">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="5" target="10" id="30">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="5" target="14" id="31">
+        <attvalues>
+          <attvalue for="0" value="E4" />
+        </attvalues>
+      </edge>
+      <edge source="6" target="7" id="32">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="6" target="9" id="33">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="6" target="11" id="34">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="6" target="15" id="35">
+        <attvalues>
+          <attvalue for="0" value="E4" />
+        </attvalues>
+      </edge>
+      <edge source="7" target="8" id="36">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="7" target="9" id="37">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="7" target="10" id="38">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="7" target="15" id="39">
+        <attvalues>
+          <attvalue for="0" value="E4" />
+        </attvalues>
+      </edge>
+      <edge source="8" target="9" id="40">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="8" target="11" id="41">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="8" target="12" id="42">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="8" target="14" id="43">
+        <attvalues>
+          <attvalue for="0" value="E4" />
+        </attvalues>
+      </edge>
+      <edge source="8" target="15" id="44">
+        <attvalues>
+          <attvalue for="0" value="E4" />
+        </attvalues>
+      </edge>
+      <edge source="9" target="11" id="45">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="9" target="14" id="46">
+        <attvalues>
+          <attvalue for="0" value="E4" />
+        </attvalues>
+      </edge>
+      <edge source="10" target="11" id="47">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="10" target="12" id="48">
+        <attvalues>
+          <attvalue for="0" value="R6" />
+        </attvalues>
+      </edge>
+      <edge source="10" target="14" id="49">
+        <attvalues>
+          <attvalue for="0" value="E4" />
+        </attvalues>
+      </edge>
+      <edge source="12" target="14" id="50">
+        <attvalues>
+          <attvalue for="0" value="E4" />
+        </attvalues>
+      </edge>
+      <edge source="13" target="15" id="51">
+        <attvalues>
+          <attvalue for="0" value="E4" />
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

@@ -3,11 +3,13 @@
 # Using SageMath to find the Reye/24-cell structure in W33
 
 import os, sys
-SAGE_DIR = "/mnt/c/Users/wiljd/OneDrive/Documents/GitHub/WilsManifold/external/sage"
-os.environ["PATH"] = f"{SAGE_DIR}/bin:" + os.environ.get("PATH", "")
-sys.path.insert(0, f"{SAGE_DIR}/lib/python3.12/site-packages")
+SAGE_DIR = os.environ.get("SAGE_DIR", "")
+if SAGE_DIR and os.path.isdir(SAGE_DIR):
+    os.environ["PATH"] = f"{SAGE_DIR}/bin:" + os.environ.get("PATH", "")
+    sys.path.insert(0, f"{SAGE_DIR}/lib/python3.12/site-packages")
 
 from sage.all import *
+VERBOSE = os.environ.get("W33_VERBOSE", "0").strip() == "1"
 print("SageMath loaded!")
 
 print("=" * 70)
@@ -287,6 +289,7 @@ from itertools import combinations
 print(f"\n  Searching for 12-vertex subgraphs with Reye-like structure...")
 
 found_reye = False
+edge_24_hits = 0
 for subset in combinations(G.vertices(), 12):
     H = G.subgraph(subset)
     if H.is_regular():
@@ -300,11 +303,15 @@ for subset in combinations(G.vertices(), 12):
             break
     # Check for specific edge counts
     if H.num_edges() == 24:  # 12 × 4 / 2 = 24 edges for 4-regular
-        print(f"  Found subgraph with 24 edges: regularity = {H.is_regular()}")
+        edge_24_hits += 1
+        if VERBOSE:
+            print(f"  Found subgraph with 24 edges: regularity = {H.is_regular()}")
 
 if not found_reye:
     print(f"  No exact Reye substructure found in vertex subsets")
     print(f"  (May need to look in dual or quotient structures)")
+    if not VERBOSE and edge_24_hits:
+        print(f"  (Suppressed {edge_24_hits} subgraph hits with 24 edges)")
 
 # ============================================================================
 # SECTION 10: THE 27 AND JORDAN ALGEBRA

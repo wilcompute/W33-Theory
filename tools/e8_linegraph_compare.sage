@@ -1,0 +1,137 @@
+#!/usr/bin/env sage
+"""
+Compare the line graph of W33 with E8 root adjacency graphs.
+
+We build E8 root graphs by connecting roots with a fixed inner product
+(e.g., 1 or -1) and compare invariants with the W33 line graph.
+
+Outputs:
+- artifacts/e8_linegraph_compare.json
+- artifacts/e8_linegraph_compare.md
+"""
+from sage.all import *
+import json
+from datetime import datetime
+
+out_json = "artifacts/e8_linegraph_compare.json"
+out_md = "artifacts/e8_linegraph_compare.md"
+
+W33 = graphs.SymplecticPolarGraph(4, 3)
+L_graph = W33.line_graph()
+
+# E8 roots
+E8 = RootSystem(['E', 8])
+L_root = E8.root_lattice()
+roots = list(L_root.roots())
+C = E8.cartan_type().cartan_matrix()
+
+# Precompute inner products
+n = len(roots)
+
+
+def root_inner_product(r, s):
+    v = vector(ZZ, r.to_vector())
+    w = vector(ZZ, s.to_vector())
+    return (v * C * w)
+
+
+def root_graph(inner_product_value):
+    edges = []
+    for i in range(n):
+        ri = roots[i]
+        for j in range(i + 1, n):
+            if root_inner_product(ri, roots[j]) == inner_product_value:
+                edges.append((i, j))
+    G = Graph(edges)
+    G.add_vertices(range(n))
+    return G
+
+
+def graph_summary(G):
+    # degree distribution
+    degs = G.degree_sequence()
+    deg_set = sorted(set(degs))
+    # spectrum (rounded to ints if possible)
+    try:
+        eigs = G.adjacency_matrix().eigenvalues()
+        from collections import Counter
+        counts = Counter(eigs)
+        spectrum = sorted([(int(e), int(m)) for e, m in counts.items()], key=lambda x: -x[0])
+    except Exception:
+        spectrum = None
+    return {
+        "order": G.order(),
+        "size": G.size(),
+        "degree_set": deg_set,
+        "degree": degs[0] if len(deg_set) == 1 else None,
+        "spectrum": spectrum,
+    }
+
+results = {
+    "timestamp": datetime.now().isoformat(),
+    "line_graph": graph_summary(L_graph),
+    "root_graphs": {},
+}
+
+for ip in [1, -1]:
+    G = root_graph(ip)
+    summary = graph_summary(G)
+
+    # quick compatibility checks
+    summary["degree_match_line_graph"] = summary["degree"] == results["line_graph"]["degree"]
+    summary["order_match_line_graph"] = summary["order"] == results["line_graph"]["order"]
+
+    # isomorphism test (only if degrees match)
+    try:
+        if summary["order_match_line_graph"] and summary["degree_match_line_graph"]:
+            summary["isomorphic_to_line_graph"] = L_graph.is_isomorphic(G)
+        else:
+            summary["isomorphic_to_line_graph"] = False
+    except Exception as e:
+        summary["isomorphic_to_line_graph"] = None
+        summary["iso_error"] = str(e)
+
+    results["root_graphs"][str(ip)] = summary
+
+# write JSON
+import os
+os.makedirs("artifacts", exist_ok=True)
+with open(out_json, "w") as f:
+    json.dump(results, f, indent=2)
+
+# write markdown
+lines = []
+lines.append("# W33 Line Graph vs E8 Root Graphs")
+lines.append("")
+lines.append(f"Generated: {results['timestamp']}")
+lines.append("")
+lines.append("## W33 Line Graph")
+lines.append("")
+lg = results['line_graph']
+lines.append(f"- order: {lg['order']}")
+lines.append(f"- size: {lg['size']}")
+lines.append(f"- degree set: {lg['degree_set']}")
+lines.append(f"- degree: {lg['degree']}")
+lines.append(f"- spectrum: {lg['spectrum']}")
+lines.append("")
+
+for ip, summary in results['root_graphs'].items():
+    lines.append(f"## E8 root graph (inner product = {ip})")
+    lines.append("")
+    lines.append(f"- order: {summary['order']}")
+    lines.append(f"- size: {summary['size']}")
+    lines.append(f"- degree set: {summary['degree_set']}")
+    lines.append(f"- degree: {summary['degree']}")
+    lines.append(f"- spectrum: {summary['spectrum']}")
+    lines.append(f"- order match line graph: {summary['order_match_line_graph']}")
+    lines.append(f"- degree match line graph: {summary['degree_match_line_graph']}")
+    lines.append(f"- isomorphic to line graph: {summary['isomorphic_to_line_graph']}")
+    if 'iso_error' in summary:
+        lines.append(f"- isomorphism error: {summary['iso_error']}")
+    lines.append("")
+
+with open(out_md, "w") as f:
+    f.write("\n".join(lines) + "\n")
+
+print(f"Wrote {out_json}")
+print(f"Wrote {out_md}")

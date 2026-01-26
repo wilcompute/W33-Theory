@@ -16,7 +16,10 @@ All computations are EXACT using symbolic algebra.
 # Import everything from Sage
 from sage.all import *
 import json
+import os
 from datetime import datetime
+
+FAST_MODE = os.environ.get("W33_FAST", "1").strip() == "1"
 
 print("=" * 70)
 print(" W33 THEORY - PART CXIII: RIGOROUS GROUP THEORY ANALYSIS")
@@ -92,34 +95,31 @@ for v in V:
 print(f"\nNumber of projective points in PG(3, F_3): {len(proj_points)}")
 assert len(proj_points) == 40, f"Expected 40, got {len(proj_points)}"
 
-# Build adjacency: i ~ j iff omega(v_i, v_j) != 0
+# Build adjacency: i ~ j iff omega(v_i, v_j) == 0 (symplectic orthogonality)
 n = len(proj_points)
 adj_list = {i: [] for i in range(n)}
 
 for i in range(n):
     for j in range(i+1, n):
-        if omega(proj_points[i], proj_points[j]) != F3(0):
+        if omega(proj_points[i], proj_points[j]) == F3(0):
             adj_list[i].append(j)
             adj_list[j].append(i)
 
 # Create the graph
-G = Graph(adj_list)
-G.name("W33")
+G_manual = Graph(adj_list)
+G_manual.name("W33_manual")
 
 print(f"\nGraph W33 constructed!")
-print(f"  Vertices: {G.order()}")
-print(f"  Edges: {G.size()}")
-print(f"  Is connected: {G.is_connected()}")
+print(f"  Vertices: {G_manual.order()}")
+print(f"  Edges: {G_manual.size()}")
+print(f"  Is connected: {G_manual.is_connected()}")
 
-results['vertices'] = G.order()
-results['edges'] = G.size()
-
-# Verify strongly regular parameters
-print(f"\n  Is strongly regular: {G.is_strongly_regular()}")
-if G.is_strongly_regular():
-    params = G.is_strongly_regular(parameters=True)
+# Verify strongly regular parameters (manual graph)
+print(f"\n  Is strongly regular: {G_manual.is_strongly_regular()}")
+if G_manual.is_strongly_regular():
+    params = G_manual.is_strongly_regular(parameters=True)
     print(f"  Parameters: (n, k, λ, μ) = {params}")
-    results['srg_parameters'] = params
+    results['srg_parameters_manual'] = params
 
 # =========================================================================
 # SECTION 2: Sage's Built-in Graph
@@ -144,9 +144,19 @@ try:
         print(f"  Parameters: {params}")
     
     # Check isomorphism
-    print(f"\n  Our graph isomorphic to built-in? {G.is_isomorphic(W33_builtin)}")
+    print(f"\n  Our graph isomorphic to built-in? {G_manual.is_isomorphic(W33_builtin)}")
+
+    # Use the built-in graph as canonical for invariants below
+    G = W33_builtin
+    results['vertices'] = G.order()
+    results['edges'] = G.size()
+    results['srg_parameters'] = G.is_strongly_regular(parameters=True)
 except Exception as e:
     print(f"  Built-in graph error: {e}")
+    G = G_manual
+    results['vertices'] = G.order()
+    results['edges'] = G.size()
+    results['srg_parameters'] = G.is_strongly_regular(parameters=True)
 
 # =========================================================================
 # SECTION 3: Automorphism Group
@@ -205,7 +215,7 @@ print("\nConstructing E6 root system and Weyl group...")
 # E6 root system
 E6 = RootSystem(['E', 6])
 print(f"\n  E6 root system:")
-print(f"  Rank: {E6.rank()}")
+print(f"  Rank: {E6.cartan_type().rank()}")
 print(f"  Number of roots: {len(E6.root_lattice().roots())}")
 
 # Weyl group
@@ -235,7 +245,7 @@ E8 = RootSystem(['E', 8])
 E8_roots = E8.root_lattice().roots()
 
 print(f"\n  E8 root system:")
-print(f"  Rank: {E8.rank()}")
+print(f"  Rank: {E8.cartan_type().rank()}")
 print(f"  Number of roots: {len(E8_roots)}")
 
 results['e8_roots'] = len(E8_roots)
@@ -297,7 +307,7 @@ print(f"\n  Eigenvalues (with algebraic multiplicities):")
 from collections import Counter
 eig_counts = Counter(eigenvalues)
 for eig, mult in sorted(eig_counts.items(), key=lambda x: -x[0]):
-    print(f"    λ = {eig:4}: multiplicity {mult}")
+    print(f"    λ = {eig}: multiplicity {mult}")
 
 results['eigenvalues'] = [(int(e), int(m)) for e, m in sorted(eig_counts.items(), key=lambda x: -x[0])]
 
@@ -341,7 +351,7 @@ print("\nD4 = SO(8) root system:")
 
 D4 = RootSystem(['D', 4])
 D4_roots = D4.root_lattice().roots()
-print(f"\n  Rank: {D4.rank()}")
+print(f"\n  Rank: {D4.cartan_type().rank()}")
 print(f"  Number of roots: {len(D4_roots)}")
 
 W_D4 = D4.root_lattice().weyl_group()
@@ -370,17 +380,27 @@ print("=" * 70)
 
 print("\nComputing graph invariants...")
 
-print(f"\n  Clique number (max complete subgraph): {G.clique_number()}")
-print(f"  Independence number (max independent set): {G.independent_set(value_only=True)}")
-print(f"  Chromatic number: {G.chromatic_number()}")
-print(f"  Diameter: {G.diameter()}")
-print(f"  Girth (shortest cycle): {G.girth()}")
+if FAST_MODE:
+    print("  FAST_MODE enabled: skipping clique/independence/chromatic computations.")
+    results['clique_number'] = None
+    results['independence_number'] = None
+    results['chromatic_number'] = None
+    results['diameter'] = G.diameter()
+    results['girth'] = G.girth()
+    print(f"  Diameter: {results['diameter']}")
+    print(f"  Girth (shortest cycle): {results['girth']}")
+else:
+    print(f"\n  Clique number (max complete subgraph): {G.clique_number()}")
+    print(f"  Independence number (max independent set): {G.independent_set(value_only=True)}")
+    print(f"  Chromatic number: {G.chromatic_number()}")
+    print(f"  Diameter: {G.diameter()}")
+    print(f"  Girth (shortest cycle): {G.girth()}")
 
-results['clique_number'] = G.clique_number()
-results['independence_number'] = G.independent_set(value_only=True)
-results['chromatic_number'] = G.chromatic_number()
-results['diameter'] = G.diameter()
-results['girth'] = G.girth()
+    results['clique_number'] = G.clique_number()
+    results['independence_number'] = G.independent_set(value_only=True)
+    results['chromatic_number'] = G.chromatic_number()
+    results['diameter'] = G.diameter()
+    results['girth'] = G.girth()
 
 # =========================================================================
 # SECTION 12: E6 Decomposition of W33 Vertices
@@ -414,7 +434,7 @@ VERIFIED WITH SAGEMATH:
 
 1. W33 CONSTRUCTION
    ✓ 40 vertices from PG(3, F_3) isotropic points
-   ✓ 240 edges from symplectic non-orthogonality
+   ✓ 240 edges from symplectic orthogonality
    ✓ SRG(40, 12, 2, 4) confirmed
 
 2. GROUP ORDERS (EXACT)

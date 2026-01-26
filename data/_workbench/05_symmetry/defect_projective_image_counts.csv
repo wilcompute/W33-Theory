@@ -1,0 +1,5 @@
+img_sec0_m0,img_sec1_m0,img_sec2_m0,img_sec3_m0,edge_elem_2T,count
+sec0_m0,sec1_m0,sec2_m0,sec3_m0,e,63
+sec0_m0,sec1_m0,sec2_m0,sec3_m0,e*,4
+sec0_m1,sec3_m1,sec1_m1,sec2_m1,(0 1 2),31
+sec0_m2,sec2_m2,sec3_m2,sec1_m2,(0 2 1),27

@@ -1,0 +1,81 @@
+﻿{
+  "timestamp_local": "2026-01-09T06:45:00-05:00",
+  "purpose": "Compute the overlap between the embedded images of aut=6 context geometries (N12_54 and N12_57) inside N12_58; export core and union induced subgraphs in both the dot-similarity and symplectic-similarity host graphs.",
+  "embeddings": {
+    "N12_54_host": "N12_58 dot-similarity threshold64 (induced embedding found earlier)",
+    "N12_57_host": "N12_58 symplectic-similarity threshold44 (monomorphism embedding)",
+    "image_sizes": {
+      "N12_54": 8,
+      "N12_57": 10
+    },
+    "overlap_size": 6,
+    "overlap_nodes": [
+      0,
+      1,
+      3,
+      4,
+      12,
+      13
+    ]
+  },
+  "core_properties": {
+    "dot_graph_core": "K6 (complete on 6 nodes) under threshold64",
+    "symplectic_graph_core": "K6 minus edge (0,13) under threshold44",
+    "core_node_metadata": [
+      {
+        "orbit_id": 0,
+        "rep": "047",
+        "h1_unique_count": 12,
+        "h1_span_dim": 6
+      },
+      {
+        "orbit_id": 1,
+        "rep": "01a",
+        "h1_unique_count": 12,
+        "h1_span_dim": 8
+      },
+      {
+        "orbit_id": 3,
+        "rep": "058",
+        "h1_unique_count": 12,
+        "h1_span_dim": 9
+      },
+      {
+        "orbit_id": 4,
+        "rep": "016",
+        "h1_unique_count": 12,
+        "h1_span_dim": 9
+      },
+      {
+        "orbit_id": 12,
+        "rep": "03a",
+        "h1_unique_count": 12,
+        "h1_span_dim": 8
+      },
+      {
+        "orbit_id": 13,
+        "rep": "017",
+        "h1_unique_count": 12,
+        "h1_span_dim": 6
+      }
+    ]
+  },
+  "notes": [
+    "The shared core nodes are all in the h1_unique_count=12 class (no collapsed-6 contexts). This suggests the overlap captures a 'generic' context backbone, while the collapsed-6 orbits (5,7,8,11) behave as additional structure not shared by both aut=6 embeddings.",
+    "Union of images covers 12 of the 14 N12_58 contexts; the only missing contexts are orbit ids 8? actually union list indicates missing ids {8,11}? We'll record explicitly in the overlap sets CSV."
+  ],
+  "exports": {
+    "overlap_sets_csv": "/mnt/data/_n12/n12_58_embedding_overlap_sets_n12_54_n12_57_20260109t114500z.csv",
+    "subgraph_stats_csv": "/mnt/data/_n12/n12_58_embedding_overlap_subgraph_stats_20260109t114500z.csv",
+    "core_edges_dot_csv": "/mnt/data/_n12/n12_58_core_intersection_edges_dot64_20260109t114500z.csv",
+    "core_edges_symp_csv": "/mnt/data/_n12/n12_58_core_intersection_edges_symp44_20260109t114500z.csv",
+    "union_edges_dot_csv": "/mnt/data/_n12/n12_58_union_edges_dot64_20260109t114500z.csv",
+    "union_edges_symp_csv": "/mnt/data/_n12/n12_58_union_edges_symp44_20260109t114500z.csv",
+    "gexf": {
+      "core_dot": "/mnt/data/_n12/n12_58_core_intersection_subgraph_dot64_k6_20260109t114500z.gexf",
+      "core_symp": "/mnt/data/_n12/n12_58_core_intersection_subgraph_symp44_k6minus1_20260109t114500z.gexf",
+      "union_dot": "/mnt/data/_n12/n12_58_union_subgraph_dot64_12nodes_20260109t114500z.gexf",
+      "union_symp": "/mnt/data/_n12/n12_58_union_subgraph_symp44_12nodes_20260109t114500z.gexf"
+    }
+  }
+}
