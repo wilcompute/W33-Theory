@@ -1,0 +1,15 @@
+{
+  "bases_checked": 40,
+  "pattern_distribution_uniform": true,
+  "pattern_distribution_example": {
+    "(np.int64(1), np.int64(1), np.int64(1), np.int64(1))": 27
+  },
+  "pattern_distribution_ordered_example": {
+    "(np.int64(1), np.int64(1), np.int64(1), np.int64(1))": 27
+  },
+  "h27_degree_to_h12_min": 4,
+  "h27_degree_to_h12_max": 4,
+  "h27_degree_to_h12_hist": {
+    "4": 1080
+  }
+}

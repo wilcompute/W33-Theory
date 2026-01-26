@@ -74,6 +74,8 @@ From the Docker Sage suite run on 2026-01-26:
 - H12 neighbor subgraph (D4 signal):
   - Each H12 decomposes into 4 disjoint triangles (12 = 4×3)
   - Aligns with the λ=2 eigenspace multiplicity 24 (D4 root count)
+  - Each H27 vertex connects to exactly one vertex in each H12 triangle
+    (pattern (1,1,1,1), uniform across bases)
 
 - Triangle co-occurrence graph:
   - 160 triangle vertices, 240 edges (degree 3)
