@@ -109,6 +109,8 @@ and the artifacts generated/updated as part of the “keep going” request.
   - Analyzed the 27 non-neighbors (H27) for Jordan-algebra adjacency rules.
 - `python3 tools/d4_triality_action.py`
   - Built the triangle co-occurrence graph and triality-style invariants.
+- `python3 tools/h12_h27_incidence_patterns.py`
+  - Measured how H27 vertices attach to the 4 H12 triangles.
 - `python3 tools/triangle_e8_correspondence.py`
   - Compared the triangle graph’s 240 edges to E8 root counts and spectra.
 - `python3 tools/d4_d4_e8_decomposition.py`
@@ -737,6 +739,21 @@ This gives a clean combinatorial rule for H27 adjacency.
 
 See `artifacts/h27_jordan_algebra_test.md`.
 
+### 1aw‑b) H27 attaches one-per-triangle to H12
+
+For any base vertex v0, H12 splits into 4 disjoint triangles. Every H27 vertex
+is adjacent to **exactly one** vertex in **each** triangle:
+
+- Pattern per H27 vertex: **(1,1,1,1)** (ordered or unordered)
+- H27 degree into H12: **4**, uniformly
+- This distribution is **identical for all 40 base vertices**
+
+So the H12–H27 incidence is a perfectly balanced 12×27 bipartite structure,
+with each H27 vertex picking one vertex from each triangle. This is a strong
+triality‑style constraint.
+
+See `artifacts/h12_h27_incidence_patterns.md`.
+
 ### 1ax) Triangle co‑occurrence graph has 240 edges
 
 The triangle co‑occurrence graph (160 triangle vertices) has **240** edges and
@@ -924,6 +941,8 @@ The digest summarizes hit counts at 0.1%, 0.5%, 1%, 5%, 10% tolerances. See
 - `artifacts/eigenspace_d4_analysis.json`
 - `artifacts/edge_root_system_analysis.md`
 - `artifacts/edge_root_system_analysis.json`
+- `artifacts/h12_h27_incidence_patterns.md`
+- `artifacts/h12_h27_incidence_patterns.json`
 - `artifacts/witting_pg32_polarity_search.md`
 - `artifacts/witting_pg32_polarity_search.json`
 - `artifacts/witting_pg32_augmented_lines_analysis.md`
