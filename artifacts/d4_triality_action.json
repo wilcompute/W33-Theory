@@ -1,0 +1,44 @@
+{
+  "unique_triangle_count": 160,
+  "total_h12_decompositions": 40,
+  "bases_per_triangle_distribution": {
+    "1": 160
+  },
+  "triangle_graph_vertices": 160,
+  "triangle_graph_edges": 240,
+  "triangle_graph_degree_set": [
+    3
+  ],
+  "adjacent_h12_intersection_distribution": {
+    "0": 240
+  },
+  "nonadjacent_h12_intersection_distribution": {
+    "0": 540
+  },
+  "sample_inter_triangle_adj": [
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ]
+  ]
+}
