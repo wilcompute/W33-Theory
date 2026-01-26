@@ -105,6 +105,30 @@ def to_native(obj):
     return obj
 
 
+def connected_components(adj):
+    """Return connected components for an adjacency matrix."""
+    n = adj.shape[0]
+    seen = set()
+    components = []
+    for start in range(n):
+        if start in seen:
+            continue
+        stack = [start]
+        comp = []
+        while stack:
+            v = stack.pop()
+            if v in seen:
+                continue
+            seen.add(v)
+            comp.append(v)
+            neighbors = np.nonzero(adj[v])[0]
+            for u in neighbors:
+                if u not in seen:
+                    stack.append(u)
+        components.append(comp)
+    return components
+
+
 def main():
     results = {}
     lines = []
@@ -174,6 +198,30 @@ def main():
     lines.append(f"- Vertices (unique triangles): {len(unique_triangles)}")
     lines.append(f"- Edges (co-occurrence in H12): {tri_edges}")
     lines.append(f"- Degree set: {tri_degree_set}")
+    lines.append("")
+
+    # Connected components in triangle graph
+    components = connected_components(tri_adj)
+    comp_sizes = sorted(len(c) for c in components)
+    results["triangle_graph_component_sizes"] = comp_sizes
+
+    # Check if each component is a K4
+    k4_flags = []
+    for comp in components:
+        if len(comp) != 4:
+            k4_flags.append(False)
+            continue
+        sub = tri_adj[np.ix_(comp, comp)]
+        edges = sub.sum() // 2
+        k4_flags.append(edges == 6)
+
+    results["triangle_graph_all_k4"] = bool(components) and all(k4_flags)
+    results["triangle_graph_component_count"] = len(components)
+
+    lines.append("### Triangle Graph Components")
+    lines.append("")
+    lines.append(f"- Component sizes: {comp_sizes}")
+    lines.append(f"- All components are K4: {results['triangle_graph_all_k4']}")
     lines.append("")
 
     # Analyze intersection patterns between H12 decompositions

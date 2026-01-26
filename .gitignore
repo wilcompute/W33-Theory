@@ -35,6 +35,7 @@ external/sage/
 
 # Local virtual env
 .venv/
+.venv_wsl/
 
 # Editor / OS files
 .DS_Store
