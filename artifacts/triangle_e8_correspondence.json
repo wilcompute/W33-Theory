@@ -1,0 +1,41 @@
+{
+  "triangle_count": 160,
+  "triangle_graph": {
+    "vertices": 160,
+    "edges": 240,
+    "degree_set": [
+      3
+    ]
+  },
+  "triangle_graph_spectrum": {
+    "3.0": 40,
+    "-1.0": 120
+  },
+  "e8_root_count": 240,
+  "e8_adjacency": {
+    "degree": 112,
+    "edges": 13440
+  },
+  "triangle_edge_count": 240,
+  "line_graph": {
+    "vertices": 240,
+    "edges": 480,
+    "degree_set": [
+      4
+    ]
+  },
+  "degree_match": false,
+  "line_graph_spectrum": {
+    "4.0": 40,
+    "-0.0": 120,
+    "-2.0": 80
+  },
+  "e8_spectrum": {
+    "112.0": 1,
+    "16.0": 35,
+    "-0.0": 120,
+    "-8.0": 84
+  },
+  "spectra_match": false,
+  "e8_line_count": 120
+}

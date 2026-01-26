@@ -172,3 +172,82 @@ Each H12 vertex is connected to:
 - 9 vertices in H27
 
 This completely determines the 12 = 2 + 1 + 9 neighbors!
+
+---
+
+## Extended Discoveries (Third Pass) - E8 Investigation
+
+### Triangle Graph ↔ E8 Connection
+
+**Key Observation**: The triangle co-occurrence graph has 240 edges = 240 E8 roots!
+
+| Structure | Count |
+|-----------|-------|
+| Triangle graph vertices | 160 |
+| Triangle graph edges | 240 |
+| E8 roots | 240 |
+| E8 root lines (±pairs) | 120 |
+
+However, the line graph L(T) of the triangle graph has:
+- Degree 4 (vs E8 root graph degree 112)
+- 480 edges (vs E8's 13440)
+- Spectra don't match directly
+
+**But both have eigenvalue 0 with multiplicity 120!**
+
+### D4×D4 Decomposition Analysis
+
+E8 contains D4×D4 structure. Key findings:
+- E8 splits as 112 (type 1) + 128 (type 2) roots
+- 240 triangle edges = 6 position pairs × 40 bases
+- Position pairs group into 3 complementary pairs: (0,1)↔(2,3), (0,2)↔(1,3), (0,3)↔(1,2)
+
+### λ=2 Eigenspace: MAJOR DISCOVERY
+
+The 24-dimensional eigenspace of W33 (eigenvalue λ=2) reveals **clean separation** of adjacency:
+
+**Vertex-level separation:**
+| Relationship | Inner Product |
+|--------------|---------------|
+| Adjacent (W33 edges) | 0.1 (all 240 pairs) |
+| Non-adjacent | -0.0667 (all 540 pairs) |
+
+**CLEAN SEPARATION!** Adjacency is completely determined by eigenspace inner product!
+
+**Edge-level separation:**
+| Relationship | Inner Products |
+|--------------|----------------|
+| Adjacent edges (share vertex) | {0.5238, 0.6429} |
+| Non-adjacent edges | {-0.1905, -0.0714, 0.0476, 0.2857} |
+
+### Edge Projection Analysis
+
+All 240 W33 edges project to vectors of **identical norm** (1.183216) in the λ=2 eigenspace.
+
+| Property | W33 Edge System | E8 Root System |
+|----------|-----------------|----------------|
+| Vectors | 240 | 240 |
+| Equal norm | ✓ | ✓ |
+| Dimension | 24 | 8 |
+| Distinct IP values | 6 | 4 |
+| Antipodal pairs | 0 | 120 |
+
+The edge projections do NOT form a classical root system (no antipodal pairs, integrality fails), but the structural parallel is significant.
+
+### New Tools Created
+
+- `tools/triangle_e8_correspondence.py` - Investigates 240=240 connection
+- `tools/d4_d4_e8_decomposition.py` - D4×D4 decomposition analysis
+- `tools/eigenspace_d4_analysis.py` - λ=2 eigenspace structure
+- `tools/edge_root_system_analysis.py` - Edge projections as root-like system
+
+### Conclusion on E8
+
+The E8 correspondence remains **unresolved** at the level of explicit bijection, but we found:
+
+1. **Numerical match**: 240 triangle edges = 240 E8 roots
+2. **Structural parallel**: Both have equal-norm vectors
+3. **Spectral connection**: Shared nullspace dimension 120
+4. **Clean separation**: λ=2 eigenspace completely determines adjacency
+
+The connection appears to be through the **24-dimensional eigenspace** rather than through direct graph isomorphism. The eigenvalue-2 multiplicity matching D4 root count (24) suggests the fundamental link is at the D4 level, with E8 emerging through higher structure
