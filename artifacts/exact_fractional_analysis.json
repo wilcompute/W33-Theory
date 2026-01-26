@@ -1,0 +1,22 @@
+{
+  "diagonal_fraction": "3/5",
+  "adjacent_fraction": "1/10",
+  "nonadjacent_fraction": "-1/15",
+  "exact_fractional": true,
+  "common_denominator": 30,
+  "numerators": {
+    "diagonal": 18,
+    "adjacent": 3,
+    "nonadjacent": -2
+  },
+  "row_sum": "0",
+  "orthogonality_check": 0,
+  "edge_inner_products": {
+    "-0.2666666667": "-4/15",
+    "-0.1": "-1/10",
+    "0.0666666667": "1/15",
+    "0.4": "2/5",
+    "0.7333333333": "11/15",
+    "0.9": "9/10"
+  }
+}
