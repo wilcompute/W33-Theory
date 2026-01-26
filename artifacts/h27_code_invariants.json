@@ -1,0 +1,10 @@
+{
+  "hamming_distance_distribution": {
+    "0": 27,
+    "3": 324
+  },
+  "affine_span_rank": 2,
+  "affine_lines_in_code": 12,
+  "affine_planes_in_code": 1,
+  "automorphism_group_size_s3s4": 432
+}

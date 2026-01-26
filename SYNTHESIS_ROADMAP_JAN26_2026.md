@@ -76,8 +76,13 @@ From the Docker Sage suite run on 2026-01-26:
   - Aligns with the λ=2 eigenspace multiplicity 24 (D4 root count)
   - Each H27 vertex connects to exactly one vertex in each H12 triangle
     (pattern (1,1,1,1), uniform across bases)
-  - No triangle labeling makes H27 an affine hyperplane or Latin cube
-    (nonlinear 3-ary code of length 4)
+  - Triangle-choice tuples collapse to 9 types (each realized by 3 vertices)
+  - The 9 tuples form an affine F3^2 plane (rank 2)
+  - Fibers are independent sets; every pair of fibers has 3 edges (perfect matching)
+  - No triangle labeling yields 27 distinct tuples (so no affine/Latin cube model)
+  - Linear equations for the 9-tuples: 2x0+2x1+x2=0 and x0+2x1+x3=0
+  - Z3 labeling exists that makes all inter-fiber matchings translations,
+    but translation constants are not difference-invariant
 
 - Triangle co-occurrence graph:
   - 160 triangle vertices, 240 edges (degree 3)

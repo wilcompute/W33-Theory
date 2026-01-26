@@ -123,6 +123,14 @@ and the artifacts generated/updated as part of the “keep going” request.
   - Searched for triangle labelings making H27 an affine hyperplane in F3^4.
 - `python3 tools/h27_latin_cube_search.py`
   - Searched for triangle labelings making H27 a 3×3×3 Latin cube.
+- `python3 tools/h27_code_invariants.py`
+  - Computed H27 tuple invariants and automorphisms under S3^4 ⋊ S4.
+- `python3 tools/h27_triplet_structure.py`
+  - Analyzed the 3‑to‑1 collapse into 9 tuple classes and their quotient graph.
+- `python3 tools/h27_fiber_translation_structure.py`
+  - Searched for Z3 labelings that turn inter‑fiber matchings into translations.
+- `python3 tools/h27_affine_plane_equations.py`
+  - Extracted the two linear equations defining the 9‑tuple affine plane.
 - Updated CI paths + proof test inputs:
   - Added `claude_workspace/run_sage.sh` wrapper so the `sage-verification` workflow can find the script.
   - Fixed `src/PROOF_MINUS_ONE.py` to use repo‑relative data paths.
@@ -758,16 +766,57 @@ triality‑style constraint.
 
 See `artifacts/h12_h27_incidence_patterns.md`.
 
-### 1aw‑c) H27 labeling is not affine or Latin-cube
+### 1aw‑c) H27 collapses to 9 tuple types (3‑fold cover)
 
-We tested whether H27’s 27 “triangle‑choice” tuples can be encoded as:
+The triangle‑choice encoding does **not** yield 27 distinct tuples in F3^4.
+Instead, it yields exactly **9** distinct tuples, each realized by **3** H27
+vertices (regardless of triangle labelings). So H27 is a 3‑fold cover of a
+9‑point base.
+
+These 9 tuples form an **affine F3^2 plane** (rank‑2 span), with:
+
+- 12 affine lines inside the 9‑point set
+- 1 affine 2‑plane (the set itself)
+
+The 3‑fold fibers are **independent sets** (no edges), and every pair of
+distinct fibers has **exactly 3 edges** (a perfect matching across the 3×3).
+The quotient graph on the 9 fibers is complete (K9), but with 3‑edge matchings
+between each pair.
+
+See `artifacts/h27_triplet_structure.md` and `artifacts/h27_code_invariants.md`.
+
+### 1aw‑c2) Affine plane equations for the 9 tuple types
+
+The 9 distinct tuples satisfy two independent **linear** equations over F3:
+
+- `2x0 + 2x1 + x2 = 0`
+- `x0 + 2x1 + x3 = 0`
+
+So the 9 tuple types are exactly an **affine 2‑plane** in F3^4.
+
+See `artifacts/h27_affine_plane_equations.md`.
+
+### 1aw‑c3) Z3‑translation labeling across fibers (exists but not difference‑invariant)
+
+We can label each 3‑vertex fiber by Z3 so that **every** inter‑fiber matching
+is a **translation** (i → i + c). Such a labeling exists, but the translation
+constant **c** is **not** a function of the affine difference between fibers.
+
+This means the fiber matchings are translation‑structured, but not globally
+coordinatized by the F3^2 base plane.
+
+See `artifacts/h27_fiber_translation_structure.md`.
+
+### 1aw‑d) Affine/Latin cube tests (negative under 27‑tuple assumption)
+
+We tested whether a 27‑tuple encoding could be:
 
 - An affine hyperplane in F3^4 (a·x = c), or
 - A 3×3×3 Latin cube (one coordinate determined by the other three)
 
 Across all **40** base vertices and **1296** labelings each, **no** solution
-exists for either model. So the 27 tuples form a genuinely **non‑linear**
-3‑ary code of length 4 (up to triangle permutations).
+exists. This is consistent with the 3‑fold collapse above: the triangle‑choice
+pattern inherently yields only **9** distinct tuples.
 
 See `artifacts/h27_affine_hyperplane_search.md` and
 `artifacts/h27_latin_cube_search.md`.
@@ -963,6 +1012,14 @@ The digest summarizes hit counts at 0.1%, 0.5%, 1%, 5%, 10% tolerances. See
 - `artifacts/h27_affine_hyperplane_search.json`
 - `artifacts/h27_latin_cube_search.md`
 - `artifacts/h27_latin_cube_search.json`
+- `artifacts/h27_code_invariants.md`
+- `artifacts/h27_code_invariants.json`
+- `artifacts/h27_triplet_structure.md`
+- `artifacts/h27_triplet_structure.json`
+- `artifacts/h27_fiber_translation_structure.md`
+- `artifacts/h27_fiber_translation_structure.json`
+- `artifacts/h27_affine_plane_equations.md`
+- `artifacts/h27_affine_plane_equations.json`
 - `artifacts/h12_h27_incidence_patterns.md`
 - `artifacts/h12_h27_incidence_patterns.json`
 - `artifacts/witting_pg32_polarity_search.md`
