@@ -45,7 +45,7 @@ from pathlib import Path
 import pandas as pd
 from collections import defaultdict
 
-ROOT = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data")
+ROOT = Path(__file__).resolve().parents[1] / "data"
 
 def load_rays():
     df = pd.read_csv(ROOT / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv")
