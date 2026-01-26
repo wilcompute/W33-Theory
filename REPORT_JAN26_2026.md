@@ -133,6 +133,8 @@ and the artifacts generated/updated as part of the “keep going” request.
   - Extracted the two linear equations defining the 9‑tuple affine plane.
 - `python3 tools/h27_fiber_edge_rule.py`
   - Derived an explicit bilinear formula for inter‑fiber translation offsets.
+- `python3 tools/h27_heisenberg_model.py`
+  - Verified H27 matches the Heisenberg‑group adjacency model exactly.
 - Updated CI paths + proof test inputs:
   - Added `claude_workspace/run_sage.sh` wrapper so the `sage-verification` workflow can find the script.
   - Fixed `src/PROOF_MINUS_ONE.py` to use repo‑relative data paths.
@@ -827,6 +829,22 @@ pairing on the base plane.
 
 See `artifacts/h27_fiber_edge_rule.md`.
 
+### 1aw‑c5) Full Heisenberg‑group model verified
+
+Using the bilinear rule, we built a full labeling of H27 as **F3^2 × Z3**
+and checked adjacency against the W33‑derived H27 graph. The model matches
+**exactly** (0 mismatches).
+
+Equivalently, H27 is the Cayley graph of the **Heisenberg group H(3)** with
+generators `{(t,0): t ∈ F3^2\\{0}}`. This explains:
+
+- Degree 8 (all nonzero t)
+- 27 vertices (3^3)
+- Automorphism structure `Z3 × AGL(2,3)` (order 3×432 = 1296), consistent
+  with the base‑vertex stabilizer computed earlier.
+
+See `artifacts/h27_heisenberg_model.md`.
+
 ### 1aw‑d) Affine/Latin cube tests (negative under 27‑tuple assumption)
 
 We tested whether a 27‑tuple encoding could be:
@@ -1042,6 +1060,8 @@ The digest summarizes hit counts at 0.1%, 0.5%, 1%, 5%, 10% tolerances. See
 - `artifacts/h27_affine_plane_equations.json`
 - `artifacts/h27_fiber_edge_rule.md`
 - `artifacts/h27_fiber_edge_rule.json`
+- `artifacts/h27_heisenberg_model.md`
+- `artifacts/h27_heisenberg_model.json`
 - `artifacts/h12_h27_incidence_patterns.md`
 - `artifacts/h12_h27_incidence_patterns.json`
 - `artifacts/witting_pg32_polarity_search.md`
