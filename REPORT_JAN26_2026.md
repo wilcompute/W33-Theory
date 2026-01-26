@@ -119,6 +119,10 @@ and the artifacts generated/updated as part of the “keep going” request.
   - Analyzed λ=2 eigenspace geometry and adjacency separation.
 - `python3 tools/edge_root_system_analysis.py`
   - Tested edge-projection vectors as a root-like system.
+- `python3 tools/h27_affine_hyperplane_search.py`
+  - Searched for triangle labelings making H27 an affine hyperplane in F3^4.
+- `python3 tools/h27_latin_cube_search.py`
+  - Searched for triangle labelings making H27 a 3×3×3 Latin cube.
 - Updated CI paths + proof test inputs:
   - Added `claude_workspace/run_sage.sh` wrapper so the `sage-verification` workflow can find the script.
   - Fixed `src/PROOF_MINUS_ONE.py` to use repo‑relative data paths.
@@ -754,6 +758,20 @@ triality‑style constraint.
 
 See `artifacts/h12_h27_incidence_patterns.md`.
 
+### 1aw‑c) H27 labeling is not affine or Latin-cube
+
+We tested whether H27’s 27 “triangle‑choice” tuples can be encoded as:
+
+- An affine hyperplane in F3^4 (a·x = c), or
+- A 3×3×3 Latin cube (one coordinate determined by the other three)
+
+Across all **40** base vertices and **1296** labelings each, **no** solution
+exists for either model. So the 27 tuples form a genuinely **non‑linear**
+3‑ary code of length 4 (up to triangle permutations).
+
+See `artifacts/h27_affine_hyperplane_search.md` and
+`artifacts/h27_latin_cube_search.md`.
+
 ### 1ax) Triangle co‑occurrence graph has 240 edges
 
 The triangle co‑occurrence graph (160 triangle vertices) has **240** edges and
@@ -941,6 +959,10 @@ The digest summarizes hit counts at 0.1%, 0.5%, 1%, 5%, 10% tolerances. See
 - `artifacts/eigenspace_d4_analysis.json`
 - `artifacts/edge_root_system_analysis.md`
 - `artifacts/edge_root_system_analysis.json`
+- `artifacts/h27_affine_hyperplane_search.md`
+- `artifacts/h27_affine_hyperplane_search.json`
+- `artifacts/h27_latin_cube_search.md`
+- `artifacts/h27_latin_cube_search.json`
 - `artifacts/h12_h27_incidence_patterns.md`
 - `artifacts/h12_h27_incidence_patterns.json`
 - `artifacts/witting_pg32_polarity_search.md`
