@@ -85,6 +85,8 @@ From the Docker Sage suite run on 2026-01-26:
     but translation constants are not difference-invariant
   - Explicit edge rule: c(u,v) = u2*v1 + 2*u1*v2 (mod 3)
     so (u,z)~(v,w) iff w = z + c(u,v) and u != v
+  - Verified full Heisenberg model: H27 ≅ Cayley(H(3), {(t,0)})
+    with automorphism structure Z3 × AGL(2,3) (order 1296)
 
 - Triangle co-occurrence graph:
   - 160 triangle vertices, 240 edges (degree 3)
