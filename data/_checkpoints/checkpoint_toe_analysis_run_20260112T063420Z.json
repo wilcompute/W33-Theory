@@ -1,0 +1,81 @@
+﻿{
+    "timestamp_utc":  "20260112T063420Z",
+    "purpose":  "Analysis refresh after data reorg",
+    "scripts_run":  [
+                        "scripts/w33_line_phase_map.ps1",
+                        "scripts/w33_line_phase_flux_join.ps1",
+                        "scripts/line_feature_table.ps1",
+                        "scripts/native_c24_fullgrid_summary.ps1",
+                        "scripts/native_vs_reduced_alignment.ps1",
+                        "scripts/native_c24_winner_signature.ps1"
+                    ],
+    "outputs":  [
+                    {
+                        "script":  "scripts/w33_line_phase_map.ps1",
+                        "outputs":  [
+                                        {
+                                            "path":  "data/_workbench/02_geometry/W33_line_phase_map.csv",
+                                            "exists":  true
+                                        },
+                                        {
+                                            "path":  "data/_workbench/02_geometry/W33_line_phase_map.md",
+                                            "exists":  true
+                                        }
+                                    ]
+                    },
+                    {
+                        "script":  "scripts/w33_line_phase_flux_join.ps1",
+                        "outputs":  [
+                                        {
+                                            "path":  "data/_workbench/02_geometry/W33_line_phase_flux_join.csv",
+                                            "exists":  true
+                                        },
+                                        {
+                                            "path":  "data/_workbench/02_geometry/W33_line_phase_flux_join.md",
+                                            "exists":  true
+                                        }
+                                    ]
+                    },
+                    {
+                        "script":  "scripts/line_feature_table.ps1",
+                        "outputs":  [
+                                        {
+                                            "path":  "data/_workbench/02_geometry/line_feature_table.csv",
+                                            "exists":  true
+                                        },
+                                        {
+                                            "path":  "data/_workbench/02_geometry/line_feature_table_summary.md",
+                                            "exists":  true
+                                        }
+                                    ]
+                    },
+                    {
+                        "script":  "scripts/native_c24_fullgrid_summary.ps1",
+                        "outputs":  [
+                                        {
+                                            "path":  "data/_workbench/04_measurement/native_C24_fullgrid_summary.md",
+                                            "exists":  true
+                                        }
+                                    ]
+                    },
+                    {
+                        "script":  "scripts/native_vs_reduced_alignment.ps1",
+                        "outputs":  [
+                                        {
+                                            "path":  "data/_workbench/04_measurement/native_vs_reduced_alignment.md",
+                                            "exists":  true
+                                        }
+                                    ]
+                    },
+                    {
+                        "script":  "scripts/native_c24_winner_signature.ps1",
+                        "outputs":  [
+                                        {
+                                            "path":  "data/_workbench/04_measurement/native_C24_winner_signature.md",
+                                            "exists":  true
+                                        }
+                                    ]
+                    }
+                ],
+    "notes":  "Generated from reorganized _toe workspace."
+}

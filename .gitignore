@@ -17,24 +17,14 @@ __pycache__/
 tmpclaude-*
 *.tmp
 
-<<<<<<< HEAD
 # Local artifacts & CI outputs
 artifacts/
-artifacts/*
 sage-part-jsons*
 SUMMARY_RESULTS.json
 NUMERIC_COMPARISONS.json
 
-# Local virtual env
-.venv/
-
-# Editor / OS files
-.DS_Store
-Thumbs.db
-=======
 # Generated output files from CI/CD and Sage verification
 PART_*.json
-artifacts/
 
 # Extracted bundles (redundant with bundles/ directory)
 extracted/
@@ -42,4 +32,11 @@ extracted/
 # Optional external dependencies
 external/pysymmetry/
 external/sage/
->>>>>>> c528789f82edeb2758be5abd6747188a2903473a
+
+# Local virtual env
+.venv/
+
+# Editor / OS files
+.DS_Store
+Thumbs.db
+.claude/

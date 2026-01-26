@@ -1,0 +1,40 @@
+{
+  "D8_size": 8,
+  "axis_stabilizer_in_D8_element_ids": [
+    0,
+    1
+  ],
+  "axis_stabilizer_in_D8_size": 2,
+  "tomotope15_stabilizer_in_D8_element_ids": [
+    0
+  ],
+  "tomotope15_stabilizer_in_D8_size": 1,
+  "intersection_axis_and_tomotope15_stabilizer_ids": [
+    0
+  ],
+  "incidence_autgroup_size": 12,
+  "axis_setwise_stabilizer_in_autgroup_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "axis_setwise_stabilizer_in_autgroup_size": 12,
+  "axis_pointwise_stabilizer_in_autgroup_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "axis_pointwise_stabilizer_in_autgroup_size": 6
+}

@@ -1,0 +1,19 @@
+{
+  "points": 40,
+  "edges": 240,
+  "k": 12,
+  "lambda": [
+    2
+  ],
+  "mu": [
+    4
+  ],
+  "lines": 40,
+  "line_sizes": [
+    4
+  ],
+  "lines_per_point": [
+    4
+  ],
+  "triangles": 160
+}

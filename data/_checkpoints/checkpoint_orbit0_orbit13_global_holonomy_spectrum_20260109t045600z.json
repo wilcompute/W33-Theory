@@ -1,0 +1,117 @@
+{
+  "orbit0": {
+    "cycle_basis_dim": 67,
+    "cycle_basis_holonomy_hist": {
+      "e": 63,
+      "(0 2 1)": 4
+    },
+    "fundamental_cycle_holonomy_hist": {
+      "e": 47,
+      "(0 2 1)": 11,
+      "(0 1 2)": 9
+    },
+    "defect_rule_fundamental": {
+      "num_delta4=0": {
+        "e": 44
+      },
+      "num_delta4=1": {
+        "(0 2 1)": 11,
+        "(0 1 2)": 9
+      },
+      "num_delta4=2": {
+        "e": 3
+      }
+    },
+    "delta4_edges": [
+      "0-20",
+      "10-12",
+      "26-27",
+      "27-45"
+    ]
+  },
+  "orbit13": {
+    "cycle_basis_dim": 67,
+    "cycle_basis_holonomy_hist": {
+      "e": 63,
+      "(0 2 1)": 4
+    },
+    "fundamental_cycle_holonomy_hist": {
+      "e": 47,
+      "(0 2 1)": 11,
+      "(0 1 2)": 9
+    },
+    "defect_rule_fundamental": {
+      "num_delta4=0": {
+        "e": 44
+      },
+      "num_delta4=1": {
+        "(0 2 1)": 11,
+        "(0 1 2)": 9
+      },
+      "num_delta4=2": {
+        "e": 3
+      }
+    }
+  },
+  "rank6_orbit_graph_aut_group": {
+    "group_order": 96,
+    "order_hist": {
+      "2": 63,
+      "6": 30,
+      "3": 2,
+      "1": 1
+    },
+    "center_order": 16,
+    "center_order_hist": {
+      "2": 15,
+      "1": 1
+    },
+    "center_simple_swaps": [
+      [
+        0,
+        13
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        14,
+        15
+      ]
+    ],
+    "s3_generator_3cycle": [
+      [
+        5,
+        11,
+        7
+      ]
+    ],
+    "s3_generator_transposition_like": [
+      [
+        1,
+        12
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        7,
+        11
+      ],
+      [
+        14,
+        15
+      ]
+    ]
+  },
+  "notes": [
+    "Fundamental cycle holonomy is trivial iff the cycle crosses delta4 edges an even number of times; odd crossings yield order-6 holonomy (tau or tau^{-1}).",
+    "Across all simple cycles of length<=10 in orbit0: delta4-count strongly controls holonomy distribution; num_delta4=0 always trivial; num_delta4=1 always nontrivial; num_delta4=2 mostly trivial but rare twisted variants tau* / tau_inv* can appear depending on cycle orientation/edge ordering."
+  ]
+}

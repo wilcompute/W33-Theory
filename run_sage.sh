@@ -52,5 +52,12 @@ cd "${REPO_ROOT}"
 if [ $# -eq 0 ]; then
     exec ${SAGE_CMD} -python
 else
-    exec ${SAGE_CMD} -python "$@"
+    case "$1" in
+        *.sage)
+            exec ${SAGE_CMD} "$@"
+            ;;
+        *)
+            exec ${SAGE_CMD} -python "$@"
+            ;;
+    esac
 fi

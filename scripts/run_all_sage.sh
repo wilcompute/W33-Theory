@@ -2,21 +2,21 @@
 set -euo pipefail
 
 # Run the set of Sage verification scripts we want in CI or locally (inside a Sage container)
-# This wrapper uses claude_workspace/run_sage.sh which prefers a usable 'sage' command.
+# This wrapper uses run_sage.sh in the repo root which prefers a usable 'sage' command.
 
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 REPO_ROOT=$(cd "${SCRIPT_DIR}/.." && pwd)
 R=0
 FAILURES=()
 
-SAGE_WRAPPER="${REPO_ROOT}/claude_workspace/run_sage.sh"
+SAGE_WRAPPER="${REPO_ROOT}/run_sage.sh"
 
 SCRIPTS=(
-  "claude_workspace/THEORY_PART_CXIII_SAGE_VERIFICATION.sage"
-  "claude_workspace/THEORY_PART_CVII_SAGE_E8_TEST.sage"
-  "claude_workspace/THEORY_PART_LIV_SAGE_VERIFICATION.py"
-  "claude_workspace/THEORY_PART_CXVIII_EXPLICIT_CONSTRUCTION.py"
-  "claude_workspace/THEORY_PART_CXIX_27_NONNEIGHBORS.py"
+  "THEORY_PART_CXIII_SAGE_VERIFICATION.sage"
+  "THEORY_PART_CVII_SAGE_E8_TEST.sage"
+  "THEORY_PART_LIV_SAGE_VERIFICATION.py"
+  "THEORY_PART_CXVIII_EXPLICIT_CONSTRUCTION.py"
+  "THEORY_PART_CXIX_27_NONNEIGHBORS.py"
 )
 
 echo "Running Sage verification scripts..."

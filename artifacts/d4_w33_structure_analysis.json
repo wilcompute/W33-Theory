@@ -1,0 +1,116 @@
+{
+  "w33_vertices": 40,
+  "eigenvalues": {
+    "12.0": 1,
+    "2.0": 24,
+    "-4.0": 15
+  },
+  "h12_analyses": [
+    {
+      "vertex": 0,
+      "neighbor_count": 12,
+      "degree_set_in_h12": [
+        2
+      ],
+      "component_count": 4,
+      "component_sizes": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "triangle_count": 4
+    },
+    {
+      "vertex": 1,
+      "neighbor_count": 12,
+      "degree_set_in_h12": [
+        2
+      ],
+      "component_count": 4,
+      "component_sizes": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "triangle_count": 4
+    },
+    {
+      "vertex": 2,
+      "neighbor_count": 12,
+      "degree_set_in_h12": [
+        2
+      ],
+      "component_count": 4,
+      "component_sizes": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "triangle_count": 4
+    },
+    {
+      "vertex": 3,
+      "neighbor_count": 12,
+      "degree_set_in_h12": [
+        2
+      ],
+      "component_count": 4,
+      "component_sizes": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "triangle_count": 4
+    },
+    {
+      "vertex": 4,
+      "neighbor_count": 12,
+      "degree_set_in_h12": [
+        2
+      ],
+      "component_count": 4,
+      "component_sizes": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "triangle_count": 4
+    }
+  ],
+  "h12_always_4_triangles": true,
+  "d4_root_count": 24,
+  "d4_root_adjacency_degree": 16,
+  "d4_component_count": 1,
+  "d4_component_sizes": [
+    24
+  ],
+  "tetra_rays": [
+    24,
+    25,
+    26,
+    27,
+    32,
+    33,
+    34,
+    35
+  ],
+  "tetra_partition": {
+    "0": [
+      24,
+      26,
+      33,
+      35
+    ],
+    "1": [
+      25,
+      27,
+      32,
+      34
+    ]
+  }
+}

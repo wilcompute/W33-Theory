@@ -1,22 +1,23 @@
 {
-  "sp4_f3_order": 51840,
-  "w_e6_order": 51840,
-  "e6_roots": 72,
-  "orders_match": true,
-  "e8_roots": 240,
-  "w_e8_order": 696729600,
-  "d4_roots": 24,
+  "srg_parameters_manual": [
+    40,
+    12,
+    2,
+    4
+  ],
   "vertices": 40,
   "edges": 240,
-  "srg_params": [
+  "srg_parameters": [
     40,
     12,
     2,
     4
   ],
   "aut_order": 51840,
-  "triple_match": true,
-  "e8_match": true,
+  "sp4_f3_order": 51840,
+  "w_e6_order": 51840,
+  "e8_roots": 240,
+  "w_e8_order": 696729600,
   "eigenvalues": [
     [
       12,
@@ -31,7 +32,16 @@
       15
     ]
   ],
-  "timestamp": "2026-01-16T20:23:20.913315",
+  "char_poly": "(x - 12) * (x + 4)^15 * (x - 2)^24",
+  "d4_roots": 24,
+  "clique_number": "None",
+  "independence_number": "None",
+  "chromatic_number": "None",
+  "diameter": 2,
+  "girth": 3,
+  "timestamp": "2026-01-26T04:16:08.590903",
   "part": "CXIII",
-  "verified_with": "SageMath 10.7"
+  "part_number": 113,
+  "verified_with": "SageMath",
+  "key_result": "Sp(4,F_3) = W(E6) = Aut(W33) = 51840"
 }

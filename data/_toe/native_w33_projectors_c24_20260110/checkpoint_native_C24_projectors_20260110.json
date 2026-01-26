@@ -1,0 +1,25 @@
+﻿{
+  "outdir": "/mnt/data/_toe/native_w33_projectors_c24_20260110",
+  "created_files": [
+    "/mnt/data/_toe/native_w33_projectors_c24_20260110/native_C24_projector_stabilities_flux_vs_noflux_keypoints.csv",
+    "/mnt/data/_toe/native_w33_projectors_c24_20260110/native_C24_projector_winners_keypoints.csv",
+    "/mnt/data/_toe/native_w33_projectors_c24_20260110/u_k_parityminus_k_sweep_keypoints.csv",
+    "/mnt/data/_toe/native_w33_projectors_c24_20260110/uvec_k0_parityminus_realimag.csv"
+  ],
+  "uvec_definition": "u[z]=(+1,+1,+1,-1,-1,-1)/sqrt(6), eigenvalue -1 under z->z+3",
+  "param_points": [
+    [
+      0.43,
+      0.75
+    ],
+    [
+      0.46,
+      1.25
+    ],
+    [
+      0.5,
+      1.25
+    ]
+  ],
+  "notes": "Native C24 projectors built as tilde_r = r \u2297 u, with r canonical W33 ray in C4. Flux sensitivity depends on u eigenvalue under central e* pairing."
+}

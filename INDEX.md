@@ -3,9 +3,13 @@
 ## Quick Navigation
 
 ### 📊 Main Results (Read These First)
-1. [RESEARCH_RECORD_SESSION_COMPLETE.md](RESEARCH_RECORD_SESSION_COMPLETE.md) - **START HERE** for complete summary
-2. [BREAKTHROUGHS_UPDATED.md](BREAKTHROUGHS_UPDATED.md) - Detailed findings with physics interpretation
-3. [V23_STRUCTURE_SUMMARY.txt](V23_STRUCTURE_SUMMARY.txt) - Summary of fermion-boson structure
+1. [FINAL_THEORY_SUMMARY.md](FINAL_THEORY_SUMMARY.md) - Consolidated computed summary (Jan 25, 2026)
+2. [W33_PROOF_SYNTHESIS.md](W33_PROOF_SYNTHESIS.md) - Proof-style synthesis with verification map
+3. [SYNTHESIS_ROADMAP_JAN26_2026.md](SYNTHESIS_ROADMAP_JAN26_2026.md) - Math+physics synthesis and test roadmap
+4. [REPORT_JAN26_2026.md](REPORT_JAN26_2026.md) - Latest verification snapshot
+5. [RESEARCH_RECORD_SESSION_COMPLETE.md](RESEARCH_RECORD_SESSION_COMPLETE.md) - **START HERE** for complete summary
+6. [BREAKTHROUGHS_UPDATED.md](BREAKTHROUGHS_UPDATED.md) - Detailed findings with physics interpretation
+7. [V23_STRUCTURE_SUMMARY.txt](V23_STRUCTURE_SUMMARY.txt) - Summary of fermion-boson structure
 
 ### 🔬 Executable Analysis Code
 Located in `src/`:

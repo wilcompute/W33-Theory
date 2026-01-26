@@ -1,0 +1,8 @@
+{
+  "n_nodes": 59,
+  "n_edges": 125,
+  "n_defect_edges": 4,
+  "cycle_space_dim": 67,
+  "n_chords_with_odd_parity": 16,
+  "bfs_root": 0
+}

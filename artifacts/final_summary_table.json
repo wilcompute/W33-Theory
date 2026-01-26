@@ -1,0 +1,266 @@
+{
+  "generated_at": "2026-01-26",
+  "vev_GeV": 246.22,
+  "entries": [
+    {
+      "tier": "Tier 1",
+      "quantity": "alpha^-1",
+      "formula": "81 + 56 + 40/(1080+31+1/7)",
+      "predicted": 137.03599897145796,
+      "experimental": 137.035999084,
+      "unit": null,
+      "error_pct": 8.212589424657898e-08,
+      "error_ppb": 0.8212589424657899
+    },
+    {
+      "tier": "Tier 1",
+      "quantity": "sin^2 theta_W",
+      "formula": "40/173",
+      "predicted": 0.23121387283236994,
+      "experimental": 0.2312,
+      "unit": null,
+      "error_pct": 0.006000360021604175,
+      "error_ppb": 60003.60021604175
+    },
+    {
+      "tier": "Tier 1",
+      "quantity": "alpha_s",
+      "formula": "8/68",
+      "predicted": 0.11764705882352941,
+      "experimental": 0.1179,
+      "unit": null,
+      "error_pct": 0.21453874170533896,
+      "error_ppb": 2145387.4170533894
+    },
+    {
+      "tier": "Tier 1",
+      "quantity": "sin^2 theta_12",
+      "formula": "27/89",
+      "predicted": 0.30337078651685395,
+      "experimental": 0.3032,
+      "unit": null,
+      "error_pct": 0.05632800687794422,
+      "error_ppb": 563280.0687794422
+    },
+    {
+      "tier": "Tier 1",
+      "quantity": "sin^2 theta_23",
+      "formula": "78/173",
+      "predicted": 0.4508670520231214,
+      "experimental": 0.4512,
+      "unit": null,
+      "error_pct": 0.0737916615422442,
+      "error_ppb": 737916.6154224421
+    },
+    {
+      "tier": "Tier 1",
+      "quantity": "m_t",
+      "formula": "v*sqrt(40/81)",
+      "predicted": 173.0257789970352,
+      "experimental": 172.7,
+      "unit": "GeV",
+      "error_pct": 0.18863867807481224,
+      "error_ppb": 1886386.7807481226
+    },
+    {
+      "tier": "Tier 1",
+      "quantity": "m_H",
+      "formula": "(v/2)*sqrt(81/78)",
+      "predicted": 125.45516310618707,
+      "experimental": 125.3,
+      "unit": "GeV",
+      "error_pct": 0.12383328506550285,
+      "error_ppb": 1238332.8506550286
+    },
+    {
+      "tier": "Tier 1",
+      "quantity": "m_tau",
+      "formula": "v*alpha*(89/90)",
+      "predicted": 1.7767902160726063,
+      "experimental": 1.777,
+      "unit": "GeV",
+      "error_pct": 0.011805510826875058,
+      "error_ppb": 118055.10826875058
+    },
+    {
+      "tier": "Tier 1",
+      "quantity": "m_c",
+      "formula": "m_t*alpha",
+      "predicted": 1.2626301139532923,
+      "experimental": 1.27,
+      "unit": "GeV",
+      "error_pct": 0.5803059879297434,
+      "error_ppb": 5803059.879297433
+    },
+    {
+      "tier": "Tier 1",
+      "quantity": "m_b",
+      "formula": "m_tau*(7/3)",
+      "predicted": 4.145843837502748,
+      "experimental": 4.18,
+      "unit": "GeV",
+      "error_pct": 0.817133074096926,
+      "error_ppb": 8171330.740969261
+    },
+    {
+      "tier": "Tier 1",
+      "quantity": "m_d",
+      "formula": "m_s/20",
+      "predicted": 0.004509393264118901,
+      "experimental": 0.0047,
+      "unit": "GeV",
+      "error_pct": 4.055462465555306,
+      "error_ppb": 40554624.65555306
+    },
+    {
+      "tier": "Tier 1",
+      "quantity": "m_mu",
+      "formula": "m_tau/17",
+      "predicted": 0.10451707153368273,
+      "experimental": 0.1057,
+      "unit": "GeV",
+      "error_pct": 1.1191376218706492,
+      "error_ppb": 11191376.218706492
+    },
+    {
+      "tier": "Tier 1",
+      "quantity": "m_e",
+      "formula": "m_mu/208",
+      "predicted": 0.0005024859208350131,
+      "experimental": 0.000511,
+      "unit": "GeV",
+      "error_pct": 1.6661603062596668,
+      "error_ppb": 16661603.062596668
+    },
+    {
+      "tier": "Tier 1",
+      "quantity": "sin(delta_CKM)",
+      "formula": "40/43",
+      "predicted": 0.9302325581395349,
+      "experimental": 0.927,
+      "unit": null,
+      "error_pct": 0.34871177341260245,
+      "error_ppb": 3487117.7341260244
+    },
+    {
+      "tier": "Tier 1",
+      "quantity": "Delta m^2_21 / Delta m^2_31",
+      "formula": "1/31",
+      "predicted": 0.03225806451612903,
+      "experimental": 0.031,
+      "unit": null,
+      "error_pct": 4.058272632674295,
+      "error_ppb": 40582726.326742955
+    },
+    {
+      "tier": "Tier 2",
+      "quantity": "sin^2 theta_13",
+      "formula": "8/360",
+      "predicted": 0.022222222222222223,
+      "experimental": 0.0225,
+      "unit": null,
+      "error_pct": 1.2345679012345605,
+      "error_ppb": 12345679.012345605
+    },
+    {
+      "tier": "Tier 2",
+      "quantity": "lambda (CKM)",
+      "formula": "sqrt(2/40)",
+      "predicted": 0.22360679774997896,
+      "experimental": 0.226,
+      "unit": null,
+      "error_pct": 1.0589390486818773,
+      "error_ppb": 10589390.486818772
+    },
+    {
+      "tier": "Tier 2",
+      "quantity": "A (CKM)",
+      "formula": "31/40",
+      "predicted": 0.775,
+      "experimental": 0.79,
+      "unit": null,
+      "error_pct": 1.8987341772151913,
+      "error_ppb": 18987341.772151913
+    },
+    {
+      "tier": "Tier 2",
+      "quantity": "m_s",
+      "formula": "m_c/14",
+      "predicted": 0.09018786528237802,
+      "experimental": 0.093,
+      "unit": "GeV",
+      "error_pct": 3.0238007716365414,
+      "error_ppb": 30238007.716365416
+    },
+    {
+      "tier": "Tier 2",
+      "quantity": "m_u",
+      "formula": "m_c*alpha/4",
+      "predicted": 0.0023034642784197797,
+      "experimental": 0.0022,
+      "unit": "GeV",
+      "error_pct": 4.702921746353617,
+      "error_ppb": 47029217.46353617
+    },
+    {
+      "tier": "Tier 3",
+      "quantity": "N_generations",
+      "formula": "81/27",
+      "predicted": 3.0,
+      "experimental": 3,
+      "unit": null,
+      "error_pct": 0.0,
+      "error_ppb": 0.0
+    },
+    {
+      "tier": "Tier 3",
+      "quantity": "Omega_DM / Omega_b",
+      "formula": "27/5",
+      "predicted": 5.4,
+      "experimental": 5.4,
+      "unit": null,
+      "error_pct": 0.0,
+      "error_ppb": 0.0
+    },
+    {
+      "tier": "Tier 3",
+      "quantity": "D (M-theory dims)",
+      "formula": "sqrt(121)",
+      "predicted": 11.0,
+      "experimental": 11,
+      "unit": null,
+      "error_pct": 0.0,
+      "error_ppb": 0.0
+    },
+    {
+      "tier": "Tier 3",
+      "quantity": "Mass ordering",
+      "formula": "PMNS hierarchy",
+      "predicted": "Normal",
+      "experimental": "TBD",
+      "unit": null,
+      "error_pct": null,
+      "error_ppb": null
+    },
+    {
+      "tier": "Tier 4",
+      "quantity": "M_Pl / v",
+      "formula": "3^36",
+      "predicted": 150094635296999121,
+      "experimental": 5e+16,
+      "unit": null,
+      "error_pct": 200.18927059399826,
+      "error_ppb": 2001892705.9399827
+    },
+    {
+      "tier": "Tier 4",
+      "quantity": "rho_Lambda / M_Pl^4",
+      "formula": "3^-256",
+      "predicted": 7.193807159919265e-123,
+      "experimental": 1e-123,
+      "unit": null,
+      "error_pct": 619.3807159919265,
+      "error_ppb": 6193807159.919265
+    }
+  ]
+}

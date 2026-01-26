@@ -1,0 +1,4 @@
+generator,sec0_m0,sec0_m1,sec0_m2,sec1_m0,sec1_m1,sec1_m2,sec2_m0,sec2_m1,sec2_m2,sec3_m0,sec3_m1,sec3_m2
+g_cycle_m_on_1_2_3,sec0_m0,sec0_m1,sec0_m2,sec1_m1,sec1_m2,sec1_m0,sec2_m1,sec2_m2,sec2_m0,sec3_m1,sec3_m2,sec3_m0
+g_reflect,sec0_m1,sec0_m0,sec0_m2,sec1_m0,sec1_m2,sec1_m1,sec2_m1,sec2_m0,sec2_m2,sec3_m0,sec3_m2,sec3_m1
+g_kernel_swap_1_2,sec0_m0,sec0_m1,sec0_m2,sec2_m2,sec2_m0,sec2_m1,sec1_m1,sec1_m2,sec1_m0,sec3_m0,sec3_m1,sec3_m2

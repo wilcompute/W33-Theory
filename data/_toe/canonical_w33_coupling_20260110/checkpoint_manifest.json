@@ -1,0 +1,85 @@
+﻿{
+  "folder": "/mnt/data/_toe/canonical_w33_coupling_20260110",
+  "generated_files": [
+    {
+      "file": "2T_element_separability_sector_phase.csv",
+      "bytes": 1072
+    },
+    {
+      "file": "canonical_projector_global_winner_flux_vs_noflux.csv",
+      "bytes": 3079
+    },
+    {
+      "file": "canonical_projector_triplet_stabilities_flux_vs_noflux.csv",
+      "bytes": 6779
+    },
+    {
+      "file": "canonical_projector_winner_curves_by_mu.csv",
+      "bytes": 794
+    },
+    {
+      "file": "sector_transition_counts_key_elements.json",
+      "bytes": 1247
+    }
+  ],
+  "notes": {
+    "measurement": "partial trace over Z6 phase + sum over nodes, then project with C^4 W33 rays; basis score = stability of dominant outcome in that basis",
+    "grid": {
+      "lambda": [
+        0.4,
+        0.41,
+        0.42,
+        0.43,
+        0.44,
+        0.45,
+        0.46,
+        0.47,
+        0.48,
+        0.49,
+        0.5,
+        0.51,
+        0.52,
+        0.53,
+        0.54,
+        0.55,
+        0.56
+      ],
+      "mu": [
+        0.75,
+        1.25,
+        1.75
+      ],
+      "times": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0,
+        1.25,
+        1.5,
+        1.75,
+        2.0
+      ]
+    },
+    "winner_changes_points": [
+      {
+        "mu": 0.75,
+        "lambda": 0.43,
+        "winner_flux": 33,
+        "winner_noflux": 8,
+        "winner_changed": true,
+        "winner_flux_stability": 13.623772943930733,
+        "winner_noflux_stability": 13.640688032991854
+      },
+      {
+        "mu": 1.25,
+        "lambda": 0.46,
+        "winner_flux": 33,
+        "winner_noflux": 8,
+        "winner_changed": true,
+        "winner_flux_stability": 14.210720337944649,
+        "winner_noflux_stability": 14.229766146377786
+      }
+    ]
+  }
+}

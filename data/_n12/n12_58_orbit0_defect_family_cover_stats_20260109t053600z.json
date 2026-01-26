@@ -1,0 +1,69 @@
+{
+  "cover_nodes": 236,
+  "cover_edges": 500,
+  "is_connected": true,
+  "sheet_bits": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "delta4_family_edges": [
+    {
+      "u": 0,
+      "v": 20,
+      "edge": [
+        0,
+        20
+      ],
+      "support_4set": "3 7 9 10",
+      "support_orbit_size": 12,
+      "family": "O12"
+    },
+    {
+      "u": 10,
+      "v": 12,
+      "edge": [
+        10,
+        12
+      ],
+      "support_4set": "3 7 10 11",
+      "support_orbit_size": 6,
+      "family": "O6"
+    },
+    {
+      "u": 26,
+      "v": 27,
+      "edge": [
+        26,
+        27
+      ],
+      "support_4set": "3 7 10 11",
+      "support_orbit_size": 6,
+      "family": "O6"
+    },
+    {
+      "u": 27,
+      "v": 45,
+      "edge": [
+        27,
+        45
+      ],
+      "support_4set": "6 7 9 10",
+      "support_orbit_size": 12,
+      "family": "O12"
+    }
+  ]
+}

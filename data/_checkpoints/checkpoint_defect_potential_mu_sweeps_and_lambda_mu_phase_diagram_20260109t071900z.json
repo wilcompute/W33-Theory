@@ -1,0 +1,67 @@
+﻿{
+  "timestamp_local": "2026-01-09T02:19:00-05:00",
+  "purpose": "Add defect-supported diagonal potentials V and sweep mu to test for bound/defect-localized modes; compute thresholds where defect mass exceeds 0.6; build coarse (lambda,mu) phase diagram candidates using the commuting structure with the V4 sector coin.",
+  "potentials": {
+    "V_defect7": "Diagonal potential on the 7 nodes incident to delta4 edges.",
+    "V_O6_4": "Diagonal potential on O6-family defect nodes (4 nodes).",
+    "V_O12_4": "Diagonal potential on O12-family defect nodes (4 nodes).",
+    "V_O6_minus_O12": "Diagonal potential with +1 on O6 nodes and -1 on O12 nodes."
+  },
+  "mu_grid": [
+    -2.0,
+    2.0,
+    0.025
+  ],
+  "K_eigenpairs_per_m": 12,
+  "defect_nodes": [
+    0,
+    10,
+    12,
+    20,
+    26,
+    27,
+    45
+  ],
+  "notable_thresholds": {
+    "defect_mass_localization_threshold": 0.6,
+    "crossings_csv": "/mnt/data/_n12/n12_58_mu_crossings_defect_mass_over_0p6_20260109t071900z.csv"
+  },
+  "lambda_mu_coarse_phase_diagram": {
+    "potential_used": "V_defect7",
+    "lambda_values": [
+      0.0,
+      0.05,
+      0.1,
+      0.25,
+      0.5,
+      1.0,
+      2.0
+    ],
+    "mu_values": [
+      -2.0,
+      -1.0,
+      -0.5,
+      0.0,
+      0.5,
+      0.75,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "top40_candidates_per_point": 40,
+    "candidates_csv": "/mnt/data/_n12/n12_58_lambda_mu_phase_diagram_candidates_potvdefect7_20260109t071900z.csv",
+    "summary_csv": "/mnt/data/_n12/n12_58_lambda_mu_phase_diagram_summary_top40_potvdefect7_20260109t071900z.csv"
+  },
+  "outputs": {
+    "mu_sweep_eigenpairs_csv": "/mnt/data/_n12/n12_58_mu_sweep_defect_potentials_top12_eigenpairs_per_m_20260109t071900z.csv",
+    "mu_sweep_summary_csv": "/mnt/data/_n12/n12_58_mu_sweep_defect_potentials_summary_per_m_20260109t071900z.csv",
+    "mu_crossings_csv": "/mnt/data/_n12/n12_58_mu_crossings_defect_mass_over_0p6_20260109t071900z.csv",
+    "lambda_mu_candidates_csv": "/mnt/data/_n12/n12_58_lambda_mu_phase_diagram_candidates_potvdefect7_20260109t071900z.csv",
+    "lambda_mu_summary_csv": "/mnt/data/_n12/n12_58_lambda_mu_phase_diagram_summary_top40_potvdefect7_20260109t071900z.csv"
+  },
+  "key_findings": [
+    "Defect-localized bound-state behavior appears first and most strongly in m=3 (the spin/center-sensitive sector). For V_defect7, defect mass >0.6 occurs already at mu\u22480.475 in m=3, while other m require larger mu (~1.7).",
+    "Family-specific potentials isolate families: V_O12_4 yields strong localization in m=3 starting around mu\u22480.725; V_O6_4 yields strong localization in m=3 around mu\u22480.725 and in m=2,4 around mu\u22480.95.",
+    "The sign-split V_O6_minus_O12 exhibits asymmetry: strong localization can occur at negative mu for m=3, suggesting a natural 'charge' polarity between O6 and O12 families."
+  ]
+}

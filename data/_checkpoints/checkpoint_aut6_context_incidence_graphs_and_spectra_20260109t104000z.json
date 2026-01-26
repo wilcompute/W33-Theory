@@ -1,0 +1,36 @@
+﻿{
+  "timestamp_local": "2026-01-09T06:40:00-05:00",
+  "purpose": "Construct context-incidence graphs for aut=6 reduced-kernel contexts (collapsed orbits) in N12_54 and N12_57; export bipartite and projected graphs; compute invariants and spectra.",
+  "contexts_count": {
+    "N12_54": 8,
+    "N12_57": 10
+  },
+  "unique_H1_classes_in_contexts": {
+    "N12_54": 21,
+    "N12_57": 24
+  },
+  "graphs_built": [
+    "Context adjacency by subspace-intersection dimension >=1 (very sparse).",
+    "Context adjacency by dot_score>=3 among 3x3 mod2 dot-products between class vectors (dense; connected).",
+    "Bipartite incidence graph contexts<->classes."
+  ],
+  "exports": {
+    "edges_csv": "/mnt/data/_n12/n12_aut6_context_incidence_graph_edges_20260109t104000z.csv",
+    "stats_csv": "/mnt/data/_n12/n12_aut6_context_graph_stats_and_hashes_20260109t104000z.csv",
+    "spectra_json": "/mnt/data/_n12/n12_aut6_context_graph_spectra_dot_ge3_20260109t104000z.json",
+    "incidence_csv": "/mnt/data/N12_aut6_context_class_incidence_table_20260109T104000Z.csv",
+    "gexf": {
+      "N12_54_intersection": "/mnt/data/_n12/n12_54_context_graph_intersection_dim_ge1_20260109t104000z.gexf",
+      "N12_57_intersection": "/mnt/data/_n12/n12_57_context_graph_intersection_dim_ge1_20260109t104000z.gexf",
+      "N12_54_dot": "/mnt/data/_n12/n12_54_context_graph_dot_score_ge3_20260109t104000z.gexf",
+      "N12_57_dot": "/mnt/data/_n12/n12_57_context_graph_dot_score_ge3_20260109t104000z.gexf",
+      "N12_54_bipartite": "/mnt/data/N12_54_context_class_bipartite_graph_20260109T104000Z.gexf",
+      "N12_57_bipartite": "/mnt/data/_n12/n12_57_context_class_bipartite_graph_20260109t104000z.gexf"
+    }
+  },
+  "notes": [
+    "Exact class sharing between contexts is rare (hence the ultra-sparse exact-share projection).",
+    "Using dot-score similarity between the 3 H1 class vectors in each context yields a robust, connected context geometry (especially in N12_57), suitable for comparing with measurement-context incidence structures.",
+    "The bipartite graph is the most faithful representation (contexts vs classes) and is recommended for further embedding / comparison tasks."
+  ]
+}

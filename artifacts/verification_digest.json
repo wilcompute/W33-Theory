@@ -1,0 +1,296 @@
+{
+  "sage_incidence": {
+    "field": "QQ",
+    "group_order": 51840,
+    "structure": "O(5,3) : C2",
+    "is_abelian": false,
+    "is_solvable": false,
+    "num_generators": 8,
+    "h1_dim": 81,
+    "h1_num_matrices": 8
+  },
+  "baseline_audit": {
+    "num_exprs": 250000,
+    "tolerances_pct": [
+      0.1,
+      0.5,
+      1.0,
+      5.0,
+      10.0
+    ],
+    "targets": {
+      "alpha": {
+        "hits": {
+          "0.1": 6,
+          "0.5": 33,
+          "1.0": 61,
+          "5.0": 301,
+          "10.0": 583
+        },
+        "top_example": {
+          "rel_error": 0.00014614315484385117,
+          "pct_error": 0.014614315484385118,
+          "complexity": 6,
+          "expr": "(log(2) / (90 + 5))",
+          "value": 0.0072962861111573185
+        }
+      },
+      "higgs_over_z": {
+        "hits": {
+          "0.1": 15,
+          "0.5": 67,
+          "1.0": 156,
+          "5.0": 874,
+          "10.0": 1737
+        },
+        "top_example": {
+          "rel_error": 5.0202988975230416e-05,
+          "pct_error": 0.005020298897523041,
+          "complexity": 6,
+          "expr": "((11 + e) / 10)",
+          "value": 1.3718281828459045
+        }
+      },
+      "omega_lambda": {
+        "hits": {
+          "0.1": 15,
+          "0.5": 82,
+          "1.0": 184,
+          "5.0": 702,
+          "10.0": 1337
+        },
+        "top_example": {
+          "rel_error": 1.612877211652327e-05,
+          "pct_error": 0.0016128772116523271,
+          "complexity": 5,
+          "expr": "((40 + 22) / 90)",
+          "value": 0.6888888888888889
+        }
+      },
+      "cabibbo_deg": {
+        "hits": {
+          "0.1": 26,
+          "0.5": 135,
+          "1.0": 255,
+          "5.0": 1250,
+          "10.0": 2569
+        },
+        "top_example": {
+          "rel_error": 4.387570215872173e-05,
+          "pct_error": 0.004387570215872173,
+          "complexity": 7,
+          "expr": "(sqrt(24) + (5 + pi))",
+          "value": 13.040572139156149
+        }
+      }
+    },
+    "config": {
+      "max_depth": 4,
+      "max_pool": 250000,
+      "base_numbers": [
+        40,
+        45,
+        90,
+        240,
+        5280,
+        6048,
+        22,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        24
+      ],
+      "base_constants": [
+        "pi",
+        "e",
+        "phi"
+      ],
+      "dedup_round_digits": 14
+    }
+  },
+  "baseline_suite": {
+    "strict": {
+      "num_exprs": 250000,
+      "tolerances_pct": [
+        0.1,
+        0.5,
+        1.0,
+        5.0,
+        10.0
+      ],
+      "targets": {
+        "alpha": {
+          "hits": {
+            "0.1": 1,
+            "0.5": 19,
+            "1.0": 44,
+            "5.0": 354,
+            "10.0": 639
+          }
+        },
+        "higgs_over_z": {
+          "hits": {
+            "0.1": 9,
+            "0.5": 42,
+            "1.0": 85,
+            "5.0": 486,
+            "10.0": 899
+          }
+        },
+        "omega_lambda": {
+          "hits": {
+            "0.1": 3,
+            "0.5": 31,
+            "1.0": 65,
+            "5.0": 341,
+            "10.0": 668
+          }
+        },
+        "cabibbo_deg": {
+          "hits": {
+            "0.1": 16,
+            "0.5": 68,
+            "1.0": 130,
+            "5.0": 668,
+            "10.0": 1154
+          }
+        }
+      },
+      "config": {
+        "base_count": 17,
+        "unary_ops": [
+          "sqrt",
+          "inv"
+        ],
+        "binary_ops": [
+          "+",
+          "-",
+          "*",
+          "/"
+        ],
+        "max_depth": 4,
+        "max_pool": 250000
+      }
+    },
+    "medium": {
+      "num_exprs": 250000,
+      "tolerances_pct": [
+        0.1,
+        0.5,
+        1.0,
+        5.0,
+        10.0
+      ],
+      "targets": {
+        "alpha": {
+          "hits": {
+            "0.1": 8,
+            "0.5": 52,
+            "1.0": 92,
+            "5.0": 612,
+            "10.0": 1043
+          }
+        },
+        "higgs_over_z": {
+          "hits": {
+            "0.1": 20,
+            "0.5": 76,
+            "1.0": 152,
+            "5.0": 817,
+            "10.0": 1610
+          }
+        },
+        "omega_lambda": {
+          "hits": {
+            "0.1": 9,
+            "0.5": 61,
+            "1.0": 124,
+            "5.0": 624,
+            "10.0": 1217
+          }
+        },
+        "cabibbo_deg": {
+          "hits": {
+            "0.1": 33,
+            "0.5": 146,
+            "1.0": 290,
+            "5.0": 1489,
+            "10.0": 2702
+          }
+        }
+      },
+      "config": {
+        "base_count": 20,
+        "unary_ops": [
+          "sqrt",
+          "inv"
+        ],
+        "binary_ops": [
+          "+",
+          "-",
+          "*",
+          "/"
+        ],
+        "max_depth": 4,
+        "max_pool": 250000
+      }
+    }
+  },
+  "verification_results": {
+    "timestamp": "2026-01-13T16:50:54.661921",
+    "verified_count": 20,
+    "failed_count": 0,
+    "verification_rate": 1.0,
+    "verified": [
+      "P = 40",
+      "L = 40",
+      "Q45 = 45",
+      "K4/Q45 = 2",
+      "Tri = 5280",
+      "TC = 240",
+      "Ratio = 22",
+      "Ratio formula",
+      "|PGU(3,3)| = 6048",
+      "\u03c4(6) = -6048 = -|PGU|",
+      "240 TC = 240 E8 roots",
+      "5280/12 = 440 Hz",
+      "5280 feet = 1 mile",
+      "Platonic edges = 90 = K4",
+      "\u03b6(4) = \u03c0\u2074/90",
+      "\u03b1 = 1/(2\u03c0\u00d722)",
+      "\u03b1 = P/Tri",
+      "\u03b8\u2081\u2082 = arcsin(\u221a(1/22))",
+      "m_H/m_Z = 11/8",
+      "\u03a9_\u039b = (1/22)\u00d715"
+    ],
+    "failed": []
+  },
+  "final_table": {
+    "generated_at": "2026-01-26",
+    "entry_count": 26,
+    "by_tier": {
+      "Tier 1": 15,
+      "Tier 2": 5,
+      "Tier 3": 4,
+      "Tier 4": 2
+    },
+    "max_error_pct": 619.3807159919265,
+    "max_error_entry": {
+      "tier": "Tier 4",
+      "quantity": "rho_Lambda / M_Pl^4",
+      "formula": "3^-256",
+      "predicted": 7.193807159919265e-123,
+      "experimental": 1e-123,
+      "unit": null,
+      "error_pct": 619.3807159919265,
+      "error_ppb": 6193807159.919265
+    }
+  },
+  "generated_at": "2026-01-26"
+}

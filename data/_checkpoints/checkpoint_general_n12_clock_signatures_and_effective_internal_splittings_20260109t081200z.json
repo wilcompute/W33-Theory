@@ -1,0 +1,86 @@
+﻿{
+  "timestamp_local": "2026-01-09T03:12:00-05:00",
+  "purpose": "Extend N12_58 kernel toward a general N12 classification and derive an effective internal (sector) splitting model for localized particle families.",
+  "N12_clock_signature_groups": {
+    "aut1_max1_gcd1_orbits176": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      33,
+      34,
+      35,
+      36,
+      37,
+      39,
+      40,
+      41,
+      42,
+      48,
+      49,
+      52
+    ],
+    "aut2_max2_gcd2_orbits88": [
+      5,
+      12,
+      15,
+      32,
+      44,
+      45,
+      46,
+      53,
+      55
+    ],
+    "aut4_max4_gcd4_orbits44": [
+      7,
+      38,
+      43,
+      50,
+      51,
+      56,
+      59
+    ],
+    "aut3_max3_gcd1_orbits60": [
+      47
+    ],
+    "aut6_max6_gcd2_orbits30": [
+      54,
+      57
+    ],
+    "aut12_max12_gcd4_orbits16": [
+      58
+    ]
+  },
+  "interpretation": [
+    "Across the 59 orientable neighborly N12 manifolds, the missing-triangle orbit structure under automorphisms falls into six discrete types, strongly controlled by automorphism-group order.",
+    "N12_58 (aut order 12) is uniquely the maximal symmetry case with missing orbits of sizes 12 and 4 (14 orbits of size 12 and 2 of size 4), consistent with the V4\u00d7Z3 projective clock and its 2T lift.",
+    "The effective internal-sector splitting model for a localized particle family can be approximated as H_int = \u03bb C4 + (\u03b16 q6) Z6 + (\u03b112 q12) Z12, where q6,q12 are the particle's O6/O12 mass weights at high \u03bc."
+  ],
+  "outputs": {
+    "N12_clock_signature_csv": "/mnt/data/_n12/n12_clock_signature_classification_by_missing_orbit_structure_20260109t081200z.csv",
+    "effective_internal_splittings_csv": "/mnt/data/_n12/n12_58_effective_internal_sector_splittings_from_particle_families_20260109t080900z.csv"
+  }
+}
