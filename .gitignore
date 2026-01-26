@@ -17,6 +17,7 @@ __pycache__/
 tmpclaude-*
 *.tmp
 
+<<<<<<< HEAD
 # Local artifacts & CI outputs
 artifacts/
 artifacts/*
@@ -30,3 +31,15 @@ NUMERIC_COMPARISONS.json
 # Editor / OS files
 .DS_Store
 Thumbs.db
+=======
+# Generated output files from CI/CD and Sage verification
+PART_*.json
+artifacts/
+
+# Extracted bundles (redundant with bundles/ directory)
+extracted/
+
+# Optional external dependencies
+external/pysymmetry/
+external/sage/
+>>>>>>> c528789f82edeb2758be5abd6747188a2903473a

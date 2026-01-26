@@ -1,4 +1,0 @@
-set_name,type,GL_orbit_size,bits
-missing_support_cap,non-quadric 5-cap,840,0001 0011 0100 0110 1000
-sec0m2_completion_cap,non-quadric 5-cap,840,1001 1011 1100 1110 1111
-quadratic_zero_cap_example,quadratic 5-cap (elliptic quadric point-set),168,0001 1000 1011 1101 1111

@@ -38,7 +38,12 @@
     },
     "desi_dark_energy": {
       "w0_measured": -0.827,
+<<<<<<< HEAD
       "w0_w33_predicted": -0.826
+=======
+      "w0_w33_predicted": -0.826,
+      "agreement_percent": 0.1
+>>>>>>> c528789f82edeb2758be5abd6747188a2903473a
     },
     "lhc_2025": {
       "status": "Record-breaking luminosity",
