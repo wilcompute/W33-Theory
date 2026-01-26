@@ -1,0 +1,33 @@
+{
+  "base_vertex": 0,
+  "neighbor_count": 12,
+  "non_neighbor_count": 27,
+  "h27_edges": 108,
+  "h27_degree_set": [
+    8
+  ],
+  "h27_lambda": [
+    1
+  ],
+  "h27_mu": [
+    0,
+    3
+  ],
+  "common_neighbor_values": [
+    2,
+    4
+  ],
+  "cn_when_h27_adjacent": [
+    2
+  ],
+  "cn_when_h27_nonadjacent": [
+    4
+  ],
+  "cn_determines_h27_adj": true,
+  "h27_eigenvalues": {
+    "8.0": 1,
+    "2.0": 12,
+    "-1.0": 8,
+    "-4.0": 6
+  }
+}
