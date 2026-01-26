@@ -1,5 +1,0 @@
-edge_elem_2T,is_center,projective_action_is_identity
-(0 1 2),False,False
-(0 2 1),False,False
-e,True,True
-e*,True,True

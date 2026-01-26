@@ -1,0 +1,385 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!55!black,
+  urlcolor=blue!55!black,
+  citecolor=blue!55!black
+}
+
+\usepackage[most]{tcolorbox}
+\tcbset{
+  colback=white,
+  colframe=black!70,
+  boxrule=0.6pt,
+  arc=2pt,
+  left=6pt,right=6pt,top=6pt,bottom=6pt
+}
+
+\newtcolorbox{keyresult}[1][]{colback=black!2,colframe=black!70,title=\textbf{Key Result}#1}
+\newtcolorbox{definitionbox}[1][]{colback=blue!2,colframe=blue!60!black,title=\textbf{Definition}#1}
+\newtcolorbox{remarkbox}[1][]{colback=orange!2,colframe=orange!60!black,title=\textbf{Remark}#1}
+\newtcolorbox{proofsketch}[1][]{colback=green!2,colframe=green!55!black,title=\textbf{Proof sketch / audit trail}#1}
+\newtcolorbox{protocolbox}[1][]{colback=purple!2,colframe=purple!60!black,title=\textbf{Protocol (testable)}#1}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\title{\textbf{Quantum Realization of the W33 Tower}\\
+\large Section 10 Draft (Weyl/Clifford, Contexts, Holonomy-Phase Test)}
+\author{Wil Dahn \quad\&\quad Sage}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This section drafts the quantum computation layer of the W33 tower in a theorem-forward manner. Starting from the same finite symplectic phase space $V=\mathbb{F}_3^4$, we construct the 2-qutrit Heisenberg--Weyl operators, identify isotropic projective lines with maximal commuting Pauli contexts, and interpret the automorphism action as a projectivized Clifford normalizer action. We then test (and falsify) a tempting identification between the quotient $\mathbb{Z}_3$ holonomy field $F$ and a symplectic commutator ``triangle phase'' $\Phi$: the fields are not equal on triangles. The computation instead reveals an $S_3=\mathbb{Z}_3\rtimes\mathbb{Z}_2$ gauge pattern forced by the fiber transports: $\Phi$ is \emph{exact} ($\Phi=da$ from an edge commutator phase $a$), while $F$ satisfies a \emph{transported} Bianchi identity (a $\mathbb{Z}_2$-twisted coboundary) rather than the naive untwisted one. In the canonical root-id gauge this manifests as an apparent 3008 ``Bianchi defects'' for the naive coboundary, which disappear after the required parallel transport / parity gauge-fix.
+\end{abstract}
+
+\begin{remarkbox}
+\textbf{Scope.} This section is intentionally algebraic and test-driven: it provides a precise quantum dictionary for the already-established W33 kernel and specifies a computation that either confirms or falsifies the ``holonomy equals commutator phase'' identification. No claims about physical constants are made here.
+\end{remarkbox}
+
+\tableofcontents
+\newpage
+
+\section{2-qutrit Weyl operators and the symplectic commutator}
+
+\begin{definitionbox}
+Let $\omega := e^{2\pi i/3}$. On $\mathbb{C}^3$ with computational basis $\{\lvert j\rangle : j\in\mathbb{Z}_3\}$ define
+\[
+X\lvert j\rangle = \lvert j+1\rangle,\qquad Z\lvert j\rangle = \omega^j\lvert j\rangle,
+\]
+so that $ZX = \omega XZ$.
+On two qutrits, for $(a,b,c,d)\in \mathbb{F}_3^4$, define the (unnormalized) Weyl operator
+\[
+W(a,b,c,d) := X^a Z^c \ \otimes\ X^b Z^d.
+\]
+\end{definitionbox}
+
+\begin{definitionbox}
+Define the standard symplectic form on $V=\mathbb{F}_3^{2n}$ with $n=2$ by writing $v=(p\mid q)$ with $p,q\in\mathbb{F}_3^2$ and
+\[
+\langle (p\mid q),(p'\mid q')\rangle := p\cdot q' - q\cdot p' \ \in\ \mathbb{F}_3.
+\]
+In coordinates $v=(a,b,c,d)$ and $w=(a',b',c',d')$, this is
+\[
+\langle v,w\rangle = a c' + b d' - c a' - d b'.
+\]
+\end{definitionbox}
+
+\begin{theorem}[Weyl commutator phase]
+\label{thm:weyl-comm}
+For all $v,w\in \mathbb{F}_3^4$,
+\[
+W(v)\,W(w) = \omega^{\langle v,w\rangle}\,W(w)\,W(v).
+\]
+Equivalently, $W(v)$ and $W(w)$ commute if and only if $\langle v,w\rangle=0$.
+\end{theorem}
+
+\begin{proofsketch}
+This is the standard Heisenberg--Weyl relation for odd prime dimension. For the above unnormalized convention, it follows from $ZX=\omega XZ$ on each tensor factor and bilinearity of the commutator exponent.
+\end{proofsketch}
+
+\begin{keyresult}
+The same symplectic form used to build $W(3,3)$ is exactly the commutator phase form in the 2-qutrit Weyl group. This is the first canonical bridge from W33 geometry to quantum operator algebra.
+\end{keyresult}
+
+\section{Projective points as Weyl directions}
+
+\begin{definitionbox}
+Let $\mathbb{P}(V)=PG(3,3)$ denote projective 1D subspaces of $V=\mathbb{F}_3^4$. A projective point $[v]$ is the equivalence class $\{v,2v\}$ for any nonzero $v\in V$.
+\end{definitionbox}
+
+\begin{theorem}[Projective points correspond to cyclic Weyl subgroups]
+\label{thm:proj-cyclic}
+Each projective point $[v]\in PG(3,3)$ determines a cyclic order-3 Weyl subgroup
+\[
+\langle W(v)\rangle = \{I,\,W(v),\,W(2v)\}.
+\]
+Moreover, $W(2v)=W(v)^{-1}$ and the subgroup depends only on $[v]$ (not the representative).
+\end{theorem}
+
+\begin{proofsketch}
+In $\mathbb{F}_3$, $2\equiv -1$ and $W(2v)=W(-v)=W(v)^{-1}$ (up to global phase, fixed by convention). Thus $\langle W(v)\rangle$ depends only on the projective class $\{v,-v\}$.
+\end{proofsketch}
+
+\begin{remarkbox}
+In the W33 tower, the 40 vertices are precisely the 40 projective points of $PG(3,3)$. Thus W33 vertices can be read as 40 ``Pauli directions'' (cyclic order-3 Weyl subgroups) for two qutrits.
+\end{remarkbox}
+
+\section{Isotropic lines as maximal commuting contexts}
+
+\begin{definitionbox}
+A 2D subspace $U\le V$ is \emph{totally isotropic} if $\langle u,u'\rangle=0$ for all $u,u'\in U$. Its projectivization is a projective line containing 4 projective points.
+\end{definitionbox}
+
+\begin{theorem}[Isotropic lines give commuting Pauli contexts]
+\label{thm:isotropic-context}
+If $U\le V$ is a totally isotropic 2D subspace, then $\{W(u):u\in U\}$ is an abelian subgroup of the 2-qutrit Weyl group of order $3^2=9$ (including identity). Equivalently, the 4 projective points on the line correspond to 4 nontrivial cyclic subgroups whose nontrivial elements pairwise commute.
+\end{theorem}
+
+\begin{proofsketch}
+If $U$ is totally isotropic, then $\langle u,u'\rangle=0$ for all $u,u'\in U$, so $W(u)$ commutes with $W(u')$ by Theorem~\ref{thm:weyl-comm}. Since $U\cong\mathbb{F}_3^2$, the set $\{W(u):u\in U\}$ has 9 elements.
+\end{proofsketch}
+
+\begin{remarkbox}
+The symplectic generalized quadrangle $W(3,3)$ consists precisely of 40 points and 40 totally isotropic projective lines. Thus the GQ lines are canonical maximal commuting Pauli contexts in the 2-qutrit Weyl group.
+\end{remarkbox}
+
+\section{Non-isotropic lines as canonical phase cells}
+
+\begin{definitionbox}
+A projective line (2D subspace) $U$ is \emph{non-isotropic} if $\langle\cdot,\cdot\rangle|_U$ is nondegenerate. In this case, there exist $u,u'\in U$ with $\langle u,u'\rangle=1$, generating a Heisenberg pair.
+\end{definitionbox}
+
+\begin{theorem}[Non-isotropic lines contain conjugate pairs]
+\label{thm:noniso}
+Let $U\le V$ be a non-isotropic 2D subspace. Then there exist $u,u'\in U$ such that $\langle u,u'\rangle=1$, and hence
+\[
+W(u)\,W(u') = \omega\,W(u')\,W(u).
+\]
+\end{theorem}
+
+\begin{proofsketch}
+Nondegeneracy of $\langle\cdot,\cdot\rangle|_U$ implies there exists a basis with symplectic form matrix $\begin{psmallmatrix}0&1\\-1&0\end{psmallmatrix}$ on $U$. Choosing $u,u'$ as basis vectors yields $\langle u,u'\rangle=1$.
+\end{proofsketch}
+
+\begin{remarkbox}
+In the W33 tower, $PG(3,3)$ has 130 lines total: 40 isotropic (GQ) and 90 non-isotropic. The ``90'' distinguished by the quotient holonomy are exactly these non-isotropic lines.
+\end{remarkbox}
+
+\section{Clifford normalizer and the W33 automorphism action}
+
+\begin{theorem}[Clifford induces symplectic action]
+\label{thm:clifford}
+Let $\mathcal{C}$ denote the 2-qutrit Clifford group (normalizer of the Weyl group in $U(9)$). Then conjugation by any $U\in\mathcal{C}$ induces a linear transformation $M\in Sp(4,3)$ on phase space such that
+\[
+U W(v) U^\dagger \;=\; \omega^{\kappa(v)}\,W(Mv).
+\]
+Conversely, each $M\in Sp(4,3)$ is induced by some Clifford up to phase.
+\end{theorem}
+
+\begin{proofsketch}
+Standard result for odd prime-power dimension: the Clifford group projects onto the symplectic group acting on discrete phase space, with kernel the Heisenberg--Weyl phases.
+\end{proofsketch}
+
+\section{Holonomy vs.\ commutator phase: tested outcome}
+
+\begin{definitionbox}
+Define the symplectic ``triangle phase'' functional on three phase points $u,v,w\in V$ by
+\[
+\Phi(u,v,w) := \langle u,v\rangle + \langle v,w\rangle + \langle w,u\rangle\ \in\ \mathbb{F}_3.
+\]
+\end{definitionbox}
+
+\begin{definitionbox}
+Given fixed projective representatives $p\mapsto v_p\in V$ for the 40 points of $PG(3,3)$, define the edge $1$-cochain
+\[
+a(p,q)\ :=\ \langle v_p, v_q\rangle\ \in\ \mathbb{F}_3,
+\]
+interpreted as a commutator phase on the oriented edge $p\to q$.
+\end{definitionbox}
+
+\begin{theorem}[Closed-loop phase identity]
+\label{thm:triangle}
+For any $u,v,w\in V$ with $u+v+w=0$, the triple Weyl product has the form
+\[
+W(u)\,W(v)\,W(w) \;=\; \omega^{\Phi(u,v,w)}\,I
+\]
+up to a global convention factor (which can be fixed by choosing standard displacement operators).
+\end{theorem}
+
+\begin{proofsketch}
+Use the Weyl multiplication law and bilinearity: $W(u)W(v)$ equals a scalar times $W(u+v)$. If $u+v+w=0$, then $W(u+v)W(w)$ is scalar times identity. Exponents combine to the cyclic sum $\Phi$ (mod 3).
+\end{proofsketch}
+
+\begin{theorem}[Exactness of the commutator phase]
+\label{thm:phi-exact}
+On the clique complex of $Q$, the triangle phase $\Phi$ is the simplicial coboundary of the edge phase $a$:
+\[
+\Phi(p,q,r)\;=\;(da)(p,q,r)\;=\;a(q,r)-a(p,r)+a(p,q)\qquad (p<q<r),
+\]
+and in particular $d\Phi=0$ on all tetrahedra.
+\end{theorem}
+
+\begin{proofsketch}
+By alternation of $\langle\cdot,\cdot\rangle$ over $\mathbb{F}_3$, one has $\langle v_r,v_p\rangle=-\langle v_p,v_r\rangle$. Thus
+\[
+\Phi(v_p,v_q,v_r)=\langle v_p,v_q\rangle+\langle v_q,v_r\rangle-\langle v_p,v_r\rangle,
+\]
+which is exactly $a(p,q)+a(q,r)-a(p,r)=da(p,q,r)$. Hence $d\Phi=d^2a=0$.
+\end{proofsketch}
+
+\begin{theorem}[Holonomy is not the pure commutator phase]
+\label{thm:holonomy-not-phi}
+Let $F(p,q,r)\in\mathbb{Z}_3$ be the quotient holonomy field on triangles of $Q=\overline{\mathrm{W33}}$. For the explicit symplectic form and projective representatives used in the W33 construction, $F\neq \Phi$ as triangle cochains (even after a global constant shift). Equivalently, the residual $D:=F-\Phi$ is not identically zero.
+\end{theorem}
+
+\begin{proofsketch}
+Computed directly on all 3240 triangles: $D$ takes three values $\{0,1,2\}$ with nontrivial distribution (artifact: \texttt{W33\_holonomy\_phase\_test\_bundle.zip}).
+\end{proofsketch}
+
+ \begin{definitionbox}
+For each quotient edge $p\!-\!q$, the transport bijection $\mathrm{tri}(p)\to \mathrm{tri}(q)$ is a permutation in $S_3$ once the fibers are ordered. Define its parity
+\[
+s(p,q)\in\mathbb{Z}_2\qquad (0=\text{even},\ 1=\text{odd}).
+\]
+Conjugation by an odd permutation in $S_3$ inverts a 3-cycle; thus the parity induces the $\mathbb{Z}_2$ action on $\mathbb{Z}_3$ by $x\mapsto -x$.
+\end{definitionbox}
+
+\begin{theorem}[Parity cocycle and gauge-fix]
+\label{thm:parity}
+The edge parity $s\in C^1(Q;\mathbb{Z}_2)$ is a cocycle ($ds=0$ on all triangles) and is in fact exact: there exists $t\in C^0(Q;\mathbb{Z}_2)$ with $s=dt$.
+\end{theorem}
+
+\begin{proofsketch}
+Computed directly from the explicit transport matchings on all 540 quotient edges, and checked on all 3240 triangles. A concrete solution $t$ with $t(0)=0$ is obtained by BFS propagation $t(q)=t(p)+s(p,q)$ along edges. (Artifact: \texttt{W33\_holonomy\_s3\_gauge\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{theorem}[Transported Bianchi identity (no sources)]
+\label{thm:bianchi}
+Let $F\in C^2(Q;\mathbb{Z}_3)$ be the triangle holonomy, where $F(p,q,r)$ is based at the first vertex of the ordered triangle $(p<q<r)$. For a tetrahedron $a<b<c<d$, define the \emph{transported} coboundary
+\[
+(d_sF)(a,b,c,d)\;:=\;(-1)^{s(a,b)}F(b,c,d)\;-\;F(a,c,d)\;+\;F(a,b,d)\;-\;F(a,b,c)\quad(\bmod 3).
+\]
+Then $d_sF\equiv 0$ on all 9450 tetrahedra (a discrete Bianchi identity).
+\end{theorem}
+
+\begin{proofsketch}
+This is the simplicial coboundary formula with local coefficients: only the face $(b,c,d)$ changes base vertex, hence the required transport along edge $(a,b)$ acting by $(-1)^{s(a,b)}$. Verified exhaustively. (Artifact: \texttt{W33\_holonomy\_s3\_gauge\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{remarkbox}
+\textbf{Why the ``3008 flux tetrahedra'' appear in the naive computation.} If one ignores basepoint transport and applies the untwisted coboundary formula, one obtains a nonzero distribution on tetrahedra (3008 nonzero values). Theorem~\ref{thm:bianchi} shows these are not physical sources but a bookkeeping artifact of comparing triangle holonomies based at different vertices without parallel transport; the correct transported coboundary vanishes.
+\end{remarkbox}
+
+\begin{theorem}[Gauge-trivialization and edge potential]
+\label{thm:edge-potential}
+Let $t$ be as in Theorem~\ref{thm:parity} and define a gauge-adjusted triangle field
+\[
+F^{(t)}(p,q,r)\;:=\;(-1)^{t(p)}\,F(p,q,r)\quad(\bmod 3).
+\]
+Then $dF^{(t)}\equiv 0$ on all tetrahedra, and moreover there exists an edge $1$-cochain $A\in C^1(Q;\mathbb{Z}_3)$ such that
+\[
+dA\;=\;F^{(t)}.
+\]
+\end{theorem}
+
+\begin{proofsketch}
+Since $s=dt$, the twist can be gauged away by flipping the fiber ordering at vertices with $t(p)=1$, yielding an equivalent untwisted cocycle $F^{(t)}$ with $dF^{(t)}=0$. Existence of $A$ was verified by solving the linear system for $dA=F^{(t)}$ on the 540 edges. (Artifact: \texttt{W33\_holonomy\_s3\_gauge\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{corollary}[Decomposition against the commutator phase]
+\label{cor:Ft-decomp}
+Let $a\in C^1(Q;\mathbb{Z}_3)$ be the commutator edge phase $a(p,q)=\langle v_p,v_q\rangle$ and $\Phi=da$ as in Theorem~\ref{thm:phi-exact}. Let $A\in C^1(Q;\mathbb{Z}_3)$ satisfy $dA=F^{(t)}$ as in Theorem~\ref{thm:edge-potential}. Define the residual edge cochain
+\[
+B\;:=\;A-a\ \in\ C^1(Q;\mathbb{Z}_3).
+\]
+Then
+\[
+F^{(t)}\;=\;\Phi\;+\;dB.
+\]
+\end{corollary}
+
+\begin{proofsketch}
+Immediate from $F^{(t)}=dA$ and $\Phi=da$:
+\[
+F^{(t)}-\Phi=d(A-a)=dB.
+\]
+\end{proofsketch}
+
+\begin{protocolbox}
+\textbf{Protocol: holonomy vs.\ commutator phase test.}
+\begin{enumerate}
+\item Use the explicit symplectic form $J$ and projective representatives $v_p\in\mathbb{F}_3^4$ for the 40 points (artifact: \texttt{W33\_holonomy\_phase\_test\_bundle.zip}).
+\item Compute $a(p,q)=\langle v_p,v_q\rangle$ on quotient edges and $\Phi=da$ on triangles.
+\item Compare $\Phi$ to the quotient holonomy field $F$ on all 3240 triangles; record the residual $D=F-\Phi$.
+\item Compute the parity cocycle $s(p,q)\in\mathbb{Z}_2$ from the transport matchings and verify $ds=0$, $s=dt$ (Theorem~\ref{thm:parity}).
+\item Verify the transported Bianchi identity $d_sF\equiv 0$ on all 9450 tetrahedra (Theorem~\ref{thm:bianchi}).
+\item Form $F^{(t)}(p,q,r)=(-1)^{t(p)}F(p,q,r)$ and solve for an edge potential $A$ with $dA=F^{(t)}$ (Theorem~\ref{thm:edge-potential}).
+\end{enumerate}
+\end{protocolbox}
+
+\section{Aut$(\mathrm{W33})$-invariant operator algebra on the 90 non-isotropic lines}
+
+\begin{definitionbox}
+Let $\mathcal{L}$ denote the set of 90 non-isotropic projective lines in $PG(3,3)$ (with respect to the same symplectic form used throughout the W33 construction). The group $\mathrm{Aut}(\mathrm{W33})$ acts transitively on $\mathcal{L}$, hence on ordered pairs $\mathcal{L}\times\mathcal{L}$. The orbits on ordered pairs define an $\mathrm{Aut}(\mathrm{W33})$-invariant coherent configuration; because all orbitals here are symmetric, it is a (symmetric) association scheme.
+\end{definitionbox}
+
+\begin{theorem}[Rank-5 association scheme and canonical involution]
+\label{thm:line-scheme}
+The $\mathrm{Aut}(\mathrm{W33})$ action on the 90 non-isotropic lines has exactly 5 orbitals on ordered pairs. Equivalently, the commutant algebra (the $\mathrm{Aut}(\mathrm{W33})$-invariant endomorphisms of the 90-line permutation module) is 5-dimensional with a canonical $\{0,1\}$ matrix basis $(B_0,\dots,B_4)$ satisfying:
+\begin{itemize}
+\item $B_4=I$ (diagonal relation),
+\item $B_1$ is a fixed-point-free involution (a perfect matching of the 90 lines into 45 transpositions),
+\item $B_2=A_{\mathrm{meet}}$ is the meet graph adjacency (two lines meet iff they share a point), which is 32-regular.
+\end{itemize}
+\end{theorem}
+
+\begin{theorem}[Spectrum and primitive idempotents]
+\label{thm:line-spectrum}
+The meet adjacency has spectrum
+\[
+\mathrm{spec}(A_{\mathrm{meet}})=32^{(1)},\quad 8^{(15)},\quad 2^{(24)},\quad (-4)^{(50)}.
+\]
+Moreover, the $(-4)$-eigenspace splits under the involution $B_1$ into $+1$ and $-1$ parts of dimensions 20 and 30, yielding a canonical decomposition of the 90-dimensional real module into isotypic pieces of dimensions
+\[
+1\ \oplus\ 15\ \oplus\ 24\ \oplus\ 20\ \oplus\ 30.
+\]
+\end{theorem}
+
+\begin{remarkbox}
+Theorems~\ref{thm:line-scheme}--\ref{thm:line-spectrum} provide a canonical ``spectral calculus'' for any $\mathrm{Aut}(\mathrm{W33})$-equivariant linear dynamics on 90-line fields: every invariant operator is a linear combination of $(B_0,\dots,B_4)$, equivalently a polynomial expression in the two generators $(A_{\mathrm{meet}},B_1)$.
+\end{remarkbox}
+
+\begin{theorem}[Generator identities]
+\label{thm:line-generators}
+In the commutant algebra one has the identities
+\[
+B_0 = A_{\mathrm{meet}}\,B_1,\qquad
+B_3 = -\tfrac{8}{3}I - \tfrac{13}{12}A_{\mathrm{meet}} - \tfrac{3}{4}(A_{\mathrm{meet}}B_1) + \tfrac{1}{12}A_{\mathrm{meet}}^2,
+\]
+where the second identity is over $\mathbb{R}$ (as an exact equality of matrices).
+\end{theorem}
+
+\begin{proofsketch}
+All assertions were computed explicitly from the 90-line representatives and verified by direct matrix multiplication and eigen-decomposition. (Artifacts: \texttt{W33\_nonisotropic\_line\_association\_scheme\_bundle.zip}, \texttt{W33\_nonisotropic\_line\_scheme\_spectral\_bundle.zip}.)
+\end{proofsketch}
+
+\section*{Artifact Index (quantum layer)}
+\begin{longtable}{@{}p{0.36\textwidth}p{0.58\textwidth}@{}}
+\toprule
+\textbf{Bundle} & \textbf{Contents / Purpose}\\
+\midrule
+\texttt{W33\_symplectic\_audit\_bundle.zip} & Projective representatives for $PG(3,3)$ points and all 130 lines; isotropic vs nonisotropic split.\\
+\texttt{W33\_quotient\_closure\_complement\_and\_noniso\_line\_curvature\_bundle.zip} & Quotient $Q=\overline{\mathrm{W33}}$, edge matchings, triangle holonomy values, and the proof that flat triangles equal nonisotropic line triples.\\
+\texttt{W33\_Z3\_curvature\_cohomology\_on\_quotient\_bundle.zip} & $\mathbb{Z}_3$ curvature cochain on triangles and non-exactness on the 2-skeleton.\\
+\texttt{W33\_holonomy\_phase\_test\_bundle.zip} & Triangle-level comparison of holonomy $F$ vs.\ symplectic phase $\Phi$, plus the \emph{naive untwisted} tetrahedra coboundary distributions (the 3008 ``defects'' that vanish after transport).\\
+\texttt{W33\_holonomy\_phase\_decomposition\_bundle.zip} & Edge commutator phase $a=\langle v_p,v_q\rangle$ on $Q$ edges with verification $\Phi=da$; full tetrahedron table of the naive untwisted $(dF,d\Phi)$.\\
+\texttt{W33\_holonomy\_s3\_gauge\_bundle.zip} & $S_3=\mathbb{Z}_3\rtimes\mathbb{Z}_2$ reinterpretation: edge-parity cocycle $s$, gauge $t$ with $s=dt$, transported Bianchi $d_sF\equiv 0$, and an explicit edge potential $A$ with $dA=F^{(t)}$.\\
+\texttt{W33\_H3\_basis\_89\_Z3\_on\_clique\_complex\_bundle.zip} & Explicit basis for $H^3$ over $\mathbb{Z}_3$ (flux lattice).\\
+\texttt{W33\_charge\_to\_line\_weights\_bundle.zip} & Projects the naive untwisted tetrahedra flux $dF$ into $H^3$ and then to the 90-line-weight model (expected all-zero since $dF$ is exact), plus an example nonzero $H^3$ class and its line weights.\\
+\texttt{W33\_lift\_to\_90\_line\_weights\_with\_labels\_bundle.zip} & Explicit lift from $H^3$ 88D core to a 90-entry nonisotropic line-weight field (mod all-ones gauge).\\
+\texttt{W33\_nonisotropic\_line\_association\_scheme\_bundle.zip} & Aut$(\mathrm{W33})$ orbitals on ordered pairs of the 90 non-isotropic lines (rank-5 association scheme), including the canonical involution pairing and the meet-graph spectrum.\\
+\texttt{W33\_nonisotropic\_line\_scheme\_spectral\_bundle.zip} & Primitive idempotents / eigenmatrices $(P,Q)$ for the 90-line association scheme; verifies $B_0=A_{\mathrm{meet}}B_1$ and gives a polynomial expression for $B_3$.\\
+\texttt{W33\_vacuum\_line\_scheme\_mode\_decomposition\_bundle.zip} & Joint-mode basis for the 90-line sector and the two derived 90-line observables $(m,z)$ with their energy fractions across the 5 modes.\\
+\texttt{W33\_best\_field\_equation\_operator\_on\_lines\_bundle.zip} & Best Aut$(\mathrm{W33})$-equivariant (modewise-diagonal) linear predictor $D$ on 90-line fields mapping $z\mapsto m$ (low $R^2$, certifying non-closure by a single invariant line operator).\\
+\texttt{W33\_transfer\_operators\_J\_to\_lines\_and\_mode\_injection\_bundle.zip} & Explicit sparse transfer operators $M,Z$ (COO) from tetra flux $J=dF$ to the 90-line observables, with cross-check against $(m,z)$ and orbit/flux mode-injection tables.\\
+\texttt{W33\_mode\_response\_table\_bulk\_to\_vacuum\_bundle.zip} & Aut$(\mathrm{W33})$ orbit decomposition of the 9450 quotient tetrahedra and mode-response tables by orbit and flux sign for the $(m,z)$ bulk-to-vacuum couplings.\\
+\bottomrule
+\end{longtable}
+
+\end{document}

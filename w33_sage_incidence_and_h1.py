@@ -2,7 +2,7 @@
 
 Run (recommended):
 
-    sage -python claude_workspace/w33_sage_incidence_and_h1.py
+    sage -python w33_sage_incidence_and_h1.py
 
 Options:
 
@@ -14,7 +14,7 @@ Options:
 
 Outputs JSON to:
 
-    claude_workspace/data/w33_sage_incidence_h1.json
+    data/w33_sage_incidence_h1.json (or claude_workspace/data/w33_sage_incidence_h1.json)
 """
 
 from __future__ import annotations
@@ -64,7 +64,7 @@ def main() -> None:
     sys.path.insert(0, str(here))
 
     # Make the bundled PySymmetry importable (when running under Sage).
-    pysymmetry_root = here.parent / "external" / "pysymmetry"
+    pysymmetry_root = here / "external" / "pysymmetry"
     if pysymmetry_root.exists():
         sys.path.insert(0, str(pysymmetry_root))
 

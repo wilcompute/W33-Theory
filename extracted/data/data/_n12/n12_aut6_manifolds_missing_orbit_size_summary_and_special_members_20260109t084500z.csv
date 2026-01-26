@@ -1,9 +1,0 @@
-id,name,orbit_size,num_orbits,triangle
-54,N12_54,2,1,
-54,N12_54,6,29,
-54,N12_54,2,special_member,"(6, 7, 8)"
-54,N12_54,2,special_member,"(9, 10, 11)"
-57,N12_57,2,1,
-57,N12_57,6,29,
-57,N12_57,2,special_member,"(0, 1, 2)"
-57,N12_57,2,special_member,"(3, 4, 5)"
