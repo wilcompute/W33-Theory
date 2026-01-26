@@ -1,0 +1,38 @@
+{
+  "lambda2_multiplicity": 24,
+  "d4_inner_products": {
+    "2.0": 24,
+    "0.0": 144,
+    "-2.0": 24,
+    "1.0": 192,
+    "-1.0": 192
+  },
+  "adj_projection_ips": {
+    "0.1": 240
+  },
+  "nonadj_projection_ips": {
+    "-0.0667": 540
+  },
+  "clean_separation": true,
+  "triangle_projection_ips": {
+    "2.4": 160,
+    "-0.2667": 12960,
+    "1.9": 480,
+    "-0.1": 7200,
+    "0.7333": 4320,
+    "-0.6": 480
+  },
+  "antipodal_triangle_pairs": 0,
+  "edge_projection_norms": {
+    "1.1832": 240
+  },
+  "edge_projection_ips": {
+    "1.0": 240,
+    "0.6429": 960,
+    "0.5238": 4320,
+    "0.2857": 240,
+    "0.0476": 15120,
+    "-0.0714": 25920,
+    "-0.1905": 10800
+  }
+}

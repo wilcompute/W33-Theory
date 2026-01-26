@@ -1,0 +1,35 @@
+{
+  "common_norm": 1.1832159566199232,
+  "inner_product_values": [
+    -0.190476,
+    -0.071429,
+    0.047619,
+    0.285714,
+    0.52381,
+    0.642857,
+    1.0
+  ],
+  "e8_inner_product_values": [
+    -1.0,
+    -0.5,
+    -0.0,
+    0.5,
+    1.0
+  ],
+  "integrality_check": false,
+  "closure_violations": 1225,
+  "samples_checked": 1225,
+  "w33_edge_graph_degree": 22,
+  "e8_root_graph_degree": 112,
+  "adj_edge_ips": {
+    "0.6429": 480,
+    "0.5238": 2160
+  },
+  "nonadj_edge_ips": {
+    "0.2857": 120,
+    "0.0476": 7560,
+    "-0.0714": 12960,
+    "-0.1905": 5400
+  },
+  "antipodal_pairs": 0
+}
