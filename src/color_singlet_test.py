@@ -11,13 +11,24 @@ This is a STRONG constraint. Let me:
 4. Look for similar constraints in other special structures
 """
 
-import numpy as np
-import pandas as pd
 from pathlib import Path
 from collections import defaultdict
 import json
 
-W33_ROOT = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\extracted\data\data")
+import numpy as np
+import pytest
+
+pd = pytest.importorskip("pandas")
+
+W33_ROOT = Path(
+    r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\extracted\data\data"
+)
+
+if not W33_ROOT.exists():
+    pytest.skip(
+        f"Required W33 data directory not available: {W33_ROOT}",
+        allow_module_level=True,
+    )
 
 def load_data():
     """Load W33 rays and collinearity (compute collinearity on the fly)."""

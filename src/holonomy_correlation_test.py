@@ -7,12 +7,23 @@ Does holonomy (Z4, Z3) pair with specific S6 holonomy partitions?
 Key question: Do (2,0) states correlate with (2,2,2) holonomy (fermions)?
 """
 
-import numpy as np
-import pandas as pd
 from pathlib import Path
 from collections import defaultdict
 
-V23_PATH = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data\_v23\v23\Q_triangles_with_centers_Z2_S3_fiber6.csv")
+import numpy as np
+import pytest
+
+pd = pytest.importorskip("pandas")
+
+V23_PATH = Path(
+    r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data\_v23\v23\Q_triangles_with_centers_Z2_S3_fiber6.csv"
+)
+
+if not V23_PATH.exists():
+    pytest.skip(
+        f"Required V23 data file not available: {V23_PATH}",
+        allow_module_level=True,
+    )
 
 def load_v23_data():
     """Load v23 triangle holonomy data."""
