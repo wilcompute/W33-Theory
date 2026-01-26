@@ -69,6 +69,22 @@ From the Docker Sage suite run on 2026-01-26:
   - H27 edges = 108, degree = 8
   - stabilizer order = 1296 (2^4 * 3^4)
   - eigenvalues: 8^1, -4^6, -1^8, 2^12
+  - H27 adjacency is determined by W33 common-neighbor counts (2 vs 4)
+
+- H12 neighbor subgraph (D4 signal):
+  - Each H12 decomposes into 4 disjoint triangles (12 = 4×3)
+  - Aligns with the λ=2 eigenspace multiplicity 24 (D4 root count)
+
+- Triangle co-occurrence graph:
+  - 160 triangle vertices, 240 edges (degree 3)
+  - Disjoint union of 40 K4 components (one per base vertex)
+  - Spectrum: 3^40, (−1)^120
+  - Line graph has 240 vertices, degree 4, nullspace dim 120
+
+- λ=2 eigenspace separation:
+  - Vertex projections separate adjacency exactly (ip 0.1 vs −0.0667)
+  - Edge projections all equal norm but do not form an E8 root system
+  - Closed form projector: P2 = (2/3) I + (1/6) A − (1/15) J
 
 - SRG(40,12,2,4) enumeration (Spence dataset):
   - 28 non-isomorphic graphs
@@ -237,6 +253,11 @@ From the Docker Sage suite run on 2026-01-26:
 - Tetrahedral subgraph:
   - induced subgraph is bipartite with 4+4 split and 16 edges
   - therefore isomorphic to K4,4
+
+- W33 line trace signature:
+  - tetra-bearing lines split into two trace-union classes
+  - 4 lines: tetra rays from same tetra PG line → union size 5
+  - 12 lines: tetra rays from two distinct tetra PG lines → union size 10
 
 - Polarity search (GL(4,2) basis changes):
   - best found: 12 of 16 hit lines become isotropic under a suitable symplectic form

@@ -101,6 +101,26 @@ and the artifacts generated/updated as part of the “keep going” request.
   - Locates tetrahedral rays inside W33 lines and computes induced subgraph stats.
 - `python3 tools/witting_w33_tetra_subgraph.py`
   - Confirms the tetrahedral-ray induced subgraph is K4,4 (bipartite 4‑regular).
+- `python3 tools/witting_w33_line_trace_tetra_analysis.py`
+  - Classifies W33 lines with tetra rays by PG(3,2) trace-union structure.
+- `python3 tools/d4_w33_structure_analysis.py`
+  - Checked H12 neighbor subgraph structure and D4 root parallels.
+- `python3 tools/h27_jordan_algebra_test.py`
+  - Analyzed the 27 non-neighbors (H27) for Jordan-algebra adjacency rules.
+- `python3 tools/d4_triality_action.py`
+  - Built the triangle co-occurrence graph and triality-style invariants.
+- `python3 tools/triangle_e8_correspondence.py`
+  - Compared the triangle graph’s 240 edges to E8 root counts and spectra.
+- `python3 tools/d4_d4_e8_decomposition.py`
+  - Explored D4×D4 and 240=240 decomposition heuristics.
+- `python3 tools/eigenspace_d4_analysis.py`
+  - Analyzed λ=2 eigenspace geometry and adjacency separation.
+- `python3 tools/edge_root_system_analysis.py`
+  - Tested edge-projection vectors as a root-like system.
+- Updated CI paths + proof test inputs:
+  - Added `claude_workspace/run_sage.sh` wrapper so the `sage-verification` workflow can find the script.
+  - Fixed `src/PROOF_MINUS_ONE.py` to use repo‑relative data paths.
+  - Adjusted `tests/test_proofs_execution.py` to skip missing external proof file.
 - `W33_POLARITY_TRIALS=10000 python3 tools/witting_pg32_polarity_search.py`
   - Random GL(4,2) polarity search to maximize isotropic hit lines.
 - `python3 tools/witting_pg32_augmented_lines_analysis.py`
@@ -663,6 +683,114 @@ complete bipartite subgraph inside W33.
 
 See `artifacts/witting_w33_tetra_subgraph.md`.
 
+### 1au) W33 lines with tetra rays vs trace unions
+
+For the **16** W33 lines that contain **two tetra rays**:
+
+- **4 lines** contain tetra rays that map to the **same** tetra PG line.
+  - These have trace‑union size **5**.
+- **12 lines** contain tetra rays from **two distinct** tetra PG lines.
+  - These have trace‑union size **10**.
+
+By contrast, W33 lines with **0 tetra rays** have union sizes **4, 8, or 10**.
+
+This splits the tetra‑bearing lines into a small “same‑tetra” class (size 4)
+and a larger “cross‑tetra” class (size 12), adding a precise trace‑map
+signature to the K4,4 substructure.
+
+See `artifacts/witting_w33_line_trace_tetra_analysis.md`.
+
+### 1at) CI fixes (pytest + Sage workflow)
+
+To address GitHub notification failures:
+
+- Added a missing `claude_workspace/run_sage.sh` wrapper so the Sage workflow
+  can resolve its script path.
+- Fixed `src/PROOF_MINUS_ONE.py` to load data from the repo’s `data/` folder
+  instead of a hard-coded local Windows path.
+- Updated `tests/test_proofs_execution.py` to skip the external proof script
+  if it is not present in this repo.
+
+These changes should stop the Sage workflow from failing on “file not found”
+and prevent pytest from failing due to missing local-only data paths.
+
+### 1av) H12 = 4 disjoint triangles (D4 signal)
+
+The H12 neighbor subgraph splits into **four disjoint triangles** (12 vertices,
+degree 2 inside H12). The tool checked 5 representative vertices and found the
+same 4‑triangle decomposition each time.
+
+This reinforces the D4‑style 4‑fold structure and matches the **24**
+eigenvalue‑2 multiplicity (D4 root count).
+
+See `artifacts/d4_w33_structure_analysis.md`.
+
+### 1aw) H27 adjacency fully determined by W33 common neighbors
+
+For the 27 non‑neighbors (H27) of a base vertex:
+
+- H27 is **8‑regular** with **108 edges**.
+- Two H27 vertices are adjacent **iff** they share exactly **2** common W33
+  neighbors (non‑adjacent pairs share **4**).
+
+This gives a clean combinatorial rule for H27 adjacency.
+
+See `artifacts/h27_jordan_algebra_test.md`.
+
+### 1ax) Triangle co‑occurrence graph has 240 edges
+
+The triangle co‑occurrence graph (160 triangle vertices) has **240** edges and
+degree **3**, with spectrum **3^40, (‑1)^120**. This is the sharpest 240=240
+match to E8 roots found so far.
+
+This graph is a **disjoint union of 40 K4 components** (each base vertex gives
+one K4 on its four H12 triangles), which explains the spectrum and degree.
+
+The line graph on these 240 edges has degree 4 and a 120‑dimensional nullspace,
+which mirrors the 120 root‑line count but is not isomorphic to the E8 root
+adjacency graph.
+
+See `artifacts/triangle_e8_correspondence.md`.
+
+### 1ay) λ=2 eigenspace cleanly separates adjacency
+
+Projecting vertices into the λ=2 eigenspace (dimension **24**) yields **exact**
+separation:
+
+- Adjacent pairs have inner product **0.1**
+- Non‑adjacent pairs have inner product **‑0.0667**
+
+So adjacency is determined purely by λ=2 inner products.
+
+See `artifacts/eigenspace_d4_analysis.md`.
+
+### 1ay‑b) Closed‑form projection formula (explains the separation)
+
+For SRG(40,12,2,4) with eigenvalues {12, 2, −4}, the projector onto λ=2 is:
+
+`P₂ = (2/3) I + (1/6) A − (1/15) J`
+
+So for distinct vertices:
+
+- Adjacent: `P₂(i,j) = 1/10`
+- Non‑adjacent: `P₂(i,j) = −1/15`
+
+This exactly matches the observed 0.1 / −0.0667 values and shows the
+separation is an intrinsic SRG identity (not an artifact of a particular
+numerical basis).
+
+### 1az) Edge projections are root‑like but not E8
+
+The 240 edge‑projection vectors in the λ=2 eigenspace:
+
+- Have identical norm (≈1.1832)
+- Have **6** inner‑product values (not the E8 4‑value pattern)
+- Fail integrality/closure checks and have **no** antipodal pairs
+
+So the edge system is “root‑like” but **not** an E8 root system.
+
+See `artifacts/edge_root_system_analysis.md`.
+
 ### 2) Computed prediction tables (internal consistency)
 
 The summary tables are now computed directly from the formulas in
@@ -780,6 +908,22 @@ The digest summarizes hit counts at 0.1%, 0.5%, 1%, 5%, 10% tolerances. See
 - `artifacts/witting_w33_line_tetrahedron_analysis.json`
 - `artifacts/witting_w33_tetra_subgraph.md`
 - `artifacts/witting_w33_tetra_subgraph.json`
+- `artifacts/witting_w33_line_trace_tetra_analysis.md`
+- `artifacts/witting_w33_line_trace_tetra_analysis.json`
+- `artifacts/d4_w33_structure_analysis.md`
+- `artifacts/d4_w33_structure_analysis.json`
+- `artifacts/h27_jordan_algebra_test.md`
+- `artifacts/h27_jordan_algebra_test.json`
+- `artifacts/d4_triality_action.md`
+- `artifacts/d4_triality_action.json`
+- `artifacts/triangle_e8_correspondence.md`
+- `artifacts/triangle_e8_correspondence.json`
+- `artifacts/d4_d4_e8_decomposition.md`
+- `artifacts/d4_d4_e8_decomposition.json`
+- `artifacts/eigenspace_d4_analysis.md`
+- `artifacts/eigenspace_d4_analysis.json`
+- `artifacts/edge_root_system_analysis.md`
+- `artifacts/edge_root_system_analysis.json`
 - `artifacts/witting_pg32_polarity_search.md`
 - `artifacts/witting_pg32_polarity_search.json`
 - `artifacts/witting_pg32_augmented_lines_analysis.md`

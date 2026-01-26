@@ -15,6 +15,11 @@
 - Edges (co-occurrence in H12): 240
 - Degree set: [np.int64(3)]
 
+### Triangle Graph Components
+
+- Component sizes: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+- All components are K4: True
+
 ## H12 Intersection Patterns
 
 For W33-adjacent vertices (i, j), how many H12 triangles do they share?
