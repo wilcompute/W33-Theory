@@ -83,6 +83,8 @@ From the Docker Sage suite run on 2026-01-26:
   - Linear equations for the 9-tuples: 2x0+2x1+x2=0 and x0+2x1+x3=0
   - Z3 labeling exists that makes all inter-fiber matchings translations,
     but translation constants are not difference-invariant
+  - Explicit edge rule: c(u,v) = u2*v1 + 2*u1*v2 (mod 3)
+    so (u,z)~(v,w) iff w = z + c(u,v) and u != v
 
 - Triangle co-occurrence graph:
   - 160 triangle vertices, 240 edges (degree 3)

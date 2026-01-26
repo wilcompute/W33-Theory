@@ -131,6 +131,8 @@ and the artifacts generated/updated as part of the “keep going” request.
   - Searched for Z3 labelings that turn inter‑fiber matchings into translations.
 - `python3 tools/h27_affine_plane_equations.py`
   - Extracted the two linear equations defining the 9‑tuple affine plane.
+- `python3 tools/h27_fiber_edge_rule.py`
+  - Derived an explicit bilinear formula for inter‑fiber translation offsets.
 - Updated CI paths + proof test inputs:
   - Added `claude_workspace/run_sage.sh` wrapper so the `sage-verification` workflow can find the script.
   - Fixed `src/PROOF_MINUS_ONE.py` to use repo‑relative data paths.
@@ -808,6 +810,23 @@ coordinatized by the F3^2 base plane.
 
 See `artifacts/h27_fiber_translation_structure.md`.
 
+### 1aw‑c4) Explicit bilinear edge rule on F3^2 × Z3
+
+After fixing a Z3 labeling on each fiber and using the affine F3^2 coordinates
+for the 9 fibers, the inter‑fiber matchings obey a **bilinear** offset:
+
+`c(u,v) = u2*v1 + 2*u1*v2  (mod 3) = −det([u; v])`
+
+So the H27 adjacency can be written as:
+
+**(u,z) adjacent to (v,w) iff** `w = z + c(u,v)` with `u != v`,
+and no edges within a fiber.
+
+This gives a clean algebraic model of H27 as F3^2 × Z3 with a symplectic
+pairing on the base plane.
+
+See `artifacts/h27_fiber_edge_rule.md`.
+
 ### 1aw‑d) Affine/Latin cube tests (negative under 27‑tuple assumption)
 
 We tested whether a 27‑tuple encoding could be:
@@ -1021,6 +1040,8 @@ The digest summarizes hit counts at 0.1%, 0.5%, 1%, 5%, 10% tolerances. See
 - `artifacts/h27_fiber_translation_structure.json`
 - `artifacts/h27_affine_plane_equations.md`
 - `artifacts/h27_affine_plane_equations.json`
+- `artifacts/h27_fiber_edge_rule.md`
+- `artifacts/h27_fiber_edge_rule.json`
 - `artifacts/h12_h27_incidence_patterns.md`
 - `artifacts/h12_h27_incidence_patterns.json`
 - `artifacts/witting_pg32_polarity_search.md`
