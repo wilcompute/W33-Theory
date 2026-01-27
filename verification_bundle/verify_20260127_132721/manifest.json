@@ -1,0 +1,42 @@
+[
+  {
+    "file": "artifacts/e6_we6_orbit_refined.json",
+    "sha256": "ddcf5641fad6913c62edb24c96652f58c1b25d2308e7f201bae66b594aa4edd5"
+  },
+  {
+    "file": "artifacts/explicit_bijection_decomposition.json",
+    "sha256": "e7b5442900e3a84d8f74b2651d4f34cfc9e1caa400f9671ff6d8941c4a7f1f37"
+  },
+  {
+    "file": "artifacts/explicit_bijection_refined.json",
+    "sha256": "53dd6a5a7f93f6c8a069a16f2cedd4b390d22687b21e32085c3c8cb149caa9f8"
+  },
+  {
+    "file": "artifacts/final_summary_table.json",
+    "sha256": "5bc0d2d9c884005ed3f4687c2427e3ddba16fb59119857d00669b011b4b7206a"
+  },
+  {
+    "file": "artifacts/final_summary_table.md",
+    "sha256": "f9671d9bbd8630111b7cca95edb7fbfe2acad4809fc6f415ad61ab5a37f79b49"
+  },
+  {
+    "file": "artifacts/verification_digest.json",
+    "sha256": "03fb9397297eb30e004d3c741b01fd38dd3664713cea6d64a828911b864830eb"
+  },
+  {
+    "file": "artifacts/verification_digest.md",
+    "sha256": "59feaeb72b98553661e9d542f539f38328f7e9178957d7c80782dd2f53634abf"
+  },
+  {
+    "file": "data/w33_baseline_audit_results.json",
+    "sha256": "a6a8b31dd02f4308e61f40c56f2e14f6099774fe393509827d4519e38eecc585"
+  },
+  {
+    "file": "data/w33_baseline_audit_top.csv",
+    "sha256": "5bfb4dd4590161bc3894684e863d2ec8f7a264361a149f63ca7e69470cc172e0"
+  },
+  {
+    "file": "data/w33_baseline_suite_results.json",
+    "sha256": "33a86bfe3205fdca96805487395286a684498a3dd1117d79895a734fcb622337"
+  }
+]
