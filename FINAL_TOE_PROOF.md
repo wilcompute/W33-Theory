@@ -521,6 +521,7 @@ Verification snapshot (last run):
 - K4 double confinement: 90/90 have (Z4,Z3)=(2,0) from `src/z4_analysis.py`
 - V23 parity↔centers: perfect correlation on 5280 triangles from `src/final_v23_analysis.py`
 - Sage verification: not available (Sage not found on this system)
+- Bundle: `verification_bundle/verify_20260127_132721/` (see `manifest.json`)
 
 
 ## APPENDIX: EXPLICIT W33↔E8 BIJECTION SCHEMA
