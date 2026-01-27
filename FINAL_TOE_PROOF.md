@@ -515,6 +515,14 @@ python -X utf8 src/z4_analysis.py
 python -X utf8 src/final_v23_analysis.py
 ```
 
+Verification snapshot (last run):
+- Date: Tue Jan 27 13:12:51 EST 2026
+- K4 color singlets: 90/90 (Z3=0) from `src/color_singlet_test.py`
+- K4 double confinement: 90/90 have (Z4,Z3)=(2,0) from `src/z4_analysis.py`
+- V23 parity↔centers: perfect correlation on 5280 triangles from `src/final_v23_analysis.py`
+- Sage verification: not available (Sage not found on this system)
+
+
 ## APPENDIX: EXPLICIT W33↔E8 BIJECTION SCHEMA
 
 This appendix summarizes the deterministic 240→240 mapping built in:
