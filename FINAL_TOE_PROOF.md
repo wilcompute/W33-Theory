@@ -456,6 +456,35 @@ There are no free parameters:
 
 ---
 
+
+## APPENDIX: EXPLICIT W33↔E8 BIJECTION SCHEMA
+
+This appendix summarizes the deterministic 240→240 mapping built in:
+```
+artifacts/explicit_bijection_decomposition.json
+```
+(constructed by `tools/explicit_bijection_decomposition.py`).
+
+**E8 root classes (via dot pairs with u1,u2):**
+```
+u1 = (1,1,1,1,1,1,1,1)
+u2 = (1,1,1,1,1,1,-1,-1)
+
+240 = 72 (E6 roots) + 6 (SU3 roots) + 27×6
+```
+
+**W33 edge classes (relative to base vertex v0):**
+```
+240 = 108 (H27 edges) + 108 (cross edges) + 12 (H12 edges) + 12 (incident edges)
+```
+
+**Assignment used:**
+- Map H27–H27 edges (108) to 4 of the 27-classes (4×27)
+- Map cross edges from 2 of the 4 H12 triangles (54) to the remaining 2 classes
+- Map the remaining 78 edges to 72 E6 roots + 6 SU3 roots
+
+This mapping is explicit, deterministic, and aligned with the E6×SU(3) structure.
+
 ## CONCLUSION
 
 ### The Evidence
