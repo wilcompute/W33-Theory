@@ -121,6 +121,19 @@ def main():
     G_we6 = WeylGroup(['E', 6], prefix="s")
 
     # Find subgroups of index 240 (size 216) via GAP low-index search on fp-group
+    if not hasattr(G_we6, "as_finitely_presented_group"):
+        results = {
+            "edge_group_order": int(G_edges.order()),
+            "we6_order": int(G_we6.order()),
+            "index240_subgroup_count": None,
+            "isomorphism_found": False,
+            "error": "WeylGroup lacks as_finitely_presented_group in this Sage build",
+        }
+        out_path = ROOT / "artifacts" / "we6_index240_search.json"
+        out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
+        print("Wrote", out_path)
+        return
+
     G_fp = G_we6.as_finitely_presented_group()
     G_gap = libgap(G_fp)
     subs = libgap.LowIndexSubgroupsFpGroup(G_gap, 240)
