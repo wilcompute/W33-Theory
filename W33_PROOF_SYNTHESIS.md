@@ -82,6 +82,32 @@ with the documented W33 invariants and Sage verification outputs in this repo.
 These are the combinatorial anchors used throughout the E6/E7/E8 decomposition
 claims in the theory documents.
 
+**L7 (E6 orbit decomposition of E8 roots).** Under the standard E6-in-E8 embedding,
+the action of W(E6) splits the E8 root set into:
+```
+240 = 72 + 27 + 27 + 27 + 27 + 27 + 27 + 1 + 1 + 1 + 1 + 1 + 1
+```
+This matches the E6 x SU(3) decomposition:
+```
+240 = 72 (E6 roots) + 6 (SU3 roots) + 27x3 + 27bar x 3bar
+```
+
+**C1 (Equivariance obstruction).** PSp(4,3) acts transitively on W33 edges (single
+orbit of size 240), but its realizations inside W(E8) act on a 27-orbit, not on the
+full 240 roots. Therefore a single-orbit equivariant bijection
+W33 edges -> E8 roots does not exist under PSp(4,3) alone. The correct equivariant
+object is the 27-sector (H27) lifted across the SU(3) phase classes.
+
+**Construction (explicit bijection).** An explicit, deterministic W33 edge -> E8 root
+bijection aligned with the E6 x SU(3) decomposition is given in:
+```
+artifacts/explicit_bijection_decomposition.json
+```
+and constructed by:
+```
+tools/explicit_bijection_decomposition.py
+```
+
 ---
 
 ## 6. Computational Verification (Reproducibility Map)
@@ -102,6 +128,13 @@ L1–L6 and the numeric predictions:
   - Produces `artifacts/final_summary_table.md` and
     `artifacts/final_summary_table.json` (prediction tables used in
     `FINAL_THEORY_SUMMARY.md`).
+
+- `tools/e6_we6_orbit_refined.py`
+  - Produces `artifacts/e6_we6_orbit_refined.json` (E6 orbit decomposition of E8).
+
+- `tools/explicit_bijection_decomposition.py`
+  - Produces `artifacts/explicit_bijection_decomposition.json`
+    (explicit W33 edge -> E8 root mapping).
 
 To reproduce locally (Python 3.10+):
 

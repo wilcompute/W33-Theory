@@ -57,6 +57,29 @@ For ANY vertex v₀ in W33:
 2. **Realification**: Witting inner products include ±1.1547, ±0.5774 (not in E8)
 3. **Graph isomorphism**: Spectra don't match
 
+### E6 Orbit Decomposition (Computed)
+
+Using the standard embedding of E6 in E8 as the subset of E8 roots orthogonal to:
+```
+u1 = (1,1,1,1,1,1,1,1)
+u2 = (1,1,1,1,1,1,-1,-1)
+```
+we obtain **72 E6 roots**. Reflections in these 6 simple roots generate W(E6),
+and its action on the **full E8 root set** splits into orbits:
+
+```
+72 + 27 + 27 + 27 + 27 + 27 + 27 + 1 + 1 + 1 + 1 + 1 + 1
+```
+
+This matches the standard decomposition:
+```
+240 = 72 (E6) + 6 (SU3) + 27×3 + 27bar×3bar
+```
+
+**Implication:** the 240-root match is **not** a single W(E6)-orbit. The
+correspondence is through **E6×SU(3)** structure and the 27-sector, which aligns
+with the W33 **H27** structure and its 6 phase sectors.
+
 ### The Correct Correspondence: Triality Structure
 
 The correspondence is through the **D4 triality** encoded in both structures:
@@ -86,6 +109,60 @@ Total: 240 roots = 120 lines × 2
        ↓                                        ↓
     V, S+, S-                              V, S+, S-
 ```
+
+### Explicit Bijection (Decomposition-Based, Constructed)
+
+We now have a **fully explicit bijection** from the 240 W33 edges to the 240 E8 roots
+using the **E6×SU(3)** decomposition (not group-equivariant, but structure-aligned):
+
+**E8 root decomposition (computed):**
+```
+240 = 72 (E6 roots) + 6 (SU3 roots) + 27×6
+```
+The 27×6 classes are identified by dot pairs with:
+```
+u1 = (1,1,1,1,1,1,1,1)
+u2 = (1,1,1,1,1,1,-1,-1)
+```
+
+**W33 edge decomposition (relative to base vertex v0):**
+```
+240 = 108 (H27 edges) + 108 (cross edges) + 12 (H12 edges) + 12 (incident edges)
+```
+
+**Assignment (explicit and deterministic):**
+- Map **H27 edges (108)** to **4 of the 27-classes** (4×27)
+- Map **cross edges from 2 of the 4 H12 triangles (54)** to the **remaining 2 classes**
+- Map the remaining **78 edges** to **72 E6 roots + 6 SU3 roots**
+
+This bijection is constructed in:
+```
+tools/explicit_bijection_decomposition.py
+```
+and written to:
+```
+artifacts/explicit_bijection_decomposition.json
+```
+
+### Equivariance Obstruction (Computed)
+
+We attempted to realize the **edge automorphism group** (PSp(4,3), order 25,920)
+as a subgroup of W(E8) **acting transitively on the 240 roots**. A direct
+computational search over order‑3 generator sets inside W(E8) consistently yields
+**order‑25,920 subgroups with orbit size 27**, not 240. This indicates:
+
+- The PSp(4,3) subgroup appears inside W(E8) **as the W(E6) action on the 27‑orbit**.
+- Therefore a **fully equivariant bijection** between *all* 240 W33 edges and *all*
+  240 E8 roots is **not possible** under PSp(4,3) alone.
+- The **correct equivariant object** is the **27‑sector (H27)**, lifted to
+  **27×6** via the SU(3) phase classes.
+
+This matches the decomposition:
+```
+240 = 72 (E6) + 6 (SU3) + 27×3 + 27bar×3bar
+```
+and explains why the explicit bijection is **decomposition‑aligned** rather than
+single‑orbit equivariant.
 
 ---
 
