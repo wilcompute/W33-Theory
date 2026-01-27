@@ -10,13 +10,20 @@
     "summaries": {
       "type": "object",
       "additionalProperties": {
-        "type": "object",
-        "properties": {
-          "part": { "type": "string" },
-          "part_number": { "type": "integer" },
-          "timestamp": { "type": "string" },
-          "key_results": { "type": ["object", "array", "null"] }
-        }
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "part": { "type": "string" },
+              "part_number": { "type": "integer" },
+              "timestamp": { "type": "string" },
+              "key_results": { "type": ["object", "array", "null"] }
+            }
+          },
+          {
+            "type": "array"
+          }
+        ]
       }
     }
   },
