@@ -102,6 +102,29 @@ from E8 roots to W33 without ad hoc matching.
 
 ---
 
+### 1.5 Explicit Root-to-Edge Bijection (Computed)
+
+Once the 40 orbits (rays) are identified, W33 edges are the 240 orbit pairs
+with orthogonality signature `(0,0,36,0,0)`. To obtain a **root → edge**
+bijection (240 ↔ 240) without assuming extra symmetry, we compute a canonical
+perfect matching between E8 roots and **incident edges** of their orbit:
+
+- Build the bipartite graph:  
+  left = 240 roots, right = 240 W33 edges  
+  root *r* is connected to an edge (A,B) iff its orbit is A or B.
+- Run deterministic Hopcroft–Karp to get a **perfect matching**.
+
+This yields an explicit, fully constructive mapping:
+```
+root r  ->  W33 edge (orbit(r), orbit-adjacent)
+```
+expressed in W33 vertex labels via the orbit-graph isomorphism.
+
+**Reproducible artifact:** `artifacts/e8_root_to_w33_edge.json`  
+**Script:** `tools/sage_e8_root_edge_bijection.py`
+
+---
+
 ## PART 2: K4 COMPONENTS AND UNIVERSAL QUANTIZATION
 
 ### 2.1 Finding: Universal (Z₄, Z₃) Selection
