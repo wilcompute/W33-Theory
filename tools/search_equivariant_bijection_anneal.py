@@ -1,23 +1,13 @@
 #!/usr/bin/env python3
-"""Search for an equivariant edge->root bijection by per-line dihedral twists.
+"""Simulated annealing search over per-line dihedral permutations.
 
-We fix:
-- line -> orbit mapping (from artifacts/edge_root_bijection_summary.json)
-- edge order per line (canonical)
-- root order per orbit (canonical cycle order)
-
-We vary:
-- for each line L, a dihedral permutation (12 choices) mapping edge positions to root positions.
-
-Objective:
-- minimize Gram mismatch for each generator on adjacent-edge pairs
-- then check full Gram invariance for best candidate
+Goal: minimize Gram mismatches for adjacency pairs across generators.
 """
 from __future__ import annotations
 
 import json
 import random
-from itertools import combinations, product
+from itertools import product
 from pathlib import Path
 from collections import Counter
 
@@ -94,10 +84,8 @@ def dihedral_perms(n=6):
     for shift in range(n):
         p = base[shift:] + base[:shift]
         perms.append(p)
-        # reverse
         p_rev = [p[0]] + list(reversed(p[1:]))
         perms.append(p_rev)
-    # unique
     uniq = []
     seen = set()
     for p in perms:
@@ -200,59 +188,22 @@ def main():
     points, edges, adj = build_w33()
     lines, line_index, edge_to_line_idx = extract_lines(adj, edges)
 
-    # Edge order per line
     line_edge_order = {li: canonical_line_edge_order(lines[li], points) for li in range(len(lines))}
 
-    # Orbit order per orbit
     orbit_data = json.loads((ROOT / "artifacts" / "e8_coxeter6_orbits.json").read_text())
     orbits = orbit_data["orbits"]
     orbit_root_order = {o: canonical_orbit_order(orbits[o]) for o in range(len(orbits))}
 
-    # line <-> orbit mapping
     summary = json.loads((ROOT / "artifacts" / "edge_root_bijection_summary.json").read_text())
     orbit_to_line = {int(k): v for k, v in summary["orbit_to_line"].items()}
     line_to_orbit = {v: k for k, v in orbit_to_line.items()}
 
-    # Generators
     edge_gens = get_edge_generators(points, edges)
 
-    # Precompute line action for each generator: for each line, where it maps and edge position perm
-    line_action = []
     edge_index = {tuple(sorted(e)): idx for idx, e in enumerate(edges)}
     edges_sorted = [tuple(sorted(e)) for e in edges]
 
-    for g in edge_gens:
-        info = {}
-        for li in range(len(lines)):
-            edge_list = line_edge_order[li]
-            # map edges under generator
-            mapped_edges = [edges_sorted[g[edge_index[e]]] for e in edge_list]
-            # line index of image
-            li2 = edge_to_line_idx[mapped_edges[0]]
-            # positions in image line
-            edge_list2 = line_edge_order[li2]
-            pos_map = [edge_list2.index(me) for me in mapped_edges]
-            info[li] = (li2, pos_map)
-        line_action.append(info)
-
-    # Dihedral perms
-    dperms = dihedral_perms(6)
-
-    # Precompute Gram matrix for roots in canonical order (by orbit, then position)
-    C = cartan_e8()
-    roots_flat = []
-    for li in range(len(lines)):
-        o = line_to_orbit[li]
-        roots_flat.extend(orbit_root_order[o])
-    # But mapping uses per-line permutation, so roots_flat is just a reference for Gram
-    root_list = [tuple(r) for r in roots_flat]
-    nroots = len(root_list)
-    Gram = [[0]*nroots for _ in range(nroots)]
-    for i in range(nroots):
-        for j in range(nroots):
-            Gram[i][j] = ip_e8(root_list[i], root_list[j], C)
-
-    # Precompute edge adjacency pairs (share vertex)
+    # adjacency pairs
     adj_pairs = []
     for i in range(len(edges_sorted)):
         e1 = edges_sorted[i]
@@ -261,32 +212,36 @@ def main():
             if s1 & set(edges_sorted[j]):
                 adj_pairs.append((i, j))
 
-    # Helper: build root permutation for a given line permutation assignment
-    def build_root_perm(line_perm_choice):
-        # line_perm_choice: list of index into dperms
+    # roots flattened by line, pos
+    roots_flat = []
+    for li in range(len(lines)):
+        o = line_to_orbit[li]
+        roots_flat.extend(orbit_root_order[o])
+    root_list = [tuple(r) for r in roots_flat]
+    C = cartan_e8()
+    Gram = [[0]*len(root_list) for _ in range(len(root_list))]
+    for i in range(len(root_list)):
+        for j in range(len(root_list)):
+            Gram[i][j] = ip_e8(root_list[i], root_list[j], C)
+
+    dperms = dihedral_perms(6)
+
+    def build_edge_to_root_idx(line_perm_choice):
         edge_to_root_idx = [None]*len(edges_sorted)
         for li in range(len(lines)):
             o = line_to_orbit[li]
             edge_list = line_edge_order[li]
             perm = dperms[line_perm_choice[li]]
-            # root positions are 0..5 in canonical orbit order
+            base = li*6
             for p, e in enumerate(edge_list):
-                root = orbit_root_order[o][perm[p]]
-                # compute root index in root_list (ordered by line then pos)
-                # base index for this line in root_list
-                base = li*6
-                # find position of root in orbit order
-                pos = orbit_root_order[o].index(root)
-                idx = base + pos
-                edge_to_root_idx[edge_index[e]] = idx
+                pos = perm[p]
+                edge_to_root_idx[edge_index[e]] = base + pos
         return edge_to_root_idx
 
     def score(line_perm_choice):
-        edge_to_root_idx = build_root_perm(line_perm_choice)
-        # evaluate Gram invariance for adjacency pairs across generators
+        edge_to_root_idx = build_edge_to_root_idx(line_perm_choice)
         mism = 0
         for g in edge_gens:
-            # root perm induced by edge perm
             for (i, j) in adj_pairs:
                 gi = g[i]
                 gj = g[j]
@@ -295,41 +250,42 @@ def main():
                     mism += 1
         return mism
 
-    # Hill-climb
-    random.seed(0)
-    line_perm = [0]*len(lines)
-    best = score(line_perm)
-    print("Initial mismatches", best)
+    # Annealing
+    best_global = None
+    best_score = None
+    best_choice = None
 
-    improved = True
-    it = 0
-    while improved and it < 20:
-        improved = False
-        it += 1
-        for li in range(len(lines)):
-            cur = line_perm[li]
-            best_local = best
-            best_choice = cur
-            for choice in range(len(dperms)):
-                if choice == cur:
-                    continue
-                line_perm[li] = choice
-                s = score(line_perm)
-                if s < best_local:
-                    best_local = s
-                    best_choice = choice
-            line_perm[li] = best_choice
-            if best_local < best:
-                best = best_local
-                improved = True
-        print("iter", it, "best", best)
+    for restart in range(5):
+        choice = [random.randrange(len(dperms)) for _ in range(len(lines))]
+        cur = score(choice)
+        if best_score is None or cur < best_score:
+            best_score = cur
+            best_choice = choice[:]
+        T = 1.0
+        for it in range(2000):
+            li = random.randrange(len(lines))
+            new = choice[li]
+            while new == choice[li]:
+                new = random.randrange(len(dperms))
+            old = choice[li]
+            choice[li] = new
+            s = score(choice)
+            if s <= cur or random.random() < 0.01:
+                cur = s
+                if cur < best_score:
+                    best_score = cur
+                    best_choice = choice[:]
+            else:
+                choice[li] = old
+            if it % 500 == 0:
+                pass
+        print("restart", restart, "best", best_score)
 
-    # Save result
     out = {
-        "best_mismatch_adjacent_pairs": best,
-        "line_perm_choice": line_perm,
+        "best_mismatch_adjacent_pairs": best_score,
+        "line_perm_choice": best_choice,
     }
-    out_path = ROOT / "artifacts" / "equivariant_search_result.json"
+    out_path = ROOT / "artifacts" / "equivariant_search_result_anneal.json"
     out_path.write_text(json.dumps(out, indent=2), encoding="utf-8")
     print("Wrote", out_path)
 
