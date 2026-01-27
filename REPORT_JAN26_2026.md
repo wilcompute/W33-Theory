@@ -135,6 +135,10 @@ and the artifacts generated/updated as part of the “keep going” request.
   - Derived an explicit bilinear formula for inter‑fiber translation offsets.
 - `python3 tools/h27_heisenberg_model.py`
   - Verified H27 matches the Heisenberg‑group adjacency model exactly.
+- `python3 tools/h27_heisenberg_automorphisms.py`
+  - Verified the full 1296‑element automorphism family from Heisenberg formulas.
+- `python3 tools/h12_triangle_label_functions.py`
+  - Derived explicit linear label functions for H12 triangles in (u1,u2,z).
 - Updated CI paths + proof test inputs:
   - Added `claude_workspace/run_sage.sh` wrapper so the `sage-verification` workflow can find the script.
   - Fixed `src/PROOF_MINUS_ONE.py` to use repo‑relative data paths.
@@ -845,6 +849,37 @@ generators `{(t,0): t ∈ F3^2\\{0}}`. This explains:
 
 See `artifacts/h27_heisenberg_model.md`.
 
+### 1aw‑c6) Heisenberg automorphisms (full 1296 family)
+
+For the Heisenberg model, all maps of the form
+
+- `u' = A u + b` with `A ∈ GL(2,3)`, `b ∈ F3^2`
+- `z' = det(A) z − B(Au, b) + c` with `c ∈ F3`
+
+preserve adjacency. We verified **all 1296** such maps are automorphisms,
+exactly matching `|GL(2,3)| × 9 × 3`.
+
+This gives an explicit formula for the base‑vertex stabilizer action on H27.
+
+See `artifacts/h27_heisenberg_automorphisms.md`.
+
+### 1aw‑c7) H12 triangles = linear forms on the base plane
+
+Using the Heisenberg labeling, the 4 H12 triangles correspond to the four
+nonzero linear forms on the base plane F3^2 (up to scalar). The H27 vertex’s
+triangle choice depends **only** on `(u1,u2)` (not on z):
+
+- Triangle 0 label = `u2`
+- Triangle 1 label = `u1`
+- Triangle 2 label = `u1 + u2`
+- Triangle 3 label = `u1 + 2u2`
+
+So H12 is canonically identified with **PG(1,3)** (4 points), while H27 is the
+Heisenberg group over F3^2. This makes the `1 + 12 + 27` decomposition
+fully group‑theoretic.
+
+See `artifacts/h12_triangle_label_functions.md`.
+
 ### 1aw‑d) Affine/Latin cube tests (negative under 27‑tuple assumption)
 
 We tested whether a 27‑tuple encoding could be:
@@ -1062,6 +1097,10 @@ The digest summarizes hit counts at 0.1%, 0.5%, 1%, 5%, 10% tolerances. See
 - `artifacts/h27_fiber_edge_rule.json`
 - `artifacts/h27_heisenberg_model.md`
 - `artifacts/h27_heisenberg_model.json`
+- `artifacts/h27_heisenberg_automorphisms.md`
+- `artifacts/h27_heisenberg_automorphisms.json`
+- `artifacts/h12_triangle_label_functions.md`
+- `artifacts/h12_triangle_label_functions.json`
 - `artifacts/h12_h27_incidence_patterns.md`
 - `artifacts/h12_h27_incidence_patterns.json`
 - `artifacts/witting_pg32_polarity_search.md`

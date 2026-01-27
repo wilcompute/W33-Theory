@@ -1,0 +1,65 @@
+{
+  "base_vertex": 0,
+  "triangle_fits": [
+    {
+      "triangle": [
+        1,
+        2,
+        3
+      ],
+      "degree1": {
+        "solvable": true,
+        "formula": "u2"
+      },
+      "degree2": {
+        "solvable": true,
+        "formula": "u2"
+      }
+    },
+    {
+      "triangle": [
+        13,
+        14,
+        15
+      ],
+      "degree1": {
+        "solvable": true,
+        "formula": "u1"
+      },
+      "degree2": {
+        "solvable": true,
+        "formula": "u1"
+      }
+    },
+    {
+      "triangle": [
+        16,
+        17,
+        18
+      ],
+      "degree1": {
+        "solvable": true,
+        "formula": "u2 + u1"
+      },
+      "degree2": {
+        "solvable": true,
+        "formula": "u2 + u1"
+      }
+    },
+    {
+      "triangle": [
+        19,
+        20,
+        21
+      ],
+      "degree1": {
+        "solvable": true,
+        "formula": "2*u2 + u1"
+      },
+      "degree2": {
+        "solvable": true,
+        "formula": "2*u2 + u1"
+      }
+    }
+  ]
+}
