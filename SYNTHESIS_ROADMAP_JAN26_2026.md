@@ -87,6 +87,8 @@ From the Docker Sage suite run on 2026-01-26:
     so (u,z)~(v,w) iff w = z + c(u,v) and u != v
   - Verified full Heisenberg model: H27 ≅ Cayley(H(3), {(t,0)})
     with automorphism structure Z3 × AGL(2,3) (order 1296)
+  - Explicit automorphisms: u' = A u + b, z' = det(A) z − B(Au,b) + c
+  - H12 triangles correspond to linear forms on F3^2: u1, u2, u1+u2, u1+2u2
 
 - Triangle co-occurrence graph:
   - 160 triangle vertices, 240 edges (degree 3)
