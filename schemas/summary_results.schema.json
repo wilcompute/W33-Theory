@@ -15,7 +15,7 @@
           "part": { "type": "string" },
           "part_number": { "type": "integer" },
           "timestamp": { "type": "string" },
-          "key_results": { "type": ["object", "null"] }
+          "key_results": { "type": ["object", "array", "null"] }
         }
       }
     }
