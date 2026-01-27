@@ -1,0 +1,61 @@
+{
+  "timestamp": "20260127_132721",
+  "runs": [
+    {
+      "cmd": [
+        "python3",
+        "w33_baseline_audit.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "cmd": [
+        "python3",
+        "w33_baseline_audit_suite.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "cmd": [
+        "python3",
+        "tools/e6_we6_orbit_refined.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "cmd": [
+        "python3",
+        "tools/explicit_bijection_decomposition.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "cmd": [
+        "/mnt/c/Users/wiljd/OneDrive/Desktop/Theory of Everything/.venv_toe/bin/python",
+        "-X",
+        "utf8",
+        "src/color_singlet_test.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "cmd": [
+        "/mnt/c/Users/wiljd/OneDrive/Desktop/Theory of Everything/.venv_toe/bin/python",
+        "-X",
+        "utf8",
+        "src/z4_analysis.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "cmd": [
+        "/mnt/c/Users/wiljd/OneDrive/Desktop/Theory of Everything/.venv_toe/bin/python",
+        "-X",
+        "utf8",
+        "src/final_v23_analysis.py"
+      ],
+      "returncode": 0
+    }
+  ],
+  "pandas_python": "/mnt/c/Users/wiljd/OneDrive/Desktop/Theory of Everything/.venv_toe/bin/python"
+}
