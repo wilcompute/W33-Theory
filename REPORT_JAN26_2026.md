@@ -139,6 +139,8 @@ and the artifacts generated/updated as part of the “keep going” request.
   - Verified the full 1296‑element automorphism family from Heisenberg formulas.
 - `python3 tools/h12_triangle_label_functions.py`
   - Derived explicit linear label functions for H12 triangles in (u1,u2,z).
+- `python3 tools/w33_local_heisenberg_model.py`
+  - Verified a full local reconstruction of W33 from Heisenberg + H12 linear forms.
 - Updated CI paths + proof test inputs:
   - Added `claude_workspace/run_sage.sh` wrapper so the `sage-verification` workflow can find the script.
   - Fixed `src/PROOF_MINUS_ONE.py` to use repo‑relative data paths.
@@ -880,6 +882,20 @@ fully group‑theoretic.
 
 See `artifacts/h12_triangle_label_functions.md`.
 
+### 1aw‑c8) Full local W33 model (exact reconstruction)
+
+Combining all components, we reconstructed the **entire W33 adjacency** around
+base vertex v0 from:
+
+- H27 Heisenberg Cayley graph on F3^2 × Z3
+- H12 = PG(1,3) × F3 (4 triangles)
+- H12–H27 edges defined by the 4 linear forms on F3^2
+- Base vertex connected to all H12 vertices
+
+The model matches the actual W33 adjacency **exactly** (0 mismatches).
+
+See `artifacts/w33_local_heisenberg_model.md`.
+
 ### 1aw‑d) Affine/Latin cube tests (negative under 27‑tuple assumption)
 
 We tested whether a 27‑tuple encoding could be:
@@ -1101,6 +1117,8 @@ The digest summarizes hit counts at 0.1%, 0.5%, 1%, 5%, 10% tolerances. See
 - `artifacts/h27_heisenberg_automorphisms.json`
 - `artifacts/h12_triangle_label_functions.md`
 - `artifacts/h12_triangle_label_functions.json`
+- `artifacts/w33_local_heisenberg_model.md`
+- `artifacts/w33_local_heisenberg_model.json`
 - `artifacts/h12_h27_incidence_patterns.md`
 - `artifacts/h12_h27_incidence_patterns.json`
 - `artifacts/witting_pg32_polarity_search.md`
