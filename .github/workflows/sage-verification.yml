@@ -34,6 +34,15 @@ jobs:
         docker run --rm -v "${{ github.workspace }}:/work" -w /work sagemath/sagemath:10.7 bash -lc "./run_sage.sh lib/scripts/scripts/pysymmetry_2t_clock_reduction.py"
         docker run --rm -v "${{ github.workspace }}:/work" -w /work sagemath/sagemath:10.7 bash -lc "./run_sage.sh lib/scripts/scripts/pysymmetry_d6_incidence_reduction.py"
 
+    - name: Upload PySymmetry outputs
+      uses: actions/upload-artifact@v4
+      with:
+        name: pysymmetry-outputs
+        path: |
+          data/_workbench/05_symmetry/pysymmetry_*.md
+          data/_workbench/05_symmetry/pysymmetry_*.csv
+        if-no-files-found: warn
+
     - name: Extract numeric comparisons
       run: |
         python scripts/make_numeric_comparisons_from_summary.py || true
