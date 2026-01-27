@@ -1,7 +1,9 @@
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
 json_files = sorted(ROOT.glob('PART_*.json'))
 
 summary = {
@@ -19,6 +21,11 @@ for jf in json_files:
         with open(jf, 'r') as f:
             data = json.load(f)
         entry['ok'] = True
+
+        # Handle array-valued PART files (wrap in an object)
+        if isinstance(data, list):
+            data = {'results': data, 'part': jf.stem}
+
         # grab canonical metadata if present
         part = data.get('part') or data.get('part_name') or data.get('part_number')
         # Normalize part_number to an integer when possible. Some PART files use roman numerals in 'part'.
