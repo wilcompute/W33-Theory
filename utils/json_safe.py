@@ -1,6 +1,7 @@
 from __future__ import annotations
 from pathlib import Path
 import json
+from decimal import Decimal
 from typing import Any, IO
 
 try:
@@ -22,13 +23,17 @@ def _default(o: Any):
         if isinstance(o, np.ndarray):
             return o.tolist()
 
-    # Generic numeric-like
-    try:
-        return int(o)
-    except Exception:
-        pass
-    try:
+    # Decimal - must check before int() since int(Decimal('3.14')) succeeds but loses precision
+    if isinstance(o, Decimal):
         return float(o)
+
+    # Generic numeric-like: try float first to preserve decimals
+    try:
+        f = float(o)
+        # If it's a whole number, return int for cleaner output
+        if f == int(f):
+            return int(f)
+        return f
     except Exception:
         pass
     # Fall back to string
