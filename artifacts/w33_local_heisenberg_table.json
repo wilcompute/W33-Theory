@@ -1,0 +1,267 @@
+[
+  {
+    "vertex": 0,
+    "class": "base"
+  },
+  {
+    "vertex": 1,
+    "class": "H12",
+    "triangle": 0,
+    "label": 0
+  },
+  {
+    "vertex": 2,
+    "class": "H12",
+    "triangle": 0,
+    "label": 1
+  },
+  {
+    "vertex": 3,
+    "class": "H12",
+    "triangle": 0,
+    "label": 2
+  },
+  {
+    "vertex": 4,
+    "class": "H27",
+    "u1": 0,
+    "u2": 0,
+    "z": 0
+  },
+  {
+    "vertex": 5,
+    "class": "H27",
+    "u1": 0,
+    "u2": 0,
+    "z": 1
+  },
+  {
+    "vertex": 6,
+    "class": "H27",
+    "u1": 0,
+    "u2": 0,
+    "z": 2
+  },
+  {
+    "vertex": 7,
+    "class": "H27",
+    "u1": 1,
+    "u2": 0,
+    "z": 0
+  },
+  {
+    "vertex": 8,
+    "class": "H27",
+    "u1": 1,
+    "u2": 0,
+    "z": 1
+  },
+  {
+    "vertex": 9,
+    "class": "H27",
+    "u1": 1,
+    "u2": 0,
+    "z": 2
+  },
+  {
+    "vertex": 10,
+    "class": "H27",
+    "u1": 2,
+    "u2": 0,
+    "z": 0
+  },
+  {
+    "vertex": 11,
+    "class": "H27",
+    "u1": 2,
+    "u2": 0,
+    "z": 1
+  },
+  {
+    "vertex": 12,
+    "class": "H27",
+    "u1": 2,
+    "u2": 0,
+    "z": 2
+  },
+  {
+    "vertex": 13,
+    "class": "H12",
+    "triangle": 1,
+    "label": 0
+  },
+  {
+    "vertex": 14,
+    "class": "H12",
+    "triangle": 1,
+    "label": 1
+  },
+  {
+    "vertex": 15,
+    "class": "H12",
+    "triangle": 1,
+    "label": 2
+  },
+  {
+    "vertex": 16,
+    "class": "H12",
+    "triangle": 2,
+    "label": 0
+  },
+  {
+    "vertex": 17,
+    "class": "H12",
+    "triangle": 2,
+    "label": 1
+  },
+  {
+    "vertex": 18,
+    "class": "H12",
+    "triangle": 2,
+    "label": 2
+  },
+  {
+    "vertex": 19,
+    "class": "H12",
+    "triangle": 3,
+    "label": 0
+  },
+  {
+    "vertex": 20,
+    "class": "H12",
+    "triangle": 3,
+    "label": 1
+  },
+  {
+    "vertex": 21,
+    "class": "H12",
+    "triangle": 3,
+    "label": 2
+  },
+  {
+    "vertex": 22,
+    "class": "H27",
+    "u1": 0,
+    "u2": 2,
+    "z": 0
+  },
+  {
+    "vertex": 23,
+    "class": "H27",
+    "u1": 0,
+    "u2": 2,
+    "z": 1
+  },
+  {
+    "vertex": 24,
+    "class": "H27",
+    "u1": 0,
+    "u2": 2,
+    "z": 2
+  },
+  {
+    "vertex": 25,
+    "class": "H27",
+    "u1": 1,
+    "u2": 2,
+    "z": 0
+  },
+  {
+    "vertex": 26,
+    "class": "H27",
+    "u1": 1,
+    "u2": 2,
+    "z": 1
+  },
+  {
+    "vertex": 27,
+    "class": "H27",
+    "u1": 1,
+    "u2": 2,
+    "z": 2
+  },
+  {
+    "vertex": 28,
+    "class": "H27",
+    "u1": 2,
+    "u2": 2,
+    "z": 0
+  },
+  {
+    "vertex": 29,
+    "class": "H27",
+    "u1": 2,
+    "u2": 2,
+    "z": 1
+  },
+  {
+    "vertex": 30,
+    "class": "H27",
+    "u1": 2,
+    "u2": 2,
+    "z": 2
+  },
+  {
+    "vertex": 31,
+    "class": "H27",
+    "u1": 0,
+    "u2": 1,
+    "z": 0
+  },
+  {
+    "vertex": 32,
+    "class": "H27",
+    "u1": 0,
+    "u2": 1,
+    "z": 2
+  },
+  {
+    "vertex": 33,
+    "class": "H27",
+    "u1": 0,
+    "u2": 1,
+    "z": 1
+  },
+  {
+    "vertex": 34,
+    "class": "H27",
+    "u1": 2,
+    "u2": 1,
+    "z": 0
+  },
+  {
+    "vertex": 35,
+    "class": "H27",
+    "u1": 2,
+    "u2": 1,
+    "z": 2
+  },
+  {
+    "vertex": 36,
+    "class": "H27",
+    "u1": 2,
+    "u2": 1,
+    "z": 1
+  },
+  {
+    "vertex": 37,
+    "class": "H27",
+    "u1": 1,
+    "u2": 1,
+    "z": 0
+  },
+  {
+    "vertex": 38,
+    "class": "H27",
+    "u1": 1,
+    "u2": 1,
+    "z": 2
+  },
+  {
+    "vertex": 39,
+    "class": "H27",
+    "u1": 1,
+    "u2": 1,
+    "z": 1
+  }
+]

@@ -141,6 +141,8 @@ and the artifacts generated/updated as part of the “keep going” request.
   - Derived explicit linear label functions for H12 triangles in (u1,u2,z).
 - `python3 tools/w33_local_heisenberg_model.py`
   - Verified a full local reconstruction of W33 from Heisenberg + H12 linear forms.
+- `python3 tools/w33_local_heisenberg_table.py`
+  - Emitted a concrete table mapping all 40 vertices into the local model.
 - Updated CI paths + proof test inputs:
   - Added `claude_workspace/run_sage.sh` wrapper so the `sage-verification` workflow can find the script.
   - Fixed `src/PROOF_MINUS_ONE.py` to use repo‑relative data paths.
@@ -896,6 +898,18 @@ The model matches the actual W33 adjacency **exactly** (0 mismatches).
 
 See `artifacts/w33_local_heisenberg_model.md`.
 
+### 1aw‑c9) Explicit coordinate table for all 40 vertices
+
+We produced an explicit mapping of each W33 vertex to:
+
+- Base vertex (v0),
+- H12 triangle + label, or
+- H27 Heisenberg coordinates (u1,u2,z)
+
+This table makes the reconstruction fully concrete and reproducible.
+
+See `artifacts/w33_local_heisenberg_table.md`.
+
 ### 1aw‑d) Affine/Latin cube tests (negative under 27‑tuple assumption)
 
 We tested whether a 27‑tuple encoding could be:
@@ -1119,6 +1133,8 @@ The digest summarizes hit counts at 0.1%, 0.5%, 1%, 5%, 10% tolerances. See
 - `artifacts/h12_triangle_label_functions.json`
 - `artifacts/w33_local_heisenberg_model.md`
 - `artifacts/w33_local_heisenberg_model.json`
+- `artifacts/w33_local_heisenberg_table.md`
+- `artifacts/w33_local_heisenberg_table.json`
 - `artifacts/h12_h27_incidence_patterns.md`
 - `artifacts/h12_h27_incidence_patterns.json`
 - `artifacts/witting_pg32_polarity_search.md`
