@@ -457,6 +457,64 @@ There are no free parameters:
 ---
 
 
+## APPENDIX: VERIFICATION & REPRODUCIBILITY MAP
+
+This appendix lists the exact scripts and artifacts that reproduce the
+mathematical and physical claims in this proof. Run in the repo root.
+
+### Core W33 Structure
+- `python w33_baseline_audit.py`
+  - Checks SRG(40,12,2,4) invariants and adjacency structure.
+- `python w33_baseline_audit_suite.py`
+  - Cross-validates counts, degree, spectrum, and automorphisms.
+- `python tools/w33_e8_triality_bijection.py`
+  - Triality axis counts and W33/E8 structure alignment.
+
+### E6/E8 Orbit Structure & Explicit Mapping
+- `python tools/e6_we6_orbit_refined.py`
+  - Computes E6-in-E8 embedding and W(E6) orbit split on E8 roots.
+  - Output: `artifacts/e6_we6_orbit_refined.json`
+- `python tools/explicit_bijection_decomposition.py`
+  - Builds the explicit 240↔240 W33-edge→E8-root mapping.
+  - Output: `artifacts/explicit_bijection_decomposition.json`
+
+### H27 / Jordan / Heisenberg Verification
+- `python tools/h27_heisenberg_model.py`
+  - Confirms Cayley graph structure for H27.
+  - Output: `artifacts/h27_heisenberg_model.json`
+- `python tools/h27_jordan_algebra_test.py`
+  - Verifies Jordan algebra constraints for H27.
+  - Output: `artifacts/h27_jordan_algebra_test.json`
+
+### Physics Signal Checks (Tier‑1 Evidence)
+- `python -X utf8 src/color_singlet_test.py`
+  - Z3=0 for all K4 components (color singlet constraint).
+- `python -X utf8 src/z4_analysis.py`
+  - Z4=2 for all K4 components (double confinement).
+- `python -X utf8 src/final_v23_analysis.py`
+  - Parity/fermion‑boson separation and v23 structure.
+
+### Summary Builders
+- `python tools/build_final_summary_table.py`
+  - Output: `artifacts/final_summary_table.json`
+- `python tools/build_verification_digest.py`
+  - Output: `artifacts/verification_digest.json`
+
+### Optional (Sage)
+- `python sage_verify.py`
+  - Produces `PART_CXIII_sagemath_verification.json`
+
+Run order (minimal):
+```
+python w33_baseline_audit.py
+python w33_baseline_audit_suite.py
+python tools/e6_we6_orbit_refined.py
+python tools/explicit_bijection_decomposition.py
+python -X utf8 src/color_singlet_test.py
+python -X utf8 src/z4_analysis.py
+python -X utf8 src/final_v23_analysis.py
+```
+
 ## APPENDIX: EXPLICIT W33↔E8 BIJECTION SCHEMA
 
 This appendix summarizes the deterministic 240→240 mapping built in:
