@@ -1,4 +1,6 @@
 # W33 Google Scholar Deep Dive - Session Summary
+> **Standardization Notice (Canonical):** See `STANDARDIZATION.md` for naming, incidence counts, and group orders.
+
 
 ## Executive Summary
 
@@ -107,7 +109,7 @@ While the mathematical structures are well-established, W33 theory provides:
 
 ## What We've Validated
 
-✅ W33 = PG(3, GF(3)) is Edge's "space S" from 1954
+✅ W33 is the point graph of W(3,3) in PG(3, GF(3)) is Edge's "space S" from 1954
 ✅ Aut(W33) = W(E₆) = 51840 (established in group theory)
 ✅ 25920 = PSp₄(3) (Hoffman & Weintraub)
 ✅ 27-dim Jordan algebra → particle physics (Todorov, Singh)

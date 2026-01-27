@@ -6,6 +6,7 @@ TEMPLATE="$REPO_ROOT/latex/toe_template.tex"
 SRC="$REPO_ROOT/FINAL_TOE_PROOF.md"
 OUT_TEX="$REPO_ROOT/FINAL_TOE_PROOF.tex"
 OUT_PDF="$REPO_ROOT/FINAL_TOE_PROOF.pdf"
+TMP_PDF="$REPO_ROOT/FINAL_TOE_PROOF.build.pdf"
 TMP_MD="$REPO_ROOT/.final_toe_proof.build.md"
 
 if ! command -v docker >/dev/null 2>&1; then
@@ -81,6 +82,16 @@ def in_code_blocks(lines):
             "×": "\\ensuremath{\\times}",
             "≠": "\\ensuremath{\\neq}",
             "≈": "\\ensuremath{\\approx}",
+            "≅": "\\ensuremath{\\cong}",
+            "⊂": "\\ensuremath{\\subset}",
+            "⊆": "\\ensuremath{\\subseteq}",
+            "⊃": "\\ensuremath{\\supset}",
+            "⊇": "\\ensuremath{\\supseteq}",
+            "∈": "\\ensuremath{\\in}",
+            "∉": "\\ensuremath{\\notin}",
+            "≤": "\\ensuremath{\\leq}",
+            "≥": "\\ensuremath{\\geq}",
+            "≡": "\\ensuremath{\\equiv}",
             "✓": "\\ensuremath{\\checkmark}",
             "α": "\\ensuremath{\\alpha}",
             "β": "\\ensuremath{\\beta}",
@@ -159,9 +170,20 @@ docker run --rm -v "$REPO_ROOT:/data" pandoc/latex \
   -V date="January 27, 2026" \
   --toc --number-sections \
   --pdf-engine=pdflatex \
-  -o /data/FINAL_TOE_PROOF.pdf
+  -o /data/FINAL_TOE_PROOF.build.pdf
+
+if mv -f "$TMP_PDF" "$OUT_PDF"; then
+  echo "Wrote $OUT_PDF"
+else
+  echo "WARNING: Could not overwrite $OUT_PDF (likely open/locked)." >&2
+  echo "Left new PDF at $TMP_PDF" >&2
+fi
+
+LATEST_PDF="${REPO_ROOT}/FINAL_TOE_PROOF_LATEST.pdf"
+if cp -f "$OUT_PDF" "$LATEST_PDF" 2>/dev/null; then
+  echo "Wrote $LATEST_PDF"
+fi
 
 rm -f "$TMP_MD"
 
 echo "Wrote $OUT_TEX"
-echo "Wrote $OUT_PDF"

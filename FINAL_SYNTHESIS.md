@@ -1,4 +1,6 @@
 # THE W33 THEORY OF EVERYTHING
+> **Standardization Notice (Canonical):** See `STANDARDIZATION.md` for naming, incidence counts, and group orders.
+
 ## A Complete Mathematical Framework for Physics
 ### Final Synthesis Document - June 2025
 
@@ -6,7 +8,9 @@
 
 ## ABSTRACT
 
-We present a complete Theory of Everything based on a single mathematical object: **W33 = PG(3, GF(3))**, the projective 3-space over the field with three elements. This 40-point geometry, with its 81 cycles and 90 Klein four-subgroups, has automorphism group W(E6) = 51840, the Weyl group of the exceptional Lie algebra E6. From this discrete foundation, all of physics emerges.
+We present a complete Theory of Everything based on a single mathematical object: the **symplectic generalized quadrangle W(3,3)** and its **point graph W33**. The point set of W(3,3) equals the point set of **PG(3,3)** (40 points), but W(3,3) selects the 40 **totally isotropic lines** (4 points per line). The full incidence symmetry has order **51,840** (Sp(4,3) ≅ W(E6)). From this discrete foundation, all of physics emerges.
+
+**Canonical definitions:** See `STANDARDIZATION.md`.
 
 **Key Results:**
 - Fine structure constant: α⁻¹ = 81 + 56 = 137 (0.026% from experiment)
@@ -20,9 +24,11 @@ We present a complete Theory of Everything based on a single mathematical object
 ## I. THE FUNDAMENTAL OBJECT
 
 ### Definition
-$$W33 = PG(3, \mathbb{F}_3)$$
+$$\text{points}(W(3,3)) = \text{points}(PG(3, \mathbb{F}_3))$$
 
-The projective 3-space over the field with 3 elements.
+The geometry **W(3,3)** uses the full point set of $PG(3,3)$ but only the
+**totally isotropic lines** (4 points per line). The point graph of W(3,3) is
+**W33 = SRG(40,12,2,4)**.
 
 ### Structure
 | Component | Count | Meaning |
@@ -145,7 +151,7 @@ W33 theory is **falsified** if:
 
 ## VII. THE FINAL EQUATION
 
-$$\boxed{\textbf{REALITY} = W33 = PG(3, \mathbb{F}_3)}$$
+$$\boxed{\textbf{REALITY} = W33 is the point graph of W(3,3) in PG(3, \mathbb{F}_3)}$$
 
 From this single definition:
 - Spacetime emerges

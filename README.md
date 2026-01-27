@@ -5,6 +5,8 @@
 **Date:** January 2026  
 **Status:** ✅ **100 PARTS COMPLETE**
 
+**Canonical definitions:** See `STANDARDIZATION.md` (W(3,3) vs W33, incidence counts, group orders).
+
 ---
 
 ## 🎯 The Equation of Everything

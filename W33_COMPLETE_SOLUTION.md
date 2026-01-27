@@ -1,5 +1,9 @@
 # W33 THEORY OF EVERYTHING - COMPLETE SOLUTION
 
+> **Standardization Notice (Canonical):** This document predates the repo-wide
+> standardization. If any definition or group order here conflicts with
+> `STANDARDIZATION.md`, the standardization file is authoritative.
+
 ## THE FINAL ANSWER
 
 The W33 geometry (generalized quadrangle GQ(3,3)) is **THE THEORY OF EVERYTHING**.
@@ -264,7 +268,7 @@ W33 (GQ(3,3)) is the **only** finite geometry with:
 4. 90 K4 components
 5. 45-vertex Q45 quotient (= SU(5) dimension)
 6. 5,280 triangles with perfect parity-centers correlation
-7. 155,520 automorphisms (PGU(3,3))
+7. Aut_inc = 51,840 (Aut_pts = 25,920) (PGU(3,3))
 
 **No other geometry has ALL these properties.**
 

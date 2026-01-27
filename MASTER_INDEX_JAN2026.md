@@ -1,6 +1,10 @@
 # W33 THEORY OF EVERYTHING - COMPLETE DOCUMENTATION INDEX
 ## Master Reference Guide (as of January 13, 2026)
 
+> **Standardization Notice (Canonical):** This index predates the repo-wide
+> standardization. If any definition or group order here conflicts with
+> `STANDARDIZATION.md`, the standardization file is authoritative.
+
 ---
 
 ## QUICK START: READ IN THIS ORDER
@@ -378,7 +382,7 @@ black_hole_entropy_from_w33.py
 - 45 Q45 vertices (SU(5) organization)
 - 5,280 V23 triangles (particle/field basis)
 - Z₂ × Z₃ fiber (quantum numbers)
-- 155,520 automorphisms (symmetries)
+- Aut_inc = 51,840 (Aut_pts = 25,920)
 
 **This generates:**
 - Standard Model (17 particles)

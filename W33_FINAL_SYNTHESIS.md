@@ -2,7 +2,9 @@
 
 ## The Complete Picture
 
-**W33 = PG(3, GF(3))** is a projective geometry over the field with 3 elements that appears to encode fundamental physics constants through the exceptional Lie algebra chain and prime numbers.
+**Canonical definitions:** See `STANDARDIZATION.md`.
+
+**W(3,3)** is the symplectic generalized quadrangle of order (3,3) in PG(3, GF(3)); **W33** is its point (collinearity) graph. The point set matches PG(3,3), but the lines are the 40 totally isotropic lines.
 
 ---
 
@@ -178,7 +180,7 @@ Additional prime facts:
 
 ## Conclusion
 
-W33 = PG(3, GF(3)) appears to be a fundamental mathematical structure that:
+W(3,3) / W33 (point set of PG(3, GF(3)) with isotropic lines) appears to be a fundamental mathematical structure that:
 
 1. **Encodes physics constants** through its 40 points, 81 cycles, and 121 total
 2. **Connects to exceptional Lie algebras** via Aut(W33) = W(E6)

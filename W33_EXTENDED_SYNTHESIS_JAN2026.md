@@ -1,6 +1,10 @@
 # W33 THEORY OF EVERYTHING - EXTENDED SYNTHESIS
 ## January 2026 - The Complete Physics Framework
 
+> **Standardization Notice (Canonical):** This document predates the repo-wide
+> standardization. If any definition or group order here conflicts with
+> `STANDARDIZATION.md`, the standardization file is authoritative.
+
 ---
 
 ## EXECUTIVE SUMMARY
@@ -34,7 +38,7 @@ Components:
   40 points (fundamental building blocks)
   40 lines (1-dimensional structures)
   Perfect point-line duality
-  155,520 automorphisms (PGU(3,3) group)
+  Aut_inc = 51,840 (Aut_pts = 25,920) (PGU(3,3) group)
 ```
 
 **Why W33?**

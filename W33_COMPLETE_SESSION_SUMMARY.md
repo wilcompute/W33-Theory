@@ -1,8 +1,10 @@
 # W33 THEORY - COMPLETE SESSION SUMMARY
+> **Standardization Notice (Canonical):** See `STANDARDIZATION.md` for naming, incidence counts, and group orders.
+
 
 ## Overview
 
-This session explored the deep mathematical structure of W33 = PG(3, GF(3)), a projective space over the field with 3 elements, and its extraordinary connections to fundamental physics.
+This session explored the deep mathematical structure of W33 is the point graph of W(3,3) in PG(3, GF(3)), a projective space over the field with 3 elements, and its extraordinary connections to fundamental physics.
 
 ---
 
@@ -224,7 +226,7 @@ generations = 81/27 = 3     (EXACT)
 
 ## Conclusion
 
-W33 = PG(3, GF(3)) appears to be a **"finite shadow"** of the exceptional structures underlying fundamental physics. The evidence is compelling:
+W33 is the point graph of W(3,3) in PG(3, GF(3)) appears to be a **"finite shadow"** of the exceptional structures underlying fundamental physics. The evidence is compelling:
 
 1. **Symmetry**: Aut(W33) = W(E6), connecting to exceptional Lie algebras
 2. **Fine Structure**: α⁻¹ = 137 emerges from W33 counts

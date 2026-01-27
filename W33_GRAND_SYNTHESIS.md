@@ -1,4 +1,6 @@
 # W33 THEORY OF EVERYTHING - GRAND SYNTHESIS
+> **Standardization Notice (Canonical):** See `STANDARDIZATION.md` for naming, incidence counts, and group orders.
+
 ## From Finite Geometry to the Monster: A Mathematical Theory of Reality
 
 ---
@@ -287,7 +289,7 @@ W33 → τ(11) ≡ 0 (mod 121) → Δ(τ) → j(τ) → Moonshine
 
 ## Conclusion
 
-The finite geometry W33 = PG(3, GF(3)) appears to be a fundamental structure encoding:
+The finite geometry W33 is the point graph of W(3,3) in PG(3, GF(3)) appears to be a fundamental structure encoding:
 
 1. **The exceptional Lie algebra hierarchy** through Aut(W33) = W(E6)
 2. **Physical constants** through 137 = 81 + 56 and sin²θ_W = 40/173

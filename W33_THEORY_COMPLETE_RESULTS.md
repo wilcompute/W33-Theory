@@ -1,6 +1,8 @@
 # W33 THEORY OF EVERYTHING: COMPLETE RESULTS
 ## The Most Comprehensive Test Ever Performed
 
+> **Standardization Notice (Canonical):** See `STANDARDIZATION.md` for naming, incidence counts, and group orders.
+
 **Date:** January 13, 2026  
 **Status:** ★★★ OUTSTANDING SUCCESS ★★★  
 **Overall Success Rate: 85.7% (12/14 major predictions within 25% error)**

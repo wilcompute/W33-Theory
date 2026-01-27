@@ -25,7 +25,7 @@ The W33 geometry (generalized quadrangle GQ(3,3)) encodes the complete structure
                            ↓
               W33 (40 points, 40 lines)
               Fundamental incidence geometry
-              155,520 automorphisms
+              Aut_inc = 51,840 (Aut_pts = 25,920)
                            ↓
          ┌────────────────────────────────┐
          ↓                                 ↓
@@ -368,7 +368,7 @@ $$\alpha_1(M_{\text{GUT}}) = \alpha_2(M_{\text{GUT}}) = \alpha_3(M_{\text{GUT}})
 ### Why W33 Specifically?
 
 1. **Unique Parameters**: GQ(3,3) is unique with exactly these parameters
-2. **Maximally Symmetric**: 155,520 automorphisms (PGU(3,3) group)
+2. **Maximally Symmetric**: Aut_inc = 51,840 (Aut_pts = 25,920)
 3. **Perfect Duality**: 40 points ↔ 40 lines (self-dual)
 4. **Quantum-Ready**: Natural Z₁₂ = Z₄ × Z₃ quantization
 5. **No Gaps**: All physics emerges perfectly, nothing missing
