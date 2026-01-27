@@ -118,6 +118,66 @@ errors reflect the internal consistency of the formulas with those values.
 ALL major W33 numbers factor as (Algebra) × 40:
 - 3240 = 81 × 40 (flux × spacetime)
 - 2880 = 72 × 40 (E₆ roots × spacetime)
+
+## 2. Local Heisenberg Decomposition (1 + 12 + 27) — Verified
+
+Fix any base vertex v0. The 40 vertices decompose as:
+
+- **1**: the base vertex v0
+- **12**: H12 = 4 disjoint triangles (neighbors of v0)
+- **27**: H27 = non-neighbors of v0
+
+This is not just a count. It admits a **fully explicit local model**:
+
+### (a) H27 = Heisenberg Cayley Graph
+
+Identify H27 with **F3^2 × Z3** with coordinates (u,z), u=(u1,u2).
+
+Define the alternating form:
+
+```
+B(u,v) = u2*v1 + 2*u1*v2   (mod 3)
+```
+
+Then adjacency inside H27 is:
+
+```
+(u,z) ~ (v,w)  iff  u != v  and  w = z + B(u,v)
+```
+
+This matches the W33-derived H27 **exactly** (0 mismatches).
+
+### (b) H12 = PG(1,3) × F3 and Linear Forms
+
+The four H12 triangles correspond to the four nonzero linear forms on F3^2:
+
+```
+L0(u)=u2
+L1(u)=u1
+L2(u)=u1+u2
+L3(u)=u1+2*u2
+```
+
+Each H27 vertex (u,z) is adjacent to **exactly one** vertex in each triangle,
+and that vertex is determined by the value of the corresponding linear form.
+
+### (c) Full Local Reconstruction of W33
+
+Combining:
+- Base vertex connected to all H12 vertices
+- H12 triangles internally complete
+- H27 Heisenberg adjacency
+- H12–H27 incidence via the four linear forms
+
+reconstructs the **entire local W33 adjacency** around v0 **exactly**.
+
+This gives a concrete, group-theoretic model of the 1+12+27 structure:
+
+```
+W33 = {v0} ⊔ (PG(1,3) × F3) ⊔ H(3)
+```
+
+where H(3) is the Heisenberg group of order 27.
 - 1080 = 27 × 40 (Jordan × spacetime)
 - 360 = 9 × 40 (3² × spacetime)
 - 240 = 6 × 40 (SU(3) roots × spacetime)
