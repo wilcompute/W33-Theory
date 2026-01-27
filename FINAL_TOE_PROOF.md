@@ -129,6 +129,8 @@ expressed in W33 vertex labels via the orbit-graph isomorphism.
 
 **Verifier:** `tools/verify_e8_root_edge_bijection.py`
 
+**Build PDF:** `scripts/build_toe_pdf.sh` (produces `FINAL_TOE_PROOF.tex` and `FINAL_TOE_PROOF.pdf`)
+
 ---
 
 ## PART 2: K4 COMPONENTS AND UNIVERSAL QUANTIZATION

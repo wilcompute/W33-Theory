@@ -1,4 +1,4 @@
-.PHONY: generate-summary test
+.PHONY: generate-summary test check-json verify-root-edge build-pdf
 
 generate-summary:
 	python scripts/collect_results.py
@@ -10,4 +10,10 @@ test: generate-summary
 
 check-json:
 	python -m pytest -q tests/test_json_serialization.py tests/test_json_safe.py -q
+
+verify-root-edge:
+	./scripts/verify_root_edge_mapping.sh
+
+build-pdf:
+	./scripts/build_toe_pdf.sh
 
