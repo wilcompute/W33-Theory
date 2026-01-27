@@ -123,6 +123,12 @@ expressed in W33 vertex labels via the orbit-graph isomorphism.
 **Reproducible artifact:** `artifacts_archive/e8_root_to_w33_edge.json`  
 **Script:** `tools/sage_e8_root_edge_bijection.py`
 
+**Mapping tables:**  
+- `artifacts_archive/e8_root_to_w33_edge.csv`  
+- `artifacts_archive/e8_root_to_w33_edge.md`
+
+**Verifier:** `tools/verify_e8_root_edge_bijection.py`
+
 ---
 
 ## PART 2: K4 COMPONENTS AND UNIVERSAL QUANTIZATION
