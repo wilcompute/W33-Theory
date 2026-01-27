@@ -91,6 +91,7 @@ From the Docker Sage suite run on 2026-01-26:
   - H12 triangles correspond to linear forms on F3^2: u1, u2, u1+u2, u1+2u2
   - Full local reconstruction: W33 = {v0} ⊔ (PG(1,3)×F3) ⊔ (Heisenberg H(3))
     with H12–H27 incidence defined by those linear forms
+  - Concrete vertex table produced for the 40-point model
 
 - Triangle co-occurrence graph:
   - 160 triangle vertices, 240 edges (degree 3)
