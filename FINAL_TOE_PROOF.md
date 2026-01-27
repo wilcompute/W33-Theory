@@ -33,6 +33,48 @@ Where:
 - **Z₃**: 3-fold symmetry (color structure)
 - **Direct product**: Appears naturally from W33 structure
 
+
+### 1.3 E6/E8 Interface and Orbit Decomposition (Computed)
+
+**Lemma (E6-in-E8 embedding).** The E6 root subsystem is the subset of E8 roots
+orthogonal to:
+```
+u1 = (1,1,1,1,1,1,1,1)
+u2 = (1,1,1,1,1,1,-1,-1)
+```
+This yields exactly **72 E6 roots**.
+
+**Lemma (E6 orbit decomposition).** The action of W(E6) on the full E8 root set
+splits into:
+```
+240 = 72 + 27 + 27 + 27 + 27 + 27 + 27 + 1 + 1 + 1 + 1 + 1 + 1
+```
+which matches the standard decomposition:
+```
+240 = 72 (E6) + 6 (SU3) + 27×3 + 27bar×3bar
+```
+
+**Corollary (Equivariance obstruction).** PSp(4,3) acts transitively on the 240
+W33 edges, but its realizations inside W(E8) act on a **27-orbit**, not on the
+full 240 roots. Therefore a single-orbit equivariant map
+W33-edges -> E8-roots is not possible under PSp(4,3) alone. The correct
+structure is the 27-sector (H27), lifted across the SU(3) phase classes.
+
+**Explicit bijection (constructed).** A deterministic, fully explicit mapping
+from W33 edges to E8 roots aligned with the E6×SU(3) decomposition is provided
+in:
+```
+artifacts/explicit_bijection_decomposition.json
+```
+and produced by:
+```
+tools/explicit_bijection_decomposition.py
+```
+The W33 edge decomposition used is:
+```
+240 = 108 (H27 edges) + 108 (cross edges) + 12 (H12 edges) + 12 (incident edges)
+```
+
 ---
 
 ## PART 2: K4 COMPONENTS AND UNIVERSAL QUANTIZATION
