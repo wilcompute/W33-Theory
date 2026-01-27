@@ -16,6 +16,22 @@ From the repo root:
 That script installs micromamba + Sage (conda-forge) and clones PySymmetry into
 `external/pysymmetry`, then runs a smoke test.
 
+## Docker quickstart (recommended if you already have Docker)
+
+From the repo root:
+
+```bash
+./scripts/setup_sage_pysymmetry_docker.sh
+```
+
+This will:
+1. Pull `sagemath/sagemath:10.7`
+2. Clone PySymmetry into `external/pysymmetry`
+3. Run a Sage + PySymmetry smoke test inside the container
+
+After that, `./run_sage.sh ...` will automatically use Docker if no local Sage
+is found.
+
 ## Why `external/sage/bin/sage` won’t run in PowerShell
 
 On Windows, `external/sage/bin/sage` is a `#!/usr/bin/env bash` script. It requires a POSIX shell (`bash`) + the usual Linux userland.

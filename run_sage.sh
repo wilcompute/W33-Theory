@@ -17,7 +17,7 @@ PYSYM_PATHS=(
     "${REPO_ROOT}/lib/pysymmetry_deck_z2_integration_patch"
 )
 
-# Prefer micromamba sage env, then system sage
+# Prefer micromamba sage env, then system sage, then bundled Sage, then Docker
 if [ -x "$HOME/bin/micromamba" ]; then
     # Use micromamba run to execute in sage environment
     SAGE_CMD="$HOME/bin/micromamba run -n sage sage"
@@ -26,6 +26,9 @@ elif command -v sage >/dev/null 2>&1; then
 elif [ -x "${REPO_ROOT}/external/sage/bin/sage" ]; then
     # Fallback: bundled Sage tree (bash-based). Works only if it is a functional Sage install.
     SAGE_CMD="${REPO_ROOT}/external/sage/bin/sage"
+elif command -v docker >/dev/null 2>&1; then
+    SAGE_MODE="docker"
+    SAGE_IMAGE="${SAGE_DOCKER_IMAGE:-sagemath/sagemath:10.7}"
 else
     echo "ERROR: Could not find Sage. Install Sage inside WSL (recommended) or ensure external/sage/bin/sage is usable." >&2
     exit 1
@@ -49,15 +52,44 @@ else
 fi
 cd "${REPO_ROOT}"
 
-if [ $# -eq 0 ]; then
-    exec ${SAGE_CMD} -python
+if [ "${SAGE_MODE:-}" = "docker" ]; then
+    DOCKER_USER_ARGS=()
+    if command -v id >/dev/null 2>&1; then
+        DOCKER_USER_ARGS=(--user "$(id -u):$(id -g)")
+    fi
+
+    DOCKER_RUN=(
+        docker run --rm
+        -v "${REPO_ROOT}:/work"
+        -w /work
+        "${DOCKER_USER_ARGS[@]}"
+        -e "PYTHONPATH=${PYTHONPATH}"
+        "${SAGE_IMAGE}"
+    )
+
+    if [ $# -eq 0 ]; then
+        exec "${DOCKER_RUN[@]}" sage -python
+    else
+        case "$1" in
+            *.sage)
+                exec "${DOCKER_RUN[@]}" sage "$@"
+                ;;
+            *)
+                exec "${DOCKER_RUN[@]}" sage -python "$@"
+                ;;
+        esac
+    fi
 else
-    case "$1" in
-        *.sage)
-            exec ${SAGE_CMD} "$@"
-            ;;
-        *)
-            exec ${SAGE_CMD} -python "$@"
-            ;;
-    esac
+    if [ $# -eq 0 ]; then
+        exec ${SAGE_CMD} -python
+    else
+        case "$1" in
+            *.sage)
+                exec ${SAGE_CMD} "$@"
+                ;;
+            *)
+                exec ${SAGE_CMD} -python "$@"
+                ;;
+        esac
+    fi
 fi
