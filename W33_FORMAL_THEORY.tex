@@ -117,6 +117,12 @@ The theory explains why there are exactly 3 fermion generations ($81/27 = 3$), w
 \noindent\textbf{Keywords:} unified field theory, exceptional Lie algebras, finite geometry, Weinberg angle, fine structure constant, dark matter, cosmological constant, M-theory, Witting polytope
 \end{abstract}
 
+\section*{Standardization (Canonical)}
+\addcontentsline{toc}{section}{Standardization (Canonical)}
+\noindent\textbf{Geometry.} $W(3,3)$ denotes the \emph{symplectic generalized quadrangle} of order $(3,3)$ in $PG(3,3)$, constructed from a nondegenerate alternating form on $\mathbb{F}_3^4$. It has 40 points and 40 totally isotropic lines, with \textbf{4 points per line} and \textbf{4 lines per point}.\\
+\textbf{Graph.} $W33$ denotes the point (collinearity) graph of $W(3,3)$, which is $\mathrm{SRG}(40,12,2,4)$ with 240 edges.\\
+\textbf{Symmetries.} The full incidence symmetry satisfies $\mathrm{Aut}_{\mathrm{inc}}(W(3,3)) \cong \mathrm{Sp}(4,3) \cong W(E_6)$ of order $51{,}840$. The point-graph symmetry is $\mathrm{Aut}_{\mathrm{pts}}(W33)\cong \mathrm{PSp}(4,3)$ of order $25{,}920$ (index $2$).
+
 \newpage
 \tableofcontents
 \newpage
@@ -129,7 +135,10 @@ The theory explains why there are exactly 3 fermion generations ($81/27 = 3$), w
 \subsection{Definition and Origin}
 
 \begin{definition}[W(3,3) Configuration]
-The W(3,3) configuration (Witt configuration) is defined as the configuration of external points with respect to an oval in the projective plane $\mathrm{PG}(2,3)$ over the field with 3 elements.
+The \textbf{symplectic generalized quadrangle} $W(3,3)$ is the polar space of totally
+isotropic points and lines in $PG(3,3)$ with respect to a nondegenerate alternating
+form on $\mathbb{F}_3^4$. Its point graph is the strongly regular graph $W33$ with
+parameters $(40,12,2,4)$.
 \end{definition}
 
 This structure was first studied by Ernst Witt in connection with the Mathieu groups and has deep connections to coding theory and combinatorics.
@@ -147,7 +156,10 @@ The W(3,3) configuration has exactly:
 \end{theorem}
 
 \begin{proof}
-The point and line counts follow from the definition of external points to an oval in $\mathrm{PG}(2,3)$. The cycle count $81 = 3^4$ follows from the combinatorial structure. The K4 count is established by direct enumeration of index-2 subgroups. See \cite{coolsaet2004} for complete details.
+The point and line counts follow from standard formulas for the symplectic generalized
+quadrangle of order $(3,3)$. The cycle count $81 = 3^4$ follows from the
+combinatorial structure and is verified computationally in this repo. The $K_4$
+count is established by direct enumeration in the verified scripts.
 \end{proof}
 
 \begin{observation}[The Unity of 121]

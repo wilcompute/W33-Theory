@@ -1,10 +1,12 @@
 # W33 Ultimate Synthesis: Exceptional Lie Algebra Connection
+> **Standardization Notice (Canonical):** See `STANDARDIZATION.md` for naming, incidence counts, and group orders.
+
 
 Generated: 2026-01-14 15:29:27
 
 ## Executive Summary
 
-W33 = PG(3, GF(3)) is embedded in the exceptional Lie algebra chain F4 ⊂ E6 ⊂ E7 ⊂ E8
+W33 is the point graph of W(3,3) in PG(3, GF(3)) is embedded in the exceptional Lie algebra chain F4 ⊂ E6 ⊂ E7 ⊂ E8
 through precise numerical relationships that predict physics constants.
 
 ## The Master Equations

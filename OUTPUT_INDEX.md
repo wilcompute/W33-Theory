@@ -4,7 +4,9 @@ Generated: January 2026
 
 ## Overview
 
-This folder contains the complete research on W33 = PG(3, GF(3)) and its connections to:
+**Canonical definitions:** See `STANDARDIZATION.md`.
+
+This folder contains the complete research on W(3,3) / W33 (point set of PG(3, GF(3)) with isotropic lines) and its connections to:
 - Monstrous Moonshine and the Monster group
 - Exceptional Lie algebras F4 ⊂ E6 ⊂ E7 ⊂ E8
 - Physics constants (α, sin²θ_W, Ω_Λ)

@@ -3,6 +3,8 @@
 **Author:** Wil Dahn  
 **Date:** January 2026
 
+**Canonical definitions:** See `STANDARDIZATION.md` (W(3,3) vs W33, incidence counts, group orders).
+
 ## Overview
 
 This repository contains the complete development of a unified theory of physics based on the **W(3,3) configuration** - a finite geometry consisting of 40 points, 40 lines, 81 cycles, and 90 Klein four-groups.

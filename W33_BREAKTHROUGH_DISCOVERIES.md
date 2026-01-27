@@ -1,4 +1,6 @@
 # W33 BREAKTHROUGH DISCOVERIES
+
+> **Standardization Notice (Canonical):** See `STANDARDIZATION.md` for naming, incidence counts, and group orders.
 ## Intuition-Driven Exploratory Research Results
 
 **Date:** January 13, 2026  

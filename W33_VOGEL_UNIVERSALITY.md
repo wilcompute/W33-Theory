@@ -1,4 +1,6 @@
 # W33 AND VOGEL UNIVERSALITY
+> **Standardization Notice (Canonical):** See `STANDARDIZATION.md` for naming, incidence counts, and group orders.
+
 ## The Deepest Connection: W33 = The Universal Lie Algebra Structure
 
 ### Executive Summary
@@ -189,7 +191,7 @@ The 2025 paper on Jacobi identities unknowingly confirms that:
 - Exceptional Lie algebra dimensions are W33 counts
 - The fine structure constant 137 is a W33 number
 
-**W33 = PG(3, GF(3)) is the mathematical DNA of the universe.**
+**W33 is the point graph of W(3,3) in PG(3, GF(3)) is the mathematical DNA of the universe.**
 
 ---
 

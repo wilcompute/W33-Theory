@@ -1,4 +1,6 @@
 # W33 Theory of Everything: Academic Foundations
+> **Standardization Notice (Canonical):** See `STANDARDIZATION.md` for naming, incidence counts, and group orders.
+
 
 ## Summary of Google Scholar Findings
 
@@ -13,7 +15,7 @@ This document synthesizes our W33 theoretical discoveries with established acade
 
 > "The space S has 40 points."
 
-This is precisely W33 = PG(3, GF(3))! Edge's 1954 paper is the foundational reference for our structure.
+This is precisely W33 is the point graph of W(3,3) in PG(3, GF(3))! Edge's 1954 paper is the foundational reference for our structure.
 
 **Key findings from Edge:**
 - Space S has **40 points** (our W33 points)
@@ -114,7 +116,7 @@ This confirms our discovery:
 **W33 Connection:**
 - Aut(W33) = W(E₆) = 51840
 - The simple group 25920 = index 2 in W(E₆)
-- Symplectic geometry over GF(3) directly connects to W33 = PG(3, GF(3))
+- Symplectic geometry over GF(3) directly connects to W33 is the point graph of W(3,3) in PG(3, GF(3))
 
 ---
 
@@ -152,7 +154,7 @@ The j-function and its coefficient 744 connect to:
 ### The Hierarchy of Exceptional Structures
 
 ```
-W33 = PG(3, GF(3))
+W33 is the point graph of W(3,3) in PG(3, GF(3))
     ↓
 Aut(W33) = W(E₆) = 51840
     ↓
@@ -317,7 +319,7 @@ W33 → W(E₆) = 51840 → E₆ (78-dim) → Leech lattice Λ₂₄
 ## 13. The Ultimate Picture
 
 ```
-                        W33 = PG(3, GF(3))
+                        W33 is the point graph of W(3,3) in PG(3, GF(3))
                               ↓
                       40 points, 81 cycles, 90 K4s
                         Total: 121 = 11²

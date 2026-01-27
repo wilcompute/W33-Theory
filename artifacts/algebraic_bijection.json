@@ -1,0 +1,13 @@
+{
+  "w33_edges": 240,
+  "e8_roots": 240,
+  "edge_invariant_classes": 1,
+  "d4_classes": {
+    "D4_vector": 48,
+    "D4_spinor_plus": 0,
+    "D4_spinor_minus": 0,
+    "mixed": 192
+  },
+  "bijection_type": "group-equivariant",
+  "conclusion": "240 edges <-> 240 roots via Sp(4,3) = W(E6) isomorphism"
+}

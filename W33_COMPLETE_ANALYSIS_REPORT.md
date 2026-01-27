@@ -1,10 +1,12 @@
 # W33 Complete Analysis Report
+> **Standardization Notice (Canonical):** See `STANDARDIZATION.md` for naming, incidence counts, and group orders.
+
 
 Generated: 2026-01-14 15:26:38
 
 ## Executive Summary
 
-W33 = PG(3, GF(3)) appears to be a fundamental mathematical structure connecting:
+W33 is the point graph of W(3,3) in PG(3, GF(3)) appears to be a fundamental mathematical structure connecting:
 - Physics constants (α, sin²θ_W, Ω_Λ)
 - Monstrous Moonshine and the Monster group
 - K3 surfaces and Mathieu moonshine
@@ -40,7 +42,7 @@ This directly connects W33 to Monstrous Moonshine!
 ## 4. The Chain of Connections
 
 ```
-W33 = PG(3, GF(3))
+W33 is the point graph of W(3,3) in PG(3, GF(3))
     │
     ├── 81 cycles = 3⁴
     │       │
@@ -57,7 +59,7 @@ Ternary Golay → M12 → A₂¹² Niemeier → Leech → Monster
 
 ## 5. Master Equations
 
-- W33 = PG(3, GF(3))
+- W33 is the point graph of W(3,3) in PG(3, GF(3))
 - |W33| = 40 + 81 = 121 = 11²
 - Aut(W33) = W(E6) = 51840
 - α⁻¹ = 81 + 56 = 137

@@ -4,6 +4,8 @@
 
 The finite incidence geometry **W33** (the generalized quadrangle GQ(3,3)) encodes the structure of the **Standard Model of particle physics** at the fundamental level.
 
+**Canonical definitions:** See `STANDARDIZATION.md` (W(3,3) vs W33, incidence counts, group orders).
+
 **Key Discovery**: All geometric properties of W33 correspond directly to physical observables:
 - Color confinement (SU(3))
 - Weak isospin (SU(2))
@@ -24,11 +26,14 @@ auto-generated tables in `artifacts/final_summary_table.md` and
 ## PART I: The W33 Geometry
 
 ### What is W33?
-- **40 points** in a highly symmetric incidence structure
-- Every point lies on exactly **3 lines**
-- Every line contains exactly **3 points**
-- 40 points + 40 lines in perfect duality
-- Automorphism group: **Aut(W33) ≅ PGU(3,3)** (155,520 elements)
+- **W(3,3)** is the symplectic generalized quadrangle of order (3,3) in **PG(3,3)**
+- **40 points** and **40 lines** (self-dual incidence structure)
+- **Each line has 4 points**
+- **Each point lies on 4 lines**
+- **Point graph**: **W33 = SRG(40,12,2,4)** with 240 edges
+- **Automorphisms (canonical)**:  
+  - **Aut_inc(W(3,3)) ≅ Sp(4,3) ≅ W(E6)**, order **51,840**  
+  - **Aut_pts(W33) ≅ PSp(4,3)**, order **25,920** (index 2)
 
 ### Why W33 is special:
 1. **Finite**: No infinities (solves renormalization problem)

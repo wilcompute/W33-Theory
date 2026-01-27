@@ -1,4 +1,6 @@
 # W33 GRAND UNIFIED THEORY - COMPLETE SYNTHESIS
+> **Standardization Notice (Canonical):** See `STANDARDIZATION.md` for naming, incidence counts, and group orders.
+
 
 ## Overview
 
@@ -200,7 +202,7 @@ The **E₆⁴ Niemeier lattice** has automorphism group containing W(E6)⁴.
         └────────────────┴────────────────┘
                          |
                          ↓
-              W33 = PG(3, GF(3))
+              W33 is the point graph of W(3,3) in PG(3, GF(3))
               40 points, 81 cycles, 90 K4s
               Total = 121 = 11²
                          |
@@ -251,7 +253,7 @@ The physical universe is fundamentally described by:
 1. **M-theory** as the underlying framework
 2. Compactified on a **T⁶-like structure** (giving 27 charges)
 3. With an inherent **ternary structure** (GF(3))
-4. Encoded geometrically as **W33 = PG(3, GF(3))**
+4. Encoded geometrically as **W33 is the point graph of W(3,3) in PG(3, GF(3))**
 5. With **E6 symmetry** (Aut = W(E6))
 6. Connected to the **Monster** via moonshine
 

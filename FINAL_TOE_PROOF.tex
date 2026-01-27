@@ -144,11 +144,25 @@
 \section{W33 THEORY OF EVERYTHING - FINAL
 PROOF}\label{w33-theory-of-everything---final-proof}
 
+\subsection{STANDARDIZATION
+(CANONICAL)}\label{standardization-canonical}
+
+All definitions and counts follow \texttt{STANDARDIZATION.md}. In
+particular: - \textbf{W(3,3)} = symplectic generalized quadrangle (order
+(3,3)) in \textbf{PG(3,3)}\\
+- \textbf{W33} = point (collinearity) graph of \textbf{W(3,3)}\\
+- \textbf{Lines have 4 points; points lie on 4 lines}\\
+- \textbf{Aut\_inc(W(3,3)) \ensuremath{\cong} Sp(4,3) \ensuremath{\cong}
+W(E6), order 51,840}\\
+- \textbf{Aut\_pts(W33) \ensuremath{\cong} PSp(4,3), order 25,920 (index
+2)}
+
 \subsection{THE FUNDAMENTAL THEOREM}\label{the-fundamental-theorem}
 
 \textbf{THEOREM}: The Standard Model of particle physics is isomorphic
-to the discrete geometric structure of W33 (the generalized quadrangle
-GQ(3,3)) with its natural automorphism group.
+to the discrete geometric structure of \textbf{W33}, the \textbf{point
+(collinearity) graph of the symplectic generalized quadrangle W(3,3)},
+together with its canonical symmetry group.
 
 \textbf{PROOF OUTLINE}:
 
@@ -185,17 +199,53 @@ STRUCTURE}\label{part-1-the-mathematical-structure}
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Finite projective plane} of order 3: GQ(3,3)
+  \textbf{Symplectic generalized quadrangle} of order (3,3):
+  \textbf{W(3,3) \ensuremath{\subset} PG(3,3)}
 \item
-  \textbf{40 points} on a \textbf{40 lines} (perfect duality)
+  \textbf{40 points} and \textbf{40 lines} (self-dual configuration)
 \item
-  Every point on exactly 3 lines
+  \textbf{Each line has 4 points}
 \item
-  Every line contains exactly 3 points
+  \textbf{Each point lies on 4 lines}
 \item
-  \textbf{Automorphism group}: PGU(3,3) with \textbar Aut(W33)\textbar{}
-  = 155,520 elements
+  \textbf{Point graph}: \textbf{W33 = SRG(40,12,2,4)} with 240 edges
+\item
+  \textbf{Automorphisms (canonical)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Aut\_inc(W(3,3)) \ensuremath{\cong} Sp(4,3)
+    \ensuremath{\cong} W(E6)}, order \textbf{51,840}\\
+  \item
+    \textbf{Aut\_pts(W33) \ensuremath{\cong} PSp(4,3)}, order
+    \textbf{25,920} (index 2)
+  \end{itemize}
 \end{itemize}
+
+\subsubsection{1.1a Disambiguation: PG(3,3) vs
+W(3,3)}\label{a-disambiguation-pg33-vs-w33}
+
+Older notes sometimes wrote \textbf{``W33 = PG(3,3)''}. The precise
+statement is:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Point set}: W(3,3) uses the \emph{full} point set of
+  \textbf{PG(3,3)} (40 points).\\
+\item
+  \textbf{Line set}: W(3,3) uses only the \textbf{totally isotropic
+  lines} (40 lines).\\
+\item
+  \textbf{Graph}: W33 is the \textbf{point graph} of W(3,3),
+  i.e.~SRG(40,12,2,4).
+\end{itemize}
+
+So \textbf{PG(3,3)} supplies the ambient projective space;
+\textbf{W(3,3)} is the symplectic polar subgeometry; \textbf{W33} is its
+collinearity graph. This is the canonical naming used throughout the
+standardized documents.
 
 \subsubsection{1.2 Natural Quantization
 Structure}\label{natural-quantization-structure}
@@ -297,45 +347,148 @@ matching.
 \subsubsection{1.5 Explicit Root-to-Edge Bijection
 (Computed)}\label{explicit-root-to-edge-bijection-computed}
 
-Once the 40 orbits (rays) are identified, W33 edges are the 240 orbit
-pairs with orthogonality signature \texttt{(0,0,36,0,0)}. To obtain a
-\textbf{root \ensuremath{\rightarrow} edge} bijection (240
-\ensuremath{\leftrightarrow} 240) without assuming extra symmetry, we
-compute a canonical perfect matching between E8 roots and
-\textbf{incident edges} of their orbit:
+Once the 40 Coxeter‑6 orbits (rays) are identified, W33 edges are the
+240 orbit pairs with orthogonality signature \texttt{(0,0,36,0,0)}.
+There are now \textbf{two} fully explicit constructions of a root
+\ensuremath{\leftrightarrow} edge bijection (240
+\ensuremath{\leftrightarrow} 240):
 
-\begin{itemize}
-\tightlist
-\item
-  Build the bipartite graph:\\
-  left = 240 roots, right = 240 W33 edges\\
-  root \emph{r} is connected to an edge (A,B) iff its orbit is A or B.
-\item
-  Run deterministic Hopcroft--Karp to get a \textbf{perfect matching}.
-\end{itemize}
+\textbf{A. Canonical line‑orbit bijection (deterministic, no matching):}
+- Each W33 edge lies on a \textbf{unique line} (4‑clique), so edges = 40
+lines \ensuremath{\times} 6 edges/line.\\
+- The 40 Coxeter‑6 orbits give 40 six‑cycles of roots.\\
+- Use a \textbf{canonical graph isomorphism} between the orbit graph and
+the \textbf{line graph} of W33\\
+(both SRG(40,12,2,4)), and then map each line's 6 edges to its orbit's 6
+roots via canonical ordering.
 
-This yields an explicit, fully constructive mapping:
+This yields a deterministic, reproducible bijection:
 
 \begin{verbatim}
-root r  ->  W33 edge (orbit(r), orbit-adjacent)
+edge (p,q)  ->  root r in orbit(line(p,q))
 \end{verbatim}
 
-expressed in W33 vertex labels via the orbit-graph isomorphism.
+\textbf{Artifacts:}\\
+- \texttt{artifacts/edge\_to\_e8\_root.json}\\
+- \texttt{artifacts/e8\_root\_to\_edge.json}\\
+- \texttt{artifacts/edge\_root\_bijection\_summary.json}\\
+\textbf{Script:} \texttt{tools/edge\_root\_bijection\_via\_lines.py}
 
-\textbf{Reproducible artifact:}
-\texttt{artifacts\_archive/e8\_root\_to\_w33\_edge.json}\\
-\textbf{Script:} \texttt{tools/sage\_e8\_root\_edge\_bijection.py}
+\textbf{Note on equivariance:} This canonical line‑orbit bijection is
+deterministic but \textbf{not} (yet) equivariant under the full Sp(4,3)
+action. A genuinely equivariant 240‑bijection still requires an explicit
+generator‑level isomorphism Sp(4,3) \ensuremath{\rightarrow}
+W(\(E_{6}\)), which remains the computational frontier.
 
-\textbf{Mapping tables:}\\
+\textbf{New obstruction (computed):} Exhaustive search over \textbf{all
+25,920} edge‑action elements shows \textbf{no} element has cycle
+structure \texttt{6\^{}40} on edges. The maximum number of 6‑cycles is
+\textbf{38}. This means the Coxeter 6‑cycles on E8 roots cannot align
+with a 6‑cycle structure on \emph{every} line under the PSp(4,3) action,
+so any equivariant bijection must \textbf{deform} the orbit‑cycle
+ordering rather than preserve it line‑by‑line.
+
+\textbf{B. Canonical perfect matching (legacy):} - Build bipartite
+graph: left = 240 roots, right = 240 W33 edges\\
+(root \emph{r} adjacent to edge (A,B) iff its orbit is A or B).\\
+- Run deterministic Hopcroft--Karp to obtain a perfect matching.
+
+\textbf{Artifacts (legacy):}\\
+- \texttt{artifacts\_archive/e8\_root\_to\_w33\_edge.json}\\
 - \texttt{artifacts\_archive/e8\_root\_to\_w33\_edge.csv}\\
-- \texttt{artifacts\_archive/e8\_root\_to\_w33\_edge.md}
-
+- \texttt{artifacts\_archive/e8\_root\_to\_w33\_edge.md}\\
+\textbf{Script:} \texttt{tools/sage\_e8\_root\_edge\_bijection.py}\\
 \textbf{Verifier:} \texttt{tools/verify\_e8\_root\_edge\_bijection.py}
 
 \textbf{Build PDF:} \texttt{scripts/build\_toe\_pdf.sh} (produces
 \texttt{FINAL\_TOE\_PROOF.tex} and \texttt{FINAL\_TOE\_PROOF.pdf})
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{1.6 New Synthesis from Legacy Threads
+(Kernel \ensuremath{\leftrightarrow}
+Phenomenology)}{1.6 New Synthesis from Legacy Threads (Kernel  Phenomenology)}}\label{new-synthesis-from-legacy-threads-kernel-phenomenology}
+
+Older documents in this repo split into two complementary tracks:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Kernel track (algebra/topology)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Square‑zero adjacency over \textbf{\(F_{2}\)}\\
+  \item
+    Canonical code and homology \textbf{H = ker(A)/im(A)}\\
+  \item
+    120‑root shell, signed lift, and \textbf{\(Z_{3}\) holonomy} on the
+    quotient\\
+  \end{itemize}
+\item
+  \textbf{Phenomenology track (physics constants)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(Z₁_{2}\) = \(Z_{4}\) \ensuremath{\times} \(Z_{3}\) selection
+    rules\\
+  \item
+    Q45 quotient \ensuremath{\leftrightarrow} SU(5)\\
+  \item
+    V23 holonomy specialization \ensuremath{\leftrightarrow}
+    masses/couplings
+  \end{itemize}
+\end{enumerate}
+
+\textbf{New synthesis:} the explicit \textbf{E8 \ensuremath{\rightarrow}
+W33 Coxeter 6‑cycle construction} provides the missing bridge between
+these tracks. It shows that the kernel's root‑shell structure is not
+merely analogous to E8 but \textbf{is explicitly realized} through
+Witting phase classes. In short:
+
+\begin{verbatim}
+E8 roots -> (Coxeter 6‑cycles) -> Witting rays (40) -> W33 (SRG(40,12,2,4))
+\end{verbatim}
+
+This eliminates the last ambiguity: the kernel's 120/240‑root structures
+and the phenomenology's W33 incidence geometry are now \textbf{the same
+object}, connected by a constructive bijection.
+
+\subsubsection{\texorpdfstring{1.7 Explicit Coordinate Lift: E8 Orbits
+\ensuremath{\rightarrow} \(F_{3}^{4}\)
+(Computed)}{1.7 Explicit Coordinate Lift: E8 Orbits  F\_\{3\}\^{}\{4\} (Computed)}}\label{explicit-coordinate-lift-e8-orbits-f_34-computed}
+
+We now have an explicit, \textbf{coordinate-level} identification
+between the E8 Coxeter 6‑cycle orbits and the canonical \(F_{3}^{4}\)
+projective points:
+
+\begin{verbatim}
+orbit(roots)  ->  projective point in F_3^4  ->  W33 vertex
+\end{verbatim}
+
+This is obtained by: 1. Building W33 from \(F_{3}^{4}\) via the
+symplectic form (standard model). 2. Building W33 from E8 Coxeter orbits
+(Section 1.4). 3. Computing a \textbf{graph isomorphism} between the two
+40‑vertex graphs.
+
+\textbf{Reproducible artifact:}
+\texttt{artifacts/e8\_orbit\_to\_f3\_point.json}\\
+\textbf{Script:} \texttt{tools/sage\_e8\_orbit\_f3\_mapping.py}
+
+This gives a fully explicit mapping:
+
+\begin{verbatim}
+E8 root -> Coxeter orbit -> Witting ray -> F_3^4 coordinate -> W33 vertex
+\end{verbatim}
+
+\textbf{Derived root\ensuremath{\rightarrow}point table:}\\
+\texttt{artifacts/e8\_root\_to\_f3\_point.json} (built by combining
+\texttt{e8\_coxeter6\_orbits.json} with the
+orbit\ensuremath{\rightarrow}\(F_{3}^{4}\) map). This is a direct lookup
+from any E8 root to its canonical projective coordinate.
 
 \subsection{PART 2: K4 COMPONENTS AND UNIVERSAL
 QUANTIZATION}\label{part-2-k4-components-and-universal-quantization}
@@ -734,7 +887,7 @@ occurs by chance
 \item
   Not a special case of larger family
 \item
-  \textbf{Maximally symmetric} (155,520 automorphisms)
+  \textbf{Maximally symmetric} (Aut\_inc = 51,840; Aut\_pts = 25,920)
 \item
   \textbf{Duality}: Points \ensuremath{\leftrightarrow} Lines perfectly
   symmetric

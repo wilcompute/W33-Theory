@@ -1,0 +1,16 @@
+{
+  "w33_vertices": 40,
+  "w33_edges": 240,
+  "sp43_generators": 10,
+  "sp43_order": 25920,
+  "vertex_orbit_sizes": [
+    40
+  ],
+  "edge_group_order": 25920,
+  "edge_orbit_sizes": [
+    240
+  ],
+  "edge_invariant_classes": 12,
+  "e8_roots": 240,
+  "e6_roots_in_e8": 72
+}

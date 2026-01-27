@@ -1,5 +1,9 @@
 # W33 THEORY OF EVERYTHING - COMPLETE ALGEBRAIC SOLUTION
 
+> **Standardization Notice (Canonical):** This document predates the repo-wide
+> standardization. If any definition or group order here conflicts with
+> `STANDARDIZATION.md`, the standardization file is authoritative.
+
 **Date:** January 13, 2026  
 **Status:** RIGOROUSLY PROVED - Exact Algebraic Treatment Complete  
 **Methods:** SageMath, SymPy, Pure Python Rational Arithmetic, Group Theory

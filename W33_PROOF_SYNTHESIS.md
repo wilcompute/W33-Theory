@@ -48,14 +48,17 @@ connecting collinear points.
 
 **L1 (Basic parameters).** W33 has v=40 vertices, k=12 degree, λ=2, μ=4.
 
-**L2 (Incidence counts).** W33 has 40 points and 40 lines, with 3 lines through each point
-and 3 points on each line.
+**L2 (Incidence counts).** W(3,3) has 40 points and 40 lines, with **4 lines through each
+point** and **4 points on each line** (order (3,3)).
 
 **L3 (Edge count).** W33 has 240 edges.
 
 **L4 (Spectrum).** The adjacency spectrum is {12^1, 2^24, (-4)^15}.
 
-**L5 (Automorphisms).** |Aut(W33)| = 51,840 = |Sp(4,3)| = |W(E6)|.
+**L5 (Automorphisms).** Full incidence symmetry:
+|Aut_inc(W(3,3))| = 51,840 = |Sp(4,3)| = |W(E6)|.  
+Point-graph symmetry:
+|Aut_pts(W33)| = 25,920 = |PSp(4,3)| (index 2).
 
 **L6 (Homology link).** The construction yields H1 dimension 81 in the documented
 clique-complex computations.
@@ -120,6 +123,10 @@ L1–L6 and the numeric predictions:
 
 - `w33_sage_incidence_and_h1.py` (output used by `show_results.py`)
   - Writes `data/w33_sage_incidence_h1.json` (group order, H1 dimension, etc.).
+
+- `tools/sage_e8_orbit_f3_mapping.py`
+  - Writes `artifacts/e8_orbit_to_f3_point.json`
+  - Explicit coordinate lift: E8 Coxeter orbits → F₃⁴ projective points.
 
 - `sage_verify.py`
   - Produces `PART_CXIII_sagemath_verification.json` (Sage verification summary).

@@ -1,6 +1,8 @@
 # W33 RESEARCH: MASTER INDEX
 ## January 13, 2026 - Session Complete
 
+> **Standardization Notice (Canonical):** See `STANDARDIZATION.md` for naming, incidence counts, and group orders.
+
 ---
 
 ## VERIFICATION STATUS: 100% SUCCESS (20/20 claims verified)

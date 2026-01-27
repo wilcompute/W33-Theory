@@ -1,4 +1,6 @@
 # W33 WILD IDEAS - SUMMARY OF MAJOR DISCOVERIES
+> **Standardization Notice (Canonical):** See `STANDARDIZATION.md` for naming, incidence counts, and group orders.
+
 
 ## Date: January 14, 2026
 
@@ -166,7 +168,7 @@ The Ramanujan tau function τ(n) (coefficients of the discriminant modular form)
 
 ## The Master Theorem
 
-**W33 = PG(3, GF(3)) is the universal structure from which all exceptional Lie theory emerges.**
+**W33 is the point graph of W(3,3) in PG(3, GF(3)) is the universal structure from which all exceptional Lie theory emerges.**
 
 ### Evidence Summary
 
