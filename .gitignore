@@ -36,6 +36,10 @@ external/sage/
 # Local virtual env
 .venv/
 .venv_wsl/
+.venv_toe/
+
+# local workspace data
+claude_workspace/data/
 
 # Editor / OS files
 .DS_Store
