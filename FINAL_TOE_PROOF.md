@@ -120,7 +120,7 @@ root r  ->  W33 edge (orbit(r), orbit-adjacent)
 ```
 expressed in W33 vertex labels via the orbit-graph isomorphism.
 
-**Reproducible artifact:** `artifacts/e8_root_to_w33_edge.json`  
+**Reproducible artifact:** `artifacts_archive/e8_root_to_w33_edge.json`  
 **Script:** `tools/sage_e8_root_edge_bijection.py`
 
 ---
