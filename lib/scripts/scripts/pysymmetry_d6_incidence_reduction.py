@@ -15,7 +15,14 @@ from pysymmetry import FiniteGroup, representation  # type: ignore
 from sage.all import CC, Permutation, PermutationGroup, matrix  # type: ignore
 
 
-ROOT = Path(__file__).resolve().parents[1]
+def resolve_repo_root(start: Path) -> Path:
+    for parent in [start] + list(start.parents):
+        if (parent / ".git").exists():
+            return parent
+    return start.parents[2]
+
+
+ROOT = resolve_repo_root(Path(__file__).resolve())
 DATA = ROOT / "data"
 OUT_DIR = DATA / "_workbench" / "05_symmetry"
 
