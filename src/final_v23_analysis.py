@@ -12,8 +12,15 @@ Key finding: PERFECT PARITY ↔ CENTERS CORRESPONDENCE
 
 import pandas as pd
 from collections import defaultdict
+from pathlib import Path
+import os
 
-df = pd.read_csv(r'C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data\_v23\v23\Q_triangles_with_centers_Z2_S3_fiber6.csv')
+# Prefer local repo data; allow override via W33_ROOT env var.
+REPO_ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_W33_ROOT = REPO_ROOT / "data"
+W33_ROOT = Path(os.environ.get("W33_ROOT", str(DEFAULT_W33_ROOT)))
+
+df = pd.read_csv(W33_ROOT / "_v23/v23/Q_triangles_with_centers_Z2_S3_fiber6.csv")
 
 print("="*70)
 print("V23 COMPLETE STRUCTURE ANALYSIS")

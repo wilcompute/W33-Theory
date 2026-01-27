@@ -16,8 +16,12 @@ import pandas as pd
 from pathlib import Path
 from collections import defaultdict
 import json
+import os
 
-W33_ROOT = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\extracted\data\data")
+# Prefer local repo data; allow override via W33_ROOT env var.
+REPO_ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_W33_ROOT = REPO_ROOT / "data"
+W33_ROOT = Path(os.environ.get("W33_ROOT", str(DEFAULT_W33_ROOT)))
 
 def load_rays():
     """Load W33 rays."""
