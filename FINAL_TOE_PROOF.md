@@ -75,6 +75,31 @@ The W33 edge decomposition used is:
 240 = 108 (H27 edges) + 108 (cross edges) + 12 (H12 edges) + 12 (incident edges)
 ```
 
+### 1.4 Explicit E8 -> W33 via Coxeter 6-cycles (Computed)
+
+**Lemma (Coxeter 6-cycle partition).** Let `c` be the Coxeter element of W(E8)
+(product of simple reflections in order 1..8). Then `c^5` has order 6 and its
+action on the 240 E8 roots partitions them into **40 orbits of size 6**.
+Each orbit is a Witting ray (phase class).
+
+**Lemma (Orbit adjacency).** For two orbits A,B, compute the 6x6 inner products
+between all roots in A and roots in B (using the E8 Cartan form). There are
+exactly two signatures. The signature
+```
+(-2,-1,0,1,2) counts = (0, 0, 36, 0, 0)
+```
+meaning **all 36 pairs are orthogonal** defines adjacency between A and B.
+The resulting 40-vertex graph is **SRG(40,12,2,4)**, i.e. **W33**.
+
+**Conclusion (Explicit bijection).** The 240 E8 roots are grouped into
+40 phase orbits (size 6) via `c^5`. W33 vertices are these orbits, and
+W33 edges are exactly the orbit pairs with the orthogonality signature
+(0,0,36,0,0). This gives a **fully explicit, computable bridge**
+from E8 roots to W33 without ad hoc matching.
+
+**Reproducible artifact:** `artifacts/e8_coxeter6_orbits.json`  
+**Script:** `tools/sage_e8_order6_orbits.py`
+
 ---
 
 ## PART 2: K4 COMPONENTS AND UNIVERSAL QUANTIZATION
