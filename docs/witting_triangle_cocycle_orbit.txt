@@ -1,0 +1,4 @@
+Monomial group size: 243
+mag_mod2: {True: 243}
+sign_mod2: {True: 243}
+mod3: {True: 243}

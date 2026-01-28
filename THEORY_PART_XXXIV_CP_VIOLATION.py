@@ -11,8 +11,9 @@ Let's derive this properly.
 """
 
 import math
-import numpy as np
 from fractions import Fraction
+
+import numpy as np
 
 print("""
 ╔══════════════════════════════════════════════════════════════════════╗
@@ -42,11 +43,9 @@ Experimental values (magnitudes):
 """)
 
 # CKM magnitudes (PDG 2024)
-V_CKM = np.array([
-    [0.97373, 0.2243, 0.00382],
-    [0.2210, 0.975, 0.0408],
-    [0.0086, 0.0415, 1.014]
-])
+V_CKM = np.array(
+    [[0.97373, 0.2243, 0.00382], [0.2210, 0.975, 0.0408], [0.0086, 0.0415, 1.014]]
+)
 
 print("  |V_ud| = 0.97373    |V_us| = 0.2243     |V_ub| = 0.00382")
 print("  |V_cd| = 0.2210     |V_cs| = 0.975      |V_cb| = 0.0408")
@@ -80,14 +79,16 @@ print("═══ The Cabibbo Angle (θ₁₂) ═══")
 print()
 
 # From Part XXXIII: sin(θ_C) ≈ 9/40
-sin_cabibbo_w33 = 9/40
+sin_cabibbo_w33 = 9 / 40
 theta_cabibbo_w33 = math.asin(sin_cabibbo_w33)
 
 print(f"  W33 prediction: sin(θ₁₂) = 9/40 = {sin_cabibbo_w33:.5f}")
 print(f"                  θ₁₂ = {math.degrees(theta_cabibbo_w33):.3f}°")
 print(f"  Experimental:   sin(θ₁₂) = {math.sin(theta_12_CKM):.5f}")
 print(f"                  θ₁₂ = {math.degrees(theta_12_CKM):.3f}°")
-print(f"  Error: {abs(sin_cabibbo_w33 - math.sin(theta_12_CKM))/math.sin(theta_12_CKM)*100:.2f}%")
+print(
+    f"  Error: {abs(sin_cabibbo_w33 - math.sin(theta_12_CKM))/math.sin(theta_12_CKM)*100:.2f}%"
+)
 print()
 
 # θ₂₃ and θ₁₃
@@ -97,17 +98,17 @@ print()
 # θ₂₃: sin(θ₂₃) ≈ 0.041
 # Possible W33: 40/1000 = 0.04, or 3/81 ≈ 0.037, or 4/90 ≈ 0.044
 theta23_candidates = [
-    ("40/1000 = 1/25", 1/25),
-    ("3/81", 3/81),
-    ("4/90", 4/90),
-    ("9/220", 9/220),
-    ("1/(27-3)", 1/24),
-    ("√(40/173)/10", math.sqrt(40/173)/10),
+    ("40/1000 = 1/25", 1 / 25),
+    ("3/81", 3 / 81),
+    ("4/90", 4 / 90),
+    ("9/220", 9 / 220),
+    ("1/(27-3)", 1 / 24),
+    ("√(40/173)/10", math.sqrt(40 / 173) / 10),
 ]
 
 print("  θ₂₃ candidates (sin θ₂₃ = 0.0408):")
 for name, val in theta23_candidates:
-    err = abs(val - 0.0408)/0.0408 * 100
+    err = abs(val - 0.0408) / 0.0408 * 100
     match = "✓" if err < 5 else ""
     print(f"    {name:20s} = {val:.5f} ({err:.1f}% off) {match}")
 print()
@@ -115,17 +116,17 @@ print()
 # θ₁₃: sin(θ₁₃) ≈ 0.0038
 # Very small - this is the one that gives CP violation
 theta13_candidates = [
-    ("9/40 × 9/40 / 4", (9/40)**2 / 4),
-    ("40/10000", 40/10000),
-    ("1/173-40", 1/(173-40)),
-    ("9/(40×56)", 9/(40*56)),
-    ("3/810", 3/810),
-    ("1/(121×2)", 1/(121*2)),
+    ("9/40 × 9/40 / 4", (9 / 40) ** 2 / 4),
+    ("40/10000", 40 / 10000),
+    ("1/173-40", 1 / (173 - 40)),
+    ("9/(40×56)", 9 / (40 * 56)),
+    ("3/810", 3 / 810),
+    ("1/(121×2)", 1 / (121 * 2)),
 ]
 
 print("  θ₁₃ candidates (sin θ₁₃ = 0.00382):")
 for name, val in theta13_candidates:
-    err = abs(val - 0.00382)/0.00382 * 100
+    err = abs(val - 0.00382) / 0.00382 * 100
     match = "✓" if err < 10 else ""
     print(f"    {name:20s} = {val:.6f} ({err:.1f}% off) {match}")
 print()
@@ -151,9 +152,9 @@ The neutrino mixing angles are LARGE (unlike CKM):
 
 # PMNS angles (NuFit 5.2, 2022)
 theta_12_PMNS = math.radians(33.41)  # Solar angle
-theta_23_PMNS = math.radians(42.2)   # Atmospheric angle (normal ordering)
-theta_13_PMNS = math.radians(8.54)   # Reactor angle
-delta_PMNS = math.radians(232)       # CP phase (poorly measured)
+theta_23_PMNS = math.radians(42.2)  # Atmospheric angle (normal ordering)
+theta_13_PMNS = math.radians(8.54)  # Reactor angle
+delta_PMNS = math.radians(232)  # CP phase (poorly measured)
 
 print("═══ PMNS Mixing Angles ═══")
 print()
@@ -188,18 +189,18 @@ print()
 sin2_12_exp = 0.303
 
 solar_candidates = [
-    ("1/3", 1/3),
-    ("27/81 = 1/3", 27/81),
-    ("40/133", 40/133),
-    ("40/121", 40/121),
-    ("sin²θ_W × 4/3", 40/173 * 4/3),
-    ("(27/81) - 0.03", 27/81 - 0.03),
+    ("1/3", 1 / 3),
+    ("27/81 = 1/3", 27 / 81),
+    ("40/133", 40 / 133),
+    ("40/121", 40 / 121),
+    ("sin²θ_W × 4/3", 40 / 173 * 4 / 3),
+    ("(27/81) - 0.03", 27 / 81 - 0.03),
 ]
 
 print(f"  Experimental: sin²θ₁₂ = {sin2_12_exp}")
 print()
 for name, val in solar_candidates:
-    err = abs(val - sin2_12_exp)/sin2_12_exp * 100
+    err = abs(val - sin2_12_exp) / sin2_12_exp * 100
     match = "✓" if err < 5 else ""
     print(f"    {name:25s} = {val:.4f} ({err:.1f}% off) {match}")
 print()
@@ -216,17 +217,17 @@ sin2_23_exp = 0.57
 
 atm_candidates = [
     ("1/2 (maximal)", 0.5),
-    ("40/81 + 0.08", 40/81 + 0.08),
-    ("81/133", 81/133),
-    ("4/7", 4/7),
-    ("90/160", 90/160),
-    ("(1 + tan²θ_W)/2 - 0.1", (1 + 40/133)/2 - 0.1),
+    ("40/81 + 0.08", 40 / 81 + 0.08),
+    ("81/133", 81 / 133),
+    ("4/7", 4 / 7),
+    ("90/160", 90 / 160),
+    ("(1 + tan²θ_W)/2 - 0.1", (1 + 40 / 133) / 2 - 0.1),
 ]
 
 print(f"  Experimental: sin²θ₂₃ = {sin2_23_exp}")
 print()
 for name, val in atm_candidates:
-    err = abs(val - sin2_23_exp)/sin2_23_exp * 100
+    err = abs(val - sin2_23_exp) / sin2_23_exp * 100
     match = "✓" if err < 5 else ""
     print(f"    {name:25s} = {val:.4f} ({err:.1f}% off) {match}")
 print()
@@ -242,18 +243,18 @@ print()
 sin2_13_exp = 0.022
 
 reactor_candidates = [
-    ("sin²θ_W / 10", 40/173/10),
-    ("1/45", 1/45),
-    ("2/90", 2/90),
-    ("9/400", 9/400),
-    ("sin²(θ_C)/10", (9/40)**2 / 10),
-    ("(40/173)²", (40/173)**2),
+    ("sin²θ_W / 10", 40 / 173 / 10),
+    ("1/45", 1 / 45),
+    ("2/90", 2 / 90),
+    ("9/400", 9 / 400),
+    ("sin²(θ_C)/10", (9 / 40) ** 2 / 10),
+    ("(40/173)²", (40 / 173) ** 2),
 ]
 
 print(f"  Experimental: sin²θ₁₃ = {sin2_13_exp}")
 print()
 for name, val in reactor_candidates:
-    err = abs(val - sin2_13_exp)/sin2_13_exp * 100
+    err = abs(val - sin2_13_exp) / sin2_13_exp * 100
     match = "✓" if err < 10 else ""
     print(f"    {name:25s} = {val:.5f} ({err:.1f}% off) {match}")
 print()
@@ -278,13 +279,13 @@ The CP-violating phases in CKM and PMNS:
 
   δ_CKM ≈ 66°  (well-measured)
   δ_PMNS ≈ 232° (poorly measured, could be 180-270°)
-  
+
 The DIFFERENCE is:
   δ_PMNS - δ_CKM ≈ 232° - 66° = 166°
-  
+
 But with uncertainty, this could be:
   δ_PMNS - δ_CKM ≈ 120° (within 2σ)
-  
+
 WHY 120°?
 """)
 
@@ -355,7 +356,7 @@ print("""
 The Jarlskog invariant J measures the amount of CP violation:
 
   J = Im(V_us V_cb V*_ub V*_cs) for CKM
-  
+
 It's related to the area of the unitarity triangle.
 """)
 
@@ -369,16 +370,16 @@ print()
 
 # W33 prediction?
 j_candidates = [
-    ("sin²θ_C × sin θ_13 × sin δ / 4", (9/40)**2 * 0.00382 * math.sin(1.144) / 4),
+    ("sin²θ_C × sin θ_13 × sin δ / 4", (9 / 40) ** 2 * 0.00382 * math.sin(1.144) / 4),
     ("9³/(40³ × 4)", 9**3 / (40**3 * 4)),
-    ("1/(40 × 810)", 1/(40 * 810)),
-    ("27/(81 × 10000)", 27/(81 * 10000)),
-    ("(9/40)³ / 100", (9/40)**3 / 100),
+    ("1/(40 × 810)", 1 / (40 * 810)),
+    ("27/(81 × 10000)", 27 / (81 * 10000)),
+    ("(9/40)³ / 100", (9 / 40) ** 3 / 100),
 ]
 
 print("  W33 candidates:")
 for name, val in j_candidates:
-    err = abs(val - J_CKM)/J_CKM * 100
+    err = abs(val - J_CKM) / J_CKM * 100
     match = "✓" if err < 20 else ""
     print(f"    {name:35s} = {val:.2e} ({err:.0f}% off) {match}")
 print()
@@ -441,26 +442,28 @@ W33 EXPLANATION:
 
   CKM mixing comes from the 40 POINTS of W33:
     sin θ_C = 9/40 = generations²/points
-    
+
   PMNS mixing comes from the 81 CYCLES of W33:
     sin²θ_solar ≈ 1/3 = 27/81 = E6_fund/cycles
     sin²θ_atm ≈ 1/2 = democratic mixing of 2 heavy states
-    
+
 The KEY INSIGHT:
-  
+
   Quarks couple through GEOMETRY (points)  → small angles
   Neutrinos couple through CYCLES          → large angles
-  
+
   The ratio of scales is:
     (PMNS scale)/(CKM scale) ~ 81/40 ≈ 2
-    
+
   This explains why neutrino mixing is "maximal" while quark mixing is "small"!
 """)
 
 # Verification
 print("═══ Verification ═══")
 print()
-print(f"  sin²θ_12(PMNS) / sin²θ_12(CKM) = {0.303}/{(9/40)**2:.4f} = {0.303/((9/40)**2):.1f}")
+print(
+    f"  sin²θ_12(PMNS) / sin²θ_12(CKM) = {0.303}/{(9/40)**2:.4f} = {0.303/((9/40)**2):.1f}"
+)
 print(f"  81/40 × 2 = {81/40 * 2:.1f}")
 print()
 print("  The ratio is approximately 81/40 × factor!")

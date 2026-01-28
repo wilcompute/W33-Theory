@@ -70,5 +70,3 @@ Action candidate (geometry-only):
 
 W33 orthonormal solution:
 - `data/_toe/w33_orthonormal_phase_solution_20260110/W33_orthonormal_solution_report.json`
-
-

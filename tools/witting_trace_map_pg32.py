@@ -8,6 +8,7 @@ Outputs:
 - artifacts/witting_trace_map_pg32.json
 - artifacts/witting_trace_map_pg32.md
 """
+
 from __future__ import annotations
 
 import json
@@ -21,10 +22,12 @@ OUT_MD = ROOT / "artifacts" / "witting_trace_map_pg32.md"
 # GF(4) representation: 0,1,2,3 correspond to 0,1,ω,ω^2
 # with ω^2 = ω + 1, and ω^3 = 1.
 
+
 def gf4_add(a: int, b: int) -> int:
     # addition in GF(2)[x]/(x^2+x+1), encoded in bits
     # map 0->00, 1->01, ω->10, ω^2->11
     return a ^ b
+
 
 def gf4_mul(a: int, b: int) -> int:
     if a == 0 or b == 0:
@@ -41,18 +44,22 @@ def gf4_mul(a: int, b: int) -> int:
     c1 = (c1 + c2) % 2
     return (c1 << 1) | c0
 
+
 def gf4_square(a: int) -> int:
     return gf4_mul(a, a)
+
 
 def gf4_trace(a: int) -> int:
     # Tr(x)=x+x^2 in GF(4) -> element of GF(2): 0 or 1
     return gf4_add(a, gf4_square(a)) & 1
+
 
 # powers of ω
 omega = 2
 omega2 = 3
 
 omega_powers = [1, omega, omega2]
+
 
 def build_base_states():
     states = []
@@ -72,14 +79,17 @@ def build_base_states():
         states.append((1, w_mu, w_nu, 0))
     return states
 
+
 def trace_map(state):
     return tuple(gf4_trace(x) for x in state)
+
 
 def normalize_projective(v):
     # normalize nonzero vector in GF(2)^4 to projective point
     if all(x == 0 for x in v):
         return None
     return v
+
 
 def main():
     states = build_base_states()
@@ -116,6 +126,7 @@ def main():
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"Wrote {OUT_JSON}")
     print(f"Wrote {OUT_MD}")
+
 
 if __name__ == "__main__":
     main()

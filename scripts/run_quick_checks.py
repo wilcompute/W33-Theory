@@ -1,17 +1,40 @@
-import subprocess, sys, os
-ROOT = os.getcwd()
-print('ROOT', ROOT)
-print('Installing requirements-dev into venv...')
-rc = subprocess.call([sys.executable, '-m', 'pip', 'install', '-r', 'requirements-dev.txt'])
-print('pip rc', rc)
-print('Run collector...')
-subprocess.call([sys.executable, 'scripts/collect_results.py'])
-print('Run numeric extractor...')
-subprocess.call([sys.executable, 'scripts/make_numeric_comparisons_from_summary.py'])
-print('Run inline validation (jsonschema)...')
-res = subprocess.call([sys.executable, 'scripts/inline_validate.py'])
-print('inline_validate rc', res)
-print('Run artifact pytest subset...')
-res2 = subprocess.call([sys.executable, '-m', 'pytest', '-q', 'tests/test_summary.py::test_summary_and_numeric_comparisons', 'tests/test_summary_schema.py::test_summary_matches_schema', 'tests/test_summary_schema.py::test_numeric_comparisons_matches_schema'])
-print('pytest rc', res2)
-sys.exit(res2)
+import os
+import subprocess
+import sys
+
+
+def main():
+    ROOT = os.getcwd()
+    print("ROOT", ROOT)
+    print("Installing requirements-dev into venv...")
+    rc = subprocess.call(
+        [sys.executable, "-m", "pip", "install", "-r", "requirements-dev.txt"]
+    )
+    print("pip rc", rc)
+    print("Run collector...")
+    subprocess.call([sys.executable, "scripts/collect_results.py"])
+    print("Run numeric extractor...")
+    subprocess.call(
+        [sys.executable, "scripts/make_numeric_comparisons_from_summary.py"]
+    )
+    print("Run inline validation (jsonschema)...")
+    res = subprocess.call([sys.executable, "scripts/inline_validate.py"])
+    print("inline_validate rc", res)
+    print("Run artifact pytest subset...")
+    res2 = subprocess.call(
+        [
+            sys.executable,
+            "-m",
+            "pytest",
+            "-q",
+            "tests/test_summary.py::test_summary_and_numeric_comparisons",
+            "tests/test_summary_schema.py::test_summary_matches_schema",
+            "tests/test_summary_schema.py::test_numeric_comparisons_matches_schema",
+        ]
+    )
+    print("pytest rc", res2)
+    sys.exit(res2)
+
+
+if __name__ == "__main__":
+    main()

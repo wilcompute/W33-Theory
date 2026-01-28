@@ -4,7 +4,6 @@ from collections import deque
 from dataclasses import dataclass
 from typing import Dict, Iterable, List, Sequence, Set, Tuple
 
-
 Perm = Tuple[int, ...]  # one-line notation: p[i] = image of i
 
 
@@ -59,7 +58,9 @@ class PermutationGroup:
 
         return list(seen.keys())
 
-    def orbits(self, elements: Sequence[int], *, max_size: int | None = None) -> List[List[int]]:
+    def orbits(
+        self, elements: Sequence[int], *, max_size: int | None = None
+    ) -> List[List[int]]:
         group = self.closure(max_size=max_size)
         unassigned: Set[int] = set(elements)
         out: List[List[int]] = []

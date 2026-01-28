@@ -61,4 +61,3 @@ From any vertex v0:
 - 1 = singlet (Higgs?)
 - 12 = gauge sector (related to D4)
 - 27 = matter sector (E6 fundamental)
-

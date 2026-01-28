@@ -9,6 +9,7 @@ Outputs:
 - artifacts/witting_pg32_alternating_form_search.json
 - artifacts/witting_pg32_alternating_form_search.md
 """
+
 from __future__ import annotations
 
 import json
@@ -19,9 +20,11 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT_JSON = ROOT / "artifacts" / "witting_pg32_alternating_form_search.json"
 OUT_MD = ROOT / "artifacts" / "witting_pg32_alternating_form_search.md"
 
+
 # GF(4) arithmetic
 def gf4_add(a: int, b: int) -> int:
     return a ^ b
+
 
 def gf4_mul(a: int, b: int) -> int:
     if a == 0 or b == 0:
@@ -35,11 +38,14 @@ def gf4_mul(a: int, b: int) -> int:
     c1 = (c1 + c2) % 2
     return (c1 << 1) | c0
 
+
 def gf4_square(a: int) -> int:
     return gf4_mul(a, a)
 
+
 def gf4_trace(a: int) -> int:
     return gf4_add(a, gf4_square(a)) & 1
+
 
 def gf4_inv(a: int) -> int:
     if a == 0:
@@ -49,9 +55,11 @@ def gf4_inv(a: int) -> int:
             return b
     raise ZeroDivisionError
 
+
 omega = 2
 omega2 = 3
 omega_powers = [1, omega, omega2]
+
 
 def build_base_states():
     states = []
@@ -68,6 +76,7 @@ def build_base_states():
         states.append((1, w_mu, w_nu, 0))
     return states
 
+
 def normalize_projective(v):
     for x in v:
         if x != 0:
@@ -75,14 +84,18 @@ def normalize_projective(v):
             return tuple(gf4_mul(inv, xi) for xi in v)
     return None
 
+
 def trace_map(v):
     return tuple(gf4_trace(x) for x in v)
+
 
 def tuple_to_bits(t):
     return (t[0] << 3) | (t[1] << 2) | (t[2] << 1) | t[3]
 
+
 def build_pg32_points():
     return [v for v in range(1, 16)]
+
 
 def build_pg32_lines(points):
     lines = set()
@@ -95,8 +108,10 @@ def build_pg32_lines(points):
             lines.add(line)
     return sorted(lines)
 
+
 def parity(x: int) -> int:
     return bin(x).count("1") & 1
+
 
 def bilinear(A, x, y):
     # A is 4x4 list of bits, x,y are 4-bit ints
@@ -105,8 +120,9 @@ def bilinear(A, x, y):
     s = 0
     for i in range(4):
         for j in range(4):
-            s ^= (A[i][j] & xb[i] & yb[j])
+            s ^= A[i][j] & xb[i] & yb[j]
     return s
+
 
 def det_mod2(M):
     M = [row[:] for row in M]
@@ -133,6 +149,7 @@ def det_mod2(M):
         rank += 1
         col += 1
     return 1 if rank == n else 0
+
 
 def main():
     # Build hit lines
@@ -187,7 +204,11 @@ def main():
         iso_lines = []
         for line in pg_lines:
             p, q, r = line
-            if bilinear(A, p, q) == 0 and bilinear(A, p, r) == 0 and bilinear(A, q, r) == 0:
+            if (
+                bilinear(A, p, q) == 0
+                and bilinear(A, p, r) == 0
+                and bilinear(A, q, r) == 0
+            ):
                 iso_lines.append(line)
         iso_set = set(iso_lines)
 
@@ -218,13 +239,18 @@ def main():
     lines.append("# Alternating Form Search (PG(3,2) vs Hit Lines)")
     lines.append("")
     lines.append(f"- hit lines: {results['hit_lines']}")
-    lines.append(f"- nondegenerate alternating forms checked: {results['nondegenerate_forms']}")
+    lines.append(
+        f"- nondegenerate alternating forms checked: {results['nondegenerate_forms']}"
+    )
     lines.append(f"- best hit count: {results['best_hit_count']}")
-    lines.append(f"- exact-match forms (16/16 with 16 isotropic lines): {results['exact_match_forms']}")
+    lines.append(
+        f"- exact-match forms (16/16 with 16 isotropic lines): {results['exact_match_forms']}"
+    )
     lines.append(f"- hit count histogram: {results['hit_count_histogram']}")
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"Wrote {OUT_JSON}")
     print(f"Wrote {OUT_MD}")
+
 
 if __name__ == "__main__":
     main()

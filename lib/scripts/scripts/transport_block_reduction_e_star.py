@@ -12,15 +12,22 @@ import pandas as pd
 import scipy.sparse as sp
 from scipy.sparse.linalg import eigsh
 
-
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUT_DIR = DATA / "_workbench" / "05_symmetry"
 
 MAP_PATH = OUT_DIR / "coin_c24_2t_alignment_mapping.csv"
-TABLE_PATH = DATA / "_toe" / "projector_recon_20260110" / "binary_tetrahedral_2T_multiplication_table.csv"
-H_TRANSPORT = DATA / "_toe" / "projector_recon_20260110" / (
-    "N12_58_orbit0_H_transport_59x24_sparse_20260109T205353Z.npz"
+TABLE_PATH = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / "binary_tetrahedral_2T_multiplication_table.csv"
+)
+H_TRANSPORT = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / ("N12_58_orbit0_H_transport_59x24_sparse_20260109T205353Z.npz")
 )
 
 
@@ -50,7 +57,9 @@ def load_mapping():
 
 def load_csr_npz(path: Path) -> sp.csr_matrix:
     z = np.load(path, allow_pickle=True)
-    return sp.csr_matrix((z["data"], z["indices"], z["indptr"]), shape=tuple(z["shape"]))
+    return sp.csr_matrix(
+        (z["data"], z["indices"], z["indptr"]), shape=tuple(z["shape"])
+    )
 
 
 def e_star_pairs(table, coin_to_elem, elem_to_coin):
@@ -124,7 +133,9 @@ def main() -> None:
     H_odd = Ko.T @ H @ Ko
     H_off = Ke.T @ H @ Ko
 
-    off_ratio = fro_norm_sparse(H_off) / fro_norm_sparse(H) if fro_norm_sparse(H) else 0.0
+    off_ratio = (
+        fro_norm_sparse(H_off) / fro_norm_sparse(H) if fro_norm_sparse(H) else 0.0
+    )
 
     eig_full = top_eigs(H, k=10)
     eig_even = top_eigs(H_even, k=10)
@@ -144,7 +155,11 @@ def main() -> None:
         f.write(f"Inputs:\n- {H_TRANSPORT}\n- {MAP_PATH}\n- {TABLE_PATH}\n\n")
         f.write(f"- off-block ratio: {off_ratio:.6e}\n\n")
         f.write("Top eigenvalues (k=10):\n\n")
-        f.write(eig_df.pivot(index="eig_index", columns="block", values="eig_value").to_markdown())
+        f.write(
+            eig_df.pivot(
+                index="eig_index", columns="block", values="eig_value"
+            ).to_markdown()
+        )
 
 
 if __name__ == "__main__":

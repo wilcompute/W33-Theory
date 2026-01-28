@@ -12,11 +12,12 @@ The triality structure is preserved:
 - W33: 3 triality axes, each with 40 edge pairs
 - E8: D4 triality acts on the D4xD4 decomposition
 """
+
 from __future__ import annotations
 
 import json
 from collections import Counter, defaultdict
-from itertools import product, combinations
+from itertools import combinations, product
 from pathlib import Path
 
 import numpy as np
@@ -45,12 +46,12 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     edges = []
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
                 edges.append((i, j))
@@ -63,17 +64,17 @@ def build_e8_roots():
     roots = []
     # Type 1: +-e_i +- e_j (112 roots)
     for i in range(8):
-        for j in range(i+1, 8):
+        for j in range(i + 1, 8):
             for si in [1, -1]:
                 for sj in [1, -1]:
-                    r = [0]*8
+                    r = [0] * 8
                     r[i] = si
                     r[j] = sj
                     roots.append(tuple(r))
     # Type 2: (+-1/2, ..., +-1/2) with even minus signs (128 roots)
     for signs in product([1, -1], repeat=8):
         if sum(1 for s in signs if s == -1) % 2 == 0:
-            roots.append(tuple(s/2 for s in signs))
+            roots.append(tuple(s / 2 for s in signs))
     return np.array(roots, dtype=float)
 
 
@@ -129,7 +130,7 @@ def pair_e8_roots():
         if i in used:
             continue
         # Find antipodal root
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if j in used:
                 continue
             if np.allclose(roots[i] + roots[j], 0):
@@ -145,9 +146,9 @@ def compute_triality_distribution(edges, vertices):
     """Compute how edges distribute across triality axes."""
     # Define triality axes by position pair complements
     triality_axes = {
-        'V': (frozenset({0,1}), frozenset({2,3})),
-        'S+': (frozenset({0,2}), frozenset({1,3})),
-        'S-': (frozenset({0,3}), frozenset({1,2})),
+        "V": (frozenset({0, 1}), frozenset({2, 3})),
+        "S+": (frozenset({0, 2}), frozenset({1, 3})),
+        "S-": (frozenset({0, 3}), frozenset({1, 2})),
     }
 
     # Count edges by which axis they "respect"
@@ -182,7 +183,7 @@ def analyze_h12_triangles(adj, vertices):
         # Find triangles among neighbors
         triangles = []
         for a, b, c in combinations(neighbors, 3):
-            if adj[a,b] and adj[a,c] and adj[b,c]:
+            if adj[a, b] and adj[a, c] and adj[b, c]:
                 triangles.append((a, b, c))
 
         if len(triangles) == 4:
@@ -193,11 +194,13 @@ def analyze_h12_triangles(adj, vertices):
                 for v in tri:
                     pos_set |= set(k for k in range(4) if vertices[v][k] != 0)
                 tri_positions.append(frozenset(pos_set))
-            triangle_data.append({
-                'base': v0,
-                'triangles': triangles,
-                'positions': tri_positions,
-            })
+            triangle_data.append(
+                {
+                    "base": v0,
+                    "triangles": triangles,
+                    "positions": tri_positions,
+                }
+            )
 
     return triangle_data
 
@@ -241,7 +244,7 @@ def main():
     # Analyze triangle position patterns
     all_tri_positions = []
     for td in tri_data:
-        all_tri_positions.extend(td['positions'])
+        all_tri_positions.extend(td["positions"])
 
     pos_pattern_counts = Counter(tuple(sorted(p)) for p in all_tri_positions)
     print("\nTriangle position patterns:")
@@ -306,16 +309,16 @@ THE CORRESPONDENCE:
         "triality": {
             "axes": ["V", "S+", "S-"],
             "position_pairs": {
-                "V": [(0,1), (2,3)],
-                "S+": [(0,2), (1,3)],
-                "S-": [(0,3), (1,2)],
-            }
-        }
+                "V": [(0, 1), (2, 3)],
+                "S+": [(0, 2), (1, 3)],
+                "S-": [(0, 3), (1, 2)],
+            },
+        },
     }
 
     out_path = ROOT / "artifacts" / "w33_e8_root_line_bijection.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(results, indent=2), encoding='utf-8')
+    out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(f"\nWrote {out_path}")
 
 

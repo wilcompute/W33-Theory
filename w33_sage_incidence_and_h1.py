@@ -68,10 +68,10 @@ def main() -> None:
     if pysymmetry_root.exists():
         sys.path.insert(0, str(pysymmetry_root))
 
+    from sage.all import GF, QQ, Graph, VectorSpace, matrix
+
     from lib.simplicial_homology import boundary_matrix, faces
     from lib.w33_io import W33DataPaths, load_w33_lines, simplices_from_lines
-
-    from sage.all import GF, QQ, Graph, VectorSpace, matrix
 
     field = QQ
     if opts["field"] == "GF":
@@ -109,8 +109,12 @@ def main() -> None:
     for g in gens:
         gen_data.append({"points": gen_point_perm(g), "lines": gen_line_perm(g)})
 
-    point_orbits = [sorted([int(v) - 1 for v in orb]) for orb in A.orbits() if min(orb) <= 40]
-    line_orbits = [sorted([int(v) - 41 for v in orb]) for orb in A.orbits() if min(orb) >= 41]
+    point_orbits = [
+        sorted([int(v) - 1 for v in orb]) for orb in A.orbits() if min(orb) <= 40
+    ]
+    line_orbits = [
+        sorted([int(v) - 41 for v in orb]) for orb in A.orbits() if min(orb) >= 41
+    ]
 
     simplices = simplices_from_lines(lines)
     vertices = simplices[0]
@@ -162,7 +166,9 @@ def main() -> None:
         if len(H_basis) == beta1:
             break
     if len(H_basis) != beta1:
-        raise RuntimeError(f"Failed to build H1 basis: expected {beta1}, got {len(H_basis)}")
+        raise RuntimeError(
+            f"Failed to build H1 basis: expected {beta1}, got {len(H_basis)}"
+        )
 
     # Matrix whose columns are a basis of Z1: [B_basis | H_basis]
     Z_cols = [*B_basis, *H_basis]
@@ -214,7 +220,9 @@ def main() -> None:
         h1_action_mats_sage.append(Ah)
 
         # JSON-safe: stringify entries (QQ elements / finite field elements)
-        h1_action_mats.append([[str(Ah[r, c]) for c in range(beta1)] for r in range(beta1)])
+        h1_action_mats.append(
+            [[str(Ah[r, c]) for c in range(beta1)] for r in range(beta1)]
+        )
 
     out = {
         "field": opts["field"],
@@ -229,7 +237,11 @@ def main() -> None:
             "line_orbits": line_orbits,
         },
         "simplicial_complex": {"n0": n0, "n1": n1, "n2": n2, "n3": len(simplices[3])},
-        "homology": {"beta1": beta1, "dim_Z1": int(Z1.dimension()), "dim_B1": int(B1.dimension())},
+        "homology": {
+            "beta1": beta1,
+            "dim_Z1": int(Z1.dimension()),
+            "dim_B1": int(B1.dimension()),
+        },
         "h1_action": {
             "basis": "H_basis extends B1 basis inside Z1",
             "generator_matrices": h1_action_mats,

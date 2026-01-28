@@ -12,14 +12,23 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUT_DIR = DATA / "_workbench" / "04_measurement"
 
-GRID_CSV = DATA / "_toe" / "native_fullgrid_20260110" / "nativeC24_fullgrid_line_stabilities_flux_noflux.csv"
+GRID_CSV = (
+    DATA
+    / "_toe"
+    / "native_fullgrid_20260110"
+    / "nativeC24_fullgrid_line_stabilities_flux_noflux.csv"
+)
 LINES_CSV = DATA / "_toe" / "coupling_20260110" / "W33_lines_to_projective_quartets.csv"
-MASKS_NPZ = DATA / "_toe" / "projector_recon_20260110" / "TOE_W33_clock_projector_masks_20260109T210928Z.npz"
+MASKS_NPZ = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / "TOE_W33_clock_projector_masks_20260109T210928Z.npz"
+)
 H1_JSON = DATA / "_n12" / "n12_58_orbit_cup_analysis.json"
 
 
@@ -179,7 +188,7 @@ def main() -> None:
         out_csv = OUT_DIR / f"nativeC24_mode{mode_k}_pairwise_kernel.csv"
         with out_csv.open("w", encoding="utf-8") as f:
             f.write("class_a,class_b,weight\n")
-            for (i, j) in pairs:
+            for i, j in pairs:
                 f.write(f"{classes[i]},{classes[j]},{K[i, j]}\n")
 
         # Save mapping for best J and U alignments.

@@ -15,8 +15,9 @@ Connecting ALL the discoveries:
 THE GRAND UNIFICATION
 """
 
-import numpy as np
 from collections import defaultdict
+
+import numpy as np
 
 print("=" * 80)
 print("W33 THEORY OF EVERYTHING - UNIFIED SYNTHESIS")
@@ -31,16 +32,16 @@ print("PART 0: THE FUNDAMENTAL NUMBERS")
 print("=" * 80)
 
 # The magic numbers
-points = 40       # Points in W33
-lines = 40        # Lines in W33 (self-dual!)
-k = 4             # Points per line
-r = 4             # Lines per point
-steinberg_dim = 81        # H₁ = Z^81
-sylow_3_order = 81        # Sylow 3-subgroup
+points = 40  # Points in W33
+lines = 40  # Lines in W33 (self-dual!)
+k = 4  # Points per line
+r = 4  # Lines per point
+steinberg_dim = 81  # H₁ = Z^81
+sylow_3_order = 81  # Sylow 3-subgroup
 fundamental_group_rank = 81  # π₁ = F₈₁
-K4_count = 90     # K4 components
-Q45_vertices = 45 # Quotient structure
-SU5_dim = 45      # SU(5) fundamental!
+K4_count = 90  # K4 components
+Q45_vertices = 45  # Quotient structure
+SU5_dim = 45  # SU(5) fundamental!
 
 print(f"""
 THE FUNDAMENTAL NUMBERS OF W33
@@ -81,7 +82,7 @@ W33 = THREE EQUIVALENT STRUCTURES
    - 40 points, 40 lines, 4 points/line
    - Automorphism group: PGU(3,3), order 155,520
 
-2. SYMPLECTIC POLAR SPACE (Algebraic)  
+2. SYMPLECTIC POLAR SPACE (Algebraic)
    - W(3,3) = W(1,3) × W(1,3) (direct product)
    - Points = totally isotropic lines in V(4,3)
    - Lines = totally isotropic planes in V(4,3)
@@ -130,7 +131,7 @@ H₁(Δ(W33), Z) = Z^81
 
 The number 81 is not random:
   81 = 3⁴ = q^(n²) where n=2 for Sp(4,q)
-  
+
 This is the STEINBERG REPRESENTATION!
   - Discovered by Robert Steinberg (1951)
   - For Sp(2n,q): dim(St) = q^(n²)
@@ -141,7 +142,7 @@ The Steinberg representation is:
   - Cuspidal (not induced)
   - Has central character
   - Appears in H*(Building, Z)
-  
+
 FUNDAMENTAL GROUP: π₁ = F₈₁
   - Free group on 81 generators
   - Each generator = 1-cycle in Δ(W33)
@@ -162,7 +163,7 @@ THE 81 CYCLES - EXPLICIT CONSTRUCTION
 
 Root System C₂:
   Positive roots: {α₁, α₂, α₁+α₂, 2α₁+α₂}
-  
+
 For each root α, there's a root subgroup:
   U_α ≅ Z/3Z (additive group of GF(3))
 
@@ -173,7 +174,7 @@ EACH ELEMENT OF U GIVES ONE CYCLE!
 
 Transvection matrix for root α with parameter t ∈ GF(3):
   x_α(t) = I + t·E_α
-  
+
 where E_α is the root matrix.
 
 The 81 elements of U are:
@@ -183,7 +184,7 @@ Each such element corresponds to a 1-cycle in Δ(W33)!
 
 PHYSICAL INTERPRETATION:
   81 cycles = 81 Berry phases
-            = 81 instanton sectors  
+            = 81 instanton sectors
             = 81 vacuum configurations
             = 81 wormholes!
 """)
@@ -202,7 +203,7 @@ K4 COMPONENTS: THE FERMIONIC STRUCTURE
 
 What is a K4 component?
   - Outer quad P: 4 mutually non-collinear points
-  - Center quad C: 4 mutually non-collinear points  
+  - Center quad C: 4 mutually non-collinear points
   - Bipartite orthogonality: ⟨p|c⟩ = 0 for all p∈P, c∈C
 
 There are exactly 90 K4 components in W33.
@@ -252,7 +253,7 @@ THE Q45 QUOTIENT
 
 From W33's automorphism structure:
   Q45 = W33 / equivalence relation
-  
+
 Q45 has EXACTLY 45 vertices.
 
 SU(5) GRAND UNIFIED THEORY
@@ -269,10 +270,10 @@ This is NOT a coincidence!
 
 The fiber structure over Q45:
   Fiber = Z₂ × Z₃
-  
+
   - Z₂: Parity (fermion vs boson)
   - Z₃: Generation (3 families)
-  
+
 Total: 45 × 6 = 270 fundamental states
 
 FERMION-BOSON SEPARATION
@@ -291,7 +292,7 @@ THREE FAMILIES
 ==============
 The Z₃ fiber encodes generation:
   Z₃ = 0: (u, d, e, νₑ)   First generation
-  Z₃ = 1: (c, s, μ, νμ)   Second generation  
+  Z₃ = 1: (c, s, μ, νμ)   Second generation
   Z₃ = 2: (t, b, τ, ντ)   Third generation
 
 WHY 3 FAMILIES? Because Z₃ has 3 elements!

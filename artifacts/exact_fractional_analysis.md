@@ -91,4 +91,3 @@ P[i,j] ∈ {18, 3, -2} / 30
 
 This exact fractional structure is a strong algebraic constraint
 suggesting deep number-theoretic properties of W33.
-

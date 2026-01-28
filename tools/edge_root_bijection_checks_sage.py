@@ -3,11 +3,12 @@
 
 Uses artifacts/edge_to_e8_root.json (root coordinates in Sage simple-root basis).
 """
+
 from __future__ import annotations
 
 import json
-from itertools import product
 from collections import Counter
+from itertools import product
 from pathlib import Path
 
 from sage.all import RootSystem
@@ -33,11 +34,11 @@ def build_w33_edges():
             proj_points.append(v)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     edges = []
     for i in range(40):
-        for j in range(i+1, 40):
+        for j in range(i + 1, 40):
             if omega(proj_points[i], proj_points[j]) == 0:
                 edges.append((i, j))
     return edges
@@ -48,7 +49,7 @@ def main():
     edges = build_w33_edges()
 
     # Build E8 root lattice and Cartan matrix (Gram in simple-root basis)
-    R = RootSystem(['E', 8]).root_lattice()
+    R = RootSystem(["E", 8]).root_lattice()
     C = R.cartan_type().cartan_matrix()
 
     # map edge->root element
@@ -105,7 +106,9 @@ def main():
     stats = {
         "adjacent_edge_ip_counts": dict(sorted(adj_ips.items())),
         "nonadjacent_edge_ip_counts": dict(sorted(nonadj_ips.items())),
-        "per_edge_adjacent_ip_profile_counts": {str(k): v for k, v in per_edge_dist.items()},
+        "per_edge_adjacent_ip_profile_counts": {
+            str(k): v for k, v in per_edge_dist.items()
+        },
     }
 
     out_path = ROOT / "artifacts" / "edge_root_bijection_stats_sage.json"

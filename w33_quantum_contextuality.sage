@@ -9,7 +9,7 @@ print("="*70)
 print("""
 THE KOCHEN-SPECKER THEOREM (1967):
 ==================================
-Quantum mechanics is CONTEXTUAL: the outcome of measuring 
+Quantum mechanics is CONTEXTUAL: the outcome of measuring
 an observable depends on what OTHER observables are measured
 simultaneously.
 
@@ -94,13 +94,13 @@ Try to assign each point a value v(p) ∈ {0, 1} such that:
 PARITY ARGUMENT:
   - 40 lines, each needing exactly one "1"
   - Total "1"s across all lines = 40
-  
+
   - Each point is on 4 lines
   - If point p has v(p) = 1, it contributes 4 to the total
-  
+
   - Need: 40 = 4 × (number of 1s)
   - So: exactly 10 points should have value 1
-  
+
 But is this achievable? Let's check!
 """)
 
@@ -196,10 +196,10 @@ Where:
   - Each row is a context (3 commuting observables)
   - Each column is a context
   - All observables are ±1 valued
-  
+
 CONSTRAINT: Product of each row = +1
             Product of each column = +1
-            
+
 BUT: The product of all 9 elements counted twice:
      (rows) → (+1)³ = +1
      (cols) → BUT the product is actually -1!
@@ -210,7 +210,7 @@ RELATION TO W(3, q):
 The Mermin-Peres square lives inside W(3, 2):
   - 9 points (observables) out of 15
   - Arranged in 6 lines (contexts) of 3
-  
+
 W(3, 3) is a LARGER version with:
   - 40 points instead of 15
   - 40 lines instead of 15
@@ -227,7 +227,7 @@ QUANTUM ERROR-CORRECTING CODES (QECCs):
 Symplectic geometry is fundamental to QECCs!
 
 A STABILIZER CODE is defined by:
-  - A symplectic vector space GF(2)^{2n} 
+  - A symplectic vector space GF(2)^{2n}
   - An isotropic subspace S (the stabilizer group)
   - Encodes k = n - dim(S) logical qubits
 
@@ -276,7 +276,7 @@ This is exactly the form defining W(3, 3)!
 
 PHYSICAL INTERPRETATION:
   - 40 points = 40 phase space points for 2 qutrits
-  - 40 lines = 40 "Lagrangian subspaces" 
+  - 40 lines = 40 "Lagrangian subspaces"
   - Lines correspond to GHZ-type entangled states!
   - The Steinberg = structure of entanglement!
 """)

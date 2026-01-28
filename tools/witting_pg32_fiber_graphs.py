@@ -9,6 +9,7 @@ Outputs:
 - artifacts/witting_pg32_fiber_graphs.json
 - artifacts/witting_pg32_fiber_graphs.md
 """
+
 from __future__ import annotations
 
 import json
@@ -19,8 +20,10 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT_JSON = ROOT / "artifacts" / "witting_pg32_fiber_graphs.json"
 OUT_MD = ROOT / "artifacts" / "witting_pg32_fiber_graphs.md"
 
+
 def gf4_add(a: int, b: int) -> int:
     return a ^ b
+
 
 def gf4_mul(a: int, b: int) -> int:
     if a == 0 or b == 0:
@@ -34,11 +37,14 @@ def gf4_mul(a: int, b: int) -> int:
     c1 = (c1 + c2) % 2
     return (c1 << 1) | c0
 
+
 def gf4_square(a: int) -> int:
     return gf4_mul(a, a)
 
+
 def gf4_trace(a: int) -> int:
     return gf4_add(a, gf4_square(a)) & 1
+
 
 def hermitian(u, v):
     s = 0
@@ -46,12 +52,15 @@ def hermitian(u, v):
         s = gf4_add(s, gf4_mul(a, gf4_square(b)))
     return s
 
+
 omega = 2
 omega2 = 3
 omega_powers = [1, omega, omega2]
 
+
 def trace_map(v):
     return tuple(gf4_trace(x) for x in v)
+
 
 def build_vertices():
     vertices = []
@@ -76,6 +85,7 @@ def build_vertices():
             for s in [1, -1]:
                 vertices.append(tuple(v))
     return vertices
+
 
 def main():
     vertices = build_vertices()
@@ -115,11 +125,14 @@ def main():
     lines.append("# Witting Fiber Orthogonality Graphs")
     lines.append("")
     for p, stats in sorted(fiber_stats.items()):
-        lines.append(f"- {p}: unique={stats['unique']} edges={stats['edges']} degree_set={stats['degree_set']}")
+        lines.append(
+            f"- {p}: unique={stats['unique']} edges={stats['edges']} degree_set={stats['degree_set']}"
+        )
 
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"Wrote {OUT_JSON}")
     print(f"Wrote {OUT_MD}")
+
 
 if __name__ == "__main__":
     main()

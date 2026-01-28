@@ -3,18 +3,20 @@
 
 Uses GAP via Sage interface.
 """
+
 from __future__ import annotations
 
 import json
 from pathlib import Path
+
 from sage.interfaces.gap import gap
 
 ROOT = Path(__file__).resolve().parents[2]
 
 
 def build_line_perms_from_we6():
-    data = json.loads((ROOT / 'artifacts' / 'we6_true_action.json').read_text())
-    roots = [tuple(r) for r in data['roots_int2']]
+    data = json.loads((ROOT / "artifacts" / "we6_true_action.json").read_text())
+    roots = [tuple(r) for r in data["roots_int2"]]
     root_to_idx = {r: i for i, r in enumerate(roots)}
 
     # lines
@@ -30,7 +32,7 @@ def build_line_perms_from_we6():
         rep = i if i < j else j
         line_reps.append(rep)
 
-    gens = data['we6_even_generators']  # 1-based perms on roots
+    gens = data["we6_even_generators"]  # 1-based perms on roots
     line_perms = []
     for g in gens:
         perm = [0] * len(line_reps)
@@ -50,9 +52,9 @@ def main():
 
     # PSp(4,3)
     try:
-        G = gap.PSp(4,3)
+        G = gap.PSp(4, 3)
     except Exception:
-        G = gap.ProjectiveSymplecticGroup(4,3)
+        G = gap.ProjectiveSymplecticGroup(4, 3)
 
     classes = gap.ConjugacyClassesSubgroups(G)
     count = int(gap.Length(classes))
@@ -61,7 +63,7 @@ def main():
     Sn = gap.SymmetricGroup(120)
 
     for i in range(1, count + 1):
-        c = gap.List(classes, "x->x")[i-1]
+        c = gap.List(classes, "x->x")[i - 1]
         H = gap.Representative(c)
         idx = int(gap.Index(G, H))
         if idx != 120:
@@ -76,10 +78,10 @@ def main():
         "matches": matches,
         "match_count": len(matches),
     }
-    out_path = ROOT / 'artifacts' / 'psp43_index120_actions.json'
+    out_path = ROOT / "artifacts" / "psp43_index120_actions.json"
     out_path.write_text(json.dumps(out, indent=2))
     print(f"Wrote {out_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

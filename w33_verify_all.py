@@ -9,26 +9,38 @@ W(5, 3) should have:
 """
 
 from itertools import combinations
+
 import numpy as np
 
-print("="*60)
+print("=" * 60)
 print("CONSTRUCTING W(5, 3) - SYMPLECTIC POLAR SPACE OF RANK 3")
-print("="*60)
+print("=" * 60)
 
 # Build W(5, 3) = totally isotropic subspaces of GF(3)^6
 # with symplectic form ω(x,y) = x₁y₄ - x₄y₁ + x₂y₅ - x₅y₂ + x₃y₆ - x₆y₃
 
+
 def symplectic_form_6(v, w):
     """Standard symplectic form on GF(3)^6"""
-    return (v[0]*w[3] - v[3]*w[0] + v[1]*w[4] - v[4]*w[1] + v[2]*w[5] - v[5]*w[2]) % 3
+    return (
+        v[0] * w[3]
+        - v[3] * w[0]
+        + v[1] * w[4]
+        - v[4] * w[1]
+        + v[2] * w[5]
+        - v[5] * w[2]
+    ) % 3
+
 
 def is_isotropic_6(v):
     """Check if vector is isotropic (ω(v,v) = 0, always true for symplectic)"""
     return symplectic_form_6(v, v) == 0
 
+
 def are_orthogonal_6(v, w):
     """Check if two vectors are symplectic-orthogonal"""
     return symplectic_form_6(v, w) == 0
+
 
 def normalize(v):
     """Normalize vector to have first nonzero entry = 1"""
@@ -38,6 +50,7 @@ def normalize(v):
             inv = pow(int(v[i]), -1, 3)  # Modular inverse
             return tuple((x * inv) % 3 for x in v)
     return tuple(v)
+
 
 # Find all projective points (nonzero vectors up to scalar)
 print("\nFinding totally isotropic 1-spaces (points)...")
@@ -49,7 +62,7 @@ for coords in range(3**6):
         v.append(temp % 3)
         temp //= 3
     v = tuple(v)
-    if v != (0,0,0,0,0,0):
+    if v != (0, 0, 0, 0, 0, 0):
         nv = normalize(v)
         if nv not in points:
             # All vectors are isotropic for symplectic form
@@ -82,9 +95,9 @@ for i, p1 in enumerate(points_list):
                 for b in range(3):
                     if a == 0 and b == 0:
                         continue
-                    v = tuple((a*p1[k] + b*p2[k]) % 3 for k in range(6))
+                    v = tuple((a * p1[k] + b * p2[k]) % 3 for k in range(6))
                     line_points.add(normalize(v))
-            
+
             line_frozen = frozenset(line_points)
             if line_frozen not in [frozenset(l) for l in lines]:
                 lines.append(list(line_points))
@@ -106,13 +119,13 @@ for line in lines[:100]:  # Sample first 100 lines
     # Get a basis for this line
     line_list = list(line)
     p1, p2 = line_list[0], line_list[1]
-    
+
     # Find all points orthogonal to both p1 and p2
     orthogonal_points = []
     for p in points_list:
         if are_orthogonal_6(p, p1) and are_orthogonal_6(p, p2):
             orthogonal_points.append(p)
-    
+
     # Find a third point to complete a generator
     for p3 in orthogonal_points:
         if normalize(p3) not in line:
@@ -123,7 +136,7 @@ for line in lines[:100]:  # Sample first 100 lines
                 if not are_orthogonal_6(p3, lp):
                     valid = False
                     break
-            
+
             if valid:
                 # Found a generator!
                 generator_points = set()
@@ -132,9 +145,12 @@ for line in lines[:100]:  # Sample first 100 lines
                         for c in range(3):
                             if a == 0 and b == 0 and c == 0:
                                 continue
-                            v = tuple((a*p1[k] + b*p2[k] + c*p3[k]) % 3 for k in range(6))
+                            v = tuple(
+                                (a * p1[k] + b * p2[k] + c * p3[k]) % 3
+                                for k in range(6)
+                            )
                             generator_points.add(normalize(v))
-                
+
                 gen_frozen = frozenset(generator_points)
                 if gen_frozen not in [frozenset(g) for g in generators]:
                     generators.append(list(generator_points))
@@ -165,7 +181,7 @@ Points per line: {len(lines[0]) if lines else 'N/A'} (expected: 13)
 
 # Actually for the clique complex of W(5, 3):
 # f₀ = points
-# f₁ = edges (pairs of orthogonal points) 
+# f₁ = edges (pairs of orthogonal points)
 # f₂ = triangles (triples of mutually orthogonal points)
 # f₃ = 4-cliques
 
@@ -190,10 +206,14 @@ print(f"Edges in clique complex: {len(edges)}")
 print("Computing triangles (3-cliques)...")
 triangles = 0
 for i, p1 in enumerate(points_list[:50]):  # Sample
-    neighbors_i = [j for j, p2 in enumerate(points_list) if j > i and are_orthogonal_6(p1, p2)]
+    neighbors_i = [
+        j for j, p2 in enumerate(points_list) if j > i and are_orthogonal_6(p1, p2)
+    ]
     for j in neighbors_i:
         p2 = points_list[j]
-        neighbors_j = [k for k in neighbors_i if k > j and are_orthogonal_6(points_list[k], p2)]
+        neighbors_j = [
+            k for k in neighbors_i if k > j and are_orthogonal_6(points_list[k], p2)
+        ]
         triangles += len(neighbors_j)
 
 print(f"Sample triangles: {triangles}")
@@ -217,9 +237,9 @@ Unlike W(3, 3):
 This is a fundamentally different topology from W(3, 3)!
 """)
 
-print("\n" + "="*60)
+print("\n" + "=" * 60)
 print("VERIFYING W(3, 3) ≅ Q(4, 3) (KLEIN CORRESPONDENCE)")
-print("="*60)
+print("=" * 60)
 
 print("""
 The KLEIN CORRESPONDENCE states that:
@@ -242,6 +262,7 @@ The 40 points of W(3, 3) map to the 40 points of Q(4, 3).
 # Let's verify Q(4, 3) has 40 points
 print("\nConstructing Q(4, 3)...")
 
+
 def normalize_5(v):
     """Normalize vector in GF(3)^5"""
     v = list(v)
@@ -251,10 +272,12 @@ def normalize_5(v):
             return tuple((x * inv) % 3 for x in v)
     return tuple(v)
 
+
 # Parabolic quadric: x₀² + x₁x₂ + x₃x₄ = 0
 def on_quadric(v):
     """Check if point is on the quadric Q(4, 3)"""
-    return (v[0]**2 + v[1]*v[2] + v[3]*v[4]) % 3 == 0
+    return (v[0] ** 2 + v[1] * v[2] + v[3] * v[4]) % 3 == 0
+
 
 q4_points = set()
 for coords in range(3**5):
@@ -264,7 +287,7 @@ for coords in range(3**5):
         v.append(temp % 3)
         temp //= 3
     v = tuple(v)
-    if v != (0,0,0,0,0) and on_quadric(v):
+    if v != (0, 0, 0, 0, 0) and on_quadric(v):
         q4_points.add(normalize_5(v))
 
 print(f"Points on Q(4, 3): {len(q4_points)}")
@@ -276,7 +299,7 @@ print("""
 
 The isomorphism is:
   Points of W(3, 3) (totally isotropic 1-spaces in GF(3)⁴)
-  ↕  
+  ↕
   Points of Q(4, 3) (points on quadric in PG(4, 3))
 
 Both have automorphism group O(5, 3) : C₂ of order 51,840.
@@ -284,9 +307,9 @@ Both have automorphism group O(5, 3) : C₂ of order 51,840.
 This is the "exceptional isomorphism" Sp(4, q) ≅ O(5, q)!
 """)
 
-print("\n" + "="*60)
+print("\n" + "=" * 60)
 print("MUB CONNECTION TO W(3, 3)")
-print("="*60)
+print("=" * 60)
 
 print("""
 MUTUALLY UNBIASED BASES (MUBs):
@@ -312,18 +335,14 @@ omega = np.exp(2j * np.pi / 3)  # Primitive cube root of unity
 B0 = np.eye(3, dtype=complex)
 
 # Fourier basis
-B1 = np.array([[1, 1, 1],
-               [1, omega, omega**2],
-               [1, omega**2, omega**4]]) / np.sqrt(3)
+B1 = np.array([[1, 1, 1], [1, omega, omega**2], [1, omega**2, omega**4]]) / np.sqrt(3)
 
 # Shifted Fourier bases
-B2 = np.array([[1, 1, 1],
-               [1, omega**2, omega],
-               [1, omega, omega**4]]) / np.sqrt(3)
+B2 = np.array([[1, 1, 1], [1, omega**2, omega], [1, omega, omega**4]]) / np.sqrt(3)
 
-B3 = np.array([[1, omega, omega],
-               [1, omega**2, omega**3],
-               [1, 1, omega**5]]) / np.sqrt(3)
+B3 = np.array(
+    [[1, omega, omega], [1, omega**2, omega**3], [1, 1, omega**5]]
+) / np.sqrt(3)
 
 # Actually, let me use the standard construction
 # For prime p, the p+1 MUBs are given by:
@@ -355,9 +374,9 @@ print(f"\nTotal MUBs: {len(MUBs)}")
 # Verify mutual unbiasedness
 print("\nVerifying mutual unbiasedness:")
 for i in range(len(MUBs)):
-    for j in range(i+1, len(MUBs)):
-        inner_products = np.abs(MUBs[i].conj() @ MUBs[j].T)**2
-        expected = 1/p * np.ones((p, p))
+    for j in range(i + 1, len(MUBs)):
+        inner_products = np.abs(MUBs[i].conj() @ MUBs[j].T) ** 2
+        expected = 1 / p * np.ones((p, p))
         if np.allclose(inner_products, expected):
             print(f"  MUB {i} ⊥ MUB {j}: ✓")
         else:
@@ -368,19 +387,19 @@ CONNECTION TO W(3, 3):
 
 The 4 MUBs give us:
   - 4 bases × 3 vectors = 12 rays in C³
-  
+
 But we need to see the W(3, 3) structure more directly.
 
 Consider the "MUB graph":
   - Vertices = rays (one-dimensional subspaces)
   - Edges = pairs from different MUBs
-  
+
 Actually, the deeper connection is:
 
 The LINES of W(3, 3) correspond to certain "MUB lines":
   - Each line has 4 points
   - These 4 points come from 4 different MUBs!
-  
+
 In finite geometry terms:
   GF(3)⁴ with symplectic form ↔ Phase space for qutrits
   W(3, 3) structure ↔ Quantum state space geometry
@@ -399,6 +418,6 @@ SUMMARY OF MUB-W33 CONNECTION:
 W(3, 3) IS the geometry underlying quantum mechanics in dimension 3!
 """)
 
-print("\n" + "★"*60)
+print("\n" + "★" * 60)
 print("      ALL VERIFICATIONS COMPLETE!")
-print("★"*60)
+print("★" * 60)

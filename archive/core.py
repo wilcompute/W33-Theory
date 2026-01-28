@@ -8,19 +8,24 @@ Key insight I'm pursuing: The universal -1 commutator suggests something
 deeper than just "finite geometry". Let me figure out what.
 """
 
+import json
+from collections import defaultdict
+from itertools import combinations
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
-from pathlib import Path
-from itertools import combinations
-from collections import defaultdict
-import json
 
 # ═══════════════════════════════════════════════════════════════════════════
 # CONSTANTS & PATHS
 # ═══════════════════════════════════════════════════════════════════════════
 
-ROOT = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data")
-W33_RAYS = ROOT / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv"
+ROOT = Path(
+    r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data"
+)
+W33_RAYS = (
+    ROOT / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv"
+)
 W33_LINES = ROOT / "_workbench/02_geometry/W33_line_phase_map.csv"
 
 # Phase quantization: Z_12 phases map to 12th roots of unity
@@ -31,25 +36,28 @@ OMEGA12 = np.exp(2j * np.pi / 12)
 # DATA LOADERS
 # ═══════════════════════════════════════════════════════════════════════════
 
+
 def load_rays():
     """Load the 40 C^4 rays as a (40, 4) complex array."""
     df = pd.read_csv(W33_RAYS)
     V = np.zeros((40, 4), dtype=np.complex128)
     for _, row in df.iterrows():
-        pid = int(row['point_id'])
+        pid = int(row["point_id"])
         for i in range(4):
-            s = str(row[f'v{i}']).replace(' ', '')
+            s = str(row[f"v{i}"]).replace(" ", "")
             V[pid, i] = complex(s)
     return V
+
 
 def load_lines():
     """Load the 15 lines as list of 4-tuples."""
     df = pd.read_csv(W33_LINES)
     lines = []
     for _, row in df.iterrows():
-        pts = tuple(map(int, str(row['point_ids']).split()))
+        pts = tuple(map(int, str(row["point_ids"]).split()))
         lines.append(pts)
     return lines
+
 
 def build_collinearity(lines):
     """Build collinearity relation: col[p] = set of points collinear with p."""
@@ -61,13 +69,16 @@ def build_collinearity(lines):
                     col[p].add(q)
     return dict(col)
 
+
 # ═══════════════════════════════════════════════════════════════════════════
 # PHASE COMPUTATIONS
 # ═══════════════════════════════════════════════════════════════════════════
 
+
 def inner(V, p, q):
     """Hermitian inner product <p|q>."""
     return np.vdot(V[p], V[q])
+
 
 def phase_k12(z):
     """Quantize phase to Z_12."""
@@ -76,15 +87,18 @@ def phase_k12(z):
     ang = np.angle(z)
     return int(round(12 * ang / (2 * np.pi))) % 12
 
+
 def phase_exact(z):
     """Return exact phase as multiple of pi/6."""
     ang = np.angle(z)
     k = round(6 * ang / np.pi)
     return k % 12
 
+
 # ═══════════════════════════════════════════════════════════════════════════
 # STRUCTURAL ANALYSIS
 # ═══════════════════════════════════════════════════════════════════════════
+
 
 class W33:
     """
@@ -137,7 +151,11 @@ class W33:
         triads = []
         for a, b, c in combinations(self.points, 3):
             # Check non-collinearity
-            if self.are_collinear(a, b) or self.are_collinear(a, c) or self.are_collinear(b, c):
+            if (
+                self.are_collinear(a, b)
+                or self.are_collinear(a, c)
+                or self.are_collinear(b, c)
+            ):
                 continue
             # Check common neighbors
             cn = self.col[a] & self.col[b] & self.col[c]
@@ -162,8 +180,12 @@ class W33:
 
         Returns (k_value_mod12, complex_value)
         """
-        z = (inner(self.V, c, a) * inner(self.V, a, d) *
-             inner(self.V, d, b) * inner(self.V, b, c))
+        z = (
+            inner(self.V, c, a)
+            * inner(self.V, a, d)
+            * inner(self.V, d, b)
+            * inner(self.V, b, c)
+        )
         k = (self.k(c, a) + self.k(a, d) + self.k(d, b) + self.k(b, c)) % 12
         return k, z
 
@@ -171,6 +193,7 @@ class W33:
 # ═══════════════════════════════════════════════════════════════════════════
 # MY INVESTIGATIONS
 # ═══════════════════════════════════════════════════════════════════════════
+
 
 def investigate_ray_structure():
     """
@@ -204,7 +227,9 @@ def investigate_ray_structure():
     for key in sorted(inner_products.keys()):
         vals = inner_products[key]
         mags = [abs(v[2]) for v in vals]
-        print(f"  {key}: count={len(vals)}, |<p|q>| in [{min(mags):.6f}, {max(mags):.6f}]")
+        print(
+            f"  {key}: count={len(vals)}, |<p|q>| in [{min(mags):.6f}, {max(mags):.6f}]"
+        )
 
     # Check if phases are exactly 12th roots
     print("\nPhase exactness check (should be multiples of pi/6):")
@@ -215,13 +240,14 @@ def investigate_ray_structure():
         actual_phase = np.angle(z)
         err = abs(actual_phase - expected_phase)
         # Account for phase wrap
-        err = min(err, 2*np.pi - err)
+        err = min(err, 2 * np.pi - err)
         phase_errors.append(err)
 
     print(f"  Max phase error: {max(phase_errors):.2e}")
     print(f"  Mean phase error: {np.mean(phase_errors):.2e}")
 
     return w
+
 
 def investigate_commutator():
     """
@@ -236,7 +262,9 @@ def investigate_commutator():
     print("COMMUTATOR INVESTIGATION")
     print("=" * 70)
 
-    print(f"\nFound {len(triads)} four-center triads in {len(set(t[1] for t in triads))} K4 components")
+    print(
+        f"\nFound {len(triads)} four-center triads in {len(set(t[1] for t in triads))} K4 components"
+    )
 
     # Group by center quad
     by_center = defaultdict(list)
@@ -260,15 +288,20 @@ def investigate_commutator():
                 comm_values[k] += 1
 
                 if len(sample_moves) < 5:
-                    sample_moves.append({
-                        'from': t1, 'to': t2,
-                        'shared': (a, b), 'swap': (c, d),
-                        'k': k, 'z': z
-                    })
+                    sample_moves.append(
+                        {
+                            "from": t1,
+                            "to": t2,
+                            "shared": (a, b),
+                            "swap": (c, d),
+                            "k": k,
+                            "z": z,
+                        }
+                    )
 
     print(f"\nCommutator k values (should all be 6 for phase=-1):")
     for k, count in sorted(comm_values.items()):
-        phase = OMEGA12 ** k
+        phase = OMEGA12**k
         print(f"  k={k} (phase={phase:.4f}): {count} moves")
 
     print(f"\nSample moves:")
@@ -278,6 +311,7 @@ def investigate_commutator():
         print(f"    Bargmann: k={m['k']}, z={m['z']:.6f}")
 
     return comm_values
+
 
 def investigate_holonomy():
     """
@@ -303,14 +337,17 @@ def investigate_holonomy():
 
     print("\nHolonomy distribution on 360 four-center triads:")
     for h in sorted(hol_counts.keys()):
-        phase = OMEGA12 ** h
+        phase = OMEGA12**h
         print(f"  h={h} (phase={phase:.4f}): {hol_counts[h]} triads")
         for triad, center in hol_examples[h]:
             a, b, c = triad
             print(f"    Example: {triad}, center={center}")
-            print(f"      k({a},{b})={w.k(a,b)}, k({b},{c})={w.k(b,c)}, k({c},{a})={w.k(c,a)}")
+            print(
+                f"      k({a},{b})={w.k(a,b)}, k({b},{c})={w.k(b,c)}, k({c},{a})={w.k(c,a)}"
+            )
 
     return hol_counts
+
 
 def investigate_algebraic_structure():
     """

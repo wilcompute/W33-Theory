@@ -13,8 +13,25 @@ from typing import Any, Dict, Iterable, List, Sequence, Tuple
 # Reuse the expression generator from the suite.
 from w33_baseline_audit_suite import Expr, Target, generate
 
-
-W33_BASE_INTS: List[int] = [40, 45, 90, 240, 5280, 6048, 22, 2, 3, 5, 6, 7, 8, 10, 11, 12, 24]
+W33_BASE_INTS: List[int] = [
+    40,
+    45,
+    90,
+    240,
+    5280,
+    6048,
+    22,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    10,
+    11,
+    12,
+    24,
+]
 
 
 def make_targets() -> List[Target]:
@@ -30,7 +47,9 @@ def make_targets() -> List[Target]:
     ]
 
 
-def make_ops(mode: str) -> Tuple[List[Expr], List[Tuple[str, Any]], List[Tuple[str, Any]]]:
+def make_ops(
+    mode: str,
+) -> Tuple[List[Expr], List[Tuple[str, Any]], List[Tuple[str, Any]]]:
     base_strict = [Expr(float(n), str(n), 1) for n in W33_BASE_INTS]
 
     unary_strict = [
@@ -104,7 +123,11 @@ def score_light(
     Avoids building/sorting huge ranked lists.
     """
 
-    out: Dict[str, Any] = {"num_exprs": len(exprs), "tolerances_pct": list(tolerances_pct), "targets": {}}
+    out: Dict[str, Any] = {
+        "num_exprs": len(exprs),
+        "tolerances_pct": list(tolerances_pct),
+        "targets": {},
+    }
 
     for t in targets:
         hits = {str(p): 0 for p in tolerances_pct}
@@ -124,7 +147,9 @@ def score_light(
             err_pct = err * 100.0
 
             if err_pct < float(best["pct_error"]) or (
-                err_pct == float(best["pct_error"]) and best["complexity"] is not None and e.complexity < int(best["complexity"])
+                err_pct == float(best["pct_error"])
+                and best["complexity"] is not None
+                and e.complexity < int(best["complexity"])
             ):
                 best = {
                     "pct_error": err_pct,
@@ -142,7 +167,9 @@ def score_light(
     return out
 
 
-def extract_summary(mode_results: Dict[str, Any], tol_key: str = "1.0") -> Dict[str, Any]:
+def extract_summary(
+    mode_results: Dict[str, Any], tol_key: str = "1.0"
+) -> Dict[str, Any]:
     """Flatten per-target (best_pct_error, hits@tol) into a dict."""
 
     summary: Dict[str, Any] = {}
@@ -175,13 +202,29 @@ def quantiles(xs: List[float], ps: Sequence[float]) -> Dict[str, float]:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Random-base control experiment for W33 baseline audit suite.")
-    parser.add_argument("--reps", type=int, default=25, help="Number of random base-set replicates per mode")
+    parser = argparse.ArgumentParser(
+        description="Random-base control experiment for W33 baseline audit suite."
+    )
+    parser.add_argument(
+        "--reps",
+        type=int,
+        default=25,
+        help="Number of random base-set replicates per mode",
+    )
     parser.add_argument("--seed", type=int, default=1337, help="RNG seed")
-    parser.add_argument("--max-pool", type=int, default=120_000, help="Expression pool size per run")
+    parser.add_argument(
+        "--max-pool", type=int, default=120_000, help="Expression pool size per run"
+    )
     parser.add_argument("--max-depth", type=int, default=4, help="Expression depth")
-    parser.add_argument("--pair-limit", type=int, default=1500, help="Within-layer mixing limit")
-    parser.add_argument("--modes", type=str, default="strict,medium", help="Comma-separated: strict,medium")
+    parser.add_argument(
+        "--pair-limit", type=int, default=1500, help="Within-layer mixing limit"
+    )
+    parser.add_argument(
+        "--modes",
+        type=str,
+        default="strict,medium",
+        help="Comma-separated: strict,medium",
+    )
     args = parser.parse_args()
 
     modes = [m.strip() for m in args.modes.split(",") if m.strip()]
@@ -197,7 +240,14 @@ def main() -> int:
     w33_mode_results: Dict[str, Any] = {}
     for mode in modes:
         base, unary, binary = make_ops(mode)
-        exprs = generate(base, unary, binary, max_depth=args.max_depth, max_pool=args.max_pool, pair_limit=args.pair_limit)
+        exprs = generate(
+            base,
+            unary,
+            binary,
+            max_depth=args.max_depth,
+            max_pool=args.max_pool,
+            pair_limit=args.pair_limit,
+        )
         w33_mode_results[mode] = score_light(exprs, targets, tolerances)
 
     # Random controls
@@ -243,7 +293,14 @@ def main() -> int:
                 ("/", lambda a, b: a / b),
             ]
 
-            exprs = generate(base_exprs, unary, binary, max_depth=args.max_depth, max_pool=args.max_pool, pair_limit=args.pair_limit)
+            exprs = generate(
+                base_exprs,
+                unary,
+                binary,
+                max_depth=args.max_depth,
+                max_pool=args.max_pool,
+                pair_limit=args.pair_limit,
+            )
             scored = score_light(exprs, targets, tolerances)
 
             row: Dict[str, Any] = {
@@ -262,7 +319,10 @@ def main() -> int:
                 print(f"  completed {i+1}/{args.reps}")
 
         # Distributions and empirical p-values
-        mode_dist: Dict[str, Any] = {"w33": {"num_exprs": w33_ref["num_exprs"], "targets": {}}, "random": {"reps": args.reps, "targets": {}}}
+        mode_dist: Dict[str, Any] = {
+            "w33": {"num_exprs": w33_ref["num_exprs"], "targets": {}},
+            "random": {"reps": args.reps, "targets": {}},
+        }
 
         for t in targets:
             tname = t.name
@@ -292,11 +352,15 @@ def main() -> int:
                     "empirical_p": p_best,
                 },
                 "hits_le_1.0": {
-                    "quantiles": quantiles([float(x) for x in xs_hits1], [0.05, 0.5, 0.95]),
+                    "quantiles": quantiles(
+                        [float(x) for x in xs_hits1], [0.05, 0.5, 0.95]
+                    ),
                     "empirical_p": p_hits1,
                 },
                 "hits_le_0.1": {
-                    "quantiles": quantiles([float(x) for x in xs_hits01], [0.05, 0.5, 0.95]),
+                    "quantiles": quantiles(
+                        [float(x) for x in xs_hits01], [0.05, 0.5, 0.95]
+                    ),
                     "empirical_p": p_hits01,
                 },
             }

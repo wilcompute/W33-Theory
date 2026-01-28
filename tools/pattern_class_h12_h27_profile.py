@@ -8,6 +8,7 @@ For each W33 vertex, compute:
 
 Outputs artifacts/pattern_class_h12_h27_profile.json
 """
+
 from __future__ import annotations
 
 import json
@@ -38,11 +39,11 @@ def construct_w33_points_and_adj():
     n = len(points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
-    adj = [[0]*n for _ in range(n)]
+    adj = [[0] * n for _ in range(n)]
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(points[i], points[j]) == 0:
                 adj[i][j] = adj[j][i] = 1
 
@@ -50,8 +51,12 @@ def construct_w33_points_and_adj():
 
 
 def build_pattern_classes():
-    inter = json.loads((ROOT / "artifacts" / "we6_coxeter6_intersection.json").read_text())
-    orbit_map = json.loads((ROOT / "artifacts" / "e8_orbit_to_f3_point.json").read_text())
+    inter = json.loads(
+        (ROOT / "artifacts" / "we6_coxeter6_intersection.json").read_text()
+    )
+    orbit_map = json.loads(
+        (ROOT / "artifacts" / "e8_orbit_to_f3_point.json").read_text()
+    )
     mapping = orbit_map["mapping"]
 
     # patterns per orbit id
@@ -96,23 +101,29 @@ def main():
     for v in range(40):
         nbrs = [i for i, a in enumerate(adj[v]) if a]
         # neighbor class counts
-        counts = [0]*k
+        counts = [0] * k
         for n in nbrs:
             counts[class_by_vertex[n]] += 1
 
         # H12 triangles and their class-multisets
         tris = h12_triangles(adj, v)
         tri_types = []
-        for a,b,c in tris:
-            tri_types.append(tuple(sorted([class_by_vertex[a], class_by_vertex[b], class_by_vertex[c]])))
+        for a, b, c in tris:
+            tri_types.append(
+                tuple(
+                    sorted([class_by_vertex[a], class_by_vertex[b], class_by_vertex[c]])
+                )
+            )
         tri_counts = Counter(tri_types)
 
-        vertex_profiles.append({
-            "vertex": v,
-            "class": class_by_vertex[v],
-            "neighbor_class_counts": counts,
-            "triangle_class_multisets": {str(k): v for k, v in tri_counts.items()},
-        })
+        vertex_profiles.append(
+            {
+                "vertex": v,
+                "class": class_by_vertex[v],
+                "neighbor_class_counts": counts,
+                "triangle_class_multisets": {str(k): v for k, v in tri_counts.items()},
+            }
+        )
 
     # Aggregate per class
     class_profiles = defaultdict(list)
@@ -122,11 +133,11 @@ def main():
     class_summary = {}
     for c, profs in class_profiles.items():
         # average neighbor class counts
-        avg = [0]*k
+        avg = [0] * k
         for p in profs:
             for i, val in enumerate(p["neighbor_class_counts"]):
                 avg[i] += val
-        avg = [val/len(profs) for val in avg]
+        avg = [val / len(profs) for val in avg]
 
         # triangle multiset union
         tri_counter = Counter()

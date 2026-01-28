@@ -9,4 +9,3 @@ Best score: **0 / 40**
 ## Tolerances (0.08, 0.08)
 
 Best score: **1 / 40**
-

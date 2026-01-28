@@ -9,16 +9,18 @@ Notes:
 """
 
 import argparse
+
 import numpy as np
 import scipy.sparse as sp
 from scipy.sparse.linalg import expm_multiply
 
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--H_npz', required=True)
-    ap.add_argument('--t', type=float, required=True)
-    ap.add_argument('--in_npy', required=True)
-    ap.add_argument('--out_npy', required=True)
+    ap.add_argument("--H_npz", required=True)
+    ap.add_argument("--t", type=float, required=True)
+    ap.add_argument("--in_npy", required=True)
+    ap.add_argument("--out_npy", required=True)
     args = ap.parse_args()
 
     H = sp.load_npz(args.H_npz).tocsr()
@@ -27,8 +29,9 @@ def main():
         raise ValueError(f"psi0 must be shape ({H.shape[0]},), got {psi0.shape}")
 
     # U(t)=exp(-i H t)
-    psi_t = expm_multiply((-1j*args.t)*H, psi0)
+    psi_t = expm_multiply((-1j * args.t) * H, psi0)
     np.save(args.out_npy, psi_t)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

@@ -7,11 +7,12 @@ This is a graph monomorphism between H27 and the skew graph.
 
 If found, this exhibits H27 as an 8-regular spanning subgraph of Schläfli-skew.
 """
+
 from __future__ import annotations
 
+import json
 from itertools import product
 from pathlib import Path
-import json
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -36,11 +37,11 @@ def build_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
-    adj = [[0]*n for _ in range(n)]
+    adj = [[0] * n for _ in range(n)]
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i][j] = adj[j][i] = 1
 
@@ -52,7 +53,7 @@ def h27_from_w33(adj, v0=0):
     non_neighbors = [j for j in range(n) if j != v0 and adj[v0][j] == 0]
     idx = {v: i for i, v in enumerate(non_neighbors)}
 
-    h_adj = [[0]*27 for _ in range(27)]
+    h_adj = [[0] * 27 for _ in range(27)]
     for i, vi in enumerate(non_neighbors):
         for j, vj in enumerate(non_neighbors):
             if i < j and adj[vi][vj]:
@@ -63,15 +64,16 @@ def h27_from_w33(adj, v0=0):
 
 # Schläfli skew graph construction
 
+
 def build_27_lines():
     lines = []
     for i in range(1, 7):
-        lines.append(('E', i))
+        lines.append(("E", i))
     for i in range(1, 7):
-        lines.append(('C', i))
+        lines.append(("C", i))
     for i in range(1, 7):
-        for j in range(i+1, 7):
-            lines.append(('L', i, j))
+        for j in range(i + 1, 7):
+            lines.append(("L", i, j))
     return lines
 
 
@@ -81,27 +83,27 @@ def lines_intersect(L1, L2):
 
     t1, t2 = L1[0], L2[0]
 
-    if t1 == 'E' and t2 == 'E':
+    if t1 == "E" and t2 == "E":
         return False
-    if t1 == 'C' and t2 == 'C':
+    if t1 == "C" and t2 == "C":
         return False
 
-    if t1 == 'E' and t2 == 'C':
+    if t1 == "E" and t2 == "C":
         return L1[1] != L2[1]
-    if t1 == 'C' and t2 == 'E':
+    if t1 == "C" and t2 == "E":
         return L1[1] != L2[1]
 
-    if t1 == 'E' and t2 == 'L':
+    if t1 == "E" and t2 == "L":
         return L1[1] in L2[1:]
-    if t1 == 'L' and t2 == 'E':
+    if t1 == "L" and t2 == "E":
         return L2[1] in L1[1:]
 
-    if t1 == 'C' and t2 == 'L':
+    if t1 == "C" and t2 == "L":
         return L1[1] in L2[1:]
-    if t1 == 'L' and t2 == 'C':
+    if t1 == "L" and t2 == "C":
         return L2[1] in L1[1:]
 
-    if t1 == 'L' and t2 == 'L':
+    if t1 == "L" and t2 == "L":
         s1 = set(L1[1:])
         s2 = set(L2[1:])
         return len(s1 & s2) == 0
@@ -112,15 +114,15 @@ def lines_intersect(L1, L2):
 def schlafli_skew_graph():
     lines = build_27_lines()
     n = len(lines)
-    adj = [[0]*n for _ in range(n)]
+    adj = [[0] * n for _ in range(n)]
 
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if lines_intersect(lines[i], lines[j]):
                 adj[i][j] = adj[j][i] = 1
 
     # skew graph = complement of intersection graph
-    skew = [[0]*n for _ in range(n)]
+    skew = [[0] * n for _ in range(n)]
     for i in range(n):
         for j in range(n):
             if i == j:
@@ -132,12 +134,12 @@ def schlafli_skew_graph():
 
 def to_bitmasks(adj):
     n = len(adj)
-    masks = [0]*n
+    masks = [0] * n
     for i in range(n):
         m = 0
         for j in range(n):
             if adj[i][j]:
-                m |= (1 << j)
+                m |= 1 << j
         masks[i] = m
     return masks
 
@@ -186,7 +188,7 @@ def search_embedding(h_adj, s_adj, max_solutions=1):
     def iter_bits(mask):
         while mask:
             lsb = mask & -mask
-            v = (lsb.bit_length() - 1)
+            v = lsb.bit_length() - 1
             yield v
             mask ^= lsb
 
@@ -256,7 +258,7 @@ def main():
         h_edges = 0
         mapped_edges = 0
         for i in range(27):
-            for j in range(i+1, 27):
+            for j in range(i + 1, 27):
                 if h_adj[i][j]:
                     h_edges += 1
                     if s_adj[sol[i]][sol[j]]:

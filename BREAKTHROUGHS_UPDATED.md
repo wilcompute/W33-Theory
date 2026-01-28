@@ -3,7 +3,7 @@
 ## Executive Summary
 
 W33 (Generalized Quadrangle GQ(3,3)) is not merely a geometric object—it is a **discrete theory of everything candidate** that encodes:
-- Color confinement (SU(3) structure)  
+- Color confinement (SU(3) structure)
 - Weak interactions (SU(2) structure)
 - In unified form through Z₁₂ = Z₄ × Z₃ quantization
 
@@ -39,12 +39,12 @@ All 90 K4s are equally "special" at the quantum level. They form the protected s
 ```
 K4 Component Distribution:
   Z3 = 0 (color singlets): 90/90 (100%)
-  
-All 4-cliques Analysis:  
+
+All 4-cliques Analysis:
   Total non-collinear: 9450
   Z3 = 0 (color singlets): 4374 (46.3%)
   Z3 ≠ 0: 6076 (53.7%)
-  
+
 K4s as fraction of singlets: 2.1%
 ```
 
@@ -73,10 +73,10 @@ ALL 90 K4 COMPONENTS HAVE IDENTICAL (Z4, Z3) = (2, 0)
 
 Z4 Distribution:
   Z4 = 0: 0/90 (0%)
-  Z4 = 1: 0/90 (0%)  
+  Z4 = 1: 0/90 (0%)
   Z4 = 2: 90/90 (100%)  ← SELECTED
   Z4 = 3: 0/90 (0%)
-  
+
 Z4 × Z3 Joint Distribution:
   Only (2, 0) is occupied [90 times]
   All other 11 combinations: 0 times
@@ -98,7 +98,7 @@ Z4 × Z3 Joint Distribution:
 ```
 Quantum Number: (Z4, Z3) = (2, 0)
                  ↓        ↓
-            Parity    Color  
+            Parity    Color
             Flip      Singlet
 ```
 
@@ -112,7 +112,7 @@ Quantum Number: (Z4, Z3) = (2, 0)
 
 ### The Match
 - SU(5) fundamental representation: 5-dimensional
-- SU(5) symmetric representation: **45-dimensional**  
+- SU(5) symmetric representation: **45-dimensional**
 - Q45 (quotient of W33): **exactly 45 vertices**
 - 90 K4 components: form **45 dual pairs** under outer↔center inversion
 
@@ -123,7 +123,7 @@ SU(5) GUT:
   Fundamental rep: 5
   Adjoint rep: 24
   Symmetric rep: 45 ← MATCHES Q45
-  
+
 W33:
   Points: 40
   Q45 vertices: 45 ← MATCH!
@@ -133,7 +133,7 @@ W33:
 ### Particle Unification in SU(5)
 SU(5) puts quarks + leptons in unified multiplets:
 - (3,2) = color triplet + weak doublet = quarks
-- (3,1) = color triplet + singlet = colored leptons  
+- (3,1) = color triplet + singlet = colored leptons
 - (1,2) = colorless + weak doublet
 - (1,1) = colorless + singlet
 
@@ -150,14 +150,14 @@ For every triangle in Q45, compute holonomy in S₆:
 5280 total triangles
 
 Acentric (parity 0): 2880 triangles
-  - Holonomy partition: (3,1,1,1) 
+  - Holonomy partition: (3,1,1,1)
   - Interpretation: Boson-like (spin 0 or 1)
-  
+
 Unicentric (parity 1): 2160 triangles
   - Holonomy partition: (2,2,2)
   - Interpretation: Fermion-like (spin 1/2)
-  
-Tricentric (parity 0): 240 triangles  
+
+Tricentric (parity 0): 240 triangles
   - Holonomy partition: identity
   - Interpretation: Flat/protected sector
 ```
@@ -176,7 +176,7 @@ This suggests W33 naturally separates fermion and boson sectors!
 
 ### The Structure
 ```
-W33 (40 points, 40 lines) 
+W33 (40 points, 40 lines)
     ↓ (compute K4 components & phases)
 90 K4 dual pairs with (Z4, Z3) = (2, 0)
     ↓ (project to quotient)
@@ -191,7 +191,7 @@ Protected sector (identity): 240 states
 
 ### Particle Content
 - **Fermion states**: 2160 triangles × (Z₄, Z₃) classes = fermion multiplets
-- **Boson states**: 2880 triangles × (Z₄, Z₃) classes = boson multiplets  
+- **Boson states**: 2880 triangles × (Z₄, Z₃) classes = boson multiplets
 - **Protected states**: 240 triangles with identity holonomy
 
 ### Quantum Numbers
@@ -337,12 +337,12 @@ Protected sector (identity): 240 states
 
 ### Code
 - `THE_PROOF.py`: Bargmann phase calculation and CP² Berry phase proof
-- `physics_connections.py`: SU(5) and E₆ framework analysis  
+- `physics_connections.py`: SU(5) and E₆ framework analysis
 - `color_singlet_test.py`: Rigorous color singlet confirmation (9450 cliques analyzed)
 - `z4_analysis.py`: Z₄ distribution study (12× selection confirmation)
 - `DOUBLE_CONFINEMENT.py`: Physical interpretation and implications
 
-### Documentation  
+### Documentation
 - `BREAKTHROUGHS.md` (this file): Comprehensive discovery summary
 - `INSIGHTS.md`: Running notes on all findings
 - `README.md`: Setup and usage guide

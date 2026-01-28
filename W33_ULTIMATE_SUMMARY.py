@@ -18,7 +18,7 @@ CONSTRUCTION:
   V = GF(3)⁴, a 4-dimensional vector space over the field with 3 elements
   ω: V × V → GF(3), the symplectic form
       ω(x, y) = x₁y₂ - x₂y₁ + x₃y₄ - x₄y₃
-  
+
   Points = totally isotropic 1-dimensional subspaces (40 points)
   Lines = totally isotropic 2-dimensional subspaces (40 lines)
   Each line contains 4 points; each point is on 4 lines
@@ -41,7 +41,7 @@ AUTOMORPHISM GROUP:
 STRUCTURE:
   PSp(4, 3) ≅ Ω(5, 3) (exceptional isomorphism!)
   |PSp(4, 3)| = 25,920 (simple group)
-  
+
 SYLOW 3-SUBGROUP:
   |Sylow₃| = 81 = 3⁴
   Structure: extraspecial or (C₃)⁴ type
@@ -68,7 +68,7 @@ EULER CHARACTERISTIC:
 FUNDAMENTAL GROUP:
   ★★★ π₁(W33) = F₈₁ ★★★
   THE FREE GROUP ON 81 GENERATORS!
-  
+
   This means:
   - W33 is aspherical (K(F₈₁, 1) space)
   - All higher homotopy groups vanish: π_n = 0 for n ≥ 2
@@ -85,7 +85,7 @@ IV. THE MAGIC NUMBER 81
 The number 81 = 3⁴ appears in at least SEVEN different ways:
 
   1. dim(H₁(W33)) = 81
-  2. rank(π₁(W33)) = 81  
+  2. rank(π₁(W33)) = 81
   3. |Sylow₃(Aut)| = 81
   4. dim(Steinberg representation) = 81
   5. Number of apartments through each flag = 81
@@ -108,7 +108,7 @@ THEOREM: For all prime powers q, the symplectic polar space W(3, q):
   1. W(3, q) is the clique complex of Sp(4, q)
   2. Aut(W(3, q)) = O(5, q) : C₂
   3. H₁(W(3, q); ℤ) = ℤ^{q⁴} (Steinberg representation)
-  4. H_n(W(3, q); ℤ) = 0 for n ≥ 2  
+  4. H_n(W(3, q); ℤ) = 0 for n ≥ 2
   5. π₁(W(3, q)) = F_{q⁴} (free group!)
   6. W(3, q) ≃ ⋁_{q⁴} S¹ (homotopy equivalence)
   7. χ(W(3, q)) = 1 - q⁴
@@ -186,7 +186,7 @@ Steinberg representation!
 SOLOMON-TITS THEOREM:
   The reduced homology of a building of rank n is concentrated
   in degree n-1 and equals the Steinberg representation.
-  
+
   For W33 (rank 2): H₁ = Steinberg ✓
 
 ═══════════════════════════════════════════════════════════════════════════════
@@ -205,7 +205,7 @@ This is a 162-REGULAR INFINITE TREE:
 CONNECTION TO p-ADIC ANALYSIS:
   W̃33 relates to the BRUHAT-TITS BUILDING of PSp(4) over
   the 3-adic numbers ℚ₃!
-  
+
   W33 is the "residue" at a special vertex of this p-adic building.
 
 ═══════════════════════════════════════════════════════════════════════════════
@@ -308,7 +308,7 @@ XII. THE BIG PICTURE
 
 W33 is a ROSETTA STONE connecting:
   • Combinatorics (Steiner systems)
-  • Finite geometry (polar spaces)  
+  • Finite geometry (polar spaces)
   • Group theory (Lie type groups)
   • Representation theory (Steinberg)
   • Algebraic topology (free groups)
@@ -322,7 +322,7 @@ XIII. CONCLUSION
 W33 demonstrates that a FINITE combinatorial object (40 points!)
 encodes INFINITE and CONTINUOUS structures:
   • The free group F₈₁ (infinite, non-abelian)
-  • p-adic Bruhat-Tits buildings  
+  • p-adic Bruhat-Tits buildings
   • The Steinberg representation
   • Quantum mechanical phenomena
 
@@ -338,12 +338,18 @@ physics. The number 81 = 3⁴ is the key that unlocks them all!
 ═══════════════════════════════════════════════════════════════════════════════
 
                               ★ ★ ★ ★ ★
-                               
+
                      THE EXPLORATION CONTINUES...
-                               
+
                               ★ ★ ★ ★ ★
 
 ═══════════════════════════════════════════════════════════════════════════════
 """
 
-print(__doc__)
+
+def main():
+    print(__doc__)
+
+
+if __name__ == "__main__":
+    main()

@@ -10,16 +10,32 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUT_DIR = DATA / "_workbench" / "04_measurement"
 
 MAP_PATH = DATA / "_workbench" / "05_symmetry" / "coin_c24_2t_alignment_mapping.csv"
-TABLE_PATH = DATA / "_toe" / "projector_recon_20260110" / "binary_tetrahedral_2T_multiplication_table.csv"
-MASKS_CSV = DATA / "_toe" / "projector_recon_20260110" / "W33_line_clock_projector_masks_20260109T210928Z.csv"
-GRID_CSV = DATA / "_toe" / "native_fullgrid_20260110" / "nativeC24_fullgrid_line_stabilities_flux_noflux.csv"
-FLUX_SUMMARY = DATA / "_toe" / "flux_response_rankings_20260110" / "line_flux_response_summary.csv"
+TABLE_PATH = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / "binary_tetrahedral_2T_multiplication_table.csv"
+)
+MASKS_CSV = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / "W33_line_clock_projector_masks_20260109T210928Z.csv"
+)
+GRID_CSV = (
+    DATA
+    / "_toe"
+    / "native_fullgrid_20260110"
+    / "nativeC24_fullgrid_line_stabilities_flux_noflux.csv"
+)
+FLUX_SUMMARY = (
+    DATA / "_toe" / "flux_response_rankings_20260110" / "line_flux_response_summary.csv"
+)
 
 
 def load_table():
@@ -123,24 +139,30 @@ def main() -> None:
 
     # Evaluate oddness predictor for winners.
     top_lines = (
-        odd_df.sort_values("odd_fraction", ascending=False)
-        .head(5)["line_id"]
-        .tolist()
+        odd_df.sort_values("odd_fraction", ascending=False).head(5)["line_id"].tolist()
     )
-    win_df["flux_winner_in_top5_odd"] = win_df["flux_winner"].isin(top_lines).astype(int)
-    win_df["noflux_winner_in_top5_odd"] = win_df["noflux_winner"].isin(top_lines).astype(int)
+    win_df["flux_winner_in_top5_odd"] = (
+        win_df["flux_winner"].isin(top_lines).astype(int)
+    )
+    win_df["noflux_winner_in_top5_odd"] = (
+        win_df["noflux_winner"].isin(top_lines).astype(int)
+    )
 
     overall_flux_top5 = win_df["flux_winner_in_top5_odd"].mean()
     overall_noflux_top5 = win_df["noflux_winner_in_top5_odd"].mean()
     changed = win_df[win_df["winner_changed"] == 1]
-    changed_flux_top5 = changed["flux_winner_in_top5_odd"].mean() if not changed.empty else 0.0
+    changed_flux_top5 = (
+        changed["flux_winner_in_top5_odd"].mean() if not changed.empty else 0.0
+    )
 
     win_df.to_csv(OUT_DIR / "e_star_oddness_winner_grid.csv", index=False)
 
     summary_path = OUT_DIR / "e_star_oddness_flux_winner_summary.md"
     with summary_path.open("w", encoding="utf-8") as f:
         f.write("# e* oddness predictor vs flux winners\n\n")
-        f.write(f"Inputs:\n- {MASKS_CSV}\n- {GRID_CSV}\n- {FLUX_SUMMARY}\n- {MAP_PATH}\n\n")
+        f.write(
+            f"Inputs:\n- {MASKS_CSV}\n- {GRID_CSV}\n- {FLUX_SUMMARY}\n- {MAP_PATH}\n\n"
+        )
         f.write(f"- corr(odd_fraction, mean_abs_delta): {corr:.6f}\n")
         f.write(f"- top5 oddness lines: {top_lines}\n\n")
         f.write("Winner overlap (top5 oddness lines):\n\n")

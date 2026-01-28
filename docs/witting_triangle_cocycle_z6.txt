@@ -1,0 +1,4 @@
+Base solvable mod2: True
+Base solvable mod3: True
+Base solvable mod6: True
+Orbit cohomology counts: {True: 243}

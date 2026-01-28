@@ -8,7 +8,7 @@
 
 ```
     40 + 81 = 121 = 11²
-    
+
     Points + Cycles = Total DOF = Perfect Square
 ```
 
@@ -283,7 +283,7 @@ This is HOLOGRAPHY at the categorical level!
    - All WIMP experiments will fail
    - Only gravitational signatures
 
-3. **Cosmological Fractions**: 
+3. **Cosmological Fractions**:
    - Vacuum: 67% ± 2%
    - Matter: 33% ± 2%
 

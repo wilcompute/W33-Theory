@@ -4,11 +4,11 @@
 from __future__ import annotations
 
 import csv
+import sys
 from pathlib import Path
 
 import numpy as np
 
-import sys
 sys.path.append(str(Path("external/pysymmetry").resolve()))
 
 from pysymmetry import FiniteGroup, representation  # type: ignore
@@ -26,9 +26,18 @@ ROOT = resolve_repo_root(Path(__file__).resolve())
 DATA = ROOT / "data"
 OUT_DIR = DATA / "_workbench" / "05_symmetry"
 
-POINT_MAPS = DATA / "_is" / "incidence_autgroup_20260110" / "automorphism_group_order12_point_maps.csv"
-LINES_CSV = DATA / "_is" / "incidence_autgroup_20260110" / "incidence_12points_15lines.csv"
-KERNEL_CSV = DATA / "_workbench" / "04_measurement" / "nativeC24_mode1_pairwise_kernel.csv"
+POINT_MAPS = (
+    DATA
+    / "_is"
+    / "incidence_autgroup_20260110"
+    / "automorphism_group_order12_point_maps.csv"
+)
+LINES_CSV = (
+    DATA / "_is" / "incidence_autgroup_20260110" / "incidence_12points_15lines.csv"
+)
+KERNEL_CSV = (
+    DATA / "_workbench" / "04_measurement" / "nativeC24_mode1_pairwise_kernel.csv"
+)
 
 
 def load_point_perms(path: Path):

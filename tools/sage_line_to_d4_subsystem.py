@@ -6,11 +6,12 @@ Discovery idea:
 - A W33 line has 4 vertices => union of 4 orbits = 24 roots.
 - Check if those 24 roots form a D4 root system (rank 4, closed under reflections).
 """
+
 from __future__ import annotations
 
 import json
+from itertools import combinations, product
 from pathlib import Path
-from itertools import product, combinations
 
 from sage.all import Matrix, vector
 
@@ -36,7 +37,7 @@ def build_proj_points():
 
 
 def omega(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
 
 def build_lines(proj_points):
@@ -44,15 +45,18 @@ def build_lines(proj_points):
     lines = set()
     n = len(proj_points)
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) != 0:
                 continue
             # span of i,j over F3
             pts = set()
-            for a, b in product([0,1,2],[0,1,2]):
+            for a, b in product([0, 1, 2], [0, 1, 2]):
                 if a == 0 and b == 0:
                     continue
-                v = tuple((a*proj_points[i][k] + b*proj_points[j][k]) % 3 for k in range(4))
+                v = tuple(
+                    (a * proj_points[i][k] + b * proj_points[j][k]) % 3
+                    for k in range(4)
+                )
                 # normalize projectively
                 v = list(v)
                 for t in range(4):
@@ -67,14 +71,16 @@ def build_lines(proj_points):
 
 
 def load_orbit_mapping():
-    orb_map = json.loads(Path('artifacts/e8_orbit_to_f3_point.json').read_text())['mapping']
+    orb_map = json.loads(Path("artifacts/e8_orbit_to_f3_point.json").read_text())[
+        "mapping"
+    ]
     # invert to point->orbit
     point_to_orbit = {tuple(v): int(k) for k, v in orb_map.items()}
     return point_to_orbit
 
 
 def load_orbits():
-    orbits = json.loads(Path('artifacts/e8_coxeter6_orbits.json').read_text())['orbits']
+    orbits = json.loads(Path("artifacts/e8_coxeter6_orbits.json").read_text())["orbits"]
     return orbits
 
 
@@ -124,7 +130,7 @@ def main():
         # inner product distribution within this 24-root set
         ip_counts = {}
         for i in range(len(roots)):
-            for j in range(i+1, len(roots)):
+            for j in range(i + 1, len(roots)):
                 ip = int(roots[i] * roots[j])
                 ip_counts[ip] = ip_counts.get(ip, 0) + 1
 
@@ -136,23 +142,25 @@ def main():
         is_d4 = is_d4_root_system(roots)
         if is_d4:
             d4_count += 1
-        line_results.append({
-            "line": list(L),
-            "orbits": orbs,
-            "rank": rank,
-            "ip_counts": ip_counts,
-            "is_d4": bool(is_d4)
-        })
+        line_results.append(
+            {
+                "line": list(L),
+                "orbits": orbs,
+                "rank": rank,
+                "ip_counts": ip_counts,
+                "is_d4": bool(is_d4),
+            }
+        )
 
     out = {
         "lines": len(lines),
         "d4_lines": d4_count,
         "rank_counts": rank_counts,
-        "results": line_results
+        "results": line_results,
     }
 
     out_path = ROOT / "artifacts" / "w33_lines_to_d4.json"
-    out_path.write_text(json.dumps(out, indent=2), encoding='utf-8')
+    out_path.write_text(json.dumps(out, indent=2), encoding="utf-8")
     print("lines", len(lines), "d4_lines", d4_count)
     print("Wrote", out_path)
 

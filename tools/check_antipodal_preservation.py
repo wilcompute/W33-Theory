@@ -3,6 +3,7 @@
 
 For a root permutation g, we test if g(-r) = -g(r) for each root r.
 """
+
 from __future__ import annotations
 
 import json
@@ -32,8 +33,8 @@ def main():
     roots = build_e8_roots()
     root_to_idx = {r: i for i, r in enumerate(roots)}
 
-    data = json.loads((ROOT / 'artifacts' / 'sp43_we6_generator_map.json').read_text())
-    gens = [g['root_perm'] for g in data['generator_maps']]
+    data = json.loads((ROOT / "artifacts" / "sp43_we6_generator_map.json").read_text())
+    gens = [g["root_perm"] for g in data["generator_maps"]]
 
     results = []
     for gi, g in enumerate(gens):
@@ -45,20 +46,22 @@ def main():
             expected = root_to_idx[tuple(-x for x in roots[s])]
             if sj == expected:
                 ok += 1
-        results.append({
-            'gen_index': gi,
-            'antipodal_preserved': ok,
-            'total': len(roots),
-        })
+        results.append(
+            {
+                "gen_index": gi,
+                "antipodal_preserved": ok,
+                "total": len(roots),
+            }
+        )
 
     out = {
-        'results': results,
-        'all_preserve': all(r['antipodal_preserved'] == r['total'] for r in results),
+        "results": results,
+        "all_preserve": all(r["antipodal_preserved"] == r["total"] for r in results),
     }
-    out_path = ROOT / 'artifacts' / 'antipodal_preservation.json'
+    out_path = ROOT / "artifacts" / "antipodal_preservation.json"
     out_path.write_text(json.dumps(out, indent=2))
     print(f"Wrote {out_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 """Display summary of W33 Sage analysis results."""
+
 import json
 from pathlib import Path
 
@@ -22,7 +23,7 @@ print(f"  Is solvable: {d['incidence']['is_solvable']}")
 print(f"  Number of generators: {len(d['incidence']['generators'])}")
 print()
 print("H1 HOMOLOGY (first homology):")
-h1_mats = d['h1_action']['generator_matrices']
+h1_mats = d["h1_action"]["generator_matrices"]
 dim = len(h1_mats[0]) if h1_mats else 0
 print(f"  Dimension (beta_1): {dim}")
 print(f"  Number of H1 action matrices: {len(h1_mats)}")

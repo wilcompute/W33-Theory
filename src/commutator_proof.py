@@ -18,32 +18,43 @@ The phase being exactly pi (i.e., -1) is the deep fact.
 Let me prove this algebraically.
 """
 
-import numpy as np
-from pathlib import Path
-import pandas as pd
 from collections import defaultdict
+from pathlib import Path
 
-ROOT = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data")
+import numpy as np
+import pandas as pd
+
+ROOT = Path(
+    r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data"
+)
+
 
 def load_rays():
-    df = pd.read_csv(ROOT / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv")
+    df = pd.read_csv(
+        ROOT
+        / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv"
+    )
     V = np.zeros((40, 4), dtype=np.complex128)
     for _, row in df.iterrows():
-        pid = int(row['point_id'])
+        pid = int(row["point_id"])
         for i in range(4):
-            V[pid, i] = complex(str(row[f'v{i}']).replace(' ', ''))
+            V[pid, i] = complex(str(row[f"v{i}"]).replace(" ", ""))
     return V
+
 
 def load_lines():
     df = pd.read_csv(ROOT / "_workbench/02_geometry/W33_line_phase_map.csv")
-    return [tuple(map(int, str(row['point_ids']).split())) for _, row in df.iterrows()]
+    return [tuple(map(int, str(row["point_ids"]).split())) for _, row in df.iterrows()]
+
 
 def inner(V, p, q):
     return np.vdot(V[p], V[q])
 
+
 # =============================================================================
 # ALGEBRAIC INVESTIGATION
 # =============================================================================
+
 
 def analyze_inner_products():
     """
@@ -61,14 +72,14 @@ def analyze_inner_products():
             col[p].update(L)
             col[p].discard(p)
 
-    print("="*70)
+    print("=" * 70)
     print("INNER PRODUCT PHASE STRUCTURE")
-    print("="*70)
+    print("=" * 70)
 
     # Collect all inner products, normalized
     phases = []
     for p in range(40):
-        for q in range(p+1, 40):
+        for q in range(p + 1, 40):
             if q in col[p]:
                 continue
             z = inner(V, p, q)
@@ -88,6 +99,7 @@ def analyze_inner_products():
 
     return phase_groups
 
+
 def analyze_specific_triads():
     """
     Look at specific triads to understand the pattern.
@@ -101,9 +113,9 @@ def analyze_specific_triads():
             col[p].update(L)
             col[p].discard(p)
 
-    print("\n" + "="*70)
+    print("\n" + "=" * 70)
     print("SPECIFIC TRIAD ANALYSIS")
-    print("="*70)
+    print("=" * 70)
 
     # Take the first K4 component: outer quad = {0, 1, 2, 3}
     # All four are mutually non-collinear and share center = {4, 13, 22, 31}
@@ -112,7 +124,7 @@ def analyze_specific_triads():
     print(f"\nOuter quad: {outer}")
     print("Checking mutual non-collinearity...")
     for i, p in enumerate(outer):
-        for q in outer[i+1:]:
+        for q in outer[i + 1 :]:
             print(f"  {p},{q}: collinear={q in col[p]}, <{p}|{q}>={inner(V, p, q):.6f}")
 
     # Common neighbors
@@ -134,9 +146,9 @@ def analyze_specific_triads():
         print("  " + " ".join(row))
 
     # Now let's trace through a Bargmann cycle
-    print("\n" + "-"*50)
+    print("\n" + "-" * 50)
     print("BARGMANN CYCLE TRACE: {0,1,2} -> {0,1,3}")
-    print("-"*50)
+    print("-" * 50)
     print("Swapping 2->3 while keeping {0,1}")
     print("Cycle: <2|0><0|3><3|1><1|2>")
 
@@ -157,9 +169,9 @@ def analyze_specific_triads():
 
     # THE KEY QUESTION: Why is this phase always pi?
     # Let's look at the phase contributions
-    print("\n" + "-"*50)
+    print("\n" + "-" * 50)
     print("PHASE DECOMPOSITION")
-    print("-"*50)
+    print("-" * 50)
     k20 = round(6 * np.angle(z20) / np.pi) % 12
     k03 = round(6 * np.angle(z03) / np.pi) % 12
     k31 = round(6 * np.angle(z31) / np.pi) % 12
@@ -170,6 +182,7 @@ def analyze_specific_triads():
     print(f"  k(3,1) = {k31}")
     print(f"  k(1,2) = {k12}")
     print(f"  Sum mod 12 = {(k20 + k03 + k31 + k12) % 12}")
+
 
 def analyze_algebraic_constraint():
     """
@@ -189,9 +202,9 @@ def analyze_algebraic_constraint():
             col[p].update(L)
             col[p].discard(p)
 
-    print("\n" + "="*70)
+    print("\n" + "=" * 70)
     print("ALGEBRAIC CONSTRAINT ANALYSIS")
-    print("="*70)
+    print("=" * 70)
 
     # Let's check: is there a simple relation between <a|b><b|c><c|a>?
     # The triad holonomy is either +i or -i.
@@ -209,13 +222,13 @@ def analyze_algebraic_constraint():
         print(f"  Line {i}: {L}")
         # Check: are points on a line orthogonal?
         for j, p in enumerate(L):
-            for q in L[j+1:]:
+            for q in L[j + 1 :]:
                 z = inner(V, p, q)
                 print(f"    <{p}|{q}> = {z:.6f}")
 
-    print("\n" + "-"*50)
+    print("\n" + "-" * 50)
     print("KEY OBSERVATION")
-    print("-"*50)
+    print("-" * 50)
     print("""
     Points on the same line are ORTHOGONAL (<p|q> = 0).
 
@@ -243,6 +256,7 @@ def analyze_algebraic_constraint():
         print(f"  Gram matrix (should be I_4):")
         print(f"    Max off-diagonal: {np.max(np.abs(G - np.eye(4))):.2e}")
 
+
 def analyze_projection_structure():
     """
     Another approach: What if we think of points as rank-1 projectors?
@@ -252,9 +266,9 @@ def analyze_projection_structure():
     """
     V = load_rays()
 
-    print("\n" + "="*70)
+    print("\n" + "=" * 70)
     print("PROJECTOR STRUCTURE")
-    print("="*70)
+    print("=" * 70)
 
     # Build projectors for first few points
     P = {}
@@ -276,6 +290,7 @@ def analyze_projection_structure():
     print(f"\nTr(P_0 P_1) = {np.trace(PP):.6f}")
     print(f"|<0|1>|^2 = {abs(inner(V, 0, 1))**2:.6f}")
 
+
 def analyze_clifford_connection():
     """
     The universal -1 in the 4-cycle suggests Clifford algebra.
@@ -289,9 +304,9 @@ def analyze_clifford_connection():
     """
     V = load_rays()
 
-    print("\n" + "="*70)
+    print("\n" + "=" * 70)
     print("CLIFFORD / SPINOR CONNECTION")
-    print("="*70)
+    print("=" * 70)
 
     # Standard basis points
     basis = [0, 4, 5, 6]
@@ -313,9 +328,9 @@ def analyze_clifford_connection():
         nonzero = [(i, c) for i, c in enumerate(coeffs) if abs(c) > 1e-10]
         print(f"  Point {p}: " + ", ".join(f"e_{i}*({c:.4f})" for i, c in nonzero))
 
-    print("\n" + "-"*50)
+    print("\n" + "-" * 50)
     print("HYPOTHESIS: SPINOR STATES")
-    print("-"*50)
+    print("-" * 50)
     print("""
     The 40 points might represent spinor states or Bloch vectors
     in a 4-dimensional spinor space.
@@ -333,12 +348,14 @@ def analyze_clifford_connection():
     - Z_3: color charge or triality from some other structure
     """)
 
+
 def main():
     analyze_inner_products()
     analyze_specific_triads()
     analyze_algebraic_constraint()
     analyze_projection_structure()
     analyze_clifford_connection()
+
 
 if __name__ == "__main__":
     main()

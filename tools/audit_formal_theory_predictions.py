@@ -15,7 +15,6 @@ from __future__ import annotations
 from dataclasses import dataclass
 from decimal import Decimal, getcontext
 
-
 getcontext().prec = 60
 
 
@@ -143,9 +142,7 @@ def _main() -> int:
     # Internal consistency check for the Higgs-sector gauge-boson mass step used in the PDF.
     # (The PDF states: g^2 = 4π α / sin^2θW, then mW = g v/2, mZ = mW/cosθW.)
     alpha_pred = Decimal(1) / alpha_inv_pred
-    pi = Decimal(
-        "3.14159265358979323846264338327950288419716939937510"
-    )
+    pi = Decimal("3.14159265358979323846264338327950288419716939937510")
     g2 = (Decimal(4) * pi * alpha_pred) / sin2_pred
     g = _sqrt(g2)
     mW = g * v / Decimal(2)

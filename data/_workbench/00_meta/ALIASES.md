@@ -369,4 +369,3 @@ This maps old paths to new paths after grouping + snake_case normalization.
 - data/_witting/witting_w10_blocks_duads_synthemes.json -> data/_witting/witting_w10_blocks_duads_synthemes.json
 - data/_witting/witting_w10_rank_blocks.csv -> data/_witting/witting_w10_rank_blocks.csv
 - data/_witting/witting_w10_rank_blocks_p1f9.json -> data/_witting/witting_w10_rank_blocks_p1f9.json
-

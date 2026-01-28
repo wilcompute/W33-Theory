@@ -10,6 +10,7 @@ Outputs:
 - artifacts/e8_partition_search.json
 - artifacts/e8_partition_search.md
 """
+
 from __future__ import annotations
 
 import json
@@ -144,7 +145,9 @@ def parse_target_pattern(spec: str):
     return targets
 
 
-def exact_cover_random(n_vertices: int, triangles: list[tuple[int, int, int]], rng: random.Random):
+def exact_cover_random(
+    n_vertices: int, triangles: list[tuple[int, int, int]], rng: random.Random
+):
     tri_for_vertex = [[] for _ in range(n_vertices)]
     for idx, (a, b, c) in enumerate(triangles):
         tri_for_vertex[a].append(idx)
@@ -211,7 +214,9 @@ def exact_cover_random(n_vertices: int, triangles: list[tuple[int, int, int]], r
     return ok, solution, nodes
 
 
-def relation_graph_orthocount(triples: list[tuple[int, int, int]], ortho: np.ndarray, selected_counts: set[int]):
+def relation_graph_orthocount(
+    triples: list[tuple[int, int, int]], ortho: np.ndarray, selected_counts: set[int]
+):
     n = len(triples)
     adj = np.zeros((n, n), dtype=int)
     for i in range(n):
@@ -229,7 +234,11 @@ def relation_graph_orthocount(triples: list[tuple[int, int, int]], ortho: np.nda
     return adj
 
 
-def relation_graph_fullip(triples: list[tuple[int, int, int]], line_reps: list[np.ndarray], selected_classes: set[tuple[int, int, int]]):
+def relation_graph_fullip(
+    triples: list[tuple[int, int, int]],
+    line_reps: list[np.ndarray],
+    selected_classes: set[tuple[int, int, int]],
+):
     # build 6-root sets per triple
     triple_roots = []
     for t in triples:
@@ -327,13 +336,18 @@ def main():
         found = None
         if RELATION_MODE == "orthocount":
             for mask in range(1, 1 << len(counts_set)):
-                selected = {counts_set[i] for i in range(len(counts_set)) if (mask >> i) & 1}
+                selected = {
+                    counts_set[i] for i in range(len(counts_set)) if (mask >> i) & 1
+                }
                 adj = relation_graph_orthocount(triples, ortho, selected)
                 params = is_srg(adj)
                 if params:
                     k, lam, mu = params
                     if (k, lam, mu) == (12, 2, 4):
-                        found = {"selected_counts": sorted(list(selected)), "params": params}
+                        found = {
+                            "selected_counts": sorted(list(selected)),
+                            "params": params,
+                        }
                         break
         elif RELATION_MODE == "fullip":
             # compute relation classes between triples
@@ -368,7 +382,9 @@ def main():
                     subsets.append(set(class_keys) - {class_keys[i]})
             else:
                 for mask in range(1, total_subsets):
-                    subset = {class_keys[i] for i in range(len(class_keys)) if (mask >> i) & 1}
+                    subset = {
+                        class_keys[i] for i in range(len(class_keys)) if (mask >> i) & 1
+                    }
                     subsets.append(subset)
             for subset in subsets:
                 adj = relation_graph_fullip(triples, lines, subset)
@@ -376,7 +392,10 @@ def main():
                 if params:
                     k, lam, mu = params
                     if (k, lam, mu) == (12, 2, 4):
-                        found = {"selected_classes": sorted(list(subset)), "params": params}
+                        found = {
+                            "selected_classes": sorted(list(subset)),
+                            "params": params,
+                        }
                         break
         if found:
             results["found_partition"] = True
@@ -399,10 +418,14 @@ def main():
     lines_md.append(f"- relation mode: {results['relation_mode']}")
     if results.get("target_pattern"):
         lines_md.append(f"- target pattern: {results['target_pattern']}")
-    lines_md.append(f"- found partition with SRG(40,12,2,4): {results['found_partition']}")
+    lines_md.append(
+        f"- found partition with SRG(40,12,2,4): {results['found_partition']}"
+    )
     if results["found_partition"]:
         lines_md.append(f"- attempt: {results['attempt']}")
-        lines_md.append(f"- selected counts: {results['found_relation']['selected_counts']}")
+        lines_md.append(
+            f"- selected counts: {results['found_relation']['selected_counts']}"
+        )
     else:
         if "last_attempt" in results:
             lines_md.append(f"- last attempt nodes: {results['last_attempt']['nodes']}")

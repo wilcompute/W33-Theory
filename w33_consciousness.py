@@ -64,7 +64,7 @@ W33 AS A SUPERPOSITION SPACE
 In W33:
   - 40 points = definite states (matter)
   - 81 cycles = superposition states (vacuum)
-  
+
 Total: 121 = 11² possible configurations
 
 The ratio 81/40 = 2.025 ≈ 2 tells us:
@@ -108,14 +108,14 @@ Decoherence interpretation:
   - K4 action = interaction with environment
   - Phase scrambling = loss of coherence
   - W33 / K4 = classical world
-  
+
 The 4 elements of K4:
   {1, a, b, ab}
-  
+
 These might correspond to:
   1 = no measurement
   a = measure position
-  b = measure momentum  
+  b = measure momentum
   ab = joint measurement (incompatible!)
 """)
 
@@ -167,7 +167,9 @@ print(f"  Average connectivity: {n_connections / n_points:.1f} per point")
 # This is high!
 print(f"\n  For comparison:")
 print(f"    Brain neurons: ~10¹¹ with ~10¹⁴ connections")
-print(f"    W33 has {n_connections}/{n_points} = {n_connections/n_points:.0f}x overdetermined!")
+print(
+    f"    W33 has {n_connections}/{n_points} = {n_connections/n_points:.0f}x overdetermined!"
+)
 
 # =============================================================================
 # PART 5: OBJECTIVE REDUCTION
@@ -194,7 +196,7 @@ W33 interpretation:
 The collapse time:
   τ ~ ℏ / (E × vacuum_difference)
     ~ ℏ / (E × 0.277)
-    
+
 This suggests collapse is related to the
 W-hierarchy transition!
 """)
@@ -274,7 +276,7 @@ Redundancy factor:
   R = (total K4 memberships) / (number of points)
     = (90 × 4) / 40
     = 9
-    
+
 Each bit of information is encoded 9 times!
 This is like a classical error-correcting code.
 """)
@@ -348,7 +350,7 @@ W33 interpretation:
 
 The W-hierarchy descent:
   W(7,3) → W(5,3) → W(3,3) → W(1,3)
-  
+
 This IS the arrow of time!
   - High vacuum → low vacuum
   - Quantum → classical

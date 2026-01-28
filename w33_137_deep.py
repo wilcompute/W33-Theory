@@ -4,9 +4,10 @@ THE 137 = 81 + 56 DEEP STRUCTURE
 Exploring why the fine structure constant decomposes as cycles + dP_2 lines.
 """
 
-import numpy as np
-from math import factorial, gcd
 from fractions import Fraction
+from math import factorial, gcd
+
+import numpy as np
 
 print("=" * 80)
 print("THE 137 = 81 + 56 DECOMPOSITION")
@@ -38,26 +39,18 @@ The number of (-1)-curves (lines) on Bl_k(P^2):
   L(k) = k + C(k,2) + C(k,3) + ... = sum of binomials
 """)
 
+
 def del_pezzo_lines(k):
     """Number of (-1)-curves on Bl_k(P^2)"""
     # E_i: k exceptional divisors
     # L_{ij}: C(k,2) = lines through 2 points
     # Q_ijk: C(k,3) = conics through 5 points (via 3)
     # etc.
-    
+
     # The exact formula depends on k
-    lines_count = {
-        0: 0,
-        1: 1,
-        2: 3,
-        3: 6,
-        4: 10,
-        5: 16,
-        6: 27,
-        7: 56,
-        8: 240
-    }
+    lines_count = {0: 0, 1: 1, 2: 3, 3: 6, 4: 10, 5: 16, 6: 27, 7: 56, 8: 240}
     return lines_count.get(k, 0)
+
 
 print("del Pezzo line counts:")
 for k in range(9):
@@ -119,10 +112,10 @@ Under SL(8) ⊂ E7:
 
 W33 CONNECTION:
   56 = 2 * 28 = 2 * C(8,2)
-  
+
   But also:
   56 = 40 + 16 = |points| + |K4|^2
-  
+
   This gives ANOTHER decomposition of 137:
   137 = 81 + 56 = 81 + 40 + 16 = |cycles| + |points| + |K4|^2
       = 121 + 16 = |W33| + |K4|^2
@@ -135,6 +128,7 @@ print(f"      = 11^2 + 4^2 (sum of two squares!)")
 
 # Verify 137 is sum of two squares
 import math
+
 print(f"\n137 = 11^2 + 4^2 = {11**2} + {4**2} = {11**2 + 4**2}")
 
 # =============================================================================
@@ -296,7 +290,7 @@ W33 connections:
 
 The 26 dimensions of bosonic string theory:
   26 = 27 - 1 = (lines on cubic) - 1
-  
+
 The 11 dimensions of M-theory:
   11 = sqrt(|W33|)
   11^2 = 121 = |W33|

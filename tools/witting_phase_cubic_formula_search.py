@@ -4,6 +4,7 @@
 We fit k (phase index mod 3) as a linear combination of all monomials
 in (mu1, nu1, mu2, nu2) with total degree <= 3 over GF(3).
 """
+
 from __future__ import annotations
 
 import json
@@ -29,11 +30,11 @@ def construct_witting_40_rays_with_labels():
 
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
             labels.append(("F0", mu, nu))
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
             labels.append(("F1", mu, nu))
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             labels.append(("F2", mu, nu))
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
             labels.append(("F3", mu, nu))
@@ -62,7 +63,12 @@ def monomials(mu1, nu1, mu2, nu2):
                     deg = e0 + e1 + e2 + e3
                     if deg > 3:
                         continue
-                    val = (vars[0]**e0) * (vars[1]**e1) * (vars[2]**e2) * (vars[3]**e3)
+                    val = (
+                        (vars[0] ** e0)
+                        * (vars[1] ** e1)
+                        * (vars[2] ** e2)
+                        * (vars[3] ** e3)
+                    )
                     mons.append(val % 3)
     return mons
 
@@ -136,7 +142,9 @@ def main():
     md_path = ROOT / "docs" / "witting_phase_cubic_formula_search.md"
     with md_path.open("w", encoding="utf-8") as f:
         f.write("# Cubic Phase Formula Search (mod 3)\n\n")
-        f.write("Monomials: all exponents with total degree ≤ 3 in (mu1,nu1,mu2,nu2).\n\n")
+        f.write(
+            "Monomials: all exponents with total degree ≤ 3 in (mu1,nu1,mu2,nu2).\n\n"
+        )
         f.write("family pair | samples | mod3 solution\n")
         f.write("--- | --- | ---\n")
         for key in sorted(results.keys()):

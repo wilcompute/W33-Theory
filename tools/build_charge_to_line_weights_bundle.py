@@ -30,7 +30,6 @@ from pathlib import Path
 
 import numpy as np
 
-
 ROOT = Path(__file__).resolve().parents[1]
 MOD = 3
 
@@ -59,7 +58,9 @@ def _read_npz_from_zip(zip_path: Path, inner_path: str) -> dict[str, np.ndarray]
     return {k: npz[k] for k in npz.files}
 
 
-def _write_csv(path: Path, fieldnames: list[str], rows: list[dict[str, object]]) -> None:
+def _write_csv(
+    path: Path, fieldnames: list[str], rows: list[dict[str, object]]
+) -> None:
     with path.open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fieldnames)
         w.writeheader()
@@ -120,7 +121,9 @@ def _build_delta2_free_columns(
     tri_index = {t: i for i, t in enumerate(triangles)}
     free_pos_of_tet = {tet: pos for pos, tet in enumerate(free_tetra_indices)}
 
-    cols: list[defaultdict[int, int]] = [defaultdict(int) for _ in range(len(triangles))]
+    cols: list[defaultdict[int, int]] = [
+        defaultdict(int) for _ in range(len(triangles))
+    ]
     for row in tetra_rows:
         tet_index = int(row["tet_index"])
         free_pos = free_pos_of_tet.get(tet_index)
@@ -212,7 +215,9 @@ def main() -> int:
     out_dir.mkdir(exist_ok=True)
 
     # --- Load triangle list and holonomy F on triangles
-    tri_rows = _read_csv_from_zip(test_bundle, "triangle_holonomy_vs_symplectic_phase.csv")
+    tri_rows = _read_csv_from_zip(
+        test_bundle, "triangle_holonomy_vs_symplectic_phase.csv"
+    )
     if len(tri_rows) != 3240:
         raise ValueError(f"Expected 3240 triangles, got {len(tri_rows)}")
     triangles = [(int(r["p"]), int(r["q"]), int(r["r"])) for r in tri_rows]
@@ -222,11 +227,15 @@ def main() -> int:
     tetra_rows = _read_csv_from_zip(h3_basis_bundle, "tetra_index_map_9450.csv")
     if len(tetra_rows) != 9450:
         raise ValueError(f"Expected 9450 tetrahedra, got {len(tetra_rows)}")
-    free_tets_data = _read_json_from_zip(h3_basis_bundle, "kernel_delta3_pivot_columns.json")
+    free_tets_data = _read_json_from_zip(
+        h3_basis_bundle, "kernel_delta3_pivot_columns.json"
+    )
     assert isinstance(free_tets_data, dict)
     free_tetra_indices = [int(x) for x in free_tets_data["free_tetra_indices"]]
     if len(free_tetra_indices) != 2828:
-        raise ValueError(f"Expected 2828 free tetra indices, got {len(free_tetra_indices)}")
+        raise ValueError(
+            f"Expected 2828 free tetra indices, got {len(free_tetra_indices)}"
+        )
     free_pos_of_tet = {tet: pos for pos, tet in enumerate(free_tetra_indices)}
 
     # --- Compute J=dF on all tetrahedra, then restrict to free coordinates
@@ -265,7 +274,9 @@ def main() -> int:
 
     nonpivot_positions = sorted(set(range(len(free_tetra_indices))) - set(basis.keys()))
     if len(nonpivot_positions) != 89:
-        raise ValueError(f"Expected 89 nonpivot positions, got {len(nonpivot_positions)}")
+        raise ValueError(
+            f"Expected 89 nonpivot positions, got {len(nonpivot_positions)}"
+        )
 
     # --- Define projection π_ours: free-space cocycle -> 89D quotient coordinates
     def project_to_h3_coords_ours(vec_free: dict[int, int]) -> np.ndarray:
@@ -274,7 +285,9 @@ def main() -> int:
 
     # --- Build change-of-basis from our quotient coordinates to the canonical H^3 basis
     # Their basis vectors are given as sparse cocycles on tetrahedra; project each to our coords.
-    h3_basis_json = _read_json_from_zip(h3_basis_bundle, "H3_basis_vectors_89_sparse.json")
+    h3_basis_json = _read_json_from_zip(
+        h3_basis_bundle, "H3_basis_vectors_89_sparse.json"
+    )
     assert isinstance(h3_basis_json, dict)
     basis_vectors = h3_basis_json["basis_vectors"]
     if len(basis_vectors) != 89:
@@ -303,7 +316,9 @@ def main() -> int:
     # --- Project J=dF
     h3_coords_89 = project_to_h3_coords_canonical(J_free).astype(np.int8)
     if int(np.count_nonzero(h3_coords_89)) != 0:
-        raise ValueError("Expected dF to have trivial H^3 class (all-zero 89-vector), but it did not")
+        raise ValueError(
+            "Expected dF to have trivial H^3 class (all-zero 89-vector), but it did not"
+        )
 
     # --- Map H^3(89) -> H3_88 coords via block basis change, then to 90 line weights
     mats = _read_npz_from_zip(h3_action_bundle, "block_basis_change_matrices_mod3.npz")
@@ -423,4 +438,3 @@ Files:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

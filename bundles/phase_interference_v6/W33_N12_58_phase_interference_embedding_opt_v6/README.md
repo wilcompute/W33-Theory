@@ -33,4 +33,3 @@ The optimizer improved:
 - w33_four_center_triads_table.csv: all 360 four-center triads with holonomy and cover statistics
 - phase_aware_interference_witness_walks.csv: step-by-step verified closed-walk witnesses for the 5 cycles
 - run_summary.json: metrics and predicate definitions
-

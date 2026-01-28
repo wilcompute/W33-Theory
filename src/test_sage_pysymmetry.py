@@ -4,9 +4,9 @@ Test script for SageMath + PySymmetry environment.
 Run with: wsl -e bash run_sage.sh src/test_sage_pysymmetry.py
 """
 
-from sage.all import *
-from pysymmetry import FiniteGroup, MapRepresentation
 import numpy as np
+from pysymmetry import FiniteGroup, MapRepresentation
+from sage.all import *
 
 print("=" * 60)
 print("SAGE + PYSYMMETRY TEST")
@@ -40,9 +40,9 @@ A = np.zeros((n, n))
 for i in range(3):
     for j in range(3):
         A[i, j] = 1 if i == j else 0.5
-        A[i+3, j+3] = 1 if i == j else 0.5
-        A[i, j+3] = 0.3
-        A[i+3, j] = 0.3
+        A[i + 3, j + 3] = 1 if i == j else 0.5
+        A[i, j + 3] = 0.3
+        A[i + 3, j] = 0.3
 
 print(f"   Created 6x6 S3-symmetric matrix")
 print(f"   Matrix:\n{A}")

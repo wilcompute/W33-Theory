@@ -15,6 +15,7 @@ Outputs:
 - artifacts/h27_jordan_algebra_test.json
 - artifacts/h27_jordan_algebra_test.md
 """
+
 from __future__ import annotations
 
 import json
@@ -51,11 +52,11 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
 
@@ -87,7 +88,9 @@ def main():
 
     lines.append("# H27 Jordan Algebra Test")
     lines.append("")
-    lines.append("Testing Jordan algebra structure on the 27 non-neighbors of W33 vertices.")
+    lines.append(
+        "Testing Jordan algebra structure on the 27 non-neighbors of W33 vertices."
+    )
     lines.append("")
 
     # Pick a base vertex and find H27
@@ -137,7 +140,7 @@ def main():
         lambda_vals = set()
         mu_vals = set()
         for i in range(27):
-            for j in range(i+1, 27):
+            for j in range(i + 1, 27):
                 common = sum(h27_adj[i, k] * h27_adj[j, k] for k in range(27))
                 if h27_adj[i, j] == 1:
                     lambda_vals.add(common)
@@ -164,7 +167,9 @@ def main():
 
     lines.append("## Jordan Algebra Analysis")
     lines.append("")
-    lines.append("The Albert algebra J³(O) is 27-dimensional with a specific multiplication.")
+    lines.append(
+        "The Albert algebra J³(O) is 27-dimensional with a specific multiplication."
+    )
     lines.append("We test if H27 admits a Jordan-like structure.")
     lines.append("")
 
@@ -178,7 +183,14 @@ def main():
                 common = sum(1 for k in range(n) if adj[a, k] and adj[b, k])
                 common_neighbors_matrix[i, j] = common
 
-    cn_values = sorted(set(common_neighbors_matrix[i, j] for i in range(27) for j in range(27) if i != j))
+    cn_values = sorted(
+        set(
+            common_neighbors_matrix[i, j]
+            for i in range(27)
+            for j in range(27)
+            if i != j
+        )
+    )
     results["common_neighbor_values"] = cn_values
 
     lines.append("### Common Neighbors in W33")
@@ -190,7 +202,7 @@ def main():
     cn_when_h27_adj = []
     cn_when_h27_nonadj = []
     for i in range(27):
-        for j in range(i+1, 27):
+        for j in range(i + 1, 27):
             if h27_adj[i, j]:
                 cn_when_h27_adj.append(common_neighbors_matrix[i, j])
             else:
@@ -199,8 +211,12 @@ def main():
     results["cn_when_h27_adjacent"] = sorted(set(cn_when_h27_adj))
     results["cn_when_h27_nonadjacent"] = sorted(set(cn_when_h27_nonadj))
 
-    lines.append(f"- Common neighbors when H27-adjacent: {sorted(set(cn_when_h27_adj))}")
-    lines.append(f"- Common neighbors when H27-non-adjacent: {sorted(set(cn_when_h27_nonadj))}")
+    lines.append(
+        f"- Common neighbors when H27-adjacent: {sorted(set(cn_when_h27_adj))}"
+    )
+    lines.append(
+        f"- Common neighbors when H27-non-adjacent: {sorted(set(cn_when_h27_nonadj))}"
+    )
     lines.append("")
 
     # Test if there's a clean relationship
@@ -221,7 +237,9 @@ def main():
     h27_eigenvalues = np.round(h27_eigenvalues, 4)
     h27_eig_mults = Counter(h27_eigenvalues)
 
-    results["h27_eigenvalues"] = {str(e): int(m) for e, m in sorted(h27_eig_mults.items(), reverse=True)}
+    results["h27_eigenvalues"] = {
+        str(e): int(m) for e, m in sorted(h27_eig_mults.items(), reverse=True)
+    }
 
     lines.append("### H27 Eigenvalue Spectrum")
     lines.append("")

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Signed line extension for true W(E6) action (Sage ordering)."""
+
 from __future__ import annotations
 
 import json
@@ -32,8 +33,8 @@ def bfs_group(gens, max_size=200000):
 
 
 def main():
-    we6 = json.loads((ROOT / 'artifacts' / 'we6_true_action.json').read_text())
-    roots = [tuple(r) for r in we6['roots_int2']]
+    we6 = json.loads((ROOT / "artifacts" / "we6_true_action.json").read_text())
+    roots = [tuple(r) for r in we6["roots_int2"]]
     root_to_idx = {r: i for i, r in enumerate(roots)}
 
     # build root lines using integer coordinates
@@ -50,7 +51,7 @@ def main():
         rep = i if i < j else j
         line_reps.append(rep)
 
-    gens = we6['we6_even_generators']  # 1-based perms
+    gens = we6["we6_even_generators"]  # 1-based perms
     gens0 = [[x - 1 for x in p] for p in gens]
 
     # verify antipodal preservation
@@ -102,10 +103,10 @@ def main():
         "state_count": len(line_reps) * 2,
         "antipodal_preserved": ok,
     }
-    out_path = ROOT / 'artifacts' / 'signed_line_extension_we6_true.json'
+    out_path = ROOT / "artifacts" / "signed_line_extension_we6_true.json"
     out_path.write_text(json.dumps(out, indent=2))
     print(f"Wrote {out_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

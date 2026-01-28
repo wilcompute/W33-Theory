@@ -9,12 +9,14 @@ Key structures:
 
 This script explores these connections.
 """
+
 from __future__ import annotations
 
 import json
 from collections import Counter, defaultdict
-from itertools import product, combinations
+from itertools import combinations, product
 from pathlib import Path
+
 import numpy as np
 from numpy.linalg import eigh
 
@@ -42,12 +44,12 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     edges = []
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
                 edges.append((i, j))
@@ -268,7 +270,9 @@ def construct_explicit_27_bijection():
     neighbors = [j for j in range(40) if adj[0, j] == 1]
     cross_edges = []
     for e in edges:
-        if (e[0] in neighbors and e[1] in nn_set) or (e[0] in nn_set and e[1] in neighbors):
+        if (e[0] in neighbors and e[1] in nn_set) or (
+            e[0] in nn_set and e[1] in neighbors
+        ):
             cross_edges.append(e)
     print(f"Cross edges (neighbor-nonneighbor): {len(cross_edges)}")
 
@@ -286,10 +290,14 @@ def construct_explicit_27_bijection():
 
     # Check: all edges accounted for
     total = len(nn_edges) + len(cross_edges) + len(neighbor_edges) + len(incident_edges)
-    print(f"Total: {len(nn_edges)} + {len(cross_edges)} + {len(neighbor_edges)} + {len(incident_edges)} = {total}")
+    print(
+        f"Total: {len(nn_edges)} + {len(cross_edges)} + {len(neighbor_edges)} + {len(incident_edges)} = {total}"
+    )
 
     # 108 + 108 + 12 + 12 = 240
-    print("\nDecomposition: 108 (H27) + 108 (cross) + 12 (neighbors) + 12 (incident) = 240")
+    print(
+        "\nDecomposition: 108 (H27) + 108 (cross) + 12 (neighbors) + 12 (incident) = 240"
+    )
     print("This is 4 * 27 + 4 * 27 + 4 * 3 + 4 * 3 = 4 * (27 + 27 + 3 + 3) = 4 * 60")
     print("Or: 2 * 108 + 2 * 12 = 216 + 24 = 240")
 
@@ -363,7 +371,7 @@ The 240 edges correspond to E8 roots via the decomposition:
 
     out_path = ROOT / "artifacts" / "e6_27_connection.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(results, indent=2), encoding='utf-8')
+    out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(f"\nWrote {out_path}")
 
 

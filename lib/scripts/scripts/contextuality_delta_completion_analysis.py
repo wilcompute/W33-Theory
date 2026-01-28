@@ -8,13 +8,16 @@ from pathlib import Path
 
 import pandas as pd
 
-
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUT_DIR = DATA / "_workbench" / "05_symmetry"
 
-FLUX_SUMMARY = DATA / "_toe" / "flux_response_rankings_20260110" / "line_flux_response_summary.csv"
-LINES_CSV = DATA / "_is" / "incidence_autgroup_20260110" / "incidence_12points_15lines.csv"
+FLUX_SUMMARY = (
+    DATA / "_toe" / "flux_response_rankings_20260110" / "line_flux_response_summary.csv"
+)
+LINES_CSV = (
+    DATA / "_is" / "incidence_autgroup_20260110" / "incidence_12points_15lines.csv"
+)
 ACTION_CSV = OUT_DIR / "D6_action_on_lines_with_completion_checks.csv"
 
 
@@ -28,9 +31,13 @@ def main() -> None:
     lines = lines.set_index("line_id")
 
     action = pd.read_csv(ACTION_CSV)
-    action = action.merge(flux[["mean_abs_delta"]], left_on="line_id_src", right_index=True)
+    action = action.merge(
+        flux[["mean_abs_delta"]], left_on="line_id_src", right_index=True
+    )
     action = action.rename(columns={"mean_abs_delta": "mean_abs_src"})
-    action = action.merge(flux[["mean_abs_delta"]], left_on="line_id_dst", right_index=True)
+    action = action.merge(
+        flux[["mean_abs_delta"]], left_on="line_id_dst", right_index=True
+    )
     action = action.rename(columns={"mean_abs_delta": "mean_abs_dst"})
     action["abs_diff"] = (action["mean_abs_dst"] - action["mean_abs_src"]).abs()
 

@@ -132,10 +132,16 @@ predictions = [
     ("4th generation", "Forbidden", "Not found", "Correct", "✓"),
 ]
 
-print(f"  {'QUANTITY':<28} │ {'W33 PREDICTION':<24} │ {'EXPERIMENT':<24} │ {'ACCURACY':<16} │ STATUS")
-print("  " + "═" * 28 + "╪" + "═" * 25 + "╪" + "═" * 25 + "╪" + "═" * 17 + "╪" + "═" * 7)
+print(
+    f"  {'QUANTITY':<28} │ {'W33 PREDICTION':<24} │ {'EXPERIMENT':<24} │ {'ACCURACY':<16} │ STATUS"
+)
+print(
+    "  " + "═" * 28 + "╪" + "═" * 25 + "╪" + "═" * 25 + "╪" + "═" * 17 + "╪" + "═" * 7
+)
 for pred in predictions:
-    print(f"  {pred[0]:<28} │ {pred[1]:<24} │ {pred[2]:<24} │ {pred[3]:<16} │  {pred[4]}")
+    print(
+        f"  {pred[0]:<28} │ {pred[1]:<24} │ {pred[2]:<24} │ {pred[3]:<16} │  {pred[4]}"
+    )
 
 print("""
 ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -203,17 +209,27 @@ print("""
 """)
 
 # Individual probabilities
-p_alpha = 1/100          # Getting α⁻¹ ≈ 137 from cycles + E7
-p_weinberg = 0.0001      # Getting sin²θ_W to 0.09σ
-p_cabibbo = 0.002        # Getting sin θ_C to 0.09%
-p_dm = 0.01              # Getting Ω_DM/Ω_b ≈ 5.4
-p_gen = 1/10             # Getting exactly 3 generations
-p_hierarchy = 1/30       # Getting exp(40) ≈ 10¹⁷
-p_lambda = 1/10          # Getting 121 = W33 total for Λ
-p_e6 = 1/1000            # Having |Aut| = |W(E6)| exactly
-p_witting = 1/1000       # van Oss = 90 = K4s
+p_alpha = 1 / 100  # Getting α⁻¹ ≈ 137 from cycles + E7
+p_weinberg = 0.0001  # Getting sin²θ_W to 0.09σ
+p_cabibbo = 0.002  # Getting sin θ_C to 0.09%
+p_dm = 0.01  # Getting Ω_DM/Ω_b ≈ 5.4
+p_gen = 1 / 10  # Getting exactly 3 generations
+p_hierarchy = 1 / 30  # Getting exp(40) ≈ 10¹⁷
+p_lambda = 1 / 10  # Getting 121 = W33 total for Λ
+p_e6 = 1 / 1000  # Having |Aut| = |W(E6)| exactly
+p_witting = 1 / 1000  # van Oss = 90 = K4s
 
-p_total = p_alpha * p_weinberg * p_cabibbo * p_dm * p_gen * p_hierarchy * p_lambda * p_e6 * p_witting
+p_total = (
+    p_alpha
+    * p_weinberg
+    * p_cabibbo
+    * p_dm
+    * p_gen
+    * p_hierarchy
+    * p_lambda
+    * p_e6
+    * p_witting
+)
 
 print(f"  Individual coincidence probabilities:")
 print(f"    α⁻¹ = 81 + 56:           1/100")
@@ -306,7 +322,7 @@ print("""
                                /     Standard Model + Gravity            \\
                               /                     |                     \\
                              /___________________________________________ \\
-                                           
+
                                          THE DESCENT OF PHYSICS
                                          FROM PURE MATHEMATICS
 

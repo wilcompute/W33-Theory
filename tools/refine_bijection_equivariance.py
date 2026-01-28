@@ -6,6 +6,7 @@ from W33 edge generators and try to reduce mismatches of the E8 inner-product
 matrix under those permutations by swapping assignments inside fixed classes
 (27-classes, 72-class, 6-class).
 """
+
 from __future__ import annotations
 
 import json
@@ -18,6 +19,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 
 # ---------------- W33 construction ----------------
+
 
 def construct_w33_points():
     F3 = [0, 1, 2]
@@ -39,7 +41,7 @@ def construct_w33_points():
 
 
 def omega(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
 
 def construct_w33_edges(points):
@@ -61,10 +63,11 @@ def normalize_proj(v):
 
 
 def check_symplectic(M):
-    Omega = [[0,0,1,0],[0,0,0,1],[2,0,0,0],[0,2,0,0]]
+    Omega = [[0, 0, 1, 0], [0, 0, 0, 1], [2, 0, 0, 0], [0, 2, 0, 0]]
+
     def mat_mult(A, B):
         n, k, m = len(A), len(B), len(B[0])
-        result = [[0]*m for _ in range(n)]
+        result = [[0] * m for _ in range(n)]
         for i in range(n):
             for j in range(m):
                 s = 0
@@ -72,6 +75,7 @@ def check_symplectic(M):
                     s = (s + A[i][l] * B[l][j]) % 3
                 result[i][j] = s
         return result
+
     MT = [[M[j][i] for j in range(4)] for i in range(4)]
     return mat_mult(mat_mult(MT, Omega), M) == Omega
 
@@ -104,16 +108,16 @@ def vertex_perm_to_edge_perm(vperm, edges):
 
 def get_w33_edge_generators(points, edges):
     gen_matrices = [
-        [[1,0,1,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,1],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[1,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,1,0,1]],
-        [[1,1,0,0],[0,1,0,0],[0,0,1,0],[0,0,2,1]],
-        [[1,0,0,0],[1,1,0,0],[0,0,1,2],[0,0,0,1]],
-        [[0,0,1,0],[0,1,0,0],[2,0,0,0],[0,0,0,1]],
-        [[1,0,0,0],[0,0,0,1],[0,0,1,0],[0,2,0,0]],
-        [[2,0,0,0],[0,1,0,0],[0,0,2,0],[0,0,0,1]],
-        [[1,0,0,0],[0,2,0,0],[0,0,1,0],[0,0,0,2]],
+        [[1, 0, 1, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 1], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [1, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 1, 0, 1]],
+        [[1, 1, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 2, 1]],
+        [[1, 0, 0, 0], [1, 1, 0, 0], [0, 0, 1, 2], [0, 0, 0, 1]],
+        [[0, 0, 1, 0], [0, 1, 0, 0], [2, 0, 0, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0], [0, 2, 0, 0]],
+        [[2, 0, 0, 0], [0, 1, 0, 0], [0, 0, 2, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 2, 0, 0], [0, 0, 1, 0], [0, 0, 0, 2]],
     ]
     edge_gens = []
     for M in gen_matrices:
@@ -127,7 +131,9 @@ def get_w33_edge_generators(points, edges):
             edge_gens.append(np.array(eperm, dtype=int))
     return edge_gens
 
+
 # ---------------- E8 roots ----------------
+
 
 def build_e8_roots_scaled():
     roots = []
@@ -197,7 +203,9 @@ def main():
     edges = construct_w33_edges(points)
     edge_gens = get_w33_edge_generators(points, edges)
 
-    mapping, data = load_mapping(ROOT / "artifacts" / "explicit_bijection_decomposition.json")
+    mapping, data = load_mapping(
+        ROOT / "artifacts" / "explicit_bijection_decomposition.json"
+    )
 
     # compute initial mismatches
     mismatches = []
@@ -214,8 +222,8 @@ def main():
 
     # build root classes
     # recompute dot-pair classes
-    u1 = np.array([1,1,1,1,1,1,1,1])
-    u2 = np.array([1,1,1,1,1,1,-1,-1])
+    u1 = np.array([1, 1, 1, 1, 1, 1, 1, 1])
+    u2 = np.array([1, 1, 1, 1, 1, 1, -1, -1])
     pairs = {}
     for idx, r in enumerate(roots):
         d = (int(r @ u1), int(r @ u2))

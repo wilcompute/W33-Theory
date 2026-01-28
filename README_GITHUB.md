@@ -1,6 +1,6 @@
 # W33 Unified Theory of Physics
 
-**Author:** Wil Dahn  
+**Author:** Wil Dahn
 **Date:** January 2026
 
 **Canonical definitions:** See `STANDARDIZATION.md` (W(3,3) vs W33, incidence counts, group orders).
@@ -103,7 +103,7 @@ This research is shared for academic and educational purposes.
 
 ## Contact
 
-**Wil Dahn**  
+**Wil Dahn**
 GitHub: [@wilcompute](https://github.com/wilcompute)
 
 ---

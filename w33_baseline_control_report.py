@@ -42,8 +42,12 @@ def main() -> int:
     lines.append("")
     lines.append(f"Generated: {now}")
     lines.append("")
-    lines.append("This compares W33’s base-number set against random ‘shape-matched’ base sets under the same expression grammar.")
-    lines.append("The goal is to measure whether W33 is *systematically better than generic numerology*.")
+    lines.append(
+        "This compares W33’s base-number set against random ‘shape-matched’ base sets under the same expression grammar."
+    )
+    lines.append(
+        "The goal is to measure whether W33 is *systematically better than generic numerology*."
+    )
     lines.append("")
 
     lines.append("## Config")
@@ -69,12 +73,18 @@ def main() -> int:
 
         lines.append("### Best-fit comparison")
         lines.append("")
-        lines.append("Empirical p-value `p(best)` means: fraction of random base sets whose best-fit error is ≤ W33’s best-fit error.")
+        lines.append(
+            "Empirical p-value `p(best)` means: fraction of random base sets whose best-fit error is ≤ W33’s best-fit error."
+        )
         lines.append("")
-        lines.append("| target | W33 best % error | random best % error quantiles (q05/q50/q95) | p(best) |")
+        lines.append(
+            "| target | W33 best % error | random best % error quantiles (q05/q50/q95) | p(best) |"
+        )
         lines.append("|---|---:|---|---:|")
         for t in targets:
-            w33_best = float(w33.get("targets", {}).get(t, {}).get("best_pct_error", float("nan")))
+            w33_best = float(
+                w33.get("targets", {}).get(t, {}).get("best_pct_error", float("nan"))
+            )
             rb = rnd.get("targets", {}).get(t, {}).get("best_pct_error", {})
             q = rb.get("quantiles", {})
             pbest = float(rb.get("empirical_p", float("nan")))
@@ -83,9 +93,13 @@ def main() -> int:
 
         lines.append("### Hit-count comparison (≤1%)")
         lines.append("")
-        lines.append("Empirical p-value `p(hits)` means: fraction of random base sets whose hit-count at ≤1% is ≥ W33’s hit-count.")
+        lines.append(
+            "Empirical p-value `p(hits)` means: fraction of random base sets whose hit-count at ≤1% is ≥ W33’s hit-count."
+        )
         lines.append("")
-        lines.append("| target | W33 hits ≤1% | random hits ≤1% quantiles (q05/q50/q95) | p(hits) |")
+        lines.append(
+            "| target | W33 hits ≤1% | random hits ≤1% quantiles (q05/q50/q95) | p(hits) |"
+        )
         lines.append("|---|---:|---|---:|")
         for t in targets:
             w33_hits = int(w33.get("targets", {}).get(t, {}).get("hits_le_1.0", 0))
@@ -97,7 +111,9 @@ def main() -> int:
 
         lines.append("### Hit-count comparison (≤0.1%)")
         lines.append("")
-        lines.append("| target | W33 hits ≤0.1% | random hits ≤0.1% quantiles (q05/q50/q95) | p(hits) |")
+        lines.append(
+            "| target | W33 hits ≤0.1% | random hits ≤0.1% quantiles (q05/q50/q95) | p(hits) |"
+        )
         lines.append("|---|---:|---|---:|")
         for t in targets:
             w33_hits = int(w33.get("targets", {}).get(t, {}).get("hits_le_0.1", 0))
@@ -109,14 +125,22 @@ def main() -> int:
 
         lines.append("Interpretation notes:")
         lines.append("")
-        lines.append("- With small `reps`, a reported p-value of `0.000` just means `< 1/reps` (not literally zero).")
-        lines.append("- Best-fit error is typically a more sensitive measure than hit-counts, because hit-counts can be inflated by many unrelated near-misses.")
+        lines.append(
+            "- With small `reps`, a reported p-value of `0.000` just means `< 1/reps` (not literally zero)."
+        )
+        lines.append(
+            "- Best-fit error is typically a more sensitive measure than hit-counts, because hit-counts can be inflated by many unrelated near-misses."
+        )
         lines.append("")
 
     lines.append("## Next steps (recommended)")
     lines.append("")
-    lines.append("- Increase replicates to tighten the p-values (e.g. `--reps 200`) and consider bumping `--max-pool` once runtime is acceptable.")
-    lines.append("- Add alternate null models: (1) uniform random ints from a single range, (2) ‘permuted W33’ where we keep magnitudes but shuffle values, (3) random sets conditioned on having similar gcd structure.")
+    lines.append(
+        "- Increase replicates to tighten the p-values (e.g. `--reps 200`) and consider bumping `--max-pool` once runtime is acceptable."
+    )
+    lines.append(
+        "- Add alternate null models: (1) uniform random ints from a single range, (2) ‘permuted W33’ where we keep magnitudes but shuffle values, (3) random sets conditioned on having similar gcd structure."
+    )
     lines.append("")
 
     with open(out_md, "w", encoding="utf-8") as f:

@@ -9,13 +9,27 @@ Every major result compiled into one view.
 import numpy as np
 
 print("═" * 80)
-print("╔══════════════════════════════════════════════════════════════════════════════╗")
-print("║                                                                              ║")
-print("║                    W33: THE MASTER CODE OF REALITY                           ║")
-print("║                                                                              ║")
-print("║                    A Summary of All Discoveries                              ║")
-print("║                                                                              ║")
-print("╚══════════════════════════════════════════════════════════════════════════════╝")
+print(
+    "╔══════════════════════════════════════════════════════════════════════════════╗"
+)
+print(
+    "║                                                                              ║"
+)
+print(
+    "║                    W33: THE MASTER CODE OF REALITY                           ║"
+)
+print(
+    "║                                                                              ║"
+)
+print(
+    "║                    A Summary of All Discoveries                              ║"
+)
+print(
+    "║                                                                              ║"
+)
+print(
+    "╚══════════════════════════════════════════════════════════════════════════════╝"
+)
 print("═" * 80)
 
 print("""
@@ -44,14 +58,14 @@ print("""
 
 # Calculate all key results
 results = [
-    ("Dark energy", "81/121", 81/121, 0.68, "1.6%"),
-    ("Dark matter", "40/121", 40/121, 0.32, "3.4%"),
+    ("Dark energy", "81/121", 81 / 121, 0.68, "1.6%"),
+    ("Dark matter", "40/121", 40 / 121, 0.32, "3.4%"),
     ("M-theory dim", "√121", np.sqrt(121), 11, "EXACT"),
-    ("SO(8) = SUGRA vectors", "1120/40", 1120/40, 28, "EXACT"),
-    ("E₇ dimension", "40+81+12", 40+81+12, 133, "EXACT"),
+    ("SO(8) = SUGRA vectors", "1120/40", 1120 / 40, 28, "EXACT"),
+    ("E₇ dimension", "40+81+12", 40 + 81 + 12, 133, "EXACT"),
     ("BH entropy factor", "|K4|", 4, 4, "EXACT"),
     ("String theories", "C(4,2)", 6, 6, "EXACT"),
-    ("Code rate", "40/81", 40/81, 0.5, "1.2%"),
+    ("Code rate", "40/81", 40 / 81, 0.5, "1.2%"),
 ]
 
 print(f"│{'Result':<25}{'Formula':<15}{'Value':<12}{'Theory':<10}{'Match':<10}│")

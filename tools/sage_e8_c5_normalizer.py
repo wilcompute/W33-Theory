@@ -1,21 +1,23 @@
 #!/usr/bin/env python3
 """Sage: compute normalizer of the Coxeter-6 element c^5 in W(E8)."""
+
 from __future__ import annotations
 
-from sage.all import RootSystem
-from pathlib import Path
 import json
+from pathlib import Path
+
+from sage.all import RootSystem
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 def main():
-    R = RootSystem(['E',8]).root_lattice()
+    R = RootSystem(["E", 8]).root_lattice()
     W = R.weyl_group()
 
     # Coxeter element c = s1 s2 ... s8
     c = W.simple_reflection(1)
-    for i in range(2,9):
+    for i in range(2, 9):
         c = c * W.simple_reflection(i)
     c5 = c**5
 

@@ -15,27 +15,37 @@ Hypothesis: Each Q-vertex corresponds to a PAIR of K4 components
 Let me verify this numerically.
 """
 
-import numpy as np
-import pandas as pd
-from pathlib import Path
 from collections import defaultdict
 from itertools import combinations
+from pathlib import Path
 
-W33_ROOT = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data")
-V23_ROOT = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data\_v23\v23")
+import numpy as np
+import pandas as pd
+
+W33_ROOT = Path(
+    r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data"
+)
+V23_ROOT = Path(
+    r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data\_v23\v23"
+)
 
 
 def load_w33():
     """Load W33 rays and build collinearity."""
-    rays_df = pd.read_csv(W33_ROOT / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv")
+    rays_df = pd.read_csv(
+        W33_ROOT
+        / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv"
+    )
     V = np.zeros((40, 4), dtype=np.complex128)
     for _, row in rays_df.iterrows():
-        pid = int(row['point_id'])
+        pid = int(row["point_id"])
         for i in range(4):
-            V[pid, i] = complex(str(row[f'v{i}']).replace(' ', ''))
+            V[pid, i] = complex(str(row[f"v{i}"]).replace(" ", ""))
 
     lines_df = pd.read_csv(W33_ROOT / "_workbench/02_geometry/W33_line_phase_map.csv")
-    lines = [tuple(map(int, str(row['point_ids']).split())) for _, row in lines_df.iterrows()]
+    lines = [
+        tuple(map(int, str(row["point_ids"]).split())) for _, row in lines_df.iterrows()
+    ]
 
     # Build collinearity
     col = defaultdict(set)
@@ -68,10 +78,12 @@ def find_k4_components(V, col):
                         continue
                     common = col[a] & col[b] & col[c] & col[d]
                     if len(common) == 4:
-                        k4_list.append({
-                            'outer': tuple(sorted([a,b,c,d])),
-                            'center': tuple(sorted(common))
-                        })
+                        k4_list.append(
+                            {
+                                "outer": tuple(sorted([a, b, c, d])),
+                                "center": tuple(sorted(common)),
+                            }
+                        )
 
     return k4_list
 
@@ -92,8 +104,8 @@ def analyze_k4_structure(k4_list, V, col):
     center_zeros = []
 
     for k4 in k4_list:
-        outer = k4['outer']
-        center = k4['center']
+        outer = k4["outer"]
+        center = k4["center"]
 
         # Find which component is zero for all outer points
         V_outer = V[list(outer)]
@@ -129,14 +141,14 @@ def analyze_k4_structure(k4_list, V, col):
     # Alternative: group by outer quad only
     outer_to_k4s = defaultdict(list)
     for i, k4 in enumerate(k4_list):
-        outer_to_k4s[k4['outer']].append(i)
+        outer_to_k4s[k4["outer"]].append(i)
 
     print(f"\nUnique outer quads: {len(outer_to_k4s)}")
 
     # Group by center quad
     center_to_k4s = defaultdict(list)
     for i, k4 in enumerate(k4_list):
-        center_to_k4s[k4['center']].append(i)
+        center_to_k4s[k4["center"]].append(i)
 
     print(f"Unique center quads: {len(center_to_k4s)}")
 
@@ -163,8 +175,8 @@ def check_duality(k4_list):
     center_to_outer = {}
 
     for k4 in k4_list:
-        outer_to_center[k4['outer']] = k4['center']
-        center_to_outer[k4['center']] = k4['outer']
+        outer_to_center[k4["outer"]] = k4["center"]
+        center_to_outer[k4["center"]] = k4["outer"]
 
     # Check if swapping gives another K4
     # i.e., if we take a center quad as a new outer, is it a valid K4?
@@ -172,7 +184,7 @@ def check_duality(k4_list):
     swap_invalid = 0
 
     for k4 in k4_list:
-        center = k4['center']
+        center = k4["center"]
         if center in outer_to_center:
             swap_valid += 1
         else:
@@ -189,7 +201,7 @@ def check_duality(k4_list):
         # Count fixed points
         fixed = 0
         for k4 in k4_list:
-            if k4['outer'] == k4['center']:
+            if k4["outer"] == k4["center"]:
                 fixed += 1
         print(f"Self-dual K4s (outer = center): {fixed}")
 
@@ -207,7 +219,7 @@ def analyze_q45_connection():
     tau_df = pd.read_csv(V23_ROOT / "Q_vertex_tau_profile.csv")
 
     # Q has 45 vertices (0 to 44)
-    q_vertices = tau_df['q'].unique()
+    q_vertices = tau_df["q"].unique()
     print(f"Q45 vertices: {len(q_vertices)}")
 
     # Each vertex has a tau profile (distribution of tau values on incident triangles)
@@ -216,8 +228,10 @@ def analyze_q45_connection():
     # Group vertices by their tau profile
     vertex_profiles = {}
     for q in q_vertices:
-        q_data = tau_df[tau_df['q'] == q]
-        profile = tuple(sorted((row['tau'], row['count']) for _, row in q_data.iterrows()))
+        q_data = tau_df[tau_df["q"] == q]
+        profile = tuple(
+            sorted((row["tau"], row["count"]) for _, row in q_data.iterrows())
+        )
         vertex_profiles[q] = profile
 
     unique_profiles = set(vertex_profiles.values())

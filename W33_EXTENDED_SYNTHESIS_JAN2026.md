@@ -189,7 +189,7 @@ Properties:
 Energy Density:
   ρ_Λ ≈ 2.1 × 10⁻⁴⁷ GeV⁴
   Ω_Λ ≈ 0.68 (of critical density)
-  
+
 Prediction: w = -1 (cosmological constant)
 Status: CONSISTENT with observations
 ```
@@ -240,7 +240,7 @@ Predictions:
   Scalar spectral index: n_s ≈ 0.96
   Tensor-to-scalar: r ≈ 0.03
   Running: dn_s/d(ln k) ≈ -0.002
-  
+
 Status: CONSISTENT with Planck satellite data
 ```
 
@@ -255,7 +255,7 @@ Status: CONSISTENT with Planck satellite data
 ```
 W33 Duality:
   40 points ↔ 40 lines (perfectly dual)
-  
+
 Interpretation:
   Points → spatial topology (3D positions)
   Lines → temporal evolution (1D time)
@@ -307,7 +307,7 @@ Mechanism:
 
 Result: Einstein field equations emerge naturally!
   R_μν - (1/2)g_μν R + Λg_μν = 8πG T_μν
-  
+
 Left side: Pure W33 geometry (no assumptions)
 Right side: Matter energy-momentum tensor
 ```

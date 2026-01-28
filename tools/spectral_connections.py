@@ -20,6 +20,7 @@ Outputs:
 - artifacts/spectral_connections.json
 - artifacts/spectral_connections.md
 """
+
 from __future__ import annotations
 
 import json
@@ -56,11 +57,11 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
 
@@ -100,10 +101,10 @@ def build_e8_roots():
 
     # Type 1: permutations of (±1, ±1, 0, 0, 0, 0, 0, 0) - 112 roots
     for i in range(8):
-        for j in range(i+1, 8):
+        for j in range(i + 1, 8):
             for si in [1, -1]:
                 for sj in [1, -1]:
-                    r = [0]*8
+                    r = [0] * 8
                     r[i] = si
                     r[j] = sj
                     roots.append(tuple(r))
@@ -111,7 +112,7 @@ def build_e8_roots():
     # Type 2: (±1/2, ..., ±1/2) with even number of minus signs - 128 roots
     for signs in product([1, -1], repeat=8):
         if sum(1 for s in signs if s == -1) % 2 == 0:
-            roots.append(tuple(s/2 for s in signs))
+            roots.append(tuple(s / 2 for s in signs))
 
     return np.array(roots, dtype=float)
 
@@ -159,7 +160,7 @@ def main():
     for v0 in range(n):
         tris = all_triangles[v0]
         for i, t1 in enumerate(tris):
-            for t2 in tris[i+1:]:
+            for t2 in tris[i + 1 :]:
                 idx1, idx2 = tri_index[t1], tri_index[t2]
                 tri_adj[idx1, idx2] = 1
                 tri_adj[idx2, idx1] = 1
@@ -180,7 +181,7 @@ def main():
 
     e8_adj = np.zeros((240, 240), dtype=int)
     for i in range(240):
-        for j in range(i+1, 240):
+        for j in range(i + 1, 240):
             ip = np.dot(e8_normalized[i], e8_normalized[j])
             if abs(ip - 0.5) < 0.01 or abs(ip + 0.5) < 0.01:
                 e8_adj[i, j] = 1
@@ -265,7 +266,7 @@ def main():
     # Build line graph
     tri_edge_list = []
     for i in range(len(unique_triangles)):
-        for j in range(i+1, len(unique_triangles)):
+        for j in range(i + 1, len(unique_triangles)):
             if tri_adj[i, j]:
                 tri_edge_list.append((i, j))
 
@@ -296,7 +297,9 @@ def main():
     lines.append("1. **40**: W33 vertices = Triangle graph eigenvalue-3 multiplicity")
     lines.append("   - This connects W33 vertex count to triangle graph spectrum")
     lines.append("")
-    lines.append("2. **120**: E8 root lines = Triangle graph eigenvalue-(-1) multiplicity")
+    lines.append(
+        "2. **120**: E8 root lines = Triangle graph eigenvalue-(-1) multiplicity"
+    )
     lines.append("   - Both E8 root graph and L(T) have 0-eigenspace of dimension 120")
     lines.append("")
     lines.append("3. **24**: W33 eigenvalue-2 multiplicity = D4 root count")

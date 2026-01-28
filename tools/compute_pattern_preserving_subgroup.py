@@ -8,10 +8,11 @@ Uses:
 Outputs:
 - artifacts/pattern_preserving_subgroup.json
 """
+
 from __future__ import annotations
 
 import json
-from collections import deque, defaultdict
+from collections import defaultdict, deque
 from itertools import product
 from pathlib import Path
 
@@ -47,29 +48,29 @@ def normalize_proj(v):
 
 def mat_mult_mod3(A, B):
     n, k, m = len(A), len(B), len(B[0])
-    out = [[0]*m for _ in range(n)]
+    out = [[0] * m for _ in range(n)]
     for i in range(n):
         for j in range(m):
             s = 0
             for l in range(k):
-                s = (s + A[i][l]*B[l][j]) % 3
+                s = (s + A[i][l] * B[l][j]) % 3
             out[i][j] = s
     return out
 
 
 def check_symplectic(M):
-    Omega = [[0,0,1,0],[0,0,0,1],[2,0,0,0],[0,2,0,0]]
+    Omega = [[0, 0, 1, 0], [0, 0, 0, 1], [2, 0, 0, 0], [0, 2, 0, 0]]
     MT = [[M[j][i] for j in range(4)] for i in range(4)]
     return mat_mult_mod3(mat_mult_mod3(MT, Omega), M) == Omega
 
 
 def apply_matrix(M, v):
-    res = [sum(M[i][j]*v[j] for j in range(4)) % 3 for i in range(4)]
+    res = [sum(M[i][j] * v[j] for j in range(4)) % 3 for i in range(4)]
     return normalize_proj(res)
 
 
 def matrix_to_perm(M, points):
-    idx = {p:i for i,p in enumerate(points)}
+    idx = {p: i for i, p in enumerate(points)}
     perm = []
     for p in points:
         q = apply_matrix(M, p)
@@ -79,16 +80,16 @@ def matrix_to_perm(M, points):
 
 def build_generators(points):
     gen_matrices = [
-        [[1,0,1,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,1],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[1,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,1,0,1]],
-        [[1,1,0,0],[0,1,0,0],[0,0,1,0],[0,0,2,1]],
-        [[1,0,0,0],[1,1,0,0],[0,0,1,2],[0,0,0,1]],
-        [[0,0,1,0],[0,1,0,0],[2,0,0,0],[0,0,0,1]],
-        [[1,0,0,0],[0,0,0,1],[0,0,1,0],[0,2,0,0]],
-        [[2,0,0,0],[0,1,0,0],[0,0,2,0],[0,0,0,1]],
-        [[1,0,0,0],[0,2,0,0],[0,0,1,0],[0,0,0,2]],
+        [[1, 0, 1, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 1], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [1, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 1, 0, 1]],
+        [[1, 1, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 2, 1]],
+        [[1, 0, 0, 0], [1, 1, 0, 0], [0, 0, 1, 2], [0, 0, 0, 1]],
+        [[0, 0, 1, 0], [0, 1, 0, 0], [2, 0, 0, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0], [0, 2, 0, 0]],
+        [[2, 0, 0, 0], [0, 1, 0, 0], [0, 0, 2, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 2, 0, 0], [0, 0, 1, 0], [0, 0, 0, 2]],
     ]
     gens = []
     for M in gen_matrices:
@@ -103,7 +104,7 @@ def perm_comp(p, q):
 
 
 def perm_inv(p):
-    inv = [0]*len(p)
+    inv = [0] * len(p)
     for i, v in enumerate(p):
         inv[v] = i
     return tuple(inv)
@@ -132,12 +133,16 @@ def main():
     points = construct_w33_points()
 
     # Orbit->point mapping (Coxeter6 orbit index -> F3 point)
-    orbit_map = json.loads((ROOT / "artifacts" / "e8_orbit_to_f3_point.json").read_text())
+    orbit_map = json.loads(
+        (ROOT / "artifacts" / "e8_orbit_to_f3_point.json").read_text()
+    )
     orbit_to_point = {int(k): tuple(v) for k, v in orbit_map["mapping"].items()}
     point_to_orbit = {v: k for k, v in orbit_to_point.items()}
 
     # Pattern class for each orbit (row tuple)
-    inter = json.loads((ROOT / "artifacts" / "we6_coxeter6_intersection.json").read_text())
+    inter = json.loads(
+        (ROOT / "artifacts" / "we6_coxeter6_intersection.json").read_text()
+    )
     patterns = [tuple(row) for row in inter["matrix"]]
     pat_ids = {}
     for row in patterns:

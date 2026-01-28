@@ -4,10 +4,11 @@
 We load the ray→F3 mapping from artifacts/witting_graph_isomorphism.json and
 recompute ω invariants for pairs/triangles, then tabulate phase clusters.
 """
+
 from __future__ import annotations
 
-import json
 import itertools
+import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -26,9 +27,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -52,12 +53,12 @@ def construct_f3_points():
 
 
 def omega_symp(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
 
 def phase_cluster(angle):
     a = np.arctan2(np.sin(angle), np.cos(angle))
-    targets = [np.pi/6, -np.pi/6, np.pi/2, -np.pi/2]
+    targets = [np.pi / 6, -np.pi / 6, np.pi / 2, -np.pi / 2]
     nearest = min(targets, key=lambda t: abs(a - t))
     return round(float(nearest), 6)
 
@@ -106,7 +107,9 @@ def main():
 
         c1 = sum(1 for w in (w12, w23, w31) if w == 1)
         c2 = 3 - c1
-        prod_sign = (1 if w12 == 1 else -1) * (1 if w23 == 1 else -1) * (1 if w31 == 1 else -1)
+        prod_sign = (
+            (1 if w12 == 1 else -1) * (1 if w23 == 1 else -1) * (1 if w31 == 1 else -1)
+        )
         multiset = tuple(sorted([w12, w23, w31]))
 
         tables["omega_counts"][(c1, c2)][cluster] += 1
@@ -140,19 +143,25 @@ def main():
         f.write("counts (c1,c2) | clusters\n")
         f.write("--- | ---\n")
         for k in sorted(tables["omega_counts"].keys()):
-            clusters = ", ".join(f"{c}:{n}" for c, n in sorted(tables["omega_counts"][k].items()))
+            clusters = ", ".join(
+                f"{c}:{n}" for c, n in sorted(tables["omega_counts"][k].items())
+            )
             f.write(f"{k} | {clusters}\n")
         f.write("\n## ω product sign\n\n")
         f.write("prod_sign | clusters\n")
         f.write("--- | ---\n")
         for k in sorted(tables["omega_product"].keys()):
-            clusters = ", ".join(f"{c}:{n}" for c, n in sorted(tables["omega_product"][k].items()))
+            clusters = ", ".join(
+                f"{c}:{n}" for c, n in sorted(tables["omega_product"][k].items())
+            )
             f.write(f"{k} | {clusters}\n")
         f.write("\n## ω multiset\n\n")
         f.write("multiset | clusters\n")
         f.write("--- | ---\n")
         for k in sorted(tables["omega_multiset"].keys()):
-            clusters = ", ".join(f"{c}:{n}" for c, n in sorted(tables["omega_multiset"][k].items()))
+            clusters = ", ".join(
+                f"{c}:{n}" for c, n in sorted(tables["omega_multiset"][k].items())
+            )
             f.write(f"{k} | {clusters}\n")
 
     print(f"Wrote {out_path}")

@@ -9,11 +9,11 @@ Exploring why H1(W33) has dimension 81 = 3^4 and its connections to:
 - Physics constants
 """
 
-import math
 import json
+import math
 import os
-from fractions import Fraction
 from datetime import datetime
+from fractions import Fraction
 
 OUTPUT_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -71,7 +71,7 @@ print()
 # For n=5, m=2: |O(5,q)| = 2 * q^4 * (q^2-1) * (q^4-1)
 m = 2
 q = 3
-omega_5_3 = q**(m**2) * math.prod([q**(2*i) - 1 for i in range(1, m+1)])
+omega_5_3 = q ** (m**2) * math.prod([q ** (2 * i) - 1 for i in range(1, m + 1)])
 o_5_3 = 2 * omega_5_3
 
 print(f"   |O(5,3)| = 2 × 3^4 × (3^2-1) × (3^4-1)")
@@ -123,7 +123,9 @@ for n in range(1, 7):
     vectors = 3**n
     nonzero = 3**n - 1
     projective = nonzero // 2 if n > 0 else 0
-    print(f"  GF(3)^{n}: {vectors} vectors, {nonzero} nonzero, {projective} projective points")
+    print(
+        f"  GF(3)^{n}: {vectors} vectors, {nonzero} nonzero, {projective} projective points"
+    )
 
 # ============================================================================
 # PART 3: THE HOMOLOGY DIMENSION
@@ -350,23 +352,17 @@ results = {
         "group": "|W(E6)| = 128 × 81 × 5",
         "exceptional": "dim(E7) - dim(F4) = 81",
         "moonshine": "729 = 9 × 81",
-        "physics": "α⁻¹ = 81 + 56"
+        "physics": "α⁻¹ = 81 + 56",
     },
     "weyl_omega_connection": {
         "W_E6": 51840,
         "Omega_5_3": 25920,
-        "relation": "W(E6) = 2 × Ω(5,3)"
+        "relation": "W(E6) = 2 × Ω(5,3)",
     },
-    "decompositions_81": [
-        "3^4",
-        "1 + 80",
-        "3 × 27",
-        "9 × 9",
-        "133 - 52"
-    ]
+    "decompositions_81": ["3^4", "1 + 80", "3 × 27", "9 × 9", "133 - 52"],
 }
 
 output_file = os.path.join(OUTPUT_DIR, "w33_81_mystery_results.json")
-with open(output_file, 'w') as f:
+with open(output_file, "w") as f:
     json.dump(results, f, indent=2, default=int)
 print(f"\nResults saved to: {output_file}")

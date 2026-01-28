@@ -5,6 +5,7 @@ Outputs:
 - artifacts/pattern_class_feature_table.json
 - artifacts/pattern_class_feature_table.md
 """
+
 from __future__ import annotations
 
 import json
@@ -66,16 +67,24 @@ def main():
     lines = []
     lines.append("# Pattern Class Feature Table")
     lines.append("")
-    lines.append("| Class | Size | Support sizes | K4 outer count | K4 center count | Avg neighbor class counts |")
+    lines.append(
+        "| Class | Size | Support sizes | K4 outer count | K4 center count | Avg neighbor class counts |"
+    )
     lines.append("|---|---:|---|---:|---:|---|")
     for c in classes:
         ckey = str(c)
         s = summary[ckey]
-        support_str = ",".join(f"{k}:{v}" for k,v in sorted(s["support_size_counts"].items()))
+        support_str = ",".join(
+            f"{k}:{v}" for k, v in sorted(s["support_size_counts"].items())
+        )
         avg = ",".join(f"{x:.2f}" for x in s["avg_neighbor_class_counts"])
-        lines.append(f"| {ckey} | {s['size']} | {support_str} | {s['k4_outer_count']} | {s['k4_center_count']} | {avg} |")
+        lines.append(
+            f"| {ckey} | {s['size']} | {support_str} | {s['k4_outer_count']} | {s['k4_center_count']} | {avg} |"
+        )
 
-    (ROOT / "artifacts" / "pattern_class_feature_table.md").write_text("\n".join(lines), encoding="utf-8")
+    (ROOT / "artifacts" / "pattern_class_feature_table.md").write_text(
+        "\n".join(lines), encoding="utf-8"
+    )
 
     print("Wrote artifacts/pattern_class_feature_table.json")
     print("Wrote artifacts/pattern_class_feature_table.md")

@@ -4,10 +4,11 @@
 We embed F3^4 projective points into C^4 via omega^x mapping
 and compute Bargmann invariant for each 4-clique (line) in W33.
 """
+
 from __future__ import annotations
 
-import json
 import itertools
+import json
 from pathlib import Path
 
 import numpy as np
@@ -50,7 +51,7 @@ def embed_rays(proj_points):
     omega = np.exp(2j * np.pi / 3)
     rays = []
     for p in proj_points:
-        v = np.array([omega ** x for x in p], dtype=complex)
+        v = np.array([omega**x for x in p], dtype=complex)
         v = v / np.linalg.norm(v)
         rays.append(v)
     return rays
@@ -67,8 +68,14 @@ def find_k4s(adj):
     n = adj.shape[0]
     k4s = []
     for a, b, c, d in itertools.combinations(range(n), 4):
-        if (adj[a, b] and adj[a, c] and adj[a, d] and
-                adj[b, c] and adj[b, d] and adj[c, d]):
+        if (
+            adj[a, b]
+            and adj[a, c]
+            and adj[a, d]
+            and adj[b, c]
+            and adj[b, d]
+            and adj[c, d]
+        ):
             k4s.append((a, b, c, d))
     return k4s
 
@@ -94,6 +101,7 @@ def main():
 
     angles = [round(float(np.angle(p)), 6) for p in phases]
     from collections import Counter
+
     counts = Counter(angles)
 
     print("Phase distribution (radians):")

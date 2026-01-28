@@ -4,6 +4,7 @@
 We model states as (line_id, sign). If a path exists from (L,+1) to (L,-1),
 that yields an explicit cocycle witness (a relation whose sign is -1).
 """
+
 from __future__ import annotations
 
 import json
@@ -48,8 +49,8 @@ def main():
         line_reps.append(rep)
 
     # Load generator perms
-    data = json.loads((ROOT / 'artifacts' / 'sp43_we6_generator_map.json').read_text())
-    gens = [g['root_perm'] for g in data['generator_maps']]
+    data = json.loads((ROOT / "artifacts" / "sp43_we6_generator_map.json").read_text())
+    gens = [g["root_perm"] for g in data["generator_maps"]]
 
     # Precompute line permutation and eps for each generator
     gen_line_perm = []
@@ -107,11 +108,11 @@ def main():
         "word": word,
         "length": len(word),
     }
-    out_path = ROOT / 'artifacts' / 'root_line_sign_negative_word.json'
+    out_path = ROOT / "artifacts" / "root_line_sign_negative_word.json"
     out_path.write_text(json.dumps(out, indent=2))
     print(f"Found length-{len(word)} word mapping line 0 to itself with sign -1")
     print(f"Wrote {out_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

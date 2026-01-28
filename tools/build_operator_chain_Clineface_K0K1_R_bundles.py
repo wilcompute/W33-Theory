@@ -34,7 +34,6 @@ from pathlib import Path
 
 import numpy as np
 
-
 ROOT = Path(__file__).resolve().parents[1]
 MOD3 = 3
 
@@ -50,7 +49,9 @@ def _read_csv_from_zip(zip_path: Path, inner: str) -> list[dict[str, str]]:
             return list(csv.DictReader(text))
 
 
-def _write_csv(path: Path, fieldnames: list[str], rows: list[dict[str, object]]) -> None:
+def _write_csv(
+    path: Path, fieldnames: list[str], rows: list[dict[str, object]]
+) -> None:
     with path.open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fieldnames)
         w.writeheader()
@@ -80,7 +81,8 @@ def main() -> int:
     ap.add_argument(
         "--quotient-bundle",
         type=Path,
-        default=ROOT / "W33_quotient_closure_complement_and_noniso_line_curvature_bundle.zip",
+        default=ROOT
+        / "W33_quotient_closure_complement_and_noniso_line_curvature_bundle.zip",
     )
     ap.add_argument(
         "--line-scheme-bundle",
@@ -90,7 +92,9 @@ def main() -> int:
     args = ap.parse_args()
 
     # --- Tetrahedra and J := dF
-    trows = _read_csv_from_zip(args.holonomy_phase_decomp, "tetra_coboundary_dF_dPhi_9450.csv")
+    trows = _read_csv_from_zip(
+        args.holonomy_phase_decomp, "tetra_coboundary_dF_dPhi_9450.csv"
+    )
     tets = [tuple(map(int, [r["a"], r["b"], r["c"], r["d"]])) for r in trows]
     J = np.array([mod3(int(r["dF"])) for r in trows], dtype=np.int16)
     if len(tets) != 9450:
@@ -117,7 +121,9 @@ def main() -> int:
         raise SystemExit("Unexpected flat triple / edge counts")
 
     # --- Curved triangles list (2880): triangles in Q that are not flat
-    tri_rows = _read_csv_from_zip(args.quotient_bundle, "quotient_triangles_holonomy_3240.csv")
+    tri_rows = _read_csv_from_zip(
+        args.quotient_bundle, "quotient_triangles_holonomy_3240.csv"
+    )
     curved: list[tuple[int, int, int]] = []
     tri_meta: dict[tuple[int, int, int], dict[str, str]] = {}
     for r in tri_rows:
@@ -152,7 +158,9 @@ def main() -> int:
             if jv:
                 m_raw[lid] = mod3(int(m_raw[lid]) + jv)
         elif flat_count not in (0, 4):
-            raise SystemExit(f"Unexpected flat_face_count={flat_count} at tet_index={ti}")
+            raise SystemExit(
+                f"Unexpected flat_face_count={flat_count} at tet_index={ti}"
+            )
 
         for tri in faces:
             if tri in triple_to_line:
@@ -161,9 +169,13 @@ def main() -> int:
             if rid is None:
                 raise SystemExit(f"Curved face {tri} not in curved list")
             if flat_count == 0:
-                K0_rows.append({"row_curved_tri": rid, "col_tet_index": ti, "value_mod3": 1})
+                K0_rows.append(
+                    {"row_curved_tri": rid, "col_tet_index": ti, "value_mod3": 1}
+                )
             elif flat_count == 1:
-                K1_rows.append({"row_curved_tri": rid, "col_tet_index": ti, "value_mod3": 1})
+                K1_rows.append(
+                    {"row_curved_tri": rid, "col_tet_index": ti, "value_mod3": 1}
+                )
             # vacuum (flat_count==4) has no curved faces
             jv = int(J[ti])
             if jv:
@@ -185,7 +197,9 @@ def main() -> int:
             lid = edge_to_line.get(ee)
             if lid is None:
                 raise SystemExit(f"Edge {ee} missing from edge_to_line")
-            R_rows.append({"row_line_id": int(lid), "col_curved_tri": rid, "value_mod3": 1})
+            R_rows.append(
+                {"row_line_id": int(lid), "col_curved_tri": rid, "value_mod3": 1}
+            )
             yv = int(y_curved[rid])
             if yv:
                 z_line[int(lid)] = mod3(int(z_line[int(lid)]) + yv)
@@ -199,11 +213,23 @@ def main() -> int:
     out1.mkdir(exist_ok=True)
     for p in out1.iterdir():
         p.unlink()
-    _write_csv(out1 / "operator_C_lineface_coo.csv", ["row_line_id", "col_tet_index", "value_mod3"], C_rows)
+    _write_csv(
+        out1 / "operator_C_lineface_coo.csv",
+        ["row_line_id", "col_tet_index", "value_mod3"],
+        C_rows,
+    )
     _write_csv(
         out1 / "m_line_from_C_lineface_J.csv",
         ["line_id", "points", "m_raw_mod3", "m_aug_mod3"],
-        [{"line_id": i, "points": line_points[i], "m_raw_mod3": int(m_raw[i]), "m_aug_mod3": int(m_aug[i])} for i in range(90)],
+        [
+            {
+                "line_id": i,
+                "points": line_points[i],
+                "m_raw_mod3": int(m_raw[i]),
+                "m_aug_mod3": int(m_aug[i]),
+            }
+            for i in range(90)
+        ],
     )
     _write_json(
         out1 / "summary.json",
@@ -242,8 +268,16 @@ def main() -> int:
             for i, tri in enumerate(curved)
         ],
     )
-    _write_csv(out2 / "operator_K0_coo.csv", ["row_curved_tri", "col_tet_index", "value_mod3"], K0_rows)
-    _write_csv(out2 / "operator_K1_coo.csv", ["row_curved_tri", "col_tet_index", "value_mod3"], K1_rows)
+    _write_csv(
+        out2 / "operator_K0_coo.csv",
+        ["row_curved_tri", "col_tet_index", "value_mod3"],
+        K0_rows,
+    )
+    _write_csv(
+        out2 / "operator_K1_coo.csv",
+        ["row_curved_tri", "col_tet_index", "value_mod3"],
+        K1_rows,
+    )
     _write_csv(
         out2 / "y_curved_triangle_current_from_J.csv",
         ["curved_tri_id", "y_mod3"],
@@ -253,10 +287,16 @@ def main() -> int:
         out2 / "summary.json",
         {
             "shape": {"rows_curved_triangles": 2880, "cols_tetra": 9450},
-            "nnz": {"K0": len(K0_rows), "K1": len(K1_rows), "K0_plus_K1": len(K0_rows) + len(K1_rows)},
+            "nnz": {
+                "K0": len(K0_rows),
+                "K1": len(K1_rows),
+                "K0_plus_K1": len(K0_rows) + len(K1_rows),
+            },
             "y_hist": {
                 str(int(val)): int(cnt)
-                for val, cnt in zip(*np.unique(y_curved, return_counts=True), strict=True)
+                for val, cnt in zip(
+                    *np.unique(y_curved, return_counts=True), strict=True
+                )
             },
         },
     )
@@ -274,13 +314,26 @@ def main() -> int:
     out3.mkdir(exist_ok=True)
     for p in out3.iterdir():
         p.unlink()
-    _write_csv(out3 / "operator_R_coo.csv", ["row_line_id", "col_curved_tri", "value_mod3"], R_rows)
+    _write_csv(
+        out3 / "operator_R_coo.csv",
+        ["row_line_id", "col_curved_tri", "value_mod3"],
+        R_rows,
+    )
     _write_csv(
         out3 / "z_line_from_R_y.csv",
         ["line_id", "points", "z_mod3"],
-        [{"line_id": i, "points": line_points[i], "z_mod3": int(z_line[i])} for i in range(90)],
+        [
+            {"line_id": i, "points": line_points[i], "z_mod3": int(z_line[i])}
+            for i in range(90)
+        ],
     )
-    _write_json(out3 / "summary.json", {"shape": {"rows_lines": 90, "cols_curved_triangles": 2880}, "nnz": len(R_rows)})
+    _write_json(
+        out3 / "summary.json",
+        {
+            "shape": {"rows_lines": 90, "cols_curved_triangles": 2880},
+            "nnz": len(R_rows),
+        },
+    )
     (out3 / "README.txt").write_text(
         "R operator (COO) mapping curved-triangle current y to 90-line aggregates via edge incidence.\n",
         encoding="utf-8",

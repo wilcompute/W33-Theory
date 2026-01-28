@@ -28,17 +28,25 @@ ROOT = resolve_repo_root(Path(__file__).resolve())
 DATA = ROOT / "data"
 OUT_DIR = DATA / "_workbench" / "05_symmetry"
 
-COIN_NPZ = DATA / "_toe" / "projector_recon_20260110" / (
-    "N12_58_sector_coin_C24_K4_by_k_sparse_20260109T205353Z.npz"
+COIN_NPZ = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / ("N12_58_sector_coin_C24_K4_by_k_sparse_20260109T205353Z.npz")
 )
-H_NPZ = DATA / "_toe" / "projector_recon_20260110" / (
-    "TOE_H_total_transport_plus_lambda_coin_59x24_lam0.5_20260109T205353Z.npz"
+H_NPZ = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / ("TOE_H_total_transport_plus_lambda_coin_59x24_lam0.5_20260109T205353Z.npz")
 )
 
 
 def load_csr_npz(path: Path) -> sp.csr_matrix:
     z = np.load(path, allow_pickle=True)
-    return sp.csr_matrix((z["data"], z["indices"], z["indptr"]), shape=tuple(z["shape"]))
+    return sp.csr_matrix(
+        (z["data"], z["indices"], z["indptr"]), shape=tuple(z["shape"])
+    )
 
 
 def deck_swap_24() -> sp.csr_matrix:
@@ -102,7 +110,10 @@ def main() -> None:
     # For Z2, the equivariant blocks are expected to split 24 -> 12 + 12.
     block_cut = 12
     off_block = np.concatenate(
-        [coin_block_np[:block_cut, block_cut:].ravel(), coin_block_np[block_cut:, :block_cut].ravel()]
+        [
+            coin_block_np[:block_cut, block_cut:].ravel(),
+            coin_block_np[block_cut:, :block_cut].ravel(),
+        ]
     )
     off_block_norm = float(np.linalg.norm(off_block))
     total_norm = float(np.linalg.norm(coin_block_np.ravel()))
@@ -115,7 +126,9 @@ def main() -> None:
     comm_norm = fro_norm_sparse(comm)
 
     # Deck parity of the u_- clock profile.
-    u_minus_6 = np.array([1.0, 1.0, 1.0, -1.0, -1.0, -1.0], dtype=float) / math.sqrt(6.0)
+    u_minus_6 = np.array([1.0, 1.0, 1.0, -1.0, -1.0, -1.0], dtype=float) / math.sqrt(
+        6.0
+    )
     u_minus_24 = np.tile(u_minus_6, 4)
     deck_parity_error = float(np.linalg.norm(z24.dot(u_minus_24) + u_minus_24))
 

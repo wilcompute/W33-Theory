@@ -8,10 +8,11 @@ from W33 to all of physics, in one place.
 The Theory of Everything, step by step.
 """
 
-import numpy as np
-from fractions import Fraction
-from decimal import Decimal, getcontext
 import json
+from decimal import Decimal, getcontext
+from fractions import Fraction
+
+import numpy as np
 
 getcontext().prec = 50
 
@@ -53,7 +54,7 @@ STEP 1.1: Vector Space
 Define V = F₃⁴, the 4-dimensional vector space over F₃.
   |V| = 3⁴ = 81 vectors
 
-STEP 1.2: Symplectic Form  
+STEP 1.2: Symplectic Form
 
 Define the symplectic form ω: V × V → F₃:
   ω(u, v) = u₁v₂ - u₂v₁ + u₃v₄ - u₄v₃  (mod 3)
@@ -74,9 +75,9 @@ STEP 1.4: The Graph W33
 Vertices: Isotropic lines in V (1-dimensional subspaces)
   Count: (3⁴ - 1)/(3 - 1) = 80/2 = 40 vertices
 
-Edges: Two vertices are connected if their lines 
+Edges: Two vertices are connected if their lines
        span an isotropic 2-plane.
-       
+
 Result: W33 = Sp(4, F₃) symplectic graph
 """)
 
@@ -84,7 +85,7 @@ Result: W33 = Sp(4, F₃) symplectic graph
 v = 40  # vertices
 k = 12  # degree
 lam = 2  # common neighbors (adjacent)
-mu = 4   # common neighbors (non-adjacent)
+mu = 4  # common neighbors (non-adjacent)
 
 print(f"\nRESULT OF CONSTRUCTION:")
 print(f"  v = {v} vertices")
@@ -107,14 +108,14 @@ STEP 2.2: Eigenvalue Calculation
 For SRG(v, k, λ, μ), eigenvalues are:
 
   e₁ = k = 12              (multiplicity m₁ = 1)
-  e₂ = (λ - μ + √Δ)/2      (multiplicity m₂)  
+  e₂ = (λ - μ + √Δ)/2      (multiplicity m₂)
   e₃ = (λ - μ - √Δ)/2      (multiplicity m₃)
 
 Where Δ = (λ - μ)² + 4(k - μ) = 4 + 32 = 36, √Δ = 6
 """)
 
 # Compute eigenvalues
-Delta = (lam - mu)**2 + 4*(k - mu)
+Delta = (lam - mu) ** 2 + 4 * (k - mu)
 sqrt_Delta = int(np.sqrt(Delta))
 e1 = k
 e2 = (lam - mu + sqrt_Delta) // 2
@@ -177,8 +178,8 @@ STEP 4.1: Fine Structure Constant
 """)
 
 # Alpha calculation
-alpha_inv_int = k**2 - 2*mu + 1  # 144 - 8 + 1 = 137
-alpha_inv_frac = Fraction(v, (k-1)*((k-lam)**2 + 1))  # 40/1111
+alpha_inv_int = k**2 - 2 * mu + 1  # 144 - 8 + 1 = 137
+alpha_inv_frac = Fraction(v, (k - 1) * ((k - lam) ** 2 + 1))  # 40/1111
 alpha_inv = float(alpha_inv_int) + float(alpha_inv_frac)
 
 print(f"  α⁻¹ = (k² - 2μ + 1) + v/[(k-1)((k-λ)²+1)]")
@@ -228,7 +229,7 @@ STEP 5.1: GUT Scale
 """)
 
 M_Z = 91.2  # GeV
-M_GUT = M_Z * 3**(v-7)
+M_GUT = M_Z * 3 ** (v - 7)
 print(f"  M_GUT = M_Z × 3^(v-7)")
 print(f"        = {M_Z} × 3^{v-7}")
 print(f"        = {M_GUT:.4e} GeV")
@@ -238,7 +239,7 @@ STEP 5.2: Planck Scale
 """)
 
 M_EW = 246  # GeV (Higgs VEV)
-hierarchy = 3**(v-4)
+hierarchy = 3 ** (v - 4)
 print(f"  M_Planck/M_EW ~ 3^(v-4)")
 print(f"                = 3^{v-4}")
 print(f"                = {hierarchy:.4e}")
@@ -258,8 +259,8 @@ print("\n" + "=" * 70)
 print("LEVEL 6: NEUTRINO PHYSICS")
 print("=" * 70)
 
-sin2_12 = k/v
-sin2_23 = 0.5 + mu/(2*v)
+sin2_12 = k / v
+sin2_23 = 0.5 + mu / (2 * v)
 R_nu = v - 7
 
 print(f"""
@@ -267,7 +268,7 @@ STEP 6.1: Mixing Angles
 
   sin²θ₁₂ = k/v = {k}/{v} = {sin2_12:.4f}
     Experimental: 0.307 ± 0.013 ✓
-    
+
   sin²θ₂₃ = 1/2 + μ/(2v) = {sin2_23:.4f}
     Experimental: 0.545 ± 0.021 ✓
 
@@ -282,7 +283,7 @@ print("LEVEL 7: COSMOLOGY")
 print("=" * 70)
 
 H0_cmb = v + m2 + m1 + lam
-H0_local = H0_cmb + 2*lam + mu
+H0_local = H0_cmb + 2 * lam + mu
 Lambda_exp = k**2 - m2 + lam
 
 print(f"""
@@ -290,10 +291,10 @@ STEP 7.1: Hubble Constants
 
   H₀(CMB) = v + m₂ + m₁ + λ = {H0_cmb} km/s/Mpc
     Planck: 67.4 ± 0.5 ✓
-    
+
   H₀(local) = H₀(CMB) + 2λ + μ = {H0_local} km/s/Mpc
     SH0ES: 73.0 ± 1.0 ✓
-    
+
   W33 EXPLAINS THE HUBBLE TENSION!
 
 STEP 7.2: Cosmological Constant
@@ -311,7 +312,7 @@ print("\n" + "=" * 70)
 print("LEVEL 8: PROTON DECAY")
 print("=" * 70)
 
-alpha_GUT = 1/v
+alpha_GUT = 1 / v
 tau_p = 1e34  # approximate
 
 print(f"""
@@ -319,9 +320,9 @@ THE SMOKING GUN PREDICTION:
 
   M_X = M_GUT = 3³³ M_Z ≈ 5 × 10¹⁵ GeV
   α_GUT = 1/v = 1/40 = {alpha_GUT}
-  
+
   τ(p → e⁺ π⁰) ≈ 10³⁴ - 10³⁵ years
-  
+
   Current limit: > 2.4 × 10³⁴ years ✓
   Testable: Hyper-Kamiokande (2027+)
 """)
@@ -334,7 +335,7 @@ print(f"""
 STEP 9.1: Automorphism Group
 
   |Aut(W33)| = 51840 = |W(E₆)| = Weyl group of E₆
-  
+
   E₆ is a key structure in grand unification!
   Contains SU(3) × SU(3) × SU(3) ⊃ Standard Model
 
@@ -388,7 +389,7 @@ FROM W33 = Sp(4, F₃):
 FUNDAMENTAL CONSTANTS:
   α⁻¹ = k² - 2μ + 1 + v/[(k-1)((k-λ)²+1)] = 137.036004
   sin²θ_W = v/(v + k² + 1) = 0.216 (at GUT scale)
-  
+
 PARTICLE PHYSICS:
   N_generations = m₃/5 = 3
   M_H = 3⁴ + v + μ = 125 GeV
@@ -459,9 +460,16 @@ results = {
     "construction": "W33 = Sp(4, F₃) symplectic graph",
     "polynomial": "P(x) = (x-12)(x-2)^24(x+4)^15",
     "parameters": {
-        "v": v, "k": k, "lambda": lam, "mu": mu,
-        "m1": m1, "m2": m2, "m3": m3,
-        "e1": e1, "e2": e2, "e3": e3
+        "v": v,
+        "k": k,
+        "lambda": lam,
+        "mu": mu,
+        "m1": m1,
+        "m2": m2,
+        "m3": m3,
+        "e1": e1,
+        "e2": e2,
+        "e3": e3,
     },
     "predictions": {
         "alpha_inverse": alpha_inv,
@@ -471,9 +479,9 @@ results = {
         "H0_CMB": H0_cmb,
         "H0_local": H0_local,
         "Lambda_exponent": -Lambda_exp,
-        "proton_lifetime_years": "1e34-1e35"
+        "proton_lifetime_years": "1e34-1e35",
     },
-    "status": "COMPLETE THEORY OF EVERYTHING"
+    "status": "COMPLETE THEORY OF EVERYTHING",
 }
 
 with open("PART_XCVI_complete_derivation.json", "w") as f:

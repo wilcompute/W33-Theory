@@ -1,0 +1,37 @@
+Orbits: 12 sizes=[27, 27, 27, 27, 27, 27, 27, 27, 81, 81, 81, 81]
+Orbit 0 size 27
+  family pairs: {('B', 'F1'): 9, ('B', 'F2'): 9, ('B', 'F0'): 9}
+  basis types: {'BN': 27}
+Orbit 1 size 27
+  family pairs: {('B', 'F2'): 9, ('B', 'F0'): 9, ('B', 'F1'): 9}
+  basis types: {'BN': 27}
+Orbit 2 size 27
+  family pairs: {('B', 'F3'): 27}
+  basis types: {'BN': 27}
+Orbit 3 size 27
+  family pairs: {('B', 'F0'): 9, ('B', 'F1'): 9, ('B', 'F2'): 9}
+  basis types: {'BN': 27}
+Orbit 4 size 27
+  family pairs: {('F0', 'F0'): 9, ('F1', 'F1'): 9, ('F2', 'F2'): 9}
+  basis types: {'NN': 27}
+Orbit 5 size 81
+  family pairs: {('F0', 'F1'): 27, ('F0', 'F2'): 27, ('F1', 'F2'): 27}
+  basis types: {'NN': 81}
+Orbit 6 size 81
+  family pairs: {('F0', 'F2'): 27, ('F0', 'F1'): 27, ('F1', 'F2'): 27}
+  basis types: {'NN': 81}
+Orbit 7 size 81
+  family pairs: {('F0', 'F3'): 27, ('F1', 'F3'): 27, ('F2', 'F3'): 27}
+  basis types: {'NN': 81}
+Orbit 8 size 81
+  family pairs: {('F0', 'F3'): 27, ('F1', 'F3'): 27, ('F2', 'F3'): 27}
+  basis types: {'NN': 81}
+Orbit 9 size 27
+  family pairs: {('F0', 'F0'): 9, ('F1', 'F1'): 9, ('F2', 'F2'): 9}
+  basis types: {'NN': 27}
+Orbit 10 size 27
+  family pairs: {('F0', 'F0'): 9, ('F1', 'F1'): 9, ('F2', 'F2'): 9}
+  basis types: {'NN': 27}
+Orbit 11 size 27
+  family pairs: {('F3', 'F3'): 27}
+  basis types: {'NN': 27}

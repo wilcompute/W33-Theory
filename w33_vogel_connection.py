@@ -14,8 +14,9 @@ This is EXACTLY what W33 predicts!
 - Three Vogel parameters
 """
 
-import numpy as np
 from itertools import combinations
+
+import numpy as np
 
 print("=" * 80)
 print("W33 AND VOGEL'S UNIVERSALITY")
@@ -47,20 +48,22 @@ VOGEL PARAMETERS FOR LIE ALGEBRAS:
 
 # Vogel parameters from Table 10 in the paper
 vogel_params = {
-    'sl_N': {'α': -2, 'β': 2, 'γ': 'N', 't': 'N'},
-    'so_N': {'α': -2, 'β': 4, 'γ': 'N-4', 't': 'N-2'},
-    'sp_2N': {'α': -2, 'β': 1, 'γ': 'N+2', 't': 'N+1'},
-    'G_2': {'α': -2, 'β': 10/3, 'γ': 8/3, 't': 4},
-    'F_4': {'α': -2, 'β': 5, 'γ': 6, 't': 9},
-    'E_6': {'α': -2, 'β': 6, 'γ': 8, 't': 12},
-    'E_7': {'α': -2, 'β': 8, 'γ': 12, 't': 18},
-    'E_8': {'α': -2, 'β': 12, 'γ': 20, 't': 30}
+    "sl_N": {"α": -2, "β": 2, "γ": "N", "t": "N"},
+    "so_N": {"α": -2, "β": 4, "γ": "N-4", "t": "N-2"},
+    "sp_2N": {"α": -2, "β": 1, "γ": "N+2", "t": "N+1"},
+    "G_2": {"α": -2, "β": 10 / 3, "γ": 8 / 3, "t": 4},
+    "F_4": {"α": -2, "β": 5, "γ": 6, "t": 9},
+    "E_6": {"α": -2, "β": 6, "γ": 8, "t": 12},
+    "E_7": {"α": -2, "β": 8, "γ": 12, "t": 18},
+    "E_8": {"α": -2, "β": 12, "γ": 20, "t": 30},
 }
 
 print(f"{'Algebra':<10} {'α':>8} {'β':>8} {'γ':>8} {'t=α+β+γ':>10}")
 print("-" * 50)
 for alg, params in vogel_params.items():
-    print(f"{alg:<10} {params['α']:>8} {params['β']:>8} {params['γ']:>8} {params['t']:>10}")
+    print(
+        f"{alg:<10} {params['α']:>8} {params['β']:>8} {params['γ']:>8} {params['t']:>10}"
+    )
 
 # =============================================================================
 # PART 2: THE THREE-NESS OF VOGEL = GF(3)!
@@ -74,7 +77,7 @@ print("""
 OBSERVATION: Vogel theory is fundamentally based on THREE:
 
   1. THREE parameters (α, β, γ)
-  2. THREE generators of Λ-algebra (t, σ, ω)  
+  2. THREE generators of Λ-algebra (t, σ, ω)
   3. THREE series of classical algebras (sl, so, sp)
 
 THE Λ-ALGEBRA:
@@ -95,13 +98,15 @@ THIS IS EXACTLY THE STRUCTURE OF GF(3)!
 W33 PREDICTION: The three Vogel parameters ARE the three elements of GF(3)!
 """)
 
+
 # Verify the symmetric functions
 def verify_symmetric_functions(alpha, beta, gamma):
     """The three elementary symmetric polynomials"""
     e1 = alpha + beta + gamma  # = t
-    e2 = alpha*beta + beta*gamma + alpha*gamma  # = σ - 2t²
+    e2 = alpha * beta + beta * gamma + alpha * gamma  # = σ - 2t²
     e3 = alpha * beta * gamma  # = ω - tσ
     return e1, e2, e3
+
 
 print("Elementary symmetric polynomials for E₇ (α=-2, β=8, γ=12):")
 e1, e2, e3 = verify_symmetric_functions(-2, 8, 12)
@@ -139,18 +144,29 @@ DEGREE OF P:
   P₂₂ = individual exceptional factors, degree 22
 """)
 
+
 def P_sl(alpha, beta, gamma):
     return (alpha + beta) * (beta + gamma) * (alpha + gamma)
 
+
 def P_exc(alpha, beta, gamma):
-    return (alpha - 2*beta - 2*gamma) * (beta - 2*alpha - 2*gamma) * (gamma - 2*alpha - 2*beta)
+    return (
+        (alpha - 2 * beta - 2 * gamma)
+        * (beta - 2 * alpha - 2 * gamma)
+        * (gamma - 2 * alpha - 2 * beta)
+    )
+
 
 # Test on exceptional algebras
 print("\nP_exc vanishes on exceptional line:")
-for alg in ['G_2', 'F_4', 'E_6', 'E_7', 'E_8']:
+for alg in ["G_2", "F_4", "E_6", "E_7", "E_8"]:
     p = vogel_params[alg]
-    if isinstance(p['α'], (int, float)) and isinstance(p['β'], (int, float)) and isinstance(p['γ'], (int, float)):
-        val = P_exc(p['α'], p['β'], p['γ'])
+    if (
+        isinstance(p["α"], (int, float))
+        and isinstance(p["β"], (int, float))
+        and isinstance(p["γ"], (int, float))
+    ):
+        val = P_exc(p["α"], p["β"], p["γ"])
         print(f"  {alg}: P_exc = {val}")
 
 # =============================================================================
@@ -172,7 +188,7 @@ LOOK AT THE COEFFICIENTS:
   • 81 = |cycles in W33| = 3⁴
   • 36 = 6² = (2×3)² appears twice
   • 225 = 15² = (3×5)²
-  
+
 THE EXCEPTIONAL ALGEBRA POLYNOMIALS (eq. 13):
   P_G2 = 18(α² + β² + γ²) - 25(α + β + γ)²
   P_F4 = 81(α² + β² + γ²) - 65(α + β + γ)²
@@ -223,10 +239,12 @@ BOTH MATCH EXACTLY!
   dim(E₈) = 248 = 2×121 + 6 = 2×(40+81) + 6
 """)
 
+
 # Verify dimensions
 def dim_adj(alpha, beta, gamma):
     t = alpha + beta + gamma
-    return (alpha - 2*t) * (beta - 2*t) * (gamma - 2*t) / (alpha * beta * gamma)
+    return (alpha - 2 * t) * (beta - 2 * t) * (gamma - 2 * t) / (alpha * beta * gamma)
+
 
 dim_e7 = dim_adj(-2, 8, 12)
 dim_e8 = dim_adj(-2, 12, 20)
@@ -255,7 +273,7 @@ The paper notes that P₂₂ contains the factors:
 W33 CONJECTURE:
 ===============
 
-We conjecture that ˆt · ˆP₂₂ = 0 if and only if the coefficients 
+We conjecture that ˆt · ˆP₂₂ = 0 if and only if the coefficients
 satisfy W33 constraints!
 
 The repeated appearance of 81 = 3⁴ = |cycles| is NOT coincidence.
@@ -287,12 +305,12 @@ Evidence:
 
 THE KEY INSIGHT:
   Jacobi identity = IHX relation = TRIVALENT VERTEX
-  
+
   Trivalent graphs with 3-symmetry = GF(3) structure!
-  
+
   The Λ-algebra multiplication:
     Insert one diagram into any vertex of another
-    
+
   This is EXACTLY the incidence structure of W33!
     - Points insert into lines
     - Lines contain points
@@ -317,7 +335,7 @@ Let's factorize:
   36 = 4 × 9 = 2² × 3² = |K4| × |GF(3)|²
   81 = 3⁴ = |cycles|
   225 = 15² = (3×5)²
-  
+
   77 = 7 × 11 → contains 11!
   176 = 16 × 11 = 4² × 11 → contains 11!
   494 = 2 × 13 × 19
@@ -330,7 +348,7 @@ OBSERVATION:
 
 Let's check: 77 + 176 = 253 = 11 × 23
            170 + 65 = 235 = 5 × 47
-           
+
 Hmm, not obviously W33. Let's try another approach...
 
 RATIOS:
@@ -339,24 +357,18 @@ RATIOS:
   77/36 = 2.14... ≈ 40/18.7
   65/36 = 1.81... ≈ 40/22
   494/225 = 2.20 ≈ 40/18.2
-  
+
 All ratios are approximately 40/18 to 40/22!
 And 40 = |W33 points|!
 """)
 
 # Calculate ratios
-ratios = [
-    (176, 81),
-    (170, 81),
-    (77, 36),
-    (65, 36),
-    (494, 225)
-]
+ratios = [(176, 81), (170, 81), (77, 36), (65, 36), (494, 225)]
 
 print("\nRatio analysis:")
 for a, b in ratios:
-    r = a/b
-    w33_equiv = 40/r
+    r = a / b
+    w33_equiv = 40 / r
     print(f"  {a}/{b} = {r:.3f}, implies 40/{r:.3f} ≈ {w33_equiv:.1f}")
 
 # =============================================================================
@@ -432,7 +444,7 @@ KEY FINDINGS:
 3. The number 81 = 3⁴ = |cycles| appears EXPLICITLY in P₂₂:
    - 176t² - 81σ
    - 170t² - 81σ
-   
+
 4. The number 137 = 1/α appears in P_E8:
    - P_E8 = 225(α² + β² + γ²) - 137(α + β + γ)²
 
@@ -443,7 +455,7 @@ KEY FINDINGS:
 CONCLUSION:
   Vogel's universality is a CONSEQUENCE of W33 being
   the universal algebraic structure!
-  
+
   ALL Lie algebras are quotients of W33.
 """)
 

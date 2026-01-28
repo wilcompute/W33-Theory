@@ -9,12 +9,13 @@ Pipeline:
 5) Load pattern classes (8 classes) and map orbit -> class.
 6) For each triangle, compute the pattern-class triple.
 """
+
 from __future__ import annotations
 
+import json
 from collections import Counter, defaultdict
 from itertools import product
 from pathlib import Path
-import json
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -39,11 +40,11 @@ def build_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
-    adj = [[0]*n for _ in range(n)]
+    adj = [[0] * n for _ in range(n)]
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i][j] = adj[j][i] = 1
 
@@ -59,26 +60,30 @@ def h27_from_w33(adj, v0=0):
 def build_27_lines():
     lines = []
     for i in range(1, 7):
-        lines.append(('E', i))
+        lines.append(("E", i))
     for i in range(1, 7):
-        lines.append(('C', i))
+        lines.append(("C", i))
     for i in range(1, 7):
-        for j in range(i+1, 7):
-            lines.append(('L', i, j))
+        for j in range(i + 1, 7):
+            lines.append(("L", i, j))
     return lines
 
 
 def main():
     # Load triangles (labels)
-    tri_data = json.loads((ROOT / 'artifacts' / 'h27_schlafli_leftover_cycles.json').read_text())
-    triangles = tri_data['cycle_labels']
+    tri_data = json.loads(
+        (ROOT / "artifacts" / "h27_schlafli_leftover_cycles.json").read_text()
+    )
+    triangles = tri_data["cycle_labels"]
 
     # Load embedding H27 index -> Schläfli index
-    embed = json.loads((ROOT / 'artifacts' / 'h27_in_schlafli_intersection.json').read_text())
-    if not embed.get('found_embedding'):
-        print('No embedding found in artifact.')
+    embed = json.loads(
+        (ROOT / "artifacts" / "h27_in_schlafli_intersection.json").read_text()
+    )
+    if not embed.get("found_embedding"):
+        print("No embedding found in artifact.")
         return
-    h_to_s = {int(k): int(v) for k, v in embed['mapping'].items()}
+    h_to_s = {int(k): int(v) for k, v in embed["mapping"].items()}
     s_to_h = {v: k for k, v in h_to_s.items()}
 
     # Build Schläfli line index map
@@ -90,15 +95,17 @@ def main():
     nn = h27_from_w33(adj, v0=0)  # list of W33 vertex indices for H27 order
 
     # Load Coxeter orbit -> W33 vertex mapping
-    orb_map = json.loads((ROOT / 'artifacts' / 'e8_root_to_w33_edge.json').read_text())
-    orbit_to_w33 = {int(k): int(v) for k, v in orb_map['orbit_to_w33_vertex'].items()}
+    orb_map = json.loads((ROOT / "artifacts" / "e8_root_to_w33_edge.json").read_text())
+    orbit_to_w33 = {int(k): int(v) for k, v in orb_map["orbit_to_w33_vertex"].items()}
     w33_to_orbit = {v: k for k, v in orbit_to_w33.items()}
 
     # Load pattern classes (orbit -> class)
-    patt = json.loads((ROOT / 'artifacts' / 'vertex_type_vs_we6_pattern.json').read_text())
+    patt = json.loads(
+        (ROOT / "artifacts" / "vertex_type_vs_we6_pattern.json").read_text()
+    )
     orbit_to_class = {}
-    for cls_idx, entry in enumerate(patt['patterns']):
-        for o in entry['orbits']:
+    for cls_idx, entry in enumerate(patt["patterns"]):
+        for o in entry["orbits"]:
             orbit_to_class[o] = cls_idx
 
     # Map each Schläfli line to pattern class via H27->W33->orbit
@@ -128,18 +135,20 @@ def main():
         pattern_to_tris[tuple(sorted(pat))].append(tri)
 
     results = {
-        'triangle_class_pattern_counts': {str(k): v for k, v in tri_pattern_counts.items()},
-        'pattern_to_triangles': {str(k): v for k, v in pattern_to_tris.items()},
-        'line_to_class': {str(k): v for k, v in line_to_class.items()},
-        'line_to_orbit': {str(k): v for k, v in line_to_orbit.items()},
-        'line_to_w33_vertex': {str(k): v for k, v in line_to_w33.items()},
+        "triangle_class_pattern_counts": {
+            str(k): v for k, v in tri_pattern_counts.items()
+        },
+        "pattern_to_triangles": {str(k): v for k, v in pattern_to_tris.items()},
+        "line_to_class": {str(k): v for k, v in line_to_class.items()},
+        "line_to_orbit": {str(k): v for k, v in line_to_orbit.items()},
+        "line_to_w33_vertex": {str(k): v for k, v in line_to_w33.items()},
     }
 
-    out_path = ROOT / 'artifacts' / 'a2_triangles_vs_coxeter_patterns.json'
-    out_path.write_text(json.dumps(results, indent=2), encoding='utf-8')
-    print(results['triangle_class_pattern_counts'])
-    print(f'Wrote {out_path}')
+    out_path = ROOT / "artifacts" / "a2_triangles_vs_coxeter_patterns.json"
+    out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
+    print(results["triangle_class_pattern_counts"])
+    print(f"Wrote {out_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

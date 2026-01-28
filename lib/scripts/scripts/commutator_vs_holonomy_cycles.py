@@ -8,13 +8,18 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUT_DIR = DATA / "_workbench" / "05_symmetry"
 
 COMM_NODE = OUT_DIR / "transport_commutator_node_localization_summary.csv"
-CYCLES = DATA / "_workbench" / "04_measurement" / "sage_zip_continuation_20260111" / "nontrivial_holonomy_cycles_catalog.csv"
+CYCLES = (
+    DATA
+    / "_workbench"
+    / "04_measurement"
+    / "sage_zip_continuation_20260111"
+    / "nontrivial_holonomy_cycles_catalog.csv"
+)
 
 
 def main() -> None:
@@ -51,7 +56,9 @@ def main() -> None:
         f.write(f"- spearman(mean, cycle_count): {spearman_count:.6f}\n")
         f.write(f"- spearman(mean, cycle_length_sum): {spearman_len:.6f}\n\n")
         f.write("Top 10 nodes by commutator mean:\n\n")
-        f.write(comm.sort_values("mean", ascending=False).head(10).to_markdown(index=False))
+        f.write(
+            comm.sort_values("mean", ascending=False).head(10).to_markdown(index=False)
+        )
 
 
 if __name__ == "__main__":

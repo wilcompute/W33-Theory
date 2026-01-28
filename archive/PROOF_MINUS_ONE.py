@@ -40,25 +40,34 @@ This is impossible unless... I'm misreading the data.
 Let me verify directly.
 """
 
-import numpy as np
-from pathlib import Path
-import pandas as pd
 from collections import defaultdict
+from pathlib import Path
 
-ROOT = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data")
+import numpy as np
+import pandas as pd
+
+ROOT = Path(
+    r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data"
+)
+
 
 def load_rays():
-    df = pd.read_csv(ROOT / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv")
+    df = pd.read_csv(
+        ROOT
+        / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv"
+    )
     V = np.zeros((40, 4), dtype=np.complex128)
     for _, row in df.iterrows():
-        pid = int(row['point_id'])
+        pid = int(row["point_id"])
         for i in range(4):
-            V[pid, i] = complex(str(row[f'v{i}']).replace(' ', ''))
+            V[pid, i] = complex(str(row[f"v{i}"]).replace(" ", ""))
     return V
+
 
 def load_lines():
     df = pd.read_csv(ROOT / "_workbench/02_geometry/W33_line_phase_map.csv")
-    return [tuple(map(int, str(row['point_ids']).split())) for _, row in df.iterrows()]
+    return [tuple(map(int, str(row["point_ids"]).split())) for _, row in df.iterrows()]
+
 
 def inner(V, p, q):
     return np.vdot(V[p], V[q])
@@ -101,14 +110,14 @@ def verify_structure():
     # Verify: center should be mutually orthogonal (collinear in W33)
     print("\nCenter inner products:")
     for i, c1 in enumerate(center):
-        for c2 in center[i+1:]:
+        for c2 in center[i + 1 :]:
             z = inner(V, c1, c2)
             print(f"  <{c1}|{c2}> = {z:.6f} (|.|={abs(z):.6f})")
 
     # Verify: outer should be mutually NON-orthogonal (non-collinear in W33)
     print("\nOuter inner products:")
     for i, p1 in enumerate(outer):
-        for p2 in outer[i+1:]:
+        for p2 in outer[i + 1 :]:
             z = inner(V, p1, p2)
             print(f"  <{p1}|{p2}> = {z:.6f} (|.|={abs(z):.6f})")
 
@@ -168,6 +177,7 @@ def find_actual_center():
     print("-" * 50)
 
     from itertools import combinations
+
     for pair in combinations(outer, 2):
         p, q = pair
         shared_lines = [L for L in lines if p in L and q in L]
@@ -221,7 +231,7 @@ def understand_collinearity():
     for L in lines[:5]:
         print(f"\nLine {L}:")
         for i, p in enumerate(L):
-            for q in L[i+1:]:
+            for q in L[i + 1 :]:
                 z = inner(V, p, q)
                 print(f"  <{p}|{q}> = {z:.6f}")
 
@@ -230,7 +240,7 @@ def understand_collinearity():
     print("Non-collinear pairs:")
     count = 0
     for p in range(5):
-        for q in range(p+1, 10):
+        for q in range(p + 1, 10):
             if q not in col[p]:
                 z = inner(V, p, q)
                 print(f"  <{p}|{q}> = {z:.6f}, |.| = {abs(z):.4f}")
@@ -319,7 +329,7 @@ def the_actual_proof():
         print("  NO! Center is NOT a single line.")
         print("  Checking pairwise collinearity:")
         for i, c1 in enumerate(center):
-            for c2 in center[i+1:]:
+            for c2 in center[i + 1 :]:
                 is_col = c2 in col[c1]
                 z = inner(V, c1, c2)
                 print(f"    ({c1},{c2}): collinear={is_col}, <.> = {z:.4f}")
@@ -330,6 +340,7 @@ def main():
     find_actual_center()
     understand_collinearity()
     the_actual_proof()
+
 
 if __name__ == "__main__":
     main()

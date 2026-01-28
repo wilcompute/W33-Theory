@@ -10,12 +10,13 @@ with monomials:
 We solve mod 3 by linear algebra over GF(3),
 and mod 4 by meet-in-the-middle, then combine via CRT.
 """
+
 from __future__ import annotations
 
+import itertools
 import json
 from collections import defaultdict
 from pathlib import Path
-import itertools
 
 import numpy as np
 
@@ -36,11 +37,11 @@ def construct_witting_40_rays_with_labels():
 
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
             labels.append(("F0", mu, nu))
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
             labels.append(("F1", mu, nu))
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             labels.append(("F2", mu, nu))
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
             labels.append(("F3", mu, nu))
@@ -60,10 +61,16 @@ def phase_index(a):
 def monomials(mu1, nu1, mu2, nu2):
     return [
         1,
-        mu1, nu1, mu2, nu2,
-        mu1*nu1, mu2*nu2,
-        mu1*mu2, nu1*nu2,
-        mu1*nu2, nu1*mu2,
+        mu1,
+        nu1,
+        mu2,
+        nu2,
+        mu1 * nu1,
+        mu2 * nu2,
+        mu1 * mu2,
+        nu1 * nu2,
+        mu1 * nu2,
+        nu1 * mu2,
     ]
 
 
@@ -139,7 +146,7 @@ def solve_mod4(samples):
         if key in right_map:
             coeffs_right = right_map[key]
             # assemble full
-            coeffs = [0]*mon_len
+            coeffs = [0] * mon_len
             for i, c in zip(left_idx, coeffs_left):
                 coeffs[i] = c
             for i, c in zip(right_idx, coeffs_right):
@@ -194,12 +201,16 @@ def main():
     md_path = ROOT / "docs" / "witting_phase_quadratic_formula_search.md"
     with md_path.open("w", encoding="utf-8") as f:
         f.write("# Quadratic Phase Formula Search\n\n")
-        f.write("Monomials: 1, mu1, nu1, mu2, nu2, mu1*nu1, mu2*nu2, mu1*mu2, nu1*nu2, mu1*nu2, nu1*mu2\n\n")
+        f.write(
+            "Monomials: 1, mu1, nu1, mu2, nu2, mu1*nu1, mu2*nu2, mu1*mu2, nu1*nu2, mu1*nu2, nu1*mu2\n\n"
+        )
         f.write("family pair | samples | mod3 | mod4 | mod12\n")
         f.write("--- | --- | --- | --- | ---\n")
         for key in sorted(results.keys()):
             r = results[key]
-            f.write(f"{key} | {r['samples']} | {r['mod3']} | {r['mod4']} | {r['mod12']}\n")
+            f.write(
+                f"{key} | {r['samples']} | {r['mod3']} | {r['mod4']} | {r['mod12']}\n"
+            )
 
     print(f"Wrote {out_path}")
     print(f"Wrote {md_path}")

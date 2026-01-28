@@ -11,6 +11,7 @@ Outputs:
 - artifacts/e8_triple_relation_search.json
 - artifacts/e8_triple_relation_search.md
 """
+
 from __future__ import annotations
 
 import json
@@ -88,7 +89,9 @@ def orthogonal(a: np.ndarray, b: np.ndarray) -> bool:
 
 def main():
     if not PARTITION_JSON.exists():
-        raise SystemExit("Missing artifacts/e8_rootline_partition.json; run tools/e8_rootline_partition.py")
+        raise SystemExit(
+            "Missing artifacts/e8_rootline_partition.json; run tools/e8_rootline_partition.py"
+        )
     partition = json.loads(PARTITION_JSON.read_text())
     if not partition.get("solution_triples"):
         raise SystemExit("Partition file has no solution_triples")
@@ -126,7 +129,13 @@ def main():
             rel_counts[i, j] = count
             rel_counts[j, i] = count
 
-    counts_set = sorted(set(int(rel_counts[i, j]) for i in range(num_triples) for j in range(i + 1, num_triples)))
+    counts_set = sorted(
+        set(
+            int(rel_counts[i, j])
+            for i in range(num_triples)
+            for j in range(i + 1, num_triples)
+        )
+    )
 
     # test all unions of count-classes
     candidates = []
@@ -156,16 +165,20 @@ def main():
         if len(lambda_set) == 1 and len(mu_set) == 1:
             lam = next(iter(lambda_set))
             mu = next(iter(mu_set))
-            candidates.append({
-                "counts": selected,
-                "k": k,
-                "lambda": lam,
-                "mu": mu,
-            })
+            candidates.append(
+                {
+                    "counts": selected,
+                    "k": k,
+                    "lambda": lam,
+                    "mu": mu,
+                }
+            )
 
     # sort candidates by k
     candidates = sorted(candidates, key=lambda x: (x["k"], x["counts"]))
-    target = [c for c in candidates if c["k"] == 12 and c["lambda"] == 2 and c["mu"] == 4]
+    target = [
+        c for c in candidates if c["k"] == 12 and c["lambda"] == 2 and c["mu"] == 4
+    ]
 
     summary = {
         "counts_set": counts_set,
@@ -185,12 +198,16 @@ def main():
     lines.append("")
     lines.append("## Candidates")
     for c in candidates:
-        lines.append(f"- counts={c['counts']} -> k={c['k']}, λ={c['lambda']}, μ={c['mu']}")
+        lines.append(
+            f"- counts={c['counts']} -> k={c['k']}, λ={c['lambda']}, μ={c['mu']}"
+        )
     lines.append("")
     lines.append("## SRG(40,12,2,4) Matches")
     if target:
         for c in target:
-            lines.append(f"- counts={c['counts']} -> k={c['k']}, λ={c['lambda']}, μ={c['mu']}")
+            lines.append(
+                f"- counts={c['counts']} -> k={c['k']}, λ={c['lambda']}, μ={c['mu']}"
+            )
     else:
         lines.append("- none")
 

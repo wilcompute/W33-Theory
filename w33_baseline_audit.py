@@ -268,7 +268,14 @@ def write_csv_top(results: Dict, out_csv: str, per_target: int = 25) -> None:
     with open(out_csv, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(
             f,
-            fieldnames=["target", "target_value", "value", "pct_error", "complexity", "expr"],
+            fieldnames=[
+                "target",
+                "target_value",
+                "value",
+                "pct_error",
+                "complexity",
+                "expr",
+            ],
         )
         writer.writeheader()
         writer.writerows(rows)
@@ -332,7 +339,9 @@ def main() -> int:
     print("Scoring matches")
     print("=" * 100)
 
-    results = score_matches(exprs, targets, tolerances_pct=(0.1, 0.5, 1.0, 5.0, 10.0), top_k=60)
+    results = score_matches(
+        exprs, targets, tolerances_pct=(0.1, 0.5, 1.0, 5.0, 10.0), top_k=60
+    )
     results["timestamp"] = datetime.now().isoformat()
     results["config"] = {
         "max_depth": 4,

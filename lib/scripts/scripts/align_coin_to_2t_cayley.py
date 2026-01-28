@@ -9,19 +9,30 @@ from pathlib import Path
 
 import numpy as np
 import scipy.sparse as sp
-
 from sage.all import Graph  # type: ignore
-
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUT_DIR = DATA / "_workbench" / "05_symmetry"
 
-COIN_NPZ = DATA / "_toe" / "projector_recon_20260110" / (
-    "N12_58_sector_coin_C24_K4_by_k_sparse_20260109T205353Z.npz"
+COIN_NPZ = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / ("N12_58_sector_coin_C24_K4_by_k_sparse_20260109T205353Z.npz")
 )
-TABLE_PATH = DATA / "_toe" / "projector_recon_20260110" / "binary_tetrahedral_2T_multiplication_table.csv"
-ORDERS_PATH = DATA / "_toe" / "projector_recon_20260110" / "binary_tetrahedral_2T_element_orders.csv"
+TABLE_PATH = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / "binary_tetrahedral_2T_multiplication_table.csv"
+)
+ORDERS_PATH = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / "binary_tetrahedral_2T_element_orders.csv"
+)
 
 
 def load_coin_graph():

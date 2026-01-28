@@ -16,4 +16,3 @@ verify-root-edge:
 
 build-pdf:
 	./scripts/build_toe_pdf.sh
-

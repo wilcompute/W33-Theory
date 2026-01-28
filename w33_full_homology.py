@@ -13,11 +13,12 @@ Either b_2 = b_3 = 0, or they're equal and nonzero.
 Let's compute them!
 """
 
-import numpy as np
 import json
-from scipy.sparse import lil_matrix, csr_matrix
-from scipy.sparse.linalg import svds
 from itertools import combinations
+
+import numpy as np
+from scipy.sparse import csr_matrix, lil_matrix
+from scipy.sparse.linalg import svds
 
 print("=" * 70)
 print("W33 COMPLETE HOMOLOGY ANALYSIS")
@@ -25,10 +26,11 @@ print("=" * 70)
 
 # Load W33 data - reconstruct from the incidence H1 file
 import os
-script_dir = os.path.dirname(os.path.abspath(__file__))
-data_file = os.path.join(script_dir, 'data', 'w33_sage_incidence_h1.json')
 
-with open(data_file, 'r') as f:
+script_dir = os.path.dirname(os.path.abspath(__file__))
+data_file = os.path.join(script_dir, "data", "w33_sage_incidence_h1.json")
+
+with open(data_file, "r") as f:
     data = json.load(f)
 
 # Extract the lines from the first generator's structure
@@ -41,12 +43,14 @@ with open(data_file, 'r') as f:
 # Build GF(3)^4 symplectic geometry
 from itertools import product
 
+
 # Symplectic form: <x,y> = x1*y3 - x3*y1 + x2*y4 - x4*y2
 def symplectic_form(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
+
 
 # Get all projective points of PG(3,3)
-# A projective point is a 1-dimensional subspace, represented by 
+# A projective point is a 1-dimensional subspace, represented by
 # the lexicographically smallest nonzero representative
 def normalize(v):
     """Normalize to projective representative."""
@@ -55,6 +59,7 @@ def normalize(v):
             inv = pow(v[i], -1, 3)  # multiplicative inverse mod 3
             return tuple((inv * x) % 3 for x in v)
     return None
+
 
 proj_points = set()
 for v in product(range(3), repeat=4):
@@ -80,16 +85,22 @@ for i, p1 in enumerate(proj_points):
 
 # Count neighbors per point
 degrees = [sum(row) for row in adj]
-print(f"Degree distribution: min={min(degrees)}, max={max(degrees)}, avg={sum(degrees)/len(degrees):.1f}")
+print(
+    f"Degree distribution: min={min(degrees)}, max={max(degrees)}, avg={sum(degrees)/len(degrees):.1f}"
+)
 
 # Find lines (totally isotropic 2-spaces = sets of 4 mutually orthogonal points)
 # A line is a maximal clique in the collinearity graph
 lines = []
 for i in range(n_points):
-    for j in range(i+1, n_points):
+    for j in range(i + 1, n_points):
         if adj[i][j]:
             # Find all points collinear with both i and j
-            common = [k for k in range(n_points) if k != i and k != j and adj[i][k] and adj[j][k]]
+            common = [
+                k
+                for k in range(n_points)
+                if k != i and k != j and adj[i][k] and adj[j][k]
+            ]
             # Check which form a 4-clique
             for k in common:
                 for l in common:
@@ -97,7 +108,9 @@ for i in range(n_points):
                         line = tuple(sorted([i, j, k, l]))
                         if line not in lines:
                             # Verify it's a maximal clique
-                            is_clique = all(adj[a][b] or a == b for a in line for b in line)
+                            is_clique = all(
+                                adj[a][b] or a == b for a in line for b in line
+                            )
                             if is_clique:
                                 lines.append(line)
 
@@ -110,16 +123,16 @@ n = n_points
 
 # Build simplicial complex
 # 0-simplices: points (vertices)
-# 1-simplices: collinear pairs (edges)  
+# 1-simplices: collinear pairs (edges)
 # 2-simplices: collinear triples (triangles)
 # 3-simplices: lines (each line = 4 mutually collinear points)
 
 # Point graph adjacency
 n = len(points)
-adj = [[False]*n for _ in range(n)]
+adj = [[False] * n for _ in range(n)]
 for line in lines:
     for i in range(4):
-        for j in range(i+1, 4):
+        for j in range(i + 1, 4):
             adj[line[i]][line[j]] = True
             adj[line[j]][line[i]] = True
 
@@ -127,7 +140,7 @@ for line in lines:
 vertices = list(range(n))
 edges = []
 for i in range(n):
-    for j in range(i+1, n):
+    for j in range(i + 1, n):
         if adj[i][j]:
             edges.append((i, j))
 
@@ -171,12 +184,12 @@ print(f"∂_2: C_2 → C_1, matrix {len(edges)} × {len(triangles)}")
 d2 = np.zeros((len(edges), len(triangles)), dtype=np.float64)
 for j, (v0, v1, v2) in enumerate(triangles):
     # Boundary: (v1,v2) - (v0,v2) + (v0,v1)
-    e01 = (min(v0,v1), max(v0,v1))
-    e02 = (min(v0,v2), max(v0,v2))
-    e12 = (min(v1,v2), max(v1,v2))
-    d2[e_idx[e12], j] = 1   # (v1,v2) with sign +1
+    e01 = (min(v0, v1), max(v0, v1))
+    e02 = (min(v0, v2), max(v0, v2))
+    e12 = (min(v1, v2), max(v1, v2))
+    d2[e_idx[e12], j] = 1  # (v1,v2) with sign +1
     d2[e_idx[e02], j] = -1  # (v0,v2) with sign -1
-    d2[e_idx[e01], j] = 1   # (v0,v1) with sign +1
+    d2[e_idx[e01], j] = 1  # (v0,v1) with sign +1
 
 # ∂_3: tetrahedra → triangles
 print(f"∂_3: C_3 → C_2, matrix {len(triangles)} × {len(tetrahedra)}")
@@ -218,7 +231,9 @@ print(f"b_1 = dim(ker ∂_1) - rank(∂_2) = ({len(edges)} - {rank_d1}) - {rank_
 rank_d3 = np.linalg.matrix_rank(d3)
 dim_ker_d2 = len(triangles) - rank_d2
 b2 = dim_ker_d2 - rank_d3
-print(f"b_2 = dim(ker ∂_2) - rank(∂_3) = ({len(triangles)} - {rank_d2}) - {rank_d3} = {b2}")
+print(
+    f"b_2 = dim(ker ∂_2) - rank(∂_3) = ({len(triangles)} - {rank_d2}) - {rank_d3} = {b2}"
+)
 
 # H_3 = ker(∂_3)
 dim_ker_d3 = len(tetrahedra) - rank_d3
@@ -255,13 +270,13 @@ W33 has:
 This means W33 is homologically 1-dimensional:
   - All interesting topology is in H_1
   - The 40 tetrahedra are boundaries (they "fill in" all potential H_2, H_3)
-  
+
 This is consistent with W33 being the clique complex of a graph.
 Clique complexes are often "aspherical" in higher dimensions.
 """)
-    
+
     print("The ENTIRE homological content of W33 is the Steinberg representation!")
-    
+
 elif b2 > 0:
     print(f"\nSurprise! H_2 has rank {b2}. This needs investigation.")
 elif b3 > 0:
@@ -273,7 +288,7 @@ print("=" * 70)
 print(f"""
   C_0 ←∂₁― C_1 ←∂₂― C_2 ←∂₃― C_3
   {len(vertices):3d} ←――― {len(edges):3d} ←――― {len(triangles):3d} ←――― {len(tetrahedra):3d}
-  
+
   rank(∂_1) = {rank_d1}
   rank(∂_2) = {rank_d2}
   rank(∂_3) = {rank_d3}

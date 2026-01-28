@@ -4,10 +4,11 @@
 This tests whether the naive grid rays are unitarily equivalent to the Witting rays
 by comparing Pancharatnam phase clustering.
 """
+
 from __future__ import annotations
 
-import json
 import itertools
+import json
 from collections import Counter
 from pathlib import Path
 
@@ -27,7 +28,9 @@ def construct_f3_grid_rays():
                 for d in F3:
                     if a == b == c == d == 0:
                         continue
-                    v = np.array([omega**a, omega**b, omega**c, omega**d], dtype=complex)
+                    v = np.array(
+                        [omega**a, omega**b, omega**c, omega**d], dtype=complex
+                    )
                     idx = next(i for i, z in enumerate(v) if abs(z) > 1e-12)
                     v = v / v[idx]
                     key = tuple(np.round(v, 6))
@@ -45,7 +48,7 @@ def wrap_angle(a):
 
 def phase_cluster(a):
     a = wrap_angle(a)
-    targets = [np.pi/6, -np.pi/6, np.pi/2, -np.pi/2]
+    targets = [np.pi / 6, -np.pi / 6, np.pi / 2, -np.pi / 2]
     nearest = min(targets, key=lambda t: abs(a - t))
     return round(float(nearest), 6)
 
@@ -55,7 +58,7 @@ def main():
     n = len(rays)
 
     # check orthonormal bases count
-    orth = [[0]*n for _ in range(n)]
+    orth = [[0] * n for _ in range(n)]
     for i in range(n):
         for j in range(i + 1, n):
             if abs(np.vdot(rays[i], rays[j])) < 1e-8:

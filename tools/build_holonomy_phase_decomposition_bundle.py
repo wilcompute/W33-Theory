@@ -28,7 +28,6 @@ from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -49,7 +48,9 @@ def _read_json_from_zip(zip_path: Path, inner_path: str) -> object:
             return json.load(raw)
 
 
-def _write_csv(path: Path, fieldnames: list[str], rows: list[dict[str, object]]) -> None:
+def _write_csv(
+    path: Path, fieldnames: list[str], rows: list[dict[str, object]]
+) -> None:
     with path.open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fieldnames)
         w.writeheader()
@@ -73,9 +74,13 @@ def _symp_pair(J: list[list[int]], v: list[int], w: list[int]) -> int:
 @dataclass(frozen=True)
 class Inputs:
     test_bundle: Path = ROOT / "W33_holonomy_phase_test_bundle.zip"
-    quotient_bundle: Path = ROOT / "W33_quotient_closure_complement_and_noniso_line_curvature_bundle.zip"
+    quotient_bundle: Path = (
+        ROOT / "W33_quotient_closure_complement_and_noniso_line_curvature_bundle.zip"
+    )
     h3_basis_bundle: Path = ROOT / "W33_H3_basis_89_Z3_on_clique_complex_bundle.zip"
-    minimal_flux_bundle: Path = ROOT / "W33_minimal_Z3_flux_cycles_tetrahedra_bundle.zip"
+    minimal_flux_bundle: Path = (
+        ROOT / "W33_minimal_Z3_flux_cycles_tetrahedra_bundle.zip"
+    )
 
 
 def main() -> int:
@@ -88,7 +93,9 @@ def main() -> int:
     out_dir.mkdir(exist_ok=True)
 
     # --- Load triangle-level data (F, Phi, D)
-    tri_rows = _read_csv_from_zip(inp.test_bundle, "triangle_holonomy_vs_symplectic_phase.csv")
+    tri_rows = _read_csv_from_zip(
+        inp.test_bundle, "triangle_holonomy_vs_symplectic_phase.csv"
+    )
     if len(tri_rows) != 3240:
         raise ValueError(f"Expected 3240 triangles, got {len(tri_rows)}")
 
@@ -111,7 +118,9 @@ def main() -> int:
         pid = int(r["point_id"])
         vec = [int(x) for x in r["vector_digits"].split()]
         if len(vec) != 4:
-            raise ValueError(f"Bad vector_digits for point {pid}: {r['vector_digits']!r}")
+            raise ValueError(
+                f"Bad vector_digits for point {pid}: {r['vector_digits']!r}"
+            )
         reps[pid] = [mod3(x) for x in vec]
     if len(reps) != 40:
         raise ValueError(f"Expected 40 representatives, got {len(reps)}")
@@ -119,14 +128,26 @@ def main() -> int:
     # Recompute Phi from symplectic form and reps, and check it matches the bundle CSV.
     Phi: dict[tuple[int, int, int], int] = {}
     phi_mismatches: list[dict[str, object]] = []
-    for (p, q, r) in F:
+    for p, q, r in F:
         vp, vq, vr = reps[p], reps[q], reps[r]
-        val = mod3(_symp_pair(J, vp, vq) + _symp_pair(J, vq, vr) + _symp_pair(J, vr, vp))
+        val = mod3(
+            _symp_pair(J, vp, vq) + _symp_pair(J, vq, vr) + _symp_pair(J, vr, vp)
+        )
         Phi[(p, q, r)] = val
         if val != Phi_given[(p, q, r)]:
-            phi_mismatches.append({"p": p, "q": q, "r": r, "phi_recomputed": val, "phi_csv": Phi_given[(p, q, r)]})
+            phi_mismatches.append(
+                {
+                    "p": p,
+                    "q": q,
+                    "r": r,
+                    "phi_recomputed": val,
+                    "phi_csv": Phi_given[(p, q, r)],
+                }
+            )
     if phi_mismatches:
-        raise ValueError(f"Phi recomputation mismatches CSV on {len(phi_mismatches)} triangles")
+        raise ValueError(
+            f"Phi recomputation mismatches CSV on {len(phi_mismatches)} triangles"
+        )
 
     # Verify D = F - Phi mod 3 matches.
     d_mismatches: list[dict[str, object]] = []
@@ -134,7 +155,9 @@ def main() -> int:
         expected = mod3(fval - Phi[key])
         if expected != D_given[key]:
             p, q, r = key
-            d_mismatches.append({"p": p, "q": q, "r": r, "D_expected": expected, "D_csv": D_given[key]})
+            d_mismatches.append(
+                {"p": p, "q": q, "r": r, "D_expected": expected, "D_csv": D_given[key]}
+            )
     if d_mismatches:
         raise ValueError(f"D mismatch on {len(d_mismatches)} triangles")
 
@@ -156,7 +179,8 @@ def main() -> int:
 
     # δa(p,q,r) = a(q,r) - a(p,r) + a(p,q)
     da_mismatches: list[dict[str, object]] = []
-    for (p, q, r) in Phi:
+    for p, q, r in Phi:
+
         def a(u: int, v: int) -> int:
             if u == v:
                 return 0
@@ -166,7 +190,9 @@ def main() -> int:
 
         val = mod3(a(q, r) - a(p, r) + a(p, q))
         if val != Phi[(p, q, r)]:
-            da_mismatches.append({"p": p, "q": q, "r": r, "delta_a": val, "Phi": Phi[(p, q, r)]})
+            da_mismatches.append(
+                {"p": p, "q": q, "r": r, "delta_a": val, "Phi": Phi[(p, q, r)]}
+            )
     if da_mismatches:
         raise ValueError(f"δa != Phi on {len(da_mismatches)} triangles")
 
@@ -186,8 +212,18 @@ def main() -> int:
         idx = int(row["tet_index"])
         a, b, c, d = int(row["a"]), int(row["b"]), int(row["c"]), int(row["d"])
         # a<b<c<d by construction
-        dF = mod3(tri_val(F, b, c, d) - tri_val(F, a, c, d) + tri_val(F, a, b, d) - tri_val(F, a, b, c))
-        dPhi = mod3(tri_val(Phi, b, c, d) - tri_val(Phi, a, c, d) + tri_val(Phi, a, b, d) - tri_val(Phi, a, b, c))
+        dF = mod3(
+            tri_val(F, b, c, d)
+            - tri_val(F, a, c, d)
+            + tri_val(F, a, b, d)
+            - tri_val(F, a, b, c)
+        )
+        dPhi = mod3(
+            tri_val(Phi, b, c, d)
+            - tri_val(Phi, a, c, d)
+            + tri_val(Phi, a, b, d)
+            - tri_val(Phi, a, b, c)
+        )
         dF_counts[dF] += 1
         dPhi_counts[dPhi] += 1
         tetra_out.append(
@@ -206,8 +242,13 @@ def main() -> int:
     # Optional: cross-check against the minimal-flux bundle's nonzero tetra list.
     flux_crosscheck = {"performed": False}
     if inp.minimal_flux_bundle.exists():
-        nonzero_rows = _read_csv_from_zip(inp.minimal_flux_bundle, "tetrahedra_flux_nonzero_3008.csv")
-        seen = {(int(r["a"]), int(r["b"]), int(r["c"]), int(r["d"])): int(r["flux_dF"]) % 3 for r in nonzero_rows}
+        nonzero_rows = _read_csv_from_zip(
+            inp.minimal_flux_bundle, "tetrahedra_flux_nonzero_3008.csv"
+        )
+        seen = {
+            (int(r["a"]), int(r["b"]), int(r["c"]), int(r["d"])): int(r["flux_dF"]) % 3
+            for r in nonzero_rows
+        }
         mism = 0
         for row in tetra_out:
             key4 = (row["a"], row["b"], row["c"], row["d"])
@@ -218,7 +259,11 @@ def main() -> int:
             else:
                 if key4 in seen:
                     mism += 1
-        flux_crosscheck = {"performed": True, "nonzero_expected": len(seen), "mismatches": mism}
+        flux_crosscheck = {
+            "performed": True,
+            "nonzero_expected": len(seen),
+            "mismatches": mism,
+        }
 
     # --- Cohomology note
     # J := dF is, by definition, δ2(F). Therefore J is a 3-coboundary and represents 0 in H^3.
@@ -258,14 +303,21 @@ def main() -> int:
     }
 
     # Write files
-    _write_csv(out_dir / "edge_symplectic_pairing_on_Q_edges_540.csv", ["p", "q", "a_symp"], edge_out_rows)
+    _write_csv(
+        out_dir / "edge_symplectic_pairing_on_Q_edges_540.csv",
+        ["p", "q", "a_symp"],
+        edge_out_rows,
+    )
     _write_csv(
         out_dir / "tetra_coboundary_dF_dPhi_9450.csv",
         ["tet_index", "a", "b", "c", "d", "dF", "dPhi", "d(F-Phi)"],
         tetra_out,
     )
     _write_json(out_dir / "holonomy_phase_decomposition_report.json", report)
-    _write_json(out_dir / "H3_coordinates_of_dF.json", {"basis": "H3_basis_89", "coords": h3_coords})
+    _write_json(
+        out_dir / "H3_coordinates_of_dF.json",
+        {"basis": "H3_basis_89", "coords": h3_coords},
+    )
 
     readme = """\
 Holonomy / symplectic-phase decomposition artifacts
@@ -303,4 +355,3 @@ Files:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

@@ -45,4 +45,3 @@ supporting the hypothesis that this D8 is the full liftable symplectic subgroup 
 - `tomotope15_image_under_lift_group.csv`: where your tomotope 15 land under each lift.
 - `cap_stabilizers.csv`: which elements stabilize the two special 5-caps.
 - `generator_r_order4_*` and `generator_s_order2_*`: explicit generators (with s r s = r^-1).
-

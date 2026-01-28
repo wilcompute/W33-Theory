@@ -4,38 +4,39 @@ Debug H1 action by verifying the group homomorphism property.
 """
 
 import json
+
 import numpy as np
 from sage.all import *
 
 # Load the JSON data
-json_path = 'claude_workspace/data/w33_sage_incidence_h1.json'
-with open(json_path, 'r') as f:
+json_path = "claude_workspace/data/w33_sage_incidence_h1.json"
+with open(json_path, "r") as f:
     data = json.load(f)
 
 print("=== Verifying H1 is a Group Homomorphism ===\n")
 
 # Get H1 action matrices
 h1_matrices = []
-for mat_data in data['h1_action']['generator_matrices']:
+for mat_data in data["h1_action"]["generator_matrices"]:
     mat = np.array([[float(x) for x in row] for row in mat_data], dtype=float)
     h1_matrices.append(mat)
 
-h1_dim = data['homology']['beta1']
+h1_dim = data["homology"]["beta1"]
 n_gens = len(h1_matrices)
 print(f"H1 dim: {h1_dim}, # generators: {n_gens}")
 
 # Build the permutation group
-generators_data = data['incidence']['generators']
+generators_data = data["incidence"]["generators"]
 perm_gens = []
 for gen in generators_data:
-    pts = gen['points']
-    lns = gen['lines']
+    pts = gen["points"]
+    lns = gen["lines"]
     combined = pts + [l + 40 for l in lns]
     perm_gens.append(combined)
 
 n = 80
 S = SymmetricGroup(n)
-perms = [S(Permutation([p+1 for p in perm])) for perm in perm_gens]
+perms = [S(Permutation([p + 1 for p in perm])) for perm in perm_gens]
 G = PermutationGroup(perms)
 
 sage_gens = G.gens()
@@ -50,14 +51,16 @@ for i, g in enumerate(sage_gens):
     order_g = g.order()
     mat = h1_matrices[i]
     tr = np.trace(mat)
-    
+
     # Check matrix order matches
     mat_power = np.eye(h1_dim)
     for _ in range(order_g):
         mat_power = mat_power @ mat
     mat_order_ok = np.allclose(mat_power, np.eye(h1_dim))
-    
-    print(f"  Gen {i}: group order={order_g}, trace={tr:.1f}, M^order=I? {mat_order_ok}")
+
+    print(
+        f"  Gen {i}: group order={order_g}, trace={tr:.1f}, M^order=I? {mat_order_ok}"
+    )
 
 # Check group relations are satisfied
 print("\n--- Checking group relations ---")
@@ -69,17 +72,18 @@ rels = list(fp.RelatorsOfFpGroup())
 
 print(f"Number of relations: {len(rels)}")
 
+
 def eval_relator_matrix(rel):
     """Evaluate a relator word as a matrix product."""
     ext_rep = list(rel.ExtRepOfObj())
     result = np.eye(h1_dim, dtype=float)
-    
+
     for i in range(0, len(ext_rep), 2):
         gen_idx = int(ext_rep[i]) - 1
-        power = int(ext_rep[i+1])
-        
+        power = int(ext_rep[i + 1])
+
         mat = h1_matrices[gen_idx]
-        
+
         if power > 0:
             for _ in range(power):
                 result = result @ mat
@@ -87,15 +91,18 @@ def eval_relator_matrix(rel):
             mat_inv = np.linalg.inv(mat)
             for _ in range(-power):
                 result = result @ mat_inv
-    
+
     return result
+
 
 # Check first few relations
 for i, rel in enumerate(rels[:10]):
     mat = eval_relator_matrix(rel)
     is_identity = np.allclose(mat, np.eye(h1_dim))
     if not is_identity:
-        print(f"  Relation {i}: FAILS! Max deviation: {np.max(np.abs(mat - np.eye(h1_dim)))}")
+        print(
+            f"  Relation {i}: FAILS! Max deviation: {np.max(np.abs(mat - np.eye(h1_dim)))}"
+        )
     else:
         print(f"  Relation {i}: OK (=I)")
 
@@ -104,19 +111,20 @@ print("\n--- Testing homomorphism property ---")
 
 gen_to_matrix = {i: h1_matrices[i] for i in range(n_gens)}
 
+
 def h1_matrix_via_factorization(g):
     gap_g = libgap(g)
     factored = gap_G.Factorization(gap_g)
     ext_rep = list(factored.ExtRepOfObj())
-    
+
     result = np.eye(h1_dim, dtype=float)
-    
+
     for i in range(0, len(ext_rep), 2):
         gen_idx = int(ext_rep[i]) - 1
-        power = int(ext_rep[i+1])
-        
+        power = int(ext_rep[i + 1])
+
         mat = gen_to_matrix[gen_idx]
-        
+
         if power > 0:
             for _ in range(power):
                 result = result @ mat
@@ -124,8 +132,9 @@ def h1_matrix_via_factorization(g):
             mat_inv = np.linalg.inv(mat)
             for _ in range(-power):
                 result = result @ mat_inv
-    
+
     return result
+
 
 # Test: ρ(g0 * g1) = ρ(g0) * ρ(g1)
 g0, g1 = sage_gens[0], sage_gens[1]

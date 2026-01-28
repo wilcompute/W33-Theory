@@ -32,14 +32,14 @@ All follow the pattern:
 
 INTERESTING OBSERVATION:
   For W(3, 2): The f-vector is (1, 15, 45, 15)
-    - This is SYMMETRIC! 
+    - This is SYMMETRIC!
     - The complex has 15 tetrahedra but also 15 vertices
     - This matches 15 lines = 15 points
-    
+
   For W(3, 3): f-vector (1, 40, 240, 160, 40)
     - Also has symmetry: 40 vertices, 40 tetrahedra
     - Matches 40 points = 40 lines
-    
+
   For W(3, 5): f-vector (1, 156, 2340, 3120, 2340, 936, 156)
     - Has 6-simplices! (lines have 6 points each)
     - 156 vertices = 156 maximal simplices
@@ -50,7 +50,7 @@ THE DEEP PATTERN:
   - q = 2: 3 points per line (triangles as maximal simplices)
   - q = 3: 4 points per line (tetrahedra)
   - q = 5: 6 points per line (5-simplices)
-  
+
   The f-vector has length q+2 (from 0-simplices to (q+1-1)-simplices)
 """)
 
@@ -81,17 +81,17 @@ print("""
 THEOREM: For the symplectic polar space W(3, q) over GF(q):
 
   1. W(3, q) is the clique complex of the symplectic graph Sp(4, q)
-  
+
   2. The automorphism group is O(5, q) : C₂ = PΓSp(4, q)
-  
+
   3. H_n(W(3, q); Q) = 0 for n ≥ 2
-  
+
   4. H₁(W(3, q); Q) = Z^{q⁴} carries the Steinberg representation
-  
+
   5. π₁(W(3, q)) = F_{q⁴} (free group on q⁴ generators)
-  
+
   6. W(3, q) is homotopy equivalent to ⋁_{q⁴} S¹ (bouquet of circles)
-  
+
   7. The Steinberg representation on H₁ is the abelianization of
      the action of Aut(W(3, q)) on π₁
 

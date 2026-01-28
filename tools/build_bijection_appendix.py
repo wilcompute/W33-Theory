@@ -6,6 +6,7 @@ Outputs:
 - artifacts/edge_root_bijection_canonical.csv
 - latex/appendix_bijection.tex
 """
+
 from __future__ import annotations
 
 import csv
@@ -35,11 +36,11 @@ def build_w33():
             proj_points.append(v)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     edges = []
     for i in range(40):
-        for j in range(i+1, 40):
+        for j in range(i + 1, 40):
             if omega(proj_points[i], proj_points[j]) == 0:
                 edges.append((i, j))
 
@@ -57,13 +58,17 @@ def normalize_proj(v):
 
 def check_symplectic(M):
     import numpy as np
-    Omega = np.array([[0,0,1,0],[0,0,0,1],[2,0,0,0],[0,2,0,0]], dtype=int)
+
+    Omega = np.array(
+        [[0, 0, 1, 0], [0, 0, 0, 1], [2, 0, 0, 0], [0, 2, 0, 0]], dtype=int
+    )
     M = np.array(M, dtype=int) % 3
     return np.all(((M.T @ Omega @ M) % 3) == Omega)
 
 
 def apply_matrix(M, v):
     import numpy as np
+
     M = np.array(M, dtype=int) % 3
     v = np.array(v, dtype=int) % 3
     result = (M @ v) % 3
@@ -72,16 +77,16 @@ def apply_matrix(M, v):
 
 def generator_matrices():
     return [
-        [[1,0,1,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,1],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[1,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,1,0,1]],
-        [[1,1,0,0],[0,1,0,0],[0,0,1,0],[0,0,2,1]],
-        [[1,0,0,0],[1,1,0,0],[0,0,1,2],[0,0,0,1]],
-        [[0,0,1,0],[0,1,0,0],[2,0,0,0],[0,0,0,1]],
-        [[1,0,0,0],[0,0,0,1],[0,0,1,0],[0,2,0,0]],
-        [[2,0,0,0],[0,1,0,0],[0,0,2,0],[0,0,0,1]],
-        [[1,0,0,0],[0,2,0,0],[0,0,1,0],[0,0,0,2]],
+        [[1, 0, 1, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 1], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [1, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 1, 0, 1]],
+        [[1, 1, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 2, 1]],
+        [[1, 0, 0, 0], [1, 1, 0, 0], [0, 0, 1, 2], [0, 0, 0, 1]],
+        [[0, 0, 1, 0], [0, 1, 0, 0], [2, 0, 0, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0], [0, 2, 0, 0]],
+        [[2, 0, 0, 0], [0, 1, 0, 0], [0, 0, 2, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 2, 0, 0], [0, 0, 1, 0], [0, 0, 0, 2]],
     ]
 
 
@@ -125,12 +130,14 @@ def main():
     labels = bfs_edge_words(edges, vertices, edge_to_idx)
 
     # load mapping
-    edge_map = json.loads((ROOT / 'artifacts' / 'explicit_bijection_decomposition.json').read_text())
-    edge_to_root_idx = {int(k): v for k, v in edge_map['edge_to_root_index'].items()}
-    root_coords = [tuple(r) for r in edge_map['root_coords']]
+    edge_map = json.loads(
+        (ROOT / "artifacts" / "explicit_bijection_decomposition.json").read_text()
+    )
+    edge_to_root_idx = {int(k): v for k, v in edge_map["edge_to_root_index"].items()}
+    root_coords = [tuple(r) for r in edge_map["root_coords"]]
 
-    we6 = json.loads((ROOT / 'artifacts' / 'we6_orbit_labels.json').read_text())
-    root_to_orbit = {eval(k): v for k, v in we6['mapping'].items()}
+    we6 = json.loads((ROOT / "artifacts" / "we6_orbit_labels.json").read_text())
+    root_to_orbit = {eval(k): v for k, v in we6["mapping"].items()}
 
     rows = []
     for eidx, (i, j) in enumerate(edges):
@@ -140,61 +147,76 @@ def main():
         r = root_coords[ridx]
         info = root_to_orbit.get(tuple(r), {})
         dist, word = labels.get(eidx, (None, None))
-        rows.append({
-            'order_key': (dist, word),
-            'edge_index': eidx,
-            'word_len': dist,
-            'word': word,
-            'v_i': i,
-            'v_j': j,
-            'root_index': ridx,
-            'root_coords': r,
-            'we6_orbit_id': info.get('orbit_id'),
-            'we6_orbit_size': info.get('orbit_size'),
-        })
+        rows.append(
+            {
+                "order_key": (dist, word),
+                "edge_index": eidx,
+                "word_len": dist,
+                "word": word,
+                "v_i": i,
+                "v_j": j,
+                "root_index": ridx,
+                "root_coords": r,
+                "we6_orbit_id": info.get("orbit_id"),
+                "we6_orbit_size": info.get("orbit_size"),
+            }
+        )
 
-    rows.sort(key=lambda r: (r['order_key'][0], r['order_key'][1]))
+    rows.sort(key=lambda r: (r["order_key"][0], r["order_key"][1]))
 
     # Write JSON/CSV
-    out_json = ROOT / 'artifacts' / 'edge_root_bijection_canonical.json'
-    out_csv = ROOT / 'artifacts' / 'edge_root_bijection_canonical.csv'
+    out_json = ROOT / "artifacts" / "edge_root_bijection_canonical.json"
+    out_csv = ROOT / "artifacts" / "edge_root_bijection_canonical.csv"
 
-    out_json.write_text(json.dumps([{k: v for k, v in r.items() if k != 'order_key'} for r in rows], indent=2), encoding='utf-8')
+    out_json.write_text(
+        json.dumps(
+            [{k: v for k, v in r.items() if k != "order_key"} for r in rows], indent=2
+        ),
+        encoding="utf-8",
+    )
 
-    with out_csv.open('w', newline='', encoding='utf-8') as f:
-        fieldnames = [k for k in rows[0].keys() if k != 'order_key']
+    with out_csv.open("w", newline="", encoding="utf-8") as f:
+        fieldnames = [k for k in rows[0].keys() if k != "order_key"]
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         for r in rows:
-            r2 = {k: v for k, v in r.items() if k != 'order_key'}
+            r2 = {k: v for k, v in r.items() if k != "order_key"}
             writer.writerow(r2)
 
     # Build LaTeX longtable
-    latex_path = ROOT / 'latex' / 'appendix_bijection.tex'
-    with latex_path.open('w', encoding='utf-8') as f:
-        f.write('\\begin{footnotesize}\n')
-        f.write('\\begin{longtable}{r r r r l r r}\n')
-        f.write('\\toprule\n')
-        f.write(r'Ord & Edge & $v_i$ & $v_j$ & Root $(r_1,\ldots,r_8)$ & Orbit & Size \\\\ ' + "\n")
-        f.write('\\midrule\n')
-        f.write('\\endfirsthead\n')
-        f.write('\\toprule\n')
-        f.write(r'Ord & Edge & $v_i$ & $v_j$ & Root $(r_1,\ldots,r_8)$ & Orbit & Size \\\\ ' + "\n")
-        f.write('\\midrule\n')
-        f.write('\\endhead\n')
+    latex_path = ROOT / "latex" / "appendix_bijection.tex"
+    with latex_path.open("w", encoding="utf-8") as f:
+        f.write("\\begin{footnotesize}\n")
+        f.write("\\begin{longtable}{r r r r l r r}\n")
+        f.write("\\toprule\n")
+        f.write(
+            r"Ord & Edge & $v_i$ & $v_j$ & Root $(r_1,\ldots,r_8)$ & Orbit & Size \\\\ "
+            + "\n"
+        )
+        f.write("\\midrule\n")
+        f.write("\\endfirsthead\n")
+        f.write("\\toprule\n")
+        f.write(
+            r"Ord & Edge & $v_i$ & $v_j$ & Root $(r_1,\ldots,r_8)$ & Orbit & Size \\\\ "
+            + "\n"
+        )
+        f.write("\\midrule\n")
+        f.write("\\endhead\n")
 
         for order, r in enumerate(rows, start=1):
-            root_str = '(' + ','.join(str(x) for x in r['root_coords']) + ')'
-            f.write(f"{order} & {r['edge_index']} & {r['v_i']} & {r['v_j']} & {root_str} & {r.get('we6_orbit_id','')} & {r.get('we6_orbit_size','')} \\\\ \n")
+            root_str = "(" + ",".join(str(x) for x in r["root_coords"]) + ")"
+            f.write(
+                f"{order} & {r['edge_index']} & {r['v_i']} & {r['v_j']} & {root_str} & {r.get('we6_orbit_id','')} & {r.get('we6_orbit_size','')} \\\\ \n"
+            )
 
-        f.write('\\bottomrule\n')
-        f.write('\\end{longtable}\n')
-        f.write('\\end{footnotesize}\n')
+        f.write("\\bottomrule\n")
+        f.write("\\end{longtable}\n")
+        f.write("\\end{footnotesize}\n")
 
     print(f"Wrote {out_json}")
     print(f"Wrote {out_csv}")
     print(f"Wrote {latex_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

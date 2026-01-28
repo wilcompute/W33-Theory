@@ -148,19 +148,19 @@
     FROM W33:                              STANDARD MODEL:
 
     Z₃ = 0 (color singlet)         ───►    SU(3)_color (3 colors)
-    
+
     Z₄ = 2 (central)               ───►    SU(2)_weak (doublets)
-    
+
     Z₁₂ phases                     ───►    U(1)_hypercharge (Y ∈ Z/6)
-    
+
     Parity = odd                   ───►    Fermions (spin 1/2)
-    
+
     Parity = even                  ───►    Bosons (spin 0, 1)
-    
+
     Z₃ fiber                       ───►    3 generations
-    
+
     Q45 = 45                       ───►    SU(5) GUT (Georgi-Glashow)
-    
+
     Holonomy entropy               ───►    Mass spectrum
 
 
@@ -174,7 +174,7 @@
     q = 5:   GQ(5,5)  →  156 points  →  Way too complex
 
     The field with 3 elements is UNIQUELY suited for physics!
-    
+
     3 = smallest odd prime
       = number of generations
       = colors in SU(3)

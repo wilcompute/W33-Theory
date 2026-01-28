@@ -24,26 +24,35 @@ So the non-trivial phases form a pattern: 3 and 9 appear in pairs.
 This is the QUATERNION structure!
 """
 
-import numpy as np
-from pathlib import Path
-import pandas as pd
 from collections import defaultdict
 from itertools import combinations, permutations
+from pathlib import Path
 
-ROOT = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data")
+import numpy as np
+import pandas as pd
+
+ROOT = Path(
+    r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data"
+)
+
 
 def load_rays():
-    df = pd.read_csv(ROOT / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv")
+    df = pd.read_csv(
+        ROOT
+        / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv"
+    )
     V = np.zeros((40, 4), dtype=np.complex128)
     for _, row in df.iterrows():
-        pid = int(row['point_id'])
+        pid = int(row["point_id"])
         for i in range(4):
-            V[pid, i] = complex(str(row[f'v{i}']).replace(' ', ''))
+            V[pid, i] = complex(str(row[f"v{i}"]).replace(" ", ""))
     return V
+
 
 def load_lines():
     df = pd.read_csv(ROOT / "_workbench/02_geometry/W33_line_phase_map.csv")
-    return [tuple(map(int, str(row['point_ids']).split())) for _, row in df.iterrows()]
+    return [tuple(map(int, str(row["point_ids"]).split())) for _, row in df.iterrows()]
+
 
 def inner(V, p, q):
     return np.vdot(V[p], V[q])
@@ -76,7 +85,7 @@ def analyze_quaternion_structure():
         for q in outer:
             if p != q:
                 z = inner(V, p, q)
-                k[(p,q)] = round(6 * np.angle(z) / np.pi) % 12
+                k[(p, q)] = round(6 * np.angle(z) / np.pi) % 12
 
     print("\nPhase table k(p,q):")
     print("     ", end="")
@@ -129,7 +138,9 @@ def analyze_quaternion_structure():
     # For Bargmann cycle 1->2->3->1:
     # B = <1|2><2|3><3|1> = w^{k(1,2)+k(2,3)+k(3,1)}
     print(f"\nBargmann 3-cycle 1->2->3->1:")
-    print(f"  k(1,2) + k(2,3) + k(3,1) = {k[(1,2)]} + {k[(2,3)]} + {k[(3,1)]} = {(k[(1,2)] + k[(2,3)] + k[(3,1)]) % 12}")
+    print(
+        f"  k(1,2) + k(2,3) + k(3,1) = {k[(1,2)]} + {k[(2,3)]} + {k[(3,1)]} = {(k[(1,2)] + k[(2,3)] + k[(3,1)]) % 12}"
+    )
 
 
 def analyze_all_k4_phase_patterns():
@@ -170,7 +181,7 @@ def analyze_all_k4_phase_patterns():
                         continue
                     common = col[a] & col[b] & col[c] & col[d]
                     if len(common) == 4:
-                        k4_list.append((a,b,c,d))
+                        k4_list.append((a, b, c, d))
 
     print(f"Found {len(k4_list)} K4 components")
 
@@ -188,8 +199,8 @@ def analyze_all_k4_phase_patterns():
 
         # Get all 6 phases
         phases = []
-        for i, p in enumerate([a,b,c,d]):
-            for q in [a,b,c,d][i+1:]:
+        for i, p in enumerate([a, b, c, d]):
+            for q in [a, b, c, d][i + 1 :]:
                 z = inner(V, p, q)
                 k = round(6 * np.angle(z) / np.pi) % 12
                 phases.append(k)
@@ -230,7 +241,7 @@ def check_bargmann_formula():
         for q in outer:
             if p != q:
                 z = inner(V, p, q)
-                k[(p,q)] = round(6 * np.angle(z) / np.pi) % 12
+                k[(p, q)] = round(6 * np.angle(z) / np.pi) % 12
 
     # The antisymmetry: k(p,q) + k(q,p) = 0 mod 12
     # This means k(q,p) = -k(p,q) = 12 - k(p,q)
@@ -240,7 +251,7 @@ def check_bargmann_formula():
     for p in outer:
         for q in outer:
             if p < q:
-                s[(p,q)] = (k[(p,q)] - k[(q,p)]) % 12
+                s[(p, q)] = (k[(p, q)] - k[(q, p)]) % 12
                 print(f"  s({p},{q}) = {k[(p,q)]} - {k[(q,p)]} = {s[(p,q)]}")
 
     # The 4-cycle sum:
@@ -252,17 +263,19 @@ def check_bargmann_formula():
     print("CYCLE DECOMPOSITION")
     print("-" * 50)
 
-    for cyc in [[0,1,2,3], [0,1,3,2], [0,2,1,3]]:
+    for cyc in [[0, 1, 2, 3], [0, 1, 3, 2], [0, 2, 1, 3]]:
         a, b, c, d = cyc
-        S = (k[(a,b)] + k[(b,c)] + k[(c,d)] + k[(d,a)]) % 12
+        S = (k[(a, b)] + k[(b, c)] + k[(c, d)] + k[(d, a)]) % 12
 
         # Alternative form
-        term1 = (k[(a,b)] - k[(a,d)]) % 12  # Compare from a
-        term2 = (k[(c,d)] - k[(c,b)]) % 12  # Compare from c
+        term1 = (k[(a, b)] - k[(a, d)]) % 12  # Compare from a
+        term2 = (k[(c, d)] - k[(c, b)]) % 12  # Compare from c
 
         print(f"\nCycle {a}->{b}->{c}->{d}:")
         print(f"  Direct: {k[(a,b)]}+{k[(b,c)]}+{k[(c,d)]}+{k[(d,a)]} = {S}")
-        print(f"  Alt:    [{k[(a,b)]}-{k[(a,d)]}] + [{k[(c,d)]}-{k[(c,b)]}] = {term1} + {term2} = {(term1+term2)%12}")
+        print(
+            f"  Alt:    [{k[(a,b)]}-{k[(a,d)]}] + [{k[(c,d)]}-{k[(c,b)]}] = {term1} + {term2} = {(term1+term2)%12}"
+        )
 
 
 def geometric_proof():
@@ -394,8 +407,8 @@ def find_the_constraint():
     for i in range(4):
         for j in range(4):
             if i != j:
-                phi[(i,j)] = np.angle(G[i,j])
-                k = round(6 * phi[(i,j)] / np.pi) % 12
+                phi[(i, j)] = np.angle(G[i, j])
+                k = round(6 * phi[(i, j)] / np.pi) % 12
                 print(f"  phi[{i},{j}] = {phi[(i,j)]:.4f} rad = k={k}")
 
 
@@ -458,13 +471,13 @@ def algebraic_identity():
     # The Bargmann 4-cycle is:
     # B = G[0,1] * G[1,2] * G[2,3] * G[3,0]
 
-    B = G[0,1] * G[1,2] * G[2,3] * G[3,0]
+    B = G[0, 1] * G[1, 2] * G[2, 3] * G[3, 0]
     print(f"\nBargmann = G[0,1]*G[1,2]*G[2,3]*G[3,0] = {B:.6f}")
     print(f"Phase of Bargmann: {np.angle(B) / np.pi:.4f} * pi")
 
     # Compare to other products
-    alt1 = G[0,1] * G[1,3] * G[3,2] * G[2,0]
-    alt2 = G[0,2] * G[2,1] * G[1,3] * G[3,0]
+    alt1 = G[0, 1] * G[1, 3] * G[3, 2] * G[2, 0]
+    alt2 = G[0, 2] * G[2, 1] * G[1, 3] * G[3, 0]
     print(f"\nAlt cycle 0->1->3->2->0: {alt1:.6f}")
     print(f"Alt cycle 0->2->1->3->0: {alt2:.6f}")
 
@@ -480,6 +493,7 @@ def main():
     geometric_proof()
     find_the_constraint()
     algebraic_identity()
+
 
 if __name__ == "__main__":
     main()

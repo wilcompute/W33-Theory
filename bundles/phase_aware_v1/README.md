@@ -16,17 +16,17 @@ Objective minimized:
 
 ## Key outputs
 
-- `phase_aware_2T_cycle_witness_walks.csv`  
+- `phase_aware_2T_cycle_witness_walks.csv`
   Step-by-step witness walks for all 5 nontrivial 2T cycles, including delta, required holonomy (when applicable),
   chosen triad, triad holonomy, and cover-size diagnostics.
 
-- `phase_aware_run_summary.json`  
+- `phase_aware_run_summary.json`
   Per-cycle and total minimal cover-12 usage under the phase constraints.
 
-- `w33_four_center_triads_with_ray_holonomy.csv`  
+- `w33_four_center_triads_with_ray_holonomy.csv`
   (and the richer table `w33_four_center_triads_with_ray_holonomy.csv` in this bundle) four-center triads + holonomy.
 
-- `w33_noncollinear_edge_phases_k_mod12.csv`  
+- `w33_noncollinear_edge_phases_k_mod12.csv`
   Oriented noncollinear edge phase labels.
 
 ## Results (this run)

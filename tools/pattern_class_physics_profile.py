@@ -3,12 +3,13 @@
 
 Outputs artifacts/pattern_class_physics_profile.json
 """
+
 from __future__ import annotations
 
 import csv
 import json
 from collections import Counter, defaultdict
-from itertools import product, combinations
+from itertools import combinations, product
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -34,11 +35,13 @@ def build_points():
 
 def build_adj(points):
     n = len(points)
+
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
-    adj = [[0]*n for _ in range(n)]
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
+
+    adj = [[0] * n for _ in range(n)]
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(points[i], points[j]) == 0:
                 adj[i][j] = adj[j][i] = 1
     return adj
@@ -47,17 +50,21 @@ def build_adj(points):
 def load_lines():
     path = ROOT / "data/_workbench/02_geometry/W33_line_phase_map.csv"
     lines = []
-    with open(path, newline='', encoding='utf-8') as f:
+    with open(path, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            pts = tuple(map(int, str(row['point_ids']).split()))
+            pts = tuple(map(int, str(row["point_ids"]).split()))
             lines.append(pts)
     return lines
 
 
 def pattern_class_by_vertex():
-    inter = json.loads((ROOT / "artifacts" / "we6_coxeter6_intersection.json").read_text())
-    orbit_map = json.loads((ROOT / "artifacts" / "e8_orbit_to_f3_point.json").read_text())
+    inter = json.loads(
+        (ROOT / "artifacts" / "we6_coxeter6_intersection.json").read_text()
+    )
+    orbit_map = json.loads(
+        (ROOT / "artifacts" / "e8_orbit_to_f3_point.json").read_text()
+    )
     mapping = orbit_map["mapping"]
 
     patterns = [tuple(row) for row in inter["matrix"]]
@@ -103,19 +110,19 @@ def compute_k4_components(adj, lines):
                         continue
                     common = col[a] & col[b] & col[c] & col[d]
                     if len(common) == 4:
-                        k4_list.append(((a,b,c,d), tuple(sorted(common))))
+                        k4_list.append(((a, b, c, d), tuple(sorted(common))))
     return k4_list
 
 
 def all_triangles(adj):
     tris = []
     for i in range(40):
-        for j in range(i+1, 40):
+        for j in range(i + 1, 40):
             if not adj[i][j]:
                 continue
-            for k in range(j+1, 40):
+            for k in range(j + 1, 40):
                 if adj[i][k] and adj[j][k]:
-                    tris.append((i,j,k))
+                    tris.append((i, j, k))
     return tris
 
 
@@ -146,8 +153,10 @@ def main():
     # Triangle profile
     tris = all_triangles(adj)
     tri_multisets = Counter()
-    for a,b,c in tris:
-        tri_multisets[tuple(sorted([class_by_vertex[a], class_by_vertex[b], class_by_vertex[c]]))] += 1
+    for a, b, c in tris:
+        tri_multisets[
+            tuple(sorted([class_by_vertex[a], class_by_vertex[b], class_by_vertex[c]]))
+        ] += 1
 
     # Line profile
     line_multisets = Counter()

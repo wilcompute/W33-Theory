@@ -65,5 +65,3 @@ Geometry-only predictors:
 W33 basis solution:
 - Orthonormal rays:
   - `data/_toe/w33_orthonormal_phase_solution_20260110/W33_orthonormal_solution_report.json`
-
-

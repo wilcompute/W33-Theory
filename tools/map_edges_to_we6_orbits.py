@@ -12,10 +12,11 @@ Uses a deterministic, documented rule:
 Root ordering is canonical by root_key (2*coords integer tuple) lexicographic.
 Edge ordering is lexicographic by (i,j).
 """
+
 from __future__ import annotations
 
 import json
-from itertools import product, combinations
+from itertools import combinations, product
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -41,12 +42,12 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     edges = []
-    adj = [[0]*n for _ in range(n)]
+    adj = [[0] * n for _ in range(n)]
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 edges.append((i, j))
                 adj[i][j] = adj[j][i] = 1
@@ -82,7 +83,7 @@ def edge_lists(edges, adj, v0=0):
             incident_edges.append((i, j))
         elif i in h27_set and j in h27_set:
             h27_edges.append((i, j))
-        elif (i in nbrs_set and j in nbrs_set):
+        elif i in nbrs_set and j in nbrs_set:
             h12_edges.append((i, j))
         elif (i in nbrs_set and j in h27_set) or (j in nbrs_set and i in h27_set):
             cross_edges.append((i, j))
@@ -91,12 +92,12 @@ def edge_lists(edges, adj, v0=0):
 
 
 def load_orbit_labels(path):
-    data = json.loads(Path(path).read_text(encoding='utf-8'))
+    data = json.loads(Path(path).read_text(encoding="utf-8"))
     mapping = data["mapping"]
     # Build root list keyed by root_key
     roots = []
     for key_str, info in mapping.items():
-        key = tuple(int(x) for x in key_str.strip('()').split(','))
+        key = tuple(int(x) for x in key_str.strip("()").split(","))
         roots.append((key, info["orbit_id"], info["orbit_size"]))
     # Canonical order by key
     roots.sort(key=lambda x: x[0])
@@ -105,7 +106,7 @@ def load_orbit_labels(path):
 
 def key_to_root(key):
     # key is 2*coords integer tuple
-    return [k/2 for k in key]
+    return [k / 2 for k in key]
 
 
 def main():
@@ -168,7 +169,7 @@ def main():
     # 1) H27 edges -> first 4 orbit27
     h27_edges_sorted = sorted(h27_edges)
     for i in range(4):
-        chunk = h27_edges_sorted[i*27:(i+1)*27]
+        chunk = h27_edges_sorted[i * 27 : (i + 1) * 27]
         keys = orbit27_list[i]
         for e, k in zip(chunk, keys):
             edge_to_root[e] = k
@@ -176,8 +177,8 @@ def main():
     # 2) Cross edges from triA,triB -> remaining 2 orbit27
     cross_AB_sorted = sorted(cross_AB)
     for i in range(2):
-        chunk = cross_AB_sorted[i*27:(i+1)*27]
-        keys = orbit27_list[4+i]
+        chunk = cross_AB_sorted[i * 27 : (i + 1) * 27]
+        keys = orbit27_list[4 + i]
         for e, k in zip(chunk, keys):
             edge_to_root[e] = k
 
@@ -188,7 +189,7 @@ def main():
     for e, k in zip(remaining_edges[:6], size1_keys):
         edge_to_root[e] = k
     # Next 72 -> size72 roots
-    for e, k in zip(remaining_edges[6:6+72], size72_keys):
+    for e, k in zip(remaining_edges[6 : 6 + 72], size72_keys):
         edge_to_root[e] = k
 
     # Sanity

@@ -10,6 +10,7 @@ Outputs:
 - artifacts/h12_triangle_label_functions.json
 - artifacts/h12_triangle_label_functions.md
 """
+
 from __future__ import annotations
 
 import json
@@ -42,11 +43,11 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
     return adj
@@ -311,11 +312,19 @@ def main():
         # fit degree 1 and degree 2
         sol1, exps1 = fit_polynomial(samples, 1)
         sol2, exps2 = fit_polynomial(samples, 2)
-        triangle_fits.append({
-            "triangle": tri,
-            "degree1": {"solvable": sol1 is not None, "formula": poly_to_string(sol1, exps1)},
-            "degree2": {"solvable": sol2 is not None, "formula": poly_to_string(sol2, exps2)},
-        })
+        triangle_fits.append(
+            {
+                "triangle": tri,
+                "degree1": {
+                    "solvable": sol1 is not None,
+                    "formula": poly_to_string(sol1, exps1),
+                },
+                "degree2": {
+                    "solvable": sol2 is not None,
+                    "formula": poly_to_string(sol2, exps2),
+                },
+            }
+        )
 
     results = {
         "base_vertex": v0,
@@ -327,8 +336,12 @@ def main():
     lines.append("")
     for entry in triangle_fits:
         lines.append(f"## Triangle {entry['triangle']}")
-        lines.append(f"- degree 1: solvable={entry['degree1']['solvable']} formula={entry['degree1']['formula']}")
-        lines.append(f"- degree 2: solvable={entry['degree2']['solvable']} formula={entry['degree2']['formula']}")
+        lines.append(
+            f"- degree 1: solvable={entry['degree1']['solvable']} formula={entry['degree1']['formula']}"
+        )
+        lines.append(
+            f"- degree 2: solvable={entry['degree2']['solvable']} formula={entry['degree2']['formula']}"
+        )
         lines.append("")
 
     OUT_JSON.write_text(json.dumps(results, indent=2))

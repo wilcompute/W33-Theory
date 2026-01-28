@@ -9,9 +9,10 @@ structure underlying W33?
 This could be the key to "universifying" all algebra.
 """
 
+from itertools import combinations, product
+
 import numpy as np
-from numpy import sqrt, pi, exp
-from itertools import product, combinations
+from numpy import exp, pi, sqrt
 
 print("=" * 80)
 print("W33 AND HIGHER ALGEBRA")
@@ -74,7 +75,7 @@ Level 4: W(4) = K4 (quaternary from Klein group)
 
 Key insight:
   dim(W(n)) grows with n following W33 patterns!
-  
+
   dim(W(1)) = 40
   dim(W(2)) = 40 × 40 / 4 = 400 (K4 quotient)
   dim(W(3)) = 40 × 81 = 3240 (point-cycle)
@@ -121,10 +122,10 @@ W33 A∞ STRUCTURE:
   m₂ = GF(3) multiplication × K4 gauge
   m₃ = GF(3) 3-fold relation (triality!)
   m₄ = K4 quaternary (holonomy = -1)
-  
+
 The A∞-relations become:
   ∂(m₄) = m₂(m₃ ⊗ 1) - m₂(1 ⊗ m₃) + ...
-  
+
 In W33: This gives the -1 phase from K4 holonomy!
 """)
 
@@ -156,12 +157,12 @@ They arise from:
 W33 AND E∞:
   W33 is NOT commutative (K4 is non-abelian in action)
   But it is E∞ in a GRADED sense!
-  
+
   GF(3) grading → ℤ₃ graded commutativity
   K4 grading → (ℤ₂)² graded commutativity
-  
+
   Combined: ℤ₁₂ graded E∞-algebra!
-  
+
 This explains the 12 gauge bosons:
   Each grade corresponds to one boson type!
 """)
@@ -194,15 +195,15 @@ This computes:
 
 W33 BAR CONSTRUCTION:
   B(W33) = ⊕ₙ W33^⊗n / K4-relations
-  
+
   dim(B(W33)) = Σₙ 40ⁿ × (phase factors)
-  
+
 The phase factors from K4 give:
   B(W33) ≃ 40 × (1 - 1/4 + 1/16 - ...)
          = 40 × 4/5 = 32
-         
+
   32 = dimension of the "fermion space"!
-  
+
 This connects to:
   32 = dim(spinor rep of SO(10))
   32 = number of supersymmetric generators
@@ -235,13 +236,13 @@ Properties:
 
 For W33:
   W33 is "almost quadratic" (K4 relations are quartic)
-  
+
 Conjecture:
   (W33)! = the DUAL structure with 81 generators!
-  
+
   This would give:
   dim(W33) × dim((W33)!) = 40 × 81 = 3240
-  
+
   3240 = 81 × 40 = Steinberg × points
        = total degrees of freedom!
 """)
@@ -269,17 +270,17 @@ The derived category D(W33-mod) has:
 
 Key structure:
   D(W33-mod) is TRIANGULATED
-  
+
 The shift functor [1] corresponds to:
   Suspending by one K4 degree!
-  
+
 Distinguished triangles:
   A → B → C → A[1]
-  
+
 In W33 terms:
   The triangles come from the 90 K4 subgroups!
   Each K4 gives a distinguished triangle.
-  
+
 This means:
   D(W33-mod) has 90 generating triangles.
 """)
@@ -311,10 +312,10 @@ For W33:
   HH⁰(W33) = center = K4-invariants = 10 dim (Q45!)
   HH¹(W33) = outer derivations from PSp(4,3)
   HH²(W33) = deformations → exceptional algebras!
-  
+
 CONJECTURE:
   HH²(W33) ≅ e₇ or contains e₇ as a summand!
-  
+
   This would explain:
   dim(E₇) = 133 = 40 + 81 + 12 = HH⁰ + HH¹ + HH²
 """)
@@ -346,15 +347,15 @@ The motive M(X) of a variety X encodes:
 
 W33 MOTIVE:
   M(W33) should be a "universal motive" in some sense!
-  
+
   It would factor as:
     M(W33) = L^40 × (1 - L)^81 / (gauge factors)
-    
+
   Where L = Lefschetz motive.
-  
+
   The Euler characteristic:
     χ(W33) = 40 - 81 = -41
-    
+
   This is NEGATIVE! → W33 has cohomological "holes"
   These holes are the K4 subgroups!
 """)
@@ -397,7 +398,7 @@ Evidence:
 
 The Lie bracket:
   [xᵢ, xⱼ] = Σ cᵢⱼᵏ xₖ
-  
+
 Where structure constants cᵢⱼᵏ come from K4!
 """)
 
@@ -430,9 +431,9 @@ At this root:
 
 CONJECTURE:
   W33 = the "root of unity specialization" of E₇
-  
+
   U_{q³=1}(e₇) ≅ W33-algebra
-  
+
 This explains why W33 is finite while E₇ is infinite!
 The GF(3) structure forces q³ = 1.
 """)

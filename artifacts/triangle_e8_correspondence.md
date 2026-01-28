@@ -90,4 +90,3 @@ E8 has 120 root lines (±pairs). Compare to 160 triangles.
 | Triangles | 160 | Root lines | 120 |
 | Triangle graph edges | 240 | Roots | 240 |
 | L(T) vertices | 240 | Roots | 240 |
-

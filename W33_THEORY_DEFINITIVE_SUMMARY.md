@@ -79,7 +79,7 @@ Every key number in W33 has a Lie-theoretic origin:
 Both E8 roots AND W33 edges number 240, but for **related reasons**:
 
 1. E8 has 240 roots
-2. Quotient by 6 phases: 240 → 40 vertices  
+2. Quotient by 6 phases: 240 → 40 vertices
 3. Degree 12 = 24/2 from D₄ structure
 4. Edges = 40 × 12 / 2 = 240
 
@@ -130,7 +130,7 @@ The Witting/W33 structure proves **quantum contextuality**:
 
 W33 is unitarily equivalent to the **Penrose dodecahedron** construction:
 - Spin-3/2 particles
-- Majorana representation  
+- Majorana representation
 - Proof of Bell non-locality "without probabilities"
 
 ---
@@ -188,7 +188,7 @@ W33 is unitarily equivalent to the **Penrose dodecahedron** construction:
 
 It is the orthogonality graph of 40 quantum states used in:
 - Quantum cryptography
-- Foundations of quantum mechanics  
+- Foundations of quantum mechanics
 - Proofs of contextuality and non-locality
 
 Its symmetry group W(E₆) = 51,840 connects it directly to exceptional Lie theory, and the numbers 40, 27, 240, 12 all trace back to the E₆-E₈ exceptional structure.

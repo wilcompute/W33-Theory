@@ -16,10 +16,11 @@ This is the natural next step in the hierarchy:
  what was missing from the previous level."
 """
 
-import numpy as np
 from collections import defaultdict
-from itertools import combinations, product
 from functools import reduce
+from itertools import combinations, product
+
+import numpy as np
 
 print("=" * 80)
 print("W(5,3): THE GRAVITATIONAL EXTENSION")
@@ -44,7 +45,7 @@ It consists of:
   - Totally isotropic 1-spaces (points)
   - Totally isotropic 2-spaces (lines)
   - Totally isotropic 3-spaces (planes)
-  
+
 Under the symplectic form on F₃⁶.
 
 COUNTING FORMULAS
@@ -53,7 +54,7 @@ COUNTING FORMULAS
 For W(2n-1, q), the number of totally isotropic k-spaces is:
 
   Points (k=1): ∏_{i=1}^{n} (q^i + 1)
-  
+
   For n=3, q=3:
     Points = (q+1)(q²+1)(q³+1) = (4)(10)(28) = 1120
 """)
@@ -96,13 +97,15 @@ For Sp(6,3):
             = 19683 × 8 × 80 × 728
 """)
 
+
 # Calculate |Sp(6,3)|
 def sp_order(n, q):
     """Order of Sp(2n, q)."""
     result = q ** (n**2)
     for i in range(1, n + 1):
-        result *= (q ** (2*i) - 1)
+        result *= q ** (2 * i) - 1
     return result
+
 
 order_sp63 = sp_order(3, 3)
 order_sp43 = sp_order(2, 3)
@@ -140,7 +143,7 @@ THE SYMPLECTIC HIERARCHY
 Pattern:
   - Points grow rapidly
   - Steinberg dimension = 3^(n²)
-  
+
 Each level CONTAINS the previous as a substructure!
 """)
 
@@ -149,9 +152,11 @@ print("\nThe hierarchy:")
 for rank in range(1, 5):
     n_pts = 1
     for i in range(1, rank + 1):
-        n_pts *= (3**i + 1)
+        n_pts *= 3**i + 1
     steinberg = 3 ** (rank**2)
-    print(f"  W({2*rank-1},3): {n_pts:>10,} points, Steinberg = 3^{rank**2} = {steinberg:,}")
+    print(
+        f"  W({2*rank-1},3): {n_pts:>10,} points, Steinberg = 3^{rank**2} = {steinberg:,}"
+    )
 
 # =============================================================================
 # PART 4: WHAT DOES W(5,3) ADD?
@@ -169,25 +174,25 @@ Possibilities:
 1. GRAVITY
    - W(3,3): Internal symmetries (gauge)
    - W(5,3): Spacetime symmetries (diffeomorphisms)
-   
+
    The extra 1080 points (1120 - 40) = gravitational DOF?
 
 2. GRAND UNIFICATION
    - W(3,3): SU(3) × SU(2) × U(1)
    - W(5,3): Larger group containing gravity
-   
+
    Maybe SO(10) or E₆ lives in W(5,3)?
 
 3. EXTRA DIMENSIONS
    - W(3,3): 4D spacetime
    - W(5,3): 10D or 11D (string theory dimensions!)
-   
+
    Calabi-Yau compactification?
 
 4. SUPERSYMMETRY
    - W(3,3): Bosons and fermions
    - W(5,3): Superpartners
-   
+
    The ratio 1120/40 = 28 = number of supercharges?
 """)
 
@@ -218,20 +223,20 @@ HOMOLOGY OF W(5,3)
 ==================
 
 For W(3,3): rank(H₁) = 81 = 3⁴
-For W(5,3): rank(H₁) = ??? 
+For W(5,3): rank(H₁) = ???
 
 Conjecture: rank(H₁) = Steinberg dimension = 3⁹ = 19683
 
 If this is true:
   - W(3,3): 40 points, 81 cycles
   - W(5,3): 1120 points, 19683 cycles
-  
+
   Ratio of cycles: 19683 / 81 = 243 = 3⁵
-  
+
 The "vacuum energy" of W(5,3):
   - If dark energy ~ cycles / (points + cycles)
   - For W(5,3): 19683 / (1120 + 19683) = 19683 / 20803 ≈ 94.6%
-  
+
   This is MUCH higher than W(3,3)'s 67%!
 """)
 
@@ -265,11 +270,11 @@ W(3,3) embeds in W(5,3) as a HYPERPLANE section!
 
 Take a hyperplane H in PG(5,3):
   - Intersection W(5,3) ∩ H = W(3,3)
-  
+
 This means:
   - Standard Model = "slice" of fuller theory
   - Gravity lives in the TRANSVERSE directions
-  
+
 The 28 = 1120/40 "extra copies" are:
   - 28 ways to embed W(3,3) in W(5,3)?
   - 28 different "Standard Models"?
@@ -315,7 +320,7 @@ But the RANK tells us something:
 OR: The extra rank gives INTERNAL dimensions:
   W(3,3): 4D spacetime
   W(5,3): 4D spacetime + 2 internal = 6D total
-  
+
 6D is interesting:
   - 6 = 10 - 4 (string theory compactification)
   - 6 = dimension of Calabi-Yau manifold
@@ -352,18 +357,18 @@ SPECIFIC CONNECTIONS
    - 28 supercharges (matches our ratio!)
    - Contains gravity + all lower spin
    - E₇(7) symmetry
-   
+
 2. STRING THEORY
    - 10D superstrings
    - Compactify on 6D Calabi-Yau
    - W(5,3) might encode the Calabi-Yau?
-   
+
 3. SO(8) TRIALITY
    - SO(8) has three 8-dimensional representations
    - All equivalent by triality
    - 28 = dim(so(8))
    - Appears in string theory
-   
+
 4. E₆ AND E₇
    - E₆: 78-dimensional, contains SO(10)
    - E₇: 133-dimensional, appears in SUGRA
@@ -395,22 +400,22 @@ Gravity lives in the "extra" structure of W(5,3).
 Evidence:
 1. 28 extra copies = 28 gravitational DOF?
    (Matches N=8 supergravity supercharges)
-   
+
 2. Steinberg 3⁹ = 19683 = gravitational vacuum modes?
-   
+
 3. Rank 3 = includes diffeomorphisms?
    (Rank 2 = internal gauge, Rank 3 = spacetime gauge)
 
 UNIFICATION:
   W(3,3) ⊂ W(5,3)
-  
+
   Standard Model ⊂ Quantum Gravity Theory
-  
+
   The embedding is the UNIFICATION!
 
 PREDICTION:
   Graviton = excitation transverse to W(3,3) in W(5,3)
-  
+
   Gravity emerges when we "lift" from W(3,3) to W(5,3)
 """)
 
@@ -450,6 +455,7 @@ is_perfect_square = sqrt_total**2 == w53_total
 print(f"\n  √{w53_total} = {np.sqrt(w53_total):.4f}")
 print(f"  Is perfect square? {is_perfect_square}")
 
+
 # Factor it
 def prime_factors(n):
     factors = {}
@@ -462,6 +468,7 @@ def prime_factors(n):
     if n > 1:
         factors[n] = factors.get(n, 0) + 1
     return factors
+
 
 factors = prime_factors(w53_total)
 print(f"\n  Factorization: {w53_total} = ", end="")
@@ -551,7 +558,7 @@ The quantum theory of gravity is:
   - W(5,3) geometry
   - With W(3,3) as the matter/gauge sector
   - And the complement as the gravitational sector
-  
+
 This should give:
   - Einstein gravity at low energies
   - Quantum corrections at Planck scale

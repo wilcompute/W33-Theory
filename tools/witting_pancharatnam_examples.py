@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Find explicit triangle examples with Pancharatnam phase ±π/6 and ±π/2."""
+
 from __future__ import annotations
 
-import json
 import itertools
+import json
 from pathlib import Path
 
 import numpy as np
@@ -23,9 +24,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -59,16 +60,16 @@ def main():
         ang = np.arctan2(np.sin(ang), np.cos(ang))
 
         # classify by nearest observed angle (±pi/6, ±pi/2)
-        targets = [np.pi/6, -np.pi/6, np.pi/2, -np.pi/2]
+        targets = [np.pi / 6, -np.pi / 6, np.pi / 2, -np.pi / 2]
         nearest = min(targets, key=lambda t: abs(ang - t))
         if abs(ang - nearest) < 1e-2:
-            if abs(nearest - np.pi/6) < 1e-6 and target["+pi/6"] is None:
+            if abs(nearest - np.pi / 6) < 1e-6 and target["+pi/6"] is None:
                 target["+pi/6"] = (i, j, k, float(ang))
-            elif abs(nearest + np.pi/6) < 1e-6 and target["-pi/6"] is None:
+            elif abs(nearest + np.pi / 6) < 1e-6 and target["-pi/6"] is None:
                 target["-pi/6"] = (i, j, k, float(ang))
-            elif abs(nearest - np.pi/2) < 1e-6 and target["+pi/2"] is None:
+            elif abs(nearest - np.pi / 2) < 1e-6 and target["+pi/2"] is None:
                 target["+pi/2"] = (i, j, k, float(ang))
-            elif abs(nearest + np.pi/2) < 1e-6 and target["-pi/2"] is None:
+            elif abs(nearest + np.pi / 2) < 1e-6 and target["-pi/2"] is None:
                 target["-pi/2"] = (i, j, k, float(ang))
 
         if all(target.values()):

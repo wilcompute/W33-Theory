@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Compute support-size distribution (nonzero coordinates) per pattern class."""
+
 from __future__ import annotations
 
 import json
@@ -29,8 +30,12 @@ def build_points():
 
 
 def pattern_class_by_vertex(points):
-    inter = json.loads((ROOT / "artifacts" / "we6_coxeter6_intersection.json").read_text())
-    orbit_map = json.loads((ROOT / "artifacts" / "e8_orbit_to_f3_point.json").read_text())
+    inter = json.loads(
+        (ROOT / "artifacts" / "we6_coxeter6_intersection.json").read_text()
+    )
+    orbit_map = json.loads(
+        (ROOT / "artifacts" / "e8_orbit_to_f3_point.json").read_text()
+    )
     mapping = orbit_map["mapping"]
 
     patterns = [tuple(row) for row in inter["matrix"]]

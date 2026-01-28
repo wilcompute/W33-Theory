@@ -1,4 +1,5 @@
 import numpy as np
+
 from THEORY_PART_CLII_STATE_PARTICIPATION import get_mub_system, participation
 
 # Precompute the full set of triangles across all MUB systems so multiple tests can reference it
@@ -26,3 +27,14 @@ def test_triangle_unique_completion():
     for triangle in all_triangles:
         completions = [v for v in range(40) if triangle in get_mub_system(v)]
         assert len(completions) == 1
+
+
+def main():
+    all_triangles = set()
+    for v in range(40):
+        for triangle in get_mub_system(v):
+            all_triangles.add(triangle)
+
+
+if __name__ == "__main__":
+    main()

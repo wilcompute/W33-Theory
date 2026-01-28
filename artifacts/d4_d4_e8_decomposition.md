@@ -162,4 +162,3 @@ The correspondence might be:
 2. What structure is preserved under such a bijection?
 3. How does the D4 triality act on the 4 triangles?
 4. Is the 112+128 split reflected in the triangle edges?
-

@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
 ═══════════════════════════════════════════════════════════════════════════════
-                                                                               
-     W33: A COMPLETE UNIFIED THEORY OF FUNDAMENTAL PHYSICS                     
-                                                                               
-              From Finite Geometry to the Theory of Everything                 
-                                                                               
+
+     W33: A COMPLETE UNIFIED THEORY OF FUNDAMENTAL PHYSICS
+
+              From Finite Geometry to the Theory of Everything
+
 ═══════════════════════════════════════════════════════════════════════════════
 
 ABSTRACT:
@@ -29,8 +29,8 @@ KEYWORDS: Theory of Everything, Grand Unified Theory, E6, Weinberg angle,
 """
 
 import math
-from fractions import Fraction
 from datetime import datetime
+from fractions import Fraction
 
 print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -138,7 +138,9 @@ alpha_inv_tree = 81 + 56
 alpha_inv_exp = 137.035999084
 print(f"   W33 derivation: α⁻¹ = (cycles) + (E7 fund) = 81 + 56 = {alpha_inv_tree}")
 print(f"   Experimental:   α⁻¹ = {alpha_inv_exp}")
-print(f"   Tree-level error: {(alpha_inv_exp - alpha_inv_tree)/alpha_inv_exp * 100:.3f}%")
+print(
+    f"   Tree-level error: {(alpha_inv_exp - alpha_inv_tree)/alpha_inv_exp * 100:.3f}%"
+)
 print(f"   (Difference = 0.036, explained by QED radiative corrections)")
 print()
 
@@ -196,7 +198,9 @@ print()
 print("═══ 6. KOIDE FORMULA ═══")
 print()
 m_e, m_mu, m_tau = 0.511, 105.66, 1776.86
-Q_exp = (m_e + m_mu + m_tau) / (math.sqrt(m_e) + math.sqrt(m_mu) + math.sqrt(m_tau))**2
+Q_exp = (m_e + m_mu + m_tau) / (
+    math.sqrt(m_e) + math.sqrt(m_mu) + math.sqrt(m_tau)
+) ** 2
 Q_w33 = Fraction(2, 3)
 
 print(f"   W33 derivation: Q = 2×27/81 = 2/3 = {float(Q_w33):.6f}")
@@ -247,7 +251,7 @@ print()
 print("""
    The Witting polytope has natural phases: ω = e^(2πi/3)
    These are the cube roots of unity: 1, ω, ω²
-   
+
    Phase differences are quantized: 0, ±2π/3 = 0°, ±120°
 """)
 print()
@@ -316,7 +320,8 @@ print("""
 for i, (pred, exp, match, status) in enumerate(predictions, 1):
     print(f"║ {i:2d}. {pred:<32} {exp:<16} {match:<9} {status:<6}     ║")
 
-print("""╠═══════════════════════════════════════════════════════════════════════════════╣
+print(
+    """╠═══════════════════════════════════════════════════════════════════════════════╣
 ║                                                                               ║
 ║  SUMMARY: 21 predictions confirmed, 4 pending experimental test               ║
 ║           SUCCESS RATE: 84%                                                   ║
@@ -324,7 +329,8 @@ print("""╠══════════════════════�
 ║  ★ Combined probability of random coincidence: P < 10⁻³² ★                    ║
 ║                                                                               ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # PART VII: EXPERIMENTAL TESTS
@@ -471,14 +477,14 @@ print("""
 
 print("""
 ═══════════════════════════════════════════════════════════════════════════════
-                                                                               
-                    "The universe is not only queerer than we suppose,          
-                     but queerer than we CAN suppose."                          
-                                        — J.B.S. Haldane                        
-                                                                               
-                    "W33 is not a model OF the universe.                        
-                     W33 IS the universe."                                      
-                                                                               
+
+                    "The universe is not only queerer than we suppose,
+                     but queerer than we CAN suppose."
+                                        — J.B.S. Haldane
+
+                    "W33 is not a model OF the universe.
+                     W33 IS the universe."
+
 ═══════════════════════════════════════════════════════════════════════════════
 
                               THEORY DOCUMENTATION
@@ -496,8 +502,8 @@ print("""
                          Total: 30 parts documenting W33
 
 ═══════════════════════════════════════════════════════════════════════════════
-                                                                               
-                           END OF W33 THEORY SUMMARY                           
-                                                                               
+
+                           END OF W33 THEORY SUMMARY
+
 ═══════════════════════════════════════════════════════════════════════════════
 """)

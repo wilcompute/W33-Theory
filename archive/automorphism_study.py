@@ -13,26 +13,35 @@ Known: The automorphism group of GQ(3,3) is related to PSU(4,2).
 But our ray realization adds extra structure (phases).
 """
 
-import numpy as np
-from pathlib import Path
-import pandas as pd
 from collections import defaultdict
 from itertools import combinations, permutations
+from pathlib import Path
 
-ROOT = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data")
+import numpy as np
+import pandas as pd
+
+ROOT = Path(
+    r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data"
+)
+
 
 def load_rays():
-    df = pd.read_csv(ROOT / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv")
+    df = pd.read_csv(
+        ROOT
+        / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv"
+    )
     V = np.zeros((40, 4), dtype=np.complex128)
     for _, row in df.iterrows():
-        pid = int(row['point_id'])
+        pid = int(row["point_id"])
         for i in range(4):
-            V[pid, i] = complex(str(row[f'v{i}']).replace(' ', ''))
+            V[pid, i] = complex(str(row[f"v{i}"]).replace(" ", ""))
     return V
+
 
 def load_lines():
     df = pd.read_csv(ROOT / "_workbench/02_geometry/W33_line_phase_map.csv")
-    return [tuple(map(int, str(row['point_ids']).split())) for _, row in df.iterrows()]
+    return [tuple(map(int, str(row["point_ids"]).split())) for _, row in df.iterrows()]
+
 
 def inner(V, p, q):
     return np.vdot(V[p], V[q])
@@ -102,10 +111,9 @@ def check_coordinate_permutations():
     print(f"Standard basis: point -> coordinate: {std_basis}")
 
     # Try permutation: e0 <-> e1
-    P = np.array([[0, 1, 0, 0],
-                  [1, 0, 0, 0],
-                  [0, 0, 1, 0],
-                  [0, 0, 0, 1]], dtype=np.complex128)
+    P = np.array(
+        [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]], dtype=np.complex128
+    )
 
     print("\nApplying e0 <-> e1 (swap coordinates 0 and 1):")
 
@@ -201,7 +209,9 @@ def find_unitary_automorphisms():
     U = V20 @ V17.conj().T
 
     print(f"\nCandidate U (mapping line 17 -> line 20):")
-    print(f"  U is {'unitary' if np.allclose(U @ U.conj().T, np.eye(4)) else 'NOT unitary'}")
+    print(
+        f"  U is {'unitary' if np.allclose(U @ U.conj().T, np.eye(4)) else 'NOT unitary'}"
+    )
 
     # Apply U to all rays
     V_transformed = (U @ V.T).T
@@ -211,7 +221,9 @@ def find_unitary_automorphisms():
     for p in range(40):
         v_new = V_transformed[p]
         for q in range(40):
-            if np.allclose(v_new, V[q], rtol=1e-5) or np.allclose(v_new, -V[q], rtol=1e-5):
+            if np.allclose(v_new, V[q], rtol=1e-5) or np.allclose(
+                v_new, -V[q], rtol=1e-5
+            ):
                 matches[p] = q
                 break
 
@@ -357,6 +369,7 @@ def main():
     analyze_automorphism_orbit()
     count_automorphisms()
     study_k4_automorphisms()
+
 
 if __name__ == "__main__":
     main()

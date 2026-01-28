@@ -14,6 +14,7 @@ Outputs:
 - artifacts/h27_affine_hyperplane_search.json
 - artifacts/h27_affine_hyperplane_search.md
 """
+
 from __future__ import annotations
 
 import json
@@ -49,11 +50,11 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
 
@@ -217,7 +218,9 @@ def main():
                             if -1 in tup:
                                 labels = None
                                 break
-                            labels.append((p0[tup[0]], p1[tup[1]], p2[tup[2]], p3[tup[3]]))
+                            labels.append(
+                                (p0[tup[0]], p1[tup[1]], p2[tup[2]], p3[tup[3]])
+                            )
                         if labels is None:
                             continue
                         label_set = set(labels)
@@ -250,12 +253,14 @@ def main():
 
         if found:
             base_has_solution += 1
-        base_summaries.append({
-            "base": v0,
-            "solutions": solutions,
-            "example_alpha": example_alpha,
-            "example_c": example_c,
-        })
+        base_summaries.append(
+            {
+                "base": v0,
+                "solutions": solutions,
+                "example_alpha": example_alpha,
+                "example_c": example_c,
+            }
+        )
 
     results["bases_checked"] = n
     results["labelings_per_base"] = total_labelings
@@ -264,7 +269,9 @@ def main():
 
     lines.append(f"- Bases checked: {n}")
     lines.append(f"- Labelings per base: {total_labelings}")
-    lines.append(f"- Bases with at least one affine-hyperplane labeling: {base_has_solution}")
+    lines.append(
+        f"- Bases with at least one affine-hyperplane labeling: {base_has_solution}"
+    )
     lines.append("")
 
     if alpha_counts:

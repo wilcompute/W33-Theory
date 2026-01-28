@@ -5,6 +5,7 @@ Each W33 edge lies on a unique line of 4 points; the opposite edge on that line
 is the complementary pair. This defines an invariant involution pairing edges
 into 120 pairs.
 """
+
 from __future__ import annotations
 
 import json
@@ -34,7 +35,7 @@ def build_projective_points():
 
 
 def omega_sym(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
 
 def build_edges(points):
@@ -47,7 +48,7 @@ def build_edges(points):
 
 
 def build_adj(edges):
-    adj = [[0]*40 for _ in range(40)]
+    adj = [[0] * 40 for _ in range(40)]
     for i, j in edges:
         adj[i][j] = adj[j][i] = 1
     return adj
@@ -60,7 +61,7 @@ def build_edge_pairs(edges, adj):
     edges_sorted = [tuple(sorted(e)) for e in edges]
 
     pair_map = {}
-    for (i, j) in edges_sorted:
+    for i, j in edges_sorted:
         common = [k for k in range(40) if adj[i][k] and adj[j][k]]
         if len(common) != 2:
             raise RuntimeError("Edge does not have 2 common neighbors")
@@ -97,11 +98,11 @@ def normalize_proj(v):
 
 
 def check_symplectic(M):
-    Omega = [[0,0,1,0],[0,0,0,1],[2,0,0,0],[0,2,0,0]]
+    Omega = [[0, 0, 1, 0], [0, 0, 0, 1], [2, 0, 0, 0], [0, 2, 0, 0]]
 
     def mat_mult(A, B):
         n, k, m = len(A), len(B), len(B[0])
-        result = [[0]*m for _ in range(n)]
+        result = [[0] * m for _ in range(n)]
         for i in range(n):
             for j in range(m):
                 for l in range(k):
@@ -148,16 +149,16 @@ def main():
     pairs, edge_to_pair = build_edge_pairs(edges, adj)
 
     gen_matrices = [
-        [[1,0,1,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,1],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[1,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,1,0,1]],
-        [[1,1,0,0],[0,1,0,0],[0,0,1,0],[0,0,2,1]],
-        [[1,0,0,0],[1,1,0,0],[0,0,1,2],[0,0,0,1]],
-        [[0,0,1,0],[0,1,0,0],[2,0,0,0],[0,0,0,1]],
-        [[1,0,0,0],[0,0,0,1],[0,0,1,0],[0,2,0,0]],
-        [[2,0,0,0],[0,1,0,0],[0,0,2,0],[0,0,0,1]],
-        [[1,0,0,0],[0,2,0,0],[0,0,1,0],[0,0,0,2]],
+        [[1, 0, 1, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 1], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [1, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 1, 0, 1]],
+        [[1, 1, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 2, 1]],
+        [[1, 0, 0, 0], [1, 1, 0, 0], [0, 0, 1, 2], [0, 0, 0, 1]],
+        [[0, 0, 1, 0], [0, 1, 0, 0], [2, 0, 0, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0], [0, 2, 0, 0]],
+        [[2, 0, 0, 0], [0, 1, 0, 0], [0, 0, 2, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 2, 0, 0], [0, 0, 1, 0], [0, 0, 0, 2]],
     ]
 
     pair_gens = []
@@ -182,13 +183,13 @@ def main():
 
     out = {
         "pairs": pairs,
-        "edge_to_pair": {f"{a}-{b}": idx for (a,b), idx in edge_to_pair.items()},
+        "edge_to_pair": {f"{a}-{b}": idx for (a, b), idx in edge_to_pair.items()},
         "pair_generators": pair_gens,
     }
-    out_path = ROOT / 'artifacts' / 'sp43_edgepair_generators.json'
+    out_path = ROOT / "artifacts" / "sp43_edgepair_generators.json"
     out_path.write_text(json.dumps(out, indent=2))
     print(f"Wrote {out_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -17,6 +17,7 @@ Outputs:
 - artifacts/d4_d4_e8_decomposition.json
 - artifacts/d4_d4_e8_decomposition.md
 """
+
 from __future__ import annotations
 
 import json
@@ -52,11 +53,11 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
 
@@ -97,7 +98,7 @@ def build_d4_roots():
     """
     roots = []
     for i in range(4):
-        for j in range(i+1, 4):
+        for j in range(i + 1, 4):
             for si in [1, -1]:
                 for sj in [1, -1]:
                     r = [0, 0, 0, 0]
@@ -113,10 +114,10 @@ def build_e8_roots():
 
     # Type 1: permutations of (±1, ±1, 0, 0, 0, 0, 0, 0) - 112 roots
     for i in range(8):
-        for j in range(i+1, 8):
+        for j in range(i + 1, 8):
             for si in [1, -1]:
                 for sj in [1, -1]:
-                    r = [0]*8
+                    r = [0] * 8
                     r[i] = si
                     r[j] = sj
                     roots.append(tuple(r))
@@ -124,14 +125,14 @@ def build_e8_roots():
     # Type 2: (±1/2, ..., ±1/2) with even number of minus signs - 128 roots
     for signs in product([1, -1], repeat=8):
         if sum(1 for s in signs if s == -1) % 2 == 0:
-            roots.append(tuple(s/2 for s in signs))
+            roots.append(tuple(s / 2 for s in signs))
 
     return roots
 
 
 def root_inner_product(r1, r2):
     """Compute inner product of two roots."""
-    return sum(a*b for a, b in zip(r1, r2))
+    return sum(a * b for a, b in zip(r1, r2))
 
 
 def to_native(obj):
@@ -173,7 +174,7 @@ def main():
 
     results["d4_root_count"] = len(d4_roots)
     results["e8_root_count"] = len(e8_roots)
-    results["d4xd4_pairs"] = len(d4_roots)**2
+    results["d4xd4_pairs"] = len(d4_roots) ** 2
 
     # D4 adjacency structure
     d4_adj = np.zeros((24, 24), dtype=int)
@@ -243,14 +244,16 @@ def main():
             for j, t2 in enumerate(tris):
                 if i < j:
                     idx1, idx2 = tri_index[t1], tri_index[t2]
-                    tri_edges.append({
-                        "base": v0,
-                        "tri1_idx": idx1,
-                        "tri2_idx": idx2,
-                        "tri1": t1,
-                        "tri2": t2,
-                        "position_pair": (i, j)  # Which triangles in the H12
-                    })
+                    tri_edges.append(
+                        {
+                            "base": v0,
+                            "tri1_idx": idx1,
+                            "tri2_idx": idx2,
+                            "tri1": t1,
+                            "tri2": t2,
+                            "position_pair": (i, j),  # Which triangles in the H12
+                        }
+                    )
 
     lines.append("## Triangle Graph Edge Structure")
     lines.append("")
@@ -265,7 +268,9 @@ def main():
         lines.append(f"- Triangles {pair}: {count} edges")
     lines.append("")
 
-    results["position_pair_distribution"] = {str(k): v for k, v in position_dist.items()}
+    results["position_pair_distribution"] = {
+        str(k): v for k, v in position_dist.items()
+    }
 
     # Each position pair gives 40 edges (one per base vertex)
     # 6 pairs × 40 = 240
@@ -424,7 +429,7 @@ def main():
     results["position_pair_duality"] = {
         "(0,1)↔(2,3)": 80,
         "(0,2)↔(1,3)": 80,
-        "(0,3)↔(1,2)": 80
+        "(0,3)↔(1,2)": 80,
     }
 
     # Summary

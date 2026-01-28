@@ -6,12 +6,14 @@ INVARIANT THEORY to classify elements.
 
 Two elements are in the same orbit iff they have the same invariants.
 """
+
 from __future__ import annotations
 
 import json
 from collections import Counter, defaultdict
-from itertools import product, combinations
+from itertools import combinations, product
 from pathlib import Path
+
 import numpy as np
 from numpy.linalg import eigh
 
@@ -39,12 +41,12 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=float)
     edges = []
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
                 edges.append((i, j))
@@ -58,10 +60,10 @@ def construct_e8_roots():
 
     # Type 1: 112 roots
     for i in range(8):
-        for j in range(i+1, 8):
+        for j in range(i + 1, 8):
             for s1 in [1, -1]:
                 for s2 in [1, -1]:
-                    r = [0.0]*8
+                    r = [0.0] * 8
                     r[i], r[j] = float(s1), float(s2)
                     roots.append(np.array(r))
 
@@ -120,16 +122,19 @@ def compute_root_spectrum(roots):
     Use the E8 Cartan matrix eigenstructure.
     """
     # E8 Cartan matrix
-    cartan = np.array([
-        [ 2, -1,  0,  0,  0,  0,  0,  0],
-        [-1,  2, -1,  0,  0,  0,  0,  0],
-        [ 0, -1,  2, -1,  0,  0,  0, -1],
-        [ 0,  0, -1,  2, -1,  0,  0,  0],
-        [ 0,  0,  0, -1,  2, -1,  0,  0],
-        [ 0,  0,  0,  0, -1,  2, -1,  0],
-        [ 0,  0,  0,  0,  0, -1,  2,  0],
-        [ 0,  0, -1,  0,  0,  0,  0,  2],
-    ], dtype=float)
+    cartan = np.array(
+        [
+            [2, -1, 0, 0, 0, 0, 0, 0],
+            [-1, 2, -1, 0, 0, 0, 0, 0],
+            [0, -1, 2, -1, 0, 0, 0, -1],
+            [0, 0, -1, 2, -1, 0, 0, 0],
+            [0, 0, 0, -1, 2, -1, 0, 0],
+            [0, 0, 0, 0, -1, 2, -1, 0],
+            [0, 0, 0, 0, 0, -1, 2, 0],
+            [0, 0, -1, 0, 0, 0, 0, 2],
+        ],
+        dtype=float,
+    )
 
     eigenvalues, eigenvectors = eigh(cartan)
     print(f"E8 Cartan eigenvalues: {np.round(eigenvalues, 3)}")
@@ -139,9 +144,9 @@ def compute_root_spectrum(roots):
     for r in roots:
         # Check if integral or half-integral
         if all(abs(x - round(x)) < 0.01 for x in r):
-            root_types.append('integral')
+            root_types.append("integral")
         else:
-            root_types.append('half')
+            root_types.append("half")
 
     type_counts = Counter(root_types)
     print(f"E8 root types: {type_counts}")
@@ -162,7 +167,7 @@ def compute_edge_algebraic_invariants(edges, adj, vertices):
     # For edge (i,j), count common neighbors
     inv1 = []
     for i, j in edges:
-        common = sum(1 for k in range(n) if adj[i,k] and adj[j,k])
+        common = sum(1 for k in range(n) if adj[i, k] and adj[j, k])
         inv1.append(common)
 
     print(f"Common neighbors: {Counter(inv1)}")
@@ -172,9 +177,9 @@ def compute_edge_algebraic_invariants(edges, adj, vertices):
     inv2 = []
     for i, j in edges:
         # Neighbors of i
-        Ni = set(k for k in range(n) if adj[i,k])
+        Ni = set(k for k in range(n) if adj[i, k])
         # Neighbors of j
-        Nj = set(k for k in range(n) if adj[j,k])
+        Nj = set(k for k in range(n) if adj[j, k])
         # Union minus i,j
         extended = (Ni | Nj) - {i, j}
         inv2.append(len(extended))
@@ -185,7 +190,7 @@ def compute_edge_algebraic_invariants(edges, adj, vertices):
     # How many triangles contain this edge?
     inv3 = []
     for i, j in edges:
-        triangles = sum(1 for k in range(n) if adj[i,k] and adj[j,k])
+        triangles = sum(1 for k in range(n) if adj[i, k] and adj[j, k])
         inv3.append(triangles)
 
     print(f"Triangles containing edge: {Counter(inv3)}")
@@ -210,7 +215,12 @@ def analyze_d4_triality_in_e8(roots):
     # S- representation: coords 4-7 (odd half-integers)
 
     # Classify roots by D4 triality
-    classes = {'D4_vector': [], 'D4_spinor_plus': [], 'D4_spinor_minus': [], 'mixed': []}
+    classes = {
+        "D4_vector": [],
+        "D4_spinor_plus": [],
+        "D4_spinor_minus": [],
+        "mixed": [],
+    }
 
     for idx, r in enumerate(roots):
         # Check if purely in first 4 or last 4 coordinates
@@ -221,20 +231,20 @@ def analyze_d4_triality_in_e8(roots):
         last4_nonzero = sum(1 for x in last4 if abs(x) > 0.01)
 
         if last4_nonzero == 0:
-            classes['D4_vector'].append(idx)
+            classes["D4_vector"].append(idx)
         elif first4_nonzero == 0:
             # Check spinor type
             if all(abs(abs(x) - 0.5) < 0.01 for x in last4 if abs(x) > 0.01):
                 # Half-integer in last 4
                 minus_count = sum(1 for x in last4 if x < -0.01)
                 if minus_count % 2 == 0:
-                    classes['D4_spinor_plus'].append(idx)
+                    classes["D4_spinor_plus"].append(idx)
                 else:
-                    classes['D4_spinor_minus'].append(idx)
+                    classes["D4_spinor_minus"].append(idx)
             else:
-                classes['D4_vector'].append(idx)  # Integer type
+                classes["D4_vector"].append(idx)  # Integer type
         else:
-            classes['mixed'].append(idx)
+            classes["mixed"].append(idx)
 
     for name, indices in classes.items():
         print(f"  {name}: {len(indices)} roots")
@@ -265,17 +275,17 @@ def find_bijection_via_gram_matching():
             s1, s2 = set(e1), set(e2)
             overlap = len(s1 & s2)
             if i == j:
-                edge_gram[i,j] = 2  # Self-loop
+                edge_gram[i, j] = 2  # Self-loop
             elif overlap == 1:
-                edge_gram[i,j] = 1  # Share one vertex
+                edge_gram[i, j] = 1  # Share one vertex
             else:
-                edge_gram[i,j] = 0  # Disjoint
+                edge_gram[i, j] = 0  # Disjoint
 
     # For E8 roots: standard inner product
     root_gram = np.zeros((240, 240))
     for i in range(240):
         for j in range(240):
-            root_gram[i,j] = np.dot(roots[i], roots[j])
+            root_gram[i, j] = np.dot(roots[i], roots[j])
 
     # Compare eigenvalue spectra
     edge_eigs = np.sort(np.linalg.eigvalsh(edge_gram))[::-1]
@@ -347,22 +357,17 @@ def verify_numerical_correspondences():
         "W33 vertices": 40,
         "E8 positive roots": 120,
         "Ratio": 3,
-
         "W33 edges": 240,
         "E8 roots": 240,
         "Match": "YES",
-
         "W33 vertex degree": 12,
         "D4 roots (positive)": 12,
         "Match2": "YES",
-
         "PSp(4,3) order": 25920,
         "W(E6)/2 order": 25920,
         "Match3": "YES",
-
         "Edge stabilizer in PSp(4,3)": 108,
         "Root stabilizer in W(E8)": "varies",
-
         "W33 lambda (SRG)": 2,
         "Common neighbors": 2,
         "E8 root inner products": "0, +-1, +-2",
@@ -438,12 +443,12 @@ and the explicit isomorphism phi: Sp(4,3) -> W(E6).
         "edge_invariant_classes": 1,  # All edges equivalent under PSp(4,3)
         "d4_classes": {k: len(v) for k, v in d4_classes.items()},
         "bijection_type": "group-equivariant",
-        "conclusion": "240 edges <-> 240 roots via Sp(4,3) = W(E6) isomorphism"
+        "conclusion": "240 edges <-> 240 roots via Sp(4,3) = W(E6) isomorphism",
     }
 
     out_path = ROOT / "artifacts" / "algebraic_bijection.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(results, indent=2), encoding='utf-8')
+    out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(f"\nWrote {out_path}")
 
 

@@ -44,10 +44,12 @@ def main() -> int:
     lines.append("")
     lines.append(f"Generated: {now}")
     lines.append("")
-    lines.append("This summarizes hit-rates for low-complexity expression search against a few physics targets.")
+    lines.append(
+        "This summarizes hit-rates for low-complexity expression search against a few physics targets."
+    )
     lines.append(
         "It is intended as a *multiple-comparisons sanity check*: if a target has many close hits in a broad grammar, "
-        "then post-hoc ‘beautiful’ formulas are less evidential." 
+        "then post-hoc ‘beautiful’ formulas are less evidential."
     )
     lines.append("")
 
@@ -79,7 +81,7 @@ def main() -> int:
         tmap = res.get("targets", {})
         for t in targets:
             tinfo = tmap.get(t, {})
-            top = (tinfo.get("top") or [])
+            top = tinfo.get("top") or []
             if not top:
                 lines.append(f"| {t} | n/a | n/a | n/a | n/a |")
                 continue
@@ -96,7 +98,9 @@ def main() -> int:
         lines.append("")
 
         # Hit-rate table
-        lines.append("Hit rates by tolerance (hits within tolerance / expressions scored):")
+        lines.append(
+            "Hit rates by tolerance (hits within tolerance / expressions scored):"
+        )
         lines.append("")
         header = "| target | " + " | ".join([f"≤{tk}%" for tk in tol_keys]) + " |"
         sep = "|---|" + "|".join(["---:"] * len(tol_keys)) + "|"
@@ -123,18 +127,24 @@ def main() -> int:
                 p_list.append(h / n_exprs)
             p_any = 1.0
             for p in p_list:
-                p_any *= (1.0 - p)
+                p_any *= 1.0 - p
             p_any = 1.0 - p_any
-            lines.append("Approx. (naïve) probability of ≥1 hit at ≤0.1% among the 4 targets:")
+            lines.append(
+                "Approx. (naïve) probability of ≥1 hit at ≤0.1% among the 4 targets:"
+            )
             lines.append("")
             lines.append(f"- ~{p_any:.6g} (treating per-target events as independent)")
             lines.append("")
 
     lines.append("## Notes")
     lines.append("")
-    lines.append("- ‘strict’ uses only arithmetic + sqrt + inverse; no π/e/φ, no log/exp.")
+    lines.append(
+        "- ‘strict’ uses only arithmetic + sqrt + inverse; no π/e/φ, no log/exp."
+    )
     lines.append("- ‘medium’ adds π/e/φ but still no log/exp.")
-    lines.append("- ‘full’ (log/exp) is intentionally gated because it tends to make very tight fits easy.")
+    lines.append(
+        "- ‘full’ (log/exp) is intentionally gated because it tends to make very tight fits easy."
+    )
     lines.append("")
     lines.append("To run full mode and regenerate the JSON:")
     lines.append("")

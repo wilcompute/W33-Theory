@@ -121,7 +121,7 @@ print("""
 Z-WIDTH MEASUREMENT (LEP):
 ─────────────────────────────
   N_ν = 2.9840 ± 0.0082
-  
+
 This RULES OUT a 4th light neutrino (m < 45 GeV).
 W33 is CONSISTENT ✓
 
@@ -137,7 +137,7 @@ OBLIQUE PARAMETERS (S, T, U):
 ────────────────────────────────
   S = -0.01 ± 0.10
   T = 0.03 ± 0.12
-  
+
   4th generation requires S ~ 0.2, T ~ 0.2
   Current data disfavors 4th gen by >3σ.
   W33 is CONSISTENT ✓
@@ -250,7 +250,7 @@ Main channel: p → e⁺π⁰
 DUNE (USA)
 ────────────────
 Volume: 40 kt liquid argon
-Timeline: 2029 start  
+Timeline: 2029 start
 Sensitivity: τ_p > 10³⁵ years (p → K⁺ν̄)
 Advantage: Better for kaon modes
 
@@ -269,7 +269,7 @@ Sensitivity: τ_p > 10³⁴ years
 W33 PREDICTION DETAILS:
 ──────────────────────────
   τ_p ∝ (M_GUT)⁴ / (α_GUT)² / m_p⁵
-  
+
 With M_GUT ~ 2×10¹⁶ GeV and α_GUT⁻¹ = 45:
   τ_p ~ 10³⁵ years
 
@@ -571,7 +571,7 @@ W33 is FALSIFIED if ANY of the following occur:
 
   1. 4th generation fermion discovered
   2. sin²θ_W ≠ 40/173 at >5σ
-  3. Ω_DM/Ω_b ≠ 27/5 at >5σ  
+  3. Ω_DM/Ω_b ≠ 27/5 at >5σ
   4. More than 2 GW polarizations detected
   5. α⁻¹ converges away from 137.036
   6. m_t/v ≠ √(40/81) at >5σ

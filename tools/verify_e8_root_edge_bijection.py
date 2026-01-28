@@ -3,6 +3,7 @@
 
 Exit non-zero if any check fails.
 """
+
 from __future__ import annotations
 
 import json

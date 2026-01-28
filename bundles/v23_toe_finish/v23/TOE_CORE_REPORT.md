@@ -16,7 +16,7 @@ It proves an exact field law linking:
 A triangle in Q is a **triad**: a triple of points pairwise noncollinear in H.
 
 ### Z₂ field
-Each edge (u,v) in Q has a canonical voltage w(u,v)∈Z₂.  
+Each edge (u,v) in Q has a canonical voltage w(u,v)∈Z₂.
 Triangle curvature is the parity:
   π(u,v,w)=w(u,v)⊕w(v,w)⊕w(w,u).
 

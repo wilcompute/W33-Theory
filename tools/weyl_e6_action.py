@@ -6,12 +6,14 @@ If not, what are the orbits?
 
 This will clarify the group-theoretic bijection.
 """
+
 from __future__ import annotations
 
 import json
 from collections import Counter, defaultdict
 from itertools import combinations, permutations
 from pathlib import Path
+
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -23,10 +25,10 @@ def construct_e8_roots():
 
     # Type 1: (+-1, +-1, 0^6) permutations: 112 roots
     for i in range(8):
-        for j in range(i+1, 8):
+        for j in range(i + 1, 8):
             for s1 in [1, -1]:
                 for s2 in [1, -1]:
-                    r = [0.0]*8
+                    r = [0.0] * 8
                     r[i], r[j] = s1, s2
                     roots.append(tuple(r))
 
@@ -135,7 +137,7 @@ def analyze_e6_orbits_on_e8():
 
     # Compute orbit of a single E8 root under W(E6)
     test_roots = [
-        e8_roots[0],   # A type-1 root
+        e8_roots[0],  # A type-1 root
         e8_roots[112],  # A type-2 root (half-integer)
     ]
 
@@ -167,7 +169,9 @@ def analyze_e6_orbits_on_e8():
 
         # Compute its orbit
         orbit = compute_weyl_orbit(rep_tuple, e6_roots, max_size=250)
-        orbit_normalized = {normalize_root(r) for r in orbit if normalize_root(r) in remaining}
+        orbit_normalized = {
+            normalize_root(r) for r in orbit if normalize_root(r) in remaining
+        }
 
         orbits.append(orbit_normalized)
         remaining -= orbit_normalized
@@ -242,9 +246,16 @@ def check_alternative_240_sets():
     print(f"E6 roots: {len(e6_roots)}")
 
     # Positive roots
-    e8_positive = [r for r in e8_roots if any(x > 0.01 for x in r) and
-                   (r[0] > 0.01 or (r[0] == 0 and r[1] > 0.01) or
-                    (r[0] == 0 and r[1] == 0 and any(x > 0.01 for x in r)))]
+    e8_positive = [
+        r
+        for r in e8_roots
+        if any(x > 0.01 for x in r)
+        and (
+            r[0] > 0.01
+            or (r[0] == 0 and r[1] > 0.01)
+            or (r[0] == 0 and r[1] == 0 and any(x > 0.01 for x in r))
+        )
+    ]
     print(f"E8 positive roots: {len(e8_positive)} (should be 120)")
 
     # E8 root pairs (root, -root)
@@ -283,12 +294,12 @@ def main():
     results = {
         "e6_orbits_on_e8": [len(o) for o in orbits],
         "psp43_edge_orbits": [240],
-        "conclusion": "W(E6) has multiple orbits on E8, PSp(4,3) is transitive on edges"
+        "conclusion": "W(E6) has multiple orbits on E8, PSp(4,3) is transitive on edges",
     }
 
     out_path = ROOT / "artifacts" / "weyl_e6_action.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(results, indent=2), encoding='utf-8')
+    out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(f"\n\nWrote {out_path}")
 
 

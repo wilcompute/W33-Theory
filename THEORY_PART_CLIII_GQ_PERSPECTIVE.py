@@ -9,15 +9,17 @@ as an incidence geometry: a GENERALIZED QUADRANGLE.
 Let's verify GQ(3, 3) and understand how MUBs fit in.
 """
 
-import numpy as np
-from itertools import combinations
 from collections import defaultdict
+from itertools import combinations
 
-print("="*70)
+import numpy as np
+
+print("=" * 70)
 print("PART CLIII: THE GENERALIZED QUADRANGLE GQ(3, 3)")
-print("="*70)
+print("=" * 70)
 
 omega = np.exp(2j * np.pi / 3)
+
 
 def build_witting_states():
     states = []
@@ -25,37 +27,41 @@ def build_witting_states():
         v = np.zeros(4, dtype=complex)
         v[i] = 1
         states.append(v)
-    
+
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([0, 1, -omega**mu, omega**nu]) / np.sqrt(3))
+            states.append(np.array([0, 1, -(omega**mu), omega**nu]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([1, 0, -omega**mu, -omega**nu]) / np.sqrt(3))
+            states.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([1, -omega**mu, 0, omega**nu]) / np.sqrt(3))
+            states.append(np.array([1, -(omega**mu), 0, omega**nu]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
             states.append(np.array([1, omega**mu, omega**nu, 0]) / np.sqrt(3))
-    
+
     return states
+
 
 states = build_witting_states()
 
+
 def is_orthogonal(i, j):
-    return abs(np.vdot(states[i], states[j]))**2 < 1e-10
+    return abs(np.vdot(states[i], states[j])) ** 2 < 1e-10
+
 
 def get_neighbors(v):
     return set(j for j in range(40) if j != v and is_orthogonal(v, j))
+
 
 # =====================================================
 # GENERALIZED QUADRANGLE BASICS
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("WHAT IS A GENERALIZED QUADRANGLE?")
-print("="*70)
+print("=" * 70)
 
 print("""
 A GENERALIZED QUADRANGLE GQ(s, t) is an incidence structure where:
@@ -84,9 +90,9 @@ For GQ(3, 3):
 # IDENTIFY THE LINES
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("IDENTIFYING THE 40 LINES")
-print("="*70)
+print("=" * 70)
 
 # In Sp₄(3), lines are totally isotropic 2-spaces
 # In quantum terms: orthonormal bases!
@@ -96,13 +102,13 @@ print("="*70)
 # Find all orthonormal bases (quadruples where all pairs orthogonal)
 lines = []
 for a in range(40):
-    for b in range(a+1, 40):
+    for b in range(a + 1, 40):
         if not is_orthogonal(a, b):
             continue
-        for c in range(b+1, 40):
+        for c in range(b + 1, 40):
             if not (is_orthogonal(a, c) and is_orthogonal(b, c)):
                 continue
-            for d in range(c+1, 40):
+            for d in range(c + 1, 40):
                 if is_orthogonal(a, d) and is_orthogonal(b, d) and is_orthogonal(c, d):
                     lines.append(tuple(sorted([a, b, c, d])))
 
@@ -113,9 +119,9 @@ print(f"Found {len(lines)} lines (orthonormal bases)")
 # VERIFY GQ PARAMETERS
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("VERIFYING GQ(3, 3) PARAMETERS")
-print("="*70)
+print("=" * 70)
 
 # Each line has 4 points (s+1 = 4, so s = 3)
 line_sizes = [len(line) for line in lines]
@@ -145,14 +151,16 @@ print(f"Maximum intersection of two lines: {max_intersection} (expected: ≤1)")
 # THE UNIQUE LINE AXIOM
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("VERIFYING THE UNIQUE LINE AXIOM")
-print("="*70)
+print("=" * 70)
 
 # Given point p not on line L, there is unique line through p meeting L
 
+
 def lines_through_point(p):
     return [line for line in lines if p in line]
+
 
 def lines_meeting_line(L):
     meeting = []
@@ -160,6 +168,7 @@ def lines_meeting_line(L):
         if line != L and len(set(line) & set(L)) > 0:
             meeting.append(line)
     return meeting
+
 
 # Test for sample point and line
 test_line = lines[0]
@@ -170,7 +179,9 @@ print(f"Test point p = {test_point} (not on L)")
 
 # Lines through p that meet L
 lines_through_p = lines_through_point(test_point)
-lines_through_p_meeting_L = [l for l in lines_through_p if len(set(l) & set(test_line)) > 0]
+lines_through_p_meeting_L = [
+    l for l in lines_through_p if len(set(l) & set(test_line)) > 0
+]
 
 print(f"Lines through p: {len(lines_through_p)}")
 print(f"Lines through p meeting L: {len(lines_through_p_meeting_L)}")
@@ -184,7 +195,9 @@ for line in lines:
         lines_p = lines_through_point(p)
         lines_p_meeting = [l for l in lines_p if len(set(l) & set(line)) > 0]
         if len(lines_p_meeting) != 1:
-            print(f"FAIL: Point {p}, Line {line} -> {len(lines_p_meeting)} connecting lines")
+            print(
+                f"FAIL: Point {p}, Line {line} -> {len(lines_p_meeting)} connecting lines"
+            )
             axiom_satisfied = False
 
 print(f"Unique line axiom satisfied: {axiom_satisfied}")
@@ -193,9 +206,9 @@ print(f"Unique line axiom satisfied: {axiom_satisfied}")
 # LINES = ORTHONORMAL BASES
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("GEOMETRIC INTERPRETATION")
-print("="*70)
+print("=" * 70)
 
 print("""
 THE KEY INSIGHT:
@@ -217,9 +230,9 @@ The 40 bases = 40 totally isotropic 2-spaces in the symplectic space.
 # CONNECTING GQ TO MUBs
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("GQ(3,3) AND THE MUB SYSTEMS")
-print("="*70)
+print("=" * 70)
 
 print("""
 RECONCILING TWO VIEWS:
@@ -260,9 +273,9 @@ print(f"  Each triangle maps to unique line: {len(triangle_to_line) == 160}")
 # THE DUAL GQ
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("THE DUAL GENERALIZED QUADRANGLE")
-print("="*70)
+print("=" * 70)
 
 print("""
 Since s = t = 3, the GQ(3, 3) is SELF-DUAL!
@@ -286,9 +299,9 @@ print(f"\nThese 4 bases form a 'line' in the dual GQ")
 # SPREADS AND RESOLUTIONS
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SPREADS IN GQ(3, 3)")
-print("="*70)
+print("=" * 70)
 
 print("""
 A SPREAD is a set of lines that partition all points.
@@ -303,6 +316,7 @@ spread = []
 available_lines = list(lines)
 
 import random
+
 random.seed(42)
 random.shuffle(available_lines)
 
@@ -311,7 +325,9 @@ for line in available_lines:
         spread.append(line)
         used_points.update(line)
 
-print(f"Found partial spread with {len(spread)} lines covering {len(used_points)} points")
+print(
+    f"Found partial spread with {len(spread)} lines covering {len(used_points)} points"
+)
 
 if len(spread) == 10:
     print("This is a complete spread!")
@@ -323,9 +339,9 @@ if len(spread) == 10:
 # THE COLLINEARITY GRAPH
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("THE COLLINEARITY GRAPH")
-print("="*70)
+print("=" * 70)
 
 print("""
 The COLLINEARITY GRAPH of GQ(3, 3) has:
@@ -359,9 +375,9 @@ print("Collinearity graph = SRG(40, 12, 2, 4) ✓")
 print("  λ = s - 1 = 2 (collinear points share 2 common neighbors)")
 print("  μ = t + 1 = 4 (non-collinear points share 4 common neighbors)")
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PART CLIII COMPLETE")
-print("="*70)
+print("=" * 70)
 
 print("""
 ╔══════════════════════════════════════════════════════════════════════╗

@@ -7,11 +7,13 @@ intersection-pattern histogram with W(E6) orbit decomposition.
 
 Outputs artifacts/coxeter_gauge_search.json
 """
+
 from __future__ import annotations
 
 import json
 import random
 from collections import Counter, deque
+
 from sage.all import RootSystem, WeylGroup
 
 
@@ -54,7 +56,7 @@ def coxeter_orbits(roots, c5):
 
 
 def we6_orbits(roots, s):
-    gens = [s[i] for i in [1,2,3,4,5,6]]
+    gens = [s[i] for i in [1, 2, 3, 4, 5, 6]]
     remaining = set(roots)
     orbits = []
     while remaining:
@@ -76,13 +78,13 @@ def pattern_hist(c6_orbits, we6_orbits):
 
 
 def main():
-    R8 = RootSystem(['E',8]).ambient_space()
+    R8 = RootSystem(["E", 8]).ambient_space()
     roots = list(R8.roots())
-    W8 = WeylGroup(['E',8])
+    W8 = WeylGroup(["E", 8])
     s = W8.simple_reflections()
 
     we6 = we6_orbits(roots, s)
-    base_perm = list(range(1,9))
+    base_perm = list(range(1, 9))
 
     results = []
     for t in range(20):
@@ -101,7 +103,7 @@ def main():
 
     out = {"trials": results}
     with open("artifacts/coxeter_gauge_search.json", "w", encoding="utf-8") as f:
-        json.dump(out, f, indent=2)
+        json.dump(out, f, indent=2, default=str)
     print("Wrote artifacts/coxeter_gauge_search.json")
 
 

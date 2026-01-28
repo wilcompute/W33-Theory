@@ -13,6 +13,7 @@ A more careful treatment of:
 """
 
 import math
+
 import numpy as np
 
 print("""
@@ -35,20 +36,20 @@ print("""
 v = 246.22  # [GeV] electroweak VEV
 
 # W33 structure (dimensionless geometric counts)
-W33_POINTS = 40      # [pts]
-W33_CYCLES = 81      # [cyc]  
-W33_K4 = 90          # [K4s]
-W33_TOTAL = 121      # [tot]
+W33_POINTS = 40  # [pts]
+W33_CYCLES = 81  # [cyc]
+W33_K4 = 90  # [K4s]
+W33_TOTAL = 121  # [tot]
 
 # Exceptional dimensions (dimensionless)
-E6_FUND = 27         # [E6f]
-E6_ADJ = 78          # [E6a]
-E7_FUND = 56         # [E7f]
-E7_ADJ = 133         # [E7a]
-E8_DIM = 248         # [E8d]
+E6_FUND = 27  # [E6f]
+E6_ADJ = 78  # [E6a]
+E7_FUND = 56  # [E7f]
+E7_ADJ = 133  # [E7a]
+E8_DIM = 248  # [E8d]
 
 # Derived
-R4 = 1111            # 4th repunit
+R4 = 1111  # 4th repunit
 
 print("=" * 78)
 print("SECTION 1: THE Z BOSON MASS")
@@ -59,7 +60,7 @@ print("""
 The Z boson mass is directly related to the electroweak VEV:
 
   m_Z = v / (2 cos θ_W)
-  
+
 where v = 246.22 GeV is our INPUT parameter.
 """)
 
@@ -146,7 +147,7 @@ print()
 # Better approach: use the ρ parameter
 # ρ = m_W² / (m_Z² cos²θ_W) = 1 + Δρ
 
-rho = (m_W_exp / m_Z)**2 / cos2_theta_W
+rho = (m_W_exp / m_Z) ** 2 / cos2_theta_W
 print(f"  ρ PARAMETER:")
 print(f"    ρ = m_W² / (m_Z² × cos²θ_W)")
 print(f"      = ({m_W_exp})² / ({m_Z:.2f}² × {cos2_theta_W:.4f})")
@@ -177,7 +178,9 @@ print()
 
 correction_needed = m_W_exp / m_W_tree
 print(f"  CORRECTION FACTOR ANALYSIS:")
-print(f"    Needed: m_W(exp) / m_W(tree) = {m_W_exp} / {m_W_tree:.2f} = {correction_needed:.5f}")
+print(
+    f"    Needed: m_W(exp) / m_W(tree) = {m_W_exp} / {m_W_tree:.2f} = {correction_needed:.5f}"
+)
 print()
 
 # Try: √(173/133) × √(133/173) = 1
@@ -214,7 +217,9 @@ print(f"  │   With ρ = 1 + 3/121:                                          �
 print(f"  │   m_W(corrected) = {m_W_rho:.2f} GeV                               │")
 print(f"  │                                                                 │")
 print(f"  │   Experimental (PDG): {m_W_exp} GeV                              │")
-print(f"  │   Agreement: {abs(m_W_rho - m_W_exp)/m_W_exp * 100:.1f}%                                            │")
+print(
+    f"  │   Agreement: {abs(m_W_rho - m_W_exp)/m_W_exp * 100:.1f}%                                            │"
+)
 print("  └─────────────────────────────────────────────────────────────────┘")
 print()
 
@@ -410,7 +415,7 @@ print("""
 print("""
 ═══════════════════════════════════════════════════════════════════════════════
                     END OF PART XLVII: GAUGE BOSON MASSES
-                    
+
   KEY RESULTS:
   ════════════
   • m_Z formula refined: v / (2√(133/173)) = 91.01 GeV
@@ -418,8 +423,8 @@ print("""
   • CDF anomaly: if real, implies K4 substructure contributions
   • Photon/gluon: exactly massless (gauge symmetry preserved)
   • Graviton: exactly massless (90/45 = 2 d.o.f. enforces spin-2)
-  
+
   The gauge boson spectrum is COMPLETELY determined by W33!
-  
+
 ═══════════════════════════════════════════════════════════════════════════════
 """)

@@ -99,4 +99,3 @@
 | Antipodal pairs | 0 | 120 |
 
 No antipodal structure - the system lacks ±root symmetry
-

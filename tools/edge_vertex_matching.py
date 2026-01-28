@@ -5,10 +5,11 @@ Each W33 edge connects two rays; each ray has 6 phase vertices. This is a
 bipartite graph where each edge node connects to 12 vertex nodes (6+6).
 We find a perfect matching to obtain an explicit bijection edge -> (ray, phase).
 """
+
 from __future__ import annotations
 
 import json
-from collections import deque, defaultdict
+from collections import defaultdict, deque
 from itertools import product
 from pathlib import Path
 
@@ -37,7 +38,7 @@ def build_projective_points():
 
 
 def omega_sym(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
 
 def build_edges(proj_points):
@@ -50,6 +51,7 @@ def build_edges(proj_points):
 
 
 # Hopcroft-Karp for bipartite matching
+
 
 def hopcroft_karp(adj, n_left, n_right):
     """adj: list of lists; adj[u] gives list of v in right."""
@@ -127,12 +129,14 @@ def main():
     mapping = []
     for e_idx, v_idx in enumerate(pair_u):
         ray, phase = right_nodes[v_idx]
-        mapping.append({
-            "edge_index": e_idx,
-            "edge": edges[e_idx],
-            "ray": ray,
-            "phase": phase,
-        })
+        mapping.append(
+            {
+                "edge_index": e_idx,
+                "edge": edges[e_idx],
+                "ray": ray,
+                "phase": phase,
+            }
+        )
 
     # Check ray usage distribution
     ray_counts = defaultdict(int)
@@ -144,9 +148,11 @@ def main():
         phase_counts[(m["ray"], m["phase"])] += 1
 
     print(f"Ray usage min/max: {min(ray_counts.values())}/{max(ray_counts.values())}")
-    print(f"Ray usage histogram: {dict(sorted((k, list(ray_counts.values()).count(k)) for k in set(ray_counts.values())))}")
+    print(
+        f"Ray usage histogram: {dict(sorted((k, list(ray_counts.values()).count(k)) for k in set(ray_counts.values())))}"
+    )
     ones = sum(1 for v in phase_counts.values() if v == 1)
-    zeros = 40*6 - ones
+    zeros = 40 * 6 - ones
     maxc = max(phase_counts.values())
     print(f"Ray-phase usage: ones={ones} zeros={zeros} max={maxc}")
 

@@ -20,11 +20,12 @@ Strategy:
 2. Use the symplectic structure to get edge relations
 3. Show this extends to E8 roots
 """
+
 from __future__ import annotations
 
 import json
 from collections import Counter, defaultdict
-from itertools import product, combinations
+from itertools import combinations, product
 from pathlib import Path
 
 import numpy as np
@@ -54,12 +55,12 @@ def construct_w33():
 
     def omega(x, y):
         """Symplectic form on F3^4."""
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     edges = []
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
                 edges.append((i, j))
@@ -81,10 +82,10 @@ def build_e6_roots():
 
     # Type 1: +-e_i +- e_j for 1 <= i < j <= 5 (in R^6, using coords 0-4)
     for i in range(5):
-        for j in range(i+1, 5):
+        for j in range(i + 1, 5):
             for si in [1, -1]:
                 for sj in [1, -1]:
-                    r = [0]*6
+                    r = [0] * 6
                     r[i] = si
                     r[j] = sj
                     roots.append(tuple(r))
@@ -95,7 +96,7 @@ def build_e6_roots():
         # Odd number of minus signs among first 5
         if sum(1 for s in signs if s == -1) % 2 == 1:
             for s6 in [1, -1]:
-                r = [s/2 for s in signs] + [s6 * sqrt3 / 2]
+                r = [s / 2 for s in signs] + [s6 * sqrt3 / 2]
                 roots.append(tuple(r))
 
     return np.array(roots, dtype=float)
@@ -105,16 +106,16 @@ def build_e8_roots():
     """Build E8 root system (240 roots in R^8)."""
     roots = []
     for i in range(8):
-        for j in range(i+1, 8):
+        for j in range(i + 1, 8):
             for si in [1, -1]:
                 for sj in [1, -1]:
-                    r = [0]*8
+                    r = [0] * 8
                     r[i] = si
                     r[j] = sj
                     roots.append(tuple(r))
     for signs in product([1, -1], repeat=8):
         if sum(1 for s in signs if s == -1) % 2 == 0:
-            roots.append(tuple(s/2 for s in signs))
+            roots.append(tuple(s / 2 for s in signs))
     return np.array(roots, dtype=float)
 
 
@@ -126,7 +127,7 @@ def f3_to_complex(x):
     2 -> omega^2
     """
     omega = np.exp(2j * np.pi / 3)
-    return omega ** x
+    return omega**x
 
 
 def map_f3_4_to_c4(v):
@@ -139,8 +140,8 @@ def map_f3_4_to_r8(v):
     c4 = map_f3_4_to_c4(v)
     r8 = np.zeros(8)
     for i in range(4):
-        r8[2*i] = c4[i].real
-        r8[2*i+1] = c4[i].imag
+        r8[2 * i] = c4[i].real
+        r8[2 * i + 1] = c4[i].imag
     return r8
 
 
@@ -162,7 +163,7 @@ def explore_f3_to_e6_map(vertices):
     # Check inner products
     ip_counts = Counter()
     for i in range(40):
-        for j in range(i+1, 40):
+        for j in range(i + 1, 40):
             ip = round(np.dot(r8_images[i], r8_images[j]), 4)
             ip_counts[ip] += 1
 
@@ -197,7 +198,7 @@ def explore_edge_encoding(edges, vertices):
     # Check inner products
     ip_counts = Counter()
     for k in range(len(edge_sums)):
-        for l in range(k+1, len(edge_sums)):
+        for l in range(k + 1, len(edge_sums)):
             ip = round(np.dot(edge_sums[k], edge_sums[l]), 4)
             ip_counts[ip] += 1
 
@@ -219,7 +220,7 @@ def explore_edge_encoding(edges, vertices):
 
     ip_counts2 = Counter()
     for k in range(len(edge_diffs)):
-        for l in range(k+1, len(edge_diffs)):
+        for l in range(k + 1, len(edge_diffs)):
             ip = round(np.dot(edge_diffs[k], edge_diffs[l]), 4)
             ip_counts2[ip] += 1
 
@@ -264,7 +265,9 @@ def explore_81_structure(vertices, omega_func):
     # (This is computationally intensive, so we'll just analyze the structure)
 
     print(f"\nSymplectic form decomposes F3^4 into:")
-    print(f"  - Isotropic vectors: those with omega(v,v)=0 (all, since omega is alternating)")
+    print(
+        f"  - Isotropic vectors: those with omega(v,v)=0 (all, since omega is alternating)"
+    )
     print(f"  - Pairs (v,w) with omega(v,w)=0 give W33 edges")
 
     # The 27 might come from fixing one coordinate
@@ -378,9 +381,9 @@ The three triality axes correspond to:
         supp2 = frozenset(k for k in range(4) if v2[k] != 0)
 
         # Check alignment with triality axes
-        V_sets = [frozenset({0,1}), frozenset({2,3})]
-        Sp_sets = [frozenset({0,2}), frozenset({1,3})]
-        Sm_sets = [frozenset({0,3}), frozenset({1,2})]
+        V_sets = [frozenset({0, 1}), frozenset({2, 3})]
+        Sp_sets = [frozenset({0, 2}), frozenset({1, 3})]
+        Sm_sets = [frozenset({0, 3}), frozenset({1, 2})]
 
         if supp1 in V_sets and supp2 in V_sets:
             axis_V += 1
@@ -439,12 +442,13 @@ def search_for_bijection(vertices, edges):
 
     if len(unique_norms) == 1:
         # Normalize and check inner products
-        edge_r8_norm = [r / np.linalg.norm(r) if np.linalg.norm(r) > 0.01 else r
-                        for r in edge_r8]
+        edge_r8_norm = [
+            r / np.linalg.norm(r) if np.linalg.norm(r) > 0.01 else r for r in edge_r8
+        ]
 
         ip_counts = Counter()
         for k in range(len(edge_r8_norm)):
-            for l in range(k+1, len(edge_r8_norm)):
+            for l in range(k + 1, len(edge_r8_norm)):
                 ip = round(np.dot(edge_r8_norm[k], edge_r8_norm[l]), 4)
                 ip_counts[ip] += 1
 
@@ -456,7 +460,7 @@ def search_for_bijection(vertices, edges):
     e8_norm = e8_roots / np.linalg.norm(e8_roots[0])
     e8_ip_counts = Counter()
     for k in range(len(e8_norm)):
-        for l in range(k+1, len(e8_norm)):
+        for l in range(k + 1, len(e8_norm)):
             ip = round(np.dot(e8_norm[k], e8_norm[l]), 4)
             e8_ip_counts[ip] += 1
 
@@ -501,12 +505,12 @@ def main():
             "27_x_3": 81,
             "27bar_x_3bar": 81,
             "total": 240,
-        }
+        },
     }
 
     out_path = ROOT / "artifacts" / "derive_e6_e8_connection.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(results, indent=2), encoding='utf-8')
+    out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(f"\n\nWrote {out_path}")
 
 

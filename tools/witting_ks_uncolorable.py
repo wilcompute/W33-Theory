@@ -5,10 +5,12 @@ We seek a 0/1 assignment to 40 rays such that each tetrad (basis)
 contains exactly one '1'. If no assignment exists, configuration is
 KS-uncolorable (state-independent contextuality).
 """
+
 from __future__ import annotations
 
 import itertools
 from pathlib import Path
+
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -24,9 +26,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -44,8 +46,14 @@ def find_tetrads(rays):
                 ortho[i, j] = ortho[j, i] = True
     tetrads = []
     for a, b, c, d in itertools.combinations(range(n), 4):
-        if (ortho[a, b] and ortho[a, c] and ortho[a, d] and
-                ortho[b, c] and ortho[b, d] and ortho[c, d]):
+        if (
+            ortho[a, b]
+            and ortho[a, c]
+            and ortho[a, d]
+            and ortho[b, c]
+            and ortho[b, d]
+            and ortho[c, d]
+        ):
             tetrads.append((a, b, c, d))
     return tetrads
 

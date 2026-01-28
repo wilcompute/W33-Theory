@@ -5,14 +5,21 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-
 ROOT = Path(__file__).resolve().parents[1]
 
-POINTS_CSV = ROOT / "data/_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv"
+POINTS_CSV = (
+    ROOT
+    / "data/_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv"
+)
 LINES_CSV = ROOT / "data/_sources/w33/W33_lines_tetrads_from_checkpoint_20260109.csv"
 PHASE_MAP_CSV = ROOT / "data/_workbench/02_geometry/W33_line_phase_map.csv"
-CANON_CSV = ROOT / "data/_toe/flux_response_rankings_20260110/line_flux_response_summary.csv"
-NATIVE_CSV = ROOT / "data/_toe/native_fullgrid_20260110/nativeC24_line_flux_response_ranking_summary.csv"
+CANON_CSV = (
+    ROOT / "data/_toe/flux_response_rankings_20260110/line_flux_response_summary.csv"
+)
+NATIVE_CSV = (
+    ROOT
+    / "data/_toe/native_fullgrid_20260110/nativeC24_line_flux_response_ranking_summary.csv"
+)
 OUT_CSV = ROOT / "data/_workbench/02_geometry/line_feature_regression.csv"
 OUT_MD = ROOT / "data/_workbench/02_geometry/line_feature_regression.md"
 
@@ -84,20 +91,30 @@ def main() -> None:
                 "abs_mean_q": abs_mean_q,
                 "sign_mean_q": sign_mean_q,
                 "var_q": var_q,
-                "unique_k_mod6": int(phase["unique_k_mod6"]) if phase is not None else np.nan,
-                "unique_k_mod3": int(phase["unique_k_mod3"]) if phase is not None else np.nan,
-                "canon_mean_abs_delta": float(canon_row["mean_abs_delta"])
-                if canon_row is not None
-                else np.nan,
-                "canon_mean_delta": float(canon_row["mean_delta"])
-                if canon_row is not None
-                else np.nan,
-                "native_mean_abs_delta": float(native_row["mean_abs_delta"])
-                if native_row is not None
-                else np.nan,
-                "native_mean_delta": float(native_row["mean_delta"])
-                if native_row is not None
-                else np.nan,
+                "unique_k_mod6": (
+                    int(phase["unique_k_mod6"]) if phase is not None else np.nan
+                ),
+                "unique_k_mod3": (
+                    int(phase["unique_k_mod3"]) if phase is not None else np.nan
+                ),
+                "canon_mean_abs_delta": (
+                    float(canon_row["mean_abs_delta"])
+                    if canon_row is not None
+                    else np.nan
+                ),
+                "canon_mean_delta": (
+                    float(canon_row["mean_delta"]) if canon_row is not None else np.nan
+                ),
+                "native_mean_abs_delta": (
+                    float(native_row["mean_abs_delta"])
+                    if native_row is not None
+                    else np.nan
+                ),
+                "native_mean_delta": (
+                    float(native_row["mean_delta"])
+                    if native_row is not None
+                    else np.nan
+                ),
             }
         )
 
@@ -128,7 +145,13 @@ def main() -> None:
     }
 
     # Linear regression: predict native_mean_abs_delta from features
-    feats = ["var_q", "abs_mean_q", "unique_k_mod6", "unique_k_mod3", "canon_mean_abs_delta"]
+    feats = [
+        "var_q",
+        "abs_mean_q",
+        "unique_k_mod6",
+        "unique_k_mod3",
+        "canon_mean_abs_delta",
+    ]
     X = df[feats].to_numpy(dtype=float)
     y = df["native_mean_abs_delta"].to_numpy(dtype=float)
     mask = ~np.isnan(X).any(axis=1) & ~np.isnan(y)
@@ -198,4 +221,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

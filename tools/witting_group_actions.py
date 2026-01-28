@@ -7,6 +7,7 @@ We restrict to monomial symmetries that preserve the 4 canonical basis states:
 
 We test which of these symmetries preserve the 40-ray set and the 40 bases.
 """
+
 from __future__ import annotations
 
 import itertools
@@ -28,9 +29,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -93,7 +94,9 @@ def main():
             mapped = []
             ok = True
             for v in rays:
-                w = np.array([phase_tuple[i] * v[perm[i]] for i in range(4)], dtype=complex)
+                w = np.array(
+                    [phase_tuple[i] * v[perm[i]] for i in range(4)], dtype=complex
+                )
                 key = ray_key(w)
                 if key not in ray_map:
                     ok = False

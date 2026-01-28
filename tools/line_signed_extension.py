@@ -5,6 +5,7 @@ We use line permutation + sign cocycle (eps) to define permutations on
 120*2 oriented line elements. This yields a concrete central extension of the
 line action by Z2.
 """
+
 from __future__ import annotations
 
 import json
@@ -71,8 +72,8 @@ def main():
         line_reps.append(rep)
 
     # Load generator perms on roots
-    data = json.loads((ROOT / 'artifacts' / 'sp43_we6_generator_map.json').read_text())
-    gens = [g['root_perm'] for g in data['generator_maps']]
+    data = json.loads((ROOT / "artifacts" / "sp43_we6_generator_map.json").read_text())
+    gens = [g["root_perm"] for g in data["generator_maps"]]
 
     # Build signed line permutations
     signed_gens = []
@@ -108,10 +109,10 @@ def main():
         "state_count": len(line_reps) * 2,
         "max_size": 600000,
     }
-    out_path = ROOT / 'artifacts' / 'signed_line_extension.json'
+    out_path = ROOT / "artifacts" / "signed_line_extension.json"
     out_path.write_text(json.dumps(out, indent=2))
     print(f"Wrote {out_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

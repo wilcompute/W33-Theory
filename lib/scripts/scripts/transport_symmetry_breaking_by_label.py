@@ -10,16 +10,28 @@ import numpy as np
 import pandas as pd
 import scipy.sparse as sp
 
-
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUT_DIR = DATA / "_workbench" / "05_symmetry"
 
 MAP_PATH = OUT_DIR / "coin_c24_2t_alignment_mapping.csv"
-TABLE_PATH = DATA / "_toe" / "projector_recon_20260110" / "binary_tetrahedral_2T_multiplication_table.csv"
-EDGES_PATH = DATA / "_toe" / "projector_recon_20260110" / "N12_58_orbit0_edges_with_2T_connection_20260109T043900Z.csv"
-H_TRANSPORT = DATA / "_toe" / "projector_recon_20260110" / (
-    "N12_58_orbit0_H_transport_59x24_sparse_20260109T205353Z.npz"
+TABLE_PATH = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / "binary_tetrahedral_2T_multiplication_table.csv"
+)
+EDGES_PATH = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / "N12_58_orbit0_edges_with_2T_connection_20260109T043900Z.csv"
+)
+H_TRANSPORT = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / ("N12_58_orbit0_H_transport_59x24_sparse_20260109T205353Z.npz")
 )
 
 
@@ -49,7 +61,9 @@ def load_mapping():
 
 def load_csr_npz(path: Path) -> sp.csr_matrix:
     z = np.load(path, allow_pickle=True)
-    return sp.csr_matrix((z["data"], z["indices"], z["indptr"]), shape=tuple(z["shape"]))
+    return sp.csr_matrix(
+        (z["data"], z["indices"], z["indptr"]), shape=tuple(z["shape"])
+    )
 
 
 def load_edge_labels():
@@ -103,7 +117,9 @@ def main() -> None:
     coin_to_elem, elem_to_coin = load_mapping()
     label_map = load_edge_labels()
 
-    coin_to_group = np.array([elems.index(coin_to_elem[i]) for i in range(24)], dtype=int)
+    coin_to_group = np.array(
+        [elems.index(coin_to_elem[i]) for i in range(24)], dtype=int
+    )
     group_to_coin = np.zeros_like(coin_to_group)
     for coin_idx, g_idx in enumerate(coin_to_group):
         group_to_coin[g_idx] = coin_idx
@@ -127,7 +143,9 @@ def main() -> None:
 
     # Reorder to group basis.
     perm_full = reorder_indices(group_to_coin)
-    H_labels_aligned = {lab: mat.tocsr()[perm_full][:, perm_full] for lab, mat in H_labels.items()}
+    H_labels_aligned = {
+        lab: mat.tocsr()[perm_full][:, perm_full] for lab, mat in H_labels.items()
+    }
     H_total_aligned = sum(H_labels_aligned.values())
 
     # Commutator norms by label and element.
@@ -157,7 +175,9 @@ def main() -> None:
         .reset_index()
         .sort_values("mean", ascending=False)
     )
-    agg.to_csv(OUT_DIR / "transport_symmetry_breaking_by_label_summary.csv", index=False)
+    agg.to_csv(
+        OUT_DIR / "transport_symmetry_breaking_by_label_summary.csv", index=False
+    )
 
     md_path = OUT_DIR / "transport_symmetry_breaking_by_label_summary.md"
     with md_path.open("w", encoding="utf-8") as f:

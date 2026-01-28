@@ -6,6 +6,7 @@ line representative to line representative, else -1. Then the cocycle is
 c(L,g,h)=eps(L,g)*eps(gL,h)/eps(L,gh). Nontriviality witnesses the sign-lift
 obstruction.
 """
+
 from __future__ import annotations
 
 import json
@@ -50,8 +51,8 @@ def main():
         line_reps.append(rep)
 
     # Load generator perms
-    data = json.loads((ROOT / 'artifacts' / 'sp43_we6_generator_map.json').read_text())
-    gens = [g['root_perm'] for g in data['generator_maps']]
+    data = json.loads((ROOT / "artifacts" / "sp43_we6_generator_map.json").read_text())
+    gens = [g["root_perm"] for g in data["generator_maps"]]
 
     # Precompute line permutation and eps for each generator
     gen_line_perm = []
@@ -96,17 +97,23 @@ def main():
             neg_lines = []
             for lid in range(len(line_reps)):
                 lid_g = gen_line_perm[gi][lid]
-                c = gen_eps[gi][lid] * gen_eps[hj][lid_g] * (1 if eps_gh[lid] == 1 else -1)
+                c = (
+                    gen_eps[gi][lid]
+                    * gen_eps[hj][lid_g]
+                    * (1 if eps_gh[lid] == 1 else -1)
+                )
                 if c == -1:
                     neg_lines.append(lid)
             cocycle_counts[len(neg_lines)] += 1
             if neg_lines:
-                cocycle_pairs.append({
-                    "g": gi,
-                    "h": hj,
-                    "neg_lines": neg_lines[:10],
-                    "neg_count": len(neg_lines),
-                })
+                cocycle_pairs.append(
+                    {
+                        "g": gi,
+                        "h": hj,
+                        "neg_lines": neg_lines[:10],
+                        "neg_count": len(neg_lines),
+                    }
+                )
 
     # Summarize
     out = {
@@ -115,10 +122,10 @@ def main():
         "cocycle_neg_line_hist": dict(cocycle_counts),
         "sample_nontrivial_pairs": cocycle_pairs[:20],
     }
-    out_path = ROOT / 'artifacts' / 'root_line_sign_cocycle_stats.json'
+    out_path = ROOT / "artifacts" / "root_line_sign_cocycle_stats.json"
     out_path.write_text(json.dumps(out, indent=2))
     print(f"Wrote {out_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

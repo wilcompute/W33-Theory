@@ -6,6 +6,7 @@ that makes entries closest to {0, 1, w, w^2}. Then we test:
   - whether every ray maps cleanly
   - whether symplectic orthogonality matches ray orthogonality
 """
+
 from __future__ import annotations
 
 import json
@@ -27,15 +28,15 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
 
 def omega_symp(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
 
 def best_f3_point(ray, tol=1e-6):
@@ -99,13 +100,13 @@ def main():
     err_nonzero = sum(1 for e in err_stats if e > 1e-6)
 
     # Build orthogonality matrices
-    ray_orth = [[0]*n for _ in range(n)]
+    ray_orth = [[0] * n for _ in range(n)]
     for i in range(n):
         for j in range(i + 1, n):
             if abs(np.vdot(rays[i], rays[j])) < 1e-8:
                 ray_orth[i][j] = ray_orth[j][i] = 1
 
-    symp_orth = [[0]*n for _ in range(n)]
+    symp_orth = [[0] * n for _ in range(n)]
     for i in range(n):
         for j in range(i + 1, n):
             if omega_symp(f3_points[i], f3_points[j]) == 0:

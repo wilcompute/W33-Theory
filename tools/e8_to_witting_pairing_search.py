@@ -7,11 +7,12 @@ Idea:
 - Identify rays in C^4 (complex scalar multiples).
 - Look for pairings where roots cluster into 40 rays of size 6.
 """
+
 from __future__ import annotations
 
+from collections import Counter, defaultdict
 from fractions import Fraction
 from itertools import combinations
-from collections import Counter, defaultdict
 
 
 def e8_roots():
@@ -67,7 +68,7 @@ def complex_inv(a, b):
 def canonical_ray(vec):
     # vec is list of 4 complex entries (a,b) with a,b Fractions.
     # Normalize by first nonzero component to make it 1+0i.
-    for (a, b) in vec:
+    for a, b in vec:
         if a != 0 or b != 0:
             inv = complex_inv(a, b)
             normed = [complex_mul(x[0], x[1], inv[0], inv[1]) for x in vec]
@@ -85,7 +86,7 @@ def ray_stats_for_pairing(pairing, roots):
     rays = defaultdict(list)
     for idx, r in enumerate(roots):
         vec = []
-        for (a, b) in pairing:
+        for a, b in pairing:
             vec.append((r[a], r[b]))
         key = canonical_ray(vec)
         rays[key].append(idx)
@@ -107,7 +108,9 @@ def main():
             candidates.append(pairing)
             print(f"Found candidate pairing: {pairing}")
         if i % 10 == 0:
-            print(f"Checked {i}/{len(pairings)} pairings... current rays={n_rays}, sizes={dict(sizes)}")
+            print(
+                f"Checked {i}/{len(pairings)} pairings... current rays={n_rays}, sizes={dict(sizes)}"
+            )
 
     print("\nCandidates:")
     for p in candidates:

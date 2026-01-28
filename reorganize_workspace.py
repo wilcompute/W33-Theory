@@ -64,6 +64,7 @@ OTHER_BUNDLES = {
     "commutator_v6": "commutator_alt",
 }
 
+
 def copy_bundle(src_name, dest_name, category="bundles"):
     src = EXTRACTED / src_name
     if not src.exists():
@@ -75,6 +76,7 @@ def copy_bundle(src_name, dest_name, category="bundles"):
     print(f"  {src_name} -> {category}/{dest_name}")
     shutil.copytree(src, dest)
     return True
+
 
 print("=" * 60)
 print("REORGANIZING WORKSPACE")

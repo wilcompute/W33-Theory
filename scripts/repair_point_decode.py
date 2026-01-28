@@ -83,7 +83,11 @@ def build_pair_inversion(
     return inversion
 
 
-def bucket_used_labels(assignments: Dict[int, int], pairs: List[Tuple[int, int]], positions: Dict[int, Position]) -> Dict[str, Set[int]]:
+def bucket_used_labels(
+    assignments: Dict[int, int],
+    pairs: List[Tuple[int, int]],
+    positions: Dict[int, Position],
+) -> Dict[str, Set[int]]:
     used: Dict[str, Set[int]] = {}
     for pos, pair_idx in assignments.items():
         bucket = positions[pos].bucket
@@ -107,7 +111,7 @@ def compute_domains(
         if pos in fixed_positions:
             domains[pos] = set(fixed_pairs)
         elif pos in paired_positions and paired_positions[pos] in assignments:
-            domains[pos] = {pair_inversion[assignments[paired_positions[pos]]]} 
+            domains[pos] = {pair_inversion[assignments[paired_positions[pos]]]}
         else:
             domains[pos] = set(all_pairs)
     return domains
@@ -158,7 +162,12 @@ def solve_decode(
             return assignments_local
 
         domains = compute_domains(
-            positions, fixed_positions, paired_positions, fixed_pairs, pair_inversion, assignments_local
+            positions,
+            fixed_positions,
+            paired_positions,
+            fixed_pairs,
+            pair_inversion,
+            assignments_local,
         )
         next_pos = min(domains, key=lambda p: len(domains[p]))
         domain_list = sorted(domains[next_pos])
@@ -183,19 +192,33 @@ def solve_decode(
                 added.append((partner, partner_pair))
 
             for pos_added, pair_added in added:
-                used_labels.setdefault(positions[pos_added].bucket, set()).update(pairs[pair_added])
+                used_labels.setdefault(positions[pos_added].bucket, set()).update(
+                    pairs[pair_added]
+                )
 
             domain_cache = compute_domains(
-                positions, fixed_positions, paired_positions, fixed_pairs, pair_inversion, new_assignments
+                positions,
+                fixed_positions,
+                paired_positions,
+                fixed_pairs,
+                pair_inversion,
+                new_assignments,
             )
             buckets = {positions[pos].bucket for pos in positions}
-            if all(is_bucket_feasible(bucket, new_assignments, pairs, positions, domain_cache) for bucket in buckets):
+            if all(
+                is_bucket_feasible(
+                    bucket, new_assignments, pairs, positions, domain_cache
+                )
+                for bucket in buckets
+            ):
                 result = backtrack(new_assignments)
                 if result is not None:
                     return result
 
             for pos_added, pair_added in added:
-                used_labels[positions[pos_added].bucket].difference_update(pairs[pair_added])
+                used_labels[positions[pos_added].bucket].difference_update(
+                    pairs[pair_added]
+                )
 
         return None
 
@@ -204,11 +227,27 @@ def solve_decode(
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Repair a partial point decode.")
-    parser.add_argument("--partial-csv", type=Path, required=True, help="CSV with pos,label_u,label_v")
-    parser.add_argument("--bucket-map", type=Path, required=True, help="JSON mapping pos -> bucket")
-    parser.add_argument("--cycle-map", type=Path, required=True, help="JSON with fixed positions and pair cycles")
-    parser.add_argument("--label-inversion", type=Path, required=True, help="JSON mapping label -> inversion(label)")
-    parser.add_argument("--output-csv", type=Path, required=True, help="Output CSV path")
+    parser.add_argument(
+        "--partial-csv", type=Path, required=True, help="CSV with pos,label_u,label_v"
+    )
+    parser.add_argument(
+        "--bucket-map", type=Path, required=True, help="JSON mapping pos -> bucket"
+    )
+    parser.add_argument(
+        "--cycle-map",
+        type=Path,
+        required=True,
+        help="JSON with fixed positions and pair cycles",
+    )
+    parser.add_argument(
+        "--label-inversion",
+        type=Path,
+        required=True,
+        help="JSON mapping label -> inversion(label)",
+    )
+    parser.add_argument(
+        "--output-csv", type=Path, required=True, help="Output CSV path"
+    )
     args = parser.parse_args()
 
     partial_pairs = read_partial_csv(args.partial_csv)
@@ -217,7 +256,9 @@ def main() -> None:
     label_inversion_raw = load_json(args.label_inversion)
     label_inversion = {int(k): int(v) for k, v in label_inversion_raw.items()}
 
-    positions = {pos: Position(pos=pos, bucket=bucket) for pos, bucket in bucket_map.items()}
+    positions = {
+        pos: Position(pos=pos, bucket=bucket) for pos, bucket in bucket_map.items()
+    }
     labels = sorted(label_inversion.keys())
     pairs = build_pairs(labels)
     pair_index = build_pair_index(pairs)
@@ -239,7 +280,10 @@ def main() -> None:
             raise ValueError(f"pos {pos} must be fixed but got non-fixed pair {u}-{v}")
         if pos in paired_positions:
             partner = paired_positions[pos]
-            if partner in assignments and assignments[partner] != pair_inversion[pair_idx]:
+            if (
+                partner in assignments
+                and assignments[partner] != pair_inversion[pair_idx]
+            ):
                 raise ValueError(
                     f"pos {pos} assigned pair {pair_idx} but partner {partner} mismatch"
                 )

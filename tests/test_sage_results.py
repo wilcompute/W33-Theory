@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+
 import pytest
 
 
@@ -7,7 +8,9 @@ def test_part_cvii_sage_results():
     """Ensure PART_CVII_sage_results.json exists and contains expected core values."""
     p = Path("PART_CVII_sage_results.json")
     if not p.exists():
-        pytest.skip("PART_CVII_sage_results.json not found — run the E8 Sage test to generate it")
+        pytest.skip(
+            "PART_CVII_sage_results.json not found — run the E8 Sage test to generate it"
+        )
 
     data = json.loads(p.read_text(encoding="utf-8"))
 

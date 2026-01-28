@@ -39,7 +39,7 @@ Each line ℓ has 4 points (4-outcome observable)
 
 Phase structure:
   Phase (k_mod6, k_mod3) partitions lines by symmetry
-  
+
 Examples:
   (6,3): 11 lines - maximal symmetry
   (5,3): 8 lines - one defect axis
@@ -69,7 +69,7 @@ Physical interpretation:
   Z₈ component (8 values):
     - Could encode: 8 chiralities, 8 helicity combinations, or 8 particles
     - Structure: Z₈ ⊃ Z₄ ⊃ Z₂ (hierarchical)
-    
+
   Z₅ component (5 values):
     - Could encode: 5 localization sectors, 5 coupling strength bins
     - Structure: Z₅ cyclic (pentagonal symmetry)
@@ -81,13 +81,13 @@ Together: 40 quantum states with explicit product structure
 
 ```
 Each line ℓ with phase (k_mod6, k_mod3) is an observable:
-  
+
   Eigenvalue assignment (hypothesis):
     λ_ℓ ∈ {0,1,2,3,4,5} mod 6     (from k_mod6)
     μ_ℓ ∈ {0,1,2} mod 3            (from k_mod3)
-    
+
   Combined eigenvalue: (λ_ℓ, μ_ℓ) ∈ Z₆ × Z₃
-  
+
   Physical meaning:
     λ: encodes defect charge / holonomy constraint
     μ: encodes sector symmetry / localization index
@@ -116,12 +116,12 @@ From N12_58 context:
   - delta4 edges with Z₂ cocycle structure
   - Order-6 holonomy (τ, τ^(-1))
   - Sector charges V₄ = Z₂ × Z₂
-  
+
 In Z₈ × Z₅ structure:
   Z₈ = {0,1,2,3,4,5,6,7}
   Z₈ ⊃ Z₆ (mod prime structure)
   Z₆ ⊃ Z₂ (subgroup)
-  
+
   → Z₈ encodes 6-cycle + parity + one extra bit
   → This matches the holonomy structure!
 ```
@@ -132,7 +132,7 @@ In Z₈ × Z₅ structure:
 Z₅ component with 5 values suggests:
   - 5 localization regions or 5 particle families
   - Each Z₅ element = sector label
-  
+
 From phase (k_mod3):
   k_mod3 ∈ {1,2,3} correlates with:
   - Sector classification
@@ -145,12 +145,12 @@ From phase (k_mod3):
 ```
 Combining indices:
   Particle type = (Z₈ component) × (Z₅ component)
-  
+
 Predicted structure:
   - 8 fundamental types from Z₈
   - 5 localization modes from Z₅
   - 40 total quantum states
-  
+
 Validation:
   Should match mode catalog from native_C24 analysis
   Should match projective classes from N12_58
@@ -176,9 +176,9 @@ For each phase σ = (k_mod6, k_mod3):
   - Collect all lines with that phase
   - Find minimal set that generates (via translation)
   - Identify the symmetry group
-  
+
 Example:
-  Phase (6,3): if these 11 lines form Z₆-orbits, 
+  Phase (6,3): if these 11 lines form Z₆-orbits,
               → U(1) action with eigenvalue 1 (mod 6)
 ```
 
@@ -196,11 +196,11 @@ Aut(W(3,3)) determines:
 ### Step 4: Identify Quantum Numbers
 ```
 For each line ℓ and phase (k_mod6, k_mod3):
-  
+
   Assign quantum numbers:
     Q₆(ℓ) = k_mod6  (holonomy/defect charge)
     Q₃(ℓ) = k_mod3  (sector label)
-  
+
   These should commute with Aut(W(3,3)) action
 ```
 
@@ -210,8 +210,8 @@ Find which of the 40 states correspond to:
   - 12 projective classes from N12_58
   - 14 contexts (measurement bases)
   - Defect-supporting configurations
-  
-This embeds the entire N12_58 contextuality 
+
+This embeds the entire N12_58 contextuality
 within the W(3,3) Z₈ × Z₅ structure.
 ```
 
@@ -222,7 +222,7 @@ Make testable predictions:
   2. Bound state localization thresholds
   3. Coupling strengths and symmetry breaking patterns
   4. Decay/transition rates between states
-  
+
 Validate against:
   - Existing checkpoint data
   - Native C24 calculations
@@ -307,4 +307,3 @@ If this algorithm succeeds, we should find:
 - `data/_docs/BREAKTHROUGH_Z8xZ5_20260112.md` — this discovery
 - N12_58 contextuality from earlier checkpoints
 - Native C24 projector measurements
-

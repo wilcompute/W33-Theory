@@ -11,6 +11,7 @@ This tool:
 3. Compares to E8 root system
 4. Searches for the orthogonal transformation
 """
+
 from __future__ import annotations
 
 import json
@@ -44,8 +45,16 @@ def construct_witting_240():
             for lam in range(3):
                 # (0, +-omega^mu, -+omega^nu, +-omega^lambda)
                 for s1, s2, s3 in product([1, -1], repeat=3):
-                    v = np.array([0, s1*omega**mu, s2*omega**nu, s3*omega**lam], dtype=complex)
-                    for perm in [(0,1,2,3), (1,0,2,3), (2,1,0,3), (3,1,2,0)]:
+                    v = np.array(
+                        [0, s1 * omega**mu, s2 * omega**nu, s3 * omega**lam],
+                        dtype=complex,
+                    )
+                    for perm in [
+                        (0, 1, 2, 3),
+                        (1, 0, 2, 3),
+                        (2, 1, 0, 3),
+                        (3, 1, 2, 0),
+                    ]:
                         vp = v[list(perm)]
                         vertices.append(tuple(vp))
 
@@ -63,7 +72,7 @@ def construct_witting_240():
     seen = set()
     for v in vertices:
         # Round for comparison
-        key = tuple(round(x.real, 6) + 1j*round(x.imag, 6) for x in v)
+        key = tuple(round(x.real, 6) + 1j * round(x.imag, 6) for x in v)
         if key not in seen:
             seen.add(key)
             unique.append(np.array(v))
@@ -93,11 +102,11 @@ def construct_witting_40_rays():
     for mu in range(3):
         for nu in range(3):
             # Group 1: (1/sqrt3)(0, 1, -omega^mu, omega^nu)
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
             # Group 2: (1/sqrt3)(1, 0, -omega^mu, -omega^nu)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
             # Group 3: (1/sqrt3)(1, -omega^mu, 0, omega^nu)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             # Group 4: (1/sqrt3)(1, omega^mu, omega^nu, 0)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
 
@@ -108,8 +117,8 @@ def realify(v):
     """Convert C^4 vector to R^8 vector."""
     result = np.zeros(8)
     for i in range(4):
-        result[2*i] = v[i].real
-        result[2*i + 1] = v[i].imag
+        result[2 * i] = v[i].real
+        result[2 * i + 1] = v[i].imag
     return result
 
 
@@ -118,17 +127,17 @@ def build_e8_roots():
     roots = []
     # Type 1: +-e_i +- e_j (112 roots)
     for i in range(8):
-        for j in range(i+1, 8):
+        for j in range(i + 1, 8):
             for si in [1, -1]:
                 for sj in [1, -1]:
-                    r = [0]*8
+                    r = [0] * 8
                     r[i] = si
                     r[j] = sj
                     roots.append(tuple(r))
     # Type 2: (+-1/2, ..., +-1/2) with even minus signs (128 roots)
     for signs in product([1, -1], repeat=8):
         if sum(1 for s in signs if s == -1) % 2 == 0:
-            roots.append(tuple(s/2 for s in signs))
+            roots.append(tuple(s / 2 for s in signs))
     return np.array(roots, dtype=float)
 
 
@@ -138,7 +147,7 @@ def compute_gram_matrix(vectors):
     gram = np.zeros((n, n))
     for i in range(n):
         for j in range(n):
-            gram[i,j] = np.dot(vectors[i], vectors[j])
+            gram[i, j] = np.dot(vectors[i], vectors[j])
     return gram
 
 
@@ -147,8 +156,8 @@ def analyze_inner_products(gram):
     n = gram.shape[0]
     ip_counts = Counter()
     for i in range(n):
-        for j in range(i+1, n):
-            val = round(gram[i,j], 4)
+        for j in range(i + 1, n):
+            val = round(gram[i, j], 4)
             ip_counts[val] += 1
     return dict(sorted(ip_counts.items()))
 
@@ -224,7 +233,7 @@ def main():
 
     # Construct via phase multiplication of the 40 rays
     omega = np.exp(2j * np.pi / 3)
-    phases = [1, omega, omega**2, -1, -omega, -omega**2]
+    phases = [1, omega, omega**2, -1, -omega, -(omega**2)]
 
     vertices_240 = []
     for ray in rays_40:
@@ -292,12 +301,12 @@ def main():
         },
         "comparison": {
             "witting_240_ips_equal_e8": witting_240_ips == e8_ips,
-        }
+        },
     }
 
     out_path = ROOT / "artifacts" / "witting_e8_realification.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(results, indent=2), encoding='utf-8')
+    out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(f"\nWrote {out_path}")
 
 

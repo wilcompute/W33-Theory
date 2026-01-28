@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Analyze W33 lines vs tetrahedral rays and PG(3,2) trace images."""
+
 from __future__ import annotations
 
 import json
@@ -10,9 +11,11 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT_JSON = ROOT / "artifacts" / "witting_w33_line_trace_tetra_analysis.json"
 OUT_MD = ROOT / "artifacts" / "witting_w33_line_trace_tetra_analysis.md"
 
+
 # GF(4) arithmetic
 def gf4_add(a: int, b: int) -> int:
     return a ^ b
+
 
 def gf4_mul(a: int, b: int) -> int:
     if a == 0 or b == 0:
@@ -26,11 +29,14 @@ def gf4_mul(a: int, b: int) -> int:
     c1 = (c1 + c2) % 2
     return (c1 << 1) | c0
 
+
 def gf4_square(a: int) -> int:
     return gf4_mul(a, a)
 
+
 def gf4_trace(a: int) -> int:
     return gf4_add(a, gf4_square(a)) & 1
+
 
 def gf4_inv(a: int) -> int:
     if a == 0:
@@ -40,9 +46,11 @@ def gf4_inv(a: int) -> int:
             return b
     raise ZeroDivisionError
 
+
 omega = 2
 omega2 = 3
 omega_powers = [1, omega, omega2]
+
 
 def build_base_states():
     states = []
@@ -59,6 +67,7 @@ def build_base_states():
         states.append((1, w_mu, w_nu, 0))
     return states
 
+
 def normalize_projective(v):
     for x in v:
         if x != 0:
@@ -66,17 +75,21 @@ def normalize_projective(v):
             return tuple(gf4_mul(inv, xi) for xi in v)
     return None
 
+
 def hermitian(u, v):
     s = 0
     for a, b in zip(u, v):
         s = gf4_add(s, gf4_mul(a, gf4_square(b)))
     return s
 
+
 def trace_map(v):
     return tuple(gf4_trace(x) for x in v)
 
+
 def weight(p):
     return sum(p)
+
 
 def main():
     base_states = [normalize_projective(s) for s in build_base_states()]
@@ -152,23 +165,37 @@ def main():
 
         tetra_lines_here = sorted(set(ray_to_pgline[v] for v in tetra_in))
         tetra_line_count = len(tetra_lines_here)
-        same_line = (tetra_line_count == 1 and tetra_count == 2)
+        same_line = tetra_line_count == 1 and tetra_count == 2
 
-        stats["distributions"]["tetra_count"][str(tetra_count)] = stats["distributions"]["tetra_count"].get(str(tetra_count), 0) + 1
-        stats["distributions"]["union_size"][str(union_size)] = stats["distributions"]["union_size"].get(str(union_size), 0) + 1
-        stats["distributions"]["union_size_by_tetra"].setdefault(str(tetra_count), {}).setdefault(str(union_size), 0)
-        stats["distributions"]["union_size_by_tetra"][str(tetra_count)][str(union_size)] += 1
-        stats["distributions"]["tetra_line_count"][str(tetra_line_count)] = stats["distributions"]["tetra_line_count"].get(str(tetra_line_count), 0) + 1
-        stats["distributions"]["same_tetra_line"][str(same_line)] = stats["distributions"]["same_tetra_line"].get(str(same_line), 0) + 1
+        stats["distributions"]["tetra_count"][str(tetra_count)] = (
+            stats["distributions"]["tetra_count"].get(str(tetra_count), 0) + 1
+        )
+        stats["distributions"]["union_size"][str(union_size)] = (
+            stats["distributions"]["union_size"].get(str(union_size), 0) + 1
+        )
+        stats["distributions"]["union_size_by_tetra"].setdefault(
+            str(tetra_count), {}
+        ).setdefault(str(union_size), 0)
+        stats["distributions"]["union_size_by_tetra"][str(tetra_count)][
+            str(union_size)
+        ] += 1
+        stats["distributions"]["tetra_line_count"][str(tetra_line_count)] = (
+            stats["distributions"]["tetra_line_count"].get(str(tetra_line_count), 0) + 1
+        )
+        stats["distributions"]["same_tetra_line"][str(same_line)] = (
+            stats["distributions"]["same_tetra_line"].get(str(same_line), 0) + 1
+        )
 
         if tetra_count == 2:
-            stats["tetra_ray_lines"].append({
-                "line": line,
-                "tetra_rays": tetra_in,
-                "tetra_pg_lines": tetra_lines_here,
-                "union_size": union_size,
-                "union": union,
-            })
+            stats["tetra_ray_lines"].append(
+                {
+                    "line": line,
+                    "tetra_rays": tetra_in,
+                    "tetra_pg_lines": tetra_lines_here,
+                    "union_size": union_size,
+                    "union": union,
+                }
+            )
 
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
     OUT_JSON.write_text(json.dumps(stats, indent=2), encoding="utf-8")
@@ -178,15 +205,24 @@ def main():
     lines_out.append("")
     lines_out.append(f"- total W33 lines: {stats['total_lines']}")
     lines_out.append(f"- tetra PG lines: {stats['tetra_pg_lines']}")
-    lines_out.append(f"- tetra_count distribution: {stats['distributions']['tetra_count']}")
-    lines_out.append(f"- union size distribution: {stats['distributions']['union_size']}")
-    lines_out.append(f"- union size by tetra count: {stats['distributions']['union_size_by_tetra']}")
-    lines_out.append(f"- tetra_line_count distribution: {stats['distributions']['tetra_line_count']}")
+    lines_out.append(
+        f"- tetra_count distribution: {stats['distributions']['tetra_count']}"
+    )
+    lines_out.append(
+        f"- union size distribution: {stats['distributions']['union_size']}"
+    )
+    lines_out.append(
+        f"- union size by tetra count: {stats['distributions']['union_size_by_tetra']}"
+    )
+    lines_out.append(
+        f"- tetra_line_count distribution: {stats['distributions']['tetra_line_count']}"
+    )
     lines_out.append(f"- same tetra line? {stats['distributions']['same_tetra_line']}")
 
     OUT_MD.write_text("\n".join(lines_out) + "\n", encoding="utf-8")
     print(f"Wrote {OUT_JSON}")
     print(f"Wrote {OUT_MD}")
+
 
 if __name__ == "__main__":
     main()

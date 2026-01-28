@@ -5,12 +5,13 @@ We test whether the 9 triangles split into 3 groups of 3 (A2^3),
 compute incidence between triangles and line-types (E,C,L), and
 check how triangles intersect the classical double-six structure.
 """
+
 from __future__ import annotations
 
+import json
 from collections import Counter, defaultdict
 from itertools import combinations
 from pathlib import Path
-import json
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -29,18 +30,18 @@ def triangle_types(tri):
 
 def line_category(line):
     t = line[0]
-    if t == 'E':
-        return 'E'
-    if t == 'C':
-        return 'C'
-    return 'L'
+    if t == "E":
+        return "E"
+    if t == "C":
+        return "C"
+    return "L"
 
 
 def double_six_sets():
     # standard double six: a_i, b_i correspond to E_i and C_i
     # We'll treat E_i as a_i and C_i as b_i for indexing
-    A = {('E', i) for i in range(1, 7)}
-    B = {('C', i) for i in range(1, 7)}
+    A = {("E", i) for i in range(1, 7)}
+    B = {("C", i) for i in range(1, 7)}
     return A, B
 
 
@@ -66,10 +67,10 @@ def main():
 
     # build triangle intersection graph (share a line)
     n = len(triangles)
-    tri_adj = [[0]*n for _ in range(n)]
+    tri_adj = [[0] * n for _ in range(n)]
     for i in range(n):
         set_i = set(tuple(x) for x in triangles[i])
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             set_j = set(tuple(x) for x in triangles[j])
             if set_i & set_j:
                 tri_adj[i][j] = tri_adj[j][i] = 1
@@ -87,7 +88,9 @@ def main():
     # triangles already disjoint in edges? check line-sharing
     disjoint_pairs = 0
     for i, j in combinations(range(n), 2):
-        if not (set(tuple(x) for x in triangles[i]) & set(tuple(x) for x in triangles[j])):
+        if not (
+            set(tuple(x) for x in triangles[i]) & set(tuple(x) for x in triangles[j])
+        ):
             disjoint_pairs += 1
 
     # double-six incidence

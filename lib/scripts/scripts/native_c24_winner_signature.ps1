@@ -83,4 +83,3 @@ foreach ($row in $nofluxQ12) {
 
 $lines -join "`n" | Set-Content -Path $outMd -Encoding utf8
 Write-Output "Wrote $outMd"
-

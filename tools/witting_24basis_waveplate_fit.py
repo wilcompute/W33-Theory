@@ -8,6 +8,7 @@ with δ=π/2 for QWP and δ=π for HWP.
 We fit angles α,β,γ in [0,π) such that
 U_target ≈ e^{iχ} QWP(α) HWP(β) QWP(γ).
 """
+
 from __future__ import annotations
 
 import json
@@ -115,21 +116,25 @@ def main():
             U = target_unitary(theta, phi)
             err, angles = fit_angles(U)
             a, b, c = angles
-            basis_ops.append({
-                "i": op["i"],
-                "j": op["j"],
-                "theta": theta,
-                "phi": phi,
-                "qwp1": a,
-                "hwp": b,
-                "qwp2": c,
-                "fit_error": err,
-            })
-        out.append({
-            "basis_index": entry["basis_index"],
-            "rays": entry["rays"],
-            "ops": basis_ops,
-        })
+            basis_ops.append(
+                {
+                    "i": op["i"],
+                    "j": op["j"],
+                    "theta": theta,
+                    "phi": phi,
+                    "qwp1": a,
+                    "hwp": b,
+                    "qwp2": c,
+                    "fit_error": err,
+                }
+            )
+        out.append(
+            {
+                "basis_index": entry["basis_index"],
+                "rays": entry["rays"],
+                "ops": basis_ops,
+            }
+        )
 
     json_path = DOCS / "witting_24basis_waveplates.json"
     json_path.write_text(json.dumps(out, indent=2), encoding="utf-8")

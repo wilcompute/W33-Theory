@@ -45,17 +45,41 @@ class W33DataPaths:
 
     @property
     def rays_csv(self) -> Path:
-        cw = self.claude_workspace / "data" / "_toe" / "w33_orthonormal_phase_solution_20260110" / "W33_point_rays_C4_complex.csv"
+        cw = (
+            self.claude_workspace
+            / "data"
+            / "_toe"
+            / "w33_orthonormal_phase_solution_20260110"
+            / "W33_point_rays_C4_complex.csv"
+        )
         if cw.exists():
             return cw
-        return self.repo_root / "data" / "_toe" / "w33_orthonormal_phase_solution_20260110" / "W33_point_rays_C4_complex.csv"
+        return (
+            self.repo_root
+            / "data"
+            / "_toe"
+            / "w33_orthonormal_phase_solution_20260110"
+            / "W33_point_rays_C4_complex.csv"
+        )
 
     @property
     def lines_csv(self) -> Path:
-        cw = self.claude_workspace / "data" / "_workbench" / "02_geometry" / "W33_line_phase_map.csv"
+        cw = (
+            self.claude_workspace
+            / "data"
+            / "_workbench"
+            / "02_geometry"
+            / "W33_line_phase_map.csv"
+        )
         if cw.exists():
             return cw
-        return self.repo_root / "data" / "_workbench" / "02_geometry" / "W33_line_phase_map.csv"
+        return (
+            self.repo_root
+            / "data"
+            / "_workbench"
+            / "02_geometry"
+            / "W33_line_phase_map.csv"
+        )
 
 
 def load_w33_rays(paths: W33DataPaths) -> np.ndarray:
@@ -86,7 +110,9 @@ def load_w33_lines(paths: W33DataPaths) -> List[Tuple[int, int, int, int]]:
     return lines
 
 
-def simplices_from_lines(lines: Sequence[Tuple[int, int, int, int]]) -> dict[int, List[Tuple[int, ...]]]:
+def simplices_from_lines(
+    lines: Sequence[Tuple[int, int, int, int]],
+) -> dict[int, List[Tuple[int, ...]]]:
     """Build a simplicial complex (flag on each line as a K4).
 
     0-simplices: vertices (0..39)

@@ -7,6 +7,7 @@ Creates a timestamped bundle under verification_bundle/ with:
 - hash manifest
 - summary.json
 """
+
 from __future__ import annotations
 
 import hashlib
@@ -142,10 +143,16 @@ def main() -> None:
     # Hash manifest
     manifest = []
     for path in sorted(copied):
-        manifest.append({"file": str(path.relative_to(bundle)), "sha256": sha256_file(path)})
+        manifest.append(
+            {"file": str(path.relative_to(bundle)), "sha256": sha256_file(path)}
+        )
 
-    (bundle / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
-    (bundle / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
+    (bundle / "manifest.json").write_text(
+        json.dumps(manifest, indent=2), encoding="utf-8"
+    )
+    (bundle / "summary.json").write_text(
+        json.dumps(summary, indent=2), encoding="utf-8"
+    )
 
     print(f"Bundle created: {bundle}")
 

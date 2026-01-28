@@ -37,7 +37,7 @@ r = e2  # = 2
 s = e3  # = -4
 
 # Actually use the standard formulas
-# f = -k(s+1)(k-s) / ((k-r)(k-s-r*s))  
+# f = -k(s+1)(k-s) / ((k-r)(k-s-r*s))
 # g = -k(r+1)(k-r) / ((k-s)(k-r-r*s))
 
 # Simpler: trace(A) = 0 = n*e0 + f*e1 + g*e2

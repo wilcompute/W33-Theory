@@ -4,6 +4,7 @@
 Uses explicit triangle examples with phases ±π/6 and ±π/2.
 Outputs a concise photonic protocol with ray vectors.
 """
+
 from __future__ import annotations
 
 import json
@@ -30,11 +31,11 @@ def construct_witting_40_rays():
 
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
             labels.append(f"(0,1,-w^{mu},w^{nu})/sqrt3")
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
             labels.append(f"(1,0,-w^{mu},-w^{nu})/sqrt3")
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             labels.append(f"(1,-w^{mu},0,w^{nu})/sqrt3")
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
             labels.append(f"(1,w^{mu},w^{nu},0)/sqrt3")
@@ -80,8 +81,12 @@ def main():
 
         f.write("## Notes\n")
         f.write("- Use any standard Pancharatnam/Berry phase interferometer.\n")
-        f.write("- Phase quantization at ±π/6 and ±π/2 is the observed discrete signature.\n")
-        f.write("- This is state‑preparation independent (depends only on ray overlaps).\n")
+        f.write(
+            "- Phase quantization at ±π/6 and ±π/2 is the observed discrete signature.\n"
+        )
+        f.write(
+            "- This is state‑preparation independent (depends only on ray overlaps).\n"
+        )
 
     print(f"Wrote {md_path}")
 

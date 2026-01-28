@@ -10,9 +10,10 @@ Is W33 unique? Special? Necessary?
 This part explores the SELECTION PRINCIPLE for W33.
 """
 
-import numpy as np
 import json
 from itertools import combinations
+
+import numpy as np
 
 print("=" * 70)
 print("W33 THEORY PART LXXXV: WHY W33?")
@@ -42,36 +43,38 @@ could possibly give physics like ours.
 
 # Check which SRGs could give α⁻¹ ≈ 137
 
+
 def check_srg_feasibility(v, k, lam, mu):
     """Check if parameters could form a valid SRG"""
     # Basic counting equation
     if k * (k - lam - 1) != mu * (v - k - 1):
         return False, "Counting equation fails"
-    
+
     # Eigenvalue calculation
-    discriminant = (lam - mu)**2 + 4*(k - mu)
+    discriminant = (lam - mu) ** 2 + 4 * (k - mu)
     if discriminant < 0:
         return False, "Negative discriminant"
-    
+
     sqrt_disc = np.sqrt(discriminant)
     r = (lam - mu + sqrt_disc) / 2
     s = (lam - mu - sqrt_disc) / 2
-    
+
     # Multiplicity calculation
-    f = -k * (s + 1) * (k - s) / ((k + r*s) * (r - s))
-    g = k * (r + 1) * (k - r) / ((k + r*s) * (r - s))
-    
+    f = -k * (s + 1) * (k - s) / ((k + r * s) * (r - s))
+    g = k * (r + 1) * (k - r) / ((k + r * s) * (r - s))
+
     # Check integrality
     if abs(f - round(f)) > 0.001 or abs(g - round(g)) > 0.001:
         return False, "Non-integer multiplicities"
-    
+
     f, g = int(round(f)), int(round(g))
-    
+
     # Check multiplicities sum to v-1
     if f + g != v - 1:
         return False, "Multiplicities don't sum correctly"
-    
+
     return True, (r, s, f, g)
+
 
 # W33 parameters
 v, k, lam, mu = 40, 12, 2, 4
@@ -105,10 +108,10 @@ candidates = []
 for k_test in range(10, 15):  # k around 12
     for mu_test in range(1, 10):
         # We need k² - 2μ + 1 ≈ 137
-        base = k_test**2 - 2*mu_test + 1
+        base = k_test**2 - 2 * mu_test + 1
         if abs(base - 137) > 5:
             continue
-            
+
         # Try various v and λ
         for v_test in range(20, 100):
             for lam_test in range(1, min(k_test, 10)):
@@ -116,23 +119,25 @@ for k_test in range(10, 15):  # k around 12
                 if valid:
                     r, s, f, g = result
                     # Calculate alpha
-                    denom = (k_test - 1) * ((k_test - lam_test)**2 + 1)
+                    denom = (k_test - 1) * ((k_test - lam_test) ** 2 + 1)
                     if denom > 0:
                         alpha_inv = base + v_test / denom
                         if 136.5 < alpha_inv < 137.5:
-                            candidates.append({
-                                'params': (v_test, k_test, lam_test, mu_test),
-                                'eigenvalues': (k_test, r, s),
-                                'multiplicities': (1, f, g),
-                                'alpha_inv': alpha_inv
-                            })
+                            candidates.append(
+                                {
+                                    "params": (v_test, k_test, lam_test, mu_test),
+                                    "eigenvalues": (k_test, r, s),
+                                    "multiplicities": (1, f, g),
+                                    "alpha_inv": alpha_inv,
+                                }
+                            )
 
 print(f"Found {len(candidates)} candidate SRGs with α⁻¹ ≈ 137:\n")
 for c in candidates[:10]:  # Show first 10
-    v, k, l, m = c['params']
+    v, k, l, m = c["params"]
     print(f"  SRG({v}, {k}, {l}, {m}): α⁻¹ = {c['alpha_inv']:.6f}")
-    e1, e2, e3 = c['eigenvalues']
-    m1, m2, m3 = c['multiplicities']
+    e1, e2, e3 = c["eigenvalues"]
+    m1, m2, m3 = c["multiplicities"]
     print(f"    Eigenvalues: {e1}, {e2:.1f}, {e3:.1f} with mult. {m1}, {m2}, {m3}")
 
 # =============================================================================
@@ -155,7 +160,7 @@ Among all candidate SRGs, W33 has UNIQUE properties:
    The field F₃ = {0, 1, 2} has exactly 3 elements.
    3 is the number of:
      - Fermion generations
-     - Colors in QCD  
+     - Colors in QCD
      - Spatial dimensions
 
 3. PERFECT DECOMPOSITION:
@@ -174,9 +179,9 @@ Among all candidate SRGs, W33 has UNIQUE properties:
 # Check the 40 = 1 + 24 + 15 decomposition for other candidates
 print("\nChecking eigenvalue decomposition for other candidates:")
 for c in candidates:
-    v, k, l, m = c['params']
-    m1, m2, m3 = c['multiplicities']
-    
+    v, k, l, m = c["params"]
+    m1, m2, m3 = c["multiplicities"]
+
     # Does it decompose into SU(5) reps?
     if m2 == 24 and m3 == 15:
         print(f"  SRG({v},{k},{l},{m}): {v} = 1 + {m2} + {m3} ✓ SU(5) match!")
@@ -209,7 +214,7 @@ v, k, lam, mu = 40, 12, 2, 4
 e1, e2, e3 = 12, 2, -4
 m1, m2, m3 = 1, 24, 15
 
-alpha_inv = k**2 - 2*mu + 1 + v/((k-1)*((k-lam)**2 + 1))
+alpha_inv = k**2 - 2 * mu + 1 + v / ((k - 1) * ((k - lam) ** 2 + 1))
 edges = v * k // 2
 
 print(f"W33 = SRG(40, 12, 2, 4):")
@@ -274,7 +279,7 @@ Beyond physics, W33 has pure mathematical significance:
    Sp(4, F₃) is related to the symplectic group PSp(4,3)
    |PSp(4,3)| = 25920
    |Aut(W33)| = 51840 = 2 × 25920
-   
+
 2. SPORADIC CONNECTIONS:
    51840 = |W(E₆)| × factor
    W(E₆) is the Weyl group of E₆
@@ -282,11 +287,11 @@ Beyond physics, W33 has pure mathematical significance:
 3. UNIQUE SRG PROPERTIES:
    W33 is one of the few SRGs that is:
    - Vertex-transitive
-   - Edge-transitive  
+   - Edge-transitive
    - Self-complementary (up to isomorphism)
 
 4. CODING THEORY:
-   W33 can be viewed as related to certain 
+   W33 can be viewed as related to certain
    error-correcting codes over F₃
 """)
 
@@ -320,7 +325,7 @@ The number 40 is not arbitrary. It arises from:
 
 3. PROJECTIVE GEOMETRY:
    PG(3, F₃) has (3⁴-1)/(3-1) = 40 points!
-   
+
 4. PHYSICS MEANING:
    40 = 4 × 10 = spacetime × (something)
    40 = 8 × 5 = gauge bosons × families?
@@ -347,7 +352,7 @@ results = {
         "α⁻¹ ≈ 137.036 within 100 ppb",
         "Multiplicities = 1 + 24 + 15 (SU(5))",
         "Symplectic origin over F_p",
-        "240 edges (E₈ roots)"
+        "240 edges (E₈ roots)",
     ],
     "alternative_srgs_found": len(candidates),
     "w33_satisfies_all": True,
@@ -355,8 +360,8 @@ results = {
     "mathematical_uniqueness": {
         "automorphism_order": 51840,
         "vertex_transitive": True,
-        "symplectic_origin": "Sp(4, F_3)"
-    }
+        "symplectic_origin": "Sp(4, F_3)",
+    },
 }
 
 with open("PART_LXXXV_why_w33.json", "w") as f:

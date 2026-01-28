@@ -7,15 +7,17 @@ Each of the 40 states participates in multiple MUB systems.
 How many? Which ones? What pattern?
 """
 
-import numpy as np
-from itertools import combinations
 from collections import defaultdict
+from itertools import combinations
 
-print("="*70)
+import numpy as np
+
+print("=" * 70)
 print("PART CLII: STATE PARTICIPATION IN MUB SYSTEMS")
-print("="*70)
+print("=" * 70)
 
 omega = np.exp(2j * np.pi / 3)
+
 
 def build_witting_states():
     states = []
@@ -23,29 +25,33 @@ def build_witting_states():
         v = np.zeros(4, dtype=complex)
         v[i] = 1
         states.append(v)
-    
+
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([0, 1, -omega**mu, omega**nu]) / np.sqrt(3))
+            states.append(np.array([0, 1, -(omega**mu), omega**nu]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([1, 0, -omega**mu, -omega**nu]) / np.sqrt(3))
+            states.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([1, -omega**mu, 0, omega**nu]) / np.sqrt(3))
+            states.append(np.array([1, -(omega**mu), 0, omega**nu]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
             states.append(np.array([1, omega**mu, omega**nu, 0]) / np.sqrt(3))
-    
+
     return states
+
 
 states = build_witting_states()
 
+
 def is_orthogonal(i, j):
-    return abs(np.vdot(states[i], states[j]))**2 < 1e-10
+    return abs(np.vdot(states[i], states[j])) ** 2 < 1e-10
+
 
 def get_neighbors(v):
     return set(j for j in range(40) if j != v and is_orthogonal(v, j))
+
 
 def get_mub_system(vertex):
     """Get the 4 bases (triangles) at this vertex"""
@@ -64,16 +70,19 @@ def get_mub_system(vertex):
                     triangles.append(tuple(sorted([n1, n2, n3])))
     return triangles
 
+
 # =====================================================
 # HOW MANY MUB SYSTEMS DOES EACH STATE PARTICIPATE IN?
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("STATE PARTICIPATION COUNT")
-print("="*70)
+print("=" * 70)
 
 # For each state, count how many MUB systems it's part of
-participation = defaultdict(set)  # state -> set of vertices whose MUB systems contain it
+participation = defaultdict(
+    set
+)  # state -> set of vertices whose MUB systems contain it
 
 for v in range(40):
     mub_sys = get_mub_system(v)
@@ -97,9 +106,9 @@ for count in sorted(count_dist.keys()):
 # THE PATTERN
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("THE PARTICIPATION PATTERN")
-print("="*70)
+print("=" * 70)
 
 # Let's verify this makes sense
 # State s appears in the MUB system at vertex v if s is a neighbor of v
@@ -125,9 +134,9 @@ print(f"Verified: All states appear in exactly 12 MUB systems: {all_have_12}")
 # WHICH 12 MUB SYSTEMS?
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("WHICH 12 MUB SYSTEMS FOR EACH STATE?")
-print("="*70)
+print("=" * 70)
 
 print("Example: State 0 (|0⟩) appears in MUB systems at vertices:")
 mub_systems_for_0 = sorted(participation[0])
@@ -142,9 +151,9 @@ print(f"  Match: {mub_systems_for_0 == neighbors_of_0}")
 # THE DUAL VIEW: WHICH STATES IN EACH MUB SYSTEM?
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("WHICH STATES IN EACH MUB SYSTEM?")
-print("="*70)
+print("=" * 70)
 
 print("Example: MUB system at vertex 0 contains states:")
 mub_0 = get_mub_system(0)
@@ -153,15 +162,17 @@ for triangle in mub_0:
     all_states_in_0.update(triangle)
 
 print(f"  {sorted(all_states_in_0)}")
-print(f"  These are exactly the 12 neighbors of 0: {sorted(all_states_in_0) == neighbors_of_0}")
+print(
+    f"  These are exactly the 12 neighbors of 0: {sorted(all_states_in_0) == neighbors_of_0}"
+)
 
 # =====================================================
 # THE INCIDENCE MATRIX
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("THE 40×40 PARTICIPATION MATRIX")
-print("="*70)
+print("=" * 70)
 
 print("""
 Define: P[s, v] = 1 if state s is in the MUB system at vertex v
@@ -192,9 +203,9 @@ print(f"Participation matrix equals adjacency matrix: {np.array_equal(P, A)}")
 # TRIANGLES AND THEIR VERTICES
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("THE TRIANGLE-VERTEX DUALITY")
-print("="*70)
+print("=" * 70)
 
 # Collect all triangles
 all_triangles = set()
@@ -226,12 +237,14 @@ for count in sorted(dist.keys()):
 # THE COUNT: 40 * 4 / ?
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("COUNTING FORMULA")
-print("="*70)
+print("=" * 70)
 
 total_triangle_appearances = sum(len(get_mub_system(v)) for v in range(40))
-print(f"Total triangle appearances across all MUB systems: {total_triangle_appearances}")
+print(
+    f"Total triangle appearances across all MUB systems: {total_triangle_appearances}"
+)
 print(f"  = 40 vertices × 4 triangles per system = 160")
 print(f"  = {len(all_triangles)} unique triangles × 1 appearance each")
 print(f"  (Each triangle appears in EXACTLY 1 MUB system!)")
@@ -249,9 +262,9 @@ print(f"\nVerified: Every triangle appears exactly once: {unique_appearances == 
 # THE BEAUTIFUL STRUCTURE
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("THE BEAUTIFUL STRUCTURE THEOREM")
-print("="*70)
+print("=" * 70)
 
 print("""
 ╔══════════════════════════════════════════════════════════════════════╗
@@ -277,9 +290,9 @@ print("""
 # VERIFY THE TRIANGLE COUNT
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("TRIANGLE COUNT VERIFICATION")
-print("="*70)
+print("=" * 70)
 
 # Count triangles from the local structure
 # At vertex 0, we have 4K₃ = 4 triangles among 12 neighbors
@@ -312,20 +325,23 @@ triangles_with_completion = {}
 for triangle in all_triangles:
     # Find the unique 4th vector that completes the basis
     a, b, c = triangle
-    
+
     # Find v such that v ⊥ a, v ⊥ b, v ⊥ c
-    completions = [v for v in range(40) if is_orthogonal(v, a) and 
-                   is_orthogonal(v, b) and is_orthogonal(v, c)]
-    
+    completions = [
+        v
+        for v in range(40)
+        if is_orthogonal(v, a) and is_orthogonal(v, b) and is_orthogonal(v, c)
+    ]
+
     triangles_with_completion[triangle] = completions
 
 # Each triangle should have exactly 1 completion
 completion_counts = [len(c) for c in triangles_with_completion.values()]
 print(f"Each triangle has unique completion: {set(completion_counts) == {1}}")
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PART CLII COMPLETE")
-print("="*70)
+print("=" * 70)
 
 print("""
 GRAND SUMMARY:

@@ -4,6 +4,7 @@
 We search for a partition of 8 classes into 6+2 that minimizes
 inter-group adjacency and analyze adjacency patterns.
 """
+
 from __future__ import annotations
 
 import json
@@ -21,7 +22,7 @@ def main():
 
     # Normalize adjacency by class sizes (approx probability)
     # Compute symmetric normalized adjacency
-    An = [[0]*k for _ in range(k)]
+    An = [[0] * k for _ in range(k)]
     for i in range(k):
         for j in range(k):
             if i == j:

@@ -13,7 +13,8 @@ import numpy as np
 
 from lib.permutation_group import Perm, PermutationGroup
 from lib.simplicial_homology import betti_numbers_via_primes
-from lib.w33_io import W33DataPaths, load_w33_lines, load_w33_rays, simplices_from_lines
+from lib.w33_io import (W33DataPaths, load_w33_lines, load_w33_rays,
+                        simplices_from_lines)
 
 
 def ray_equiv(a: np.ndarray, b: np.ndarray, *, rtol=1e-6, atol=1e-8) -> bool:
@@ -35,7 +36,9 @@ def ray_equiv(a: np.ndarray, b: np.ndarray, *, rtol=1e-6, atol=1e-8) -> bool:
     return np.allclose(a, lam * b, rtol=rtol, atol=atol)
 
 
-def canonical_ray_key(v: np.ndarray, *, eps: float = 1e-12, ndigits: int = 10) -> Tuple[float, ...]:
+def canonical_ray_key(
+    v: np.ndarray, *, eps: float = 1e-12, ndigits: int = 10
+) -> Tuple[float, ...]:
     """Canonicalize a ray up to global phase by dividing by first nonzero entry."""
 
     idx = None
@@ -62,7 +65,12 @@ def build_ray_index(V: np.ndarray) -> Dict[Tuple[float, ...], List[int]]:
     return idx
 
 
-def induced_point_permutation_from_unitary(V: np.ndarray, U: np.ndarray, *, ray_index: Dict[Tuple[float, ...], List[int]] | None = None) -> Perm | None:
+def induced_point_permutation_from_unitary(
+    V: np.ndarray,
+    U: np.ndarray,
+    *,
+    ray_index: Dict[Tuple[float, ...], List[int]] | None = None,
+) -> Perm | None:
     """If U sends the set of rays to itself, return the induced permutation of point ids."""
 
     V_new = (U @ V.T).T
@@ -149,12 +157,16 @@ def monomial_z12_generators(
         for k1 in range(root_order):
             for k2 in range(root_order):
                 for k3 in range(root_order):
-                    D = np.diag([1.0 + 0j, roots[k1], roots[k2], roots[k3]]).astype(np.complex128)
+                    D = np.diag([1.0 + 0j, roots[k1], roots[k2], roots[k3]]).astype(
+                        np.complex128
+                    )
                     U = D @ P
 
                     checked += 1
                     if checked % progress_every == 0:
-                        print(f"  checked {checked} monomial candidates; generators={len(gens)}")
+                        print(
+                            f"  checked {checked} monomial candidates; generators={len(gens)}"
+                        )
 
                     # fast prune: check a small sample maps to *some* ray
                     V_new = (U @ V.T).T
@@ -168,7 +180,9 @@ def monomial_z12_generators(
                     if not ok:
                         continue
 
-                    perm_pts = induced_point_permutation_from_unitary(V, U, ray_index=ray_index)
+                    perm_pts = induced_point_permutation_from_unitary(
+                        V, U, ray_index=ray_index
+                    )
                     if perm_pts is None:
                         continue
                     if perm_pts not in gens:

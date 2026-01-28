@@ -71,4 +71,3 @@ In the full W33, are vertices from different triangles connected?
   T3: [0, 0, 0, 0]
 
 Total inter-triangle edges: 0
-

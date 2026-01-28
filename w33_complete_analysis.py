@@ -5,18 +5,18 @@ W33 Complete Analysis - Comprehensive Mathematical Exploration
 This script performs a complete analysis of W33 and its connections to:
 - Monstrous Moonshine and the j-function
 - The ternary Golay code and M12
-- K3 surfaces and Mathieu moonshine  
+- K3 surfaces and Mathieu moonshine
 - Niemeier lattices and umbral moonshine
 - Physics predictions (α, sin²θ_W, Ω_Λ)
 
 All outputs are saved to files for reference.
 """
 
-import math
 import json
+import math
 import os
-from fractions import Fraction
 from datetime import datetime
+from fractions import Fraction
 
 # Output directory
 OUTPUT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -34,7 +34,7 @@ results = {
     "niemeier_connections": {},
     "numerical_coincidences": [],
     "master_equations": [],
-    "open_questions": []
+    "open_questions": [],
 }
 
 print("=" * 80)
@@ -56,8 +56,8 @@ w33 = {
     "field_size": 3,
     "projective_dimension": 3,
     "points": 40,  # (3^4 - 1)/(3 - 1) = 80/2 = 40
-    "lines": 40,   # By duality
-    "cycles": 81,  # 3^4 
+    "lines": 40,  # By duality
+    "cycles": 81,  # 3^4
     "k4s": 90,
     "total_elements": 121,  # 40 + 81 or 11^2
     "automorphism_group": "W(E6)",
@@ -110,29 +110,31 @@ sin2_error = abs(sin2_w_w33_float - sin2_w_measured) / sin2_w_measured * 100
 omega_lambda_measured = 0.6889  # Planck 2018
 omega_lambda_w33 = Fraction(81, 121)
 omega_lambda_w33_float = float(omega_lambda_w33)
-omega_error = abs(omega_lambda_w33_float - omega_lambda_measured) / omega_lambda_measured * 100
+omega_error = (
+    abs(omega_lambda_w33_float - omega_lambda_measured) / omega_lambda_measured * 100
+)
 
 physics = {
     "fine_structure_constant": {
         "formula": "α⁻¹ = 81 + 56 = |cycles| + (dim(E7) - 25)",
         "predicted": alpha_inv_w33,
         "measured": alpha_inv_measured,
-        "error_percent": round(alpha_error, 4)
+        "error_percent": round(alpha_error, 4),
     },
     "weinberg_angle": {
         "formula": "sin²θ_W = 40/173 = |points|/173",
         "predicted": str(sin2_w_w33),
         "predicted_float": sin2_w_w33_float,
         "measured": sin2_w_measured,
-        "error_percent": round(sin2_error, 6)
+        "error_percent": round(sin2_error, 6),
     },
     "dark_energy_fraction": {
         "formula": "Ω_Λ = 81/121 = |cycles|/|total|",
         "predicted": str(omega_lambda_w33),
         "predicted_float": omega_lambda_w33_float,
         "measured": omega_lambda_measured,
-        "error_percent": round(omega_error, 2)
-    }
+        "error_percent": round(omega_error, 2),
+    },
 }
 
 # Product relationship
@@ -143,7 +145,7 @@ physics["product_relationship"] = {
     "formula": "α⁻¹ × sin²θ_W ≈ 744/24",
     "w33_product": round(product_w33, 6),
     "moonshine_ratio": product_moonshine,
-    "difference": round(product_w33 - product_moonshine, 6)
+    "difference": round(product_w33 - product_moonshine, 6),
 }
 
 results["physics_predictions"] = physics
@@ -205,24 +207,24 @@ moonshine = {
         "order_scientific": f"≈ 8.08 × 10^53",
         "divisible_by_121": div_121,
         "power_of_11": power_11,
-        "note": f"11^{power_11} = {11**power_11} = |W33 total|^{power_11//2}"
+        "note": f"11^{power_11} = {11**power_11} = |W33 total|^{power_11//2}",
     },
     "j_function": {
         "constant_term": j_constant,
         "first_coefficient": j_first_coeff,
         "expansion": "j(τ) = q⁻¹ + 744 + 196884q + 21493760q² + ...",
-        "744_decomposition": "744 = 729 + 15 = 3^6 + 15 = 9×81 + 15"
+        "744_decomposition": "744 = 729 + 15 = 3^6 + 15 = 9×81 + 15",
     },
     "ramanujan_tau": {
         "tau_11": tau_11,
         "tau_11_factored": f"τ(11) = 121 × {tau_11_div_121} = 11² × {tau_11_div_121}",
-        "divisible_by_w33": True
+        "divisible_by_w33": True,
     },
     "mckay_observation": {
         "formula": "196884 = 196883 + 1",
         "196883": "smallest nontrivial Monster irrep dimension",
-        "mod_121": 196883 % 121
-    }
+        "mod_121": 196883 % 121,
+    },
 }
 
 results["moonshine_connections"] = moonshine
@@ -263,21 +265,21 @@ ternary = {
         "codewords": 729,  # 3^6
         "automorphism": "M11",
         "extended_automorphism": "2.M12",
-        "connection_to_w33": "729 = 9 × 81 = 9 × |W33 cycles|"
+        "connection_to_w33": "729 = 9 × 81 = 9 × |W33 cycles|",
     },
     "coxeter_todd_k12": {
         "name": "Coxeter-Todd Lattice K12",
         "dimension": 12,
         "minimal_vectors": 756,
         "automorphism_involves": "PSU(4, GF(3))",
-        "connection": "Sublattice of Leech fixed by order-3 automorphism"
+        "connection": "Sublattice of Leech fixed by order-3 automorphism",
     },
     "complex_leech": {
         "name": "Complex Leech Lattice",
         "complex_dimension": 12,
         "base_ring": "Eisenstein integers Z[ω], ω³=1",
         "construction": "Built from ternary Golay code",
-        "mathieu_group": "M12 (not M24!)"
+        "mathieu_group": "M12 (not M24!)",
     },
     "key_equation": "744 = 729 + 15 = |Ternary Golay| + dim(so(6))",
     "power_table": {
@@ -289,8 +291,8 @@ ternary = {
         "3^5": 243,
         "3^6": 729,
         "3^7": 2187,
-        "3^8": 6561
-    }
+        "3^8": 6561,
+    },
 }
 
 results["ternary_universe"] = ternary
@@ -327,13 +329,13 @@ k3 = {
     "mathieu_moonshine": {
         "discovery": "Eguchi-Ooguri-Tachikawa (2010)",
         "phenomenon": "K3 elliptic genus decomposes into M24 representations",
-        "mystery": "No faithful M24 action on any K3 surface (Mukai-Kondo)"
+        "mystery": "No faithful M24 action on any K3 surface (Mukai-Kondo)",
     },
     "connections_to_w33": {
         "euler_24_niemeier": "χ(K3) = 24 = number of Niemeier lattices",
         "betti_22_11": "b₂(K3) = 22 = 2 × 11, and 11² = 121 = |W33|",
-        "m12_in_m24": "M12 ⊂ M24, and M12 acts on ternary Golay"
-    }
+        "m12_in_m24": "M12 ⊂ M24, and M12 acts on ternary Golay",
+    },
 }
 
 results["k3_connections"] = k3
@@ -362,16 +364,26 @@ niemeier = {
     "definition": "24 positive definite even unimodular lattices of rank 24",
     "key_lattices": [
         {"name": "Leech", "roots": 0, "coxeter": None, "automorphism": "2.Co₁"},
-        {"name": "A₁²⁴", "roots": 48, "coxeter": 2, "automorphism": "M24 (binary Golay)"},
-        {"name": "A₂¹²", "roots": 72, "coxeter": 3, "automorphism": "M12 (ternary Golay)"},
+        {
+            "name": "A₁²⁴",
+            "roots": 48,
+            "coxeter": 2,
+            "automorphism": "M24 (binary Golay)",
+        },
+        {
+            "name": "A₂¹²",
+            "roots": 72,
+            "coxeter": 3,
+            "automorphism": "M12 (ternary Golay)",
+        },
         {"name": "E₆⁴", "roots": 288, "coxeter": 12, "automorphism": "W(E6)⁴ related"},
-        {"name": "E₈³", "roots": 720, "coxeter": 30, "automorphism": "W(E8)³"}
+        {"name": "E₈³", "roots": 720, "coxeter": 30, "automorphism": "W(E8)³"},
     ],
     "w33_connections": {
         "A2_12": "Coxeter number 3 = |GF(3)|, Aut involves M12",
-        "E6_4": "W(E6) = Aut(W33) = 51840"
+        "E6_4": "W(E6) = Aut(W33) = 51840",
     },
-    "umbral_moonshine": "Each Niemeier lattice ↔ mock modular forms (Cheng-Duncan-Harvey)"
+    "umbral_moonshine": "Each Niemeier lattice ↔ mock modular forms (Cheng-Duncan-Harvey)",
 }
 
 results["niemeier_connections"] = niemeier
@@ -400,18 +412,42 @@ coincidences = [
     {"lhs": "121", "rhs": "40 + 81", "significance": "|points| + |cycles|"},
     {"lhs": "81", "rhs": "3⁴", "significance": "|cycles| = power of field size"},
     {"lhs": "729", "rhs": "9 × 81", "significance": "|Ternary Golay| = 9 × |cycles|"},
-    {"lhs": "744", "rhs": "729 + 15", "significance": "j-constant = |Golay| + dim(so(6))"},
+    {
+        "lhs": "744",
+        "rhs": "729 + 15",
+        "significance": "j-constant = |Golay| + dim(so(6))",
+    },
     {"lhs": "744", "rhs": "24 × 31", "significance": "j-constant = χ(K3) × 31"},
     {"lhs": "51840", "rhs": "|W(E6)|", "significance": "Aut(W33) = Weyl group of E6"},
     {"lhs": "51840", "rhs": "2⁷ × 3⁴ × 5", "significance": "Contains 3⁴ = 81"},
-    {"lhs": "τ(11)", "rhs": "121 × 4419", "significance": "Ramanujan tau divisible by |W33|"},
-    {"lhs": "196883 mod 121", "rhs": "16 = 2⁴", "significance": "Monster rep mod |W33|"},
+    {
+        "lhs": "τ(11)",
+        "rhs": "121 × 4419",
+        "significance": "Ramanujan tau divisible by |W33|",
+    },
+    {
+        "lhs": "196883 mod 121",
+        "rhs": "16 = 2⁴",
+        "significance": "Monster rep mod |W33|",
+    },
     {"lhs": "137", "rhs": "81 + 56", "significance": "α⁻¹ = |cycles| + 56"},
-    {"lhs": "40/173", "rhs": "sin²θ_W", "significance": "|points|/173 = Weinberg angle EXACT"},
+    {
+        "lhs": "40/173",
+        "rhs": "sin²θ_W",
+        "significance": "|points|/173 = Weinberg angle EXACT",
+    },
     {"lhs": "81/121", "rhs": "Ω_Λ", "significance": "|cycles|/|total| ≈ dark energy"},
-    {"lhs": "α⁻¹ × sin²θ_W", "rhs": "≈ 744/24", "significance": "Physics × j-constant/χ(K3)"},
+    {
+        "lhs": "α⁻¹ × sin²θ_W",
+        "rhs": "≈ 744/24",
+        "significance": "Physics × j-constant/χ(K3)",
+    },
     {"lhs": "22", "rhs": "2 × 11", "significance": "b₂(K3) contains prime 11"},
-    {"lhs": "24", "rhs": "# Niemeier", "significance": "χ(K3) = Niemeier count = Leech dim"},
+    {
+        "lhs": "24",
+        "rhs": "# Niemeier",
+        "significance": "χ(K3) = Niemeier count = Leech dim",
+    },
 ]
 
 results["numerical_coincidences"] = coincidences
@@ -467,7 +503,7 @@ questions = [
     "Q7: What mock modular form encodes W33 structure?",
     "Q8: Can we derive fermion masses from W33?",
     "Q9: What is the physical meaning of 81 cycles?",
-    "Q10: Is W33 the 'shadow' mathematics behind physics?"
+    "Q10: Is W33 the 'shadow' mathematics behind physics?",
 ]
 
 results["open_questions"] = questions
@@ -484,7 +520,7 @@ print("SAVING RESULTS")
 print("=" * 80)
 
 # Save JSON results
-with open(RESULTS_FILE, 'w') as f:
+with open(RESULTS_FILE, "w") as f:
     json.dump(results, f, indent=2, default=str)
 print(f"Results saved to: {RESULTS_FILE}")
 
@@ -582,7 +618,7 @@ report += """
 W33 may be that structure.
 """
 
-with open(REPORT_FILE, 'w', encoding='utf-8') as f:
+with open(REPORT_FILE, "w", encoding="utf-8") as f:
     f.write(report)
 print(f"Report saved to: {REPORT_FILE}")
 

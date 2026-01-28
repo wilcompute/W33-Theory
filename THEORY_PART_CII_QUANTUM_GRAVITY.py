@@ -2,9 +2,9 @@
 """
 ═══════════════════════════════════════════════════════════════════════════════
                THEORY OF EVERYTHING - PART CII (102)
-               
+
                QUANTUM GRAVITY, NEUTRINO MASSES, AND EVOLVING DARK ENERGY
-               
+
                The W33 Framework Addresses the Deepest Questions in Physics
 ═══════════════════════════════════════════════════════════════════════════════
 
@@ -23,9 +23,10 @@ Date: January 2026
 Part: CII (102) of the Theory of Everything
 """
 
-import numpy as np
 import json
 from datetime import datetime
+
+import numpy as np
 
 print("═" * 80)
 print("              THEORY OF EVERYTHING - PART CII")
@@ -40,15 +41,15 @@ print("═" * 80)
 # ═══════════════════════════════════════════════════════════════════════════════
 
 # W33 Structure Numbers
-v_W33 = 40      # Points (particles)
-k_W33 = 12      # Valency (connections)
+v_W33 = 40  # Points (particles)
+k_W33 = 12  # Valency (connections)
 lambda_W33 = 2  # Common neighbors (adjacent)
-mu_W33 = 4      # Common neighbors (non-adjacent)
+mu_W33 = 4  # Common neighbors (non-adjacent)
 
 # Eigenvalues and Multiplicities
 eig_principal = k_W33  # 12
-eig_second = 2         # 2 (multiplicity 24)
-eig_third = -4         # -4 (multiplicity 15)
+eig_second = 2  # 2 (multiplicity 24)
+eig_third = -4  # -4 (multiplicity 15)
 mult_one = 1
 mult_second = 24
 mult_third = 15
@@ -72,7 +73,7 @@ Aut_W33 = 51840  # |W(E₆)|
 v_EW = 246.22  # Electroweak VEV in GeV
 M_Z = 91.1876  # Z boson mass in GeV
 M_Planck = 1.221e19  # Planck mass in GeV
-alpha_em = 1/137.036
+alpha_em = 1 / 137.036
 hbar_c = 0.197327  # GeV·fm
 
 print("\n" + "=" * 80)
@@ -155,14 +156,19 @@ ratio_exp = Delta_m31_sq_exp / Delta_m21_sq_exp
 print(f"\nExperimental ratio: Δm²₃₁/Δm²₂₁ = {ratio_exp:.2f}")
 
 # W33 prediction for ratio
-ratio_W33 = cycles_W33 / (lambda_W33 + mu_W33 + 1/cycles_W33)
+ratio_W33 = cycles_W33 / (lambda_W33 + mu_W33 + 1 / cycles_W33)
 print(f"W33 prediction: 81/(2+4+1/81) = {ratio_W33:.2f}")
 
-ratio_alt = (eig_principal - eig_third) / (eig_second - eig_third) * E6_fund / (eig_principal - eig_second)
+ratio_alt = (
+    (eig_principal - eig_third)
+    / (eig_second - eig_third)
+    * E6_fund
+    / (eig_principal - eig_second)
+)
 print(f"Alternative: (12-(-4))/(2-(-4)) × 27/(12-2) = {ratio_alt:.2f}")
 
 # Best W33 formula for mass splitting ratio
-ratio_best = (cycles_W33 - E6_fund/2) / (mu_W33 - lambda_W33 + 0.57)
+ratio_best = (cycles_W33 - E6_fund / 2) / (mu_W33 - lambda_W33 + 0.57)
 print(f"Optimized: (81-13.5)/(4-2+0.57) = {ratio_best:.2f}")
 
 print("\n" + "=" * 80)
@@ -220,17 +226,17 @@ print(f"  This gives: λ_C > {lambda_C_W33:.2e} m (effectively massless)")
 # In W33: M_Planck/v ~ 3^(33/2) × sqrt(121/40)
 
 M_P_over_v = M_Planck / v_EW
-W33_ratio = (3**(33/2)) * np.sqrt(total_W33 / v_W33)
+W33_ratio = (3 ** (33 / 2)) * np.sqrt(total_W33 / v_W33)
 print(f"\n  M_Planck/v = {M_P_over_v:.2e}")
 print(f"  W33 prediction: 3^(33/2) × √(121/40) = {W33_ratio:.2e}")
 
 # Graviton-matter coupling
-alpha_grav = (v_EW / M_Planck)**2
+alpha_grav = (v_EW / M_Planck) ** 2
 print(f"\n  Gravitational fine structure constant: α_G = (v/M_P)² = {alpha_grav:.2e}")
 print(f"  Ratio α_em/α_G = {alpha_em/alpha_grav:.2e}")
 
 # W33 explanation: α_G ~ 1/Aut(W33) × (40/121)²
-alpha_G_W33 = (1/Aut_W33) * (v_W33/total_W33)**2
+alpha_G_W33 = (1 / Aut_W33) * (v_W33 / total_W33) ** 2
 print(f"  W33: α_G ~ (1/51840) × (40/121)² = {alpha_G_W33:.2e}")
 
 print("\n" + "=" * 80)
@@ -272,8 +278,8 @@ print()
 # DESI suggests w is slightly evolving: w(z) = w₀ + w_a × z/(1+z)
 
 w_0 = -0.827  # DESI 2025 best fit
-w_a = -0.75   # DESI 2025 best fit
-w_CC = -1.0   # Cosmological constant
+w_a = -0.75  # DESI 2025 best fit
+w_CC = -1.0  # Cosmological constant
 
 print("DESI 2025 Equation of State Parameters:")
 print(f"  w₀ = {w_0:.3f} (constant term)")
@@ -305,7 +311,7 @@ print(f"  DESI measurement: w₀ = {w_0:.3f}")
 
 # w_a from W33
 # The evolution rate w_a ~ -cycles/total × (some W33 factor)
-w_a_W33 = -cycles_W33 / total_W33 * (eig_principal/10)
+w_a_W33 = -cycles_W33 / total_W33 * (eig_principal / 10)
 print(f"\n  W33 prediction: w_a ~ -81/121 × 1.2 = {w_a_W33:.3f}")
 print(f"  DESI measurement: w_a = {w_a:.3f}")
 
@@ -388,45 +394,47 @@ predictions = {
         "W33_prediction": "0.06-0.08 eV (normal ordering)",
         "Current_bound": "< 0.12 eV (Planck+BAO)",
         "Test": "KATRIN final (2027), DUNE, Hyper-K",
-        "W33_formula": "Σm_ν ~ v²/M_P × (27/240) × 3 generations"
+        "W33_formula": "Σm_ν ~ v²/M_P × (27/240) × 3 generations",
     },
     "Mass Hierarchy": {
         "Observable": "Normal vs Inverted ordering",
         "W33_prediction": "NORMAL ordering (m₁ < m₂ < m₃)",
         "Reason": "W33 eigenvalue structure: 12 > 2 > -4",
-        "Test": "JUNO (2025), DUNE (2027+)"
+        "Test": "JUNO (2025), DUNE (2027+)",
     },
     "Dark Energy Evolution": {
         "Observable": "w₀ and w_a parameters",
         "W33_prediction": "w₀ = -0.826, w_a = -0.80",
         "Current_value": "w₀ = -0.83 ± 0.06, w_a = -0.75 ± 0.25",
         "Test": "DESI full data (2026), Euclid, Roman",
-        "W33_formula": "w₀ = -1 + (40-27+8)/121"
+        "W33_formula": "w₀ = -1 + (40-27+8)/121",
     },
     "Graviton Mass": {
         "Observable": "m_g upper bound",
         "W33_prediction": "m_g = 0 (exactly massless)",
         "Current_bound": "< 1.76×10⁻²³ eV",
         "Test": "LISA (2030s), Einstein Telescope",
-        "W33_formula": "m_g = 0 from gauge invariance of 121D moduli"
+        "W33_formula": "m_g = 0 from gauge invariance of 121D moduli",
     },
     "Proton Decay": {
         "Observable": "τ(p → e⁺π⁰)",
         "W33_prediction": "τ ~ 10³⁴⁻³⁵ years",
         "Current_bound": "> 2.4×10³⁴ years (Super-K)",
         "Test": "Hyper-Kamiokande (2027+), DUNE",
-        "W33_formula": "τ ~ M_GUT⁴/(m_p⁵ × α_GUT²)"
-    }
+        "W33_formula": "τ ~ M_GUT⁴/(m_p⁵ × α_GUT²)",
+    },
 }
 
 for name, details in predictions.items():
     print(f"\n{name}:")
     print(f"  Observable: {details['Observable']}")
     print(f"  W33 Prediction: {details['W33_prediction']}")
-    if 'Reason' in details:
+    if "Reason" in details:
         print(f"  Reason: {details['Reason']}")
-    if 'Current_bound' in details:
-        print(f"  Current: {details.get('Current_bound', details.get('Current_value', 'N/A'))}")
+    if "Current_bound" in details:
+        print(
+            f"  Current: {details.get('Current_bound', details.get('Current_value', 'N/A'))}"
+        )
     print(f"  Test: {details['Test']}")
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -484,34 +492,30 @@ results = {
     "date": datetime.now().isoformat(),
     "discoveries": {
         "KATRIN_2025": "m_ν < 0.45 eV",
-        "DESI_2025": {
-            "w_0": w_0,
-            "w_a": w_a,
-            "significance": "2.8-4.2σ"
-        },
-        "graviton_mass_bound": "< 1.76e-23 eV"
+        "DESI_2025": {"w_0": w_0, "w_a": w_a, "significance": "2.8-4.2σ"},
+        "graviton_mass_bound": "< 1.76e-23 eV",
     },
     "W33_predictions": {
         "w_0_predicted": -1 + delta_w_best,
         "neutrino_mass_sum": "0.06-0.08 eV",
         "mass_hierarchy": "normal",
         "graviton_mass": 0,
-        "spacetime_dimensions": D_spacetime
+        "spacetime_dimensions": D_spacetime,
     },
     "key_formulas": {
         "dark_energy_w0": "w₀ = -1 + (40-27+8)/121 = -0.826",
         "cosmological_constant": "Λ = 10^(-(40+81)) × M_Planck⁴",
         "seesaw_scale": "M_R = M_GUT × (40/121)",
-        "mass_splitting_ratio": "Δm²₃₁/Δm²₂₁ ~ 81/(λ+μ) ~ 33"
+        "mass_splitting_ratio": "Δm²₃₁/Δm²₂₁ ~ 81/(λ+μ) ~ 33",
     },
     "experimental_matches": {
         "DESI_w0": {"predicted": -0.826, "observed": -0.827, "agreement": "0.1%"},
-        "mass_ratio": {"predicted": 33.5, "observed": 33.5, "agreement": "exact"}
-    }
+        "mass_ratio": {"predicted": 33.5, "observed": 33.5, "agreement": "exact"},
+    },
 }
 
 output_file = "PART_CII_quantum_gravity.json"
-with open(output_file, 'w') as f:
+with open(output_file, "w") as f:
     json.dump(results, f, indent=2, default=int)
 
 print(f"\nResults saved to: {output_file}")

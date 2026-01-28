@@ -7,24 +7,37 @@ import csv
 from pathlib import Path
 
 import numpy as np
-import scipy.sparse as sp
 import pandas as pd
-
+import scipy.sparse as sp
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUT_DIR = DATA / "_workbench" / "05_symmetry"
 
 MAP_PATH = OUT_DIR / "coin_c24_2t_alignment_mapping.csv"
-TABLE_PATH = DATA / "_toe" / "projector_recon_20260110" / "binary_tetrahedral_2T_multiplication_table.csv"
-H_TOTAL = DATA / "_toe" / "projector_recon_20260110" / (
-    "TOE_H_total_transport_plus_lambda_coin_59x24_lam0.5_20260109T205353Z.npz"
+TABLE_PATH = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / "binary_tetrahedral_2T_multiplication_table.csv"
 )
-H_TRANSPORT = DATA / "_toe" / "projector_recon_20260110" / (
-    "N12_58_orbit0_H_transport_59x24_sparse_20260109T205353Z.npz"
+H_TOTAL = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / ("TOE_H_total_transport_plus_lambda_coin_59x24_lam0.5_20260109T205353Z.npz")
 )
-COIN_NPZ = DATA / "_toe" / "projector_recon_20260110" / (
-    "N12_58_sector_coin_C24_K4_by_k_sparse_20260109T205353Z.npz"
+H_TRANSPORT = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / ("N12_58_orbit0_H_transport_59x24_sparse_20260109T205353Z.npz")
+)
+COIN_NPZ = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / ("N12_58_sector_coin_C24_K4_by_k_sparse_20260109T205353Z.npz")
 )
 
 
@@ -54,7 +67,9 @@ def load_mapping():
 
 def load_csr_npz(path: Path) -> sp.csr_matrix:
     z = np.load(path, allow_pickle=True)
-    return sp.csr_matrix((z["data"], z["indices"], z["indptr"]), shape=tuple(z["shape"]))
+    return sp.csr_matrix(
+        (z["data"], z["indices"], z["indptr"]), shape=tuple(z["shape"])
+    )
 
 
 def perm_coin_for_left_action(elems, table, coin_to_elem, elem_to_coin, g):
@@ -95,7 +110,9 @@ def main() -> None:
 
     rows = []
     for g in elems:
-        perm_coin = perm_coin_for_left_action(elems, table, coin_to_elem, elem_to_coin, g)
+        perm_coin = perm_coin_for_left_action(
+            elems, table, coin_to_elem, elem_to_coin, g
+        )
         perm = perm_full(perm_coin)
         rows.append(
             {
@@ -113,7 +130,9 @@ def main() -> None:
     summary_path = OUT_DIR / "coin_c24_2t_fullH_equivariance_summary.md"
     with summary_path.open("w", encoding="utf-8") as f:
         f.write("# Full-H equivariance under 2T (left action)\n\n")
-        f.write(f"Inputs:\n- {H_TOTAL}\n- {H_TRANSPORT}\n- {COIN_NPZ}\n- {MAP_PATH}\n\n")
+        f.write(
+            f"Inputs:\n- {H_TOTAL}\n- {H_TRANSPORT}\n- {COIN_NPZ}\n- {MAP_PATH}\n\n"
+        )
         f.write("Elements with zero commutator (full H):\n\n")
         if zero_rows.empty:
             f.write("- none\n")

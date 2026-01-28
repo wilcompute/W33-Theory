@@ -43,7 +43,6 @@ from pathlib import Path
 
 import numpy as np
 
-
 ROOT = Path(__file__).resolve().parents[1]
 MOD3 = 3
 
@@ -78,7 +77,9 @@ def _read_json_from_zip(zip_path: Path, inner: str) -> object:
         return json.loads(zf.read(inner).decode("utf-8"))
 
 
-def _write_csv(path: Path, fieldnames: list[str], rows: list[dict[str, object]]) -> None:
+def _write_csv(
+    path: Path, fieldnames: list[str], rows: list[dict[str, object]]
+) -> None:
     with path.open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fieldnames)
         w.writeheader()
@@ -142,7 +143,9 @@ def _compute_mode_projectors(Ameet: np.ndarray, S: np.ndarray) -> dict[str, np.n
     return out
 
 
-def _mode_energy_fractions(projectors: dict[str, np.ndarray], v_centered: np.ndarray) -> tuple[dict[str, float], float]:
+def _mode_energy_fractions(
+    projectors: dict[str, np.ndarray], v_centered: np.ndarray
+) -> tuple[dict[str, float], float]:
     energies: dict[str, float] = {}
     total = 0.0
     for name, E in projectors.items():
@@ -182,7 +185,9 @@ def main() -> int:
     args = ap.parse_args()
 
     # --- Load tetrahedra and J := dF
-    trows = _read_csv_from_zip(args.holonomy_phase_decomp, "tetra_coboundary_dF_dPhi_9450.csv")
+    trows = _read_csv_from_zip(
+        args.holonomy_phase_decomp, "tetra_coboundary_dF_dPhi_9450.csv"
+    )
     tets = [tuple(map(int, [r["a"], r["b"], r["c"], r["d"]])) for r in trows]
     J = np.array([mod3(int(r["dF"])) for r in trows], dtype=np.int16)
     if len(tets) != 9450:
@@ -337,7 +342,7 @@ def main() -> int:
 
     # line_contributions_long.csv
     line_rows = []
-    for (oid, jv) in classes:
+    for oid, jv in classes:
         mv = m_class[(oid, jv)]
         zv = z_class[(oid, jv)]
         for lid in range(90):
@@ -358,7 +363,15 @@ def main() -> int:
             )
     _write_csv(
         out_dir / "line_contributions_long.csv",
-        ["line_id", "points", "orbit_id", "orbit_name", "J_value", "m_contrib", "z_contrib"],
+        [
+            "line_id",
+            "points",
+            "orbit_id",
+            "orbit_name",
+            "J_value",
+            "m_contrib",
+            "z_contrib",
+        ],
         line_rows,
     )
 
@@ -408,7 +421,16 @@ def main() -> int:
 
     _write_csv(
         out_dir / "class_counts_summary.csv",
-        ["orbit_id", "orbit_name", "J_value", "num_tets", "m_sum_mod3", "z_sum_mod3", "m_nonzero_lines", "z_nonzero_lines"],
+        [
+            "orbit_id",
+            "orbit_name",
+            "J_value",
+            "num_tets",
+            "m_sum_mod3",
+            "z_sum_mod3",
+            "m_nonzero_lines",
+            "z_nonzero_lines",
+        ],
         class_count_rows,
     )
 
@@ -519,4 +541,3 @@ Mode energies:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

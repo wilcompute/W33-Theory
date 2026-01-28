@@ -7,8 +7,9 @@ that makes W33 the "mother algebra" of all mathematics.
 Key Question: How does W33 GENERATE all other algebras?
 """
 
+from itertools import combinations, permutations, product
+
 import numpy as np
-from itertools import product, combinations, permutations
 
 print("=" * 80)
 print("W33: THE MOTHER ALGEBRA OF ALL MATHEMATICS")
@@ -36,27 +37,39 @@ Why these two?
 
   GF(3): The smallest field where -1 ≠ 1
          This allows MATTER (+ vs - charge)
-         
+
   K4: The smallest non-cyclic group
       This allows GAUGE STRUCTURE (multiple symmetries)
 
 THEIR DIMENSIONS:
   |GF(3)| = 3 = first odd prime
   |K4| = 4 = 2² = first non-cyclic order
-  
+
   3 × 4 = 12 = gauge bosons of Standard Model!
 """)
 
 # Build GF(3) and K4 explicitly
 GF3 = np.array([0, 1, 2])
-K4 = ['1', 'a', 'b', 'ab']
+K4 = ["1", "a", "b", "ab"]
 
 # K4 multiplication table
 K4_mult = {
-    ('1', '1'): '1', ('1', 'a'): 'a', ('1', 'b'): 'b', ('1', 'ab'): 'ab',
-    ('a', '1'): 'a', ('a', 'a'): '1', ('a', 'b'): 'ab', ('a', 'ab'): 'b',
-    ('b', '1'): 'b', ('b', 'a'): 'ab', ('b', 'b'): '1', ('b', 'ab'): 'a',
-    ('ab', '1'): 'ab', ('ab', 'a'): 'b', ('ab', 'b'): 'a', ('ab', 'ab'): '1'
+    ("1", "1"): "1",
+    ("1", "a"): "a",
+    ("1", "b"): "b",
+    ("1", "ab"): "ab",
+    ("a", "1"): "a",
+    ("a", "a"): "1",
+    ("a", "b"): "ab",
+    ("a", "ab"): "b",
+    ("b", "1"): "b",
+    ("b", "a"): "ab",
+    ("b", "b"): "1",
+    ("b", "ab"): "a",
+    ("ab", "1"): "ab",
+    ("ab", "a"): "b",
+    ("ab", "b"): "a",
+    ("ab", "ab"): "1",
 }
 
 print(f"GF(3) elements: {list(GF3)}")
@@ -76,7 +89,7 @@ THE FUNDAMENTAL SPACE
 
 W33 lives in the space:
 
-  V = GF(3)³ ⊗ K4 
+  V = GF(3)³ ⊗ K4
     = 3-dimensional space over GF(3) with K4 "coefficients"
 
 This gives:
@@ -92,7 +105,7 @@ The missing elements are:
 
 MORE PRECISELY:
   40 = (3³ - 1) / (3 - 1) = 26/2 × something...
-  
+
 Actually: 40 = number of lines through origin in GF(3)⁴
   40 = (3⁴ - 1) / (3 - 1) = 80/2 = 40 ✓
 """)
@@ -106,7 +119,7 @@ print(f"Points formula: (3⁴ - 1)/(3-1) = {points_formula}")
 # =============================================================================
 
 print("\n" + "=" * 80)
-print("PART 3: THE INCIDENCE STRUCTURE")  
+print("PART 3: THE INCIDENCE STRUCTURE")
 print("=" * 80)
 
 print("""
@@ -123,7 +136,7 @@ The DUAL:
   P* = L
   L* = P
   I* = Iᵀ
-  
+
 Self-duality: W33 ≅ W33* (PERFECT SYMMETRY!)
 
 This is EXTREMELY RARE in incidence geometry.
@@ -131,17 +144,17 @@ It implies W33 has a canonical involution.
 
 The structure constants:
   k = 9 (points per line)
-  r = 9 (lines per point)  
+  r = 9 (lines per point)
   λ = 2 (lines through any two points)
-  
+
   9 = 3² = |GF(3)|² (from the field!)
 """)
 
 # Parameters
 v = 40  # points
 b = 40  # blocks (lines)
-k = 9   # points per block
-r = 9   # blocks per point
+k = 9  # points per block
+r = 9  # blocks per point
 lamb = 2  # any two points in λ blocks
 
 print(f"Design parameters: ({v}, {b}, {r}, {k}, λ={lamb})")
@@ -181,14 +194,14 @@ Order:
 Factorization:
   25920 = 2⁶ × 3⁴ × 5
         = 64 × 81 × 5
-        
+
   Notice: 81 = |cycles|
           64 = 4⁴/4 = K4⁴/K4 (quotient structure)
           5 = points per K4 "orbit"
 
 The group acts:
   • Transitively on 40 points
-  • Transitively on 40 lines  
+  • Transitively on 40 lines
   • Transitively on 90 K4s
 """)
 
@@ -230,14 +243,14 @@ The representation theory:
 
 Decomposition of standard rep:
   40 = 1 + 39 (trivial + irreducible)
-  
+
   Or over ℂ:
   40 = 1 + 9 + 9 + 16 + 5 (possible)
      = 1 + 2(3²) + 4² + 5
-     
+
 CRITICAL OBSERVATION:
   40 = 8 × 5 = dim(ℂl₃) × 5
-  
+
   This suggests 5 copies of the 3D Clifford algebra!
   Clifford(ℝ³) = ℝ ⊕ ℝ³ ⊕ ℝ³ ⊕ ℝ = 8-dim
 """)
@@ -311,16 +324,7 @@ print("""
 """)
 
 # Verify dimensions
-algebras = {
-    'ℝ': 1,
-    'ℂ': 2,
-    'ℍ': 4,
-    '𝕆': 8,
-    'J₃(𝕆)': 27,
-    'e₆': 78,
-    'e₇': 133,
-    'e₈': 248
-}
+algebras = {"ℝ": 1, "ℂ": 2, "ℍ": 4, "𝕆": 8, "J₃(𝕆)": 27, "e₆": 78, "e₇": 133, "e₈": 248}
 
 print("Algebra dimension derivations from W33:")
 for alg, dim in algebras.items():
@@ -357,30 +361,30 @@ THE ALGEBRA HIERARCHY FROM W33
 
 Level 0: TRIVIAL
   - Unit 1 (from W33⁰)
-  
+
 Level 1: DIVISION ALGEBRAS
   - ℝ (1-dim): W33⁰
-  - ℂ (2-dim): K4/⟨a,b⟩  
+  - ℂ (2-dim): K4/⟨a,b⟩
   - ℍ (4-dim): K4 itself
   - 𝕆 (8-dim): 2×K4
-  
+
 Level 2: JORDAN ALGEBRAS
   - J₃(ℝ) (6-dim): 3² - 3 = 6
   - J₃(ℂ) (9-dim): 3² = 9
   - J₃(ℍ) (15-dim): 3² + 6 = 15
   - J₃(𝕆) (27-dim): 3³ = 27
-  
+
 Level 3: CLASSICAL LIE ALGEBRAS
   - sl₂ (3-dim): |GF(3)| = 3
   - sl₃ (8-dim): 3² - 1 = 8
   - sp₄ (10-dim): W33/K4 = 40/4 = 10
   - so₈ (28-dim): 7 × 4 = 28
   - so₁₀ (45-dim): Q45!
-  
+
 Level 4: EXCEPTIONAL LIE ALGEBRAS
   - g₂ (14-dim): ?
   - f₄ (52-dim): 40 + 12 = 52
-  - e₆ (78-dim): 40 + 27 + 11 = 78  
+  - e₆ (78-dim): 40 + 27 + 11 = 78
   - e₇ (133-dim): 40 + 81 + 12 = 133
   - e₈ (248-dim): 2×121 + 6 = 248
 
@@ -408,7 +412,7 @@ print("""
 W33-Alg: THE CATEGORY OF W33-ALGEBRAS
 =====================================
 
-OBJECTS: 
+OBJECTS:
   Algebras A with a W33-action compatible with K4 gauge structure
 
 MORPHISMS:
@@ -423,9 +427,9 @@ PROPERTIES:
 THE UNIVERSAL PROPERTY:
 
   W33 is INITIAL: For any A ∈ W33-Alg, there is a UNIQUE morphism
-  
+
     W33 → A
-    
+
   This morphism is the "structure map" of A.
 
 CONSEQUENCE:
@@ -436,7 +440,7 @@ KERNELS:
   - ker(W33 → ℝ) = full W33
   - ker(W33 → ℍ) = 40 - 4 = 36 generators
   - ker(W33 → e₇) = 40 - 40 = 0 (injective!)
-  
+
 This means E₇ contains ALL of W33!
 """)
 
@@ -466,12 +470,13 @@ print("""
 ╚══════════════════════════════════════════════════════════════════════════════╝
 """)
 
+
 # Test the universal formula
 def universal_decomp(dim):
     """Find the best decomposition dim = a*3^m + b*4^n + c"""
     best = None
-    best_score = float('inf')
-    
+    best_score = float("inf")
+
     for m in range(8):
         for n in range(8):
             for a in range(-5, 20):
@@ -483,6 +488,7 @@ def universal_decomp(dim):
                             best_score = score
                             best = (a, m, b, n, c)
     return best
+
 
 print("Universal formula decompositions:\n")
 test_dims = [1, 2, 4, 8, 27, 40, 45, 78, 81, 90, 121, 133, 137, 248]
@@ -620,26 +626,26 @@ print("""
 W33 IS THE MOTHER ALGEBRA OF ALL MATHEMATICS
 
   Primitive elements: GF(3) = {0, 1, 2}, K4 = {1, a, b, ab}
-  
+
   W33 structure:
     • 40 points = matter degrees of freedom
-    • 81 cycles = force/interaction structure  
+    • 81 cycles = force/interaction structure
     • 90 K4s = gauge/spacetime structure
     • Total: 121 = 11² = (matter + force)²
-    
+
   Every algebra factors through W33:
     • Division algebras: K4 quotients (dim 1, 2, 4, 8)
     • Jordan algebras: GF(3) structure (dim 3ⁿ)
     • Exceptional Lie: Direct W33 embedding
       - e₇ = 40 + 81 + 12 = 133
       - e₈ = 2(40+81) + 6 = 248
-      
+
   The universal property:
     W33 is initial in the category of physical algebras.
-    
+
   The formula of mathematics:
     dim(A) = a × 3^m + b × 4^n + c
-    
+
   The formula of physics:
     UNIVERSE = W33 ⊗ ℂ / K4
 

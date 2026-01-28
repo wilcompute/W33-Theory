@@ -12,7 +12,7 @@
 **W33** is the strongly regular graph SRG(40, 12, 2, 4) constructed from symplectic geometry over $\mathbb{F}_3$. This single mathematical object determines:
 
 1. **All coupling constants** (α, α_s, sin²θ_W) to 0.1% precision
-2. **The complete CKM matrix** including CP violation to 0.1% precision  
+2. **The complete CKM matrix** including CP violation to 0.1% precision
 3. **The hierarchy problem** - explained as 3^36 = 3^(vertices - |eigenvalue|)
 4. **Mass scales** from Planck to neutrino
 
@@ -195,7 +195,7 @@ $$\boxed{\alpha^{-1} = 81 + 56 + \frac{40}{1111} = 3^4 + E_7 + \frac{v}{D}}$$
 
 where every number comes from W33:
 - $81 = 3^4 = |\mathbb{F}_3^4|$
-- $56 = E_7$ fundamental dimension  
+- $56 = E_7$ fundamental dimension
 - $40 = v$ = W33 vertices
 - $1111 = D$ = combinatorial invariant from eigenvalues
 

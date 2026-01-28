@@ -14,6 +14,7 @@ Outputs:
 - artifacts/h27_heisenberg_automorphisms.json
 - artifacts/h27_heisenberg_automorphisms.md
 """
+
 from __future__ import annotations
 
 import json
@@ -51,11 +52,12 @@ def model_adj(u, z, v, w):
 
 def apply_auto(A, b, c, u, z):
     detA = det2(A)
-    u2 = ((A[0][0] * u[0] + A[0][1] * u[1] + b[0]) % 3,
-          (A[1][0] * u[0] + A[1][1] * u[1] + b[1]) % 3)
+    u2 = (
+        (A[0][0] * u[0] + A[0][1] * u[1] + b[0]) % 3,
+        (A[1][0] * u[0] + A[1][1] * u[1] + b[1]) % 3,
+    )
     # compute B(Au, b)
-    Au = ((A[0][0] * u[0] + A[0][1] * u[1]) % 3,
-          (A[1][0] * u[0] + A[1][1] * u[1]) % 3)
+    Au = ((A[0][0] * u[0] + A[0][1] * u[1]) % 3, (A[1][0] * u[0] + A[1][1] * u[1]) % 3)
     # sign is negative to ensure w' - z' = B(Au+b, Av+b)
     z2 = (detA * z - B(Au, b) + c) % 3
     return u2, z2

@@ -23,26 +23,37 @@ MY K4/-1 PROOF CONNECTION:
 Let me explore this connection.
 """
 
+from collections import defaultdict
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
-from pathlib import Path
-from collections import defaultdict
 
 # Paths
-W33_ROOT = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data")
-V23_ROOT = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data\_v23\v23")
+W33_ROOT = Path(
+    r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data"
+)
+V23_ROOT = Path(
+    r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data\_v23\v23"
+)
+
 
 def load_w33():
     """Load W33 rays and lines."""
-    rays_df = pd.read_csv(W33_ROOT / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv")
+    rays_df = pd.read_csv(
+        W33_ROOT
+        / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv"
+    )
     V = np.zeros((40, 4), dtype=np.complex128)
     for _, row in rays_df.iterrows():
-        pid = int(row['point_id'])
+        pid = int(row["point_id"])
         for i in range(4):
-            V[pid, i] = complex(str(row[f'v{i}']).replace(' ', ''))
+            V[pid, i] = complex(str(row[f"v{i}"]).replace(" ", ""))
 
     lines_df = pd.read_csv(W33_ROOT / "_workbench/02_geometry/W33_line_phase_map.csv")
-    lines = [tuple(map(int, str(row['point_ids']).split())) for _, row in lines_df.iterrows()]
+    lines = [
+        tuple(map(int, str(row["point_ids"]).split())) for _, row in lines_df.iterrows()
+    ]
 
     return V, lines
 
@@ -95,7 +106,7 @@ def analyze_correspondence():
                         continue
                     common = col[a] & col[b] & col[c] & col[d]
                     if len(common) == 4:
-                        k4_list.append(((a,b,c,d), tuple(sorted(common))))
+                        k4_list.append(((a, b, c, d), tuple(sorted(common))))
 
     print(f"\nW33 has {len(k4_list)} K4 components")
 
@@ -137,12 +148,12 @@ def analyze_v23_triangles():
 
     # Group by triad type
     print("\nTriangle counts by centers:")
-    centers_counts = triangles_df['centers'].value_counts().sort_index()
+    centers_counts = triangles_df["centers"].value_counts().sort_index()
     for centers, count in centers_counts.items():
         print(f"  centers={centers}: {count}")
 
     print("\nTriangle counts by (centers, z2_parity, fiber6_cycle_type):")
-    grouped = triangles_df.groupby(['centers', 'z2_parity', 'fiber6_cycle_type']).size()
+    grouped = triangles_df.groupby(["centers", "z2_parity", "fiber6_cycle_type"]).size()
     for (centers, parity, cycle_type), count in grouped.items():
         print(f"  ({centers}, {parity}, {cycle_type}): {count}")
 
@@ -222,12 +233,12 @@ def numerical_check():
     # For each vertex, compute a signature
     vertex_signatures = {}
     for q in range(45):
-        q_data = tau_df[tau_df['q'] == q]
+        q_data = tau_df[tau_df["q"] == q]
         # Get the counts for each tau type
         tau_counts = {}
         for _, row in q_data.iterrows():
-            tau = row['tau']
-            count = row['count']
+            tau = row["tau"]
+            count = row["count"]
             tau_counts[tau] = count
         vertex_signatures[q] = tuple(sorted(tau_counts.items()))
 
@@ -239,7 +250,7 @@ def numerical_check():
     print("\nSpecial vertices mentioned in v23:")
     special = [0, 1, 7, 41]
     for q in special:
-        q_data = tau_df[tau_df['q'] == q]
+        q_data = tau_df[tau_df["q"] == q]
         print(f"\nVertex q={q}:")
         for _, row in q_data.iterrows():
             print(f"  tau={row['tau']}: count={row['count']}, freq={row['freq']:.4f}")

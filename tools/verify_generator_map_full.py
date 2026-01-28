@@ -7,6 +7,7 @@ Checks for each generator:
 
 Outputs: artifacts/sp43_we6_generator_map_full_verify.json
 """
+
 from __future__ import annotations
 
 import json
@@ -35,9 +36,9 @@ def build_e8_roots():
 
 
 def main():
-    data = json.loads((ROOT / 'artifacts' / 'sp43_we6_generator_map.json').read_text())
-    we6 = json.loads((ROOT / 'artifacts' / 'we6_orbit_labels.json').read_text())
-    root_to_orbit = {eval(k): v for k, v in we6['mapping'].items()}
+    data = json.loads((ROOT / "artifacts" / "sp43_we6_generator_map.json").read_text())
+    we6 = json.loads((ROOT / "artifacts" / "we6_orbit_labels.json").read_text())
+    root_to_orbit = {eval(k): v for k, v in we6["mapping"].items()}
 
     roots = build_e8_roots()
     R = np.array(roots, dtype=float)
@@ -48,11 +49,11 @@ def main():
     for r in roots:
         key = tuple(int(2 * x) for x in r)
         info = root_to_orbit.get(key)
-        orbit_sizes.append(info['orbit_size'] if info else None)
+        orbit_sizes.append(info["orbit_size"] if info else None)
 
     results = []
-    for gen in data['generator_maps']:
-        perm = gen['root_perm']
+    for gen in data["generator_maps"]:
+        perm = gen["root_perm"]
         perm = np.array(perm, dtype=int)
 
         Gp = G[np.ix_(perm, perm)]
@@ -64,22 +65,24 @@ def main():
                 orbit_ok = False
                 break
 
-        results.append({
-            'gen_index': gen['gen_index'],
-            'gram_invariant': bool(gram_ok),
-            'orbit_size_invariant': bool(orbit_ok),
-        })
+        results.append(
+            {
+                "gen_index": gen["gen_index"],
+                "gram_invariant": bool(gram_ok),
+                "orbit_size_invariant": bool(orbit_ok),
+            }
+        )
 
     out = {
-        'generator_checks': results,
-        'all_gram_ok': all(r['gram_invariant'] for r in results),
-        'all_orbit_ok': all(r['orbit_size_invariant'] for r in results),
+        "generator_checks": results,
+        "all_gram_ok": all(r["gram_invariant"] for r in results),
+        "all_orbit_ok": all(r["orbit_size_invariant"] for r in results),
     }
 
-    out_path = ROOT / 'artifacts' / 'sp43_we6_generator_map_full_verify.json'
-    out_path.write_text(json.dumps(out, indent=2), encoding='utf-8')
+    out_path = ROOT / "artifacts" / "sp43_we6_generator_map_full_verify.json"
+    out_path.write_text(json.dumps(out, indent=2), encoding="utf-8")
     print(f"Wrote {out_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

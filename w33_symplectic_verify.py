@@ -4,9 +4,10 @@ Verify that W33 IS the symplectic polar space W(3) over GF(3).
 Check graph isomorphism between W33's point graph and Sp(4,3).
 """
 
-from sage.all import *
-import numpy as np
 import json
+
+import numpy as np
+from sage.all import *
 
 print("=== Verifying W33 = Symplectic Polar Space W(3,3) ===")
 print()
@@ -15,14 +16,17 @@ print()
 with open("claude_workspace/data/w33_sage_incidence_h1.json") as f:
     data = json.load(f)
 
-from lib.w33_io import W33DataPaths, load_w33_lines
-from pathlib import Path
 import sys
+from pathlib import Path
 
-here = Path('.').resolve()
-sys.path.insert(0, str(here / 'claude_workspace'))
+from lib.w33_io import W33DataPaths, load_w33_lines
 
-paths = W33DataPaths.from_this_file(str(here / 'claude_workspace' / 'w33_sage_incidence_and_h1.py'))
+here = Path(".").resolve()
+sys.path.insert(0, str(here / "claude_workspace"))
+
+paths = W33DataPaths.from_this_file(
+    str(here / "claude_workspace" / "w33_sage_incidence_and_h1.py")
+)
 lines = load_w33_lines(paths)
 
 n_points = 40
@@ -34,13 +38,15 @@ w33_edges = []
 for line in lines:
     line_list = list(line)
     for i in range(len(line_list)):
-        for j in range(i+1, len(line_list)):
+        for j in range(i + 1, len(line_list)):
             w33_edges.append((line_list[i], line_list[j]))
 
 W33_graph = Graph()
 W33_graph.add_vertices(range(40))
 W33_graph.add_edges(w33_edges)
-print(f"W33 point graph: {W33_graph.num_verts()} vertices, {W33_graph.num_edges()} edges")
+print(
+    f"W33 point graph: {W33_graph.num_verts()} vertices, {W33_graph.num_edges()} edges"
+)
 
 # Build symplectic graph Sp(4,3)
 print("\nBuilding symplectic graph Sp(4,3)...")
@@ -48,9 +54,11 @@ print("\nBuilding symplectic graph Sp(4,3)...")
 F = GF(3)
 V = VectorSpace(F, 4)
 
+
 def symplectic_form(x, y):
     """Standard symplectic form on F^4"""
-    return x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]
+    return x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]
+
 
 # Get projective points
 points = []
@@ -70,7 +78,7 @@ for v in V:
 # Build adjacency
 sp_edges = []
 for i in range(40):
-    for j in range(i+1, 40):
+    for j in range(i + 1, 40):
         if symplectic_form(points[i], points[j]) == F(0):
             sp_edges.append((i, j))
 
@@ -89,7 +97,7 @@ if is_iso:
     print(f"\nIsomorphism found!")
 else:
     print("NOT isomorphic?! Let me check more carefully...")
-    
+
     # Check canonical labels
     print("\nComparing canonical forms...")
     W33_can = W33_graph.canonical_label()
@@ -108,7 +116,7 @@ print()
 # Count totally isotropic lines (4 points, pairwise orthogonal)
 ti_lines = []
 for i in range(40):
-    for j in range(i+1, 40):
+    for j in range(i + 1, 40):
         if symplectic_form(points[i], points[j]) != F(0):
             continue  # Not orthogonal
         # Find all points orthogonal to both i and j
@@ -128,7 +136,7 @@ print(f"Number of lines in W33: {n_lines}")
 
 if len(ti_lines) == n_lines:
     print("Counts match!")
-    
+
 # Check if the TI lines match W33's lines under the isomorphism
 print()
 print("=== Final Verification ===")

@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """Analyze the induced line-graph structure on the balanced 27-edge orbit."""
+
 from __future__ import annotations
 
+import json
 from collections import Counter, deque
 from itertools import product
 from pathlib import Path
-import json
+
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -29,11 +31,11 @@ def build_w33():
             proj_points.append(v)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     edges = []
     for i in range(40):
-        for j in range(i+1, 40):
+        for j in range(i + 1, 40):
             if omega(proj_points[i], proj_points[j]) == 0:
                 edges.append((i, j))
 
@@ -45,21 +47,23 @@ def main():
     edge_to_idx = {tuple(sorted(e)): i for i, e in enumerate(edges)}
 
     # Load balanced orbit id
-    bias = json.loads((ROOT / 'artifacts' / 'su3_phase_orbit_bias.json').read_text())
+    bias = json.loads((ROOT / "artifacts" / "su3_phase_orbit_bias.json").read_text())
     balanced_orbit = None
-    for k, v in bias['orbit_sums'].items():
-        if v == {'0': 9, '1': 9, '2': 9} or v == {0: 9, 1: 9, 2: 9}:
-            balanced_orbit = int(k.split('_')[1])
+    for k, v in bias["orbit_sums"].items():
+        if v == {"0": 9, "1": 9, "2": 9} or v == {0: 9, 1: 9, 2: 9}:
+            balanced_orbit = int(k.split("_")[1])
     if balanced_orbit is None:
         print("No balanced orbit found")
         return
 
     # Load root labels and edge->root map
-    we6 = json.loads((ROOT / 'artifacts' / 'we6_orbit_labels.json').read_text())
-    root_to_orbit = {eval(k): v for k, v in we6['mapping'].items()}
-    edge_map = json.loads((ROOT / 'artifacts' / 'explicit_bijection_decomposition.json').read_text())
-    edge_to_root_idx = {int(k): v for k, v in edge_map['edge_to_root_index'].items()}
-    root_coords = [tuple(r) for r in edge_map['root_coords']]
+    we6 = json.loads((ROOT / "artifacts" / "we6_orbit_labels.json").read_text())
+    root_to_orbit = {eval(k): v for k, v in we6["mapping"].items()}
+    edge_map = json.loads(
+        (ROOT / "artifacts" / "explicit_bijection_decomposition.json").read_text()
+    )
+    edge_to_root_idx = {int(k): v for k, v in edge_map["edge_to_root_index"].items()}
+    root_coords = [tuple(r) for r in edge_map["root_coords"]]
 
     # Balanced edge indices
     balanced_indices = []
@@ -68,7 +72,7 @@ def main():
         ridx = edge_to_root_idx[eidx]
         r = root_coords[ridx]
         info = root_to_orbit.get(r)
-        if info and info['orbit_size'] == 27 and info['orbit_id'] == balanced_orbit:
+        if info and info["orbit_size"] == 27 and info["orbit_id"] == balanced_orbit:
             balanced_indices.append(eidx)
 
     # Build induced line-graph on these 27 edges
@@ -77,7 +81,7 @@ def main():
     adj = np.zeros((n, n), dtype=int)
     for i in range(n):
         a, b = idx_to_edge[i]
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             c, d = idx_to_edge[j]
             if a == c or a == d or b == c or b == d:
                 adj[i, j] = adj[j, i] = 1
@@ -124,11 +128,11 @@ def main():
             proj_points.append(v)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
-    adj_w33 = [[0]*40 for _ in range(40)]
+    adj_w33 = [[0] * 40 for _ in range(40)]
     for i in range(40):
-        for j in range(i+1, 40):
+        for j in range(i + 1, 40):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj_w33[i][j] = adj_w33[j][i] = 1
 
@@ -141,7 +145,7 @@ def main():
         ridx = edge_to_root_idx[eidx]
         r = root_coords[ridx]
         has_odd = any(abs(x) % 2 == 1 for x in r)
-        edge_root_type[i] = 'half' if has_odd else 'integral'
+        edge_root_type[i] = "half" if has_odd else "integral"
 
     comp_summaries = []
     for comp in comps:
@@ -152,15 +156,15 @@ def main():
         for local_idx in comp:
             a, b = idx_to_edge[local_idx]
             if a in H27 and b in H27:
-                shell_counts['H27-H27'] += 1
+                shell_counts["H27-H27"] += 1
             elif (a in H12 and b in H27) or (a in H27 and b in H12):
-                shell_counts['H12-H27'] += 1
+                shell_counts["H12-H27"] += 1
             elif a in H12 and b in H12:
-                shell_counts['H12-H12'] += 1
+                shell_counts["H12-H12"] += 1
             elif a == v0 or b == v0:
-                shell_counts['v0'] += 1
+                shell_counts["v0"] += 1
             else:
-                shell_counts['other'] += 1
+                shell_counts["other"] += 1
             root_counts[edge_root_type[local_idx]] += 1
             comp_degrees.append(int(degrees[local_idx]))
             comp_edges.append((a, b, points[a], points[b], edge_root_type[local_idx]))
@@ -169,15 +173,17 @@ def main():
         if len(comp) <= 4:
             comp_list = [int(x) for x in comp]
             comp_adj = [[int(adj[i, j]) for j in comp_list] for i in comp_list]
-        comp_summaries.append({
-            "size": len(comp),
-            "shell_counts": dict(shell_counts),
-            "root_types": dict(root_counts),
-            "degree_dist": dict(Counter(comp_degrees)),
-            "adjacency": comp_adj,
-            "edges": comp_edges if len(comp) <= 3 else None,
-            "nodes": comp_list if len(comp) <= 3 else None,
-        })
+        comp_summaries.append(
+            {
+                "size": len(comp),
+                "shell_counts": dict(shell_counts),
+                "root_types": dict(root_counts),
+                "degree_dist": dict(Counter(comp_degrees)),
+                "adjacency": comp_adj,
+                "edges": comp_edges if len(comp) <= 3 else None,
+                "nodes": comp_list if len(comp) <= 3 else None,
+            }
+        )
 
     # Spectrum
     eigvals = np.linalg.eigvalsh(adj)
@@ -193,11 +199,11 @@ def main():
         "spectrum_counts": {str(k): v for k, v in sorted(eigval_counts.items())},
     }
 
-    out_path = ROOT / 'artifacts' / 'balanced_orbit_subgraph.json'
-    out_path.write_text(json.dumps(results, indent=2), encoding='utf-8')
+    out_path = ROOT / "artifacts" / "balanced_orbit_subgraph.json"
+    out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(results)
     print(f"Wrote {out_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

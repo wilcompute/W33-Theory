@@ -74,7 +74,7 @@ This decomposes under the Standard Model as:
 
 The decomposition under SO(10) → SU(5):
   27 → 16 + 10 + 1
-  
+
   16 = Standard Model fermions (one generation)
   10 = Vector-like exotic (heavy)
   1  = Singlet (sterile neutrino)
@@ -261,14 +261,14 @@ The mass hierarchy has a pattern:
 
   3rd generation / 2nd generation ≈ λ² ≈ 1/20
   2nd generation / 1st generation ≈ λ² ≈ 1/20
-  
+
   where λ ≈ 0.22 ≈ sin(θ_C) = 9/40 (Cabibbo!)
 
 W33 INTERPRETATION:
 """)
 
 # Cabibbo angle
-sin_cabibbo = 9/40
+sin_cabibbo = 9 / 40
 lambda_w33 = sin_cabibbo
 
 print(f"  λ = sin(θ_C) = 9/40 = {lambda_w33}")
@@ -304,7 +304,7 @@ The Yukawa matrices have "texture zeros" - elements that are zero or small.
 In W33:
   • Points not on the same line → zero Yukawa
   • Points on the same line → non-zero Yukawa
-  
+
 This creates a PATTERN in the mass matrices!
 
 The incidence structure of W33 (4 points per line, 9 lines per point)
@@ -334,8 +334,8 @@ W33 EXPLANATION:
 
 # Neutrino mixing angles
 theta_12 = 33.44  # degrees (solar)
-theta_23 = 49.2   # degrees (atmospheric)
-theta_13 = 8.57   # degrees (reactor)
+theta_23 = 49.2  # degrees (atmospheric)
+theta_13 = 8.57  # degrees (reactor)
 
 print("═══ PMNS Mixing Angles ═══")
 print()
@@ -392,7 +392,7 @@ print("""
 # Test the formula
 print("═══ Testing the Formula ═══")
 print()
-lambda_sq = (9/40)**2
+lambda_sq = (9 / 40) ** 2
 print(f"  (9/40)² = {lambda_sq:.4f}")
 print(f"  (40/9)² = {1/lambda_sq:.1f}")
 print()

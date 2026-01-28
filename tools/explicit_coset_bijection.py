@@ -12,12 +12,14 @@ The bijection is DEFINED by choosing:
 - Base root r0 in E8
 - Generator correspondence phi(g_i) for each generator g_i
 """
+
 from __future__ import annotations
 
 import json
-from collections import deque, defaultdict
+from collections import defaultdict, deque
 from itertools import product
 from pathlib import Path
+
 import numpy as np
 from sympy.combinatorics import Permutation, PermutationGroup
 
@@ -43,11 +45,11 @@ def construct_w33():
             proj_points.append(v)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     edges = []
     for i in range(40):
-        for j in range(i+1, 40):
+        for j in range(i + 1, 40):
             if omega(proj_points[i], proj_points[j]) == 0:
                 edges.append((i, j))
 
@@ -66,11 +68,11 @@ def normalize_proj(v):
 
 def check_symplectic(M):
     """Check if M preserves symplectic form."""
-    Omega = [[0,0,1,0],[0,0,0,1],[2,0,0,0],[0,2,0,0]]
+    Omega = [[0, 0, 1, 0], [0, 0, 0, 1], [2, 0, 0, 0], [0, 2, 0, 0]]
 
     def mat_mult(A, B):
         n, k, m = len(A), len(B), len(B[0])
-        result = [[0]*m for _ in range(n)]
+        result = [[0] * m for _ in range(n)]
         for i in range(n):
             for j in range(m):
                 for l in range(k):
@@ -119,16 +121,16 @@ def vertex_perm_to_edge_perm(vperm, edges):
 def get_sp43_generators(vertices, edges):
     """Get symplectic generators as edge permutations."""
     gen_matrices = [
-        [[1,0,1,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]],  # T1
-        [[1,0,0,0],[0,1,0,1],[0,0,1,0],[0,0,0,1]],  # T2
-        [[1,0,0,0],[0,1,0,0],[1,0,1,0],[0,0,0,1]],  # T3
-        [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,1,0,1]],  # T4
-        [[1,1,0,0],[0,1,0,0],[0,0,1,0],[0,0,2,1]],  # T5
-        [[1,0,0,0],[1,1,0,0],[0,0,1,2],[0,0,0,1]],  # T6
-        [[0,0,1,0],[0,1,0,0],[2,0,0,0],[0,0,0,1]],  # S1
-        [[1,0,0,0],[0,0,0,1],[0,0,1,0],[0,2,0,0]],  # S2
-        [[2,0,0,0],[0,1,0,0],[0,0,2,0],[0,0,0,1]],  # D1
-        [[1,0,0,0],[0,2,0,0],[0,0,1,0],[0,0,0,2]],  # D2
+        [[1, 0, 1, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]],  # T1
+        [[1, 0, 0, 0], [0, 1, 0, 1], [0, 0, 1, 0], [0, 0, 0, 1]],  # T2
+        [[1, 0, 0, 0], [0, 1, 0, 0], [1, 0, 1, 0], [0, 0, 0, 1]],  # T3
+        [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 1, 0, 1]],  # T4
+        [[1, 1, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 2, 1]],  # T5
+        [[1, 0, 0, 0], [1, 1, 0, 0], [0, 0, 1, 2], [0, 0, 0, 1]],  # T6
+        [[0, 0, 1, 0], [0, 1, 0, 0], [2, 0, 0, 0], [0, 0, 0, 1]],  # S1
+        [[1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0], [0, 2, 0, 0]],  # S2
+        [[2, 0, 0, 0], [0, 1, 0, 0], [0, 0, 2, 0], [0, 0, 0, 1]],  # D1
+        [[1, 0, 0, 0], [0, 2, 0, 0], [0, 0, 1, 0], [0, 0, 0, 2]],  # D2
     ]
 
     edge_gens = []
@@ -176,7 +178,7 @@ def bfs_coset_labeling(gens, n_elements, base_idx=0):
 
             if next_elem_inv not in visited:
                 visited.add(next_elem_inv)
-                labels[next_elem_inv] = (current_dist + 1, current_word + (-g_idx-1,))
+                labels[next_elem_inv] = (current_dist + 1, current_word + (-g_idx - 1,))
                 queue.append(next_elem_inv)
 
     return labels
@@ -188,10 +190,10 @@ def construct_e8_roots():
 
     # Type 1: 112 roots
     for i in range(8):
-        for j in range(i+1, 8):
+        for j in range(i + 1, 8):
             for s1 in [1, -1]:
                 for s2 in [1, -1]:
-                    r = [0.0]*8
+                    r = [0.0] * 8
                     r[i], r[j] = float(s1), float(s2)
                     roots.append(tuple(r))
 
@@ -376,14 +378,16 @@ TO MAKE FULLY EXPLICIT:
     # Save results
     results = {
         "edges_labeled": len(edge_labels) if edge_labels else 0,
-        "max_word_distance": max(d for d, _ in edge_labels.values()) if edge_labels else 0,
+        "max_word_distance": (
+            max(d for d, _ in edge_labels.values()) if edge_labels else 0
+        ),
         "bijection_type": "coset-equivariant",
-        "construction": "BFS word labeling + group isomorphism"
+        "construction": "BFS word labeling + group isomorphism",
     }
 
     out_path = ROOT / "artifacts" / "explicit_coset_bijection.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(results, indent=2), encoding='utf-8')
+    out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(f"\nWrote {out_path}")
 
 

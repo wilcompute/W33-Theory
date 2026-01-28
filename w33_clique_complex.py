@@ -3,21 +3,25 @@
 Simple check: Is W33 the clique complex of the symplectic graph?
 """
 
-from sage.all import *
 import json
+
+from sage.all import *
 
 # Load W33 data
 with open("claude_workspace/data/w33_sage_incidence_h1.json") as f:
     data = json.load(f)
 
-from lib.w33_io import W33DataPaths, load_w33_lines
-from pathlib import Path
 import sys
+from pathlib import Path
 
-here = Path('.').resolve()
-sys.path.insert(0, str(here / 'claude_workspace'))
+from lib.w33_io import W33DataPaths, load_w33_lines
 
-paths = W33DataPaths.from_this_file(str(here / 'claude_workspace' / 'w33_sage_incidence_and_h1.py'))
+here = Path(".").resolve()
+sys.path.insert(0, str(here / "claude_workspace"))
+
+paths = W33DataPaths.from_this_file(
+    str(here / "claude_workspace" / "w33_sage_incidence_and_h1.py")
+)
 lines = load_w33_lines(paths)
 
 print("=== Is W33 the Clique Complex of Sp(4,3)? ===")
@@ -28,7 +32,7 @@ edges = set()
 for line in lines:
     line_list = sorted(line)
     for i in range(len(line_list)):
-        for j in range(i+1, len(line_list)):
+        for j in range(i + 1, len(line_list)):
             edges.add((line_list[i], line_list[j]))
 
 print(f"Collinearity graph: 40 vertices, {len(edges)} edges")
@@ -41,8 +45,8 @@ for line in lines:
     line_list = sorted(line)
     # Each line contributes C(4,3) = 4 triangles
     for i in range(len(line_list)):
-        for j in range(i+1, len(line_list)):
-            for k in range(j+1, len(line_list)):
+        for j in range(i + 1, len(line_list)):
+            for k in range(j + 1, len(line_list)):
                 triangles.add((line_list[i], line_list[j], line_list[k]))
 
 print(f"Triangles (3-cliques): {len(triangles)}")
@@ -71,10 +75,12 @@ print(f"  Triangles: {len(triangles)}")
 print(f"  Tetrahedra: {len(four_cliques)}")
 print()
 
-if (complex_data['n0'] == 40 and
-    complex_data['n1'] == len(edges) and
-    complex_data['n2'] == len(triangles) and
-    complex_data['n3'] == len(four_cliques)):
+if (
+    complex_data["n0"] == 40
+    and complex_data["n1"] == len(edges)
+    and complex_data["n2"] == len(triangles)
+    and complex_data["n3"] == len(four_cliques)
+):
     print("★ W33 IS the clique complex of Sp(4,3)! ★")
     print()
     print("This means W33 is the FLAG COMPLEX of the symplectic polar space!")

@@ -8,12 +8,13 @@ We must construct EXACTLY 40 rays whose orthogonality graph is Sp₄(3).
 The key insight: use the F₃ structure to guide the construction!
 """
 
-import numpy as np
 from itertools import combinations, product
 
-print("="*70)
+import numpy as np
+
+print("=" * 70)
 print("PART CXXXVII: THE CORRECT 40 WITTING RAYS")
-print("="*70)
+print("=" * 70)
 
 omega = np.exp(2j * np.pi / 3)  # Cube root of unity
 
@@ -23,15 +24,17 @@ omega = np.exp(2j * np.pi / 3)  # Cube root of unity
 
 F3 = [0, 1, 2]
 
+
 def symplectic_form(x, y):
     """Symplectic form on F₃⁴"""
-    return (x[0]*y[1] - x[1]*y[0] + x[2]*y[3] - x[3]*y[2]) % 3
+    return (x[0] * y[1] - x[1] * y[0] + x[2] * y[3] - x[3] * y[2]) % 3
+
 
 def get_F3_representatives():
     """Get canonical representatives for 40 projective points in P³(F₃)"""
     reps = []
     for v in product(F3, repeat=4):
-        if v == (0,0,0,0):
+        if v == (0, 0, 0, 0):
             continue
         first_nonzero = next(i for i, x in enumerate(v) if x != 0)
         scale = v[first_nonzero]
@@ -41,6 +44,7 @@ def get_F3_representatives():
             reps.append(normalized)
     return reps
 
+
 F3_reps = get_F3_representatives()
 print(f"Number of F₃ projective points: {len(F3_reps)}")
 
@@ -48,14 +52,16 @@ print(f"Number of F₃ projective points: {len(F3_reps)}")
 # BUILD WITTING STATES INDEXED BY F₃
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("WITTING STATES INDEXED BY F₃ COORDINATES")
-print("="*70)
+print("=" * 70)
+
 
 def support_type(rep):
     """Classify representative by its support pattern"""
     supp = tuple(i for i, x in enumerate(rep) if x != 0)
     return supp
+
 
 # Group by support type
 by_support = {}
@@ -87,21 +93,22 @@ for s, c in sorted(size_counts.items()):
 # MAP F₃ → COMPLEX STATES (CORRECTLY)
 # =====================================================
 
-print("\n" + "="*70)
-print("BUILDING QUANTUM STATES FROM F₃ COORDINATES")  
-print("="*70)
+print("\n" + "=" * 70)
+print("BUILDING QUANTUM STATES FROM F₃ COORDINATES")
+print("=" * 70)
+
 
 def F3_to_complex(rep):
     """
     Map F₃ representative to complex state.
-    
+
     Key: The mapping must preserve:
     - Symplectic orthogonality ↔ complex orthogonality
-    
+
     Method: Use position-dependent phases
     """
     state = np.zeros(4, dtype=complex)
-    
+
     for i, x in enumerate(rep):
         if x == 0:
             state[i] = 0
@@ -109,8 +116,9 @@ def F3_to_complex(rep):
             state[i] = 1
         else:  # x == 2
             state[i] = omega  # Map 2 → ω
-    
+
     return state / np.linalg.norm(state)
+
 
 # Build states
 states = [F3_to_complex(rep) for rep in F3_reps]
@@ -122,15 +130,15 @@ adj_quantum = np.zeros((n, n), dtype=int)
 adj_F3 = np.zeros((n, n), dtype=int)
 
 for i in range(n):
-    for j in range(i+1, n):
+    for j in range(i + 1, n):
         # Quantum orthogonality
-        ip = abs(np.vdot(states[i], states[j]))**2
+        ip = abs(np.vdot(states[i], states[j])) ** 2
         if ip < 1e-10:
-            adj_quantum[i,j] = adj_quantum[j,i] = 1
-        
+            adj_quantum[i, j] = adj_quantum[j, i] = 1
+
         # F₃ symplectic orthogonality
         if symplectic_form(F3_reps[i], F3_reps[j]) == 0:
-            adj_F3[i,j] = adj_F3[j,i] = 1
+            adj_F3[i, j] = adj_F3[j, i] = 1
 
 # Compare
 edges_quantum = adj_quantum.sum() // 2
@@ -138,7 +146,9 @@ edges_F3 = adj_F3.sum() // 2
 degrees_quantum = adj_quantum.sum(axis=1)
 degrees_F3 = adj_F3.sum(axis=1)
 
-print(f"\nQuantum orthogonality: {edges_quantum} edges, degrees {sorted(set(degrees_quantum))}")
+print(
+    f"\nQuantum orthogonality: {edges_quantum} edges, degrees {sorted(set(degrees_quantum))}"
+)
 print(f"F₃ symplectic:         {edges_F3} edges, degrees {sorted(set(degrees_F3))}")
 
 # Check agreement
@@ -149,11 +159,13 @@ if not agreement:
     # Find discrepancies
     diff_count = 0
     for i in range(n):
-        for j in range(i+1, n):
-            if adj_quantum[i,j] != adj_F3[i,j]:
+        for j in range(i + 1, n):
+            if adj_quantum[i, j] != adj_F3[i, j]:
                 diff_count += 1
                 if diff_count <= 5:
-                    print(f"  Mismatch at ({i},{j}): quantum={adj_quantum[i,j]}, F₃={adj_F3[i,j]}")
+                    print(
+                        f"  Mismatch at ({i},{j}): quantum={adj_quantum[i,j]}, F₃={adj_F3[i,j]}"
+                    )
                     print(f"    F₃ reps: {F3_reps[i]}, {F3_reps[j]}")
                     print(f"    States: {states[i]}, {states[j]}")
                     print(f"    |⟨|⟩|² = {abs(np.vdot(states[i], states[j]))**2:.6f}")
@@ -164,63 +176,67 @@ if not agreement:
 # THE CORRECT MAPPING (ATTEMPT 2)
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("CONSTRUCTING THE CORRECT ISOMORPHISM")
-print("="*70)
+print("=" * 70)
+
 
 def F3_to_complex_v2(rep):
     """
     Alternative mapping using Heisenberg structure.
-    
+
     For F₃⁴ with symplectic form, use:
     - Positions encode basis states
     - Values encode phase multipliers
     """
     state = np.zeros(4, dtype=complex)
-    
+
     for i, x in enumerate(rep):
         if x == 0:
             state[i] = 0
         else:
             # x ∈ {1, 2} → phase ω^{x-1} = {1, ω}
-            state[i] = omega**(x - 1)
-    
+            state[i] = omega ** (x - 1)
+
     return state / np.linalg.norm(state)
+
 
 # This is the same as v1. The issue is the mapping doesn't
 # preserve the symplectic structure.
 
 # The correct approach: use a DIFFERENT embedding
 
+
 def build_correct_witting():
     """
     The correct Witting states satisfy:
     ⟨ψ_x | ψ_y⟩ = 0 iff ω(x,y) = 0 (for x ≠ y)
-    
+
     This requires the "symplectic Fourier transform" approach.
-    
+
     For x = (a₁,a₂,a₃,a₄) ∈ F₃⁴:
     |ψ_x⟩ = (1/2) Σ_{t∈F₃⁴} ω^{ω(x,t)} |t⟩
-    
+
     But this gives 81 states (one per F₃⁴ point), not 40.
-    
+
     The projective version needs:
     |ψ_{[x]}⟩ where [x] is the projective class
     """
-    
+
     # Actually, the simplest approach:
     # The Witting states ARE determined by the F₃ structure
     # but the mapping involves the DUAL space
-    
+
     # For the symplectic polar graph, two 1-spaces are adjacent
     # iff their span is isotropic.
-    
+
     # In the quantum version, orthogonality is |⟨ψ|φ⟩| = 0
-    
+
     # The key is: the states must be related by
     # a representation of the Heisenberg group over F₃
-    
+
     return None
+
 
 # Let's instead verify that Sp₄(3) from F₃ IS correct
 print("Verifying F₃ construction gives Sp₄(3):")
@@ -233,16 +249,16 @@ if degrees_F3.min() == degrees_F3.max():
     k = degrees_F3[0]
     lam_vals, mu_vals = [], []
     for i in range(n):
-        for j in range(i+1, n):
-            common = sum(adj_F3[i,l] and adj_F3[j,l] for l in range(n))
-            if adj_F3[i,j]:
+        for j in range(i + 1, n):
+            common = sum(adj_F3[i, l] and adj_F3[j, l] for l in range(n))
+            if adj_F3[i, j]:
                 lam_vals.append(common)
             else:
                 mu_vals.append(common)
     lam = lam_vals[0] if lam_vals else 0
     mu = mu_vals[0] if mu_vals else 0
     print(f"  SRG parameters: ({n}, {k}, {lam}, {mu})")
-    
+
     if (n, k, lam, mu) == (40, 12, 2, 4):
         print("  ✓ F₃ construction gives Sp₄(3) exactly!")
 
@@ -250,9 +266,9 @@ if degrees_F3.min() == degrees_F3.max():
 # THE CONCLUSION
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("CONCLUSION")
-print("="*70)
+print("=" * 70)
 
 print("""
 TWO WAYS TO GET Sp₄(3):
@@ -299,15 +315,15 @@ RETIRED: "W33" - use standard notation going forward.
 # INNER PRODUCT ANALYSIS
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("INNER PRODUCT ANALYSIS")
-print("="*70)
+print("=" * 70)
 
 # What inner products does our naive mapping give?
 inner_prods = {}
 for i in range(n):
-    for j in range(i+1, n):
-        ip = round(abs(np.vdot(states[i], states[j]))**2, 6)
+    for j in range(i + 1, n):
+        ip = round(abs(np.vdot(states[i], states[j])) ** 2, 6)
         if ip not in inner_prods:
             inner_prods[ip] = 0
         inner_prods[ip] += 1
@@ -325,6 +341,6 @@ print("  Total: 780 pairs (= 40×39/2) ✓")
 print(f"\nOur construction gives: {edges_quantum} orthogonal pairs")
 print(f"Expected for Sp₄(3): 240 orthogonal pairs")
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PART CXXXVII COMPLETE")
-print("="*70)
+print("=" * 70)

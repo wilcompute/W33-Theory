@@ -5,12 +5,12 @@ from __future__ import annotations
 
 import csv
 import math
+import sys
 from pathlib import Path
 
 import numpy as np
 import scipy.sparse as sp
 
-import sys
 sys.path.append(str(Path("external/pysymmetry").resolve()))
 
 from pysymmetry import FiniteGroup, representation  # type: ignore
@@ -28,12 +28,23 @@ ROOT = resolve_repo_root(Path(__file__).resolve())
 DATA = ROOT / "data"
 OUT_DIR = DATA / "_workbench" / "05_symmetry"
 
-TABLE_PATH = DATA / "_toe" / "projector_recon_20260110" / "binary_tetrahedral_2T_multiplication_table.csv"
-COIN_NPZ = DATA / "_toe" / "projector_recon_20260110" / (
-    "N12_58_sector_coin_C24_K4_by_k_sparse_20260109T205353Z.npz"
+TABLE_PATH = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / "binary_tetrahedral_2T_multiplication_table.csv"
 )
-H_NPZ = DATA / "_toe" / "projector_recon_20260110" / (
-    "TOE_H_total_transport_plus_lambda_coin_59x24_lam0.5_20260109T205353Z.npz"
+COIN_NPZ = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / ("N12_58_sector_coin_C24_K4_by_k_sparse_20260109T205353Z.npz")
+)
+H_NPZ = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / ("TOE_H_total_transport_plus_lambda_coin_59x24_lam0.5_20260109T205353Z.npz")
 )
 
 
@@ -75,7 +86,9 @@ def find_generators(elems, table, side: str):
 
 def load_csr_npz(path: Path) -> sp.csr_matrix:
     z = np.load(path, allow_pickle=True)
-    return sp.csr_matrix((z["data"], z["indices"], z["indptr"]), shape=tuple(z["shape"]))
+    return sp.csr_matrix(
+        (z["data"], z["indices"], z["indptr"]), shape=tuple(z["shape"])
+    )
 
 
 def csr_to_sage(m: sp.csr_matrix):
@@ -183,7 +196,7 @@ def write_commutators(res, out_path: Path):
     with out_path.open("w", encoding="utf-8") as f:
         f.write("generator,commutator_frobenius\n")
         for gen, norm in res["gen_commutators"]:
-            f.write(f"\"{gen}\",{norm:.6e}\n")
+            f.write(f'"{gen}",{norm:.6e}\n')
 
 
 def main() -> None:

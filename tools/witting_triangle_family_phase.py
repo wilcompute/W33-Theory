@@ -4,10 +4,11 @@
 We classify each non-orthogonal triangle by the multiset of family labels
 (B, F0..F3) and tabulate the Pancharatnam phase cluster (±pi/6, ±pi/2).
 """
+
 from __future__ import annotations
 
-import json
 import itertools
+import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -30,11 +31,11 @@ def construct_witting_40_rays_with_labels():
 
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
             labels.append(("F0", mu, nu))
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
             labels.append(("F1", mu, nu))
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             labels.append(("F2", mu, nu))
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
             labels.append(("F3", mu, nu))
@@ -48,7 +49,7 @@ def wrap_angle(a):
 
 def phase_cluster(angle):
     a = wrap_angle(angle)
-    targets = [np.pi/6, -np.pi/6, np.pi/2, -np.pi/2]
+    targets = [np.pi / 6, -np.pi / 6, np.pi / 2, -np.pi / 2]
     nearest = min(targets, key=lambda t: abs(a - t))
     return round(float(nearest), 6)
 
@@ -75,7 +76,9 @@ def main():
         table[key][ph] += 1
 
     # keep top patterns by total count
-    totals = sorted([(k, sum(v.values())) for k, v in table.items()], key=lambda x: -x[1])
+    totals = sorted(
+        [(k, sum(v.values())) for k, v in table.items()], key=lambda x: -x[1]
+    )
     top = totals[:12]
 
     out = {

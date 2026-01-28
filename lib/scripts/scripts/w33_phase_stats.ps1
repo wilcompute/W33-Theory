@@ -82,4 +82,3 @@ foreach ($kind in ($kindCounts | ForEach-Object { $_.Name })) {
 
 $lines -join "`n" | Set-Content -Path $outPath -Encoding utf8
 Write-Output "Wrote $outPath"
-

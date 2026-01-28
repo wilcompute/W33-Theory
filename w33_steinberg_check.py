@@ -10,8 +10,9 @@ Key property: Steinberg rep restricted to a Sylow p-subgroup gives
 the regular representation.
 """
 
-from sage.all import *
 import json
+
+from sage.all import *
 
 with open("claude_workspace/data/w33_sage_incidence_h1.json") as f:
     data = json.load(f)
@@ -26,7 +27,7 @@ for gen in generators_data:
 
 n = 80
 S = SymmetricGroup(n)
-perms = [S(Permutation([p+1 for p in perm])) for perm in perm_gens]
+perms = [S(Permutation([p + 1 for p in perm])) for perm in perm_gens]
 G = PermutationGroup(perms)
 
 gap_G = libgap(G)
@@ -125,7 +126,7 @@ for i, c in enumerate(gap_classes):
         val = int(chi_val)
     else:
         val = complex(str(chi_val.sage()))
-    
+
     if val != 0:
         # Check if order is coprime to 3
         coprime_to_3 = (order % 3 != 0) or order == 1
@@ -134,7 +135,9 @@ for i, c in enumerate(gap_classes):
         while temp % 3 == 0:
             p_part *= 3
             temp //= 3
-        print(f"  Class {i}: order={order}, chi={val}, 3-part={p_part}, coprime to 3: {coprime_to_3}")
+        print(
+            f"  Class {i}: order={order}, chi={val}, 3-part={p_part}, coprime to 3: {coprime_to_3}"
+        )
 
 print()
 print("For Steinberg rep, non-zero values occur only on semisimple elements")

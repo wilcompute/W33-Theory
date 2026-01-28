@@ -106,4 +106,3 @@ Total edges in W33: 240
 The λ=2 eigenspace of W33 carries D4 root structure.
 The 240 edge projections into this space may relate to E8 roots
 through the D4×D4 ⊂ E8 decomposition.
-

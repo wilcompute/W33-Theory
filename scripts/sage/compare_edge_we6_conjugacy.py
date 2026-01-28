@@ -3,9 +3,11 @@
 
 Uses GAP to attempt conjugating permutation in Sym(240).
 """
+
 from __future__ import annotations
 
 import json
+
 from sage.all import Permutation, PermutationGroup
 from sage.interfaces.gap import gap
 
@@ -21,11 +23,11 @@ def to_gap_group(perms):
 
 
 def main():
-    edge = json.loads(open('artifacts/sp43_edge_generators.json').read())
-    we6 = json.loads(open('artifacts/we6_true_action.json').read())
+    edge = json.loads(open("artifacts/sp43_edge_generators.json").read())
+    we6 = json.loads(open("artifacts/we6_true_action.json").read())
 
-    edge_gens = [[x + 1 for x in p] for p in edge['generators']]  # to 1-based
-    we6_even = we6['we6_even_generators']
+    edge_gens = [[x + 1 for x in p] for p in edge["generators"]]  # to 1-based
+    we6_even = we6["we6_even_generators"]
 
     G1 = to_perm_group(edge_gens)
     G2 = to_perm_group(we6_even)
@@ -46,7 +48,7 @@ def main():
         print("Found conjugating element")
         # export permutation
         perm_list = list(conj)
-        with open('artifacts/edge_we6_conjugating_perm.json', 'w') as f:
+        with open("artifacts/edge_we6_conjugating_perm.json", "w") as f:
             json.dump({"perm": perm_list}, f)
         print("Wrote artifacts/edge_we6_conjugating_perm.json")
 
@@ -55,10 +57,10 @@ def main():
         "g2_order": int(G2.order()),
         "is_conjugate": bool(is_conj),
     }
-    with open('artifacts/edge_we6_conjugacy.json', 'w') as f:
-        json.dump(out, f, indent=2)
+    with open("artifacts/edge_we6_conjugacy.json", "w") as f:
+        json.dump(out, f, indent=2, default=str)
     print("Wrote artifacts/edge_we6_conjugacy.json")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

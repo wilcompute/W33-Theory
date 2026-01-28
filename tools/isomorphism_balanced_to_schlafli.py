@@ -4,12 +4,14 @@
 Then transfer E/C/L labels to the balanced nodes and analyze distributions by Z3 phase
 and by integral/half root type.
 """
+
 from __future__ import annotations
 
+import json
 from collections import Counter, defaultdict
 from itertools import product
 from pathlib import Path
-import json
+
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -33,11 +35,11 @@ def build_w33():
             proj_points.append(v)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     edges = []
     for i in range(40):
-        for j in range(i+1, 40):
+        for j in range(i + 1, 40):
             if omega(proj_points[i], proj_points[j]) == 0:
                 edges.append((i, j))
 
@@ -48,19 +50,21 @@ def build_balanced_root_graph():
     points, edges = build_w33()
     edge_to_idx = {tuple(sorted(e)): i for i, e in enumerate(edges)}
 
-    bias = json.loads((ROOT / 'artifacts' / 'su3_phase_orbit_bias.json').read_text())
+    bias = json.loads((ROOT / "artifacts" / "su3_phase_orbit_bias.json").read_text())
     balanced_orbit = None
-    for k, v in bias['orbit_sums'].items():
-        if v == {'0': 9, '1': 9, '2': 9} or v == {0: 9, 1: 9, 2: 9}:
-            balanced_orbit = int(k.split('_')[1])
+    for k, v in bias["orbit_sums"].items():
+        if v == {"0": 9, "1": 9, "2": 9} or v == {0: 9, 1: 9, 2: 9}:
+            balanced_orbit = int(k.split("_")[1])
     if balanced_orbit is None:
         raise RuntimeError("No balanced orbit found")
 
-    we6 = json.loads((ROOT / 'artifacts' / 'we6_orbit_labels.json').read_text())
-    root_to_orbit = {eval(k): v for k, v in we6['mapping'].items()}
-    edge_map = json.loads((ROOT / 'artifacts' / 'explicit_bijection_decomposition.json').read_text())
-    edge_to_root_idx = {int(k): v for k, v in edge_map['edge_to_root_index'].items()}
-    root_coords = [tuple(r) for r in edge_map['root_coords']]
+    we6 = json.loads((ROOT / "artifacts" / "we6_orbit_labels.json").read_text())
+    root_to_orbit = {eval(k): v for k, v in we6["mapping"].items()}
+    edge_map = json.loads(
+        (ROOT / "artifacts" / "explicit_bijection_decomposition.json").read_text()
+    )
+    edge_to_root_idx = {int(k): v for k, v in edge_map["edge_to_root_index"].items()}
+    root_coords = [tuple(r) for r in edge_map["root_coords"]]
 
     # Phase function
     def phase(v):
@@ -76,17 +80,17 @@ def build_balanced_root_graph():
         ridx = edge_to_root_idx[eidx]
         r = root_coords[ridx]
         info = root_to_orbit.get(r)
-        if info and info['orbit_size'] == 27 and info['orbit_id'] == balanced_orbit:
+        if info and info["orbit_size"] == 27 and info["orbit_id"] == balanced_orbit:
             bal_edges.append(e)
             roots.append(np.array([x / 2.0 for x in r], dtype=float))
             phases.append(int((phase(points[e[0]]) + phase(points[e[1]])) % 3))
             has_odd = any(abs(x) % 2 == 1 for x in r)
-            root_types.append('half' if has_odd else 'integral')
+            root_types.append("half" if has_odd else "integral")
 
     n = len(roots)
-    adj = [[0]*n for _ in range(n)]
+    adj = [[0] * n for _ in range(n)]
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             ip = float(np.dot(roots[i], roots[j]))
             if abs(ip - 1.0) < 1e-6:
                 adj[i][j] = adj[j][i] = 1
@@ -98,45 +102,45 @@ def build_schlafli_skew():
     # Build Schlaefli lines
     lines = []
     for i in range(1, 7):
-        lines.append(('E', i))
+        lines.append(("E", i))
     for i in range(1, 7):
-        lines.append(('C', i))
+        lines.append(("C", i))
     for i in range(1, 7):
-        for j in range(i+1, 7):
-            lines.append(('L', i, j))
+        for j in range(i + 1, 7):
+            lines.append(("L", i, j))
 
     def intersect(L1, L2):
         if L1 == L2:
             return False
         t1, t2 = L1[0], L2[0]
-        if t1 == 'E' and t2 == 'E':
+        if t1 == "E" and t2 == "E":
             return False
-        if t1 == 'C' and t2 == 'C':
+        if t1 == "C" and t2 == "C":
             return False
-        if t1 == 'E' and t2 == 'C':
+        if t1 == "E" and t2 == "C":
             return L1[1] != L2[1]
-        if t1 == 'C' and t2 == 'E':
+        if t1 == "C" and t2 == "E":
             return L1[1] != L2[1]
-        if t1 == 'E' and t2 == 'L':
+        if t1 == "E" and t2 == "L":
             return L1[1] in L2[1:]
-        if t1 == 'L' and t2 == 'E':
+        if t1 == "L" and t2 == "E":
             return L2[1] in L1[1:]
-        if t1 == 'C' and t2 == 'L':
+        if t1 == "C" and t2 == "L":
             return L1[1] in L2[1:]
-        if t1 == 'L' and t2 == 'C':
+        if t1 == "L" and t2 == "C":
             return L2[1] in L1[1:]
-        if t1 == 'L' and t2 == 'L':
+        if t1 == "L" and t2 == "L":
             return len(set(L1[1:]) & set(L2[1:])) == 0
         return False
 
     n = len(lines)
-    adj_inter = [[0]*n for _ in range(n)]
+    adj_inter = [[0] * n for _ in range(n)]
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if intersect(lines[i], lines[j]):
                 adj_inter[i][j] = adj_inter[j][i] = 1
     # Skew graph = complement
-    adj_skew = [[0]*n for _ in range(n)]
+    adj_skew = [[0] * n for _ in range(n)]
     for i in range(n):
         for j in range(n):
             if i == j:
@@ -234,7 +238,7 @@ def main():
     # Verify isomorphism
     ok = True
     for i in range(len(adj_bal)):
-        for j in range(i+1, len(adj_bal)):
+        for j in range(i + 1, len(adj_bal)):
             if adj_bal[i][j] != adj_sch[mapping[i]][mapping[j]]:
                 ok = False
                 break
@@ -254,16 +258,18 @@ def main():
         "line_type_counts": dict(line_type_counts),
         "phase_line_counts": {str(k): dict(v) for k, v in phase_line_counts.items()},
         "root_line_counts": {k: dict(v) for k, v in root_line_counts.items()},
-        "mapping_sample": {str(k): bal_to_line[k] for k in sorted(bal_to_line.keys())[:10]},
+        "mapping_sample": {
+            str(k): bal_to_line[k] for k in sorted(bal_to_line.keys())[:10]
+        },
         "mapping_full": mapping_full,
         "isomorphism_verified": ok,
     }
 
-    out_path = ROOT / 'artifacts' / 'balanced_orbit_schlafli_isomorphism.json'
-    out_path.write_text(json.dumps(results, indent=2), encoding='utf-8')
+    out_path = ROOT / "artifacts" / "balanced_orbit_schlafli_isomorphism.json"
+    out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(results)
     print(f"Wrote {out_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -14,8 +14,9 @@ And the mystery of 1111 in the α correction.
 """
 
 import math
-import numpy as np
 from fractions import Fraction
+
+import numpy as np
 
 print("""
 ╔══════════════════════════════════════════════════════════════════════╗
@@ -42,13 +43,7 @@ The exceptional Lie algebras form a unique sequence:
 with dimensions:
 """)
 
-exceptional = {
-    'G2': 14,
-    'F4': 52,
-    'E6': 78,
-    'E7': 133,
-    'E8': 248
-}
+exceptional = {"G2": 14, "F4": 52, "E6": 78, "E7": 133, "E8": 248}
 
 for name, dim in exceptional.items():
     print(f"    dim({name}) = {dim}")
@@ -81,7 +76,7 @@ Why E7 specifically, not E6 or E8?
 KEY INSIGHT: The EMBEDDING chain
 
     W33 ←→ W(E6)    [W33's automorphism group is the Weyl group of E6]
-    
+
 But W(E6) is a SUBGROUP of E7:
     W(E6) ⊂ E7
 
@@ -126,23 +121,23 @@ PROOF SKETCH:
 
 1. W33 has 40 points, which parametrize the coset space:
        W33 ≅ E7/(E6 × U(1)) restricted to a discrete subgroup
-       
+
 2. The TOTAL structure is:
        E7 = (E6 structure) + (W33 geometry)
        dim(E7) = dim(E6) + "effective W33 dimension"
-       
+
    But actually:
        dim(E7) = 133
        dim(E6) = 78
        133 - 78 = 55 ≠ 40
-       
+
    So the direct subtraction doesn't work. Let's think differently.
 
 3. ALTERNATIVE: The 40 comes from the COSET GEOMETRY
        E7/E6 has dimension 133 - 78 = 55
        But the PHYSICAL degrees of freedom for electroweak mixing
        are the W33 points = 40
-       
+
    The denominator 173 = 40 + 133 is the TOTAL:
        (Geometric d.o.f.) + (Full E7 algebra)
 """)
@@ -222,7 +217,7 @@ base3 = []
 while n > 0:
     base3.append(n % 3)
     n //= 3
-print(''.join(map(str, reversed(base3))))
+print("".join(map(str, reversed(base3))))
 print()
 
 # The repunit connection
@@ -239,7 +234,35 @@ for k in range(1, 8):
     # Try factoring
     temp = repunit
     factors = []
-    for p in [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103]:
+    for p in [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13,
+        17,
+        19,
+        23,
+        29,
+        31,
+        37,
+        41,
+        43,
+        47,
+        53,
+        59,
+        61,
+        67,
+        71,
+        73,
+        79,
+        83,
+        89,
+        97,
+        101,
+        103,
+    ]:
         while temp % p == 0:
             factors.append(p)
             temp //= p
@@ -263,7 +286,7 @@ print("""
 
 In W33:
     11 = √121 = √(W33_total)
-    
+
 Could 101 have W33 significance?
 
     101 = 100 + 1 = 10² + 1
@@ -337,7 +360,7 @@ Combining tree-level and loop correction:
 Let's verify:
 """)
 
-alpha_inv_predicted = 137 + 40/1111
+alpha_inv_predicted = 137 + 40 / 1111
 alpha_inv_exp = 137.035999084
 
 print(f"  W33 prediction: α⁻¹ = {alpha_inv_predicted:.6f}")
@@ -367,13 +390,40 @@ for num_coef in range(1, 100):
             # Check if denom has W33 structure
             factors = []
             temp = denom_coef
-            for p in [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101]:
+            for p in [
+                2,
+                3,
+                5,
+                7,
+                11,
+                13,
+                17,
+                19,
+                23,
+                29,
+                31,
+                37,
+                41,
+                43,
+                47,
+                53,
+                59,
+                61,
+                67,
+                71,
+                73,
+                79,
+                83,
+                89,
+                97,
+                101,
+            ]:
                 while temp % p == 0:
                     factors.append(p)
                     temp //= p
             if temp > 1:
                 factors.append(temp)
-            
+
             if num_coef <= 90:  # W33 numbers
                 best_matches.append((num_coef, denom_coef, val, factors))
 
@@ -382,7 +432,7 @@ best_matches.sort(key=lambda x: abs(x[2] - target))
 
 print("  Best matches with W33-sized numerators:")
 for num, denom, val, factors in best_matches[:10]:
-    factor_str = ' × '.join(map(str, factors))
+    factor_str = " × ".join(map(str, factors))
     print(f"    {num:2d}/{denom:4d} = {val:.9f} (denom = {factor_str})")
 
 print()
@@ -402,7 +452,7 @@ The full breaking chain from E7 to the Standard Model:
     E7 (dim=133)
      ↓  breaks to
     E6 × U(1)_X  (dim = 78 + 1 = 79)
-     ↓  breaks to  
+     ↓  breaks to
     SO(10) × U(1)_ψ × U(1)_X  (dim = 45 + 1 + 1 = 47)
      ↓  breaks to
     SU(5) × U(1)_χ × U(1)_ψ × U(1)_X  (dim = 24 + 3 = 27)
@@ -459,14 +509,14 @@ print("""
 W33 encodes the entire breaking chain:
 
     1. Total structure: 121 = W33_total = dim(E7) - dim(SM)
-    
+
     2. Weinberg angle: sin²θ_W = 40/173 = W33_points/(W33_points + dim(E7))
-    
+
     3. Fine structure: α⁻¹ = 137 = 81 + 56 = cycles + ???
-    
+
     4. Correction: Δα⁻¹ = 40/1111 = points/[11 × 101]
        where 11 = √121 and 101 = dim(E7) - dim(spinor)
-    
+
     5. Dark matter: Ω_DM/Ω_b = 27/5 = E6_fund / ???
 
 The pattern suggests W33 is the "DNA" of symmetry breaking!
@@ -583,7 +633,9 @@ print(f"  From sin²: {0.23121/(1-0.23121):.6f}")
 print()
 
 print(f"  α⁻¹(tree) = {W33_cycles} + {E7_fund} = {alpha_inv_tree}")
-print(f"  α⁻¹(1-loop) = {alpha_inv_tree} + {delta_alpha_inv:.6f} = {alpha_inv_tree + delta_alpha_inv:.6f}")
+print(
+    f"  α⁻¹(1-loop) = {alpha_inv_tree} + {delta_alpha_inv:.6f} = {alpha_inv_tree + delta_alpha_inv:.6f}"
+)
 print(f"  Experimental: 137.035999")
 print()
 

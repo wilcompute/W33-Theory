@@ -28,7 +28,7 @@ print("PART 1: The 24 Niemeier Lattices")
 print("=" * 70)
 
 print("""
-The 24 NIEMEIER LATTICES are the 24 positive definite even unimodular 
+The 24 NIEMEIER LATTICES are the 24 positive definite even unimodular
 lattices of rank 24. They are classified by their root systems:
 
 LATTICE       COXETER #    SPORADIC GROUP CONNECTION
@@ -131,7 +131,7 @@ W33 STRUCTURE:
   - 81 cycles
   - 90 K4s
   - Total: 121 = 11²
-  
+
   Aut(W33) = W(E6) = |W(E6)| = 51840
            = 2⁷ × 3⁴ × 5
            = 128 × 81 × 5
@@ -187,7 +187,7 @@ print("=" * 70)
 print("""
 WHY 24? The number 24 appears throughout:
 
-1. NIEMEIER LATTICES: Exactly 24 
+1. NIEMEIER LATTICES: Exactly 24
 2. LEECH LATTICE: Dimension 24
 3. RAMANUJAN TAU: τ(n) appears in weight 12 = 24/2 modular form
 4. BOSONIC STRING: Critical dimension 26 = 24 + 2
@@ -197,11 +197,11 @@ WHY 24? The number 24 appears throughout:
 
 THE 24-DIMENSIONAL STRUCTURE:
   j(τ) - 744 = q⁻¹ + 0 + 196884q + ...
-  
+
   The constant 744 appears because:
   744 = 24 × 31
       = 729 + 15 = 3⁶ + 15
-  
+
   And 729 = |ternary Golay| = 9 × 81 = 9 × |W33 cycles|!
 """)
 
@@ -307,7 +307,7 @@ print("=" * 70)
 print("""
 DEEP HOLES OF LEECH:
 - The Leech lattice has "holes" - points not covered by spheres
-- The 23 other Niemeier lattices correspond to the 23 orbits 
+- The 23 other Niemeier lattices correspond to the 23 orbits
   of deep holes in Leech!
 - These are stabilized by the umbral groups
 

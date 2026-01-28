@@ -18,7 +18,7 @@ $$\alpha^{-1} = e_1^2 - e_2 |e_3| + 1 + \frac{v}{D}$$
 
 where all quantities come from W33:
 - $e_1 = 12$, $e_2 = 2$, $e_3 = -4$ (eigenvalues)
-- $v = 40$ (vertices)  
+- $v = 40$ (vertices)
 - $D = 1111$ (combinatorial invariant)
 
 $$\alpha^{-1} = 144 - 8 + 1 + \frac{40}{1111} = 137.036004$$

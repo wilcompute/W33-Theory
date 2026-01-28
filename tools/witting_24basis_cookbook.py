@@ -9,12 +9,13 @@ Outputs:
 Also computes a heuristic noncontextual bound: max number of bases that can be
 satisfied by any 0/1 assignment (exactly one "1" per basis) found by local search.
 """
+
 from __future__ import annotations
 
 import json
 import random
-from pathlib import Path
 from itertools import combinations
+from pathlib import Path
 
 import numpy as np
 
@@ -39,13 +40,13 @@ def construct_witting_40_rays():
     # 36 states in 4 groups of 9
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
             labels.append(f"(0,1,-w^{mu},w^{nu})/sqrt3")
 
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
             labels.append(f"(1,0,-w^{mu},-w^{nu})/sqrt3")
 
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             labels.append(f"(1,-w^{mu},0,w^{nu})/sqrt3")
 
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
@@ -67,8 +68,14 @@ def find_tetrads(rays):
                 ortho[i, j] = ortho[j, i] = True
     tetrads = []
     for a, b, c, d in combinations(range(n), 4):
-        if (ortho[a, b] and ortho[a, c] and ortho[a, d] and
-                ortho[b, c] and ortho[b, d] and ortho[c, d]):
+        if (
+            ortho[a, b]
+            and ortho[a, c]
+            and ortho[a, d]
+            and ortho[b, c]
+            and ortho[b, d]
+            and ortho[c, d]
+        ):
             tetrads.append((a, b, c, d))
     return tetrads
 
@@ -147,9 +154,7 @@ def main():
     with csv_path.open("w", encoding="utf-8") as f:
         f.write("ray_index,label,v0,v1,v2,v3\n")
         for i, v in enumerate(rays):
-            f.write(
-                f"{i},\"{labels[i]}\",{v[0]},{v[1]},{v[2]},{v[3]}\n"
-            )
+            f.write(f'{i},"{labels[i]}",{v[0]},{v[1]},{v[2]},{v[3]}\n')
 
     # Save subset JSON
     subset_path = DOCS / "witting_24basis_subset.json"
@@ -159,7 +164,9 @@ def main():
                 "bases": [list(map(int, b)) for b in bases_24],
                 "ray_labels": labels,
                 "heuristic_max_satisfied_bases": int(max_sat),
-                "exact_max_satisfied_bases": int(exact_bound) if exact_bound is not None else None,
+                "exact_max_satisfied_bases": (
+                    int(exact_bound) if exact_bound is not None else None
+                ),
             },
             indent=2,
         ),
@@ -170,15 +177,23 @@ def main():
     md_path = DOCS / "witting_24basis_cookbook.md"
     with md_path.open("w", encoding="utf-8") as f:
         f.write("# Witting 24‑Basis KS Cookbook\n\n")
-        f.write("This file lists a 24‑basis subset (out of 40) that remains KS‑uncolorable.\n")
+        f.write(
+            "This file lists a 24‑basis subset (out of 40) that remains KS‑uncolorable.\n"
+        )
         if exact_bound is not None:
             f.write("It also includes the exact noncontextual bound.\n\n")
             f.write("## Exact noncontextual bound\n")
-            f.write(f"- Max bases satisfiable by any 0/1 assignment: **{exact_bound} / {len(bases_24)}**\n\n")
+            f.write(
+                f"- Max bases satisfiable by any 0/1 assignment: **{exact_bound} / {len(bases_24)}**\n\n"
+            )
         else:
-            f.write("It also includes a heuristic noncontextual bound from local search.\n\n")
+            f.write(
+                "It also includes a heuristic noncontextual bound from local search.\n\n"
+            )
             f.write("## Heuristic noncontextual bound\n")
-            f.write(f"- Best bases satisfiable found: **{max_sat} / {len(bases_24)}**\n\n")
+            f.write(
+                f"- Best bases satisfiable found: **{max_sat} / {len(bases_24)}**\n\n"
+            )
         f.write("## Ray index map\n")
         for i, lab in enumerate(labels):
             f.write(f"- r{i}: {lab}\n")

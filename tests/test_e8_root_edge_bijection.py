@@ -1,6 +1,7 @@
 import json
 from itertools import product
 from pathlib import Path
+
 import pytest
 
 
@@ -36,7 +37,9 @@ def build_w33_edges():
 def test_e8_root_to_w33_edge_bijection():
     p = Path("artifacts_archive/e8_root_to_w33_edge.json")
     if not p.exists():
-        pytest.skip("e8_root_to_w33_edge.json not found — run tools/sage_e8_root_edge_bijection.py")
+        pytest.skip(
+            "e8_root_to_w33_edge.json not found — run tools/sage_e8_root_edge_bijection.py"
+        )
 
     data = json.loads(p.read_text(encoding="utf-8"))
 

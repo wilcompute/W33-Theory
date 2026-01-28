@@ -1,6 +1,6 @@
 ﻿import csv
-import json
 import itertools
+import json
 from collections import Counter
 from pathlib import Path
 
@@ -18,7 +18,9 @@ def parse_proj_classes(row):
         return raw.split()
     raw_list = (row.get("proj_list") or "").strip()
     if raw_list:
-        cleaned = raw_list.replace("[", "").replace("]", "").replace("'", "").replace('"', "")
+        cleaned = (
+            raw_list.replace("[", "").replace("]", "").replace("'", "").replace('"', "")
+        )
         return [item.strip() for item in cleaned.split(",") if item.strip()]
     return []
 
@@ -85,7 +87,9 @@ def main():
     out_dir.mkdir(parents=True, exist_ok=True)
 
     k12_path = data_dir / "_workbench" / "02_geometry" / "W33_line_phase_k12_map.csv"
-    coupling_path = data_dir / "toe_coupling_20260110" / "W33_lines_to_projective_quartets.csv"
+    coupling_path = (
+        data_dir / "toe_coupling_20260110" / "W33_lines_to_projective_quartets.csv"
+    )
 
     line_counts = {}
     with k12_path.open(newline="", encoding="utf-8-sig") as handle:
@@ -202,14 +206,20 @@ def main():
     with md_path.open("w", encoding="utf-8") as handle:
         handle.write("# Tau action vs W33 line phase shifts\n\n")
         handle.write("Search:\n")
-        handle.write("- Searched order-3 projective-class actions of the form `sec -> perm(sec)` with per-sector m-shifts.\n")
+        handle.write(
+            "- Searched order-3 projective-class actions of the form `sec -> perm(sec)` with per-sector m-shifts.\n"
+        )
         handle.write("- Chose mapping that maximizes line-quartet preservation.\n\n")
         handle.write("Inputs:\n")
         handle.write("- `data/_workbench/02_geometry/W33_line_phase_k12_map.csv`\n")
-        handle.write("- `data/_toe/coupling_20260110/W33_lines_to_projective_quartets.csv`\n\n")
+        handle.write(
+            "- `data/_toe/coupling_20260110/W33_lines_to_projective_quartets.csv`\n\n"
+        )
         handle.write("Outputs:\n")
         handle.write("- `data/_workbench/04_measurement/tau_phase_shift_pairs.csv`\n")
-        handle.write("- `data/_workbench/04_measurement/tau_phase_shift_histogram.csv`\n\n")
+        handle.write(
+            "- `data/_workbench/04_measurement/tau_phase_shift_histogram.csv`\n\n"
+        )
         handle.write("- `data/_workbench/04_measurement/tau_phase_shift_self.csv`\n\n")
         handle.write(f"Best mapping: {mapping_note}\n")
         handle.write(f"Pairable lines: {len(pairs)}\n\n")
@@ -227,4 +237,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

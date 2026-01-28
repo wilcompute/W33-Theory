@@ -5,11 +5,12 @@ We decompose each 4x4 unitary into a sequence of 2x2 complex Givens rotations
 acting on adjacent modes (i-1,i) to zero below-diagonal entries.
 Outputs a JSON with operations (i,j,theta,phi) and final diagonal phases.
 """
+
 from __future__ import annotations
 
 import json
-from pathlib import Path
 from itertools import combinations
+from pathlib import Path
 
 import numpy as np
 
@@ -28,9 +29,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -48,8 +49,14 @@ def find_tetrads(rays):
                 ortho[i, j] = ortho[j, i] = True
     tetrads = []
     for a, b, c, d in combinations(range(n), 4):
-        if (ortho[a, b] and ortho[a, c] and ortho[a, d] and
-                ortho[b, c] and ortho[b, d] and ortho[c, d]):
+        if (
+            ortho[a, b]
+            and ortho[a, c]
+            and ortho[a, d]
+            and ortho[b, c]
+            and ortho[b, d]
+            and ortho[c, d]
+        ):
             tetrads.append((a, b, c, d))
     return tetrads
 
@@ -106,14 +113,16 @@ def reck_decompose(U):
             G = givens_matrix(n, row - 1, row, c, s)
             U_work = G @ U_work
             # store operation (row-1,row,c,s)
-            ops.append({
-                "i": row - 1,
-                "j": row,
-                "c": c,
-                "s": s,
-                "theta": float(np.arccos(np.clip(abs(c), 0, 1))),
-                "phi": float((np.angle(s) - np.angle(c)) % (2 * np.pi)),
-            })
+            ops.append(
+                {
+                    "i": row - 1,
+                    "j": row,
+                    "c": c,
+                    "s": s,
+                    "theta": float(np.arccos(np.clip(abs(c), 0, 1))),
+                    "phi": float((np.angle(s) - np.angle(c)) % (2 * np.pi)),
+                }
+            )
 
     # U_work is upper triangular with unit modulus diagonal
     diag = np.diag(U_work)
@@ -137,12 +146,14 @@ def main():
     for bi, base in enumerate(bases):
         U = np.column_stack([rays[i] for i in base])
         ops, phases = reck_decompose(U)
-        out.append({
-            "basis_index": bi,
-            "rays": list(base),
-            "ops": ops,
-            "diag_phases": phases,
-        })
+        out.append(
+            {
+                "basis_index": bi,
+                "rays": list(base),
+                "ops": ops,
+                "diag_phases": phases,
+            }
+        )
 
     out_path = DOCS / "witting_24basis_reck.json"
     out_path.write_text(json.dumps(out, indent=2, default=str), encoding="utf-8")

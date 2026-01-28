@@ -20,7 +20,7 @@ This characteristic polynomial IS the universe.
 
 ### Key Numbers
 - **v = 40** vertices (dimensions)
-- **k = 12** degree (connections)  
+- **k = 12** degree (connections)
 - **λ = 2, μ = 4** (regularity parameters)
 - **1111 = 11 × 101** (alpha denominator)
 - **|Aut| = 51840 = |W(E₆)|** (Weyl group!)
@@ -393,7 +393,7 @@ Back to F₃         ← The loop closes
 Generation scaling: m_g ~ ε^(2(3-g))
 
 Gen 3: ε⁰ = 1       (t, b, τ masses)
-Gen 2: ε² = 1/36    (c, s, μ masses)  
+Gen 2: ε² = 1/36    (c, s, μ masses)
 Gen 1: ε⁴ = 1/1296  (u, d, e masses)
 
 12 orders of magnitude from GEOMETRY!
@@ -487,7 +487,7 @@ The loop is complete.
 - All 40 systems are **distinct**
 - Participation matrix = Adjacency matrix of Sp₄(3)
 
-### Part CLI-CLII: Sharing Structure  
+### Part CLI-CLII: Sharing Structure
 - Adjacent vertices share **exactly 2 orthogonal states** (λ=2)
 - Non-adjacent share **exactly 4 non-orthogonal states** (μ=4)
 - **160 triangles** partition into 40 groups of 4
@@ -502,4 +502,3 @@ The loop is complete.
 ---
 
 *Sp₄(3) Theory - January 2026 - Part CLIII Complete*
-

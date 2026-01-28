@@ -6,11 +6,12 @@ Discovery:
 - Build W33 from E8 Coxeter 6-cycle orbits.
 - Compute explicit graph isomorphism -> orbit-to-point map.
 """
+
 from __future__ import annotations
 
 import json
-from pathlib import Path
 from itertools import product
+from pathlib import Path
 
 from sage.all import Graph, RootSystem, vector
 
@@ -35,12 +36,12 @@ def build_w33_f3():
             proj_points.append(v)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     edges = []
     n = len(proj_points)
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 edges.append((i, j))
 
@@ -50,7 +51,7 @@ def build_w33_f3():
 
 
 def build_w33_from_e8():
-    R = RootSystem(['E', 8]).root_lattice()
+    R = RootSystem(["E", 8]).root_lattice()
     roots = list(R.roots())
     root_index = {tuple(r.to_vector()): i for i, r in enumerate(roots)}
     C = R.cartan_type().cartan_matrix()
@@ -81,11 +82,11 @@ def build_w33_from_e8():
     def ip(a, b):
         va = vector(a.to_vector())
         vb = vector(b.to_vector())
-        return (va * C * vb)  # simply-laced: Cartan = Gram in simple-root basis
+        return va * C * vb  # simply-laced: Cartan = Gram in simple-root basis
 
     edges = []
     for i in range(len(orbits)):
-        for j in range(i+1, len(orbits)):
+        for j in range(i + 1, len(orbits)):
             # check if all 36 pairs orthogonal
             ok = True
             for ri in orbits[i]:

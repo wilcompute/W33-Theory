@@ -3,6 +3,7 @@
 
 Outputs artifacts/pattern_class_clusters.json
 """
+
 from __future__ import annotations
 
 import json
@@ -38,7 +39,9 @@ def kmeans(X, k, iters=100, seed=0):
 
 
 def main():
-    table = json.loads((ROOT / "artifacts" / "pattern_class_feature_table.json").read_text())
+    table = json.loads(
+        (ROOT / "artifacts" / "pattern_class_feature_table.json").read_text()
+    )
 
     classes = sorted(int(k) for k in table["class_summary"].keys())
 
@@ -47,7 +50,9 @@ def main():
     for c in classes:
         s = table["class_summary"][str(c)]
         support = s.get("support_size_counts", {})
-        sup = np.array([support.get(str(i), support.get(i, 0)) for i in [1,2,3,4]], dtype=float)
+        sup = np.array(
+            [support.get(str(i), support.get(i, 0)) for i in [1, 2, 3, 4]], dtype=float
+        )
         # normalize support by class size
         if s["size"] > 0:
             sup = sup / s["size"]
@@ -56,9 +61,12 @@ def main():
     X = np.vstack(X)
 
     results = {}
-    for k in [2,3,4,5]:
+    for k in [2, 3, 4, 5]:
         labels, centers = kmeans(X, k, iters=200, seed=0)
-        clusters = {str(i): [int(classes[j]) for j in range(len(classes)) if labels[j] == i] for i in range(k)}
+        clusters = {
+            str(i): [int(classes[j]) for j in range(len(classes)) if labels[j] == i]
+            for i in range(k)
+        }
         results[str(k)] = clusters
 
     out = {

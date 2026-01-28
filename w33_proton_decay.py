@@ -12,7 +12,7 @@ Key idea: Proton decay mediated by W-hierarchy transitions
 """
 
 import numpy as np
-from numpy import pi, log, log10, sqrt, exp
+from numpy import exp, log, log10, pi, sqrt
 
 print("=" * 80)
 print("W33 AND PROTON DECAY")
@@ -61,7 +61,7 @@ print("=" * 80)
 
 # Physical constants
 M_P = 1.221e19  # Planck mass in GeV
-v_EW = 246      # Electroweak scale in GeV
+v_EW = 246  # Electroweak scale in GeV
 
 print("""
 GUT SCALE DERIVATION
@@ -82,13 +82,13 @@ The discrepancy suggests we need 3^25:
 
 # GUT scale calculations
 M_GUT_v1 = v_EW * 3**24
-M_GUT_v2 = v_EW * 3**25  
+M_GUT_v2 = v_EW * 3**25
 M_GUT_v3 = v_EW * 3**26
 M_GUT_standard = 2e16
 
 print(f"GUT scale estimates:")
 print(f"  v_EW × 3²⁴ = {M_GUT_v1:.2e} GeV")
-print(f"  v_EW × 3²⁵ = {M_GUT_v2:.2e} GeV")  
+print(f"  v_EW × 3²⁵ = {M_GUT_v2:.2e} GeV")
 print(f"  v_EW × 3²⁶ = {M_GUT_v3:.2e} GeV")
 print(f"  Standard GUT = {M_GUT_standard:.2e} GeV")
 
@@ -97,7 +97,7 @@ M_GUT_w33 = v_EW * (81 * 3**22)  # 81 = Steinberg of W33
 print(f"\n  W33 refined: v_EW × 81 × 3²² = {M_GUT_w33:.2e} GeV")
 
 # The 40/81 ratio
-M_GUT_ratio = v_EW * 3**25 * (81/40)
+M_GUT_ratio = v_EW * 3**25 * (81 / 40)
 print(f"  With 81/40 factor: {M_GUT_ratio:.2e} GeV")
 
 # =============================================================================
@@ -126,7 +126,7 @@ W33 insight:
 
 # Parameters
 m_p = 0.938  # GeV
-alpha_GUT = 1/40  # W33 prediction!
+alpha_GUT = 1 / 40  # W33 prediction!
 hbar_c = 1.97e-14  # GeV⋅cm
 c = 3e10  # cm/s
 year = 3.15e7  # seconds
@@ -135,26 +135,32 @@ print(f"\nParameters:")
 print(f"  α_GUT = 1/40 = {alpha_GUT:.4f} (from W33)")
 print(f"  m_p = {m_p:.3f} GeV")
 
+
 # Calculate lifetime for different GUT scales
 def proton_lifetime(M_GUT, alpha_GUT, m_p):
     """Calculate proton lifetime in years"""
     # Dimensional formula: τ ∝ M^4 / (α^2 m^5)
     # Need proper coefficients
     hbar = 6.582e-25  # GeV⋅s
-    
+
     # Lifetime in natural units: τ = M_GUT^4 / (α^2 m_p^5)
     tau_natural = M_GUT**4 / (alpha_GUT**2 * m_p**5)  # GeV^-1
-    
+
     # Convert to seconds
     tau_seconds = tau_natural * hbar
-    
+
     # Convert to years
     tau_years = tau_seconds / year
-    
+
     return tau_years
 
+
 print(f"\nProton lifetimes:")
-for M_GUT, label in [(M_GUT_v2, "3²⁵"), (M_GUT_standard, "standard"), (M_GUT_ratio, "W33")]:
+for M_GUT, label in [
+    (M_GUT_v2, "3²⁵"),
+    (M_GUT_standard, "standard"),
+    (M_GUT_ratio, "W33"),
+]:
     tau = proton_lifetime(M_GUT, alpha_GUT, m_p)
     status = "✓" if tau > tau_exp_limit else "✗"
     print(f"  M_GUT = {M_GUT:.1e} GeV ({label})")
@@ -191,7 +197,7 @@ W33 counting:
 # Each K4 has 4 vertices, making (4 choose 3) = 4 triangles
 n_triangles = 90 * 4  # 90 K4s, 4 triangles each
 # But overcounting...
-n_triangles_actual = 40 * (40-1) * (40-2) / 6 / 10  # Rough estimate
+n_triangles_actual = 40 * (40 - 1) * (40 - 2) / 6 / 10  # Rough estimate
 
 print(f"Proton-like configurations:")
 print(f"  Triangles in K4 structure: ~{360}")
@@ -284,7 +290,7 @@ print(f"  More realistic: use 3^(40+41) = 3^81 structure differently")
 # Alternative: use the hierarchy
 # τ ∝ (M_GUT/m_p)^4 / α^2
 M_GUT_best = 3e15  # GeV
-tau_realistic = (M_GUT_best/m_p)**4 / alpha_GUT**2 * hbar / year
+tau_realistic = (M_GUT_best / m_p) ** 4 / alpha_GUT**2 * hbar / year
 
 print(f"\n  Realistic estimate:")
 print(f"    M_GUT = {M_GUT_best:.0e} GeV")
@@ -313,7 +319,7 @@ W33 PREDICTION
 If W33 theory is correct:
   M_GUT = v_EW × 3²⁵ × (81/40) ≈ 10¹⁵-10¹⁶ GeV
   α_GUT = 1/40
-  
+
   Predicted: τ_p ∼ 10³⁵-10³⁶ years
 
 This is JUST BEYOND current limits!
@@ -321,8 +327,8 @@ Hyper-K could see proton decay!
 """)
 
 # W33 prediction range
-tau_w33_low = proton_lifetime(1e15, 1/40, m_p)
-tau_w33_high = proton_lifetime(3e16, 1/40, m_p)
+tau_w33_low = proton_lifetime(1e15, 1 / 40, m_p)
+tau_w33_high = proton_lifetime(3e16, 1 / 40, m_p)
 
 print(f"\nW33 prediction range:")
 print(f"  τ_p = {tau_w33_low:.1e} - {tau_w33_high:.1e} years")

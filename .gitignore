@@ -46,3 +46,5 @@ claude_workspace/data/
 .DS_Store
 Thumbs.db
 .claude/
+# Local generated plots/artifacts
+sp4_spectrum_test.png

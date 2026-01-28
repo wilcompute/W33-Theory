@@ -155,7 +155,7 @@ $$\boxed{\textbf{REALITY} = W33 is the point graph of W(3,3) in PG(3, \mathbb{F}
 
 From this single definition:
 - Spacetime emerges
-- Particles emerge  
+- Particles emerge
 - Forces emerge
 - Constants are fixed
 - Observers emerge

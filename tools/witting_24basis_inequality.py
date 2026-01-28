@@ -4,6 +4,7 @@
 We use the exact noncontextual bound: max satisfied bases = 23.
 Quantum prediction: 24 (state-independent), since each basis sum of projectors = I.
 """
+
 from __future__ import annotations
 
 import json
@@ -36,7 +37,9 @@ def main():
         f.write(f"- Max satisfiable bases: **{max_sat} / {num_bases}**\n\n")
         f.write("## Quantum prediction (state‑independent)\n")
         f.write(f"- Quantum value: **{quantum_value} / {num_bases}**\n\n")
-        f.write("**Reason:** For any quantum state, each orthonormal basis sums to identity,\n")
+        f.write(
+            "**Reason:** For any quantum state, each orthonormal basis sums to identity,\n"
+        )
         f.write("so the expected ‘one‑outcome’ per basis is exactly 1.\n\n")
         f.write("## Inequality\n")
         f.write(f"For any noncontextual model:  S ≤ {max_sat}.\n")

@@ -18,11 +18,13 @@ What if W33 makes this EXACT?
   - Mark Van Raamsdonk
 """
 
-import numpy as np
 from collections import defaultdict
 from itertools import combinations
+
 import matplotlib
-matplotlib.use('Agg')
+import numpy as np
+
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 print("=" * 80)
@@ -52,14 +54,14 @@ Paper 2 (with Rosen):
   - Einstein-Rosen bridge (wormhole)
   - Connection between distant regions
   - Non-traversable (classically)
-  
+
 For 80 years, these seemed unrelated.
 
 MALDACENA-SUSSKIND (2013):
   They are the SAME THING!
-  
+
   ER = EPR
-  
+
   - Every entangled pair connected by microscopic wormhole
   - Wormhole = geometric manifestation of entanglement
   - No information transfer (still respects causality)
@@ -97,33 +99,35 @@ The entanglement structure of the universe
 IS the W33 cycle structure.
 """)
 
+
 class W33Wormhole:
     """A wormhole as a W33 cycle."""
-    
+
     def __init__(self, cycle_id, points):
         self.id = cycle_id
         self.points = points  # Points in the cycle
         self.throat = len(points)  # Wormhole "throat" size
         self.phase = 0  # Berry phase (entanglement phase)
         self.entanglement_entropy = np.log2(3)  # Each wormhole carries ~1.58 bits
-        
+
     def traverse(self, direction=1):
         """Traverse the wormhole, accumulating phase."""
         # Phase accumulated = ± π/6 (from Z₁₂ structure)
         self.phase = (self.phase + direction * np.pi / 6) % (2 * np.pi)
         return self.phase
-    
+
     def entanglement(self):
         """Entanglement entropy through this wormhole."""
         return self.entanglement_entropy
 
+
 class W33WormholeNetwork:
     """The network of 81 wormholes."""
-    
+
     def __init__(self):
         self.wormholes = []
         self._construct_network()
-        
+
     def _construct_network(self):
         """Build the 81 wormholes from W33 cycles."""
         # Simplified: 81 cycles each connecting ~5 points on average
@@ -133,11 +137,11 @@ class W33WormholeNetwork:
             points = [(i * 3 + j) % 40 for j in range(cycle_length)]
             wh = W33Wormhole(i, points)
             self.wormholes.append(wh)
-    
+
     def total_entanglement(self):
         """Total entanglement entropy in the network."""
         return sum(wh.entanglement() for wh in self.wormholes)
-    
+
     def connectivity(self):
         """How connected is the network?"""
         # Each wormhole connects its points
@@ -147,6 +151,7 @@ class W33WormholeNetwork:
                 connections[p1].add(p2)
                 connections[p2].add(p1)
         return sum(len(v) for v in connections.values()) / 2
+
 
 print("\nBuilding W33 wormhole network:")
 network = W33WormholeNetwork()
@@ -177,32 +182,34 @@ Multipartite entanglement:
 
 W33 ENTANGLEMENT:
   The K4 components are like GHZ states!
-  
+
   Each K4:
     - 7 outer points entangled with 1 center
     - Triple structure (Z₃) = W-state-like
     - Phase structure (Z₄) = GHZ-like
 """)
 
+
 def compute_entanglement_matrix(n_points=40, n_cycles=81):
     """Compute entanglement between W33 points."""
     # Each cycle creates entanglement between its points
     E = np.zeros((n_points, n_points))
-    
+
     for c in range(n_cycles):
         # Points in this cycle
         cycle_size = 4 + (c % 3)
         points = [(c * 3 + j) % n_points for j in range(cycle_size)]
-        
+
         # Entanglement between all pairs in the cycle
         for i, p1 in enumerate(points):
             for j, p2 in enumerate(points):
                 if i != j:
                     E[p1, p2] += 1.0 / cycle_size
-    
+
     # Normalize
     E = E / np.max(E)
     return E
+
 
 E = compute_entanglement_matrix()
 print(f"\nEntanglement matrix computed:")
@@ -233,34 +240,36 @@ VAN RAAMSDONK'S INSIGHT
 If you REMOVE entanglement between two regions:
   - They become causally disconnected
   - Spacetime literally TEARS apart
-  
+
 Entanglement = Connectivity of spacetime
 
 W33 IMPLICATION:
   The 81 wormholes STITCH spacetime together!
-  
+
   Remove a cycle:
     - That wormhole closes
     - Part of space disconnects
-    
+
   The 40 points are only connected BECAUSE of
   the 81 cycles (entanglement/wormholes).
 """)
 
+
 def remove_wormhole(E, wormhole_id):
     """See what happens when we remove a wormhole."""
     E_new = E.copy()
-    
+
     # Remove entanglement from this cycle
     cycle_size = 4 + (wormhole_id % 3)
     points = [(wormhole_id * 3 + j) % 40 for j in range(cycle_size)]
-    
+
     for p1 in points:
         for p2 in points:
             if p1 != p2:
                 E_new[p1, p2] = max(0, E_new[p1, p2] - 1.0 / cycle_size)
-    
+
     return E_new
+
 
 print("\nExperiment: What happens when we remove wormholes?")
 
@@ -275,23 +284,25 @@ for i in range(10):
 new_rank = np.linalg.matrix_rank(E_reduced, tol=0.01)
 print(f"  After removing 10 wormholes: rank = {new_rank}")
 
+
 # Check connectivity
 def count_connected_components(matrix, threshold=0.01):
     """Count connected components of the entanglement graph."""
     n = matrix.shape[0]
     visited = [False] * n
     components = 0
-    
+
     def dfs(node):
         visited[node] = True
         for neighbor in range(n):
             if not visited[neighbor] and matrix[node, neighbor] > threshold:
                 dfs(neighbor)
-    
+
     # Use iterative DFS to avoid recursion limit
     import sys
+
     sys.setrecursionlimit(100)
-    
+
     for node in range(n):
         if not visited[node]:
             try:
@@ -299,8 +310,9 @@ def count_connected_components(matrix, threshold=0.01):
                 components += 1
             except RecursionError:
                 components += 1
-    
+
     return components
+
 
 # Simplified connectivity check
 original_connectivity = np.sum(E > 0.01) / 2
@@ -327,7 +339,7 @@ Or: 81 = number of ways to "link" a 3D+1D spacetime
 Wormhole counting:
   - GQ(q,q) has (q²+1)(q+1) points = 40 for q=3
   - First homology H₁ has rank q⁴ = 81 for q=3
-  
+
 Each independent cycle = one wormhole = one unit of entanglement
 
 The universe needs EXACTLY 81 wormholes to:
@@ -383,31 +395,33 @@ Gao-Jafferis-Wall (2016):
 
 W33 WORMHOLES:
   The 81 cycles are NON-TRAVERSABLE for information.
-  
+
   Why? The Berry phase:
     - Traverse forward: gain phase φ
     - Traverse backward: gain phase -φ
     - But phase is mod 2π
-    
+
   Information gets SCRAMBLED, not transferred!
-  
+
   However: CORRELATIONS can propagate.
   This is exactly quantum entanglement!
 """)
+
 
 def traverse_wormhole(wormhole, data):
     """Attempt to send data through a wormhole."""
     # Data gets scrambled by Berry phase
     phase = wormhole.traverse(direction=1)
-    
+
     # Apply phase rotation to data
     scrambled = []
     for bit in data:
         # Phase scrambling
         scrambled_bit = (bit + int(phase * 6 / np.pi)) % 2
         scrambled.append(scrambled_bit)
-    
+
     return scrambled, phase
+
 
 print("\nSimulating wormhole traversal:")
 wh = W33Wormhole(0, [0, 1, 2, 3])
@@ -440,23 +454,24 @@ The vacuum appears thermal (Unruh effect).
 
 Jacobson (1995):
   Einstein's equations follow from thermodynamics!
-  
+
   δS = δQ/T → R_μν - ½Rg_μν = 8πG T_μν
 
 Gravity is an ENTROPIC force.
 
 W33 GRAVITY:
   The 81 wormholes carry entanglement entropy.
-  
+
   Total entropy: S = 81 × log₂(3) ≈ 128 bits
-  
+
   This entropy creates a "force":
     - Particles want to be entangled
     - Entanglement = wormhole connection
     - Connection = being "close" in spacetime
-    
+
   GRAVITY = tendency toward maximum entanglement!
 """)
+
 
 def gravitational_potential(E, point):
     """Compute 'gravitational potential' from entanglement."""
@@ -464,6 +479,7 @@ def gravitational_potential(E, point):
     total_entanglement = np.sum(E[point, :])
     potential = -total_entanglement  # Negative = bound
     return potential
+
 
 print("\nGravitational potential from entanglement:")
 for p in [0, 10, 20, 30]:
@@ -497,34 +513,36 @@ Two entangled copies of the CFT!
 
 W33 THERMOFIELD DOUBLE:
   The 40 points naturally split into pairs!
-  
+
   - 40 = 2 × 20 (or other partitions)
   - Each half is a "CFT"
   - The 81 wormholes connect them
-  
+
   This is why W33 works for a complete ToE:
   It's self-dual, containing both sides!
 """)
+
 
 def create_thermofield_double(n_points=40, beta=1.0):
     """Create a TFD-like state from W33."""
     # Split points into L and R
     L = list(range(n_points // 2))
     R = list(range(n_points // 2, n_points))
-    
+
     # Entanglement between L and R
     state = {}
     for i, (l, r) in enumerate(zip(L, R)):
         # Boltzmann weight
         weight = np.exp(-beta * (i + 1))
         state[(l, r)] = weight
-    
+
     # Normalize
     total = sum(state.values())
     for key in state:
         state[key] /= total
-    
+
     return state, L, R
+
 
 tfd, L, R = create_thermofield_double()
 print(f"\nThermofield double state:")
@@ -607,21 +625,21 @@ TESTABLE PREDICTIONS
 3. ENTANGLEMENT ENTROPY BOUND
    Maximum entanglement entropy per region:
    S_max = A / (4 ℓ_P²)
-   
+
    W33 predicts: S = 81 × log₂(3) for fundamental cell
    This gives a minimum area: A_min = 4 × 128 × ℓ_P² ≈ 500 ℓ_P²
 
 4. NUMBER OF SPATIAL DIMENSIONS
    The ratio wormholes/points = 81/40 ≈ 2
    This equals (d-1) for d=3 spatial dimensions!
-   
+
    Prediction: In 4 spatial dimensions, ratio would be ~3
    This constrains dimensional reduction scenarios.
 
 5. ENTANGLEMENT STRUCTURE OF VACUUM
    The vacuum has non-trivial entanglement.
    W33 predicts: 81 fundamental entangled modes.
-   
+
    Test: Study vacuum fluctuations, look for 81-fold structure.
 """)
 
@@ -650,14 +668,14 @@ THE DEEPEST TRUTH
 =================
 
   ER = EPR
-  
+
   Einstein's two 1935 papers are ONE paper.
-  
+
   Wormholes = Entanglement = W33 Cycles
-  
+
   The 81 wormholes are not "in" spacetime.
   They ARE spacetime.
-  
+
   Spacetime is woven from quantum entanglement,
   and the loom is W33.
 """)

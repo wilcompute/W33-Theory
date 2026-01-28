@@ -5,12 +5,13 @@ We use the canonical Z3 phase (x4 coordinate) on the 27 lines, induce a
 phase on the 9 Schläfli triangles, and interpret the 3 phase classes as
 A2 weights. We then build the A2 root system and map phases to weights.
 """
+
 from __future__ import annotations
 
-from collections import defaultdict, Counter
+import json
+from collections import Counter, defaultdict
 from itertools import product
 from pathlib import Path
-import json
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -35,11 +36,11 @@ def build_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
-    adj = [[0]*n for _ in range(n)]
+    adj = [[0] * n for _ in range(n)]
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i][j] = adj[j][i] = 1
 
@@ -55,25 +56,29 @@ def h27_from_w33(adj, v0=0):
 def build_27_lines():
     lines = []
     for i in range(1, 7):
-        lines.append(('E', i))
+        lines.append(("E", i))
     for i in range(1, 7):
-        lines.append(('C', i))
+        lines.append(("C", i))
     for i in range(1, 7):
-        for j in range(i+1, 7):
-            lines.append(('L', i, j))
+        for j in range(i + 1, 7):
+            lines.append(("L", i, j))
     return lines
 
 
 def main():
     # Load H27 embedding and triangle list
-    tri_data = json.loads((ROOT / 'artifacts' / 'h27_schlafli_leftover_cycles.json').read_text())
-    triangles = [[tuple(x) for x in tri] for tri in tri_data['cycle_labels']]
+    tri_data = json.loads(
+        (ROOT / "artifacts" / "h27_schlafli_leftover_cycles.json").read_text()
+    )
+    triangles = [[tuple(x) for x in tri] for tri in tri_data["cycle_labels"]]
 
-    embed = json.loads((ROOT / 'artifacts' / 'h27_in_schlafli_intersection.json').read_text())
-    if not embed.get('found_embedding'):
-        print('No H27 embedding found.')
+    embed = json.loads(
+        (ROOT / "artifacts" / "h27_in_schlafli_intersection.json").read_text()
+    )
+    if not embed.get("found_embedding"):
+        print("No H27 embedding found.")
         return
-    h_to_s = {int(k): int(v) for k, v in embed['mapping'].items()}
+    h_to_s = {int(k): int(v) for k, v in embed["mapping"].items()}
     s_to_h = {v: k for k, v in h_to_s.items()}
 
     # Build W33 and map line -> W33 vertex coordinate
@@ -122,20 +127,20 @@ def main():
     weight_sum_counts = Counter(tri_weight_sums)
 
     results = {
-        'line_phase_counts': dict(Counter(line_phase.values())),
-        'triangle_phase_multisets': {str(k): v for k, v in phase_counts.items()},
-        'triangle_weight_sums': {str(k): v for k, v in weight_sum_counts.items()},
-        'weights': weights,
-        'line_phase': {str(k): v for k, v in line_phase.items()},
+        "line_phase_counts": dict(Counter(line_phase.values())),
+        "triangle_phase_multisets": {str(k): v for k, v in phase_counts.items()},
+        "triangle_weight_sums": {str(k): v for k, v in weight_sum_counts.items()},
+        "weights": weights,
+        "line_phase": {str(k): v for k, v in line_phase.items()},
     }
 
-    out_path = ROOT / 'artifacts' / 'su3_a2_root_mapping.json'
-    out_path.write_text(json.dumps(results, indent=2), encoding='utf-8')
-    print(results['line_phase_counts'])
-    print(results['triangle_phase_multisets'])
-    print(results['triangle_weight_sums'])
-    print(f'Wrote {out_path}')
+    out_path = ROOT / "artifacts" / "su3_a2_root_mapping.json"
+    out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
+    print(results["line_phase_counts"])
+    print(results["triangle_phase_multisets"])
+    print(results["triangle_weight_sums"])
+    print(f"Wrote {out_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

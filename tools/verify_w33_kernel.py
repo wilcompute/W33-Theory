@@ -19,7 +19,6 @@ from pathlib import Path
 
 import numpy as np
 
-
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -104,7 +103,9 @@ class BundlePaths:
     h8_qform: Path = ROOT / "W33_H8_quadratic_form_bundle.zip"
     roots120: Path = ROOT / "W33_to_H_to_120root_SRG_bundle.zip"
     gaugefix: Path = ROOT / "W33_global_gaugefix_no16_bundle.zip"
-    quotient: Path = ROOT / "W33_quotient_closure_complement_and_noniso_line_curvature_bundle.zip"
+    quotient: Path = (
+        ROOT / "W33_quotient_closure_complement_and_noniso_line_curvature_bundle.zip"
+    )
 
 
 def verify_w33_graph() -> np.ndarray:
@@ -123,13 +124,21 @@ def verify_w33_graph() -> np.ndarray:
     mask_adj = A.astype(bool)
     mask_nonadj = ~mask_adj
     np.fill_diagonal(mask_nonadj, False)
-    _assert(np.all(A2[mask_adj] == 2), "Adjacent pairs should have λ=2 common neighbors")
-    _assert(np.all(A2[mask_nonadj] == 4), "Non-adjacent pairs should have μ=4 common neighbors")
+    _assert(
+        np.all(A2[mask_adj] == 2), "Adjacent pairs should have λ=2 common neighbors"
+    )
+    _assert(
+        np.all(A2[mask_nonadj] == 4),
+        "Non-adjacent pairs should have μ=4 common neighbors",
+    )
 
     # Spectrum: 12^(1), 2^(24), (-4)^(15)
     evals = np.linalg.eigvalsh(A.astype(np.float64))
     rounded = np.rint(evals).astype(int)
-    _assert(np.allclose(evals, rounded, atol=1e-6), "Eigenvalues not near integers as expected")
+    _assert(
+        np.allclose(evals, rounded, atol=1e-6),
+        "Eigenvalues not near integers as expected",
+    )
     unique, counts = np.unique(rounded, return_counts=True)
     spec = dict(zip(unique.tolist(), counts.tolist(), strict=True))
     _assert(spec.get(12) == 1, f"Expected eigenvalue 12 multiplicity 1, got {spec}")
@@ -150,7 +159,9 @@ def verify_w33_graph() -> np.ndarray:
 def verify_gf2_kernel_code(A: np.ndarray) -> None:
     b = BundlePaths()
     gen_rows = _read_csv_from_zip(b.gf2_code, "generators_weight6_linepair_xors.csv")
-    _assert(len(gen_rows) == 240, f"Expected 240 weight-6 generators, got {len(gen_rows)}")
+    _assert(
+        len(gen_rows) == 240, f"Expected 240 weight-6 generators, got {len(gen_rows)}"
+    )
 
     # Verify each generator is weight 6 and in ker(A) over GF(2).
     gen_mat = np.zeros((len(gen_rows), 40), dtype=np.uint8)
@@ -165,7 +176,9 @@ def verify_gf2_kernel_code(A: np.ndarray) -> None:
         _assert(int(Ax.sum()) == 0, f"Generator {i}: A*x != 0 (mod 2)")
 
     gen_rank = _gf2_rank_from_binary_rows(gen_mat)
-    _assert(gen_rank == 24, f"Generators should span dim 24 kernel, got rank {gen_rank}")
+    _assert(
+        gen_rank == 24, f"Generators should span dim 24 kernel, got rank {gen_rank}"
+    )
 
     # Verify the provided basis is a basis for ker(A).
     basis_rows = _read_csv_from_zip(b.gf2_code, "code_basis_24x40.csv")
@@ -223,7 +236,10 @@ def verify_h8_quadratic_form() -> None:
         if i != 0:
             counts_nonzero[q] += 1
     _assert(counts == {0: 136, 1: 120}, f"q-value counts on F2^8 mismatch: {counts}")
-    _assert(counts_nonzero == {0: 135, 1: 120}, f"q-value counts on nonzero mismatch: {counts_nonzero}")
+    _assert(
+        counts_nonzero == {0: 135, 1: 120},
+        f"q-value counts on nonzero mismatch: {counts_nonzero}",
+    )
 
     # Orbit sizes under provided generators in GL(8,2).
     gen_data = _read_json_from_zip(b.h8_qform, "H_generator_matrices_8x8.json")
@@ -257,7 +273,10 @@ def verify_h8_quadratic_form() -> None:
         orbit_sizes.append(len(orbit))
 
     orbit_sizes.sort()
-    _assert(orbit_sizes == [120, 135], f"Expected two nonzero orbits [120,135], got {orbit_sizes}")
+    _assert(
+        orbit_sizes == [120, 135],
+        f"Expected two nonzero orbits [120,135], got {orbit_sizes}",
+    )
 
 
 def verify_root_graph_srg() -> None:
@@ -269,36 +288,55 @@ def verify_root_graph_srg() -> None:
 
     edge_rows = _read_csv_from_zip(b.roots120, "root_graph_edges_srg120_56_28_24.csv")
     edges = [(int(r["u"]), int(r["v"])) for r in edge_rows]
-    _assert(len(edges) == 3360, f"Expected 3360 edges in SRG(120,56,...), got {len(edges)}")
+    _assert(
+        len(edges) == 3360, f"Expected 3360 edges in SRG(120,56,...), got {len(edges)}"
+    )
     A = _build_undirected_adjacency(120, edges)
     deg = A.sum(axis=1)
-    _assert(np.all(deg == 56), f"Root graph degree mismatch: {sorted(set(deg.tolist()))}")
+    _assert(
+        np.all(deg == 56), f"Root graph degree mismatch: {sorted(set(deg.tolist()))}"
+    )
 
     A2 = (A.astype(np.int16) @ A.astype(np.int16)).astype(np.int16)
     _assert(np.all(np.diag(A2) == 56), "Diagonal of A^2 should equal degree 56")
     mask_adj = A.astype(bool)
     mask_nonadj = ~mask_adj
     np.fill_diagonal(mask_nonadj, False)
-    _assert(np.all(A2[mask_adj] == 28), "Adjacent pairs should have λ=28 common neighbors")
-    _assert(np.all(A2[mask_nonadj] == 24), "Non-adjacent pairs should have μ=24 common neighbors")
+    _assert(
+        np.all(A2[mask_adj] == 28), "Adjacent pairs should have λ=28 common neighbors"
+    )
+    _assert(
+        np.all(A2[mask_nonadj] == 24),
+        "Non-adjacent pairs should have μ=24 common neighbors",
+    )
 
 
 def verify_240_to_120_projection() -> None:
     b = BundlePaths()
     roots = _read_csv_from_zip(b.roots120, "roots_120_list.csv")
     h8_to_root_id = {int(r["h8_int"]): int(r["root_id"]) for r in roots}
-    _assert(len(h8_to_root_id) == 120, "Expected 120 distinct h8_int values in roots list")
+    _assert(
+        len(h8_to_root_id) == 120, "Expected 120 distinct h8_int values in roots list"
+    )
 
     mapping_rows = _read_csv_from_zip(b.roots120, "generator_to_root_map.csv")
-    _assert(len(mapping_rows) == 240, f"Expected 240 generator->root map rows, got {len(mapping_rows)}")
+    _assert(
+        len(mapping_rows) == 240,
+        f"Expected 240 generator->root map rows, got {len(mapping_rows)}",
+    )
     counts: dict[int, int] = {}
     for r in mapping_rows:
         h8_int = int(r["h8_int"])
         root_id = h8_to_root_id[h8_int]
         counts[root_id] = counts.get(root_id, 0) + 1
-    _assert(len(counts) == 120, f"Expected 120 distinct roots in map, got {len(counts)}")
+    _assert(
+        len(counts) == 120, f"Expected 120 distinct roots in map, got {len(counts)}"
+    )
     bad = [k for k, v in counts.items() if v != 2]
-    _assert(not bad, f"Expected each root to have exactly 2 preimages; bad roots: {bad[:10]}")
+    _assert(
+        not bad,
+        f"Expected each root to have exactly 2 preimages; bad roots: {bad[:10]}",
+    )
 
 
 def verify_global_gauge_fix_partition() -> None:
@@ -307,7 +345,10 @@ def verify_global_gauge_fix_partition() -> None:
     assert isinstance(summary, dict)
     result = summary["result"]
     _assert(result["c16"] == 0, "Gauge-fix summary says some 16-weight edges remain")
-    _assert(result["c0"] == 120 and result["c12"] == 3240, "Gauge-fix edge weight counts mismatch")
+    _assert(
+        result["c0"] == 120 and result["c12"] == 3240,
+        "Gauge-fix edge weight counts mismatch",
+    )
 
     edges = _read_csv_from_zip(b.gaugefix, "edge_triples_with_weights_3360.csv")
     _assert(len(edges) == 3360, "Expected 3360 root-graph edges in gauge-fix bundle")
@@ -315,7 +356,10 @@ def verify_global_gauge_fix_partition() -> None:
     for r in edges:
         w = int(r["weight"])
         weight_counts[w] = weight_counts.get(w, 0) + 1
-    _assert(weight_counts == {0: 120, 12: 3240}, f"Edge weight histogram mismatch: {weight_counts}")
+    _assert(
+        weight_counts == {0: 120, 12: 3240},
+        f"Edge weight histogram mismatch: {weight_counts}",
+    )
 
     # Verify the 40 zero-defect triangles partition the 120 roots.
     zero_tris = _read_csv_from_zip(b.gaugefix, "zero_triangles_by_base_point_40.csv")
@@ -337,20 +381,31 @@ def verify_quotient_and_holonomy(A_w33: np.ndarray) -> None:
 
     # Quotient edges = 540, degree 27 on 40 vertices.
     q_edges_rows = _read_csv_from_zip(b.quotient, "quotient_graph_edges_540.csv")
-    _assert(len(q_edges_rows) == 540, f"Expected 540 quotient edges, got {len(q_edges_rows)}")
+    _assert(
+        len(q_edges_rows) == 540,
+        f"Expected 540 quotient edges, got {len(q_edges_rows)}",
+    )
     q_edges = [(int(r["p"]), int(r["q"])) for r in q_edges_rows]
     Q = _build_undirected_adjacency(40, q_edges)
     q_deg = Q.sum(axis=1)
-    _assert(np.all(q_deg == 27), f"Quotient graph degree mismatch: {sorted(set(q_deg.tolist()))}")
+    _assert(
+        np.all(q_deg == 27),
+        f"Quotient graph degree mismatch: {sorted(set(q_deg.tolist()))}",
+    )
 
     # Q must be the complement of W33.
     W_comp = (1 - A_w33).astype(np.uint8)
     np.fill_diagonal(W_comp, 0)
-    _assert(np.array_equal(Q, W_comp), "Quotient graph does not equal complement of W33 adjacency")
+    _assert(
+        np.array_equal(Q, W_comp),
+        "Quotient graph does not equal complement of W33 adjacency",
+    )
 
     # Holonomy classification: identity vs 3-cycle; identity triangles correspond to non-isotropic PG(3,3) lines.
     tri_rows = _read_csv_from_zip(b.quotient, "quotient_triangles_holonomy_3240.csv")
-    _assert(len(tri_rows) == 3240, f"Expected 3240 quotient triangles, got {len(tri_rows)}")
+    _assert(
+        len(tri_rows) == 3240, f"Expected 3240 quotient triangles, got {len(tri_rows)}"
+    )
 
     identity_tris: set[tuple[int, int, int]] = set()
     hol_counts: dict[str, int] = {}
@@ -360,7 +415,10 @@ def verify_quotient_and_holonomy(A_w33: np.ndarray) -> None:
         tri = tuple(sorted((int(r["p"]), int(r["q"]), int(r["r"]))))
         if hol == "identity":
             identity_tris.add(tri)
-    _assert(hol_counts.get("identity") == 360 and hol_counts.get("3-cycle") == 2880, f"Holonomy counts mismatch: {hol_counts}")
+    _assert(
+        hol_counts.get("identity") == 360 and hol_counts.get("3-cycle") == 2880,
+        f"Holonomy counts mismatch: {hol_counts}",
+    )
 
     # Independently compute the 360 triples arising from the 90 non-isotropic lines in PG(3,3).
     lines_all = _read_csv_from_zip(b.symplectic, "lines_all_PG33.csv")
@@ -369,14 +427,23 @@ def verify_quotient_and_holonomy(A_w33: np.ndarray) -> None:
         for r in lines_all
         if int(r["is_isotropic"]) == 0
     ]
-    _assert(len(noniso_lines) == 90, f"Expected 90 non-isotropic projective lines, got {len(noniso_lines)}")
+    _assert(
+        len(noniso_lines) == 90,
+        f"Expected 90 non-isotropic projective lines, got {len(noniso_lines)}",
+    )
     noniso_tris: set[tuple[int, int, int]] = set()
     for pts in noniso_lines:
         _assert(len(pts) == 4, f"Projective line does not have 4 points: {pts}")
         for a, b_, c in combinations(sorted(pts), 3):
             noniso_tris.add((a, b_, c))
-    _assert(len(noniso_tris) == 360, f"Expected 360 triples from non-isotropic lines, got {len(noniso_tris)}")
-    _assert(identity_tris == noniso_tris, "Identity-holonomy triangles do not match non-isotropic-line triples")
+    _assert(
+        len(noniso_tris) == 360,
+        f"Expected 360 triples from non-isotropic lines, got {len(noniso_tris)}",
+    )
+    _assert(
+        identity_tris == noniso_tris,
+        "Identity-holonomy triangles do not match non-isotropic-line triples",
+    )
 
 
 def main() -> int:
@@ -404,10 +471,14 @@ def main() -> int:
     print("  OK: Root graph is SRG(120,56,28,24)")
 
     verify_global_gauge_fix_partition()
-    print("  OK: Global gauge-fix eliminates all 16-weight defects; 40 flat triples partition roots")
+    print(
+        "  OK: Global gauge-fix eliminates all 16-weight defects; 40 flat triples partition roots"
+    )
 
     verify_quotient_and_holonomy(A)
-    print("  OK: Quotient Q is complement of W33; identity holonomy triangles ↔ 90 non-isotropic lines")
+    print(
+        "  OK: Quotient Q is complement of W33; identity holonomy triangles ↔ 90 non-isotropic lines"
+    )
 
     print("All checks passed.")
     return 0

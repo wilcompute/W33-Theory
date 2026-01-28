@@ -10,19 +10,20 @@ Steps:
 6) Test mapping root -> edge via (orbit(r), orbit(c^k r)) for k=1..5.
 7) If a k yields a bijection onto all 240 W33 edges, export mapping.
 """
+
 from __future__ import annotations
 
-from collections import Counter, defaultdict
 import json
+from collections import Counter, defaultdict
 from pathlib import Path
 
-from sage.all import RootSystem, Graph
+from sage.all import Graph, RootSystem
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 def build_e8():
-    RS = RootSystem(['E', 8])
+    RS = RootSystem(["E", 8])
     RL = RS.root_lattice()
     roots = list(RL.roots())  # 240 roots
     W = RL.weyl_group()
@@ -87,7 +88,11 @@ def build_orbit_graph(orbits, C):
 def build_w33_graph():
     # Construct W33 from F3^4 with symplectic form
     F3 = [0, 1, 2]
-    vectors = [v for v in __import__('itertools').product(F3, repeat=4) if any(x != 0 for x in v)]
+    vectors = [
+        v
+        for v in __import__("itertools").product(F3, repeat=4)
+        if any(x != 0 for x in v)
+    ]
     proj_points = []
     seen = set()
     for v in vectors:
@@ -104,7 +109,7 @@ def build_w33_graph():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     edges = []
     for i in range(n):
@@ -201,7 +206,9 @@ def main():
         print("No bijection found for k=1..5.")
 
     # Random search for a single group element g with bijection property
-    print("Searching for g in W(E8) such that r -> (orbit(r), orbit(g r)) is bijective...")
+    print(
+        "Searching for g in W(E8) such that r -> (orbit(r), orbit(g r)) is bijective..."
+    )
     candidate_g = None
     if chosen_k is None:
         for t in range(300):
@@ -264,7 +271,9 @@ def main():
 
         def dfs(u):
             for v in left_adj[u]:
-                if pair_v[v] == -1 or (dist[pair_v[v]] == dist[u] + 1 and dfs(pair_v[v])):
+                if pair_v[v] == -1 or (
+                    dist[pair_v[v]] == dist[u] + 1 and dfs(pair_v[v])
+                ):
                     pair_u[u] = v
                     pair_v[v] = u
                     return True
@@ -329,7 +338,9 @@ def main():
     out = {
         "mapping_mode": mapping_mode,
         "coxeter_power_for_edge": int(chosen_k) if chosen_k is not None else None,
-        "random_g_word": candidate_g.reduced_word() if candidate_g is not None else None,
+        "random_g_word": (
+            candidate_g.reduced_word() if candidate_g is not None else None
+        ),
         "orbit_signature": list(sig),
         "orbit_to_w33_vertex": {int(k): int(v) for k, v in mapping.items()},
         "w33_vertices": proj_points,

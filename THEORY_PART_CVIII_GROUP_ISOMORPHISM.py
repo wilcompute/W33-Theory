@@ -14,11 +14,13 @@ This is a KNOWN mathematical result, but its appearance in W33 theory
 is the key to understanding why W33 connects to E8 physics.
 """
 
-import numpy as np
-from itertools import combinations, permutations
+import json
 from collections import Counter
 from datetime import datetime
-import json
+from itertools import combinations, permutations
+
+import numpy as np
+
 
 def header(title):
     """Print section header."""
@@ -28,20 +30,21 @@ def header(title):
     print("=" * 70)
     print()
 
+
 def main():
     header("W33 THEORY - PART CVIII: THE Sp(4, F_3) ≅ W(E6) ISOMORPHISM")
     print("Part 108")
     print()
     print("Proving the deep connection between symplectic geometry and Lie theory")
     print()
-    
+
     results = {}
-    
+
     # =====================================================================
     # SECTION 1: The Groups Involved
     # =====================================================================
     header("SECTION 1: THE GROUPS INVOLVED")
-    
+
     print("GROUP 1: Sp(4, F_3) - Symplectic Group over F_3")
     print("-" * 50)
     print()
@@ -60,12 +63,12 @@ def main():
     print("  |Sp(4, F_3)| = 3^4 × (3^2 - 1) × (3^4 - 1)")
     print("              = 81 × 8 × 80")
     print("              = 51,840")
-    
+
     # Verify
     sp4_order = 81 * 8 * 80
     print(f"\n  Computed: {sp4_order}")
     results["sp4_f3_order"] = sp4_order
-    
+
     print()
     print("GROUP 2: W(E6) - Weyl Group of E6")
     print("-" * 50)
@@ -79,23 +82,23 @@ def main():
     print("  |W(E6)| = 2^7 × 3^4 × 5")
     print("         = 128 × 81 × 5")
     print("         = 51,840")
-    
+
     # Verify
     we6_order = (2**7) * (3**4) * 5
     print(f"\n  Computed: {we6_order}")
     results["w_e6_order"] = we6_order
-    
+
     print()
     print("ORDER MATCH:")
     print(f"  |Sp(4, F_3)| = {sp4_order}")
     print(f"  |W(E6)|      = {we6_order}")
     print(f"  Equal?       {sp4_order == we6_order} ✓")
-    
+
     # =====================================================================
     # SECTION 2: The Isomorphism Theorem
     # =====================================================================
     header("SECTION 2: THE ISOMORPHISM THEOREM")
-    
+
     print("THEOREM (Dickson-Atlas):")
     print()
     print("  Sp(4, F_3) / {±I} ≅ PSp(4, F_3) ≅ W(E6) / Z(W(E6))")
@@ -107,7 +110,7 @@ def main():
     print("  This is one of the SPORADIC isomorphisms between finite")
     print("  groups of different natural constructions.")
     print()
-    
+
     print("PROOF OUTLINE:")
     print("-" * 50)
     print()
@@ -131,15 +134,15 @@ def main():
     print("  • W33 contains structure related to G2")
     print("  • G2 ⊂ SO(7) and G2 ⊂ E6")
     print("  • The octonions provide the bridge")
-    
+
     # =====================================================================
     # SECTION 3: Factor Group Structure
     # =====================================================================
     header("SECTION 3: FACTOR GROUP STRUCTURE")
-    
+
     print("Prime factorization of 51,840:")
     print()
-    
+
     n = 51840
     factors = []
     temp = n
@@ -150,12 +153,12 @@ def main():
             count += 1
         if count > 0:
             factors.append((p, count))
-    
+
     print(f"  51,840 = ", end="")
     factor_str = " × ".join([f"{p}^{e}" for p, e in factors])
     print(factor_str)
     print()
-    
+
     # Verify
     product = 1
     for p, e in factors:
@@ -163,9 +166,9 @@ def main():
         print(f"  {p}^{e} = {p**e}")
     print(f"\n  Product: {product}")
     print(f"  Matches: {product == n} ✓")
-    
+
     results["factorization"] = [(int(p), int(e)) for p, e in factors]
-    
+
     print()
     print("INTERPRETATION:")
     print("-" * 50)
@@ -179,12 +182,12 @@ def main():
     print("  • 2^7 = 128 comes from reflections (sign choices)")
     print("  • 3^4 = 81 from the exceptional structure")
     print("  • 5 from the 27 lines (27 = 27 ≡ 2 mod 5)")
-    
+
     # =====================================================================
     # SECTION 4: The 27 Lines Connection
     # =====================================================================
     header("SECTION 4: THE 27 LINES ON A CUBIC SURFACE")
-    
+
     print("CAYLEY'S FAMOUS RESULT (1849):")
     print()
     print("  Every smooth cubic surface in CP³ contains EXACTLY 27 lines.")
@@ -222,19 +225,19 @@ def main():
     print("    • 27 = visible sector particles")
     print("    • 12 = gauge bosons")
     print("    • 1 = dark matter singlet?")
-    
+
     results["27_lines"] = {
         "cubic_surface_lines": 27,
         "each_meets": 10,
         "pairs": 45,
-        "w33_decomposition": "40 = 27 + 12 + 1"
+        "w33_decomposition": "40 = 27 + 12 + 1",
     }
-    
+
     # =====================================================================
     # SECTION 5: Explicit Generators
     # =====================================================================
     header("SECTION 5: EXPLICIT GENERATORS")
-    
+
     print("Sp(4, F_3) GENERATORS:")
     print("-" * 50)
     print()
@@ -248,7 +251,7 @@ def main():
     print("   D = diag(a, b, a^(-1), b^(-1))")
     print("   where a, b ∈ F_3^*")
     print()
-    
+
     print("W(E6) GENERATORS:")
     print("-" * 50)
     print()
@@ -264,12 +267,12 @@ def main():
     print("  (s_i)² = 1")
     print("  (s_i s_j)³ = 1 if nodes connected")
     print("  (s_i s_j)² = 1 otherwise")
-    
+
     # =====================================================================
     # SECTION 6: The Isomorphism Map
     # =====================================================================
     header("SECTION 6: THE ISOMORPHISM MAP")
-    
+
     print("CONSTRUCTION OF φ: Sp(4, F_3) → W(E6)")
     print("-" * 50)
     print()
@@ -295,12 +298,12 @@ def main():
     print()
     print("  The action of Sp(4, F_3) on the '27' part")
     print("  is EXACTLY the action of W(E6) on the 27 lines.")
-    
+
     # =====================================================================
     # SECTION 7: Physical Implications
     # =====================================================================
     header("SECTION 7: PHYSICAL IMPLICATIONS")
-    
+
     print("WHY THIS MATTERS FOR W33 THEORY:")
     print("-" * 50)
     print()
@@ -327,19 +330,19 @@ def main():
     print("   • Each generation fits in a 27 of E6")
     print("   • W33's connection predicts 3 × 27 = 81 = 3^4 = |F_3^4|")
     print("   • The discrete structure IS the generation structure!")
-    
+
     results["physical_implications"] = [
         "Discrete-continuous bridge via W(E6)",
         "F_3 structure → 3 generations",
         "E6 GUT connection via 27-dimensional rep",
-        "81 = 3^4 fundamental discretization"
+        "81 = 3^4 fundamental discretization",
     ]
-    
+
     # =====================================================================
     # SECTION 8: The Chain of Groups
     # =====================================================================
     header("SECTION 8: THE CHAIN OF GROUPS")
-    
+
     print("THE COMPLETE GROUP CHAIN:")
     print("-" * 50)
     print()
@@ -359,31 +362,33 @@ def main():
     print()
     print("GROUP ORDERS IN THE CHAIN:")
     print()
-    
+
     orders = {
         "|GL(4, F_3)|": (3**4 - 1) * (3**4 - 3) * (3**4 - 9) * (3**4 - 27),
         "|Sp(4, F_3)|": 51840,
         "|W(E6)|": 51840,
         "|W(E7)|": 2903040,
-        "|W(E8)|": 696729600
+        "|W(E8)|": 696729600,
     }
-    
+
     for name, order in orders.items():
         print(f"  {name} = {order:,}")
-    
+
     results["group_orders"] = {k: v for k, v in orders.items()}
-    
+
     print()
     print("INDEX CALCULATIONS:")
     print()
-    print(f"  [GL(4, F_3) : Sp(4, F_3)] = {orders['|GL(4, F_3)|'] // orders['|Sp(4, F_3)|']:,}")
+    print(
+        f"  [GL(4, F_3) : Sp(4, F_3)] = {orders['|GL(4, F_3)|'] // orders['|Sp(4, F_3)|']:,}"
+    )
     print(f"  [W(E8) : W(E6)] = {orders['|W(E8)|'] // orders['|W(E6)|']:,}")
-    
+
     # =====================================================================
     # SECTION 9: Numerical Coincidences Explained
     # =====================================================================
     header("SECTION 9: NUMERICAL COINCIDENCES EXPLAINED")
-    
+
     print("The Sp(4, F_3) ≅ W(E6) isomorphism EXPLAINS our findings:")
     print()
     print("═" * 60)
@@ -408,12 +413,12 @@ def main():
     print("                           Also: dim of eigenspace")
     print()
     print("═" * 60)
-    
+
     # =====================================================================
     # SECTION 10: The Complete Picture
     # =====================================================================
     header("SECTION 10: THE COMPLETE PICTURE")
-    
+
     print("W33 THEORY UNIFIED VIEW:")
     print("=" * 60)
     print()
@@ -453,12 +458,12 @@ def main():
     print("  This explains WHY there are 3 generations,")
     print("  WHY there are 12 gauge bosons,")
     print("  and WHY E8 appears in unification attempts.")
-    
+
     # =====================================================================
     # SECTION 11: Next Steps
     # =====================================================================
     header("SECTION 11: NEXT MATHEMATICAL CHALLENGES")
-    
+
     print("TO COMPLETE THE W33-E8 CONNECTION:")
     print("-" * 50)
     print()
@@ -484,20 +489,20 @@ def main():
     print("   • 40 vertices: 27 visible + 12 gauge + 1 ???")
     print("   • The singlet may be dark matter")
     print("   • Mass ≈ 77 GeV from W33 prediction")
-    
+
     results["next_steps"] = [
         "Find explicit 8D embedding subspace",
         "Map E6 roots to W33 structure",
         "Understand triality and D4 connection",
         "Derive symmetry breaking pattern",
-        "Identify dark matter as W33 singlet"
+        "Identify dark matter as W33 singlet",
     ]
-    
+
     # =====================================================================
     # Summary
     # =====================================================================
     header("PART CVIII SUMMARY")
-    
+
     print("ESTABLISHED MATHEMATICAL FACTS:")
     print()
     print("  ✓ Sp(4, F_3) ≅ W(E6) (sporadic isomorphism)")
@@ -522,7 +527,7 @@ def main():
     print()
     print("  W33 theory didn't stumble upon E8/E6—it was ALWAYS")
     print("  about E6/E8 physics at the discrete level.")
-    
+
     # Save results
     def convert_numpy(obj):
         """Recursively convert numpy types to Python native types."""
@@ -537,20 +542,21 @@ def main():
         elif isinstance(obj, np.ndarray):
             return obj.tolist()
         return obj
-    
+
     results["timestamp"] = datetime.now().isoformat()
     results["part"] = "CVIII"
     results["part_number"] = 108
     results["isomorphism_proven"] = "Sp(4, F_3) ≅ W(E6)"
-    results["orders_match"] = (sp4_order == we6_order)
-    
+    results["orders_match"] = sp4_order == we6_order
+
     results = convert_numpy(results)
-    
+
     with open("PART_CVIII_group_isomorphism.json", "w") as f:
         json.dump(results, f, indent=2, default=int)
-    
+
     print()
     print("Results saved to: PART_CVIII_group_isomorphism.json")
+
 
 if __name__ == "__main__":
     main()

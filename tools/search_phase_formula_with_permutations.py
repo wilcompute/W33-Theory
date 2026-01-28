@@ -5,41 +5,44 @@ We test whether there exists a permutation of indices 1..6 (and optional E<->C s
 such that phases satisfy affine formulas in i (mod 3):
   E_i: a*i+b, C_i: c*i+d, L_ij: e*i+f*j+g (mod 3)
 """
+
 from __future__ import annotations
 
+import json
 from itertools import permutations, product
 from pathlib import Path
-import json
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 def main():
-    iso = json.loads((ROOT / 'artifacts' / 'balanced_orbit_schlafli_isomorphism.json').read_text())
-    mapping_full = iso['mapping_full']
+    iso = json.loads(
+        (ROOT / "artifacts" / "balanced_orbit_schlafli_isomorphism.json").read_text()
+    )
+    mapping_full = iso["mapping_full"]
 
     # Build line -> phase dict
     line_phase = {}
     for _, info in mapping_full.items():
-        line = tuple(info['line'])
-        line_phase[line] = int(info['phase'])
+        line = tuple(info["line"])
+        line_phase[line] = int(info["phase"])
 
     indices = [1, 2, 3, 4, 5, 6]
 
     def phase_E(i, perm, swap):
-        line = ('E', perm[i-1]) if not swap else ('C', perm[i-1])
+        line = ("E", perm[i - 1]) if not swap else ("C", perm[i - 1])
         return line_phase[line]
 
     def phase_C(i, perm, swap):
-        line = ('C', perm[i-1]) if not swap else ('E', perm[i-1])
+        line = ("C", perm[i - 1]) if not swap else ("E", perm[i - 1])
         return line_phase[line]
 
     def phase_L(i, j, perm, swap):
         # L-lines unaffected by E/C swap; indices permuted
-        ii, jj = perm[i-1], perm[j-1]
+        ii, jj = perm[i - 1], perm[j - 1]
         if ii > jj:
             ii, jj = jj, ii
-        return line_phase[('L', ii, jj)]
+        return line_phase[("L", ii, jj)]
 
     solutions = []
     for perm in permutations(indices):
@@ -47,7 +50,12 @@ def main():
             # Precompute observed phases
             E_obs = {i: phase_E(i, perm, swap) for i in indices}
             C_obs = {i: phase_C(i, perm, swap) for i in indices}
-            L_obs = {(i, j): phase_L(i, j, perm, swap) for i in indices for j in indices if i < j}
+            L_obs = {
+                (i, j): phase_L(i, j, perm, swap)
+                for i in indices
+                for j in indices
+                if i < j
+            }
 
             # Search coefficients
             for a, b, c, d, e, f, g in product([0, 1, 2], repeat=7):
@@ -69,11 +77,13 @@ def main():
                         ok = False
                         break
                 if ok:
-                    solutions.append({
-                        "perm": perm,
-                        "swap_EC": swap,
-                        "coeffs": (a, b, c, d, e, f, g),
-                    })
+                    solutions.append(
+                        {
+                            "perm": perm,
+                            "swap_EC": swap,
+                            "coeffs": (a, b, c, d, e, f, g),
+                        }
+                    )
             if solutions:
                 break
         if solutions:
@@ -83,11 +93,11 @@ def main():
         "num_solutions": len(solutions),
         "solutions": solutions[:3],
     }
-    out_path = ROOT / 'artifacts' / 'schlafli_phase_formula_perm.json'
-    out_path.write_text(json.dumps(results, indent=2), encoding='utf-8')
+    out_path = ROOT / "artifacts" / "schlafli_phase_formula_perm.json"
+    out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(results)
     print(f"Wrote {out_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

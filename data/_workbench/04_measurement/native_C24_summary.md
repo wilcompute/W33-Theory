@@ -13,4 +13,3 @@ Source:
 - lambda=0.43, mu=0.75, winner_flux=36, winner_noflux=8, flip=True
 - lambda=0.46, mu=1.25, winner_flux=14, winner_noflux=3, flip=True
 - lambda=0.5, mu=1.25, winner_flux=14, winner_noflux=3, flip=True
-

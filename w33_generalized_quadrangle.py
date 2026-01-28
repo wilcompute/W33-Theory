@@ -15,8 +15,9 @@ A generalized quadrangle GQ(s,t) has:
 For PSp(4,3), the classical GQ is GQ(3,3) or related.
 """
 
-from sage.all import *
 import json
+
+from sage.all import *
 
 with open("claude_workspace/data/w33_sage_incidence_h1.json") as f:
     data = json.load(f)
@@ -24,15 +25,19 @@ with open("claude_workspace/data/w33_sage_incidence_h1.json") as f:
 print("=== Is W33 a Generalized Quadrangle? ===")
 print()
 
-# Load W33 lines
-from lib.w33_io import W33DataPaths, load_w33_lines
 from pathlib import Path
 
-here = Path('.').resolve()
-import sys
-sys.path.insert(0, str(here / 'claude_workspace'))
+# Load W33 lines
+from lib.w33_io import W33DataPaths, load_w33_lines
 
-paths = W33DataPaths.from_this_file(str(here / 'claude_workspace' / 'w33_sage_incidence_and_h1.py'))
+here = Path(".").resolve()
+import sys
+
+sys.path.insert(0, str(here / "claude_workspace"))
+
+paths = W33DataPaths.from_this_file(
+    str(here / "claude_workspace" / "w33_sage_incidence_and_h1.py")
+)
 lines = load_w33_lines(paths)
 
 n_points = 40
@@ -64,12 +69,12 @@ if s_plus_1 and t_plus_1:
     print(f"Regular structure: s = {s}, t = {t}")
     print(f"This would be GQ({s}, {t})")
     print()
-    
+
     # Check the GQ counting formula:
     # |points| = (s+1)(st+1)
     # |lines| = (t+1)(st+1)
-    expected_points = (s+1) * (s*t + 1)
-    expected_lines = (t+1) * (s*t + 1)
+    expected_points = (s + 1) * (s * t + 1)
+    expected_lines = (t + 1) * (s * t + 1)
     print(f"GQ({s},{t}) should have:")
     print(f"  Points: (s+1)(st+1) = {expected_points}")
     print(f"  Lines:  (t+1)(st+1) = {expected_lines}")
@@ -92,15 +97,15 @@ triangle_count = 0
 for line_idx, pts in enumerate(lines):
     pts_list = list(pts)
     for i in range(len(pts_list)):
-        for j in range(i+1, len(pts_list)):
-            for k in range(j+1, len(pts_list)):
+        for j in range(i + 1, len(pts_list)):
+            for k in range(j + 1, len(pts_list)):
                 # These three are collinear (on this line)
                 # Check if any two are on another common line
                 p1, p2, p3 = pts_list[i], pts_list[j], pts_list[k]
                 common_12 = point_to_lines[p1] & point_to_lines[p2]
                 common_23 = point_to_lines[p2] & point_to_lines[p3]
                 common_13 = point_to_lines[p1] & point_to_lines[p3]
-                
+
                 # They should share exactly one line (this one)
                 if len(common_12) > 1 or len(common_23) > 1 or len(common_13) > 1:
                     triangle_count += 1
@@ -112,7 +117,7 @@ print()
 print("=== Checking GQ axiom (non-collinear points) ===")
 
 # Build collinearity relation
-collinear = [[False]*n_points for _ in range(n_points)]
+collinear = [[False] * n_points for _ in range(n_points)]
 for line_idx, pts in enumerate(lines):
     for p1 in pts:
         for p2 in pts:
@@ -121,10 +126,14 @@ for line_idx, pts in enumerate(lines):
 # For non-collinear pairs, count common neighbors
 common_neighbor_counts = {}
 for p1 in range(n_points):
-    for p2 in range(p1+1, n_points):
+    for p2 in range(p1 + 1, n_points):
         if not collinear[p1][p2]:
             # Count common neighbors (points collinear to both)
-            common = sum(1 for q in range(n_points) if collinear[p1][q] and collinear[p2][q] and q != p1 and q != p2)
+            common = sum(
+                1
+                for q in range(n_points)
+                if collinear[p1][q] and collinear[p2][q] and q != p1 and q != p2
+            )
             if common not in common_neighbor_counts:
                 common_neighbor_counts[common] = 0
             common_neighbor_counts[common] += 1
@@ -156,4 +165,6 @@ for i, gen in enumerate(generators_data):
     # Hard to detect directly, but we can check if any generator
     # induces a similar permutation on both
     if pts == lns:
-        print(f"Generator {i}: acts identically on points and lines (possible polarity component)")
+        print(
+            f"Generator {i}: acts identically on points and lines (possible polarity component)"
+        )

@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
 """Analyze hit lines by Hamming-weight classes and the 6-point subgeometry."""
+
 from __future__ import annotations
 
 import json
-from itertools import product, combinations
+from itertools import combinations, product
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT_JSON = ROOT / "artifacts" / "witting_pg32_weight_orbit_analysis.json"
 OUT_MD = ROOT / "artifacts" / "witting_pg32_weight_orbit_analysis.md"
 
+
 # GF(4) arithmetic
 def gf4_add(a: int, b: int) -> int:
     return a ^ b
+
 
 def gf4_mul(a: int, b: int) -> int:
     if a == 0 or b == 0:
@@ -26,11 +29,14 @@ def gf4_mul(a: int, b: int) -> int:
     c1 = (c1 + c2) % 2
     return (c1 << 1) | c0
 
+
 def gf4_square(a: int) -> int:
     return gf4_mul(a, a)
 
+
 def gf4_trace(a: int) -> int:
     return gf4_add(a, gf4_square(a)) & 1
+
 
 def gf4_inv(a: int) -> int:
     if a == 0:
@@ -40,9 +46,11 @@ def gf4_inv(a: int) -> int:
             return b
     raise ZeroDivisionError
 
+
 omega = 2
 omega2 = 3
 omega_powers = [1, omega, omega2]
+
 
 def build_base_states():
     states = []
@@ -59,6 +67,7 @@ def build_base_states():
         states.append((1, w_mu, w_nu, 0))
     return states
 
+
 def normalize_projective(v):
     for x in v:
         if x != 0:
@@ -66,14 +75,18 @@ def normalize_projective(v):
             return tuple(gf4_mul(inv, xi) for xi in v)
     return None
 
+
 def trace_map(v):
     return tuple(gf4_trace(x) for x in v)
+
 
 def tuple_to_bits(t):
     return (t[0] << 3) | (t[1] << 2) | (t[2] << 1) | t[3]
 
+
 def build_pg32_points():
     return [v for v in range(1, 16)]
+
 
 def build_pg32_lines(points):
     lines = set()
@@ -86,8 +99,10 @@ def build_pg32_lines(points):
             lines.add(line)
     return sorted(lines)
 
+
 def weight(x: int) -> int:
     return bin(x).count("1")
+
 
 def main():
     base_states = [normalize_projective(s) for s in build_base_states()]
@@ -172,7 +187,9 @@ def main():
     lines = []
     lines.append("# Weight-Class Analysis (PG(3,2) Hit Lines)")
     lines.append("")
-    lines.append(f"- weight classes: { {k: len(v) for k, v in weight_classes.items()} }")
+    lines.append(
+        f"- weight classes: { {k: len(v) for k, v in weight_classes.items()} }"
+    )
     lines.append(f"- hit-line patterns: {results['pattern_hit']}")
     lines.append(f"- all-line patterns: {results['pattern_all']}")
     lines.append("")
@@ -180,11 +197,14 @@ def main():
     lines.append(f"- points: {sorted(wt2_points)}")
     lines.append(f"- lines on weight-2 points: {len(wt2_lines)}")
     lines.append(f"- point degrees on those lines: {results['wt2_point_degrees']}")
-    lines.append(f"- line intersections (pairwise): min={results['wt2_line_intersection_counts']['min']} max={results['wt2_line_intersection_counts']['max']}")
+    lines.append(
+        f"- line intersections (pairwise): min={results['wt2_line_intersection_counts']['min']} max={results['wt2_line_intersection_counts']['max']}"
+    )
 
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"Wrote {OUT_JSON}")
     print(f"Wrote {OUT_MD}")
+
 
 if __name__ == "__main__":
     main()

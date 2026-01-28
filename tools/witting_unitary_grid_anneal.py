@@ -5,10 +5,12 @@ We try to maximize a "grid-score" for Witting rays under a unitary U.
 Score = number of rays that map into grid form (tolerant).
 We run hill-climb/anneal starting from random U.
 """
+
 from __future__ import annotations
 
 import json
 from pathlib import Path
+
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -24,9 +26,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -79,7 +81,7 @@ def score_unitary(U, rays, tol_mag=5e-2, tol_phase=5e-2):
 
 def perturb_unitary(U, eps=0.05):
     # random skew-Hermitian perturbation, reunitarize via QR
-    A = (np.random.randn(4, 4) + 1j * np.random.randn(4, 4))
+    A = np.random.randn(4, 4) + 1j * np.random.randn(4, 4)
     K = A - A.conjugate().T
     M = U + eps * (K @ U)
     q, r = np.linalg.qr(M)
@@ -124,8 +126,14 @@ def main():
         "settings": [str(s) for s in settings],
         "best_scores": {k: v["score"] for k, v in best.items()},
         "best_U": {
-            k: [[{"re": float(x.real), "im": float(x.imag)} for x in row]
-                for row in np.round(v["U"], 6)] if v["U"] is not None else None
+            k: (
+                [
+                    [{"re": float(x.real), "im": float(x.imag)} for x in row]
+                    for row in np.round(v["U"], 6)
+                ]
+                if v["U"] is not None
+                else None
+            )
             for k, v in best.items()
         },
     }

@@ -13,6 +13,7 @@ Outputs:
 - artifacts/h27_fiber_edge_rule.json
 - artifacts/h27_fiber_edge_rule.md
 """
+
 from __future__ import annotations
 
 import json
@@ -45,11 +46,11 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
     return adj
@@ -303,16 +304,18 @@ def main():
         exps = generate_monomials(degree)
         A = []
         b = []
-        for (u, v, c) in data:
+        for u, v, c in data:
             x = (u[0], u[1], v[0], v[1])
             A.append([eval_monomial(e, x) for e in exps])
             b.append(c)
         sol = solve_linear_mod3(A, b)
-        fit_results.append({
-            "degree": degree,
-            "solvable": sol is not None,
-            "num_monomials": len(exps),
-        })
+        fit_results.append(
+            {
+                "degree": degree,
+                "solvable": sol is not None,
+                "num_monomials": len(exps),
+            }
+        )
         if sol is not None:
             fit_results[-1]["coeffs"] = sol
             fit_results[-1]["exps"] = exps
@@ -345,7 +348,7 @@ def main():
     v_idx = {v: i for i, v in enumerate(v_list)}
     A = []
     b = []
-    for (u, v, c) in data:
+    for u, v, c in data:
         row = [0] * (len(u_list) + len(v_list))
         row[u_idx[u]] = 1
         row[len(u_list) + v_idx[v]] = 1
@@ -357,7 +360,7 @@ def main():
     # variables: f(u) (9), g(v) (9), M (2x2 =4)
     A = []
     b = []
-    for (u, v, c) in data:
+    for u, v, c in data:
         row = [0] * (len(u_list) + len(v_list) + 4)
         row[u_idx[u]] = 1
         row[len(u_list) + v_idx[v]] = 1
@@ -389,7 +392,9 @@ def main():
     lines.append("")
     lines.append("## Polynomial fit for c(u,v)")
     for fit in fit_results:
-        lines.append(f"- degree {fit['degree']} (monomials={fit['num_monomials']}): solvable={fit['solvable']}")
+        lines.append(
+            f"- degree {fit['degree']} (monomials={fit['num_monomials']}): solvable={fit['solvable']}"
+        )
     if degree2_formula is not None:
         lines.append("")
         lines.append(f"- degree-2 formula: c(u,v) = {degree2_formula} (mod 3)")

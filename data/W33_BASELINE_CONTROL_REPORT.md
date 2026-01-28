@@ -100,4 +100,3 @@ Interpretation notes:
 
 - Increase replicates to tighten the p-values (e.g. `--reps 200`) and consider bumping `--max-pool` once runtime is acceptable.
 - Add alternate null models: (1) uniform random ints from a single range, (2) ‘permuted W33’ where we keep magnitudes but shuffle values, (3) random sets conditioned on having similar gcd structure.
-

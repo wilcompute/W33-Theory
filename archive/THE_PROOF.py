@@ -29,26 +29,35 @@ Since both are 4 points in C^4:
 WAIT. Let me check the actual dimensions.
 """
 
-import numpy as np
-from pathlib import Path
-import pandas as pd
 from collections import defaultdict
 from itertools import combinations, permutations
+from pathlib import Path
 
-ROOT = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data")
+import numpy as np
+import pandas as pd
+
+ROOT = Path(
+    r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data"
+)
+
 
 def load_rays():
-    df = pd.read_csv(ROOT / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv")
+    df = pd.read_csv(
+        ROOT
+        / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv"
+    )
     V = np.zeros((40, 4), dtype=np.complex128)
     for _, row in df.iterrows():
-        pid = int(row['point_id'])
+        pid = int(row["point_id"])
         for i in range(4):
-            V[pid, i] = complex(str(row[f'v{i}']).replace(' ', ''))
+            V[pid, i] = complex(str(row[f"v{i}"]).replace(" ", ""))
     return V
+
 
 def load_lines():
     df = pd.read_csv(ROOT / "_workbench/02_geometry/W33_line_phase_map.csv")
-    return [tuple(map(int, str(row['point_ids']).split())) for _, row in df.iterrows()]
+    return [tuple(map(int, str(row["point_ids"]).split())) for _, row in df.iterrows()]
+
 
 def inner(V, p, q):
     return np.vdot(V[p], V[q])
@@ -220,7 +229,7 @@ def prove_phase_equals_minus_one():
     # They span a 3D space (rank 3) and are "maximally non-orthogonal"
 
     # The Bargmann invariant B = <0|1><1|2><2|3><3|0>
-    B = G[0,1] * G[1,2] * G[2,3] * G[3,0]
+    B = G[0, 1] * G[1, 2] * G[2, 3] * G[3, 0]
     phase = np.angle(B)
     k = round(6 * phase / np.pi) % 12
 
@@ -294,7 +303,7 @@ def verify_phase_universality():
                         continue
                     common = col[a] & col[b] & col[c] & col[d]
                     if len(common) == 4:
-                        k4_list.append(((a,b,c,d), tuple(sorted(common))))
+                        k4_list.append(((a, b, c, d), tuple(sorted(common))))
 
     print(f"Found {len(k4_list)} K4 components")
 
@@ -336,13 +345,13 @@ def verify_phase_universality():
         # Find zero components in outer
         outer_zero = []
         for i in range(4):
-            if all(abs(P[:,i]) < 1e-6):
+            if all(abs(P[:, i]) < 1e-6):
                 outer_zero.append(i)
 
         # Find zero components in center
         center_zero = []
         for i in range(4):
-            if all(abs(C[:,i]) < 1e-6):
+            if all(abs(C[:, i]) < 1e-6):
                 center_zero.append(i)
 
         print(f"\nK4: outer={outer}, center={center}")
@@ -428,6 +437,7 @@ def main():
     prove_phase_equals_minus_one()
     verify_phase_universality()
     the_final_proof()
+
 
 if __name__ == "__main__":
     main()

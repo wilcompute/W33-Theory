@@ -11,6 +11,7 @@ Families:
 We compute phase classes (rounded to pi/6 grid) for non-orthogonal pairs
 and tabulate by (family_i, family_j).
 """
+
 from __future__ import annotations
 
 import json
@@ -36,11 +37,11 @@ def construct_witting_40_rays_with_labels():
 
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
             labels.append(("F0", mu, nu))
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
             labels.append(("F1", mu, nu))
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             labels.append(("F2", mu, nu))
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
             labels.append(("F3", mu, nu))
@@ -74,7 +75,9 @@ def main():
 
     out = {
         "pairs_nonorth": sum(sum(c.values()) for c in table.values()),
-        "table": {str(k): {str(p): n for p, n in sorted(v.items())} for k, v in table.items()},
+        "table": {
+            str(k): {str(p): n for p, n in sorted(v.items())} for k, v in table.items()
+        },
     }
 
     out_path = ROOT / "artifacts" / "witting_pair_phase_family_table.json"

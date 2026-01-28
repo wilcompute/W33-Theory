@@ -11,10 +11,11 @@ Then, for each non‑orthogonal triangle, we compute:
 We tabulate contingency tables to see if phase cluster is predicted by any
 simple symplectic invariant.
 """
+
 from __future__ import annotations
 
-import json
 import itertools
+import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -33,9 +34,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -62,7 +63,7 @@ def f3_point_from_ray(ray, tol=1e-6):
     ray_n = ray_n * factor
 
     # square to remove overall sign ambiguity (−ω^k -> ω^{2k})
-    ray_n = ray_n ** 2
+    ray_n = ray_n**2
 
     coords = []
     for z in ray_n:
@@ -80,12 +81,12 @@ def f3_point_from_ray(ray, tol=1e-6):
 
 
 def omega_symp(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
 
 def phase_cluster(angle):
     a = np.arctan2(np.sin(angle), np.cos(angle))
-    targets = [np.pi/6, -np.pi/6, np.pi/2, -np.pi/2]
+    targets = [np.pi / 6, -np.pi / 6, np.pi / 2, -np.pi / 2]
     nearest = min(targets, key=lambda t: abs(a - t))
     return round(float(nearest), 6)
 
@@ -104,9 +105,9 @@ def main():
             overlap[(i, j)] = np.vdot(rays[i], rays[j])
 
     tables = {
-        "omega_counts": defaultdict(Counter),      # (c1,c2) -> cluster
-        "omega_product": defaultdict(Counter),     # prod_sign -> cluster
-        "omega_multiset": defaultdict(Counter),    # multiset -> cluster
+        "omega_counts": defaultdict(Counter),  # (c1,c2) -> cluster
+        "omega_product": defaultdict(Counter),  # prod_sign -> cluster
+        "omega_multiset": defaultdict(Counter),  # multiset -> cluster
     }
 
     triples = 0
@@ -167,19 +168,25 @@ def main():
         f.write("counts (c1,c2) | clusters\n")
         f.write("--- | ---\n")
         for k in sorted(tables["omega_counts"].keys()):
-            clusters = ", ".join(f"{c}:{n}" for c, n in sorted(tables["omega_counts"][k].items()))
+            clusters = ", ".join(
+                f"{c}:{n}" for c, n in sorted(tables["omega_counts"][k].items())
+            )
             f.write(f"{k} | {clusters}\n")
         f.write("\n## ω product sign\n\n")
         f.write("prod_sign | clusters\n")
         f.write("--- | ---\n")
         for k in sorted(tables["omega_product"].keys()):
-            clusters = ", ".join(f"{c}:{n}" for c, n in sorted(tables["omega_product"][k].items()))
+            clusters = ", ".join(
+                f"{c}:{n}" for c, n in sorted(tables["omega_product"][k].items())
+            )
             f.write(f"{k} | {clusters}\n")
         f.write("\n## ω multiset\n\n")
         f.write("multiset | clusters\n")
         f.write("--- | ---\n")
         for k in sorted(tables["omega_multiset"].keys()):
-            clusters = ", ".join(f"{c}:{n}" for c, n in sorted(tables["omega_multiset"][k].items()))
+            clusters = ", ".join(
+                f"{c}:{n}" for c, n in sorted(tables["omega_multiset"][k].items())
+            )
             f.write(f"{k} | {clusters}\n")
 
     print(f"Wrote {out_path}")

@@ -2,7 +2,7 @@
 W33 THEORY - PART LXXIII: PROTON STABILITY AND DECAY
 ====================================================
 
-Grand Unified Theories predict proton decay. 
+Grand Unified Theories predict proton decay.
 Current experimental bound: τ_p > 10^34 years
 
 What does W33 predict for proton lifetime?
@@ -11,21 +11,22 @@ Author: Wil Dahn
 Date: January 2026
 """
 
-import numpy as np
-import math
 import json
+import math
 
-print("="*70)
+import numpy as np
+
+print("=" * 70)
 print("W33 THEORY PART LXXIII: PROTON STABILITY")
-print("="*70)
+print("=" * 70)
 
 # =============================================================================
 # SECTION 1: THE PROTON DECAY PUZZLE
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 1: PROTON STABILITY")
-print("="*70)
+print("=" * 70)
 
 print("""
 The proton appears to be extremely stable:
@@ -53,9 +54,9 @@ print(f"Experimental bound: τ_p > {tau_p_exp:.1e} years")
 # SECTION 2: GUT SCALE AND PROTON DECAY
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 2: GUT SCALE FROM W33")
-print("="*70)
+print("=" * 70)
 
 print("""
 The proton decay rate depends on the GUT scale M_GUT:
@@ -92,9 +93,9 @@ The exponent 33 = W33 connection:
 # SECTION 3: PROTON LIFETIME CALCULATION
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 3: W33 PROTON LIFETIME")
-print("="*70)
+print("=" * 70)
 
 print("""
 The proton lifetime formula:
@@ -112,7 +113,7 @@ Using W33 values:
 
 # Constants
 m_p = 0.938  # GeV
-alpha_GUT = 1/40  # Unified coupling from W33 (40 vertices!)
+alpha_GUT = 1 / 40  # Unified coupling from W33 (40 vertices!)
 A = 0.01  # Hadronic factor
 hbar = 6.582e-25  # GeV·s
 
@@ -146,9 +147,9 @@ else:
 # SECTION 4: DIMENSION-6 OPERATORS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 4: BARYON NUMBER VIOLATION")
-print("="*70)
+print("=" * 70)
 
 print("""
 Proton decay in GUTs proceeds through dimension-6 operators:
@@ -165,9 +166,9 @@ In W33:
 The W33 structure naturally suppresses proton decay!
 
 Key observation:
-  The 15 = m_3 multiplicity corresponds to the 
+  The 15 = m_3 multiplicity corresponds to the
   (3̄, 2) + (3, 1, -1/3) of SU(5) decomposition.
-  
+
   These are exactly the states mediating proton decay!
   Their mass is controlled by the W33 GUT scale.
 """)
@@ -176,9 +177,9 @@ Key observation:
 # SECTION 5: DOMINANT DECAY CHANNELS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 5: DECAY CHANNELS")
-print("="*70)
+print("=" * 70)
 
 print("""
 Main proton decay channels in GUTs:
@@ -202,9 +203,9 @@ which W33 also predicts!
 # SECTION 6: WHY 3^33?
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 6: THE SIGNIFICANCE OF 33")
-print("="*70)
+print("=" * 70)
 
 print("""
 Why is M_GUT = 3^33?
@@ -229,9 +230,9 @@ Planck and electroweak scales!
 # Verify
 M_P = 3**40
 M_W = 3**4
-ratio_check = 7/40
+ratio_check = 7 / 40
 
-M_GUT_derived = M_P * (M_W/M_P)**ratio_check
+M_GUT_derived = M_P * (M_W / M_P) ** ratio_check
 print(f"Verification: M_Planck × (M_W/M_Planck)^(7/40)")
 print(f"  = 3^40 × (3^4/3^40)^(7/40)")
 print(f"  = 3^40 × 3^(-36 × 7/40)")
@@ -244,9 +245,9 @@ print(f"Compare to 3^33 = {3**33:.3e}")
 # SECTION 7: FUTURE EXPERIMENTS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 7: EXPERIMENTAL TESTS")
-print("="*70)
+print("=" * 70)
 
 print("""
 Upcoming experiments will probe deeper:
@@ -275,9 +276,9 @@ it would be a MAJOR confirmation of W33!
 # SECTION 8: B-L SYMMETRY
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 8: B-L IN W33")
-print("="*70)
+print("=" * 70)
 
 print("""
 W33 preserves B - L (baryon minus lepton number).
@@ -285,16 +286,16 @@ W33 preserves B - L (baryon minus lepton number).
 This is because:
   - SRG(40, 12, 2, 4) has automorphism group containing
     transformations that preserve this combination
-  
+
   - The 40 vertices split as:
     * 16 quarks (B = 1/3 each)
-    * 8 antiquarks (B = -1/3 each)  
+    * 8 antiquarks (B = -1/3 each)
     * 12 leptons (L = 1 each)
     * 4 Higgs-like (B = L = 0)
-    
+
   Total: B - L is preserved in all interactions!
 
-This explains why n - n̄ oscillations are also 
+This explains why n - n̄ oscillations are also
 extremely suppressed (violates B by 2).
 """)
 
@@ -302,9 +303,9 @@ extremely suppressed (violates B by 2).
 # SECTION 9: COSMOLOGICAL IMPLICATIONS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 9: BARYOGENESIS")
-print("="*70)
+print("=" * 70)
 
 print("""
 For baryogenesis (matter-antimatter asymmetry), we need:
@@ -313,7 +314,7 @@ For baryogenesis (matter-antimatter asymmetry), we need:
 2. C and CP violation ✓ (Part LXIX showed this)
 3. Out of equilibrium ✓ (GUT phase transition)
 
-The W33 GUT scale M_GUT = 3^33 ~ 10^16 GeV is 
+The W33 GUT scale M_GUT = 3^33 ~ 10^16 GeV is
 PERFECT for thermal leptogenesis!
 
 The right-handed neutrino mass scale M_R = 3^20 ~ 10^10 GeV
@@ -328,7 +329,7 @@ W33 naturally explains:
 # Baryon asymmetry estimate
 M_R = 3**20  # Right-handed neutrino scale
 M_W_scale = 3**4  # W boson scale
-eta_estimate = (M_W_scale / M_R)**0.5 * 1e-6  # Rough scaling
+eta_estimate = (M_W_scale / M_R) ** 0.5 * 1e-6  # Rough scaling
 print(f"\nBaryon asymmetry estimate: η ~ {eta_estimate:.0e}")
 print(f"Experimental: η = 6.1 × 10^(-10)")
 
@@ -336,31 +337,31 @@ print(f"Experimental: η = 6.1 × 10^(-10)")
 # SECTION 10: SUMMARY
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PART LXXIII CONCLUSIONS")
-print("="*70)
+print("=" * 70)
 
 results = {
-    'GUT_scale': {
-        'formula': 'M_GUT = 3^33',
-        'value_GeV': 3**33,
-        'derivation': 'M_Planck × (M_W/M_Planck)^(7/40)'
+    "GUT_scale": {
+        "formula": "M_GUT = 3^33",
+        "value_GeV": 3**33,
+        "derivation": "M_Planck × (M_W/M_Planck)^(7/40)",
     },
-    'proton_lifetime': {
-        'prediction_years': tau_p_years,
-        'experimental_bound': tau_p_exp,
-        'consistent': tau_p_years > tau_p_exp
+    "proton_lifetime": {
+        "prediction_years": tau_p_years,
+        "experimental_bound": tau_p_exp,
+        "consistent": tau_p_years > tau_p_exp,
     },
-    'significance_of_33': [
-        'v - 7 = 40 - 7 = 33',
-        'Interpolation between Planck and weak scales',
-        'Natural GUT scale emergence'
+    "significance_of_33": [
+        "v - 7 = 40 - 7 = 33",
+        "Interpolation between Planck and weak scales",
+        "Natural GUT scale emergence",
     ],
-    'B_minus_L': 'Exactly conserved in W33',
-    'baryogenesis': 'Compatible with thermal leptogenesis'
+    "B_minus_L": "Exactly conserved in W33",
+    "baryogenesis": "Compatible with thermal leptogenesis",
 }
 
-with open('PART_LXXIII_proton_decay.json', 'w') as f:
+with open("PART_LXXIII_proton_decay.json", "w") as f:
     json.dump(results, f, indent=2, default=str)
 
 print("""
@@ -391,4 +392,4 @@ Proton decay could be the SMOKING GUN for W33!
 
 Results saved to PART_LXXIII_proton_decay.json
 """)
-print("="*70)
+print("=" * 70)

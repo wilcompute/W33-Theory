@@ -8,14 +8,23 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUT_DIR = DATA / "_workbench" / "04_measurement"
 
 ODDNESS = OUT_DIR / "e_star_oddness_per_line.csv"
-RESPONSE = DATA / "_toe" / "flux_response_law_20260110" / "response_law_regression_coeffs_all40.csv"
-GRID = DATA / "_toe" / "native_fullgrid_20260110" / "nativeC24_fullgrid_line_stabilities_flux_noflux.csv"
+RESPONSE = (
+    DATA
+    / "_toe"
+    / "flux_response_law_20260110"
+    / "response_law_regression_coeffs_all40.csv"
+)
+GRID = (
+    DATA
+    / "_toe"
+    / "native_fullgrid_20260110"
+    / "nativeC24_fullgrid_line_stabilities_flux_noflux.csv"
+)
 
 
 def zscore(x):
@@ -50,11 +59,20 @@ def main() -> None:
             }
         )
     win_df = pd.DataFrame(winners)
-    win_df = win_df.merge(df[["line_id", "score"]], left_on="flux_winner", right_on="line_id", how="left")
+    win_df = win_df.merge(
+        df[["line_id", "score"]], left_on="flux_winner", right_on="line_id", how="left"
+    )
     win_df = win_df.rename(columns={"score": "flux_score"}).drop(columns=["line_id"])
-    win_df = win_df.merge(df[["line_id", "score"]], left_on="noflux_winner", right_on="line_id", how="left")
+    win_df = win_df.merge(
+        df[["line_id", "score"]],
+        left_on="noflux_winner",
+        right_on="line_id",
+        how="left",
+    )
     win_df = win_df.rename(columns={"score": "noflux_score"}).drop(columns=["line_id"])
-    win_df["flux_beats_noflux"] = (win_df["flux_score"] > win_df["noflux_score"]).astype(int)
+    win_df["flux_beats_noflux"] = (
+        win_df["flux_score"] > win_df["noflux_score"]
+    ).astype(int)
 
     top5 = df.sort_values("score", ascending=False).head(5)["line_id"].tolist()
     win_df["flux_in_top5"] = win_df["flux_winner"].isin(top5).astype(int)
@@ -62,7 +80,9 @@ def main() -> None:
 
     overall_flux_beats = win_df["flux_beats_noflux"].mean()
     changed = win_df[win_df["winner_changed"] == 1]
-    changed_flux_beats = changed["flux_beats_noflux"].mean() if not changed.empty else 0.0
+    changed_flux_beats = (
+        changed["flux_beats_noflux"].mean() if not changed.empty else 0.0
+    )
 
     summary_path = OUT_DIR / "mixed_predictor_oddness_defect_summary.md"
     with summary_path.open("w", encoding="utf-8") as f:
@@ -70,7 +90,9 @@ def main() -> None:
         f.write(f"Inputs:\n- {ODDNESS}\n- {RESPONSE}\n- {GRID}\n\n")
         f.write(f"- top5 lines by score: {top5}\n")
         f.write(f"- flux winner beats noflux score: {overall_flux_beats:.6f}\n")
-        f.write(f"- flux winner beats noflux when winner changes: {changed_flux_beats:.6f}\n")
+        f.write(
+            f"- flux winner beats noflux when winner changes: {changed_flux_beats:.6f}\n"
+        )
         f.write(f"- flux winners in top5: {win_df['flux_in_top5'].mean():.6f}\n")
         f.write(f"- noflux winners in top5: {win_df['noflux_in_top5'].mean():.6f}\n")
 

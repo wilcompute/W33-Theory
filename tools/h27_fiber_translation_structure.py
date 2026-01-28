@@ -15,6 +15,7 @@ Outputs:
 - artifacts/h27_fiber_translation_structure.json
 - artifacts/h27_fiber_translation_structure.md
 """
+
 from __future__ import annotations
 
 import json
@@ -47,11 +48,11 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
     return adj, proj_points
@@ -283,7 +284,9 @@ def main():
 
         # fiber coordinates in F3^2
         basis_info, coords = basis_coords(fiber_keys)
-        results["fiber_coords"] = {str(k): v for k, v in coords.items()} if coords else None
+        results["fiber_coords"] = (
+            {str(k): v for k, v in coords.items()} if coords else None
+        )
 
         # check if translation depends only on coord difference
         diff_map = {}
@@ -306,7 +309,9 @@ def main():
 
         results["translation_consistent_by_diff"] = consistent
         results["translation_by_diff"] = {str(k): v for k, v in diff_map.items()}
-        results["translation_by_diff_counts"] = {str(k): diff_counts[k] for k in diff_counts}
+        results["translation_by_diff_counts"] = {
+            str(k): diff_counts[k] for k in diff_counts
+        }
 
         lines.append("## Translation-by-difference check")
         lines.append(f"- consistent: {consistent}")

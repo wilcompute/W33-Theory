@@ -3,11 +3,12 @@
 
 Pure-python (no sympy). Generates PSp(4,3) by BFS on generator permutations.
 """
+
 from __future__ import annotations
 
 import json
 from collections import deque
-from itertools import product, combinations
+from itertools import combinations, product
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -33,7 +34,7 @@ def build_projective_points():
 
 
 def omega_sym(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
 
 def build_edges(proj_points):
@@ -46,7 +47,7 @@ def build_edges(proj_points):
 
 
 def build_lines_from_edges(edges):
-    adj = [[0]*40 for _ in range(40)]
+    adj = [[0] * 40 for _ in range(40)]
     for i, j in edges:
         adj[i][j] = adj[j][i] = 1
 
@@ -69,11 +70,11 @@ def normalize_proj(v):
 
 
 def check_symplectic(M):
-    Omega = [[0,0,1,0],[0,0,0,1],[2,0,0,0],[0,2,0,0]]
+    Omega = [[0, 0, 1, 0], [0, 0, 0, 1], [2, 0, 0, 0], [0, 2, 0, 0]]
 
     def mat_mult(A, B):
         n, k, m = len(A), len(B), len(B[0])
-        result = [[0]*m for _ in range(n)]
+        result = [[0] * m for _ in range(n)]
         for i in range(n):
             for j in range(m):
                 for l in range(k):
@@ -108,7 +109,7 @@ def perm_compose(a, b):
 
 
 def perm_inverse(p):
-    inv = [0]*len(p)
+    inv = [0] * len(p)
     for i, v in enumerate(p):
         inv[v] = i
     return inv
@@ -116,16 +117,16 @@ def perm_inverse(p):
 
 def get_sp43_generators(vertices):
     gen_matrices = [
-        [[1,0,1,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,1],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[1,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,1,0,1]],
-        [[1,1,0,0],[0,1,0,0],[0,0,1,0],[0,0,2,1]],
-        [[1,0,0,0],[1,1,0,0],[0,0,1,2],[0,0,0,1]],
-        [[0,0,1,0],[0,1,0,0],[2,0,0,0],[0,0,0,1]],
-        [[1,0,0,0],[0,0,0,1],[0,0,1,0],[0,2,0,0]],
-        [[2,0,0,0],[0,1,0,0],[0,0,2,0],[0,0,0,1]],
-        [[1,0,0,0],[0,2,0,0],[0,0,1,0],[0,0,0,2]],
+        [[1, 0, 1, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 1], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [1, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 1, 0, 1]],
+        [[1, 1, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 2, 1]],
+        [[1, 0, 0, 0], [1, 1, 0, 0], [0, 0, 1, 2], [0, 0, 0, 1]],
+        [[0, 0, 1, 0], [0, 1, 0, 0], [2, 0, 0, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0], [0, 2, 0, 0]],
+        [[2, 0, 0, 0], [0, 1, 0, 0], [0, 0, 2, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 2, 0, 0], [0, 0, 1, 0], [0, 0, 0, 2]],
     ]
     gens = []
     for M in gen_matrices:
@@ -195,7 +196,7 @@ def bfs_line_words(line_gens, base_idx=0):
             invg = perm_inverse(g)
             inv = invg[cur]
             if inv not in labels:
-                labels[inv] = word + [-(gi+1)]
+                labels[inv] = word + [-(gi + 1)]
                 q.append(inv)
     return labels
 
@@ -258,7 +259,7 @@ def main():
         word = line_words[li]
         mapped_pts = [apply_word_to_point(word, p, point_gens) for p in base_line]
         mapped_pairs = {}
-        for (a, b) in base_pairs:
+        for a, b in base_pairs:
             ia = base_line.index(a)
             ib = base_line.index(b)
             pair = tuple(sorted((mapped_pts[ia], mapped_pts[ib])))
@@ -271,7 +272,9 @@ def main():
     line_lookup = {line: idx for idx, line in enumerate(lines)}
     for e in edges:
         e_sorted = tuple(sorted(e))
-        line_idx = next(i for i, line in enumerate(lines) if set(e_sorted).issubset(line))
+        line_idx = next(
+            i for i, line in enumerate(lines) if set(e_sorted).issubset(line)
+        )
         point = line_to_point[line_idx]
         phase = edge_to_phase[e_sorted]
         edge_to_vertex[e_sorted] = (point, phase)
@@ -281,7 +284,9 @@ def main():
 
     out = {
         "line_to_point": {str(k): v for k, v in line_to_point.items()},
-        "edge_to_vertex": {f"{a}-{b}": [p, ph] for (a,b),(p,ph) in edge_to_vertex.items()},
+        "edge_to_vertex": {
+            f"{a}-{b}": [p, ph] for (a, b), (p, ph) in edge_to_vertex.items()
+        },
         "base_line": list(base_line),
         "base_pairs": [list(p) for p in base_pairs],
         "p0": p0,

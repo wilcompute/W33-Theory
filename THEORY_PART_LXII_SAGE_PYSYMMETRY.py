@@ -9,21 +9,23 @@ Author: Wil Dahn
 Date: January 2026
 """
 
-import numpy as np
-from itertools import combinations, product
 import json
+from itertools import combinations, product
 
-print("="*70)
+import numpy as np
+
+print("=" * 70)
 print("W33 THEORY PART LXII: SAGEMATH & PYSYMMETRY DEEP DIVE")
-print("="*70)
+print("=" * 70)
 
 # =============================================================================
 # SECTION 1: BUILD W33 FROM SCRATCH IN PURE PYTHON (for verification)
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 1: CONSTRUCTING W33 AS Sp(4,3) SYMPLECTIC GRAPH")
-print("="*70)
+print("=" * 70)
+
 
 def symplectic_form_f3(u, v):
     """
@@ -31,7 +33,8 @@ def symplectic_form_f3(u, v):
     For W33, we want the graph where vertices are ADJACENT when orthogonal!
     Returns result in F_3 (mod 3)
     """
-    return (u[0]*v[2] - u[2]*v[0] + u[1]*v[3] - u[3]*v[1]) % 3
+    return (u[0] * v[2] - u[2] * v[0] + u[1] * v[3] - u[3] * v[1]) % 3
+
 
 def find_isotropic_1spaces_f3():
     """
@@ -40,12 +43,12 @@ def find_isotropic_1spaces_f3():
     In F_3, we take representatives with first nonzero coordinate = 1.
     """
     isotropic_spaces = []
-    
+
     # Iterate over all nonzero vectors in F_3^4
     for v in product(range(3), repeat=4):
-        if v == (0,0,0,0):
+        if v == (0, 0, 0, 0):
             continue
-        
+
         # Check if isotropic: <v,v> = 0 (always true for symplectic form!)
         if symplectic_form_f3(v, v) == 0:
             # Normalize: find first nonzero and scale to 1
@@ -58,68 +61,73 @@ def find_isotropic_1spaces_f3():
                     if v_normalized not in isotropic_spaces:
                         isotropic_spaces.append(v_normalized)
                     break
-    
+
     return isotropic_spaces
+
 
 print("Finding isotropic 1-spaces in F_3^4...")
 isotropic_spaces = find_isotropic_1spaces_f3()
 print(f"Found {len(isotropic_spaces)} isotropic 1-spaces")
 
+
 # Build adjacency: two 1-spaces are adjacent if their symplectic form = 0 (orthogonal)
 # This gives the W33 graph with SRG(40,12,2,4)
 def build_w33_adjacency(spaces):
     """Build adjacency matrix for W33 graph.
-    
+
     In the symplectic graph over F_3^4, vertices (1-spaces) are adjacent
     when they are ORTHOGONAL (symplectic form = 0), not perpendicular!
     """
     n = len(spaces)
     adj = np.zeros((n, n), dtype=int)
-    
+
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             # Check if orthogonal (symplectic form = 0) BUT not same space
             if symplectic_form_f3(spaces[i], spaces[j]) == 0:
-                adj[i,j] = 1
-                adj[j,i] = 1
-    
+                adj[i, j] = 1
+                adj[j, i] = 1
+
     return adj
+
 
 adj_matrix = build_w33_adjacency(isotropic_spaces)
 print(f"\nAdjacency matrix shape: {adj_matrix.shape}")
 
 # Verify SRG parameters
 degrees = adj_matrix.sum(axis=1)
-print(f"Vertex degrees: min={degrees.min()}, max={degrees.max()}, all same={len(set(degrees))==1}")
+print(
+    f"Vertex degrees: min={degrees.min()}, max={degrees.max()}, all same={len(set(degrees))==1}"
+)
 
 if len(set(degrees)) == 1:
     k = degrees[0]
     print(f"Degree k = {k}")
-    
+
     # Check lambda (common neighbors of adjacent vertices)
     lambdas = []
     for i in range(len(isotropic_spaces)):
-        for j in range(i+1, len(isotropic_spaces)):
-            if adj_matrix[i,j] == 1:
-                common = sum(adj_matrix[i,:] * adj_matrix[j,:])
+        for j in range(i + 1, len(isotropic_spaces)):
+            if adj_matrix[i, j] == 1:
+                common = sum(adj_matrix[i, :] * adj_matrix[j, :])
                 lambdas.append(common)
-    
+
     if len(set(lambdas)) == 1:
         lam = lambdas[0]
         print(f"Lambda (adj pairs) = {lam}")
-    
+
     # Check mu (common neighbors of non-adjacent vertices)
     mus = []
     for i in range(len(isotropic_spaces)):
-        for j in range(i+1, len(isotropic_spaces)):
-            if adj_matrix[i,j] == 0:
-                common = sum(adj_matrix[i,:] * adj_matrix[j,:])
+        for j in range(i + 1, len(isotropic_spaces)):
+            if adj_matrix[i, j] == 0:
+                common = sum(adj_matrix[i, :] * adj_matrix[j, :])
                 mus.append(common)
-    
+
     if len(set(mus)) == 1:
         mu = mus[0]
         print(f"Mu (non-adj pairs) = {mu}")
-    
+
     print(f"\n*** W33 is SRG({len(isotropic_spaces)}, {k}, {lam}, {mu}) ***")
 
 # Count edges
@@ -131,9 +139,9 @@ print(f"240 = E_8 roots? {edges == 240}")
 # SECTION 2: GENERATE SAGEMATH CODE FOR Sp(4,3)
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 2: GENERATING SAGEMATH CODE FOR Sp(4,3)")
-print("="*70)
+print("=" * 70)
 
 sage_code_sp4_3 = '''
 # W33 Theory - SageMath Verification of Sp(4,3)
@@ -292,7 +300,7 @@ print("\\n*** SAGE VERIFICATION COMPLETE ***")
 '''
 
 # Save the SageMath code
-with open('w33_sage_sp4_3_verification.sage', 'w', encoding='utf-8') as f:
+with open("w33_sage_sp4_3_verification.sage", "w", encoding="utf-8") as f:
     f.write(sage_code_sp4_3)
 
 print("Generated: w33_sage_sp4_3_verification.sage")
@@ -301,9 +309,9 @@ print("Generated: w33_sage_sp4_3_verification.sage")
 # SECTION 3: EIGENVALUE ANALYSIS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 3: EIGENVALUE ANALYSIS OF W33")
-print("="*70)
+print("=" * 70)
 
 # Compute eigenvalues of adjacency matrix
 eigenvalues = np.linalg.eigvalsh(adj_matrix)
@@ -325,16 +333,18 @@ print(f"  s = -4 (multiplicity m_s)")
 # For SRG(n,k,λ,μ): eigenvalues are k, r, s where
 # r,s = (1/2)[(λ-μ) ± √((λ-μ)² + 4(k-μ))]
 n, k, lam, mu = 40, 12, 2, 4
-discriminant = (lam - mu)**2 + 4*(k - mu)
+discriminant = (lam - mu) ** 2 + 4 * (k - mu)
 r = ((lam - mu) + np.sqrt(discriminant)) / 2
 s = ((lam - mu) - np.sqrt(discriminant)) / 2
 print(f"\nComputed: r = {r}, s = {s}")
 
 # Multiplicities
-m_r = (-k*s + (n-1)*r*s + k) / ((r-s)*(k+r*s))
-m_s = (k*r - (n-1)*r*s - k) / ((r-s)*(k+r*s))
+m_r = (-k * s + (n - 1) * r * s + k) / ((r - s) * (k + r * s))
+m_s = (k * r - (n - 1) * r * s - k) / ((r - s) * (k + r * s))
 # Alternative formula
-m_r_alt = (n - 1 + (n-1)*(lam-mu) + 2*k) / (2 + (lam-mu) + 2*np.sqrt(discriminant)/2)
+m_r_alt = (n - 1 + (n - 1) * (lam - mu) + 2 * k) / (
+    2 + (lam - mu) + 2 * np.sqrt(discriminant) / 2
+)
 
 print(f"Theoretical multiplicities: m_r = {m_r}, m_s = {m_s}")
 
@@ -342,22 +352,22 @@ print(f"Theoretical multiplicities: m_r = {m_r}, m_s = {m_s}")
 # SECTION 4: CONNECTION TO EXCEPTIONAL ALGEBRAS (COMPUTATIONAL)
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 4: EXCEPTIONAL ALGEBRA NUMEROLOGY")
-print("="*70)
+print("=" * 70)
 
 # Let's systematically check all the formulas
 checks = {
-    '81 = 3^4': 81 == 3**4,
-    '40 vertices': len(isotropic_spaces) == 40,
-    '240 edges = E8 roots': edges == 240,
-    '173 = 133 + 40': 173 == 133 + 40,
-    '229 = 173 + 56': 229 == 173 + 56,
-    '248 = 81 + 56 + 111': 248 == 81 + 56 + 111,
-    '137 ≈ 81 + 56': abs(137 - (81 + 56)) < 1,
-    '1111 = 11 × 101': 1111 == 11 * 101,
-    '1111 = 37 × 30 + 1': 1111 == 37 * 30 + 1,
-    '37 = 7 + 13 + 17': 37 == 7 + 13 + 17,
+    "81 = 3^4": 81 == 3**4,
+    "40 vertices": len(isotropic_spaces) == 40,
+    "240 edges = E8 roots": edges == 240,
+    "173 = 133 + 40": 173 == 133 + 40,
+    "229 = 173 + 56": 229 == 173 + 56,
+    "248 = 81 + 56 + 111": 248 == 81 + 56 + 111,
+    "137 ≈ 81 + 56": abs(137 - (81 + 56)) < 1,
+    "1111 = 11 × 101": 1111 == 11 * 101,
+    "1111 = 37 × 30 + 1": 1111 == 37 * 30 + 1,
+    "37 = 7 + 13 + 17": 37 == 7 + 13 + 17,
 }
 
 print("Verification of key relations:")
@@ -369,17 +379,17 @@ for relation, result in checks.items():
 # SECTION 5: DEEPER - COUNTING SPECIAL SUBSTRUCTURES
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 5: COUNTING SPECIAL SUBSTRUCTURES")
-print("="*70)
+print("=" * 70)
 
 # Count triangles
 triangles = 0
 for i in range(len(isotropic_spaces)):
-    for j in range(i+1, len(isotropic_spaces)):
-        if adj_matrix[i,j] == 1:
-            for kk in range(j+1, len(isotropic_spaces)):
-                if adj_matrix[i,kk] == 1 and adj_matrix[j,kk] == 1:
+    for j in range(i + 1, len(isotropic_spaces)):
+        if adj_matrix[i, j] == 1:
+            for kk in range(j + 1, len(isotropic_spaces)):
+                if adj_matrix[i, kk] == 1 and adj_matrix[j, kk] == 1:
                     triangles += 1
 
 print(f"Number of triangles: {triangles}")
@@ -414,11 +424,11 @@ print(f"Number of 3-cliques (triangles): {len(cliques_3)}")
 # SECTION 6: GENERATE PYSYMMETRY CODE
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 6: PYSYMMETRY-COMPATIBLE CODE")
-print("="*70)
+print("=" * 70)
 
-pysymmetry_code = '''
+pysymmetry_code = """
 # W33 Theory - pysymmetry Analysis
 # Requires SageMath with pysymmetry installed
 
@@ -480,9 +490,9 @@ for r in range(1, 6):
             print(f"  81 = {' + '.join(map(str, combo))}")
 
 print("\\n*** pysymmetry analysis complete ***")
-'''
+"""
 
-with open('w33_pysymmetry_analysis.sage', 'w', encoding='utf-8') as f:
+with open("w33_pysymmetry_analysis.sage", "w", encoding="utf-8") as f:
     f.write(pysymmetry_code)
 
 print("Generated: w33_pysymmetry_analysis.sage")
@@ -491,9 +501,9 @@ print("Generated: w33_pysymmetry_analysis.sage")
 # SECTION 7: NEW DISCOVERY - GRAPH SPECTRUM AND PHYSICS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 7: GRAPH SPECTRUM → PHYSICS CONNECTION")
-print("="*70)
+print("=" * 70)
 
 print("""
 INSIGHT: The eigenvalues of W33 might encode physical information!
@@ -536,7 +546,7 @@ The multiplicity 24 appears!
   • 24 = Leech lattice minimum vectors / 2
 
 The multiplicity 15 appears!
-  • 15 = dimension of SU(4) adjoint  
+  • 15 = dimension of SU(4) adjoint
   • 15 = number of generators of SU(4)
 
 The eigenvalue pattern (1, 24, 15) sums to 40!
@@ -549,25 +559,25 @@ Could this relate to gauge symmetry breaking?
 # SECTION 8: MODULAR ARITHMETIC PATTERNS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 8: MODULAR PATTERNS (mod 3)")
-print("="*70)
+print("=" * 70)
 
 print("""
 W33 is built over F_3, so let's look at key numbers mod 3:
 """)
 
 key_numbers = {
-    'alpha_inv': 137,
-    '173': 173,
-    '229': 229,
-    '1111': 1111,
-    'E6_adj': 78,
-    'E6_fund': 27,
-    'E7_adj': 133,
-    'E7_fund': 56,
-    'E8_dim': 248,
-    'E8_roots': 240,
+    "alpha_inv": 137,
+    "173": 173,
+    "229": 229,
+    "1111": 1111,
+    "E6_adj": 78,
+    "E6_fund": 27,
+    "E7_adj": 133,
+    "E7_fund": 56,
+    "E8_dim": 248,
+    "E8_roots": 240,
 }
 
 print(f"{'Number':<15} {'Value':<8} {'mod 3':<8} {'mod 9':<8} {'mod 27'}")
@@ -583,7 +593,7 @@ OBSERVATION:
 • 81 ≡ 0 (mod 3), 0 (mod 9), 0 (mod 27) [obviously]
 • 56 ≡ 2 (mod 3), 2 (mod 9), 2 (mod 27)
 
-So 137 ≡ 56 (mod 27)! 
+So 137 ≡ 56 (mod 27)!
 And 137 - 56 = 81 = 3⁴, divisible by 27.
 
 This confirms: α⁻¹ = 81 + 56 + ε where ε is small correction!
@@ -593,9 +603,9 @@ This confirms: α⁻¹ = 81 + 56 + ε where ε is small correction!
 # SECTION 9: OUTSIDE THE BOX - SPECTRAL GAP AND MASS GAP
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 9: SPECTRAL GAP → MASS GAP?")
-print("="*70)
+print("=" * 70)
 
 print("""
 WILD IDEA: Could the W33 spectral gap relate to the QCD mass gap?
@@ -626,9 +636,9 @@ These are simple ratios! Could encode:
 # SECTION 10: GENERATE COMPREHENSIVE SAGE SCRIPT
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 10: COMPREHENSIVE SAGE VERIFICATION SCRIPT")
-print("="*70)
+print("=" * 70)
 
 comprehensive_sage = '''
 #!/usr/bin/env sage
@@ -690,8 +700,8 @@ print(f"  Isotropic 1-spaces: {len(iso_spaces)}")
 def symp_form(u, v):
     return vector(GF(3), u) * J * vector(GF(3), v)
 
-edges = [(i, j) for i in range(len(iso_spaces)) 
-         for j in range(i+1, len(iso_spaces)) 
+edges = [(i, j) for i in range(len(iso_spaces))
+         for j in range(i+1, len(iso_spaces))
          if symp_form(iso_spaces[i], iso_spaces[j]) != 0]
 
 W33 = Graph(edges)
@@ -810,7 +820,7 @@ with open('w33_sage_results.json', 'w') as f:
 print("\\nResults saved to w33_sage_results.json")
 '''
 
-with open('w33_comprehensive_verification.sage', 'w', encoding='utf-8') as f:
+with open("w33_comprehensive_verification.sage", "w", encoding="utf-8") as f:
     f.write(comprehensive_sage)
 
 print("Generated: w33_comprehensive_verification.sage")
@@ -820,36 +830,36 @@ print("Generated: w33_comprehensive_verification.sage")
 # =============================================================================
 
 results = {
-    'w33_vertices': len(isotropic_spaces),
-    'w33_edges': int(edges),
-    'srg_parameters': [40, 12, 2, 4],
-    'eigenvalues': {
-        '12': {'multiplicity': 1},
-        '2': {'multiplicity': 24},
-        '-4': {'multiplicity': 15},
+    "w33_vertices": len(isotropic_spaces),
+    "w33_edges": int(edges),
+    "srg_parameters": [40, 12, 2, 4],
+    "eigenvalues": {
+        "12": {"multiplicity": 1},
+        "2": {"multiplicity": 24},
+        "-4": {"multiplicity": 15},
     },
-    'triangles': triangles,
-    'four_cliques': four_cliques,
-    'key_verifications': {k: bool(v) for k, v in checks.items()},
-    'generated_files': [
-        'w33_sage_sp4_3_verification.sage',
-        'w33_pysymmetry_analysis.sage',
-        'w33_comprehensive_verification.sage'
+    "triangles": triangles,
+    "four_cliques": four_cliques,
+    "key_verifications": {k: bool(v) for k, v in checks.items()},
+    "generated_files": [
+        "w33_sage_sp4_3_verification.sage",
+        "w33_pysymmetry_analysis.sage",
+        "w33_comprehensive_verification.sage",
     ],
-    'physical_interpretation': {
-        'multiplicity_24': 'SU(5) adjoint dimension',
-        'multiplicity_15': 'SU(4) adjoint dimension',
-        'spectral_gap': 10,
-        'eigenvalue_ratios': {'12/2': 6, '12/-4': -3, '2/-4': -0.5}
-    }
+    "physical_interpretation": {
+        "multiplicity_24": "SU(5) adjoint dimension",
+        "multiplicity_15": "SU(4) adjoint dimension",
+        "spectral_gap": 10,
+        "eigenvalue_ratios": {"12/2": 6, "12/-4": -3, "2/-4": -0.5},
+    },
 }
 
-with open('PART_LXII_sage_pysymmetry_results.json', 'w') as f:
+with open("PART_LXII_sage_pysymmetry_results.json", "w") as f:
     json.dump(results, f, indent=2, default=int)
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PART LXII CONCLUSIONS")
-print("="*70)
+print("=" * 70)
 
 print("""
 COMPUTATIONAL VERIFICATION COMPLETE:
@@ -863,11 +873,11 @@ COMPUTATIONAL VERIFICATION COMPLETE:
 
 5. Generated three SageMath verification scripts:
    - w33_sage_sp4_3_verification.sage
-   - w33_pysymmetry_analysis.sage  
+   - w33_pysymmetry_analysis.sage
    - w33_comprehensive_verification.sage
 
 NEW DISCOVERY:
-The eigenvalue multiplicities (24, 15) correspond to 
+The eigenvalue multiplicities (24, 15) correspond to
 dimensions of SU(5) and SU(4) adjoints!
 This might connect W33 to GUT gauge group breaking:
   SU(5) → SU(4) → SU(3) × SU(2) × U(1)
@@ -876,4 +886,4 @@ Run the .sage files in SageMath for full verification.
 
 Results saved to PART_LXII_sage_pysymmetry_results.json
 """)
-print("="*70)
+print("=" * 70)

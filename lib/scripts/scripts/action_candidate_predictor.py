@@ -128,7 +128,9 @@ def main():
     out_dir = data_dir / "_workbench" / "04_measurement"
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    line_feature_path = data_dir / "_workbench" / "02_geometry" / "line_feature_table.csv"
+    line_feature_path = (
+        data_dir / "_workbench" / "02_geometry" / "line_feature_table.csv"
+    )
     k12_path = data_dir / "_workbench" / "02_geometry" / "W33_line_phase_k12_map.csv"
     tau_self_path = out_dir / "tau_phase_shift_self.csv"
 
@@ -140,9 +142,11 @@ def main():
             line_features[line_id] = {
                 "var_q_class": row.get("var_q_class", ""),
                 "var_q_r": float(row["var_q_r"]) if row["var_q_r"] else 0.0,
-                "native_mean_abs_delta": float(row["native_mean_abs_delta"])
-                if row["native_mean_abs_delta"]
-                else 0.0,
+                "native_mean_abs_delta": (
+                    float(row["native_mean_abs_delta"])
+                    if row["native_mean_abs_delta"]
+                    else 0.0
+                ),
             }
 
     k12_counts = {}
@@ -151,7 +155,9 @@ def main():
         reader = csv.DictReader(handle)
         required = {"line_id", "k_mod12_counts"}
         if not required.issubset(set(reader.fieldnames or [])):
-            raise ValueError(f"Missing required columns in {k12_path}: {required - set(reader.fieldnames or [])}")
+            raise ValueError(
+                f"Missing required columns in {k12_path}: {required - set(reader.fieldnames or [])}"
+            )
         for row in reader:
             try:
                 line_id = int(row["line_id"])
@@ -271,10 +277,16 @@ def main():
         handle.write("- var_q_r: Q12 variance (low is better)\n")
         handle.write("- var_q_class: Q12 variance label\n")
         handle.write("- k12_entropy: entropy of k mod 12 phases\n")
-        handle.write("- k12_kl_global: KL divergence from global k mod 12 distribution\n")
-        handle.write("- tau_shift_similarity: self-similarity under k12 shift=2 (lower is better)\n\n")
+        handle.write(
+            "- k12_kl_global: KL divergence from global k mod 12 distribution\n"
+        )
+        handle.write(
+            "- tau_shift_similarity: self-similarity under k12 shift=2 (lower is better)\n\n"
+        )
         handle.write("Candidate score (prior):\n")
-        handle.write("- score = -z(var_q_r) - z(k12_entropy) + z(k12_kl_global) - z(tau_shift_similarity)\n\n")
+        handle.write(
+            "- score = -z(var_q_r) - z(k12_entropy) + z(k12_kl_global) - z(tau_shift_similarity)\n\n"
+        )
         handle.write("Fitted score (least squares, standardized features):\n")
         handle.write(f"- intercept: {round(beta[0], 6)}\n")
         handle.write(
@@ -287,7 +299,9 @@ def main():
         handle.write(f"- top{top_n} overlap prior: {overlap_prior}\n")
         handle.write(f"- top{top_n} overlap fit: {overlap_fit}\n\n")
         handle.write("Outputs:\n")
-        handle.write("- `data/_workbench/04_measurement/action_candidate_features.csv`\n")
+        handle.write(
+            "- `data/_workbench/04_measurement/action_candidate_features.csv`\n"
+        )
 
 
 if __name__ == "__main__":

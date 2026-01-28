@@ -3,13 +3,14 @@
 
 Goal: minimize Gram mismatches for adjacency pairs across generators.
 """
+
 from __future__ import annotations
 
 import json
 import random
+from collections import Counter
 from itertools import product
 from pathlib import Path
-from collections import Counter
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -32,12 +33,12 @@ def build_w33():
             proj_points.append(v)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     edges = []
-    adj = [[0]*40 for _ in range(40)]
+    adj = [[0] * 40 for _ in range(40)]
     for i in range(40):
-        for j in range(i+1, 40):
+        for j in range(i + 1, 40):
             if omega(proj_points[i], proj_points[j]) == 0:
                 edges.append((i, j))
                 adj[i][j] = adj[j][i] = 1
@@ -55,7 +56,9 @@ def extract_lines(adj, edges):
         edge_to_line[(i, j)] = line
     lines = sorted(lines)
     line_index = {line: idx for idx, line in enumerate(lines)}
-    edge_to_line_idx = {tuple(sorted(e)): line_index[edge_to_line[e]] for e in edge_to_line}
+    edge_to_line_idx = {
+        tuple(sorted(e)): line_index[edge_to_line[e]] for e in edge_to_line
+    }
     return lines, line_index, edge_to_line_idx
 
 
@@ -63,7 +66,7 @@ def canonical_line_edge_order(line, points):
     ordered_pts = sorted(line, key=lambda idx: points[idx])
     edge_list = []
     for i in range(4):
-        for j in range(i+1, 4):
+        for j in range(i + 1, 4):
             a, b = ordered_pts[i], ordered_pts[j]
             edge_list.append(tuple(sorted((a, b))))
     return edge_list
@@ -106,15 +109,17 @@ def normalize_proj(v):
 
 
 def check_symplectic(M):
-    Omega = [[0,0,1,0],[0,0,0,1],[2,0,0,0],[0,2,0,0]]
+    Omega = [[0, 0, 1, 0], [0, 0, 0, 1], [2, 0, 0, 0], [0, 2, 0, 0]]
+
     def mat_mult(A, B):
         n, k, m = len(A), len(B), len(B[0])
-        result = [[0]*m for _ in range(n)]
+        result = [[0] * m for _ in range(n)]
         for i in range(n):
             for j in range(m):
                 for l in range(k):
                     result[i][j] = (result[i][j] + A[i][l] * B[l][j]) % 3
         return result
+
     MT = [[M[j][i] for j in range(4)] for i in range(4)]
     result = mat_mult(mat_mult(MT, Omega), M)
     return result == Omega
@@ -146,16 +151,16 @@ def vertex_perm_to_edge_perm(vperm, edges):
 
 def get_edge_generators(vertices, edges):
     gen_matrices = [
-        [[1,0,1,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,1],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[1,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,1,0,1]],
-        [[1,1,0,0],[0,1,0,0],[0,0,1,0],[0,0,2,1]],
-        [[1,0,0,0],[1,1,0,0],[0,0,1,2],[0,0,0,1]],
-        [[0,0,1,0],[0,1,0,0],[2,0,0,0],[0,0,0,1]],
-        [[1,0,0,0],[0,0,0,1],[0,0,1,0],[0,2,0,0]],
-        [[2,0,0,0],[0,1,0,0],[0,0,2,0],[0,0,0,1]],
-        [[1,0,0,0],[0,2,0,0],[0,0,1,0],[0,0,0,2]],
+        [[1, 0, 1, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 1], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [1, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 1, 0, 1]],
+        [[1, 1, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 2, 1]],
+        [[1, 0, 0, 0], [1, 1, 0, 0], [0, 0, 1, 2], [0, 0, 0, 1]],
+        [[0, 0, 1, 0], [0, 1, 0, 0], [2, 0, 0, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0], [0, 2, 0, 0]],
+        [[2, 0, 0, 0], [0, 1, 0, 0], [0, 0, 2, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 2, 0, 0], [0, 0, 1, 0], [0, 0, 0, 2]],
     ]
     edge_gens = []
     for M in gen_matrices:
@@ -169,32 +174,38 @@ def get_edge_generators(vertices, edges):
 
 def cartan_e8():
     return [
-        [ 2, -1,  0,  0,  0,  0,  0,  0],
-        [-1,  2, -1,  0,  0,  0,  0,  0],
-        [ 0, -1,  2, -1,  0,  0,  0, -1],
-        [ 0,  0, -1,  2, -1,  0,  0,  0],
-        [ 0,  0,  0, -1,  2, -1,  0,  0],
-        [ 0,  0,  0,  0, -1,  2, -1,  0],
-        [ 0,  0,  0,  0,  0, -1,  2,  0],
-        [ 0,  0, -1,  0,  0,  0,  0,  2],
+        [2, -1, 0, 0, 0, 0, 0, 0],
+        [-1, 2, -1, 0, 0, 0, 0, 0],
+        [0, -1, 2, -1, 0, 0, 0, -1],
+        [0, 0, -1, 2, -1, 0, 0, 0],
+        [0, 0, 0, -1, 2, -1, 0, 0],
+        [0, 0, 0, 0, -1, 2, -1, 0],
+        [0, 0, 0, 0, 0, -1, 2, 0],
+        [0, 0, -1, 0, 0, 0, 0, 2],
     ]
 
 
 def ip_e8(r, s, C):
-    return sum(r[i]*C[i][j]*s[j] for i in range(8) for j in range(8))
+    return sum(r[i] * C[i][j] * s[j] for i in range(8) for j in range(8))
 
 
 def main():
     points, edges, adj = build_w33()
     lines, line_index, edge_to_line_idx = extract_lines(adj, edges)
 
-    line_edge_order = {li: canonical_line_edge_order(lines[li], points) for li in range(len(lines))}
+    line_edge_order = {
+        li: canonical_line_edge_order(lines[li], points) for li in range(len(lines))
+    }
 
-    orbit_data = json.loads((ROOT / "artifacts" / "e8_coxeter6_orbits.json").read_text())
+    orbit_data = json.loads(
+        (ROOT / "artifacts" / "e8_coxeter6_orbits.json").read_text()
+    )
     orbits = orbit_data["orbits"]
     orbit_root_order = {o: canonical_orbit_order(orbits[o]) for o in range(len(orbits))}
 
-    summary = json.loads((ROOT / "artifacts" / "edge_root_bijection_summary.json").read_text())
+    summary = json.loads(
+        (ROOT / "artifacts" / "edge_root_bijection_summary.json").read_text()
+    )
     orbit_to_line = {int(k): v for k, v in summary["orbit_to_line"].items()}
     line_to_orbit = {v: k for k, v in orbit_to_line.items()}
 
@@ -208,7 +219,7 @@ def main():
     for i in range(len(edges_sorted)):
         e1 = edges_sorted[i]
         s1 = set(e1)
-        for j in range(i+1, len(edges_sorted)):
+        for j in range(i + 1, len(edges_sorted)):
             if s1 & set(edges_sorted[j]):
                 adj_pairs.append((i, j))
 
@@ -219,7 +230,7 @@ def main():
         roots_flat.extend(orbit_root_order[o])
     root_list = [tuple(r) for r in roots_flat]
     C = cartan_e8()
-    Gram = [[0]*len(root_list) for _ in range(len(root_list))]
+    Gram = [[0] * len(root_list) for _ in range(len(root_list))]
     for i in range(len(root_list)):
         for j in range(len(root_list)):
             Gram[i][j] = ip_e8(root_list[i], root_list[j], C)
@@ -227,12 +238,12 @@ def main():
     dperms = dihedral_perms(6)
 
     def build_edge_to_root_idx(line_perm_choice):
-        edge_to_root_idx = [None]*len(edges_sorted)
+        edge_to_root_idx = [None] * len(edges_sorted)
         for li in range(len(lines)):
             o = line_to_orbit[li]
             edge_list = line_edge_order[li]
             perm = dperms[line_perm_choice[li]]
-            base = li*6
+            base = li * 6
             for p, e in enumerate(edge_list):
                 pos = perm[p]
                 edge_to_root_idx[edge_index[e]] = base + pos
@@ -242,11 +253,13 @@ def main():
         edge_to_root_idx = build_edge_to_root_idx(line_perm_choice)
         mism = 0
         for g in edge_gens:
-            for (i, j) in adj_pairs:
+            for i, j in adj_pairs:
                 gi = g[i]
                 gj = g[j]
-                if Gram[edge_to_root_idx[i]][edge_to_root_idx[j]] != \
-                   Gram[edge_to_root_idx[gi]][edge_to_root_idx[gj]]:
+                if (
+                    Gram[edge_to_root_idx[i]][edge_to_root_idx[j]]
+                    != Gram[edge_to_root_idx[gi]][edge_to_root_idx[gj]]
+                ):
                     mism += 1
         return mism
 

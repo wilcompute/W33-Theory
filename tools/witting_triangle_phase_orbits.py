@@ -5,11 +5,12 @@ We build the monomial symmetry group (243 elements) that preserves the 40-ray se
 then compute orbit sizes on the 3240 non-orthogonal triangles, separated by
 phase cluster (±pi/6, ±pi/2).
 """
+
 from __future__ import annotations
 
-import json
 import itertools
-from collections import defaultdict, Counter
+import json
+from collections import Counter, defaultdict
 from pathlib import Path
 
 import numpy as np
@@ -27,9 +28,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -49,7 +50,7 @@ def canonical_key(ray, tol=1e-6):
 
 def phase_cluster(angle):
     a = np.arctan2(np.sin(angle), np.cos(angle))
-    targets = [np.pi/6, -np.pi/6, np.pi/2, -np.pi/2]
+    targets = [np.pi / 6, -np.pi / 6, np.pi / 2, -np.pi / 2]
     nearest = min(targets, key=lambda t: abs(a - t))
     return round(float(nearest), 6)
 
@@ -62,7 +63,9 @@ def build_monomial_group(rays):
     elements = []
     for perm in itertools.permutations(range(4)):
         for a0, a1, a2, a3 in itertools.product(phases, repeat=4):
-            phase_vec = np.array([omega**a0, omega**a1, omega**a2, omega**a3], dtype=complex)
+            phase_vec = np.array(
+                [omega**a0, omega**a1, omega**a2, omega**a3], dtype=complex
+            )
             mapping = []
             valid = True
             for r in rays:
@@ -126,9 +129,7 @@ def main():
     out = {
         "group_elements": len(group),
         "triangles": len(triangles),
-        "orbit_sizes_by_phase": {
-            str(k): Counter(v) for k, v in orbit_sizes.items()
-        },
+        "orbit_sizes_by_phase": {str(k): Counter(v) for k, v in orbit_sizes.items()},
     }
 
     out_path = ROOT / "artifacts" / "witting_triangle_phase_orbits.json"

@@ -53,7 +53,7 @@ The geometry itself enforces that elementary transport only happens in color-sin
 - The 90 K4s form 45 dual pairs ✓
 - Z₂ × Z₃ fiber matches weak isospin × color ✓
 
-**Option 2: E6 GUT** 
+**Option 2: E6 GUT**
 - E6 Weyl group W(E6) has order 51,840
 - E6 has two 27-dimensional fundamental reps
 - E6 → SO(10) × U(1) → SU(5) × U(1) breaking chain
@@ -90,7 +90,7 @@ Where:
 
 **Key geometric facts:**
 1. K4 outer quad P: 4 mutually non-collinear points
-2. K4 center quad C: 4 other mutually non-collinear points  
+2. K4 center quad C: 4 other mutually non-collinear points
 3. **Critical:** P and C are completely orthogonal to each other
 4. Both live in orthogonal 3D subspaces (from SVD analysis)
 
@@ -178,7 +178,7 @@ This IS a field equation in the strict physics sense!
 1. **Algebraic proof of Z₃ = 0 for K4s**
    - Use rank-3 orthogonal structure
    - Show constraint follows from geometry alone
-   
+
 2. **Z₄ analysis**
    - Distribution of Z₄ values in K4s
    - Any Z₄ constraints similar to Z₃?

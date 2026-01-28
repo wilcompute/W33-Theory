@@ -4,16 +4,17 @@
 If found, test whether the 40 orbits define a 40-vertex graph with SRG(40,12,2,4)
 when we connect two orbits if they contain orthogonal roots (inner product 0).
 """
+
 from __future__ import annotations
 
-from collections import Counter
 import random
+from collections import Counter
 
 from sage.all import RootSystem
 
 
 def build_e8():
-    RS = RootSystem(['E', 8])
+    RS = RootSystem(["E", 8])
     RL = RS.root_lattice()
     roots = list(RL.roots())  # 240 roots
     W = RL.weyl_group()
@@ -158,7 +159,9 @@ def test_candidate(name, w, roots, C):
             adj_sig = graph_from_signature(n, pairs)
             params_sig = srg_params(adj_sig)
             if params_sig is not None and params_sig[1] == 12:
-                print(f"  Candidate signature {sig} -> SRG params {params_sig} with {len(pairs)} edges")
+                print(
+                    f"  Candidate signature {sig} -> SRG params {params_sig} with {len(pairs)} edges"
+                )
                 result = {
                     "name": name,
                     "signature": sig,
@@ -188,8 +191,9 @@ def main():
     res = test_candidate("coxeter^5", cand, roots, C)
     if isinstance(res, dict):
         # Persist results
-        from pathlib import Path
         import json
+        from pathlib import Path
+
         out = {
             "element": res["name"],
             "signature": [int(x) for x in res["signature"]],
@@ -197,7 +201,9 @@ def main():
             "orbit_count": len(res["orbits"]),
             "orbit_size": len(res["orbits"][0]),
             "edges": [[int(i), int(j)] for i, j in res["pairs"]],
-            "orbits": [[[int(x) for x in r.to_vector()] for r in orb] for orb in res["orbits"]],
+            "orbits": [
+                [[int(x) for x in r.to_vector()] for r in orb] for orb in res["orbits"]
+            ],
         }
         out_path = Path("artifacts/e8_coxeter6_orbits.json")
         out_path.parent.mkdir(parents=True, exist_ok=True)

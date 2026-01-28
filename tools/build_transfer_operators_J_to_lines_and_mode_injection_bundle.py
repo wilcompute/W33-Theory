@@ -34,7 +34,6 @@ from pathlib import Path
 
 import numpy as np
 
-
 ROOT = Path(__file__).resolve().parents[1]
 MOD3 = 3
 
@@ -66,7 +65,9 @@ def _read_json_from_zip(zip_path: Path, inner: str) -> object:
         return json.loads(zf.read(inner).decode("utf-8"))
 
 
-def _write_csv(path: Path, fieldnames: list[str], rows: list[dict[str, object]]) -> None:
+def _write_csv(
+    path: Path, fieldnames: list[str], rows: list[dict[str, object]]
+) -> None:
     with path.open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fieldnames)
         w.writeheader()
@@ -123,7 +124,9 @@ def _compute_mode_projectors(Ameet: np.ndarray, S: np.ndarray) -> dict[str, np.n
     return out
 
 
-def _mode_energy_fractions(projectors: dict[str, np.ndarray], v_centered: np.ndarray) -> tuple[dict[str, float], float]:
+def _mode_energy_fractions(
+    projectors: dict[str, np.ndarray], v_centered: np.ndarray
+) -> tuple[dict[str, float], float]:
     energies: dict[str, float] = {}
     total = 0.0
     for name, E in projectors.items():
@@ -164,12 +167,15 @@ def main() -> int:
     ap.add_argument(
         "--out",
         type=Path,
-        default=ROOT / "W33_transfer_operators_J_to_lines_and_mode_injection_bundle.zip",
+        default=ROOT
+        / "W33_transfer_operators_J_to_lines_and_mode_injection_bundle.zip",
     )
     args = ap.parse_args()
 
     # --- Load tetrahedra and J := dF
-    trows = _read_csv_from_zip(args.holonomy_phase_decomp, "tetra_coboundary_dF_dPhi_9450.csv")
+    trows = _read_csv_from_zip(
+        args.holonomy_phase_decomp, "tetra_coboundary_dF_dPhi_9450.csv"
+    )
     tets = [tuple(map(int, [r["a"], r["b"], r["c"], r["d"]])) for r in trows]
     J = np.array([mod3(int(r["dF"])) for r in trows], dtype=np.int16)
     if len(tets) != 9450:
@@ -220,12 +226,16 @@ def main() -> int:
 
         if flat_count == 1:
             attached_line[ti] = int(flat[0])
-            m_rows.append({"row_line_id": int(flat[0]), "col_tet_index": ti, "value_mod3": 1})
+            m_rows.append(
+                {"row_line_id": int(flat[0]), "col_tet_index": ti, "value_mod3": 1}
+            )
             jv = int(J[ti])
             if jv:
                 m_raw[int(flat[0])] = mod3(int(m_raw[int(flat[0])]) + jv)
         elif flat_count not in (0, 4):
-            raise SystemExit(f"Unexpected flat_face_count={flat_count} for tet_index={ti}")
+            raise SystemExit(
+                f"Unexpected flat_face_count={flat_count} for tet_index={ti}"
+            )
 
         # Z operator column aggregation for this tet
         local: dict[int, int] = {}
@@ -243,7 +253,9 @@ def main() -> int:
         for lid, coeff in sorted(local.items()):
             if coeff == 0:
                 continue
-            z_rows.append({"row_line_id": int(lid), "col_tet_index": ti, "value_mod3": int(coeff)})
+            z_rows.append(
+                {"row_line_id": int(lid), "col_tet_index": ti, "value_mod3": int(coeff)}
+            )
             z_cols[ti].append((int(lid), int(coeff)))
             jv = int(J[ti])
             if jv:
@@ -326,8 +338,12 @@ def main() -> int:
     # --- Build injection tables by orbit and flux value
     inj_rows = []
     agg_rows = []
-    m_class: dict[tuple[int, int], np.ndarray] = {(oid, jv): np.zeros(90, dtype=np.int16) for oid in orbit_sizes for jv in (1, 2)}
-    z_class: dict[tuple[int, int], np.ndarray] = {(oid, jv): np.zeros(90, dtype=np.int16) for oid in orbit_sizes for jv in (1, 2)}
+    m_class: dict[tuple[int, int], np.ndarray] = {
+        (oid, jv): np.zeros(90, dtype=np.int16) for oid in orbit_sizes for jv in (1, 2)
+    }
+    z_class: dict[tuple[int, int], np.ndarray] = {
+        (oid, jv): np.zeros(90, dtype=np.int16) for oid in orbit_sizes for jv in (1, 2)
+    }
 
     for ti in range(n):
         jv = int(J[ti])
@@ -398,11 +414,15 @@ def main() -> int:
     if args.vacuum_mode_bundle.exists():
         try:
             rows = _read_csv_from_zip(args.vacuum_mode_bundle, "line_vectors_mod3.csv")
-            m_ref = np.array([int(r["m_aug_mod3"]) for r in rows], dtype=np.int16) % MOD3
+            m_ref = (
+                np.array([int(r["m_aug_mod3"]) for r in rows], dtype=np.int16) % MOD3
+            )
             z_ref = np.array([int(r["z_mod3"]) for r in rows], dtype=np.int16) % MOD3
             crosscheck["matches_m_aug"] = bool(np.array_equal(m_aug, m_ref))
             crosscheck["matches_z"] = bool(np.array_equal(z_vec, z_ref))
-            crosscheck["m_aug_mismatches"] = int(np.count_nonzero((m_aug - m_ref) % MOD3))
+            crosscheck["m_aug_mismatches"] = int(
+                np.count_nonzero((m_aug - m_ref) % MOD3)
+            )
             crosscheck["z_mismatches"] = int(np.count_nonzero((z_vec - z_ref) % MOD3))
         except Exception as e:
             crosscheck["error"] = f"{type(e).__name__}: {e}"
@@ -415,11 +435,28 @@ def main() -> int:
         out_dir.rmdir()
     out_dir.mkdir()
 
-    _write_csv(out_dir / "operator_M_coo.csv", ["row_line_id", "col_tet_index", "value_mod3"], m_rows)
-    _write_csv(out_dir / "operator_Z_coo.csv", ["row_line_id", "col_tet_index", "value_mod3"], z_rows)
+    _write_csv(
+        out_dir / "operator_M_coo.csv",
+        ["row_line_id", "col_tet_index", "value_mod3"],
+        m_rows,
+    )
+    _write_csv(
+        out_dir / "operator_Z_coo.csv",
+        ["row_line_id", "col_tet_index", "value_mod3"],
+        z_rows,
+    )
     _write_csv(
         out_dir / "tetrahedra_J_dF_9450.csv",
-        ["tet_index", "a", "b", "c", "d", "J_dF_mod3", "flat_face_count", "attached_line_id_if_boundary"],
+        [
+            "tet_index",
+            "a",
+            "b",
+            "c",
+            "d",
+            "J_dF_mod3",
+            "flat_face_count",
+            "attached_line_id_if_boundary",
+        ],
         tet_rows,
     )
 
@@ -483,8 +520,13 @@ def main() -> int:
             },
             "counts": {
                 "num_tetrahedra": len(tets),
-                "J_hist": {str(k): int(v) for k, v in sorted(Counter(J.tolist()).items())},
-                "flat_face_count_hist": {str(k): int(v) for k, v in sorted(Counter(flat_face_count.tolist()).items())},
+                "J_hist": {
+                    str(k): int(v) for k, v in sorted(Counter(J.tolist()).items())
+                },
+                "flat_face_count_hist": {
+                    str(k): int(v)
+                    for k, v in sorted(Counter(flat_face_count.tolist()).items())
+                },
                 "orbit_sizes": orbit_sizes,
             },
             "crosscheck": crosscheck,

@@ -34,7 +34,6 @@ from pathlib import Path
 
 import numpy as np
 
-
 ROOT = Path(__file__).resolve().parents[1]
 MOD3 = 3
 
@@ -44,7 +43,9 @@ def _read_bytes_from_zip(zip_path: Path, inner_path: str) -> bytes:
         return zf.read(inner_path)
 
 
-def _write_csv(path: Path, fieldnames: list[str], rows: list[dict[str, object]]) -> None:
+def _write_csv(
+    path: Path, fieldnames: list[str], rows: list[dict[str, object]]
+) -> None:
     with path.open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fieldnames)
         w.writeheader()
@@ -111,7 +112,9 @@ def _read_90_vector_csv(path: Path) -> np.ndarray:
             raise ValueError(f"{path}: expected a 'line_id' column")
         value_cols = [c for c in r.fieldnames if c != "line_id"]
         if not value_cols:
-            raise ValueError(f"{path}: expected a second value column besides 'line_id'")
+            raise ValueError(
+                f"{path}: expected a second value column besides 'line_id'"
+            )
         value_col = value_cols[0]
         out = np.zeros(90, dtype=np.int16)
         seen = set()
@@ -137,7 +140,9 @@ class IdempotentInfo:
     epsilon_sigma: int
 
 
-def _cluster_eigenvalues_int(evals: np.ndarray, tol: float = 1e-6) -> dict[int, np.ndarray]:
+def _cluster_eigenvalues_int(
+    evals: np.ndarray, tol: float = 1e-6
+) -> dict[int, np.ndarray]:
     """
     Cluster eigenvalues by rounding to nearest integer (with a tolerance check).
     Returns map: integer eigenvalue -> indices array.
@@ -166,7 +171,9 @@ def _sigma_sign_close(x: float, tol: float = 1e-6) -> int:
     return r
 
 
-def _fit_invariant_operator_mod3(B: list[np.ndarray], z: np.ndarray, m: np.ndarray) -> dict[str, object]:
+def _fit_invariant_operator_mod3(
+    B: list[np.ndarray], z: np.ndarray, m: np.ndarray
+) -> dict[str, object]:
     """
     Brute-force best D = sum_i a_i B_i over Z3 (243 combos).
     Returns best coefficients and mismatch stats.
@@ -182,7 +189,13 @@ def _fit_invariant_operator_mod3(B: list[np.ndarray], z: np.ndarray, m: np.ndarr
                 for a3 in range(3):
                     for a4 in range(3):
                         coeff = (a0, a1, a2, a3, a4)
-                        y = (a0 * Bz[0] + a1 * Bz[1] + a2 * Bz[2] + a3 * Bz[3] + a4 * Bz[4]) % MOD3
+                        y = (
+                            a0 * Bz[0]
+                            + a1 * Bz[1]
+                            + a2 * Bz[2]
+                            + a3 * Bz[3]
+                            + a4 * Bz[4]
+                        ) % MOD3
                         mism = int(np.count_nonzero((y - m) % MOD3))
                         if best is None or mism < best["mismatches"]:
                             best = {
@@ -208,8 +221,12 @@ def main() -> int:
         type=Path,
         default=ROOT / "W33_nonisotropic_line_scheme_spectral_bundle.zip",
     )
-    ap.add_argument("--z-csv", type=Path, default=None, help="Optional 90-vector CSV (z observable)")
-    ap.add_argument("--m-csv", type=Path, default=None, help="Optional 90-vector CSV (m observable)")
+    ap.add_argument(
+        "--z-csv", type=Path, default=None, help="Optional 90-vector CSV (z observable)"
+    )
+    ap.add_argument(
+        "--m-csv", type=Path, default=None, help="Optional 90-vector CSV (m observable)"
+    )
     args = ap.parse_args()
 
     bundle_path: Path = args.scheme_bundle
@@ -256,7 +273,9 @@ def main() -> int:
         groups_S = _cluster_eigenvalues_int(wS, tol=1e-6)  # keys are ±1
         for epsS, jdxs in groups_S.items():
             if epsS not in (-1, 1):
-                raise SystemExit(f"Unexpected sigma eigenvalue {epsS} on Ameet={lamA} space")
+                raise SystemExit(
+                    f"Unexpected sigma eigenvalue {epsS} on Ameet={lamA} space"
+                )
             Vc = V @ uS[:, jdxs]  # (90, mult2)
             E = Vc @ Vc.T
             mult = int(round(float(np.trace(E))))
@@ -292,7 +311,9 @@ def main() -> int:
     # --- Dual eigenmatrix Q = v * P^{-1} (exact rationals)
     v = 90
     Pinv = _invert_matrix_fraction(P_int)
-    Q = [[Fraction(v, 1) * Pinv[i][j] for j in range(5)] for i in range(5)]  # (Bi row, Ej col)
+    Q = [
+        [Fraction(v, 1) * Pinv[i][j] for j in range(5)] for i in range(5)
+    ]  # (Bi row, Ej col)
 
     # --- Build exact coefficient representation of each Ej in the B-basis:
     #     Ej = (1/v) * sum_i Q[i][j] * B_i
@@ -330,7 +351,9 @@ def main() -> int:
         + (-3.0 / 4.0) * AS.astype(np.float64)
         + (1.0 / 12.0) * A2.astype(np.float64)
     )
-    gen_identities["B3_expression_verifies"] = bool(np.allclose(B3_recon, B[3].astype(np.float64), atol=1e-9))
+    gen_identities["B3_expression_verifies"] = bool(
+        np.allclose(B3_recon, B[3].astype(np.float64), atol=1e-9)
+    )
 
     # --- Sanity checks on idempotents (float)
     max_idem_err = 0.0
@@ -354,19 +377,40 @@ def main() -> int:
         Bi_hat = np.zeros((n, n), dtype=np.float64)
         for j in range(5):
             Bi_hat += float(P_int[j][i]) * E_from_coeff[j]
-        max_recon_err = max(max_recon_err, float(np.max(np.abs(Bi_hat - B[i].astype(np.float64)))))
+        max_recon_err = max(
+            max_recon_err, float(np.max(np.abs(Bi_hat - B[i].astype(np.float64))))
+        )
 
     # Orthogonality P*Q = vI, Q*P = vI (exact check)
     P_frac = [[Fraction(x, 1) for x in row] for row in P_int]
-    PQ = [[sum(P_frac[r][k] * Q[k][c] for k in range(5)) for c in range(5)] for r in range(5)]
-    QP = [[sum(Q[r][k] * P_frac[k][c] for k in range(5)) for c in range(5)] for r in range(5)]
-    pq_ok = all(PQ[r][c] == (Fraction(v, 1) if r == c else Fraction(0, 1)) for r in range(5) for c in range(5))
-    qp_ok = all(QP[r][c] == (Fraction(v, 1) if r == c else Fraction(0, 1)) for r in range(5) for c in range(5))
+    PQ = [
+        [sum(P_frac[r][k] * Q[k][c] for k in range(5)) for c in range(5)]
+        for r in range(5)
+    ]
+    QP = [
+        [sum(Q[r][k] * P_frac[k][c] for k in range(5)) for c in range(5)]
+        for r in range(5)
+    ]
+    pq_ok = all(
+        PQ[r][c] == (Fraction(v, 1) if r == c else Fraction(0, 1))
+        for r in range(5)
+        for c in range(5)
+    )
+    qp_ok = all(
+        QP[r][c] == (Fraction(v, 1) if r == c else Fraction(0, 1))
+        for r in range(5)
+        for c in range(5)
+    )
 
     sanity = {
-        "spectrum_Ameet": {str(k): int(len(vv)) for k, vv in sorted(groups_A.items(), key=lambda kv: -kv[0])},
+        "spectrum_Ameet": {
+            str(k): int(len(vv))
+            for k, vv in sorted(groups_A.items(), key=lambda kv: -kv[0])
+        },
         "idempotent_multiplicities": [info.multiplicity for info in info_list],
-        "idempotent_pairs_(lambda_Ameet,epsilon_sigma)": [(info.lambda_ameet, info.epsilon_sigma) for info in info_list],
+        "idempotent_pairs_(lambda_Ameet,epsilon_sigma)": [
+            (info.lambda_ameet, info.epsilon_sigma) for info in info_list
+        ],
         "P_is_integer": True,
         "PQ_equals_vI": pq_ok,
         "QP_equals_vI": qp_ok,
@@ -385,7 +429,9 @@ def main() -> int:
         opt["best_fit_mod3_in_B_basis"] = _fit_invariant_operator_mod3(B, z=z, m=mvec)
 
         # Real least-squares in B-basis (embed Z3 as {0,1,2} in R)
-        X = np.stack([(Bi.astype(np.float64) @ z.astype(np.float64)) for Bi in B], axis=1)  # (90,5)
+        X = np.stack(
+            [(Bi.astype(np.float64) @ z.astype(np.float64)) for Bi in B], axis=1
+        )  # (90,5)
         y = mvec.astype(np.float64)
         coeff, residuals, rank, svals = np.linalg.lstsq(X, y, rcond=None)
         opt["least_squares_real_in_B_basis"] = {
@@ -445,7 +491,17 @@ def main() -> int:
         )
     _write_csv(
         out_dir / "P_eigenmatrix.csv",
-        ["E", "multiplicity", "lambda_Ameet", "epsilon_sigma", "P(B0)", "P(B1)", "P(B2)", "P(B3)", "P(B4)"],
+        [
+            "E",
+            "multiplicity",
+            "lambda_Ameet",
+            "epsilon_sigma",
+            "P(B0)",
+            "P(B1)",
+            "P(B2)",
+            "P(B3)",
+            "P(B4)",
+        ],
         p_rows,
     )
 
@@ -462,16 +518,26 @@ def main() -> int:
                 "Q(E4)": _fraction_to_str(Q[i][4]),
             }
         )
-    _write_csv(out_dir / "Q_dual_eigenmatrix.csv", ["B", "Q(E0)", "Q(E1)", "Q(E2)", "Q(E3)", "Q(E4)"], q_rows)
+    _write_csv(
+        out_dir / "Q_dual_eigenmatrix.csv",
+        ["B", "Q(E0)", "Q(E1)", "Q(E2)", "Q(E3)", "Q(E4)"],
+        q_rows,
+    )
 
-    _write_json(out_dir / "primitive_idempotents_coeffs.json", {"E_order": [i.eid for i in info_list], "coeffs": coeffs})
+    _write_json(
+        out_dir / "primitive_idempotents_coeffs.json",
+        {"E_order": [i.eid for i in info_list], "coeffs": coeffs},
+    )
     _write_json(out_dir / "generator_identities.json", gen_identities)
     _write_json(out_dir / "sanity_checks.json", sanity)
     if opt:
         _write_json(out_dir / "optional_vector_fit_and_projections.json", opt)
 
     # Save float idempotent matrices
-    np.savez_compressed(out_dir / "primitive_idempotents_float.npz", **{info.eid: E for info, E in zip(info_list, E_from_coeff, strict=True)})
+    np.savez_compressed(
+        out_dir / "primitive_idempotents_float.npz",
+        **{info.eid: E for info, E in zip(info_list, E_from_coeff, strict=True)},
+    )
 
     readme = f"""\
 Non-isotropic 90-line association scheme: spectral decomposition
@@ -527,4 +593,3 @@ Optional:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

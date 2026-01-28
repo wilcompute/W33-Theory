@@ -192,25 +192,25 @@ try:
     print(f"  Vertices: {W33.order()}")
     print(f"  Edges: {W33.size()}")
     print(f"  Is connected: {W33.is_connected()}")
-    
+
     results['vertices'] = W33.order()
     results['edges'] = W33.size()
-    
+
     # Check strongly regular parameters
     print(f"\n  Is strongly regular: {W33.is_strongly_regular()}")
     if W33.is_strongly_regular():
         params = W33.is_strongly_regular(parameters=True)
         print(f"  SRG parameters: (n, k, λ, μ) = {params}")
         results['srg_parameters'] = params
-    
+
     # KEY COMPARISON
     print(f"\n  KEY COMPARISON:")
     print(f"  W33 edges = {W33.size()}")
     print(f"  E8 roots  = {len(E8_roots)}")
     print(f"  MATCH: {W33.size() == len(E8_roots)}")
-    
+
     results['e8_edge_match'] = (W33.size() == len(E8_roots))
-    
+
 except Exception as e:
     print(f"  Error building graph: {e}")
     # Manual construction as backup
@@ -229,17 +229,17 @@ try:
     order_aut = Aut_W33.order()
     print(f"\n  |Aut(W33)| = {order_aut}")
     print(f"  Factorization: {factor(order_aut)}")
-    
+
     results['aut_order'] = int(order_aut)
-    
+
     print(f"\n  FINAL VERIFICATION:")
     print(f"  |Sp(4, F_3)| = {order_sp4}")
     print(f"  |W(E6)|      = {order_we6}")
     print(f"  |Aut(W33)|   = {order_aut}")
     print(f"\n  ALL THREE EQUAL: {order_sp4 == order_we6 == order_aut}")
-    
+
     results['triple_isomorphism'] = (order_sp4 == order_we6 == order_aut)
-    
+
 except Exception as e:
     print(f"  Error computing automorphism group: {e}")
 
@@ -254,23 +254,23 @@ try:
     print("\nComputing eigenvalues of adjacency matrix...")
     A = W33.adjacency_matrix()
     eigenvalues = A.eigenvalues()
-    
+
     from collections import Counter
     eig_counts = Counter(eigenvalues)
-    
+
     print("\n  Eigenvalues with multiplicities:")
     for eig, mult in sorted(eig_counts.items(), key=lambda x: -x[0]):
         print(f"    λ = {eig:4}: multiplicity {mult}")
-    
+
     results['eigenvalues'] = [(int(e), int(m)) for e, m in sorted(eig_counts.items(), key=lambda x: -x[0])]
-    
+
     print(f"\n  Sum of multiplicities: {sum(eig_counts.values())} (should be 40)")
-    
+
     print("\n  INTERPRETATION:")
     print("    λ = 12: multiplicity 1  (trivial representation)")
     print("    λ = 2:  multiplicity 24 = 3 × 8 (triality!)")
     print("    λ = -4: multiplicity 15 = dim(SU(4))")
-    
+
 except Exception as e:
     print(f"  Error computing spectrum: {e}")
 
@@ -290,7 +290,7 @@ VERIFIED WITH SAGEMATH:
 
 2. GROUP ORDERS (EXACT COMPUTATION):
    |Sp(4, F_3)| = 51,840
-   |W(E6)|      = 51,840  
+   |W(E6)|      = 51,840
    |Aut(W33)|   = 51,840
    ✓ TRIPLE ISOMORPHISM VERIFIED
 
@@ -307,7 +307,7 @@ VERIFIED WITH SAGEMATH:
 5. PHYSICAL INTERPRETATION:
    40 = 27 + 12 + 1
    27 = E6 fundamental (matter)
-   12 = gauge bosons  
+   12 = gauge bosons
    1  = singlet
 
 THE MATHEMATICAL FOUNDATION IS RIGOROUS AND EXACT.

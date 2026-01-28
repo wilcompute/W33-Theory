@@ -9,6 +9,7 @@ We build:
 We then try to map the W33 generator words to the even Weyl generators by
 searching for a permutation of generators that yields a bijection.
 """
+
 from __future__ import annotations
 
 import json
@@ -20,6 +21,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 # ---------------- W33 construction ----------------
+
 
 def construct_w33_points():
     F3 = [0, 1, 2]
@@ -41,7 +43,7 @@ def construct_w33_points():
 
 
 def omega(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
 
 def construct_w33_edges(points):
@@ -63,10 +65,11 @@ def normalize_proj(v):
 
 
 def check_symplectic(M):
-    Omega = [[0,0,1,0],[0,0,0,1],[2,0,0,0],[0,2,0,0]]
+    Omega = [[0, 0, 1, 0], [0, 0, 0, 1], [2, 0, 0, 0], [0, 2, 0, 0]]
+
     def mat_mult(A, B):
         n, k, m = len(A), len(B), len(B[0])
-        result = [[0]*m for _ in range(n)]
+        result = [[0] * m for _ in range(n)]
         for i in range(n):
             for j in range(m):
                 s = 0
@@ -74,6 +77,7 @@ def check_symplectic(M):
                     s = (s + A[i][l] * B[l][j]) % 3
                 result[i][j] = s
         return result
+
     MT = [[M[j][i] for j in range(4)] for i in range(4)]
     return mat_mult(mat_mult(MT, Omega), M) == Omega
 
@@ -106,16 +110,16 @@ def vertex_perm_to_edge_perm(vperm, edges):
 
 def get_w33_edge_generators(points, edges):
     gen_matrices = [
-        [[1,0,1,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,1],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[1,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,1,0,1]],
-        [[1,1,0,0],[0,1,0,0],[0,0,1,0],[0,0,2,1]],
-        [[1,0,0,0],[1,1,0,0],[0,0,1,2],[0,0,0,1]],
-        [[0,0,1,0],[0,1,0,0],[2,0,0,0],[0,0,0,1]],
-        [[1,0,0,0],[0,0,0,1],[0,0,1,0],[0,2,0,0]],
-        [[2,0,0,0],[0,1,0,0],[0,0,2,0],[0,0,0,1]],
-        [[1,0,0,0],[0,2,0,0],[0,0,1,0],[0,0,0,2]],
+        [[1, 0, 1, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 1], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [1, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 1, 0, 1]],
+        [[1, 1, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 2, 1]],
+        [[1, 0, 0, 0], [1, 1, 0, 0], [0, 0, 1, 2], [0, 0, 0, 1]],
+        [[0, 0, 1, 0], [0, 1, 0, 0], [2, 0, 0, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0], [0, 2, 0, 0]],
+        [[2, 0, 0, 0], [0, 1, 0, 0], [0, 0, 2, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 2, 0, 0], [0, 0, 1, 0], [0, 0, 0, 2]],
     ]
     edge_gens = []
     for M in gen_matrices:
@@ -148,7 +152,9 @@ def bfs_edge_labels(gens, n_edges, base=0):
                 pass
     return labels
 
+
 # ---------------- E8 / E6 / even Weyl ----------------
+
 
 def build_e8_roots_scaled():
     roots = []
@@ -174,8 +180,8 @@ def dot(a, b):
 
 
 def e6_subset(roots):
-    u1 = (1,1,1,1,1,1,1,1)
-    u2 = (1,1,1,1,1,1,-1,-1)
+    u1 = (1, 1, 1, 1, 1, 1, 1, 1)
+    u2 = (1, 1, 1, 1, 1, 1, -1, -1)
     return [r for r in roots if dot(r, u1) == 0 and dot(r, u2) == 0]
 
 
@@ -285,7 +291,7 @@ def main():
     # (We will build 10 generators to match W33)
     even_gens = []
     for i in range(5):
-        even_gens.append(compose(refls[i], refls[i+1]))
+        even_gens.append(compose(refls[i], refls[i + 1]))
     even_gens.append(compose(refls[5], refls[0]))
     even_gens.append(compose(refls[0], refls[2]))
     even_gens.append(compose(refls[1], refls[3]))

@@ -4,6 +4,7 @@
 Outputs:
 - artifacts/pattern_class_k4_profile.json
 """
+
 from __future__ import annotations
 
 import csv
@@ -36,17 +37,21 @@ def build_points():
 def load_lines():
     path = ROOT / "data/_workbench/02_geometry/W33_line_phase_map.csv"
     lines = []
-    with open(path, newline='', encoding='utf-8') as f:
+    with open(path, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            pts = tuple(map(int, str(row['point_ids']).split()))
+            pts = tuple(map(int, str(row["point_ids"]).split()))
             lines.append(pts)
     return lines
 
 
 def pattern_class_by_vertex():
-    inter = json.loads((ROOT / "artifacts" / "we6_coxeter6_intersection.json").read_text())
-    orbit_map = json.loads((ROOT / "artifacts" / "e8_orbit_to_f3_point.json").read_text())
+    inter = json.loads(
+        (ROOT / "artifacts" / "we6_coxeter6_intersection.json").read_text()
+    )
+    orbit_map = json.loads(
+        (ROOT / "artifacts" / "e8_orbit_to_f3_point.json").read_text()
+    )
     mapping = orbit_map["mapping"]
 
     # pattern rows for orbits
@@ -96,7 +101,7 @@ def compute_k4_components():
                         continue
                     common = col[a] & col[b] & col[c] & col[d]
                     if len(common) == 4:
-                        k4_list.append(((a,b,c,d), tuple(sorted(common))))
+                        k4_list.append(((a, b, c, d), tuple(sorted(common))))
     return k4_list
 
 
@@ -122,7 +127,9 @@ def main():
     out = {
         "k4_count": len(k4_list),
         "outer_class_multisets": {str(k): v for k, v in outer_class_multisets.items()},
-        "center_class_multisets": {str(k): v for k, v in center_class_multisets.items()},
+        "center_class_multisets": {
+            str(k): v for k, v in center_class_multisets.items()
+        },
         "outer_class_counts": dict(outer_class_counts),
         "center_class_counts": dict(center_class_counts),
     }

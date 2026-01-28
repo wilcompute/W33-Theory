@@ -7,7 +7,7 @@
 
 **Claim**: W(3,3) is the universal algebraic structure from which ALL algebras derive.
 
-**Key Formula**: 
+**Key Formula**:
 ```
 ALGEBRA = W33 ⊗ COEFFICIENTS / RELATIONS
 ```

@@ -8,6 +8,7 @@ Outputs:
 - artifacts/sp43_we6_generator_map_full_we6.json
 - artifacts/sp43_we6_generator_map_full_we6_verify.json
 """
+
 from __future__ import annotations
 
 import json
@@ -36,7 +37,7 @@ def build_e8_roots():
 
 
 def main():
-    data = json.loads((ROOT / 'artifacts' / 'sp43_we6_generator_map.json').read_text())
+    data = json.loads((ROOT / "artifacts" / "sp43_we6_generator_map.json").read_text())
     roots = build_e8_roots()
     n = len(roots)
 
@@ -45,21 +46,22 @@ def main():
     flip_perm = [root_to_idx[tuple(-x for x in r)] for r in roots]
 
     full_generators = []
-    for g in data['generator_maps']:
-        full_generators.append(g['root_perm'])
+    for g in data["generator_maps"]:
+        full_generators.append(g["root_perm"])
     full_generators.append(flip_perm)
 
     out = {
-        'generator_count': len(full_generators),
-        'generators': full_generators,
+        "generator_count": len(full_generators),
+        "generators": full_generators,
     }
-    out_path = ROOT / 'artifacts' / 'sp43_we6_generator_map_full_we6.json'
+    out_path = ROOT / "artifacts" / "sp43_we6_generator_map_full_we6.json"
     out_path.write_text(json.dumps(out, indent=2))
     print(f"Wrote {out_path}")
 
     # Verify group order via Sage (libgap)
     try:
         from sage.libs.gap.libgap import libgap
+
         gap_perms = [libgap.PermList([x + 1 for x in perm]) for perm in full_generators]
         G = libgap.Group(gap_perms)
         order = int(libgap.Order(G))
@@ -70,13 +72,13 @@ def main():
         err = None
 
     verify = {
-        'order': order,
-        'error': err,
+        "order": order,
+        "error": err,
     }
-    verify_path = ROOT / 'artifacts' / 'sp43_we6_generator_map_full_we6_verify.json'
+    verify_path = ROOT / "artifacts" / "sp43_we6_generator_map_full_we6_verify.json"
     verify_path.write_text(json.dumps(verify, indent=2))
     print(f"Wrote {verify_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

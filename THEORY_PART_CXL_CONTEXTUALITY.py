@@ -9,18 +9,20 @@ The 40 states cannot be consistently "pre-labeled" for all 40 bases.
 This is a manifestation of the Kochen-Specker theorem in dimension 4.
 """
 
-import numpy as np
 from itertools import combinations
 
-print("="*70)
+import numpy as np
+
+print("=" * 70)
 print("PART CXL: CONTEXTUALITY AND KOCHEN-SPECKER STRUCTURE")
-print("="*70)
+print("=" * 70)
 
 omega = np.exp(2j * np.pi / 3)
 
 # =====================================================
 # BUILD WITTING STATES AND BASES
 # =====================================================
+
 
 def build_witting_states():
     """Build the 40 Witting states"""
@@ -29,46 +31,51 @@ def build_witting_states():
         v = np.zeros(4, dtype=complex)
         v[i] = 1
         states.append(v)
-    
+
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([0, 1, -omega**mu, omega**nu]) / np.sqrt(3))
+            states.append(np.array([0, 1, -(omega**mu), omega**nu]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([1, 0, -omega**mu, -omega**nu]) / np.sqrt(3))
+            states.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([1, -omega**mu, 0, omega**nu]) / np.sqrt(3))
+            states.append(np.array([1, -(omega**mu), 0, omega**nu]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
             states.append(np.array([1, omega**mu, omega**nu, 0]) / np.sqrt(3))
-    
+
     return states
+
 
 def find_bases(states):
     """Find all 40 orthonormal bases (4-cliques in orthogonality graph)"""
     n = len(states)
-    
+
     # Build adjacency (orthogonality)
-    adj = [[False]*n for _ in range(n)]
+    adj = [[False] * n for _ in range(n)]
     for i in range(n):
-        for j in range(i+1, n):
-            if abs(np.vdot(states[i], states[j]))**2 < 1e-10:
+        for j in range(i + 1, n):
+            if abs(np.vdot(states[i], states[j])) ** 2 < 1e-10:
                 adj[i][j] = adj[j][i] = True
-    
+
     # Find 4-cliques
     bases = []
     for i in range(n):
         neighbors_i = [j for j in range(n) if adj[i][j]]
         for j in neighbors_i:
-            if j <= i: continue
+            if j <= i:
+                continue
             for k in neighbors_i:
-                if k <= j or not adj[j][k]: continue
+                if k <= j or not adj[j][k]:
+                    continue
                 for l in neighbors_i:
-                    if l <= k or not adj[j][l] or not adj[k][l]: continue
-                    bases.append(frozenset([i,j,k,l]))
-    
+                    if l <= k or not adj[j][l] or not adj[k][l]:
+                        continue
+                    bases.append(frozenset([i, j, k, l]))
+
     return list(set(bases))
+
 
 states = build_witting_states()
 bases = find_bases(states)
@@ -78,9 +85,9 @@ print(f"Built {len(states)} states and {len(bases)} bases")
 # THE KOCHEN-SPECKER CONSTRAINT
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("THE KOCHEN-SPECKER CONSTRAINT")
-print("="*70)
+print("=" * 70)
 
 print("""
 KOCHEN-SPECKER THEOREM:
@@ -107,15 +114,16 @@ THIS IS IMPOSSIBLE!
 # BRUTE FORCE VERIFICATION
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("COMPUTATIONAL VERIFICATION")
-print("="*70)
+print("=" * 70)
+
 
 # Count how many colorings give correct result for all bases
 def count_valid_colorings_partial():
     """
     Try to find a valid coloring or prove none exists.
-    
+
     A coloring is valid if each basis has exactly one marked state.
     """
     # Build state-to-bases incidence
@@ -123,14 +131,14 @@ def count_valid_colorings_partial():
     for b_idx, basis in enumerate(bases):
         for state in basis:
             state_in_bases[state].append(b_idx)
-    
+
     # Use constraint propagation
     # For each basis, record which states can possibly be marked
     base_candidates = [set(basis) for basis in bases]
-    
+
     # If we fix one basis, that constrains others
     # Let's check: if we mark state 0, what happens?
-    
+
     def propagate(marked):
         """Given marked states, check if assignment is consistent"""
         # For each basis, count how many marked states it contains
@@ -139,19 +147,19 @@ def count_valid_colorings_partial():
             if marked_count > 1:
                 return False, "Multiple marked in a basis"
         return True, "OK so far"
-    
+
     # Enumerate: select one state per base of 10 "core" bases
     # The 10 bases {♠}, {♡}, {♢}, {♣} for each rank give partition of 40 states
-    
+
     # Actually, from Vlasov: the standard basis {0,1,2,3} must have exactly one marked
     # Let's try marking state 0
-    
+
     marked = {0}
-    
+
     # State 0 is in 4 bases. In those bases, states 0,1,2,3 form one.
     # So in basis {0,1,2,3}, state 0 is marked → 1,2,3 not marked
     unmarked = {1, 2, 3}
-    
+
     # Now check other bases containing state 0
     bases_with_0 = [b for b in bases if 0 in b]
     print(f"\nState 0 is in {len(bases_with_0)} bases:")
@@ -159,21 +167,22 @@ def count_valid_colorings_partial():
         print(f"  Basis: {sorted(b)}")
         # In each of these, only state 0 is marked
         unmarked.update(b - {0})
-    
+
     print(f"\nUnmarked states (from state 0's bases): {len(unmarked)}")
     print(f"  {sorted(unmarked)[:10]}...")
-    
+
     # Now we need exactly one marked state in all other bases
     remaining_bases = [b for b in bases if 0 not in b]
     print(f"\nRemaining bases (without state 0): {len(remaining_bases)}")
-    
+
     # Each remaining basis needs exactly one marked state
     # But unmarked contains many states → limited choices
     available = set(range(40)) - marked - unmarked
     print(f"Available states to mark: {len(available)}")
     print(f"  {sorted(available)}")
-    
+
     return None
+
 
 count_valid_colorings_partial()
 
@@ -181,14 +190,15 @@ count_valid_colorings_partial()
 # THE OBSTRUCTION COUNT
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("OBSTRUCTION ANALYSIS")
-print("="*70)
+print("=" * 70)
+
 
 def analyze_obstruction():
     """
     From Vlasov: the best we can do is 34/40 bases correct.
-    
+
     Maximum correct bases: 34 (85%)
     Minimum incorrect: 6 (15%)
     """
@@ -198,40 +208,42 @@ def analyze_obstruction():
     for b_idx, basis in enumerate(bases):
         for state in basis:
             incidence[b_idx, state] = 1
-    
+
     print("Incidence matrix:")
     print(f"  Shape: {incidence.shape}")
     print(f"  Row sums (states per basis): {set(incidence.sum(axis=1))}")
     print(f"  Column sums (bases per state): {set(incidence.sum(axis=0))}")
-    
+
     # Try random colorings and count success rate
     import random
+
     random.seed(42)
-    
+
     best_score = 0
     for trial in range(10000):
         # Random coloring: mark exactly 10 states (one per "rank" in card notation)
         marked = set(random.sample(range(40), 10))
-        
+
         correct = 0
         for basis in bases:
             marked_in_basis = len(basis & marked)
             if marked_in_basis == 1:
                 correct += 1
-        
+
         if correct > best_score:
             best_score = correct
             best_marking = marked
-    
+
     print(f"\nRandom search (10000 trials):")
     print(f"  Best coloring achieved: {best_score}/40 bases correct")
     print(f"  Best marked set: {sorted(best_marking)}")
-    
+
     # Check Vlasov's optimal marking
     # From the paper: marking {1♠, 2♠, 3♡, 4♡, 5♡, 6♣, 7♢, 8♢, 9♢, 10♣}
     # This requires the card indexing...
-    
+
     return best_score
+
 
 best = analyze_obstruction()
 
@@ -239,9 +251,9 @@ best = analyze_obstruction()
 # CONTEXTUALITY AS RESOURCE
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("CONTEXTUALITY AS A QUANTUM RESOURCE")
-print("="*70)
+print("=" * 70)
 
 print("""
 WHY THIS MATTERS:
@@ -267,7 +279,7 @@ The Witting configuration is MAXIMALLY CONTEXTUAL for dimension 4:
 
 The contextuality "fraction" is:
   6/40 = 15% obstruction
-  
+
 This is the LARGEST contextuality achievable in ℂ⁴ with equiangular states.
 """)
 
@@ -275,9 +287,9 @@ This is the LARGEST contextuality achievable in ℂ⁴ with equiangular states.
 # CONNECTION TO BELL INEQUALITIES
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("CONNECTION TO BELL INEQUALITIES")
-print("="*70)
+print("=" * 70)
 
 print("""
 PENROSE'S "BELL WITHOUT PROBABILITIES":
@@ -304,56 +316,57 @@ When Alice and Bob measure in the same Witting basis:
 # VERIFY CONTEXTUALITY QUANTITATIVELY
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("QUANTITATIVE CONTEXTUALITY MEASURE")
-print("="*70)
+print("=" * 70)
+
 
 def contextual_fraction():
     """
     Compute the contextual fraction: minimum bases that must fail.
-    
+
     This is an optimization problem:
     Minimize the number of bases with ≠1 marked state
     Subject to: each basis has at most 4 candidates
-    
+
     Use integer linear programming heuristic.
     """
     from scipy.optimize import linprog
-    
+
     # Variables: x_i = 1 if state i is marked
     # Constraints: For each basis b, Σ_{i∈b} x_i ≤ 1 (no more than 1)
     #             But we also want ≥ 1, so Σ x_i = 1 per basis
-    
     # This is actually an exact cover problem - NP-hard!
     # Use relaxation and rounding
-    
+
     n_states = 40
     n_bases = 40
-    
+
     # Build constraint matrix
     A_eq = np.zeros((n_bases, n_states))
     for b_idx, basis in enumerate(bases):
         for state in basis:
             A_eq[b_idx, state] = 1
-    
+
     b_eq = np.ones(n_bases)  # Each basis sums to 1
-    
+
     # Objective: minimize total (to get exactly 10 marked)
     c = np.ones(n_states)
-    
+
     # LP relaxation
-    result = linprog(c, A_eq=A_eq, b_eq=b_eq, bounds=(0, 1), method='highs')
-    
+    result = linprog(c, A_eq=A_eq, b_eq=b_eq, bounds=(0, 1), method="highs")
+
     if result.success:
         print(f"LP relaxation:")
         print(f"  Optimal objective (should be 10): {result.fun:.4f}")
         print(f"  Solution integrality: {np.allclose(result.x, np.round(result.x))}")
-        
+
         if not np.allclose(result.x, np.round(result.x)):
             print("\n  LP solution is FRACTIONAL!")
             print("  This proves no valid coloring exists.")
     else:
         print(f"LP failed: {result.message}")
+
 
 # contextual_fraction()  # Requires scipy, skip for now
 
@@ -371,9 +384,9 @@ The 6 "bad" bases form two groups of 3:
 This is the KOCHEN-SPECKER OBSTRUCTION for the Witting configuration.
 """)
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PART CXL COMPLETE")
-print("="*70)
+print("=" * 70)
 
 print("""
 KEY FINDINGS:

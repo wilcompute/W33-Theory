@@ -16,6 +16,7 @@ Outputs:
 - artifacts/edge_root_system_analysis.json
 - artifacts/edge_root_system_analysis.md
 """
+
 from __future__ import annotations
 
 import json
@@ -52,11 +53,11 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
 
@@ -69,10 +70,10 @@ def build_e8_roots():
 
     # Type 1: permutations of (±1, ±1, 0, 0, 0, 0, 0, 0) - 112 roots
     for i in range(8):
-        for j in range(i+1, 8):
+        for j in range(i + 1, 8):
             for si in [1, -1]:
                 for sj in [1, -1]:
-                    r = [0]*8
+                    r = [0] * 8
                     r[i] = si
                     r[j] = sj
                     roots.append(tuple(r))
@@ -80,7 +81,7 @@ def build_e8_roots():
     # Type 2: (±1/2, ..., ±1/2) with even number of minus signs - 128 roots
     for signs in product([1, -1], repeat=8):
         if sum(1 for s in signs if s == -1) % 2 == 0:
-            roots.append(tuple(s/2 for s in signs))
+            roots.append(tuple(s / 2 for s in signs))
 
     return np.array(roots, dtype=float)
 
@@ -123,7 +124,7 @@ def main():
     # Get edges
     edges = []
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if adj[i, j]:
                 edges.append((i, j))
 
@@ -135,7 +136,7 @@ def main():
 
     # Compute edge projections
     edge_projections = []
-    for (a, b) in edges:
+    for a, b in edges:
         indicator = np.zeros(n)
         indicator[a] = 1
         indicator[b] = 1
@@ -260,7 +261,7 @@ def main():
     closure_violations = 0
     samples_checked = 0
     for i in range(min(50, len(edges))):
-        for j in range(i+1, min(50, len(edges))):
+        for j in range(i + 1, min(50, len(edges))):
             alpha = normalized[i]
             beta = normalized[j]
             ip = np.dot(alpha, beta)
@@ -269,8 +270,9 @@ def main():
             # Check if reflection is in the set
             found = False
             for k in range(len(edges)):
-                if np.allclose(reflection, normalized[k], atol=0.01) or \
-                   np.allclose(reflection, -normalized[k], atol=0.01):
+                if np.allclose(reflection, normalized[k], atol=0.01) or np.allclose(
+                    reflection, -normalized[k], atol=0.01
+                ):
                     found = True
                     break
             if not found:
@@ -315,7 +317,7 @@ def main():
 
     e8_adj = np.zeros((240, 240), dtype=int)
     for i in range(240):
-        for j in range(i+1, 240):
+        for j in range(i + 1, 240):
             ip = np.dot(e8_normalized[i], e8_normalized[j])
             if abs(ip - 0.5) < 0.01 or abs(ip + 0.5) < 0.01:
                 e8_adj[i, j] = 1
@@ -340,7 +342,7 @@ def main():
     adj_ips = []
     nonadj_ips = []
     for i in range(240):
-        for j in range(i+1, 240):
+        for j in range(i + 1, 240):
             ip = gram_rounded[i, j]
             if edge_adj[i, j]:
                 adj_ips.append(ip)
@@ -369,7 +371,7 @@ def main():
 
     antipodal_count = 0
     for i in range(240):
-        for j in range(i+1, 240):
+        for j in range(i + 1, 240):
             if abs(gram_rounded[i, j] + 1) < 0.01:
                 antipodal_count += 1
 
@@ -395,7 +397,9 @@ def main():
     lines.append("")
 
     if antipodal_count == 120:
-        lines.append("**REMARKABLE**: The W33 edge system has exactly 120 antipodal pairs,")
+        lines.append(
+            "**REMARKABLE**: The W33 edge system has exactly 120 antipodal pairs,"
+        )
         lines.append("matching E8's root-line count!")
     elif antipodal_count == 0:
         lines.append("No antipodal structure - the system lacks ±root symmetry")

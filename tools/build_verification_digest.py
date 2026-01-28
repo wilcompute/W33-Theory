@@ -5,6 +5,7 @@ Produces:
 - artifacts/verification_digest.md
 - artifacts/verification_digest.json
 """
+
 from __future__ import annotations
 
 import json
@@ -117,7 +118,9 @@ def build_markdown(summary: dict) -> str:
     lines = []
     lines.append("# Verification Digest")
     lines.append("")
-    lines.append("Auto-generated summary of verification artifacts and baseline audits.")
+    lines.append(
+        "Auto-generated summary of verification artifacts and baseline audits."
+    )
     lines.append("")
 
     sage = summary.get("sage_incidence")

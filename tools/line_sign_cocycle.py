@@ -4,10 +4,11 @@
 We attempt to assign a sign to each root line so that each generator maps
 line reps to line reps. When inconsistent, we extract a cycle with product -1.
 """
+
 from __future__ import annotations
 
 import json
-from collections import deque, defaultdict
+from collections import defaultdict, deque
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -48,8 +49,8 @@ def main():
         line_reps.append(rep)
 
     # Load generator perms
-    data = json.loads((ROOT / 'artifacts' / 'sp43_we6_generator_map.json').read_text())
-    gens = [g['root_perm'] for g in data['generator_maps']]
+    data = json.loads((ROOT / "artifacts" / "sp43_we6_generator_map.json").read_text())
+    gens = [g["root_perm"] for g in data["generator_maps"]]
 
     # Build constraint graph: line a -> line b with sign eps
     adj = defaultdict(list)
@@ -72,7 +73,7 @@ def main():
         q = deque([start])
         while q:
             u = q.popleft()
-            for (v, eps, gi) in adj[u]:
+            for v, eps, gi in adj[u]:
                 implied = eps * sigma[u]
                 if sigma[v] is None:
                     sigma[v] = implied
@@ -118,18 +119,27 @@ def main():
 
                         out = {
                             "status": "inconsistent",
-                            "conflict_edge": {"from": u, "to": v, "eps": eps, "generator": gi},
+                            "conflict_edge": {
+                                "from": u,
+                                "to": v,
+                                "eps": eps,
+                                "generator": gi,
+                            },
                             "cycle": [
                                 {"from": a, "to": b, "eps": e, "generator": gii}
                                 for (a, b, e, gii) in cycle
                             ],
                         }
-                        (ROOT / 'artifacts' / 'root_line_sign_cocycle.json').write_text(json.dumps(out, indent=2))
-                        print("Inconsistency cycle written to artifacts/root_line_sign_cocycle.json")
+                        (ROOT / "artifacts" / "root_line_sign_cocycle.json").write_text(
+                            json.dumps(out, indent=2)
+                        )
+                        print(
+                            "Inconsistency cycle written to artifacts/root_line_sign_cocycle.json"
+                        )
                         return
 
     print("No inconsistency found (unexpected)")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -3,7 +3,6 @@ import json
 import os
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -44,7 +43,10 @@ def main():
         )
 
     # 2) Tomotope best-fit to projective classes
-    p = ROOT / "data/_checkpoints/checkpoint_tomotope_to_n12_58_projective_bestfit_20260110t043900z.json"
+    p = (
+        ROOT
+        / "data/_checkpoints/checkpoint_tomotope_to_n12_58_projective_bestfit_20260110t043900z.json"
+    )
     if p.exists():
         d = load_json(p)
         opt = d.get("optimization", {})
@@ -59,7 +61,10 @@ def main():
         )
 
     # 3) Triangle to W33 completion
-    p = ROOT / "data/_checkpoints/checkpoint_tomotope_triangle_to_w33_completion_20260110t043900z.json"
+    p = (
+        ROOT
+        / "data/_checkpoints/checkpoint_tomotope_triangle_to_w33_completion_20260110t043900z.json"
+    )
     if p.exists():
         d = load_json(p)
         notes = d.get("notes", {})
@@ -86,7 +91,10 @@ def main():
         )
 
     # 5) Flux toggle node0 (checkpoint only)
-    p = ROOT / "data/_toe/flux_toggle_node0_20260110/checkpoint_toe_flux_toggle_node0_20260110.json"
+    p = (
+        ROOT
+        / "data/_toe/flux_toggle_node0_20260110/checkpoint_toe_flux_toggle_node0_20260110.json"
+    )
     if p.exists():
         d = load_json(p)
         files = d.get("files", {})
@@ -99,7 +107,10 @@ def main():
         )
 
     # 6) Take it all the way
-    p = ROOT / "data/_toe/take_it_all_way_20260110/checkpoint_toe_take_it_all_way_20260110.json"
+    p = (
+        ROOT
+        / "data/_toe/take_it_all_way_20260110/checkpoint_toe_take_it_all_way_20260110.json"
+    )
     if p.exists():
         d = load_json(p)
         files = d.get("files", {})
@@ -112,7 +123,10 @@ def main():
         )
 
     # 7) W33 orthonormal solution report
-    p = ROOT / "data/_toe/w33_orthonormal_phase_solution_20260110/W33_orthonormal_solution_report.json"
+    p = (
+        ROOT
+        / "data/_toe/w33_orthonormal_phase_solution_20260110/W33_orthonormal_solution_report.json"
+    )
     if p.exists():
         d = load_json(p)
         out_lines += section(
@@ -141,7 +155,10 @@ def main():
         )
 
     # 9) Harmonic lift checkpoint (file manifest)
-    p = ROOT / "data/_toe/harmonic_lift_geometry_predictor_20260110/checkpoint_harmonic_lift_geometry_predictor.json"
+    p = (
+        ROOT
+        / "data/_toe/harmonic_lift_geometry_predictor_20260110/checkpoint_harmonic_lift_geometry_predictor.json"
+    )
     if p.exists():
         d = load_json(p)
         files = d.get("files", {})
@@ -168,7 +185,10 @@ def main():
         )
 
     # 11) Native C24 projectors
-    p = ROOT / "data/_toe/native_w33_projectors_c24_20260110/checkpoint_native_C24_projectors_20260110.json"
+    p = (
+        ROOT
+        / "data/_toe/native_w33_projectors_c24_20260110/checkpoint_native_C24_projectors_20260110.json"
+    )
     if p.exists():
         d = load_json(p)
         out_lines += section(
@@ -181,7 +201,10 @@ def main():
         )
 
     # 12) Native C24 full-grid
-    p = ROOT / "data/_toe/native_fullgrid_20260110/checkpoint_nativeC24_fullgrid_20260110.json"
+    p = (
+        ROOT
+        / "data/_toe/native_fullgrid_20260110/checkpoint_nativeC24_fullgrid_20260110.json"
+    )
     if p.exists():
         d = load_json(p)
         notes = d.get("notes", {})
@@ -204,4 +227,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

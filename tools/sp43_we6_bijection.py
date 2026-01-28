@@ -10,13 +10,14 @@ Strategy:
 2. Find corresponding action on E8 roots (via W(E6) subset of E8)
 3. Use equivariance to construct the bijection
 """
+
 from __future__ import annotations
 
 import json
 from collections import Counter, defaultdict
-from itertools import product, combinations
-from pathlib import Path
 from functools import reduce
+from itertools import combinations, product
+from pathlib import Path
 
 import numpy as np
 
@@ -44,13 +45,13 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     edges = []
     edge_set = set()
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
                 edges.append((i, j))
@@ -69,7 +70,7 @@ def mat_mult_mod3(A, B):
     n = len(A)
     m = len(B[0])
     k = len(B)
-    result = [[0]*m for _ in range(n)]
+    result = [[0] * m for _ in range(n)]
     for i in range(n):
         for j in range(m):
             for l in range(k):
@@ -95,7 +96,7 @@ def check_symplectic(M):
     # Standard symplectic: Omega = [[0,0,1,0],[0,0,0,1],[-1,0,0,0],[0,-1,0,0]]
     # = [[0,0,1,0],[0,0,0,1],[2,0,0,0],[0,2,0,0]] in F3
 
-    Omega = [[0,0,1,0],[0,0,0,1],[2,0,0,0],[0,2,0,0]]
+    Omega = [[0, 0, 1, 0], [0, 0, 0, 1], [2, 0, 0, 0], [0, 2, 0, 0]]
 
     # M is symplectic iff M^T * Omega * M = Omega
     MT = [[M[j][i] for j in range(4)] for i in range(4)]
@@ -119,25 +120,25 @@ def generate_sp43_elements():
 
     # Transvection T_{e1,e3}: x -> x + omega(x,e3)*e1
     # In matrix form for our omega: add row3 to row1
-    T1 = [[1,0,1,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]
+    T1 = [[1, 0, 1, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
     if check_symplectic(T1):
         generators.append(T1)
 
-    T2 = [[1,0,0,0],[0,1,0,1],[0,0,1,0],[0,0,0,1]]
+    T2 = [[1, 0, 0, 0], [0, 1, 0, 1], [0, 0, 1, 0], [0, 0, 0, 1]]
     if check_symplectic(T2):
         generators.append(T2)
 
     # Swap first and third coordinates (symplectic swap)
-    S1 = [[0,0,1,0],[0,1,0,0],[2,0,0,0],[0,0,0,1]]  # 2 = -1 in F3
+    S1 = [[0, 0, 1, 0], [0, 1, 0, 0], [2, 0, 0, 0], [0, 0, 0, 1]]  # 2 = -1 in F3
     if check_symplectic(S1):
         generators.append(S1)
 
-    S2 = [[1,0,0,0],[0,0,0,1],[0,0,1,0],[0,2,0,0]]
+    S2 = [[1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0], [0, 2, 0, 0]]
     if check_symplectic(S2):
         generators.append(S2)
 
     # Dilation: scale (x1,x2) by 2 and (x3,x4) by 2^-1=2
-    D = [[2,0,0,0],[0,2,0,0],[0,0,2,0],[0,0,0,2]]
+    D = [[2, 0, 0, 0], [0, 2, 0, 0], [0, 0, 2, 0], [0, 0, 0, 2]]
     if check_symplectic(D):
         generators.append(D)
 
@@ -197,12 +198,18 @@ def find_edge_invariants(edges, vertices, adj):
         common = nz_i & nz_j
 
         # Invariant 2: Number of common neighbors in W33
-        common_neighbors = sum(1 for k in range(40) if adj[i,k] and adj[j,k])
+        common_neighbors = sum(1 for k in range(40) if adj[i, k] and adj[j, k])
 
         # Invariant 3: Triality axis alignment
-        V_axis = (nz_i <= {0,1} or nz_i <= {2,3}) and (nz_j <= {0,1} or nz_j <= {2,3})
-        Sp_axis = (nz_i <= {0,2} or nz_i <= {1,3}) and (nz_j <= {0,2} or nz_j <= {1,3})
-        Sm_axis = (nz_i <= {0,3} or nz_i <= {1,2}) and (nz_j <= {0,3} or nz_j <= {1,2})
+        V_axis = (nz_i <= {0, 1} or nz_i <= {2, 3}) and (
+            nz_j <= {0, 1} or nz_j <= {2, 3}
+        )
+        Sp_axis = (nz_i <= {0, 2} or nz_i <= {1, 3}) and (
+            nz_j <= {0, 2} or nz_j <= {1, 3}
+        )
+        Sm_axis = (nz_i <= {0, 3} or nz_i <= {1, 2}) and (
+            nz_j <= {0, 3} or nz_j <= {1, 2}
+        )
 
         inv = (len(active), len(common), common_neighbors, V_axis, Sp_axis, Sm_axis)
         invariants.append(inv)
@@ -256,13 +263,13 @@ def explore_triality_bijection(edges, vertices):
 
     for pp, edge_list in pos_pair_edges.items():
         pp_set = set(pp)
-        complement = {0,1,2,3} - pp_set
+        complement = {0, 1, 2, 3} - pp_set
 
-        if pp_set == {0,1} or pp_set == {2,3}:
+        if pp_set == {0, 1} or pp_set == {2, 3}:
             axis_V.extend(edge_list)
-        elif pp_set == {0,2} or pp_set == {1,3}:
+        elif pp_set == {0, 2} or pp_set == {1, 3}:
             axis_Sp.extend(edge_list)
-        elif pp_set == {0,3} or pp_set == {1,2}:
+        elif pp_set == {0, 3} or pp_set == {1, 2}:
             axis_Sm.extend(edge_list)
         # Edges with 3 or 4 active positions don't align with pure axis
 
@@ -335,18 +342,36 @@ the bijection is: e |-> phi(g) . r0 where g.e0 = e
         "generators_found": len(generators),
         "invariant_types": len(set(invariants)),
         "triality_edges": {
-            "V_axis": len([e for pp, edges in pos_pair_edges.items()
-                         if set(pp) in [{0,1}, {2,3}] for e in edges]),
-            "Sp_axis": len([e for pp, edges in pos_pair_edges.items()
-                          if set(pp) in [{0,2}, {1,3}] for e in edges]),
-            "Sm_axis": len([e for pp, edges in pos_pair_edges.items()
-                          if set(pp) in [{0,3}, {1,2}] for e in edges]),
-        }
+            "V_axis": len(
+                [
+                    e
+                    for pp, edges in pos_pair_edges.items()
+                    if set(pp) in [{0, 1}, {2, 3}]
+                    for e in edges
+                ]
+            ),
+            "Sp_axis": len(
+                [
+                    e
+                    for pp, edges in pos_pair_edges.items()
+                    if set(pp) in [{0, 2}, {1, 3}]
+                    for e in edges
+                ]
+            ),
+            "Sm_axis": len(
+                [
+                    e
+                    for pp, edges in pos_pair_edges.items()
+                    if set(pp) in [{0, 3}, {1, 2}]
+                    for e in edges
+                ]
+            ),
+        },
     }
 
     out_path = ROOT / "artifacts" / "sp43_we6_bijection.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(results, indent=2), encoding='utf-8')
+    out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(f"\n\nWrote {out_path}")
 
 

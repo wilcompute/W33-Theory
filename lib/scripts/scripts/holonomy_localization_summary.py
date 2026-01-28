@@ -9,14 +9,23 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUT_DIR = DATA / "_workbench" / "04_measurement"
 
-MODE_SUMMARY = OUT_DIR / "sage_zip_continuation_20260111" / "keypoint_lam0p5_mu1p25_difference_modes_summary.csv"
-CYCLE_CATALOG = OUT_DIR / "sage_zip_continuation_20260111" / "nontrivial_holonomy_cycles_catalog.csv"
-DEFECT_EDGES = DATA / "_toe" / "geometric_reduction_20260110" / "orbit0_edges_Z2_cocycle.csv"
+MODE_SUMMARY = (
+    OUT_DIR
+    / "sage_zip_continuation_20260111"
+    / "keypoint_lam0p5_mu1p25_difference_modes_summary.csv"
+)
+CYCLE_CATALOG = (
+    OUT_DIR
+    / "sage_zip_continuation_20260111"
+    / "nontrivial_holonomy_cycles_catalog.csv"
+)
+DEFECT_EDGES = (
+    DATA / "_toe" / "geometric_reduction_20260110" / "orbit0_edges_Z2_cocycle.csv"
+)
 NODE_SIG = DATA / "_workbench" / "05_symmetry" / "orbit0_node_transport_signature.csv"
 
 
@@ -50,7 +59,10 @@ def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     modes = pd.read_csv(MODE_SUMMARY)
     cycles = pd.read_csv(CYCLE_CATALOG)
-    cycle_meta = {int(r["cycle_id"]): (int(r["length"]), str(r["holonomy"])) for _, r in cycles.iterrows()}
+    cycle_meta = {
+        int(r["cycle_id"]): (int(r["length"]), str(r["holonomy"]))
+        for _, r in cycles.iterrows()
+    }
     defect_nodes = load_defect_nodes()
     degrees = load_degrees()
 

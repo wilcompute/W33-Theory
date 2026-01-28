@@ -17,26 +17,35 @@ HYPOTHESIS: The outer quad P, living in the orthogonal complement of center C,
 must satisfy specific phase relationships due to the dimension constraint.
 """
 
-import numpy as np
-from pathlib import Path
-import pandas as pd
 from collections import defaultdict
 from itertools import combinations, permutations
+from pathlib import Path
 
-ROOT = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data")
+import numpy as np
+import pandas as pd
+
+ROOT = Path(
+    r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data"
+)
+
 
 def load_rays():
-    df = pd.read_csv(ROOT / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv")
+    df = pd.read_csv(
+        ROOT
+        / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv"
+    )
     V = np.zeros((40, 4), dtype=np.complex128)
     for _, row in df.iterrows():
-        pid = int(row['point_id'])
+        pid = int(row["point_id"])
         for i in range(4):
-            V[pid, i] = complex(str(row[f'v{i}']).replace(' ', ''))
+            V[pid, i] = complex(str(row[f"v{i}"]).replace(" ", ""))
     return V
+
 
 def load_lines():
     df = pd.read_csv(ROOT / "_workbench/02_geometry/W33_line_phase_map.csv")
-    return [tuple(map(int, str(row['point_ids']).split())) for _, row in df.iterrows()]
+    return [tuple(map(int, str(row["point_ids"]).split())) for _, row in df.iterrows()]
+
 
 def inner(V, p, q):
     return np.vdot(V[p], V[q])
@@ -167,7 +176,7 @@ def analyze_determinant_constraint():
     # Let me try: compute the "permanent" analog for comparison
     # Bargmann for cycle 0->1->2->3->0 uses G[0,1], G[1,2], G[2,3], G[3,0]
 
-    B_cycle = G[0,1] * G[1,2] * G[2,3] * G[3,0]
+    B_cycle = G[0, 1] * G[1, 2] * G[2, 3] * G[3, 0]
     print(f"\nBargmann (0->1->2->3): {B_cycle}")
 
     # Compare with determinant term for permutation (1,2,3,0):
@@ -336,7 +345,7 @@ def understand_w33_lines():
     # Check orthonormality of line 17
     print("Inner products on line 17:")
     for i, p in enumerate(line_17):
-        for q in line_17[i+1:]:
+        for q in line_17[i + 1 :]:
             ip = inner(V, p, q)
             print(f"  <{p}|{q}> = {ip}")
 
@@ -409,6 +418,7 @@ def main():
     prove_from_orthogonality()
     understand_w33_lines()
     final_insight()
+
 
 if __name__ == "__main__":
     main()

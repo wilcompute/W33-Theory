@@ -9,7 +9,7 @@ Are all non-trivial zeros of ζ(s) on Re(s) = 1/2?
 The connection to W33:
   - 40/81 = code rate ≈ 0.494 ≈ 1/2
   - The critical line is Re(s) = 1/2
-  
+
 Is there a spectral interpretation where
 W33 eigenvalues relate to zeta zeros?
 
@@ -50,8 +50,16 @@ First few non-trivial zeros (imaginary parts):
 
 # First 10 zeta zeros (imaginary parts)
 zeta_zeros = [
-    14.134725, 21.022040, 25.010858, 30.424876, 32.935062,
-    37.586178, 40.918719, 43.327073, 48.005151, 49.773832
+    14.134725,
+    21.022040,
+    25.010858,
+    30.424876,
+    32.935062,
+    37.586178,
+    40.918719,
+    43.327073,
+    48.005151,
+    49.773832,
 ]
 
 print(f"\nFirst 10 non-trivial zeros (imaginary parts):")
@@ -73,11 +81,11 @@ WHY 1/2?
 The critical line Re(s) = 1/2 is special because:
   - Functional equation symmetry: s ↔ 1-s
   - The "center" of this reflection is 1/2
-  
+
 W33 connection:
   - Code rate = 40/81 = 0.4938... ≈ 0.5
   - This is almost exactly 1/2!
-  
+
 Could the W33 code structure FORCE zeta zeros
 to lie on Re(s) = 1/2?
 
@@ -117,7 +125,7 @@ a self-adjoint operator H on a Hilbert space.
 
 The zeros ρ = 1/2 + iγ would correspond to:
   H |ρ⟩ = γ |ρ⟩
-  
+
 For self-adjoint H, eigenvalues are REAL,
 so γ real ⟹ zeros on Re(s) = 1/2.
 
@@ -155,7 +163,7 @@ Consider the adjacency structure of W33:
 
 The Laplacian on this graph:
   L = D - A
-  
+
 where D = degree matrix, A = adjacency matrix.
 
 If eigenvalues of L relate to ζ-zeros...
@@ -211,6 +219,7 @@ Missing small primes: 13 (appears in Sp(6,3) order!)
 # Analyze prime content
 from functools import reduce
 
+
 def prime_factors(n):
     factors = []
     d = 2
@@ -223,9 +232,15 @@ def prime_factors(n):
         factors.append(n)
     return factors
 
-for name, n in [("40 (points)", 40), ("81 (cycles)", 81), 
-                ("90 (K4s)", 90), ("121 (total)", 121),
-                ("133 (E₇)", 133), ("248 (E₈)", 248)]:
+
+for name, n in [
+    ("40 (points)", 40),
+    ("81 (cycles)", 81),
+    ("90 (K4s)", 90),
+    ("121 (total)", 121),
+    ("133 (E₇)", 133),
+    ("248 (E₈)", 248),
+]:
     pf = prime_factors(n)
     print(f"  {name} = {' × '.join(map(str, pf))}")
 
@@ -255,6 +270,7 @@ W33 interpretation:
   then primes emerge from W33 spectrum!
 """)
 
+
 # The prime counting function
 def pi_x(x):
     """Count primes up to x."""
@@ -264,9 +280,10 @@ def pi_x(x):
     sieve[0] = sieve[1] = False
     for i in range(2, int(x**0.5) + 1):
         if sieve[i]:
-            for j in range(i*i, int(x) + 1, i):
+            for j in range(i * i, int(x) + 1, i):
                 sieve[j] = False
     return sum(sieve)
+
 
 print(f"\nPrime counting:")
 for x in [40, 81, 90, 121, 133]:
@@ -291,7 +308,7 @@ This ratio appears in information theory:
 
 Shannon's noisy channel theorem:
   Rate R achievable if R < C (capacity)
-  
+
 For W33 as a code:
   Rate = 40/81 = 0.4938
   Capacity must be ≥ 0.4938
@@ -343,7 +360,7 @@ W33 connection:
   - W33 has a natural Hermitian structure
   - The 40×40 adjacency matrix
   - Or the 121×121 full matrix
-  
+
 Could W33 BE the hidden quantum system?
 """)
 
@@ -424,12 +441,12 @@ matter and vacuum in W33!
 
 matter/total = 40/121 ↔ vacuum/total = 81/121
     0.331    ↔    0.669
-    
+
 Sum to 1, symmetric around 0.5!
 """)
 
-matter_frac = 40/121
-vacuum_frac = 81/121
+matter_frac = 40 / 121
+vacuum_frac = 81 / 121
 
 print(f"\nMatter-vacuum duality:")
 print(f"  Matter fraction: {matter_frac:.4f}")

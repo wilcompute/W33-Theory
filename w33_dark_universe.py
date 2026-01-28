@@ -16,9 +16,10 @@ but a FEATURE of W33?
   - J.B.S. Haldane
 """
 
-import numpy as np
 from collections import defaultdict
 from itertools import combinations
+
+import numpy as np
 
 print("=" * 80)
 print("W33 AND THE DARK UNIVERSE")
@@ -59,7 +60,7 @@ EVIDENCE FOR DARK MATTER
 
 WHAT IS IT?
   We don't know!
-  
+
   Candidates:
   - WIMPs (Weakly Interacting Massive Particles)
   - Axions
@@ -70,7 +71,7 @@ WHAT IS IT?
 
 # Observed fractions
 Omega_DM = 0.27  # Dark matter fraction
-Omega_b = 0.05   # Baryonic matter
+Omega_b = 0.05  # Baryonic matter
 Omega_DE = 0.68  # Dark energy
 Omega_total = Omega_DM + Omega_b + Omega_DE
 
@@ -99,18 +100,18 @@ The 40 points of W33 divide into:
 In the K4 structure:
   - Each K4 has 7 outer + 1 center = 8 points
   - Some K4s may be "dark" (no EM coupling)
-  
+
 The ratio of dark to visible:
 
   Observed: Ω_DM / Ω_b ≈ 27 / 5 ≈ 5.4
 
 W33 PREDICTION:
   If 40 points split into visible/dark...
-  
+
   We need: n_dark / n_visible ≈ 5.4
-  
+
   This gives: n_visible ≈ 6, n_dark ≈ 34
-  
+
   But! Remember the K4 structure:
   - 90 K4 components
   - If 1/6 are "visible" → 15 visible K4s
@@ -163,7 +164,7 @@ Mechanism:
   - Cycles with non-trivial holonomy act as mass
   - They curve spacetime (gravity)
   - But they don't couple to EM (dark!)
-  
+
 This explains why dark matter:
   1. Gravitates (yes - it's geometric)
   2. Doesn't emit light (no EM coupling)
@@ -174,9 +175,9 @@ This explains why dark matter:
 QUANTITATIVE:
   If each cycle carries mass m_cycle...
   Total dark mass ∝ 81 × m_cycle
-  
+
   Observed mass visible ∝ number of particles
-  
+
   Ratio: 81 cycles / 40 points ≈ 2
   But many points are visible, so effective ratio larger!
 """)
@@ -216,19 +217,19 @@ The cosmological constant problem:
 
 W33 RESOLUTION:
   The 81 vacuum modes with K4 constraints!
-  
+
   Remember from cosmological constant analysis:
   - 81 modes = 81 contributions to vacuum energy
   - K4 structure forces CANCELLATION
   - Residual Λ is exponentially small
-  
+
 Dark energy fraction:
   Ω_DE / Ω_total ≈ 0.68
-  
+
 W33 PREDICTION:
   The fraction of vacuum energy that survives
   = fraction of "uncompensated" cycles
-  
+
   If 81 cycles mostly cancel...
   Surviving contribution ∝ imbalance
 """)
@@ -270,7 +271,7 @@ CAN W33 EXPLAIN THE EXACT FRACTIONS?
 
 Observed:
   - Dark Energy: 68%
-  - Dark Matter: 27%  
+  - Dark Matter: 27%
   - Baryonic Matter: 5%
 
 W33 numbers:
@@ -284,18 +285,18 @@ Let's try different mappings:
 MAPPING 1: Direct point counting
   Baryonic ~ 1/8 of points (EM sector) = 5 points
   Dark ~ 7/8 of points = 35 points
-  
+
   Ratio: 35/5 = 7 (observed: 5.4)
-  
+
 MAPPING 2: K4 to cycle ratio
   K4s: 90 (matter-like)
   Cycles: 81 (vacuum-like)
-  
+
   Ratio: 81/90 ≈ 0.9 (need more thought)
-  
+
 MAPPING 3: Combined structure
   Total DOF = 40 + 81 = 121 = 11²
-  
+
   Vacuum (cycles): 81/121 = 67% ≈ Ω_DE!
   Matter (points): 40/121 = 33% ≈ Ω_DM + Ω_b!
 """)
@@ -339,28 +340,28 @@ The asymmetry is tiny:
 
 This requires (Sakharov conditions):
   1. Baryon number violation
-  2. C and CP violation  
+  2. C and CP violation
   3. Out of thermal equilibrium
 
 W33 EXPLANATION:
   The K4 Bargmann phase = -1 provides NATURAL CP violation!
-  
+
   K4 structure:
   - Each K4 has a preferred orientation
   - Orientation ~ choice of matter vs antimatter
   - Phase -1 means: going around flips sign
-  
+
   The 90 K4s are not "balanced":
   - Some favor matter
   - Some favor antimatter
   - Small net imbalance!
-  
+
 ESTIMATE:
   If each K4 contributes ±1 randomly...
   Net asymmetry ~ √(90) / 90 ≈ 0.1
-  
+
   Actual asymmetry ~ 10⁻⁹
-  
+
   This requires additional suppression factor.
 """)
 
@@ -398,7 +399,7 @@ Why is gravity so weak?
 
   M_weak ~ 100 GeV (weak scale)
   M_Planck ~ 10^19 GeV (gravity scale)
-  
+
   Ratio: 10^17 = HUGE
 
 The Higgs mass is "unnatural":
@@ -407,21 +408,21 @@ The Higgs mass is "unnatural":
 
 W33 SOLUTION?
   What if the hierarchy is GEOMETRIC?
-  
+
   W33 has multiple scales:
   - 40 points (smallest)
   - 90 K4s (intermediate)
   - 81 cycles (largest topological)
-  
+
   Ratio of scales:
   - 81 / 40 ≈ 2
   - Not 10^17!
-  
+
   BUT: What if we need MANY W33 copies?
-  
+
   Universe = tensor product of N W33 copies
   Scale hierarchy = 40^N
-  
+
   For 40^N ~ 10^17:
   N = 17 / log10(40) ≈ 17 / 1.6 ≈ 10-11 copies
 """)
@@ -471,15 +472,15 @@ This explains null results from:
 
 ALTERNATIVE SIGNATURES:
   If dark matter is W33 cycles:
-  
+
   1. GRAVITATIONAL ONLY
      - Affects orbits, lensing
      - No particle interactions
-     
+
   2. TOPOLOGICAL TRANSITIONS
      - Rare events where cycles reconfigure
      - Might produce observable signals
-     
+
   3. INTERFERENCE PATTERNS
      - If cycles have wave nature
      - Quantum interference of dark matter?
@@ -514,28 +515,28 @@ If dark matter = W33 cycles, what's the Lagrangian?
 
 VISIBLE SECTOR:
   L_vis = Standard Model on points 1-6 (estimate)
-  
+
 DARK SECTOR:
   L_dark = Topological term on 81 cycles
-  
+
   L_dark = ∑_i θ_i × (dA_i / 2π)
-  
+
   where θ_i = Berry phase of cycle i
         A_i = gauge connection on cycle i
-        
+
 This is a CHERN-SIMONS-like term!
 
 COUPLING:
   L_int = gravitational only
-  
+
   L_int = √(-g) × (T_vis^μν + T_dark^μν) × g_μν
-  
+
   Both sectors curve spacetime.
   But only visible sector couples to EM.
 
 TOTAL:
   L_total = L_SM + L_dark + L_gravity
-  
+
   This is the complete Theory of Everything!
 """)
 
@@ -600,15 +601,17 @@ print("""
 """)
 
 # Final verification
-matter_predicted = 40/121
-vacuum_predicted = 81/121
+matter_predicted = 40 / 121
+vacuum_predicted = 81 / 121
 matter_observed = Omega_DM + Omega_b
 vacuum_observed = Omega_DE
 
 print(f"\nFinal comparison:")
 print(f"  Matter: predicted = {matter_predicted:.3f}, observed = {matter_observed:.3f}")
 print(f"  Vacuum: predicted = {vacuum_predicted:.3f}, observed = {vacuum_observed:.3f}")
-print(f"\n  Agreement within {abs(vacuum_predicted - vacuum_observed)/vacuum_observed * 100:.1f}%!")
+print(
+    f"\n  Agreement within {abs(vacuum_predicted - vacuum_observed)/vacuum_observed * 100:.1f}%!"
+)
 
 print("\n" + "=" * 80)
 print("THE DARK UNIVERSE IS W33.")

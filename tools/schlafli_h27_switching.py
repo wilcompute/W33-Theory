@@ -11,11 +11,13 @@ Computes:
 - Seidel matrix eigenvalues (switching class invariants)
 - Triangle counts and spectra
 """
+
 from __future__ import annotations
 
 from collections import Counter
 from itertools import combinations, product
 from pathlib import Path
+
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -41,11 +43,11 @@ def build_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
 
@@ -68,15 +70,16 @@ def h27_from_w33(adj, v0=0):
 
 # --- Schläfli graph via blow-up model ---
 
+
 def build_27_lines():
     lines = []
     for i in range(1, 7):
-        lines.append(('E', i))  # exceptional
+        lines.append(("E", i))  # exceptional
     for i in range(1, 7):
-        lines.append(('C', i))  # conics
+        lines.append(("C", i))  # conics
     for i in range(1, 7):
-        for j in range(i+1, 7):
-            lines.append(('L', i, j))  # line through i,j
+        for j in range(i + 1, 7):
+            lines.append(("L", i, j))  # line through i,j
     return lines
 
 
@@ -87,31 +90,31 @@ def lines_intersect(L1, L2):
     t1, t2 = L1[0], L2[0]
 
     # E_i
-    if t1 == 'E' and t2 == 'E':
+    if t1 == "E" and t2 == "E":
         return False
-    if t1 == 'C' and t2 == 'C':
+    if t1 == "C" and t2 == "C":
         return False
 
     # E_i with C_j
-    if t1 == 'E' and t2 == 'C':
+    if t1 == "E" and t2 == "C":
         return L1[1] != L2[1]
-    if t1 == 'C' and t2 == 'E':
+    if t1 == "C" and t2 == "E":
         return L1[1] != L2[1]
 
     # E_i with L_{jk}
-    if t1 == 'E' and t2 == 'L':
+    if t1 == "E" and t2 == "L":
         return L1[1] in L2[1:]
-    if t1 == 'L' and t2 == 'E':
+    if t1 == "L" and t2 == "E":
         return L2[1] in L1[1:]
 
     # C_i with L_{jk}
-    if t1 == 'C' and t2 == 'L':
+    if t1 == "C" and t2 == "L":
         return L1[1] in L2[1:]
-    if t1 == 'L' and t2 == 'C':
+    if t1 == "L" and t2 == "C":
         return L2[1] in L1[1:]
 
     # L_{ij} with L_{kl}
-    if t1 == 'L' and t2 == 'L':
+    if t1 == "L" and t2 == "L":
         s1 = set(L1[1:])
         s2 = set(L2[1:])
         # intersect iff disjoint pairs
@@ -126,7 +129,7 @@ def schlafli_intersection_graph():
     adj = np.zeros((n, n), dtype=int)
 
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if lines_intersect(lines[i], lines[j]):
                 adj[i, j] = adj[j, i] = 1
 
@@ -143,7 +146,7 @@ def graph_parameters(adj):
     lam_set = set()
     mu_set = set()
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             common = int(np.dot(adj[i], adj[j]))
             if adj[i, j] == 1:
                 lam_set.add(common)
@@ -216,13 +219,19 @@ def main():
     out_path.write_text(np.array2string(np.array(h_seidel)) + "\n")
     # overwrite with JSON for stability
     import json
+
     out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
 
     print("H27 params:", h_params)
     print("Schlafli intersection params:", sch_params)
     print("Schlafli skew params:", comp_params)
     print("Triangle counts:", h_tri, sch_tri, comp_tri)
-    print("Seidel eigenvalue multiset sizes:", len(set(h_seidel)), len(set(sch_seidel)), len(set(comp_seidel)))
+    print(
+        "Seidel eigenvalue multiset sizes:",
+        len(set(h_seidel)),
+        len(set(sch_seidel)),
+        len(set(comp_seidel)),
+    )
     print(f"Wrote {out_path}")
 
 

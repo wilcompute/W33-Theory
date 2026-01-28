@@ -26,4 +26,3 @@ We count how each H27 vertex attaches to these triangles.
 - Triangle 1: {1: 27}
 - Triangle 2: {1: 27}
 - Triangle 3: {1: 27}
-

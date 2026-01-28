@@ -31,7 +31,7 @@ print("""
 The j-invariant is the most important function in number theory:
 
   j(τ) = 1/q + 744 + 196884q + 21493760q² + ...
-  
+
 where q = e^(2πiτ).
 
 THE MYSTERY OF 744:
@@ -83,12 +83,16 @@ print()
 monster_order = 808017424794512875886459904961710757005754368000000000
 
 print(f"The Monster group M has order:")
-print(f"  |M| = 808,017,424,794,512,875,886,459,904,961,710,757,005,754,368,000,000,000")
+print(
+    f"  |M| = 808,017,424,794,512,875,886,459,904,961,710,757,005,754,368,000,000,000"
+)
 print(f"      ≈ 8 × 10^53")
 print()
 
 print("Prime factorization:")
-print("  |M| = 2^46 × 3^20 × 5^9 × 7^6 × 11^2 × 13^3 × 17 × 19 × 23 × 29 × 31 × 41 × 47 × 59 × 71")
+print(
+    "  |M| = 2^46 × 3^20 × 5^9 × 7^6 × 11^2 × 13^3 × 17 × 19 × 23 × 29 × 31 × 41 × 47 × 59 × 71"
+)
 print()
 
 # W33 connection
@@ -226,7 +230,7 @@ And:
 
 Also:
   dim(E8) = 248 = 8 × 31 = 8 × (32 - 1)
-  
+
 where 32 = 2^5 = dim of spinor in 10D.
 """)
 
@@ -352,7 +356,7 @@ print("""
 Ramanujan discovered remarkable formulas involving π:
 
   1/π = (2√2/9801) Σ (4k)!(1103+26390k) / ((k!)^4 × 396^(4k))
-  
+
 The numbers 9801, 1103, 26390, 396 have deep meaning.
 """)
 
