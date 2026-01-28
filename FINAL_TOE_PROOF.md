@@ -1254,15 +1254,25 @@ Doc: `docs/witting_pair_phase_gauge_fit.md`
 Script: `tools/witting_pair_phase_gauge_fit.py`
 
 **Triangle cocycle obstruction (computed):**  
-We treat the non‑orthogonality graph as a 2‑complex (540 edges, 3240 triangles)
+We treat the non-orthogonality graph as a 2-complex (540 edges, 3240 triangles)
 and ask whether the **triangle phase labels** are coboundaries of edge labels.
-For three coarse labelings—Z₂ magnitude (|phase|), Z₂ sign, and Z₃ (k mod 3)—the
+For three coarse labelings - Z2 magnitude (|phase|), Z2 sign, and Z3 (k mod 3) - the
 linear system `x_ij + x_jk + x_ki = t_ijk` is **unsolvable**. Thus the triangle
-phases define **nontrivial 2‑cocycles** even after coarse reduction, confirming
-the phase structure is genuinely higher‑order and not reducible to edge data.
+phases define **nontrivial 2-cocycles** even after coarse reduction, confirming
+the phase structure is genuinely higher-order and not reducible to edge data.
 
 Doc: `docs/witting_triangle_cocycle.md`  
 Script: `tools/witting_triangle_cocycle.py`
+
+**Cohomology of the non-orth 2-complex (computed):**  
+Computing the cohomology of the 2-complex (vertices=40, edges=540, triangles=3240)
+over GF(2) and GF(3) yields **H^1 = 0** and a huge **H^2 dimension = 2739** in both
+cases. Thus there are **no nontrivial edge-level classes**, but a vast space of
+triangle-level 2-cocycles. This explains why the Pancharatnam phases are
+irreducibly higher-order: triangle data is the natural cohomological layer here.
+
+Doc: `docs/witting_triangle_cohomology.md`  
+Script: `tools/witting_triangle_cohomology.py`
 
 **Isomorphism orbit class (computed):**  
 Under the **monomial subgroup** (order 243), the explicit graph isomorphism
