@@ -361,9 +361,13 @@ artifacts/sp43_we6_generator_map_sage_verify.json
 scripts/sage/verify_sp43_image_group.sage
 \end{verbatim}
 
-\textbf{Full invariance harness.} A complete Gram‑matrix check confirms
-that each generator preserves all E8 inner products (not just sampled
-pairs), and each root's W(E6) orbit size (72/27/1). See:
+\textbf{Full invariance harness.} A complete Gram‑matrix check shows
+that the current explicit generator map is \textbf{not} an isometry of
+the E8 root system, and does \textbf{not} preserve W(E6) orbit sizes.
+This confirms the edge\ensuremath{\rightarrow}root map is
+\textbf{combinatorial (orbit‑aligned)} rather than metric; the group
+action is equivariant only at the level of the constructed
+correspondence, not as an orthogonal transformation of E8. See:
 
 \begin{verbatim}
 artifacts/sp43_we6_generator_map_full_verify.json
@@ -380,11 +384,106 @@ edge\ensuremath{\rightarrow}root mapping: the PSp(4,3) action is
 \textbf{equivariant up to sign}, but cannot be globally lifted to a
 sign‑consistent 240‑root action by a single relabeling. This is a
 precise, testable obstruction and narrows the remaining group‑theoretic
-gap. See:
+gap. An explicit length‑3 line‑cycle with sign product −1 is extracted
+as a witness of the obstruction. The induced \(Z_{2}\) cocycle is
+strongly nontrivial: many generator pairs yield negative cocycle values
+on dozens of root lines (full histogram recorded). In particular, the
+global sign‑flip does \textbf{not} commute with the induced generator
+permutations, and the generated group with sign‑flip grows beyond
+25,920. This further confirms the obstruction is not a mere relabeling.
+Even more sharply, there exists a \textbf{length‑2} word in the
+generators that returns a root line to itself with \textbf{sign −1},
+giving an explicit minimal cocycle witness. Finally, an antipodal‑pair
+check shows that the generator maps send only a small fraction of roots
+to antipodal pairs (typically far below 25\%), so the explicit
+edge\ensuremath{\rightarrow}root generator map is \textbf{not} an
+automorphism of the E8 root system in the usual orthogonal sense. See:
 
 \begin{verbatim}
 tools/align_root_signs_for_we6.py
 artifacts/root_line_sign_assignment.json
+tools/line_sign_cocycle.py
+artifacts/root_line_sign_cocycle.json
+tools/compute_sign_cocycle.py
+artifacts/root_line_sign_cocycle_stats.json
+tools/compute_group_order_with_signflip.py
+artifacts/signflip_group_order.json
+tools/find_negative_sign_word.py
+artifacts/root_line_sign_negative_word.json
+tools/check_antipodal_preservation.py
+artifacts/antipodal_preservation.json
+\end{verbatim}
+
+\textbf{True W(E6) action (orthogonal) and even subgroup.} Using Sage,
+we computed the \textbf{actual} W(E6) subgroup of W(E8) (order 51,840)
+and its even subgroup (order 25,920) as explicit permutations of the 240
+E8 roots. This gives a genuine orthogonal action to compare against the
+edge action. See:
+
+\begin{verbatim}
+scripts/sage/compute_true_we6_action.py
+artifacts/we6_true_action.json
+\end{verbatim}
+
+\textbf{Conjugacy check (edge action vs true W(E6) even action).} The
+PSp(4,3) edge action (on 240 edges) is \textbf{not conjugate} inside
+Sym(240) to the true W(E6) even subgroup action on the 240 roots. This
+rules out an orthogonal, fully equivariant
+edge\ensuremath{\rightarrow}root map at the 240‑root level. See:
+
+\begin{verbatim}
+scripts/sage/compare_edge_we6_conjugacy.py
+artifacts/edge_we6_conjugacy.json
+\end{verbatim}
+
+\textbf{Conjugacy check (edge‑pair action vs W(E6) line action).} We
+paired each edge with its opposite edge on the unique 4‑clique line,
+producing \textbf{120} invariant edge‑pairs. The induced PSp(4,3) action
+on these 120 pairs is \textbf{not conjugate} to the true W(E6) even
+action on the 120 root lines. This rules out a direct equivariant
+identification at the \textbf{line‑pair} level as well. See:
+
+\begin{verbatim}
+tools/build_edge_pair_action.py
+artifacts/sp43_edgepair_generators.json
+scripts/sage/compare_edgepair_we6_line_conjugacy.py
+artifacts/edgepair_we6line_conjugacy.json
+\end{verbatim}
+
+\textbf{Exhaustive index‑120 action search.} We enumerated \textbf{all}
+conjugacy classes of subgroups of index 120 in PSp(4,3) (116 classes
+total) and tested each coset action for conjugacy to the true W(E6) line
+action on 120 root lines. \textbf{No} index‑120 action matches. This
+definitively rules out any hidden 120‑set identification between the W33
+edge action and the W(E6) line action. See:
+
+\begin{verbatim}
+scripts/gap/psp43_index120_actions.g
+artifacts/psp43_index120_actions.json
+\end{verbatim}
+
+\textbf{Exhaustive index‑240 action search (uniqueness).} We enumerated
+\textbf{all} index‑240 subgroup classes of PSp(4,3) (116 total subgroup
+classes scanned) and tested each coset action for conjugacy to the W33
+edge action. Exactly \textbf{one} conjugacy class matches, showing the
+240‑edge action is \textbf{unique} up to conjugacy among all index‑240
+actions. See:
+
+\begin{verbatim}
+scripts/gap/psp43_index240_actions.g
+artifacts/psp43_index240_actions.json
+\end{verbatim}
+
+\textbf{Central extension from true W(E6) action (resolved).} Using the
+\textbf{true} W(E6) even action (which preserves antipodal pairs), we
+built the signed line extension on 120 root lines. The resulting signed
+action has order \textbf{25,920}, and adjoining the global sign‑flip
+gives order \textbf{51,840}, matching W(E6). This explicitly realizes
+the central \(Z_{2}\) extension predicted by the cocycle analysis. See:
+
+\begin{verbatim}
+tools/line_signed_extension_we6_true.py
+artifacts/signed_line_extension_we6_true.json
 \end{verbatim}
 
 \textbf{Exported bijection tables.} The full explicit
@@ -400,6 +499,32 @@ generated by:
 
 \begin{verbatim}
 tools/export_edge_root_bijection.py
+\end{verbatim}
+
+\textbf{Canonical Coxeter‑orbit matching (deterministic).} Using the
+Coxeter‑6 orbit partition of E8 (40 orbits \ensuremath{\times} 6 roots)
+and the orbit\ensuremath{\rightarrow}\(F_{3}^{4}\) mapping, we build a
+deterministic perfect matching from W33 edges to (vertex,phase) pairs,
+and thus to a unique root in the corresponding orbit. This yields a
+\textbf{canonical} (but not group‑equivariant)
+edge\ensuremath{\rightarrow}root map aligned with Coxeter orbits:
+
+\begin{verbatim}
+tools/build_canonical_orbit_bijection.py
+artifacts/edge_root_canonical_orbit_bijection.json
+\end{verbatim}
+
+\textbf{Edge\ensuremath{\rightarrow}Witting‑vertex perfect matching
+(non‑equivariant).} Independently of the group action, there is a
+perfect matching between the 240 W33 edges and the 240 phase‑vertices
+(40 rays \ensuremath{\times} 6 phases) of the Witting configuration.
+This gives an explicit edge\ensuremath{\rightarrow}(ray,phase) bijection
+(deterministic for the chosen algorithm, but not group‑equivariant),
+written to:
+
+\begin{verbatim}
+tools/edge_vertex_matching.py
+artifacts/edge_vertex_matching.json
 \end{verbatim}
 
 \textbf{Explicit bijection (W(E6)-orbit aligned).} Using the computed
@@ -1149,26 +1274,29 @@ There are now \textbf{two} fully explicit constructions of a root
 \ensuremath{\leftrightarrow} edge bijection (240
 \ensuremath{\leftrightarrow} 240):
 
-\textbf{A. Canonical line‑orbit bijection (deterministic, no matching):}
-- Each W33 edge lies on a \textbf{unique line} (4‑clique), so edges = 40
-lines \ensuremath{\times} 6 edges/line.\\
-- The 40 Coxeter‑6 orbits give 40 six‑cycles of roots.\\
-- Use a \textbf{canonical graph isomorphism} between the orbit graph and
-the \textbf{line graph} of W33\\
-(both SRG(40,12,2,4)), and then map each line's 6 edges to its orbit's 6
-roots via canonical ordering.
+\textbf{A. Canonical orbit‑to‑vertex matching (deterministic, with
+matching):} - The Coxeter‑6 orbit graph is \textbf{isomorphic to the W33
+point graph}, but \textbf{not} to the line graph. Therefore a line‑orbit
+bijection is \textbf{not} available. - Use the
+orbit\ensuremath{\rightarrow}\(F_{3}^{4}\) mapping to identify each
+Coxeter orbit with a \textbf{W33 vertex}. - Perform a deterministic
+perfect matching between edges and (vertex,phase) pairs, then map each
+phase to the corresponding root in the orbit order.
 
 This yields a deterministic, reproducible bijection:
 
 \begin{verbatim}
-edge (p,q)  ->  root r in orbit(line(p,q))
+edge (p,q)  ->  root r in orbit(p) or orbit(q) via canonical matching
 \end{verbatim}
 
 \textbf{Artifacts:}\\
-- \texttt{artifacts/edge\_to\_e8\_root.json}\\
-- \texttt{artifacts/e8\_root\_to\_edge.json}\\
-- \texttt{artifacts/edge\_root\_bijection\_summary.json}\\
-\textbf{Script:} \texttt{tools/edge\_root\_bijection\_via\_lines.py}
+- \texttt{artifacts/edge\_root\_canonical\_orbit\_bijection.json}\\
+\textbf{Script:} \texttt{tools/build\_canonical\_orbit\_bijection.py}
+
+\textbf{Note:} The older line‑orbit construction
+\texttt{tools/edge\_root\_bijection\_via\_lines.py} should be treated as
+\textbf{heuristic}; the orbit graph is not isomorphic to the line graph,
+so that path cannot be canonicalized.
 
 \textbf{Note on equivariance:} This canonical line‑orbit bijection is
 deterministic but \textbf{not} (yet) equivariant under the full Sp(4,3)
