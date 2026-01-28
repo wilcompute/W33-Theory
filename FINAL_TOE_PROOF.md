@@ -165,6 +165,25 @@ tools/sage_we6_coxeter6_intersection.py
 artifacts/we6_coxeter6_intersection.json
 ```
 
+**Vertex‑type correlation (computed).** Using the canonical orbit→F₃⁴ mapping,
+each Coxeter‑6 orbit (W33 vertex) can be labeled by the support size of its
+F₃⁴ projective point (1,2,3,4 non‑zero coordinates). These support sizes are
+not uniform across the W(E6) intersection patterns; the 40 vertices split into
+8 pattern classes with characteristic support‑size mixtures. See:
+```
+tools/analyze_vertex_types_vs_we6_patterns.py
+artifacts/vertex_type_vs_we6_pattern.json
+```
+
+**Quotient graph by pattern classes.** Collapsing the 40 W33 vertices by their
+W(E6) intersection pattern yields an 8‑class quotient graph with explicit
+inter‑class adjacency counts. This provides a new coarse‑grained signature of
+the E6×A2 stratification inside W33. See:
+```
+tools/analyze_pattern_quotient_graph.py
+artifacts/pattern_quotient_graph.json
+```
+
 ---
 
 ### 1.5 Explicit Root-to-Edge Bijection (Computed)
@@ -713,6 +732,12 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `docker run --rm -v "$PWD":/workspace -w /workspace sagemath/sagemath:10.7 sage -python tools/sage_we6_coxeter6_intersection.py`
   - Sage: intersection of W(E6) orbits with Coxeter‑6 orbits (vertex‑type split).
   - Output: `artifacts/we6_coxeter6_intersection.json`
+- `python3 tools/analyze_vertex_types_vs_we6_patterns.py`
+  - Correlates Coxeter‑6 intersection patterns with F₃⁴ support sizes.
+  - Output: `artifacts/vertex_type_vs_we6_pattern.json`
+- `python3 tools/analyze_pattern_quotient_graph.py`
+  - Builds the 8‑class quotient graph by W(E6) intersection patterns.
+  - Output: `artifacts/pattern_quotient_graph.json`
 - `python tools/explicit_bijection_decomposition.py`
   - Builds the explicit 240↔240 W33-edge→E8-root mapping.
   - Output: `artifacts/explicit_bijection_decomposition.json`
