@@ -37,6 +37,7 @@ external/sage/
 .venv/
 .venv_wsl/
 .venv_toe/
+.venv_tools/
 
 # local workspace data
 claude_workspace/data/
