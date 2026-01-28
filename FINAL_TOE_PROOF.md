@@ -214,6 +214,20 @@ tools/pattern_class_h12_h27_profile.py
 artifacts/pattern_class_h12_h27_profile.json
 ```
 
+**K4 component profile.** Each K4 component (outer 4‑tuple + center 4‑tuple)
+admits a pattern‑class multiset profile. The outer and center class‑count
+distributions are identical (as expected by duality), and the dominant
+multisets are:
+```
+(0,0,2,4), (0,2,2,3), (1,2,3,3), (0,1,3,3), (0,1,1,4)
+```
+This provides a direct bridge between the W(E6) pattern classes and the
+K4 “protected sector” used in the Z3/Z4 confinement results. See:
+```
+tools/pattern_class_k4_profile.py
+artifacts/pattern_class_k4_profile.json
+```
+
 **Exceptional vertex triplet.** Exactly **3** Coxeter‑6 orbits contain the
 size‑1 W(E6) roots. These correspond to three explicit F₃⁴ projective points:
 ```
@@ -793,6 +807,9 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `python3 tools/pattern_class_h12_h27_profile.py`
   - Computes neighbor‑class and triangle‑type profiles per pattern class.
   - Output: `artifacts/pattern_class_h12_h27_profile.json`
+- `python3 tools/pattern_class_k4_profile.py`
+  - Computes pattern‑class profiles of all 90 K4 components (outer/center).
+  - Output: `artifacts/pattern_class_k4_profile.json`
 - `python tools/explicit_bijection_decomposition.py`
   - Builds the explicit 240↔240 W33-edge→E8-root mapping.
   - Output: `artifacts/explicit_bijection_decomposition.json`
