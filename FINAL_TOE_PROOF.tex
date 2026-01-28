@@ -504,6 +504,31 @@ This suggests the SU(3) phase \textbf{distinguishes} the six 27‑orbits
 but does not select a single privileged orbit; instead it yields a
 \textbf{controlled, near‑uniform} phase bias across the 27‑sector.
 
+\textbf{Balanced 27‑orbit geometry (computed).} Focusing on the
+perfectly balanced orbit \textbf{27\_4}, we find it consists of
+\textbf{27 edges} and touches \textbf{25 vertices}. Its vertex‑incidence
+histogram is non‑uniform:
+
+\begin{verbatim}
+incidence counts (vertices): 1x10, 2x10, 3x1, 4x2, 6x1, 7x1
+\end{verbatim}
+
+Support sizes of the touched vertices (number of nonzero F3 coords) are:
+
+\begin{verbatim}
+|supp|=1: 2 vertices
+|supp|=2: 5 vertices
+|supp|=3: 12 vertices
+|supp|=4: 6 vertices
+\end{verbatim}
+
+Relative to the base vertex v0=0, the edges are overwhelmingly
+\textbf{cross‑shell} (23 of 27 are H12--H27), with only \textbf{3} edges
+inside H12 and \textbf{1} inside H27, and \textbf{none} incident to v0.
+This indicates the balanced orbit is largely a \textbf{bridge} between
+the neighbor shell and non‑neighbor shell, rather than a purely internal
+H27 structure.
+
 Artifacts:
 
 \begin{verbatim}
@@ -529,6 +554,8 @@ tools/su3_phase_edge_lift.py
 artifacts/su3_phase_edge_lift.json
 tools/su3_phase_orbit_bias.py
 artifacts/su3_phase_orbit_bias.json
+tools/analyze_balanced_orbit_geometry.py
+artifacts/balanced_orbit_geometry.json
 \end{verbatim}
 
 Artifacts:
