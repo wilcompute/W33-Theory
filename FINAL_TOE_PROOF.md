@@ -1327,6 +1327,17 @@ captured by any simple local feature set; the dependence is global.
 Doc: `docs/witting_z3_edge_potential_tree.md`  
 Script: `tools/witting_z3_edge_potential_tree.py`
 
+**Z3 edge labels by monomial orbits (computed):**  
+Under the monomial symmetry group (order 243), the 540 non-orth edges split into
+**12 orbits**: eight of size **27** and four of size **81**. The Z3 labels are
+**not constant** on orbits, but each orbit has a stable label distribution.
+The 27-orbits are highly skewed (e.g., {1:12,2:14,0:1}), while 81-orbits are
+closer to balanced. This shows the Z3 potential aligns with the monomial orbit
+stratification but remains globally mixed within each orbit.
+
+Doc: `docs/witting_z3_edge_orbits.md`  
+Script: `tools/witting_z3_edge_orbits.py`
+
 **Z2 cocycle minimal-support heuristic (computed):**  
 We searched for sparse representatives of the two Z2 cocycle classes by adding
 edge coboundaries and greedily reducing support (multiple random restarts).
