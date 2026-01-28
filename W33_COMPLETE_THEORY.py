@@ -321,7 +321,7 @@ def interpretation():
         - Grand Unified Theory gauge groups
         - Modular forms and moonshine
         - M-theory and string compactifications
-        
+
         W33 could be the "genetic code" of the universe - a discrete
         structure that, when properly understood, yields all the
         continuous structures of physics.

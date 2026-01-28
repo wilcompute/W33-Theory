@@ -11,7 +11,8 @@ The origin of the mass hierarchy from the 27 representation structure.
 import math
 from fractions import Fraction
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║               W33 THEORY OF EVERYTHING - PART XXIII                          ║
@@ -19,7 +20,8 @@ print("""
 ║                    FERMION MASSES FROM E6                                    ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # THE FERMION MASS HIERARCHY PUZZLE
@@ -30,7 +32,8 @@ print("THE FERMION MASS HIERARCHY PUZZLE")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 One of the deepest mysteries in physics: WHY these particular masses?
 
 CHARGED LEPTON MASSES:
@@ -52,7 +55,8 @@ QUARK MASSES (approximate, MS-bar at 2 GeV):
 
 The ratio m_t/m_e spans 12 orders of magnitude!
 The Standard Model has NO explanation for these values.
-""")
+"""
+)
 
 # =============================================================================
 # THE 27 OF E6
@@ -63,7 +67,8 @@ print("THE 27 REPRESENTATION OF E6")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 In E6 GUT, one generation of fermions fits into the 27 representation:
 
 27 = (3,3,1) + (3̄,1,3̄) + (1,3̄,3)    under SU(3)_C × SU(3)_L × SU(3)_R
@@ -74,7 +79,7 @@ This decomposes under the Standard Model as:
 
 The decomposition under SO(10) → SU(5):
   27 → 16 + 10 + 1
-  
+
   16 = Standard Model fermions (one generation)
   10 = Vector-like exotic (heavy)
   1  = Singlet (sterile neutrino)
@@ -82,7 +87,8 @@ The decomposition under SO(10) → SU(5):
 W33 CONNECTION:
   • 81 cycles = 3 × 27 → THREE generations of 27
   • The factor 3 is NOT arbitrary - it's 3⁴/3³ = 81/27
-""")
+"""
+)
 
 # =============================================================================
 # MASS MATRICES FROM W33
@@ -93,7 +99,8 @@ print("MASS MATRICES FROM W33 STRUCTURE")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 HYPOTHESIS: Yukawa couplings come from W33 incidence structure
 
 The 40 points and 40 lines create an incidence matrix I:
@@ -104,7 +111,8 @@ Each point is on 9 lines → row sum = 9
 Each line has 4 points → column sum = 4
 
 The eigenvalues of I^T I might determine mass ratios!
-""")
+"""
+)
 
 # Compute some expected eigenvalues
 print("═══ Eigenvalue Structure ═══")
@@ -256,16 +264,18 @@ print("THE HIERARCHICAL STRUCTURE")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 The mass hierarchy has a pattern:
 
   3rd generation / 2nd generation ≈ λ² ≈ 1/20
   2nd generation / 1st generation ≈ λ² ≈ 1/20
-  
+
   where λ ≈ 0.22 ≈ sin(θ_C) = 9/40 (Cabibbo!)
 
 W33 INTERPRETATION:
-""")
+"""
+)
 
 # Cabibbo angle
 sin_cabibbo = 9 / 40
@@ -298,18 +308,20 @@ print("TEXTURE ZEROS FROM W33 INCIDENCE")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 The Yukawa matrices have "texture zeros" - elements that are zero or small.
 
 In W33:
   • Points not on the same line → zero Yukawa
   • Points on the same line → non-zero Yukawa
-  
+
 This creates a PATTERN in the mass matrices!
 
 The incidence structure of W33 (4 points per line, 9 lines per point)
 naturally generates hierarchical textures.
-""")
+"""
+)
 
 # =============================================================================
 # NEUTRINO MASSES
@@ -320,7 +332,8 @@ print("NEUTRINO MASSES AND MIXING")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 Neutrino mass differences (from oscillations):
   Δm²₂₁ = 7.53 × 10⁻⁵ eV²  (solar)
   Δm²₃₂ = 2.453 × 10⁻³ eV² (atmospheric)
@@ -330,7 +343,8 @@ The PMNS matrix (neutrino mixing) differs from CKM (quarks)!
   • PMNS: large mixing, nearly democratic
 
 W33 EXPLANATION:
-""")
+"""
+)
 
 # Neutrino mixing angles
 theta_12 = 33.44  # degrees (solar)
@@ -365,7 +379,8 @@ print("W33 MASS FORMULA CONJECTURE")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ╔════════════════════════════════════════════════════════════════════════════════╗
 ║                         W33 MASS FORMULA CONJECTURE                            ║
 ╠════════════════════════════════════════════════════════════════════════════════╣
@@ -387,7 +402,8 @@ print("""
 ║  The PATTERN matches, even if individual masses need refinement.               ║
 ║                                                                                ║
 ╚════════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # Test the formula
 print("═══ Testing the Formula ═══")
@@ -420,7 +436,8 @@ print("PART XXIII SUMMARY")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 KEY DISCOVERIES:
 
 1. The 27 of E6 contains one generation of fermions
@@ -442,7 +459,8 @@ KEY DISCOVERIES:
 
 THE MASS HIERARCHY IS NOT RANDOM.
 IT IS ENCODED IN W33's INCIDENCE GEOMETRY.
-""")
+"""
+)
 
 print()
 print("=" * 80)

@@ -145,7 +145,8 @@ print("\n" + "=" * 70)
 print("THE F₃ × F₃ PATTERN")
 print("=" * 70)
 
-print("""
+print(
+    """
 The 9 superposition states are indexed by (μ, ν) ∈ F₃ × F₃:
 
      ν=0    ν=1    ν=2
@@ -156,7 +157,8 @@ The 9 superposition states are indexed by (μ, ν) ∈ F₃ × F₃:
 State index = 4 + 3μ + ν
 
 Question: What orthogonality pattern creates the 3 triangles?
-""")
+"""
+)
 
 # Compute which states are orthogonal
 print("Orthogonality pattern in F₃ × F₃:")
@@ -177,7 +179,8 @@ print("\n" + "=" * 70)
 print("DISCOVERING THE ORTHOGONALITY RULE")
 print("=" * 70)
 
-print("""
+print(
+    """
 For states (0, 1, -ω^μ₁, ω^ν₁)/√3 and (0, 1, -ω^μ₂, ω^ν₂)/√3:
 
 Inner product = (1/3)(1 + ω^{μ₂-μ₁} + ω^{ν₁-ν₂})
@@ -189,9 +192,10 @@ So we need: {ω^{μ₂-μ₁}, ω^{ν₁-ν₂}} = {ω, ω²}
 
 This happens when:
   μ₂ - μ₁ ∈ {1, 2} and ν₁ - ν₂ ∈ {2, 1} respectively
-  
+
 Or: (μ₂-μ₁, ν₁-ν₂) ∈ {(1,2), (2,1)} mod 3
-""")
+"""
+)
 
 # Verify the rule
 print("\nVerifying orthogonality rule:")
@@ -226,21 +230,23 @@ print("\n" + "=" * 70)
 print("GEOMETRIC INTERPRETATION")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE THREE TRIANGLES IN F₃ × F₃:
 ===============================
 
-The orthogonality rule (Δμ, Δν) ∈ {(1,2), (2,1)} 
+The orthogonality rule (Δμ, Δν) ∈ {(1,2), (2,1)}
 defines a GRAPH on the 9 points of F₃ × F₃.
 
 This graph is 3K₃: three disjoint triangles!
 
 Triangle 2: {(0,0), (1,2), (2,1)} = {4, 8, 10}
-Triangle 3: {(0,1), (1,0), (2,2)} = {5, 7, 12}  
+Triangle 3: {(0,1), (1,0), (2,2)} = {5, 7, 12}
 Triangle 4: {(0,2), (1,1), (2,0)} = {6, 8, 11}
 
 Wait, let me verify...
-""")
+"""
+)
 
 # Find the actual triangles
 for t in sup_triangles:
@@ -266,7 +272,8 @@ print("\n" + "=" * 70)
 print("CONNECTION TO AFFINE GEOMETRY")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE AFFINE PLANE AG(2, F₃):
 ===========================
 
@@ -286,7 +293,8 @@ correspond to ONE parallel class of lines in AG(2, F₃)!
 
 The direction of these lines is determined by the orthogonality
 condition (Δμ, Δν) ∈ {(1,2), (2,1)}.
-""")
+"""
+)
 
 # Verify: do the triangles partition the 9 points?
 all_points = set()
@@ -304,7 +312,8 @@ print("\n" + "=" * 70)
 print("COMPLETE LOCAL STRUCTURE OF Sp₄(3)")
 print("=" * 70)
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════╗
 ║               LOCAL STRUCTURE AT ANY VERTEX                          ║
 ╠══════════════════════════════════════════════════════════════════════╣
@@ -333,13 +342,15 @@ print("""
 ║        = 1 + 4×3 + 3×9                                              ║
 ║                                                                      ║
 ╚══════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("PART CXLVII COMPLETE")
 print("=" * 70)
 
-print("""
+print(
+    """
 KEY DISCOVERIES:
 ================
 
@@ -362,4 +373,5 @@ KEY DISCOVERIES:
    - 12 neighbors: 4K₃ (triangles, parallel class)
    - 27 non-neighbors: tripartite graph (9+9+9)
    - Beautiful interplay of F₃ geometry and quantum structure
-""")
+"""
+)

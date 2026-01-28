@@ -207,7 +207,8 @@ print("\n" + "=" * 70)
 print("GEOMETRIC INTERPRETATION")
 print("=" * 70)
 
-print("""
+print(
+    """
 ANALYSIS:
 =========
 
@@ -222,7 +223,8 @@ In quantum terms:
 
 The 12 neighbors span the 3-dimensional subspace ℂ³ ⊂ ℂ⁴
 perpendicular to |0⟩.
-""")
+"""
+)
 
 # Verify: all neighbors have first component 0
 print("Verification - first component of each neighbor:")
@@ -342,7 +344,8 @@ print("\n" + "=" * 70)
 print("COMPARISON TO KNOWN GRAPHS ON 12 VERTICES")
 print("=" * 70)
 
-print("""
+print(
+    """
 CANDIDATE GRAPHS:
 =================
 
@@ -363,7 +366,10 @@ CANDIDATE GRAPHS:
 7. 3×4 GRID GRAPH: 12 vertices, 17 edges. Check our count.
 
 8. K₃,₃,₃,₃ (complete 4-partite): 12 vertices, but different structure.
-""".format(edge_count=edge_count))
+""".format(
+        edge_count=edge_count
+    )
+)
 
 # Specific checks
 if edge_count == 30:
@@ -412,7 +418,8 @@ print("\n" + "=" * 70)
 print("PART CXLVI COMPLETE")
 print("=" * 70)
 
-print(f"""
+print(
+    f"""
 KEY FINDINGS:
 =============
 
@@ -430,6 +437,7 @@ KEY FINDINGS:
 
 4. Block structure:
    - {intra_0} edges within basis block
-   - {intra_1} edges within superposition block  
+   - {intra_1} edges within superposition block
    - {inter} edges between blocks
-""")
+"""
+)

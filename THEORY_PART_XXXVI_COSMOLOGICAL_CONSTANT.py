@@ -10,7 +10,8 @@ And why is 122 ≈ 121 = W33_total?
 import math
 from fractions import Fraction
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════╗
 ║             THEORY OF EVERYTHING - PART XXXVI                        ║
 ║                                                                      ║
@@ -18,7 +19,8 @@ print("""
 ║                                                                      ║
 ║                  Why Λ ~ 10⁻¹²¹ = 10^(-W33_total)                   ║
 ╚══════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # THE PROBLEM
@@ -29,7 +31,8 @@ print("THE COSMOLOGICAL CONSTANT PROBLEM")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 The cosmological constant Λ controls the expansion of the universe.
 
 OBSERVED VALUE (in Planck units):
@@ -45,7 +48,8 @@ This is often called "the worst prediction in physics."
 The theory is wrong by 122 ORDERS OF MAGNITUDE.
 
 BUT WAIT... 122 ≈ 121 = 11² = W33_total!
-""")
+"""
+)
 
 # =============================================================================
 # THE W33 NUMBERS
@@ -58,7 +62,8 @@ print()
 
 W33_TOTAL = 121  # 40 points + 81 cycles
 
-print(f"""
+print(
+    f"""
 W33 Structure:
   Points = 40
   Cycles = 81
@@ -74,7 +79,8 @@ The "+1" could come from:
   • A logarithmic correction
   • The "extra" point in projective completion
   • Integration over moduli space
-""")
+"""
+)
 
 # =============================================================================
 # EXPONENTIAL SUPPRESSION MECHANISMS
@@ -85,7 +91,8 @@ print("EXPONENTIAL SUPPRESSION FROM W33")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 How could W33 structure suppress Λ by such an enormous factor?
 
 ═══ Mechanism 1: Instanton Sum ═══
@@ -94,12 +101,14 @@ If Λ receives contributions from 121 independent "instantons"
 (one for each W33 element), each suppressed by e⁻ˢ where S ~ 2π:
 
   Λ ~ exp(-2π × 121) = exp(-760.3)
-""")
+"""
+)
 
 print(f"  exp(-2π × 121) = {math.exp(-2*math.pi*121):.2e}")
 print()
 
-print("""
+print(
+    """
   This gives ~ 10⁻³³⁰, far too small!
 
 ═══ Mechanism 2: Product of Small Factors ═══
@@ -109,7 +118,8 @@ If each W33 element contributes a factor of 1/10:
   Λ ~ (1/10)^121 = 10⁻¹²¹ ✓
 
   But WHY would each element contribute exactly 1/10?
-""")
+"""
+)
 
 # =============================================================================
 # THE DIMENSIONAL ANALYSIS
@@ -120,7 +130,8 @@ print("DIMENSIONAL ANALYSIS")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ═══ A Natural Explanation ═══
 
 The Planck scale sets the UV cutoff: M_Pl ~ 10¹⁹ GeV
@@ -140,7 +151,8 @@ This is just dimensional analysis - not explanatory.
 
 But W33 gives us WHY the exponent is 122:
   122 = W33_total + 1 = 121 + 1
-""")
+"""
+)
 
 # =============================================================================
 # THE "COINCIDENCE PROBLEM"
@@ -151,7 +163,8 @@ print("THE COINCIDENCE PROBLEM")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 There's actually TWO cosmological constant problems:
 
 1. WHY is Λ so small? (the 10⁻¹²² problem)
@@ -165,7 +178,8 @@ The dark energy density and matter density are comparable TODAY:
 Ratio: Ω_Λ / Ω_m ≈ 2.1
 
 W33 PREDICTION:
-""")
+"""
+)
 
 # Calculate possible W33 ratio
 ratio_w33 = Fraction(81, 40)  # cycles/points
@@ -209,7 +223,8 @@ print("VACUUM ENERGY FROM W33")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 In QFT, vacuum energy comes from zero-point fluctuations:
 
   ρ_vac = Σ (1/2)ℏω
@@ -225,7 +240,8 @@ is reduced by a factor of exp(-W33_total):
 
 For c = ln(10):
   ρ_vac^{W33} = M_Pl⁴ × 10⁻¹²¹
-""")
+"""
+)
 
 print(f"  ln(10) = {math.log(10):.4f}")
 print()
@@ -239,7 +255,8 @@ print("THE 122 vs 121 QUESTION")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ═══ Is the Exponent 121 or 122? ═══
 
 Observed: Λ ~ 10⁻¹²² (rough estimate)
@@ -256,7 +273,8 @@ THIS IS BETWEEN -121 AND -122!
 
 And remarkably close to:
   -121.5 = -121 - 1/2 = -W33_total - 1/2
-""")
+"""
+)
 
 # Calculate exact value
 Lambda_Mpl4 = 2.888e-122
@@ -264,13 +282,15 @@ log_Lambda = math.log10(Lambda_Mpl4)
 print(f"Precise value: log₁₀(Λ) = {log_Lambda:.3f}")
 print()
 
-print("""
+print(
+    """
 ═══ Possible Explanation for the -0.54 ═══
 
   -121.54 = -121 - 0.54
-  
+
 Could 0.54 come from W33?
-""")
+"""
+)
 
 # Search for 0.54 in W33
 print("  Searching for 0.54 in W33 structure:")
@@ -289,7 +309,8 @@ print("ANTHROPIC vs W33")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ═══ The Anthropic Argument ═══
 
 Some physicists argue Λ is small because we couldn't exist otherwise.
@@ -311,7 +332,8 @@ This matches observation!
 The difference:
   Anthropic: Λ could have been anything, we got lucky
   W33:       Λ is mathematically determined by combinatorics
-""")
+"""
+)
 
 # Calculate W33 prediction
 w33_exponent = -121 - 1 / 2 - 1 / 27
@@ -329,7 +351,8 @@ print("DEEP STRUCTURE: WHY 121?")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ═══ The Holographic Principle ═══
 
 The holographic principle says physics in a volume is encoded
@@ -358,7 +381,8 @@ For the universe:
   S_max ~ 10¹²² bits
 
 This is the SAME as the cosmological constant suppression!
-""")
+"""
+)
 
 # =============================================================================
 # THE 11 CONNECTION
@@ -369,15 +393,16 @@ print("THE NUMBER 11: THE PORTAL")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 121 = 11² appears everywhere:
 
   W33_total = 40 + 81 = 121 = 11²
-  
+
   Λ ~ 10⁻¹²¹ ~ 10^(-11²)
-  
+
   M-theory has 11 dimensions!
-  
+
   √121 = 11 = the "portal number"
 
 Is this coincidence?
@@ -391,7 +416,8 @@ W33 CONNECTION:
   • 11 = √(W33_total)
   • The extra 7 dimensions could be related to 7 octonion units
   • 11 = 4 + 7 (spacetime + internal)
-""")
+"""
+)
 
 print("Key relationships:")
 print(f"  11² = {11**2} = W33_total")
@@ -409,7 +435,8 @@ print("THE COMPLETE Λ FORMULA")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ╔═══════════════════════════════════════════════════════════════════════╗
 ║                                                                       ║
 ║  THE W33 COSMOLOGICAL CONSTANT FORMULA:                              ║
@@ -430,7 +457,8 @@ print("""
 ║  ERROR: < 1%                                                          ║
 ║                                                                       ║
 ╚═══════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # DARK ENERGY EVOLUTION
@@ -441,7 +469,8 @@ print("DARK ENERGY: CONSTANT OR VARYING?")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ═══ Is Λ Truly Constant? ═══
 
 Current observations are consistent with constant Λ.
@@ -449,7 +478,7 @@ But small variations (quintessence) aren't ruled out.
 
 The equation of state parameter:
   w = p/ρ = -1 for cosmological constant
-  
+
 Observed: w = -1.03 ± 0.03
 
 ═══ W33 Prediction ═══
@@ -460,7 +489,8 @@ Any time variation would falsify the geometric origin.
 Prediction: w = -1 exactly (no quintessence)
 
 However, there might be W33 corrections:
-""")
+"""
+)
 
 # W33 correction to w
 w_correction = -40 / (40 * 81)  # -1/(cycles)
@@ -479,7 +509,8 @@ print("SUMMARY: THE COSMOLOGICAL CONSTANT")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ╔═══════════════════════════════════════════════════════════════════════╗
 ║                 W33 COSMOLOGICAL CONSTANT RESULTS                     ║
 ╠═══════════════════════════════════════════════════════════════════════╣
@@ -515,7 +546,8 @@ It is DETERMINED by W33 combinatorics.
 
 The "worst prediction in physics" becomes the BEST prediction
 when viewed through the lens of W33!
-""")
+"""
+)
 
 print("=" * 72)
 print("END OF PART XXXVI: THE COSMOLOGICAL CONSTANT")

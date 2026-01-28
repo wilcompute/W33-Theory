@@ -29,7 +29,8 @@ print("\n" + "=" * 80)
 print("PART 1: THE MEASUREMENT PROBLEM")
 print("=" * 80)
 
-print("""
+print(
+    """
 THE MYSTERY
 ===========
 
@@ -47,7 +48,8 @@ Interpretations:
   4. Objective Collapse: New physics causes collapse
 
 What does W33 say?
-""")
+"""
+)
 
 # =============================================================================
 # PART 2: W33 AND SUPERPOSITION
@@ -57,14 +59,15 @@ print("\n" + "=" * 80)
 print("PART 2: W33 STRUCTURE AND SUPERPOSITION")
 print("=" * 80)
 
-print("""
+print(
+    """
 W33 AS A SUPERPOSITION SPACE
 ============================
 
 In W33:
   - 40 points = definite states (matter)
   - 81 cycles = superposition states (vacuum)
-  
+
 Total: 121 = 11² possible configurations
 
 The ratio 81/40 = 2.025 ≈ 2 tells us:
@@ -77,7 +80,8 @@ This matches quantum mechanics:
 W33 interpretation:
   MEASUREMENT = projection from 81-space to 40-space
   COLLAPSE = vacuum → matter transition
-""")
+"""
+)
 
 # The ratio
 ratio = 81 / 40
@@ -93,7 +97,8 @@ print("\n" + "=" * 80)
 print("PART 3: K4 AND DECOHERENCE")
 print("=" * 80)
 
-print("""
+print(
+    """
 K4 AS THE DECOHERENCE MECHANISM
 ================================
 
@@ -108,16 +113,17 @@ Decoherence interpretation:
   - K4 action = interaction with environment
   - Phase scrambling = loss of coherence
   - W33 / K4 = classical world
-  
+
 The 4 elements of K4:
   {1, a, b, ab}
-  
+
 These might correspond to:
   1 = no measurement
   a = measure position
-  b = measure momentum  
+  b = measure momentum
   ab = joint measurement (incompatible!)
-""")
+"""
+)
 
 print(f"\nK4 structure:")
 print(f"  |K4| = 4 measurement types")
@@ -132,7 +138,8 @@ print("\n" + "=" * 80)
 print("PART 4: INTEGRATED INFORMATION Φ")
 print("=" * 80)
 
-print("""
+print(
+    """
 TONONI'S INTEGRATED INFORMATION THEORY
 ======================================
 
@@ -151,7 +158,8 @@ W33's Φ:
 
 W33 is MAXIMALLY INTEGRATED:
   The K4 structure connects everything to everything.
-""")
+"""
+)
 
 # Estimate Φ for W33
 n_points = 40
@@ -179,7 +187,8 @@ print("\n" + "=" * 80)
 print("PART 5: PENROSE'S OBJECTIVE REDUCTION")
 print("=" * 80)
 
-print("""
+print(
+    """
 GRAVITY AND COLLAPSE
 ====================
 
@@ -196,10 +205,11 @@ W33 interpretation:
 The collapse time:
   τ ~ ℏ / (E × vacuum_difference)
     ~ ℏ / (E × 0.277)
-    
+
 This suggests collapse is related to the
 W-hierarchy transition!
-""")
+"""
+)
 
 # Vacuum fractions
 v_w53 = 19683 / (1120 + 19683)
@@ -220,7 +230,8 @@ print("\n" + "=" * 80)
 print("PART 6: THE OBSERVER IN W33")
 print("=" * 80)
 
-print("""
+print(
+    """
 WHAT IS AN OBSERVER?
 ====================
 
@@ -243,7 +254,8 @@ The maximum observer:
   - All 40 points
   - Can distinguish 40 outcomes
   - log₂(40) ≈ 5.3 bits
-""")
+"""
+)
 
 print(f"\nObserver information capacity:")
 print(f"  Minimum (1 K4): log₂(4) = {np.log2(4):.1f} bits")
@@ -258,7 +270,8 @@ print("\n" + "=" * 80)
 print("PART 7: QUANTUM DARWINISM")
 print("=" * 80)
 
-print("""
+print(
+    """
 REDUNDANT INFORMATION
 =====================
 
@@ -276,10 +289,11 @@ Redundancy factor:
   R = (total K4 memberships) / (number of points)
     = (90 × 4) / 40
     = 9
-    
+
 Each bit of information is encoded 9 times!
 This is like a classical error-correcting code.
-""")
+"""
+)
 
 # Redundancy
 total_k4_memberships = 90 * 4
@@ -299,7 +313,8 @@ print("\n" + "=" * 80)
 print("PART 8: FREE WILL")
 print("=" * 80)
 
-print("""
+print(
+    """
 DOES W33 ALLOW FREE WILL?
 =========================
 
@@ -318,7 +333,8 @@ Free will interpretation:
 The 90 K4 subgroups = 90 points of freedom
 Each K4 decision has 4 outcomes
 Total: 4^90 ≈ 10^54 possible histories!
-""")
+"""
+)
 
 print(f"\nDegrees of freedom:")
 print(f"  K4 subgroups: 90")
@@ -333,7 +349,8 @@ print("\n" + "=" * 80)
 print("PART 9: TIME AND CONSCIOUSNESS")
 print("=" * 80)
 
-print("""
+print(
+    """
 THE ARROW OF TIME
 =================
 
@@ -350,12 +367,13 @@ W33 interpretation:
 
 The W-hierarchy descent:
   W(7,3) → W(5,3) → W(3,3) → W(1,3)
-  
+
 This IS the arrow of time!
   - High vacuum → low vacuum
   - Quantum → classical
   - Potential → actual
-""")
+"""
+)
 
 print(f"\nW-hierarchy as time:")
 print(f"  t=0:    W(7,3) 99.8% vacuum (pure potential)")
@@ -371,7 +389,8 @@ print("\n" + "=" * 80)
 print("PART 10: CONSCIOUSNESS IN W33")
 print("=" * 80)
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                    CONSCIOUSNESS AND W33 THEORY                              ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
@@ -421,7 +440,8 @@ print("""
 ║    • Why free will feels real                                                ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 print("\n" + "=" * 80)
 print("MEASUREMENT = 81 → 40 PROJECTION")

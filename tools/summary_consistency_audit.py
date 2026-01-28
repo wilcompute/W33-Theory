@@ -8,11 +8,9 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.append(str(ROOT))
 
 from src.summary_insights import collect_key_result_stats  # noqa: E402
-from src.summary_insights import (
-    compute_numeric_comparison_stats,
-    load_numeric_comparisons,
-    load_summary_results,
-)
+from src.summary_insights import (compute_numeric_comparison_stats,
+                                  load_numeric_comparisons,
+                                  load_summary_results)
 
 
 def build_report(root: Path) -> str:

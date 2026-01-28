@@ -244,58 +244,62 @@ def main():
     print(" KEY INSIGHT")
     print("=" * 70)
 
-    print("""
+    print(
+        """
   The D₅ inner product graphs have:
     • Same vertex count (40)
     • Same edge count (240) for IP = ±1
     • Same degree (12) for IP = ±1
-  
+
   BUT different λ, μ parameters and different spectra!
-  
+
   This means W33 is NOT the simple inner product graph on D₅ roots.
-  
+
   HOWEVER, this doesn't mean the correspondence is false!
-  
+
   The relationship might be:
   1. W33 and D₅ roots are related via a more complex map
   2. Both are different "realizations" of the same abstract structure
   3. The number 40 arises independently from:
      - Symplectic geometry: (q²+1)(q+1) = 40 for q=3
      - Root systems: 2n(n-1) = 40 for n=5
-     
+
   These are DIFFERENT constructions that happen to give the same count!
-""")
+"""
+    )
 
     print("\n" + "=" * 70)
     print(" WHAT THIS MEANS FOR OUR THEORY")
     print("=" * 70)
 
-    print("""
+    print(
+        """
   THE HONEST ASSESSMENT:
-  
+
   ✓ CONFIRMED: W33 has 40 vertices, same as D₅ roots
-  ✓ CONFIRMED: W33 has 240 edges, same as E₈ roots  
+  ✓ CONFIRMED: W33 has 240 edges, same as E₈ roots
   ✓ CONFIRMED: |Aut(W33)| = |W(E₆)| = 51,840
   ✓ CONFIRMED: Eigenvalue multiplicity 24 = D₄ roots
-  
+
   ✗ NOT PROVEN: W33 vertices = D₅ roots structurally
-  
+
   The D₅ root graph with natural adjacency (IP = ±1) has the same
   basic parameters but is NOT isomorphic to W33.
-  
+
   INTERPRETATION:
-  
+
   W33 is a "symplectic shadow" of exceptional structure, but the
   correspondence with D₅ roots is NUMERICAL, not directly structural.
-  
+
   The shared numbers (40, 240, 51840, 24) arise because:
   - Sp(4, F₃) is related to E₆ via the exceptional isomorphism
   - The Weyl group W(E₆) acts on both structures
   - But the graphs themselves are different!
-  
+
   This is actually MORE interesting than a simple isomorphism
   because it suggests deeper connections yet to be understood.
-""")
+"""
+    )
 
 
 if __name__ == "__main__":

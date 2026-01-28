@@ -394,7 +394,8 @@ def the_final_proof():
     print("THE FINAL PROOF")
     print("=" * 70)
 
-    print("""
+    print(
+        """
     THEOREM: For any K4 component in W33, Bargmann(outer) = -1.
 
     PROOF:
@@ -428,7 +429,8 @@ def the_final_proof():
     Therefore, Bargmann(outer) = e^{i*pi} = -1.
 
     QED
-    """)
+    """
+    )
 
 
 def main():

@@ -57,66 +57,66 @@ def main():
     interpretations = """
   INTERPRETATION A: Coset Interpretation
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  
+
   W33 = Sp(4, F₃) symplectic polar graph
-  
+
   |Sp(4, F₃)| = 51,840
   |Aut(W33)| = 51,840
-  
+
   The 40 vertices are maximal totally isotropic subspaces
   of the 4-dimensional symplectic space over F₃.
-  
+
   Counting: In Sp(4, q), the number of maximal isotropic planes is:
     (q² + 1)(q + 1) = (9 + 1)(3 + 1) = 10 × 4 = 40 ✓
-  
+
   So: 40 = (q² + 1)(q + 1) where q = 3
-  
-  
+
+
   INTERPRETATION B: Pentad Structure
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  
+
   40 = 8 × 5
-  
+
   8 = dim(𝕆) = octonions
   5 = dim of fundamental representation of SU(5) GUT group
-  
+
   In SU(5) GUT:
     • 5 = (d̄, d̄, d̄, e⁺, ν̄ₑ) = one complete anti-generation
     • 5̄ = (d, d, d, e⁻, νₑ) = one complete generation
-  
+
   Could 40 = 8 × 5 mean:
     "8 copies of the 5-dimensional GUT representation"?
-  
-  
+
+
   INTERPRETATION C: Symplectic Roots
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  
+
   C₄ (Sp(8)) has 36 roots (short) + 4 roots (long) = 40 roots? NO!
   Actually C₄ has 2n² = 32 roots.
-  
+
   B₄ (SO(9)) has 2n² = 32 roots. NO!
-  
+
   What has 40?
     F₄ has 48 roots
     A₅ has 30 roots
     D₅ has 40 roots! ✓
-  
+
   D₅ = SO(10) has exactly 40 roots!
-  
-  
+
+
   INTERPRETATION D: D₅ = SO(10) Connection
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  
+
   D₅ root system:
     • 40 roots = ±eᵢ ± eⱼ for 1 ≤ i < j ≤ 5
     • Number of roots = 2 × C(5,2) × 2 = 2 × 10 × 2 = 40 ✓
-  
+
   This is PROFOUND:
     The 40 vertices of W33 correspond to the 40 roots of D₅!
-  
+
   But wait: D₅ roots are signed pairs from {e₁, e₂, e₃, e₄, e₅}
   There are C(5,2) = 10 pairs, each with 4 sign choices → 40
-  
+
   Actually: 40 = 4 × 10 = (signs) × (pairs)
 """
     print(interpretations)
@@ -144,32 +144,32 @@ def main():
 
     meanings_of_5 = """
   POSSIBLE MEANINGS OF 5:
-  
+
   1. EXCEPTIONAL DIVISION:
      • 5 is the first dimension where a division algebra fails
      • ℝ (1), ℂ (2), ℍ (4), 𝕆 (8), then NO division algebra at 16
      • The "gap" at 5 is meaningful
-  
+
   2. ALTERNATING STRUCTURE:
      • |A₅| = 60 = smallest non-abelian simple group
      • 5! = 120 = |S₅|
      • PGL(2, 5) ≅ S₅ has order 120
-  
+
   3. SU(5) GUT:
      • 5 = dim of fundamental rep
      • 5 quarks + leptons in one family (with color)
      • Anti-symmetric: ∧²(5) = 10 (Higgs)
-  
+
   4. PENTAD/ICOSAHEDRAL:
      • 5 = faces meeting at icosahedron vertex
      • 5-fold symmetry is "exceptional" in 2D (quasicrystals)
      • |A₅| = 60 = icosahedral group
-  
+
   5. DIMENSIONAL REASONING:
      • 5 = 1 + 4 = scalar + spacetime
      • 5 = 3 + 2 = space + extra dimensions
      • 5 dimensions in Kaluza-Klein theory
-  
+
   6. FROM W33 STRUCTURE:
      • 40/8 = 5 because W33 has special structure
      • Maybe: 5 generations of octonions?
@@ -185,7 +185,7 @@ def main():
 
     so10 = """
   IF 40 VERTICES = 40 ROOTS OF D₅ = SO(10):
-  
+
   ┌─────────────────────────────────────────────────────────────────┐
   │                                                                 │
   │  D₅ STRUCTURE:                                                  │
@@ -216,12 +216,12 @@ def main():
   │    The 24 + 16 is about ROOT subgroups                         │
   │                                                                 │
   └─────────────────────────────────────────────────────────────────┘
-  
+
   BUT NOTICE:
-  
+
     24 = D₄ roots = eigenvalue 2 multiplicity in W33!
     16 = spinor representation of SO(10)
-    
+
   There IS a connection, just not direct!
 """
     print(so10)
@@ -235,31 +235,31 @@ def main():
 
     gut_connection = """
   THE GRAND UNIFIED THEORY CHAIN:
-  
+
     E₆ → SO(10) → SU(5) → SU(3) × SU(2) × U(1)
-  
+
   WHERE:
     • E₆ has Weyl group of order 51,840 = |Aut(W33)|
     • SO(10) = D₅ has 40 roots = |V(W33)|
     • SU(5) has fundamental rep dimension 5
     • Final group is Standard Model gauge group
-  
+
   THE NUMBERS FIT:
-  
+
     |W(E₆)| = 51,840
     |D₅ roots| = 40
     |SU(5) fund| = 5
     |SU(3)| = 3² - 1 = 8 (gluons)
-    
+
     And: 51,840 = 1296 × 40 = 6⁴ × (D₅ roots)
-  
+
   SPECULATION:
-  
+
     W33 might be the "meeting point" where:
     • E₆ symmetry (automorphisms)
     • D₅ structure (vertices)
     • E₈ interactions (edges)
-    
+
     all come together!
 """
     print(gut_connection)
@@ -292,15 +292,15 @@ def main():
 
     ultimate = """
   SYNTHESIS: WHY 40?
-  
+
   W33 is uniquely determined by:
-  
+
   1. SRG parameters (40, 12, 2, 4)
   2. Being the symplectic polar graph Sp(4, F₃)
   3. Having Aut group W(E₆)
-  
+
   The number 40 arises because:
-  
+
   ╔═══════════════════════════════════════════════════════════════════╗
   ║                                                                   ║
   ║  40 = |D₅ roots| = |maximal isotropics in Sp(4, F₃)|              ║
@@ -315,13 +315,13 @@ def main():
   ║  abstract relationship combinatorially!                           ║
   ║                                                                   ║
   ╚═══════════════════════════════════════════════════════════════════╝
-  
+
   SO THE ANSWER IS:
-  
+
     40 = 8 × 5 because:
       8 = dim(𝕆) enters through E₆/E₇/E₈ exceptional structure
       5 = the rank of D₅ = SO(10), which sits inside E₆
-    
+
     40 vertices = 40 roots of D₅ ⊂ E₆ with Weyl group acting
 """
     print(ultimate)
@@ -376,35 +376,35 @@ def main():
   ═══════════════════════════════════════════════════════════════════
   THE NUMBER 40 = 8 × 5
   ═══════════════════════════════════════════════════════════════════
-  
+
   PRIMARY INTERPRETATION:
     40 = number of roots in D₅ = SO(10)
-  
+
   SECONDARY INTERPRETATION:
     40 = (q² + 1)(q + 1) for q = 3 (symplectic formula)
-  
+
   THE 8 × 5 DECOMPOSITION:
     8 = octonion dimension, entering via exceptional algebras
     5 = rank of D₅, which embeds in E₆
-  
+
   THE PROFOUND CONNECTION:
     • E₆ ⊃ D₅ with E₆ roots = D₅ roots + spinors (72 = 40 + 32)
     • W(E₆) acts on 40 vertices = 40 D₅ roots
     • The symplectic realization over F₃ makes this finite
-  
+
   NEW INSIGHT:
     The 72 E₆ roots decompose as:
       72 = 40 (W33 vertices) + 32 (spinors)
-    
+
     This means W33 captures the "vector" part of E₆,
     while the "spinor" part (32 = 16 + 16̄) represents
     matter/antimatter generations!
-  
+
   THE CHAIN:
     E₈ (240 edges) → E₆ (51,840 automorphisms) → D₅ (40 vertices)
-    
+
     W33 is the combinatorial realization of E₆/D₅ structure!
-  
+
   ═══════════════════════════════════════════════════════════════════
 """
     print(summary)

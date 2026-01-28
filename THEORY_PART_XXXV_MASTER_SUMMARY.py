@@ -10,7 +10,8 @@ All predictions, all formulas, all confirmations.
 import math
 from fractions import Fraction
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════╗
 ║             THEORY OF EVERYTHING - PART XXXV                         ║
 ║                                                                      ║
@@ -18,7 +19,8 @@ print("""
 ║                                                                      ║
 ║              All W33 Predictions in One Place                        ║
 ╚══════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # THE FOUNDATION: W33 STRUCTURE
@@ -29,7 +31,8 @@ print("I. THE FOUNDATION: W33 = W(3,3)")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 The Witt design W(3,3) is a combinatorial structure with:
 
   ┌─────────────────────────────────────────────────────────┐
@@ -50,7 +53,8 @@ The Exceptional Jordan Algebra Connection:
   • Aut(J₃(O)) = F₄ (52-dimensional exceptional Lie group)
   • The 27 decomposes as: 27 → 16 + 10 + 1 under SO(10)
   • This IS the Standard Model fermion content!
-""")
+"""
+)
 
 # =============================================================================
 # THE KEY NUMBERS
@@ -78,7 +82,8 @@ FUND_E7 = 56
 # The magic number
 MAGIC_173 = W33_POINTS + DIM_E7  # 40 + 133 = 173
 
-print(f"""
+print(
+    f"""
 ╔═══════════════════════════════════════════════════════════════════════╗
 ║                    THE W33 NUMBER DICTIONARY                          ║
 ╠═══════════════════════════════════════════════════════════════════════╣
@@ -102,7 +107,8 @@ print(f"""
 ║    128 = 2⁷ = SO(16) spinor (heterotic string)                       ║
 ║    5   = 133 - 128 = dim(E7) - 2⁷                                    ║
 ╚═══════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # THE MASTER FORMULA TABLE
@@ -247,7 +253,8 @@ print("IV. THE COMPLETE PREDICTION TABLE")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ╔═══════════════════════════════════════════════════════════════════════════════════════╗
 ║                            W33 THEORY OF EVERYTHING                                   ║
 ║                         COMPLETE PREDICTION SUMMARY                                   ║
@@ -268,7 +275,8 @@ print("""
 ║  δ_PMNS             │ 4π/3 - 8°                   │ 232°        │ 232°       │ ~0    ║
 ║  J_CKM              │ 1/(40×810)                  │ 3.09×10⁻⁵   │ 3.08×10⁻⁵  │ 0.3%  ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # THE DEEP CONNECTIONS
@@ -279,15 +287,16 @@ print("V. THE DEEP CONNECTIONS")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ═══ The 173 Decomposition ═══
 
   173 = 40 + 133 = W33_points + dim(E7)
-  
+
   This is WHY sin²θ_W = 40/173:
     - The numerator 40 is GEOMETRY (W33 points)
     - The denominator 173 is GEOMETRY + ALGEBRA (points + E7)
-    
+
   The Weinberg angle measures the RATIO of geometric structure
   to total (geometric + algebraic) structure!
 
@@ -297,18 +306,18 @@ print("""
        = √(W33_total) × (dim(E7) - 32)
        = √121 × (133 - 32)
        = 11 × 101
-       
+
   The correction to α⁻¹ is: 40/1111 = 0.036004
   This gives α⁻¹ = 137.036004, matching experiment!
 
 ═══ The Dark Matter "5" ═══
 
   The mysterious 5 in Ω_DM/Ω_b = 27/5:
-  
+
     5 = dim(E7) - 2⁷ = 133 - 128
-    
+
   Where 128 = 2⁷ is the SO(16) spinor from heterotic strings!
-  
+
   Dark matter arises from the DIFFERENCE between:
     - E7 structure (133)
     - Heterotic spinor structure (128)
@@ -317,14 +326,15 @@ print("""
 
   CKM (quarks):   small angles  ← couple through POINTS (40)
   PMNS (neutrinos): large angles ← couple through CYCLES (81)
-  
+
   Ratio: PMNS scale / CKM scale ~ 81/40 ≈ 2
-  
+
   The 120° phase from Witting polytope underlies both:
     δ_CKM ≈ π/3 ≈ 60°
     δ_PMNS ≈ 4π/3 ≈ 240°
     Ratio: 4 (exactly!)
-""")
+"""
+)
 
 # =============================================================================
 # THE CHAIN OF DISCOVERY
@@ -335,7 +345,8 @@ print("VI. THE CHAIN OF DISCOVERY (How We Got Here)")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 The W33 Theory emerged from a remarkable chain of discoveries:
 
   Part I:    W33 structure recognized (40 points, 81 cycles, 121 total)
@@ -353,7 +364,8 @@ The W33 Theory emerged from a remarkable chain of discoveries:
   Part XXXV: This Master Summary
 
 The theory grew from simple combinatorics to a complete TOE.
-""")
+"""
+)
 
 # =============================================================================
 # THE STATISTICAL SIGNIFICANCE
@@ -365,11 +377,13 @@ print("=" * 72)
 print()
 
 # Calculate combined probability
-print("""
+print(
+    """
 How likely is it that W33 matches experiment by CHANCE?
 
 Individual match probabilities (rough estimates):
-""")
+"""
+)
 
 matches = [
     ("sin²θ_W = 40/173", 0.1, "0.1σ"),
@@ -393,7 +407,8 @@ print(f"\n  Combined probability: p ≈ {p_combined:.2e}")
 print(f"\n  This is LESS than one chance in {1/p_combined:.0e}!")
 print()
 
-print("""
+print(
+    """
 CONCLUSION: The probability that W33 matches ALL these observations
 by pure coincidence is essentially ZERO.
 
@@ -405,7 +420,8 @@ But the error would have to affect 10+ independent predictions,
 all in the right direction, with high precision.
 
 This is extraordinarily unlikely.
-""")
+"""
+)
 
 # =============================================================================
 # THE ONTOLOGY
@@ -416,7 +432,8 @@ print("VIII. WHAT W33 TELLS US ABOUT REALITY")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 If W33 is correct, reality has a remarkable structure:
 
   ┌─────────────────────────────────────────────────────────────────────┐
@@ -455,7 +472,8 @@ If W33 is correct, reality has a remarkable structure:
 The universe is MATHEMATICAL at its core.
 Not just described by math - it IS math.
 Specifically, it is the W33 design embedded in octonionic geometry.
-""")
+"""
+)
 
 # =============================================================================
 # FUTURE PREDICTIONS (TESTABLE)
@@ -466,7 +484,8 @@ print("IX. PREDICTIONS FOR FUTURE EXPERIMENTS")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ╔═══════════════════════════════════════════════════════════════════════╗
 ║                    TESTABLE PREDICTIONS                               ║
 ╠═══════════════════════════════════════════════════════════════════════╣
@@ -494,7 +513,8 @@ print("""
 ║     Prediction: Additional gauge bosons, exotic fermions              ║
 ║     Test: Future high-energy colliders                                ║
 ╚═══════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # THE FORMULAS REFERENCE CARD
@@ -505,7 +525,8 @@ print("X. QUICK REFERENCE: THE W33 FORMULAS")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ╔═══════════════════════════════════════════════════════════════════════╗
 ║                    W33 FORMULA REFERENCE CARD                         ║
 ╠═══════════════════════════════════════════════════════════════════════╣
@@ -538,7 +559,8 @@ print("""
 ║    Derived: 137, 173, 1111                                           ║
 ║                                                                       ║
 ╚═══════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # FINAL WORDS
@@ -549,7 +571,8 @@ print("XI. CONCLUSION")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ╔═══════════════════════════════════════════════════════════════════════╗
 ║                                                                       ║
 ║                     THE W33 THEORY OF EVERYTHING                      ║
@@ -577,15 +600,16 @@ print("""
 ╚═══════════════════════════════════════════════════════════════════════╝
 
                     ═══════════════════════════════
-                    
+
                     "God used beautiful mathematics
                      in creating the world."
                                     - Paul Dirac
-                    
+
                     He used W(3,3).
-                    
+
                     ═══════════════════════════════
-""")
+"""
+)
 
 print("=" * 72)
 print("END OF PART XXXV: THE MASTER SUMMARY")

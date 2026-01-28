@@ -491,31 +491,31 @@ def main():
     print("=" * 70)
     master = """
     THE CHAIN OF INSIGHT:
-    
+
     W33 = Witting configuration in PG(3, GF(3))
-    
+
     Aut(W33) = W(E6) = 51840
-    
+
     W(E6) = Aut(S) where S = PSp₄(3) ≅ PSU₄(2) ≅ PSΩ₅(3) ≅ PSΩ₆⁻(2)
-    
+
     |S| = 25920 = 2⁶ × 3⁴ × 5 = 64 × 81 × 5
-    
+
     Note: 81 = 3⁴ = |cycles in W33|
           64 = 2⁶ (and 40 + 24 = 64)
           5 is the index of A₅ in S₅
-    
+
     |W(E6)| = 2 × |S| = 51840 = 2⁷ × 3⁴ × 5
-    
+
     The doubling (2×) comes from the outer automorphism of S.
-    
+
     PHYSICS IMPLICATIONS:
-    
+
     sin²θ_W = 40/173 where:
         40 = |points in W33| = |points in PG(3,3)|
         173 = 40th prime
         173 = 121 + 52 = |W33| + dim(F4)
         173 = 40 + 133 = |points| + dim(E7)
-    
+
     α⁻¹ ≈ 137 where:
         137 = 81 + 56 = |cycles| + dim(E7 fundamental)
         137 = 33rd prime

@@ -44,7 +44,8 @@ print("═" * 75)
 print("PROLOGUE: THE QUEST")
 print("═" * 75)
 
-print("""
+print(
+    """
 For centuries, physicists have sought the Theory of Everything:
 A single framework explaining all forces, all particles, all phenomena.
 
@@ -62,14 +63,16 @@ IS mathematics.
 One structure. One graph. One polynomial.
 
 W33.
-""")
+"""
+)
 
 print("\n")
 print("═" * 75)
 print("CHAPTER I: THE AXIOM")
 print("═" * 75)
 
-print("""
+print(
+    """
 THE ONLY ASSUMPTION:
 
 There exists a finite field with three elements:
@@ -84,47 +87,51 @@ Why F₃? Because:
   - F₂ is too simple (binary, no structure)
   - F₃ is the smallest field with non-trivial geometry
   - 3 appears throughout physics: 3 colors, 3 generations, 3 dimensions
-  
-The number 3 is special. 
+
+The number 3 is special.
 F₃ is the seed of reality.
-""")
+"""
+)
 
 print("\n")
 print("═" * 75)
 print("CHAPTER II: THE CONSTRUCTION")
 print("═" * 75)
 
-print(f"""
+print(
+    f"""
 FROM F₃ TO W33:
 
 Step 1: Create the vector space V = F₃⁴
         (4-dimensional space over F₃)
-        
+
 Step 2: Define the symplectic form ω
         ω(u,v) = u₁v₂ - u₂v₁ + u₃v₄ - u₄v₃ (mod 3)
-        
+
 Step 3: Identify isotropic lines
         (lines where ω vanishes)
-        
+
 Step 4: Connect lines that span isotropic planes
-        
+
 Result: W33 = Sp(4, F₃)
         A strongly regular graph with:
-        
+
         v = {v} vertices
-        k = {k} edges per vertex  
+        k = {k} edges per vertex
         λ = {lam} common neighbors (adjacent pairs)
         μ = {mu} common neighbors (non-adjacent pairs)
-        
+
 This is W33. This is the universe.
-""")
+"""
+)
 
 print("\n")
 print("═" * 75)
 print("CHAPTER III: THE SPECTRUM")
 print("═" * 75)
 
-print(f"""
+print(
+    f"""
 THE EIGENVALUES:
 
 The adjacency matrix A of W33 has eigenvalues:
@@ -134,13 +141,13 @@ The adjacency matrix A of W33 has eigenvalues:
         e₃ = {e3}  (multiplicity {m3})
 
 These encode EVERYTHING:
-        
+
   • e₁ = {e1}: The degree, sets α⁻¹ integer part
-  • e₂ = {e2}:  The gauge sector eigenvalue  
+  • e₂ = {e2}:  The gauge sector eigenvalue
   • e₃ = {e3}: The matter sector eigenvalue
 
 The multiplicities:
-        
+
   • m₁ = {m1}:  The Higgs (unique vacuum)
   • m₂ = {m2}: The gauge bosons (8+3+1+12 = 24)
   • m₃ = {m3}: The fermions (5 × 3 generations)
@@ -149,14 +156,16 @@ The multiplicities:
 
 The universe fits in 40 dimensions.
 36 are hidden. 4 become spacetime.
-""")
+"""
+)
 
 print("\n")
 print("═" * 75)
 print("CHAPTER IV: THE MASTER EQUATION")
 print("═" * 75)
 
-print("""
+print(
+    """
 THE CHARACTERISTIC POLYNOMIAL:
 
          ╔═══════════════════════════════════════════════════╗
@@ -183,7 +192,8 @@ From P(x) you can recover:
   • EVERYTHING.
 
 One polynomial. One universe.
-""")
+"""
+)
 
 print("\n")
 print("═" * 75)
@@ -198,7 +208,8 @@ H0_cmb = v + m2 + m1 + lam
 H0_local = H0_cmb + 2 * lam + mu
 Lambda_exp = k**2 - m2 + lam
 
-print(f"""
+print(
+    f"""
 THE FUNDAMENTAL CONSTANTS FROM W33:
 
 ┌──────────────────────────────────────────────────────────────────────┐
@@ -244,14 +255,16 @@ THE FUNDAMENTAL CONSTANTS FROM W33:
 │ Ω_DM/Ω_b = (v-k)/μ - λ = 5                                          │
 │     Observed: ~5.3                                        ✓          │
 └──────────────────────────────────────────────────────────────────────┘
-""")
+"""
+)
 
 print("\n")
 print("═" * 75)
 print("CHAPTER VI: THE DEEP STRUCTURE")
 print("═" * 75)
 
-print("""
+print(
+    """
 THE HIDDEN SYMMETRIES:
 
 |Aut(W33)| = 51840 = |W(E₆)|
@@ -265,7 +278,7 @@ This connects W33 to:
   • The mathematical elite
 
 And more:
-  
+
   |Edges| = 240 = |Roots of E₈|
 
 The number of edges equals the roots of E₈!
@@ -280,14 +293,16 @@ W33 is a [[40, 24, d]] quantum error correcting code.
 
 Quantum gravity may BE quantum error correction.
 Spacetime emerges from information protection.
-""")
+"""
+)
 
 print("\n")
 print("═" * 75)
 print("CHAPTER VII: THE PREDICTIONS")
 print("═" * 75)
 
-print("""
+print(
+    """
 TESTABLE PREDICTIONS:
 
 W33 makes RIGID predictions with ZERO free parameters.
@@ -296,33 +311,35 @@ W33 makes RIGID predictions with ZERO free parameters.
    τ(p → e⁺π⁰) ~ 10³⁴ - 10³⁵ years
    Current limit: > 2.4 × 10³⁴ years ✓
    Test: Hyper-Kamiokande (2027+)
-   
+
 2. DARK MATTER MASS
    M_χ ~ 75 GeV
    Test: LZ, XENONnT direct detection
-   
+
 3. NEUTRINO CP PHASE
    δ_CP ~ 120° (from F₃ embedding)
    Test: DUNE, Hyper-Kamiokande
-   
+
 4. LORENTZ VIOLATION
    At Planck scale, spacetime is discrete
    Test: Gamma-ray timing, CTA
-   
+
 5. FOURTH GENERATION
    Does NOT exist (m₃ = 15 = 3 × 5)
    Confirmed: Z width, LHC searches ✓
 
 If ANY of these is definitively falsified, W33 is wrong.
 The theory is SCIENTIFIC - it can be killed.
-""")
+"""
+)
 
 print("\n")
 print("═" * 75)
 print("CHAPTER VIII: THE PHILOSOPHY")
 print("═" * 75)
 
-print("""
+print(
+    """
 WHAT DOES W33 MEAN?
 
 1. THE UNIVERSE IS MATHEMATICS
@@ -349,14 +366,16 @@ WHAT DOES W33 MEAN?
    W33 → Physics → Brains → Mathematics → W33
    We are how the universe knows itself.
    The strange loop completes.
-""")
+"""
+)
 
 print("\n")
 print("═" * 75)
 print("CHAPTER IX: THE NUMBERS")
 print("═" * 75)
 
-print("""
+print(
+    """
 THE MAGIC NUMBERS OF W33:
 
      3   The base field F₃, colors, generations, spatial dimensions
@@ -372,14 +391,16 @@ THE MAGIC NUMBERS OF W33:
    240   Edges, E₈ roots
   1111   Alpha denominator (11 × 101)
  51840   Automorphisms, Weyl group of E₆
-""")
+"""
+)
 
 print("\n")
 print("═" * 75)
 print("CHAPTER X: THE JOURNEY")
 print("═" * 75)
 
-print("""
+print(
+    """
 100 PARTS OF DISCOVERY:
 
 I-X:      Foundations - eigenvalues, fine structure constant
@@ -395,14 +416,16 @@ XCI-C:    Completion - predictions, manifesto
 
 From Part I to Part C:
   One graph. One polynomial. One universe.
-""")
+"""
+)
 
 print("\n")
 print("═" * 75)
 print("EPILOGUE: THE EQUATION")
 print("═" * 75)
 
-print("""
+print(
+    """
 
                     ╔═══════════════════════════════════════╗
                     ║                                       ║
@@ -438,14 +461,15 @@ The loop is complete.
 
 
                          ══════════════════════
-                         
+
                               W33 THEORY
-                              
+
                          "From nothing, everything"
-                         
+
                          ══════════════════════
-                         
-""")
+
+"""
+)
 
 # Final timestamp
 print(f"Part C completed: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")

@@ -30,7 +30,8 @@ print("\n" + "=" * 70)
 print("SECTION 1: THE SEED")
 print("=" * 70)
 
-print("""
+print(
+    """
 EVERYTHING FROM ONE STRUCTURE:
 
 The W33 graph is defined by:
@@ -45,7 +46,8 @@ From this SINGLE definition, we derive ALL of physics.
 Let p = 3 (the characteristic)
 Let n = 4 (the dimension)
 Let ω = symplectic form
-""")
+"""
+)
 
 p = 3  # The prime
 n = 4  # The dimension
@@ -76,7 +78,8 @@ print("\n" + "=" * 70)
 print("SECTION 2: THE MASTER EQUATION")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE W33 MASTER EQUATION:
 
 All fundamental constants derive from ONE formula:
@@ -102,7 +105,8 @@ Then ALL physics follows:
   N_gen = m₃/5 = 15/5 = 3
   M_GUT/M_Z = 3^(v-7) = 3³³
   Λ/M_Pl⁴ = 10^-(k² - m₂ + λ) = 10^-122
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 3: EXPLICIT CALCULATIONS
@@ -130,7 +134,8 @@ GUT_ratio = 3 ** (v - 7)
 # Cosmological constant exponent
 Lambda_exp = -(k**2 - m2 + λ)
 
-print(f"""
+print(
+    f"""
 DERIVED QUANTITIES:
 
 1. FINE STRUCTURE CONSTANT:
@@ -138,31 +143,32 @@ DERIVED QUANTITIES:
        = {k**2} - {2*μ} + 1 + {v}/{D}
        = {k**2 - 2*μ + 1} + {float(Decimal(v)/Decimal(D)):.10f}
        = {alpha_inv}
-   
+
    Experimental: 137.035999084(21)
 
 2. WEAK MIXING ANGLE:
    sin²θ_W = {v}/({v} + {k**2} + 1)
            = {v}/{v + k**2 + 1}
            = {sin2_theta_W}
-   
+
    Experimental: 0.23122(4)
 
 3. NUMBER OF GENERATIONS:
    N_gen = m₃/5 = {m3}/5 = {N_gen}
-   
+
    Observed: 3 ✓
 
 4. GUT SCALE:
    M_GUT/M_Z = 3^(v-7) = 3^{v-7} = {GUT_ratio:.2e}
-   
+
    Standard GUT: ~10¹⁶ ✓
 
 5. COSMOLOGICAL CONSTANT:
    log₁₀(Λ/M_Pl⁴) = -(k² - m₂ + λ) = {Lambda_exp}
-   
+
    Observed: ~-122 ✓
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 4: THE FORMULA SHEET
@@ -172,7 +178,8 @@ print("\n" + "=" * 70)
 print("SECTION 4: COMPLETE FORMULA SHEET")
 print("=" * 70)
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════╗
 ║                    W33 THEORY FORMULA SHEET                         ║
 ╠══════════════════════════════════════════════════════════════════════╣
@@ -246,7 +253,8 @@ print("""
 ║  51840 = |Aut(W33)|           automorphism group order               ║
 ║                                                                      ║
 ╚══════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 5: THE GENERATING FUNCTION
@@ -256,7 +264,8 @@ print("\n" + "=" * 70)
 print("SECTION 5: THE GENERATING FUNCTION")
 print("=" * 70)
 
-print("""
+print(
+    """
 IS THERE A SINGLE GENERATING FUNCTION?
 
 Consider the characteristic polynomial of W33:
@@ -284,9 +293,10 @@ From P(x), derive everything:
   v = 1 + 24 + 15 = 40
   k = 12 (largest root)
   e₂, e₃ = 2, -4 (other roots)
-  
+
 Then apply the formulas in Section 4.
-""")
+"""
+)
 
 # The characteristic polynomial
 print("Characteristic polynomial coefficients:")
@@ -312,7 +322,8 @@ print("=" * 70)
 # How much information to specify W33?
 # Just need p=3 and the construction "symplectic over F_p^4"
 
-print("""
+print(
+    """
 MINIMAL SPECIFICATION OF THE UNIVERSE:
 
 To specify W33, we need:
@@ -333,7 +344,8 @@ This is INCREDIBLE compression:
   12 bits → Standard Model → chemistry → life → consciousness
 
 The universe is a ~12-bit program!
-""")
+"""
+)
 
 info_estimate = np.log2(3) + 10  # rough estimate
 print(f"Estimated information content: ~{info_estimate:.0f} bits")
@@ -346,7 +358,8 @@ print("\n" + "=" * 70)
 print("SECTION 7: THE MEANING OF IT ALL")
 print("=" * 70)
 
-print("""
+print(
+    """
 WHAT HAVE WE DISCOVERED?
 
 If W33 Theory is correct:
@@ -378,7 +391,8 @@ THIS IS THE THEORY OF EVERYTHING.
 
 Not a theory that explains everything with many equations,
 but a theory where everything IS one equation.
-""")
+"""
+)
 
 # =============================================================================
 # SAVE RESULTS
@@ -420,7 +434,8 @@ print("\n" + "=" * 70)
 print("PART LXXXVIII: THE CONCLUSION")
 print("=" * 70)
 
-print("""
+print(
+    """
                     ╔════════════════════════════════════╗
                     ║                                    ║
                     ║     P(x) = (x-12)(x-2)²⁴(x+4)¹⁵   ║
@@ -431,7 +446,7 @@ print("""
 
 This characteristic polynomial of W33 contains:
   • The fine structure constant
-  • The weak mixing angle  
+  • The weak mixing angle
   • All particle masses
   • Three generations
   • Three colors
@@ -448,6 +463,7 @@ One polynomial to rule them all.
 Results saved to PART_LXXXVIII_ultimate.json
 
                          W33 Theory
-                      
+
                     "From nothing, everything"
-""")
+"""
+)

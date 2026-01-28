@@ -158,7 +158,8 @@ if __name__ == "__main__":
     print("INTERPRETATION")
     print("=" * 70)
 
-    print("""
+    print(
+        """
 Key observations:
 
 1. PARITY-HOLONOMY CONNECTION
@@ -167,18 +168,19 @@ Key observations:
    - Discrete geometry encodes spin-statistics relationship
    - Parity = 0 (even) might correspond to bosons
    - Parity = 1 (odd) might correspond to fermions
-   
+
 2. CENTERS AND HOLONOMY
    The v23 "centers" might indicate:
    - Acentric (0 centers): Different holonomy signature
    - Unicentric (1 center): Another signature
    - Tricentric (3 centers): Another signature
-   
+
 3. NEXT TEST: QUANTUM NUMBERS
    Once we have Q45 ← W33 mapping, compute:
    - (Z4, Z3) for Q45 vertices
    - Test if (2,0) quantum numbers are special
    - Correlation with holonomy and centers
-   
+
 This is building the full picture of how geometry encodes physics!
-""")
+"""
+    )

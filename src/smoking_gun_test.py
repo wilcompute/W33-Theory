@@ -224,24 +224,26 @@ def compute_mass_matrix_structure():
     # then mass matrix elements could be:
     #   M_{i,j} = <vertex_i_fiber_state | interaction | vertex_j_fiber_state>
 
-    print(f"""
+    print(
+        f"""
 Potential Mass Matrix Structure:
   Dimension: 45 × 6 = 270 states (if all were equivalent)
-  
+
 Actual structure may be constrained by:
   1. Fermion triangles (2160): define fermion mass terms
   2. Boson triangles (2880): define gauge boson masses
   3. Topological triangles (240): protected sector
-  
+
 If Q45 structure is SU(5) fundamental representation,
 expected mass patterns:
   - 5 light states (could be leptons + 1 light quark)
   - 10 heavy states (could be quarks + anti-leptons)
   - Mixing angles from fiber coupling
-  
+
 Prediction: Mass spectrum should show 2-3 families
            with specific mass ratios from geometry
-""")
+"""
+    )
 
 
 if __name__ == "__main__":
@@ -253,7 +255,8 @@ if __name__ == "__main__":
     print("\n" + "=" * 70)
     print("CONCLUSION")
     print("=" * 70)
-    print("""
+    print(
+        """
 Q45 structure with all vertices at (Z4, Z3) = (2, 0):
 
 ✓ Consistent with SU(5) fundamental rep
@@ -263,4 +266,5 @@ Q45 structure with all vertices at (Z4, Z3) = (2, 0):
 
 Next test: Extract actual vertex potentials and
 compute mass eigenvalues.
-""")
+"""
+    )

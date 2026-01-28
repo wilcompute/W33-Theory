@@ -1,38 +1,38 @@
 #!/usr/bin/env python3
-"""
-╔══════════════════════════════════════════════════════════════════════════════╗
-║                                                                              ║
-║                    THEORY OF EVERYTHING - PART LII                           ║
-║                                                                              ║
-║                     COMPLETE PREDICTION SUMMARY                              ║
-║                                                                              ║
-║                    All Predictions • All Agreements • All Units              ║
-║                                                                              ║
-╚══════════════════════════════════════════════════════════════════════════════╝
+#
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                    THEORY OF EVERYTHING - PART LII                           ║
+# ║                                                                              ║
+# ║                     COMPLETE PREDICTION SUMMARY                              ║
+# ║                                                                              ║
+# ║                    All Predictions • All Agreements • All Units              ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+#
+# Part LII: A complete catalog of all W33 predictions with:
+#   - The exact formula
+#   - The geometric origin of each number
+#   - The predicted value
+#   - The experimental value
+#   - The percent agreement
+#
+# This is the MASTER REFERENCE for the W33 Theory of Everything.
 
-Part LII: A complete catalog of all W33 predictions with:
-  - The exact formula
-  - The geometric origin of each number
-  - The predicted value
-  - The experimental value
-  - The percent agreement
-
-This is the MASTER REFERENCE for the W33 Theory of Everything.
-"""
 
 import numpy as np
 
-print("""
-╔══════════════════════════════════════════════════════════════════════════════╗
-║                                                                              ║
-║                    THEORY OF EVERYTHING - PART LII                           ║
-║                                                                              ║
-║                     COMPLETE PREDICTION SUMMARY                              ║
-║                                                                              ║
-║                    All Predictions • All Agreements • All Units              ║
-║                                                                              ║
-╚══════════════════════════════════════════════════════════════════════════════╝
-""")
+print(  #
+    # ╔══════════════════════════════════════════════════════════════════════════════╗
+    # ║                                                                              ║
+    # ║                    THEORY OF EVERYTHING - PART LII                           ║
+    # ║                                                                              ║
+    # ║                     COMPLETE PREDICTION SUMMARY                              ║
+    # ║                                                                              ║
+    # ║                    All Predictions • All Agreements • All Units              ║
+    # ║                                                                              ║
+    # ╚══════════════════════════════════════════════════════════════════════════════╝
+)
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # W33 STRUCTURE (All dimensionless geometric counts)
@@ -82,21 +82,45 @@ print()
 
 predictions = []
 
-def add_prediction(name, formula, W33_numbers_used, predicted, observed, units, agreement):
-    predictions.append({
-        'name': name,
-        'formula': formula,
-        'W33_numbers': W33_numbers_used,
-        'predicted': predicted,
-        'observed': observed,
-        'units': units,
-        'agreement': agreement
-    })
+
+def add_prediction(
+    name, formula, W33_numbers_used, predicted, observed, units, agreement
+):
+    predictions.append(
+        {
+            "name": name,
+            "formula": formula,
+            "W33_numbers": W33_numbers_used,
+            "predicted": predicted,
+            "observed": observed,
+            "units": units,
+            "agreement": agreement,
+        }
+    )
+
 
 # FUNDAMENTAL CONSTANTS
-add_prediction("α⁻¹", "81 + 56 + 40/1111", "cyc, E7f, pts, R4", 137.036004, 137.035999, "dimensionless", "3.3×10⁻⁸")
-add_prediction("sin²θ_W", "40/(40+133)", "pts, E7a", 0.231214, 0.23121, "dimensionless", "0.1σ")
-add_prediction("α_s(M_Z)", "27/(240-11)", "E6f, E8r, √tot", 0.1179, 0.1179, "dimensionless", "EXACT")
+add_prediction(
+    "α⁻¹",
+    "81 + 56 + 40/1111",
+    "cyc, E7f, pts, R4",
+    137.036004,
+    137.035999,
+    "dimensionless",
+    "3.3×10⁻⁸",
+)
+add_prediction(
+    "sin²θ_W", "40/(40+133)", "pts, E7a", 0.231214, 0.23121, "dimensionless", "0.1σ"
+)
+add_prediction(
+    "α_s(M_Z)",
+    "27/(240-11)",
+    "E6f, E8r, √tot",
+    0.1179,
+    0.1179,
+    "dimensionless",
+    "EXACT",
+)
 
 # PARTICLE MASSES (quarks)
 add_prediction("m_t", "v × √(40/81)", "pts, cyc", 173.03, 172.76, "GeV", "0.15%")
@@ -129,21 +153,35 @@ add_prediction("|V_ub|", "1 / 250", "E8+2", 0.0040, 0.00394, "dimensionless", "1
 add_prediction("θ₁₂", "arcsin(√(27/81))", "E6f, cyc", 35.26, 33.44, "degrees", "5.4%")
 add_prediction("θ₂₃", "arctan(√(40/40))", "pts, lin", 45.0, 49.2, "degrees", "8.5%")
 add_prediction("θ₁₃", "arcsin(√(3/211))", "gen, tot+K4", 6.85, 8.57, "degrees", "20%")
-add_prediction("δ_CP (lept)", "π + arcsin(27/133)", "E6f, E7a", 191.7, 197, "degrees", "2.7%")
+add_prediction(
+    "δ_CP (lept)", "π + arcsin(27/133)", "E6f, E7a", 191.7, 197, "degrees", "2.7%"
+)
 
 # COSMOLOGY
 add_prediction("Ω_DM/Ω_b", "27 / 5", "E6f, dark", 5.4, 5.408, "dimensionless", "0.15%")
 add_prediction("N_gen", "81 / 27", "cyc, E6f", 3, 3, "integer", "EXACT")
 add_prediction("n_s", "1 - 2/56", "E7f", 0.9643, 0.9649, "dimensionless", "0.06%")
-add_prediction("r (tensor)", "8 / 56²", "oct, E7f", 0.0026, "<0.064", "dimensionless", "consistent")
+add_prediction(
+    "r (tensor)", "8 / 56²", "oct, E7f", 0.0026, "<0.064", "dimensionless", "consistent"
+)
 
 # COSMOLOGICAL CONSTANT
-add_prediction("-log₁₀(Λ/M_P⁴)", "121 + 1/2 + 1/27", "tot, E6f", 121.54, "~122", "dimensionless", "~0.4%")
+add_prediction(
+    "-log₁₀(Λ/M_P⁴)",
+    "121 + 1/2 + 1/27",
+    "tot, E6f",
+    121.54,
+    "~122",
+    "dimensionless",
+    "~0.4%",
+)
 
 # SPACETIME
 add_prediction("D (dimensions)", "√121", "tot", 11, 11, "integer", "EXACT")
 add_prediction("N_GW (pol)", "90 / 45", "K4", 2, 2, "integer", "EXACT")
-add_prediction("Koide Q", "2×27 / 81", "E6f, cyc", 0.6667, 0.66666, "dimensionless", "0.001%")
+add_prediction(
+    "Koide Q", "2×27 / 81", "E6f, cyc", 0.6667, 0.66666, "dimensionless", "0.001%"
+)
 
 # QCD
 add_prediction("β₀", "11 - 4", "√tot, gen", 7, 7, "integer", "EXACT")
@@ -159,7 +197,11 @@ print()
 print("┌" + "─" * 78 + "┐")
 print("│ {:^76} │".format("FUNDAMENTAL CONSTANTS"))
 print("├" + "─" * 78 + "┤")
-print("│ {:15} │ {:25} │ {:10} │ {:10} │ {:8} │".format("Parameter", "W33 Formula", "Predicted", "Observed", "Agree"))
+print(
+    "│ {:15} │ {:25} │ {:10} │ {:10} │ {:8} │".format(
+        "Parameter", "W33 Formula", "Predicted", "Observed", "Agree"
+    )
+)
 print("├" + "─" * 78 + "┤")
 
 categories = {
@@ -180,10 +222,20 @@ for cat, names in categories.items():
     print("│ {:^76} │".format(cat))
     print("├" + "─" * 78 + "┤")
     for p in predictions:
-        if p['name'] in names:
-            pred_str = f"{p['predicted']}" if isinstance(p['predicted'], int) else f"{p['predicted']:.4f}" if p['predicted'] < 1 else f"{p['predicted']:.2f}"
-            obs_str = str(p['observed'])
-            print(f"│ {p['name']:15} │ {p['formula'][:25]:25} │ {pred_str:>10} │ {obs_str:>10} │ {p['agreement']:>8} │")
+        if p["name"] in names:
+            pred_str = (
+                f"{p['predicted']}"
+                if isinstance(p["predicted"], int)
+                else (
+                    f"{p['predicted']:.4f}"
+                    if p["predicted"] < 1
+                    else f"{p['predicted']:.2f}"
+                )
+            )
+            obs_str = str(p["observed"])
+            print(
+                f"│ {p['name']:15} │ {p['formula'][:25]:25} │ {pred_str:>10} │ {obs_str:>10} │ {p['agreement']:>8} │"
+            )
     print("├" + "─" * 78 + "┤")
 
 print("└" + "─" * 78 + "┘")
@@ -198,16 +250,26 @@ print("AGREEMENT STATISTICS")
 print("=" * 80)
 print()
 
-exact_count = sum(1 for p in predictions if "EXACT" in str(p['agreement']))
-sub_1pct = sum(1 for p in predictions if any(x in str(p['agreement']) for x in ['0.', '10⁻']))
+exact_count = sum(1 for p in predictions if "EXACT" in str(p["agreement"]))
+sub_1pct = sum(
+    1 for p in predictions if any(x in str(p["agreement"]) for x in ["0.", "10⁻"])
+)
+
+
 # Handle percentage agreements carefully - strip ~ and other characters
 def parse_percent(s):
     try:
-        clean = str(s).replace('%','').replace('~','').replace('×10⁻⁸','').strip()
+        clean = str(s).replace("%", "").replace("~", "").replace("×10⁻⁸", "").strip()
         return float(clean.split()[0])
     except:
         return 100.0  # Non-percentage entries
-sub_5pct = sum(1 for p in predictions if '%' in str(p['agreement']) and parse_percent(p['agreement']) < 5)
+
+
+sub_5pct = sum(
+    1
+    for p in predictions
+    if "%" in str(p["agreement"]) and parse_percent(p["agreement"]) < 5
+)
 total = len(predictions)
 
 print(f"  Total predictions:           {total}")
@@ -307,136 +369,134 @@ print("  or EXACT for integer quantities.")
 print()
 print("═" * 80)
 
-"""
-PART CLIV: SPREADS AND QUANTUM CODING (DETAIL)
-==============================================
+#
+# PART CLIV: SPREADS AND QUANTUM CODING (DETAIL)
+# ==============================================
+#
+# # Spreads in Sp₄(3):
+# # A spread is a set of 10 disjoint orthonormal bases (lines) that partition all 40 states.
+# # This is equivalent to a complete set of mutually orthogonal subspaces.
+#
+# import numpy as np
+# from itertools import combinations
+# from collections import defaultdict
+#
+# omega = np.exp(2j * np.pi / 3)
+#
+# def build_witting_states():
+#     states = []
+#     for i in range(4):
+#         v = np.zeros(4, dtype=complex)
+#         v[i] = 1
+#         states.append(v)
+#     for mu in [0, 1, 2]:
+#         for nu in [0, 1, 2]:
+#             states.append(np.array([0, 1, -omega**mu, omega**nu]) / np.sqrt(3))
+#     for mu in [0, 1, 2]:
+#         for nu in [0, 1, 2]:
+#             states.append(np.array([1, 0, -omega**mu, -omega**nu]) / np.sqrt(3))
+#     for mu in [0, 1, 2]:
+#         for nu in [0, 1, 2]:
+#             states.append(np.array([1, -omega**mu, 0, omega**nu]) / np.sqrt(3))
+#     for mu in [0, 1, 2]:
+#         for nu in [0, 1, 2]:
+#             states.append(np.array([1, omega**mu, omega**nu, 0]) / np.sqrt(3))
+#     return states
+#
+# states = build_witting_states()
+#
+# def is_orthogonal(i, j):
+#     return abs(np.vdot(states[i], states[j]))**2 < 1e-10
+#
+# # Find all orthonormal bases (lines)
+# lines = []
+# for a in range(40):
+#     for b in range(a+1, 40):
+#         if not is_orthogonal(a, b):
+#             continue
+#         for c in range(b+1, 40):
+#             if not (is_orthogonal(a, c) and is_orthogonal(b, c)):
+#                 continue
+#             for d in range(c+1, 40):
+#                 if is_orthogonal(a, d) and is_orthogonal(b, d) and is_orthogonal(c, d):
+#                     lines.append(tuple(sorted([a, b, c, d])))
+# lines = list(set(lines))
+#
+# # Greedy spread finder
+# used_points = set()
+# spread = []
+# available_lines = list(lines)
+# import random
+# random.seed(42)
+# random.shuffle(available_lines)
+# for line in available_lines:
+#     if not any(p in used_points for p in line):
+#         spread.append(line)
+#         used_points.update(line)
+# print(f"Found spread with {len(spread)} lines covering {len(used_points)} points.")
+# if len(spread) == 10:
+#     print("Spread found! Lines:")
+#     for line in spread:
+#         print(f"  {line}")
+#
+# # PART CLV: QUANTUM CIRCUITS FOR WITTING STATES (DETAIL)
+# # ======================================================
+# #
+# # Each Witting state can be prepared from |0⟩ by a sequence of Clifford and triflection gates.
+# # For illustration, we show the circuit for the first few states.
+# #
+# # from math import pi
+# #
+# # from qiskit import QuantumCircuit
+# #
+# #
+# # def witting_circuit(index):
+# #     qc = QuantumCircuit(2)
+# #     if index == 0:
+# #         # |0⟩
+# #         pass
+# #     elif index == 1:
+# #         # |1⟩
+# #         qc.x(0)
+# #     elif index == 2:
+# #         # |2⟩
+# #         qc.x(1)
+# #     elif index == 3:
+# #         # |3⟩
+# #         qc.x(0)
+# #         qc.x(1)
+# #     else:
+# #         # For superpositions, use Hadamard and phase gates
+# #         qc.h(0)
+# #         qc.h(1)
+# #         qc.rz(2*pi/3, 0)
+# #         qc.rz(2*pi/3, 1)
+# #     return qc
+# #
+# # for i in range(4):
+# #     print(f"Quantum circuit for Witting state {i}:")
+# #     print(witting_circuit(i))
+# #
+# # PART CLVI: HIGHER-DIMENSIONAL GENERALIZATION (DETAIL)
+# # =====================================================
+# #
+# # Explore Sp₄(q) for q = 5, 7
+# # Compute parameters and compare to Sp₄(3)
+# #
+# # def srg_parameters(q):
+# #     v = (q**2 + 1)*(q + 1)
+# #     k = q*(q + 1)
+# #     lam = q - 1
+# #     mu = q + 1
+# #     return v, k, lam, mu
+# #
+# # for q in [3, 5, 7]:
+# #     v, k, lam, mu = srg_parameters(q)
+# #     print(f"Sp₄({q}): v={v}, k={k}, λ={lam}, μ={mu}")
+#
 
-# Spreads in Sp₄(3):
-# A spread is a set of 10 disjoint orthonormal bases (lines) that partition all 40 states.
-# This is equivalent to a complete set of mutually orthogonal subspaces.
-
-import numpy as np
-from itertools import combinations
-from collections import defaultdict
-
-omega = np.exp(2j * np.pi / 3)
-
-def build_witting_states():
-    states = []
-    for i in range(4):
-        v = np.zeros(4, dtype=complex)
-        v[i] = 1
-        states.append(v)
-    for mu in [0, 1, 2]:
-        for nu in [0, 1, 2]:
-            states.append(np.array([0, 1, -omega**mu, omega**nu]) / np.sqrt(3))
-    for mu in [0, 1, 2]:
-        for nu in [0, 1, 2]:
-            states.append(np.array([1, 0, -omega**mu, -omega**nu]) / np.sqrt(3))
-    for mu in [0, 1, 2]:
-        for nu in [0, 1, 2]:
-            states.append(np.array([1, -omega**mu, 0, omega**nu]) / np.sqrt(3))
-    for mu in [0, 1, 2]:
-        for nu in [0, 1, 2]:
-            states.append(np.array([1, omega**mu, omega**nu, 0]) / np.sqrt(3))
-    return states
-
-states = build_witting_states()
-
-def is_orthogonal(i, j):
-    return abs(np.vdot(states[i], states[j]))**2 < 1e-10
-
-# Find all orthonormal bases (lines)
-lines = []
-for a in range(40):
-    for b in range(a+1, 40):
-        if not is_orthogonal(a, b):
-            continue
-        for c in range(b+1, 40):
-            if not (is_orthogonal(a, c) and is_orthogonal(b, c)):
-                continue
-            for d in range(c+1, 40):
-                if is_orthogonal(a, d) and is_orthogonal(b, d) and is_orthogonal(c, d):
-                    lines.append(tuple(sorted([a, b, c, d])))
-lines = list(set(lines))
-
-# Greedy spread finder
-used_points = set()
-spread = []
-available_lines = list(lines)
-import random
-random.seed(42)
-random.shuffle(available_lines)
-for line in available_lines:
-    if not any(p in used_points for p in line):
-        spread.append(line)
-        used_points.update(line)
-print(f"Found spread with {len(spread)} lines covering {len(used_points)} points.")
-if len(spread) == 10:
-    print("Spread found! Lines:")
-    for line in spread:
-        print(f"  {line}")
-
-"""
-PART CLV: QUANTUM CIRCUITS FOR WITTING STATES (DETAIL)
-======================================================
-
-# Each Witting state can be prepared from |0⟩ by a sequence of Clifford and triflection gates.
-# For illustration, we show the circuit for the first few states.
-
-from math import pi
-
-from qiskit import QuantumCircuit
-
-
-def witting_circuit(index):
-    qc = QuantumCircuit(2)
-    if index == 0:
-        # |0⟩
-        pass
-    elif index == 1:
-        # |1⟩
-        qc.x(0)
-    elif index == 2:
-        # |2⟩
-        qc.x(1)
-    elif index == 3:
-        # |3⟩
-        qc.x(0)
-        qc.x(1)
-    else:
-        # For superpositions, use Hadamard and phase gates
-        qc.h(0)
-        qc.h(1)
-        qc.rz(2*pi/3, 0)
-        qc.rz(2*pi/3, 1)
-    return qc
-
-for i in range(4):
-    print(f"Quantum circuit for Witting state {i}:")
-    print(witting_circuit(i))
-
-"""
-PART CLVI: HIGHER-DIMENSIONAL GENERALIZATION (DETAIL)
-=====================================================
-
-# Explore Sp₄(q) for q = 5, 7
-# Compute parameters and compare to Sp₄(3)
-
-def srg_parameters(q):
-    v = (q**2 + 1)*(q + 1)
-    k = q*(q + 1)
-    lam = q - 1
-    mu = q + 1
-    return v, k, lam, mu
-
-for q in [3, 5, 7]:
-    v, k, lam, mu = srg_parameters(q)
-    print(f"Sp₄({q}): v={v}, k={k}, λ={lam}, μ={mu}")
-
-"""
-PART CLVII: WITTING POLYTOPE GEOMETRY
-=====================================
+# PART CLVII: WITTING POLYTOPE GEOMETRY
+# =====================================
 
 # The Witting polytope is a 4D regular polytope with 240 vertices.
 # The 40 Witting states are a distinguished subset, related to the E₆ root system.
@@ -444,36 +504,36 @@ PART CLVII: WITTING POLYTOPE GEOMETRY
 
 # ...existing code...
 
-"""
-PART CLVIII: AUTOMORPHISM GROUPS AND SYMMETRY
-=============================================
+#
+# PART CLVIII: AUTOMORPHISM GROUPS AND SYMMETRY
+# =============================================
+#
+# # The automorphism group of Sp₄(3) is W(E₆) ≅ G₃₄ (order 51840).
+# # Analyze the action on states, bases, spreads, and MUB systems.
+#
+# # ...existing code...
+#
 
-# The automorphism group of Sp₄(3) is W(E₆) ≅ G₃₄ (order 51840).
-# Analyze the action on states, bases, spreads, and MUB systems.
-
-# ...existing code...
-
-"""
-PART CLIX: CRYPTOGRAPHIC APPLICATIONS
-=====================================
+# PART CLIX: CRYPTOGRAPHIC APPLICATIONS
+# =====================================
 
 # Spreads and MUBs enable quantum key distribution and secret sharing.
 # Let's outline protocols and security implications.
 
 # ...existing code...
 
-"""
-PART CLX: CONNECTIONS TO PHYSICS
-================================
+#
+# PART CLX: CONNECTIONS TO PHYSICS
+# ================================
+#
+# # The Sp₄(3) structure encodes contextuality, quantum correlations, and geometric phases.
+# # Discuss implications for quantum foundations and physical theory.
+#
+# # ...existing code...
+#
 
-# The Sp₄(3) structure encodes contextuality, quantum correlations, and geometric phases.
-# Discuss implications for quantum foundations and physical theory.
-
-# ...existing code...
-
-"""
-PART CLXI: THE MASTER EQUATION AND PHYSICAL INTERPRETATION
-==========================================================
+# PART CLXI: THE MASTER EQUATION AND PHYSICAL INTERPRETATION
+# ==========================================================
 
 # The characteristic polynomial P(x) = (x - 12)(x - 2)^{24}(x + 4)^{15} encodes all spectral properties of Sp₄(3).
 # Each eigenvalue corresponds to a physical observable: energy, charge, mass, or quantum number.
@@ -481,29 +541,29 @@ PART CLXI: THE MASTER EQUATION AND PHYSICAL INTERPRETATION
 
 # ...existing code...
 
-"""
-PART CLXII: EMERGENCE OF SPACE, TIME, AND MATTER
-===============================================
+#
+# PART CLXII: EMERGENCE OF SPACE, TIME, AND MATTER
+# ===============================================
+#
+# # The combinatorial structure of Sp₄(3) gives rise to dimensionality, causality, and quantum fields.
+# # Analyze how the graph encodes spacetime, particle interactions, and conservation laws.
+#
+# # ...existing code...
+#
 
-# The combinatorial structure of Sp₄(3) gives rise to dimensionality, causality, and quantum fields.
-# Analyze how the graph encodes spacetime, particle interactions, and conservation laws.
-
-# ...existing code...
-
-"""
-PART CLXIII: QUANTUM GRAVITY AND COSMOLOGY
-==========================================
+# PART CLXIII: QUANTUM GRAVITY AND COSMOLOGY
+# ==========================================
 
 # Explore how the Witting configuration models quantum gravity, black holes, and the evolution of the universe.
 # Discuss connections to holography, entropy, and the arrow of time.
 
 # ...existing code...
 
-"""
-PART CLXIV: THE FINAL UNIFICATION
-=================================
-
-# Synthesize all results: Sp₄(3) as the unique mathematical structure encoding the laws of physics.
-# Present the unified framework and predictions for future experiments.
-
-# ...existing code...
+#
+# PART CLXIV: THE FINAL UNIFICATION
+# =================================
+#
+# # Synthesize all results: Sp₄(3) as the unique mathematical structure encoding the laws of physics.
+# # Present the unified framework and predictions for future experiments.
+#
+# # ...existing code...

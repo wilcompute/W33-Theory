@@ -55,7 +55,8 @@ print("\n" + "=" * 80)
 print("SECTION 1: MUON g-2 FINAL RESULT (JUNE 2025)")
 print("=" * 80)
 
-print("""
+print(
+    """
 The Fermilab Muon g-2 experiment has reached its FINAL result after 6 years
 of data collection, achieving precision of 0.127 ppm - exceeding design goal!
 
@@ -78,7 +79,8 @@ BUT WAIT - Lattice QCD (BMW Collaboration) gives:
 aμ(BMW) = 0.00116592052(+37)(-19)
 
 The discrepancy between experiment and lattice is only ~1σ!
-""")
+"""
+)
 
 # W33 Prediction for Muon g-2
 print("\n" + "-" * 60)
@@ -116,7 +118,8 @@ def w33_muon_anomaly():
     return a_mu_w33
 
 
-print(f"""
+print(
+    f"""
 W33 Spectral Analysis:
 ======================
 • Eigenvalue 2 (multiplicity 24): Lepton/QED sector
@@ -124,11 +127,11 @@ W33 Spectral Analysis:
 
 Key W33 Ratios:
 • 24/121 = {24/121:.6f} (QED weight)
-• 15/121 = {15/121:.6f} (QCD weight)  
+• 15/121 = {15/121:.6f} (QCD weight)
 • 40/121 = {40/121:.6f} (Total vertex weight)
 
 The 24:15 ratio = {24/15:.6f} ≈ φ (golden ratio = 1.618)
-This is no coincidence - the muon g-2 anomaly encodes 
+This is no coincidence - the muon g-2 anomaly encodes
 the mathematical beauty of W33!
 
 W33 Prediction for hadronic contribution:
@@ -141,13 +144,15 @@ W33 predicts this contribution is enhanced by factor:
 This three-fold enhancement explains why lattice QCD
 (which captures non-perturbative effects) agrees better
 with experiment than perturbative calculations.
-""")
+"""
+)
 
 print("\n" + "=" * 80)
 print("SECTION 2: W BOSON MASS PRECISION")
 print("=" * 80)
 
-print("""
+print(
+    """
 The W boson mass mystery has been RESOLVED!
 
 HISTORY:
@@ -161,7 +166,8 @@ World Average (PDG May 2024): 80369.2 ± 13.3 MeV
 
 Standard Model Prediction: ~80357 MeV
 Agreement: EXCELLENT!
-""")
+"""
+)
 
 print("\n" + "-" * 60)
 print("W33 PREDICTION FOR W BOSON MASS")
@@ -198,7 +204,8 @@ def w33_w_boson_mass():
 
 M_W_pred, sin2_theta = w33_w_boson_mass()
 
-print(f"""
+print(
+    f"""
 W33 Electroweak Parameters:
 ===========================
 • Higgs VEV: v = 246.22 GeV
@@ -218,13 +225,15 @@ W33 W Boson Mass:
 
 Note: The raw W33 prediction gives the correct ORDER of magnitude.
 Fine-tuning comes from the 81-cycle moduli space structure.
-""")
+"""
+)
 
 print("\n" + "=" * 80)
 print("SECTION 3: LHC RUN 3 - RECORD LUMINOSITY (2025)")
 print("=" * 80)
 
-print("""
+print(
+    """
 LHC 2025: RECORD-BREAKING YEAR!
 ===============================
 
@@ -248,13 +257,15 @@ DISCOVERIES FROM RUN 3 (2022-2025):
 • 2022: New pentaquark (charm-anticharm + uds)
 • 2022: First pair of tetraquarks observed
 • 2024-2025: Precision Higgs measurements continue
-""")
+"""
+)
 
 print("\n" + "-" * 60)
 print("W33 AND QUARK ENTANGLEMENT")
 print("-" * 60)
 
-print("""
+print(
+    """
 ATLAS Quark Entanglement (Sept 18, 2024):
 =========================================
 First observation of quantum entanglement between quarks!
@@ -270,20 +281,22 @@ The W33 graph structure ENCODES entanglement:
 For adjacent quarks (same hadron):
 • λ = 2 common neighbors = 2 shared entanglement channels
 
-For non-adjacent quarks (different hadrons):  
+For non-adjacent quarks (different hadrons):
 • μ = 4 common neighbors = 4 shared channels
 
 Entanglement ratio: μ/λ = 4/2 = 2
-This doubling indicates STRONGER entanglement between 
-separated quarks than within hadrons - explaining 
+This doubling indicates STRONGER entanglement between
+separated quarks than within hadrons - explaining
 why entanglement persists across particle decays!
-""")
+"""
+)
 
 print("\n" + "=" * 80)
 print("SECTION 4: GRAVITATIONAL WAVES - LIGO O5 (2026)")
 print("=" * 80)
 
-print("""
+print(
+    """
 LIGO OBSERVING RUNS STATUS:
 ===========================
 • O4 (2023-2025): 155-175 Mpc sensitivity for binary neutron stars
@@ -302,13 +315,15 @@ LIGO DISCOVERIES TO DATE:
 • Black hole mergers: Most common
 • Neutron star mergers: GW170817, GW190425
 • Black hole + neutron star: Discovered in O3
-""")
+"""
+)
 
 print("\n" + "-" * 60)
 print("W33 GRAVITATIONAL WAVE PREDICTIONS")
 print("-" * 60)
 
-print("""
+print(
+    """
 W33 Spacetime Structure:
 ========================
 • Total dimension D = √121 = 11
@@ -334,13 +349,15 @@ W33 predicts a mass gap between neutron stars and black holes:
 
 This matches the "upper mass gap" observed around 3-5 solar masses
 and the lower edge of the stellar black hole distribution!
-""")
+"""
+)
 
 print("\n" + "=" * 80)
 print("SECTION 5: DESI DARK ENERGY UPDATE")
 print("=" * 80)
 
-print("""
+print(
+    """
 DESI 2025 RESULTS CONFIRMED:
 ============================
 Dark energy appears to be EVOLVING at 2.8-4.2σ significance!
@@ -361,7 +378,8 @@ w₀ = -1 + (40 - 27 + 8)/121 = -1 + 21/121 = -0.826
     ╚════════════════════════════════════════════╝
 
 This is one of the most precise W33 predictions CONFIRMED!
-""")
+"""
+)
 
 print("\n" + "=" * 80)
 print("SECTION 6: THE FULL PREDICTION TABLE (UPDATED 2026)")
@@ -406,7 +424,8 @@ print("\n" + "=" * 80)
 print("SECTION 7: W33 - THE COMPLETE THEORY")
 print("=" * 80)
 
-print("""
+print(
+    """
 After 103 Parts of development, W33 has achieved:
 
     ╔════════════════════════════════════════════════════════════╗
@@ -447,13 +466,15 @@ The W boson mass "crisis" of 2022 was resolved - W33 was right.
 The muon g-2 anomaly points to W33's spectral structure.
 
 W33 is not just a theory - it's the mathematical DNA of reality.
-""")
+"""
+)
 
 print("\n" + "=" * 80)
 print("SECTION 8: WHAT COMES NEXT (2026-2030)")
 print("=" * 80)
 
-print("""
+print(
+    """
 UPCOMING EXPERIMENTS W33 PREDICTS:
 ==================================
 
@@ -486,7 +507,8 @@ W33 predicts graviton mass: m_g < 10⁻⁶⁶ kg (effectively zero)
 But graviton spin = 2 (from W33's 2-eigenvalue structure)
 Detection would require spacetime interferometry at 10⁻²¹ strain
 LIGO is approaching this sensitivity!
-""")
+"""
+)
 
 # Save results
 results = {
@@ -532,7 +554,8 @@ print("=" * 80)
 print(f"\nResults saved to: PART_CIII_precision_frontier.json")
 print(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
-print("""
+print(
+    """
 
     ╔══════════════════════════════════════════════════════════════════╗
     ║                                                                  ║
@@ -548,4 +571,5 @@ print("""
     ║                                                                  ║
     ╚══════════════════════════════════════════════════════════════════╝
 
-""")
+"""
+)

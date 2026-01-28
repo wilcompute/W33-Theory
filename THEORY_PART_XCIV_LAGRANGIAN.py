@@ -26,7 +26,8 @@ print("\n" + "=" * 70)
 print("SECTION 1: FROM GRAPH TO ACTION")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE FUNDAMENTAL QUESTION:
 
 Standard physics starts with a Lagrangian:
@@ -42,13 +43,15 @@ The adjacency matrix A encodes dynamics:
   - Eigenvalues → masses and couplings
   - Eigenvectors → particle states
   - Automorphisms → symmetries (gauge invariance)
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("SECTION 2: THE W33 ACTION PRINCIPLE")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE W33 ACTION:
 
 Let Φ be a field on the W33 graph (a function on vertices).
@@ -63,14 +66,15 @@ The adjacency matrix A plays the role of the Laplacian!
 
 KINETIC TERM:
   T = Φᵀ A Φ = ∑_{i~j} Φᵢ Φⱼ
-  
+
 This counts "interactions" between connected vertices.
 
 POTENTIAL TERM:
   V = ∑_i [m²Φᵢ² + λ Φᵢ⁴ + ...]
-  
+
 Where m² and λ come from W33 eigenvalues!
-""")
+"""
+)
 
 # Demonstrate the eigenvalue decomposition
 print("\nEIGENVALUE DECOMPOSITION:")
@@ -82,7 +86,8 @@ print("\n" + "=" * 70)
 print("SECTION 3: GAUGE SYMMETRY FROM AUTOMORPHISMS")
 print("=" * 70)
 
-print("""
+print(
+    """
 GAUGE INVARIANCE:
 
 The automorphism group Aut(W33) has order 51840.
@@ -90,14 +95,14 @@ These are SYMMETRIES of the action!
 
 For any g ∈ Aut(W33):
   S[gΦ] = S[Φ]
-  
+
 This is GAUGE INVARIANCE in the discrete setting!
 
 CONTINUOUS LIMIT:
 
 As we take the continuum limit, discrete automorphisms become:
   - SU(3) color symmetry
-  - SU(2) weak isospin  
+  - SU(2) weak isospin
   - U(1) hypercharge
 
 DERIVATION:
@@ -110,7 +115,8 @@ Contains subgroups matching:
   |SU(3)| : related to 3⁴ factor (color from F₃)
   |SU(2)| : related to 2³ factor
   |U(1)|  : related to cyclic factors
-""")
+"""
+)
 
 aut_order = 51840
 print(f"\nAUTOMORPHISM GROUP DECOMPOSITION:")
@@ -127,7 +133,8 @@ print("\n" + "=" * 70)
 print("SECTION 4: MATTER FIELDS FROM EIGENSPACES")
 print("=" * 70)
 
-print("""
+print(
+    """
 PARTICLE CONTENT:
 
 The eigenspaces of W33 correspond to particle types:
@@ -135,18 +142,19 @@ The eigenspaces of W33 correspond to particle types:
 E₁ (dim = 1, eigenvalue = 12):
   → The Higgs singlet?
   → Or the "vacuum" direction
-  
+
 E₂ (dim = 24, eigenvalue = 2):
   → Gauge bosons!
   → 24 = dimension of SU(5) adjoint
   → Contains: 8 gluons + 3 W's + 1 B + 12 heavy X,Y
-  
+
 E₃ (dim = 15, eigenvalue = -4):
   → Matter fermions!
   → 15 = dimension of SU(5) antisymmetric
   → Contains: quarks and leptons of one generation
   → 3 generations from m₃/5 = 3
-""")
+"""
+)
 
 print("EIGENSPACE ↔ PARTICLE CORRESPONDENCE:")
 print("-" * 50)
@@ -160,7 +168,8 @@ print("\n" + "=" * 70)
 print("SECTION 5: THE YANG-MILLS TERM")
 print("=" * 70)
 
-print("""
+print(
+    """
 GAUGE FIELD LAGRANGIAN:
 
 The Yang-Mills action for gauge fields is:
@@ -181,7 +190,8 @@ Running to low energies:
   α_s(M_Z) ≈ 0.118  (from RGE with W33 beta function)
   α_EM(M_Z) ≈ 1/128
   α_W(M_Z) ≈ 1/30
-""")
+"""
+)
 
 alpha_gut = 1 / v
 print(f"\nGAUGE COUPLING AT UNIFICATION:")
@@ -198,7 +208,8 @@ print("\n" + "=" * 70)
 print("SECTION 6: THE HIGGS POTENTIAL")
 print("=" * 70)
 
-print("""
+print(
+    """
 HIGGS POTENTIAL:
 
 The Standard Model Higgs potential is:
@@ -216,9 +227,10 @@ Its potential parameters come from graph structure:
 
 The Higgs VEV:
   <H> = v_H where v_H² = μ²/(2λ)
-  
+
 This gives M_H² = 2λ v_H² = μ²
-""")
+"""
+)
 
 # Compute Higgs parameters
 delta_12 = e1 - e2  # 10
@@ -233,7 +245,8 @@ print("\n" + "=" * 70)
 print("SECTION 7: YUKAWA COUPLINGS")
 print("=" * 70)
 
-print("""
+print(
+    """
 FERMION MASSES:
 
 Fermions get mass from Yukawa couplings:
@@ -256,13 +269,14 @@ Comes from the STRUCTURE of the projections P₁, P₂, P₃!
 MASS HIERARCHY:
 
 The ratio of largest to smallest fermion mass:
-  m_t/m_ν ~ 10¹² 
+  m_t/m_ν ~ 10¹²
 
 This comes from:
   3^(v/2) = 3^20 = 3.5 × 10⁹
 
 Plus logarithmic factors gives the full hierarchy!
-""")
+"""
+)
 
 mass_hierarchy = 3 ** (v // 2)
 print(f"\nMASS HIERARCHY FROM W33:")
@@ -273,7 +287,8 @@ print("\n" + "=" * 70)
 print("SECTION 8: THE COMPLETE STANDARD MODEL LAGRANGIAN")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE EMERGENT LAGRANGIAN:
 
 From W33, we derive the Standard Model Lagrangian:
@@ -300,18 +315,20 @@ WHERE EVERYTHING COMES FROM W33:
   • Higgs doublet ← E₁ connection
   • Yukawa matrices ← Eigenspace overlaps
   • μ², λ in V(H) ← Eigenvalue differences
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("SECTION 9: BEYOND THE STANDARD MODEL")
 print("=" * 70)
 
-print("""
+print(
+    """
 W33 INCLUDES MORE THAN SM!
 
 The 24-dimensional E₂ eigenspace contains:
   • 8 gluons (SU(3))
-  • 3 W bosons (SU(2))  
+  • 3 W bosons (SU(2))
   • 1 B boson (U(1))
   • 12 EXTRA gauge bosons!
 
@@ -328,16 +345,18 @@ ADDITIONAL CONTENT:
 The E₃ eigenspace with dim=15 gives:
   • 5̄ of SU(5): (d_R, e, ν)
   • 10 of SU(5): (Q, u_R, e_R)
-  
+
 This is EXACTLY the fermion content of one SM generation!
 Three generations from 15 = 3 × 5.
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("SECTION 10: THE ACTION FROM FIRST PRINCIPLES")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE MASTER ACTION:
 
 Starting from W33, the complete action is:
@@ -362,13 +381,15 @@ WHERE:
 THIS IS THE STANDARD MODEL + GUT COMPLETION!
 
 The Lagrangian is not assumed - it EMERGES from W33.
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("PART XCIV CONCLUSIONS")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE LAGRANGIAN EMERGES FROM W33!
 
 KEY DERIVATIONS:
@@ -397,7 +418,8 @@ IT FOLLOWS FROM W33 GRAPH STRUCTURE!
 
 This is the deepest result: physics is geometry.
 The Lagrangian IS the adjacency matrix in disguise.
-""")
+"""
+)
 
 # Save results
 results = {

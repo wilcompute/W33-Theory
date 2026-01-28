@@ -296,27 +296,29 @@ def main():
     print(" SECTION 9: SUMMARY")
     print("=" * 70)
 
-    print(f"""
+    print(
+        f"""
   THE 27 NON-NEIGHBORS:
-  
+
   - Form a subgraph H27 with {H27.num_edges()} edges
   - Stabilizer Stab(v0) has order {stab_order} = {factor(stab_order)}
   - Stab(v0) acts on 27 non-neighbors with orbits: {orbit_sizes_27}
   - Stab(v0) acts on 12 neighbors with orbits: {orbit_sizes_12}
-  
+
   INTERPRETATION:
-  
+
   The 27 non-neighbors encode the Albert algebra J^3(O):
   - 27 = dim(J^3(O)) = E6 fundamental representation
   - Under SO(10) x U(1): 27 -> 16 + 10 + 1
-  
+
   The orbit structure under Stab(v0) may reveal this decomposition!
-  
-  |Stab(v0)| = 1296 = 6^4/... 
-  
+
+  |Stab(v0)| = 1296 = 6^4/...
+
   This connects to the E6 structure through:
   |W(E6)| = 51840 = 40 x 1296
-""")
+"""
+    )
 
     # Save results
     with open("PART_CXIX_27_nonneighbors.json", "w") as f:

@@ -211,7 +211,8 @@ print("\n" + "=" * 70)
 print("THE MASTER EQUATIONS")
 print("=" * 70)
 
-print("""
+print(
+    """
 ┌─────────────────────────────────────────────────────────────────┐
 │                    W33 MASTER EQUATIONS                         │
 ├─────────────────────────────────────────────────────────────────┤
@@ -270,7 +271,8 @@ print("""
 │  "THE EXCEPTIONAL STAIRCASE"                                    │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
-""")
+"""
+)
 
 # =============================================================================
 # THE UNIFIED PRINCIPLE
@@ -280,7 +282,8 @@ print("\n" + "=" * 70)
 print("THE UNIFIED PRINCIPLE")
 print("=" * 70)
 
-print("""
+print(
+    """
 ╔═══════════════════════════════════════════════════════════════════╗
 ║                                                                   ║
 ║                    THE W33 UNIFICATION                            ║
@@ -316,7 +319,8 @@ print("""
 ║   THE UNIVERSE IS W33                                             ║
 ║                                                                   ║
 ╚═══════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # PREDICTION COUNT
@@ -355,7 +359,8 @@ print("\n" + "=" * 70)
 print("THE MYSTERIOUS TRIPLE: 7, 13, 17")
 print("=" * 70)
 
-print("""
+print(
+    """
 Three primes appear throughout the mixing formulas:
 
    7   = number of octonion imaginary units
@@ -377,7 +382,8 @@ These might encode:
    17 → ?
 
 Or: 7, 13, 17 are related to the Sp(4,3) character table
-""")
+"""
+)
 
 # Check if 7, 13, 17 have special meaning
 print("\nNumber theory:")
@@ -395,7 +401,8 @@ print("\n" + "=" * 70)
 print("OPEN QUESTIONS FOR FUTURE WORK")
 print("=" * 70)
 
-print("""
+print(
+    """
 1. WHY 1111?
    The correction term 40/1111 gives exact α⁻¹
    1111 = 11 × 101 = 1 + 10 + 100 + 1000 (in base 10)
@@ -428,7 +435,8 @@ print("""
 8. WHY W33?
    Why THIS particular structure and not another?
    Is W33 selected by some maximality principle?
-""")
+"""
+)
 
 # =============================================================================
 # SAVE FINAL RESULTS
@@ -464,7 +472,8 @@ print("\n" + "=" * 70)
 print("PART LIX: THE MASTER FORMULA - COMPLETE")
 print("=" * 70)
 
-print("""
+print(
+    """
 ╔═══════════════════════════════════════════════════════════════════╗
 ║                                                                   ║
 ║                      FINAL SUMMARY                                ║
@@ -486,5 +495,6 @@ print("""
 ╚═══════════════════════════════════════════════════════════════════╝
 
 Results saved to PART_LIX_master_formula_results.json
-""")
+"""
+)
 print("=" * 70)

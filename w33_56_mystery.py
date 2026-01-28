@@ -391,49 +391,49 @@ def main():
     print("=" * 70)
     final = """
     THE ROLE OF 56 IN THE W33 THEORY:
-    
+
     1. ALGEBRAIC:
        56 = dim(E7 fundamental representation)
        56 = smallest non-trivial irrep of E7
-       
+
     2. GEOMETRIC:
        56 = |(-1)-curves on dP₇|
        56 = 7 + 21 + 21 + 7 (symmetric decomposition)
        56 = C(7,1) + C(7,2) + C(7,5) + C(7,6)
-       
+
     3. PHYSICAL:
        α⁻¹ = 81 + 56 = 137
        56 connects W33 cycles (81) to α⁻¹
-       
+
     4. PATTERN:
        27 → 56 → 248
        E6   E7   E8
-       
+
        56 = 2 × 27 + 2
        248 = 4 × 56 + 24
-       
+
     5. NUMBER-THEORETIC:
        56 = 7 × 8 = rank(E7) × 8
        56 = 2 × 28 = 2 × T(7) where T(n) = n(n+1)/2
-       
-    
+
+
     THE DEEP CONNECTION:
-    
+
     W33 (cycles = 81) + E7 (fund = 56) = α⁻¹ (137)
-    
+
     This suggests:
     - W33 encodes the "base" structure (GF(3) geometry)
     - E7 adds the "gauge" structure
     - Together they determine electromagnetic coupling!
-    
-    
+
+
     WHY E7?
-    
+
     E7 is the "middle" exceptional algebra:
     - E6 ↔ W33 automorphisms (W(E6) = Aut(W33))
     - E7 ↔ Fine structure constant (81 + 56 = 137)
     - E8 ↔ Moonshine constant (744 = 3 × 248)
-    
+
     The three exceptional E-algebras correspond to:
     - E6: Symmetry (automorphism group)
     - E7: Coupling strength

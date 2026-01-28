@@ -55,4 +55,3 @@ the next high-leverage computation is to:
 1) fit a compact parametric form for (c1,c2,c3)(λ,μ) (e.g., low-degree polynomial or rational),
 2) interpret c1 as “flux amplitude” and (c2,c3) as “coin–defect interference” terms,
 3) then map the line modes (v1,v2,v3) back to projective quartets/orbits to extract a closed-form symmetry explanation for which measurements are flux-favored vs flux-suppressed.
-

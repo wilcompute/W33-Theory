@@ -44,5 +44,3 @@ Source: `data/_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_12t
 - 3: 15
 - 4: 9
 - 5: 15
-
-

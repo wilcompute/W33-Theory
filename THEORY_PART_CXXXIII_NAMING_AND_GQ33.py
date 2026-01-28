@@ -324,10 +324,11 @@ print("\n" + "=" * 70)
 print("GQ(3,3) STRUCTURE")
 print("=" * 70)
 
-print("""
+print(
+    """
 A Generalized Quadrangle GQ(s,t) satisfies:
 - Each point on (t+1) lines
-- Each line has (s+1) points  
+- Each line has (s+1) points
 - No triangles (girth ≥ 4)
 - Unique connection axiom
 
@@ -335,13 +336,14 @@ For GQ(3,3):
   s = t = 3
   Points: (1+s)(1+st) = 4 × 10 = 40
   Lines:  (1+t)(1+st) = 4 × 10 = 40  (self-dual!)
-  
+
 This is exactly our structure!
 - 40 Witting states = 40 points of GQ(3,3)
 - 40 orthonormal bases = 40 lines of GQ(3,3)
 - Each state in 4 bases (point on 4 lines)
 - Each basis has 4 states (line has 4 points)
-""")
+"""
+)
 
 
 # Find the lines (orthonormal bases)
@@ -401,13 +403,14 @@ print("\n" + "=" * 70)
 print("NAMING CONVENTION ESTABLISHED")
 print("=" * 70)
 
-print("""
+print(
+    """
 STANDARD NAMES for this graph:
 ==============================
 
 1. Sp₄(3) - Symplectic polar graph over F₃
    This is the CANONICAL NAME in the literature
-   
+
 2. O(5,3) - Orthogonal polar graph (isomorphic to Sp₄(3))
 
 3. GQ(3,3) - The collinearity graph of the generalized quadrangle
@@ -433,7 +436,8 @@ We will use Sp₄(3) as the primary name, with:
 - GQ(3,3) when emphasizing the incidence geometry
 
 The old "W33" notation is RETIRED.
-""")
+"""
+)
 
 # =====================================================
 # CONNECTION TO F₃ ARITHMETIC
@@ -443,7 +447,8 @@ print("\n" + "=" * 70)
 print("CONNECTION TO F₃ ARITHMETIC")
 print("=" * 70)
 
-print("""
+print(
+    """
 Why F₃? The Symplectic Structure:
 ================================
 
@@ -456,7 +461,7 @@ Sp₄(3) comes from the symplectic group over F₃:
 
 The count:
 - |F₃⁴| = 81 vectors
-- Remove 0: 80 nonzero vectors  
+- Remove 0: 80 nonzero vectors
 - Each 1-space has 2 nonzero vectors
 - Not all are isotropic; counting gives 40
 
@@ -466,7 +471,8 @@ The Witting configuration COMPLEXIFIES this structure:
 - F₃ → ω = e^{2πi/3} (3rd root of unity)
 - Isotropic 1-spaces → rays in CP³
 - Symplectic orthogonality → quantum orthogonality
-""")
+"""
+)
 
 
 # Verify the number of isotropic 1-spaces in F₃⁴

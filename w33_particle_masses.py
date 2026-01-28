@@ -70,14 +70,16 @@ print("\n" + "=" * 80)
 print("PART 2: MASS RATIOS AND W33")
 print("=" * 80)
 
-print("""
+print(
+    """
 SEARCHING FOR W33 NUMBERS
 =========================
 
 Key W33 numbers: 3, 4, 9, 10, 12, 27, 28, 40, 81, 90, 121, 133
 
 Let's check if mass ratios involve these...
-""")
+"""
+)
 
 w33_nums = [3, 4, 9, 10, 12, 27, 28, 40, 81, 90, 121, 133, 3**2, 3**3, 3**4, 3**5]
 
@@ -118,7 +120,8 @@ print("\n" + "=" * 80)
 print("PART 3: THE KOIDE FORMULA")
 print("=" * 80)
 
-print("""
+print(
+    """
 KOIDE'S MYSTERIOUS FORMULA
 ==========================
 
@@ -126,7 +129,8 @@ Koide (1981) found:
   Q = (m_e + m_μ + m_τ) / (√m_e + √m_μ + √m_τ)² = 2/3
 
 This is satisfied to 0.01% accuracy!
-""")
+"""
+)
 
 m_e, m_mu, m_tau = masses["e"], masses["μ"], masses["τ"]
 Q_koide = (m_e + m_mu + m_tau) / (np.sqrt(m_e) + np.sqrt(m_mu) + np.sqrt(m_tau)) ** 2
@@ -151,7 +155,8 @@ print("\n" + "=" * 80)
 print("PART 4: W33 MASS MATRIX")
 print("=" * 80)
 
-print("""
+print(
+    """
 CONSTRUCTING A MASS MATRIX
 ==========================
 
@@ -162,9 +167,10 @@ The Yukawa matrix Y has unknown entries.
 
 W33 proposal:
   The Yukawa matrix comes from W33 structure!
-  
+
 Consider a 3×3 matrix from K4 phases...
-""")
+"""
+)
 
 # A simple K4-based mass matrix
 # K4 = {1, a, b, ab} with phases
@@ -195,7 +201,8 @@ print("\n" + "=" * 80)
 print("PART 5: POWERS OF 3")
 print("=" * 80)
 
-print("""
+print(
+    """
 THE ROLE OF 3
 =============
 
@@ -209,7 +216,8 @@ W33 is built on GF(3). Powers of 3:
   3⁹ = 19683 = St(W(5,3))
 
 Do masses scale with powers of 3?
-""")
+"""
+)
 
 # Check if masses ~ 3^n
 print(f"\nMass in units of electron mass:")
@@ -238,7 +246,8 @@ print("\n" + "=" * 80)
 print("PART 6: NEUTRINO MASSES")
 print("=" * 80)
 
-print("""
+print(
+    """
 THE SEE-SAW AND W33
 ===================
 
@@ -246,19 +255,20 @@ Neutrino masses are tiny: m_ν ~ eV << m_e ~ MeV
 
 The see-saw mechanism:
   m_ν ~ m_D² / M_R
-  
+
 where m_D ~ electroweak, M_R ~ GUT scale.
 
 W33 interpretation:
   m_ν / m_e ~ (m_e / M_R) ~ ?
-  
+
 If M_R ~ 10¹⁴ GeV and m_e ~ 0.5 MeV:
   m_ν ~ (0.5 MeV)² / 10¹⁴ GeV ~ 10⁻¹² MeV ~ eV ✓
 
 The ratio M_R / v involves W33?
   M_R / v ~ 10¹² ~ 3²⁵ ?
   Or: M_R / v ~ 81¹² / something
-""")
+"""
+)
 
 # Check the GUT/EW ratio
 m_GUT = 1e14  # GeV
@@ -278,7 +288,8 @@ print("\n" + "=" * 80)
 print("PART 7: THREE GENERATIONS")
 print("=" * 80)
 
-print("""
+print(
+    """
 WHY THREE GENERATIONS?
 ======================
 
@@ -288,12 +299,13 @@ W33 answer:
   - W33 is over GF(3) - the field with 3 elements
   - K4 acts on 3 non-identity elements
   - There are 3 colors in SU(3)
-  
+
 The 3 generations may correspond to:
   - The 3 non-trivial elements of K4
   - Or the 3 elements of GF(3)
   - Or the 3 faces of a tetrahedron
-""")
+"""
+)
 
 print(f"\nGeneration pattern:")
 print(f"  Gen 1 (e, u, d):  light")
@@ -314,7 +326,8 @@ print("\n" + "=" * 80)
 print("PART 8: BOSON MASSES")
 print("=" * 80)
 
-print("""
+print(
+    """
 W, Z, AND HIGGS MASSES
 ======================
 
@@ -323,7 +336,8 @@ The boson masses are related:
   M_H = ?
 
 W33 predictions?
-""")
+"""
+)
 
 # Check W/Z ratio
 cos_theta_W = masses["W"] / masses["Z"]
@@ -355,7 +369,8 @@ print("\n" + "=" * 80)
 print("PART 9: THE GRAND PATTERN")
 print("=" * 80)
 
-print("""
+print(
+    """
 MASS FORMULA ATTEMPT
 ====================
 
@@ -363,7 +378,8 @@ Hypothesis: All masses are given by:
   m_i = m_0 × 3^(n_i) × f(W33)
 
 where n_i is an integer or half-integer.
-""")
+"""
+)
 
 # Reference mass
 m_0 = masses["e"]  # electron mass
@@ -386,7 +402,8 @@ print("\n" + "=" * 80)
 print("PART 10: MASS HIERARCHY FROM W33")
 print("=" * 80)
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                    PARTICLE MASSES FROM W33                                  ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
@@ -418,7 +435,8 @@ print("""
 ║  Full derivation needs more work.                                            ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 print("\n" + "=" * 80)
 print("m_t / m_b = 40 = |W(3,3)|")

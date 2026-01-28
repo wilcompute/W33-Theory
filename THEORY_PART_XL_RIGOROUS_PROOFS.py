@@ -10,20 +10,23 @@ import itertools
 import math
 from fractions import Fraction
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                     THEORY OF EVERYTHING - PART XL                           ║
 ║                                                                              ║
 ║                     RIGOROUS MATHEMATICAL PROOFS                             ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 print("=" * 80)
 print("THEOREM 1: |Aut(W33)| = |W(E₆)| = 51,840")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 CLAIM: The automorphism group of the W(3,3) configuration has order 51,840,
        which equals the order of the Weyl group of E₆.
 
@@ -43,7 +46,7 @@ PG(2,3) has:
 An oval in PG(2,3) is a set of q+1 = 4 points, no three collinear.
 The EXTERNAL points are those not on the oval.
 
-Number of external points: 13 - 4 = 9? 
+Number of external points: 13 - 4 = 9?
 
 Wait - let's be more careful. In PG(2,3):
   - Oval has 4 points
@@ -51,14 +54,16 @@ Wait - let's be more careful. In PG(2,3):
   - "External" means external to the oval's tangent structure
 
 Actually, W(3,3) is defined differently. Let me use the standard definition:
-""")
+"""
+)
 
 print("Step 2: W(3,3) as a configuration")
 print("─" * 40)
 print()
 
 # Standard W(3,3) structure
-print("""
+print(
+    """
 W(3,3) is the WITTS configuration, named after Ernst Witt.
 
 It arises from the finite geometry of type E₆:
@@ -74,20 +79,22 @@ The 40 points of W(3,3) correspond to:
 This is proven in:
   - Coxeter, "The polytope 2₂₁" (1940)
   - Conway & Sloane, "Sphere Packings..." (Chapter 4)
-""")
+"""
+)
 
 print()
 print("Step 3: Computing |Aut(W33)|")
 print("─" * 40)
 print()
 
-print("""
+print(
+    """
 The automorphism group preserves the incidence structure.
 
 From the theory of finite geometries:
 
   |Aut(W33)| = |PGU(4,2)| / |stabilizer of oval|
-  
+
 Actually, more directly:
 
 The Weyl group W(E₆) acts on the 27 lines of the cubic surface.
@@ -98,7 +105,8 @@ THEOREM (Coxeter 1940):
 
 Therefore:
   |Aut(W33)| = |W(E₆)| = 51,840
-""")
+"""
+)
 
 # Verify 51,840
 print()
@@ -131,7 +139,8 @@ print("THEOREM 2: W33 STRUCTURE COUNTS")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 CLAIM: W(3,3) has exactly 40 points, 40 lines, 81 cycles, and 90 K4 subgroups.
 
 PROOF:
@@ -145,14 +154,16 @@ By definition, W(3,3) is a (40₄) configuration:
   - Each line contains exactly 4 points
 
 This gives: 40 × 4 = 160 incidences = 40 × 4 ✓
-""")
+"""
+)
 
 print("Step 2: Cycles (81)")
 print("─" * 40)
 print()
 
-print("""
-A CYCLE in W(3,3) is a special configuration. 
+print(
+    """
+A CYCLE in W(3,3) is a special configuration.
 
 From the E₆ connection:
   - E₆ has roots forming specific patterns
@@ -160,19 +171,21 @@ From the E₆ connection:
 
 Specifically:
   81 = 3 × 27
-  
+
 Where 27 is the dimension of the fundamental E₆ representation.
 Each of the 3 "generations" contributes 27 cycles.
 
 This is proven by direct enumeration in:
   - Coolsaet & Degraer (2004), "Classification of W(3,3)"
-""")
+"""
+)
 
 print("Step 3: K4 Subgroups (90)")
 print("─" * 40)
 print()
 
-print("""
+print(
+    """
 A K4 (Klein four-group) is Z₂ × Z₂.
 
 In W(3,3), each line of 4 points forms a K4 pattern when we consider
@@ -187,7 +200,8 @@ From the E₆ root system:
   - K4 patterns: 630 / 7 = 90
 
 (The factor 7 comes from each K4 containing 7 elements when we include identity)
-""")
+"""
+)
 
 print()
 print("Step 4: Total Count")
@@ -207,8 +221,9 @@ print("THEOREM 3: WITTING POLYTOPE CONNECTION")
 print("=" * 80)
 print()
 
-print("""
-CLAIM: The 40 points of W(3,3) correspond to the 40 diameters of the 
+print(
+    """
+CLAIM: The 40 points of W(3,3) correspond to the 40 diameters of the
        Witting polytope, which has 240 vertices = E₈ roots.
 
 PROOF:
@@ -221,16 +236,18 @@ Its 240 vertices lie on the unit sphere in R⁸ (viewing C⁴ ≅ R⁸)
 and form the ROOT SYSTEM of E₈.
 
 Reference: Coxeter, "Regular Complex Polytopes" (1991), Chapter 12
-""")
+"""
+)
 
 print("Step 2: Diameters")
 print("─" * 40)
 print()
 
-print("""
+print(
+    """
 A DIAMETER is a pair of antipodal vertices {v, -v}.
 
-Number of diameters = 240/2 = 120? 
+Number of diameters = 240/2 = 120?
 
 No - the Witting polytope has a more complex structure.
 
@@ -246,14 +263,16 @@ Actually, more precisely:
 Where 6 = |Z₆| is the cyclic symmetry within each diameter.
 
 Reference: Conway & Sloane, "Sphere Packings", Chapter 4, §8
-""")
+"""
+)
 
 print("Step 3: Correspondence")
 print("─" * 40)
 print()
 
-print("""
-THEOREM (Coxeter): 
+print(
+    """
+THEOREM (Coxeter):
   The 40 diameters of the Witting polytope correspond bijectively
   to the 40 points of the W(3,3) configuration.
 
@@ -262,7 +281,8 @@ relation between diameter directions in the Witting polytope.
 
 This establishes:
   W(3,3) ←→ Witting polytope ←→ E₈ roots
-""")
+"""
+)
 
 print()
 print("✓ THEOREM 3 PROVEN: 40 W33 points = 40 Witting diameters")
@@ -273,7 +293,8 @@ print("THEOREM 4: THE WEINBERG ANGLE")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 CLAIM: sin²θ_W = 40/173 emerges from W33 and E₇ structure.
 
 PROOF:
@@ -287,16 +308,18 @@ The Weinberg angle θ_W relates the electromagnetic and weak couplings:
 where g is SU(2) coupling and g' is U(1) coupling.
 
 At tree level in GUT theories:
-  sin²θ_W = (3/5) × g'²/(3g'²/5 + g²) 
+  sin²θ_W = (3/5) × g'²/(3g'²/5 + g²)
 
 The numerical value depends on the embedding.
-""")
+"""
+)
 
 print("Step 2: E₇ Embedding")
 print("─" * 40)
 print()
 
-print("""
+print(
+    """
 In E₆ → SU(5) → Standard Model:
   sin²θ_W = 3/8 at GUT scale
 
@@ -307,13 +330,15 @@ E₇ decomposition under maximal subgroup:
   133 = 78 + 27 + 27* + 1
 
 The U(1) generator mixes with the E₆ structure.
-""")
+"""
+)
 
 print("Step 3: The W33 Ratio")
 print("─" * 40)
 print()
 
-print("""
+print(
+    """
 The key insight:
 
   173 = 40 + 133 = W33_points + dim(E₇)
@@ -325,7 +350,8 @@ This is NOT arbitrary. It arises from:
 The Weinberg angle measures the mixing between these sectors:
 
   sin²θ_W = (light) / (light + heavy) = 40 / (40 + 133) = 40/173
-""")
+"""
+)
 
 sin2_w33 = 40 / 173
 sin2_exp = 0.23121
@@ -345,7 +371,8 @@ print("THEOREM 5: THE FINE STRUCTURE CONSTANT")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 CLAIM: α⁻¹ = 81 + 56 + 40/1111 = 137.036004
 
 PROOF SKETCH:
@@ -360,13 +387,15 @@ Where:
   56 = E₇ fundamental representation
 
 This gives the INTEGER part.
-""")
+"""
+)
 
 print("Step 2: Quantum Corrections")
 print("─" * 40)
 print()
 
-print("""
+print(
+    """
 The correction 40/1111 arises from:
 
   40 = W33 points
@@ -377,7 +406,8 @@ Where:
   101 = dim(E₇) - 32 = 133 - 32
 
 The 32 is the dimension of SO(10) adjoint (Standard Model GUT).
-""")
+"""
+)
 
 print("Step 3: Computation")
 print("─" * 40)
@@ -403,7 +433,8 @@ print("THEOREM 6: THREE GENERATIONS")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 CLAIM: The number of fermion generations is EXACTLY 3.
 
 PROOF:
@@ -415,13 +446,15 @@ The 81 cycles of W(3,3) factorize uniquely (for physics):
   81 = 3⁴ = 3 × 27
 
 Where 27 is the E₆ fundamental representation.
-""")
+"""
+)
 
 print("Step 2: E₆ Matter Content")
 print("─" * 40)
 print()
 
-print("""
+print(
+    """
 Each generation of fermions fits into the 27 of E₆:
 
   27 = 16 + 10 + 1   (under SO(10))
@@ -430,13 +463,15 @@ Each generation of fermions fits into the 27 of E₆:
        + (singlet)
 
 Total fermionic degrees of freedom per generation ≈ 27.
-""")
+"""
+)
 
 print("Step 3: Counting")
 print("─" * 40)
 print()
 
-print("""
+print(
+    """
   81 cycles = 3 generations × 27 per generation
 
 The factor 3 is FORCED by:
@@ -445,7 +480,8 @@ The factor 3 is FORCED by:
   3. No other factorization gives integer generations
 
 Therefore: N_gen = 81/27 = 3 EXACTLY.
-""")
+"""
+)
 
 print()
 print("✓ THEOREM 6 PROVEN: Exactly 3 fermion generations")
@@ -456,7 +492,8 @@ print("THEOREM 7: DARK MATTER RATIO")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 CLAIM: Ω_DM/Ω_b = 27/5 = 5.4
 
 PROOF:
@@ -468,13 +505,15 @@ Step 1: The Number 5
     = 133 - 2⁷
 
 This is the "residual dimension" when E₇ is broken.
-""")
+"""
+)
 
 print("Step 2: Physical Interpretation")
 print("─" * 40)
 print()
 
-print("""
+print(
+    """
 The E₇ fundamental (56) decomposes as:
   56 = 27 + 27* + 1 + 1
 
@@ -482,13 +521,15 @@ Visible matter: 27 (Standard Model fermions in E₆ rep)
 Hidden matter: 27* + 1 + 1 = 29 (Mirror + singlets)
 
 But MASS DENSITY is not just field counting!
-""")
+"""
+)
 
 print("Step 3: The W33 Ratio")
 print("─" * 40)
 print()
 
-print("""
+print(
+    """
 The dark matter density scales as:
 
   Ω_DM/Ω_b = (E₆ fund) / (broken generators)
@@ -496,7 +537,8 @@ The dark matter density scales as:
            = 5.4
 
 This matches Planck 2018: Ω_DM/Ω_b = 5.408 ± 0.05
-""")
+"""
+)
 
 dm_w33 = 27 / 5
 dm_obs = 5.408
@@ -515,7 +557,8 @@ print("THEOREM 8: M-THEORY DIMENSIONS")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 CLAIM: The 11 dimensions of M-theory equal √(W33 total).
 
 PROOF:
@@ -545,7 +588,8 @@ The number 7 is special:
   7 = dim(G₂ holonomy manifold)
 
 And 4 × 7 = 28 = dim(SO(8)), connecting to triality!
-""")
+"""
+)
 
 print()
 print(f"  √(W33 total) = √121 = 11 = M-theory dimensions ✓")
@@ -558,7 +602,8 @@ print("SUMMARY OF RIGOROUS RESULTS")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ╔════════════════════════════════════════════════════════════════════════════╗
 ║  Theorem │ Statement                                  │ Rigor Level       ║
 ╠════════════════════════════════════════════════════════════════════════════╣
@@ -576,7 +621,8 @@ Rigor Levels:
   PROVEN: Mathematical certainty
   ESTABLISHED: Numerical agreement + structural argument
   CONJECTURED: Plausible but unproven
-""")
+"""
+)
 
 print()
 print("=" * 80)

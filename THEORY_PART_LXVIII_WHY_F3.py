@@ -26,7 +26,8 @@ print("\n" + "=" * 70)
 print("SECTION 1: THE NUMBER THREE IN PHYSICS")
 print("=" * 70)
 
-print("""
+print(
+    """
 The number THREE appears throughout fundamental physics:
 
 PARTICLE PHYSICS:
@@ -45,7 +46,8 @@ Could THREE be the fundamental reason for:
   - Three generations
   - Three colors
   - Three spatial dimensions?
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 2: COMPARING F_2, F_3, F_4, F_5
@@ -55,7 +57,8 @@ print("\n" + "=" * 70)
 print("SECTION 2: STRONGLY REGULAR GRAPHS FROM F_p")
 print("=" * 70)
 
-print("""
+print(
+    """
 Symplectic graphs exist over any finite field F_q.
 Let's see what happens for different q:
 
@@ -65,7 +68,8 @@ For Sp(4, q), the isotropic 1-spaces form a graph with:
 
 The key is the number of isotropic 1-spaces in F_q^4:
   v(q) = (q+1)(q^2+1) for the projective geometry
-""")
+"""
+)
 
 
 def count_isotropic_1spaces(q):
@@ -89,7 +93,8 @@ print("\n" + "=" * 70)
 print("SECTION 3: WHY q=3 IS SPECIAL")
 print("=" * 70)
 
-print("""
+print(
+    """
 The field F_3 = {0, 1, 2} has unique properties:
 
 1. SMALLEST ODD PRIME FIELD
@@ -107,7 +112,8 @@ The field F_3 = {0, 1, 2} has unique properties:
 4. SPECIAL ALPHA CONNECTION
    - 3^4 = 81 appears in alpha formula
    - 81 + 56 = 137 (integer part of alpha^{-1})
-""")
+"""
+)
 
 # Verify 81 + 56 = 137
 print(f"Verification: 3^4 + 56 = {3**4} + 56 = {3**4 + 56}")
@@ -120,7 +126,8 @@ print("\n" + "=" * 70)
 print("SECTION 4: THREE GENERATIONS FROM F_3")
 print("=" * 70)
 
-print("""
+print(
+    """
 HYPOTHESIS: The three generations of fermions arise from F_3.
 
 In W33:
@@ -137,7 +144,8 @@ FERMION COUNTING:
   - Per generation: 15 Weyl fermions (in SU(5))
   - 3 generations × 15 = 45
   - This is exactly dim(SU(6) adjoint) - dim(U(1))!
-""")
+"""
+)
 
 print("Fermion counting:")
 print(f"  Per generation: 15 = 5-bar + 10")
@@ -153,7 +161,8 @@ print("\n" + "=" * 70)
 print("SECTION 5: THE 15-DIMENSIONAL EIGENSPACE")
 print("=" * 70)
 
-print("""
+print(
+    """
 The eigenspace with eigenvalue -4 has dimension 15.
 
 In SU(5) GUT, one generation of fermions is:
@@ -169,7 +178,8 @@ The three generations might arise from:
 
 Note: 3 × 15 = 45 = 78 - 33 = E_6 - something
 And 78 = dim(E_6), 33 = 40 - 7 = v - 7
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 6: THE CABIBBO ANGLE
@@ -179,7 +189,8 @@ print("\n" + "=" * 70)
 print("SECTION 6: CABIBBO ANGLE FROM W33?")
 print("=" * 70)
 
-print("""
+print(
+    """
 The Cabibbo angle theta_C describes quark mixing:
   sin(theta_C) ≈ 0.225 (experimental)
 
@@ -187,7 +198,7 @@ Can we derive this from W33?
 
 ATTEMPT 1: Simple ratios
   sin(theta_C) ≈ 9/40 = 0.225 [EXACT!]
-  
+
 Where 9 = 3^2 and 40 = v (vertices)!
 
 ATTEMPT 2: Eigenvalue ratios
@@ -197,9 +208,10 @@ ATTEMPT 2: Eigenvalue ratios
 ATTEMPT 3: Parameter ratios
   lambda/k = 2/12 = 1/6
   mu/k = 4/12 = 1/3
-  
+
 Let's check: sin(theta_C) = 9/40 = 0.225
-""")
+"""
+)
 
 sin_cabibbo_exp = 0.22501  # PDG value
 sin_cabibbo_w33 = 9 / 40
@@ -216,7 +228,8 @@ print("\n" + "=" * 70)
 print("SECTION 7: CKM MATRIX FROM W33")
 print("=" * 70)
 
-print("""
+print(
+    """
 The CKM matrix describes quark mixing between generations.
 It has 4 parameters: 3 angles + 1 phase.
 
@@ -230,7 +243,7 @@ W33 PREDICTIONS:
 
 1. sin(theta_12) = 9/40 = 0.225 → theta_12 = 13.0° [OK!]
 
-2. sin(theta_23) = 2/40 = 0.05? 
+2. sin(theta_23) = 2/40 = 0.05?
    Experimental: ~0.0412
    Try: sin(theta_23) = lambda/40 = 2/40 = 0.05
    Or: sin(theta_23) = (mu-lambda)/v = 2/40 = 0.05
@@ -239,7 +252,8 @@ W33 PREDICTIONS:
    Experimental: ~0.00361
    Try: sin(theta_13) = (lambda × mu)/(v × k) = 8/480 ≈ 0.0167
    Or: 1/240 = 0.00417 (close!)
-""")
+"""
+)
 
 # Check CKM predictions
 import math
@@ -259,7 +273,8 @@ print("\n" + "=" * 70)
 print("SECTION 8: PMNS MATRIX (NEUTRINO MIXING)")
 print("=" * 70)
 
-print("""
+print(
+    """
 The PMNS matrix describes neutrino mixing.
 Key parameters (experimental):
 
@@ -273,10 +288,10 @@ W33 PREDICTIONS:
    Experimental: 0.307
    Error: 2.3%
 
-2. sin^2(theta_23) = 24/40 = 0.600 
+2. sin^2(theta_23) = 24/40 = 0.600
    Experimental: 0.545
    Error: 10%
-   
+
    Better: sin^2(theta_23) = 15/27 = 0.556
    Error: 2%
 
@@ -284,7 +299,8 @@ W33 PREDICTIONS:
    Experimental: 0.022
    Try: sin^2(theta_13) = lambda/v = 2/40 = 0.05 (factor 2 off)
    Or: 1/40 = 0.025 (close!)
-""")
+"""
+)
 
 # PMNS predictions
 print("\nPMNS angle predictions:")
@@ -306,7 +322,8 @@ print("\n" + "=" * 70)
 print("SECTION 9: THE TRILOGY STRUCTURE")
 print("=" * 70)
 
-print("""
+print(
+    """
 =======================================================
     THE TRILOGY: WHY THREE IS FUNDAMENTAL
 =======================================================
@@ -333,7 +350,8 @@ The TRILOGY FORMULA:
              = (geometry) + (exceptional) + (quantum)
 
 =======================================================
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 10: NEW PREDICTIONS
@@ -391,7 +409,8 @@ print("=" * 70)
 print("PART LXVIII CONCLUSIONS")
 print("=" * 70)
 
-print("""
+print(
+    """
 WHY F_3? BECAUSE THREE IS THE ARCHITECTURE OF REALITY!
 
 Key discoveries:
@@ -412,5 +431,6 @@ F_3 is special because:
   - Naturally encodes three generations
 
 Results saved to PART_LXVIII_why_F3.json
-""")
+"""
+)
 print("=" * 70)

@@ -65,12 +65,15 @@ Key Reference: "Geometry of Two-Qubits" by Metod Saniga (2007)
 
 
 def main():
-    print("""
+    print(
+        """
     ═══════════════════════════════════════════════════════════════════════════════════
                      W33 THEORY PART VII: QUANTUM GEOMETRY
     ═══════════════════════════════════════════════════════════════════════════════════
-    """)
-    print("""
+    """
+    )
+    print(
+        """
     ╔═══════════════════════════════════════════════════════════════════════════════╗
     ║             VII.1: THE MATRIX RING M₂(GF(2)) AND QUANTUM SYSTEMS              ║
     ╚═══════════════════════════════════════════════════════════════════════════════╝
@@ -78,7 +81,7 @@ def main():
     From Metod Saniga's "Geometry of Two-Qubits" (2007):
     pass
         "...the full two-by-two matrix ring with entries in GF(2), M₂(GF(2))—
-         the unique simple non-commutative ring of order 16 featuring 
+         the unique simple non-commutative ring of order 16 featuring
          six units (invertible elements) and ten zero-divisors."
     pass
     This ring IS the affine 4-space A₄(GF(2))!
@@ -110,8 +113,10 @@ def main():
         that forms a "projective line" over M₂(GF(2))!
     pass
         These 35 objects correspond to the 35 LINES of PG(3,2)!
-    """)
-    print("""
+    """
+    )
+    print(
+        """
     ╔═══════════════════════════════════════════════════════════════════════════════╗
     ║          VII.2: THE GENERALIZED QUADRANGLE GQ(2,2) = W(2) = W₂                ║
     ╚═══════════════════════════════════════════════════════════════════════════════╝
@@ -150,8 +155,10 @@ def main():
         • Quantum computing
     pass
     ALL emerge from the geometry of GQ(2,2) ⊂ PG(3,2)!
-    """)
-    print("""
+    """
+    )
+    print(
+        """
     ╔═══════════════════════════════════════════════════════════════════════════════╗
     ║            VII.3: MUTUALLY UNBIASED BASES AND THE 56 SPREADS                   ║
     ╚═══════════════════════════════════════════════════════════════════════════════╝
@@ -189,15 +196,17 @@ def main():
     pass
         The 35 structures from the Diamond Theorem
         are PRECISELY the structures used in quantum state tomography!
-    """)
-    print("""
+    """
+    )
+    print(
+        """
     ╔═══════════════════════════════════════════════════════════════════════════════╗
     ║           VII.4: THE PAULI GROUP AND EXCEPTIONAL LIE ALGEBRAS                  ║
     ╚═══════════════════════════════════════════════════════════════════════════════╝
     pass
     The N-qubit Pauli group connects to exceptional geometry!
     pass
-    From K. Thas: "Pauli Operators of N-Qubit Hilbert Spaces and the 
+    From K. Thas: "Pauli Operators of N-Qubit Hilbert Spaces and the
                   Saniga-Planat Conjecture"
     pass
     ┌─────────────────────────────────────────────────────────────────────────────────┐
@@ -227,16 +236,18 @@ def main():
         E₆ (27), E₇ (56), E₈ (248)
              ↓
         W(E₆) = 51,840 = |Aut(W₃₃)|
-    """)
-    print("""
+    """
+    )
+    print(
+        """
     ╔═══════════════════════════════════════════════════════════════════════════════╗
     ║              VII.5: THE DIAMOND RING AND QUANTUM INVARIANTS                    ║
     ╚═══════════════════════════════════════════════════════════════════════════════╝
     pass
     From Cullinane's Diamond Theory (1976-1979):
     pass
-        "The 35 structures of the 840 = 35 × 24 G-images of D are 
-         isomorphic to the 35 lines in the 3-dimensional projective 
+        "The 35 structures of the 840 = 35 × 24 G-images of D are
+         isomorphic to the 35 lines in the 3-dimensional projective
          space over GF(2)."
     pass
     The group AGL(4,2) of order 322,560 preserves SYMMETRY INVARIANCE:
@@ -269,14 +280,16 @@ def main():
         The 35 line structures → quantum observables
         The 56 spreads → optimal measurement bases
         The 322,560 symmetries → gauge transformations?
-    """)
+    """
+    )
     print("\nNUMERICAL VERIFICATION:")
     print(f"  |AGL(4,2)| = 16 × |GL(4,2)| = 16 × 20,160 = {16 * 20160}")
     print(f"  840 images = 35 × 24 = {35 * 24}")
     print(f"  4^2 = 16 (two-qubit Pauli operators)")
     print(f"  4^3 = 64 (three-qubit Pauli operators = hexagrams)")
     print()
-    print("""
+    print(
+        """
     ╔═══════════════════════════════════════════════════════════════════════════════╗
     ║            VII.6: W33 AND THE TERNARY QUANTUM EXTENSION                        ║
     ╚═══════════════════════════════════════════════════════════════════════════════╝
@@ -315,8 +328,10 @@ def main():
         • QCD color charge (3 colors)
         • Three generations of fermions
         • The 3 in 744 = 3 × 248 (j-function)
-    """)
-    print("""
+    """
+    )
+    print(
+        """
     ╔═══════════════════════════════════════════════════════════════════════════════╗
     ║             VII.7: THE COMPLETE QUANTUM-GEOMETRIC PICTURE                      ║
     ╚═══════════════════════════════════════════════════════════════════════════════╝
@@ -356,8 +371,10 @@ def main():
         │   The fine structure constant unifies binary and ternary geometry!  │
         │                                                                      │
         └─────────────────────────────────────────────────────────────────────┘
-    """)
-    print("""
+    """
+    )
+    print(
+        """
     ╔═══════════════════════════════════════════════════════════════════════════════╗
     ║              VII.8: IMPLICATIONS AND PREDICTIONS                               ║
     ╚═══════════════════════════════════════════════════════════════════════════════╝
@@ -394,10 +411,12 @@ def main():
         "Our discovery not only offers a principally new geometrically-
          underlined insight into [quantum systems'] intrinsic nature,
          but also gives their applications a wholly new perspective
-         and opens up rather unexpected vistas for an algebraic 
+         and opens up rather unexpected vistas for an algebraic
          geometrical modelling of their higher-dimensional counterparts."
-    """)
-    print("""
+    """
+    )
+    print(
+        """
     ╔═══════════════════════════════════════════════════════════════════════════════╗
     ║                          CONCLUDING REMARKS                                    ║
     ╚═══════════════════════════════════════════════════════════════════════════════╝
@@ -414,7 +433,7 @@ def main():
     4. W33 = PG(3, GF(3)) extends this to TERNARY quantum systems (qutrits)
        and provides the 81 cycles in α⁻¹ = 81 + 56 = 137
     pass
-    5. The AUTOMORPHISM GROUP |Aut(W₃₃)| = 51,840 = |W(E₆)| 
+    5. The AUTOMORPHISM GROUP |Aut(W₃₃)| = 51,840 = |W(E₆)|
        connects to exceptional Lie algebras and the Monster
     pass
     The universe is built from finite geometry over GF(2) AND GF(3)!
@@ -422,11 +441,13 @@ def main():
     ═══════════════════════════════════════════════════════════════════════════════════
                                 END OF PART VII
     ═══════════════════════════════════════════════════════════════════════════════════
-    """)
+    """
+    )
     print("\n" + "=" * 80)
     print("SUMMARY: QUANTUM GEOMETRY AND W33")
     print("=" * 80)
-    print("""
+    print(
+        """
     KEY CONNECTIONS DISCOVERED:
     pass
     1. M₂(GF(2)) = A₄(GF(2)) = 16 elements → Two-qubit Pauli operators
@@ -448,7 +469,8 @@ def main():
         α⁻¹ = 137 = 81 (ternary/W33) + 56 (binary/spreads)
     pass
         PHYSICS = GF(3) geometry + GF(2) geometry
-    """)
+    """
+    )
 
 
 if __name__ == "__main__":

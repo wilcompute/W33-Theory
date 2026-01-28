@@ -262,18 +262,19 @@ if __name__ == "__main__":
     print("\n" + "=" * 70)
     print("PHYSICS INTERPRETATION")
     print("=" * 70)
-    print("""
+    print(
+        """
 The color singlet hypothesis is CONFIRMED:
 
 1. ALL 90 K4 components have Z3 = 0 (mod 12)
    - Not a symmetry (automorphisms break all symmetries)
    - Emerges purely from the orthogonal dual geometry
-   
+
 2. This is analogous to QCD:
    - Color charge Z3 = 0 is "color singlet" requirement
    - Only color singlets are allowed in asymptotic states
    - Confinement emerges from geometry, not from symmetry
-   
+
 3. The K4 structure SELECTS for color-neutral transport:
    - Elementary swaps in K4 never change color
    - This is why fermionic sign (-1) can emerge cleanly
@@ -289,4 +290,5 @@ The color singlet hypothesis is CONFIRMED:
    - Does the Z4 holonomy (weak isospin part) also have constraints?
    - Are there only certain Z4 values allowed?
    - What is the distribution of Z4 holonomies?
-""")
+"""
+    )

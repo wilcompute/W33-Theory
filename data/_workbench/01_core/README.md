@@ -9,4 +9,3 @@ Entry points:
 
 Related summaries:
 - `data/_toe/take_it_all_way_20260110/toe_take_it_all_way_report.md`
-

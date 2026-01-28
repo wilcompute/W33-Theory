@@ -135,7 +135,8 @@ print("\n" + "=" * 70)
 print("THE STRUCTURE THEOREM")
 print("=" * 70)
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════╗
 ║                    THE 3D MUB EMBEDDING THEOREM                      ║
 ╠══════════════════════════════════════════════════════════════════════╣
@@ -154,7 +155,8 @@ print("""
 ║  copies of the complete 3D MUB system, one at each vertex.           ║
 ║                                                                      ║
 ╚══════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =====================================================
 # COUNT UNIQUE MUB SYSTEMS
@@ -229,7 +231,8 @@ print("\n" + "=" * 70)
 print("COMPARISON TO STANDARD 3D MUBs")
 print("=" * 70)
 
-print("""
+print(
+    """
 STANDARD 3D MUBs:
 =================
 
@@ -246,11 +249,12 @@ Our Witting MUBs at vertex 0:
 B₀ = {|1⟩, |2⟩, |3⟩}  (the other 3 basis states)
 
 B₁ = {|4⟩, |9⟩, |11⟩}  = AG(2,F₃) line, direction (1,2)
-B₂ = {|5⟩, |7⟩, |12⟩}  = AG(2,F₃) line, direction (1,2)  
+B₂ = {|5⟩, |7⟩, |12⟩}  = AG(2,F₃) line, direction (1,2)
 B₃ = {|6⟩, |8⟩, |10⟩}  = AG(2,F₃) line, direction (1,2)
 
 These are related to standard 3D MUBs by a unitary transformation!
-""")
+"""
+)
 
 # =====================================================
 # CONNECTION TO AFFINE GEOMETRY
@@ -260,7 +264,8 @@ print("\n" + "=" * 70)
 print("THE AFFINE GEOMETRY CONNECTION")
 print("=" * 70)
 
-print("""
+print(
+    """
 DEEP CONNECTION:
 ================
 
@@ -278,7 +283,8 @@ Different choices of parallel class give isomorphic but different MUBs.
 
 THEOREM: The 4 parallel classes in AG(2, F₃) give 4 different
          ways to embed 4 MUBs at each vertex!
-""")
+"""
+)
 
 # Count: how many of the 4 parallel classes appear at vertex 0?
 # The 9 superpositions are indexed by (μ, ν), and we found direction (1,2)
@@ -335,7 +341,8 @@ print("\n" + "=" * 70)
 print("PART CL COMPLETE")
 print("=" * 70)
 
-print("""
+print(
+    """
 MAJOR DISCOVERIES:
 ==================
 
@@ -359,6 +366,7 @@ MAJOR DISCOVERIES:
    - Every state participates in multiple MUB systems
    - Highly efficient quantum information structure
 
-NAMING: The Sp₄(3)/Witting configuration is a 
+NAMING: The Sp₄(3)/Witting configuration is a
         "40-FOLD 3D MUB EMBEDDING" in ℂ⁴
-""")
+"""
+)

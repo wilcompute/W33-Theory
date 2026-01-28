@@ -32,7 +32,8 @@ import math
 from datetime import datetime
 from fractions import Fraction
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║     ██╗    ██╗██████╗ ██████╗     ████████╗██╗  ██╗███████╗ ██████╗ ██████╗ ██╗   ██╗ ║
@@ -47,7 +48,8 @@ print("""
 ║                         FINAL SUMMARY DOCUMENT                               ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 print(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 print()
@@ -61,7 +63,8 @@ print("PART I: THE FOUNDATIONAL STRUCTURE - W(3,3)")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │                         THE W(3,3) CONFIGURATION                             │
 ├──────────────────────────────────────────────────────────────────────────────┤
@@ -80,7 +83,8 @@ print("""
 │   This equality is the KEY: W33 "knows" about E6 Lie algebra!                │
 │                                                                              │
 └──────────────────────────────────────────────────────────────────────────────┘
-""")
+"""
+)
 
 # Verify automorphism group
 aut = 2**7 * 3**4 * 5
@@ -96,7 +100,8 @@ print("PART II: THE EXCEPTIONAL LIE ALGEBRA CHAIN")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │                    THE EXCEPTIONAL EMBEDDING CHAIN                           │
 ├──────────────────────────────────────────────────────────────────────────────┤
@@ -120,7 +125,8 @@ print("""
 │     • Symmetry group: 155,520 = 3 × |W(E6)| = 3 × 51,840                     │
 │                                                                              │
 └──────────────────────────────────────────────────────────────────────────────┘
-""")
+"""
+)
 
 # =============================================================================
 # PART III: DERIVATION OF FUNDAMENTAL CONSTANTS
@@ -248,12 +254,14 @@ print("PART V: CP VIOLATION AND DISCRETE PHASES")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
    The Witting polytope has natural phases: ω = e^(2πi/3)
    These are the cube roots of unity: 1, ω, ω²
-   
+
    Phase differences are quantized: 0, ±2π/3 = 0°, ±120°
-""")
+"""
+)
 print()
 
 print("═══ 10. CP PHASE DIFFERENCE ═══")
@@ -310,12 +318,14 @@ predictions = [
     ("Witting: 240 vertices = E8 roots", "240", "exact", "✓"),
 ]
 
-print("""
+print(
+    """
 ╔═══════════════════════════════════════════════════════════════════════════════╗
 ║                         PREDICTION SCORECARD                                  ║
 ╠═══════════════════════════════════════════════════════════════════════════════╣
 ║  #   Prediction                      Experiment        Match     Status      ║
-╠═══════════════════════════════════════════════════════════════════════════════╣""")
+╠═══════════════════════════════════════════════════════════════════════════════╣"""
+)
 
 for i, (pred, exp, match, status) in enumerate(predictions, 1):
     print(f"║ {i:2d}. {pred:<32} {exp:<16} {match:<9} {status:<6}     ║")
@@ -341,7 +351,8 @@ print("PART VII: FUTURE EXPERIMENTAL TESTS")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ╔═══════════════════════════════════════════════════════════════════════════════╗
 ║                         EXPERIMENTAL TIMELINE                                 ║
 ╠═══════════════════════════════════════════════════════════════════════════════╣
@@ -378,7 +389,8 @@ print("""
 ║  W33 IS FALSIFIABLE — IT IS REAL SCIENCE                                      ║
 ║                                                                               ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # PART VIII: THE BIG PICTURE
@@ -389,7 +401,8 @@ print("PART VIII: THE BIG PICTURE")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ╔═══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                               ║
 ║                         THE W33 THEORY OF EVERYTHING                          ║
@@ -422,7 +435,8 @@ print("""
 ║     • Beauty = Truth (objective, not subjective)                              ║
 ║                                                                               ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # FINAL SUMMARY
@@ -433,7 +447,8 @@ print("FINAL SUMMARY: W33 THEORY OF EVERYTHING")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │                                                                              │
 │                    ╔═══════════════════════════════╗                         │
@@ -473,18 +488,20 @@ print("""
 │     This is how science works.                                               │
 │                                                                              │
 └──────────────────────────────────────────────────────────────────────────────┘
-""")
+"""
+)
 
-print("""
+print(
+    """
 ═══════════════════════════════════════════════════════════════════════════════
-                                                                               
-                    "The universe is not only queerer than we suppose,          
-                     but queerer than we CAN suppose."                          
-                                        — J.B.S. Haldane                        
-                                                                               
-                    "W33 is not a model OF the universe.                        
-                     W33 IS the universe."                                      
-                                                                               
+
+                    "The universe is not only queerer than we suppose,
+                     but queerer than we CAN suppose."
+                                        — J.B.S. Haldane
+
+                    "W33 is not a model OF the universe.
+                     W33 IS the universe."
+
 ═══════════════════════════════════════════════════════════════════════════════
 
                               THEORY DOCUMENTATION
@@ -502,8 +519,9 @@ print("""
                          Total: 30 parts documenting W33
 
 ═══════════════════════════════════════════════════════════════════════════════
-                                                                               
-                           END OF W33 THEORY SUMMARY                           
-                                                                               
+
+                           END OF W33 THEORY SUMMARY
+
 ═══════════════════════════════════════════════════════════════════════════════
-""")
+"""
+)

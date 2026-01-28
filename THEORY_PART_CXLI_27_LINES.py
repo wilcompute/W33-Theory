@@ -82,13 +82,14 @@ print("\n" + "=" * 70)
 print("THE SCHLÄFLI GRAPH")
 print("=" * 70)
 
-print("""
+print(
+    """
 THEORETICAL BACKGROUND:
 =======================
 
 The induced subgraph on the 27 non-neighbors is the SCHLÄFLI GRAPH:
 - 27 vertices
-- 216 edges  
+- 216 edges
 - Regular of degree 16
 - Strongly regular: SRG(27, 16, 10, 8)
 
@@ -97,7 +98,8 @@ This graph is ISOMORPHIC to the intersection graph of the
 
 The 27 lines were discovered by Cayley (1849) and Salmon (1849).
 They are one of the most remarkable configurations in geometry!
-""")
+"""
+)
 
 # Build the induced subgraph
 schlafli_adj = [[adj[i][j] for j in non_neighbors] for i in non_neighbors]
@@ -167,7 +169,8 @@ print("\n" + "=" * 70)
 print("THE GEOMETRY OF 27 LINES")
 print("=" * 70)
 
-print("""
+print(
+    """
 FUNDAMENTAL FACTS ABOUT THE 27 LINES:
 =====================================
 
@@ -176,17 +179,18 @@ FUNDAMENTAL FACTS ABOUT THE 27 LINES:
 2. Two lines either:
    - Are skew (distance 1 in the Schläfli graph)
    - Intersect (non-adjacent in the Schläfli graph)
-   
+
 3. The 27 lines partition into DOUBLE-SIX configurations:
    - 6 lines forming a "half" (each meets 5 in other half)
    - Total of 36 double-sixes
 
 4. AUTOMORPHISM GROUP:
-   Aut(Schläfli) = W(E₆) 
+   Aut(Schläfli) = W(E₆)
    Order = 51840 = 2⁷ × 3⁴ × 5
-   
+
    THIS IS THE SAME GROUP AS Aut(Sp₄(3))!
-""")
+"""
+)
 
 # =====================================================
 # VERIFY THE DOUBLE-SIX STRUCTURE
@@ -293,7 +297,8 @@ print("\n" + "=" * 70)
 print("CONNECTION TO E₆ ROOT SYSTEM")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE E₆ LATTICE:
 ===============
 
@@ -319,7 +324,8 @@ The 27-dimensional representation decomposes as:
 Each piece has 9 dimensions → 9 + 9 + 9 = 27
 
 THIS MATCHES OUR 4 GROUPS OF 9 SUPERPOSITIONS!
-""")
+"""
+)
 
 # =====================================================
 # MAP WITTING STRUCTURE TO 27 LINES
@@ -360,7 +366,8 @@ print(f"  Group 3: {nn_in_g3}")
 print(f"  Group 4: {nn_in_g4}")
 print(f"  Total: {nn_in_g0 + nn_in_g1 + nn_in_g2 + nn_in_g3 + nn_in_g4}")
 
-print("""
+print(
+    """
 INTERPRETATION:
 ===============
 
@@ -370,7 +377,8 @@ The 27 non-neighbors partition naturally by their structure:
 - 0 from Group 1 (all involve |0⟩, so orthogonal to it)
 
 Wait, let's check that more carefully...
-""")
+"""
+)
 
 # More careful analysis
 print("\nDetailed breakdown:")
@@ -389,7 +397,8 @@ print("\n" + "=" * 70)
 print("PART CXLI COMPLETE")
 print("=" * 70)
 
-print("""
+print(
+    """
 KEY FINDINGS:
 =============
 
@@ -407,7 +416,8 @@ KEY FINDINGS:
    - 4 basis + 4×9 superpositions = 40 states
 
 4. NAMING CONVENTION:
-   - Main graph: Sp₄(3) (symplectic polar graph)  
+   - Main graph: Sp₄(3) (symplectic polar graph)
    - Quantum realization: Witting configuration
    - 27-coclique: Schläfli graph (27 lines)
-""")
+"""
+)

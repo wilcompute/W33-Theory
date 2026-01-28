@@ -31,7 +31,8 @@ print("\n" + "=" * 80)
 print("PART 1: WHY 3?")
 print("=" * 80)
 
-print("""
+print(
+    """
 THE UNIQUE PROPERTIES OF 3
 ==========================
 
@@ -53,7 +54,8 @@ THE UNIQUE PROPERTIES OF 3
 
 The recurring pattern:
   Everything divides by or relates to 3!
-""")
+"""
+)
 
 # =============================================================================
 # PART 2: FERMAT'S LITTLE THEOREM AND W33
@@ -63,7 +65,8 @@ print("\n" + "=" * 80)
 print("PART 2: FERMAT'S LITTLE THEOREM")
 print("=" * 80)
 
-print("""
+print(
+    """
 FERMAT'S LITTLE THEOREM
 =======================
 
@@ -85,7 +88,8 @@ In W33:
   - Z₁₂ = Z₄ × Z₃ (Chinese Remainder Theorem)
   - The Z₃ part is (Z/3Z)* extended
   - The Z₄ part is related to Gaussian integers
-""")
+"""
+)
 
 # Verify
 for a in [1, 2]:
@@ -108,7 +112,8 @@ def legendre(a, p):
     return result if result <= 1 else result - p
 
 
-print("""
+print(
+    """
 QUADRATIC RECIPROCITY
 =====================
 
@@ -123,7 +128,8 @@ Quadratic reciprocity relates (p/q) and (q/p):
 
 For p = 3, q = 5:
   (3/5)(5/3) = (-1)^((2×4)/4) = (-1)^2 = 1
-""")
+"""
+)
 
 for a in range(1, 6):
     print(f"  ({a}/3) = {legendre(a, 3):+d}")
@@ -136,7 +142,8 @@ print("\n" + "=" * 80)
 print("PART 4: GAUSSIAN INTEGERS AND Z₄")
 print("=" * 80)
 
-print("""
+print(
+    """
 GAUSSIAN INTEGERS Z[i]
 ======================
 
@@ -146,7 +153,7 @@ The units of Z[i] are {1, -1, i, -i} = Z₄!
 
 This Z₄ appears in W33's phase structure:
   Z₁₂ = Z₄ × Z₃
-  
+
 The Z₄ part encodes:
   - Phase shifts by π/2
   - The 4th roots of unity
@@ -159,7 +166,8 @@ Prime factorization in Z[i]:
 
 The fact that 3 stays prime in Z[i] is significant!
 It means Z₃ and Z₄ are "independent" - no mixing.
-""")
+"""
+)
 
 
 # Gaussian primes
@@ -200,7 +208,8 @@ print("\n" + "=" * 80)
 print("PART 5: EISENSTEIN INTEGERS AND Z₃")
 print("=" * 80)
 
-print("""
+print(
+    """
 EISENSTEIN INTEGERS Z[ω]
 ========================
 
@@ -214,7 +223,7 @@ But the 3-torsion is Z₃ = {1, ω, ω²}!
 
 This Z₃ appears in W33's phase structure:
   Z₁₂ = Z₄ × Z₃
-  
+
 The Z₃ part encodes:
   - Phase shifts by 2π/3
   - The cube roots of unity
@@ -228,7 +237,8 @@ Prime factorization in Z[ω]:
 The fact that 3 ramifies in Z[ω] is KEY!
 It means the "3" in W33 is deeply connected to
 the Eisenstein integers.
-""")
+"""
+)
 
 # Cube roots of unity
 omega = np.exp(2j * np.pi / 3)
@@ -245,7 +255,8 @@ print("\n" + "=" * 80)
 print("PART 6: MODULAR FORMS")
 print("=" * 80)
 
-print("""
+print(
+    """
 MODULAR FORMS
 =============
 
@@ -270,7 +281,8 @@ Its cusps are at rational points, including 3.
 
 W33 lives over GF(3), which corresponds to the
 cusp at 3 in the modular curve X₀(3).
-""")
+"""
+)
 
 # Ramanujan's tau function (first few values)
 # τ(n) is the coefficient of q^n in Δ(τ)
@@ -299,7 +311,8 @@ def zeta(s, terms=1000):
     return sum(1 / n**s for n in range(1, terms + 1))
 
 
-print("""
+print(
+    """
 THE RIEMANN ZETA FUNCTION
 =========================
 
@@ -314,9 +327,10 @@ The Euler product shows that ζ encodes all primes!
 
 For the prime 3:
   Factor at 3: (1 - 3^(-s))^(-1)
-  
+
 At s = 2: (1 - 1/9)^(-1) = 9/8 = 1.125
-""")
+"""
+)
 
 print(f"\nζ(2) = {zeta(2):.6f} ≈ π²/6 = {np.pi**2/6:.6f}")
 print(f"ζ(3) = {zeta(3):.6f} (Apéry's constant)")
@@ -335,7 +349,8 @@ print("\n" + "=" * 80)
 print("PART 8: THE NUMBER 81")
 print("=" * 80)
 
-print("""
+print(
+    """
 THE NUMBER 81 = 3⁴
 ==================
 
@@ -350,7 +365,7 @@ THE NUMBER 81 = 3⁴
   - 81 = 3⁴ (perfect 4th power of 3)
   - 81 = 80 + 1 = 4 × 20 + 1
   - 80 = |points in W33| × 2 = 2 × 40
-  
+
 Factorizations:
   81 = 1 × 81 = 3 × 27 = 9 × 9
 
@@ -367,7 +382,8 @@ Carmichael's function:
   λ(81) = 27
 
 These are all related to powers of 3!
-""")
+"""
+)
 
 # Verify
 divisors_81 = [d for d in range(1, 82) if 81 % d == 0]
@@ -387,7 +403,8 @@ print("\n" + "=" * 80)
 print("PART 9: CONNECTION TO THE MONSTER GROUP")
 print("=" * 80)
 
-print("""
+print(
+    """
 THE MONSTER AND W33
 ===================
 
@@ -414,7 +431,8 @@ The number 3 appears in Monster moonshine:
 And 196883 = 47 × 59 × 71 = 3 × 65627 + 2
 
 The factor of 3 keeps appearing!
-""")
+"""
+)
 
 # J-invariant coefficients
 j_coeffs = [1, 744, 196884, 21493760, 864299970]
@@ -431,7 +449,8 @@ print("\n" + "=" * 80)
 print("PART 10: THE GRAND SYNTHESIS")
 print("=" * 80)
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                       W33 AND NUMBER THEORY: SYNTHESIS                       ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
@@ -473,9 +492,11 @@ print("""
 ║  the GOLDILOCKS VALUE: not too simple, not too complex.                      ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
-print("""
+print(
+    """
 FINAL MEDITATION:
 
   "God made the integers; all else is the work of man."
@@ -488,7 +509,8 @@ FINAL MEDITATION:
 The prime 3 is the atom of mathematics.
 W33 is the atom of physics.
 They are the same thing.
-""")
+"""
+)
 
 print("\n" + "=" * 80)
 print("END OF NUMBER THEORY EXPLORATION")

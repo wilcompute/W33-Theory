@@ -40,7 +40,8 @@ print("\n" + "=" * 80)
 print("PART 1: THE ER=EPR CONJECTURE")
 print("=" * 80)
 
-print("""
+print(
+    """
 EINSTEIN'S TWO PAPERS OF 1935
 =============================
 
@@ -54,14 +55,14 @@ Paper 2 (with Rosen):
   - Einstein-Rosen bridge (wormhole)
   - Connection between distant regions
   - Non-traversable (classically)
-  
+
 For 80 years, these seemed unrelated.
 
 MALDACENA-SUSSKIND (2013):
   They are the SAME THING!
-  
+
   ER = EPR
-  
+
   - Every entangled pair connected by microscopic wormhole
   - Wormhole = geometric manifestation of entanglement
   - No information transfer (still respects causality)
@@ -70,7 +71,8 @@ WHY THIS MATTERS:
   Unifies quantum mechanics and gravity!
   Entanglement IS geometry.
   Spacetime emerges from entanglement.
-""")
+"""
+)
 
 # =============================================================================
 # PART 2: W33 CYCLES AS WORMHOLES
@@ -80,7 +82,8 @@ print("\n" + "=" * 80)
 print("PART 2: W33 CYCLES AS WORMHOLES")
 print("=" * 80)
 
-print("""
+print(
+    """
 THE INSIGHT
 ===========
 
@@ -97,7 +100,8 @@ These ARE the wormholes!
 
 The entanglement structure of the universe
 IS the W33 cycle structure.
-""")
+"""
+)
 
 
 class W33Wormhole:
@@ -167,7 +171,8 @@ print("\n" + "=" * 80)
 print("PART 3: ENTANGLEMENT STRUCTURE OF W33")
 print("=" * 80)
 
-print("""
+print(
+    """
 ENTANGLEMENT IN QUANTUM MECHANICS
 =================================
 
@@ -182,12 +187,13 @@ Multipartite entanglement:
 
 W33 ENTANGLEMENT:
   The K4 components are like GHZ states!
-  
+
   Each K4:
     - 7 outer points entangled with 1 center
     - Triple structure (Z₃) = W-state-like
     - Phase structure (Z₄) = GHZ-like
-""")
+"""
+)
 
 
 def compute_entanglement_matrix(n_points=40, n_cycles=81):
@@ -231,7 +237,8 @@ print("\n" + "=" * 80)
 print("PART 4: SPACETIME EMERGES FROM ENTANGLEMENT")
 print("=" * 80)
 
-print("""
+print(
+    """
 VAN RAAMSDONK'S INSIGHT
 ========================
 
@@ -240,19 +247,20 @@ VAN RAAMSDONK'S INSIGHT
 If you REMOVE entanglement between two regions:
   - They become causally disconnected
   - Spacetime literally TEARS apart
-  
+
 Entanglement = Connectivity of spacetime
 
 W33 IMPLICATION:
   The 81 wormholes STITCH spacetime together!
-  
+
   Remove a cycle:
     - That wormhole closes
     - Part of space disconnects
-    
+
   The 40 points are only connected BECAUSE of
   the 81 cycles (entanglement/wormholes).
-""")
+"""
+)
 
 
 def remove_wormhole(E, wormhole_id):
@@ -328,7 +336,8 @@ print("\n" + "=" * 80)
 print("PART 5: WHY 81 WORMHOLES?")
 print("=" * 80)
 
-print("""
+print(
+    """
 THE NUMBER 81 EXPLAINED
 =======================
 
@@ -339,7 +348,7 @@ Or: 81 = number of ways to "link" a 3D+1D spacetime
 Wormhole counting:
   - GQ(q,q) has (q²+1)(q+1) points = 40 for q=3
   - First homology H₁ has rank q⁴ = 81 for q=3
-  
+
 Each independent cycle = one wormhole = one unit of entanglement
 
 The universe needs EXACTLY 81 wormholes to:
@@ -351,7 +360,8 @@ Too few wormholes → spacetime fragments
 Too many wormholes → no local physics (everything entangled with everything)
 
 81 is the GOLDILOCKS number!
-""")
+"""
+)
 
 # Verify the relationship
 q = 3
@@ -376,7 +386,8 @@ print("\n" + "=" * 80)
 print("PART 6: TRAVERSABLE VS NON-TRAVERSABLE WORMHOLES")
 print("=" * 80)
 
-print("""
+print(
+    """
 CLASSICAL WORMHOLES: NON-TRAVERSABLE
 ====================================
 
@@ -395,17 +406,18 @@ Gao-Jafferis-Wall (2016):
 
 W33 WORMHOLES:
   The 81 cycles are NON-TRAVERSABLE for information.
-  
+
   Why? The Berry phase:
     - Traverse forward: gain phase φ
     - Traverse backward: gain phase -φ
     - But phase is mod 2π
-    
+
   Information gets SCRAMBLED, not transferred!
-  
+
   However: CORRELATIONS can propagate.
   This is exactly quantum entanglement!
-""")
+"""
+)
 
 
 def traverse_wormhole(wormhole, data):
@@ -445,7 +457,8 @@ print("\n" + "=" * 80)
 print("PART 7: GRAVITY FROM ENTANGLEMENT")
 print("=" * 80)
 
-print("""
+print(
+    """
 THE RINDLER HORIZON
 ===================
 
@@ -454,23 +467,24 @@ The vacuum appears thermal (Unruh effect).
 
 Jacobson (1995):
   Einstein's equations follow from thermodynamics!
-  
+
   δS = δQ/T → R_μν - ½Rg_μν = 8πG T_μν
 
 Gravity is an ENTROPIC force.
 
 W33 GRAVITY:
   The 81 wormholes carry entanglement entropy.
-  
+
   Total entropy: S = 81 × log₂(3) ≈ 128 bits
-  
+
   This entropy creates a "force":
     - Particles want to be entangled
     - Entanglement = wormhole connection
     - Connection = being "close" in spacetime
-    
+
   GRAVITY = tendency toward maximum entanglement!
-""")
+"""
+)
 
 
 def gravitational_potential(E, point):
@@ -498,7 +512,8 @@ print("\n" + "=" * 80)
 print("PART 8: THE THERMOFIELD DOUBLE")
 print("=" * 80)
 
-print("""
+print(
+    """
 THE THERMOFIELD DOUBLE STATE
 ============================
 
@@ -513,14 +528,15 @@ Two entangled copies of the CFT!
 
 W33 THERMOFIELD DOUBLE:
   The 40 points naturally split into pairs!
-  
+
   - 40 = 2 × 20 (or other partitions)
   - Each half is a "CFT"
   - The 81 wormholes connect them
-  
+
   This is why W33 works for a complete ToE:
   It's self-dual, containing both sides!
-""")
+"""
+)
 
 
 def create_thermofield_double(n_points=40, beta=1.0):
@@ -562,7 +578,8 @@ print("\n" + "=" * 80)
 print("PART 9: THE COMPLETE ER=EPR PICTURE")
 print("=" * 80)
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                        W33 AND ER=EPR: SUMMARY                               ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
@@ -598,7 +615,8 @@ print("""
 ║       = Information content of the fundamental structure                     ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # PART 10: PREDICTIONS
@@ -608,7 +626,8 @@ print("\n" + "=" * 80)
 print("PART 10: PREDICTIONS FROM W33 ER=EPR")
 print("=" * 80)
 
-print("""
+print(
+    """
 TESTABLE PREDICTIONS
 ====================
 
@@ -625,23 +644,24 @@ TESTABLE PREDICTIONS
 3. ENTANGLEMENT ENTROPY BOUND
    Maximum entanglement entropy per region:
    S_max = A / (4 ℓ_P²)
-   
+
    W33 predicts: S = 81 × log₂(3) for fundamental cell
    This gives a minimum area: A_min = 4 × 128 × ℓ_P² ≈ 500 ℓ_P²
 
 4. NUMBER OF SPATIAL DIMENSIONS
    The ratio wormholes/points = 81/40 ≈ 2
    This equals (d-1) for d=3 spatial dimensions!
-   
+
    Prediction: In 4 spatial dimensions, ratio would be ~3
    This constrains dimensional reduction scenarios.
 
 5. ENTANGLEMENT STRUCTURE OF VACUUM
    The vacuum has non-trivial entanglement.
    W33 predicts: 81 fundamental entangled modes.
-   
+
    Test: Study vacuum fluctuations, look for 81-fold structure.
-""")
+"""
+)
 
 # Calculate predictions
 print("\nNumerical predictions:")
@@ -662,23 +682,25 @@ print(f"  Fundamental information: {S_w33:.1f} bits")
 print(f"  This is log₂(number of vacuum states)")
 print(f"  Number of vacuum states: 2^{S_w33:.0f} ≈ 10^{S_w33*np.log10(2):.0f}")
 
-print("""
+print(
+    """
 
 THE DEEPEST TRUTH
 =================
 
   ER = EPR
-  
+
   Einstein's two 1935 papers are ONE paper.
-  
+
   Wormholes = Entanglement = W33 Cycles
-  
+
   The 81 wormholes are not "in" spacetime.
   They ARE spacetime.
-  
+
   Spacetime is woven from quantum entanglement,
   and the loom is W33.
-""")
+"""
+)
 
 print("\n" + "=" * 80)
 print("END OF ER=EPR EXPLORATION")

@@ -26,7 +26,8 @@ print("\n" + "=" * 70)
 print("SECTION 1: THE HIGGS MASS")
 print("=" * 70)
 
-print("""
+print(
+    """
 The Higgs boson mass:
   M_H = 125.25 ± 0.17 GeV (PDG 2024)
 
@@ -41,7 +42,8 @@ where v = 246 GeV is the Higgs VEV.
 From measurements: lambda ≈ 0.13
 
 Can W33 predict M_H?
-""")
+"""
+)
 
 M_H_exp = 125.25  # GeV
 v_higgs = 246.22  # GeV
@@ -59,7 +61,8 @@ print("\n" + "=" * 70)
 print("SECTION 2: FINDING 125 IN W33")
 print("=" * 70)
 
-print("""
+print(
+    """
 Let's search for combinations of W33 numbers that give ~125:
 
 W33 parameters:
@@ -69,7 +72,8 @@ W33 parameters:
   e1 = 12, e2 = 2, e3 = -4
   3^4 = 81, 3^2 = 9
   complement_degree = 27
-""")
+"""
+)
 
 # Try various combinations
 attempts = {
@@ -96,7 +100,8 @@ print("\n" + "=" * 70)
 print("SECTION 3: W33 HIGGS MASS FORMULA")
 print("=" * 70)
 
-print("""
+print(
+    """
 MULTIPLE W33 FORMULAS FOR 125:
 
 1. M_H = 3^4 + v + mu = 81 + 40 + 4 = 125 GeV
@@ -111,7 +116,8 @@ MULTIPLE W33 FORMULAS FOR 125:
 
 Let's verify the main formula:
   M_H = 3^4 + v + mu = 81 + 40 + 4 = 125 GeV
-""")
+"""
+)
 
 M_H_w33 = 81 + 40 + 4
 print(f"W33 prediction: M_H = 3^4 + v + mu = {M_H_w33} GeV")
@@ -126,7 +132,8 @@ print("\n" + "=" * 70)
 print("SECTION 4: PHYSICAL INTERPRETATION")
 print("=" * 70)
 
-print("""
+print(
+    """
 The formula M_H = 3^4 + v + mu has deep meaning:
 
   3^4 = 81 = |F_3^4| = size of symplectic space
@@ -146,7 +153,8 @@ ALTERNATIVE INTERPRETATION using formula 2:
   M_H = 3^4 + 2*m2 - |e3|
       = 81 + 2*(SU(5) dim) - (smallest eigenvalue)
       = geometry + gauge - correction
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 5: THE HIGGS QUARTIC COUPLING
@@ -156,7 +164,8 @@ print("\n" + "=" * 70)
 print("SECTION 5: HIGGS SELF-COUPLING")
 print("=" * 70)
 
-print("""
+print(
+    """
 The Higgs quartic coupling lambda relates M_H to v:
   M_H^2 = 2 * lambda * v^2
   lambda = M_H^2 / (2 * v^2)
@@ -166,7 +175,8 @@ From W33:
   v = 246 GeV (= 3(3^4 + 1))
 
 Let's compute lambda from W33 values:
-""")
+"""
+)
 
 M_H_w33 = 125
 v_w33 = 246
@@ -230,7 +240,8 @@ print("\n" + "=" * 70)
 print("SECTION 6: STABILITY AND METASTABILITY")
 print("=" * 70)
 
-print("""
+print(
+    """
 The measured Higgs mass M_H ≈ 125 GeV puts the SM in a
 METASTABLE state - between stability and instability!
 
@@ -247,7 +258,8 @@ The metastability condition requires:
   126 GeV < M_H(critical) < 129 GeV (at 3σ)
 
 W33's 125 GeV is just below this boundary!
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 7: TOP QUARK MASS AND HIGGS
@@ -257,7 +269,8 @@ print("\n" + "=" * 70)
 print("SECTION 7: TOP QUARK - HIGGS RELATION")
 print("=" * 70)
 
-print("""
+print(
+    """
 The top quark mass M_t and Higgs mass M_H are linked through
 radiative corrections. The stability boundary depends on both.
 
@@ -268,12 +281,13 @@ Can W33 predict M_t?
 Attempt: M_t = M_H + v + mu = 125 + 40 + 4 = 169 GeV
          (2% low)
 
-Attempt: M_t = M_H + 2*m2 = 125 + 48 = 173 GeV  
+Attempt: M_t = M_H + 2*m2 = 125 + 48 = 173 GeV
          (0.2% error!)
 
 Or: M_t = 160 + 12 + 1 = 173 GeV
         = triangles + k + m1
-""")
+"""
+)
 
 M_t_exp = 172.69
 M_t_w33 = 125 + 48  # M_H + 2*m2
@@ -295,20 +309,22 @@ print("\n" + "=" * 70)
 print("SECTION 8: FUNDAMENTAL MASS RATIOS")
 print("=" * 70)
 
-print("""
+print(
+    """
 Key mass ratios from W33:
 
 1. M_H / M_W = 125 / 81 ≈ 1.54
    Experimental: 125.25 / 80.38 ≈ 1.56
-   
+
 2. M_t / M_H = 173 / 125 = 1.384
    Experimental: 172.69 / 125.25 ≈ 1.38
-   
+
 3. M_t / M_W = 173 / 81 ≈ 2.14
    Experimental: 172.69 / 80.38 ≈ 2.15
 
 4. M_Z / M_W = 1 / cos(theta_W) with sin^2(theta_W) = 40/173
-""")
+"""
+)
 
 # Compute ratios
 print("\nMass ratio verification:")
@@ -324,7 +340,8 @@ print("\n" + "=" * 70)
 print("SECTION 9: GEOMETRIC ORIGIN OF HIGGS")
 print("=" * 70)
 
-print("""
+print(
+    """
 =======================================================
     THE HIGGS FIELD FROM W33 GEOMETRY
 =======================================================
@@ -350,7 +367,8 @@ The number 125 = 5^3 also suggests:
   - Cubed → 3 generations contribute
 
 =======================================================
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 10: SUMMARY OF MASS PREDICTIONS
@@ -360,7 +378,8 @@ print("\n" + "=" * 70)
 print("SECTION 10: COMPLETE MASS SPECTRUM")
 print("=" * 70)
 
-print("""
+print(
+    """
 =======================================================
     W33 MASS PREDICTIONS
 =======================================================
@@ -385,7 +404,8 @@ RATIOS:
   M_t/M_H = 173/125 = 1.38         [exp: 1.38, 0%]
 
 =======================================================
-""")
+"""
+)
 
 # =============================================================================
 # SAVE RESULTS
@@ -418,7 +438,8 @@ print("\n" + "=" * 70)
 print("PART LXXI CONCLUSIONS")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE HIGGS MASS FROM W33!
 
 Key discoveries:
@@ -439,5 +460,6 @@ Key discoveries:
 W33 predicts SM is METASTABLE at M_H = 125 GeV!
 
 Results saved to PART_LXXI_higgs_mass.json
-""")
+"""
+)
 print("=" * 70)

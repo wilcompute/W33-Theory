@@ -270,7 +270,8 @@ print("\n" + "=" * 70)
 print("COXETER-LIKE PRESENTATION")
 print("=" * 70)
 
-print("""
+print(
+    """
 The triflection group has presentation similar to Coxeter groups.
 
 For complex reflection groups, the generators satisfy:
@@ -287,7 +288,7 @@ From our computation:
   (R₂R₄)³ = 1
   (R₃R₄)⁶ = 1
 
-This matches the complex reflection group G₃₄ in the 
+This matches the complex reflection group G₃₄ in the
 Shephard-Todd classification!
 
 G₃₄ has:
@@ -296,7 +297,8 @@ G₃₄ has:
 - The relations above
 
 This confirms: Aut(Sp₄(3)) ≅ W(E₆) ≅ complex reflection group G₃₄
-""")
+"""
+)
 
 # =====================================================
 # STABILIZER OF A STATE
@@ -306,7 +308,8 @@ print("\n" + "=" * 70)
 print("STABILIZER ANALYSIS")
 print("=" * 70)
 
-print("""
+print(
+    """
 The stabilizer of a state under W(E₆) has order:
   |W(E₆)|/40 = 51840/40 = 1296
 
@@ -321,7 +324,8 @@ The factor 27 corresponds to:
 The factor 48 = |GL(2, F₃)| is:
 - The stabilizer of a non-neighbor pair
 - Related to the F₃ arithmetic structure
-""")
+"""
+)
 
 # =====================================================
 # VERIFY STATES ARE PRESERVED
@@ -370,7 +374,8 @@ print("\n" + "=" * 70)
 print("PART CXXXIX COMPLETE")
 print("=" * 70)
 
-print("""
+print(
+    """
 KEY FINDINGS:
 =============
 
@@ -389,4 +394,5 @@ KEY FINDINGS:
    Aut(Sp₄(3)) ≅ W(E₆) ≅ G₃₄ (Shephard-Todd #34)
 
 5. Stabilizer structure: 1296 = 27 × 48 = 27 × |GL(2, F₃)|
-""")
+"""
+)

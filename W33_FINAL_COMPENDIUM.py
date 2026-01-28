@@ -9,7 +9,8 @@ Run this file for the full theory overview.
 
 
 def main():
-    print("""
+    print(
+        """
     ╔══════════════════════════════════════════════════════════════════════════════╗
     ║                                                                              ║
     ║                     W33: THE THEORY OF EVERYTHING                            ║
@@ -89,7 +90,7 @@ def main():
         Key dimensional relations:
     pass
           • dim(E6) = 78 = 121 - 43 = W33_total - 43
-          • dim(E7) = 133 = 121 + 12 = W33_total + 12  
+          • dim(E7) = 133 = 121 + 12 = W33_total + 12
           • dim(E8) = 248 = 121 + 127 = W33_total + Mersenne prime M₇
     pass
     ═══════════════════════════════════════════════════════════════════════════════
@@ -233,7 +234,8 @@ def main():
     pass
                                         ∎
     pass
-    """)
+    """
+    )
 
 
 if __name__ == "__main__":

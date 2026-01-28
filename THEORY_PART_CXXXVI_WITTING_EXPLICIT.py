@@ -259,7 +259,8 @@ print("\n" + "=" * 70)
 print("THE STRUCTURAL UNDERSTANDING")
 print("=" * 70)
 
-print("""
+print(
+    """
 THEOREM: The Sp₄(3) graph uniquely determines the Witting configuration.
 
 PROOF STRUCTURE:
@@ -270,15 +271,16 @@ PROOF STRUCTURE:
 
 EIGENVALUE ANALYSIS:
   Sp₄(3) has spectrum {12¹, 2²⁴, (-4)¹⁵}
-  
+
 For a graph G with adjacency A and complement Ā:
   A + Ā = J - I (all-ones minus identity)
-  
+
 The Witting Gram matrix satisfies:
   G = I + (1/√3)(J - I - A)
-  
+
 where A is adjacency (orthogonal pairs → 0 in Gram).
-""")
+"""
+)
 
 # Verify the Gram matrix formula
 n = 40
@@ -307,7 +309,8 @@ print("\n" + "=" * 70)
 print("THE KEY INSIGHT: PHASES FROM E₆")
 print("=" * 70)
 
-print("""
+print(
+    """
 The Witting configuration is NOT just "any" realization of Sp₄(3).
 
 It is the UNIQUE realization with:
@@ -319,22 +322,23 @@ The relative phases between non-orthogonal pairs carry
 the E₆ structure. This is why:
 
   240 = |E₈ roots| = |Witting polytope vertices| / 1
-  
+
 wait, actually:
   240 = Witting polytope vertices in C⁴
   40 = 240 / 6 (quotient by 6th roots of unity)
-  
+
 The Witting polytope has 240 VERTICES (not 40).
 These project to 40 RAYS under the phase quotient.
 
 So the Witting POLYTOPE has:
   - 240 vertices
   - Symmetry group = complex reflection group W = 3.W(E₆)
-  
+
 And the CONFIGURATION (quotient) has:
-  - 40 rays  
+  - 40 rays
   - Symmetry group = W(E₆) (after quotienting)
-""")
+"""
+)
 
 # =====================================================
 # WITTING POLYTOPE: THE 240 VERTICES

@@ -30,4 +30,3 @@
 ## is_special_orbit_size_4
 - preserved: {'False': 26, 'True': 1}
 - non-preserved: {'False': 31, 'True': 1}
-

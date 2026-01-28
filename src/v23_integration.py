@@ -180,7 +180,8 @@ def explore_physics_connection():
     print("PHYSICS CONNECTION")
     print("=" * 70)
 
-    print("""
+    print(
+        """
     SYNTHESIS:
 
     1. W33 Structure (my findings):
@@ -211,7 +212,8 @@ def explore_physics_connection():
        - The v23 (2,2,2) holonomy comes from unicentric triads
        - Both involve "fermion-like" sign flips under transport
        - Are they the same phenomenon seen from different angles?
-    """)
+    """
+    )
 
 
 def numerical_check():
@@ -268,7 +270,8 @@ def main():
     print("\n" + "=" * 70)
     print("CONCLUSION")
     print("=" * 70)
-    print("""
+    print(
+        """
     The v23 bundle establishes a RIGOROUS field equation relating:
     - Intrinsic geometry (centers = 0, 1, 3)
     - Z_2 gauge curvature (parity)
@@ -291,7 +294,8 @@ def main():
     - Field equation: centers -> holonomy class
 
     This is the discrete analog of a gauge theory!
-    """)
+    """
+    )
 
 
 if __name__ == "__main__":

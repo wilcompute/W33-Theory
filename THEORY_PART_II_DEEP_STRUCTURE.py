@@ -17,13 +17,15 @@ import math
 from fractions import Fraction
 from itertools import combinations
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════╗
 ║              THEORY OF EVERYTHING - PART II                          ║
 ║                                                                      ║
 ║                    THE DEEP STRUCTURE                                ║
 ╚══════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # CHAPTER 1: WHERE DOES 56 COME FROM?
@@ -34,13 +36,15 @@ print("CHAPTER 1: THE ORIGIN OF 56")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 The master equation α⁻¹ = 81 + 56 = 137 requires us to understand 56.
 
 56 is the dimension of the FUNDAMENTAL representation of E7.
 
 But why does E7 appear in W33 theory?
-""")
+"""
+)
 
 # The embedding chain
 print("THE EMBEDDING CHAIN:")
@@ -165,19 +169,21 @@ print()
 # Why this ratio?
 print("WHY THIS RATIO?")
 print()
-print("""
+print(
+    """
   The Weinberg angle θ_W determines electroweak mixing.
-  
+
   sin²θ_W = g'² / (g² + g'²)
-  
+
   where g = SU(2) coupling, g' = U(1) coupling.
-  
+
   In W33 theory:
     • g² ∝ (internal structure) = 133 = dim(E7)
     • g'² ∝ (boundary) = 40 = W33 points
-    
+
   So sin²θ_W = 40 / (40 + 133) = 40/173 ✓
-""")
+"""
+)
 
 # =============================================================================
 # CHAPTER 3: DARK MATTER
@@ -384,7 +390,8 @@ print()
 # The key transition
 print("THE KEY TRANSITION:")
 print()
-print("""
+print(
+    """
   W33 (discrete)
     ↓ [take 'limit']
   W(E6) (finite group)
@@ -396,7 +403,8 @@ print("""
   Quantum fields
     ↓ [low energy]
   Particles & spacetime
-""")
+"""
+)
 
 # =============================================================================
 # CHAPTER 6: THE COMPLETE PARTICLE SPECTRUM
@@ -591,7 +599,8 @@ print("CHAPTER 10: FINAL SYNTHESIS")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ╔════════════════════════════════════════════════════════════════════╗
 ║                    THE COMPLETE PICTURE                            ║
 ╠════════════════════════════════════════════════════════════════════╣
@@ -627,7 +636,8 @@ print("""
 ║    Planck-scale discrete structure                                 ║
 ║                                                                    ║
 ╚════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 print()
 print("=" * 72)

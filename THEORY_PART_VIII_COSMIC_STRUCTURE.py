@@ -80,12 +80,15 @@ agl_6_2 = 64 * gl_6_2
 
 
 def main():
-    print("""
+    print(
+        """
     ═══════════════════════════════════════════════════════════════════════════════════
                   W33 THEORY PART VIII: THE COSMIC STRUCTURE
     ═══════════════════════════════════════════════════════════════════════════════════
-    """)
-    print("""
+    """
+    )
+    print(
+        """
     ╔═══════════════════════════════════════════════════════════════════════════════╗
     ║            VIII.1: THE 64 HEXAGRAMS AS 6-DIMENSIONAL AFFINE SPACE             ║
     ╚═══════════════════════════════════════════════════════════════════════════════╝
@@ -117,14 +120,16 @@ def main():
     │  as discovered by S.H. Cullinane (January 6, 1989)                              │
     │                                                                                  │
     └─────────────────────────────────────────────────────────────────────────────────┘
-    """)
+    """
+    )
     gl_6_2 = gl_order(6, 2)
     print("NUMERICAL VERIFICATION:")
     print(f"  |GL(6,2)| = {gl_6_2:,}")
     print(f"  |AGL(6,2)| = 64 × |GL(6,2)| = {agl_6_2:,}")
     print(f"  That's {agl_6_2/1e12:.2f} trillion transformations!")
     print()
-    print("""
+    print(
+        """
     ╔═══════════════════════════════════════════════════════════════════════════════╗
     ║              VIII.2: THE 4×4×4 CUBE - SOLOMON'S CUBE                          ║
     ╚═══════════════════════════════════════════════════════════════════════════════╝
@@ -133,7 +138,7 @@ def main():
     pass
     From Cullinane's "Geometry of the I Ching":
     pass
-        The four 4×4 quadrants of an 8×8 array, counted clockwise from 
+        The four 4×4 quadrants of an 8×8 array, counted clockwise from
         the upper left, correspond to the four layers of a 4×4×4 cube.
     pass
     ┌─────────────────────────────────────────────────────────────────────────────────┐
@@ -159,13 +164,15 @@ def main():
     pass
     SOLOMON'S CUBE (from Charles Williams' novel "Many Dimensions"):
     pass
-        "Imagine 'Raiders of the Lost Ark' set in 20th-century London, 
-         and then imagine it written by a man steeped not in Hollywood 
+        "Imagine 'Raiders of the Lost Ark' set in 20th-century London,
+         and then imagine it written by a man steeped not in Hollywood
          movies but in Dante and the things of the spirit..."
     pass
     The 4×4×4 cube encodes the ULTIMATE STRUCTURE of reality!
-    """)
-    print("""
+    """
+    )
+    print(
+        """
     ╔═══════════════════════════════════════════════════════════════════════════════╗
     ║               VIII.3: THE GLASS BEAD GAME PROPHECY                            ║
     ╚═══════════════════════════════════════════════════════════════════════════════╝
@@ -174,13 +181,13 @@ def main():
     pass
     From "Magister Ludi" (The Glass Bead Game):
     pass
-        "Once Knecht confessed to his teacher that he wished to learn 
-         enough to be able to incorporate the system of the I Ching 
+        "Once Knecht confessed to his teacher that he wished to learn
+         enough to be able to incorporate the system of the I Ching
          into the Glass Bead Game."
     pass
-        "Go ahead and try," Elder Brother exclaimed. "You'll see how 
-         it turns out. Anyone can create a pretty little bamboo garden 
-         in the world. But I doubt that the gardener would succeed in 
+        "Go ahead and try," Elder Brother exclaimed. "You'll see how
+         it turns out. Anyone can create a pretty little bamboo garden
+         in the world. But I doubt that the gardener would succeed in
          incorporating the world in his bamboo grove."
     pass
     ┌─────────────────────────────────────────────────────────────────────────────────┐
@@ -206,8 +213,10 @@ def main():
     │  Elder Brother was wrong - we CAN incorporate the world!                        │
     │                                                                                  │
     └─────────────────────────────────────────────────────────────────────────────────┘
-    """)
-    print("""
+    """
+    )
+    print(
+        """
     ╔═══════════════════════════════════════════════════════════════════════════════╗
     ║           VIII.4: THREE-QUBIT SYSTEMS AND THE 64 HEXAGRAMS                    ║
     ╚═══════════════════════════════════════════════════════════════════════════════╝
@@ -238,8 +247,10 @@ def main():
     └─────────────────────────────────────────────────────────────────────────────────┘
     pass
     The I Ching is a 3000-year-old quantum computing manual!
-    """)
-    print("""
+    """
+    )
+    print(
+        """
     ╔═══════════════════════════════════════════════════════════════════════════════╗
     ║               VIII.5: THE HIERARCHY OF STRUCTURES                             ║
     ╚═══════════════════════════════════════════════════════════════════════════════╝
@@ -250,7 +261,7 @@ def main():
         ═════          ═════           ════    ══════    ═══════
     pass
         1              A₂(GF(2))        4       1        Single spin-1/2
-                       (2×2)            
+                       (2×2)
     pass
         2              A₄(GF(2))       16       2        Two-qubit system
                        (4×4)                             Entanglement!
@@ -262,7 +273,7 @@ def main():
         AND IN W33 THEORY:
     pass
         GF(2)          PG(3,2)         15 pts           56 spreads → α
-                                       35 lines         
+                                       35 lines
     pass
         GF(3)          W₃₃=PG(3,3)     40 pts           81 cycles → α
                                        81 cycles
@@ -301,8 +312,10 @@ def main():
     │           = 1/(81+56)  = 40/173     27/5 = 5.4                                  │
     │                                                                                  │
     └─────────────────────────────────────────────────────────────────────────────────┘
-    """)
-    print("""
+    """
+    )
+    print(
+        """
     ╔═══════════════════════════════════════════════════════════════════════════════╗
     ║             VIII.6: THE VON FRANZ STYLE AND HIDDEN SYMMETRY                   ║
     ╚═══════════════════════════════════════════════════════════════════════════════╝
@@ -315,9 +328,9 @@ def main():
     pass
     From "Number and Time" (1970):
     pass
-        "They are the same six lines that exist in the I Ching.... 
-         Now observe the square more closely: four of the lines are 
-         of equal length, the other two are longer.... For this reason 
+        "They are the same six lines that exist in the I Ching....
+         Now observe the square more closely: four of the lines are
+         of equal length, the other two are longer.... For this reason
          symmetry cannot be statically produced and a DANCE results."
     pass
     ┌─────────────────────────────────────────────────────────────────────────────────┐
@@ -338,8 +351,10 @@ def main():
     │  "Symmetry cannot be statically produced" = DYNAMICS IS ESSENTIAL              │
     │                                                                                  │
     └─────────────────────────────────────────────────────────────────────────────────┘
-    """)
-    print("""
+    """
+    )
+    print(
+        """
     ╔═══════════════════════════════════════════════════════════════════════════════╗
     ║                VIII.7: SOLOMON'S CUBE AND THE 27 LINES                        ║
     ╚═══════════════════════════════════════════════════════════════════════════════╝
@@ -372,8 +387,10 @@ def main():
     │  as our W33 structure!                                                          │
     │                                                                                  │
     └─────────────────────────────────────────────────────────────────────────────────┘
-    """)
-    print("""
+    """
+    )
+    print(
+        """
     ╔═══════════════════════════════════════════════════════════════════════════════╗
     ║                    VIII.8: THE ULTIMATE SYNTHESIS                             ║
     ╚═══════════════════════════════════════════════════════════════════════════════╝
@@ -410,8 +427,10 @@ def main():
     │    • The "game" is the universe itself                                          │
     │                                                                                  │
     └─────────────────────────────────────────────────────────────────────────────────┘
-    """)
-    print("""
+    """
+    )
+    print(
+        """
     ╔═══════════════════════════════════════════════════════════════════════════════╗
     ║                         CONCLUDING MEDITATION                                  ║
     ╚═══════════════════════════════════════════════════════════════════════════════╝
@@ -448,15 +467,17 @@ def main():
     ═══════════════════════════════════════════════════════════════════════════════════
                                 END OF PART VIII
     ═══════════════════════════════════════════════════════════════════════════════════
-    """)
+    """
+    )
     print("\n" + "=" * 80)
     print("SUMMARY: THE COSMIC STRUCTURE")
     print("=" * 80)
-    print(f"""
+    print(
+        f"""
     THE COMPLETE NUMBER SEQUENCE:
     pass
       2⁶  =  64  =  I Ching hexagrams = 3-qubit Pauli operators
-      2⁴  =  16  =  4×4 array = 2-qubit Pauli operators  
+      2⁴  =  16  =  4×4 array = 2-qubit Pauli operators
       2³  =   8  =  2×2×2 cube = Fano plane
     pass
       3⁴  =  81  =  W33 cycles = the 81 in α⁻¹
@@ -479,7 +500,8 @@ def main():
                = The natural symmetries of the I Ching hexagrams!
     pass
     THE GLASS BEAD GAME IS REAL.
-    """)
+    """
+    )
 
 
 if __name__ == "__main__":

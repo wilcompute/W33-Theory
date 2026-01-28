@@ -256,7 +256,8 @@ def main():
     print("THE BIJECTION STRUCTURE")
     print("=" * 55)
 
-    print("""
+    print(
+        """
 STRUCTURAL CORRESPONDENCE:
 
 W33 (240 edges):
@@ -279,7 +280,8 @@ THE CORRESPONDENCE:
     - W33 axis V <-> E8 D4 vector representation
     - W33 axis S+ <-> E8 D4 spinor+ representation
     - W33 axis S- <-> E8 D4 spinor- representation
-""")
+"""
+    )
 
     # Verify 240 = 240
     print("\nNUMERICAL VERIFICATION:")

@@ -86,7 +86,8 @@ print("\n" + "=" * 80)
 print("W33 ANGULAR STRUCTURE")
 print("=" * 80)
 
-print("""
+print(
+    """
 K4 PHASES AND MIXING ANGLES
 ===========================
 
@@ -99,7 +100,8 @@ Key W33 angles:
   - 1/3 = 120° between GF(3) elements
   - 1/40 = 9° (point contribution)
   - 1/81 = 1.23° (cycle contribution)
-""")
+"""
+)
 
 # W33 inspired angles
 angle_gf3 = 2 * pi / 3  # 120° - generation spacing
@@ -121,7 +123,8 @@ print("\n" + "=" * 80)
 print("CABIBBO ANGLE FROM W33")
 print("=" * 80)
 
-print("""
+print(
+    """
 THE CABIBBO ANGLE
 =================
 
@@ -131,7 +134,8 @@ This is the most precisely measured mixing angle.
 
 W33 hypothesis:
   θ_c related to fundamental ratios in W33
-""")
+"""
+)
 
 # Try various W33 combinations
 cabibbo_observed = 0.22650
@@ -222,7 +226,8 @@ print("\n" + "=" * 80)
 print("PMNS ANGLES FROM W33")
 print("=" * 80)
 
-print("""
+print(
+    """
 NEUTRINO MIXING ANGLES
 ======================
 
@@ -232,7 +237,8 @@ Key values:
   sin²(θ₁₂) ≈ 0.307 (solar)
   sin²(θ₂₃) ≈ 0.546 (atmospheric, near maximal)
   sin²(θ₁₃) ≈ 0.0220 (reactor, small)
-""")
+"""
+)
 
 sin2_12_obs = sin(theta_12) ** 2  # ≈ 0.307
 sin2_23_obs = sin(theta_23) ** 2  # ≈ 0.546
@@ -281,7 +287,8 @@ print("\n" + "=" * 80)
 print("WOLFENSTEIN HIERARCHY")
 print("=" * 80)
 
-print("""
+print(
+    """
 CKM EXPANSION IN POWERS OF λ
 ============================
 
@@ -296,7 +303,8 @@ Each generation mixing is suppressed by λ ≈ 0.22.
 W33 interpretation:
   λ = fundamental transition amplitude
   λⁿ = n-th generation suppression
-""")
+"""
+)
 
 
 # Compute CKM in Wolfenstein
@@ -346,7 +354,8 @@ print("\n" + "=" * 80)
 print("CP VIOLATION")
 print("=" * 80)
 
-print("""
+print(
+    """
 THE JARLSKOG INVARIANT
 ======================
 
@@ -359,7 +368,8 @@ J ≈ 3.18 × 10⁻⁵ (observed)
 W33 interpretation:
   CP violation from K4 phase = -1
   The phase creates matter-antimatter asymmetry!
-""")
+"""
+)
 
 # Jarlskog invariant
 J_observed = 3.18e-5
@@ -387,7 +397,8 @@ print("\n" + "=" * 80)
 print("TRIBIMAXIMAL MIXING")
 print("=" * 80)
 
-print("""
+print(
+    """
 THE TRIBIMAXIMAL MATRIX
 =======================
 
@@ -406,7 +417,8 @@ The last is WRONG! θ₁₃ ≠ 0 (Daya Bay 2012)
 
 W33 correction:
   sin²θ₁₃ = 1/45 = 0.0222 (from K4 structure)
-""")
+"""
+)
 
 # Tribimaximal predictions
 print(f"\nTribimaximal predictions:")
@@ -427,7 +439,8 @@ print("\n" + "=" * 80)
 print("W33 FLAVOR MIXING SYNTHESIS")
 print("=" * 80)
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                    FLAVOR MIXING FROM W33                                    ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
@@ -462,7 +475,8 @@ print("""
 ║  AGREEMENT WITHIN ERRORS!                                                    ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # Final check
 theta_13_pred = arcsin(sqrt(1 / 45)) * 180 / pi

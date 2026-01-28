@@ -188,4 +188,3 @@ The research is at a **critical juncture**:
 The 4-regularity + 40-point + phase-encoding suggests this is **purpose-designed**, not generic.
 
 Next move: **Exploit the phase structure to decode the algebra.**
-

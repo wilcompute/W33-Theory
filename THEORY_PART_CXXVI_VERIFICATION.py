@@ -250,17 +250,18 @@ def main():
     print(" THEORETICAL RESOLUTION")
     print("=" * 70)
 
-    print("""
+    print(
+        """
   The key insight from the literature:
-  
+
   The symplectic polar graph Sp(4, F₃) with 40 vertices has
   automorphism group of order 51,840.
-  
+
   This group contains PSp(4, F₃) (order 25,920) as an index-2 subgroup.
-  
+
   The extra factor of 2 comes from the GRAPH AUTOMORPHISM that
   is NOT induced by a symplectic transformation.
-  
+
   ╔═══════════════════════════════════════════════════════════════════╗
   ║                                                                   ║
   ║   For the symplectic polar graph of Sp(2n, q) with q odd:         ║
@@ -274,36 +275,37 @@ def main():
   ║     |Aut(W33)| = 25,920 × 2 = 51,840 = |W(E₆)|                    ║
   ║                                                                   ║
   ╚═══════════════════════════════════════════════════════════════════╝
-  
+
   The isomorphism Aut(W33) ≅ W(E₆) is therefore:
-  
+
     W(E₆) ≅ PSp(4, F₃) ⋊ Z₂
-    
+
   where:
     • PSp(4, F₃) = index-2 subgroup = "symplectic" automorphisms
     • Z₂ = polarity automorphism = "extra" automorphism
-  
+
   ═══════════════════════════════════════════════════════════════════
   WHAT THIS MEANS FOR W33 THEORY:
   ═══════════════════════════════════════════════════════════════════
-  
+
   The connection between W33 and E₆ is through this GROUP isomorphism:
-  
+
     Aut(W33) ≅ W(E₆)
-    
+
   This is a genuine, deep mathematical fact - not a coincidence!
-  
+
   It explains why:
   • |Aut(W33)| = 51,840 (= |W(E₆)|)
-  • The 27 non-neighbors correspond to E₆ structure  
+  • The 27 non-neighbors correspond to E₆ structure
   • The eigenvalue multiplicities reflect E₆ subgroups
-  
+
   The numerical coincidences (40 = D₅ roots, 240 = E₈ roots)
   are STILL unexplained. They may be coincidences, or they may
   reflect additional structure we haven't understood yet.
-  
+
   ═══════════════════════════════════════════════════════════════════
-""")
+"""
+    )
 
 
 if __name__ == "__main__":

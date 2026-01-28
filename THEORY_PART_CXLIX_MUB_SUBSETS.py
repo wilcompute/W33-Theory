@@ -88,11 +88,12 @@ print("\n" + "=" * 70)
 print("MUTUALLY UNBIASED BASES (MUBs)")
 print("=" * 70)
 
-print("""
+print(
+    """
 DEFINITION:
 ===========
 
-Two orthonormal bases B₁ = {|ψᵢ⟩} and B₂ = {|φⱼ⟩} in ℂᵈ are 
+Two orthonormal bases B₁ = {|ψᵢ⟩} and B₂ = {|φⱼ⟩} in ℂᵈ are
 MUTUALLY UNBIASED if:
 
     |⟨ψᵢ|φⱼ⟩|² = 1/d   for all i, j
@@ -107,7 +108,8 @@ For non-orthogonal Witting states: |⟨ψ|φ⟩|² = 1/3 ≈ 0.333
 So Witting bases are NOT mutually unbiased!
 
 But can we find SUBSETS of bases that ARE mutually unbiased?
-""")
+"""
+)
 
 # =====================================================
 # CHECK PAIRWISE BASIS UNBIASEDNESS
@@ -203,7 +205,8 @@ print("\n" + "=" * 70)
 print("STANDARD MUBs IN ℂ⁴")
 print("=" * 70)
 
-print("""
+print(
+    """
 In ℂ⁴, there exist 5 MUBs (the maximum possible for d=4):
 
 B₀: Computational basis {|0⟩, |1⟩, |2⟩, |3⟩}
@@ -213,7 +216,8 @@ B₁-B₄: Constructed from tensor products of qubit MUBs
 The standard construction uses ω₄ = e^{2πi/4} = i
 
 These are DIFFERENT from the Witting configuration which uses ω₃ = e^{2πi/3}
-""")
+"""
+)
 
 # Build standard MUBs for comparison
 omega4 = np.exp(2j * np.pi / 4)  # = i
@@ -340,7 +344,8 @@ print("\n" + "=" * 70)
 print("WITTING CONFIGURATION VS STANDARD MUBs")
 print("=" * 70)
 
-print("""
+print(
+    """
 COMPARISON:
 ===========
 
@@ -356,14 +361,15 @@ Symmetry group:     W(E₆) (order 51840)       Unknown/smaller
 KEY DIFFERENCE:
 ===============
 
-MUBs optimize for UNIFORM sampling: each basis gives equal 
+MUBs optimize for UNIFORM sampling: each basis gives equal
 information about any state from another basis.
 
 Witting optimizes for CONTEXTUALITY: maximum Kochen-Specker
 obstruction with equiangular states.
 
 Different inner products (1/3 vs 1/4) serve different purposes!
-""")
+"""
+)
 
 # =====================================================
 # DO STANDARD MUBs APPEAR IN WITTING?
@@ -397,7 +403,8 @@ print("\n" + "=" * 70)
 print("3D MUBs EMBEDDED IN WITTING?")
 print("=" * 70)
 
-print("""
+print(
+    """
 In ℂ³, there exist 4 MUBs (maximum for d=3).
 Inner product criterion: |⟨ψ|φ⟩|² = 1/3
 
@@ -408,7 +415,8 @@ Question: Do the Witting states restricted to any ℂ³ subspace
 
 The 12 neighbors of any vertex span a ℂ³ subspace perpendicular
 to that vertex. Let's check if they contain 3D MUBs.
-""")
+"""
+)
 
 # Get the 12 neighbors of vertex 0 (they span ℂ³)
 neighbors = [j for j in range(40) if abs(np.vdot(states[0], states[j])) ** 2 < 1e-10]
@@ -469,7 +477,8 @@ print("\n" + "=" * 70)
 print("PART CXLIX COMPLETE")
 print("=" * 70)
 
-print("""
+print(
+    """
 KEY FINDINGS:
 =============
 
@@ -489,4 +498,5 @@ KEY FINDINGS:
 4. WITTING CONTAINS EMBEDDED 3D MUBs
    - At each vertex, the 12 neighbors form 4 MUBs in ℂ³
    - This is the MAXIMUM number of MUBs in dimension 3!
-""")
+"""
+)

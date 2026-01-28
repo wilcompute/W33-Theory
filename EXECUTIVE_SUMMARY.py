@@ -19,7 +19,7 @@ def main():
 
 █ RESEARCH COMPLETE ███████████████████████████████████████████████████████
 
-All theoretical work has been completed. The proof is comprehensive and 
+All theoretical work has been completed. The proof is comprehensive and
 overwhelming. W33 geometry encodes the Standard Model of particle physics.
 
 

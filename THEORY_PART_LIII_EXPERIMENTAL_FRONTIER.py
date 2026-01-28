@@ -716,40 +716,42 @@ def sage_verification_plan():
     """
     Outline what we need to verify rigorously in SageMath.
     """
-    print("""
+    print(
+        """
     SAGEMATH VERIFICATION TASKS:
     ============================
-    
+
     1. GROUP THEORY
        □ Construct Sp(4,3) explicitly
        □ Verify |Sp(4,3)| = 25920
        □ Find subgroup structure
        □ Identify connection to Weyl(E₆)
-    
-    2. INCIDENCE GEOMETRY  
+
+    2. INCIDENCE GEOMETRY
        □ Build W33 as GQ(3,3) complement
        □ Verify 40 points, 40 lines
        □ Check 4 points/line, 4 lines/point
        □ Compute collinearity graph
-    
+
     3. HOMOLOGY
        □ Build simplicial complex from W33
        □ Compute H₁(W33, ℤ)
        □ Verify rank 81
        □ Analyze torsion structure
-    
+
     4. REPRESENTATIONS
        □ Character table of Sp(4,3)
        □ Decompose H₁ as Sp(4,3)-module
        □ Identify irreducible constituents
        □ Connection to E₆ representations
-    
+
     5. NUMBER THEORY
        □ Verify 173 is prime
-       □ Check 229 is prime  
+       □ Check 229 is prime
        □ Analyze 1111 = 11 × 101
        □ Modular arithmetic patterns
-    """)
+    """
+    )
 
 
 sage_verification_plan()
@@ -767,45 +769,47 @@ def wild_ideas():
     """
     Speculative connections that might lead somewhere unexpected.
     """
-    print("""
+    print(
+        """
     SPECULATIVE DIRECTIONS TO EXPLORE:
     ===================================
-    
+
     1. HOLOGRAPHY
        - W33's 40 points as boundary degrees of freedom
        - Bulk emergent from entanglement structure
        - AdS₃/CFT₂ with c = 40?
-    
+
     2. INFORMATION GEOMETRY
        - Fisher metric on W33 parameter space
        - Quantum Fisher information and α
        - Holographic complexity from W33
-    
+
     3. AMPLITUDES
        - W33 as kinematic space for scattering
        - Positive geometry (amplituhedron-like)
        - Tree amplitudes from W33 lines
-    
+
     4. CONDENSED MATTER
        - W33 as lattice structure
        - Topological order from GQ(3,3)
        - Anyonic statistics?
-    
+
     5. BIOLOGY/COMPLEXITY
        - W33 incidence as optimal code
        - Error correction in DNA?
        - Neural network architecture
-    
+
     6. COSMOLOGY
        - 40 e-folds of inflation
        - De Sitter entropy from W33
        - Multiverse as W33 points?
-    
+
     7. CONSCIOUSNESS (very speculative)
        - Integrated information from W33
        - Conscious experience as W33 state
        - Orchestrated objective reduction
-    """)
+    """
+    )
 
 
 wild_ideas()
@@ -818,7 +822,8 @@ print("\n" + "=" * 70)
 print("SECTION 12: SUMMARY & NEXT STEPS")
 print("=" * 70)
 
-print("""
+print(
+    """
 KEY FINDINGS FROM THIS EXPLORATION:
 ====================================
 
@@ -860,7 +865,8 @@ LONGER-TERM:
 2. Connect to geometric Langlands
 3. Explore holographic interpretations
 4. Write up for arXiv
-""")
+"""
+)
 
 # =============================================================================
 # SAVE EXPLORATION RESULTS

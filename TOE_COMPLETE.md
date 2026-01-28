@@ -37,33 +37,33 @@ The W33 geometry (generalized quadrangle GQ(3,3)) encodes the complete structure
          │  (Z₃ = 0)               │     ↓
          │                         │    270 fundamental
          ├─ Weak isospin           │    objects
-         │  (Z₄ = 2)               │     
+         │  (Z₄ = 2)               │
          │                         │    SU(5) GUT
          └─ 12× enhancement    ────┘    embedding
-            
+
                            ↓
                     V23 TRIANGLES
                    (5,280 configurations)
-                    
+
          ┌─────────────────────────────────┐
          │                                 │
     FERMIONS (2,160)                  BOSONS (2,880 + 240)
     Odd parity                        Even parity
-    Unicentric triangles              
+    Unicentric triangles
          │                                 │
     Quarks + Leptons              Gauge bosons + Topological
     6 types × 3 families          (photon, W, Z, gluons)
                                   + Dark sector
-    
+
          ↓
     HOLONOMY SPECIALIZATION
     Shannon entropy → particle mass
-    
+
          ↓
     PARTICLE SPECTRUM
     3 generations, 6 quarks, 3 leptons
     4 gauge bosons, Higgs, dark matter
-    
+
          ↓
     ENERGY SCALES
     Electroweak: 100 GeV
@@ -321,7 +321,7 @@ $$\alpha_1(M_{\text{GUT}}) = \alpha_2(M_{\text{GUT}}) = \alpha_3(M_{\text{GUT}})
 ### 2. Neutrino Masses
 
 **Structure**: 3 families from Z₃ fiber
-**Mass differences**: 
+**Mass differences**:
 - $\Delta m_{\text{atm}}^2 \approx 2.5 \times 10^{-3}$ eV²
 - $\Delta m_{\text{solar}}^2 \approx 7 \times 10^{-5}$ eV²
 **Ratio**: ≈ 36 (from geometric analysis)
@@ -421,7 +421,7 @@ In traditional physics:
   - α⁻¹ ≈ 137 from 12² geometric factor
   - αₛ ≈ 0.12 from running at M_Z
   - All ratios follow from geometry
-  
+
 - **Particle masses**: Derived from holonomy entropy
   - m_t = 173 GeV from S = 1.236
   - m_W = 80 GeV from S = 1.43
@@ -431,7 +431,7 @@ In traditional physics:
 - **Family structure**: Derived from Z₃ fiber
   - Z₃ ∈ {0,1,2} gives exactly 3 families
   - No freedom, topologically enforced
-  
+
 - **Gauge symmetries**: Derived from W33 structure
   - SU(3): From Z₃ fiber in unicentric triangles
   - SU(2): From Z₄ universal assignment

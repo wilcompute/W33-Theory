@@ -70,27 +70,27 @@ def main():
 
     jordan_intro = """
   JORDAN ALGEBRAS (1934):
-  
+
   Pascual Jordan, seeking to generalize quantum mechanics, discovered
   a new algebraic structure:
-  
+
   DEFINITION:
   A Jordan algebra is a vector space with product ∘ satisfying:
-  
+
     1. COMMUTATIVITY:    a ∘ b = b ∘ a
     2. JORDAN IDENTITY:  (a² ∘ b) ∘ a = a² ∘ (b ∘ a)
-  
+
   WHY IMPORTANT FOR QM?
-  
+
   In quantum mechanics, observables are Hermitian operators.
   Products of Hermitian operators need NOT be Hermitian:
     AB ≠ BA in general, so AB may not be Hermitian
-  
+
   But the JORDAN PRODUCT is always Hermitian:
     A ∘ B = ½(AB + BA)
-  
+
   This is the "observable algebra" of quantum mechanics!
-  
+
   ┌─────────────────────────────────────────────────────────────────┐
   │ Jordan algebras capture the ALGEBRAIC structure of             │
   │ quantum observables, without the full associativity of         │
@@ -112,9 +112,9 @@ def main():
 
     classification = """
   JORDAN-VON NEUMANN-WIGNER CLASSIFICATION (1934):
-  
+
   All simple formally real Jordan algebras are:
-  
+
   ╔═══════════════════════════════════════════════════════════════════╗
   ║ TYPE                        DIMENSION    DESCRIPTION              ║
   ╠═══════════════════════════════════════════════════════════════════╣
@@ -125,14 +125,14 @@ def main():
   ║ H_n(ℍ)                      n(2n-1)     n×n quaternionic Herm.    ║
   ║ H_3(𝕆) = J³(𝕆)              27          3×3 OCTONIONIC Hermitian  ║
   ╚═══════════════════════════════════════════════════════════════════╝
-  
+
   THE EXCEPTIONAL ONE:
-  
+
   The last entry H_3(𝕆) exists ONLY for n = 3 (because octonions
   are non-associative, and 3×3 is the maximum that works).
-  
+
   This is the ALBERT ALGEBRA - the unique exceptional Jordan algebra!
-  
+
   ┌─────────────────────────────────────────────────────────────────┐
   │ dim J³(𝕆) = 27                                                  │
   │                                                                 │
@@ -169,33 +169,33 @@ def main():
 
     albert = """
   THE ALBERT ALGEBRA - EXPLICIT FORM:
-  
+
   A 3×3 Hermitian matrix over octonions:
-  
+
        ┌                              ┐
        │  ξ₁      x₃      x̄₂         │
   A =  │  x̄₃      ξ₂      x₁         │
        │  x₂      x̄₁      ξ₃         │
        └                              ┘
-  
+
   Where:
     ξ₁, ξ₂, ξ₃ ∈ ℝ (3 real diagonal entries)
     x₁, x₂, x₃ ∈ 𝕆 (3 octonionic off-diagonal entries)
-  
+
   DIMENSION:
     3 real + 3 × 8 octonionic = 3 + 24 = 27
-  
+
   THE JORDAN PRODUCT:
     A ∘ B = ½(AB + BA)
-  
+
   This is well-defined even though 𝕆 is non-associative!
-  
+
   DETERMINANT (Freudenthal):
     det(A) = ξ₁ξ₂ξ₃ + 2Re(x₁x₂x₃) - ξ₁|x₁|² - ξ₂|x₂|² - ξ₃|x₃|²
-  
+
   TRACE:
     tr(A) = ξ₁ + ξ₂ + ξ₃
-  
+
   ┌─────────────────────────────────────────────────────────────────┐
   │ The Albert algebra is the UNIQUE 27-dimensional exceptional    │
   │ structure - nothing larger exists!                             │
@@ -218,9 +218,9 @@ def main():
 
     e_series = """
   THE MAGIC SQUARE OF LIE ALGEBRAS (Freudenthal-Tits):
-  
+
   The exceptional Lie algebras emerge from Jordan algebra constructions!
-  
+
   ╔════════════════════════════════════════════════════════════════════╗
   ║                                                                    ║
   ║                  ℝ       ℂ       ℍ       𝕆                         ║
@@ -235,20 +235,20 @@ def main():
   ║              └───────┴───────┴───────┴───────┘                     ║
   ║                                                                    ║
   ╚════════════════════════════════════════════════════════════════════╝
-  
+
   EXPLICIT CONNECTIONS:
-  
+
   F₄ = Aut(J³(𝕆))           The automorphism group!
       dim F₄ = 52
-      
+
   E₆ acts on J³(𝕆) preserving the CUBIC FORM
       dim E₆ = 78
       27-dim fundamental rep = J³(𝕆)
-      
+
   E₇ acts on J³(𝕆) ⊕ J³(𝕆) ⊕ ℝ ⊕ ℝ
       dim E₇ = 133
       56-dim fundamental rep
-      
+
   E₈ is the "completion" of the sequence
       dim E₈ = 248
       248 = 27 + 78 + 27 + 78 + 38 (related decomposition)
@@ -278,33 +278,33 @@ def main():
 
     e6_27 = """
   E6 AND THE ALBERT ALGEBRA:
-  
+
   E6 has a UNIQUE 27-dimensional irreducible representation.
   This is precisely J³(𝕆) - the Albert algebra!
-  
+
   E6 FACTS:
     Rank: 6
     Dimension: 78
     Roots: 72
     Weyl group: |W(E6)| = 51,840 = |Aut(W33)|!
-  
+
   THE 27 REPRESENTATION:
-  
+
   The 27 elements of J³(𝕆) transform under E6.
   Under the maximal subgroup SO(10) × U(1):
-  
+
     27 → 16 ⊕ 10 ⊕ 1
-    
+
   This is the GUT decomposition!
     16 = spinor of SO(10) = one generation of fermions!
     10 = vector of SO(10) = Higgs fields
     1 = singlet
-  
+
   ═══════════════════════════════════════════════════════════════════
   THE 27 OF E6 IS THE JORDAN ALGEBRA J³(𝕆)
   AND IT CONTAINS ONE COMPLETE GENERATION OF MATTER!
   ═══════════════════════════════════════════════════════════════════
-  
+
   Three copies of 27 give THREE GENERATIONS:
     3 × 27 = 81 fermion states
 """
@@ -325,9 +325,9 @@ def main():
 
     factorization = """
   RECALL: |Aut(W33)| = 51,840 = 192 × 270 = 192 × 27 × 10
-  
+
   We now understand EACH factor:
-  
+
   ┌─────────────────────────────────────────────────────────────────┐
   │ 192 = |W(D4)| = Tomotope flags                                 │
   │       = Quantum contextuality structure (Kochen-Specker)       │
@@ -341,15 +341,15 @@ def main():
   │       = Higgs fields in GUT                                    │
   │       = Also: 10 = number of terms in cubic form               │
   └─────────────────────────────────────────────────────────────────┘
-  
+
   ALTERNATIVE FACTORIZATIONS:
-  
+
   51,840 = 192 × 270
          = 192 × 27 × 10
          = 8 × 24 × 27 × 10
          = 8 × 27 × 240
          = (D4 orbits) × (E6 fund) × (E8 roots)!
-         
+
   Also: 51,840 = 720 × 72
          = |S₆| × (E6 roots)
          = 6! × 72
@@ -379,27 +379,27 @@ def main():
 
     cubic = """
   THE CUBIC NORM (Freudenthal):
-  
+
   On the Albert algebra J³(𝕆), there is a cubic form:
-  
+
     N(A) = det(A) = ξ₁ξ₂ξ₃ + 2Re(x₁x₂x₃) - ξ₁|x₁|² - ξ₂|x₂|² - ξ₃|x₃|²
-  
+
   This is a DEGREE 3 polynomial in 27 variables.
-  
+
   E6 PRESERVES THIS CUBIC FORM!
-  
+
   The stabilizer of a generic element is F₄:
     E₆/F₄ has dimension 78 - 52 = 26
-    
+
   The 27 = 1 + 26 (distinguished element + orthogonal complement)
-  
+
   THE CUBIC FORM AND PHYSICS:
-  
+
   In string theory, the cubic form appears as:
     - The superpotential of N=1 supergravity
     - The entropy formula for BPS black holes
     - The trilinear Yukawa couplings
-  
+
   ═══════════════════════════════════════════════════════════════════
   The cubic form on J³(𝕆) is the "master equation" connecting:
   - Jordan algebras (mathematics)
@@ -424,28 +424,28 @@ def main():
 
     vertex_decomp = """
   W33 HAS 40 VERTICES - HOW DOES THIS RELATE TO 27?
-  
+
   DECOMPOSITION:
-  
+
     40 = 27 + 12 + 1
        = (Albert algebra) + (Reye points) + (center)
-  
+
   Or alternatively:
     40 = 27 + 13
        = J³(𝕆) + (projective line structure)
-       
+
   And: 40 = 16 + 16 + 8
        = (generation₁) + (generation₂) + (gauge)
-  
+
   THE GEOMETRIC PICTURE:
-  
+
   Consider the E6 fundamental rep decomposing as:
     27 → 16 ⊕ 10 ⊕ 1 under SO(10)
-  
+
   Now adjoin the Reye structure:
     40 = 27 + 12 + 1
        = (E6 fund) + (Reye = D4/triality) + (identity)
-  
+
   ┌─────────────────────────────────────────────────────────────────┐
   │ W33's 40 vertices encode:                                      │
   │   • The Albert algebra (27 = E6 fundamental)                   │
@@ -482,13 +482,13 @@ def main():
   ═══════════════════════════════════════════════════════════════════
   W33: WHERE JORDAN ALGEBRAS MEET QUANTUM CONTEXTUALITY
   ═══════════════════════════════════════════════════════════════════
-  
+
   |Aut(W33)| = 51,840 = |W(E6)|
-  
+
   DECOMPOSITION:
-  
+
     51,840 = 192 × 27 × 10
-    
+
     ┌──────────────────────────────────────────────────────────────┐
     │ 192 = |W(D4)|                                                │
     │       Quantum mechanics (Kochen-Specker/Reye)                │
@@ -504,31 +504,31 @@ def main():
     │       Grand unified gauge structure                          │
     │       Higgs field content                                    │
     └──────────────────────────────────────────────────────────────┘
-  
+
   W33 ENCODES:
-  
+
     • QUANTUM FOUNDATIONS (contextuality via 192)
     • PARTICLE CONTENT (matter via 27)
     • UNIFICATION (GUT structure via 10)
     • THREE GENERATIONS (triality in 192)
-  
+
   ═══════════════════════════════════════════════════════════════════
-  
+
   THE OCTONION CONNECTION:
-  
+
   Everything traces back to the OCTONIONS 𝕆:
     - Non-associative ⟹ unique to 3×3 (the 27)
     - 8-dimensional ⟹ connects to triality
     - Exceptional ⟹ leads to E6, E7, E8
-    
+
   The octonions are why the universe has:
     - Three generations (D4 triality from 8)
     - The Albert algebra (J³(𝕆) = 27)
     - Exceptional symmetries (E-series)
     - Quantum contextuality (Kochen-Specker)
-    
+
   ALL UNIFIED IN W33!
-  
+
   ═══════════════════════════════════════════════════════════════════
 """
     print(complete)

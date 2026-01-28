@@ -25,24 +25,26 @@ print("\n" + "=" * 70)
 print("SECTION 1: EXPERIMENTAL NEUTRINO DATA")
 print("=" * 70)
 
-print("""
+print(
+    """
 Neutrino oscillation experiments have measured:
 
 MASS-SQUARED DIFFERENCES:
   Δm²_21 = (7.53 ± 0.18) × 10⁻⁵ eV² (solar)
   |Δm²_31| = (2.453 ± 0.033) × 10⁻³ eV² (atmospheric)
-  
+
 MIXING ANGLES (PMNS matrix):
   θ₁₂ = 33.44° ± 0.77° (solar angle)
   θ₂₃ = 49.0° ± 1.1°   (atmospheric angle)
   θ₁₃ = 8.57° ± 0.12°  (reactor angle)
-  
+
 CP PHASE:
   δ_CP = 195° ± 25° (hint of CP violation)
 
 The PMNS matrix U has the same structure as CKM but
 with VERY DIFFERENT values - large mixing angles!
-""")
+"""
+)
 
 # Experimental values
 dm21_sq = 7.53e-5  # eV²
@@ -66,7 +68,8 @@ print("\n" + "=" * 70)
 print("SECTION 2: PMNS MIXING ANGLES FROM W33")
 print("=" * 70)
 
-print("""
+print(
+    """
 The PMNS matrix differs from CKM in that neutrino mixing
 is LARGE rather than small.
 
@@ -81,7 +84,8 @@ The complement structure of W33 governs neutrinos!
   - Total = 39 (one less than 40)
 
 PMNS angles from W33 complement:
-""")
+"""
+)
 
 # W33 parameters
 v, k, lam, mu = 40, 12, 2, 4
@@ -142,13 +146,15 @@ print("\n" + "=" * 70)
 print("SECTION 3: NEUTRINO MASS RATIO")
 print("=" * 70)
 
-print("""
+print(
+    """
 The key observable is the ratio of mass-squared differences:
 
   R = |Δm²_31| / Δm²_21
 
 Experimental: R = 2.453 × 10⁻³ / 7.53 × 10⁻⁵ = 32.6
-""")
+"""
+)
 
 R_exp = dm31_sq / dm21_sq
 print(f"R_experimental = {R_exp:.1f}")
@@ -176,12 +182,13 @@ print("\n" + "=" * 70)
 print("SECTION 4: ABSOLUTE MASS SCALE")
 print("=" * 70)
 
-print("""
+print(
+    """
 Oscillations only measure mass DIFFERENCES.
 Absolute scale from:
   - Cosmology: Σm_ν < 0.12 eV (Planck)
   - Beta decay: m_β < 0.8 eV (KATRIN)
-  
+
 SEESAW MECHANISM:
   m_ν ~ m_D² / M_R
 
@@ -190,10 +197,11 @@ where m_D ~ electroweak scale, M_R ~ GUT scale.
 W33 SEESAW:
   M_R = 3^(v/2) = 3^20 ~ 3.5 × 10⁹ GeV
   m_D ~ v_Higgs × Yukawa ~ 100 GeV (typical)
-  
+
   m_ν ~ (100 GeV)² / (3.5 × 10⁹ GeV)
       ~ 3 × 10⁻⁹ GeV = 0.003 eV
-""")
+"""
+)
 
 M_R = 3**20
 m_D = 100  # GeV typical
@@ -223,13 +231,15 @@ print("\n" + "=" * 70)
 print("SECTION 5: FULL PMNS MATRIX")
 print("=" * 70)
 
-print("""
+print(
+    """
 The PMNS matrix in standard parametrization:
 
 U = R_23 × U_13 × R_12
 
 where R_ij are rotation matrices and U_13 includes CP phase.
-""")
+"""
+)
 
 
 def pmns_matrix(t12, t23, t13, delta):
@@ -293,7 +303,8 @@ print("\n" + "=" * 70)
 print("SECTION 6: TRIBIMAXIMAL LIMIT")
 print("=" * 70)
 
-print("""
+print(
+    """
 The TRIBIMAXIMAL mixing pattern (Harrison-Perkins-Scott):
 
         | √(2/3)   1/√3    0    |
@@ -308,7 +319,8 @@ W33 CONNECTION:
   θ_13 ≠ 0 is a CORRECTION from W33 structure
 
 The deviation from TBM is controlled by W33 parameters.
-""")
+"""
+)
 
 # Tribimaximal values
 sqrt_2_3 = math.sqrt(2 / 3)
@@ -342,7 +354,8 @@ print("\n" + "=" * 70)
 print("SECTION 7: MAJORANA PHASES")
 print("=" * 70)
 
-print("""
+print(
+    """
 If neutrinos are Majorana particles, there are 2 additional phases:
   α₁ and α₂ (Majorana phases)
 
@@ -357,7 +370,8 @@ we conjecture Majorana phases also relate to W33:
 
   α₁ = π × λ/k = π × 2/12 = π/6 = 30°
   α₂ = π × μ/k = π × 4/12 = π/3 = 60°
-""")
+"""
+)
 
 alpha1_w33 = 180 * lam / k
 alpha2_w33 = 180 * mu / k
@@ -374,7 +388,8 @@ print("\n" + "=" * 70)
 print("SECTION 8: NEUTRINOLESS DOUBLE BETA DECAY")
 print("=" * 70)
 
-print("""
+print(
+    """
 If neutrinos are Majorana particles:
   0νββ: (A, Z) → (A, Z+2) + 2e⁻
 
@@ -389,7 +404,8 @@ With m₂ ~ 0.009 eV, m₃ ~ 0.05 eV:
 
 This is BELOW current sensitivity but within reach
 of next-generation experiments (nEXO, LEGEND).
-""")
+"""
+)
 
 # Estimate m_ββ
 m2_est = math.sqrt(dm21_sq)  # ~ 0.009 eV
@@ -412,7 +428,8 @@ print("\n" + "=" * 70)
 print("SECTION 9: LEPTOGENESIS")
 print("=" * 70)
 
-print("""
+print(
+    """
 LEPTOGENESIS explains the matter-antimatter asymmetry:
 
 1. Heavy right-handed neutrinos N decay out of equilibrium
@@ -426,7 +443,8 @@ W33 LEPTOGENESIS:
 
 The CP asymmetry in N decays:
   ε ~ (m₃² - m₂²) × sin(2δ) / (8π v²)
-""")
+"""
+)
 
 # Estimate CP asymmetry parameter
 v_higgs = 246  # GeV
@@ -479,7 +497,8 @@ results = {
 with open("PART_LXXVII_neutrinos.json", "w") as f:
     json.dump(results, f, indent=2, default=int)
 
-print("""
+print(
+    """
 NEUTRINO SECTOR FROM W33!
 
 Key discoveries:
@@ -503,5 +522,6 @@ Key discoveries:
 6. Leptogenesis compatible with W33 CP violation
 
 Results saved to PART_LXXVII_neutrinos.json
-""")
+"""
+)
 print("=" * 70)

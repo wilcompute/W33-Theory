@@ -285,7 +285,7 @@ unified = """
     points(40)  cycles(81)  K4s(90)
          │           │
     sin²θ_W = 40/173  α⁻¹ = 81 + 56 = 137
-    
+
 The exceptional algebras F4 ⊂ E6 ⊂ E7 ⊂ E8
 encode the structure of W33 and predict physics constants!
 """

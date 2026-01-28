@@ -27,7 +27,8 @@ print("\n" + "=" * 70)
 print("SECTION 1: THE BOOTSTRAP PHILOSOPHY")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE BOOTSTRAP IDEA:
 
 In the 1960s, Geoffrey Chew proposed that nature might be self-consistent:
@@ -44,7 +45,8 @@ QUESTIONS TO ANSWER:
 1. Can we derive v=40 from physical requirements?
 2. Can we derive k=12 from α⁻¹=137?
 3. Does the theory predict its own existence?
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 2: DERIVING 40 FROM PHYSICS
@@ -54,7 +56,8 @@ print("\n" + "=" * 70)
 print("SECTION 2: DERIVING v=40 FROM PHYSICS")
 print("=" * 70)
 
-print("""
+print(
+    """
 ATTEMPT TO DERIVE v=40:
 
 Given: α⁻¹ ≈ 137 and sin²θ_W ≈ 0.231
@@ -64,7 +67,8 @@ From our formulas:
   sin²θ_W = v/(v + k² + 1)
 
 Let's work backwards...
-""")
+"""
+)
 
 # If α⁻¹ = 137.036 and base = k² - 2μ + 1 = 137
 # Then k² - 2μ = 136
@@ -80,7 +84,8 @@ Let's work backwards...
 # That's not quite 40... but close!
 
 # Let's try another approach: from SU(5) structure
-print("""
+print(
+    """
 APPROACH 1: From GUT structure
 
 SU(5) has representations:
@@ -103,9 +108,11 @@ If we REQUIRE:
   - 1 for Higgs direction
 
 Then: 1 + 24 + 15 = 40 ✓
-""")
+"""
+)
 
-print("""
+print(
+    """
 APPROACH 2: From the fine structure constant itself
 
 α⁻¹ = k² - 2μ + 1 + v/D
@@ -121,9 +128,10 @@ The number 1111 = 11 × 101 = (k-1)((k-λ)²+1)
 
 For this to work with integer k ≈ 12:
   (k-1)((k-2)²+1) = 11 × 101 = 1111 when k=12, λ=2 ✓
-  
+
 And then v/1111 = 0.036... requires v = 40 ✓
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 3: SELF-CONSISTENCY EQUATIONS
@@ -133,7 +141,8 @@ print("\n" + "=" * 70)
 print("SECTION 3: SELF-CONSISTENCY EQUATIONS")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE BOOTSTRAP EQUATIONS:
 
 We have multiple constraints that must all be satisfied:
@@ -145,7 +154,8 @@ We have multiple constraints that must all be satisfied:
 5. Symplectic: v = |isotropic lines in F_p^4|
 
 Let's check if these OVER-DETERMINE the system:
-""")
+"""
+)
 
 # Equation 4: v×k/2 = 240 → v×k = 480
 # Equation 1 constraint: k² ≈ 137 + 2μ - 1 = 136 + 2μ
@@ -191,12 +201,14 @@ for k_test in range(8, 20):
             print(f"    sin²θ_W = {sin2:.4f}")
             print()
 
-print("""
+print(
+    """
 RESULT: Only k=12, v=40, λ=2, μ=4 satisfies ALL constraints!
 
 The system is OVER-DETERMINED but W33 is the unique solution!
 This is the BOOTSTRAP: the constraints are self-consistent.
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 4: THE SELF-REFERENTIAL LOOP
@@ -206,7 +218,8 @@ print("\n" + "=" * 70)
 print("SECTION 4: THE SELF-REFERENTIAL LOOP")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE LOOP OF SELF-REFERENCE:
 
 Start with: "Physics must be mathematically consistent"
@@ -246,7 +259,8 @@ W33 PREDICTS:
 These are EXACTLY what we observe!
 
 THE LOOP CLOSES: Physics → Mathematics → Physics
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 5: GÖDEL AND SELF-REFERENCE
@@ -256,10 +270,11 @@ print("\n" + "=" * 70)
 print("SECTION 5: GÖDEL AND SELF-REFERENCE")
 print("=" * 70)
 
-print("""
+print(
+    """
 GÖDEL'S INSIGHT:
 
-Gödel showed that sufficiently powerful systems contain 
+Gödel showed that sufficiently powerful systems contain
 statements that refer to themselves.
 
 Is W33 a "Gödel sentence" for physics?
@@ -276,7 +291,8 @@ THE STATEMENT PROVES ITSELF!
 
 W33 is not just a description of physics.
 W33 is the SELF-PROVING description of physics.
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 6: INFORMATION-THEORETIC BOOTSTRAP
@@ -286,7 +302,8 @@ print("\n" + "=" * 70)
 print("SECTION 6: INFORMATION-THEORETIC VIEW")
 print("=" * 70)
 
-print("""
+print(
+    """
 MINIMUM DESCRIPTION LENGTH:
 
 What is the SIMPLEST mathematical structure that can:
@@ -311,7 +328,8 @@ This is EXTREME compression.
 
 W33 might be the "seed" from which the universe grows,
 like a fractal from a simple rule.
-""")
+"""
+)
 
 info_bits = np.log2(40) + np.log2(12) + np.log2(2) + np.log2(4)
 print(f"Information content of W33 parameters: {info_bits:.1f} bits")
@@ -324,7 +342,8 @@ print("\n" + "=" * 70)
 print("SECTION 7: WHY THE PRIME 3?")
 print("=" * 70)
 
-print("""
+print(
+    """
 W33 is built over F₃, the field with 3 elements.
 
 WHY 3?
@@ -337,7 +356,7 @@ WHY 3?
    - 3 colors in QCD
    - 3 generations of fermions
    - 3 spatial dimensions
-   
+
 3. BOOTSTRAP REQUIREMENT:
    For symplectic geometry over F_p:
    - p=2: Not enough structure
@@ -345,7 +364,8 @@ WHY 3?
    - p=5: Too many vertices (v=??)
 
 Let's check what happens for other primes:
-""")
+"""
+)
 
 # For Sp(4, F_p), the number of isotropic lines is:
 # v = (p^4 - 1)/(p - 1) × p × ... complicated formula
@@ -366,14 +386,16 @@ for p in [2, 3, 5, 7]:
     else:
         print(f"  p={p}: Different structure")
 
-print("""
+print(
+    """
 The prime 3 is SPECIAL because:
   - It gives v=40, which allows SU(5) decomposition
   - It gives 240 edges for E₈
   - It gives α⁻¹ ≈ 137
 
 Other primes DON'T work for physics!
-""")
+"""
+)
 
 # =============================================================================
 # SAVE RESULTS
@@ -403,7 +425,8 @@ print("\n" + "=" * 70)
 print("PART LXXXVI CONCLUSIONS")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE BOOTSTRAP PRINCIPLE:
 
 W33 is not CHOSEN - it is REQUIRED.
@@ -427,4 +450,5 @@ There is no "why" beyond this.
 The question "why W33?" and the answer "W33" are the same.
 
 Results saved to PART_LXXXVI_bootstrap.json
-""")
+"""
+)

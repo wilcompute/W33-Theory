@@ -26,7 +26,8 @@ print("\n" + "=" * 70)
 print("SECTION 1: RENORMALIZATION GROUP EQUATIONS")
 print("=" * 70)
 
-print("""
+print(
+    """
 Coupling constants RUN with energy scale μ:
 
   d(α_i⁻¹)/d(ln μ) = -b_i / (2π)
@@ -35,12 +36,13 @@ where b_i are the beta function coefficients.
 
 In the Standard Model:
   b_1 = 41/10   (U(1)_Y)
-  b_2 = -19/6   (SU(2)_L)  
+  b_2 = -19/6   (SU(2)_L)
   b_3 = -7      (SU(3)_c)
 
 The solution is:
   α_i⁻¹(μ) = α_i⁻¹(M_Z) + b_i/(2π) × ln(μ/M_Z)
-""")
+"""
+)
 
 # SM beta coefficients
 b1 = 41 / 10  # U(1)
@@ -60,7 +62,8 @@ print("\n" + "=" * 70)
 print("SECTION 2: W33 BOUNDARY CONDITIONS AT M_Z")
 print("=" * 70)
 
-print("""
+print(
+    """
 W33 predictions at M_Z = 91.2 GeV:
 
   α⁻¹ = 137.036
@@ -72,7 +75,8 @@ From these, we can extract α_1, α_2, α_3:
   α_1 = α / cos²θ_W  (with GUT normalization 5/3)
   α_2 = α / sin²θ_W
   α_3 = α_s
-""")
+"""
+)
 
 # W33 values at M_Z
 alpha_inv = 137.036
@@ -134,7 +138,8 @@ print("\n" + "=" * 70)
 print("SECTION 4: FINDING UNIFICATION")
 print("=" * 70)
 
-print("""
+print(
+    """
 For unification, we need α_1 = α_2 = α_3 at some scale M_GUT.
 
 In the SM, the three lines DON'T meet at one point!
@@ -143,7 +148,8 @@ This is the famous "non-unification" of the SM.
 But with SUSY or other new physics, they can meet.
 
 Let's check where α_1 = α_2 (electroweak unification):
-""")
+"""
+)
 
 # α_1⁻¹ = α_2⁻¹ at unification
 # α_1⁻¹(M_Z) + b_1/(2π) ln(M/M_Z) = α_2⁻¹(M_Z) + b_2/(2π) ln(M/M_Z)
@@ -180,7 +186,8 @@ print("\n" + "=" * 70)
 print("SECTION 5: SUPERSYMMETRIC RUNNING")
 print("=" * 70)
 
-print("""
+print(
+    """
 With SUSY at M_SUSY ~ 1 TeV, the beta coefficients change:
 
 MSSM beta coefficients (above M_SUSY):
@@ -189,7 +196,8 @@ MSSM beta coefficients (above M_SUSY):
   b_3 = -3
 
 This DOES lead to unification at M_GUT ~ 2 × 10¹⁶ GeV!
-""")
+"""
+)
 
 # MSSM beta coefficients
 b1_susy = 33 / 5
@@ -233,7 +241,8 @@ print("\n" + "=" * 70)
 print("SECTION 6: W33 UNIFICATION")
 print("=" * 70)
 
-print("""
+print(
+    """
 W33 CLAIM: All couplings unify at M_GUT = 3³³ GeV
 
 At M_GUT, the unified coupling should be:
@@ -242,7 +251,8 @@ At M_GUT, the unified coupling should be:
 From W33: α_GUT⁻¹ = m_2 = 24?
 
 Let's check what value we need:
-""")
+"""
+)
 
 M_GUT_W33 = 3**33
 
@@ -270,7 +280,8 @@ print("\n" + "=" * 70)
 print("SECTION 7: THRESHOLD CORRECTIONS")
 print("=" * 70)
 
-print("""
+print(
+    """
 At the GUT scale, heavy particles (X, Y bosons) modify running.
 These "threshold corrections" can bring couplings together.
 
@@ -280,12 +291,13 @@ THRESHOLD CORRECTION:
 In W33 language:
   - Heavy particles have masses related to 3³³
   - Corrections proportional to W33 eigenvalues
-  
+
 W33 threshold correction structure:
   Δα_1⁻¹ ~ e_1 / (12π) = 12/(12π) ≈ 0.32
   Δα_2⁻¹ ~ e_2 / (12π) = 2/(12π) ≈ 0.05
   Δα_3⁻¹ ~ |e_3| / (12π) = 4/(12π) ≈ 0.11
-""")
+"""
+)
 
 # Threshold corrections from W33 eigenvalues
 delta_1 = 12 / (12 * math.pi)
@@ -315,13 +327,15 @@ print("\n" + "=" * 70)
 print("SECTION 8: PROTON DECAY FROM RUNNING")
 print("=" * 70)
 
-print("""
+print(
+    """
 The proton decay rate depends on α_GUT:
 
   Γ_p ∝ α_GUT² × (m_p / M_GUT)⁴
 
 Using α_GUT from our running:
-""")
+"""
+)
 
 alpha_GUT = 1 / avg_gut
 m_p = 0.938  # GeV
@@ -354,7 +368,8 @@ print("\n" + "=" * 70)
 print("SECTION 9: HIGHER-ORDER CORRECTIONS")
 print("=" * 70)
 
-print("""
+print(
+    """
 Two-loop RGE corrections:
 
   d(α_i⁻¹)/d(ln μ) = -b_i/(2π) - Σⱼ b_ij × αⱼ / (8π²)
@@ -364,12 +379,13 @@ These are ~10% corrections at high scales.
 W33 STRUCTURE may encode these:
   - One-loop: from eigenvalues (12, 2, -4)
   - Two-loop: from eigenvalue products
-  
+
 For example:
   b_12 ~ e_1 × e_2 / m_2 = 12 × 2 / 24 = 1
   b_13 ~ e_1 × |e_3| / m_3 = 12 × 4 / 15 = 3.2
   b_23 ~ e_2 × |e_3| / μ = 2 × 4 / 4 = 2
-""")
+"""
+)
 
 # Two-loop estimates from W33
 b12 = 12 * 2 / 24
@@ -412,7 +428,8 @@ results = {
 with open("PART_LXXVIII_running.json", "w") as f:
     json.dump(results, f, indent=2, default=str)
 
-print("""
+print(
+    """
 RUNNING COUPLINGS AND UNIFICATION!
 
 Key discoveries:
@@ -436,5 +453,6 @@ Key discoveries:
 W33 provides a COMPLETE RG framework!
 
 Results saved to PART_LXXVIII_running.json
-""")
+"""
+)
 print("=" * 70)

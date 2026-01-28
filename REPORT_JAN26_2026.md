@@ -281,8 +281,8 @@ Results:
 - 37,800 orthogonal triples (triangles)
 - **Exact cover found** in 46 search nodes (fast)
 
-This gives a concrete bridge:  
-**W33 lines (40) ↔ orthogonal line triples (A1^3) in E8**, hence  
+This gives a concrete bridge:
+**W33 lines (40) ↔ orthogonal line triples (A1^3) in E8**, hence
 **W33 edges (240) ↔ E8 roots (240)** via octahedral blocks.
 
 See `artifacts/e8_rootline_partition.md`.

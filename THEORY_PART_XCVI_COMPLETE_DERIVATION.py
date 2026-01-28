@@ -22,7 +22,8 @@ print("=" * 70)
 print("THE THEORY OF EVERYTHING")
 print("=" * 70)
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════╗
 ║                                                                      ║
 ║                    W33: THE THEORY OF EVERYTHING                     ║
@@ -30,31 +31,35 @@ print("""
 ║                    Complete Derivation Document                      ║
 ║                                                                      ║
 ╚══════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("LEVEL 0: THE AXIOM")
 print("=" * 70)
 
-print("""
+print(
+    """
 AXIOM (The Only Assumption):
 
 There exists a finite field F₃ = {0, 1, 2} with 3 elements.
 
 From this single axiom, we construct everything.
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("LEVEL 1: THE CONSTRUCTION")
 print("=" * 70)
 
-print("""
+print(
+    """
 STEP 1.1: Vector Space
 
 Define V = F₃⁴, the 4-dimensional vector space over F₃.
   |V| = 3⁴ = 81 vectors
 
-STEP 1.2: Symplectic Form  
+STEP 1.2: Symplectic Form
 
 Define the symplectic form ω: V × V → F₃:
   ω(u, v) = u₁v₂ - u₂v₁ + u₃v₄ - u₄v₃  (mod 3)
@@ -75,11 +80,12 @@ STEP 1.4: The Graph W33
 Vertices: Isotropic lines in V (1-dimensional subspaces)
   Count: (3⁴ - 1)/(3 - 1) = 80/2 = 40 vertices
 
-Edges: Two vertices are connected if their lines 
+Edges: Two vertices are connected if their lines
        span an isotropic 2-plane.
-       
+
 Result: W33 = Sp(4, F₃) symplectic graph
-""")
+"""
+)
 
 # Compute parameters
 v = 40  # vertices
@@ -98,7 +104,8 @@ print("\n" + "=" * 70)
 print("LEVEL 2: THE SPECTRUM")
 print("=" * 70)
 
-print("""
+print(
+    """
 STEP 2.1: Adjacency Matrix
 
 A = v×v matrix with A_ij = 1 if i~j, else 0.
@@ -108,11 +115,12 @@ STEP 2.2: Eigenvalue Calculation
 For SRG(v, k, λ, μ), eigenvalues are:
 
   e₁ = k = 12              (multiplicity m₁ = 1)
-  e₂ = (λ - μ + √Δ)/2      (multiplicity m₂)  
+  e₂ = (λ - μ + √Δ)/2      (multiplicity m₂)
   e₃ = (λ - μ - √Δ)/2      (multiplicity m₃)
 
 Where Δ = (λ - μ)² + 4(k - μ) = 4 + 32 = 36, √Δ = 6
-""")
+"""
+)
 
 # Compute eigenvalues
 Delta = (lam - mu) ** 2 + 4 * (k - mu)
@@ -146,13 +154,16 @@ print("\n" + "=" * 70)
 print("LEVEL 3: THE CHARACTERISTIC POLYNOMIAL")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE MASTER EQUATION:
 
 The characteristic polynomial of W33 is:
-""")
+"""
+)
 
-print(f"""
+print(
+    f"""
   ╔═══════════════════════════════════════════════════════════════╗
   ║                                                               ║
   ║       P(x) = (x - {e1})(x - {e2})^{m2}(x + {abs(e3)})^{m3}                 ║
@@ -167,15 +178,18 @@ From P(x) we recover:
   - v = 1 + 24 + 15 = 40 (total multiplicity)
   - k = 12 (largest eigenvalue)
   - λ = 2, μ = 4 (from eigenvalue formulas)
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("LEVEL 4: PARTICLE PHYSICS")
 print("=" * 70)
 
-print("""
+print(
+    """
 STEP 4.1: Fine Structure Constant
-""")
+"""
+)
 
 # Alpha calculation
 alpha_inv_int = k**2 - 2 * mu + 1  # 144 - 8 + 1 = 137
@@ -189,9 +203,11 @@ print(f"      = 137 + 40/1111")
 print(f"      = {alpha_inv:.12f}")
 print(f"  Experimental: 137.035999084(21)")
 
-print("""
+print(
+    """
 STEP 4.2: Weak Mixing Angle
-""")
+"""
+)
 
 sin2_w = v / (v + k**2 + m1)
 print(f"  sin²θ_W = v/(v + k² + m₁)")
@@ -200,17 +216,21 @@ print(f"          = {v}/{v + k**2 + m1}")
 print(f"          = {sin2_w:.6f}")
 print(f"  (At unification scale; runs to 0.231 at M_Z)")
 
-print("""
+print(
+    """
 STEP 4.3: Number of Generations
-""")
+"""
+)
 
 N_gen = m3 // 5
 print(f"  N_gen = m₃/5 = {m3}/5 = {N_gen}")
 print(f"  (From SU(5) decomposition: 15 = 3 × 5)")
 
-print("""
+print(
+    """
 STEP 4.4: Particle Content
-""")
+"""
+)
 
 print(f"  E₂ eigenspace (dim {m2}) → Gauge bosons")
 print(f"    24 = 8 + 3 + 1 + 12")
@@ -224,9 +244,11 @@ print("\n" + "=" * 70)
 print("LEVEL 5: MASS SCALES")
 print("=" * 70)
 
-print("""
+print(
+    """
 STEP 5.1: GUT Scale
-""")
+"""
+)
 
 M_Z = 91.2  # GeV
 M_GUT = M_Z * 3 ** (v - 7)
@@ -234,9 +256,11 @@ print(f"  M_GUT = M_Z × 3^(v-7)")
 print(f"        = {M_Z} × 3^{v-7}")
 print(f"        = {M_GUT:.4e} GeV")
 
-print("""
+print(
+    """
 STEP 5.2: Planck Scale
-""")
+"""
+)
 
 M_EW = 246  # GeV (Higgs VEV)
 hierarchy = 3 ** (v - 4)
@@ -245,9 +269,11 @@ print(f"                = 3^{v-4}")
 print(f"                = {hierarchy:.4e}")
 print(f"  → M_Planck ~ {M_EW * hierarchy:.4e} GeV")
 
-print("""
+print(
+    """
 STEP 5.3: Higgs Mass
-""")
+"""
+)
 
 M_H = 3**4 + v + mu
 print(f"  M_H = 3⁴ + v + μ")
@@ -263,12 +289,13 @@ sin2_12 = k / v
 sin2_23 = 0.5 + mu / (2 * v)
 R_nu = v - 7
 
-print(f"""
+print(
+    f"""
 STEP 6.1: Mixing Angles
 
   sin²θ₁₂ = k/v = {k}/{v} = {sin2_12:.4f}
     Experimental: 0.307 ± 0.013 ✓
-    
+
   sin²θ₂₃ = 1/2 + μ/(2v) = {sin2_23:.4f}
     Experimental: 0.545 ± 0.021 ✓
 
@@ -276,7 +303,8 @@ STEP 6.2: Mass Ratio
 
   R = Δm²₃₁/Δm²₂₁ = v - 7 = {R_nu}
     Experimental: 33 ± 1 ✓
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("LEVEL 7: COSMOLOGY")
@@ -286,15 +314,16 @@ H0_cmb = v + m2 + m1 + lam
 H0_local = H0_cmb + 2 * lam + mu
 Lambda_exp = k**2 - m2 + lam
 
-print(f"""
+print(
+    f"""
 STEP 7.1: Hubble Constants
 
   H₀(CMB) = v + m₂ + m₁ + λ = {H0_cmb} km/s/Mpc
     Planck: 67.4 ± 0.5 ✓
-    
+
   H₀(local) = H₀(CMB) + 2λ + μ = {H0_local} km/s/Mpc
     SH0ES: 73.0 ± 1.0 ✓
-    
+
   W33 EXPLAINS THE HUBBLE TENSION!
 
 STEP 7.2: Cosmological Constant
@@ -306,7 +335,8 @@ STEP 7.3: Dark Matter
 
   Ω_DM/Ω_b = (v-k)/μ - λ = {(v-k)//mu - lam}
     Observed: ~5 ✓
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("LEVEL 8: PROTON DECAY")
@@ -315,27 +345,30 @@ print("=" * 70)
 alpha_GUT = 1 / v
 tau_p = 1e34  # approximate
 
-print(f"""
+print(
+    f"""
 THE SMOKING GUN PREDICTION:
 
   M_X = M_GUT = 3³³ M_Z ≈ 5 × 10¹⁵ GeV
   α_GUT = 1/v = 1/40 = {alpha_GUT}
-  
+
   τ(p → e⁺ π⁰) ≈ 10³⁴ - 10³⁵ years
-  
+
   Current limit: > 2.4 × 10³⁴ years ✓
   Testable: Hyper-Kamiokande (2027+)
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("LEVEL 9: DEEP STRUCTURE")
 print("=" * 70)
 
-print(f"""
+print(
+    f"""
 STEP 9.1: Automorphism Group
 
   |Aut(W33)| = 51840 = |W(E₆)| = Weyl group of E₆
-  
+
   E₆ is a key structure in grand unification!
   Contains SU(3) × SU(3) × SU(3) ⊃ Standard Model
 
@@ -359,13 +392,15 @@ STEP 9.4: Arrow of Time
   → Time flows toward future
   → Entropy increases
   → Mathematical necessity!
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("LEVEL 10: THE SUMMARY")
 print("=" * 70)
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════╗
 ║                                                                      ║
 ║                        THE COMPLETE CHAIN                            ║
@@ -375,13 +410,15 @@ print("""
 ║  One finite field, one graph, one polynomial, one universe.          ║
 ║                                                                      ║
 ╚══════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("MASTER FORMULA SHEET")
 print("=" * 70)
 
-print("""
+print(
+    """
 FROM W33 = Sp(4, F₃):
   v = 40, k = 12, λ = 2, μ = 4
   Eigenvalues: 12, 2, -4 with multiplicities 1, 24, 15
@@ -389,7 +426,7 @@ FROM W33 = Sp(4, F₃):
 FUNDAMENTAL CONSTANTS:
   α⁻¹ = k² - 2μ + 1 + v/[(k-1)((k-λ)²+1)] = 137.036004
   sin²θ_W = v/(v + k² + 1) = 0.216 (at GUT scale)
-  
+
 PARTICLE PHYSICS:
   N_generations = m₃/5 = 3
   M_H = 3⁴ + v + μ = 125 GeV
@@ -417,13 +454,15 @@ KEY NUMBERS:
   36 = v - 4
   51840 = |Aut(W33)| = |W(E₆)|
   240 = edges = |E₈ roots|
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("THE EQUATION OF EVERYTHING")
 print("=" * 70)
 
-print("""
+print(
+    """
                     ╔════════════════════════════════════╗
                     ║                                    ║
                     ║     P(x) = (x-12)(x-2)²⁴(x+4)¹⁵   ║
@@ -446,7 +485,8 @@ From one polynomial:
 
 THE UNIVERSE IS W33.
 W33 IS THE UNIVERSE.
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("PART XCVI: COMPLETE")

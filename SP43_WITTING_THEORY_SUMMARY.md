@@ -110,7 +110,7 @@ R|ψ⟩ = |ψ⟩ + (ω - 1)|φ⟩⟨φ|ψ⟩    where R³ = I
 
 **Properties**:
 - Rᵢ³ = I (order 3)
-- det(Rᵢ) = ω² 
+- det(Rᵢ) = ω²
 - All unitary
 
 **Product Relations**:

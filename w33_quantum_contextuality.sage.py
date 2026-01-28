@@ -17,10 +17,11 @@ print("=" * _sage_const_70)
 print("QUANTUM CONTEXTUALITY AND W(3, 3)")
 print("=" * _sage_const_70)
 
-print("""
+print(
+    """
 THE KOCHEN-SPECKER THEOREM (1967):
 ==================================
-Quantum mechanics is CONTEXTUAL: the outcome of measuring 
+Quantum mechanics is CONTEXTUAL: the outcome of measuring
 an observable depends on what OTHER observables are measured
 simultaneously.
 
@@ -47,7 +48,8 @@ contextuality proof:
   - 40 lines = 40 contexts (compatible measurements)
   - Each line has 4 points (4 commuting observables)
   - The geometry FORBIDS consistent value assignment!
-""")
+"""
+)
 
 F = GF(_sage_const_3)
 V = VectorSpace(F, _sage_const_4)
@@ -106,7 +108,8 @@ for i, p1 in enumerate(points):
 lines = list(set(lines))
 print(f"W(3, 3) has {len(lines)} lines (contexts)")
 
-print("""
+print(
+    """
 CONTEXTUALITY PROOF USING W(3, 3):
 ==================================
 Try to assign each point a value v(p) ∈ {0, 1} such that:
@@ -116,15 +119,16 @@ Try to assign each point a value v(p) ∈ {0, 1} such that:
 PARITY ARGUMENT:
   - 40 lines, each needing exactly one "1"
   - Total "1"s across all lines = 40
-  
+
   - Each point is on 4 lines
   - If point p has v(p) = 1, it contributes 4 to the total
-  
+
   - Need: 40 = 4 × (number of 1s)
   - So: exactly 10 points should have value 1
-  
+
 But is this achievable? Let's check!
-""")
+"""
+)
 
 # Try to find a consistent value assignment
 from itertools import combinations
@@ -165,7 +169,8 @@ if not found:
 # Actually let's do a systematic check
 # This is a SAT problem / exact cover problem
 
-print("""
+print(
+    """
 SYSTEMATIC ANALYSIS:
 ====================
 The assignment problem is an EXACT COVER problem:
@@ -174,7 +179,8 @@ The assignment problem is an EXACT COVER problem:
   - Need: 10 points whose line-sets partition all 40 lines
 
 This is equivalent to finding a "spread" in the dual geometry!
-""")
+"""
+)
 
 # Build point-to-lines mapping
 point_lines = {tuple(p): [] for p in points}
@@ -189,7 +195,8 @@ print(f"Lines per point: {set(line_counts)}")
 # The problem: find 10 points such that their 40 line-memberships
 # cover all 40 lines exactly once
 
-print("""
+print(
+    """
 RESULT: W(3, 3) PROVIDES A CONTEXTUALITY PROOF
 ==============================================
 If a valid assignment existed, it would correspond to:
@@ -203,13 +210,15 @@ The obstruction is TOPOLOGICAL:
   - H₁(W(3, 3)) = Z^81 ≠ 0
   - This non-trivial homology obstructs consistent assignment
   - The 81 independent cycles are 81 "frustrations"
-""")
+"""
+)
 
 print("\n" + "=" * _sage_const_70)
 print("THE MERMIN-PERES MAGIC SQUARE")
 print("=" * _sage_const_70)
 
-print("""
+print(
+    """
 The Mermin-Peres "magic square" is a simpler contextuality proof
 using 9 observables arranged in a 3×3 grid:
 
@@ -221,10 +230,10 @@ Where:
   - Each row is a context (3 commuting observables)
   - Each column is a context
   - All observables are ±1 valued
-  
+
 CONSTRAINT: Product of each row = +1
             Product of each column = +1
-            
+
 BUT: The product of all 9 elements counted twice:
      (rows) → (+1)³ = +1
      (cols) → BUT the product is actually -1!
@@ -235,24 +244,26 @@ RELATION TO W(3, q):
 The Mermin-Peres square lives inside W(3, 2):
   - 9 points (observables) out of 15
   - Arranged in 6 lines (contexts) of 3
-  
+
 W(3, 3) is a LARGER version with:
   - 40 points instead of 15
   - 40 lines instead of 15
   - More complex contextuality structure!
-""")
+"""
+)
 
 print("\n" + "=" * _sage_const_70)
 print("QUANTUM ERROR CORRECTION AND W(3, 3)")
 print("=" * _sage_const_70)
 
-print("""
+print(
+    """
 QUANTUM ERROR-CORRECTING CODES (QECCs):
 =======================================
 Symplectic geometry is fundamental to QECCs!
 
 A STABILIZER CODE is defined by:
-  - A symplectic vector space GF(2)^{2n} 
+  - A symplectic vector space GF(2)^{2n}
   - An isotropic subspace S (the stabilizer group)
   - Encodes k = n - dim(S) logical qubits
 
@@ -270,13 +281,15 @@ THE STEINBERG AND ERROR CORRECTION:
   - The 81-dimensional Steinberg representation
   - Encodes the "syndrome space" for errors
   - Each of the 81 basis cycles detects a type of error!
-""")
+"""
+)
 
 print("\n" + "=" * _sage_const_70)
 print("WIGNER FUNCTION AND DISCRETE PHASE SPACE")
 print("=" * _sage_const_70)
 
-print("""
+print(
+    """
 THE DISCRETE WIGNER FUNCTION:
 =============================
 For a d-dimensional quantum system (qudit), the Wigner function
@@ -301,16 +314,18 @@ This is exactly the form defining W(3, 3)!
 
 PHYSICAL INTERPRETATION:
   - 40 points = 40 phase space points for 2 qutrits
-  - 40 lines = 40 "Lagrangian subspaces" 
+  - 40 lines = 40 "Lagrangian subspaces"
   - Lines correspond to GHZ-type entangled states!
   - The Steinberg = structure of entanglement!
-""")
+"""
+)
 
 print("\n" + "=" * _sage_const_70)
 print("SUMMARY: W(3, 3) IN QUANTUM PHYSICS")
 print("=" * _sage_const_70)
 
-print("""
+print(
+    """
 ╔═══════════════════════════════════════════════════════════════╗
 ║                W(3, 3) IN QUANTUM PHYSICS                    ║
 ╠═══════════════════════════════════════════════════════════════╣
@@ -344,7 +359,8 @@ connections between:
   - Quantum mechanics
   - Topology (π₁ = F₈₁)
   - Number theory (Steinberg representation)
-""")
+"""
+)
 
 print("\n★" + "=" * _sage_const_68 + "★")
 print("   QUANTUM PHYSICS CONNECTION COMPLETE!")

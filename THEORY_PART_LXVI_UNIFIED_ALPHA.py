@@ -30,17 +30,19 @@ print("\n" + "=" * 70)
 print("SECTION 1: COMPARING THE TWO FORMULAS")
 print("=" * 70)
 
-print("""
+print(
+    """
 FORMULA 1 (Original W33):
   alpha^{-1} = 81 + 56 + 40/1111
-  
+
 FORMULA 2 (From Eigenvalues):
   alpha^{-1} = 12^2 - 2*4 + 1 + 40/1111
 
 Both give 137.036004... with the SAME 40/1111 correction!
 
 Let's check the integer parts:
-""")
+"""
+)
 
 # Check integer parts
 formula1_int = 81 + 56
@@ -58,14 +60,15 @@ print("\n" + "=" * 70)
 print("SECTION 2: THE 81 + 56 DECOMPOSITION")
 print("=" * 70)
 
-print("""
+print(
+    """
 The original formula splits 137 as:
   81 + 56 = 137
 
 Let's understand these numbers:
   81 = 3^4 = |F_3^4| = number of points in symplectic space
   56 = E_7 fundamental rep dimension!
-  
+
 But we also have:
   12^2 = 144
   2*4 = 8
@@ -77,7 +80,8 @@ Let's verify: 137 = 144 - 7 = 12² - 7
 And: 137 = 81 + 56
 
 Therefore: 81 + 56 = 144 - 7
-""")
+"""
+)
 
 print("Algebraic verification:")
 print(f"  81 + 56 = {81 + 56}")
@@ -95,14 +99,15 @@ print("\n" + "=" * 70)
 print("SECTION 3: FINDING THE DEEP CONNECTION")
 print("=" * 70)
 
-print("""
+print(
+    """
 Let's find how 81 and 56 relate to the eigenvalue formula.
 
 From 81 + 56 = 144 - 8 + 1 = 12² - 2*4 + 1:
 
   81 = 3^4 = (number of F_3^4 points)
   56 = 137 - 81 = 12² - 8 + 1 - 81 = 144 - 8 + 1 - 81 = 56
-  
+
 Let's try to express 56 in terms of eigenvalues and 81:
 
   81 = 3^4
@@ -110,10 +115,11 @@ Let's try to express 56 in terms of eigenvalues and 81:
      = 144 - 81 - 7
      = 63 - 7
      = 56
-     
+
 WAIT! 63 = 144 - 81 = 12² - 3^4 = degree² - |space|
 And: 56 = 63 - 7 = 63 - (8-1) = 63 - (2*4 - 1)
-""")
+"""
+)
 
 print("\nKey relationships:")
 print(f"  12² = {12**2}")
@@ -129,24 +135,26 @@ print("\n" + "=" * 70)
 print("SECTION 4: SU(8) AND THE NUMBER 56")
 print("=" * 70)
 
-print("""
+print(
+    """
 STUNNING OBSERVATION:
 
   63 = 8² - 1 = SU(8) adjoint dimension
   56 = 8 × 7 = antisymmetric tensor of SU(8)!
-  
+
 The 56 of SU(8) is the 3-form representation!
 
 Also: 56 = dim(E_7 fundamental)
       63 = dim(SU(8) adjoint)
-      
+
 And E_7 ⊃ SU(8) with the decomposition:
   133 = 63 + 70 = SU(8) adjoint + antisymmetric 4-form
 
 So the formula 81 + 56 connects to:
   - 81 = F_3^4 points (symplectic geometry)
   - 56 = E_7 fundamental (exceptional geometry)
-""")
+"""
+)
 
 print("\nSU(8) representations:")
 print(f"  SU(8) adjoint: 8² - 1 = {8**2 - 1}")
@@ -162,7 +170,8 @@ print("\n" + "=" * 70)
 print("SECTION 5: THE UNIFIED FORMULA")
 print("=" * 70)
 
-print("""
+print(
+    """
 We can now write THREE equivalent formulas for alpha^{-1}:
 
 FORMULA 1 (E_7 form):
@@ -178,7 +187,8 @@ FORMULA 3 (SU(8) form):
              = 81 + 56 + 40/1111
 
 All three are EQUIVALENT and give 137.036004...!
-""")
+"""
+)
 
 # Verify all formulas
 f1 = 81 + 56 + 40 / 1111
@@ -198,22 +208,24 @@ print("\n" + "=" * 70)
 print("SECTION 6: THE MYSTERIOUS 40/1111")
 print("=" * 70)
 
-print("""
+print(
+    """
 The quantum correction 40/1111 appears in ALL formulas.
 
 What is 1111?
   1111 = 11 × 101
   1111 = 1234 - 123 = (10*11*12/6) - (10*11/2) + 1
-  
+
 But also:
   1111 ≈ 1000 + 111 ≈ 10³ + 3*37
-  
+
 More interestingly:
   40 × 1111 = 44440
   1 + 1 + 1 + 1 = 4 = clique number of W33
-  
+
 Let's try other interpretations:
-""")
+"""
+)
 
 # Factor 1111
 print("Factorization of 1111:")
@@ -237,7 +249,8 @@ print("\n" + "=" * 70)
 print("SECTION 7: DECODING 1111")
 print("=" * 70)
 
-print("""
+print(
+    """
 HYPOTHESIS: 1111 comes from the Sp(4,3) geometry.
 
 |Sp(4,3)| = 51840 = 2^7 × 3^4 × 5
@@ -245,17 +258,18 @@ HYPOTHESIS: 1111 comes from the Sp(4,3) geometry.
 Let's try:
   51840 / 40 = 1296 = 6^4 (point stabilizer)
   51840 / 1296 = 40 (orbit size)
-  
+
 What about 1111?
   1111 × 46.67... = 51840 (not clean)
-  
+
 Try: 1111 = k + 240 + something?
   1111 = 240 + 871 = edges + ?
-  
+
 Or: 1111 = 12 × 92 + 7 = 12 × 92 + 7
-  
+
 Actually: 1111 = 40 × 27 + 31 = vertices × complement_degree + 31
-""")
+"""
+)
 
 print("\nRelationships with W33 numbers:")
 print(f"  40 × 27 = {40*27} (vs 1111)")
@@ -274,7 +288,8 @@ print("\n" + "=" * 70)
 print("SECTION 8: 1111 AS A GEOMETRIC INVARIANT")
 print("=" * 70)
 
-print("""
+print(
+    """
 Let's think about this differently.
 
 The exact formula gives:
@@ -283,21 +298,22 @@ The exact formula gives:
 What is 152247?
   152247 = 137 × 1111 + 40
          = 137 × 1111 + vertices
-         
+
 So: alpha^{-1} × 1111 = 137 × 1111 + 40
                       = 152207 + 40
                       = 152247
 
 IMPORTANT: 1111 might be chosen so that:
   alpha^{-1} × 1111 ≡ 40 (mod 1111)
-  
+
 This means: alpha^{-1} ≡ 40 × 1111^{-1} (mod 1)
-  
+
 Actually, the formula says:
   alpha^{-1} = 137 + 40/1111
-  
+
 So 1111 is the denominator that makes the correction exactly 40 vertices!
-""")
+"""
+)
 
 print("\nThe 1111 mystery:")
 print(f"  152247 = 137 × 1111 + 40 = {137*1111 + 40}")
@@ -312,7 +328,8 @@ print("\n" + "=" * 70)
 print("SECTION 9: THE GRAND UNIFIED FORMULA")
 print("=" * 70)
 
-print("""
+print(
+    """
 =======================================================
     THE GRAND UNIFIED ALPHA FORMULA
 =======================================================
@@ -327,15 +344,15 @@ Starting from W33 structure:
 The fine structure constant is:
 
   alpha^{-1} = k² - e_+ × |e_-| + 1 + n/1111
-  
+
             = 12² - 2 × 4 + 1 + 40/1111
-            
+
             = 144 - 8 + 1 + 40/1111
-            
+
             = 137 + 40/1111
-            
+
             = 81 + 56 + 40/1111
-            
+
             = |F_3^4| + dim(E_7 fund) + n/1111
 
 WHERE:
@@ -352,7 +369,8 @@ This suggests alpha knows about the FULL gauge structure
 of the Standard Model and beyond!
 
 =======================================================
-""")
+"""
+)
 
 # =============================================================================
 # SAVE RESULTS
@@ -383,7 +401,8 @@ print("\n" + "=" * 70)
 print("PART LXVI CONCLUSIONS")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE TWO FORMULAS ARE UNIFIED:
 
   81 + 56 = 12² - 2×4 + 1 = 137
@@ -394,15 +413,16 @@ This reveals:
   - 12² = full gauge structure
   - 2×4 = 8 = SU(3) strong force
   - 1 = U(1) electromagnetism
-  
+
 The formula alpha^{-1} = 137.036 encodes:
   - Symplectic geometry (81)
-  - Exceptional geometry (56)  
+  - Exceptional geometry (56)
   - Gauge structure (144 - 8 + 1)
   - Quantum corrections (40/1111)
 
 W33 IS THE ROSETTA STONE OF FUNDAMENTAL PHYSICS!
 
 Results saved to PART_LXVI_unified_alpha.json
-""")
+"""
+)
 print("=" * 70)

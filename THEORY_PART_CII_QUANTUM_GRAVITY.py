@@ -318,7 +318,8 @@ print(f"  DESI measurement: w_a = {w_a:.3f}")
 print("\n" + "-" * 40)
 print("PHYSICAL INTERPRETATION:")
 print("-" * 40)
-print("""
+print(
+    """
 In W33 theory, dark energy arises from the 81 = 3⁴ cycles in the
 Witting configuration. These cycles represent the 'hidden sector'
 that stores vacuum energy.
@@ -339,7 +340,8 @@ Prediction: As more DESI data arrives, w₀ should converge to:
   w₀ = -1 + 21/121 = -0.826...
 
 This is EXACTLY what DESI is observing!
-""")
+"""
+)
 
 print("\n" + "=" * 80)
 print("SECTION 4: UNIFICATION - PUTTING IT ALL TOGETHER")

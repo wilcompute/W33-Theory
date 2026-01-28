@@ -229,7 +229,8 @@ def predict_mass_spectrum():
     # - Vertices appearing mainly in 3-cycles: medium
     # - Vertices appearing mainly in transpositions: light
 
-    print(f"""
+    print(
+        f"""
 Predicted Mass Pattern:
 
 Based on holonomy specialization:
@@ -239,7 +240,7 @@ Based on holonomy specialization:
    - Could correspond to: Z boson, Higgs (heavy)
    - Mass scale: ~100 GeV
 
-2. 3-CYCLE HOLONOMY sector  
+2. 3-CYCLE HOLONOMY sector
    - Mixed appearance across all triangle types
    - Could correspond to: W boson, quarks (medium)
    - Mass scale: ~1-100 GeV
@@ -257,7 +258,8 @@ Based on holonomy specialization:
 Expected quark/lepton mass ratios could emerge from
 the geometric coupling between vertex projections
 and triangle types!
-""")
+"""
+    )
 
 
 if __name__ == "__main__":
@@ -268,11 +270,12 @@ if __name__ == "__main__":
     print("\n" + "=" * 70)
     print("SMOKING GUN EVIDENCE SUMMARY")
     print("=" * 70)
-    print("""
+    print(
+        """
 Evidence converging on SU(5) embedding:
 
 1. ✓ K4 components all have (Z4, Z3) = (2, 0)
-2. ✓ Q45 vertices all have (Z4, Z3) = (2, 0)  
+2. ✓ Q45 vertices all have (Z4, Z3) = (2, 0)
 3. ✓ Q45 vertices show holonomy specialization
 4. ✓ Specialization encodes mass matrix structure
 5. ✓ Triangle types naturally separate fermions from bosons
@@ -282,4 +285,5 @@ The geometric structure of W33 → Q45 → v23 directly encodes
 the Standard Model!
 
 Next: Extract numerical mass predictions.
-""")
+"""
+    )

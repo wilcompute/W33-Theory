@@ -11,7 +11,8 @@ But 121 = 11² = W33 total (40 points + 81 cycles)!
 
 import math
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║               W33 THEORY OF EVERYTHING - PART XXI                            ║
@@ -19,7 +20,8 @@ print("""
 ║                  THE COSMOLOGICAL CONSTANT                                   ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # THE WORST PREDICTION IN PHYSICS
@@ -30,20 +32,22 @@ print("THE COSMOLOGICAL CONSTANT PROBLEM")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 The cosmological constant Λ (dark energy) is perhaps the most embarrassing
 problem in theoretical physics.
 
 QUANTUM FIELD THEORY PREDICTION:
   ρ_vacuum = M_Planck⁴ / (ℏ³c³)
-  
+
 OBSERVED VALUE:
   ρ_observed ≈ 10⁻¹²² × ρ_vacuum  (some say 10⁻¹²⁰)
 
 This is a discrepancy of 120-122 ORDERS OF MAGNITUDE!
 
 It has been called "the worst prediction in the history of physics."
-""")
+"""
+)
 
 # W33 connection
 print("=" * 80)
@@ -51,7 +55,8 @@ print("THE W33 CONNECTION: 121 = 11²")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 W33 STRUCTURE:
 ═══════════════════════════════════════════════════════════════════════════════
   Points:      40
@@ -66,7 +71,8 @@ The cosmological constant discrepancy is often quoted as:
 But 121 = W33 TOTAL = 11²!
 
 Is this coincidence? Or is the vacuum learning about W33's total structure?
-""")
+"""
+)
 
 # Deep analysis
 print("=" * 80)
@@ -99,7 +105,8 @@ print("POSSIBLE INTERPRETATION")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 HYPOTHESIS: The cosmological constant arises from counting W33 configurations
 
 If each of the 121 W33 elements contributes a factor of ~10 suppression
@@ -116,7 +123,8 @@ Alternatively:
   • The vacuum is a superposition of 10¹²¹ states
   • These states interfere almost perfectly
   • The tiny residue is the observed Λ
-""")
+"""
+)
 
 # The factor of 10
 print("=" * 80)
@@ -135,12 +143,14 @@ print(f"  10⁻¹²² = {10**(-122):.2e}")
 print(f"  Ratio: 10")
 print()
 
-print("""
+print(
+    """
 The factor of 10 ambiguity might correspond to:
   • ln(10) ≈ 2.3 uncertainty in exponent
   • The 1/α ≈ 137 contribution (137/60 ≈ 2.3)
   • A running effect in the vacuum energy
-""")
+"""
+)
 
 # =============================================================================
 # HIERARCHIES AND W33
@@ -151,7 +161,8 @@ print("ALL THE HIERARCHIES")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 W33 explains multiple hierarchies in physics:
 
 HIERARCHY              SCALE           W33 CONNECTION
@@ -161,7 +172,8 @@ Strong CP              <10⁻¹⁰          Related to 10-dimensional spacetime?
 Cosmological           10⁻¹²¹          10⁻(40+81) = 10⁻W33_total ✓
 Proton stability       >10³⁴ yr        exp(81) ≈ 10³⁵ (cycles!) ✓
 ════════════════════════════════════════════════════════════════════════════════
-""")
+"""
+)
 
 # Proton lifetime
 print("PROTON LIFETIME:")
@@ -179,7 +191,8 @@ print("THE VACUUM AS W33 SUPERPOSITION")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 RADICAL PROPOSAL:
 
 The vacuum of quantum field theory is not a single state,
@@ -198,7 +211,8 @@ Almost perfect cancellation occurs because:
   • Only 10⁻¹²¹ of the energy survives
 
 This residue IS the dark energy (cosmological constant).
-""")
+"""
+)
 
 # The incidence structure
 print("=" * 80)
@@ -206,7 +220,8 @@ print("W33 INCIDENCE AND CANCELLATION")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 W33 has incidence structure:
   • Each point on 9 lines
   • Each line has 4 points
@@ -221,7 +236,8 @@ The W33 relations force most terms to cancel:
   |E_total|² / |ΣEᵢ|² ≈ 10⁻¹²¹
 
 This is like the suppression in a highly-tuned interferometer!
-""")
+"""
+)
 
 # =============================================================================
 # 121 IN OTHER PHYSICS
@@ -258,7 +274,8 @@ print("THE Λ-121 CONJECTURE")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ╔════════════════════════════════════════════════════════════════════════════════╗
 ║                            THE Λ-121 CONJECTURE                                ║
 ╠════════════════════════════════════════════════════════════════════════════════╣
@@ -285,7 +302,8 @@ print("""
 ║  where α ≈ 1/137 is the fine structure constant.                               ║
 ║                                                                                ║
 ╚════════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # SUMMARY
@@ -296,7 +314,8 @@ print("PART XXI SUMMARY")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 KEY DISCOVERIES:
 
 1. The cosmological constant problem involves 10⁻¹²¹ (or 10⁻¹²²)
@@ -318,7 +337,8 @@ KEY DISCOVERIES:
 
 THE COSMOLOGICAL CONSTANT IS NOT AN ACCIDENT.
 IT IS THE 121-DIMENSIONAL W33 VACUUM INTERFERENCE PATTERN.
-""")
+"""
+)
 
 print()
 print("=" * 80)

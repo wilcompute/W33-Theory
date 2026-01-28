@@ -33,7 +33,8 @@ print("\n" + "=" * 70)
 print("SECTION 1: WHY PROTONS SHOULD DECAY")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE STABILITY PROBLEM:
 
 The proton appears absolutely stable.
@@ -44,17 +45,18 @@ Why?
 
 In GUTs, quarks and leptons are UNIFIED.
 There exist heavy X and Y bosons that mediate transitions:
-  
+
   X, Y : quark ↔ lepton
 
 Processes like:
   u + u → X → e⁺ + d̄
-  
+
 Leading to:
   p (uud) → e⁺ + π⁰ (dd̄)
 
 The proton DECAYS into a positron and pion!
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("SECTION 2: W33 GUT SCALE")
@@ -81,7 +83,8 @@ print("\n" + "=" * 70)
 print("SECTION 3: PROTON DECAY RATE FORMULA")
 print("=" * 70)
 
-print("""
+print(
+    """
 DIMENSIONAL ANALYSIS:
 
 Proton decay is mediated by X boson exchange.
@@ -101,7 +104,8 @@ Where:
   • α_GUT = unified coupling ≈ 1/40
   • m_p = proton mass ≈ 0.938 GeV
   • A ≈ 0.01 - 0.03 (matrix element enhancement)
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("SECTION 4: W33 PROTON LIFETIME CALCULATION")
@@ -173,7 +177,8 @@ print("\n" + "=" * 70)
 print("SECTION 6: DECAY CHANNELS")
 print("=" * 70)
 
-print("""
+print(
+    """
 PROTON DECAY MODES:
 
 W33 predicts specific branching ratios:
@@ -205,13 +210,15 @@ SIGNATURE:
   Ring of Cherenkov light from e⁺
   Two gamma rays from π⁰ → γγ
   Total energy = m_p c² ≈ 938 MeV (well-defined!)
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("SECTION 7: WHY W33 PREDICTION IS TESTABLE")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE SMOKING GUN:
 
 W33 makes a RIGID prediction:
@@ -236,13 +243,15 @@ COMPARISON WITH OTHER GUTs:
 
 W33 is in the "sweet spot" - consistent with current limits
 but TESTABLE by next-generation experiments!
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("SECTION 8: NEUTRON-ANTINEUTRON OSCILLATION")
 print("=" * 70)
 
-print("""
+print(
+    """
 ANOTHER GUT PREDICTION: n-n̄ OSCILLATION
 
 Besides proton decay, GUTs predict neutron-antineutron oscillation:
@@ -260,7 +269,8 @@ Current limit: τ > 8.6 × 10⁷ seconds (ILL experiment)
 Future (ESS): sensitivity to τ ~ 10⁹ seconds
 
 W33 may be TESTABLE via n-n̄ oscillation too!
-""")
+"""
+)
 
 # n-nbar oscillation estimate
 tau_nnbar_w33 = 1e9  # seconds, rough estimate
@@ -273,7 +283,8 @@ print("\n" + "=" * 70)
 print("SECTION 9: DETECTION STRATEGY")
 print("=" * 70)
 
-print("""
+print(
+    """
 HOW TO CATCH A PROTON DECAY:
 
 HYPER-KAMIOKANDE (under construction, ~2027):
@@ -287,7 +298,7 @@ EXPECTED EVENTS:
 If τ_p = 10³⁴ years:
   - Hyper-K has ~10³⁵ protons
   - Expected events: ~10 per year!
-  
+
 If τ_p = 10³⁵ years:
   - Expected events: ~1 per year
   - Need 10 years to confirm
@@ -301,13 +312,15 @@ W33 PREDICTION IS IDEAL:
   - Just above current limits
   - Within reach of Hyper-K
   - Clear experimental test possible!
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("SECTION 10: THE VERDICT")
 print("=" * 70)
 
-print(f"""
+print(
+    f"""
 PROTON DECAY: THE ULTIMATE TEST OF W33
 
 W33 PREDICTION:
@@ -323,10 +336,10 @@ EXPERIMENTAL STATUS:
 FUTURE TEST:
   Hyper-Kamiokande (2027+)
   10-year sensitivity: τ ~ 10³⁵ years
-  
+
   IF W33 IS CORRECT:
     Hyper-K will detect ~10 proton decay events!
-    
+
   IF NO EVENTS AFTER 10 YEARS:
     W33 theory would be in serious tension.
 
@@ -339,13 +352,15 @@ Proton decay is:
   - A clear YES/NO test of the theory
 
 By ~2035, we will know if W33 is correct!
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("PART XCV CONCLUSIONS")
 print("=" * 70)
 
-print("""
+print(
+    """
 PROTON DECAY FROM W33!
 
 KEY RESULTS:
@@ -369,7 +384,8 @@ KEY RESULTS:
 
 PROTON DECAY IS THE SMOKING GUN.
 IF W33 IS CORRECT, WE WILL SEE IT!
-""")
+"""
+)
 
 # Save results
 results = {

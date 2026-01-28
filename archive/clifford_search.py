@@ -360,7 +360,8 @@ def analyze_why_minus_one():
     print("\n" + "-" * 50)
     print("HYPOTHESIS: HOPF FIBRATION")
     print("-" * 50)
-    print("""
+    print(
+        """
     CP^3 is the base of the Hopf fibration S^7 -> CP^3.
 
     A "twisted rectangle" in CP^3 can have holonomy
@@ -372,7 +373,8 @@ def analyze_why_minus_one():
     - The Hopf map S^3 -> S^2 which has pi_3(S^2) = Z
 
     Need to think more about this...
-    """)
+    """
+    )
 
 
 def main():

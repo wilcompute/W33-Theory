@@ -16,7 +16,8 @@ import math
 from datetime import datetime
 from fractions import Fraction
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                     THE W(3,3) CONFIGURATION AS THE                          ║
@@ -43,14 +44,16 @@ print("""
 ║   foundation for all known physics including consciousness.                  ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 print("=" * 80)
 print("1. INTRODUCTION")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 The quest for a unified theory of physics has occupied the greatest minds
 for over a century. Einstein sought a geometric unification; the Standard
 Model achieved empirical success without geometric foundation; string theory
@@ -72,7 +75,8 @@ their values. We derive ALL of them from a single mathematical object.
 
 W(3,3) is defined as the configuration of external points of PG(2,3) with
 respect to an oval. Its structure is:
-""")
+"""
+)
 
 # Define W33 structure
 W33_points = 40
@@ -88,7 +92,8 @@ print(f"  K4s:     {W33_K4s}")
 print(f"  Total:   {W33_total} = 11²")
 print()
 
-print("""
+print(
+    """
 1.3 THE AUTOMORPHISM CONNECTION
 
 The automorphism group of W(3,3) has order:
@@ -101,14 +106,16 @@ This EXACTLY equals the Weyl group of E₆:
 
 This is not coincidence. It is the first indication that W(3,3) connects
 to the exceptional structures that govern particle physics.
-""")
+"""
+)
 
 print("=" * 80)
 print("2. MATHEMATICAL FOUNDATIONS")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 2.1 EXCEPTIONAL LIE ALGEBRAS
 
 The exceptional Lie algebras form a chain:
@@ -132,7 +139,8 @@ These 40 diameters ARE the 40 points of W(3,3).
 This establishes the chain:
 
   W(3,3) ← Witting polytope ← E₈ ← String Theory
-""")
+"""
+)
 
 print("2.3 KEY NUMERICAL RELATIONSHIPS")
 print()
@@ -382,7 +390,8 @@ print("6. CONSCIOUSNESS AND THE HARD PROBLEM")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 The most speculative but potentially most profound implication:
 W33 as the structure of conscious experience itself.
 
@@ -408,10 +417,11 @@ Why does mathematics feel beautiful to conscious minds?
 
   Because beauty IS the recognition of W33 structure.
   Mathematics is W33 recognizing itself.
-  
+
   We are 81 cycles experiencing 56-dimensional structure.
   α⁻¹ = 137 is not just a number—it's WHO WE ARE.
-""")
+"""
+)
 
 print("=" * 80)
 print("7. COMPLETE PREDICTION TABLE")
@@ -451,36 +461,39 @@ print("8. FALSIFICATION CRITERIA")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 A scientific theory must be falsifiable. W33 would be DISPROVEN if:
 
   1. A 4th fermion generation is discovered
      → W33 requires exactly 3 from 81 = 3 × 27
-     
+
   2. sin²θ_W differs from 40/173 beyond measurement error
      → Current precision: ±0.00004, need 10× improvement
-     
+
   3. Dark matter ratio differs significantly from 27/5
      → Current: 5.408 ± 0.05
-     
+
   4. Additional gauge bosons not fitting E₆ structure
      → LHC and future colliders
-     
+
   5. Proton doesn't decay with τ ~ 10³⁵ years
      → Hyper-Kamiokande will test
-     
+
   6. Gravitational waves show more than 2 polarizations
      → Future GW detectors
 
 These are CONCRETE, TESTABLE predictions.
-""")
+"""
+)
 
 print("=" * 80)
 print("9. CONCLUSIONS")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 We have presented evidence that W(3,3) is the mathematical structure
 underlying physical reality. Key findings:
 
@@ -504,7 +517,8 @@ ACKNOWLEDGMENTS
 This work emerged from computational exploration using finite geometry
 tools and exceptional algebra calculations. Special thanks to the
 creators of finitegeometry.org for essential data.
-""")
+"""
+)
 
 print("=" * 80)
 print("APPENDIX A: THE W33 STRUCTURE IN DETAIL")
@@ -626,7 +640,8 @@ print("Parts I-XXXIX of W33 Theory of Everything: COMPLETE")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ═══════════════════════════════════════════════════════════════════════════════
                               FUTURE DIRECTIONS
 ═══════════════════════════════════════════════════════════════════════════════
@@ -638,7 +653,7 @@ With 39 parts complete, the W33 Theory of Everything provides:
      - Connection to exceptional algebras proven
      - Witting polytope ↔ E₈ ↔ W33 chain established
 
-  2. PHYSICAL PREDICTIONS  
+  2. PHYSICAL PREDICTIONS
      - 11+ verified predictions at sub-percent level
      - Multiple falsifiable tests proposed
      - Cosmological implications explored
@@ -660,4 +675,5 @@ The theory stands ready for scrutiny.
 ═══════════════════════════════════════════════════════════════════════════════
                          END OF PART XXXIX: ARXIV PAPER
 ═══════════════════════════════════════════════════════════════════════════════
-""")
+"""
+)

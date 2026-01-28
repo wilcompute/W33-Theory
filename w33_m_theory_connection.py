@@ -451,7 +451,7 @@ def main():
     print("=" * 70)
     master = """
     THE W33 - M-THEORY - E6 TRIANGLE:
-    
+
               M-theory on T^5/T^6
                     /      \\
                    /        \\
@@ -466,31 +466,31 @@ def main():
         |                         |
         ↓                         ↓
     W33 in PG(3, GF(3))    del Pezzo 6
-    
-    
+
+
     THE KEY EQUATIONS:
-    
+
     1. W(E6) = Aut(PSp₄(3)) = Aut(W33) = 51840
-    
+
     2. 81 = 3 × 27 = 3 × (M-theory charges)
                    = |W33 cycles|
                    = dim(E7) - dim(F4) = 133 - 52
-    
+
     3. sin²θ_W = 40/173 = |points|/p₄₀
-    
+
     4. α⁻¹ ≈ 137 = 81 + 56 = |cycles| + dim(E7 fund)
                  = p₃₃ where 33 = 40 - 7 = |points| - rank(E7)
-    
+
     5. 27 lines ↔ 27 M-theory charges ↔ E6 fundamental rep
-    
+
     6. GF(3) introduces the factor of 3 that gives:
        - Three generations of fermions?
        - Triality symmetry?
        - The "ternary" structure of nature?
-    
-    
+
+
     THE ULTIMATE SPECULATION:
-    
+
     The physical universe may be fundamentally described by:
     - M-theory (the underlying framework)
     - Compactified on a T^6-like structure (giving 27 charges)

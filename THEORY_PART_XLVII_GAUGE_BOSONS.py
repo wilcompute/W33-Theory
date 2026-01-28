@@ -16,7 +16,8 @@ import math
 
 import numpy as np
 
-print("""
+print(
+    """
 ╔════════════════════════════════════════════════════════════════════════════╗
 ║                                                                            ║
 ║                    THEORY OF EVERYTHING - PART XLVII                       ║
@@ -26,7 +27,8 @@ print("""
 ║              W Mass • Z Mass • The CDF Anomaly • Graviton                 ║
 ║                                                                            ║
 ╚════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # FUNDAMENTAL PARAMETERS
@@ -56,13 +58,15 @@ print("SECTION 1: THE Z BOSON MASS")
 print("=" * 78)
 print()
 
-print("""
+print(
+    """
 The Z boson mass is directly related to the electroweak VEV:
 
   m_Z = v / (2 cos θ_W)
-  
+
 where v = 246.22 GeV is our INPUT parameter.
-""")
+"""
+)
 
 # Our sin²θ_W = 40/173
 sin2_theta_W = 40 / 173
@@ -101,12 +105,14 @@ print("SECTION 2: W BOSON MASS - DETAILED ANALYSIS")
 print("=" * 78)
 print()
 
-print("""
+print(
+    """
 The W boson mass at tree level:
   m_W = m_Z × cos θ_W = v / 2
 
 But there are RADIATIVE CORRECTIONS from loops!
-""")
+"""
+)
 
 # Tree level
 m_W_tree = m_Z * cos_theta_W
@@ -232,12 +238,14 @@ print("SECTION 3: THE CDF W MASS ANOMALY")
 print("=" * 78)
 print()
 
-print("""
+print(
+    """
 In 2022, CDF reported m_W = 80.4335 ± 0.0094 GeV
 This is 7σ higher than the SM prediction!
 
 Can W33 explain this?
-""")
+"""
+)
 
 # The CDF value vs SM
 delta_CDF = m_W_CDF - m_W_exp
@@ -285,10 +293,12 @@ print("SECTION 4: PHOTON AND GLUON MASSES")
 print("=" * 78)
 print()
 
-print("""
+print(
+    """
 The photon and gluon are EXACTLY massless due to gauge symmetry.
 W33 must EXPLAIN why they remain massless.
-""")
+"""
+)
 
 print("  PHOTON MASSLESSNESS:")
 print()
@@ -333,10 +343,12 @@ print("SECTION 5: GRAVITON MASS")
 print("=" * 78)
 print()
 
-print("""
+print(
+    """
 General Relativity requires m_graviton = 0.
 But massive gravity theories exist. What does W33 say?
-""")
+"""
+)
 
 # Graviton mass bound
 m_graviton_bound = 1.2e-22  # eV (from LIGO)
@@ -385,7 +397,8 @@ print("COMPLETE GAUGE BOSON MASS SPECTRUM")
 print("=" * 78)
 print()
 
-print("""
+print(
+    """
 ┌─────────────────┬─────────────────────────────────┬───────────┬───────────┐
 │ BOSON           │ W33 FORMULA                     │ PREDICTED │ OBSERVED  │
 ├─────────────────┼─────────────────────────────────┼───────────┼───────────┤
@@ -410,12 +423,14 @@ print("""
 
   Units: v = 246.22 GeV (electroweak VEV)
          All W33 numbers are dimensionless [geometric counts]
-""")
+"""
+)
 
-print("""
+print(
+    """
 ═══════════════════════════════════════════════════════════════════════════════
                     END OF PART XLVII: GAUGE BOSON MASSES
-                    
+
   KEY RESULTS:
   ════════════
   • m_Z formula refined: v / (2√(133/173)) = 91.01 GeV
@@ -423,8 +438,9 @@ print("""
   • CDF anomaly: if real, implies K4 substructure contributions
   • Photon/gluon: exactly massless (gauge symmetry preserved)
   • Graviton: exactly massless (90/45 = 2 d.o.f. enforces spin-2)
-  
+
   The gauge boson spectrum is COMPLETELY determined by W33!
-  
+
 ═══════════════════════════════════════════════════════════════════════════════
-""")
+"""
+)
