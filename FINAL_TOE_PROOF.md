@@ -1145,6 +1145,15 @@ probed interferometrically in photonic implementations.
 Artifact: `artifacts/witting_pancharatnam_triangles.json`  
 Script: `tools/witting_pancharatnam_triangles.py`
 
+**Equiangular overlap structure (computed):**  
+Across all 40 rays, pairwise overlaps take only two values:
+orthogonal or **|⟨ri|rj⟩|² = 1/3** (540 non‑orthogonal pairs, 240 orthogonal).
+Thus every non‑orthogonal triangle has identical overlap magnitudes and the
+phase signature is driven purely by the **relative arguments** of overlaps.
+
+Doc: `docs/witting_ray_overlap_structure.md`  
+Script: `tools/witting_ray_overlap_structure.py`
+
 **Example triangles (computed):**  
 Explicit ray triples with phases ±π/6 and ±π/2 are listed here:  
 `docs/witting_pancharatnam_examples.md`  
