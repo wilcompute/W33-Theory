@@ -1228,6 +1228,15 @@ the π/6 phase lattice.
 Doc: `docs/witting_phase_symplectic_mapped.md`  
 Script: `tools/witting_phase_symplectic_mapped.py`
 
+**Isomorphism orbit class (computed):**  
+Under the **monomial subgroup** (order 243), the explicit graph isomorphism
+falls into **81 distinct mappings**. This shows the ray→F₃⁴ labeling is **not**
+unique, but lies in a structured orbit under symmetry; the phase law remains
+invariant across these mappings.
+
+Doc: `docs/witting_isomorphism_orbit_check.md`  
+Script: `tools/witting_isomorphism_orbit_check.py`
+
 **External unitary search (computed):**  
 We attempted to map Witting rays to the **naive F₃⁴ grid rays**
 (v = (ω^a, ω^b, ω^c, ω^d)) via basis‑aligned unitaries. The target grid has
