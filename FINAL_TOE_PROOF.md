@@ -147,12 +147,32 @@ such that every H27 edge is a skew‑edge). The search found **no embedding**:
 H27 is **not** a spanning 8‑regular subgraph of the skew‑line graph. This rules
 out a simple “edge‑subset” explanation for H27.
 
+**Positive embedding (computed).** In contrast, H27 **does** embed as a spanning
+subgraph of the **intersection** graph (degree 10). The difference
+`Schläfli_intersection − H27` is a **2‑regular** spanning subgraph consisting of
+**nine disjoint triangles** (27 edges total), so:
+```
+Schläfli_intersection = H27  +  (9 disjoint 3-cycles)
+```
+This yields a precise combinatorial bridge between H27 and the classical 27‑line
+configuration. The 9 triangles can be written explicitly in the standard
+double‑six labeling:
+```
+(E1, C3, L13), (E2, C1, L12), (E3, C2, L23),
+(E4, C6, L46), (E5, C4, L45), (E6, C5, L56),
+(L14, L26, L35), (L15, L24, L36), (L16, L25, L34)
+```
+
 Artifacts:
 ```
 tools/schlafli_h27_switching.py
 artifacts/schlafli_h27_switching.json
 tools/search_h27_in_schlafli_skew.py
 artifacts/h27_in_schlafli_skew.json
+tools/search_h27_in_schlafli_intersection.py
+artifacts/h27_in_schlafli_intersection.json
+tools/analyze_h27_schlafli_decomposition.py
+artifacts/h27_schlafli_leftover_cycles.json
 ```
 
 ### 1.4 Explicit E8 -> W33 via Coxeter 6-cycles (Computed)
@@ -990,6 +1010,12 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `python3 tools/search_h27_in_schlafli_skew.py`
   - Searches for an H27 edge‑subset embedding into the Schläfli skew graph.
   - Output: `artifacts/h27_in_schlafli_skew.json`
+- `python3 tools/search_h27_in_schlafli_intersection.py`
+  - Finds an H27 edge‑subset embedding into the Schläfli intersection graph.
+  - Output: `artifacts/h27_in_schlafli_intersection.json`
+- `python3 tools/analyze_h27_schlafli_decomposition.py`
+  - Computes the 9 disjoint triangles removed from the Schläfli intersection graph.
+  - Output: `artifacts/h27_schlafli_leftover_cycles.json`
 
 ### Physics Signal Checks (Tier‑1 Evidence)
 - `python -X utf8 src/color_singlet_test.py`
