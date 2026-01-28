@@ -154,12 +154,16 @@ lifted to a sign‑consistent 240‑root action by a single relabeling. This is 
 precise, testable obstruction and narrows the remaining group‑theoretic gap.
 An explicit length‑3 line‑cycle with sign product −1 is extracted as a witness
 of the obstruction.
+The induced Z₂ cocycle is strongly nontrivial: many generator pairs yield
+negative cocycle values on dozens of root lines (full histogram recorded).
 See:
 ```
 tools/align_root_signs_for_we6.py
 artifacts/root_line_sign_assignment.json
 tools/line_sign_cocycle.py
 artifacts/root_line_sign_cocycle.json
+tools/compute_sign_cocycle.py
+artifacts/root_line_sign_cocycle_stats.json
 ```
 **Exported bijection tables.** The full explicit edge↔root bijection is now
 exported for inspection and downstream analysis:
