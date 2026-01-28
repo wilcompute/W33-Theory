@@ -1285,6 +1285,16 @@ This isolates the genuinely nontrivial content to the Z2 reductions.
 Doc: `docs/witting_triangle_cocycle_z6.md`  
 Script: `tools/witting_triangle_cocycle_z6.py`
 
+**Z3 edge potential (computed):**  
+Solving the oriented coboundary equation `x_ij + x_jk − x_ik = t_ijk` over GF(3)
+gives an explicit **edge potential** for the Z3 triangle phase class. A canonical
+solution (free variables = 0) yields the edge-label distribution:
+**{0: 150, 1: 195, 2: 195}** across the 540 non‑orth edges. Thus the mod‑3 class
+is genuinely an edge‑derived potential even though Z2 reductions are not.
+
+Doc: `docs/witting_triangle_cocycle_z3_edge_potential.md`  
+Script: `tools/witting_triangle_cocycle_z3_edge_potential.py`
+
 **Z2 cocycle minimal-support heuristic (computed):**  
 We searched for sparse representatives of the two Z2 cocycle classes by adding
 edge coboundaries and greedily reducing support (multiple random restarts).
