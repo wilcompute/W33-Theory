@@ -471,6 +471,21 @@ every triangle. This realizes the 9 triangles as \textbf{A2 weight‑zero
 triplets} and gives an explicit SU(3) interpretation inside the 27‑line
 geometry.
 
+\textbf{SU(3) phase lift to the full edge\ensuremath{\rightarrow}root
+map (computed).} Using the explicit edge\ensuremath{\rightarrow}root
+bijection, we propagate the Z3 phase from W33 vertices to \textbf{all
+240 edges} and summarize phase‑pair statistics by W(E6) orbit type:
+
+\begin{verbatim}
+Edges by orbit size: 27‑orbits = 162, 72‑orbit = 72, 1‑orbits = 6
+27‑orbit phase sums: (0,1,2) = (48, 56, 58)
+72‑orbit phase sums: (0,1,2) = (30, 20, 22)
+\end{verbatim}
+
+Thus the SU(3) phase is \textbf{not confined} to the 27‑sector; it
+threads through the full E6\ensuremath{\times}A2 decomposition in a
+\textbf{nontrivial, but near‑balanced} way.
+
 Artifacts:
 
 \begin{verbatim}
@@ -492,6 +507,8 @@ tools/su3_a2_root_mapping.py
 artifacts/su3_a2_root_mapping.json
 tools/e8_coxeter_phase_from_f3.py
 artifacts/e8_coxeter_phase_vs_f3.json
+tools/su3_phase_edge_lift.py
+artifacts/su3_phase_edge_lift.json
 \end{verbatim}
 
 Artifacts:
@@ -1963,6 +1980,17 @@ Verification}\label{h27-jordan-heisenberg-verification}
     assignment.
   \item
     Output: \texttt{artifacts/e8\_coxeter\_phase\_vs\_f3.json}
+  \end{itemize}
+\item
+  \texttt{python3\ tools/su3\_phase\_edge\_lift.py}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Lifts Z3 phase to the full edge\ensuremath{\rightarrow}root map;
+    summarizes by W(E6) orbit size.
+  \item
+    Output: \texttt{artifacts/su3\_phase\_edge\_lift.json}
   \end{itemize}
 \end{itemize}
 
