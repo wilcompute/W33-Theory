@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Cocycle orbit under monomial symmetries.
+"""Test Z6 cocycle solvability and orbit under monomial symmetry.
 
-We compute how the triangle-phase labeling transforms under the monomial
-symmetry group (order 243) and test cohomology equivalence:
-  t_g - t in im(d1) ?
-for mod 2 and mod 3 labelings.
+We use the triangle phase class k (mod 6) and test whether there exists
+edge labels x_e in Z6 with x_ij + x_jk + x_ki = t_ijk (mod 6).
+Over Z6, solvable iff solvable mod 2 and mod 3 (CRT).
+We also test cohomology equivalence under monomial symmetries via the same rule.
 """
 from __future__ import annotations
 
@@ -97,7 +97,6 @@ def phase_to_k(angle):
 
 
 def gauss_elim_ops(A, p):
-    """Gaussian elimination with operation logging. Returns ops and rank."""
     A = A.copy() % p
     m, n = A.shape
     row = 0
@@ -146,25 +145,17 @@ def apply_ops_to_vec(b, ops, p):
 
 def in_image(b, ops, rank, p):
     b2 = apply_ops_to_vec(b, ops, p)
-    # rows rank..end must be zero
     return bool(np.all(b2[rank:] % p == 0))
 
 
 def main():
-    print("TRIANGLE COCYCLE ORBIT TEST")
+    print("Z6 TRIANGLE COCYCLE TEST")
     print("=" * 60)
     rays = construct_witting_40_rays()
     n = len(rays)
     edges = build_nonorth_edges(rays)
     triangles = build_triangles(edges, n)
 
-    # triangle label base
-    tri_label_k = {}
-    for (i, j, k) in triangles:
-        ip = np.vdot(rays[i], rays[j]) * np.vdot(rays[j], rays[k]) * np.vdot(rays[k], rays[i])
-        tri_label_k[(i, j, k)] = phase_to_k(np.angle(ip))
-
-    # d1 matrix for cohomology checks
     edge_index = {e: idx for idx, e in enumerate(edges)}
     d1 = np.zeros((len(triangles), len(edges)), dtype=int)
     for t_idx, (i, j, k) in enumerate(triangles):
@@ -178,71 +169,60 @@ def main():
     ops2, rank2 = gauss_elim_ops(d1, 2)
     ops3, rank3 = gauss_elim_ops(d1, 3)
 
-    # base label vectors
-    t_mag = np.array([0 if (tri_label_k[t] % 12) in (1, 11) else 1 for t in triangles], dtype=int)
-    t_sign = np.array([0 if (tri_label_k[t] % 12) in (1, 3) else 1 for t in triangles], dtype=int)
-    t_mod3 = np.array([tri_label_k[t] % 3 for t in triangles], dtype=int)
+    # base labels
+    t6 = np.zeros(len(triangles), dtype=int)
+    for idx, (i, j, k) in enumerate(triangles):
+        ip_ij = np.vdot(rays[i], rays[j])
+        ip_jk = np.vdot(rays[j], rays[k])
+        ip_ik = np.vdot(rays[i], rays[k])
+        ip = ip_ij * ip_jk * np.conjugate(ip_ik)
+        kp = phase_to_k(np.angle(ip))
+        t6[idx] = kp % 6
 
-    # monomial group
+    # solvable mod6 iff solvable mod2 and mod3
+    ok2 = in_image(t6 % 2, ops2, rank2, 2)
+    ok3 = in_image(t6 % 3, ops3, rank3, 3)
+    ok6 = ok2 and ok3
+    print(f"Base t6 solvable mod2: {ok2}")
+    print(f"Base t6 solvable mod3: {ok3}")
+    print(f"Base t6 solvable mod6: {ok6}")
+
+    # orbit under monomial symmetry
     group = build_monomial_group(rays)
-    print(f"Monomial group size: {len(group)}")
-
-    orbit_counts = {
-        "mag_mod2": Counter(),
-        "sign_mod2": Counter(),
-        "mod3": Counter(),
-    }
-
+    counts = Counter()
     for g in group:
-        # permute triangles via mapping g
-        # note: monomial symmetry preserves triangle phase for mapped indices
-        t_g_mag = np.zeros(len(triangles), dtype=int)
-        t_g_sign = np.zeros(len(triangles), dtype=int)
-        t_g_mod3 = np.zeros(len(triangles), dtype=int)
+        t6_g = np.zeros(len(triangles), dtype=int)
         for idx, (i, j, k) in enumerate(triangles):
             i2, j2, k2 = g[i], g[j], g[k]
             arr = [i2, j2, k2]
             a, b, c = sorted(arr)
-            kp = tri_label_k[(a, b, c)]
-            # orientation sign: odd permutation -> sign -1
+            ip_ab = np.vdot(rays[a], rays[b])
+            ip_bc = np.vdot(rays[b], rays[c])
+            ip_ac = np.vdot(rays[a], rays[c])
+            ip = ip_ab * ip_bc * np.conjugate(ip_ac)
+            kp = phase_to_k(np.angle(ip)) % 6
+            # orientation sign: odd permutation flips phase sign
             inv = 0
             for p in range(3):
                 for q in range(p + 1, 3):
                     if arr[p] > arr[q]:
                         inv += 1
-            sign = -1 if (inv % 2 == 1) else 1
+            if inv % 2 == 1:
+                kp = (-kp) % 6
+            t6_g[idx] = kp
+        d2 = (t6_g - t6) % 2
+        d3 = (t6_g - t6) % 3
+        ok = in_image(d2, ops2, rank2, 2) and in_image(d3, ops3, rank3, 3)
+        counts[ok] += 1
 
-            t_g_mag[idx] = 0 if kp in (1, 11) else 1
-            t_g_sign[idx] = 0 if kp in (1, 3) else 1
-            if sign == 1:
-                t_g_mod3[idx] = kp % 3
-            else:
-                t_g_mod3[idx] = (-kp) % 3
+    print(f"Z6 cohomology orbit: {dict(counts)}")
 
-        # differences
-        d_mag = (t_g_mag - t_mag) % 2
-        d_sign = (t_g_sign - t_sign) % 2
-        d_mod3 = (t_g_mod3 - t_mod3) % 3
-
-        ok_mag = in_image(d_mag, ops2, rank2, 2)
-        ok_sign = in_image(d_sign, ops2, rank2, 2)
-        ok_mod3 = in_image(d_mod3, ops3, rank3, 3)
-
-        orbit_counts["mag_mod2"][ok_mag] += 1
-        orbit_counts["sign_mod2"][ok_sign] += 1
-        orbit_counts["mod3"][ok_mod3] += 1
-
-    print("Cohomology equivalence counts:")
-    print(f"  mag_mod2: {dict(orbit_counts['mag_mod2'])}")
-    print(f"  sign_mod2: {dict(orbit_counts['sign_mod2'])}")
-    print(f"  mod3: {dict(orbit_counts['mod3'])}")
-
-    out_path = ROOT / "docs" / "witting_triangle_cocycle_orbit.txt"
+    out_path = ROOT / "docs" / "witting_triangle_cocycle_z6.txt"
     with out_path.open("w", encoding="utf-8") as f:
-        f.write(f"Monomial group size: {len(group)}\n")
-        f.write(f"mag_mod2: {dict(orbit_counts['mag_mod2'])}\n")
-        f.write(f"sign_mod2: {dict(orbit_counts['sign_mod2'])}\n")
-        f.write(f"mod3: {dict(orbit_counts['mod3'])}\n")
+        f.write(f"Base solvable mod2: {ok2}\n")
+        f.write(f"Base solvable mod3: {ok3}\n")
+        f.write(f"Base solvable mod6: {ok6}\n")
+        f.write(f"Orbit cohomology counts: {dict(counts)}\n")
     print(f"Wrote {out_path}")
 
 

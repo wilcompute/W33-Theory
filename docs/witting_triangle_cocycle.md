@@ -21,20 +21,19 @@ We then solve linear systems for edge labels `x_e` so that:
 ### Labelings tested
 - **Z2 magnitude class**: t=0 for |phase|=pi/6, t=1 for |phase|=pi/2
 - **Z2 sign class**: t=0 for positive phase, t=1 for negative phase
-- **Z3 class**: t = k mod 3
+- **Z3 class**: t = k mod 3 (with oriented boundary)
 
 ## Results
 - **Z2 magnitude:** no solution (unsolvable)
 - **Z2 sign:** no solution (unsolvable)
-- **Z3 class:** no solution (unsolvable)
+- **Z3 class:** **solvable** (a coboundary exists)
 
-So none of these triangle phase labelings are coboundaries of edge labels. The
-triangle phases define **nontrivial 2-cocycles** in these coefficient systems.
+So the coarse Z2 reductions are **nontrivial cocycles**, while the Z3 class is
+**cohomologically trivial** once orientation is handled correctly.
 
 ## Interpretation
-This shows the triangle phase structure is not reducible to edge phase labels even
-after collapsing to coarse Z2/Z3 classes. It behaves as a **genuine higher-order
-cohomological invariant** of the non-orthogonality 2-complex.
+The triangle phases still define higher-order structure, but the mod-3 class
+is gauge-equivalent to edge data. The Z2 reductions remain genuinely nontrivial.
 
 Script: `tools/witting_triangle_cocycle.py`
 Output: `artifacts/witting_triangle_cocycle.json`

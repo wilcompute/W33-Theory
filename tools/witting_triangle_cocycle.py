@@ -141,9 +141,16 @@ def main():
     ok2s, rank2s = gauss_solve_modp(A2s, b2s, 2)
     print(f"Z2 cocycle (sign): solvable={ok2s}, rank={rank2s}")
 
-    # Z3: t = k mod 3
+    # Z3: t = k mod 3 with oriented d1 (1, -1, 1)
     b3 = np.array([k % 3 for k in tri_k], dtype=int)
-    A3 = A2.copy()
+    A3 = np.zeros((m, ecount), dtype=int)
+    for idx, (i, j, k) in enumerate(triangles):
+        e_jk = edge_index[(j, k)]
+        e_ik = edge_index[(i, k)]
+        e_ij = edge_index[(i, j)]
+        A3[idx, e_jk] = 1
+        A3[idx, e_ik] = -1
+        A3[idx, e_ij] = 1
     ok3, rank3 = gauss_solve_modp(A3, b3, 3)
     print(f"Z3 cocycle (k mod 3): solvable={ok3}, rank={rank3}")
 
