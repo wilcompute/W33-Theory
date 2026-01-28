@@ -1210,11 +1210,26 @@ Script: `tools/witting_f3_projective_map_test.py`
 **External unitary search (computed):**  
 We attempted to map Witting rays to the **naive F₃⁴ grid rays**
 (v = (ω^a, ω^b, ω^c, ω^d)) via basis‑aligned unitaries. The target grid has
-**no orthonormal bases at all**, so no such unitary exists. This nails down that
-the correct F₃⁴ model requires a **non‑trivial embedding** (not the raw ω‑grid).
+**only 27 rays** and **no orthonormal bases at all**, so no such unitary exists.
+This nails down that the correct F₃⁴ model requires a **non‑trivial embedding**
+(not the raw ω‑grid).
 
 Doc: `docs/witting_external_unitary_search.md`  
 Script: `tools/witting_external_unitary_search.py`
+
+**Naive grid phase mismatch (computed):**  
+The **27‑ray ω‑grid** produces a different triangle‑phase distribution:
+```
+phase ≈ +π/6 : 700
+phase ≈ −π/6 : 578
+phase ≈ +π/2 : 840
+phase ≈ −π/2 : 807
+```
+So the ω‑grid is **not** unitarily equivalent to the Witting 40‑ray set and
+should instead be viewed as a distinct 27‑sector object.
+
+Doc: `docs/witting_grid_triangle_phases.md`  
+Script: `tools/witting_grid_triangle_phases.py`
 
 **Triangle orbits under monomial symmetry (computed):**  
 Monomial symmetries (order 243) split non‑orthogonal triangles into orbits of
@@ -1228,10 +1243,15 @@ Script: `tools/witting_triangle_phase_orbits.py`
 **Phase formula search (computed):**  
 We searched for a linear phase rule k ≡ aμ₁+bν₁+cμ₂+dν₂+e (mod 12) by family.
 No simple linear formula exists in general; only one family pair admits a fit.
-So the phase lattice is **not** a trivial affine function of (μ,ν).
+We also searched **quadratic** formulas in (μ,ν) and found a **single family pair**
+(F2,F3) admitting a full mod‑12 quadratic fit; all others fail.  
+So the phase lattice is **not** a trivial affine or quadratic function of (μ,ν).
 
 Doc: `docs/witting_phase_formula_search.md`  
 Script: `tools/witting_phase_formula_search.py`
+
+Doc (quadratic): `docs/witting_phase_quadratic_formula_search.md`  
+Script: `tools/witting_phase_quadratic_formula_search.py`
 
 **Example triangles (computed):**  
 Explicit ray triples with phases ±π/6 and ±π/2 are listed here:  

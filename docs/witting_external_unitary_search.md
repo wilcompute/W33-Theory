@@ -1,5 +1,7 @@
 # External Unitary Search (Witting → F3^4 Grid)
 
+Source rays: **40**
+Target rays (naive ω‑grid): **27**
 Source bases: **40**
 Target bases: **0**
 
