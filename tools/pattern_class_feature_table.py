@@ -21,27 +21,11 @@ def load_json(name):
 def main():
     # Load artifacts
     inter = load_json("we6_coxeter6_intersection.json")
-    vertex_type = load_json("vertex_type_vs_we6_pattern.json")
     h12 = load_json("pattern_class_h12_h27_profile.json")
     k4 = load_json("pattern_class_k4_profile.json")
-    phys = load_json("pattern_class_physics_profile.json")
     exc = load_json("exceptional_we6_patterns.json")
     quotient = load_json("pattern_quotient_graph.json")
-
-    # Build pattern -> class id mapping
-    patterns = [tuple(row) for row in inter["matrix"]]
-    pat_ids = {}
-    for row in patterns:
-        if row not in pat_ids:
-            pat_ids[row] = len(pat_ids)
-
-    # Support size counts per class (from vertex_type artifact)
-    class_support = defaultdict(lambda: defaultdict(int))
-    for item in vertex_type["patterns"]:
-        pat = eval(item["pattern"]) if isinstance(item["pattern"], str) else tuple(item["pattern"])
-        cls = pat_ids[pat]
-        for sz, cnt in item["support_size_counts"].items():
-            class_support[cls][int(sz)] += cnt
+    support = load_json("pattern_class_support_sizes.json")
 
     # Build class feature summary
     classes = sorted(int(k) for k in h12["class_summary"].keys())
@@ -55,11 +39,9 @@ def main():
         outer_count = k4["outer_class_counts"].get(ckey, 0)
         center_count = k4["center_class_counts"].get(ckey, 0)
 
-        # Top triangle/line multisets containing this class (global, not per-class)
-        # For now include global top 5 (already in proof)
         summary[ckey] = {
             "size": size,
-            "support_size_counts": dict(class_support[ckey]),
+            "support_size_counts": support.get(ckey, {}),
             "avg_neighbor_class_counts": avg_neighbors,
             "k4_outer_count": outer_count,
             "k4_center_count": center_count,
@@ -89,9 +71,9 @@ def main():
     for c in classes:
         ckey = str(c)
         s = summary[ckey]
-        support = ",".join(f"{k}:{v}" for k,v in sorted(s["support_size_counts"].items()))
+        support_str = ",".join(f"{k}:{v}" for k,v in sorted(s["support_size_counts"].items()))
         avg = ",".join(f"{x:.2f}" for x in s["avg_neighbor_class_counts"])
-        lines.append(f"| {ckey} | {s['size']} | {support} | {s['k4_outer_count']} | {s['k4_center_count']} | {avg} |")
+        lines.append(f"| {ckey} | {s['size']} | {support_str} | {s['k4_outer_count']} | {s['k4_center_count']} | {avg} |")
 
     (ROOT / "artifacts" / "pattern_class_feature_table.md").write_text("\n".join(lines), encoding="utf-8")
 

@@ -3,7 +3,12 @@
   "class_summary": {
     "0": {
       "size": 9,
-      "support_size_counts": {},
+      "support_size_counts": {
+        "1": 1,
+        "2": 5,
+        "3": 2,
+        "4": 1
+      },
       "avg_neighbor_class_counts": [
         2.2222222222222223,
         2.5555555555555554,
@@ -19,7 +24,10 @@
     },
     "1": {
       "size": 8,
-      "support_size_counts": {},
+      "support_size_counts": {
+        "3": 5,
+        "4": 3
+      },
       "avg_neighbor_class_counts": [
         2.875,
         2.0,
@@ -35,7 +43,12 @@
     },
     "2": {
       "size": 8,
-      "support_size_counts": {},
+      "support_size_counts": {
+        "1": 1,
+        "2": 3,
+        "3": 3,
+        "4": 1
+      },
       "avg_neighbor_class_counts": [
         2.25,
         2.625,
@@ -51,7 +64,12 @@
     },
     "3": {
       "size": 8,
-      "support_size_counts": {},
+      "support_size_counts": {
+        "2": 2,
+        "3": 3,
+        "1": 1,
+        "4": 2
+      },
       "avg_neighbor_class_counts": [
         3.125,
         2.375,
@@ -67,7 +85,12 @@
     },
     "4": {
       "size": 4,
-      "support_size_counts": {},
+      "support_size_counts": {
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1
+      },
       "avg_neighbor_class_counts": [
         3.25,
         2.25,
@@ -83,7 +106,9 @@
     },
     "5": {
       "size": 1,
-      "support_size_counts": {},
+      "support_size_counts": {
+        "3": 1
+      },
       "avg_neighbor_class_counts": [
         3.0,
         2.0,
@@ -99,7 +124,9 @@
     },
     "6": {
       "size": 1,
-      "support_size_counts": {},
+      "support_size_counts": {
+        "2": 1
+      },
       "avg_neighbor_class_counts": [
         3.0,
         3.0,
@@ -115,7 +142,9 @@
     },
     "7": {
       "size": 1,
-      "support_size_counts": {},
+      "support_size_counts": {
+        "3": 1
+      },
       "avg_neighbor_class_counts": [
         3.0,
         3.0,
