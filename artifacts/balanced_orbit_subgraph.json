@@ -24,7 +24,28 @@
       },
       "root_types": {
         "integral": 3
-      }
+      },
+      "degree_dist": {
+        "1": 2,
+        "2": 1
+      },
+      "adjacency": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ]
     },
     {
       "size": 24,
@@ -36,7 +57,17 @@
       "root_types": {
         "half": 16,
         "integral": 8
-      }
+      },
+      "degree_dist": {
+        "1": 2,
+        "3": 1,
+        "6": 6,
+        "5": 4,
+        "4": 7,
+        "8": 1,
+        "7": 3
+      },
+      "adjacency": null
     }
   ],
   "spectrum_counts": {
