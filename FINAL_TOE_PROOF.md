@@ -1237,6 +1237,16 @@ invariant across these mappings.
 Doc: `docs/witting_isomorphism_orbit_check.md`  
 Script: `tools/witting_isomorphism_orbit_check.py`
 
+**Non‑invariance under full Aut(W33) (computed):**  
+When we apply **symplectic graph automorphisms** (Sp(4,3) generators) via the
+ray→F₃⁴ mapping, the phase law **is not preserved** (thousands of violations).
+Conclusion: the π/6 phase law is **not a pure graph invariant** of W33; it is
+specific to the **unitary ray realization** and preserved only by the
+unitary monomial subgroup, not by all graph automorphisms.
+
+Doc: `docs/witting_phase_law_invariance.md`  
+Script: `tools/witting_phase_law_invariance.py`
+
 **External unitary search (computed):**  
 We attempted to map Witting rays to the **naive F₃⁴ grid rays**
 (v = (ω^a, ω^b, ω^c, ω^d)) via basis‑aligned unitaries. The target grid has
