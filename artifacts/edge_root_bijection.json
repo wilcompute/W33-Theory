@@ -1,0 +1,7202 @@
+[
+  {
+    "edge_index": 0,
+    "v_i": 0,
+    "v_j": 1,
+    "v_i_coords": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "root_index": 112,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 1,
+    "v_i": 0,
+    "v_j": 2,
+    "v_i_coords": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "root_index": 208,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 2,
+    "v_i": 0,
+    "v_j": 3,
+    "v_i_coords": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      0,
+      0,
+      1,
+      2
+    ],
+    "root_index": 111,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      -2
+    ],
+    "we6_orbit_id": 10,
+    "we6_orbit_size": 1
+  },
+  {
+    "edge_index": 3,
+    "v_i": 0,
+    "v_j": 13,
+    "v_i_coords": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "root_index": 108,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      2
+    ],
+    "we6_orbit_id": 8,
+    "we6_orbit_size": 1
+  },
+  {
+    "edge_index": 4,
+    "v_i": 0,
+    "v_j": 14,
+    "v_i_coords": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "root_index": 143,
+    "root_coords": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 5,
+    "v_i": 0,
+    "v_j": 15,
+    "v_i_coords": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      0,
+      2
+    ],
+    "root_index": 239,
+    "root_coords": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 6,
+    "v_i": 0,
+    "v_j": 16,
+    "v_i_coords": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "root_index": 1,
+    "root_coords": [
+      2,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 7,
+    "v_i": 0,
+    "v_j": 17,
+    "v_i_coords": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "root_index": 2,
+    "root_coords": [
+      -2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 8,
+    "v_i": 0,
+    "v_j": 18,
+    "v_i_coords": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      1,
+      2
+    ],
+    "root_index": 5,
+    "root_coords": [
+      2,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 9,
+    "v_i": 0,
+    "v_j": 19,
+    "v_i_coords": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      2,
+      0
+    ],
+    "root_index": 6,
+    "root_coords": [
+      -2,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 10,
+    "v_i": 0,
+    "v_j": 20,
+    "v_i_coords": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "root_index": 9,
+    "root_coords": [
+      2,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 11,
+    "v_i": 0,
+    "v_j": 21,
+    "v_i_coords": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      2,
+      2
+    ],
+    "root_index": 10,
+    "root_coords": [
+      -2,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 12,
+    "v_i": 1,
+    "v_j": 2,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "root_index": 13,
+    "root_coords": [
+      2,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 13,
+    "v_i": 1,
+    "v_j": 3,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      0,
+      0,
+      1,
+      2
+    ],
+    "root_index": 14,
+    "root_coords": [
+      -2,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 14,
+    "v_i": 1,
+    "v_j": 4,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      0,
+      1,
+      0,
+      0
+    ],
+    "root_index": 20,
+    "root_coords": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 15,
+    "v_i": 1,
+    "v_j": 5,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "root_index": 24,
+    "root_coords": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 16,
+    "v_i": 1,
+    "v_j": 6,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      0,
+      1,
+      0,
+      2
+    ],
+    "root_index": 44,
+    "root_coords": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 17,
+    "v_i": 1,
+    "v_j": 7,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      0,
+      1,
+      1,
+      0
+    ],
+    "root_index": 48,
+    "root_coords": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 18,
+    "v_i": 1,
+    "v_j": 8,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      0,
+      1,
+      1,
+      1
+    ],
+    "root_index": 64,
+    "root_coords": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 19,
+    "v_i": 1,
+    "v_j": 9,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      0,
+      1,
+      1,
+      2
+    ],
+    "root_index": 68,
+    "root_coords": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 20,
+    "v_i": 1,
+    "v_j": 10,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      0,
+      1,
+      2,
+      0
+    ],
+    "root_index": 80,
+    "root_coords": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      2,
+      0
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 21,
+    "v_i": 1,
+    "v_j": 11,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      0,
+      1,
+      2,
+      1
+    ],
+    "root_index": 84,
+    "root_coords": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      2
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 22,
+    "v_i": 1,
+    "v_j": 12,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      0,
+      1,
+      2,
+      2
+    ],
+    "root_index": 92,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      2,
+      0
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 23,
+    "v_i": 2,
+    "v_j": 3,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      0,
+      0,
+      1,
+      2
+    ],
+    "root_index": 17,
+    "root_coords": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 24,
+    "v_i": 2,
+    "v_j": 31,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "root_index": 96,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      2
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 25,
+    "v_i": 2,
+    "v_j": 32,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      1
+    ],
+    "root_index": 100,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      2,
+      0
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 26,
+    "v_i": 2,
+    "v_j": 33,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      2
+    ],
+    "root_index": 104,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      2
+    ],
+    "we6_orbit_id": 12,
+    "we6_orbit_size": 1
+  },
+  {
+    "edge_index": 27,
+    "v_i": 2,
+    "v_j": 34,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      0
+    ],
+    "root_index": 215,
+    "root_coords": [
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 28,
+    "v_i": 2,
+    "v_j": 35,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      1
+    ],
+    "root_index": 219,
+    "root_coords": [
+      1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 29,
+    "v_i": 2,
+    "v_j": 36,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      2
+    ],
+    "root_index": 221,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 30,
+    "v_i": 2,
+    "v_j": 37,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      0
+    ],
+    "root_index": 222,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 31,
+    "v_i": 2,
+    "v_j": 38,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      1
+    ],
+    "root_index": 223,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 32,
+    "v_i": 2,
+    "v_j": 39,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      2
+    ],
+    "root_index": 227,
+    "root_coords": [
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 33,
+    "v_i": 3,
+    "v_j": 22,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "root_index": 229,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 34,
+    "v_i": 3,
+    "v_j": 23,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      0,
+      1
+    ],
+    "root_index": 230,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 35,
+    "v_i": 3,
+    "v_j": 24,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      0,
+      2
+    ],
+    "root_index": 231,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 36,
+    "v_i": 3,
+    "v_j": 25,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "root_index": 233,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 37,
+    "v_i": 3,
+    "v_j": 26,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "root_index": 234,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 38,
+    "v_i": 3,
+    "v_j": 27,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      2
+    ],
+    "root_index": 235,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 39,
+    "v_i": 3,
+    "v_j": 28,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      0
+    ],
+    "root_index": 236,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 40,
+    "v_i": 3,
+    "v_j": 29,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      1
+    ],
+    "root_index": 237,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 41,
+    "v_i": 3,
+    "v_j": 30,
+    "v_i_coords": [
+      0,
+      0,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      2
+    ],
+    "root_index": 238,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 42,
+    "v_i": 4,
+    "v_j": 7,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      0,
+      1,
+      1,
+      0
+    ],
+    "root_index": 3,
+    "root_coords": [
+      -2,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 43,
+    "v_i": 4,
+    "v_j": 10,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      0,
+      1,
+      2,
+      0
+    ],
+    "root_index": 7,
+    "root_coords": [
+      -2,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 44,
+    "v_i": 4,
+    "v_j": 13,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "root_index": 0,
+    "root_coords": [
+      2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 45,
+    "v_i": 4,
+    "v_j": 16,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "root_index": 18,
+    "root_coords": [
+      -2,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 46,
+    "v_i": 4,
+    "v_j": 19,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      2,
+      0
+    ],
+    "root_index": 29,
+    "root_coords": [
+      0,
+      2,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 47,
+    "v_i": 4,
+    "v_j": 22,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "root_index": 11,
+    "root_coords": [
+      -2,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 48,
+    "v_i": 4,
+    "v_j": 25,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "root_index": 15,
+    "root_coords": [
+      -2,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 49,
+    "v_i": 4,
+    "v_j": 28,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      0
+    ],
+    "root_index": 19,
+    "root_coords": [
+      -2,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 50,
+    "v_i": 4,
+    "v_j": 31,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "root_index": 31,
+    "root_coords": [
+      0,
+      -2,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 51,
+    "v_i": 4,
+    "v_j": 34,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      0
+    ],
+    "root_index": 35,
+    "root_coords": [
+      0,
+      -2,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 52,
+    "v_i": 4,
+    "v_j": 37,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      0
+    ],
+    "root_index": 39,
+    "root_coords": [
+      0,
+      -2,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 53,
+    "v_i": 5,
+    "v_j": 8,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      0,
+      1,
+      1,
+      1
+    ],
+    "root_index": 43,
+    "root_coords": [
+      0,
+      -2,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 54,
+    "v_i": 5,
+    "v_j": 11,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      0,
+      1,
+      2,
+      1
+    ],
+    "root_index": 55,
+    "root_coords": [
+      0,
+      0,
+      -2,
+      -2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 55,
+    "v_i": 5,
+    "v_j": 13,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "root_index": 4,
+    "root_coords": [
+      2,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 56,
+    "v_i": 5,
+    "v_j": 16,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "root_index": 30,
+    "root_coords": [
+      0,
+      -2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 57,
+    "v_i": 5,
+    "v_j": 19,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      2,
+      0
+    ],
+    "root_index": 33,
+    "root_coords": [
+      0,
+      2,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 58,
+    "v_i": 5,
+    "v_j": 23,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      0,
+      1
+    ],
+    "root_index": 59,
+    "root_coords": [
+      0,
+      0,
+      -2,
+      0,
+      -2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 59,
+    "v_i": 5,
+    "v_j": 26,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "root_index": 63,
+    "root_coords": [
+      0,
+      0,
+      -2,
+      0,
+      0,
+      -2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 60,
+    "v_i": 5,
+    "v_j": 29,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      1
+    ],
+    "root_index": 75,
+    "root_coords": [
+      0,
+      0,
+      0,
+      -2,
+      -2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 61,
+    "v_i": 5,
+    "v_j": 33,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      2
+    ],
+    "root_index": 79,
+    "root_coords": [
+      0,
+      0,
+      0,
+      -2,
+      0,
+      -2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 62,
+    "v_i": 5,
+    "v_j": 36,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      2
+    ],
+    "root_index": 91,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      -2,
+      -2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 63,
+    "v_i": 5,
+    "v_j": 39,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      2
+    ],
+    "root_index": 144,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 64,
+    "v_i": 6,
+    "v_j": 9,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      0,
+      1,
+      1,
+      2
+    ],
+    "root_index": 145,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 65,
+    "v_i": 6,
+    "v_j": 12,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      0,
+      1,
+      2,
+      2
+    ],
+    "root_index": 146,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 66,
+    "v_i": 6,
+    "v_j": 13,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "root_index": 8,
+    "root_coords": [
+      2,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 67,
+    "v_i": 6,
+    "v_j": 16,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "root_index": 34,
+    "root_coords": [
+      0,
+      -2,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 68,
+    "v_i": 6,
+    "v_j": 19,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      2,
+      0
+    ],
+    "root_index": 37,
+    "root_coords": [
+      0,
+      2,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 69,
+    "v_i": 6,
+    "v_j": 24,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      0,
+      2
+    ],
+    "root_index": 148,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 70,
+    "v_i": 6,
+    "v_j": 27,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      2
+    ],
+    "root_index": 152,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 71,
+    "v_i": 6,
+    "v_j": 30,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      2
+    ],
+    "root_index": 160,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 72,
+    "v_i": 6,
+    "v_j": 32,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      1
+    ],
+    "root_index": 176,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 73,
+    "v_i": 6,
+    "v_j": 35,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      1
+    ],
+    "root_index": 177,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 74,
+    "v_i": 6,
+    "v_j": 38,
+    "v_i_coords": [
+      0,
+      1,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      1
+    ],
+    "root_index": 178,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 75,
+    "v_i": 7,
+    "v_j": 10,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      0,
+      1,
+      2,
+      0
+    ],
+    "root_index": 180,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 76,
+    "v_i": 7,
+    "v_j": 14,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "root_index": 12,
+    "root_coords": [
+      2,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 77,
+    "v_i": 7,
+    "v_j": 17,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "root_index": 38,
+    "root_coords": [
+      0,
+      -2,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 78,
+    "v_i": 7,
+    "v_j": 20,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "root_index": 41,
+    "root_coords": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 79,
+    "v_i": 7,
+    "v_j": 23,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      0,
+      1
+    ],
+    "root_index": 184,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 80,
+    "v_i": 7,
+    "v_j": 26,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "root_index": 192,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 81,
+    "v_i": 7,
+    "v_j": 29,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      1
+    ],
+    "root_index": 23,
+    "root_coords": [
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 82,
+    "v_i": 7,
+    "v_j": 32,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      1
+    ],
+    "root_index": 27,
+    "root_coords": [
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 83,
+    "v_i": 7,
+    "v_j": 35,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      1
+    ],
+    "root_index": 47,
+    "root_coords": [
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 84,
+    "v_i": 7,
+    "v_j": 38,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      1
+    ],
+    "root_index": 51,
+    "root_coords": [
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 85,
+    "v_i": 8,
+    "v_j": 11,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      0,
+      1,
+      2,
+      1
+    ],
+    "root_index": 67,
+    "root_coords": [
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 86,
+    "v_i": 8,
+    "v_j": 14,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "root_index": 16,
+    "root_coords": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 87,
+    "v_i": 8,
+    "v_j": 17,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "root_index": 42,
+    "root_coords": [
+      0,
+      -2,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 88,
+    "v_i": 8,
+    "v_j": 20,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "root_index": 53,
+    "root_coords": [
+      0,
+      0,
+      2,
+      -2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 89,
+    "v_i": 8,
+    "v_j": 24,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      0,
+      2
+    ],
+    "root_index": 71,
+    "root_coords": [
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 90,
+    "v_i": 8,
+    "v_j": 27,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      2
+    ],
+    "root_index": 83,
+    "root_coords": [
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 91,
+    "v_i": 8,
+    "v_j": 30,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      2
+    ],
+    "root_index": 87,
+    "root_coords": [
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 92,
+    "v_i": 8,
+    "v_j": 31,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "root_index": 95,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 93,
+    "v_i": 8,
+    "v_j": 34,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      0
+    ],
+    "root_index": 99,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 94,
+    "v_i": 8,
+    "v_j": 37,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      0
+    ],
+    "root_index": 103,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 95,
+    "v_i": 9,
+    "v_j": 12,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      0,
+      1,
+      2,
+      2
+    ],
+    "root_index": 107,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 9,
+    "we6_orbit_size": 1
+  },
+  {
+    "edge_index": 96,
+    "v_i": 9,
+    "v_j": 14,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "root_index": 28,
+    "root_coords": [
+      0,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 97,
+    "v_i": 9,
+    "v_j": 17,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "root_index": 54,
+    "root_coords": [
+      0,
+      0,
+      -2,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 98,
+    "v_i": 9,
+    "v_j": 20,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "root_index": 57,
+    "root_coords": [
+      0,
+      0,
+      2,
+      0,
+      -2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 99,
+    "v_i": 9,
+    "v_j": 22,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "root_index": 113,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 100,
+    "v_i": 9,
+    "v_j": 25,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "root_index": 114,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 101,
+    "v_i": 9,
+    "v_j": 28,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      0
+    ],
+    "root_index": 115,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 102,
+    "v_i": 9,
+    "v_j": 33,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      2
+    ],
+    "root_index": 116,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 103,
+    "v_i": 9,
+    "v_j": 36,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      2
+    ],
+    "root_index": 117,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 104,
+    "v_i": 9,
+    "v_j": 39,
+    "v_i_coords": [
+      0,
+      1,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      2
+    ],
+    "root_index": 118,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 105,
+    "v_i": 10,
+    "v_j": 15,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      0,
+      2
+    ],
+    "root_index": 32,
+    "root_coords": [
+      0,
+      2,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 106,
+    "v_i": 10,
+    "v_j": 18,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      1,
+      2
+    ],
+    "root_index": 58,
+    "root_coords": [
+      0,
+      0,
+      -2,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 107,
+    "v_i": 10,
+    "v_j": 21,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      2,
+      2
+    ],
+    "root_index": 61,
+    "root_coords": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      -2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 108,
+    "v_i": 10,
+    "v_j": 24,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      0,
+      2
+    ],
+    "root_index": 120,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 109,
+    "v_i": 10,
+    "v_j": 27,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      2
+    ],
+    "root_index": 121,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 110,
+    "v_i": 10,
+    "v_j": 30,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      2
+    ],
+    "root_index": 122,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 111,
+    "v_i": 10,
+    "v_j": 33,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      2
+    ],
+    "root_index": 124,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 112,
+    "v_i": 10,
+    "v_j": 36,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      2
+    ],
+    "root_index": 128,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 113,
+    "v_i": 10,
+    "v_j": 39,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      2
+    ],
+    "root_index": 129,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 114,
+    "v_i": 11,
+    "v_j": 15,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      0,
+      2
+    ],
+    "root_index": 36,
+    "root_coords": [
+      0,
+      2,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 115,
+    "v_i": 11,
+    "v_j": 18,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      1,
+      2
+    ],
+    "root_index": 62,
+    "root_coords": [
+      0,
+      0,
+      -2,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 116,
+    "v_i": 11,
+    "v_j": 21,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      2,
+      2
+    ],
+    "root_index": 73,
+    "root_coords": [
+      0,
+      0,
+      0,
+      2,
+      -2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 117,
+    "v_i": 11,
+    "v_j": 22,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "root_index": 130,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 118,
+    "v_i": 11,
+    "v_j": 25,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "root_index": 132,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 119,
+    "v_i": 11,
+    "v_j": 28,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      0
+    ],
+    "root_index": 136,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 120,
+    "v_i": 11,
+    "v_j": 32,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      1
+    ],
+    "root_index": 22,
+    "root_coords": [
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 121,
+    "v_i": 11,
+    "v_j": 35,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      1
+    ],
+    "root_index": 26,
+    "root_coords": [
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 122,
+    "v_i": 11,
+    "v_j": 38,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      1
+    ],
+    "root_index": 46,
+    "root_coords": [
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 123,
+    "v_i": 12,
+    "v_j": 15,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      0,
+      2
+    ],
+    "root_index": 40,
+    "root_coords": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 124,
+    "v_i": 12,
+    "v_j": 18,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      1,
+      2
+    ],
+    "root_index": 74,
+    "root_coords": [
+      0,
+      0,
+      0,
+      -2,
+      2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 125,
+    "v_i": 12,
+    "v_j": 21,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      2,
+      2
+    ],
+    "root_index": 77,
+    "root_coords": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      -2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 126,
+    "v_i": 12,
+    "v_j": 23,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      0,
+      1
+    ],
+    "root_index": 50,
+    "root_coords": [
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 127,
+    "v_i": 12,
+    "v_j": 26,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "root_index": 66,
+    "root_coords": [
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 128,
+    "v_i": 12,
+    "v_j": 29,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      1
+    ],
+    "root_index": 70,
+    "root_coords": [
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 129,
+    "v_i": 12,
+    "v_j": 31,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "root_index": 82,
+    "root_coords": [
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      2,
+      0
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 130,
+    "v_i": 12,
+    "v_j": 34,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      0
+    ],
+    "root_index": 86,
+    "root_coords": [
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      2
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 131,
+    "v_i": 12,
+    "v_j": 37,
+    "v_i_coords": [
+      0,
+      1,
+      2,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      0
+    ],
+    "root_index": 94,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      2,
+      0
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 132,
+    "v_i": 13,
+    "v_j": 14,
+    "v_i_coords": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "root_index": 78,
+    "root_coords": [
+      0,
+      0,
+      0,
+      -2,
+      0,
+      2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 133,
+    "v_i": 13,
+    "v_j": 15,
+    "v_i_coords": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      0,
+      2
+    ],
+    "root_index": 89,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      -2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 134,
+    "v_i": 13,
+    "v_j": 22,
+    "v_i_coords": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "root_index": 52,
+    "root_coords": [
+      0,
+      0,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 135,
+    "v_i": 13,
+    "v_j": 23,
+    "v_i_coords": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      0,
+      1
+    ],
+    "root_index": 56,
+    "root_coords": [
+      0,
+      0,
+      2,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 136,
+    "v_i": 13,
+    "v_j": 24,
+    "v_i_coords": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      0,
+      2
+    ],
+    "root_index": 60,
+    "root_coords": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 137,
+    "v_i": 13,
+    "v_j": 31,
+    "v_i_coords": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "root_index": 72,
+    "root_coords": [
+      0,
+      0,
+      0,
+      2,
+      2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 138,
+    "v_i": 13,
+    "v_j": 32,
+    "v_i_coords": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      1
+    ],
+    "root_index": 76,
+    "root_coords": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 139,
+    "v_i": 13,
+    "v_j": 33,
+    "v_i_coords": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      2
+    ],
+    "root_index": 88,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 140,
+    "v_i": 14,
+    "v_j": 15,
+    "v_i_coords": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      0,
+      2
+    ],
+    "root_index": 90,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      -2,
+      2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 141,
+    "v_i": 14,
+    "v_j": 25,
+    "v_i_coords": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "root_index": 159,
+    "root_coords": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 142,
+    "v_i": 14,
+    "v_j": 26,
+    "v_i_coords": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "root_index": 167,
+    "root_coords": [
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 143,
+    "v_i": 14,
+    "v_j": 27,
+    "v_i_coords": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      2
+    ],
+    "root_index": 171,
+    "root_coords": [
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 144,
+    "v_i": 14,
+    "v_j": 37,
+    "v_i_coords": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      0
+    ],
+    "root_index": 173,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 145,
+    "v_i": 14,
+    "v_j": 38,
+    "v_i_coords": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      1
+    ],
+    "root_index": 174,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 146,
+    "v_i": 14,
+    "v_j": 39,
+    "v_i_coords": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      2
+    ],
+    "root_index": 175,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 147,
+    "v_i": 15,
+    "v_j": 28,
+    "v_i_coords": [
+      1,
+      0,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      0
+    ],
+    "root_index": 191,
+    "root_coords": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 148,
+    "v_i": 15,
+    "v_j": 29,
+    "v_i_coords": [
+      1,
+      0,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      1
+    ],
+    "root_index": 199,
+    "root_coords": [
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 149,
+    "v_i": 15,
+    "v_j": 30,
+    "v_i_coords": [
+      1,
+      0,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      2
+    ],
+    "root_index": 203,
+    "root_coords": [
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 150,
+    "v_i": 15,
+    "v_j": 34,
+    "v_i_coords": [
+      1,
+      0,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      0
+    ],
+    "root_index": 205,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 151,
+    "v_i": 15,
+    "v_j": 35,
+    "v_i_coords": [
+      1,
+      0,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      1
+    ],
+    "root_index": 206,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 152,
+    "v_i": 15,
+    "v_j": 36,
+    "v_i_coords": [
+      1,
+      0,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      2
+    ],
+    "root_index": 207,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 153,
+    "v_i": 16,
+    "v_j": 17,
+    "v_i_coords": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "root_index": 109,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      -2
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 154,
+    "v_i": 16,
+    "v_j": 18,
+    "v_i_coords": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      1,
+      2
+    ],
+    "root_index": 110,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      2
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 155,
+    "v_i": 16,
+    "v_j": 25,
+    "v_i_coords": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "root_index": 147,
+    "root_coords": [
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 156,
+    "v_i": 16,
+    "v_j": 26,
+    "v_i_coords": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "root_index": 149,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 157,
+    "v_i": 16,
+    "v_j": 27,
+    "v_i_coords": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      2
+    ],
+    "root_index": 150,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 158,
+    "v_i": 16,
+    "v_j": 34,
+    "v_i_coords": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      0
+    ],
+    "root_index": 151,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 159,
+    "v_i": 16,
+    "v_j": 35,
+    "v_i_coords": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      1
+    ],
+    "root_index": 153,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 160,
+    "v_i": 16,
+    "v_j": 36,
+    "v_i_coords": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      2
+    ],
+    "root_index": 154,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 161,
+    "v_i": 17,
+    "v_j": 18,
+    "v_i_coords": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      1,
+      2
+    ],
+    "root_index": 155,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 162,
+    "v_i": 17,
+    "v_j": 28,
+    "v_i_coords": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      0
+    ],
+    "root_index": 156,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 163,
+    "v_i": 17,
+    "v_j": 29,
+    "v_i_coords": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      1
+    ],
+    "root_index": 157,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 164,
+    "v_i": 17,
+    "v_j": 30,
+    "v_i_coords": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      2
+    ],
+    "root_index": 158,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 165,
+    "v_i": 17,
+    "v_j": 31,
+    "v_i_coords": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "root_index": 161,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 166,
+    "v_i": 17,
+    "v_j": 32,
+    "v_i_coords": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      1
+    ],
+    "root_index": 162,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 167,
+    "v_i": 17,
+    "v_j": 33,
+    "v_i_coords": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      2
+    ],
+    "root_index": 163,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 168,
+    "v_i": 18,
+    "v_j": 22,
+    "v_i_coords": [
+      1,
+      0,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "root_index": 164,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 169,
+    "v_i": 18,
+    "v_j": 23,
+    "v_i_coords": [
+      1,
+      0,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      0,
+      1
+    ],
+    "root_index": 165,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 170,
+    "v_i": 18,
+    "v_j": 24,
+    "v_i_coords": [
+      1,
+      0,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      0,
+      2
+    ],
+    "root_index": 166,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 171,
+    "v_i": 18,
+    "v_j": 37,
+    "v_i_coords": [
+      1,
+      0,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      0
+    ],
+    "root_index": 168,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 172,
+    "v_i": 18,
+    "v_j": 38,
+    "v_i_coords": [
+      1,
+      0,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      1
+    ],
+    "root_index": 169,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 173,
+    "v_i": 18,
+    "v_j": 39,
+    "v_i_coords": [
+      1,
+      0,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      2
+    ],
+    "root_index": 170,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 174,
+    "v_i": 19,
+    "v_j": 20,
+    "v_i_coords": [
+      1,
+      0,
+      2,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "root_index": 172,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 175,
+    "v_i": 19,
+    "v_j": 21,
+    "v_i_coords": [
+      1,
+      0,
+      2,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      2,
+      2
+    ],
+    "root_index": 179,
+    "root_coords": [
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 176,
+    "v_i": 19,
+    "v_j": 28,
+    "v_i_coords": [
+      1,
+      0,
+      2,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      0
+    ],
+    "root_index": 181,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 177,
+    "v_i": 19,
+    "v_j": 29,
+    "v_i_coords": [
+      1,
+      0,
+      2,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      1
+    ],
+    "root_index": 182,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 178,
+    "v_i": 19,
+    "v_j": 30,
+    "v_i_coords": [
+      1,
+      0,
+      2,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      2
+    ],
+    "root_index": 183,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 179,
+    "v_i": 19,
+    "v_j": 37,
+    "v_i_coords": [
+      1,
+      0,
+      2,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      0
+    ],
+    "root_index": 185,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 180,
+    "v_i": 19,
+    "v_j": 38,
+    "v_i_coords": [
+      1,
+      0,
+      2,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      1
+    ],
+    "root_index": 186,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 181,
+    "v_i": 19,
+    "v_j": 39,
+    "v_i_coords": [
+      1,
+      0,
+      2,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      2
+    ],
+    "root_index": 187,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 182,
+    "v_i": 20,
+    "v_j": 21,
+    "v_i_coords": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      0,
+      2,
+      2
+    ],
+    "root_index": 188,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 183,
+    "v_i": 20,
+    "v_j": 22,
+    "v_i_coords": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "root_index": 189,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 184,
+    "v_i": 20,
+    "v_j": 23,
+    "v_i_coords": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      0,
+      1
+    ],
+    "root_index": 190,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 185,
+    "v_i": 20,
+    "v_j": 24,
+    "v_i_coords": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      0,
+      2
+    ],
+    "root_index": 193,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 186,
+    "v_i": 20,
+    "v_j": 34,
+    "v_i_coords": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      0
+    ],
+    "root_index": 194,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 187,
+    "v_i": 20,
+    "v_j": 35,
+    "v_i_coords": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      1
+    ],
+    "root_index": 195,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 188,
+    "v_i": 20,
+    "v_j": 36,
+    "v_i_coords": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      2
+    ],
+    "root_index": 196,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 189,
+    "v_i": 21,
+    "v_j": 25,
+    "v_i_coords": [
+      1,
+      0,
+      2,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "root_index": 197,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 190,
+    "v_i": 21,
+    "v_j": 26,
+    "v_i_coords": [
+      1,
+      0,
+      2,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "root_index": 198,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 191,
+    "v_i": 21,
+    "v_j": 27,
+    "v_i_coords": [
+      1,
+      0,
+      2,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      2
+    ],
+    "root_index": 200,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 192,
+    "v_i": 21,
+    "v_j": 31,
+    "v_i_coords": [
+      1,
+      0,
+      2,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "root_index": 201,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 193,
+    "v_i": 21,
+    "v_j": 32,
+    "v_i_coords": [
+      1,
+      0,
+      2,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      1
+    ],
+    "root_index": 202,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 194,
+    "v_i": 21,
+    "v_j": 33,
+    "v_i_coords": [
+      1,
+      0,
+      2,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      2
+    ],
+    "root_index": 204,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 195,
+    "v_i": 22,
+    "v_j": 27,
+    "v_i_coords": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      2
+    ],
+    "root_index": 98,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      2
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 196,
+    "v_i": 22,
+    "v_j": 29,
+    "v_i_coords": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      1
+    ],
+    "root_index": 102,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      2,
+      0
+    ],
+    "we6_orbit_id": 11,
+    "we6_orbit_size": 1
+  },
+  {
+    "edge_index": 197,
+    "v_i": 22,
+    "v_j": 31,
+    "v_i_coords": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "root_index": 106,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      2
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 198,
+    "v_i": 22,
+    "v_j": 36,
+    "v_i_coords": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      2
+    ],
+    "root_index": 209,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 199,
+    "v_i": 22,
+    "v_j": 38,
+    "v_i_coords": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      1
+    ],
+    "root_index": 210,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 200,
+    "v_i": 23,
+    "v_j": 25,
+    "v_i_coords": [
+      1,
+      1,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "root_index": 211,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 201,
+    "v_i": 23,
+    "v_j": 30,
+    "v_i_coords": [
+      1,
+      1,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      2
+    ],
+    "root_index": 212,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 202,
+    "v_i": 23,
+    "v_j": 33,
+    "v_i_coords": [
+      1,
+      1,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      2
+    ],
+    "root_index": 213,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 203,
+    "v_i": 23,
+    "v_j": 35,
+    "v_i_coords": [
+      1,
+      1,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      1
+    ],
+    "root_index": 214,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 204,
+    "v_i": 23,
+    "v_j": 37,
+    "v_i_coords": [
+      1,
+      1,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      0
+    ],
+    "root_index": 216,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 205,
+    "v_i": 24,
+    "v_j": 26,
+    "v_i_coords": [
+      1,
+      1,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "root_index": 217,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 206,
+    "v_i": 24,
+    "v_j": 28,
+    "v_i_coords": [
+      1,
+      1,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      0
+    ],
+    "root_index": 218,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 207,
+    "v_i": 24,
+    "v_j": 32,
+    "v_i_coords": [
+      1,
+      1,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      1
+    ],
+    "root_index": 220,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 208,
+    "v_i": 24,
+    "v_j": 34,
+    "v_i_coords": [
+      1,
+      1,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      0
+    ],
+    "root_index": 224,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 209,
+    "v_i": 24,
+    "v_j": 39,
+    "v_i_coords": [
+      1,
+      1,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      2
+    ],
+    "root_index": 225,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 210,
+    "v_i": 25,
+    "v_j": 30,
+    "v_i_coords": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      2
+    ],
+    "root_index": 226,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 211,
+    "v_i": 25,
+    "v_j": 32,
+    "v_i_coords": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      1
+    ],
+    "root_index": 228,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 212,
+    "v_i": 25,
+    "v_j": 34,
+    "v_i_coords": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      0
+    ],
+    "root_index": 232,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 213,
+    "v_i": 25,
+    "v_j": 39,
+    "v_i_coords": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      2
+    ],
+    "root_index": 21,
+    "root_coords": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 214,
+    "v_i": 26,
+    "v_j": 28,
+    "v_i_coords": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      0
+    ],
+    "root_index": 25,
+    "root_coords": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 215,
+    "v_i": 26,
+    "v_j": 31,
+    "v_i_coords": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "root_index": 45,
+    "root_coords": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 216,
+    "v_i": 26,
+    "v_j": 36,
+    "v_i_coords": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      2
+    ],
+    "root_index": 49,
+    "root_coords": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 217,
+    "v_i": 26,
+    "v_j": 38,
+    "v_i_coords": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      1
+    ],
+    "root_index": 65,
+    "root_coords": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 218,
+    "v_i": 27,
+    "v_j": 29,
+    "v_i_coords": [
+      1,
+      1,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      1,
+      2,
+      1
+    ],
+    "root_index": 69,
+    "root_coords": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 219,
+    "v_i": 27,
+    "v_j": 33,
+    "v_i_coords": [
+      1,
+      1,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      2
+    ],
+    "root_index": 81,
+    "root_coords": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 220,
+    "v_i": 27,
+    "v_j": 35,
+    "v_i_coords": [
+      1,
+      1,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      1
+    ],
+    "root_index": 85,
+    "root_coords": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 221,
+    "v_i": 27,
+    "v_j": 37,
+    "v_i_coords": [
+      1,
+      1,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      0
+    ],
+    "root_index": 93,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 222,
+    "v_i": 28,
+    "v_j": 33,
+    "v_i_coords": [
+      1,
+      1,
+      2,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      2
+    ],
+    "root_index": 97,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 223,
+    "v_i": 28,
+    "v_j": 35,
+    "v_i_coords": [
+      1,
+      1,
+      2,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      1
+    ],
+    "root_index": 101,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 7,
+    "we6_orbit_size": 1
+  },
+  {
+    "edge_index": 224,
+    "v_i": 28,
+    "v_j": 37,
+    "v_i_coords": [
+      1,
+      1,
+      2,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      0
+    ],
+    "root_index": 105,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 225,
+    "v_i": 29,
+    "v_j": 32,
+    "v_i_coords": [
+      1,
+      1,
+      2,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      1
+    ],
+    "root_index": 119,
+    "root_coords": [
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 226,
+    "v_i": 29,
+    "v_j": 34,
+    "v_i_coords": [
+      1,
+      1,
+      2,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      0
+    ],
+    "root_index": 123,
+    "root_coords": [
+      1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 227,
+    "v_i": 29,
+    "v_j": 39,
+    "v_i_coords": [
+      1,
+      1,
+      2,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      2
+    ],
+    "root_index": 125,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 228,
+    "v_i": 30,
+    "v_j": 31,
+    "v_i_coords": [
+      1,
+      1,
+      2,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "root_index": 126,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 229,
+    "v_i": 30,
+    "v_j": 36,
+    "v_i_coords": [
+      1,
+      1,
+      2,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      2
+    ],
+    "root_index": 127,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 230,
+    "v_i": 30,
+    "v_j": 38,
+    "v_i_coords": [
+      1,
+      1,
+      2,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      1
+    ],
+    "root_index": 131,
+    "root_coords": [
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 231,
+    "v_i": 31,
+    "v_j": 35,
+    "v_i_coords": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      1
+    ],
+    "root_index": 133,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 232,
+    "v_i": 31,
+    "v_j": 39,
+    "v_i_coords": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      2
+    ],
+    "root_index": 134,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 233,
+    "v_i": 32,
+    "v_j": 36,
+    "v_i_coords": [
+      1,
+      2,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      2
+    ],
+    "root_index": 135,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 234,
+    "v_i": 32,
+    "v_j": 37,
+    "v_i_coords": [
+      1,
+      2,
+      0,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      0
+    ],
+    "root_index": 137,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 235,
+    "v_i": 33,
+    "v_j": 34,
+    "v_i_coords": [
+      1,
+      2,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      1,
+      0
+    ],
+    "root_index": 138,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 236,
+    "v_i": 33,
+    "v_j": 38,
+    "v_i_coords": [
+      1,
+      2,
+      0,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      1
+    ],
+    "root_index": 139,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 237,
+    "v_i": 34,
+    "v_j": 38,
+    "v_i_coords": [
+      1,
+      2,
+      1,
+      0
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      1
+    ],
+    "root_index": 140,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 238,
+    "v_i": 35,
+    "v_j": 39,
+    "v_i_coords": [
+      1,
+      2,
+      1,
+      1
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      2
+    ],
+    "root_index": 141,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 239,
+    "v_i": 36,
+    "v_j": 37,
+    "v_i_coords": [
+      1,
+      2,
+      1,
+      2
+    ],
+    "v_j_coords": [
+      1,
+      2,
+      2,
+      0
+    ],
+    "root_index": 142,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  }
+]
