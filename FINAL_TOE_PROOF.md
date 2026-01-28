@@ -302,6 +302,9 @@ size 3 : H12–H27 = 2,  H12–H12 = 1,  H27–H27 = 0
 ```
 This shows the balanced orbit decomposes into a **dominant mixed component**
 and a **small integral triangle**, sharpening the internal SU(3)‑phase geometry.
+Concretely, the 3‑edge component is anchored at the axis vertex `(0,1,0,0)` and
+links to two H27 vertices `(1,0,1,0)` and `(1,0,1,2)`, i.e. a rigid **axis‑to‑H27**
+V‑shape within the balanced set.
 
 **Balanced‑orbit root geometry (computed).** The 27 corresponding E8 roots
 (after scaling by 1/2 to standard normalization) have **pairwise inner products
