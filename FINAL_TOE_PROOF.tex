@@ -365,11 +365,20 @@ differ). This sharpens the E6--H27 relation: the 27‑line configuration
 is the \textbf{E6 orbit} object, while H27 is a \textbf{distinct
 27‑vertex Heisenberg Cayley graph} inside W33.
 
+\textbf{Stronger obstruction (computed).} We searched for a
+\textbf{graph monomorphism} from H27 into the Schläfli \textbf{skew}
+graph (i.e., a permutation of 27 vertices such that every H27 edge is a
+skew‑edge). The search found \textbf{no embedding}: H27 is \textbf{not}
+a spanning 8‑regular subgraph of the skew‑line graph. This rules out a
+simple ``edge‑subset'' explanation for H27.
+
 Artifacts:
 
 \begin{verbatim}
 tools/schlafli_h27_switching.py
 artifacts/schlafli_h27_switching.json
+tools/search_h27_in_schlafli_skew.py
+artifacts/h27_in_schlafli_skew.json
 \end{verbatim}
 
 \subsubsection{1.4 Explicit E8 -\textgreater{} W33 via Coxeter 6-cycles
@@ -1696,6 +1705,17 @@ Verification}\label{h27-jordan-heisenberg-verification}
     switching invariants.
   \item
     Output: \texttt{artifacts/schlafli\_h27\_switching.json}
+  \end{itemize}
+\item
+  \texttt{python3\ tools/search\_h27\_in\_schlafli\_skew.py}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Searches for an H27 edge‑subset embedding into the Schläfli skew
+    graph.
+  \item
+    Output: \texttt{artifacts/h27\_in\_schlafli\_skew.json}
   \end{itemize}
 \end{itemize}
 
