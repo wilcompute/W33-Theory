@@ -303,6 +303,15 @@ tools/composite_multiplet_optimizer.py
 artifacts/composite_multiplet_optimizer.json
 ```
 
+**Constraint solver (least‑squares).** A constrained least‑squares fit compares
+the observed class‑adjacency counts (classes 0..5) to an ideal E6 edge pattern
+scaled by a factor α. The best mapping is recorded, but the cost remains large,
+reinforcing that adjacency alone cannot fix a canonical multiplet labeling.
+```
+tools/constraint_multiplet_solver.py
+artifacts/constraint_multiplet_solver.json
+```
+
 **Exceptional vertex triplet.** Exactly **3** Coxeter‑6 orbits contain the
 size‑1 W(E6) roots. These correspond to three explicit F₃⁴ projective points:
 ```
@@ -909,6 +918,9 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `python3 tools/composite_multiplet_optimizer.py`
   - Composite feature optimizer for E6 node labeling (heuristic).
   - Output: `artifacts/composite_multiplet_optimizer.json`
+- `python3 tools/constraint_multiplet_solver.py`
+  - Least‑squares fit of class adjacency to E6 edges (heuristic).
+  - Output: `artifacts/constraint_multiplet_solver.json`
 - `python tools/explicit_bijection_decomposition.py`
   - Builds the explicit 240↔240 W33-edge→E8-root mapping.
   - Output: `artifacts/explicit_bijection_decomposition.json`

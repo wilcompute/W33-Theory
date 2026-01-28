@@ -567,6 +567,17 @@ tools/composite_multiplet_optimizer.py
 artifacts/composite_multiplet_optimizer.json
 \end{verbatim}
 
+\textbf{Constraint solver (least‑squares).} A constrained least‑squares
+fit compares the observed class‑adjacency counts (classes 0..5) to an
+ideal E6 edge pattern scaled by a factor \ensuremath{\alpha}. The best
+mapping is recorded, but the cost remains large, reinforcing that
+adjacency alone cannot fix a canonical multiplet labeling.
+
+\begin{verbatim}
+tools/constraint_multiplet_solver.py
+artifacts/constraint_multiplet_solver.json
+\end{verbatim}
+
 \textbf{Exceptional vertex triplet.} Exactly \textbf{3} Coxeter‑6 orbits
 contain the size‑1 W(E6) roots. These correspond to three explicit
 \(F_{3}^{4}\) projective points:
@@ -1558,6 +1569,16 @@ Mapping}\label{e6e8-orbit-structure-explicit-mapping}
     Composite feature optimizer for E6 node labeling (heuristic).
   \item
     Output: \texttt{artifacts/composite\_multiplet\_optimizer.json}
+  \end{itemize}
+\item
+  \texttt{python3\ tools/constraint\_multiplet\_solver.py}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Least‑squares fit of class adjacency to E6 edges (heuristic).
+  \item
+    Output: \texttt{artifacts/constraint\_multiplet\_solver.json}
   \end{itemize}
 \item
   \texttt{python\ tools/explicit\_bijection\_decomposition.py}
