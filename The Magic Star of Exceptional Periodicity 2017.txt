@@ -1,0 +1,243 @@
+
+--- page 1 ---
+DFPD/2017/TH/14
+The Magic Star of
+Exceptional Periodicity
+Piero Truini 1, Michael Rios 2, Alessio Marrani 3,4
+1 Dipartimento di Fisica, Universit` a di Genova,
+and INFN, sez. di Genova,
+via Dodecaneso 33, I-16146 Genova, Italy
+truini@ge.infn.it
+2 Dyonica, ICMQG, USA
+mrios@dyonicatech.com
+3 Museo Storico della Fisica e Centro Studi e Ricerche “Enrico Fermi”,
+Via Panisperna 89A, I-00184, Roma, Italy
+4 Dipartimento di Fisica e Astronomia “Galileo Galilei”, Universit` a di Padova,
+and INFN, Sez. di Padova,
+Via Marzolo 8, I-35131 Padova, Italy
+jazzphyzz@gmail.com
+ABSTRACT
+We present a periodic inﬁnite chain of ﬁnite generalisations of the exceptional structures, in-
+cluding e8, the exceptional Jordan algebra (and pair), and the octonions. We demonstrate that
+the exceptional Jordan algebra is part of an inﬁnite family of ﬁnite-dimensional matrix algebras
+(corresponding to a particular class of cubic Vinberg’s T-algebras). Correspondingly, we prove
+that e8 is part of an inﬁnite family of algebras (dubbed “Magic Star” algebras) that resemble
+lattice vertex algebras.
+Seminar delivered by MR at the 4th Mile High Conference on Nonassociative Mathematics
+University of Denver, Denver, Colorado, USA, July 29-August 5, 2017
+arXiv:1711.07881v2  [hep-th]  1 Dec 2017
+
+--- page 2 ---
+Contents
+1 Introduction 1
+2 Jordan Structures and related Lie algebras 3
+3 The Magic Star: Exceptional Lie algebras and Jordan structures 5
+4 Exceptional Periodicity and Extended Roots 7
+5 The LMS algebra 11
+6 T-algebras 13
+7 Future Developments 17
+1 Introduction
+In the mind of every mathematician, there is a tension between the general rule and exceptional
+cases. Our conscience tells us we should strive for general theorems, yet we are fascinated and
+seduced by beautiful exceptions.
+J. Stillwell [1]
+Since the inception of quantum mechanics operator algebras and their symmetries have
+proved to be of central importance. Jordan, Wigner and von Neumann [2], in a rigorous
+exploration of extended forms of quantum mechanics, classiﬁed ﬁnite dimensional self-adjoint
+operator algebras, now known as formally real Jordan algebras. The exceptional case they found
+contained the largest division algebra, the octonions O [3], ﬁrst discovered by J. T. Graves in
+1843.
+With Gell-Mann’s Eightfold way [4], and subsequent study of the su3 quark and gluon
+structures [5, 6], Lie algebras solidiﬁed a ﬁrm role in the study of elementary particles. After
+the classiﬁcations by Killing and Cartan, all ﬁnite-dimensional complex simple Lie algebras,
+along with all their non-compact real forms, are known. Besides the inﬁnite classical series
+an, bn, cn, dn, ﬁve exceptional Lie algebras exist : g2, f4, e6, e7 and e8. Gursey, Ramond
+and others argued exceptional Lie algebras played a role in uniﬁcation of fundamental particles
+[7]. With such studies the octonions made a return, as the algebra of their derivations is the
+smallest exceptional Lie algebra g2. Moreover the maximal self-adjoint operator algebra over
+the octonions, the exceptional Jordan algebra JO
+3 , has the next largest exceptional Lie algebra
+f4 describing its derivations [8].
+Various non-compact real forms of exceptional Lie algebras play the role of electric-magnetic
+duality (U-duality1) algebras in locally supersymmetric theories of gravity 2 (see e.g. [12] for
+theories with 8 supersymmetries).
+The largest exceptional Lie algebra e8 became central to the heterotic string [13] construc-
+tion, that assigned 16 of the 26 dimensions of the bosonic string to the e8⊕ e8 even self-dual
+lattice. Later, as D = 11 supergravity merged with D = 10 string theory in Witten’s [14]
+mysterious M-theory, Ramond et al. noticed the D = 11 supermultiplet had a hidden f4
+symmetry [15], an observation which was further investigated by Sati [16, 17]. Ramond even
+1Here U-duality is referred to as the “continuous” symmetries of [9]. Their discrete versions are theU-duality
+non-perturbative string theory symmetries introduced in [10].
+2Some non-compact real forms of exceptional algebras also occur in absence of local supersymmetry ( cfr.
+[11], and Refs. therein).
+1
+
+--- page 3 ---
+speculated whether the exceptional Jordan algebra JO
+3 might be a special charge space related
+to the D = 11 lightcone [18], as it has natural so(9) and f4 symmetry3. Schwarz and Kim
+then recast the BFSS matrix model [20] for M-theory in terms of octonion variables [21], and
+Smolin invoked the full exceptional Jordan algebra in a Chern-Simons string matrix model [22]
+for Horowitz and Susskind’s conjectured “bosonic M-theory” in D = 27 [23].
+With breakthroughs in algebraic geometry, coming from Connes and others in the investiga-
+tion of noncommutative geometry [24, 25, 26], a program for emergent spacetime is underway
+and goes beyond Riemannian geometry in favor of recovering manifolds from operator algebras.
+This move to an algebraic derived spacetime proved to be novel, as it circumvented the usual
+problems with Lorentz symmetry via discretization by making geometry inherently fuzzy [27].
+It was even found that extended objects in string theory, D-branes, had natural coordinates
+that were noncommutative [20, 28]. This made the role of C∗-algebras and K-homology of
+central importance to the study of D-branes [29, 30], while also providing the spectral triples
+for traditional noncommutative geometry and its applications in deriving the Standard Model
+of particle physics [31, 32].
+In 2007, Lisi proposed a uniﬁed model [33] using e8, which was later discovered to be
+troubled [34]. However, Lisi’s theory inspired Truini to study a special star-like projection -
+named “Magic Star” (MS) - of e8 under a2 [35]; also motivated by the search of a uniﬁed way
+to characterize the fourth row of the Freudenthal-Rozen-Tits Magic Square [36], the Magic Star
+made the structure of Jordan algebras of degree three manifest in each exceptional Lie algebra
+[35] (see also [37, 38]). An interaction based model using this e8 projection has been speculated
+in [35], and proposed in [39].
+Our aim, in this contribution to the Proceedings of 4th Mile High Conference on Nonas-
+sociative Mathematics, as well as in subsequent forthcoming works, is to deﬁne and study a
+consistent generalization of exceptional Lie algebras, by crucially exploiting some remarkable
+properties of the MS.
+We will show how it is possible to go beyond the largest ﬁnite-dimensional exceptional Lie
+algebra e8 by relying on the basic structures underlying the MS. This will result in the formula-
+tion of the so-called ”Exceptional Periodicity” (EP), namely a generalization of exceptional Lie
+algebras which is parametrized by a natural number n∈ N, and which also enjoys a periodicity
+(ultimately traced back to the well known Bott periodicity). At each “level” of EP, namely
+for each ﬁxed value of n, the dimension of the resulting algebra will be ﬁnite, raising however
+the intriguing question (left for future studies) of investigating its n→∞ limit. The impetus
+for the EP generalization came from certain 3- and 5- gradings of the exceptional Lie algebras,
+along with spinor structures 4 beyond e8.
+We will prove the existence of a periodic inﬁnite chain of ﬁnite generalisations of the ex-
+ceptional structures, including e8, the Exceptional Jordan (or Albert) Algebra JO
+3 , and the
+octonions O themselves. Remarkably, for n = 1, the MS-shaped structure of known ﬁnite-
+dimensional exceptional Lie algebras is recovered.
+As it will be evident from the subsequent treatment, the price to be paid for such an
+elegant and periodic, n-parametrized and MS-shaped, generalization of exceptional algebras is
+that the resulting algebras will no longer be of Lie type , namely they will not satisfy Jacobi
+identities anymore. Indeed, within EP we will not be dealing with root lattices, but rather
+with “extended” root lattices, which will be thoroughly deﬁned further below.
+It is here worth remarking that EP provides a way to go beyond e8 which is radically
+3Recently, the maximally non-compact (i.e., split) real form f4(4) has been conjectured as the global symmetry
+of an exotic ten-dimensional theory in the context of the study of “Magic Pyramids” [19]. See Mike Duﬀ’s talk
+at this Conference.
+4Discussion with Eric Weinstein, during the “Advances in Quantum Gravity” symposium, San Francisco,
+July 2016.
+2
+
+--- page 4 ---
+diﬀerent from the way provided by aﬃne and (extended) Kac-Moody generalizations, such as 5
+e+
+8 =: e9, e++
+8 =: e10,e+++
+8 =: e11, which also appeared as symmetries for (super)gravity models
+reduced to D = 2, 1, 0 dimensions [41, 42], respectively, as well as near spacelike singularities
+in supergravity [43]. In fact, while such extensions of e8 are still of Lie type but inﬁnite-
+dimensional, the generalization of exceptional Lie algebras provided by EP is not of Lie type ,
+but nevertheless is ﬁnite-dimensional, for each level of the EP itself.
+The paper is organized as follows.
+In section 2 we recall the notions of Jordan Algebras and Pairs with particular emphasis on
+their relationship with all the exceptional Lie algebras, except e8. In section 3 we introduce
+the Magic Star and show its main features, among which the appearance of a triple of Jordan
+Pairs at the core of e8. This is, in our opinion, the best way of expressing the link between
+e8 and Jordan algebras. In sections 4, 5 and 6 we extend the features of the Magic Star,
+in particular its relationship with the exceptional Lie algebras, to an inﬁnite chain of ﬁnite
+dimensional algebras called Exceptional Periodicity (EP). In the case of the extension e(n)
+8 of
+e8, the algebra has rank N = 4(n + 1), n = 1, 2,... . In section 4 we introduce a system of
+extended roots for EP, depending on n, which generalizes the root system of the exceptional
+Lie algebras. In section 5 we associate an algebra, for each n, to the extended root system.
+It appears as a ﬁnite dimensional generalization of the exceptional Lie algebras, in which the
+Jacobi identity is only partially true. In section 6 we show that in the Magic Star for EP the
+role of the Jordan algebras is played by matrix algebras, ﬁrst introduced by Vinberg [44], called
+T-algebras. All in all, EP not only generalizes exceptional Lie algebras, but also the excep-
+tional Jordan algebra via its T-algebra [44] structure. And, moreover, this structure is made
+manifest in the MS projections of the extended root systems. In section 7 we list some future
+developments on the study of EP and its applications to a model for Quantum Gravity. Most
+of these developments are at an advanced stage at the time we are completing the present paper.
+2 Jordan Structures and related Lie algebras
+There are no Jordan algebras, there are only Lie algebras.
+I. L. Kantor
+The modern formulation of Jordan algebras, [45], involves a quadratic map Uxy (like xyx
+for associative algebras) instead of the original symmetric product x·y = 1
+2(xy +yx), [2]. The
+quadratic map and its linearization Vx,yz = (Ux+z−Ux−Uz)y (likexyz +zyx in the associative
+case) reveal the mathematical structure of Jordan Algebras much more clearly, through the
+notion of inverse, inner ideal, generic norm, etc. The quadratic formulation is also particularly
+suited for the connection with Lie algebras, as we will explain in the next section. The axioms
+for (quadratic) Jordan algebras are:
+U1 =Id , U xVy,x =Vx,yUx , U Uxy =UxUyUx (2.1)
+The quadratic formulation led to the concept of Jordan Triple systems [46], an example of
+which is a pair of modules represented by rectangular matrices. There is no way of multiplying
+two matricesx andy , say n×m andm×n respectively, by means of a bilinear product. But
+one can do it using a product like xyx, quadratic in x and linear in y. Notice that, like in the
+case of rectangular matrices, there needs not be a unity in these structures. The axioms are in
+this case:
+UxVy,x =Vx,yUx , V Uxy,y =Vx,Uyx , U Uxy =UxUyUx (2.2)
+5For recent development on e11 and beyond, see [40].
+3
+
+--- page 5 ---
+Finally, a Jordan Pair is deﬁned just as a pair of modules ( V +,V −) acting on each other
+(but not on themselves) like a Jordan Triple:
+UxσVy−σ,xσ =Vxσ,y−σUxσ
+VUxσy−σ,y−σ =Vxσ,Uy−σxσ
+UUxσy−σ =UxσUy−σUxσ
+(2.3)
+where σ =± and xσ∈V +σ, y−σ∈V−σ.
+Jordan Pairs are strongly related to the Tits-Kantor-Koecher construction of Lie Algebras
+L [47]-[49] (see also the interesting relation to Hopf algebras, [50]):
+L =J⊕ str(J)⊕ ¯J (2.4)
+where J is a Jordan algebra and str( J) = L(J)⊕Der(J) is the structure algebra of J [51];
+L(x) is the left multiplication in J: L(x)y = x·y and Der(J) = [L(J),L (J)] is the algebra of
+derivations of J (the algebra of the automorphism group of J) [52][53].
+In the case of complex exceptional Lie algebras, this construction applies to e7, with J =
+J8
+3≡ JO
+3 , the 27-dimensional exceptional Jordan algebra of 3 × 3 Hermitian matrices over the
+complex octonions, and str(J) = e6⊗C - C denoting the complex ﬁeld. The algebra e6 is called
+the reduced structure algebra of J, str 0(J), namely the structure algebra with the generator
+corresponding to the multiplication by a complex number taken away: e6 = L(J0)⊕Der(J),
+with J0 denoting the traceless elements of J.
+Let us focus on exceptional Jordan and Lie algebras. We consider the Jordan algebras and
+Pairs based on the 3× 3 matrices Jννν
+3,ννν = 1, 2, 4, 8:
+Jννν
+3 :=
+
+
+α a ¯b
+¯a β c
+b ¯c γ
+
+ α,β,γ ∈ C ; a,b,c ∈ A
+ννν = 1, 2, 4, 8 for A = R, C, H, O (2.5)
+where R, C, H, O denote the Hurwitz algebras of reals, complex, quaternions and octonions,
+respectively.
+Ifx,y∈ Jννν
+3 andxy denotes their standard matrix product, we denote by x·y := 1
+2(xy +yx) the
+Jordan product of x andy. The Jordan identity is the power associativity with respect to this
+product:
+x2·(x·z)−x·(x2·z) = 0, (2.6)
+Another fundamental product is the sharp product #, [51]. It is the linearization of x# :=
+x2−t(x)x− 1
+2(t(x2)−t(x)2)I, with t(x) denoting the trace of x∈ Jννν
+3, in terms of which we
+may write the fundamental cubic identity for Jννν
+3,ννν = 1, 2, 4, 8:
+x#·x = 1
+3t(x#,x )I or x3−t(x)x2 +t(x#)x− 1
+3t(x#,x )I = 0 (2.7)
+where we use the notation t(x,y ) := t(x·y) and x3 = x2·x (notice that for J8
+3, because of
+non-associativity,x2x̸=xx2 in general).
+The triple product is deﬁned as, [51]:
+{x,y,z} :=Vx,yz : = t(x,y )z +t(z,y )x− (x#z)#y
+= 2 [(x·y)·z + (y·z)·x− (z·x)·y] (2.8)
+Notice that the last equality of (2.8) is not trivial at all. Vx,yz is the linearization of the
+quadratic map Uxy. The equation (2.3.15) at page 484 of [51] shows that:
+Uxy =t(x,y )x−x##y = 2(x·y)·x−x2·y (2.9)
+4

@@ -1462,6 +1462,31 @@ This is the **SMOKING GUN** evidence for a unified theory.
 
 ---
 
+## External Literature Integration (2024 / 2017 / 2021)
+
+Three newly added papers provide strong external resonance with the W33 program:
+
+1) **E8(-24) with A1 + G2 + C3 (2024).** The embedding route A1+G2+C3 in E8(-24)
+connects SU(3) (via G2) and a C3-based phase‑space symmetry that descends to
+SL4(R). This is a natural external counterpart to the W33 symplectic/phase‑space
+thread and the SL4(R) symmetry that emerges in our H27/Schlaefli sector.
+
+2) **Magic Star / Exceptional Periodicity (2017).** The Magic Star projection
+makes Jordan‑pair structures manifest in E8 and extends them in EP. Our discovery
+that all six 27‑orbits in E8 are Schlaefli copies, with a canonical balanced
+orbit singled out by Z3 phase, aligns cleanly with the Magic Star / EP emphasis
+on Jordan‑pair and 27‑sector structure.
+
+3) **Warm Dark Matter from Higher‑Dimensional Gauge Theories (2021).** EP‑based
+models yield large fermionic degrees of freedom (2048) compatible with keV‑scale
+WDM. This provides a plausible high‑dof physical realization for the discrete
+finite sector encoded by W33 and its E8 embedding.
+
+We capture these connections in:
+`EXTERNAL_READING_NOTES_JAN28_2026.md`
+
+---
+
 ## FINAL STATEMENT
 
 The work presented here demonstrates that the discrete geometric structure of **W33** is not just mathematically beautiful—it is **physically profound**.
