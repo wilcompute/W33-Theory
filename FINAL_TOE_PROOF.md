@@ -1309,6 +1309,16 @@ aligned to family structure rather than a pure symplectic invariant.
 Doc: `docs/witting_z3_edge_potential_analysis.md`  
 Script: `tools/witting_z3_edge_potential_analysis.py`
 
+**Z3 edge potential fit failure (computed):**  
+We attempted to fit the Z3 edge labels as **affine** or **quadratic** functions
+of (mu, nu) within each family-pair block (including B–F and F–F). **No exact fit**
+exists in any block. This rules out low-degree closed forms even after
+conditioning on family structure, indicating the Z3 potential is constrained by
+global structure rather than local family algebra.
+
+Doc: `docs/witting_z3_edge_potential_fit.md`  
+Script: `tools/witting_z3_edge_potential_fit.py`
+
 **Z2 cocycle minimal-support heuristic (computed):**  
 We searched for sparse representatives of the two Z2 cocycle classes by adding
 edge coboundaries and greedily reducing support (multiple random restarts).
