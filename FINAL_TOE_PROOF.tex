@@ -340,6 +340,38 @@ tools/map_edges_to_we6_orbits.py
 tools/sage_we6_orbit_labels.py
 \end{verbatim}
 
+\subsubsection{1.3a H27 vs the 27‑line (Schläfli) graphs
+(Computed)}\label{a-h27-vs-the-27line-schluxe4fli-graphs-computed}
+
+The 27 lines on a smooth cubic surface define two classical graphs: -
+\textbf{Intersection graph}: adjacency = lines intersect, degree
+\textbf{10}, SRG(27,10,1,5). - \textbf{Skew‑line graph} (complement):
+adjacency = lines disjoint, degree \textbf{16}, SRG(27,16,10,8).
+
+The induced \textbf{H27} subgraph in W33 (non‑neighbors of any vertex)
+is: - \textbf{27 vertices, degree 8}, \textbf{108 edges}. - \textbf{Not
+SRG}: \ensuremath{\lambda} = 1 and \ensuremath{\mu} \ensuremath{\in}
+\{0,3\} (two \ensuremath{\mu} values).
+
+We compared \textbf{Seidel eigenvalue spectra} (switching‑class
+invariants) and \textbf{triangle counts}, obtaining: - \textbf{H27}: 36
+triangles; Seidel spectrum differs from both 27‑line graphs. -
+\textbf{Schläfli (intersection)}: 45 triangles. - \textbf{Schläfli
+(skew)}: 720 triangles.
+
+\textbf{Conclusion.} H27 is \textbf{not isomorphic} to either 27‑line
+graph, and is not \textbf{switching‑equivalent} to them (Seidel spectra
+differ). This sharpens the E6--H27 relation: the 27‑line configuration
+is the \textbf{E6 orbit} object, while H27 is a \textbf{distinct
+27‑vertex Heisenberg Cayley graph} inside W33.
+
+Artifacts:
+
+\begin{verbatim}
+tools/schlafli_h27_switching.py
+artifacts/schlafli_h27_switching.json
+\end{verbatim}
+
 \subsubsection{1.4 Explicit E8 -\textgreater{} W33 via Coxeter 6-cycles
 (Computed)}\label{explicit-e8---w33-via-coxeter-6-cycles-computed}
 
@@ -1653,6 +1685,17 @@ Verification}\label{h27-jordan-heisenberg-verification}
     Verifies Jordan algebra constraints for H27.
   \item
     Output: \texttt{artifacts/h27\_jordan\_algebra\_test.json}
+  \end{itemize}
+\item
+  \texttt{python3\ tools/schlafli\_h27\_switching.py}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Compares H27 to Schläfli intersection/complement graphs and
+    switching invariants.
+  \item
+    Output: \texttt{artifacts/schlafli\_h27\_switching.json}
   \end{itemize}
 \end{itemize}
 
