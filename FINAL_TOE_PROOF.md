@@ -292,7 +292,8 @@ is **not** explained by W33 automorphisms.
 **Balanced‑orbit induced line‑graph (computed).** Consider the line‑graph
 restricted to the 27 balanced edges (edges adjacent if they share a vertex).
 This induced subgraph has **two components** of sizes **24** and **3**. The
-3‑edge component is entirely **integral‑root** edges (3/3 integral), with shell
+3‑edge component is a **V‑shape** (two edges sharing a single edge‑node; no
+triangle), and is entirely **integral‑root** edges (3/3 integral), with shell
 counts **H12–H27:2, H12–H12:1**. The 24‑edge component contains **16 half‑roots**
 and **8 integral roots**, and is overwhelmingly **cross‑shell**:
 ```
