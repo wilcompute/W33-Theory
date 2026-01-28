@@ -1,0 +1,55 @@
+{
+  "results": [
+    {
+      "gen_index": 0,
+      "antipodal_preserved": 14,
+      "total": 240
+    },
+    {
+      "gen_index": 1,
+      "antipodal_preserved": 4,
+      "total": 240
+    },
+    {
+      "gen_index": 2,
+      "antipodal_preserved": 6,
+      "total": 240
+    },
+    {
+      "gen_index": 3,
+      "antipodal_preserved": 56,
+      "total": 240
+    },
+    {
+      "gen_index": 4,
+      "antipodal_preserved": 2,
+      "total": 240
+    },
+    {
+      "gen_index": 5,
+      "antipodal_preserved": 0,
+      "total": 240
+    },
+    {
+      "gen_index": 6,
+      "antipodal_preserved": 8,
+      "total": 240
+    },
+    {
+      "gen_index": 7,
+      "antipodal_preserved": 4,
+      "total": 240
+    },
+    {
+      "gen_index": 8,
+      "antipodal_preserved": 40,
+      "total": 240
+    },
+    {
+      "gen_index": 9,
+      "antipodal_preserved": 40,
+      "total": 240
+    }
+  ],
+  "all_preserve": false
+}
