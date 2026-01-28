@@ -1092,6 +1092,11 @@ noncontextual bound **23** and quantum value **24**.
 Docs: `docs/witting_24basis_inequality.md`  
 Script: `tools/witting_24basis_inequality.py`
 
+**KS run‑sheet (computed):**  
+Full measurement order and ray definitions for the 24‑basis experiment:  
+`docs/witting_24basis_runsheet.md`  
+Script: `tools/witting_24basis_runsheet.py`
+
 **Noise threshold (computed):**  
 Under depolarizing noise in d=4, the inequality remains violated for
 visibility **v ≥ 0.944444** (noise fraction **p ≤ 0.055556**).
@@ -1124,6 +1129,16 @@ Script: `tools/witting_pancharatnam_triangles.py`
 Explicit ray triples with phases 0 and ±2π/3 are listed here:  
 `docs/witting_pancharatnam_examples.md`  
 Script: `tools/witting_pancharatnam_examples.py`
+
+### 1.10 Monomial Symmetry Subgroup (Computed)
+
+We enumerated the **monomial** symmetries that permute coordinates (S₄) and
+apply independent cube‑root phases (Z₃⁴) while preserving the 40‑ray set and
+the 40 bases. The valid subgroup has size **243 = 3⁵**, a clean Z₃ signature
+inside the larger symmetry structure.
+
+Artifact: `artifacts/witting_monomial_symmetry.json`  
+Script: `tools/witting_group_actions.py`
 
 **Interferometric protocol (computed):**  
 A concrete measurement protocol for the Z₃ Pancharatnam phase using
