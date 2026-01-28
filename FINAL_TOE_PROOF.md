@@ -226,6 +226,16 @@ scripts/gap/psp43_index120_actions.g
 artifacts/psp43_index120_actions.json
 ```
 
+**Exhaustive index‑240 action search (uniqueness).** We enumerated **all**
+index‑240 subgroup classes of PSp(4,3) (116 total subgroup classes scanned) and
+tested each coset action for conjugacy to the W33 edge action. Exactly **one**
+conjugacy class matches, showing the 240‑edge action is **unique** up to
+conjugacy among all index‑240 actions. See:
+```
+scripts/gap/psp43_index240_actions.g
+artifacts/psp43_index240_actions.json
+```
+
 **Central extension from true W(E6) action (resolved).** Using the **true**
 W(E6) even action (which preserves antipodal pairs), we built the signed line
 extension on 120 root lines. The resulting signed action has order **25,920**,
