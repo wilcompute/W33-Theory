@@ -1319,6 +1319,14 @@ global structure rather than local family algebra.
 Doc: `docs/witting_z3_edge_potential_fit.md`  
 Script: `tools/witting_z3_edge_potential_fit.py`
 
+**Z3 edge potential tree (computed):**  
+A shallow decision tree using family ids, mu/nu, basis involvement, support size,
+and omega achieves only **51.7%** accuracy. This confirms the Z3 labels are not
+captured by any simple local feature set; the dependence is global.
+
+Doc: `docs/witting_z3_edge_potential_tree.md`  
+Script: `tools/witting_z3_edge_potential_tree.py`
+
 **Z2 cocycle minimal-support heuristic (computed):**  
 We searched for sparse representatives of the two Z2 cocycle classes by adding
 edge coboundaries and greedily reducing support (multiple random restarts).
