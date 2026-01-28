@@ -421,6 +421,21 @@ tools/analyze_pattern_quotient_graph.py
 artifacts/pattern_quotient_graph.json
 \end{verbatim}
 
+\textbf{Exceptional vertex triplet.} Exactly \textbf{3} Coxeter‑6 orbits
+contain the size‑1 W(E6) roots. These correspond to three explicit
+\(F_{3}^{4}\) projective points:
+
+\begin{verbatim}
+[1,1,0,1], [0,1,1,0], [1,0,1,1]
+\end{verbatim}
+
+See:
+
+\begin{verbatim}
+tools/report_exceptional_patterns.py
+artifacts/exceptional_we6_patterns.json
+\end{verbatim}
+
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsubsection{1.5 Explicit Root-to-Edge Bijection
@@ -1259,6 +1274,17 @@ Mapping}\label{e6e8-orbit-structure-explicit-mapping}
     Builds the 8‑class quotient graph by W(E6) intersection patterns.
   \item
     Output: \texttt{artifacts/pattern\_quotient\_graph.json}
+  \end{itemize}
+\item
+  \texttt{python3\ tools/report\_exceptional\_patterns.py}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Lists the 3 Coxeter‑6 orbits involving size‑1 W(E6) roots and their
+    \(F_{3}^{4}\) points.
+  \item
+    Output: \texttt{artifacts/exceptional\_we6\_patterns.json}
   \end{itemize}
 \item
   \texttt{python\ tools/explicit\_bijection\_decomposition.py}
