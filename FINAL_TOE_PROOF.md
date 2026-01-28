@@ -1092,6 +1092,13 @@ noncontextual bound **23** and quantum value **24**.
 Docs: `docs/witting_24basis_inequality.md`  
 Script: `tools/witting_24basis_inequality.py`
 
+**Noise threshold (computed):**  
+Under depolarizing noise in d=4, the inequality remains violated for
+visibility **v ≥ 0.944444** (noise fraction **p ≤ 0.055556**).
+
+Docs: `docs/witting_24basis_noise_threshold.md`  
+Script: `tools/witting_24basis_noise_threshold.py`
+
 ### 1.9 Z₃ Pancharatnam Phase Signature (Computed)
 
 **Hunch tested:** Non‑orthogonal triangles in the 40‑ray Witting set should
