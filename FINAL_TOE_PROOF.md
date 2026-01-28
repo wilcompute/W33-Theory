@@ -1032,6 +1032,45 @@ E8 root → Coxeter orbit → Witting ray → F₃⁴ coordinate → W33 vertex
 with the orbit→F₃⁴ map). This is a direct lookup from any E8 root to its canonical
 projective coordinate.
 
+### 1.8 Contextuality Diagnostics on the Witting 40‑Ray Set (Computed)
+
+We tested the **Witting 40‑ray configuration** (the 40 projective rays in C⁴)
+for the two strongest contextuality signatures used in photonic experiments.
+
+**A. KS uncolorability (state‑independent contextuality):**  
+We searched for a 0/1 assignment to the 40 rays with **exactly one** “1” in
+each of the 40 orthonormal tetrads. **No assignment exists.**  
+This is a direct computational proof that the 40‑ray Witting set is
+**Kochen–Specker uncolorable** (state‑independent contextuality).
+
+Artifact: `artifacts/witting_ks_uncolorable.json`  
+Script: `tools/witting_ks_uncolorable.py`
+
+**Criticality (computed):** Removing **any single ray** makes the system
+colorable. The 40‑ray set is **critical** for KS contextuality.
+
+Artifact: `artifacts/witting_ks_criticality.json`  
+Script: `tools/witting_ks_criticality.py`
+
+**B. Parity‑proof obstruction (computed):**  
+We solved the GF(2) system **A·x = 0**, with **∑x = 1**, where A is the
+ray×basis incidence matrix (40×40). The system is **inconsistent**.  
+Therefore, **no parity‑proof subset** exists within the full 40‑basis set.
+
+Artifact: `artifacts/witting_parity_proof.json`  
+Script: `tools/witting_parity_proof.py`
+
+**C. Reduced‑context KS proof (computed):**  
+A greedy reduction finds a **24‑basis subset** (out of 40) that remains
+KS‑uncolorable, lowering experimental overhead while preserving contextuality.
+
+Artifact: `artifacts/witting_ks_reduce_bases.json`  
+Script: `tools/witting_ks_reduce_bases.py`
+
+**Interpretation:** The Witting set is **contextual but not parity‑contextual**
+in its full 40‑basis form. Photonic tests should therefore target a **KS
+inequality** (state‑independent contextuality) rather than a parity proof.
+
 ## PART 2: K4 COMPONENTS AND UNIVERSAL QUANTIZATION
 
 ### 2.1 Finding: Universal (Z₄, Z₃) Selection
