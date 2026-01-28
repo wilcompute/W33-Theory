@@ -272,6 +272,17 @@ tools/pattern_class_vertex_k4_incidence.py
 artifacts/pattern_class_vertex_k4_incidence.json
 ```
 
+**Candidate multiplet inference (heuristic).** Using the 8‑class quotient graph,
+classes **6,7** form a natural 2‑node block (single edge between them), a
+plausible A2/SU(3) candidate. Mapping the remaining 6 classes onto an E6 Dynkin
+pattern by adjacency is underdetermined; the best permutation still has
+significant mismatches. We record the best adjacency‑based assignments as a
+**heuristic** starting point (not canonical):
+```
+tools/infer_multiplet_mapping.py
+artifacts/pattern_class_multiplet_inference.json
+```
+
 **Exceptional vertex triplet.** Exactly **3** Coxeter‑6 orbits contain the
 size‑1 W(E6) roots. These correspond to three explicit F₃⁴ projective points:
 ```
@@ -869,6 +880,9 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `python3 tools/pattern_class_vertex_k4_incidence.py`
   - Per‑vertex K4 incidence (outer/center) aggregated by pattern class.
   - Output: `artifacts/pattern_class_vertex_k4_incidence.json`
+- `python3 tools/infer_multiplet_mapping.py`
+  - Heuristic mapping of pattern classes to E6/A2 nodes via quotient graph adjacency.
+  - Output: `artifacts/pattern_class_multiplet_inference.json`
 - `python tools/explicit_bijection_decomposition.py`
   - Builds the explicit 240↔240 W33-edge→E8-root mapping.
   - Output: `artifacts/explicit_bijection_decomposition.json`

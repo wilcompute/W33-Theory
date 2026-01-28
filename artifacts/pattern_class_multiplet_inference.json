@@ -1,0 +1,57 @@
+{
+  "a2_classes": [
+    6,
+    7
+  ],
+  "e6_classes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "best_mismatch": 20,
+  "best_mismatch_mapping": {
+    "0": {
+      "assigned_e6_node": 0
+    },
+    "1": {
+      "assigned_e6_node": 1
+    },
+    "2": {
+      "assigned_e6_node": 2
+    },
+    "3": {
+      "assigned_e6_node": 3
+    },
+    "4": {
+      "assigned_e6_node": 4
+    },
+    "5": {
+      "assigned_e6_node": 5
+    }
+  },
+  "best_weighted_score": -12,
+  "best_weighted_mapping": {
+    "0": {
+      "assigned_e6_node": 2
+    },
+    "1": {
+      "assigned_e6_node": 0
+    },
+    "2": {
+      "assigned_e6_node": 4
+    },
+    "3": {
+      "assigned_e6_node": 3
+    },
+    "4": {
+      "assigned_e6_node": 1
+    },
+    "5": {
+      "assigned_e6_node": 5
+    }
+  },
+  "note": "Heuristic mapping using unweighted adjacency and weighted counts. Not canonical."
+}
