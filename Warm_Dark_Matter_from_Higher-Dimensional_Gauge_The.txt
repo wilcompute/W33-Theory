@@ -1,0 +1,367 @@
+
+--- page 1 ---
+universe
+Article
+Warm Dark Matter from Higher-Dimensional Gauge Theories
+Sinziana Paduroiu 1,*
+ , Michael Rios 2
+ , Alessio Marrani 3
+ and David Chester 4
+/gid00030/gid00035/gid00032/gid00030/gid00038/gid00001/gid00033/gid00042/gid00045/gid00001
+/gid00048/gid00043/gid00031/gid00028/gid00047/gid00032/gid00046
+Citation: Paduroiu, S.; Rios, M.;
+Marrani, A.; Chester, D. Warm Dark
+Matter from Higher-Dimensional
+Gauge Theories. Universe 2021, 7, 462.
+https://doi.org/10.3390/universe
+7120462
+Academic Editor: Norma G. Sanchez
+Received: 16 October 2021
+Accepted: 23 November 2021
+Published: 27 November 2021
+Publisher’s Note: MDPI stays neutral
+with regard to jurisdictional claims in
+published maps and institutional afﬁl-
+iations.
+Copyright: © 2021 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed under the terms and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+1 QOOSP Lab, Las Vegas, NV 89169, USA
+2 Dyonica ICMQG, Los Angeles, CA 90032, USA; michael@dyonica.org
+3 Centro Studi e Ricerche Enrico Fermi, 00184 Rome, Italy; alessio@dyonica.org
+4 Quantum Gravity Research, Los Angeles, CA 90290, USA; davidc@quantumgravityresearch.org
+* Correspondence: sinziana@qoosplab.org
+Abstract: Warm dark matter particles with masses in the keV range have been linked with the large
+group representations in gauge theories through a high number of species at decoupling. In this
+paper, we address WDM fermionic degrees of freedom from such representations. Bridging higher-
+dimensional particle physics theories with cosmology studies and astrophysical observations, our
+approach is two-folded, i.e., it includes realistic models from higher-dimensional representations and
+constraints from simulations tested against observations. Starting with superalgebras in exceptional
+periodicity theories, we discuss several symmetry reductions and we consider several representations
+that accommodate a high number of degrees of freedom. We isolate a model that naturally accommo-
+dates both the standard model representation and the fermionic dark matter in agreement with both
+large and small-scale constraints. This model considers an intersection of branes in D = 27 + 3 in a
+manner that provides the degrees of freedom for the standard model on one hand and 2048 fermionic
+degrees of freedom for dark matter, corresponding to a∼2 keV particle mass, on the other. In this
+context, we discuss the theoretical implications and the observable predictions.
+Keywords: warm dark matter; fermions; degrees of freedom; higher-dimensional gauge theories;
+M-theory
+1. Introduction
+In the past decade, having been thoroughly tested against the data from observations,
+the cold dark matter (CDM) model has encountered difﬁculties in explaining these data and
+has proved to be inconsistent with the observations under several aspects. Besides the two
+initial concerns—the large cores in galaxies and the small number of satellites—that may
+or may not be reconciled by introducing ﬁnely tuned baryonic processes in the simulations,
+there are several other points of concern at both small and large scales, e.g., the fact that the
+population of dwarf galaxies in voids is in contradiction with the predictions from CDM
+simulations [1–3]; the failure to replicate, in CDM simulations, the high number of pure
+bulgeless galaxies observed and the low number of galaxy mergers [4,5]; the formation and
+growth of supermassive black holes in agreement with observed distributions [6]; and the
+recent detection of high-redshift quasars [7].
+WDM scenarios with particles in the keV range are gaining ground in explaining
+some of these discrepancies and many studies show the advantages that a keV dark matter
+model presents in explaining the observations at both small and large scales [8–18]. A keV
+WDM particle, for example, can explain the existence of cores in galaxies of varied masses,
+from dwarf galaxies to spirals, when considering the quantum Fermi pressure of the
+particles [12–14]. Moreover, while, for spiral galaxies, in an attempt to reconcile the CDM
+model with observations, the presence of the cores has been attributed to the stars and
+gas concentration at the center of galaxies—tentatively described by adding baryonic
+components in the simulations, with different studies showing different results, sometimes
+contradictory (e.g., [19,20])—for dwarf galaxies, which are dark matter dominated, this
+cannot be the case.
+Universe 2021, 7, 462. https://doi.org/10.3390/universe7120462 https://www.mdpi.com/journal/universe
+
+--- page 2 ---
+Universe 2021, 7, 462 2 of 14
+Furthermore, in WDM models with keV particles, stars can form early on inside the
+ﬁlaments, as shown in unparalleled high-resolution simulations [21] and could provide
+the seeds for the early formation of black holes, predictions that could be tested with more
+such high-resolution simulation studies.
+Given the challenges that the CDM is facing and in the absence of a successful experi-
+mental detection of a CDM particle candidate, studies of warm dark matter models are
+highly justiﬁed both from the theoretical and numerical perspectives.
+From the point of view of particle physics, the theoretical models that predict candi-
+dates for the generically called ‘warm dark matter’ are more varied than those for CDM,
+with different production mechanisms that translate into several intrinsic properties of
+the dark matter particles, reviewed in [22]. The consensus to what these particles have in
+common is that they possess an astronomically signiﬁcant free streaming length. The free
+streaming length implies a cutoff in the power spectrum and a non-zero velocity disper-
+sion. The value for these ‘quantities’ is dictated by the particular model and production
+mechanism and it gives a certain mass for the considered particle. In [16,17], several WDM
+particle models and their assumptions have been re-examined, showing how strongly
+model-dependent their properties are and, consequently, how weak the constraints on the
+particle mass from the over-simpliﬁed simulations are.
+Therefore, the catch comes from the freedom WDM provides in terms of the particle
+candidates that are theorized in this category, mainly in the mass-velocity correspondence.
+Since, in reality, we can only constrain, with observations and simulations, the velocity
+dispersion of the particle and not the mass, other particle physics constraints have to be
+considered in the absence of detection experimental results.
+A particular model that has been extensively used in warm dark matter simulations
+is the one described in [ 23], which implies a much higher number of degrees of free-
+dom at decoupling than for the standard model and its supersymmetric extensions [24].
+As hinted in [ 23], this would be possible in larger gauge groups, especially those with
+extra dimensions.
+Several studies have looked at larger gauge group representations in relation to dark
+matter [25–29], but none that would explain the high number of degrees of freedom. In the
+context of the so-called exceptional super Yang Mills theories, large group representations
+that could allow this high number to be reached have been explored [30,31]. In this paper,
+we revise these results and attempt to develop and isolate models that would produce the
+required high number of degrees of freedom at decoupling, while preserving the standard
+model representations. We found that these representations favor 2048 fermionic degrees
+of freedom at decoupling, which corresponds to a∼2 keV particle, which happens to be in
+agreement with observations.
+In Section 2, we review the warm dark matter model requirement of such high degrees
+of freedom. In Section 3, we introduce the algebras with higher dimensional spinors
+and discuss several reductions in the context of exceptional periodicity. In Section 4, we
+discuss the WDM and SM disentanglement through braneworld intersections, isolating a
+mechanism through which SM degrees of freedom are isolated from WDM ones and WDM
+becomes neutral under the photon gauging the electromagnetic U(1). Our conclusions are
+summarized in Section 5.
+2. keV WDM from Higher-Dimensional Gauge Theories
+Within the WDM scenario, several models with various particle production mecha-
+nisms and various properties have been previously studied. We can distinguish between
+thermally produced neutrinos and those coming from a non-resonant production mecha-
+nism [32–36] for particles in the eV–hundreds keV range that do not decay. More complex
+models that consider decay [37] and re-thermalization [38] have also been considered as
+well as quantum semi-degenerate particles with a non-negligible chemical potential [16].
+However, in numerical simulations, the varied models are oversimpliﬁed, often using
+a ‘cutoff’ in the power spectrum as the only parameter that distinguishes WDM from CDM
+
+--- page 3 ---
+Universe 2021, 7, 462 3 of 14
+particles, as reviewed in [39]. The model most favored by simulation studies for a thermal
+relic WDM particle, which provides this ‘cutoff’ mass-velocity, is the one described in [23].
+Below, we discuss this model, its assumptions and its implications.
+WDM Degrees of Freedom
+The particle assumed in [ 23] is a thermal relic particle that decouples while still
+relativistic, but, by equality, is nonrelativistic. The streaming speed at equality vs/c ∝
+TX/mX, where the effective temperature TX varies inversely with the scale factor. In
+order to have a streaming speed that is low enough to keep up with the CDM success
+at large scales—meaning, the formation of structures as an early enough redshift and
+within the observable mass scales for halos—the decrease in the effective temperature is
+suggested [23]. If the particle decouples with thermal abundance, ρX ∝ T3
+XmX must be
+held ﬁxed. Therefore, to obtain a reasonable reduction in velocity, one needs to decrease
+the temperature and increase the mass. One way the reduction in temperature can be
+realized is through increasing the number of the degrees of freedom at decoupling. The
+example given in [23] assumes a reduction in TX of∼4 and an increase in mass of 43, thus
+corresponding to 688 degrees of freedom. However, for 1 keV , the number of degrees
+of freedom is higher and this is usually what is indirectly used in simulations when the
+velocity of the WDM particle is introduced, as shown in [16,17].
+Below, we remind the derivation in [23] and the discussion in [16]. As recalled in [23]
+(see [23] Appendix A for a detailed derivation and [16] for a detailed assessment of that
+derivation), for a thermal relict particle X that decouples when relativistic, the abundance
+nX relative to photons is
+nX
+nγ
+=
+(43/4
+gdec
+)( 4
+11
+)gX
+2 , (1)
+where gdec is the number of relativistic species present at decoupling—degrees of freedom—
+and gX is the number of spin states of the particle. Assuming that the distribution function
+scales as the non-thermal distribution (exp(v/v0) + 1)−1, for a redshift z, the velocity v0
+(in Equation (A3) [23]) is given,
+v0(z)
+1 + z = 0.012
+(ΩX
+0.3
+)1
+3
+( h
+0.65
+)2
+3
+(1.5
+gX
+)1
+3
+(keV
+mX
+)4
+3
+km s−1 . (2)
+The relation between the cosmological parameters and the particle’s density ρx is
+ΩXh2≡ ρx
+ρc
+h2 = mXnX
+3H2/8πG h2≈ 115
+gdec
+gX
+1.5
+mX
+keV , (3)
+for the Hubble constant H≡ 100h km s−1 kpc−1.
+Therefore, for an mX = 1 keV particle, considering ΩX = 0.3 as in [23], we have the
+following formula for the velocity:
+v0(z)
+1 + z≈ 0.12
+( 1
+gdec
+)1/3 keV
+mX
+km s−1 (4)
+that gives gdec≈ 1000 (gX/1.5)1/3 for a 1 keV particle.
+This large value for the number of degrees of freedom at decoupling is much higher
+than the value for the standard model, ∼107, and even the supersymmetric extension,
+∼229 [24]. Other studies arbitrarily choose, in their analyses, a much more conservative
+value for the number of degrees of freedom of the WDM particle candidates, i.e., ∼150
+for a massive neutrino [24];∼100 for right-handed neutrinos that would decouple before
+the electro-weak phase transition [ 40]. The number of degrees of freedom scales with
+the mass of the particle therefore a higher mass would correspond to a higher number of
+degrees of freedom (and a stronger decrease in temperature). Since this value is correlated
+to the mass–velocity correspondence that dictates the behavior of the WDM particle and its
+
+--- page 4 ---
+Universe 2021, 7, 462 4 of 14
+inﬂuence on the structure formation and evolution, we study the theoretical models where
+such a large number of degrees of freedom can be achieved.
+While the authors in [23] do hint at larger group representations with extra dimensions
+in relation to the high gdec number, they also mention that entropy-producing processes
+that take place after the decoupling of the particle can mimic an increase in gdec. Indeed,
+trying to avoid such large group representations, [22,41–43] discuss the entropy generation
+by the out-of-equilibrium decay of heavier particles, which would allow the number of
+degrees of freedom of the keV particle to be similar to that used for active neutrinos [41].
+Self-interactions as a possible way to reduce the number densities by self-annihilations
+are also discussed in [ 44]. However, in this paper, we look at the large gauge group
+representations that would naturally produce this high number of degrees of freedom,
+starting with the symmetry reductions in algebras with higher-dimensional spinors in
+exceptional periodicity theories.
+3. Algebras with Higher-Dimensional Spinors
+A class of algebras involving higher-dimensional spinors is studied in the so-called
+exceptional super Yang–Mills (ESYM) theories, ﬁrstly discussed in [30,31], in which higher-
+dimensional theories [45–50] beyond string/M-theory [51,52] have been considered and
+extended, also in relation to exceptional periodicity (EP) algebras [53–55]. In this section, we
+provide various branchings of these algebras with a number of spinor degrees of freedom
+ofO(103). Here, we discuss the symmetry reductions along the worldvolume (WV) of
+p-branes, which centrally extend the underlying chiral superalgebra and the reductions
+that follow the so-called Magic Star structure—named so in [ 53] after the star polygon
+geometric shape—of the corresponding EP algebra.
+3.1. Superalgebra in 17 + 1 and 9-Brane WV Reduction
+One of the simplest examples is based on the (1, 0) superalgebra obtained by setting
+n = 1 in Equation (3.5) of [30], namely, the chiral superalgebra of ESYM in D = s + t =
+17 + 1 space–time dimensions, whose central extensions are given by the r.h.s. of the
+anticommutator
+{
+Qα, Qβ
+}
+= (γµ )αβ Pµ + (γµ 1...µ 5 )αβ Zµ 1...µ 5 + (γµ 1...µ 9 )αβ Zµ 1...µ 9, (5)
+namely, by a 1-brane (fundamental string), an electric 5-brane and its dual, a magnetic
+9-brane. The corresponding EP 3-graded algebra, whose semisimple, 0-graded part yields
+the homogeneous Lorentz algebra of 17 + 1 space–time, is obtained by setting n = 1 in
+(II.14) of [55], namely,
+e(1)
+6(−26) := 256′
+−1⊕ (so17,1⊕ R)0⊕ 2561, (6)
+where 256 and 256′, respectively, denote the Majorana–Weyl (MW) semispinor in17 + 1
+dimensions and its conjugate (note that the EP leveln is understood with +1 in [30], namely,
+the ﬁrst non-trivial level of EP is given by n = 2 therein). It should be remarked that, when
+the spinors are interpreted as Abelian translational generators, the non-negatively graded
+part of the EP algebra e(1)
+6(−26) (6) yields the Lie algebra of the global isometry group of the
+homogeneous non-symmetric real special manifold L(16, 1, 0) in the classiﬁcation cited
+in [56,57].
+Symmetry reduction along the WV of the highest-dimensional central extension
+occurring in the r.h.s. of (5), namely, along the9 + 1 dimensional WV of the 9-brane, yields
+the breaking
+so17,1 → so9,1⊕ so8⊕ (10, 8v); (7)
+256 = (16, 8s)⊕
+(
+16′, 8c
+)
+; (8)
+256′ =
+(
+16′, 8s
+)
+⊕ (16, 8c), (9)
+
+--- page 5 ---
+Universe 2021, 7, 462 5 of 14
+thus yielding an so8 inner/ﬁber symmetry, whose only peculiar polarization is shown in
+the branchings (7)–(9).
+Let us recall that, in the models for family uniﬁcation beyond the SM, such as the ones
+discussed in [58,59], one posits a further breaking of the inner symmetry,
+so8 → so5⊕ so3⊕ (5, 3)≃ usp4⊕ su2⊕ (5, 3); (10)
+8v = (5, 1)⊕ (1, 3); 8s = (4, 2); 8c =
+(
+4, 2
+)
+, (11)
+where so3 is used for family symmetry [58].
+3.2. Superalgebra in 20 + 4 and 12-Brane WV Reduction
+Another example is provided by the quasi-conformal level of the above symmetry,
+namely, by the the (1, 0) superalgebra obtained by setting n = 1 in Equation (3.8) of [30],
+the chiral superalgebra of ESYM in D = 20 + 4 space–time dimensions, whose central
+extensions are given by the r.h.s. of the anticommutator
+{
+Qα, Qβ
+}
+= ηαβ Z + (γµ 1...µ 4 )αβ Zµ 1...µ 4 + (γµ 1...µ 8 )αβ Zµ 1...µ 8 + (γµ 1...µ 12 )αβ Zµ 1...µ 12, (12)
+namely, by a 0-brane, a 4-brane, an electric 8-brane and its dual, a magnetic 12-brane. The
+corresponding 5-graded EP algebra is obtained by setting n = 1 in (II.16) of [55].
+e(1)
+8(−24) := so20,4⊕ 2048 (13)
+= 22−2⊕ 1024′
+−1⊕ (so19,3⊕ R)0⊕ 10241,⊕222, (14)
+where 2048 and 1024 denote the MW semispinors in 20 + 4 and 19 + 3 dimensions, re-
+spectively. Again, when the spinors and vectors are interpreted as Abelian translational
+generators, the non-negatively graded part of the EP algebra e(1)
+8(−24) (14) corresponds to the
+Lie algebra of the global isometry group of the homogeneous non-symmetric quaternionic
+Kähler manifold given by the image of the aforementioned space L(16, 1, 0) under the
+composite c·R-map [56,57].
+The symmetry reduction along the WV of the highest-dimensional central extension
+occurring in the r.h.s. of (12), namely the 12 + 4 dimensional WV of the 12-brane, yields
+the breaking
+so20,4 → so12,4⊕ so8⊕ (16, 8v); (15)
+2048 = (128, 8s)⊕
+(
+128′, 8c
+)
+, (16)
+thus again yielding an so8 inner/ﬁber symmetry, where128 and 128′ stand for the MW
+semispinor in 12 + 4 dimensions and its conjugate, respectively.
+3.2.1. Further Reduction in Inner/Fiber Symmetry
+Through a disentangling mechanism discussed in Section 4, one copy of the 128
+encodes SM matter and the rest provides thousands of fermionic degrees of freedom.
+A possible way to do this is to further break the inner/ﬁber symmetryso8 down to
+so7 and/or g2:
+so20,4 → so12,4⊕ so8⊕ (16, 8v)→ so12,4⊕ so7⊕ (1, 7)⊕ (16, 7)⊕ (16, 1); (17)
+2048 = (128, 8s)⊕
+(
+128′, 8c
+)
+= (128, 8)⊕
+(
+128′, 8
+)
+, (18)
+or
+so20,4 → so12,4⊕ so8⊕ (16, 8v)→ so12,4⊕ so7⊕ (1, 7)⊕ (16, 7)⊕ (16, 1)
+→ so12,4⊕ g2⊕ 2· (1, 7)⊕ (16, 7)⊕ (16, 1); (19)
+2048 = (128, 8s)⊕
+(
+128′, 8c
+)
+= (128, 8)⊕
+(
+128′, 8
+)
+= (128, 7)⊕
+(
+128′, 7
+)
+⊕ (128, 1)⊕
+(
+128′, 1
+)
+. (20)

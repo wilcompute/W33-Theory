@@ -1,0 +1,269 @@
+
+--- page 1 ---
+arXiv:2404.18938v2  [physics.gen-ph]  6 May 2024
+ON POSSIBLE EMBEDDINGS OF THE ST ANDARD MODELS
+OF P ARTICLE PHYSICS AND GRA VITY IN E8
+ROBERT ARNOTT WILSON
+Abstract. I investigate the structure of E8 under the action of the subalge-
+bra/subgroup A1 + G2 + C3, as a potential route to uniﬁcation of the funda-
+mental forces of nature into a single algebraic structure. T he particular real
+form E8(−24) supports a decomposition into compact G2 plus split A1 + C3,
+which allows a restriction from G2 to SU (3) for the strong force, together with
+split SL2(R) to break the symmetry of the weak interaction and give mass
+to the intermediate vector bosons. The factor C3 contains various copies of
+the Lorentz group SL2(C) and extends the ‘spacetime’ symmetries to the full
+group of symplectic symmetries of real 3 + 3-dimensional pha se space.
+Restricting G2 to the Standard Model SU (3) extends C3 to A5, in the real
+form SU (3, 3), acting on a complex phase space that includes both moment um
+and current. There is then a natural restriction from SU (3, 3) to SO(3, 3),
+describing the action of SL4(R) on phase space. The resulting action of SL4(R)
+on E8 includes tensors that are equivalent to the stress-energy t ensor, the Ricci
+tensor and the Riemann tensor, and therefore permits the for malism of general
+relativity to be developed inside E8(−24). The model then suggests unexpected
+and perhaps subtle ways in which general relativity and part icle physics may
+be forced to modify each other, in order to produce a uniﬁed th eory.
+1. Introduction
+A number of E8 models of fundamental physics have been proposed in recent
+years [1, 2, 3, 4, 5], but none of them has been suﬃciently compelling t o persuade
+large numbers of people that they are useful. The key issue is how to split up
+the symmetries of E8 to get something that looks like the Standard Model, and
+in particular, how to do this in a reasonably ‘natural’ way. In addition t here
+are a number of technical issues which cause a lot of trouble, partic ularly to do
+with complex structures and chirality, and with implementing three ge nerations of
+fermions when there appears on the face of it to be only enough roo m for two [6].
+The approach to ‘naturality’ taken in [1] is to take the Freudenthal– Tits ‘magic
+square’ [7, 8, 9] as a guide. The Lie structure of the magic square is
+A1 A2 C3 F4
+A2 A2 + A2 A5 E6
+C3 A5 D6 E7
+F4 E6 E7 E8
+(1)
+and most emphasis has been put on the fourth row and the fourth c olumn, where
+the exceptional Lie groups are found. However, the other entrie s in the table are
+also interesting. For example, the route taken in [1] from top left to bottom right
+goes via A2, A5 and E6 in the second row (see also [10, 11]).
+Date: First draft: 20th April 2024; this version; 6th May 2024.
+1
+
+--- page 2 ---
+2 ROBERT ARNOTT WILSON
+The corresponding ‘magic square’ for 2 × 2 matrices is
+B0 B1 B2 B4
+B1 D2 D3 D5
+B2 D3 D4 D6
+B4 D5 D6 D8
+(2)
+where I use the notation B and D to emphasise that these are all spin groups, with
+Bn = Spin(2n + 1) and Dn = Spin(2n). However, I would like to draw particular
+attention to the isomorphisms between spin groups (types B and D) and unitary
+(type A) and symplectic (type C) groups:
+B1 = A1,
+D2 = A1 + A1,
+B2 = C2,
+D3 = A3.(3)
+All of the exceptional isomorphisms listed here arise from the triality automorphism
+of D4, which links together all the groups in the table that are not in the fo urth
+row or fourth column.
+The isomorphism B1 = A1 gives the basic fact that Spin(3) ∼
+= SU (2), which
+is the foundation of quantum mechanics (QM), while D2 = A1 + A1 extends this
+to Spin(3, 1) ∼
+= SL(2, C) for relativistic QM. The isomorphism D3 = A3 is needed
+to explain the complex structure of the Dirac algebra, as the comple x Cliﬀord
+algebra of Minkowski spacetime, since the smallest real Lie algebra t hat contains
+all the Dirac matrices, including γ5, is of this type. This isomorphism also plays
+a signiﬁcant role in various Grand Uniﬁed Theories (GUTs) from 1974 o nwards
+[12, 13, 14], in various real forms including Spin(6) ∼
+= SU (4), Spin(4, 2) ∼
+= SU (2, 2)
+and Spin(3, 3) ∼
+= SL4(R). The isomorphism B2 = C2 similarly lies at the heart of
+the AdS/CFT correspondence [15], and describes the Lie algebra of the even part
+of the Dirac algebra.
+Extending then to the 3 × 3 case, we extend C2 to C3, which looks a lot more
+‘natural’ than extending B2 to C3. In this note, therefore, I concentrate on the third
+row of the magic square [16, 17], and especially the ﬁrst group, Sp6(R), that has
+a classical interpretation as the symmetry group of phase space [1 8]. The second
+group extends this to a complex phase space, so that both moment um and current
+can be included, as well as the position of both mass and charge. This extends the
+symplectic group to Sp6(C) ∼
+= SU (3, 3), whose centralizer in E8 is SU (3)× SL2(R).
+The latter is a real form of the gauge group SU (3) × SU (2) of the strong and weak
+nuclear forces, and I shall argue in this paper that the group SU (3, 3) describes
+both classical and quantum forms of both electromagnetism and gr avity.
+2. Embedding C2 in D8
+In the semi-split version of the magic square, both the compact and split real
+forms of C2 occur, but because I want to use C2 to implement the Dirac algebra,
+I want the split form, that is the group Spin(3, 2) ∼
+= Sp4(R). Embedding into
+Spin(12, 4) we see the centralizer Spin(9, 2), which we can split into three pieces,
+Spin(6), Spin(3) and Spin(2), if we want to get the Standard Model gauge groups
+SU (3), SU (2) and U (1). However, the reason for this splitting will not become
+clear until we consider the embedding of C3 in E8.
+
+--- page 3 ---
+THE STANDARD MODEL AND GRA VITY IN E8 3
+In the notation of [1, 19], we need to choose a copy of the split quat ernions
+H′ in the split octonions, say the copy with basis U, K, L, KL. Then the corre-
+sponding copy of Spin(3, 2) acts on the indices u := 1, U, K, L, KL, leaving IL, J L
+for Spin(2), and i, j, k, il, jl, kl for Spin(6) and/or SU (3), so that Spin(3) acts on
+l, I, J . In particular we see some symmetry-breaking for Spin(3), generated by XlI ,
+XlJ and DI,J , already in the notation. Now for the Dirac part of the algebra, the
+labels u, U, K, L, KL correspond to the matrices γ1, γ2, γ3, γ0 and γ5 respectively,
+and the products of pairs of these gamma matrices generate the a lgebra so(3, 2):
+X1, XK, DK,
+XL, DL, DK,L,
+XKL, DKL, DK,KL , DL,KL,(4)
+in which the ﬁrst row contains the rotations in SL2(C), and the second row contains
+the boosts, while the third row contains a Lorentzian 4-vector.
+Since this algebra is quaternionic rather than octonionic, its element s can be
+written as ordinary 2 × 2 anti-Hermitian quaternion matrices, which make it easier
+to understand the structure. The Xs are oﬀ-diagonal, the single-index Ds are
+diagonal traceless, and the double-index Ds add the imaginary traces:
+( 0 1
+− 1 0
+)
+,
+( 0 K
+K 0
+)
+,
+( K 0
+0 − K
+)
+,
+( 0 L
+L 0
+)
+,
+( L 0
+0 − L
+)
+,
+( KL 0
+0 KL
+)
+,
+( 0 KL
+KL 0
+)
+,
+( KL 0
+0 − KL
+)
+,
+( L 0
+0 L
+)
+,
+( K 0
+0 K
+)
+(5)
+These matrices can be regarded as a split quaternionic version of th e Pauli matrices,
+which occur in the ﬁrst row, in the mathematicians’ anti-Hermitian co nvention
+rather than the physicists’ Hermitian convention. The last matrix in the third row
+is the scalar matrix that is the product of the three Pauli matrices ( Hermitian
+convention).
+3. Extending to C3
+To extend from C2 to C3 we have to generalise the X terms to Y and Z, and
+the D terms to E:
+Y1, YK, YL, YKL,
+Z1, ZK, ZL, ZKL,
+EK, EL, EKL.(6)
+Equivalently, we extend from 2 × 2 matrices to 3 × 3, to obtain a split quaternionic
+version of the Gell-Mann matrices [20]. It turns out that the ‘scalar ’ 2 × 2 matrices
+extend to traceless 3 × 3 matrices, in the same way that the Gell-Mann matrices
+are traceless. In the notation of [19], this condition is enforced by t he identity:
+Dp + Ep + Fp = 0 (7)
+for all single index p, here K, L and KL. I make no claims as to how these Gell-
+Mann matrices should be interpreted, or whether they have anyth ing to do with
+the Gell-Mann matrices used in QCD [21].
+
+--- page 4 ---
+4 ROBERT ARNOTT WILSON
+In fact, the compact part of this group Sp6(R) is a copy of U (3) generated by
+all the elements that have an even number of copies of L in their labels:
+X1, XK, Y1, YK, Z1, ZK, DK, EK, DL,KL(8)
+where again the double-index Ds add an imaginary trace to the matrices. As
+matrices, these are just the anti-Hermitian matrices over the com plex subalgebra
+C of H′. There are also two copies of GL3(R) obtained by replacing K by L or KL
+(or indeed any linear combination of the two):
+X1, XL, Y1, YL, Z1, ZL, DL, EL, DK,KL ;
+X1, XKL, Y1, YKL, Z1, ZKL, DKL , EKL, DK,L.(9)
+These are anti-Hermitian matrices over the respective copies of th e split complex
+numbers C′ in H′. Leaving oﬀ the double-index Ds restricts to SL3(R), and the
+subtle relationships between these two copies of SL3(R) and SU (3) will play an
+important role in this paper.
+4. The centralizer of C3
+The centralizer of Sp6(R) in E8 is a group of type A1 + G2, in which the copy
+of G2 is compact, acting on the indices i, j, k, l, il, jl, kl, and the copy of A1 is
+split, acting on the indices I, J, IL, J L in one of its chiral spinor (weak isospin?)
+representations. This copy of A1 is obviously not the same as the copy, acting
+on l, I, J , that we suggested in Section 2 simply by looking in D8. However, we
+eﬀectively chose a copy of su(2) + u(1) acting on l, I, J, IL, J L, so that by ‘mixing’
+DI,J with DIL,JL we obtain one of the elements of the centralizer. To get the
+rest we need to replace XlI and XlJ by one combination of DI,IL and DJ,JL and
+another combination of DI,JL and DJ,IL.
+In other words, the conversion between these two copies of A1, one of which
+is compact and the other split, is very reminiscent of the ‘symmetry- breaking’ of
+the weak SU (2) in the Standard Model, that converts from a ‘primordial’ massles s
+SU (2) to SL2(R) via the complexiﬁcation SL2(C), in order to give the intermediate
+vector bosons non-zero masses. Thus the E8 model provides a fundamental math-
+ematical reason for this symmetry-breaking, namely enforcemen t of the condition
+that the gauge group must commute not only with D2, as the Coleman–Mandula
+theorem [22] requires, or with C2, as the embedding in D8 requires, but with the
+whole of C3.
+To see the details of how these two copies of A1 are related to each other, we
+can work in the group they generate, which is another copy of Spin(3, 2), acting on
+the labels l, I, J, IL, J L, and commuting with the ﬁrst copy. The ten dimensions of
+this group are represented by
+XlI , XlJ , DI,J , DIL,JL ,
+XlIL , XlJL , DI,IL , DI,JL , DJ,IL, DJ,JL.(10)
+Since we are genuinely using the octonions at this point, it is not possib le to write
+these elements of the algebra as ordinary matrices. However, the notation of [19]
+may help to visualise what is going on. The generators of the two copie s of A1 are
+related as follows (where the signs are determined by the chirality, o r equivalently
+
+--- page 5 ---
+THE STANDARD MODEL AND GRA VITY IN E8 5
+by the embedding in G2):
+DI,J → DI,J − DIL,JL
+XlI → DI,IL − DJ,JL
+XlJ → DJ,IL + DI,JL .(11)
+Turning now to the remaining factor, which is presumably related to t he strong
+force, we compare the group Spin(6) that appears in the centralizer of Spin(3, 2),
+with the group G2 that appears in the centralizer of Sp6(R). After replacing the
+original (unbroken symmetry) copy of A1 by the chiral copy on I, J, IL, J L, we no
+longer require the label l for the weak interaction, which can be added to the strong
+force, to extend the gauge group SU (3) acting on 3 + 3 colours and anti-colours to
+G2 acting on 7 ‘colours’. This extension is reminiscent of the Pati–Salam mo del,
+which uses SU (4) for four colours and four anti-colours, but is group-theoret ically
+completely diﬀerent.
+Notice also that we have a chiral pair of left-handed and right-hand ed copies of
+SL2(R), so that there is a close parallel between the two models:
+SU (4) × SU (2)L × SU (2)R
+G2 × SL2(R)L × SL2(R)R.(12)
+Generators for SL2(R)R in this case are obtained by changing the signs in (11).
+But this group SL2(R)R is not contained in Sp6(R), so we do not ﬁnd it useful,
+and shall not use it. In Section 5 we consider a diﬀerent type of ‘right -handed’
+SL2(R), whose generators are given in (22), which is contained in Sp6(R), and has
+more useful symmetry properties.
+Here we have a total of 20 degrees of freedom, compared to 21 in t he Pati–Salam
+model. Therefore our full model is of type C3 + A1 + G2, based on the group
+Sp6(R) × SL2(R) × G2,(13)
+with the ﬁrst factor generalising the Lorentz group, the second f actor representing
+a real form of weak SU (2), and the third factor generalizing strong SU (3).
+5. Extending to A5
+The occurrence of G2 in the decomposition A1 +G2 +C3, rather than A2, that we
+would expect for the strong force, suggests that we should move to the second group
+in the third row of the magic square, of type A5, and the associated decomposition
+A1 + A2 + A5 of E8. The particular real forms that arise are
+SL2(R) × SU (3) × SU (3, 3),(14)
+which is analogous to the decomposition
+SU (2) × SL3(R) × SL3(H) (15)
+studied in [1, Section II.C]. I propose these diﬀerent real forms as a potentially closer
+match to the Standard Model, since the compact group SU (3) is more suitable for
+massless gluons, while the split group SL2(R) has two boosts that are suitable for
+masses of the intermediate vector bosons. This is because mass is u sually introduced
+by complexifying the compact gauge group, precisely in order to gen erate boosts.
