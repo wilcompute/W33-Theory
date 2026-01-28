@@ -12,22 +12,23 @@ Author: Wil Dahn
 Date: January 2026
 """
 
-import numpy as np
+import json
 from fractions import Fraction
 from itertools import combinations
-import json
 
-print("="*70)
+import numpy as np
+
+print("=" * 70)
 print("W33 THEORY PART LVII: FERMION MASSES & CKM MATRIX")
-print("="*70)
+print("=" * 70)
 
 # =============================================================================
 # SECTION 1: THE GENERATION PUZZLE
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 1: WHY THREE GENERATIONS?")
-print("="*70)
+print("=" * 70)
 
 print("""
 THE GENERATION MYSTERY:
@@ -53,25 +54,25 @@ The decomposition 81 = 3 × 27 might mean:
 # SECTION 2: MASS HIERARCHY FROM W33 NUMBERS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 2: MASS HIERARCHY EXPLORATION")
-print("="*70)
+print("=" * 70)
 
 # Experimental quark masses (in MeV at 2 GeV scale)
 quark_masses = {
-    'u': 2.16,      # up
-    'd': 4.67,      # down
-    's': 93.4,      # strange
-    'c': 1270,      # charm
-    'b': 4180,      # bottom
-    't': 172760,    # top (pole mass)
+    "u": 2.16,  # up
+    "d": 4.67,  # down
+    "s": 93.4,  # strange
+    "c": 1270,  # charm
+    "b": 4180,  # bottom
+    "t": 172760,  # top (pole mass)
 }
 
 # Charged lepton masses (MeV)
 lepton_masses = {
-    'e': 0.511,
-    'mu': 105.7,
-    'tau': 1777,
+    "e": 0.511,
+    "mu": 105.7,
+    "tau": 1777,
 }
 
 print("Experimental masses (MeV):")
@@ -90,9 +91,9 @@ print("\n--- Mass Ratio Analysis ---")
 W33_nums = [3, 4, 9, 12, 27, 40, 56, 81, 137, 173, 229, 1111]
 
 # Lepton mass ratios
-r_mu_e = lepton_masses['mu'] / lepton_masses['e']
-r_tau_mu = lepton_masses['tau'] / lepton_masses['mu']
-r_tau_e = lepton_masses['tau'] / lepton_masses['e']
+r_mu_e = lepton_masses["mu"] / lepton_masses["e"]
+r_tau_mu = lepton_masses["tau"] / lepton_masses["mu"]
+r_tau_e = lepton_masses["tau"] / lepton_masses["e"]
 
 print(f"\nLepton mass ratios:")
 print(f"  mμ/me = {r_mu_e:.2f}")
@@ -106,8 +107,8 @@ print(f"  206.8 ≈ 207 = 3² × 23")
 
 # The Koide formula!
 print("\n--- The Koide Formula ---")
-me, mmu, mtau = lepton_masses['e'], lepton_masses['mu'], lepton_masses['tau']
-koide = (me + mmu + mtau) / (np.sqrt(me) + np.sqrt(mmu) + np.sqrt(mtau))**2
+me, mmu, mtau = lepton_masses["e"], lepton_masses["mu"], lepton_masses["tau"]
+koide = (me + mmu + mtau) / (np.sqrt(me) + np.sqrt(mmu) + np.sqrt(mtau)) ** 2
 print(f"Koide formula: (Σm)/(Σ√m)² = {koide:.6f}")
 print(f"Theoretical value: 2/3 = {2/3:.6f}")
 print(f"Match: {abs(koide - 2/3) < 0.001}")
@@ -116,9 +117,9 @@ print(f"Match: {abs(koide - 2/3) < 0.001}")
 # SECTION 3: W33 FORMULA FOR KOIDE
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 3: W33 INTERPRETATION OF KOIDE")
-print("="*70)
+print("=" * 70)
 
 print("""
 THE KOIDE FORMULA:
@@ -140,11 +141,13 @@ The Koide formula comes from W33 structure where:
 • The "3" is the number of generations from F₃
 """)
 
+
 # Generalized Koide
 def koide_param(masses):
     """Compute Koide parameter for any 3 masses."""
     m = np.array(masses)
-    return np.sum(m) / np.sum(np.sqrt(m))**2
+    return np.sum(m) / np.sum(np.sqrt(m)) ** 2
+
 
 print("\nKoide parameter for different triplets:")
 print(f"  Charged leptons: {koide_param([me, mmu, mtau]):.6f}")
@@ -155,16 +158,14 @@ print(f"  Up quarks (u,c,t): {koide_param([2.16, 1270, 172760]):.6f}")
 # SECTION 4: CKM MATRIX
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 4: CKM MATRIX FROM W33")
-print("="*70)
+print("=" * 70)
 
 # Experimental CKM matrix magnitudes
-CKM_exp = np.array([
-    [0.97370, 0.2245, 0.00382],
-    [0.221, 0.987, 0.0410],
-    [0.0080, 0.0388, 1.013]
-])
+CKM_exp = np.array(
+    [[0.97370, 0.2245, 0.00382], [0.221, 0.987, 0.0410], [0.0080, 0.0388, 1.013]]
+)
 
 print("Experimental CKM matrix |Vij|:")
 print(CKM_exp)
@@ -188,7 +189,7 @@ Let's check: 2/9 in W33 terms:
 """)
 
 # Test 2/9 as Cabibbo angle
-cabibbo_pred = 2/9
+cabibbo_pred = 2 / 9
 cabibbo_exp = 0.2245
 
 print(f"\nCabibbo angle test:")
@@ -201,9 +202,9 @@ print(f"  Error: {abs(cabibbo_exp - cabibbo_pred)/cabibbo_exp * 100:.2f}%")
 # SECTION 5: WOLFENSTEIN PARAMETRIZATION
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 5: WOLFENSTEIN PARAMETERS")
-print("="*70)
+print("=" * 70)
 
 # Wolfenstein parameters (experimental)
 lambda_w = 0.22650  # ≈ sin(θc)
@@ -241,27 +242,27 @@ A ≈ 0.79:
 # Test predictions
 print("\nW33 Wolfenstein predictions:")
 predictions = {
-    'λ': (27/119, lambda_w),
-    'A': (27/34, A),
-    'η̄': (5/14, eta_bar),
+    "λ": (27 / 119, lambda_w),
+    "A": (27 / 34, A),
+    "η̄": (5 / 14, eta_bar),
 }
 
 for param, (pred, exp) in predictions.items():
-    err = abs(pred - exp)/exp * 100
+    err = abs(pred - exp) / exp * 100
     print(f"  {param}: predicted {pred:.4f}, experimental {exp:.4f}, error {err:.2f}%")
 
 # =============================================================================
 # SECTION 6: PMNS MATRIX (NEUTRINO MIXING)
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 6: PMNS MATRIX (NEUTRINO MIXING)")
-print("="*70)
+print("=" * 70)
 
 # Experimental PMNS angles
 theta12 = 33.44  # degrees (solar angle)
-theta23 = 49.2   # degrees (atmospheric angle)
-theta13 = 8.57   # degrees (reactor angle)
+theta23 = 49.2  # degrees (atmospheric angle)
+theta13 = 8.57  # degrees (reactor angle)
 
 print("Experimental PMNS angles:")
 print(f"  θ12 = {theta12}° (solar)")
@@ -269,9 +270,9 @@ print(f"  θ23 = {theta23}° (atmospheric)")
 print(f"  θ13 = {theta13}° (reactor)")
 
 # Convert to sin²
-s12_sq = np.sin(np.radians(theta12))**2
-s23_sq = np.sin(np.radians(theta23))**2
-s13_sq = np.sin(np.radians(theta13))**2
+s12_sq = np.sin(np.radians(theta12)) ** 2
+s23_sq = np.sin(np.radians(theta23)) ** 2
+s13_sq = np.sin(np.radians(theta13)) ** 2
 
 print(f"\nsin² values:")
 print(f"  sin²θ12 = {s12_sq:.4f}")
@@ -308,22 +309,22 @@ sin²θ13 ≈ 0.022:
 # Test predictions
 print("\nW33 PMNS predictions:")
 pmns_pred = {
-    'sin²θ12': (40/131, s12_sq),
-    'sin²θ23': (4/7, s23_sq),
-    'sin²θ13': (2/91, s13_sq),
+    "sin²θ12": (40 / 131, s12_sq),
+    "sin²θ23": (4 / 7, s23_sq),
+    "sin²θ13": (2 / 91, s13_sq),
 }
 
 for param, (pred, exp) in pmns_pred.items():
-    err = abs(pred - exp)/exp * 100
+    err = abs(pred - exp) / exp * 100
     print(f"  {param}: predicted {pred:.4f}, experimental {exp:.4f}, error {err:.2f}%")
 
 # =============================================================================
 # SECTION 7: UNIFIED MIXING PATTERN
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 7: UNIFIED MIXING FROM W33")
-print("="*70)
+print("=" * 70)
 
 print("""
 EMERGING PATTERN:
@@ -363,9 +364,9 @@ The numbers 7, 13, 17 appear repeatedly!
 # SECTION 8: MASS FORMULA ATTEMPT
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 8: MASS FORMULA FROM W33")
-print("="*70)
+print("=" * 70)
 
 print("""
 MASS HIERARCHY HYPOTHESIS:
@@ -379,32 +380,38 @@ The huge mass hierarchy (mt/me ≈ 340,000) might come from powers of 3!
 Let's check if masses fit powers of 3:
 """)
 
+
 def find_power_of_3(m, base_scale=1):
     """Find the nearest power of 3 representation."""
-    log3 = np.log(m/base_scale) / np.log(3)
+    log3 = np.log(m / base_scale) / np.log(3)
     n = round(log3)
     pred = base_scale * 3**n
     ratio = m / pred
     return n, pred, ratio
 
+
 print("\nQuark masses as powers of 3 (base = 0.5 MeV):")
 base = 0.5
 for name, mass in quark_masses.items():
     n, pred, ratio = find_power_of_3(mass, base)
-    print(f"  {name}: {mass:.1f} MeV ≈ {base} × 3^{n} = {pred:.1f} MeV (ratio: {ratio:.3f})")
+    print(
+        f"  {name}: {mass:.1f} MeV ≈ {base} × 3^{n} = {pred:.1f} MeV (ratio: {ratio:.3f})"
+    )
 
 print("\nLepton masses as powers of 3 (base = 0.5 MeV):")
 for name, mass in lepton_masses.items():
     n, pred, ratio = find_power_of_3(mass, base)
-    print(f"  {name}: {mass:.1f} MeV ≈ {base} × 3^{n} = {pred:.1f} MeV (ratio: {ratio:.3f})")
+    print(
+        f"  {name}: {mass:.1f} MeV ≈ {base} × 3^{n} = {pred:.1f} MeV (ratio: {ratio:.3f})"
+    )
 
 # =============================================================================
 # SECTION 9: GENERATION FORMULA
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 9: GENERATION MASS FORMULA")
-print("="*70)
+print("=" * 70)
 
 print("""
 HYPOTHESIS: Masses follow m_n = m_0 × f(n) where n = generation
@@ -424,10 +431,12 @@ W33 VERSION:
 Could θ = 2/9 radians? (Cabibbo angle!)
 """)
 
+
 # Test Koide-type formula
 def koide_mass(m0, theta, n):
     """Koide formula for nth generation."""
-    return m0 * (1 + np.sqrt(2) * np.cos(theta + 2*np.pi*n/3))**2
+    return m0 * (1 + np.sqrt(2) * np.cos(theta + 2 * np.pi * n / 3)) ** 2
+
 
 # Fit for charged leptons
 theta_fit = 0.2222  # radians
@@ -437,7 +446,7 @@ print("\nKoide formula fit:")
 print(f"  θ = {theta_fit} rad ≈ 2/9 = {2/9:.4f}")
 print(f"  m0 = {m0_fit} MeV")
 
-for n, (name, mass_exp) in enumerate([('e', 0.511), ('mu', 105.7), ('tau', 1777)]):
+for n, (name, mass_exp) in enumerate([("e", 0.511), ("mu", 105.7), ("tau", 1777)]):
     mass_pred = koide_mass(m0_fit, theta_fit, n)
     print(f"  {name}: predicted {mass_pred:.2f} MeV, experimental {mass_exp} MeV")
 
@@ -445,9 +454,9 @@ for n, (name, mass_exp) in enumerate([('e', 0.511), ('mu', 105.7), ('tau', 1777)
 # SECTION 10: THE FULL PICTURE
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 10: SYNTHESIS")
-print("="*70)
+print("=" * 70)
 
 print("""
 EMERGING MASS/MIXING STRUCTURE FROM W33:
@@ -490,26 +499,26 @@ PREDICTIONS:
 # =============================================================================
 
 results = {
-    'koide_parameter': float(koide),
-    'cabibbo_prediction': 2/9,
-    'wolfenstein': {
-        'lambda_pred': 27/119,
-        'A_pred': 27/34,
-        'eta_bar_pred': 5/14,
+    "koide_parameter": float(koide),
+    "cabibbo_prediction": 2 / 9,
+    "wolfenstein": {
+        "lambda_pred": 27 / 119,
+        "A_pred": 27 / 34,
+        "eta_bar_pred": 5 / 14,
     },
-    'pmns': {
-        'sin2_theta12_pred': 40/131,
-        'sin2_theta23_pred': 4/7,
-        'sin2_theta13_pred': 2/91,
+    "pmns": {
+        "sin2_theta12_pred": 40 / 131,
+        "sin2_theta23_pred": 4 / 7,
+        "sin2_theta13_pred": 2 / 91,
     },
-    'key_numbers': [2, 4, 7, 9, 13, 14, 17, 27, 34, 40, 91, 119, 131],
+    "key_numbers": [2, 4, 7, 9, 13, 14, 17, 27, 34, 40, 91, 119, 131],
 }
 
-with open('PART_LVII_fermion_masses_results.json', 'w') as f:
-        json.dump(results, f, indent=2, default=int)
-print("\n" + "="*70)
+with open("PART_LVII_fermion_masses_results.json", "w") as f:
+    json.dump(results, f, indent=2, default=int)
+print("\n" + "=" * 70)
 print("PART LVII CONCLUSIONS")
-print("="*70)
+print("=" * 70)
 
 print("""
 KEY RESULTS:
@@ -529,4 +538,4 @@ NEXT: Derive these formulas from W33 group theory!
 
 Results saved to PART_LVII_fermion_masses_results.json
 """)
-print("="*70)
+print("=" * 70)

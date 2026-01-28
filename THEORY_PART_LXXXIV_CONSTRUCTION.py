@@ -8,10 +8,11 @@ construction, not just numerical verification.
 This uses SageMath's graph theory capabilities.
 """
 
-import numpy as np
 import json
 import subprocess
 import sys
+
+import numpy as np
 
 print("=" * 70)
 print("W33 THEORY PART LXXXIV: SAGEMATH GRAPH CONSTRUCTION")
@@ -328,6 +329,7 @@ Two vertices are adjacent if their span is a 2-dimensional isotropic subspace.
 # F_3 elements
 F3 = [0, 1, 2]  # representing 0, 1, -1 (since 2 = -1 in F_3)
 
+
 # Generate all nonzero vectors in F_3^4
 def gen_vectors():
     vectors = []
@@ -339,11 +341,13 @@ def gen_vectors():
                         vectors.append((a, b, c, d))
     return vectors
 
+
 vectors = gen_vectors()
 print(f"Nonzero vectors in F_3^4: {len(vectors)}")
 
 # Group into 1-dimensional subspaces (lines)
 # Two vectors are in the same line if one is a scalar multiple of the other
+
 
 def normalize(v):
     """Return canonical representative of the line through v"""
@@ -355,15 +359,18 @@ def normalize(v):
             return tuple((x * inv) % 3 for x in v)
     return v
 
+
 # Get unique lines
 lines = list(set(normalize(v) for v in vectors))
 print(f"1-dimensional subspaces (lines): {len(lines)}")
 
+
 # Symplectic form: omega(u, v) = u_0*v_1 - u_1*v_0 + u_2*v_3 - u_3*v_2
 def symplectic(u, v):
     """Standard symplectic form on F_3^4"""
-    result = (u[0]*v[1] - u[1]*v[0] + u[2]*v[3] - u[3]*v[2]) % 3
+    result = (u[0] * v[1] - u[1] * v[0] + u[2] * v[3] - u[3] * v[2]) % 3
     return result
+
 
 # Two lines are adjacent if they span an isotropic 2-space
 # i.e., if omega(u, v) = 0 for representatives u, v
@@ -371,7 +378,7 @@ n = len(lines)
 adj = np.zeros((n, n), dtype=int)
 
 for i in range(n):
-    for j in range(i+1, n):
+    for j in range(i + 1, n):
         u = lines[i]
         v = lines[j]
         if symplectic(u, v) == 0:
@@ -388,23 +395,25 @@ print(f"  All equal to 12: {np.all(degrees == 12)}")
 # Verify SRG parameters
 print("\nVerifying SRG parameters...")
 
+
 def check_lambda_mu(adj_matrix):
     """Check λ and μ parameters"""
     n = len(adj_matrix)
     lambda_vals = []
     mu_vals = []
-    
+
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             # Count common neighbors
             common = sum(adj_matrix[i, k] * adj_matrix[j, k] for k in range(n))
-            
+
             if adj_matrix[i, j] == 1:
                 lambda_vals.append(common)
             else:
                 mu_vals.append(common)
-    
+
     return set(lambda_vals), set(mu_vals)
+
 
 lambda_set, mu_set = check_lambda_mu(adj)
 print(f"  λ values (adjacent pairs): {lambda_set}")
@@ -421,6 +430,7 @@ eigenvalues = np.linalg.eigvalsh(adj)
 eigenvalues_rounded = np.round(eigenvalues, 6)
 
 from collections import Counter
+
 ev_counts = Counter(eigenvalues_rounded)
 print("Eigenvalues and multiplicities:")
 for ev, mult in sorted(ev_counts.items(), reverse=True):
@@ -477,8 +487,8 @@ This formula emerges DIRECTLY from the W33 graph!
 """)
 
 # Compute alpha
-alpha_inv_base = k_param**2 - 2*mu_param + 1
-denom = (k_param - 1) * ((k_param - lam)**2 + 1)
+alpha_inv_base = k_param**2 - 2 * mu_param + 1
+denom = (k_param - 1) * ((k_param - lam) ** 2 + 1)
 alpha_inv = alpha_inv_base + v_param / denom
 
 print(f"Computed α⁻¹ = {alpha_inv:.12f}")
@@ -488,7 +498,7 @@ print(f"Computed α⁻¹ = {alpha_inv:.12f}")
 # =============================================================================
 
 # Save the adjacency matrix
-np.savetxt("W33_adjacency_matrix.txt", adj, fmt='%d')
+np.savetxt("W33_adjacency_matrix.txt", adj, fmt="%d")
 print("\nAdjacency matrix saved to W33_adjacency_matrix.txt")
 
 # Save line representatives
@@ -502,21 +512,15 @@ results = {
     "part": "LXXXIV",
     "title": "SageMath Graph Construction",
     "construction": "Symplectic graph on 1-dim subspaces of F_3^4",
-    "verified_parameters": {
-        "v": v_param,
-        "k": k_param,
-        "lambda": lam,
-        "mu": mu_param
-    },
-    "eigenvalues": {
-        "e1": 12,
-        "e2": 2,
-        "e3": -4,
-        "multiplicities": [1, 24, 15]
-    },
+    "verified_parameters": {"v": v_param, "k": k_param, "lambda": lam, "mu": mu_param},
+    "eigenvalues": {"e1": 12, "e2": 2, "e3": -4, "multiplicities": [1, 24, 15]},
     "alpha_inverse": float(alpha_inv),
     "alpha_experimental": 137.035999084,
-    "files_generated": ["W33_adjacency_matrix.txt", "W33_lines.txt", "w33_sage_construction.sage"]
+    "files_generated": [
+        "W33_adjacency_matrix.txt",
+        "W33_lines.txt",
+        "w33_sage_construction.sage",
+    ],
 }
 
 with open("PART_LXXXIV_construction.json", "w") as f:

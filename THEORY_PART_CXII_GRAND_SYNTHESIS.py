@@ -9,9 +9,11 @@ The complete E8 connection and its implications.
 This is a milestone document consolidating all findings.
 """
 
-import numpy as np
-from datetime import datetime
 import json
+from datetime import datetime
+
+import numpy as np
+
 
 def header(title):
     """Print section header."""
@@ -21,14 +23,16 @@ def header(title):
     print("=" * 70)
     print()
 
+
 def box(text):
     """Print text in a box."""
-    lines = text.strip().split('\n')
+    lines = text.strip().split("\n")
     width = max(len(line) for line in lines) + 4
-    print("+" + "-" * (width-2) + "+")
+    print("+" + "-" * (width - 2) + "+")
     for line in lines:
         print(f"| {line:<{width-4}} |")
-    print("+" + "-" * (width-2) + "+")
+    print("+" + "-" * (width - 2) + "+")
+
 
 def main():
     header("W33 THEORY - PART CXII: THE GRAND SYNTHESIS")
@@ -36,14 +40,14 @@ def main():
     print()
     print("Consolidating the E8 connection: Parts CV through CXI")
     print()
-    
+
     results = {}
-    
+
     # =====================================================================
     # SECTION 1: Executive Summary
     # =====================================================================
     header("SECTION 1: EXECUTIVE SUMMARY")
-    
+
     box("""
 THE FUNDAMENTAL CLAIM:
 
@@ -63,47 +67,59 @@ It is a deep mathematical connection rooted in:
 - F_3 structure --> 3 generations
 - k = 12 --> 12 gauge bosons
 """)
-    
+
     # =====================================================================
     # SECTION 2: Summary of Parts CV-CXI
     # =====================================================================
     header("SECTION 2: SUMMARY OF PARTS CV-CXI")
-    
+
     parts = [
-        ("CV", 105, "E8 Connection", 
-         "240 edges = 240 E8 roots. First identification."),
-        
-        ("CVI", 106, "E8 Embedding",
-         "E8 root structure. Inner products: -2, -1, 0, +1."),
-        
-        ("CVII", 107, "Explicit E8 Test",
-         "Constructed W33 from F_3^4. Confirmed SRG(40,12,2,4)."),
-        
-        ("CVIII", 108, "Group Isomorphism",
-         "Proved Sp(4,F_3) = W(E6). Sporadic isomorphism."),
-        
-        ("CIX", 109, "D4 Triality",
-         "24 = 3x8 explains 3 generations via D4 triality."),
-        
-        ("CX", 110, "Symmetry Breaking",
-         "Complete chain: E8 --> E6 --> SO(10) --> SU(5) --> SM."),
-        
-        ("CXI", 111, "Particle Map",
-         "40 = 27 + 12 + 1. Explicit vertex-particle assignment."),
+        ("CV", 105, "E8 Connection", "240 edges = 240 E8 roots. First identification."),
+        (
+            "CVI",
+            106,
+            "E8 Embedding",
+            "E8 root structure. Inner products: -2, -1, 0, +1.",
+        ),
+        (
+            "CVII",
+            107,
+            "Explicit E8 Test",
+            "Constructed W33 from F_3^4. Confirmed SRG(40,12,2,4).",
+        ),
+        (
+            "CVIII",
+            108,
+            "Group Isomorphism",
+            "Proved Sp(4,F_3) = W(E6). Sporadic isomorphism.",
+        ),
+        ("CIX", 109, "D4 Triality", "24 = 3x8 explains 3 generations via D4 triality."),
+        (
+            "CX",
+            110,
+            "Symmetry Breaking",
+            "Complete chain: E8 --> E6 --> SO(10) --> SU(5) --> SM.",
+        ),
+        (
+            "CXI",
+            111,
+            "Particle Map",
+            "40 = 27 + 12 + 1. Explicit vertex-particle assignment.",
+        ),
     ]
-    
+
     print(f"{'Part':<8} {'#':<5} {'Title':<25} {'Key Finding'}")
     print("-" * 70)
     for part, num, title, finding in parts:
         print(f"{part:<8} {num:<5} {title:<25} {finding[:40]}...")
-    
+
     results["parts_summary"] = [(p, n, t) for p, n, t, _ in parts]
-    
+
     # =====================================================================
     # SECTION 3: The Mathematical Foundation
     # =====================================================================
     header("SECTION 3: THE MATHEMATICAL FOUNDATION")
-    
+
     print("LAYER 1: FINITE FIELD")
     print("-" * 50)
     print()
@@ -111,7 +127,7 @@ It is a deep mathematical connection rooted in:
     print("  The field with 3 elements")
     print("  Characteristic 3 is special for E-type Lie algebras")
     print()
-    
+
     print("LAYER 2: VECTOR SPACE")
     print("-" * 50)
     print()
@@ -119,7 +135,7 @@ It is a deep mathematical connection rooted in:
     print("  The 4-dimensional vector space over F_3")
     print("  81 = 3^4 = 27 x 3 (E6 fundamental x generations)")
     print()
-    
+
     print("LAYER 3: SYMPLECTIC FORM")
     print("-" * 50)
     print()
@@ -127,7 +143,7 @@ It is a deep mathematical connection rooted in:
     print("  Defines perpendicularity in symplectic geometry")
     print("  Adjacency in W33: omega(x,y) != 0")
     print()
-    
+
     print("LAYER 4: PROJECTIVE SPACE")
     print("-" * 50)
     print()
@@ -135,7 +151,7 @@ It is a deep mathematical connection rooted in:
     print("  Projective 3-space over F_3")
     print("  These 40 points are the W33 vertices")
     print()
-    
+
     print("LAYER 5: THE GRAPH W33")
     print("-" * 50)
     print()
@@ -143,19 +159,19 @@ It is a deep mathematical connection rooted in:
     print("  Strongly regular graph SRG(40, 12, 2, 4)")
     print("  40 vertices, 240 edges, k=12, lambda=2, mu=4")
     print()
-    
+
     print("LAYER 6: LIE THEORY CONNECTION")
     print("-" * 50)
     print()
     print("  |Aut(W33)| = |Sp(4, F_3)| = 51,840 = |W(E6)|")
     print("  240 edges = 240 E8 roots")
     print("  The discrete skeleton of E8/E6")
-    
+
     # =====================================================================
     # SECTION 4: The Numbers That Matter
     # =====================================================================
     header("SECTION 4: THE NUMBERS THAT MATTER")
-    
+
     numbers = [
         (3, "F_3 = {0,1,2}", "3 generations of fermions"),
         (4, "F_3^4 dimension", "Spacetime dimensions?"),
@@ -172,19 +188,19 @@ It is a deep mathematical connection rooted in:
         (248, "dim(E8)", "E8 Lie algebra dimension"),
         (51840, "|Aut(W33)|", "|W(E6)| = |Sp(4,F_3)|"),
     ]
-    
+
     print(f"{'Number':<10} {'W33 Origin':<20} {'Physical Meaning'}")
     print("-" * 60)
     for num, origin, meaning in numbers:
         print(f"{num:<10} {origin:<20} {meaning}")
-    
+
     results["key_numbers"] = {str(n): (o, m) for n, o, m in numbers}
-    
+
     # =====================================================================
     # SECTION 5: The Eigenvalue Spectrum
     # =====================================================================
     header("SECTION 5: THE EIGENVALUE SPECTRUM")
-    
+
     print("W33 CHARACTERISTIC POLYNOMIAL:")
     print()
     print("  P(x) = (x - 12)(x - 2)^24(x + 4)^15")
@@ -207,18 +223,18 @@ It is a deep mathematical connection rooted in:
     print("    - 15 = 4^2 - 1 (adjoint of SU(4))")
     print()
     print("CHECK: 1 + 24 + 15 = 40 vertices")
-    
+
     results["eigenvalues"] = {
         "12": {"mult": 1, "meaning": "gauge boson count"},
         "2": {"mult": 24, "meaning": "D4 triality, 3 generations"},
-        "-4": {"mult": 15, "meaning": "Pati-Salam SU(4)"}
+        "-4": {"mult": 15, "meaning": "Pati-Salam SU(4)"},
     }
-    
+
     # =====================================================================
     # SECTION 6: The Symmetry Breaking Chain
     # =====================================================================
     header("SECTION 6: THE COMPLETE SYMMETRY BREAKING CHAIN")
-    
+
     print("""
     PLANCK SCALE (~10^19 GeV)
     ========================
@@ -270,12 +286,12 @@ It is a deep mathematical connection rooted in:
     ELECTROWEAK SCALE (~246 GeV)
     ============================
 """)
-    
+
     # =====================================================================
     # SECTION 7: The Particle Content
     # =====================================================================
     header("SECTION 7: THE PARTICLE CONTENT")
-    
+
     print("40 VERTICES = 27 + 12 + 1")
     print("=" * 50)
     print()
@@ -294,25 +310,25 @@ It is a deep mathematical connection rooted in:
     print()
     print("   1: E6 singlet (sterile neutrino)")
     print()
-    
+
     print("12 GAUGE VERTICES:")
     print("-" * 50)
     print("   8: Gluons (SU(3) color)")
     print("   3: Weak bosons (W+, W-, Z)")
     print("   1: Photon")
     print()
-    
+
     print("1 DARK MATTER VERTEX:")
     print("-" * 50)
     print("   1: Scalar singlet")
     print("      Mass: 77.03 GeV (from eigenvalue formula)")
     print("      Stability: from W33 adjacency structure")
-    
+
     # =====================================================================
     # SECTION 8: Three Generations Explained
     # =====================================================================
     header("SECTION 8: THREE GENERATIONS EXPLAINED")
-    
+
     print("WHY EXACTLY THREE GENERATIONS?")
     print("=" * 50)
     print()
@@ -340,12 +356,12 @@ It is a deep mathematical connection rooted in:
     print("CONCLUSION:")
     print("  Three generations is INEVITABLE from W33 structure.")
     print("  Not a free parameter - it's DETERMINED by the math.")
-    
+
     # =====================================================================
     # SECTION 9: Testable Predictions
     # =====================================================================
     header("SECTION 9: TESTABLE PREDICTIONS")
-    
+
     predictions = [
         ("Dark matter mass", "77.03 ± 0.5 GeV", "Direct detection, LHC"),
         ("Number of generations", "Exactly 3", "Confirmed (LEP Z-width)"),
@@ -356,19 +372,19 @@ It is a deep mathematical connection rooted in:
         ("No 4th generation", "Forbidden", "Confirmed (LEP)"),
         ("E6 exotic particles", "Exist at high scale", "Future colliders"),
     ]
-    
+
     print(f"{'Prediction':<25} {'Value':<20} {'Test'}")
     print("-" * 70)
     for pred, val, test in predictions:
         print(f"{pred:<25} {val:<20} {test}")
-    
+
     results["predictions"] = [(p, v, t) for p, v, t in predictions]
-    
+
     # =====================================================================
     # SECTION 10: Connection to Cosmology
     # =====================================================================
     header("SECTION 10: CONNECTION TO COSMOLOGY")
-    
+
     print("DARK ENERGY (from earlier parts):")
     print("-" * 50)
     print()
@@ -390,12 +406,12 @@ It is a deep mathematical connection rooted in:
     print("  E6 breaking could drive inflation")
     print("  Scalar fields from the 27 decomposition")
     print("  Spectral index related to eigenvalue structure?")
-    
+
     # =====================================================================
     # SECTION 11: Comparison to Other Theories
     # =====================================================================
     header("SECTION 11: COMPARISON TO OTHER THEORIES")
-    
+
     print("W33 vs STRING THEORY:")
     print("-" * 50)
     print("  String: Requires extra dimensions (6 or 7)")
@@ -403,7 +419,7 @@ It is a deep mathematical connection rooted in:
     print("  String: E8×E8 from heterotic construction")
     print("  W33: E8 from discrete geometry (240 edges)")
     print()
-    
+
     print("W33 vs LISI'S E8 THEORY:")
     print("-" * 50)
     print("  Lisi: Particles ARE E8 roots")
@@ -411,7 +427,7 @@ It is a deep mathematical connection rooted in:
     print("  Lisi: Criticized for fermion doubling")
     print("  W33: Natural fermion content from 27 of E6")
     print()
-    
+
     print("W33 vs TRADITIONAL GUTs:")
     print("-" * 50)
     print("  GUTs: E6 group assumed, not derived")
@@ -419,7 +435,7 @@ It is a deep mathematical connection rooted in:
     print("  GUTs: Particle count chosen by hand")
     print("  W33: 40 vertices determined by SRG parameters")
     print()
-    
+
     print("UNIQUE FEATURES OF W33:")
     print("-" * 50)
     print("  1. Explains WHY E8 (240 edges = 240 roots)")
@@ -427,12 +443,12 @@ It is a deep mathematical connection rooted in:
     print("  3. Explains WHY 12 gauge bosons (k = 12)")
     print("  4. Predicts dark matter mass (77 GeV)")
     print("  5. Connects to cosmology (w_0 = -0.827)")
-    
+
     # =====================================================================
     # SECTION 12: The Deep Structure
     # =====================================================================
     header("SECTION 12: THE DEEP STRUCTURE")
-    
+
     print("""
     THE W33 VISION OF REALITY
     =========================
@@ -462,12 +478,12 @@ It is a deep mathematical connection rooted in:
     The discreteness is F_3 = {0, 1, 2}.
     The number 3 is the first nontrivial prime.
     """)
-    
+
     # =====================================================================
     # SECTION 13: Open Questions
     # =====================================================================
     header("SECTION 13: OPEN QUESTIONS")
-    
+
     print("MATHEMATICAL:")
     print("-" * 50)
     print("  1. Explicit E8 embedding (find the right 8D subspace)")
@@ -475,7 +491,7 @@ It is a deep mathematical connection rooted in:
     print("  3. Understand mu = 4 (non-adjacent common neighbors)")
     print("  4. Connect to modular forms and number theory")
     print()
-    
+
     print("PHYSICAL:")
     print("-" * 50)
     print("  1. Gravity: How does spacetime geometry emerge?")
@@ -483,19 +499,19 @@ It is a deep mathematical connection rooted in:
     print("  3. Mass hierarchy: Why such different scales?")
     print("  4. CP violation: Where does it come from in W33?")
     print()
-    
+
     print("EXPERIMENTAL:")
     print("-" * 50)
     print("  1. Direct detection of 77 GeV dark matter")
     print("  2. Precision tests of w(z) evolution")
     print("  3. Search for E6 exotics at colliders")
     print("  4. Proton decay at predicted rate")
-    
+
     # =====================================================================
     # SECTION 14: Conclusion
     # =====================================================================
     header("SECTION 14: CONCLUSION")
-    
+
     box("""
 PARTS CV-CXII HAVE ESTABLISHED:
 
@@ -522,11 +538,11 @@ PARTS CV-CXII HAVE ESTABLISHED:
 W33 THEORY MAY BE THE DISCRETE FOUNDATION
 OF FUNDAMENTAL PHYSICS.
 """)
-    
+
     # =====================================================================
     # Save results
     # =====================================================================
-    
+
     def convert_numpy(obj):
         """Recursively convert numpy types to Python native types."""
         if isinstance(obj, dict):
@@ -540,25 +556,26 @@ OF FUNDAMENTAL PHYSICS.
         elif isinstance(obj, np.ndarray):
             return obj.tolist()
         return obj
-    
+
     results["timestamp"] = datetime.now().isoformat()
     results["part"] = "CXII"
     results["part_number"] = 112
     results["title"] = "The Grand Synthesis"
     results["parts_covered"] = "CV-CXI (105-111)"
     results["key_finding"] = "W33 is the discrete skeleton of E8 physics"
-    
+
     results = convert_numpy(results)
-    
+
     with open("PART_CXII_grand_synthesis.json", "w") as f:
         json.dump(results, f, indent=2, default=int)
-    
+
     print()
     print("Results saved to: PART_CXII_grand_synthesis.json")
     print()
     print("=" * 70)
     print(" END OF E8 CONNECTION SERIES (PARTS CV-CXII)")
     print("=" * 70)
+
 
 if __name__ == "__main__":
     main()

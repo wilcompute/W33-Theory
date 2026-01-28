@@ -8,6 +8,7 @@ Outputs:
 - artifacts/e8_witting_compare.json
 - artifacts/e8_witting_compare.md
 """
+
 from __future__ import annotations
 
 import json
@@ -38,13 +39,19 @@ def build_witting_vertices():
         for nu in range(3):
             w_mu = omega_powers[mu]
             w_nu = omega_powers[nu]
-            base_states.append(np.array([0, 1, -w_mu, w_nu], dtype=complex) / np.sqrt(3))
-            base_states.append(np.array([1, 0, -w_mu, -w_nu], dtype=complex) / np.sqrt(3))
-            base_states.append(np.array([1, -w_mu, 0, w_nu], dtype=complex) / np.sqrt(3))
+            base_states.append(
+                np.array([0, 1, -w_mu, w_nu], dtype=complex) / np.sqrt(3)
+            )
+            base_states.append(
+                np.array([1, 0, -w_mu, -w_nu], dtype=complex) / np.sqrt(3)
+            )
+            base_states.append(
+                np.array([1, -w_mu, 0, w_nu], dtype=complex) / np.sqrt(3)
+            )
             base_states.append(np.array([1, w_mu, w_nu, 0], dtype=complex) / np.sqrt(3))
 
     # multiply by 6 phases
-    phases = [1, omega, omega**2, -1, -omega, -omega**2]
+    phases = [1, omega, omega**2, -1, -omega, -(omega**2)]
     vertices = []
     for state in base_states:
         for phase in phases:
@@ -130,8 +137,12 @@ def main():
     summary = {
         "witting_count": int(witting_r.shape[0]),
         "e8_count": int(e8.shape[0]),
-        "witting_norms_sq": [float(x) for x in np.unique(np.round(np.sum(witting_r**2, axis=1), 6))],
-        "e8_norms_sq": [float(x) for x in np.unique(np.round(np.sum(e8**2, axis=1), 6))],
+        "witting_norms_sq": [
+            float(x) for x in np.unique(np.round(np.sum(witting_r**2, axis=1), 6))
+        ],
+        "e8_norms_sq": [
+            float(x) for x in np.unique(np.round(np.sum(e8**2, axis=1), 6))
+        ],
         "witting_dot_distribution": w_dist,
         "e8_dot_distribution": e_dist,
         "witting_neighbor_counts_ip1": neighbor_counts(wG, 1.0),

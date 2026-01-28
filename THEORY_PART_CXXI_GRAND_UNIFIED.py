@@ -18,21 +18,22 @@ Now let's put it all together to see the complete structure.
 import json
 from datetime import datetime
 
+
 def main():
     print("=" * 70)
     print(" W33 THEORY - PART CXXI: THE GRAND UNIFIED STRUCTURE")
     print(" Complete Synthesis")
     print("=" * 70)
-    
+
     results = {"part": "CXXI", "synthesis": {}}
-    
+
     # =========================================================================
     # SECTION 1: THE COMPLETE NUMBER TABLE
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 1: THE COMPLETE NUMBER TABLE")
     print("=" * 70)
-    
+
     table = """
   ╔═══════════════════════════════════════════════════════════════════╗
   ║                    W33 MASTER NUMBER TABLE                        ║
@@ -69,21 +70,26 @@ def main():
   ╚═══════════════════════════════════════════════════════════════════╝
 """
     print(table)
-    
+
     results["synthesis"]["number_table"] = {
         "vertices": {"n": 40, "decomposition": "1+12+27"},
         "edges": {"total": 240, "h12": 12, "h27": 108, "cross": 108},
-        "automorphisms": {"aut": 51840, "stab_v": 1296, "stab_v_n": 108, "stab_v_nn": 48},
-        "eigenvalues": [(12, 1), (2, 24), (-4, 15)]
+        "automorphisms": {
+            "aut": 51840,
+            "stab_v": 1296,
+            "stab_v_n": 108,
+            "stab_v_nn": 48,
+        },
+        "eigenvalues": [(12, 1), (2, 24), (-4, 15)],
     }
-    
+
     # =========================================================================
     # SECTION 2: THE HIERARCHY OF STRUCTURES
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 2: THE HIERARCHY OF STRUCTURES")
     print("=" * 70)
-    
+
     hierarchy = """
   THE FOUR LEVELS OF W33 STRUCTURE:
   
@@ -117,14 +123,14 @@ def main():
     • 40 equivalent "origins" (vertex transitivity)
 """
     print(hierarchy)
-    
+
     # =========================================================================
     # SECTION 3: THE PHYSICAL INTERPRETATION
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 3: THE PHYSICAL INTERPRETATION")
     print("=" * 70)
-    
+
     physics = """
   IF W33 ENCODES PARTICLE PHYSICS:
   
@@ -156,14 +162,14 @@ def main():
   └─────────────────────────────────────────────────────────────────┘
 """
     print(physics)
-    
+
     # =========================================================================
     # SECTION 4: THE MATHEMATICAL INTERPRETATION
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 4: THE MATHEMATICAL INTERPRETATION")
     print("=" * 70)
-    
+
     math = """
   THE EXCEPTIONAL STRUCTURE:
   
@@ -192,14 +198,14 @@ def main():
   ALL ENCODED IN ONE 40-VERTEX GRAPH!
 """
     print(math)
-    
+
     # =========================================================================
     # SECTION 5: THE 6-HIERARCHY EXPLAINED
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 5: THE 6-HIERARCHY EXPLAINED")
     print("=" * 70)
-    
+
     six_explained = """
   WHY POWERS OF 6?
   
@@ -239,14 +245,14 @@ def main():
   DIFFERENT origins, not triality choices.
 """
     print(six_explained)
-    
+
     # =========================================================================
     # SECTION 6: THE FUNDAMENTAL EQUATION
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 6: THE FUNDAMENTAL EQUATION")
     print("=" * 70)
-    
+
     fundamental = """
   THE W33 STRUCTURE EQUATION:
   
@@ -276,14 +282,14 @@ def main():
        = singlet + Reye + Albert
 """
     print(fundamental)
-    
+
     # =========================================================================
     # SECTION 7: OPEN QUESTIONS
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 7: OPEN QUESTIONS")
     print("=" * 70)
-    
+
     questions = """
   QUESTIONS FOR FURTHER INVESTIGATION:
   
@@ -313,14 +319,14 @@ def main():
      the 240 edges be "causal connections"?
 """
     print(questions)
-    
+
     # =========================================================================
     # SECTION 8: SUMMARY
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 8: SUMMARY")
     print("=" * 70)
-    
+
     summary = """
   ═══════════════════════════════════════════════════════════════════
   PART CXXI: THE GRAND UNIFIED STRUCTURE
@@ -359,17 +365,18 @@ def main():
   ═══════════════════════════════════════════════════════════════════
 """
     print(summary)
-    
+
     # Save results
-    with open('PART_CXXI_grand_unified.json', 'w') as f:
+    with open("PART_CXXI_grand_unified.json", "w") as f:
         json.dump(results, f, indent=2, default=int)
     print(f"\nResults saved to: PART_CXXI_grand_unified.json")
-    
+
     print("\n" + "=" * 70)
     print(" END OF PART CXXI - THE GRAND SYNTHESIS")
     print("=" * 70)
-    
+
     return results
+
 
 if __name__ == "__main__":
     main()

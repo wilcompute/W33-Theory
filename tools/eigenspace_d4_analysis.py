@@ -16,6 +16,7 @@ Outputs:
 - artifacts/eigenspace_d4_analysis.json
 - artifacts/eigenspace_d4_analysis.md
 """
+
 from __future__ import annotations
 
 import json
@@ -52,11 +53,11 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
 
@@ -67,7 +68,7 @@ def build_d4_roots():
     """Build D4 root system (24 roots in R^4)."""
     roots = []
     for i in range(4):
-        for j in range(i+1, 4):
+        for j in range(i + 1, 4):
             for si in [1, -1]:
                 for sj in [1, -1]:
                     r = [0, 0, 0, 0]
@@ -180,7 +181,7 @@ def main():
     adj_ips = []
     nonadj_ips = []
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             ip = proj_gram_rounded[i, j]
             if adj[i, j]:
                 adj_ips.append(ip)
@@ -203,7 +204,9 @@ def main():
     lines.append("")
 
     results["adj_projection_ips"] = {str(k): int(v) for k, v in adj_ip_counts.items()}
-    results["nonadj_projection_ips"] = {str(k): int(v) for k, v in nonadj_ip_counts.items()}
+    results["nonadj_projection_ips"] = {
+        str(k): int(v) for k, v in nonadj_ip_counts.items()
+    }
 
     # Check if the separation is clean
     adj_set = set(adj_ip_counts.keys())
@@ -260,7 +263,7 @@ def main():
     for v0 in range(n):
         neighbors = [i for i in range(n) if adj[v0, i]]
         for i, a in enumerate(neighbors):
-            for b in neighbors[i+1:]:
+            for b in neighbors[i + 1 :]:
                 if adj[a, b]:
                     triangle_set.add(tuple(sorted([a, b, v0])))
 
@@ -297,7 +300,9 @@ def main():
             lines.append(f"- ⟨T_i, T_j⟩ = {ip}: {count} pairs")
     lines.append("")
 
-    results["triangle_projection_ips"] = {str(k): int(v) for k, v in tri_ip_counts.items() if v > 5}
+    results["triangle_projection_ips"] = {
+        str(k): int(v) for k, v in tri_ip_counts.items() if v > 5
+    }
 
     # Look for 24 special directions
     # D4 roots come in 12 antipodal pairs
@@ -311,7 +316,7 @@ def main():
     # Check for antipodal pairs
     antipodal_pairs = []
     for i in range(len(triangles)):
-        for j in range(i+1, len(triangles)):
+        for j in range(i + 1, len(triangles)):
             dot = np.dot(normalized_tri_projs[i], normalized_tri_projs[j])
             if abs(dot + 1) < 0.01:  # Nearly antipodal
                 antipodal_pairs.append((i, j, dot))
@@ -321,7 +326,9 @@ def main():
     lines.append(f"Found {len(antipodal_pairs)} antipodal pairs")
     if antipodal_pairs:
         for i, j, dot in antipodal_pairs[:5]:
-            lines.append(f"- Triangles {triangles[i]} and {triangles[j]}: dot = {dot:.4f}")
+            lines.append(
+                f"- Triangles {triangles[i]} and {triangles[j]}: dot = {dot:.4f}"
+            )
     lines.append("")
 
     results["antipodal_triangle_pairs"] = len(antipodal_pairs)
@@ -332,7 +339,7 @@ def main():
 
     edges = []
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if adj[i, j]:
                 edges.append((i, j))
 
@@ -341,7 +348,7 @@ def main():
 
     # For each edge, compute its projection
     edge_projections = []
-    for (a, b) in edges:
+    for a, b in edges:
         indicator = np.zeros(n)
         indicator[a] = 1
         indicator[b] = 1
@@ -360,7 +367,9 @@ def main():
         lines.append(f"- ||P(e)|| = {norm}: {count} edges")
     lines.append("")
 
-    results["edge_projection_norms"] = {str(k): int(v) for k, v in edge_norm_counts.items()}
+    results["edge_projection_norms"] = {
+        str(k): int(v) for k, v in edge_norm_counts.items()
+    }
 
     # Key insight: the 240 edges might map to 240 E8 roots
     # Let's see if edge projections have root-like properties
@@ -383,14 +392,18 @@ def main():
             lines.append(f"- ⟨ê_i, ê_j⟩ = {ip}: {count} pairs")
     lines.append("")
 
-    results["edge_projection_ips"] = {str(k): int(v) for k, v in edge_ip_counts.items() if v > 5}
+    results["edge_projection_ips"] = {
+        str(k): int(v) for k, v in edge_ip_counts.items() if v > 5
+    }
 
     # Summary
     lines.append("## Summary")
     lines.append("")
     lines.append("### Key Findings")
     lines.append("")
-    lines.append(f"1. W33's λ=2 eigenspace has dimension {len(lambda2_indices)} = D4 root count")
+    lines.append(
+        f"1. W33's λ=2 eigenspace has dimension {len(lambda2_indices)} = D4 root count"
+    )
     lines.append("")
 
     if results.get("clean_separation"):

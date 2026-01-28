@@ -5,10 +5,11 @@ We build the non-orthogonality graph on 40 rays and its triangle 2-complex.
 We test whether the triangle phase labels are coboundaries of edge 1-cochains
 (mod 2 and mod 3).
 """
+
 from __future__ import annotations
 
 import json
-from itertools import product, combinations
+from itertools import combinations, product
 from pathlib import Path
 
 import numpy as np
@@ -26,9 +27,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 

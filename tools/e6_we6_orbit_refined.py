@@ -6,12 +6,13 @@ subset orthogonal to u1=(1,1,1,1,1,1,1,1) and u2=(1,1,1,1,1,1,-1,-1).
 Compute simple roots of E6 via a generic rho, and analyze W(E6) orbits
 on the full E8 root set.
 """
+
 from __future__ import annotations
 
+import json
+import random
 from collections import Counter, deque
 from itertools import product
-import random
-import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]

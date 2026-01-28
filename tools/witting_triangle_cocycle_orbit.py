@@ -6,6 +6,7 @@ symmetry group (order 243) and test cohomology equivalence:
   t_g - t in im(d1) ?
 for mod 2 and mod 3 labelings.
 """
+
 from __future__ import annotations
 
 import itertools
@@ -27,9 +28,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -55,7 +56,9 @@ def build_monomial_group(rays):
     elements = []
     for perm in itertools.permutations(range(4)):
         for a0, a1, a2, a3 in itertools.product(phases, repeat=4):
-            phase_vec = np.array([omega**a0, omega**a1, omega**a2, omega**a3], dtype=complex)
+            phase_vec = np.array(
+                [omega**a0, omega**a1, omega**a2, omega**a3], dtype=complex
+            )
             mapping = []
             valid = True
             for r in rays:
@@ -160,8 +163,12 @@ def main():
 
     # triangle label base
     tri_label_k = {}
-    for (i, j, k) in triangles:
-        ip = np.vdot(rays[i], rays[j]) * np.vdot(rays[j], rays[k]) * np.vdot(rays[k], rays[i])
+    for i, j, k in triangles:
+        ip = (
+            np.vdot(rays[i], rays[j])
+            * np.vdot(rays[j], rays[k])
+            * np.vdot(rays[k], rays[i])
+        )
         tri_label_k[(i, j, k)] = phase_to_k(np.angle(ip))
 
     # d1 matrix for cohomology checks
@@ -179,8 +186,12 @@ def main():
     ops3, rank3 = gauss_elim_ops(d1, 3)
 
     # base label vectors
-    t_mag = np.array([0 if (tri_label_k[t] % 12) in (1, 11) else 1 for t in triangles], dtype=int)
-    t_sign = np.array([0 if (tri_label_k[t] % 12) in (1, 3) else 1 for t in triangles], dtype=int)
+    t_mag = np.array(
+        [0 if (tri_label_k[t] % 12) in (1, 11) else 1 for t in triangles], dtype=int
+    )
+    t_sign = np.array(
+        [0 if (tri_label_k[t] % 12) in (1, 3) else 1 for t in triangles], dtype=int
+    )
     t_mod3 = np.array([tri_label_k[t] % 3 for t in triangles], dtype=int)
 
     # monomial group

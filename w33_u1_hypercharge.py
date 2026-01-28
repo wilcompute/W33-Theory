@@ -12,15 +12,16 @@ W33 gives us:
 Where is U(1)?
 
 This script explores:
-1. Center of Sp(4,3) 
+1. Center of Sp(4,3)
 2. Characters of the Steinberg representation
 3. W(5,3) embedding
 4. Exceptional isomorphisms at q=3
 """
 
-import numpy as np
 from collections import defaultdict
 from itertools import combinations
+
+import numpy as np
 
 print("=" * 80)
 print("SEARCHING FOR U(1) HYPERCHARGE IN W33 STRUCTURE")
@@ -212,7 +213,7 @@ print("=" * 80)
 
 # W(5,3) parameters
 w53_points = (3**6 - 1) // (3 - 1)  # = 364
-w53_steinberg_dim = 3**(3**2)  # = 3^9 = 19683
+w53_steinberg_dim = 3 ** (3**2)  # = 3^9 = 19683
 
 print(f"""
 W(5,3) - THE HIGHER STRUCTURE

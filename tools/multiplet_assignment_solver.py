@@ -7,6 +7,7 @@ Higher is better. We search all permutations of classes 0..5.
 
 Outputs artifacts/multiplet_assignment_solver.json
 """
+
 from __future__ import annotations
 
 import json
@@ -19,9 +20,9 @@ ROOT = Path(__file__).resolve().parents[1]
 E6_adj = {
     0: {2},
     1: {2},
-    2: {0,1,3},
-    3: {2,4},
-    4: {3,5},
+    2: {0, 1, 3},
+    3: {2, 4},
+    4: {3, 5},
     5: {4},
 }
 
@@ -46,7 +47,7 @@ def main():
     A = q["adjacency_counts"]
 
     # Fix A2 block as classes 6,7
-    e6_classes = [0,1,2,3,4,5]
+    e6_classes = [0, 1, 2, 3, 4, 5]
 
     best = None
     best_perm = None
@@ -58,11 +59,11 @@ def main():
 
     mapping = {str(e6_classes[i]): int(best_perm[i]) for i in range(6)}
     out = {
-        "a2_classes": [6,7],
+        "a2_classes": [6, 7],
         "e6_classes": e6_classes,
         "best_score": best,
         "best_mapping": mapping,
-        "note": "Weighted adjacency fit only; heuristic."
+        "note": "Weighted adjacency fit only; heuristic.",
     }
 
     (ROOT / "artifacts" / "multiplet_assignment_solver.json").write_text(

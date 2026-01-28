@@ -10,8 +10,9 @@ This investigates:
 4. Why no other structure can work
 """
 
+from itertools import combinations, product
+
 import numpy as np
-from itertools import product, combinations
 
 print("=" * 80)
 print("W33: WHY IS THIS THE UNIVERSAL STRUCTURE?")
@@ -111,12 +112,12 @@ Alternative analysis:
 
 # K4 structure
 print("K4 multiplication table:")
-K4_elements = ['1', 'a', 'b', 'ab']
+K4_elements = ["1", "a", "b", "ab"]
 K4_mult = {
-    '1': {'1': '1', 'a': 'a', 'b': 'b', 'ab': 'ab'},
-    'a': {'1': 'a', 'a': '1', 'b': 'ab', 'ab': 'b'},
-    'b': {'1': 'b', 'a': 'ab', 'b': '1', 'ab': 'a'},
-    'ab': {'1': 'ab', 'a': 'b', 'b': 'a', 'ab': '1'}
+    "1": {"1": "1", "a": "a", "b": "b", "ab": "ab"},
+    "a": {"1": "a", "a": "1", "b": "ab", "ab": "b"},
+    "b": {"1": "b", "a": "ab", "b": "1", "ab": "a"},
+    "ab": {"1": "ab", "a": "b", "b": "a", "ab": "1"},
 }
 
 print("     1    a    b   ab")
@@ -220,8 +221,8 @@ This relates to the VIRASORO ALGEBRA:
 
 # Central charge calculations
 c1 = 40 - 27  # One possibility
-c2 = 40 / 3   # Another possibility
-c3 = 26       # Bosonic string critical dimension
+c2 = 40 / 3  # Another possibility
+c3 = 26  # Bosonic string critical dimension
 c4 = 40 - 26  # Difference
 
 print(f"Possible central charges:")
@@ -501,16 +502,25 @@ print("=" * 80)
 
 # All the matching numbers
 matches = [
-    ("Dark energy fraction", 81/121, 0.68, abs(81/121 - 0.68)/0.68 * 100),
-    ("Fine structure 1/α", 81 + 56, 137.036, abs(137 - 137.036)/137.036 * 100),
-    ("Weinberg angle sin²θ_W", 40/173, 0.23121, abs(40/173 - 0.23121)/0.23121 * 100),
-    ("Mass ratio m_t/m_b", 40, 38.6, abs(40 - 38.6)/38.6 * 100),
-    ("Reactor angle θ₁₃", np.arcsin(np.sqrt(1/45))*180/np.pi, 8.57, 
-     abs(np.arcsin(np.sqrt(1/45))*180/np.pi - 8.57)/8.57 * 100),
-    ("E₇ dimension", 40+81+12, 133, abs(133 - 133)/133 * 100),
-    ("E₈ dimension", 2*(40+81)+6, 248, abs(248 - 248)/248 * 100),
-    ("|PSp(4,3)| / 81", 25920/81, 320, abs(320 - 320)/320 * 100),
-    ("Gauge bosons", 3*4, 12, 0),
+    ("Dark energy fraction", 81 / 121, 0.68, abs(81 / 121 - 0.68) / 0.68 * 100),
+    ("Fine structure 1/α", 81 + 56, 137.036, abs(137 - 137.036) / 137.036 * 100),
+    (
+        "Weinberg angle sin²θ_W",
+        40 / 173,
+        0.23121,
+        abs(40 / 173 - 0.23121) / 0.23121 * 100,
+    ),
+    ("Mass ratio m_t/m_b", 40, 38.6, abs(40 - 38.6) / 38.6 * 100),
+    (
+        "Reactor angle θ₁₃",
+        np.arcsin(np.sqrt(1 / 45)) * 180 / np.pi,
+        8.57,
+        abs(np.arcsin(np.sqrt(1 / 45)) * 180 / np.pi - 8.57) / 8.57 * 100,
+    ),
+    ("E₇ dimension", 40 + 81 + 12, 133, abs(133 - 133) / 133 * 100),
+    ("E₈ dimension", 2 * (40 + 81) + 6, 248, abs(248 - 248) / 248 * 100),
+    ("|PSp(4,3)| / 81", 25920 / 81, 320, abs(320 - 320) / 320 * 100),
+    ("Gauge bosons", 3 * 4, 12, 0),
 ]
 
 print("\nW33 predictions vs observed values:\n")

@@ -3,7 +3,7 @@
 THEORY OF EVERYTHING - PART XVIII: THE QUANTUM CARDS AND W33
 ==============================================================
 
-Deep dive into the Vlasov paper "Scheme of quantum communications 
+Deep dive into the Vlasov paper "Scheme of quantum communications
 based on Witting polytope" - the 40 QUANTUM CARDS = W33's 40 POINTS!
 
 This connects:
@@ -14,9 +14,10 @@ This connects:
     • Quantum key distribution protocols
 """
 
-import numpy as np
-from fractions import Fraction
 import math
+from fractions import Fraction
+
+import numpy as np
 
 print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗

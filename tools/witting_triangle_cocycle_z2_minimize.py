@@ -4,6 +4,7 @@
 We represent triangle cochains as bitmasks and reduce support by adding edge
 coboundaries (columns of d1) greedily.
 """
+
 from __future__ import annotations
 
 import random
@@ -25,9 +26,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -108,20 +109,24 @@ def main():
     for t_idx, (i, j, k) in enumerate(triangles):
         for a, b in [(i, j), (j, k), (i, k)]:
             e = edge_index[(a, b) if a < b else (b, a)]
-            cols[e] |= (1 << t_idx)
+            cols[e] |= 1 << t_idx
 
     # build z2_mag and z2_sign as bitmasks
     z2_mag = 0
     z2_sign = 0
     for t_idx, (i, j, k) in enumerate(triangles):
-        ip = np.vdot(rays[i], rays[j]) * np.vdot(rays[j], rays[k]) * np.conjugate(np.vdot(rays[i], rays[k]))
+        ip = (
+            np.vdot(rays[i], rays[j])
+            * np.vdot(rays[j], rays[k])
+            * np.conjugate(np.vdot(rays[i], rays[k]))
+        )
         kp = phase_to_k(np.angle(ip))
         mag = 0 if kp in (1, 11) else 1
         sgn = 0 if kp in (1, 3) else 1
         if mag == 1:
-            z2_mag |= (1 << t_idx)
+            z2_mag |= 1 << t_idx
         if sgn == 1:
-            z2_sign |= (1 << t_idx)
+            z2_sign |= 1 << t_idx
 
     print(f"Initial mag support: {z2_mag.bit_count()}")
     print(f"Initial sign support: {z2_sign.bit_count()}")

@@ -6,6 +6,7 @@ edge labels x_e in Z6 with x_ij + x_jk + x_ki = t_ijk (mod 6).
 Over Z6, solvable iff solvable mod 2 and mod 3 (CRT).
 We also test cohomology equivalence under monomial symmetries via the same rule.
 """
+
 from __future__ import annotations
 
 import itertools
@@ -27,9 +28,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -55,7 +56,9 @@ def build_monomial_group(rays):
     elements = []
     for perm in itertools.permutations(range(4)):
         for a0, a1, a2, a3 in itertools.product(phases, repeat=4):
-            phase_vec = np.array([omega**a0, omega**a1, omega**a2, omega**a3], dtype=complex)
+            phase_vec = np.array(
+                [omega**a0, omega**a1, omega**a2, omega**a3], dtype=complex
+            )
             mapping = []
             valid = True
             for r in rays:

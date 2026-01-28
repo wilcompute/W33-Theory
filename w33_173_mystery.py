@@ -8,8 +8,8 @@ But where does 173 come from?
 173 is prime. Let's explore its connections.
 """
 
-import math
 import json
+import math
 import os
 from datetime import datetime
 
@@ -74,13 +74,7 @@ print("\n" + "=" * 40)
 print("EXCEPTIONAL LIE ALGEBRA DIMENSIONS")
 print("=" * 40)
 
-exceptional = {
-    "G2": 14,
-    "F4": 52,
-    "E6": 78,
-    "E7": 133,
-    "E8": 248
-}
+exceptional = {"G2": 14, "F4": 52, "E6": 78, "E7": 133, "E8": 248}
 
 for name, dim in exceptional.items():
     print(f"dim({name}) = {dim}")
@@ -253,27 +247,21 @@ results = {
         "prime": True,
         "decomposition_1": "121 + 52 = |W33| + dim(F4)",
         "decomposition_2": "40 + 133 = |points| + dim(E7)",
-        "prime_index": "173 is the 40th prime, 40 = |points|"
+        "prime_index": "173 is the 40th prime, 40 = |points|",
     },
     "81_bridge": {
         "equation": "|cycles| = dim(E7) - dim(F4) = 81",
-        "significance": "81 bridges W33 to exceptional algebras"
+        "significance": "81 bridges W33 to exceptional algebras",
     },
     "137_analysis": {
         "prime_index": "137 is the 33rd prime",
         "decomposition": "81 + 56 = |cycles| + dim(E7 fundamental)",
-        "w33_connection": "'33' in W33 name"
+        "w33_connection": "'33' in W33 name",
     },
-    "exceptional_dimensions": {
-        "G2": 14,
-        "F4": 52,
-        "E6": 78,
-        "E7": 133,
-        "E8": 248
-    }
+    "exceptional_dimensions": {"G2": 14, "F4": 52, "E6": 78, "E7": 133, "E8": 248},
 }
 
 output_file = os.path.join(OUTPUT_DIR, "w33_173_mystery_results.json")
-with open(output_file, 'w') as f:
+with open(output_file, "w") as f:
     json.dump(results, f, indent=2, default=int)
 print(f"\nResults saved to: {output_file}")

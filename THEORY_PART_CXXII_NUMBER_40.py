@@ -18,41 +18,42 @@ import json
 from fractions import Fraction
 from math import factorial
 
+
 def main():
     print("=" * 70)
     print(" W33 THEORY - PART CXXII: THE NUMBER 40 = 8 × 5")
     print(" Why 40 Vertices?")
     print("=" * 70)
-    
+
     results = {"part": "CXXII", "analysis": {}}
-    
+
     # =========================================================================
     # SECTION 1: ALL FACTORIZATIONS OF 40
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 1: ALL FACTORIZATIONS OF 40")
     print("=" * 70)
-    
+
     print("\n  40 = 2³ × 5 = 8 × 5")
     print("\n  All divisor pairs:")
     divisors = [(1, 40), (2, 20), (4, 10), (5, 8)]
     for a, b in divisors:
         print(f"    {a} × {b}")
-    
+
     print("\n  Prime factorization tells us:")
     print("    • 2³ = 8 = octonion dimension")
     print("    • 5 = first prime not dividing 24 = |W(A₄)|")
     print("    • 5 is the 'new' ingredient!")
-    
+
     results["analysis"]["factorizations"] = divisors
-    
+
     # =========================================================================
     # SECTION 2: GEOMETRIC INTERPRETATIONS
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 2: GEOMETRIC INTERPRETATIONS")
     print("=" * 70)
-    
+
     interpretations = """
   INTERPRETATION A: Coset Interpretation
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -119,28 +120,28 @@ def main():
   Actually: 40 = 4 × 10 = (signs) × (pairs)
 """
     print(interpretations)
-    
+
     # Verify D5 root count
     print("\n  VERIFICATION: D₅ root count")
     print("  D₅ roots are ±eᵢ ± eⱼ for i < j")
     n = 5
-    root_count = 2 * (n * (n-1))  # 2n(n-1)
+    root_count = 2 * (n * (n - 1))  # 2n(n-1)
     print(f"  Number of D₅ roots = 2n(n-1) = 2 × 5 × 4 = {root_count}")
     print(f"  W33 vertices = 40 ✓")
-    
+
     results["analysis"]["D5_connection"] = {
         "D5_root_count": root_count,
         "formula": "2n(n-1) where n=5",
-        "match": root_count == 40
+        "match": root_count == 40,
     }
-    
+
     # =========================================================================
     # SECTION 3: THE 5 IN 40 = 8 × 5
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 3: THE 5 IN 40 = 8 × 5")
     print("=" * 70)
-    
+
     meanings_of_5 = """
   POSSIBLE MEANINGS OF 5:
   
@@ -174,14 +175,14 @@ def main():
      • Maybe: 5 generations of octonions?
 """
     print(meanings_of_5)
-    
+
     # =========================================================================
     # SECTION 4: THE D₅ = SO(10) INTERPRETATION
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 4: THE D₅ = SO(10) INTERPRETATION")
     print("=" * 70)
-    
+
     so10 = """
   IF 40 VERTICES = 40 ROOTS OF D₅ = SO(10):
   
@@ -224,14 +225,14 @@ def main():
   There IS a connection, just not direct!
 """
     print(so10)
-    
+
     # =========================================================================
     # SECTION 5: CONNECTION TO E6 AND GUT
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 5: CONNECTION TO E6 AND GUT")
     print("=" * 70)
-    
+
     gut_connection = """
   THE GRAND UNIFIED THEORY CHAIN:
   
@@ -262,33 +263,33 @@ def main():
     all come together!
 """
     print(gut_connection)
-    
+
     # =========================================================================
     # SECTION 6: SYMPLECTIC INTERPRETATION
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 6: THE SYMPLECTIC INTERPRETATION")
     print("=" * 70)
-    
+
     print("\n  W33 vertices = maximal isotropic subspaces in Sp(4, F₃)")
     print("\n  The formula: (q² + 1)(q + 1) for q = 3")
     print(f"    (3² + 1)(3 + 1) = 10 × 4 = 40 ✓")
-    
+
     print("\n  Breaking down 10 × 4:")
     print("    10 = q² + 1 = 9 + 1 = geometric structure")
     print("    4 = q + 1 = field structure + 1")
-    
+
     print("\n  Alternative: 8 × 5")
     print("    This doesn't factor naturally from symplectic formula")
     print("    40 = 8 × 5 requires octonion/GUT interpretation")
-    
+
     # =========================================================================
     # SECTION 7: THE ULTIMATE INTERPRETATION
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 7: THE ULTIMATE INTERPRETATION")
     print("=" * 70)
-    
+
     ultimate = """
   SYNTHESIS: WHY 40?
   
@@ -324,22 +325,22 @@ def main():
     40 vertices = 40 roots of D₅ ⊂ E₆ with Weyl group acting
 """
     print(ultimate)
-    
+
     results["analysis"]["interpretation"] = {
         "40_as_D5_roots": True,
         "E6_contains_D5": True,
         "symplectic_formula": "(q²+1)(q+1) for q=3",
         "8_meaning": "octonion dimension via exceptional structure",
-        "5_meaning": "rank of D5 = SO(10)"
+        "5_meaning": "rank of D5 = SO(10)",
     }
-    
+
     # =========================================================================
     # SECTION 8: VERIFICATION VIA E6 ROOT DECOMPOSITION
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 8: E₆ ROOT DECOMPOSITION")
     print("=" * 70)
-    
+
     print("\n  E₆ has 72 roots.")
     print("  E₆ ⊃ D₅: Under this embedding, 72 roots decompose as:")
     print()
@@ -350,27 +351,27 @@ def main():
     print("  Spinor weights: (±½, ±½, ±½, ±½, ±½) with even sign changes (32)")
     print()
     print("  SO: E₆ = D₅ + spinors, and W33 vertices = D₅ roots!")
-    
+
     print("\n  The 32 spinors form the spinor representation of SO(10).")
     print("  In GUT physics:")
     print("    • 16 = one generation of fermions")
     print("    • 16̄ = one generation of anti-fermions")
     print("    • 32 = 16 + 16̄ = complete generation pair")
-    
+
     results["analysis"]["E6_decomposition"] = {
         "E6_roots": 72,
         "D5_roots": 40,
         "spinor_weights": 32,
-        "decomposition": "72 = 40 + 32"
+        "decomposition": "72 = 40 + 32",
     }
-    
+
     # =========================================================================
     # SUMMARY
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SUMMARY: PART CXXII")
     print("=" * 70)
-    
+
     summary = """
   ═══════════════════════════════════════════════════════════════════
   THE NUMBER 40 = 8 × 5
@@ -407,17 +408,18 @@ def main():
   ═══════════════════════════════════════════════════════════════════
 """
     print(summary)
-    
+
     # Save results
-    with open('PART_CXXII_number_40.json', 'w') as f:
+    with open("PART_CXXII_number_40.json", "w") as f:
         json.dump(results, f, indent=2, default=int)
     print(f"\nResults saved to: PART_CXXII_number_40.json")
-    
+
     print("\n" + "=" * 70)
     print(" END OF PART CXXII")
     print("=" * 70)
-    
+
     return results
+
 
 if __name__ == "__main__":
     main()

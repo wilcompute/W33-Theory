@@ -268,7 +268,7 @@ W33 INTERPRETATION:
 """)
 
 # Cabibbo angle
-sin_cabibbo = 9/40
+sin_cabibbo = 9 / 40
 lambda_w33 = sin_cabibbo
 
 print(f"  λ = sin(θ_C) = 9/40 = {lambda_w33}")
@@ -334,8 +334,8 @@ W33 EXPLANATION:
 
 # Neutrino mixing angles
 theta_12 = 33.44  # degrees (solar)
-theta_23 = 49.2   # degrees (atmospheric)
-theta_13 = 8.57   # degrees (reactor)
+theta_23 = 49.2  # degrees (atmospheric)
+theta_13 = 8.57  # degrees (reactor)
 
 print("═══ PMNS Mixing Angles ═══")
 print()
@@ -392,7 +392,7 @@ print("""
 # Test the formula
 print("═══ Testing the Formula ═══")
 print()
-lambda_sq = (9/40)**2
+lambda_sq = (9 / 40) ** 2
 print(f"  (9/40)² = {lambda_sq:.4f}")
 print(f"  (40/9)² = {1/lambda_sq:.1f}")
 print()

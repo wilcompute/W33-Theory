@@ -9,10 +9,11 @@ The alpha formula: α⁻¹ = k² - 2μ + 1 + v/1111
 WHY 1111? What's the next term? Can we derive 1111 from first principles?
 """
 
-import numpy as np
 import json
 from decimal import Decimal, getcontext
 from fractions import Fraction
+
+import numpy as np
 
 getcontext().prec = 100
 
@@ -24,10 +25,10 @@ print("=" * 70)
 # W33 PARAMETERS
 # =============================================================================
 
-v = 40      # vertices
-k = 12      # regularity
-λ = 2       # edge parameter
-μ = 4       # non-edge parameter
+v = 40  # vertices
+k = 12  # regularity
+λ = 2  # edge parameter
+μ = 4  # non-edge parameter
 
 e1, e2, e3 = 12, 2, -4
 m1, m2, m3 = 1, 24, 15
@@ -40,7 +41,7 @@ print("SECTION 1: THE MYSTERY OF 1111")
 print("=" * 70)
 
 alpha_exp = Decimal("137.035999084")
-base = k**2 - 2*μ + 1  # = 137
+base = k**2 - 2 * μ + 1  # = 137
 correction_needed = alpha_exp - base
 
 print(f"""
@@ -100,7 +101,7 @@ combos = [
     ("k⁴ / something", k**4),  # = 20736
     ("27 × 41 + 4", 27 * 41 + 4),  # = 1111
     ("v × 27 + 31", v * 27 + 31),  # = 1111!
-    ("v × (v-13) + 31", v * (v-13) + 31),  # = 40 × 27 + 31 = 1111
+    ("v × (v-13) + 31", v * (v - 13) + 31),  # = 40 × 27 + 31 = 1111
 ]
 
 for name, value in combos:
@@ -232,7 +233,7 @@ print("=" * 70)
 
 # Current precision
 alpha_exp_precise = Decimal("137.035999084")
-alpha_W33_order1 = Decimal(137) + Decimal(40)/Decimal(1111)
+alpha_W33_order1 = Decimal(137) + Decimal(40) / Decimal(1111)
 
 diff = alpha_exp_precise - alpha_W33_order1
 
@@ -297,7 +298,7 @@ This suggests the FULL FORMULA might be:
 """)
 
 # Check this
-test_formula = Decimal(137) + Decimal(40)/Decimal(1112)
+test_formula = Decimal(137) + Decimal(40) / Decimal(1112)
 print(f"""
 Testing: α⁻¹ = 137 + 40/1112 = {test_formula}
 
@@ -369,7 +370,7 @@ This is PURELY from W33 parameters!
 """)
 
 # Verify
-derived_1111 = (k - 1) * ((k - λ)**2 + 1)
+derived_1111 = (k - 1) * ((k - λ) ** 2 + 1)
 print(f"Verification: (k-1) × ((k-λ)² + 1) = {derived_1111}")
 
 # =============================================================================
@@ -404,7 +405,7 @@ No mysterious constants - just W33!
 # =============================================================================
 
 print("\n" + "=" * 70)
-print("SECTION 8: RADIATIVE CORRECTIONS")  
+print("SECTION 8: RADIATIVE CORRECTIONS")
 print("=" * 70)
 
 print(f"""
@@ -482,23 +483,20 @@ results = {
         "k": k,
         "lambda": λ,
         "result": derived_1111,
-        "components": {
-            "factor1": k - 1,
-            "factor2": (k - λ)**2 + 1
-        }
+        "components": {"factor1": k - 1, "factor2": (k - λ) ** 2 + 1},
     },
     "alpha_formula": {
         "complete": "k² - 2μ + 1 + v/[(k-1)×((k-λ)²+1)]",
-        "base": k**2 - 2*μ + 1,
+        "base": k**2 - 2 * μ + 1,
         "denominator": derived_1111,
-        "result": float(137 + v/1111)
+        "result": float(137 + v / 1111),
     },
     "alternative_derivations": [
         "1111 = v × 3³ + 31 = 40 × 27 + 31",
         "1111 = 11 × 101 (prime factorization)",
-        "1111 = (10⁴ - 1)/9 (repunit)"
+        "1111 = (10⁴ - 1)/9 (repunit)",
     ],
-    "second_order": float(diff)
+    "second_order": float(diff),
 }
 
 with open("PART_LXXXII_corrections.json", "w") as f:

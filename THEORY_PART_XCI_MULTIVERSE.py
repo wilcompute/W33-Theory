@@ -8,9 +8,10 @@ Or are there other Sp(n, F_p) universes?
 What makes our universe special?
 """
 
-import numpy as np
-from fractions import Fraction
 import json
+from fractions import Fraction
+
+import numpy as np
 
 print("=" * 70)
 print("W33 THEORY PART XCI: THE MULTIVERSE QUESTION")
@@ -61,21 +62,22 @@ The W33 is Sp(4, F_3): n=4, p=3
 Let's explore other possibilities:
 """)
 
+
 def symplectic_parameters(n, p):
     """Calculate parameters for Sp(n, F_p) symplectic graph."""
     # Number of isotropic 1-spaces in F_p^n with symplectic form
     # For Sp(2m, F_p): |isotropic lines| = (p^m - 1)(p^m + 1)/(p-1) for m = n/2
     # But actually, the count is (p^n - 1)/(p - 1) for isotropic vectors
-    # divided by (p-1) for projectivization... 
-    
+    # divided by (p-1) for projectivization...
+
     # For symplectic graph from Sp(n, F_p), n=2m:
-    # v = (p^m + 1)(p^(m-1) + 1)...(p + 1)(p^m - 1)(p^(m-1) - 1)...(p - 1) / ... 
+    # v = (p^m + 1)(p^(m-1) + 1)...(p + 1)(p^m - 1)(p^(m-1) - 1)...(p - 1) / ...
     # This gets complicated. Let's use the known formulas.
-    
+
     # For Sp(4, F_q): v = (q^2+1)(q+1) - doesn't match...
     # Actually for the ISOTROPIC LINE graph:
-    # v = (q^4 - 1)/(q - 1) × correction = ... 
-    
+    # v = (q^4 - 1)/(q - 1) × correction = ...
+
     # Let's just enumerate some known cases:
     if n == 4 and p == 2:
         # Sp(4, F_2) = S_6 (symmetric group)
@@ -96,6 +98,7 @@ def symplectic_parameters(n, p):
         return 364, 40, 4, 4  # Estimated
     else:
         return None, None, None, None
+
 
 # Survey of possible universes
 print("SYMPLECTIC GRAPH LANDSCAPE:")
@@ -171,25 +174,29 @@ For life (as we know it):
 Let's check which (n,p) could support observers:
 """)
 
+
 def alpha_from_params(v, k, lam, mu):
     """Calculate α⁻¹ from graph parameters."""
     if v is None:
         return None
     try:
-        alpha_inv = (k**2 - 2*mu + 1) + v / ((k-1)*((k-lam)**2 + 1))
+        alpha_inv = (k**2 - 2 * mu + 1) + v / ((k - 1) * ((k - lam) ** 2 + 1))
         return alpha_inv
     except:
         return None
 
+
 def spatial_dim(p):
     """Spatial dimensions from characteristic."""
     return p  # Our hypothesis: d = p
+
 
 def generations(m3):
     """Number of generations from m₃."""
     if m3 and m3 % 5 == 0:
         return m3 // 5
     return None
+
 
 print("ANTHROPIC ANALYSIS:")
 print("-" * 70)
@@ -201,16 +208,16 @@ for n, p, notes in cases:
     v_p, k_p, lam_p, mu_p = symplectic_parameters(n, p)
     alpha_inv = alpha_from_params(v_p, k_p, lam_p, mu_p)
     d = spatial_dim(p)
-    
+
     # Estimate m3 from eigenvalue formula
     # m₁ + m₂ + m₃ = v, m₁ = 1, so m₂ + m₃ = v - 1
     # For our case m₂/m₃ = 24/15 ≈ 1.6
     if v_p:
         m3_est = (v_p - 1) // 2.6 if v_p > 1 else 0  # rough estimate
-        n_gen = generations(int(m3_est)) if m3_est else '?'
+        n_gen = generations(int(m3_est)) if m3_est else "?"
     else:
-        n_gen = '?'
-    
+        n_gen = "?"
+
     # Check viability
     viable = "?"
     if alpha_inv:
@@ -221,7 +228,7 @@ for n, p, notes in cases:
                 viable = f"NO (d={d})"
         else:
             viable = f"NO (α⁻¹={alpha_inv:.1f})"
-    
+
     alpha_str = f"{alpha_inv:.3f}" if alpha_inv else "?"
     print(f"({n},{p}){' '*5} {alpha_str:<15} {d:<10} {str(n_gen):<10} {viable}")
 
@@ -284,25 +291,28 @@ For a universe to be self-consistent:
 TEST ON Sp(n, F_p) FAMILY:
 """)
 
+
 def test_self_consistency(n, p):
     """Test if Sp(n, F_p) universe is self-consistent."""
     v_p, k_p, lam_p, mu_p = symplectic_parameters(n, p)
-    
+
     if v_p is None:
         return "UNKNOWN"
-    
+
     failures = []
-    
+
     # Test 1: α⁻¹ in range
     alpha_inv = alpha_from_params(v_p, k_p, lam_p, mu_p)
     if alpha_inv is None or alpha_inv < 100 or alpha_inv > 200:
-        failures.append(f"α⁻¹={alpha_inv:.1f} out of range" if alpha_inv else "α undefined")
-    
+        failures.append(
+            f"α⁻¹={alpha_inv:.1f} out of range" if alpha_inv else "α undefined"
+        )
+
     # Test 2: d = 3
     d = spatial_dim(p)
     if d != 3:
         failures.append(f"d={d}≠3")
-    
+
     # Test 3: GUT structure (need SU(5) or larger)
     # Requires specific eigenspace structure
     # For W33: 1 + 24 + 15 = SU(5) rep dimensions
@@ -311,18 +321,19 @@ def test_self_consistency(n, p):
         pass  # W33 has SU(5)
     else:
         failures.append("No SU(5) structure")
-    
+
     # Test 4: Hierarchy
     # Need M_Planck >> M_EW
     # For W33: 3^36 separation
     # Other p: p^(v-4) separation
     if p == 2:
         failures.append("Hierarchy too small (p=2)")
-    
+
     if len(failures) == 0:
         return "CONSISTENT ✓"
     else:
         return f"FAILS: {', '.join(failures)}"
+
 
 print(f"{'(n,p)':<10} {'Self-Consistency Result'}")
 print("-" * 60)
@@ -488,15 +499,15 @@ results = {
     "other_universes": {
         "(4,2)": "Fails: p=2 too small, no chemistry",
         "(4,5)": "Fails: d=5 spatial dimensions",
-        "(4,7)": "Fails: d=7 spatial dimensions", 
-        "(6,3)": "Fails: No SU(5) structure"
+        "(4,7)": "Fails: d=7 spatial dimensions",
+        "(6,3)": "Fails: No SU(5) structure",
     },
     "implications": [
         "Universe is unique",
         "Constants are determined",
         "No fine-tuning needed",
-        "Mathematical necessity"
-    ]
+        "Mathematical necessity",
+    ],
 }
 
 with open("PART_XCI_multiverse.json", "w") as f:

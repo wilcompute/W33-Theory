@@ -11,6 +11,7 @@ we now explore:
 """
 
 import math
+
 import numpy as np
 
 print("""
@@ -131,14 +132,14 @@ print()
 
 # Possible W33 expressions
 candidates = [
-    ("9/40", 9/40),
-    ("1/4 - 1/81", 1/4 - 1/81),
-    ("40/178", 40/178),
-    ("27/121", 27/121),
-    ("√(40/173)/2", math.sqrt(40/173)/2),
-    ("81/(3×121)", 81/(3*121)),
-    ("9/40", 9/40),
-    ("3/√173", 3/math.sqrt(173)),
+    ("9/40", 9 / 40),
+    ("1/4 - 1/81", 1 / 4 - 1 / 81),
+    ("40/178", 40 / 178),
+    ("27/121", 27 / 121),
+    ("√(40/173)/2", math.sqrt(40 / 173) / 2),
+    ("81/(3×121)", 81 / (3 * 121)),
+    ("9/40", 9 / 40),
+    ("3/√173", 3 / math.sqrt(173)),
 ]
 
 print("W33 candidates for sin(θC):")
@@ -148,7 +149,7 @@ for name, val in candidates:
 print()
 
 # Best match: 9/40
-best_cabibbo = 9/40
+best_cabibbo = 9 / 40
 print(f"BEST MATCH: sin(θC) ≈ 9/40 = {best_cabibbo:.6f}")
 print(f"  Interpretation: 9/40 = 9 (W33 substructure) / 40 (W33 points)")
 print(f"  Difference from experiment: {abs(best_cabibbo - Vus_exp):.6f}")
@@ -157,12 +158,12 @@ print()
 # For |Vcb|
 print(f"  |Vcb| = {Vcb_exp:.4f}")
 candidates_cb = [
-    ("1/27 + 1/81", 1/27 + 1/81),
-    ("9/173", 9/173),
-    ("40/1000", 40/1000),
-    ("1/24", 1/24),
-    ("81/1960", 81/1960),
-    ("3/73", 3/73),
+    ("1/27 + 1/81", 1 / 27 + 1 / 81),
+    ("9/173", 9 / 173),
+    ("40/1000", 40 / 1000),
+    ("1/24", 1 / 24),
+    ("81/1960", 81 / 1960),
+    ("3/73", 3 / 73),
 ]
 
 print("W33 candidates for |Vcb|:")
@@ -174,10 +175,10 @@ print()
 # For |Vub|
 print(f"  |Vub| = {Vub_exp:.5f}")
 candidates_ub = [
-    ("9/40 × 1/27/2", (9/40) * (1/27) / 2),
-    ("1/270", 1/270),
-    ("3/810", 3/810),
-    ("1/(81×3)", 1/(81*3)),
+    ("9/40 × 1/27/2", (9 / 40) * (1 / 27) / 2),
+    ("1/270", 1 / 270),
+    ("3/810", 3 / 810),
+    ("1/(81×3)", 1 / (81 * 3)),
 ]
 
 print("W33 candidates for |Vub|:")
@@ -225,19 +226,19 @@ print(f"  W33: EXACT maximal mixing predicted by K4 symmetry!")
 print(f"        K4 (Klein four group) has order 4 → θ = π/4")
 print()
 
-# For solar angle  
+# For solar angle
 print(f"Solar angle θ₁₂:")
 print(f"  Experiment: {33.5}°")
 print(f"  sin²(θ₁₂) = {math.sin(theta12_exp)**2:.4f}")
 print()
 
 # Check W33 ratios for sin²(θ₁₂)
-sin2_12_exp = math.sin(theta12_exp)**2
+sin2_12_exp = math.sin(theta12_exp) ** 2
 candidates_12 = [
-    ("1/3", 1/3),
-    ("27/81", 27/81),
-    ("40/121", 40/121),
-    ("9/27", 9/27),
+    ("1/3", 1 / 3),
+    ("27/81", 27 / 81),
+    ("40/121", 40 / 121),
+    ("9/27", 9 / 27),
 ]
 
 print("W33 candidates for sin²(θ₁₂):")
@@ -258,12 +259,12 @@ print(f"  Experiment: {8.5}°")
 print(f"  sin²(θ₁₃) = {math.sin(theta13_exp)**2:.4f}")
 print()
 
-sin2_13_exp = math.sin(theta13_exp)**2
+sin2_13_exp = math.sin(theta13_exp) ** 2
 candidates_13 = [
-    ("1/40", 1/40),
-    ("3/121", 3/121),
-    ("1/45", 1/45),
-    ("9/400", 9/400),
+    ("1/40", 1 / 40),
+    ("3/121", 3 / 121),
+    ("1/45", 1 / 45),
+    ("9/400", 9 / 400),
 ]
 
 print("W33 candidates for sin²(θ₁₃):")
@@ -321,9 +322,9 @@ print(f"  m_t/m_b = {ratio_tb:.2f}")
 # Try W33 expressions for this ratio
 candidates_tb = [
     ("40", 40),
-    ("81/2", 81/2),
-    ("√(27×64)", math.sqrt(27*64)),
-    ("173/4", 173/4),
+    ("81/2", 81 / 2),
+    ("√(27×64)", math.sqrt(27 * 64)),
+    ("173/4", 173 / 4),
 ]
 
 print(f"  W33 candidates:")
@@ -337,9 +338,9 @@ ratio_mue = m_mu / m_e
 print(f"  m_μ/m_e = {ratio_mue:.2f}")
 
 candidates_mue = [
-    ("81×2.5", 81*2.5),
-    ("3×81-40", 3*81-40),
-    ("27×8", 27*8),
+    ("81×2.5", 81 * 2.5),
+    ("3×81-40", 3 * 81 - 40),
+    ("27×8", 27 * 8),
 ]
 
 print(f"  W33 candidates:")
@@ -353,9 +354,9 @@ ratio_taumu = m_tau / m_mu
 print(f"  m_τ/m_μ = {ratio_taumu:.2f}")
 
 candidates_taumu = [
-    ("27/1.6", 27/1.6),
+    ("27/1.6", 27 / 1.6),
     ("√270", math.sqrt(270)),
-    ("3²×1.87", 9*1.87),
+    ("3²×1.87", 9 * 1.87),
 ]
 
 print(f"  W33 candidates:")
@@ -391,7 +392,7 @@ This is the "Froggatt-Nielsen" pattern!
 """)
 
 # Check the hierarchical pattern
-lambda_val = 9/40
+lambda_val = 9 / 40
 print(f"If λ = sin(θC) ≈ 9/40 = {lambda_val:.4f}:")
 print()
 

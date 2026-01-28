@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 from itertools import combinations
+
 from sage.all import WeylGroup
 
-W8 = WeylGroup(['E',8])
+W8 = WeylGroup(["E", 8])
 refs = W8.simple_reflections()
 
 indices = list(refs.keys())

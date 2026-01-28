@@ -13,21 +13,22 @@ Author: Wil Dahn
 Date: January 2026
 """
 
-import numpy as np
-from fractions import Fraction as F
 import json
+from fractions import Fraction as F
 
-print("="*70)
+import numpy as np
+
+print("=" * 70)
 print("W33 THEORY PART LXVI: UNIFYING THE TWO ALPHA FORMULAS")
-print("="*70)
+print("=" * 70)
 
 # =============================================================================
 # SECTION 1: THE TWO FORMULAS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 1: COMPARING THE TWO FORMULAS")
-print("="*70)
+print("=" * 70)
 
 print("""
 FORMULA 1 (Original W33):
@@ -43,7 +44,7 @@ Let's check the integer parts:
 
 # Check integer parts
 formula1_int = 81 + 56
-formula2_int = 12**2 - 2*4 + 1
+formula2_int = 12**2 - 2 * 4 + 1
 
 print(f"Formula 1 integer part: 81 + 56 = {formula1_int}")
 print(f"Formula 2 integer part: 12² - 8 + 1 = {formula2_int}")
@@ -53,9 +54,9 @@ print(f"Match? {formula1_int == formula2_int}")
 # SECTION 2: DECOMPOSING 137 = 81 + 56
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 2: THE 81 + 56 DECOMPOSITION")
-print("="*70)
+print("=" * 70)
 
 print("""
 The original formula splits 137 as:
@@ -90,9 +91,9 @@ print("And 7 = 8 - 1 = (2*4) - 1")
 # SECTION 3: DEEPER STRUCTURE
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 3: FINDING THE DEEP CONNECTION")
-print("="*70)
+print("=" * 70)
 
 print("""
 Let's find how 81 and 56 relate to the eigenvalue formula.
@@ -124,9 +125,9 @@ print(f"  63 - 7 = {63 - 7}")
 # SECTION 4: THE SU(8) CONNECTION
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 4: SU(8) AND THE NUMBER 56")
-print("="*70)
+print("=" * 70)
 
 print("""
 STUNNING OBSERVATION:
@@ -157,9 +158,9 @@ print(f"  SU(8) 3-form: 8*7*6/(3*2*1) = {8*7*6//6} = 56 !")
 # SECTION 5: UNIFICATION OF FORMULAS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 5: THE UNIFIED FORMULA")
-print("="*70)
+print("=" * 70)
 
 print("""
 We can now write THREE equivalent formulas for alpha^{-1}:
@@ -180,9 +181,9 @@ All three are EQUIVALENT and give 137.036004...!
 """)
 
 # Verify all formulas
-f1 = 81 + 56 + 40/1111
-f2 = 12**2 - 2*4 + 1 + 40/1111
-f3 = 81 + 8*7*6//6 + 40/1111
+f1 = 81 + 56 + 40 / 1111
+f2 = 12**2 - 2 * 4 + 1 + 40 / 1111
+f3 = 81 + 8 * 7 * 6 // 6 + 40 / 1111
 
 print("Numerical verification:")
 print(f"  Formula 1 (E_7):   {f1:.10f}")
@@ -193,9 +194,9 @@ print(f"  Formula 3 (SU(8)): {f3:.10f}")
 # SECTION 6: WHY 40/1111?
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 6: THE MYSTERIOUS 40/1111")
-print("="*70)
+print("=" * 70)
 
 print("""
 The quantum correction 40/1111 appears in ALL formulas.
@@ -232,9 +233,9 @@ print(f"  3^7 = {3**7} (close to 1111×2 = 2222)")
 # SECTION 7: THE NUMBER 1111 IN CONTEXT
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 7: DECODING 1111")
-print("="*70)
+print("=" * 70)
 
 print("""
 HYPOTHESIS: 1111 comes from the Sp(4,3) geometry.
@@ -269,9 +270,9 @@ print(f"  So: 1111 = (12 × 24 × 15)/4 + 31")
 # SECTION 8: ANOTHER APPROACH TO 1111
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 8: 1111 AS A GEOMETRIC INVARIANT")
-print("="*70)
+print("=" * 70)
 
 print("""
 Let's think about this differently.
@@ -307,9 +308,9 @@ print(f"                   = 137 + 40/1111")
 # SECTION 9: THE FINAL UNIFIED PICTURE
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 9: THE GRAND UNIFIED FORMULA")
-print("="*70)
+print("=" * 70)
 
 print("""
 =======================================================
@@ -358,33 +359,29 @@ of the Standard Model and beyond!
 # =============================================================================
 
 results = {
-    'formulas': {
-        'eigenvalue': '12^2 - 2*4 + 1 + 40/1111',
-        'E7': '81 + 56 + 40/1111',
-        'SU8': '81 + dim(SU8 3-form) + 40/1111'
+    "formulas": {
+        "eigenvalue": "12^2 - 2*4 + 1 + 40/1111",
+        "E7": "81 + 56 + 40/1111",
+        "SU8": "81 + dim(SU8 3-form) + 40/1111",
     },
-    'key_numbers': {
-        '81': '3^4 = |F_3^4|',
-        '56': 'E_7 fundamental = SU(8) 3-form',
-        '63': 'SU(8) adjoint = 8^2 - 1',
-        '144': '12^2 = degree^2',
-        '8': '2*4 = SU(3) dimension',
-        '1': 'U(1) dimension'
+    "key_numbers": {
+        "81": "3^4 = |F_3^4|",
+        "56": "E_7 fundamental = SU(8) 3-form",
+        "63": "SU(8) adjoint = 8^2 - 1",
+        "144": "12^2 = degree^2",
+        "8": "2*4 = SU(3) dimension",
+        "1": "U(1) dimension",
     },
-    'exact_value': {
-        'numerator': 152247,
-        'denominator': 1111,
-        'decimal': 137.036004
-    },
-    'experimental': 137.035999,
-    'error_ppb': 5
+    "exact_value": {"numerator": 152247, "denominator": 1111, "decimal": 137.036004},
+    "experimental": 137.035999,
+    "error_ppb": 5,
 }
 
-with open('PART_LXVI_unified_alpha.json', 'w') as f:
-        json.dump(results, f, indent=2, default=int)
-print("\n" + "="*70)
+with open("PART_LXVI_unified_alpha.json", "w") as f:
+    json.dump(results, f, indent=2, default=int)
+print("\n" + "=" * 70)
 print("PART LXVI CONCLUSIONS")
-print("="*70)
+print("=" * 70)
 
 print("""
 THE TWO FORMULAS ARE UNIFIED:
@@ -408,4 +405,4 @@ W33 IS THE ROSETTA STONE OF FUNDAMENTAL PHYSICS!
 
 Results saved to PART_LXVI_unified_alpha.json
 """)
-print("="*70)
+print("=" * 70)

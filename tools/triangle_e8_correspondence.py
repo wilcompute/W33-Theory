@@ -18,6 +18,7 @@ Outputs:
 - artifacts/triangle_e8_correspondence.json
 - artifacts/triangle_e8_correspondence.md
 """
+
 from __future__ import annotations
 
 import json
@@ -53,11 +54,11 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
 
@@ -97,10 +98,10 @@ def build_e8_roots():
 
     # Type 1: permutations of (±1, ±1, 0, 0, 0, 0, 0, 0) - 112 roots
     for i in range(8):
-        for j in range(i+1, 8):
+        for j in range(i + 1, 8):
             for si in [1, -1]:
                 for sj in [1, -1]:
-                    r = [0]*8
+                    r = [0] * 8
                     r[i] = si
                     r[j] = sj
                     roots.append(tuple(r))
@@ -108,7 +109,7 @@ def build_e8_roots():
     # Type 2: (±1/2, ..., ±1/2) with even number of minus signs - 128 roots
     for signs in product([1, -1], repeat=8):
         if sum(1 for s in signs if s == -1) % 2 == 0:
-            roots.append(tuple(s/2 for s in signs))
+            roots.append(tuple(s / 2 for s in signs))
 
     return roots
 
@@ -134,7 +135,9 @@ def main():
 
     lines.append("# Triangle Graph ↔ E8 Correspondence Investigation")
     lines.append("")
-    lines.append("**Key Observation**: The W33 triangle co-occurrence graph has 240 edges,")
+    lines.append(
+        "**Key Observation**: The W33 triangle co-occurrence graph has 240 edges,"
+    )
     lines.append("the same as the number of E8 roots!")
     lines.append("")
 
@@ -166,7 +169,7 @@ def main():
     for v0 in range(n):
         tris = all_triangles[v0]
         for i, t1 in enumerate(tris):
-            for t2 in tris[i+1:]:
+            for t2 in tris[i + 1 :]:
                 idx1, idx2 = tri_index[t1], tri_index[t2]
                 tri_adj[idx1, idx2] = 1
                 tri_adj[idx2, idx1] = 1
@@ -185,7 +188,9 @@ def main():
     lines.append("")
     lines.append(f"- Vertices: {len(unique_triangles)}")
     lines.append(f"- **Edges: {tri_edges}** (= E8 root count!)")
-    lines.append(f"- Degree: {tri_degree_set[0] if len(tri_degree_set) == 1 else tri_degree_set}")
+    lines.append(
+        f"- Degree: {tri_degree_set[0] if len(tri_degree_set) == 1 else tri_degree_set}"
+    )
     lines.append("")
 
     # Compute triangle graph spectrum
@@ -193,7 +198,9 @@ def main():
     tri_eigenvalues = np.round(tri_eigenvalues, 4)
     tri_eig_mults = Counter(tri_eigenvalues)
 
-    results["triangle_graph_spectrum"] = {str(e): int(m) for e, m in sorted(tri_eig_mults.items(), reverse=True)}
+    results["triangle_graph_spectrum"] = {
+        str(e): int(m) for e, m in sorted(tri_eig_mults.items(), reverse=True)
+    }
 
     lines.append("### Triangle Graph Spectrum")
     lines.append("")
@@ -216,7 +223,7 @@ def main():
     for i, r1 in enumerate(e8_roots):
         for j, r2 in enumerate(e8_roots):
             if i != j:
-                ip = sum(a*b for a, b in zip(r1, r2))
+                ip = sum(a * b for a, b in zip(r1, r2))
                 if abs(ip - 1) < 0.01 or abs(ip + 1) < 0.01:
                     e8_adj[i, j] = 1
 
@@ -262,7 +269,7 @@ def main():
     # Build edge list
     tri_edge_list = []
     for i in range(len(unique_triangles)):
-        for j in range(i+1, len(unique_triangles)):
+        for j in range(i + 1, len(unique_triangles)):
             if tri_adj[i, j]:
                 tri_edge_list.append((i, j))
 
@@ -294,7 +301,9 @@ def main():
     lines.append("")
     lines.append(f"- Vertices: {len(tri_edge_list)}")
     lines.append(f"- Edges: {line_edges}")
-    lines.append(f"- Degree: {line_degree_set[0] if len(line_degree_set) == 1 else line_degree_set}")
+    lines.append(
+        f"- Degree: {line_degree_set[0] if len(line_degree_set) == 1 else line_degree_set}"
+    )
     lines.append("")
 
     # Compare with E8
@@ -303,7 +312,9 @@ def main():
     lines.append(f"| Property | L(T) | E8 root graph |")
     lines.append(f"|----------|------|---------------|")
     lines.append(f"| Vertices | {len(tri_edge_list)} | {len(e8_roots)} |")
-    lines.append(f"| Degree | {line_degree_set[0] if len(line_degree_set) == 1 else 'varies'} | {e8_degree} |")
+    lines.append(
+        f"| Degree | {line_degree_set[0] if len(line_degree_set) == 1 else 'varies'} | {e8_degree} |"
+    )
     lines.append(f"| Edges | {line_edges} | {e8_edges} |")
     lines.append("")
 
@@ -312,7 +323,9 @@ def main():
         lines.append("**DEGREE MATCH!** Both graphs are regular with the same degree.")
         results["degree_match"] = True
     else:
-        lines.append(f"Degree mismatch: L(T) has degree {line_degree_set}, E8 has degree {e8_degree}")
+        lines.append(
+            f"Degree mismatch: L(T) has degree {line_degree_set}, E8 has degree {e8_degree}"
+        )
         results["degree_match"] = False
 
     lines.append("")
@@ -323,7 +336,9 @@ def main():
         line_eigenvalues = np.round(line_eigenvalues, 4)
         line_eig_mults = Counter(line_eigenvalues)
 
-        results["line_graph_spectrum"] = {str(e): int(m) for e, m in sorted(line_eig_mults.items(), reverse=True)}
+        results["line_graph_spectrum"] = {
+            str(e): int(m) for e, m in sorted(line_eig_mults.items(), reverse=True)
+        }
 
         lines.append("### Line Graph Spectrum")
         lines.append("")
@@ -336,7 +351,9 @@ def main():
         e8_eigenvalues = np.round(e8_eigenvalues, 4)
         e8_eig_mults = Counter(e8_eigenvalues)
 
-        results["e8_spectrum"] = {str(e): int(m) for e, m in sorted(e8_eig_mults.items(), reverse=True)}
+        results["e8_spectrum"] = {
+            str(e): int(m) for e, m in sorted(e8_eig_mults.items(), reverse=True)
+        }
 
         lines.append("### E8 Root Graph Spectrum")
         lines.append("")
@@ -390,7 +407,9 @@ def main():
     lines.append("")
 
     if results.get("degree_match"):
-        lines.append("**Key finding**: The line graph of the triangle co-occurrence graph")
+        lines.append(
+            "**Key finding**: The line graph of the triangle co-occurrence graph"
+        )
         lines.append("has 240 vertices with the same degree as E8 root adjacency!")
         lines.append("")
         lines.append("This strongly suggests a structural correspondence.")

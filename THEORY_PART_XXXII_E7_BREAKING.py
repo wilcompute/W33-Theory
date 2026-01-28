@@ -14,8 +14,9 @@ And the mystery of 1111 in the α correction.
 """
 
 import math
-import numpy as np
 from fractions import Fraction
+
+import numpy as np
 
 print("""
 ╔══════════════════════════════════════════════════════════════════════╗
@@ -42,13 +43,7 @@ The exceptional Lie algebras form a unique sequence:
 with dimensions:
 """)
 
-exceptional = {
-    'G2': 14,
-    'F4': 52,
-    'E6': 78,
-    'E7': 133,
-    'E8': 248
-}
+exceptional = {"G2": 14, "F4": 52, "E6": 78, "E7": 133, "E8": 248}
 
 for name, dim in exceptional.items():
     print(f"    dim({name}) = {dim}")
@@ -222,7 +217,7 @@ base3 = []
 while n > 0:
     base3.append(n % 3)
     n //= 3
-print(''.join(map(str, reversed(base3))))
+print("".join(map(str, reversed(base3))))
 print()
 
 # The repunit connection
@@ -239,7 +234,35 @@ for k in range(1, 8):
     # Try factoring
     temp = repunit
     factors = []
-    for p in [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103]:
+    for p in [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13,
+        17,
+        19,
+        23,
+        29,
+        31,
+        37,
+        41,
+        43,
+        47,
+        53,
+        59,
+        61,
+        67,
+        71,
+        73,
+        79,
+        83,
+        89,
+        97,
+        101,
+        103,
+    ]:
         while temp % p == 0:
             factors.append(p)
             temp //= p
@@ -337,7 +360,7 @@ Combining tree-level and loop correction:
 Let's verify:
 """)
 
-alpha_inv_predicted = 137 + 40/1111
+alpha_inv_predicted = 137 + 40 / 1111
 alpha_inv_exp = 137.035999084
 
 print(f"  W33 prediction: α⁻¹ = {alpha_inv_predicted:.6f}")
@@ -367,13 +390,40 @@ for num_coef in range(1, 100):
             # Check if denom has W33 structure
             factors = []
             temp = denom_coef
-            for p in [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101]:
+            for p in [
+                2,
+                3,
+                5,
+                7,
+                11,
+                13,
+                17,
+                19,
+                23,
+                29,
+                31,
+                37,
+                41,
+                43,
+                47,
+                53,
+                59,
+                61,
+                67,
+                71,
+                73,
+                79,
+                83,
+                89,
+                97,
+                101,
+            ]:
                 while temp % p == 0:
                     factors.append(p)
                     temp //= p
             if temp > 1:
                 factors.append(temp)
-            
+
             if num_coef <= 90:  # W33 numbers
                 best_matches.append((num_coef, denom_coef, val, factors))
 
@@ -382,7 +432,7 @@ best_matches.sort(key=lambda x: abs(x[2] - target))
 
 print("  Best matches with W33-sized numerators:")
 for num, denom, val, factors in best_matches[:10]:
-    factor_str = ' × '.join(map(str, factors))
+    factor_str = " × ".join(map(str, factors))
     print(f"    {num:2d}/{denom:4d} = {val:.9f} (denom = {factor_str})")
 
 print()
@@ -583,7 +633,9 @@ print(f"  From sin²: {0.23121/(1-0.23121):.6f}")
 print()
 
 print(f"  α⁻¹(tree) = {W33_cycles} + {E7_fund} = {alpha_inv_tree}")
-print(f"  α⁻¹(1-loop) = {alpha_inv_tree} + {delta_alpha_inv:.6f} = {alpha_inv_tree + delta_alpha_inv:.6f}")
+print(
+    f"  α⁻¹(1-loop) = {alpha_inv_tree} + {delta_alpha_inv:.6f} = {alpha_inv_tree + delta_alpha_inv:.6f}"
+)
 print(f"  Experimental: 137.035999")
 print()
 

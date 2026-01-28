@@ -5,12 +5,13 @@ We test linear (and affine) functionals f(x)=c·x + b (mod 3) on the 27 H27
 vertices (non-neighbors of v0). Using the H27->Schläfli embedding, we check
 if each of the 9 Schläfli triangles is rainbow (0,1,2).
 """
+
 from __future__ import annotations
 
-from itertools import product
-from collections import Counter
-from pathlib import Path
 import json
+from collections import Counter
+from itertools import product
+from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -35,11 +36,11 @@ def build_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
-    adj = [[0]*n for _ in range(n)]
+    adj = [[0] * n for _ in range(n)]
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i][j] = adj[j][i] = 1
 
@@ -55,25 +56,29 @@ def h27_from_w33(adj, v0=0):
 def build_27_lines():
     lines = []
     for i in range(1, 7):
-        lines.append(('E', i))
+        lines.append(("E", i))
     for i in range(1, 7):
-        lines.append(('C', i))
+        lines.append(("C", i))
     for i in range(1, 7):
-        for j in range(i+1, 7):
-            lines.append(('L', i, j))
+        for j in range(i + 1, 7):
+            lines.append(("L", i, j))
     return lines
 
 
 def main():
     # Load triangle list and embedding
-    tri_data = json.loads((ROOT / 'artifacts' / 'h27_schlafli_leftover_cycles.json').read_text())
-    triangles = [[tuple(x) for x in tri] for tri in tri_data['cycle_labels']]
+    tri_data = json.loads(
+        (ROOT / "artifacts" / "h27_schlafli_leftover_cycles.json").read_text()
+    )
+    triangles = [[tuple(x) for x in tri] for tri in tri_data["cycle_labels"]]
 
-    embed = json.loads((ROOT / 'artifacts' / 'h27_in_schlafli_intersection.json').read_text())
-    if not embed.get('found_embedding'):
-        print('No embedding found.')
+    embed = json.loads(
+        (ROOT / "artifacts" / "h27_in_schlafli_intersection.json").read_text()
+    )
+    if not embed.get("found_embedding"):
+        print("No embedding found.")
         return
-    h_to_s = {int(k): int(v) for k, v in embed['mapping'].items()}
+    h_to_s = {int(k): int(v) for k, v in embed["mapping"].items()}
     s_to_h = {v: k for k, v in h_to_s.items()}
 
     lines = build_27_lines()
@@ -100,52 +105,57 @@ def main():
     F3 = [0, 1, 2]
     # test linear and affine functionals
     for c in product(F3, repeat=4):
-        if c == (0,0,0,0):
+        if c == (0, 0, 0, 0):
             continue
         for b in F3:
             ok = True
             for tri in tri_points:
-                colors = [ (c[0]*p[0] + c[1]*p[1] + c[2]*p[2] + c[3]*p[3] + b) % 3 for p in tri]
-                if set(colors) != {0,1,2}:
+                colors = [
+                    (c[0] * p[0] + c[1] * p[1] + c[2] * p[2] + c[3] * p[3] + b) % 3
+                    for p in tri
+                ]
+                if set(colors) != {0, 1, 2}:
                     ok = False
                     break
             if ok:
                 # color counts
                 color_counts = [0, 0, 0]
                 for p in [line_to_point[line] for line in line_to_point]:
-                    col = (c[0]*p[0] + c[1]*p[1] + c[2]*p[2] + c[3]*p[3] + b) % 3
+                    col = (
+                        c[0] * p[0] + c[1] * p[1] + c[2] * p[2] + c[3] * p[3] + b
+                    ) % 3
                     color_counts[col] += 1
-                solutions.append({'c': c, 'b': b, 'color_counts': color_counts})
+                solutions.append({"c": c, "b": b, "color_counts": color_counts})
 
     # classify c up to scalar
     def normalize_c(cvec):
-        if cvec == (0,0,0,0):
+        if cvec == (0, 0, 0, 0):
             return cvec
         # use smallest scalar among {1,2} to canonicalize
         c1 = cvec
-        c2 = tuple((2*x) % 3 for x in cvec)
+        c2 = tuple((2 * x) % 3 for x in cvec)
         return min(c1, c2)
 
     class_counts = Counter()
     b_counts = Counter()
     for sol in solutions:
-        cn = normalize_c(sol['c'])
+        cn = normalize_c(sol["c"])
         class_counts[cn] += 1
-        b_counts[sol['b']] += 1
+        b_counts[sol["b"]] += 1
 
     results = {
-        'num_solutions_found': len(solutions),
-        'num_c_classes': len(class_counts),
-        'c_class_counts': {str(k): v for k, v in class_counts.items()},
-        'b_counts': dict(b_counts),
-        'solutions': solutions,
+        "num_solutions_found": len(solutions),
+        "num_c_classes": len(class_counts),
+        "c_class_counts": {str(k): v for k, v in class_counts.items()},
+        "b_counts": dict(b_counts),
+        "solutions": solutions,
     }
 
-    out_path = ROOT / 'artifacts' / 'z3_phase_linear_search.json'
-    out_path.write_text(json.dumps(results, indent=2), encoding='utf-8')
+    out_path = ROOT / "artifacts" / "z3_phase_linear_search.json"
+    out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(results)
-    print(f'Wrote {out_path}')
+    print(f"Wrote {out_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

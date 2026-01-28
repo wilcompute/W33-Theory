@@ -39,11 +39,11 @@ print("""
 # ═══════════════════════════════════════════════════════════════════════════════
 
 # W33 structure
-PTS = 40       # Points
-LIN = 40       # Lines  
-CYC = 81       # Cycles = 3⁴
-K4 = 90        # K4 subgroups
-TOT = 121      # Total = 11²
+PTS = 40  # Points
+LIN = 40  # Lines
+CYC = 81  # Cycles = 3⁴
+K4 = 90  # K4 subgroups
+TOT = 121  # Total = 11²
 
 # Exceptional algebras
 E6_fund = 27
@@ -52,12 +52,12 @@ E7_adj = 133
 E8_dim = 248
 
 # Special numbers
-R4 = 1111      # 4th repunit
-AUT = 51840    # |Aut(W33)|
-DARK = 5       # Dark sector multiplier = 40/8
+R4 = 1111  # 4th repunit
+AUT = 51840  # |Aut(W33)|
+DARK = 5  # Dark sector multiplier = 40/8
 
 # Physical constants and input
-v = 246.22        # GeV (electroweak VEV) - INPUT
+v = 246.22  # GeV (electroweak VEV) - INPUT
 M_Planck = 1.221e19  # GeV
 G_Newton = 6.674e-11  # m³/(kg·s²)
 
@@ -87,7 +87,7 @@ print()
 # M_Planck = v × √(some W33 factor)
 # What factor gives ~10^17?
 # 51840^2 ≈ 2.7×10⁹ - too small
-# (51840 × 1111)^(1) ≈ 5.8×10⁷ - too small  
+# (51840 × 1111)^(1) ≈ 5.8×10⁷ - too small
 # Let's try: v × AUT × 1111 × √(248) ≈ v × 9×10⁸
 
 W33_hierarchy_factor = AUT * R4 * np.sqrt(E8_dim) / PTS
@@ -168,7 +168,7 @@ print()
 # = 2 physical
 print(f"  4D COUNTING:")
 print(f"    g_μν components: 4×5/2 = 10")
-print(f"    - gauge freedoms: 4")  
+print(f"    - gauge freedoms: 4")
 print(f"    - constraints: 4")
 print(f"    = physical d.o.f.: 2 ✓")
 print()
@@ -227,7 +227,7 @@ print()
 
 # The cosmological constant
 # Λ ~ 10^{-122} M_P⁴
-Lambda_factor = TOT + 0.5 + 1/E6_fund
+Lambda_factor = TOT + 0.5 + 1 / E6_fund
 print(f"  COSMOLOGICAL CONSTANT:")
 print(f"    -log₁₀(Λ/M_P⁴) = 121[tot] + 1/2 + 1/27 = {Lambda_factor:.3f}")
 Lambda_exp = -Lambda_factor
@@ -454,12 +454,16 @@ print("│ spin            │ 2 (symmetric tensor)           │ 2         │ 
 print("├─────────────────┼────────────────────────────────┼───────────┼───────────┤")
 print("│ COSMOLOGICAL CONSTANT                                                    │")
 print("├─────────────────┼────────────────────────────────┼───────────┼───────────┤")
-print(f"│ -log₁₀(Λ/M_P⁴) │ 121[tot] + 1/2 + 1/27          │ {Lambda_factor:.2f}    │ ~122      │")
+print(
+    f"│ -log₁₀(Λ/M_P⁴) │ 121[tot] + 1/2 + 1/27          │ {Lambda_factor:.2f}    │ ~122      │"
+)
 print("├─────────────────┼────────────────────────────────┼───────────┼───────────┤")
 print("│ SPACETIME                                                                │")
 print("├─────────────────┼────────────────────────────────┼───────────┼───────────┤")
 print("│ D               │ √121[tot]                      │ 11        │ 11 (M-th) │")
-print(f"│ l_min/l_P       │ √(40[pts]/121[tot])            │ {l_min_factor:.3f}     │ ?         │")
+print(
+    f"│ l_min/l_P       │ √(40[pts]/121[tot])            │ {l_min_factor:.3f}     │ ?         │"
+)
 print("├─────────────────┼────────────────────────────────┼───────────┼───────────┤")
 print("│ EINSTEIN EQUATION                                                        │")
 print("├─────────────────┼────────────────────────────────┼───────────┼───────────┤")

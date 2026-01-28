@@ -8,12 +8,16 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUT_DIR = DATA / "_workbench" / "04_measurement"
 
-GRID_CSV = DATA / "_toe" / "native_fullgrid_20260110" / "nativeC24_fullgrid_line_stabilities_flux_noflux.csv"
+GRID_CSV = (
+    DATA
+    / "_toe"
+    / "native_fullgrid_20260110"
+    / "nativeC24_fullgrid_line_stabilities_flux_noflux.csv"
+)
 
 
 def load_grid():
@@ -39,9 +43,7 @@ def load_grid():
 
 
 def design_matrix(lam, mu):
-    return np.column_stack(
-        [np.ones_like(lam), lam, mu, lam**2, lam * mu, mu**2]
-    )
+    return np.column_stack([np.ones_like(lam), lam, mu, lam**2, lam * mu, mu**2])
 
 
 def fit_surfaces(C, lam, mu):

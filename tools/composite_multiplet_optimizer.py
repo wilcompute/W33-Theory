@@ -13,12 +13,14 @@ permutations to minimize squared error.
 
 Outputs artifacts/composite_multiplet_optimizer.json
 """
+
 from __future__ import annotations
 
-import json
 import itertools
-import numpy as np
+import json
 from pathlib import Path
+
+import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -26,42 +28,48 @@ ROOT = Path(__file__).resolve().parents[1]
 E6_adj = {
     0: {2},
     1: {2},
-    2: {0,1,3},
-    3: {2,4},
-    4: {3,5},
+    2: {0, 1, 3},
+    3: {2, 4},
+    4: {3, 5},
     5: {4},
 }
 
 
 def e6_distance_matrix():
     # BFS distances between nodes 0..5
-    dist = [[0]*6 for _ in range(6)]
+    dist = [[0] * 6 for _ in range(6)]
     for i in range(6):
         # BFS
-        q = [(i,0)]
+        q = [(i, 0)]
         seen = {i}
         while q:
-            v,d = q.pop(0)
+            v, d = q.pop(0)
             dist[i][v] = d
             for w in E6_adj[v]:
                 if w not in seen:
                     seen.add(w)
-                    q.append((w,d+1))
+                    q.append((w, d + 1))
     return dist
 
 
 def main():
-    table = json.loads((ROOT / "artifacts" / "pattern_class_feature_table.json").read_text())
-    support = json.loads((ROOT / "artifacts" / "pattern_class_support_sizes.json").read_text())
+    table = json.loads(
+        (ROOT / "artifacts" / "pattern_class_feature_table.json").read_text()
+    )
+    support = json.loads(
+        (ROOT / "artifacts" / "pattern_class_support_sizes.json").read_text()
+    )
 
-    classes = [0,1,2,3,4,5]
+    classes = [0, 1, 2, 3, 4, 5]
 
     # Build feature vectors for classes
     X = []
     for c in classes:
         s = table["class_summary"][str(c)]
         sup = support.get(str(c), {})
-        sup_vec = np.array([sup.get(str(i), sup.get(i, 0)) for i in [1,2,3,4]], dtype=float)
+        sup_vec = np.array(
+            [sup.get(str(i), sup.get(i, 0)) for i in [1, 2, 3, 4]], dtype=float
+        )
         if s["size"] > 0:
             sup_vec = sup_vec / s["size"]
         nbr = np.array(s["avg_neighbor_class_counts"], dtype=float) / 12.0
@@ -92,7 +100,7 @@ def main():
         # perm maps class index -> node
         score = 0.0
         for ci, node in enumerate(perm):
-            score += np.sum((Xh[ci] - T[node])**2)
+            score += np.sum((Xh[ci] - T[node]) ** 2)
         if best is None or score < best:
             best = score
             best_perm = perm

@@ -4,15 +4,16 @@ W33 THEORY PART LXXXVI: THE BOOTSTRAP
 
 Can W33 derive ITSELF? Can physics determine its own mathematical structure?
 
-This explores self-consistency: the universe must be describable by 
+This explores self-consistency: the universe must be describable by
 mathematics that can exist WITHIN that universe.
 
 The ultimate question: Is W33 self-referential?
 """
 
-import numpy as np
 import json
 from fractions import Fraction
+
+import numpy as np
 
 print("=" * 70)
 print("W33 THEORY PART LXXXVI: THE BOOTSTRAP")
@@ -167,24 +168,24 @@ for k_test in range(8, 20):
     if 480 % k_test != 0:
         continue
     v_test = 480 // k_test
-    
+
     # From α⁻¹ base = 137: k² - 2μ + 1 = 137
     mu_test = (k_test**2 + 1 - 137) / 2
     if mu_test != int(mu_test) or mu_test <= 0:
         continue
     mu_test = int(mu_test)
-    
+
     # Check if valid SRG could exist
     # Need λ such that counting equation works
     for lam_test in range(1, k_test):
         if k_test * (k_test - lam_test - 1) == mu_test * (v_test - k_test - 1):
             # Check alpha
-            denom = (k_test - 1) * ((k_test - lam_test)**2 + 1)
-            alpha = k_test**2 - 2*mu_test + 1 + v_test/denom
-            
+            denom = (k_test - 1) * ((k_test - lam_test) ** 2 + 1)
+            alpha = k_test**2 - 2 * mu_test + 1 + v_test / denom
+
             print(f"  k={k_test}, v={v_test}, λ={lam_test}, μ={mu_test}")
             print(f"    α⁻¹ = {alpha:.6f}")
-            
+
             # Check sin²θ_W
             sin2 = v_test / (v_test + k_test**2 + 1)
             print(f"    sin²θ_W = {sin2:.4f}")
@@ -359,7 +360,7 @@ for p in [2, 3, 5, 7]:
     # Rough estimate for isotropic lines in F_p^4
     v_estimate = (p**4 - 1) // (p - 1) * (p + 1) // (p**2 + 1)
     # This isn't quite right but gives the flavor
-    
+
     if p == 3:
         print(f"  p={p}: v ≈ 40 (this is W33!)")
     else:
@@ -388,11 +389,11 @@ results = {
         "sin2_theta_W": 0.231,
         "anomaly_cancellation": "40 = 1 + 24 + 15",
         "E8_connection": "240 edges",
-        "symplectic": "Over F_3"
+        "symplectic": "Over F_3",
     },
     "unique_solution": "SRG(40, 12, 2, 4)",
     "information_bits": float(info_bits),
-    "self_reference": "W33 describes a universe that can discover W33"
+    "self_reference": "W33 describes a universe that can discover W33",
 }
 
 with open("PART_LXXXVI_bootstrap.json", "w") as f:

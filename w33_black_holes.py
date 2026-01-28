@@ -59,9 +59,11 @@ print("\nBlack hole entropy examples:")
 M_sun_kg = 2e30  # kg
 M_planck_kg = 2.2e-8  # kg
 
-for name, M_ratio in [("Stellar (10 M☉)", 10 * M_sun_kg / M_planck_kg),
-                       ("Galactic (10⁶ M☉)", 1e6 * M_sun_kg / M_planck_kg),
-                       ("Primordial (10¹⁵ g)", 1e12 / M_planck_kg)]:
+for name, M_ratio in [
+    ("Stellar (10 M☉)", 10 * M_sun_kg / M_planck_kg),
+    ("Galactic (10⁶ M☉)", 1e6 * M_sun_kg / M_planck_kg),
+    ("Primordial (10¹⁵ g)", 1e12 / M_planck_kg),
+]:
     S = 4 * np.pi * M_ratio**2
     print(f"  {name}: S ~ 10^{np.log10(S):.0f}")
 

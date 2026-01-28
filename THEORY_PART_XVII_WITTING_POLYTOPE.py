@@ -10,15 +10,16 @@ by Alexander Yu. Vlasov (arXiv:2503.18431, Moscow Univ. Phys. 80, 560 (2025))
 
 THIS IS THE MISSING LINK BETWEEN:
     • W33's 40 points
-    • E8's 240 roots  
+    • E8's 240 roots
     • Quantum foundations (Kochen-Specker, Bell theorems)
     • The "quantum cards" formalism
     • Spin-3/2 particles (ququarts)
 """
 
-import numpy as np
-from fractions import Fraction
 import math
+from fractions import Fraction
+
+import numpy as np
 
 print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -66,7 +67,7 @@ WITTING_EDGES = 2160
 WITTING_FACES = 2160
 WITTING_CELLS = 240
 WITTING_DIAMETERS = 40  # ← THIS IS W33!
-EDGES_PER_VERTEX = 27   # ← THIS IS E6!
+EDGES_PER_VERTEX = 27  # ← THIS IS E6!
 WITTING_SYMMETRY = 155520  # = 3 × 51840
 W_E6 = 51840
 

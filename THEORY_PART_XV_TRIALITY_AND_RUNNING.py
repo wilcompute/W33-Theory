@@ -142,8 +142,8 @@ The coupling "runs" - it depends on energy scale!
 """)
 
 # Alpha values at different scales
-alpha_0 = 1/137.035999084  # Low energy
-alpha_Z = 1/127.9           # At M_Z
+alpha_0 = 1 / 137.035999084  # Low energy
+alpha_Z = 1 / 127.9  # At M_Z
 
 print("═══ Measured Values ═══")
 print(f"  α(0)⁻¹ = 137.036 (Thomson limit)")
@@ -175,21 +175,23 @@ print("═══ Computing β₀ ═══")
 print()
 
 # Charges and multiplicities
-# Per generation: 
+# Per generation:
 # - up-type quark: Q=2/3, 3 colors, 2 chiralities (for Dirac) → factor of 3
 # - down-type quark: Q=-1/3, 3 colors
 # - charged lepton: Q=-1
 # - neutrino: Q=0
 
 # Sum of Q² for one generation (quarks have factor 3 for color)
-sum_Q2_quarks = 3 * ((2/3)**2 + (1/3)**2)  # up + down, 3 colors
-sum_Q2_leptons = 1**2 + 0**2                # electron + neutrino
+sum_Q2_quarks = 3 * ((2 / 3) ** 2 + (1 / 3) ** 2)  # up + down, 3 colors
+sum_Q2_leptons = 1**2 + 0**2  # electron + neutrino
 sum_Q2_one_gen = sum_Q2_quarks + sum_Q2_leptons
 
 # 3 generations
 sum_Q2_total = 3 * sum_Q2_one_gen
 
-print(f"  Per generation (quarks): 3 × ((2/3)² + (1/3)²) = 3 × {(2/3)**2 + (1/3)**2:.4f} = {sum_Q2_quarks:.4f}")
+print(
+    f"  Per generation (quarks): 3 × ((2/3)² + (1/3)²) = 3 × {(2/3)**2 + (1/3)**2:.4f} = {sum_Q2_quarks:.4f}"
+)
 print(f"  Per generation (leptons): 1² + 0² = {sum_Q2_leptons:.4f}")
 print(f"  Per generation total: {sum_Q2_one_gen:.4f}")
 print(f"  All 3 generations: {sum_Q2_total:.4f}")
@@ -293,14 +295,16 @@ print()
 
 # Assume Λ = M_Planck
 M_planck = 1.22e19  # GeV
-m_e = 0.511e-3      # GeV (electron mass)
+m_e = 0.511e-3  # GeV (electron mass)
 
 ln_ratio = math.log(M_planck / m_e)
 correction_qed = beta_0 * ln_ratio
 
 print(f"  If Λ = M_Planck = {M_planck:.2e} GeV")
 print(f"  ln(M_Planck/m_e) = {ln_ratio:.2f}")
-print(f"  QED correction = β₀ × ln = {beta_0:.6f} × {ln_ratio:.2f} = {correction_qed:.3f}")
+print(
+    f"  QED correction = β₀ × ln = {beta_0:.6f} × {ln_ratio:.2f} = {correction_qed:.3f}"
+)
 print()
 print(f"  This gives α⁻¹ = 137 + {correction_qed:.3f} = {137 + correction_qed:.3f}")
 print(f"  But experimental: 137.036")
@@ -380,13 +384,7 @@ print("═══ Dimensions ═══")
 print()
 
 # Dimensions of exceptional groups
-dims = {
-    'G2': 14,
-    'F4': 52,
-    'E6': 78,
-    'E7': 133,
-    'E8': 248
-}
+dims = {"G2": 14, "F4": 52, "E6": 78, "E7": 133, "E8": 248}
 
 print("  Exceptional Lie algebra dimensions:")
 for name, dim in dims.items():
@@ -442,17 +440,19 @@ print("""
 print("═══ Final Verification ═══")
 print()
 
-alpha_inv_w33 = 81 + 56 + 3/83
+alpha_inv_w33 = 81 + 56 + 3 / 83
 alpha_inv_exp = 137.0359990840
 
-sin2_w33 = 40/173
+sin2_w33 = 40 / 173
 sin2_exp = 0.23121
 
 print(f"Fine Structure Constant:")
 print(f"  W33:  α⁻¹ = 81 + 56 + 3/83 = {alpha_inv_w33:.10f}")
 print(f"  Exp:  α⁻¹ = {alpha_inv_exp:.10f}")
 print(f"  Diff: {abs(alpha_inv_w33 - alpha_inv_exp):.10f}")
-print(f"  Relative error: {abs(alpha_inv_w33 - alpha_inv_exp)/alpha_inv_exp * 100:.6f}%")
+print(
+    f"  Relative error: {abs(alpha_inv_w33 - alpha_inv_exp)/alpha_inv_exp * 100:.6f}%"
+)
 print()
 
 print(f"Weinberg Angle:")

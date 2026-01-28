@@ -5,19 +5,20 @@ Compute character by evaluating trace of action matrices on class representative
 """
 
 import json
+
 import numpy as np
 from sage.all import *
 
 # Load the JSON data
-with open('claude_workspace/data/w33_sage_incidence_h1.json', 'r') as f:
+with open("claude_workspace/data/w33_sage_incidence_h1.json", "r") as f:
     data = json.load(f)
 
 print("=== H1 Irreducible Decomposition (Direct Approach) ===")
 
 # Get H1 matrices from the JSON - they're in h1_action.generator_matrices
-h1_action = data.get('h1_action', {})
-h1_matrices_data = h1_action.get('generator_matrices', [])
-h1_dim = data.get('homology', {}).get('beta1', None)
+h1_action = data.get("h1_action", {})
+h1_matrices_data = h1_action.get("generator_matrices", [])
+h1_dim = data.get("homology", {}).get("beta1", None)
 
 if not h1_matrices_data:
     print("No H1 action matrices found in JSON!")
@@ -40,19 +41,20 @@ for i, mat_data in enumerate(h1_matrices_data):
 # We need to reconstruct the group to get conjugacy class structure
 
 # Load incidences from the JSON
-incidence_data = data.get('incidence', {})
-generators = incidence_data.get('generators', [])
+incidence_data = data.get("incidence", {})
+generators = incidence_data.get("generators", [])
 
 # Need to rebuild the bipartite graph from generator permutations
 # First get n_points and n_blocks
-n_points = len(generators[0]['points']) if generators else 40
-n_blocks = len(generators[0]['lines']) if generators else 40
+n_points = len(generators[0]["points"]) if generators else 40
+n_blocks = len(generators[0]["lines"]) if generators else 40
 
 print(f"\nNumber of points: {n_points}")
 print(f"Number of blocks: {n_blocks}")
 
 # Build bipartite incidence graph
 from sage.graphs.graph import Graph
+
 G = Graph()
 
 point_labels = {p: f"P{p}" for p in points}
@@ -77,7 +79,7 @@ char_table = gap_G.CharacterTable()
 irreps = char_table.Irr()
 n_irreps = len(irreps)
 
-# Get class representatives  
+# Get class representatives
 class_reps = char_table.ConjugacyClasses()
 n_classes = len(class_reps)
 class_sizes = [int(libgap.Size(c)) for c in class_reps]
@@ -113,34 +115,35 @@ for i, g in enumerate(gens):
     else:
         print(f"  Warning: {gen_name} not in H1 matrices")
 
+
 # Function to compute H1 matrix for arbitrary group element
 def compute_h1_matrix(g, gen_to_matrix, gens):
     """Compute H1 matrix for group element g by factoring into generators."""
     # Use GAP's Factorization
     gap_g = libgap(g)
     gap_gens = [libgap(gen) for gen in gens]
-    
+
     try:
         factored = gap_G.Factorization(gap_g)
         ext_rep = list(factored.ExtRepOfObj())
     except:
         print(f"    Cannot factor element")
         return None
-    
+
     # Parse the external representation
     dim = list(gen_to_matrix.values())[0].shape[0]
     result = np.eye(dim, dtype=complex)
-    
+
     for i in range(0, len(ext_rep), 2):
         gen_idx = int(ext_rep[i]) - 1  # 1-indexed in GAP
-        power = int(ext_rep[i+1])
-        
+        power = int(ext_rep[i + 1])
+
         if gen_idx not in gen_to_matrix:
             print(f"    Generator {gen_idx} not found in map")
             return None
-        
+
         mat = gen_to_matrix[gen_idx]
-        
+
         if power > 0:
             for _ in range(power):
                 result = result @ mat
@@ -148,8 +151,9 @@ def compute_h1_matrix(g, gen_to_matrix, gens):
             mat_inv = np.linalg.inv(mat)
             for _ in range(-power):
                 result = result @ mat_inv
-    
+
     return result
+
 
 # Compute H1 character on each conjugacy class
 h1_chi = []
@@ -158,7 +162,7 @@ for c_idx in range(n_classes):
     gap_class = class_reps[c_idx]
     # Get a representative element from the class
     rep = gap_class.Representative()
-    
+
     # Convert to Sage
     try:
         sage_rep = Aut(rep.sage())
@@ -170,18 +174,20 @@ for c_idx in range(n_classes):
             print(f"  Class {c_idx}: cannot convert representative")
             h1_chi.append(0)
             continue
-    
+
     # Compute H1 matrix and trace
     mat = compute_h1_matrix(sage_rep, gen_to_matrix, gens)
     if mat is None:
         h1_chi.append(0)
         continue
-    
+
     trace = np.trace(mat)
     h1_chi.append(round(trace.real))
-    
+
     order_elem = int(libgap.Order(rep))
-    print(f"  Class {c_idx}: size={class_sizes[c_idx]:5}, order={order_elem:2}, chi={h1_chi[-1]}")
+    print(
+        f"  Class {c_idx}: size={class_sizes[c_idx]:5}, order={order_elem:2}, chi={h1_chi[-1]}"
+    )
 
 print(f"\nH1 character: {h1_chi}")
 
@@ -189,7 +195,7 @@ print(f"\nH1 character: {h1_chi}")
 print(f"chi(1) = {h1_chi[0]}, H1 dim = {data.get('h1_dim')}")
 
 # Now compute inner product of H1 character with itself
-chi_squared = sum(class_sizes[j] * h1_chi[j]**2 for j in range(n_classes)) / order
+chi_squared = sum(class_sizes[j] * h1_chi[j] ** 2 for j in range(n_classes)) / order
 print(f"<chi, chi> = {chi_squared}")
 print(f"Is H1 irreducible? {abs(chi_squared - 1) < 0.01}")
 
@@ -201,8 +207,12 @@ total_dim = 0
 
 for i in range(n_irreps):
     irrep_chi = list(irreps[i])
-    irrep_deg = int(irrep_chi[0].IsInt() and int(irrep_chi[0]) or round(complex(str(irrep_chi[0].sage())).real))
-    
+    irrep_deg = int(
+        irrep_chi[0].IsInt()
+        and int(irrep_chi[0])
+        or round(complex(str(irrep_chi[0].sage())).real)
+    )
+
     # Compute inner product
     inner_sum = 0
     for j in range(n_classes):
@@ -217,17 +227,21 @@ for i in range(n_irreps):
                 chi_i_val = complex(str(gap_val.sage()))
         except:
             chi_i_val = complex(str(gap_val.sage()))
-        
-        chi_i_conj = chi_i_val.conjugate() if isinstance(chi_i_val, complex) else chi_i_val
-        
+
+        chi_i_conj = (
+            chi_i_val.conjugate() if isinstance(chi_i_val, complex) else chi_i_val
+        )
+
         inner_sum += class_sizes[j] * h1_chi[j] * chi_i_conj
-    
+
     inner = inner_sum / order
-    mult_approx = inner.real if hasattr(inner, 'real') else float(inner)
-    
+    mult_approx = inner.real if hasattr(inner, "real") else float(inner)
+
     if abs(mult_approx) > 0.01 or irrep_deg == 81:  # Always show 81-dim irreps
         mult = round(mult_approx)
-        print(f"  Irrep {i}: dim={irrep_deg:3}, <chi_H1,chi_i>≈{mult_approx:.6f}, mult={mult}")
+        print(
+            f"  Irrep {i}: dim={irrep_deg:3}, <chi_H1,chi_i>≈{mult_approx:.6f}, mult={mult}"
+        )
         if mult > 0:
             decomposition.append((i, irrep_deg, mult))
             total_dim += mult * irrep_deg

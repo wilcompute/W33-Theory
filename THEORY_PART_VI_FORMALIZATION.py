@@ -234,9 +234,9 @@ print("=" * 72)
 print()
 
 # Define W33 constants
-P = 40   # points
-C = 81   # cycles
-K = 90   # K4s
+P = 40  # points
+C = 81  # cycles
+K = 90  # K4s
 T = 121  # total
 
 # Experimental values
@@ -252,9 +252,15 @@ n_gen_w33 = C / 27
 
 print(f"{'Quantity':<20} {'W33':>15} {'Experiment':>15} {'Error':>12}")
 print("-" * 65)
-print(f"{'α⁻¹':<20} {alpha_w33_inv:>15} {alpha_exp_inv:>15.6f} {100*abs(alpha_w33_inv - alpha_exp_inv)/alpha_exp_inv:>11.4f}%")
-print(f"{'sin²θ_W':<20} {sin2_w33:>15.6f} {sin2_exp:>15.6f} {100*abs(sin2_w33 - sin2_exp)/sin2_exp:>11.4f}%")
-print(f"{'Ω_DM/Ω_b':<20} {dm_ratio_w33:>15.2f} {dm_ratio_exp:>15.2f} {100*abs(dm_ratio_w33 - dm_ratio_exp)/dm_ratio_exp:>11.4f}%")
+print(
+    f"{'α⁻¹':<20} {alpha_w33_inv:>15} {alpha_exp_inv:>15.6f} {100*abs(alpha_w33_inv - alpha_exp_inv)/alpha_exp_inv:>11.4f}%"
+)
+print(
+    f"{'sin²θ_W':<20} {sin2_w33:>15.6f} {sin2_exp:>15.6f} {100*abs(sin2_w33 - sin2_exp)/sin2_exp:>11.4f}%"
+)
+print(
+    f"{'Ω_DM/Ω_b':<20} {dm_ratio_w33:>15.2f} {dm_ratio_exp:>15.2f} {100*abs(dm_ratio_w33 - dm_ratio_exp)/dm_ratio_exp:>11.4f}%"
+)
 print(f"{'N_gen':<20} {n_gen_w33:>15.0f} {3:>15} {'exact':>12}")
 print()
 

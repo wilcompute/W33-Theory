@@ -4,7 +4,6 @@ import math
 from dataclasses import dataclass
 from typing import Dict, List, Sequence, Tuple
 
-
 Simplex = Tuple[int, ...]  # oriented simplex given by an ordered tuple of vertices
 
 
@@ -164,4 +163,9 @@ def betti_numbers_via_primes(
     for k, sk in simplices_by_dim.items():
         chi += ((-1) ** k) * len(sk)
 
-    return HomologySummary(primes=primes, betti_by_prime=betti_by_prime, betti_estimate=betti_est, euler_characteristic=chi)
+    return HomologySummary(
+        primes=primes,
+        betti_by_prime=betti_by_prime,
+        betti_estimate=betti_est,
+        euler_characteristic=chi,
+    )

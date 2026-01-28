@@ -3,6 +3,7 @@
 
 We use the Z3 edge potential labels and attempt exact fits per family pair.
 """
+
 from __future__ import annotations
 
 from itertools import product
@@ -23,9 +24,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -64,7 +65,11 @@ def solve_edge_potential(rays):
         d1[t_idx, e_jk] = 1
         d1[t_idx, e_ik] = -1
         d1[t_idx, e_ij] = 1
-        ip = np.vdot(rays[i], rays[j]) * np.vdot(rays[j], rays[k]) * np.conjugate(np.vdot(rays[i], rays[k]))
+        ip = (
+            np.vdot(rays[i], rays[j])
+            * np.vdot(rays[j], rays[k])
+            * np.conjugate(np.vdot(rays[i], rays[k]))
+        )
         t[t_idx] = phase_to_k(np.angle(ip)) % 3
 
     # solve d1 x = t over GF(3) (one solution)
@@ -210,7 +215,9 @@ def main():
         else:
             pred = (np.array(X_aff) @ sol_aff) % 3
             exact = bool(np.all(pred == (np.array(y) % 3)))
-            out_lines.append(f"{key}: affine {'OK' if exact else 'PARTIAL'} {sol_aff.tolist()}")
+            out_lines.append(
+                f"{key}: affine {'OK' if exact else 'PARTIAL'} {sol_aff.tolist()}"
+            )
 
         sol_quad = solve_affine_mod3(X_quad, y)
         if sol_quad is None:

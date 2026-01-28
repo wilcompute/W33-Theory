@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Analyze Z3 edge potential labels vs ray families and symplectic data."""
+
 from __future__ import annotations
 
 import json
+from collections import Counter, defaultdict
 from itertools import product
 from pathlib import Path
-from collections import Counter, defaultdict
 
 import numpy as np
 
@@ -22,9 +23,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -48,7 +49,7 @@ def construct_f3_points():
 
 
 def omega_symp(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
 
 def build_nonorth_edges(rays, tol=1e-8):
@@ -85,7 +86,11 @@ def solve_edge_potential(rays):
         d1[t_idx, e_jk] = 1
         d1[t_idx, e_ik] = -1
         d1[t_idx, e_ij] = 1
-        ip = np.vdot(rays[i], rays[j]) * np.vdot(rays[j], rays[k]) * np.conjugate(np.vdot(rays[i], rays[k]))
+        ip = (
+            np.vdot(rays[i], rays[j])
+            * np.vdot(rays[j], rays[k])
+            * np.conjugate(np.vdot(rays[i], rays[k]))
+        )
         t[t_idx] = phase_to_k(np.angle(ip)) % 3
 
     # solve d1 x = t over GF(3)

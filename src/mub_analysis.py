@@ -15,26 +15,35 @@ But we have |<p|q>|^2 = 1/3 for non-collinear pairs.
 This is NOT a MUB. It's something else. Let me figure out what.
 """
 
-import numpy as np
-from pathlib import Path
-import pandas as pd
 from collections import defaultdict
 from itertools import combinations
+from pathlib import Path
 
-ROOT = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data")
+import numpy as np
+import pandas as pd
+
+ROOT = Path(
+    r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data"
+)
+
 
 def load_rays():
-    df = pd.read_csv(ROOT / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv")
+    df = pd.read_csv(
+        ROOT
+        / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv"
+    )
     V = np.zeros((40, 4), dtype=np.complex128)
     for _, row in df.iterrows():
-        pid = int(row['point_id'])
+        pid = int(row["point_id"])
         for i in range(4):
-            V[pid, i] = complex(str(row[f'v{i}']).replace(' ', ''))
+            V[pid, i] = complex(str(row[f"v{i}"]).replace(" ", ""))
     return V
+
 
 def load_lines():
     df = pd.read_csv(ROOT / "_workbench/02_geometry/W33_line_phase_map.csv")
-    return [tuple(map(int, str(row['point_ids']).split())) for _, row in df.iterrows()]
+    return [tuple(map(int, str(row["point_ids"]).split())) for _, row in df.iterrows()]
+
 
 def inner(V, p, q):
     return np.vdot(V[p], V[q])
@@ -151,7 +160,9 @@ def analyze_incidence_geometry():
     # Actually, let me recount
     for p in range(40):
         if len(lines_per_point[p]) != 4:
-            print(f"  Point {p} is on {len(lines_per_point[p])} lines: {lines_per_point[p]}")
+            print(
+                f"  Point {p} is on {len(lines_per_point[p])} lines: {lines_per_point[p]}"
+            )
 
 
 def analyze_special_bases():
@@ -226,7 +237,7 @@ def analyze_quaternion_action():
 
     phase_decomp = defaultdict(int)
     for p in range(40):
-        for q in range(p+1, 40):
+        for q in range(p + 1, 40):
             if q in col[p]:
                 continue
             z = inner(V, p, q)
@@ -274,8 +285,8 @@ def analyze_quaternion_action():
     for (h4, h3), count in sorted(hol_decomp.items()):
         # h4: 0->1, 1->i, 2->-1, 3->-i
         # h3: 0->1, 1->w, 2->w^2
-        q_part = ['1', 'i', '-1', '-i'][h4]
-        t_part = ['1', 'w', 'w^2'][h3]
+        q_part = ["1", "i", "-1", "-i"][h4]
+        t_part = ["1", "w", "w^2"][h3]
         print(f"  ({h4}, {h3}) = {q_part} * {t_part}: {count} triads")
 
 
@@ -337,6 +348,7 @@ def main():
     analyze_special_bases()
     analyze_quaternion_action()
     analyze_3_fold_structure()
+
 
 if __name__ == "__main__":
     main()

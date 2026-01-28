@@ -127,7 +127,9 @@ INTERPRETATION:
 print(f"NUMERICAL VERIFICATION:")
 print(f"  W33 Formula: α⁻¹ = {float(alpha_inv_corrected):.10f}")
 print(f"  Experiment:  α⁻¹ = {alpha_inv_exp:.10f}")
-print(f"  Agreement:   {(1 - abs(float(alpha_inv_corrected) - alpha_inv_exp)/alpha_inv_exp) * 100:.6f}%")
+print(
+    f"  Agreement:   {(1 - abs(float(alpha_inv_corrected) - alpha_inv_exp)/alpha_inv_exp) * 100:.6f}%"
+)
 print()
 
 # =============================================================================
@@ -135,7 +137,7 @@ print()
 # =============================================================================
 
 print("=" * 80)
-print("PART IV: THE WEINBERG ANGLE")  
+print("PART IV: THE WEINBERG ANGLE")
 print("=" * 80)
 print()
 
@@ -159,7 +161,9 @@ print(f"NUMERICAL VERIFICATION:")
 print(f"  W33 Formula: sin²θ_W = 40/173 = {float(sin2_w33):.6f}")
 print(f"  Experiment:  sin²θ_W = {sin2_exp:.6f} ± 0.00015")
 print(f"  Difference:  {abs(float(sin2_w33) - sin2_exp):.6f}")
-print(f"  Statistical: {abs(float(sin2_w33) - sin2_exp)/0.00015:.2f}σ (0.09σ deviation)")
+print(
+    f"  Statistical: {abs(float(sin2_w33) - sin2_exp)/0.00015:.2f}σ (0.09σ deviation)"
+)
 print()
 
 # =============================================================================
@@ -331,7 +335,9 @@ predictions = [
     ("θ₂₃ (PMNS)", "π/4", 45.0, 45.0, "<5%"),
 ]
 
-print(f"{'Quantity':<15} {'W33 Formula':<20} {'W33 Value':<12} {'Experiment':<12} {'Error':<10}")
+print(
+    f"{'Quantity':<15} {'W33 Formula':<20} {'W33 Value':<12} {'Experiment':<12} {'Error':<10}"
+)
 print("-" * 80)
 for name, formula, w33_val, exp_val, error in predictions:
     print(f"{name:<15} {formula:<20} {w33_val:<12.6f} {exp_val:<12.6f} {error:<10}")

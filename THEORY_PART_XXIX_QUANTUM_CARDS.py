@@ -8,9 +8,10 @@ information system. The 40 "quantum cards" enable cryptography,
 contextuality tests, and quantum computing applications.
 """
 
-import numpy as np
-import math
 import cmath
+import math
+
+import numpy as np
 
 print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -68,6 +69,7 @@ print("SECTION 2: GENERATING THE 40 QUANTUM STATES")
 print("=" * 80)
 print()
 
+
 def gf3_to_complex(x):
     """Map GF(3) element to complex number."""
     if x == 0:
@@ -77,10 +79,11 @@ def gf3_to_complex(x):
     else:  # x == 2
         return omega**2
 
+
 def generate_projective_points():
     """Generate all 40 points of PG(3,3)."""
     points = []
-    
+
     # Iterate over all non-zero vectors in GF(3)^4
     for x0 in range(3):
         for x1 in range(3):
@@ -88,26 +91,28 @@ def generate_projective_points():
                 for x3 in range(3):
                     if (x0, x1, x2, x3) == (0, 0, 0, 0):
                         continue
-                    
+
                     # Normalize: find first non-zero coordinate
                     vec = [x0, x1, x2, x3]
                     first_nonzero = next(i for i, x in enumerate(vec) if x != 0)
-                    
+
                     # Scale so first nonzero is 1
                     scale = vec[first_nonzero]
                     # In GF(3): inverse of 1 is 1, inverse of 2 is 2
                     inv_scale = 1 if scale == 1 else 2
                     normalized = tuple((x * inv_scale) % 3 for x in vec)
-                    
+
                     if normalized not in points:
                         points.append(normalized)
-    
+
     return points
+
 
 def point_to_quantum_state(point):
     """Convert a PG(3,3) point to a normalized quantum state."""
     state = np.array([gf3_to_complex(x) for x in point], dtype=complex)
     return state / np.linalg.norm(state)
+
 
 # Generate all 40 points
 points = generate_projective_points()
@@ -122,7 +127,9 @@ print()
 for i in range(10):
     p = points[i]
     s = states[i]
-    print(f"  {i+1:2d}. [{p[0]},{p[1]},{p[2]},{p[3]}] → |ψ⟩ = [{s[0]:.3f}, {s[1]:.3f}, {s[2]:.3f}, {s[3]:.3f}]")
+    print(
+        f"  {i+1:2d}. [{p[0]},{p[1]},{p[2]},{p[3]}] → |ψ⟩ = [{s[0]:.3f}, {s[1]:.3f}, {s[2]:.3f}, {s[3]:.3f}]"
+    )
 print("  ...")
 print()
 
@@ -145,6 +152,7 @@ For the Witting configuration, orthogonality is more subtle than ⟨ψ|φ⟩ = 0
 The lines are defined by the finite geometry structure.
 """)
 
+
 def normalize_point(vec):
     """Normalize a point in projective space over GF(3)."""
     if vec == (0, 0, 0, 0):
@@ -154,19 +162,20 @@ def normalize_point(vec):
     inv_scale = 1 if scale == 1 else 2  # Inverse in GF(3)
     return tuple((x * inv_scale) % 3 for x in vec)
 
+
 def find_lines(points):
     """Find all lines in PG(3,3) - each line has 4 collinear points."""
     lines = []
     point_set = set(points)
-    
+
     # A line in PG(3,3) is the set of points: {s*P + t*Q : s,t ∈ GF(3), not both 0}
     # where P, Q are two distinct points that span the line
-    
+
     for i, p1 in enumerate(points):
         for j, p2 in enumerate(points):
             if j <= i:
                 continue
-            
+
             # Generate all points on the line through p1 and p2
             line_points = set()
             for s in range(3):
@@ -178,14 +187,15 @@ def find_lines(points):
                     normalized = normalize_point(new_point)
                     if normalized and normalized in point_set:
                         line_points.add(normalized)
-            
+
             # A valid line in PG(3,3) contains exactly 4 points
             if len(line_points) == 4:
                 line = frozenset(line_points)
                 if line not in [frozenset(l) for l in lines]:
                     lines.append(tuple(sorted(line_points)))
-    
+
     return lines
+
 
 lines = find_lines(points)
 print(f"Found {len(lines)} lines in PG(3,3)")
@@ -227,7 +237,7 @@ n = len(states)
 gram = np.zeros((n, n))
 for i in range(n):
     for j in range(n):
-        gram[i, j] = abs(np.vdot(states[i], states[j]))**2
+        gram[i, j] = abs(np.vdot(states[i], states[j])) ** 2
 
 print(f"Gram matrix shape: {gram.shape}")
 print()
@@ -317,7 +327,9 @@ print()
 if avg_lines_per_point > 0:
     print(f"  If k points are 'true', they cover k × {avg_lines_per_point:.1f} lines")
     print(f"  Need to cover exactly {total_lines} lines")
-    print(f"  Required: k = {total_lines}/{avg_lines_per_point:.1f} = {total_lines/avg_lines_per_point:.2f}")
+    print(
+        f"  Required: k = {total_lines}/{avg_lines_per_point:.1f} = {total_lines/avg_lines_per_point:.2f}"
+    )
 else:
     print(f"  (Line structure computed using full W33 geometry)")
     print(f"  In full W33: 40 lines, each point on 4 lines")
@@ -386,7 +398,9 @@ print()
 # Each state is in ~4 lines, total 40*4 state-line incidences = 160
 # Equals 4*40 = 160 ✓ (each line has 4 states, 40 lines = 160)
 
-lines_per_state = avg_lines_per_point if avg_lines_per_point > 0 else 4.0  # W33 has 4 lines per point
+lines_per_state = (
+    avg_lines_per_point if avg_lines_per_point > 0 else 4.0
+)  # W33 has 4 lines per point
 total_contexts = len(lines) if len(lines) > 0 else 40  # W33 has 40 lines
 
 # Probability that Bob chooses Alice's context
@@ -592,7 +606,9 @@ for i in range(min(40, len(states))):
     p = points[i]
     s = states[i]
     # Format state nicely
-    state_str = f"[{s[0].real:+.3f}{s[0].imag:+.3f}j, {s[1].real:+.3f}{s[1].imag:+.3f}j, ...]"
+    state_str = (
+        f"[{s[0].real:+.3f}{s[0].imag:+.3f}j, {s[1].real:+.3f}{s[1].imag:+.3f}j, ...]"
+    )
     print(f"  {i+1:4d} |  [{p[0]},{p[1]},{p[2]},{p[3]}]          |  {state_str}")
     if i == 9:
         print("  -----+------------------+----------------------------------------")

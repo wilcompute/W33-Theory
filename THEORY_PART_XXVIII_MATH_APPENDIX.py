@@ -7,9 +7,9 @@ Complete mathematical foundations, proofs, and derivations for W33 Theory.
 This is the rigorous technical backbone of the theory.
 """
 
+import itertools
 import math
 from fractions import Fraction
-import itertools
 
 print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -360,7 +360,7 @@ The structure group of J₃(𝕆) (preserving determinant) is E₆.
   The 27-dim representation of E₆ is exactly J₃(𝕆)!
 """)
 
-dim_j3o = 3 + 3*8
+dim_j3o = 3 + 3 * 8
 print(f"  dim(J₃(𝕆)) = 3 + 3×8 = {dim_j3o} = 27  ✓")
 print()
 
@@ -648,6 +648,7 @@ Step 3: Numerical estimate
 """)
 
 import math
+
 exp_81 = math.exp(81)
 # Convert to years: need fundamental time scale
 # If fundamental time = Planck time = 5.4 × 10⁻⁴⁴ s
@@ -771,7 +772,7 @@ m_mu = 105.66  # MeV
 m_tau = 1776.86  # MeV
 
 Q_num = m_e + m_mu + m_tau
-Q_den = (math.sqrt(m_e) + math.sqrt(m_mu) + math.sqrt(m_tau))**2
+Q_den = (math.sqrt(m_e) + math.sqrt(m_mu) + math.sqrt(m_tau)) ** 2
 Q = Q_num / Q_den
 
 print(f"  Koide Q = {Q:.6f}")

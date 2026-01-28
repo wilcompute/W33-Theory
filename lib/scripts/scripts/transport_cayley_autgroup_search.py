@@ -10,22 +10,29 @@ import pandas as pd
 import scipy.sparse as sp
 from sage.all import Graph  # type: ignore
 
-
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUT_DIR = DATA / "_workbench" / "05_symmetry"
 
-COIN_NPZ = DATA / "_toe" / "projector_recon_20260110" / (
-    "N12_58_sector_coin_C24_K4_by_k_sparse_20260109T205353Z.npz"
+COIN_NPZ = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / ("N12_58_sector_coin_C24_K4_by_k_sparse_20260109T205353Z.npz")
 )
-H_TRANSPORT = DATA / "_toe" / "projector_recon_20260110" / (
-    "N12_58_orbit0_H_transport_59x24_sparse_20260109T205353Z.npz"
+H_TRANSPORT = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / ("N12_58_orbit0_H_transport_59x24_sparse_20260109T205353Z.npz")
 )
 
 
 def load_csr_npz(path: Path) -> sp.csr_matrix:
     z = np.load(path, allow_pickle=True)
-    return sp.csr_matrix((z["data"], z["indices"], z["indptr"]), shape=tuple(z["shape"]))
+    return sp.csr_matrix(
+        (z["data"], z["indices"], z["indptr"]), shape=tuple(z["shape"])
+    )
 
 
 def load_coin_graph():

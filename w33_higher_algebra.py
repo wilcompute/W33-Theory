@@ -9,9 +9,10 @@ structure underlying W33?
 This could be the key to "universifying" all algebra.
 """
 
+from itertools import combinations, product
+
 import numpy as np
-from numpy import sqrt, pi, exp
-from itertools import product, combinations
+from numpy import exp, pi, sqrt
 
 print("=" * 80)
 print("W33 AND HIGHER ALGEBRA")

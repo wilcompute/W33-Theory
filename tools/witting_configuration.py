@@ -11,12 +11,14 @@ This script:
 3. Computes which ray-pairs are orthogonal (W33 edges)
 4. Establishes the edge <-> root bijection
 """
+
 from __future__ import annotations
 
 import json
 from collections import Counter, defaultdict
-from itertools import product, combinations
+from itertools import combinations, product
 from pathlib import Path
+
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -97,7 +99,7 @@ def construct_witting_vertices():
 
 def omega_inner_product(p1, p2):
     """Symplectic form omega on F_3^4."""
-    return (p1[0]*p2[2] - p1[2]*p2[0] + p1[1]*p2[3] - p1[3]*p2[1]) % 3
+    return (p1[0] * p2[2] - p1[2] * p2[0] + p1[1] * p2[3] - p1[3] * p2[1]) % 3
 
 
 def check_ray_orthogonality(rays, proj_points):
@@ -110,7 +112,7 @@ def check_ray_orthogonality(rays, proj_points):
     edges = []
 
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega_inner_product(proj_points[i], proj_points[j]) == 0:
                 edges.append((i, j))
 
@@ -119,7 +121,7 @@ def check_ray_orthogonality(rays, proj_points):
 
 def compute_hermitian_inner_product(v1, v2):
     """Compute |<v1, v2>|^2."""
-    return abs(np.vdot(v1, v2))**2
+    return abs(np.vdot(v1, v2)) ** 2
 
 
 def analyze_vertex_adjacency(all_vertices):
@@ -133,7 +135,7 @@ def analyze_vertex_adjacency(all_vertices):
     # Sample inner products
     inner_prods = []
     for i in range(min(100, n)):
-        for j in range(i+1, min(100, n)):
+        for j in range(i + 1, min(100, n)):
             v1 = all_vertices[i][2]
             v2 = all_vertices[j][2]
             ip = compute_hermitian_inner_product(v1, v2)
@@ -183,10 +185,10 @@ def construct_e8_from_witting():
 
     # Type 1: (+-1, +-1, 0, 0, 0, 0, 0, 0) and permutations: 112 roots
     for i in range(8):
-        for j in range(i+1, 8):
+        for j in range(i + 1, 8):
             for s1 in [1, -1]:
                 for s2 in [1, -1]:
-                    r = [0.0]*8
+                    r = [0.0] * 8
                     r[i], r[j] = s1, s2
                     e8_roots.append(tuple(r))
 
@@ -241,11 +243,13 @@ def find_bijection_via_fingerprint(edges, proj_points, e8_roots):
     def edge_fingerprint(e_idx):
         i, j = edges[e_idx]
         # Count edges sharing vertex i
-        share_i = sum(1 for k, (a, b) in enumerate(edges)
-                     if k != e_idx and (a == i or b == i))
+        share_i = sum(
+            1 for k, (a, b) in enumerate(edges) if k != e_idx and (a == i or b == i)
+        )
         # Count edges sharing vertex j
-        share_j = sum(1 for k, (a, b) in enumerate(edges)
-                     if k != e_idx and (a == j or b == j))
+        share_j = sum(
+            1 for k, (a, b) in enumerate(edges) if k != e_idx and (a == j or b == j)
+        )
         # Count edges in "triangle" (sharing both endpoints with another edge)
         triangles = 0
         for k, (a, b) in enumerate(edges):
@@ -273,7 +277,7 @@ def find_bijection_via_fingerprint(edges, proj_points, e8_roots):
         inner_prods = []
         for k, other in enumerate(e8_roots):
             if k != r_idx:
-                ip = sum(a*b for a, b in zip(root, other))
+                ip = sum(a * b for a, b in zip(root, other))
                 inner_prods.append(round(ip, 2))
         return tuple(sorted(Counter(inner_prods).items()))
 
@@ -296,7 +300,9 @@ def main():
 
     print(f"\nConstructed:")
     print(f"  {len(rays)} rays (W33 vertices)")
-    print(f"  {len(all_vertices)} Witting vertices ({len(all_vertices)//len(rays)} per ray)")
+    print(
+        f"  {len(all_vertices)} Witting vertices ({len(all_vertices)//len(rays)} per ray)"
+    )
 
     # Check W33 edges
     edges = check_ray_orthogonality(rays, proj_points)
@@ -404,7 +410,7 @@ encodes E8's root structure in a group-equivariant way.
 
     out_path = ROOT / "artifacts" / "witting_configuration.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(results, indent=2), encoding='utf-8')
+    out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(f"\nWrote {out_path}")
 
 

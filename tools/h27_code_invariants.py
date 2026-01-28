@@ -12,11 +12,12 @@ Outputs:
 - artifacts/h27_code_invariants.json
 - artifacts/h27_code_invariants.md
 """
+
 from __future__ import annotations
 
 import json
 from collections import Counter
-from itertools import permutations, product, combinations
+from itertools import combinations, permutations, product
 from pathlib import Path
 
 import numpy as np
@@ -47,11 +48,11 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
 

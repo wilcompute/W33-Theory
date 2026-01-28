@@ -3,9 +3,11 @@
 
 Outputs a CSV with magnitude and phase (radians and degrees) for each component.
 """
+
 from __future__ import annotations
 
 from pathlib import Path
+
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,11 +29,11 @@ def construct_witting_40_rays():
 
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
             labels.append(f"(0,1,-w^{mu},w^{nu})/sqrt3")
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
             labels.append(f"(1,0,-w^{mu},-w^{nu})/sqrt3")
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             labels.append(f"(1,-w^{mu},0,w^{nu})/sqrt3")
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
             labels.append(f"(1,w^{mu},w^{nu},0)/sqrt3")
@@ -49,7 +51,7 @@ def main():
                 amp = abs(v[k])
                 phase = np.angle(v[k])
                 f.write(
-                    f"{i},\"{labels[i]}\",{k},{amp:.8f},{phase:.8f},{np.degrees(phase):.4f}\n"
+                    f'{i},"{labels[i]}",{k},{amp:.8f},{phase:.8f},{np.degrees(phase):.4f}\n'
                 )
 
     print(f"Wrote {out_path}")

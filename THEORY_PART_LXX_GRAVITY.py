@@ -12,21 +12,22 @@ Author: Wil Dahn
 Date: January 2026
 """
 
-import numpy as np
-import math
 import json
+import math
 
-print("="*70)
+import numpy as np
+
+print("=" * 70)
 print("W33 THEORY PART LXX: GRAVITY FROM W33")
-print("="*70)
+print("=" * 70)
 
 # =============================================================================
 # SECTION 1: THE HIERARCHY PROBLEM
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 1: THE HIERARCHY PROBLEM")
-print("="*70)
+print("=" * 70)
 
 print("""
 THE FUNDAMENTAL MYSTERY:
@@ -61,9 +62,9 @@ print(f"Ratio M_P/M_W = {M_Planck/M_W:.3e}")
 # SECTION 2: W33 NUMBERS AND LARGE RATIOS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 2: W33 AND LARGE NUMBERS")
-print("="*70)
+print("=" * 70)
 
 print("""
 W33 generates large numbers through exponentiation:
@@ -94,9 +95,9 @@ print(f"Ratio: {planck_ratio / M_Planck:.2f}")
 # SECTION 3: THE PLANCK MASS FORMULA
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 3: PLANCK MASS FROM W33")
-print("="*70)
+print("=" * 70)
 
 print("""
 HYPOTHESIS: The Planck mass is determined by W33:
@@ -131,9 +132,9 @@ print(f"Match? {abs(ratio - (1 + 1/137.036)) < 0.005}")
 # SECTION 4: THE ELECTROWEAK SCALE
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 4: ELECTROWEAK SCALE FROM W33")
-print("="*70)
+print("=" * 70)
 
 print("""
 The Higgs VEV v = 246 GeV sets the electroweak scale.
@@ -167,9 +168,9 @@ print(f"Error: {abs(v_higgs_w33 - v_higgs)/v_higgs * 100:.2f}%")
 # SECTION 5: THE W AND Z MASSES
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 5: W AND Z MASSES")
-print("="*70)
+print("=" * 70)
 
 print("""
 The W and Z boson masses are:
@@ -196,7 +197,7 @@ print(f"Experimental M_W = {M_W:.3f} GeV")
 print(f"Error: {abs(M_W_w33 - M_W)/M_W * 100:.1f}%")
 
 # Z mass
-sin2_thetaW = 40/173
+sin2_thetaW = 40 / 173
 cos2_thetaW = 1 - sin2_thetaW
 cos_thetaW = math.sqrt(cos2_thetaW)
 M_Z_w33 = M_W_w33 / cos_thetaW
@@ -209,9 +210,9 @@ print(f"Error: {abs(M_Z_w33 - M_Z)/M_Z * 100:.1f}%")
 # SECTION 6: THE HIERARCHY EXPLAINED
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 6: THE HIERARCHY EXPLAINED")
-print("="*70)
+print("=" * 70)
 
 print("""
 =======================================================
@@ -254,9 +255,9 @@ print(f"Ratio: {hierarchy_exp / hierarchy_w33:.1f}")
 # SECTION 7: NEWTON'S CONSTANT
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 7: NEWTON'S CONSTANT G")
-print("="*70)
+print("=" * 70)
 
 print("""
 Newton's gravitational constant:
@@ -279,7 +280,7 @@ FORMULA:
 This is EXACTLY the inverse square of the Planck mass!
 """)
 
-G_natural_units = 1 / (3**40)**2
+G_natural_units = 1 / (3**40) ** 2
 G_actual = 1 / M_Planck**2
 
 print(f"W33: G = 3^(-80) = {G_natural_units:.3e} GeV^-2")
@@ -290,9 +291,9 @@ print(f"Ratio: {G_actual / G_natural_units:.2f}")
 # SECTION 8: THE COMPLETE MASS SPECTRUM
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 8: MASS SPECTRUM FROM W33")
-print("="*70)
+print("=" * 70)
 
 print("""
 W33 determines ALL fundamental mass scales:
@@ -314,11 +315,11 @@ All mass scales are powers of 3!
 
 # Check various scales
 scales = {
-    'Planck': (40, 1.22e19),
-    'GUT': (33, 2e16),
-    'Intermediate': (24, 3e11),
-    'Electroweak': (4, 81),
-    'QCD': (-1, 0.33),
+    "Planck": (40, 1.22e19),
+    "GUT": (33, 2e16),
+    "Intermediate": (24, 3e11),
+    "Electroweak": (4, 81),
+    "QCD": (-1, 0.33),
 }
 
 print("\nVerification:")
@@ -327,15 +328,17 @@ for name, (power, exp_val) in scales.items():
     if power < 0:
         w33_val = 3**power
     ratio = exp_val / w33_val if w33_val != 0 else 0
-    print(f"  {name}: 3^{power} = {w33_val:.2e} GeV (exp: {exp_val:.2e}, ratio: {ratio:.1f})")
+    print(
+        f"  {name}: 3^{power} = {w33_val:.2e} GeV (exp: {exp_val:.2e}, ratio: {ratio:.1f})"
+    )
 
 # =============================================================================
 # SECTION 9: THE COSMOLOGICAL CONSTANT
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 9: THE COSMOLOGICAL CONSTANT")
-print("="*70)
+print("=" * 70)
 
 print("""
 The cosmological constant problem:
@@ -375,9 +378,9 @@ print(f"Match? Ratio = {Lambda_ratio / 3**(-64):.1f}")
 # SECTION 10: GRAND SYNTHESIS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 10: GRAND SYNTHESIS")
-print("="*70)
+print("=" * 70)
 
 print("""
 =======================================================
@@ -418,40 +421,38 @@ the difference between 40 vertices and 4 (eigenvalue).
 # =============================================================================
 
 results = {
-    'Planck_mass': {
-        'formula': '3^40 GeV',
-        'prediction': 3**40,
-        'experimental': 1.221e19,
-        'ratio': 3**40 / 1.221e19
+    "Planck_mass": {
+        "formula": "3^40 GeV",
+        "prediction": 3**40,
+        "experimental": 1.221e19,
+        "ratio": 3**40 / 1.221e19,
     },
-    'W_mass': {
-        'formula': '3^4 GeV',
-        'prediction': 81,
-        'experimental': 80.379,
-        'error_percent': abs(81 - 80.379)/80.379 * 100
+    "W_mass": {
+        "formula": "3^4 GeV",
+        "prediction": 81,
+        "experimental": 80.379,
+        "error_percent": abs(81 - 80.379) / 80.379 * 100,
     },
-    'Higgs_VEV': {
-        'formula': '3(3^4 + 1) GeV',
-        'prediction': 246,
-        'experimental': 246.22,
-        'error_percent': abs(246 - 246.22)/246.22 * 100
+    "Higgs_VEV": {
+        "formula": "3(3^4 + 1) GeV",
+        "prediction": 246,
+        "experimental": 246.22,
+        "error_percent": abs(246 - 246.22) / 246.22 * 100,
     },
-    'hierarchy': {
-        'formula': '3^36',
-        'W33_value': 3**36,
-        'experimental': M_Planck/M_W
+    "hierarchy": {
+        "formula": "3^36",
+        "W33_value": 3**36,
+        "experimental": M_Planck / M_W,
     },
-    'Newton_G': {
-        'formula': '3^(-80) in natural units'
-    }
+    "Newton_G": {"formula": "3^(-80) in natural units"},
 }
 
-with open('PART_LXX_gravity.json', 'w') as f:
+with open("PART_LXX_gravity.json", "w") as f:
     json.dump(results, f, indent=2, default=int)
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PART LXX CONCLUSIONS")
-print("="*70)
+print("=" * 70)
 
 print("""
 GRAVITY FROM W33!
@@ -476,4 +477,4 @@ It's built into the W33 graph structure:
 
 Results saved to PART_LXX_gravity.json
 """)
-print("="*70)
+print("=" * 70)

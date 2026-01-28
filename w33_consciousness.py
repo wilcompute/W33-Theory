@@ -167,7 +167,9 @@ print(f"  Average connectivity: {n_connections / n_points:.1f} per point")
 # This is high!
 print(f"\n  For comparison:")
 print(f"    Brain neurons: ~10¹¹ with ~10¹⁴ connections")
-print(f"    W33 has {n_connections}/{n_points} = {n_connections/n_points:.0f}x overdetermined!")
+print(
+    f"    W33 has {n_connections}/{n_points} = {n_connections/n_points:.0f}x overdetermined!"
+)
 
 # =============================================================================
 # PART 5: OBJECTIVE REDUCTION

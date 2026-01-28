@@ -9,6 +9,7 @@ Outputs:
 - artifacts/witting_pg32_quadratic_rule_search.json
 - artifacts/witting_pg32_quadratic_rule_search.md
 """
+
 from __future__ import annotations
 
 import json
@@ -19,9 +20,11 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT_JSON = ROOT / "artifacts" / "witting_pg32_quadratic_rule_search.json"
 OUT_MD = ROOT / "artifacts" / "witting_pg32_quadratic_rule_search.md"
 
+
 # GF(4) arithmetic
 def gf4_add(a: int, b: int) -> int:
     return a ^ b
+
 
 def gf4_mul(a: int, b: int) -> int:
     if a == 0 or b == 0:
@@ -35,11 +38,14 @@ def gf4_mul(a: int, b: int) -> int:
     c1 = (c1 + c2) % 2
     return (c1 << 1) | c0
 
+
 def gf4_square(a: int) -> int:
     return gf4_mul(a, a)
 
+
 def gf4_trace(a: int) -> int:
     return gf4_add(a, gf4_square(a)) & 1
+
 
 def gf4_inv(a: int) -> int:
     if a == 0:
@@ -49,9 +55,11 @@ def gf4_inv(a: int) -> int:
             return b
     raise ZeroDivisionError
 
+
 omega = 2
 omega2 = 3
 omega_powers = [1, omega, omega2]
+
 
 def build_base_states():
     states = []
@@ -68,6 +76,7 @@ def build_base_states():
         states.append((1, w_mu, w_nu, 0))
     return states
 
+
 def normalize_projective(v):
     for x in v:
         if x != 0:
@@ -75,14 +84,18 @@ def normalize_projective(v):
             return tuple(gf4_mul(inv, xi) for xi in v)
     return None
 
+
 def trace_map(v):
     return tuple(gf4_trace(x) for x in v)
+
 
 def tuple_to_bits(t):
     return (t[0] << 3) | (t[1] << 2) | (t[2] << 1) | t[3]
 
+
 def build_pg32_points():
     return [v for v in range(1, 16)]
+
 
 def build_pg32_lines(points):
     lines = set()
@@ -95,9 +108,10 @@ def build_pg32_lines(points):
             lines.add(line)
     return sorted(lines)
 
+
 def q_eval(coeffs, x):
     # coeffs: 6 cross, 4 linear, 1 constant
-    (a01, a02, a03, a12, a13, a23, b0, b1, b2, b3, c) = coeffs
+    a01, a02, a03, a12, a13, a23, b0, b1, b2, b3, c = coeffs
     x0 = (x >> 3) & 1
     x1 = (x >> 2) & 1
     x2 = (x >> 1) & 1
@@ -115,6 +129,7 @@ def q_eval(coeffs, x):
     val ^= b3 & x3
     val ^= c
     return val
+
 
 def main():
     # Build hit lines
@@ -174,17 +189,35 @@ def main():
             overlap = len(selected & hit_line_set)
             union = len(selected | hit_line_set)
             jaccard = overlap / union if union else 0.0
-            if overlap > best_overlap or (overlap == best_overlap and jaccard > best_jaccard):
+            if overlap > best_overlap or (
+                overlap == best_overlap and jaccard > best_jaccard
+            ):
                 best_overlap = overlap
                 best_jaccard = jaccard
-                best_records = [{"subset": sorted(subset), "coeffs": coeffs, "overlap": overlap, "jaccard": jaccard, "selected": len(selected)}]
+                best_records = [
+                    {
+                        "subset": sorted(subset),
+                        "coeffs": coeffs,
+                        "overlap": overlap,
+                        "jaccard": jaccard,
+                        "selected": len(selected),
+                    }
+                ]
             elif overlap == best_overlap and abs(jaccard - best_jaccard) < 1e-9:
                 if len(best_records) < 5:
-                    best_records.append({"subset": sorted(subset), "coeffs": coeffs, "overlap": overlap, "jaccard": jaccard, "selected": len(selected)})
+                    best_records.append(
+                        {
+                            "subset": sorted(subset),
+                            "coeffs": coeffs,
+                            "overlap": overlap,
+                            "jaccard": jaccard,
+                            "selected": len(selected),
+                        }
+                    )
 
     results = {
         "hit_lines": len(hit_line_set),
-        "quadratic_forms": 2 ** 11,
+        "quadratic_forms": 2**11,
         "exact_rule_matches": len(exact_records),
         "best_overlap": best_overlap,
         "best_jaccard": best_jaccard,
@@ -200,13 +233,18 @@ def main():
     lines.append(f"- hit lines: {results['hit_lines']}")
     lines.append(f"- quadratic forms tested: {results['quadratic_forms']}")
     lines.append(f"- exact matches: {results['exact_rule_matches']}")
-    lines.append(f"- best overlap: {results['best_overlap']} (Jaccard {results['best_jaccard']:.3f})")
+    lines.append(
+        f"- best overlap: {results['best_overlap']} (Jaccard {results['best_jaccard']:.3f})"
+    )
     if results["best_examples"]:
         ex = results["best_examples"][0]
-        lines.append(f"- example best subset: {ex['subset']} with selected={ex['selected']}")
+        lines.append(
+            f"- example best subset: {ex['subset']} with selected={ex['selected']}"
+        )
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"Wrote {OUT_JSON}")
     print(f"Wrote {OUT_MD}")
+
 
 if __name__ == "__main__":
     main()

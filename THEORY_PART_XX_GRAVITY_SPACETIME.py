@@ -9,9 +9,10 @@ How does SPACETIME emerge from W33?
 The deepest questions of physics!
 """
 
-import numpy as np
-from fractions import Fraction
 import math
+from fractions import Fraction
+
+import numpy as np
 
 print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -284,6 +285,7 @@ print()
 
 # Check if any exponential works
 import math
+
 print("Exponential explorations:")
 print(f"  exp(40) = {math.exp(40):.2e}")
 print(f"  exp(81) = {math.exp(81):.2e}")

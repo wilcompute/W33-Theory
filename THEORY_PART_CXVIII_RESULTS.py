@@ -15,9 +15,9 @@ KEY FINDINGS:
    - The vertex itself: 1
    - Neighbors of v: 12 (= degree k)
    - Non-neighbors of v: 27 (= 40 - 1 - 12)
-   
+
    Total: 40 = 1 + 12 + 27
-   
+
    This matches:
    - 1 = singlet (the "origin")
    - 12 = Reye configuration points
@@ -29,10 +29,10 @@ KEY FINDINGS:
    - SRG(12, 2, 1, 0)
    - 12 vertices, 12 edges
    - 2-regular (each vertex has degree 2)
-   
+
    This is the "cocktail party graph" = 6K₂ complement
    = 6 disjoint edges!
-   
+
    Each neighbor pair shares exactly λ = 2 common neighbors with v₀
    (by the SRG parameter λ = 2 of W33)
 
@@ -42,7 +42,7 @@ KEY FINDINGS:
    - 12 with multiplicity 1 (the degree)
    - 2 with multiplicity 24 (= D4 roots!)
    - -4 with multiplicity 15
-   
+
    The multiplicity 24 eigenspace encodes D4 structure!
 
 4. REYE-LIKE SUBSTRUCTURE
@@ -54,7 +54,7 @@ KEY FINDINGS:
 5. AUTOMORPHISM FACTORIZATION
    ---------------------------
    |Aut(W33)| = 51,840 = 192 × 270
-   
+
    192 = |W(D4)| appears as the index of D4-like substructures
    270 = 27 × 10 = Albert × SO(10) vector
 
@@ -86,7 +86,7 @@ CONCLUSION:
 
 The W33 graph literally encodes:
 - The Albert algebra (27 non-neighbors)
-- The Reye configuration (12 neighbors)  
+- The Reye configuration (12 neighbors)
 - The D4/triality structure (eigenvalue multiplicity 24)
 
 All unified in a single 40-vertex strongly regular graph
@@ -108,37 +108,37 @@ results = {
             "vertex": 1,
             "neighbors": 12,
             "non_neighbors": 27,
-            "verified": True
+            "verified": True,
         },
         "neighbor_subgraph": {
             "type": "SRG(12, 2, 1, 0)",
             "vertices": 12,
             "edges": 12,
             "regular_degree": 2,
-            "structure": "6 disjoint edges (cocktail party complement)"
+            "structure": "6 disjoint edges (cocktail party complement)",
         },
         "eigenvalues": {
             "spectrum": [(12, 1), (2, 24), (-4, 15)],
             "d4_multiplicity": 24,
-            "matches_d4_roots": True
+            "matches_d4_roots": True,
         },
         "automorphism": {
             "order": 51840,
             "factorization": "192 × 270",
             "d4_factor": 192,
-            "e6_quotient": 270
-        }
+            "e6_quotient": 270,
+        },
     },
     "interpretation": {
         "1": "singlet / origin / identity",
         "12": "Reye configuration / D4 triality / neighbors",
-        "27": "Albert algebra J³(𝕆) / E6 fundamental / non-neighbors"
+        "27": "Albert algebra J³(𝕆) / E6 fundamental / non-neighbors",
     },
-    "conclusion": "W33 explicitly encodes Albert + Reye + singlet structure"
+    "conclusion": "W33 explicitly encodes Albert + Reye + singlet structure",
 }
 
 # Save
-with open('PART_CXVIII_explicit_results.json', 'w') as f:
+with open("PART_CXVIII_explicit_results.json", "w") as f:
     json.dump(results, f, indent=2, default=int)
 
 print("=" * 70)

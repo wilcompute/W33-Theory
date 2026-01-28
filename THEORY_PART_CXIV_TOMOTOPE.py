@@ -27,7 +27,7 @@ print("-" * 70)
 # |W(D_n)| = 2^(n-1) * n!
 # For D4: 2^3 * 4! = 8 * 24 = 192
 n = 4
-order_d4 = (2**(n-1)) * (1*2*3*4)  # 2^3 * 4! = 8 * 24 = 192
+order_d4 = (2 ** (n - 1)) * (1 * 2 * 3 * 4)  # 2^3 * 4! = 8 * 24 = 192
 
 print(f"\n  D4 = SO(8) root system")
 print(f"  |W(D4)| = 2^(n-1) × n! = 2³ × 4!")
@@ -37,12 +37,12 @@ print(f"         = 8 × 24 = {order_d4}")
 print(f"\n  Prime factorization: 192 = 2⁶ × 3")
 print(f"  Check: 64 × 3 = {64 * 3}")
 
-results['w_d4_order'] = order_d4
+results["w_d4_order"] = order_d4
 
 # D4 roots: 2n(n-1) = 2*4*3 = 24
 d4_roots = 2 * n * (n - 1)
 print(f"\n  Number of D4 roots: 2n(n-1) = {d4_roots}")
-results['d4_roots'] = d4_roots
+results["d4_roots"] = d4_roots
 
 # =========================================================================
 # SECTION 2: The Tomotope
@@ -69,8 +69,8 @@ print("""
   - Root systems (D4 = SO(8))
 """)
 
-results['tomotope_flags'] = 192
-results['connection'] = "tomotope_flags = |W(D4)| = 192"
+results["tomotope_flags"] = 192
+results["connection"] = "tomotope_flags = |W(D4)| = 192"
 
 # =========================================================================
 # SECTION 3: The 24-Cell Connection
@@ -99,7 +99,7 @@ print(f"""
 """)
 
 print(f"  Verification: {order_d4} × 6 = {order_d4 * 6} ✓")
-results['24cell_symmetry'] = cell24_symmetry
+results["24cell_symmetry"] = cell24_symmetry
 
 # =========================================================================
 # SECTION 4: Key Decompositions of 192
@@ -157,7 +157,7 @@ print(f"""
     51840 = 192 × 270
 """)
 
-results['quotient'] = quotient
+results["quotient"] = quotient
 
 print(f"""
   W33 EIGENVALUE MULTIPLICITIES:
@@ -225,11 +225,11 @@ print(f"""
   encoding the fundamental triality that gives rise to generations.
 """)
 
-results['hierarchy'] = {
-    'W_D4': order_d4,
-    'W_E6': w_e6,
-    'W_E8': w_e8,
-    'E6_over_D4': quotient
+results["hierarchy"] = {
+    "W_D4": order_d4,
+    "W_E6": w_e6,
+    "W_E8": w_e8,
+    "E6_over_D4": quotient,
 }
 
 # =========================================================================
@@ -269,12 +269,14 @@ print(f"""
 """)
 
 # Save results
-results['timestamp'] = datetime.now().isoformat()
-results['part'] = 'CXIV'
-results['part_number'] = 114
-results['key_insight'] = 'Tomotope 192 flags = |W(D4)| = triality origin of 3 generations'
+results["timestamp"] = datetime.now().isoformat()
+results["part"] = "CXIV"
+results["part_number"] = 114
+results["key_insight"] = (
+    "Tomotope 192 flags = |W(D4)| = triality origin of 3 generations"
+)
 
-with open('PART_CXIV_tomotope_connection.json', 'w') as f:
+with open("PART_CXIV_tomotope_connection.json", "w") as f:
     json.dump(results, f, indent=2, default=int)
 
 print("Results saved to: PART_CXIV_tomotope_connection.json")

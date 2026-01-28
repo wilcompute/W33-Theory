@@ -4,10 +4,12 @@
 We use the ambient space model for E8 roots so Weyl group actions apply.
 Outputs an artifact with orbit sizes and sample reps.
 """
+
 from __future__ import annotations
 
 import json
 from collections import Counter, deque
+
 from sage.all import RootSystem, WeylGroup
 
 
@@ -52,11 +54,11 @@ def vec_to_list(v):
 
 
 def main():
-    R8 = RootSystem(['E', 8]).ambient_space()
+    R8 = RootSystem(["E", 8]).ambient_space()
     roots = list(R8.roots())
     print(f"E8 roots: {len(roots)}")
 
-    W8 = WeylGroup(['E', 8])
+    W8 = WeylGroup(["E", 8])
     s = W8.simple_reflections()
 
     # Subset (1..6) yields W(E6) (order 51840)
@@ -98,7 +100,7 @@ def main():
     }
 
     with open("artifacts/we6_orbits_on_e8_roots.json", "w", encoding="utf-8") as f:
-        json.dump(out, f, indent=2)
+        json.dump(out, f, indent=2, default=str)
 
     print("Wrote artifacts/we6_orbits_on_e8_roots.json")
 

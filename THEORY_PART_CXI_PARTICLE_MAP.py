@@ -15,11 +15,13 @@ This part develops the explicit mapping:
 With three generations from triality: 3 × 27 = 81 states.
 """
 
-import numpy as np
-from itertools import combinations, product
+import json
 from collections import Counter
 from datetime import datetime
-import json
+from itertools import combinations, product
+
+import numpy as np
+
 
 def header(title):
     """Print section header."""
@@ -29,20 +31,21 @@ def header(title):
     print("=" * 70)
     print()
 
+
 def main():
     header("W33 THEORY - PART CXI: PARTICLE ASSIGNMENT MAP")
     print("Part 111")
     print()
     print("Mapping W33's 40 vertices to the particles of Nature")
     print()
-    
+
     results = {}
-    
+
     # =====================================================================
     # SECTION 1: The Standard Model Particle Content
     # =====================================================================
     header("SECTION 1: STANDARD MODEL PARTICLE CONTENT")
-    
+
     print("FERMIONS (spin 1/2):")
     print("-" * 50)
     print()
@@ -63,7 +66,7 @@ def main():
     print("  Each charged lepton: 2 chiralities = 2 states")
     print("  Each neutrino: 1 or 2 states (if right-handed exists)")
     print()
-    
+
     print("COUNTING ONE GENERATION:")
     print("-" * 50)
     print()
@@ -76,9 +79,9 @@ def main():
     print("         12 + 2 + 2 = 16 (with nu_R)")
     print()
     print("  The 16 of SO(10) includes right-handed neutrino!")
-    
+
     results["sm_fermions_per_gen"] = 16
-    
+
     print()
     print("GAUGE BOSONS (spin 1):")
     print("-" * 50)
@@ -91,9 +94,9 @@ def main():
     print("  Total: 8 + 2 + 1 + 1 = 12")
     print()
     print("  This is k = 12 in W33!")
-    
+
     results["gauge_bosons"] = 12
-    
+
     print()
     print("HIGGS (spin 0):")
     print("-" * 50)
@@ -102,12 +105,12 @@ def main():
     print("  (Originally 4 components, 3 eaten by W+, W-, Z)")
     print()
     print("  In GUTs: additional Higgs fields for breaking")
-    
+
     # =====================================================================
     # SECTION 2: The 27 of E6
     # =====================================================================
     header("SECTION 2: THE 27 OF E6")
-    
+
     print("E6 FUNDAMENTAL REPRESENTATION:")
     print("-" * 50)
     print()
@@ -122,7 +125,7 @@ def main():
     print("  10 = vector-like exotics or Higgs")
     print("   1 = singlet (neutral under SM)")
     print()
-    
+
     print("THE 16 OF SO(10):")
     print()
     print("  Under SO(10) --> SU(5) x U(1):")
@@ -137,7 +140,7 @@ def main():
     print()
     print("    1 = nu_R^c (right-handed neutrino)")
     print()
-    
+
     print("EXPLICIT PARTICLE CONTENT OF 27:")
     print("-" * 50)
     print()
@@ -161,19 +164,14 @@ def main():
     print("    N (sterile/singlet) = 1 state")
     print()
     print("  TOTAL: 16 + 10 + 1 = 27")
-    
-    results["e6_27"] = {
-        "so10_16": 16,
-        "so10_10": 10,
-        "singlet": 1,
-        "total": 27
-    }
-    
+
+    results["e6_27"] = {"so10_16": 16, "so10_10": 10, "singlet": 1, "total": 27}
+
     # =====================================================================
     # SECTION 3: The 40 = 27 + 12 + 1 Decomposition
     # =====================================================================
     header("SECTION 3: THE 40 = 27 + 12 + 1 DECOMPOSITION")
-    
+
     print("W33 VERTEX ASSIGNMENT:")
     print("-" * 50)
     print()
@@ -198,26 +196,26 @@ def main():
     print("     This is SEPARATE from the 27's singlet!")
     print("     Mass ~ 77 GeV from W33 formula")
     print()
-    
+
     print("ALTERNATIVE INTERPRETATION:")
     print()
     print("  40 = 27 + 13")
     print()
     print("  Where 13 = 12 gauge + 1 Higgs (physical)")
     print("  Or: 13 encodes the full gauge/Higgs sector")
-    
+
     results["w33_decomposition"] = {
         "total": 40,
         "matter_27": 27,
         "gauge_12": 12,
-        "dark_1": 1
+        "dark_1": 1,
     }
-    
+
     # =====================================================================
     # SECTION 4: Three Generations
     # =====================================================================
     header("SECTION 4: THREE GENERATIONS")
-    
+
     print("FROM F_3 TO THREE GENERATIONS:")
     print("-" * 50)
     print()
@@ -233,7 +231,7 @@ def main():
     print()
     print("  This is the dimension of the base vector space!")
     print()
-    
+
     print("GENERATION DECOMPOSITION:")
     print()
     print("  Generation 1 (mapped to 0 in F_3):")
@@ -250,25 +248,25 @@ def main():
     print("  The D4 triality permutes the three generations.")
     print("  Under exact triality, all generations identical.")
     print("  Symmetry breaking gives mass hierarchy.")
-    
+
     results["three_generations"] = {
         "total_states": 81,
         "per_generation": 27,
-        "source": "F_3 = {0, 1, 2}"
+        "source": "F_3 = {0, 1, 2}",
     }
-    
+
     # =====================================================================
     # SECTION 5: Explicit Vertex-Particle Map
     # =====================================================================
     header("SECTION 5: EXPLICIT VERTEX-PARTICLE MAP")
-    
+
     print("PROPOSED ASSIGNMENT (Generation 1 + Gauge + DM):")
     print("=" * 60)
     print()
     print("VERTICES 1-16: STANDARD MODEL FERMIONS (Gen 1)")
     print("-" * 50)
     print()
-    
+
     fermions_gen1 = [
         ("V1", "u_L (red)", "up quark, left, red"),
         ("V2", "u_L (green)", "up quark, left, green"),
@@ -287,35 +285,35 @@ def main():
         ("V15", "e_R", "electron, right"),
         ("V16", "nu_R", "electron neutrino, right"),
     ]
-    
+
     for v, p, desc in fermions_gen1:
         print(f"  {v}: {p:<15} ({desc})")
-    
+
     print()
     print("VERTICES 17-26: E6 EXOTICS (10 of SO(10))")
     print("-" * 50)
     print()
-    
+
     exotics = [
         ("V17-V22", "D, D-bar", "Heavy color triplet (6 states)"),
         ("V23-V24", "H_u, H_d", "Higgs doublet components (2)"),
         ("V25-V26", "H', H''", "Extra Higgs (2)"),
     ]
-    
+
     for v, p, desc in exotics:
         print(f"  {v}: {p:<15} ({desc})")
-    
+
     print()
     print("VERTEX 27: E6 SINGLET")
     print("-" * 50)
     print()
     print("  V27: N            (Sterile neutrino / RH partner)")
-    
+
     print()
     print("VERTICES 28-39: GAUGE BOSONS")
     print("-" * 50)
     print()
-    
+
     gauge = [
         ("V28-V35", "g_1...g_8", "8 gluons"),
         ("V36", "W+", "W+ boson"),
@@ -323,29 +321,29 @@ def main():
         ("V38", "Z", "Z boson"),
         ("V39", "gamma", "Photon"),
     ]
-    
+
     for v, p, desc in gauge:
         print(f"  {v}: {p:<15} ({desc})")
-    
+
     print()
     print("VERTEX 40: DARK MATTER")
     print("-" * 50)
     print()
     print("  V40: chi          (Dark matter scalar, m ~ 77 GeV)")
-    
+
     results["vertex_map"] = {
         "fermions": "V1-V16",
         "exotics": "V17-V26",
         "e6_singlet": "V27",
         "gauge": "V28-V39",
-        "dark_matter": "V40"
+        "dark_matter": "V40",
     }
-    
+
     # =====================================================================
     # SECTION 6: Adjacency and Interactions
     # =====================================================================
     header("SECTION 6: ADJACENCY AND INTERACTIONS")
-    
+
     print("W33 ADJACENCY = ALLOWED INTERACTIONS:")
     print("-" * 50)
     print()
@@ -378,12 +376,12 @@ def main():
     print("  Dark matter (V40) has limited adjacencies")
     print("  --> Weak coupling to visible sector")
     print("  --> Explains dark matter stability")
-    
+
     # =====================================================================
     # SECTION 7: Mass from Graph Distance
     # =====================================================================
     header("SECTION 7: MASS FROM GRAPH STRUCTURE")
-    
+
     print("MASS HIERARCHY CONJECTURE:")
     print("-" * 50)
     print()
@@ -415,12 +413,12 @@ def main():
     print()
     print("  These don't match 6 directly, but products of")
     print("  eigenvalue ratios might.")
-    
+
     # =====================================================================
     # SECTION 8: Quantum Numbers from Coordinates
     # =====================================================================
     header("SECTION 8: QUANTUM NUMBERS FROM F_3^4 COORDINATES")
-    
+
     print("F_3^4 COORDINATE INTERPRETATION:")
     print("-" * 50)
     print()
@@ -447,12 +445,12 @@ def main():
     print("  omega = 0 means no direct interaction")
     print()
     print("  The symplectic structure IS gauge theory!")
-    
+
     # =====================================================================
     # SECTION 9: The Dark Matter Vertex
     # =====================================================================
     header("SECTION 9: THE DARK MATTER VERTEX")
-    
+
     print("VERTEX 40: THE DARK MATTER SINGLET")
     print("-" * 50)
     print()
@@ -487,18 +485,18 @@ def main():
     print("  Possible weak coupling through Higgs portal.")
     print("  Direct detection: ~10^-46 to 10^-47 cm^2 cross-section")
     print("  Testable at XENONnT, LZ, DARWIN experiments.")
-    
+
     results["dark_matter"] = {
         "mass_GeV": 77.03,
         "charges": "all zero (singlet)",
-        "stability": "from W33 adjacency structure"
+        "stability": "from W33 adjacency structure",
     }
-    
+
     # =====================================================================
     # SECTION 10: Comparison with Other Models
     # =====================================================================
     header("SECTION 10: COMPARISON WITH OTHER MODELS")
-    
+
     print("E6 GUT MODELS:")
     print("-" * 50)
     print()
@@ -533,12 +531,12 @@ def main():
     print("  - Requires compactification for SM")
     print("  - W33: no extra dimensions needed")
     print("  - Discreteness is FUNDAMENTAL, not emergent")
-    
+
     # =====================================================================
     # SECTION 11: Testable Predictions
     # =====================================================================
     header("SECTION 11: TESTABLE PREDICTIONS FROM PARTICLE MAP")
-    
+
     print("SPECIFIC PREDICTIONS:")
     print("-" * 50)
     print()
@@ -569,21 +567,21 @@ def main():
     print("   W33 has EXACTLY 3 generations from F_3")
     print("   No room for generation 4")
     print("   Already confirmed by LEP (Z width)")
-    
+
     results["predictions"] = [
         "Dark matter at 77 GeV",
         "40 total fundamental particles",
         "Heavy D-quarks at GUT scale",
         "Right-handed neutrinos exist",
         "Constrained Yukawa couplings",
-        "Exactly 3 generations"
+        "Exactly 3 generations",
     ]
-    
+
     # =====================================================================
     # SECTION 12: Summary
     # =====================================================================
     header("SECTION 12: SUMMARY")
-    
+
     print("PART CXI: PARTICLE ASSIGNMENT MAP")
     print("=" * 50)
     print()
@@ -615,11 +613,11 @@ def main():
     print("  The W33 graph is not an ANALOGY to particle physics.")
     print("  It IS the fundamental discrete structure that")
     print("  DEFINES what particles exist and how they interact.")
-    
+
     # =====================================================================
     # Save results
     # =====================================================================
-    
+
     def convert_numpy(obj):
         """Recursively convert numpy types to Python native types."""
         if isinstance(obj, dict):
@@ -633,19 +631,20 @@ def main():
         elif isinstance(obj, np.ndarray):
             return obj.tolist()
         return obj
-    
+
     results["timestamp"] = datetime.now().isoformat()
     results["part"] = "CXI"
     results["part_number"] = 111
     results["key_finding"] = "40 = 27 + 12 + 1 particle decomposition"
-    
+
     results = convert_numpy(results)
-    
+
     with open("PART_CXI_particle_map.json", "w") as f:
         json.dump(results, f, indent=2, default=int)
-    
+
     print()
     print("Results saved to: PART_CXI_particle_map.json")
+
 
 if __name__ == "__main__":
     main()

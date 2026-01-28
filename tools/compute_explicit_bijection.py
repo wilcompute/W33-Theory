@@ -12,16 +12,17 @@ Alternative: Use the group-theoretic approach
 - W(E6) acts on E8 roots
 - Find matching based on orbit structure
 """
+
 from __future__ import annotations
 
 import json
-from collections import Counter, defaultdict
-from itertools import product, combinations, permutations
-from pathlib import Path
 import sys
+from collections import Counter, defaultdict
+from itertools import combinations, permutations, product
+from pathlib import Path
 
 import numpy as np
-from numpy.linalg import eigh, svd, norm
+from numpy.linalg import eigh, norm, svd
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -47,12 +48,12 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=float)
     edges = []
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
                 edges.append((i, j))
@@ -65,17 +66,17 @@ def build_e8_roots():
     roots = []
     # Type 1: +-e_i +- e_j
     for i in range(8):
-        for j in range(i+1, 8):
+        for j in range(i + 1, 8):
             for si in [1, -1]:
                 for sj in [1, -1]:
-                    r = [0]*8
+                    r = [0] * 8
                     r[i] = si
                     r[j] = sj
                     roots.append(r)
     # Type 2: half-integer with even minus signs
     for signs in product([1, -1], repeat=8):
         if sum(1 for s in signs if s == -1) % 2 == 0:
-            roots.append([s/2 for s in signs])
+            roots.append([s / 2 for s in signs])
     return np.array(roots, dtype=float)
 
 
@@ -137,12 +138,12 @@ def analyze_edge_projections(edge_projs, e8_roots):
 
     edge_ips = []
     for i in range(240):
-        for j in range(i+1, 240):
+        for j in range(i + 1, 240):
             edge_ips.append(round(np.dot(edge_projs_norm[i], edge_projs_norm[j]), 4))
 
     e8_ips = []
     for i in range(240):
-        for j in range(i+1, 240):
+        for j in range(i + 1, 240):
             e8_ips.append(round(np.dot(e8_roots_norm[i], e8_roots_norm[j]), 4))
 
     print(f"  Edge IPs: {sorted(set(edge_ips))[:10]}...")
@@ -368,7 +369,7 @@ def brute_force_bijection(edges, vertices, adj, e8_roots):
             len(only_i),
             len(only_j),
             common_edges,
-            cross_edges
+            cross_edges,
         )
         w33_fingerprints.append(fingerprint)
 
@@ -428,7 +429,9 @@ def main():
     edge_invs, e8_invs = find_bijection_via_invariants(edges, vertices, adj, e8_roots)
 
     # Method 3: Canonical bijection attempt
-    w33_classes, e8_classes = attempt_canonical_bijection(edges, vertices, adj, e8_roots)
+    w33_classes, e8_classes = attempt_canonical_bijection(
+        edges, vertices, adj, e8_roots
+    )
 
     # Method 4: Search for linear map
     G_edge, G_e8 = search_for_linear_map(edge_projs, e8_roots)
@@ -472,7 +475,7 @@ HOWEVER, the STRUCTURAL correspondence is established:
 
     out_path = ROOT / "artifacts" / "compute_explicit_bijection.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(results, indent=2), encoding='utf-8')
+    out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(f"\n\nWrote {out_path}")
 
 

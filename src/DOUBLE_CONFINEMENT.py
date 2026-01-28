@@ -188,13 +188,13 @@ This is approaching "smoking gun" territory.
 """)
 
 # Numerical check
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("NUMERICAL CROSS-CHECK")
-print("="*70)
+print("=" * 70)
 
 # If Z4 and Z3 were independent and uniform
-prob_z4_2 = 1/4  # Z4 uniform over {0,1,2,3}
-prob_z3_0 = 1/3  # Z3 uniform over {0,1,2}
+prob_z4_2 = 1 / 4  # Z4 uniform over {0,1,2,3}
+prob_z3_0 = 1 / 3  # Z3 uniform over {0,1,2}
 prob_independent = prob_z4_2 * prob_z3_0  # = 1/12
 
 expected_k4s_with_2_0 = 90 * prob_independent
@@ -212,9 +212,9 @@ print(f"\n*** Selection enhancement: {ratio:.0f}× ***")
 print(f"    (This is 12 standard deviations above random!)")
 
 # Compare to physical scales
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("ENERGY SCALE IMPLICATIONS")
-print("="*70)
+print("=" * 70)
 
 print("""
 If K4 selection factor of 12 is source of hierarchy:

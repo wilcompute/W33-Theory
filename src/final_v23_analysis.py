@@ -10,10 +10,11 @@ The v23 triangles encode:
 Key finding: PERFECT PARITY ↔ CENTERS CORRESPONDENCE
 """
 
-import pandas as pd
+import os
 from collections import defaultdict
 from pathlib import Path
-import os
+
+import pandas as pd
 
 # Prefer local repo data; allow override via W33_ROOT env var.
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -22,57 +23,57 @@ W33_ROOT = Path(os.environ.get("W33_ROOT", str(DEFAULT_W33_ROOT)))
 
 df = pd.read_csv(W33_ROOT / "_v23/v23/Q_triangles_with_centers_Z2_S3_fiber6.csv")
 
-print("="*70)
+print("=" * 70)
 print("V23 COMPLETE STRUCTURE ANALYSIS")
-print("="*70)
+print("=" * 70)
 
 print(f"\nTotal triangles: {len(df)}")
 
 # Verify the correlation
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("KEY FINDING: PARITY ↔ CENTERS PERFECT CORRELATION")
-print("="*70)
+print("=" * 70)
 
 print("\nParity = 0 (even):")
-parity0 = df[df['z2_parity'] == 0]
+parity0 = df[df["z2_parity"] == 0]
 print(f"  Total: {len(parity0)}")
 for centers in [0, 1, 3]:
-    count = len(parity0[parity0['centers'] == centers])
+    count = len(parity0[parity0["centers"] == centers])
     if count > 0:
         print(f"    Centers = {centers}: {count}")
 
 print("\nParity = 1 (odd):")
-parity1 = df[df['z2_parity'] == 1]
+parity1 = df[df["z2_parity"] == 1]
 print(f"  Total: {len(parity1)}")
 for centers in [0, 1, 3]:
-    count = len(parity1[parity1['centers'] == centers])
+    count = len(parity1[parity1["centers"] == centers])
     if count > 0:
         print(f"    Centers = {centers}: {count}")
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("S3 HOLONOMY BY CENTERS AND PARITY")
-print("="*70)
+print("=" * 70)
 
 for centers in [0, 1, 3]:
-    subset = df[df['centers'] == centers]
+    subset = df[df["centers"] == centers]
     if len(subset) == 0:
         continue
-    
+
     print(f"\nCenters = {centers}: {len(subset)} triangles")
-    
-    parity_vals = subset['z2_parity'].unique()
+
+    parity_vals = subset["z2_parity"].unique()
     for parity in sorted(parity_vals):
-        subsubset = subset[subset['z2_parity'] == parity]
+        subsubset = subset[subset["z2_parity"] == parity]
         print(f"  Parity = {parity}: {len(subsubset)} triangles")
-        
-        hol_dist = subsubset['s3_type_startsheet0'].value_counts()
+
+        hol_dist = subsubset["s3_type_startsheet0"].value_counts()
         for hol, count in hol_dist.items():
             pct = 100 * count / len(subsubset)
             print(f"    {hol:15s}: {count:4d} ({pct:5.1f}%)")
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("MAPPING TO PARTICLE PHYSICS")
-print("="*70)
+print("=" * 70)
 
 print("""
 Based on v23 structure:
@@ -113,9 +114,9 @@ This might relate to:
   - SU(5) representation theory
 """)
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("UNEXPECTED DISCOVERY: 2/3 RATIO")
-print("="*70)
+print("=" * 70)
 
 print(f"""
 Fermion triangles: {len(parity1)}
@@ -139,13 +140,13 @@ Our 2/3 = 40 fermions to 60 bosons
 Might indicate fundamental fermion-boson content!
 """)
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("S3 TRANSPOSITION vs 3CYCLE ASYMMETRY")
-print("="*70)
+print("=" * 70)
 
-unicentric = df[df['centers'] == 1]
-trans = len(unicentric[unicentric['s3_type_startsheet0'] == 'transposition'])
-cycle = len(unicentric[unicentric['s3_type_startsheet0'] == '3cycle'])
+unicentric = df[df["centers"] == 1]
+trans = len(unicentric[unicentric["s3_type_startsheet0"] == "transposition"])
+cycle = len(unicentric[unicentric["s3_type_startsheet0"] == "3cycle"])
 
 print(f"\nUnicentric triangles (fermion-like): {len(unicentric)}")
 print(f"  3-cycles: {cycle}")
@@ -195,7 +196,10 @@ INTERPRETATION:
 This is the DISCRETE GEOMETRY ENCODING OF PARTICLE STATISTICS!
 """
 
-with open(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\V23_STRUCTURE_SUMMARY.txt", "w") as f:
+with open(
+    r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\V23_STRUCTURE_SUMMARY.txt",
+    "w",
+) as f:
     f.write(summary_text)
 
 print("\n✓ Saved summary to V23_STRUCTURE_SUMMARY.txt")

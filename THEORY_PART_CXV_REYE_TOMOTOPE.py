@@ -63,15 +63,15 @@ print("""
      related to how it slices the 24-cell structure
 """)
 
-results['tomotope'] = {
-    'rank': 4,
-    'vertices': 4,
-    'edges': 12,
-    'faces': 16,
-    'cells': 8,  # 4 tet + 4 hemioctahedra
-    'flags': 192,
-    'symmetry_order': 96,
-    'flag_orbits': 2
+results["tomotope"] = {
+    "rank": 4,
+    "vertices": 4,
+    "edges": 12,
+    "faces": 16,
+    "cells": 8,  # 4 tet + 4 hemioctahedra
+    "flags": 192,
+    "symmetry_order": 96,
+    "flag_orbits": 2,
 }
 
 # =========================================================================
@@ -117,13 +117,13 @@ print("""
   ═══════════════════════════════════════════════════
 """)
 
-results['reye'] = {
-    'points': 12,
-    'lines': 16,
-    'points_per_line': 3,
-    'lines_per_point': 4,
-    'flags': 48,
-    'symmetry_order': 576
+results["reye"] = {
+    "points": 12,
+    "lines": 16,
+    "points_per_line": 3,
+    "lines_per_point": 4,
+    "flags": 48,
+    "symmetry_order": 576,
 }
 
 # =========================================================================
@@ -157,12 +157,12 @@ print("""
   in Euclidean 4-space, reduced by antipodal identification!
 """)
 
-results['connection'] = {
-    'tomotope_edges': 12,
-    'reye_points': 12,
-    'tomotope_faces': 16,
-    'reye_lines': 16,
-    'incidence_match': True
+results["connection"] = {
+    "tomotope_edges": 12,
+    "reye_points": 12,
+    "tomotope_faces": 16,
+    "reye_lines": 16,
+    "incidence_match": True,
 }
 
 # =========================================================================
@@ -203,12 +203,12 @@ print(f"    192 × 6 = {192 * 6} = |Aut(24-cell)| ✓")
 print(f"    192 = 2³ × 4! = 8 × 24 ✓")
 print(f"    576 = 192 × 3 = |Aut(Reye)| ✓")
 
-results['flag_analysis'] = {
-    'tomotope_flags': 192,
-    'w_d4_order': 192,
-    '24cell_symmetry': 1152,
-    'triality_factor': 6,
-    'reye_symmetry': 576
+results["flag_analysis"] = {
+    "tomotope_flags": 192,
+    "w_d4_order": 192,
+    "24cell_symmetry": 1152,
+    "triality_factor": 6,
+    "reye_symmetry": 576,
 }
 
 # =========================================================================
@@ -391,18 +391,18 @@ print("""
 # =========================================================================
 # Save results
 # =========================================================================
-results['timestamp'] = datetime.now().isoformat()
-results['part'] = 'CXV'
-results['part_number'] = 115
-results['key_insight'] = 'Tomotope edges-faces = Reye config, both from 24-cell/D4'
-results['references'] = [
+results["timestamp"] = datetime.now().isoformat()
+results["part"] = "CXV"
+results["part_number"] = 115
+results["key_insight"] = "Tomotope edges-faces = Reye config, both from 24-cell/D4"
+results["references"] = [
     'Monson, Pellicer & Williams (2012), "The Tomotope", Ars Mathematica Contemporanea',
     'Aravind (2000), "How Reye\'s configuration helps in proving Bell-Kochen-Specker"',
     'Manivel (2006), "Configurations of lines and models of Lie algebras"',
-    'Reye (1882), "Das Problem der Configurationen"'
+    'Reye (1882), "Das Problem der Configurationen"',
 ]
 
-with open('PART_CXV_reye_tomotope.json', 'w') as f:
+with open("PART_CXV_reye_tomotope.json", "w") as f:
     json.dump(results, f, indent=2, default=int)
 
 print("Results saved to: PART_CXV_reye_tomotope.json")

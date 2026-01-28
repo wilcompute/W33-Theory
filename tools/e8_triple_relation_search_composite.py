@@ -11,6 +11,7 @@ Outputs:
 - artifacts/e8_triple_relation_search_composite.json
 - artifacts/e8_triple_relation_search_composite.md
 """
+
 from __future__ import annotations
 
 import json
@@ -114,7 +115,9 @@ def is_srg(adj: np.ndarray):
 
 def main():
     if not PARTITION_JSON.exists():
-        raise SystemExit("Missing artifacts/e8_rootline_partition.json; run tools/e8_rootline_partition.py")
+        raise SystemExit(
+            "Missing artifacts/e8_rootline_partition.json; run tools/e8_rootline_partition.py"
+        )
     partition = json.loads(PARTITION_JSON.read_text())
     triples = partition.get("solution_triples", [])
     if len(triples) != 40:
@@ -220,7 +223,9 @@ def main():
     lines.append(f"- SRG(40,12,2,4) matches: {len(target)}")
     if target:
         for item in target:
-            lines.append(f"- combo size={item['combo_size']} -> k={item['k']}, λ={item['lambda']}, μ={item['mu']}")
+            lines.append(
+                f"- combo size={item['combo_size']} -> k={item['k']}, λ={item['lambda']}, μ={item['mu']}"
+            )
 
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"Wrote {OUT_JSON}")

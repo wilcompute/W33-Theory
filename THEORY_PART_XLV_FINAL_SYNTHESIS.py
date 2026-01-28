@@ -14,6 +14,7 @@ The deepest remaining questions:
 """
 
 import math
+
 import numpy as np
 
 print("""
@@ -32,22 +33,16 @@ print("""
 # W33 FUNDAMENTALS
 # =============================================================================
 
-W33 = {
-    'points': 40,
-    'lines': 40,
-    'cycles': 81,
-    'K4': 90,
-    'total': 121
-}
+W33 = {"points": 40, "lines": 40, "cycles": 81, "K4": 90, "total": 121}
 
 EXCEPTIONAL = {
-    'E6_fund': 27,
-    'E6_adj': 78,
-    'E6_roots': 72,
-    'E7_fund': 56,
-    'E7_adj': 133,
-    'E8_dim': 248,
-    'E8_roots': 240
+    "E6_fund": 27,
+    "E6_adj": 78,
+    "E6_roots": 72,
+    "E7_fund": 56,
+    "E7_adj": 133,
+    "E8_dim": 248,
+    "E8_roots": 240,
 }
 
 AUT_W33 = 51840
@@ -88,7 +83,9 @@ print("  ENTROPY AND CONFIGURATION SPACE:")
 print()
 print(f"    |Aut(W33)| = {AUT_W33} = number of equivalent states")
 print(f"    Entropy increase = exploring more of this configuration space")
-print(f"    S_max = log({AUT_W33}) = {math.log(AUT_W33):.2f} nats = {math.log2(AUT_W33):.1f} bits")
+print(
+    f"    S_max = log({AUT_W33}) = {math.log(AUT_W33):.2f} nats = {math.log2(AUT_W33):.1f} bits"
+)
 print()
 
 print("  ┌─────────────────────────────────────────────────────────────────┐")

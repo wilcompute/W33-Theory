@@ -4,7 +4,7 @@
 ║           W33: THE COMPLETE IDENTIFICATION                   ║
 ╚══════════════════════════════════════════════════════════════╝
 
-THEOREM: W33 is the clique complex (flag complex) of the 
+THEOREM: W33 is the clique complex (flag complex) of the
 symplectic polar space W(3) over GF(3).
 
 This document summarizes all the discoveries.

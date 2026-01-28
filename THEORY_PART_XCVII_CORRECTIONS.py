@@ -10,10 +10,11 @@ Difference: 4.5 × 10⁻⁶ (about 5 ppm or ~200σ)
 Can W33 theory provide higher-order corrections to close this gap?
 """
 
-import numpy as np
+import json
 from decimal import Decimal, getcontext
 from fractions import Fraction
-import json
+
+import numpy as np
 
 getcontext().prec = 60
 
@@ -31,9 +32,11 @@ print("SECTION 1: THE DISCREPANCY")
 print("=" * 70)
 
 # Leading order calculation
-alpha_inv_LO = Decimal(k**2 - 2*mu + 1) + Decimal(v) / Decimal((k-1)*((k-lam)**2 + 1))
-alpha_inv_exp = Decimal('137.035999084')
-alpha_inv_err = Decimal('0.000000021')
+alpha_inv_LO = Decimal(k**2 - 2 * mu + 1) + Decimal(v) / Decimal(
+    (k - 1) * ((k - lam) ** 2 + 1)
+)
+alpha_inv_exp = Decimal("137.035999084")
+alpha_inv_err = Decimal("0.000000021")
 
 discrepancy = alpha_inv_LO - alpha_inv_exp
 sigma = discrepancy / alpha_inv_err
@@ -232,7 +235,7 @@ Where b is the beta function coefficient.
 # Standard Model: b = -4/3 × N_gen - 1/3 × N_Higgs + ...
 # In W33: should be related to eigenspace dimensions
 
-b_em = -(4/3) * 3 * (1/9 + 4/9 + 1) - 1/3  # QED beta function (simplified)
+b_em = -(4 / 3) * 3 * (1 / 9 + 4 / 9 + 1) - 1 / 3  # QED beta function (simplified)
 print(f"\nQED BETA FUNCTION (simplified): b ≈ {b_em:.3f}")
 
 # The running from GUT to low energy
@@ -264,7 +267,7 @@ W33 THRESHOLD CORRECTION:
 The heavy X, Y bosons DON'T affect α at observable precision!
 """)
 
-threshold = (m2 - 12) * (91.2**2) / ((5e15)**2)
+threshold = (m2 - 12) * (91.2**2) / ((5e15) ** 2)
 print(f"  Threshold correction: {threshold:.2e} (negligible)")
 
 print("\n" + "=" * 70)
@@ -415,9 +418,9 @@ results = {
     "correction_sources": [
         "RG running",
         "Hadronic contributions",
-        "Graph higher-order terms"
+        "Graph higher-order terms",
     ],
-    "conclusion": "5 ppm discrepancy expected at leading order"
+    "conclusion": "5 ppm discrepancy expected at leading order",
 }
 
 with open("PART_XCVII_corrections.json", "w") as f:

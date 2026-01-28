@@ -10,8 +10,9 @@ KEY QUESTION: Where does the "5" in Ω_DM/Ω_b = 27/5 come from?
 """
 
 import math
-import numpy as np
 from fractions import Fraction
+
+import numpy as np
 
 print("""
 ╔══════════════════════════════════════════════════════════════════════╗
@@ -142,10 +143,12 @@ print()
 print("═══ The Koide Formula ═══")
 print()
 
+
 def koide_Q(m1, m2, m3):
     """Calculate Koide's Q parameter."""
     sqrt_sum = math.sqrt(m1) + math.sqrt(m2) + math.sqrt(m3)
     return (m1 + m2 + m3) / sqrt_sum**2
+
 
 Q_leptons = koide_Q(m_e, m_mu, m_tau)
 print(f"  Charged leptons: Q = (m_e + m_μ + m_τ)/(√m_e + √m_μ + √m_τ)²")
@@ -189,11 +192,11 @@ v = 246.22  # GeV (Higgs VEV)
 
 # Various W33-motivated formulas
 predictions = [
-    ("v/√2", v/math.sqrt(2)),
-    ("v × √(40/81)", v * math.sqrt(40/81)),
-    ("v × √(133/173)", v * math.sqrt(133/173)),
-    ("v × cos(θ_W)", v * math.sqrt(133/173)),  # cos²θ_W = 133/173
-    ("v/√2 × (173/174)", v/math.sqrt(2) * 173/174),
+    ("v/√2", v / math.sqrt(2)),
+    ("v × √(40/81)", v * math.sqrt(40 / 81)),
+    ("v × √(133/173)", v * math.sqrt(133 / 173)),
+    ("v × cos(θ_W)", v * math.sqrt(133 / 173)),  # cos²θ_W = 133/173
+    ("v/√2 × (173/174)", v / math.sqrt(2) * 173 / 174),
 ]
 
 print(f"  Experimental m_t = {m_t} GeV")
@@ -239,13 +242,13 @@ print("═══ W33 Predictions for Higgs Mass ═══")
 print()
 
 higgs_predictions = [
-    ("v/2", v/2),
-    ("v × √(40/173)", v * math.sqrt(40/173)),
-    ("v × sin(θ_W)", v * math.sqrt(40/173)),
-    ("v/√(2 + 2/81)", v / math.sqrt(2 + 2/81)),
-    ("v/√(173/81 - 0.15)", v / math.sqrt(173/81 - 0.15)),
-    ("m_t × √(40/81)", m_t * math.sqrt(40/81)),
-    ("2×m_W × sin(θ_W)", 2 * 80.379 * math.sqrt(40/173)),
+    ("v/2", v / 2),
+    ("v × √(40/173)", v * math.sqrt(40 / 173)),
+    ("v × sin(θ_W)", v * math.sqrt(40 / 173)),
+    ("v/√(2 + 2/81)", v / math.sqrt(2 + 2 / 81)),
+    ("v/√(173/81 - 0.15)", v / math.sqrt(173 / 81 - 0.15)),
+    ("m_t × √(40/81)", m_t * math.sqrt(40 / 81)),
+    ("2×m_W × sin(θ_W)", 2 * 80.379 * math.sqrt(40 / 173)),
 ]
 
 print(f"  Experimental m_H = {m_H} GeV")
@@ -263,7 +266,7 @@ print("═══ A Remarkable Formula ═══")
 print()
 
 # m_H ≈ v/2 × √(121/90) ??
-val = v/2 * math.sqrt(121/90)
+val = v / 2 * math.sqrt(121 / 90)
 print(f"  Try: m_H = (v/2) × √(W33_total / K4s)")
 print(f"          = (v/2) × √(121/90)")
 print(f"          = {v/2} × {math.sqrt(121/90):.4f}")
@@ -273,7 +276,7 @@ print(f"  Error:    {abs(val - m_H)/m_H * 100:.1f}%")
 print()
 
 # Another try
-val2 = v/2 * math.sqrt(133/121)
+val2 = v / 2 * math.sqrt(133 / 121)
 print(f"  Try: m_H = (v/2) × √(dim(E7) / W33_total)")
 print(f"          = (v/2) × √(133/121)")
 print(f"          = {val2:.2f} GeV")
@@ -286,7 +289,7 @@ print("═══ The Best Higgs Formula ═══")
 print()
 
 # What combination gives 125.25?
-target_ratio = m_H / (v/2)  # ≈ 1.018
+target_ratio = m_H / (v / 2)  # ≈ 1.018
 print(f"  m_H / (v/2) = {target_ratio:.6f}")
 print()
 print("  Looking for W33 ratio ≈ 1.018...")
@@ -294,13 +297,13 @@ print()
 
 # Search
 best_match = None
-best_diff = float('inf')
+best_diff = float("inf")
 
 for a in [40, 81, 90, 121, 133, 173, 56, 78, 27]:
     for b in [40, 81, 90, 121, 133, 173, 56, 78, 27]:
         if a != b:
-            for op in ['/', 'sqrt/']:
-                if op == '/':
+            for op in ["/", "sqrt/"]:
+                if op == "/":
                     val = a / b
                 else:
                     val = math.sqrt(a / b)
@@ -376,14 +379,14 @@ print("═══ W33 Prediction for Cabibbo Angle ═══")
 print()
 
 cabibbo_candidates = [
-    ("√(m_d/m_s)", math.sqrt(m_d/m_s)),
-    ("1/√(27-7)", 1/math.sqrt(27-7)),
-    ("√(40/173)/2", math.sqrt(40/173)/2),
-    ("40/173", 40/173),
-    ("1/√(81/4)", 1/math.sqrt(81/4)),
-    ("√(4/81)", math.sqrt(4/81)),
-    ("2/9", 2/9),
-    ("9/40", 9/40),
+    ("√(m_d/m_s)", math.sqrt(m_d / m_s)),
+    ("1/√(27-7)", 1 / math.sqrt(27 - 7)),
+    ("√(40/173)/2", math.sqrt(40 / 173) / 2),
+    ("40/173", 40 / 173),
+    ("1/√(81/4)", 1 / math.sqrt(81 / 4)),
+    ("√(4/81)", math.sqrt(4 / 81)),
+    ("2/9", 2 / 9),
+    ("9/40", 9 / 40),
 ]
 
 for name, val in cabibbo_candidates:
@@ -452,11 +455,11 @@ print("=" * 72)
 print()
 
 results = [
-    ("sin²θ_W", 40/173, 0.23121, 0.00004),
+    ("sin²θ_W", 40 / 173, 0.23121, 0.00004),
     ("α⁻¹", 137.036, 137.036, 0.00002),
-    ("Ω_DM/Ω_b", 27/5, 5.41, 0.05),
-    ("Koide Q", 2/3, 0.666661, 0.000001),
-    ("sin(θ_C)", 9/40, 0.225, 0.001),
+    ("Ω_DM/Ω_b", 27 / 5, 5.41, 0.05),
+    ("Koide Q", 2 / 3, 0.666661, 0.000001),
+    ("sin(θ_C)", 9 / 40, 0.225, 0.001),
 ]
 
 print("  Quantity          W33 Pred    Expt        σ away")

@@ -12,13 +12,15 @@ Strategy:
 3. Compute complete orbit structure
 4. Match with E8 root orbit structure under W(E6)
 """
+
 from __future__ import annotations
 
 import json
 from collections import Counter, defaultdict
-from itertools import product, combinations, permutations
-from pathlib import Path
 from functools import reduce
+from itertools import combinations, permutations, product
+from pathlib import Path
+
 import numpy as np
 from sympy.combinatorics import Permutation, PermutationGroup
 
@@ -46,13 +48,13 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     edges = []
     edge_set = set()
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
                 edges.append((i, j))
@@ -75,7 +77,7 @@ def mat_mult_mod3(A, B):
     """Matrix multiplication mod 3."""
     n, k = len(A), len(B)
     m = len(B[0])
-    result = [[0]*m for _ in range(n)]
+    result = [[0] * m for _ in range(n)]
     for i in range(n):
         for j in range(m):
             for l in range(k):
@@ -91,7 +93,7 @@ def apply_matrix(M, v):
 
 def check_symplectic(M):
     """Check if M preserves symplectic form."""
-    Omega = [[0,0,1,0],[0,0,0,1],[2,0,0,0],[0,2,0,0]]
+    Omega = [[0, 0, 1, 0], [0, 0, 0, 1], [2, 0, 0, 0], [0, 2, 0, 0]]
     MT = [[M[j][i] for j in range(4)] for i in range(4)]
     temp = mat_mult_mod3(MT, Omega)
     result = mat_mult_mod3(temp, M)
@@ -118,19 +120,19 @@ def generate_sp43_generators(vertices):
     # Standard symplectic generators
     gen_matrices = [
         # Transvections
-        [[1,0,1,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,1],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[1,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,1,0,1]],
+        [[1, 0, 1, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 1], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [1, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 1, 0, 1]],
         # More transvections
-        [[1,1,0,0],[0,1,0,0],[0,0,1,0],[0,0,2,1]],
-        [[1,0,0,0],[1,1,0,0],[0,0,1,2],[0,0,0,1]],
+        [[1, 1, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 2, 1]],
+        [[1, 0, 0, 0], [1, 1, 0, 0], [0, 0, 1, 2], [0, 0, 0, 1]],
         # Symplectic swaps
-        [[0,0,1,0],[0,1,0,0],[2,0,0,0],[0,0,0,1]],
-        [[1,0,0,0],[0,0,0,1],[0,0,1,0],[0,2,0,0]],
+        [[0, 0, 1, 0], [0, 1, 0, 0], [2, 0, 0, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0], [0, 2, 0, 0]],
         # Block diagonal
-        [[2,0,0,0],[0,1,0,0],[0,0,2,0],[0,0,0,1]],
-        [[1,0,0,0],[0,2,0,0],[0,0,1,0],[0,0,0,2]],
+        [[2, 0, 0, 0], [0, 1, 0, 0], [0, 0, 2, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 2, 0, 0], [0, 0, 1, 0], [0, 0, 0, 2]],
     ]
 
     for M in gen_matrices:
@@ -168,10 +170,10 @@ def construct_e8_roots():
     # Type 1: permutations of (+-1, +-1, 0, 0, 0, 0, 0, 0)
     # Total: C(8,2) * 4 = 28 * 4 = 112
     for i in range(8):
-        for j in range(i+1, 8):
+        for j in range(i + 1, 8):
             for s1 in [1, -1]:
                 for s2 in [1, -1]:
-                    r = [0]*8
+                    r = [0] * 8
                     r[i], r[j] = s1, s2
                     roots.append(tuple(r))
 
@@ -187,7 +189,7 @@ def construct_e8_roots():
 
 def e8_root_inner_product(r1, r2):
     """Compute inner product of two E8 roots."""
-    return sum(a*b for a, b in zip(r1, r2))
+    return sum(a * b for a, b in zip(r1, r2))
 
 
 def compute_e8_root_graph():
@@ -198,8 +200,11 @@ def compute_e8_root_graph():
     # Roots are adjacent if inner product is 1 (root string length)
     adj_counts = Counter()
     for i in range(n):
-        count = sum(1 for j in range(n) if i != j and
-                   abs(e8_root_inner_product(roots[i], roots[j]) - 1) < 0.01)
+        count = sum(
+            1
+            for j in range(n)
+            if i != j and abs(e8_root_inner_product(roots[i], roots[j]) - 1) < 0.01
+        )
         adj_counts[count] += 1
 
     return roots, adj_counts
@@ -211,7 +216,7 @@ def analyze_w33_edge_graph(edges, adj, vertices):
     edge_adj = np.zeros((n, n), dtype=int)
 
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             e1, e2 = edges[i], edges[j]
             # Edges share a vertex?
             if set(e1) & set(e2):
@@ -409,7 +414,7 @@ encodes the relationship between the 6+6 Witting vertices in rays i,j.
 
     out_path = ROOT / "artifacts" / "orbit_bijection.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(results, indent=2), encoding='utf-8')
+    out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(f"\nWrote {out_path}")
 
     return results

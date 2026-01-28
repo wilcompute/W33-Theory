@@ -10,17 +10,20 @@ This happens because the triangles give "collapsible" relations.
 Let's understand the topology more deeply.
 """
 
-from sage.all import *
+from itertools import combinations, product
+
 import numpy as np
-from itertools import product, combinations
+from sage.all import *
 
 print("=" * 70)
 print("WHY IS π₁(W33) FREE?")
 print("=" * 70)
 
+
 # Build the symplectic polar space W(3,3)
 def symplectic_form(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
+
 
 def normalize(v):
     for i in range(4):
@@ -28,6 +31,7 @@ def normalize(v):
             inv = pow(v[i], -1, 3)
             return tuple((inv * x) % 3 for x in v)
     return None
+
 
 proj_points = set()
 for v in product(range(3), repeat=4):
@@ -49,9 +53,11 @@ for i, p1 in enumerate(proj_points):
 # Find lines
 lines_set = set()
 for i in range(n):
-    for j in range(i+1, n):
+    for j in range(i + 1, n):
         if adj[i][j]:
-            common = [k for k in range(n) if k != i and k != j and adj[i][k] and adj[j][k]]
+            common = [
+                k for k in range(n) if k != i and k != j and adj[i][k] and adj[j][k]
+            ]
             for k, l in combinations(common, 2):
                 if adj[k][l]:
                     lines_set.add(tuple(sorted([i, j, k, l])))
@@ -97,7 +103,7 @@ for i, u in enumerate(link_vertices):
             # u, w are neighbors of v and adjacent to each other
             # So (v, u, w) is a triangle in W33
             link_edges.append((i, j))
-            
+
             # Check for tetrahedra: need a 4th vertex x adjacent to v, u, w
             for k, x in enumerate(link_vertices):
                 if k > j and adj[u][x] and adj[w][x]:
@@ -259,7 +265,9 @@ print(f"Building H₀ = {Building.homology(0)}")
 print(f"Building H₁ = {Building.homology(1)}")
 
 building_pi1 = Building.fundamental_group()
-print(f"Building π₁: {building_pi1.ngens()} generators, {len(building_pi1.relations())} relations")
+print(
+    f"Building π₁: {building_pi1.ngens()} generators, {len(building_pi1.relations())} relations"
+)
 
 print("\n" + "=" * 70)
 print("★★★ FINAL SUMMARY ★★★")

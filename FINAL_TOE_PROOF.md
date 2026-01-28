@@ -1338,6 +1338,16 @@ stratification but remains globally mixed within each orbit.
 Doc: `docs/witting_z3_edge_orbits.md`  
 Script: `tools/witting_z3_edge_orbits.py`
 
+**Monomial orbit typing (computed):**  
+The 12 edge orbits are **exactly** the family-block decomposition of the 40-ray
+set: basis–family edges form size‑27 orbits (BF0/BF1/BF2 mixed, BF3 separate),
+same‑family F0/F1/F2 edges form size‑27 orbits, F3–F3 is a separate size‑27 orbit,
+and cross‑family edges split into two size‑81 orbits (F0/F1/F2 block vs F*–F3 block).
+Thus the monomial orbit structure is determined purely by family pairing.
+
+Doc: `docs/witting_z3_edge_orbit_typing.md`  
+Script: `tools/witting_z3_edge_orbit_typing.py`
+
 **Z2 cocycle minimal-support heuristic (computed):**  
 We searched for sparse representatives of the two Z2 cocycle classes by adding
 edge coboundaries and greedily reducing support (multiple random restarts).

@@ -1,4 +1,5 @@
 import numpy as np
+
 from THEORY_PART_CLII_STATE_PARTICIPATION import get_mub_system, participation
 
 # Precompute the full set of triangles across all MUB systems so multiple tests can reference it

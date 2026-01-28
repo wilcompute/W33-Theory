@@ -3,7 +3,7 @@
 W33 - THE UNIVERSAL COVER: AN INFINITE TREE
 
 Since π₁(W33) = F₈₁, the universal cover of W33 is an infinite
-contractible simplicial complex. 
+contractible simplicial complex.
 
 For a bouquet of circles, the universal cover is the Cayley graph
 of the free group - an infinite tree.
@@ -11,17 +11,20 @@ of the free group - an infinite tree.
 Let's explore what the universal cover of W33 looks like!
 """
 
-from sage.all import *
+from itertools import combinations, product
+
 import numpy as np
-from itertools import product, combinations
+from sage.all import *
 
 print("=" * 70)
 print("THE UNIVERSAL COVER OF W33")
 print("=" * 70)
 
+
 # Build W33
 def symplectic_form(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
+
 
 def normalize(v):
     for i in range(4):
@@ -29,6 +32,7 @@ def normalize(v):
             inv = pow(v[i], -1, 3)
             return tuple((inv * x) % 3 for x in v)
     return None
+
 
 proj_points = set()
 for v in product(range(3), repeat=4):
@@ -48,9 +52,11 @@ for i, p1 in enumerate(proj_points):
 
 lines_set = set()
 for i in range(n):
-    for j in range(i+1, n):
+    for j in range(i + 1, n):
         if adj[i][j]:
-            common = [k for k in range(n) if k != i and k != j and adj[i][k] and adj[j][k]]
+            common = [
+                k for k in range(n) if k != i and k != j and adj[i][k] and adj[j][k]
+            ]
             for k, l in combinations(common, 2):
                 if adj[k][l]:
                     lines_set.add(tuple(sorted([i, j, k, l])))
@@ -99,11 +105,13 @@ print("=" * 70)
 # V(1) = 2n (neighbors of root)
 # V(d) = 2n × (2n-1)^{d-1} for d ≥ 1
 
+
 def vertices_at_distance(n_gen, d):
     """Count vertices at distance d in Cayley graph of F_n."""
     if d == 0:
         return 1
-    return 2 * n_gen * (2 * n_gen - 1)**(d - 1)
+    return 2 * n_gen * (2 * n_gen - 1) ** (d - 1)
+
 
 n_gen = 81
 print(f"Vertices at distance d from root (for F_{n_gen}):")

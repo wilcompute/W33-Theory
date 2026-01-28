@@ -15,8 +15,9 @@ Connecting ALL the discoveries:
 THE GRAND UNIFICATION
 """
 
-import numpy as np
 from collections import defaultdict
+
+import numpy as np
 
 print("=" * 80)
 print("W33 THEORY OF EVERYTHING - UNIFIED SYNTHESIS")
@@ -31,16 +32,16 @@ print("PART 0: THE FUNDAMENTAL NUMBERS")
 print("=" * 80)
 
 # The magic numbers
-points = 40       # Points in W33
-lines = 40        # Lines in W33 (self-dual!)
-k = 4             # Points per line
-r = 4             # Lines per point
-steinberg_dim = 81        # H₁ = Z^81
-sylow_3_order = 81        # Sylow 3-subgroup
+points = 40  # Points in W33
+lines = 40  # Lines in W33 (self-dual!)
+k = 4  # Points per line
+r = 4  # Lines per point
+steinberg_dim = 81  # H₁ = Z^81
+sylow_3_order = 81  # Sylow 3-subgroup
 fundamental_group_rank = 81  # π₁ = F₈₁
-K4_count = 90     # K4 components
-Q45_vertices = 45 # Quotient structure
-SU5_dim = 45      # SU(5) fundamental!
+K4_count = 90  # K4 components
+Q45_vertices = 45  # Quotient structure
+SU5_dim = 45  # SU(5) fundamental!
 
 print(f"""
 THE FUNDAMENTAL NUMBERS OF W33

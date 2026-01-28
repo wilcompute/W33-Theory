@@ -11,6 +11,7 @@ Outputs:
 - artifacts/e8_triple_relation_search_full.json
 - artifacts/e8_triple_relation_search_full.md
 """
+
 from __future__ import annotations
 
 import json
@@ -94,7 +95,9 @@ def root_type(root: np.ndarray) -> str:
 
 def main():
     if not PARTITION_JSON.exists():
-        raise SystemExit("Missing artifacts/e8_rootline_partition.json; run tools/e8_rootline_partition.py")
+        raise SystemExit(
+            "Missing artifacts/e8_rootline_partition.json; run tools/e8_rootline_partition.py"
+        )
     partition = json.loads(PARTITION_JSON.read_text())
     triples = partition.get("solution_triples", [])
     if len(triples) != 40:
@@ -203,12 +206,16 @@ def main():
         "triple_type_distribution": {
             "type1_count_set": sorted({c["type1"] for c in triple_type_counts}),
             "type2_count_set": sorted({c["type2"] for c in triple_type_counts}),
-            "pattern_counts": {str(k): v for k, v in sorted(type_pattern_counts.items())},
+            "pattern_counts": {
+                str(k): v for k, v in sorted(type_pattern_counts.items())
+            },
         },
         "candidate_count": len(candidates),
         "candidates": candidates,
         "target_srg_40_12_2_4": target,
-        "subset_search_mode": "full" if total_subsets <= MAX_CLASS_UNIONS else "single+complements",
+        "subset_search_mode": (
+            "full" if total_subsets <= MAX_CLASS_UNIONS else "single+complements"
+        ),
     }
 
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
@@ -223,8 +230,12 @@ def main():
     lines.append(f"- SRG(40,12,2,4) matches: {len(target)}")
     lines.append("")
     lines.append("## Triple type distribution (line types per triple)")
-    lines.append(f"- type1 count set: {summary['triple_type_distribution']['type1_count_set']}")
-    lines.append(f"- type2 count set: {summary['triple_type_distribution']['type2_count_set']}")
+    lines.append(
+        f"- type1 count set: {summary['triple_type_distribution']['type1_count_set']}"
+    )
+    lines.append(
+        f"- type2 count set: {summary['triple_type_distribution']['type2_count_set']}"
+    )
     lines.append("- pattern counts:")
     for k, v in summary["triple_type_distribution"]["pattern_counts"].items():
         lines.append(f"  - {k}: {v}")
@@ -236,7 +247,9 @@ def main():
     lines.append("## SRG(40,12,2,4) matches")
     if target:
         for item in target:
-            lines.append(f"- classes={item['classes']} -> k={item['k']}, λ={item['lambda']}, μ={item['mu']}")
+            lines.append(
+                f"- classes={item['classes']} -> k={item['k']}, λ={item['lambda']}, μ={item['mu']}"
+            )
     else:
         lines.append("- none")
 

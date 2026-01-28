@@ -20,25 +20,26 @@ to the E6/Albert/triality structure.
 import json
 from datetime import datetime
 
+
 def main():
     print("=" * 70)
     print(" W33 THEORY - PART CXX: THE NUMBER 1296")
     print(" The Stabilizer Structure")
     print("=" * 70)
-    
+
     results = {"part": "CXX", "findings": {}}
-    
+
     # =========================================================================
     # SECTION 1: FACTORIZATIONS OF 1296
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 1: FACTORIZATIONS OF 1296")
     print("=" * 70)
-    
+
     n = 1296
     print(f"\n  |Stab(v)| = {n}")
     print(f"\n  Prime factorization: {n} = 2^4 × 3^4")
-    
+
     print(f"\n  Significant factorizations:")
     print(f"    {n} = 36² = (6²)² = 6⁴")
     print(f"    {n} = 16 × 81 = 2⁴ × 3⁴")
@@ -49,28 +50,28 @@ def main():
     print(f"    {n} = 4 × 324 = 4 × 18²")
     print(f"    {n} = 3 × 432")
     print(f"    {n} = 2 × 648 = 2 × 8 × 81")
-    
+
     # Key connection numbers
     print(f"\n  Key connections:")
     print(f"    12 × 108 = {12 * 108} (neighbors × H27 edges)")
     print(f"    27 × 48 = {27 * 48} (Albert × ?)")
     print(f"    192 × 6.75 = {192 * 6.75} (not integer)")
     print(f"    1296 / 192 = {n / 192} = 6.75 (not integer)")
-    
+
     results["findings"]["factorizations"] = {
         "prime": "2^4 × 3^4",
         "square": "36²",
         "fourth_power": "6⁴",
-        "key_products": ["12 × 108", "27 × 48", "16 × 81"]
+        "key_products": ["12 × 108", "27 × 48", "16 × 81"],
     }
-    
+
     # =========================================================================
     # SECTION 2: THE STABILIZER AS A GROUP
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 2: THE STABILIZER AS A GROUP")
     print("=" * 70)
-    
+
     stab_analysis = """
   WHAT IS THE STABILIZER?
   
@@ -97,14 +98,14 @@ def main():
   But 1296 << 12! × 27!, so it's a small subgroup.
 """
     print(stab_analysis)
-    
+
     # =========================================================================
     # SECTION 3: ACTION ON NEIGHBORS
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 3: ACTION ON 12 NEIGHBORS")
     print("=" * 70)
-    
+
     neighbor_analysis = """
   THE 12 NEIGHBORS FORM SRG(12, 2, 1, 0):
   
@@ -136,14 +137,14 @@ def main():
   The 3⁴ factor is curious - more 3s than in 6!
 """
     print(neighbor_analysis)
-    
+
     # =========================================================================
     # SECTION 4: THE ROLE OF 6
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 4: THE MAGIC OF 6")
     print("=" * 70)
-    
+
     six_analysis = """
   THE NUMBER 6 APPEARS EVERYWHERE:
   
@@ -174,28 +175,23 @@ def main():
     - The 6³ = 216 cross-edges
 """
     print(six_analysis)
-    
+
     print("\n  Verification of 6-powers:")
     print(f"    6¹ = 6")
     print(f"    6² = 36")
     print(f"    6³ = 216 (cross-edges)")
     print(f"    6⁴ = 1296 (stabilizer)")
     print(f"    6⁴ × 40 = 51840 (full automorphism)")
-    
-    results["findings"]["powers_of_6"] = {
-        "6^1": 6,
-        "6^2": 36,
-        "6^3": 216,
-        "6^4": 1296
-    }
-    
+
+    results["findings"]["powers_of_6"] = {"6^1": 6, "6^2": 36, "6^3": 216, "6^4": 1296}
+
     # =========================================================================
     # SECTION 5: CONNECTION TO E6
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 5: CONNECTION TO E6 STRUCTURE")
     print("=" * 70)
-    
+
     e6_connection = """
   E6 AND THE NUMBER 1296:
   
@@ -227,28 +223,28 @@ def main():
   This is a homogeneous space for the Weyl group action!
 """
     print(e6_connection)
-    
+
     # Check various quotients
     print("\n  E6 quotient checks:")
     print(f"    |W(E6)| / 40 = 51840 / 40 = {51840 // 40} = |Stab(v)| ✓")
     print(f"    |W(E6)| / 27 = 51840 / 27 = {51840 // 27} = 1920")
     print(f"    |W(E6)| / 72 = 51840 / 72 = {51840 // 72} = 720 = 6!")
     print(f"    |W(E6)| / 45 = 51840 / 45 = {51840 // 45} = 1152 = |Aut(24-cell)|")
-    
+
     results["findings"]["e6_quotients"] = {
         "/40": 1296,
         "/27": 1920,
         "/72": 720,
-        "/45": 1152
+        "/45": 1152,
     }
-    
+
     # =========================================================================
     # SECTION 6: THE 1296 = 27 × 48 DECOMPOSITION
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 6: THE DECOMPOSITION 1296 = 27 × 48")
     print("=" * 70)
-    
+
     decomp_27_48 = """
   1296 = 27 × 48
   
@@ -280,26 +276,26 @@ def main():
     - 6 × 8 (triality × octonions)
 """
     print(decomp_27_48)
-    
+
     print("\n  The number 48:")
     print(f"    48 = 2 × 24 = 2 × (D4 roots)")
     print(f"    48 = 3 × 16 = 3 × (spinor)")
     print(f"    48 = 4 × 12 = 4 × (neighbors)")
     print(f"    48 = 6 × 8 = 6 × (octonion dim)")
     print(f"    48 = |GL(2, F₃)| = (9-1)(9-3) = 8 × 6")
-    
+
     results["findings"]["number_48"] = {
         "factorizations": ["2×24", "3×16", "4×12", "6×8"],
-        "gl2_f3": True
+        "gl2_f3": True,
     }
-    
+
     # =========================================================================
     # SECTION 7: THE 1296 = 12 × 108 DECOMPOSITION
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 7: THE DECOMPOSITION 1296 = 12 × 108")
     print("=" * 70)
-    
+
     decomp_12_108 = """
   1296 = 12 × 108
   
@@ -323,19 +319,19 @@ def main():
     - Edges from N(v) to N̄(v): 108
 """
     print(decomp_12_108)
-    
+
     print("\n  Orbit-stabilizer verification:")
     print(f"    If 12 neighbors form one orbit: |stab| = 1296/12 = {1296//12}")
     print(f"    If 27 non-neighbors form one orbit: |stab| = 1296/27 = {1296//27}")
     print(f"    108 × 48 / 1296 = {108 * 48 / 1296} (not immediately meaningful)")
-    
+
     # =========================================================================
     # SECTION 8: GROUP THEORY IDENTIFICATION
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 8: IDENTIFYING THE GROUP")
     print("=" * 70)
-    
+
     group_id = """
   KNOWN GROUPS OF ORDER 1296:
   
@@ -368,14 +364,14 @@ def main():
     1 + 12 + 27 decomposition around vertex v
 """
     print(group_id)
-    
+
     # =========================================================================
     # SECTION 9: THE HIERARCHY
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 9: THE COMPLETE HIERARCHY")
     print("=" * 70)
-    
+
     hierarchy = """
   THE NUMBER HIERARCHY:
   
@@ -410,14 +406,14 @@ def main():
   Or: 40 = 2³ × 5 = 2(2² × 5) = 2 × 20
 """
     print(hierarchy)
-    
+
     # =========================================================================
     # SECTION 10: SUMMARY
     # =========================================================================
     print("\n" + "=" * 70)
     print(" SECTION 10: SUMMARY")
     print("=" * 70)
-    
+
     summary = """
   ═══════════════════════════════════════════════════════════════════
   PART CXX SUMMARY: THE NUMBER 1296
@@ -459,17 +455,18 @@ def main():
   ═══════════════════════════════════════════════════════════════════
 """
     print(summary)
-    
+
     # Save results
-    with open('PART_CXX_1296_analysis.json', 'w') as f:
+    with open("PART_CXX_1296_analysis.json", "w") as f:
         json.dump(results, f, indent=2, default=int)
     print(f"\nResults saved to: PART_CXX_1296_analysis.json")
-    
+
     print("\n" + "=" * 70)
     print(" END OF PART CXX")
     print("=" * 70)
-    
+
     return results
+
 
 if __name__ == "__main__":
     main()

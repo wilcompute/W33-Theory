@@ -16,9 +16,10 @@ that naturally gives the tiny observed value!
 Let's explore this...
 """
 
-import numpy as np
-from fractions import Fraction
 from collections import defaultdict
+from fractions import Fraction
+
+import numpy as np
 
 print("=" * 80)
 print("W33 AND THE COSMOLOGICAL CONSTANT PROBLEM")
@@ -190,7 +191,7 @@ print(f"Effective modes after K4 constraint: ~{81/90:.2f}")
 # The 81 cycles are generators of H₁
 # The K4 constraint correlates them
 
-# The key insight: 
+# The key insight:
 # 81 = 3^4 and there are 4 positive roots in C₂
 # Each root contributes independently but they're PAIRED
 

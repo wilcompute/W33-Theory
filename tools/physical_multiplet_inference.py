@@ -11,6 +11,7 @@ Pipeline:
 
 Outputs artifacts/physical_multiplet_inference.json
 """
+
 from __future__ import annotations
 
 import csv
@@ -21,27 +22,30 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-RAYS_CSV = ROOT / "data/_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv"
+RAYS_CSV = (
+    ROOT
+    / "data/_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv"
+)
 Q45_CSV = ROOT / "data/q45_quantum_numbers.csv"
 V23_CSV = ROOT / "data/_v23/v23/Q_triangles_with_centers_Z2_S3_fiber6.csv"
 
 
 def load_rays():
-    V = [[0j]*4 for _ in range(40)]
-    with open(RAYS_CSV, newline='', encoding='utf-8') as f:
+    V = [[0j] * 4 for _ in range(40)]
+    with open(RAYS_CSV, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            pid = int(row['point_id'])
+            pid = int(row["point_id"])
             for i in range(4):
-                V[pid][i] = complex(str(row[f'v{i}']).replace(' ', ''))
+                V[pid][i] = complex(str(row[f"v{i}"]).replace(" ", ""))
     return V
 
 
 def collinearity(V):
-    col = [[0]*40 for _ in range(40)]
+    col = [[0] * 40 for _ in range(40)]
     for i in range(40):
-        for j in range(i+1, 40):
-            inner = sum((V[i][k].conjugate()*V[j][k] for k in range(4)))
+        for j in range(i + 1, 40):
+            inner = sum((V[i][k].conjugate() * V[j][k] for k in range(4)))
             if abs(inner) < 1e-6:
                 col[i][j] = col[j][i] = 1
     return col
@@ -51,30 +55,34 @@ def compute_k4_components(col):
     k4s = []
     n = 40
     for a in range(n):
-        for b in range(a+1, n):
+        for b in range(a + 1, n):
             if col[a][b]:
                 continue
-            for c in range(b+1, n):
+            for c in range(b + 1, n):
                 if col[a][c] or col[b][c]:
                     continue
-                for d in range(c+1, n):
+                for d in range(c + 1, n):
                     if col[a][d] or col[b][d] or col[c][d]:
                         continue
                     # common neighbors
                     common = []
                     for p in range(n):
-                        if p in (a,b,c,d):
+                        if p in (a, b, c, d):
                             continue
                         if col[a][p] and col[b][p] and col[c][p] and col[d][p]:
                             common.append(p)
                     if len(common) == 4:
-                        k4s.append((tuple(sorted([a,b,c,d])), tuple(sorted(common))))
+                        k4s.append((tuple(sorted([a, b, c, d])), tuple(sorted(common))))
     return k4s
 
 
 def pattern_class_by_vertex():
-    inter = json.loads((ROOT / "artifacts" / "we6_coxeter6_intersection.json").read_text())
-    orbit_map = json.loads((ROOT / "artifacts" / "e8_orbit_to_f3_point.json").read_text())
+    inter = json.loads(
+        (ROOT / "artifacts" / "we6_coxeter6_intersection.json").read_text()
+    )
+    orbit_map = json.loads(
+        (ROOT / "artifacts" / "e8_orbit_to_f3_point.json").read_text()
+    )
     mapping = orbit_map["mapping"]
 
     patterns = [tuple(row) for row in inter["matrix"]]
@@ -87,21 +95,23 @@ def pattern_class_by_vertex():
     point_to_orbit = {tuple(v): int(k) for k, v in mapping.items()}
 
     # build points in standard order
-    F3 = [0,1,2]
-    points=[]; seen=set()
+    F3 = [0, 1, 2]
+    points = []
+    seen = set()
     for v in product(F3, repeat=4):
-        if all(x==0 for x in v):
+        if all(x == 0 for x in v):
             continue
-        v=list(v)
+        v = list(v)
         for i in range(4):
-            if v[i]!=0:
-                inv=1 if v[i]==1 else 2
-                v=tuple((x*inv)%3 for x in v)
+            if v[i] != 0:
+                inv = 1 if v[i] == 1 else 2
+                v = tuple((x * inv) % 3 for x in v)
                 break
         if v not in seen:
-            seen.add(v); points.append(v)
+            seen.add(v)
+            points.append(v)
 
-    class_by_vertex=[]
+    class_by_vertex = []
     for p in points:
         oid = point_to_orbit[p]
         class_by_vertex.append(orbit_class[oid])
@@ -110,27 +120,29 @@ def pattern_class_by_vertex():
 
 def load_q45_mapping():
     q45 = {}
-    with open(Q45_CSV, newline='', encoding='utf-8') as f:
+    with open(Q45_CSV, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            q = int(row['q45_vertex'])
-            q45[q] = (int(row['k4_u']), int(row['k4_v']))
+            q = int(row["q45_vertex"])
+            q45[q] = (int(row["k4_u"]), int(row["k4_v"]))
     return q45
 
 
 def load_v23_triangles():
     tris = []
-    with open(V23_CSV, newline='', encoding='utf-8') as f:
+    with open(V23_CSV, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            tris.append({
-                'u': int(row['u']),
-                'v': int(row['v']),
-                'w': int(row['w']),
-                'centers': int(row['centers']),
-                'z2_parity': int(row['z2_parity']),
-                'fiber6_cycle_type': row['fiber6_cycle_type'],
-            })
+            tris.append(
+                {
+                    "u": int(row["u"]),
+                    "v": int(row["v"]),
+                    "w": int(row["w"]),
+                    "centers": int(row["centers"]),
+                    "z2_parity": int(row["z2_parity"]),
+                    "fiber6_cycle_type": row["fiber6_cycle_type"],
+                }
+            )
     return tris
 
 
@@ -162,10 +174,10 @@ def main():
     class_fiber = defaultdict(Counter)
 
     for t in tris:
-        qvs = [t['u'], t['v'], t['w']]
-        parity = t['z2_parity']
-        centers = t['centers']
-        ftype = t['fiber6_cycle_type']
+        qvs = [t["u"], t["v"], t["w"]]
+        parity = t["z2_parity"]
+        centers = t["centers"]
+        ftype = t["fiber6_cycle_type"]
         for q in qvs:
             sig = q45_sig.get(q)
             if sig is None:

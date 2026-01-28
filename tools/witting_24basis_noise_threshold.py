@@ -9,6 +9,7 @@ Under depolarization, each projector expectation shifts to:
 Since each basis includes exactly one designated outcome, S_v = 24 * (v + (1-v)/d).
 We solve for v where S_v equals the noncontextual bound (23).
 """
+
 from __future__ import annotations
 
 import json
@@ -35,7 +36,7 @@ def main():
     # Solve S_v = S_nc
     # v + (1-v)/d = S_nc / S_q
     target = S_nc / S_q
-    v = (target - 1/d) / (1 - 1/d)
+    v = (target - 1 / d) / (1 - 1 / d)
 
     # Convert to noise p = 1 - v
     p = 1 - v

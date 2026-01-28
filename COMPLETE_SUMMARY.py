@@ -4,6 +4,7 @@ COMPLETE SUMMARY OF W33 THEORY OF EVERYTHING
 Visual representation of all connections and evidence
 """
 
+
 def print_summary():
     summary = """
 ╔════════════════════════════════════════════════════════════════════════════╗
@@ -419,5 +420,6 @@ Next: Experimental confirmation phase
 """
     print(summary)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     print_summary()

@@ -8,15 +8,16 @@ The deepest question: Can W33 generate ALL algebraic structures?
 Key insight: The numbers 3 and 4 in W33 might encode:
   - 3 = dimension of base field GF(3)
   - 4 = |K4| = dimension of quaternions
-  
+
 Together: 3 × 4 = 12 = gauge bosons of Standard Model
 
 But there's something deeper...
 """
 
+from itertools import combinations, product
+
 import numpy as np
-from numpy import sqrt, pi, exp, log
-from itertools import product, combinations
+from numpy import exp, log, pi, sqrt
 
 print("=" * 80)
 print("W33 AND UNIVERSAL ALGEBRA")
@@ -54,12 +55,7 @@ W33 CONNECTION:
 """)
 
 # Division algebra dimensions
-div_algebras = {
-    'ℝ': 1,
-    'ℂ': 2,
-    'ℍ': 4,
-    '𝕆': 8
-}
+div_algebras = {"ℝ": 1, "ℂ": 2, "ℍ": 4, "𝕆": 8}
 
 total_dim = sum(div_algebras.values())
 print(f"Division algebra dimensions:")
@@ -210,15 +206,10 @@ KEY DIMENSIONS IN W33:
 """)
 
 # Magic square dimensions
-magic_square = [
-    [3, 8, 21, 52],
-    [8, 16, 35, 78],
-    [21, 35, 66, 133],
-    [52, 78, 133, 248]
-]
+magic_square = [[3, 8, 21, 52], [8, 16, 35, 78], [21, 35, 66, 133], [52, 78, 133, 248]]
 
 print(f"\nMagic square dimensions:")
-labels = ['ℝ', 'ℂ', 'ℍ', '𝕆']
+labels = ["ℝ", "ℂ", "ℍ", "𝕆"]
 for i, row in enumerate(magic_square):
     print(f"  {labels[i]}: {row}")
 

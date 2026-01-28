@@ -1,8 +1,9 @@
 from __future__ import annotations
-from pathlib import Path
+
 import json
 from decimal import Decimal
-from typing import Any, IO
+from pathlib import Path
+from typing import IO, Any
 
 try:
     import numpy as np
@@ -50,7 +51,7 @@ def dump_json(obj: Any, fp_or_path: str | Path | IO[str], **kwargs) -> None:
     if isinstance(fp_or_path, (str, Path)):
         path = Path(fp_or_path)
         path.parent.mkdir(parents=True, exist_ok=True)
-        with path.open('w', encoding=kwargs.pop('encoding', 'utf-8')) as f:
+        with path.open("w", encoding=kwargs.pop("encoding", "utf-8")) as f:
             json.dump(obj, f, default=_default, **kwargs)
     else:
         json.dump(obj, fp_or_path, default=_default, **kwargs)
@@ -58,7 +59,7 @@ def dump_json(obj: Any, fp_or_path: str | Path | IO[str], **kwargs) -> None:
 
 def load_json(fp_or_path: str | Path | IO[str]):
     if isinstance(fp_or_path, (str, Path)):
-        with open(fp_or_path, 'r', encoding='utf-8') as f:
+        with open(fp_or_path, "r", encoding="utf-8") as f:
             return json.load(f)
     else:
         return json.load(fp_or_path)

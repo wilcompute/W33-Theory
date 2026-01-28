@@ -19,10 +19,10 @@ THE MASTER EQUATION:
     k = 12 neighbors
     λ = 2 (common neighbors for adjacent)
     μ = 4 (common neighbors for non-adjacent)
-    
+
     Eigenvalues: 12, 2, -4
     Multiplicities: 1, 24, 15
-    
+
     TOTAL: 40 + 81 = 121 = 11²
 
 """
@@ -41,14 +41,14 @@ print("=" * 80)
 # ============================================================================
 
 W33 = {
-    'v': 40,           # vertices
-    'k': 12,           # degree (neighbors)
-    'lambda': 2,       # common neighbors (adjacent)
-    'mu': 4,           # common neighbors (non-adjacent)
-    'eigenvalues': [12, 2, -4],
-    'multiplicities': [1, 24, 15],
-    'total_spectrum': 40 + 81,  # = 121 = 11²
-    'dimension': 11,   # √121 = 11 spacetime dimensions
+    "v": 40,  # vertices
+    "k": 12,  # degree (neighbors)
+    "lambda": 2,  # common neighbors (adjacent)
+    "mu": 4,  # common neighbors (non-adjacent)
+    "eigenvalues": [12, 2, -4],
+    "multiplicities": [1, 24, 15],
+    "total_spectrum": 40 + 81,  # = 121 = 11²
+    "dimension": 11,  # √121 = 11 spacetime dimensions
 }
 
 print("\n" + "=" * 80)
@@ -88,31 +88,33 @@ print("-" * 60)
 # The muon g-2 anomaly arises from W33's 24-dimensional lepton sector
 # The eigenvalue 2 with multiplicity 24 controls lepton couplings
 
+
 def w33_muon_anomaly():
     """
     W33 predicts the muon anomaly from its spectral structure.
-    
+
     Key insight: The 24-multiplicity of eigenvalue 2 represents
     24 virtual loop contributions to the muon magnetic moment.
-    
+
     The fundamental ratio is:
     α_W33 = 24/(40 + 81) = 24/121
-    
+
     This gives the fractional anomaly contribution.
     """
     # W33 fine structure constant contribution
-    alpha_over_pi = 1/137 / 3.14159265359  # ~ 0.00232
-    
+    alpha_over_pi = 1 / 137 / 3.14159265359  # ~ 0.00232
+
     # W33 multiplicity factor
     m24 = 24 / 121  # = 0.1983...
-    
+
     # W33 enhancement from the 15-dimensional sector (QCD effects)
     qcd_factor = 15 / 121  # = 0.1240...
-    
+
     # Full W33 anomaly
-    a_mu_w33 = alpha_over_pi * (1 + m24 + qcd_factor * (40/12))
-    
+    a_mu_w33 = alpha_over_pi * (1 + m24 + qcd_factor * (40 / 12))
+
     return a_mu_w33
+
 
 print(f"""
 W33 Spectral Analysis:
@@ -165,32 +167,34 @@ print("\n" + "-" * 60)
 print("W33 PREDICTION FOR W BOSON MASS")
 print("-" * 60)
 
+
 def w33_w_boson_mass():
     """
     W33 predicts the W boson mass through electroweak symmetry breaking.
-    
+
     The Higgs VEV v ≈ 246 GeV is encoded in W33 as:
     v = 246 GeV × (40/121)^(1/4)
-    
+
     The W mass ratio to v is:
     M_W / v = g/2 where g is the SU(2) coupling
-    
+
     W33 predicts g² = 4 × (12/40) = 1.2
     """
     v_higgs = 246.22  # GeV
-    
+
     # W33 weak coupling from k/v ratio
     g_squared_w33 = 4 * (12 / 40)  # = 1.2
-    g_w33 = g_squared_w33 ** 0.5   # = 1.095
-    
+    g_w33 = g_squared_w33**0.5  # = 1.095
+
     # Weinberg angle from W33
     # sin²θ_W = μ/(k+μ) = 4/16 = 0.25 ≈ 0.231 (experimental)
     sin2_theta_w33 = 4 / (12 + 4)
-    
+
     # W mass prediction
     M_W_w33 = v_higgs * g_w33 / 2
-    
+
     return M_W_w33, sin2_theta_w33
+
 
 M_W_pred, sin2_theta = w33_w_boson_mass()
 
@@ -366,13 +370,11 @@ print("=" * 80)
 predictions = [
     # Part CII confirmations
     ("Dark Energy w₀", -0.826, -0.827, 0.06, "0.1%", "CONFIRMED (DESI 2025)"),
-    
     # Part CIII updates
     ("W boson mass (GeV)", 80.36, 80.360, 0.010, "0.00%", "CMS Sept 2024"),
     ("Weinberg angle sin²θ", 0.25, 0.231, 0.001, "8%", "Structure correct"),
     ("Muon g-2 aμ", 0.00116592, 0.00116592, 0.0000001, "~0.0%", "Fermilab 2025"),
     ("Spacetime dimensions", 11, 11, 0, "EXACT", "M-theory match"),
-    
     # Earlier predictions still valid
     ("Fine structure α⁻¹", 137.036, 137.036, 0.001, "~0%", "EXACT match"),
     ("Strong coupling αs", 0.118, 0.1180, 0.001, "~0%", "High precision"),
@@ -387,12 +389,16 @@ predictions = [
 ]
 
 print("\n" + "-" * 100)
-print(f"{'Parameter':<30} {'W33 Pred':>12} {'Experiment':>12} {'Error':>10} {'Agreement':>10} {'Status':<20}")
+print(
+    f"{'Parameter':<30} {'W33 Pred':>12} {'Experiment':>12} {'Error':>10} {'Agreement':>10} {'Status':<20}"
+)
 print("-" * 100)
 
 for name, pred, exp, err, agree, status in predictions:
     err_str = f"±{err}" if err else "-"
-    print(f"{name:<30} {pred:>12.6g} {exp:>12.6g} {err_str:>10} {agree:>10} {status:<20}")
+    print(
+        f"{name:<30} {pred:>12.6g} {exp:>12.6g} {err_str:>10} {agree:>10} {status:<20}"
+    )
 
 print("-" * 100)
 
@@ -492,32 +498,32 @@ results = {
         "muon_g2_final_2025": {
             "experimental": 0.001165920705,
             "precision_ppm": 0.127,
-            "status": "Most precise magnetic moment ever measured"
+            "status": "Most precise magnetic moment ever measured",
         },
         "w_boson_mass_2024": {
             "cms_value_gev": 80.3602,
             "error_gev": 0.0099,
-            "status": "CDF anomaly resolved - SM confirmed"
+            "status": "CDF anomaly resolved - SM confirmed",
         },
         "desi_dark_energy_2025": {
             "w0_measured": -0.827,
             "w0_w33_predicted": -0.826,
-            "agreement_percent": 0.1
+            "agreement_percent": 0.1,
         },
         "lhc_2025": {
             "status": "Record-breaking luminosity",
-            "exceeded_target_by_fb": 5.4
+            "exceeded_target_by_fb": 5.4,
         },
         "quark_entanglement_2024": {
             "discovered": "September 18, 2024",
-            "significance": "First observation at highest energy"
-        }
+            "significance": "First observation at highest energy",
+        },
     },
     "predictions_total": len(predictions),
-    "summary": "W33 theory passes all 2025-2026 precision tests"
+    "summary": "W33 theory passes all 2025-2026 precision tests",
 }
 
-with open('PART_CIII_precision_frontier.json', 'w') as f:
+with open("PART_CIII_precision_frontier.json", "w") as f:
     json.dump(results, f, indent=2, default=int)
 
 print("\n" + "=" * 80)

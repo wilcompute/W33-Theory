@@ -4,9 +4,10 @@ TOWARDS A W33 PROOF OF ˆt · ˆP₂₂ = 0
 Using the self-duality of W33 to approach Vogel's open problem.
 """
 
-import numpy as np
 from fractions import Fraction
 from itertools import combinations, product
+
+import numpy as np
 
 print("=" * 80)
 print("W33 APPROACH TO THE P22 CONJECTURE")
@@ -20,12 +21,13 @@ print("\n" + "=" * 80)
 print("PART 1: THE W33 STRUCTURE")
 print("=" * 80)
 
+
 def build_pg33():
     """Build the projective space PG(3, GF(3))"""
-    
+
     # Points: equivalence classes of nonzero vectors in GF(3)^4
     points = []
-    
+
     for a in range(3):
         for b in range(3):
             for c in range(3):
@@ -33,31 +35,33 @@ def build_pg33():
                     vec = [a, b, c, d]
                     if vec == [0, 0, 0, 0]:
                         continue
-                    
+
                     # Normalize: first nonzero coord = 1
                     for i in range(4):
                         if vec[i] != 0:
                             inv = pow(vec[i], -1, 3)  # Multiplicative inverse in GF(3)
                             vec = [(v * inv) % 3 for v in vec]
                             break
-                    
+
                     vec = tuple(vec)
                     if vec not in points:
                         points.append(vec)
-    
+
     return points
+
 
 points = build_pg33()
 print(f"Number of points: {len(points)}")
+
 
 # Build incidence structure
 def are_collinear(p1, p2, p3):
     """Check if three points are collinear in PG(3, GF(3))"""
     # They're collinear if the 4x3 matrix has rank <= 2
     # Equivalently: all 3x3 minors are zero mod 3
-    
+
     mat = np.array([p1, p2, p3], dtype=int)
-    
+
     # Check all 3x3 submatrices
     for cols in combinations(range(4), 3):
         submat = mat[:, cols]
@@ -65,6 +69,7 @@ def are_collinear(p1, p2, p3):
         if det != 0:
             return False
     return True
+
 
 # Count lines
 lines = []
@@ -79,7 +84,7 @@ for i, p1 in enumerate(points):
                 continue
             if are_collinear(p1, p2, p3):
                 line_points.append(p3)
-        
+
         line_points = tuple(sorted(line_points))
         if len(line_points) == 4 and line_points not in lines:
             lines.append(line_points)
@@ -155,31 +160,33 @@ print("=" * 80)
 # Count cycles of length 3 (triangles)
 # In PG(3,3), these come from planes
 
+
 def count_cycles():
     """Count 3-cycles in W33"""
     # A 3-cycle consists of 3 mutually collinear points forming a triangle
     # In projective geometry, any 3 non-collinear points span a plane
-    
+
     triangles = 0
-    
+
     # Actually, we want to count something different:
     # The 81 "cycles" in the W33 context refer to the 81 elements of GF(3)^4
     # which parametrize the affine part
-    
+
     # Or: planes in PG(3,3)
     # A plane in PG(3,3) contains (3^3 - 1)/(3-1) = 13 points
     # Number of planes = (3^4 - 1)(3^3 - 1) / ((3^2 - 1)(3 - 1)) = ?
-    
+
     # Let's compute this properly
     # PG(n,q) has Gaussian binomial [n+1, k+1]_q k-flats
-    
+
     # For PG(3,3), planes are 2-flats
     # [4,3]_3 = (3^4 - 1)(3^3 - 1)(3^2 - 1) / ((3^3-1)(3^2-1)(3-1))
     #         = (3^4 - 1) / (3 - 1) = 80/2 = 40
-    
+
     # So there are 40 planes, matching the 40 points (self-duality!)
-    
+
     return 40  # planes
+
 
 n_planes = count_cycles()
 print(f"Number of planes in PG(3,3): {n_planes}")
