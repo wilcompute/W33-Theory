@@ -1,0 +1,29 @@
+{
+  "status": "inconsistent",
+  "conflict_edge": {
+    "from": 2,
+    "to": 4,
+    "eps": 1,
+    "generator": 1
+  },
+  "cycle": [
+    {
+      "from": 0,
+      "to": 2,
+      "eps": 1,
+      "generator": 3
+    },
+    {
+      "from": 4,
+      "to": 0,
+      "eps": -1,
+      "generator": 5
+    },
+    {
+      "from": 2,
+      "to": 4,
+      "eps": 1,
+      "generator": 1
+    }
+  ]
+}
