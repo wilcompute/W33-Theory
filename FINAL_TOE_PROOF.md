@@ -1152,6 +1152,12 @@ Explicit per‑component magnitudes and phases for all 40 rays (direct state‑p
 `docs/witting_ray_amplitude_phase.csv`  
 Script: `tools/witting_ray_phase_table.py`
 
+**Waveplate schedule (computed):**  
+Each 2×2 rotation approximated by **QWP–HWP–QWP** angles (up to global phase):  
+`docs/witting_24basis_waveplates.md`  
+`docs/witting_24basis_waveplates.json`  
+Script: `tools/witting_24basis_waveplate_fit.py`
+
 **Interpretation:** The Witting set is **contextual but not parity‑contextual**
 in its full 40‑basis form. Photonic tests should therefore target a **KS
 inequality** (state‑independent contextuality) rather than a parity proof.
