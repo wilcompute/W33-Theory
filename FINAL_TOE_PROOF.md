@@ -1067,6 +1067,24 @@ KS‑uncolorable, lowering experimental overhead while preserving contextuality.
 Artifact: `artifacts/witting_ks_reduce_bases.json`  
 Script: `tools/witting_ks_reduce_bases.py`
 
+**Photonic cookbook (generated):**  
+We generated a **24‑basis cookbook** with explicit ray vectors and basis lists
+for experimental implementation, plus a **heuristic noncontextual bound**
+from local search.
+
+Docs:  
+`docs/witting_24basis_cookbook.md`  
+`docs/witting_24basis_vectors.csv`  
+`docs/witting_24basis_subset.json`  
+Script: `tools/witting_24basis_cookbook.py`
+
+**Unitary implementation (computed):**  
+For each of the 24 bases, a 4×4 unitary is provided with the basis rays as
+columns (direct experimental settings).
+
+Docs: `docs/witting_24basis_unitaries.json`  
+Script: `tools/witting_24basis_unitaries.py`
+
 **Interpretation:** The Witting set is **contextual but not parity‑contextual**
 in its full 40‑basis form. Photonic tests should therefore target a **KS
 inequality** (state‑independent contextuality) rather than a parity proof.
