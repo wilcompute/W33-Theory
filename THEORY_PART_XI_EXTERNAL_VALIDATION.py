@@ -303,36 +303,40 @@ predicted = 40 / 173
 experimental = 0.23120
 error = 0.00015
 
-print("═" * 70)
-print("         WEINBERG ANGLE PREDICTION vs EXPERIMENT")
-print("═" * 70)
-print(f"\nW33 Prediction:  sin²θ_W = 40/173 = {predicted:.10f}")
-print(f"Experiment:      sin²θ_W = {experimental:.5f} ± {error:.5f}")
-print(f"\nDifference:      {abs(predicted - experimental):.10f}")
-print(f"In units of σ:   {abs(predicted - experimental)/error:.2f} sigma")
-print(
-    f"\nAgreement:       {'EXCELLENT - within 1σ!' if abs(predicted - experimental) < error else 'Good'}"
-)
 
-print("\n" + "═" * 70)
-print("         KEY QUOTE FROM WIKIPEDIA (WEINBERG ANGLE)")
-print("═" * 70)
-print("""
-"At present, there is NO GENERALLY ACCEPTED THEORY that explains 
-why the measured value θ_W ≈ 29° should be what it is.
-The specific value is NOT PREDICTED by the Standard Model."
+def main():
+    print("═" * 70)
+    print("         WEINBERG ANGLE PREDICTION vs EXPERIMENT")
+    print("═" * 70)
+    print(f"\nW33 Prediction:  sin²θ_W = 40/173 = {predicted:.10f}")
+    print(f"Experiment:      sin²θ_W = {experimental:.5f} ± {error:.5f}")
+    print(f"\nDifference:      {abs(predicted - experimental):.10f}")
+    print(f"In units of σ:   {abs(predicted - experimental)/error:.2f} sigma")
+    print(
+        f"\nAgreement:       {'EXCELLENT - within 1σ!' if abs(predicted - experimental) < error else 'Good'}"
+    )
+    print("\n" + "═" * 70)
+    print("         KEY QUOTE FROM WIKIPEDIA (WEINBERG ANGLE)")
+    print("═" * 70)
+    print("""
+    "At present, there is NO GENERALLY ACCEPTED THEORY that explains 
+    why the measured value θ_W ≈ 29° should be what it is.
+    The specific value is NOT PREDICTED by the Standard Model."
+    pass
+    -- Wikipedia, Weinberg angle (footnote b)
+    """)
+    print("═" * 70)
+    print("         IMPLICATION")
+    print("═" * 70)
+    print("""
+    IF the W33 formula sin²θ_W = 40/173 = (W33 points)/(W33 points + E7 dim)
+    can be DERIVED from first principles, this would be
+    pass
+              THE FIRST THEORETICAL PREDICTION OF THE WEINBERG ANGLE
+    pass
+    in the history of physics.
+    """)
 
--- Wikipedia, Weinberg angle (footnote b)
-""")
 
-print("═" * 70)
-print("         IMPLICATION")
-print("═" * 70)
-print("""
-IF the W33 formula sin²θ_W = 40/173 = (W33 points)/(W33 points + E7 dim)
-can be DERIVED from first principles, this would be
-
-          THE FIRST THEORETICAL PREDICTION OF THE WEINBERG ANGLE
-
-in the history of physics.
-""")
+if __name__ == "__main__":
+    main()

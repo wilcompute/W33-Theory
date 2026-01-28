@@ -346,4 +346,10 @@ physics. The number 81 = 3⁴ is the key that unlocks them all!
 ═══════════════════════════════════════════════════════════════════════════════
 """
 
-print(__doc__)
+
+def main():
+    print(__doc__)
+
+
+if __name__ == "__main__":
+    main()

@@ -13,8 +13,7 @@ import numpy as np
 
 from lib.permutation_group import Perm, PermutationGroup
 from lib.simplicial_homology import betti_numbers_via_primes
-from lib.w33_io import (W33DataPaths, load_w33_lines, load_w33_rays,
-                        simplices_from_lines)
+from lib.w33_io import W33DataPaths, load_w33_lines, load_w33_rays, simplices_from_lines
 
 
 def ray_equiv(a: np.ndarray, b: np.ndarray, *, rtol=1e-6, atol=1e-8) -> bool:

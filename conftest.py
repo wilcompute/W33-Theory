@@ -6,12 +6,6 @@ _optional_modules = {
     "pandas": False,
     "sage": False,
 }
-for m in list(_optional_modules.keys()):
-    try:
-        importlib.import_module(m)
-        _optional_modules[m] = True
-    except Exception:
-        _optional_modules[m] = False
 
 import re
 
@@ -44,3 +38,16 @@ def pytest_ignore_collect(path, config):
                     print(f"Skipping {path} (requires {mod})")
                     return True
     return False
+
+
+def main():
+    for m in list(_optional_modules.keys()):
+        try:
+            importlib.import_module(m)
+            _optional_modules[m] = True
+        except Exception:
+            _optional_modules[m] = False
+
+
+if __name__ == "__main__":
+    main()

@@ -92,6 +92,12 @@ for jf in sorted(ROOT.glob("PART_*.json")):
 
     scan(data)
 
-with open(out, "w") as f:
-    json.dump(res, f, indent=2, default=int)
-print("Wrote", out, "entries:", len(res))
+
+def main():
+    with open(out, "w") as f:
+        json.dump(res, f, indent=2, default=int)
+    print("Wrote", out, "entries:", len(res))
+
+
+if __name__ == "__main__":
+    main()

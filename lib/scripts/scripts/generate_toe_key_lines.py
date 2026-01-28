@@ -15,9 +15,6 @@ import os
 ROOT = Path(__file__).resolve().parents[1]
 # Allow tests or external callers to override the repo root directory.
 # Priority: CLI --root, then TOE_ROOT env var, else default ROOT above.
-parser = argparse.ArgumentParser(add_help=False)
-parser.add_argument("--root", type=str, default=None)
-args, _ = parser.parse_known_args()
 if args.root:
     ROOT = Path(args.root).resolve()
 else:
@@ -94,39 +91,8 @@ else:
 
 # build merged rows
 rows = []
-for line_id in sorted(set(list(ac.keys()) + list(ph.keys()))):
-    a = ac.get(line_id, {})
-    p = ph.get(line_id, {})
-    row = {
-        "line_id": line_id,
-        "native_mean_abs_delta": float(a.get("native_mean_abs_delta") or 0.0),
-        "var_q_class": a.get("var_q_class", ""),
-        "var_q_r": float(a.get("var_q_r") or 0.0),
-        "k12_entropy": float(a.get("k12_entropy") or 0.0),
-        "k12_kl_global": float(a.get("k12_kl_global") or 0.0),
-        "tau_shift_similarity": float(a.get("tau_shift_similarity") or 0.0),
-        "prior_score": float(a.get("prior_score") or 0.0),
-        "fit_score": float(a.get("fit_score") or 0.0),
-        "unique_k_mod6": int(p.get("unique_k_mod6") or 0),
-        "unique_k_mod3": int(p.get("unique_k_mod3") or 0),
-        "node_commutator_score": float(node_scores.get(line_id, 0.0)),
-        "in_top_node_commutator": int(line_id in top_node5_set),
-        "mixed_score": float(mixed_scores.get(line_id, 0.0)),
-        "in_top_mixed": int(line_id in top_mixed5_set),
-        "e_star_oddness": float(e_star.get(line_id, 0.0)),
-        "in_top_e_star_oddness": int(line_id in top_e5_set),
-    }
-    rows.append(row)
 
 # ranks and top lists
-rows_sorted_native = sorted(
-    rows, key=lambda r: r["native_mean_abs_delta"], reverse=True
-)
-rows_sorted_prior = sorted(rows, key=lambda r: r["prior_score"], reverse=True)
-rows_sorted_fit = sorted(rows, key=lambda r: r["fit_score"], reverse=True)
-rows_sorted_node = sorted(rows, key=lambda r: r["node_commutator_score"], reverse=True)
-rows_sorted_mixed = sorted(rows, key=lambda r: r["mixed_score"], reverse=True)
-rows_sorted_e_star = sorted(rows, key=lambda r: r["e_star_oddness"], reverse=True)
 
 top_n = 10
 top_native = {r["line_id"] for r in rows_sorted_native[:top_n]}
@@ -136,35 +102,6 @@ top_node = {r["line_id"] for r in rows_sorted_node[:5]}
 top_mixed = {r["line_id"] for r in rows_sorted_mixed[:5]}
 top_e_star = {r["line_id"] for r in rows_sorted_e_star[:5]}
 
-for r in rows:
-    r["rank_native"] = next(
-        i + 1
-        for i, rr in enumerate(rows_sorted_native)
-        if rr["line_id"] == r["line_id"]
-    )
-    r["rank_prior"] = next(
-        i + 1 for i, rr in enumerate(rows_sorted_prior) if rr["line_id"] == r["line_id"]
-    )
-    r["rank_fit"] = next(
-        i + 1 for i, rr in enumerate(rows_sorted_fit) if rr["line_id"] == r["line_id"]
-    )
-    r["rank_node_commutator"] = next(
-        i + 1 for i, rr in enumerate(rows_sorted_node) if rr["line_id"] == r["line_id"]
-    )
-    r["rank_mixed"] = next(
-        i + 1 for i, rr in enumerate(rows_sorted_mixed) if rr["line_id"] == r["line_id"]
-    )
-    r["rank_e_star_oddness"] = next(
-        i + 1
-        for i, rr in enumerate(rows_sorted_e_star)
-        if rr["line_id"] == r["line_id"]
-    )
-    r["in_top_native"] = int(r["line_id"] in top_native)
-    r["in_top_prior"] = int(r["line_id"] in top_prior)
-    r["in_top_fit"] = int(r["line_id"] in top_fit)
-    r["in_top_node_commutator"] = int(r["line_id"] in top_node)
-    r["in_top_mixed"] = int(r["line_id"] in top_mixed)
-    r["in_top_e_star_oddness"] = int(r["line_id"] in top_e_star)
 # write CSV
 fieldnames = [
     "line_id",
@@ -195,16 +132,8 @@ fieldnames = [
     "in_top_e_star_oddness",
 ]
 # ensure output dir exists
-out_path.parent.mkdir(parents=True, exist_ok=True)
-md_path.parent.mkdir(parents=True, exist_ok=True)
-with open(out_path, "w", newline="", encoding="utf-8") as f:
-    writer = csv.DictWriter(f, fieldnames=fieldnames)
-    writer.writeheader()
-    for r in sorted(rows, key=lambda r: r["line_id"]):
-        writer.writerow({k: r.get(k, "") for k in fieldnames})
 
 # write short md summary
-union_top = sorted(list(top_native | top_prior | top_fit))
 md_lines = [
     "# TOE key lines digest",
     "",
@@ -215,8 +144,95 @@ md_lines = [
     "",
     "See `toe_key_lines.csv` for per-line metrics and ranks.",
 ]
-with open(md_path, "w", encoding="utf-8") as f:
-    f.write("\n".join(md_lines))
 
-print("Wrote", out_path)
-print("Wrote", md_path)
+
+def main():
+    parser = argparse.ArgumentParser(add_help=False)
+    parser.add_argument("--root", type=str, default=None)
+    args, _ = parser.parse_known_args()
+    for line_id in sorted(set(list(ac.keys()) + list(ph.keys()))):
+        a = ac.get(line_id, {})
+        p = ph.get(line_id, {})
+        row = {
+            "line_id": line_id,
+            "native_mean_abs_delta": float(a.get("native_mean_abs_delta") or 0.0),
+            "var_q_class": a.get("var_q_class", ""),
+            "var_q_r": float(a.get("var_q_r") or 0.0),
+            "k12_entropy": float(a.get("k12_entropy") or 0.0),
+            "k12_kl_global": float(a.get("k12_kl_global") or 0.0),
+            "tau_shift_similarity": float(a.get("tau_shift_similarity") or 0.0),
+            "prior_score": float(a.get("prior_score") or 0.0),
+            "fit_score": float(a.get("fit_score") or 0.0),
+            "unique_k_mod6": int(p.get("unique_k_mod6") or 0),
+            "unique_k_mod3": int(p.get("unique_k_mod3") or 0),
+            "node_commutator_score": float(node_scores.get(line_id, 0.0)),
+            "in_top_node_commutator": int(line_id in top_node5_set),
+            "mixed_score": float(mixed_scores.get(line_id, 0.0)),
+            "in_top_mixed": int(line_id in top_mixed5_set),
+            "e_star_oddness": float(e_star.get(line_id, 0.0)),
+            "in_top_e_star_oddness": int(line_id in top_e5_set),
+        }
+        rows.append(row)
+    rows_sorted_native = sorted(
+        rows, key=lambda r: r["native_mean_abs_delta"], reverse=True
+    )
+    rows_sorted_prior = sorted(rows, key=lambda r: r["prior_score"], reverse=True)
+    rows_sorted_fit = sorted(rows, key=lambda r: r["fit_score"], reverse=True)
+    rows_sorted_node = sorted(
+        rows, key=lambda r: r["node_commutator_score"], reverse=True
+    )
+    rows_sorted_mixed = sorted(rows, key=lambda r: r["mixed_score"], reverse=True)
+    rows_sorted_e_star = sorted(rows, key=lambda r: r["e_star_oddness"], reverse=True)
+    for r in rows:
+        r["rank_native"] = next(
+            i + 1
+            for i, rr in enumerate(rows_sorted_native)
+            if rr["line_id"] == r["line_id"]
+        )
+        r["rank_prior"] = next(
+            i + 1
+            for i, rr in enumerate(rows_sorted_prior)
+            if rr["line_id"] == r["line_id"]
+        )
+        r["rank_fit"] = next(
+            i + 1
+            for i, rr in enumerate(rows_sorted_fit)
+            if rr["line_id"] == r["line_id"]
+        )
+        r["rank_node_commutator"] = next(
+            i + 1
+            for i, rr in enumerate(rows_sorted_node)
+            if rr["line_id"] == r["line_id"]
+        )
+        r["rank_mixed"] = next(
+            i + 1
+            for i, rr in enumerate(rows_sorted_mixed)
+            if rr["line_id"] == r["line_id"]
+        )
+        r["rank_e_star_oddness"] = next(
+            i + 1
+            for i, rr in enumerate(rows_sorted_e_star)
+            if rr["line_id"] == r["line_id"]
+        )
+        r["in_top_native"] = int(r["line_id"] in top_native)
+        r["in_top_prior"] = int(r["line_id"] in top_prior)
+        r["in_top_fit"] = int(r["line_id"] in top_fit)
+        r["in_top_node_commutator"] = int(r["line_id"] in top_node)
+        r["in_top_mixed"] = int(r["line_id"] in top_mixed)
+        r["in_top_e_star_oddness"] = int(r["line_id"] in top_e_star)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    md_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(out_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        for r in sorted(rows, key=lambda r: r["line_id"]):
+            writer.writerow({k: r.get(k, "") for k in fieldnames})
+    union_top = sorted(list(top_native | top_prior | top_fit))
+    with open(md_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(md_lines))
+    print("Wrote", out_path)
+    print("Wrote", md_path)
+
+
+if __name__ == "__main__":
+    main()

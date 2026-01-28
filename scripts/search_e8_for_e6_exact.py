@@ -6,29 +6,15 @@ from fractions import Fraction
 from pathlib import Path
 
 # load backtrack nodes
-back = Path("PART_CVII_e6_in_e8_backtrack.json")
 if not back.exists():
     print("Backtrack file missing")
     raise SystemExit(1)
 nodes = json.loads(back.read_text())[0]["nodes"]
-print("nodes", nodes)
 
 # build E8 roots as rational vectors
 E8 = []
 import itertools
 
-for i in range(8):
-    for j in range(i + 1, 8):
-        for si in (-1, 1):
-            for sj in (-1, 1):
-                r = [0] * 8
-                r[i] = si
-                r[j] = sj
-                E8.append(tuple(Fraction(x) for x in r))
-for signs in itertools.product([-1, 1], repeat=8):
-    if sum(1 for s in signs if s < 0) % 2 == 0:
-        r = tuple(Fraction(s, 2) for s in signs)
-        E8.append(r)
 assert len(E8) == 240
 
 # simple roots as rational
@@ -92,21 +78,41 @@ def solve_frac(A, b):
 
 
 in_span = []
-for idx, r in enumerate(E8):
-    x = solve_frac(T, list(r))
-    if x is None:
-        continue
-    # check exact reconstruction
-    recon = [
-        sum(T[row][col] * x[col] for col in range(len(simples))) for row in range(8)
-    ]
-    if all(recon[i] == r[i] for i in range(8)):
-        # check integer coefficients
-        if all(xi.denominator == 1 for xi in x):
-            in_span.append({"index": idx, "coeffs": [int(xi) for xi in x]})
 
-print("Found in_span count:", len(in_span))
-Path("PART_CVII_e6_in_e8_backtrack_exact.json").write_text(
-    json.dumps(in_span, indent=2)
-)
-print("Wrote PART_CVII_e6_in_e8_backtrack_exact.json")
+
+def main():
+    back = Path("PART_CVII_e6_in_e8_backtrack.json")
+    print("nodes", nodes)
+    for i in range(8):
+        for j in range(i + 1, 8):
+            for si in (-1, 1):
+                for sj in (-1, 1):
+                    r = [0] * 8
+                    r[i] = si
+                    r[j] = sj
+                    E8.append(tuple(Fraction(x) for x in r))
+    for signs in itertools.product([-1, 1], repeat=8):
+        if sum(1 for s in signs if s < 0) % 2 == 0:
+            r = tuple(Fraction(s, 2) for s in signs)
+            E8.append(r)
+    for idx, r in enumerate(E8):
+        x = solve_frac(T, list(r))
+        if x is None:
+            continue
+        # check exact reconstruction
+        recon = [
+            sum(T[row][col] * x[col] for col in range(len(simples))) for row in range(8)
+        ]
+        if all(recon[i] == r[i] for i in range(8)):
+            # check integer coefficients
+            if all(xi.denominator == 1 for xi in x):
+                in_span.append({"index": idx, "coeffs": [int(xi) for xi in x]})
+    print("Found in_span count:", len(in_span))
+    Path("PART_CVII_e6_in_e8_backtrack_exact.json").write_text(
+        json.dumps(in_span, indent=2)
+    )
+    print("Wrote PART_CVII_e6_in_e8_backtrack_exact.json")
+
+
+if __name__ == "__main__":
+    main()

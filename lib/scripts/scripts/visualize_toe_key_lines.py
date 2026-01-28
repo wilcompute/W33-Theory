@@ -1,20 +1,15 @@
 """Generate figures from data/_docs/toe_key_lines.csv and save to data/_docs/figures/"""
 
+import argparse
+import os
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 
-sns.set(style="whitegrid")
-import argparse
-import os
-
 repo_root = Path(__file__).resolve().parents[1]
 # Allow overriding the repo root for tests: CLI --root then TOE_ROOT env var
-vparser = argparse.ArgumentParser(add_help=False)
-vparser.add_argument("--root", type=str, default=None)
-vargs, _ = vparser.parse_known_args()
 if vargs.root:
     repo_root = Path(vargs.root).resolve()
 else:
@@ -24,7 +19,6 @@ else:
 
 key_lines = repo_root / "data" / "_docs" / "toe_key_lines.csv"
 fig_dir = repo_root / "data" / "_docs" / "figures"
-fig_dir.mkdir(parents=True, exist_ok=True)
 
 if not key_lines.exists():
     print(
@@ -32,9 +26,6 @@ if not key_lines.exists():
     )
     raise SystemExit(1)
 
-print("Loading", key_lines)
-df = pd.read_csv(key_lines, encoding="utf-8-sig")
-print("Read", len(df), "rows")
 
 # Boxplot: mean_abs_delta by unique_k_mod6
 if "mean_abs_delta" in df.columns and "unique_k_mod6" in df.columns:
@@ -76,14 +67,29 @@ if "k12_entropy" in df.columns:
 
 # Small summary CSV
 summary = {}
-summary["n_rows"] = len(df)
 summary["mean_abs_delta_mean"] = (
     float(df["mean_abs_delta"].mean()) if "mean_abs_delta" in df.columns else None
 )
 summary["k12_entropy_mean"] = (
     float(df["k12_entropy"].mean()) if "k12_entropy" in df.columns else None
 )
-pd.DataFrame([summary]).to_csv(
-    repo_root / "data" / "_docs" / "toe_key_lines_summary.csv", index=False
-)
-print("Wrote summary CSV")
+
+
+def main():
+    sns.set(style="whitegrid")
+    vparser = argparse.ArgumentParser(add_help=False)
+    vparser.add_argument("--root", type=str, default=None)
+    vargs, _ = vparser.parse_known_args()
+    fig_dir.mkdir(parents=True, exist_ok=True)
+    print("Loading", key_lines)
+    df = pd.read_csv(key_lines, encoding="utf-8-sig")
+    print("Read", len(df), "rows")
+    summary["n_rows"] = len(df)
+    pd.DataFrame([summary]).to_csv(
+        repo_root / "data" / "_docs" / "toe_key_lines_summary.csv", index=False
+    )
+    print("Wrote summary CSV")
+
+
+if __name__ == "__main__":
+    main()

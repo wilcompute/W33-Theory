@@ -6,26 +6,12 @@ import json
 from fractions import Fraction
 from pathlib import Path
 
-back = Path("PART_CVII_e6_in_e8_backtrack.json")
 if not back.exists():
     print("No backtrack file")
     raise SystemExit(1)
-solutions = json.loads(back.read_text())
 
 # build E8 roots
 E8 = []
-for i in range(8):
-    for j in range(i + 1, 8):
-        for si in (-1, 1):
-            for sj in (-1, 1):
-                r = [0] * 8
-                r[i] = si
-                r[j] = sj
-                E8.append(tuple(Fraction(x) for x in r))
-for signs in itertools.product([-1, 1], repeat=8):
-    if sum(1 for s in signs if s < 0) % 2 == 0:
-        r = tuple(Fraction(s, 2) for s in signs)
-        E8.append(r)
 assert len(E8) == 240
 
 results = []
@@ -99,6 +85,26 @@ for sol in solutions:
         {"nodes": nodes, "in_span_count": len(in_span), "in_span_indices": in_span[:20]}
     )
 
-Path("PART_CVII_e6_backtrack_eval.json").write_text(json.dumps(results, indent=2))
-print("Wrote PART_CVII_e6_backtrack_eval.json")
-print(json.dumps(results, indent=2))
+
+def main():
+    back = Path("PART_CVII_e6_in_e8_backtrack.json")
+    solutions = json.loads(back.read_text())
+    for i in range(8):
+        for j in range(i + 1, 8):
+            for si in (-1, 1):
+                for sj in (-1, 1):
+                    r = [0] * 8
+                    r[i] = si
+                    r[j] = sj
+                    E8.append(tuple(Fraction(x) for x in r))
+    for signs in itertools.product([-1, 1], repeat=8):
+        if sum(1 for s in signs if s < 0) % 2 == 0:
+            r = tuple(Fraction(s, 2) for s in signs)
+            E8.append(r)
+    Path("PART_CVII_e6_backtrack_eval.json").write_text(json.dumps(results, indent=2))
+    print("Wrote PART_CVII_e6_backtrack_eval.json")
+    print(json.dumps(results, indent=2))
+
+
+if __name__ == "__main__":
+    main()
