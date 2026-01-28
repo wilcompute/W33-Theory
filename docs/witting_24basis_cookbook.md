@@ -1,10 +1,10 @@
 # Witting 24‑Basis KS Cookbook
 
 This file lists a 24‑basis subset (out of 40) that remains KS‑uncolorable.
-It also includes a heuristic noncontextual bound from local search.
+It also includes the exact noncontextual bound.
 
-## Heuristic noncontextual bound
-- Best bases satisfiable found: **23 / 24**
+## Exact noncontextual bound
+- Max bases satisfiable by any 0/1 assignment: **23 / 24**
 
 ## Ray index map
 - r0: e0

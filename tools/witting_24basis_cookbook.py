@@ -81,6 +81,14 @@ def load_24basis_subset():
     return []
 
 
+def load_exact_bound():
+    path = ROOT / "artifacts" / "witting_24basis_exact_bound.json"
+    if path.exists():
+        data = json.loads(path.read_text())
+        return data.get("max_satisfied")
+    return None
+
+
 def bases_satisfied(assign, bases):
     count = 0
     for base in bases:
@@ -132,6 +140,7 @@ def main():
 
     # Heuristic classical bound
     max_sat, assignment = heuristic_max_satisfied(len(rays), bases_24)
+    exact_bound = load_exact_bound()
 
     # Save vectors CSV
     csv_path = DOCS / "witting_24basis_vectors.csv"
@@ -150,6 +159,7 @@ def main():
                 "bases": [list(map(int, b)) for b in bases_24],
                 "ray_labels": labels,
                 "heuristic_max_satisfied_bases": int(max_sat),
+                "exact_max_satisfied_bases": int(exact_bound) if exact_bound is not None else None,
             },
             indent=2,
         ),
@@ -161,9 +171,14 @@ def main():
     with md_path.open("w", encoding="utf-8") as f:
         f.write("# Witting 24‑Basis KS Cookbook\n\n")
         f.write("This file lists a 24‑basis subset (out of 40) that remains KS‑uncolorable.\n")
-        f.write("It also includes a heuristic noncontextual bound from local search.\n\n")
-        f.write("## Heuristic noncontextual bound\n")
-        f.write(f"- Best bases satisfiable found: **{max_sat} / {len(bases_24)}**\n\n")
+        if exact_bound is not None:
+            f.write("It also includes the exact noncontextual bound.\n\n")
+            f.write("## Exact noncontextual bound\n")
+            f.write(f"- Max bases satisfiable by any 0/1 assignment: **{exact_bound} / {len(bases_24)}**\n\n")
+        else:
+            f.write("It also includes a heuristic noncontextual bound from local search.\n\n")
+            f.write("## Heuristic noncontextual bound\n")
+            f.write(f"- Best bases satisfiable found: **{max_sat} / {len(bases_24)}**\n\n")
         f.write("## Ray index map\n")
         for i, lab in enumerate(labels):
             f.write(f"- r{i}: {lab}\n")
