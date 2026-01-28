@@ -1,0 +1,28 @@
+{
+  "results": [
+    {
+      "sigma": 0.01,
+      "accuracy": 1.0
+    },
+    {
+      "sigma": 0.05,
+      "accuracy": 1.0
+    },
+    {
+      "sigma": 0.1,
+      "accuracy": 1.0
+    },
+    {
+      "sigma": 0.15,
+      "accuracy": 1.0
+    },
+    {
+      "sigma": 0.2,
+      "accuracy": 1.0
+    },
+    {
+      "sigma": 0.25,
+      "accuracy": 1.0
+    }
+  ]
+}

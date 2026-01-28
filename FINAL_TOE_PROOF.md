@@ -1111,6 +1111,11 @@ visibility **v ≥ 0.944444** (noise fraction **p ≤ 0.055556**).
 Docs: `docs/witting_24basis_noise_threshold.md`  
 Script: `tools/witting_24basis_noise_threshold.py`
 
+**Lab script (computed):**  
+Step‑by‑step measurement order and scoring instructions:  
+`docs/witting_24basis_labscript.md`  
+Script: `tools/witting_24basis_labscript.py`
+
 ### 1.9 Z₃ Pancharatnam Phase Signature (Computed)
 
 **Hunch tested:** Non‑orthogonal triangles in the 40‑ray Witting set should
@@ -1165,6 +1170,11 @@ Script: `tools/witting_pancharatnam_protocol.py`
 Explicit ray triples plus amplitude/phase tables for lab execution:  
 `docs/witting_pancharatnam_runsheet.md`  
 Script: `tools/witting_pancharatnam_runsheet.py`
+
+**Phase‑noise robustness (computed):**  
+Classification accuracy vs uniform phase noise σ:  
+`docs/witting_pancharatnam_noise_threshold.md`  
+Script: `tools/witting_pancharatnam_noise_threshold.py`
 
 **Unitary implementation (computed):**  
 For each of the 24 bases, a 4×4 unitary is provided with the basis rays as
