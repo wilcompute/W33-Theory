@@ -392,6 +392,26 @@ standard double‑six labeling:
 (L14, L26, L35), (L15, L24, L36), (L16, L25, L34)
 \end{verbatim}
 
+\textbf{Triangle taxonomy (computed).} The 9 triangles split cleanly
+into: - \textbf{Six mixed triangles} of type \textbf{(E, C, L)}: each
+contains exactly one exceptional line E\_i, one conic C\_j, and one line
+L\_ij. - \textbf{Three pure triangles} of type \textbf{(L, L, L)}: each
+contains three L\_ij lines.
+
+These 9 triangles are \textbf{pairwise disjoint} (no shared lines), and
+each of the 27 lines appears \textbf{exactly once}. This is a canonical
+\textbf{A2\ensuremath{\times}A2\ensuremath{\times}A2}-style partition of
+the 27 lines into 9 triples, compatible with the H27 embedding and
+strongly suggestive of the SU(3) factor in the E6\ensuremath{\times}A2
+decomposition.
+
+Artifacts:
+
+\begin{verbatim}
+tools/analyze_h27_schlafli_triangles_structure.py
+artifacts/h27_schlafli_triangle_structure.json
+\end{verbatim}
+
 Artifacts:
 
 \begin{verbatim}
@@ -1762,6 +1782,17 @@ Verification}\label{h27-jordan-heisenberg-verification}
     intersection graph.
   \item
     Output: \texttt{artifacts/h27\_schlafli\_leftover\_cycles.json}
+  \end{itemize}
+\item
+  \texttt{python3\ tools/analyze\_h27\_schlafli\_triangles\_structure.py}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Analyzes the 9 Schläfli triangles (E/C/L taxonomy,
+    A2\ensuremath{\times}A2\ensuremath{\times}A2 split).
+  \item
+    Output: \texttt{artifacts/h27\_schlafli\_triangle\_structure.json}
   \end{itemize}
 \end{itemize}
 
