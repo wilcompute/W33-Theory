@@ -13,6 +13,17 @@ on phase space. The paper highlights a route from G2 -> SU(3), and from C3
 to SU(3,3) -> SO(3,3) -> SL4(R), with geometric tensors emerging in the action
 of SL4(R) on E8.
 
+Online access (cross-check): arXiv listing 2404.18938 and an online summary exist.
+
+Key statements (from PDF text):
+- E8(-24) supports a decomposition into compact G2 plus split A1 + C3.
+- Restricting G2 to SU(3) (strong force) and split SL2(R) is proposed as a
+  symmetry-breaking mechanism for the weak sector.
+- The C3 factor contains copies of SL2(C) (Lorentz) and extends to A5 in the
+  real form SU(3,3) acting on complex phase space.
+- SU(3,3) -> SO(3,3) corresponds to SL4(R) acting on phase space; this action
+  yields tensors equivalent to stress-energy, Ricci, and Riemann, embedding GR.
+
 Potential connections:
 - Our W33 structure lives naturally in Sp(4,3) and the SL4(R) real form appears
   as a symmetry of (3+3)-dimensional phase space in the paper’s chain.
@@ -27,6 +38,16 @@ periodic family of finite-dimensional algebras; the “Magic Star” projection
 makes Jordan-pair structure manifest in E8. The EP algebras are finite but no
 longer Lie (Jacobi fails in general), with a lattice-like extended root system.
 The work is published as a J. Phys.: Conf. Ser. paper based on arXiv:1711.07881.
+
+Online access (cross-check): arXiv:1711.07881 and conference proceedings online.
+
+Key statements (from PDF text):
+- The Magic Star projection of E8 under A2 makes a triple of Jordan pairs
+  visible at the six inner vertices.
+- E8 can be described as 4 orthogonal A2 subalgebras plus 3 Jordan pairs.
+- EP introduces “extended roots” and yields finite-dimensional algebras that
+  generally fail the Jacobi identity (non‑Lie) but preserve Magic‑Star structure.
+- At each EP level, the Jordan algebra role is generalized to Vinberg T‑algebras.
 
 Potential connections:
 - The Magic Star’s Jordan-pair structure dovetails with our H27/Schlaefli
@@ -45,6 +66,15 @@ Core idea: WDM models with high decoupling d.o.f. are motivated by large gauge
 representations; in EP/brane setups (D=27+3), the authors identify a model with
 2048 fermionic d.o.f., giving ~2 keV dark matter mass, while preserving SM
 representations.
+
+Online access (cross-check): Universe (MDPI) 2021, 7, 462.
+
+Key statements (from PDF text):
+- The model uses intersecting branes in D=27+3, isolating SM and WDM sectors.
+- 2048 fermionic degrees of freedom are associated with the dark sector, giving
+  ~2 keV WDM mass in the cited thermal relic framework.
+- The construction uses EP superalgebras and large spinor representations;
+  a concrete 11‑brane / 19‑brane intersection yields the 3‑brane spacetime.
 
 Potential connections:
 - Our W33 theory already predicts Ω_DM/Ω_b ≈ 27/5; a 2048-d.o.f. WDM sector is
