@@ -303,6 +303,17 @@ size 3 : H12–H27 = 2,  H12–H12 = 1,  H27–H27 = 0
 This shows the balanced orbit decomposes into a **dominant mixed component**
 and a **small integral triangle**, sharpening the internal SU(3)‑phase geometry.
 
+**Balanced‑orbit root geometry (computed).** The 27 corresponding E8 roots
+(after scaling by 1/2 to standard normalization) have **pairwise inner products
+only in {0,1}** within this subset:
+```
+inner products: 0 -> 135 pairs, 1 -> 216 pairs
+```
+The induced “root‑neighbor” graph (edges for inner product 1) is **regular of
+degree 16** on all 27 nodes, and there are **no A2 triangles** (no triples with
+pairwise inner product −1). This indicates the balanced 27‑orbit is a **very
+non‑root‑subsystem** subset, but still carries a strong regularity signature.
+
 Artifacts:
 ```
 tools/analyze_h27_schlafli_triangles_structure.py
@@ -333,6 +344,8 @@ tools/analyze_balanced_orbit_stabilizer.py
 artifacts/balanced_orbit_stabilizer.json
 tools/analyze_balanced_orbit_subgraph.py
 artifacts/balanced_orbit_subgraph.json
+tools/analyze_balanced_orbit_roots.py
+artifacts/balanced_orbit_roots.json
 ```
 
 Artifacts:
