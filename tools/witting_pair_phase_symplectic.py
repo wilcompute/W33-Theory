@@ -252,11 +252,46 @@ def main():
         if ok == len(y):
             print("Exact mod-3 fit found.")
 
+    # attempt full quadratic fit in 8 vars (x0..x3,y0..y3) for k mod 3
+    Z = []
+    z = []
+    for i, j, k in pairs:
+        xi = ray_to_f3[i]
+        xj = ray_to_f3[j]
+        v = list(xi) + list(xj)  # 8 variables
+        feats = []
+        # linear terms
+        feats.extend([val % 3 for val in v])
+        # square terms
+        feats.extend([(val * val) % 3 for val in v])
+        # cross terms
+        for a in range(8):
+            for b in range(a + 1, 8):
+                feats.append((v[a] * v[b]) % 3)
+        # constant
+        feats.append(1)
+        Z.append(feats)
+        z.append(k % 3)
+    Z = np.array(Z, dtype=int)
+    z = np.array(z, dtype=int)
+    sol2 = gauss_solve_mod3(Z, z)
+    if sol2 is None:
+        print("No quadratic fit for k mod 3.")
+        quad_fit = False
+    else:
+        quad_fit = True
+        preds = (Z @ sol2) % 3
+        ok = int(np.sum(preds == z))
+        print(f"Quadratic fit for k mod 3: {ok}/{len(z)} correct")
+        if ok == len(z):
+            print("Exact quadratic mod-3 fit found.")
+
     out = {
         "non_orth_pairs": len(pairs),
         "omega_distribution": {str(w): {str(k): by_omega[w].count(k) for k in sorted(set(by_omega[w]))}
                                 for w in [1, 2]},
         "mod3_fit": bool(fit),
+        "mod3_quadratic_fit": bool(quad_fit),
     }
     out_path = ROOT / "artifacts" / "witting_pair_phase_symplectic.json"
     out_path.write_text(json.dumps(out, indent=2), encoding="utf-8")
