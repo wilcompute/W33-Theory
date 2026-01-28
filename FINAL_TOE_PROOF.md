@@ -312,6 +312,17 @@ tools/constraint_multiplet_solver.py
 artifacts/constraint_multiplet_solver.json
 ```
 
+**v23 parity/centers probe (negative result).** Using the Q45→K4 mapping and the
+v23 triangle dataset, we computed parity/centers/holonomy distributions per
+pattern class. The distributions are **uniform across classes**, implying that
+the current Q45/v23 observables do **not** distinguish the W(E6) pattern
+classes. This suggests either (i) the pattern classes are orthogonal to the
+v23 observables, or (ii) additional structure is required in the Q45 mapping.
+```
+tools/physical_multiplet_inference.py
+artifacts/physical_multiplet_inference.json
+```
+
 **Exceptional vertex triplet.** Exactly **3** Coxeter‑6 orbits contain the
 size‑1 W(E6) roots. These correspond to three explicit F₃⁴ projective points:
 ```
@@ -921,6 +932,9 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `python3 tools/constraint_multiplet_solver.py`
   - Least‑squares fit of class adjacency to E6 edges (heuristic).
   - Output: `artifacts/constraint_multiplet_solver.json`
+- `python3 tools/physical_multiplet_inference.py`
+  - Q45/v23 parity/centers/holonomy probe by pattern class (uniform result).
+  - Output: `artifacts/physical_multiplet_inference.json`
 - `python tools/explicit_bijection_decomposition.py`
   - Builds the explicit 240↔240 W33-edge→E8-root mapping.
   - Output: `artifacts/explicit_bijection_decomposition.json`

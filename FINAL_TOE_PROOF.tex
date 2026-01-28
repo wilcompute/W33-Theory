@@ -578,6 +578,20 @@ tools/constraint_multiplet_solver.py
 artifacts/constraint_multiplet_solver.json
 \end{verbatim}
 
+\textbf{v23 parity/centers probe (negative result).} Using the
+Q45\ensuremath{\rightarrow}K4 mapping and the v23 triangle dataset, we
+computed parity/centers/holonomy distributions per pattern class. The
+distributions are \textbf{uniform across classes}, implying that the
+current Q45/v23 observables do \textbf{not} distinguish the W(E6)
+pattern classes. This suggests either (i) the pattern classes are
+orthogonal to the v23 observables, or (ii) additional structure is
+required in the Q45 mapping.
+
+\begin{verbatim}
+tools/physical_multiplet_inference.py
+artifacts/physical_multiplet_inference.json
+\end{verbatim}
+
 \textbf{Exceptional vertex triplet.} Exactly \textbf{3} Coxeter‑6 orbits
 contain the size‑1 W(E6) roots. These correspond to three explicit
 \(F_{3}^{4}\) projective points:
@@ -1579,6 +1593,17 @@ Mapping}\label{e6e8-orbit-structure-explicit-mapping}
     Least‑squares fit of class adjacency to E6 edges (heuristic).
   \item
     Output: \texttt{artifacts/constraint\_multiplet\_solver.json}
+  \end{itemize}
+\item
+  \texttt{python3\ tools/physical\_multiplet\_inference.py}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Q45/v23 parity/centers/holonomy probe by pattern class (uniform
+    result).
+  \item
+    Output: \texttt{artifacts/physical\_multiplet\_inference.json}
   \end{itemize}
 \item
   \texttt{python\ tools/explicit\_bijection\_decomposition.py}
