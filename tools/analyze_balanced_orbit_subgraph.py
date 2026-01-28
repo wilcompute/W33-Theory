@@ -148,6 +148,7 @@ def main():
         shell_counts = Counter()
         root_counts = Counter()
         comp_degrees = []
+        comp_edges = []
         for local_idx in comp:
             a, b = idx_to_edge[local_idx]
             if a in H27 and b in H27:
@@ -162,6 +163,7 @@ def main():
                 shell_counts['other'] += 1
             root_counts[edge_root_type[local_idx]] += 1
             comp_degrees.append(int(degrees[local_idx]))
+            comp_edges.append((a, b, points[a], points[b], edge_root_type[local_idx]))
         # If component is tiny, record its internal adjacency
         comp_adj = None
         if len(comp) <= 4:
@@ -173,6 +175,7 @@ def main():
             "root_types": dict(root_counts),
             "degree_dist": dict(Counter(comp_degrees)),
             "adjacency": comp_adj,
+            "edges": comp_edges if len(comp) <= 3 else None,
         })
 
     # Spectrum
