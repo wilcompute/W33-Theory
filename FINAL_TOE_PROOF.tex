@@ -434,6 +434,17 @@ tools/compute_pattern_preserving_subgroup.py
 artifacts/pattern_preserving_subgroup.json
 \end{verbatim}
 
+\textbf{Gauge‑choice robustness.} We sampled 20 random Coxeter orderings
+(permuting the simple reflections) and recomputed the W(E6)--Coxeter‑6
+intersection patterns. All trials yielded the \textbf{same 8‑class
+histogram}, indicating that the pattern split is \textbf{invariant under
+Coxeter ordering} (a robust gauge choice). See:
+
+\begin{verbatim}
+tools/search_coxeter_choice_gauge.py
+artifacts/coxeter_gauge_search.json
+\end{verbatim}
+
 \textbf{Exceptional vertex triplet.} Exactly \textbf{3} Coxeter‑6 orbits
 contain the size‑1 W(E6) roots. These correspond to three explicit
 \(F_{3}^{4}\) projective points:
@@ -1310,6 +1321,17 @@ Mapping}\label{e6e8-orbit-structure-explicit-mapping}
     Tests W33 automorphisms that preserve W(E6) pattern classes.
   \item
     Output: \texttt{artifacts/pattern\_preserving\_subgroup.json}
+  \end{itemize}
+\item
+  \texttt{docker\ run\ -\/-rm\ -v\ "\$PWD":/workspace\ -w\ /workspace\ sagemath/sagemath:10.7\ sage\ -python\ tools/search\_coxeter\_choice\_gauge.py}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Random Coxeter orderings; checks robustness of 8‑class pattern
+    histogram.
+  \item
+    Output: \texttt{artifacts/coxeter\_gauge\_search.json}
   \end{itemize}
 \item
   \texttt{python\ tools/explicit\_bijection\_decomposition.py}
