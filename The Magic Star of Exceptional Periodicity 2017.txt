@@ -241,3 +241,942 @@ Notice that the last equality of (2.8) is not trivial at all. Vx,yz is the linea
 quadratic map Uxy. The equation (2.3.15) at page 484 of [51] shows that:
 Uxy =t(x,y )x−x##y = 2(x·y)·x−x2·y (2.9)
 4
+
+--- page 6 ---
+The following identities can be derived from the Jordan Pair axioms, [54]:
+[Vx,y,Vz,w] =VVx,yz,w−Vz,Vx,yw (2.10)
+and, for D = (D+,D−) a derivation of the Jordan Pair V and β(x,y ) = (Vx,y,−Vy,x),
+[D,β (x,y )] =β(D+(x),y ) +β(x,D−(y)) (2.11)
+We have: For JP := (J, ¯J): str(J) =Der(JP )
+Ux+y− = [[x+,y−],x +] ; Ux−y+ = [[x−,y +],x−]
+JP axioms follow from the Jacobi identity of the Lie algebra str(J).
+To summarize the relationship between the exceptional Jordan algebra and the exceptional
+Lie algebras is:
+g2 =Der(O)
+f4 =Der(J8
+3) ; Der(J) = [L(J),L (J)]
+e6 =stro(J8
+3) =L(J0)⊕Der(J) =Dero(J8
+3, J8
+3)
+e7 = J8
+3⊕Der(J8
+3, J8
+3)⊕ J8
+3 superstructure algebra
+e8 = ?
+The link between e8 and Jordan Algebras and Pairs is expressed, in our opinion, by the
+Magic Star, [35].
+3 The Magic Star: Exceptional Lie algebras and Jordan
+structures
+The star that can bring peace and order back to the chaotic world.
+citation from the “Magic Star” TV series, China, 2017.
+The Magic Star, [35] [37], shown in Figure 1, is the projection of the roots of the exceptional
+Lie algebras on a complex su(3) = a2 plane, recognizable by the dots forming the external
+hexagon, and it exhibits the Jordan Pair content of each exceptional Lie algebra. There are
+three Jordan Pairs ( Jννν
+3, J3
+ννν), each of which lies on an axis symmetrically with respect to the
+center of the diagram. Each pair doubles a simple Jordan algebra of rank 3, Jννν
+3, with involution
+- the conjugate representation J3
+ννν, which is the algebra of 3 × 3 Hermitian matrices over A,
+where A = R, C, H, O for ννν = 1, 2, 4, 8 respectively. The exceptional Lie algebras f4, e6, e7,
+e8 are obtained forννν = 1, 2, 4, 8, respectively. g2 can be also represented in the same way, with
+the Jordan algebra reduced to a single element. The Jordan algebras Jννν
+3 (and their conjugate
+J3
+ννν) globally behave like a 3 (and a 3) dimensional representation of the outer a2. The algebra
+denoted by gννν
+0 in the center (plus the Cartan generator associated with the axis along which
+the pair lies) is the algebra of the automorphism group of the Jordan Pair; namely, gννν
+0 is the
+the reduced structure group of the corresponding Jordan algebra Jννν
+3: gννν
+0 = str0 (Jννν
+3).
+The base ﬁeld considered throughout the present paper is C. The various real compact and
+non-compact forms of the exceptional Lie algebras follow as a consequence, using some more
+or less laborious tricks, whose treatment we leave to a future study, and they do not aﬀect the
+5
+
+--- page 7 ---
+Figure 1: Root diagram of f4, e6, e7, e8 (ννν = 1, 2, 4, 8) projected on the plane of one a2
+essential structure.
+What is magic in the Magic Star? Let us list a number of features which are clearly shown
+by the picture.
+1) The Magic Star represents a unifying view of all the exceptional algebras.
+2) Since Dero(J2
+3, J2
+3) = a2⊕ a2 and Dero(J8
+3, J8
+3) = e6, Figure 1 depicts the following
+decomposition, [35] :
+e8 = ac
+2 + (3, J8
+3) + (¯3, J8
+3) +Dero(J8
+3, J8
+3)
+= ac
+2 + (3, J8
+3) + (¯3, J8
+3) + af
+2 + (3, J2
+3) + (¯3, J2
+3) +Dero(J2
+3, J2
+3)
+= ac
+2 + (3, J8
+3) + (¯3, J8
+3) + af
+2 + (3, J2
+3) + (¯3, J2
+3) + a(1)
+2 + a(2)
+2
+(3.1)
+which shows that e8 is made of 4 orthogonal a2 subalgebras, plus 3 Jordan Pairs (J8
+3, J8
+3)
+over the octonions, plus 3 Jordan Pairs ( J2
+3, J2
+3) over the complex. The role of the a2’s is
+interchangeable: any a2 would produce a Magic Star. Select one and call it ac
+2 for color
+a2 and another one, af
+2, inside e6 as ﬂavor a2, then the Jordan Pairs in 3.1 represent three
+families of colored and three families of ﬂavor degrees of freedom (notice that the ﬂavor
+part is a singlet of ac
+2).The two remaining a2’s may be related to gravity. We are currently
+working on this aspect with the hope to produce an e8 model of quantum gravity with
+an emergent discrete spacetime.
+3) By considering a Jordan Pair ( J8
+3, J8
+3) plus e6⊕ C we get the 3-graded Lie algebra e7,
+clearly shown in Figure 2. This shows why quadratic maps and Jordan Pairs are the
+natural Jordan product and structure inside e8: Uxσy−σ = [[xσ,y−σ],xσ] , σ =±
+whereas [xσ,yσ] = 0 as clearly shown by the 3-grading.
+4) Other important algebraic structures easily visible in the Magic Star are related to the 5-
+grading of e8: the Freudenthal Triple Systems (FTS), [55], in the case of e8 an irreducible
+56-dimensional irreducible representation of e7, and the Kantor Pair, [56], formed by two
+FTS’. They are shown in Figure 3. Denoting g = g−2 + g−1 + g0 + g1 + g2 the 5-grading,
+we have e7 in grade 0 = Der(FTS ), an FTS in grade 1 (a 56-dim irrep of e7) and 1-
+dimensional g±2 := Cx±ρ. The non-deg skew bilinear <, > and a fully symmetric quartic
+6
+
+--- page 8 ---
+Figure 2: e7 (resp. a5) as 3-graded inside e8 (resp. e6)
+Figure 3: FTS (left) and KP (right) within e8
+form q on g1, characteristic of the FTS, are obtained by:
+[x,y ] = <x,y >x ρ x,y∈ g1
+q(x,x,x,x ) = [ x, [x, [x, [x,x−ρ]]]] x∈ g1
+(3.2)
+from which⇒q(xβ1,xβ2,xβ3,xβ4) follows by linearization.
+The Kantor Pair is a pair of modules and within e8 is
+KP = e8⊖ (e7⊕ a1)
+4 Exceptional Periodicity and Extended Roots
+Divinity drew Earth out of Emptiness as he drew One from Nothing to create many.
+Pythagoras
+We force the deﬁnition of root system to include what we call extended roots not obeying
+the symmetry by Weyl reﬂection, nor the fact that 2 (α,β )
+(α,α ) be integer for all roots α, β.
+7
+
+--- page 9 ---
+Let{k1,...,k N} be an orthonormal basis of an Euclidean space V of dimension N. For any
+n = 1, 2,... we introduce N = 4(n + 1) and deﬁne the extended roots of e(n)
+8 as:
+e(n)
+8 :
+±ki±kj 1≤i<j ≤N 2N(N− 1) roots
+1
+2(±k1±k2±...±kN) even # of + 2 N−1 roots (4.1)
+This is a root system only in the case n = 1 and e8(1) = e8.
+The extended roots of g(n)
+2 are obtained by projecting on the space spanned by k1−k2
+and k1 +k2− 2k3, hence g(n)
+2 = g2; those of f (n)
+4 are the projection on the space spanned by
+k1,k 2,...,k N−4:
+f (n)
+4 :
+±ki ,±ki±kj 1≤i<j ≤N− 4
+1
+2(±k1±k2±...±kN−4) (4.2)
+and ﬁnally:
+e(n)
+6 :
+±ki±kj 1≤i<j ≤N− 3
+1
+2(±k1±k2±...± (kN−2 +kN−1 +kN)) even # of + (4.3)
+e(n)
+7 :
+±(kN−1 +kN)
+±ki±kj 1≤i<j ≤N− 2
+1
+2(±k1±k2±...± (kN−1 +kN)) even # of +
+(4.4)
+Figure 4: The Magic Star
+All these sets of extended roots form a Magic star of ﬁgure 4, once projected on the plane
+spanned byk1−k2 andk1 +k2−2k3. In the ﬁgure the pair of integers (a,b ) are the (Euclidean)
+scalar products of each root with k1−k2 and k1 +k2− 2k3.
+8
+
+--- page 10 ---
+One can readily check that, upon a relabeling of the k’s, e(n)
+6 is the center of the Magic Star
+of e(n)
+8 and that e(n)
+7 = e(n)
+6 ⊕T(a,b)⊕T(−a,−b), for a ﬁxed pair ( a,b )∈{ (1, 1), (−1, 1), (0,−2)},
+where e(n)
+6 is the center of the Magic Star and T(a,b) is the set of roots of e(n)
+8 whose scalar
+products with k1−k2 and k1 +k2− 2k3 are (a,b ).
+The rank of g(n)
+2 , f (n)
+4 , e(n)
+6 , e(n)
+7 , e(n)
+8 is the dimension of the vector space V spanned by
+their roots, namely 2, N− 4, N− 2, N− 1, N respectively.
+By abuse of deﬁnition we shall often say root, for short, instead of extended root.
+From now on we restrict to e(n)
+6 , e(n)
+7 , e(n)
+8 and denote byLMS anyone of them, by Φ the set
+of extended roots of LMS and by R its rank. We recall that N = 4(n + 1),n = 1, 2,... , hence
+R =N− 2 = 4n + 2 for e(n)
+6 , R =N− 1 = 4n + 3 for e(n)
+7 , R =N = 4n + 4 for e(n)
+8 .
+We denote by ΦO and ΦS the following subsets of Φ:
+ΦO ={(±ki±kj)∈ Φ}
+ΦS ={ 1
+2(±k1±k2±...±kN)∈ Φ}
+(4.5)
+Remark 4.1. Notice that ΦO is the root system of dN−3 in the case of e(n)
+6 , of dN−2⊕a1 in
+the case of e(n)
+7 and of dN in the case of e(n)
+8 .
+We now prove the following results.
+Proposition 4.2. For all ρ∈ ΦO and x∈ Φ: 2(x,ρ )
+(ρ,ρ )∈ Z and wρ(x) = x− 2(x,ρ )
+(ρ,ρ )ρ∈ Φ (the
+set of extended roots is closed under the Weyl reﬂections by all ρ∈ ΦO). The set of extended
+roots is closed under the Weyl reﬂections by all ρ∈ Φ if and only if n = 1.
+Proof. If ρ∈ ΦO then (ρ,ρ ) = 2 and ( x,ρ )∈{ 0,±1,±2}, hence 2 (x,ρ )
+(ρ,ρ ) ∈ Z and wρ(x) =
+x− (x,ρ )ρ. If ( x,ρ ) = 0 then wρ(x) = x∈ Φ. If ( x,ρ ) =±1 then wρ(x) = x∓ρ∈ Φ as we
+shall prove in proposition 4.4. If ( x,ρ ) = ±2 then ρ =±x and wρ(x) = −x∈ Φ. Suppose
+now that both x,ρ∈ ΦS and write x = 1
+2
+∑λiki, ρ = 1
+2
+∑µiki where λi,µi∈{− 1, 1}. We can
+certainly pick an x such that (x,ρ ) =−n which occurs whenever for two indices j,ℓ λj = µj
+and λℓ =µℓ while λi =−µi for i̸=j,ℓ . Hence wρ(x) =x + 2 n
+n + 1ρ = 1
+2
+∑νiki. We have that
+|νj| =
+⏐⏐⏐⏐λj + 2 n
+n + 1µj
+⏐⏐⏐⏐ = 3n + 1
+n + 1 ≥ 2 and|νj| = 2 if and only if n = 1, in which case Φ is the
+root system of a simple Lie algebra. For n> 1 there is no root with such a coeﬃcient νj.
+We introduce the basis ∆ = {α1,...,α R} of Φ, with αi = ki− ki+1, 1 ≤ i ≤ R− 2,
+αR−1 =kR−2 +kR−1 and αR =− 1
+2(k1 +k2 +... +kN); we order them by setting αi >α i+1:
+∆ ={k1−k2,k 2−k3,...,k R−2−kR−1,kR−2 +kR−1,− 1
+2(k1 +k2 +... +kN)} (4.6)
+Proposition 4.3. The set ∆ in (4.6) is a set of simple extended roots, by which we mean:
+i) ∆ is a basis of the Euclidean space V of ﬁnite dimension R;
+ii) every root β can be written as a linear combination of roots of ∆ with all positive or all
+negative integer coeﬃcients: β =∑ℓiαi with ℓi≥ 0 or ℓi≤ 0 for all i.
+9
+
+--- page 11 ---
+For all roots β =∑R
+i=1miαi the coeﬃcient mR is such that:
+mR∈{ 0,±2} if β∈ ΦO
+mR =±1 if β∈ ΦS (4.7)
+Proof. The set ∆ ={α1,...,α R} is obviously a basis in V . Let u =kN−2 +kN−1 +kN,kN−1 +
+kN,kN for e(n)
+6 , e(n)
+7 , e(n)
+8 respectively. We have:
+kR−1 = 1
+2(αR−1−αR−2)
+ki = αi +ki+1 =∑R−2
+ℓ=i αℓ + 1
+2(αR−1−αR−2) , 1≤i≤R− 2
+u = −2αR−∑R−2
+ℓ=1 ℓαℓ− R−1
+2 (αR−1−αR−2)
+(4.8)
+from which we obtain, for 1 ≤i<j ≤R− 1 and forcing ∑s
+ℓ=rαℓ = 0 if r >s:
+ki +kj = ∑R−3
+ℓ=i αℓ +∑R−2
+ℓ=j αℓ +αR−1
+ki−kj = ∑j−1
+ℓ=i αℓ
+
+
+ 1≤i<j ≤R− 1 (4.9)
+for e(n)
+7 , namely for R =N− 1 = 4n + 3 and u =kN−1 +kN:
+−u = 2 αR +∑R−3
+ℓ=1 ℓαℓ + 2nαR−2 + (2n + 1)αR−1 , for e(n)
+7 (4.10)
+for e(n)
+8 , namely for R =N:
+±ki−kN = 2 αN +∑i−1
+ℓ=1ℓαℓ +∑N−3
+ℓ=i (ℓ± 1)αℓ + (2n + 1±1
+2 )αN−2
++(2n + 1 + 1±1
+2 )αN−1 , i ≤N− 2
+±kN−1−kN = 2 αN +∑N−3
+ℓ=1 ℓαℓ + (2n + 1∓1
+2 )αN−2 + (2n + 1 + 1±1
+2 )αN−1
+(4.11)
+We see that all the roots in (4.9),(4.10),(4.11) are the sum of simple roots with all positive
+integer coeﬃcients. These are half of the roots in Φ O and they are all positive roots.
+The rest of the roots in ΦO are negative and are obviously the sum of simple roots with integer
+coeﬃcients that are all negative.
+Finally all the roots in Φ S that contain− 1
+2u can be obtained from αR by ﬂipping an even
+number of signs and this is done by adding to αR a certain number of terms of the type ki +kj,
+1≤ i < j≤ R− 1. These are all positive roots, a half of the roots in Φ S and are linear
+combination of simple roots with integer coeﬃcients that are all positive.
+The negative roots are similarly obtained by adding to −αN a certain numeber of terms of the
+type−(ki +kj), 1≤ i < j≤ R− 1, and are linear combination of simple roots with integer
+coeﬃcients that are all negative.
+As an consequence we easily obtain 4.7.
+Proposition 4.4. For each α∈ ΦO,β ∈ Φ the scalar product (α,β )∈{± 2,±1, 0}; α +β (
+respectivelyα−β) is a root if and only if (α,β ) =−1 (respectively +1); if both α +β andα−β
+are not in Φ∪{ 0} then (α,β ) = 0.
+For eachα,β ∈ ΦS the scalar product (α,β )∈{± (n+1),±n,±(n−1),..., 0};α+β ( respectively
+α−β) is a root if and only if (α,β ) =−n (respectively +n).
+Forα,β ∈ Φ if α +β is a root then α−β is not a root.
+10
+
+--- page 12 ---
+Proof. If both α,β ∈ ΦO the proof follows from the fact that Φ O is the root system of a
+simply laced Lie algebra. If α∈ ΦO,β ∈ ΦS then obviously ( α,β )∈ {±1, 0}. Moreover,
+let us write α = σiki +σjkj, i < j, σi,j ∈{− 1, 1}. Then ( α,β ) = −1 if and only if β =
+1
+2(±k1±...−σiki±...−σjkj±...±kN), which is true if and only if α +β∈ Φ (in particular
+α +β ∈ ΦS). Similarly ( α,β ) = 1 if and only if α−β ∈ Φ. As a consequence, if both
+α±β /∈ Φ∪{ 0} then (α,β )̸=±1 and also ( α,β )̸=±2 because (α,β ) =±2 if and only if
+α =±β; therefore (α,β ) = 0.
+If both α,β ∈ ΦS, then all their signs but an even number 2m must be equal, m = 0,...,N/ 2 =
+2(n + 1) and we get (α,β ) = 1
+4(N− 2m− 2m) = n + 1−m =n + 1,n,n − 1,...,−(n + 1) for
+m = 0,..., 2(n + 1). Moreover, since ±ki±ki∈{ 0,±2ki}, i = 1,...N then α +β∈ Φ if and
+only if all signs are opposite but 2 (in which case α +β is actually in Φ O) and this is true if
+and only if (α,β ) =− 1
+4(N− 4) =−n. Similarly (α,β ) =n if and only if α−β∈ Φ. The last
+statement of the Proposition follows trivially.
+The preceding propositions extend to EP analogous results for the root system of simply
+laced Lie algebras. They are essential in determining the structure of the algebra LMS that we
+associate to the extended roots in the next section.
+5 The LMS algebra
+Mathematics is the art of giving the same name to diﬀerent things.
+H. Poincar´ e
+We deﬁne theLMS algebra (as before LMS is either e(n)
+6 or e(n)
+7 or e(n)
+8 ) by extending the
+construction of a Lie algebra from a root system, [57] [58] [59]. In particular we generalize the
+algorithm in [59] for simply laced Lee algebras, since also in our set of extended roots the β
+chain through α, namely the set of roots α +cβ, c∈ Z, has length one.
+We giveLMS an algebra structure of rank R over a ﬁeld extension F of the rational integers
+Z in the following way 6 :
+a) we select the set of simple extended roots ∆ = {α1,...,α R} of Φ
+b) we select a basis {h1,...,h R} of the R-dimensional vector space H over F and set hα =∑R
+i=1cihi for each α∈ Φ such that α =∑R
+i=1ciαi
+c) we associate to each α∈ Φ a one-dimensional vector space Lα over F spanned by xα
+d) we deﬁne LMS =H⨁
+α∈ΦLα as a vector space over F
+e) we give LMS an algebraic structure by deﬁning the following multiplication on the basis
+BLS ={h1,...,h R}∪{ xα| α∈ Φ}, extended by linearity to a bilinear multiplication
+LMS×L MS→L MS:
+[hi,hj] = 0 , 1≤i,j ≤R
+[hi,xα] =−[xα,hi] = (α,αi)xα , 1≤i≤R , α∈ Φ
+[xα,x−α] =−hα
+[xα,xβ] = 0 for α,β ∈ Φ such that α +β /∈ Φ and α̸=−β
+[xα,xβ] =ε(α,β )xα+β for α,β ∈ Φ such that α +β∈ Φ
+(5.1)
+6Speciﬁcally, we will take F to be the complex ﬁeld C.
+11
+
+--- page 13 ---
+whereε(α,β ) is the asymmetry function, introduced in [60], see also [59], deﬁned as follows:
+Deﬁnition 5.1. Let L denote the lattice of all linear combinations of the simple extended roots
+with integer coeﬃcients
+L =
+{ R∑
+i=1
+ciαi| ci∈ Z , αi∈ ∆
+}
+(5.2)
+the asymmetry function ε(α,β ) : L× L→{− 1, 1} is deﬁned by:
+ε(α,β ) =
+R∏
+i,j=1
+ε(αi,αj)ℓimj for α =
+R∑
+i=1
+ℓiαi , β =
+R∑
+j=1
+mjαj (5.3)
+whereαi,αj∈ ∆ and
+ε(αi,αj) =
+
+
+
+−1 if i =j
+−1 if αi +αj is a root and αi <α j
++1 otherwise
+(5.4)
+We now show some properties of the asymmetry function. In particular we show that, for
+α,β,α +β∈ Φ, ε(α,β ) =−ε(β,α ) which implies that the bilinear product (5.1) is antisym-
+metric.
+Proposition 5.2. The asymmetry function ε satisﬁes, for α,β,γ,δ ∈ L, α = ∑miαi and
+β =∑niαi:
+i) ε(α +β,γ ) = ε(α,γ )ε(β,γ )
+ii) ε(α,γ +δ) = ε(α,γ )ε(α,δ )
+iii) ε(α,α ) = ( −1)
+1
+2 (α,α)−m2
+R
+n−1
+2
+iv) ε(α,β )ε(β,α ) = ( −1)(α,β)−mRnR(n−1)
+v) ε(0,β ) = ε(α, 0) = 1
+vi) ε(−α,β ) = ε(α,β )−1 =ε(α,β )
+vii) ε(α,−β) = ε(α,β )−1 =ε(α,β )
+Proof. The ﬁrst two properties follow directly from the deﬁnition. In order to prove iii) we
+ﬁrst notice that for αi,αj∈ ∆ , i̸=j, (αi,αj)∈{ 0,−1}. Therefore:
+ε(α,α ) = ∏
+1≤i,j≤Rε(αi,αj)mimj =∏
+1≤i<j≤R(−1)mimj(αi,αj)∏
+1≤i≤R(−1)m2
+i
+= ( −1)
+∑
+1≤i<j≤Rmimj(αi,αj)+ 1
+2
+∑
+1≤i≤Rm2
+i (αi,αi)− 1
+2
+∑
+1≤i≤Rm2
+i ((αi,αi)−2)
+= ( −1)
+1
+2 (α,α)− 1
+2m2
+R((αR,αR)−2) = (−1)
+1
+2 (α,α)−m2
+R
+n−1
+2
+(5.5)
+Property iv) follows from iii) by replacing α with α +β and using the ﬁrst two. If α =∑miαi, β =∑niαi and α +β =∑ℓiαi =∑(mi +ni)αi we get:
+ε(α +β,α +β) = ( −1)
+1
+2 (α+β,α+β)−ℓ2
+R
+n−1
+2 = (−1)
+1
+2 (α,α)+ 1
+2 (β,β)+(α,β)−ℓ2
+R
+n−1
+2
+= ( −1)
+1
+2 (α,α)−m2
+R
+n−1
+2 (−1)
+1
+2 (β,β)−n2
+R
+n−1
+2 ε(α,β )ε(β,α )
+(5.6)
+from which the property follows. Property v) is a trivial consequence of the deﬁnition, whereas
+properties vi) and vii) follow from property v) together with i) and ii).
+12
+
+--- page 14 ---
+Proposition 5.3. If α,β,α +β∈ Φ then:
+i) ε(α,α ) =−1 α∈ Φ
+ii) ε(α,β ) =−ε(β,α ) α,β, (α +β)∈ Φ antisymmetry
+iii) ε(α,β ) =ε(β,α +β) if α,α +β∈ Φ, β∈ L
+iv) ε(α,β ) =ε(β,α−β) if α,α−β∈ Φ, β∈ L
+Proof. By (4.7) if α∈ ΦO then (α,α ) = 2 and m2
+R/2 is even, hence ε(α,α ) =−1. If α∈ ΦS
+then (α,α ) = n + 1 and m2
+R = 1. Therefore if ( −1)
+1
+2 (α,α)−m2
+R
+n−1
+2 = (−1)
+1
+2 (n+1−n+1) =−1.
+As a consequence, if α,β,α +β ∈ Φ, then −1 = ε(α +β,α +β) = ε(α,β )ε(β,α ), hence
+ε(α,β ) =−ε(β,α )
+Finally we prove iii) - similar proof for iv):
+ε(α,β ) =ε(α,α−α +β) =ε(α,α )ε(α,α +β) =−ε(α +β−β,α +β) =ε(β,α +β)
+6 T-algebras
+The essence of Mathematics lies in its freedom.
+G. Cantor
+We now concentrate on the set of roots T(a,b) on a tip of the Magic Star. In order to ﬁx one,
+let us considerT(1,1) and denote it simply byT . The reader will forgive us if we shall be concise
+whenever there is no risk of misunderstanding and useT to denote both the set of roots and the
+set of elements in LMS associated to those roots. An element of T is an F-linear combination
+of xα,xβ,... for α,β,... in T(1,1). We give T an algebraic structure with a symmetric product,
+thus mimicking the case n = 1 when T is a Jordan algebra.
+Let us ﬁrst show what happens in the case n = 1, in particular for e8. It is proven in [37]
+thatT =J(1,1) is the Jordan Algebra J8
+3 of 3× 3 Hermitean matrices over the octonions O. Let
+us denote by P1 := E11, P2 := E22, P3 := E33 the three trace-one idempotents, whose sum is
+the identity in J8
+3,Eii representing the matrix with a 1 in the ( ii) position and zero elsewhere.
+Let us identify the algebra d4⊂ f4⊂ e6⊂ e6⊕ ac
+2⊂ e8 with the roots±ki±kj, 4≤i<j ≤ 7
+and P1,P 2,P 3 with the elements of J(1,1) which are left invariant by d4, [61]. This uniquely
+identiﬁesP1,P 2,P 3 with the roots k1 +k8,k1−k8 and−k2−k3. Since e7⊂ e8 is 3-graded, one
+can deﬁne a 3-linear product on J(1,1), [51], and a Jordan product through the correspondence
+with the quadratic formulation of Jordan algebras.
+Still in the case of e8 (e(n)
+8 for n = 1), if we identify the e8 generators corresponding to
+the roots in ΦO with the bosons and those corresponding to the roots in Φ S with the fermions,
+then the 11 bosons in T are k1±kj, j = 4,..., 8 and−k2−k3. The three bosons k1±k8 and
+−k2−k3, correspond to the three diagonal idempotents xP 1,xP 2,xP 3, which are left invariant
+by d4, whose roots are ±ki±kj , 4≤i<j ≤ 7.
+The remaining 8 vectors (bosons) and the 2x8 spinors (fermions) are linked by triality. No-
+tice that one spinor has 1
+2(k1− k2− k3 + k8) ﬁxed and even number of + signs among
+±k4±k5±k6±k7, while the other one has 1
+2(k1−k2−k3−k8) ﬁxed and odd number of
++ signs among±k4±k5±k6±k7. So they are both 8 dimensional representations of d4.
+Therefore a generic element ofJ8
+3 is a linear superposition of 3 diagonal elements plus one vector
+and two spinors (or a bispinor). The vector can be viewed as the (12) octonionic entry of the
+13
+
+--- page 15 ---
+matrix (plus its octonionic conjugate in the (21) position) and the two 8-dimensional spinors as
+the (31) and (23) entry (plus their respective octonionic conjugate in the (31) and (23) position).
+We do the same for n≥ 1 and consider the most general case e(n)
+8 (the other two cases e(n)
+6
+and e(n)
+7 being a restriction of it).
+Let us deﬁnexP 1,xP 2 andxP 3 as the elements ofLMS inT associated to the rootsρ1 :=k1+kN,
+ρ2 :=k1−kN and ρ3 :=−k2−k3:
+xP 1↔ρ1 :=k1 +kN ; xP 2↔ρ2 :=k1−kN ; xP 3↔ρ3 :=−k2−k3 (6.1)
+They are left invariant by the Lie subalgebra dN−4 = d4n, whose roots are ±ki±kj , 4≤i<
+j≤N− 1.
+We denote byTO the set of roots in T∩ ΦO, by T′
+O the set of roots in TO that are not ρ1,ρ 2,ρ 3
+and by TS the set of roots in T∩ ΦS. In the case we are considering, where T =T(1,1) we have
+T′
+O ={k1±kj, j = 4,...,N − 1} and TS ={ 1
+2(k1−k2−k3±k4±...±kN)}, even # of +. We
+further splitTS intoT +
+S ={ 1
+2(k1−k2−k3±k4±...+kN)} andT−
+S ={ 1
+2(k1−k2−k3±k4±...−kN)}.
+Then v∈T′
+O is an 8n-dimensional vector and s±∈T±
+S are 24n−1-dimensional spinors of d4n.
+We write a generic element x of T as x =∑λixPi + xv + xs+ +xs− where
+xv =
+∑
+α∈T′
+O
+λv
+αxα (6.2)
+xs± =
+∑
+α∈T±
+S
+λs±
+α xα (6.3)
+We view λv
+α as a coordinate of the vector λv and λs±
+α as a coordinate of the spinor λs±
+;
+we denote by ¯λv (¯λs±
+) the vectors ( spinor) in the dual space with respect to the appropriate
+bilinear form and view x as a 3× 3 Hermitean matrix:
+
+
+λ1 λv ¯λs+
+¯λv λ2 λs−
+λs+ ¯λs− λ3
+
+ (6.4)
+whose entries have the following F-dimensions:
+• 1 for the scalar diagonal elements λ1,λ 2,λ 3;
+• 8n for the vectorλv;
+• 24n−1 for the spinors λs±.
+We see that only forn = 1 the dimension of the vector and the spinors is the same, whereas
+for n > 1 the entries in the (12) , (21) position have diﬀerent dimension than those in the
+(31), (13), (23), (32) position. Nevertheless we now deﬁne a symmetric product of the elements
+in T , which then becomes a generalization of the Jordan algebra J8
+3 in a very precise sense.
+This type of generalization of the Jordan Algebra is known in the literature, [44], where it is
+called T−algebra.
+We denote byI the elementI :=xP 1 +xP 2 +xP 3 and byI− the elementI− :=−¯xP 1− ¯xP 2−
+¯xP 3 of ¯T :=T(−1,−1), where ¯xP 1, ¯xP 2 and ¯xP 3 are associated to the roots −k1−kN,−k1 +kN
+and k2 +k3.
+We give T an algebraic structure by introducing the symmetric product, see Proposition
+6.2:
+x◦y := 1
+2[[x,I−],y ] , x,y ∈T (6.5)
+14
+
+--- page 16 ---
+We introduce the trace (see Proposition 6.2) tr(x)∈ F for x∈T in the following way:
+for x =ℓ1xP 1 +ℓ2xP 2 +ℓ3xP 3 +
+∑
+α̸=ρ1,ρ2,ρ3
+ℓαxα tr(x) =ℓ1 +ℓ2 +ℓ3 (6.6)
+We denote by tr(x,y ) :=tr(x◦y) and by x2 :=x◦x. For each x∈T we deﬁne
+x# =x2−tr(x)x− 1
+2(tr(x2)−tr(x)2)I (6.7)
+and we say that x is rank-1 if x# = 0. Notice that tr(x#) = − 1
+2(tr(x2)−tr(x)2), therefore
+x# = 0 implies x2 = tr(x)x: a rank-1 element of T is either a nilpotent or a multiple of a
+primitive idempotent u∈T : u2 =u and tr(u) = 1.
+Let us also introduce N(x)∈ F for x∈T in the following way:
+N(x) = 1
+6
+{
+tr(x)3− 3tr(x)tr(x2) + 2tr(x3)
+}
+= 1
+3tr(x#,x ) (6.8)
+where x2 =x◦x and x3 =x◦x2.
+Since by (6.8) a rank-1 element x has N(x) = 0 any element of T falls into the following
+classiﬁcation:
+rank-1: x# = 0
+rank-2: x#̸= 0 , N(x) = 0
+rank-3: N(x)̸= 0
+(6.9)
+Examples of rank-2 and rank-3 elements are xP 1 +xP 2 and I respectively.
+We ﬁnally now show the main properties of the algebra T .
+Proposition 6.1. Letx,y∈T then [[x,I−],y ] + [[I−,y ],x ] = 0.
+Proof. By the linearity it is suﬃcient to prove the proposition for basis elementsX0∈{ ¯xP 1, ¯xP 2, ¯xP 3}
+and basis elements X1,X 2 of T and the statement of the Proposition amounts to J0 +J2 = 0,
+with J0 := [[X0,X 1],X 2] and J2 := [[X2,X 0],X 1] Set X0 = xα, α∈ {−k1±kN,k 2 +k3},
+X1 =xβ,X2 =xγ. Since X1,X 2∈T then [X1,X 2] = 0 and β +γ /∈ Φ∪{ 0}; we also have that
+α̸=β,α ̸=γ.
+If none of the sums α +β, α +γ is in Φ nor is 0, then J0 +J2 = 0. Also if β = γ then
+J0 +J2 = 0 is trivially satisﬁed.
+From now on at least one of α +β,α +γ, is in Φ∪{ 0}. Suppose ﬁrst that α +β = 0. Then
+J0 =−(γ,α )xγ and we have the following possibilities:
+a1) if α +γ = 0 then β =γ and J0 +J2 = 0 becomes trivial;
+a2) if α+γ∈ Φ then (γ,α ) =−1 by Proposition 4.4 andJ0 =xγ; moreoverJ2 =ε(γ,α )ε(α+
+γ,−α)xγ =ε(α,−α)xγ =−xγ (because of Propositions 5.2 and 5.3) and J0 +J2 = 0 is
+veriﬁed;
+a3) if both α±γ /∈ Φ∪{ 0} then (α,γ ) = 0, by Proposition 4.4 being α ∈ ΦO, hence
+J0 =J2 = 0.
+15
+
+--- page 17 ---
+Similarly if we suppose α +γ = 0.
+From now on α,β,γ ∈ Φ, α̸=±β̸=±γ̸=±α and α +β +γ∈ Φ (notice that α +β +γ
+cannot be zero forα∈T(−1,−1) andβ,γ ∈T(1,1) and ifα+β+γ /∈ Φ then obviouslyJ0 =J2 = 0).
+If none ofα+β,α +γ is in Φ thenJ0 =J2 = 0. If α+β∈ Φ then alsoα+γ∈ Φ (and vicev-
+ersa): if γ∈ ΦO then, by Proposition 4.4, (α +β,γ ) =−1 = (α,γ ) + (β,γ ) = (α,γ ), implying
+α+γ∈ Φ; ifβ∈ ΦO andγ∈ ΦS then (β,γ )∈{ 0, 1} and (α+β,γ ) =−1 = (α,γ )+(β,γ ) implies
+(α,γ ) =−1 and (β,γ ) = 0; ifβ,γ ∈ ΦS then (α+β)∈ ΦS and (α+β,γ ) =−n = (α,γ )+(β,γ ),
+with (α,γ )∈{ 0,±1} since α∈ Φ0. But ( α,γ ) = 0 implies β +γ∈ Φ and (α,γ ) = 1 implies
+(β,γ ) =−(n + 1) hence β =−γ which both contraddict the hypothesis. Hence ( α,γ ) =−1
+and α +γ∈ Φ.
+Finally, ifα +β,α +γ∈ Φ then
+[[xα,xβ],xγ] + [[xγ,xα],xβ] =
+−ε(α,β )ε(γ,α )ε(β,γ ) +ε(γ,α )ε(γ,β )ε(α,β ) =ε(α,β )ε(γ,α )(ε(γ,β )−ε(β,γ )) (6.10)
+Byiv) of Proposition5.2 plus Proposition 4.4 and (4.7) we haveε(β,γ )ε(γ,β ) = (−1)(β,γ)−mNnN(n−1).
+If β∈ ΦO or γ∈ ΦO then ε(β,γ )ε(γ,β ) = (−1)(β,γ) and (β,γ )∈{ 0, 1}. Suppose ( β,γ ) = 1.
+Then either α +γ∈ ΦO orβ∈ ΦO and (α +γ,β ) =−1; but also (α +γ,β ) = (α,β ) + (γ,β ) =
+−1 + 1 = 0, a contraddiction. If both β,γ ∈ ΦS then (α +γ,β ) =−n and (α,β ) =−1. So
+(β,γ ) =−(n− 1) and ε(β,γ )ε(γ,β ) = (−1)(β,γ)−mNnN(n−1) = (−1)−(n−1)±(n−1) = 1, therefore
+ε(β,γ ) =ε(γ,β ) and (6.10) is zero.
+This ends the proof of Proposition 6.1.
+Proposition 6.2. The product x,y → x◦y is symmetric. With respect to this product the
+element I∈ T is the identity and the elements xP 1,xP 2,xP 3∈ T are trace-one idempotents,
+hence are rank-1 elements of T . All xα∈ T but xP 1,xP 2,xP 3 are nilpotent and trace-0, hence
+they are also rank-1 elements of T . The form x→ tr(x) is a trace form, namely tr(x,y ) is
+bilinear and symmetric in x,y and the associative property tr(x◦y,z ) = tr(x,y◦z) holds for
+every x,y,z ∈T .
+Proof. By Proposition 6.1:
+[[x,I−],y ] + [[I−,y ],x ] = 0 ⇒ [[x,I−],y ] = [[y,I−],x ] ⇒ x◦y =y◦x (6.11)
+We also have
+[xPi,−¯xPj ] =δijhρi , i,j = 1, 2, 3 (6.12)
+and for any α∈T(r,s), being ρ1 +ρ2 +ρ3 = 2k1−k2−k3:
+I◦xα = 1
+2[[I,I−],xα] = 1
+2[hρ1 +hρ2 +hρ3,xα] = 1
+2(ρ1 +ρ2 +ρ3,α )xα =xα (6.13)
+By linearity this extends to any x∈T .
+Moreover:
+xPi◦xPi = 1
+2[[xPi,I−],xPi ] = 1
+2[hρi,xPi ] = 1
+2(ρi,ρi)xPi =xPi (6.14)
+Obviouslytr(xP 1) =tr(xP 2) =tr(xP 3) = 1.
+We now show that xα∈T is nilpotent if α̸=k1±kN,−k2−k3.
+Supposexα◦xα̸= 0 then either 2α−k1−kN or 2α−k1 +kN or 2α+k2 +k3 is a root. If α∈ ΦO
+then 2α−k1∓kN =k1± 2ki∓kN is a root if and only if ki =kN, whereas 2α +k2 +k3 is not a
+root. If α∈ ΦS then nor 2α−k1∓kN nor 2α+k2+k3 are roots. Therefore α̸=k1±kN,−k2−k3
+implies x2
+α = 0 and, obviously, tr(xα) = 0 and xα be rank-1.
+Finally, from the deﬁnition of the product x,y→x◦y and the deﬁnition of the trace it easily
+follows thattr(x,y ) is bilinear. The associativity of the trace is proven by direct calculation.
+16
+
+--- page 18 ---
+7 Future Developments
+There are more things in heaven and earth, Horatio, than are dreamt of in your philosophy.
+“Hamlet” 1.5.167-8, W. Shakespeare
+We have presented a periodic inﬁnite chain of ﬁnite generalisations of the exceptional struc-
+tures, including e8, the exceptional Jordan algebra JO
+3 (and pair), and the octonions. We have
+demonstrated that the exceptional Jordan algebra JO
+3 is part of an inﬁnite family of ﬁnite-
+dimensional matrix algebras (corresponding to a particular class of Vinberg’s cubic T-algebras
+[44]). Correspondingly, we have proved that e8 is part of an inﬁnite family of MS algebras,
+that resemble lattice vertex algebras.
+We are currently working on several topics concerning the mathematical structure presented
+in this paper. Many of them are at an advanced stage, some are completed. In particular we
+will expand in future papers on the algebra of derivations of the algebras LMS and T , the
+lattice, the modular forms and the theta functions related to EP.
+There are also several topics that we are planning to develop in the future, strictly related to
+Quantum Gravity. In particular, a model for interactions based on EP which includes gravity
+and the expansion of space-time, starting from a singularity. We aim at a new perspective of
+elementary particle physics at the early stages of the Universe based on the idea that inter-
+actions, deﬁned in a purely algebraic way, are the fundamental objects of the theory, whereas
+space-time, hence gravity, are derived structures.
+An interesting venue of research stemming from EP is to study the higher dimensional weight
+vectors of algebras akin to lattice vertex algebras (the original motivation for Borcherds’ deﬁ-
+nition of vertex algebras [62]), that project to a “Magic Star” structure. Such extended “Magic
+Star” algebras make use of an asymmetry function [60, 59], that acts like the cocycle of a lattice
+vertex algebra which gives a twisted group ringCϵ[Λ] over an even lattice Λ. This gives algebras
+that span higher dimensional lattices, beyond that of the self-dual D = 8 lattice of e8, and
+allows one to potentially probe the symmetries of the heterotic string and moonshine [63, 64],
+as well as to formulate a T -algebra generalization of noncommutative geometry. Speciﬁcally,
+EP gives a novel algebraic method to study even self-dual lattices, such as the e8⊕ e8 and
+Leech lattices, which already have a well known connection to the Monster vertex algebra and
+D = 24 bosonic string compactiﬁcations [65, 66, 67].
+With an inﬁnite family of new algebras that extend the exceptional Lie algebras, EP gives a
+fresh new toolkit for studying emergent spacetime and quantum gravity, in dimensions beyond
+those previously explored, using spectral techniques applied to an inﬁnite class of cubic T -
+algebras.
+An interaction based approach might also have a Yang-Mills interpretation, as EP hints at
+higher-dimensional (possibly super) Yang-Mills theories (see e.g. [68]), that may exhibit some
+kind of triality.
+As the exceptional Jordan algebra JO
+3 is to e8, so is the particular inﬁnite class of cubic
+T-algebras to the higher EP algebras, when projected along an a2. Therefore, physically, the
+class of cubic T-algebras under consideration allows one to consistently generalize exceptional
+quantum mechanics of Jordan, Wigner and von Neumann [2], because they go beyond the
+formally real Jordan algebraic classiﬁcation of quantum-mechanical self-adjoint operators; in a
+sense, the classiﬁcation of quantum-mechanical observables can only probe the T-algebras up
+to the exceptional Jordan algebra.
+17
+
+--- page 19 ---
+It is the authors’ hope that a synthesis of spectral algebraic geometry and EP can unify
+many approaches to uniﬁcation and quantum gravity, and provide a new lens for searching a
+non-perturbative theory of all matter, forces and spacetime.
+Acknowledgments
+The work of PT is supported in part by the Istituto Nazionale di Fisica Nucleare grant In.
+Spec. GE 41.
+References
+[1] J. Stillwell, Exceptional Objects, Amer. Math. Mon. 105, 850 (1998).
+[2] P. Jordan, J. von Neumann and E. P. Wigner, On an algebraic generalization of the quan-
+tum mechanical formalism, Ann. Math. 35 (1934) no. 1, 29–64.
+[3] A. Cayley, On Jacobi’s elliptic functions, in reply to the Rev. Brice Bronwin; and on
+quaternions, Philosophical Magazine 26, 208-211 (1845).
+[4] M. Gell-Mann, The Eightfold Way: A Theory of strong interaction symmetry , Synchrotron
+Laboratory Report CTSL-20, California Inst. of Tech., Pasadena (1961).
+[5] M. Gell-Mann, A Schematic Model of Baryons and Mesons , Phys. Lett. 8 (3), 214-215
+(1964).
+[6] G. Zweig, An SU (3 ) Model for Strong Interaction Symmetry and its Breaking: II , CERN
+Report No. 8419/TH.401 (1964).
+[7] F. G¨ ursey, P. Ramond and P. Sikivie,A universal gauge theory model based on E 6, Phys.
+Lett. B60 (2), 177-180 (1976).
+[8] C. Chevalley and R. D. Schafer, The Exceptional Simple Lie Algebras F 4 and E 6, Proc.
+Natl. Acad. Sci. U.S.A. 35 (2), 137-141 (1950).
+[9] E. Cremmer and B. Julia, TheN = 8 Supergravity Theory. 1. The Lagrangian, Phys. Lett.
+B80, 48 (1978). E. Cremmer and B. Julia, The SO (8 ) Supergravity, Nucl. Phys. B159,
+141 (1979).
+[10] C. Hull and P. K. Townsend, Unity of Superstring Dualities, Nucl. Phys. B438, 109 (1995),
+hep-th/9410167.
+[11] A. Marrani, G. Pradisi, F. Riccioni and L. Romano, Non-Supersymmetric Magic The-
+ories and Ehlers Truncations , Int. J. Mod. Phys. A32 (2017) no.19-20, 1750120,
+arXiv:1701.03031 [hep-th] .
+[12] M. G¨ unaydin, G. Sierra, P. K. Townsend,Exceptional Supergravity Theories and the Magic
+Square, Phys. Lett. B133 , 72 (1983). M. G¨ unaydin, G. Sierra and P. K. Townsend,
+The Geometry of N = 2 Maxwell-Einstein Supergravity and Jordan Algebras , Nucl. Phys.
+B242, 244 (1984).
+[13] D. Gross, J. Harvey, E. Martinec and R. Rohm, Heterotic string, Phys. Rev. Lett. 54 (6),
+502-505 (1985).
+18
+
+--- page 20 ---
+[14] E. Witten, String theory dynamics in various dimensions , Nuclear Physics B443 (1), 85-
+126 (1995), hep-th/9503124.
+[15] T. Pengpan and P. Ramond, M(ysterious) Patterns in SO (9 ), Phys. Rept. 315, 137-152
+(1998), hep-th/9808190.
+[16] H. Sati, OP2 Bundles in M -Theory , Commun. Num. Theor. Phys. 3 (2009) 495,
+arXiv:0807.4899 [hep-th] .
+[17] H. Sati, On the geometry of the supermultiplet in M -theory , Int. J. Geom. Meth. Mod.
+Phys. 8 (2011) 1, arXiv:0909.4737 [hep-th] .
+[18] P. Ramond, Exceptional Groups and Physics , Plenary Talk delivered at the Conference
+Groupe 24, Paris, July 2002, arXiv:hep-th/0301050v1.
+[19] A. Anastasiou, L. Borsten, M.J. Duﬀ, L.J. Hughes, S. Nagy, Super Yang-Mills, division
+algebras and triality, JHEP 1408 (2014) 080, arXiv:1309.0546 [hep-th] . A. Anastasiou,
+L. Borsten, M.J. Duﬀ, L.J. Hughes, S. Nagy, A magic pyramid of supergravities , JHEP
+1404 (2014) 178, arXiv:1312.6523 [hep-th] .
+[20] T. Banks, W. Fischler, S. H. Shenker and L. Susskind, M Theory as a Matrix Model: A
+Conjecture, Phys. Rev. D55, 5112-5128 (1997), hep-th/9610043.
+[21] B. Kim and A. Schwarz, Formulation of M(atrix) model in terms of octonions (unpub-
+lished).
+[22] L. Smolin, The exceptional Jordan algebra and the matrix string , hep-th/0104050.
+[23] G. T. Horowitz and L. Susskind, Bosonic M Theory , J. Math. Phys. 42, 3152 (2001),
+hep-th/0012037.
+[24] A. Connes : “Noncommutative Geometry”, Boston, Academic Press (1994).
+[25] M. Artin and J. J. Zhang, Noncommutative projective schemes, Adv. Math. 109 (2), 228-
+287 (1994).
+[26] A. Connes, M. R. Douglas and A. Schwarz, Noncommutative geometry and matrix theory:
+compactiﬁcation on tori, JHEP 9802, 003 (1998), hep-th/9711162.
+[27] J. Madore, Noncommutative Geometry for Pedestrians, Lecture given at the International
+School of Gravitation, Erice, gr-qc/9906059.
+[28] P. M. Ho and Y. S. Wu, Noncommutative Geometry and D-branes , Phys. Lett. B398,
+52-60 (1997), hep-th/9611233.
+[29] T. Asakawa, S. Sugimoto and S. Terashima, D-branes, Matrix Theory and K -homology ,
+JHEP 0203, 034 (2002), hep-th/0108085.
+[30] R. J. Szabo, D-Branes, Tachyons and K -Homology , Mod. Phys. Lett. A17, 2297 (2002),
+hep-th/0209210.
+[31] A. Connes, Noncommutative geometry and reality, J. Math. Phys. 36, 6194 (1995).
+[32] A. Connes, Gravity coupled with matter and the foundation of noncommutative geometry ,
+Comm. Math. Phys. 155, 109 (1996).
+[33] A. Garrett Lisi, An exceptionally simple theory of everything, arXiv:0711.0770 [hep-th] .
+19
+
+--- page 21 ---
+[34] J. Distler and S. Garibaldi, There is no “Theory of Everything” inside E 8, Comm. Math.
+Phys. 298 (2010), 419, arXiv:0905.2658 [math.RT] .
+[35] P. Truini, Exceptional Lie Algebras, SU (3 ) and Jordan Pairs , Paciﬁc J. Math. 260, 227
+(2012), arXiv:1112.1258 [math-ph] .
+[36] H. Freudenthal, Beziehungen der E 7 und E 8 zur oktavenebene I-II , Nederl. Akad. Weten-
+sch. Proc. Ser. 57 (1954) 218–230. J. Tits, Interpr´ etation g´ eometriques de groupes de Lie
+simples compacts de la classe E , M´ em. Acad. Roy. Belg. Sci29 (1955) 3. H. Freudenthal,
+Beziehungen der E 7 und E 8 zur oktavenebene IX , Nederl. Akad. Wetensch. Proc. Ser.
+A62 (1959) 466–474. B. A. Rosenfeld, Geometrical interpretation of the compact simple
+Lie groups of the class E , (Russian) Dokl. Akad. Nauk. SSSR 106 (1956) 600–603. J. Tits,
+Alg` ebres alternatives, alg` ebres de Jordan et alg` ebres de Lie exceptionnelles, Indag. Math.
+28 (1966) 223–237.
+[37] A. Marrani and P. Truini, Exceptional Lie Algebras, SU (3 ) and Jordan Pairs Part 2:
+Zorn-type Representations, J. Phys. A47 (2014) 265202, arXiv:1403.5120 [math-ph] .
+[38] A. Marrani and P. Truini, Sextonions, Zorn Matrices, and e7 1
+2
+, Lett. Math. Phys. 107
+(2017) no.10, 1859-1875, arXiv:1506.04604 [math.RA] .
+[39] A. Marrani and P. Truini, Exceptional Lie Algebras at the very Foundations of Space and
+Time, p Adic Ultra. Anal. Appl. 8 (2016) no.1, 68-86, arXiv:1506.08576 [hep-th] .
+[40] G. Bossard, A. Kleinschmidt, J. Palmkvist, C. N. Pope and E. Sezgin, Beyond E 11, JHEP
+1705 (2017) 020, arXiv:1703.01305 [hep-th] .
+[41] H. Nicolai, The integrability of N = 16 supergravity , Phys. Lett. B194, 402 (1987). R.
+P. Geroch, A method for generating solutions of Einstein’s equations , J. Math. Phys. 12,
+918–924 (1971). R. P. Geroch, A method for generating new solutions of Einstein’s equa-
+tion. 2, J. Math. Phys. 13, 394–404 (1972). B. Julia, in : “Lectures in applied mathemat-
+ics”, vol. 21, p. 355. AMS-SIAM, 1985. B. Julia, Group Disintegrations. Invited paper
+presented at Nuﬃeld Gravity Workshop, Cambridge, Eng., Jun 22 - Jul 12, 1980. S.
+Mizoguchi, E 10 symmetry in one-dimensional supergravity , Nucl. Phys. B528, 238–264
+(1998), hep-th/9703160.
+[42] A. G. Tumanov and P. West, E11 in 11D , Phys. Lett. B758 (2016) 278, 1601.03974
+[hep-th].
+[43] T. Damour and M. Henneaux, E10, BE 10 and arithmetical chaos in superstring cosmology,
+Phys. Rev. Lett. 86, 4749–4752 (2001), hep-th/0012172. T. Damour, M. Henneaux, B.
+Julia and H. Nicolai, Hyperbolic Kac-Moody algebras and chaos in Kaluza-Klein models ,
+Phys. Lett. B509, 323–330 (2001), hep-th/0103094.
+[44] E.B. Vinberg, The theory of Convex Homogeneous Cones , in Transaction of the Moscow
+Mathematical Society for the year 1963, 340-403, American Mathematical Society, Provi-
+dence RI 1965.
+[45] N. Jacobson, Structure Theory for a class of Jordan Algebras, Proc. Nat. Acad. Sci. U.S.A.,
+55 243 (1966).
+[46] K. Meyberg, Jordan-Triplesysteme und die Koecher-Konstruktion von Lie Algebren, Math.
+Z. 115, 58 (1970).
+20
+
+--- page 22 ---
+[47] J. Tits, Une classe d’alg` ebres de Lie en relation avec les alg` ebres de Jordan,Nederl. Akad.
+Wetensch. Proc. Ser. A 65 = Indagationes Mathematicae 24, 530 (1962).
+[48] I. L. Kantor, Classiﬁcation of irreducible transitive diﬀerential groups, Doklady Akademiii
+Nauk SSSR 158, 1271 (1964).
+[49] M.Koecher, Imbedding of Jordan algebras into Lie algebras. I. , Am. J. Math. 89, 787
+(1967).
+[50] J.R. Faulkner, Jordan pairs and Hopf algebras, J. of Algebra, 232, 152 (2000).
+[51] K. McCrimmon : “ A Taste of Jordan Algebras” (Springer-Verlag New York Inc., New
+York, 2004).
+[52] R. D. Schafer: “ An Introduction to Non Associative Algebras” (Academic Press, 1966).
+[53] R. D. Schafer, Inner derivations of non associative algebras , Bull. Amer. Math. Soc. 55,
+769 (1949).
+[54] O.Loos : “Jordan Pairs”, Lect. Notes Math. 460, (Springer, 1975).
+[55] F.W. Helenius, Freudenthal triple systems by root system methods Journal of Algebra, 357,
+1 116-137 (2012), arXiv:1005.1275v1 [math-RT]
+[56] B. Allison, J. Faulkner and O. Smirnov Weyl Images of Kantor Pairs Canad. J. Math. 69,
+721-766 (2017).
+[57] Carter, R. W. Simple Groups of Lie Type , Wiley-Interscience, New-York, 1989
+[58] J.E. Humphreys: “ Introduction to Lie Algebras and Representation Theory” (Springer-
+Verlag New York Inc., New York, 1972)
+[59] W.A. de Graaf : “ Lie Algebras: Theory and Algorithms” (North-Holland Mathematical
+Library 56, Elsevier, Amsterdam, 2000).
+[60] V.G. Kac : “ Inﬁnite Dimensional Lie Algebras” , third edition (Cambridge University
+Press, Cambridge, 1990).
+[61] N. Jacobson: “ Exceptional Lie Algebras”, Lecture Notes in Pure and Applied Mathematics
+1 (M. Dekker, 1971).
+[62] R. Borcherds, Vertex algebras, Kac-Moody algebras, and the Monster , Proc. Natl. Acad.
+Sci. USA 83, 3068-3071 (1986).
+[63] J. H. Conway and S. P. Norton, Monstrous Moonshine, Bull. London Math. Soc. 11 (3),
+308-339 (1979).
+[64] M. C. N. Cheng, J. F. R. Duncan and J. A. Harvey, Umbral Moonshine, Commun. Number
+Theory Phys. 8, 101-242 (2014), arXiv:1204.2779 [math.RT] .
+[65] A. Meurman, I. Frenkel and J. Lepowski : “Vertex operator algebras and the Monster” ,
+Pure and Applied Mathematics 134, Academic Press, New York (1988).
+[66] P. Goddard and D. I. Olive, Algebras, lattices and strings, in : “Vertex operators in math-
+ematics and physics” (J. Lepowsky, S. Mandelstam and I. M. Singer Eds.), 51-96, MRSI
+Vol. 3, Springer Verlag, New York (1985).
+21
+
+--- page 23 ---
+[67] P. Goddard and D. I. Olive : “Kac-Moody and Virasoro algebras: A reprint volume for
+physicists”, Advanced Series in Mathematical Physics, Vol. 3, World Scientiﬁc, Singapore
+(1988).
+[68] E. Sezgin, SuperYang-Mills in (11,3)-dimensions , Phys. Lett. B403 (1997) 265-272,
+hep-th/9703123.
+22

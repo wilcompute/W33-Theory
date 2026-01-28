@@ -365,3 +365,527 @@ so20,4 → so12,4⊕ so8⊕ (16, 8v)→ so12,4⊕ so7⊕ (1, 7)⊕ (16, 7)⊕ (1
 128′, 1
 )
 . (20)
+
+--- page 6 ---
+Universe 2021, 7, 462 6 of 14
+While this isolates a 128 as a singlet of g2 and has additional fermions, breaking so12,4
+further to identify the standard model and electromagnetism would lead to the additional
+fermions to have the same charge, therefore not be dark matter. Nevertheless, the utilization
+of the 2048 spinor in e(1)
+8(−24) is later used to identify a candidate for WDM.
+3.2.2. Magic Star Reduction in D = 20 + 4
+Another possible symmetry reduction on the same ESYM, which is useful in order to
+discuss family uniﬁcation beyond the SM, concerns the exploitation of the so-called Magic
+Star [53] decomposition of the EP algebra e(1)
+8(−24) (13)–(14), with the EP algebra e(1)
+6(−26) (6)
+posited in the center of the star-like arrangement of (generalized) roots,
+e(1)
+8(−24) = e(1)
+6(−26)⊕ sl3(R)⊕
+(
+T8,1
+3 , 3
+)
+⊕
+((
+T8,1
+3
+)′
+, 3′
+)
+, (21)
+as depicted in Figure 1, where T8,1
+3 denotes the Hermitian part of the special Vinberg
+cubic T-algebra [60,61] with elements realized as formal 3× 3 Hermitian matrices, whose
+manifestly so16-covariant structure reads
+X :=
+
+
+1I 16 128
+∗ 1I I 128′
+∗ ∗ 1I I I
+
+∈ T8,1
+3 , (22)
+where 128 and 128′, respectively, denote the MW semispinor in 16 dimensions and its
+conjugate (the case q = 8 and n = 1 of Equation (III.1) of [ 55]). In addition, it is here
+worth recalling that the Hermitian matrix-like structure (22) corresponds to the manifestly
+so17,1-covariant Peirce decomposition
+T8,1
+3 = 1−4⊕ 182⊕ 256−1, (23)
+where the so17,1-singlet corresponds to the so16-singlet 1I I I in (22).
+Figure 1. A Magic Star-type projection of e(1)
+8(−24) that contains e(1)
+6(−26) in the center, named after the
+star polygon geometric shape.
+
+--- page 7 ---
+Universe 2021, 7, 462 7 of 14
+4. Symmetry Reduction to the Standard Model and Warm Dark Matter Disentanglement
+By studying E8× E8 heterotic string theory on the boundary of an 11-dimensional
+supergravity bulk, two E8 gauge theories on the endpoints of an orbifold fromR10× S1/Z2
+have been found [62,63]. The anomaly cancellation requires a twelve-form, which is factor-
+ized into a 4-form and 8-form, yet these are invoked in 10- and 11-dimensional theories,
+implying a complete description from larger dimensions. Heterotic string theory must have
+an origin from D = 25 + 1 or higher. While bosonic string theory exists in D = 25 + 1, het-
+erotic string theory places 16 dimensions on an even, self-dual lattice and includes fermions.
+D = 26 + 1 bosonic M-theory and D = 26 + 2 target space–time for 2D gravity has been
+introduced [64,65]. How D = 11 + 3 uniﬁes the superalgebras of type I, type IIA, type IIB
+and heterotic theories has been articulated in [46–48]. The superalgebras of M-theory and
+F-theory can arise from nested braneworlds in D = 27 + 3, as the exceptional Yang–Mills
+superalgebra contains an 11-brane worldvolume with spinors [31]. Dimensional reduction
+also ﬁnds a 10-brane worldvolume with a 16D transverse space and includes spinors.
+The Horava–Witten theory [62,63] shows how M-theory on R9× S1× S1/Z2, when
+compactiﬁed on S1, leads to type IIA and E8× E8 heterotic string theories, which are
+T-dual to type I and Spin (16)× Spin (16)⊂ Spin (32) superstring theories. This implies
+that the type I superstring on R9× S1 naturally has a Spin (16)× Spin (16) vacuum. Dark
+matter has been discussed in relation to nonsupersymmetricSpin (16)× Spin (16) string the-
+ory [25,26,29]. While heterotic string theory leading to the supersymmetric standard model
+allows for supersymmetric light dark matter candidates such as neutralinos [ 66], light
+supersymmetric partners of the standard model below 1.5 TeV have not been observed [67].
+The exceptional Yang–Mills superalgebras facilitate an understanding of various world-
+volume constructions for M-theory and beyond, which allows for supersymmetric forms
+of matter beyond the standard model that are different from the superpartners or the
+nonsupersymmetric dark matter models..
+Since the membranes discussed in this section are more complicated than those
+contained within M-theory itself, a brief pedagogical introduction to membranes and
+their relationship to gauge theory is warranted. To start, let us consider the worldline
+formulation of a free point particle described by the following action:
+S0 =−mc
+∫
+ds =−mc
+∫ √
+gµν ˙xµ ˙xνdτ. (24)
+Varying this action leads to the standard geodesic equation in general relativity. Extended
+objects in supergravity lead to “p-brane” for arbitrary-dimensional membranes, which
+spans a (p + 1)-dimensional worldvolume and generalizes the worldline formulation
+above [68]. While strings are 1-branes on a worldsheet and M-theory has a 2-brane world-
+volume, 3-brane worldvolumes were found in type IIB supergravity [69]. F-theory admits
+3-brane phenomenology that can include the standard model with gravity [70]. Further-
+more, 3-branes are intimately related to AdS5, whose isometry group is the conformal
+group Spin (4, 2). Additionally, AdS5 supports a 4D CFT with a 3-brane on the boundary,
+such that dS4 can be obtained within the Randall–Sundrum model [71,72].
+Before the full signiﬁcance of the Yang–Mills theory for the standard model was estab-
+lished, the nonlinear sigma model was introduced for pions, which is a nonrenormalizable
+theory similar to general relativity. General relativity is equivalent to a nonlinear sigma
+model Lagrangian [73], which is similarly used for the bosonic sector of p-branes:
+Sp =
+∫
+dp+1x
+[1
+2
+√
+|g|
+(
+gµν GMN ∂µ X M∂νXN− 1
+)
++ 1
+2(p + 1)! ϵµ 1...µ p+1 CM1...Mp+1 ∂µ 1 X M1...∂µ p+1 X Mp+1
+]
+, (25)
+where CM1... Mp+1 is a p + 1-form potential sourced by the p-brane and X M is a scalar ﬁeld
+with an index with respect to the target space, such as D = 10 + 1 in M-theory. The bosonic
+p-brane Lagrangian in the static gauge leads to a Born–Infeld action,
+
+--- page 8 ---
+Universe 2021, 7, 462 8 of 14
+Sp =−T
+∫
+dp+1x
+√
+−det
+(
+ηµν + 1
+T ∂µ X M∂νXN GMN
+)
+, (26)
+where T = 1/(2πlP)p is the brane tension. The Born–Infeld action was introduced as
+an electrodynamical theory; it is the 1-loop renormalization of QED. The historical de-
+velopments of transitioning from the non-renormalizable nonlinear sigma model to the
+renormalizable Yang–Mills theory suggest that the Yang–Mills gauge gravity theories,
+such as the MacDowell–Mansouri theory, will remain important for the uniﬁcation of the
+standard model and gravity [74]. As braneworlds are intimately related to the study of
+gravity and beyond-the-standard-model physics is necessary for dark matter, we propose
+that braneworld spinors allow us to consider new dark matter candidates.
+We brieﬂy review the representation theory of the standard model as well as the most
+common high-energy GUT models, recalling that SU(3)c× U(1)e⊂ SU(5)⊂ Spin (10)⊂
+E6(−78)⊂ E8(−24). E6(−78) allows us to consider three charts of Spin (10)× U(1), such
+that E8(−24) contains three charts of Spin (10)× Spin (2, 4) for a combination of GUT and
+conformal symmetries. The D = 12 + 4 (1,0) chiral super-Poincaré algebra also exists and
+contains a 128 spinor. When breaking to Spin (2, 4)× Spin (10), the three conformal charts
+span Spin (4, 4) (associated to a conformal braneworld symmetry), such that three distinct
+16 representations of Spin (10) are found, each leading to the standard model fermion
+representations with respect to SU(3)c× SU(2)L× U(1)Y,
+16 = (3, 1) 1
+3
+⊕ (1, 2)− 1
+2
+⊕ (3, 2) 1
+6
+⊕ (3, 1)− 2
+3
+⊕ (1, 1)1⊕ (1, 1)0. (27)
+Once the bosons are uniﬁed into a single gauge group, such as SU(5) or Spin (10), the
+vector bosons are described by the Yang–Mills action.
+SYM =
+∫
+ddx
+√
+−g 1
+g2
+YM
+FA
+µν FA
+ρσ gµρ gνσ. (28)
+At high energies, an SU(2, 2)× U(1) conformal gauge group, axial U(1) and SU(5)
+GUT leads to SU(7, 2), which is also a maximal subalgebra of E8(−24). An E8(−24) gauge
+theory does not need to be considered, but rather gauge theories from subalgebras. For
+instance, E6 GUT contains a complex 27 and 27 in combination with the adjoint representa-
+tion 78 [75].
+Combined with another U(1), the total of all of these states leads to E7 by combining
+the adjoint bosonic sector with the complex fermionic sector.
+133 = 27⊕ 78⊕ 1⊕ 27. (29)
+As shown above, the representations found within E6 GUT stem from a single adjoint
+representation of E7; similarly,E8. Recently, using E6 to obtain the standard model spectrum
+has been explored [76] without using E6 GUT. E8 for three generations of matter has also
+been explored [77], although conformal spacetime symmetry was not considered. This non-
+supersymmetric E8 GUT model and the supersymmetric E8× E8 heterotic string theory
+use this to make contact with three generations of matter. Since two of the authors recently
+found EP algebras that generalize E8 [53], we expand the exploration of the representations
+associated with these algebras. Dark matter is an immediate natural candidate, as the
+EP algebras contain spinors for matter beyond the standard model. Superalgebras are
+explored to motivate braneworld intersections that naturally lead to the standard model
+spectrum as described above, along with additional dark matter candidates.
+4.1. Braneworld Spinors
+D = 26 + 1 M-theory with a 8, 192 spinor [ 78] and many p-branes provides an
+origin for heterotic string theory and M-theory. A 2-brane, 5-brane, 10-brane, 13-brane,
+18-brane and 21-brane is found from considering a superalgebra with 8, 192 supercharges.
+
+--- page 9 ---
+Universe 2021, 7, 462 9 of 14
+D = 10 + 1 M-theory has a 2-brane and 5-brane, while a 21-brane was anticipated in
+D = 26 + 1 bosonic M-theory [64]. In D = 26 + 1, a 10-brane and 18-brane allow for a (10,1)
+worldvolume theory and a (18,1) worldvolume theory. Breaking Spin (26, 1) to various
+subgroups makes contact with worldvolume and transverse symmetries of interest.
+Braneworld Worldvolume Transverse Spinors
+2-brane Spin (2, 1) Spin (24) (2, 2048′)⊕ (2, 2048)
+10-brane Spin (10, 1) Spin (16) (32, 128′)⊕ (32′, 128)
+18-brane Spin (18, 1) Spin (8) (512, 8′)⊕ (512′, 8)
+(30)
+in which the breaking of the 8, 192 spinor is also provided. The 2-brane relates to the
+Horowitz–Susskind [64] D = 2 + 1 CFT with SO(24) global symmetry and AdS4× S23
+holography. The spinors in the 10-brane worldvolume only see the 32 spinor of M-theory
+from (32, 128) components. The D = 26 + 1 theory contains a 128 spinor of a transverse
+Spin (16), just as the superstring has an 8s spinor of Spin (8). This can be compared to the
+Horava–Witten theory [62,63] with R10× S1/Z2, by orbifolding a spatial direction of the
+10-brane. The 18-brane gives a D = 18 + 1 “M-theory" that reduces to a D = 17 + 1 string
+theory as studied in relation to Kac–Moody algebras [79]. Quasiconformal extensions of
+the 2-brane, 10-brane, 18-brane and global space–time motivate Spin (4, 4), Spin (12, 4),
+Spin (20, 4) and Spin (28, 4) symmetries and their EP extensions.
+Spin (12, 4) is the conformal symmetry of Spin (11, 3), whose exceptional Yang–Mills
+superalgebra admits a Hodge duality between a 3-brane and 7-brane when the 3-brane
+is treated as a worldvolume for space–time, generalizing the 2-brane and 5-brane. The
+isometry group of the 3-brane (3,3) worldvolume has Spin (4, 4) conformal symmetry,
+which describes three generations of matter [80,81]. A transverse Spin (8) is used for visible
+matter within Spin (12, 4), where fermionic degrees of freedom can be encoded by a 128
+spinor of Spin (12, 4), leading to e8(−24). Going to Spin (20, 4) or Spin (28, 4) allows us to
+consider transverse Spin (16) or Spin (24) for possible dark matter.
+D = 28 + 4 entails the following braneworld twistors for three generations:
+Braneworld Conformal worldvolume Transverse Spinors
+3-brane Spin (4, 4) Spin (24) (8, 2048′)⊕ (8′, 2048)
+11-brane Spin (12, 4) Spin (16) (128, 128′)⊕ (128′, 128)
+19-brane Spin (20, 4) Spin (8) (2048, 8′)⊕ (2048′, 8)
+(31)
+Taking the 11-brane and 19-brane in D = 27 + 3, they are forced to intersect spatially via a
+3-brane. The 11-brane isolates a D = 11 + 3 worldvolume with a 3-brane and dual 7-brane,
+while the 19-brane isolates a D = 19 + 3 worldvolume with a 3-brane and dual 15-brane.
+Our proposal is that the D = 11 + 3 worldvolume theory encodes baryonic matter, while
+the D = 19 + 3 theory encodes a dark matter sector.
+EP algebras provide new dark matter models via intersected or nested higher mem-
+brane worldvolumes. In order to combine dark matter and the standard model within the
+same space–time worldvolume, e(2)
+8(−24) with so28,4 is of interest, as it contains so12,4⊕ so16
+in addition to various vector and spinor representations. The group Spin (12, 4) combines
+the 4D conformal group with Spin (10) GUT. The compact real form of e(2)
+8 also contains
+so16⊕ so16, which has been studied in relation to dark matter in a different context [29].
+4.2. Braneworld Intersections for Warm Dark Matter beyond the Standard Model
+One candidate for describing the standard model from string theory is the utilization
+of D3 and D7 branes from type IIB supergravity or F-theory [ 82]. The central extension
+of D = 11 + 3 minimal chiral (1, 0) superalgebra naturally contains a 3-brane and dual
+7-brane, as well as the type IIB superalgebra [47,48]. The role of E8(−24) with Spin (12, 4)
+in the context of background-independent two-time M-theory and heterotic string theory
+withN = 2 or 1 has been mentioned in [83]. A single generation of fermions can be found
+via 64 of Spin (11, 3) as off-shell degrees of freedom [84]. While breaking Spin (12, 4)→
+
+--- page 10 ---
+Universe 2021, 7, 462 10 of 14
+Spin (2, 4)× Spin (10) is tempting, this makes it difﬁcult to identify the three generations
+of matter with less than 2048 spinors without another consideration. Some of the authors
+have explored how SU(3, 2)× SU(5) (maximal and non-symmetric subgroup of E8(−24))
+naturally leads to three conformal charts, in a manner similar to how quasiconformal
+groups with four times are the conformal group for three generations of matter [81]. The
+corresponding (1,0) chiral super-Poincaré algebra in D = 12 + 4 entails three generations
+of the standard model within 128 of Spin (12, 4) instead of 192 off-shell degrees of freedom.
+Throughout this section, it is assumed that three generations of the standard model
+stem from a 3-brane and dual 7-brane, immersed in an 11-brane worldvolume. To go be-
+yond the standard model and include dark matter candidates, a 15-brane is also considered.
+The 3-brane and 15-brane exist inside a 19-brane worldvolume. The possible p-branes in
+D = 27 + 3 are shown in Figure 2. In particular, visible matter and dark matter are iso-
+lated on the 11-brane and 19-brane, such that they intersect on the 11 + 19− 27 = 3-brane
+worldvolume for space–time. In this manner, the braneworld intersection identiﬁes visi-
+ble and dark matter with different forces, yet they exist within the same space–time. The
+D = 27 + 3 theory may be isolated to D = 19 + 3 for dark matter, yet reduced toD = 11 + 3
+for visible matter.
+Here, a model via Spin (12, 4)× Spin (16) is pursued. The Spin (16) factor arises from
+the transverse symmetry of an 11-brane worldvolume in D = 27 + 3. Then, we study a
+braneworld intersection of the 11-brane and 19-brane in D = 27 + 3.
+By restricting to the 11-brane worldvolume, the 3-brane is dual to a 7-brane. Isolating the
+conformal group of the 11-brane worldvolume withine(2)
+8(−24) encodes a transverseSpin (16),
+e(2)
+8(−24)
+496⊕32,768
+→ so28,4→ so12,4⊕ so16→ so4,4⊕ so8⊕ so16, (32)
+496 = ( 120, 1)⊕ (1, 120)⊕ (16, 16)
+= ( 28, 1, 1)⊕ (1, 28, 1)⊕ (8v, 8v, 1)⊕ (1, 1, 120)⊕ (8v, 1, 16)⊕ (1, 8v, 16), (33)
+32, 768 = ( 128, 128′)⊕ (128′, 128)
+= ( 8s, 8c, 128′)⊕ (8c, 8s, 128′)⊕ (8c, 8s, 128)⊕ (8s, 8c, 128). (34)
+Figure 2. The intersections of branes in D = 27 + 3. For instance, the 3-brane is dual to the 23-brane,
+which contains the 7-brane and 15-brane.
+Once the 3-brane worldvolume is isolated within the 11-brane worldvolume, Spin (8)
+is found as being transverse to Spin (4, 4) as the conformal worldvolume symmetry. The
+3-brane within the 11-brane within D = 27 + 3 has the effect of making the Spin (16)
+transverse to the 11-brane hidden with respect to the matter isolated to the 3-brane and
+dual 7-brane within D = 11 + 3.
+
+--- page 11 ---
+Universe 2021, 7, 462 11 of 14
+On the other hand, by restricting to the 19-brane worldvolume, the 3-brane is dual
+to a 15-brane. Isolating the conformal group of the 19-brane worldvolume within e(2)
+8(−24)
+leads to a transverse Spin (8).
+e(2)
+8(−24)
+496⊕32,768
+→ so28,4→ so20,4⊕ so8→ so4,4⊕ so16⊕ so8, (35)
+496 = ( 276, 1)⊕ (1, 28)⊕ (24, 8v)
+= ( 28, 1, 1)⊕ (1, 120, 1)⊕ (8v, 16, 1)⊕ (1, 1, 28)⊕ (8v, 1, 8v)⊕ (1, 16, 8v), (36)
+32, 768 = ( 2048, 8c)⊕ (2048′, 8s)
+= ( 8s, 128′, 8c)⊕ (8c, 128, 8c)⊕ (8c, 128, 8s)⊕ (8s, 128′, 8s). (37)
+Once the 3-brane worldvolume is isolated within the 19-brane worldvolume, Spin (16)
+is transverse to Spin (4, 4). The 3-brane within the 19-brane in a bulk D = 27 + 3 leaves the
+Spin (8) transverse to the 19-brane hidden with respect to matter isolated to the 3-brane
+and its dual 15-brane within D = 19 + 3.
+While isolating the 3-brane in the 19-brane versus 11-brane symmetries within e(2)
+8(−24)
+leads to different representations, not all representations of the fermions are identiﬁable.
+For instance, the 11-brane cannot access a 15-brane in its transverse space, such that the
+so16 representations are unobservable, while the 19-brane cannot access a 7-brane in its
+transverse space, such that the so8 representations are unobservable. We assume that the
+so8 transverse to the 19-brane contains the electromagnetic u1 of the standard model [85].
+With the 11-brane and 19-brane intersection, the 3-brane effectively sees the following
+fermionic representations with respect to Spin (4, 4)× Spin (8)× Spin (16):
+(8s, 8c, 1)⊕ (8c, 8s, 1)⊕ (8s, 1, 128′)⊕ (8c, 1, 128), (38)
+where the singlets effectively arise at low energies, since a 3-brane in an 11-brane cannot
+probe a transverse 15-brane immersed in D = 27 + 3, for instance. As such, since the
+3-brane is the intersection of two worldvolumes, 128 visible and 2048 dark fermions are
+found effectively at low energy from an intersecting braneworld model that contains
+worldvolumes that support the commonly studied supergravities and string theories. The
+2048 dark fermions come from (8s, 1, 128′)⊕ (8c, 1, 128), which cannot be probed by the
+so8 containing the electromagnetic u1.
+This number of degrees of freedom corresponds to
+mX
+keV≈ 17.8ΩXh2 1.5
+gX
+, (39)
+a∼2 keV particle that is in agreement with observations at both large scales—galaxy
+formation and distribution—and small scales—cores [12,13].
+5. Conclusions
+In this paper, we discuss possible large gauge group representations that allow us to
+obtain a high number of fermionic degrees of freedom using superalgebras in the context
+of exceptional periodicity models and M-theory braneworlds. We ﬁnd that an 11-brane
+and 19-brane in D = 27 + 3 intersect by a 3-brane for space–time such that respective dual
+7-branes and 15-branes provide both the degrees of freedom for the standard model and
+the ones for fermionic WDM, while preserving the ‘separation’ and the lack of interaction
+between SM and WDM particles. Since so12,4 combines conformal symmetry with so10,
+the so8 contains su3⊕ u1 of the strong and electromagnetic forces, such that the 19-brane
+does not interact with light; therefore, it is dark.
+In this realization, the intersecting braneworlds span D = 27 + 3, but individually
+span D = 11 + 3 and D = 19 + 3. For D = 11 + 3, the 3-brane is dual to a 7-brane for light
+matter in 128 off-shell degrees of freedom. For D = 19 + 3, the 3-brane is dual to a 15-brane
+for dark matter. We ﬁnd 2048 fermionic degrees of freedom in this representation, which
+
+--- page 12 ---
+Universe 2021, 7, 462 12 of 14
+correspond to∼2 keV in the model cited in [23]. This particle spectrum is in agreement with
+constraints from structure formation. Moreover, a 2 keV particle inﬂuences the formation of
+cores in galaxies [12,13]. Several other representations have been discussed and analyzed.
+However, this representation has the advantage of naturally allowing for a WDM candidate
+that is interesting from the point of view of astrophysical constraints and also implying
+worldvolumes that support supergravities and string theories. The evolution of a particle
+produced in this manner can be discussed further. While beyond the scope of this paper,
+further investigations of what happens to these species once the particle decouples would
+provide additional constraints.
+Author Contributions: S.P . and M.R. initiated this research; S.P . contributed the WDM insights and
+discussion, M.R. the superalgebras and brane reduction; A.M. contributed to the superalgebras and
+symmetry breaking; D.C. contributed the braneworld intersection and matter-multiplet phenomenol-
+ogy. All authors contributed to the writing of the paper. All authors have read and agreed to the
+published version of the manuscript.
+Funding: This research study received no external funding.
+Institutional Review Board Statement: Not applicable.
+Informed Consent Statement: Not applicable.
+Acknowledgments: S.P . would like to thank N.G. Sanchez for the invitation to submit to this special
+issue and for useful suggestions.
+Conﬂicts of Interest: The authors declare no conﬂict of interest.
+Abbreviations
+The following abbreviations are used in this manuscript:
+MDPI Multidisciplinary Digital Publishing Institute
+DOAJ directory of open access journals
+WDM warm dark matter
+CDM cold dark matter
+SM standard model
+EP exceptional periodicity
+ESYM exceptional super Yang–Mills
+WV worldvolume
+References
+1. Tikhonov, A.V .; Gottlöber, S.; Yepes, G.; Hoffman, Y. The sizes of minivoids in the local Universe: An argument in favour of a
+warm dark matter model? Mon. Not. RAS 2009, 399, 1611. [CrossRef]
+2. Zavala, J.; Jing, Y.P .; Faltenbacher, A.; Yepes, G.; Hoffman, Y.; Gottlöber, S.; Catinella, B. The velocity function in the local
+environment from LCDM and LWDM constrained simulations. Astrophys. J. 2009, 700, 1779. [CrossRef]
+3. Peebles, P .J.E.; Nusser, A. Nearby galaxies as pointers to a better theory of cosmic evolution.Nature 2010, 465, 565–569. [CrossRef]
+4. Kormendy, J.; Drory, N.; Bender, R.; Cornell, M.E. Bulgeless Giant Galaxies Challenge Our Picture of Galaxy Formation by
+Hierarchical Clustering. Astrophys. J. 2010, 723, 54. [CrossRef]
+5. Kormendy, J. Elliptical Galaxies and Bulges of Disc Galaxies: Summary of Progress and Outstanding Issues. In Galactic Bulges;
+Springer: Berlin/Heidelberg, Germany, 2016; pp. 431–477.
+6. Caramete, L.I.; Biermann, P .L. The catalog of nearby black hole candidates. arxiv 2011, arXiv:1107.2244.
+7. Wang, F.; Yang, J.; Fan, X.; Hennawi, J.F.; Barth, A.J.; Banados, E.; Bian, F.; Boutsia, K.; Connor, T.; Davies, F.B.; et al. A Luminous
+Quasar at Redshift 7.642. Astrophys. J. Lett. 2021, 907, L1. [CrossRef]
+8. de Vega, H.; Sanchez, N.G. Model independent analysis of dark matter points to a particle mass at the keV scale. Mon. Not. R.
+Astron. Soc. 2010, 404, 885. [CrossRef]
+9. de Vega, H.; Salucci, P .; Sanchez, N.G. The mass of the dark matter particle from theory and observations.New Astron. 2012, 17,
+653. [CrossRef]
+10. de Vega, H.; Sanchez, N.G. Cosmological evolution of warm dark matter ﬂuctuations. I. Efﬁcient computational framework with
+Volterra integral equations. Phys. Rev. D 2012, 85, 043516. [CrossRef]
+11. de Vega, H.; Sanchez, N.G. Cosmological evolution of warm dark matter ﬂuctuations. II. Solution from small to large scales and
+keV sterile neutrinos. Phys. Rev. D 2012, 85, 043517. [CrossRef]
+
+--- page 13 ---
+Universe 2021, 7, 462 13 of 14
+12. Destri, C.; de Vega, H.J.; Sanchez, N.G. Fermionic warm dark matter produces galaxy cores in the observed scales because of
+quantum mechanics. New Astron. 2013, 22, 39. [CrossRef]
+13. Destri, C.; de Vega, H.J.; Sanchez, N.G. Quantum WDM fermions and gravitation determine the observed galaxy structures.
+Astropart. Phys. 2013, 46, 1. [CrossRef]
+14. Destri, C.; de Vega, H.J.; Sanchez, N.G. Warm dark matter primordial spectra and the onset of structure formation at redshift z.
+Phys. Rev. D 2013, 88, 083512. [CrossRef]
+15. de Vega, H.; Salucci, P .; Sanchez, N.G. Observational rotation curves and density proﬁles versus the Thomas–Fermi galaxy
+structure theory. Mon. Not. R. Astron. Soc. 2014, 442, 2717. [CrossRef]
+16. Paduroiu, S.; Revaz, Y.; Pfenniger, D. Structure formation in warm dark matter cosmologies: Top-Bottom Upside-Down.arXiv
+2015, arXiv:1506.03789.
+17. Paduroiu, S. Structure Formation in Warm Dark Matter Cosmologies. Ph.D. Thesis, University of Geneva, Geneva, Switzerland,
+2015.
+18. Sanchez, N.; Paduroiu, S.; Biermann, P .L. Warm Dark Matter Astrophysics in Agreement with Observations and keV Sterile
+Neutrinos: Synthesis of Highlights and Conclusions of the Chalonge -de Vega Meudon Workshop 2016 In Memoriam Héctor J. de
+Vega. 2016. Available online: https://hal.archives-ouvertes.fr/hal-01773092 (accessed on 16 October 2021).
+19. Macciò, A.V .; Stinson, G.; Brook, C.B.; Wadsley, J.; Couchman, H.M.P .; Shen, S.; Gibson, B.K.; Quinn, T. Halo Expansion in
+Cosmological Hydro Simulations: Toward a Baryonic Solution of the Cusp/Core Problem in Massive Spirals. Astrophys. J. 2012,
+744, L9. [CrossRef]
+20. Marinacci, F.; Pakmor, R.; Springel, V . The formation of disc galaxies in high-resolution moving-mesh cosmological simulations.
+Mon. Not. RAS 2014, 437, 1750. [CrossRef]
+21. Gao, L.; Theuns, T. Lighting the Universe with ﬁlaments. Science 2007, 317, 1527. [CrossRef] [PubMed]
+22. Boyarsky, A.; Drewes, M.; Lasserre, T.; Mertens, S.; Ruchayskiy, O. Sterile Neutrino Dark Matter.Prog. Part. Nucl. Phys. 2019, 104,
+1–45. [CrossRef]
+23. Bode, P .; Ostriker, J.P .; Turok, N. Halo formation in warm dark matter models. Astrophys. J. 2001, 556, 93. [CrossRef]
+24. Pierpaoli, E.; Borgani, S.; Masiero, A.; Yamaguchi, M. The Formation of Cosmic Structures in a Light Gravitino Dominated
+Universe. Phys. Rev. D 1998, 57, 2089. [CrossRef]
+25. Alvarez-Gaumé, L.; Ginsparg, P .; Moore, G.; Vafa, C. An O(16) × O(16) heterotic string. Phys. Lett. B 1986, 171, 2. [CrossRef]
+26. Dixon, L.G.; Harvey, J.A. String theories in ten dimensions without supersymmetry. Nucl. Phys. B 1986, 274, 18. [CrossRef]
+27. Jedamzik, K.; Lemoine, M.; Moultaka, G. Gravitino dark matter in gauge mediated supersymmetry breaking. Phys. Rev. D 2006,
+73, 1550. [CrossRef]
+28. Gross, C.; Lebedev, O.; Mambrini, Y. Non-Abelian gauge ﬁelds as dark matter. J. High Energy Phys. 2015, 8, 158. [CrossRef]
+29. McGuigan, M. Dark Horse, Dark Matter: Revisiting the SO(16)x SO(16)’ Nonsupersymmetric Model in the LHC and Dark Energy
+Era. arXiv 2019, arXiv:1907.01944.
+30. Rios, M.; Marrani, A.; Chester, D. The Geometry of Exceptional Super Yang-Mills Theories. Phys. Rev. D 2019, 99, 046004.
+[CrossRef]
+31. Rios, M.; Marrani, A.; Chester, D. Exceptional Super Yang-Mills inD = 27 + 3 and Worldvolume M-Theory.Phys. Lett. B 2020,
+808, 135674. [CrossRef]
+32. Dodelson, S.; Widrow, L.M. Sterile neutrinos as dark matter. Phys. Rev. Lett. 1994, 72, 17–20. [CrossRef]
+33. Shi, X.; Fuller, G.M. New dark matter candidate: Nonthermal sterile neutrinos. Phys. Rev. Lett. 1999, 82, 2832. [CrossRef]
+34. Dolgov, A.D. Neutrinos in cosmology. Phys. Rep. 2002, 370, 333. [CrossRef]
+35. Asaka, T.; Shaposhnikov, M.; Kusenko, A. Opening a new window for warm dark matter.Phys. Lett. B 2006, 638, 401. [CrossRef]
+36. Boyarsky, A.; Lesgourgues, J.; Ruchayskiy, O.; Viel, M. Realistic sterile neutrino dark matter with keV mass does not contradict
+cosmological bounds. Phys. Rev. Lett. 2009, 102, 201304. [CrossRef] [PubMed]
+37. Fuller, G.M.; Kishimoto, C.T.; Kusenko, A. Heavy sterile neutrinos, entropy and relativistic energy production, and the relic
+neutrino background. arXiv 2011, arXiv:1110.6479.
+38. Lello, L.; Boyanovsky, D. Cosmological Implications of Light Sterile Neutrinos produced after the QCD Phase Transition.
+Phys. Rev. D 2015, 91, 063502. [CrossRef]
+39. Paduroiu, S. Warm Dark Matter in Numerical Simulations. 2021, submitted to Universe, MDPI.
+40. Colombi, S.; Dodelson, S.; Widrow, L.M. Large Scale Structure Tests of Warm Dark Matter. Astrophys. J. 1996, 458, 1. [CrossRef]
+41. Bezrukov, F.; Hettmansperger, H.; Lindner, M. keV sterile neutrino dark matter in gauge extensions of the standard model.Phys.
+Rev. D 2010, 81, 085032. [CrossRef]
+42. Nemevšek, M.; Senjanovi´ c, G.; Zhang, Y. Warm dark matter in low scale left-right theory.J. Cosmol. Astropart. Phys. 2012, 7, 6.
+[CrossRef]
+43. Patwardhan, A.V .; Fuller, G.M.; Kishimoto, C.T.; Kusenko, A. Diluted equilibrium sterile neutrino dark matter.Phys. Rev. D 2015,
+92, 103509. [CrossRef]
+44. Herms, J.; Ibarra, A.; Toma, T. A new mechanism of sterile neutrino dark matter production. JCAP 2018, 6, 36. [CrossRef]
+45. Vafa, C. Evidence for F-Theory. Nucl. Phys. B 1996, 469, 403. [CrossRef]
+46. Bars, I. S-theory. Phys. Rev. D 1997, 55, 2373. [CrossRef]
+47. Bars, I. A case for 14 dimensions. Phys. Lett. B 1997, 403, 257. [CrossRef]
+
+--- page 14 ---
+Universe 2021, 7, 462 14 of 14
+48. Sezgin, E. Super Yang-Mills in (11,3) Dimensions. Phys. Lett. B 1997, 403, 265. [CrossRef]
+49. Nishino, H. Supersymmetric Yang-Mills Theories in D ⩾ 12. Nucl. Phys. B 1998, 523, 450. [CrossRef]
+50. Rudychev, I.; Sezgin, E.; Sundell, P . Supersymmetry in dimensions beyond eleven. Nucl. Phys. Proc. Suppl. 1998, 68, 285.
+[CrossRef]
+51. Witten, E. String Theory Dynamics In Various Dimensions. Nucl. Phys. B 1995, 443, 85. [CrossRef]
+52. Banks, T.; Fischler, W.; Shenker, S.H.; Susskind, L. M Theory As A Matrix Model: A Conjecture. Phys. Rev. D 1995, 55, 5112.
+[CrossRef]
+53. Truini, P .; Rios, M.; Marrani, A. The Magic Star of Exceptional Periodicity. In Proceedings of the 4th Mile High Conference on
+Nonassociative Mathematics, Denver, CO, USA, 29 July–5 August 2017.
+54. Truini, P .; Marrani, A.; Rios, M. Magic Star and Exceptional Periodicity: An approach to Quantum Gravity. In Proceedings of the
+32nd International Colloquium on Group Theoretical Methods in Physics, Prague, Czech Republic, 9–13 July 2018.
+55. Marrani, A.; Truini, P .; Rios, M. The Magic of Being Exceptional. In Proceedings of the 32nd International Colloquium on Group
+Theoretical Methods in Physics, Prague, Czech Republic, 9–13 July 2018.
+56. de Wit, B.; Van Proeyen, A. Special geometry, cubic polynomials and homogeneous quaternionic spaces.Commun. Math. Phys.
+1992, 149, 307. [CrossRef]
+57. de Wit, B.; Vanderseypen, F.; Van Proeyen, A. Symmetry structure of special geometries.Nucl. Phys. B 1993, 400, 463. [CrossRef]
+58. Reig, M.; Valle, J.W.F.; Vaquera-Araujo, C.A.; Wilczek, F. A Model of Comprehensive Uniﬁcation.Phys. Lett. B 2017, 774, 667.
+[CrossRef]
+59. BenTov, Y.; Zee, A. The Origin of Families and SO(18) Grand Uniﬁcation. Phys. Rev. D 2016, 93, 065036. [CrossRef]
+60. Vinberg, E.B. The theory of Convex Homogeneous Cones. In T ransaction of the Moscow Mathematical Society for the Y ear 1963 ;
+American Mathematical Society: Providence, RI, USA, 1963; pp. 340–403.
+61. Alekseevsky, D.V .; Marrani, A.; Spiro, A. Special Vinberg Cones and the Entropy of BPS Extremal Black Holes. arXiv 2021,
+arXiv:2107.06797.
+62. Horava, P .; Witten, E. Heterotic and Type I String Dynamics from Eleven Dimensions. Nucl. Phys. B 1996, 460, 506. [CrossRef]
+63. Horava, P .; Witten, E. Eleven-Dimensional Supergravity on a Manifold with Boundary. Nucl. Phys. B 1996, 475, 94. [CrossRef]
+64. Horowitz, G.; Susskind, L. Bosonic M Theory. J. Math. Phys. 2001, 42, 3152–3160. [CrossRef]
+65. Watabiki, Y. The bosonic string and superstring models in 26 + 2 and 10 + 2 dimensional space–time, and the generalized
+Chern-Simons action. J. High Energy Phys. 2003, 5, 1. [CrossRef]
+66. Jungman, G.; Kamionkowski, M.; Griest, K. Supersymmetric Dark Matter. Phys. Rept. 1996, 267, 195. [CrossRef]
+67. ATLAS Collaboration. Search for bottom-squark pair production with the ATLAS detector in ﬁnal states containing Higgs bosons,
+bb-jets and missing transverse momentum. J. High Energy Phys. 2019, 12, 60.
+68. Duff, M.J.; Inami, T.; Pope, C.N.; Sezgin, E.; Stelle, K.S. Semiclassical quantization of the supermembrane. Nucl. Phys. B 1988, 297,
+515. [CrossRef]
+69. Cederwall, M.; von Gussich, A.; Nilsson, B.E.W.; Westerberg, A. The Dirichlet super three-brane in ten-dimensional type IIB
+supergravity. Nucl. Phys. B 1997, 490, 163–178. [CrossRef]
+70. Heckman, J.J.; Vafa, C. From F-theory GUTs to the LHC. arXiv 2008, arXiv:hep-th/0809.3452.
+71. Randall, L.; Sundrum, R. A Large mass hierarchy from a small extra dimension. Phys. Rev. Lett. 1999, 83, 3370–3373. [CrossRef]
+72. Hirayama, T. A Holographic dual of CFT with ﬂavor on de Sitter space. J. High Energy Phys. 2006, 6, 13. [CrossRef]
+73. Cheung, C.; Remmen, G.N. Twofold Symmetries of the Pure Gravity Action. J. High Energy Phys. 2017, 1, 104. [CrossRef]
+74. MacDowell, S.W.; Mansouri, F. Uniﬁed geometric theory of gravity and supergravity.Phys. Rev. Lett. 1977, 38, 739–742. [CrossRef]
+75. Gürsey, F.; Ramond, P .; Sikivie, P .A. Universal Gauge Theory Model Based on E6. Phys. Lett. B 1976, 60, 177–180. [CrossRef]
+76. Boyle, L. The Standard Model, The Exceptional Jordan Algebra, and Triality. arXiv 2006, arXiv:2006.16265.
+77. Bars, I.; Günaydin, M. Grand Uniﬁcation with the Exceptional Group E8. Phys. Rev. Lett. 1980, 45, 859. [CrossRef]
+78. Marrani, A.; Rios, M.; Chester, D. Monstrous M-theory. arXiv 2008, arXiv:hep-th/2008.06742.
+79. Gaberdiel, M.R.; West, P .C. Kac-Moody algebras in perturbative string theory. J. High Energy Phys. 2002, 8, 49. [CrossRef]
+80. Kostant, B. The Principle of Triality and A Distinguished Unitary Representation of SO(4,4). In Differential Geometrical Methods
+in Theoretical Physics; Bleuler, K., Werner, M., Eds.; NATO ASI Series (Series C: Mathematical and Physical Sciences); Springer:
+Dordrecht, The Netherlands, 1988; Volume 250.
+81. Chester, D.; Marrani, A.; Rios, M. Beyond the standard model with six-dimensional spacetime. arXiv 2020, arXiv:2002.02391.
+82. Aldazabal, G.; Ibanez, L.E.; Quevedo, F.; Uranga, A.M. D-Branes at Singularities: A Bottom-Up Approach to the String Embedding
+of the Standard Model. J. High Energy Phys. 2000, 8, 2. [CrossRef]
+83. Martinec, E.J. Geometrical structures of M theory. arXiv 1996, arXiv:hep-th/9608017.
+84. Krasnov, K. Spin(11,3), particles and octonions. arXiv 2021, arXiv:hep-th/2104.01786.
+85. Slansky, R. Group Theory for Uniﬁed Model Building. Phys. Rept. 1981, 79, 1–28. [CrossRef]
