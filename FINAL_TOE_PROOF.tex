@@ -496,6 +496,18 @@ tools/pattern_class_physics_profile.py
 artifacts/pattern_class_physics_profile.json
 \end{verbatim}
 
+\textbf{Consolidated pattern‑class feature table.} A single table
+summarizing class sizes, support‑size distribution, K4 participation,
+and neighbor‑class profiles:
+
+\begin{verbatim}
+artifacts/pattern_class_feature_table.md
+artifacts/pattern_class_feature_table.json
+\end{verbatim}
+
+This is the quantitative basis for mapping pattern classes to physical
+multiplets (work in progress).
+
 \textbf{Exceptional vertex triplet.} Exactly \textbf{3} Coxeter‑6 orbits
 contain the size‑1 W(E6) roots. These correspond to three explicit
 \(F_{3}^{4}\) projective points:
@@ -1415,6 +1427,16 @@ Mapping}\label{e6e8-orbit-structure-explicit-mapping}
     Computes pattern‑class profiles for all triangles and lines.
   \item
     Output: \texttt{artifacts/pattern\_class\_physics\_profile.json}
+  \end{itemize}
+\item
+  \texttt{python3\ tools/pattern\_class\_feature\_table.py}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Consolidated pattern‑class feature table (sizes, K4, neighbors).
+  \item
+    Output: \texttt{artifacts/pattern\_class\_feature\_table.json}
   \end{itemize}
 \item
   \texttt{python\ tools/explicit\_bijection\_decomposition.py}

@@ -244,6 +244,15 @@ tools/pattern_class_physics_profile.py
 artifacts/pattern_class_physics_profile.json
 ```
 
+**Consolidated pattern‑class feature table.** A single table summarizing class
+sizes, support‑size distribution, K4 participation, and neighbor‑class profiles:
+```
+artifacts/pattern_class_feature_table.md
+artifacts/pattern_class_feature_table.json
+```
+This is the quantitative basis for mapping pattern classes to physical
+multiplets (work in progress).
+
 **Exceptional vertex triplet.** Exactly **3** Coxeter‑6 orbits contain the
 size‑1 W(E6) roots. These correspond to three explicit F₃⁴ projective points:
 ```
@@ -829,6 +838,9 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `python3 tools/pattern_class_physics_profile.py`
   - Computes pattern‑class profiles for all triangles and lines.
   - Output: `artifacts/pattern_class_physics_profile.json`
+- `python3 tools/pattern_class_feature_table.py`
+  - Consolidated pattern‑class feature table (sizes, K4, neighbors).
+  - Output: `artifacts/pattern_class_feature_table.json`
 - `python tools/explicit_bijection_decomposition.py`
   - Builds the explicit 240↔240 W33-edge→E8-root mapping.
   - Output: `artifacts/explicit_bijection_decomposition.json`
