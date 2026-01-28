@@ -161,6 +161,18 @@ on edges. The maximum number of 6‑cycles is **38**. This means the Coxeter
 under the PSp(4,3) action, so any equivariant bijection must **deform** the
 orbit‑cycle ordering rather than preserve it line‑by‑line.
 
+**Further negative evidence (computed):**
+- A full **S₆‑per‑line** local search (720 choices per line) still leaves
+  >22k generator‑adjacency mismatches.  
+- A CSP check shows **no** assignment exists even for a **single generator**.  
+- Random W(E8) order‑6 searches failed to find an alternative 6‑cycle
+  partition of the roots into 40 orbits that yields W33.
+
+Artifacts:  
+`artifacts/equivariant_search_result_s6.json`  
+`artifacts/equivariant_single_gen_solution.json`  
+`artifacts/e8_order6_partition_found.json`
+
 **B. Canonical perfect matching (legacy):**
 - Build bipartite graph: left = 240 roots, right = 240 W33 edges  
   (root *r* adjacent to edge (A,B) iff its orbit is A or B).  
