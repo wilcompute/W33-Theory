@@ -181,6 +181,15 @@ so enlarging to S₆ cannot resolve equivariance.
 
 Artifact: `artifacts/orbit_adj_gram_auts.json`
 
+**CSP impossibility (computed):** Treating each line’s orbit as fixed and
+allowing **all Gram‑preserving permutations** inside each orbit (sizes 2/4/12),
+AC‑3 constraint propagation already yields **no solution** before backtracking.
+This is a proof‑by‑exhaustion that **no equivariant bijection** exists under
+the Coxeter‑6 partition even after relaxing per‑line ordering to every
+orbit‑isometry.
+
+Artifact: `artifacts/equivariant_csp_orbit_iso.json`
+
 **B. Canonical perfect matching (legacy):**
 - Build bipartite graph: left = 240 roots, right = 240 W33 edges  
   (root *r* adjacent to edge (A,B) iff its orbit is A or B).  
