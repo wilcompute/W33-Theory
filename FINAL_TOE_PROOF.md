@@ -1257,9 +1257,10 @@ Script: `tools/witting_pair_phase_gauge_fit.py`
 We treat the non-orthogonality graph as a 2-complex (540 edges, 3240 triangles)
 and ask whether the **triangle phase labels** are coboundaries of edge labels.
 For three coarse labelings - Z2 magnitude (|phase|), Z2 sign, and Z3 (k mod 3) - the
-linear system `x_ij + x_jk + x_ki = t_ijk` is **unsolvable**. Thus the triangle
-phases define **nontrivial 2-cocycles** even after coarse reduction, confirming
-the phase structure is genuinely higher-order and not reducible to edge data.
+linear system `x_ij + x_jk + x_ki = t_ijk` is **unsolvable** for the two Z2
+reductions, but **solvable** for Z3 once orientation is handled correctly.
+Thus the Z2 reductions define **nontrivial 2-cocycles**, while the Z3 class is
+cohomologically trivial.
 
 Doc: `docs/witting_triangle_cocycle.md`  
 Script: `tools/witting_triangle_cocycle.py`
@@ -1269,13 +1270,20 @@ We transported the triangle cocycle under all **243 monomial symmetries** and
 tested cohomology equivalence (difference is a coboundary). Results:
 - **Z2 magnitude** class: **243/243** cohomologous (invariant).
 - **Z2 sign** class: **243/243** cohomologous (invariant).
-- **Z3** class (k mod 3): **only 3/243** cohomologous; **240** move to distinct
-  cohomology classes.
-Thus the Z3 cocycle is **maximally symmetry-breaking**, while its Z2 reductions
-are rigid under monomial symmetry.
+- **Z3** class (k mod 3): **243/243** cohomologous (invariant, with orientation).
+Thus the Z2 reductions define nontrivial but **rigid** cocycle classes, while Z3
+is cohomologically trivial and invariant.
 
 Doc: `docs/witting_triangle_cocycle_orbit.md`  
 Script: `tools/witting_triangle_cocycle_orbit.py`
+
+**Z6 triangle class (computed):**  
+The full phase class `k mod 6` is also a **coboundary** (solvable mod 2 and mod 3)
+and its cohomology class is **invariant** under the entire monomial symmetry group.
+This isolates the genuinely nontrivial content to the Z2 reductions.
+
+Doc: `docs/witting_triangle_cocycle_z6.md`  
+Script: `tools/witting_triangle_cocycle_z6.py`
 
 **Cohomology of the non-orth 2-complex (computed):**  
 Computing the cohomology of the 2-complex (vertices=40, edges=540, triangles=3240)
