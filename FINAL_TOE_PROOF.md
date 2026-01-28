@@ -1295,6 +1295,20 @@ is genuinely an edge‑derived potential even though Z2 reductions are not.
 Doc: `docs/witting_triangle_cocycle_z3_edge_potential.md`  
 Script: `tools/witting_triangle_cocycle_z3_edge_potential.py`
 
+**Z3 edge potential structure (computed):**  
+We analyzed the Z3 edge labels by ray families, basis involvement, and symplectic
+omega. The distribution is **structured but not uniform**:
+- Edge labels: {0:150, 1:195, 2:195}.
+- Basis–nonbasis edges bias toward labels 1 and 2 (label 0 suppressed).
+- The F2–F3 family block is **perfectly balanced** (18/18/18), while B–F3 and F3–F3
+  are biased toward label 0.
+- Omega classes show only mild bias; omega does not determine the label.
+This supports the interpretation of the Z3 potential as a **gauge edge field**
+aligned to family structure rather than a pure symplectic invariant.
+
+Doc: `docs/witting_z3_edge_potential_analysis.md`  
+Script: `tools/witting_z3_edge_potential_analysis.py`
+
 **Z2 cocycle minimal-support heuristic (computed):**  
 We searched for sparse representatives of the two Z2 cocycle classes by adding
 edge coboundaries and greedily reducing support (multiple random restarts).
