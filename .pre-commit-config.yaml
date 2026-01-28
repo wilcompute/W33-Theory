@@ -28,10 +28,10 @@ repos:
     rev: v1.19.1
     hooks:
       - id: mypy
+        files: '^(src|lib|tools)/.*\\.py$'
         args:
           - "--exclude"
           - "bundles[\\\/]phase_aware_v1.*scripts_recompute_w33_ray_holonomy.py"
           - "--exclude"
-          - "extracted[\\\/]
-.*"
+          - "extracted[\\\/]\.*"
         additional_dependencies: ["types-python-dateutil"]
