@@ -1207,6 +1207,27 @@ coordinates.
 Doc: `docs/witting_f3_projective_map_test.md`  
 Script: `tools/witting_f3_projective_map_test.py`
 
+**Explicit graph isomorphism found (computed):**  
+We constructed an explicit **graph isomorphism** between the Witting ray
+orthogonality graph and the symplectic point graph W(3,3), yielding a concrete
+ray→F₃⁴ projective labeling. This gives a **direct bridge** from geometric
+phases to symplectic invariants.
+
+Doc: `docs/witting_graph_isomorphism.md`  
+Script: `tools/witting_graph_isomorphism.py`
+
+**Phase–symplectic law (computed, new):**  
+Using the explicit ray→F₃⁴ labeling, the Pancharatnam phase classes collapse
+to a clean **symplectic invariant**:
+- If **sgn(ω₁₂ ω₂₃ ω₃₁) = −1**, then phase ∈ {−π/6, +π/2}.  
+- If **sgn(ω₁₂ ω₂₃ ω₃₁) = +1**, then phase ∈ {+π/6, −π/2}.  
+So the **product sign of the three symplectic pairings** controls the phase
+sector. This is the first exact closed‑form link between W(3,3) geometry and
+the π/6 phase lattice.
+
+Doc: `docs/witting_phase_symplectic_mapped.md`  
+Script: `tools/witting_phase_symplectic_mapped.py`
+
 **External unitary search (computed):**  
 We attempted to map Witting rays to the **naive F₃⁴ grid rays**
 (v = (ω^a, ω^b, ω^c, ω^d)) via basis‑aligned unitaries. The target grid has
