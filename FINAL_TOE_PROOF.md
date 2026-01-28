@@ -318,7 +318,10 @@ non‑adjacent pairs: 8 common neighbors
 ```
 Thus this graph is **SRG(27,16,10,8)**. The balanced 27‑orbit therefore defines
 a **highly regular** 27‑vertex structure inside E8 that is *not* itself a root
-subsystem, but is tightly constrained combinatorially.
+subsystem, but is tightly constrained combinatorially. Notably, these parameters
+match the **Schläfli graph** (the complement of the 27‑line intersection graph),
+suggesting the balanced 27‑orbit recovers the **Schläfli geometry** directly
+inside the E8 root subset.
 
 Artifacts:
 ```
