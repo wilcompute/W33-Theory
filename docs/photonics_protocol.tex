@@ -1,0 +1,252 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp}
+  \usepackage{lmodern}
+\else
+  \usepackage{fontspec}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+\fi
+\DeclareUnicodeCharacter{2080}{\textsubscript{0}}
+\DeclareUnicodeCharacter{2081}{\textsubscript{1}}
+\DeclareUnicodeCharacter{2082}{\textsubscript{2}}
+\DeclareUnicodeCharacter{2083}{\textsubscript{3}}
+\DeclareUnicodeCharacter{2084}{\textsubscript{4}}
+\DeclareUnicodeCharacter{2085}{\textsubscript{5}}
+\DeclareUnicodeCharacter{2086}{\textsubscript{6}}
+\DeclareUnicodeCharacter{2087}{\textsubscript{7}}
+\DeclareUnicodeCharacter{2088}{\textsubscript{8}}
+\DeclareUnicodeCharacter{2089}{\textsubscript{9}}
+\DeclareUnicodeCharacter{2212}{-}
+\DeclareUnicodeCharacter{00D7}{\times}
+\DeclareUnicodeCharacter{2070}{\textsuperscript{0}}
+\DeclareUnicodeCharacter{2071}{\textsuperscript{i}}
+\DeclareUnicodeCharacter{00B9}{\textsuperscript{1}}
+\DeclareUnicodeCharacter{00B2}{\textsuperscript{2}}
+\DeclareUnicodeCharacter{00B3}{\textsuperscript{3}}
+\DeclareUnicodeCharacter{2074}{\textsuperscript{4}}
+\DeclareUnicodeCharacter{2075}{\textsuperscript{5}}
+\DeclareUnicodeCharacter{2076}{\textsuperscript{6}}
+\DeclareUnicodeCharacter{2077}{\textsuperscript{7}}
+\DeclareUnicodeCharacter{2078}{\textsuperscript{8}}
+\DeclareUnicodeCharacter{2079}{\textsuperscript{9}}
+\DeclareUnicodeCharacter{207A}{\textsuperscript{+}}
+\DeclareUnicodeCharacter{207B}{\textsuperscript{-}}
+\DeclareUnicodeCharacter{2190}{\ensuremath{\leftarrow}}
+\DeclareUnicodeCharacter{2192}{\ensuremath{\rightarrow}}
+\DeclareUnicodeCharacter{2194}{\ensuremath{\leftrightarrow}}
+\DeclareUnicodeCharacter{03B1}{\ensuremath{\alpha}}
+\DeclareUnicodeCharacter{03B2}{\ensuremath{\beta}}
+\DeclareUnicodeCharacter{03B3}{\ensuremath{\gamma}}
+\DeclareUnicodeCharacter{03B4}{\ensuremath{\delta}}
+\DeclareUnicodeCharacter{03B5}{\ensuremath{\epsilon}}
+\DeclareUnicodeCharacter{03B6}{\ensuremath{\zeta}}
+\DeclareUnicodeCharacter{03B7}{\ensuremath{\eta}}
+\DeclareUnicodeCharacter{03B8}{\ensuremath{\theta}}
+\DeclareUnicodeCharacter{03BB}{\ensuremath{\lambda}}
+\DeclareUnicodeCharacter{03BC}{\ensuremath{\mu}}
+\DeclareUnicodeCharacter{03BD}{\ensuremath{\nu}}
+\DeclareUnicodeCharacter{03BE}{\ensuremath{\xi}}
+\DeclareUnicodeCharacter{03C0}{\ensuremath{\pi}}
+\DeclareUnicodeCharacter{03C1}{\ensuremath{\rho}}
+\DeclareUnicodeCharacter{03C3}{\ensuremath{\sigma}}
+\DeclareUnicodeCharacter{03C4}{\ensuremath{\tau}}
+\DeclareUnicodeCharacter{03C6}{\ensuremath{\phi}}
+\DeclareUnicodeCharacter{03C7}{\ensuremath{\chi}}
+\DeclareUnicodeCharacter{03C8}{\ensuremath{\psi}}
+\DeclareUnicodeCharacter{03C9}{\ensuremath{\omega}}
+\DeclareUnicodeCharacter{0394}{\ensuremath{\Delta}}
+\DeclareUnicodeCharacter{0398}{\ensuremath{\Theta}}
+\DeclareUnicodeCharacter{039B}{\ensuremath{\Lambda}}
+\DeclareUnicodeCharacter{03A0}{\ensuremath{\Pi}}
+\DeclareUnicodeCharacter{03A3}{\ensuremath{\Sigma}}
+\DeclareUnicodeCharacter{03A6}{\ensuremath{\Phi}}
+\DeclareUnicodeCharacter{03A8}{\ensuremath{\Psi}}
+\DeclareUnicodeCharacter{03A9}{\ensuremath{\Omega}}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{calc}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{fancyvrb}
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage{tikz}
+\newcounter{none}
+\newcommand{\real}[1]{#1}
+
+\definecolor{accent}{HTML}{0B3D91}
+\definecolor{accent2}{HTML}{111111}
+\definecolor{soft}{HTML}{F5F7FB}
+\definecolor{shadecolor}{HTML}{F0F3F8}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=accent,
+  urlcolor=accent,
+  citecolor=accent,
+  pdfauthor={},
+  pdftitle={Witting/W33 Photonics Protocol}
+}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\setlength{\parskip}{0.6em}
+\setlength{\parindent}{0pt}
+\renewcommand{\baselinestretch}{1.05}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textsc{Witting/W33 Photonics Protocol}}
+\fancyhead[R]{\small\textsc{W33 / E8}}
+\fancyfoot[C]{\thepage}
+
+\newcommand{\theorembox}[1]{%
+  \begin{center}
+  \setlength{\fboxsep}{8pt}%
+  \fcolorbox{accent}{soft}{\parbox{0.9\linewidth}{#1}}%
+  \end{center}
+}
+
+\newcommand{\subtitletext}{24‑basis KS + Z₃ Pancharatnam Phase}
+\newcommand{\doctitle}{Witting/W33 Photonics Protocol}
+\newcommand{\docdate}{January 28, 2026}
+
+\begin{document}
+\begin{titlepage}
+  \vspace*{1.5cm}
+  {\Huge\bfseries\color{accent}\doctitle\par}
+  \vspace{0.6cm}
+  {\Large\color{accent2}\subtitletext\par}
+  \vspace{1.0cm}
+  \theorembox{\textbf{Claim:} The W33 generalized quadrangle encodes the Standard Model structure via a finite geometric backbone and an explicit E8 root correspondence.}
+  \vfill
+  {\large\docdate\par}
+  \vspace{0.8cm}
+  \begin{flushright}
+    \textsc{W33 Theory of Everything}\par
+    \textsc{Computed Proof + Artifacts}
+  \end{flushright}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{Witting/W33 Photonics
+Protocol}\label{wittingw33-photonics-protocol}
+
+\subsection{1. Objective}\label{objective}
+
+This protocol tests two \textbf{falsifiable signatures} of the
+Witting/W33 structure:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{State‑independent contextuality} via the 24‑basis KS
+  inequality (bound 23 vs quantum 24).
+\item
+  \textbf{\(Z_{3}\) geometric phase} via Pancharatnam/Berry phase loops
+  on explicit Witting‑ray triangles.
+\end{enumerate}
+
+\subsection{2. KS Inequality (24‑Basis
+Subset)}\label{ks-inequality-24basis-subset}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Noncontextual bound:} 23 / 24
+\item
+  \textbf{Quantum prediction:} 24 / 24 (state‑independent)
+\end{itemize}
+
+Docs: - \texttt{docs/witting\_24basis\_inequality.md} -
+\texttt{docs/witting\_24basis\_runsheet.md}
+
+\textbf{Noise threshold (depolarizing):} - Visibility \textbf{v
+\ensuremath{\geq} 0.944444} (noise p \ensuremath{\leq} 0.055556) -
+\texttt{docs/witting\_24basis\_noise\_threshold.md}
+
+\subsection{3. State Preparation}\label{state-preparation}
+
+Two equivalent paths:
+
+\textbf{(A) Direct unitary preparation} -
+\texttt{docs/witting\_24basis\_unitaries.json}
+
+\textbf{(B) Optical decomposition} - MZI schedule:
+\texttt{docs/witting\_24basis\_mzi\_schedule.md} - Waveplates (rad):
+\texttt{docs/witting\_24basis\_waveplates.md} - Waveplates (deg):
+\texttt{docs/witting\_24basis\_waveplates\_deg.md}
+
+\subsection{4. KS Measurement Run‑Sheet}\label{ks-measurement-runsheet}
+
+Use the basis order and ray definitions in: -
+\texttt{docs/witting\_24basis\_runsheet.md}
+
+Each basis uses four orthogonal rays. The score S is the number of bases
+with exactly one designated outcome.
+
+\subsection{\texorpdfstring{5. \(Z_{3}\) Pancharatnam Phase
+Test}{5. Z\_\{3\} Pancharatnam Phase Test}}\label{z_3-pancharatnam-phase-test}
+
+\textbf{Signature:} phases clustered at 0 and
+\ensuremath{\pm}2\ensuremath{\pi}/3.
+
+\begin{itemize}
+\tightlist
+\item
+  Example triangles: \texttt{docs/witting\_pancharatnam\_examples.md}
+\item
+  Full run‑sheet: \texttt{docs/witting\_pancharatnam\_runsheet.md}
+\item
+  Measurement protocol: \texttt{docs/witting\_pancharatnam\_protocol.md}
+\end{itemize}
+
+\subsection{6. Implementation Checklist}\label{implementation-checklist}
+
+\begin{itemize}
+\tightlist
+\item
+  Calibrate phase reference across all interferometric measurements.
+\item
+  Verify orthonormality of each basis (unitary columns).
+\item
+  Collect counts for all 24 bases \ensuremath{\rightarrow} compute KS
+  score.
+\item
+  Measure triangle phases for \(Z_{3}\) signature.
+\end{itemize}
+
+\subsection{7. Summary of Expected
+Outcomes}\label{summary-of-expected-outcomes}
+
+\begin{itemize}
+\tightlist
+\item
+  KS violation: \textbf{S = 24}, bound \textbf{S \ensuremath{\leq} 23}.
+\item
+  \(Z_{3}\) phase quantization: \textbf{Φ \ensuremath{\in} \{0,
+  \ensuremath{\pm}2\ensuremath{\pi}/3\}}.
+\end{itemize}
+
+If either fails, the Witting/W33 photonic realization is falsified.
+
+\IfFileExists{latex/external_sources.tex}{
+  \clearpage
+  \input{latex/external_sources.tex}
+}{}
+
+\end{document}
