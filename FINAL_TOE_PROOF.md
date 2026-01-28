@@ -1247,6 +1247,15 @@ unitary monomial subgroup, not by all graph automorphisms.
 Doc: `docs/witting_phase_law_invariance.md`  
 Script: `tools/witting_phase_law_invariance.py`
 
+**Monomial subgroup preservation (computed):**  
+Re‑testing the phase law under **all 243 monomial symmetries**, after properly
+transporting the ray→F₃⁴ mapping, shows **zero violations for all 243 elements**.
+Thus the phase law is **exactly invariant** under the full unitary monomial
+symmetry group, but **not** under the full graph automorphism group.
+
+Doc: `docs/witting_phase_law_monomial_subgroup.md`  
+Script: `tools/witting_phase_law_monomial_subgroup.py`
+
 **External unitary search (computed):**  
 We attempted to map Witting rays to the **naive F₃⁴ grid rays**
 (v = (ω^a, ω^b, ω^c, ω^d)) via basis‑aligned unitaries. The target grid has
