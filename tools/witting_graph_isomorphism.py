@@ -170,9 +170,16 @@ def main():
         if not ok:
             break
 
+    # neighbor-set signature for each mapped vertex
+    nbr_sig = {}
+    for u in range(n):
+        mapped = result[u]
+        nbr_sig[str(u)] = sorted(int(result[x]) for x in adj_r[u])
+
     out = {
         "found": ok,
         "mapping": {str(k): int(v) for k, v in result.items()},
+        "neighbor_signature": nbr_sig,
     }
 
     out_path = ROOT / "artifacts" / "witting_graph_isomorphism.json"
