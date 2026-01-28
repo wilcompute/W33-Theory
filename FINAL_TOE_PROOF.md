@@ -186,6 +186,17 @@ across eight distinct patterns (one pattern repeated twice). This shows the
 A2 partition is **not** aligned to the 8 Coxeter‑pattern classes and is therefore
 an **extrinsic E6 structure** rather than an intrinsic W33 invariant.
 
+**W(E6) orbit content (computed).** Summing the W(E6) orbit intersection vectors
+for the three lines in each triangle (18 roots total) yields **6 distinct**
+orbit‑content types across the 9 triangles. Two triangles include **exactly two**
+fixed‑root contributions (size‑1 orbits), while the others have **none**. The
+total counts (72‑orbit, 27‑orbits, 1‑orbits) across triangles are:
+```
+(2,16,0) ×2, (10,8,0) ×2, (6,12,0) ×2, (4,12,2) ×1, (4,14,0) ×1, (8,8,2) ×1
+```
+This confirms the A2 partition does **not** align cleanly to a single E6 orbit
+type; it mixes the 72‑sector and the 27‑sectors in multiple inequivalent ways.
+
 Artifacts:
 ```
 tools/analyze_h27_schlafli_triangles_structure.py
@@ -194,6 +205,8 @@ tools/analyze_a2_triangles_vs_coxeter_patterns.py
 artifacts/a2_triangles_vs_coxeter_patterns.json
 tools/analyze_a2_triangle_adjacency.py
 artifacts/a2_triangle_adjacency.json
+tools/analyze_a2_triangles_we6_orbits.py
+artifacts/a2_triangles_we6_orbits.json
 ```
 
 Artifacts:
@@ -1058,6 +1071,9 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `python3 tools/analyze_a2_triangle_adjacency.py`
   - Triangle‑to‑triangle line‑intersection counts (uniform 3×3 incidence).
   - Output: `artifacts/a2_triangle_adjacency.json`
+- `python3 tools/analyze_a2_triangles_we6_orbits.py`
+  - Triangle root‑content vectors across W(E6) orbits (72 + 6×27 + 6×1).
+  - Output: `artifacts/a2_triangles_we6_orbits.json`
 
 ### Physics Signal Checks (Tier‑1 Evidence)
 - `python -X utf8 src/color_singlet_test.py`

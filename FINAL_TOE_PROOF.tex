@@ -420,6 +420,21 @@ repeated twice). This shows the A2 partition is \textbf{not} aligned to
 the 8 Coxeter‑pattern classes and is therefore an \textbf{extrinsic E6
 structure} rather than an intrinsic W33 invariant.
 
+\textbf{W(E6) orbit content (computed).} Summing the W(E6) orbit
+intersection vectors for the three lines in each triangle (18 roots
+total) yields \textbf{6 distinct} orbit‑content types across the 9
+triangles. Two triangles include \textbf{exactly two} fixed‑root
+contributions (size‑1 orbits), while the others have \textbf{none}. The
+total counts (72‑orbit, 27‑orbits, 1‑orbits) across triangles are:
+
+\begin{verbatim}
+(2,16,0) x2, (10,8,0) x2, (6,12,0) x2, (4,12,2) x1, (4,14,0) x1, (8,8,2) x1
+\end{verbatim}
+
+This confirms the A2 partition does \textbf{not} align cleanly to a
+single E6 orbit type; it mixes the 72‑sector and the 27‑sectors in
+multiple inequivalent ways.
+
 Artifacts:
 
 \begin{verbatim}
@@ -429,6 +444,8 @@ tools/analyze_a2_triangles_vs_coxeter_patterns.py
 artifacts/a2_triangles_vs_coxeter_patterns.json
 tools/analyze_a2_triangle_adjacency.py
 artifacts/a2_triangle_adjacency.json
+tools/analyze_a2_triangles_we6_orbits.py
+artifacts/a2_triangles_we6_orbits.json
 \end{verbatim}
 
 Artifacts:
@@ -1834,6 +1851,17 @@ Verification}\label{h27-jordan-heisenberg-verification}
     3\ensuremath{\times}3 incidence).
   \item
     Output: \texttt{artifacts/a2\_triangle\_adjacency.json}
+  \end{itemize}
+\item
+  \texttt{python3\ tools/analyze\_a2\_triangles\_we6\_orbits.py}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Triangle root‑content vectors across W(E6) orbits (72 +
+    6\ensuremath{\times}27 + 6\ensuremath{\times}1).
+  \item
+    Output: \texttt{artifacts/a2\_triangles\_we6\_orbits.json}
   \end{itemize}
 \end{itemize}
 
