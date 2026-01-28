@@ -1097,6 +1097,13 @@ Full measurement order and ray definitions for the 24‑basis experiment:
 `docs/witting_24basis_runsheet.md`  
 Script: `tools/witting_24basis_runsheet.py`
 
+**Lab protocol (PDF/TeX):**  
+Integrated photonics protocol for the KS test + Z₃ phase measurement:  
+`docs/photonics_protocol.pdf`  
+`docs/photonics_protocol.tex`  
+`docs/photonics_protocol.md`  
+Script: `scripts/build_photonics_protocol_pdf.sh`
+
 **Noise threshold (computed):**  
 Under depolarizing noise in d=4, the inequality remains violated for
 visibility **v ≥ 0.944444** (noise fraction **p ≤ 0.055556**).
@@ -1139,6 +1146,14 @@ inside the larger symmetry structure.
 
 Artifact: `artifacts/witting_monomial_symmetry.json`  
 Script: `tools/witting_group_actions.py`
+
+**24‑basis symmetry collapse (computed):**  
+Restricting to the **24‑basis** KS subset collapses the monomial symmetry to
+order **3** (all ray and basis orbits become trivial). This confirms the
+subset is highly symmetry‑breaking and thus experimentally discriminating.
+
+Artifact: `artifacts/witting_24basis_symmetry.json`  
+Script: `tools/witting_24basis_symmetry.py`
 
 **Interferometric protocol (computed):**  
 A concrete measurement protocol for the Z₃ Pancharatnam phase using
