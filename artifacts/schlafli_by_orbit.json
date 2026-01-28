@@ -1,0 +1,335 @@
+{
+  "0": {
+    "srg": [
+      27,
+      16,
+      [
+        10
+      ],
+      [
+        8
+      ]
+    ],
+    "isomorphic": true,
+    "line_type_counts": {
+      "E": 6,
+      "L": 15,
+      "C": 6
+    },
+    "phase_counts": {
+      "1": 11,
+      "0": 6,
+      "2": 10
+    },
+    "phase_line_counts": {
+      "1": {
+        "E": 2,
+        "L": 7,
+        "C": 2
+      },
+      "0": {
+        "E": 3,
+        "L": 3
+      },
+      "2": {
+        "L": 5,
+        "E": 1,
+        "C": 4
+      }
+    },
+    "root_type_counts": {
+      "integral": 11,
+      "half": 16
+    },
+    "root_line_counts": {
+      "integral": {
+        "E": 5,
+        "L": 5,
+        "C": 1
+      },
+      "half": {
+        "C": 5,
+        "L": 10,
+        "E": 1
+      }
+    }
+  },
+  "1": {
+    "srg": [
+      27,
+      16,
+      [
+        10
+      ],
+      [
+        8
+      ]
+    ],
+    "isomorphic": true,
+    "line_type_counts": {
+      "E": 6,
+      "L": 15,
+      "C": 6
+    },
+    "phase_counts": {
+      "0": 9,
+      "1": 11,
+      "2": 7
+    },
+    "phase_line_counts": {
+      "0": {
+        "E": 1,
+        "L": 7,
+        "C": 1
+      },
+      "1": {
+        "E": 3,
+        "C": 5,
+        "L": 3
+      },
+      "2": {
+        "L": 5,
+        "E": 2
+      }
+    },
+    "root_type_counts": {
+      "integral": 11,
+      "half": 16
+    },
+    "root_line_counts": {
+      "integral": {
+        "E": 5,
+        "L": 5,
+        "C": 1
+      },
+      "half": {
+        "C": 5,
+        "L": 10,
+        "E": 1
+      }
+    }
+  },
+  "2": {
+    "srg": [
+      27,
+      16,
+      [
+        10
+      ],
+      [
+        8
+      ]
+    ],
+    "isomorphic": true,
+    "line_type_counts": {
+      "E": 6,
+      "L": 15,
+      "C": 6
+    },
+    "phase_counts": {
+      "1": 8,
+      "2": 10,
+      "0": 9
+    },
+    "phase_line_counts": {
+      "1": {
+        "E": 3,
+        "C": 2,
+        "L": 3
+      },
+      "2": {
+        "L": 6,
+        "E": 1,
+        "C": 3
+      },
+      "0": {
+        "E": 2,
+        "L": 6,
+        "C": 1
+      }
+    },
+    "root_type_counts": {
+      "integral": 11,
+      "half": 16
+    },
+    "root_line_counts": {
+      "integral": {
+        "E": 5,
+        "L": 5,
+        "C": 1
+      },
+      "half": {
+        "C": 5,
+        "L": 10,
+        "E": 1
+      }
+    }
+  },
+  "4": {
+    "srg": [
+      27,
+      16,
+      [
+        10
+      ],
+      [
+        8
+      ]
+    ],
+    "isomorphic": true,
+    "line_type_counts": {
+      "E": 6,
+      "L": 15,
+      "C": 6
+    },
+    "phase_counts": {
+      "2": 9,
+      "0": 9,
+      "1": 9
+    },
+    "phase_line_counts": {
+      "2": {
+        "E": 2,
+        "L": 5,
+        "C": 2
+      },
+      "0": {
+        "L": 6,
+        "E": 2,
+        "C": 1
+      },
+      "1": {
+        "E": 2,
+        "L": 4,
+        "C": 3
+      }
+    },
+    "root_type_counts": {
+      "integral": 11,
+      "half": 16
+    },
+    "root_line_counts": {
+      "integral": {
+        "E": 5,
+        "L": 5,
+        "C": 1
+      },
+      "half": {
+        "C": 5,
+        "L": 10,
+        "E": 1
+      }
+    }
+  },
+  "5": {
+    "srg": [
+      27,
+      16,
+      [
+        10
+      ],
+      [
+        8
+      ]
+    ],
+    "isomorphic": true,
+    "line_type_counts": {
+      "E": 6,
+      "L": 15,
+      "C": 6
+    },
+    "phase_counts": {
+      "0": 9,
+      "2": 12,
+      "1": 6
+    },
+    "phase_line_counts": {
+      "0": {
+        "E": 2,
+        "L": 4,
+        "C": 3
+      },
+      "2": {
+        "L": 8,
+        "E": 2,
+        "C": 2
+      },
+      "1": {
+        "E": 2,
+        "L": 3,
+        "C": 1
+      }
+    },
+    "root_type_counts": {
+      "integral": 11,
+      "half": 16
+    },
+    "root_line_counts": {
+      "integral": {
+        "E": 5,
+        "L": 5,
+        "C": 1
+      },
+      "half": {
+        "C": 5,
+        "L": 10,
+        "E": 1
+      }
+    }
+  },
+  "6": {
+    "srg": [
+      27,
+      16,
+      [
+        10
+      ],
+      [
+        8
+      ]
+    ],
+    "isomorphic": true,
+    "line_type_counts": {
+      "E": 6,
+      "L": 15,
+      "C": 6
+    },
+    "phase_counts": {
+      "2": 10,
+      "1": 11,
+      "0": 6
+    },
+    "phase_line_counts": {
+      "2": {
+        "E": 4,
+        "L": 4,
+        "C": 2
+      },
+      "1": {
+        "L": 6,
+        "E": 2,
+        "C": 3
+      },
+      "0": {
+        "L": 5,
+        "C": 1
+      }
+    },
+    "root_type_counts": {
+      "integral": 11,
+      "half": 16
+    },
+    "root_line_counts": {
+      "integral": {
+        "E": 5,
+        "L": 5,
+        "C": 1
+      },
+      "half": {
+        "C": 5,
+        "L": 10,
+        "E": 1
+      }
+    }
+  }
+}

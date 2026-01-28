@@ -689,6 +689,21 @@ and a \textbf{canonical balanced‑orbit labeling}. This removes the last
 ambiguity in the balanced Schläfli embedding and fixes a concrete
 edge\ensuremath{\rightarrow}root\ensuremath{\rightarrow}line map.
 
+\textbf{All six 27‑orbits are Schläfli (computed).} For every 27‑orbit
+(ids 0,1,2,4,5,6), the root‑neighbor graph is \textbf{SRG(27,16,10,8)}
+and isomorphic to the Schläfli skew graph. Each orbit has the same
+line‑type split \textbf{E=6, C=6, L=15}, and the same root‑type split
+\textbf{11 integral / 16 half} with
+
+\begin{verbatim}
+integral: E=5, C=1, L=5
+half:     E=1, C=5, L=10
+\end{verbatim}
+
+Thus the 27‑sector of E8 decomposes into \textbf{six Schläfli copies},
+each carrying its own Z3 phase distribution; the balanced orbit (27\_4)
+is the unique \textbf{exactly 9/9/9} phase‑balanced one.
+
 \textbf{No simple index formula (computed).} We searched for an affine
 Z3 rule expressing the phase purely in terms of Schläfli indices (i mod
 3), allowing all S6 permutations of indices and an optional
@@ -749,6 +764,8 @@ tools/search_phase_formula_schlafli.py
 artifacts/schlafli_phase_formula.json
 tools/search_phase_formula_with_permutations.py
 artifacts/schlafli_phase_formula_perm.json
+tools/extend_mapping_by_orbits.py
+artifacts/schlafli_by_orbit.json
 \end{verbatim}
 
 Artifacts:
