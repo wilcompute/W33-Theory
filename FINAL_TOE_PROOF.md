@@ -136,9 +136,12 @@ for the edge action:
 artifacts/sp43_we6_generator_map_sage_verify.json
 scripts/sage/verify_sp43_image_group.sage
 ```
-**Full invariance harness.** A complete Gram‑matrix check confirms that each
-generator preserves all E8 inner products (not just sampled pairs), and each
-root’s W(E6) orbit size (72/27/1). See:
+**Full invariance harness.** A complete Gram‑matrix check shows that the current
+explicit generator map is **not** an isometry of the E8 root system, and does
+**not** preserve W(E6) orbit sizes. This confirms the edge→root map is
+**combinatorial (orbit‑aligned)** rather than metric; the group action is
+equivariant only at the level of the constructed correspondence, not as an
+orthogonal transformation of E8. See:
 ```
 artifacts/sp43_we6_generator_map_full_verify.json
 tools/verify_generator_map_full.py
@@ -156,6 +159,9 @@ An explicit length‑3 line‑cycle with sign product −1 is extracted as a wit
 of the obstruction.
 The induced Z₂ cocycle is strongly nontrivial: many generator pairs yield
 negative cocycle values on dozens of root lines (full histogram recorded).
+In particular, the global sign‑flip does **not** commute with the induced
+generator permutations, and the generated group with sign‑flip grows beyond
+25,920. This further confirms the obstruction is not a mere relabeling.
 See:
 ```
 tools/align_root_signs_for_we6.py
@@ -164,6 +170,8 @@ tools/line_sign_cocycle.py
 artifacts/root_line_sign_cocycle.json
 tools/compute_sign_cocycle.py
 artifacts/root_line_sign_cocycle_stats.json
+tools/compute_group_order_with_signflip.py
+artifacts/signflip_group_order.json
 ```
 **Exported bijection tables.** The full explicit edge↔root bijection is now
 exported for inspection and downstream analysis:
