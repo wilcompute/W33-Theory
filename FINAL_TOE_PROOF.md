@@ -1285,6 +1285,17 @@ This isolates the genuinely nontrivial content to the Z2 reductions.
 Doc: `docs/witting_triangle_cocycle_z6.md`  
 Script: `tools/witting_triangle_cocycle_z6.py`
 
+**Z2 cocycle minimal-support heuristic (computed):**  
+We searched for sparse representatives of the two Z2 cocycle classes by adding
+edge coboundaries and greedily reducing support (multiple random restarts).
+The magnitude cocycle is already minimal at **360** triangles (exactly the number
+of |phase| = pi/2 triangles). The sign cocycle can be reduced from **1620** to
+**360**, suggesting both Z2 classes admit a sparse 360-triangle representative.
+This points to a rigid 360-triangle substructure inside the 2-complex.
+
+Doc: `docs/witting_triangle_cocycle_z2_minimize.md`  
+Script: `tools/witting_triangle_cocycle_z2_minimize.py`
+
 **Cohomology of the non-orth 2-complex (computed):**  
 Computing the cohomology of the 2-complex (vertices=40, edges=540, triangles=3240)
 over GF(2) and GF(3) yields **H^1 = 0** and a huge **H^2 dimension = 2739** in both

@@ -1,0 +1,5 @@
+Triangles: 3240
+Initial mag support: 360
+Reduced mag support: 360
+Initial sign support: 1620
+Reduced sign support: 360
