@@ -98,6 +98,11 @@
           ],
           "integral"
         ]
+      ],
+      "nodes": [
+        0,
+        4,
+        16
       ]
     },
     {
@@ -121,7 +126,8 @@
         "7": 3
       },
       "adjacency": null,
-      "edges": null
+      "edges": null,
+      "nodes": null
     }
   ],
   "spectrum_counts": {

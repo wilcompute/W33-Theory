@@ -673,6 +673,22 @@ So the \textbf{A2\ensuremath{\times}A2\ensuremath{\times}A2} triangle
 partition survives, but the SU(3) phase now \textbf{reweights} it, with
 only a single perfectly rainbow triangle.
 
+\textbf{Canonical Schläfli normalization (computed).} We fixed the
+residual labeling ambiguity by anchoring two rigid features: 1) the
+\textbf{unique all‑integral} triangle is normalized to \textbf{(E1, C2,
+L12)}, and 2) the \textbf{axis V‑shape} (the 3‑edge component in the
+balanced line‑graph) is normalized to contain \textbf{C2 and two
+E‑lines} with lexicographically minimal indices. This yields a unique
+index permutation
+
+\begin{verbatim}
+perm = (3,2,1,4,5,6),  E/C swap = False
+\end{verbatim}
+
+and a \textbf{canonical balanced‑orbit labeling}. This removes the last
+ambiguity in the balanced Schläfli embedding and fixes a concrete
+edge\ensuremath{\rightarrow}root\ensuremath{\rightarrow}line map.
+
 \textbf{No simple index formula (computed).} We searched for an affine
 Z3 rule expressing the phase purely in terms of Schläfli indices (i mod
 3), allowing all S6 permutations of indices and an optional
@@ -727,6 +743,8 @@ tools/isomorphism_balanced_to_schlafli.py
 artifacts/balanced_orbit_schlafli_isomorphism.json
 tools/analyze_balanced_triangle_phase_alignment.py
 artifacts/balanced_triangle_phase_alignment.json
+tools/canonicalize_balanced_mapping.py
+artifacts/balanced_orbit_canonical_mapping.json
 tools/search_phase_formula_schlafli.py
 artifacts/schlafli_phase_formula.json
 tools/search_phase_formula_with_permutations.py

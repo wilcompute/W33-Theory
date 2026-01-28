@@ -1,0 +1,273 @@
+{
+  "perm": [
+    3,
+    2,
+    1,
+    4,
+    5,
+    6
+  ],
+  "swap_ec": false,
+  "all_integral_triangle": [
+    [
+      "E",
+      3
+    ],
+    [
+      "C",
+      2
+    ],
+    [
+      "L",
+      2,
+      3
+    ]
+  ],
+  "vshape_lines": [
+    [
+      "E",
+      1
+    ],
+    [
+      "E",
+      4
+    ],
+    [
+      "C",
+      2
+    ]
+  ],
+  "canonical_mapping": {
+    "0": {
+      "line": [
+        "E",
+        3
+      ],
+      "phase": 0,
+      "root_type": "integral"
+    },
+    "1": {
+      "line": [
+        "E",
+        2
+      ],
+      "phase": 1,
+      "root_type": "half"
+    },
+    "2": {
+      "line": [
+        "L",
+        2,
+        3
+      ],
+      "phase": 2,
+      "root_type": "integral"
+    },
+    "3": {
+      "line": [
+        "E",
+        1
+      ],
+      "phase": 2,
+      "root_type": "integral"
+    },
+    "4": {
+      "line": [
+        "E",
+        4
+      ],
+      "phase": 0,
+      "root_type": "integral"
+    },
+    "5": {
+      "line": [
+        "L",
+        1,
+        2
+      ],
+      "phase": 1,
+      "root_type": "integral"
+    },
+    "6": {
+      "line": [
+        "E",
+        5
+      ],
+      "phase": 1,
+      "root_type": "integral"
+    },
+    "7": {
+      "line": [
+        "L",
+        2,
+        4
+      ],
+      "phase": 2,
+      "root_type": "integral"
+    },
+    "8": {
+      "line": [
+        "L",
+        2,
+        5
+      ],
+      "phase": 1,
+      "root_type": "integral"
+    },
+    "9": {
+      "line": [
+        "L",
+        2,
+        6
+      ],
+      "phase": 2,
+      "root_type": "integral"
+    },
+    "10": {
+      "line": [
+        "E",
+        6
+      ],
+      "phase": 0,
+      "root_type": "integral"
+    },
+    "11": {
+      "line": [
+        "C",
+        6
+      ],
+      "phase": 0,
+      "root_type": "half"
+    },
+    "12": {
+      "line": [
+        "C",
+        5
+      ],
+      "phase": 1,
+      "root_type": "half"
+    },
+    "13": {
+      "line": [
+        "C",
+        4
+      ],
+      "phase": 2,
+      "root_type": "half"
+    },
+    "14": {
+      "line": [
+        "C",
+        1
+      ],
+      "phase": 0,
+      "root_type": "half"
+    },
+    "15": {
+      "line": [
+        "C",
+        3
+      ],
+      "phase": 1,
+      "root_type": "half"
+    },
+    "16": {
+      "line": [
+        "C",
+        2
+      ],
+      "phase": 2,
+      "root_type": "integral"
+    },
+    "17": {
+      "line": [
+        "L",
+        1,
+        3
+      ],
+      "phase": 0,
+      "root_type": "half"
+    },
+    "18": {
+      "line": [
+        "L",
+        3,
+        4
+      ],
+      "phase": 1,
+      "root_type": "half"
+    },
+    "19": {
+      "line": [
+        "L",
+        1,
+        4
+      ],
+      "phase": 2,
+      "root_type": "half"
+    },
+    "20": {
+      "line": [
+        "L",
+        3,
+        5
+      ],
+      "phase": 0,
+      "root_type": "half"
+    },
+    "21": {
+      "line": [
+        "L",
+        1,
+        5
+      ],
+      "phase": 2,
+      "root_type": "half"
+    },
+    "22": {
+      "line": [
+        "L",
+        4,
+        5
+      ],
+      "phase": 0,
+      "root_type": "half"
+    },
+    "23": {
+      "line": [
+        "L",
+        3,
+        6
+      ],
+      "phase": 1,
+      "root_type": "half"
+    },
+    "24": {
+      "line": [
+        "L",
+        1,
+        6
+      ],
+      "phase": 2,
+      "root_type": "half"
+    },
+    "25": {
+      "line": [
+        "L",
+        4,
+        6
+      ],
+      "phase": 0,
+      "root_type": "half"
+    },
+    "26": {
+      "line": [
+        "L",
+        5,
+        6
+      ],
+      "phase": 1,
+      "root_type": "half"
+    }
+  }
+}
