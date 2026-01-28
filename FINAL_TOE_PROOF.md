@@ -1253,6 +1253,15 @@ Script: `tools/witting_phase_formula_search.py`
 Doc (quadratic): `docs/witting_phase_quadratic_formula_search.md`  
 Script: `tools/witting_phase_quadratic_formula_search.py`
 
+**Random U(4) grid‑score search (computed):**  
+A 2000‑trial Haar‑random unitary search for a map that sends many Witting rays
+into the cube‑root grid form found **best score 0/40**. This indicates that
+grid‑form alignment is not generic and must be **highly structured**, if it
+exists at all.
+
+Doc: `docs/witting_unitary_grid_score_search.md`  
+Script: `tools/witting_unitary_grid_score_search.py`
+
 **Example triangles (computed):**  
 Explicit ray triples with phases ±π/6 and ±π/2 are listed here:  
 `docs/witting_pancharatnam_examples.md`  
