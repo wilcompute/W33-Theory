@@ -1253,6 +1253,17 @@ low‑degree algebraic rule in F₃⁴ coordinates.
 Doc: `docs/witting_pair_phase_gauge_fit.md`  
 Script: `tools/witting_pair_phase_gauge_fit.py`
 
+**Triangle cocycle obstruction (computed):**  
+We treat the non‑orthogonality graph as a 2‑complex (540 edges, 3240 triangles)
+and ask whether the **triangle phase labels** are coboundaries of edge labels.
+For three coarse labelings—Z₂ magnitude (|phase|), Z₂ sign, and Z₃ (k mod 3)—the
+linear system `x_ij + x_jk + x_ki = t_ijk` is **unsolvable**. Thus the triangle
+phases define **nontrivial 2‑cocycles** even after coarse reduction, confirming
+the phase structure is genuinely higher‑order and not reducible to edge data.
+
+Doc: `docs/witting_triangle_cocycle.md`  
+Script: `tools/witting_triangle_cocycle.py`
+
 **Isomorphism orbit class (computed):**  
 Under the **monomial subgroup** (order 243), the explicit graph isomorphism
 falls into **81 distinct mappings**. This shows the ray→F₃⁴ labeling is **not**
