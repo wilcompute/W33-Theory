@@ -1147,6 +1147,11 @@ Reck rotations converted to Mach–Zehnder reflectivities and phases:
 `docs/witting_24basis_mzi_schedule.json`  
 Script: `tools/witting_24basis_mzi_schedule.py`
 
+**Ray amplitude/phase table (computed):**  
+Explicit per‑component magnitudes and phases for all 40 rays (direct state‑prep):  
+`docs/witting_ray_amplitude_phase.csv`  
+Script: `tools/witting_ray_phase_table.py`
+
 **Interpretation:** The Witting set is **contextual but not parity‑contextual**
 in its full 40‑basis form. Photonic tests should therefore target a **KS
 inequality** (state‑independent contextuality) rather than a parity proof.
