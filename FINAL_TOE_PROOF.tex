@@ -372,6 +372,26 @@ skew‑edge). The search found \textbf{no embedding}: H27 is \textbf{not}
 a spanning 8‑regular subgraph of the skew‑line graph. This rules out a
 simple ``edge‑subset'' explanation for H27.
 
+\textbf{Positive embedding (computed).} In contrast, H27 \textbf{does}
+embed as a spanning subgraph of the \textbf{intersection} graph (degree
+10). The difference \texttt{Schläfli\_intersection\ −\ H27} is a
+\textbf{2‑regular} spanning subgraph consisting of \textbf{nine disjoint
+triangles} (27 edges total), so:
+
+\begin{verbatim}
+Schläfli_intersection = H27  +  (9 disjoint 3-cycles)
+\end{verbatim}
+
+This yields a precise combinatorial bridge between H27 and the classical
+27‑line configuration. The 9 triangles can be written explicitly in the
+standard double‑six labeling:
+
+\begin{verbatim}
+(E1, C3, L13), (E2, C1, L12), (E3, C2, L23),
+(E4, C6, L46), (E5, C4, L45), (E6, C5, L56),
+(L14, L26, L35), (L15, L24, L36), (L16, L25, L34)
+\end{verbatim}
+
 Artifacts:
 
 \begin{verbatim}
@@ -379,6 +399,10 @@ tools/schlafli_h27_switching.py
 artifacts/schlafli_h27_switching.json
 tools/search_h27_in_schlafli_skew.py
 artifacts/h27_in_schlafli_skew.json
+tools/search_h27_in_schlafli_intersection.py
+artifacts/h27_in_schlafli_intersection.json
+tools/analyze_h27_schlafli_decomposition.py
+artifacts/h27_schlafli_leftover_cycles.json
 \end{verbatim}
 
 \subsubsection{1.4 Explicit E8 -\textgreater{} W33 via Coxeter 6-cycles
@@ -1716,6 +1740,28 @@ Verification}\label{h27-jordan-heisenberg-verification}
     graph.
   \item
     Output: \texttt{artifacts/h27\_in\_schlafli\_skew.json}
+  \end{itemize}
+\item
+  \texttt{python3\ tools/search\_h27\_in\_schlafli\_intersection.py}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Finds an H27 edge‑subset embedding into the Schläfli intersection
+    graph.
+  \item
+    Output: \texttt{artifacts/h27\_in\_schlafli\_intersection.json}
+  \end{itemize}
+\item
+  \texttt{python3\ tools/analyze\_h27\_schlafli\_decomposition.py}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Computes the 9 disjoint triangles removed from the Schläfli
+    intersection graph.
+  \item
+    Output: \texttt{artifacts/h27\_schlafli\_leftover\_cycles.json}
   \end{itemize}
 \end{itemize}
 
