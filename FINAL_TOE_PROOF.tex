@@ -388,6 +388,19 @@ with a 6‑cycle structure on \emph{every} line under the PSp(4,3) action,
 so any equivariant bijection must \textbf{deform} the orbit‑cycle
 ordering rather than preserve it line‑by‑line.
 
+\textbf{Further negative evidence (computed):} - A full
+\textbf{\(S_{6}\)‑per‑line} local search (720 choices per line) still
+leaves \textgreater22k generator‑adjacency mismatches.\\
+- A CSP check shows \textbf{no} assignment exists even for a
+\textbf{single generator}.\\
+- Random W(E8) order‑6 searches failed to find an alternative 6‑cycle
+partition of the roots into 40 orbits that yields W33.
+
+Artifacts:\\
+\texttt{artifacts/equivariant\_search\_result\_s6.json}\strut \\
+\texttt{artifacts/equivariant\_single\_gen\_solution.json}\strut \\
+\texttt{artifacts/e8\_order6\_partition\_found.json}
+
 \textbf{B. Canonical perfect matching (legacy):} - Build bipartite
 graph: left = 240 roots, right = 240 W33 edges\\
 (root \emph{r} adjacent to edge (A,B) iff its orbit is A or B).\\
