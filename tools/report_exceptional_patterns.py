@@ -25,8 +25,25 @@ def main():
         point = mapping[str(i)]
         print(f"  orbit {i}: row={row}  point={point}")
 
+    # Build adjacency among exceptional points in W33
+    points = [tuple(item[2]) if len(item) > 2 else tuple(mapping[str(item[0])]) for item in []]  # placeholder
+    pts = [tuple(mapping[str(i)]) for i, _ in exceptional]
+
+    def omega(p, q):
+        return (p[0]*q[2] - p[2]*q[0] + p[1]*q[3] - p[3]*q[1]) % 3
+
+    adj_pairs = []
+    for a in range(len(pts)):
+        for b in range(a+1, len(pts)):
+            adj_pairs.append({
+                "pair": [pts[a], pts[b]],
+                "omega": omega(pts[a], pts[b]),
+                "adjacent": omega(pts[a], pts[b]) == 0,
+            })
+
     out = {
-        "exceptional_orbits": [{"orbit": i, "row": row, "point": mapping[str(i)]} for i, row in exceptional]
+        "exceptional_orbits": [{"orbit": i, "row": row, "point": mapping[str(i)]} for i, row in exceptional],
+        "adjacency_pairs": adj_pairs,
     }
     (ROOT / "artifacts" / "exceptional_we6_patterns.json").write_text(
         json.dumps(out, indent=2), encoding="utf-8"
