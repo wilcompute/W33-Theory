@@ -237,6 +237,21 @@ Edges by orbit size: 27‑orbits = 162, 72‑orbit = 72, 1‑orbits = 6
 Thus the SU(3) phase is **not confined** to the 27‑sector; it threads through
 the full E6×A2 decomposition in a **nontrivial, but near‑balanced** way.
 
+**27‑orbit phase bias (computed).** Refining to the **six distinct 27‑orbits**
+(orbit ids 0,1,2,4,5,6), the phase‑sum distribution varies mildly by orbit.
+One orbit is exactly balanced **(9,9,9)**; the others show small biases such as
+```
+27_0: (0,1,2) = (6,11,10)
+27_5: (0,1,2) = (9,6,12)
+27_6: (0,1,2) = (6,11,10)
+27_2: (0,1,2) = (9,8,10)
+27_1: (0,1,2) = (9,11,7)
+27_4: (0,1,2) = (9,9,9)  ← perfectly balanced
+```
+This suggests the SU(3) phase **distinguishes** the six 27‑orbits but does not
+select a single privileged orbit; instead it yields a **controlled, near‑uniform**
+phase bias across the 27‑sector.
+
 Artifacts:
 ```
 tools/analyze_h27_schlafli_triangles_structure.py
@@ -259,6 +274,8 @@ tools/e8_coxeter_phase_from_f3.py
 artifacts/e8_coxeter_phase_vs_f3.json
 tools/su3_phase_edge_lift.py
 artifacts/su3_phase_edge_lift.json
+tools/su3_phase_orbit_bias.py
+artifacts/su3_phase_orbit_bias.json
 ```
 
 Artifacts:
@@ -1144,6 +1161,9 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `python3 tools/su3_phase_edge_lift.py`
   - Lifts Z3 phase to the full edge→root map; summarizes by W(E6) orbit size.
   - Output: `artifacts/su3_phase_edge_lift.json`
+- `python3 tools/su3_phase_orbit_bias.py`
+  - Phase‑sum biases for each 27‑orbit (ids 0,1,2,4,5,6).
+  - Output: `artifacts/su3_phase_orbit_bias.json`
 
 ### Physics Signal Checks (Tier‑1 Evidence)
 - `python -X utf8 src/color_singlet_test.py`
