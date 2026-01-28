@@ -397,6 +397,30 @@ tools/sage_we6_coxeter6_intersection.py
 artifacts/we6_coxeter6_intersection.json
 \end{verbatim}
 
+\textbf{Vertex‑type correlation (computed).} Using the canonical
+orbit\ensuremath{\rightarrow}\(F_{3}^{4}\) mapping, each Coxeter‑6 orbit
+(W33 vertex) can be labeled by the support size of its \(F_{3}^{4}\)
+projective point (1,2,3,4 non‑zero coordinates). These support sizes are
+not uniform across the W(E6) intersection patterns; the 40 vertices
+split into 8 pattern classes with characteristic support‑size mixtures.
+See:
+
+\begin{verbatim}
+tools/analyze_vertex_types_vs_we6_patterns.py
+artifacts/vertex_type_vs_we6_pattern.json
+\end{verbatim}
+
+\textbf{Quotient graph by pattern classes.} Collapsing the 40 W33
+vertices by their W(E6) intersection pattern yields an 8‑class quotient
+graph with explicit inter‑class adjacency counts. This provides a new
+coarse‑grained signature of the E6\ensuremath{\times}A2 stratification
+inside W33. See:
+
+\begin{verbatim}
+tools/analyze_pattern_quotient_graph.py
+artifacts/pattern_quotient_graph.json
+\end{verbatim}
+
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsubsection{1.5 Explicit Root-to-Edge Bijection
@@ -1214,6 +1238,27 @@ Mapping}\label{e6e8-orbit-structure-explicit-mapping}
     (vertex‑type split).
   \item
     Output: \texttt{artifacts/we6\_coxeter6\_intersection.json}
+  \end{itemize}
+\item
+  \texttt{python3\ tools/analyze\_vertex\_types\_vs\_we6\_patterns.py}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Correlates Coxeter‑6 intersection patterns with \(F_{3}^{4}\)
+    support sizes.
+  \item
+    Output: \texttt{artifacts/vertex\_type\_vs\_we6\_pattern.json}
+  \end{itemize}
+\item
+  \texttt{python3\ tools/analyze\_pattern\_quotient\_graph.py}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Builds the 8‑class quotient graph by W(E6) intersection patterns.
+  \item
+    Output: \texttt{artifacts/pattern\_quotient\_graph.json}
   \end{itemize}
 \item
   \texttt{python\ tools/explicit\_bijection\_decomposition.py}
