@@ -1085,6 +1085,13 @@ assignment is **23/24**.
 Artifact: `artifacts/witting_24basis_exact_bound.json`  
 Script: `tools/witting_24basis_exact_bound.py`
 
+**KS inequality (computed):**  
+The 24‑basis subset yields a state‑independent KS inequality with
+noncontextual bound **23** and quantum value **24**.
+
+Docs: `docs/witting_24basis_inequality.md`  
+Script: `tools/witting_24basis_inequality.py`
+
 ### 1.9 Z₃ Pancharatnam Phase Signature (Computed)
 
 **Hunch tested:** Non‑orthogonal triangles in the 40‑ray Witting set should
@@ -1106,6 +1113,11 @@ interferometrically in photonic implementations.
 Artifact: `artifacts/witting_pancharatnam_triangles.json`  
 Script: `tools/witting_pancharatnam_triangles.py`
 
+**Example triangles (computed):**  
+Explicit ray triples with phases 0 and ±2π/3 are listed here:  
+`docs/witting_pancharatnam_examples.md`  
+Script: `tools/witting_pancharatnam_examples.py`
+
 **Unitary implementation (computed):**  
 For each of the 24 bases, a 4×4 unitary is provided with the basis rays as
 columns (direct experimental settings).
@@ -1119,6 +1131,9 @@ Each 4×4 unitary is decomposed into a sequence of 2×2 complex Givens rotations
 
 Docs: `docs/witting_24basis_reck.json`  
 Script: `tools/witting_24basis_reck_decomp.py`
+
+Readable schedule: `docs/witting_24basis_reck_schedule.md`  
+Script: `tools/witting_24basis_reck_schedule.py`
 
 **Interpretation:** The Witting set is **contextual but not parity‑contextual**
 in its full 40‑basis form. Photonic tests should therefore target a **KS
