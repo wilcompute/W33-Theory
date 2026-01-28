@@ -106,8 +106,20 @@ def compute_spectrum(states):
 
 # Backwards-compatible wrapper to preserve the old module API
 # Tests and other modules expect is_orthogonal(i, j) to be available
-def is_orthogonal(i, j):
-    states = build_witting_states()
+def is_orthogonal(*args):
+    """Backwards-compatible wrapper.
+
+    Supports both signatures:
+      is_orthogonal(i, j) -> builds states internally
+      is_orthogonal(states, i, j) -> uses provided states
+    """
+    if len(args) == 2:
+        i, j = args
+        states = build_witting_states()
+    elif len(args) == 3:
+        states, i, j = args
+    else:
+        raise TypeError("is_orthogonal expects 2 or 3 arguments")
     return is_orthogonal_states(states, i, j)
 
 

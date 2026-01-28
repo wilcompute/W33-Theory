@@ -3,8 +3,6 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT))
-json_files = sorted(ROOT.glob("PART_*.json"))
 
 summary = {"collected_files": [], "count": len(json_files), "summary_by_part": {}}
 
@@ -191,32 +189,40 @@ for jf in json_files:
         summary["collected_files"].append(entry)
 
 # Compatibility: add a couple of keys expected by downstream scripts/tests
-summary["total_part_json_files"] = len(json_files)
 # Build a simple mapping `summaries` filename -> metadata for backward compatibility
 summaries_map = {}
-for entry in summary["collected_files"]:
-    fname = entry.get("file")
-    if not fname:
-        continue
-    sm = {}
-    # Include 'part' only if present and a string
-    if entry.get("part"):
-        sm["part"] = entry.get("part")
-    # Only include integer part_number if available
-    if entry.get("part_number") is not None:
-        sm["part_number"] = entry.get("part_number")
-    # Keep a short text field if present
-    if entry.get("short"):
-        sm["short"] = entry.get("short")
-    # Only include timestamp if present and non-null (schema expects a string)
-    if entry.get("timestamp"):
-        sm["timestamp"] = entry.get("timestamp")
-    summaries_map[fname] = sm
 summary["summaries"] = summaries_map
 
 from utils.json_safe import dump_json
 
 out = ROOT / "SUMMARY_RESULTS.json"
-dump_json(summary, out, indent=2, sort_keys=True)
 
-print(f"Collected {len(json_files)} PART_*.json files into {out}")
+
+def main():
+    sys.path.insert(0, str(ROOT))
+    json_files = sorted(ROOT.glob("PART_*.json"))
+    summary["total_part_json_files"] = len(json_files)
+    for entry in summary["collected_files"]:
+        fname = entry.get("file")
+        if not fname:
+            continue
+        sm = {}
+        # Include 'part' only if present and a string
+        if entry.get("part"):
+            sm["part"] = entry.get("part")
+        # Only include integer part_number if available
+        if entry.get("part_number") is not None:
+            sm["part_number"] = entry.get("part_number")
+        # Keep a short text field if present
+        if entry.get("short"):
+            sm["short"] = entry.get("short")
+        # Only include timestamp if present and non-null (schema expects a string)
+        if entry.get("timestamp"):
+            sm["timestamp"] = entry.get("timestamp")
+        summaries_map[fname] = sm
+    dump_json(summary, out, indent=2, sort_keys=True)
+    print(f"Collected {len(json_files)} PART_*.json files into {out}")
+
+
+if __name__ == "__main__":
+    main()

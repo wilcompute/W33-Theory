@@ -85,13 +85,39 @@ for dirpath, dirnames, filenames in os.walk(REPO_ROOT, onerror=lambda e: None):
                 )
 
 # Also look for plt.show occurrences
-for p in REPO_ROOT.rglob("*.py"):
-    try:
-        text = p.read_text(encoding="utf-8")
-    except Exception:
+for dirpath, dirnames, filenames in os.walk(REPO_ROOT, onerror=lambda e: None):
+    # skip virtualenv and build dirs
+    if any(part in SKIP_DIRS for part in Path(dirpath).parts):
         continue
-    if "plt.show(" in text and any(part not in SKIP_DIRS for part in p.parts):
-        suspicious.append((str(p), None, "plt.show()"))
+    for fn in filenames:
+        if not fn.endswith(".py"):
+            continue
+        p = Path(dirpath) / fn
+        try:
+            text = p.read_text(encoding="utf-8")
+        except Exception:
+            continue
+        if "plt.show(" in text:
+            # Only flag plt.show() when it appears at top-level (not inside functions or guarded blocks)
+            try:
+                tree2 = ast.parse(text, filename=str(p))
+            except Exception:
+                # If we can't parse, conservatively flag it
+                suspicious.append((str(p), None, "plt.show() (unparsed)"))
+                continue
+            found_top_level_plt_show = False
+            for node in tree2.body:
+                if isinstance(node, ast.Expr) and isinstance(node.value, ast.Call):
+                    func = node.value.func
+                    if (
+                        isinstance(func, ast.Attribute)
+                        and getattr(func, "attr", None) == "show"
+                    ):
+                        if isinstance(func.value, ast.Name) and func.value.id == "plt":
+                            found_top_level_plt_show = True
+                            break
+            if found_top_level_plt_show:
+                suspicious.append((str(p), None, "plt.show()"))
 
 if suspicious:
     print("Found top-level function calls or plt.show() in these files:")

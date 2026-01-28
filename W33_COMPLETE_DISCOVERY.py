@@ -183,4 +183,10 @@ mathematics (40 points!) encodes infinite continuous structures
 ═══════════════════════════════════════════════════════════════════════════════
 """
 
-print(__doc__)
+
+def main():
+    print(__doc__)
+
+
+if __name__ == "__main__":
+    main()

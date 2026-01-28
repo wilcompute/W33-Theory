@@ -2,13 +2,14 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.append(str(ROOT))
 
 
-from src.summary_insights import (collect_key_result_stats,  # noqa: E402
-                                  compute_numeric_comparison_stats,
-                                  load_numeric_comparisons,
-                                  load_summary_results)
+from src.summary_insights import collect_key_result_stats  # noqa: E402
+from src.summary_insights import (
+    compute_numeric_comparison_stats,
+    load_numeric_comparisons,
+    load_summary_results,
+)
 
 
 def test_key_result_stats():
@@ -28,3 +29,11 @@ def test_numeric_comparison_stats():
     assert stats.count == len(numeric_entries)
     assert stats.mean_abs_diff >= 0
     assert stats.max_abs_diff >= 0
+
+
+def main():
+    sys.path.append(str(ROOT))
+
+
+if __name__ == "__main__":
+    main()

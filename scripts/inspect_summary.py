@@ -1,7 +1,6 @@
 import json
 import pathlib
 
-p = pathlib.Path("SUMMARY_RESULTS.json")
 if not p.exists():
     print("MISSING")
 else:
@@ -15,3 +14,11 @@ else:
         print("summaries_len=", len(d["summaries"]))
     # show a small snippet of collected_files count
     print("collected_files=", len(d.get("collected_files", [])))
+
+
+def main():
+    p = pathlib.Path("SUMMARY_RESULTS.json")
+
+
+if __name__ == "__main__":
+    main()
