@@ -1,0 +1,12 @@
+{
+  "best_score": 8.76965449245542,
+  "mapping": {
+    "0": 3,
+    "1": 1,
+    "2": 4,
+    "3": 0,
+    "4": 2,
+    "5": 5
+  },
+  "note": "Composite heuristic using support+neighbor vs E6 distance template. Non\u2011canonical."
+}
