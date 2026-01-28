@@ -271,8 +271,7 @@ def construct_bijection_via_canonical_form():
     # This requires matching generators between PSp(4,3) and W(E6)
 
     print("\n--- Bijection Structure ---")
-    print(
-        """
+    print("""
 The bijection is constructed as follows:
 
 1. EDGE LABELING:
@@ -291,8 +290,7 @@ The bijection is constructed as follows:
 
 This is EQUIVARIANT by construction:
    bij(g.e) = phi(g).bij(e) for all g in PSp(4,3)
-"""
-    )
+""")
 
     # Compute example labels
     print("\n--- Sample Edge Labels ---")
@@ -350,8 +348,7 @@ def main():
     print("\n" + "=" * 70)
     print("BIJECTION CONSTRUCTION COMPLETE")
     print("=" * 70)
-    print(
-        """
+    print("""
 THE EXPLICIT BIJECTION EXISTS and is given by:
 
    bij: W33 edges -> E8 roots (or W(E6) cosets)
@@ -376,8 +373,7 @@ TO MAKE FULLY EXPLICIT:
 - Match with presentation of W(E6)
 - This determines phi on generators
 - The bijection then follows from the word labeling
-"""
-    )
+""")
 
     # Save results
     results = {

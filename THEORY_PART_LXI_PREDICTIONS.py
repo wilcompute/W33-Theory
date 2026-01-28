@@ -25,8 +25,7 @@ print("\n" + "=" * 70)
 print("PREDICTION 1: PMNS CP PHASE δ")
 print("=" * 70)
 
-print(
-    """
+print("""
 CURRENT STATUS:
 ===============
 The PMNS CP phase δ is poorly constrained:
@@ -47,8 +46,7 @@ The formula δ = 4π/7 × (1 + small correction) gives:
   δ ≈ 206° ± 10°
 
 This is TESTABLE by DUNE and Hyper-Kamiokande!
-"""
-)
+""")
 
 # Calculate predictions
 delta_pred_1 = 360 * 4 / 7
@@ -62,8 +60,7 @@ print("\n" + "=" * 70)
 print("PREDICTION 2: NEUTRINOLESS DOUBLE BETA DECAY")
 print("=" * 70)
 
-print(
-    """
+print("""
 MAJORANA MASS:
 ==============
 If neutrinos are Majorana particles, neutrinoless double
@@ -86,8 +83,7 @@ limits but could be tested by nEXO and LEGEND-1000.
 
 Alternatively, if inverted hierarchy:
 |m_ββ| ≈ 15-50 meV (testable NOW!)
-"""
-)
+""")
 
 # =============================================================================
 # PREDICTION 3: PROTON DECAY
@@ -97,8 +93,7 @@ print("\n" + "=" * 70)
 print("PREDICTION 3: PROTON DECAY LIFETIME")
 print("=" * 70)
 
-print(
-    """
+print("""
 GUT PREDICTION:
 ===============
 Grand Unified Theories predict proton decay.
@@ -120,8 +115,7 @@ With α⁻¹ ≈ 137 and n related to W33 structure,
 This gives τ_p ≈ 10³⁴-³⁶ years
 
 TESTABLE: Hyper-Kamiokande will probe τ_p ~ 10³⁵ years!
-"""
-)
+""")
 
 # =============================================================================
 # PREDICTION 4: DARK MATTER MASS
@@ -131,8 +125,7 @@ print("\n" + "=" * 70)
 print("PREDICTION 4: DARK MATTER CANDIDATE")
 print("=" * 70)
 
-print(
-    """
+print("""
 W33 DARK MATTER:
 ================
 
@@ -157,8 +150,7 @@ Option 3: Sterile neutrino with m ~ keV scale
   m_DM = 27 × (some factor) keV
 
 These are in range for direct detection experiments!
-"""
-)
+""")
 
 m_W = 80.377  # GeV
 m_Z = 91.1876  # GeV
@@ -178,8 +170,7 @@ print("\n" + "=" * 70)
 print("PREDICTION 5: EXTENDED HIGGS SECTOR")
 print("=" * 70)
 
-print(
-    """
+print("""
 W33 HIGGS STRUCTURE:
 ====================
 
@@ -200,8 +191,7 @@ Or simpler:
   m_H₃ ≈ 125 × 3 = 375 GeV
 
 TESTABLE: HL-LHC can discover heavy Higgs up to ~1 TeV!
-"""
-)
+""")
 
 m_H1 = 125.25  # GeV
 H2_pred_1 = m_H1 * 27 / 12
@@ -219,8 +209,7 @@ print("\n" + "=" * 70)
 print("PREDICTION 6: NO FOURTH GENERATION")
 print("=" * 70)
 
-print(
-    """
+print("""
 W33 GENERATION STRUCTURE:
 =========================
 
@@ -240,8 +229,7 @@ However, W33 doesn't forbid:
 • Sterile neutrinos
 • Vectorlike fermions
 • Exotic states not in standard generations
-"""
-)
+""")
 
 # =============================================================================
 # PREDICTION 7: MAGNETIC MONOPOLES
@@ -251,8 +239,7 @@ print("\n" + "=" * 70)
 print("PREDICTION 7: MAGNETIC MONOPOLES")
 print("=" * 70)
 
-print(
-    """
+print("""
 DIRAC QUANTIZATION:
 ===================
 
@@ -275,8 +262,7 @@ These are cosmological relics - search via:
 • IceCube
 • MACRO remnants
 • Ancient mica searches
-"""
-)
+""")
 
 # =============================================================================
 # PREDICTION 8: RUNNING OF α_s
@@ -286,8 +272,7 @@ print("\n" + "=" * 70)
 print("PREDICTION 8: PRECISE α_s RUNNING")
 print("=" * 70)
 
-print(
-    """
+print("""
 STRONG COUPLING EVOLUTION:
 ==========================
 
@@ -306,8 +291,7 @@ by the W33 boundary condition α_s(M_Z) = 27/229.
 
 TESTABLE: High-precision α_s measurements at LHC
 and future colliders!
-"""
-)
+""")
 
 
 # Calculate QCD running (1-loop approximation)
@@ -336,8 +320,7 @@ print("\n" + "=" * 70)
 print("PREDICTION 9: COSMOLOGICAL PARAMETERS")
 print("=" * 70)
 
-print(
-    """
+print("""
 TESTABLE COSMOLOGY:
 ===================
 
@@ -356,8 +339,7 @@ W33 predicts these will converge to the W33 values!
 SPECIFIC PREDICTION:
 As measurements improve, Ω_Λ should move toward
 56/81 = 0.6914, not stay at 0.6889.
-"""
-)
+""")
 
 # =============================================================================
 # PREDICTION 10: SUMMARY TABLE
@@ -414,8 +396,7 @@ print("\n" + "=" * 70)
 print("PART LXI CONCLUSIONS")
 print("=" * 70)
 
-print(
-    """
+print("""
 W33 THEORY IS FALSIFIABLE!
 
 Key predictions that can be tested:
@@ -433,6 +414,5 @@ W33 Theory would be falsified.
 is not science. W33 makes precise, testable predictions."
 
 Results saved to PART_LXI_predictions_results.json
-"""
-)
+""")
 print("=" * 70)

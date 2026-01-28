@@ -27,8 +27,7 @@ print("\n" + "=" * 80)
 print("PART 1: WHAT IS A UNIVERSAL OBJECT?")
 print("=" * 80)
 
-print(
-    """
+print("""
 UNIVERSAL OBJECTS IN CATEGORY THEORY
 ====================================
 
@@ -46,8 +45,7 @@ W33 CONJECTURE:
   W(3,3) is the INITIAL object in the category of
   "physical algebras" - algebras that can describe
   reality.
-"""
-)
+""")
 
 # =============================================================================
 # PART 2: THE GF(3) × K4 PRODUCT
@@ -120,8 +118,7 @@ print("\n" + "=" * 80)
 print("PART 3: THE TENSOR ALGEBRA GF(3) ⊗ K4")
 print("=" * 80)
 
-print(
-    """
+print("""
 TENSOR PRODUCT STRUCTURE
 ========================
 
@@ -142,8 +139,7 @@ W33 as quotient:
 What are the 68 identifications?
   68 = 4 × 17
   17 = F₄ connection (17 points in Fano plane completion)
-"""
-)
+""")
 
 # GF(3)^3 elements
 GF3_cubed = list(product(GF3, repeat=3))
@@ -162,8 +158,7 @@ print("\n" + "=" * 80)
 print("PART 4: THE AUTOMORPHISM GROUP")
 print("=" * 80)
 
-print(
-    """
+print("""
 Aut(W33) STRUCTURE
 ==================
 
@@ -189,8 +184,7 @@ UNIVERSAL PROPERTY:
   PSp(4,3) is the LARGEST group that acts
   faithfully on 40 points preserving the
   W33 incidence structure!
-"""
-)
+""")
 
 # Compute |PSp(4,3)|
 psp43 = 25920
@@ -215,8 +209,7 @@ print("\n" + "=" * 80)
 print("PART 5: REPRESENTATION THEORY")
 print("=" * 80)
 
-print(
-    """
+print("""
 IRREDUCIBLE REPRESENTATIONS OF PSp(4,3)
 =======================================
 
@@ -236,8 +229,7 @@ The representation ring:
 W33 Universal Property:
   The 40-dimensional representation encodes
   the points of W33 directly!
-"""
-)
+""")
 
 # Some representation dimensions
 rep_dims = [1, 5, 6, 10, 15, 20, 24, 30, 36, 40, 45, 60]
@@ -256,8 +248,7 @@ print("\n" + "=" * 80)
 print("PART 6: THE FREE ALGEBRA OVER W33")
 print("=" * 80)
 
-print(
-    """
+print("""
 FREE ALGEBRA CONSTRUCTION
 =========================
 
@@ -279,8 +270,7 @@ Dimension counting:
 The quotient F(W33)/relations should give
 a finite-dimensional algebra related to
 the exceptional groups!
-"""
-)
+""")
 
 print(f"Free algebra structure:")
 print(f"  Generators: 40 (W33 points)")
@@ -295,8 +285,7 @@ print("\n" + "=" * 80)
 print("PART 7: CLIFFORD ALGEBRAS FROM W33")
 print("=" * 80)
 
-print(
-    """
+print("""
 CLIFFORD ALGEBRA STRUCTURE
 ==========================
 
@@ -322,8 +311,7 @@ W33 CONNECTION:
 
   But 40 = 8 × 5 = Cl(3) × 5
   This is Cl(3) with a 5-fold tensor factor!
-"""
-)
+""")
 
 # Clifford dimensions
 print(f"Clifford algebra dimensions:")
@@ -349,8 +337,7 @@ print("\n" + "=" * 80)
 print("PART 8: W33 AS A MONOIDAL CATEGORY")
 print("=" * 80)
 
-print(
-    """
+print("""
 CATEGORICAL STRUCTURE
 =====================
 
@@ -369,8 +356,7 @@ THEOREM (CONJECTURED):
   W33-Mod ≅ Rep(E₇)
 
 This would explain why dim(E₇) = 133 = 40 + 81 + 12!
-"""
-)
+""")
 
 print(f"Categorical dimensions:")
 print(f"  Objects: 40 (points)")
@@ -385,8 +371,7 @@ print("\n" + "=" * 80)
 print("PART 9: THE ℤ₃ × ℤ₄ GRADING")
 print("=" * 80)
 
-print(
-    """
+print("""
 GRADED ALGEBRA STRUCTURE
 ========================
 
@@ -404,8 +389,7 @@ This 12-fold grading corresponds to:
 Grade decomposition:
   • Grade 0: 40/12 ≈ 3.3 → identity component
   • Grades 1-11: gauge transformations
-"""
-)
+""")
 
 print(f"Grading structure:")
 print(f"  ℤ₃ grading: 3 components")
@@ -421,8 +405,7 @@ print("\n" + "=" * 80)
 print("PART 10: THE UNIVERSAL ENVELOPING ALGEBRA")
 print("=" * 80)
 
-print(
-    """
+print("""
 U(W33) - THE UNIVERSAL ENVELOPE
 ===============================
 
@@ -439,8 +422,7 @@ CONJECTURE:
   dim(U(w33)) would relate to:
     dim(E₇) = 133
     or dim(E₈) = 248
-"""
-)
+""")
 
 print(f"Universal envelope dimensions:")
 print(f"  If w33 ≅ e₇: dim(w33) = 133")
@@ -455,8 +437,7 @@ print("\n" + "=" * 80)
 print("PART 11: THE FUNDAMENTAL THEOREM (CONJECTURE)")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                    THE FUNDAMENTAL THEOREM OF W33                            ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
@@ -485,8 +466,7 @@ print(
 ║  W33 is the "theory of everything" for algebra!                              ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # PART 12: THE ALGEBRAIC BOOTSTRAP
@@ -496,8 +476,7 @@ print("\n" + "=" * 80)
 print("PART 12: THE ALGEBRAIC BOOTSTRAP")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE BOOTSTRAP PRINCIPLE
 =======================
 
@@ -524,8 +503,7 @@ W33 might be the UNIQUE algebra satisfying:
    - K4 → gauge structure
 
 W33 is the UNIQUE structure satisfying all four!
-"""
-)
+""")
 
 print(f"Bootstrap conditions:")
 print(f"  Minimality: ✓ (GF(3), K4, W(3,3) all minimal)")
@@ -541,8 +519,7 @@ print("\n" + "=" * 80)
 print("CONCLUSION: THE UNIVERSAL ALGEBRA")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                    W(3,3): THE UNIVERSAL ALGEBRA                             ║
@@ -577,8 +554,7 @@ print(
 ║  This is the algebraic analogue of "the universe from W33"                  ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print("\n" + "=" * 80)
 print("W33 = THE ATOM OF ALGEBRA")

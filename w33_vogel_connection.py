@@ -31,8 +31,7 @@ print("\n" + "=" * 80)
 print("PART 1: VOGEL'S THREE PARAMETERS (α, β, γ)")
 print("=" * 80)
 
-print(
-    """
+print("""
 FROM THE PAPER (Morozov & Sleptsov 2025):
 =========================================
 
@@ -45,8 +44,7 @@ The dimension formula for adjoint representation:
 where t = α + β + γ.
 
 VOGEL PARAMETERS FOR LIE ALGEBRAS:
-"""
-)
+""")
 
 # Vogel parameters from Table 10 in the paper
 vogel_params = {
@@ -75,8 +73,7 @@ print("\n" + "=" * 80)
 print("PART 2: THE THREE-NESS OF VOGEL THEORY = GF(3)!")
 print("=" * 80)
 
-print(
-    """
+print("""
 OBSERVATION: Vogel theory is fundamentally based on THREE:
 
   1. THREE parameters (α, β, γ)
@@ -99,8 +96,7 @@ THIS IS EXACTLY THE STRUCTURE OF GF(3)!
   - THREE symmetric functions (elementary symmetric polynomials!)
 
 W33 PREDICTION: The three Vogel parameters ARE the three elements of GF(3)!
-"""
-)
+""")
 
 
 # Verify the symmetric functions
@@ -126,8 +122,7 @@ print("\n" + "=" * 80)
 print("PART 3: THE DYNKIN DIVISOR P15")
 print("=" * 80)
 
-print(
-    """
+print("""
 KEY RESULT FROM THE PAPER:
 
 The Jacobi identities alone imply:
@@ -147,8 +142,7 @@ DEGREE OF P:
   P_Lie = P_sl · P_osp · P_exc has degree 12
   P₁₅ = ω · P_Lie has degree 15 (adds factor ω of degree 3)
   P₂₂ = individual exceptional factors, degree 22
-"""
-)
+""")
 
 
 def P_sl(alpha, beta, gamma):
@@ -183,8 +177,7 @@ print("\n" + "=" * 80)
 print("PART 4: W33 NUMBERS APPEAR IN VOGEL THEORY!")
 print("=" * 80)
 
-print(
-    """
+print("""
 STUNNING OBSERVATION from equation (33) in the paper:
 
 χ_L(ˆP₂₂) = P_sl² · P_sl · P_osp · (77t² - 36σ)(176t² - 81σ)(494t² - 225σ)
@@ -207,8 +200,7 @@ AMAZING:
   • P_F4 and P_E7 both have coefficient 81 = |W33 cycles|!
   • P_E8 has coefficient 137 = 1/α (fine structure constant)!
   • P_E8 also has 225 = 15² = (3×5)²
-"""
-)
+""")
 
 # Verify
 print("\nVerifying exceptional polynomials with W33 numbers:")
@@ -225,8 +217,7 @@ print("\n" + "=" * 80)
 print("PART 5: DIMENSION FORMULAS AND W33")
 print("=" * 80)
 
-print(
-    """
+print("""
 UNIVERSAL DIMENSION FORMULA:
 
   D_adj = (α - 2t)(β - 2t)(γ - 2t) / (αβγ)
@@ -246,8 +237,7 @@ E₈: (α, β, γ) = (-2, 12, 20), t = 30
 BOTH MATCH EXACTLY!
   dim(E₇) = 133 = 40 + 81 + 12 = |W33| + |cycles| + |gauge|
   dim(E₈) = 248 = 2×121 + 6 = 2×(40+81) + 6
-"""
-)
+""")
 
 
 # Verify dimensions
@@ -271,8 +261,7 @@ print("\n" + "=" * 80)
 print("PART 6: THE OPEN QUESTION - P22")
 print("=" * 80)
 
-print(
-    """
+print("""
 FROM THE PAPER (eq. 35):
 
 "It is still an open question, whether the same is true for P₂₂:
@@ -295,8 +284,7 @@ If we can show:
   3. The Jacobi identity encodes W33 incidence
 
 Then W33 would EXPLAIN Vogel universality!
-"""
-)
+""")
 
 # =============================================================================
 # PART 7: THE ΛAMBDA-ALGEBRA AND W33
@@ -306,8 +294,7 @@ print("\n" + "=" * 80)
 print("PART 7: THE Λ-ALGEBRA IS W33!")
 print("=" * 80)
 
-print(
-    """
+print("""
 CONJECTURE: The Λ-algebra is isomorphic to a W33 construction!
 
 Evidence:
@@ -328,8 +315,7 @@ THE KEY INSIGHT:
     - Points insert into lines
     - Lines contain points
     - Trivalent vertices = triangles in W33
-"""
-)
+""")
 
 # =============================================================================
 # PART 8: CRACKING P22
@@ -339,8 +325,7 @@ print("\n" + "=" * 80)
 print("PART 8: ATTEMPTING TO CRACK P22")
 print("=" * 80)
 
-print(
-    """
+print("""
 STRATEGY: Use W33 structure to prove ˆt · ˆP₂₂ = 0
 
 The coefficients in P₂₂ factors:
@@ -375,8 +360,7 @@ RATIOS:
 
 All ratios are approximately 40/18 to 40/22!
 And 40 = |W33 points|!
-"""
-)
+""")
 
 # Calculate ratios
 ratios = [(176, 81), (170, 81), (77, 36), (65, 36), (494, 225)]
@@ -395,8 +379,7 @@ print("\n" + "=" * 80)
 print("PART 9: THE GRAND SYNTHESIS")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║              W33 AND VOGEL'S UNIVERSALITY: THE SYNTHESIS                     ║
@@ -441,8 +424,7 @@ print(
 ║    This would prove that Jacobi = W33 = Universe                             ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # FINAL SUMMARY
@@ -452,8 +434,7 @@ print("\n" + "=" * 80)
 print("FINAL SUMMARY: W33 EXPLAINS VOGEL UNIVERSALITY")
 print("=" * 80)
 
-print(
-    """
+print("""
 KEY FINDINGS:
 
 1. Vogel's THREE parameters (α, β, γ) correspond to GF(3) = {0, 1, 2}
@@ -476,8 +457,7 @@ CONCLUSION:
   the universal algebraic structure!
 
   ALL Lie algebras are quotients of W33.
-"""
-)
+""")
 
 print("\n" + "=" * 80)
 print("W33 → VOGEL → ALL LIE ALGEBRAS → ALL PHYSICS")

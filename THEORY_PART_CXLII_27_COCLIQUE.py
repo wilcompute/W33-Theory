@@ -150,8 +150,7 @@ print("=" * 70)
 
 if params:
     n, k, lam, mu = params
-    print(
-        f"""
+    print(f"""
 THE INDUCED GRAPH IS SRG({n}, {k}, {lam}, {mu})
 
 This is NOT the Schläfli graph SRG(27, 16, 10, 8).
@@ -165,8 +164,7 @@ For Schläfli SRG(27, 16, 10, 8):
             = SRG(27, 10, 1, 6)
 
 Hmm, that doesn't match {params} either!
-"""
-    )
+""")
 
 # =====================================================
 # CHECK THE ACTUAL SCHLÄFLI RELATIONS
@@ -176,8 +174,7 @@ print("\n" + "=" * 70)
 print("RELATION TO 27 LINES")
 print("=" * 70)
 
-print(
-    """
+print("""
 DEEPER ANALYSIS:
 ================
 
@@ -199,8 +196,7 @@ Our induced graph:
 - Non-adjacent = non-orthogonal
 
 So our graph edges correspond to INTERSECTION of lines!
-"""
-)
+""")
 
 # Compute the complement
 comp_induced = [
@@ -235,8 +231,7 @@ for e in sorted(unique_eigs, reverse=True):
     mult = np.sum(np.abs(eigenvalues - e) < 0.01)
     print(f"  {e:.4f} with multiplicity {mult}")
 
-print(
-    """
+print("""
 ANALYSIS:
 =========
 
@@ -256,8 +251,7 @@ The COLLINEARITY GRAPH of the 27 points in PG(3, F₃) has:
 This gives a regular graph, but with different parameters.
 
 Let me check if this matches a known structure...
-"""
-)
+""")
 
 # =====================================================
 # KNOWN SRG(27, 8, 1, 4)
@@ -267,8 +261,7 @@ print("\n" + "=" * 70)
 print("IDENTIFYING SRG(27, 8, 1, 4)")
 print("=" * 70)
 
-print(
-    """
+print("""
 Looking up SRG(27, 8, 1, 4) in the literature...
 
 This is NOT the Schläfli graph!
@@ -296,8 +289,7 @@ Each edge is in exactly 1 triangle.
 This is the structure of the KNESER GRAPH K(9,4)... no wait.
 
 Actually this is the NU GRAPH in design theory!
-"""
-)
+""")
 
 # Count triangles
 triangles = 0
@@ -319,8 +311,7 @@ print("\n" + "=" * 70)
 print("STRUCTURAL CONCLUSION")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE 27-COCLIQUE STRUCTURE:
 ==========================
 
@@ -350,8 +341,7 @@ The 3 × 9 = 27 decomposition reflects the triality of E₆:
 
 The graph structure within each 9-block and between blocks
 encodes the E₆ Weyl group geometry.
-"""
-)
+""")
 
 # =====================================================
 # INTER-BLOCK ADJACENCIES
@@ -389,8 +379,7 @@ print(
     f"  Total: {edges_within_g2 + edges_within_g3 + edges_within_g4 + edges_g2_g3 + edges_g2_g4 + edges_g3_g4}"
 )
 
-print(
-    """
+print("""
 OBSERVATION:
 ============
 The edges are ENTIRELY between blocks, none within!
@@ -403,15 +392,13 @@ This is the COMPLETE TRIPARTITE graph minus some edges:
 
 The 108 edges form a specific pattern related to the
 F₃ × F₃ structure of each 9-block.
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("PART CXLII COMPLETE")
 print("=" * 70)
 
-print(
-    """
+print("""
 KEY FINDINGS:
 =============
 
@@ -432,5 +419,4 @@ NAMING:
   - Sp₄(3): The main 40-vertex orthogonality graph
   - Witting configuration: The 40 quantum states in ℂ⁴
   - The 27-coclique graph: SRG(27, 8, 1, 4) (name TBD)
-"""
-)
+""")

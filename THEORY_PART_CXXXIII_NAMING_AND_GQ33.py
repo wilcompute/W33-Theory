@@ -324,8 +324,7 @@ print("\n" + "=" * 70)
 print("GQ(3,3) STRUCTURE")
 print("=" * 70)
 
-print(
-    """
+print("""
 A Generalized Quadrangle GQ(s,t) satisfies:
 - Each point on (t+1) lines
 - Each line has (s+1) points
@@ -342,8 +341,7 @@ This is exactly our structure!
 - 40 orthonormal bases = 40 lines of GQ(3,3)
 - Each state in 4 bases (point on 4 lines)
 - Each basis has 4 states (line has 4 points)
-"""
-)
+""")
 
 
 # Find the lines (orthonormal bases)
@@ -403,8 +401,7 @@ print("\n" + "=" * 70)
 print("NAMING CONVENTION ESTABLISHED")
 print("=" * 70)
 
-print(
-    """
+print("""
 STANDARD NAMES for this graph:
 ==============================
 
@@ -436,8 +433,7 @@ We will use Sp₄(3) as the primary name, with:
 - GQ(3,3) when emphasizing the incidence geometry
 
 The old "W33" notation is RETIRED.
-"""
-)
+""")
 
 # =====================================================
 # CONNECTION TO F₃ ARITHMETIC
@@ -447,8 +443,7 @@ print("\n" + "=" * 70)
 print("CONNECTION TO F₃ ARITHMETIC")
 print("=" * 70)
 
-print(
-    """
+print("""
 Why F₃? The Symplectic Structure:
 ================================
 
@@ -471,8 +466,7 @@ The Witting configuration COMPLEXIFIES this structure:
 - F₃ → ω = e^{2πi/3} (3rd root of unity)
 - Isotropic 1-spaces → rays in CP³
 - Symplectic orthogonality → quantum orthogonality
-"""
-)
+""")
 
 
 # Verify the number of isotropic 1-spaces in F₃⁴

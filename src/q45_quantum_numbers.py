@@ -220,8 +220,7 @@ def analyze_fiber_structure(df_q45, v23_df):
     print("FIBER BUNDLE STRUCTURE ANALYSIS")
     print("=" * 70)
 
-    print(
-        f"""
+    print(f"""
 Each Q45 vertex can have states in Z2 × Z3 fiber:
   Z2 states: 0, 1 (sheet)
   Z3 states: 0, 1, 2 (port)
@@ -233,8 +232,7 @@ In v23 data, we have:
 
 Test: Do different fiber states of same Q45 vertex
       appear in different triangle types?
-"""
-    )
+""")
 
     # Check if v23 data includes fiber information
     v23_cols = list(v23_df.columns)
@@ -284,12 +282,10 @@ if __name__ == "__main__":
     print("\n" + "=" * 70)
     print("NEXT STEP: Map this to particle physics")
     print("=" * 70)
-    print(
-        """
+    print("""
 If Q45 vertices with (Z4, Z3) = (2,0) correspond to:
   - SU(5) fundamental representation
   - Specific fermion or boson multiplets
 
 Then this confirms discrete embedding of GUT structure!
-"""
-    )
+""")

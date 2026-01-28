@@ -244,8 +244,7 @@ def main():
     print(" KEY INSIGHT")
     print("=" * 70)
 
-    print(
-        """
+    print("""
   The D₅ inner product graphs have:
     • Same vertex count (40)
     • Same edge count (240) for IP = ±1
@@ -265,15 +264,13 @@ def main():
      - Root systems: 2n(n-1) = 40 for n=5
 
   These are DIFFERENT constructions that happen to give the same count!
-"""
-    )
+""")
 
     print("\n" + "=" * 70)
     print(" WHAT THIS MEANS FOR OUR THEORY")
     print("=" * 70)
 
-    print(
-        """
+    print("""
   THE HONEST ASSESSMENT:
 
   ✓ CONFIRMED: W33 has 40 vertices, same as D₅ roots
@@ -298,8 +295,7 @@ def main():
 
   This is actually MORE interesting than a simple isomorphism
   because it suggests deeper connections yet to be understood.
-"""
-    )
+""")
 
 
 if __name__ == "__main__":

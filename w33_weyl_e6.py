@@ -52,8 +52,7 @@ print("\n" + "=" * 80)
 print("PART 2: WHY E6 SPECIFICALLY?")
 print("=" * 80)
 
-print(
-    """
+print("""
 The exceptional Lie algebra E6 has:
   - Dimension: 78
   - Rank: 6
@@ -75,8 +74,7 @@ W33 CONNECTION:
   W33 has 81 = 3 * 27 cycles
 
   This suggests W33 is a "triple cover" of the 27-line configuration!
-"""
-)
+""")
 
 # =============================================================================
 # PART 3: THE 27 LINES AND W33
@@ -86,8 +84,7 @@ print("\n" + "=" * 80)
 print("PART 3: THE 27 LINES CONFIGURATION")
 print("=" * 80)
 
-print(
-    """
+print("""
 The 27 lines on a cubic surface have the following incidence:
 
 Each line meets exactly 10 other lines (5 pairs of 2)
@@ -103,8 +100,7 @@ The incidence structure:
   - L_{ij} meets L_{kl} if {i,j} ∩ {k,l} = ∅ (6 lines) + C_k, C_l (4 lines)
 
 This forms the "Schläfli graph" with 27 vertices, each of degree 16.
-"""
-)
+""")
 
 
 # Build the Schläfli configuration
@@ -186,8 +182,7 @@ print("\n" + "=" * 80)
 print("PART 4: FROM 27 LINES TO 81 CYCLES")
 print("=" * 80)
 
-print(
-    """
+print("""
 The key observation: 81 = 3 * 27
 
 This suggests a TRIPLE COVER structure!
@@ -210,8 +205,7 @@ because:
   - W33 extends this by the GF(3) structure
   - But the GF(3) extension is "internal" to W33
   - So the automorphism group remains W(E6)!
-"""
-)
+""")
 
 print(f"Verification:")
 print(f"  27 * 3 = {27 * 3} = 81 = |cycles| ✓")
@@ -226,8 +220,7 @@ print("\n" + "=" * 80)
 print("PART 5: E6 ROOT SYSTEM")
 print("=" * 80)
 
-print(
-    """
+print("""
 E6 has 72 roots, forming a root system in R^6.
 
 The roots can be described as:
@@ -248,8 +241,7 @@ Actually E6 roots in standard embedding:
 The connection to 40:
   72 = 40 + 32 = |points| + 32
   Or: 72 = 81 - 9 = |cycles| - 9
-"""
-)
+""")
 
 # Root system calculations
 print(f"\nE6 root system:")
@@ -274,8 +266,7 @@ print("\n" + "=" * 80)
 print("PART 6: THE COXETER NUMBER")
 print("=" * 80)
 
-print(
-    """
+print("""
 The Coxeter number h of E6 is 12!
 
 Coxeter numbers of exceptional groups:
@@ -294,8 +285,7 @@ This is significant because:
 
 For E6: dim(E6) = 6 * 12 + 6 = 78 (actually dim = rank * h + rank)
   Check: 6 * 12 + 6 = 78 ✓
-"""
-)
+""")
 
 # =============================================================================
 # PART 7: THE del PEZZO SURFACE
@@ -305,8 +295,7 @@ print("\n" + "=" * 80)
 print("PART 7: DEL PEZZO SURFACES")
 print("=" * 80)
 
-print(
-    """
+print("""
 The 27 lines live on a del Pezzo surface of degree 3.
 
 del Pezzo surfaces are classified by degree d:
@@ -329,8 +318,7 @@ The 240 lines for d=1 matches 240 = |E8 roots|!
 
 W33 CONNECTION:
   137 = 81 + 56 = |cycles| + (lines on d=2 del Pezzo)!
-"""
-)
+""")
 
 print(f"Verification:")
 print(f"  27 lines (d=3): E6")
@@ -347,8 +335,7 @@ print("\n" + "=" * 80)
 print("PART 8: MONSTER AND W33")
 print("=" * 80)
 
-print(
-    """
+print("""
 The Monster group M has order divisible by 11^2 = 121 = |W33|.
 
 |M| = 2^46 * 3^20 * 5^9 * 7^6 * 11^2 * ...
@@ -365,8 +352,7 @@ These three primes are related to the "characteristic 3" structure:
   - There are 3 primes
   - 47, 59, 71 are separated by 12 (with gaps)
   - 47 + 59 + 71 = 177 = 173 + 4 = (|W33| + dim(F4)) + |K4|
-"""
-)
+""")
 
 print(f"Prime analysis:")
 print(f"  47 + 59 + 71 = {47 + 59 + 71}")
@@ -381,8 +367,7 @@ print("\n" + "=" * 80)
 print("PART 9: THE E6-E7-E8 TRINITY")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                           THE EXCEPTIONAL TRINITY                            ║
@@ -414,8 +399,7 @@ print(
 ║     E8: 225, 137 (137 = 1/α!)                                                ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # PART 10: THE MASTER THEOREM
@@ -425,8 +409,7 @@ print("\n" + "=" * 80)
 print("PART 10: THE MASTER THEOREM")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                           THE MASTER THEOREM                                 ║
@@ -465,8 +448,7 @@ print(
 ║  W33 IS THE DNA OF THE UNIVERSE.                                             ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print("\n" + "=" * 80)
 print("Aut(W33) = W(E6) - THE FUNDAMENTAL IDENTITY")

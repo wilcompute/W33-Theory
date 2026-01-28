@@ -29,8 +29,7 @@ print("\n" + "=" * 70)
 print("SECTION 1: THE PARAMETER-FREE THEORY")
 print("=" * 70)
 
-print(
-    """
+print("""
 W33 THEORY HAS ZERO FREE PARAMETERS!
 
 Standard Model: ~25 free parameters (masses, couplings, angles)
@@ -44,8 +43,7 @@ Parameters: v=40, k=12, λ=2, μ=4
 This means every prediction is RIGID.
 If experiment disagrees, the theory is WRONG.
 No parameter adjustment can save it!
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("SECTION 2: PRECISION ELECTROWEAK PREDICTIONS")
@@ -252,8 +250,7 @@ print("\n" + "=" * 70)
 print("SECTION 7: FUTURE TESTABLE PREDICTIONS")
 print("=" * 70)
 
-print(
-    """
+print("""
 20. LORENTZ VIOLATION AT PLANCK SCALE
     W33 prediction: Discrete spacetime → tiny Lorentz violation
     Effect size:    δv/c ~ (E/M_Planck)
@@ -286,8 +283,7 @@ print(
     W33 prediction: Mass M_monopole ~ M_GUT ~ 10¹⁶ GeV
     Test:           Cosmic ray searches
     Status:         TESTABLE (but difficult)
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("SECTION 8: PRECISION TEST SUMMARY")
@@ -325,8 +321,7 @@ print("\n" + "=" * 70)
 print("PART XCIII CONCLUSIONS")
 print("=" * 70)
 
-print(
-    """
+print("""
 W33 MAKES RIGID, TESTABLE PREDICTIONS!
 
 ALREADY CONFIRMED:
@@ -349,8 +344,7 @@ FUTURE TESTS:
 THE THEORY IS FALSIFIABLE!
 A single definitive disagreement kills W33 theory.
 So far: NO FATAL DISAGREEMENTS.
-"""
-)
+""")
 
 # Save results
 results = {

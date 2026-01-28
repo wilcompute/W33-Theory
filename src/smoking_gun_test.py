@@ -224,8 +224,7 @@ def compute_mass_matrix_structure():
     # then mass matrix elements could be:
     #   M_{i,j} = <vertex_i_fiber_state | interaction | vertex_j_fiber_state>
 
-    print(
-        f"""
+    print(f"""
 Potential Mass Matrix Structure:
   Dimension: 45 × 6 = 270 states (if all were equivalent)
 
@@ -242,8 +241,7 @@ expected mass patterns:
 
 Prediction: Mass spectrum should show 2-3 families
            with specific mass ratios from geometry
-"""
-    )
+""")
 
 
 if __name__ == "__main__":
@@ -255,8 +253,7 @@ if __name__ == "__main__":
     print("\n" + "=" * 70)
     print("CONCLUSION")
     print("=" * 70)
-    print(
-        """
+    print("""
 Q45 structure with all vertices at (Z4, Z3) = (2, 0):
 
 ✓ Consistent with SU(5) fundamental rep
@@ -266,5 +263,4 @@ Q45 structure with all vertices at (Z4, Z3) = (2, 0):
 
 Next test: Extract actual vertex potentials and
 compute mass eigenvalues.
-"""
-    )
+""")

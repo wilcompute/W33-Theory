@@ -28,8 +28,7 @@ print("\n" + "=" * 70)
 print("SECTION 1: BASIC NUMBER THEORY OF 1111")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE NUMBER 1111:
 ================
 
@@ -39,8 +38,7 @@ Properties:
 • Repunit: 1111 = (10⁴ - 1)/9 = 1 + 10 + 100 + 1000
 • Binary: 1111 = 10001010111₂ (11 bits)
 • In base 3: 1111 = 1111001₃ (1×729 + 1×243 + 1×81 + 1×27 + 1 = 1081... wait)
-"""
-)
+""")
 
 
 # Check base conversions
@@ -75,8 +73,7 @@ print("\n" + "=" * 70)
 print("SECTION 2: 1111 AS A REPUNIT")
 print("=" * 70)
 
-print(
-    """
+print("""
 REPUNIT NUMBERS:
 ================
 
@@ -98,8 +95,7 @@ Both 11 and 101 are special primes:
 • 101 = 100 + 1
 
 These are "repunit primes" patterns!
-"""
-)
+""")
 
 
 # Factorize repunits
@@ -131,8 +127,7 @@ print("\n" + "=" * 70)
 print("SECTION 3: 1111 FROM W33 GEOMETRY?")
 print("=" * 70)
 
-print(
-    """
+print("""
 SEARCHING FOR 1111 IN W33:
 ==========================
 
@@ -152,8 +147,7 @@ Attempts:
 
 The cleanest: 1111 = 1080 + 31 = 40 × 27 + 31
   Where 31 is prime and 40 × 27 = W33 × E₆_fund!
-"""
-)
+""")
 
 # Check combinations
 print("\nSearching for W33 decompositions of 1111:")
@@ -188,15 +182,13 @@ digit_sum = sum(digits_3)
 print(f"Sum of digits: {digit_sum}")
 
 # Analysis
-print(
-    f"""
+print(f"""
 Base 3 decomposition of 1111:
 1111 = 1×3⁶ + 1×3⁵ + 1×3⁴ + 0×3³ + 2×3² + 0×3¹ + 1×3⁰
      = 729 + 243 + 81 + 0 + 18 + 0 + 1
      = 729 + 243 + 81 + 18 + 1
      = 1072? Let me verify...
-"""
-)
+""")
 
 # Manual verification
 check = 1 * 729 + 1 * 243 + 1 * 81 + 0 * 27 + 2 * 9 + 0 * 3 + 1 * 1
@@ -226,8 +218,7 @@ print("\n" + "=" * 70)
 print("SECTION 5: 1111 AND EXCEPTIONAL ALGEBRAS")
 print("=" * 70)
 
-print(
-    """
+print("""
 EXCEPTIONAL DECOMPOSITIONS:
 ===========================
 
@@ -238,8 +229,7 @@ dim(E₇) = 133, fund = 56
 dim(E₈) = 248, roots = 240
 
 Attempts:
-"""
-)
+""")
 
 # Try combinations
 exceptional = {
@@ -281,8 +271,7 @@ print("\n" + "=" * 70)
 print("SECTION 6: WHY 40/1111?")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE RATIO 40/1111:
 ==================
 
@@ -306,10 +295,7 @@ OR in terms of geometry:
 • 11 = number of something (maximal cliques? special substructures?)
 • 101 = number of something else
 • 40/1111 = W33 normalized by these counts
-""".format(
-        40 / 1111
-    )
-)
+""".format(40 / 1111))
 
 # =============================================================================
 # SECTION 7: 1111 AND 37
@@ -319,8 +305,7 @@ print("\n" + "=" * 70)
 print("SECTION 7: THE 37 CONNECTION")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE NUMBER 37:
 ==============
 
@@ -344,8 +329,7 @@ Or: 1111 = (7 + 13 + 17) × 30 + 1
            = 1111 ✓
 
 BEAUTIFUL! 1111 = 999 + 111 + 1 = 27 × 37 + 3 × 37 + 1
-"""
-)
+""")
 
 # Verify
 print(f"Verification:")
@@ -362,8 +346,7 @@ print("\n" + "=" * 70)
 print("SECTION 8: 1111 AS GEOMETRIC SERIES")
 print("=" * 70)
 
-print(
-    """
+print("""
 GEOMETRIC SERIES INTERPRETATION:
 ================================
 
@@ -385,8 +368,7 @@ Alternative: 3^7 - 1076 = 2187 - 1076 = 1111
 Where 1076 = 4 × 269, and 269 is prime.
 
 Or: 3^7 = 2187 = 1111 + 1076 = 1111 + 4 × 269
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 9: DEEPER STRUCTURE
@@ -396,8 +378,7 @@ print("\n" + "=" * 70)
 print("SECTION 9: THE DEEP STRUCTURE")
 print("=" * 70)
 
-print(
-    """
+print("""
 SYNTHESIZING THE MEANING OF 1111:
 =================================
 
@@ -437,8 +418,7 @@ The 1111 vacuum constraints might come from:
 Total: 1 + 10 + 100 + 1000 = 1111
 
 This matches the generation hierarchy!
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 10: PREDICTIVE POWER
@@ -448,8 +428,7 @@ print("\n" + "=" * 70)
 print("SECTION 10: PREDICTIONS FROM 1111")
 print("=" * 70)
 
-print(
-    """
+print("""
 IF 1111 = generation hierarchy constraints, THEN:
 
 Generation mass hierarchy ∝ powers of 10?
@@ -471,8 +450,7 @@ If 1111 = 11 × 101, then:
 • 11 might count first-order corrections
 • 101 might count second-order corrections
 • 40/1111 = W33 / (11 × 101) is the normalized correction
-"""
-)
+""")
 
 # Calculate actual ratios
 me, mmu, mtau = 0.511, 105.7, 1777
@@ -507,8 +485,7 @@ print("\n" + "=" * 70)
 print("PART LX CONCLUSIONS")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE MYSTERY OF 1111 - RESOLVED?
 
 Key findings:
@@ -534,6 +511,5 @@ where the vacuum structure 1111 = 1 + 10 + 100 + 1000
 encodes the three-generation hierarchy.
 
 Results saved to PART_LX_1111_mystery_results.json
-"""
-)
+""")
 print("=" * 70)

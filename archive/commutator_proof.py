@@ -229,8 +229,7 @@ def analyze_algebraic_constraint():
     print("\n" + "-" * 50)
     print("KEY OBSERVATION")
     print("-" * 50)
-    print(
-        """
+    print("""
     Points on the same line are ORTHOGONAL (<p|q> = 0).
 
     This means the 4 points on each line form an orthonormal basis of C^4!
@@ -242,8 +241,7 @@ def analyze_algebraic_constraint():
     So this is not a standard MUB configuration.
 
     But the structure is similar: equiangular frames with orthogonality constraints.
-    """
-    )
+    """)
 
     # Let's verify: do lines give orthonormal bases?
     print("\nVerifying orthonormality on lines:")
@@ -333,8 +331,7 @@ def analyze_clifford_connection():
     print("\n" + "-" * 50)
     print("HYPOTHESIS: SPINOR STATES")
     print("-" * 50)
-    print(
-        """
+    print("""
     The 40 points might represent spinor states or Bloch vectors
     in a 4-dimensional spinor space.
 
@@ -349,8 +346,7 @@ def analyze_clifford_connection():
     The Z_12 phases might encode both:
     - Z_4: quaternionic phase (1, i, -1, -i) from SU(2) spinors
     - Z_3: color charge or triality from some other structure
-    """
-    )
+    """)
 
 
 def main():

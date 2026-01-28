@@ -26,8 +26,7 @@ print("\n" + "=" * 70)
 print("SECTION 1: DARK MATTER EVIDENCE")
 print("=" * 70)
 
-print(
-    """
+print("""
 Evidence for dark matter:
 
 1. Galaxy rotation curves (flat at large r)
@@ -48,8 +47,7 @@ From Part LXX, W33 predicts:
   Ω_Λ = 56/81 = 0.691 (1% error)
 
 But what IS the dark matter particle?
-"""
-)
+""")
 
 Omega_m_exp = 0.315
 Omega_b_exp = 0.049
@@ -65,8 +63,7 @@ print("\n" + "=" * 70)
 print("SECTION 2: W33 DARK SECTOR")
 print("=" * 70)
 
-print(
-    """
+print("""
 W33 = SRG(40, 12, 2, 4) has 40 vertices.
 
 We've assigned:
@@ -84,8 +81,7 @@ These 10 "hidden" vertices could be:
   - Dark matter candidates (4)
   - Dark photon / Z' (1)
   - Additional scalars (2)
-"""
-)
+""")
 
 SM_vertices = 30
 DM_vertices = 40 - SM_vertices
@@ -100,8 +96,7 @@ print("\n" + "=" * 70)
 print("SECTION 3: W33 WIMP CANDIDATE")
 print("=" * 70)
 
-print(
-    """
+print("""
 The leading dark matter paradigm: WIMPs
 (Weakly Interacting Massive Particles)
 
@@ -119,8 +114,7 @@ Or alternatively:
   M_χ = 3^4 × (1 - mu/81) = 81 × 0.951 = 77 GeV
 
 This is in the PERFECT mass range for WIMP searches!
-"""
-)
+""")
 
 M_chi_w33 = 81 - 4  # 77 GeV
 print(f"W33 WIMP mass: M_χ = 3^4 - mu = {M_chi_w33} GeV")
@@ -137,8 +131,7 @@ print("\n" + "=" * 70)
 print("SECTION 4: DARK MATTER RELIC ABUNDANCE")
 print("=" * 70)
 
-print(
-    """
+print("""
 The relic abundance from thermal freeze-out:
 
   Ω_χ h^2 = (1.07 × 10^9 GeV^-1) / (M_Pl × g_*^{1/2} × x_f × <σv>)
@@ -151,8 +144,7 @@ where:
 For W33 WIMP with M_χ = 77 GeV:
   - Couples through W33 structure
   - Annihilation: χχ → SM particles
-"""
-)
+""")
 
 # Simplified calculation
 M_Pl = 1.22e19  # GeV
@@ -181,8 +173,7 @@ print("\n" + "=" * 70)
 print("SECTION 5: WIMP STABILITY")
 print("=" * 70)
 
-print(
-    """
+print("""
 Dark matter must be STABLE (or very long-lived).
 
 Why would a W33 dark vertex be stable?
@@ -200,8 +191,7 @@ The lightest "dark parity odd" particle (LDP) is stable.
   LDP = χ (our 77 GeV WIMP)
 
 Decay χ → SM is FORBIDDEN by this Z_2!
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 6: DIRECT DETECTION
@@ -211,8 +201,7 @@ print("\n" + "=" * 70)
 print("SECTION 6: DIRECT DETECTION SIGNATURES")
 print("=" * 70)
 
-print(
-    """
+print("""
 Direct detection experiments (LZ, XENONnT, PandaX):
   - Look for χ + nucleus → χ + nucleus (recoil)
   - Current limit: σ_SI < 10^-47 cm^2 at 50 GeV
@@ -223,8 +212,7 @@ The interaction is mediated by Higgs exchange (scalar):
   σ_SI = (f_N^2 × M_χ^2 × m_N^2) / (π × M_H^4 × v^2)
 
 where f_N ~ 0.3 is the Higgs-nucleon coupling.
-"""
-)
+""")
 
 # Compute cross section
 f_N = 0.3
@@ -242,15 +230,13 @@ GeV_to_cm2 = 3.89e-28
 sigma_SI_cm2 = sigma_SI * GeV_to_cm2**2
 print(f"In cm^2: σ_SI ~ {sigma_SI_cm2:.1e} cm^2")
 
-print(
-    """
+print("""
 The predicted cross section is BELOW current limits!
 W33 WIMP could be detected in next-generation experiments.
 
 KEY: The factor of (M_chi / M_H)^2 × (m_N / v)^2 gives
 natural suppression to ~10^-46 cm^2 range.
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 7: INDIRECT DETECTION
@@ -260,8 +246,7 @@ print("\n" + "=" * 70)
 print("SECTION 7: INDIRECT DETECTION")
 print("=" * 70)
 
-print(
-    """
+print("""
 Indirect detection looks for DM annihilation products:
   χχ → γγ, W+W-, bb̄, τ+τ-, ...
 
@@ -280,8 +265,7 @@ Look for gamma ray LINE at 77 GeV!
 Interestingly, there were hints of excess at ~75-80 GeV
 in early Fermi-LAT data from the galactic center.
 (Though now attributed mostly to unresolved sources)
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 8: DARK SECTOR PARTICLES
@@ -291,8 +275,7 @@ print("\n" + "=" * 70)
 print("SECTION 8: COMPLETE W33 DARK SECTOR")
 print("=" * 70)
 
-print(
-    """
+print("""
 W33 predicts a COMPLETE dark sector (10 vertices):
 
 1. χ (WIMP) - 77 GeV - stable DM
@@ -315,8 +298,7 @@ MASS SPECTRUM:
   χ (77 GeV) < χ' (85 GeV) < ...
 
 Only χ is stable → cosmological dark matter!
-"""
-)
+""")
 
 # Mass predictions
 dark_masses = {
@@ -336,8 +318,7 @@ print("\n" + "=" * 70)
 print("SECTION 9: BARYONIC / DARK MATTER RATIO")
 print("=" * 70)
 
-print(
-    """
+print("""
 Why is Ω_DM / Ω_b ≈ 5?
 
 W33 prediction:
@@ -355,8 +336,7 @@ ALTERNATIVE from W33 numbers:
 
 This is remarkable: the dark-to-baryon ratio
 is FIXED by W33 geometry!
-"""
-)
+""")
 
 Omega_DM_b_pred = 40 / 8
 Omega_DM_b_exp = Omega_DM_exp / Omega_b_exp
@@ -403,8 +383,7 @@ results = {
 
 with open("PART_LXXIV_dark_matter.json", "w") as f:
     json.dump(results, f, indent=2, default=int)
-print(
-    """
+print("""
 DARK MATTER FROM W33!
 
 Key discoveries:
@@ -428,6 +407,5 @@ Key discoveries:
 W33 provides a COMPLETE dark matter framework!
 
 Results saved to PART_LXXIV_dark_matter.json
-"""
-)
+""")
 print("=" * 70)

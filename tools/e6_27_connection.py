@@ -332,8 +332,7 @@ def main():
     print("\n" + "=" * 70)
     print("SUMMARY: THE 27-240 CONNECTION")
     print("=" * 70)
-    print(
-        """
+    print("""
 KEY FINDINGS:
 
 1. H27 (non-neighbors) has 108 edges
@@ -360,8 +359,7 @@ The 240 edges correspond to E8 roots via the decomposition:
   240 = 27 * 8 + 24 (where 24 = 3 * 8 is D4 structure)
   OR
   240 = 2 * 108 + 2 * 12 = 2 * (H27 + vertex degree)
-"""
-    )
+""")
 
     # Save
     results = {

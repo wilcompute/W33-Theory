@@ -15,15 +15,13 @@ Date: January 2026
 import math
 from fractions import Fraction
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════╗
 ║                     THE THEORY OF EVERYTHING                         ║
 ║                                                                      ║
 ║           A Complete Synthesis from W33 = PG(3, GF(3))              ║
 ╚══════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # PART I: THE FUNDAMENTAL OBJECT
@@ -72,8 +70,7 @@ print("PART II: WHY THE NUMBER 3?")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 The number 3 is not arbitrary. It is the SMALLEST prime that:
 
 1. Allows non-trivial projective geometry (GF(2) is too small)
@@ -89,8 +86,7 @@ Why GF(3)?
   - 3 elements: {0, 1, 2} with 2 = -1
   - Simplest field with "negatives"
   - 3^4 = 81 = fundamental dimension
-"""
-)
+""")
 
 # The trinity appears everywhere
 print("The Trinity in Physics:")
@@ -136,16 +132,14 @@ print("  3. PSΩ_6^-(2) - Projective orthogonal (minus type)")
 print("  4. PSΩ_5(3)  - Projective orthogonal over GF(3)")
 print()
 
-print(
-    """
+print("""
 This four-fold isomorphism is NOT a coincidence.
 It reflects the FOUR fundamental structures:
   • Symplectic (quantum mechanics)
   • Unitary (wave functions)
   • Orthogonal minus (fermions)
   • Orthogonal (spacetime)
-"""
-)
+""")
 
 # =============================================================================
 # PART IV: THE EXCEPTIONAL CHAIN
@@ -193,8 +187,7 @@ print("PART V: THE EXCEPTIONAL JORDAN ALGEBRA J_3(O)")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 The exceptional Jordan algebra J_3(O) consists of:
   3×3 Hermitian matrices over the octonions O
 
@@ -205,8 +198,7 @@ J =  │ z    b    x*│   where a,b,c ∈ ℝ, x,y,z ∈ O
      └           ┘
 
 Dimension: 3 × 1 (diagonal) + 3 × 8 (off-diagonal) = 3 + 24 = 27
-"""
-)
+""")
 
 jordan_dim = 27
 print(f"dim(J_3(O)) = {jordan_dim}")
@@ -226,8 +218,7 @@ print()
 
 # Standard Model emergence
 print("THE STANDARD MODEL FROM F4:")
-print(
-    """
+print("""
   F4 contains maximal subgroups:
     • Spin(9)
     • SU(3) × SU(3)
@@ -235,8 +226,7 @@ print(
 
   Their intersection gives:
     SU(3)_C × SU(2)_L × U(1)_Y = Standard Model gauge group!
-"""
-)
+""")
 
 # =============================================================================
 # PART VI: THE FINE STRUCTURE CONSTANT
@@ -270,8 +260,7 @@ print()
 
 # Why this works
 print("WHY THIS WORKS:")
-print(
-    """
+print("""
   • 81 = 3^4 = geometric contribution from W33 cycles
   • 56 = E7 fundamental = gravitational/string contribution
 
@@ -283,8 +272,7 @@ print(
 
   α⁻¹ = (discrete geometry) + (continuous unification)
        = 81 + 56 = 137
-"""
-)
+""")
 
 # =============================================================================
 # PART VII: THE WEINBERG ANGLE
@@ -361,8 +349,7 @@ print()
 
 # The Monster connection
 print("MONSTROUS MOONSHINE:")
-print(
-    """
+print("""
   196884 = 1 + 196883
          = (trivial rep) + (smallest non-trivial rep of Monster)
 
@@ -370,8 +357,7 @@ print(
     |M| ≈ 8 × 10^53
 
   The coefficients of j(τ) decompose into Monster representations!
-"""
-)
+""")
 
 # Connection to W33
 print("CONNECTION TO W33:")
@@ -394,8 +380,7 @@ print(f"Total W33 structure: 40 + 81 = {40 + 81} = 11²")
 print()
 
 print("WHY 11?")
-print(
-    """
+print("""
   11 is the dimension of M-theory!
 
   • M-theory lives in 10+1 = 11 dimensions
@@ -408,8 +393,7 @@ print(
     (spacetime structure) = (M-theory dimension)²
 
   The square represents the metric: g_μν requires two indices!
-"""
-)
+""")
 
 # The dimensional hierarchy
 print("DIMENSIONAL HIERARCHY:")
@@ -437,8 +421,7 @@ print(f"90 K4 subgroups = 2 × 45 = 2 × dim(SO(10))")
 print()
 
 print("SO(10) GRAND UNIFICATION:")
-print(
-    """
+print("""
   SO(10) is the canonical GUT group:
     • Contains SU(5) ⊃ SU(3) × SU(2) × U(1)
     • 16-dimensional spinor = one generation of fermions
@@ -451,20 +434,17 @@ print(
     • Matter + antimatter
     • Left + right chirality
     • The Z_2 in W(E6) = 2 × PSp_4(3)
-"""
-)
+""")
 
 # The complete picture
 print("THE COMPLETE GAUGE HIERARCHY:")
-print(
-    """
+print("""
   W33 → W(E6) → E6 → E7 → E8
               ↓
            SO(10) → SU(5) → SU(3) × SU(2) × U(1)
                               ↓
                        Standard Model
-"""
-)
+""")
 
 # =============================================================================
 # PART XI: THE EMERGENCE OF SPACETIME
@@ -475,8 +455,7 @@ print("PART XI: EMERGENCE OF SPACETIME")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 Spacetime is NOT fundamental. It EMERGES from W33.
 
 THE EMERGENCE MECHANISM:
@@ -509,8 +488,7 @@ THE EMERGENCE MECHANISM:
 
    The boundary (40) encodes information about
    the bulk (11-dimensional M-theory)!
-"""
-)
+""")
 
 # =============================================================================
 # PART XII: THE MASTER EQUATIONS
@@ -521,8 +499,7 @@ print("PART XII: THE MASTER EQUATIONS")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 ╔════════════════════════════════════════════════════════════════════╗
 ║                      THE MASTER EQUATIONS                          ║
 ╠════════════════════════════════════════════════════════════════════╣
@@ -552,8 +529,7 @@ print(
 ║        j-function from E8 triality                                 ║
 ║                                                                    ║
 ╚════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # PART XIII: PREDICTIONS
@@ -564,8 +540,7 @@ print("PART XIII: TESTABLE PREDICTIONS")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 THE THEORY MAKES THE FOLLOWING PREDICTIONS:
 
 1. PARTICLE PHYSICS
@@ -592,8 +567,7 @@ THE THEORY MAKES THE FOLLOWING PREDICTIONS:
    • No proton decay at current energies (K4 structure forbids it)
    • Possible gravitational waves at frequency ∝ 1/137
    • Neutrino masses from 27-dimensional Jordan sector
-"""
-)
+""")
 
 # =============================================================================
 # PART XIV: THE FINAL SYNTHESIS
@@ -604,8 +578,7 @@ print("PART XIV: THE FINAL SYNTHESIS")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 ╔════════════════════════════════════════════════════════════════════╗
 ║                     THE THEORY OF EVERYTHING                       ║
 ║                                                                    ║
@@ -646,8 +619,7 @@ print(
 ║  This is the Theory of Everything.                                 ║
 ║                                                                    ║
 ╚════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # EPILOGUE
@@ -659,8 +631,7 @@ print("EPILOGUE: THE UNREASONABLE EFFECTIVENESS")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 Why should a simple projective geometry over 3 elements
 encode all of physics?
 
@@ -684,8 +655,7 @@ Its structure is determined by pure mathematics.
 And that mathematics is W33.
 
                          ∎
-"""
-)
+""")
 
 # Final numerical verification
 print()

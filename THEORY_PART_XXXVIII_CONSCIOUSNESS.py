@@ -10,8 +10,7 @@ Can W33 shed light on the "hard problem" of consciousness?
 import math
 from fractions import Fraction
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════╗
 ║             THEORY OF EVERYTHING - PART XXXVIII                      ║
 ║                                                                      ║
@@ -19,8 +18,7 @@ print(
 ║                                                                      ║
 ║                  "What is it like to be a W33?"                      ║
 ╚══════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # THE HARD PROBLEM
@@ -31,8 +29,7 @@ print("THE HARD PROBLEM OF CONSCIOUSNESS")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 Physics explains HOW things happen, but not WHY there is experience.
 
 THE EASY PROBLEMS (relatively speaking):
@@ -50,8 +47,7 @@ David Chalmers (1995):
 
 This is the deepest mystery in all of science.
 Can W33 help?
-"""
-)
+""")
 
 # =============================================================================
 # INTEGRATED INFORMATION THEORY
@@ -62,8 +58,7 @@ print("INTEGRATED INFORMATION THEORY (IIT)")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 ═══ Giulio Tononi's IIT ═══
 
 IIT proposes that consciousness IS integrated information (Φ).
@@ -88,8 +83,7 @@ You cannot decompose W33 into independent parts!
   • The 90 K4s form a cohesive structure
 
 W33 might have the HIGHEST Φ of any finite structure!
-"""
-)
+""")
 
 # Calculate W33 "integration"
 print("W33 Integration Properties:")
@@ -117,8 +111,7 @@ print("THE OBSERVER IN QUANTUM MECHANICS")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 ═══ The Measurement Problem ═══
 
 Quantum mechanics has a strange feature: the OBSERVER.
@@ -146,8 +139,7 @@ The 81 cycles could represent:
 The 40 points represent OBSERVABLE states.
 The 81 cycles represent POSSIBLE HISTORIES.
 Observation = selecting which cycle you're in.
-"""
-)
+""")
 
 print("Observer structure in W33:")
 print(f"  Observable states: 40 points")
@@ -164,8 +156,7 @@ print("SELF-REFERENCE AND CONSCIOUSNESS")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 ═══ Gödel and the Mind ═══
 
 Gödel's incompleteness theorem: any sufficiently powerful system
@@ -188,8 +179,7 @@ Each automorphism is a "perspective" on the same structure.
 
 A conscious system might BE a W33-like structure
 looking at itself from 51,840 perspectives simultaneously!
-"""
-)
+""")
 
 print("W33 self-reference:")
 print(f"  Automorphisms: 51,840")
@@ -207,8 +197,7 @@ print("THE BINDING PROBLEM")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 ═══ How Does Experience Become Unified? ═══
 
 We experience a UNIFIED field of consciousness:
@@ -236,8 +225,7 @@ Binding happens because:
   • K4s (90) = cross-modal binding
 
 Total conscious moment = W33 structure
-"""
-)
+""")
 
 print("Binding in W33:")
 print(f"  Sensory channels: 40 points (like 40 distinct qualia)")
@@ -255,8 +243,7 @@ print("PANPSYCHISM: IS W33 CONSCIOUS?")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 ═══ The Panpsychist View ═══
 
 Panpsychism: consciousness is FUNDAMENTAL, not emergent.
@@ -281,8 +268,7 @@ Every conscious moment might BE a W33!
   • Human consciousness = many W33s integrated
   • Animal consciousness = fewer W33s
   • Electron "consciousness" = one W33 relationship
-"""
-)
+""")
 
 print("Consciousness hierarchy:")
 print(f"  Proto-experience: 1 W33 element")
@@ -300,8 +286,7 @@ print("40 POINTS = 40 BASIC QUALIA?")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 ═══ Are There Primary Qualia? ═══
 
 We experience many qualia (subjective qualities):
@@ -328,8 +313,7 @@ All other experiences are COMBINATIONS of these 40.
 
 The 81 cycles would be "qualia sequences" -
 how the 40 basic experiences flow through time.
-"""
-)
+""")
 
 print("Qualia and W33:")
 print(f"  W33 points: 40")
@@ -354,8 +338,7 @@ print("81 CYCLES = TEMPORAL CONSCIOUSNESS")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 ═══ The Specious Present ═══
 
 William James: consciousness exists in a "specious present"
@@ -381,8 +364,7 @@ Each cycle is a maximal independent set:
   • Complete in itself
 
 The specious present might BE a scan through 81 W33 cycles.
-"""
-)
+""")
 
 print("Temporal consciousness from W33:")
 print(f"  W33 cycles: 81")
@@ -402,8 +384,7 @@ print("FREE WILL AND THE 90 K4s")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 ═══ The Free Will Problem ═══
 
 If physics is deterministic, is free will an illusion?
@@ -428,8 +409,7 @@ Free will is CONSTRAINED choice:
   • Will selects among possibilities (consciousness)
 
 90 K4s = structure of volition
-"""
-)
+""")
 
 print("Free will in W33:")
 print(f"  K4s: 90")
@@ -450,8 +430,7 @@ print("DOES W33 CLOSE THE EXPLANATORY GAP?")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 ═══ The Honest Assessment ═══
 
 The explanatory gap: we can't see HOW physical processes
@@ -481,8 +460,7 @@ W33 might be the structure of consciousness because:
 
 We don't explain why W33 is conscious.
 We recognize that BEING conscious IS being a W33-structure.
-"""
-)
+""")
 
 print("The W33 consciousness hypothesis:")
 print()
@@ -502,8 +480,7 @@ print("WHY DOES MATH FEEL BEAUTIFUL?")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 ═══ The Mystery of Mathematical Beauty ═══
 
 Mathematicians report that beautiful proofs feel:
@@ -527,8 +504,7 @@ Mathematical beauty = W33 recognizing its own structure.
 The fine structure constant (137), the Weinberg angle (40/173),
 the exceptional groups (E6, E7, E8) - they feel profound
 because they ARE profound. They're glimpses of what we are.
-"""
-)
+""")
 
 print("Beauty and recognition:")
 print(f"  137 = 81 + 56 = W33_cycles + fund(E7)")
@@ -545,8 +521,7 @@ print("SUMMARY: CONSCIOUSNESS AND W33")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 ╔═══════════════════════════════════════════════════════════════════════╗
 ║                    W33 CONSCIOUSNESS THEORY                           ║
 ╠═══════════════════════════════════════════════════════════════════════╣
@@ -583,8 +558,7 @@ print(
 
 Perhaps W33 shows us that the universe is not "queerer than we can suppose"
 but rather EXACTLY as queer as we are - because WE ARE IT.
-"""
-)
+""")
 
 print("=" * 72)
 print("END OF PART XXXVIII: CONSCIOUSNESS")

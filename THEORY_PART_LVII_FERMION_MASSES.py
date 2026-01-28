@@ -30,8 +30,7 @@ print("\n" + "=" * 70)
 print("SECTION 1: WHY THREE GENERATIONS?")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE GENERATION MYSTERY:
 =======================
 
@@ -49,8 +48,7 @@ W33 ANSWER:
 
 The decomposition 81 = 3 × 27 might mean:
     3 generations × 27-dimensional family space
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 2: MASS HIERARCHY FROM W33 NUMBERS
@@ -123,8 +121,7 @@ print("\n" + "=" * 70)
 print("SECTION 3: W33 INTERPRETATION OF KOIDE")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE KOIDE FORMULA:
 ==================
 
@@ -142,8 +139,7 @@ HYPOTHESIS:
 The Koide formula comes from W33 structure where:
 • The "2" counts something (perhaps 2 off-diagonal elements)
 • The "3" is the number of generations from F₃
-"""
-)
+""")
 
 
 # Generalized Koide
@@ -174,8 +170,7 @@ CKM_exp = np.array(
 print("Experimental CKM matrix |Vij|:")
 print(CKM_exp)
 
-print(
-    """
+print("""
 CKM STRUCTURE:
 ==============
 
@@ -191,8 +186,7 @@ W33 PREDICTION ATTEMPT:
 Let's check: 2/9 in W33 terms:
 • 2 appears in many places (F₃ has element 2)
 • 9 = 3² is fundamental
-"""
-)
+""")
 
 # Test 2/9 as Cabibbo angle
 cabibbo_pred = 2 / 9
@@ -224,8 +218,7 @@ print(f"  A = {A}")
 print(f"  ρ̄ = {rho_bar}")
 print(f"  η̄ = {eta_bar}")
 
-print(
-    """
+print("""
 W33 INTERPRETATION:
 ===================
 
@@ -244,8 +237,7 @@ A ≈ 0.79:
 η̄ ≈ 0.357:
 • 5/14 = 0.357! (exact!)
 • 14 = 2 × 7 (octonion related)
-"""
-)
+""")
 
 # Test predictions
 print("\nW33 Wolfenstein predictions:")
@@ -287,8 +279,7 @@ print(f"  sin²θ12 = {s12_sq:.4f}")
 print(f"  sin²θ23 = {s23_sq:.4f}")
 print(f"  sin²θ13 = {s13_sq:.4f}")
 
-print(
-    """
+print("""
 TRIBIMAXIMAL MIXING (Historical):
 ==================================
 The "tribimaximal" ansatz predicted:
@@ -313,8 +304,7 @@ sin²θ23 ≈ 0.573:
 sin²θ13 ≈ 0.022:
 • 2/91 = 0.022 (exact!)
 • 91 = 7 × 13
-"""
-)
+""")
 
 # Test predictions
 print("\nW33 PMNS predictions:")
@@ -336,8 +326,7 @@ print("\n" + "=" * 70)
 print("SECTION 7: UNIFIED MIXING FROM W33")
 print("=" * 70)
 
-print(
-    """
+print("""
 EMERGING PATTERN:
 =================
 
@@ -369,8 +358,7 @@ Let's find W33 connections:
 The numbers 7, 13, 17 appear repeatedly!
 • 7 + 13 + 17 = 37
 • 7 × 13 × 17 = 1547
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 8: MASS FORMULA ATTEMPT
@@ -380,8 +368,7 @@ print("\n" + "=" * 70)
 print("SECTION 8: MASS FORMULA FROM W33")
 print("=" * 70)
 
-print(
-    """
+print("""
 MASS HIERARCHY HYPOTHESIS:
 ==========================
 
@@ -391,8 +378,7 @@ The huge mass hierarchy (mt/me ≈ 340,000) might come from powers of 3!
 3¹¹ = 177,147  ≈ mt (in MeV)!
 
 Let's check if masses fit powers of 3:
-"""
-)
+""")
 
 
 def find_power_of_3(m, base_scale=1):
@@ -427,8 +413,7 @@ print("\n" + "=" * 70)
 print("SECTION 9: GENERATION MASS FORMULA")
 print("=" * 70)
 
-print(
-    """
+print("""
 HYPOTHESIS: Masses follow m_n = m_0 × f(n) where n = generation
 
 For charged leptons, try:
@@ -444,8 +429,7 @@ where θ ≈ 0.222 radians and m_0 is a scale.
 
 W33 VERSION:
 Could θ = 2/9 radians? (Cabibbo angle!)
-"""
-)
+""")
 
 
 # Test Koide-type formula
@@ -474,8 +458,7 @@ print("\n" + "=" * 70)
 print("SECTION 10: SYNTHESIS")
 print("=" * 70)
 
-print(
-    """
+print("""
 EMERGING MASS/MIXING STRUCTURE FROM W33:
 =========================================
 
@@ -509,8 +492,7 @@ PREDICTIONS:
 • Cabibbo angle: sin θc = 2/9 = 0.2222...
 • CP violation in PMNS: δ from W33 geometry
 • Neutrino masses: may follow similar Koide formula
-"""
-)
+""")
 
 # =============================================================================
 # SAVE RESULTS
@@ -538,8 +520,7 @@ print("\n" + "=" * 70)
 print("PART LVII CONCLUSIONS")
 print("=" * 70)
 
-print(
-    """
+print("""
 KEY RESULTS:
 
 1. ✓ Koide formula Q = 2/3 connects to F₃ structure
@@ -556,6 +537,5 @@ KEY RESULTS:
 NEXT: Derive these formulas from W33 group theory!
 
 Results saved to PART_LVII_fermion_masses_results.json
-"""
-)
+""")
 print("=" * 70)

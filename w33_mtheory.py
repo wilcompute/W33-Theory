@@ -33,8 +33,7 @@ print("\n" + "=" * 80)
 print("PART 1: THE SIGNIFICANCE OF 11")
 print("=" * 80)
 
-print(
-    """
+print("""
 WHY 11 DIMENSIONS?
 ==================
 
@@ -57,8 +56,7 @@ W33 connection:
   11 = √(40 + 81) = √(matter + vacuum)
 
 THE DIMENSION IS THE GEOMETRIC MEAN!
-"""
-)
+""")
 
 w33_points = 40
 w33_cycles = 81
@@ -81,8 +79,7 @@ print("\n" + "=" * 80)
 print("PART 2: 32 SUPERCHARGES")
 print("=" * 80)
 
-print(
-    """
+print("""
 M-THEORY SUPERSYMMETRY
 ======================
 
@@ -107,8 +104,7 @@ Actually:
   - 32 = 2 × 16 = 2 × 4² = 2 × (K4)²
 
 The supercharges relate to K4 structure!
-"""
-)
+""")
 
 supercharges = 32
 k4_size = 4
@@ -134,8 +130,7 @@ print("\n" + "=" * 80)
 print("PART 3: M2 AND M5 BRANES")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE FUNDAMENTAL BRANES
 ======================
 
@@ -160,8 +155,7 @@ W33 connection:
   - 2 = dimension of ℂ
   - 5 = dimension of sphere S⁴ boundary (M5 horizon)
   - 2 + 5 = 7 = imaginary octonions!
-"""
-)
+""")
 
 m2_dim = 2 + 1  # M2-brane worldvolume
 m5_dim = 5 + 1  # M5-brane worldvolume
@@ -186,8 +180,7 @@ print("\n" + "=" * 80)
 print("PART 4: E₈ × E₈ AND THE 496")
 print("=" * 80)
 
-print(
-    """
+print("""
 HETEROTIC STRING THEORY
 =======================
 
@@ -214,8 +207,7 @@ W33 connection:
   248 = 56 × 4 + 24 = 4 × (E₇ fund) + SU(5)
 
   Key: 248 - 133 = 115 = ?
-"""
-)
+""")
 
 e8_dim = 248
 e8xe8_dim = 496
@@ -244,8 +236,7 @@ print("\n" + "=" * 80)
 print("PART 5: THE 24 AND MOONSHINE")
 print("=" * 80)
 
-print(
-    """
+print("""
 MONSTROUS MOONSHINE
 ===================
 
@@ -267,8 +258,7 @@ W33 connection:
   24 = dim(SU(5)) ✓
   24 = 2 × 12 = 2 × dim(SM gauge)
   24 = 40 - 16 = W33 - spinor
-"""
-)
+""")
 
 print(f"\nThe number 24:")
 print(f"  Leech lattice dimension: 24")
@@ -291,8 +281,7 @@ print("\n" + "=" * 80)
 print("PART 6: COMPACTIFICATION ON W33")
 print("=" * 80)
 
-print(
-    """
+print("""
 M-THEORY ON W33
 ===============
 
@@ -316,8 +305,7 @@ Possible interpretation:
   This is the "size" of the W33 geometry
 
   9,170,703,360 = 2¹⁰ × 3⁹ × 5 × 7 × 13
-"""
-)
+""")
 
 sp63_order = 9170703360
 
@@ -347,8 +335,7 @@ print("\n" + "=" * 80)
 print("PART 7: THE DUALITY WEB")
 print("=" * 80)
 
-print(
-    """
+print("""
 STRING THEORY DUALITIES
 =======================
 
@@ -374,8 +361,7 @@ W33 interpretation:
 
 The 6 duality frames correspond to
 the 6 ways to choose 2 elements from K4!
-"""
-)
+""")
 
 print(f"\nThe number 6:")
 print(f"  String theories: 5 + M-theory = 6")
@@ -395,8 +381,7 @@ print("\n" + "=" * 80)
 print("PART 8: 121 = 11² DECOMPOSITION")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE STRUCTURE OF 121
 ====================
 
@@ -420,8 +405,7 @@ Or:
 
 The 11 = √121 is the GEOMETRIC MEAN of
 the matter-vacuum duality!
-"""
-)
+""")
 
 print(f"\n121 decompositions:")
 print(f"  121 = 1 + 120 = 1 + dim(SO(16))")
@@ -442,8 +426,7 @@ print("\n" + "=" * 80)
 print("PART 9: F-THEORY AND 12 DIMENSIONS")
 print("=" * 80)
 
-print(
-    """
+print("""
 F-THEORY: 12 DIMENSIONS
 =======================
 
@@ -463,8 +446,7 @@ So:
   M-theory (11D) + gauge (12D structure) → E₇!
 
 The F-theory lift of W33 gives E₇ unification!
-"""
-)
+""")
 
 print(f"\nF-theory dimensions:")
 print(f"  F-theory: 12D")
@@ -485,8 +467,7 @@ print("\n" + "=" * 80)
 print("PART 10: THE ULTIMATE SYNTHESIS")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                    W33 AND M-THEORY: THE CONNECTION                          ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
@@ -532,8 +513,7 @@ print(
 ║  Everything is encoded in 40 + 81 = 121 = 11².                               ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print("\n" + "=" * 80)
 print("11 = √(MATTER + VACUUM) = √(40 + 81) = √121")

@@ -20,19 +20,16 @@
 # This is the MASTER REFERENCE for the W33 Theory of Everything.
 
 
-import numpy as np
+import numpy as np  # noqa: F401
 
-print(  #
-    # ╔══════════════════════════════════════════════════════════════════════════════╗
-    # ║                                                                              ║
-    # ║                    THEORY OF EVERYTHING - PART LII                           ║
-    # ║                                                                              ║
-    # ║                     COMPLETE PREDICTION SUMMARY                              ║
-    # ║                                                                              ║
-    # ║                    All Predictions • All Agreements • All Units              ║
-    # ║                                                                              ║
-    # ╚══════════════════════════════════════════════════════════════════════════════╝
-)
+# ASCII header for Part LII (printing moved to main())
+
+if __name__ != "__main__":
+    # Avoid printing at import time; running as script will print.
+    def _w33_noop_print(*args, **kwargs):
+        return None
+
+    print = _w33_noop_print
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # W33 STRUCTURE (All dimensionless geometric counts)
@@ -261,7 +258,7 @@ def parse_percent(s):
     try:
         clean = str(s).replace("%", "").replace("~", "").replace("×10⁻⁸", "").strip()
         return float(clean.split()[0])
-    except:
+    except Exception:
         return 100.0  # Non-percentage entries
 
 

@@ -119,8 +119,7 @@ print("\n" + "=" * 70)
 print("DUALITY ANALYSIS")
 print("=" * 70)
 
-print(
-    """
+print("""
 W33 has 40 points and 40 lines - a perfect symmetry!
 In symplectic geometry, there IS a polarity (duality):
 
@@ -130,8 +129,7 @@ But there's also a symmetry in the polar space itself:
   Points (40) ↔ Lines (40)
 
 Let's check if there's a natural bijection...
-"""
-)
+""")
 
 # For each point p, consider the set of lines through p
 point_to_lines = {i: [] for i in range(n)}
@@ -245,8 +243,7 @@ print("=" * 70)
 # But v^⊥ contains v (since v is isotropic), so v^⊥ has dimension 3
 # and contains all lines through v
 
-print(
-    """
+print("""
 The symplectic polarity σ on PG(3,3):
   σ(point v) = v^⊥ = {u : ⟨u,v⟩ = 0}
 
@@ -259,8 +256,7 @@ At the level of the polar space W(3,3):
 
 The polarity extends to an automorphism of the incidence structure
 that swaps "points" and "lines" as abstract objects.
-"""
-)
+""")
 
 # Verify: the incidence matrix is symmetric (I_{p,L} = I_{L,p})
 incidence_matrix = np.zeros((n, len(lines)), dtype=int)
@@ -277,8 +273,7 @@ print("\n" + "=" * 70)
 print("SUMMARY: THE SELF-DUALITY")
 print("=" * 70)
 
-print(
-    """
+print("""
 ★ KEY INSIGHT: W33 IS SELF-DUAL ★
 
 The 40-40 symmetry between points and lines reflects that:
@@ -292,5 +287,4 @@ The outer automorphism of PSp(4,3) includes this polarity!
 At the level of homology:
   H₁(W33) transforms under the FULL group O(5,3):C2
   The Steinberg representation is compatible with this symmetry
-"""
-)
+""")

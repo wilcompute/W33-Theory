@@ -41,8 +41,7 @@ print("\n" + "=" * 80)
 print("PART 1: W33 AS A QUANTUM ERROR-CORRECTING CODE")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE INSIGHT: W33 IS A CODE
 ==========================
 
@@ -67,8 +66,7 @@ W33 CODE PARAMETERS:
   - n = 40 (physical qudits, base 3)
   - Lines give parity constraints
   - K4s give syndrome measurements
-"""
-)
+""")
 
 
 # Build the W33 parity check matrix
@@ -185,8 +183,7 @@ print("\n" + "=" * 80)
 print("PART 2: THE HOLOGRAPHIC BOUND")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE HOLOGRAPHIC PRINCIPLE
 =========================
 
@@ -206,8 +203,7 @@ W33 HOLOGRAPHY:
   - 40 points = "bulk" (3+1 dimensional?)
   - Boundary = lines? Or some substructure?
   - Information content = 81 bits (from H₁)
-"""
-)
+""")
 
 # Compute information content of W33
 n_points = 40
@@ -253,8 +249,7 @@ print("\n" + "=" * 80)
 print("PART 3: BLACK HOLE INFORMATION PARADOX")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE PARADOX
 ===========
 
@@ -275,8 +270,7 @@ W33 RESOLUTION:
   - Each cycle = one "bit" of black hole memory
   - Berry phase = how information is encoded
   - K4 constraint = information never truly lost
-"""
-)
+""")
 
 
 class W33BlackHole:
@@ -361,8 +355,7 @@ print("\n" + "=" * 80)
 print("PART 4: IT FROM BIT - THE UNIVERSE AS COMPUTATION")
 print("=" * 80)
 
-print(
-    """
+print("""
 WHEELER'S "IT FROM BIT"
 =======================
 
@@ -381,8 +374,7 @@ W33 AS A COMPUTER:
 
 The universe doesn't CONTAIN information.
 The universe IS information.
-"""
-)
+""")
 
 
 class W33Computer:
@@ -463,8 +455,7 @@ print("\n" + "=" * 80)
 print("PART 5: THE OBSERVER AND MEASUREMENT")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE MEASUREMENT PROBLEM
 =======================
 
@@ -486,8 +477,7 @@ OBSERVER = any subsystem correlated with W33 phases
 
 This is not consciousness-based!
 It's purely geometric/informational.
-"""
-)
+""")
 
 
 class W33Observer:
@@ -545,15 +535,13 @@ for p in [25, 30, 35]:
 print(f"  Bob knows: {bob.knowledge()}")
 print(f"  Bob's uncertainty: {bob.uncertainty(universe):.1f} bits")
 
-print(
-    """
+print("""
 KEY INSIGHT:
   - Different observers have different knowledge
   - But the W33 structure is observer-INDEPENDENT
   - "Objective reality" = the W33 geometry
   - "Subjective knowledge" = correlations with W33
-"""
-)
+""")
 
 # =============================================================================
 # PART 6: CONSCIOUSNESS AND INFORMATION
@@ -563,8 +551,7 @@ print("\n" + "=" * 80)
 print("PART 6: CONSCIOUSNESS AND INFORMATION")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE HARD PROBLEM OF CONSCIOUSNESS
 =================================
 
@@ -587,8 +574,7 @@ This doesn't EXPLAIN consciousness, but shows:
   - W33 has the right STRUCTURE for consciousness
   - Integrated information is built in
   - Not an accident, but geometric necessity
-"""
-)
+""")
 
 
 def integrated_information(subsystem, connectivity):
@@ -642,8 +628,7 @@ print(f"  One K4 (8 points): Φ = {phi_k4:.2f}")
 phi_full = integrated_information(list(range(40)), None)
 print(f"  Full W33 (40 points): Φ = {phi_full:.2f}")
 
-print(
-    """
+print("""
 SPECULATION:
   If consciousness requires Φ > threshold,
   then W33 structures with K4 components
@@ -651,8 +636,7 @@ SPECULATION:
 
   The universe isn't just DESCRIBED by W33.
   The universe EXPERIENCES itself through W33.
-"""
-)
+""")
 
 # =============================================================================
 # PART 7: THE NATURE OF TIME
@@ -662,8 +646,7 @@ print("\n" + "=" * 80)
 print("PART 7: TIME FROM INFORMATION")
 print("=" * 80)
 
-print(
-    """
+print("""
 WHAT IS TIME?
 =============
 
@@ -687,8 +670,7 @@ W33 ARROW OF TIME:
 The 81 cycles are like 81 "clocks":
   - Each ticks at its own rate
   - The overall flow = emergent time
-"""
-)
+""")
 
 
 class W33Time:
@@ -749,8 +731,7 @@ print("\n" + "=" * 80)
 print("PART 8: THE FINAL SYNTHESIS")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║              W33: INFORMATION IS FUNDAMENTAL                                 ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
@@ -809,8 +790,7 @@ THE DEEPEST INSIGHT:
 
 Wheeler was right: "It from Bit."
 More precisely: "It from W(3,3)."
-"""
-)
+""")
 
 print("\n" + "=" * 80)
 print("END OF INFORMATION-THEORETIC EXPLORATION")

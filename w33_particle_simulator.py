@@ -614,8 +614,7 @@ print("\n" + "=" * 80)
 print("PART 7: THE COMPLETE PICTURE")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                    W33 STANDARD MODEL SUMMARY                                ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
@@ -650,8 +649,7 @@ print(
 ║    • Cosmological constant in anthropic window                               ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # PART 8: SIMULATION - PARTICLE COLLISION
@@ -735,8 +733,7 @@ print("\n" + "=" * 80)
 print("END OF W33 PARTICLE PHYSICS SIMULATOR")
 print("=" * 80)
 
-print(
-    """
+print("""
 
 CONCLUSION:
 ===========
@@ -750,5 +747,4 @@ The W33 structure provides a complete framework for particle physics:
 
 The Standard Model is not arbitrary -
 it's the UNIQUE physics emerging from W33!
-"""
-)
+""")

@@ -229,8 +229,7 @@ def physical_analysis():
     print(" PHYSICAL ANALYSIS")
     print("=" * 70)
 
-    print(
-        """
+    print("""
     THE EIGENVALUE MULTIPLICITIES ENCODE PARTICLE PHYSICS:
 
     λ = 12 (mult 1):
@@ -277,8 +276,7 @@ def physical_analysis():
         - Combinatorics
 
     And potentially: PHYSICS (through E6 → SM symmetry breaking)
-    """
-    )
+    """)
 
 
 if __name__ == "__main__":

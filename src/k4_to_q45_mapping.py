@@ -268,8 +268,7 @@ def main():
     print("\n" + "=" * 70)
     print("KEY INSIGHT")
     print("=" * 70)
-    print(
-        """
+    print("""
     The 90 -> 45 mapping might work as follows:
 
     1. W33 (GQ(3,3)) has 40 points and 90 K4 components
@@ -287,8 +286,7 @@ def main():
     The -1 Bargmann phase in K4 and the (2,2,2) holonomy in unicentric triads
     are both manifestations of the same topological obstruction:
     a nontrivial Z_2 cocycle on the base space.
-    """
-    )
+    """)
 
 
 if __name__ == "__main__":

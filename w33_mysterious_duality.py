@@ -150,8 +150,7 @@ print("\n" + "=" * 70)
 print("PART 4: M-THEORY CHARGES")
 print("=" * 70)
 
-print(
-    """
+print("""
 The Mysterious Duality (Vafa, Iqbal-Neitzke-Vafa 2001):
 
 M-theory on T^k ↔ del Pezzo dP_k = Bl_k(P²)
@@ -159,8 +158,7 @@ M-theory on T^k ↔ del Pezzo dP_k = Bl_k(P²)
 For M-theory on T^6 (giving 5D):
 - U-duality group = E6
 - BPS charges ↔ 27 lines on cubic surface (= dP_3)
-"""
-)
+""")
 
 print("M-theory on T^6 charges (U-duality = E6):")
 print("  6 momenta (KK modes)")
@@ -186,8 +184,7 @@ print("\n" + "=" * 70)
 print("PART 5: W33 AS THE E6 BRIDGE")
 print("=" * 70)
 
-print(
-    """
+print("""
 The W(3,3) geometry sits at the E6 level of the exceptional hierarchy:
 
     E8 (240 roots)
@@ -203,8 +200,7 @@ W33 Interpretation:
 - This suggests W33 captures a 3-fold structure over the E6 geometry
 - The factor 3 = order of center of E6!
 - Z(E6) = Z/3Z → triple cover structure
-"""
-)
+""")
 
 print("The Number 81 in E-series context:")
 print(f"  81 = 3⁴ (perfect fourth power)")
@@ -218,8 +214,7 @@ print("\n" + "=" * 70)
 print("PART 6: FINE STRUCTURE CONSTANT FROM MYSTERIOUS DUALITY")
 print("=" * 70)
 
-print(
-    """
+print("""
 From Mysterious Duality:
   dP_2 has 56 lines (E7 representation)
   dP_3 has 27 lines (E6 representation)
@@ -231,8 +226,7 @@ Fine Structure Constant:
   1/α = 137 = 81 + 56 = |W33 cycles| + |dP_2 lines|
       = 3 × (dP_3 lines) + (dP_2 lines)
       = 3 × 27 + 56
-"""
-)
+""")
 
 alpha_inv = W33_CYCLES + 56
 experimental = 137.035999084
@@ -283,8 +277,7 @@ print("\n" + "=" * 70)
 print("PART 8: SCHLÄFLI GRAPH CONNECTION")
 print("=" * 70)
 
-print(
-    """
+print("""
 The Schläfli graph:
   - 27 vertices (= 27 lines on cubic surface)
   - 216 edges
@@ -296,8 +289,7 @@ Schläfli graph parameters: srg(27, 16, 10, 8)
   - k = 16 neighbors per vertex
   - λ = 10 common neighbors (adjacent)
   - μ = 8 common neighbors (non-adjacent)
-"""
-)
+""")
 
 schlafli_vertices = 27
 schlafli_edges = 216
@@ -357,8 +349,7 @@ print("\n" + "=" * 70)
 print("PART 10: THE COMPLETE PICTURE")
 print("=" * 70)
 
-print(
-    """
+print("""
 ╔════════════════════════════════════════════════════════════════════╗
 ║           W33 AND THE MYSTERIOUS DUALITY: SUMMARY                  ║
 ╠════════════════════════════════════════════════════════════════════╣
@@ -397,8 +388,7 @@ print(
 ║    W33 ←→ W(E6) ←→ 27 lines ←→ M-theory/T⁶ ←→ E6 U-duality       ║
 ║                                                                    ║
 ╚════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # ============================================================================
 # PART 11: New Predictions
@@ -407,8 +397,7 @@ print("\n" + "=" * 70)
 print("PART 11: PREDICTIONS FROM W33/MYSTERIOUS DUALITY")
 print("=" * 70)
 
-print(
-    """
+print("""
 If W33 is truly fundamental to the Mysterious Duality, we predict:
 
 1. TRIPLE STRUCTURE:
@@ -433,8 +422,7 @@ If W33 is truly fundamental to the Mysterious Duality, we predict:
 5. WEINBERG ANGLE:
    sin²θ_W = 40/173 = |points|/(|points| + |E7|)
    where 173 = 40 + 133 = |points| + dim(E7)
-"""
-)
+""")
 
 # Final numerical checks
 print("\nNumerical Verification:")

@@ -49,8 +49,7 @@ masses = {
     "ν3": 5e-11,
 }
 
-print(
-    """
+print("""
 THE FERMION MASS SPECTRUM:
 
 Generation 1:    u ~ 2 MeV      d ~ 5 MeV      e ~ 0.5 MeV    ν ~ 0.01 eV
@@ -58,27 +57,23 @@ Generation 2:    c ~ 1.3 GeV    s ~ 93 MeV     μ ~ 106 MeV
 Generation 3:    t ~ 173 GeV    b ~ 4.2 GeV    τ ~ 1.8 GeV
 
 RATIOS:
-"""
-)
+""")
 
 print(f"  m_t / m_u = {masses['t']/masses['u']:.0f}")
 print(f"  m_b / m_d = {masses['b']/masses['d']:.0f}")
 print(f"  m_τ / m_e = {masses['τ']/masses['e']:.0f}")
 print(f"  m_t / m_ν3 ≈ {masses['t']/masses['ν3']:.0e}")
 
-print(
-    """
+print("""
 The hierarchy spans 12 ORDERS OF MAGNITUDE!
 This is the flavor puzzle. Why these specific values?
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("SECTION 2: W33 MASS MECHANISM")
 print("=" * 70)
 
-print(
-    """
+print("""
 HOW MASSES ARISE IN W33:
 
 1. Fermions live in E₃ eigenspace (dim = 15)
@@ -99,15 +94,13 @@ THE KEY: The E₃ eigenspace has INTERNAL STRUCTURE
   5 = SU(5) multiplet (d_R, L)
 
 Within E₃, there's a HIERARCHY of states!
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("SECTION 3: THE HIERARCHY FORMULA")
 print("=" * 70)
 
-print(
-    """
+print("""
 W33 HIERARCHY MECHANISM:
 
 The mass of generation g (g = 1, 2, 3) scales as:
@@ -123,8 +116,7 @@ Natural candidates:
   ε₂ = μ/k = 4/12 = 1/3 ≈ 0.333
   ε₃ = 1/√v = 1/√40 ≈ 0.158
   ε₄ = λ/v = 2/40 = 0.05
-"""
-)
+""")
 
 # Test different epsilon values
 eps_candidates = {
@@ -160,8 +152,7 @@ print("\n" + "=" * 70)
 print("SECTION 4: THE FROGGATT-NIELSEN MECHANISM IN W33")
 print("=" * 70)
 
-print(
-    """
+print("""
 FROGGATT-NIELSEN IN STANDARD THEORY:
 
 A heavy "flavon" field Φ with VEV <Φ>/M gives small parameter ε.
@@ -181,8 +172,7 @@ The graph distance d corresponds to the Froggatt-Nielsen charge n!
   y_f ∝ ε^(d_f)
 
 Where d_f is the "effective distance" of fermion f from the Higgs vertex.
-"""
-)
+""")
 
 # Graph distance in W33
 print(f"\nGRAPH DISTANCE STRUCTURE:")
@@ -198,8 +188,7 @@ print("=" * 70)
 # Define the W33 hierarchy parameter
 eps = lam / k  # = 1/6, seems to work best
 
-print(
-    f"""
+print(f"""
 CHOOSING: ε = λ/k = {lam}/{k} = {eps:.4f}
 
 MASS FORMULAS:
@@ -209,8 +198,7 @@ Second generation (g=2): Mass ~ M_0 × ε²
 First generation (g=1):  Mass ~ M_0 × ε⁴
 
 Where M_0 is set by the Higgs VEV (246 GeV) and O(1) coefficients.
-"""
-)
+""")
 
 print("\nPREDICTED RATIOS:")
 print(f"  3rd/2nd generation: 1/ε² = {1/eps**2:.1f}")
@@ -241,8 +229,7 @@ print("\n" + "=" * 70)
 print("SECTION 6: REFINED HIERARCHY WITH CLEBSCH-GORDAN")
 print("=" * 70)
 
-print(
-    """
+print("""
 REFINED FORMULAS:
 
 The simple ε^n scaling needs O(1) Clebsch-Gordan coefficients
@@ -261,8 +248,7 @@ This explains why:
   - Up quarks have the largest hierarchy (t >> c >> u)
   - Down quarks have intermediate hierarchy
   - Charged leptons have similar pattern to down quarks
-"""
-)
+""")
 
 # Clebsch-Gordan factors
 c_u = 1
@@ -278,8 +264,7 @@ print("\n" + "=" * 70)
 print("SECTION 7: NEUTRINO MASSES")
 print("=" * 70)
 
-print(
-    """
+print("""
 NEUTRINO MASSES ARE SPECIAL:
 
 Neutrinos are 10¹² times lighter than the top quark!
@@ -300,8 +285,7 @@ In W33:
   m_ν ~ (few GeV)² / (5 × 10¹⁵ GeV) ~ 10⁻¹² GeV ~ 0.001 eV
 
 THIS IS EXACTLY THE RIGHT SCALE!
-"""
-)
+""")
 
 # See-saw calculation
 M_R = 5e15  # GeV (GUT scale)
@@ -319,8 +303,7 @@ print("\n" + "=" * 70)
 print("SECTION 8: QUARK-LEPTON COMPLEMENTARITY")
 print("=" * 70)
 
-print(
-    """
+print("""
 QUARK-LEPTON COMPLEMENTARITY:
 
 An intriguing observation:
@@ -338,8 +321,7 @@ They're related by the E₈ structure underlying W33!
 
 The "hidden" SU(5) exchanges quarks ↔ leptons.
 This imposes relationships between mixing angles!
-"""
-)
+""")
 
 # Quark mixing angles (CKM)
 theta_12_q = 13.0  # degrees (Cabibbo angle)
@@ -360,8 +342,7 @@ print("\n" + "=" * 70)
 print("SECTION 9: THE COMPLETE MASS SPECTRUM")
 print("=" * 70)
 
-print(
-    """
+print("""
 COMPLETE W33 MASS FORMULAS:
 
 Let M_0 = v_H × y_t = 246 GeV × 1 = 246 GeV (top Yukawa ~ 1)
@@ -377,8 +358,7 @@ DOWN-TYPE QUARKS:
   m_d = ...
 
 The exact coefficients require fitting, but the STRUCTURE is from W33!
-"""
-)
+""")
 
 # Rough predictions
 M_0 = 174  # GeV (top mass sets the scale)
@@ -408,8 +388,7 @@ print("\n" + "=" * 70)
 print("SECTION 10: THE HIERARCHY IS GEOMETRIC")
 print("=" * 70)
 
-print(
-    f"""
+print(f"""
 THE DEEP INSIGHT:
 
 The fermion mass hierarchy is NOT random!
@@ -438,15 +417,13 @@ The 12 orders of magnitude come from:
   - CG coefficients for different sectors
 
 IT'S ALL FROM W33!
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("PART XCVIII CONCLUSIONS")
 print("=" * 70)
 
-print(
-    f"""
+print(f"""
 THE FERMION MASS HIERARCHY FROM W33!
 
 KEY RESULTS:
@@ -470,8 +447,7 @@ KEY RESULTS:
 
 THE HIERARCHY IS GEOMETRIC, NOT RANDOM!
 It's encoded in the W33 graph parameters.
-"""
-)
+""")
 
 # Save results
 results = {

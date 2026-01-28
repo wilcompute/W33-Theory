@@ -373,7 +373,9 @@ def e8_to_sm():
     print("STANDARD MODEL QUANTUM NUMBERS:")
     print("  From E6, one generation of fermions fits in the 27:")
     print()
-    print("  27 = (3,2)₁/₆ ⊕ (3̄,1)₋₂/₃ ⊕ (3̄,1)₁/₃ ⊕ (1,2)₋₁/₂ ⊕ (1,1)₁ ⊕ (1,1)₀ ⊕ ...")
+    print(
+        "  27 = (3,2)₁/₆ ⊕ (3̄,1)₋₂/₃ ⊕ (3̄,1)₁/₃ ⊕ (1,2)₋₁/₂ ⊕ (1,1)₁ ⊕ (1,1)₀ ⊕ ..."
+    )
     print("     = Q_L    ⊕  u_R^c   ⊕  d_R^c  ⊕  L      ⊕  e_R^c ⊕  ν_R  ⊕ ...")
     print()
     print("  This is exactly one generation! And W33 gives 3 of them.")

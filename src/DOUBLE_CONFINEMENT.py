@@ -26,8 +26,7 @@ ratio = observed_k4s_with_2_0 / expected_k4s_with_2_0
 
 
 def main():
-    print(
-        """
+    print("""
     ═════════════════════════════════════════════════════════════════════
     DOUBLE CONFINEMENT: DISCOVERY ANALYSIS
     ═════════════════════════════════════════════════════════════════════
@@ -203,8 +202,7 @@ def main():
     ✓ Explains origin of confinement geometrically
     pass
     This is approaching "smoking gun" territory.
-    """
-    )
+    """)
     print("\n" + "=" * 70)
     print("NUMERICAL CROSS-CHECK")
     print("=" * 70)
@@ -218,8 +216,7 @@ def main():
     print("\n" + "=" * 70)
     print("ENERGY SCALE IMPLICATIONS")
     print("=" * 70)
-    print(
-        """
+    print("""
     If K4 selection factor of 12 is source of hierarchy:
     pass
     Planck scale: 10^19 GeV (W33 dynamics at this scale)
@@ -237,8 +234,7 @@ def main():
     (Standard prediction: ~10^16 GeV)
     pass
     This might be why SU(5) GUT scale emerges naturally!
-    """
-    )
+    """)
 
 
 if __name__ == "__main__":

@@ -243,8 +243,7 @@ print(f"b_3 = dim(ker ∂_3) = {len(tetrahedra)} - {rank_d3} = {b3}")
 print("\n" + "=" * 70)
 print("BETTI NUMBERS")
 print("=" * 70)
-print(
-    f"""
+print(f"""
   b_0 = {b0}   (connected components)
   b_1 = {b1}  (1-cycles)
   b_2 = {b2}   (2-cycles / voids)
@@ -253,8 +252,7 @@ print(
   χ = b_0 - b_1 + b_2 - b_3 = {b0} - {b1} + {b2} - {b3} = {b0 - b1 + b2 - b3}
   Expected χ = {chi}
   Match: {b0 - b1 + b2 - b3 == chi}
-"""
-)
+""")
 
 # Analysis
 print("=" * 70)
@@ -262,8 +260,7 @@ print("INTERPRETATION")
 print("=" * 70)
 
 if b2 == 0 and b3 == 0:
-    print(
-        """
+    print("""
 W33 has:
   • H_0 = Z    (connected)
   • H_1 = Z^81 (the Steinberg representation!)
@@ -276,8 +273,7 @@ This means W33 is homologically 1-dimensional:
 
 This is consistent with W33 being the clique complex of a graph.
 Clique complexes are often "aspherical" in higher dimensions.
-"""
-    )
+""")
 
     print("The ENTIRE homological content of W33 is the Steinberg representation!")
 
@@ -289,13 +285,11 @@ elif b3 > 0:
 print("\n" + "=" * 70)
 print("BOUNDARY MATRIX RANKS SUMMARY")
 print("=" * 70)
-print(
-    f"""
+print(f"""
   C_0 ←∂₁― C_1 ←∂₂― C_2 ←∂₃― C_3
   {len(vertices):3d} ←――― {len(edges):3d} ←――― {len(triangles):3d} ←――― {len(tetrahedra):3d}
 
   rank(∂_1) = {rank_d1}
   rank(∂_2) = {rank_d2}
   rank(∂_3) = {rank_d3}
-"""
-)
+""")

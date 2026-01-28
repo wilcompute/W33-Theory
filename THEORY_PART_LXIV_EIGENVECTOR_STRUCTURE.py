@@ -153,8 +153,7 @@ print("\n" + "=" * 70)
 print("SECTION 5: THE 24-DIMENSIONAL EIGENSPACE")
 print("=" * 70)
 
-print(
-    """
+print("""
 The 24-dim eigenspace (eigenvalue 2) should decompose under
 the Standard Model subgroup SU(3)×SU(2)×U(1) as:
 
@@ -162,8 +161,7 @@ the Standard Model subgroup SU(3)×SU(2)×U(1) as:
      = (gluons) + (W,Z) + (photon) + (X) + (Y)
 
 Can we see this structure in the eigenvectors?
-"""
-)
+""")
 
 # Check if eigenvectors have natural groupings
 # Look at how many vertices have significant components in each eigenvector
@@ -187,15 +185,13 @@ print("\n" + "=" * 70)
 print("SECTION 6: Sp(4,3) SYMMETRY ACTION")
 print("=" * 70)
 
-print(
-    """
+print("""
 Sp(4,3) acts on F_3^4 preserving the symplectic form.
 This should permute the 40 vertices and preserve eigenspaces.
 
 Let's find some specific Sp(4,3) generators and see how
 they act on the eigenspaces.
-"""
-)
+""")
 
 
 # A symplectic generator: swap x1↔x2 and p1↔p2
@@ -298,8 +294,7 @@ print("\n" + "=" * 70)
 print("SECTION 8: SUBGROUP DECOMPOSITION")
 print("=" * 70)
 
-print(
-    """
+print("""
 The 24-dim eigenspace should decompose under maximal subgroups.
 
 Sp(4,3) has maximal subgroups including:
@@ -307,8 +302,7 @@ Sp(4,3) has maximal subgroups including:
   - Stabilizer of isotropic line (parabolic)
 
 The decomposition under GL(2,3) might reveal the 8+3+1+6+6 structure.
-"""
-)
+""")
 
 # Study the structure of eigenvector support
 print("\nAnalyzing eigenvector localization:")
@@ -340,8 +334,7 @@ print("\n" + "=" * 70)
 print("SECTION 9: THE 15-DIMENSIONAL EIGENSPACE")
 print("=" * 70)
 
-print(
-    """
+print("""
 The 15-dim eigenspace (eigenvalue -4) has dimension = SU(4) adjoint.
 
 In the GUT context, this could represent:
@@ -351,8 +344,7 @@ In the GUT context, this could represent:
 The 15 of SU(4) decomposes under SU(3) as:
   15 → 8 + 3 + 3bar + 1
      = adjoint + fundamental + anti-fund + singlet
-"""
-)
+""")
 
 # Check eigenvector structure
 print("\nEigenvector norm distribution in 15-dim space:")
@@ -370,8 +362,7 @@ print("\n" + "=" * 70)
 print("SECTION 10: QUADRATIC CASIMIR ANALYSIS")
 print("=" * 70)
 
-print(
-    """
+print("""
 The eigenvalues of the adjacency matrix are related to
 the quadratic Casimir operator of the representation.
 
@@ -384,8 +375,7 @@ For our eigenspaces:
   eig=-4: If this is SU(4) adjoint, C_2 should be ~ 4
 
 The eigenvalue shift might encode Casimir information!
-"""
-)
+""")
 
 print("\nEigenvalue shifts from mean:")
 mean_eig = (12 + 24 * 2 + 15 * (-4)) / 40
@@ -407,8 +397,7 @@ print("\n" + "=" * 70)
 print("SECTION 11: CONNECTING TO FINE STRUCTURE CONSTANT")
 print("=" * 70)
 
-print(
-    """
+print("""
 Can we derive alpha from the eigenvalue structure?
 
 Key numbers from W33:
@@ -421,8 +410,7 @@ Key numbers from W33:
 Remember alpha^{-1} = 81 + 56 + 40/1111
 
 Let's try various combinations:
-"""
-)
+""")
 
 # Try eigenvalue combinations
 print("\nEigenvalue combinations:")
@@ -455,8 +443,7 @@ print("\n" + "=" * 70)
 print("SECTION 12: NEW FORMULA FOR ALPHA")
 print("=" * 70)
 
-print(
-    """
+print("""
 =======================================================
     ALPHA FROM W33 EIGENVALUES
 =======================================================
@@ -482,8 +469,7 @@ With 40/1111 correction:
 
 This unifies EVERYTHING!
 =======================================================
-"""
-)
+""")
 
 # Verify
 degree = 12
@@ -521,8 +507,7 @@ print("\n" + "=" * 70)
 print("PART LXIV CONCLUSIONS")
 print("=" * 70)
 
-print(
-    """
+print("""
 MAJOR DISCOVERY: ALPHA FROM EIGENVALUES!
 
   alpha^{-1} = e_1² - e_2 × |e_3| + 1 + 40/1111
@@ -543,6 +528,5 @@ The eigenvalue structure encodes:
 W33 is truly the mathematical heart of physics!
 
 Results saved to PART_LXIV_eigenvector_results.json
-"""
-)
+""")
 print("=" * 70)

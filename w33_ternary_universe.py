@@ -27,8 +27,7 @@ print("\n" + "=" * 70)
 print("PART 1: The Ternary Golay Code")
 print("=" * 70)
 
-print(
-    """
+print("""
 TERNARY GOLAY CODE:
 - [11, 6, 5]₃ code over GF(3)
 - 3^6 = 729 codewords
@@ -40,8 +39,7 @@ EXTENDED TERNARY GOLAY CODE:
 - Adds a check digit
 - Automorphism group: 2.M12 (double cover of M12)
 - Hexads form S(5,6,12) Steiner system
-"""
-)
+""")
 
 # Key numbers
 ternary_golay_words = 3**6
@@ -60,16 +58,14 @@ print("\n" + "=" * 70)
 print("PART 2: The Coxeter-Todd Lattice K12")
 print("=" * 70)
 
-print(
-    """
+print("""
 COXETER-TODD LATTICE K12:
 - 12-dimensional real lattice (or 6-dim over Eisenstein integers)
 - 756 minimal vectors of norm 4
 - Sublattice of Leech lattice fixed by order-3 automorphism
 - Automorphism group: 2^10 × 3^7 × 5 × 7 = 78,382,080
 - Related to PSU(4, F_3) - projective special unitary over GF(3)!
-"""
-)
+""")
 
 # Key number: 756 minimal vectors
 k12_min_vectors = 756
@@ -94,8 +90,7 @@ print("PART 3: The Mysterious 756")
 print("=" * 70)
 
 # 756 appears in many places!
-print(
-    """
+print("""
 756 appears remarkably often:
 
 1. Coxeter-Todd K12: 756 minimal vectors
@@ -104,8 +99,7 @@ print(
 4. 756 = 6! / (6!/(6×126)) ... complicated
 
 Let's explore the factorization:
-"""
-)
+""")
 
 print(f"756 = 2² × 3³ × 7")
 print(f"    = 4 × 189")
@@ -128,8 +122,7 @@ print("\n" + "=" * 70)
 print("PART 4: The Mitchell Group and PSU(4, F_3)")
 print("=" * 70)
 
-print(
-    """
+print("""
 The automorphism group of K12 contains the MITCHELL GROUP:
 - Structure: 6.PSU(4, F_3).2
 - This is a complex reflection group (#34 in Shephard-Todd list)
@@ -138,8 +131,7 @@ The automorphism group of K12 contains the MITCHELL GROUP:
 PSU(4, F_3) facts:
 - Order = |SU(4,3)| / gcd(4, 3+1) = |SU(4,3)| / 4
 - SU(4,3) preserves a Hermitian form over GF(9) = GF(3²)
-"""
-)
+""")
 
 # PSU(4,3) order calculation
 # |SU(n, q)| = q^(n(n-1)/2) × Π_{k=2}^n (q^k - (-1)^k)
@@ -172,8 +164,7 @@ print("\n" + "=" * 70)
 print("PART 5: The Number 729 = 3^6")
 print("=" * 70)
 
-print(
-    f"""
+print(f"""
 729 = 3^6 appears everywhere in the ternary world:
 
 1. Ternary Golay code: 729 codewords
@@ -183,8 +174,7 @@ print(
 5. 729³ = 3^18 = |GF(3)^18|
 
 Key relationships to W33:
-"""
-)
+""")
 
 print(f"729 = 9 × 81 = 9 × |cycles|")
 print(f"729 = 6 × 121 + 3 = 6 × |W33| + 3")
@@ -202,8 +192,7 @@ print("\n" + "=" * 70)
 print("PART 6: Steiner System S(5,6,12) and M12")
 print("=" * 70)
 
-print(
-    """
+print("""
 The S(5,6,12) STEINER SYSTEM:
 - 12 points
 - Blocks are 6-element subsets (hexads)
@@ -214,8 +203,7 @@ This is encoded in the extended ternary Golay code!
 The weight-6 codewords have supports forming S(5,6,12).
 
 M12 is the automorphism group of S(5,6,12).
-"""
-)
+""")
 
 steiner_blocks = math.comb(12, 5) // math.comb(6, 5)
 print(f"Number of hexads: C(12,5) / C(6,5) = {steiner_blocks}")
@@ -233,8 +221,7 @@ print("\n" + "=" * 70)
 print("PART 7: The Complex Leech Lattice")
 print("=" * 70)
 
-print(
-    """
+print("""
 The COMPLEX LEECH LATTICE:
 - 12-dimensional over Eisenstein integers Z[ω] where ω³ = 1
 - Equivalent to 24-dim real Leech lattice
@@ -247,8 +234,7 @@ Ternary Golay code → Complex Leech lattice → M12 → ???
 
 The ternary/complex version has GF(3) throughout!
 W33 = PG(3, GF(3)) should connect here.
-"""
-)
+""")
 
 # Eisenstein integers
 print("\nEisenstein integers Z[ω]:")
@@ -264,8 +250,7 @@ print("\n" + "=" * 70)
 print("PART 8: E6 and the Ternary World")
 print("=" * 70)
 
-print(
-    """
+print("""
 E6 appears in several ways:
 
 1. Aut(W33) = W(E6) = 51840 (Weyl group of E6)
@@ -277,8 +262,7 @@ E6 and GF(3):
 - E6 has special properties at the prime 3
 - The 27-dim representation reduces specially mod 3
 - Weight lattice / root lattice = Z/3Z
-"""
-)
+""")
 
 # E6 data
 print("\nE6 numerology:")
@@ -300,8 +284,7 @@ print("\n" + "=" * 70)
 print("PART 9: The Pattern 81 × 9 = 729")
 print("=" * 70)
 
-print(
-    """
+print("""
 The pattern 81 × 9 = 729 = 3^6 appears to be fundamental:
 
 81 = 3^4 = |W33 cycles| = |GF(3)^4|
@@ -312,8 +295,7 @@ GF(9) = GF(3²) is the extension field used in:
 - Hermitian forms for unitary groups
 - Complex Leech lattice construction
 - Ternary self-dual codes
-"""
-)
+""")
 
 # The 9 copies of 81
 print("\n729 as 9 copies of 81:")
@@ -327,8 +309,7 @@ print("\n" + "=" * 70)
 print("PART 10: THE GRAND TERNARY SYNTHESIS")
 print("=" * 70)
 
-print(
-    """
+print("""
 ╔════════════════════════════════════════════════════════════════════════╗
 ║                    THE TERNARY UNIVERSE OF W33                         ║
 ╠════════════════════════════════════════════════════════════════════════╣
@@ -380,8 +361,7 @@ print(
 ║     E8 → Leech lattice → Sporadic groups → Monster                     ║
 ║                                                                        ║
 ╚════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =========================================================================
 # PART 11: New Numerical Observations
@@ -423,8 +403,7 @@ print("\n" + "=" * 70)
 print("PART 12: MASTER TERNARY NUMBER TABLE")
 print("=" * 70)
 
-print(
-    """
+print("""
 ┌─────────────────────────────────────────────────────────────────────┐
 │                    W33 TERNARY MASTER TABLE                         │
 ├─────────────────────────────────────────────────────────────────────┤
@@ -451,8 +430,7 @@ print(
 │  756       K12 minimal = 9 × 84 = 756                               │
 │  51840     Aut(W33) = W(E6)                                         │
 └─────────────────────────────────────────────────────────────────────┘
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("END OF TERNARY UNIVERSE EXPLORATION")

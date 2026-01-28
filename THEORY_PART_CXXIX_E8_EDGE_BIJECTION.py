@@ -196,8 +196,7 @@ def find_e8_to_w33_map():
     print(f"  W33: 40 vertices, 240 edges")
     print(f"  Ratio: 240/120 = 2")
 
-    print(
-        """
+    print("""
 
     INSIGHT: The correspondence is NOT direct!
 
@@ -208,8 +207,7 @@ def find_e8_to_w33_map():
     But 72 ≠ 240...
 
     ALTERNATIVE: Consider the Witting edges in the full 240-vertex polytope
-    """
-    )
+    """)
 
     # In the full Witting polytope, which vertex pairs are adjacent?
     # For complex polytopes, adjacency is defined by the polytope structure
@@ -217,8 +215,7 @@ def find_e8_to_w33_map():
     # From Coxeter: Witting polytope has 2160 edges (as a 4D complex polytope)
     # Not 240!
 
-    print(
-        """
+    print("""
     CORRECTION: The full Witting polytope has MANY more edges!
 
     The 240 in W33 comes from the PROJECTED graph (40 states):
@@ -240,8 +237,7 @@ def find_e8_to_w33_map():
     2. W33 edges = 240 (coincidentally same, from 40 × 12 / 2)
 
     Is this truly a coincidence, or is there deeper structure?
-    """
-    )
+    """)
 
     return e8_roots, w33_edges
 
@@ -268,8 +264,7 @@ def investigate_240_coincidence():
 
     # Is there a formula relating these?
 
-    print(
-        """
+    print("""
     KEY RELATIONSHIPS:
 
     1. |E8 roots| = 240
@@ -291,15 +286,13 @@ def investigate_240_coincidence():
     - Dividing by 2 (undirected): 480 → 240
 
     The degree 12 exactly compensates for the phase quotient!
-    """
-    )
+    """)
 
     # Why is degree = 12?
     # In CP^3 (projective 3-space), a generic point has...
     # Actually, 12 orthogonal states come from the Witting structure
 
-    print(
-        """
+    print("""
     WHY DEGREE 12?
 
     Each Witting state |ψ⟩ is orthogonal to states |φ⟩ where ⟨ψ|φ⟩ = 0.
@@ -322,8 +315,7 @@ def investigate_240_coincidence():
     - The D₄ root system (24 roots, 12 pairs)
     - The quaternionic structure on C⁴ ≅ H²
     - The hyperbolic structure of CP³
-    """
-    )
+    """)
 
 
 def explore_e6_d5_action():
@@ -334,8 +326,7 @@ def explore_e6_d5_action():
     print("W(E6) AND W(D5) ACTIONS")
     print("=" * 70)
 
-    print(
-        """
+    print("""
     |W(E6)| = 51,840 = |Aut(W33)|
     |W(D5)| = 1,920
 
@@ -372,8 +363,7 @@ def explore_e6_d5_action():
 
     Need to be careful: the 40 W33 vertices are acted on by W(E6),
     and W(D5) is a subgroup, so W(D5) also acts on the 40 vertices.
-    """
-    )
+    """)
 
     # The D5 → E6 embedding
     # E6 has 72 roots, D5 has 40 roots
@@ -382,8 +372,7 @@ def explore_e6_d5_action():
     # At the Weyl group level:
     # |W(E6)| / |W(D5)| = 51840 / 1920 = 27
 
-    print(
-        """
+    print("""
     D5 → E6 RELATIONSHIP:
 
     |D5 roots| = 40 (same as W33 vertices!)
@@ -404,8 +393,7 @@ def explore_e6_d5_action():
     Hmm, 72 appears as:
     - |E6 roots| = 72
     - Our earlier 72 = 40 + 32 decomposition in the theory
-    """
-    )
+    """)
 
 
 if __name__ == "__main__":
@@ -416,8 +404,7 @@ if __name__ == "__main__":
     print("\n" + "=" * 70)
     print("CONCLUSIONS")
     print("=" * 70)
-    print(
-        """
+    print("""
     THE 240 APPEARS TWICE FOR RELATED BUT DISTINCT REASONS:
 
     1. |E8 roots| = |Witting polytope vertices| = 240
@@ -442,5 +429,4 @@ if __name__ == "__main__":
      12 = |D4 roots|/2 = W33 degree
 
     EVERYTHING TRACES TO THE EXCEPTIONAL LIE ALGEBRA E8!
-    """
-    )
+    """)

@@ -22,8 +22,7 @@ print("\n" + "=" * 80)
 print("PART 1: THE DEL PEZZO LINE SEQUENCE")
 print("=" * 80)
 
-print(
-    """
+print("""
 del Pezzo surfaces Bl_k(P^2) (blow-up of P^2 at k generic points):
 
   k=0: P^2           →   0 lines
@@ -38,8 +37,7 @@ del Pezzo surfaces Bl_k(P^2) (blow-up of P^2 at k generic points):
 
 The number of (-1)-curves (lines) on Bl_k(P^2):
   L(k) = k + C(k,2) + C(k,3) + ... = sum of binomials
-"""
-)
+""")
 
 
 def del_pezzo_lines(k):
@@ -67,8 +65,7 @@ print("\n" + "=" * 80)
 print("PART 2: THE 56 AND E7")
 print("=" * 80)
 
-print(
-    """
+print("""
 For k=7 (del Pezzo degree 2):
   56 lines = 56-dimensional representation of E7!
 
@@ -87,8 +84,7 @@ W33 CONNECTION:
       = |W33 cycles| + dim(56 of E7)
 
 This means: 1/α = |cycles| + |E7 spinor|
-"""
-)
+""")
 
 print("Verification:")
 print(f"  81 + 56 = {81 + 56} = 137 ✓")
@@ -103,8 +99,7 @@ print("\n" + "=" * 80)
 print("PART 3: THE STRUCTURE OF 56")
 print("=" * 80)
 
-print(
-    """
+print("""
 The 56-dim rep of E7 decomposes under various subgroups:
 
 Under E6 ⊂ E7:
@@ -124,8 +119,7 @@ W33 CONNECTION:
   This gives ANOTHER decomposition of 137:
   137 = 81 + 56 = 81 + 40 + 16 = |cycles| + |points| + |K4|^2
       = 121 + 16 = |W33| + |K4|^2
-"""
-)
+""")
 
 print("Alternative decomposition:")
 print(f"  137 = 121 + 16 = {121 + 16}")
@@ -145,8 +139,7 @@ print("\n" + "=" * 80)
 print("PART 4: THE 240 AND E8")
 print("=" * 80)
 
-print(
-    """
+print("""
 For k=8 (del Pezzo degree 1):
   240 lines = 240 roots of E8!
 
@@ -163,8 +156,7 @@ Connection to W33:
   240 = 248 - 8 = dim(E8) - rank(E8)
 
 The 248-dim rep of E8 = 240 (adjoint roots) + 8 (Cartan)
-"""
-)
+""")
 
 print("E8 decompositions:")
 print(f"  240 = 2 * 121 - 2 = {2 * 121 - 2}")
@@ -179,8 +171,7 @@ print("\n" + "=" * 80)
 print("PART 5: THE EXCEPTIONAL SEQUENCE")
 print("=" * 80)
 
-print(
-    """
+print("""
 The sequence of lines on del Pezzo surfaces (k=6,7,8):
 
   27 (E6)  →  56 (E7)  →  240 (E8)
@@ -203,8 +194,7 @@ The pattern suggests:
 Actually:
   56 - 2*27 = 56 - 54 = 2
   240 - 4*56 = 240 - 224 = 16 = |K4|^2!
-"""
-)
+""")
 
 print("Exact differences:")
 print(f"  56 - 2*27 = {56 - 2*27}")
@@ -232,8 +222,7 @@ print(f"\nRatios:")
 print(f"  |W(E7)|/|W(E6)| = {W_E7 // W_E6} = 56")
 print(f"  |W(E8)|/|W(E7)| = {W_E8 // W_E7} = 240")
 
-print(
-    """
+print("""
 REMARKABLE:
   |W(E7)| = 56 * |W(E6)| = 56 * 51840
   |W(E8)| = 240 * |W(E7)| = 240 * |W(E7)|
@@ -243,8 +232,7 @@ The number of lines on the del Pezzo surface IS the index ratio!
 This means:
   56 = [W(E7) : W(E6)]
   240 = [W(E8) : W(E7)]
-"""
-)
+""")
 
 # =============================================================================
 # PART 7: THE EXCEPTIONAL JORDAN ALGEBRA
@@ -254,8 +242,7 @@ print("\n" + "=" * 80)
 print("PART 7: THE EXCEPTIONAL JORDAN ALGEBRA")
 print("=" * 80)
 
-print(
-    """
+print("""
 The exceptional Jordan algebra J_3(O) has dimension 27!
   (3x3 Hermitian matrices over octonions)
 
@@ -275,8 +262,7 @@ Each step adds structure:
   Actually: E6 acts on J_3(O) ⊗ C
 
 This is the MAGIC SQUARE of Lie algebras!
-"""
-)
+""")
 
 print("Jordan algebra connection:")
 print(f"  dim(J_3(O)) = 27 = |W33 cycles|/3 = 81/3")
@@ -291,8 +277,7 @@ print("\n" + "=" * 80)
 print("PART 8: STRING THEORY DIMENSIONS")
 print("=" * 80)
 
-print(
-    """
+print("""
 In string theory:
   - Superstring: 10 dimensions
   - M-theory: 11 dimensions
@@ -315,8 +300,7 @@ The critical dimension formula:
   For k=1: d = 26
   For k=2: d = 14 = dim(G2)!
   For k=24: d = 3 = dim(GF(3))!
-"""
-)
+""")
 
 print("Dimension connections:")
 print(f"  26 = 27 - 1 = {27 - 1}")
@@ -331,8 +315,7 @@ print("\n" + "=" * 80)
 print("PART 9: THE COMPLETE PICTURE OF 137")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                    THE FINE STRUCTURE CONSTANT 137                           ║
@@ -370,8 +353,7 @@ print(
 ║  The INTEGER PART 137 comes from W33 geometry!                               ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # PART 10: THE FINAL FORMULA
@@ -381,8 +363,7 @@ print("\n" + "=" * 80)
 print("PART 10: THE FINAL FORMULA")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                         THE W33 FORMULA FOR α                                ║
@@ -413,8 +394,7 @@ print(
 ║             all Lie algebras via Vogel universality.                         ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # Numerical verification
 alpha_exp = 137.035999084

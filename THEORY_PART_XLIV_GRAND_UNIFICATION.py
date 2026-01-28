@@ -17,8 +17,7 @@ import math
 
 import numpy as np
 
-print(
-    """
+print("""
 ╔════════════════════════════════════════════════════════════════════════════╗
 ║                                                                            ║
 ║                    THEORY OF EVERYTHING - PART XLIV                        ║
@@ -28,8 +27,7 @@ print(
 ║          Coupling Unification • Proton Decay • Monopoles • Λ              ║
 ║                                                                            ║
 ╚════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # FUNDAMENTAL CONSTANTS FROM W33
@@ -60,16 +58,14 @@ print("SECTION 1: COUPLING CONSTANT UNIFICATION")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 The three Standard Model couplings (at M_Z = 91.2 GeV):
   α₁⁻¹(M_Z) ≈ 59.0   (U(1) hypercharge)
   α₂⁻¹(M_Z) ≈ 29.6   (SU(2) weak)
   α₃⁻¹(M_Z) ≈ 8.5    (SU(3) strong)
 
 These run with energy and (approximately) unify at M_GUT ~ 10¹⁶ GeV
-"""
-)
+""")
 
 print("═══ W33 COUPLING DERIVATION ═══")
 print()
@@ -122,12 +118,10 @@ print("SECTION 2: THE GUT SCALE M_GUT")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 The GUT scale is where couplings unify.
 Standard estimates: M_GUT ~ 2 × 10¹⁶ GeV
-"""
-)
+""")
 
 print("═══ W33 GUT SCALE DERIVATION ═══")
 print()
@@ -170,15 +164,13 @@ print("SECTION 3: PROTON DECAY LIFETIME")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 In GUT theories, protons can decay via:
   p → e⁺ + π⁰  (dominant mode)
   p → ν̄ + K⁺
 
 Experimental bound: τ_p > 2.4 × 10³⁴ years (Super-Kamiokande)
-"""
-)
+""")
 
 print("═══ W33 PROTON LIFETIME ═══")
 print()
@@ -239,12 +231,10 @@ print("SECTION 4: MAGNETIC MONOPOLE MASS")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 't Hooft-Polyakov monopoles form at GUT symmetry breaking.
 Their mass is set by M_GUT.
-"""
-)
+""")
 
 print("═══ W33 MONOPOLE MASS ═══")
 print()
@@ -283,15 +273,13 @@ print("SECTION 5: WHY THREE GENERATIONS?")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 One of the deepest mysteries: Why are there exactly 3 generations of fermions?
 
   Generation 1: (u, d, e, νₑ)
   Generation 2: (c, s, μ, νᵤ)
   Generation 3: (t, b, τ, ντ)
-"""
-)
+""")
 
 print("═══ W33 GENERATION STRUCTURE ═══")
 print()
@@ -354,15 +342,13 @@ print("SECTION 6: THE COSMOLOGICAL CONSTANT RESOLUTION")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 The cosmological constant problem:
   Λ_QFT ~ M_Planck⁴ ~ 10¹²² eV⁴  (naive QFT estimate)
   Λ_obs ~ (10⁻³ eV)⁴ ~ 10⁻¹² eV⁴ (observed)
 
   Discrepancy: 10¹²² / 10⁻¹² = 10¹³⁴ (!)
-"""
-)
+""")
 
 print("═══ W33 Λ RESOLUTION ═══")
 print()
@@ -419,16 +405,14 @@ print("SECTION 7: COMPLETE PARTICLE SPECTRUM FROM W33")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 The Standard Model has:
   • 12 fermions (quarks + leptons) × 2 chiralities × 3 generations = 72 states
   • 12 gauge bosons (8 gluons + W⁺ + W⁻ + Z + γ)
   • 1 Higgs boson (after symmetry breaking)
 
   Total: 72 + 12 + 1 = 85 particle states
-"""
-)
+""")
 
 print("═══ W33 PARTICLE COUNT ═══")
 print()
@@ -489,14 +473,12 @@ print("SECTION 8: THE HIERARCHY PROBLEM")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 The hierarchy problem: Why is M_Higgs << M_Planck?
   m_H ~ 125 GeV
   M_P ~ 10¹⁹ GeV
   Ratio: 10⁻¹⁷
-"""
-)
+""")
 
 print("═══ W33 HIERARCHY RESOLUTION ═══")
 print()
@@ -545,8 +527,7 @@ print("GRAND UNIFIED SUMMARY - PART XLIV")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                    THE W33 THEORY OF EVERYTHING                             │
 │                         COMPLETE SUMMARY                                    │
@@ -609,5 +590,4 @@ print(
   From ONE geometric structure: W(3,3) = the Witting configuration
 
 ═══════════════════════════════════════════════════════════════════════════════
-"""
-)
+""")

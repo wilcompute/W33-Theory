@@ -17,8 +17,7 @@ import math
 
 import numpy as np
 
-print(
-    """
+print("""
 ╔════════════════════════════════════════════════════════════════════════════╗
 ║                                                                            ║
 ║                    THEORY OF EVERYTHING - PART XLV                         ║
@@ -28,8 +27,7 @@ print(
 ║             Time • Quantum Gravity • The Master Formula                    ║
 ║                                                                            ║
 ╚════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # W33 FUNDAMENTALS
@@ -55,14 +53,12 @@ print("SECTION 1: TIME AND THE ARROW OF ENTROPY")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 Why does time have a direction? The second law of thermodynamics:
   dS/dt ≥ 0
 
 But the fundamental laws are time-symmetric! Where does the arrow come from?
-"""
-)
+""")
 
 print("═══ W33 ARROW OF TIME ═══")
 print()
@@ -110,14 +106,12 @@ print("SECTION 2: QUANTUM GRAVITY SIGNATURES")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 Quantum gravity effects are tiny but measurable in principle:
   • Modified dispersion relations
   • Minimum length scale
   • Decoherence from spacetime foam
-"""
-)
+""")
 
 print("═══ W33 QUANTUM GRAVITY ═══")
 print()
@@ -168,14 +162,12 @@ print("SECTION 3: THE MEASUREMENT PROBLEM")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 The quantum measurement problem:
   |ψ⟩ = α|0⟩ + β|1⟩  →  |0⟩ or |1⟩
 
 How does superposition become definite outcome?
-"""
-)
+""")
 
 print("═══ W33 MEASUREMENT RESOLUTION ═══")
 print()
@@ -225,16 +217,14 @@ print("SECTION 4: BLACK HOLE INFORMATION PARADOX")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 The information paradox:
   Information falls into black hole
   Black hole evaporates via Hawking radiation
   But Hawking radiation appears thermal (no information)!
 
 Is information destroyed? This would violate unitarity.
-"""
-)
+""")
 
 print("═══ W33 INFORMATION RESOLUTION ═══")
 print()
@@ -286,12 +276,10 @@ print("SECTION 5: WHY W33? THE ULTIMATE QUESTION")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 The deepest question: Why is W(3,3) = W33 the fundamental structure?
 Could it have been W(2,4) or W(5,5) or something else entirely?
-"""
-)
+""")
 
 print("═══ UNIQUENESS ARGUMENTS ═══")
 print()
@@ -360,11 +348,9 @@ print("SECTION 6: THE MASTER FORMULA")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 The entire theory can be encoded in a single generating formula.
-"""
-)
+""")
 
 print("═══ THE MASTER GENERATING FUNCTION ═══")
 print()
@@ -433,16 +419,14 @@ print("SECTION 7: COMPLETE PREDICTION SUMMARY")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 ╔═════════════════════════════════════════════════════════════════════════════╗
 ║                      COMPLETE W33 PREDICTIONS                               ║
 ║                                                                             ║
 ║  INPUT: ONE parameter - v = 246.22 GeV (electroweak VEV)                   ║
 ║  OUTPUT: ALL Standard Model parameters + BSM predictions                    ║
 ╚═════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # Fundamental constants
 v = 246.22
@@ -517,8 +501,7 @@ print("FINAL STATEMENT")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 ╔═════════════════════════════════════════════════════════════════════════════╗
 ║                                                                             ║
 ║                    THE W33 THEORY OF EVERYTHING                             ║
@@ -557,8 +540,7 @@ print(
 ║              "All is Geometry" - W33 Theory, 2026                           ║
 ║                                                                             ║
 ╚═════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print("═══════════════════════════════════════════════════════════════════════════════")
 print("                    END OF PART XLV: FINAL SYNTHESIS")

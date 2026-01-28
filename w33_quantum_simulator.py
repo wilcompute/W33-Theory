@@ -134,8 +134,7 @@ print("\n" + "=" * 70)
 print("[2] QUANTUM OBSERVABLES")
 print("=" * 70)
 
-print(
-    """
+print("""
 Each point of W33 corresponds to a QUANTUM OBSERVABLE.
 
 For a 2-qutrit system (Hilbert space C³ ⊗ C³ = C⁹):
@@ -144,8 +143,7 @@ For a 2-qutrit system (Hilbert space C³ ⊗ C³ = C⁹):
   - Each line = 4 mutually commuting observables
 
 The symplectic structure encodes COMMUTATION RELATIONS!
-"""
-)
+""")
 
 # Build Weyl operators for 2-qutrit system
 # Weyl operators: W(a,b) = X^a Z^b where X, Z are generalized Pauli
@@ -215,16 +213,14 @@ print("\n" + "=" * 70)
 print("[3] QUANTUM CONTEXTUALITY")
 print("=" * 70)
 
-print(
-    """
+print("""
 The Kochen-Specker theorem says we cannot assign definite values
 v(O) ∈ {outcomes} to all observables O such that:
   1. Values are consistent across different measurement contexts
   2. Values respect the algebraic relations
 
 W33 provides a PROOF of contextuality!
-"""
-)
+""")
 
 # For each line, the 4 commuting observables form a "context"
 # In a context, we can simultaneously diagonalize all 4 operators
@@ -254,8 +250,7 @@ for idx, line in enumerate(lines[:5]):  # Sample first 5 contexts
 
     context_expectations.append(expectations)
 
-print(
-    """
+print("""
 CONTEXTUALITY ARGUMENT:
 -----------------------
 If hidden variables existed, each observable O would have a
@@ -268,8 +263,7 @@ But in quantum mechanics:
 W33's structure (40 points, 40 lines, 4 per line) makes this
 IMPOSSIBLE to satisfy consistently. The topology (H₁ = Z^81)
 is the obstruction!
-"""
-)
+""")
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # PART 4: ENTANGLEMENT AND THE STEINBERG
@@ -279,8 +273,7 @@ print("\n" + "=" * 70)
 print("[4] ENTANGLEMENT STRUCTURE")
 print("=" * 70)
 
-print(
-    """
+print("""
 The Steinberg representation (dim 81) encodes the ENTANGLEMENT
 structure of the 2-qutrit system!
 
@@ -288,8 +281,7 @@ Key insight:
   - Lines of W33 = Lagrangian subspaces
   - Lagrangian subspaces ↔ maximally entangled states
   - The 40 lines → 40 "directions" of entanglement
-"""
-)
+""")
 
 # Build a maximally entangled state (generalized Bell state)
 # |Φ⟩ = (1/√3) Σ_i |i⟩|i⟩
@@ -319,8 +311,7 @@ print("\n" + "=" * 70)
 print("[5] THE 81 FUNDAMENTAL CYCLES")
 print("=" * 70)
 
-print(
-    """
+print("""
 H₁(W33) = Z^81 means there are 81 independent "loops" in W33.
 
 PHYSICAL INTERPRETATION:
@@ -333,8 +324,7 @@ space (here, the W33 geometry), it acquires a phase:
 The 81 independent cycles give 81 independent Berry phases.
 This is the geometric/topological content of quantum mechanics
 encoded in W33!
-"""
-)
+""")
 
 # Compute the "cycle space" dimension
 # Euler characteristic χ = V - E + F (for 2-complex)
@@ -355,8 +345,7 @@ print("\n" + "=" * 70)
 print("[6] DISCRETE WIGNER FUNCTION")
 print("=" * 70)
 
-print(
-    """
+print("""
 The Wigner function is a quasi-probability distribution on phase space.
 
 For a 2-qutrit system:
@@ -368,8 +357,7 @@ The discrete Wigner function W(q₁,p₁,q₂,p₂) satisfies:
   - Marginals give correct probabilities
   - Can be NEGATIVE (signature of quantum coherence)
   - Transforms simply under symplectic operations
-"""
-)
+""")
 
 
 def discrete_wigner(rho, point):
@@ -409,8 +397,7 @@ print("\n" + "=" * 70)
 print("SUMMARY: W33 AS QUANTUM GEOMETRY")
 print("=" * 70)
 
-print(
-    """
+print("""
 ╔═══════════════════════════════════════════════════════════════════╗
 ║                    W33 QUANTUM DICTIONARY                        ║
 ╠═══════════════════════════════════════════════════════════════════╣
@@ -440,8 +427,7 @@ INFINITE structures of quantum mechanics and topology.
              ★ DISCRETE ↔ CONTINUOUS ★
              ★ FINITE ↔ INFINITE ★
              ★ CLASSICAL ↔ QUANTUM ★
-"""
-)
+""")
 
 print("\n" + "★" * 70)
 print("         W33 QUANTUM SIMULATOR COMPLETE!")

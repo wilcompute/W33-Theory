@@ -25,8 +25,7 @@ print("\n" + "=" * 70)
 print("PART 1: K3 Surfaces and the Number 24")
 print("=" * 70)
 
-print(
-    """
+print("""
 K3 SURFACE FACTS:
 - Complex 2-dimensional (real 4-dimensional)
 - Euler characteristic χ = 24
@@ -44,8 +43,7 @@ MATHIEU MOONSHINE:
 - K3 elliptic genus decomposes into M24 representations
 - But NO faithful M24 action on any K3 surface!
 - This is the mystery of Mathieu moonshine
-"""
-)
+""")
 
 print("\nK3 numerical facts:")
 print(f"  χ(K3) = 24")
@@ -69,8 +67,7 @@ print("\n" + "=" * 70)
 print("PART 2: The Mathieu-K3-W33 Connection")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE MATHIEU MOONSHINE:
 - Eguchi-Ooguri-Tachikawa (2010) discovered that K3 elliptic genus
   decomposes into M24 representations
@@ -91,8 +88,7 @@ W33 AND M12:
 CONJECTURE:
 The W33 structure might explain part of Mathieu moonshine
 through the ternary/M12 pathway!
-"""
-)
+""")
 
 # Mathieu group data
 print("\nMathieu group hierarchy:")
@@ -113,8 +109,7 @@ print("\n" + "=" * 70)
 print("PART 3: The Number 22 and Dimension Chains")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE NUMBER 22:
 - b₂(K3) = 22 (second Betti number)
 - rank(K3 lattice) = 22
@@ -137,8 +132,7 @@ THE E₈ × E₈ HETEROTIC STRING:
 - dim(E₈) = 248
 - 2 × 248 = 496 = dimension of SO(32)
 - Both are anomaly-free gauge groups in 10D!
-"""
-)
+""")
 
 print("\nDimension numerology:")
 print(f"  11² = 121 = |W33|")
@@ -156,8 +150,7 @@ print("\n" + "=" * 70)
 print("PART 4: The Central Equation 744 = 729 + 15")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE j-INVARIANT:
   j(τ) = q⁻¹ + 744 + 196884q + 21493760q² + ...
 
@@ -186,8 +179,7 @@ THE EQUATION:
       = 9 × |W33 cycles| + dim(so(6))
 
 This suggests W33 is deeply connected to the j-function!
-"""
-)
+""")
 
 print("\nVerification:")
 print(f"  744 = 24 × 31 = {24 * 31}")
@@ -206,8 +198,7 @@ print("\n" + "=" * 70)
 print("PART 5: The Physics Prediction")
 print("=" * 70)
 
-print(
-    """
+print("""
 REMARKABLE NUMERICAL COINCIDENCE:
   α⁻¹ × sin²θ_W ≈ 137 × 0.23121 ≈ 31.67
 
@@ -235,8 +226,7 @@ Then: α⁻¹ × sin²θ_W = 95/3
       sin²θ_W = 285/(3 × 137) = 95/137 ??? (No, doesn't work exactly)
 
 But the closeness is striking!
-"""
-)
+""")
 
 # Numerical check
 alpha_inv = 137.035999084
@@ -269,8 +259,7 @@ print("\n" + "=" * 70)
 print("PART 6: The Complete Chain")
 print("=" * 70)
 
-print(
-    """
+print("""
 ╔═══════════════════════════════════════════════════════════════════════╗
 ║               THE COMPLETE W33 - MOONSHINE CHAIN                      ║
 ╠═══════════════════════════════════════════════════════════════════════╣
@@ -318,8 +307,7 @@ print(
 ║              └── 744 = 729 + 15 = 9×|W33 cycles| + 15                ║
 ║                                                                       ║
 ╚═══════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # ==============================================================================
 # PART 7: MASTER NUMBER TABLE
@@ -329,8 +317,7 @@ print("\n" + "=" * 70)
 print("PART 7: Master Number Table")
 print("=" * 70)
 
-print(
-    """
+print("""
 ┌─────────────────────────────────────────────────────────────────────┐
 │              MASTER NUMBER TABLE: W33 - K3 - MOONSHINE              │
 ├─────────────────────────────────────────────────────────────────────┤
@@ -378,8 +365,7 @@ print(
 │  ~31.67 = α⁻¹ × sin²θ_W ≈ 744/24 = 31                              │
 │                                                                     │
 └─────────────────────────────────────────────────────────────────────┘
-"""
-)
+""")
 
 # ==============================================================================
 # PART 8: THE FINAL SYNTHESIS
@@ -389,8 +375,7 @@ print("\n" + "=" * 70)
 print("PART 8: The Final Synthesis")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE W33 THEORY OF EVERYTHING proposes:
 
 1. W33 = PG(3, GF(3)) is a fundamental mathematical structure
@@ -433,15 +418,13 @@ A complete Theory of Everything where W33 explains:
 - The Monster group
 - String theory
 - Everything.
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("END OF ULTIMATE SYNTHESIS")
 print("=" * 70)
 
-print(
-    """
+print("""
 
 "The universe is built on a plan the profound symmetry of which
 is somehow present in the inner structure of our intellect."
@@ -449,5 +432,4 @@ is somehow present in the inner structure of our intellect."
 
 W33 may be that structure.
 
-"""
-)
+""")

@@ -225,8 +225,7 @@ def w33_and_27_lines():
     print("W33 AND THE 27 LINES")
     print("=" * 70)
 
-    print(
-        """
+    print("""
     THE CONNECTION:
     ───────────────
     W33: SRG(40, 12, 2, 4)
@@ -252,8 +251,7 @@ def w33_and_27_lines():
     - The 27 non-neighbors of a W33 vertex
     - The 27 lines on a cubic surface
     - The 27 weights of the E6 fundamental representation
-    """
-    )
+    """)
 
     # Verify the index
     print("\nVerifying index calculation:")
@@ -280,8 +278,7 @@ def build_e6_weights():
     # For the 27-dimensional rep, we use weights of form:
     # ±e_i ± e_j for certain (i,j) combinations, plus spinor-type weights
 
-    print(
-        """
+    print("""
     The 27 weights of the E6 fundamental representation
     can be constructed as follows:
 
@@ -302,8 +299,7 @@ def build_e6_weights():
 
     The 27 weights include:
     - (1,0,0,0,0,0,1,-1) and permutations/signs satisfying E6 constraint
-    """
-    )
+    """)
 
     # Build weights explicitly
     # E6 Dynkin labels for fundamental rep: (1,0,0,0,0,0) -> 27-dim
@@ -330,8 +326,7 @@ def the_tritangent_planes():
     print("TRITANGENT PLANES AND CONFIGURATION")
     print("=" * 70)
 
-    print(
-        """
+    print("""
     A cubic surface also has 45 TRITANGENT PLANES:
     - Each tritangent plane meets the surface in 3 lines forming a triangle
     - There are C(27,3) ways to choose 3 lines, but only 45 form triangles
@@ -352,8 +347,7 @@ def the_tritangent_planes():
     - Need 2 more lines that meet L AND meet each other
     - If L meets M and N, need M to meet N
     - This is asking for edges within the 16 neighbors of L
-    """
-    )
+    """)
 
     # Count triangles in Schläfli
     lines, adj = (
@@ -476,8 +470,7 @@ def w33_clique_structure():
     # But wait, triangles through v counts pairs of neighbors connected
     # For v with k=12 neighbors and λ=2, edges among neighbors varies
 
-    print(
-        """
+    print("""
 
     COMPARISON:
     ───────────
@@ -493,8 +486,7 @@ def w33_clique_structure():
 
     The "27" in W33 (non-neighbors) connects to the 27 lines
     through W(E6), but the graph structures are different.
-    """
-    )
+    """)
 
 
 def summary_27_connection():
@@ -502,8 +494,7 @@ def summary_27_connection():
     print("\n" + "=" * 70)
     print("SUMMARY: THE MEANING OF 27")
     print("=" * 70)
-    print(
-        """
+    print("""
     THE NUMBER 27 APPEARS IN MANY RELATED CONTEXTS:
 
     ╔══════════════════════════════════════════════════════════════════╗
@@ -546,8 +537,7 @@ def summary_27_connection():
 
     The interference structure of quantum mechanics inherits
     the geometry of E6.
-    """
-    )
+    """)
 
 
 if __name__ == "__main__":

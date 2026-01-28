@@ -89,8 +89,7 @@ print("\n" + "=" * 70)
 print("THE KOCHEN-SPECKER CONSTRAINT")
 print("=" * 70)
 
-print(
-    """
+print("""
 KOCHEN-SPECKER THEOREM:
 =======================
 
@@ -109,8 +108,7 @@ A "coloring" would assign to each state either "marked" (1) or "unmarked" (0)
 such that each basis has exactly one marked state.
 
 THIS IS IMPOSSIBLE!
-"""
-)
+""")
 
 # =====================================================
 # BRUTE FORCE VERIFICATION
@@ -257,8 +255,7 @@ print("\n" + "=" * 70)
 print("CONTEXTUALITY AS A QUANTUM RESOURCE")
 print("=" * 70)
 
-print(
-    """
+print("""
 WHY THIS MATTERS:
 =================
 
@@ -284,8 +281,7 @@ The contextuality "fraction" is:
   6/40 = 15% obstruction
 
 This is the LARGEST contextuality achievable in ℂ⁴ with equiangular states.
-"""
-)
+""")
 
 # =====================================================
 # CONNECTION TO BELL INEQUALITIES
@@ -295,8 +291,7 @@ print("\n" + "=" * 70)
 print("CONNECTION TO BELL INEQUALITIES")
 print("=" * 70)
 
-print(
-    """
+print("""
 PENROSE'S "BELL WITHOUT PROBABILITIES":
 =======================================
 
@@ -315,8 +310,7 @@ When Alice and Bob measure in the same Witting basis:
 - Results always match (quantum correlation)
 - Cannot be explained by classical hidden variables
 - Contextuality provides the obstruction
-"""
-)
+""")
 
 # =====================================================
 # VERIFY CONTEXTUALITY QUANTITATIVELY
@@ -376,8 +370,7 @@ def contextual_fraction():
 
 # contextual_fraction()  # Requires scipy, skip for now
 
-print(
-    """
+print("""
 EXACT RESULT (from Vlasov):
 ===========================
 
@@ -389,15 +382,13 @@ The 6 "bad" bases form two groups of 3:
 - Bases (15, 25, 38): have 0 marked states
 
 This is the KOCHEN-SPECKER OBSTRUCTION for the Witting configuration.
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("PART CXL COMPLETE")
 print("=" * 70)
 
-print(
-    """
+print("""
 KEY FINDINGS:
 =============
 
@@ -417,5 +408,4 @@ KEY FINDINGS:
    for equiangular tight frames in dimension 4
 
 NAMING: This analysis applies to Sp₄(3) realized as the Witting configuration.
-"""
-)
+""")

@@ -102,8 +102,7 @@ print("\n" + "=" * 70)
 print("PART 3: McKay-Thompson Series and M12")
 print("=" * 70)
 
-print(
-    """
+print("""
 From the Monstrous Moonshine conjecture (proven by Borcherds):
 
 The McKay-Thompson series T_g for g of order 11 in Monster:
@@ -114,8 +113,7 @@ which acts on 12 points - just as W33 has 40/4 = 10 special structures...
 
 KEY INSIGHT: M12 centralizes an element of order 11 in Monster!
 The centralizer of an order-11 element contains M12.
-"""
-)
+""")
 
 # j-function coefficients (first few)
 j_coefficients = [1, 744, 196884, 21493760, 864299970, 20245856256]
@@ -141,8 +139,7 @@ print("=" * 70)
 # The tau function is multiplicative and famously:
 # τ(11) ≡ 0 (mod 11)  [Swinnerton-Dyer]
 
-print(
-    """
+print("""
 The Ramanujan tau function τ(n) appears in:
 Δ(τ) = q × Π_{n=1}^∞ (1-qⁿ)²⁴ = Σ τ(n)qⁿ
 
@@ -163,8 +160,7 @@ CRITICAL OBSERVATION:
 τ(11) = 534612 = 121 × 4419 = 11² × 4419
 
 So 121 = 11² = W33 total divides τ(11)!
-"""
-)
+""")
 
 tau_11 = 534612
 print(f"τ(11) = {tau_11}")
@@ -184,8 +180,7 @@ print("\n" + "=" * 70)
 print("PART 5: W33, Steiner Systems, and M12")
 print("=" * 70)
 
-print(
-    """
+print("""
 STEINER SYSTEM S(5,6,12):
 - 12 points, blocks are 6-element subsets
 - Every 5 points lie in exactly ONE 6-block
@@ -199,8 +194,7 @@ W33 CONNECTION:
 - S(5,6,12) can be constructed FROM S(2,3,9)!
 
 So: W33 (over GF(3)) → S(2,3,9) → S(5,6,12) → M12 → Monster
-"""
-)
+""")
 
 # Number of blocks in S(5,6,12)
 steiner_blocks_s5612 = math.comb(12, 5) // math.comb(6, 5)
@@ -222,8 +216,7 @@ print("\n" + "=" * 70)
 print("PART 6: The Mysterious 744 in j(τ)")
 print("=" * 70)
 
-print(
-    """
+print("""
 j(τ) = q⁻¹ + 744 + 196884q + ...
 
 The constant term 744 is intriguing:
@@ -238,8 +231,7 @@ W33 CONNECTIONS:
 
 DEEPER: 31 is a Mersenne prime = 2⁵ - 1
 And 744 = 24 × 31 = 24 × (2⁵ - 1)
-"""
-)
+""")
 
 # Check relations
 print(f"\n744 / 8 = {744 // 8} = 93")
@@ -280,8 +272,7 @@ print(f"Co₁ is the automorphism group of the Leech lattice")
 print(f"Monster ⊃ 2.Co₁ (double cover of Conway)")
 
 # The chain of sporadic groups
-print(
-    """
+print("""
 The Happy Family (20 sporadic groups in Monster):
 
 Generation 1: Mathieu groups M11, M12, M22, M23, M24
@@ -290,8 +281,7 @@ Generation 3: Monster M
 
 W33's Aut(W33) = W(E6) connects to E8 → Leech → Monster
 via: E6 → E7 → E8 → Leech lattice → Co₁ → Monster
-"""
-)
+""")
 
 # =========================================================================
 # PART 8: Grand Synthesis - The 137 Connection
@@ -300,8 +290,7 @@ print("\n" + "=" * 70)
 print("PART 8: GRAND SYNTHESIS - α⁻¹ = 137")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE GRAND UNIFIED PICTURE:
 
 From W33 = PG(3, GF(3)):
@@ -323,8 +312,7 @@ W33 PREDICTION:
 137 = 81 + 56 = |cycles| + |dP₂ lines|
     = 3⁴ + 56
     = E6(triple) + E7(minuscule)
-"""
-)
+""")
 
 # The stunning formula
 alpha_inv_w33 = w33_cycles + 56
@@ -371,8 +359,7 @@ print("\n" + "=" * 70)
 print("PART 10: THE MASTER EQUATIONS")
 print("=" * 70)
 
-print(
-    """
+print("""
 ╔═══════════════════════════════════════════════════════════════════════════╗
 ║                     W33 MOONSHINE MASTER EQUATIONS                        ║
 ╠═══════════════════════════════════════════════════════════════════════════╣
@@ -409,8 +396,7 @@ print(
 ║         and 11² | |Monster| exactly                                       ║
 ║                                                                           ║
 ╚═══════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =========================================================================
 # PART 11: Numerical Predictions
@@ -452,8 +438,7 @@ print("\n" + "=" * 70)
 print("PART 12: OPEN QUESTIONS FOR FURTHER RESEARCH")
 print("=" * 70)
 
-print(
-    """
+print("""
 1. WHY does 11² = 121 appear both in W33 and as the exact power of 11 in |Monster|?
    Is there a direct construction relating W33 to Monster?
 
@@ -486,8 +471,7 @@ print(
 
 10. The Weinberg angle sin²θ_W = 40/173 uses 173 = 121 + 52.
     What is 52 in W33 language? (Note: 52 = 40 + 12...)
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("END OF W33 MOONSHINE SYNTHESIS")

@@ -333,8 +333,7 @@ def main():
     print("THE WITTING-E8 CONNECTION")
     print("=" * 70)
 
-    print(
-        """
+    print("""
 ESTABLISHED FACTS:
 1. Witting polytope has 240 vertices in C^4
 2. These 240 vertices ARE the 240 E8 roots (under realification)
@@ -359,8 +358,7 @@ POSSIBLE INTERPRETATIONS:
 3. 240 = some representation-theoretic object
 
 Let me compute the FLAG count of W33...
-"""
-    )
+""")
 
     # Flags in W33
     # A flag is a vertex-line incidence
@@ -379,8 +377,7 @@ Let me compute the FLAG count of W33...
     # The 240 is the EDGE count, which equals the ROOT count
     # This is the nontrivial correspondence we need to explain
 
-    print(
-        """
+    print("""
 THE 240 = 240 CORRESPONDENCE:
 
 The GQ(3,3) = W(3,3) has:
@@ -399,8 +396,7 @@ The correspondence 240 edges <-> 240 roots goes via:
 
 This is the CONTENT of the theory - that W33's edge structure
 encodes E8's root structure in a group-equivariant way.
-"""
-    )
+""")
 
     # Save analysis
     results = {

@@ -35,8 +35,7 @@ print("\n" + "=" * 80)
 print("PART 1: THE CENTER OF Sp(4,3)")
 print("=" * 80)
 
-print(
-    """
+print("""
 For Sp(2n, q):
   - Center Z(Sp(2n,q)) = {±I}
   - |Z| = gcd(2, q-1)
@@ -54,8 +53,7 @@ The issue:
   - Total: Z₂ × Z₃ = Z₆, not Z₁₂!
 
 So where does the extra Z₂ (making Z₄) come from?
-"""
-)
+""")
 
 # =============================================================================
 # PART 2: OUTER AUTOMORPHISMS
@@ -65,8 +63,7 @@ print("\n" + "=" * 80)
 print("PART 2: OUTER AUTOMORPHISMS")
 print("=" * 80)
 
-print(
-    """
+print("""
 The full automorphism group of the W33 incidence structure:
   Aut(W33) = PΓSp(4,3)
 
@@ -86,8 +83,7 @@ The duality gives an extra Z₂:
 But this Z₄ is NOT cyclic! It's the Klein group V₄.
 
 Hmm, this doesn't quite work either...
-"""
-)
+""")
 
 # =============================================================================
 # PART 3: THE EXCEPTIONAL ISOMORPHISM PSp(4,3) ≅ PSU(4,2)
@@ -97,8 +93,7 @@ print("\n" + "=" * 80)
 print("PART 3: EXCEPTIONAL ISOMORPHISM AT q=3")
 print("=" * 80)
 
-print(
-    """
+print("""
 EXCEPTIONAL ISOMORPHISM:
   PSp(4,3) ≅ PSU(4,2)
 
@@ -127,8 +122,7 @@ The key is the TRIPLE COVER:
 
 The Schur multiplier of PSU(4,2) is Z₃!
 This gives the extra Z₃ for color!
-"""
-)
+""")
 
 # =============================================================================
 # PART 4: THE SCHUR MULTIPLIER
@@ -138,8 +132,7 @@ print("\n" + "=" * 80)
 print("PART 4: SCHUR MULTIPLIER AND CENTRAL EXTENSIONS")
 print("=" * 80)
 
-print(
-    """
+print("""
 SCHUR MULTIPLIER OF PSp(4,3):
   M(PSp(4,3)) = Z₂
 
@@ -168,8 +161,7 @@ The quantization:
   Y ∈ {-2, -1, 0, 1, 2, ...} / 6
 
 matches the Z₁₂ structure!
-"""
-)
+""")
 
 # =============================================================================
 # PART 5: HYPERCHARGE FROM WEIGHT LATTICE
@@ -179,8 +171,7 @@ print("\n" + "=" * 80)
 print("PART 5: HYPERCHARGE FROM WEIGHT LATTICE")
 print("=" * 80)
 
-print(
-    """
+print("""
 SU(5) GRAND UNIFICATION:
   SU(5) ⊃ SU(3) × SU(2) × U(1)
 
@@ -210,8 +201,7 @@ Decomposition under SU(3) × SU(2):
   - 15 = (6,1) + (3,2) + (1,3)
 
 Each piece has definite hypercharge!
-"""
-)
+""")
 
 # =============================================================================
 # PART 6: W(5,3) EMBEDDING FOR U(1)
@@ -225,8 +215,7 @@ print("=" * 80)
 w53_points = (3**6 - 1) // (3 - 1)  # = 364
 w53_steinberg_dim = 3 ** (3**2)  # = 3^9 = 19683
 
-print(
-    f"""
+print(f"""
 W(5,3) - THE HIGHER STRUCTURE
 =============================
 
@@ -251,8 +240,7 @@ The quotient:
   W(5,3) / W(3,3) ≅ ???
 
 This should give the missing U(1)!
-"""
-)
+""")
 
 # =============================================================================
 # PART 7: THE COMPLETE GAUGE GROUP
@@ -262,8 +250,7 @@ print("\n" + "=" * 80)
 print("PART 7: THE COMPLETE GAUGE GROUP")
 print("=" * 80)
 
-print(
-    """
+print("""
 BUILDING THE STANDARD MODEL GAUGE GROUP
 =======================================
 
@@ -304,8 +291,7 @@ Standard Model hypercharges (Y):
 All are n/6 with n ∈ {-6, -3, -2, 0, 1, 3, 4}
 
 The discrete group Z₆ ⊂ U(1) generates all these!
-"""
-)
+""")
 
 # =============================================================================
 # PART 8: GEOMETRIC INTERPRETATION
@@ -315,8 +301,7 @@ print("\n" + "=" * 80)
 print("PART 8: GEOMETRIC INTERPRETATION OF U(1)")
 print("=" * 80)
 
-print(
-    """
+print("""
 U(1) AS PHASE OF INNER PRODUCTS
 ===============================
 
@@ -341,8 +326,7 @@ To preserve W33 relations:
   θ_p - θ_q = n × π/6 for collinear p, q
 
 This constrains U(1) to Z₁₂ at the discrete level!
-"""
-)
+""")
 
 # =============================================================================
 # PART 9: NUMERICAL VERIFICATION
@@ -352,8 +336,7 @@ print("\n" + "=" * 80)
 print("PART 9: NUMERICAL VERIFICATION")
 print("=" * 80)
 
-print(
-    """
+print("""
 CHECKING HYPERCHARGE ASSIGNMENTS
 ================================
 
@@ -388,8 +371,7 @@ Where T₃ is the weak isospin.
 
 This DOES match! The K4 (Z₄=2, Z₃=0) selection
 gives T₃ = ±1/2, Y = ∓1/6 combined.
-"""
-)
+""")
 
 # =============================================================================
 # PART 10: THE COMPLETE PICTURE
@@ -399,8 +381,7 @@ print("\n" + "=" * 80)
 print("PART 10: THE COMPLETE PICTURE")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════╗
 ║          U(1) HYPERCHARGE IN W33: RESOLVED                   ║
 ╠══════════════════════════════════════════════════════════════╣
@@ -445,15 +426,13 @@ The W33 structure encodes:
   - Continuous: U(1) gauge symmetry
   - Combined: Full Standard Model gauge group
 
-"""
-)
+""")
 
 print("\n" + "=" * 80)
 print("CONCLUSION")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE MYSTERY IS SOLVED:
 ======================
 
@@ -476,5 +455,4 @@ The final equation:
   Z(SU(3) × SU(2) × U(1)) = Z₃ × Z₂ × U(1) ⊃ Z₁₂
 
 And W33 encodes exactly Z₁₂ at the discrete level.
-"""
-)
+""")

@@ -64,8 +64,7 @@ print("\n" + "=" * 70)
 print("THE ORTHOGONALITY RULE FOR SUPERPOSITIONS")
 print("=" * 70)
 
-print(
-    """
+print("""
 For states in Group 1: (0, 1, -ω^μ, ω^ν)/√3
 
 Inner product between (μ₁, ν₁) and (μ₂, ν₂):
@@ -88,8 +87,7 @@ RULE: States (μ₁, ν₁) and (μ₂, ν₂) are orthogonal iff
       (μ₂-μ₁, ν₁-ν₂) ∈ {(1, 2), (2, 1)} mod 3
 
 Wait, let me compute (Δμ, Δν) where Δν = ν₂ - ν₁:
-"""
-)
+""")
 
 # Verify the actual rule
 print("\nActual orthogonality pattern:")
@@ -111,8 +109,7 @@ print("\n" + "=" * 70)
 print("LINES IN THE AFFINE PLANE AG(2, F₃)")
 print("=" * 70)
 
-print(
-    """
+print("""
 AG(2, F₃) has 9 points and 12 lines.
 Lines have the form: {(x, y) : ax + by = c} for fixed a, b, c.
 
@@ -130,8 +127,7 @@ Lines:
   ν - μ = 0: {(0,0), (1,1), (2,2)} = {4, 8, 12}
   ν - μ = 1: {(0,1), (1,2), (2,0)} = {5, 9, 10}
   ν - μ = 2: {(0,2), (1,0), (2,1)} = {6, 7, 11}
-"""
-)
+""")
 
 # Verify these are the actual triangles
 triangles_predicted = [
@@ -173,8 +169,7 @@ print("\n" + "=" * 70)
 print("THE AFFINE PLANE AG(2, F₃)")
 print("=" * 70)
 
-print(
-    """
+print("""
 AG(2, F₃) = F₃ × F₃ as a set of 9 points.
 
 PARALLEL CLASSES (4 total, 3 lines each):
@@ -199,8 +194,7 @@ Direction (1, 2) - other diagonal:
   {(0,0), (1,2), (2,1)} = {4, 9, 11}    (2ν - μ = 0)
   {(0,1), (1,0), (2,2)} = {5, 7, 12}    (2ν - μ = 1)
   {(0,2), (1,1), (2,0)} = {6, 8, 10}    (2ν - μ = 2)
-"""
-)
+""")
 
 # Check which parallel class matches our triangles
 print("Matching to actual triangles:")
@@ -240,8 +234,7 @@ n_edges = sum(sum(row) for row in n_adj) // 2
 nn_adj = [[is_orthogonal(i, j) for j in non_neighbors] for i in non_neighbors]
 nn_edges = sum(sum(row) for row in nn_adj) // 2
 
-print(
-    f"""
+print(f"""
 ╔══════════════════════════════════════════════════════════════════════╗
 ║              COMPLETE LOCAL STRUCTURE AT VERTEX 0                    ║
 ╠══════════════════════════════════════════════════════════════════════╣
@@ -289,8 +282,7 @@ print(
 ║  40 = 1 + 12 + 27 = vertex + 4×3 triangles + 3×9 tripartite        ║
 ║                                                                      ║
 ╚══════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =====================================================
 # CONNECTIONS BETWEEN NEIGHBOR AND NON-NEIGHBOR
@@ -329,8 +321,7 @@ print("\n" + "=" * 70)
 print("PART CXLVIII COMPLETE")
 print("=" * 70)
 
-print(
-    """
+print("""
 COMPLETE LOCAL STRUCTURE OF Sp₄(3):
 ===================================
 
@@ -351,5 +342,4 @@ CROSS EDGES (108):
   Each neighbor adjacent to 9 non-neighbors (on average)
 
 This completes the local analysis of Sp₄(3)!
-"""
-)
+""")

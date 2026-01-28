@@ -15,15 +15,13 @@ from fractions import Fraction
 
 import numpy as np
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════╗
 ║             THEORY OF EVERYTHING - PART XXXIV                        ║
 ║                                                                      ║
 ║              CP VIOLATION AND NEUTRINO MIXING                        ║
 ╚══════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # THE CKM MATRIX
@@ -34,8 +32,7 @@ print("THE CKM MATRIX")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 The CKM (Cabibbo-Kobayashi-Maskawa) matrix describes quark mixing:
 
         ⎛ V_ud   V_us   V_ub ⎞
@@ -43,8 +40,7 @@ The CKM (Cabibbo-Kobayashi-Maskawa) matrix describes quark mixing:
         ⎝ V_td   V_ts   V_tb ⎠
 
 Experimental values (magnitudes):
-"""
-)
+""")
 
 # CKM magnitudes (PDG 2024)
 V_CKM = np.array(
@@ -144,8 +140,7 @@ print("THE PMNS MATRIX (NEUTRINO MIXING)")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 The PMNS (Pontecorvo-Maki-Nakagawa-Sakata) matrix describes neutrino mixing:
 
         ⎛ U_e1   U_e2   U_e3 ⎞
@@ -153,8 +148,7 @@ The PMNS (Pontecorvo-Maki-Nakagawa-Sakata) matrix describes neutrino mixing:
          ⎝ U_τ1   U_τ2   U_τ3 ⎠
 
 The neutrino mixing angles are LARGE (unlike CKM):
-"""
-)
+""")
 
 # PMNS angles (NuFit 5.2, 2022)
 theta_12_PMNS = math.radians(33.41)  # Solar angle
@@ -280,8 +274,7 @@ print("CP VIOLATION: THE WITTING PHASE")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 The CP-violating phases in CKM and PMNS:
 
   δ_CKM ≈ 66°  (well-measured)
@@ -294,8 +287,7 @@ But with uncertainty, this could be:
   δ_PMNS - δ_CKM ≈ 120° (within 2σ)
 
 WHY 120°?
-"""
-)
+""")
 
 print("═══ The Witting Polytope Phase ═══")
 print()
@@ -360,15 +352,13 @@ print("THE JARLSKOG INVARIANT")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 The Jarlskog invariant J measures the amount of CP violation:
 
   J = Im(V_us V_cb V*_ub V*_cs) for CKM
 
 It's related to the area of the unitarity triangle.
-"""
-)
+""")
 
 # CKM Jarlskog
 J_CKM = 3.08e-5  # experimental
@@ -414,8 +404,7 @@ print("SUMMARY: W33 MIXING PREDICTIONS")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 ╔═══════════════════════════════════════════════════════════════════════╗
 ║                   W33 MIXING ANGLE PREDICTIONS                        ║
 ╠═══════════════════════════════════════════════════════════════════════╣
@@ -435,8 +424,7 @@ print(
 ║    δ_PMNS / δ_CKM ≈ 4                   (from Witting structure)     ║
 ║    δ_PMNS - δ_CKM ≈ 3π/2 = 166°         (experiment confirms!)       ║
 ╚═══════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # THE DEEP CONNECTION
@@ -447,8 +435,7 @@ print("THE DEEP CONNECTION: WHY NEUTRINOS ARE DIFFERENT")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 Why are PMNS angles large while CKM angles are small?
 
 W33 EXPLANATION:
@@ -469,8 +456,7 @@ The KEY INSIGHT:
     (PMNS scale)/(CKM scale) ~ 81/40 ≈ 2
 
   This explains why neutrino mixing is "maximal" while quark mixing is "small"!
-"""
-)
+""")
 
 # Verification
 print("═══ Verification ═══")

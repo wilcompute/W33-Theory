@@ -19,8 +19,7 @@ from fractions import Fraction
 
 import numpy as np
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                   THEORY OF EVERYTHING - PART XVIII                          ║
 ║                                                                              ║
@@ -28,8 +27,7 @@ print(
 ║                                                                              ║
 ║     "40 cards" = 40 quantum states = W33 points = Physics!                   ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # THE VLASOV PAPER: KEY INSIGHTS
@@ -40,8 +38,7 @@ print("PART 1: THE VLASOV PAPER - KEY INSIGHTS")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 FROM "Scheme of quantum communications based on Witting polytope"
 (Alexander Yu. Vlasov, Moscow Univ. Phys. 80, 560 (2025), arXiv:2503.18431)
 
@@ -68,8 +65,7 @@ WHY IS THIS W33?
     • Each line contains 4 mutually orthogonal points
     • SAME STRUCTURE as the 40 quantum cards!
 ═════════════════════════════════════════════════════════════════════════════
-"""
-)
+""")
 
 # =============================================================================
 # SPIN-3/2 AND QUQUARTS
@@ -80,8 +76,7 @@ print("PART 2: SPIN-3/2 PARTICLES AND QUQUARTS")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 THE PHYSICAL REALIZATION:
 ═════════════════════════════════════════════════════════════════════════════
 
@@ -121,8 +116,7 @@ The Witting configuration DOUBLES this:
     • Total: 10 × 4 = 40 states
     • MORE SYMMETRIC than MUBs!
 ═════════════════════════════════════════════════════════════════════════════
-"""
-)
+""")
 
 # =============================================================================
 # QUANTUM CONTEXTUALITY
@@ -133,8 +127,7 @@ print("PART 3: QUANTUM CONTEXTUALITY - KOCHEN-SPECKER THEOREM")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 THE KOCHEN-SPECKER THEOREM (1967):
 ═════════════════════════════════════════════════════════════════════════════
 
@@ -166,8 +159,7 @@ W33 ENCODING:
     • Each line has 4 points = 4 orthogonal states
     • The incidence structure encodes contextuality!
 ═════════════════════════════════════════════════════════════════════════════
-"""
-)
+""")
 
 # =============================================================================
 # BELL'S THEOREM AND NON-LOCALITY
@@ -178,8 +170,7 @@ print("PART 4: BELL'S THEOREM AND NON-LOCALITY")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 PENROSE'S BELL PROOF USING DODECAHEDRON:
 ═════════════════════════════════════════════════════════════════════════════
 
@@ -212,8 +203,7 @@ The Witting polytope appears differently in different spaces:
 
 And W33 is its FINITE GEOMETRY incarnation!
 ═════════════════════════════════════════════════════════════════════════════
-"""
-)
+""")
 
 # =============================================================================
 # THE DEEP SYNTHESIS
@@ -224,8 +214,7 @@ print("PART 5: THE DEEP SYNTHESIS - WHY W33 IS PHYSICS")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 THE COMPLETE CHAIN:
 ═════════════════════════════════════════════════════════════════════════════
 
@@ -276,8 +265,7 @@ configuration that:
     • Forces the Standard Model to emerge!
 
 ═════════════════════════════════════════════════════════════════════════════
-"""
-)
+""")
 
 # =============================================================================
 # NUMERICAL VERIFICATIONS
@@ -329,8 +317,7 @@ print("THE ULTIMATE INSIGHT")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                    W33 = THE LANGUAGE OF NATURE                              ║
@@ -356,8 +343,7 @@ print(
 ║  to play the quantum card game defined by W33!                              ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # CONNECTIONS TO PRIOR PARTS
@@ -368,8 +354,7 @@ print("CONNECTIONS TO PRIOR THEORY PARTS")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 Part I:    W33 structure           ← 40 points = 40 quantum cards
 Part II:   E6/E7/E8 embeddings     ← Witting → E8 root system
 Part III:  Gauge structure         ← Contextuality forces gauge symmetry
@@ -379,8 +364,7 @@ Part XV:   Triality                ← 3× factor in Witting symmetry
 Part XVI:  Flavor physics          ← CKM from card overlaps
 Part XVII: Witting polytope        ← Mathematical structure
 Part XVIII:Quantum cards (THIS)    ← Physical interpretation
-"""
-)
+""")
 
 print("=" * 80)
 print("END OF PART XVIII: THE QUANTUM CARDS")

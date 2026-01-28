@@ -260,8 +260,7 @@ def the_gosset_adjacency():
     # This should be degree 56 (each E8 root has 56 neighbors in Gosset)
 
     # Compare with W33
-    print(
-        """
+    print("""
 
     GOSSET vs W33:
     ──────────────
@@ -285,8 +284,7 @@ def the_gosset_adjacency():
     - Gosset adjacency = IP = 1 in R^8
 
     These are DIFFERENT relations, but both stem from E8.
-    """
-    )
+    """)
 
 
 def explore_24_cell():
@@ -320,8 +318,7 @@ def explore_24_cell():
     # But D4 roots are (±1, ±1, 0, 0) permutations
     # That's 24 roots... same count but different!
 
-    print(
-        """
+    print("""
     CLARIFICATION:
 
     D4 root system: 24 roots of form (±1, ±1, 0, 0) permutations
@@ -347,8 +344,7 @@ def explore_24_cell():
 
     Actually, the stabilizer in Aut(W33) of a vertex should be
     computed directly, not assumed to be W(D4).
-    """
-    )
+    """)
 
     # Verify stabilizer
     print("\nRECALCULATING STABILIZER:")
@@ -378,8 +374,7 @@ def explore_24_cell():
     # 1296 appears in the ATLAS...
     # It's the order of the group 3^4 : 2.A_4 or similar
 
-    print(
-        """
+    print("""
     THE STABILIZER 1296:
 
     The stabilizer of a vertex in Aut(W33) has order 1296.
@@ -398,8 +393,7 @@ def explore_24_cell():
     Or: 1296 = 27 × 48 = 27 × |GL(2, F_3)|
 
     Interesting: 27 appears again!
-    """
-    )
+    """)
 
 
 def d5_spinor_connection():
@@ -415,8 +409,7 @@ def d5_spinor_connection():
     print("D5 SPINORS AND THE 72 = 40 + 32 DECOMPOSITION")
     print("=" * 70)
 
-    print(
-        """
+    print("""
     D5 REPRESENTATION THEORY:
 
     D5 = SO(10) has:
@@ -450,8 +443,7 @@ def d5_spinor_connection():
 
     This explains our earlier observation that 72 = 40 + 32
     in the context of W33 structure!
-    """
-    )
+    """)
 
     # Build E6 roots and check decomposition
     e8_roots = build_e8_roots()
@@ -471,8 +463,7 @@ def d5_spinor_connection():
     # D5 roots in first 5 coordinates (within the E6 constraint)
 
     # Actually, let's just count dimensions
-    print(
-        """
+    print("""
     THE DECOMPOSITION:
 
     E6 root system (72 roots)
@@ -495,8 +486,7 @@ def d5_spinor_connection():
     The 32 comes from D5 spinor in E6 ⊃ D5 embedding.
 
     Different 27 and 32!
-    """
-    )
+    """)
 
 
 def main():
@@ -509,8 +499,7 @@ def main():
     print("\n" + "=" * 70)
     print("SUMMARY: ROOT SYSTEMS AND W33")
     print("=" * 70)
-    print(
-        """
+    print("""
     THE EXCEPTIONAL HIERARCHY:
 
     E8 (240 roots)
@@ -539,8 +528,7 @@ def main():
     27 = [W(E6):W(D5)] = W33 non-neighbors = lines on cubic
     24 = |D4 roots|
     1296 = 51840/40 = W33 vertex stabilizer = 2^4 × 3^4
-    """
-    )
+    """)
 
 
 if __name__ == "__main__":

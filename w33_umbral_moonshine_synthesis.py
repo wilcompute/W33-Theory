@@ -27,8 +27,7 @@ print("\n" + "=" * 70)
 print("PART 1: The 24 Niemeier Lattices")
 print("=" * 70)
 
-print(
-    """
+print("""
 The 24 NIEMEIER LATTICES are the 24 positive definite even unimodular
 lattices of rank 24. They are classified by their root systems:
 
@@ -58,8 +57,7 @@ LATTICE       COXETER #    SPORADIC GROUP CONNECTION
 22. D₁₆E₈        30
 23. E₈³          30        ← E8 × E8 × E8
 24. D₂₄          46
-"""
-)
+""")
 
 print("\nCRITICAL OBSERVATION:")
 print("  A₂¹² has Coxeter number 3 and automorphism group M12!")
@@ -73,8 +71,7 @@ print("\n" + "=" * 70)
 print("PART 2: The A₂¹² - M12 - Ternary Golay Connection")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE A₂¹² NIEMEIER LATTICE:
 - Root system: 12 copies of A₂ (sl₃ root system)
 - Coxeter number: 3 (the prime underlying GF(3)!)
@@ -100,8 +97,7 @@ THE CHAIN:
   Umbral moonshine (mock modular forms)
     ↓
   Monster group (via moonshine)
-"""
-)
+""")
 
 # The numbers
 print("\nNumerical verification:")
@@ -118,8 +114,7 @@ print("\n" + "=" * 70)
 print("PART 3: The E₆⁴ Niemeier Lattice")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE E₆⁴ NIEMEIER LATTICE:
 - Root system: 4 copies of E₆
 - Coxeter number: 12
@@ -140,8 +135,7 @@ W33 STRUCTURE:
   Aut(W33) = W(E6) = |W(E6)| = 51840
            = 2⁷ × 3⁴ × 5
            = 128 × 81 × 5
-"""
-)
+""")
 
 print("\nE₆⁴ lattice calculations:")
 print(f"  |W(E6)| = 51840")
@@ -158,8 +152,7 @@ print("\n" + "=" * 70)
 print("PART 4: Umbral Moonshine Dictionary")
 print("=" * 70)
 
-print(
-    """
+print("""
 UMBRAL MOONSHINE:
 - For each Niemeier lattice L_X with root system X,
 - There is an umbral group G_X = Aut(L_X) / W(X)
@@ -181,8 +174,7 @@ THE MATHIEU MOONSHINE:
 This mystery parallels our W33 mystery:
   W33 appears connected to physics (α, sin²θ_W, Ω_Λ)
   But the mechanism is unknown!
-"""
-)
+""")
 
 # ==============================================================================
 # PART 5: THE NUMBER 24
@@ -192,8 +184,7 @@ print("\n" + "=" * 70)
 print("PART 5: The Number 24")
 print("=" * 70)
 
-print(
-    """
+print("""
 WHY 24? The number 24 appears throughout:
 
 1. NIEMEIER LATTICES: Exactly 24
@@ -212,8 +203,7 @@ THE 24-DIMENSIONAL STRUCTURE:
       = 729 + 15 = 3⁶ + 15
 
   And 729 = |ternary Golay| = 9 × 81 = 9 × |W33 cycles|!
-"""
-)
+""")
 
 print("\n24 factorizations:")
 print(f"  24 = 2³ × 3 = 8 × 3 = 6 × 4 = 12 × 2")
@@ -237,8 +227,7 @@ print("\n" + "=" * 70)
 print("PART 6: Vertex Operator Algebras and the Monster VOA")
 print("=" * 70)
 
-print(
-    """
+print("""
 MONSTER VERTEX OPERATOR ALGEBRA V♮:
 - Constructed by Frenkel-Lepowsky-Meurman (1988)
 - Central charge c = 24
@@ -260,8 +249,7 @@ Could there be a VOA construction involving W33?
   - 121 = 11² connects to Monster through 11² | |Monster|
   - Aut(W33) = W(E6) relates to E₆⁴ Niemeier lattice
   - M12 in ternary Golay connects to A₂¹² Niemeier lattice
-"""
-)
+""")
 
 # Central charge
 print("\nCentral charge numerology:")
@@ -280,8 +268,7 @@ print("\n" + "=" * 70)
 print("PART 7: Mock Modular Forms")
 print("=" * 70)
 
-print(
-    """
+print("""
 MOCK MODULAR FORMS (Ramanujan, 1920):
 - "Mock theta functions" that are almost modular
 - Have a "shadow" (a cusp form) that measures failure of modularity
@@ -299,8 +286,7 @@ The coefficients are dimensions of M24 representations!
 TERNARY ANALOG:
 For A₂¹² (M12), there should be similar mock forms.
 The role of GF(3) suggests W33 is deeply embedded here!
-"""
-)
+""")
 
 # Some Mathieu moonshine numbers
 print("\nMathieu moonshine coefficients:")
@@ -318,8 +304,7 @@ print("\n" + "=" * 70)
 print("PART 8: Deep Holes of the Leech Lattice")
 print("=" * 70)
 
-print(
-    """
+print("""
 DEEP HOLES OF LEECH:
 - The Leech lattice has "holes" - points not covered by spheres
 - The 23 other Niemeier lattices correspond to the 23 orbits
@@ -336,8 +321,7 @@ where Co₁ (Conway's group) has order:
 
 This connects to Monster via:
   Co₁ < 2.Co₁ < Aut(Λ₂₄) → VOA → Monster
-"""
-)
+""")
 
 co1_order = 4157776806543360000
 print(f"\n|Co₁| = {co1_order:,}")
@@ -353,8 +337,7 @@ print("\n" + "=" * 70)
 print("PART 9: The Master Synthesis - W33 in Umbral Moonshine")
 print("=" * 70)
 
-print(
-    """
+print("""
 ╔═══════════════════════════════════════════════════════════════════════╗
 ║           W33 AND THE UMBRAL MOONSHINE LANDSCAPE                      ║
 ╠═══════════════════════════════════════════════════════════════════════╣
@@ -402,8 +385,7 @@ THE NUMERICAL WEB:
   51840 (Aut)          |W(E6)|                   SAME!
   137 (α⁻¹)            --                        Mystery
   40/173 (sin²θ)       --                        Mystery
-"""
-)
+""")
 
 # ==============================================================================
 # PART 10: THE COXETER NUMBER 3
@@ -413,8 +395,7 @@ print("\n" + "=" * 70)
 print("PART 10: Coxeter Number 3 and the Ternary World")
 print("=" * 70)
 
-print(
-    """
+print("""
 COXETER NUMBER = 3:
 The A₂¹² Niemeier lattice has Coxeter number h = 3.
 
@@ -437,8 +418,7 @@ In A₂¹²:
   - 12 copies of A₂
   - 12 × 6 = 72 roots total
   - M12 permutes these 12 copies!
-"""
-)
+""")
 
 print("\nA₂ numerology:")
 print(f"  |W(A₂)| = 3! = 6")
@@ -455,8 +435,7 @@ print("\n" + "=" * 70)
 print("PART 11: Predictions and Open Questions")
 print("=" * 70)
 
-print(
-    """
+print("""
 PREDICTIONS FROM W33 + UMBRAL MOONSHINE:
 
 1. W33 VOA CONJECTURE:
@@ -488,8 +467,7 @@ Q3: Can we derive α⁻¹ = 137 from umbral moonshine?
 Q4: Is there a K3 surface whose symmetry involves W33?
 
 Q5: What is the vertex algebra for the ternary universe?
-"""
-)
+""")
 
 # ==============================================================================
 # PART 12: NUMERICAL COINCIDENCE TABLE
@@ -499,8 +477,7 @@ print("\n" + "=" * 70)
 print("PART 12: Master Coincidence Table")
 print("=" * 70)
 
-print(
-    """
+print("""
 ┌─────────────────────────────────────────────────────────────────────┐
 │         W33 - UMBRAL MOONSHINE COINCIDENCE TABLE                    │
 ├─────────────────────────────────────────────────────────────────────┤
@@ -528,8 +505,7 @@ print(
 │ Ω_Λ (dark energy)     │ 81/121       │ = 0.6694 (1.6% accurate)     │
 │ α⁻¹ × sin²θ_W         │ ~31.67       │ ≈ 744/24 + 0.67 = 31.67     │
 └─────────────────────────────────────────────────────────────────────┘
-"""
-)
+""")
 
 # Verification calculations
 print("\nVerification calculations:")

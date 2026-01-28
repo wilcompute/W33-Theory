@@ -339,8 +339,7 @@ def propose_dark_energy_mechanism():
     print("PART 5: PROPOSED DARK ENERGY MECHANISM")
     print("=" * 70)
 
-    print(
-        """
+    print("""
 MECHANISM: Dark Energy as Topological Sector Energy Cost
 
 The W33 geometry has THREE distinct sectors:
@@ -377,8 +376,7 @@ Testable Predictions:
     2. No time evolution of Λ (rigidity from geometry)
     3. Quantum vacuum fluctuations reduced by factor ~10^-120
     4. Topological defects generate dark energy locally
-    """
-    )
+    """)
 
     return True
 
@@ -404,8 +402,7 @@ def predict_quintessence_alternatives():
     # Energy: ρ(t) ~ ρ_0 × (1 + ε × sin(α × ln(a)))
     # where a = scale factor
 
-    print(
-        """
+    print("""
 W33 Prediction for Dark Energy Evolution:
     w(z) = -1 + (very small correction ~ 10^-8)
 
@@ -418,8 +415,7 @@ Test Method:
     - Measure w(z) as function of redshift z
     - If w(z) = constant, consistent with W33
     - If w(z) varies, need to modify theory
-    """
-    )
+    """)
 
     return True
 
@@ -509,8 +505,7 @@ def main():
     print("SUMMARY: DARK ENERGY FROM W33")
     print("=" * 70)
 
-    print(
-        f"""
+    print(f"""
 Key Findings:
 
 1. TOPOLOGICAL SECTOR IDENTIFIED
@@ -541,8 +536,7 @@ Key Findings:
    Dark energy is NOT mysterious!
    It emerges naturally from W33 geometry
    Cosmological constant problem SOLVED
-"""
-    )
+""")
 
     return {
         "tricentric": tri_structure,

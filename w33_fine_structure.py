@@ -28,8 +28,7 @@ print("\n" + "=" * 80)
 print("PART 1: THE MYSTERY OF α")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE FINE STRUCTURE CONSTANT
 ===========================
 
@@ -45,8 +44,7 @@ If α were different by a few percent, atoms wouldn't form,
 chemistry wouldn't work, and we wouldn't exist.
 
 WHY is α ≈ 1/137?
-"""
-)
+""")
 
 alpha_experimental = 1 / 137.035999084
 print(f"\nExperimental value:")
@@ -61,8 +59,7 @@ print("\n" + "=" * 80)
 print("PART 2: HUNTING FOR 137")
 print("=" * 80)
 
-print(
-    """
+print("""
 SEARCHING W33 STRUCTURE
 =======================
 
@@ -70,8 +67,7 @@ Known W33 numbers:
   40, 81, 90, 121, 133, ...
 
 Combinations to try:
-"""
-)
+""")
 
 # Key W33 numbers
 n_points = 40
@@ -114,8 +110,7 @@ print("\n" + "=" * 80)
 print("PART 3: THE INTERPRETATION")
 print("=" * 80)
 
-print(
-    """
+print("""
 81 + 56 = 137
 =============
 
@@ -130,8 +125,7 @@ the total degrees of freedom coupling fermions
 to the vacuum!
 
 But we need 137.036, not exactly 137...
-"""
-)
+""")
 
 # The correction
 alpha_137 = 1 / 137
@@ -158,8 +152,7 @@ print("\n" + "=" * 80)
 print("PART 4: DERIVING α")
 print("=" * 80)
 
-print(
-    """
+print("""
 A CANDIDATE FORMULA
 ===================
 
@@ -171,8 +164,7 @@ If δ = 56/1568 = 1/28:
   1/α = 81 + 56 + 1/28 = 137.0357...
 
 Let's check...
-"""
-)
+""")
 
 # Test formula
 delta_1 = 1 / 28
@@ -214,8 +206,7 @@ print("\n" + "=" * 80)
 print("PART 5: THE DEEPER FORMULA")
 print("=" * 80)
 
-print(
-    """
+print("""
 SEARCHING FOR THE EXACT FORMULA
 ===============================
 
@@ -225,8 +216,7 @@ Decomposition:
   137.035999084 = 137 + 0.035999084
 
 The 0.036 part must come from W33 structure...
-"""
-)
+""")
 
 # The decimal part
 decimal = 137.035999084 - 137
@@ -276,8 +266,7 @@ print("\n" + "=" * 80)
 print("PART 6: THE π CONNECTION")
 print("=" * 80)
 
-print(
-    """
+print("""
 DOES π APPEAR?
 ==============
 
@@ -286,8 +275,7 @@ Many attempts at α involve π:
   - Some GUT predictions involve π
 
 Let's check if π × (W33 numbers) gives 137...
-"""
-)
+""")
 
 # π combinations
 pi_combos = [
@@ -319,8 +307,7 @@ print("\n" + "=" * 80)
 print("PART 7: RUNNING COUPLING")
 print("=" * 80)
 
-print(
-    """
+print("""
 α RUNS WITH ENERGY
 ==================
 
@@ -335,8 +322,7 @@ W33 interpretation:
   - GUT: 1/24 = 1/dim(SU(5)) !
 
 The coupling RUNS through W33 structure!
-"""
-)
+""")
 
 # Check 128
 print(f"\nα at M_Z:")
@@ -359,8 +345,7 @@ print("\n" + "=" * 80)
 print("PART 8: WEINBERG ANGLE")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE WEINBERG ANGLE
 ==================
 
@@ -371,8 +356,7 @@ This determines electroweak mixing:
 
 W33 prediction?
   sin²θ_W = ?
-"""
-)
+""")
 
 # Weinberg angle
 sin2_theta_exp = 0.23122  # PDG value
@@ -409,8 +393,7 @@ print("\n" + "=" * 80)
 print("PART 9: GAUGE COUPLING UNIFICATION")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE THREE SM COUPLINGS
 ======================
 
@@ -426,8 +409,7 @@ W33 interpretation:
   - α₃: Strong ~ K4 × 2 = 8
   - α₂: Weak ~ (90-60)/1 = 30?
   - α₁: Hypercharge ~ 59 ≈ 60 = 90 - 30?
-"""
-)
+""")
 
 print(f"\nCoupling decompositions:")
 print(f"  1/α₃ ≈ 8 = 2³ = (K4) × 2")
@@ -443,8 +425,7 @@ print("\n" + "=" * 80)
 print("PART 10: α FROM W33")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                    THE FINE STRUCTURE CONSTANT FROM W33                      ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
@@ -479,8 +460,7 @@ print(
 ║  More work needed for exact formula.                                         ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print("\n" + "=" * 80)
 print("1/α ≈ 81 + 56 = VACUUM + FERMIONS = 137")

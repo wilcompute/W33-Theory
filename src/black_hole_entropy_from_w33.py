@@ -171,8 +171,7 @@ def derive_planck_scale_coupling():
     print("PART 3: CONTINUOUS LIMIT AND AREA LAW")
     print("=" * 70)
 
-    print(
-        f"""
+    print(f"""
 From Discrete to Continuous:
 
 W33 is finite geometry (5280 triangles)
@@ -200,8 +199,7 @@ The 1/4 factor:
     - Surface/volume ratio for spherical shell: 1/4
 
     S_BH = (1/4) × (A/l_P^2) ✓ (exact coefficient)
-"""
-    )
+""")
 
     return True
 
@@ -224,8 +222,7 @@ def test_against_string_theory():
     print("PART 4: COMPARISON WITH OTHER APPROACHES")
     print("=" * 70)
 
-    print(
-        f"""
+    print(f"""
 Black Hole Entropy Predictions:
 
 STRING THEORY:
@@ -271,8 +268,7 @@ Distinguishing Test:
 
     If experiment shows DIFFERENT value:
         New physics required beyond all three
-"""
-    )
+""")
 
     return True
 
@@ -347,8 +343,7 @@ def solve_information_paradox():
     print("PART 6: INFORMATION PARADOX RESOLUTION")
     print("=" * 70)
 
-    print(
-        f"""
+    print(f"""
 The Information Paradox (Hawking 1974):
 
 Question: What happens to information when a black hole evaporates?
@@ -404,8 +399,7 @@ Implication:
     ✓ W33 geometry is fundamental repository
     ✓ All information accessible (in principle)
     ✓ Quantum mechanics is consistent
-"""
-    )
+""")
 
     return True
 
@@ -431,8 +425,7 @@ def main():
     print("SUMMARY: BLACK HOLE ENTROPY FROM W33")
     print("=" * 70)
 
-    print(
-        f"""
+    print(f"""
 Key Findings:
 
 1. ENTROPY ORIGIN IDENTIFIED
@@ -483,8 +476,7 @@ Black hole entropy is not mysterious!
 It emerges from counting W33 topological states.
 The information paradox is solved by W33 geometry.
 Black holes are perfect test of quantum geometry.
-"""
-    )
+""")
 
     return {"bh_problem": bh_problem, "microstates": microstates}
 

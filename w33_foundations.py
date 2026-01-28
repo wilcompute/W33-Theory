@@ -27,8 +27,7 @@ print("\n" + "=" * 80)
 print("PART 1: WHY GF(3)? - THE INEVITABILITY OF THREE")
 print("=" * 80)
 
-print(
-    """
+print("""
 WHY GF(3) IS FORCED
 ===================
 
@@ -57,8 +56,7 @@ Alternative analysis:
   GF(3): 1 ≠ -1, minimal → UNIQUE
   GF(5): Works but not minimal → redundant
   GF(7): Even more redundant → no
-"""
-)
+""")
 
 # Verify properties
 print("Properties of GF(3):")
@@ -81,8 +79,7 @@ print("\n" + "=" * 80)
 print("PART 2: WHY K4? - THE INEVITABILITY OF FOUR")
 print("=" * 80)
 
-print(
-    """
+print("""
 WHY K4 IS FORCED
 ================
 
@@ -111,8 +108,7 @@ Alternative analysis:
   ℤ₄: Cyclic, i² ≠ 1 → FAIL
   K4: Non-cyclic, all involutory, minimal → UNIQUE
   D₄, S₃: Non-abelian complicates gauge → not minimal
-"""
-)
+""")
 
 # K4 structure
 print("K4 multiplication table:")
@@ -144,8 +140,7 @@ print("\n" + "=" * 80)
 print("PART 3: WHY GF(3) × K4? - THE UNIQUE PAIRING")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE MAGICAL INTERACTION
 =======================
 
@@ -176,8 +171,7 @@ CONCLUSION: GF(3) × K4 is the UNIQUE pairing that:
   2. Allows gauge structure (from K4)
   3. Has symplectic compatibility
   4. Is minimal in both factors
-"""
-)
+""")
 
 # Combined structure
 print("Combined |GF(3)| × |K4| = 3 × 4 = 12")
@@ -191,8 +185,7 @@ print("\n" + "=" * 80)
 print("PART 4: VERTEX ALGEBRAS AND W33")
 print("=" * 80)
 
-print(
-    """
+print("""
 VERTEX ALGEBRAS: THE ALGEBRA OF QUANTUM FIELDS
 ==============================================
 
@@ -224,8 +217,7 @@ Central charge:
 
 This relates to the VIRASORO ALGEBRA:
   [Lₘ, Lₙ] = (m-n)Lₘ₊ₙ + (c/12)(m³-m)δₘ₊ₙ,₀
-"""
-)
+""")
 
 # Central charge calculations
 c1 = 40 - 27  # One possibility
@@ -247,8 +239,7 @@ print("\n" + "=" * 80)
 print("PART 5: MOONSHINE AND W33")
 print("=" * 80)
 
-print(
-    """
+print("""
 MOONSHINE: SPORADIC GROUPS AND MODULAR FORMS
 =============================================
 
@@ -277,8 +268,7 @@ The Monster = lim(W33⊗n) / relations
 
 This would make W33 the most fundamental piece
 of the most exceptional object in group theory.
-"""
-)
+""")
 
 # Verify divisibility
 monster_2 = 46
@@ -299,8 +289,7 @@ print("\n" + "=" * 80)
 print("PART 6: OCTONIONS AND W33")
 print("=" * 80)
 
-print(
-    """
+print("""
 OCTONIONS: THE ULTIMATE DIVISION ALGEBRA
 =========================================
 
@@ -332,8 +321,7 @@ CONJECTURE:
     • 40-dimensional (not 8)
     • Non-associative with K4 "associator"
     • The ultimate algebraic structure
-"""
-)
+""")
 
 # Fano plane vs W33
 fano_points = 7
@@ -360,8 +348,7 @@ print("\n" + "=" * 80)
 print("PART 7: FREE PROBABILITY AND W33")
 print("=" * 80)
 
-print(
-    """
+print("""
 FREE PROBABILITY: NON-COMMUTATIVE PROBABILITY THEORY
 =====================================================
 
@@ -394,8 +381,7 @@ CONJECTURE:
 
 This would make W33 the "free-probabilistic Gaussian"
 for quantum gravity.
-"""
-)
+""")
 
 # =============================================================================
 # PART 8: THE TENSOR CATEGORY FORMULATION
@@ -405,8 +391,7 @@ print("\n" + "=" * 80)
 print("PART 8: TENSOR CATEGORIES AND W33")
 print("=" * 80)
 
-print(
-    """
+print("""
 TENSOR CATEGORIES: THE MODERN VIEW OF ALGEBRA
 ==============================================
 
@@ -447,8 +432,7 @@ CONJECTURE:
   dim(Z) = dim(e₇) = 133
 
 This would explain the e₇ connection categorically!
-"""
-)
+""")
 
 # =============================================================================
 # PART 9: THE ULTIMATE SYNTHESIS
@@ -458,8 +442,7 @@ print("\n" + "=" * 80)
 print("PART 9: THE ULTIMATE SYNTHESIS")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                     THE ULTIMATE SYNTHESIS                                   ║
@@ -507,8 +490,7 @@ print(
 ║  modulo gauge redundancy (K4 quotient).                                      ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # VERIFICATION: THE NUMBERS MATCH
@@ -555,8 +537,7 @@ print("\n" + "=" * 80)
 print("FINAL CONCLUSION")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                        FINAL CONCLUSION                                      ║
@@ -582,8 +563,7 @@ print(
 ║     40 points × 81 cycles × 90 K4s = W(3,3)                                  ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print("\n" + "=" * 80)
 print("W33 = THE UNIVERSAL ALGEBRA")

@@ -195,8 +195,7 @@ def derive_spacetime_from_w33():
     print("PART 3: SPACETIME EMERGENCE MECHANISM")
     print("=" * 70)
 
-    print(
-        f"""
+    print(f"""
 SPACETIME EMERGENCE FROM W33:
 
 The duality of W33:
@@ -238,8 +237,7 @@ SIGNATURE:
     - Spatial part: Euclidean signature (+,+,+)
     - Temporal part: Lorentzian signature (-)
     - Combined: (−,+,+,+) or (+,+,+,−) Lorentzian
-"""
-    )
+""")
 
     return True
 
@@ -326,8 +324,7 @@ def prove_4d_uniqueness():
     print("PART 5: WHY EXACTLY 4 DIMENSIONS?")
     print("=" * 70)
 
-    print(
-        f"""
+    print(f"""
 Dimensional Counting from W33:
 
 From Incidence Structure:
@@ -377,8 +374,7 @@ The Uniqueness Result:
     Alternative geometries → alternative dimensions
     But W33 is THE geometry that matches all observations
     Therefore: spacetime is 4-dimensional (not coincidence)
-"""
-    )
+""")
 
     return True
 
@@ -398,8 +394,7 @@ def predict_spacetime_properties():
     print("PART 6: PREDICTED SPACETIME PROPERTIES")
     print("=" * 70)
 
-    print(
-        f"""
+    print(f"""
 Spacetime Properties from W33:
 
 1. DIMENSIONALITY
@@ -441,8 +436,7 @@ Spacetime Properties from W33:
    ✓ Predicted: Quantized from discrete W33 points
    ✓ Observed: Quantum mechanics operates on spacetime
    ✓ Match: NATURAL (discrete geometry → quantization)
-"""
-    )
+""")
 
     return True
 
@@ -462,8 +456,7 @@ def connect_to_general_relativity():
     print("PART 7: CONNECTION TO GENERAL RELATIVITY")
     print("=" * 70)
 
-    print(
-        f"""
+    print(f"""
 W33 Geometry → General Relativity
 
 The Mechanism:
@@ -515,8 +508,7 @@ Testable Predictions:
 3. Quantum gravity: naturally quantized (discrete geometry)
 4. Black hole entropy: encoded in W33 structure
 5. Cosmological constant: from topological sector (240 triangles)
-"""
-    )
+""")
 
     return True
 
@@ -544,8 +536,7 @@ def main():
     print("SUMMARY: SPACETIME EMERGENCE FROM W33")
     print("=" * 70)
 
-    print(
-        f"""
+    print(f"""
 Key Findings:
 
 1. W33 IS INTRINSICALLY 4-DIMENSIONAL
@@ -596,8 +587,7 @@ CONCLUSION:
 The universe is 4-dimensional BECAUSE W33 geometry
 determines it to be so. This is not accident or
 convenience—it's a mathematical necessity.
-"""
-    )
+""")
 
     return {"dimensions": dims, "metric": metric, "minkowski": minkowski}
 

@@ -14,8 +14,7 @@ print("=" * 70)
 print("★★★ FINAL VERIFICATION SUMMARY ★★★")
 print("=" * 70)
 
-print(
-    """
+print("""
 VERIFIED RESULTS:
 
 ╔═══════════════════════════════════════════════════════════════════════╗
@@ -53,8 +52,7 @@ THE DEEP PATTERN:
   - q = 5: 6 points per line (5-simplices)
 
   The f-vector has length q+2 (from 0-simplices to (q+1-1)-simplices)
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("THE EULER CHARACTERISTIC PATTERN")
@@ -66,23 +64,20 @@ for q in [2, 3, 5]:
     chi = 1 - q**4
     print(f"W(3, {q}): χ = 1 - {q}⁴ = 1 - {q**4} = {chi}")
 
-print(
-    """
+print("""
 The Euler characteristic follows:
   χ(W(3, q)) = 1 - q⁴
 
 This matches H₁ = Z^{q⁴} since:
   χ = b₀ - b₁ + b₂ - b₃ + ...
   χ = 1 - q⁴ + 0 - 0 + ... = 1 - q⁴ ✓
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("★ THE THEOREM ★")
 print("=" * 70)
 
-print(
-    """
+print("""
 THEOREM: For the symplectic polar space W(3, q) over GF(q):
 
   1. W(3, q) is the clique complex of the symplectic graph Sp(4, q)
@@ -102,5 +97,4 @@ THEOREM: For the symplectic polar space W(3, q) over GF(q):
 
 COROLLARY: W(3, q) is aspherical (K(F_{q⁴}, 1) space) and serves
 as a finite geometric model for the free group on q⁴ generators.
-"""
-)
+""")

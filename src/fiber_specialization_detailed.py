@@ -229,8 +229,7 @@ def predict_mass_spectrum():
     # - Vertices appearing mainly in 3-cycles: medium
     # - Vertices appearing mainly in transpositions: light
 
-    print(
-        f"""
+    print(f"""
 Predicted Mass Pattern:
 
 Based on holonomy specialization:
@@ -258,8 +257,7 @@ Based on holonomy specialization:
 Expected quark/lepton mass ratios could emerge from
 the geometric coupling between vertex projections
 and triangle types!
-"""
-    )
+""")
 
 
 if __name__ == "__main__":
@@ -270,8 +268,7 @@ if __name__ == "__main__":
     print("\n" + "=" * 70)
     print("SMOKING GUN EVIDENCE SUMMARY")
     print("=" * 70)
-    print(
-        """
+    print("""
 Evidence converging on SU(5) embedding:
 
 1. ✓ K4 components all have (Z4, Z3) = (2, 0)
@@ -285,5 +282,4 @@ The geometric structure of W33 → Q45 → v23 directly encodes
 the Standard Model!
 
 Next: Extract numerical mass predictions.
-"""
-    )
+""")

@@ -327,8 +327,7 @@ def main():
     print("KEY STRUCTURAL PARALLEL")
     print("=" * 50)
 
-    print(
-        """
+    print("""
 W33 Structure:
   240 edges = 6 position-pair groups x 40 bases
 
@@ -351,8 +350,7 @@ Shared Structure:
   - Both have dimension 24 as key number (D4 roots, W33 lambda=2 eigenspace)
   - Both encode triality (D4's S3 outer automorphism)
   - Both have 120 as key (root lines, nullspace dimension)
-"""
-    )
+""")
 
     # Save results
     results = {

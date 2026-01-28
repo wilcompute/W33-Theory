@@ -223,16 +223,14 @@ print("\n" + "=" * 70)
 print("GEOMETRIC INTERPRETATION: APARTMENTS")
 print("=" * 70)
 
-print(
-    """
+print("""
 In building theory, an APARTMENT is a "thin" sub-building.
 For Sp(4,3), an apartment corresponds to:
   - A non-degenerate 2-dimensional symplectic subspace of GF(3)⁴
   - This gives a "grid" structure
 
 Let's find the apartments in W33!
-"""
-)
+""")
 
 # An apartment in W(3,q) is determined by a symplectic basis
 # A symplectic basis of GF(3)⁴ is (e1, e2, f1, f2) with:

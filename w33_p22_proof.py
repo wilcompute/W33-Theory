@@ -134,8 +134,7 @@ print("\n" + "=" * 80)
 print("PART 3: THE SELF-DUALITY")
 print("=" * 80)
 
-print(
-    f"""
+print(f"""
 W33 is SELF-DUAL:
   |Points| = {n_points}
   |Lines|  = {n_lines}
@@ -148,8 +147,7 @@ The duality is given by:
   Point (a,b,c,d) <-> Hyperplane ax + by + cz + dw = 0
 
 This is exactly the structure behind Vogel's universality!
-"""
-)
+""")
 
 # =============================================================================
 # PART 4: COUNTING CYCLES (THE 81)
@@ -194,8 +192,7 @@ n_planes = count_cycles()
 print(f"Number of planes in PG(3,3): {n_planes}")
 print(f"This matches |points| = {n_points} by self-duality!")
 
-print(
-    """
+print("""
 The "81 cycles" refers to:
   81 = |GF(3)^4| = size of the affine 4-space over GF(3)
 
@@ -206,8 +203,7 @@ In terms of W33 structure:
   where 121 = (3^4 - 1)/(3-1) + (3^3-1)/(3-1) + ...
 
 Wait, let me recalculate the 81:
-"""
-)
+""")
 
 # The 81 in W33 theory
 print("The 81 in W33 theory:")
@@ -228,8 +224,7 @@ print("\n" + "=" * 80)
 print("PART 5: THE ALGEBRA STRUCTURE")
 print("=" * 80)
 
-print(
-    """
+print("""
 The incidence algebra Inc(W33) has:
   Basis: e_{p,L} for each incidence p ∈ L
   Product: e_{p,L} · e_{L,p'} = e_{p,p'} if well-defined
@@ -244,8 +239,7 @@ where:
   - IHX is the Jacobi identity in diagram form
 
 The quotient structure reduces 160 basis elements to just 3 generators!
-"""
-)
+""")
 
 # =============================================================================
 # PART 6: THE KEY INSIGHT FOR P22
@@ -255,8 +249,7 @@ print("\n" + "=" * 80)
 print("PART 6: THE KEY INSIGHT FOR P22")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE P22 STRUCTURE:
 
 P₂₂ = P_sl² · P_sl · P_osp · P_G2 · P_F4 · P_E6 · P_E7 · P_E8
@@ -301,8 +294,7 @@ And the palindrome forces ˆt ∝ ˆt', so:
   2 · ˆt · ˆP₂₂ = 0
 
 Therefore: ˆt · ˆP₂₂ = 0 (assuming char ≠ 2)
-"""
-)
+""")
 
 # =============================================================================
 # PART 7: THE FORMAL ARGUMENT
@@ -312,8 +304,7 @@ print("\n" + "=" * 80)
 print("PART 7: THE FORMAL ARGUMENT")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                    SKETCH OF PROOF: ˆt · ˆP₂₂ = 0                            ║
@@ -349,8 +340,7 @@ print(
 ║           Since char(Λ) = 0: ˆt · ˆP₂₂ = 0.  □                               ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # PART 8: VERIFICATION
@@ -388,8 +378,7 @@ print("\n" + "=" * 80)
 print("CONCLUSION")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                           MAIN RESULT                                        ║
@@ -424,8 +413,7 @@ print(
 The answer to Morozov & Sleptsov's open question is: YES, ˆt · ˆP₂₂ = 0.
 
 The reason: W33 self-duality + the palindromic structure of P₂₂.
-"""
-)
+""")
 
 print("\n" + "=" * 80)
 print("W33 ANSWERS THE OPEN PROBLEM")

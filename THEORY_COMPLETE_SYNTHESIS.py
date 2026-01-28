@@ -17,8 +17,7 @@ incorporating all discoveries from Parts I through XVI.
 import math
 from fractions import Fraction
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                    W33 THEORY OF EVERYTHING                                  ║
@@ -26,8 +25,7 @@ print(
 ║                  COMPLETE SYNTHESIS: PARTS I-XVI                             ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # THE FUNDAMENTAL GEOMETRY
@@ -38,8 +36,7 @@ print("PART I: THE FUNDAMENTAL GEOMETRY")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 W33 = W(3,3) = PG(3, GF(3)) - The Projective Geometry over the Field of 3 Elements
 
 FUNDAMENTAL NUMBERS:
@@ -57,8 +54,7 @@ WHY W33?
   • Smallest finite geometry with exceptional properties
   • Connects to E6/E7/E8 exceptional Lie groups
   • Automorphism group = Weyl group of E6
-"""
-)
+""")
 
 # =============================================================================
 # THE EXCEPTIONAL CONNECTION
@@ -69,8 +65,7 @@ print("PART II: THE EXCEPTIONAL CONNECTION")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 W33 CONNECTS TO EXCEPTIONAL MATHEMATICS:
 
 |Aut(W33)| = 51,840 = |W(E6)| (Weyl group of E6)
@@ -93,8 +88,7 @@ EXCEPTIONAL LIE GROUP CHAIN:
   E6 fundamental rep = 27
   E7 fundamental rep = 56
   E8 fundamental rep = 248 (adjoint)
-"""
-)
+""")
 
 # =============================================================================
 # THE ALPHA FORMULA
@@ -110,8 +104,7 @@ alpha_inv_tree = 137
 alpha_inv_corrected = 137 + Fraction(3, 83)
 alpha_inv_exp = 137.0359990840
 
-print(
-    """
+print("""
 THE FORMULA FOR α⁻¹:
 
 TREE LEVEL:
@@ -129,8 +122,7 @@ INTERPRETATION:
   • 81 = W33 cycles (geometry of matter)
   • 56 = E7 fundamental rep (28 + 28 electromagnetic duality)
   • 3/83 = triality / (cycles + E7 singlets)
-"""
-)
+""")
 
 print(f"NUMERICAL VERIFICATION:")
 print(f"  W33 Formula: α⁻¹ = {float(alpha_inv_corrected):.10f}")
@@ -152,8 +144,7 @@ print()
 sin2_w33 = Fraction(40, 173)
 sin2_exp = 0.23120  # ± 0.00015
 
-print(
-    """
+print("""
 THE FORMULA FOR sin²θ_W:
 
   sin²θ_W = 40/173
@@ -164,8 +155,7 @@ WHERE:
   • 40 = W33 points
   • 173 = 81 + 90 + 2 = cycles + K4s + 2
   • The "2" represents E7 singlets (from 56 → 27 + 27* + 1 + 1)
-"""
-)
+""")
 
 print(f"NUMERICAL VERIFICATION:")
 print(f"  W33 Formula: sin²θ_W = 40/173 = {float(sin2_w33):.6f}")
@@ -185,8 +175,7 @@ print("PART V: THREE GENERATIONS FROM TRIALITY")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 WHY EXACTLY THREE GENERATIONS?
 
 Spin(8) has TRIALITY - unique among all simple Lie groups!
@@ -214,8 +203,7 @@ EACH GENERATION = ONE TRIALITY SECTOR:
   Generation 3 ↔ Right-handed spinor
 
 The triality automorphism PERMUTES generations while preserving structure.
-"""
-)
+""")
 
 # =============================================================================
 # CKM AND PMNS MATRICES
@@ -229,8 +217,7 @@ print()
 cabibbo_w33 = Fraction(9, 40)
 cabibbo_exp = 0.2252
 
-print(
-    """
+print("""
 CKM MATRIX (QUARKS):
 
   Cabibbo angle: sin(θC) = 9/40 = 0.225
@@ -248,8 +235,7 @@ PMNS MATRIX (NEUTRINOS):
 CONTRAST:
   Quarks:    small mixing  ← "local" W33 geometry
   Neutrinos: large mixing  ← "global" W33 structure
-"""
-)
+""")
 
 print(f"CABIBBO ANGLE VERIFICATION:")
 print(f"  W33:  sin(θC) = 9/40 = {float(cabibbo_w33):.6f}")
@@ -269,8 +255,7 @@ print()
 dm_w33 = Fraction(27, 5)
 dm_exp = 5.41
 
-print(
-    """
+print("""
 DARK MATTER / VISIBLE MATTER:
 
   Ω_DM/Ω_b = 27/5 = 5.4
@@ -286,8 +271,7 @@ From Planck 2018:
   Ω_DM = 0.265
   Ω_b  = 0.049
   Ratio = 5.41
-"""
-)
+""")
 
 print(f"DARK MATTER VERIFICATION:")
 print(f"  W33:  Ω_DM/Ω_b = 27/5 = {float(dm_w33):.1f}")
@@ -304,8 +288,7 @@ print("COMPLETE THEORY: THE W33 UNIVERSE")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                        THE W33 UNIVERSE                                      ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
@@ -332,8 +315,7 @@ print(
 ║  COSMOLOGY:          Λ ~ 10⁻¹²¹ from W33 total = 121                        ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # PREDICTIONS SUMMARY
@@ -370,8 +352,7 @@ print("CONNECTIONS TO FUNDAMENTAL PHYSICS")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 M-THEORY / STRING THEORY:
   • 27 lines on cubic surface ↔ M-theory U-duality
   • del Pezzo surfaces ↔ toroidal compactifications
@@ -391,8 +372,7 @@ ALGEBRAIC GEOMETRY:
   • 27 lines on smooth cubic surface (Cayley-Salmon 1849)
   • Monodromy group = W(E6) = 51,840
   • Configuration studied by Schläfli, Cartan, du Val
-"""
-)
+""")
 
 # =============================================================================
 # FINAL STATEMENT
@@ -403,8 +383,7 @@ print("CONCLUSION")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 THE W33 THEORY OF EVERYTHING proposes that:
 
   The fundamental structure of physics is encoded in W33 = PG(3, GF(3)),
@@ -432,5 +411,4 @@ THE W33 THEORY OF EVERYTHING proposes that:
 ══════════════════════════════════════════════════════════════════════════════════
                         END OF W33 THEORY SYNTHESIS
 ══════════════════════════════════════════════════════════════════════════════════
-"""
-)
+""")
