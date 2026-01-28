@@ -421,6 +421,19 @@ tools/analyze_pattern_quotient_graph.py
 artifacts/pattern_quotient_graph.json
 \end{verbatim}
 
+\textbf{Symmetry breaking note.} The 8 pattern classes are \textbf{not
+preserved} by the intrinsic automorphism group of W33 (PSp(4,3)). A
+direct check shows that no standard symplectic generator preserves the
+pattern coloring; the color‑preserving subgroup is trivial. This
+confirms that the W(E6)--Coxeter pattern is \textbf{extra structure}
+imported from the chosen E8 embedding, not an intrinsic W33 invariant.
+See:
+
+\begin{verbatim}
+tools/compute_pattern_preserving_subgroup.py
+artifacts/pattern_preserving_subgroup.json
+\end{verbatim}
+
 \textbf{Exceptional vertex triplet.} Exactly \textbf{3} Coxeter‑6 orbits
 contain the size‑1 W(E6) roots. These correspond to three explicit
 \(F_{3}^{4}\) projective points:
@@ -1287,6 +1300,16 @@ Mapping}\label{e6e8-orbit-structure-explicit-mapping}
     \(F_{3}^{4}\) points.
   \item
     Output: \texttt{artifacts/exceptional\_we6\_patterns.json}
+  \end{itemize}
+\item
+  \texttt{python3\ tools/compute\_pattern\_preserving\_subgroup.py}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Tests W33 automorphisms that preserve W(E6) pattern classes.
+  \item
+    Output: \texttt{artifacts/pattern\_preserving\_subgroup.json}
   \end{itemize}
 \item
   \texttt{python\ tools/explicit\_bijection\_decomposition.py}
