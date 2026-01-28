@@ -371,25 +371,27 @@ print("\n" + "=" * 70)
 print("SECTION 7: E6 WEYL GROUP CONNECTION")
 print("=" * 70)
 
-print("""
+print(
+    """
 Key relationship:
   |W(E₆)| = 51840 = |Sp(4,3)|
-  
+
 This means Sp(4,3) has the same order as W(E₆) (a known sporadic isomorphism).
 
 E₆ root system has:
   - 72 roots
-  - 36 positive roots  
+  - 36 positive roots
   - Fundamental weights related to 27-dimensional representation
 
 Connection to W33:
   - The 40 points might relate to E₆ representation theory
   - 40 = dimension of some E₆ irrep?
   - Check: E₆ has irreps of dimensions 1, 27, 78, 351, 650, 1728, ...
-  
+
 Interesting: 1728 appears in our α formula!
   α = 173/1728 relates to E₆ somehow?
-""")
+"""
+)
 
 # The 27-dimensional representation of E₆
 # Is dual to itself: 27 ⊗ 27 contains 1 + 78 + 650
@@ -531,12 +533,13 @@ print("\n" + "=" * 70)
 print("PART LIV SUMMARY")
 print("=" * 70)
 
-print("""
+print(
+    """
 VERIFIED IN THIS SESSION:
 =========================
 ✓ W33 has exactly 40 vertices (isotropic points over F₃)
 ✓ W33 is a strongly regular graph with parameters (40, 12, 2, 4)
-✓ Complement is SRG(40, 27, 18, 18)  
+✓ Complement is SRG(40, 27, 18, 18)
 ✓ 4-cliques = lines of W33 = 40 total
 ✓ |Aut(W33)| = |Sp(4,3)| = 51840 = 2⁷ × 3⁴ × 5
 ✓ |Sp(4,3)| = |W(E₆)| (sporadic order coincidence)
@@ -555,7 +558,7 @@ NEW INSIGHTS:
 =============
 • 56 in the α formula is dim(E₇ fundamental representation)!
   This suggests W33 connects to E₆ AND E₇
-  
+
 • The formula might be: α⁻¹ = dim(H₁(W33)) + dim(ρ₅₆(E₇)) + boundary term
 
 • 1728 = 12³ where 12 = degree of W33 graph - is this coincidence?
@@ -565,7 +568,8 @@ NEW INSIGHTS:
   - 12 neighbors → gauge connections?
   - 2 common neighbors for adjacent → some constraint
   - 4 common for non-adjacent → another constraint
-""")
+"""
+)
 
 print("=" * 70)
 print("END OF PART LIV")

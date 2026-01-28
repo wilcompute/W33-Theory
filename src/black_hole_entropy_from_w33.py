@@ -171,7 +171,8 @@ def derive_planck_scale_coupling():
     print("PART 3: CONTINUOUS LIMIT AND AREA LAW")
     print("=" * 70)
 
-    print(f"""
+    print(
+        f"""
 From Discrete to Continuous:
 
 W33 is finite geometry (5280 triangles)
@@ -190,16 +191,17 @@ Planck Area Element:
     - k triangles fit on horizon of area A
     - k ≈ A/l_P^2
     - Entropy ~ k (logarithmic counting)
-    
+
     Result: S_BH ∝ A/l_P^2 ✓ (Bekenstein-Hawking)
 
 The 1/4 factor:
     - Comes from: only SURFACE layer contributes
     - Interior is screened (no entropy information)
     - Surface/volume ratio for spherical shell: 1/4
-    
+
     S_BH = (1/4) × (A/l_P^2) ✓ (exact coefficient)
-""")
+"""
+    )
 
     return True
 
@@ -222,7 +224,8 @@ def test_against_string_theory():
     print("PART 4: COMPARISON WITH OTHER APPROACHES")
     print("=" * 70)
 
-    print(f"""
+    print(
+        f"""
 Black Hole Entropy Predictions:
 
 STRING THEORY:
@@ -241,34 +244,35 @@ W33 PREDICTION:
     S_BH = (A/4l_P^2)
     Derivation: Counting topological triangle states
     Status: MATCHES STRING THEORY EXACTLY
-    
+
 Why W33 Matches String Theory:
     - Both count microstates
     - String theory: supersymmetric string states
     - W33: topological triangles from finite geometry
     - They count the SAME thing!
-    
+
     Implication: String theory is ENCODING W33 geometry
     W33 is more fundamental (finite, constructive)
     String theory is derived (approximate, algebraic)
 
 Distinguishing Test:
     Measurement of black hole entropy to precision ±1%
-    
+
     String theory: S = A/(4l_P^2)
     LQG: S = A/(4l_P^2) × 0.055 [smaller]
-    
+
     W33 predicts: STRING THEORY VALUE
-    
+
     If experiment confirms S = A/(4l_P^2):
         W33 is correct!
-    
+
     If experiment confirms LQG value:
         W33 needs modification
-    
+
     If experiment shows DIFFERENT value:
         New physics required beyond all three
-""")
+"""
+    )
 
     return True
 
@@ -343,14 +347,15 @@ def solve_information_paradox():
     print("PART 6: INFORMATION PARADOX RESOLUTION")
     print("=" * 70)
 
-    print(f"""
+    print(
+        f"""
 The Information Paradox (Hawking 1974):
 
 Question: What happens to information when a black hole evaporates?
     - Initial state: entangled matter (quantum state)
     - Hawking radiation: appears thermal (no correlations)
     - Final state: apparently random, information lost?
-    
+
 Standard Resolution: Subtle correlations in Hawking radiation
 Problem: Details remain unclear (unresolved for 50 years)
 
@@ -362,17 +367,17 @@ Mechanism:
     1. Matter falls into black hole
        → Geometric state of W33 changes
        → Holonomy along boundary paths changes
-    
+
     2. Black hole evaporates
        → Radiation carries away mass/energy
        → But W33 holonomy structure PRESERVED
        → Information remains accessible
-    
+
     3. Final state analysis
        → Holonomy encodes all initial information
        → Information index: product of holonomy factors
        → UNITARITY PRESERVED
-    
+
 Why This Works:
 
     - Hawking radiation: appears thermal (correct, no paradox)
@@ -387,7 +392,7 @@ Testable Prediction:
     Correlation strength: ~ exp(-S_BH)
     For astrophysical black holes: incredibly tiny
     For Planck-scale black holes: potentially observable
-    
+
     Key signature: Non-thermal higher-order correlations
     Detectable in principle with sufficient sensitivity
 
@@ -399,7 +404,8 @@ Implication:
     ✓ W33 geometry is fundamental repository
     ✓ All information accessible (in principle)
     ✓ Quantum mechanics is consistent
-""")
+"""
+    )
 
     return True
 
@@ -425,7 +431,8 @@ def main():
     print("SUMMARY: BLACK HOLE ENTROPY FROM W33")
     print("=" * 70)
 
-    print(f"""
+    print(
+        f"""
 Key Findings:
 
 1. ENTROPY ORIGIN IDENTIFIED
@@ -476,7 +483,8 @@ Black hole entropy is not mysterious!
 It emerges from counting W33 topological states.
 The information paradox is solved by W33 geometry.
 Black holes are perfect test of quantum geometry.
-""")
+"""
+    )
 
     return {"bh_problem": bh_problem, "microstates": microstates}
 

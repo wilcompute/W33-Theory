@@ -30,7 +30,8 @@ print("\n" + "=" * 70)
 print("SECTION 1: PAULI GROUPS AND STABILIZER CODES")
 print("=" * 70)
 
-print("""
+print(
+    """
 BACKGROUND: STABILIZER CODES
 ============================
 
@@ -39,7 +40,7 @@ with distance d (can correct ⌊(d-1)/2⌋ errors).
 
 The Pauli group on n qubits has 4^n elements (ignoring phases):
 • n=1: {I, X, Y, Z} = 4 elements
-• n=2: 16 elements  
+• n=2: 16 elements
 • n=3: 64 elements
 
 These form a vector space over F_4 or over F_2^{2n}.
@@ -56,7 +57,8 @@ Let's think differently:
 • For 2 qutrits: 81 = 3^4 generalized Paulis (Weyl-Heisenberg)
 
 81 = dim(H₁(W33))! This is not a coincidence!
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 2: QUTRIT PAULIS AND THE WEYL-HEISENBERG GROUP
@@ -179,7 +181,8 @@ print("\n" + "=" * 70)
 print("SECTION 4: W33 ↔ QUTRIT PAULIS")
 print("=" * 70)
 
-print("""
+print(
+    """
 KEY REALIZATION:
 ================
 
@@ -196,7 +199,8 @@ So W33 points = equivalence classes of self-commuting 2-qutrit Paulis!
 
 The 40 points represent 40 "directions" in Pauli space that commute with themselves.
 The 40 lines represent 40 maximally commuting sets (4 mutually commuting Paulis each).
-""")
+"""
+)
 
 
 # Build the projective points
@@ -249,7 +253,8 @@ print("\n" + "=" * 70)
 print("SECTION 5: W33 AS QUANTUM CODE")
 print("=" * 70)
 
-print("""
+print(
+    """
 STABILIZER CODE INTERPRETATION:
 ================================
 
@@ -270,14 +275,15 @@ Parameters of W33 as a code:
 • 4 lines/point = each generator in 4 stabilizer groups
 
 POSSIBLE CODE: [[9, k, d]] code on qutrits?
-• 9 = 3² qutrits (9-dimensional Hilbert space per qutrit)  
+• 9 = 3² qutrits (9-dimensional Hilbert space per qutrit)
 • k = encoded logical qutrits
 • d = distance
 
 Or viewing the 40 as an error basis:
 • 40 "directions" of errors
 • Protected by the 40 stabilizer sets
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 6: MUTUALLY UNBIASED BASES CONNECTION
@@ -287,7 +293,8 @@ print("\n" + "=" * 70)
 print("SECTION 6: MUB CONNECTION")
 print("=" * 70)
 
-print("""
+print(
+    """
 MUTUALLY UNBIASED BASES (MUBs):
 ===============================
 
@@ -309,7 +316,8 @@ SIC-POVM in dimension d has d² elements.
 • d = 7: SIC has 49 elements
 
 40 is between d=6 and d=7 SIC-POVMs!
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 7: CONTEXTUALITY AND KOCHEN-SPECKER
@@ -319,11 +327,12 @@ print("\n" + "=" * 70)
 print("SECTION 7: QUANTUM CONTEXTUALITY")
 print("=" * 70)
 
-print("""
+print(
+    """
 KOCHEN-SPECKER THEOREM AND CONTEXTUALITY:
 =========================================
 
-The KS theorem says: No non-contextual hidden variable theory can 
+The KS theorem says: No non-contextual hidden variable theory can
 reproduce quantum mechanics.
 
 A KS SET is a collection of projectors that cannot be consistently
@@ -343,10 +352,11 @@ The Doily (15 points, 15 lines) contains the Mermin-Peres magic square.
 It proves contextuality for 2-qubit systems.
 
 W33 MAGIC STRUCTURE?
-• 40 points, 40 lines 
+• 40 points, 40 lines
 • Could encode a "magic hypercube" for 2-qutrit contextuality!
 • This would be a new result in quantum foundations!
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 8: THE 137 CONNECTION TO CODES
@@ -356,7 +366,8 @@ print("\n" + "=" * 70)
 print("SECTION 8: 137 FROM CODING THEORY?")
 print("=" * 70)
 
-print("""
+print(
+    """
 WILD SPECULATION: α⁻¹ ≈ 137 FROM CODING THEORY
 ================================================
 
@@ -379,7 +390,8 @@ For a [[9,1,d]] code on qutrits:
 INTERESTING: 3⁹ / 137 ≈ 143.7 ≈ 144 = 12²
 
 Could there be an "optimal" code whose parameters give 137?
-""")
+"""
+)
 
 # Some coding theory calculations
 print("\nCoding theory numerology:")
@@ -402,7 +414,8 @@ print("\n" + "=" * 70)
 print("SECTION 9: 137 IN BINARY")
 print("=" * 70)
 
-print("""
+print(
+    """
 REMARKABLE: 137 = 10001001 in binary
 =====================================
 
@@ -418,7 +431,8 @@ This is significant because:
 Hamming weight of 137 is 3 (three 1-bits).
 
 Also: 137 in base 3:
-""")
+"""
+)
 
 
 def to_base(n, b):
@@ -450,7 +464,8 @@ print("\n" + "=" * 70)
 print("SECTION 10: SYNTHESIS - QUANTUM CODES AND PHYSICS")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE EMERGING PICTURE:
 =====================
 
@@ -469,7 +484,7 @@ THE EMERGING PICTURE:
    • Binary: 137 = 2⁷ + 2³ + 1 (Hamming weight 3)
    • Ternary: 137 = 1×81 + 2×27 + 0×9 + 1×3 + 2×1
    • In base 3: 137 = 81 + 54 + 2 = 81 + 56!
-   
+
    This confirms: α⁻¹ ≈ 81 + 56 from BASE 3 structure!
 
 4. Physical interpretation:
@@ -485,7 +500,8 @@ THE EMERGING PICTURE:
 
 THIS IS A UNIFIED PICTURE:
 Geometry (W33) ↔ Algebra (E₆,E₇) ↔ Physics (α) ↔ Information (QEC codes)
-""")
+"""
+)
 
 # Final verification
 print("\n" + "=" * 70)
@@ -534,13 +550,14 @@ with open("PART_LVI_quantum_codes_results.json", "w") as f:
 print("\n" + "=" * 70)
 print("CONCLUSIONS OF PART LVI")
 print("=" * 70)
-print("""
+print(
+    """
 KEY DISCOVERIES:
 
 1. W33 is the structure of 2-QUTRIT PAULI OPERATORS!
    - 40 points = isotropic Pauli directions
    - 40 lines = maximal commuting sets
-   
+
 2. 137 = 81 + 56 EXACTLY (in integers!)
    - 81 = 3⁴ = Pauli space dimension
    - 56 = E₇ fundamental
@@ -552,12 +569,13 @@ KEY DISCOVERIES:
 
 4. W33 may encode a CONTEXTUALITY PROOF for qutrits
    - Analogous to how Doily encodes Mermin-Peres for qubits
-   
+
 5. The universe might be a QUANTUM ERROR CORRECTING CODE
    - α measures the "code quality"
    - Gauge symmetries = stabilizers
    - Quantum fluctuations = errors
-   
+
 Results saved to PART_LVI_quantum_codes_results.json
-""")
+"""
+)
 print("=" * 70)

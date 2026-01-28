@@ -33,34 +33,36 @@ def explain_dual_interpretation():
     print("=" * 70)
     print("THE DUAL INTERPRETATION OF W33")
     print("=" * 70)
-    print("""
+    print(
+        """
     INTERPRETATION 1: ORTHOGONALITY GRAPH (Standard)
     ────────────────────────────────────────────────
     Vertices = 40 quantum states
     Edges = orthogonal pairs (|⟨ψ|φ⟩|² = 0)
-    
+
     This gives W33 = SRG(40, 12, 2, 4)
     - Each state orthogonal to 12 others
     - λ = 2: two common orthogonal states for adjacent pair
     - μ = 4: four common orthogonal states for non-adjacent pair
-    
+
     INTERPRETATION 2: NON-ORTHOGONALITY GRAPH (Complement)
     ──────────────────────────────────────────────────────
-    Vertices = 40 quantum states  
+    Vertices = 40 quantum states
     Edges = non-orthogonal pairs (|⟨ψ|φ⟩|² = 1/3)
-    
+
     This gives W33̄ = SRG(40, 27, 18, 18)
     - Each state has overlap 1/3 with 27 others
     - λ = μ = 18 (conference graph!)
-    
+
     PHYSICS MEANING:
     ────────────────
     - Orthogonal states: perfectly distinguishable (can be measured precisely)
     - Non-orthogonal states (1/3 overlap): partially distinguishable
-    
+
     The 27 NON-NEIGHBORS = states that interfere with measurement!
     This is why 27 keeps appearing - it's the "interference count"!
-    """)
+    """
+    )
 
 
 # ============================================================
@@ -145,13 +147,15 @@ def build_bases_and_contexts():
     print("\n" + "-" * 50)
     print("KOCHEN-SPECKER CONTEXTUALITY TEST")
     print("-" * 50)
-    print("""
+    print(
+        """
     Can we assign each state a "value" (0 or 1) such that:
     - In each basis, exactly one state has value 1?
-    
+
     If NO, then quantum mechanics exhibits CONTEXTUALITY:
     the "value" of a state depends on which basis we measure.
-    """)
+    """
+    )
 
     # Try to find a valid coloring
     # This is equivalent to finding an independent set that hits each clique once
@@ -209,18 +213,20 @@ def build_bases_and_contexts():
     # For Witting configuration, the Penrose proof shows this is impossible
     # The geometric structure prevents any consistent assignment
 
-    print("""
+    print(
+        """
     RESULT: No valid assignment exists!
-    
+
     This is the KOCHEN-SPECKER THEOREM for the Witting configuration:
     - You cannot assign pre-determined values to quantum measurements
     - The "value" is CONTEXTUAL - depends on what else you measure
-    
+
     PENROSE'S PROOF:
     - Use the dodecahedron geometry to show inconsistency
     - Maximum consistent assignment covers 34/40 bases (85%)
     - 6 bases will always have 0 or 2 marked states (contradiction)
-    """)
+    """
+    )
 
     return bases, state_to_bases
 
@@ -271,42 +277,46 @@ def analyze_e8_to_witting():
     # The factor of 6 comes from the Z6 action
     print(f"\n240 / 6 = {240 // 6} = number of Witting rays!")
 
-    print("""
+    print(
+        """
     THE QUOTIENT:
     ─────────────
     E8 has 240 roots, but they come in antipodal pairs: ±r
     Taking one from each pair: 240/2 = 120
-    
+
     But for Witting in C^4, we have 6th roots of unity acting:
     z → ω^k z where ω = e^(2πi/6) = e^(πi/3)
-    
+
     Actually, for the phase action on CP^3:
     240 vertices → 240/6 = 40 rays (quantum states)
-    
+
     INTERPRETATION:
     - E8's 240 = complete symmetry before quantum quotient
     - Witting's 40 = quantum states (rays in projective space)
     - W33's 240 edges = "shadow" of E8's 240 roots!
-    """)
+    """
+    )
 
     # The W33 graph has 240 edges = |E8 roots|
     # This can't be coincidence - there must be a bijection!
 
-    print("""
+    print(
+        """
     THE 240 EDGES OF W33:
     ────────────────────
     W33 has 40 vertices, each with degree 12
     Total edges = 40 × 12 / 2 = 240
-    
+
     240 = |E8 root system|!
-    
+
     CONJECTURE: There is a natural bijection
-    
+
         E8 roots ↔ Edges of W33
-        
+
     where each E8 root corresponds to an orthogonal pair
     of Witting states!
-    """)
+    """
+    )
 
     return e8_roots
 
@@ -323,29 +333,30 @@ def explain_qkd_protocol():
     print("\n" + "=" * 70)
     print("W33 IN QUANTUM KEY DISTRIBUTION")
     print("=" * 70)
-    print("""
+    print(
+        """
     VLASOV'S QKD PROTOCOL:
     ─────────────────────
-    
+
     1. SETUP:
        - Alice and Bob share entangled ququarts (4-level systems)
        - Entangled state: |Σ⟩ = (1/2)(|00⟩ + |11⟩ + |22⟩ + |33⟩)
-       
+
     2. MEASUREMENT:
        - Each chooses one of the 40 bases (4-cliques of W33)
        - If same basis: perfectly correlated results
        - If different: results may differ (enables eavesdropper detection)
-       
+
     3. KEY GENERATION:
        - When bases match: use results as shared secret key
        - When bases differ: use to check for tampering
-       
+
     4. SECURITY FROM CONTEXTUALITY:
        - An eavesdropper (Eve) cannot simultaneously assign
          definite values to all 40 states
        - Any classical simulation fails for at least 6/40 bases
        - This creates detectable errors!
-    
+
     W33 STRUCTURE IN THE PROTOCOL:
     ──────────────────────────────
     - 40 vertices = 40 possible measurement outcomes
@@ -353,21 +364,22 @@ def explain_qkd_protocol():
     - 27 non-neighbors = states with interference (1/3 overlap)
     - 40 cliques = 40 measurement bases
     - Each state in 4 bases = contextuality (same state, different contexts)
-    
+
     THE 51,840 SYMMETRIES:
     ─────────────────────
     |Aut(W33)| = |W(E6)| = 51,840 symmetries
-    
+
     These are all the "relabelings" that preserve the protocol's structure.
     A permutation of states preserves:
     - Which pairs are orthogonal (edges)
     - Which sets form bases (4-cliques)
     - The inner product structure
-    
+
     This large symmetry group provides:
     - Protocol flexibility (many equivalent implementations)
     - Cryptographic security (hard to distinguish equivalent setups)
-    """)
+    """
+    )
 
 
 # ============================================================
@@ -382,7 +394,8 @@ def complete_picture():
     print("\n" + "=" * 70)
     print("THE COMPLETE MATHEMATICAL PICTURE")
     print("=" * 70)
-    print("""
+    print(
+        """
     ╔══════════════════════════════════════════════════════════════════╗
     ║                     THE W33 HIERARCHY                            ║
     ╠══════════════════════════════════════════════════════════════════╣
@@ -432,7 +445,8 @@ def complete_picture():
     ║  • Spin-3/2 systems (Penrose dodecahedron)                       ║
     ║                                                                  ║
     ╚══════════════════════════════════════════════════════════════════╝
-    """)
+    """
+    )
 
 
 # ============================================================
@@ -447,51 +461,53 @@ def open_questions():
     print("\n" + "=" * 70)
     print("OPEN QUESTIONS")
     print("=" * 70)
-    print("""
+    print(
+        """
     MATHEMATICAL QUESTIONS:
     ───────────────────────
     1. What is the explicit bijection E8 roots ↔ W33 edges?
        (Both have cardinality 240)
-       
+
     2. How does W(D5) ⊂ W(E6) act on W33?
        - W(D5) has order 1920
        - [W(E6):W(D5)] = 27 = non-neighbor count
        - Is there a geometric interpretation?
-       
+
     3. The Witting polytope in RP^7:
        - Waegell & Aravind: it appears as E8 root rays
        - How does this relate to the 8D Gosset polytope?
-       
+
     4. Connection to the Leech lattice:
        - E8 embeds in Leech lattice
        - Does W33 have a 24-dimensional avatar?
-    
+
     PHYSICS QUESTIONS:
     ─────────────────
     5. Why does nature use the Witting configuration?
        - Is there a physical principle selecting this structure?
        - Connection to exceptional Lie groups in physics?
-       
+
     6. Can W33 structure be directly observed?
        - Interference experiments with ququarts
        - Entanglement witnesses based on W33
-       
+
     7. Generalization to higher dimensions:
        - Are there analogous structures in CP^n for n > 3?
        - What is the "W33 tower" in higher dimensions?
-    
+
     GROUP THEORY QUESTIONS:
     ───────────────────────
     8. The triflection presentation:
        - W(E6) is generated by 4 triflections
        - Same generators for Sp(4,F3)?
        - Relationship to Shephard-Todd classification?
-       
+
     9. The exceptional isomorphism:
        - PSp(4,F3) ⋊ Z2 ≅ W(E6)
        - What is the geometric meaning of this isomorphism?
        - Can it be visualized?
-    """)
+    """
+    )
 
 
 # ============================================================

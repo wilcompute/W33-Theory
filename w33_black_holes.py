@@ -33,13 +33,14 @@ print("\n" + "=" * 80)
 print("PART 1: THE BLACK HOLE ENTROPY PUZZLE")
 print("=" * 80)
 
-print("""
+print(
+    """
 THE BEKENSTEIN-HAWKING FORMULA
 ==============================
 
 Black holes have entropy:
   S_BH = A / (4 l_P²)
-  
+
 For a Schwarzschild black hole of mass M:
   R_s = 2GM/c² (Schwarzschild radius)
   A = 4π R_s² = 16π G² M² / c⁴
@@ -50,9 +51,10 @@ THE PUZZLE:
   - A thermal system has S ~ N (# of particles)
   - A volume of particles has S ~ R³
   - But S_BH ~ R² (area, not volume!)
-  
+
 This suggests degrees of freedom live on BOUNDARY.
-""")
+"""
+)
 
 # Some numbers
 print("\nBlack hole entropy examples:")
@@ -75,7 +77,8 @@ print("\n" + "=" * 80)
 print("PART 2: W33 HOLOGRAPHIC ENTROPY")
 print("=" * 80)
 
-print("""
+print(
+    """
 HOLOGRAPHIC BOUND FROM W33
 ==========================
 
@@ -100,7 +103,8 @@ Ratio:
 
 This is TOO MUCH information!
 We need a constraint...
-""")
+"""
+)
 
 log2_121 = np.log2(121)
 print(f"\nW33 information per cell: log₂(121) = {log2_121:.3f} bits")
@@ -115,7 +119,8 @@ print("\n" + "=" * 80)
 print("PART 3: THE K4 CONSTRAINT")
 print("=" * 80)
 
-print("""
+print(
+    """
 K4 GAUGE REDUNDANCY
 ===================
 
@@ -126,21 +131,22 @@ Physical states = W33 / K4 = Q45 projection
 
 Information per cell:
   Unconstrained: log₂(40 + 81) = log₂(121) = 6.92 bits
-  K4-constrained: log₂(|Q45| + ?) 
+  K4-constrained: log₂(|Q45| + ?)
 
 What survives K4 projection?
   Points: 40 → 10 (Q45)
   Cycles: 81 → 81/K4 = ?
-  
+
 The K4 action on cycles:
   - K4 permutes some cycles
   - Independent cycle classes = 81/4 ≈ 20
-  
+
 Physical configurations: 10 + 20 = 30
 Information: log₂(30) = 4.91 bits
 
 Still not 0.25...
-""")
+"""
+)
 
 # Physical counting
 q45_points = 10
@@ -161,7 +167,8 @@ print("\n" + "=" * 80)
 print("PART 4: THE GEOMETRIC CONSTRAINT")
 print("=" * 80)
 
-print("""
+print(
+    """
 AREA QUANTIZATION
 =================
 
@@ -174,19 +181,20 @@ where j = spin labels (half-integers).
 
 In W33 theory:
   A = l_P² × n × f(W33)
-  
+
 where n = integer, f = function of W33 structure.
 
 What is f(W33)?
   - Minimum area from W33 geometry
   - Related to the 40-point structure
   - Or the K4 action
-  
+
 If f = 4 (from K4 size):
   S = (A / l_P²) / 4 = A / (4 l_P²) ✓✓✓
-  
+
 THE K4 GIVES THE FACTOR OF 4!
-""")
+"""
+)
 
 print("\nThe K4 = ℤ₂×ℤ₂ factor:")
 print(f"  |K4| = 4")
@@ -202,17 +210,18 @@ print("\n" + "=" * 80)
 print("PART 5: MICROSCOPIC STATE COUNTING")
 print("=" * 80)
 
-print("""
+print(
+    """
 COUNTING MICROSTATES
 ====================
 
 For a black hole with area A:
   N_cells = A / (4 l_P²)  (Planck cells)
-  
+
 Each cell has:
   - 1 bit of information (boundary DOF)
   - Encodes matter vs vacuum (40 vs 81)
-  
+
 Total states:
   Ω = 2^(N_cells)
   S = ln(Ω) = N_cells × ln(2)
@@ -225,7 +234,8 @@ Ratio:
   S_W33 / S_BH = 0.693
 
 We need 1 / ln(2) = 1.44 bits per cell.
-""")
+"""
+)
 
 print("\nBit counting:")
 print(f"  1 bit = ln(2) = {np.log(2):.3f}")
@@ -240,7 +250,8 @@ print("\n" + "=" * 80)
 print("PART 6: THE EXACT FORMULA")
 print("=" * 80)
 
-print("""
+print(
+    """
 EXACT MICROSCOPIC FORMULA
 =========================
 
@@ -251,21 +262,22 @@ From W33:
   - Each Planck cell on horizon = one W33 mode
   - The mode is constrained by K4 (factor of 4)
   - Each mode has 2 states (matter/vacuum)
-  
+
 But wait - what about the 81/40 asymmetry?
 
 The VACUUM dominates:
   Probability of vacuum state = 81/121 = 0.669
-  
+
 Entropy per cell (Shannon):
   H = -p log(p) - (1-p) log(1-p)
     = -0.669 × log(0.669) - 0.331 × log(0.331)
     = 0.269 + 0.366
     = 0.635 nats
     = 0.916 bits
-    
+
 Close to 1 bit!
-""")
+"""
+)
 
 p_vacuum = 81 / 121
 p_matter = 40 / 121
@@ -291,7 +303,8 @@ print("\n" + "=" * 80)
 print("PART 7: THE 121 = 11² BREAKTHROUGH")
 print("=" * 80)
 
-print("""
+print(
+    """
 THE NUMBER 121 AND BLACK HOLES
 ==============================
 
@@ -305,7 +318,7 @@ Microstate count per 4 l_P²:
 
 But we have 121 configurations...
   ln(121) = 4.796 nats
-  
+
 Per fundamental cell:
   121 configs → 4.796 nats
   Spread over 4 l_P²:
@@ -320,10 +333,11 @@ We're off by factor of 4.796.
 BUT: The observable configurations are Q45!
   |Q45| = 10
   ln(10) = 2.303 nats
-  
+
 Per 4 l_P²: 2.303 / 4 = 0.576 nats per l_P²
 Still factor of ~2 off.
-""")
+"""
+)
 
 print(f"\nConfiguration entropy:")
 print(f"  ln(121) = {np.log(121):.3f} nats")
@@ -338,7 +352,8 @@ print("\n" + "=" * 80)
 print("PART 8: THE RECONCILIATION")
 print("=" * 80)
 
-print("""
+print(
+    """
 HOW W33 GIVES BH ENTROPY
 ========================
 
@@ -347,14 +362,14 @@ The key insight: PHASE SPACE counting.
 For W33 on a horizon:
   - Points (40) = matter excitations
   - Cycles (81) = vacuum fluctuations
-  
+
 At the horizon, we don't count STATES,
 we count EDGES of a quantum code!
 
 The W33 code structure:
   - [81, 40] code
   - 81 physical qubits
-  - 40 logical qubits  
+  - 40 logical qubits
   - Code distance = K4 structure
 
 For quantum error correction:
@@ -370,7 +385,8 @@ If S_physical = A/(4 l_P²):
   S_logical = A/(8 l_P²)
 
 Each logical qubit on boundary = 1/2 × ln(2) entropy.
-""")
+"""
+)
 
 code_rate = 40 / 81
 print(f"\nW33 quantum code:")
@@ -386,7 +402,8 @@ print("\n" + "=" * 80)
 print("PART 9: HAWKING TEMPERATURE FROM W33")
 print("=" * 80)
 
-print("""
+print(
+    """
 HAWKING TEMPERATURE
 ===================
 
@@ -406,9 +423,10 @@ The factor of 8π comes from:
 
 W33 interpretation:
   T_H = 1/(8π M) = 1/(2π × 4 × M)
-  
+
 The K4 appears as the factor of 4!
-""")
+"""
+)
 
 print("\nHawking temperature factors:")
 print(f"  T_H = 1 / (2π × 4 × M)")
@@ -423,7 +441,8 @@ print("\n" + "=" * 80)
 print("PART 10: THE COMPLETE BLACK HOLE PICTURE")
 print("=" * 80)
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║             W33 THEORY OF BLACK HOLE THERMODYNAMICS                          ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
@@ -472,7 +491,8 @@ print("""
 ║  This is a UNIVERSAL factor from W33 geometry.                               ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 print("\n" + "=" * 80)
 print("THE FACTOR OF 4 IN BLACK HOLE ENTROPY IS |K4| = |ℤ₂×ℤ₂|")

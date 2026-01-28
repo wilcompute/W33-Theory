@@ -302,7 +302,8 @@ def derive_240_decomposition():
     print("E8 DECOMPOSITION UNDER E6 x SU(3)")
     print("=" * 60)
 
-    print("""
+    print(
+        """
 The E8 root system decomposes under E6 x SU(3) as:
 
   240 E8 roots = 72 (E6 roots)
@@ -325,7 +326,8 @@ The connection:
   - The 81 in E8 decomposition = 81 elements of F3^4
   - The 40 projective points = quotient of 80 non-zero vectors by F3*
   - The 240 edges encode symplectic orthogonality
-""")
+"""
+    )
 
     # Build the explicit count
     print("\nNumerical verification:")
@@ -342,7 +344,8 @@ def explore_triality_in_e6(vertices, edges, omega_func):
     print("D4 TRIALITY IN E6 STRUCTURE")
     print("=" * 60)
 
-    print("""
+    print(
+        """
 E6 contains D5, and D5 contains D4.
 D4 has triality: its three 8-dim representations (V, S+, S-) are permuted.
 
@@ -362,7 +365,8 @@ The three triality axes correspond to:
   - Splitting R^4 = R^2 + R^2 in three different ways
   - Each splitting gives a D2 x D2 = SO(4) structure
   - The three splittings are permuted by S3 (triality)
-""")
+"""
+    )
 
     # Verify the symplectic pairing
     print("\nSymplectic coordinate pairings:")

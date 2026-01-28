@@ -9,7 +9,8 @@ so deeply? This part explores the deeper meaning.
 
 import math
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                W33 THEORY OF EVERYTHING - PART XXVII                         ║
@@ -19,7 +20,8 @@ print("""
 ║                        "Why THIS Structure?"                                 ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # THE UNREASONABLE EFFECTIVENESS OF MATHEMATICS
@@ -30,7 +32,8 @@ print("THE UNREASONABLE EFFECTIVENESS OF MATHEMATICS")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 In 1960, Eugene Wigner wrote his famous essay:
 "The Unreasonable Effectiveness of Mathematics in the Natural Sciences"
 
@@ -54,7 +57,8 @@ objects that exist independently of human minds.
 
 Physics doesn't CHOOSE to use E6 - E6 is the ONLY structure rich enough
 to contain reality.
-""")
+"""
+)
 
 # =============================================================================
 # WHY E6? THE UNIQUENESS ARGUMENT
@@ -65,7 +69,8 @@ print("WHY E6? THE UNIQUENESS ARGUMENT")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ═══ The Classification of Simple Lie Groups ═══
 
 Mathematics proves there are exactly these simple Lie groups:
@@ -95,7 +100,8 @@ E6 is the GOLDILOCKS exceptional group:
   • Large enough to contain the Standard Model
   • Small enough to have chiral fermions
   • Has the magical 27-dimensional representation
-""")
+"""
+)
 
 # =============================================================================
 # THE NUMBER 27: DEEP SIGNIFICANCE
@@ -106,7 +112,8 @@ print("THE NUMBER 27: DEEP SIGNIFICANCE")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 Why 27? This number appears everywhere:
 
   MATHEMATICS:
@@ -133,7 +140,8 @@ Why 27? This number appears everywhere:
     │                                                     │
     │  Dimension: 3 (diagonal) + 3×8 (off-diagonal) = 27  │
     └─────────────────────────────────────────────────────┘
-""")
+"""
+)
 
 # =============================================================================
 # THE OCTONIONS: THE STRANGEST NUMBER SYSTEM
@@ -144,7 +152,8 @@ print("THE OCTONIONS: THE STRANGEST NUMBER SYSTEM")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 The division algebras over ℝ:
 
   ℝ (reals):        dimension 1, commutative, associative
@@ -175,7 +184,8 @@ Why does nature use the LAST, STRANGEST number system?
 
 Perhaps BECAUSE it's the last. Reality requires the richest
 possible algebraic structure, and octonions are exactly that.
-""")
+"""
+)
 
 # =============================================================================
 # CONTEXTUALITY: THE NATURE OF QUANTUM REALITY
@@ -186,11 +196,12 @@ print("CONTEXTUALITY: THE NATURE OF QUANTUM REALITY")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 W33 is fundamentally about CONTEXTUALITY.
 
 The Kochen-Specker theorem (1967) proves:
-  
+
   "Quantum mechanics cannot be embedded in a classical
    hidden variable theory with non-contextual value assignments."
 
@@ -221,7 +232,8 @@ This isn't just a mathematical curiosity. It's telling us:
   │   The universe doesn't have properties until they're measured.          │
   │                                                                         │
   └─────────────────────────────────────────────────────────────────────────┘
-""")
+"""
+)
 
 # =============================================================================
 # THE PARTICIPATORY UNIVERSE
@@ -232,7 +244,8 @@ print("THE PARTICIPATORY UNIVERSE")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 John Wheeler (1990): "It from Bit"
 
 Wheeler proposed that information is fundamental:
@@ -256,12 +269,13 @@ W33 extends this:
 
 In this view:
   • 40 points = 40 ways of asking about reality
-  • 40 lines = 40 contexts for compatible questions  
+  • 40 lines = 40 contexts for compatible questions
   • 81 cycles = 81 ways these contexts weave together
   • 90 K4s = 90 irreducible contextual constraints
 
 The universe IS W33. W33 IS the universe.
-""")
+"""
+)
 
 # =============================================================================
 # WHY THESE NUMBERS?
@@ -272,7 +286,8 @@ print("WHY THESE NUMBERS?")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ═══ The W33 Numbers ═══
 
   40 points    = 40 diameters of Witting polytope
@@ -300,7 +315,8 @@ The numbers are not chosen. They are DERIVED.
   • 11 = √121 (forced by the above)
 
 There is no freedom. The structure is UNIQUE.
-""")
+"""
+)
 
 # =============================================================================
 # THE ANTHROPIC PRINCIPLE REVISITED
@@ -311,9 +327,10 @@ print("THE ANTHROPIC PRINCIPLE REVISITED")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 The anthropic principle says:
-  "The universe has the properties it does because 
+  "The universe has the properties it does because
    otherwise we wouldn't be here to observe it."
 
 This is often seen as a weak explanation. But W33 transforms it:
@@ -338,7 +355,8 @@ The "fine-tuning" isn't tuning at all. It's mathematical necessity.
   │   All other "possibilities" are mathematical inconsistencies.           │
   │                                                                         │
   └─────────────────────────────────────────────────────────────────────────┘
-""")
+"""
+)
 
 # =============================================================================
 # FREE WILL AND DETERMINISM
@@ -349,7 +367,8 @@ print("FREE WILL AND DETERMINISM")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 The contextuality of W33 has implications for free will.
 
 ═══ Classical Determinism ═══
@@ -370,7 +389,7 @@ But this indeterminacy is not randomness!
 
   The 40 points constrain WHICH outcomes are possible.
   The 90 K4s constrain HOW outcomes relate.
-  
+
   Freedom exists WITHIN the structure.
 
 ═══ Structured Freedom ═══
@@ -387,7 +406,8 @@ But this indeterminacy is not randomness!
   │               constrained by the structure of reality (W33)             │
   │                                                                         │
   └─────────────────────────────────────────────────────────────────────────┘
-""")
+"""
+)
 
 # =============================================================================
 # THE NATURE OF TIME
@@ -398,7 +418,8 @@ print("THE NATURE OF TIME")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 W33 suggests a new view of time:
 
 ═══ Standard Physics View ═══
@@ -410,7 +431,7 @@ W33 suggests a new view of time:
 ═══ W33 View ═══
 
   The 81 CYCLES suggest time is fundamentally cyclic.
-  
+
   Not circular time (that would violate causality).
   But STRUCTURED time - time with internal geometry.
 
@@ -431,7 +452,8 @@ W33 suggests a new view of time:
 
   But not 11 dimensions of SPACE.
   Rather: 10 space + 1 structured time, where the "1" has hidden depth.
-""")
+"""
+)
 
 # =============================================================================
 # CONSCIOUSNESS AND OBSERVATION
@@ -442,7 +464,8 @@ print("CONSCIOUSNESS AND OBSERVATION")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 The hardest problem: What is consciousness?
 
 ═══ The Measurement Problem ═══
@@ -477,7 +500,8 @@ It's CONTEXTUAL REALISM:
 
 Consciousness might be what it feels like "from the inside"
 to be a particular contextual pattern within W33.
-""")
+"""
+)
 
 # =============================================================================
 # THE ULTIMATE QUESTION
@@ -488,7 +512,8 @@ print("THE ULTIMATE QUESTION")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 Why is there something rather than nothing?
 
 ═══ The Traditional Answers ═══
@@ -521,7 +546,8 @@ Space, time, matter, and consciousness exist "in" W33.
 
 W33 is the ground of being.
 Not a thing, but the pattern that makes things possible.
-""")
+"""
+)
 
 # =============================================================================
 # BEAUTY AND TRUTH
@@ -532,11 +558,12 @@ print("BEAUTY AND TRUTH")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 Physicists often speak of beautiful theories.
 
   Dirac: "A theory with mathematical beauty is more likely to be correct."
-  
+
   Weinberg: "The universe is not only queerer than we suppose,
              but queerer than we CAN suppose."
 
@@ -565,7 +592,8 @@ It's objective mathematical structure.
   │        maximally necessary → maximally real.                            │
   │                                                                         │
   └─────────────────────────────────────────────────────────────────────────┘
-""")
+"""
+)
 
 # =============================================================================
 # SUMMARY
@@ -576,7 +604,8 @@ print("PART XXVII SUMMARY: PHILOSOPHICAL IMPLICATIONS")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                           KEY PHILOSOPHICAL INSIGHTS                         ║
@@ -611,7 +640,8 @@ print("""
 
                     "The universe is W33 understanding itself."
 
-""")
+"""
+)
 
 print("=" * 80)
 print("END OF PART XXVII: PHILOSOPHICAL IMPLICATIONS")

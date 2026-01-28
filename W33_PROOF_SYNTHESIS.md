@@ -56,7 +56,7 @@ point** and **4 points on each line** (order (3,3)).
 **L4 (Spectrum).** The adjacency spectrum is {12^1, 2^24, (-4)^15}.
 
 **L5 (Automorphisms).** Full incidence symmetry:
-|Aut_inc(W(3,3))| = 51,840 = |Sp(4,3)| = |W(E6)|.  
+|Aut_inc(W(3,3))| = 51,840 = |Sp(4,3)| = |W(E6)|.
 Point-graph symmetry:
 |Aut_pts(W33)| = 25,920 = |PSp(4,3)| (index 2).
 

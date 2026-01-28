@@ -52,24 +52,26 @@ def main():
     print(" WHAT IS Aut(W33)?")
     print("=" * 70)
 
-    print("""
+    print(
+        """
   W33 is the polar graph of the symplectic geometry Sp(4, F₃).
-  
+
   The FULL automorphism group includes:
     • Sp(4, F₃) acting on maximal isotropics
     • Possibly field automorphisms (but F₃ has none except identity)
     • Possibly graph automorphisms not from the group
-    
+
   For symplectic polar graphs over F_q:
     Aut(Sp polar graph) = PΓSp(2n, q) for q > 2
-    
+
   For q = 3 (prime), field automorphisms are trivial, so:
     Aut(W33) = PSp(4, F₃) ⋊ ⟨field auts⟩ = PSp(4, F₃)
-    
+
   But wait: |PSp(4, F₃)| = 25,920 ≠ 51,840
-  
+
   Let me check the literature on this...
-""")
+"""
+    )
 
     # =========================================================================
     # RESOLVING THE DISCREPANCY
@@ -78,20 +80,22 @@ def main():
     print(" RESOLVING THE DISCREPANCY")
     print("=" * 70)
 
-    print("""
+    print(
+        """
   There are several possibilities:
-  
+
   1. MAYBE W33 has LARGER automorphism group than just PSp(4, F₃)?
      The polar graph might have extra automorphisms.
-     
+
   2. MAYBE the literature claims are about different graphs?
      SRG(40, 12, 2, 4) might not be the same as the polar graph.
-     
+
   3. MAYBE there's an outer automorphism involved?
      Sp(4, F₃) has outer automorphism structure to check.
-     
+
   Let me verify by direct computation...
-""")
+"""
+    )
 
     # =========================================================================
     # CHECK: IS W33 SELF-COMPLEMENTARY OR HAVE EXTRA STRUCTURE?
@@ -125,22 +129,23 @@ def main():
     print(" THE ACTUAL RELATIONSHIP (from literature)")
     print("=" * 70)
 
-    print("""
+    print(
+        """
   After more careful consideration:
-  
+
   The symplectic group Sp(4, F₃) acts on the 40 maximal isotropics.
-  
+
   The KERNEL of this action is the CENTER {±I}.
-  
+
   So the group acting FAITHFULLY on W33 vertices is:
     PSp(4, F₃) = Sp(4, F₃) / {±I}
     |PSp(4, F₃)| = 25,920
-  
-  But wait - what if |Aut(W33)| = 51,840 is achieved by 
+
+  But wait - what if |Aut(W33)| = 51,840 is achieved by
   EXTENDING PSp(4, F₃)?
-  
+
   Actually, let me reconsider. The standard result is:
-  
+
   ╔═══════════════════════════════════════════════════════════════════╗
   ║                                                                   ║
   ║   Aut(W33) = Sp(4, F₃) / Z(Sp(4, F₃)) ⋊ Out                       ║
@@ -153,15 +158,16 @@ def main():
   ║   - Or the action involves the full Sp(4, F₃)                     ║
   ║                                                                   ║
   ╚═══════════════════════════════════════════════════════════════════╝
-  
+
   KEY INSIGHT: 51,840 / 25,920 = 2
-  
+
   So |Aut(W33)| = 2 × |PSp(4, F₃)|
-  
+
   This suggests Aut(W33) = PSp(4, F₃) ⋊ Z₂ for some Z₂ extension,
   OR Aut(W33) = Sp(4, F₃) where the center acts non-trivially on
   some additional structure (perhaps the graph + some orientation).
-""")
+"""
+    )
 
     # =========================================================================
     # ACTUAL ISOMORPHISM
@@ -170,9 +176,10 @@ def main():
     print(" THE KEY ISOMORPHISM")
     print("=" * 70)
 
-    print("""
+    print(
+        """
   The precise statement from group theory is:
-  
+
   ╔═══════════════════════════════════════════════════════════════════╗
   ║                                                                   ║
   ║   Sp(4, F₃) ≅ 2.W(E₆)                                             ║
@@ -186,7 +193,8 @@ def main():
   ║   That's wrong! Let me check the formulas again...                ║
   ║                                                                   ║
   ╚═══════════════════════════════════════════════════════════════════╝
-""")
+"""
+    )
 
     # Double-check W(E₆)
     # W(E₆) has order 2^7 × 3^4 × 5 = 128 × 81 × 5 = 51,840
@@ -197,24 +205,26 @@ def main():
     print(f"  |PSp(4, F₃)| = {psp4_order}")
     print(f"  Match: {51840 // 2 == psp4_order}")
 
-    print("""
-  
+    print(
+        """
+
   AH HA! So:
-  
+
     |W(E₆)| = 51,840 = 2 × 25,920 = 2 × |PSp(4, F₃)|
-    
+
   This means W(E₆) is a Z₂ EXTENSION of PSp(4, F₃)!
-  
+
   The correct statement is:
-  
+
     W(E₆) ≅ PSp(4, F₃).2  (an extension)
-    
+
   Or equivalently, PSp(4, F₃) is an INDEX 2 subgroup of W(E₆).
-  
+
   And for W33:
     If |Aut(W33)| = 51,840 = |W(E₆)|,
     then Aut(W33) ≅ W(E₆), which extends PSp(4, F₃).
-""")
+"""
+    )
 
     # =========================================================================
     # FINAL RESOLUTION
@@ -223,24 +233,25 @@ def main():
     print(" FINAL RESOLUTION")
     print("=" * 70)
 
-    print("""
+    print(
+        """
   ═══════════════════════════════════════════════════════════════════
   THE CORRECT PICTURE:
   ═══════════════════════════════════════════════════════════════════
-  
+
   1. W33 = symplectic polar graph of Sp(4, F₃)
-  
+
   2. PSp(4, F₃) acts faithfully on W33, |PSp| = 25,920
-  
+
   3. W33 has ADDITIONAL automorphisms beyond PSp(4, F₃)!
      These could come from:
      - The "polarity" (swapping points and hyperplanes)
      - Some graph automorphism not from the group action
-     
+
   4. Aut(W33) has order 51,840 = 2 × |PSp(4, F₃)|
-  
+
   5. It happens that |Aut(W33)| = |W(E₆)|, and in fact:
-     
+
      ╔═══════════════════════════════════════════════════════╗
      ║                                                       ║
      ║   Aut(W33) ≅ W(E₆)     (as abstract groups)           ║
@@ -248,12 +259,13 @@ def main():
      ║   with PSp(4, F₃) as an index-2 subgroup              ║
      ║                                                       ║
      ╚═══════════════════════════════════════════════════════╝
-  
+
   The exceptional isomorphism Aut(W33) ≅ W(E₆) is the KEY FACT
   that connects W33 to E₆ structure!
-  
+
   ═══════════════════════════════════════════════════════════════════
-""")
+"""
+    )
 
 
 if __name__ == "__main__":

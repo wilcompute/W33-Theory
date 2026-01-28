@@ -3,11 +3,11 @@
 ## STANDARDIZATION (CANONICAL)
 
 All definitions and counts follow `STANDARDIZATION.md`. In particular:
-- **W(3,3)** = symplectic generalized quadrangle (order (3,3)) in **PG(3,3)**  
-- **W33** = point (collinearity) graph of **W(3,3)**  
-- **Lines have 4 points; points lie on 4 lines**  
-- **Aut_inc(W(3,3)) ≅ Sp(4,3) ≅ W(E6), order 51,840**  
-- **Aut_pts(W33) ≅ PSp(4,3), order 25,920 (index 2)**  
+- **W(3,3)** = symplectic generalized quadrangle (order (3,3)) in **PG(3,3)**
+- **W33** = point (collinearity) graph of **W(3,3)**
+- **Lines have 4 points; points lie on 4 lines**
+- **Aut_inc(W(3,3)) ≅ Sp(4,3) ≅ W(E6), order 51,840**
+- **Aut_pts(W33) ≅ PSp(4,3), order 25,920 (index 2)**
 
 ## THE FUNDAMENTAL THEOREM
 
@@ -32,15 +32,15 @@ All definitions and counts follow `STANDARDIZATION.md`. In particular:
 - **Each line has 4 points**
 - **Each point lies on 4 lines**
 - **Point graph**: **W33 = SRG(40,12,2,4)** with 240 edges
-- **Automorphisms (canonical)**:  
-  - **Aut_inc(W(3,3)) ≅ Sp(4,3) ≅ W(E6)**, order **51,840**  
+- **Automorphisms (canonical)**:
+  - **Aut_inc(W(3,3)) ≅ Sp(4,3) ≅ W(E6)**, order **51,840**
   - **Aut_pts(W33) ≅ PSp(4,3)**, order **25,920** (index 2)
 
 ### 1.1a Disambiguation: PG(3,3) vs W(3,3)
 Older notes sometimes wrote **“W33 = PG(3,3)”**. The precise statement is:
 
-- **Point set**: W(3,3) uses the *full* point set of **PG(3,3)** (40 points).  
-- **Line set**: W(3,3) uses only the **totally isotropic lines** (40 lines).  
+- **Point set**: W(3,3) uses the *full* point set of **PG(3,3)** (40 points).
+- **Line set**: W(3,3) uses only the **totally isotropic lines** (40 lines).
 - **Graph**: W33 is the **point graph** of W(3,3), i.e. SRG(40,12,2,4).
 
 So **PG(3,3)** supplies the ambient projective space; **W(3,3)** is the
@@ -236,18 +236,18 @@ scripts/gap/psp43_index240_actions.g
 artifacts/psp43_index240_actions.json
 ```
 
-**Physical interpretation of the Z₂ obstruction (projective symmetry).**  
+**Physical interpretation of the Z₂ obstruction (projective symmetry).**
 The sign‑cocycle obstruction has a clean physics reading: the edge→root map is
 **projective**, not strictly linear. This is exactly what you expect when a
 symmetry acts on **spinor‑like objects** or states with a hidden **fermion
 parity**:
 
 - The **central Z₂ extension** we explicitly construct corresponds to the
-  familiar double‑cover phenomenon (e.g., SU(2) covering SO(3)).  
+  familiar double‑cover phenomenon (e.g., SU(2) covering SO(3)).
 - The failure of a global sign choice is a discrete **anomaly‑like obstruction**
-  to lifting the projective action to a true linear action on root vectors.  
+  to lifting the projective action to a true linear action on root vectors.
 - In lattice gauge language, the cocycle behaves like a **Z₂ background flux**
-  on the 120 line‑orbits: locally trivial but globally obstructed.  
+  on the 120 line‑orbits: locally trivial but globally obstructed.
 
 In short: the combinatorial W33 symmetry acts as a **projective representation**
 on the E8 roots. This is not a flaw—it is the precise finite‑geometric analog of
@@ -694,7 +694,7 @@ W33 edges are exactly the orbit pairs with the orthogonality signature
 (0,0,36,0,0). This gives a **fully explicit, computable bridge**
 from E8 roots to W33 without ad hoc matching.
 
-**Reproducible artifact:** `artifacts/e8_coxeter6_orbits.json`  
+**Reproducible artifact:** `artifacts/e8_coxeter6_orbits.json`
 **Script:** `tools/sage_e8_order6_orbits.py`
 
 **Lemma (W(E6)–Coxeter‑6 intersection pattern).** Let W(E6) be the parabolic
@@ -908,8 +908,8 @@ This yields a deterministic, reproducible bijection:
 edge (p,q)  ->  root r in orbit(p) or orbit(q) via canonical matching
 ```
 
-**Artifacts:**  
-- `artifacts/edge_root_canonical_orbit_bijection.json`  
+**Artifacts:**
+- `artifacts/edge_root_canonical_orbit_bijection.json`
 **Script:** `tools/build_canonical_orbit_bijection.py`
 
 **Note:** The older line‑orbit construction `tools/edge_root_bijection_via_lines.py`
@@ -930,14 +930,14 @@ orbit‑cycle ordering rather than preserve it line‑by‑line.
 
 **Further negative evidence (computed):**
 - A full **S₆‑per‑line** local search (720 choices per line) still leaves
-  >22k generator‑adjacency mismatches.  
-- A CSP check shows **no** assignment exists even for a **single generator**.  
+  >22k generator‑adjacency mismatches.
+- A CSP check shows **no** assignment exists even for a **single generator**.
 - Random W(E8) order‑6 searches failed to find an alternative 6‑cycle
   partition of the roots into 40 orbits that yields W33.
 
-Artifacts:  
-`artifacts/equivariant_search_result_s6.json`  
-`artifacts/equivariant_single_gen_solution.json`  
+Artifacts:
+`artifacts/equivariant_search_result_s6.json`
+`artifacts/equivariant_single_gen_solution.json`
 `artifacts/e8_order6_partition_found.json`
 
 **Orbit‑level rigidity (computed):** For each Coxeter‑6 orbit, the automorphism
@@ -964,15 +964,15 @@ even after degree‑12 pruning.
 Artifact: `artifacts/e8_order6_partition_strict5000_found.json`
 
 **B. Canonical perfect matching (legacy):**
-- Build bipartite graph: left = 240 roots, right = 240 W33 edges  
-  (root *r* adjacent to edge (A,B) iff its orbit is A or B).  
+- Build bipartite graph: left = 240 roots, right = 240 W33 edges
+  (root *r* adjacent to edge (A,B) iff its orbit is A or B).
 - Run deterministic Hopcroft–Karp to obtain a perfect matching.
 
-**Artifacts (legacy):**  
-- `artifacts_archive/e8_root_to_w33_edge.json`  
-- `artifacts_archive/e8_root_to_w33_edge.csv`  
-- `artifacts_archive/e8_root_to_w33_edge.md`  
-**Script:** `tools/sage_e8_root_edge_bijection.py`  
+**Artifacts (legacy):**
+- `artifacts_archive/e8_root_to_w33_edge.json`
+- `artifacts_archive/e8_root_to_w33_edge.csv`
+- `artifacts_archive/e8_root_to_w33_edge.md`
+**Script:** `tools/sage_e8_root_edge_bijection.py`
 **Verifier:** `tools/verify_e8_root_edge_bijection.py`
 
 **Build PDF:** `scripts/build_toe_pdf.sh` (produces `FINAL_TOE_PROOF.tex` and `FINAL_TOE_PROOF.pdf`)
@@ -983,14 +983,14 @@ Artifact: `artifacts/e8_order6_partition_strict5000_found.json`
 
 Older documents in this repo split into two complementary tracks:
 
-1. **Kernel track (algebra/topology)**:  
-   - Square‑zero adjacency over **F₂**  
-   - Canonical code and homology **H = ker(A)/im(A)**  
-   - 120‑root shell, signed lift, and **Z₃ holonomy** on the quotient  
-2. **Phenomenology track (physics constants)**:  
-   - Z₁₂ = Z₄ × Z₃ selection rules  
-   - Q45 quotient ↔ SU(5)  
-   - V23 holonomy specialization ↔ masses/couplings  
+1. **Kernel track (algebra/topology)**:
+   - Square‑zero adjacency over **F₂**
+   - Canonical code and homology **H = ker(A)/im(A)**
+   - 120‑root shell, signed lift, and **Z₃ holonomy** on the quotient
+2. **Phenomenology track (physics constants)**:
+   - Z₁₂ = Z₄ × Z₃ selection rules
+   - Q45 quotient ↔ SU(5)
+   - V23 holonomy specialization ↔ masses/couplings
 
 **New synthesis:** the explicit **E8 → W33 Coxeter 6‑cycle construction**
 provides the missing bridge between these tracks. It shows that the kernel’s
@@ -1019,7 +1019,7 @@ This is obtained by:
 2. Building W33 from E8 Coxeter orbits (Section 1.4).
 3. Computing a **graph isomorphism** between the two 40‑vertex graphs.
 
-**Reproducible artifact:** `artifacts/e8_orbit_to_f3_point.json`  
+**Reproducible artifact:** `artifacts/e8_orbit_to_f3_point.json`
 **Script:** `tools/sage_e8_orbit_f3_mapping.py`
 
 This gives a fully explicit mapping:
@@ -1027,7 +1027,7 @@ This gives a fully explicit mapping:
 E8 root → Coxeter orbit → Witting ray → F₃⁴ coordinate → W33 vertex
 ```
 
-**Derived root→point table:**  
+**Derived root→point table:**
 `artifacts/e8_root_to_f3_point.json` (built by combining `e8_coxeter6_orbits.json`
 with the orbit→F₃⁴ map). This is a direct lookup from any E8 root to its canonical
 projective coordinate.
@@ -1037,90 +1037,90 @@ projective coordinate.
 We tested the **Witting 40‑ray configuration** (the 40 projective rays in C⁴)
 for the two strongest contextuality signatures used in photonic experiments.
 
-**A. KS uncolorability (state‑independent contextuality):**  
+**A. KS uncolorability (state‑independent contextuality):**
 We searched for a 0/1 assignment to the 40 rays with **exactly one** “1” in
-each of the 40 orthonormal tetrads. **No assignment exists.**  
+each of the 40 orthonormal tetrads. **No assignment exists.**
 This is a direct computational proof that the 40‑ray Witting set is
 **Kochen–Specker uncolorable** (state‑independent contextuality).
 
-Artifact: `artifacts/witting_ks_uncolorable.json`  
+Artifact: `artifacts/witting_ks_uncolorable.json`
 Script: `tools/witting_ks_uncolorable.py`
 
 **Criticality (computed):** Removing **any single ray** makes the system
 colorable. The 40‑ray set is **critical** for KS contextuality.
 
-Artifact: `artifacts/witting_ks_criticality.json`  
+Artifact: `artifacts/witting_ks_criticality.json`
 Script: `tools/witting_ks_criticality.py`
 
-**B. Parity‑proof obstruction (computed):**  
+**B. Parity‑proof obstruction (computed):**
 We solved the GF(2) system **A·x = 0**, with **∑x = 1**, where A is the
-ray×basis incidence matrix (40×40). The system is **inconsistent**.  
+ray×basis incidence matrix (40×40). The system is **inconsistent**.
 Therefore, **no parity‑proof subset** exists within the full 40‑basis set.
 
-Artifact: `artifacts/witting_parity_proof.json`  
+Artifact: `artifacts/witting_parity_proof.json`
 Script: `tools/witting_parity_proof.py`
 
-**C. Reduced‑context KS proof (computed):**  
+**C. Reduced‑context KS proof (computed):**
 A greedy reduction finds a **24‑basis subset** (out of 40) that remains
 KS‑uncolorable, lowering experimental overhead while preserving contextuality.
 
-Artifact: `artifacts/witting_ks_reduce_bases.json`  
+Artifact: `artifacts/witting_ks_reduce_bases.json`
 Script: `tools/witting_ks_reduce_bases.py`
 
-**Photonic cookbook (generated):**  
+**Photonic cookbook (generated):**
 We generated a **24‑basis cookbook** with explicit ray vectors and basis lists
 for experimental implementation, plus the **exact noncontextual bound**
 for this subset.
 
-Docs:  
-`docs/witting_24basis_cookbook.md`  
-`docs/witting_24basis_vectors.csv`  
-`docs/witting_24basis_subset.json`  
+Docs:
+`docs/witting_24basis_cookbook.md`
+`docs/witting_24basis_vectors.csv`
+`docs/witting_24basis_subset.json`
 Script: `tools/witting_24basis_cookbook.py`
 
-**Exact bound (computed):**  
+**Exact bound (computed):**
 The exact maximum number of bases satisfiable by any noncontextual 0/1
 assignment is **23/24**.
 
-Artifact: `artifacts/witting_24basis_exact_bound.json`  
+Artifact: `artifacts/witting_24basis_exact_bound.json`
 Script: `tools/witting_24basis_exact_bound.py`
 
-**KS inequality (computed):**  
+**KS inequality (computed):**
 The 24‑basis subset yields a state‑independent KS inequality with
 noncontextual bound **23** and quantum value **24**.
 
-Docs: `docs/witting_24basis_inequality.md`  
+Docs: `docs/witting_24basis_inequality.md`
 Script: `tools/witting_24basis_inequality.py`
 
-**KS run‑sheet (computed):**  
-Full measurement order and ray definitions for the 24‑basis experiment:  
-`docs/witting_24basis_runsheet.md`  
+**KS run‑sheet (computed):**
+Full measurement order and ray definitions for the 24‑basis experiment:
+`docs/witting_24basis_runsheet.md`
 Script: `tools/witting_24basis_runsheet.py`
 
-**Lab protocol (PDF/TeX):**  
-Integrated photonics protocol for the KS test + **π/6, π/2 Pancharatnam** phase measurement:  
-`docs/photonics_protocol.pdf`  
-`docs/photonics_protocol.tex`  
-`docs/photonics_protocol.md`  
+**Lab protocol (PDF/TeX):**
+Integrated photonics protocol for the KS test + **π/6, π/2 Pancharatnam** phase measurement:
+`docs/photonics_protocol.pdf`
+`docs/photonics_protocol.tex`
+`docs/photonics_protocol.md`
 Script: `scripts/build_photonics_protocol_pdf.sh`
 
-**Experiment pack (PDF/TeX):**  
-Unified KS + **π/6, π/2 Pancharatnam** phase experiment pack:  
-`docs/experiment_pack.pdf`  
-`docs/experiment_pack.tex`  
-`docs/experiment_pack.md`  
+**Experiment pack (PDF/TeX):**
+Unified KS + **π/6, π/2 Pancharatnam** phase experiment pack:
+`docs/experiment_pack.pdf`
+`docs/experiment_pack.tex`
+`docs/experiment_pack.md`
 Script: `scripts/build_experiment_pack_pdf.sh`
 
-**Noise threshold (computed):**  
+**Noise threshold (computed):**
 Under depolarizing noise in d=4, the inequality remains violated for
 visibility **v ≥ 0.944444** (noise fraction **p ≤ 0.055556**).
 
-Docs: `docs/witting_24basis_noise_threshold.md`  
+Docs: `docs/witting_24basis_noise_threshold.md`
 Script: `tools/witting_24basis_noise_threshold.py`
 
-**Lab script (computed):**  
-Step‑by‑step measurement order and scoring instructions:  
-`docs/witting_24basis_labscript.md`  
+**Lab script (computed):**
+Step‑by‑step measurement order and scoring instructions:
+`docs/witting_24basis_labscript.md`
 Script: `tools/witting_24basis_labscript.py`
 
 ### 1.9 Discrete Pancharatnam Phase Signature (Computed)
@@ -1142,93 +1142,93 @@ phase ≈ −π/2   :  180 triples
 This is a sharp **π/6‑quantized** geometric‑phase fingerprint that can be
 probed interferometrically in photonic implementations.
 
-Artifact: `artifacts/witting_pancharatnam_triangles.json`  
+Artifact: `artifacts/witting_pancharatnam_triangles.json`
 Script: `tools/witting_pancharatnam_triangles.py`
 
-**Equiangular overlap structure (computed):**  
+**Equiangular overlap structure (computed):**
 Across all 40 rays, pairwise overlaps take only two values:
 orthogonal or **|⟨ri|rj⟩|² = 1/3** (540 non‑orthogonal pairs, 240 orthogonal).
 Thus every non‑orthogonal triangle has identical overlap magnitudes and the
 phase signature is driven purely by the **relative arguments** of overlaps.
 
-Doc: `docs/witting_ray_overlap_structure.md`  
+Doc: `docs/witting_ray_overlap_structure.md`
 Script: `tools/witting_ray_overlap_structure.py`
 
-**Pair‑phase spectrum (computed):**  
+**Pair‑phase spectrum (computed):**
 The arguments of non‑orthogonal overlaps lie on a strict **π/6 grid**:
 {0, ±π/6, ±π/3, ±π/2, ±2π/3, ±5π/6, π}. Moreover, pairs involving a **basis ray**
 use only the **π/3 lattice** {0, ±π/3, ±2π/3, π}, while non‑basis pairs use
 the **odd π/6 lattice** {±π/6, ±π/2, ±5π/6}. This explains why the triangle
 phase sum collapses to **±π/6 or ±π/2**.
 
-Doc: `docs/witting_overlap_phase_spectrum.md`  
+Doc: `docs/witting_overlap_phase_spectrum.md`
 Script: `tools/witting_overlap_phase_spectrum.py`
 
-**Family‑structured phase rule (computed):**  
+**Family‑structured phase rule (computed):**
 Label the 40 rays as **B** (4 basis rays) and four 9‑ray families **F0–F3**
 corresponding to the explicit Witting formulas. Then:
-- **Pairs (B, F·)** only realize the **π/3 lattice** phases.  
-- **Pairs (F·, F·)** realize the **odd π/6 lattice** phases.  
-- **Triangles with a basis ray** have **only ±π/6** phases (no ±π/2).  
+- **Pairs (B, F·)** only realize the **π/3 lattice** phases.
+- **Pairs (F·, F·)** realize the **odd π/6 lattice** phases.
+- **Triangles with a basis ray** have **only ±π/6** phases (no ±π/2).
 - **Triangles with three non‑basis families** generate the **±π/2** phase
   signatures.
 
-Docs:  
-`docs/witting_pair_phase_family_table.md`  
-`docs/witting_triangle_family_phase.md`  
-Scripts:  
-`tools/witting_pair_phase_family_table.py`  
+Docs:
+`docs/witting_pair_phase_family_table.md`
+`docs/witting_triangle_family_phase.md`
+Scripts:
+`tools/witting_pair_phase_family_table.py`
 `tools/witting_triangle_family_phase.py`
 
-**Negative result (computed):**  
+**Negative result (computed):**
 No orthonormal basis **inside the 40‑ray set** yields a unitary that maps the
 full set to the naive cube‑root grid form. The best alignment score is **4/40**
 (the basis itself). Thus the F₃⁴ symplectic description requires a **non‑trivial
 external unitary**, not just a change of basis within the ray set.
 
-Doc: `docs/witting_basis_alignment_search.md`  
+Doc: `docs/witting_basis_alignment_search.md`
 Script: `tools/witting_basis_alignment_search.py`
 
-**Monomial phase‑symmetry breaking (computed):**  
+**Monomial phase‑symmetry breaking (computed):**
 The full monomial symmetry group preserving the 40‑ray set has size **243**,
 but **only 3** elements preserve the pair‑phase classes. Thus the π/6 lattice
 structure **breaks** almost all monomial symmetry—this phase fingerprint is
 highly discriminating.
 
-Doc: `docs/witting_phase_orbit_invariance.md`  
+Doc: `docs/witting_phase_orbit_invariance.md`
 Script: `tools/witting_phase_orbit_invariance.py`
 
-**Naive F₃⁴ mapping fails (computed):**  
+**Naive F₃⁴ mapping fails (computed):**
 A direct cube‑root rounding map from rays to F₃⁴ projective points does **not**
 reproduce the symplectic orthogonality graph (large FP/FN counts). This confirms
 the W(3,3) interpretation is **unitary‑equivalent but non‑trivial** in the ray
 coordinates.
 
-Doc: `docs/witting_f3_projective_map_test.md`  
+Doc: `docs/witting_f3_projective_map_test.md`
 Script: `tools/witting_f3_projective_map_test.py`
 
-**Explicit graph isomorphism found (computed):**  
+**Explicit graph isomorphism found (computed):**
 We constructed an explicit **graph isomorphism** between the Witting ray
 orthogonality graph and the symplectic point graph W(3,3), yielding a concrete
 ray→F₃⁴ projective labeling. This gives a **direct bridge** from geometric
 phases to symplectic invariants.
 
-Doc: `docs/witting_graph_isomorphism.md`  
+Doc: `docs/witting_graph_isomorphism.md`
 Script: `tools/witting_graph_isomorphism.py`
 
-**Phase–symplectic law (computed, new):**  
+**Phase–symplectic law (computed, new):**
 Using the explicit ray→F₃⁴ labeling, the Pancharatnam phase classes collapse
 to a clean **symplectic invariant**:
-- If **sgn(ω₁₂ ω₂₃ ω₃₁) = −1**, then phase ∈ {−π/6, +π/2}.  
-- If **sgn(ω₁₂ ω₂₃ ω₃₁) = +1**, then phase ∈ {+π/6, −π/2}.  
+- If **sgn(ω₁₂ ω₂₃ ω₃₁) = −1**, then phase ∈ {−π/6, +π/2}.
+- If **sgn(ω₁₂ ω₂₃ ω₃₁) = +1**, then phase ∈ {+π/6, −π/2}.
 So the **product sign of the three symplectic pairings** controls the phase
 sector. This is the first exact closed‑form link between W(3,3) geometry and
 the π/6 phase lattice.
 
-Doc: `docs/witting_phase_symplectic_mapped.md`  
+Doc: `docs/witting_phase_symplectic_mapped.md`
 Script: `tools/witting_phase_symplectic_mapped.py`
 
-**Pair‑phase vs symplectic form (computed):**  
+**Pair‑phase vs symplectic form (computed):**
 Using the same ray→F₃⁴ labeling, we tested whether the **pairwise** phase
 arg⟨ri|rj⟩ can be expressed as a low‑degree algebraic function of the F₃
 coordinates. The phase distribution within ω=1 and ω=2 classes is **broad**,
@@ -1240,20 +1240,20 @@ We further allowed a **full quadratic** polynomial in the eight F₃ variables
 class is not captured by any low‑degree algebraic form, supporting a
 higher‑order cocycle interpretation.
 
-Doc: `docs/witting_pair_phase_symplectic.md`  
+Doc: `docs/witting_pair_phase_symplectic.md`
 Script: `tools/witting_pair_phase_symplectic.py`
 
-**Gauge‑fixed pair‑phase search (computed):**  
+**Gauge‑fixed pair‑phase search (computed):**
 We allowed per‑ray phase shifts sᵢ (mod 3) and tried to solve
 `k_ij + s_i − s_j = f(x_i, x_j)` for **bilinear+linear** and **full quadratic**
 polynomials f over GF(3). **No solution exists** in either case. Thus even after
 optimal U(1) rephasing, the pairwise phase classes do **not** collapse to any
 low‑degree algebraic rule in F₃⁴ coordinates.
 
-Doc: `docs/witting_pair_phase_gauge_fit.md`  
+Doc: `docs/witting_pair_phase_gauge_fit.md`
 Script: `tools/witting_pair_phase_gauge_fit.py`
 
-**Triangle cocycle obstruction (computed):**  
+**Triangle cocycle obstruction (computed):**
 We treat the non-orthogonality graph as a 2-complex (540 edges, 3240 triangles)
 and ask whether the **triangle phase labels** are coboundaries of edge labels.
 For three coarse labelings - Z2 magnitude (|phase|), Z2 sign, and Z3 (k mod 3) - the
@@ -1262,10 +1262,10 @@ reductions, but **solvable** for Z3 once orientation is handled correctly.
 Thus the Z2 reductions define **nontrivial 2-cocycles**, while the Z3 class is
 cohomologically trivial.
 
-Doc: `docs/witting_triangle_cocycle.md`  
+Doc: `docs/witting_triangle_cocycle.md`
 Script: `tools/witting_triangle_cocycle.py`
 
-**Cocycle orbit under monomial symmetry (computed):**  
+**Cocycle orbit under monomial symmetry (computed):**
 We transported the triangle cocycle under all **243 monomial symmetries** and
 tested cohomology equivalence (difference is a coboundary). Results:
 - **Z2 magnitude** class: **243/243** cohomologous (invariant).
@@ -1274,28 +1274,28 @@ tested cohomology equivalence (difference is a coboundary). Results:
 Thus the Z2 reductions define nontrivial but **rigid** cocycle classes, while Z3
 is cohomologically trivial and invariant.
 
-Doc: `docs/witting_triangle_cocycle_orbit.md`  
+Doc: `docs/witting_triangle_cocycle_orbit.md`
 Script: `tools/witting_triangle_cocycle_orbit.py`
 
-**Z6 triangle class (computed):**  
+**Z6 triangle class (computed):**
 The full phase class `k mod 6` is also a **coboundary** (solvable mod 2 and mod 3)
 and its cohomology class is **invariant** under the entire monomial symmetry group.
 This isolates the genuinely nontrivial content to the Z2 reductions.
 
-Doc: `docs/witting_triangle_cocycle_z6.md`  
+Doc: `docs/witting_triangle_cocycle_z6.md`
 Script: `tools/witting_triangle_cocycle_z6.py`
 
-**Z3 edge potential (computed):**  
+**Z3 edge potential (computed):**
 Solving the oriented coboundary equation `x_ij + x_jk − x_ik = t_ijk` over GF(3)
 gives an explicit **edge potential** for the Z3 triangle phase class. A canonical
 solution (free variables = 0) yields the edge-label distribution:
 **{0: 150, 1: 195, 2: 195}** across the 540 non‑orth edges. Thus the mod‑3 class
 is genuinely an edge‑derived potential even though Z2 reductions are not.
 
-Doc: `docs/witting_triangle_cocycle_z3_edge_potential.md`  
+Doc: `docs/witting_triangle_cocycle_z3_edge_potential.md`
 Script: `tools/witting_triangle_cocycle_z3_edge_potential.py`
 
-**Z3 edge potential structure (computed):**  
+**Z3 edge potential structure (computed):**
 We analyzed the Z3 edge labels by ray families, basis involvement, and symplectic
 omega. The distribution is **structured but not uniform**:
 - Edge labels: {0:150, 1:195, 2:195}.
@@ -1306,28 +1306,28 @@ omega. The distribution is **structured but not uniform**:
 This supports the interpretation of the Z3 potential as a **gauge edge field**
 aligned to family structure rather than a pure symplectic invariant.
 
-Doc: `docs/witting_z3_edge_potential_analysis.md`  
+Doc: `docs/witting_z3_edge_potential_analysis.md`
 Script: `tools/witting_z3_edge_potential_analysis.py`
 
-**Z3 edge potential fit failure (computed):**  
+**Z3 edge potential fit failure (computed):**
 We attempted to fit the Z3 edge labels as **affine** or **quadratic** functions
 of (mu, nu) within each family-pair block (including B–F and F–F). **No exact fit**
 exists in any block. This rules out low-degree closed forms even after
 conditioning on family structure, indicating the Z3 potential is constrained by
 global structure rather than local family algebra.
 
-Doc: `docs/witting_z3_edge_potential_fit.md`  
+Doc: `docs/witting_z3_edge_potential_fit.md`
 Script: `tools/witting_z3_edge_potential_fit.py`
 
-**Z3 edge potential tree (computed):**  
+**Z3 edge potential tree (computed):**
 A shallow decision tree using family ids, mu/nu, basis involvement, support size,
 and omega achieves only **51.7%** accuracy. This confirms the Z3 labels are not
 captured by any simple local feature set; the dependence is global.
 
-Doc: `docs/witting_z3_edge_potential_tree.md`  
+Doc: `docs/witting_z3_edge_potential_tree.md`
 Script: `tools/witting_z3_edge_potential_tree.py`
 
-**Z3 edge labels by monomial orbits (computed):**  
+**Z3 edge labels by monomial orbits (computed):**
 Under the monomial symmetry group (order 243), the 540 non-orth edges split into
 **12 orbits**: eight of size **27** and four of size **81**. The Z3 labels are
 **not constant** on orbits, but each orbit has a stable label distribution.
@@ -1335,20 +1335,20 @@ The 27-orbits are highly skewed (e.g., {1:12,2:14,0:1}), while 81-orbits are
 closer to balanced. This shows the Z3 potential aligns with the monomial orbit
 stratification but remains globally mixed within each orbit.
 
-Doc: `docs/witting_z3_edge_orbits.md`  
+Doc: `docs/witting_z3_edge_orbits.md`
 Script: `tools/witting_z3_edge_orbits.py`
 
-**Monomial orbit typing (computed):**  
+**Monomial orbit typing (computed):**
 The 12 edge orbits are **exactly** the family-block decomposition of the 40-ray
 set: basis–family edges form size‑27 orbits (BF0/BF1/BF2 mixed, BF3 separate),
 same‑family F0/F1/F2 edges form size‑27 orbits, F3–F3 is a separate size‑27 orbit,
 and cross‑family edges split into two size‑81 orbits (F0/F1/F2 block vs F*–F3 block).
 Thus the monomial orbit structure is determined purely by family pairing.
 
-Doc: `docs/witting_z3_edge_orbit_typing.md`  
+Doc: `docs/witting_z3_edge_orbit_typing.md`
 Script: `tools/witting_z3_edge_orbit_typing.py`
 
-**Z2 cocycle minimal-support heuristic (computed):**  
+**Z2 cocycle minimal-support heuristic (computed):**
 We searched for sparse representatives of the two Z2 cocycle classes by adding
 edge coboundaries and greedily reducing support (multiple random restarts).
 The magnitude cocycle is already minimal at **360** triangles (exactly the number
@@ -1356,67 +1356,67 @@ of |phase| = pi/2 triangles). The sign cocycle can be reduced from **1620** to
 **360**, suggesting both Z2 classes admit a sparse 360-triangle representative.
 This points to a rigid 360-triangle substructure inside the 2-complex.
 
-Doc: `docs/witting_triangle_cocycle_z2_minimize.md`  
+Doc: `docs/witting_triangle_cocycle_z2_minimize.md`
 Script: `tools/witting_triangle_cocycle_z2_minimize.py`
 
-**Cohomology of the non-orth 2-complex (computed):**  
+**Cohomology of the non-orth 2-complex (computed):**
 Computing the cohomology of the 2-complex (vertices=40, edges=540, triangles=3240)
 over GF(2) and GF(3) yields **H^1 = 0** and a huge **H^2 dimension = 2739** in both
 cases. Thus there are **no nontrivial edge-level classes**, but a vast space of
 triangle-level 2-cocycles. This explains why the Pancharatnam phases are
 irreducibly higher-order: triangle data is the natural cohomological layer here.
 
-Doc: `docs/witting_triangle_cohomology.md`  
+Doc: `docs/witting_triangle_cohomology.md`
 Script: `tools/witting_triangle_cohomology.py`
 
-**Isomorphism orbit class (computed):**  
+**Isomorphism orbit class (computed):**
 Under the **monomial subgroup** (order 243), the explicit graph isomorphism
 falls into **81 distinct mappings**. This shows the ray→F₃⁴ labeling is **not**
 unique, but lies in a structured orbit under symmetry; the phase law remains
 invariant across these mappings.
 
-Doc: `docs/witting_isomorphism_orbit_check.md`  
+Doc: `docs/witting_isomorphism_orbit_check.md`
 Script: `tools/witting_isomorphism_orbit_check.py`
 
-**Non‑invariance under full Aut(W33) (computed):**  
+**Non‑invariance under full Aut(W33) (computed):**
 When we apply **symplectic graph automorphisms** (Sp(4,3) generators) via the
 ray→F₃⁴ mapping, the phase law **is not preserved** (thousands of violations).
 Conclusion: the π/6 phase law is **not a pure graph invariant** of W33; it is
 specific to the **unitary ray realization** and preserved only by the
 unitary monomial subgroup, not by all graph automorphisms.
 
-Doc: `docs/witting_phase_law_invariance.md`  
+Doc: `docs/witting_phase_law_invariance.md`
 Script: `tools/witting_phase_law_invariance.py`
 
-**Monomial subgroup preservation (computed):**  
+**Monomial subgroup preservation (computed):**
 Re‑testing the phase law under **all 243 monomial symmetries**, after properly
 transporting the ray→F₃⁴ mapping, shows **zero violations for all 243 elements**.
 Thus the phase law is **exactly invariant** under the full unitary monomial
 symmetry group, but **not** under the full graph automorphism group.
 
-Doc: `docs/witting_phase_law_monomial_subgroup.md`  
+Doc: `docs/witting_phase_law_monomial_subgroup.md`
 Script: `tools/witting_phase_law_monomial_subgroup.py`
 
-**Full PSp(4,3) scan (computed):**  
+**Full PSp(4,3) scan (computed):**
 Enumerating the entire **PSp(4,3)** automorphism group (size 25,920) shows that
 **only the identity** preserves the phase law. So the phase law is **maximally
 symmetry‑breaking** inside the symplectic automorphism group: it is compatible
 with the **unitary monomial subgroup** but not with generic graph automorphisms.
 
-Doc: `docs/witting_phase_law_full_aut.md`  
+Doc: `docs/witting_phase_law_full_aut.md`
 Script: `tools/witting_phase_law_full_aut.py`
 
-**External unitary search (computed):**  
+**External unitary search (computed):**
 We attempted to map Witting rays to the **naive F₃⁴ grid rays**
 (v = (ω^a, ω^b, ω^c, ω^d)) via basis‑aligned unitaries. The target grid has
 **only 27 rays** and **no orthonormal bases at all**, so no such unitary exists.
 This nails down that the correct F₃⁴ model requires a **non‑trivial embedding**
 (not the raw ω‑grid).
 
-Doc: `docs/witting_external_unitary_search.md`  
+Doc: `docs/witting_external_unitary_search.md`
 Script: `tools/witting_external_unitary_search.py`
 
-**Naive grid phase mismatch (computed):**  
+**Naive grid phase mismatch (computed):**
 The **27‑ray ω‑grid** produces a different triangle‑phase distribution:
 ```
 phase ≈ +π/6 : 700
@@ -1427,59 +1427,59 @@ phase ≈ −π/2 : 807
 So the ω‑grid is **not** unitarily equivalent to the Witting 40‑ray set and
 should instead be viewed as a distinct 27‑sector object.
 
-Doc: `docs/witting_grid_triangle_phases.md`  
+Doc: `docs/witting_grid_triangle_phases.md`
 Script: `tools/witting_grid_triangle_phases.py`
 
-**Triangle orbits under monomial symmetry (computed):**  
+**Triangle orbits under monomial symmetry (computed):**
 Monomial symmetries (order 243) split non‑orthogonal triangles into orbits of
 sizes **9, 27, 81**, and the distribution depends on phase class. This shows the
 Pancharatnam signature is not just a global scalar, but an **orbit‑level label**
 of triangle geometry.
 
-Doc: `docs/witting_triangle_phase_orbits.md`  
+Doc: `docs/witting_triangle_phase_orbits.md`
 Script: `tools/witting_triangle_phase_orbits.py`
 
-**Phase formula search (computed):**  
+**Phase formula search (computed):**
 We searched for a linear phase rule k ≡ aμ₁+bν₁+cμ₂+dν₂+e (mod 12) by family.
 No simple linear formula exists in general; only one family pair admits a fit.
 We also searched **quadratic** formulas in (μ,ν) and found a **single family pair**
-(F2,F3) admitting a full mod‑12 quadratic fit; all others fail.  
+(F2,F3) admitting a full mod‑12 quadratic fit; all others fail.
 So the phase lattice is **not** a trivial affine or quadratic function of (μ,ν).
 
-Doc: `docs/witting_phase_formula_search.md`  
+Doc: `docs/witting_phase_formula_search.md`
 Script: `tools/witting_phase_formula_search.py`
 
-Doc (quadratic): `docs/witting_phase_quadratic_formula_search.md`  
+Doc (quadratic): `docs/witting_phase_quadratic_formula_search.md`
 Script: `tools/witting_phase_quadratic_formula_search.py`
 
-**Random U(4) grid‑score search (computed):**  
+**Random U(4) grid‑score search (computed):**
 A 2000‑trial Haar‑random unitary search for a map that sends many Witting rays
 into the cube‑root grid form found **best score 0/40**. This indicates that
 grid‑form alignment is not generic and must be **highly structured**, if it
 exists at all.
 
-Doc: `docs/witting_unitary_grid_score_search.md`  
+Doc: `docs/witting_unitary_grid_score_search.md`
 Script: `tools/witting_unitary_grid_score_search.py`
 
-**Structured U(4) anneal (computed):**  
+**Structured U(4) anneal (computed):**
 Local perturbation/anneal search (5000 steps) still yields **best score 0/40**
 at strict tolerance and **1/40** at a looser tolerance. This strongly suggests
 there is **no nearby unitary** that maps the Witting rays into the naive grid.
 
-Doc: `docs/witting_unitary_grid_anneal.md`  
+Doc: `docs/witting_unitary_grid_anneal.md`
 Script: `tools/witting_unitary_grid_anneal.py`
 
-**Cubic mod‑3 phase laws (computed):**  
+**Cubic mod‑3 phase laws (computed):**
 Allowing **all degree ≤ 3 monomials** in (μ,ν) over GF(3), some family pairs
 admit a mod‑3 fit, but others still fail. Thus even **cubic** rules do **not**
 uniformly explain the phase lattice.
 
-Doc: `docs/witting_phase_cubic_formula_search.md`  
+Doc: `docs/witting_phase_cubic_formula_search.md`
 Script: `tools/witting_phase_cubic_formula_search.py`
 
-**Example triangles (computed):**  
-Explicit ray triples with phases ±π/6 and ±π/2 are listed here:  
-`docs/witting_pancharatnam_examples.md`  
+**Example triangles (computed):**
+Explicit ray triples with phases ±π/6 and ±π/2 are listed here:
+`docs/witting_pancharatnam_examples.md`
 Script: `tools/witting_pancharatnam_examples.py`
 
 ### 1.10 Monomial Symmetry Subgroup (Computed)
@@ -1489,71 +1489,71 @@ apply independent cube‑root phases (Z₃⁴) while preserving the 40‑ray set
 the 40 bases. The valid subgroup has size **243 = 3⁵**, a clean Z₃ signature
 inside the larger symmetry structure.
 
-Artifact: `artifacts/witting_monomial_symmetry.json`  
+Artifact: `artifacts/witting_monomial_symmetry.json`
 Script: `tools/witting_group_actions.py`
 
-**24‑basis symmetry collapse (computed):**  
+**24‑basis symmetry collapse (computed):**
 Restricting to the **24‑basis** KS subset collapses the monomial symmetry to
 order **3** (all ray and basis orbits become trivial). This confirms the
 subset is highly symmetry‑breaking and thus experimentally discriminating.
 
-Artifact: `artifacts/witting_24basis_symmetry.json`  
+Artifact: `artifacts/witting_24basis_symmetry.json`
 Script: `tools/witting_24basis_symmetry.py`
 
-**Interferometric protocol (computed):**  
+**Interferometric protocol (computed):**
 A concrete measurement protocol for the **π/6, π/2** Pancharatnam phase using
-explicit Witting‑ray triangles:  
-`docs/witting_pancharatnam_protocol.md`  
+explicit Witting‑ray triangles:
+`docs/witting_pancharatnam_protocol.md`
 Script: `tools/witting_pancharatnam_protocol.py`
 
-**Run‑sheet (computed):**  
-Explicit ray triples plus amplitude/phase tables for lab execution:  
-`docs/witting_pancharatnam_runsheet.md`  
+**Run‑sheet (computed):**
+Explicit ray triples plus amplitude/phase tables for lab execution:
+`docs/witting_pancharatnam_runsheet.md`
 Script: `tools/witting_pancharatnam_runsheet.py`
 
-**Phase‑noise robustness (computed):**  
-Classification accuracy vs uniform phase noise σ:  
-`docs/witting_pancharatnam_noise_threshold.md`  
+**Phase‑noise robustness (computed):**
+Classification accuracy vs uniform phase noise σ:
+`docs/witting_pancharatnam_noise_threshold.md`
 Script: `tools/witting_pancharatnam_noise_threshold.py`
 
-**Unitary implementation (computed):**  
+**Unitary implementation (computed):**
 For each of the 24 bases, a 4×4 unitary is provided with the basis rays as
 columns (direct experimental settings).
 
-Docs: `docs/witting_24basis_unitaries.json`  
+Docs: `docs/witting_24basis_unitaries.json`
 Script: `tools/witting_24basis_unitaries.py`
 
-**Reck‑style optical decomposition (computed):**  
+**Reck‑style optical decomposition (computed):**
 Each 4×4 unitary is decomposed into a sequence of 2×2 complex Givens rotations
 (beam‑splitter‑like operations) plus diagonal phases.
 
-Docs: `docs/witting_24basis_reck.json`  
+Docs: `docs/witting_24basis_reck.json`
 Script: `tools/witting_24basis_reck_decomp.py`
 
-Readable schedule: `docs/witting_24basis_reck_schedule.md`  
+Readable schedule: `docs/witting_24basis_reck_schedule.md`
 Script: `tools/witting_24basis_reck_schedule.py`
 
-**MZI‑ready schedule (computed):**  
-Reck rotations converted to Mach–Zehnder reflectivities and phases:  
-`docs/witting_24basis_mzi_schedule.md`  
-`docs/witting_24basis_mzi_schedule.json`  
+**MZI‑ready schedule (computed):**
+Reck rotations converted to Mach–Zehnder reflectivities and phases:
+`docs/witting_24basis_mzi_schedule.md`
+`docs/witting_24basis_mzi_schedule.json`
 Script: `tools/witting_24basis_mzi_schedule.py`
 
-**Ray amplitude/phase table (computed):**  
-Explicit per‑component magnitudes and phases for all 40 rays (direct state‑prep):  
-`docs/witting_ray_amplitude_phase.csv`  
+**Ray amplitude/phase table (computed):**
+Explicit per‑component magnitudes and phases for all 40 rays (direct state‑prep):
+`docs/witting_ray_amplitude_phase.csv`
 Script: `tools/witting_ray_phase_table.py`
 
-**Waveplate schedule (computed):**  
-Each 2×2 rotation approximated by **QWP–HWP–QWP** angles (up to global phase):  
-`docs/witting_24basis_waveplates.md`  
-`docs/witting_24basis_waveplates.json`  
+**Waveplate schedule (computed):**
+Each 2×2 rotation approximated by **QWP–HWP–QWP** angles (up to global phase):
+`docs/witting_24basis_waveplates.md`
+`docs/witting_24basis_waveplates.json`
 Script: `tools/witting_24basis_waveplate_fit.py`
 
-**Waveplate schedule (degrees):**  
-Same schedule in fast‑axis degrees (mod 180°):  
-`docs/witting_24basis_waveplates_deg.md`  
-`docs/witting_24basis_waveplates_deg.json`  
+**Waveplate schedule (degrees):**
+Same schedule in fast‑axis degrees (mod 180°):
+`docs/witting_24basis_waveplates_deg.md`
+`docs/witting_24basis_waveplates_deg.json`
 Script: `tools/witting_24basis_waveplate_degrees.py`
 
 **Interpretation:** The Witting set is **contextual but not parity‑contextual**
@@ -1820,7 +1820,7 @@ Running to 10¹⁶ GeV gives approximately 0.375 ✓
 - **Fundamental representation**: 27-dimensional
 - **Weyl group order**: 51,840
 
-**Problem**: 
+**Problem**:
 - W33 has 40 points, not 27
 - Q45 has 45 vertices, not 27
 - E₆ has dimension 78, not directly related to W33
@@ -1833,10 +1833,10 @@ Running to 10¹⁶ GeV gives approximately 0.375 ✓
 1. **K4 color singlet probability**: 46.3% in random, 100% in W33 → 2.16× enhancement, but combined with Z₄:
    - Probability: 1 / (2^10) ≈ 10⁻³⁰
    - Never occurs by chance
-   
+
 2. **Perfect parity-centers correlation**: 100% topological
    - Probability by chance: < 10⁻¹⁰⁰
-   
+
 3. **Q45 quotient dimension = SU(5)**:
    - Probability by chance: < 10⁻²⁰
 

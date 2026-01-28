@@ -50,8 +50,8 @@ print(f"|V| = {V.cardinality()}")
 
 # Symplectic form matrix J
 # J = [[0, 0, 1, 0], [0, 0, 0, 1], [-1, 0, 0, 0], [0, -1, 0, 0]]
-J = matrix(F3, [[0, 0, 1, 0], 
-                [0, 0, 0, 1], 
+J = matrix(F3, [[0, 0, 1, 0],
+                [0, 0, 0, 1],
                 [2, 0, 0, 0],   # -1 = 2 in F_3
                 [0, 2, 0, 0]])
 print(f"\nSymplectic form matrix J:")
@@ -142,7 +142,7 @@ try:
     if W33_builtin.is_strongly_regular():
         params = W33_builtin.is_strongly_regular(parameters=True)
         print(f"  Parameters: {params}")
-    
+
     # Check isomorphism
     print(f"\n  Our graph isomorphic to built-in? {G_manual.is_isomorphic(W33_builtin)}")
 

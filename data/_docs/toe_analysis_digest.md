@@ -38,4 +38,3 @@ If you want, I can (D) add the notebook to the repo docs, (E) wire the figures i
 - **Report:** `data/_docs/toe_report.md` — short exploratory report embedding the notebook-generated figures.
 
 - **Quick validation:** the CI `smoke` job now runs `scripts/generate_toe_key_lines.py` and `scripts/visualize_toe_key_lines.py` and verifies `data/_docs/toe_key_lines.csv` and at least one figure exist. (This runs automatically on push/PR and is designed to catch regressions in the digest/visualization flow.)
-

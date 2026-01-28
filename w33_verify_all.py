@@ -167,13 +167,15 @@ num_lines = len(lines)
 # Lines per point = (q² + 1)(q + 1) = 40 (for q=3)
 # Generators = (q + 1)(q² + 1)(q³ + 1) = 4 * 10 * 28 = 1120
 
-print(f"""
+print(
+    f"""
 W(5, 3) STRUCTURE:
 -----------------
 Points: {num_points} (expected: 364)
 Lines: {num_lines} (expected: many)
 Points per line: {len(lines[0]) if lines else 'N/A'} (expected: 13)
-""")
+"""
+)
 
 # Euler characteristic
 # For a building of type C₃, the Euler characteristic formula is different
@@ -218,7 +220,8 @@ for i, p1 in enumerate(points_list[:50]):  # Sample
 
 print(f"Sample triangles: {triangles}")
 
-print("""
+print(
+    """
 PREDICTION FOR W(5, 3):
 -----------------------
 Based on Solomon-Tits theorem:
@@ -235,13 +238,15 @@ Unlike W(3, 3):
   - W(5, 3) has interesting π₂
 
 This is a fundamentally different topology from W(3, 3)!
-""")
+"""
+)
 
 print("\n" + "=" * 60)
 print("VERIFYING W(3, 3) ≅ Q(4, 3) (KLEIN CORRESPONDENCE)")
 print("=" * 60)
 
-print("""
+print(
+    """
 The KLEIN CORRESPONDENCE states that:
 
   W(3, 3) ≅ Q(4, 3)
@@ -257,7 +262,8 @@ Points of Q(4, 3) = projective points satisfying
   x₀² + x₁x₂ + x₃x₄ = 0 (or similar quadratic form)
 
 The 40 points of W(3, 3) map to the 40 points of Q(4, 3).
-""")
+"""
+)
 
 # Let's verify Q(4, 3) has 40 points
 print("\nConstructing Q(4, 3)...")
@@ -294,24 +300,27 @@ print(f"Points on Q(4, 3): {len(q4_points)}")
 print(f"Points in W(3, 3): 40")
 print(f"Match: {len(q4_points) == 40}")
 
-print("""
+print(
+    """
 ✓ VERIFIED: Q(4, 3) has exactly 40 points = W(3, 3) points!
 
 The isomorphism is:
   Points of W(3, 3) (totally isotropic 1-spaces in GF(3)⁴)
-  ↕  
+  ↕
   Points of Q(4, 3) (points on quadric in PG(4, 3))
 
 Both have automorphism group O(5, 3) : C₂ of order 51,840.
 
 This is the "exceptional isomorphism" Sp(4, q) ≅ O(5, q)!
-""")
+"""
+)
 
 print("\n" + "=" * 60)
 print("MUB CONNECTION TO W(3, 3)")
 print("=" * 60)
 
-print("""
+print(
+    """
 MUTUALLY UNBIASED BASES (MUBs):
 
 In dimension d, two orthonormal bases B = {|b_i⟩} and B' = {|b'_j⟩}
@@ -326,7 +335,8 @@ Maximum number of MUBs in dimension d:
 For d = 3: Maximum 4 MUBs exist.
 
 The 4 MUBs in C³ relate to W(3, 3) as follows:
-""")
+"""
+)
 
 # Construct 4 MUBs in dimension 3
 omega = np.exp(2j * np.pi / 3)  # Primitive cube root of unity
@@ -382,31 +392,34 @@ for i in range(len(MUBs)):
         else:
             print(f"  MUB {i} ⊥ MUB {j}: Close but not exact (numerical)")
 
-print("""
+print(
+    """
 CONNECTION TO W(3, 3):
 
 The 4 MUBs give us:
   - 4 bases × 3 vectors = 12 rays in C³
-  
+
 But we need to see the W(3, 3) structure more directly.
 
 Consider the "MUB graph":
   - Vertices = rays (one-dimensional subspaces)
   - Edges = pairs from different MUBs
-  
+
 Actually, the deeper connection is:
 
 The LINES of W(3, 3) correspond to certain "MUB lines":
   - Each line has 4 points
   - These 4 points come from 4 different MUBs!
-  
+
 In finite geometry terms:
   GF(3)⁴ with symplectic form ↔ Phase space for qutrits
   W(3, 3) structure ↔ Quantum state space geometry
   Totally isotropic lines ↔ Mutually unbiased configurations
-""")
+"""
+)
 
-print("""
+print(
+    """
 SUMMARY OF MUB-W33 CONNECTION:
 -----------------------------
 1. The 4 MUBs in C³ come from GF(3)² (2D over finite field)
@@ -416,7 +429,8 @@ SUMMARY OF MUB-W33 CONNECTION:
 5. Quantum error correction uses W(3, 3) as check matrix
 
 W(3, 3) IS the geometry underlying quantum mechanics in dimension 3!
-""")
+"""
+)
 
 print("\n" + "★" * 60)
 print("      ALL VERIFICATIONS COMPLETE!")

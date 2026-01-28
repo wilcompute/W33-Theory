@@ -9,21 +9,24 @@ Following intuitions about unexplored connections in W33.
 import math
 from fractions import Fraction
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                     THEORY OF EVERYTHING - PART XLII                         ║
 ║                                                                              ║
 ║                         DEEPER STRUCTURES                                    ║
 ║                    Following Unexplored Intuitions                           ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 print("=" * 80)
 print("INTUITION 1: THE MYSTERIOUS NUMBER 1111")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 We use α⁻¹ = 81 + 56 + 40/1111, but what IS 1111?
 
   1111 = 11 × 101
@@ -31,7 +34,8 @@ We use α⁻¹ = 81 + 56 + 40/1111, but what IS 1111?
 We claimed 101 = 133 - 32 = dim(E₇) - dim(SO(10) adjoint)
 
 But let's look deeper at 1111:
-""")
+"""
+)
 
 # Properties of 1111
 print("Properties of 1111:")
@@ -78,14 +82,16 @@ print("INTUITION 2: THE NUMBER 5 - GEOMETRIC ORIGIN")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 The number 5 = 133 - 128 appears EVERYWHERE:
   - Dark matter ratio: 27/5 = 5.4
   - Hierarchy: M_Pl/M_EW ~ 10^(81/5)
   - 5 = dim(E₇) - dim(SO(16) spinor)
 
 But what IS 5 in W33 geometry?
-""")
+"""
+)
 
 # Exploring 5 in W33
 print("5 in W33 structure:")
@@ -126,14 +132,16 @@ print("INTUITION 3: THE 240 CONNECTION")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 240 appears in TWO independent places:
   1. E₈ root system: 240 roots
   2. Witting polytope: 240 vertices
   3. W33 connections: 40 × 12 / 2 = 240
 
 Is this coincidence? Let's verify:
-""")
+"""
+)
 
 # W33 connection count
 print("W33 Point Connections:")
@@ -168,11 +176,13 @@ print("INTUITION 4: LEPTON MASS RATIOS")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 Koide formula: Q = 2/3 matches 2×27/81 exactly.
 
 What about other mass ratios?
-""")
+"""
+)
 
 # Masses
 m_e = 0.51099895  # MeV
@@ -225,7 +235,8 @@ print("INTUITION 5: HOLOGRAPHIC PRINCIPLE")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 The holographic principle says:
   Maximum entropy S = A/(4 l_P²) where A = horizon area
 
@@ -233,7 +244,8 @@ For the observable universe:
   S ~ 10^{122} bits
 
 But 122 ≈ W33 total + 1 = 121 + 1!
-""")
+"""
+)
 
 # Holographic entropy
 print("Universe Entropy:")
@@ -274,12 +286,14 @@ print("INTUITION 6: THE 27 LINES ON A CUBIC SURFACE")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 A deep classical result: Every smooth cubic surface in P³ contains
 exactly 27 lines. This was proven by Cayley and Salmon (1849).
 
 The 27 = dim(E₆ fundamental) is NOT coincidence!
-""")
+"""
+)
 
 print("The 27 Lines:")
 print(f"  27 = lines on cubic surface")
@@ -310,10 +324,12 @@ print("INTUITION 7: TIME AND THE 81 CYCLES")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 We noted that 81 cycles ≈ specious present (~80-100 moments).
 But there's more: 81 = 3⁴ has deep time structure.
-""")
+"""
+)
 
 print("The 81 = 3⁴ Structure:")
 print(f"  3⁴ = 3 × 3 × 3 × 3")
@@ -338,10 +354,12 @@ print("INTUITION 8: SUPERSYMMETRY AND K4")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 The 90 K4 subgroups (Klein four-group = Z₂ × Z₂) relate to
 supersymmetry structure.
-""")
+"""
+)
 
 print("K4 and SUSY:")
 print(f"  K4 = Z₂ × Z₂")
@@ -373,7 +391,8 @@ print("SUMMARY: UNEXPLORED CONNECTIONS REVEALED")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ╔════════════════════════════════════════════════════════════════════════════╗
 ║  Intuition │ Finding                                                       ║
 ╠════════════════════════════════════════════════════════════════════════════╣
@@ -386,7 +405,8 @@ print("""
 ║     7      │ 81 = 3⁴ → 4D time structure, arrow of time                    ║
 ║     8      │ 90 K4s → SUSY at TeV scale                                    ║
 ╚════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 print()
 print("NEW FORMULAS DISCOVERED:")

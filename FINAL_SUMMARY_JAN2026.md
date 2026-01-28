@@ -41,9 +41,9 @@ W33 (40 points × 40 lines)
     └─ Z₂ × Z₃ Fiber (6 states per vertex)
         ├─ Z₂: Matter/Antimatter
         └─ Z₃: Color charge + Family structure
-        
+
         ↓ Generates ↓
-        
+
     Particle Physics ✓
     Gravity ✓
     Cosmology ✓

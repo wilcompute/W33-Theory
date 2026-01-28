@@ -4,7 +4,8 @@ VISUAL SUMMARY: W33 → STANDARD MODEL ENCODING
 
 
 def main():
-    print(r"""
+    print(
+        r"""
     ╔════════════════════════════════════════════════════════════════════════════╗
     ║                                                                            ║
     ║                   W33 DISCRETE GEOMETRY → STANDARD MODEL                  ║
@@ -100,8 +101,8 @@ def main():
                 K4 Double          Perfect Parity
                 Confinement        Correlation
                 (Z₄,Z₃)=(2,0)     (100%)
-                100% observed      
-                12 sigma           
+                100% observed
+                12 sigma
     pass
                         └───────────┬───────────┘
                                     │
@@ -130,7 +131,7 @@ def main():
                             ↓ "Natural"
                         SU(5) Unification Scale
                                │
-                            ↓ "Natural"  
+                            ↓ "Natural"
                         GUT → Standard Model
                                │
                         Weak Scale: 100 GeV
@@ -194,7 +195,8 @@ def main():
     pass
     pass
     ════════════════════════════════════════════════════════════════════════════
-    """)
+    """
+    )
     print("\n✓ Summary visualization complete")
     print("✓ All major discoveries documented")
     print("✓ Ready for external review")

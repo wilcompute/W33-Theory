@@ -252,28 +252,30 @@ def analyze_correlation():
     print("SUMMARY & INTERPRETATION")
     print("=" * 70)
 
-    print(f"""
+    print(
+        f"""
 Key Findings:
-  
+
 1. Quantum number distribution is NON-UNIFORM
    (Predicted by our SU(5) GUT hypothesis)
-   
+
 2. Holonomy types show clear structure
    {total_2220:4d} fermion-like (2,2,2)
    {hol_counts.get('(3,1,1,1)', 0):4d} boson-like (3,1,1,1)
    {hol_counts.get('identity', 0):4d} flat/identity
-   
+
 3. Correlation between (Z4,Z3) and holonomy:
    If (2,0) preferentially couples to (2,2,2),
    this would be SMOKING GUN evidence!
-   
+
    Current status: Review contingency table above
-   
+
 Next Steps:
   If correlation is strong: HYPOTHESIS CONFIRMED ✓
   If correlation is weak: Need alternative explanation
   Either way: Provides insight into physics structure
-""")
+"""
+    )
 
     return v23_df, contingency
 

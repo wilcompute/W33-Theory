@@ -90,7 +90,8 @@ def analyze_27_structure(adj, vertices):
     print("27 LINES ON A CUBIC SURFACE")
     print("-" * 40)
 
-    print("""
+    print(
+        """
 The 27 lines on a general cubic surface have incidence:
 - Each line meets exactly 10 others
 - Incidence graph: 27 vertices, 135 edges (10-regular)
@@ -102,7 +103,8 @@ Our H27:
 
 H27 is NOT the Schlafli graph, but may be related through a quotient
 or different projection.
-""")
+"""
+    )
 
     # Compute H27 adjacency
     h27_adj = np.zeros((27, 27), dtype=int)
@@ -133,7 +135,8 @@ def explore_40_as_e6_orbits(vertices):
     print("40 VERTICES AS E6 WEIGHT STRUCTURE")
     print("=" * 60)
 
-    print("""
+    print(
+        """
 In E6 representation theory:
 - 27-dim fundamental representation (minuscule weight omega_1)
 - Weight orbit under W(E6) has exactly 27 weights
@@ -165,7 +168,8 @@ and D4 subset of D5 has:
 - Spinor-: 8-dim
 
 Hmm, 12 = 4 triangles * 3 vertices. The 4 triangles of H12!
-""")
+"""
+    )
 
     # Analyze the 40 vertices by first non-zero coordinate
     print("\n" + "-" * 40)
@@ -188,7 +192,8 @@ Hmm, 12 = 4 triangles * 3 vertices. The 4 triangles of H12!
     print("PROJECTIVE STRUCTURE PG(3,3)")
     print("-" * 40)
 
-    print(f"""
+    print(
+        f"""
 W33 = collinearity graph of the symplectic polar space W(3,3)
 W(3,3) lives in PG(3,3), the projective 3-space over F3
 
@@ -199,7 +204,8 @@ PG(3,3) structure:
 
 Our 40 vertices ARE the 40 points of PG(3,3)!
 The symplectic form selects which pairs are "adjacent" (symplectically orthogonal).
-""")
+"""
+    )
 
     return by_first_pos
 
@@ -222,7 +228,8 @@ def derive_explicit_e6_map(vertices, adj):
     # - Permutes the 27 weights of the fundamental representation
     # - Permutes the 72 roots
 
-    print("""
+    print(
+        """
 STRATEGY: Find how Sp(4,3) action on 40 points corresponds to
 W(E6) action on E6 structures.
 
@@ -237,7 +244,8 @@ Under this map:
   - H27 (27 non-neighbors) <-> E6 fundamental (27 weights)
   - H12 (12 neighbors) <-> D4 roots (12 positive roots)
   - v0 (base vertex) <-> Origin/trivial
-""")
+"""
+    )
 
     # Test the H27 <-> E6 fundamental correspondence
     h27 = get_h27(adj, 0)
@@ -266,7 +274,8 @@ Under this map:
     # The eigenvalues of the 27-dim E6 fundamental Cartan matrix
     # would give us the right comparison, but that requires E6 structure
 
-    print("""
+    print(
+        """
 Comparing to E6:
   E6 Cartan matrix eigenvalues: {1, 2, 3, 4, 5, 6} (roots of char poly)
   E6 fundamental weights form a 27-point orbit under W(E6)
@@ -276,7 +285,8 @@ Comparing to E6:
 The eigenvalue 2 with multiplicity 12 is interesting:
   12 = D4 positive root count = 24/2
   This connects H27 to D4 structure within E6!
-""")
+"""
+    )
 
     return h27, h12
 
@@ -292,7 +302,8 @@ def analyze_240_as_e8_roots(edges, vertices, adj):
     # E8 decomposes under E6 x SU(3) as:
     # 240 = 72 + 6 + 81 + 81
 
-    print("""
+    print(
+        """
 E8 root decomposition under E6 x SU(3):
   72 E6 roots
   6 SU(3) roots
@@ -302,7 +313,8 @@ E8 root decomposition under E6 x SU(3):
 Total: 72 + 6 + 81 + 81 = 240
 
 Can we see this in W33 edges?
-""")
+"""
+    )
 
     # Classify edges by endpoint type
     edge_types = defaultdict(list)
@@ -329,7 +341,8 @@ Can we see this in W33 edges?
     # Group edges by relationship to H27
     # An edge is "in H27" if both endpoints are in H27 for some base vertex
 
-    print("""
+    print(
+        """
 Another approach: Use the 1+12+27 decomposition.
 
 For base vertex v0:
@@ -341,7 +354,8 @@ For base vertex v0:
 Total from v0's perspective: 12 + 108 + 108 + 12 = 240 edges
 
 But this overcounts! Let's count properly...
-""")
+"""
+    )
 
     # Proper edge count
     # Each edge is counted from one perspective
@@ -404,7 +418,8 @@ def main():
     print("KEY FINDINGS")
     print("=" * 60)
 
-    print("""
+    print(
+        """
 1. H27 (27 non-neighbors) <-> E6 fundamental (27-dim)
    - Both have 27 elements
    - Both governed by automorphism group of order 51,840
@@ -428,7 +443,8 @@ def main():
    The numbers don't match directly, but the structure is similar:
    - Both have a "small + small + large + large" pattern
    - The ratios are close: 78/24 = 3.25, 162/216 = 0.75
-""")
+"""
+    )
 
     # Save results
     results = {

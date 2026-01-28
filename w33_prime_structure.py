@@ -70,7 +70,8 @@ print("\n" + "=" * 40)
 print("THE PRIME INDEX MIRACLE")
 print("=" * 40)
 
-print(f"""
+print(
+    f"""
 sin²θ_W = |points| / p_|points|
         = 40 / p_40
         = 40 / 173
@@ -78,7 +79,8 @@ sin²θ_W = |points| / p_|points|
 This means: The Weinberg angle is determined by
   - numerator = number of W33 points
   - denominator = the (number of points)-th prime!
-""")
+"""
+)
 
 # What about other W33 numbers?
 print("\n" + "=" * 40)

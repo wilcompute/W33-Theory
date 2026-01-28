@@ -525,7 +525,7 @@ def main():
     print("=" * 70)
     synthesis = """
     THE MOONSHINE-W33 WEB:
-    
+
     Monster Group M
          |
          | contains 11² = 121 = |W33| in its order
@@ -552,40 +552,40 @@ def main():
     W33 = Witting configuration
     |W33| = 121 = 11²
     |Aut(W33)| = W(E6) = 51840
-    
-    
+
+
     KEY NUMERICAL COINCIDENCES:
-    
+
     1. 11² = 121 appears in Monster order AND |W33|
-    
+
     2. 744 = 9 × 81 + 15 = 9 × |cycles| + 15
        744 = 24 × 31 (24 = Leech dim, 31 = Mersenne)
-    
+
     3. τ(11) = 534612 = 121 × 4419 = |W33| × 4419
-    
+
     4. E₆⁴ Niemeier lattice has W(E6) in its automorphism group
-    
+
     5. 196560 Leech minimal vectors = 27 × 7280
        27 = M-theory charges = E6 fundamental dimension
-    
+
     6. 15 = C(6,2) = M2-brane wrapping modes in M-theory!
        So 744 = 9×81 + 15 = 9×(3×27) + C(6,2)
                = 9 × (3 copies of M-theory) + M2 wrappings
-    
-    
+
+
     THE 15 MYSTERY RESOLVED?
-    
+
     744 = 729 + 15
         = 27 × 27 + 15
         = (E6 fund)² + C(6,2)
         = (M-theory charges)² + (M2-brane modes)
-    
+
     OR:
-    
+
     744 = 3 × 248 = 3 × dim(E8)
-    
+
     Actually: 744 = 3 × 248 = 3 × dim(E8)!
-    
+
     This is exact! The j-function constant term equals THREE COPIES of E8!
     """
     print(synthesis)

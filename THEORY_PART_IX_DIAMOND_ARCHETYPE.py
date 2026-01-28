@@ -82,7 +82,7 @@ THE SOLUTION:
     │                                                                       │
     └───────────────────────────────────────────────────────────────────────┘
 
-SOCRATES: "And if the truth about reality is always in our soul, the soul 
+SOCRATES: "And if the truth about reality is always in our soul, the soul
            must be immortal...."  (Meno 86b)
 
 The diamond figure encodes TWO great Pythagorean discoveries:

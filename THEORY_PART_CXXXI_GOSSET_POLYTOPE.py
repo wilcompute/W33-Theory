@@ -260,8 +260,9 @@ def the_gosset_adjacency():
     # This should be degree 56 (each E8 root has 56 neighbors in Gosset)
 
     # Compare with W33
-    print("""
-    
+    print(
+        """
+
     GOSSET vs W33:
     ──────────────
     Gosset 4_21:
@@ -269,22 +270,23 @@ def the_gosset_adjacency():
     - 6720 edges
     - Degree 56
     - Not strongly regular (various IP values)
-    
+
     W33:
     - 40 vertices (Witting rays = E8/6)
     - 240 edges
     - Degree 12
     - Strongly regular SRG(40, 12, 2, 4)
-    
+
     The 240 E8 roots quotient to 40 Witting rays.
     The Gosset adjacency does NOT directly become W33 adjacency!
-    
+
     Instead:
     - W33 adjacency = orthogonality in C^4
     - Gosset adjacency = IP = 1 in R^8
-    
+
     These are DIFFERENT relations, but both stem from E8.
-    """)
+    """
+    )
 
 
 def explore_24_cell():
@@ -318,33 +320,35 @@ def explore_24_cell():
     # But D4 roots are (±1, ±1, 0, 0) permutations
     # That's 24 roots... same count but different!
 
-    print("""
+    print(
+        """
     CLARIFICATION:
-    
+
     D4 root system: 24 roots of form (±1, ±1, 0, 0) permutations
     - These are NOT the 24-cell vertices!
     - |W(D4)| = 2^3 × 4!/2 = 8 × 12 = 192 (not 1152!)
-    
+
     Wait, let me recalculate:
     |W(D_n)| = 2^{n-1} × n!
     |W(D4)| = 2^3 × 4! = 8 × 24 = 192
-    
+
     But our stabilizer was 1296...
     |W(E6)|/40 = 51840/40 = 1296
-    
+
     1296 = 2^4 × 3^4 = 16 × 81
-    
+
     Hmm, 1296 is NOT |W(D4)| = 192.
-    
+
     Let me check: 1296 = 6 × 216 = 6 × 6^3
     Or: 1296 = 1296... what factors?
     1296 = 2^4 × 81 = 16 × 81 = 16 × 3^4
-    
+
     Compare to W(F4) = 1152 = 2^7 × 9 = 128 × 9
-    
+
     Actually, the stabilizer in Aut(W33) of a vertex should be
     computed directly, not assumed to be W(D4).
-    """)
+    """
+    )
 
     # Verify stabilizer
     print("\nRECALCULATING STABILIZER:")
@@ -374,26 +378,28 @@ def explore_24_cell():
     # 1296 appears in the ATLAS...
     # It's the order of the group 3^4 : 2.A_4 or similar
 
-    print("""
+    print(
+        """
     THE STABILIZER 1296:
-    
+
     The stabilizer of a vertex in Aut(W33) has order 1296.
-    
+
     1296 = 2^4 × 3^4 = (2 × 3)^4 / (36/36) = hmm
-    
-    One description: The stabilizer is related to the 
+
+    One description: The stabilizer is related to the
     affine group AGL(2, F_3) or similar structure.
-    
+
     AGL(2, F_3) = F_3^2 : GL(2, F_3)
     |GL(2, F_3)| = (9-1)(9-3) = 8 × 6 = 48
     |AGL(2, F_3)| = 9 × 48 = 432
-    
+
     Hmm, 1296 = 3 × 432 = 3 × |AGL(2, F_3)|
-    
+
     Or: 1296 = 27 × 48 = 27 × |GL(2, F_3)|
-    
+
     Interesting: 27 appears again!
-    """)
+    """
+    )
 
 
 def d5_spinor_connection():
@@ -409,41 +415,43 @@ def d5_spinor_connection():
     print("D5 SPINORS AND THE 72 = 40 + 32 DECOMPOSITION")
     print("=" * 70)
 
-    print("""
+    print(
+        """
     D5 REPRESENTATION THEORY:
-    
+
     D5 = SO(10) has:
     - Vector representation: dimension 10
     - Adjoint representation: dimension 45 (= 10 choose 2)
     - Root system: 40 roots
-    
+
     Spinor representations:
     - Two half-spinors: Δ+ and Δ-, each dimension 16
     - Total spinor: dimension 32
-    
+
     E6 BRANCHING:
-    
+
     E6 → D5 branching:
     - E6 adjoint (78) → D5 adjoint (45) + D5 vector (10) + 2×spinor (32) + singlet
-    
+
     Wait, that's: 45 + 10 + 32 + 1 = 88 ≠ 78
-    
+
     Let me reconsider...
-    
+
     E6 has 72 roots.
     D5 has 40 roots.
-    
+
     Under D5 ⊂ E6:
     - 72 E6 roots = 40 D5 roots + 32 other weights
-    
+
     The "32 other" are the weights of the D5 spinor appearing in E6!
-    
+
     VERIFICATION:
     72 = 40 + 32 ✓
-    
+
     This explains our earlier observation that 72 = 40 + 32
     in the context of W33 structure!
-    """)
+    """
+    )
 
     # Build E6 roots and check decomposition
     e8_roots = build_e8_roots()
@@ -463,30 +471,32 @@ def d5_spinor_connection():
     # D5 roots in first 5 coordinates (within the E6 constraint)
 
     # Actually, let's just count dimensions
-    print("""
+    print(
+        """
     THE DECOMPOSITION:
-    
+
     E6 root system (72 roots)
          ↓
     D5 root system (40 roots) ⊕ D5 spinor weights (32)
-    
+
     In W33/Witting context:
     - 40 vertices = D5 roots = Witting states
     - Each vertex has 27 non-neighbors (= 72 - 40 - some overlap structure)
-    
+
     Hmm, 27 ≠ 32. Let me reconsider...
-    
+
     The 27 non-neighbors per vertex is different from 32 spinor weights.
-    
+
     Actually:
     - 40 W33 vertices total
     - For each vertex: 1 (self) + 12 (neighbors) + 27 (non-neighbors) = 40 ✓
-    
+
     The 27 comes from [W(E6):W(D5)] = 27, not from spinor dimension.
     The 32 comes from D5 spinor in E6 ⊃ D5 embedding.
-    
+
     Different 27 and 32!
-    """)
+    """
+    )
 
 
 def main():
@@ -499,9 +509,10 @@ def main():
     print("\n" + "=" * 70)
     print("SUMMARY: ROOT SYSTEMS AND W33")
     print("=" * 70)
-    print("""
+    print(
+        """
     THE EXCEPTIONAL HIERARCHY:
-    
+
     E8 (240 roots)
     ├── Gosset 4_21 polytope (240 vertices)
     ├── W(E8) has order 696,729,600
@@ -517,7 +528,7 @@ def main():
                 │
                 └── D4 (24 roots)
                     └── W(D4), order 192
-    
+
     THE NUMBERS:
     ────────────
     240 = |E8 roots| = |Witting vertices| = |W33 edges|
@@ -528,7 +539,8 @@ def main():
     27 = [W(E6):W(D5)] = W33 non-neighbors = lines on cubic
     24 = |D4 roots|
     1296 = 51840/40 = W33 vertex stabilizer = 2^4 × 3^4
-    """)
+    """
+    )
 
 
 if __name__ == "__main__":

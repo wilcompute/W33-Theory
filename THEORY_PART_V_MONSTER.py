@@ -10,13 +10,15 @@ moonshine, and the ultimate structure of mathematics.
 import math
 from fractions import Fraction
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════╗
 ║             THEORY OF EVERYTHING - PART V                            ║
 ║                                                                      ║
 ║                  THE MONSTER CONNECTION                              ║
 ╚══════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # THE j-FUNCTION AND 744
@@ -27,11 +29,12 @@ print("THE j-FUNCTION AND THE NUMBER 744")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 The j-invariant is the most important function in number theory:
 
   j(τ) = 1/q + 744 + 196884q + 21493760q² + ...
-  
+
 where q = e^(2πiτ).
 
 THE MYSTERY OF 744:
@@ -41,7 +44,8 @@ THE MYSTERY OF 744:
   • 744 = 729 + 15 = 3^6 + 15
 
 W33 CONNECTION:
-""")
+"""
+)
 
 print("═══ Decomposing 744 ═══")
 print()
@@ -132,7 +136,8 @@ print("THE CHAIN: W33 → E6 → E8 → MONSTER")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 The mathematical hierarchy:
 
   W33 (40 points)
@@ -152,7 +157,8 @@ Each step is an "extension" or "completion":
   • W(E6) → E6: Continuous extension
   • E6 → E8: Exceptional embedding
   • E8 → Monster: Via moonshine module V^♮
-""")
+"""
+)
 
 # =============================================================================
 # 196884 AND W33
@@ -220,7 +226,8 @@ print("THE DIMENSION FORMULA")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 There's a beautiful formula relating exceptional Lie algebras:
 
   dim(E8) - dim(E7) - dim(E6) = 248 - 133 - 78 = 37
@@ -230,9 +237,10 @@ And:
 
 Also:
   dim(E8) = 248 = 8 × 31 = 8 × (32 - 1)
-  
+
 where 32 = 2^5 = dim of spinor in 10D.
-""")
+"""
+)
 
 # W33 version
 print("═══ W33 Dimension Relations ═══")
@@ -269,7 +277,8 @@ print("STRING THEORY DIMENSIONS")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 Critical dimensions in string theory:
 
   Bosonic string: 26
@@ -278,7 +287,8 @@ Critical dimensions in string theory:
   F-theory: 12
 
 W33 CONNECTIONS:
-""")
+"""
+)
 
 print("═══ The Number 26 ═══")
 print()
@@ -315,7 +325,8 @@ print("THE NUMBER 24")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 24 is ubiquitous in mathematics and physics:
 
   • Leech lattice in 24 dimensions
@@ -324,7 +335,8 @@ print("""
   • 1 + 2 + 3 + ... = -1/12 (regularized), and 2 × 12 = 24
   • j(τ) has 744 = 31 × 24 as constant term
   • Ramanujan's τ function: Δ(q) = q∏(1-q^n)^24
-""")
+"""
+)
 
 print("═══ W33 and 24 ═══")
 print()
@@ -352,13 +364,15 @@ print("THE RAMANUJAN CONNECTION")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 Ramanujan discovered remarkable formulas involving π:
 
   1/π = (2√2/9801) Σ (4k)!(1103+26390k) / ((k!)^4 × 396^(4k))
-  
+
 The numbers 9801, 1103, 26390, 396 have deep meaning.
-""")
+"""
+)
 
 print("═══ The Number 9801 ═══")
 print()
@@ -390,7 +404,8 @@ print("THE COMPLETE PICTURE")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ╔════════════════════════════════════════════════════════════════════════╗
 ║                     THE MATHEMATICAL UNIVERSE                          ║
 ╠════════════════════════════════════════════════════════════════════════╣
@@ -422,7 +437,8 @@ print("""
 ║                       MATHEMATICAL TRUTH                               ║
 ║                                                                        ║
 ╚════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # SYNTHESIS
@@ -433,7 +449,8 @@ print("SYNTHESIS: WHY THE MONSTER?")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 Why does the Monster group appear in physics?
 
 ANSWER: Because the Monster is the COMPLETION of W33.
@@ -466,7 +483,8 @@ discrete mathematics to continuous geometry.
                     W33 IS THE SEED.
                  THE MONSTER IS THE TREE.
                PHYSICS IS THE FLOWERING.
-""")
+"""
+)
 
 print("=" * 72)
 print("END OF PART V: THE MONSTER CONNECTION")

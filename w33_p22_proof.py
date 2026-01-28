@@ -134,20 +134,22 @@ print("\n" + "=" * 80)
 print("PART 3: THE SELF-DUALITY")
 print("=" * 80)
 
-print(f"""
+print(
+    f"""
 W33 is SELF-DUAL:
   |Points| = {n_points}
   |Lines|  = {n_lines}
-  
+
 In a self-dual geometry:
   - Points <-> Hyperplanes (lines in 3D projective space)
   - Lines through a point <-> Points on a hyperplane
-  
+
 The duality is given by:
   Point (a,b,c,d) <-> Hyperplane ax + by + cz + dw = 0
 
 This is exactly the structure behind Vogel's universality!
-""")
+"""
+)
 
 # =============================================================================
 # PART 4: COUNTING CYCLES (THE 81)
@@ -192,18 +194,20 @@ n_planes = count_cycles()
 print(f"Number of planes in PG(3,3): {n_planes}")
 print(f"This matches |points| = {n_points} by self-duality!")
 
-print("""
+print(
+    """
 The "81 cycles" refers to:
   81 = |GF(3)^4| = size of the affine 4-space over GF(3)
-  
+
 This is the TOTAL space from which W33 = PG(3,3) is constructed!
 
 In terms of W33 structure:
   40 points + 40 lines + 40 planes + ... = 121 total
-  where 121 = (3^4 - 1)/(3-1) + (3^3-1)/(3-1) + ... 
+  where 121 = (3^4 - 1)/(3-1) + (3^3-1)/(3-1) + ...
 
 Wait, let me recalculate the 81:
-""")
+"""
+)
 
 # The 81 in W33 theory
 print("The 81 in W33 theory:")
@@ -224,22 +228,24 @@ print("\n" + "=" * 80)
 print("PART 5: THE ALGEBRA STRUCTURE")
 print("=" * 80)
 
-print("""
+print(
+    """
 The incidence algebra Inc(W33) has:
   Basis: e_{p,L} for each incidence p ∈ L
   Product: e_{p,L} · e_{L,p'} = e_{p,p'} if well-defined
-  
+
 Total incidences: 40 × 4 = 160 (each point on 4 lines)
 
 The Λ-algebra is a QUOTIENT:
   Λ = Inc(W33)^{S₃} / IHX
-  
+
 where:
   - S₃ acts by permuting the 3 "types" of incidences
   - IHX is the Jacobi identity in diagram form
 
 The quotient structure reduces 160 basis elements to just 3 generators!
-""")
+"""
+)
 
 # =============================================================================
 # PART 6: THE KEY INSIGHT FOR P22
@@ -249,7 +255,8 @@ print("\n" + "=" * 80)
 print("PART 6: THE KEY INSIGHT FOR P22")
 print("=" * 80)
 
-print("""
+print(
+    """
 THE P22 STRUCTURE:
 
 P₂₂ = P_sl² · P_sl · P_osp · P_G2 · P_F4 · P_E6 · P_E7 · P_E8
@@ -258,7 +265,7 @@ The five exceptional factors have σ-coefficients:
   G2: 36 = 4 × 9 = |K4| × |GF(3)|²
   F4: 81 = 3^4
   E6: 36 = 4 × 9
-  E7: 81 = 3^4  
+  E7: 81 = 3^4
   E8: 225 = 15² = (3×5)²
 
 Pattern: 36, 81, 36, 81, 225
@@ -279,22 +286,23 @@ This means the incidence algebra has an anti-involution:
 For the product ˆt · ˆP₂₂:
   - ˆt involves "insertions" (point-type operations)
   - ˆP₂₂ involves the exceptional structure (plane-type relations)
-  
+
 The palindromic coefficients mean:
   ˆP₂₂ = D(ˆP₂₂) (up to scalar)
 
 Combined with the IHX relation (which is D-invariant):
-  ˆt · ˆP₂₂ = D(ˆt · ˆP₂₂) = D(ˆP₂₂) · D(ˆt) 
-            = ˆP₂₂ · ˆt' 
-            
+  ˆt · ˆP₂₂ = D(ˆt · ˆP₂₂) = D(ˆP₂₂) · D(ˆt)
+            = ˆP₂₂ · ˆt'
+
 But in a self-dual algebra with IHX:
   ˆt · ˆP₂₂ + ˆP₂₂ · ˆt' = 0 (from Jacobi)
 
 And the palindrome forces ˆt ∝ ˆt', so:
   2 · ˆt · ˆP₂₂ = 0
-  
+
 Therefore: ˆt · ˆP₂₂ = 0 (assuming char ≠ 2)
-""")
+"""
+)
 
 # =============================================================================
 # PART 7: THE FORMAL ARGUMENT
@@ -304,7 +312,8 @@ print("\n" + "=" * 80)
 print("PART 7: THE FORMAL ARGUMENT")
 print("=" * 80)
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                    SKETCH OF PROOF: ˆt · ˆP₂₂ = 0                            ║
@@ -340,7 +349,8 @@ print("""
 ║           Since char(Λ) = 0: ˆt · ˆP₂₂ = 0.  □                               ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # PART 8: VERIFICATION
@@ -378,7 +388,8 @@ print("\n" + "=" * 80)
 print("CONCLUSION")
 print("=" * 80)
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                           MAIN RESULT                                        ║
@@ -413,7 +424,8 @@ print("""
 The answer to Morozov & Sleptsov's open question is: YES, ˆt · ˆP₂₂ = 0.
 
 The reason: W33 self-duality + the palindromic structure of P₂₂.
-""")
+"""
+)
 
 print("\n" + "=" * 80)
 print("W33 ANSWERS THE OPEN PROBLEM")

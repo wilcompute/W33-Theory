@@ -89,12 +89,13 @@ print("=" * _sage_const_60)
 # MUBs in C^3: 4 bases of 3 vectors each
 # Total: 12 rays, but structured!
 
-print("""
+print(
+    """
 In dimension d = 3 (prime):
   - Maximum MUBs = d + 1 = 4
   - Each MUB has 3 orthonormal vectors
   - Total: 4 × 3 = 12 rays
-  
+
 The MUB structure relates to:
   - GF(3)^2 phase space (9 points)
   - Wigner function discretization
@@ -103,20 +104,22 @@ The MUB structure relates to:
 Connection: W(3, 3) has 40 points = 4 × 10
   - 4 "directions" from MUBs
   - 10 = (q^2+1) from each direction
-  
+
 The Steinberg representation dimension 81 = 3^4 relates to:
   - 4 MUBs raised to dimension 4 in some sense
   - Or: 3^4 = (3)^{2×2} = (dim)^{rank}
-""")
+"""
+)
 
 print("\n" + "=" * _sage_const_60)
 print("SUMMARY")
 print("=" * _sage_const_60)
 
-print("""
+print(
+    """
 VERIFIED:
 1. |Sp(6, 3)| computed (9 billion+)
-2. Q(4, 3) has 40 points = W(3, 3) ✓  
+2. Q(4, 3) has 40 points = W(3, 3) ✓
 3. W(5, 3) has 364 points
 4. Steinberg for W(5, 3) has dim 3^9 = 19,683
 
@@ -134,4 +137,5 @@ Aspherical    │    YES       │    NO
 
 The rank-2 case is special: aspherical with free π_1!
 Higher ranks have more complex topology.
-""")
+"""
+)

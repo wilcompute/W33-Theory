@@ -14,4 +14,3 @@ This builds directly on:
 - canonical_gauge_assignment.csv (v14)
 - four-center triads (W33)
 - flip audit (N12_58)
-

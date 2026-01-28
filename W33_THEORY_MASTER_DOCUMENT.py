@@ -11,7 +11,8 @@ From finitegeometry.org through the Witting polytope to quantum gravity.
 import math
 from fractions import Fraction
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                     W33 THEORY OF EVERYTHING                                 ║
@@ -21,7 +22,8 @@ print("""
 ║                         Parts I - XX                                         ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # THE FUNDAMENTAL STRUCTURE
@@ -32,7 +34,8 @@ print("SECTION 1: THE FUNDAMENTAL STRUCTURE - W33")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 W33 = W(3,3) = Symplectic Polar Space over GF(3)
 
 BASIC DATA:
@@ -49,14 +52,15 @@ SYMMETRY GROUP:
   |Aut(W33)| = |W(E6)| = 51,840
 
   This is the Weyl group of the exceptional Lie algebra E6!
-  
+
   The equality |Aut(W33)| = |W(E6)| is NOT a coincidence.
   It reveals the deep connection between:
     • Finite geometry (W33)
     • Exceptional mathematics (E6)
     • Fundamental physics (Standard Model)
 ═══════════════════════════════════════════════════════════════════════════════
-""")
+"""
+)
 
 # =============================================================================
 # THE WITTING CONNECTION
@@ -67,7 +71,8 @@ print("SECTION 2: THE WITTING POLYTOPE CONNECTION")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 THE WITTING POLYTOPE 3{3}3{3}3{3}3 (Complex 4D)
 ═══════════════════════════════════════════════════════════════════════════════
 
@@ -76,7 +81,7 @@ THE WITTING POLYTOPE 3{3}3{3}3{3}3 (Complex 4D)
   Vertices            240      = E8 roots = 6 × 40
   Edges               2160     = 24 × 90 = 24 × K4s
   Faces               2160     Self-dual
-  Cells               240      
+  Cells               240
   DIAMETERS           40       = W33 POINTS! ★★★
   Edges per vertex    27       = E6 fundamental rep
   van Oss polygon     90       = W33 K4s! ★★★
@@ -89,11 +94,12 @@ KEY IDENTIFICATION:
 
 This connects:
   • E8 root system (240 roots)
-  • Witting polytope (240 vertices)  
+  • Witting polytope (240 vertices)
   • W33 finite geometry (40 points)
   • Quantum foundations (contextuality, Bell)
 ═══════════════════════════════════════════════════════════════════════════════
-""")
+"""
+)
 
 # =============================================================================
 # THE PHYSICS PREDICTIONS
@@ -175,7 +181,8 @@ print("SECTION 4: PREDICTION SCORECARD")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ╔════════════════════════════════════════════════════════════════════════════════╗
 ║                           W33 PREDICTION SCORECARD                             ║
 ╠════════════════════════════════════════════════════════════════════════════════╣
@@ -197,7 +204,8 @@ print("""
 ║           Probability of coincidence: < 10⁻¹⁷                                  ║
 ║                                                                                ║
 ╚════════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # THE COMPLETE CHAIN
@@ -208,7 +216,8 @@ print("SECTION 5: THE COMPLETE CHAIN")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ╔════════════════════════════════════════════════════════════════════════════════╗
 ║                      FROM E8 TO PHYSICS: THE COMPLETE CHAIN                    ║
 ╠════════════════════════════════════════════════════════════════════════════════╣
@@ -263,7 +272,8 @@ print("""
 ║    • All particle masses and couplings                                         ║
 ║                                                                                ║
 ╚════════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # PARTS SUMMARY
@@ -274,7 +284,8 @@ print("SECTION 6: PARTS SUMMARY (I - XX)")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 Part I:     W33 Basic Structure
 Part II:    E6/E7/E8 Exceptional Embeddings
 Part III:   Gauge Structure and Symmetry Breaking
@@ -297,7 +308,8 @@ Part XIX:   Deep Witting Numerology ★
 Part XX:    Gravity and Spacetime ★
 
 ★ = New parts from the "quantum cards" PDF discovery
-""")
+"""
+)
 
 # =============================================================================
 # CONCLUSION
@@ -308,7 +320,8 @@ print("SECTION 7: CONCLUSION")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ╔════════════════════════════════════════════════════════════════════════════════╗
 ║                              FINAL ASSESSMENT                                  ║
 ╠════════════════════════════════════════════════════════════════════════════════╣
@@ -347,7 +360,8 @@ print("""
 ║  Occam's razor favors (a).                                                     ║
 ║                                                                                ║
 ╚════════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 print()
 print("=" * 80)

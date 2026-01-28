@@ -445,36 +445,36 @@ def main():
 
     synthesis = """
     W33 ENCODES THE STRUCTURE OF GRAND UNIFIED THEORIES:
-    
+
     1. MATTER UNIFICATION:
        - SO(10) spinor: 16-dimensional
        - All fermions in one generation unified
        - W33 → E6 → SO(10) → Standard Model
-    
+
     2. GAUGE STRUCTURE:
        - 90 K4s = 2 × 45 = 2 × dim(SO(10))
        - Two copies: Left-right symmetry?
        - 45 = 21 + 24 = Pati-Salam + SU(5)
-    
+
     3. THREE GENERATIONS:
        - 81 cycles = 3 × 27
        - 27 = E6 fundamental
        - Each 27 contains one complete generation!
        - W33 EXPLAINS why there are 3 generations!
-    
+
     4. E6 AS MASTER SYMMETRY:
        - W(E6) = Aut(W33) = 51840
        - E6 ⊃ SO(10) ⊃ SU(5) ⊃ Standard Model
        - W33 sits at the E6 level
-    
+
     5. HIGGS STRUCTURE:
        - 45H: GUT breaking, 45 = 90/2
        - 126H: Neutrino masses, 126 = 121 + 5
        - W33 encodes Higgs multiplet structure
-    
-    
+
+
     THE W33 - GUT DICTIONARY:
-    
+
     | W33 Number | GUT Meaning |
     |------------|-------------|
     | 40 points  | 2.5 × 16 (spinors) |
@@ -482,17 +482,17 @@ def main():
     | 90 K4s     | 2 × 45 (doubled SO(10)) |
     | 121 total  | 126 - 5 (Higgs minus SU(3)) |
     | 51840 aut  | W(E6) (master symmetry) |
-    
-    
+
+
     CONCLUSION:
-    
+
     W33 is not just a mathematical curiosity.
     It appears to encode the ENTIRE STRUCTURE of Grand Unified Theory:
     - The gauge group hierarchy
     - The matter content
     - The number of generations
     - The Higgs structure
-    
+
     W33 may be the "finite shadow" of the unified theory of physics!
     """
 
@@ -510,7 +510,7 @@ def main():
     27 → 16 ⊕ 10 ⊕ 1                  [E6 → SO(10) branching]
     121 = 126 - 5                      [W33 ↔ Higgs₁₂₆]
     51840 = |W(E6)| = |Aut(W33)|      [Master symmetry]
-    
+
     α⁻¹ = 81 + 56 = 137               [Fine structure constant]
     sin²θ_W = 40/173                   [Weinberg angle]
     """

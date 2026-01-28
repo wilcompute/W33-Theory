@@ -81,19 +81,20 @@ def propose_quantum_number_test():
     print("PROPOSED TEST: HOLONOMY ↔ QUANTUM NUMBER CONNECTION")
     print("=" * 70)
 
-    print("""
+    print(
+        """
 Hypothesis: The 2160 fermion-like triangles (2,2,2 holonomy) correspond
 to specific (Z4, Z3) quantum numbers, while 2880 boson-like triangles
 (3,1,1,1 holonomy) correspond to others.
 
 Specifically, we predict:
-  
+
   (Z4, Z3) = (2, 0) [what we confirmed for K4s]
     ↕ couples to ↕
   Holonomy = (2,2,2) [fermion partition]
-  
+
   (Z4, Z3) = (0, 0) or other
-    ↕ couples to ↕  
+    ↕ couples to ↕
   Holonomy = (3,1,1,1) [boson partition]
 
 Experimental Method:
@@ -107,7 +108,7 @@ Expected Result:
   If hypothesis correct, table should show strong correlation
   (2,0) → mostly (2,2,2)
   (0,0) or (1,*) → mostly (3,1,1,1)
-  
+
   Chi-square test should show p < 10^-10 significance
 
 Impact if Confirmed:
@@ -117,7 +118,8 @@ Impact if Confirmed:
   ✓ Provides mechanism for spin-statistics theorem
 
 This test could be "smoking gun" evidence!
-""")
+"""
+    )
 
 
 if __name__ == "__main__":
@@ -128,17 +130,19 @@ if __name__ == "__main__":
         print("\n" + "=" * 70)
         print("NEXT ACTION REQUIRED")
         print("=" * 70)
-        print("""
+        print(
+            """
 To complete this test, we need to:
 
 1. Load W33 rays (40 points with complex phases)
 2. For each v23 triangle: compute (Z4, Z3) from vertex phases
 3. Match against recorded holonomy
 4. Create 4×3×3 contingency table:
-   
+
    Axes: Z4 ∈ {0,1,2,3}, Z3 ∈ {0,1,2}, Holonomy ∈ {(2,2,2), (3,1,1,1), identity}
 
 5. Analyze correlation structure
 
 This will be the DEFINING TEST of the W33 theory!
-""")
+"""
+        )

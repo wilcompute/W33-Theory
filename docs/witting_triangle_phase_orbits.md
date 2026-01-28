@@ -35,4 +35,3 @@ orbit size | count
 9 | 3
 27 | 5
 81 | 2
-

@@ -108,7 +108,7 @@ The proven fact is that **ˆt · ˆP₁₅ = 0** (equation 30 in the paper).
 3. The 81 factor encodes **|W33 cycles|**
 4. Self-duality forces cancellation in the product
 
-**Mechanism**: 
+**Mechanism**:
 - ˆt encodes "point structure" via Jacobi/IHX
 - ˆP₂₂ encodes "cycle structure" via the 81 coefficient
 - W33 incidence relation implies (points) × (cycles) = 0 mod IHX

@@ -26,7 +26,8 @@ print("\n" + "=" * 70)
 print("SECTION 1: THE LANDSCAPE PROBLEM")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE MULTIVERSE DEBATE:
 
 String theory suggests 10^500 possible vacuum states.
@@ -45,13 +46,15 @@ Instead of string vacua, consider symplectic graphs over finite fields:
 
 Each (n, p) gives a different "universe" with different physics.
 Is ours (n=4, p=3) special?
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("SECTION 2: THE Sp(n, F_p) LANDSCAPE")
 print("=" * 70)
 
-print("""
+print(
+    """
 FAMILY OF SYMPLECTIC GRAPHS:
 
 For dimension n (even) and prime p, we get:
@@ -60,7 +63,8 @@ For dimension n (even) and prime p, we get:
 The W33 is Sp(4, F_3): n=4, p=3
 
 Let's explore other possibilities:
-""")
+"""
+)
 
 
 def symplectic_parameters(n, p):
@@ -128,7 +132,8 @@ print("\n" + "=" * 70)
 print("SECTION 3: SELECTION PRINCIPLES")
 print("=" * 70)
 
-print("""
+print(
+    """
 WHY (n=4, p=3)?
 
 What makes Sp(4, F_3) special among all Sp(n, F_p)?
@@ -140,10 +145,10 @@ CANDIDATE SELECTION PRINCIPLES:
    - p=3 is the smallest odd prime
    - W33 is the "simplest complex universe"
 
-2. ANTHROPIC SELECTION  
+2. ANTHROPIC SELECTION
    - Only W33 allows observers (life, chemistry, stars)
    - Other (n,p) have "wrong" physics
-   
+
 3. MATHEMATICAL UNIQUENESS
    - W33 has special properties among SRGs
    - 240 edges = E₈ roots
@@ -154,25 +159,28 @@ CANDIDATE SELECTION PRINCIPLES:
    - Other (n,p) may be self-contradictory
 
 Let's test these!
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("SECTION 4: ANTHROPIC CONSTRAINTS")
 print("=" * 70)
 
-print("""
+print(
+    """
 WHAT DO OBSERVERS REQUIRE?
 
 For life (as we know it):
   1. Stable atoms (chemistry)
-  2. Stable stars (energy source)  
+  2. Stable stars (energy source)
   3. Complex molecules (DNA-like)
   4. Long timescales (evolution)
   5. Three spatial dimensions (stable orbits)
   6. Fine structure constant ~1/137 (chemistry works)
-  
+
 Let's check which (n,p) could support observers:
-""")
+"""
+)
 
 
 def alpha_from_params(v, k, lam, mu):
@@ -234,23 +242,26 @@ for n, p, notes in cases:
 
 print("-" * 70)
 
-print("""
+print(
+    """
 RESULT:
 
 Only (n=4, p=3) seems to satisfy ALL anthropic constraints:
   - α⁻¹ ≈ 137 ✓
-  - 3 spatial dimensions ✓  
+  - 3 spatial dimensions ✓
   - 3 generations ✓
   - Stable chemistry ✓
-  
+
 Other universes are "sterile" - no observers can exist!
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("SECTION 5: ARE OTHER UNIVERSES REAL?")
 print("=" * 70)
 
-print("""
+print(
+    """
 PHILOSOPHICAL QUESTION:
 
 Do Sp(n, F_p) for other (n, p) "exist"?
@@ -262,23 +273,25 @@ THREE POSITIONS:
    Other Sp(n, F_p) universes are just as real as ours.
    We happen to be in the anthropically selected one.
 
-2. PHYSICAL REALISM  
+2. PHYSICAL REALISM
    Only our universe (the one with observers) exists.
    Other (n, p) are mathematical curiosities, not real.
-   
+
 3. W33 UNIQUENESS
    Only W33 is fully self-consistent.
    Other Sp(n, F_p) have internal contradictions.
    W33 is the ONLY possible universe.
 
 Let's investigate option 3!
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("SECTION 6: SELF-CONSISTENCY TEST")
 print("=" * 70)
 
-print("""
+print(
+    """
 BOOTSTRAP CONSTRAINTS:
 
 For a universe to be self-consistent:
@@ -289,7 +302,8 @@ For a universe to be self-consistent:
   5. Gravity must be weaker than other forces (hierarchy)
 
 TEST ON Sp(n, F_p) FAMILY:
-""")
+"""
+)
 
 
 def test_self_consistency(n, p):
@@ -342,20 +356,23 @@ for n, p, _ in cases:
     print(f"({n},{p}){' '*5} {result}")
 print("-" * 60)
 
-print("""
+print(
+    """
 CONCLUSION:
 
 Only (n=4, p=3) passes all self-consistency tests!
 
-W33 is not just anthropically selected - 
+W33 is not just anthropically selected -
 it's the ONLY mathematically consistent option!
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("SECTION 7: THE UNIQUENESS THEOREM (CONJECTURE)")
 print("=" * 70)
 
-print("""
+print(
+    """
 CONJECTURE: W33 UNIQUENESS THEOREM
 
 Among all strongly regular graphs arising from finite geometry,
@@ -374,16 +391,18 @@ If this theorem is true, then:
 
 This would be the ultimate answer to "Why this universe?"
 Because it's the ONLY possible one!
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("SECTION 8: QUANTUM MULTIVERSE?")
 print("=" * 70)
 
-print("""
+print(
+    """
 MANY-WORLDS INTERPRETATION:
 
-Quantum mechanics suggests "many worlds" - 
+Quantum mechanics suggests "many worlds" -
 each measurement branches reality.
 
 DOES W33 ALLOW THIS?
@@ -402,13 +421,15 @@ So many-worlds is COMPATIBLE with W33 uniqueness:
 
 The multiverse question is about PHYSICS, not states.
 W33 says: ONE physics, many states.
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("SECTION 9: ETERNAL INFLATION?")
 print("=" * 70)
 
-print("""
+print(
+    """
 ETERNAL INFLATION:
 
 In inflation theory, different regions might have different vacua.
@@ -425,15 +446,17 @@ The apparent "multiverse" from eternal inflation
 is actually ONE universe with distant regions.
 
 W33 parameters are UNIVERSAL:
-  v = 40, k = 12, λ = 2, μ = 4 
+  v = 40, k = 12, λ = 2, μ = 4
   ...everywhere, always.
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("SECTION 10: THE FINAL ANSWER")
 print("=" * 70)
 
-print("""
+print(
+    """
 IS THERE A MULTIVERSE?
 
 W33 THEORY ANSWER: NO (in the physics sense)
@@ -457,13 +480,15 @@ The question "Why W33?" has the answer:
 
 This is not fine-tuning. This is mathematical necessity.
 The universe exists because it MUST.
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("PART XCI CONCLUSIONS")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE MULTIVERSE QUESTION ANSWERED!
 
 KEY INSIGHTS:
@@ -487,7 +512,8 @@ KEY INSIGHTS:
 
 THE UNIVERSE IS NOT FINE-TUNED.
 IT'S THE ONLY OPTION.
-""")
+"""
+)
 
 # Save results
 results = {

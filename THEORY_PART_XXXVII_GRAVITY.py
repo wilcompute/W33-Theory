@@ -10,7 +10,8 @@ How does spacetime itself arise from combinatorial structure?
 import math
 from fractions import Fraction
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════╗
 ║             THEORY OF EVERYTHING - PART XXXVII                       ║
 ║                                                                      ║
@@ -18,7 +19,8 @@ print("""
 ║                                                                      ║
 ║                  From W33 to General Relativity                      ║
 ╚══════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # THE GRAVITY PROBLEM
@@ -29,7 +31,8 @@ print("THE GRAVITY PROBLEM")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 Gravity is the outlier in fundamental physics:
 
   • Electromagnetic force: mediated by photon (spin 1)
@@ -45,7 +48,8 @@ Gravity is DIFFERENT:
 
 The Standard Model doesn't include gravity.
 Can W33 explain why gravity is so different?
-""")
+"""
+)
 
 # =============================================================================
 # THE E8 CONNECTION
@@ -56,7 +60,8 @@ print("GRAVITY FROM E8")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ═══ The E8 Root System ═══
 
 E8 has 248 dimensions (largest exceptional Lie algebra).
@@ -71,7 +76,8 @@ The graviton might live in the DIFFERENCE:
   248 - 78 - 12 = 248 - 90 = 158???
 
 Let's explore systematically:
-""")
+"""
+)
 
 # E8 dimensions
 DIM_E8 = 248
@@ -113,7 +119,8 @@ print("M-THEORY AND 11 DIMENSIONS")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ═══ Why 11 Dimensions? ═══
 
 M-theory lives in 11 dimensions. Why 11?
@@ -126,7 +133,7 @@ The number 11 is FORCED by W33 combinatorics!
 
 Dimensional decomposition:
   11 = 4 + 7
-  
+
   4 = spacetime dimensions (visible)
   7 = internal dimensions (compact)
 
@@ -134,7 +141,8 @@ The 7 internal dimensions relate to:
   • 7 imaginary units of octonions
   • 7-sphere S⁷ (unit octonions)
   • G₂ holonomy manifolds
-""")
+"""
+)
 
 print("Key W33/M-theory connections:")
 print(f"  √(W33_total) = √121 = {int(math.sqrt(121))} = M-theory dimensions")
@@ -151,7 +159,8 @@ print("SPACETIME EMERGENCE")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ═══ The Big Question ═══
 
 How does continuous spacetime emerge from discrete W33?
@@ -171,11 +180,12 @@ W33 has 40 points.
 
 Could 10 be significant? Yes!
   10 = dim(spacetime metric) = components of g_μν
-  
+
 So: 40 points = 4 dimensions × 10 metric components
 
 This suggests W33 points encode BOTH space AND the metric!
-""")
+"""
+)
 
 print("W33 spacetime structure:")
 print(f"  40 = 4 × 10 = dimensions × metric components")
@@ -192,13 +202,14 @@ print("NEWTON'S CONSTANT FROM W33")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ═══ The Hierarchy Problem ═══
 
-Why is gravity so weak? 
+Why is gravity so weak?
 
   G_N ~ 6.67 × 10⁻¹¹ m³/(kg·s²)
-  
+
 In Planck units:
   G_N = 1/M_Pl²
 
@@ -213,7 +224,8 @@ This is the "hierarchy problem" - why such a huge ratio?
 ═══ W33 Explanation ═══
 
 If gravity is suppressed by W33 structure:
-""")
+"""
+)
 
 # W33 suppression factors
 W33_TOTAL = 121
@@ -257,7 +269,8 @@ print("WHY IS THE GRAVITON SPIN-2?")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ═══ Spin and Symmetry ═══
 
 Particle spin comes from how it transforms under rotations:
@@ -282,7 +295,8 @@ K4 acts on pairs of points, giving tensor structure!
   K4 → Z₂ × Z₂ → 2 × 2 tensor
 
 The graviton's spin-2 nature comes from K4 structure!
-""")
+"""
+)
 
 print("K4 and tensor structure:")
 print(f"  90 K4s in W33")
@@ -300,7 +314,8 @@ print("BLACK HOLE ENTROPY")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ═══ Bekenstein-Hawking Entropy ═══
 
 Black hole entropy is proportional to horizon AREA, not volume:
@@ -323,7 +338,8 @@ because W33 is fundamentally discrete.
 The factor 4 in S = A/4L_Pl² might come from:
   4 = spacetime dimensions
   4 = points per line in W33
-""")
+"""
+)
 
 # Calculate entropy factor
 print("W33 entropy structure:")
@@ -343,7 +359,8 @@ print("GRAVITATIONAL WAVES")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ═══ Two Polarizations ═══
 
 Gravitational waves have exactly 2 polarizations:
@@ -361,9 +378,10 @@ This might explain 2 polarizations:
   • 45 = α_GUT⁻¹ (unification coupling)
   • 2 = polarization states
 
-Alternative: 
+Alternative:
   • 90/40 = 2.25 ≈ 2 (K4s per point → polarizations)
-""")
+"""
+)
 
 print("Gravitational wave polarizations from W33:")
 print(f"  90 K4s = 2 × 45")
@@ -380,7 +398,8 @@ print("THE METRIC TENSOR")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ═══ Constructing g_μν ═══
 
 The spacetime metric g_μν has 10 independent components in 4D.
@@ -396,9 +415,10 @@ for each of 4 dimensions!
 The signature (-,+,+,+) could come from:
   • 1 time dimension (points 1-10)
   • 3 space dimensions (points 11-40)
-  
+
 Ratio: 10/30 = 1/3 (1 time : 3 space)
-""")
+"""
+)
 
 print("Metric structure from W33:")
 print(f"  40 points = 4 dimensions × 10 metric components")
@@ -415,7 +435,8 @@ print("QUANTUM GRAVITY FROM W33")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ═══ The Holy Grail ═══
 
 Quantum gravity unifies:
@@ -439,7 +460,8 @@ The continuous limit emerges as:
 Planck scale physics IS W33 physics.
 Below Planck scale, the W33 structure is manifest.
 Above Planck scale, it averages to smooth spacetime.
-""")
+"""
+)
 
 print("W33 quantum gravity:")
 print(f"  Fundamental: W33 combinatorial structure")
@@ -457,13 +479,14 @@ print("GRAVITATIONAL COUPLING CONSTANT")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ═══ α_G: The Gravitational Fine Structure Constant ═══
 
 By analogy with α_EM = e²/(4πε₀ℏc) ≈ 1/137,
 we can define:
 
-  α_G = G_N m²/(ℏc) 
+  α_G = G_N m²/(ℏc)
 
 For protons:
   α_G(proton) = G_N m_p²/(ℏc) ≈ 5.9 × 10⁻³⁹
@@ -474,7 +497,8 @@ Ratio:
   α_EM / α_G ≈ 10³⁶
 
 ═══ W33 Prediction ═══
-""")
+"""
+)
 
 # Calculate ratio
 alpha_EM = 1 / 137
@@ -508,7 +532,8 @@ print("SUMMARY: GRAVITY FROM W33")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ╔═══════════════════════════════════════════════════════════════════════╗
 ║                     W33 GRAVITY RESULTS                               ║
 ╠═══════════════════════════════════════════════════════════════════════╣
@@ -549,7 +574,8 @@ Gravity emerges naturally from W33 structure:
   • Discreteness resolves quantum gravity
 
 The W33 Theory of Everything includes gravity!
-""")
+"""
+)
 
 print("=" * 72)
 print("END OF PART XXXVII: GRAVITY AND SPACETIME")

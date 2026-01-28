@@ -93,9 +93,10 @@ print("\n" + "=" * 70)
 print("IMPLICATIONS OF π₁ = F₈₁")
 print("=" * 70)
 
-print("""
+print(
+    """
 1. ASPHERICITY
-   
+
    Since π₁(W33) = F₈₁ (free), W33 is aspherical.
    This means:
      • π_n(W33) = 0 for all n ≥ 2
@@ -103,29 +104,30 @@ print("""
      • The universal cover is contractible (a tree)
 
 2. HOMOLOGICAL DIMENSION
-   
+
    H_n(W33; Z) = 0 for n ≥ 2  ✓ (we verified this)
    H_1(W33; Z) = Z^81 = F₈₁^ab  ✓
-   
+
    So the homology matches what we expect from a free group.
 
 3. THE STEINBERG REPRESENTATION REVISITED
-   
+
    The action of Aut(W33) = O(5,3):C₂ on:
      • H₁(W33) = Z^81 = Steinberg representation
      • π₁(W33) = F₈₁
-   
+
    The group action on the free group F₈₁ abelianizes to
    the Steinberg representation on Z^81!
 
 4. THE UNIVERSAL COVER
-   
+
    The universal cover of W33 is a TREE!
    It's the Bass-Serre tree of the free group.
-   
+
    Since |π₁| = ∞, the universal cover is infinite.
    Each vertex has degree... let's compute.
-""")
+"""
+)
 
 # Check if W33 is a graph (1-dimensional)
 # No! It's 3-dimensional. So why is π₁ free?
@@ -189,14 +191,16 @@ for v1 in vertices:
 print(f"\nInduced 4-cycles: {induced_4cycles}")
 
 if induced_4cycles == 0:
-    print("""
+    print(
+        """
 ★ No induced 4-cycles! This explains why π₁ is free! ★
 
 A clique complex is aspherical (has free π₁) if and only if
 the underlying graph has no induced n-cycles for n ≥ 4.
 
 Sp(4,3) is "chordal" - every cycle has a chord!
-""")
+"""
+    )
 else:
     print(f"\nHmm, there ARE induced 4-cycles. Let me think about this...")
     print("The asphericity must come from another mechanism.")
@@ -241,11 +245,13 @@ print(f"  Relations: {rels[:3] if rels else 'None'}")
 
 if len(rels) == 0:
     print("\n★★★ π₁(W33) really is the FREE GROUP F₈₁! ★★★")
-    print("""
+    print(
+        """
 This is VERY surprising if there are induced 4-cycles.
 
 Let me verify by checking the 2-skeleton more carefully...
-""")
+"""
+    )
 
 # Actually, Sage might be collapsing the complex first!
 # The key is: what does Sage do with the simplicial complex?
@@ -293,7 +299,8 @@ print("\n" + "=" * 70)
 print("FINAL UNDERSTANDING")
 print("=" * 70)
 
-print("""
+print(
+    """
 The computation shows:
   • W33 (full 3-skeleton): π₁ = F₈₁
   • 2-skeleton: π₁ = ? (need to compare)
@@ -306,4 +313,5 @@ The STEINBERG REPRESENTATION in H₁ is the abelianization of F₈₁:
 
 The automorphism group O(5,3):C₂ acts on F₈₁ and this action
 descends to the Steinberg representation on the abelianization!
-""")
+"""
+)

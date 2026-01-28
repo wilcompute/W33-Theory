@@ -14,13 +14,15 @@ from fractions import Fraction
 
 import numpy as np
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════╗
 ║             THEORY OF EVERYTHING - PART XXXIII                       ║
 ║                                                                      ║
 ║              MASS HIERARCHIES AND DARK MATTER                        ║
 ╚══════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # THE DARK MATTER RATIO: 27/5
@@ -31,14 +33,16 @@ print("THE DARK MATTER RATIO: WHERE DOES 5 COME FROM?")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 Observation: Ω_DM / Ω_b ≈ 5.41 (Planck 2018)
 W33 Prediction: 27/5 = 5.4
 
 The 27 is clear: dim(E6 fundamental) = dim(J₃(O))
 
 But what is 5?
-""")
+"""
+)
 
 # Candidates for "5"
 print("═══ Candidates for 5 ═══")
@@ -71,16 +75,18 @@ print()
 # Deep connection
 print("═══ Heterotic String Connection ═══")
 print()
-print("""
+print(
+    """
   In heterotic string theory:
     - E8 × E8 or SO(32) gauge group
     - SO(16) spinor has dimension 2⁸/2 = 128
-    
+
   The difference 133 - 128 = 5 represents:
     - "Extra" dimensions beyond the spinor structure
     - These become the MASSIVE degrees of freedom
     - Dark matter lives in this "gap"!
-""")
+"""
+)
 
 # So the dark matter formula becomes
 print("═══ The Complete Dark Matter Formula ═══")
@@ -104,7 +110,8 @@ print("FERMION MASS HIERARCHY FROM W33")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 The Standard Model has a puzzling mass hierarchy:
 
   Top quark:     172.76 GeV    (heaviest fermion)
@@ -118,7 +125,8 @@ The Standard Model has a puzzling mass hierarchy:
   Electron:        0.000511 GeV
 
 Spanning 6 orders of magnitude! Why?
-""")
+"""
+)
 
 # Mass ratios
 m_t = 172.76
@@ -176,14 +184,16 @@ print("THE TOP QUARK MASS")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 The top quark is special: m_t ≈ v/√2 where v = 246 GeV
 
     m_t = 172.76 GeV
     v/√2 = 246/√2 = 173.95 GeV
-    
+
 The ratio m_t / (v/√2) ≈ 0.99 is remarkably close to 1!
-""")
+"""
+)
 
 # W33 prediction for top mass
 print("═══ W33 Prediction for Top Mass ═══")
@@ -326,10 +336,12 @@ print("GENERATION MASS RATIOS")
 print("=" * 72)
 print()
 
-print("""
-The three generations have hierarchical masses. 
+print(
+    """
+The three generations have hierarchical masses.
 Key ratios between generations:
-""")
+"""
+)
 
 # Charged lepton ratios
 print("═══ Charged Leptons ═══")
@@ -419,7 +431,8 @@ print("SUMMARY: W33 MASS AND MIXING FORMULAS")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ╔═══════════════════════════════════════════════════════════════════════╗
 ║                    W33 MASS/MIXING RELATIONS                          ║
 ╠═══════════════════════════════════════════════════════════════════════╣
@@ -443,7 +456,8 @@ print("""
 ║    dim(E7) - dim(SM) = 133 - 12 = 121 = W33_total                    ║
 ║                                                                       ║
 ╚═══════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # NUMERICAL VERIFICATION

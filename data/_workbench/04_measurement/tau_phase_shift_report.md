@@ -24,4 +24,3 @@ Internal k12 shift=2 similarity (tau phase proxy):
 - min: 0.0
 - max: 0.090278
 - mean: 0.052625
-

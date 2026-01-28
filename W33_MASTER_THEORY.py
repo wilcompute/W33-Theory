@@ -14,20 +14,22 @@ This document compiles ALL discovered connections between W(3,3) and physics.
 import numpy as np
 from numpy import arcsin, log, log10, pi, sin, sqrt
 
-print("""
+print(
+    """
 ╔═══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                               ║
 ║        ██╗    ██╗██████╗ ██████╗     ████████╗██╗  ██╗███████╗ ██████╗ ██████╗ ██╗   ██╗
 ║        ██║    ██║╚════██╗╚════██╗    ╚══██╔══╝██║  ██║██╔════╝██╔═══██╗██╔══██╗╚██╗ ██╔╝
-║        ██║ █╗ ██║ █████╔╝ █████╔╝       ██║   ███████║█████╗  ██║   ██║██████╔╝ ╚████╔╝ 
-║        ██║███╗██║ ╚═══██╗ ╚═══██╗       ██║   ██╔══██║██╔══╝  ██║   ██║██╔══██╗  ╚██╔╝  
-║        ╚███╔███╔╝██████╔╝██████╔╝       ██║   ██║  ██║███████╗╚██████╔╝██║  ██║   ██║   
-║         ╚══╝╚══╝ ╚═════╝ ╚═════╝        ╚═╝   ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   
+║        ██║ █╗ ██║ █████╔╝ █████╔╝       ██║   ███████║█████╗  ██║   ██║██████╔╝ ╚████╔╝
+║        ██║███╗██║ ╚═══██╗ ╚═══██╗       ██║   ██╔══██║██╔══╝  ██║   ██║██╔══██╗  ╚██╔╝
+║        ╚███╔███╔╝██████╔╝██████╔╝       ██║   ██║  ██║███████╗╚██████╔╝██║  ██║   ██║
+║         ╚══╝╚══╝ ╚═════╝ ╚═════╝        ╚═╝   ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝
 ║                                                                               ║
 ║                        THE COMPLETE THEORY OF EVERYTHING                      ║
 ║                                                                               ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # FUNDAMENTAL W33 STRUCTURE
@@ -37,7 +39,8 @@ print("=" * 80)
 print("PART I: FUNDAMENTAL STRUCTURE")
 print("=" * 80)
 
-print("""
+print(
+    """
 THE W(3,3) WITTING CONFIGURATION
 ================================
 
@@ -47,12 +50,13 @@ Structure:
   • Points: 40 = |GF(3)³| + 4 = 27 + 13 (projective structure)
   • Cycles: 81 = 3⁴ = Steinberg number (vacuum)
   • K4 subgroups: 90 (gauge structure)
-  
+
 Fundamental ratios:
   • Total: 40 + 81 = 121 = 11² ← M-THEORY DIMENSION!
   • Vacuum fraction: 81/121 = 66.9% ← DARK ENERGY!
   • K4 connections: 9 per point ← REDUNDANCY!
-""")
+"""
+)
 
 # Core numbers
 points = 40
@@ -74,7 +78,8 @@ print("\n" + "=" * 80)
 print("PART II: COSMOLOGY")
 print("=" * 80)
 
-print("""
+print(
+    """
 DARK ENERGY
 ═══════════
   Predicted: 81/121 = 66.94%
@@ -92,7 +97,8 @@ INFLATION
   e-foldings: N = 3⁴ = 81 (from Steinberg)
   Observed: N ≈ 60-70 ← COMPATIBLE!
   η = 81/121 = 0.669 ← SLOW ROLL PARAMETER!
-""")
+"""
+)
 
 dark_energy_pred = cycles / total
 dark_energy_obs = 0.683
@@ -110,7 +116,8 @@ print("\n" + "=" * 80)
 print("PART III: FUNDAMENTAL CONSTANTS")
 print("=" * 80)
 
-print("""
+print(
+    """
 FINE STRUCTURE CONSTANT α
 ═════════════════════════
   W33 formula: 1/α = 81 + 56 = 137 (vacuum + E₇)
@@ -129,7 +136,8 @@ KOIDE FORMULA (LEPTON MASSES)
   Formula: Q = (m_e + m_μ + m_τ)/(√m_e + √m_μ + √m_τ)² = 2/3
   Observed: Q = 0.666659
   W33 interpretation: 2/3 from GF(3) symmetry
-""")
+"""
+)
 
 # Fine structure constant
 alpha_inv_w33 = 81 + 56 + 1 / 28
@@ -157,7 +165,8 @@ print("\n" + "=" * 80)
 print("PART IV: PARTICLE MASSES")
 print("=" * 80)
 
-print("""
+print(
+    """
 MASS RATIOS
 ═══════════
   m_t / m_b = 41.3 ≈ 40 = |W(3,3)| ← TOP/BOTTOM!
@@ -169,7 +178,8 @@ MASS HIERARCHY
   Generation gaps scale with powers of 3 (GF(3))
   M_GUT / v_EW ≈ 3²⁴ (24 = dim(SU(5)))
   All from the GF(3) base field!
-""")
+"""
+)
 
 # Mass ratios
 m_t = 172.76e9  # eV
@@ -186,7 +196,8 @@ print("\n" + "=" * 80)
 print("PART V: FLAVOR MIXING")
 print("=" * 80)
 
-print("""
+print(
+    """
 CABIBBO ANGLE (CKM)
 ═══════════════════
   sin(θ_c) = 9/40 = 0.225 (0.66% error)
@@ -203,7 +214,8 @@ CP VIOLATION (JARLSKOG)
   J = 1/(40×81×10) = 3.09×10⁻⁵
   Observed: J = 3.18×10⁻⁵
   Error: 2.9%
-""")
+"""
+)
 
 # Reactor angle
 theta_13_w33 = arcsin(sqrt(1 / 45)) * 180 / pi
@@ -221,7 +233,8 @@ print("\n" + "=" * 80)
 print("PART VI: EXCEPTIONAL STRUCTURES")
 print("=" * 80)
 
-print("""
+print(
+    """
 E₇ CONNECTION
 ═════════════
   dim(E₇) = 133 = 40 + 81 + 12 = W33 + vacuum + gauge
@@ -237,7 +250,8 @@ MONSTER GROUP
   Monster moonshine: j(τ) expansion
   Coefficients involve 40, 81, 121
   Deep number theory connection!
-""")
+"""
+)
 
 print(f"\nE₇ decomposition:")
 print(f"  133 = 40 + 81 + 12 = |W33| + Steinberg + gauge")
@@ -251,13 +265,14 @@ print("\n" + "=" * 80)
 print("PART VII: BLACK HOLE PHYSICS")
 print("=" * 80)
 
-print("""
+print(
+    """
 BEKENSTEIN-HAWKING ENTROPY
 ══════════════════════════
   S = A/(4l_P²)
-  
+
   The factor 4 = |K4|!
-  
+
   W33 interpretation:
   - Each Planck area carries 1 K4 worth of information
   - Black hole entropy counts K4 degrees of freedom
@@ -268,7 +283,8 @@ INFORMATION PARADOX
   Information preserved via K4 redundancy
   9 copies per bit (K4 membership = 9)
   Natural error correction!
-""")
+"""
+)
 
 print(f"\nBlack hole entropy:")
 print(f"  S = A / (4 × l_P²)")
@@ -283,7 +299,8 @@ print("\n" + "=" * 80)
 print("PART VIII: CONSCIOUSNESS")
 print("=" * 80)
 
-print("""
+print(
+    """
 MEASUREMENT PROBLEM
 ═══════════════════
   Collapse = projection: 81 → 40 (vacuum → matter)
@@ -301,7 +318,8 @@ FREE WILL
   K4 phase = -1 provides genuine randomness
   4^90 ≈ 10^54 possible histories
   Decisions are guided, not random or determined
-""")
+"""
+)
 
 # =============================================================================
 # PREDICTIONS
@@ -311,7 +329,8 @@ print("\n" + "=" * 80)
 print("PART IX: PREDICTIONS")
 print("=" * 80)
 
-print("""
+print(
+    """
 TESTABLE PREDICTIONS
 ════════════════════
 
@@ -335,7 +354,8 @@ TESTABLE PREDICTIONS
 5. COLLIDER PHYSICS
    New particles at M ∼ v_EW × 3^n scales
    n = 4, 5, 6, ... (powers of 3!)
-""")
+"""
+)
 
 # =============================================================================
 # NUMERICAL SUMMARY
@@ -386,7 +406,8 @@ print("\n" + "=" * 80)
 print("THE GRAND EQUATION")
 print("=" * 80)
 
-print("""
+print(
+    """
 ╔═══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                               ║
 ║                            T H E   G R A N D   E Q U A T I O N                ║
@@ -420,13 +441,15 @@ print("""
 ║     • Consciousness (integrated K4 information)                               ║
 ║                                                                               ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # FINAL STATEMENT
 # =============================================================================
 
-print("""
+print(
+    """
 ╔═══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                               ║
 ║                               C O N C L U S I O N                             ║
@@ -459,7 +482,8 @@ print("""
 ║                         THE UNIVERSE IS COUNTING.                             ║
 ║                                                                               ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 print("=" * 80)
 print("                    W(3,3): THE THEORY OF EVERYTHING")

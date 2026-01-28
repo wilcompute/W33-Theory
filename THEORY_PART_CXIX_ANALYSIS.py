@@ -211,29 +211,29 @@ def main():
 
     albert_decomp = """
   THE ALBERT ALGEBRA J³(𝕆):
-  
+
   A 3×3 Hermitian matrix over octonions:
-  
+
        ┌                              ┐
        │  ξ₁      x₃      x̄₂         │
   A =  │  x̄₃      ξ₂      x₁         │
        │  x₂      x̄₁      ξ₃         │
        └                              ┘
-  
+
   DECOMPOSITION: 27 = 3 + 24 = 3 + 3×8
     - 3 diagonal entries (real)
     - 3 off-diagonal octonions (24 = 3 × 8)
-  
+
   Under F₄ (automorphism group):
     27 is irreducible
-  
+
   Under SO(9) (subgroup of F₄):
     27 → 1 + 9 + 9 + 8
-  
+
   Under SO(10) × U(1) (from E₆):
     27 → 16 + 10 + 1
        = spinor + vector + singlet
-  
+
   This last decomposition is the GUT decomposition!
 """
     print(albert_decomp)
@@ -253,29 +253,29 @@ def main():
 
     insight = """
   THE W33 ↔ ALBERT ALGEBRA CONNECTION:
-  
+
   Pick any vertex v in W33:
-  
+
     40 = 1 + 12 + 27
        = v + N(v) + N̄(v)
-  
+
   The 27 non-neighbors N̄(v):
     - Form an 8-regular subgraph H27 with 108 edges
     - Each connects to exactly μ = 4 of the 12 neighbors
     - The stabilizer Stab(v) of order 1296 acts on them
-  
+
   THE PHYSICAL INTERPRETATION:
-  
+
   If W33 encodes particle physics:
     - The vertex v = the "observer" or "vacuum"
     - The 12 neighbors = gauge/interaction structure (Reye/D4)
     - The 27 non-neighbors = matter content (one E6 generation)
-  
+
   The decomposition 27 → 16 + 10 + 1 under SO(10) is:
     - 16 = one generation of fermions
     - 10 = Higgs fields
     - 1 = right-handed neutrino (or singlet)
-  
+
   So W33 naturally contains:
     - 3 generations worth of structure (via triality/192)
     - The complete particle content (via 27/Albert)
@@ -321,34 +321,34 @@ def main():
   ═══════════════════════════════════════════════════════════════════
   PART CXIX SUMMARY: THE 27 NON-NEIGHBORS
   ═══════════════════════════════════════════════════════════════════
-  
+
   KEY FINDINGS (derived from SRG parameters):
-  
+
   1. H27 (subgraph on 27 non-neighbors) is 8-regular
      - 27 vertices, 108 edges
      - Each non-neighbor connects to 4 neighbors (μ = 4)
      - Each non-neighbor connects to 8 other non-neighbors (k - μ = 8)
-  
+
   2. Cross-structure:
      - 108 edges between 12 neighbors and 27 non-neighbors
      - 108 edges within H27
      - Total: 216 = 6³ edges involving non-neighbors
-  
+
   3. Stabilizer:
      - |Stab(v)| = 1296 = 2⁴ × 3⁴ = 36²
      - Acts on 27 non-neighbors with specific orbit structure
-  
+
   4. Albert algebra connection:
      - 27 = dim J³(𝕆) = E6 fundamental
      - Natural decompositions: 3 + 24, or 16 + 10 + 1
-  
+
   ═══════════════════════════════════════════════════════════════════
-  
+
   W33 = 1 + 12 + 27 encodes:
     • 1 = origin/vacuum
-    • 12 = gauge structure (Reye/D4)  
+    • 12 = gauge structure (Reye/D4)
     • 27 = matter content (Albert/E6)
-  
+
   ═══════════════════════════════════════════════════════════════════
 """
     print(summary)

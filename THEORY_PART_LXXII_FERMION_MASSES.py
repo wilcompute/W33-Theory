@@ -44,12 +44,13 @@ masses = {
     "bottom": 4.18,
 }
 
-print("""
+print(
+    """
 Experimental fermion masses (GeV):
 
 LEPTONS:                    QUARKS (up-type):        QUARKS (down-type):
   e  = 0.000511              u = 0.00216              d = 0.0047
-  μ  = 0.1057                c = 1.27                 s = 0.093  
+  μ  = 0.1057                c = 1.27                 s = 0.093
   τ  = 1.777                 t = 172.69               b = 4.18
 
 Mass ratios span 6 ORDERS OF MAGNITUDE!
@@ -57,7 +58,8 @@ Mass ratios span 6 ORDERS OF MAGNITUDE!
   M_t / M_e = 172.69 / 0.000511 ≈ 340,000
 
 In the SM, these are 9 FREE PARAMETERS with no explanation!
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 2: POWERS OF 3 HYPOTHESIS
@@ -67,13 +69,15 @@ print("\n" + "=" * 70)
 print("SECTION 2: POWERS OF 3 IN W33")
 print("=" * 70)
 
-print("""
+print(
+    """
 W33 is built on F_3, so let's check if masses relate to powers of 3.
 
 Hypothesis: M_f = M_0 × 3^n for some integers n
 
 Taking M_top = 173 GeV as reference:
-""")
+"""
+)
 
 M_top = 173  # GeV
 
@@ -100,11 +104,13 @@ print("\n" + "=" * 70)
 print("SECTION 3: GENERATION SUPPRESSION FACTOR")
 print("=" * 70)
 
-print("""
+print(
+    """
 Each generation is suppressed relative to the previous.
 
 Let's compute inter-generation ratios:
-""")
+"""
+)
 
 # Lepton ratios
 r_tau_mu = masses["tau"] / masses["muon"]
@@ -138,7 +144,8 @@ print("\n" + "=" * 70)
 print("SECTION 4: W33 MASS FORMULA")
 print("=" * 70)
 
-print("""
+print(
+    """
 Pattern emerging: masses scale roughly as powers of W33 numbers!
 
 KEY INSIGHT: The generation index g = 1, 2, 3 maps to
@@ -154,7 +161,8 @@ PROPOSED FORMULA:
   M_f = M_top × 3^(-a_f) × (Yukawa factor)
 
 where a_f depends on generation and fermion type.
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 5: YUKAWA COUPLINGS FROM W33
@@ -164,13 +172,15 @@ print("\n" + "=" * 70)
 print("SECTION 5: YUKAWA COUPLING STRUCTURE")
 print("=" * 70)
 
-print("""
+print(
+    """
 The Yukawa coupling y_f relates mass to Higgs VEV:
   M_f = y_f × v / sqrt(2)
   y_f = M_f × sqrt(2) / v
 
 where v = 246 GeV.
-""")
+"""
+)
 
 v = 246
 sqrt2 = math.sqrt(2)
@@ -194,7 +204,8 @@ print("\n" + "=" * 70)
 print("SECTION 6: DEMOCRATIC MASS STRUCTURE")
 print("=" * 70)
 
-print("""
+print(
+    """
 INSIGHT: W33 has 40 vertices with high symmetry.
 
 Consider a DEMOCRATIC mass matrix (all entries equal):
@@ -210,7 +221,8 @@ After symmetry breaking, small perturbations give:
 
 The ratios depend on the PERTURBATION STRUCTURE,
 which is determined by W33 geometry!
-""")
+"""
+)
 
 # Democratic matrix eigenvalues
 M_demo = np.ones((3, 3))
@@ -225,8 +237,9 @@ print("\n" + "=" * 70)
 print("SECTION 7: W33 FROGGATT-NIELSEN MECHANISM")
 print("=" * 70)
 
-print("""
-The Froggatt-Nielsen mechanism explains hierarchies through a 
+print(
+    """
+The Froggatt-Nielsen mechanism explains hierarchies through a
 symmetry breaking parameter epsilon < 1.
 
 M_ij ~ epsilon^(q_i + q_j)
@@ -241,7 +254,8 @@ Suppose generation charges are:
 Then mass ratios go like:
   m_1 : m_2 : m_3 = (1/3)^8 : (1/3)^4 : 1
                   = 1/6561 : 1/81 : 1
-""")
+"""
+)
 
 eps = 1 / 3
 q = [4, 2, 0]  # generation charges
@@ -261,7 +275,8 @@ print("\n" + "=" * 70)
 print("SECTION 8: W33 MASS RATIO PREDICTIONS")
 print("=" * 70)
 
-print("""
+print(
+    """
 Using the W33 suppression structure:
 
 UP-TYPE QUARKS (charge q_u):
@@ -275,7 +290,8 @@ DOWN-TYPE QUARKS (charge q_d):
 LEPTONS (charge q_l):
   e/τ ~ (1/3)^7
   μ/τ ~ (1/3)^3
-""")
+"""
+)
 
 # Compute predictions
 print("\nMass ratio predictions vs experiment:")
@@ -327,7 +343,8 @@ print("\n" + "=" * 70)
 print("SECTION 9: KOIDE FORMULA AND W33")
 print("=" * 70)
 
-print("""
+print(
+    """
 The mysterious KOIDE FORMULA for charged leptons:
 
   K = (m_e + m_μ + m_τ) / (sqrt(m_e) + sqrt(m_μ) + sqrt(m_τ))^2
@@ -338,7 +355,8 @@ Experimental: K = 0.666661 ± 0.000007
 This is unexplained in the Standard Model.
 
 Can W33 explain Koide?
-""")
+"""
+)
 
 m_e = masses["electron"]
 m_mu = masses["muon"]
@@ -352,17 +370,19 @@ print(f"Koide parameter K = {K:.6f}")
 print(f"K = 2/3 = {2/3:.6f}")
 print(f"Deviation: {abs(K - 2/3)/K * 100:.4f}%")
 
-print("""
+print(
+    """
 W33 CONNECTION:
   K = 2/3 where:
     - 2 = e_2 (second eigenvalue)
     - 3 = base field F_3
 
-This suggests the Koide formula emerges from 
+This suggests the Koide formula emerges from
 W33 eigenvalue structure!
 
 The formula K = e_2 / |F_3| = 2/3 is EXACT!
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 10: NEUTRINO MASSES
@@ -372,7 +392,8 @@ print("\n" + "=" * 70)
 print("SECTION 10: NEUTRINO MASS HIERARCHY")
 print("=" * 70)
 
-print("""
+print(
+    """
 Neutrino masses from oscillation data:
 
   Δm²_21 = 7.5 × 10⁻⁵ eV² (solar)
@@ -386,7 +407,8 @@ The ratio: Δm²_31 / Δm²_21 ≈ 33
 
 REMARKABLY: 33 = v - 7 = 40 - 7 (from W33!)
             or 33 = W33 parameters!
-""")
+"""
+)
 
 dm21_sq = 7.5e-5  # eV^2
 dm31_sq = 2.5e-3  # eV^2
@@ -396,7 +418,8 @@ print(f"Δm²_31 / Δm²_21 = {ratio:.1f}")
 print(f"W33 prediction: 40 - 7 = 33")
 print(f"Error: {abs(ratio - 33)/33 * 100:.1f}%")
 
-print("""
+print(
+    """
 SEESAW MECHANISM:
 Neutrino masses are tiny because of the seesaw:
   m_ν ~ m_D² / M_R
@@ -406,7 +429,8 @@ where M_R is the right-handed neutrino mass scale.
 In W33: M_R = 3^(v/2) = 3^20 ~ 10^10 GeV
 
 This gives m_ν ~ (100 GeV)² / 10^10 GeV ~ 0.01 eV ✓
-""")
+"""
+)
 
 M_R_w33 = 3**20
 m_D = 100  # GeV typical Dirac mass
@@ -442,7 +466,8 @@ results = {
 
 with open("PART_LXXII_fermion_masses.json", "w") as f:
     json.dump(results, f, indent=2, default=int)
-print("""
+print(
+    """
 FERMION MASS HIERARCHY FROM W33!
 
 Key discoveries:
@@ -466,5 +491,6 @@ The fermion mass hierarchy is NOT random -
 it's determined by W33 geometry!
 
 Results saved to PART_LXXII_fermion_masses.json
-""")
+"""
+)
 print("=" * 70)

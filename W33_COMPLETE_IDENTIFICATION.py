@@ -10,7 +10,8 @@ symplectic polar space W(3) over GF(3).
 This document summarizes all the discoveries.
 """
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════╗
 ║                    W33: COMPLETE IDENTIFICATION                       ║
 ╚══════════════════════════════════════════════════════════════════════╝
@@ -52,11 +53,11 @@ III. THE SIMPLICIAL COMPLEX
 ═══════════════════════════════════════════════════════════════════════
 
 W33's simplicial complex is the CLIQUE COMPLEX of Sp(4,3):
-  
+
   • 0-simplices: 40 points
   • 1-simplices: 240 edges (pairs of collinear points)
   • 2-simplices: 160 triangles (triples of mutually collinear points)
-  • 3-simplices: 40 tetrahedra (= the 40 lines, each being 4 mutually 
+  • 3-simplices: 40 tetrahedra (= the 40 lines, each being 4 mutually
                                  collinear points)
 
 ═══════════════════════════════════════════════════════════════════════
@@ -129,4 +130,5 @@ The "theory of everything" aspect: W33 sits at the intersection of:
   • Algebraic topology (homology, buildings)
 
 ═══════════════════════════════════════════════════════════════════════
-""")
+"""
+)

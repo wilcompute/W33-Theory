@@ -28,4 +28,3 @@ This folder captures an explicit, *computable* coupling between:
 - `W33_lines_to_projective_quartets.csv`: every W33 line’s projective quartet/signature.
 - `switchpoints_mu1p25_with_delta4_distance.csv`: lambda switchpoints annotated by distance to delta4 endpoints.
 - `node0_boundary_winners_with_quartets.csv`: boundary winners enriched with projective quartets.
-

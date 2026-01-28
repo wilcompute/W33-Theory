@@ -398,7 +398,8 @@ def investigate_matter_asymmetry_origin():
     print("PART 6: FUNDAMENTAL ASYMMETRY ORIGIN")
     print("=" * 70)
 
-    print(f"""
+    print(
+        f"""
 The Z2 Asymmetry in W33:
 
 The fiber coordinate Z2 is not just an abstract label.
@@ -419,7 +420,8 @@ This explains:
 ✓ Why matter >> antimatter naturally
 ✓ Why cosmological constant doesn't cancel
 ✓ Why baryon asymmetry is FUNDAMENTAL, not accidental
-""")
+"""
+    )
 
     return True
 
@@ -445,7 +447,8 @@ def propose_future_tests():
     print("PART 7: EXPERIMENTAL TESTS")
     print("=" * 70)
 
-    print(f"""
+    print(
+        f"""
 Testing Baryon Asymmetry Predictions:
 
 1. PROTON DECAY (Hyper-Kamiokande 2030s)
@@ -465,7 +468,7 @@ Testing Baryon Asymmetry Predictions:
    - Mixing angles: determined by fiber geometry
    - CP phase: from automorphism structure
    - Status: CURRENT - high precision
-   
+
 4. DARK MATTER SEARCHES (XENON, LUX NOW)
    - Tricentric sector candidates
    - Coupling strength: geometric
@@ -475,7 +478,8 @@ Testing Baryon Asymmetry Predictions:
    - Proton decay observation would confirm K4↔Q45 mechanism
    - Coupling constant unification at 10^16 GeV
    - Status: KEY VERIFICATION AWAITED
-""")
+"""
+    )
 
     return True
 
@@ -503,7 +507,8 @@ def main():
     print("SUMMARY: BARYON ASYMMETRY FROM W33")
     print("=" * 70)
 
-    print(f"""
+    print(
+        f"""
 Key Findings:
 
 1. ASYMMETRY MECHANISM IDENTIFIED
@@ -540,7 +545,8 @@ Key Findings:
    - Emerges from W33 geometry fundamentally
    - No need for separate baryogenesis mechanism
    - All physics unified through geometry
-""")
+"""
+    )
 
     return {
         "fiber": fiber,

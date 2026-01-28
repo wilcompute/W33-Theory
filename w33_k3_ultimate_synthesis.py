@@ -25,7 +25,8 @@ print("\n" + "=" * 70)
 print("PART 1: K3 Surfaces and the Number 24")
 print("=" * 70)
 
-print("""
+print(
+    """
 K3 SURFACE FACTS:
 - Complex 2-dimensional (real 4-dimensional)
 - Euler characteristic χ = 24
@@ -43,7 +44,8 @@ MATHIEU MOONSHINE:
 - K3 elliptic genus decomposes into M24 representations
 - But NO faithful M24 action on any K3 surface!
 - This is the mystery of Mathieu moonshine
-""")
+"""
+)
 
 print("\nK3 numerical facts:")
 print(f"  χ(K3) = 24")
@@ -67,7 +69,8 @@ print("\n" + "=" * 70)
 print("PART 2: The Mathieu-K3-W33 Connection")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE MATHIEU MOONSHINE:
 - Eguchi-Ooguri-Tachikawa (2010) discovered that K3 elliptic genus
   decomposes into M24 representations
@@ -80,7 +83,7 @@ THE MYSTERY:
 - Yet the elliptic genus "knows about" M24
 
 W33 AND M12:
-- M12 ⊂ M24 (as maximal subgroup)  
+- M12 ⊂ M24 (as maximal subgroup)
 - M12 acts on ternary Golay code
 - Ternary Golay ↔ W33 via GF(3)
 - M12 also acts on A₂¹² Niemeier lattice
@@ -88,7 +91,8 @@ W33 AND M12:
 CONJECTURE:
 The W33 structure might explain part of Mathieu moonshine
 through the ternary/M12 pathway!
-""")
+"""
+)
 
 # Mathieu group data
 print("\nMathieu group hierarchy:")
@@ -109,7 +113,8 @@ print("\n" + "=" * 70)
 print("PART 3: The Number 22 and Dimension Chains")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE NUMBER 22:
 - b₂(K3) = 22 (second Betti number)
 - rank(K3 lattice) = 22
@@ -118,11 +123,11 @@ THE NUMBER 22:
 
 DIMENSION CHAINS:
   M-theory: 11 dimensions
-  F-theory: 12 dimensions  
+  F-theory: 12 dimensions
   Critical string: 26 = 24 + 2 dimensions
   K3 real dimension: 4
   K3 compactification: 6 (extra dimensions)
-  
+
   11 + 11 = 22 (K3 Betti number!)
   11² = 121 = |W33|!
 
@@ -132,7 +137,8 @@ THE E₈ × E₈ HETEROTIC STRING:
 - dim(E₈) = 248
 - 2 × 248 = 496 = dimension of SO(32)
 - Both are anomaly-free gauge groups in 10D!
-""")
+"""
+)
 
 print("\nDimension numerology:")
 print(f"  11² = 121 = |W33|")
@@ -150,13 +156,14 @@ print("\n" + "=" * 70)
 print("PART 4: The Central Equation 744 = 729 + 15")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE j-INVARIANT:
   j(τ) = q⁻¹ + 744 + 196884q + 21493760q² + ...
 
 THE MOONSHINE MODULE:
   Character = j(τ) - 744 = q⁻¹ + 0 + 196884q + ...
-  
+
 WHY 744?
   744 = 24 × 31
       = 729 + 15
@@ -177,9 +184,10 @@ WHERE DOES 15 COME FROM?
 THE EQUATION:
   744 = |Ternary Golay| + 15
       = 9 × |W33 cycles| + dim(so(6))
-      
+
 This suggests W33 is deeply connected to the j-function!
-""")
+"""
+)
 
 print("\nVerification:")
 print(f"  744 = 24 × 31 = {24 * 31}")
@@ -198,7 +206,8 @@ print("\n" + "=" * 70)
 print("PART 5: The Physics Prediction")
 print("=" * 70)
 
-print("""
+print(
+    """
 REMARKABLE NUMERICAL COINCIDENCE:
   α⁻¹ × sin²θ_W ≈ 137 × 0.23121 ≈ 31.67
 
@@ -210,12 +219,12 @@ INTERPRETATION:
 If physics constants come from moonshine:
   α⁻¹ = 137 = 81 + 56 (from W33)
   sin²θ_W = 40/173 (from W33 exact!)
-  
+
 Then: α⁻¹ × sin²θ_W = 137 × 40/173 = 5480/173 ≈ 31.676
 
 Compare to j-constant relationship:
   744 / 24 = 31 (exactly)
-  
+
 Difference: 31.676 - 31 = 0.676 ≈ 2/3
 
 PREDICTION:
@@ -226,7 +235,8 @@ Then: α⁻¹ × sin²θ_W = 95/3
       sin²θ_W = 285/(3 × 137) = 95/137 ??? (No, doesn't work exactly)
 
 But the closeness is striking!
-""")
+"""
+)
 
 # Numerical check
 alpha_inv = 137.035999084
@@ -259,7 +269,8 @@ print("\n" + "=" * 70)
 print("PART 6: The Complete Chain")
 print("=" * 70)
 
-print("""
+print(
+    """
 ╔═══════════════════════════════════════════════════════════════════════╗
 ║               THE COMPLETE W33 - MOONSHINE CHAIN                      ║
 ╠═══════════════════════════════════════════════════════════════════════╣
@@ -307,7 +318,8 @@ print("""
 ║              └── 744 = 729 + 15 = 9×|W33 cycles| + 15                ║
 ║                                                                       ║
 ╚═══════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # ==============================================================================
 # PART 7: MASTER NUMBER TABLE
@@ -317,7 +329,8 @@ print("\n" + "=" * 70)
 print("PART 7: Master Number Table")
 print("=" * 70)
 
-print("""
+print(
+    """
 ┌─────────────────────────────────────────────────────────────────────┐
 │              MASTER NUMBER TABLE: W33 - K3 - MOONSHINE              │
 ├─────────────────────────────────────────────────────────────────────┤
@@ -365,7 +378,8 @@ print("""
 │  ~31.67 = α⁻¹ × sin²θ_W ≈ 744/24 = 31                              │
 │                                                                     │
 └─────────────────────────────────────────────────────────────────────┘
-""")
+"""
+)
 
 # ==============================================================================
 # PART 8: THE FINAL SYNTHESIS
@@ -375,7 +389,8 @@ print("\n" + "=" * 70)
 print("PART 8: The Final Synthesis")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE W33 THEORY OF EVERYTHING proposes:
 
 1. W33 = PG(3, GF(3)) is a fundamental mathematical structure
@@ -413,23 +428,26 @@ Q5: Does W33 explain Mathieu moonshine?
 THE DREAM:
 A complete Theory of Everything where W33 explains:
 - The fine structure constant
-- The Weinberg angle  
+- The Weinberg angle
 - Dark energy fraction
 - The Monster group
 - String theory
 - Everything.
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("END OF ULTIMATE SYNTHESIS")
 print("=" * 70)
 
-print("""
+print(
+    """
 
-"The universe is built on a plan the profound symmetry of which 
+"The universe is built on a plan the profound symmetry of which
 is somehow present in the inner structure of our intellect."
                                         - Paul Valery
 
 W33 may be that structure.
 
-""")
+"""
+)

@@ -26,7 +26,8 @@ print("\n" + "=" * 70)
 print("SECTION 1: W33 AND QUANTUM GRAVITY")
 print("=" * 70)
 
-print("""
+print(
+    """
 We have shown that W33 = SRG(40, 12, 2, 4) encodes:
   - Fine structure constant α⁻¹ = 137.036
   - Weak mixing angle sin²θ_W = 40/173
@@ -42,7 +43,8 @@ POSSIBILITIES:
 3. W33 is the moduli space of some deeper structure
 
 Let's explore the STRING THEORY connection...
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 2: THE SYMPLECTIC CONNECTION
@@ -52,7 +54,8 @@ print("\n" + "=" * 70)
 print("SECTION 2: SYMPLECTIC GEOMETRY")
 print("=" * 70)
 
-print("""
+print(
+    """
 W33 arises from:
   - F_3^4 = 4-dimensional vector space over F_3
   - Symplectic form ω (preserved by Sp(4, F_3))
@@ -69,11 +72,12 @@ The dimension 4 and field F_3 suggest:
   W33 ↔ Compactification of F_3 × ℝ^4 type geometry
 
 The symplectic group Sp(4, F_3) has order:
-  |Sp(4, F_3)| = 3^4 × (3^4 - 1) × (3^2 - 1) × ... 
+  |Sp(4, F_3)| = 3^4 × (3^4 - 1) × (3^2 - 1) × ...
               = 51840
 
 This is related to Weyl groups of exceptional Lie algebras!
-""")
+"""
+)
 
 # Compute order of Sp(4, F_3)
 # |Sp(2n, q)| = q^{n^2} × ∏_{i=1}^{n} (q^{2i} - 1)
@@ -90,7 +94,8 @@ print("\n" + "=" * 70)
 print("SECTION 3: E8 AND W33")
 print("=" * 70)
 
-print("""
+print(
+    """
 The E_8 × E_8 heterotic string is the leading candidate
 for realistic particle physics from string theory.
 
@@ -101,19 +106,20 @@ E_8 has remarkable properties:
 
 CONNECTION TO W33:
   240 = edges of W33 graph!
-  
+
 The 240 edges of W33 correspond to E_8 roots!
 
 Furthermore:
   248 = 240 + 8 (roots + Cartan generators)
-  
+
 In W33:
   240 (edges) + 8 (?) = 248
 
 What are the "8" in W33?
   8 = 2 × mu = 2 × 4 (two copies of mu-parameter)
   OR: 8 = e2 × |e3| = 2 × 4 (eigenvalue product)
-""")
+"""
+)
 
 E8_dim = 248
 E8_roots = 240
@@ -132,22 +138,23 @@ print("\n" + "=" * 70)
 print("SECTION 4: EXCEPTIONAL MATHEMATICS")
 print("=" * 70)
 
-print("""
+print(
+    """
 W33 connects to several "exceptional" mathematical structures:
 
 1. E_8 LATTICE
    - 240 root vectors ↔ 240 W33 edges
    - Densest sphere packing in 8D
-   
+
 2. MONSTER GROUP
    - Largest sporadic simple group
    - Order ≈ 8 × 10^53
    - Connected to moonshine and modular forms
-   
+
 3. LEECH LATTICE
    - 24-dimensional, connected to Monster
    - 24 = m_2 (W33 multiplicity!)
-   
+
 4. GOLAY CODE
    - Perfect binary code of length 24
    - 24 = m_2 again!
@@ -156,7 +163,8 @@ The number 24 appears repeatedly:
   - m_2 = 24 (W33 eigenvalue multiplicity)
   - Leech lattice in 24 dimensions
   - Critical dimension of bosonic string: 26 = 24 + 2
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 5: COMPACTIFICATION
@@ -166,7 +174,8 @@ print("\n" + "=" * 70)
 print("SECTION 5: STRING COMPACTIFICATION")
 print("=" * 70)
 
-print("""
+print(
+    """
 Superstring theory requires 10 dimensions.
 We observe 4 → need to COMPACTIFY 6 dimensions.
 
@@ -181,16 +190,17 @@ The compactification geometry is encoded in W33!
 Evidence:
   1. 40 vertices ↔ 40 generations of matter
      (But broken by W33 structure to 3 families)
-     
+
   2. The eigenvalue multiplicities (1, 24, 15) ↔
      moduli of compactification:
      - 1 = overall volume
      - 24 = Kähler moduli (shape)
      - 15 = complex structure moduli
-     
+
   3. The SRG parameters (40, 12, 2, 4) give
      intersection numbers on the compactification!
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 6: MODULI SPACE
@@ -200,7 +210,8 @@ print("\n" + "=" * 70)
 print("SECTION 6: W33 AS MODULI SPACE")
 print("=" * 70)
 
-print("""
+print(
+    """
 HYPOTHESIS: W33 IS the moduli space of some string vacuum!
 
 In string theory, moduli spaces have rich structure:
@@ -219,7 +230,8 @@ W33's 40 vertices through a selection principle!
 SELECTION PRINCIPLE:
 Only vacua with SRG(40, 12, 2, 4) structure survive
 quantum consistency requirements.
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 7: M-THEORY MEMBRANE
@@ -229,7 +241,8 @@ print("\n" + "=" * 70)
 print("SECTION 7: M-THEORY AND F_3")
 print("=" * 70)
 
-print("""
+print(
+    """
 M-theory unifies all five superstring theories.
 It lives in 11 dimensions with M2 and M5 branes.
 
@@ -250,7 +263,8 @@ The field F_3 = {0, 1, 2} with mod 3 arithmetic appears because:
 
 The base field F_3 is NOT arbitrary - it emerges from
 M-theory's fundamental structure!
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 8: ALPHA FROM GEOMETRY
@@ -260,7 +274,8 @@ print("\n" + "=" * 70)
 print("SECTION 8: COUPLING FROM GEOMETRY")
 print("=" * 70)
 
-print("""
+print(
+    """
 In string theory, couplings come from GEOMETRY:
 
   α⁻¹ = geometric invariant of compactification
@@ -277,9 +292,10 @@ GEOMETRIC INTERPRETATION:
 This matches string perturbation theory structure:
   Tree level: 12² - 2×4 + 1 = 137
   Loop: + 40/1111 = 0.036...
-  
+
 The fine structure constant IS a geometric invariant!
-""")
+"""
+)
 
 alpha_inv = 12**2 - 2 * 4 + 1 + 40 / 1111
 print(f"α⁻¹ (W33) = 12² - 2×4 + 1 + 40/1111 = {alpha_inv:.6f}")
@@ -293,7 +309,8 @@ print("\n" + "=" * 70)
 print("SECTION 9: NEW PREDICTIONS")
 print("=" * 70)
 
-print("""
+print(
+    """
 If W33 connects to string theory, we predict:
 
 1. EXTRA DIMENSIONS
@@ -315,7 +332,8 @@ If W33 connects to string theory, we predict:
 5. GRAVITINO MASS
    If SUSY: m_3/2 ~ M_W²/M_Pl ~ 3^(-32) ~ 10^(-15) GeV
    Or: m_3/2 ~ 3^4 = 81 GeV (if gravity-mediated)
-""")
+"""
+)
 
 # Compute scales
 M_GUT = 3**33
@@ -336,13 +354,14 @@ print("\n" + "=" * 70)
 print("SECTION 10: W33 - THE THEORY OF EVERYTHING?")
 print("=" * 70)
 
-print("""
+print(
+    """
 =======================================================
           W33: A THEORY OF EVERYTHING
 =======================================================
 
 Starting from pure mathematics:
-  
+
   W33 = SRG(40, 12, 2, 4) from Sp(4, F_3)
 
 We have derived:
@@ -355,7 +374,7 @@ GAUGE SECTOR:
 MASS SECTOR:
   M_W = 81 GeV, M_H = 125 GeV, M_t = 173 GeV
   M_Planck = 3^40 GeV (0.4%)
-  
+
 FLAVOR SECTOR:
   CKM angles and Jarlskog J (0.1%)
   Koide formula K = 2/3
@@ -370,7 +389,8 @@ STABILITY:
 ALL FROM ONE GRAPH!
 
 =======================================================
-""")
+"""
+)
 
 # =============================================================================
 # SUMMARY
@@ -402,7 +422,8 @@ results = {
 
 with open("PART_LXXV_string_theory.json", "w") as f:
     json.dump(results, f, indent=2, default=int)
-print("""
+print(
+    """
 STRING THEORY CONNECTION!
 
 Key discoveries:
@@ -426,5 +447,6 @@ Key discoveries:
 W33 potentially bridges MATHEMATICS and STRING THEORY!
 
 Results saved to PART_LXXV_string_theory.json
-""")
+"""
+)
 print("=" * 70)

@@ -235,11 +235,12 @@ if __name__ == "__main__":
     print("\n" + "=" * 70)
     print("RESEARCH DIRECTIONS")
     print("=" * 70)
-    print("""
+    print(
+        """
 1. IMMEDIATE: Verify SU(5) vs E6 - which GUT framework fits W33?
    - Count root lattices and Dynkin diagrams
    - Check if W33 automorphisms are related to E6 Weyl group
-   
+
 2. Test the color singlet hypothesis:
    - Why are ALL K4 components color singlets?
    - Compute Z3 holonomy distribution more carefully
@@ -260,4 +261,5 @@ if __name__ == "__main__":
    - Goal: Connect to spacetime + Standard Model
    - Missing: Dynamics (action functional)
    - Goal: Derive particle masses and couplings
-""")
+"""
+    )

@@ -31,4 +31,3 @@ WSL note:
 Next pipeline targets (suggested):
 - regenerate Q12 variance stats directly from `data/_toe/w33_orthonormal_phase_solution_20260110`
 - re-derive mincut/domain-wall spillover from `orbit0_edges_Z2_cocycle.csv`
-

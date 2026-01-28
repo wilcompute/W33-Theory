@@ -318,24 +318,28 @@ def main():
     print("\n" + "═" * 70)
     print("         KEY QUOTE FROM WIKIPEDIA (WEINBERG ANGLE)")
     print("═" * 70)
-    print("""
-    "At present, there is NO GENERALLY ACCEPTED THEORY that explains 
+    print(
+        """
+    "At present, there is NO GENERALLY ACCEPTED THEORY that explains
     why the measured value θ_W ≈ 29° should be what it is.
     The specific value is NOT PREDICTED by the Standard Model."
     pass
     -- Wikipedia, Weinberg angle (footnote b)
-    """)
+    """
+    )
     print("═" * 70)
     print("         IMPLICATION")
     print("═" * 70)
-    print("""
+    print(
+        """
     IF the W33 formula sin²θ_W = 40/173 = (W33 points)/(W33 points + E7 dim)
     can be DERIVED from first principles, this would be
     pass
               THE FIRST THEORETICAL PREDICTION OF THE WEINBERG ANGLE
     pass
     in the history of physics.
-    """)
+    """
+    )
 
 
 if __name__ == "__main__":

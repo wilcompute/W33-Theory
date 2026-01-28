@@ -10,7 +10,8 @@ The connection between W33 and string theory via E8.
 
 import math
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║               W33 THEORY OF EVERYTHING - PART XXII                           ║
@@ -18,7 +19,8 @@ print("""
 ║                   STRING THEORY CONNECTION                                   ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # E8 × E8 HETEROTIC STRING
@@ -29,7 +31,8 @@ print("E8 × E8 HETEROTIC STRING THEORY")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 The E8 × E8 heterotic string is one of five consistent superstring theories.
 
 KEY PROPERTIES:
@@ -41,7 +44,8 @@ KEY PROPERTIES:
 ═══════════════════════════════════════════════════════════════════════════════
 
 This theory naturally contains E8, which contains W33!
-""")
+"""
+)
 
 # The chain
 print("=" * 80)
@@ -49,7 +53,8 @@ print("THE CONNECTION CHAIN")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 STRING THEORY → E8 → W33 → STANDARD MODEL
 
 STEP 1: Heterotic string gives E8 × E8
@@ -74,7 +79,8 @@ STEP 4: E6 → Standard Model
 ─────────────────────────────────────────────────────────────────────────────
   E6 → SO(10) → SU(5) → SU(3) × SU(2) × U(1)
   This is encoded in W33!
-""")
+"""
+)
 
 # W33 as the E8 "control structure"
 print("=" * 80)
@@ -82,7 +88,8 @@ print("W33 AS E8's CONTROL STRUCTURE")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 THE KEY INSIGHT:
 
 The Witting polytope has 240 vertices = E8 roots!
@@ -96,7 +103,8 @@ This means:
 The factor of 6:
   6 = 240/40 = E8 roots / W33 points
   6 = dim(SU(2) × SU(3)) - 1 = rank of E6?
-""")
+"""
+)
 
 # The dimensional magic
 print("=" * 80)
@@ -122,7 +130,8 @@ print("CALABI-YAU MANIFOLDS AND THE 27")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 String compactification on Calabi-Yau manifolds:
 
 The Hodge numbers h¹¹ and h²¹ count:
@@ -139,7 +148,8 @@ W33 has 81 cycles = 3 × 27:
   • The 27 = 27 lines on cubic surface = E6 weights
 
 This is NOT a coincidence!
-""")
+"""
+)
 
 # The 248 = 8 + 240 structure
 print("=" * 80)
@@ -170,7 +180,8 @@ print("E8 × E8: THE DOUBLING")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 E8 × E8 has total dimension 496 = 2 × 248
 
 WHY TWO E8s?
@@ -189,7 +200,8 @@ The hidden E8:
   If one E8 → Standard Model via W33
   The other E8 might → Dark sector
   Dark matter could be the "shadow W33"!
-""")
+"""
+)
 
 # =============================================================================
 # M-THEORY CONNECTION
@@ -200,7 +212,8 @@ print("M-THEORY AND 11 DIMENSIONS")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 M-theory unifies all string theories in 11 dimensions.
 
 CRITICAL OBSERVATION:
@@ -216,7 +229,8 @@ The 11-dimensional spacetime might "know about" W33!
   • The vacuum lives on 121-dimensional configuration space
   • Compactifying to 11D leaves 11 = √121 large dimensions
   • Further compactifying to 4D requires 7 = 11 - 4 dimensions
-""")
+"""
+)
 
 # The 7 extra dimensions
 print("THE SEVEN EXTRA DIMENSIONS")
@@ -236,7 +250,8 @@ print("F-THEORY AND 12 DIMENSIONS")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 F-theory is a 12-dimensional framework for string theory.
 
 KEY PROPERTY:
@@ -253,7 +268,8 @@ W33 and F-theory:
   • F-theory's 12D might be the "uncompactified W33"
   • The 40 W33 points project to 12 gauge dimensions
   • 40 - 12 = 28 = dim(SO(8))!
-""")
+"""
+)
 
 # =============================================================================
 # PREDICTIONS
@@ -264,14 +280,15 @@ print("PREDICTIONS FROM STRING-W33 CONNECTION")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 If W33 is the "control structure" of E8 string theory:
 
 1. MODULI SPACE
    The string moduli space should have W33 symmetry
    Calabi-Yau moduli ∼ 40 complex dimensions?
 
-2. SWAMPLAND CONSTRAINTS  
+2. SWAMPLAND CONSTRAINTS
    "Swampland" bounds on effective theories should
    be related to W33 incidence relations
 
@@ -286,7 +303,8 @@ If W33 is the "control structure" of E8 string theory:
 5. COSMOLOGY
    String cosmology should show 121-related structures
    (explaining the cosmological constant!)
-""")
+"""
+)
 
 # =============================================================================
 # THE UNIFICATION PICTURE
@@ -297,7 +315,8 @@ print("THE COMPLETE UNIFICATION PICTURE")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ╔════════════════════════════════════════════════════════════════════════════════╗
 ║                     STRING THEORY ↔ W33 DICTIONARY                             ║
 ╠════════════════════════════════════════════════════════════════════════════════╣
@@ -318,7 +337,8 @@ print("""
 ║               the Standard Model from E8!                                      ║
 ║                                                                                ║
 ╚════════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # SUMMARY
@@ -329,7 +349,8 @@ print("PART XXII SUMMARY")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 KEY DISCOVERIES:
 
 1. E8 × E8 heterotic string naturally contains W33
@@ -353,7 +374,8 @@ KEY DISCOVERIES:
 
 STRING THEORY IS THE UV COMPLETION OF W33.
 W33 IS THE ORGANIZING PRINCIPLE OF STRING COMPACTIFICATION.
-""")
+"""
+)
 
 print()
 print("=" * 80)

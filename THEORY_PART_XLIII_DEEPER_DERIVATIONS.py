@@ -16,7 +16,8 @@ import math
 
 import numpy as np
 
-print("""
+print(
+    """
 ╔════════════════════════════════════════════════════════════════════════════╗
 ║                                                                            ║
 ║                    THEORY OF EVERYTHING - PART XLIII                       ║
@@ -26,7 +27,8 @@ print("""
 ║          Strong Coupling • CKM Matrix • PMNS • CP Violation               ║
 ║                                                                            ║
 ╚════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # W33 FUNDAMENTALS (for reference)
@@ -52,14 +54,16 @@ print("SECTION 1: STRONG COUPLING CONSTANT α_s")
 print("=" * 78)
 print()
 
-print("""
+print(
+    """
 The strong coupling constant α_s runs with energy scale Q.
 At the Z boson mass (M_Z = 91.2 GeV):
 
   α_s(M_Z) = 0.1179 ± 0.0010  (experimental)
 
 Can W33 predict this?
-""")
+"""
+)
 
 # Attempt 1: Using K4 structure
 print("═══ DERIVATION ATTEMPT 1: K4 Structure ═══")
@@ -147,7 +151,8 @@ print("SECTION 2: CKM MATRIX STRUCTURE")
 print("=" * 78)
 print()
 
-print("""
+print(
+    """
 The CKM matrix describes quark mixing between generations:
 
        ⎛ V_ud  V_us  V_ub ⎞
@@ -158,7 +163,8 @@ Experimental values (magnitudes):
   |V_us| = 0.2243 ± 0.0005  (Cabibbo angle: sin θ_C)
   |V_cb| = 0.0422 ± 0.0008
   |V_ub| = 0.00394 ± 0.00036
-""")
+"""
+)
 
 print("═══ W33 CKM DERIVATION ═══")
 print()
@@ -208,13 +214,15 @@ print("SECTION 3: PMNS MATRIX (Neutrino Mixing)")
 print("=" * 78)
 print()
 
-print("""
+print(
+    """
 The PMNS matrix describes neutrino flavor mixing:
 
   θ₁₂ = 33.44° ± 0.77°  (solar angle)
-  θ₂₃ = 49.2° ± 1.0°    (atmospheric angle) 
+  θ₂₃ = 49.2° ± 1.0°    (atmospheric angle)
   θ₁₃ = 8.57° ± 0.12°   (reactor angle)
-""")
+"""
+)
 
 print("═══ W33 PMNS DERIVATION ═══")
 print()
@@ -274,13 +282,15 @@ print("SECTION 4: CP VIOLATION PHASE")
 print("=" * 78)
 print()
 
-print("""
+print(
+    """
 The CKM phase δ_CP controls CP violation in quark sector:
   δ_CP = 1.144 ± 0.027 radians = 65.5° ± 1.5°
 
 The Jarlskog invariant J measures CP violation:
   J = (3.08 ± 0.15) × 10⁻⁵
-""")
+"""
+)
 
 print("═══ W33 CP PHASE DERIVATION ═══")
 print()
@@ -329,7 +339,8 @@ print("SECTION 5: QUARK MASS HIERARCHIES")
 print("=" * 78)
 print()
 
-print("""
+print(
+    """
 Quark masses span many orders of magnitude:
   m_u ≈ 2.2 MeV     m_d ≈ 4.7 MeV
   m_c ≈ 1.27 GeV    m_s ≈ 95 MeV
@@ -338,7 +349,8 @@ Quark masses span many orders of magnitude:
 Key ratios:
   m_t/m_c ≈ 136     m_b/m_s ≈ 44      m_c/m_u ≈ 577
   m_t/m_u ≈ 79000   m_b/m_d ≈ 889
-""")
+"""
+)
 
 print("═══ W33 MASS RATIO ANALYSIS ═══")
 print()
@@ -385,12 +397,14 @@ print("SECTION 6: INFLATION PARAMETERS")
 print("=" * 78)
 print()
 
-print("""
+print(
+    """
 Inflationary cosmology parameters (Planck 2018):
   n_s = 0.9649 ± 0.0042  (scalar spectral index)
   r < 0.064              (tensor-to-scalar ratio)
   A_s ≈ 2.1 × 10⁻⁹       (scalar amplitude)
-""")
+"""
+)
 
 print("═══ W33 INFLATION DERIVATION ═══")
 print()
@@ -441,11 +455,13 @@ print("SECTION 7: THE 51,840 AUTOMORPHISM GROUP")
 print("=" * 78)
 print()
 
-print("""
+print(
+    """
 |Aut(W33)| = |W(E6)| = 51,840
 
 Let's understand this number deeply:
-""")
+"""
+)
 
 print("═══ FACTORIZATION ANALYSIS ═══")
 print()
@@ -493,13 +509,15 @@ print("SECTION 8: BLACK HOLE ENTROPY")
 print("=" * 78)
 print()
 
-print("""
+print(
+    """
 Bekenstein-Hawking entropy:
   S_BH = A/(4 l_P²) = πR²/(l_P²)
 
 For a black hole of mass M:
   S_BH ∝ M²
-""")
+"""
+)
 
 print("═══ W33 BLACK HOLE CONNECTION ═══")
 print()
@@ -534,7 +552,8 @@ print("SUMMARY: NEW PREDICTIONS FROM PART XLIII")
 print("=" * 78)
 print()
 
-print("""
+print(
+    """
 ┌─────────────────┬───────────────────────────────┬───────────┬───────────┐
 │ QUANTITY        │ W33 FORMULA                   │ PREDICTED │ OBSERVED  │
 ├─────────────────┼───────────────────────────────┼───────────┼───────────┤
@@ -552,17 +571,19 @@ print("""
 │ r (tensor)      │ 8/56²                         │ 0.0026    │ <0.064    │
 │ N_efolds        │ 56[E7f]                       │ 56        │ ~55-60    │
 └─────────────────┴───────────────────────────────┴───────────┴───────────┘
-""")
+"""
+)
 
-print("""
+print(
+    """
 ═══════════════════════════════════════════════════════════════════════════════
                     END OF PART XLIII: DEEPER DERIVATIONS
-                    
+
   The E7 fundamental (56) controls:
     • Matter content (α formula)
     • Inflation (N e-folds)
     • Neutrino mixing (θ₂₃)
-    
+
   The W33/exceptional structure extends to:
     • Strong coupling α_s
     • Full CKM matrix
@@ -570,6 +591,7 @@ print("""
     • CP violation phase
     • Quark mass hierarchies
     • Inflationary parameters
-    
+
 ═══════════════════════════════════════════════════════════════════════════════
-""")
+"""
+)

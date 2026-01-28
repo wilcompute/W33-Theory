@@ -40,14 +40,14 @@ try:
     chi = G.character_table()
     print("\nCharacter table computed successfully!")
     print(f"Number of irreducible representations: {chi.nrows()}")
-    
+
     # Find dimensions of irreps
     dims = [chi[i,0] for i in range(chi.nrows())]
     dims_sorted = sorted(dims)
     print(f"\nIrreducible representation dimensions:")
     for d in dims_sorted:
         print(f"  dim = {d}")
-        
+
     # Check for representations matching W33 eigenspace dimensions
     print("\nLooking for representations of dimensions 1, 15, 24...")
     for d in [1, 15, 24]:
@@ -55,7 +55,7 @@ try:
             print(f"  [OK] Found irrep of dimension {d}")
         else:
             print(f"  [??] No irrep of dimension {d}")
-            
+
 except Exception as e:
     print(f"Could not compute character table: {e}")
     print("(This may take too long for |G| = 51840)")

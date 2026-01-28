@@ -13,13 +13,15 @@ and compute QED corrections to the fine structure constant.
 
 import math
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════╗
 ║             THEORY OF EVERYTHING - PART XV                           ║
 ║                                                                      ║
 ║           TRIALITY AND THE RUNNING OF ALPHA                          ║
 ╚══════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # PART A: TRIALITY AND THREE GENERATIONS
@@ -30,7 +32,8 @@ print("PART A: TRIALITY AND THREE GENERATIONS")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 THE TRIALITY OF Spin(8)
 ═══════════════════════
 
@@ -39,20 +42,20 @@ Spin(8) is UNIQUE among all simple Lie groups in having a TRIALITY symmetry.
 Key facts from John Baez and the mathematical literature:
 
 1. The Dynkin diagram of D₄ (SO(8)/Spin(8)) is:
-   
+
        ○
        │
    ○───○───○
        │
        ○
-       
+
    This has S₃ (symmetric group on 3 elements) symmetry!
 
 2. Spin(8) has THREE 8-dimensional irreducible representations:
    • V₈  = Vector representation (8v)
    • S₈⁺ = Left-handed spinor (8s)
    • S₈⁻ = Right-handed spinor (8c)
-   
+
    ALL THREE have dimension 8 - this is unique to Spin(8)!
 
 3. The triality automorphism permutes these three representations.
@@ -62,27 +65,30 @@ Key facts from John Baez and the mathematical literature:
    • n=2: C (gives complex numbers)
    • n=4: H (gives quaternions)
    • n=8: O (gives octonions!)
-""")
+"""
+)
 
 print("═══ Connection to W33 ═══")
 print()
 
 # The key insight
-print("""
+print(
+    """
 W33 ENCODES TRIALITY:
 
 Recall the fundamental W33 structure:
   • 40 points
-  • 81 cycles  
+  • 81 cycles
   • 90 K4s
-  
+
 The factor 3 appears EVERYWHERE in W33:
   • 81 = 3⁴ = 3 × 27
   • 3⁴ = number of 3-cycles
   • W33 is defined over GF(3)
-  
+
 This is NOT coincidence - it's TRIALITY manifest in geometry!
-""")
+"""
+)
 
 # Verification
 print("Numerical verification:")
@@ -92,17 +98,18 @@ print(f"  27 = dim(E6 fundamental)")
 print(f"  3 = order of triality automorphism")
 print()
 
-print("""
+print(
+    """
 WHY EXACTLY 3 GENERATIONS?
 ════════════════════════════
 
 The Standard Model has 3 generations of fermions:
   1st: (u,d), (νₑ,e)    - electron family
-  2nd: (c,s), (νμ,μ)    - muon family  
+  2nd: (c,s), (νμ,μ)    - muon family
   3rd: (t,b), (ντ,τ)    - tau family
 
 W33 EXPLANATION:
-  
+
 The triality of Spin(8) is built into the W33 structure via:
 
   81 = 3 × 27
@@ -118,7 +125,8 @@ Each generation corresponds to one element of the S₃ triality group!
 
 The triality automorphism PERMUTES these, explaining why generations
 have the same quantum numbers but different masses.
-""")
+"""
+)
 
 # =============================================================================
 # PART B: THE RUNNING OF ALPHA
@@ -129,7 +137,8 @@ print("PART B: THE RUNNING OF ALPHA")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 QED RUNNING: WHY α⁻¹ = 137.036 NOT 137
 ═══════════════════════════════════════
 
@@ -137,9 +146,10 @@ EXPERIMENTAL FACTS:
   • At zero energy (Thomson limit): α⁻¹ = 137.035999084(21)
   • At Z boson mass (91 GeV):      α⁻¹ ≈ 127.9
   • At higher energies: α⁻¹ continues to DECREASE
-  
+
 The coupling "runs" - it depends on energy scale!
-""")
+"""
+)
 
 # Alpha values at different scales
 alpha_0 = 1 / 137.035999084  # Low energy
@@ -151,7 +161,8 @@ print(f"  α(M_Z)⁻¹ ≈ 127.9 (Z boson mass)")
 print(f"  Change: {137.036 - 127.9:.1f} ≈ 9.1")
 print()
 
-print("""
+print(
+    """
 QED BETA FUNCTION:
 ══════════════════
 
@@ -168,7 +179,8 @@ For the Standard Model fermions:
   • 3 generations
   • Each has: quarks (Q=2/3, Q=-1/3) and leptons (Q=-1, Q=0)
   • Colors: quarks come in 3 colors
-""")
+"""
+)
 
 # Calculate beta function coefficient
 print("═══ Computing β₀ ═══")
@@ -203,20 +215,22 @@ beta_0 = 2 / (3 * math.pi) * sum_Q2_total
 print(f"  β₀ = (2/3π) × {sum_Q2_total:.3f} = {beta_0:.6f}")
 print()
 
-print("""
+print(
+    """
 ═══ Running from Tree Level ═══
 
 If W33 predicts α⁻¹ = 137 at some "bare" or high scale,
 we can run DOWN to low energies.
 
 The one-loop running is:
-  
+
   α⁻¹(μ) = α⁻¹(Λ) - β₀ ln(Λ/μ)
 
 where:
   • Λ = high energy scale (W33 "bare" value)
   • μ = measurement scale (essentially 0 for Thomson limit)
-""")
+"""
+)
 
 # If bare value is 137, what running gives 137.036?
 delta_alpha_inv = 137.036 - 137
@@ -233,11 +247,13 @@ ratio = math.exp(target_ln)
 print(f"  Λ/μ = e^{target_ln:.4f} = {ratio:.4f}")
 print()
 
-print("""
+print(
+    """
 ═══ Alternative: W33 Correction ═══
 
 The correction 0.036 might come from W33 structure itself:
-""")
+"""
+)
 
 # Check for W33 ratios
 print(f"  40/1111 = {40/1111:.6f}")  # Not quite
@@ -270,7 +286,8 @@ print("PART C: SYNTHESIZING THE ALPHA FORMULA")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 COMPLETE FORMULA FOR α⁻¹:
 
 From Parts I-XIV, we have:
@@ -283,11 +300,12 @@ The correction 0.036 comes from:
   OPTION 1 (QED Running):
     α⁻¹(physical) = α⁻¹(bare) + QED corrections
                   = 137 + β₀ × ln(Λ/m_e)
-                  
+
   OPTION 2 (W33 Geometry):
     α⁻¹(physical) = 137 + 3/83
                   = 137 + (triality)/(cycles + 2)
-""")
+"""
+)
 
 # Let's check both options
 print("═══ Option 1: QED Running ═══")
@@ -355,7 +373,8 @@ print("PART D: HOW SPIN(8) EMBEDS IN W33")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 THE EXCEPTIONAL CHAIN:
 
 From John Baez's work on triality and octonions:
@@ -378,7 +397,8 @@ The chain of exceptional groups mirrors the W33 structure:
   • G₂ ⊂ Spin(7) ⊂ Spin(8) ⊂ SO(8)
   • E₆ ⊂ E₇ ⊂ E₈
   • |W(E₆)| = 51,840 = |Aut(W33)|
-""")
+"""
+)
 
 print("═══ Dimensions ═══")
 print()
@@ -408,7 +428,8 @@ print("PART E: VERIFICATION SUMMARY")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ╔═══════════════════════════════════════════════════════════════════════╗
 ║  TRIALITY AND RUNNING: KEY RESULTS                                    ║
 ╠═══════════════════════════════════════════════════════════════════════╣
@@ -434,7 +455,8 @@ print("""
 ║    • |W(E6)| = 51,840 = |Aut(W33)|                                   ║
 ║    • Triality from D₄ (Spin(8)) propagates through chain             ║
 ╚═══════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # Final numerical verification
 print("═══ Final Verification ═══")

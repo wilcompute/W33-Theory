@@ -307,7 +307,8 @@ def construct_abstract_bijection():
     print("ABSTRACT BIJECTION CONSTRUCTION")
     print("=" * 60)
 
-    print("""
+    print(
+        """
 THE BIJECTION IS DETERMINED BY:
 
 1. GROUP ISOMORPHISM: Sp(4,3) -> W(E6)
@@ -344,7 +345,8 @@ For each edge e, there exists g in PSp(4,3) with g(e_0) = e.
 Map e to phi(g)[H] where phi: PSp(4,3) -> W(E6)/center.
 
 This is an EQUIVARIANT bijection by construction.
-""")
+"""
+    )
 
 
 def verify_numerical_correspondences():
@@ -379,7 +381,8 @@ def verify_numerical_correspondences():
     print("\n" + "-" * 40)
     print("THE DEEP CORRESPONDENCE:")
     print("-" * 40)
-    print("""
+    print(
+        """
 W33 edges    <->  E8 roots
 40 vertices  <->  40 half-spinor rays
 12 neighbors <->  12 D4 positive roots
@@ -389,7 +392,8 @@ The 240 correspondence is EQUIVARIANT:
   For all g in Sp(4,3):  bij(g.e) = phi(g).bij(e)
 
 where phi: Sp(4,3) -> W(E6) is the isomorphism.
-""")
+"""
+    )
 
 
 def main():
@@ -421,7 +425,8 @@ def main():
     print("\n" + "=" * 70)
     print("CONCLUSION")
     print("=" * 70)
-    print("""
+    print(
+        """
 The W33-E8 bijection exists and is UNIQUE (up to the group isomorphism).
 It is characterized by:
 
@@ -434,7 +439,8 @@ because the local structures differ (edge degree 22 vs root degree 56).
 
 The bijection IS computable given explicit generators for both groups
 and the explicit isomorphism phi: Sp(4,3) -> W(E6).
-""")
+"""
+    )
 
     # Save results
     results = {

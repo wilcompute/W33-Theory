@@ -11,4 +11,3 @@ Source:
 - k=3: count=2, flip_count=0, mean_max_abs_delta=0
 - k=4: count=2, flip_count=2, mean_max_abs_delta=16.090583
 - k=5: count=2, flip_count=0, mean_max_abs_delta=0
-

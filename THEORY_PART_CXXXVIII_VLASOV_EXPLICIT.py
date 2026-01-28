@@ -260,7 +260,8 @@ print("\n" + "=" * 70)
 print("STRUCTURE SUMMARY")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE WITTING CONFIGURATION:
 ==========================
 
@@ -281,7 +282,8 @@ GQ(3,3) structure:
 - Each line has 4 points
 
 Automorphism group: W(E₆) with |W(E₆)| = 51840
-""")
+"""
+)
 
 # =====================================================
 # NAMING CONVENTION
@@ -291,7 +293,8 @@ print("\n" + "=" * 70)
 print("NAMING CONVENTION (FINALIZED)")
 print("=" * 70)
 
-print("""
+print(
+    """
 PRIMARY NAME: Sp₄(3)
 ====================
 
@@ -314,7 +317,8 @@ NAMING CONVENTIONS:
 - Use "GQ(3,3)" when emphasizing incidence geometry
 
 RETIRED: "W33" - the informal name is now replaced by standard notation.
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("PART CXXXVIII COMPLETE")

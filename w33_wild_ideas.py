@@ -22,7 +22,8 @@ print("\n" + "=" * 80)
 print("IDEA 1: MOONSHINE AND THE MONSTER")
 print("=" * 80)
 
-print("""
+print(
+    """
 The Monster group M has order:
   |M| = 2^46 * 3^20 * 5^9 * 7^6 * 11^2 * 13^3 * 17 * 19 * 23 * 29 * 31 * 41 * 47 * 59 * 71
 
@@ -30,9 +31,10 @@ Key observation: 11^2 = 121 = |W33|!
 
 The j-function coefficients in Monstrous Moonshine:
   j(q) = q^{-1} + 744 + 196884q + 21493760q^2 + ...
-  
+
 Let's check W33 numbers in these coefficients:
-""")
+"""
+)
 
 moonshine_coeffs = [1, 744, 196884, 21493760, 864299970, 20245856256]
 w33_numbers = [40, 81, 90, 121, 137, 173]
@@ -60,7 +62,8 @@ print("\n" + "=" * 80)
 print("IDEA 2: THE 24-CELL, E8, AND W33")
 print("=" * 80)
 
-print("""
+print(
+    """
 The 24-cell is the unique self-dual regular 4D polytope.
   Vertices: 24
   Edges: 96
@@ -74,10 +77,11 @@ W33 CONNECTION:
   24 = 121 - 97 = |W33| - 97
   But more interestingly:
   24 = 40 - 16 = |points| - |K4|^2
-  
+
   240 = 2 * 121 - 2 = 2|W33| - 2
   OR:  240 = 81 + 81 + 78 = 2|cycles| + dim(E6)!
-""")
+"""
+)
 
 print("Verification:")
 print(f"  240 = 2 * 121 - 2 = {2 * 121 - 2}")
@@ -97,7 +101,8 @@ print("\n" + "=" * 80)
 print("IDEA 3: QUANTUM DIMENSIONS")
 print("=" * 80)
 
-print("""
+print(
+    """
 In quantum groups at root of unity, dimensions become "quantum dimensions".
 
 For U_q(sl_2) at q = e^{2*pi*i/n}:
@@ -105,7 +110,8 @@ For U_q(sl_2) at q = e^{2*pi*i/n}:
 
 W33 HYPOTHESIS: The natural root of unity for W33 is q = e^{2*pi*i/3}
 (a primitive cube root of unity, matching GF(3))
-""")
+"""
+)
 
 
 def quantum_dim(k, n):
@@ -134,7 +140,8 @@ print("\n" + "=" * 80)
 print("IDEA 4: KNOT POLYNOMIALS AND W33")
 print("=" * 80)
 
-print("""
+print(
+    """
 The Jones polynomial V(t) of a knot evaluated at special points:
 
 For the trefoil knot: V(t) = t + t^3 - t^4
@@ -143,7 +150,8 @@ For the figure-8: V(t) = t^{-2} - t^{-1} + 1 - t + t^2
 Vogel's universality comes from Chern-Simons theory which produces these!
 
 W33 HYPOTHESIS: Evaluate at t = omega (cube root of unity)
-""")
+"""
+)
 
 omega = np.exp(2j * np.pi / 3)
 
@@ -269,7 +277,8 @@ print("\n" + "=" * 80)
 print("IDEA 7: PLATONIC SOLIDS AND W33")
 print("=" * 80)
 
-print("""
+print(
+    """
 Platonic solids form dual pairs:
   Tetrahedron (4F, 4V) - self-dual
   Cube (6F, 8V) <-> Octahedron (8F, 6V)
@@ -279,14 +288,15 @@ Vertex + Face counts:
   Tetrahedron: 4 + 4 = 8
   Cube/Oct: 8 + 6 = 14 = dim(G2)!
   Dodeca/Icosa: 20 + 12 = 32
-  
+
 Total vertices: 4 + 8 + 6 + 20 + 12 = 50
 Total faces: 4 + 6 + 8 + 12 + 20 = 50
 
 W33 CONNECTION:
   50 = 40 + 10 = |points| + 10
   50 = 90 - 40 = |K4s| - |points|
-""")
+"""
+)
 
 # 4D polytopes
 print("\n4D Regular Polytopes (vertex counts):")
@@ -314,7 +324,8 @@ print("\n" + "=" * 80)
 print("IDEA 8: INFORMATION-THEORETIC VIEW")
 print("=" * 80)
 
-print("""
+print(
+    """
 Information content in W33:
 
 log_2(40) = 5.32 bits (to specify a point)
@@ -327,10 +338,11 @@ In GF(3): log_2(3) = 1.58 bits per element
 Holographic bound:
   If W33 encodes the universe, then
   S = A/(4*l_P^2) = (area in Planck units)
-  
+
   For a "W33 Planck cell":
   S_W33 = 121 * log(3) = 133 = dim(E7)!
-""")
+"""
+)
 
 log2_40 = np.log2(40)
 log2_81 = np.log2(81)
@@ -414,22 +426,24 @@ print("\n" + "=" * 80)
 print("IDEA 11: 3-ADIC STRUCTURE")
 print("=" * 80)
 
-print("""
+print(
+    """
 W33 lives over GF(3), suggesting 3-adic relevance.
 
 In the 3-adic integers Z_3:
   Units: Z_3* = {x : |x|_3 = 1}
-  
+
 The multiplicative group (Z/3^n)* has order:
   phi(3^n) = 3^{n-1} * 2 = 2 * 3^{n-1}
 
 For n=4: phi(81) = 54 = 2 * 27 = 2 * 3^3
-  
+
 The additive group Z/81 has 81 elements.
   81 = |W33 cycles|!
 
 3-adic expansion of W33 numbers:
-""")
+"""
+)
 
 
 def to_base_3(n):
@@ -462,7 +476,8 @@ print("\n" + "=" * 80)
 print("IDEA 12: 27 LINES ON A CUBIC")
 print("=" * 80)
 
-print("""
+print(
+    """
 A smooth cubic surface contains exactly 27 lines.
 This is a classic result in algebraic geometry.
 
@@ -474,14 +489,15 @@ The configuration of 27 lines forms the E6 root system pattern!
 W33 CONNECTION:
   27 = 3^3
   81 = 3^4 = 3 * 27
-  
+
   So: |W33 cycles| = 3 * (lines on cubic)!
-  
+
 The symmetry group of the 27 lines is W(E6), the Weyl group of E6.
   |W(E6)| = 51840 = |Aut(W33)| (!)
-  
+
 THIS IS THE SAME GROUP!
-""")
+"""
+)
 
 print(f"Verification:")
 print(f"  |W(E6)| = 2^7 * 3^4 * 5 = {2**7 * 3**4 * 5}")
@@ -501,7 +517,8 @@ print("\n" + "=" * 80)
 print("IDEA 13: RAMANUJAN'S NUMBERS")
 print("=" * 80)
 
-print("""
+print(
+    """
 Ramanujan found many remarkable formulas involving pi.
 
 One famous formula involves:
@@ -510,9 +527,10 @@ Key numbers: 9801 = 99^2
 W33 CHECK:
   9801 = 99^2 = 81 * 121 + 0
   Actually: 81 * 121 = 9801 exactly!
-  
+
   9801 = |cycles| * |total| !!!
-""")
+"""
+)
 
 print(f"Verification: 81 * 121 = {81 * 121}")
 print(f"sqrt(9801) = {int(sqrt(9801))} = 99 = 100 - 1")
@@ -535,7 +553,8 @@ print("\n" + "=" * 80)
 print("IDEA 14: MODULAR FORMS AND ETA PRODUCTS")
 print("=" * 80)
 
-print("""
+print(
+    """
 The Dedekind eta function: eta(tau) = q^{1/24} * Product_{n>=1} (1 - q^n)
 
 The 24 in q^{1/24} is crucial!
@@ -543,7 +562,7 @@ The 24 in q^{1/24} is crucial!
 
 Eta products give modular forms. The discriminant:
   Delta(tau) = eta(tau)^{24} = q * Product (1-q^n)^{24}
-  
+
 This is the modular form of weight 12 (= |bosons|!)
 
 Coefficients of Delta: tau(n) (Ramanujan tau function)
@@ -552,7 +571,8 @@ Coefficients of Delta: tau(n) (Ramanujan tau function)
   tau(5) = 4830
   tau(7) = -16744
   tau(11) = 534612
-""")
+"""
+)
 
 tau_values = [1, -24, 252, -1472, 4830, -6048, -16744, 84480, -113643, -115920, 534612]
 print("Ramanujan tau values tau(p) for primes p:")
@@ -574,7 +594,8 @@ print("\n" + "=" * 80)
 print("IDEA 15: THETA FUNCTIONS")
 print("=" * 80)
 
-print("""
+print(
+    """
 Jacobi theta functions theta_i(q) are fundamental.
 
 theta_3(q) = Sum_{n=-inf}^{inf} q^{n^2} = 1 + 2q + 2q^4 + 2q^9 + ...
@@ -588,7 +609,8 @@ theta_3(q)^4 counts representations as sum of 4 squares.
 
 By Jacobi's formula:
   r_4(n) = 8 * sum_{d|n, 4 not dividing d} d
-""")
+"""
+)
 
 
 def r4(n):
@@ -692,7 +714,8 @@ print("\n" + "=" * 80)
 print("SUMMARY OF WILD DISCOVERIES")
 print("=" * 80)
 
-print("""
+print(
+    """
 MAJOR DISCOVERIES:
 
 1. |W(E6)| = 51840 = |Aut(W33)|
@@ -718,7 +741,8 @@ MAJOR DISCOVERIES:
 
 8. Monster group has 11^2 = 121 in its order
    W33 appears in the largest sporadic group!
-""")
+"""
+)
 
 print("\n" + "=" * 80)
 print("THE WEYL GROUP CONNECTION IS HUGE!")

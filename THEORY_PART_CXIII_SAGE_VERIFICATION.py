@@ -229,54 +229,56 @@ def physical_analysis():
     print(" PHYSICAL ANALYSIS")
     print("=" * 70)
 
-    print("""
+    print(
+        """
     THE EIGENVALUE MULTIPLICITIES ENCODE PARTICLE PHYSICS:
-    
+
     λ = 12 (mult 1):
         - Trivial representation
         - The "ground state" of the graph
         - Higgs-like scalar
-    
+
     λ = 2 (mult 24 = 3 × 8):
         - Three generations × 8 dimensions
         - D4 triality → 3 generations of fermions
         - 8 = dim(fundamental spinor of SO(8))
-    
+
     λ = -4 (mult 15):
         - dim(SU(4)) = 15
         - Adjoint representation of Pati-Salam unification
         - Also: 15 = dim(sl(4, R))
-    
+
     ═══════════════════════════════════════════════════════════════════════
-    
+
     THE EDGE COUNT 240 = E8 ROOTS:
-    
+
     E8 unifies all forces:
         - Gravity (spin 2)
-        - Strong force (SU(3), 8 gluons)  
+        - Strong force (SU(3), 8 gluons)
         - Weak force (SU(2), W±, Z)
         - Electromagnetism (U(1), γ)
         - Plus matter (fermions)
-    
+
     W33's 240 edges provide a COMBINATORIAL realization of E8 structure!
-    
+
     ═══════════════════════════════════════════════════════════════════════
-    
+
     THE SYMMETRY GROUP 51,840:
-    
+
     This is not just any number—it appears in THREE independent contexts:
-    
+
     1. Sp(4, F_3): Symplectic geometry over F_3
     2. W(E6): Weyl group of exceptional Lie algebra
     3. Aut(W33): Graph automorphisms of W33
-    
+
     This "coincidence" is a deep mathematical truth that connects:
         - Finite geometry
-        - Lie theory  
+        - Lie theory
         - Combinatorics
-    
+
     And potentially: PHYSICS (through E6 → SM symmetry breaking)
-    """)
+    """
+    )
 
 
 if __name__ == "__main__":

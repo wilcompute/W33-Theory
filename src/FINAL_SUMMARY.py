@@ -5,7 +5,8 @@ Final update: All discoveries in one comprehensive summary
 
 
 def main():
-    print("""
+    print(
+        """
     ╔══════════════════════════════════════════════════════════════════════╗
     ║                  W33 GEOMETRY → PARTICLE PHYSICS                     ║
     ║                    COMPLETE EVIDENCE SUMMARY                         ║
@@ -21,7 +22,7 @@ def main():
       Statistical: 100% success rate (90/90), 12× enhancement over expected
       Interpretation: Color confinement emerges from geometry
     pass
-    DISCOVERY 2: Double Confinement - Weak Isospin  
+    DISCOVERY 2: Double Confinement - Weak Isospin
       Finding: ALL 90 K4 components have Z4 = 2 (phase = -1)
       Evidence: All K4s select for identical (Z4, Z3) = (2, 0)
       Statistical: 12 standard deviations above random
@@ -48,7 +49,7 @@ def main():
     pass
     HOLONOMY STRUCTURE:
     pass
-      Acentric (bosons): 
+      Acentric (bosons):
         • Identity: 1488 (51.7%)
         • 3-cycle: 1392 (48.3%)
     pass
@@ -293,7 +294,8 @@ def main():
     If yes → This becomes the leading TOE candidate
     If no → We learn why finite geometry alone insufficient
     ═════════════════════════════════════════════════════════════════════════
-    """)
+    """
+    )
 
 
 if __name__ == "__main__":

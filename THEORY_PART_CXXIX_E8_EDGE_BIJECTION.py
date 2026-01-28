@@ -196,18 +196,20 @@ def find_e8_to_w33_map():
     print(f"  W33: 40 vertices, 240 edges")
     print(f"  Ratio: 240/120 = 2")
 
-    print("""
-    
+    print(
+        """
+
     INSIGHT: The correspondence is NOT direct!
-    
+
     Instead, consider the E6 ⊂ E8 embedding:
     - E6 has 72 roots
     - E8 = E6 ∪ (168 more roots)
-    
+
     But 72 ≠ 240...
-    
+
     ALTERNATIVE: Consider the Witting edges in the full 240-vertex polytope
-    """)
+    """
+    )
 
     # In the full Witting polytope, which vertex pairs are adjacent?
     # For complex polytopes, adjacency is defined by the polytope structure
@@ -215,15 +217,16 @@ def find_e8_to_w33_map():
     # From Coxeter: Witting polytope has 2160 edges (as a 4D complex polytope)
     # Not 240!
 
-    print("""
+    print(
+        """
     CORRECTION: The full Witting polytope has MANY more edges!
-    
+
     The 240 in W33 comes from the PROJECTED graph (40 states):
     - 40 states, degree 12 → 40 × 12 / 2 = 240 edges
-    
+
     The 240 E8 roots correspondence is to the 240 VERTICES of Witting,
     NOT to the edges of W33!
-    
+
     THE TRUE CORRESPONDENCE:
     ─────────────────────────
     E8 roots (240) ↔ Witting polytope vertices (240)
@@ -231,13 +234,14 @@ def find_e8_to_w33_map():
                    Witting rays (40)
                         ↓ (orthogonality graph)
                    W33 edges (240)
-    
+
     So 240 appears TWICE but for different reasons:
     1. E8 roots = Witting vertices = 240 (original count)
     2. W33 edges = 240 (coincidentally same, from 40 × 12 / 2)
-    
+
     Is this truly a coincidence, or is there deeper structure?
-    """)
+    """
+    )
 
     return e8_roots, w33_edges
 
@@ -264,58 +268,62 @@ def investigate_240_coincidence():
 
     # Is there a formula relating these?
 
-    print("""
+    print(
+        """
     KEY RELATIONSHIPS:
-    
+
     1. |E8 roots| = 240
     2. |Witting vertices| = 240  (by construction from E8)
     3. |W33 edges| = 240 = 40 × 12 / 2
-    
+
     WHY 40 × 12 / 2 = 240?
-    
+
     40 = 240/6 (quotient by phase group Z₆)
     12 = ?
-    
+
     INSIGHT: 12 = |D₄ roots| / 2 = 24/2
-    
+
     So: 40 × 12 / 2 = (240/6) × (24/2) / 2 = 240 × 24 / 24 = 240 !
-    
+
     The 240 is preserved because:
     - Dividing by 6 (phases): 240 → 40
     - Multiplying by 12 (degree): 40 → 480 directed edges
     - Dividing by 2 (undirected): 480 → 240
-    
+
     The degree 12 exactly compensates for the phase quotient!
-    """)
+    """
+    )
 
     # Why is degree = 12?
     # In CP^3 (projective 3-space), a generic point has...
     # Actually, 12 orthogonal states come from the Witting structure
 
-    print("""
+    print(
+        """
     WHY DEGREE 12?
-    
+
     Each Witting state |ψ⟩ is orthogonal to states |φ⟩ where ⟨ψ|φ⟩ = 0.
-    
+
     In the Witting configuration:
     - |⟨ψ|φ⟩|² ∈ {0, 1/3} (only two values!)
     - 12 states give |⟨ψ|φ⟩|² = 0
     - 27 states give |⟨ψ|φ⟩|² = 1/3
-    
+
     So degree 12 is determined by the specific SIC-POVM like structure.
-    
+
     12 + 27 = 39 = 40 - 1 (other states besides ψ itself) ✓
-    
+
     THE DEEPER FORMULA:
-    
+
     For a point in CP^3 with the Witting symmetry,
     the "orthogonal locus" has exactly 12 points.
-    
+
     This relates to:
-    - The D₄ root system (24 roots, 12 pairs)  
+    - The D₄ root system (24 roots, 12 pairs)
     - The quaternionic structure on C⁴ ≅ H²
     - The hyperbolic structure of CP³
-    """)
+    """
+    )
 
 
 def explore_e6_d5_action():
@@ -326,44 +334,46 @@ def explore_e6_d5_action():
     print("W(E6) AND W(D5) ACTIONS")
     print("=" * 70)
 
-    print("""
+    print(
+        """
     |W(E6)| = 51,840 = |Aut(W33)|
     |W(D5)| = 1,920
-    
+
     [W(E6) : W(D5)] = 51,840 / 1,920 = 27
-    
+
     This matches the 27 non-neighbors of each W33 vertex!
-    
+
     INTERPRETATION:
     ───────────────
     W(E6) acts transitively on W33 vertices (40 vertices).
     Stabilizer of one vertex has order 51,840 / 40 = 1,296.
-    
+
     W(D5) ⊂ W(E6) is a subgroup of index 27.
-    
+
     The 27 cosets of W(D5) in W(E6) correspond to:
     - The 27 non-neighbors of each vertex
     - The 27 lines of the E6 incidence geometry
     - The 27 points on a cubic surface
-    
+
     THE W(D5) ORBITS:
     ────────────────
     Given a vertex v in W33:
     - W(D5) has orbit size 40/27 × something?
-    
+
     Actually: W(D5) acting on 40 Witting states...
-    
+
     |W(D5)| = 1920 = 2^7 × 15
     40 = 2³ × 5
-    
+
     If W(D5) acts transitively on 40 states:
     Stabilizer = 1920/40 = 48 = |W(D4)/2| = S₄ × Z₂
-    
+
     But W(D5) ⊄ W(E6) directly maps to W33 action...
-    
+
     Need to be careful: the 40 W33 vertices are acted on by W(E6),
     and W(D5) is a subgroup, so W(D5) also acts on the 40 vertices.
-    """)
+    """
+    )
 
     # The D5 → E6 embedding
     # E6 has 72 roots, D5 has 40 roots
@@ -372,28 +382,30 @@ def explore_e6_d5_action():
     # At the Weyl group level:
     # |W(E6)| / |W(D5)| = 51840 / 1920 = 27
 
-    print("""
+    print(
+        """
     D5 → E6 RELATIONSHIP:
-    
+
     |D5 roots| = 40 (same as W33 vertices!)
     |E6 roots| = 72 (same as W33's 72 = 40 + 32 neighbor structure!)
-    
+
     72 - 40 = 32 = dimension of spinor rep of D5
-    
+
     This suggests:
     - E6 roots = D5 roots ∪ D5 spinor weights
     - 72 = 40 + 32
-    
+
     And for W33:
-    - 72 = edges incident to vertex + ??? 
-    
+    - 72 = edges incident to vertex + ???
+
     Wait: each vertex has degree 12, not 72.
     But total edges through vertex counting: 40 × 12 = 480 (double counting)
-    
+
     Hmm, 72 appears as:
     - |E6 roots| = 72
     - Our earlier 72 = 40 + 32 decomposition in the theory
-    """)
+    """
+    )
 
 
 if __name__ == "__main__":
@@ -404,21 +416,22 @@ if __name__ == "__main__":
     print("\n" + "=" * 70)
     print("CONCLUSIONS")
     print("=" * 70)
-    print("""
+    print(
+        """
     THE 240 APPEARS TWICE FOR RELATED BUT DISTINCT REASONS:
-    
+
     1. |E8 roots| = |Witting polytope vertices| = 240
        - This is BY CONSTRUCTION (Witting embeds in E8)
-       
+
     2. |W33 edges| = 40 × 12 / 2 = 240
        - This comes from the SRG parameters
        - 40 = 240/6 (quotient)
        - 12 = degree (from orthogonality structure)
-       
+
     The equality 240 = 240 is NOT accidental:
     - The degree 12 precisely compensates for the 6-fold quotient
     - This is a feature of the exceptional geometry
-    
+
     THE KEY NUMBERS AND THEIR SOURCES:
     ──────────────────────────────────
     240 = |E8 roots| = |Witting vertices| = |W33 edges|
@@ -427,6 +440,7 @@ if __name__ == "__main__":
      40 = |D5 roots| = |W33 vertices| = 240/6
      27 = |E6 fund rep| = [W(E6):W(D5)] = W33 non-degree
      12 = |D4 roots|/2 = W33 degree
-     
+
     EVERYTHING TRACES TO THE EXCEPTIONAL LIE ALGEBRA E8!
-    """)
+    """
+    )

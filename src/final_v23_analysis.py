@@ -75,7 +75,8 @@ print("\n" + "=" * 70)
 print("MAPPING TO PARTICLE PHYSICS")
 print("=" * 70)
 
-print("""
+print(
+    """
 Based on v23 structure:
 
 ACENTRIC (0 centers): 2880 triangles
@@ -89,11 +90,11 @@ UNICENTRIC (1 center): 2160 triangles
   - Holonomy: Mixed (3cycle and transposition)
   - Interpretation: Fermions (quarks, leptons)
   - Character: Odd parity, couples to single special point
-  
+
   Sub-structure:
     - 3cycle holonomy: 2072 - cyclical structure
     - Transposition: 1092 - pairwise swaps
-    
+
   Ratio: 2072/1092 ≈ 1.9 → maybe relates to generation structure?
 
 TRICENTRIC (3 centers): 240 triangles
@@ -110,15 +111,17 @@ Summary Counts:
 Wow! Fermions to Bosons ratio = 2/3 exactly!
 This might relate to:
   - Quark flavor families
-  - Lepton flavor families  
+  - Lepton flavor families
   - SU(5) representation theory
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("UNEXPECTED DISCOVERY: 2/3 RATIO")
 print("=" * 70)
 
-print(f"""
+print(
+    f"""
 Fermion triangles: {len(parity1)}
 Boson triangles:   {len(parity0)}
 Ratio: {len(parity1)}/{len(parity0)} = {len(parity1)/len(parity0):.4f}
@@ -133,12 +136,13 @@ In SU(5) GUT:
   - 5 fundamental rep = 1 boson + 4 fermions → ratio 4/1
   - 10 adjoint has 20 bosons, 5 fermions → ratio 1/4
   - Symmetric 45 = 30 bosons, 15 fermions → ratio 1/2
-  
+
 Our 2/3 = 40 fermions to 60 bosons
        = 8 × 5 to 12 × 5
-       
+
 Might indicate fundamental fermion-boson content!
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("S3 TRANSPOSITION vs 3CYCLE ASYMMETRY")
@@ -153,12 +157,14 @@ print(f"  3-cycles: {cycle}")
 print(f"  Transpositions: {trans}")
 print(f"  Ratio 3cycle:transposition = {cycle}/{trans} = {cycle/trans:.3f}")
 
-print(f"""
+print(
+    f"""
 This {cycle/trans:.1f}:1 ratio might indicate:
   - Different classes of fermions
   - Color triplet vs singlet couplings
   - Generation structure (if ratio relates to 3 generations)
-""")
+"""
+)
 
 # Save summary
 summary_text = f"""
@@ -171,16 +177,16 @@ CLASSIFICATION BY CENTERS:
   Acentric (0 centers):  2880 = parity 0 (ALL)
   Unicentric (1 center): 2160 = parity 1 (ALL)
   Tricentric (3 centers):  240 = parity 0 (ALL)
-  
+
 CLASSIFICATION BY PARITY:
   Even (parity 0): 3120 = 2880 + 240 (acentric + tricentric)
   Odd (parity 1):  2160 = all unicentric
-  
+
 FERMION-BOSON RATIO:
   Fermions (odd):   2160
   Bosons (even):    3120
   Ratio: 2/3 (not accidental)
-  
+
 S3 HOLONOMY (in unicentric only):
   Identity:    1068 (49.4%)
   3-cycles:    2072 (50.6% of unicentric = 39.2% total)
@@ -192,7 +198,7 @@ INTERPRETATION:
   • Odd parity ↔ Fermions ↔ Unicentric
   • Even parity ↔ Bosons ↔ Acentric or Tricentric
   • 2/3 fermion-boson ratio is exact geometric property
-  
+
 This is the DISCRETE GEOMETRY ENCODING OF PARTICLE STATISTICS!
 """
 

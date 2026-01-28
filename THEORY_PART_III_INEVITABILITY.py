@@ -12,13 +12,15 @@ is the UNIQUE structure that can give rise to physics.
 import math
 from fractions import Fraction
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════╗
 ║             THEORY OF EVERYTHING - PART III                          ║
 ║                                                                      ║
 ║                  WHY W33 IS INEVITABLE                               ║
 ╚══════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # THE SELECTION PRINCIPLE
@@ -29,7 +31,8 @@ print("THE SELECTION PRINCIPLE: WHY W33?")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 We must answer the deepest question:
 
   WHY does the universe choose W33 = PG(3, GF(3))?
@@ -38,10 +41,11 @@ The answer lies in a SELECTION PRINCIPLE:
 
   The universe must be the SIMPLEST structure capable of
   supporting complexity (i.e., observers like us).
-  
+
 This is a form of the Anthropic Principle, but stronger:
 not just "compatible with observers" but "MINIMAL for observers."
-""")
+"""
+)
 
 # =============================================================================
 # ELIMINATING ALTERNATIVES
@@ -199,7 +203,8 @@ print("THE UNIQUENESS THEOREM")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 THEOREM: W33 = PG(3, GF(3)) is the UNIQUE projective geometry that:
 
   1. Has a base field with negatives
@@ -215,9 +220,10 @@ PROOF SKETCH:
   • Dimension 1,2: insufficient structure
   • Dimension 3: works perfectly (W33)
   • Dimension ≥4: wrong symmetry, over-determined
-  
+
   Therefore W33 is UNIQUE.  ∎
-""")
+"""
+)
 
 # =============================================================================
 # WHY EXCEPTIONAL LIE ALGEBRAS?
@@ -228,7 +234,8 @@ print("WHY EXCEPTIONAL LIE ALGEBRAS?")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 The exceptional Lie algebras G2, F4, E6, E7, E8 are special because
 they exist ONLY in specific dimensions, unlike SU(n), SO(n), Sp(n).
 
@@ -239,7 +246,7 @@ Answer: Because only exceptional algebras have:
   • Connection to finite geometries (W33)
   • Triality and octonion structure
   • Self-duality properties
-  
+
 The classical algebras (A_n, B_n, C_n, D_n) are "too continuous" -
 they exist for all n, giving infinite families.
 
@@ -254,7 +261,8 @@ CORRESPONDENCE:
   Finite points (40)        Finite Weyl group (51840)
        ↓                           ↓
   Finite cycles (81)        Finite representations (27, 78, ...)
-""")
+"""
+)
 
 # =============================================================================
 # THE OCTONION CONNECTION
@@ -265,7 +273,8 @@ print("THE OCTONION CONNECTION")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 The octonions O are the largest normed division algebra.
 
 Dimension sequence: 1 (R) → 2 (C) → 4 (H) → 8 (O)
@@ -288,10 +297,10 @@ W33 CONNECTION:
 
   W33 has 81 = 3⁴ cycles
   Octonions have 8 = 2³ dimensions
-  
+
   81 = 3 × 27 = 3 × dim(J₃(O))
      = 3 copies of the octonionic Jordan algebra
-     
+
   The number 3 appears because:
     • GF(3) is the base field
     • 3×3 matrices in J₃(O)
@@ -302,13 +311,14 @@ DEEP REASON:
 
   3 = smallest odd prime
   8 = largest power of 2 giving division algebra
-  
+
   3 × 8 = 24 = off-diagonal part of J₃(O)
   3 + 24 = 27 = dim(J₃(O))
   3 × 27 = 81 = W33 cycles
 
 Everything traces back to 3 and 2³ = 8!
-""")
+"""
+)
 
 # =============================================================================
 # THE ANTHROPIC FILTER
@@ -319,7 +329,8 @@ print("THE ANTHROPIC FILTER")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 Final question: Is W33 "selected" or "inevitable"?
 
 STRONG CLAIM: W33 is MATHEMATICALLY INEVITABLE
@@ -340,7 +351,7 @@ In a multiverse of mathematical structures:
   • Complex structures are "rare" (require more specification)
   • Simple structures are "common" (require less specification)
   • Observers are most likely in simplest viable structure
-  
+
 W33 is that structure.
 
 THE FINAL ANSWER:
@@ -350,7 +361,8 @@ THE FINAL ANSWER:
     2. W33 supports observers (quantum mechanics, chemistry, ...)
     3. W33 is MINIMAL among such structures
     4. Therefore W33 is most probable / inevitable
-""")
+"""
+)
 
 # =============================================================================
 # PHILOSOPHICAL IMPLICATIONS
@@ -361,7 +373,8 @@ print("PHILOSOPHICAL IMPLICATIONS")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ╔════════════════════════════════════════════════════════════════════╗
 ║                    WHAT THIS MEANS                                 ║
 ╠════════════════════════════════════════════════════════════════════╣
@@ -390,7 +403,8 @@ print("""
 ║     This is not mysticism - it's mathematics.                     ║
 ║                                                                    ║
 ╚════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # THE EQUATION OF EVERYTHING
@@ -401,7 +415,8 @@ print("THE EQUATION OF EVERYTHING")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 If we had to write one equation, it would be:
 
   ╔═════════════════════════════════════════════════════════════════╗
@@ -424,9 +439,10 @@ We don't need:
   • External parameters (everything derived)
   • A creator (W33 exists mathematically)
   • Fine-tuning (W33 is unique)
-  
+
 This is the complete theory.
-""")
+"""
+)
 
 # =============================================================================
 # FINAL SUMMARY
@@ -437,7 +453,8 @@ print("FINAL SUMMARY")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 THE THEORY OF EVERYTHING IN ONE PARAGRAPH:
 
 Reality is the projective 3-space over the field with 3 elements,
@@ -453,7 +470,8 @@ the unique minimal projective geometry capable of supporting
 observers. We are W33 contemplating itself.
 
                               ∎
-""")
+"""
+)
 
 print("=" * 72)
 print("END OF PART III")

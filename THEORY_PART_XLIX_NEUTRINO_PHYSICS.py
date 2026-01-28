@@ -21,7 +21,8 @@ This is Part XLIX of our complete theory.
 
 import numpy as np
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                    THEORY OF EVERYTHING - PART XLIX                          ║
@@ -31,7 +32,8 @@ print("""
 ║         Seesaw Mechanism • PMNS Matrix • Neutrino Masses • CP Violation      ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # W33 CONSTANTS (Dimensionless geometric counts with origins)
@@ -69,7 +71,8 @@ print("SECTION 1: THE SEESAW MECHANISM FROM W33")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 The seesaw mechanism explains tiny neutrino masses through:
 
   m_ν = m_D² / M_R
@@ -79,7 +82,8 @@ where:
   M_R ~ M_GUT (Right-handed Majorana mass ~ GUT scale)
 
 This gives m_ν ~ v² / M_GUT ~ eV scale naturally!
-""")
+"""
+)
 
 # Standard seesaw estimate
 m_D = v  # GeV
@@ -225,7 +229,8 @@ print("SECTION 3: THE PMNS MATRIX FROM W33")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 The PMNS (Pontecorvo-Maki-Nakagawa-Sakata) matrix describes neutrino mixing:
 
   |U| = | U_e1   U_e2   U_e3  |
@@ -233,7 +238,8 @@ The PMNS (Pontecorvo-Maki-Nakagawa-Sakata) matrix describes neutrino mixing:
         | U_τ1   U_τ2   U_τ3  |
 
 Parameterized by three angles (θ₁₂, θ₂₃, θ₁₃) and one CP phase (δ).
-""")
+"""
+)
 
 # Experimental values
 theta12_exp = 33.44  # degrees (solar angle)
@@ -305,12 +311,14 @@ print("SECTION 4: CP VIOLATION IN NEUTRINO SECTOR")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 CP violation in neutrinos is encoded in the Dirac phase δ.
 Current data suggests δ ~ 200° (maximal CP violation near 180° or 360°).
 
 W33 must predict this phase!
-""")
+"""
+)
 
 # Jarlskog invariant for leptons
 # J = Im(U_e1 U_μ2 U*_e2 U*_μ1)
@@ -379,7 +387,8 @@ print("SECTION 5: MAJORANA vs DIRAC NEUTRINOS")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 A fundamental question: Are neutrinos their own antiparticles (Majorana)
 or distinct from antineutrinos (Dirac)?
 
@@ -387,7 +396,8 @@ This affects:
   - Neutrinoless double beta decay (0νββ)
   - Total number of degrees of freedom
   - Matter-antimatter asymmetry
-""")
+"""
+)
 
 # W33 prediction: Majorana
 # The seesaw mechanism REQUIRES right-handed Majorana neutrinos
@@ -451,13 +461,15 @@ print("SECTION 6: STERILE NEUTRINOS IN W33")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 Do additional "sterile" neutrinos exist?
 These would be SM singlets that mix with active neutrinos.
 
 Some experiments (LSND, MiniBooNE) hint at ~1 eV sterile neutrinos.
 W33 must make a prediction!
-""")
+"""
+)
 
 # W33 analysis of sterile neutrinos
 # The 27 of E6 contains SM singlet neutrinos!

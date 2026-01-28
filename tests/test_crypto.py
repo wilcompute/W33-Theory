@@ -1,12 +1,7 @@
 import numpy as np
 
-from THEORY_PART_CXLIV_CRYPTO import (
-    Sigma,
-    build_witting_states,
-    compute_correlation,
-    find_bases,
-    rho_A,
-)
+from THEORY_PART_CXLIV_CRYPTO import (Sigma, build_witting_states,
+                                      compute_correlation, find_bases, rho_A)
 
 
 def test_states_and_bases_counts():

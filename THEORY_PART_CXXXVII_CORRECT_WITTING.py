@@ -270,7 +270,8 @@ print("\n" + "=" * 70)
 print("CONCLUSION")
 print("=" * 70)
 
-print("""
+print(
+    """
 TWO WAYS TO GET Sp₄(3):
 =======================
 
@@ -309,7 +310,8 @@ When realized in ℂ⁴: "Witting graph" or "Witting orthogonality graph"
 Both give the same SRG(40, 12, 2, 4) with Aut ≅ W(E₆).
 
 RETIRED: "W33" - use standard notation going forward.
-""")
+"""
+)
 
 # =====================================================
 # INNER PRODUCT ANALYSIS

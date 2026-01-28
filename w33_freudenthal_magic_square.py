@@ -584,35 +584,35 @@ def main():
     print("=" * 70)
     synthesis = """
     THE FREUDENTHAL MAGIC SQUARE REVEALS:
-    
+
     1. E6 = M(C, O) = M(O, C)
        - E6 arises from bioctonions C ⊗ O
        - W(E6) = Aut(W33) = 51840
-       
+
     2. The 27-dimensional structure:
        - J₃(O) = exceptional Jordan algebra, dim 27
        - 27 lines on cubic surface
        - 27 M-theory charges on T⁶
        - W33 cycles: 81 = 3 × 27
-       
+
     3. Rosenfeld projective planes:
        - P²(C ⊗ O) has E6 symmetry, dim 32
        - W33 might be a "finite analog"!
-       
+
     4. The exceptional hierarchy:
        - F4: P²(O), dim 16
        - E6: P²(C ⊗ O), dim 32 ← W33!
        - E7: P²(H ⊗ O), dim 64
        - E8: P²(O ⊗ O), dim 128
-       
+
     5. Division algebra pattern:
        - R(1) → C(2) → H(4) → O(8)
        - Dimensions double: 1, 2, 4, 8
        - GF(3) in W33 might encode "ternary octonions"?
-       
-    
+
+
     THE W33 NUMBERS IN MAGIC SQUARE CONTEXT:
-    
+
     | W33 | Magic Square Connection |
     |-----|-------------------------|
     | 40  | Points = ? |
@@ -620,17 +620,17 @@ def main():
     | 90  | K4s = 2 × 45 = 2 × dim(SO(10)) |
     | 121 | Total = 11² |
     | 51840 | Aut = |W(E6)| |
-    
-    
+
+
     THE OCTONION THREAD:
-    
+
     Octonions O are the common thread:
     - G2 = Aut(O), dim 14
     - F4 = Aut(J₃(O)), dim 52
     - E6 from C ⊗ O, dim 78
     - E7 from H ⊗ O, dim 133
     - E8 from O ⊗ O, dim 248
-    
+
     W33 over GF(3) may be encoding a "finite octonion" structure!
     """
     print(synthesis)

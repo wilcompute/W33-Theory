@@ -128,7 +128,8 @@ print("\nComputing clique complex (sample)...")
 # The clique complex is too large to compute fully
 # But we can verify the prediction using theory
 
-print("""
+print(
+    """
 THEORETICAL PREDICTION:
 -----------------------
 For W(5, 3) = symplectic polar space of rank 3:
@@ -151,7 +152,8 @@ Unlike W(3, 3):
   - H_1 = 0 (not Z^81)
   - π_1 is NOT free (may be trivial or finite)
   - Interesting π_2
-""")
+"""
+)
 
 # Verify group order
 print("\nGroup information:")
@@ -162,7 +164,8 @@ print(f"|O(7, 3)| should be similar (isomorphism)")
 chi = f0 - f1 + triangles  # Ignoring higher terms for now
 print(f"\nPartial χ (ignoring f_3, f_4, ...) = {chi}")
 
-print("""
+print(
+    """
 COMPARISON:
 -----------
 W(3, 3):
@@ -180,7 +183,8 @@ W(5, 3):
   - Has interesting π_2
 
 The rank-2 and rank-3 cases are TOPOLOGICALLY DIFFERENT!
-""")
+"""
+)
 
 print("\n" + "=" * 60)
 print("KLEIN CORRESPONDENCE: W(3,3) ≅ Q(4,3)")
@@ -213,13 +217,15 @@ print(f"Points on Q(4, 3): {len(q4_points)}")
 print("Points on W(3, 3): 40")
 print(f"Match: {len(q4_points) == 40} ✓")
 
-print("""
+print(
+    """
 The exceptional isomorphism Sp(4, q) ≅ O(5, q) gives:
   W(3, q) ≅ Q(4, q)
 
 This works for all q! The 40-point structure is the same
 whether viewed as symplectic or orthogonal geometry.
-""")
+"""
+)
 
 print("\n★" + "=" * 58 + "★")
 print("   W(5, 3) AND KLEIN CORRESPONDENCE VERIFIED!")

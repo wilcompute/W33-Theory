@@ -145,7 +145,8 @@ print("\n" + "=" * 70)
 print("THE KEY INSIGHT")
 print("=" * 70)
 
-print("""
+print(
+    """
 The formula "rank = edges - vertices + 1 - triangles" is WRONG.
 
 The correct computation is:
@@ -156,7 +157,7 @@ where ∂₁: C₁ → C₀ and ∂₂: C₂ → C₁.
 We found:
   rank(∂₁) = 39  (so dim(ker ∂₁) = 240 - 39 = 201)
   rank(∂₂) = 120 (so im ∂₂ has rank 120)
-  
+
 Therefore:
   dim(H₁) = 201 - 120 = 81  ✓
 
@@ -169,7 +170,8 @@ The 40 "missing" relations come from the tetrahedra!
 Each tetrahedron's boundary is 4 triangles, giving a "zero relation".
 40 tetrahedra × 1 relation each = 40 dependencies.
 So: 160 - 40 = 120 independent triangle boundaries. ✓
-""")
+"""
+)
 
 # Verify this
 print("\n" + "=" * 70)
@@ -199,20 +201,23 @@ all_one = all(len(tets) == 1 for tets in triangle_to_tets.values())
 print(f"Every triangle in exactly one tetrahedron: {all_one}")
 
 if all_one:
-    print("""
+    print(
+        """
 Every triangle belongs to exactly one line (tetrahedron).
 This means:
   - 40 tetrahedra × 4 triangles each = 160 triangles ✓
   - Each tetrahedron boundary gives ∂₃(tet) = t1 - t2 + t3 - t4 = 0
   - This provides 40 linear dependencies among triangle boundaries
   - So rank(∂₂) = 160 - 40 = 120 ✓
-""")
+"""
+    )
 
 print("=" * 70)
 print("CONCLUSION")
 print("=" * 70)
 
-print("""
+print(
+    """
 The homology calculation is correct:
   H₁(W33) = Z^81
 
@@ -228,4 +233,5 @@ So π₁(W33) could be:
   2. Non-abelian with Z^81 as abelianization
 
 Let's see what Sage computes for π₁...
-""")
+"""
+)

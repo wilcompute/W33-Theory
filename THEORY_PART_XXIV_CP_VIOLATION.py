@@ -12,7 +12,8 @@ import cmath
 import math
 from fractions import Fraction
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║               W33 THEORY OF EVERYTHING - PART XXIV                           ║
@@ -20,7 +21,8 @@ print("""
 ║            CP VIOLATION AND MATTER-ANTIMATTER ASYMMETRY                      ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # THE MATTER-ANTIMATTER PUZZLE
@@ -31,7 +33,8 @@ print("THE MATTER-ANTIMATTER PUZZLE")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 One of the biggest mysteries in cosmology:
 
 WHY IS THERE MORE MATTER THAN ANTIMATTER?
@@ -52,7 +55,8 @@ SAKHAROV CONDITIONS (1967):
   1. Baryon number violation
   2. C and CP violation
   3. Out-of-equilibrium dynamics
-""")
+"""
+)
 
 # =============================================================================
 # CP VIOLATION IN THE STANDARD MODEL
@@ -63,7 +67,8 @@ print("CP VIOLATION IN THE STANDARD MODEL")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 CP violation arises from the CKM matrix having a COMPLEX phase.
 
 THE CKM MATRIX (quark mixing):
@@ -78,7 +83,8 @@ THE CKM MATRIX (quark mixing):
     • 3 mixing angles (θ₁₂, θ₂₃, θ₁₃)
     • 1 CP-violating phase (δ)
 ═══════════════════════════════════════════════════════════════════════════════
-""")
+"""
+)
 
 # CKM parameters
 theta_12_ckm = 13.04  # degrees (Cabibbo angle)
@@ -124,7 +130,8 @@ print("W33 ORIGIN OF CP VIOLATION")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 WHERE DOES THE CP PHASE COME FROM?
 
 In the Standard Model, δ is a free parameter.
@@ -136,7 +143,8 @@ The Witting polytope lives in C⁴ (complex 4-space).
 Complex numbers have PHASES.
 The phases of W33's vertex coordinates determine δ!
 ═══════════════════════════════════════════════════════════════════════════════
-""")
+"""
+)
 
 # Witting polytope vertices involve cube roots of unity
 omega = cmath.exp(2j * math.pi / 3)  # cube root of unity
@@ -169,7 +177,8 @@ print("PREDICTING THE CP PHASE")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 CONJECTURE: The CKM phase δ is determined by W33 geometry.
 
 The Witting polytope has phases that are multiples of 2π/3 = 120°.
@@ -177,7 +186,8 @@ The Witting polytope has phases that are multiples of 2π/3 = 120°.
 However, the CKM phase is δ ≈ 68.8°.
 
 POSSIBLE EXPLANATION:
-""")
+"""
+)
 
 # 68.8 degrees analysis
 delta_obs = 68.8
@@ -304,13 +314,15 @@ print("CP VIOLATION IN NEUTRINOS (PMNS)")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 The PMNS matrix (lepton mixing) also has a CP phase.
 
 CURRENT STATUS:
   δ_PMNS ≈ 195° ± 50° (hint from T2K/NOvA)
   Large uncertainty - not yet precisely measured
-""")
+"""
+)
 
 delta_pmns_hint = 195  # degrees
 
@@ -348,7 +360,8 @@ print("W33 PHASE STRUCTURE CONJECTURE")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ╔════════════════════════════════════════════════════════════════════════════════╗
 ║                      W33 CP PHASE CONJECTURE                                   ║
 ╠════════════════════════════════════════════════════════════════════════════════╣
@@ -366,7 +379,8 @@ print("""
 ║  that differ by one Witting phase rotation.                                    ║
 ║                                                                                ║
 ╚════════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # STRONG CP AND θ_QCD
@@ -377,7 +391,8 @@ print("STRONG CP PROBLEM")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 The Strong CP Problem:
 
 QCD allows a term θ_QCD that violates CP.
@@ -391,7 +406,8 @@ Standard solutions:
   3. Spontaneous CP violation
 
 W33 SOLUTION:
-""")
+"""
+)
 
 print("═══ W33 and Strong CP ═══")
 print()
@@ -417,7 +433,8 @@ print("PART XXIV SUMMARY")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 KEY DISCOVERIES:
 
 1. CP violation in W33 comes from Witting polytope phases
@@ -429,7 +446,7 @@ KEY DISCOVERIES:
 3. Jarlskog invariant J ∼ 10⁻⁵ emerges from W33 numerology
    J ∝ (9/40)³ × W33 factors
 
-4. Baryon asymmetry η ∼ 10⁻⁹ - 10⁻¹⁰ 
+4. Baryon asymmetry η ∼ 10⁻⁹ - 10⁻¹⁰
    Enhanced by 81 cycle decay channels
 
 5. Strong CP problem solved:
@@ -438,7 +455,8 @@ KEY DISCOVERIES:
 CP VIOLATION IS NOT ARBITRARY.
 IT IS DETERMINED BY W33's COMPLEX PHASE STRUCTURE.
 THE MATTER-ANTIMATTER ASYMMETRY IS A W33 PREDICTION.
-""")
+"""
+)
 
 print()
 print("=" * 80)

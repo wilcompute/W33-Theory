@@ -390,49 +390,51 @@ print("\n" + "=" * 70)
 print(" SECTION 12: SUMMARY OF FINDINGS")
 print("=" * 70)
 
-print(f"""
+print(
+    f"""
   ═══════════════════════════════════════════════════════════════════
   KEY DISCOVERIES:
   ═══════════════════════════════════════════════════════════════════
-  
+
   1. W33 VERTEX DECOMPOSITION:
      40 = 1 + 12 + 27
         = any vertex + its neighbors + its non-neighbors
         = singlet + neighbors + non-neighbors
-     
+
      This matches: singlet + Reye(12) + Albert(27)!
-  
+
   2. EIGENVALUE STRUCTURE:
      Eigenvalue 2 with multiplicity 24 = D4 roots
      This 24-dimensional eigenspace encodes D4 structure!
-  
+
   3. AUTOMORPHISM FACTORIZATION:
      |Aut(W33)| = 51,840 = 192 x 270
-     
+
      192 = |W(D4)| (index of D4-like substructure)
      270 = quotient = 27 x 10 (Albert x SO(10) vector)
-  
+
   4. SYMPLECTIC ORIGIN:
      W33 = isotropic lines in Sp(4, F_3)
      The 40 vertices are totally isotropic subspaces
-  
+
   5. THE 12 NEIGHBORS FORM SRG(12, 2, 1, 0)
      This is a very specific structure!
-  
+
   ═══════════════════════════════════════════════════════════════════
-  
+
   THE GEOMETRIC PICTURE:
-  
+
   Pick any vertex v in W33:
     * v itself (1 point) = the "origin" / singlet
     * 12 neighbors = Reye-like configuration (D4/triality)
     * 27 non-neighbors = Albert algebra structure (E6 fundamental)
-  
+
   The automorphism group permutes these structures:
     |Aut| = 51,840 = ways to choose (origin, Reye, Albert)
-  
+
   ═══════════════════════════════════════════════════════════════════
-""")
+"""
+)
 
 print("=" * 70)
 print(" END OF PART CXVIII")

@@ -217,7 +217,8 @@ print("\n" + "=" * 70)
 print("★ VERIFICATION SUMMARY ★")
 print("=" * 70)
 
-print("""
+print(
+    """
 Pattern confirmed:
 
   W(3, q) has:
@@ -225,9 +226,10 @@ Pattern confirmed:
     • Lines: (q + 1)(q² + 1)
     • Points per line: q + 1
     • Degree: q² + q
-    
+
     • H₁ = ℤ^{q⁴}  (Steinberg representation)
     • π₁ = F_{q⁴}  (free group!)
-    
+
 This verifies our discovery about W33 generalizes!
-""")
+"""
+)

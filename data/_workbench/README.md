@@ -28,4 +28,3 @@ Supporting storage:
 - `data/_sources` contains canonical inputs extracted from legacy archives.
 - `data/_archives` stores legacy zip backups.
 - `data/_n12`, `data/_w33`, `data/_witting` contain grouped, normalized datasets.
-

@@ -30,13 +30,14 @@ print("\n" + "=" * 70)
 print("SECTION 1: THE COSMIC COINCIDENCE PROBLEM")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE COSMOLOGICAL CONSTANT PROBLEM:
 ==================================
 
 The observed dark energy density:
   ρ_Λ ≈ 6 × 10⁻¹⁰ J/m³
-  
+
 Quantum field theory predicts:
   ρ_QFT ≈ 10¹¹³ J/m³
 
@@ -48,7 +49,8 @@ KEY NUMBERS:
 • And: 123 = 81 + 42 = 3⁴ + 42
 
 The "123" in 10^123 might not be coincidence!
-""")
+"""
+)
 
 # Cosmological parameters
 H0 = 67.4  # km/s/Mpc (Hubble constant)
@@ -70,7 +72,8 @@ print("\n" + "=" * 70)
 print("SECTION 2: W33 STRUCTURE IN Ω VALUES")
 print("=" * 70)
 
-print(f"""
+print(
+    f"""
 DARK ENERGY FRACTION Ω_Λ = {Omega_Lambda}:
 
 Let's look for W33 patterns:
@@ -83,12 +86,13 @@ This is remarkable: Ω_Λ ≈ 56/81 = 0.6914
 MATTER FRACTION Ω_m = {Omega_m}:
 • 0.311 ≈ 40/129 = {40/129:.4f}
 • 0.311 ≈ 56/180 = {56/180:.4f}
-• 0.311 ≈ 25/81 = {25/81:.4f} 
+• 0.311 ≈ 25/81 = {25/81:.4f}
 
 Notice: 56 + 25 = 81! So:
   Ω_Λ = 56/81, Ω_m = 25/81
   gives Ω_Λ + Ω_m = 81/81 = 1 ✓
-""")
+"""
+)
 
 # Test 56/81 prediction
 pred_Lambda = 56 / 81
@@ -111,7 +115,8 @@ print("\n" + "=" * 70)
 print("SECTION 3: HUBBLE CONSTANT FROM W33")
 print("=" * 70)
 
-print(f"""
+print(
+    f"""
 HUBBLE TENSION:
 ===============
 • Planck (CMB): H₀ = 67.4 ± 0.5 km/s/Mpc
@@ -130,7 +135,8 @@ The two measurements might represent different W33 phases!
 More precisely:
 • 27 × 5/2 = 67.5 ≈ H₀(Planck)
 • 27 × 8/3 = 72 ≈ H₀(SH0ES)
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 4: BARYON ASYMMETRY
@@ -143,7 +149,8 @@ print("=" * 70)
 # Baryon-to-photon ratio
 eta_b = 6.1e-10  # baryon-to-photon ratio
 
-print(f"""
+print(
+    f"""
 BARYON ASYMMETRY:
 =================
 
@@ -162,7 +169,8 @@ W33 CONNECTION:
 • 6 = number of quarks (3 generations × 2 types)
 • 10⁻¹⁰ might relate to α² ≈ 5 × 10⁻⁵
 • So η_b ∝ α⁴ × (something)?
-""")
+"""
+)
 
 alpha = 1 / 137.036
 print(f"α² = {alpha**2:.2e}")
@@ -182,7 +190,8 @@ n_s = 0.9649  # Scalar spectral index
 r = 0.06  # Tensor-to-scalar ratio (upper limit)
 A_s = 2.1e-9  # Scalar amplitude
 
-print(f"""
+print(
+    f"""
 INFLATION PARAMETERS:
 ====================
 
@@ -199,11 +208,12 @@ SCALAR INDEX n_s:
 • 0.0351 ≈ 1/28.5 ≈ 2/57
 
 Let's try: 1 - n_s = 4/114 = 2/57
-This gives n_s = 55/57 = {55/57:.4f} 
+This gives n_s = 55/57 = {55/57:.4f}
 
 Or: 1 - n_s = 27/770 = {27/770:.5f}
 giving n_s = 743/770 = {743/770:.4f}
-""")
+"""
+)
 
 # Check various predictions
 print(f"\nW33 inflation predictions:")
@@ -222,7 +232,8 @@ print("\n" + "=" * 70)
 print("SECTION 6: SOLVING THE 10^123 PROBLEM")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE 10^123 DISCREPANCY:
 =======================
 
@@ -241,7 +252,8 @@ The vacuum energy formula might be:
   ρ_vac ∝ M_P⁴ × 3^(-81) × (geometric factor)
 
 Let's check: 3⁸¹ ≈ ?
-""")
+"""
+)
 
 # Calculate 3^81
 import math
@@ -250,7 +262,8 @@ log10_3_81 = 81 * math.log10(3)
 print(f"3⁸¹ = 10^{log10_3_81:.2f}")
 print(f"This is about 10^38.7")
 
-print(f"""
+print(
+    f"""
 Hmm, 3⁸¹ ≈ 10³⁹ not 10¹²³.
 
 But: 81 + 42 = 123, and 42 = 2 × 3 × 7
@@ -264,7 +277,8 @@ Alternative: The effective suppression is (1/137)^N
 So: 137^57 ≈ 10¹²² is close to 10¹²³
 
 And 57 = 3 × 19 = 81 - 24 = 81 - 3! - 3·2!
-""")
+"""
+)
 
 # Check 137^57
 log10_137_57 = 57 * math.log10(137)
@@ -279,7 +293,8 @@ print("SECTION 7: DARK MATTER")
 print("=" * 70)
 
 Omega_dm = Omega_m - Omega_b
-print(f"""
+print(
+    f"""
 DARK MATTER:
 ============
 
@@ -300,7 +315,8 @@ If Ω_DM/Ω_b = 5:
 If we use 81 structure:
   Ω_DM = 5/6 × 25/81 = 125/486 = {125/486:.4f}
   Ω_b = 1/6 × 25/81 = 25/486 = {25/486:.4f}
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 8: THE COSMOLOGICAL FORMULA
@@ -310,7 +326,8 @@ print("\n" + "=" * 70)
 print("SECTION 8: UNIFIED COSMOLOGICAL FORMULA")
 print("=" * 70)
 
-print("""
+print(
+    """
 W33 COSMOLOGICAL EQUATIONS:
 ===========================
 
@@ -319,7 +336,7 @@ Building from our findings:
 1. DENSITY FRACTIONS:
    Ω_Λ = 56/81 (dark energy)
    Ω_m = 25/81 (matter)
-   
+
    Note: 56 + 25 = 81 ✓
 
 2. MATTER DECOMPOSITION:
@@ -339,7 +356,8 @@ Building from our findings:
 
 The common numbers: 27, 56, 57, 81, 137
 All from W33 and exceptional algebra structure!
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 9: PREDICTIONS TABLE
@@ -376,7 +394,8 @@ print("\n" + "=" * 70)
 print("SECTION 10: DERIVING Λ FROM W33")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE COSMOLOGICAL CONSTANT:
 ==========================
 
@@ -394,16 +413,17 @@ Hypothesis: Λ = M_P² × α^N × (geometric factor)
 
 If the suppression is α⁶⁰:
   α⁶⁰ = (1/137)⁶⁰ ≈ 10⁻¹²⁸
-  
+
 If α⁵⁷:
   α⁵⁷ = (1/137)⁵⁷ ≈ 10⁻¹²²
-  
+
 Close! The 57 = 81 - 24 = 81 - 4! might encode
 the relationship between vacuum structure and W33.
 
 ALTERNATIVE: Λ ∝ H₀² ∝ (27)² from W33
 The 27 = E₆ fundamental dimension appears directly!
-""")
+"""
+)
 
 # =============================================================================
 # SAVE RESULTS
@@ -433,13 +453,14 @@ print("\n" + "=" * 70)
 print("PART LVIII CONCLUSIONS")
 print("=" * 70)
 
-print("""
+print(
+    """
 MAJOR COSMOLOGICAL RESULTS:
 
 1. ✓ Ω_Λ = 56/81 (0.4% error)
    Dark energy fraction from E₇ fundamental / 3⁴
 
-2. ✓ Ω_m = 25/81 (0.6% error)  
+2. ✓ Ω_m = 25/81 (0.6% error)
    Matter fraction completing unity: 56 + 25 = 81
 
 3. ✓ H₀ = 27 × 5/2 = 67.5 (0.1% error)
@@ -455,5 +476,6 @@ MAJOR COSMOLOGICAL RESULTS:
 THE UNIVERSE IS BUILT ON W33 NUMBERS!
 
 Results saved to PART_LVIII_cosmology_results.json
-""")
+"""
+)
 print("=" * 70)

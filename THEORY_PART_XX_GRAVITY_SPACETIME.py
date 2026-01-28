@@ -14,7 +14,8 @@ from fractions import Fraction
 
 import numpy as np
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                   THEORY OF EVERYTHING - PART XX                             ║
 ║                                                                              ║
@@ -22,7 +23,8 @@ print("""
 ║                                                                              ║
 ║     The final frontiers: How do space, time, and gravity emerge?            ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # THE GRAVITY PROBLEM
@@ -33,7 +35,8 @@ print("PART 1: THE GRAVITY PROBLEM")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 THE CENTRAL MYSTERY:
 ═════════════════════════════════════════════════════════════════════════════
 
@@ -66,7 +69,8 @@ These 170 generators include:
     • 56 (E7 fundamental) - appears in α⁻¹!
     • The rest: GRAVITY?
 ═════════════════════════════════════════════════════════════════════════════
-""")
+"""
+)
 
 # =============================================================================
 # DIMENSION COUNTING
@@ -115,7 +119,8 @@ print("PART 3: SPACETIME FROM W33")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 HOW DOES 4-DIMENSIONAL SPACETIME EMERGE?
 ═════════════════════════════════════════════════════════════════════════════
 
@@ -123,11 +128,11 @@ W33 lives in 4-dimensional symplectic space:
     • W(3,3) = symplectic polar space
     • The "3,3" means: W(d,q) with d=3, q=3
     • Dimension of underlying space: 2(d+1) = 2×4 = 8
-    
+
 But wait - the Witting polytope lives in C⁴!
     • C⁴ has complex dimension 4
     • Real dimension 8
-    
+
 HYPOTHESIS: The 4 dimensions of spacetime = C⁴ of Witting
 ═════════════════════════════════════════════════════════════════════════════
 
@@ -151,7 +156,8 @@ Why 4 dimensions specifically?
    • Each is 8-dimensional
    • The "observable" part is 4D complex = spacetime
 ═════════════════════════════════════════════════════════════════════════════
-""")
+"""
+)
 
 # =============================================================================
 # GRAVITY AS GEOMETRY OF W33
@@ -162,7 +168,8 @@ print("PART 4: GRAVITY AS W33 GEOMETRY")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 GRAVITY = CURVATURE OF W33
 ═════════════════════════════════════════════════════════════════════════════
 
@@ -193,7 +200,8 @@ The 90 K4s might encode:
     • Christoffel symbols (connection)
     • 90 = gravitational "glue"
 ═════════════════════════════════════════════════════════════════════════════
-""")
+"""
+)
 
 # =============================================================================
 # PLANCK SCALE FROM W33
@@ -204,7 +212,8 @@ print("PART 5: PLANCK SCALE FROM W33")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 THE PLANCK SCALE
 ═════════════════════════════════════════════════════════════════════════════
 
@@ -222,7 +231,8 @@ The W33 total is 121 = 40 + 81 = points + cycles.
 √121 = 11
 
 CONJECTURE: The Planck scale involves √(W33 total) = 11
-""")
+"""
+)
 
 # Numerical exploration
 w33_total = 121
@@ -256,7 +266,8 @@ print("PART 6: THE HIERARCHY PROBLEM")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 THE HIERARCHY PROBLEM:
 ═════════════════════════════════════════════════════════════════════════════
 
@@ -271,7 +282,8 @@ This is the "hierarchy problem" - why 17 orders of magnitude?
 
 W33 APPROACH:
 ═════════════════════════════════════════════════════════════════════════════
-""")
+"""
+)
 
 # Various W33 numbers
 print("W33 numbers that might explain hierarchy:")
@@ -298,12 +310,14 @@ print(f"  log(10¹⁷) = {log_h:.1f}")
 print(f"  This is close to 40 - 1 = 39!")
 print()
 
-print("""
+print(
+    """
 HYPOTHESIS:
     M_Planck / M_EW ~ exp(W33 points - 1) = exp(39) ≈ 10¹⁷
 
 The "40 points" of W33 control the gravity-electroweak hierarchy!
-""")
+"""
+)
 
 # =============================================================================
 # QUANTUM GRAVITY FROM W33
@@ -314,7 +328,8 @@ print("PART 7: QUANTUM GRAVITY HINTS")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 QUANTUM GRAVITY SIGNATURES:
 ═════════════════════════════════════════════════════════════════════════════
 
@@ -345,7 +360,8 @@ W33 suggests a specific quantum gravity structure:
    • W33 encodes E8 structure
    • Two copies? Left-movers × Right-movers?
 ═════════════════════════════════════════════════════════════════════════════
-""")
+"""
+)
 
 # =============================================================================
 # SYNTHESIS
@@ -356,7 +372,8 @@ print("SYNTHESIS: THE COMPLETE PICTURE")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                    GRAVITY IN W33 THEORY                                     ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
@@ -386,7 +403,8 @@ print("""
 ║    • Cosmological constant (≈ 10⁻¹²¹!)                                      ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 print("=" * 80)
 print("END OF PART XX: GRAVITY AND SPACETIME")

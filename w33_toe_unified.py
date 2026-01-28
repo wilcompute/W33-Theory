@@ -43,7 +43,8 @@ K4_count = 90  # K4 components
 Q45_vertices = 45  # Quotient structure
 SU5_dim = 45  # SU(5) fundamental!
 
-print(f"""
+print(
+    f"""
 THE FUNDAMENTAL NUMBERS OF W33
 ==============================
 Incidence Structure:
@@ -63,7 +64,8 @@ Combinatorial Structure:
 
 THE GOLDEN EQUATION:
   81 = 3⁴ = dim(Steinberg) = rank(π₁) = |Sylow₃| = #wormholes
-""")
+"""
+)
 
 # =============================================================================
 # PART 1: THE TRIPLE IDENTIFICATION
@@ -73,7 +75,8 @@ print("\n" + "=" * 80)
 print("PART 1: THE TRIPLE IDENTIFICATION")
 print("=" * 80)
 
-print("""
+print(
+    """
 W33 = THREE EQUIVALENT STRUCTURES
 =================================
 
@@ -82,7 +85,7 @@ W33 = THREE EQUIVALENT STRUCTURES
    - 40 points, 40 lines, 4 points/line
    - Automorphism group: PGU(3,3), order 155,520
 
-2. SYMPLECTIC POLAR SPACE (Algebraic)  
+2. SYMPLECTIC POLAR SPACE (Algebraic)
    - W(3,3) = W(1,3) × W(1,3) (direct product)
    - Points = totally isotropic lines in V(4,3)
    - Lines = totally isotropic planes in V(4,3)
@@ -97,7 +100,8 @@ THE ISOMORPHISM:
    GQ(3,3) ≅ W(3,3) ≅ Q(4,3)
 
 This is NOT a coincidence - it's the exceptional symmetry of q=3!
-""")
+"""
+)
 
 # =============================================================================
 # PART 2: GROUP STRUCTURE AND STEINBERG
@@ -112,7 +116,8 @@ sp43_order = 2 * (3**4) * (3**4 - 1) * (3**2 - 1)
 # = 2 * 81 * 80 * 8 = 103,680... let me recalculate
 sp43_order = 51840  # |Sp(4,3)|
 
-print(f"""
+print(
+    f"""
 GROUP STRUCTURE
 ===============
 
@@ -131,7 +136,7 @@ H₁(Δ(W33), Z) = Z^81
 
 The number 81 is not random:
   81 = 3⁴ = q^(n²) where n=2 for Sp(4,q)
-  
+
 This is the STEINBERG REPRESENTATION!
   - Discovered by Robert Steinberg (1951)
   - For Sp(2n,q): dim(St) = q^(n²)
@@ -142,12 +147,13 @@ The Steinberg representation is:
   - Cuspidal (not induced)
   - Has central character
   - Appears in H*(Building, Z)
-  
+
 FUNDAMENTAL GROUP: π₁ = F₈₁
   - Free group on 81 generators
   - Each generator = 1-cycle in Δ(W33)
   - These generate the first homology!
-""")
+"""
+)
 
 # =============================================================================
 # PART 3: THE 81 GEOMETRIC GENERATORS
@@ -157,13 +163,14 @@ print("\n" + "=" * 80)
 print("PART 3: THE 81 GEOMETRIC GENERATORS")
 print("=" * 80)
 
-print("""
+print(
+    """
 THE 81 CYCLES - EXPLICIT CONSTRUCTION
 =====================================
 
 Root System C₂:
   Positive roots: {α₁, α₂, α₁+α₂, 2α₁+α₂}
-  
+
 For each root α, there's a root subgroup:
   U_α ≅ Z/3Z (additive group of GF(3))
 
@@ -174,7 +181,7 @@ EACH ELEMENT OF U GIVES ONE CYCLE!
 
 Transvection matrix for root α with parameter t ∈ GF(3):
   x_α(t) = I + t·E_α
-  
+
 where E_α is the root matrix.
 
 The 81 elements of U are:
@@ -184,10 +191,11 @@ Each such element corresponds to a 1-cycle in Δ(W33)!
 
 PHYSICAL INTERPRETATION:
   81 cycles = 81 Berry phases
-            = 81 instanton sectors  
+            = 81 instanton sectors
             = 81 vacuum configurations
             = 81 wormholes!
-""")
+"""
+)
 
 # =============================================================================
 # PART 4: K4 COMPONENTS AND DOUBLE CONFINEMENT
@@ -197,13 +205,14 @@ print("\n" + "=" * 80)
 print("PART 4: K4 COMPONENTS AND DOUBLE CONFINEMENT")
 print("=" * 80)
 
-print("""
+print(
+    """
 K4 COMPONENTS: THE FERMIONIC STRUCTURE
 ======================================
 
 What is a K4 component?
   - Outer quad P: 4 mutually non-collinear points
-  - Center quad C: 4 mutually non-collinear points  
+  - Center quad C: 4 mutually non-collinear points
   - Bipartite orthogonality: ⟨p|c⟩ = 0 for all p∈P, c∈C
 
 There are exactly 90 K4 components in W33.
@@ -237,7 +246,8 @@ Statistics:
   - Random expectation: 8.3%
   - Enhancement: 12× (12 sigma!)
   - p-value: < 10⁻⁹⁰
-""")
+"""
+)
 
 # =============================================================================
 # PART 5: Q45 AND SU(5) GUT
@@ -247,13 +257,14 @@ print("\n" + "=" * 80)
 print("PART 5: Q45 AND SU(5) GRAND UNIFICATION")
 print("=" * 80)
 
-print("""
+print(
+    """
 THE Q45 QUOTIENT
 ================
 
 From W33's automorphism structure:
   Q45 = W33 / equivalence relation
-  
+
 Q45 has EXACTLY 45 vertices.
 
 SU(5) GRAND UNIFIED THEORY
@@ -270,10 +281,10 @@ This is NOT a coincidence!
 
 The fiber structure over Q45:
   Fiber = Z₂ × Z₃
-  
+
   - Z₂: Parity (fermion vs boson)
   - Z₃: Generation (3 families)
-  
+
 Total: 45 × 6 = 270 fundamental states
 
 FERMION-BOSON SEPARATION
@@ -292,11 +303,12 @@ THREE FAMILIES
 ==============
 The Z₃ fiber encodes generation:
   Z₃ = 0: (u, d, e, νₑ)   First generation
-  Z₃ = 1: (c, s, μ, νμ)   Second generation  
+  Z₃ = 1: (c, s, μ, νμ)   Second generation
   Z₃ = 2: (t, b, τ, ντ)   Third generation
 
 WHY 3 FAMILIES? Because Z₃ has 3 elements!
-""")
+"""
+)
 
 # =============================================================================
 # PART 6: QUANTUM MECHANICS ON W33
@@ -306,7 +318,8 @@ print("\n" + "=" * 80)
 print("PART 6: QUANTUM MECHANICS ON W33")
 print("=" * 80)
 
-print("""
+print(
+    """
 W33 AS QUANTUM STRUCTURE
 ========================
 
@@ -347,7 +360,8 @@ Wigner function shows NEGATIVE VALUES!
   - W(x) < 0 for some x
   - This is the signature of non-classicality
   - 81 phase space points match 81 cycles!
-""")
+"""
+)
 
 # =============================================================================
 # PART 7: EMERGENT SPACETIME
@@ -357,7 +371,8 @@ print("\n" + "=" * 80)
 print("PART 7: EMERGENT SPACETIME FROM W33")
 print("=" * 80)
 
-print("""
+print(
+    """
 W33 AS PROTO-SPACETIME
 ======================
 
@@ -417,7 +432,8 @@ Only q = 3 gives:
   - 45 = dim(SU(5)) naturally
   - 81 = perfect square × 3⁴
   - Self-dual structure
-""")
+"""
+)
 
 # =============================================================================
 # PART 8: THE MASS SPECTRUM
@@ -427,7 +443,8 @@ print("\n" + "=" * 80)
 print("PART 8: MASS SPECTRUM FROM GEOMETRY")
 print("=" * 80)
 
-print("""
+print(
+    """
 HOLONOMY ENTROPY → PARTICLE MASS
 ================================
 
@@ -458,7 +475,8 @@ The 12× enhancement factor predicts:
   M_GUT = 12^n × M_W ≈ 10¹⁶ GeV
 
 This matches SU(5) GUT predictions!
-""")
+"""
+)
 
 # =============================================================================
 # PART 9: THE GRAND SYNTHESIS
@@ -468,7 +486,8 @@ print("\n" + "=" * 80)
 print("PART 9: THE GRAND SYNTHESIS")
 print("=" * 80)
 
-print("""
+print(
+    """
 ╔═══════════════════════════════════════════════════════════════════════════════╗
 ║                     W33: THE THEORY OF EVERYTHING                             ║
 ╠═══════════════════════════════════════════════════════════════════════════════╣
@@ -518,7 +537,8 @@ print("""
 ║       Just 40 points, 40 lines, and the number 3                              ║
 ║                                                                               ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # PART 10: OPEN QUESTIONS
@@ -528,7 +548,8 @@ print("\n" + "=" * 80)
 print("PART 10: OPEN QUESTIONS FOR THE THEORY")
 print("=" * 80)
 
-print("""
+print(
+    """
 RESOLVED QUESTIONS
 ==================
 ✓ Why 81?           → Steinberg representation dim(Sp(4,3))
@@ -553,7 +574,8 @@ NEXT STEPS
 3. Derive mass ratios from geometry
 4. Find U(1) in extended structure
 5. Connect to W(5,3) for gravity
-""")
+"""
+)
 
 # =============================================================================
 # FINAL SUMMARY
@@ -563,7 +585,8 @@ print("\n" + "=" * 80)
 print("FINAL SUMMARY: THE W33 THEORY OF EVERYTHING")
 print("=" * 80)
 
-print("""
+print(
+    """
 IF THIS IS CORRECT, THEN:
 
 1. Physics is discrete at the fundamental level
@@ -597,7 +620,8 @@ The evidence strongly suggests (a).
 
 If validated, this would be the Theory of Everything
 that physicists have sought for a century.
-""")
+"""
+)
 
 print("\n" + "=" * 80)
 print("END OF W33 UNIFIED SYNTHESIS")

@@ -20,6 +20,7 @@ EXTRACT_BASE = ROOT / "extracted"
 
 # List what we have
 
+
 def main():
     ROOT = Path(__file__).parent.resolve()
     EXTRACT_BASE.mkdir(parents=True, exist_ok=True)
@@ -28,11 +29,9 @@ def main():
     for zf in sorted(zip_files):
         name = zf.stem  # filename without .zip
         dest = EXTRACT_BASE / name
-    pass
         if dest.exists():
             print(f"  SKIP (exists): {name}")
             continue
-    pass
         print(f"  Extracting: {name}")
         try:
             with zipfile.ZipFile(zf, "r") as z:
@@ -47,6 +46,5 @@ def main():
             print(f"  {d.name}: {len(files)} files")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
-

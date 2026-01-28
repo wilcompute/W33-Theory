@@ -225,33 +225,35 @@ def w33_and_27_lines():
     print("W33 AND THE 27 LINES")
     print("=" * 70)
 
-    print("""
+    print(
+        """
     THE CONNECTION:
     ───────────────
     W33: SRG(40, 12, 2, 4)
     - 40 vertices (Witting states)
     - Each vertex has 12 neighbors and 27 NON-neighbors
-    
+
     27 Lines: Schläfli graph SRG(27, 16, 10, 8)
     - 27 vertices (lines on cubic surface)
     - Each line intersects 16 others
-    
+
     These are DIFFERENT graphs, but connected through E6:
-    
+
     W(E6) acts on:
     1. The 40 Witting states (via Aut(W33))
     2. The 27 lines on the cubic surface
     3. The 27-dimensional fundamental representation of E6
-    
+
     THE INDEX CONNECTION:
     ────────────────────
     [W(E6) : W(D5)] = 51840 / 1920 = 27
-    
+
     The 27 cosets of W(D5) in W(E6) can be identified with:
     - The 27 non-neighbors of a W33 vertex
     - The 27 lines on a cubic surface
     - The 27 weights of the E6 fundamental representation
-    """)
+    """
+    )
 
     # Verify the index
     print("\nVerifying index calculation:")
@@ -278,28 +280,30 @@ def build_e6_weights():
     # For the 27-dimensional rep, we use weights of form:
     # ±e_i ± e_j for certain (i,j) combinations, plus spinor-type weights
 
-    print("""
+    print(
+        """
     The 27 weights of the E6 fundamental representation
     can be constructed as follows:
-    
+
     Using E6 ⊂ E8 embedding (last two coords sum to 0):
-    
+
     Type 1: 16 weights from D5 spinor
-    Type 2: 10 weights from D5 vector  
+    Type 2: 10 weights from D5 vector
     Type 3: 1 weight (the zero weight with multiplicity)
-    
+
     Total: 16 + 10 + 1 = 27
-    
+
     But actually for the fundamental rep it's:
     - All 27 weights have multiplicity 1
     - They form an orbit under W(E6)
-    
+
     EXPLICIT CONSTRUCTION:
     Using coordinates (x1,...,x8) with x7 + x8 = 0:
-    
+
     The 27 weights include:
     - (1,0,0,0,0,0,1,-1) and permutations/signs satisfying E6 constraint
-    """)
+    """
+    )
 
     # Build weights explicitly
     # E6 Dynkin labels for fundamental rep: (1,0,0,0,0,0) -> 27-dim
@@ -326,28 +330,30 @@ def the_tritangent_planes():
     print("TRITANGENT PLANES AND CONFIGURATION")
     print("=" * 70)
 
-    print("""
+    print(
+        """
     A cubic surface also has 45 TRITANGENT PLANES:
     - Each tritangent plane meets the surface in 3 lines forming a triangle
     - There are C(27,3) ways to choose 3 lines, but only 45 form triangles
-    
+
     These 45 triangles are the maximal cliques in the Schläfli graph!
     (Each triangle = 3 mutually intersecting lines)
-    
+
     RELATION TO W33:
     ────────────────
     W33 has 40 maximal 4-cliques (orthogonal bases)
     Each vertex is in exactly 4 cliques
-    
+
     The 27 lines have 45 triangles (3-cliques)
     Each line is in: C(16,2)/C(3,2) triangles per line?
-    
+
     Let's compute: each line meets 16 others
     Triangles through a given line L:
     - Need 2 more lines that meet L AND meet each other
     - If L meets M and N, need M to meet N
     - This is asking for edges within the 16 neighbors of L
-    """)
+    """
+    )
 
     # Count triangles in Schläfli
     lines, adj = (
@@ -470,23 +476,25 @@ def w33_clique_structure():
     # But wait, triangles through v counts pairs of neighbors connected
     # For v with k=12 neighbors and λ=2, edges among neighbors varies
 
-    print("""
-    
+    print(
+        """
+
     COMPARISON:
     ───────────
     Schläfli (27 lines):
     - 45 triangles (3-cliques, tritangent planes)
     - 10 triangles per vertex
     - No larger cliques (max clique = 3)
-    
-    W33 (40 Witting states):  
+
+    W33 (40 Witting states):
     - 40 4-cliques (orthogonal bases)
     - 4 4-cliques per vertex
     - Max clique = 4 (bases)
-    
+
     The "27" in W33 (non-neighbors) connects to the 27 lines
     through W(E6), but the graph structures are different.
-    """)
+    """
+    )
 
 
 def summary_27_connection():
@@ -494,9 +502,10 @@ def summary_27_connection():
     print("\n" + "=" * 70)
     print("SUMMARY: THE MEANING OF 27")
     print("=" * 70)
-    print("""
+    print(
+        """
     THE NUMBER 27 APPEARS IN MANY RELATED CONTEXTS:
-    
+
     ╔══════════════════════════════════════════════════════════════════╗
     ║  Context                         │  The "27"                    ║
     ╠══════════════════════════════════════════════════════════════════╣
@@ -507,37 +516,38 @@ def summary_27_connection():
     ║  Exceptional Jordan algebra      │  Dimension (27 = 3×3×3)      ║
     ║  Freudenthal's magic square      │  E6 entry                    ║
     ╚══════════════════════════════════════════════════════════════════╝
-    
+
     THE UNIFYING PRINCIPLE:
     ─────────────────────
     All these 27s are ISOMORPHIC as W(E6)-sets!
-    
+
     W(E6) acts on each:
     - Transitively (single orbit)
     - With stabilizer of order 51840/27 = 1920 = |W(D5)|
-    
+
     So the 27 non-neighbors of a W33 vertex, the 27 lines on a cubic,
-    and the 27 weights of the E6 fundamental rep are all 
+    and the 27 weights of the E6 fundamental rep are all
     "the same thing" from the perspective of W(E6).
-    
+
     THE D5 → E6 EMBEDDING:
     ────────────────────
     D5 has 40 roots (matching W33 vertices!)
     E6 has 72 roots
-    
+
     The cosets W(E6)/W(D5) give 27 "directions" that E6 has
     beyond D5. These are the 27 that appear everywhere.
-    
+
     PHYSICAL INTERPRETATION:
     ──────────────────────
     In W33/Witting:
     - 40 quantum states
     - Given state ψ: 12 orthogonal, 27 with overlap 1/3
     - The 27 "interfering" states form a W(E6)-orbit!
-    
+
     The interference structure of quantum mechanics inherits
     the geometry of E6.
-    """)
+    """
+    )
 
 
 if __name__ == "__main__":

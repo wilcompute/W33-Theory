@@ -86,7 +86,8 @@ print("\n" + "=" * 70)
 print("PART 1: W33 AS ATOMS OF SPACE")
 print("=" * 70)
 
-print("""
+print(
+    """
 CAUSAL SET THEORY proposes that spacetime is fundamentally DISCRETE.
 
 The continuum is an approximation!
@@ -103,9 +104,10 @@ Why W33?
   2. Large symmetry group Aut = 51,840
   3. Encodes quantum mechanics (as we showed!)
   4. Natural causal structure from incidence relations
-  
+
 Let's explore this...
-""")
+"""
+)
 
 # Define a "causal structure" on W33
 # Points on a common line are "spacelike separated"
@@ -148,7 +150,8 @@ print("\n" + "=" * 70)
 print("PART 2: SPIN NETWORKS ON W33")
 print("=" * 70)
 
-print("""
+print(
+    """
 LOOP QUANTUM GRAVITY describes spacetime using SPIN NETWORKS:
   - Nodes = chunks of volume
   - Edges = faces between volumes (carry area)
@@ -160,7 +163,8 @@ For W33, we can define a spin network:
   - Labels = representations of Sp(4,3)!
 
 The incidence graph of W33 IS a spin network!
-""")
+"""
+)
 
 # Build the collinearity graph (points connected if on same line)
 print("Building W33 spin network (collinearity graph)...")
@@ -187,19 +191,21 @@ print(f"    Degree per node: {degrees[0]} (regular graph!)")
 # The graph is regular - every point is connected to 12 others
 # This is because each point lies on 4 lines, each with 3 other points
 
-print("""
+print(
+    """
 SPIN NETWORK INTERPRETATION:
   - Each node represents a "quantum of volume"
   - Each edge represents a "quantum of area"
   - Total volume ∝ number of nodes = 40
   - Total area ∝ number of edges = 120
-  
+
 In Planck units:
   - Volume ~ 40 × ℓ_P³
   - Area ~ 120 × ℓ_P²
-  
+
 This is a FINITE quantum geometry!
-""")
+"""
+)
 
 # Compute graph-theoretic properties
 # Adjacency matrix
@@ -225,7 +231,8 @@ print("\n" + "=" * 70)
 print("PART 3: HOLOGRAPHIC PRINCIPLE AND W33")
 print("=" * 70)
 
-print("""
+print(
+    """
 The HOLOGRAPHIC PRINCIPLE states:
   - Information in a volume is bounded by its surface area
   - A (d+1)-dimensional bulk = d-dimensional boundary theory
@@ -240,14 +247,15 @@ ENTROPY BOUND:
   - Bekenstein-Hawking: S ≤ A / (4 ℓ_P²)
   - For W33: "Area" ~ 120 edges
   - Max entropy ~ 120 / 4 = 30 bits?
-  
+
 But W33 has MORE structure: H₁ = Z^81
   - 81 independent cycles = 81 bits of topological information
   - This EXCEEDS the naive area bound!
-  
+
 INTERPRETATION: W33's topology stores "hidden" information
 beyond the area law. This is like BLACK HOLE MICROSTATES!
-""")
+"""
+)
 
 # Compute the "entropy" of W33
 # Using graph-theoretic entropy
@@ -278,7 +286,8 @@ print("\n" + "=" * 70)
 print("PART 4: EMERGENT DIMENSIONS FROM W33")
 print("=" * 70)
 
-print("""
+print(
+    """
 HOW MANY DIMENSIONS does W33 "feel like"?
 
 We can estimate the effective dimension using:
@@ -288,9 +297,10 @@ We can estimate the effective dimension using:
 
 Let's compute the SPECTRAL DIMENSION:
   d_s = -2 × d(log P(t)) / d(log t)
-  
+
 where P(t) is the return probability of a random walk.
-""")
+"""
+)
 
 
 # Compute spectral dimension via random walk
@@ -325,17 +335,19 @@ d_spectral = -2 * slope
 
 print(f"\nEstimated spectral dimension: d_s ≈ {d_spectral:.2f}")
 
-print("""
+print(
+    """
 INTERPRETATION:
   - Spectral dimension < 4 suggests dimensional reduction at small scales
   - This matches predictions from quantum gravity theories!
   - At Planck scale, spacetime may be ~2 dimensional
-  
+
 W33 naturally exhibits this dimensional reduction:
   - It's a finite structure (like a 0-dimensional set of points)
   - But connected like a 3D simplicial complex
   - Random walks "feel" an intermediate dimension!
-""")
+"""
+)
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # PART 5: THE SPECIAL ROLE OF THE PRIME 3
@@ -345,13 +357,14 @@ print("\n" + "=" * 70)
 print("PART 5: WHY THE PRIME 3?")
 print("=" * 70)
 
-print("""
+print(
+    """
 W33 is built over GF(3) - the field with 3 elements.
 WHY might 3 be special in physics?
 
 1. SPACETIME HAS 3+1 = 4 DIMENSIONS
    The symplectic space GF(3)⁴ has dimension 4!
-   
+
 2. THREE FAMILIES OF PARTICLES
    Quarks and leptons come in 3 generations.
    Could this reflect GF(3) structure?
@@ -371,7 +384,8 @@ special properties that enable:
   - Quantum mechanics (contextuality)
   - Reasonable dimensional structure
   - Rich but finite complexity
-""")
+"""
+)
 
 # Compare W33 to W22 (over GF(2)) and W55 (over GF(5))
 
@@ -392,15 +406,17 @@ for q in primes:
     )
     print()
 
-print("""
+print(
+    """
 THE GOLDILOCKS PRINCIPLE:
   q = 2: Too simple (only 15 points, 16-dim Steinberg)
   q = 3: Just right (40 points, 81-dim Steinberg) ★
   q = 5: Too complex (156 points, 625-dim Steinberg)
-  
+
 W(3, 3) is complex enough to encode quantum mechanics
 but simple enough to be "computable" by the universe!
-""")
+"""
+)
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # PART 6: QUANTUM GRAVITY ON W33
@@ -410,7 +426,8 @@ print("\n" + "=" * 70)
 print("PART 6: QUANTUM GRAVITY ON W33")
 print("=" * 70)
 
-print("""
+print(
+    """
 Combining everything, we can define QUANTUM GRAVITY on W33:
 
 HILBERT SPACE:
@@ -420,19 +437,20 @@ HILBERT SPACE:
 
 HAMILTONIAN:
   - Sum over 4-simplices (plaquettes)
-  - Each plaquette gives a "holonomy" 
+  - Each plaquette gives a "holonomy"
   - H = Σ_{plaquettes} (1 - holonomy)
-  
+
 This is like LATTICE GAUGE THEORY but on W33!
 
 PARTITION FUNCTION:
   Z = Tr(e^{-βH})
-  
+
 Encodes:
   - Quantum fluctuations of geometry
   - Sum over "spin foams" (spacetime histories)
   - Emergent smooth spacetime in some limit
-""")
+"""
+)
 
 # Define a simplified "quantum gravity" model
 # Ising-like model on W33
@@ -485,7 +503,8 @@ print("\n" + "=" * 70)
 print("PART 7: THE ULTIMATE CONNECTION")
 print("=" * 70)
 
-print("""
+print(
+    """
 ╔═══════════════════════════════════════════════════════════════════╗
 ║            W33: THE THEORY OF EVERYTHING?                        ║
 ╚═══════════════════════════════════════════════════════════════════╝
@@ -515,7 +534,7 @@ We have shown that W33 encodes:
    ✓ Steinberg representation
    ✓ Langlands program
    ✓ p-adic structure (Q₃)
-   
+
 5. GROUP THEORY
    ✓ PSp(4,3) ≅ Ω(5,3)
    ✓ Building theory
@@ -546,7 +565,8 @@ Why does a 40-point geometry encode so much?
 Perhaps because:
   "The universe is written in the language of mathematics"
   and W33 is one of its fundamental WORDS.
-""")
+"""
+)
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # FINAL: THE 81 WORMHOLES
@@ -556,14 +576,15 @@ print("\n" + "=" * 70)
 print("EPILOGUE: THE 81 WORMHOLES")
 print("=" * 70)
 
-print("""
+print(
+    """
 π₁(W33) = F₈₁ - the free group on 81 generators.
 
 PHYSICAL INTERPRETATION:
   - Each generator is a WORMHOLE!
   - 81 independent tunnels through spacetime
   - Connecting different regions of the 40-point universe
-  
+
 The free group structure means:
   - Wormholes can be composed (traversed in sequence)
   - Wormholes have inverses (traverse backwards)
@@ -574,7 +595,7 @@ This is the QUANTUM FOAM:
   - At Planck scale, spacetime topology fluctuates wildly
   - 81 fundamental fluctuation modes
   - Each mode contributes to the "vacuum energy"
-  
+
 The Steinberg representation (dim 81) captures:
   - How automorphisms of spacetime act on wormholes
   - The "gauge group" of quantum gravity
@@ -595,7 +616,8 @@ The Steinberg representation (dim 81) captures:
 ║              THE KEY TO THE UNIVERSE?                             ║
 ║                                                                   ║
 ╚═══════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 print("\n" + "★" * 70)
 print("      W33 EMERGENT SPACETIME EXPLORATION COMPLETE!")

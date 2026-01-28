@@ -97,9 +97,10 @@ def main():
     print(" SECTION 2: THE EXCEPTIONAL ISOMORPHISM")
     print("=" * 70)
 
-    print("""
+    print(
+        """
   THE KEY: There is an exceptional isomorphism of groups!
-  
+
   ╔═══════════════════════════════════════════════════════════════════╗
   ║                                                                   ║
   ║   PSp(4, F₃) ≅ W(E₆)    (as abstract groups!)                     ║
@@ -108,17 +109,18 @@ def main():
   ║   between finite groups of Lie type and Weyl groups.              ║
   ║                                                                   ║
   ╚═══════════════════════════════════════════════════════════════════╝
-  
+
   This explains everything:
-  
+
   • W33 is the polar graph of Sp(4, F₃)
   • Its automorphism group is PSp(4, F₃)
   • PSp(4, F₃) happens to be isomorphic to W(E₆)
   • Therefore |Aut(W33)| = |W(E₆)| = 51,840
-  
+
   The connection to E₆ is through this GROUP ISOMORPHISM,
   not through any direct correspondence of geometric objects!
-""")
+"""
+    )
 
     # =========================================================================
     # SECTION 3: WHY THE NUMBERS MATCH
@@ -196,7 +198,8 @@ def main():
     print(" SECTION 5: THE REFINED PICTURE")
     print("=" * 70)
 
-    print("""
+    print(
+        """
   ╔═══════════════════════════════════════════════════════════════════╗
   ║                     THE TRUE STRUCTURE                            ║
   ╠═══════════════════════════════════════════════════════════════════╣
@@ -222,7 +225,8 @@ def main():
   ║  connection is through the GROUP, not through geometry!           ║
   ║                                                                   ║
   ╚═══════════════════════════════════════════════════════════════════╝
-""")
+"""
+    )
 
     # =========================================================================
     # SECTION 6: WHAT IS GENUINELY DEEP
@@ -231,41 +235,43 @@ def main():
     print(" SECTION 6: WHAT IS GENUINELY DEEP")
     print("=" * 70)
 
-    print("""
+    print(
+        """
   GENUINE (not coincidental):
-  
+
   1. PSp(4, F₃) ≅ W(E₆)
      This exceptional isomorphism is a real theorem, discovered
      by studying the structure of finite simple groups.
-     
+
   2. The 27 appears in multiple places:
      • Non-neighbor count in W33
      • Index [W(E₆) : W(D₅)]
      • Dimension of E₆ fundamental representation
      • Dimension of Albert algebra J³(𝕆)
-     
+
      These are all related through the E₆ structure!
-     
+
   3. The 192 = |W(D₄)| and triality:
      • |W(D₄)| = 192 divides |W(E₆)| = 51,840
      • 51,840 = 192 × 270
      • D₄ triality is built into the E₆ structure
-     
+
   4. The eigenvalue structure:
      • Multiplicity 24 reflects D₄ ⊂ E₆
      • Multiplicity 15 reflects some other subgroup
      • The spectral decomposition encodes group theory!
-     
+
   COINCIDENTAL (probably):
-  
+
   1. 40 = D₅ root count
      The symplectic formula gives 40, D₅ formula gives 40.
      Same number, no known structural reason.
-     
-  2. 240 = E₈ root count  
+
+  2. 240 = E₈ root count
      Edge count formula gives 240, E₈ formula gives 240.
      Same number, no known structural reason.
-""")
+"""
+    )
 
     # =========================================================================
     # SECTION 7: THE HONEST CONCLUSION
@@ -274,40 +280,42 @@ def main():
     print(" SECTION 7: THE HONEST CONCLUSION")
     print("=" * 70)
 
-    print("""
+    print(
+        """
   ═══════════════════════════════════════════════════════════════════
   WHAT WE NOW UNDERSTAND:
   ═══════════════════════════════════════════════════════════════════
-  
+
   W33 connects to exceptional mathematics through ONE key fact:
-  
+
         PSp(4, F₃) ≅ W(E₆)
-        
+
   This group isomorphism is the "bridge" that explains:
     • Why |Aut(W33)| equals |W(E₆)|
     • Why the 27 and 24 appear with their E₆/D₄ meanings
     • Why W33 has rich structure related to exceptional algebra
-    
+
   The numerical coincidences (40, 240) may be just that - coincidences.
   Or they may point to deeper structure we don't yet understand.
-  
+
   ═══════════════════════════════════════════════════════════════════
   THE REMAINING MYSTERY:
   ═══════════════════════════════════════════════════════════════════
-  
+
   Is there a REASON why:
     • (3² + 1)(3 + 1) = 2 × 5 × 4 = |D₅ roots|?
     • 40 × 12 / 2 = |E₈ roots|?
-    
+
   These could be:
     1. Pure numerical coincidence (likely)
     2. Hints of deeper structure connecting Sp(4, F₃) to root systems
     3. Evidence that the "right" way to see W33 hasn't been found yet
-    
+
   The investigation continues...
-  
+
   ═══════════════════════════════════════════════════════════════════
-""")
+"""
+    )
 
     return True
 

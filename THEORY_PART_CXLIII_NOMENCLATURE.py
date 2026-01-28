@@ -21,7 +21,8 @@ print("=" * 70)
 print("PART CXLIII: UNIFIED NOMENCLATURE")
 print("=" * 70)
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════╗
 ║                    OFFICIAL NAMING CONVENTION                        ║
 ╠══════════════════════════════════════════════════════════════════════╣
@@ -79,7 +80,8 @@ print("""
 ║    NOT SRG:    μ varies (this is not the Schläfli graph!)           ║
 ║                                                                      ║
 ╚══════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =====================================================
 # VERIFICATION OF ALL CLAIMS
@@ -161,17 +163,18 @@ print("\n" + "=" * 70)
 print("KEY EQUIVALENCES (ALL VERIFIED)")
 print("=" * 70)
 
-print("""
+print(
+    """
 1. GRAPH ISOMORPHISMS:
    Sp₄(3) ≅ Witting orthogonality graph ≅ O(5,3) graph ≅ GQ(3,3) point graph
 
-2. GROUP ISOMORPHISMS:  
+2. GROUP ISOMORPHISMS:
    Aut(Sp₄(3)) ≅ W(E₆) ≅ G₃₄ ≅ O⁻(6,2) ≅ PSp(4,3).2
 
 3. QUANTUM STRUCTURE:
    40 Witting states form 40 orthonormal bases (GQ(3,3) lines)
    Each state in exactly 4 bases
-   
+
 4. INNER PRODUCT STRUCTURE:
    |⟨ψ|φ⟩|² = 0 ↔ orthogonal ↔ adjacent in Sp₄(3)
    |⟨ψ|φ⟩|² = 1/3 ↔ non-orthogonal ↔ non-adjacent
@@ -179,7 +182,8 @@ print("""
 5. STABILIZER:
    |Stab(v)| = 51840/40 = 1296 = 2⁴ × 3⁴
    Contains GL(2, F₃) factor (order 48)
-""")
+"""
+)
 
 # =====================================================
 # CONNECTION TO ORIGINAL THEORY
@@ -189,11 +193,12 @@ print("\n" + "=" * 70)
 print("CONNECTION TO PRIOR WORK")
 print("=" * 70)
 
-print("""
+print(
+    """
 RELATIONSHIP TO PRIOR "W33" INVESTIGATIONS:
 ===========================================
 
-The structure we called "W33" throughout Parts I-CXXXII 
+The structure we called "W33" throughout Parts I-CXXXII
 is definitively identified as Sp₄(3), the symplectic polar graph.
 
 Key milestones:
@@ -210,7 +215,8 @@ The quantum physics significance:
 - Optimal MUB-like structure in dimension 4
 - Connection to E₆ exceptional symmetry
 - Triflection (order-3) quantum gates
-""")
+"""
+)
 
 # =====================================================
 # TRIFLECTION GENERATORS SUMMARY
@@ -220,7 +226,8 @@ print("\n" + "=" * 70)
 print("TRIFLECTION GENERATORS (FROM VLASOV)")
 print("=" * 70)
 
-print("""
+print(
+    """
 The 4 triflection generators of W(E₆) acting on ℂ⁴:
 
 R_k = I + (ω - 1)|φ_k⟩⟨φ_k|   where ω = e^{2πi/3}
@@ -235,7 +242,8 @@ Properties:
 - det(R_k) = ω² (complex reflections)
 - ⟨R₁, R₂, R₃, R₄⟩ = G₃₄ ≅ W(E₆)
 - Transitive action on all 40 Witting states
-""")
+"""
+)
 
 # =====================================================
 # THE MASTER THEOREM
@@ -245,7 +253,8 @@ print("\n" + "=" * 70)
 print("THE MASTER THEOREM")
 print("=" * 70)
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════╗
 ║                                                                      ║
 ║  THEOREM (Sp₄(3)-Witting Correspondence):                            ║
@@ -271,7 +280,8 @@ print("""
 ║  acts transitively on all these structures.                          ║
 ║                                                                      ║
 ╚══════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("PART CXLIII COMPLETE - NOMENCLATURE ESTABLISHED")

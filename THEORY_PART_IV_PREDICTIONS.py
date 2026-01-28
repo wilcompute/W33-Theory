@@ -10,13 +10,15 @@ from W33 that can be tested against experiment.
 import math
 from fractions import Fraction
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════╗
 ║             THEORY OF EVERYTHING - PART IV                           ║
 ║                                                                      ║
 ║              PREDICTIONS AND EXPERIMENTAL TESTS                      ║
 ╚══════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # PRECISION CALCULATIONS
@@ -102,7 +104,8 @@ print("MASS RATIO PREDICTIONS")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 Mass ratios in W33 should come from the representation structure
 of E6 and its subgroups. Key numbers:
 
@@ -111,7 +114,8 @@ of E6 and its subgroups. Key numbers:
   3 = number of generations
 
 Let's see what ratios emerge naturally:
-""")
+"""
+)
 
 # Top/Bottom mass ratio
 m_top = 172.76  # GeV
@@ -172,7 +176,8 @@ print("GENERATION STRUCTURE")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 WHY EXACTLY 3 GENERATIONS?
 
 In W33:
@@ -182,7 +187,7 @@ In W33:
 
 This is not a choice - it's FORCED by the arithmetic:
   3⁴ = 81 = 3 × 27
-  
+
 The only factorization is 3 × 27. Not 9 × 9, not 27 × 3.
 (Actually 81 = 9 × 9 = 27 × 3 are also factorizations,
 but only 3 × 27 matches E6 representation theory.)
@@ -191,7 +196,8 @@ PREDICTION: There are EXACTLY 3 generations.
   • 4th generation: FORBIDDEN
   • Hidden generations: FORBIDDEN
   • Any deviation: W33 falsified
-""")
+"""
+)
 
 # =============================================================================
 # DARK MATTER PREDICTION
@@ -202,21 +208,23 @@ print("DARK MATTER PREDICTION")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 From Part II, we derived:
 
   E7 decomposition: 56 → 27 + 27* + 1 + 1
-  
+
   Visible: 27 (Standard Model)
   Hidden: 29 (Dark sector - the 27* + 2 singlets)
-  
+
 But this is the FIELD CONTENT, not the MASS DENSITY.
 
 For mass density, we need to account for:
   1. Number of degrees of freedom
   2. Thermal history
   3. Mass scales
-""")
+"""
+)
 
 # Observed ratio
 dm_ratio_obs = 5.4  # Dark/Visible ≈ 5.4
@@ -276,16 +284,18 @@ print("COSMOLOGICAL CONSTANT")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 The cosmological constant problem: Why is Λ so small?
 
   Observed: Λ ≈ 10⁻¹²² (in Planck units)
   Naïve QFT: Λ ~ 1 (in Planck units)
-  
+
   This is off by 122 orders of magnitude!
 
 W33 APPROACH:
-""")
+"""
+)
 
 # The number 122 is interesting
 print("═══ The Number 122 ═══")
@@ -330,17 +340,19 @@ print("PROTON DECAY PREDICTION")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 In GUT theories, proton decay is mediated by heavy gauge bosons.
 
 Standard GUT prediction:
   τ_p ~ 10³⁴ - 10³⁶ years (model-dependent)
-  
+
 Current limit:
   τ_p > 2.4 × 10³⁴ years (Super-Kamiokande)
 
 W33 PREDICTION:
-""")
+"""
+)
 
 # W33 prediction for proton lifetime
 print("═══ W33 Analysis ═══")
@@ -375,11 +387,13 @@ print("NEUTRINO MASSES")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 Neutrino masses are tiny: m_ν ~ 0.01 - 0.1 eV
 
 W33 EXPLANATION:
-""")
+"""
+)
 
 print("═══ Seesaw Mechanism ═══")
 print()
@@ -458,7 +472,8 @@ print("SUMMARY OF TESTABLE PREDICTIONS")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 ╔════════════════════════════════════════════════════════════════════════════╗
 ║  QUANTITY              W33 FORMULA              PREDICTED    OBSERVED     ║
 ╠════════════════════════════════════════════════════════════════════════════╣
@@ -477,7 +492,8 @@ print("""
 ║  Proton lifetime       ~10³⁵ years              Testable     ⏳ 2027+     ║
 ║  M_SUSY (GeV)          M_EW×√(90/40)            ~370         ⏳ TBD       ║
 ╚════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # FALSIFICATION CRITERIA
@@ -488,28 +504,29 @@ print("FALSIFICATION CRITERIA")
 print("=" * 72)
 print()
 
-print("""
+print(
+    """
 W33 THEORY WOULD BE FALSIFIED IF:
 
   1. A 4th generation is discovered
      → W33 requires exactly 3 generations (81/27 = 3)
-     
+
   2. sin²θ_W ≠ 40/173 beyond 5σ
      → MOLLER at JLab (2025-2028): precision ±0.00003
      → Must equal 0.231214...
-     
+
   3. Ω_DM/Ω_b ≠ 27/5 beyond 5σ
      → CMB-S4 (2027-2035): precision ±0.02
      → Must equal 5.4
-     
+
   4. m_t/v ≠ √(40/81) beyond 5σ
      → HL-LHC (2029-2041): m_t to ±0.2 GeV
      → Must equal 0.7027...
-     
+
   5. More than 2 gravitational wave polarizations detected
      → LISA (2030s): GW polarization tests
      → Must be exactly 2 (from 90/45)
-     
+
   6. Proton decay not observed by 10³⁶ years
      → Hyper-Kamiokande (2027-2040)
      → Should see events if τ ~ 10³⁵ years
@@ -520,7 +537,8 @@ W33 THEORY WOULD BE FALSIFIED IF:
 
 These are CONCRETE, TESTABLE predictions with TIMELINES.
 W33 is falsifiable - it is real science.
-""")
+"""
+)
 
 print("=" * 72)
 print("END OF PART IV: PREDICTIONS AND TESTS")

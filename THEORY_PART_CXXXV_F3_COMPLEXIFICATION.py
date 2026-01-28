@@ -30,7 +30,8 @@ print("=" * 70)
 
 omega = np.exp(2j * np.pi / 3)
 
-print("""
+print(
+    """
 The multiplicative group F₃* = {1, 2} ≅ Z/2Z has characters:
 - Trivial character: χ₀(1) = χ₀(2) = 1
 - Non-trivial character: χ₁(1) = 1, χ₁(2) = -1
@@ -40,11 +41,12 @@ But for the ADDITIVE character F₃ → ℂ*, we use:
 
 This gives THREE additive characters:
   ψ₀(x) = 1           (trivial)
-  ψ₁(x) = ω^x         (generator)  
+  ψ₁(x) = ω^x         (generator)
   ψ₂(x) = ω^{2x}      (conjugate)
 
 These satisfy orthogonality: Σₓ ψₐ(x) ψ̄ᵦ(x) = 3δₐᵦ
-""")
+"""
+)
 
 # Verify character orthogonality
 F3 = [0, 1, 2]
@@ -61,7 +63,8 @@ print("\n" + "=" * 70)
 print("THE COMPLEXIFIED SYMPLECTIC FORM")
 print("=" * 70)
 
-print("""
+print(
+    """
 Over F₃⁴, the symplectic form is:
   ω(x,y) = x₁y₂ - x₂y₁ + x₃y₄ - x₄y₃  (mod 3)
 
@@ -74,9 +77,10 @@ When ω(x,y) = 0 (symplectically orthogonal):
 
 When ω(x,y) ≠ 0:
   The phase ω^{ω(x,y)} gives non-trivial interference
-  
+
 This is why the Witting states have |⟨ψ|φ⟩|² ∈ {0, 1/3}!
-""")
+"""
+)
 
 # =====================================================
 # EXPLICIT WITTING STATES FROM F₃ COORDINATES
@@ -234,7 +238,8 @@ print("\n" + "=" * 70)
 print("THE TENSOR PRODUCT CONSTRUCTION")
 print("=" * 70)
 
-print("""
+print(
+    """
 A better approach: C⁴ = C² ⊗ C²
 
 The Witting states can be built from:
@@ -249,7 +254,8 @@ KEY FORMULA (from Vlasov):
 The 40 Witting states include:
 - 4 standard basis states: |e₀⟩, |e₁⟩, |e₂⟩, |e₃⟩
 - 36 superposition states with ω phases
-""")
+"""
+)
 
 
 def correct_witting_states():
@@ -334,7 +340,8 @@ print("\n" + "=" * 70)
 print("THE FUNDAMENTAL ISOMORPHISM")
 print("=" * 70)
 
-print("""
+print(
+    """
 THEOREM: Sp₄(3) has a UNIQUE quantum realization in ℂ⁴
 with inner products |⟨ψ|φ⟩|² ∈ {0, 1/3}.
 
@@ -352,7 +359,8 @@ PROOF SKETCH:
 
 The Witting polytope is the UNIVERSAL CONSTRUCTION:
 240 vertices in ℂ⁴ → 40 rays → Sp₄(3) orthogonality graph
-""")
+"""
+)
 
 # =====================================================
 # CONNECTION TO REPRESENTATION THEORY
@@ -362,7 +370,8 @@ print("\n" + "=" * 70)
 print("REPRESENTATION THEORY CONNECTION")
 print("=" * 70)
 
-print("""
+print(
+    """
 The 40 Witting states form:
 - An EQUIANGULAR TIGHT FRAME in ℂ⁴
 - With angle arccos(1/√3) between non-orthogonal pairs
@@ -379,9 +388,10 @@ The 27 non-neighbors of any vertex correspond to:
 
 This triple appearance of 27 is NOT coincidental:
   27 = dim(J₃(𝕆)) = [W(E₆):W(D₅)] = lines on cubic surface
-  
+
 where J₃(𝕆) is the Albert algebra (exceptional Jordan algebra over octonions).
-""")
+"""
+)
 
 # =====================================================
 # VERIFY THE STRUCTURE VIA ADJACENCY
@@ -431,21 +441,24 @@ print(f"\nF₃ representatives by support size:")
 for s, count in sorted(support_sizes.items()):
     print(f"  Support {s}: {count} points")
 
-print("""
+print(
+    """
 Support analysis:
   Support 1: Standard basis states
-  Support 2: 2-superposition states  
+  Support 2: 2-superposition states
   Support 3: 3-superposition states
   Support 4: Full superposition states
-  
+
 This matches the Witting state structure!
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("PART CXXXV COMPLETE")
 print("=" * 70)
 
-print("""
+print(
+    """
 KEY FINDINGS:
 =============
 
@@ -471,4 +484,5 @@ NAMING CONVENTION ADOPTED:
   Quantum context: "Witting graph"
   Geometry context: GQ(3,3) collinearity graph
   RETIRED: "W33"
-""")
+"""
+)

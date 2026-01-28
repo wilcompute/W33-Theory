@@ -27,7 +27,8 @@ print("\n" + "=" * 70)
 print("SECTION 1: GAUGE ANOMALIES")
 print("=" * 70)
 
-print("""
+print(
+    """
 GAUGE ANOMALIES arise when quantum effects break a classical symmetry.
 
 For a chiral gauge theory (like the SM) to be consistent:
@@ -43,7 +44,8 @@ TYPES OF ANOMALIES:
   6. [Grav]²U(1)  - Gravitational anomaly
 
 For each, the sum over all left-handed fermions must vanish.
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 2: STANDARD MODEL PARTICLE CONTENT
@@ -53,7 +55,8 @@ print("\n" + "=" * 70)
 print("SECTION 2: SM PARTICLE CONTENT")
 print("=" * 70)
 
-print("""
+print(
+    """
 Standard Model fermions (one generation, LEFT-HANDED):
 
   Particle    SU(3)   SU(2)   U(1)_Y
@@ -67,7 +70,8 @@ Standard Model fermions (one generation, LEFT-HANDED):
 
 Note: Right-handed fermions count with opposite chirality,
 so we treat them as left-handed anti-particles with opposite charges.
-""")
+"""
+)
 
 # SM particles (Y is weak hypercharge)
 # Format: (name, SU(3)_dim, SU(2)_dim, Y, chirality_factor)
@@ -171,7 +175,8 @@ print("\n" + "=" * 70)
 print("SECTION 4: DETAILED [U(1)]³ CALCULATION")
 print("=" * 70)
 
-print("""
+print(
+    """
 The [U(1)]³ anomaly is:
   A = Σ d(SU3) × d(SU2) × Y³
 
@@ -186,7 +191,8 @@ Total = 1/36 - 8/9 + 1/9 - 1/4 + 1
       = 1/36 - 32/36 + 4/36 - 9/36 + 36/36
       = (1 - 32 + 4 - 9 + 36)/36
       = 0/36 = 0 ✓
-""")
+"""
+)
 
 # Verify
 A_U1_detailed = (
@@ -206,7 +212,8 @@ print("\n" + "=" * 70)
 print("SECTION 5: W33 PARTICLE CONTENT")
 print("=" * 70)
 
-print("""
+print(
+    """
 W33 has 40 vertices. We assign them to particles as:
 
 QUARKS (18 vertices):
@@ -228,21 +235,24 @@ Total: 18 + 12 + 10 = 40 ✓
 
 The key question: Does this respect anomaly cancellation?
 Answer: YES, because we have COMPLETE generations!
-""")
+"""
+)
 
 # W33 has 3 complete generations
 # Each generation independently cancels anomalies
 # Plus gauge bosons and scalars (don't contribute to chiral anomalies)
 
-print("""
+print(
+    """
 W33 ANOMALY STRUCTURE:
   - 3 generations × (Q, u_R, d_R, L, e_R) = 15 × 3 = 45 chiral fermions
   - But 40 vertices...
-  
+
 Resolution: The 40 vertices represent GAUGE MULTIPLETS, not individual fields!
   - Q_L (3,2): 1 vertex represents a color triplet, weak doublet
   - This matches the SRG structure!
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 6: W33 QUANTUM NUMBERS
@@ -252,7 +262,8 @@ print("\n" + "=" * 70)
 print("SECTION 6: W33 VERTEX QUANTUM NUMBERS")
 print("=" * 70)
 
-print("""
+print(
+    """
 W33 eigenvalue multiplicities: (1, 24, 15)
 
 INTERPRETATION:
@@ -263,16 +274,17 @@ INTERPRETATION:
 In SU(5) GUT language:
   24 = adjoint representation (gauge bosons)
   15 = antisymmetric tensor (contributes to fermions)
-  
+
   Fermions of SU(5): 5̄ ⊕ 10 per generation
-    5̄: (d_R, L) 
+    5̄: (d_R, L)
     10: (u_R, Q, e_R)
-    
+
   3 generations: 3 × (5 + 10) = 45 Weyl fermions
-  
+
 W33's 40 vertices encode the MAXIMAL STRUCTURE
 consistent with anomaly cancellation!
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 7: THE 40 = 24 + 15 + 1 DECOMPOSITION
@@ -282,18 +294,19 @@ print("\n" + "=" * 70)
 print("SECTION 7: THE 40 = 24 + 15 + 1 DECOMPOSITION")
 print("=" * 70)
 
-print("""
+print(
+    """
 The eigenvalue decomposition 40 = 1 + 24 + 15 matches SU(5):
 
 1. SINGLET (m₁ = 1):
    The Higgs field that breaks SU(5) → SM
-   
+
 2. ADJOINT (m₂ = 24):
    SU(5) gauge bosons:
    - 8 gluons (SU(3))
    - 3 W bosons + 1 B boson (electroweak)
    - 12 X,Y bosons (mediating proton decay)
-   
+
 3. FERMION-RELATED (m₃ = 15):
    This is the antisymmetric 15 of SU(5)
    Contains parts of the fermion structure
@@ -302,7 +315,8 @@ Total: 1 + 24 + 15 = 40 ✓
 
 The W33 structure AUTOMATICALLY incorporates
 anomaly cancellation through its SU(5) embedding!
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 8: MIXED ANOMALIES
@@ -312,7 +326,8 @@ print("\n" + "=" * 70)
 print("SECTION 8: GLOBAL AND MIXED ANOMALIES")
 print("=" * 70)
 
-print("""
+print(
+    """
 Beyond gauge anomalies, there are GLOBAL anomalies:
 
 1. WITTEN SU(2) ANOMALY:
@@ -331,7 +346,8 @@ Beyond gauge anomalies, there are GLOBAL anomalies:
    - W33 inherits this from complete generations
 
 All anomaly conditions satisfied by W33!
-""")
+"""
+)
 
 # Verify gravitational anomaly
 grav_per_gen = (1 / 6) * 6 + (-2 / 3) * 3 + (1 / 3) * 3 + (-1 / 2) * 2 + 1
@@ -345,7 +361,8 @@ print("\n" + "=" * 70)
 print("SECTION 9: ANOMALY-DERIVED PREDICTIONS")
 print("=" * 70)
 
-print("""
+print(
+    """
 Anomaly cancellation CONSTRAINS the theory:
 
 1. NUMBER OF GENERATIONS:
@@ -369,7 +386,8 @@ W33's 77 GeV dark matter candidate:
    - Must be a SINGLET or complete multiplet
    - A Majorana fermion (self-conjugate) is anomaly-free ✓
    - A real scalar is also allowed ✓
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 10: SUMMARY
@@ -397,7 +415,8 @@ results = {
 
 with open("PART_LXXIX_anomalies.json", "w") as f:
     json.dump(results, f, indent=2, default=int)
-print("""
+print(
+    """
 ANOMALY CANCELLATION IN W33!
 
 Key discoveries:
@@ -424,5 +443,6 @@ W33 passes the hardest consistency test:
 QUANTUM ANOMALY CANCELLATION!
 
 Results saved to PART_LXXIX_anomalies.json
-""")
+"""
+)
 print("=" * 70)

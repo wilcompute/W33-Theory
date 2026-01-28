@@ -26,7 +26,8 @@ print("\n" + "=" * 70)
 print("SECTION 1: THE MATTER-ANTIMATTER PUZZLE")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE BARYON ASYMMETRY:
 
 The observable universe contains:
@@ -48,13 +49,15 @@ For baryogenesis, we need:
 
 The Standard Model has ALL THREE... but not enough CP violation!
 BSM physics (like W33) must provide additional CP violation.
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("SECTION 2: CP VIOLATION IN THE STANDARD MODEL")
 print("=" * 70)
 
-print("""
+print(
+    """
 CKM MATRIX:
 
 Quark mixing is described by the 3×3 CKM matrix V_CKM.
@@ -71,7 +74,8 @@ PMNS MATRIX:
 Lepton mixing also has CP phase(s).
 The Dirac phase δ_CP is being measured by DUNE/T2K.
 Preliminary hints: δ_CP ~ -90° (maximal!)
-""")
+"""
+)
 
 # CKM Jarlskog
 J_CKM = 3e-5
@@ -81,7 +85,8 @@ print("\n" + "=" * 70)
 print("SECTION 3: CP VIOLATION IN W33")
 print("=" * 70)
 
-print("""
+print(
+    """
 WHERE DOES CP VIOLATION COME FROM IN W33?
 
 The W33 graph is REAL - the adjacency matrix A has real entries.
@@ -103,27 +108,30 @@ In W33, CP corresponds to a specific automorphism:
 
 CP violation occurs when the Yukawa sector
 doesn't respect this involution!
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("SECTION 4: THE CP PHASE FROM W33 STRUCTURE")
 print("=" * 70)
 
-print("""
+print(
+    """
 W33 CP PHASE FORMULA:
 
-The CP violating phase δ comes from the ASYMMETRY 
+The CP violating phase δ comes from the ASYMMETRY
 in the eigenvalue structure:
 
   e₁ = 12, e₂ = 2, e₃ = -4
 
 The signed asymmetry:
   A = (e₁ + e₂ + e₃) = 12 + 2 - 4 = 10
-  
+
 But trace(A) = 0, so this is subtle...
 
 BETTER: Phase from eigenvalue RATIOS
-""")
+"""
+)
 
 # Eigenvalue phase analysis
 # If we embed in complex numbers, we can define phases
@@ -150,7 +158,8 @@ for name, val in candidates:
 # The F₃ phase is particularly natural
 omega_phase = 2 * np.pi / 3  # 120 degrees
 
-print(f"""
+print(
+    f"""
 THE NATURAL CHOICE: δ = 2π/3 (120°)
 
 This comes from F₃ = {{0, 1, 2}} having a natural embedding:
@@ -159,13 +168,15 @@ This comes from F₃ = {{0, 1, 2}} having a natural embedding:
   2 → ω² = e^(4πi/3)
 
 The primitive cube root of unity ω introduces phase 2π/3!
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("SECTION 5: CKM AND PMNS FROM W33")
 print("=" * 70)
 
-print("""
+print(
+    """
 QUARK MIXING (CKM):
 
 The CKM matrix is approximately:
@@ -177,7 +188,8 @@ V_CKM ≈ ⎜  -λ     1-λ²/2      Aλ²     ⎟
 Wolfenstein parameters: λ ≈ 0.22, A ≈ 0.81, ρ ≈ 0.14, η ≈ 0.35
 
 W33 CONNECTION:
-""")
+"""
+)
 
 # Wolfenstein λ from W33
 lambda_wolf = np.sqrt(lam / k)  # sqrt(2/12) = sqrt(1/6) ≈ 0.408
@@ -194,24 +206,27 @@ cabibbo = (lam) / (k - lam)  # 2/10 = 0.2
 print(f"  W33 candidate 4: λ/(k-λ) = {cabibbo:.4f}")
 print(f"  MATCH! λ/(k-λ) = 2/10 = 0.20 ≈ sin θ_C ✓")
 
-print(f"""
+print(
+    f"""
 LEPTON MIXING (PMNS):
 
 Lepton mixing angles are LARGE (unlike CKM):
   θ₁₂ ≈ 33° (solar)
-  θ₂₃ ≈ 49° (atmospheric) 
+  θ₂₃ ≈ 49° (atmospheric)
   θ₁₃ ≈ 8.5° (reactor)
 
 We already derived from W33:
   sin²θ₁₂ = k/v = {k/v} = {k/v:.3f} → θ₁₂ = {np.degrees(np.arcsin(np.sqrt(k/v))):.1f}°
   sin²θ₂₃ = 1/2 + μ/(2v) = {0.5 + mu/(2*v):.3f} → θ₂₃ = {np.degrees(np.arcsin(np.sqrt(0.5 + mu/(2*v)))):.1f}°
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("SECTION 6: THE JARLSKOG INVARIANT FROM W33")
 print("=" * 70)
 
-print("""
+print(
+    """
 JARLSKOG INVARIANT:
 
 For CKM: J = c₁₂ s₁₂ c₂₃ s₂₃ c₁₃² s₁₃ sin δ
@@ -221,7 +236,8 @@ For PMNS: J_PMNS has the same form with lepton angles.
 W33 PREDICTION:
 
 Using the natural CP phase δ = 2π/3:
-""")
+"""
+)
 
 # PMNS angles from W33
 s12_sq = k / v
@@ -256,7 +272,8 @@ print("\n" + "=" * 70)
 print("SECTION 7: LEPTOGENESIS FROM W33")
 print("=" * 70)
 
-print("""
+print(
+    """
 LEPTOGENESIS MECHANISM:
 
 Heavy right-handed neutrinos (mass ~ M_R) decay:
@@ -277,7 +294,8 @@ With W33 values:
   m_D ~ ε_hier × v_H (Dirac mass with hierarchy)
 
 This gives sufficient asymmetry for η ~ 10⁻¹⁰!
-""")
+"""
+)
 
 # Rough leptogenesis calculation
 M_R = 5e15  # GeV
@@ -302,7 +320,8 @@ print("\n" + "=" * 70)
 print("SECTION 8: STRONG CP PROBLEM")
 print("=" * 70)
 
-print("""
+print(
+    """
 THE STRONG CP PROBLEM:
 
 QCD allows a CP-violating term:
@@ -325,7 +344,8 @@ W33 PREDICTION: θ = 0 naturally!
 
 The positivity of e₂ means no imaginary phase in the gluon sector.
 Strong CP is solved by W33 structure!
-""")
+"""
+)
 
 print(f"\nW33 STRONG CP:")
 print(f"  E₂ eigenvalue: e₂ = {e2} (positive, real)")
@@ -336,7 +356,8 @@ print("\n" + "=" * 70)
 print("SECTION 9: ELECTRIC DIPOLE MOMENTS")
 print("=" * 70)
 
-print("""
+print(
+    """
 EDM PREDICTIONS:
 
 Electric Dipole Moments (EDMs) are sensitive to CP violation.
@@ -350,12 +371,13 @@ W33 PREDICTIONS:
 
 With θ = 0 (from E₂ structure):
   d_n from QCD: ~0 (strong CP solved!)
-  
+
 With δ_CP = 2π/3 in leptons:
   d_e from 2-loop: ~ 10⁻³⁸ e·cm (unobservable)
 
 W33 predicts SMALL EDMs, consistent with all limits!
-""")
+"""
+)
 
 print(f"\nW33 EDM PREDICTIONS:")
 print(f"  d_n: ~0 (strong CP = 0)")
@@ -366,7 +388,8 @@ print("\n" + "=" * 70)
 print("SECTION 10: SUMMARY OF CP VIOLATION IN W33")
 print("=" * 70)
 
-print(f"""
+print(
+    f"""
 CP VIOLATION SUMMARY!
 
 SOURCES OF CP VIOLATION IN W33:
@@ -397,13 +420,15 @@ The CP violation comes from:
   - See-saw with M_R ~ M_GUT
 
 All consistent with observations!
-""")
+"""
+)
 
 print("\n" + "=" * 70)
 print("PART XCIX CONCLUSIONS")
 print("=" * 70)
 
-print("""
+print(
+    """
 CP VIOLATION FROM W33!
 
 KEY RESULTS:
@@ -417,13 +442,14 @@ KEY RESULTS:
 
 4. STRONG CP SOLVED: θ = 0 from E₂ positivity
 
-5. LEPTOGENESIS WORKS: 
+5. LEPTOGENESIS WORKS:
    M_R ~ M_GUT, sufficient CP asymmetry
 
 6. EDMS: Predicted small, consistent with limits
 
 THE MATTER-ANTIMATTER ASYMMETRY IS EXPLAINED!
-""")
+"""
+)
 
 # Save results
 results = {

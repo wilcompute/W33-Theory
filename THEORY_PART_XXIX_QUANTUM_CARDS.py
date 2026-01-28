@@ -13,7 +13,8 @@ import math
 
 import numpy as np
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                 W33 THEORY OF EVERYTHING - PART XXIX                         ║
@@ -23,7 +24,8 @@ print("""
 ║              Quantum Information Implementation of W33                       ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 1: THE 40 STATES IN CP³
@@ -34,7 +36,8 @@ print("SECTION 1: THE 40 QUANTUM STATES IN CP³")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ═══ The Quantum Card System ═══
 
 The 40 points of W33 can be realized as 40 quantum states in CP³,
@@ -50,7 +53,8 @@ Points in PG(3,3) are equivalence classes [x₀:x₁:x₂:x₃] where xᵢ ∈ G
 We map these to quantum states using:
 
   GF(3) → ℂ:  0 → 1,  1 → ω,  2 → ω²  where ω = e^(2πi/3)
-""")
+"""
+)
 
 # Define the cube root of unity
 omega = cmath.exp(2j * math.pi / 3)
@@ -142,7 +146,8 @@ print("SECTION 3: ORTHOGONALITY STRUCTURE (LINES)")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ═══ Lines in W33 ═══
 
 Two quantum states |ψ⟩ and |φ⟩ are "collinear" in W33 if they share a line.
@@ -150,7 +155,8 @@ In quantum terms, this corresponds to a specific inner product relationship.
 
 For the Witting configuration, orthogonality is more subtle than ⟨ψ|φ⟩ = 0.
 The lines are defined by the finite geometry structure.
-""")
+"""
+)
 
 
 def normalize_point(vec):
@@ -224,13 +230,15 @@ print("SECTION 4: INNER PRODUCT STRUCTURE")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ═══ The Gram Matrix ═══
 
 The Gram matrix G has entries G_ij = |⟨ψᵢ|ψⱼ⟩|²
 
 This encodes all pairwise relationships between the 40 states.
-""")
+"""
+)
 
 # Compute Gram matrix
 n = len(states)
@@ -266,7 +274,8 @@ print("SECTION 5: CONTEXTUALITY AND KOCHEN-SPECKER THEOREM")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ═══ Quantum Contextuality ═══
 
 The Kochen-Specker theorem states that quantum mechanics cannot be
@@ -294,13 +303,14 @@ Suppose we try to assign values v(ψ) ∈ {0, 1} to each state |ψ⟩.
 Requirements:
   • For each line (context), exactly ONE state has v = 1
     (because we measure ONE outcome per context)
-  
+
   • Each state participates in multiple contexts
-  
+
   • The W33 geometry makes these constraints UNSATISFIABLE
 
 This is the Kochen-Specker contradiction!
-""")
+"""
+)
 
 # Demonstrate the counting argument
 print("═══ Counting Argument ═══")
@@ -348,7 +358,8 @@ print("SECTION 6: QUANTUM CRYPTOGRAPHY (VLASOV'S PROTOCOL)")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ═══ Quantum Key Distribution with 40 Cards ═══
 
 Vlasov (2001) proposed using the Witting configuration for quantum
@@ -383,7 +394,8 @@ An eavesdropper (Eve) cannot:
 
 The 40-card system is MAXIMALLY SECURE in a specific sense:
 it uses the minimum number of states needed for unconditional security.
-""")
+"""
+)
 
 # Simulate protocol efficiency
 print("═══ Protocol Parameters ═══")
@@ -427,7 +439,8 @@ print("SECTION 7: QUANTUM COMPUTER IMPLEMENTATION")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ═══ Qudit Implementation ═══
 
 The 40 states live in CP³ (4-dimensional Hilbert space).
@@ -450,7 +463,8 @@ To prepare state |ψ⟩ = (z₀, z₁, z₂, z₃) from |00⟩:
 General 2-qubit state requires O(15) elementary gates.
 
 ═══ Sample Circuit for State 1 ═══
-""")
+"""
+)
 
 # Show circuit for first state
 first_state = states[0]
@@ -472,13 +486,14 @@ print("SECTION 8: EXPERIMENTAL REALIZATION")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ═══ Photonic Implementation ═══
 
 The 40 states can be realized using SINGLE PHOTONS in 4 modes:
 
   Mode encoding: 4 spatial paths or 4 time bins
-  
+
   State: |ψ⟩ = z₀|mode_0⟩ + z₁|mode_1⟩ + z₂|mode_2⟩ + z₃|mode_3⟩
 
 Components:
@@ -492,7 +507,7 @@ Components:
 Use 4 internal states of a trapped ion:
 
   Example: ⁴⁰Ca⁺ with 4 Zeeman sublevels
-  
+
   |ψ⟩ = z₀|m=-3/2⟩ + z₁|m=-1/2⟩ + z₂|m=+1/2⟩ + z₃|m=+3/2⟩
 
 Control: Microwave or Raman transitions between levels.
@@ -505,7 +520,8 @@ Use 4 lowest levels of a transmon qudit:
 
 Advantage: Fast gates, scalability
 Challenge: Maintaining coherence in higher levels
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 9: VERIFICATION EXPERIMENT
@@ -516,7 +532,8 @@ print("SECTION 9: VERIFICATION EXPERIMENT DESIGN")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ═══ Testing W33 Contextuality ═══
 
 EXPERIMENT: Verify the Kochen-Specker contradiction using W33 states.
@@ -553,7 +570,8 @@ then this experiment directly probes the "fabric of spacetime"!
 
 The contextuality isn't just a quantum curiosity -
 it's the REASON why physics has the structure it does.
-""")
+"""
+)
 
 # =============================================================================
 # SECTION 10: THE 40 CARDS AS FOUNDATION OF PHYSICS
@@ -564,7 +582,8 @@ print("SECTION 10: THE 40 CARDS AS FOUNDATION OF PHYSICS")
 print("=" * 80)
 print()
 
-print("""
+print(
+    """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                    THE 40 QUANTUM CARDS: SUMMARY                             ║
@@ -595,7 +614,8 @@ print("""
 ║    • Foundation of future quantum computing                                  ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-""")
+"""
+)
 
 # Final state summary
 print("═══ The Complete 40 Quantum Cards ═══")

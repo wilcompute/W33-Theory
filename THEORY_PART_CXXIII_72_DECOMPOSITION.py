@@ -65,7 +65,7 @@ def main():
 
     meaning = """
   THE DECOMPOSITION 72 = 40 + 32:
-  
+
   ┌─────────────────────────────────────────────────────────────────┐
   │                                                                 │
   │  40 = D₅ ROOTS = VECTOR REPRESENTATION                          │
@@ -87,12 +87,12 @@ def main():
   │    • Represent: matter, particles, what we observe              │
   │                                                                 │
   └─────────────────────────────────────────────────────────────────┘
-  
+
   THE PROFOUND INSIGHT:
-  
+
     W33 captures the VECTOR (gauge) part of E₆ structure!
     The SPINOR (matter) part is "external" to W33!
-    
+
     This is like:
       W33 = the stage (40 vertices = gauge structure)
       Matter = the actors (32 spinors = particles)
@@ -141,17 +141,17 @@ def main():
 
     twentyseven = """
   THE QUOTIENT |W(E₆)| / |W(D₅)| = 27 IS SIGNIFICANT!
-  
+
   Recall from W33:
     • 40 vertices decompose as 1 + 12 + 27
     • The 27 non-neighbors correspond to Albert algebra J³(𝕆)
-  
+
   Now we find:
     • |W(E₆)| / |W(D₅)| = 27
     • This is the index of D₅ Weyl group in E₆ Weyl group
-  
+
   THE CONNECTION:
-  
+
   ╔═══════════════════════════════════════════════════════════════════╗
   ║                                                                   ║
   ║  The 27 non-neighbors in W33 correspond to the 27 cosets          ║
@@ -163,17 +163,17 @@ def main():
   ║    • The 27 cosets act non-trivially on vertex structure          ║
   ║                                                                   ║
   ╚═══════════════════════════════════════════════════════════════════╝
-  
+
   DEEPER:
-  
+
     27 = dim(E₆ fundamental) = dim(J³(𝕆)) = |W(E₆)/W(D₅)|
-    
+
     The same 27 appears in:
       1. W33 vertex neighborhood (27 non-neighbors)
       2. Albert algebra (27 dimensions)
       3. E₆ fundamental representation (27 dimensions)
       4. Weyl group quotient (27 cosets)
-    
+
     This cannot be coincidence!
 """
     print(twentyseven)
@@ -187,35 +187,35 @@ def main():
 
     layers = """
   W33 HAS THREE STRUCTURAL LAYERS:
-  
+
   LAYER 1: VERTICES (40) = D₅ ROOTS
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     • The 40 vertices ARE the D₅ roots
     • They form the "scaffold" of the theory
     • Gauge structure / interactions
-  
-  LAYER 2: EDGES (240) = E₈ ROOTS  
+
+  LAYER 2: EDGES (240) = E₈ ROOTS
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     • The 240 edges correspond to E₈ roots
     • They encode all possible interactions
     • The "connections" between gauge states
-  
+
   LAYER 3: AUTOMORPHISMS (51,840) = W(E₆)
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     • The symmetry group IS the E₆ Weyl group
     • This acts on vertices, preserving edges
     • The "symmetry" of the theory
-  
+
   THE EXCEPTIONAL HIERARCHY:
-  
+
     E₈ ⊃ E₇ ⊃ E₆ ⊃ D₅ ⊃ D₄
-    
+
     In W33:
       • D₄: appears in eigenvalue multiplicity (24 roots)
       • D₅: appears in vertex count (40 roots)
       • E₆: appears in automorphism group (|W| = 51,840)
       • E₈: appears in edge count (240 roots)
-      
+
     ALL FOUR EXCEPTIONAL STRUCTURES IN ONE GRAPH!
 """
     print(layers)
@@ -229,37 +229,37 @@ def main():
 
     spinors = """
   THE 32 SPINORS ARE "EXTERNAL" TO W33
-  
+
   If 40 vertices = D₅ roots, then the 32 spinor roots of E₆ are NOT
   directly visible in W33's vertex set.
-  
+
   BUT THEY APPEAR IN:
-  
+
   1. THE EIGENVALUE STRUCTURE
      • W33 eigenvalues: 12 (×1), 2 (×24), -4 (×15)
      • Multiplicities sum to: 1 + 24 + 15 = 40 ✓
      • The 24 = D₄ roots already appear
      • 15 = dim(antisymmetric tensor of D₅) ?
-  
+
   2. THE NEIGHBORHOOD STRUCTURE
      • 12 neighbors = half of 24 = D₄ decomposition
      • 27 non-neighbors = E₆ fundamental
      • The 32 spinors "live between" vertices!
-  
+
   3. EDGE STRUCTURE
      • 240 edges > 72 E₆ roots
      • But 240 = E₈ roots!
      • E₈ ⊃ E₆ ⊃ D₅
      • The spinors ARE encoded in the edges!
-  
+
   SPECULATION:
-  
+
     The 32 spinors might correspond to special 32-element subsets
     of edges or to distinguished paths in W33.
-    
+
     Recall: 240 = 72 × 3 + 24
            240 = 40 × 6 (degree × vertices / 2)
-           
+
     There might be a natural 32-element structure hiding in W33.
 """
     print(spinors)
@@ -273,7 +273,7 @@ def main():
 
     gut = """
   IF W33 ENCODES A GRAND UNIFIED THEORY:
-  
+
   ┌─────────────────────────────────────────────────────────────────┐
   │                                                                 │
   │  E₆ GUT STRUCTURE:                                              │
@@ -312,7 +312,7 @@ def main():
 
     master = """
   THE W33 MASTER EQUATIONS:
-  
+
   ╔═══════════════════════════════════════════════════════════════════╗
   ║                                                                   ║
   ║   VERTEX EQUATION:     40 = D₅ roots = 8 × 5 = 1 + 12 + 27        ║
@@ -328,18 +328,18 @@ def main():
   ║   TRIALITY EQUATION:   3 generations from D₄ ⊂ D₅ triality        ║
   ║                                                                   ║
   ╚═══════════════════════════════════════════════════════════════════╝
-  
+
   THE UNIFIED INTERPRETATION:
-  
+
     W33 is the combinatorial realization of E₆/D₅ structure, where:
     • Vertices = gauge (vector) degrees of freedom
-    • External spinors = matter degrees of freedom  
+    • External spinors = matter degrees of freedom
     • Edges = interactions
     • Automorphisms = symmetry
-    
+
     The Standard Model emerges from this via:
     E₆ → SO(10) → SU(5) → SU(3)×SU(2)×U(1)
-    
+
     With 3 generations from D₄ triality!
 """
     print(master)
@@ -355,34 +355,34 @@ def main():
   ═══════════════════════════════════════════════════════════════════
   THE 72 = 40 + 32 DECOMPOSITION
   ═══════════════════════════════════════════════════════════════════
-  
+
   E₆ ROOTS DECOMPOSE AS:
     72 = 40 + 32
        = D₅ roots + spinors
        = W33 vertices + matter generations
-  
+
   THE KEY INSIGHT:
     W33's 40 vertices = D₅ roots (gauge/vector structure)
     The 32 spinors = matter (external to vertex set)
-    
+
   THE 27 UNIFICATION:
     |W(E₆)| / |W(D₅)| = 51,840 / 1,920 = 27
-    
+
     This same 27 appears as:
       • W33 non-neighbors
       • Albert algebra dimension
       • E₆ fundamental representation
       • Weyl group coset count
-  
+
   THE EXCEPTIONAL CHAIN IN W33:
     E₈ (240 edges) ⊃ E₆ (51,840 auts) ⊃ D₅ (40 verts) ⊃ D₄ (24 mult)
-  
+
   PHYSICAL INTERPRETATION:
     • W33 = gauge structure of unified theory
     • 32 spinors = matter (16 + 16̄ per generation)
     • 3 generations from D₄ triality
     • 240 edges = all interactions (including gravity?)
-  
+
   ═══════════════════════════════════════════════════════════════════
 """
     print(summary)
