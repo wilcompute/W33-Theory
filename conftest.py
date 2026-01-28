@@ -3,8 +3,8 @@ from pathlib import Path
 
 # Detect availability of optional heavy dependencies
 _optional_modules = {
-    'pandas': False,
-    'sage': False,
+    "pandas": False,
+    "sage": False,
 }
 for m in list(_optional_modules.keys()):
     try:
@@ -14,9 +14,13 @@ for m in list(_optional_modules.keys()):
         _optional_modules[m] = False
 
 import re
+
 _skip_triggers = {
-    'pandas': [re.compile(r"^\s*(import|from)\s+pandas\b", re.M)],
-    'sage': [re.compile(r"^\s*(import|from)\s+sage\b", re.M), re.compile(r"from\s+sage\.all", re.M)]
+    "pandas": [re.compile(r"^\s*(import|from)\s+pandas\b", re.M)],
+    "sage": [
+        re.compile(r"^\s*(import|from)\s+sage\b", re.M),
+        re.compile(r"from\s+sage\.all", re.M),
+    ],
 }
 
 

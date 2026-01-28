@@ -8,10 +8,11 @@ Here we compile ALL predictions of W33 theory that can be tested.
 These predictions are RIGID - W33 has no free parameters to adjust!
 """
 
-import numpy as np
+import json
 from decimal import Decimal, getcontext
 from fractions import Fraction
-import json
+
+import numpy as np
 
 getcontext().prec = 50
 
@@ -49,19 +50,21 @@ print("SECTION 2: PRECISION ELECTROWEAK PREDICTIONS")
 print("=" * 70)
 
 # Fine structure constant
-alpha_inv_w33 = Decimal(137) + Decimal(40)/Decimal(1111)
-alpha_inv_exp = Decimal('137.035999084')
-alpha_inv_err = Decimal('0.000000021')
+alpha_inv_w33 = Decimal(137) + Decimal(40) / Decimal(1111)
+alpha_inv_exp = Decimal("137.035999084")
+alpha_inv_err = Decimal("0.000000021")
 
 print("\n1. FINE STRUCTURE CONSTANT α")
 print(f"   W33 prediction:  α⁻¹ = {float(alpha_inv_w33):.12f}")
 print(f"   Experimental:    α⁻¹ = {float(alpha_inv_exp):.12f} ± {float(alpha_inv_err)}")
 print(f"   Difference:      Δ = {float(alpha_inv_w33 - alpha_inv_exp):.6e}")
-print(f"   Discrepancy:     {float((alpha_inv_w33 - alpha_inv_exp)/alpha_inv_err):.1f}σ")
+print(
+    f"   Discrepancy:     {float((alpha_inv_w33 - alpha_inv_exp)/alpha_inv_err):.1f}σ"
+)
 
 # Weak mixing angle (high energy)
 sin2_w33 = Decimal(v) / Decimal(v + k**2 + m1)
-sin2_gut = Decimal('0.2312')  # at GUT scale, roughly
+sin2_gut = Decimal("0.2312")  # at GUT scale, roughly
 
 print(f"\n2. WEAK MIXING ANGLE sin²θ_W (at GUT scale)")
 print(f"   W33 prediction:  sin²θ_W = {float(sin2_w33):.6f}")
@@ -69,8 +72,8 @@ print(f"   Expected (GUT):  sin²θ_W ≈ 0.2105 - 0.2312 (scale dependent)")
 print(f"   Status: W33 gives HIGH-ENERGY value")
 
 # Running to M_Z
-sin2_mz_exp = Decimal('0.23122')
-sin2_mz_err = Decimal('0.00004')
+sin2_mz_exp = Decimal("0.23122")
+sin2_mz_err = Decimal("0.00004")
 # RGE running from GUT to M_Z increases sin²θ_W
 # W33 value is at unification scale
 
@@ -103,7 +106,7 @@ print(f"   Experimental:    m_t/m_b ≈ {mt_mb_exp:.1f}")
 print(f"   Status: GOOD AGREEMENT (within running corrections)")
 
 # W boson mass
-M_W_w33 = 80 + v/v  # Simple: 80 + 1 = 81... need better formula
+M_W_w33 = 80 + v / v  # Simple: 80 + 1 = 81... need better formula
 # Actually let's use M_W/M_Z ratio from sin²θ_W
 M_Z = 91.1876
 M_W_from_weinberg = M_Z * np.sqrt(1 - float(sin2_mz_exp))
@@ -115,7 +118,7 @@ print(f"   Status: Tests Weinberg relation (indirect)")
 # Z boson mass
 M_Z_w33 = k * 7 + k + lam  # 84 + 12 + 2 = 98... not quite
 # Better: M_Z ≈ 91 = 81 + 10 = 3^4 + v/4
-M_Z_formula = 3**4 + v/4  # 81 + 10 = 91
+M_Z_formula = 3**4 + v / 4  # 81 + 10 = 91
 print(f"\n7. Z BOSON MASS")
 print(f"   W33 formula:     M_Z ≈ 3⁴ + v/4 = {M_Z_formula} GeV")
 print(f"   Experimental:    M_Z = 91.1876 ± 0.0021 GeV")
@@ -126,7 +129,7 @@ print("SECTION 4: NEUTRINO PREDICTIONS")
 print("=" * 70)
 
 # Neutrino mixing angles
-sin2_12_w33 = k/v  # 12/40 = 0.30
+sin2_12_w33 = k / v  # 12/40 = 0.30
 sin2_12_exp = 0.307
 sin2_12_err = 0.013
 
@@ -135,7 +138,7 @@ print(f"   W33 prediction:  sin²θ₁₂ = k/v = {sin2_12_w33:.4f}")
 print(f"   Experimental:    sin²θ₁₂ = {sin2_12_exp} ± {sin2_12_err}")
 print(f"   Status: EXCELLENT AGREEMENT! ✓")
 
-sin2_23_w33 = 0.5 + mu/(2*v)  # 0.5 + 4/80 = 0.55
+sin2_23_w33 = 0.5 + mu / (2 * v)  # 0.5 + 4/80 = 0.55
 sin2_23_exp = 0.545
 sin2_23_err = 0.021
 
@@ -144,7 +147,7 @@ print(f"   W33 prediction:  sin²θ₂₃ = 1/2 + μ/(2v) = {sin2_23_w33:.4f}")
 print(f"   Experimental:    sin²θ₂₃ = {sin2_23_exp} ± {sin2_23_err}")
 print(f"   Status: EXCELLENT AGREEMENT! ✓")
 
-sin2_13_w33 = (lam/k) * (1 - lam/(k*v))  # 0.1667 × 0.996 ≈ 0.166 - too big
+sin2_13_w33 = (lam / k) * (1 - lam / (k * v))  # 0.1667 × 0.996 ≈ 0.166 - too big
 # Better formula: sin²θ₁₃ = λ²/(k×v) = 4/480 = 0.0083... closer but not exact
 sin2_13_v2 = lam**2 / (k * v)
 sin2_13_exp = 0.0220
@@ -180,8 +183,8 @@ print(f"    W33 prediction: H₀ = v + m₂ + m₁ + λ = {H0_cmb_w33} km/s/Mpc"
 print(f"    Planck (CMB):   H₀ = {H0_cmb_exp} ± {H0_cmb_err} km/s/Mpc")
 print(f"    Status: EXCELLENT AGREEMENT! ✓")
 
-H0_local_w33 = H0_cmb_w33 + 2*lam + mu  # 67 + 4 + 4 = 75... actually 73
-H0_local_v2 = v + m2 + m1 + 2*lam + mu  # 40+24+1+4+4 = 73
+H0_local_w33 = H0_cmb_w33 + 2 * lam + mu  # 67 + 4 + 4 = 75... actually 73
+H0_local_v2 = v + m2 + m1 + 2 * lam + mu  # 40+24+1+4+4 = 73
 H0_local_exp = 73.0
 H0_local_err = 1.0
 
@@ -199,7 +202,7 @@ print(f"    Observed:       log₁₀(Λ/M_Pl⁴) ≈ -122")
 print(f"    Status: EXACT AGREEMENT! ✓")
 
 # Dark matter ratio
-Omega_ratio_w33 = (v - k)/mu - lam  # (40-12)/4 - 2 = 5
+Omega_ratio_w33 = (v - k) / mu - lam  # (40-12)/4 - 2 = 5
 Omega_ratio_exp = 5.3
 Omega_ratio_err = 0.1
 
@@ -213,7 +216,7 @@ print("SECTION 6: HIGH-ENERGY PREDICTIONS (TESTABLE)")
 print("=" * 70)
 
 # GUT scale
-M_GUT_GeV = 91.2 * 3**(v-7)  # M_Z × 3^33
+M_GUT_GeV = 91.2 * 3 ** (v - 7)  # M_Z × 3^33
 print("\n16. GRAND UNIFICATION SCALE")
 print(f"    W33 prediction: M_GUT = M_Z × 3^(v-7) = 3³³ M_Z")
 print(f"                    M_GUT ≈ 5 × 10¹⁵ GeV")
@@ -223,7 +226,7 @@ print(f"    Status: CONSISTENT with GUT expectations")
 # Proton decay lifetime
 # τ_p ∝ M_GUT^4 / (α_GUT^2 × m_p^5)
 # With M_GUT = 3^33 M_Z and α_GUT ~ 1/40
-tau_p_years = 1e34 * (3**33 / 1e16)**4  # rough scaling
+tau_p_years = 1e34 * (3**33 / 1e16) ** 4  # rough scaling
 print(f"\n17. PROTON DECAY LIFETIME")
 print(f"    W33 prediction: τ_p ~ 10³⁴ - 10³⁵ years")
 print(f"    Current limit:  τ_p > 2.4 × 10³⁴ years (p → e⁺π⁰)")
@@ -309,8 +312,10 @@ print("-" * 70)
 
 # Count successes
 exact = sum(1 for p in predictions if "EXACT" in p[4] or "0σ" in p[4])
-good = sum(1 for p in predictions if "σ" in p[4] and float(p[4].replace("σ","")) < 2)
-print(f"\nSUMMARY: {exact} exact matches, {good} within 2σ, out of {len(predictions)} predictions")
+good = sum(1 for p in predictions if "σ" in p[4] and float(p[4].replace("σ", "")) < 2)
+print(
+    f"\nSUMMARY: {exact} exact matches, {good} within 2σ, out of {len(predictions)} predictions"
+)
 
 print("\n" + "=" * 70)
 print("PART XCIII CONCLUSIONS")
@@ -352,9 +357,9 @@ results = {
         "Proton decay",
         "Dark matter mass",
         "Lorentz violation",
-        "Neutrino CP phase"
+        "Neutrino CP phase",
     ],
-    "status": "All predictions consistent with experiment"
+    "status": "All predictions consistent with experiment",
 }
 
 with open("PART_XCIII_predictions.json", "w") as f:

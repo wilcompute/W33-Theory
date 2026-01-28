@@ -12,12 +12,13 @@ The Witting configuration elegantly packages 40 copies of maximal
 3D MUB systems, one at each vertex!
 """
 
-import numpy as np
 from itertools import combinations
 
-print("="*70)
+import numpy as np
+
+print("=" * 70)
 print("PART CL: THE 40 EMBEDDED 3D MUB SYSTEMS")
-print("="*70)
+print("=" * 70)
 
 omega = np.exp(2j * np.pi / 3)
 
@@ -25,40 +26,45 @@ omega = np.exp(2j * np.pi / 3)
 # BUILD WITTING STATES
 # =====================================================
 
+
 def build_witting_states():
     states = []
     for i in range(4):
         v = np.zeros(4, dtype=complex)
         v[i] = 1
         states.append(v)
-    
+
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([0, 1, -omega**mu, omega**nu]) / np.sqrt(3))
+            states.append(np.array([0, 1, -(omega**mu), omega**nu]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([1, 0, -omega**mu, -omega**nu]) / np.sqrt(3))
+            states.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([1, -omega**mu, 0, omega**nu]) / np.sqrt(3))
+            states.append(np.array([1, -(omega**mu), 0, omega**nu]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
             states.append(np.array([1, omega**mu, omega**nu, 0]) / np.sqrt(3))
-    
+
     return states
+
 
 states = build_witting_states()
 
+
 def is_orthogonal(i, j):
-    return abs(np.vdot(states[i], states[j]))**2 < 1e-10
+    return abs(np.vdot(states[i], states[j])) ** 2 < 1e-10
+
 
 # =====================================================
 # VERIFY ALL 40 MUB SYSTEMS
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("VERIFYING 3D MUB SYSTEM AT EACH VERTEX")
-print("="*70)
+print("=" * 70)
+
 
 def get_local_mub_system(vertex):
     """
@@ -66,7 +72,7 @@ def get_local_mub_system(vertex):
     Returns the 12 neighbors organized as 4 bases of 3.
     """
     neighbors = [j for j in range(40) if is_orthogonal(vertex, j)]
-    
+
     # Find all triangles (3-cliques) among neighbors
     triangles = []
     for i, n1 in enumerate(neighbors):
@@ -80,8 +86,9 @@ def get_local_mub_system(vertex):
                     continue
                 if is_orthogonal(n1, n3) and is_orthogonal(n2, n3):
                     triangles.append((n1, n2, n3))
-    
+
     return triangles
+
 
 def verify_mub_property(triangles):
     """
@@ -90,21 +97,22 @@ def verify_mub_property(triangles):
     """
     if len(triangles) != 4:
         return False, f"Expected 4 triangles, got {len(triangles)}"
-    
+
     # Check all pairs of triangles
     for i, t1 in enumerate(triangles):
         for j, t2 in enumerate(triangles):
             if j <= i:
                 continue
-            
+
             # Check all 9 cross-inner products
             for s1 in t1:
                 for s2 in t2:
-                    ip_sq = abs(np.vdot(states[s1], states[s2]))**2
-                    if abs(ip_sq - 1/3) > 0.001:
+                    ip_sq = abs(np.vdot(states[s1], states[s2])) ** 2
+                    if abs(ip_sq - 1 / 3) > 0.001:
                         return False, f"Bad inner product {ip_sq}"
-    
+
     return True, "Valid 3D MUB system"
+
 
 # Verify for all 40 vertices
 print("Checking each of the 40 vertices:")
@@ -123,9 +131,9 @@ if all_valid:
 # THE STRUCTURE THEOREM
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("THE STRUCTURE THEOREM")
-print("="*70)
+print("=" * 70)
 
 print("""
 ╔══════════════════════════════════════════════════════════════════════╗
@@ -152,9 +160,9 @@ print("""
 # COUNT UNIQUE MUB SYSTEMS
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("COUNTING UNIQUE 3D MUB SYSTEMS")
-print("="*70)
+print("=" * 70)
 
 # Collect all MUB systems
 all_mub_systems = []
@@ -174,6 +182,7 @@ if len(unique_systems) == 40:
 else:
     # Count multiplicities
     from collections import Counter
+
     counts = Counter(all_mub_systems)
     print(f"Distribution of system multiplicities: {Counter(counts.values())}")
 
@@ -181,15 +190,17 @@ else:
 # OVERLAP STRUCTURE BETWEEN MUB SYSTEMS
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("OVERLAP BETWEEN DIFFERENT MUB SYSTEMS")
-print("="*70)
+print("=" * 70)
+
 
 def mub_system_overlap(v1, v2):
     """Count how many triangles (bases) the two MUB systems share"""
     sys1 = set([tuple(sorted(t)) for t in get_local_mub_system(v1)])
     sys2 = set([tuple(sorted(t)) for t in get_local_mub_system(v2)])
     return len(sys1 & sys2)
+
 
 # Compute overlap matrix (sample)
 print("Sample overlaps between MUB systems at different vertices:")
@@ -202,7 +213,7 @@ for i in range(5):
 # Full overlap statistics
 overlap_counts = {}
 for i in range(40):
-    for j in range(i+1, 40):
+    for j in range(i + 1, 40):
         ov = mub_system_overlap(i, j)
         overlap_counts[ov] = overlap_counts.get(ov, 0) + 1
 
@@ -214,9 +225,9 @@ for ov in sorted(overlap_counts.keys()):
 # THE STANDARD 3D MUBs
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("COMPARISON TO STANDARD 3D MUBs")
-print("="*70)
+print("=" * 70)
 
 print("""
 STANDARD 3D MUBs:
@@ -245,9 +256,9 @@ These are related to standard 3D MUBs by a unitary transformation!
 # CONNECTION TO AFFINE GEOMETRY
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("THE AFFINE GEOMETRY CONNECTION")
-print("="*70)
+print("=" * 70)
 
 print("""
 DEEP CONNECTION:
@@ -273,46 +284,32 @@ THEOREM: The 4 parallel classes in AG(2, F₃) give 4 different
 # The 9 superpositions are indexed by (μ, ν), and we found direction (1,2)
 # Other parallel classes have directions (1,0), (0,1), (1,1)
 
+
 def get_parallel_classes():
     """Return the 4 parallel classes of AG(2, F₃)"""
     # Points: (μ, ν) for μ, ν ∈ {0, 1, 2}
     # State index: 4 + 3μ + ν
-    
+
     classes = []
-    
+
     # Direction (1, 0): lines μ = const
-    c1 = [
-        (4, 5, 6),    # μ = 0
-        (7, 8, 9),    # μ = 1  
-        (10, 11, 12)  # μ = 2
-    ]
+    c1 = [(4, 5, 6), (7, 8, 9), (10, 11, 12)]  # μ = 0  # μ = 1  # μ = 2
     classes.append(("(1,0)", c1))
-    
+
     # Direction (0, 1): lines ν = const
-    c2 = [
-        (4, 7, 10),   # ν = 0
-        (5, 8, 11),   # ν = 1
-        (6, 9, 12)    # ν = 2
-    ]
+    c2 = [(4, 7, 10), (5, 8, 11), (6, 9, 12)]  # ν = 0  # ν = 1  # ν = 2
     classes.append(("(0,1)", c2))
-    
+
     # Direction (1, 1): lines ν - μ = const
-    c3 = [
-        (4, 8, 12),   # ν - μ = 0
-        (5, 9, 10),   # ν - μ = 1
-        (6, 7, 11)    # ν - μ = 2
-    ]
+    c3 = [(4, 8, 12), (5, 9, 10), (6, 7, 11)]  # ν - μ = 0  # ν - μ = 1  # ν - μ = 2
     classes.append(("(1,1)", c3))
-    
+
     # Direction (1, 2): lines 2ν - μ = const (equivalent to ν - 2μ = const)
-    c4 = [
-        (4, 9, 11),   # 2ν - μ = 0
-        (5, 7, 12),   # 2ν - μ = 2
-        (6, 8, 10)    # 2ν - μ = 1
-    ]
+    c4 = [(4, 9, 11), (5, 7, 12), (6, 8, 10)]  # 2ν - μ = 0  # 2ν - μ = 2  # 2ν - μ = 1
     classes.append(("(1,2)", c4))
-    
+
     return classes
+
 
 parallel_classes = get_parallel_classes()
 
@@ -334,9 +331,9 @@ for direction, lines in parallel_classes:
                     break
     print(f"  Direction {direction}: All lines orthogonal? {all_orth}")
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PART CL COMPLETE")
-print("="*70)
+print("=" * 70)
 
 print("""
 MAJOR DISCOVERIES:

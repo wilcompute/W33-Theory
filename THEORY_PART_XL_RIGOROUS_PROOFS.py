@@ -6,9 +6,9 @@ THEORY OF EVERYTHING - PART XL: RIGOROUS MATHEMATICAL PROOFS
 Formal proofs of the key W33 claims with mathematical rigor.
 """
 
+import itertools
 import math
 from fractions import Fraction
-import itertools
 
 print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -327,7 +327,7 @@ The Weinberg angle measures the mixing between these sectors:
   sin²θ_W = (light) / (light + heavy) = 40 / (40 + 133) = 40/173
 """)
 
-sin2_w33 = 40/173
+sin2_w33 = 40 / 173
 sin2_exp = 0.23121
 
 print()
@@ -383,7 +383,7 @@ print("Step 3: Computation")
 print("─" * 40)
 print()
 
-alpha_inv = 81 + 56 + 40/1111
+alpha_inv = 81 + 56 + 40 / 1111
 alpha_exp = 137.035999084
 
 print(f"  α⁻¹ = 81 + 56 + 40/1111")
@@ -498,7 +498,7 @@ The dark matter density scales as:
 This matches Planck 2018: Ω_DM/Ω_b = 5.408 ± 0.05
 """)
 
-dm_w33 = 27/5
+dm_w33 = 27 / 5
 dm_obs = 5.408
 
 print()

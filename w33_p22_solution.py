@@ -8,8 +8,9 @@ We attempt to crack this using W33 structure.
 Key insight: The coefficients in P₂₂ are related to W33 numbers!
 """
 
-import numpy as np
 from fractions import Fraction
+
+import numpy as np
 
 print("=" * 80)
 print("ATTEMPTING TO SOLVE THE P22 OPEN PROBLEM")
@@ -44,18 +45,21 @@ Let's convert to (t, σ) coordinates:
 So: α² + β² + γ² = t² - 2(αβ + βγ + αγ) = t² - 2(σ - 2t²) = 5t² - 2σ
 """)
 
+
 # Verify the conversion
 def alpha_beta_gamma_sq_sum(alpha, beta, gamma):
     return alpha**2 + beta**2 + gamma**2
 
+
 def from_t_sigma(t, sigma):
     """α² + β² + γ² = 5t² - 2σ"""
-    return 5*t**2 - 2*sigma
+    return 5 * t**2 - 2 * sigma
+
 
 # Test with E7: α=-2, β=8, γ=12, so t=18
 alpha, beta, gamma = -2, 8, 12
 t = alpha + beta + gamma
-sigma = alpha*beta + beta*gamma + alpha*gamma + 2*t**2
+sigma = alpha * beta + beta * gamma + alpha * gamma + 2 * t**2
 
 direct = alpha_beta_gamma_sq_sum(alpha, beta, gamma)
 from_formula = from_t_sigma(t, sigma)
@@ -95,7 +99,7 @@ p_factors = [
     (176, 81, "?"),
     (494, 225, "?"),
     (170, 81, "?"),
-    (65, 36, "G2")
+    (65, 36, "G2"),
 ]
 
 # From eq 13, let's convert each
@@ -104,14 +108,16 @@ p_factors = [
 #      = 90t² - 36σ - 25t²
 #      = 65t² - 36σ  ✓ matches!
 
+
 def convert_P(a_coeff, b_coeff):
     """Convert from a(α²+β²+γ²) - b(α+β+γ)² to (c)t² - (d)σ form
     Using α²+β²+γ² = 5t² - 2σ
     """
     # a(5t² - 2σ) - bt² = (5a - b)t² - 2aσ
-    c = 5*a_coeff - b_coeff
-    d = 2*a_coeff
+    c = 5 * a_coeff - b_coeff
+    d = 2 * a_coeff
     return c, d
+
 
 print("Conversion verification:")
 exceptional_P = [
@@ -119,7 +125,7 @@ exceptional_P = [
     ("F4", 81, 65),
     ("E6", 18, 13),
     ("E7", 81, 53),
-    ("E8", 225, 137)
+    ("E8", 225, 137),
 ]
 
 for name, a, b in exceptional_P:
@@ -157,6 +163,7 @@ for name, a, b in exceptional_P:
     c, d = convert_P(a, b)
     # Find the GCD for normalization
     from math import gcd
+
     g = gcd(c, d)
     c_norm, d_norm = c // g, d // g
     print(f"  P_{name}: ({c}, {d}) / {g} = ({c_norm}t² - {d_norm}σ)")
@@ -237,7 +244,7 @@ print("\n" + "=" * 80)
 print("ANALYZING THE 81 PATTERN")
 print("=" * 80)
 
-# The d-coefficients (σ coefficients) 
+# The d-coefficients (σ coefficients)
 d_coeffs = [36, 81, 225, 81, 36]  # G2, F4, E8, E7, E6 (reordered)
 c_coeffs = [65, 170, 494, 176, 77]
 
@@ -326,9 +333,11 @@ either t = 0 or P₂₂ = 0.
 Let's check that P₂₂ = 0 for all exceptional algebras:
 """)
 
+
 def P22_factor(t, sigma, c, d):
     """Compute c*t² - d*σ"""
     return c * t**2 - d * sigma
+
 
 def P22_full(t, sigma):
     """Product of all five exceptional factors"""
@@ -338,19 +347,20 @@ def P22_full(t, sigma):
         result *= P22_factor(t, sigma, c, d)
     return result
 
+
 # Test on exceptional algebras
 exceptional_test = [
-    ("G2", -2, 10/3, 8/3),
+    ("G2", -2, 10 / 3, 8 / 3),
     ("F4", -2, 5, 6),
     ("E6", -2, 6, 8),
     ("E7", -2, 8, 12),
-    ("E8", -2, 12, 20)
+    ("E8", -2, 12, 20),
 ]
 
 print("P₂₂ values for exceptional algebras:")
 for name, a, b, g in exceptional_test:
     t = a + b + g
-    sigma = a*b + b*g + a*g + 2*t**2
+    sigma = a * b + b * g + a * g + 2 * t**2
     p22 = P22_full(t, sigma)
     print(f"  {name}: t={t:.2f}, σ={sigma:.2f}, P₂₂ = {p22:.6f}")
 

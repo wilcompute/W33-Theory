@@ -8,9 +8,10 @@ What Lagrangian emerges from W33?
 This is the key step: derive the Standard Model Lagrangian from graph structure!
 """
 
-import numpy as np
-from fractions import Fraction
 import json
+from fractions import Fraction
+
+import numpy as np
 
 print("=" * 70)
 print("W33 THEORY PART XCIV: THE EMERGENT LAGRANGIAN")
@@ -182,7 +183,7 @@ Running to low energies:
   α_W(M_Z) ≈ 1/30
 """)
 
-alpha_gut = 1/v
+alpha_gut = 1 / v
 print(f"\nGAUGE COUPLING AT UNIFICATION:")
 print(f"  α_GUT = 1/v = 1/{v} = {alpha_gut:.4f}")
 print(f"  g_GUT = √(4πα_GUT) = {np.sqrt(4*np.pi*alpha_gut):.4f}")
@@ -263,7 +264,7 @@ This comes from:
 Plus logarithmic factors gives the full hierarchy!
 """)
 
-mass_hierarchy = 3**(v//2)
+mass_hierarchy = 3 ** (v // 2)
 print(f"\nMASS HIERARCHY FROM W33:")
 print(f"  3^(v/2) = 3^{v//2} = {mass_hierarchy:.2e}")
 print(f"  This sets the scale of mass hierarchies!")
@@ -407,9 +408,9 @@ results = {
         "gauge_bosons": "E₂ eigenspace, dim 24",
         "fermions": "E₃ eigenspace, dim 15",
         "higgs": "E₁ eigenspace, dim 1",
-        "alpha_gut": 1/v,
-        "lagrangian": "L_SM emerges from graph action"
-    }
+        "alpha_gut": 1 / v,
+        "lagrangian": "L_SM emerges from graph action",
+    },
 }
 
 with open("PART_XCIV_lagrangian.json", "w") as f:

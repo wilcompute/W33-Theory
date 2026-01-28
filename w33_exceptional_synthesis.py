@@ -8,11 +8,11 @@ through precise numerical relationships that predict physics constants.
 This script documents and verifies all connections with saved outputs.
 """
 
-import math
 import json
+import math
 import os
-from fractions import Fraction
 from datetime import datetime
+from fractions import Fraction
 
 OUTPUT_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -33,7 +33,7 @@ exceptional = {
     "F4": {"dim": 52, "rank": 4, "roots": 48},
     "E6": {"dim": 78, "rank": 6, "roots": 72},
     "E7": {"dim": 133, "rank": 7, "roots": 126},
-    "E8": {"dim": 248, "rank": 8, "roots": 240}
+    "E8": {"dim": 248, "rank": 8, "roots": 240},
 }
 
 # Key representations
@@ -157,7 +157,7 @@ weyl_orders = {
     "W(F4)": 1152,
     "W(E6)": 51840,
     "W(E7)": 2903040,
-    "W(E8)": 696729600
+    "W(E8)": 696729600,
 }
 
 for name, order in weyl_orders.items():
@@ -348,25 +348,21 @@ results = {
         "cycles_bridge": {
             "value": 81,
             "formula": "dim(E7) - dim(F4) = 133 - 52",
-        }
+        },
     },
-    "prime_indices": {
-        "137": 33,
-        "173": 40,
-        "note": "40 = |points| = index of 173"
-    },
+    "prime_indices": {"137": 33, "173": 40, "note": "40 = |points| = index of 173"},
     "weyl_groups": weyl_orders,
     "physics_connections": {
         "N8_supergravity": "E7(7) global symmetry, 56-dim rep contains charges",
         "heterotic_string_K3": "E8 × E7 gauge group, K3 has b_2 = 22 = 2 × 11",
-        "del_pezzo": "W(E6) = Aut(W33) connects to dP_6 with 27 lines"
+        "del_pezzo": "W(E6) = Aut(W33) connects to dP_6 with 27 lines",
     },
-    "verifications": {v[0]: v[1] for v in verifications}
+    "verifications": {v[0]: v[1] for v in verifications},
 }
 
 # Save JSON
 json_file = os.path.join(OUTPUT_DIR, "w33_exceptional_synthesis_results.json")
-with open(json_file, 'w') as f:
+with open(json_file, "w") as f:
     json.dump(results, f, indent=2, default=int)
 print(f"JSON saved to: {json_file}")
 
@@ -475,7 +471,7 @@ which in turn encodes fundamental physics constants.*
 """
 
 md_file = os.path.join(OUTPUT_DIR, "W33_EXCEPTIONAL_SYNTHESIS.md")
-with open(md_file, 'w', encoding='utf-8') as f:
+with open(md_file, "w", encoding="utf-8") as f:
     f.write(md_report)
 print(f"Markdown saved to: {md_file}")
 

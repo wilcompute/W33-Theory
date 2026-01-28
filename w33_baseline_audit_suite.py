@@ -61,7 +61,9 @@ def _safe_unary(name: str, op: Callable[[float], float], e: Expr) -> Optional[Ex
     return Expr(v, f"{name}({e.repr})", e.complexity + 1)
 
 
-def _safe_binary(sym: str, op: Callable[[float, float], float], a: Expr, b: Expr) -> Optional[Expr]:
+def _safe_binary(
+    sym: str, op: Callable[[float, float], float], a: Expr, b: Expr
+) -> Optional[Expr]:
     try:
         v = op(a.value, b.value)
     except (ValueError, OverflowError, ZeroDivisionError):
@@ -139,8 +141,17 @@ def generate(
     return list(seen.values())
 
 
-def score(exprs: Sequence[Expr], targets: Sequence[Target], tolerances_pct=(0.1, 0.5, 1.0, 5.0, 10.0), top_k=20) -> Dict:
-    out: Dict = {"num_exprs": len(exprs), "tolerances_pct": list(tolerances_pct), "targets": {}}
+def score(
+    exprs: Sequence[Expr],
+    targets: Sequence[Target],
+    tolerances_pct=(0.1, 0.5, 1.0, 5.0, 10.0),
+    top_k=20,
+) -> Dict:
+    out: Dict = {
+        "num_exprs": len(exprs),
+        "tolerances_pct": list(tolerances_pct),
+        "targets": {},
+    }
 
     for t in targets:
         hits = {str(p): 0 for p in tolerances_pct}
@@ -187,7 +198,12 @@ def main() -> int:
         Target("cabibbo_deg", cabibbo_deg),
     ]
 
-    bin_ops = [("+", lambda a, b: a + b), ("-", lambda a, b: a - b), ("*", lambda a, b: a * b), ("/", lambda a, b: a / b)]
+    bin_ops = [
+        ("+", lambda a, b: a + b),
+        ("-", lambda a, b: a - b),
+        ("*", lambda a, b: a * b),
+        ("/", lambda a, b: a / b),
+    ]
 
     # Suite configs
     # Full mode (with log/exp) is expensive; enable explicitly.
@@ -196,11 +212,18 @@ def main() -> int:
 
     # Strict: arithmetic + sqrt only; no transcendentals, no special constants.
     base_strict = [Expr(float(n), str(n), 1) for n in base_numbers]
-    unary_strict = [("sqrt", lambda x: math.sqrt(x) if x >= 0 else float("nan")), ("inv", lambda x: 1.0 / x)]
+    unary_strict = [
+        ("sqrt", lambda x: math.sqrt(x) if x >= 0 else float("nan")),
+        ("inv", lambda x: 1.0 / x),
+    ]
     suite.append(("strict", base_strict, unary_strict, bin_ops, 250_000))
 
     # Medium: add pi/e/phi, still no log/exp.
-    base_medium = list(base_strict) + [Expr(math.pi, "pi", 2), Expr(math.e, "e", 2), Expr((1 + math.sqrt(5)) / 2, "phi", 3)]
+    base_medium = list(base_strict) + [
+        Expr(math.pi, "pi", 2),
+        Expr(math.e, "e", 2),
+        Expr((1 + math.sqrt(5)) / 2, "phi", 3),
+    ]
     suite.append(("medium", base_medium, unary_strict, bin_ops, 250_000))
 
     # Full: add log/exp.
@@ -217,7 +240,9 @@ def main() -> int:
         print("=" * 100)
         print(f"Suite mode: {name}")
         print("=" * 100)
-        exprs = generate(base, unary, binary, max_depth=4, max_pool=max_pool, pair_limit=1500)
+        exprs = generate(
+            base, unary, binary, max_depth=4, max_pool=max_pool, pair_limit=1500
+        )
         res = score(exprs, targets)
         results["suite"][name] = {
             "config": {

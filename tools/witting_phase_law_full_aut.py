@@ -5,11 +5,12 @@ We generate the symplectic group from standard generators (as permutations
 of W33 rays via the explicit ray->F3 mapping), then test the phase law on all
 non-orthogonal triangles.
 """
+
 from __future__ import annotations
 
-import json
 import itertools
-from collections import deque, Counter
+import json
+from collections import Counter, deque
 from pathlib import Path
 
 import numpy as np
@@ -27,9 +28,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -53,26 +54,28 @@ def construct_f3_points():
 
 
 def omega_symp(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
 
 def phase_cluster(angle):
     a = np.arctan2(np.sin(angle), np.cos(angle))
-    targets = [np.pi/6, -np.pi/6, np.pi/2, -np.pi/2]
+    targets = [np.pi / 6, -np.pi / 6, np.pi / 2, -np.pi / 2]
     nearest = min(targets, key=lambda t: abs(a - t))
     return round(float(nearest), 6)
 
 
 def check_symplectic(M):
-    Omega = [[0,0,1,0],[0,0,0,1],[2,0,0,0],[0,2,0,0]]
+    Omega = [[0, 0, 1, 0], [0, 0, 0, 1], [2, 0, 0, 0], [0, 2, 0, 0]]
+
     def mat_mult(A, B):
         n, k, m = len(A), len(B), len(B[0])
-        res = [[0]*m for _ in range(n)]
+        res = [[0] * m for _ in range(n)]
         for i in range(n):
             for j in range(m):
                 for l in range(k):
-                    res[i][j] = (res[i][j] + A[i][l]*B[l][j]) % 3
+                    res[i][j] = (res[i][j] + A[i][l] * B[l][j]) % 3
         return res
+
     MT = [[M[j][i] for j in range(4)] for i in range(4)]
     return mat_mult(mat_mult(MT, Omega), M) == Omega
 
@@ -111,18 +114,21 @@ def main():
     f3_index = {tuple(p): i for i, p in enumerate(f3_points)}
 
     mapping_path = ROOT / "artifacts" / "witting_graph_isomorphism.json"
-    mapping = {int(k): int(v) for k, v in json.loads(mapping_path.read_text())["mapping"].items()}
+    mapping = {
+        int(k): int(v)
+        for k, v in json.loads(mapping_path.read_text())["mapping"].items()
+    }
 
     # symplectic generators
     gen_matrices = [
-        [[1,0,1,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,1],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[1,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,1,0,1]],
-        [[1,1,0,0],[0,1,0,0],[0,0,1,0],[0,0,2,1]],
-        [[1,0,0,0],[1,1,0,0],[0,0,1,2],[0,0,0,1]],
-        [[0,0,1,0],[0,1,0,0],[2,0,0,0],[0,0,0,1]],
-        [[1,0,0,0],[0,0,0,1],[0,0,1,0],[0,2,0,0]],
+        [[1, 0, 1, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 1], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [1, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 1, 0, 1]],
+        [[1, 1, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 2, 1]],
+        [[1, 0, 0, 0], [1, 1, 0, 0], [0, 0, 1, 2], [0, 0, 0, 1]],
+        [[0, 0, 1, 0], [0, 1, 0, 0], [2, 0, 0, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0], [0, 2, 0, 0]],
     ]
     gens = [M for M in gen_matrices if check_symplectic(M)]
     gen_perms = [perm_from_matrix(M, mapping, f3_index) for M in gens]
@@ -169,7 +175,9 @@ def main():
         w12 = omega_symp(p_i, p_j)
         w23 = omega_symp(p_j, p_k)
         w31 = omega_symp(p_k, p_i)
-        sign = (1 if w12 == 1 else -1) * (1 if w23 == 1 else -1) * (1 if w31 == 1 else -1)
+        sign = (
+            (1 if w12 == 1 else -1) * (1 if w23 == 1 else -1) * (1 if w31 == 1 else -1)
+        )
         tri_sign.append(sign)
 
     tri_index = {tuple(sorted(t)): idx for idx, t in enumerate(triangles)}

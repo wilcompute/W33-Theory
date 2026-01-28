@@ -221,7 +221,7 @@ print("Possible W33 suppressions:")
 print()
 
 # Factor 1: exp(-W33_total/2)
-factor1 = math.exp(-W33_TOTAL/2)
+factor1 = math.exp(-W33_TOTAL / 2)
 print(f"  exp(-121/2) = exp(-60.5) = {factor1:.2e}")
 print()
 
@@ -242,7 +242,7 @@ print(f"  exp(40) = {math.exp(40):.2e} = 10^{40/math.log(10):.1f}")
 print()
 
 # Best match
-best = 81/5
+best = 81 / 5
 print(f"  BEST: 10^(81/5) = 10^{best:.1f} ≈ 10¹⁷")
 print(f"  This gives: M_Pl/M_EW = 10^(cycles/5)")
 print(f"  The 5 = dim(E7) - 2⁷ = 133 - 128 (dark matter number!)")
@@ -477,7 +477,7 @@ Ratio:
 """)
 
 # Calculate ratio
-alpha_EM = 1/137
+alpha_EM = 1 / 137
 alpha_G_proton = 5.9e-39
 ratio = alpha_EM / alpha_G_proton
 

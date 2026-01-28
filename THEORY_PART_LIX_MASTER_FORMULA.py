@@ -18,140 +18,137 @@ Author: Wil Dahn
 Date: January 2026
 """
 
-import numpy as np
-from fractions import Fraction
 import json
+from fractions import Fraction
 
-print("="*70)
+import numpy as np
+
+print("=" * 70)
 print("W33 THEORY PART LIX: THE MASTER FORMULA")
-print("="*70)
+print("=" * 70)
 
 # =============================================================================
 # THE COMPLETE PARAMETER TABLE
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("THE COMPLETE W33 PREDICTION TABLE")
-print("="*70)
+print("=" * 70)
 
 # All predictions organized by category
 all_predictions = {
     # Coupling constants
-    'Fine Structure Constant': {
-        'formula': 'α⁻¹ = 81 + 56 + 40/1111',
-        'predicted': 81 + 56 + 40/1111,
-        'observed': 137.036,
-        'W33_meaning': '3⁴ + E₇_fund + W33/1111'
+    "Fine Structure Constant": {
+        "formula": "α⁻¹ = 81 + 56 + 40/1111",
+        "predicted": 81 + 56 + 40 / 1111,
+        "observed": 137.036,
+        "W33_meaning": "3⁴ + E₇_fund + W33/1111",
     },
-    'Weak Mixing Angle': {
-        'formula': 'sin²θ_W = 40/173',
-        'predicted': 40/173,
-        'observed': 0.23121,
-        'W33_meaning': 'W33 / (E₇_adj + W33)'
+    "Weak Mixing Angle": {
+        "formula": "sin²θ_W = 40/173",
+        "predicted": 40 / 173,
+        "observed": 0.23121,
+        "W33_meaning": "W33 / (E₇_adj + W33)",
     },
-    'Strong Coupling': {
-        'formula': 'α_s = 27/229',
-        'predicted': 27/229,
-        'observed': 0.1179,
-        'W33_meaning': 'E₆_fund / (173 + E₇_fund)'
+    "Strong Coupling": {
+        "formula": "α_s = 27/229",
+        "predicted": 27 / 229,
+        "observed": 0.1179,
+        "W33_meaning": "E₆_fund / (173 + E₇_fund)",
     },
-    
     # CKM Matrix
-    'Cabibbo Angle': {
-        'formula': 'sin θ_c = 2/9',
-        'predicted': 2/9,
-        'observed': 0.2245,
-        'W33_meaning': '2 / 3²'
+    "Cabibbo Angle": {
+        "formula": "sin θ_c = 2/9",
+        "predicted": 2 / 9,
+        "observed": 0.2245,
+        "W33_meaning": "2 / 3²",
     },
-    'Wolfenstein λ': {
-        'formula': 'λ = 27/119',
-        'predicted': 27/119,
-        'observed': 0.2265,
-        'W33_meaning': '27 / (7 × 17)'
+    "Wolfenstein λ": {
+        "formula": "λ = 27/119",
+        "predicted": 27 / 119,
+        "observed": 0.2265,
+        "W33_meaning": "27 / (7 × 17)",
     },
-    'Wolfenstein A': {
-        'formula': 'A = 27/34',
-        'predicted': 27/34,
-        'observed': 0.79,
-        'W33_meaning': '27 / (2 × 17)'
+    "Wolfenstein A": {
+        "formula": "A = 27/34",
+        "predicted": 27 / 34,
+        "observed": 0.79,
+        "W33_meaning": "27 / (2 × 17)",
     },
-    'Wolfenstein η̄': {
-        'formula': 'η̄ = 5/14',
-        'predicted': 5/14,
-        'observed': 0.357,
-        'W33_meaning': '5 / (2 × 7)'
+    "Wolfenstein η̄": {
+        "formula": "η̄ = 5/14",
+        "predicted": 5 / 14,
+        "observed": 0.357,
+        "W33_meaning": "5 / (2 × 7)",
     },
-    
     # PMNS Matrix
-    'Solar Angle': {
-        'formula': 'sin²θ₁₂ = 40/131',
-        'predicted': 40/131,
-        'observed': 0.304,
-        'W33_meaning': 'W33 / 131'
+    "Solar Angle": {
+        "formula": "sin²θ₁₂ = 40/131",
+        "predicted": 40 / 131,
+        "observed": 0.304,
+        "W33_meaning": "W33 / 131",
     },
-    'Atmospheric Angle': {
-        'formula': 'sin²θ₂₃ = 4/7',
-        'predicted': 4/7,
-        'observed': 0.573,
-        'W33_meaning': '4 / 7'
+    "Atmospheric Angle": {
+        "formula": "sin²θ₂₃ = 4/7",
+        "predicted": 4 / 7,
+        "observed": 0.573,
+        "W33_meaning": "4 / 7",
     },
-    'Reactor Angle': {
-        'formula': 'sin²θ₁₃ = 2/91',
-        'predicted': 2/91,
-        'observed': 0.0222,
-        'W33_meaning': '2 / (7 × 13)'
+    "Reactor Angle": {
+        "formula": "sin²θ₁₃ = 2/91",
+        "predicted": 2 / 91,
+        "observed": 0.0222,
+        "W33_meaning": "2 / (7 × 13)",
     },
-    
     # Cosmology
-    'Dark Energy Fraction': {
-        'formula': 'Ω_Λ = 56/81',
-        'predicted': 56/81,
-        'observed': 0.6889,
-        'W33_meaning': 'E₇_fund / 3⁴'
+    "Dark Energy Fraction": {
+        "formula": "Ω_Λ = 56/81",
+        "predicted": 56 / 81,
+        "observed": 0.6889,
+        "W33_meaning": "E₇_fund / 3⁴",
     },
-    'Matter Fraction': {
-        'formula': 'Ω_m = 25/81',
-        'predicted': 25/81,
-        'observed': 0.3111,
-        'W33_meaning': '(81-56) / 81'
+    "Matter Fraction": {
+        "formula": "Ω_m = 25/81",
+        "predicted": 25 / 81,
+        "observed": 0.3111,
+        "W33_meaning": "(81-56) / 81",
     },
-    'Spectral Index': {
-        'formula': 'n_s = 55/57',
-        'predicted': 55/57,
-        'observed': 0.9649,
-        'W33_meaning': '55 / 57'
+    "Spectral Index": {
+        "formula": "n_s = 55/57",
+        "predicted": 55 / 57,
+        "observed": 0.9649,
+        "W33_meaning": "55 / 57",
     },
-    'Hubble Constant': {
-        'formula': 'H₀ = 27 × 5/2',
-        'predicted': 67.5,
-        'observed': 67.4,
-        'W33_meaning': 'E₆_fund × 5/2'
+    "Hubble Constant": {
+        "formula": "H₀ = 27 × 5/2",
+        "predicted": 67.5,
+        "observed": 67.4,
+        "W33_meaning": "E₆_fund × 5/2",
     },
-    
     # Koide Formula
-    'Koide Parameter': {
-        'formula': 'Q = 2/3',
-        'predicted': 2/3,
-        'observed': 0.6666,
-        'W33_meaning': '2/3 from F₃'
+    "Koide Parameter": {
+        "formula": "Q = 2/3",
+        "predicted": 2 / 3,
+        "observed": 0.6666,
+        "W33_meaning": "2/3 from F₃",
     },
 }
 
 print(f"\n{'Parameter':<25} {'Predicted':<15} {'Observed':<12} {'Error':<10}")
-print("="*62)
+print("=" * 62)
 
 total_predictions = 0
 excellent_predictions = 0  # < 1% error
 
 for name, data in all_predictions.items():
-    pred = data['predicted']
-    obs = data['observed']
-    err = abs(pred - obs)/obs * 100
-    
+    pred = data["predicted"]
+    obs = data["observed"]
+    err = abs(pred - obs) / obs * 100
+
     total_predictions += 1
     if err < 1.0:
         excellent_predictions += 1
-    
+
     # Determine quality marker
     if err < 0.1:
         marker = "★★★"
@@ -161,10 +158,10 @@ for name, data in all_predictions.items():
         marker = "★"
     else:
         marker = ""
-    
+
     print(f"{name:<25} {pred:<15.6f} {obs:<12.4f} {err:<7.2f}% {marker}")
 
-print("="*62)
+print("=" * 62)
 print(f"\nTotal predictions: {total_predictions}")
 print(f"Excellent (< 1% error): {excellent_predictions}")
 print(f"Success rate: {excellent_predictions/total_predictions*100:.0f}%")
@@ -173,9 +170,9 @@ print(f"Success rate: {excellent_predictions/total_predictions*100:.0f}%")
 # THE FUNDAMENTAL NUMBERS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("THE FUNDAMENTAL NUMBERS OF W33")
-print("="*70)
+print("=" * 70)
 
 fundamental_numbers = {
     3: "Base field F₃",
@@ -202,7 +199,7 @@ fundamental_numbers = {
 }
 
 print("\nNumber   Meaning                           Connection")
-print("-"*70)
+print("-" * 70)
 for num, meaning in fundamental_numbers.items():
     print(f"{num:<8} {meaning}")
 
@@ -210,9 +207,9 @@ for num, meaning in fundamental_numbers.items():
 # THE MASTER EQUATIONS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("THE MASTER EQUATIONS")
-print("="*70)
+print("=" * 70)
 
 print("""
 ┌─────────────────────────────────────────────────────────────────┐
@@ -279,9 +276,9 @@ print("""
 # THE UNIFIED PRINCIPLE
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("THE UNIFIED PRINCIPLE")
-print("="*70)
+print("=" * 70)
 
 print("""
 ╔═══════════════════════════════════════════════════════════════════╗
@@ -325,15 +322,15 @@ print("""
 # PREDICTION COUNT
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("STATISTICAL ANALYSIS")
-print("="*70)
+print("=" * 70)
 
 errors = []
 for name, data in all_predictions.items():
-    pred = data['predicted']
-    obs = data['observed']
-    err = abs(pred - obs)/obs * 100
+    pred = data["predicted"]
+    obs = data["observed"]
+    err = abs(pred - obs) / obs * 100
     errors.append(err)
 
 errors = np.array(errors)
@@ -354,9 +351,9 @@ print(f"\n√(Σ(error²)/N) = {np.sqrt(np.mean(errors**2)):.2f}%")
 # THE NUMBERS 7, 13, 17
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("THE MYSTERIOUS TRIPLE: 7, 13, 17")
-print("="*70)
+print("=" * 70)
 
 print("""
 Three primes appear throughout the mixing formulas:
@@ -394,9 +391,9 @@ print(f"  37 × 3 = 111")
 # OPEN QUESTIONS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("OPEN QUESTIONS FOR FUTURE WORK")
-print("="*70)
+print("=" * 70)
 
 print("""
 1. WHY 1111?
@@ -438,28 +435,34 @@ print("""
 # =============================================================================
 
 final_results = {
-    'theory': 'W33 Theory of Everything',
-    'author': 'Wil Dahn',
-    'date': 'January 2026',
-    'total_predictions': len(all_predictions),
-    'mean_error': float(np.mean(errors)),
-    'predictions': {k: {'predicted': float(v['predicted']), 
-                        'observed': float(v['observed']),
-                        'error_percent': float(abs(v['predicted']-v['observed'])/v['observed']*100),
-                        'formula': v['formula']}
-                    for k, v in all_predictions.items()},
-    'fundamental_object': 'W33 = Isotropic lines in F₃⁴',
-    'symmetry_group': 'Sp(4,3), order 51840',
-    'graph_parameters': 'SRG(40, 12, 2, 4)',
-    'exceptional_connection': 'W33 → E₆ → E₇ → E₈'
+    "theory": "W33 Theory of Everything",
+    "author": "Wil Dahn",
+    "date": "January 2026",
+    "total_predictions": len(all_predictions),
+    "mean_error": float(np.mean(errors)),
+    "predictions": {
+        k: {
+            "predicted": float(v["predicted"]),
+            "observed": float(v["observed"]),
+            "error_percent": float(
+                abs(v["predicted"] - v["observed"]) / v["observed"] * 100
+            ),
+            "formula": v["formula"],
+        }
+        for k, v in all_predictions.items()
+    },
+    "fundamental_object": "W33 = Isotropic lines in F₃⁴",
+    "symmetry_group": "Sp(4,3), order 51840",
+    "graph_parameters": "SRG(40, 12, 2, 4)",
+    "exceptional_connection": "W33 → E₆ → E₇ → E₈",
 }
 
-with open('PART_LIX_master_formula_results.json', 'w') as f:
+with open("PART_LIX_master_formula_results.json", "w") as f:
     json.dump(final_results, f, indent=2, default=int)
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PART LIX: THE MASTER FORMULA - COMPLETE")
-print("="*70)
+print("=" * 70)
 
 print("""
 ╔═══════════════════════════════════════════════════════════════════╗
@@ -484,4 +487,4 @@ print("""
 
 Results saved to PART_LIX_master_formula_results.json
 """)
-print("="*70)
+print("=" * 70)

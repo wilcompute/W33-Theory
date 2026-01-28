@@ -11,12 +11,13 @@ The induced subgraph has parameters:
 This is actually more interesting - it's the complement Schläfli graph!
 """
 
-import numpy as np
 from itertools import combinations
 
-print("="*70)
-print("PART CXLII: THE 27-COCLIQUE STRUCTURE")  
-print("="*70)
+import numpy as np
+
+print("=" * 70)
+print("PART CXLII: THE 27-COCLIQUE STRUCTURE")
+print("=" * 70)
 
 omega = np.exp(2j * np.pi / 3)
 
@@ -24,43 +25,47 @@ omega = np.exp(2j * np.pi / 3)
 # BUILD WITTING STATES
 # =====================================================
 
+
 def build_witting_states():
     states = []
     for i in range(4):
         v = np.zeros(4, dtype=complex)
         v[i] = 1
         states.append(v)
-    
+
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([0, 1, -omega**mu, omega**nu]) / np.sqrt(3))
+            states.append(np.array([0, 1, -(omega**mu), omega**nu]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([1, 0, -omega**mu, -omega**nu]) / np.sqrt(3))
+            states.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([1, -omega**mu, 0, omega**nu]) / np.sqrt(3))
+            states.append(np.array([1, -(omega**mu), 0, omega**nu]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
             states.append(np.array([1, omega**mu, omega**nu, 0]) / np.sqrt(3))
-    
+
     return states
+
 
 states = build_witting_states()
 
+
 def inner_product_sq(i, j):
-    return abs(np.vdot(states[i], states[j]))**2
+    return abs(np.vdot(states[i], states[j])) ** 2
+
 
 # Build adjacency matrix (orthogonality graph = Sp₄(3))
-adj = [[inner_product_sq(i,j) < 1e-10 for j in range(40)] for i in range(40)]
+adj = [[inner_product_sq(i, j) < 1e-10 for j in range(40)] for i in range(40)]
 
 # =====================================================
 # ANALYZE THE 27-COCLIQUE
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("THE INDUCED SUBGRAPH ON 27 NON-NEIGHBORS")
-print("="*70)
+print("=" * 70)
 
 vertex = 0
 neighbors = [j for j in range(40) if adj[vertex][j]]
@@ -72,7 +77,9 @@ print(f"Non-neighbors ({len(non_neighbors)}): {non_neighbors}")
 
 # Build induced subgraph
 n_nn = len(non_neighbors)
-induced_adj = [[adj[non_neighbors[i]][non_neighbors[j]] for j in range(n_nn)] for i in range(n_nn)]
+induced_adj = [
+    [adj[non_neighbors[i]][non_neighbors[j]] for j in range(n_nn)] for i in range(n_nn)
+]
 
 # Count edges
 edge_count = sum(sum(row) for row in induced_adj) // 2
@@ -87,42 +94,47 @@ print(f"  Degree: {set(degrees)}")
 # VERIFY SRG PARAMETERS
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SRG PARAMETER VERIFICATION")
-print("="*70)
+print("=" * 70)
+
 
 def verify_srg_parameters(adj_matrix, n):
     """Check what SRG parameters the graph has"""
     # Check regularity
     degrees = [sum(row) for row in adj_matrix]
     k = degrees[0] if len(set(degrees)) == 1 else None
-    
+
     if k is None:
         return None, f"Not regular: degrees {set(degrees)}"
-    
+
     # Compute λ (common neighbors of adjacent vertices)
     lambda_counts = []
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if adj_matrix[i][j]:
                 common = sum(adj_matrix[i][l] and adj_matrix[j][l] for l in range(n))
                 lambda_counts.append(common)
-    
+
     lam = lambda_counts[0] if lambda_counts and len(set(lambda_counts)) == 1 else None
-    
+
     # Compute μ (common neighbors of non-adjacent vertices)
     mu_counts = []
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if not adj_matrix[i][j]:
                 common = sum(adj_matrix[i][l] and adj_matrix[j][l] for l in range(n))
                 mu_counts.append(common)
-    
+
     mu = mu_counts[0] if mu_counts and len(set(mu_counts)) == 1 else None
-    
+
     if lam is not None and mu is not None:
         return (n, k, lam, mu), "SRG verified"
-    return None, f"λ values: {set(lambda_counts) if lambda_counts else 'N/A'}, μ values: {set(mu_counts) if mu_counts else 'N/A'}"
+    return (
+        None,
+        f"λ values: {set(lambda_counts) if lambda_counts else 'N/A'}, μ values: {set(mu_counts) if mu_counts else 'N/A'}",
+    )
+
 
 params, msg = verify_srg_parameters(induced_adj, n_nn)
 print(f"SRG parameters: {params}")
@@ -132,9 +144,9 @@ print(f"Message: {msg}")
 # INTERPRETATION
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("INTERPRETATION")
-print("="*70)
+print("=" * 70)
 
 if params:
     n, k, lam, mu = params
@@ -158,9 +170,9 @@ Hmm, that doesn't match {params} either!
 # CHECK THE ACTUAL SCHLÄFLI RELATIONS
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("RELATION TO 27 LINES")
-print("="*70)
+print("=" * 70)
 
 print("""
 DEEPER ANALYSIS:
@@ -187,7 +199,9 @@ So our graph edges correspond to INTERSECTION of lines!
 """)
 
 # Compute the complement
-comp_induced = [[not induced_adj[i][j] and i != j for j in range(n_nn)] for i in range(n_nn)]
+comp_induced = [
+    [not induced_adj[i][j] and i != j for j in range(n_nn)] for i in range(n_nn)
+]
 comp_edges = sum(sum(row) for row in comp_induced) // 2
 comp_degrees = [sum(row) for row in comp_induced]
 
@@ -202,9 +216,9 @@ print(f"  SRG parameters: {params_comp}")
 # THE CORRECT RELATIONSHIP
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("THE CORRECT STRUCTURAL RELATIONSHIP")
-print("="*70)
+print("=" * 70)
 
 # Check spectrum
 adj_matrix = np.array(induced_adj, dtype=float)
@@ -243,9 +257,9 @@ Let me check if this matches a known structure...
 # KNOWN SRG(27, 8, 1, 4)
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("IDENTIFYING SRG(27, 8, 1, 4)")
-print("="*70)
+print("=" * 70)
 
 print("""
 Looking up SRG(27, 8, 1, 4) in the literature...
@@ -280,9 +294,9 @@ Actually this is the NU GRAPH in design theory!
 # Count triangles
 triangles = 0
 for i in range(n_nn):
-    for j in range(i+1, n_nn):
+    for j in range(i + 1, n_nn):
         if induced_adj[i][j]:
-            for k in range(j+1, n_nn):
+            for k in range(j + 1, n_nn):
                 if induced_adj[i][k] and induced_adj[j][k]:
                     triangles += 1
 
@@ -293,9 +307,9 @@ print(f"Prediction from λ=1: {27 * 8 * 1 // 6} = 36")
 # FINAL STRUCTURAL UNDERSTANDING
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("STRUCTURAL CONCLUSION")
-print("="*70)
+print("=" * 70)
 
 print("""
 THE 27-COCLIQUE STRUCTURE:
@@ -333,17 +347,17 @@ encodes the E₆ Weyl group geometry.
 # INTER-BLOCK ADJACENCIES
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("TRIALITY BLOCK ANALYSIS")
-print("="*70)
+print("=" * 70)
 
 # The non-neighbors are indices 13-39
 # Group 2: 13-21 (indices 0-8 in non_neighbors)
 # Group 3: 22-30 (indices 9-17 in non_neighbors)
 # Group 4: 31-39 (indices 18-26 in non_neighbors)
 
-g2_idx = list(range(0, 9))    # non_neighbors[0:9] = states 13-21
-g3_idx = list(range(9, 18))   # non_neighbors[9:18] = states 22-30
+g2_idx = list(range(0, 9))  # non_neighbors[0:9] = states 13-21
+g3_idx = list(range(9, 18))  # non_neighbors[9:18] = states 22-30
 g4_idx = list(range(18, 27))  # non_neighbors[18:27] = states 31-39
 
 # Count edges within and between blocks
@@ -361,7 +375,9 @@ print(f"  Within Group 4: {edges_within_g4}")
 print(f"  Between G2-G3: {edges_g2_g3}")
 print(f"  Between G2-G4: {edges_g2_g4}")
 print(f"  Between G3-G4: {edges_g3_g4}")
-print(f"  Total: {edges_within_g2 + edges_within_g3 + edges_within_g4 + edges_g2_g3 + edges_g2_g4 + edges_g3_g4}")
+print(
+    f"  Total: {edges_within_g2 + edges_within_g3 + edges_within_g4 + edges_g2_g3 + edges_g2_g4 + edges_g3_g4}"
+)
 
 print("""
 OBSERVATION:
@@ -378,9 +394,9 @@ The 108 edges form a specific pattern related to the
 F₃ × F₃ structure of each 9-block.
 """)
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PART CXLII COMPLETE")
-print("="*70)
+print("=" * 70)
 
 print("""
 KEY FINDINGS:

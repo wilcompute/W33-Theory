@@ -18,10 +18,11 @@ From one polynomial to everything.
 This is the manifesto of W33 Theory.
 """
 
-import numpy as np
-from decimal import Decimal, getcontext
 import json
 from datetime import datetime
+from decimal import Decimal, getcontext
+
+import numpy as np
 
 getcontext().prec = 60
 
@@ -190,11 +191,11 @@ print("CHAPTER V: THE CONSTANTS")
 print("═" * 75)
 
 # Calculate key constants
-alpha_inv = 137 + Decimal(40)/Decimal(1111)
+alpha_inv = 137 + Decimal(40) / Decimal(1111)
 sin2_w = v / (v + k**2 + m1)
 M_H = 3**4 + v + mu
 H0_cmb = v + m2 + m1 + lam
-H0_local = H0_cmb + 2*lam + mu
+H0_local = H0_cmb + 2 * lam + mu
 Lambda_exp = k**2 - m2 + lam
 
 print(f"""
@@ -464,9 +465,16 @@ results = {
     "construction": "W33 = Sp(4, F₃)",
     "polynomial": "P(x) = (x-12)(x-2)^24(x+4)^15",
     "parameters": {
-        "v": v, "k": k, "λ": lam, "μ": mu,
-        "m1": m1, "m2": m2, "m3": m3,
-        "e1": e1, "e2": e2, "e3": e3
+        "v": v,
+        "k": k,
+        "λ": lam,
+        "μ": mu,
+        "m1": m1,
+        "m2": m2,
+        "m3": m3,
+        "e1": e1,
+        "e2": e2,
+        "e3": e3,
     },
     "key_predictions": {
         "alpha_inverse": 137.036004,
@@ -476,17 +484,17 @@ results = {
         "H0_CMB": 67,
         "H0_local": 73,
         "Lambda_exponent": -122,
-        "proton_lifetime": "10^34-10^35 years"
+        "proton_lifetime": "10^34-10^35 years",
     },
     "philosophy": {
         "universe_is_math": True,
         "multiverse": False,
         "observers_inevitable": True,
         "time_arrow": "from eigenvalue positivity",
-        "consciousness": "part of the loop"
+        "consciousness": "part of the loop",
     },
     "status": "THEORY OF EVERYTHING - COMPLETE",
-    "completion_date": datetime.now().isoformat()
+    "completion_date": datetime.now().isoformat(),
 }
 
 with open("PART_C_manifesto.json", "w") as f:

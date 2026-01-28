@@ -11,21 +11,22 @@ Author: Wil Dahn
 Date: January 2026
 """
 
-import numpy as np
-from fractions import Fraction
 import json
+from fractions import Fraction
 
-print("="*70)
+import numpy as np
+
+print("=" * 70)
 print("W33 THEORY PART LX: THE MYSTERY OF 1111")
-print("="*70)
+print("=" * 70)
 
 # =============================================================================
 # SECTION 1: BASIC PROPERTIES OF 1111
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 1: BASIC NUMBER THEORY OF 1111")
-print("="*70)
+print("=" * 70)
 
 print("""
 THE NUMBER 1111:
@@ -39,16 +40,18 @@ Properties:
 • In base 3: 1111 = 1111001₃ (1×729 + 1×243 + 1×81 + 1×27 + 1 = 1081... wait)
 """)
 
+
 # Check base conversions
 def to_base(n, b):
     """Convert n to base b."""
     if n == 0:
-        return '0'
+        return "0"
     digits = []
     while n:
         digits.append(str(n % b))
         n //= b
-    return ''.join(reversed(digits))
+    return "".join(reversed(digits))
+
 
 print(f"1111 in various bases:")
 print(f"  Base 2:  {to_base(1111, 2)}")
@@ -66,9 +69,9 @@ print(f"  Verification: {base3} in base 3 = {check} in base 10")
 # SECTION 2: 1111 AND REPUNITS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 2: 1111 AS A REPUNIT")
-print("="*70)
+print("=" * 70)
 
 print("""
 REPUNIT NUMBERS:
@@ -94,6 +97,7 @@ Both 11 and 101 are special primes:
 These are "repunit primes" patterns!
 """)
 
+
 # Factorize repunits
 def factorize_small(n):
     """Simple factorization."""
@@ -108,6 +112,7 @@ def factorize_small(n):
         factors.append(n)
     return factors
 
+
 print("Repunit factorizations:")
 for k in range(1, 8):
     R_k = (10**k - 1) // 9
@@ -118,9 +123,9 @@ for k in range(1, 8):
 # SECTION 3: CONNECTION TO W33 GEOMETRY
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 3: 1111 FROM W33 GEOMETRY?")
-print("="*70)
+print("=" * 70)
 
 print("""
 SEARCHING FOR 1111 IN W33:
@@ -159,9 +164,9 @@ for a in w33_nums:
 # SECTION 4: 1111 IN BASE 3
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 4: 1111 IN BASE 3 (THE W33 BASE)")
-print("="*70)
+print("=" * 70)
 
 # 1111 in base 3
 base3_1111 = to_base(1111, 3)
@@ -186,7 +191,7 @@ Base 3 decomposition of 1111:
 """)
 
 # Manual verification
-check = 1*729 + 1*243 + 1*81 + 0*27 + 2*9 + 0*3 + 1*1
+check = 1 * 729 + 1 * 243 + 1 * 81 + 0 * 27 + 2 * 9 + 0 * 3 + 1 * 1
 print(f"Manual check: {check}")
 # The base 3 representation
 print(f"Correct base 3: {to_base(1111, 3)}")
@@ -209,9 +214,9 @@ print("  " + " + ".join(f"{c}×3^{i}" for i, c, p in powers))
 # SECTION 5: 1111 AND EXCEPTIONAL NUMBERS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 5: 1111 AND EXCEPTIONAL ALGEBRAS")
-print("="*70)
+print("=" * 70)
 
 print("""
 EXCEPTIONAL DECOMPOSITIONS:
@@ -228,10 +233,14 @@ Attempts:
 
 # Try combinations
 exceptional = {
-    'E6_adj': 78, 'E6_fund': 27,
-    'E7_adj': 133, 'E7_fund': 56,
-    'E8_dim': 248, 'E8_roots': 240,
-    'W33': 40, '3^4': 81
+    "E6_adj": 78,
+    "E6_fund": 27,
+    "E7_adj": 133,
+    "E7_fund": 56,
+    "E8_dim": 248,
+    "E8_roots": 240,
+    "W33": 40,
+    "3^4": 81,
 }
 
 # Check simple combinations
@@ -250,15 +259,17 @@ for n1, v1 in exceptional.items():
             diff = 1111 - v1 * v2
             if diff in exceptional.values():
                 name3 = [k for k, v in exceptional.items() if v == diff][0]
-                print(f"  {n1} × {n2} + {name3} = {v1} × {v2} + {diff} = {v1*v2} + {diff} = 1111")
+                print(
+                    f"  {n1} × {n2} + {name3} = {v1} × {v2} + {diff} = {v1*v2} + {diff} = 1111"
+                )
 
 # =============================================================================
 # SECTION 6: THE FORMULA 40/1111
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 6: WHY 40/1111?")
-print("="*70)
+print("=" * 70)
 
 print("""
 THE RATIO 40/1111:
@@ -284,15 +295,15 @@ OR in terms of geometry:
 • 11 = number of something (maximal cliques? special substructures?)
 • 101 = number of something else
 • 40/1111 = W33 normalized by these counts
-""".format(40/1111))
+""".format(40 / 1111))
 
 # =============================================================================
 # SECTION 7: 1111 AND 37
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 7: THE 37 CONNECTION")
-print("="*70)
+print("=" * 70)
 
 print("""
 THE NUMBER 37:
@@ -331,9 +342,9 @@ print(f"  3 × 37 = {3 * 37} (111)")
 # SECTION 8: 1111 AS GEOMETRIC SERIES
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 8: 1111 AS GEOMETRIC SERIES")
-print("="*70)
+print("=" * 70)
 
 print("""
 GEOMETRIC SERIES INTERPRETATION:
@@ -363,9 +374,9 @@ Or: 3^7 = 2187 = 1111 + 1076 = 1111 + 4 × 269
 # SECTION 9: DEEPER STRUCTURE
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 9: THE DEEP STRUCTURE")
-print("="*70)
+print("=" * 70)
 
 print("""
 SYNTHESIZING THE MEANING OF 1111:
@@ -413,9 +424,9 @@ This matches the generation hierarchy!
 # SECTION 10: PREDICTIVE POWER
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 10: PREDICTIONS FROM 1111")
-print("="*70)
+print("=" * 70)
 
 print("""
 IF 1111 = generation hierarchy constraints, THEN:
@@ -446,6 +457,7 @@ me, mmu, mtau = 0.511, 105.7, 1777
 mu, mc, mt = 2.16, 1270, 172760
 
 import math
+
 print("\nMass ratio exponents (base 10):")
 print(f"  log₁₀(mμ/me) = {math.log10(mmu/me):.2f}")
 print(f"  log₁₀(mτ/me) = {math.log10(mtau/me):.2f}")
@@ -457,21 +469,21 @@ print(f"  log₁₀(mt/mu) = {math.log10(mt/mu):.2f}")
 # =============================================================================
 
 results = {
-    '1111_factorization': '11 × 101',
-    '1111_repunit': '(10^4 - 1)/9',
-    '1111_from_37': '37 × 30 + 1 = 999 + 111 + 1',
-    '1111_from_W33': '40 × 27 + 31',
-    '40/1111': 40/1111,
-    'alpha_inverse_formula': '81 + 56 + 40/1111',
-    'interpretation': 'Vacuum constraint count from generation hierarchy'
+    "1111_factorization": "11 × 101",
+    "1111_repunit": "(10^4 - 1)/9",
+    "1111_from_37": "37 × 30 + 1 = 999 + 111 + 1",
+    "1111_from_W33": "40 × 27 + 31",
+    "40/1111": 40 / 1111,
+    "alpha_inverse_formula": "81 + 56 + 40/1111",
+    "interpretation": "Vacuum constraint count from generation hierarchy",
 }
 
-with open('PART_LX_1111_mystery_results.json', 'w') as f:
+with open("PART_LX_1111_mystery_results.json", "w") as f:
     json.dump(results, f, indent=2, default=int)
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PART LX CONCLUSIONS")
-print("="*70)
+print("=" * 70)
 
 print("""
 THE MYSTERY OF 1111 - RESOLVED?
@@ -500,4 +512,4 @@ encodes the three-generation hierarchy.
 
 Results saved to PART_LX_1111_mystery_results.json
 """)
-print("="*70)
+print("=" * 70)

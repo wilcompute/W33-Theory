@@ -1,2 +1,3 @@
 import jsonschema
-print('jsonschema', jsonschema.__version__)
+
+print("jsonschema", jsonschema.__version__)

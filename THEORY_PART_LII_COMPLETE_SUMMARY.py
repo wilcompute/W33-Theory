@@ -384,8 +384,10 @@ PART CLV: QUANTUM CIRCUITS FOR WITTING STATES (DETAIL)
 # Each Witting state can be prepared from |0⟩ by a sequence of Clifford and triflection gates.
 # For illustration, we show the circuit for the first few states.
 
-from qiskit import QuantumCircuit
 from math import pi
+
+from qiskit import QuantumCircuit
+
 
 def witting_circuit(index):
     qc = QuantumCircuit(2)

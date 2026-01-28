@@ -47,7 +47,9 @@ def parse_proj_classes(row):
         return raw.split()
     raw_list = (row.get("proj_list") or "").strip()
     if raw_list:
-        cleaned = raw_list.replace("[", "").replace("]", "").replace("'", "").replace('"', "")
+        cleaned = (
+            raw_list.replace("[", "").replace("]", "").replace("'", "").replace('"', "")
+        )
         return [item.strip() for item in cleaned.split(",") if item.strip()]
     return []
 
@@ -111,7 +113,9 @@ def main():
     out_dir.mkdir(parents=True, exist_ok=True)
 
     phase_map_path = out_dir / "W33_line_phase_map.csv"
-    coupling_path = data_dir / "toe_coupling_20260110" / "W33_lines_to_projective_quartets.csv"
+    coupling_path = (
+        data_dir / "toe_coupling_20260110" / "W33_lines_to_projective_quartets.csv"
+    )
 
     line_phase = {}
     global_k6 = defaultdict(int)
@@ -120,7 +124,9 @@ def main():
         reader = csv.DictReader(handle)
         required = {"line_id", "k_mod6_counts", "k_mod3_counts"}
         if not required.issubset(set(reader.fieldnames or [])):
-            raise ValueError(f"Missing required columns in {phase_map_path}: {required - set(reader.fieldnames or [])}")
+            raise ValueError(
+                f"Missing required columns in {phase_map_path}: {required - set(reader.fieldnames or [])}"
+            )
         for row in reader:
             try:
                 line_id = int(row["line_id"])
@@ -135,9 +141,15 @@ def main():
                 global_k3[k] += v
             line_phase[line_id] = {"k6": k6_counts, "k3": k3_counts}
 
-    proj_to_counts = defaultdict(lambda: {"k6": defaultdict(int), "k3": defaultdict(int), "lines": 0})
-    sec_to_counts = defaultdict(lambda: {"k6": defaultdict(int), "k3": defaultdict(int), "lines": 0})
-    m_to_counts = defaultdict(lambda: {"k6": defaultdict(int), "k3": defaultdict(int), "lines": 0})
+    proj_to_counts = defaultdict(
+        lambda: {"k6": defaultdict(int), "k3": defaultdict(int), "lines": 0}
+    )
+    sec_to_counts = defaultdict(
+        lambda: {"k6": defaultdict(int), "k3": defaultdict(int), "lines": 0}
+    )
+    m_to_counts = defaultdict(
+        lambda: {"k6": defaultdict(int), "k3": defaultdict(int), "lines": 0}
+    )
 
     with coupling_path.open(newline="", encoding="utf-8-sig") as handle:
         reader = csv.DictReader(handle)
@@ -248,7 +260,9 @@ def main():
         writer.writeheader()
         writer.writerows(m_rows)
 
-    proj_rows_sorted = sorted(proj_rows, key=lambda r: (-r["k6_kl_global"], -r["k6_dom_frac"]))
+    proj_rows_sorted = sorted(
+        proj_rows, key=lambda r: (-r["k6_kl_global"], -r["k6_dom_frac"])
+    )
     top_proj = proj_rows_sorted[:6]
 
     md_path = out_dir / "projective_phase_alignment.md"
@@ -256,15 +270,29 @@ def main():
         handle.write("# Projective class vs W33 phase alignment\n\n")
         handle.write("Inputs:\n")
         handle.write("- `data/_workbench/02_geometry/W33_line_phase_map.csv`\n")
-        handle.write("- `data/_toe/coupling_20260110/W33_lines_to_projective_quartets.csv`\n\n")
+        handle.write(
+            "- `data/_toe/coupling_20260110/W33_lines_to_projective_quartets.csv`\n\n"
+        )
         handle.write("Outputs:\n")
-        handle.write("- `data/_workbench/02_geometry/projective_class_phase_alignment.csv`\n")
-        handle.write("- `data/_workbench/02_geometry/projective_sector_phase_alignment.csv`\n")
-        handle.write("- `data/_workbench/02_geometry/projective_m_phase_alignment.csv`\n\n")
+        handle.write(
+            "- `data/_workbench/02_geometry/projective_class_phase_alignment.csv`\n"
+        )
+        handle.write(
+            "- `data/_workbench/02_geometry/projective_sector_phase_alignment.csv`\n"
+        )
+        handle.write(
+            "- `data/_workbench/02_geometry/projective_m_phase_alignment.csv`\n\n"
+        )
         handle.write("Global phase distribution:\n")
-        handle.write(f"- k mod 6 counts: {json.dumps(dict(sorted(global_k6.items())))}\n")
-        handle.write(f"- k mod 3 counts: {json.dumps(dict(sorted(global_k3.items())))}\n\n")
-        handle.write("Most phase-biased projective classes (by k mod 6 KL to global):\n")
+        handle.write(
+            f"- k mod 6 counts: {json.dumps(dict(sorted(global_k6.items())))}\n"
+        )
+        handle.write(
+            f"- k mod 3 counts: {json.dumps(dict(sorted(global_k3.items())))}\n\n"
+        )
+        handle.write(
+            "Most phase-biased projective classes (by k mod 6 KL to global):\n"
+        )
         for row in top_proj:
             handle.write(
                 f"- {row['proj_class']}: k6_dom={row['k6_dom_k']} "
@@ -275,4 +303,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

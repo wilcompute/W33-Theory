@@ -10,10 +10,11 @@ from which EVERYTHING flows.
 This is the search for the Theory of Everything in one line.
 """
 
-import numpy as np
 import json
-from fractions import Fraction
 from decimal import Decimal, getcontext
+from fractions import Fraction
+
+import numpy as np
 
 getcontext().prec = 50
 
@@ -55,8 +56,8 @@ v = (p**n - 1) // (p - 1)  # Number of lines in projective space
 
 v = 40  # vertices
 k = 12  # degree
-λ = 2   # edge parameter  
-μ = 4   # non-edge parameter
+λ = 2  # edge parameter
+μ = 4  # non-edge parameter
 
 e1, e2, e3 = k, 2, -4
 m1, m2, m3 = 1, 24, 15
@@ -112,10 +113,10 @@ print("SECTION 3: EXPLICIT CALCULATIONS")
 print("=" * 70)
 
 # The denominator in alpha formula
-D = (k - 1) * ((k - λ)**2 + 1)
+D = (k - 1) * ((k - λ) ** 2 + 1)
 
 # Alpha inverse
-alpha_inv = Decimal(k**2 - 2*μ + 1) + Decimal(v) / Decimal(D)
+alpha_inv = Decimal(k**2 - 2 * μ + 1) + Decimal(v) / Decimal(D)
 
 # Weak mixing angle
 sin2_theta_W = Decimal(v) / Decimal(v + k**2 + 1)
@@ -124,7 +125,7 @@ sin2_theta_W = Decimal(v) / Decimal(v + k**2 + 1)
 N_gen = m3 // 5
 
 # GUT scale (relative to M_Z)
-GUT_ratio = 3**(v - 7)
+GUT_ratio = 3 ** (v - 7)
 
 # Cosmological constant exponent
 Lambda_exp = -(k**2 - m2 + λ)
@@ -294,8 +295,8 @@ print("Characteristic polynomial coefficients:")
 # At x=0: P(0) = (-12)(-2)^24(4)^15
 
 # We can compute some values
-P_at_0 = (-12) * ((-2)**24) * (4**15)
-P_at_1 = (-11) * ((-1)**24) * (5**15)
+P_at_0 = (-12) * ((-2) ** 24) * (4**15)
+P_at_1 = (-11) * ((-1) ** 24) * (5**15)
 
 print(f"  P(0) = {P_at_0:.2e}")
 print(f"  P(1) = {P_at_1:.2e}")
@@ -380,7 +381,7 @@ but a theory where everything IS one equation.
 """)
 
 # =============================================================================
-# SAVE RESULTS  
+# SAVE RESULTS
 # =============================================================================
 
 results = {
@@ -389,24 +390,27 @@ results = {
     "title": "The Ultimate Equation",
     "fundamental_structure": "Sp(4, F₃) symplectic graph",
     "parameters": {
-        "v": v, "k": k, "lambda": λ, "mu": μ,
+        "v": v,
+        "k": k,
+        "lambda": λ,
+        "mu": μ,
         "eigenvalues": [e1, e2, e3],
-        "multiplicities": [m1, m2, m3]
+        "multiplicities": [m1, m2, m3],
     },
     "characteristic_polynomial": "(x - 12)(x - 2)^24(x + 4)^15",
     "derived_constants": {
         "alpha_inverse": str(alpha_inv),
         "sin2_theta_W": str(sin2_theta_W),
         "N_generations": N_gen,
-        "cosmological_exponent": Lambda_exp
+        "cosmological_exponent": Lambda_exp,
     },
     "key_numbers": {
         "1111": "alpha denominator",
         "122": "cosmological exponent",
         "33": "mass ratio, GUT",
-        "36": "extra dimensions"
+        "36": "extra dimensions",
     },
-    "information_bits": int(info_estimate)
+    "information_bits": int(info_estimate),
 }
 
 with open("PART_LXXXVIII_ultimate.json", "w") as f:

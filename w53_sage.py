@@ -4,9 +4,9 @@ W(5, 3) Homology Computation in Sage
 """
 
 # Build W(5, 3) symplectic polar space
-print("="*60)
-print("W(5, 3) - RANK 3 SYMPLECTIC POLAR SPACE")  
-print("="*60)
+print("=" * 60)
+print("W(5, 3) - RANK 3 SYMPLECTIC POLAR SPACE")
+print("=" * 60)
 
 # Symplectic form on GF(3)^6
 # ω(x,y) = x₁y₄ - x₄y₁ + x₂y₅ - x₅y₂ + x₃y₆ - x₆y₃
@@ -15,17 +15,22 @@ F = GF(3)
 V = VectorSpace(F, 6)
 
 # Symplectic matrix
-J = matrix(F, [
-    [0, 0, 0, 1, 0, 0],
-    [0, 0, 0, 0, 1, 0],
-    [0, 0, 0, 0, 0, 1],
-    [-1, 0, 0, 0, 0, 0],
-    [0, -1, 0, 0, 0, 0],
-    [0, 0, -1, 0, 0, 0]
-])
+J = matrix(
+    F,
+    [
+        [0, 0, 0, 1, 0, 0],
+        [0, 0, 0, 0, 1, 0],
+        [0, 0, 0, 0, 0, 1],
+        [-1, 0, 0, 0, 0, 0],
+        [0, -1, 0, 0, 0, 0],
+        [0, 0, -1, 0, 0, 0],
+    ],
+)
+
 
 def symplectic_form(v, w):
     return v * J * w
+
 
 # Find totally isotropic 1-spaces (points of W(5,3))
 def normalize(v):
@@ -33,6 +38,7 @@ def normalize(v):
         if v[i] != 0:
             return v / v[i]
     return v
+
 
 points = []
 seen = set()
@@ -47,9 +53,11 @@ for v in V:
 
 print(f"Points of W(5, 3): {len(points)}")
 
+
 # Find totally isotropic lines (2-spaces)
 def are_orthogonal(v, w):
     return symplectic_form(v, w) == 0
+
 
 print("Finding totally isotropic lines...")
 lines = []
@@ -64,7 +72,7 @@ for i, p1 in enumerate(points):
                 for b in F:
                     if a == 0 and b == 0:
                         continue
-                    v = a*p1 + b*p2
+                    v = a * p1 + b * p2
                     line_pts.add(tuple(normalize(v)))
             lines.append(frozenset(line_pts))
 
@@ -78,7 +86,7 @@ G.add_vertices(range(len(points)))
 
 # Two points are adjacent if they're on a common line (orthogonal)
 for i in range(len(points)):
-    for j in range(i+1, len(points)):
+    for j in range(i + 1, len(points)):
         if are_orthogonal(points[i], points[j]):
             G.add_edge(i, j)
 
@@ -107,7 +115,7 @@ triangles = 0
 for v in range(len(points)):
     neighbors = G.neighbors(v)
     for i, n1 in enumerate(neighbors):
-        for n2 in neighbors[i+1:]:
+        for n2 in neighbors[i + 1 :]:
             if G.has_edge(n1, n2):
                 triangles += 1
 triangles //= 3  # Each triangle counted 3 times
@@ -174,18 +182,20 @@ W(5, 3):
 The rank-2 and rank-3 cases are TOPOLOGICALLY DIFFERENT!
 """)
 
-print("\n" + "="*60)
+print("\n" + "=" * 60)
 print("KLEIN CORRESPONDENCE: W(3,3) ≅ Q(4,3)")
-print("="*60)
+print("=" * 60)
 
 # Build Q(4, 3) - parabolic quadric
 print("\nBuilding Q(4, 3)...")
 
 V5 = VectorSpace(F, 5)
 
+
 # Quadric form: x_0^2 + x_1*x_2 + x_3*x_4 = 0
 def on_quadric(v):
-    return v[0]**2 + v[1]*v[2] + v[3]*v[4] == 0
+    return v[0] ** 2 + v[1] * v[2] + v[3] * v[4] == 0
+
 
 q4_points = []
 seen = set()
@@ -211,6 +221,6 @@ This works for all q! The 40-point structure is the same
 whether viewed as symplectic or orthogonal geometry.
 """)
 
-print("\n★" + "="*58 + "★")
+print("\n★" + "=" * 58 + "★")
 print("   W(5, 3) AND KLEIN CORRESPONDENCE VERIFIED!")
-print("★" + "="*58 + "★")
+print("★" + "=" * 58 + "★")

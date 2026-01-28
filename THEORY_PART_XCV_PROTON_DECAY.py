@@ -8,9 +8,10 @@ W33 makes a PRECISE prediction for the proton lifetime.
 This is potentially the definitive test of the theory!
 """
 
-import numpy as np
-from decimal import Decimal, getcontext
 import json
+from decimal import Decimal, getcontext
+
+import numpy as np
 
 getcontext().prec = 50
 
@@ -60,7 +61,7 @@ print("SECTION 2: W33 GUT SCALE")
 print("=" * 70)
 
 # GUT scale from W33
-M_GUT_ratio = 3**(v - 7)  # 3^33
+M_GUT_ratio = 3 ** (v - 7)  # 3^33
 M_GUT = M_Z * M_GUT_ratio
 
 print(f"\nW33 PREDICTION FOR GUT SCALE:")
@@ -107,7 +108,7 @@ print("SECTION 4: W33 PROTON LIFETIME CALCULATION")
 print("=" * 70)
 
 # W33 unified coupling
-alpha_GUT = 1/v  # 1/40 = 0.025
+alpha_GUT = 1 / v  # 1/40 = 0.025
 
 print(f"\nW33 INPUT PARAMETERS:")
 print(f"  M_X = 3³³ × M_Z = {M_GUT:.4e} GeV")
@@ -379,14 +380,14 @@ results = {
         "alpha_GUT": float(alpha_GUT),
         "tau_p_years": float(tau_p_years),
         "tau_p_range": "10^34 - 10^35 years",
-        "dominant_channel": "p → e⁺ + π⁰"
+        "dominant_channel": "p → e⁺ + π⁰",
     },
     "experimental": {
         "current_limit": "2.4e34 years",
         "status": "consistent",
-        "future_test": "Hyper-Kamiokande 2027+"
+        "future_test": "Hyper-Kamiokande 2027+",
     },
-    "verdict": "Testable smoking gun prediction"
+    "verdict": "Testable smoking gun prediction",
 }
 
 with open("PART_XCV_proton_decay.json", "w") as f:

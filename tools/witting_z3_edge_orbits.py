@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Analyze Z3 edge labels by monomial-group orbits on non-orth edges."""
+
 from __future__ import annotations
 
 import itertools
@@ -22,9 +23,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -50,7 +51,9 @@ def build_monomial_group(rays):
     elements = []
     for perm in itertools.permutations(range(4)):
         for a0, a1, a2, a3 in itertools.product(phases, repeat=4):
-            phase_vec = np.array([omega**a0, omega**a1, omega**a2, omega**a3], dtype=complex)
+            phase_vec = np.array(
+                [omega**a0, omega**a1, omega**a2, omega**a3], dtype=complex
+            )
             mapping = []
             valid = True
             for r in rays:
@@ -99,7 +102,11 @@ def solve_edge_potential(rays):
         d1[t_idx, e_jk] = 1
         d1[t_idx, e_ik] = -1
         d1[t_idx, e_ij] = 1
-        ip = np.vdot(rays[i], rays[j]) * np.vdot(rays[j], rays[k]) * np.conjugate(np.vdot(rays[i], rays[k]))
+        ip = (
+            np.vdot(rays[i], rays[j])
+            * np.vdot(rays[j], rays[k])
+            * np.conjugate(np.vdot(rays[i], rays[k]))
+        )
         t[t_idx] = phase_to_k(np.angle(ip)) % 3
 
     # solve d1 x = t over GF(3)
@@ -155,7 +162,7 @@ def main():
     edge_maps = []
     for g in group:
         emap = []
-        for (i, j) in edges:
+        for i, j in edges:
             a, b = g[i], g[j]
             if a > b:
                 a, b = b, a

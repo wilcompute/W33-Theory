@@ -31,14 +31,14 @@ print()
 print("═══ FINE STRUCTURE CONSTANT ═══")
 print()
 alpha_inv_exp = 137.035999084  # CODATA 2018
-alpha_exp = 1/alpha_inv_exp
+alpha_exp = 1 / alpha_inv_exp
 
 # COMPLETE W33 FORMULA (discovered in Parts I-XLII)
 # α⁻¹ = cycles + E7_fund + correction
 #     = 81 + 56 + 40/1111
 
-alpha_inv_w33 = 81 + 56 + 40/1111
-alpha_w33 = 1/alpha_inv_w33
+alpha_inv_w33 = 81 + 56 + 40 / 1111
+alpha_w33 = 1 / alpha_inv_w33
 
 print("W33 COMPLETE FORMULA:")
 print(f"  α⁻¹ = 81 + 56 + 40/1111")
@@ -55,7 +55,9 @@ print()
 print("REMARKABLE AGREEMENT:")
 diff = abs(alpha_inv_w33 - alpha_inv_exp)
 print(f"  |Δα⁻¹| = {diff:.9f}")
-print(f"  Relative error = {diff/alpha_inv_exp:.2e} = {diff/alpha_inv_exp * 1e8:.1f} parts in 10⁸")
+print(
+    f"  Relative error = {diff/alpha_inv_exp:.2e} = {diff/alpha_inv_exp * 1e8:.1f} parts in 10⁸"
+)
 print()
 
 # Understanding 1111
@@ -245,7 +247,7 @@ print()
 
 # Another possibility: the ratio involves 27 and 5
 # 27/5 = 5.4 exactly!
-print("  REMARKABLE: 27/5 = {:.1f} ← Exactly the observed ratio!".format(27/5))
+print("  REMARKABLE: 27/5 = {:.1f} ← Exactly the observed ratio!".format(27 / 5))
 print()
 print("  Interpretation:")
 print("    27 = E6 fundamental representation = dim(J₃(𝕆))")
@@ -421,7 +423,7 @@ print()
 
 # W33 Higgs mass formula
 v = 246.22  # Electroweak VEV in GeV
-m_H_w33 = (v/2) * math.sqrt(81/78)
+m_H_w33 = (v / 2) * math.sqrt(81 / 78)
 
 print("  FORMULA: m_H = (v/2) × √(cycles/dim(E6))")
 print(f"                = (v/2) × √(81/78)")
@@ -436,7 +438,7 @@ print()
 print("═══ TOP QUARK MASS ═══")
 print()
 m_t_exp = 172.76  # GeV
-m_t_w33 = v * math.sqrt(40/81)
+m_t_w33 = v * math.sqrt(40 / 81)
 
 print("  FORMULA: m_t = v × √(points/cycles)")
 print(f"               = v × √(40/81)")

@@ -28,9 +28,10 @@ is revealed to be the fundamental figure underlying:
 This simple instruction contains the seed of the entire theory.
 """
 
-import numpy as np
 from fractions import Fraction
 from itertools import permutations
+
+import numpy as np
 
 print("=" * 90)
 print("              W33 THEORY PART IX: THE DIAMOND ARCHETYPE")
@@ -644,8 +645,8 @@ print("  • Quantum physics (entanglement, fundamental constants)")
 print("  • Aesthetics (Hopkins, Stevens, Hesse, Joyce)")
 print()
 print('"It is a good light, then, for those')
-print(' That know the ultimate Plato,')
-print(' Tranquillizing with this jewel')
+print(" That know the ultimate Plato,")
+print(" Tranquillizing with this jewel")
 print(' The torments of confusion."')
-print('    - Wallace Stevens')
+print("    - Wallace Stevens")
 print()

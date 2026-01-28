@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Clean up the workspace: remove temp files and move duplicates to archive."""
 
-from pathlib import Path
 import shutil
+from pathlib import Path
 
 # Use the directory where this script is located as the ROOT
 ROOT = Path(__file__).parent.resolve()

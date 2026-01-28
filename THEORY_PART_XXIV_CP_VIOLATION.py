@@ -8,8 +8,8 @@ CP VIOLATION AND MATTER-ANTIMATTER ASYMMETRY
 Why is there more matter than antimatter in the universe?
 """
 
-import math
 import cmath
+import math
 from fractions import Fraction
 
 print("""
@@ -82,9 +82,9 @@ THE CKM MATRIX (quark mixing):
 
 # CKM parameters
 theta_12_ckm = 13.04  # degrees (Cabibbo angle)
-theta_23_ckm = 2.38   # degrees
+theta_23_ckm = 2.38  # degrees
 theta_13_ckm = 0.201  # degrees
-delta_ckm = 68.8      # degrees (CP phase)
+delta_ckm = 68.8  # degrees (CP phase)
 
 print("═══ CKM Parameters ═══")
 print()
@@ -229,14 +229,14 @@ print("═══ W33 Prediction ═══")
 print()
 
 # A natural combination
-J_w33_attempt = (9/40)**3 * (40/173) * math.sin(math.radians(60))
+J_w33_attempt = (9 / 40) ** 3 * (40 / 173) * math.sin(math.radians(60))
 print(f"  J ∼ sin³(θ_C) × sin²(θ_W) × sin(60°)")
 print(f"    = (9/40)³ × (40/173) × sin(60°)")
 print(f"    = {J_w33_attempt:.2e}")
 print()
 
 # Another attempt
-J_w33_attempt2 = (9/40)**2 * (1/40) * (1/81) * math.sin(math.radians(120))
+J_w33_attempt2 = (9 / 40) ** 2 * (1 / 40) * (1 / 81) * math.sin(math.radians(120))
 print(f"  J ∼ λ² × (1/points) × (1/cycles) × sin(120°)")
 print(f"    = (9/40)² × (1/40) × (1/81) × sin(120°)")
 print(f"    = {J_w33_attempt2:.2e}")

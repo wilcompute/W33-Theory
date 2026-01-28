@@ -9,9 +9,10 @@ universal algebraic structure.
 Key question: What is the CATEGORICAL universal property?
 """
 
+from itertools import permutations, product
+
 import numpy as np
-from numpy import sqrt, pi, log
-from itertools import product, permutations
+from numpy import log, pi, sqrt
 
 print("=" * 80)
 print("THE UNIVERSAL PROPERTY OF W(3,3)")
@@ -75,12 +76,24 @@ for a in GF3:
     print(f"  {a} | {row}")
 
 # Define K4
-K4 = ['1', 'a', 'b', 'c']  # c = ab
+K4 = ["1", "a", "b", "c"]  # c = ab
 K4_mul_table = {
-    ('1', '1'): '1', ('1', 'a'): 'a', ('1', 'b'): 'b', ('1', 'c'): 'c',
-    ('a', '1'): 'a', ('a', 'a'): '1', ('a', 'b'): 'c', ('a', 'c'): 'b',
-    ('b', '1'): 'b', ('b', 'a'): 'c', ('b', 'b'): '1', ('b', 'c'): 'a',
-    ('c', '1'): 'c', ('c', 'a'): 'b', ('c', 'b'): 'a', ('c', 'c'): '1',
+    ("1", "1"): "1",
+    ("1", "a"): "a",
+    ("1", "b"): "b",
+    ("1", "c"): "c",
+    ("a", "1"): "a",
+    ("a", "a"): "1",
+    ("a", "b"): "c",
+    ("a", "c"): "b",
+    ("b", "1"): "b",
+    ("b", "a"): "c",
+    ("b", "b"): "1",
+    ("b", "c"): "a",
+    ("c", "1"): "c",
+    ("c", "a"): "b",
+    ("c", "b"): "a",
+    ("c", "c"): "1",
 }
 
 print("\nK4 = {1, a, b, c} where c = ab")

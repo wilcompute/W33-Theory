@@ -4,6 +4,7 @@
 If the induced permutations on roots preserve the E8 bilinear form,
 then the bijection is compatible with a Weyl-group action.
 """
+
 from __future__ import annotations
 
 import json
@@ -33,11 +34,11 @@ def build_w33():
             proj_points.append(v)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     edges = []
     for i in range(40):
-        for j in range(i+1, 40):
+        for j in range(i + 1, 40):
             if omega(proj_points[i], proj_points[j]) == 0:
                 edges.append((i, j))
 
@@ -54,15 +55,17 @@ def normalize_proj(v):
 
 
 def check_symplectic(M):
-    Omega = [[0,0,1,0],[0,0,0,1],[2,0,0,0],[0,2,0,0]]
+    Omega = [[0, 0, 1, 0], [0, 0, 0, 1], [2, 0, 0, 0], [0, 2, 0, 0]]
+
     def mat_mult(A, B):
         n, k, m = len(A), len(B), len(B[0])
-        result = [[0]*m for _ in range(n)]
+        result = [[0] * m for _ in range(n)]
         for i in range(n):
             for j in range(m):
                 for l in range(k):
                     result[i][j] = (result[i][j] + A[i][l] * B[l][j]) % 3
         return result
+
     MT = [[M[j][i] for j in range(4)] for i in range(4)]
     result = mat_mult(mat_mult(MT, Omega), M)
     return result == Omega
@@ -94,16 +97,16 @@ def vertex_perm_to_edge_perm(vperm, edges):
 
 def get_sp43_generators(vertices, edges):
     gen_matrices = [
-        [[1,0,1,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,1],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[1,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,1,0,1]],
-        [[1,1,0,0],[0,1,0,0],[0,0,1,0],[0,0,2,1]],
-        [[1,0,0,0],[1,1,0,0],[0,0,1,2],[0,0,0,1]],
-        [[0,0,1,0],[0,1,0,0],[2,0,0,0],[0,0,0,1]],
-        [[1,0,0,0],[0,0,0,1],[0,0,1,0],[0,2,0,0]],
-        [[2,0,0,0],[0,1,0,0],[0,0,2,0],[0,0,0,1]],
-        [[1,0,0,0],[0,2,0,0],[0,0,1,0],[0,0,0,2]],
+        [[1, 0, 1, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 1], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [1, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 1, 0, 1]],
+        [[1, 1, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 2, 1]],
+        [[1, 0, 0, 0], [1, 1, 0, 0], [0, 0, 1, 2], [0, 0, 0, 1]],
+        [[0, 0, 1, 0], [0, 1, 0, 0], [2, 0, 0, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0], [0, 2, 0, 0]],
+        [[2, 0, 0, 0], [0, 1, 0, 0], [0, 0, 2, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 2, 0, 0], [0, 0, 1, 0], [0, 0, 0, 2]],
     ]
 
     edge_perms = []
@@ -132,7 +135,7 @@ def main():
     root_index = {r: i for i, r in enumerate(roots)}
 
     # Gram matrix in simple-root basis (consistent with Sage ordering)
-    R = RootSystem(['E', 8]).root_lattice()
+    R = RootSystem(["E", 8]).root_lattice()
     C = R.cartan_type().cartan_matrix()
 
     def ip(r, s):
@@ -140,7 +143,7 @@ def main():
 
     # Precompute Gram matrix entries
     n = len(roots)
-    Gram = [[0]*n for _ in range(n)]
+    Gram = [[0] * n for _ in range(n)]
     for i in range(n):
         for j in range(n):
             Gram[i][j] = ip(roots[i], roots[j])
@@ -156,7 +159,7 @@ def main():
     # Test equivariance: each edge perm induces a root perm
     for g_idx, eperm in enumerate(edge_perms):
         # Build root permutation induced by edge permutation
-        perm = [0]*n
+        perm = [0] * n
         for e in edge_list:
             i = edge_idx[e]
             e2 = edge_list[eperm[i]]

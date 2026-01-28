@@ -11,8 +11,9 @@ Can W33 say anything about:
 This is highly speculative but let's see what emerges!
 """
 
-import numpy as np
 import json
+
+import numpy as np
 
 print("=" * 70)
 print("W33 THEORY PART LXXXIII: COSMOLOGY")
@@ -22,10 +23,10 @@ print("=" * 70)
 # W33 PARAMETERS
 # =============================================================================
 
-v = 40      # vertices
-k = 12      # regularity
-λ_graph = 2 # edge parameter (using λ_graph to avoid confusion with Λ)
-μ = 4       # non-edge parameter
+v = 40  # vertices
+k = 12  # regularity
+λ_graph = 2  # edge parameter (using λ_graph to avoid confusion with Λ)
+μ = 4  # non-edge parameter
 
 e1, e2, e3 = 12, 2, -4
 m1, m2, m3 = 1, 24, 15
@@ -92,7 +93,7 @@ DISCOVERY:
 
 # Verify
 check1 = k**2 - m2 + λ_graph
-check2 = 3*v + λ_graph
+check2 = 3 * v + λ_graph
 print(f"Verification: k² - m₂ + λ = {check1}")
 print(f"Verification: 3v + λ = {check2}")
 
@@ -293,7 +294,7 @@ THIS MIGHT EXPLAIN THE HUBBLE TENSION!
 """)
 
 H_CMB = v + m2 + m1 + λ_graph
-H_local = v + m2 + m1 + 2*λ_graph + μ
+H_local = v + m2 + m1 + 2 * λ_graph + μ
 print(f"\nW33 predictions:")
 print(f"  H₀(CMB) = v + m₂ + m₁ + λ = {H_CMB}")
 print(f"  H₀(local) = v + m₂ + m₁ + 2λ + μ = {H_local}")
@@ -417,16 +418,20 @@ results = {
     "key_number": {
         "value": 122,
         "formula": "k² - m₂ + λ",
-        "appears_in": ["cosmological constant", "age of universe", "holographic entropy"]
+        "appears_in": [
+            "cosmological constant",
+            "age of universe",
+            "holographic entropy",
+        ],
     },
     "predictions": {
         "cosmological_constant_exponent": -122,
         "e_folds_inflation": N_efolds,
         "age_exponent": 61,
         "H0_CMB": H_CMB,
-        "H0_local": H_local
+        "H0_local": H_local,
     },
-    "speculative": True
+    "speculative": True,
 }
 
 with open("PART_LXXXIII_cosmology.json", "w") as f:

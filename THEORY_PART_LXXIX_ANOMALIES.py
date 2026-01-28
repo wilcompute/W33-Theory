@@ -11,20 +11,21 @@ Author: Wil Dahn
 Date: January 2026
 """
 
-import numpy as np
 import json
 
-print("="*70)
+import numpy as np
+
+print("=" * 70)
 print("W33 THEORY PART LXXIX: ANOMALY CANCELLATION")
-print("="*70)
+print("=" * 70)
 
 # =============================================================================
 # SECTION 1: WHAT ARE ANOMALIES?
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 1: GAUGE ANOMALIES")
-print("="*70)
+print("=" * 70)
 
 print("""
 GAUGE ANOMALIES arise when quantum effects break a classical symmetry.
@@ -48,9 +49,9 @@ For each, the sum over all left-handed fermions must vanish.
 # SECTION 2: STANDARD MODEL PARTICLE CONTENT
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 2: SM PARTICLE CONTENT")
-print("="*70)
+print("=" * 70)
 
 print("""
 Standard Model fermions (one generation, LEFT-HANDED):
@@ -74,12 +75,12 @@ so we treat them as left-handed anti-particles with opposite charges.
 
 SM_fermions = [
     # Left-handed
-    ('Q_L (3,2,1/6)', 3, 2, 1/6, 1),
-    ('L_L (1,2,-1/2)', 1, 2, -1/2, 1),
+    ("Q_L (3,2,1/6)", 3, 2, 1 / 6, 1),
+    ("L_L (1,2,-1/2)", 1, 2, -1 / 2, 1),
     # Right-handed (counted with opposite Y for anomaly)
-    ('u_R (3,1,2/3)', 3, 1, -2/3, 1),  # Y -> -Y for RH
-    ('d_R (3,1,-1/3)', 3, 1, 1/3, 1),
-    ('e_R (1,1,-1)', 1, 1, 1, 1),
+    ("u_R (3,1,2/3)", 3, 1, -2 / 3, 1),  # Y -> -Y for RH
+    ("d_R (3,1,-1/3)", 3, 1, 1 / 3, 1),
+    ("e_R (1,1,-1)", 1, 1, 1, 1),
 ]
 
 print("Particles for anomaly calculation:")
@@ -90,83 +91,85 @@ for p in SM_fermions:
 # SECTION 3: ANOMALY CONDITIONS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 3: ANOMALY CANCELLATION CONDITIONS")
-print("="*70)
+print("=" * 70)
+
 
 def compute_anomalies(particles):
     """Compute all gauge anomalies for a set of particles"""
-    
+
     # [SU(3)]³: Σ d(SU2) × (SU3 index)
     # For fundamental of SU(3), the cubic invariant is 1
     # This vanishes for any number of generations because
     # quarks and antiquarks contribute equally
-    
+
     A_SU3_cubed = 0
     for name, d3, d2, Y, chi in particles:
         if d3 == 3:  # Fundamental of SU(3)
             A_SU3_cubed += chi * d2 * 1  # Cubic Casimir = 1 for fundamental
         elif d3 == 1:
             pass  # Singlets don't contribute
-    
+
     # [SU(2)]³: Always vanishes for SU(2) (no cubic invariant)
     A_SU2_cubed = 0  # By group theory
-    
+
     # [U(1)]³: Σ d(SU3) × d(SU2) × Y³
     A_U1_cubed = 0
     for name, d3, d2, Y, chi in particles:
         A_U1_cubed += chi * d3 * d2 * Y**3
-    
+
     # [SU(3)]²U(1): Σ d(SU2) × Y × C_2(SU3)
     # C_2(fundamental) = 1/2
     A_SU3sq_U1 = 0
     for name, d3, d2, Y, chi in particles:
         if d3 == 3:
-            A_SU3sq_U1 += chi * d2 * Y * (1/2)  # C_2 = 1/2 for fundamental
-    
+            A_SU3sq_U1 += chi * d2 * Y * (1 / 2)  # C_2 = 1/2 for fundamental
+
     # [SU(2)]²U(1): Σ d(SU3) × Y × C_2(SU2)
     # C_2(doublet) = 3/4
     A_SU2sq_U1 = 0
     for name, d3, d2, Y, chi in particles:
         if d2 == 2:
-            A_SU2sq_U1 += chi * d3 * Y * (3/4)
-    
+            A_SU2sq_U1 += chi * d3 * Y * (3 / 4)
+
     # [Grav]²U(1): Σ d(SU3) × d(SU2) × Y
     A_grav_U1 = 0
     for name, d3, d2, Y, chi in particles:
         A_grav_U1 += chi * d3 * d2 * Y
-    
+
     return {
-        '[SU(3)]³': A_SU3_cubed,
-        '[SU(2)]³': A_SU2_cubed,
-        '[U(1)]³': A_U1_cubed,
-        '[SU(3)]²U(1)': A_SU3sq_U1,
-        '[SU(2)]²U(1)': A_SU2sq_U1,
-        '[Grav]²U(1)': A_grav_U1
+        "[SU(3)]³": A_SU3_cubed,
+        "[SU(2)]³": A_SU2_cubed,
+        "[U(1)]³": A_U1_cubed,
+        "[SU(3)]²U(1)": A_SU3sq_U1,
+        "[SU(2)]²U(1)": A_SU2sq_U1,
+        "[Grav]²U(1)": A_grav_U1,
     }
+
 
 # Compute for SM (one generation)
 anomalies_1gen = compute_anomalies(SM_fermions)
 
 print("SM anomaly contributions (ONE generation):")
 for name, value in anomalies_1gen.items():
-    status = '✓' if abs(value) < 1e-10 else f'= {value}'
+    status = "✓" if abs(value) < 1e-10 else f"= {value}"
     print(f"  {name}: {status}")
 
 # Three generations
-anomalies_3gen = {k: 3*v for k, v in anomalies_1gen.items()}
+anomalies_3gen = {k: 3 * v for k, v in anomalies_1gen.items()}
 print("\nSM anomalies (THREE generations):")
 for name, value in anomalies_3gen.items():
-    status = '✓ CANCELS' if abs(value) < 1e-10 else f'= {value:.4f}'
+    status = "✓ CANCELS" if abs(value) < 1e-10 else f"= {value:.4f}"
     print(f"  {name}: {status}")
 
 # =============================================================================
 # SECTION 4: DETAILED CALCULATION
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 4: DETAILED [U(1)]³ CALCULATION")
-print("="*70)
+print("=" * 70)
 
 print("""
 The [U(1)]³ anomaly is:
@@ -186,20 +189,22 @@ Total = 1/36 - 8/9 + 1/9 - 1/4 + 1
 """)
 
 # Verify
-A_U1_detailed = (6 * (1/6)**3 + 
-                 3 * (-2/3)**3 + 
-                 3 * (1/3)**3 + 
-                 2 * (-1/2)**3 + 
-                 1 * (1)**3)
+A_U1_detailed = (
+    6 * (1 / 6) ** 3
+    + 3 * (-2 / 3) ** 3
+    + 3 * (1 / 3) ** 3
+    + 2 * (-1 / 2) ** 3
+    + 1 * (1) ** 3
+)
 print(f"Numerical check: {A_U1_detailed:.10f}")
 
 # =============================================================================
 # SECTION 5: W33 PARTICLE ASSIGNMENT
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 5: W33 PARTICLE CONTENT")
-print("="*70)
+print("=" * 70)
 
 print("""
 W33 has 40 vertices. We assign them to particles as:
@@ -243,9 +248,9 @@ Resolution: The 40 vertices represent GAUGE MULTIPLETS, not individual fields!
 # SECTION 6: W33 QUANTUM NUMBERS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 6: W33 VERTEX QUANTUM NUMBERS")
-print("="*70)
+print("=" * 70)
 
 print("""
 W33 eigenvalue multiplicities: (1, 24, 15)
@@ -273,9 +278,9 @@ consistent with anomaly cancellation!
 # SECTION 7: THE 40 = 24 + 15 + 1 DECOMPOSITION
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 7: THE 40 = 24 + 15 + 1 DECOMPOSITION")
-print("="*70)
+print("=" * 70)
 
 print("""
 The eigenvalue decomposition 40 = 1 + 24 + 15 matches SU(5):
@@ -303,9 +308,9 @@ anomaly cancellation through its SU(5) embedding!
 # SECTION 8: MIXED ANOMALIES
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 8: GLOBAL AND MIXED ANOMALIES")
-print("="*70)
+print("=" * 70)
 
 print("""
 Beyond gauge anomalies, there are GLOBAL anomalies:
@@ -329,16 +334,16 @@ All anomaly conditions satisfied by W33!
 """)
 
 # Verify gravitational anomaly
-grav_per_gen = (1/6)*6 + (-2/3)*3 + (1/3)*3 + (-1/2)*2 + 1
+grav_per_gen = (1 / 6) * 6 + (-2 / 3) * 3 + (1 / 3) * 3 + (-1 / 2) * 2 + 1
 print(f"Gravitational anomaly per generation: {grav_per_gen}")
 
 # =============================================================================
 # SECTION 9: PREDICTIONS FROM ANOMALY CONSTRAINTS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 9: ANOMALY-DERIVED PREDICTIONS")
-print("="*70)
+print("=" * 70)
 
 print("""
 Anomaly cancellation CONSTRAINS the theory:
@@ -370,28 +375,28 @@ W33's 77 GeV dark matter candidate:
 # SECTION 10: SUMMARY
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PART LXXIX CONCLUSIONS")
-print("="*70)
+print("=" * 70)
 
 results = {
-    'SM_anomalies': 'All cancel per generation',
-    'W33_decomposition': {
-        'm1': {'value': 1, 'interpretation': 'Higgs singlet'},
-        'm2': {'value': 24, 'interpretation': 'SU(5) adjoint gauge bosons'},
-        'm3': {'value': 15, 'interpretation': 'Fermion structure'}
+    "SM_anomalies": "All cancel per generation",
+    "W33_decomposition": {
+        "m1": {"value": 1, "interpretation": "Higgs singlet"},
+        "m2": {"value": 24, "interpretation": "SU(5) adjoint gauge bosons"},
+        "m3": {"value": 15, "interpretation": "Fermion structure"},
     },
-    'anomaly_types': {
-        '[SU(3)]³': 'Vanishes for complete generations',
-        '[SU(2)]³': 'Vanishes by group theory',
-        '[U(1)]³': 'Cancels: 1-32+4-9+36 = 0',
-        '[Grav]²U(1)': 'Cancels per generation'
+    "anomaly_types": {
+        "[SU(3)]³": "Vanishes for complete generations",
+        "[SU(2)]³": "Vanishes by group theory",
+        "[U(1)]³": "Cancels: 1-32+4-9+36 = 0",
+        "[Grav]²U(1)": "Cancels per generation",
     },
-    'W33_consistency': 'All anomalies cancel - theory is quantum consistent!'
+    "W33_consistency": "All anomalies cancel - theory is quantum consistent!",
 }
 
-with open('PART_LXXIX_anomalies.json', 'w') as f:
-        json.dump(results, f, indent=2, default=int)
+with open("PART_LXXIX_anomalies.json", "w") as f:
+    json.dump(results, f, indent=2, default=int)
 print("""
 ANOMALY CANCELLATION IN W33!
 
@@ -420,4 +425,4 @@ QUANTUM ANOMALY CANCELLATION!
 
 Results saved to PART_LXXIX_anomalies.json
 """)
-print("="*70)
+print("=" * 70)

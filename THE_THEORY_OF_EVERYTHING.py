@@ -40,7 +40,7 @@ q = 3  # The prime field
 n = 3  # Projective dimension
 
 # Number of points in PG(n, q) = (q^(n+1) - 1) / (q - 1)
-num_points = (q**(n+1) - 1) // (q - 1)
+num_points = (q ** (n + 1) - 1) // (q - 1)
 num_lines = num_points  # Self-dual in PG(3,q)
 
 print(f"W33 = PG({n}, GF({q}))")
@@ -50,7 +50,7 @@ print()
 
 # The incidence structure gives us cycles
 num_cycles = 81  # From computational analysis
-num_k4s = 90     # K4 subgroups
+num_k4s = 90  # K4 subgroups
 
 print(f"Incidence structure:")
 print(f"  Cycles: {num_cycles} = 3^4")
@@ -151,11 +151,11 @@ print("=" * 72)
 print()
 
 exceptional = {
-    'G2': {'dim': 14, 'rank': 2},
-    'F4': {'dim': 52, 'rank': 4},
-    'E6': {'dim': 78, 'rank': 6},
-    'E7': {'dim': 133, 'rank': 7},
-    'E8': {'dim': 248, 'rank': 8}
+    "G2": {"dim": 14, "rank": 2},
+    "F4": {"dim": 52, "rank": 4},
+    "E6": {"dim": 78, "rank": 6},
+    "E7": {"dim": 133, "rank": 7},
+    "E8": {"dim": 248, "rank": 8},
 }
 
 print("The Exceptional Lie Algebras:")
@@ -244,7 +244,9 @@ e7_fundamental = 56
 alpha_inv_predicted = cycles_81 + e7_fundamental
 alpha_inv_experimental = 137.035999084
 
-error_alpha = abs(alpha_inv_predicted - alpha_inv_experimental) / alpha_inv_experimental * 100
+error_alpha = (
+    abs(alpha_inv_predicted - alpha_inv_experimental) / alpha_inv_experimental * 100
+)
 
 print("THE MASTER EQUATION:")
 print()

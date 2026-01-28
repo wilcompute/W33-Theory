@@ -10,9 +10,9 @@ W33 GRAND EXPLORATION - ALL DIRECTIONS AT ONCE!
 Let's explore the entire landscape!
 """
 
-print("="*70)
+print("=" * 70)
 print("PART 1: HIGHER RANK POLAR SPACES - W(5, q)")
-print("="*70)
+print("=" * 70)
 
 # W(2n-1, q) is the symplectic polar space of rank n
 # W(3, q) = rank 2 -> Steinberg in H₁
@@ -42,7 +42,7 @@ n = 3  # rank
 
 # Number of points in W(2n-1, q)
 # Formula: (q^{2n} - 1)/(q - 1) for totally isotropic 1-spaces
-# Actually for W(2n-1, q): points = (q^n - 1)(q^n + 1)/(q-1) = (q^{2n} - 1)/(q-1)... 
+# Actually for W(2n-1, q): points = (q^n - 1)(q^n + 1)/(q-1) = (q^{2n} - 1)/(q-1)...
 # Wait, let me be more careful.
 
 # For W(2n-1, q):
@@ -55,13 +55,15 @@ n = 3  # rank
 print("\nW(5, 3) PARAMETERS:")
 print("-" * 40)
 
+
 # Sp(6, q) order
 def sp_order(n, q):
     """Order of Sp(2n, q)"""
-    order = q**(n**2)
-    for i in range(1, n+1):
-        order *= (q**(2*i) - 1)
+    order = q ** (n**2)
+    for i in range(1, n + 1):
+        order *= q ** (2 * i) - 1
     return order
+
 
 sp6_order = sp_order(3, 3)
 print(f"|Sp(6, 3)| = {sp6_order:,}")
@@ -69,8 +71,9 @@ print(f"|Sp(6, 3)| = {sp6_order:,}")
 # For W(5, q), points = (q^6 - 1)/(q - 1) = 1 + q + q² + q³ + q⁴ + q⁵
 # No wait, that's PG(5, q). Need totally isotropic points.
 
-# Number of totally isotropic 1-spaces = (q^3 - 1)(q^3 + q)/(q - 1)... 
+# Number of totally isotropic 1-spaces = (q^3 - 1)(q^3 + q)/(q - 1)...
 # Let me just compute directly.
+
 
 # Gaussian binomial [n, k]_q
 def gaussian_binomial(n, k, q):
@@ -81,12 +84,13 @@ def gaussian_binomial(n, k, q):
     num = 1
     den = 1
     for i in range(k):
-        num *= (q**(n-i) - 1)
-        den *= (q**(i+1) - 1)
+        num *= q ** (n - i) - 1
+        den *= q ** (i + 1) - 1
     return num // den
 
+
 # Number of totally isotropic k-spaces in W(2n-1, q)
-# For k=1 (points): product_{i=0}^{n-1} (q^{n-i} + 1) ... 
+# For k=1 (points): product_{i=0}^{n-1} (q^{n-i} + 1) ...
 # Actually: (q^n + 1) * [n, 1]_q / something
 
 # Let me use a known formula
@@ -166,9 +170,9 @@ PREDICTION: H₂(W(5, 3)) = Z^{3**9:,} (Steinberg!)
             π₂(W(5, 3)) ≠ 0 (NOT aspherical!)
 """)
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PART 2: OTHER POLAR SPACE TYPES")
-print("="*70)
+print("=" * 70)
 
 print("""
 POLAR SPACES come in several flavors based on the form:
@@ -208,7 +212,7 @@ print("-" * 40)
 # This is rank 2, so similar to W(3, 3)
 
 # Number of points on Q(2n, q):
-# Formula: (q^n - 1)(q^n + 1)/(q - 1) = (q^{2n} - 1)/(q - 1)... 
+# Formula: (q^n - 1)(q^n + 1)/(q - 1) = (q^{2n} - 1)/(q - 1)...
 # Wait, that's not quite right for quadrics.
 
 # Q(2n, q) singular points = (q^{2n+1} - 1)/(q - 1) total PG points
@@ -216,7 +220,7 @@ print("-" * 40)
 
 # For Q(4, 3) (parabolic, 5-dimensional quadric in PG(4)):
 # Points = 1 + q + q² + 2q³ = 40 for q=3? No...
-# Actually Q(4, q) points = (q² + 1)(q + 1) 
+# Actually Q(4, q) points = (q² + 1)(q + 1)
 
 q4_points = (3**2 + 1) * (3 + 1)
 print(f"Q(4, 3) points = (3²+1)(3+1) = {q4_points}")
@@ -242,9 +246,9 @@ The symplectic polar space is ISOMORPHIC to the parabolic orthogonal quadric!
 This is known as the "Klein correspondence" in dimension 4.
 """)
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PART 3: EXPLICIT GEOMETRIC BASIS FOR 81 CYCLES")
-print("="*70)
+print("=" * 70)
 
 print("""
 Goal: Find 81 explicit cycles in W33 that form a basis for H₁.
@@ -312,9 +316,9 @@ Total: 3 × 3 × 3 × 3 = 81 root group elements
 Each element ≠ 1 gives a nontrivial cycle!
 """)
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PART 4: PHYSICS CONNECTIONS")
-print("="*70)
+print("=" * 70)
 
 print("""
 ╔═══════════════════════════════════════════════════════════════════╗
@@ -401,9 +405,9 @@ is related to:
   - The role of primes in physics (why is 3 special?)
 """)
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SYNTHESIS: THE BIG PICTURE")
-print("="*70)
+print("=" * 70)
 
 print("""
                     ┌─────────────────┐
@@ -450,9 +454,9 @@ print("""
 Everything connects through the magical number 81 = 3⁴!
 """)
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("VERIFIED HIERARCHY OF POLAR SPACES")
-print("="*70)
+print("=" * 70)
 
 print("""
 SYMPLECTIC FAMILY W(2n-1, q):
@@ -477,9 +481,9 @@ General rank n: W(2n-1, q)
   • Steinberg in H_{n-1}, dim = q^{n²}
 """)
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("NEXT STEPS FOR EXPLORATION")
-print("="*70)
+print("=" * 70)
 
 print("""
 1. COMPUTE W(5, 3) EXPLICITLY
@@ -506,6 +510,6 @@ print("""
    - Look for patterns in q = prime power
 """)
 
-print("\n" + "★"*70)
+print("\n" + "★" * 70)
 print("                    EXPLORATION COMPLETE!")
-print("★"*70)
+print("★" * 70)

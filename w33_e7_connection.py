@@ -149,7 +149,7 @@ tests = [
     ("40 + 81 + 12", 40 + 81 + 12),
     ("7 × 19", 7 * 19),
     ("126 + 7 (roots + rank)", 126 + 7),
-    ("28 + 28 + 28 + 28 + 21", 28*4 + 21),
+    ("28 + 28 + 28 + 28 + 21", 28 * 4 + 21),
     ("W(3,3) + K4s + ?", 40 + 90),  # 130
 ]
 
@@ -216,7 +216,9 @@ print(f"  Gravitinos: {n8_gravitino}")
 print(f"  Vectors:    {n8_vector}")
 print(f"  Fermions:   {n8_fermion} ← 56 of E₇!")
 print(f"  Scalars:    {n8_scalar} ← E₇/SU(8)")
-print(f"  Total:      {n8_graviton + n8_gravitino + n8_vector + n8_fermion + n8_scalar}")
+print(
+    f"  Total:      {n8_graviton + n8_gravitino + n8_vector + n8_fermion + n8_scalar}"
+)
 
 # Connection to W
 print(f"\n56 and W-hierarchy:")
@@ -356,7 +358,7 @@ magic_dims = [
     ("E₆", 78),
     ("SO(12)", 66),
     ("E₇", 133),
-    ("E₈", 248)
+    ("E₈", 248),
 ]
 
 for name, d in magic_dims:
@@ -523,7 +525,7 @@ print(f"    at low energies has E₇ symmetry!")
 # Verify the gauge dimension
 print(f"\n  SM gauge dimensions:")
 print(f"    SU(3): {8}")
-print(f"    SU(2): {3}")  
+print(f"    SU(2): {3}")
 print(f"    U(1):  {1}")
 print(f"    Total: {8 + 3 + 1} = 12")
 

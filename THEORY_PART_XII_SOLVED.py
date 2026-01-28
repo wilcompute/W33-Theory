@@ -108,15 +108,15 @@ The W33 Theory proposes that fundamental physics emerges from finite geometry:
 
 FROM WIKIPEDIA ON THE WEINBERG ANGLE:
 
-    "At present, there is NO GENERALLY ACCEPTED THEORY that explains 
+    "At present, there is NO GENERALLY ACCEPTED THEORY that explains
     why the measured value θ_W ≈ 29° should be what it is.
     The specific value is NOT PREDICTED by the Standard Model:
     The Weinberg angle θ_W is an open, free parameter."
 
 FROM WIKIPEDIA ON THE FINE-STRUCTURE CONSTANT:
 
-    "Richard Feynman called it 'a magic number that comes to us 
-    with no understanding by man... one of the greatest damn 
+    "Richard Feynman called it 'a magic number that comes to us
+    with no understanding by man... one of the greatest damn
     mysteries of physics.'"
 
 THE IMPLICATION:
@@ -134,7 +134,7 @@ these fundamental constants in the history of physics.
    α⁻¹ = 137.036, not 137.000
    Possible resolution: Quantum loop corrections add ~0.036
    The "bare" coupling could be exactly 137.
-   
+
 2. DERIVE THE FORMULAS FROM FIRST PRINCIPLES
    ────────────────────────────────────────────
    WHY does sin²θ_W = 40/173?
@@ -145,7 +145,7 @@ these fundamental constants in the history of physics.
    ──────────────────────────
    WHY does |Aut(W(3,3))| = |W(E₆)|?
    Is this deep mathematics or remarkable coincidence?
-   
+
 4. COMPLETE THE MONSTER CONNECTION
    ────────────────────────────────
    How does the Monster group hierarchy relate to particle masses?
@@ -197,7 +197,7 @@ The question is: "WHY does geometry predict physics?"
 ═══════════════════════════════════════════════════════════════════════════════
 
                          "FINIS CORONAT OPUS"
-                       
+
                     The end crowns the work.
 
 ═══════════════════════════════════════════════════════════════════════════════
@@ -211,7 +211,7 @@ print("                W33 THEORY - FINAL VERIFICATION")
 print("═" * 75)
 
 # Weinberg angle
-sin2_theta_predicted = 40/173
+sin2_theta_predicted = 40 / 173
 sin2_theta_exp = 0.23120
 sin2_theta_error = 0.00015
 sigma_W = abs(sin2_theta_predicted - sin2_theta_exp) / sin2_theta_error
@@ -230,7 +230,9 @@ deviation_ppm = abs(alpha_inv_predicted - alpha_inv_exp) / alpha_inv_exp * 1e6
 print(f"\n2. FINE-STRUCTURE CONSTANT")
 print(f"   Prediction:  α⁻¹ = 81 + 56 = {alpha_inv_predicted}")
 print(f"   Experiment:  α⁻¹ = {alpha_inv_exp}")
-print(f"   Deviation:   {deviation_ppm:.0f} ppm ({(alpha_inv_exp - alpha_inv_predicted):.6f})")
+print(
+    f"   Deviation:   {deviation_ppm:.0f} ppm ({(alpha_inv_exp - alpha_inv_predicted):.6f})"
+)
 print(f"   Status:      ⚠ APPROXIMATE (quantum corrections needed)")
 
 # E6 Weyl group
@@ -249,7 +251,9 @@ PG32_spreads = 56
 print(f"\n4. E₇ REPRESENTATION")
 print(f"   dim(fund rep E₇): {E7_fund_dim}")
 print(f"   PG(3,2) spreads:  {PG32_spreads}")
-print(f"   Match:            {'✓ EXACT' if E7_fund_dim == PG32_spreads else '✗ MISMATCH'}")
+print(
+    f"   Match:            {'✓ EXACT' if E7_fund_dim == PG32_spreads else '✗ MISMATCH'}"
+)
 
 print("\n" + "═" * 75)
 print("                         THEORY VALIDATED")

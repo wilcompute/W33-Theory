@@ -243,7 +243,7 @@ print(f"  31 + 2/3 = {31 + 2/3:.4f}")
 
 # Using our W33 values
 alpha_w33 = 137
-sin2_w33 = 40/173
+sin2_w33 = 40 / 173
 product_w33 = alpha_w33 * sin2_w33
 
 print(f"\nUsing W33 predictions:")

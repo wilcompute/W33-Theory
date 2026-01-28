@@ -5,6 +5,7 @@ FINAL EXECUTIVE SUMMARY - THEORY OF EVERYTHING COMPLETE
 This script provides a definitive summary of all evidence for W33 as the Theory of Everything.
 """
 
+
 def main():
     summary = """
 ╔═══════════════════════════════════════════════════════════════════════════╗
@@ -361,5 +362,6 @@ The answer is there. The evidence is overwhelming. The theory is complete.
 """
     print(summary)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

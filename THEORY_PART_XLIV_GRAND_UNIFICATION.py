@@ -14,6 +14,7 @@ The Ultimate Synthesis:
 """
 
 import math
+
 import numpy as np
 
 print("""
@@ -33,7 +34,7 @@ print("""
 # =============================================================================
 
 W33_POINTS = 40
-W33_LINES = 40  
+W33_LINES = 40
 W33_CYCLES = 81
 W33_K4 = 90
 W33_TOTAL = 121
@@ -133,7 +134,7 @@ print()
 # Or: 14 ≈ 56/4 = E7_fund/4
 
 # Better: M_GUT = v × 10^(56/4) = v × 10^14
-M_GUT_w33 = v_ew * 10**(E7_FUND/4)
+M_GUT_w33 = v_ew * 10 ** (E7_FUND / 4)
 print(f"  M_GUT = v × 10^(56/4) = {v_ew} × 10¹⁴")
 print(f"        = {M_GUT_w33:.2e} GeV")
 print()
@@ -190,11 +191,11 @@ print()
 # Combined with other factors
 
 m_proton = 0.938  # GeV
-alpha_GUT = 1/24
+alpha_GUT = 1 / 24
 M_GUT = 1.1e16  # GeV
 
 # Rough estimate
-tau_factor = (M_GUT/m_proton)**4 / alpha_GUT**2
+tau_factor = (M_GUT / m_proton) ** 4 / alpha_GUT**2
 # Convert to years: 1 GeV⁻¹ ≈ 6.58 × 10⁻²⁵ s
 tau_seconds = tau_factor * 6.58e-25 / m_proton
 tau_years = tau_seconds / (3.15e7)
@@ -361,7 +362,7 @@ print()
 # Universe entropy ~ 10^122 (Bekenstein bound)
 # S ~ (R_H/l_P)² where R_H ~ Hubble radius
 S_universe = 1e122  # bits
-Lambda_natural = 1/S_universe
+Lambda_natural = 1 / S_universe
 print(f"  S_universe ~ 10¹²² bits (Bekenstein bound)")
 print(f"  Λ ~ 1/S ~ 10⁻¹²² (in Planck units)")
 print()

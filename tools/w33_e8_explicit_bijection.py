@@ -18,11 +18,12 @@ E8 D4×D4 decomposition:
 
 The map should preserve the triality structure.
 """
+
 from __future__ import annotations
 
 import json
 from collections import Counter, defaultdict
-from itertools import product, combinations
+from itertools import combinations, product
 from pathlib import Path
 
 import numpy as np
@@ -51,12 +52,12 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     edges = []
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
                 edges.append((i, j))
@@ -69,17 +70,17 @@ def build_e8_roots():
     roots = []
     # Type 1: ±e_i ± e_j (112 roots)
     for i in range(8):
-        for j in range(i+1, 8):
+        for j in range(i + 1, 8):
             for si in [1, -1]:
                 for sj in [1, -1]:
-                    r = [0]*8
+                    r = [0] * 8
                     r[i] = si
                     r[j] = sj
                     roots.append(tuple(r))
     # Type 2: (±1/2, ..., ±1/2) with even number of minus signs (128 roots)
     for signs in product([1, -1], repeat=8):
         if sum(1 for s in signs if s == -1) % 2 == 0:
-            roots.append(tuple(s/2 for s in signs))
+            roots.append(tuple(s / 2 for s in signs))
     return np.array(roots, dtype=float)
 
 
@@ -118,11 +119,11 @@ def compute_w33_triangles(adj, n):
     """Find all triangles in W33."""
     triangles = []
     for i in range(n):
-        for j in range(i+1, n):
-            if adj[i,j]:
-                for k in range(j+1, n):
-                    if adj[i,k] and adj[j,k]:
-                        triangles.append((i,j,k))
+        for j in range(i + 1, n):
+            if adj[i, j]:
+                for k in range(j + 1, n):
+                    if adj[i, k] and adj[j, k]:
+                        triangles.append((i, j, k))
     return triangles
 
 
@@ -134,9 +135,9 @@ def get_h12_triangles(adj, v0):
     # Find triangles among neighbors
     h12_triangles = []
     for i, a in enumerate(neighbors):
-        for j, b in enumerate(neighbors[i+1:], i+1):
+        for j, b in enumerate(neighbors[i + 1 :], i + 1):
             if adj[a, b]:
-                for k, c in enumerate(neighbors[j+1:], j+1):
+                for k, c in enumerate(neighbors[j + 1 :], j + 1):
                     if adj[a, c] and adj[b, c]:
                         h12_triangles.append((a, b, c))
 
@@ -149,9 +150,9 @@ def analyze_triality_structure(adj, vertices, edges):
 
     # Define position pair complements (triality axes)
     triality_axes = {
-        'V': (frozenset({0,1}), frozenset({2,3})),
-        'S+': (frozenset({0,2}), frozenset({1,3})),
-        'S-': (frozenset({0,3}), frozenset({1,2})),
+        "V": (frozenset({0, 1}), frozenset({2, 3})),
+        "S+": (frozenset({0, 2}), frozenset({1, 3})),
+        "S-": (frozenset({0, 3}), frozenset({1, 2})),
     }
 
     # Classify edges by which triality axis they "live on"
@@ -167,7 +168,7 @@ def analyze_triality_structure(adj, vertices, edges):
             # Edges connect vertices that agree on one pair and differ on the other
             pass
 
-        edge_axis[idx] = 'unclassified'
+        edge_axis[idx] = "unclassified"
 
     return edge_axis
 
@@ -178,7 +179,7 @@ def build_triangle_graph_edges(triangles, adj):
     tri_edges = []
 
     for i, t1 in enumerate(triangles):
-        for j, t2 in enumerate(triangles[i+1:], i+1):
+        for j, t2 in enumerate(triangles[i + 1 :], i + 1):
             # Triangles are adjacent if they share exactly one vertex
             common = len(set(t1) & set(t2))
             if common == 1:
@@ -193,7 +194,7 @@ def e8_inner_products(roots):
     ip = np.zeros((n, n))
     for i in range(n):
         for j in range(n):
-            ip[i,j] = np.dot(roots[i], roots[j])
+            ip[i, j] = np.dot(roots[i], roots[j])
     return ip
 
 
@@ -214,8 +215,8 @@ def attempt_bijection(tri_edges, e8_roots):
     # Count inner product distribution
     ip_counts = Counter()
     for i in range(m):
-        for j in range(i+1, m):
-            ip_val = round(e8_ip[i,j], 4)
+        for j in range(i + 1, m):
+            ip_val = round(e8_ip[i, j], 4)
             ip_counts[ip_val] += 1
 
     return None, ip_counts
@@ -250,8 +251,8 @@ def main():
     e8_ip = e8_inner_products(e8_roots)
     ip_counts = Counter()
     for i in range(len(e8_roots)):
-        for j in range(i+1, len(e8_roots)):
-            ip_val = round(e8_ip[i,j], 4)
+        for j in range(i + 1, len(e8_roots)):
+            ip_val = round(e8_ip[i, j], 4)
             ip_counts[ip_val] += 1
 
     print("\nE8 inner product distribution:")
@@ -277,7 +278,7 @@ def main():
     edge_type_counts = Counter()
     for i, j in edges:
         t1, t2 = vertex_type[i], vertex_type[j]
-        edge_type_counts[(min(t1,t2), max(t1,t2))] += 1
+        edge_type_counts[(min(t1, t2), max(t1, t2))] += 1
 
     print("\nEdge types (by endpoint nonzero counts):")
     for et in sorted(edge_type_counts.keys()):
@@ -300,9 +301,9 @@ def main():
     print("=" * 50)
 
     triality_axes = {
-        'V':  [(0,1), (2,3)],
-        'S+': [(0,2), (1,3)],
-        'S-': [(0,3), (1,2)],
+        "V": [(0, 1), (2, 3)],
+        "S+": [(0, 2), (1, 3)],
+        "S-": [(0, 3), (1, 2)],
     }
 
     print("\nTriality axes (complementary position pairs):")
@@ -372,7 +373,7 @@ Shared Structure:
 
     out_path = ROOT / "artifacts" / "w33_e8_explicit_bijection.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(results, indent=2), encoding='utf-8')
+    out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(f"\nWrote {out_path}")
 
 

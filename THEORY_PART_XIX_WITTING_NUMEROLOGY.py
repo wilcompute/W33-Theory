@@ -9,9 +9,10 @@ Every single one connects to W33 and physics!
 Let's decode them ALL.
 """
 
-import numpy as np
-from fractions import Fraction
 import math
+from fractions import Fraction
+
+import numpy as np
 
 print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -34,17 +35,17 @@ print()
 
 # Witting polytope data from Wikipedia
 WITTING = {
-    'vertices': 240,
-    'edges': 2160,      # 3-edges (complex edges with 3 vertices each)
-    'faces': 2160,      # 3{3}3 Möbius-Kantor polygons
-    'cells': 240,       # 3{3}3{3}3 Hessian polyhedra
-    'diameters': 40,
-    'edges_per_vertex': 27,
-    'faces_per_vertex': 72,
-    'cells_per_vertex': 27,
-    'symmetry': 155520,
-    'petrie_polygon': 30,
-    'van_oss_polygon': 90,
+    "vertices": 240,
+    "edges": 2160,  # 3-edges (complex edges with 3 vertices each)
+    "faces": 2160,  # 3{3}3 Möbius-Kantor polygons
+    "cells": 240,  # 3{3}3{3}3 Hessian polyhedra
+    "diameters": 40,
+    "edges_per_vertex": 27,
+    "faces_per_vertex": 72,
+    "cells_per_vertex": 27,
+    "symmetry": 155520,
+    "petrie_polygon": 30,
+    "van_oss_polygon": 90,
 }
 
 print("Witting Polytope 3{3}3{3}3{3}3 in C⁴:")
@@ -193,31 +194,31 @@ print("═══ FUNDAMENTAL RATIOS ═══")
 print()
 
 # vertices/diameters
-ratio1 = WITTING['vertices'] / WITTING['diameters']
+ratio1 = WITTING["vertices"] / WITTING["diameters"]
 print(f"  vertices/diameters = 240/40 = {ratio1}")
 print("    = 6 (hexagonal structure per diameter)")
 print()
 
 # edges/vertices
-ratio2 = WITTING['edges'] / WITTING['vertices']
+ratio2 = WITTING["edges"] / WITTING["vertices"]
 print(f"  edges/vertices = 2160/240 = {ratio2}")
 print("    = 9 = 3² (triality squared)")
 print()
 
 # symmetry/vertices
-ratio3 = WITTING['symmetry'] / WITTING['vertices']
+ratio3 = WITTING["symmetry"] / WITTING["vertices"]
 print(f"  symmetry/vertices = 155520/240 = {ratio3}")
 print("    = 648 = 8 × 81 = 8 × (W33 cycles)")
 print()
 
 # edges/diameters
-ratio4 = WITTING['edges'] / WITTING['diameters']
+ratio4 = WITTING["edges"] / WITTING["diameters"]
 print(f"  edges/diameters = 2160/40 = {ratio4}")
 print("    = 54 = 2 × 27 = 2 × (E6 rep)")
 print()
 
 # W(E6) / vertices
-ratio5 = w_e6 / WITTING['vertices']
+ratio5 = w_e6 / WITTING["vertices"]
 print(f"  |W(E6)|/vertices = 51840/240 = {ratio5}")
 print("    = 216 = 6³ = 6 × 6 × 6")
 print()

@@ -4,8 +4,9 @@ Explore the Sylow 3-subgroup and its relationship to H1.
 The Sylow 3-subgroup has order 3^4 = 81 = dim(H1)!
 """
 
-from sage.all import *
 import json
+
+from sage.all import *
 
 with open("claude_workspace/data/w33_sage_incidence_h1.json") as f:
     data = json.load(f)
@@ -20,7 +21,7 @@ for gen in generators_data:
 
 n = 80
 S = SymmetricGroup(n)
-perms = [S(Permutation([p+1 for p in perm])) for perm in perm_gens]
+perms = [S(Permutation([p + 1 for p in perm])) for perm in perm_gens]
 G = PermutationGroup(perms)
 
 gap_G = libgap(G)
@@ -60,7 +61,9 @@ print(f"  Center of P: order {center_p.Size()}")
 normalizer = gap_G.Normalizer(sylow3)
 print(f"\nNormalizer N_G(P):")
 print(f"  Order: {normalizer.Size()}")
-print(f"  Index [G : N_G(P)] = {G.order() // int(normalizer.Size())} (= number of Sylow 3-subgroups)")
+print(
+    f"  Index [G : N_G(P)] = {G.order() // int(normalizer.Size())} (= number of Sylow 3-subgroups)"
+)
 
 # The quotient N_G(P)/P is important - it's how G acts on P
 quotient_order = int(normalizer.Size()) // 81
@@ -117,13 +120,15 @@ for g in p_elements:
     # Use GAP to find class
     class_idx = gap_G.ConjugacyClass(g)
     rep = class_idx.Representative()
-    
+
     # Find the index in the character table
     gap_classes = char_table.ConjugacyClasses()
     for i, c in enumerate(gap_classes):
         if rep in c:
             chi_val = chi_23[i]
-            chi_on_p[order_g].append(int(chi_val) if chi_val.IsInt() else complex(str(chi_val.sage())))
+            chi_on_p[order_g].append(
+                int(chi_val) if chi_val.IsInt() else complex(str(chi_val.sage()))
+            )
             break
 
 print("\nCharacter values on P by element order:")

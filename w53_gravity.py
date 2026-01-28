@@ -16,10 +16,11 @@ This is the natural next step in the hierarchy:
  what was missing from the previous level."
 """
 
-import numpy as np
 from collections import defaultdict
-from itertools import combinations, product
 from functools import reduce
+from itertools import combinations, product
+
+import numpy as np
 
 print("=" * 80)
 print("W(5,3): THE GRAVITATIONAL EXTENSION")
@@ -96,13 +97,15 @@ For Sp(6,3):
             = 19683 × 8 × 80 × 728
 """)
 
+
 # Calculate |Sp(6,3)|
 def sp_order(n, q):
     """Order of Sp(2n, q)."""
     result = q ** (n**2)
     for i in range(1, n + 1):
-        result *= (q ** (2*i) - 1)
+        result *= q ** (2 * i) - 1
     return result
+
 
 order_sp63 = sp_order(3, 3)
 order_sp43 = sp_order(2, 3)
@@ -149,9 +152,11 @@ print("\nThe hierarchy:")
 for rank in range(1, 5):
     n_pts = 1
     for i in range(1, rank + 1):
-        n_pts *= (3**i + 1)
+        n_pts *= 3**i + 1
     steinberg = 3 ** (rank**2)
-    print(f"  W({2*rank-1},3): {n_pts:>10,} points, Steinberg = 3^{rank**2} = {steinberg:,}")
+    print(
+        f"  W({2*rank-1},3): {n_pts:>10,} points, Steinberg = 3^{rank**2} = {steinberg:,}"
+    )
 
 # =============================================================================
 # PART 4: WHAT DOES W(5,3) ADD?
@@ -450,6 +455,7 @@ is_perfect_square = sqrt_total**2 == w53_total
 print(f"\n  √{w53_total} = {np.sqrt(w53_total):.4f}")
 print(f"  Is perfect square? {is_perfect_square}")
 
+
 # Factor it
 def prime_factors(n):
     factors = {}
@@ -462,6 +468,7 @@ def prime_factors(n):
     if n > 1:
         factors[n] = factors.get(n, 0) + 1
     return factors
+
 
 factors = prime_factors(w53_total)
 print(f"\n  Factorization: {w53_total} = ", end="")

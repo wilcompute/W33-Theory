@@ -173,7 +173,7 @@ print(f"  Ω_Λ / Ω_m = 81/40 = {float(ratio_w33):.3f} ???")
 print(f"  Observed: Ω_Λ / Ω_m ≈ 2.125")
 print()
 
-ratio_w33_2 = Fraction(27+56, 40)  # (E6_fund + E7_fund) / points
+ratio_w33_2 = Fraction(27 + 56, 40)  # (E6_fund + E7_fund) / points
 print(f"  Alternative: (27+56)/40 = 83/40 = {83/40:.3f}")
 print()
 
@@ -183,7 +183,7 @@ print(f"  Or: dim(E7)/(something) ???")
 print()
 
 # Let's find exact match
-target = 0.68/0.32
+target = 0.68 / 0.32
 print(f"  Target: {target:.4f}")
 print()
 
@@ -193,7 +193,7 @@ w33_nums = [27, 40, 56, 78, 81, 90, 121, 133]
 for a in w33_nums:
     for b in w33_nums:
         if b != 0:
-            ratio = a/b
+            ratio = a / b
             if 2.0 < ratio < 2.3:
                 error = abs(ratio - target) / target * 100
                 print(f"    {a}/{b} = {ratio:.4f} ({error:.1f}% off)")
@@ -314,7 +314,7 @@ The difference:
 """)
 
 # Calculate W33 prediction
-w33_exponent = -121 - 1/2 - 1/27
+w33_exponent = -121 - 1 / 2 - 1 / 27
 print(f"W33 prediction: Λ = 10^({w33_exponent:.4f}) M_Pl⁴")
 print(f"              = {10**w33_exponent:.3e} M_Pl⁴")
 print(f"Observed:     Λ = 2.888 × 10⁻¹²² M_Pl⁴")
@@ -463,7 +463,7 @@ However, there might be W33 corrections:
 """)
 
 # W33 correction to w
-w_correction = -40/(40*81)  # -1/(cycles)
+w_correction = -40 / (40 * 81)  # -1/(cycles)
 print(f"  Possible W33 correction: Δw = -1/81 = {-1/81:.5f}")
 print(f"  This gives: w = -1 + (-1/81) = {-1 - 1/81:.5f}")
 print()

@@ -3,12 +3,12 @@
 W33's point graph is SRG(40, 12, 2, 4).
 This is a FAMOUS graph! Let's identify it.
 
-SRG(40, 12, 2, 4) is the symplectic graph from the 
+SRG(40, 12, 2, 4) is the symplectic graph from the
 dual polar space of Sp(4,3)!
 """
 
-from sage.all import *
 import numpy as np
+from sage.all import *
 
 print("=== Identifying SRG(40, 12, 2, 4) ===")
 print()
@@ -68,9 +68,11 @@ print()
 F = GF(3)
 V = VectorSpace(F, 4)
 
+
 # Symplectic form: [x, y] = x1*y3 - x3*y1 + x2*y4 - x4*y2
 def symplectic_form(x, y):
-    return x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]
+    return x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]
+
 
 # Get projective points (equivalence classes of non-zero vectors)
 points = []
@@ -91,9 +93,9 @@ for v in V:
 print(f"Projective points in PG(3, 3): {len(points)}")
 
 # Build symplectic graph
-adj = [[0]*40 for _ in range(40)]
+adj = [[0] * 40 for _ in range(40)]
 for i in range(40):
-    for j in range(i+1, 40):
+    for j in range(i + 1, 40):
         p1, p2 = points[i], points[j]
         # Convert to vectors
         v1 = V(list(p1))
@@ -109,21 +111,21 @@ print()
 # Check if it's SRG(40, 12, 2, 4)
 if set(degrees) == {12}:
     print("Degree = 12 ✓")
-    
+
     # Check λ and μ
     lambda_test = []
     mu_test = []
     for i in range(40):
-        for j in range(i+1, 40):
+        for j in range(i + 1, 40):
             common = sum(1 for k in range(40) if adj[i][k] and adj[j][k])
             if adj[i][j]:
                 lambda_test.append(common)
             else:
                 mu_test.append(common)
-    
+
     print(f"λ values: {set(lambda_test)}")
     print(f"μ values: {set(mu_test)}")
-    
+
     if set(lambda_test) == {2} and set(mu_test) == {4}:
         print()
         print("★ Symplectic graph Sp(4,3) IS SRG(40, 12, 2, 4)! ★")
@@ -134,7 +136,7 @@ print()
 print("W33 is a 2-(40, 4, 1) design whose point graph is")
 print("isomorphic to the symplectic graph of PG(3, 3)!")
 print()
-print("The 40 'lines' of W33 correspond to the 40 'totally isotropic")  
+print("The 40 'lines' of W33 correspond to the 40 'totally isotropic")
 print("lines' in the symplectic geometry of PG(3, 3).")
 print()
 print("This makes W33 the SYMPLECTIC POLAR SPACE W(3,3)!")

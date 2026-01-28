@@ -8,6 +8,7 @@ all 40 rays to the canonical grid form:
     with phases in {1, w, w^2} up to global phase
 We report the best score and if any basis achieves 40/40.
 """
+
 from __future__ import annotations
 
 import json
@@ -29,9 +30,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -75,7 +76,7 @@ def main():
     n = len(rays)
 
     # orthogonality matrix
-    orth = [[0]*n for _ in range(n)]
+    orth = [[0] * n for _ in range(n)]
     for i in range(n):
         for j in range(i + 1, n):
             if abs(np.vdot(rays[i], rays[j])) < 1e-8:
@@ -90,7 +91,13 @@ def main():
             # candidates orthogonal to i and j
             candidates = [k for k in range(n) if orth[i][k] and orth[j][k]]
             for k, l in combinations(candidates, 2):
-                if orth[k][l] and orth[i][k] and orth[i][l] and orth[j][k] and orth[j][l]:
+                if (
+                    orth[k][l]
+                    and orth[i][k]
+                    and orth[i][l]
+                    and orth[j][k]
+                    and orth[j][l]
+                ):
                     base = tuple(sorted((i, j, k, l)))
                     bases.add(base)
     bases = sorted(bases)

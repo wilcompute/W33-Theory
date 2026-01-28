@@ -9,6 +9,7 @@ Outputs a summary table mapping:
 - pattern -> counts of F3^4 support sizes
 - pattern -> list of orbit ids
 """
+
 from __future__ import annotations
 
 import json
@@ -23,8 +24,12 @@ def support_size(p):
 
 
 def main():
-    inter = json.loads((ROOT / "artifacts" / "we6_coxeter6_intersection.json").read_text())
-    orbit_map = json.loads((ROOT / "artifacts" / "e8_orbit_to_f3_point.json").read_text())
+    inter = json.loads(
+        (ROOT / "artifacts" / "we6_coxeter6_intersection.json").read_text()
+    )
+    orbit_map = json.loads(
+        (ROOT / "artifacts" / "e8_orbit_to_f3_point.json").read_text()
+    )
     mapping = orbit_map["mapping"]
 
     matrix = inter["matrix"]  # list of 40 rows
@@ -42,14 +47,18 @@ def main():
 
     # Build summary
     summary = []
-    for pat, orbs in sorted(pattern_to_orbits.items(), key=lambda x: (-len(x[1]), x[0])):
+    for pat, orbs in sorted(
+        pattern_to_orbits.items(), key=lambda x: (-len(x[1]), x[0])
+    ):
         sizes = dict(pattern_to_sizes[pat])
-        summary.append({
-            "pattern": pat,
-            "count": len(orbs),
-            "support_size_counts": sizes,
-            "orbits": orbs,
-        })
+        summary.append(
+            {
+                "pattern": pat,
+                "count": len(orbs),
+                "support_size_counts": sizes,
+                "orbits": orbs,
+            }
+        )
 
     out = {
         "patterns": summary,
@@ -63,7 +72,9 @@ def main():
     # Print a compact summary
     print("Pattern summary (count -> support sizes):")
     for item in summary:
-        print(f"{item['count']} orbits, sizes={item['support_size_counts']}, pattern={item['pattern']}")
+        print(
+            f"{item['count']} orbits, sizes={item['support_size_counts']}, pattern={item['pattern']}"
+        )
 
     print("Wrote artifacts/vertex_type_vs_we6_pattern.json")
 

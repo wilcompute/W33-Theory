@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Greedy decision tree for Z3 edge labels from simple features."""
+
 from __future__ import annotations
 
-from itertools import product
 import json
-from pathlib import Path
 from collections import Counter, defaultdict
+from itertools import product
+from pathlib import Path
 
 import numpy as np
 
@@ -22,9 +23,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -48,7 +49,7 @@ def construct_f3_points():
 
 
 def omega_symp(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
 
 def build_nonorth_edges(rays, tol=1e-8):
@@ -85,7 +86,11 @@ def solve_edge_potential(rays):
         d1[t_idx, e_jk] = 1
         d1[t_idx, e_ik] = -1
         d1[t_idx, e_ij] = 1
-        ip = np.vdot(rays[i], rays[j]) * np.vdot(rays[j], rays[k]) * np.conjugate(np.vdot(rays[i], rays[k]))
+        ip = (
+            np.vdot(rays[i], rays[j])
+            * np.vdot(rays[j], rays[k])
+            * np.conjugate(np.vdot(rays[i], rays[k]))
+        )
         t[t_idx] = phase_to_k(np.angle(ip)) % 3
 
     # solve d1 x = t over GF(3)
@@ -156,18 +161,20 @@ def build_features(edges, labels, mapping=None, f3_points=None):
             w = omega_symp(pi, pj)
         else:
             w = 0
-        rows.append({
-            "fam_i": fi,
-            "fam_j": fj,
-            "same_fam": same_fam,
-            "basis": (bi, bj),
-            "mu_i": 0 if mui is None else mui,
-            "nu_i": 0 if nui is None else nui,
-            "mu_j": 0 if muj is None else muj,
-            "nu_j": 0 if nuj is None else nuj,
-            "support": (min(nz_i, nz_j), max(nz_i, nz_j)),
-            "omega": w,
-        })
+        rows.append(
+            {
+                "fam_i": fi,
+                "fam_j": fj,
+                "same_fam": same_fam,
+                "basis": (bi, bj),
+                "mu_i": 0 if mui is None else mui,
+                "nu_i": 0 if nui is None else nui,
+                "mu_j": 0 if muj is None else muj,
+                "nu_j": 0 if nuj is None else nuj,
+                "support": (min(nz_i, nz_j), max(nz_i, nz_j)),
+                "omega": w,
+            }
+        )
         ys.append(int(labels[idx]))
     return rows, ys
 
@@ -176,7 +183,7 @@ def gini(counts):
     total = sum(counts.values())
     if total == 0:
         return 0.0
-    return 1.0 - sum((c/total)**2 for c in counts.values())
+    return 1.0 - sum((c / total) ** 2 for c in counts.values())
 
 
 def best_split(rows, ys, features):
@@ -190,7 +197,7 @@ def best_split(rows, ys, features):
         # compute weighted gini
         w = 0.0
         for vals in buckets.values():
-            w += (len(vals)/n) * gini(Counter(vals))
+            w += (len(vals) / n) * gini(Counter(vals))
         gain = base - w
         if best is None or gain > best[0]:
             best = (gain, feat, buckets)
@@ -200,15 +207,25 @@ def best_split(rows, ys, features):
 def build_tree(rows, ys, features, depth=0, max_depth=3):
     counts = Counter(ys)
     if depth >= max_depth or len(counts) == 1:
-        return {"leaf": True, "label": counts.most_common(1)[0][0], "counts": dict(counts)}
+        return {
+            "leaf": True,
+            "label": counts.most_common(1)[0][0],
+            "counts": dict(counts),
+        }
     gain, feat, buckets = best_split(rows, ys, features)
     if gain <= 1e-6:
-        return {"leaf": True, "label": counts.most_common(1)[0][0], "counts": dict(counts)}
+        return {
+            "leaf": True,
+            "label": counts.most_common(1)[0][0],
+            "counts": dict(counts),
+        }
     node = {"leaf": False, "feature": feat, "gain": gain, "children": {}}
     for key, vals in buckets.items():
         sub_rows = [r for r, y in zip(rows, ys) if r[feat] == key]
         sub_ys = [y for r, y in zip(rows, ys) if r[feat] == key]
-        node["children"][str(key)] = build_tree(sub_rows, sub_ys, features, depth+1, max_depth)
+        node["children"][str(key)] = build_tree(
+            sub_rows, sub_ys, features, depth + 1, max_depth
+        )
     return node
 
 
@@ -252,7 +269,18 @@ def main():
         f3_points = None
 
     rows, ys = build_features(edges, labels, mapping, f3_points)
-    features = ["fam_i", "fam_j", "same_fam", "basis", "mu_i", "nu_i", "mu_j", "nu_j", "support", "omega"]
+    features = [
+        "fam_i",
+        "fam_j",
+        "same_fam",
+        "basis",
+        "mu_i",
+        "nu_i",
+        "mu_j",
+        "nu_j",
+        "support",
+        "omega",
+    ]
 
     tree = build_tree(rows, ys, features, max_depth=3)
     acc = tree_accuracy(tree, rows, ys)

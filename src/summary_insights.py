@@ -66,7 +66,9 @@ def collect_key_result_stats(summaries: dict[str, dict[str, Any]]) -> dict[str, 
     }
 
 
-def compute_numeric_comparison_stats(entries: Iterable[dict[str, Any]]) -> NumericComparisonStats:
+def compute_numeric_comparison_stats(
+    entries: Iterable[dict[str, Any]],
+) -> NumericComparisonStats:
     diffs = [abs(float(entry["diff"])) for entry in entries if "diff" in entry]
     if not diffs:
         return NumericComparisonStats(count=0, mean_abs_diff=0.0, max_abs_diff=0.0)

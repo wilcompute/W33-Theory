@@ -9,21 +9,22 @@ Author: Wil Dahn
 Date: January 2026
 """
 
-import numpy as np
-from itertools import product, combinations
 import json
+from itertools import combinations, product
 
-print("="*70)
+import numpy as np
+
+print("=" * 70)
 print("W33 THEORY PART LXVII: THE 1111 MYSTERY")
-print("="*70)
+print("=" * 70)
 
 # =============================================================================
 # SECTION 1: PROPERTIES OF 1111
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 1: BASIC PROPERTIES OF 1111")
-print("="*70)
+print("=" * 70)
 
 print("""
 The number 1111 appears in:
@@ -57,9 +58,9 @@ print()
 # SECTION 2: 1111 AND W33 COMBINATORICS
 # =============================================================================
 
-print("="*70)
+print("=" * 70)
 print("SECTION 2: 1111 AND W33 COMBINATORICS")
-print("="*70)
+print("=" * 70)
 
 # W33 parameters
 v = 40  # vertices
@@ -95,9 +96,9 @@ print(f"31 = 40 - 9 = v - 3^2")
 # SECTION 3: THE 31 IN CONTEXT
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 3: UNDERSTANDING 31")
-print("="*70)
+print("=" * 70)
 
 print("""
 We found: 1111 = 40 × 27 + 31
@@ -120,9 +121,9 @@ print(f"  31 = 24 + 7 = (SU(5) dim) + 7")
 # SECTION 4: THE FULL 1111 FORMULA
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 4: DERIVING 1111 FROM W33")
-print("="*70)
+print("=" * 70)
 
 print("""
 We have:
@@ -150,9 +151,9 @@ print(f"\nVerification: 40 × 27 + (2 + 4 + 24 + 1) = {formula_1111}")
 # SECTION 5: GEOMETRIC INTERPRETATION
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 5: GEOMETRIC INTERPRETATION OF 1111")
-print("="*70)
+print("=" * 70)
 
 print("""
 1111 = 40 × 27 + 31
@@ -181,9 +182,9 @@ print(f"Check: 240 + 540 = {240 + 540} = C(40,2) = {40*39//2}")
 # SECTION 6: ANOTHER APPROACH - 1111 AS 11 × 101
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 6: 1111 = 11 × 101")
-print("="*70)
+print("=" * 70)
 
 print("""
 Since 1111 = 11 × 101, look for 11 and 101 in W33.
@@ -213,9 +214,9 @@ print(f"\nVerification: (12-1) × (81 + 12 + 8) = {check_1111}")
 # SECTION 7: YET ANOTHER APPROACH
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 7: 1111 AND THE EIGENVALUE PRODUCTS")
-print("="*70)
+print("=" * 70)
 
 print("""
 Eigenvalues: 12, 2, -4
@@ -240,9 +241,9 @@ print("\nAnd 31 = lambda + mu + m_2 + 1 = 2 + 4 + 24 + 1")
 # SECTION 8: THE FINAL FORMULA FOR 1111
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 8: THE FINAL 1111 FORMULA")
-print("="*70)
+print("=" * 70)
 
 print("""
 =======================================================
@@ -279,9 +280,9 @@ from W33 geometry!
 # SECTION 9: THE COMPLETE ALPHA FORMULA
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 9: THE COMPLETE ALPHA FORMULA")
-print("="*70)
+print("=" * 70)
 
 print("""
 =======================================================
@@ -316,26 +317,26 @@ strongly regular graph SRG(40, 12, 2, 4).
 # =============================================================================
 
 results = {
-    '1111_formula': {
-        'main_term': '(e1 × m2 × m3) / |e3| = 12 × 24 × 15 / 4 = 1080',
-        'correction': 'lambda + mu + m2 + 1 = 2 + 4 + 24 + 1 = 31',
-        'total': 1111
+    "1111_formula": {
+        "main_term": "(e1 × m2 × m3) / |e3| = 12 × 24 × 15 / 4 = 1080",
+        "correction": "lambda + mu + m2 + 1 = 2 + 4 + 24 + 1 = 31",
+        "total": 1111,
     },
-    'alpha_complete_formula': {
-        'integer_part': 'e1^2 - e2*|e3| + 1 = 144 - 8 + 1 = 137',
-        'denominator_D': '(e1 × m2 × m3)/|e3| + lambda + mu + m2 + 1 = 1111',
-        'numerator': 'v = 40',
-        'result': '137 + 40/1111 = 137.036004'
+    "alpha_complete_formula": {
+        "integer_part": "e1^2 - e2*|e3| + 1 = 144 - 8 + 1 = 137",
+        "denominator_D": "(e1 × m2 × m3)/|e3| + lambda + mu + m2 + 1 = 1111",
+        "numerator": "v = 40",
+        "result": "137 + 40/1111 = 137.036004",
     },
-    'factorization': '1111 = 11 × 101',
-    'geometric_meaning': '1111 encodes eigenvalue products and SRG parameters'
+    "factorization": "1111 = 11 × 101",
+    "geometric_meaning": "1111 encodes eigenvalue products and SRG parameters",
 }
 
-with open('PART_LXVII_1111_mystery.json', 'w') as f:
-        json.dump(results, f, indent=2, default=int)
-print("\n" + "="*70)
+with open("PART_LXVII_1111_mystery.json", "w") as f:
+    json.dump(results, f, indent=2, default=int)
+print("\n" + "=" * 70)
 print("PART LXVII CONCLUSIONS")
-print("="*70)
+print("=" * 70)
 
 print("""
 THE 1111 MYSTERY SOLVED!
@@ -356,4 +357,4 @@ W33 geometry alone determines alpha to 5 ppb accuracy!
 
 Results saved to PART_LXVII_1111_mystery.json
 """)
-print("="*70)
+print("=" * 70)

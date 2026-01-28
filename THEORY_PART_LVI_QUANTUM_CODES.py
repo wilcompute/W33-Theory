@@ -13,21 +13,22 @@ Author: Wil Dahn
 Date: January 2026
 """
 
-import numpy as np
-from itertools import combinations, product
 from collections import defaultdict
+from itertools import combinations, product
 
-print("="*70)
+import numpy as np
+
+print("=" * 70)
 print("W33 THEORY PART LVI: QUANTUM ERROR CORRECTION")
-print("="*70)
+print("=" * 70)
 
 # =============================================================================
 # SECTION 1: THE PAULI GROUP AND STABILIZER CODES
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 1: PAULI GROUPS AND STABILIZER CODES")
-print("="*70)
+print("=" * 70)
 
 print("""
 BACKGROUND: STABILIZER CODES
@@ -61,40 +62,41 @@ Let's think differently:
 # SECTION 2: QUTRIT PAULIS AND THE WEYL-HEISENBERG GROUP
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 2: QUTRIT PAULI OPERATORS")
-print("="*70)
+print("=" * 70)
+
 
 def build_qutrit_paulis():
     """
     Build the 9 single-qutrit Pauli operators (generalized).
-    
+
     For qutrits, we use clock (Z) and shift (X) matrices over ℤ₃:
     X|j⟩ = |j+1 mod 3⟩
     Z|j⟩ = ω^j|j⟩ where ω = e^{2πi/3}
-    
+
     The 9 operators are X^a Z^b for a,b ∈ {0,1,2}
     """
     omega = np.exp(2j * np.pi / 3)
-    
+
     # Clock matrix Z
     Z = np.diag([1, omega, omega**2])
-    
-    # Shift matrix X  
-    X = np.array([[0, 0, 1],
-                  [1, 0, 0],
-                  [0, 1, 0]], dtype=complex)
-    
+
+    # Shift matrix X
+    X = np.array([[0, 0, 1], [1, 0, 0], [0, 1, 0]], dtype=complex)
+
     paulis = {}
     for a in range(3):
         for b in range(3):
             op = np.linalg.matrix_power(X, a) @ np.linalg.matrix_power(Z, b)
             paulis[(a, b)] = op
-    
+
     return paulis, X, Z
+
 
 paulis_1, X, Z = build_qutrit_paulis()
 print(f"Single qutrit Paulis: {len(paulis_1)} operators (labeled by (a,b) ∈ F₃²)")
+
 
 # Two-qutrit Paulis
 def build_two_qutrit_paulis():
@@ -102,10 +104,10 @@ def build_two_qutrit_paulis():
     Build 81 two-qutrit Pauli operators: X₁^{a₁} Z₁^{b₁} ⊗ X₂^{a₂} Z₂^{b₂}
     """
     omega = np.exp(2j * np.pi / 3)
-    
+
     Z = np.diag([1, omega, omega**2])
     X = np.array([[0, 0, 1], [1, 0, 0], [0, 1, 0]], dtype=complex)
-    
+
     paulis = {}
     for a1 in range(3):
         for b1 in range(3):
@@ -114,8 +116,9 @@ def build_two_qutrit_paulis():
                     op1 = np.linalg.matrix_power(X, a1) @ np.linalg.matrix_power(Z, b1)
                     op2 = np.linalg.matrix_power(X, a2) @ np.linalg.matrix_power(Z, b2)
                     paulis[(a1, b1, a2, b2)] = np.kron(op1, op2)
-    
+
     return paulis
+
 
 paulis_2 = build_two_qutrit_paulis()
 print(f"Two-qutrit Paulis: {len(paulis_2)} operators")
@@ -125,21 +128,23 @@ print(f"This equals 3^4 = 81 = dim(H₁(W33))!")
 # SECTION 3: COMMUTATION RELATIONS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 3: COMMUTATION STRUCTURE")
-print("="*70)
+print("=" * 70)
+
 
 def symplectic_inner_product_f3(v1, v2):
     """
     Symplectic inner product for qutrit Paulis.
-    
+
     For Paulis P(a₁,b₁,a₂,b₂) and P(a₁',b₁',a₂',b₂'):
     They commute iff ω^{⟨v,v'⟩_s} = 1
     where ⟨v,v'⟩_s = a₁b₁' - a₁'b₁ + a₂b₂' - a₂'b₂ (mod 3)
     """
     a1, b1, a2, b2 = v1
     a1p, b1p, a2p, b2p = v2
-    return (a1*b1p - a1p*b1 + a2*b2p - a2p*b2) % 3
+    return (a1 * b1p - a1p * b1 + a2 * b2p - a2p * b2) % 3
+
 
 # Count commuting pairs
 commuting = 0
@@ -159,7 +164,7 @@ print(f"Non-commuting pairs: {non_commuting}")
 # The isotropic points (self-commuting non-identity)
 isotropic = []
 for v in paulis_2.keys():
-    if v != (0,0,0,0):  # Exclude identity
+    if v != (0, 0, 0, 0):  # Exclude identity
         if symplectic_inner_product_f3(v, v) == 0:
             isotropic.append(v)
 
@@ -170,9 +175,9 @@ print("These should relate to W33 points!")
 # SECTION 4: THE W33-PAULI CONNECTION
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 4: W33 ↔ QUTRIT PAULIS")
-print("="*70)
+print("=" * 70)
 
 print("""
 KEY REALIZATION:
@@ -193,27 +198,28 @@ The 40 points represent 40 "directions" in Pauli space that commute with themsel
 The 40 lines represent 40 maximally commuting sets (4 mutually commuting Paulis each).
 """)
 
+
 # Build the projective points
 def projective_points_f3():
     """Find the 40 points of projective space over F₃⁴ that are isotropic."""
     points = []
     seen = set()
-    
+
     def symplectic(p, q):
-        return (p[0]*q[1] - p[1]*q[0] + p[2]*q[3] - p[3]*q[2]) % 3
-    
+        return (p[0] * q[1] - p[1] * q[0] + p[2] * q[3] - p[3] * q[2]) % 3
+
     for a in range(3):
         for b in range(3):
             for c in range(3):
                 for d in range(3):
                     v = (a, b, c, d)
-                    if v == (0,0,0,0):
+                    if v == (0, 0, 0, 0):
                         continue
-                    
+
                     # Check isotropic
                     if symplectic(v, v) != 0:
                         continue
-                    
+
                     # Normalize to canonical rep
                     for i, x in enumerate(v):
                         if x != 0:
@@ -223,8 +229,9 @@ def projective_points_f3():
                                 seen.add(normalized)
                                 points.append(normalized)
                             break
-    
+
     return points
+
 
 proj_points = projective_points_f3()
 print(f"\nIsotropic projective points: {len(proj_points)}")
@@ -238,9 +245,9 @@ else:
 # SECTION 5: STABILIZER CODE INTERPRETATION
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 5: W33 AS QUANTUM CODE")
-print("="*70)
+print("=" * 70)
 
 print("""
 STABILIZER CODE INTERPRETATION:
@@ -276,9 +283,9 @@ Or viewing the 40 as an error basis:
 # SECTION 6: MUTUALLY UNBIASED BASES CONNECTION
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 6: MUB CONNECTION")
-print("="*70)
+print("=" * 70)
 
 print("""
 MUTUALLY UNBIASED BASES (MUBs):
@@ -308,9 +315,9 @@ SIC-POVM in dimension d has d² elements.
 # SECTION 7: CONTEXTUALITY AND KOCHEN-SPECKER
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 7: QUANTUM CONTEXTUALITY")
-print("="*70)
+print("=" * 70)
 
 print("""
 KOCHEN-SPECKER THEOREM AND CONTEXTUALITY:
@@ -345,9 +352,9 @@ W33 MAGIC STRUCTURE?
 # SECTION 8: THE 137 CONNECTION TO CODES
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 8: 137 FROM CODING THEORY?")
-print("="*70)
+print("=" * 70)
 
 print("""
 WILD SPECULATION: α⁻¹ ≈ 137 FROM CODING THEORY
@@ -391,9 +398,9 @@ print(f"In binary: 137 = {bin(137)}")
 # SECTION 9: BINARY REPRESENTATION OF 137
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 9: 137 IN BINARY")
-print("="*70)
+print("=" * 70)
 
 print("""
 REMARKABLE: 137 = 10001001 in binary
@@ -413,14 +420,16 @@ Hamming weight of 137 is 3 (three 1-bits).
 Also: 137 in base 3:
 """)
 
+
 def to_base(n, b):
     if n == 0:
-        return '0'
+        return "0"
     digits = []
     while n:
         digits.append(str(n % b))
         n //= b
-    return ''.join(reversed(digits))
+    return "".join(reversed(digits))
+
 
 print(f"137 in base 2: {to_base(137, 2)}")
 print(f"137 in base 3: {to_base(137, 3)} = 1×81 + 2×27 + 0×9 + 1×3 + 2×1")
@@ -437,9 +446,9 @@ print(f"Verification: {val}")
 # SECTION 10: THE ULTIMATE SYNTHESIS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 10: SYNTHESIS - QUANTUM CODES AND PHYSICS")
-print("="*70)
+print("=" * 70)
 
 print("""
 THE EMERGING PICTURE:
@@ -479,13 +488,13 @@ Geometry (W33) ↔ Algebra (E₆,E₇) ↔ Physics (α) ↔ Information (QEC cod
 """)
 
 # Final verification
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("FINAL VERIFICATIONS")
-print("="*70)
+print("=" * 70)
 
 print(f"\n137 in base 3: {to_base(137, 3)}")
 print(f"= 1×3⁴ + 2×3³ + 0×3² + 1×3¹ + 2×3⁰")
-print(f"= 81 + 54 + 0 + 3 + 2")  
+print(f"= 81 + 54 + 0 + 3 + 2")
 print(f"= 81 + 56 - 3 + 3 + 2 - 2")
 print(f"= 81 + 56 + (2+3-2-3)")
 print(f"= 81 + 56 + 0 (approximately!)")
@@ -507,23 +516,24 @@ print(f"Measured α⁻¹ = 137.035999...")
 # =============================================================================
 
 import json
+
 results = {
-    'w33_points': 40,
-    'pauli_space_dim': 81,
-    'e7_fundamental': 56,
-    '137_base3': to_base(137, 3),
-    '137_binary': bin(137),
-    '137_decomposition': '81 + 56 = 137 exactly',
-    'qec_interpretation': 'W33 encodes 2-qutrit Pauli structure',
-    'contextuality': 'W33 may encode KS-type proof for qutrits',
+    "w33_points": 40,
+    "pauli_space_dim": 81,
+    "e7_fundamental": 56,
+    "137_base3": to_base(137, 3),
+    "137_binary": bin(137),
+    "137_decomposition": "81 + 56 = 137 exactly",
+    "qec_interpretation": "W33 encodes 2-qutrit Pauli structure",
+    "contextuality": "W33 may encode KS-type proof for qutrits",
 }
 
-with open('PART_LVI_quantum_codes_results.json', 'w') as f:
+with open("PART_LVI_quantum_codes_results.json", "w") as f:
     json.dump(results, f, indent=2, default=int)
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("CONCLUSIONS OF PART LVI")
-print("="*70)
+print("=" * 70)
 print("""
 KEY DISCOVERIES:
 
@@ -550,4 +560,4 @@ KEY DISCOVERIES:
    
 Results saved to PART_LVI_quantum_codes_results.json
 """)
-print("="*70)
+print("=" * 70)

@@ -9,9 +9,10 @@ Why does the universe contain observers?
 This is philosophy meets physics meets mathematics.
 """
 
-import numpy as np
-from fractions import Fraction
 import json
+from fractions import Fraction
+
+import numpy as np
 
 print("=" * 70)
 print("W33 THEORY PART XCII: CONSCIOUSNESS AND OBSERVERS")
@@ -430,11 +431,11 @@ results = {
         "consciousness_from_integration": "IIT-compatible",
         "strange_loop": "W33 → Physics → Brains → Math → W33",
         "mind_matter_relation": "neutral monism",
-        "free_will": "compatibilist (quantum + processing)"
+        "free_will": "compatibilist (quantum + processing)",
     },
     "hard_problem": "remains open",
     "meaning": "Universe understands itself through observers",
-    "speculation_level": "high but grounded in W33 structure"
+    "speculation_level": "high but grounded in W33 structure",
 }
 
 with open("PART_XCII_consciousness.json", "w") as f:

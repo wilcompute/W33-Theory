@@ -3,11 +3,13 @@
 
 Produces diagnostics and writes PART_CVII_e8_embedding_attempt.json on success/failure.
 """
+
 from __future__ import annotations
+
 import json
-from pathlib import Path
 import math
 import random
+from pathlib import Path
 
 import numpy as np
 
@@ -15,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 # --- Build W33 vertices (projective points PG(3, F3))
 F = 3
+
 
 def canonical_rep(v):
     # v is tuple of ints mod 3
@@ -31,6 +34,7 @@ def canonical_rep(v):
                 inv = 0
             return tuple(((x * inv) % F) for x in v)
     return None
+
 
 # generate all nonzero vectors in F3^4
 all_vectors = []
@@ -50,9 +54,11 @@ for v in all_vectors:
 vertices = sorted(list(reps))
 assert len(vertices) == 40
 
+
 # symplectic form: x1*y2 - x2*y1 + x3*y4 - x4*y3 (mod 3)
 def symp(x, y):
-    return (x[0]*y[1] - x[1]*y[0] + x[2]*y[3] - x[3]*y[2]) % F
+    return (x[0] * y[1] - x[1] * y[0] + x[2] * y[3] - x[3] * y[2]) % F
+
 
 # adjacency
 n = len(vertices)
@@ -96,7 +102,7 @@ print("X shape:", X.shape)
 
 # collect oriented edge vectors (i<j) as one set of 240 vectors, choose a consistent orientation
 E = []
-for (i, j) in edges:
+for i, j in edges:
     v = X[i] - X[j]
     # normalize
     nv = np.linalg.norm(v)
@@ -109,11 +115,12 @@ print("Edge vectors shape:", E.shape)
 # Type 1: permutations of (±1, ±1, 0,0,0,0,0,0)
 E8 = []
 import itertools
+
 for i in range(8):
-    for j in range(i+1, 8):
+    for j in range(i + 1, 8):
         for si in (-1, 1):
             for sj in (-1, 1):
-                r = [0]*8
+                r = [0] * 8
                 r[i] = si
                 r[j] = sj
                 E8.append(tuple(r))
@@ -133,8 +140,8 @@ print("E8 roots shape:", E8.shape)
 
 # ICP-like iterative closest point between E (N x 8) and E8 (N x 8)
 try:
-    from scipy.spatial import cKDTree
     from scipy.optimize import linear_sum_assignment
+    from scipy.spatial import cKDTree
 except Exception:
     print("scipy required: install 'scipy' in your venv (pip install scipy)")
     raise
@@ -143,6 +150,7 @@ A_mat = E.copy()
 B_mat = E8.copy()
 
 # We'll attempt to find orthogonal R that maps A_mat -> B_mat with bijection via iterative NN matching
+
 
 def orthogonal_procrustes(A, B):
     # Solve min_R ||A R - B||_F s.t. R^T R = I
@@ -156,6 +164,7 @@ def orthogonal_procrustes(A, B):
         R = U @ Vt
     return R
 
+
 # initial random shuffle correspondence
 perm = np.arange(B_mat.shape[0])
 np.random.seed(0)
@@ -163,12 +172,12 @@ np.random.shuffle(perm)
 
 R = np.eye(8)
 prev_score = 0
-best = {'R': R, 'matches': 0, 'errors': None}
+best = {"R": R, "matches": 0, "errors": None}
 
 tol = 1e-6
 for it in range(200):
     # map A via R
-    A_mapped = (A_mat @ R)
+    A_mapped = A_mat @ R
     # nearest neighbor from A_mapped to B_mat
     tree = cKDTree(B_mat)
     dists, idx = tree.query(A_mapped, k=1)
@@ -181,8 +190,10 @@ for it in range(200):
     dists_new = np.linalg.norm(A_mapped_new - B_match, axis=1)
     matches = np.sum(dists_new < 1e-6)
     mean_err = float(dists_new.mean())
-    if matches > best['matches'] or (matches == best['matches'] and mean_err < (best['errors'] or 1e9)):
-        best = {'R': R_new.copy(), 'matches': int(matches), 'errors': float(mean_err)}
+    if matches > best["matches"] or (
+        matches == best["matches"] and mean_err < (best["errors"] or 1e9)
+    ):
+        best = {"R": R_new.copy(), "matches": int(matches), "errors": float(mean_err)}
     if matches > prev_score:
         prev_score = matches
         R = R_new
@@ -195,27 +206,34 @@ for it in range(200):
     if matches >= 230 and mean_err < 1e-6:
         break
 
-print("Best matches:", best['matches'], "mean_err:", best['errors'])
+print("Best matches:", best["matches"], "mean_err:", best["errors"])
 
 # Final evaluation: compute exact bijection greedily to avoid collisions
-A_mapped_final = A_mat @ best['R']
+A_mapped_final = A_mat @ best["R"]
 # build cost matrix using squared distances
 cost = np.linalg.norm(A_mapped_final[:, None, :] - B_mat[None, :, :], axis=2)
 row_ind, col_ind = linear_sum_assignment(cost)
 assigned_dist = cost[row_ind, col_ind]
 matches_final = np.sum(assigned_dist < 1e-6)
-print("Assignment matches (dist<1e-6):", int(matches_final), "mean assigned dist:", float(assigned_dist.mean()))
+print(
+    "Assignment matches (dist<1e-6):",
+    int(matches_final),
+    "mean assigned dist:",
+    float(assigned_dist.mean()),
+)
 
 out = {
-    'n_vertices': int(n),
-    'n_edges': int(m),
-    'embedding_dim': 8,
-    'icp_matches': int(best['matches']),
-    'icp_mean_err': float(best['errors']),
-    'assignment_matches': int(matches_final),
-    'assignment_mean_err': float(assigned_dist.mean())
+    "n_vertices": int(n),
+    "n_edges": int(m),
+    "embedding_dim": 8,
+    "icp_matches": int(best["matches"]),
+    "icp_mean_err": float(best["errors"]),
+    "assignment_matches": int(matches_final),
+    "assignment_mean_err": float(assigned_dist.mean()),
 }
 
-(Path.cwd() / 'PART_CVII_e8_embedding_attempt.json').write_text(json.dumps(out, indent=2))
-print('Wrote PART_CVII_e8_embedding_attempt.json')
+(Path.cwd() / "PART_CVII_e8_embedding_attempt.json").write_text(
+    json.dumps(out, indent=2)
+)
+print("Wrote PART_CVII_e8_embedding_attempt.json")
 print(json.dumps(out, indent=2))

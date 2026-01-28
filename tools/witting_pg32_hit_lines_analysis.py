@@ -8,6 +8,7 @@ Outputs:
 - artifacts/witting_pg32_hit_lines_analysis.json
 - artifacts/witting_pg32_hit_lines_analysis.md
 """
+
 from __future__ import annotations
 
 import json
@@ -18,9 +19,11 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT_JSON = ROOT / "artifacts" / "witting_pg32_hit_lines_analysis.json"
 OUT_MD = ROOT / "artifacts" / "witting_pg32_hit_lines_analysis.md"
 
+
 # GF(4) arithmetic
 def gf4_add(a: int, b: int) -> int:
     return a ^ b
+
 
 def gf4_mul(a: int, b: int) -> int:
     if a == 0 or b == 0:
@@ -34,11 +37,14 @@ def gf4_mul(a: int, b: int) -> int:
     c1 = (c1 + c2) % 2
     return (c1 << 1) | c0
 
+
 def gf4_square(a: int) -> int:
     return gf4_mul(a, a)
 
+
 def gf4_trace(a: int) -> int:
     return gf4_add(a, gf4_square(a)) & 1
+
 
 def gf4_inv(a: int) -> int:
     if a == 0:
@@ -48,9 +54,11 @@ def gf4_inv(a: int) -> int:
             return b
     raise ZeroDivisionError
 
+
 omega = 2
 omega2 = 3
 omega_powers = [1, omega, omega2]
+
 
 def build_base_states():
     states = []
@@ -67,6 +75,7 @@ def build_base_states():
         states.append((1, w_mu, w_nu, 0))
     return states
 
+
 def normalize_projective(v):
     for x in v:
         if x != 0:
@@ -74,11 +83,14 @@ def normalize_projective(v):
             return tuple(gf4_mul(inv, xi) for xi in v)
     return None
 
+
 def trace_map(v):
     return tuple(gf4_trace(x) for x in v)
 
+
 def build_pg32_points():
     return [v for v in product([0, 1], repeat=4) if v != (0, 0, 0, 0)]
+
 
 def build_pg32_lines(points):
     lines = set()
@@ -90,6 +102,7 @@ def build_pg32_lines(points):
             line = tuple(sorted([p, q, r]))
             lines.add(line)
     return sorted(lines)
+
 
 def main():
     base_states = [normalize_projective(s) for s in build_base_states()]
@@ -153,10 +166,17 @@ def main():
     summary = {
         "hit_line_count": len(hit_lines),
         "points_covered": sum(1 for v in point_cover.values() if v > 0),
-        "point_cover_counts": {str(k): list(point_cover.values()).count(k) for k in sorted(set(point_cover.values()))},
+        "point_cover_counts": {
+            str(k): list(point_cover.values()).count(k)
+            for k in sorted(set(point_cover.values()))
+        },
         "line_intersection_degree_set": sorted(set(degrees)),
         "srg": srg,
-        "skew_pair_count": sum(1 for i, j in combinations(range(n), 2) if len(set(hit_lines[i]) & set(hit_lines[j])) == 0),
+        "skew_pair_count": sum(
+            1
+            for i, j in combinations(range(n), 2)
+            if len(set(hit_lines[i]) & set(hit_lines[j])) == 0
+        ),
     }
 
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
@@ -168,13 +188,16 @@ def main():
     lines.append(f"- hit lines: {summary['hit_line_count']}")
     lines.append(f"- points covered: {summary['points_covered']}")
     lines.append(f"- point cover counts: {summary['point_cover_counts']}")
-    lines.append(f"- line intersection degree set: {summary['line_intersection_degree_set']}")
+    lines.append(
+        f"- line intersection degree set: {summary['line_intersection_degree_set']}"
+    )
     lines.append(f"- skew pair count: {summary['skew_pair_count']}")
     lines.append(f"- SRG: {summary['srg']}")
 
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"Wrote {OUT_JSON}")
     print(f"Wrote {OUT_MD}")
+
 
 if __name__ == "__main__":
     main()

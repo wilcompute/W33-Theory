@@ -4,6 +4,7 @@
 We embed W(E6) as subgroup of W(E8) via simple reflections on E8 root lattice.
 We then test orbit partition sizes on E8 roots.
 """
+
 from __future__ import annotations
 
 import json
@@ -16,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def main():
-    R8 = RootSystem(['E', 8]).root_lattice()
+    R8 = RootSystem(["E", 8]).root_lattice()
     W8 = R8.weyl_group()
 
     # Use E6 simple reflections embedded in E8: take reflections 1..6 of E8

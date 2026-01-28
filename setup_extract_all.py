@@ -4,9 +4,9 @@ Extract all zip files in the WilsManifold root directory.
 Organizes them into a structured workspace.
 """
 
+import shutil
 import zipfile
 from pathlib import Path
-import shutil
 
 # Use the directory where this script is located as the ROOT
 ROOT = Path(__file__).parent.resolve()
@@ -30,7 +30,7 @@ for zf in sorted(zip_files):
 
     print(f"  Extracting: {name}")
     try:
-        with zipfile.ZipFile(zf, 'r') as z:
+        with zipfile.ZipFile(zf, "r") as z:
             z.extractall(dest)
     except Exception as e:
         print(f"    ERROR: {e}")

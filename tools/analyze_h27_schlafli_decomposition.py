@@ -5,11 +5,12 @@ Given an embedding, compute the removed edges (degree-2 leftover per vertex)
 so that Schläfli intersection graph = H27 + disjoint 2-regular subgraph.
 Report cycle decomposition of the leftover edges.
 """
+
 from __future__ import annotations
 
+import json
 from itertools import product
 from pathlib import Path
-import json
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -34,11 +35,11 @@ def build_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
-    adj = [[0]*n for _ in range(n)]
+    adj = [[0] * n for _ in range(n)]
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i][j] = adj[j][i] = 1
 
@@ -49,7 +50,7 @@ def h27_from_w33(adj, v0=0):
     n = len(adj)
     non_neighbors = [j for j in range(n) if j != v0 and adj[v0][j] == 0]
 
-    h_adj = [[0]*27 for _ in range(27)]
+    h_adj = [[0] * 27 for _ in range(27)]
     for i, vi in enumerate(non_neighbors):
         for j, vj in enumerate(non_neighbors):
             if i < j and adj[vi][vj]:
@@ -61,12 +62,12 @@ def h27_from_w33(adj, v0=0):
 def build_27_lines():
     lines = []
     for i in range(1, 7):
-        lines.append(('E', i))
+        lines.append(("E", i))
     for i in range(1, 7):
-        lines.append(('C', i))
+        lines.append(("C", i))
     for i in range(1, 7):
-        for j in range(i+1, 7):
-            lines.append(('L', i, j))
+        for j in range(i + 1, 7):
+            lines.append(("L", i, j))
     return lines
 
 
@@ -76,27 +77,27 @@ def lines_intersect(L1, L2):
 
     t1, t2 = L1[0], L2[0]
 
-    if t1 == 'E' and t2 == 'E':
+    if t1 == "E" and t2 == "E":
         return False
-    if t1 == 'C' and t2 == 'C':
+    if t1 == "C" and t2 == "C":
         return False
 
-    if t1 == 'E' and t2 == 'C':
+    if t1 == "E" and t2 == "C":
         return L1[1] != L2[1]
-    if t1 == 'C' and t2 == 'E':
+    if t1 == "C" and t2 == "E":
         return L1[1] != L2[1]
 
-    if t1 == 'E' and t2 == 'L':
+    if t1 == "E" and t2 == "L":
         return L1[1] in L2[1:]
-    if t1 == 'L' and t2 == 'E':
+    if t1 == "L" and t2 == "E":
         return L2[1] in L1[1:]
 
-    if t1 == 'C' and t2 == 'L':
+    if t1 == "C" and t2 == "L":
         return L1[1] in L2[1:]
-    if t1 == 'L' and t2 == 'C':
+    if t1 == "L" and t2 == "C":
         return L2[1] in L1[1:]
 
-    if t1 == 'L' and t2 == 'L':
+    if t1 == "L" and t2 == "L":
         s1 = set(L1[1:])
         s2 = set(L2[1:])
         return len(s1 & s2) == 0
@@ -107,10 +108,10 @@ def lines_intersect(L1, L2):
 def schlafli_intersection_graph():
     lines = build_27_lines()
     n = len(lines)
-    adj = [[0]*n for _ in range(n)]
+    adj = [[0] * n for _ in range(n)]
 
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if lines_intersect(lines[i], lines[j]):
                 adj[i][j] = adj[j][i] = 1
 
@@ -128,7 +129,7 @@ def load_embedding():
 
 def cycle_decomposition(adj):
     n = len(adj)
-    visited = [False]*n
+    visited = [False] * n
     cycles = []
 
     for v in range(n):
@@ -161,7 +162,7 @@ def cycle_decomposition(adj):
     for c in cycles:
         # if closed, last repeats first
         if len(c) > 1 and c[-1] == c[0]:
-            cycle_lengths.append(len(c)-1)
+            cycle_lengths.append(len(c) - 1)
         else:
             cycle_lengths.append(len(c))
     return cycle_lengths, cycles
@@ -179,18 +180,18 @@ def main():
 
     # Build mapped H27 adjacency in Schläfli vertex labels
     n = 27
-    mapped = [[0]*n for _ in range(n)]
+    mapped = [[0] * n for _ in range(n)]
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if h_adj[i][j]:
                 a = mapping[i]
                 b = mapping[j]
                 mapped[a][b] = mapped[b][a] = 1
 
     # leftover edges = Schläfli intersection edges minus mapped H27 edges
-    leftover = [[0]*n for _ in range(n)]
+    leftover = [[0] * n for _ in range(n)]
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if s_adj[i][j] and not mapped[i][j]:
                 leftover[i][j] = leftover[j][i] = 1
 
@@ -207,7 +208,7 @@ def main():
 
     results = {
         "leftover_degree_set": deg_set,
-        "leftover_edges": sum(sum(row) for row in leftover)//2,
+        "leftover_edges": sum(sum(row) for row in leftover) // 2,
         "cycle_lengths": sorted(cycle_lengths),
         "cycle_count": len(cycle_lengths),
         "cycle_labels": cycle_labels,

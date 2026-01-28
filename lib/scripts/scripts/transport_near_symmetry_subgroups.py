@@ -10,12 +10,16 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUT_DIR = DATA / "_workbench" / "05_symmetry"
 
-TABLE_PATH = DATA / "_toe" / "projector_recon_20260110" / "binary_tetrahedral_2T_multiplication_table.csv"
+TABLE_PATH = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / "binary_tetrahedral_2T_multiplication_table.csv"
+)
 COMM_PATH = OUT_DIR / "coin_c24_2t_fullH_equivariance.csv"
 
 
@@ -107,9 +111,17 @@ def main() -> None:
         f.write("# Near-symmetry subgroups under transport commutator norms\n\n")
         f.write(f"Inputs:\n- {COMM_PATH}\n- {TABLE_PATH}\n\n")
         f.write("Best subgroup per order (min max_comm):\n\n")
-        f.write(best[["order", "generators", "max_comm", "mean_comm"]].to_markdown(index=False))
+        f.write(
+            best[["order", "generators", "max_comm", "mean_comm"]].to_markdown(
+                index=False
+            )
+        )
         f.write("\n\nTop 8 subgroups overall:\n\n")
-        f.write(df.head(8)[["order", "generators", "max_comm", "mean_comm"]].to_markdown(index=False))
+        f.write(
+            df.head(8)[["order", "generators", "max_comm", "mean_comm"]].to_markdown(
+                index=False
+            )
+        )
 
 
 if __name__ == "__main__":

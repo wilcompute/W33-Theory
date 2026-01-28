@@ -9,15 +9,17 @@ We use:
 This yields a fully explicit bijection (not group-equivariant), but
 preserves the E6×SU(3) structural decomposition.
 """
+
 from __future__ import annotations
 
 import json
-from itertools import product, combinations
+from itertools import combinations, product
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
 # ---------------- W33 construction ----------------
+
 
 def construct_w33_points():
     F3 = [0, 1, 2]
@@ -39,12 +41,12 @@ def construct_w33_points():
 
 
 def omega(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
 
 def construct_w33_edges(points):
     edges = []
-    adj = [[0]*40 for _ in range(40)]
+    adj = [[0] * 40 for _ in range(40)]
     for i in range(40):
         for j in range(i + 1, 40):
             if omega(points[i], points[j]) == 0:
@@ -52,7 +54,9 @@ def construct_w33_edges(points):
                 adj[i][j] = adj[j][i] = 1
     return edges, adj
 
+
 # ---------------- E8 roots and decomposition ----------------
+
 
 def build_e8_roots_scaled():
     roots = []
@@ -78,15 +82,17 @@ def dot(a, b):
 
 
 def classify_roots_by_dot(roots):
-    u1 = (1,1,1,1,1,1,1,1)
-    u2 = (1,1,1,1,1,1,-1,-1)
+    u1 = (1, 1, 1, 1, 1, 1, 1, 1)
+    u2 = (1, 1, 1, 1, 1, 1, -1, -1)
     classes = {}
     for i, r in enumerate(roots):
         d = (dot(r, u1), dot(r, u2))
         classes.setdefault(d, []).append(i)
     return classes
 
+
 # ---------------- Bijection construction ----------------
+
 
 def main():
     points = construct_w33_points()
@@ -157,7 +163,7 @@ def main():
     # H27 edges -> first 4 classes
     h27_edges = edges_h27
     for idx in range(4):
-        edge_chunk = h27_edges[idx*27:(idx+1)*27]
+        edge_chunk = h27_edges[idx * 27 : (idx + 1) * 27]
         root_chunk = class27_lists[idx]
         for e, r_idx in zip(edge_chunk, root_chunk):
             mapping[e] = r_idx
@@ -165,7 +171,7 @@ def main():
     # Cross edges from first 2 triangles -> remaining 2 classes
     cross_edges_selected = cross_by_tri[0] + cross_by_tri[1]
     for idx in range(2):
-        edge_chunk = cross_edges_selected[idx*27:(idx+1)*27]
+        edge_chunk = cross_edges_selected[idx * 27 : (idx + 1) * 27]
         root_chunk = class27_lists[4 + idx]
         for e, r_idx in zip(edge_chunk, root_chunk):
             mapping[e] = r_idx

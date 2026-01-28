@@ -9,9 +9,10 @@ Why does the universe not fall apart into quantum chaos?
 Answer: W33 provides error correction at the Planck scale.
 """
 
-import numpy as np
-from fractions import Fraction
 import json
+from fractions import Fraction
+
+import numpy as np
 
 print("=" * 70)
 print("W33 THEORY PART LXXXIX: QUANTUM ERROR CORRECTING CODE")
@@ -420,19 +421,19 @@ results = {
     "code_parameters": {
         "physical_qubits": v,
         "logical_qubits": m2,
-        "code_rate": float(code_rate)
+        "code_rate": float(code_rate),
     },
     "automorphism_weyl": {
         "aut_w33": aut_order,
         "weyl_E6": 51840,
-        "match": aut_order == 51840
+        "match": aut_order == 51840,
     },
     "implications": [
         "Spacetime stability from error correction",
         "Decoherence from exceeding code distance",
         "Quantum gravity as error correction",
-        "Black hole information preserved"
-    ]
+        "Black hole information preserved",
+    ],
 }
 
 with open("PART_LXXXIX_quantum_code.json", "w") as f:

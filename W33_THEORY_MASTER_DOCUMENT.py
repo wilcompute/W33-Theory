@@ -113,7 +113,9 @@ print("═══ FINE STRUCTURE CONSTANT ═══")
 print(f"  Tree level:    α⁻¹ = 81 + 56 = {alpha_inv_tree}")
 print(f"  Refined:       α⁻¹ = 81 + 56 + 3/83 = {float(alpha_inv_refined):.6f}")
 print(f"  Experimental:  α⁻¹ = {alpha_inv_exp}")
-print(f"  Refined error: {abs(float(alpha_inv_refined) - alpha_inv_exp)/alpha_inv_exp * 100:.4f}%")
+print(
+    f"  Refined error: {abs(float(alpha_inv_refined) - alpha_inv_exp)/alpha_inv_exp * 100:.4f}%"
+)
 print()
 
 # Weinberg angle
@@ -134,7 +136,9 @@ sin_cabibbo_exp = 0.22453
 print("═══ CABIBBO ANGLE ═══")
 print(f"  W33 prediction:  sin(θ_C) = 9/40 = {float(sin_cabibbo_w33):.5f}")
 print(f"  Experimental:    sin(θ_C) = {sin_cabibbo_exp}")
-print(f"  Error:           {abs(float(sin_cabibbo_w33) - sin_cabibbo_exp)/sin_cabibbo_exp * 100:.2f}%")
+print(
+    f"  Error:           {abs(float(sin_cabibbo_w33) - sin_cabibbo_exp)/sin_cabibbo_exp * 100:.2f}%"
+)
 print()
 
 # Dark matter ratio

@@ -11,17 +11,20 @@ Let's explore this and find the explicit connection between:
 - The 81-dimensional Steinberg representation
 """
 
-from sage.all import *
+from itertools import combinations, product
+
 import numpy as np
-from itertools import product, combinations
+from sage.all import *
 
 print("=" * 70)
 print("THE 81 CONNECTION: FLAGS, APARTMENTS, AND STEINBERG")
 print("=" * 70)
 
+
 # Build the symplectic polar space W(3,3)
 def symplectic_form(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
+
 
 def normalize(v):
     for i in range(4):
@@ -29,6 +32,7 @@ def normalize(v):
             inv = pow(v[i], -1, 3)
             return tuple((inv * x) % 3 for x in v)
     return None
+
 
 proj_points = set()
 for v in product(range(3), repeat=4):
@@ -49,9 +53,11 @@ for i, p1 in enumerate(proj_points):
 
 lines_set = set()
 for i in range(n):
-    for j in range(i+1, n):
+    for j in range(i + 1, n):
         if adj[i][j]:
-            common = [k for k in range(n) if k != i and k != j and adj[i][k] and adj[j][k]]
+            common = [
+                k for k in range(n) if k != i and k != j and adj[i][k] and adj[j][k]
+            ]
             for k, l in combinations(common, 2):
                 if adj[k][l]:
                     lines_set.add(tuple(sorted([i, j, k, l])))
@@ -88,15 +94,16 @@ print(f"Chosen flag: point {p0}, line {L0}")
 print(f"  Point coords: {proj_points[p0]}")
 print(f"  Line points: {lines[L0]}")
 
+
 # Find all apartments through this flag
 def find_apartments_through_flag(p, L):
     """Find all apartments containing flag (p, L)."""
     apts = []
     L_pts = list(lines[L])
-    
+
     # The apartment octagon: p-L-p1-L1-p2-L2-p3-L3-p
     # p and p2 are opposite, p1 and p3 are opposite
-    
+
     for p1 in L_pts:
         if p1 == p:
             continue
@@ -105,29 +112,37 @@ def find_apartments_through_flag(p, L):
             if p1 not in L1 or L1_idx == L:
                 continue
             L1_pts = list(L1)
-            
+
             for p2 in L1_pts:
                 if p2 == p1 or adj[p][p2]:  # p, p2 must be non-adjacent
                     continue
-                
+
                 for L2_idx, L2 in enumerate(lines):
                     if p2 not in L2 or L2_idx == L1_idx:
                         continue
                     L2_pts = list(L2)
-                    
+
                     for p3 in L2_pts:
                         if p3 == p2 or adj[p1][p3]:  # p1, p3 must be non-adjacent
                             continue
-                        
+
                         # Check if there's a line L3 connecting p3 and p (not L, L2)
                         for L3_idx, L3 in enumerate(lines):
-                            if p3 in L3 and p in L3 and L3_idx != L and L3_idx != L2_idx:
+                            if (
+                                p3 in L3
+                                and p in L3
+                                and L3_idx != L
+                                and L3_idx != L2_idx
+                            ):
                                 # Found apartment!
-                                apts.append({
-                                    'points': (p, p1, p2, p3),
-                                    'lines': (L, L1_idx, L2_idx, L3_idx)
-                                })
+                                apts.append(
+                                    {
+                                        "points": (p, p1, p2, p3),
+                                        "lines": (L, L1_idx, L2_idx, L3_idx),
+                                    }
+                                )
     return apts
+
 
 apartments_through_flag = find_apartments_through_flag(p0, L0)
 print(f"Apartments through flag: {len(apartments_through_flag)}")
@@ -220,17 +235,21 @@ print("\n" + "=" * 70)
 print("SYMPLECTIC TRANSVECTIONS")
 print("=" * 70)
 
+
 def transvection(v, a):
     """
     The symplectic transvection T_{v,a} where v is isotropic:
     T_{v,a}(x) = x + a⟨x,v⟩v
-    
+
     This is in Sp(4,3) and has order 3 (if a ≠ 0) or 1 (if a = 0).
     """
+
     def T(x):
         coeff = (a * symplectic_form(x, v)) % 3
         return tuple((x[i] + coeff * v[i]) % 3 for i in range(4))
+
     return T
+
 
 # Pick an isotropic vector
 v = (1, 0, 0, 0)  # This is isotropic since ⟨v,v⟩ = 0

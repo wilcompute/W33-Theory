@@ -18,10 +18,11 @@ Answer: W33 is one of them.
 But maybe we CAN understand... through W33.
 """
 
-import numpy as np
 from collections import defaultdict
-from itertools import product, combinations
 from functools import reduce
+from itertools import combinations, product
+
+import numpy as np
 
 print("=" * 80)
 print("W33 AND CATEGORY THEORY")
@@ -61,51 +62,54 @@ WHY CATEGORIES?
   Same patterns appear in wildly different areas.
 """)
 
+
 class Category:
     """A simple category implementation."""
-    
+
     def __init__(self, name):
         self.name = name
         self.objects = set()
         self.morphisms = {}  # (A, B) -> list of morphisms
-        self.identity = {}   # A -> id_A
-        
+        self.identity = {}  # A -> id_A
+
     def add_object(self, obj):
         self.objects.add(obj)
         # Every object has an identity morphism
         self.identity[obj] = f"id_{obj}"
         self.morphisms[(obj, obj)] = [self.identity[obj]]
-    
+
     def add_morphism(self, source, target, name):
         if (source, target) not in self.morphisms:
             self.morphisms[(source, target)] = []
         self.morphisms[(source, target)].append(name)
-    
+
     def compose(self, f, g):
         """Compose morphisms g ∘ f."""
         return f"{g} ∘ {f}"
-    
+
     def hom_set(self, A, B):
         """Return Hom(A, B) = morphisms from A to B."""
         return self.morphisms.get((A, B), [])
-    
+
     def is_isomorphism(self, f, A, B):
         """Check if f: A → B has an inverse."""
         # f is iso if there exists g: B → A with g ∘ f = id_A and f ∘ g = id_B
         for g in self.hom_set(B, A):
-            if self.compose(f, g) == self.identity.get(A) and \
-               self.compose(g, f) == self.identity.get(B):
+            if self.compose(f, g) == self.identity.get(A) and self.compose(
+                g, f
+            ) == self.identity.get(B):
                 return True
         return False
 
+
 # Build a small example category
 C = Category("Example")
-for obj in ['A', 'B', 'C']:
+for obj in ["A", "B", "C"]:
     C.add_object(obj)
 
-C.add_morphism('A', 'B', 'f')
-C.add_morphism('B', 'C', 'g')
-C.add_morphism('A', 'C', 'h')  # This should be g ∘ f
+C.add_morphism("A", "B", "f")
+C.add_morphism("B", "C", "g")
+C.add_morphism("A", "C", "h")  # This should be g ∘ f
 
 print("\nExample category:")
 print(f"  Objects: {C.objects}")
@@ -142,19 +146,20 @@ Even better: W33 is an ENRICHED category
   - The phases give the enrichment
 """)
 
+
 class W33Category:
     """W33 as a category/groupoid."""
-    
+
     def __init__(self):
         # 40 points as objects
         self.objects = list(range(40))
-        
+
         # Morphisms from line structure
         self.morphisms = defaultdict(list)
-        
+
         # Build morphisms from lines
         self._build_morphisms()
-        
+
     def _build_morphisms(self):
         """Build morphisms from W33 line structure."""
         # Generate W33 lines (simplified)
@@ -162,7 +167,7 @@ class W33Category:
         for i in range(40):
             line = [(i + j * 10) % 40 for j in range(4)]
             lines.append(line)
-        
+
         # Each line creates morphisms between all pairs of its points
         for line in lines:
             for i, p1 in enumerate(line):
@@ -172,27 +177,31 @@ class W33Category:
                         phase = (j - i) % 4  # Z₄ phase
                         morph = (f"path_{p1}_{p2}", phase * np.pi / 2)
                         self.morphisms[(p1, p2)].append(morph)
-    
+
     def hom(self, A, B):
         """Hom(A, B) = morphisms from A to B."""
         return self.morphisms.get((A, B), [])
-    
+
     def compose(self, f, g):
         """Compose two path morphisms."""
         name = f"{g[0]} ∘ {f[0]}"
         phase = (f[1] + g[1]) % (2 * np.pi)
         return (name, phase)
-    
+
     def is_groupoid(self):
         """Check that every morphism is invertible."""
         for (A, B), morphs in self.morphisms.items():
             for m in morphs:
                 # Look for inverse in Hom(B, A)
-                inverses = [m2 for m2 in self.hom(B, A) 
-                           if abs((m[1] + m2[1]) % (2*np.pi)) < 0.01]
+                inverses = [
+                    m2
+                    for m2 in self.hom(B, A)
+                    if abs((m[1] + m2[1]) % (2 * np.pi)) < 0.01
+                ]
                 if not inverses:
                     return False
         return True
+
 
 print("\nBuilding W33 as a category:")
 W33Cat = W33Category()
@@ -240,34 +249,47 @@ PHYSICS CONNECTION:
   Physical observables = functorial invariants
 """)
 
+
 class Functor:
     """A functor between categories."""
-    
+
     def __init__(self, name, source_cat, target_cat, obj_map, morph_map):
         self.name = name
         self.source = source_cat
         self.target = target_cat
         self.obj_map = obj_map
         self.morph_map = morph_map
-    
+
     def apply_object(self, obj):
         return self.obj_map(obj)
-    
+
     def apply_morphism(self, morph):
         return self.morph_map(morph)
 
+
 # Example: Identity functor on W33
-def id_obj(x): return x
-def id_morph(m): return m
+def id_obj(x):
+    return x
+
+
+def id_morph(m):
+    return m
+
 
 Id = Functor("Identity", W33Cat, W33Cat, id_obj, id_morph)
 
+
 # Example: Shift functor (rotation of points)
-def shift_obj(x): return (x + 1) % 40
-def shift_morph(m): 
-    name = m[0].replace(str(int(m[0].split('_')[1])), 
-                        str((int(m[0].split('_')[1]) + 1) % 40))
+def shift_obj(x):
+    return (x + 1) % 40
+
+
+def shift_morph(m):
+    name = m[0].replace(
+        str(int(m[0].split("_")[1])), str((int(m[0].split("_")[1]) + 1) % 40)
+    )
     return (name, m[1])
+
 
 Shift = Functor("Shift", W33Cat, W33Cat, shift_obj, shift_morph)
 
@@ -329,13 +351,16 @@ W33 YONEDA:
   HOLOGRAPHY FROM YONEDA!
 """)
 
+
 def yoneda_embedding(cat, obj):
     """The Yoneda embedding of an object."""
+
     # Returns the representable functor Hom(obj, -)
     def hom_functor(target):
         return len(cat.hom(obj, target))
-    
+
     return hom_functor
+
 
 # Compute Yoneda embedding for a point
 hom_0 = yoneda_embedding(W33Cat, 0)
@@ -391,8 +416,8 @@ W33 AS A HIGHER STRUCTURE:
 k_morphisms = {
     0: 40,  # Points
     1: 160,  # Paths along lines (40 lines × 4 points × ~1 connection)
-    2: 81,   # Cycles
-    3: 10,   # Relations between cycles (estimate)
+    2: 81,  # Cycles
+    3: 10,  # Relations between cycles (estimate)
 }
 
 print("\nW33 as higher category:")
@@ -520,13 +545,15 @@ W33 UNIVERSAL PROPERTY?
   W33 is the SEED from which all physics grows!
 """)
 
+
 def is_initial(obj, category, test_objects):
     """Check if obj is initial (has unique morphism to each object)."""
     for target in test_objects:
-        morphisms = category.hom(obj, target) if hasattr(category, 'hom') else []
+        morphisms = category.hom(obj, target) if hasattr(category, "hom") else []
         if len(morphisms) != 1:
             return False
     return True
+
 
 print("\nUniversal property check:")
 print("  W33 as initial object: Conjectured")

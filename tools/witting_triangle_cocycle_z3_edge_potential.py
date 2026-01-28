@@ -5,6 +5,7 @@ We solve d1 x = t over GF(3) where t is the triangle phase class k mod 3
 (with oriented boundary). We output a canonical solution and analyze its
 structure (edge type distribution, support, etc.).
 """
+
 from __future__ import annotations
 
 from itertools import combinations
@@ -25,9 +26,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -123,7 +124,11 @@ def main():
     # build t = k mod 3
     t = np.zeros(len(triangles), dtype=int)
     for idx, (i, j, k) in enumerate(triangles):
-        ip = np.vdot(rays[i], rays[j]) * np.vdot(rays[j], rays[k]) * np.conjugate(np.vdot(rays[i], rays[k]))
+        ip = (
+            np.vdot(rays[i], rays[j])
+            * np.vdot(rays[j], rays[k])
+            * np.conjugate(np.vdot(rays[i], rays[k]))
+        )
         kp = phase_to_k(np.angle(ip))
         t[idx] = kp % 3
 

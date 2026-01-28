@@ -5,6 +5,7 @@ We use the explicit edge->root mapping and the symplectic generators to obtain
 permutations of the 240 E8 roots. We then verify these permutations preserve
 inner products and W(E6) orbit structure (72 + 6*27 + 6*1).
 """
+
 from __future__ import annotations
 
 import json
@@ -34,11 +35,11 @@ def build_w33():
             proj_points.append(v)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     edges = []
     for i in range(40):
-        for j in range(i+1, 40):
+        for j in range(i + 1, 40):
             if omega(proj_points[i], proj_points[j]) == 0:
                 edges.append((i, j))
 
@@ -55,7 +56,9 @@ def normalize_proj(v):
 
 
 def check_symplectic(M):
-    Omega = np.array([[0,0,1,0],[0,0,0,1],[2,0,0,0],[0,2,0,0]], dtype=int)
+    Omega = np.array(
+        [[0, 0, 1, 0], [0, 0, 0, 1], [2, 0, 0, 0], [0, 2, 0, 0]], dtype=int
+    )
     M = np.array(M, dtype=int) % 3
     return np.all(((M.T @ Omega @ M) % 3) == Omega)
 
@@ -69,23 +72,23 @@ def apply_matrix(M, v):
 
 def generator_matrices():
     return [
-        [[1,0,1,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,1],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[1,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,1,0,1]],
-        [[1,1,0,0],[0,1,0,0],[0,0,1,0],[0,0,2,1]],
-        [[1,0,0,0],[1,1,0,0],[0,0,1,2],[0,0,0,1]],
-        [[0,0,1,0],[0,1,0,0],[2,0,0,0],[0,0,0,1]],
-        [[1,0,0,0],[0,0,0,1],[0,0,1,0],[0,2,0,0]],
-        [[2,0,0,0],[0,1,0,0],[0,0,2,0],[0,0,0,1]],
-        [[1,0,0,0],[0,2,0,0],[0,0,1,0],[0,0,0,2]],
+        [[1, 0, 1, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 1], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [1, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 1, 0, 1]],
+        [[1, 1, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 2, 1]],
+        [[1, 0, 0, 0], [1, 1, 0, 0], [0, 0, 1, 2], [0, 0, 0, 1]],
+        [[0, 0, 1, 0], [0, 1, 0, 0], [2, 0, 0, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0], [0, 2, 0, 0]],
+        [[2, 0, 0, 0], [0, 1, 0, 0], [0, 0, 2, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 2, 0, 0], [0, 0, 1, 0], [0, 0, 0, 2]],
     ]
 
 
 def build_e8_roots():
     roots = []
     for i in range(8):
-        for j in range(i+1, 8):
+        for j in range(i + 1, 8):
             for si in (1, -1):
                 for sj in (1, -1):
                     r = [0.0] * 8
@@ -104,20 +107,22 @@ def main():
     edge_to_idx = {tuple(sorted(e)): i for i, e in enumerate(edges)}
 
     # load edge -> root map
-    edge_map = json.loads((ROOT / 'artifacts' / 'explicit_bijection_decomposition.json').read_text())
-    edge_to_root_idx = {int(k): v for k, v in edge_map['edge_to_root_index'].items()}
+    edge_map = json.loads(
+        (ROOT / "artifacts" / "explicit_bijection_decomposition.json").read_text()
+    )
+    edge_to_root_idx = {int(k): v for k, v in edge_map["edge_to_root_index"].items()}
 
     # W(E6) orbit labels
-    we6 = json.loads((ROOT / 'artifacts' / 'we6_orbit_labels.json').read_text())
-    root_to_orbit = {eval(k): v for k, v in we6['mapping'].items()}
-    root_coords = [tuple(r) for r in edge_map['root_coords']]
+    we6 = json.loads((ROOT / "artifacts" / "we6_orbit_labels.json").read_text())
+    root_to_orbit = {eval(k): v for k, v in we6["mapping"].items()}
+    root_coords = [tuple(r) for r in edge_map["root_coords"]]
 
     # root index -> orbit id, size
     root_orbit = {}
     for idx, r in enumerate(root_coords):
         info = root_to_orbit.get(tuple(r))
         if info:
-            root_orbit[idx] = (info['orbit_id'], info['orbit_size'])
+            root_orbit[idx] = (info["orbit_id"], info["orbit_size"])
 
     # E8 roots list
     e8_roots = build_e8_roots()
@@ -165,11 +170,11 @@ def main():
 
         # verify it is a permutation of 240
         if any(x is None for x in rperm):
-            raise RuntimeError('Incomplete root permutation')
+            raise RuntimeError("Incomplete root permutation")
 
         # verify inner products preserved
         def dot(r1, r2):
-            return sum(a*b for a, b in zip(r1, r2))
+            return sum(a * b for a, b in zip(r1, r2))
 
         ok = True
         for i in range(20):  # sample check
@@ -194,21 +199,23 @@ def main():
                 orbit_ok = False
                 break
 
-        results.append({
-            "gen_index": gen_idx,
-            "preserves_inner_products": ok,
-            "preserves_we6_orbits": orbit_ok,
-            "root_perm": rperm,
-        })
+        results.append(
+            {
+                "gen_index": gen_idx,
+                "preserves_inner_products": ok,
+                "preserves_we6_orbits": orbit_ok,
+                "root_perm": rperm,
+            }
+        )
 
     out = {
         "generator_maps": results,
     }
 
-    out_path = ROOT / 'artifacts' / 'sp43_we6_generator_map.json'
+    out_path = ROOT / "artifacts" / "sp43_we6_generator_map.json"
     out_path.write_text(json.dumps(out, indent=2))
     print(f"Wrote {out_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

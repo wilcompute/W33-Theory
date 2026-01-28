@@ -7,6 +7,7 @@ For each 2x2 rotation (c,s) we report:
 - R = sin^2(theta), T = cos^2(theta)
 This maps to a beam splitter with reflectivity R and an internal phase phi.
 """
+
 from __future__ import annotations
 
 import json
@@ -30,22 +31,26 @@ def main():
         for op in entry["ops"]:
             theta = float(op["theta"])
             phi = float(op["phi"])
-            R = float((__import__('math').sin(theta))**2)
-            T = float((__import__('math').cos(theta))**2)
-            ops.append({
-                "i": op["i"],
-                "j": op["j"],
-                "theta": theta,
-                "phi": phi,
-                "R": R,
-                "T": T,
-            })
-        out.append({
-            "basis_index": entry["basis_index"],
-            "rays": entry["rays"],
-            "ops": ops,
-            "diag_phases": entry["diag_phases"],
-        })
+            R = float((__import__("math").sin(theta)) ** 2)
+            T = float((__import__("math").cos(theta)) ** 2)
+            ops.append(
+                {
+                    "i": op["i"],
+                    "j": op["j"],
+                    "theta": theta,
+                    "phi": phi,
+                    "R": R,
+                    "T": T,
+                }
+            )
+        out.append(
+            {
+                "basis_index": entry["basis_index"],
+                "rays": entry["rays"],
+                "ops": ops,
+                "diag_phases": entry["diag_phases"],
+            }
+        )
 
     json_path = DOCS / "witting_24basis_mzi_schedule.json"
     json_path.write_text(json.dumps(out, indent=2), encoding="utf-8")
@@ -53,7 +58,9 @@ def main():
     md_path = DOCS / "witting_24basis_mzi_schedule.md"
     with md_path.open("w", encoding="utf-8") as f:
         f.write("# Witting 24‑Basis MZI Schedule\n\n")
-        f.write("Each op is a 2×2 mixing on modes (i,j) with reflectivity R and phase phi.\n\n")
+        f.write(
+            "Each op is a 2×2 mixing on modes (i,j) with reflectivity R and phase phi.\n\n"
+        )
         for entry in out:
             f.write(f"## Basis B{entry['basis_index']:02d}\n")
             f.write(f"Rays: {entry['rays']}\n\n")

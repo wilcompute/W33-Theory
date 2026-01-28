@@ -6,9 +6,10 @@ Why is there more matter than antimatter in the universe?
 This requires CP violation - and W33 must explain it!
 """
 
-import numpy as np
-from decimal import Decimal, getcontext
 import json
+from decimal import Decimal, getcontext
+
+import numpy as np
 
 getcontext().prec = 50
 
@@ -132,12 +133,12 @@ BETTER: Phase from eigenvalue RATIOS
 
 # Try various combinations
 candidates = [
-    ("arctan(e₃/e₁)", np.arctan(e3/e1)),
-    ("arctan(e₂/e₃)", np.arctan(e2/e3)),
-    ("arctan(λ/μ)", np.arctan(lam/mu)),
-    ("arctan((e₁-e₂)/(e₂-e₃))", np.arctan((e1-e2)/(e2-e3))),
-    ("π × λ/k", np.pi * lam/k),
-    ("2π/3 (F₃ phase)", 2*np.pi/3),
+    ("arctan(e₃/e₁)", np.arctan(e3 / e1)),
+    ("arctan(e₂/e₃)", np.arctan(e2 / e3)),
+    ("arctan(λ/μ)", np.arctan(lam / mu)),
+    ("arctan((e₁-e₂)/(e₂-e₃))", np.arctan((e1 - e2) / (e2 - e3))),
+    ("π × λ/k", np.pi * lam / k),
+    ("2π/3 (F₃ phase)", 2 * np.pi / 3),
 ]
 
 print("\nCP PHASE CANDIDATES:")
@@ -179,8 +180,8 @@ W33 CONNECTION:
 """)
 
 # Wolfenstein λ from W33
-lambda_wolf = np.sqrt(lam/k)  # sqrt(2/12) = sqrt(1/6) ≈ 0.408
-lambda_wolf_v2 = lam/k  # 2/12 ≈ 0.167
+lambda_wolf = np.sqrt(lam / k)  # sqrt(2/12) = sqrt(1/6) ≈ 0.408
+lambda_wolf_v2 = lam / k  # 2/12 ≈ 0.167
 lambda_wolf_v3 = np.sin(np.radians(13))  # Cabibbo angle
 
 print(f"  Cabibbo angle sin θ_C ≈ 0.22")
@@ -189,7 +190,7 @@ print(f"  W33 candidate 2: √(λ/k) = {np.sqrt(lam/k):.4f}")
 print(f"  W33 candidate 3: (λ-1)/(k-1) = {(lam-1)/(k-1):.4f}")
 
 # Try to match
-cabibbo = (lam)/(k-lam)  # 2/10 = 0.2
+cabibbo = (lam) / (k - lam)  # 2/10 = 0.2
 print(f"  W33 candidate 4: λ/(k-λ) = {cabibbo:.4f}")
 print(f"  MATCH! λ/(k-λ) = 2/10 = 0.20 ≈ sin θ_C ✓")
 
@@ -223,8 +224,8 @@ Using the natural CP phase δ = 2π/3:
 """)
 
 # PMNS angles from W33
-s12_sq = k/v
-s23_sq = 0.5 + mu/(2*v)
+s12_sq = k / v
+s23_sq = 0.5 + mu / (2 * v)
 s13_sq = 0.022  # Using experimental (W33 formula less precise)
 
 c12 = np.sqrt(1 - s12_sq)
@@ -234,7 +235,7 @@ s23 = np.sqrt(s23_sq)
 c13 = np.sqrt(1 - s13_sq)
 s13 = np.sqrt(s13_sq)
 
-delta = 2*np.pi/3  # W33 CP phase
+delta = 2 * np.pi / 3  # W33 CP phase
 
 J_PMNS = c12 * s12 * c23 * s23 * c13**2 * s13 * np.sin(delta)
 
@@ -247,7 +248,7 @@ print(f"  J_PMNS = {J_PMNS:.5f}")
 print(f"  Experimental: |J_PMNS| ≈ 0.033")
 
 # Also check for δ = -π/2 (maximal, hinted by data)
-delta_max = -np.pi/2
+delta_max = -np.pi / 2
 J_PMNS_max = c12 * s12 * c23 * s23 * c13**2 * s13 * np.sin(delta_max)
 print(f"\n  If δ = -90° (maximal): J_PMNS = {abs(J_PMNS_max):.5f}")
 
@@ -280,12 +281,12 @@ This gives sufficient asymmetry for η ~ 10⁻¹⁰!
 
 # Rough leptogenesis calculation
 M_R = 5e15  # GeV
-v_H = 246   # GeV
+v_H = 246  # GeV
 m_D = 0.028 * v_H  # ~7 GeV (2nd gen scale)
-delta_CP = 2*np.pi/3
+delta_CP = 2 * np.pi / 3
 
 # CP asymmetry (very rough)
-eps_CP = (1/(8*np.pi)) * (m_D**2 / (v_H**2 * M_R)) * np.sin(delta_CP)
+eps_CP = (1 / (8 * np.pi)) * (m_D**2 / (v_H**2 * M_R)) * np.sin(delta_CP)
 print(f"\nLEPTOGENESIS CP ASYMMETRY:")
 print(f"  M_R = {M_R:.0e} GeV")
 print(f"  m_D = {m_D:.1f} GeV")
@@ -428,13 +429,13 @@ THE MATTER-ANTIMATTER ASYMMETRY IS EXPLAINED!
 results = {
     "part": "XCIX",
     "title": "CP Violation",
-    "cp_phase": float(2*np.pi/3),
+    "cp_phase": float(2 * np.pi / 3),
     "cp_phase_degrees": 120,
-    "cabibbo_angle": float(lam/(k-lam)),
+    "cabibbo_angle": float(lam / (k - lam)),
     "jarlskog_pmns": float(J_PMNS),
     "strong_cp": "θ = 0 naturally",
     "leptogenesis": "Works with M_R ~ M_GUT",
-    "conclusion": "Matter-antimatter asymmetry explained"
+    "conclusion": "Matter-antimatter asymmetry explained",
 }
 
 with open("PART_XCIX_cp_violation.json", "w") as f:

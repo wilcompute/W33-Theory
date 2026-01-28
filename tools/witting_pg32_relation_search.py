@@ -9,6 +9,7 @@ Outputs:
 - artifacts/witting_pg32_relation_search.json
 - artifacts/witting_pg32_relation_search.md
 """
+
 from __future__ import annotations
 
 import json
@@ -19,9 +20,11 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT_JSON = ROOT / "artifacts" / "witting_pg32_relation_search.json"
 OUT_MD = ROOT / "artifacts" / "witting_pg32_relation_search.md"
 
+
 # GF(4) arithmetic
 def gf4_add(a: int, b: int) -> int:
     return a ^ b
+
 
 def gf4_mul(a: int, b: int) -> int:
     if a == 0 or b == 0:
@@ -35,11 +38,14 @@ def gf4_mul(a: int, b: int) -> int:
     c1 = (c1 + c2) % 2
     return (c1 << 1) | c0
 
+
 def gf4_square(a: int) -> int:
     return gf4_mul(a, a)
 
+
 def gf4_trace(a: int) -> int:
     return gf4_add(a, gf4_square(a)) & 1
+
 
 def gf4_inv(a: int) -> int:
     if a == 0:
@@ -49,9 +55,11 @@ def gf4_inv(a: int) -> int:
             return b
     raise ZeroDivisionError
 
+
 omega = 2
 omega2 = 3
 omega_powers = [1, omega, omega2]
+
 
 def build_base_states():
     states = []
@@ -68,6 +76,7 @@ def build_base_states():
         states.append((1, w_mu, w_nu, 0))
     return states
 
+
 def normalize_projective(v):
     for x in v:
         if x != 0:
@@ -75,14 +84,17 @@ def normalize_projective(v):
             return tuple(gf4_mul(inv, xi) for xi in v)
     return None
 
+
 def hermitian(u, v):
     s = 0
     for a, b in zip(u, v):
         s = gf4_add(s, gf4_mul(a, gf4_square(b)))
     return s
 
+
 def trace_map(v):
     return tuple(gf4_trace(x) for x in v)
+
 
 def main():
     base_states = [normalize_projective(s) for s in build_base_states()]
@@ -170,6 +182,7 @@ def main():
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"Wrote {OUT_JSON}")
     print(f"Wrote {OUT_MD}")
+
 
 if __name__ == "__main__":
     main()

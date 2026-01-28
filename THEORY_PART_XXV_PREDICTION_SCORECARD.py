@@ -36,35 +36,41 @@ predictions_constants = [
         "w33": "81 + 56 = 137",
         "exp": "137.035999084",
         "error": "0.03%",
-        "status": "✓"
+        "status": "✓",
     },
     {
         "name": "Refined α⁻¹ (with 3/83)",
         "w33": "137 + 3/83 = 137.0361",
         "exp": "137.035999084",
         "error": "0.0001%",
-        "status": "✓✓"
+        "status": "✓✓",
     },
     {
         "name": "Weinberg Angle sin²θ_W",
         "w33": "40/173 = 0.231214",
         "exp": "0.23121(4)",
         "error": "0.09σ",
-        "status": "✓✓✓"
+        "status": "✓✓✓",
     },
     {
         "name": "Cabibbo Angle sin(θ_C)",
         "w33": "9/40 = 0.225",
         "exp": "0.22453",
         "error": "0.2%",
-        "status": "✓✓"
+        "status": "✓✓",
     },
 ]
 
-print(f"{'QUANTITY':<35} │ {'W33 PREDICTION':<22} │ {'EXPERIMENT':<18} │ {'ERROR':<12} │ STATUS")
-print("─" * 35 + "─┼─" + "─" * 22 + "─┼─" + "─" * 18 + "─┼─" + "─" * 12 + "─┼─" + "─" * 6)
+print(
+    f"{'QUANTITY':<35} │ {'W33 PREDICTION':<22} │ {'EXPERIMENT':<18} │ {'ERROR':<12} │ STATUS"
+)
+print(
+    "─" * 35 + "─┼─" + "─" * 22 + "─┼─" + "─" * 18 + "─┼─" + "─" * 12 + "─┼─" + "─" * 6
+)
 for p in predictions_constants:
-    print(f"{p['name']:<35} │ {p['w33']:<22} │ {p['exp']:<18} │ {p['error']:<12} │ {p['status']}")
+    print(
+        f"{p['name']:<35} │ {p['w33']:<22} │ {p['exp']:<18} │ {p['error']:<12} │ {p['status']}"
+    )
 print()
 
 # =============================================================================
@@ -82,28 +88,34 @@ predictions_cosmo = [
         "w33": "27/5 = 5.40",
         "exp": "5.41",
         "error": "0.2%",
-        "status": "✓✓✓"
+        "status": "✓✓✓",
     },
     {
         "name": "Cosmological Constant exponent",
         "w33": "-121 = -(40+81)",
         "exp": "~-122",
         "error": "~1 order",
-        "status": "✓"
+        "status": "✓",
     },
     {
         "name": "Electroweak Hierarchy",
         "w33": "exp(39) ≈ 10¹⁷",
         "exp": "M_Pl/M_EW ≈ 10¹⁷",
         "error": "Correct",
-        "status": "✓✓"
+        "status": "✓✓",
     },
 ]
 
-print(f"{'QUANTITY':<35} │ {'W33 PREDICTION':<22} │ {'EXPERIMENT':<18} │ {'ERROR':<12} │ STATUS")
-print("─" * 35 + "─┼─" + "─" * 22 + "─┼─" + "─" * 18 + "─┼─" + "─" * 12 + "─┼─" + "─" * 6)
+print(
+    f"{'QUANTITY':<35} │ {'W33 PREDICTION':<22} │ {'EXPERIMENT':<18} │ {'ERROR':<12} │ STATUS"
+)
+print(
+    "─" * 35 + "─┼─" + "─" * 22 + "─┼─" + "─" * 18 + "─┼─" + "─" * 12 + "─┼─" + "─" * 6
+)
 for p in predictions_cosmo:
-    print(f"{p['name']:<35} │ {p['w33']:<22} │ {p['exp']:<18} │ {p['error']:<12} │ {p['status']}")
+    print(
+        f"{p['name']:<35} │ {p['w33']:<22} │ {p['exp']:<18} │ {p['error']:<12} │ {p['status']}"
+    )
 print()
 
 # =============================================================================
@@ -121,35 +133,41 @@ predictions_particles = [
         "w33": "3 (from 81=3×27)",
         "exp": "3",
         "error": "Exact",
-        "status": "✓✓✓"
+        "status": "✓✓✓",
     },
     {
         "name": "4th Generation",
         "w33": "FORBIDDEN",
         "exp": "Not found",
         "error": "Exact",
-        "status": "✓✓✓"
+        "status": "✓✓✓",
     },
     {
         "name": "SM Gauge Group Rank",
         "w33": "4 (from E6 breaking)",
         "exp": "4",
         "error": "Exact",
-        "status": "✓✓✓"
+        "status": "✓✓✓",
     },
     {
         "name": "Gauge Dimensions (12)",
         "w33": "40-28 = 12",
         "exp": "12",
         "error": "Exact",
-        "status": "✓✓✓"
+        "status": "✓✓✓",
     },
 ]
 
-print(f"{'QUANTITY':<35} │ {'W33 PREDICTION':<22} │ {'EXPERIMENT':<18} │ {'ERROR':<12} │ STATUS")
-print("─" * 35 + "─┼─" + "─" * 22 + "─┼─" + "─" * 18 + "─┼─" + "─" * 12 + "─┼─" + "─" * 6)
+print(
+    f"{'QUANTITY':<35} │ {'W33 PREDICTION':<22} │ {'EXPERIMENT':<18} │ {'ERROR':<12} │ STATUS"
+)
+print(
+    "─" * 35 + "─┼─" + "─" * 22 + "─┼─" + "─" * 18 + "─┼─" + "─" * 12 + "─┼─" + "─" * 6
+)
 for p in predictions_particles:
-    print(f"{p['name']:<35} │ {p['w33']:<22} │ {p['exp']:<18} │ {p['error']:<12} │ {p['status']}")
+    print(
+        f"{p['name']:<35} │ {p['w33']:<22} │ {p['exp']:<18} │ {p['error']:<12} │ {p['status']}"
+    )
 print()
 
 # =============================================================================
@@ -167,35 +185,41 @@ predictions_mass = [
         "w33": "~40 (W33 points)",
         "exp": "41.3",
         "error": "3%",
-        "status": "✓✓"
+        "status": "✓✓",
     },
     {
         "name": "Koide Formula Q",
         "w33": "2/3 (triality)",
         "exp": "0.666661",
         "error": "0.001%",
-        "status": "✓✓✓"
+        "status": "✓✓✓",
     },
     {
         "name": "Mass Hierarchy λ",
         "w33": "9/40 = 0.225",
         "exp": "~0.22",
         "error": "~2%",
-        "status": "✓✓"
+        "status": "✓✓",
     },
     {
         "name": "τ/μ Mass Ratio",
         "w33": "81/5 = 16.2",
         "exp": "16.82",
         "error": "4%",
-        "status": "✓"
+        "status": "✓",
     },
 ]
 
-print(f"{'QUANTITY':<35} │ {'W33 PREDICTION':<22} │ {'EXPERIMENT':<18} │ {'ERROR':<12} │ STATUS")
-print("─" * 35 + "─┼─" + "─" * 22 + "─┼─" + "─" * 18 + "─┼─" + "─" * 12 + "─┼─" + "─" * 6)
+print(
+    f"{'QUANTITY':<35} │ {'W33 PREDICTION':<22} │ {'EXPERIMENT':<18} │ {'ERROR':<12} │ STATUS"
+)
+print(
+    "─" * 35 + "─┼─" + "─" * 22 + "─┼─" + "─" * 18 + "─┼─" + "─" * 12 + "─┼─" + "─" * 6
+)
 for p in predictions_mass:
-    print(f"{p['name']:<35} │ {p['w33']:<22} │ {p['exp']:<18} │ {p['error']:<12} │ {p['status']}")
+    print(
+        f"{p['name']:<35} │ {p['w33']:<22} │ {p['exp']:<18} │ {p['error']:<12} │ {p['status']}"
+    )
 print()
 
 # =============================================================================
@@ -213,35 +237,41 @@ predictions_cp = [
         "w33": "2π/3 = 120°",
         "exp": "~126°",
         "error": "~5%",
-        "status": "✓✓"
+        "status": "✓✓",
     },
     {
         "name": "sin(δ_CKM)",
         "w33": "27/29 = 0.931",
         "exp": "0.932",
         "error": "0.1%",
-        "status": "✓✓"
+        "status": "✓✓",
     },
     {
         "name": "Jarlskog Invariant J",
         "w33": "~10⁻⁵ (W33 factors)",
         "exp": "3×10⁻⁵",
         "error": "Order OK",
-        "status": "✓"
+        "status": "✓",
     },
     {
         "name": "θ_QCD (Strong CP)",
         "w33": "0 (discrete)",
         "exp": "<10⁻¹⁰",
         "error": "Consistent",
-        "status": "✓✓"
+        "status": "✓✓",
     },
 ]
 
-print(f"{'QUANTITY':<35} │ {'W33 PREDICTION':<22} │ {'EXPERIMENT':<18} │ {'ERROR':<12} │ STATUS")
-print("─" * 35 + "─┼─" + "─" * 22 + "─┼─" + "─" * 18 + "─┼─" + "─" * 12 + "─┼─" + "─" * 6)
+print(
+    f"{'QUANTITY':<35} │ {'W33 PREDICTION':<22} │ {'EXPERIMENT':<18} │ {'ERROR':<12} │ STATUS"
+)
+print(
+    "─" * 35 + "─┼─" + "─" * 22 + "─┼─" + "─" * 18 + "─┼─" + "─" * 12 + "─┼─" + "─" * 6
+)
 for p in predictions_cp:
-    print(f"{p['name']:<35} │ {p['w33']:<22} │ {p['exp']:<18} │ {p['error']:<12} │ {p['status']}")
+    print(
+        f"{p['name']:<35} │ {p['w33']:<22} │ {p['exp']:<18} │ {p['error']:<12} │ {p['status']}"
+    )
 print()
 
 # =============================================================================
@@ -259,42 +289,48 @@ predictions_math = [
         "w33": "51,840",
         "exp": "51,840",
         "error": "Exact",
-        "status": "✓✓✓"
+        "status": "✓✓✓",
     },
     {
         "name": "Witting vertices = E8 roots",
         "w33": "240",
         "exp": "240",
         "error": "Exact",
-        "status": "✓✓✓"
+        "status": "✓✓✓",
     },
     {
         "name": "Witting diameters = W33 pts",
         "w33": "40",
         "exp": "40",
         "error": "Exact",
-        "status": "✓✓✓"
+        "status": "✓✓✓",
     },
     {
         "name": "van Oss polygon = K4s",
         "w33": "90",
         "exp": "90",
         "error": "Exact",
-        "status": "✓✓✓"
+        "status": "✓✓✓",
     },
     {
         "name": "M-theory dim = √(W33 total)",
         "w33": "√121 = 11",
         "exp": "11",
         "error": "Exact",
-        "status": "✓✓✓"
+        "status": "✓✓✓",
     },
 ]
 
-print(f"{'QUANTITY':<35} │ {'W33 PREDICTION':<22} │ {'VERIFIED':<18} │ {'ERROR':<12} │ STATUS")
-print("─" * 35 + "─┼─" + "─" * 22 + "─┼─" + "─" * 18 + "─┼─" + "─" * 12 + "─┼─" + "─" * 6)
+print(
+    f"{'QUANTITY':<35} │ {'W33 PREDICTION':<22} │ {'VERIFIED':<18} │ {'ERROR':<12} │ STATUS"
+)
+print(
+    "─" * 35 + "─┼─" + "─" * 22 + "─┼─" + "─" * 18 + "─┼─" + "─" * 12 + "─┼─" + "─" * 6
+)
 for p in predictions_math:
-    print(f"{p['name']:<35} │ {p['w33']:<22} │ {p['exp']:<18} │ {p['error']:<12} │ {p['status']}")
+    print(
+        f"{p['name']:<35} │ {p['w33']:<22} │ {p['exp']:<18} │ {p['error']:<12} │ {p['status']}"
+    )
 print()
 
 # =============================================================================
@@ -312,35 +348,41 @@ predictions_future = [
         "w33": "exp(81) ≈ 10³⁵ yr",
         "exp": ">10³⁴ yr",
         "error": "Testable",
-        "status": "⏳"
+        "status": "⏳",
     },
     {
         "name": "Neutrino Mass Scale",
         "w33": "~0.01 eV (seesaw)",
         "exp": ">0.01 eV (Δm²)",
         "error": "Consistent",
-        "status": "⏳"
+        "status": "⏳",
     },
     {
         "name": "GUT Coupling α_GUT⁻¹",
         "w33": "45 (from 90 K4s)",
         "exp": "~25-40",
         "error": "Close",
-        "status": "⏳"
+        "status": "⏳",
     },
     {
         "name": "New Physics at E6 scale",
         "w33": "Leptoquarks, Z'",
         "exp": "Not yet seen",
         "error": "Future",
-        "status": "⏳"
+        "status": "⏳",
     },
 ]
 
-print(f"{'QUANTITY':<35} │ {'W33 PREDICTION':<22} │ {'STATUS':<18} │ {'TIMING':<12} │ STATUS")
-print("─" * 35 + "─┼─" + "─" * 22 + "─┼─" + "─" * 18 + "─┼─" + "─" * 12 + "─┼─" + "─" * 6)
+print(
+    f"{'QUANTITY':<35} │ {'W33 PREDICTION':<22} │ {'STATUS':<18} │ {'TIMING':<12} │ STATUS"
+)
+print(
+    "─" * 35 + "─┼─" + "─" * 22 + "─┼─" + "─" * 18 + "─┼─" + "─" * 12 + "─┼─" + "─" * 6
+)
 for p in predictions_future:
-    print(f"{p['name']:<35} │ {p['w33']:<22} │ {p['exp']:<18} │ {p['error']:<12} │ {p['status']}")
+    print(
+        f"{p['name']:<35} │ {p['w33']:<22} │ {p['exp']:<18} │ {p['error']:<12} │ {p['status']}"
+    )
 print()
 
 # =============================================================================

@@ -6,6 +6,7 @@ We show:
   - Overlap phases are quantized in multiples of pi/6.
   - Phase distribution depends on whether a basis ray is involved.
 """
+
 from __future__ import annotations
 
 import json
@@ -27,9 +28,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -108,7 +109,9 @@ def main():
         f.write("basis rays in pair | phase counts\n")
         f.write("--- | ---\n")
         for bcount in sorted(phase_by_basis.keys()):
-            clusters = ", ".join(f"{k}:{v}" for k, v in sorted(phase_by_basis[bcount].items()))
+            clusters = ", ".join(
+                f"{k}:{v}" for k, v in sorted(phase_by_basis[bcount].items())
+            )
             f.write(f"{bcount} | {clusters}\n")
 
     print(f"Wrote {out_path}")

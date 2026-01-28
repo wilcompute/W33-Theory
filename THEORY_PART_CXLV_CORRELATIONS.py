@@ -6,15 +6,15 @@ THEORY PART CXLV: PERFECT CORRELATIONS AND MEASUREMENT
 Investigating the correlation structure more carefully.
 
 The maximally entangled state |Σ⟩ = (|00⟩+|11⟩+|22⟩+|33⟩)/2
-gives PERFECT correlation when both parties measure in the 
+gives PERFECT correlation when both parties measure in the
 COMPUTATIONAL BASIS, but we need to transform for other bases.
 """
 
 import numpy as np
 
-print("="*70)
+print("=" * 70)
 print("PART CXLV: PERFECT CORRELATIONS IN WITTING BASES")
-print("="*70)
+print("=" * 70)
 
 omega = np.exp(2j * np.pi / 3)
 
@@ -22,48 +22,57 @@ omega = np.exp(2j * np.pi / 3)
 # BUILD WITTING STATES
 # =====================================================
 
+
 def build_witting_states():
     states = []
     for i in range(4):
         v = np.zeros(4, dtype=complex)
         v[i] = 1
         states.append(v)
-    
+
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([0, 1, -omega**mu, omega**nu]) / np.sqrt(3))
+            states.append(np.array([0, 1, -(omega**mu), omega**nu]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([1, 0, -omega**mu, -omega**nu]) / np.sqrt(3))
+            states.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([1, -omega**mu, 0, omega**nu]) / np.sqrt(3))
+            states.append(np.array([1, -(omega**mu), 0, omega**nu]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
             states.append(np.array([1, omega**mu, omega**nu, 0]) / np.sqrt(3))
-    
+
     return states
 
+
 states = build_witting_states()
+
 
 # Find all bases
 def find_bases(states):
     n = len(states)
-    adj = [[abs(np.vdot(states[i], states[j]))**2 < 1e-10 
-            for j in range(n)] for i in range(n)]
-    
+    adj = [
+        [abs(np.vdot(states[i], states[j])) ** 2 < 1e-10 for j in range(n)]
+        for i in range(n)
+    ]
+
     bases = []
     for i in range(n):
         neighbors_i = [j for j in range(n) if adj[i][j]]
         for j in neighbors_i:
-            if j <= i: continue
+            if j <= i:
+                continue
             for k in neighbors_i:
-                if k <= j or not adj[j][k]: continue
+                if k <= j or not adj[j][k]:
+                    continue
                 for l in neighbors_i:
-                    if l <= k or not adj[j][l] or not adj[k][l]: continue
-                    bases.append(frozenset([i,j,k,l]))
-    
+                    if l <= k or not adj[j][l] or not adj[k][l]:
+                        continue
+                    bases.append(frozenset([i, j, k, l]))
+
     return list(set(bases))
+
 
 bases = find_bases(states)
 print(f"Found {len(bases)} orthonormal bases")
@@ -72,9 +81,9 @@ print(f"Found {len(bases)} orthonormal bases")
 # THE MAXIMALLY ENTANGLED STATE
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("THE STANDARD ENTANGLED STATE")
-print("="*70)
+print("=" * 70)
 
 # The standard maximally entangled state
 # |Σ⟩ = (|00⟩ + |11⟩ + |22⟩ + |33⟩)/2
@@ -112,33 +121,35 @@ But if Alice uses a DIFFERENT Witting basis, the correlations change.
 # CORRELATION IN STANDARD BASIS
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("CORRELATION IN STANDARD BASIS")
-print("="*70)
+print("=" * 70)
 
 # Define the entangled state as a vector in ℂ⁴ ⊗ ℂ⁴
 Sigma = np.zeros((16,), dtype=complex)
-Sigma[0*4 + 0] = 0.5  # |00⟩
-Sigma[1*4 + 1] = 0.5  # |11⟩
-Sigma[2*4 + 2] = 0.5  # |22⟩
-Sigma[3*4 + 3] = 0.5  # |33⟩
+Sigma[0 * 4 + 0] = 0.5  # |00⟩
+Sigma[1 * 4 + 1] = 0.5  # |11⟩
+Sigma[2 * 4 + 2] = 0.5  # |22⟩
+Sigma[3 * 4 + 3] = 0.5  # |33⟩
+
 
 def compute_correlation(basis_A, basis_B):
     """
     Compute P(i,j) when Alice measures in basis_A, Bob in basis_B.
-    
+
     P(i,j) = |⟨ψ^A_i ⊗ ψ^B_j | Σ⟩|²
     """
     states_A = [states[idx] for idx in basis_A]
     states_B = [states[idx] for idx in basis_B]
-    
+
     probs = np.zeros((4, 4))
     for i in range(4):
         for j in range(4):
             proj = np.kron(states_A[i], states_B[j])
-            probs[i, j] = abs(np.vdot(proj, Sigma))**2
-    
+            probs[i, j] = abs(np.vdot(proj, Sigma)) ** 2
+
     return probs
+
 
 # Standard basis measurement
 std_basis_list = [0, 1, 2, 3]
@@ -155,9 +166,9 @@ print(f"  Expected: 1.0 (PERFECT correlation)")
 # GENERAL SAME-BASIS CORRELATION
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("GENERAL SAME-BASIS CORRELATION")
-print("="*70)
+print("=" * 70)
 
 print("""
 KEY PROPERTY:
@@ -188,9 +199,9 @@ print(f"  Unique values: {sorted(set(np.round(same_basis_correlations, 4)))}")
 # UNDERSTANDING THE CORRELATION STRUCTURE
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("CORRELATION STRUCTURE ANALYSIS")
-print("="*70)
+print("=" * 70)
 
 print("""
 OBSERVATION:
@@ -208,7 +219,9 @@ This requires |Σ⟩ to be symmetric under the basis transformation.
 """)
 
 # Analyze which bases give perfect correlation
-perfect_corr_bases = [b for b, c in zip(bases, same_basis_correlations) if abs(c - 1.0) < 1e-10]
+perfect_corr_bases = [
+    b for b, c in zip(bases, same_basis_correlations) if abs(c - 1.0) < 1e-10
+]
 print(f"\nBases with perfect correlation (P=1.0):")
 print(f"  Count: {len(perfect_corr_bases)}")
 if perfect_corr_bases:
@@ -216,7 +229,9 @@ if perfect_corr_bases:
         print(f"    {sorted(b)}")
 
 # Analyze 0.5 correlation bases
-half_corr_bases = [b for b, c in zip(bases, same_basis_correlations) if abs(c - 0.5) < 0.01]
+half_corr_bases = [
+    b for b, c in zip(bases, same_basis_correlations) if abs(c - 0.5) < 0.01
+]
 print(f"\nBases with P(same) ≈ 0.5:")
 print(f"  Count: {len(half_corr_bases)}")
 if half_corr_bases:
@@ -227,9 +242,9 @@ if half_corr_bases:
 # THE CORRECT ENTANGLED STATE
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("CONSTRUCTING THE UNIVERSAL ENTANGLED STATE")
-print("="*70)
+print("=" * 70)
 
 print("""
 For device-independent QKD, we need an entangled state that gives
@@ -255,6 +270,7 @@ Let's verify this properly...
 # - Bob measures in basis B* = {|b_i⟩*} (complex conjugate)
 # This gives perfect correlation!
 
+
 def compute_correlation_with_conjugate(basis):
     """
     Alice measures in basis, Bob measures in conjugate basis.
@@ -262,20 +278,21 @@ def compute_correlation_with_conjugate(basis):
     """
     states_A = [states[idx] for idx in basis]
     states_B = [states[idx].conj() for idx in basis]  # Complex conjugate!
-    
+
     # The maximally entangled state
     Phi = np.zeros(16, dtype=complex)
     for i in range(4):
-        Phi[i*4 + i] = 1.0
+        Phi[i * 4 + i] = 1.0
     Phi = Phi / 2  # Normalize
-    
+
     probs = np.zeros((4, 4))
     for i in range(4):
         for j in range(4):
             proj = np.kron(states_A[i], states_B[j])
-            probs[i, j] = abs(np.vdot(proj, Phi))**2
-    
+            probs[i, j] = abs(np.vdot(proj, Phi)) ** 2
+
     return probs
+
 
 # Test with a non-standard basis
 test_basis = sorted(bases[1])
@@ -299,9 +316,9 @@ print(f"  Min: {min(conj_correlations):.4f}")
 print(f"  Max: {max(conj_correlations):.4f}")
 print(f"  All perfect? {all(abs(c - 1.0) < 1e-10 for c in conj_correlations)}")
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PART CXLV COMPLETE")
-print("="*70)
+print("=" * 70)
 
 print("""
 KEY FINDING:

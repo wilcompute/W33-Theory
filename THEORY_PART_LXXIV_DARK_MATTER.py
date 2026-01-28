@@ -9,21 +9,22 @@ Author: Wil Dahn
 Date: January 2026
 """
 
-import numpy as np
-import math
 import json
+import math
 
-print("="*70)
+import numpy as np
+
+print("=" * 70)
 print("W33 THEORY PART LXXIV: DARK MATTER FROM W33")
-print("="*70)
+print("=" * 70)
 
 # =============================================================================
 # SECTION 1: THE DARK MATTER PROBLEM
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 1: DARK MATTER EVIDENCE")
-print("="*70)
+print("=" * 70)
 
 print("""
 Evidence for dark matter:
@@ -58,9 +59,9 @@ print(f"Ω_DM = {Omega_DM_exp:.3f}")
 # SECTION 2: W33 DARK SECTOR
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 2: W33 DARK SECTOR")
-print("="*70)
+print("=" * 70)
 
 print("""
 W33 = SRG(40, 12, 2, 4) has 40 vertices.
@@ -91,9 +92,9 @@ print(f"Dark sector vertices: {DM_vertices}")
 # SECTION 3: WIMP FROM W33
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 3: W33 WIMP CANDIDATE")
-print("="*70)
+print("=" * 70)
 
 print("""
 The leading dark matter paradigm: WIMPs
@@ -126,9 +127,9 @@ print(f"Alternative: M_χ = 3^4 - |e3| = 81 - 4 = {M_chi_alt} GeV")
 # SECTION 4: RELIC ABUNDANCE
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 4: DARK MATTER RELIC ABUNDANCE")
-print("="*70)
+print("=" * 70)
 
 print("""
 The relic abundance from thermal freeze-out:
@@ -168,9 +169,9 @@ print(f"This is exactly weak-scale! (1-3 pb expected)")
 # SECTION 5: STABILITY FROM W33 SYMMETRY
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 5: WIMP STABILITY")
-print("="*70)
+print("=" * 70)
 
 print("""
 Dark matter must be STABLE (or very long-lived).
@@ -196,9 +197,9 @@ Decay χ → SM is FORBIDDEN by this Z_2!
 # SECTION 6: DIRECT DETECTION
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 6: DIRECT DETECTION SIGNATURES")
-print("="*70)
+print("=" * 70)
 
 print("""
 Direct detection experiments (LZ, XENONnT, PandaX):
@@ -241,9 +242,9 @@ natural suppression to ~10^-46 cm^2 range.
 # SECTION 7: INDIRECT DETECTION
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 7: INDIRECT DETECTION")
-print("="*70)
+print("=" * 70)
 
 print("""
 Indirect detection looks for DM annihilation products:
@@ -270,9 +271,9 @@ in early Fermi-LAT data from the galactic center.
 # SECTION 8: DARK SECTOR PARTICLES
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 8: COMPLETE W33 DARK SECTOR")
-print("="*70)
+print("=" * 70)
 
 print("""
 W33 predicts a COMPLETE dark sector (10 vertices):
@@ -301,9 +302,9 @@ Only χ is stable → cosmological dark matter!
 
 # Mass predictions
 dark_masses = {
-    'chi': 77,       # Main WIMP
-    'chi_prime': 85, # Heavier partner
-    'dark_photon': 5,  # MeV to GeV scale
+    "chi": 77,  # Main WIMP
+    "chi_prime": 85,  # Heavier partner
+    "dark_photon": 5,  # MeV to GeV scale
 }
 
 for name, mass in dark_masses.items():
@@ -313,9 +314,9 @@ for name, mass in dark_masses.items():
 # SECTION 9: DARK MATTER RATIO FROM W33
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 9: BARYONIC / DARK MATTER RATIO")
-print("="*70)
+print("=" * 70)
 
 print("""
 Why is Ω_DM / Ω_b ≈ 5?
@@ -348,34 +349,40 @@ print(f"Error: {abs(Omega_DM_b_pred - Omega_DM_b_exp)/Omega_DM_b_exp * 100:.0f}%
 # SECTION 10: SUMMARY
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PART LXXIV CONCLUSIONS")
-print("="*70)
+print("=" * 70)
 
 results = {
-    'WIMP_candidate': {
-        'formula': 'M_χ = 3^4 - mu = 81 - 4',
-        'mass_GeV': 77,
-        'stability': 'Z_2 parity from Sp(4, F_3)'
+    "WIMP_candidate": {
+        "formula": "M_χ = 3^4 - mu = 81 - 4",
+        "mass_GeV": 77,
+        "stability": "Z_2 parity from Sp(4, F_3)",
     },
-    'dark_sector': {
-        'total_vertices': 10,
-        'composition': ['χ (77 GeV)', 'χ\' (85 GeV)', '3 right-handed ν', 'γ\'', '2 dark scalars']
+    "dark_sector": {
+        "total_vertices": 10,
+        "composition": [
+            "χ (77 GeV)",
+            "χ' (85 GeV)",
+            "3 right-handed ν",
+            "γ'",
+            "2 dark scalars",
+        ],
     },
-    'DM_to_baryon': {
-        'formula': 'v / (mu + lambda + 2) = 40/8',
-        'prediction': 5,
-        'experimental': Omega_DM_b_exp,
-        'error_percent': abs(Omega_DM_b_pred - Omega_DM_b_exp)/Omega_DM_b_exp * 100
+    "DM_to_baryon": {
+        "formula": "v / (mu + lambda + 2) = 40/8",
+        "prediction": 5,
+        "experimental": Omega_DM_b_exp,
+        "error_percent": abs(Omega_DM_b_pred - Omega_DM_b_exp) / Omega_DM_b_exp * 100,
     },
-    'predictions': {
-        'gamma_line_energy': '77 GeV',
-        'direct_detection': 'Below current limits, within reach'
-    }
+    "predictions": {
+        "gamma_line_energy": "77 GeV",
+        "direct_detection": "Below current limits, within reach",
+    },
 }
 
-with open('PART_LXXIV_dark_matter.json', 'w') as f:
-        json.dump(results, f, indent=2, default=int)
+with open("PART_LXXIV_dark_matter.json", "w") as f:
+    json.dump(results, f, indent=2, default=int)
 print("""
 DARK MATTER FROM W33!
 
@@ -401,4 +408,4 @@ W33 provides a COMPLETE dark matter framework!
 
 Results saved to PART_LXXIV_dark_matter.json
 """)
-print("="*70)
+print("=" * 70)

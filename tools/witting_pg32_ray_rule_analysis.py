@@ -12,6 +12,7 @@ Outputs:
 - artifacts/witting_pg32_ray_rule_analysis.json
 - artifacts/witting_pg32_ray_rule_analysis.md
 """
+
 from __future__ import annotations
 
 import json
@@ -23,9 +24,11 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT_JSON = ROOT / "artifacts" / "witting_pg32_ray_rule_analysis.json"
 OUT_MD = ROOT / "artifacts" / "witting_pg32_ray_rule_analysis.md"
 
+
 # GF(4) arithmetic (0,1,ω,ω^2 -> 0,1,2,3)
 def gf4_add(a: int, b: int) -> int:
     return a ^ b
+
 
 def gf4_mul(a: int, b: int) -> int:
     if a == 0 or b == 0:
@@ -39,11 +42,14 @@ def gf4_mul(a: int, b: int) -> int:
     c1 = (c1 + c2) % 2
     return (c1 << 1) | c0
 
+
 def gf4_square(a: int) -> int:
     return gf4_mul(a, a)
 
+
 def gf4_trace(a: int) -> int:
     return gf4_add(a, gf4_square(a)) & 1
+
 
 def gf4_inv(a: int) -> int:
     if a == 0:
@@ -53,9 +59,11 @@ def gf4_inv(a: int) -> int:
             return b
     raise ZeroDivisionError
 
+
 omega = 2
 omega2 = 3
 omega_powers = [1, omega, omega2]
+
 
 def build_base_states():
     states = []
@@ -72,6 +80,7 @@ def build_base_states():
         states.append((1, w_mu, w_nu, 0))
     return states
 
+
 def normalize_projective(v):
     for x in v:
         if x != 0:
@@ -79,11 +88,14 @@ def normalize_projective(v):
             return tuple(gf4_mul(inv, xi) for xi in v)
     return None
 
+
 def trace_map(v):
     return tuple(gf4_trace(x) for x in v)
 
+
 def weight(t):
     return sum(t)
+
 
 def main():
     base_states = [normalize_projective(s) for s in build_base_states()]
@@ -125,15 +137,17 @@ def main():
         inv_key2 = (support, counts[1], counts[2], counts[3])
         inv_key3 = (support, counts[1], counts[2] + counts[3])  # omega/omega2 merged
 
-        ray_records.append({
-            "index": idx,
-            "state": s,
-            "pattern": pattern,
-            "counts": counts,
-            "support": support,
-            "img_size": img_size,
-            "imgs": imgs,
-        })
+        ray_records.append(
+            {
+                "index": idx,
+                "state": s,
+                "pattern": pattern,
+                "counts": counts,
+                "support": support,
+                "img_size": img_size,
+                "imgs": imgs,
+            }
+        )
 
         pattern_groups[pattern].append(idx)
         invariant_groups["zeros"].setdefault(inv_key, 0)
@@ -188,6 +202,7 @@ def main():
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"Wrote {OUT_JSON}")
     print(f"Wrote {OUT_MD}")
+
 
 if __name__ == "__main__":
     main()

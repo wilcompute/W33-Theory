@@ -11,11 +11,13 @@ How does W33 encode this breaking pattern?
 The eigenvalue structure and vertex decomposition hold the key.
 """
 
-import numpy as np
-from itertools import combinations, product
+import json
 from collections import Counter
 from datetime import datetime
-import json
+from itertools import combinations, product
+
+import numpy as np
+
 
 def header(title):
     """Print section header."""
@@ -25,20 +27,21 @@ def header(title):
     print("=" * 70)
     print()
 
+
 def main():
     header("W33 THEORY - PART CX: SYMMETRY BREAKING CHAIN")
     print("Part 110")
     print()
     print("From E8 at the Planck scale to the Standard Model at low energy")
     print()
-    
+
     results = {}
-    
+
     # =====================================================================
     # SECTION 1: The Grand Unification Landscape
     # =====================================================================
     header("SECTION 1: THE GRAND UNIFICATION LANDSCAPE")
-    
+
     print("THE STANDARD MODEL GAUGE GROUP:")
     print("-" * 50)
     print()
@@ -51,18 +54,18 @@ def main():
     print("  Total gauge bosons: 8 + 3 + 1 = 12")
     print()
     print("  This matches k = 12 in W33!")
-    
+
     results["sm_gauge"] = {
         "group": "SU(3) x SU(2) x U(1)",
         "bosons": {"gluons": 8, "weak": 3, "hypercharge": 1},
-        "total": 12
+        "total": 12,
     }
-    
+
     print()
     print("CANDIDATE UNIFICATION GROUPS:")
     print("-" * 50)
     print()
-    
+
     groups = [
         ("SU(5)", 24, "Georgi-Glashow (1974)"),
         ("SO(10)", 45, "Fritzsch-Minkowski (1975)"),
@@ -70,23 +73,23 @@ def main():
         ("E7", 133, "Theoretical"),
         ("E8", 248, "Lisi, string theory"),
     ]
-    
+
     print(f"  {'Group':<10} {'dim':<6} {'Context':<30}")
     print("-" * 50)
     for g, d, c in groups:
         print(f"  {g:<10} {d:<6} {c:<30}")
-    
+
     print()
     print("W33 CONNECTION:")
     print("  240 edges = 240 E8 roots")
     print("  |Aut(W33)| = 51,840 = |W(E6)|")
     print("  --> W33 naturally connects to E6 and E8!")
-    
+
     # =====================================================================
     # SECTION 2: E8 Structure
     # =====================================================================
     header("SECTION 2: E8 STRUCTURE")
-    
+
     print("E8 FUNDAMENTAL DATA:")
     print("-" * 50)
     print()
@@ -103,25 +106,21 @@ def main():
     print()
     print("  (The branch gives E8 its exceptional properties)")
     print()
-    
+
     print("E8 CONTAINS ALL OTHER EXCEPTIONAL GROUPS:")
     print()
     print("  E8 contains E7 contains E6 contains F4 contains G2")
     print()
     print("  Also: E8 contains D8 = SO(16)")
     print("        E8 contains A8 = SU(9)")
-    
-    results["e8"] = {
-        "dim": 248,
-        "rank": 8,
-        "roots": 240
-    }
-    
+
+    results["e8"] = {"dim": 248, "rank": 8, "roots": 240}
+
     # =====================================================================
     # SECTION 3: The Breaking Chain
     # =====================================================================
     header("SECTION 3: THE SYMMETRY BREAKING CHAIN")
-    
+
     print("E8 --> STANDARD MODEL:")
     print("=" * 60)
     print()
@@ -137,10 +136,10 @@ def main():
     print()
     print("  27 x 3 = 81 = 3^4 = |F_3^4|")
     print("  This is the W33 connection!")
-    
+
     dim_check = 78 + 8 + 81 + 81
     print(f"\n  Dimension check: {dim_check} = 248? {dim_check == 248}")
-    
+
     print()
     print("STEP 2: E6 --> SO(10) x U(1)")
     print("-" * 40)
@@ -151,10 +150,10 @@ def main():
     print()
     print("  SO(10) is the classic GUT group")
     print("  One generation of fermions = 16 of SO(10)")
-    
+
     dim_check_e6 = 45 + 1 + 16 + 16
     print(f"\n  Dimension check: {dim_check_e6} = 78? {dim_check_e6 == 78}")
-    
+
     print()
     print("STEP 3: SO(10) --> SU(5) x U(1)")
     print("-" * 40)
@@ -164,7 +163,7 @@ def main():
     print("  16 = 10 + 5-bar + 1  (one generation)")
     print()
     print("  SU(5) is the minimal GUT group")
-    
+
     print()
     print("STEP 4: SU(5) --> SU(3) x SU(2) x U(1)")
     print("-" * 40)
@@ -174,19 +173,19 @@ def main():
     print("  This is the Standard Model gauge group!")
     print()
     print("  8 gluons + 3 weak bosons + 1 photon = 12 bosons")
-    
+
     results["breaking_chain"] = [
         "E8 --> E6 x SU(3)",
         "E6 --> SO(10) x U(1)",
         "SO(10) --> SU(5) x U(1)",
-        "SU(5) --> SU(3) x SU(2) x U(1)"
+        "SU(5) --> SU(3) x SU(2) x U(1)",
     ]
-    
+
     # =====================================================================
     # SECTION 4: W33 Encodes the Breaking
     # =====================================================================
     header("SECTION 4: W33 ENCODES THE BREAKING")
-    
+
     print("HOW W33 STRUCTURE REFLECTS SYMMETRY BREAKING:")
     print("-" * 50)
     print()
@@ -217,19 +216,19 @@ def main():
     print("    27 --> quarks + leptons (visible matter)")
     print("    12 --> SM gauge bosons")
     print("    1 --> dark matter scalar")
-    
+
     results["vertex_decomposition"] = {
         "total": 40,
         "e6_fund": 27,
         "gauge": 12,
-        "singlet": 1
+        "singlet": 1,
     }
-    
+
     # =====================================================================
     # SECTION 5: Eigenvalue Structure and Breaking
     # =====================================================================
     header("SECTION 5: EIGENVALUE STRUCTURE AND BREAKING")
-    
+
     print("W33 EIGENVALUES: 12 (x1), 2 (x24), -4 (x15)")
     print("-" * 50)
     print()
@@ -253,7 +252,7 @@ def main():
     print("MULTIPLICITIES ADD TO 40:")
     mult_sum = 1 + 24 + 15
     print(f"  1 + 24 + 15 = {mult_sum} = 40 vertices")
-    
+
     print()
     print("EIGENVALUE RATIOS:")
     print()
@@ -262,18 +261,18 @@ def main():
     print("  2 / 4 = 0.5")
     print()
     print("  These ratios may encode mass scales!")
-    
+
     results["eigenvalues"] = {
         "values": [12, 2, -4],
         "multiplicities": [1, 24, 15],
-        "sum": 40
+        "sum": 40,
     }
-    
+
     # =====================================================================
     # SECTION 6: The 15 and Pati-Salam
     # =====================================================================
     header("SECTION 6: THE 15 AND PATI-SALAM")
-    
+
     print("PATI-SALAM MODEL:")
     print("-" * 50)
     print()
@@ -297,18 +296,18 @@ def main():
     print("         --> SU(3) x SU(2) x U(1)  [Standard Model]")
     print()
     print("  The 15 in W33 eigenspace captures this intermediate step.")
-    
+
     results["pati_salam"] = {
         "gauge_group": "SU(4) x SU(2) x SU(2)",
         "dimension": 15 + 3 + 3,
-        "w33_connection": "multiplicity 15"
+        "w33_connection": "multiplicity 15",
     }
-    
+
     # =====================================================================
     # SECTION 7: The 81 and Three Generations
     # =====================================================================
     header("SECTION 7: THE 81 AND THREE GENERATIONS")
-    
+
     print("THE CRITICAL NUMBER 81:")
     print("-" * 50)
     print()
@@ -336,7 +335,7 @@ def main():
     print("  The 16 of SO(10) = one generation of fermions")
     print("  The 10 = Higgs-like scalars")
     print("  The 1 = singlet")
-    
+
     print()
     print("FERMION CONTENT (one generation):")
     print()
@@ -350,18 +349,18 @@ def main():
     print("  nu_R: right-handed neutrino (1)")
     print()
     print("  Total: 6 + 3 + 3 + 2 + 1 + 1 = 16")
-    
+
     results["generations"] = {
         "number": 3,
         "source": "81 = 27 x 3 from F_3^4",
-        "one_gen_in_so10": 16
+        "one_gen_in_so10": 16,
     }
-    
+
     # =====================================================================
     # SECTION 8: Breaking Scales
     # =====================================================================
     header("SECTION 8: BREAKING SCALES")
-    
+
     print("ENERGY SCALES IN THE BREAKING CHAIN:")
     print("-" * 50)
     print()
@@ -383,18 +382,18 @@ def main():
     print("  M_GUT / M_EW ~ 10^14 ~ (10^7)^2")
     print()
     print("  Interestingly: 10^7 ~ sqrt(M_GUT/M_EW)")
-    
+
     results["scales"] = {
         "planck": "10^19 GeV",
         "gut": "10^16 GeV",
-        "electroweak": "246 GeV"
+        "electroweak": "246 GeV",
     }
-    
+
     # =====================================================================
     # SECTION 9: The Complete Picture
     # =====================================================================
     header("SECTION 9: THE COMPLETE PICTURE")
-    
+
     print("W33 THEORY SYMMETRY BREAKING MAP:")
     print("=" * 60)
     print()
@@ -436,12 +435,12 @@ def main():
     print("  LOW ENERGY PHYSICS (< 246 GeV)")
     print()
     print("=" * 60)
-    
+
     # =====================================================================
     # SECTION 10: Predictions from Breaking Pattern
     # =====================================================================
     header("SECTION 10: PREDICTIONS FROM BREAKING PATTERN")
-    
+
     print("WHAT W33 PREDICTS ABOUT SYMMETRY BREAKING:")
     print("-" * 50)
     print()
@@ -470,21 +469,21 @@ def main():
     print("   E6 has 78 - 12 = 66 extra gauge bosons")
     print("   These should appear at E6 breaking scale")
     print("   Z' bosons from E6: potentially detectable")
-    
+
     results["predictions"] = [
         "3 generations (confirmed)",
         "12 gauge bosons (confirmed)",
         "Pati-Salam intermediate stage",
         "E6 GUT structure",
         "77 GeV dark matter scalar",
-        "Extra Z' bosons from E6"
+        "Extra Z' bosons from E6",
     ]
-    
+
     # =====================================================================
     # SECTION 11: Comparison with Other Approaches
     # =====================================================================
     header("SECTION 11: COMPARISON WITH OTHER APPROACHES")
-    
+
     print("W33 vs OTHER E8 APPROACHES:")
     print("-" * 50)
     print()
@@ -512,12 +511,12 @@ def main():
     print("  3. Explains gauge boson count (from k=12)")
     print("  4. Makes testable predictions (77 GeV DM)")
     print("  5. Connects to cosmology (DESI w_0 = -0.827)")
-    
+
     # =====================================================================
     # SECTION 12: Summary
     # =====================================================================
     header("SECTION 12: SUMMARY")
-    
+
     print("PART CX: SYMMETRY BREAKING CHAIN")
     print("=" * 50)
     print()
@@ -558,11 +557,11 @@ def main():
     print("  lives on, with the Standard Model emerging")
     print("  through the natural breaking pattern encoded")
     print("  in the graph's structure.")
-    
+
     # =====================================================================
     # Save results
     # =====================================================================
-    
+
     def convert_numpy(obj):
         """Recursively convert numpy types to Python native types."""
         if isinstance(obj, dict):
@@ -576,19 +575,20 @@ def main():
         elif isinstance(obj, np.ndarray):
             return obj.tolist()
         return obj
-    
+
     results["timestamp"] = datetime.now().isoformat()
     results["part"] = "CX"
     results["part_number"] = 110
     results["key_finding"] = "Complete E8 --> SM breaking encoded in W33"
-    
+
     results = convert_numpy(results)
-    
+
     with open("PART_CX_symmetry_breaking.json", "w") as f:
         json.dump(results, f, indent=2, default=int)
-    
+
     print()
     print("Results saved to: PART_CX_symmetry_breaking.json")
+
 
 if __name__ == "__main__":
     main()

@@ -10,6 +10,7 @@ Outputs:
 - artifacts/witting_pg32_line_space_plucker.json
 - artifacts/witting_pg32_line_space_plucker.md
 """
+
 from __future__ import annotations
 
 import json
@@ -20,9 +21,11 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT_JSON = ROOT / "artifacts" / "witting_pg32_line_space_plucker.json"
 OUT_MD = ROOT / "artifacts" / "witting_pg32_line_space_plucker.md"
 
+
 # GF(4) arithmetic (0,1,ω,ω^2 -> 0,1,2,3)
 def gf4_add(a: int, b: int) -> int:
     return a ^ b
+
 
 def gf4_mul(a: int, b: int) -> int:
     if a == 0 or b == 0:
@@ -36,11 +39,14 @@ def gf4_mul(a: int, b: int) -> int:
     c1 = (c1 + c2) % 2
     return (c1 << 1) | c0
 
+
 def gf4_square(a: int) -> int:
     return gf4_mul(a, a)
 
+
 def gf4_trace(a: int) -> int:
     return gf4_add(a, gf4_square(a)) & 1
+
 
 def gf4_inv(a: int) -> int:
     if a == 0:
@@ -50,9 +56,11 @@ def gf4_inv(a: int) -> int:
             return b
     raise ZeroDivisionError
 
+
 omega = 2
 omega2 = 3
 omega_powers = [1, omega, omega2]
+
 
 def build_base_states():
     states = []
@@ -69,6 +77,7 @@ def build_base_states():
         states.append((1, w_mu, w_nu, 0))
     return states
 
+
 def normalize_projective(v):
     for x in v:
         if x != 0:
@@ -76,17 +85,22 @@ def normalize_projective(v):
             return tuple(gf4_mul(inv, xi) for xi in v)
     return None
 
+
 def trace_map(v):
     return tuple(gf4_trace(x) for x in v)
+
 
 def tuple_to_bits(t):
     return (t[0] << 3) | (t[1] << 2) | (t[2] << 1) | t[3]
 
+
 def bits_to_vec(x: int):
     return [(x >> 3) & 1, (x >> 2) & 1, (x >> 1) & 1, x & 1]
 
+
 def build_pg32_points():
     return [v for v in range(1, 16)]
+
 
 def build_pg32_lines(points):
     lines = set()
@@ -98,6 +112,7 @@ def build_pg32_lines(points):
             line = tuple(sorted([p, q, r]))
             lines.add(line)
     return sorted(lines)
+
 
 def plucker(line):
     # line given by two independent vectors in F2^4
@@ -118,8 +133,10 @@ def plucker(line):
         val = (val << 1) | bit
     return val  # 6-bit int
 
+
 def parity(x: int) -> int:
     return bin(x).count("1") & 1
+
 
 def main():
     # build hit lines (Witting ray images)
@@ -158,13 +175,20 @@ def main():
     plucker_hit = {line_plucker[line] for line in hit_lines}
 
     # Linear hyperplane search: w·p = 0 or 1
-    best_lin = {"match": False, "w": None, "polarity": None, "overlap": -1, "jaccard": -1.0, "selected": None}
+    best_lin = {
+        "match": False,
+        "w": None,
+        "polarity": None,
+        "overlap": -1,
+        "jaccard": -1.0,
+        "selected": None,
+    }
     exact_linear = []
     hit_mask = 0
     line_list = pg_lines
     for idx, line in enumerate(line_list):
         if line in hit_line_set:
-            hit_mask |= (1 << idx)
+            hit_mask |= 1 << idx
 
     for w in range(1, 64):
         mask0 = 0
@@ -173,9 +197,9 @@ def main():
             p = line_plucker[line]
             val = parity(w & p)
             if val == 0:
-                mask0 |= (1 << idx)
+                mask0 |= 1 << idx
             else:
-                mask1 |= (1 << idx)
+                mask1 |= 1 << idx
 
         for polarity, mask in [("0", mask0), ("1", mask1)]:
             if mask == hit_mask:
@@ -183,7 +207,9 @@ def main():
             overlap = (mask & hit_mask).bit_count()
             union = (mask | hit_mask).bit_count()
             jaccard = overlap / union if union else 0.0
-            if overlap > best_lin["overlap"] or (overlap == best_lin["overlap"] and jaccard > best_lin["jaccard"]):
+            if overlap > best_lin["overlap"] or (
+                overlap == best_lin["overlap"] and jaccard > best_lin["jaccard"]
+            ):
                 best_lin = {
                     "match": False,
                     "w": w,
@@ -204,10 +230,15 @@ def main():
     # quadratic terms
     for i in range(6):
         for j in range(i + 1, 6):
-            monomials.append([
-                (((line_plucker[line] >> (5 - i)) & 1) & ((line_plucker[line] >> (5 - j)) & 1))
-                for line in line_list
-            ])
+            monomials.append(
+                [
+                    (
+                        ((line_plucker[line] >> (5 - i)) & 1)
+                        & ((line_plucker[line] >> (5 - j)) & 1)
+                    )
+                    for line in line_list
+                ]
+            )
 
     # convert monomials to bitmasks
     mono_masks = []
@@ -215,7 +246,7 @@ def main():
         mask = 0
         for idx, val in enumerate(mon):
             if val:
-                mask |= (1 << idx)
+                mask |= 1 << idx
         mono_masks.append(mask)
 
     best_quad = {"overlap": -1, "jaccard": -1.0, "selected": None, "coeffs": None}
@@ -235,7 +266,9 @@ def main():
         overlap = (mask & hit_mask).bit_count()
         union = (mask | hit_mask).bit_count()
         jaccard = overlap / union if union else 0.0
-        if overlap > best_quad["overlap"] or (overlap == best_quad["overlap"] and jaccard > best_quad["jaccard"]):
+        if overlap > best_quad["overlap"] or (
+            overlap == best_quad["overlap"] and jaccard > best_quad["jaccard"]
+        ):
             best_quad = {
                 "overlap": overlap,
                 "jaccard": jaccard,
@@ -264,14 +297,19 @@ def main():
     lines.append(f"- hit lines: {results['hit_lines']}")
     lines.append(f"- unique Plücker points: {results['plucker_unique']}")
     lines.append(f"- linear exact matches: {results['linear_exact_matches']}")
-    lines.append(f"- linear best overlap: {results['linear_best']['overlap']} (selected={results['linear_best']['selected']}, Jaccard={results['linear_best']['jaccard']:.3f})")
+    lines.append(
+        f"- linear best overlap: {results['linear_best']['overlap']} (selected={results['linear_best']['selected']}, Jaccard={results['linear_best']['jaccard']:.3f})"
+    )
     lines.append(f"- quadratic forms tested: {results['quadratic_forms_tested']}")
     lines.append(f"- quadratic exact matches: {results['quadratic_exact_matches']}")
-    lines.append(f"- quadratic best overlap: {results['quadratic_best']['overlap']} (selected={results['quadratic_best']['selected']}, Jaccard={results['quadratic_best']['jaccard']:.3f})")
+    lines.append(
+        f"- quadratic best overlap: {results['quadratic_best']['overlap']} (selected={results['quadratic_best']['selected']}, Jaccard={results['quadratic_best']['jaccard']:.3f})"
+    )
 
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"Wrote {OUT_JSON}")
     print(f"Wrote {OUT_MD}")
+
 
 if __name__ == "__main__":
     main()

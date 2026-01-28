@@ -13,6 +13,7 @@ Extending the W33 framework to:
 """
 
 import math
+
 import numpy as np
 
 print("""
@@ -163,7 +164,7 @@ print("═══ W33 CKM DERIVATION ═══")
 print()
 
 # We already have sin θ_C = 9/40 = 0.225
-sin_cabibbo = 9/40
+sin_cabibbo = 9 / 40
 print(f"  sin θ_C = 9[gen²]/40[pts] = {sin_cabibbo:.4f}")
 print(f"  Experimental: 0.2243")
 print(f"  Agreement: {abs(sin_cabibbo - 0.2243)/0.2243 * 100:.2f}%")
@@ -289,18 +290,24 @@ print()
 
 delta_CP_exp = 1.144  # radians
 delta_attempt1 = math.atan(W33_POINTS / E6_FUND)
-print(f"  Attempt 1: δ = arctan(40/27) = {delta_attempt1:.3f} rad = {math.degrees(delta_attempt1):.1f}°")
+print(
+    f"  Attempt 1: δ = arctan(40/27) = {delta_attempt1:.3f} rad = {math.degrees(delta_attempt1):.1f}°"
+)
 print(f"  Experimental: {delta_CP_exp:.3f} rad = 65.5°")
 print()
 
 delta_attempt2 = math.atan(W33_CYCLES / E7_FUND)
-print(f"  Attempt 2: δ = arctan(81/56) = {delta_attempt2:.3f} rad = {math.degrees(delta_attempt2):.1f}°")
+print(
+    f"  Attempt 2: δ = arctan(81/56) = {delta_attempt2:.3f} rad = {math.degrees(delta_attempt2):.1f}°"
+)
 print()
 
 # Better: Use the golden ratio connection
 # δ ≈ 2π/5.5 ≈ 1.14
-delta_attempt3 = 2 * math.pi / (11/2)
-print(f"  Attempt 3: δ = 2π/(11/2) = 4π/11 = {delta_attempt3:.3f} rad = {math.degrees(delta_attempt3):.1f}°")
+delta_attempt3 = 2 * math.pi / (11 / 2)
+print(
+    f"  Attempt 3: δ = 2π/(11/2) = 4π/11 = {delta_attempt3:.3f} rad = {math.degrees(delta_attempt3):.1f}°"
+)
 print(f"  Agreement: {abs(delta_attempt3 - delta_CP_exp)/delta_CP_exp * 100:.1f}%")
 print()
 
@@ -343,7 +350,7 @@ print(f"  W33: 133 + 3 = E7_adj + gen = {E7_ADJ + 3}")
 print(f"  Close match!")
 print()
 
-# Bottom/Strange ratio  
+# Bottom/Strange ratio
 m_b_s_exp = 4180 / 95  # ≈ 44
 print(f"  m_b/m_s = 44 experimental")
 print(f"  W33: 40 + 4 = points + 4 = {W33_POINTS + 4}")
@@ -393,7 +400,7 @@ print()
 # 0.035 ≈ 1/28 ≈ 1/(27+1) = 1/(E6_fund + 1)
 
 n_s_exp = 0.9649
-n_s_w33 = 1 - 1/(E6_FUND + 1)
+n_s_w33 = 1 - 1 / (E6_FUND + 1)
 print(f"  n_s = 1 - 1/(27+1) = 1 - 1/28 = {n_s_w33:.4f}")
 print(f"  Experimental: {n_s_exp}")
 print(f"  Agreement: {abs(n_s_w33 - n_s_exp)/n_s_exp * 100:.2f}%")
@@ -408,7 +415,7 @@ print()
 # Tensor-to-scalar ratio r
 # r < 0.064, predicted by slow-roll: r ≈ 16ε ≈ 8/N²
 # If N = 56: r ≈ 8/56² = 8/3136 ≈ 0.0026
-r_w33 = 8 / (E7_FUND ** 2)
+r_w33 = 8 / (E7_FUND**2)
 print(f"  r = 8/56² = 8/3136 = {r_w33:.4f}")
 print(f"  Experimental bound: r < 0.064")
 print(f"  Prediction consistent with bound ✓")
@@ -468,7 +475,7 @@ print()
 print("  The 51,840 symmetries represent:")
 print()
 print("  • 128 spinor transformations (fermion structure)")
-print("  • 81 cycle permutations (loop structure)")  
+print("  • 81 cycle permutations (loop structure)")
 print("  • 5-fold dark sector symmetry")
 print()
 print("  OR equivalently:")

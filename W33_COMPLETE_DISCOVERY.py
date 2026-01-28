@@ -114,7 +114,7 @@ VERIFIED CASES:
    The Steinberg representation is central to the Langlands correspondence.
    It appears in the cohomology of Shimura varieties and p-adic analysis.
 
-2. p-ADIC NUMBER THEORY  
+2. p-ADIC NUMBER THEORY
    The universal cover of W33 relates to the Bruhat-Tits building of
    PSp(4) over the 3-adic numbers Q₃.
 

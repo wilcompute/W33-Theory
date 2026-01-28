@@ -9,9 +9,9 @@ Author: Wil Dahn
 Date: January 2026
 """
 
-print("="*70)
+print("=" * 70)
 print("W33 THEORY PART LXV: SAGEMATH VERIFICATION SUITE")
-print("="*70)
+print("=" * 70)
 
 # =============================================================================
 # GENERATE SAGE VERIFICATION SCRIPTS
@@ -456,15 +456,15 @@ print("="*60)
 '''
 
 # Write all scripts
-with open('w33_complete_verification.sage', 'w', encoding='utf-8') as f:
+with open("w33_complete_verification.sage", "w", encoding="utf-8") as f:
     f.write(sage_complete)
 print("Generated: w33_complete_verification.sage")
 
-with open('w33_sp4_group.sage', 'w', encoding='utf-8') as f:
+with open("w33_sp4_group.sage", "w", encoding="utf-8") as f:
     f.write(sage_group)
 print("Generated: w33_sp4_group.sage")
 
-with open('w33_alpha.sage', 'w', encoding='utf-8') as f:
+with open("w33_alpha.sage", "w", encoding="utf-8") as f:
     f.write(sage_alpha)
 print("Generated: w33_alpha.sage")
 
@@ -538,13 +538,13 @@ W33 IS THE MATHEMATICAL HEART OF THE UNIVERSE!
 ================================================================================
 """
 
-with open('W33_VERIFICATION_SUMMARY.txt', 'w', encoding='utf-8') as f:
+with open("W33_VERIFICATION_SUMMARY.txt", "w", encoding="utf-8") as f:
     f.write(summary)
 print("\nGenerated: W33_VERIFICATION_SUMMARY.txt")
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PART LXV COMPLETE: SAGEMATH VERIFICATION SUITE GENERATED")
-print("="*70)
+print("=" * 70)
 print("""
 Generated files:
   1. w33_complete_verification.sage - Full W33 verification
@@ -557,4 +557,4 @@ To run in SageMath:
   sage w33_sp4_group.sage
   sage w33_alpha.sage
 """)
-print("="*70)
+print("=" * 70)

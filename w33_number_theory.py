@@ -13,9 +13,10 @@ This script explores the deep connections between:
   - The abc conjecture
 """
 
-import numpy as np
-from fractions import Fraction
 from collections import defaultdict
+from fractions import Fraction
+
+import numpy as np
 
 print("=" * 80)
 print("W33 AND NUMBER THEORY")
@@ -98,12 +99,14 @@ print("\n" + "=" * 80)
 print("PART 3: QUADRATIC RECIPROCITY")
 print("=" * 80)
 
+
 def legendre(a, p):
     """Compute Legendre symbol (a/p)."""
     if a % p == 0:
         return 0
-    result = pow(a, (p-1)//2, p)
+    result = pow(a, (p - 1) // 2, p)
     return result if result <= 1 else result - p
+
 
 print("""
 QUADRATIC RECIPROCITY
@@ -158,10 +161,11 @@ The fact that 3 stays prime in Z[i] is significant!
 It means Z₃ and Z₄ are "independent" - no mixing.
 """)
 
+
 # Gaussian primes
 def is_gaussian_prime(a, b):
     """Check if a + bi is a Gaussian prime."""
-    n = a*a + b*b  # Norm
+    n = a * a + b * b  # Norm
     if n == 0:
         return False
     if b == 0:
@@ -169,6 +173,7 @@ def is_gaussian_prime(a, b):
     if a == 0:
         return abs(b) % 4 == 3 and is_prime(abs(b))
     return is_prime(n)
+
 
 def is_prime(n):
     if n < 2:
@@ -178,11 +183,12 @@ def is_prime(n):
             return False
     return True
 
+
 print("\nSmall Gaussian primes (norm < 20):")
 for a in range(-4, 5):
     for b in range(-4, 5):
         if is_gaussian_prime(a, b):
-            n = a*a + b*b
+            n = a * a + b * b
             if n < 20 and n > 0:
                 print(f"  {a:+d}{b:+d}i  (norm = {n})")
 
@@ -273,7 +279,7 @@ tau = {1: 1, 2: -24, 3: 252, 4: -1472, 5: 4830}
 print("\nRamanujan's tau function:")
 for n, t in tau.items():
     print(f"  τ({n}) = {t}")
-    
+
 print(f"\nNote: τ(3) = 252 = 4 × 63 = 4 × 9 × 7 = 4 × 3² × 7")
 print(f"      The factor of 3² reflects the special role of 3!")
 
@@ -285,11 +291,13 @@ print("\n" + "=" * 80)
 print("PART 7: RIEMANN ZETA FUNCTION")
 print("=" * 80)
 
+
 def zeta(s, terms=1000):
     """Compute ζ(s) for s > 1."""
     if s <= 1:
-        return float('inf')
-    return sum(1/n**s for n in range(1, terms+1))
+        return float("inf")
+    return sum(1 / n**s for n in range(1, terms + 1))
+
 
 print("""
 THE RIEMANN ZETA FUNCTION
@@ -316,7 +324,7 @@ print(f"ζ(4) = {zeta(4):.6f} ≈ π⁴/90 = {np.pi**4/90:.6f}")
 
 # Euler product factor at 3
 for s in [2, 3, 4]:
-    factor_3 = 1 / (1 - 3**(-s))
+    factor_3 = 1 / (1 - 3 ** (-s))
     print(f"\nEuler factor at 3 for ζ({s}): {factor_3:.6f}")
 
 # =============================================================================

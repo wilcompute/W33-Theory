@@ -7,8 +7,9 @@ that makes W33 the "mother algebra" of all mathematics.
 Key Question: How does W33 GENERATE all other algebras?
 """
 
+from itertools import combinations, permutations, product
+
 import numpy as np
-from itertools import product, combinations, permutations
 
 print("=" * 80)
 print("W33: THE MOTHER ALGEBRA OF ALL MATHEMATICS")
@@ -49,14 +50,26 @@ THEIR DIMENSIONS:
 
 # Build GF(3) and K4 explicitly
 GF3 = np.array([0, 1, 2])
-K4 = ['1', 'a', 'b', 'ab']
+K4 = ["1", "a", "b", "ab"]
 
 # K4 multiplication table
 K4_mult = {
-    ('1', '1'): '1', ('1', 'a'): 'a', ('1', 'b'): 'b', ('1', 'ab'): 'ab',
-    ('a', '1'): 'a', ('a', 'a'): '1', ('a', 'b'): 'ab', ('a', 'ab'): 'b',
-    ('b', '1'): 'b', ('b', 'a'): 'ab', ('b', 'b'): '1', ('b', 'ab'): 'a',
-    ('ab', '1'): 'ab', ('ab', 'a'): 'b', ('ab', 'b'): 'a', ('ab', 'ab'): '1'
+    ("1", "1"): "1",
+    ("1", "a"): "a",
+    ("1", "b"): "b",
+    ("1", "ab"): "ab",
+    ("a", "1"): "a",
+    ("a", "a"): "1",
+    ("a", "b"): "ab",
+    ("a", "ab"): "b",
+    ("b", "1"): "b",
+    ("b", "a"): "ab",
+    ("b", "b"): "1",
+    ("b", "ab"): "a",
+    ("ab", "1"): "ab",
+    ("ab", "a"): "b",
+    ("ab", "b"): "a",
+    ("ab", "ab"): "1",
 }
 
 print(f"GF(3) elements: {list(GF3)}")
@@ -106,7 +119,7 @@ print(f"Points formula: (3⁴ - 1)/(3-1) = {points_formula}")
 # =============================================================================
 
 print("\n" + "=" * 80)
-print("PART 3: THE INCIDENCE STRUCTURE")  
+print("PART 3: THE INCIDENCE STRUCTURE")
 print("=" * 80)
 
 print("""
@@ -140,8 +153,8 @@ The structure constants:
 # Parameters
 v = 40  # points
 b = 40  # blocks (lines)
-k = 9   # points per block
-r = 9   # blocks per point
+k = 9  # points per block
+r = 9  # blocks per point
 lamb = 2  # any two points in λ blocks
 
 print(f"Design parameters: ({v}, {b}, {r}, {k}, λ={lamb})")
@@ -311,16 +324,7 @@ print("""
 """)
 
 # Verify dimensions
-algebras = {
-    'ℝ': 1,
-    'ℂ': 2,
-    'ℍ': 4,
-    '𝕆': 8,
-    'J₃(𝕆)': 27,
-    'e₆': 78,
-    'e₇': 133,
-    'e₈': 248
-}
+algebras = {"ℝ": 1, "ℂ": 2, "ℍ": 4, "𝕆": 8, "J₃(𝕆)": 27, "e₆": 78, "e₇": 133, "e₈": 248}
 
 print("Algebra dimension derivations from W33:")
 for alg, dim in algebras.items():
@@ -466,12 +470,13 @@ print("""
 ╚══════════════════════════════════════════════════════════════════════════════╝
 """)
 
+
 # Test the universal formula
 def universal_decomp(dim):
     """Find the best decomposition dim = a*3^m + b*4^n + c"""
     best = None
-    best_score = float('inf')
-    
+    best_score = float("inf")
+
     for m in range(8):
         for n in range(8):
             for a in range(-5, 20):
@@ -483,6 +488,7 @@ def universal_decomp(dim):
                             best_score = score
                             best = (a, m, b, n, c)
     return best
+
 
 print("Universal formula decompositions:\n")
 test_dims = [1, 2, 4, 8, 27, 40, 45, 78, 81, 90, 121, 133, 137, 248]

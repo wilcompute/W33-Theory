@@ -119,7 +119,7 @@ print(f"  32 = 2 × 16 = 2 × (K4)²")
 print(f"\nSpinor dimensions:")
 for d in range(3, 12):
     if d % 2 == 1:
-        spinor_dim = 2**((d-1)//2)
+        spinor_dim = 2 ** ((d - 1) // 2)
         print(f"  D={d}: Dirac spinor = 2^{(d-1)//2} = {spinor_dim}")
 
 # =============================================================================
@@ -450,7 +450,7 @@ The F-theory lift of W33 gives E₇ unification!
 
 print(f"\nF-theory dimensions:")
 print(f"  F-theory: 12D")
-print(f"  M-theory: 11D") 
+print(f"  M-theory: 11D")
 print(f"  Type IIB: 10D")
 print(f"  Difference: 12 - 10 = 2 (torus)")
 

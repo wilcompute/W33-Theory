@@ -8,8 +8,9 @@ This is the deepest question: the structure we perceive (3+1 dimensions)
 must somehow emerge from the fundamental graph structure.
 """
 
-import numpy as np
 import json
+
+import numpy as np
 from scipy.linalg import eigvalsh
 
 print("=" * 70)
@@ -20,10 +21,10 @@ print("=" * 70)
 # W33 PARAMETERS
 # =============================================================================
 
-v = 40      # vertices
-k = 12      # regularity
-λ = 2       # edge parameter
-μ = 4       # non-edge parameter
+v = 40  # vertices
+k = 12  # regularity
+λ = 2  # edge parameter
+μ = 4  # non-edge parameter
 
 e1, e2, e3 = 12, 2, -4
 m1, m2, m3 = 1, 24, 15
@@ -423,7 +424,7 @@ results = {
         "total": 40,
         "spacetime": 4,
         "internal": 36,
-        "formula": "40 = 4 + 36 = 1 + 3 + 36"
+        "formula": "40 = 4 + 36 = 1 + 3 + 36",
     },
     "why_3_plus_1": {
         "time": "m₁ = 1 (unique trivial eigenspace)",
@@ -434,9 +435,9 @@ results = {
         "Eigenvalue decomposition",
         "Compactification of 36 dimensions",
         "Continuum limit",
-        "Lorentz symmetry emerges"
+        "Lorentz symmetry emerges",
     ],
-    "prediction": "Tiny Lorentz violations at Planck energies"
+    "prediction": "Tiny Lorentz violations at Planck energies",
 }
 
 with open("PART_LXXXVII_spacetime.json", "w") as f:

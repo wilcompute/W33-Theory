@@ -40,34 +40,37 @@ References:
 import json
 from datetime import datetime
 
+
 def print_section(title):
     print("\n" + "=" * 70)
     print(f" {title}")
     print("=" * 70)
+
 
 def print_subsection(title):
     print("\n" + "-" * 70)
     print(f" {title}")
     print("-" * 70)
 
+
 def main():
     results = {
         "part": "CXVI",
         "title": "Quantum Contextuality and the Kochen-Specker Theorem",
         "timestamp": datetime.now().isoformat(),
-        "findings": {}
+        "findings": {},
     }
-    
+
     print("=" * 70)
     print(" W33 THEORY - PART CXVI: QUANTUM CONTEXTUALITY")
     print(" The Kochen-Specker Theorem and W33")
     print("=" * 70)
-    
+
     # =========================================================================
     # SECTION 1: THE KOCHEN-SPECKER THEOREM
     # =========================================================================
     print_section("SECTION 1: THE KOCHEN-SPECKER THEOREM (1967)")
-    
+
     ks_explanation = """
   THE FUNDAMENTAL QUANTUM NO-GO THEOREM:
   
@@ -91,19 +94,19 @@ def main():
   Measurement outcomes depend on the full experimental context!
 """
     print(ks_explanation)
-    
+
     results["findings"]["kochen_specker"] = {
         "year": 1967,
         "authors": "Simon Kochen, Ernst Specker",
         "result": "No non-contextual hidden variable theory for dim >= 3",
-        "implication": "Quantum contextuality is fundamental"
+        "implication": "Quantum contextuality is fundamental",
     }
-    
+
     # =========================================================================
     # SECTION 2: THE REYE CONFIGURATION PROOF
     # =========================================================================
     print_section("SECTION 2: THE REYE CONFIGURATION PROOF")
-    
+
     reye_proof = """
   ARAVIND'S DISCOVERY (2000):
   
@@ -142,21 +145,21 @@ def main():
   ═══════════════════════════════════════════════════════════════════
 """
     print(reye_proof)
-    
+
     results["findings"]["reye_proof"] = {
         "dimension": 4,
         "projectors": 12,
         "contexts": 16,
         "configuration": "(12₄, 16₃)",
         "coordinates": "permutations of (±1, ±1, 0, 0)",
-        "same_as": ["24-cell vertices", "D4 roots", "Tomotope edges"]
+        "same_as": ["24-cell vertices", "D4 roots", "Tomotope edges"],
     }
-    
+
     # =========================================================================
     # SECTION 3: WHY DIMENSION 4?
     # =========================================================================
     print_section("SECTION 3: WHY DIMENSION 4 IS SPECIAL")
-    
+
     dim4_analysis = """
   THE MAGIC OF 4 DIMENSIONS:
   
@@ -192,20 +195,20 @@ def main():
   between classical and quantum behavior!
 """
     print(dim4_analysis)
-    
+
     results["findings"]["dimension_4"] = {
         "structures": ["24-cell", "D4 triality", "quaternions", "Reye"],
         "classical_symmetry": "maximal (24-cell is unique)",
         "quantum_contextuality": "first provable here",
         "triality": "three generations",
-        "division_algebra": "quaternions (non-commutative)"
+        "division_algebra": "quaternions (non-commutative)",
     }
-    
+
     # =========================================================================
     # SECTION 4: THE NUMBER 192 REVISITED
     # =========================================================================
     print_section("SECTION 4: THE NUMBER 192 AND QUANTUM MECHANICS")
-    
+
     n192_quantum = """
   RECALL FROM PART CXV:
   
@@ -248,7 +251,7 @@ def main():
   multiplying the flag count by 4.
 """
     print(n192_quantum)
-    
+
     # Verify the counting
     reye_flags = 12 * 4  # 12 points, each in 4 lines
     print(f"\n  Verification:")
@@ -256,19 +259,19 @@ def main():
     print(f"    Tomotope vertices: 4")
     print(f"    192 = 48 × 4 = {48 * 4} ✓")
     print(f"    Alternative: 192 = 16 × 12 = {16 * 12} (contexts × projectors)")
-    
+
     results["findings"]["n192_quantum"] = {
         "reye_incidences": 48,
         "tomotope_vertices": 4,
         "product": 192,
-        "interpretation": "quantum measurement configurations"
+        "interpretation": "quantum measurement configurations",
     }
-    
+
     # =========================================================================
     # SECTION 5: W33 AND QUANTUM CONTEXTUALITY
     # =========================================================================
     print_section("SECTION 5: W33 AND QUANTUM CONTEXTUALITY")
-    
+
     w33_quantum = """
   THE W33 CONNECTION:
   
@@ -312,27 +315,27 @@ def main():
   - Unified physics (E6, SO(10), three generations)
 """
     print(w33_quantum)
-    
+
     # Verify the hierarchy
     print(f"\n  Hierarchy Verification:")
     print(f"    192 × 270 = {192 * 270} = |Aut(W33)| ✓")
     print(f"    51,840 × 13,500 = {51840 * 13500}")
     print(f"    |W(E8)| = 696,729,600")
     print(f"    Ratio: {696729600 // 51840} = 13,440 (close to 13,500)")
-    
+
     results["findings"]["w33_quantum"] = {
         "aut_w33": 51840,
         "factorization": "192 × 270",
         "d4_factor": 192,
         "e6_factor": 270,
-        "interpretation": "quantum × GUT structure"
+        "interpretation": "quantum × GUT structure",
     }
-    
+
     # =========================================================================
     # SECTION 6: THE THREE GENERATIONS AGAIN
     # =========================================================================
     print_section("SECTION 6: THREE GENERATIONS FROM CONTEXTUALITY")
-    
+
     three_gen = """
   WHY THREE GENERATIONS?
   
@@ -369,21 +372,21 @@ def main():
   └─────────────────────────────────────────────────────────────────┘
 """
     print(three_gen)
-    
+
     results["findings"]["three_generations"] = {
         "triality_decomposition": "12 = 4 + 4 + 4",
         "cube_contribution": 8,
         "infinity_points": 3,
         "center": 1,
         "total": 12,
-        "unification": "contextuality and generations from same geometry"
+        "unification": "contextuality and generations from same geometry",
     }
-    
+
     # =========================================================================
     # SECTION 7: IMPLICATIONS FOR PHYSICS
     # =========================================================================
     print_section("SECTION 7: IMPLICATIONS FOR PHYSICS")
-    
+
     physics = """
   WHAT THIS MEANS FOR FUNDAMENTAL PHYSICS:
   
@@ -420,19 +423,19 @@ def main():
   ╚═══════════════════════════════════════════════════════════════════╝
 """
     print(physics)
-    
+
     results["findings"]["physics_implications"] = {
         "qm_geometric": True,
         "contextuality_structural": True,
         "three_generations_required": True,
-        "e_series_necessary": True
+        "e_series_necessary": True,
     }
-    
+
     # =========================================================================
     # SECTION 8: THE PERES-MERMIN SQUARE
     # =========================================================================
     print_section("SECTION 8: THE PERES-MERMIN MAGIC SQUARE")
-    
+
     peres_mermin = """
   ANOTHER KS PROOF: THE PERES-MERMIN SQUARE
   
@@ -465,20 +468,20 @@ def main():
   that exhibits this contextuality!
 """
     print(peres_mermin)
-    
+
     results["findings"]["peres_mermin"] = {
         "observables": 9,
         "contexts": 6,
         "type": "2-qubit system",
         "contradiction": "parity",
-        "relation_to_reye": "subset of Reye configuration"
+        "relation_to_reye": "subset of Reye configuration",
     }
-    
+
     # =========================================================================
     # SECTION 9: SUMMARY
     # =========================================================================
     print_section("SECTION 9: SUMMARY")
-    
+
     summary = """
   ═══════════════════════════════════════════════════════════════════
   PART CXVI SUMMARY: QUANTUM CONTEXTUALITY AND W33
@@ -528,26 +531,27 @@ def main():
   ═══════════════════════════════════════════════════════════════════
 """
     print(summary)
-    
+
     results["summary"] = {
         "reye_proves_ks": True,
         "dimension_4_special": True,
         "n192_quantum": True,
         "w33_unifies": True,
-        "triality_contextuality_unified": True
+        "triality_contextuality_unified": True,
     }
-    
+
     # Save results
     output_file = "PART_CXVI_quantum_contextuality.json"
-    with open(output_file, 'w') as f:
+    with open(output_file, "w") as f:
         json.dump(results, f, indent=2, default=int)
     print(f"\nResults saved to: {output_file}")
-    
+
     print("\n" + "=" * 70)
     print(" END OF PART CXVI")
     print("=" * 70)
-    
+
     return results
+
 
 if __name__ == "__main__":
     main()

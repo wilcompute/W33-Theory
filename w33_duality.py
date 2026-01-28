@@ -10,17 +10,20 @@ Also: the 40+40 symmetry between points and lines suggests
 there might be a self-duality. Let's explore this!
 """
 
-from sage.all import *
+from itertools import combinations, product
+
 import numpy as np
-from itertools import product, combinations
+from sage.all import *
 
 print("=" * 70)
 print("W33 FUNDAMENTAL GROUP AND DUALITY ANALYSIS")
 print("=" * 70)
 
+
 # Build the symplectic polar space W(3,3)
 def symplectic_form(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
+
 
 def normalize(v):
     for i in range(4):
@@ -28,6 +31,7 @@ def normalize(v):
             inv = pow(v[i], -1, 3)
             return tuple((inv * x) % 3 for x in v)
     return None
+
 
 proj_points = set()
 for v in product(range(3), repeat=4):
@@ -50,9 +54,11 @@ for i, p1 in enumerate(proj_points):
 # Find lines
 lines_set = set()
 for i in range(n):
-    for j in range(i+1, n):
+    for j in range(i + 1, n):
         if adj[i][j]:
-            common = [k for k in range(n) if k != i and k != j and adj[i][k] and adj[j][k]]
+            common = [
+                k for k in range(n) if k != i and k != j and adj[i][k] and adj[j][k]
+            ]
             for k, l in combinations(common, 2):
                 if adj[k][l]:
                     lines_set.add(tuple(sorted([i, j, k, l])))
@@ -77,7 +83,7 @@ print("=" * 70)
 # Actually, let's use Sage's built-in methods
 
 # Build the simplicial complex
-edges = [(i, j) for i in range(n) for j in range(i+1, n) if adj[i][j]]
+edges = [(i, j) for i in range(n) for j in range(i + 1, n) if adj[i][j]]
 triangles = []
 for line in lines:
     for triple in combinations(line, 3):
@@ -168,9 +174,10 @@ print(f"Lines intersecting each line: {min(line_neighbors)} - {max(line_neighbor
 
 # Count intersection multiplicities
 from collections import Counter
+
 intersections = Counter()
 for i in range(len(lines)):
-    for j in range(i+1, len(lines)):
+    for j in range(i + 1, len(lines)):
         if line_adj[i][j] > 0:
             intersections[line_adj[i][j]] += 1
 
@@ -188,10 +195,16 @@ print("=" * 70)
 point_graph = Graph({i: [j for j in range(n) if adj[i][j]] for i in range(n)})
 
 # Line graph: two lines adjacent if they share a point
-line_graph = Graph({i: [j for j in range(len(lines)) if i != j and line_adj[i][j] == 1] 
-                   for i in range(len(lines))})
+line_graph = Graph(
+    {
+        i: [j for j in range(len(lines)) if i != j and line_adj[i][j] == 1]
+        for i in range(len(lines))
+    }
+)
 
-print(f"Point graph: {point_graph.num_verts()} vertices, {point_graph.num_edges()} edges")
+print(
+    f"Point graph: {point_graph.num_verts()} vertices, {point_graph.num_edges()} edges"
+)
 print(f"Line graph:  {line_graph.num_verts()} vertices, {line_graph.num_edges()} edges")
 
 # Are they isomorphic?
@@ -202,8 +215,10 @@ print(f"Line graph:  {line_graph.num_verts()} vertices, {line_graph.num_edges()}
 print(f"\nPoint graph degree: {point_graph.degree()[0]}")
 print(f"Line graph degree:  {line_graph.degree()[0]}")
 
-if point_graph.num_verts() == line_graph.num_verts() and \
-   point_graph.num_edges() == line_graph.num_edges():
+if (
+    point_graph.num_verts() == line_graph.num_verts()
+    and point_graph.num_edges() == line_graph.num_edges()
+):
     print("\nSame size! Checking isomorphism...")
     if point_graph.is_isomorphic(line_graph):
         print("★ Point graph ≅ Line graph! The symmetry is perfect! ★")

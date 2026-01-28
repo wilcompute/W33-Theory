@@ -1,9 +1,11 @@
 #!/usr/bin/env sage
 """Compute isomorphism between Coxeter-6 orbit graph and W33 point/line graph."""
+
 from __future__ import annotations
 
 import json
 from itertools import product
+
 from sage.all import Graph
 
 
@@ -27,7 +29,7 @@ def build_projective_points():
 
 
 def omega_sym(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
 
 def build_edges(points):
@@ -40,7 +42,7 @@ def build_edges(points):
 
 
 def build_lines_from_edges(edges):
-    adj = [[0]*40 for _ in range(40)]
+    adj = [[0] * 40 for _ in range(40)]
     for i, j in edges:
         adj[i][j] = adj[j][i] = 1
 
@@ -72,8 +74,8 @@ def first_isomorphism(G1, G2):
 
 
 def main():
-    data = json.loads(open('artifacts/e8_coxeter6_orbits.json').read())
-    orbit_edges = data['edges']
+    data = json.loads(open("artifacts/e8_coxeter6_orbits.json").read())
+    orbit_edges = data["edges"]
     G_orbit = Graph(orbit_edges)
 
     points = build_projective_points()
@@ -96,10 +98,10 @@ def main():
     target = None
     if iso_point:
         mapping = first_isomorphism(G_orbit, G_point)
-        target = 'point'
+        target = "point"
     elif iso_line:
         mapping = first_isomorphism(G_orbit, G_line)
-        target = 'line'
+        target = "line"
     else:
         raise RuntimeError("Orbit graph not isomorphic to point or line graph")
 
@@ -110,10 +112,10 @@ def main():
         "orbit_to_index": {int(k): int(v) for k, v in mapping.items()},
         "target": target,
     }
-    with open('artifacts/orbit_graph_isomorphism.json', 'w') as f:
-        json.dump(out, f, indent=2)
+    with open("artifacts/orbit_graph_isomorphism.json", "w") as f:
+        json.dump(out, f, indent=2, default=str)
     print("Wrote artifacts/orbit_graph_isomorphism.json")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

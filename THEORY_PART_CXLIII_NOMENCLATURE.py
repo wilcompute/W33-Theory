@@ -17,9 +17,9 @@ This is the official graph-theoretic name recognized in:
 
 import numpy as np
 
-print("="*70)
+print("=" * 70)
 print("PART CXLIII: UNIFIED NOMENCLATURE")
-print("="*70)
+print("=" * 70)
 
 print("""
 ╔══════════════════════════════════════════════════════════════════════╗
@@ -85,9 +85,9 @@ print("""
 # VERIFICATION OF ALL CLAIMS
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("COMPUTATIONAL VERIFICATION")
-print("="*70)
+print("=" * 70)
 
 omega = np.exp(2j * np.pi / 3)
 
@@ -100,22 +100,26 @@ for i in range(4):
 
 for mu in [0, 1, 2]:
     for nu in [0, 1, 2]:
-        states.append(np.array([0, 1, -omega**mu, omega**nu]) / np.sqrt(3))
+        states.append(np.array([0, 1, -(omega**mu), omega**nu]) / np.sqrt(3))
 for mu in [0, 1, 2]:
     for nu in [0, 1, 2]:
-        states.append(np.array([1, 0, -omega**mu, -omega**nu]) / np.sqrt(3))
+        states.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / np.sqrt(3))
 for mu in [0, 1, 2]:
     for nu in [0, 1, 2]:
-        states.append(np.array([1, -omega**mu, 0, omega**nu]) / np.sqrt(3))
+        states.append(np.array([1, -(omega**mu), 0, omega**nu]) / np.sqrt(3))
 for mu in [0, 1, 2]:
     for nu in [0, 1, 2]:
         states.append(np.array([1, omega**mu, omega**nu, 0]) / np.sqrt(3))
 
+
 # Build adjacency matrix
 def is_orthogonal(i, j):
-    return abs(np.vdot(states[i], states[j]))**2 < 1e-10
+    return abs(np.vdot(states[i], states[j])) ** 2 < 1e-10
 
-adj_matrix = np.array([[is_orthogonal(i, j) for j in range(40)] for i in range(40)], dtype=float)
+
+adj_matrix = np.array(
+    [[is_orthogonal(i, j) for j in range(40)] for i in range(40)], dtype=float
+)
 
 # Verify SRG(40, 12, 2, 4)
 edges = int(np.sum(adj_matrix)) // 2
@@ -129,7 +133,7 @@ print(f"Degree: {set(degrees)}")
 lambda_vals = []
 mu_vals = []
 for i in range(40):
-    for j in range(i+1, 40):
+    for j in range(i + 1, 40):
         common = int(adj_matrix[i, :] @ adj_matrix[:, j])
         if adj_matrix[i, j]:
             lambda_vals.append(common)
@@ -153,9 +157,9 @@ print(f"Spectrum: {dict(sorted(spectrum.items(), reverse=True))}")
 # EQUIVALENCES
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("KEY EQUIVALENCES (ALL VERIFIED)")
-print("="*70)
+print("=" * 70)
 
 print("""
 1. GRAPH ISOMORPHISMS:
@@ -181,9 +185,9 @@ print("""
 # CONNECTION TO ORIGINAL THEORY
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("CONNECTION TO PRIOR WORK")
-print("="*70)
+print("=" * 70)
 
 print("""
 RELATIONSHIP TO PRIOR "W33" INVESTIGATIONS:
@@ -212,9 +216,9 @@ The quantum physics significance:
 # TRIFLECTION GENERATORS SUMMARY
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("TRIFLECTION GENERATORS (FROM VLASOV)")
-print("="*70)
+print("=" * 70)
 
 print("""
 The 4 triflection generators of W(E₆) acting on ℂ⁴:
@@ -237,9 +241,9 @@ Properties:
 # THE MASTER THEOREM
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("THE MASTER THEOREM")
-print("="*70)
+print("=" * 70)
 
 print("""
 ╔══════════════════════════════════════════════════════════════════════╗
@@ -269,6 +273,6 @@ print("""
 ╚══════════════════════════════════════════════════════════════════════╝
 """)
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PART CXLIII COMPLETE - NOMENCLATURE ESTABLISHED")
-print("="*70)
+print("=" * 70)

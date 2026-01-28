@@ -16,9 +16,10 @@ but a FEATURE of W33?
   - J.B.S. Haldane
 """
 
-import numpy as np
 from collections import defaultdict
 from itertools import combinations
+
+import numpy as np
 
 print("=" * 80)
 print("W33 AND THE DARK UNIVERSE")
@@ -70,7 +71,7 @@ WHAT IS IT?
 
 # Observed fractions
 Omega_DM = 0.27  # Dark matter fraction
-Omega_b = 0.05   # Baryonic matter
+Omega_b = 0.05  # Baryonic matter
 Omega_DE = 0.68  # Dark energy
 Omega_total = Omega_DM + Omega_b + Omega_DE
 
@@ -600,15 +601,17 @@ print("""
 """)
 
 # Final verification
-matter_predicted = 40/121
-vacuum_predicted = 81/121
+matter_predicted = 40 / 121
+vacuum_predicted = 81 / 121
 matter_observed = Omega_DM + Omega_b
 vacuum_observed = Omega_DE
 
 print(f"\nFinal comparison:")
 print(f"  Matter: predicted = {matter_predicted:.3f}, observed = {matter_observed:.3f}")
 print(f"  Vacuum: predicted = {vacuum_predicted:.3f}, observed = {vacuum_observed:.3f}")
-print(f"\n  Agreement within {abs(vacuum_predicted - vacuum_observed)/vacuum_observed * 100:.1f}%!")
+print(
+    f"\n  Agreement within {abs(vacuum_predicted - vacuum_observed)/vacuum_observed * 100:.1f}%!"
+)
 
 print("\n" + "=" * 80)
 print("THE DARK UNIVERSE IS W33.")

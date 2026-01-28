@@ -15,11 +15,13 @@ This part explores whether W33's structure encodes
 the three generations of fermions through D4 triality.
 """
 
-import numpy as np
-from itertools import combinations, product
+import json
 from collections import Counter
 from datetime import datetime
-import json
+from itertools import combinations, product
+
+import numpy as np
+
 
 def header(title):
     """Print section header."""
@@ -29,16 +31,17 @@ def header(title):
     print("=" * 70)
     print()
 
+
 def construct_w33():
     """Construct W33 from F_3^4 symplectic geometry."""
     F3 = [0, 1, 2]
-    
+
     # Generate all nonzero vectors in F_3^4
     vectors = []
     for v in product(F3, repeat=4):
         if any(x != 0 for x in v):
             vectors.append(v)
-    
+
     # Projective points: equivalence classes under scalar multiplication
     proj_points = []
     seen = set()
@@ -53,23 +56,24 @@ def construct_w33():
         if v not in seen:
             seen.add(v)
             proj_points.append(v)
-    
+
     n = len(proj_points)  # Should be 40
-    
+
     # Symplectic form: omega(x, y) = x1*y3 - x3*y1 + x2*y4 - x4*y2
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
-    
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
+
     # Build adjacency: adjacent if omega != 0
     adj = np.zeros((n, n), dtype=int)
     edges = []
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) != 0:
                 adj[i, j] = adj[j, i] = 1
                 edges.append((i, j))
-    
+
     return adj, proj_points, edges
+
 
 def main():
     header("W33 THEORY - PART CIX: D4 TRIALITY AND THREE GENERATIONS")
@@ -78,14 +82,14 @@ def main():
     print("Why are there exactly THREE generations of fermions?")
     print("The answer may lie in D4 triality encoded in W33.")
     print()
-    
+
     results = {}
-    
+
     # =====================================================================
     # SECTION 1: What is D4 Triality?
     # =====================================================================
     header("SECTION 1: WHAT IS D4 TRIALITY?")
-    
+
     print("THE EXCEPTIONAL PROPERTY OF D4 = so(8)")
     print("-" * 50)
     print()
@@ -109,33 +113,33 @@ def main():
     print("  8_v --> 8_s --> 8_c --> 8_v")
     print()
     print("This is UNIQUE to D4 among all simple Lie algebras!")
-    
+
     results["d4_reps"] = ["8_v (vector)", "8_s (spinor)", "8_c (conjugate spinor)"]
-    
+
     # =====================================================================
     # SECTION 2: D4 Dimensions
     # =====================================================================
     header("SECTION 2: D4 DIMENSIONAL ANALYSIS")
-    
+
     print("DIMENSION OF so(8):")
     print()
     print("  dim(so(n)) = n(n-1)/2")
     print("  dim(so(8)) = 8 x 7 / 2 = 28")
     print()
-    
+
     dim_so8 = 8 * 7 // 2
     print(f"  Computed: {dim_so8}")
-    
+
     print()
     print("ROOT SYSTEM OF D4:")
     print()
     print("  Number of roots = 2 x 4 x 3 = 24")
     print("  (General: D_n has 2n(n-1) roots)")
     print()
-    
+
     d4_roots = 2 * 4 * 3
     print(f"  Computed: {d4_roots}")
-    
+
     print()
     print("THE KEY NUMBER 24:")
     print("-" * 50)
@@ -145,52 +149,52 @@ def main():
     print("  24 = 3 x 8 (triality structure)")
     print()
     print("  This is NOT a coincidence!")
-    
+
     results["d4_dim"] = dim_so8
     results["d4_roots"] = d4_roots
-    
+
     # =====================================================================
     # SECTION 3: Constructing D4 Roots
     # =====================================================================
     header("SECTION 3: EXPLICIT D4 ROOT SYSTEM")
-    
+
     print("D4 roots in R^4:")
     print()
     print("Type 1: +/- e_i +/- e_j for i < j")
     print("        (all sign combinations)")
     print()
-    
+
     # Generate D4 roots
     d4_root_list = []
-    
+
     # Type 1: +/- e_i +/- e_j
     for i in range(4):
-        for j in range(i+1, 4):
+        for j in range(i + 1, 4):
             for si in [1, -1]:
                 for sj in [1, -1]:
                     root = [0, 0, 0, 0]
                     root[i] = si
                     root[j] = sj
                     d4_root_list.append(tuple(root))
-    
+
     print(f"Number of D4 roots: {len(d4_root_list)}")
     print()
     print("Sample roots:")
     for i, r in enumerate(d4_root_list[:8]):
         print(f"  {r}")
     print("  ...")
-    
+
     # Verify
     assert len(d4_root_list) == 24, f"Expected 24 D4 roots, got {len(d4_root_list)}"
     print(f"\nVerified: {len(d4_root_list)} roots (matches eigenspace dimension!)")
-    
+
     results["d4_roots_explicit"] = len(d4_root_list)
-    
+
     # =====================================================================
     # SECTION 4: Triality and the Three 8s
     # =====================================================================
     header("SECTION 4: TRIALITY AND THE THREE 8s")
-    
+
     print("TRIALITY EXPLAINED:")
     print("-" * 50)
     print()
@@ -223,30 +227,30 @@ def main():
     print()
     print("The octonion multiplication gives the triality-twisted")
     print("Clifford structure!")
-    
+
     # =====================================================================
     # SECTION 5: 24 = 3 x 8 Decomposition in W33
     # =====================================================================
     header("SECTION 5: 24 = 3 x 8 IN W33 EIGENSPACE")
-    
+
     # Construct W33 and get eigenspace
     adj, vertices, edges = construct_w33()
     eigenvalues, eigenvectors = np.linalg.eigh(adj)
-    
+
     # Round eigenvalues
     eigenvalues = np.round(eigenvalues, 6)
     unique_eigs = sorted(set(eigenvalues), reverse=True)
-    
+
     print("W33 EIGENVALUE STRUCTURE:")
     print()
     for eig in unique_eigs:
         mult = np.sum(np.abs(eigenvalues - eig) < 0.001)
         print(f"  lambda = {eig:6.1f}: multiplicity {mult}")
-    
+
     # Get the eigenspace for lambda = 2
     lambda_2_indices = np.where(np.abs(eigenvalues - 2) < 0.001)[0]
     eigenspace_2 = eigenvectors[:, lambda_2_indices]
-    
+
     print()
     print(f"Eigenspace for lambda=2:")
     print(f"  Dimension: {eigenspace_2.shape[1]}")
@@ -272,14 +276,14 @@ def main():
     print("  Generation 3: 8_c subspace")
     print()
     print("  Triality permutes the generations!")
-    
+
     results["eigenspace_dim"] = int(eigenspace_2.shape[1])
-    
+
     # =====================================================================
     # SECTION 6: The 8 of SO(8) and Fermions
     # =====================================================================
     header("SECTION 6: THE 8 OF SO(8) AND FERMIONS")
-    
+
     print("STANDARD MODEL FERMIONS (one generation):")
     print("-" * 50)
     print()
@@ -309,12 +313,12 @@ def main():
     print("  have IDENTICAL gauge quantum numbers!")
     print()
     print("  The generations differ ONLY by triality phase.")
-    
+
     # =====================================================================
     # SECTION 7: E8 --> D4 x D4
     # =====================================================================
     header("SECTION 7: E8 --> D4 x D4 CONNECTION")
-    
+
     print("E8 DECOMPOSITION:")
     print("-" * 50)
     print()
@@ -335,7 +339,7 @@ def main():
     print("  The three (8, 8) terms correspond to triality!")
     print()
     print("  (8_v, 8_v): vector-vector coupling")
-    print("  (8_s, 8_s): spinor-spinor coupling") 
+    print("  (8_s, 8_s): spinor-spinor coupling")
     print("  (8_c, 8_c): conjugate-conjugate coupling")
     print()
     print("CONNECTION TO W33:")
@@ -343,14 +347,14 @@ def main():
     print("  W33 has 240 edges = 240 E8 roots")
     print("  The E8 --> D4 x D4 splitting shows triality")
     print("  The 24-dimensional eigenspace captures the D4 root structure")
-    
+
     results["e8_d4d4"] = "248 = 28 + 28 + 64 + 64 + 64"
-    
+
     # =====================================================================
     # SECTION 8: Searching for Triality in W33
     # =====================================================================
     header("SECTION 8: SEARCHING FOR TRIALITY IN W33")
-    
+
     print("LOOKING FOR Z_3 SYMMETRY:")
     print("-" * 50)
     print()
@@ -379,12 +383,12 @@ def main():
     print()
     print("  Each of 3 generations gets a 27 of E6.")
     print("  Total: 3 x 27 = 81 = |F_3^4|")
-    
+
     # =====================================================================
     # SECTION 9: The Generation Structure
     # =====================================================================
     header("SECTION 9: GENERATION STRUCTURE FROM W33")
-    
+
     print("WHY THREE GENERATIONS?")
     print("-" * 50)
     print()
@@ -417,12 +421,12 @@ def main():
     print()
     print("  It's not a random feature - it's INEVITABLE")
     print("  from the underlying discrete geometry.")
-    
+
     # =====================================================================
     # SECTION 10: Mass Hierarchy from Triality
     # =====================================================================
     header("SECTION 10: MASS HIERARCHY FROM TRIALITY")
-    
+
     print("THE GENERATION MASS PUZZLE:")
     print("-" * 50)
     print()
@@ -464,21 +468,17 @@ def main():
     print(f"    12 / (-4) = {eig_12 / eig_m4}")
     print()
     print("  These ratios may encode generation mass information.")
-    
+
     results["mass_ratios"] = {
         "tau_mu_e": "3500:200:1 approximately",
-        "eigenvalue_ratios": {
-            "12/2": 6,
-            "2/(-4)": -0.5,
-            "12/(-4)": -3
-        }
+        "eigenvalue_ratios": {"12/2": 6, "2/(-4)": -0.5, "12/(-4)": -3},
     }
-    
+
     # =====================================================================
     # SECTION 11: D4 in W33 Explicitly
     # =====================================================================
     header("SECTION 11: FINDING D4 IN W33 EXPLICITLY")
-    
+
     print("SUBGRAPH ANALYSIS:")
     print("-" * 50)
     print()
@@ -487,21 +487,21 @@ def main():
     print()
     print("Looking for D4 substructure:")
     print()
-    
+
     # Compute the degree sequence
     degrees = adj.sum(axis=1)
     print(f"All vertices have degree: {set(degrees)}")
-    
+
     # Count triangles
     triangles = 0
     for i in range(40):
-        for j in range(i+1, 40):
+        for j in range(i + 1, 40):
             if adj[i, j]:
                 common = np.sum(adj[i] * adj[j])
                 triangles += common
     triangles //= 3  # Each triangle counted 3 times
     print(f"Number of triangles: {triangles}")
-    
+
     # D4 root graph would have specific structure
     print()
     print("D4 ROOT GRAPH:")
@@ -513,7 +513,7 @@ def main():
     print("  In D4: each root is adjacent to 6 others")
     print("  (those with inner product 1)")
     print()
-    
+
     # Compare with W33
     print("W33 vs D4:")
     print()
@@ -525,12 +525,12 @@ def main():
     print()
     print("  The D4 structure appears EMBEDDED in W33,")
     print("  not as the full graph but as a SUBSTRUCTURE.")
-    
+
     # =====================================================================
     # SECTION 12: Summary and Implications
     # =====================================================================
     header("SECTION 12: SUMMARY AND IMPLICATIONS")
-    
+
     print("PART CIX FINDINGS:")
     print("=" * 50)
     print()
@@ -569,11 +569,11 @@ def main():
     print("  which is the SAME 3 as the number of generations.")
     print()
     print("  This is not numerology - it's deep mathematics!")
-    
+
     # =====================================================================
     # Save results
     # =====================================================================
-    
+
     def convert_numpy(obj):
         """Recursively convert numpy types to Python native types."""
         if isinstance(obj, dict):
@@ -587,20 +587,21 @@ def main():
         elif isinstance(obj, np.ndarray):
             return obj.tolist()
         return obj
-    
+
     results["timestamp"] = datetime.now().isoformat()
     results["part"] = "CIX"
     results["part_number"] = 109
     results["key_finding"] = "24 = 3 x 8 explains three generations via D4 triality"
     results["triality_connection"] = True
-    
+
     results = convert_numpy(results)
-    
+
     with open("PART_CIX_d4_triality.json", "w") as f:
         json.dump(results, f, indent=2, default=int)
-    
+
     print()
     print("Results saved to: PART_CIX_d4_triality.json")
+
 
 if __name__ == "__main__":
     main()

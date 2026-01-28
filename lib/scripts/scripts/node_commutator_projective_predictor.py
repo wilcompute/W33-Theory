@@ -8,21 +8,36 @@ from pathlib import Path
 
 import pandas as pd
 
-
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUT_DIR = DATA / "_workbench" / "04_measurement"
 
-NODE_WEIGHTS = DATA / "_workbench" / "05_symmetry" / "transport_commutator_node_localization_summary.csv"
-EDGE_IMAGES = DATA / "_toe" / "coupling_20260110" / "orbit0_edges_with_projective_images.csv"
+NODE_WEIGHTS = (
+    DATA
+    / "_workbench"
+    / "05_symmetry"
+    / "transport_commutator_node_localization_summary.csv"
+)
+EDGE_IMAGES = (
+    DATA / "_toe" / "coupling_20260110" / "orbit0_edges_with_projective_images.csv"
+)
 LINES = DATA / "_toe" / "coupling_20260110" / "W33_lines_to_projective_quartets.csv"
-FLUX_SUMMARY = DATA / "_toe" / "flux_response_rankings_20260110" / "line_flux_response_summary.csv"
-GRID = DATA / "_toe" / "native_fullgrid_20260110" / "nativeC24_fullgrid_line_stabilities_flux_noflux.csv"
+FLUX_SUMMARY = (
+    DATA / "_toe" / "flux_response_rankings_20260110" / "line_flux_response_summary.csv"
+)
+GRID = (
+    DATA
+    / "_toe"
+    / "native_fullgrid_20260110"
+    / "nativeC24_fullgrid_line_stabilities_flux_noflux.csv"
+)
 
 
 def node_class_counts(edges: pd.DataFrame, class_cols: list[str]) -> pd.DataFrame:
     nodes = pd.Index(sorted(set(edges["u"]).union(edges["v"])))
-    classes = sorted({cls for col in class_cols for cls in edges[col].dropna().unique()})
+    classes = sorted(
+        {cls for col in class_cols for cls in edges[col].dropna().unique()}
+    )
     counts = pd.DataFrame(0, index=nodes, columns=classes, dtype=float)
 
     for _, row in edges.iterrows():
@@ -39,7 +54,9 @@ def node_class_counts(edges: pd.DataFrame, class_cols: list[str]) -> pd.DataFram
     return counts
 
 
-def class_weights_from_nodes(node_counts: pd.DataFrame, node_weights: pd.DataFrame) -> pd.Series:
+def class_weights_from_nodes(
+    node_counts: pd.DataFrame, node_weights: pd.DataFrame
+) -> pd.Series:
     df = node_counts.merge(node_weights[["node", "mean"]], on="node", how="left")
     df["mean"] = df["mean"].fillna(0.0)
     class_cols = [c for c in df.columns if c not in {"node", "mean"}]
@@ -88,9 +105,13 @@ def winner_grid(scores: pd.DataFrame) -> pd.DataFrame:
     win_df = pd.DataFrame(winners)
     win_df = win_df.merge(scores, left_on="flux_winner", right_on="line_id", how="left")
     win_df = win_df.rename(columns={"score": "flux_score"}).drop(columns=["line_id"])
-    win_df = win_df.merge(scores, left_on="noflux_winner", right_on="line_id", how="left")
+    win_df = win_df.merge(
+        scores, left_on="noflux_winner", right_on="line_id", how="left"
+    )
     win_df = win_df.rename(columns={"score": "noflux_score"}).drop(columns=["line_id"])
-    win_df["flux_beats_noflux"] = (win_df["flux_score"] > win_df["noflux_score"]).astype(int)
+    win_df["flux_beats_noflux"] = (
+        win_df["flux_score"] > win_df["noflux_score"]
+    ).astype(int)
     return win_df
 
 
@@ -135,7 +156,9 @@ def main() -> None:
         f.write(f"- top5 lines by score: {top5}\n")
         f.write(f"- flux winners in top5: {win_df['flux_in_top5'].mean():.6f}\n")
         f.write(f"- noflux winners in top5: {win_df['noflux_in_top5'].mean():.6f}\n")
-        f.write(f"- flux winner beats noflux score: {win_df['flux_beats_noflux'].mean():.6f}\n")
+        f.write(
+            f"- flux winner beats noflux score: {win_df['flux_beats_noflux'].mean():.6f}\n"
+        )
         changed = win_df[win_df["winner_changed"] == 1]
         changed_rate = changed["flux_beats_noflux"].mean() if not changed.empty else 0.0
         f.write(f"- flux beats noflux when winner changes: {changed_rate:.6f}\n")

@@ -168,7 +168,7 @@ print()
 
 # 5. Top quark mass
 v = 246.22  # Higgs vev in GeV
-m_top_w33 = v * math.sqrt(40/81)
+m_top_w33 = v * math.sqrt(40 / 81)
 m_top_exp = 172.76
 error_top = abs(m_top_w33 - m_top_exp) / m_top_exp * 100
 
@@ -226,7 +226,7 @@ print(f"  Status:      ✓ GOOD")
 print()
 
 # 10. Higgs mass
-m_H_w33 = (v/2) * math.sqrt(81/78)  # v/2 × √(cycles/dim(E6))
+m_H_w33 = (v / 2) * math.sqrt(81 / 78)  # v/2 × √(cycles/dim(E6))
 m_H_exp = 125.25
 error_H = abs(m_H_w33 - m_H_exp) / m_H_exp * 100
 

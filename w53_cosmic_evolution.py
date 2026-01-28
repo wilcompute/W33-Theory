@@ -21,10 +21,12 @@ This connects:
   - Dark energy evolution
 """
 
-import numpy as np
 from collections import defaultdict
+
 import matplotlib
-matplotlib.use('Agg')
+import numpy as np
+
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 print("=" * 80)
@@ -40,22 +42,26 @@ print("\n" + "=" * 80)
 print("PART 1: THE COMPLETE W-HIERARCHY")
 print("=" * 80)
 
+
 def w_points(n, q=3):
     """Number of points in W(2n-1, q)."""
     result = 1
     for i in range(1, n + 1):
-        result *= (q**i + 1)
+        result *= q**i + 1
     return result
+
 
 def w_steinberg(n, q=3):
     """Steinberg dimension for Sp(2n, q)."""
     return q ** (n**2)
+
 
 def w_vacuum_fraction(n, q=3):
     """Vacuum fraction = cycles / (points + cycles)."""
     pts = w_points(n, q)
     cycles = w_steinberg(n, q)  # Conjecture: H₁ rank = Steinberg
     return cycles / (pts + cycles)
+
 
 print("""
 THE W(2n-1, 3) HIERARCHY
@@ -70,15 +76,19 @@ for n in range(1, 6):
     steinberg = w_steinberg(n)
     total = pts + steinberg
     vacuum = w_vacuum_fraction(n)
-    hierarchy.append({
-        'n': n,
-        'name': f'W({2*n-1},3)',
-        'points': pts,
-        'steinberg': steinberg,
-        'total': total,
-        'vacuum': vacuum
-    })
-    print(f"  {hierarchy[-1]['name']:8} | Points: {pts:>12,} | Steinberg: {steinberg:>15,} | Vacuum: {vacuum:.4f}")
+    hierarchy.append(
+        {
+            "n": n,
+            "name": f"W({2*n-1},3)",
+            "points": pts,
+            "steinberg": steinberg,
+            "total": total,
+            "vacuum": vacuum,
+        }
+    )
+    print(
+        f"  {hierarchy[-1]['name']:8} | Points: {pts:>12,} | Steinberg: {steinberg:>15,} | Vacuum: {vacuum:.4f}"
+    )
 
 print(f"\nObserved dark energy today: 0.68")
 print(f"W(3,3) prediction: {hierarchy[1]['vacuum']:.4f}")
@@ -166,8 +176,8 @@ SLOW ROLL PARAMETERS:
 """)
 
 # Calculate inflationary parameters
-vacuum_w53 = hierarchy[2]['vacuum']
-vacuum_w33 = hierarchy[1]['vacuum']
+vacuum_w53 = hierarchy[2]["vacuum"]
+vacuum_w33 = hierarchy[1]["vacuum"]
 delta_vacuum = vacuum_w53 - vacuum_w33
 
 print(f"\nW-hierarchy inflation parameters:")
@@ -221,11 +231,11 @@ This is NOT a coincidence!
 
 # N=8 SUGRA spectrum
 sugra_spectrum = {
-    'graviton': 1,
-    'gravitino': 8,
-    'vector': 28,
-    'fermion': 56,
-    'scalar': 70
+    "graviton": 1,
+    "gravitino": 8,
+    "vector": 28,
+    "fermion": 56,
+    "scalar": 70,
 }
 
 print(f"N=8 SUGRA particle content:")
@@ -281,15 +291,12 @@ CONNECTION TO W(5,3):
 """)
 
 # E-series dimensions
-e_dims = {
-    'E₆': 78,
-    'E₇': 133,
-    'E₈': 248
-}
+e_dims = {"E₆": 78, "E₇": 133, "E₈": 248}
 
 print(f"\nExceptional group dimensions:")
 for group, dim in e_dims.items():
     print(f"  {group}: {dim}")
+
 
 # Factor analysis
 def prime_factors(n):
@@ -304,10 +311,14 @@ def prime_factors(n):
         factors[n] = factors.get(n, 0) + 1
     return factors
 
+
 sp63_order = 9170703360
 factors = prime_factors(sp63_order)
 print(f"\n|Sp(6,3)| = {sp63_order:,}")
-print(f"  = " + " × ".join(f"{p}^{e}" if e > 1 else str(p) for p, e in sorted(factors.items())))
+print(
+    f"  = "
+    + " × ".join(f"{p}^{e}" if e > 1 else str(p) for p, e in sorted(factors.items()))
+)
 
 # Check for E₇ substructure
 print(f"\n  133 = 7 × 19")
@@ -353,16 +364,16 @@ This means:
 
 # SO(8) dimensions
 so8_reps = {
-    '8_v (vector)': 8,
-    '8_s (spinor)': 8,
-    '8_c (co-spinor)': 8,
-    '28 (adjoint)': 28,
-    '35_v': 35,
-    '35_s': 35,
-    '35_c': 35,
-    '56_v': 56,
-    '56_s': 56,
-    '56_c': 56
+    "8_v (vector)": 8,
+    "8_s (spinor)": 8,
+    "8_c (co-spinor)": 8,
+    "28 (adjoint)": 28,
+    "35_v": 35,
+    "35_s": 35,
+    "35_c": 35,
+    "56_v": 56,
+    "56_s": 56,
+    "56_c": 56,
 }
 
 print(f"\nSO(8) representations:")
@@ -411,10 +422,12 @@ This becomes the HOT BIG BANG!
 # Energy calculation
 energy_fraction_released = vacuum_w53 - vacuum_w33
 print(f"\nEnergy released in transition:")
-print(f"  Fraction: {energy_fraction_released:.3f} = {energy_fraction_released*100:.1f}%")
+print(
+    f"  Fraction: {energy_fraction_released:.3f} = {energy_fraction_released*100:.1f}%"
+)
 
 # If total energy at GUT scale is ~(10¹⁶ GeV)⁴
-E_gut_density = (1e16)**4  # GeV⁴
+E_gut_density = (1e16) ** 4  # GeV⁴
 E_released = energy_fraction_released * E_gut_density
 print(f"\n  If E_total ~ (10¹⁶ GeV)⁴")
 print(f"  E_released ~ {energy_fraction_released:.2f} × 10^64 GeV⁴")
@@ -458,7 +471,7 @@ If transitioning toward W(1,3) over ~10¹⁰⁰ years:
 """)
 
 # W(1,3) vacuum fraction
-vacuum_w13 = hierarchy[0]['vacuum']
+vacuum_w13 = hierarchy[0]["vacuum"]
 print(f"\nW(1,3) vacuum fraction: {vacuum_w13:.4f}")
 print(f"  (This is 3/(4+3) = 3/7 ≈ 0.43)")
 

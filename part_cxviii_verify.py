@@ -5,13 +5,16 @@ W33 THEORY - PART CXVIII: EXPLICIT CONSTRUCTION (Summary)
 SageMath verification of the 40 = 1 + 12 + 27 decomposition.
 """
 
-import os, sys
+import os
+import sys
+
 SAGE_DIR = "/mnt/c/Users/wiljd/OneDrive/Documents/GitHub/WilsManifold/external/sage"
 os.environ["PATH"] = f"{SAGE_DIR}/bin:" + os.environ.get("PATH", "")
 sys.path.insert(0, f"{SAGE_DIR}/lib/python3.12/site-packages")
 
-from sage.all import *
 import json
+
+from sage.all import *
 
 print("=" * 60)
 print(" PART CXVIII: THE KEY VERIFICATION")
@@ -44,13 +47,15 @@ non_neighbors = [v for v in G.vertices() if v != v0 and v not in neighbors]
 print(f"\nVertex v0: 1")
 print(f"Neighbors of v0: {len(neighbors)}")
 print(f"Non-neighbors of v0: {len(non_neighbors)}")
-print(f"\n1 + {len(neighbors)} + {len(non_neighbors)} = {1 + len(neighbors) + len(non_neighbors)}")
+print(
+    f"\n1 + {len(neighbors)} + {len(non_neighbors)} = {1 + len(neighbors) + len(non_neighbors)}"
+)
 
 results["verified"]["decomposition"] = {
     "vertex": 1,
     "neighbors": len(neighbors),
     "non_neighbors": len(non_neighbors),
-    "total": 1 + len(neighbors) + len(non_neighbors)
+    "total": 1 + len(neighbors) + len(non_neighbors),
 }
 
 if len(neighbors) == 12 and len(non_neighbors) == 27:
@@ -97,7 +102,7 @@ for root, mult in roots:
         results["verified"]["d4_eigenvalue"] = int(root)
 
 # Save results
-with open('PART_CXVIII_verified.json', 'w') as f:
+with open("PART_CXVIII_verified.json", "w") as f:
     json.dump(results, f, indent=2, default=int)
 print("\nResults saved to: PART_CXVIII_verified.json")
 

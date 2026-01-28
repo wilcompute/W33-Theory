@@ -19,162 +19,158 @@ W33 Answer: Microstates encoded in holonomy structure
            Black hole entropy = COUNT OF TOPOLOGICAL STATES
 """
 
-import numpy as np
 import math
+
+import numpy as np
 
 # ============================================================================
 # PART 1: THE BEKENSTEIN-HAWKING FORMULA
 # ============================================================================
 
+
 def analyze_bh_entropy_problem():
     """
     Bekenstein-Hawking entropy: S = A / (4 l_P^2)
-    
+
     This formula is EXACT in string theory and loop quantum gravity
     But where does the area dependence come from geometrically?
-    
+
     W33 Answer: The entropy counts topological sectors that
                 can form on the event horizon
     """
-    
+
     print("=" * 70)
     print("PART 1: BLACK HOLE ENTROPY FROM W33")
     print("=" * 70)
-    
+
     # Physical constants
     k_B = 1.38e-23  # Boltzmann constant (J/K)
     c = 3e8  # Speed of light (m/s)
     G = 6.67e-11  # Gravitational constant (m^3/kg/s^2)
     hbar = 1.055e-34  # Reduced Planck constant (J·s)
-    
+
     # Planck length
-    l_P = math.sqrt((hbar * G) / (c ** 3))
-    
+    l_P = math.sqrt((hbar * G) / (c**3))
+
     print(f"\nFundamental Constants:")
     print(f"  Planck length: l_P = {l_P:.2e} m")
     print(f"  = {l_P * 1e35:.2e} (in units of 10^-35 m)")
-    
+
     # Bekenstein-Hawking entropy
     print(f"\nBekenstein-Hawking Formula:")
     print(f"  S_BH = (c^3 k_B) / (4 G ℏ) × A")
     print(f"  = A / (4 l_P^2)")
     print(f"  where A = event horizon surface area")
-    
+
     # Example: Solar mass black hole
     M_sun = 2e30  # kg
-    Schwarzschild_r = 2 * G * M_sun / (c ** 2)
-    A_sun = 4 * np.pi * Schwarzschild_r ** 2
-    
-    S_sun = A_sun / (4 * l_P ** 2)
-    
+    Schwarzschild_r = 2 * G * M_sun / (c**2)
+    A_sun = 4 * np.pi * Schwarzschild_r**2
+
+    S_sun = A_sun / (4 * l_P**2)
+
     print(f"\nExample: Solar Mass Black Hole")
     print(f"  Mass: 1 M_sun = {M_sun:.2e} kg")
     print(f"  Schwarzschild radius: {Schwarzschild_r:.2e} m")
     print(f"  Horizon area: {A_sun:.2e} m^2")
     print(f"  Entropy: S_BH = {S_sun:.2e} bits")
-    
-    return {
-        'planck_length': l_P,
-        'example_entropy': S_sun
-    }
+
+    return {"planck_length": l_P, "example_entropy": S_sun}
 
 
 def count_topological_states():
     """
     W33 Explanation:
-    
+
     Black hole horizon = boundary of spacetime (from W33)
     Topological states on boundary = how many ways to tile/organize the geometry
-    
+
     The boundary of a black hole is a SURFACE (2D)
     In W33, this surface must be tiled by triangles from V23
-    
+
     Number of triangles that fit in area A:
     N_triangles ~ A / (characteristic triangle size)
-    
+
     Each triangle is a microstate
     Entropy = log(number of microstates) = log(N_triangles)
-    
+
     But wait - not all arrangements are allowed!
     Only those consistent with W33 topology
     """
-    
+
     print("\n" + "=" * 70)
     print("PART 2: COUNTING TOPOLOGICAL MICROSTATES")
     print("=" * 70)
-    
+
     # W33 triangle size (in Planck units)
     # Each triangle has "area" ~ 1 (geometric unit)
     triangle_area_unit = 1  # Relative to Planck area
-    
+
     print(f"\nTopological Microstates on Black Hole Horizon:")
     print(f"  Horizon area: A")
     print(f"  Triangle area (characteristic): ~ l_P^2")
     print(f"  Number of triangles that fit: N ~ A / l_P^2")
-    
+
     # Each triangle is a state
     # But can combine into larger configurations
     # Constraint: must respect W33 incidence structure
-    
+
     # In V23, we have:
     # - 2160 fermion triangles (unicentric)
     # - 2880 boson triangles (acentric)
     # - 240 topological triangles (tricentric)
-    
+
     total_triangles = 5280
-    
+
     print(f"\nW33 Triangle Types:")
     print(f"  Fermion triangles: 2160")
     print(f"  Boson triangles: 2880")
     print(f"  Topological triangles: 240")
     print(f"  Total: 5280")
-    
+
     # Each type can contribute to horizon microstates
     # Combinatorial counting:
     # Number of ways to arrange N_fit triangles from 5280 types
-    
+
     # Simplified: Entropy ~ log(5280^(N_fit))
     #                      = N_fit × log(5280)
-    
+
     log_5280 = math.log(5280)
-    
+
     print(f"\nEntropy Calculation:")
     print(f"  S_BH = N_fit × ln(5280)")
     print(f"       = (A/l_P^2) × ln(5280)")
     print(f"  where ln(5280) ≈ {log_5280:.3f}")
-    
+
     # But Bekenstein-Hawking has coefficient 1/4
     # This comes from: only triangles on SURFACE contribute
     # Interior triangles don't carry entropy information
     # Surface fraction: 1/4 (from geometry)
-    
+
     print(f"\nGeometric Correction:")
     print(f"  Surface triangles / Total: ~ 1/4")
     print(f"  This comes from: surface area vs volume ratio")
     print(f"  Corrected: S_BH = (A/4l_P^2) × ln(5280)")
-    
-    return {
-        'total_types': total_triangles,
-        'entropy_factor': log_5280
-    }
+
+    return {"total_types": total_triangles, "entropy_factor": log_5280}
 
 
 def derive_planck_scale_coupling():
     """
     Interesting fact: ln(5280) ≈ 8.57
-    
+
     But standard black hole entropy uses different counting
     Where does the AREA formula come from?
-    
+
     Answer: W33 triangles are NOT all the same area!
     Some are smaller (higher density on horizon)
     Distribution of triangle sizes → continuous area limit
     """
-    
+
     print("\n" + "=" * 70)
     print("PART 3: CONTINUOUS LIMIT AND AREA LAW")
     print("=" * 70)
-    
+
     print(f"""
 From Discrete to Continuous:
 
@@ -204,7 +200,7 @@ The 1/4 factor:
     
     S_BH = (1/4) × (A/l_P^2) ✓ (exact coefficient)
 """)
-    
+
     return True
 
 
@@ -212,20 +208,20 @@ def test_against_string_theory():
     """
     String theory prediction (using holomorphic counting):
     S_BH = (A/4l_P^2) [universal result]
-    
+
     Loop quantum gravity prediction:
     S_BH = (A/4l_P^2) × (log(3)/(2π)) [small difference]
-    
+
     W33 prediction:
     S_BH = (A/4l_P^2) [matches string theory exactly!]
-    
+
     Why? Because W33 is MORE fundamental than either
     """
-    
+
     print("\n" + "=" * 70)
     print("PART 4: COMPARISON WITH OTHER APPROACHES")
     print("=" * 70)
-    
+
     print(f"""
 Black Hole Entropy Predictions:
 
@@ -273,80 +269,80 @@ Distinguishing Test:
     If experiment shows DIFFERENT value:
         New physics required beyond all three
 """)
-    
+
     return True
 
 
 def predict_black_hole_thermodynamics():
     """
     From entropy, we can derive full thermodynamics
-    
+
     Temperature: T = ℏ c^3 / (8π k_B G M)
-    
+
     This is Hawking temperature!
     Can we derive it from W33?
     """
-    
+
     print("\n" + "=" * 70)
     print("PART 5: COMPLETE BLACK HOLE THERMODYNAMICS")
     print("=" * 70)
-    
+
     # Physical constants (SI units)
     hbar = 1.055e-34
     c = 3e8
     G = 6.67e-11
     k_B = 1.38e-23
-    
+
     # Black hole thermodynamic relations
     print(f"\nFrom W33 Entropy, Full Thermodynamics Follows:")
     print(f"\n1. ENTROPY")
     print(f"   S_BH = A / (4 l_P^2)")
     print(f"   (counts topological triangles)")
-    
+
     print(f"\n2. TEMPERATURE (Hawking)")
     print(f"   T_H = ℏ c^3 / (8π k_B G M)")
     print(f"   (inverse relation to mass)")
-    
+
     print(f"\n3. ENERGY")
     print(f"   E = M c^2")
     print(f"   (rest energy of black hole)")
-    
+
     print(f"\n4. FIRST LAW")
     print(f"   dE = T dS")
     print(f"   = (T_H) × (dA/4l_P^2)")
     print(f"   = (ℏ c^3/8π G) × (dA/M)")
-    
+
     print(f"\n5. EVAPORATION RATE")
     print(f"   dM/dt = -(ℏ c^6) / (15360π G^2 M^2)")
     print(f"   (small black holes evaporate faster)")
-    
+
     print(f"\nAll Hawking Radiation Properties:")
     print(f"   ✓ Temperature ∝ 1/M (smaller = hotter)")
     print(f"   ✓ Entropy ∝ M^2 (larger = more entropy)")
     print(f"   ✓ Evaporation rate ∝ 1/M^2 (runaway)")
     print(f"   ✓ Total energy radiated = original rest mass")
     print(f"   ✓ Information paradox: states encoded in W33")
-    
+
     return True
 
 
 def solve_information_paradox():
     """
     The Black Hole Information Paradox:
-    
+
     Question: Where does information go when black hole evaporates?
-    
+
     W33 Answer: Information is ENCODED IN HOLONOMY
-    
+
     When black hole forms: initial information → geometric state
     When black hole evaporates: Hawking radiation encodes holonomy
     Information is NOT lost - it's in spacetime curvature!
     """
-    
+
     print("\n" + "=" * 70)
     print("PART 6: INFORMATION PARADOX RESOLUTION")
     print("=" * 70)
-    
+
     print(f"""
 The Information Paradox (Hawking 1974):
 
@@ -404,18 +400,18 @@ Implication:
     ✓ All information accessible (in principle)
     ✓ Quantum mechanics is consistent
 """)
-    
+
     return True
 
 
 def main():
     """Run black hole entropy analysis"""
-    
+
     print("\n" * 2)
     print("=" * 70)
     print(" BLACK HOLE ENTROPY FROM W33 HOLONOMY ".center(70))
     print("=" * 70)
-    
+
     # Run analyses
     bh_problem = analyze_bh_entropy_problem()
     microstates = count_topological_states()
@@ -423,12 +419,12 @@ def main():
     string_comp = test_against_string_theory()
     thermo = predict_black_hole_thermodynamics()
     paradox = solve_information_paradox()
-    
+
     # Summary
     print("\n" + "=" * 70)
     print("SUMMARY: BLACK HOLE ENTROPY FROM W33")
     print("=" * 70)
-    
+
     print(f"""
 Key Findings:
 
@@ -481,12 +477,9 @@ It emerges from counting W33 topological states.
 The information paradox is solved by W33 geometry.
 Black holes are perfect test of quantum geometry.
 """)
-    
-    return {
-        'bh_problem': bh_problem,
-        'microstates': microstates
-    }
+
+    return {"bh_problem": bh_problem, "microstates": microstates}
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     results = main()

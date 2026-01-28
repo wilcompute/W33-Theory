@@ -12,12 +12,13 @@ For Witting:    |⟨ψ|φ⟩|² = 1/3 for non-orthogonal pairs
 Question: Can we find MUB SUBSETS within the Witting structure?
 """
 
-import numpy as np
 from itertools import combinations
 
-print("="*70)
+import numpy as np
+
+print("=" * 70)
 print("PART CXLIX: MUB SUBSETS IN THE WITTING CONFIGURATION")
-print("="*70)
+print("=" * 70)
 
 omega = np.exp(2j * np.pi / 3)
 
@@ -25,45 +26,53 @@ omega = np.exp(2j * np.pi / 3)
 # BUILD WITTING STATES AND BASES
 # =====================================================
 
+
 def build_witting_states():
     states = []
     for i in range(4):
         v = np.zeros(4, dtype=complex)
         v[i] = 1
         states.append(v)
-    
+
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([0, 1, -omega**mu, omega**nu]) / np.sqrt(3))
+            states.append(np.array([0, 1, -(omega**mu), omega**nu]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([1, 0, -omega**mu, -omega**nu]) / np.sqrt(3))
+            states.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([1, -omega**mu, 0, omega**nu]) / np.sqrt(3))
+            states.append(np.array([1, -(omega**mu), 0, omega**nu]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
             states.append(np.array([1, omega**mu, omega**nu, 0]) / np.sqrt(3))
-    
+
     return states
+
 
 def find_bases(states):
     n = len(states)
-    adj = [[abs(np.vdot(states[i], states[j]))**2 < 1e-10 
-            for j in range(n)] for i in range(n)]
-    
+    adj = [
+        [abs(np.vdot(states[i], states[j])) ** 2 < 1e-10 for j in range(n)]
+        for i in range(n)
+    ]
+
     bases = []
     for i in range(n):
         neighbors_i = [j for j in range(n) if adj[i][j]]
         for j in neighbors_i:
-            if j <= i: continue
+            if j <= i:
+                continue
             for k in neighbors_i:
-                if k <= j or not adj[j][k]: continue
+                if k <= j or not adj[j][k]:
+                    continue
                 for l in neighbors_i:
-                    if l <= k or not adj[j][l] or not adj[k][l]: continue
-                    bases.append(frozenset([i,j,k,l]))
-    
+                    if l <= k or not adj[j][l] or not adj[k][l]:
+                        continue
+                    bases.append(frozenset([i, j, k, l]))
+
     return list(set(bases))
+
 
 states = build_witting_states()
 bases = find_bases(states)
@@ -75,9 +84,9 @@ print(f"Found {len(bases)} orthonormal bases")
 # MUB DEFINITION
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("MUTUALLY UNBIASED BASES (MUBs)")
-print("="*70)
+print("=" * 70)
 
 print("""
 DEFINITION:
@@ -104,26 +113,29 @@ But can we find SUBSETS of bases that ARE mutually unbiased?
 # CHECK PAIRWISE BASIS UNBIASEDNESS
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PAIRWISE BASIS ANALYSIS")
-print("="*70)
+print("=" * 70)
+
 
 def are_mub(basis1, basis2, tolerance=0.01):
     """Check if two bases are mutually unbiased (|⟨ψ|φ⟩|² = 1/4)"""
     for i in basis1:
         for j in basis2:
-            ip_sq = abs(np.vdot(states[i], states[j]))**2
+            ip_sq = abs(np.vdot(states[i], states[j])) ** 2
             if abs(ip_sq - 0.25) > tolerance:
                 return False, ip_sq
     return True, 0.25
+
 
 def inner_product_between_bases(basis1, basis2):
     """Get all inner products between two bases"""
     ips = []
     for i in basis1:
         for j in basis2:
-            ips.append(abs(np.vdot(states[i], states[j]))**2)
+            ips.append(abs(np.vdot(states[i], states[j])) ** 2)
     return ips
+
 
 # Check what inner products appear between different bases
 print("Inner products between different bases:")
@@ -135,7 +147,7 @@ for i, b1 in enumerate(bases):
             continue
         if b1 & b2:  # Bases share a state
             continue
-        
+
         ips = inner_product_between_bases(b1, b2)
         for ip in ips:
             ip_rounded = round(ip, 4)
@@ -151,9 +163,9 @@ for ip, count in sorted(ip_counts.items()):
 # SEARCH FOR MUB PAIRS
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SEARCHING FOR MUB PAIRS")
-print("="*70)
+print("=" * 70)
 
 # Check if ANY pair of bases is mutually unbiased
 mub_pairs = []
@@ -165,11 +177,11 @@ for i, b1 in enumerate(bases):
             continue
         if b1 & b2:  # Skip if bases share a state
             continue
-        
+
         ips = inner_product_between_bases(b1, b2)
         min_ip = min(ips)
         max_ip = max(ips)
-        
+
         if abs(min_ip - 0.25) < 0.01 and abs(max_ip - 0.25) < 0.01:
             mub_pairs.append((i, j))
         elif abs(min_ip - max_ip) < 0.01:  # Uniform but not 1/4
@@ -187,9 +199,9 @@ if almost_mub_pairs:
 # THE STANDARD MUBs IN ℂ⁴
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("STANDARD MUBs IN ℂ⁴")
-print("="*70)
+print("=" * 70)
 
 print("""
 In ℂ⁴, there exist 5 MUBs (the maximum possible for d=4):
@@ -207,81 +219,126 @@ These are DIFFERENT from the Witting configuration which uses ω₃ = e^{2πi/3}
 omega4 = np.exp(2j * np.pi / 4)  # = i
 
 # Computational basis
-mub_0 = [np.array([1,0,0,0]), np.array([0,1,0,0]), 
-         np.array([0,0,1,0]), np.array([0,0,0,1])]
+mub_0 = [
+    np.array([1, 0, 0, 0]),
+    np.array([0, 1, 0, 0]),
+    np.array([0, 0, 1, 0]),
+    np.array([0, 0, 0, 1]),
+]
 
 # Fourier basis (tensor of Hadamard)
-H = np.array([[1,1],[1,-1]]) / np.sqrt(2)
+H = np.array([[1, 1], [1, -1]]) / np.sqrt(2)
 HH = np.kron(H, H)
 mub_1 = [HH[:, i] for i in range(4)]
+
 
 # Other MUBs from tensor products
 def build_mub_4():
     """Build all 5 standard MUBs in ℂ⁴"""
     mubs = []
-    
+
     # B0: Computational
-    mubs.append([np.array([1,0,0,0], dtype=complex),
-                 np.array([0,1,0,0], dtype=complex),
-                 np.array([0,0,1,0], dtype=complex),
-                 np.array([0,0,0,1], dtype=complex)])
-    
+    mubs.append(
+        [
+            np.array([1, 0, 0, 0], dtype=complex),
+            np.array([0, 1, 0, 0], dtype=complex),
+            np.array([0, 0, 1, 0], dtype=complex),
+            np.array([0, 0, 0, 1], dtype=complex),
+        ]
+    )
+
     # B1-B4: From qubit tensor products with phases
     # Using the standard construction
     omega = np.exp(2j * np.pi / 4)  # i
-    
+
     # B1
     b1 = []
     for a in [0, 1]:
         for b in [0, 1]:
-            v = np.array([1, omega**(2*a), omega**(2*b), omega**(2*(a+b))]) / 2
+            v = (
+                np.array(
+                    [1, omega ** (2 * a), omega ** (2 * b), omega ** (2 * (a + b))]
+                )
+                / 2
+            )
             b1.append(v)
     mubs.append(b1)
-    
+
     # B2
     b2 = []
     for a in [0, 1]:
         for b in [0, 1]:
-            v = np.array([1, omega**(2*a+1), omega**(2*b), omega**(2*(a+b)+1)]) / 2
+            v = (
+                np.array(
+                    [
+                        1,
+                        omega ** (2 * a + 1),
+                        omega ** (2 * b),
+                        omega ** (2 * (a + b) + 1),
+                    ]
+                )
+                / 2
+            )
             b2.append(v)
     mubs.append(b2)
-    
+
     # B3
     b3 = []
     for a in [0, 1]:
         for b in [0, 1]:
-            v = np.array([1, omega**(2*a), omega**(2*b+1), omega**(2*(a+b)+1)]) / 2
+            v = (
+                np.array(
+                    [
+                        1,
+                        omega ** (2 * a),
+                        omega ** (2 * b + 1),
+                        omega ** (2 * (a + b) + 1),
+                    ]
+                )
+                / 2
+            )
             b3.append(v)
     mubs.append(b3)
-    
+
     # B4
     b4 = []
     for a in [0, 1]:
         for b in [0, 1]:
-            v = np.array([1, omega**(2*a+1), omega**(2*b+1), omega**(2*(a+b))]) / 2
+            v = (
+                np.array(
+                    [
+                        1,
+                        omega ** (2 * a + 1),
+                        omega ** (2 * b + 1),
+                        omega ** (2 * (a + b)),
+                    ]
+                )
+                / 2
+            )
             b4.append(v)
     mubs.append(b4)
-    
+
     return mubs
+
 
 standard_mubs = build_mub_4()
 
 print("Verifying standard MUBs:")
 for i in range(5):
-    for j in range(i+1, 5):
+    for j in range(i + 1, 5):
         ips = []
         for v1 in standard_mubs[i]:
             for v2 in standard_mubs[j]:
-                ips.append(abs(np.vdot(v1, v2))**2)
+                ips.append(abs(np.vdot(v1, v2)) ** 2)
         print(f"  B{i} vs B{j}: |⟨ψ|φ⟩|² = {set(np.round(ips, 4))}")
 
 # =====================================================
 # WITTING VS MUB COMPARISON
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("WITTING CONFIGURATION VS STANDARD MUBs")
-print("="*70)
+print("=" * 70)
 
 print("""
 COMPARISON:
@@ -312,16 +369,18 @@ Different inner products (1/3 vs 1/4) serve different purposes!
 # DO STANDARD MUBs APPEAR IN WITTING?
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("DO STANDARD MUBs APPEAR IN WITTING?")
-print("="*70)
+print("=" * 70)
+
 
 # Check if any standard MUB state is (close to) a Witting state
 def find_closest_witting(target):
     """Find the Witting state closest to target"""
-    overlaps = [abs(np.vdot(target, s))**2 for s in states]
+    overlaps = [abs(np.vdot(target, s)) ** 2 for s in states]
     max_idx = np.argmax(overlaps)
     return max_idx, overlaps[max_idx]
+
 
 print("Closest Witting states to standard MUB states:")
 for mub_idx, mub in enumerate(standard_mubs):
@@ -334,9 +393,9 @@ for mub_idx, mub in enumerate(standard_mubs):
 # EMBEDDED 3D MUBs
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("3D MUBs EMBEDDED IN WITTING?")
-print("="*70)
+print("=" * 70)
 
 print("""
 In ℂ³, there exist 4 MUBs (maximum for d=3).
@@ -352,7 +411,7 @@ to that vertex. Let's check if they contain 3D MUBs.
 """)
 
 # Get the 12 neighbors of vertex 0 (they span ℂ³)
-neighbors = [j for j in range(40) if abs(np.vdot(states[0], states[j]))**2 < 1e-10]
+neighbors = [j for j in range(40) if abs(np.vdot(states[0], states[j])) ** 2 < 1e-10]
 
 # Project to ℂ³ (drop first coordinate which is 0 for all neighbors)
 neighbor_states_3d = [states[n][1:4] for n in neighbors]
@@ -361,19 +420,23 @@ print(f"12 neighbors of |0⟩, projected to ℂ³:")
 for i, s in enumerate(neighbor_states_3d[:5]):
     print(f"  State {neighbors[i]}: {s}")
 
+
 # Find orthonormal bases within these 12 states
 def find_3d_bases(states_3d, indices):
     """Find all orthonormal bases (size 3) among the 3D states"""
     n = len(states_3d)
     bases_3d = []
     for i in range(n):
-        for j in range(i+1, n):
-            if abs(np.vdot(states_3d[i], states_3d[j]))**2 < 1e-10:
-                for k in range(j+1, n):
-                    if (abs(np.vdot(states_3d[i], states_3d[k]))**2 < 1e-10 and
-                        abs(np.vdot(states_3d[j], states_3d[k]))**2 < 1e-10):
+        for j in range(i + 1, n):
+            if abs(np.vdot(states_3d[i], states_3d[j])) ** 2 < 1e-10:
+                for k in range(j + 1, n):
+                    if (
+                        abs(np.vdot(states_3d[i], states_3d[k])) ** 2 < 1e-10
+                        and abs(np.vdot(states_3d[j], states_3d[k])) ** 2 < 1e-10
+                    ):
                         bases_3d.append((indices[i], indices[j], indices[k]))
     return bases_3d
+
 
 bases_in_3d = find_3d_bases(neighbor_states_3d, neighbors)
 print(f"\nFound {len(bases_in_3d)} orthonormal bases in the ℂ³ subspace:")
@@ -389,22 +452,22 @@ for i, b1 in enumerate(bases_in_3d):
             continue
         if set(b1) & set(b2):
             continue
-        
+
         ips = []
         for idx1 in b1:
             for idx2 in b2:
-                ip = abs(np.vdot(states[idx1], states[idx2]))**2
+                ip = abs(np.vdot(states[idx1], states[idx2])) ** 2
                 ips.append(ip)
-        
-        if all(abs(ip - 1/3) < 0.01 for ip in ips):
+
+        if all(abs(ip - 1 / 3) < 0.01 for ip in ips):
             mub_3d_pairs.append((b1, b2))
             print(f"  MUB pair: {b1} and {b2}")
 
 print(f"\nTotal 3D MUB pairs found: {len(mub_3d_pairs)}")
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PART CXLIX COMPLETE")
-print("="*70)
+print("=" * 70)
 
 print("""
 KEY FINDINGS:

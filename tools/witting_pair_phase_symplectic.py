@@ -4,6 +4,7 @@
 We use the explicit ray->F3 mapping (graph isomorphism) and test whether
 pairwise Pancharatnam phases admit simple algebraic forms over GF(3).
 """
+
 from __future__ import annotations
 
 import json
@@ -25,9 +26,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -51,7 +52,7 @@ def construct_f3_points():
 
 
 def omega_symp(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
 
 def build_adjacency_rays(rays, tol=1e-8):
@@ -86,8 +87,7 @@ def is_compatible(u, v, mapping, adj_r, adj_f):
 def backtrack(order, candidates, mapping, used, adj_r, adj_f):
     if len(mapping) == len(order):
         return mapping
-    u = min((u for u in order if u not in mapping),
-            key=lambda x: len(candidates[x]))
+    u = min((u for u in order if u not in mapping), key=lambda x: len(candidates[x]))
     for v in list(candidates[u]):
         if v in used:
             continue
@@ -137,6 +137,7 @@ def find_graph_isomorphism(rays, points):
 
 
 # ------------------ algebra over GF(3) ------------------
+
 
 def gauss_solve_mod3(A, b):
     """Solve A x = b over GF(3). Returns one solution or None."""
@@ -288,8 +289,10 @@ def main():
 
     out = {
         "non_orth_pairs": len(pairs),
-        "omega_distribution": {str(w): {str(k): by_omega[w].count(k) for k in sorted(set(by_omega[w]))}
-                                for w in [1, 2]},
+        "omega_distribution": {
+            str(w): {str(k): by_omega[w].count(k) for k in sorted(set(by_omega[w]))}
+            for w in [1, 2]
+        },
         "mod3_fit": bool(fit),
         "mod3_quadratic_fit": bool(quad_fit),
     }

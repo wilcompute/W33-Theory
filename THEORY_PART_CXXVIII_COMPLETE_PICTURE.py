@@ -16,21 +16,23 @@ THE KEY REALIZATION:
 - The 240 edges = E8 root count is NOT coincidental!
 """
 
-import numpy as np
-from itertools import combinations, product
 from collections import defaultdict
+from itertools import combinations, product
+
+import numpy as np
 
 # ============================================================
 # PART 1: THE DUAL INTERPRETATION
 # ============================================================
 
+
 def explain_dual_interpretation():
     """
     The Witting/W33 structure has two dual interpretations.
     """
-    print("="*70)
+    print("=" * 70)
     print("THE DUAL INTERPRETATION OF W33")
-    print("="*70)
+    print("=" * 70)
     print("""
     INTERPRETATION 1: ORTHOGONALITY GRAPH (Standard)
     ────────────────────────────────────────────────
@@ -60,28 +62,30 @@ def explain_dual_interpretation():
     This is why 27 keeps appearing - it's the "interference count"!
     """)
 
+
 # ============================================================
 # PART 2: THE CONTEXTUALITY STRUCTURE
 # ============================================================
 
+
 def build_bases_and_contexts():
     """
     Build the 40 orthogonal bases and analyze contextuality.
-    
+
     Contextuality = the same state belongs to multiple measurement contexts
     and its "value" depends on which other states are measured with it.
     """
     omega = np.exp(2j * np.pi / 3)
-    
+
     # Build Witting states
     states = []
-    
+
     # 4 basis states
     for i in range(4):
         s = np.zeros(4, dtype=complex)
         s[i] = 3
         states.append(s)
-    
+
     # 36 other states
     omega_powers = [1, omega, omega**2]
     for mu in range(3):
@@ -92,21 +96,21 @@ def build_bases_and_contexts():
             states.append(np.array([1, 0, -w_mu, -w_nu], dtype=complex))
             states.append(np.array([1, -w_mu, 0, w_nu], dtype=complex))
             states.append(np.array([1, w_mu, w_nu, 0], dtype=complex))
-    
+
     def normalize(v):
         return v / np.linalg.norm(v)
-    
+
     def is_orthogonal(v1, v2):
-        return np.abs(np.vdot(normalize(v1), normalize(v2)))**2 < 1e-10
-    
+        return np.abs(np.vdot(normalize(v1), normalize(v2))) ** 2 < 1e-10
+
     # Build adjacency for orthogonality
     adj = defaultdict(set)
     for i in range(40):
-        for j in range(i+1, 40):
+        for j in range(i + 1, 40):
             if is_orthogonal(states[i], states[j]):
                 adj[i].add(j)
                 adj[j].add(i)
-    
+
     # Find all 4-cliques (orthogonal bases)
     bases = []
     for i in range(40):
@@ -120,27 +124,27 @@ def build_bases_and_contexts():
                             if l > k:
                                 bases.append(tuple(sorted([i, j, k, l])))
     bases = list(set(bases))
-    
-    print("="*70)
+
+    print("=" * 70)
     print("CONTEXTUALITY STRUCTURE")
-    print("="*70)
+    print("=" * 70)
     print(f"\n40 states organize into {len(bases)} measurement bases")
-    
+
     # For each state, list which bases it belongs to
     state_to_bases = defaultdict(list)
     for bi, basis in enumerate(bases):
         for s in basis:
             state_to_bases[s].append(bi)
-    
+
     print("\nEach state belongs to exactly 4 bases:")
     for s in range(min(5, 40)):  # Show first 5
         print(f"  State {s}: bases {state_to_bases[s]}")
     print("  ...")
-    
+
     # Verify contextuality: check if assignment of values is possible
-    print("\n" + "-"*50)
+    print("\n" + "-" * 50)
     print("KOCHEN-SPECKER CONTEXTUALITY TEST")
-    print("-"*50)
+    print("-" * 50)
     print("""
     Can we assign each state a "value" (0 or 1) such that:
     - In each basis, exactly one state has value 1?
@@ -148,25 +152,25 @@ def build_bases_and_contexts():
     If NO, then quantum mechanics exhibits CONTEXTUALITY:
     the "value" of a state depends on which basis we measure.
     """)
-    
+
     # Try to find a valid coloring
     # This is equivalent to finding an independent set that hits each clique once
     # For Witting configuration, this is IMPOSSIBLE (Kochen-Specker)
-    
+
     # Try all 2^40 assignments? No, use constraint propagation
     # Actually, we can use the 10 "rank" bases as a starting point
     # (bases where all states have same rank in Vlasov's card notation)
-    
+
     print("Testing if contextual assignment exists...")
-    
+
     # The key insight: 40 states, 40 bases, each state in 4 bases
     # By counting: if assignment exists, exactly 40 states marked
     # But each marked state covers 4 bases, so 40*4/4 = 40 ✓ (counting works)
     # However, structural constraints make it impossible!
-    
+
     # Actually verify by trying to find valid assignment
     # Use constraint: in each basis, exactly 1 state is "marked"
-    
+
     def check_assignment_possible():
         """Try to find valid assignment using backtracking."""
         # Start with first basis
@@ -174,7 +178,7 @@ def build_bases_and_contexts():
             assignment = {first_choice}
             covered_bases = set([0])
             remaining_states = set(range(40)) - assignment
-            
+
             # Propagate: for each basis, check constraints
             def propagate(assignment, covered_bases):
                 changed = True
@@ -195,16 +199,16 @@ def build_bases_and_contexts():
                         if len(remaining_in_basis) == 0 and len(assigned_in_basis) == 0:
                             return None, None  # Contradiction!
                 return assignment, covered_bases
-            
+
             result = propagate(assignment.copy(), covered_bases.copy())
             if result[0] is not None:
                 return True, result[0]
-        
+
         return False, None
-    
+
     # For Witting configuration, the Penrose proof shows this is impossible
     # The geometric structure prevents any consistent assignment
-    
+
     print("""
     RESULT: No valid assignment exists!
     
@@ -217,54 +221,56 @@ def build_bases_and_contexts():
     - Maximum consistent assignment covers 34/40 bases (85%)
     - 6 bases will always have 0 or 2 marked states (contradiction)
     """)
-    
+
     return bases, state_to_bases
+
 
 # ============================================================
 # PART 3: THE E8 → WITTING → W33 CHAIN
 # ============================================================
 
+
 def analyze_e8_to_witting():
     """
     Analyze how E8 roots descend to Witting configuration.
-    
+
     E8 (240 roots in R^8)
-         ↓ 
+         ↓
     Witting polytope (240 vertices in C^4)
          ↓ (quotient by phase = 6 elements)
     Witting configuration (40 rays in CP^3 = 40 quantum states)
          ↓ (orthogonality graph)
     W33 = SRG(40, 12, 2, 4)
     """
-    print("\n" + "="*70)
+    print("\n" + "=" * 70)
     print("E8 → WITTING → W33 DESCENT")
-    print("="*70)
-    
+    print("=" * 70)
+
     # Build E8 roots
     e8_roots = []
-    
+
     # Type 1: (±1, ±1, 0^6) - 112 roots
     for i in range(8):
-        for j in range(i+1, 8):
+        for j in range(i + 1, 8):
             for s1 in [1, -1]:
                 for s2 in [1, -1]:
                     root = np.zeros(8)
                     root[i] = s1
                     root[j] = s2
                     e8_roots.append(root)
-    
+
     # Type 2: (±1/2)^8 with even parity - 128 roots
     for signs in product([1, -1], repeat=8):
         if sum(1 for s in signs if s == -1) % 2 == 0:
             root = np.array(signs) / 2
             e8_roots.append(root)
-    
+
     print(f"\nE8 root system: {len(e8_roots)} roots")
-    
+
     # Key observation: 240 / 6 = 40
     # The factor of 6 comes from the Z6 action
     print(f"\n240 / 6 = {240 // 6} = number of Witting rays!")
-    
+
     print("""
     THE QUOTIENT:
     ─────────────
@@ -282,10 +288,10 @@ def analyze_e8_to_witting():
     - Witting's 40 = quantum states (rays in projective space)
     - W33's 240 edges = "shadow" of E8's 240 roots!
     """)
-    
+
     # The W33 graph has 240 edges = |E8 roots|
     # This can't be coincidence - there must be a bijection!
-    
+
     print("""
     THE 240 EDGES OF W33:
     ────────────────────
@@ -301,20 +307,22 @@ def analyze_e8_to_witting():
     where each E8 root corresponds to an orthogonal pair
     of Witting states!
     """)
-    
+
     return e8_roots
+
 
 # ============================================================
 # PART 4: THE PHYSICS - QUANTUM KEY DISTRIBUTION
 # ============================================================
 
+
 def explain_qkd_protocol():
     """
     Explain how W33 structure is used for quantum cryptography.
     """
-    print("\n" + "="*70)
+    print("\n" + "=" * 70)
     print("W33 IN QUANTUM KEY DISTRIBUTION")
-    print("="*70)
+    print("=" * 70)
     print("""
     VLASOV'S QKD PROTOCOL:
     ─────────────────────
@@ -361,17 +369,19 @@ def explain_qkd_protocol():
     - Cryptographic security (hard to distinguish equivalent setups)
     """)
 
+
 # ============================================================
 # PART 5: THE COMPLETE MATHEMATICAL PICTURE
 # ============================================================
+
 
 def complete_picture():
     """
     Synthesize everything into the complete mathematical picture.
     """
-    print("\n" + "="*70)
+    print("\n" + "=" * 70)
     print("THE COMPLETE MATHEMATICAL PICTURE")
-    print("="*70)
+    print("=" * 70)
     print("""
     ╔══════════════════════════════════════════════════════════════════╗
     ║                     THE W33 HIERARCHY                            ║
@@ -424,17 +434,19 @@ def complete_picture():
     ╚══════════════════════════════════════════════════════════════════╝
     """)
 
+
 # ============================================================
 # PART 6: OPEN QUESTIONS
 # ============================================================
+
 
 def open_questions():
     """
     Document remaining questions for future investigation.
     """
-    print("\n" + "="*70)
+    print("\n" + "=" * 70)
     print("OPEN QUESTIONS")
-    print("="*70)
+    print("=" * 70)
     print("""
     MATHEMATICAL QUESTIONS:
     ───────────────────────
@@ -481,6 +493,7 @@ def open_questions():
        - Can it be visualized?
     """)
 
+
 # ============================================================
 # MAIN
 # ============================================================
@@ -492,7 +505,7 @@ if __name__ == "__main__":
     explain_qkd_protocol()
     complete_picture()
     open_questions()
-    
-    print("\n" + "="*70)
+
+    print("\n" + "=" * 70)
     print("END PART CXXVIII")
-    print("="*70)
+    print("=" * 70)
