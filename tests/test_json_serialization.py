@@ -1,8 +1,8 @@
 import re
 from pathlib import Path
 
+# pattern to detect json.dump(..., indent=2) without default=
 PATTERN = re.compile(r"json\.dump\([^\)]*indent\s*=\s*2[^\)]*\)")
-
 
 def test_no_plain_json_dump_with_indent():
     """Fail if any file contains json.dump(..., indent=2) without an explicit default= argument."""
@@ -43,3 +43,11 @@ def test_no_plain_json_dump_with_indent():
             "Found json.dump calls with indent=2 and no default=:\n" + "\n".join(msgs)
         )
     # otherwise pass
+
+def main():
+    PATTERN = re.compile(r"json\.dump\([^\)]*indent\s*=\s*2[^\)]*\)")
+
+
+if __name__ == '__main__':
+    main()
+
