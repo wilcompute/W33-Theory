@@ -1207,6 +1207,32 @@ coordinates.
 Doc: `docs/witting_f3_projective_map_test.md`  
 Script: `tools/witting_f3_projective_map_test.py`
 
+**External unitary search (computed):**  
+We attempted to map Witting rays to the **naive F₃⁴ grid rays**
+(v = (ω^a, ω^b, ω^c, ω^d)) via basis‑aligned unitaries. The target grid has
+**no orthonormal bases at all**, so no such unitary exists. This nails down that
+the correct F₃⁴ model requires a **non‑trivial embedding** (not the raw ω‑grid).
+
+Doc: `docs/witting_external_unitary_search.md`  
+Script: `tools/witting_external_unitary_search.py`
+
+**Triangle orbits under monomial symmetry (computed):**  
+Monomial symmetries (order 243) split non‑orthogonal triangles into orbits of
+sizes **9, 27, 81**, and the distribution depends on phase class. This shows the
+Pancharatnam signature is not just a global scalar, but an **orbit‑level label**
+of triangle geometry.
+
+Doc: `docs/witting_triangle_phase_orbits.md`  
+Script: `tools/witting_triangle_phase_orbits.py`
+
+**Phase formula search (computed):**  
+We searched for a linear phase rule k ≡ aμ₁+bν₁+cμ₂+dν₂+e (mod 12) by family.
+No simple linear formula exists in general; only one family pair admits a fit.
+So the phase lattice is **not** a trivial affine function of (μ,ν).
+
+Doc: `docs/witting_phase_formula_search.md`  
+Script: `tools/witting_phase_formula_search.py`
+
 **Example triangles (computed):**  
 Explicit ray triples with phases ±π/6 and ±π/2 are listed here:  
 `docs/witting_pancharatnam_examples.md`  
