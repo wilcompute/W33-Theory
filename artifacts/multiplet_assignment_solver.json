@@ -1,0 +1,24 @@
+{
+  "a2_classes": [
+    6,
+    7
+  ],
+  "e6_classes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "best_score": -6,
+  "best_mapping": {
+    "0": 2,
+    "1": 0,
+    "2": 4,
+    "3": 3,
+    "4": 1,
+    "5": 5
+  },
+  "note": "Weighted adjacency fit only; heuristic."
+}
