@@ -165,6 +165,10 @@ generator permutations, and the generated group with sign‑flip grows beyond
 Even more sharply, there exists a **length‑2** word in the generators that
 returns a root line to itself with **sign −1**, giving an explicit minimal
 cocycle witness.
+Finally, an antipodal‑pair check shows that the generator maps send only a
+small fraction of roots to antipodal pairs (typically far below 25%), so the
+explicit edge→root generator map is **not** an automorphism of the E8 root
+system in the usual orthogonal sense.
 See:
 ```
 tools/align_root_signs_for_we6.py
@@ -177,6 +181,8 @@ tools/compute_group_order_with_signflip.py
 artifacts/signflip_group_order.json
 tools/find_negative_sign_word.py
 artifacts/root_line_sign_negative_word.json
+tools/check_antipodal_preservation.py
+artifacts/antipodal_preservation.json
 ```
 **Exported bijection tables.** The full explicit edge↔root bijection is now
 exported for inspection and downstream analysis:
