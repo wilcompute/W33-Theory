@@ -1262,6 +1262,22 @@ exists at all.
 Doc: `docs/witting_unitary_grid_score_search.md`  
 Script: `tools/witting_unitary_grid_score_search.py`
 
+**Structured U(4) anneal (computed):**  
+Local perturbation/anneal search (5000 steps) still yields **best score 0/40**
+at strict tolerance and **1/40** at a looser tolerance. This strongly suggests
+there is **no nearby unitary** that maps the Witting rays into the naive grid.
+
+Doc: `docs/witting_unitary_grid_anneal.md`  
+Script: `tools/witting_unitary_grid_anneal.py`
+
+**Cubic mod‑3 phase laws (computed):**  
+Allowing **all degree ≤ 3 monomials** in (μ,ν) over GF(3), some family pairs
+admit a mod‑3 fit, but others still fail. Thus even **cubic** rules do **not**
+uniformly explain the phase lattice.
+
+Doc: `docs/witting_phase_cubic_formula_search.md`  
+Script: `tools/witting_phase_cubic_formula_search.py`
+
 **Example triangles (computed):**  
 Explicit ray triples with phases ±π/6 and ±π/2 are listed here:  
 `docs/witting_pancharatnam_examples.md`  
