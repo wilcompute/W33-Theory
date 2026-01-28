@@ -236,6 +236,25 @@ scripts/gap/psp43_index240_actions.g
 artifacts/psp43_index240_actions.json
 ```
 
+**Physical interpretation of the Z₂ obstruction (projective symmetry).**  
+The sign‑cocycle obstruction has a clean physics reading: the edge→root map is
+**projective**, not strictly linear. This is exactly what you expect when a
+symmetry acts on **spinor‑like objects** or states with a hidden **fermion
+parity**:
+
+- The **central Z₂ extension** we explicitly construct corresponds to the
+  familiar double‑cover phenomenon (e.g., SU(2) covering SO(3)).  
+- The failure of a global sign choice is a discrete **anomaly‑like obstruction**
+  to lifting the projective action to a true linear action on root vectors.  
+- In lattice gauge language, the cocycle behaves like a **Z₂ background flux**
+  on the 120 line‑orbits: locally trivial but globally obstructed.  
+
+In short: the combinatorial W33 symmetry acts as a **projective representation**
+on the E8 roots. This is not a flaw—it is the precise finite‑geometric analog of
+the spin‑statistics and fermion‑parity subtlety in continuum physics. The
+explicit central extension shows how the obstruction is resolved at the level of
+**signed lines**, not at the level of raw roots.
+
 **Central extension from true W(E6) action (resolved).** Using the **true**
 W(E6) even action (which preserves antipodal pairs), we built the signed line
 extension on 120 root lines. The resulting signed action has order **25,920**,
