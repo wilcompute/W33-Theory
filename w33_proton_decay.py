@@ -27,8 +27,7 @@ print("\n" + "=" * 80)
 print("EXPERIMENTAL STATUS")
 print("=" * 80)
 
-print(
-    """
+print("""
 PROTON DECAY SEARCHES
 =====================
 
@@ -45,8 +44,7 @@ Current limits (Super-Kamiokande):
 
 Minimal SU(5) predicted: τ ∼ 10³⁰ years → RULED OUT!
 SUSY SU(5) predicted: τ ∼ 10³⁴ years → being tested
-"""
-)
+""")
 
 tau_exp_limit = 2.4e34  # years, p → e⁺π⁰
 print(f"\nExperimental limit:")
@@ -65,8 +63,7 @@ print("=" * 80)
 M_P = 1.221e19  # Planck mass in GeV
 v_EW = 246  # Electroweak scale in GeV
 
-print(
-    """
+print("""
 GUT SCALE DERIVATION
 ====================
 
@@ -81,8 +78,7 @@ Standard GUT estimate: 2 × 10^16 GeV
 
 The discrepancy suggests we need 3^25:
   M_GUT = v_EW × 3^25 ≈ 2 × 10^15 GeV
-"""
-)
+""")
 
 # GUT scale calculations
 M_GUT_v1 = v_EW * 3**24
@@ -112,8 +108,7 @@ print("\n" + "=" * 80)
 print("PROTON LIFETIME CALCULATION")
 print("=" * 80)
 
-print(
-    """
+print("""
 PROTON DECAY IN GUT
 ===================
 
@@ -127,8 +122,7 @@ Where:
 
 W33 insight:
   α_GUT = 1/40 = 1/|W33|
-"""
-)
+""")
 
 # Parameters
 m_p = 0.938  # GeV
@@ -180,8 +174,7 @@ print("\n" + "=" * 80)
 print("W33 AND PROTON STRUCTURE")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE PROTON AS A W33 CONFIGURATION
 =================================
 
@@ -198,8 +191,7 @@ Properties:
 W33 counting:
   - Proton has 3 × 3 = 9 quarks (counting sea)
   - This matches 9 = K4 membership redundancy!
-"""
-)
+""")
 
 # Number of triangles in W33
 # Each K4 has 4 vertices, making (4 choose 3) = 4 triangles
@@ -219,8 +211,7 @@ print("\n" + "=" * 80)
 print("W33 DECAY AMPLITUDE")
 print("=" * 80)
 
-print(
-    """
+print("""
 PROTON DECAY FROM W33 TRANSITIONS
 =================================
 
@@ -240,8 +231,7 @@ Decay amplitude:
 The instanton action:
   S ∝ 81 × ln(3) = 81 × 1.099 = 89
   exp(-89) ≈ 10^(-39)
-"""
-)
+""")
 
 S_instanton = 81 * log(3)
 exp_S = exp(-S_instanton)
@@ -263,8 +253,7 @@ print("\n" + "=" * 80)
 print("PRECISE W33 PREDICTION")
 print("=" * 80)
 
-print(
-    """
+print("""
 W33 PROTON LIFETIME FORMULA
 ===========================
 
@@ -278,8 +267,7 @@ Where:
   ℏ/m_p c² = proton Compton time
 
 This gives an astronomically long lifetime!
-"""
-)
+""")
 
 # Calculate
 hbar = 6.582e-25  # GeV⋅s
@@ -316,8 +304,7 @@ print("\n" + "=" * 80)
 print("EXPERIMENTAL PROSPECTS")
 print("=" * 80)
 
-print(
-    """
+print("""
 HYPER-KAMIOKANDE
 ================
 
@@ -337,8 +324,7 @@ If W33 theory is correct:
 
 This is JUST BEYOND current limits!
 Hyper-K could see proton decay!
-"""
-)
+""")
 
 # W33 prediction range
 tau_w33_low = proton_lifetime(1e15, 1 / 40, m_p)
@@ -360,8 +346,7 @@ print("\n" + "=" * 80)
 print("PROTON DECAY SYNTHESIS")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                    PROTON DECAY FROM W33                                     ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
@@ -397,8 +382,7 @@ print(
 ║  if W33 prediction is correct!                                               ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print("\n" + "=" * 80)
 print("α_GUT = 1/40 = 1/|W(3,3)|")

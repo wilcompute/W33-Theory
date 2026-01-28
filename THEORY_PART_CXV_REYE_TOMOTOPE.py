@@ -33,8 +33,7 @@ print("\n" + "-" * 70)
 print(" SECTION 1: THE TOMOTOPE")
 print("-" * 70)
 
-print(
-    """
+print("""
   THE TOMOTOPE (Monson, Pellicer & Williams, 2012)
 
   An abstract 4-polytope (polychoron) with:
@@ -62,8 +61,7 @@ print(
 
   3. NAME: "Tomotope" - from Greek "tomos" (cut/section)
      related to how it slices the 24-cell structure
-"""
-)
+""")
 
 results["tomotope"] = {
     "rank": 4,
@@ -83,8 +81,7 @@ print("\n" + "-" * 70)
 print(" SECTION 2: THE REYE CONFIGURATION")
 print("-" * 70)
 
-print(
-    """
+print("""
   THE REYE CONFIGURATION (Theodor Reye, 1882)
 
   A (12₄, 16₃) configuration in projective geometry:
@@ -118,8 +115,7 @@ print(
   THE REYE CONFIGURATION IS THE 24-CELL PROJECTED
   FROM 4D EUCLIDEAN SPACE TO 3D PROJECTIVE SPACE
   ═══════════════════════════════════════════════════
-"""
-)
+""")
 
 results["reye"] = {
     "points": 12,
@@ -137,8 +133,7 @@ print("\n" + "-" * 70)
 print(" SECTION 3: TOMOTOPE-REYE CONNECTION")
 print("-" * 70)
 
-print(
-    """
+print("""
   THE DEEP CONNECTION (Monson & Pellicer, 2012):
 
   "The edges and faces of the tomotope have the same
@@ -160,8 +155,7 @@ print(
 
   These are EXACTLY the coordinates of the 24-cell vertices
   in Euclidean 4-space, reduced by antipodal identification!
-"""
-)
+""")
 
 results["connection"] = {
     "tomotope_edges": 12,
@@ -178,8 +172,7 @@ print("\n" + "-" * 70)
 print(" SECTION 4: THE FLAG COUNT 192 = |W(D4)|")
 print("-" * 70)
 
-print(
-    f"""
+print(f"""
   THE MAGICAL NUMBER 192:
 
   Tomotope flags = 192 = |W(D4)| = Weyl group of D4
@@ -203,8 +196,7 @@ print(
 
   24-cell symmetry = W(D4) × Triality
                    = 192 × 6 = 1152
-"""
-)
+""")
 
 print(f"\n  Verification:")
 print(f"    192 × 6 = {192 * 6} = |Aut(24-cell)| ✓")
@@ -226,8 +218,7 @@ print("\n" + "-" * 70)
 print(" SECTION 5: TRIALITY AND THE REYE CONFIGURATION")
 print("-" * 70)
 
-print(
-    """
+print("""
   FROM WIKIPEDIA - SECTION 2.1:
   "The Reye configuration and triality" (Manivel, 2006)
 
@@ -254,8 +245,7 @@ print(
   KEY INSIGHT:
   The 12 points decompose as 8 + 3 + 1 = 12
   Under triality, this becomes symmetric.
-"""
-)
+""")
 
 # =========================================================================
 # SECTION 6: Quantum Mechanics Connection
@@ -264,8 +254,7 @@ print("\n" + "-" * 70)
 print(" SECTION 6: QUANTUM MECHANICS CONNECTION")
 print("-" * 70)
 
-print(
-    """
+print("""
   THE BELL-KOCHEN-SPECKER THEOREM (Aravind, 2000):
 
   "The Reye configuration underlies some proofs of the
@@ -286,8 +275,7 @@ print(
   - W33 theory (through D4 triality and 192)
   - Foundations of quantum mechanics
   - Hidden variable impossibility proofs
-"""
-)
+""")
 
 # =========================================================================
 # SECTION 7: The Complete Picture
@@ -296,8 +284,7 @@ print("\n" + "-" * 70)
 print(" SECTION 7: THE COMPLETE PICTURE")
 print("-" * 70)
 
-print(
-    """
+print("""
   HIERARCHY OF STRUCTURES:
 
   24-cell (4D)
@@ -325,8 +312,7 @@ print(
   └─────────────────────────────────────────────────────┘
 
   And 270 = 27 × 10 = (E6 fund) × (SO(10) vector)
-"""
-)
+""")
 
 # =========================================================================
 # SECTION 8: Connection to W33
@@ -335,8 +321,7 @@ print("\n" + "-" * 70)
 print(" SECTION 8: CONNECTION TO W33")
 print("-" * 70)
 
-print(
-    """
+print("""
   W33 = SRG(40, 12, 2, 4) CONNECTIONS:
 
   1. EIGENVALUE MULTIPLICITY:
@@ -361,8 +346,7 @@ print(
   W(D4) = 192 → W(E6) = 51,840 = 192 × 270
                          ↓
                     Aut(W33)
-"""
-)
+""")
 
 # =========================================================================
 # SECTION 9: Summary
@@ -371,8 +355,7 @@ print("\n" + "=" * 70)
 print(" SUMMARY: THE TOMOTOPE-REYE-W33 SYNTHESIS")
 print("=" * 70)
 
-print(
-    """
+print("""
   KEY DISCOVERIES:
 
   1. TOMOTOPE has 192 flags = |W(D4)|
@@ -403,8 +386,7 @@ print(
   ALL CONNECTED THROUGH THE MAGIC NUMBER 192!
 
   ═══════════════════════════════════════════════════════════════
-"""
-)
+""")
 
 # =========================================================================
 # Save results

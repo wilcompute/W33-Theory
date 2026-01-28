@@ -716,8 +716,7 @@ def sage_verification_plan():
     """
     Outline what we need to verify rigorously in SageMath.
     """
-    print(
-        """
+    print("""
     SAGEMATH VERIFICATION TASKS:
     ============================
 
@@ -750,8 +749,7 @@ def sage_verification_plan():
        □ Check 229 is prime
        □ Analyze 1111 = 11 × 101
        □ Modular arithmetic patterns
-    """
-    )
+    """)
 
 
 sage_verification_plan()
@@ -769,8 +767,7 @@ def wild_ideas():
     """
     Speculative connections that might lead somewhere unexpected.
     """
-    print(
-        """
+    print("""
     SPECULATIVE DIRECTIONS TO EXPLORE:
     ===================================
 
@@ -808,8 +805,7 @@ def wild_ideas():
        - Integrated information from W33
        - Conscious experience as W33 state
        - Orchestrated objective reduction
-    """
-    )
+    """)
 
 
 wild_ideas()
@@ -822,8 +818,7 @@ print("\n" + "=" * 70)
 print("SECTION 12: SUMMARY & NEXT STEPS")
 print("=" * 70)
 
-print(
-    """
+print("""
 KEY FINDINGS FROM THIS EXPLORATION:
 ====================================
 
@@ -865,8 +860,7 @@ LONGER-TERM:
 2. Connect to geometric Langlands
 3. Explore holographic interpretations
 4. Write up for arXiv
-"""
-)
+""")
 
 # =============================================================================
 # SAVE EXPLORATION RESULTS

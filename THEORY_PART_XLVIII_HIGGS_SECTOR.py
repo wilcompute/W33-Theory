@@ -19,8 +19,7 @@ the interplay of W33 structure with the Planck scale.
 
 import numpy as np
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                    THEORY OF EVERYTHING - PART XLVIII                        ║
@@ -30,8 +29,7 @@ print(
 ║              Symmetry Breaking • Higgs Potential • VEV Structure             ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # W33 CONSTANTS (Dimensionless geometric counts with origins)
@@ -74,16 +72,14 @@ print()
 
 M_Planck = 1.221e19  # GeV - Planck mass
 
-print(
-    """
+print("""
 The electroweak VEV v = 246.22 GeV appears arbitrary in the Standard Model.
 In W33 theory, it emerges from the hierarchy:
 
   v² / M_Planck² = geometric factor
 
 Let's explore this...
-"""
-)
+""")
 
 # The hierarchy problem
 hierarchy = v_input / M_Planck
@@ -134,8 +130,7 @@ print("SECTION 2: THE HIGGS POTENTIAL FROM W33")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 The Standard Model Higgs potential is:
 
   V(H) = μ² |H|² + λ |H|⁴
@@ -147,8 +142,7 @@ where:
 After SSB:
   m_H² = 2 λ v²
   μ² = -λ v²
-"""
-)
+""")
 
 # Experimental Higgs mass
 m_H_exp = 125.25  # GeV
@@ -197,8 +191,7 @@ print("SECTION 3: ELECTROWEAK SYMMETRY BREAKING - CORRECTED ANALYSIS")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 After SSB: SU(2)_L × U(1)_Y → U(1)_em
 
 The gauge boson masses emerge from:
@@ -208,8 +201,7 @@ The gauge boson masses emerge from:
 where g, g' are gauge couplings.
 
 KEY INSIGHT: We need to find g and g' from W33!
-"""
-)
+""")
 
 # Experimental values
 m_W_exp = 80.377  # GeV (PDG 2023)
@@ -287,8 +279,7 @@ print("SECTION 4: THE HIGGS DOUBLET STRUCTURE FROM W33")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 The Standard Model has a single Higgs doublet:
 
   H = (H⁺, H⁰)ᵀ
@@ -297,8 +288,7 @@ with hypercharge Y = 1/2. After SSB:
   H → (0, v/√2)ᵀ + fluctuations
 
 WHY one doublet? W33 answers this!
-"""
-)
+""")
 
 # E6 27 decomposes under SM
 # 27 = (3,3,1) + (3̄,1,3) + (1,3̄,3) under SU(3)³ trinification
@@ -350,8 +340,7 @@ print("SECTION 5: VACUUM STABILITY FROM W33")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 A critical question: Is our vacuum stable?
 
 In the SM, λ runs with energy and can become negative at high scales.
@@ -359,8 +348,7 @@ This depends sensitively on m_H and m_t.
 
 The measured values put us in a METASTABLE region!
 W33 must address this.
-"""
-)
+""")
 
 # Vacuum stability condition
 # λ(μ) > 0 for all μ up to M_Planck
@@ -418,8 +406,7 @@ print("SECTION 6: EXTENDED HIGGS SECTOR - PREDICTIONS")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 Does W33 predict additional Higgs bosons?
 
 E6 models typically have extended Higgs sectors:
@@ -427,8 +414,7 @@ E6 models typically have extended Higgs sectors:
   - But most get large masses
 
 Let's see what W33 predicts...
-"""
-)
+""")
 
 # The 27 of E6 decomposes as:
 # Under SO(10): 27 = 16 + 10 + 1

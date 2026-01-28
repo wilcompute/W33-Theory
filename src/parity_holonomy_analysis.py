@@ -158,8 +158,7 @@ if __name__ == "__main__":
     print("INTERPRETATION")
     print("=" * 70)
 
-    print(
-        """
+    print("""
 Key observations:
 
 1. PARITY-HOLONOMY CONNECTION
@@ -182,5 +181,4 @@ Key observations:
    - Correlation with holonomy and centers
 
 This is building the full picture of how geometry encodes physics!
-"""
-    )
+""")

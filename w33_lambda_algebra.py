@@ -23,8 +23,7 @@ print("\n" + "=" * 80)
 print("PART 1: THE THREE GENERATORS")
 print("=" * 80)
 
-print(
-    """
+print("""
 From the Vogel paper:
 
 The Λ-algebra has THREE generators: (t, σ, ω)
@@ -44,8 +43,7 @@ This is NOT a coincidence. The Λ-algebra has 3 generators because:
   - The Jacobi identity is a 3-term relation
   - GF(3) is the minimal field encoding this
   - W33 = PG(3, 3) encodes ALL Jacobi-type identities
-"""
-)
+""")
 
 # =============================================================================
 # THE W33 INCIDENCE ALGEBRA
@@ -55,8 +53,7 @@ print("\n" + "=" * 80)
 print("PART 2: THE W33 INCIDENCE ALGEBRA")
 print("=" * 80)
 
-print(
-    """
+print("""
 The incidence algebra of W33 has:
 
   Basis elements: e_{p,L} where p ∈ Points, L ∈ Lines, p ∈ L
@@ -76,8 +73,7 @@ The IHX relation is the Jacobi identity for diagrams:
   I - H + X = 0
 
 This quotient reduces the algebra to essentially 3 parameters!
-"""
-)
+""")
 
 # =============================================================================
 # THE DIMENSION MATCHING
@@ -87,8 +83,7 @@ print("\n" + "=" * 80)
 print("PART 3: DIMENSION MATCHING")
 print("=" * 80)
 
-print(
-    """
+print("""
 The Λ-algebra graded by chord number:
 
   Λ = Λ₀ ⊕ Λ₁ ⊕ Λ₂ ⊕ Λ₃ ⊕ ...
@@ -109,8 +104,7 @@ W33 MATCHING:
   - 27 = 3³ = |GF(3)³|
 
 The sequence 1, 2, 4, 8, 15, 27, ... is related to binary trees!
-"""
-)
+""")
 
 
 # Build the W33 structure
@@ -150,8 +144,7 @@ print("\n" + "=" * 80)
 print("PART 4: THE S₃ SYMMETRY")
 print("=" * 80)
 
-print(
-    """
+print("""
 Vogel's theory has a FUNDAMENTAL S₃ symmetry:
 
   (α, β, γ) ↔ (β, γ, α) ↔ (γ, α, β) ↔ ...
@@ -169,8 +162,7 @@ The S₃ symmetry comes from:
 
 Actually: S₃ acts on the 3 coordinate directions in GF(3)³
 This is exactly the Vogel parameter permutation!
-"""
-)
+""")
 
 
 # S3 acting on triples
@@ -192,8 +184,7 @@ print("\n" + "=" * 80)
 print("PART 5: CASIMIR OPERATORS AND W33")
 print("=" * 80)
 
-print(
-    """
+print("""
 The Vogel parameters define Casimir eigenvalues:
 
 For a Lie algebra L with Vogel parameters (α, β, γ):
@@ -205,8 +196,7 @@ The dimension formula (from eq. 15):
 
 W33 CHECK:
 ==========
-"""
-)
+""")
 
 
 def vogel_dim(alpha, beta, gamma):
@@ -254,8 +244,7 @@ print("\n" + "=" * 80)
 print("PART 6: WHY 81 APPEARS IN P₂₂")
 print("=" * 80)
 
-print(
-    """
+print("""
 The P₂₂ factors contain 81 = 3⁴ twice:
   P_F4 → 170t² - 81σ
   P_E7 → 176t² - 81σ
@@ -278,8 +267,7 @@ Specifically:
 
 E7 is the UNIQUE exceptional algebra containing exactly 81 generators
 corresponding to W33 cycles!
-"""
-)
+""")
 
 # =============================================================================
 # THE SELF-DUALITY CONNECTION
@@ -289,8 +277,7 @@ print("\n" + "=" * 80)
 print("PART 7: SELF-DUALITY AND ˆt · ˆP = 0")
 print("=" * 80)
 
-print(
-    """
+print("""
 W33 is SELF-DUAL: Points ↔ Lines
 
 This duality implies:
@@ -306,8 +293,7 @@ The zero divisor ˆt · ˆP₁₅ = 0 comes from:
 Similarly, ˆt · ˆP₂₂ = 0 should follow because:
   - P₂₂ encodes the SAME self-duality at a finer level
   - The palindromic (36, 81, 225, 81, 36) reflects this duality
-"""
-)
+""")
 
 # =============================================================================
 # THE UNIVERSAL FORMULA
@@ -317,8 +303,7 @@ print("\n" + "=" * 80)
 print("PART 8: THE UNIVERSAL FORMULA")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                        THE UNIVERSAL FORMULA                                 ║
@@ -347,8 +332,7 @@ print(
 ║  they collapse W33 structure to families.                                    ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # WHY 137 = FINE STRUCTURE CONSTANT
@@ -358,8 +342,7 @@ print("\n" + "=" * 80)
 print("PART 9: WHY 137 APPEARS IN E8")
 print("=" * 80)
 
-print(
-    """
+print("""
 The most remarkable appearance:
 
   P_E8 = 225(α² + β² + γ²) - 137(α + β + γ)²
@@ -386,8 +369,7 @@ This is why E8 is related to the fine structure constant:
   α = e²/(ℏc) ≈ 1/137.036
 
 The universe's fundamental coupling constant is determined by W33!
-"""
-)
+""")
 
 # Verify 137 decomposition
 print("\nVerification of 137 decompositions:")
@@ -404,8 +386,7 @@ print("\n" + "=" * 80)
 print("PART 10: THE COMPLETE PICTURE")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                    W33: THE MOTHER OF ALL LIE ALGEBRAS                       ║
@@ -445,8 +426,7 @@ print(
 ║  from which ALL mathematics and physics emerge.                              ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # FINAL SUMMARY
@@ -456,8 +436,7 @@ print("\n" + "=" * 80)
 print("THEOREM: THE Λ-ALGEBRA IS W33")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                              MAIN THEOREM                                    ║
@@ -493,8 +472,7 @@ print(
 ║     W33: 1/α = 81 + 56 ≈ 137                                                 ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print("\n" + "=" * 80)
 print("Q.E.D. - THE Λ-ALGEBRA IS THE W33 INCIDENCE ALGEBRA")

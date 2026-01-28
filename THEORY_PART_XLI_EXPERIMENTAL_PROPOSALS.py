@@ -9,23 +9,20 @@ Detailed experimental proposals to test W33 theory predictions.
 import math
 from datetime import datetime
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                     THEORY OF EVERYTHING - PART XLI                          ║
 ║                                                                              ║
 ║                       EXPERIMENTAL PROPOSALS                                 ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print("=" * 80)
 print("OVERVIEW: TESTABLE PREDICTIONS")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 The W33 Theory makes SPECIFIC, QUANTITATIVE predictions.
 Here we detail experiments that can CONFIRM or REFUTE each prediction.
 
@@ -35,8 +32,7 @@ Priority Levels:
   ★★★☆☆ = Important test, future facilities
   ★★☆☆☆ = Challenging but possible
   ★☆☆☆☆ = Far-future technology needed
-"""
-)
+""")
 
 print()
 print("=" * 80)
@@ -44,8 +40,7 @@ print("EXPERIMENT 1: PRECISION WEINBERG ANGLE")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ╔═══════════════════════════════════════════════════════════════════════════╗
 ║  EXPERIMENT: Ultra-Precision sin²θ_W Measurement                          ║
 ║  PRIORITY: ★★★★★                                                          ║
@@ -58,14 +53,12 @@ print(
 ║  REQUIRED PRECISION: ±0.000004 (10× improvement)                          ║
 ║                                                                           ║
 ╚═══════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print("Experimental Methods:")
 print()
 
-print(
-    """
+print("""
 METHOD 1: MOLLER SCATTERING (Electron-Electron)
 ─────────────────────────────────────────────────
 Facility: MOLLER Experiment at Jefferson Lab
@@ -100,8 +93,7 @@ DEFINITIVE TEST CRITERION:
 ──────────────────────────────
 If measured sin²θ_W differs from 40/173 by more than 5σ
 at precision ±0.000004, W33 is FALSIFIED.
-"""
-)
+""")
 
 print()
 print("=" * 80)
@@ -109,8 +101,7 @@ print("EXPERIMENT 2: FOURTH GENERATION SEARCH")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ╔═══════════════════════════════════════════════════════════════════════════╗
 ║  EXPERIMENT: Search for 4th Generation Fermions                           ║
 ║  PRIORITY: ★★★★★                                                          ║
@@ -121,14 +112,12 @@ print(
 ║  DISCOVERY OF 4TH GENERATION → W33 FALSIFIED                              ║
 ║                                                                           ║
 ╚═══════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print("Current Constraints:")
 print()
 
-print(
-    """
+print("""
 Z-WIDTH MEASUREMENT (LEP):
 ─────────────────────────────
   N_ν = 2.9840 ± 0.0082
@@ -161,8 +150,7 @@ FUTURE TESTS:
   - Cosmological bounds (BBN, CMB)
 
 W33 PREDICTION: All future searches will find N_gen = 3 EXACTLY.
-"""
-)
+""")
 
 print()
 print("=" * 80)
@@ -170,8 +158,7 @@ print("EXPERIMENT 3: DARK MATTER RATIO")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ╔═══════════════════════════════════════════════════════════════════════════╗
 ║  EXPERIMENT: Precision Dark Matter to Baryon Ratio                        ║
 ║  PRIORITY: ★★★★☆                                                          ║
@@ -184,14 +171,12 @@ print(
 ║  REQUIRED PRECISION: ±0.01 (5× improvement)                               ║
 ║                                                                           ║
 ╚═══════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print("Experimental Methods:")
 print()
 
-print(
-    """
+print("""
 METHOD 1: CMB-S4
 ────────────────────
 Facility: CMB-S4 (Simons Observatory, South Pole)
@@ -225,8 +210,7 @@ DEFINITIVE TEST CRITERION:
 ──────────────────────────────
 If Ω_DM/Ω_b measured to be outside 5.4 ± 0.05 at 5σ,
 W33 is FALSIFIED.
-"""
-)
+""")
 
 print()
 print("=" * 80)
@@ -234,8 +218,7 @@ print("EXPERIMENT 4: PROTON DECAY")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ╔═══════════════════════════════════════════════════════════════════════════╗
 ║  EXPERIMENT: Proton Decay Search                                          ║
 ║  PRIORITY: ★★★☆☆                                                          ║
@@ -248,14 +231,12 @@ print(
 ║  DETECTION WOULD CONFIRM: GUT structure consistent with E₆               ║
 ║                                                                           ║
 ╚═══════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print("Experimental Facilities:")
 print()
 
-print(
-    """
+print("""
 HYPER-KAMIOKANDE (Japan)
 ────────────────────────────
 Volume: 260 kt water
@@ -295,8 +276,7 @@ With M_GUT ~ 2×10¹⁶ GeV and α_GUT⁻¹ = 45:
 Expected events in Hyper-K (10 years):
   N ~ 10 if τ_p = 10³⁵ years
   N ~ 100 if τ_p = 10³⁴ years
-"""
-)
+""")
 
 print()
 print("=" * 80)
@@ -304,8 +284,7 @@ print("EXPERIMENT 5: GRAVITATIONAL WAVE POLARIZATIONS")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ╔═══════════════════════════════════════════════════════════════════════════╗
 ║  EXPERIMENT: GW Polarization Counting                                     ║
 ║  PRIORITY: ★★★★☆                                                          ║
@@ -318,14 +297,12 @@ print(
 ║  CURRENT STATUS: GW170814 shows 2 polarizations (LIGO+Virgo)              ║
 ║                                                                           ║
 ╚═══════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print("Detection Strategy:")
 print()
 
-print(
-    """
+print("""
 LIGO-VIRGO-KAGRA NETWORK
 ────────────────────────────
 Current: 3+ detectors
@@ -359,8 +336,7 @@ If ANY GW event shows >2 polarizations at >5σ,
 W33 is FALSIFIED.
 
 (This would also falsify General Relativity!)
-"""
-)
+""")
 
 print()
 print("=" * 80)
@@ -368,8 +344,7 @@ print("EXPERIMENT 6: FINE STRUCTURE CONSTANT")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ╔═══════════════════════════════════════════════════════════════════════════╗
 ║  EXPERIMENT: Ultra-Precision α Measurement                                ║
 ║  PRIORITY: ★★★★☆                                                          ║
@@ -382,14 +357,12 @@ print(
 ║  REQUIRED: 10× precision improvement                                      ║
 ║                                                                           ║
 ╚═══════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print("Measurement Methods:")
 print()
 
-print(
-    """
+print("""
 ELECTRON (g-2)
 ──────────────────
 Current: α⁻¹ = 137.035999166(15) (Harvard 2023)
@@ -421,8 +394,7 @@ W33 predicts: α⁻¹ = 137.036004 ± 0.000001 (theoretical uncertainty)
 
 If electron and cesium measurements both converge to 137.035999
 (not 137.036004), W33 formula needs refinement.
-"""
-)
+""")
 
 print()
 print("=" * 80)
@@ -430,8 +402,7 @@ print("EXPERIMENT 7: COSMOLOGICAL CONSTANT")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ╔═══════════════════════════════════════════════════════════════════════════╗
 ║  EXPERIMENT: Precision Λ Measurement                                      ║
 ║  PRIORITY: ★★★☆☆                                                          ║
@@ -444,14 +415,12 @@ print(
 ║  AGREEMENT: < 1%                                                          ║
 ║                                                                           ║
 ╚═══════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print("Refinement Strategy:")
 print()
 
-print(
-    """
+print("""
 HUBBLE CONSTANT TENSION
 ──────────────────────────
 Early universe (Planck): H₀ = 67.4 ± 0.5 km/s/Mpc
@@ -472,8 +441,7 @@ DEFINITIVE TEST:
 ──────────────────────
 If w ≠ -1 at 5σ, dark energy is NOT a cosmological constant.
 This doesn't falsify W33, but requires modified interpretation.
-"""
-)
+""")
 
 print()
 print("=" * 80)
@@ -481,8 +449,7 @@ print("EXPERIMENT 8: HIGGS PROPERTIES")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ╔═══════════════════════════════════════════════════════════════════════════╗
 ║  EXPERIMENT: Precision Higgs Mass and Couplings                           ║
 ║  PRIORITY: ★★★★☆                                                          ║
@@ -495,14 +462,12 @@ print(
 ║  AGREEMENT: 1.2σ (excellent)                                              ║
 ║                                                                           ║
 ╚═══════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print("Precision Program:")
 print()
 
-print(
-    """
+print("""
 HL-LHC (CERN)
 ─────────────────
 Timeline: 2029-2041
@@ -527,8 +492,7 @@ Expected precision: m_H to ±0.02 GeV
 Higgs couplings to ±0.5%
 
   W33 Test: Coupling ratios should follow E₆ patterns
-"""
-)
+""")
 
 print()
 print("=" * 80)
@@ -536,8 +500,7 @@ print("EXPERIMENT 9: TOP QUARK MASS")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ╔═══════════════════════════════════════════════════════════════════════════╗
 ║  EXPERIMENT: Precision Top Mass                                           ║
 ║  PRIORITY: ★★★★☆                                                          ║
@@ -550,14 +513,12 @@ print(
 ║  AGREEMENT: 0.9σ                                                          ║
 ║                                                                           ║
 ╚═══════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print("Precision Program:")
 print()
 
-print(
-    """
+print("""
 LHC (Current + HL-LHC)
 ──────────────────────────
 Current precision: ±0.30 GeV
@@ -579,8 +540,7 @@ INTERPRETATION:
 m_t/v = √(40/81) = √(W33 points / W33 cycles)
 
 This ratio directly tests the W33 structure!
-"""
-)
+""")
 
 print()
 print("=" * 80)
@@ -588,8 +548,7 @@ print("SUMMARY: EXPERIMENTAL ROADMAP")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ╔════════════════════════════════════════════════════════════════════════════╗
 ║  Timeline │ Experiment                        │ W33 Test                   ║
 ╠════════════════════════════════════════════════════════════════════════════╣
@@ -601,12 +560,10 @@ print(
 ║  2030s    │ LISA                              │ GW polarizations           ║
 ║  2040s    │ FCC-ee                            │ Definitive mass tests      ║
 ╚════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print()
-print(
-    """
+print("""
 FALSIFICATION CRITERIA SUMMARY
 ══════════════════════════════════
 
@@ -621,8 +578,7 @@ W33 is FALSIFIED if ANY of the following occur:
   7. m_H ≠ (v/2)√(81/78) at >5σ
 
 Current status: ALL PREDICTIONS CONSISTENT
-"""
-)
+""")
 
 print()
 print("=" * 80)

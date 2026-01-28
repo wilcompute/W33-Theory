@@ -11,8 +11,7 @@ import itertools
 import math
 from fractions import Fraction
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                W33 THEORY OF EVERYTHING - PART XXVIII                        ║
@@ -22,8 +21,7 @@ print(
 ║                   Rigorous Foundations and Proofs                            ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # APPENDIX A: THE W(3,3) CONFIGURATION
@@ -34,8 +32,7 @@ print("APPENDIX A: THE W(3,3) CONFIGURATION")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ═══ Definition A.1: Finite Geometry GF(3) ═══
 
 The Galois field GF(3) = {0, 1, 2} with arithmetic modulo 3:
@@ -66,8 +63,7 @@ W(3,3) is defined as the generalized quadrangle embedded in PG(3,3).
   Incidence: Each point lies on exactly 4 lines
              Each line contains exactly 4 points
              Two points are collinear iff they share a line
-"""
-)
+""")
 
 # Count verification
 print("═══ Theorem A.1: Point Count ═══")
@@ -85,8 +81,7 @@ print("APPENDIX B: CYCLE STRUCTURE")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ═══ Definition B.1: Cycles in W(3,3) ═══
 
 A cycle in W(3,3) is a closed path of lines that returns to the starting point.
@@ -106,8 +101,7 @@ PROOF SKETCH:
   The cycles are indexed by elements of GF(3)⁴ = {0,1,2}⁴.
 
   |GF(3)⁴| = 3⁴ = 81  ∎
-"""
-)
+""")
 
 cycles = 3**4
 print(f"  Number of cycles = 3⁴ = {cycles}  ✓")
@@ -122,8 +116,7 @@ print("APPENDIX C: K4 SUBSTRUCTURES")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ═══ Definition C.1: K4 (Klein Four-Group) ═══
 
 K4 = ℤ₂ × ℤ₂ = {e, a, b, c} with multiplication table:
@@ -156,8 +149,7 @@ PROOF:
     Van Oss polygons: 90 total
 
   By direct enumeration of 4-point K4 patterns: 90  ∎
-"""
-)
+""")
 
 k4s = 90
 print(f"  Number of K4 substructures = {k4s}  ✓")
@@ -172,8 +164,7 @@ print("APPENDIX D: AUTOMORPHISM GROUP")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ═══ Definition D.1: Automorphism Group ═══
 
 Aut(W33) = {σ: W33 → W33 | σ is a bijection preserving incidence}
@@ -199,8 +190,7 @@ PROOF:
     |Aut(W33)| = 2⁷ × 3⁴ × 5
                = 128 × 81 × 5
                = 51,840  ∎
-"""
-)
+""")
 
 # Verify factorization
 aut_size = 2**7 * 3**4 * 5
@@ -222,8 +212,7 @@ print("APPENDIX E: THE WITTING POLYTOPE")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ═══ Definition E.1: The Witting Polytope ═══
 
 The Witting polytope is a regular complex polytope in ℂ⁴ with:
@@ -262,8 +251,7 @@ PROOF:
     |ℂP³ points| = (3⁴-1)/(3-1) = 40
 
   The 40 diameters correspond to 40 points of W33!  ∎
-"""
-)
+""")
 
 print(f"  Witting polytope: 240 vertices, 40 diameters")
 print(f"  240 = |E8 roots|, 40 = |W33 points|  ✓")
@@ -278,8 +266,7 @@ print("APPENDIX F: EXCEPTIONAL LIE ALGEBRAS")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ═══ Definition F.1: Exceptional Lie Algebras ═══
 
 The five exceptional simple Lie algebras are:
@@ -314,8 +301,7 @@ The automorphism group of W33 equals the Weyl group of E6:
   Aut(W33) ≅ W(E6)
 
 This is the KEY connection between combinatorics and Lie theory!
-"""
-)
+""")
 
 print("  Exceptional Weyl groups:")
 print(f"    |W(G2)| = 12")
@@ -334,8 +320,7 @@ print("APPENDIX G: EXCEPTIONAL JORDAN ALGEBRA J₃(𝕆)")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ═══ Definition G.1: Jordan Algebra ═══
 
 A Jordan algebra (J, ∘) is a vector space with product ∘ satisfying:
@@ -373,8 +358,7 @@ The structure group of J₃(𝕆) (preserving determinant) is E₆.
 
   E₆ acts on J₃(𝕆), preserving the cubic norm.
   The 27-dim representation of E₆ is exactly J₃(𝕆)!
-"""
-)
+""")
 
 dim_j3o = 3 + 3 * 8
 print(f"  dim(J₃(𝕆)) = 3 + 3×8 = {dim_j3o} = 27  ✓")
@@ -389,8 +373,7 @@ print("APPENDIX H: DERIVATION OF α⁻¹ = 137")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ═══ Theorem H.1: Fine Structure Constant ═══
 
   α⁻¹ = 81 + 56 = 137
@@ -433,8 +416,7 @@ This correction arises from:
   - Box diagrams: +0.001
 
 Total: ≈ 0.036  ✓
-"""
-)
+""")
 
 alpha_tree = 81 + 56
 print(f"  α⁻¹(tree) = 81 + 56 = {alpha_tree}  ✓")
@@ -451,8 +433,7 @@ print("APPENDIX I: DERIVATION OF sin²θ_W = 40/173")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ═══ Theorem I.1: Weinberg Angle ═══
 
   sin²θ_W = 40/173
@@ -487,8 +468,7 @@ Step 4: Final ratio
           = 40 / 173
 
 ═══ Numerical Verification ═══
-"""
-)
+""")
 
 sin2_w33 = Fraction(40, 173)
 sin2_exp = 0.23121
@@ -517,8 +497,7 @@ print("APPENDIX J: DERIVATION OF Ω_DM/Ω_b = 27/5")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ═══ Theorem J.1: Dark/Visible Matter Ratio ═══
 
   Ω_DM / Ω_b = 27/5 = 5.4
@@ -559,8 +538,7 @@ Step 4: Physical picture
     Ω_DM/Ω_b = 27/5 = 5.4
 
 ═══ Numerical Verification ═══
-"""
-)
+""")
 
 dm_w33 = Fraction(27, 5)
 dm_exp = 5.41  # Planck 2018
@@ -579,8 +557,7 @@ print("APPENDIX K: COSMOLOGICAL CONSTANT FROM 121")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ═══ Theorem K.1: Λ ~ 10⁻¹²¹ ═══
 
   The cosmological constant Λ ≈ 10⁻¹²² in Planck units.
@@ -623,8 +600,7 @@ Step 3: Physical interpretation
     - Integration over cycles (factor of 3⁴/8 ≈ 10)
     - The 11 = √121 (M-theory connection)
     - Higher-order W33 corrections
-"""
-)
+""")
 
 w33_total = 40 + 81
 print(f"  W33 total = 40 + 81 = {w33_total}")
@@ -642,8 +618,7 @@ print("APPENDIX L: PROTON LIFETIME FROM 81 CYCLES")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ═══ Theorem L.1: τ_proton ~ exp(81) ═══
 
   Proton lifetime τ_p ~ exp(81) × (fundamental time scale)
@@ -670,8 +645,7 @@ Step 2: W33 connection
     τ_p ~ exp(81)
 
 Step 3: Numerical estimate
-"""
-)
+""")
 
 import math
 
@@ -707,8 +681,7 @@ print("APPENDIX M: CP VIOLATION FROM WITTING PHASES")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ═══ Theorem M.1: Discrete Phase Structure ═══
 
   The Witting polytope has natural phases: 0, ±2π/3 (cube roots of unity)
@@ -746,8 +719,7 @@ Step 4: Phase difference
 
   W33 explanation: Only discrete phases 0, ±2π/3 are allowed.
   θ_QCD = 0 is selected by the discrete symmetry.
-"""
-)
+""")
 
 delta_ckm = 68.8  # degrees
 delta_pmns = 195  # degrees (hint)
@@ -770,8 +742,7 @@ print("APPENDIX N: FERMION MASS HIERARCHIES")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ═══ Theorem N.1: Koide Formula ═══
 
   The Koide formula states:
@@ -793,8 +764,7 @@ print(
   m_t / m_b ≈ 41 ≈ 40 = W33 points
   m_τ / m_μ ≈ 16.8 ≈ 81/5 = 16.2
   m_μ / m_e ≈ 207 ≈ 3×81 - 40 = 203
-"""
-)
+""")
 
 # Calculate Koide Q
 m_e = 0.511  # MeV
@@ -819,8 +789,7 @@ print("MATHEMATICAL APPENDIX SUMMARY")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ╔═══════════════════════════════════════════════════════════════════════════════╗
 ║                        KEY MATHEMATICAL RESULTS                               ║
 ╠═══════════════════════════════════════════════════════════════════════════════╣
@@ -839,8 +808,7 @@ print(
 ║  M.  δ_PMNS - δ_CKM = 2π/3 (Witting phase)                                    ║
 ║  N.  Koide Q = 2/3 = 2×27/81                                                  ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print("=" * 80)
 print("END OF PART XXVIII: MATHEMATICAL APPENDIX")

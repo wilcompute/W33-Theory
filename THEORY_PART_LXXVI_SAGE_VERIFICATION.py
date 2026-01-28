@@ -39,14 +39,12 @@ print("SECTION 1: CONSTRUCTING W33 = SRG(40, 12, 2, 4)")
 print("=" * 70)
 
 if SAGE_AVAILABLE:
-    print(
-        """
+    print("""
     W33 is the graph of isotropic 1-dimensional subspaces
     of F_3^4 with respect to a symplectic form.
 
     Two 1-spaces are adjacent iff their sum is isotropic.
-    """
-    )
+    """)
 
     # Define the field and vector space
     F3 = GF(3)
@@ -296,13 +294,11 @@ print("\n" + "=" * 70)
 print("SECTION 5: ALPHA FORMULA VERIFICATION")
 print("=" * 70)
 
-print(
-    """
+print("""
 α⁻¹ = 12² - 2×4 + 1 + 40/1111 = 137.036004
 
 Let's verify each component comes from W33:
-"""
-)
+""")
 
 # All values from W33
 v, k, lam, mu = 40, 12, 2, 4
@@ -407,8 +403,7 @@ results = {
 with open("PART_LXXVI_verification.json", "w") as f:
     json.dump(results, f, indent=2, default=int)
 
-print(
-    """
+print("""
 VERIFICATION COMPLETE!
 
 ✓ W33 = SRG(40, 12, 2, 4) from symplectic geometry
@@ -419,6 +414,5 @@ VERIFICATION COMPLETE!
 ✓ All masses from W33 arithmetic
 
 Results saved to PART_LXXVI_verification.json
-"""
-)
+""")
 print("=" * 70)

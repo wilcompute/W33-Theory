@@ -5,8 +5,7 @@ Final update: All discoveries in one comprehensive summary
 
 
 def main():
-    print(
-        """
+    print("""
     ╔══════════════════════════════════════════════════════════════════════╗
     ║                  W33 GEOMETRY → PARTICLE PHYSICS                     ║
     ║                    COMPLETE EVIDENCE SUMMARY                         ║
@@ -294,8 +293,7 @@ def main():
     If yes → This becomes the leading TOE candidate
     If no → We learn why finite geometry alone insufficient
     ═════════════════════════════════════════════════════════════════════════
-    """
-    )
+    """)
 
 
 if __name__ == "__main__":

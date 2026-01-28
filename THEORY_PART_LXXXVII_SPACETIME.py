@@ -33,8 +33,7 @@ print("\n" + "=" * 70)
 print("SECTION 1: THE DIMENSION PROBLEM")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE PUZZLE:
 
 W33 has 40 vertices (dimensions in some sense).
@@ -49,8 +48,7 @@ String theory: 10 = 4 + 6 (spacetime + Calabi-Yau)
 W33 theory:    40 = 4 + 36 (spacetime + ???)
 
 Let's explore how spacetime could EMERGE.
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 2: EIGENVALUE STRUCTURE
@@ -60,8 +58,7 @@ print("\n" + "=" * 70)
 print("SECTION 2: EIGENVALUE DECOMPOSITION")
 print("=" * 70)
 
-print(
-    f"""
+print(f"""
 The eigenvalues of W33 are:
 
   e₁ = {e1} with multiplicity m₁ = {m1}
@@ -81,8 +78,7 @@ SPECULATION:
   - m₃ = 15 → matter content
 
 But where are the 3 spatial dimensions?
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 3: THE LORENTZ SIGNATURE
@@ -92,8 +88,7 @@ print("\n" + "=" * 70)
 print("SECTION 3: LORENTZ SIGNATURE FROM EIGENVALUES")
 print("=" * 70)
 
-print(
-    """
+print("""
 Spacetime has signature (-,+,+,+) or (1,3).
 
 The W33 eigenvalues are: 12, 2, -4
@@ -118,8 +113,7 @@ In PROJECTIVE terms:
   15 = 1 + 14 under some subgroup
 
   Could give: 1 time + 3 space + more
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 4: COMPACTIFICATION
@@ -129,8 +123,7 @@ print("\n" + "=" * 70)
 print("SECTION 4: COMPACTIFICATION MECHANISM")
 print("=" * 70)
 
-print(
-    """
+print("""
 HOW EXTRA DIMENSIONS HIDE:
 
 In Kaluza-Klein theory, extra dimensions are "compactified"
@@ -155,8 +148,7 @@ If R ~ L_Planck/3¹⁸ (from GUT scale):
   KK masses ~ 10¹⁵ GeV (too heavy to observe)
 
 Only zero modes (n=0) are light - these are SM particles!
-"""
-)
+""")
 
 # Calculate KK mass scale
 M_Planck = 1.22e19  # GeV
@@ -175,8 +167,7 @@ print("\n" + "=" * 70)
 print("SECTION 5: GEOMETRY FROM GRAPH DISTANCE")
 print("=" * 70)
 
-print(
-    """
+print("""
 GRAPH GEOMETRY:
 
 W33 has natural "distance" - the graph distance.
@@ -197,14 +188,12 @@ In the limit v → ∞, the graph could approximate a manifold.
 
 W33 is FINITE (v=40), so it gives DISCRETE spacetime.
 But at scales >> L_Planck, it looks continuous.
-"""
-)
+""")
 
 # Compute graph distances in W33
 # (We'd need the actual adjacency matrix; let's reason about it)
 
-print(
-    """
+print("""
 METRIC STRUCTURE:
 
 In W33:
@@ -219,8 +208,7 @@ The "volume" at distance d:
 
 This is like a BALL in W33-space!
 The growth rate (1, 12, 27) is different from Euclidean (1, 6, 18 in 3D).
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 6: TIME EMERGES FROM GRAPH DYNAMICS
@@ -230,8 +218,7 @@ print("\n" + "=" * 70)
 print("SECTION 6: EMERGENCE OF TIME")
 print("=" * 70)
 
-print(
-    """
+print("""
 TIME FROM GRAPH EVOLUTION:
 
 Space might be "frozen" in the graph structure.
@@ -254,8 +241,7 @@ If the universe "ticks" through automorphisms:
 
 This is incredibly fast! The "cosmic clock" ticks
 at frequencies ~ 10³⁹ Hz.
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 7: THE HOLOGRAPHIC PRINCIPLE
@@ -265,8 +251,7 @@ print("\n" + "=" * 70)
 print("SECTION 7: HOLOGRAPHIC EMERGENCE")
 print("=" * 70)
 
-print(
-    """
+print("""
 HOLOGRAPHY:
 
 The holographic principle says:
@@ -286,8 +271,7 @@ Consider: W33 eigenspaces as "holographic screens"
 The formula 40 = 4 + 36 could mean:
   4 = projected dimensions (spacetime)
   36 = encoding dimensions (holographic data)
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 8: LORENTZ INVARIANCE
@@ -297,8 +281,7 @@ print("\n" + "=" * 70)
 print("SECTION 8: LORENTZ SYMMETRY")
 print("=" * 70)
 
-print(
-    """
+print("""
 LORENTZ INVARIANCE:
 
 Special relativity requires Lorentz symmetry: SO(3,1).
@@ -323,14 +306,12 @@ Let's check if Aut(W33) contains a 6-dimensional subspace:
 
 |SO(3,1)| is a Lie group (infinite), but its discrete subgroups
 could live inside the finite group Aut(W33).
-"""
-)
+""")
 
 # The rotations SO(3) has discrete subgroups like A₄, S₄, A₅
 # |A₄| = 12, |S₄| = 24, |A₅| = 60
 
-print(
-    """
+print("""
 DISCRETE LORENTZ:
 
 At the Planck scale, Lorentz symmetry might be DISCRETE!
@@ -342,8 +323,7 @@ This is TESTABLE:
 
 If W33 is fundamental, there should be TINY deviations
 from perfect Lorentz symmetry at extreme energies!
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 9: WHY 3+1?
@@ -353,8 +333,7 @@ print("\n" + "=" * 70)
 print("SECTION 9: WHY 3 SPACE + 1 TIME?")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE DEEP QUESTION: Why is spacetime (3+1)-dimensional?
 
 W33 ANSWER ATTEMPT:
@@ -384,8 +363,7 @@ Time dimension:
 
 RESULT: Spacetime = (1 time) + (3 space) = 4 dimensions
         Internal = 40 - 4 = 36 dimensions (compactified)
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 10: SUMMARY
@@ -395,8 +373,7 @@ print("\n" + "=" * 70)
 print("SECTION 10: HOW SPACETIME EMERGES")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE EMERGENCE STORY:
 
 1. FUNDAMENTAL LEVEL: W33 graph with 40 vertices
@@ -433,8 +410,7 @@ This resolves many puzzles:
   - Why is spacetime smooth? (Continuum limit)
   - Why Lorentz invariance? (Approximate symmetry)
   - What is quantum gravity? (Graph dynamics)
-"""
-)
+""")
 
 # =============================================================================
 # SAVE RESULTS
@@ -471,8 +447,7 @@ print("\n" + "=" * 70)
 print("PART LXXXVII CONCLUSIONS")
 print("=" * 70)
 
-print(
-    """
+print("""
 SPACETIME FROM W33!
 
 KEY INSIGHTS:
@@ -493,5 +468,4 @@ It emerges from the W33 graph structure.
 This is a radical but testable proposal.
 
 Results saved to PART_LXXXVII_spacetime.json
-"""
-)
+""")

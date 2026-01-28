@@ -40,8 +40,7 @@ print("\n" + "=" * 80)
 print("PART 1: THE ER=EPR CONJECTURE")
 print("=" * 80)
 
-print(
-    """
+print("""
 EINSTEIN'S TWO PAPERS OF 1935
 =============================
 
@@ -71,8 +70,7 @@ WHY THIS MATTERS:
   Unifies quantum mechanics and gravity!
   Entanglement IS geometry.
   Spacetime emerges from entanglement.
-"""
-)
+""")
 
 # =============================================================================
 # PART 2: W33 CYCLES AS WORMHOLES
@@ -82,8 +80,7 @@ print("\n" + "=" * 80)
 print("PART 2: W33 CYCLES AS WORMHOLES")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE INSIGHT
 ===========
 
@@ -100,8 +97,7 @@ These ARE the wormholes!
 
 The entanglement structure of the universe
 IS the W33 cycle structure.
-"""
-)
+""")
 
 
 class W33Wormhole:
@@ -171,8 +167,7 @@ print("\n" + "=" * 80)
 print("PART 3: ENTANGLEMENT STRUCTURE OF W33")
 print("=" * 80)
 
-print(
-    """
+print("""
 ENTANGLEMENT IN QUANTUM MECHANICS
 =================================
 
@@ -192,8 +187,7 @@ W33 ENTANGLEMENT:
     - 7 outer points entangled with 1 center
     - Triple structure (Z₃) = W-state-like
     - Phase structure (Z₄) = GHZ-like
-"""
-)
+""")
 
 
 def compute_entanglement_matrix(n_points=40, n_cycles=81):
@@ -237,8 +231,7 @@ print("\n" + "=" * 80)
 print("PART 4: SPACETIME EMERGES FROM ENTANGLEMENT")
 print("=" * 80)
 
-print(
-    """
+print("""
 VAN RAAMSDONK'S INSIGHT
 ========================
 
@@ -259,8 +252,7 @@ W33 IMPLICATION:
 
   The 40 points are only connected BECAUSE of
   the 81 cycles (entanglement/wormholes).
-"""
-)
+""")
 
 
 def remove_wormhole(E, wormhole_id):
@@ -336,8 +328,7 @@ print("\n" + "=" * 80)
 print("PART 5: WHY 81 WORMHOLES?")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE NUMBER 81 EXPLAINED
 =======================
 
@@ -360,8 +351,7 @@ Too few wormholes → spacetime fragments
 Too many wormholes → no local physics (everything entangled with everything)
 
 81 is the GOLDILOCKS number!
-"""
-)
+""")
 
 # Verify the relationship
 q = 3
@@ -386,8 +376,7 @@ print("\n" + "=" * 80)
 print("PART 6: TRAVERSABLE VS NON-TRAVERSABLE WORMHOLES")
 print("=" * 80)
 
-print(
-    """
+print("""
 CLASSICAL WORMHOLES: NON-TRAVERSABLE
 ====================================
 
@@ -416,8 +405,7 @@ W33 WORMHOLES:
 
   However: CORRELATIONS can propagate.
   This is exactly quantum entanglement!
-"""
-)
+""")
 
 
 def traverse_wormhole(wormhole, data):
@@ -457,8 +445,7 @@ print("\n" + "=" * 80)
 print("PART 7: GRAVITY FROM ENTANGLEMENT")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE RINDLER HORIZON
 ===================
 
@@ -483,8 +470,7 @@ W33 GRAVITY:
     - Connection = being "close" in spacetime
 
   GRAVITY = tendency toward maximum entanglement!
-"""
-)
+""")
 
 
 def gravitational_potential(E, point):
@@ -512,8 +498,7 @@ print("\n" + "=" * 80)
 print("PART 8: THE THERMOFIELD DOUBLE")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE THERMOFIELD DOUBLE STATE
 ============================
 
@@ -535,8 +520,7 @@ W33 THERMOFIELD DOUBLE:
 
   This is why W33 works for a complete ToE:
   It's self-dual, containing both sides!
-"""
-)
+""")
 
 
 def create_thermofield_double(n_points=40, beta=1.0):
@@ -578,8 +562,7 @@ print("\n" + "=" * 80)
 print("PART 9: THE COMPLETE ER=EPR PICTURE")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                        W33 AND ER=EPR: SUMMARY                               ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
@@ -615,8 +598,7 @@ print(
 ║       = Information content of the fundamental structure                     ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # PART 10: PREDICTIONS
@@ -626,8 +608,7 @@ print("\n" + "=" * 80)
 print("PART 10: PREDICTIONS FROM W33 ER=EPR")
 print("=" * 80)
 
-print(
-    """
+print("""
 TESTABLE PREDICTIONS
 ====================
 
@@ -660,8 +641,7 @@ TESTABLE PREDICTIONS
    W33 predicts: 81 fundamental entangled modes.
 
    Test: Study vacuum fluctuations, look for 81-fold structure.
-"""
-)
+""")
 
 # Calculate predictions
 print("\nNumerical predictions:")
@@ -682,8 +662,7 @@ print(f"  Fundamental information: {S_w33:.1f} bits")
 print(f"  This is log₂(number of vacuum states)")
 print(f"  Number of vacuum states: 2^{S_w33:.0f} ≈ 10^{S_w33*np.log10(2):.0f}")
 
-print(
-    """
+print("""
 
 THE DEEPEST TRUTH
 =================
@@ -699,8 +678,7 @@ THE DEEPEST TRUTH
 
   Spacetime is woven from quantum entanglement,
   and the loom is W33.
-"""
-)
+""")
 
 print("\n" + "=" * 80)
 print("END OF ER=EPR EXPLORATION")

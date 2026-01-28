@@ -14,15 +14,13 @@ import math
 
 import numpy as np
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════╗
 ║             THEORY OF EVERYTHING - PART XVI                          ║
 ║                                                                      ║
 ║          THE 81 CYCLES AND FLAVOR PHYSICS                            ║
 ╚══════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # PART A: THE 81 CYCLES STRUCTURE
@@ -33,8 +31,7 @@ print("PART A: STRUCTURE OF THE 81 CYCLES")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 THE 81 CYCLES IN W33
 ═══════════════════════
 
@@ -53,8 +50,7 @@ In a whist tournament W(n,n):
   Total: 3 × 3 × 3 × 3 = 3⁴ = 81
 
 This is the number of maximal abelian subgroups!
-"""
-)
+""")
 
 # Factorizations of 81
 print("═══ Factorizations of 81 ═══")
@@ -65,8 +61,7 @@ print(f"  81 = 9 × 9    (two factors of 9)")
 print(f"  81 = 27 × 3   (E6 rep × triality)")
 print()
 
-print(
-    """
+print("""
 THE 81-27-3 STRUCTURE
 ═══════════════════════
 
@@ -82,8 +77,7 @@ The 27 of E6 contains (under SO(10) decomposition):
        └────────── fermion spinor (contains SM fermions)
 
 So 81 = 3 × (16 + 10 + 1) = 48 + 30 + 3
-"""
-)
+""")
 
 print(f"  81 = 3 × 16 + 3 × 10 + 3 × 1")
 print(f"     = {3*16} + {3*10} + {3*1}")
@@ -99,8 +93,7 @@ print("PART B: CKM MIXING MATRIX")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 CKM MATRIX: EXPERIMENTAL VALUES
 ═══════════════════════════════
 
@@ -117,8 +110,7 @@ Key features:
   • Nearly diagonal (small mixing)
   • Hierarchical structure: |Vub| << |Vcb| << |Vus|
   • |Vus| ≈ 0.225 ≈ sin(θC) (Cabibbo angle)
-"""
-)
+""")
 
 # Experimental values
 Vus_exp = 0.2252
@@ -204,8 +196,7 @@ print("PART C: PMNS MIXING MATRIX (NEUTRINOS)")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 PMNS MATRIX: EXPERIMENTAL VALUES
 ════════════════════════════════
 
@@ -218,8 +209,7 @@ Unlike CKM, PMNS has LARGE mixing angles!
   • θ₁₃ ≈ 8.5° (reactor angle)
 
 Key observation: θ₂₃ ≈ 45° = π/4 (maximal mixing!)
-"""
-)
+""")
 
 # Experimental values
 theta12_exp = 33.5 * math.pi / 180
@@ -293,8 +283,7 @@ print("PART D: FERMION MASS HIERARCHIES")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 WHY DO MASSES SPAN 13 ORDERS OF MAGNITUDE?
 ═══════════════════════════════════════════
 
@@ -313,8 +302,7 @@ Fermion masses (in GeV):
   • Neutrinos:     m_ν ~ 10⁻¹¹ (eV scale → 10⁻¹¹ GeV)
 
 Ratio: m_t/m_ν ~ 10¹³ (13 orders of magnitude!)
-"""
-)
+""")
 
 # Key mass ratios
 m_t = 172.76
@@ -386,8 +374,7 @@ print("PART E: W33 HIERARCHICAL STRUCTURE")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 W33 HIERARCHY MECHANISM
 ═══════════════════════════
 
@@ -402,8 +389,7 @@ This suggests mass scales follow:
 where λ ≈ 0.22 ≈ sin(θC) ≈ 9/40
 
 This is the "Froggatt-Nielsen" pattern!
-"""
-)
+""")
 
 # Check the hierarchical pattern
 lambda_val = 9 / 40
@@ -424,16 +410,14 @@ print(f"  Actual: m_τ : m_μ : m_e = 1.777 : 0.1057 : 0.000511")
 print(f"                        = 1 : {0.1057/1.777:.4f} : {0.000511/1.777:.6f}")
 print()
 
-print(
-    """
+print("""
 REFINED HIERARCHY:
 
 The charged lepton ratios are closer to:
   m_τ : m_μ : m_e ≈ 1 : λ² : λ⁵
 
 This suggests different W33 "depth" for different particles.
-"""
-)
+""")
 
 # =============================================================================
 # SUMMARY
@@ -444,8 +428,7 @@ print("SUMMARY: W33 FLAVOR PHYSICS")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 ╔═══════════════════════════════════════════════════════════════════════╗
 ║  W33 FLAVOR PHYSICS: KEY PREDICTIONS                                  ║
 ╠═══════════════════════════════════════════════════════════════════════╣
@@ -475,8 +458,7 @@ print(
 ║    • Neutrinos: large mixing, degenerate masses                       ║
 ║    • Both emerge from SAME W33 structure!                             ║
 ╚═══════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # Numerical summary
 print("═══ Numerical Summary ═══")

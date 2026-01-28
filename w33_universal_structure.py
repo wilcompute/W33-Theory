@@ -24,8 +24,7 @@ print("\n" + "=" * 80)
 print("PART 1: THE PRIMITIVE STRUCTURES - GF(3) AND K4")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE TWO ATOMS OF ALGEBRA
 ========================
 
@@ -47,8 +46,7 @@ THEIR DIMENSIONS:
   |K4| = 4 = 2² = first non-cyclic order
 
   3 × 4 = 12 = gauge bosons of Standard Model!
-"""
-)
+""")
 
 # Build GF(3) and K4 explicitly
 GF3 = np.array([0, 1, 2])
@@ -85,8 +83,7 @@ print("\n" + "=" * 80)
 print("PART 2: THE TENSOR PRODUCT - GF(3)³ ⊗ K4")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE FUNDAMENTAL SPACE
 =====================
 
@@ -111,8 +108,7 @@ MORE PRECISELY:
 
 Actually: 40 = number of lines through origin in GF(3)⁴
   40 = (3⁴ - 1) / (3 - 1) = 80/2 = 40 ✓
-"""
-)
+""")
 
 # The projective formula
 points_formula = (3**4 - 1) // (3 - 1)
@@ -126,8 +122,7 @@ print("\n" + "=" * 80)
 print("PART 3: THE INCIDENCE STRUCTURE")
 print("=" * 80)
 
-print(
-    """
+print("""
 W33 AS AN INCIDENCE GEOMETRY
 ============================
 
@@ -153,8 +148,7 @@ The structure constants:
   λ = 2 (lines through any two points)
 
   9 = 3² = |GF(3)|² (from the field!)
-"""
-)
+""")
 
 # Parameters
 v = 40  # points
@@ -181,8 +175,7 @@ print("\n" + "=" * 80)
 print("PART 4: THE COLLINEATION GROUP - PSp(4,3)")
 print("=" * 80)
 
-print(
-    """
+print("""
 SYMMETRIES OF W33: PSp(4,3)
 ===========================
 
@@ -210,8 +203,7 @@ The group acts:
   • Transitively on 40 points
   • Transitively on 40 lines
   • Transitively on 90 K4s
-"""
-)
+""")
 
 # Order of PSp(4,3)
 order_Sp = (3**4) * (3**4 - 1) * (3**2 - 1)
@@ -234,8 +226,7 @@ print("\n" + "=" * 80)
 print("PART 5: REPRESENTATION THEORY OF W33")
 print("=" * 80)
 
-print(
-    """
+print("""
 REPRESENTATIONS OF THE W33 ALGEBRA
 ==================================
 
@@ -262,8 +253,7 @@ CRITICAL OBSERVATION:
 
   This suggests 5 copies of the 3D Clifford algebra!
   Clifford(ℝ³) = ℝ ⊕ ℝ³ ⊕ ℝ³ ⊕ ℝ = 8-dim
-"""
-)
+""")
 
 # Possible irrep dimensions for PSp(4,3)
 # From character table
@@ -284,8 +274,7 @@ print("\n" + "=" * 80)
 print("PART 6: THE FUNDAMENTAL THEOREM OF W33 ALGEBRA")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║             THE FUNDAMENTAL THEOREM OF W33 ALGEBRA                           ║
@@ -332,8 +321,7 @@ print(
 ║     = 248-dim = 2 × 121 + 6                                                  ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # Verify dimensions
 algebras = {"ℝ": 1, "ℂ": 2, "ℍ": 4, "𝕆": 8, "J₃(𝕆)": 27, "e₆": 78, "e₇": 133, "e₈": 248}
@@ -367,8 +355,7 @@ print("\n" + "=" * 80)
 print("PART 7: THE HIERARCHY OF ALL ALGEBRAS")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE ALGEBRA HIERARCHY FROM W33
 ==============================
 
@@ -403,8 +390,7 @@ Level 4: EXCEPTIONAL LIE ALGEBRAS
 
 THE KEY OBSERVATION:
 Every algebra at Level ≥ 2 involves W33 numbers (40, 81, 90)!
-"""
-)
+""")
 
 # Verify each exceptional algebra
 print("\nExceptional algebra structure:")
@@ -422,8 +408,7 @@ print("\n" + "=" * 80)
 print("PART 8: THE CATEGORY OF W33-ALGEBRAS")
 print("=" * 80)
 
-print(
-    """
+print("""
 W33-Alg: THE CATEGORY OF W33-ALGEBRAS
 =====================================
 
@@ -457,8 +442,7 @@ KERNELS:
   - ker(W33 → e₇) = 40 - 40 = 0 (injective!)
 
 This means E₇ contains ALL of W33!
-"""
-)
+""")
 
 # =============================================================================
 # PART 9: THE UNIVERSAL FORMULA
@@ -468,8 +452,7 @@ print("\n" + "=" * 80)
 print("PART 9: THE UNIVERSAL FORMULA")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                    THE UNIVERSAL FORMULA                                     ║
@@ -485,8 +468,7 @@ print(
 ║    • 4 comes from K4                                                         ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 
 # Test the universal formula
@@ -532,8 +514,7 @@ print("\n" + "=" * 80)
 print("PART 10: THE META-THEOREM - W33 AS THE DNA OF MATHEMATICS")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║              THE META-THEOREM: W33 IS THE DNA OF MATHEMATICS                 ║
@@ -579,8 +560,7 @@ print(
 ║  Together they generate ALL mathematical objects.                            ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # PART 11: THE GRAND SYNTHESIS
@@ -590,8 +570,7 @@ print("\n" + "=" * 80)
 print("PART 11: THE GRAND SYNTHESIS")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                        THE GRAND SYNTHESIS                                   ║
@@ -633,8 +612,7 @@ print(
 ║    • Gauge = K4 quotient (removes redundancy)                                ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # FINAL SUMMARY
@@ -644,8 +622,7 @@ print("\n" + "=" * 80)
 print("FINAL SUMMARY: W33 UNIVERSAL ALGEBRA")
 print("=" * 80)
 
-print(
-    """
+print("""
 W33 IS THE MOTHER ALGEBRA OF ALL MATHEMATICS
 
   Primitive elements: GF(3) = {0, 1, 2}, K4 = {1, a, b, ab}
@@ -672,8 +649,7 @@ W33 IS THE MOTHER ALGEBRA OF ALL MATHEMATICS
   The formula of physics:
     UNIVERSE = W33 ⊗ ℂ / K4
 
-"""
-)
+""")
 
 print("=" * 80)
 print("W33: THE DNA OF MATHEMATICS AND PHYSICS")

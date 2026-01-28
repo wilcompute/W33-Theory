@@ -29,8 +29,7 @@ print("\n" + "=" * 80)
 print("PART 1: THE MEASUREMENT PROBLEM")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE MYSTERY
 ===========
 
@@ -48,8 +47,7 @@ Interpretations:
   4. Objective Collapse: New physics causes collapse
 
 What does W33 say?
-"""
-)
+""")
 
 # =============================================================================
 # PART 2: W33 AND SUPERPOSITION
@@ -59,8 +57,7 @@ print("\n" + "=" * 80)
 print("PART 2: W33 STRUCTURE AND SUPERPOSITION")
 print("=" * 80)
 
-print(
-    """
+print("""
 W33 AS A SUPERPOSITION SPACE
 ============================
 
@@ -80,8 +77,7 @@ This matches quantum mechanics:
 W33 interpretation:
   MEASUREMENT = projection from 81-space to 40-space
   COLLAPSE = vacuum → matter transition
-"""
-)
+""")
 
 # The ratio
 ratio = 81 / 40
@@ -97,8 +93,7 @@ print("\n" + "=" * 80)
 print("PART 3: K4 AND DECOHERENCE")
 print("=" * 80)
 
-print(
-    """
+print("""
 K4 AS THE DECOHERENCE MECHANISM
 ================================
 
@@ -122,8 +117,7 @@ These might correspond to:
   a = measure position
   b = measure momentum
   ab = joint measurement (incompatible!)
-"""
-)
+""")
 
 print(f"\nK4 structure:")
 print(f"  |K4| = 4 measurement types")
@@ -138,8 +132,7 @@ print("\n" + "=" * 80)
 print("PART 4: INTEGRATED INFORMATION Φ")
 print("=" * 80)
 
-print(
-    """
+print("""
 TONONI'S INTEGRATED INFORMATION THEORY
 ======================================
 
@@ -158,8 +151,7 @@ W33's Φ:
 
 W33 is MAXIMALLY INTEGRATED:
   The K4 structure connects everything to everything.
-"""
-)
+""")
 
 # Estimate Φ for W33
 n_points = 40
@@ -187,8 +179,7 @@ print("\n" + "=" * 80)
 print("PART 5: PENROSE'S OBJECTIVE REDUCTION")
 print("=" * 80)
 
-print(
-    """
+print("""
 GRAVITY AND COLLAPSE
 ====================
 
@@ -208,8 +199,7 @@ The collapse time:
 
 This suggests collapse is related to the
 W-hierarchy transition!
-"""
-)
+""")
 
 # Vacuum fractions
 v_w53 = 19683 / (1120 + 19683)
@@ -230,8 +220,7 @@ print("\n" + "=" * 80)
 print("PART 6: THE OBSERVER IN W33")
 print("=" * 80)
 
-print(
-    """
+print("""
 WHAT IS AN OBSERVER?
 ====================
 
@@ -254,8 +243,7 @@ The maximum observer:
   - All 40 points
   - Can distinguish 40 outcomes
   - log₂(40) ≈ 5.3 bits
-"""
-)
+""")
 
 print(f"\nObserver information capacity:")
 print(f"  Minimum (1 K4): log₂(4) = {np.log2(4):.1f} bits")
@@ -270,8 +258,7 @@ print("\n" + "=" * 80)
 print("PART 7: QUANTUM DARWINISM")
 print("=" * 80)
 
-print(
-    """
+print("""
 REDUNDANT INFORMATION
 =====================
 
@@ -292,8 +279,7 @@ Redundancy factor:
 
 Each bit of information is encoded 9 times!
 This is like a classical error-correcting code.
-"""
-)
+""")
 
 # Redundancy
 total_k4_memberships = 90 * 4
@@ -313,8 +299,7 @@ print("\n" + "=" * 80)
 print("PART 8: FREE WILL")
 print("=" * 80)
 
-print(
-    """
+print("""
 DOES W33 ALLOW FREE WILL?
 =========================
 
@@ -333,8 +318,7 @@ Free will interpretation:
 The 90 K4 subgroups = 90 points of freedom
 Each K4 decision has 4 outcomes
 Total: 4^90 ≈ 10^54 possible histories!
-"""
-)
+""")
 
 print(f"\nDegrees of freedom:")
 print(f"  K4 subgroups: 90")
@@ -349,8 +333,7 @@ print("\n" + "=" * 80)
 print("PART 9: TIME AND CONSCIOUSNESS")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE ARROW OF TIME
 =================
 
@@ -372,8 +355,7 @@ This IS the arrow of time!
   - High vacuum → low vacuum
   - Quantum → classical
   - Potential → actual
-"""
-)
+""")
 
 print(f"\nW-hierarchy as time:")
 print(f"  t=0:    W(7,3) 99.8% vacuum (pure potential)")
@@ -389,8 +371,7 @@ print("\n" + "=" * 80)
 print("PART 10: CONSCIOUSNESS IN W33")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                    CONSCIOUSNESS AND W33 THEORY                              ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
@@ -440,8 +421,7 @@ print(
 ║    • Why free will feels real                                                ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print("\n" + "=" * 80)
 print("MEASUREMENT = 81 → 40 PROJECTION")

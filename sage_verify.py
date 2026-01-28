@@ -156,8 +156,7 @@ results["eigenvalues"] = [
 print("\n" + "=" * 70)
 print(" SUMMARY")
 print("=" * 70)
-print(
-    """
+print("""
 VERIFIED WITH SAGEMATH:
 
 1. |Sp(4, F_3)| = |W(E6)| = |Aut(W33)| = 51,840 ✓
@@ -169,8 +168,7 @@ VERIFIED WITH SAGEMATH:
    - 15 = dim(SU(4))
 
 THE MATHEMATICAL FOUNDATION IS RIGOROUS.
-"""
-)
+""")
 
 # Save results
 results["timestamp"] = datetime.now().isoformat()

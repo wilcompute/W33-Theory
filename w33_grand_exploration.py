@@ -18,8 +18,7 @@ print("=" * 70)
 # W(3, q) = rank 2 -> Steinberg in H₁
 # W(5, q) = rank 3 -> Steinberg should be in H₂!
 
-print(
-    """
+print("""
 THEORY:
 For symplectic polar space W(2n-1, q) of rank n:
   - Building has dimension n-1
@@ -35,8 +34,7 @@ dim(Steinberg) = q^{n²}
 
 For W(5, 3) with rank n=3:
   dim(Steinberg) = 3^9 = 19683
-"""
-)
+""")
 
 # Let's compute W(5, 3) parameters
 q = 3
@@ -160,8 +158,7 @@ print(f"W(5, 3) lines attempt = {w5_lines}")
 w5_generators = (3**3 + 1) * (3**2 + 1) * (3 + 1)
 print(f"W(5, 3) generators = {w5_generators}")
 
-print(
-    f"""
+print(f"""
 W(5, 3) SUMMARY:
   - Points: {w5_points}
   - Generators (maximal t.i.): {w5_generators}
@@ -171,15 +168,13 @@ W(5, 3) SUMMARY:
 PREDICTION: H₂(W(5, 3)) = Z^{3**9:,} (Steinberg!)
             H₁(W(5, 3)) = 0
             π₂(W(5, 3)) ≠ 0 (NOT aspherical!)
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("PART 2: OTHER POLAR SPACE TYPES")
 print("=" * 70)
 
-print(
-    """
+print("""
 POLAR SPACES come in several flavors based on the form:
 
 1. SYMPLECTIC W(2n-1, q)
@@ -206,8 +201,7 @@ KEY INSIGHT: ALL polar spaces have:
   - Building structure
   - Steinberg representation in top reduced homology
   - Apartments (Coxeter complexes)
-"""
-)
+""")
 
 # Let's compute some orthogonal examples
 print("\nORTHOGONAL POLAR SPACES:")
@@ -237,8 +231,7 @@ print(f"Q(4, 3) points = (3²+1)(3+1) = {q4_points}")
 # Q⁻(5, 3) elliptic quadric
 # Points = (q² + 1)(q² - q + 1) or similar
 
-print(
-    """
+print("""
 Comparison of rank-2 polar spaces over GF(3):
 
 Type        | Points | Lines | Aut order    | Steinberg dim
@@ -251,15 +244,13 @@ Q⁻(3, 3)    |    7   |   7   |     ???      |     smaller
 SURPRISE: W(3, 3) ≅ Q(4, 3)!
 The symplectic polar space is ISOMORPHIC to the parabolic orthogonal quadric!
 This is known as the "Klein correspondence" in dimension 4.
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("PART 3: EXPLICIT GEOMETRIC BASIS FOR 81 CYCLES")
 print("=" * 70)
 
-print(
-    """
+print("""
 Goal: Find 81 explicit cycles in W33 that form a basis for H₁.
 
 Strategy:
@@ -279,12 +270,10 @@ Generators of P correspond to transvections:
   T_{v,1}: x ↦ x + ⟨x,v⟩v
 
 for v running over 4 independent isotropic vectors.
-"""
-)
+""")
 
 # Let's describe the geometric basis explicitly
-print(
-    """
+print("""
 EXPLICIT BASIS CONSTRUCTION:
 
 Step 1: Choose base flag (point-line pair)
@@ -304,12 +293,10 @@ GEOMETRIC MEANING:
 - Each basis cycle corresponds to a "direction" in the building
 - The Sylow subgroup acts simply transitively on these directions
 - This is WHY dim(Steinberg)|_{Sylow} = regular representation!
-"""
-)
+""")
 
 # Create explicit cycles using transvection geometry
-print(
-    """
+print("""
 TRANSVECTION CYCLES:
 
 A transvection T_{v,a} moves points along "lines parallel to v".
@@ -327,15 +314,13 @@ The root system C₂ has 4 positive roots: α, β, α+β, 2α+β
 Each root gives a root subgroup ≅ (GF(3), +)
 Total: 3 × 3 × 3 × 3 = 81 root group elements
 Each element ≠ 1 gives a nontrivial cycle!
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("PART 4: PHYSICS CONNECTIONS")
 print("=" * 70)
 
-print(
-    """
+print("""
 ╔═══════════════════════════════════════════════════════════════════╗
 ║           W33 AND THE "THEORY OF EVERYTHING"                     ║
 ╚═══════════════════════════════════════════════════════════════════╝
@@ -372,11 +357,9 @@ SPECULATION: Why might W33-like structures appear in physics?
    - W33 as error-correcting code for the universe?
    - 40 logical states, 81 check symbols?
    - Self-dual → matter-antimatter symmetry?
-"""
-)
+""")
 
-print(
-    """
+print("""
 SPECIFIC PHYSICS APPLICATIONS:
 
 A. QUANTUM STATE SPACES
@@ -401,11 +384,9 @@ D. DISCRETE GAUGE THEORY
    40 sites, 40 gauge field links (lines)
    PSp(4,3) gauge symmetry
    Interesting toy model!
-"""
-)
+""")
 
-print(
-    """
+print("""
 THE DEEP CONNECTION: LANGLANDS ↔ PHYSICS
 
 The Steinberg representation connects to:
@@ -422,15 +403,13 @@ is related to:
   - Discretization of gauge theory
   - Quantum information aspects of spacetime
   - The role of primes in physics (why is 3 special?)
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("SYNTHESIS: THE BIG PICTURE")
 print("=" * 70)
 
-print(
-    """
+print("""
                     ┌─────────────────┐
                     │  LANGLANDS      │
                     │  PROGRAM        │
@@ -473,15 +452,13 @@ print(
                     └─────────────────┘
 
 Everything connects through the magical number 81 = 3⁴!
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("VERIFIED HIERARCHY OF POLAR SPACES")
 print("=" * 70)
 
-print(
-    """
+print("""
 SYMPLECTIC FAMILY W(2n-1, q):
 
 Rank 2: W(3, q)
@@ -502,15 +479,13 @@ Rank 4: W(7, q)
 
 General rank n: W(2n-1, q)
   • Steinberg in H_{n-1}, dim = q^{n²}
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("NEXT STEPS FOR EXPLORATION")
 print("=" * 70)
 
-print(
-    """
+print("""
 1. COMPUTE W(5, 3) EXPLICITLY
    - Build the 364-point polar space
    - Verify H₂ = Z^{19683}
@@ -533,8 +508,7 @@ print(
    - W(3, 7): π₁ = F_{2401}
    - W(3, 9): π₁ = F_{6561}
    - Look for patterns in q = prime power
-"""
-)
+""")
 
 print("\n" + "★" * 70)
 print("                    EXPLORATION COMPLETE!")

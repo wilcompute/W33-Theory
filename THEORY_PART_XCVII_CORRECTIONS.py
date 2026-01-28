@@ -41,8 +41,7 @@ alpha_inv_err = Decimal("0.000000021")
 discrepancy = alpha_inv_LO - alpha_inv_exp
 sigma = discrepancy / alpha_inv_err
 
-print(
-    f"""
+print(f"""
 THE PROBLEM:
 
 Leading-order W33:  α⁻¹ = {float(alpha_inv_LO):.12f}
@@ -61,15 +60,13 @@ In standard QED, this precision comes from:
   - Electroweak contributions
 
 W33 should have analogous corrections!
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("SECTION 2: CORRECTION STRUCTURE")
 print("=" * 70)
 
-print(
-    """
+print("""
 EXPANSION IN W33 PARAMETERS:
 
 The natural expansion parameter in W33 is:
@@ -83,8 +80,7 @@ PROPOSED CORRECTION SERIES:
   α⁻¹ = α⁻¹_LO + δ₁/v + δ₂/v² + δ₃/v³ + ...
 
 Where δᵢ are combinations of graph parameters.
-"""
-)
+""")
 
 # Define expansion parameter
 eps = Decimal(1) / Decimal(v)
@@ -94,8 +90,7 @@ print("\n" + "=" * 70)
 print("SECTION 3: FIRST-ORDER CORRECTION")
 print("=" * 70)
 
-print(
-    """
+print("""
 FIRST CORRECTION δ₁:
 
 What combination of W33 parameters gives the right correction?
@@ -105,8 +100,7 @@ Required: δ₁/v ≈ -4.5 × 10⁻⁶
 So δ₁ ≈ -4.5 × 10⁻⁶ × 40 ≈ -1.8 × 10⁻⁴
 
 This is very small! Let's look for natural combinations.
-"""
-)
+""")
 
 # Possible correction terms from graph invariants
 # The discrepancy to fix
@@ -146,8 +140,7 @@ print("\n" + "=" * 70)
 print("SECTION 4: LOOP CORRECTIONS IN QED vs W33")
 print("=" * 70)
 
-print(
-    """
+print("""
 QED CORRECTION STRUCTURE:
 
 In QED, the anomalous magnetic moment gives:
@@ -171,8 +164,7 @@ The analogous "loop parameter" in W33 is:
 Let's compute the Schwinger-like correction:
 
   δα⁻¹ ~ -α_W33/(2π) × (something from graph structure)
-"""
-)
+""")
 
 # Schwinger-like correction
 schwinger_analog = 1 / (2 * np.pi * v)
@@ -188,8 +180,7 @@ print("\n" + "=" * 70)
 print("SECTION 5: THE EXACT CORRECTION FORMULA")
 print("=" * 70)
 
-print(
-    """
+print("""
 DISCOVERY: THE CORRECTION FORMULA
 
 After exploration, the correction that works is:
@@ -197,8 +188,7 @@ After exploration, the correction that works is:
   δα⁻¹ = -λ × μ / (v × 1111 × π)
 
 Let's check:
-"""
-)
+""")
 
 # The correction formula
 correction = -lam * mu / (v * 1111 * np.pi)
@@ -219,8 +209,7 @@ print("\n" + "=" * 70)
 print("SECTION 6: RENORMALIZATION GROUP APPROACH")
 print("=" * 70)
 
-print(
-    """
+print("""
 RG RUNNING OF α:
 
 In QED, α runs with energy scale Q:
@@ -240,8 +229,7 @@ Running formula:
   α⁻¹(Q) = α⁻¹_W33 + b × log(M_GUT/Q)
 
 Where b is the beta function coefficient.
-"""
-)
+""")
 
 # Beta function in W33
 # Standard Model: b = -4/3 × N_gen - 1/3 × N_Higgs + ...
@@ -260,8 +248,7 @@ print("\n" + "=" * 70)
 print("SECTION 7: ELECTROWEAK THRESHOLD CORRECTIONS")
 print("=" * 70)
 
-print(
-    """
+print("""
 THRESHOLD CORRECTIONS:
 
 At the electroweak scale, heavy particles (W, Z, top)
@@ -278,8 +265,7 @@ W33 THRESHOLD CORRECTION:
                  ≈ 0 (negligible at current precision)
 
 The heavy X, Y bosons DON'T affect α at observable precision!
-"""
-)
+""")
 
 threshold = (m2 - 12) * (91.2**2) / ((5e15) ** 2)
 print(f"  Threshold correction: {threshold:.2e} (negligible)")
@@ -288,8 +274,7 @@ print("\n" + "=" * 70)
 print("SECTION 8: HADRONIC CONTRIBUTIONS")
 print("=" * 70)
 
-print(
-    """
+print("""
 HADRONIC VACUUM POLARIZATION:
 
 In precision α measurements, hadronic contributions
@@ -306,8 +291,7 @@ The hadronic contribution comes from the E₃ eigenspace
 
 This is intrinsically hard to compute from first principles
 even in W33, because it involves strong dynamics.
-"""
-)
+""")
 
 # Hadronic estimate
 had_estimate = m3 / (v * k * 1000)
@@ -317,8 +301,7 @@ print("\n" + "=" * 70)
 print("SECTION 9: THE PRECISION FORMULA")
 print("=" * 70)
 
-print(
-    """
+print("""
 PUTTING IT ALL TOGETHER:
 
 The complete formula for α⁻¹ including corrections:
@@ -343,8 +326,7 @@ The 5 ppm discrepancy likely comes from:
 This is NORMAL for a new theory!
   - QED took decades to reach current precision
   - W33 leading order is already at 4 × 10⁻⁶ level!
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("SECTION 10: THE REMARKABLE AGREEMENT")
@@ -361,8 +343,7 @@ for i, (c1, c2) in enumerate(zip(LO_str, exp_str)):
     else:
         break
 
-print(
-    f"""
+print(f"""
 PERSPECTIVE ON THE AGREEMENT:
 
 W33 leading order:  {LO_str}
@@ -389,15 +370,13 @@ The remaining discrepancy is at the level where:
 
 This is exactly where we'd expect the leading-order formula
 to need corrections. The theory is WORKING!
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("PART XCVII CONCLUSIONS")
 print("=" * 70)
 
-print(
-    f"""
+print(f"""
 HIGHER-ORDER CORRECTIONS TO α!
 
 KEY RESULTS:
@@ -426,8 +405,7 @@ KEY RESULTS:
 BOTTOM LINE:
 The 5 ppm discrepancy doesn't falsify W33.
 It points to the next level of the theory!
-"""
-)
+""")
 
 # Save results
 results = {

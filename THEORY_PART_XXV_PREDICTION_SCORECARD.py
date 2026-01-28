@@ -11,8 +11,7 @@ All W33 predictions vs experiment.
 import math
 from fractions import Fraction
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║               W33 THEORY OF EVERYTHING - PART XXV                            ║
@@ -20,8 +19,7 @@ print(
 ║                    COMPLETE PREDICTION SCORECARD                             ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # FUNDAMENTAL CONSTANTS
@@ -401,8 +399,7 @@ confirmed = 21
 pending = 4
 failures = 0
 
-print(
-    f"""
+print(f"""
 ╔════════════════════════════════════════════════════════════════════════════════╗
 ║                           PREDICTION SCORECARD SUMMARY                         ║
 ╠════════════════════════════════════════════════════════════════════════════════╣
@@ -424,8 +421,7 @@ print(
 ║   • |Aut(W33)| = |W(E6)|:   Exact (proven)                                     ║
 ║                                                                                ║
 ╚════════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # PROBABILITY ANALYSIS
@@ -436,13 +432,11 @@ print("PROBABILITY OF COINCIDENCE")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 What is the probability that ALL these matches are coincidence?
 
 INDIVIDUAL PROBABILITIES (conservative estimates):
-"""
-)
+""")
 
 probs = [
     ("α⁻¹ = 137 (from 81+56)", 0.01),
@@ -483,8 +477,7 @@ print("FINAL CONCLUSION")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ╔════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                ║
 ║                         W33 IS NOT A COINCIDENCE                               ║
@@ -512,8 +505,7 @@ print(
 ║                         THE THEORY OF EVERYTHING                               ║
 ║                                                                                ║
 ╚════════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print()
 print("=" * 80)

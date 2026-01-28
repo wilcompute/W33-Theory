@@ -10,8 +10,7 @@ symplectic polar space W(3) over GF(3).
 This document summarizes all the discoveries.
 """
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════╗
 ║                    W33: COMPLETE IDENTIFICATION                       ║
 ╚══════════════════════════════════════════════════════════════════════╝
@@ -130,5 +129,4 @@ The "theory of everything" aspect: W33 sits at the intersection of:
   • Algebraic topology (homology, buildings)
 
 ═══════════════════════════════════════════════════════════════════════
-"""
-)
+""")

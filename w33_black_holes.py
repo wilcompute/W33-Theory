@@ -33,8 +33,7 @@ print("\n" + "=" * 80)
 print("PART 1: THE BLACK HOLE ENTROPY PUZZLE")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE BEKENSTEIN-HAWKING FORMULA
 ==============================
 
@@ -53,8 +52,7 @@ THE PUZZLE:
   - But S_BH ~ R² (area, not volume!)
 
 This suggests degrees of freedom live on BOUNDARY.
-"""
-)
+""")
 
 # Some numbers
 print("\nBlack hole entropy examples:")
@@ -77,8 +75,7 @@ print("\n" + "=" * 80)
 print("PART 2: W33 HOLOGRAPHIC ENTROPY")
 print("=" * 80)
 
-print(
-    """
+print("""
 HOLOGRAPHIC BOUND FROM W33
 ==========================
 
@@ -103,8 +100,7 @@ Ratio:
 
 This is TOO MUCH information!
 We need a constraint...
-"""
-)
+""")
 
 log2_121 = np.log2(121)
 print(f"\nW33 information per cell: log₂(121) = {log2_121:.3f} bits")
@@ -119,8 +115,7 @@ print("\n" + "=" * 80)
 print("PART 3: THE K4 CONSTRAINT")
 print("=" * 80)
 
-print(
-    """
+print("""
 K4 GAUGE REDUNDANCY
 ===================
 
@@ -145,8 +140,7 @@ Physical configurations: 10 + 20 = 30
 Information: log₂(30) = 4.91 bits
 
 Still not 0.25...
-"""
-)
+""")
 
 # Physical counting
 q45_points = 10
@@ -167,8 +161,7 @@ print("\n" + "=" * 80)
 print("PART 4: THE GEOMETRIC CONSTRAINT")
 print("=" * 80)
 
-print(
-    """
+print("""
 AREA QUANTIZATION
 =================
 
@@ -193,8 +186,7 @@ If f = 4 (from K4 size):
   S = (A / l_P²) / 4 = A / (4 l_P²) ✓✓✓
 
 THE K4 GIVES THE FACTOR OF 4!
-"""
-)
+""")
 
 print("\nThe K4 = ℤ₂×ℤ₂ factor:")
 print(f"  |K4| = 4")
@@ -210,8 +202,7 @@ print("\n" + "=" * 80)
 print("PART 5: MICROSCOPIC STATE COUNTING")
 print("=" * 80)
 
-print(
-    """
+print("""
 COUNTING MICROSTATES
 ====================
 
@@ -234,8 +225,7 @@ Ratio:
   S_W33 / S_BH = 0.693
 
 We need 1 / ln(2) = 1.44 bits per cell.
-"""
-)
+""")
 
 print("\nBit counting:")
 print(f"  1 bit = ln(2) = {np.log(2):.3f}")
@@ -250,8 +240,7 @@ print("\n" + "=" * 80)
 print("PART 6: THE EXACT FORMULA")
 print("=" * 80)
 
-print(
-    """
+print("""
 EXACT MICROSCOPIC FORMULA
 =========================
 
@@ -276,8 +265,7 @@ Entropy per cell (Shannon):
     = 0.916 bits
 
 Close to 1 bit!
-"""
-)
+""")
 
 p_vacuum = 81 / 121
 p_matter = 40 / 121
@@ -303,8 +291,7 @@ print("\n" + "=" * 80)
 print("PART 7: THE 121 = 11² BREAKTHROUGH")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE NUMBER 121 AND BLACK HOLES
 ==============================
 
@@ -336,8 +323,7 @@ BUT: The observable configurations are Q45!
 
 Per 4 l_P²: 2.303 / 4 = 0.576 nats per l_P²
 Still factor of ~2 off.
-"""
-)
+""")
 
 print(f"\nConfiguration entropy:")
 print(f"  ln(121) = {np.log(121):.3f} nats")
@@ -352,8 +338,7 @@ print("\n" + "=" * 80)
 print("PART 8: THE RECONCILIATION")
 print("=" * 80)
 
-print(
-    """
+print("""
 HOW W33 GIVES BH ENTROPY
 ========================
 
@@ -385,8 +370,7 @@ If S_physical = A/(4 l_P²):
   S_logical = A/(8 l_P²)
 
 Each logical qubit on boundary = 1/2 × ln(2) entropy.
-"""
-)
+""")
 
 code_rate = 40 / 81
 print(f"\nW33 quantum code:")
@@ -402,8 +386,7 @@ print("\n" + "=" * 80)
 print("PART 9: HAWKING TEMPERATURE FROM W33")
 print("=" * 80)
 
-print(
-    """
+print("""
 HAWKING TEMPERATURE
 ===================
 
@@ -425,8 +408,7 @@ W33 interpretation:
   T_H = 1/(8π M) = 1/(2π × 4 × M)
 
 The K4 appears as the factor of 4!
-"""
-)
+""")
 
 print("\nHawking temperature factors:")
 print(f"  T_H = 1 / (2π × 4 × M)")
@@ -441,8 +423,7 @@ print("\n" + "=" * 80)
 print("PART 10: THE COMPLETE BLACK HOLE PICTURE")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║             W33 THEORY OF BLACK HOLE THERMODYNAMICS                          ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
@@ -491,8 +472,7 @@ print(
 ║  This is a UNIVERSAL factor from W33 geometry.                               ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print("\n" + "=" * 80)
 print("THE FACTOR OF 4 IN BLACK HOLE ENTROPY IS |K4| = |ℤ₂×ℤ₂|")

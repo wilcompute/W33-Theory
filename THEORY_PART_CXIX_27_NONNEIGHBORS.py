@@ -296,8 +296,7 @@ def main():
     print(" SECTION 9: SUMMARY")
     print("=" * 70)
 
-    print(
-        f"""
+    print(f"""
   THE 27 NON-NEIGHBORS:
 
   - Form a subgraph H27 with {H27.num_edges()} edges
@@ -317,8 +316,7 @@ def main():
 
   This connects to the E6 structure through:
   |W(E6)| = 51840 = 40 x 1296
-"""
-    )
+""")
 
     # Save results
     with open("PART_CXIX_27_nonneighbors.json", "w") as f:

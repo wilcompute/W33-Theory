@@ -9,8 +9,7 @@ Run this file for the full theory overview.
 
 
 def main():
-    print(
-        """
+    print("""
     ╔══════════════════════════════════════════════════════════════════════════════╗
     ║                                                                              ║
     ║                     W33: THE THEORY OF EVERYTHING                            ║
@@ -234,8 +233,7 @@ def main():
     pass
                                         ∎
     pass
-    """
-    )
+    """)
 
 
 if __name__ == "__main__":

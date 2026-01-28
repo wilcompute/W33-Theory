@@ -203,8 +203,7 @@ print("\n" + "=" * 70)
 print("WEYL GROUP AND APARTMENTS")
 print("=" * 70)
 
-print(
-    """
+print("""
 For Sp(4), the Weyl group is W(C₂) = dihedral group of order 8.
 
 The Weyl group acts on each apartment as the symmetry group of the octagon:
@@ -217,8 +216,7 @@ Key formula:
   # apartments = |G| / (|B| × |W|)
 
 where B is a Borel subgroup and W is the Weyl group.
-"""
-)
+""")
 
 # For PSp(4,3): |G| = 25920, |W| = 8
 # |B| = |T| × |U| where T = torus, U = unipotent radical
@@ -292,8 +290,7 @@ print("\n" + "=" * 70)
 print("WHY 81 CYCLES? THE STEINBERG CONNECTION")
 print("=" * 70)
 
-print(
-    """
+print("""
 The number 81 = 3⁴ arises from the ROOT SYSTEM of type C₂:
 
 For the root system C₂:
@@ -312,8 +309,7 @@ The 81 independent cycles in H₁ correspond to:
 Each generator of π₁ = F₈₁ can be thought of as a
 "twisted apartment path" - a non-contractible loop that
 goes through the building in a specific pattern.
-"""
-)
+""")
 
 # Count how the 33 apartments are related to the 81 cycles
 print(f"\n33 apartments × ? = 81 cycles?")

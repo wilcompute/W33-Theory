@@ -31,8 +31,7 @@ print()
 print("=" * 50)
 print("INTERPRETATION:")
 print("=" * 50)
-print(
-    f"""
+print(f"""
 The incidence automorphism group has order {d['incidence']['group_order']:,}.
 
 The structure 'O(5,3) : C2' means:
@@ -49,5 +48,4 @@ Previously computed (pure Python):
   - β₂ = 0, β₃ = 0
   - Euler characteristic χ = -80
   - Ray-preserving subgroup order: 108
-"""
-)
+""")

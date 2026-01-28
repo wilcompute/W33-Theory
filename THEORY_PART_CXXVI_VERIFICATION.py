@@ -250,8 +250,7 @@ def main():
     print(" THEORETICAL RESOLUTION")
     print("=" * 70)
 
-    print(
-        """
+    print("""
   The key insight from the literature:
 
   The symplectic polar graph Sp(4, F₃) with 40 vertices has
@@ -304,8 +303,7 @@ def main():
   reflect additional structure we haven't understood yet.
 
   ═══════════════════════════════════════════════════════════════════
-"""
-    )
+""")
 
 
 if __name__ == "__main__":

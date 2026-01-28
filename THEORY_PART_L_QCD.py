@@ -22,8 +22,7 @@ This is a milestone Part 50!
 
 import numpy as np
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                     THEORY OF EVERYTHING - PART L                            ║
@@ -33,8 +32,7 @@ print(
 ║            Strong Coupling • Confinement • Asymptotic Freedom • Hadrons      ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # W33 CONSTANTS
@@ -71,15 +69,13 @@ print("SECTION 1: THE STRONG COUPLING CONSTANT α_s")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 The strong coupling constant α_s determines the strength of QCD.
 Unlike α_em, it "runs" significantly with energy scale.
 
 At the Z mass: α_s(M_Z) ≈ 0.118
 W33 must derive this from geometry!
-"""
-)
+""")
 
 # Experimental value at Z pole
 alpha_s_exp = 0.1179  # PDG 2022
@@ -126,16 +122,14 @@ print("SECTION 2: ASYMPTOTIC FREEDOM FROM W33")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 QCD has the remarkable property of ASYMPTOTIC FREEDOM:
   - α_s → 0 as energy → ∞ (quarks are "free" at high energy)
   - α_s → large as energy → 0 (confinement at low energy)
 
 This comes from the β-function with coefficient b₀ < 0.
 W33 must explain WHY SU(3) has this property!
-"""
-)
+""")
 
 # QCD beta function
 # β(α_s) = -b₀ α_s² / (2π) + O(α_s³)
@@ -187,14 +181,12 @@ print("SECTION 3: THE QCD SCALE Λ_QCD")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 The QCD scale Λ_QCD marks where perturbative QCD breaks down.
 Experimentally: Λ_QCD ≈ 200-300 MeV
 
 W33 must predict this scale!
-"""
-)
+""")
 
 # Experimental QCD scale
 Lambda_QCD_exp = 0.217  # GeV (MS-bar, n_f=5)
@@ -252,14 +244,12 @@ print("SECTION 4: THE PROTON MASS FROM W33")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 The proton mass m_p ≈ 938 MeV is almost entirely from QCD binding energy.
 The quark masses contribute only ~1%!
 
 W33 must derive m_p from pure geometry.
-"""
-)
+""")
 
 # Experimental proton mass
 m_p_exp = 0.93827  # GeV
@@ -336,14 +326,12 @@ print("SECTION 5: COLOR CONFINEMENT FROM W33")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 Color confinement: Free quarks cannot exist; they're always bound in hadrons.
 
 The confinement mechanism is one of the Clay Millennium Problems.
 W33 offers a geometric explanation!
-"""
-)
+""")
 
 # String tension
 sigma_exp = 0.44  # GeV² (string tension)

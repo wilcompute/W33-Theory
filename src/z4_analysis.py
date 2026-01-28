@@ -255,8 +255,7 @@ if __name__ == "__main__":
     print("\n" + "=" * 70)
     print("SUMMARY")
     print("=" * 70)
-    print(
-        """
+    print("""
 Key findings from Z4 analysis will tell us:
 
 1. If Z4 is FIXED:
@@ -275,5 +274,4 @@ Key findings from Z4 analysis will tell us:
    - Could be the "fundamental rep" of the GUT
 
 The answer will guide interpretation of the W33 structure!
-"""
-    )
+""")

@@ -116,8 +116,7 @@ print("=" * 70)
 # So each state appears in as many MUB systems as it has neighbors = 12!
 
 if __name__ == "__main__":
-    print(
-        """
+    print("""
     THEOREM: Each state appears in exactly 12 MUB systems.
 
     PROOF:
@@ -125,8 +124,7 @@ if __name__ == "__main__":
     - This happens iff s ⊥ v
     - Each state has exactly 12 neighbors (degree = 12)
     - Therefore each state appears in exactly 12 MUB systems ✓
-    """
-    )
+    """)
 
 # Verify
 all_have_12 = all(c == 12 for c in counts)
@@ -176,16 +174,14 @@ print("\n" + "=" * 70)
 print("THE 40×40 PARTICIPATION MATRIX")
 print("=" * 70)
 
-print(
-    """
+print("""
 Define: P[s, v] = 1 if state s is in the MUB system at vertex v
                 = 1 if s and v are orthogonal (neighbors in Sp₄(3))
 
 This is exactly the ADJACENCY MATRIX of Sp₄(3)!
 
 The MUB participation structure IS the Witting graph itself.
-"""
-)
+""")
 
 # Compute and verify
 P = np.zeros((40, 40), dtype=int)
@@ -270,8 +266,7 @@ print("\n" + "=" * 70)
 print("THE BEAUTIFUL STRUCTURE THEOREM")
 print("=" * 70)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════╗
 ║           THE WITTING-MUB PARTITION THEOREM                          ║
 ╠══════════════════════════════════════════════════════════════════════╣
@@ -289,8 +284,7 @@ print(
 ║  6. The participation matrix IS the Sp₄(3) adjacency matrix          ║
 ║                                                                      ║
 ╚══════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =====================================================
 # VERIFY THE TRIANGLE COUNT
@@ -311,8 +305,7 @@ print("=" * 70)
 
 print("Why 160 unique triangles?")
 print("-" * 50)
-print(
-    """
+print("""
 At each vertex v, the 12 neighbors form 4 triangles in ℂ³ = v^⊥.
 
 Triangle {a, b, c} belongs to MUB system at v iff:
@@ -325,8 +318,7 @@ Each orthonormal triangle in ℂ⁴ determines a UNIQUE 4th basis vector.
 Each of the 40 orthonormal bases in ℂ⁴ contains (4 choose 3) = 4 triangles.
 
 Total triangles = 40 bases × 4 triangles/base = 160 ✓
-"""
-)
+""")
 
 # Verify by direct computation
 triangles_with_completion = {}
@@ -351,8 +343,7 @@ print("\n" + "=" * 70)
 print("PART CLII COMPLETE")
 print("=" * 70)
 
-print(
-    """
+print("""
 GRAND SUMMARY:
 ==============
 
@@ -373,5 +364,4 @@ MUB SYSTEMS (40)
   └── Together use all 160 triangles exactly once
 
 This is an OPTIMAL PACKING of MUB structure into 4 dimensions!
-"""
-)
+""")

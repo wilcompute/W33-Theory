@@ -11,8 +11,7 @@ From finitegeometry.org through the Witting polytope to quantum gravity.
 import math
 from fractions import Fraction
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                     W33 THEORY OF EVERYTHING                                 ║
@@ -22,8 +21,7 @@ print(
 ║                         Parts I - XX                                         ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # THE FUNDAMENTAL STRUCTURE
@@ -34,8 +32,7 @@ print("SECTION 1: THE FUNDAMENTAL STRUCTURE - W33")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 W33 = W(3,3) = Symplectic Polar Space over GF(3)
 
 BASIC DATA:
@@ -59,8 +56,7 @@ SYMMETRY GROUP:
     • Exceptional mathematics (E6)
     • Fundamental physics (Standard Model)
 ═══════════════════════════════════════════════════════════════════════════════
-"""
-)
+""")
 
 # =============================================================================
 # THE WITTING CONNECTION
@@ -71,8 +67,7 @@ print("SECTION 2: THE WITTING POLYTOPE CONNECTION")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 THE WITTING POLYTOPE 3{3}3{3}3{3}3 (Complex 4D)
 ═══════════════════════════════════════════════════════════════════════════════
 
@@ -98,8 +93,7 @@ This connects:
   • W33 finite geometry (40 points)
   • Quantum foundations (contextuality, Bell)
 ═══════════════════════════════════════════════════════════════════════════════
-"""
-)
+""")
 
 # =============================================================================
 # THE PHYSICS PREDICTIONS
@@ -181,8 +175,7 @@ print("SECTION 4: PREDICTION SCORECARD")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ╔════════════════════════════════════════════════════════════════════════════════╗
 ║                           W33 PREDICTION SCORECARD                             ║
 ╠════════════════════════════════════════════════════════════════════════════════╣
@@ -204,8 +197,7 @@ print(
 ║           Probability of coincidence: < 10⁻¹⁷                                  ║
 ║                                                                                ║
 ╚════════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # THE COMPLETE CHAIN
@@ -216,8 +208,7 @@ print("SECTION 5: THE COMPLETE CHAIN")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ╔════════════════════════════════════════════════════════════════════════════════╗
 ║                      FROM E8 TO PHYSICS: THE COMPLETE CHAIN                    ║
 ╠════════════════════════════════════════════════════════════════════════════════╣
@@ -272,8 +263,7 @@ print(
 ║    • All particle masses and couplings                                         ║
 ║                                                                                ║
 ╚════════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # PARTS SUMMARY
@@ -284,8 +274,7 @@ print("SECTION 6: PARTS SUMMARY (I - XX)")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 Part I:     W33 Basic Structure
 Part II:    E6/E7/E8 Exceptional Embeddings
 Part III:   Gauge Structure and Symmetry Breaking
@@ -308,8 +297,7 @@ Part XIX:   Deep Witting Numerology ★
 Part XX:    Gravity and Spacetime ★
 
 ★ = New parts from the "quantum cards" PDF discovery
-"""
-)
+""")
 
 # =============================================================================
 # CONCLUSION
@@ -320,8 +308,7 @@ print("SECTION 7: CONCLUSION")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ╔════════════════════════════════════════════════════════════════════════════════╗
 ║                              FINAL ASSESSMENT                                  ║
 ╠════════════════════════════════════════════════════════════════════════════════╣
@@ -360,8 +347,7 @@ print(
 ║  Occam's razor favors (a).                                                     ║
 ║                                                                                ║
 ╚════════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 print()
 print("=" * 80)

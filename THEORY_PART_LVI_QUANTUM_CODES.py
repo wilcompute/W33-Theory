@@ -30,8 +30,7 @@ print("\n" + "=" * 70)
 print("SECTION 1: PAULI GROUPS AND STABILIZER CODES")
 print("=" * 70)
 
-print(
-    """
+print("""
 BACKGROUND: STABILIZER CODES
 ============================
 
@@ -57,8 +56,7 @@ Let's think differently:
 • For 2 qutrits: 81 = 3^4 generalized Paulis (Weyl-Heisenberg)
 
 81 = dim(H₁(W33))! This is not a coincidence!
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 2: QUTRIT PAULIS AND THE WEYL-HEISENBERG GROUP
@@ -181,8 +179,7 @@ print("\n" + "=" * 70)
 print("SECTION 4: W33 ↔ QUTRIT PAULIS")
 print("=" * 70)
 
-print(
-    """
+print("""
 KEY REALIZATION:
 ================
 
@@ -199,8 +196,7 @@ So W33 points = equivalence classes of self-commuting 2-qutrit Paulis!
 
 The 40 points represent 40 "directions" in Pauli space that commute with themselves.
 The 40 lines represent 40 maximally commuting sets (4 mutually commuting Paulis each).
-"""
-)
+""")
 
 
 # Build the projective points
@@ -253,8 +249,7 @@ print("\n" + "=" * 70)
 print("SECTION 5: W33 AS QUANTUM CODE")
 print("=" * 70)
 
-print(
-    """
+print("""
 STABILIZER CODE INTERPRETATION:
 ================================
 
@@ -282,8 +277,7 @@ POSSIBLE CODE: [[9, k, d]] code on qutrits?
 Or viewing the 40 as an error basis:
 • 40 "directions" of errors
 • Protected by the 40 stabilizer sets
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 6: MUTUALLY UNBIASED BASES CONNECTION
@@ -293,8 +287,7 @@ print("\n" + "=" * 70)
 print("SECTION 6: MUB CONNECTION")
 print("=" * 70)
 
-print(
-    """
+print("""
 MUTUALLY UNBIASED BASES (MUBs):
 ===============================
 
@@ -316,8 +309,7 @@ SIC-POVM in dimension d has d² elements.
 • d = 7: SIC has 49 elements
 
 40 is between d=6 and d=7 SIC-POVMs!
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 7: CONTEXTUALITY AND KOCHEN-SPECKER
@@ -327,8 +319,7 @@ print("\n" + "=" * 70)
 print("SECTION 7: QUANTUM CONTEXTUALITY")
 print("=" * 70)
 
-print(
-    """
+print("""
 KOCHEN-SPECKER THEOREM AND CONTEXTUALITY:
 =========================================
 
@@ -355,8 +346,7 @@ W33 MAGIC STRUCTURE?
 • 40 points, 40 lines
 • Could encode a "magic hypercube" for 2-qutrit contextuality!
 • This would be a new result in quantum foundations!
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 8: THE 137 CONNECTION TO CODES
@@ -366,8 +356,7 @@ print("\n" + "=" * 70)
 print("SECTION 8: 137 FROM CODING THEORY?")
 print("=" * 70)
 
-print(
-    """
+print("""
 WILD SPECULATION: α⁻¹ ≈ 137 FROM CODING THEORY
 ================================================
 
@@ -390,8 +379,7 @@ For a [[9,1,d]] code on qutrits:
 INTERESTING: 3⁹ / 137 ≈ 143.7 ≈ 144 = 12²
 
 Could there be an "optimal" code whose parameters give 137?
-"""
-)
+""")
 
 # Some coding theory calculations
 print("\nCoding theory numerology:")
@@ -414,8 +402,7 @@ print("\n" + "=" * 70)
 print("SECTION 9: 137 IN BINARY")
 print("=" * 70)
 
-print(
-    """
+print("""
 REMARKABLE: 137 = 10001001 in binary
 =====================================
 
@@ -431,8 +418,7 @@ This is significant because:
 Hamming weight of 137 is 3 (three 1-bits).
 
 Also: 137 in base 3:
-"""
-)
+""")
 
 
 def to_base(n, b):
@@ -464,8 +450,7 @@ print("\n" + "=" * 70)
 print("SECTION 10: SYNTHESIS - QUANTUM CODES AND PHYSICS")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE EMERGING PICTURE:
 =====================
 
@@ -500,8 +485,7 @@ THE EMERGING PICTURE:
 
 THIS IS A UNIFIED PICTURE:
 Geometry (W33) ↔ Algebra (E₆,E₇) ↔ Physics (α) ↔ Information (QEC codes)
-"""
-)
+""")
 
 # Final verification
 print("\n" + "=" * 70)
@@ -550,8 +534,7 @@ with open("PART_LVI_quantum_codes_results.json", "w") as f:
 print("\n" + "=" * 70)
 print("CONCLUSIONS OF PART LVI")
 print("=" * 70)
-print(
-    """
+print("""
 KEY DISCOVERIES:
 
 1. W33 is the structure of 2-QUTRIT PAULI OPERATORS!
@@ -576,6 +559,5 @@ KEY DISCOVERIES:
    - Quantum fluctuations = errors
 
 Results saved to PART_LVI_quantum_codes_results.json
-"""
-)
+""")
 print("=" * 70)

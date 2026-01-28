@@ -259,8 +259,7 @@ print("\n" + "=" * 70)
 print("THE STRUCTURAL UNDERSTANDING")
 print("=" * 70)
 
-print(
-    """
+print("""
 THEOREM: The Sp₄(3) graph uniquely determines the Witting configuration.
 
 PROOF STRUCTURE:
@@ -279,8 +278,7 @@ The Witting Gram matrix satisfies:
   G = I + (1/√3)(J - I - A)
 
 where A is adjacency (orthogonal pairs → 0 in Gram).
-"""
-)
+""")
 
 # Verify the Gram matrix formula
 n = 40
@@ -309,8 +307,7 @@ print("\n" + "=" * 70)
 print("THE KEY INSIGHT: PHASES FROM E₆")
 print("=" * 70)
 
-print(
-    """
+print("""
 The Witting configuration is NOT just "any" realization of Sp₄(3).
 
 It is the UNIQUE realization with:
@@ -337,8 +334,7 @@ So the Witting POLYTOPE has:
 And the CONFIGURATION (quotient) has:
   - 40 rays
   - Symmetry group = W(E₆) (after quotienting)
-"""
-)
+""")
 
 # =====================================================
 # WITTING POLYTOPE: THE 240 VERTICES

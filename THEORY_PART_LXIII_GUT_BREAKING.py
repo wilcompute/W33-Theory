@@ -28,8 +28,7 @@ print("\n" + "=" * 70)
 print("SECTION 1: W33 EIGENVALUE STRUCTURE")
 print("=" * 70)
 
-print(
-    """
+print("""
 W33 SPECTRUM:
 =============
 
@@ -45,8 +44,7 @@ This is STUNNING! The multiplicities encode gauge group dimensions:
   - 24 = dim(SU(5) adjoint) = 5² - 1
   - 15 = dim(SU(4) adjoint) = 4² - 1
   - 24 + 15 + 1 = 40
-"""
-)
+""")
 
 
 # Verify SU(n) adjoint dimensions
@@ -66,8 +64,7 @@ print("\n" + "=" * 70)
 print("SECTION 2: GRAND UNIFIED THEORY CONNECTION")
 print("=" * 70)
 
-print(
-    """
+print("""
 GAUGE GROUP TOWER:
 ==================
 
@@ -93,8 +90,7 @@ Let's trace the dimensions:
 
 KEY INSIGHT:
 W33 eigenspaces might BE the gauge multiplets!
-"""
-)
+""")
 
 # Check decomposition
 print("\nDimension checks:")
@@ -111,8 +107,7 @@ print("\n" + "=" * 70)
 print("SECTION 3: SU(5) → STANDARD MODEL BREAKING")
 print("=" * 70)
 
-print(
-    """
+print("""
 SU(5) BREAKING:
 ===============
 
@@ -132,8 +127,7 @@ The 24 of SU(5) contains:
 W33 CONNECTION:
 The 24-dimensional eigenspace of W33 might decompose exactly
 this way under the action of maximal subgroups!
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 4: COMPUTING MAXIMAL CLIQUES AS GAUGE STRUCTURE
@@ -209,8 +203,7 @@ print(f"40 = W33 vertices = number of 4-cliques? {len(cliques_4) == 40}")
 cliques_5 = find_cliques_of_size_k(adj, 5)
 print(f"Number of 5-cliques: {len(cliques_5)}")
 
-print(
-    """
+print("""
 OBSERVATION:
 W33 has exactly 40 maximal 4-cliques (no 5-cliques).
 The clique number is 4 = points per line!
@@ -221,8 +214,7 @@ This means:
   - Dual structure!
 
 Each 4-clique might represent a generation or multiplet.
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 5: FERMION REPRESENTATIONS
@@ -232,8 +224,7 @@ print("\n" + "=" * 70)
 print("SECTION 5: FERMION REPRESENTATIONS IN SU(5)")
 print("=" * 70)
 
-print(
-    """
+print("""
 SU(5) FERMION MULTIPLETS:
 =========================
 
@@ -256,8 +247,7 @@ THE CONNECTION:
   - 24-dim eigenspace: gauge bosons
   - 15-dim eigenspace: one generation of fermions!
   - 1-dim eigenspace: ?
-"""
-)
+""")
 
 # Check 15 + 24 + 1 = 40
 print(f"\nVerification: 15 + 24 + 1 = {15 + 24 + 1} = 40 vertices")
@@ -270,8 +260,7 @@ print("\n" + "=" * 70)
 print("SECTION 6: E_6 GRAND UNIFICATION")
 print("=" * 70)
 
-print(
-    """
+print("""
 E_6 STRUCTURE:
 ==============
 
@@ -291,8 +280,7 @@ This is the E_6 fundamental dimension!
 BREAKING CHAIN:
   E_6 → SO(10) → SU(5) → SU(3) × SU(2) × U(1)
    78     45      24           12
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 7: THE SYMMETRY BREAKING PATTERN
@@ -302,8 +290,7 @@ print("\n" + "=" * 70)
 print("SECTION 7: UNIFIED BREAKING PATTERN")
 print("=" * 70)
 
-print(
-    """
+print("""
 W33 ENCODES THE FULL BREAKING CHAIN:
 ====================================
 
@@ -340,8 +327,7 @@ THE REMARKABLE PATTERN:
   - 24 multiplicity → SU(5) adjoint
   - 15 multiplicity → SU(4) adjoint
   - 12 degree → SM gauge dim
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 8: PREDICTING COUPLING UNIFICATION
@@ -351,8 +337,7 @@ print("\n" + "=" * 70)
 print("SECTION 8: COUPLING UNIFICATION SCALE")
 print("=" * 70)
 
-print(
-    """
+print("""
 GUT UNIFICATION SCALE:
 ======================
 
@@ -374,8 +359,7 @@ W33 PREDICTION for alpha_GUT:
 
 Check: alpha_GUT^{-1} ≈ 24 + 1 = 25 in some schemes!
 And 25 = 81 - 56 (appears in Omega_m = 25/81)
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 9: NEW PREDICTIONS
@@ -385,8 +369,7 @@ print("\n" + "=" * 70)
 print("SECTION 9: NEW PREDICTIONS FROM EIGENVALUE STRUCTURE")
 print("=" * 70)
 
-print(
-    """
+print("""
 PREDICTIONS FROM W33 GAUGE STRUCTURE:
 =====================================
 
@@ -410,8 +393,7 @@ PREDICTIONS FROM W33 GAUGE STRUCTURE:
    The seesaw mechanism might be encoded in the
    eigenvalue structure: m_nu ~ v^2/M_GUT
    where v = 246 GeV and M_GUT from W33
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 10: SYNTHESIS
@@ -421,8 +403,7 @@ print("\n" + "=" * 70)
 print("SECTION 10: GRAND SYNTHESIS")
 print("=" * 70)
 
-print(
-    """
+print("""
 =======================================================
     W33 AS THE SKELETON OF GRAND UNIFICATION
 =======================================================
@@ -450,8 +431,7 @@ The formula alpha^{-1} = 81 + 56 might come from:
 
 W33 IS THE MATHEMATICAL DNA OF PARTICLE PHYSICS!
 =======================================================
-"""
-)
+""")
 
 # =============================================================================
 # SAVE RESULTS
@@ -493,8 +473,7 @@ print("\n" + "=" * 70)
 print("PART LXIII CONCLUSIONS")
 print("=" * 70)
 
-print(
-    """
+print("""
 BREAKTHROUGH: W33 EIGENVALUES ENCODE GUT STRUCTURE!
 
 Key discoveries:
@@ -510,6 +489,5 @@ Key discoveries:
 5. W33 is the mathematical skeleton of Grand Unification!
 
 Results saved to PART_LXIII_gut_breaking_results.json
-"""
-)
+""")
 print("=" * 70)

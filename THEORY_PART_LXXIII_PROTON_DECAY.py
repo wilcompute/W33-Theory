@@ -28,8 +28,7 @@ print("\n" + "=" * 70)
 print("SECTION 1: PROTON STABILITY")
 print("=" * 70)
 
-print(
-    """
+print("""
 The proton appears to be extremely stable:
   τ_p > 2.4 × 10^34 years (Super-Kamiokande, p → e+ π0)
 
@@ -45,8 +44,7 @@ But in Grand Unified Theories (GUTs), B is violated!
   - SO(10): τ_p ~ 10^33-10^36 years (allowed)
 
 What does W33 predict?
-"""
-)
+""")
 
 # Experimental bound
 tau_p_exp = 2.4e34  # years
@@ -60,8 +58,7 @@ print("\n" + "=" * 70)
 print("SECTION 2: GUT SCALE FROM W33")
 print("=" * 70)
 
-print(
-    """
+print("""
 The proton decay rate depends on the GUT scale M_GUT:
 
   Γ_p ~ α_GUT^2 × m_p^5 / M_GUT^4
@@ -72,8 +69,7 @@ From W33:
   M_GUT = 3^33 GeV
 
 Let's compute this:
-"""
-)
+""")
 
 M_GUT_w33 = 3**33
 print(f"W33 GUT scale: M_GUT = 3^33 = {M_GUT_w33:.3e} GeV")
@@ -85,15 +81,13 @@ print(f"Typical GUT scale: M_GUT ~ {M_GUT_typical:.1e} GeV")
 ratio = M_GUT_w33 / M_GUT_typical
 print(f"Ratio: W33/typical = {ratio:.0f}")
 
-print(
-    """
+print("""
 W33 GUT scale is HIGHER than typical → proton more stable!
 
 The exponent 33 = W33 connection:
   33 = 40 - 7 = v - (mu + lambda + 1)
   or 33 = 27 + 6 (complement degree + 6)
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 3: PROTON LIFETIME CALCULATION
@@ -103,8 +97,7 @@ print("\n" + "=" * 70)
 print("SECTION 3: W33 PROTON LIFETIME")
 print("=" * 70)
 
-print(
-    """
+print("""
 The proton lifetime formula:
 
   τ_p = (M_GUT^4) / (α_GUT^2 × m_p^5 × A)
@@ -116,8 +109,7 @@ Using W33 values:
   α_GUT ≈ α_s(M_GUT) ~ 1/40 (from coupling unification)
   m_p = 0.938 GeV
   A ~ 0.01 (typical)
-"""
-)
+""")
 
 # Constants
 m_p = 0.938  # GeV
@@ -159,8 +151,7 @@ print("\n" + "=" * 70)
 print("SECTION 4: BARYON NUMBER VIOLATION")
 print("=" * 70)
 
-print(
-    """
+print("""
 Proton decay in GUTs proceeds through dimension-6 operators:
 
   O_6 ~ (1/M_GUT^2) × (qqql)
@@ -180,8 +171,7 @@ Key observation:
 
   These are exactly the states mediating proton decay!
   Their mass is controlled by the W33 GUT scale.
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 5: DOMINANT DECAY CHANNELS
@@ -191,8 +181,7 @@ print("\n" + "=" * 70)
 print("SECTION 5: DECAY CHANNELS")
 print("=" * 70)
 
-print(
-    """
+print("""
 Main proton decay channels in GUTs:
 
 1. p → e+ π0   (dominant in SU(5))
@@ -208,8 +197,7 @@ W33 prediction: ALL channels suppressed by M_GUT^4 = (3^33)^4
 
 Branching ratios depend on Yukawa structure,
 which W33 also predicts!
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 6: WHY 3^33?
@@ -219,8 +207,7 @@ print("\n" + "=" * 70)
 print("SECTION 6: THE SIGNIFICANCE OF 33")
 print("=" * 70)
 
-print(
-    """
+print("""
 Why is M_GUT = 3^33?
 
 The number 33 appears naturally in W33:
@@ -238,8 +225,7 @@ The number 33 appears naturally in W33:
 
 This gives a DERIVATION of the GUT scale from
 Planck and electroweak scales!
-"""
-)
+""")
 
 # Verify
 M_P = 3**40
@@ -263,8 +249,7 @@ print("\n" + "=" * 70)
 print("SECTION 7: EXPERIMENTAL TESTS")
 print("=" * 70)
 
-print(
-    """
+print("""
 Upcoming experiments will probe deeper:
 
 1. Hyper-Kamiokande (2027+)
@@ -285,8 +270,7 @@ W33 PREDICTIONS:
 
 If proton decay is found at 10^35 years,
 it would be a MAJOR confirmation of W33!
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 8: B-L SYMMETRY
@@ -296,8 +280,7 @@ print("\n" + "=" * 70)
 print("SECTION 8: B-L IN W33")
 print("=" * 70)
 
-print(
-    """
+print("""
 W33 preserves B - L (baryon minus lepton number).
 
 This is because:
@@ -314,8 +297,7 @@ This is because:
 
 This explains why n - n̄ oscillations are also
 extremely suppressed (violates B by 2).
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 9: COSMOLOGICAL IMPLICATIONS
@@ -325,8 +307,7 @@ print("\n" + "=" * 70)
 print("SECTION 9: BARYOGENESIS")
 print("=" * 70)
 
-print(
-    """
+print("""
 For baryogenesis (matter-antimatter asymmetry), we need:
 
 1. Baryon number violation ✓ (W33 has it at GUT scale)
@@ -343,8 +324,7 @@ W33 naturally explains:
   - Why protons are stable (high GUT scale)
   - Why matter dominates (CP violation + B violation)
   - The observed baryon-to-photon ratio η ~ 10^(-10)
-"""
-)
+""")
 
 # Baryon asymmetry estimate
 M_R = 3**20  # Right-handed neutrino scale
@@ -384,8 +364,7 @@ results = {
 with open("PART_LXXIII_proton_decay.json", "w") as f:
     json.dump(results, f, indent=2, default=str)
 
-print(
-    """
+print("""
 PROTON STABILITY FROM W33!
 
 Key discoveries:
@@ -412,6 +391,5 @@ Key discoveries:
 Proton decay could be the SMOKING GUN for W33!
 
 Results saved to PART_LXXIII_proton_decay.json
-"""
-)
+""")
 print("=" * 70)

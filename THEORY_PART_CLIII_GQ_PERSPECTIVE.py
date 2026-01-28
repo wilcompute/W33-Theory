@@ -63,8 +63,7 @@ print("\n" + "=" * 70)
 print("WHAT IS A GENERALIZED QUADRANGLE?")
 print("=" * 70)
 
-print(
-    """
+print("""
 A GENERALIZED QUADRANGLE GQ(s, t) is an incidence structure where:
 
 • POINTS: A set P of points
@@ -85,8 +84,7 @@ For GQ(3, 3):
 • Lines:  (3+1)(3·3+1) = 4·10 = 40 (by symmetry!)
 • Each line has 4 points
 • Each point is on 4 lines
-"""
-)
+""")
 
 # =====================================================
 # IDENTIFY THE LINES
@@ -212,8 +210,7 @@ print("\n" + "=" * 70)
 print("GEOMETRIC INTERPRETATION")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE KEY INSIGHT:
 ================
 
@@ -227,8 +224,7 @@ Incidence (point on line) = State is in that basis!
 This is exactly the POLAR GEOMETRY of the symplectic form on F₃⁴.
 
 The 40 bases = 40 totally isotropic 2-spaces in the symplectic space.
-"""
-)
+""")
 
 # =====================================================
 # CONNECTING GQ TO MUBs
@@ -238,8 +234,7 @@ print("\n" + "=" * 70)
 print("GQ(3,3) AND THE MUB SYSTEMS")
 print("=" * 70)
 
-print(
-    """
+print("""
 RECONCILING TWO VIEWS:
 ======================
 
@@ -254,8 +249,7 @@ VIEW 2: 40-fold 3D MUB embedding
 - Each state in 12 MUB systems
 
 HOW DO THEY CONNECT?
-"""
-)
+""")
 
 # Lines = C⁴ bases, Triangles = C³ bases
 # Each C⁴ basis has 4 triangles (subsets of size 3)
@@ -283,8 +277,7 @@ print("\n" + "=" * 70)
 print("THE DUAL GENERALIZED QUADRANGLE")
 print("=" * 70)
 
-print(
-    """
+print("""
 Since s = t = 3, the GQ(3, 3) is SELF-DUAL!
 
 Dual GQ: interchange points and lines
@@ -292,8 +285,7 @@ Dual GQ: interchange points and lines
 - Lines of dual = Points of original = 40 states
 
 A "line" in the dual consists of the 4 bases containing a given state.
-"""
-)
+""")
 
 # Example
 print("Example: The 4 bases containing state 0:")
@@ -311,14 +303,12 @@ print("\n" + "=" * 70)
 print("SPREADS IN GQ(3, 3)")
 print("=" * 70)
 
-print(
-    """
+print("""
 A SPREAD is a set of lines that partition all points.
 For GQ(3, 3): 40 points ÷ 4 per line = 10 lines needed.
 
 Question: Do spreads exist in Sp₄(3)?
-"""
-)
+""")
 
 # Try to find a spread by greedy method
 used_points = set()
@@ -353,8 +343,7 @@ print("\n" + "=" * 70)
 print("THE COLLINEARITY GRAPH")
 print("=" * 70)
 
-print(
-    """
+print("""
 The COLLINEARITY GRAPH of GQ(3, 3) has:
 - Vertices: 40 points
 - Edges: Two points are adjacent iff they lie on a common line
@@ -365,8 +354,7 @@ Parameters:
 - n = 40 vertices
 - k = (s+1)t = 4·3 = 12 (each point collinear with 12 others)
 - λ = s + t - 1 = 3 + 3 - 1 = ... wait, let me verify
-"""
-)
+""")
 
 # The collinearity graph of GQ(s,t) is SRG with parameters
 # (v, k, λ, μ) = ((s+1)(st+1), s(t+1), s-1+t(t-1), t(t-1)+1) for t > 1
@@ -391,8 +379,7 @@ print("\n" + "=" * 70)
 print("PART CLIII COMPLETE")
 print("=" * 70)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════╗
 ║                   THE THREE FACES OF WITTING                         ║
 ╠══════════════════════════════════════════════════════════════════════╣
@@ -416,5 +403,4 @@ print(
 
 These three perspectives are ISOMORPHIC and reveal different
 facets of the same extraordinary mathematical object!
-"""
-)
+""")

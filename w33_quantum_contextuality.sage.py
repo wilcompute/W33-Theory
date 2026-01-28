@@ -17,8 +17,7 @@ print("=" * _sage_const_70)
 print("QUANTUM CONTEXTUALITY AND W(3, 3)")
 print("=" * _sage_const_70)
 
-print(
-    """
+print("""
 THE KOCHEN-SPECKER THEOREM (1967):
 ==================================
 Quantum mechanics is CONTEXTUAL: the outcome of measuring
@@ -48,8 +47,7 @@ contextuality proof:
   - 40 lines = 40 contexts (compatible measurements)
   - Each line has 4 points (4 commuting observables)
   - The geometry FORBIDS consistent value assignment!
-"""
-)
+""")
 
 F = GF(_sage_const_3)
 V = VectorSpace(F, _sage_const_4)
@@ -108,8 +106,7 @@ for i, p1 in enumerate(points):
 lines = list(set(lines))
 print(f"W(3, 3) has {len(lines)} lines (contexts)")
 
-print(
-    """
+print("""
 CONTEXTUALITY PROOF USING W(3, 3):
 ==================================
 Try to assign each point a value v(p) ∈ {0, 1} such that:
@@ -127,8 +124,7 @@ PARITY ARGUMENT:
   - So: exactly 10 points should have value 1
 
 But is this achievable? Let's check!
-"""
-)
+""")
 
 # Try to find a consistent value assignment
 from itertools import combinations
@@ -169,8 +165,7 @@ if not found:
 # Actually let's do a systematic check
 # This is a SAT problem / exact cover problem
 
-print(
-    """
+print("""
 SYSTEMATIC ANALYSIS:
 ====================
 The assignment problem is an EXACT COVER problem:
@@ -179,8 +174,7 @@ The assignment problem is an EXACT COVER problem:
   - Need: 10 points whose line-sets partition all 40 lines
 
 This is equivalent to finding a "spread" in the dual geometry!
-"""
-)
+""")
 
 # Build point-to-lines mapping
 point_lines = {tuple(p): [] for p in points}
@@ -195,8 +189,7 @@ print(f"Lines per point: {set(line_counts)}")
 # The problem: find 10 points such that their 40 line-memberships
 # cover all 40 lines exactly once
 
-print(
-    """
+print("""
 RESULT: W(3, 3) PROVIDES A CONTEXTUALITY PROOF
 ==============================================
 If a valid assignment existed, it would correspond to:
@@ -210,15 +203,13 @@ The obstruction is TOPOLOGICAL:
   - H₁(W(3, 3)) = Z^81 ≠ 0
   - This non-trivial homology obstructs consistent assignment
   - The 81 independent cycles are 81 "frustrations"
-"""
-)
+""")
 
 print("\n" + "=" * _sage_const_70)
 print("THE MERMIN-PERES MAGIC SQUARE")
 print("=" * _sage_const_70)
 
-print(
-    """
+print("""
 The Mermin-Peres "magic square" is a simpler contextuality proof
 using 9 observables arranged in a 3×3 grid:
 
@@ -249,15 +240,13 @@ W(3, 3) is a LARGER version with:
   - 40 points instead of 15
   - 40 lines instead of 15
   - More complex contextuality structure!
-"""
-)
+""")
 
 print("\n" + "=" * _sage_const_70)
 print("QUANTUM ERROR CORRECTION AND W(3, 3)")
 print("=" * _sage_const_70)
 
-print(
-    """
+print("""
 QUANTUM ERROR-CORRECTING CODES (QECCs):
 =======================================
 Symplectic geometry is fundamental to QECCs!
@@ -281,15 +270,13 @@ THE STEINBERG AND ERROR CORRECTION:
   - The 81-dimensional Steinberg representation
   - Encodes the "syndrome space" for errors
   - Each of the 81 basis cycles detects a type of error!
-"""
-)
+""")
 
 print("\n" + "=" * _sage_const_70)
 print("WIGNER FUNCTION AND DISCRETE PHASE SPACE")
 print("=" * _sage_const_70)
 
-print(
-    """
+print("""
 THE DISCRETE WIGNER FUNCTION:
 =============================
 For a d-dimensional quantum system (qudit), the Wigner function
@@ -317,15 +304,13 @@ PHYSICAL INTERPRETATION:
   - 40 lines = 40 "Lagrangian subspaces"
   - Lines correspond to GHZ-type entangled states!
   - The Steinberg = structure of entanglement!
-"""
-)
+""")
 
 print("\n" + "=" * _sage_const_70)
 print("SUMMARY: W(3, 3) IN QUANTUM PHYSICS")
 print("=" * _sage_const_70)
 
-print(
-    """
+print("""
 ╔═══════════════════════════════════════════════════════════════╗
 ║                W(3, 3) IN QUANTUM PHYSICS                    ║
 ╠═══════════════════════════════════════════════════════════════╣
@@ -359,8 +344,7 @@ connections between:
   - Quantum mechanics
   - Topology (π₁ = F₈₁)
   - Number theory (Steinberg representation)
-"""
-)
+""")
 
 print("\n★" + "=" * _sage_const_68 + "★")
 print("   QUANTUM PHYSICS CONNECTION COMPLETE!")

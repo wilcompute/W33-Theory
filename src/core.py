@@ -395,8 +395,7 @@ def investigate_algebraic_structure():
     print("\n" + "-" * 50)
     print("HYPOTHESIS: Clifford algebra connection")
     print("-" * 50)
-    print(
-        """
+    print("""
     The Z_12 phases factor as Z_12 = Z_3 × Z_4.
 
     The Z_4 part (phases ±1, ±i) is exactly the scalar part of
@@ -407,8 +406,7 @@ def investigate_algebraic_structure():
     - Clifford algebra generators: γ_i γ_j = -γ_j γ_i
 
     Question: Can we identify the 4 basis vectors with γ_0, γ_1, γ_2, γ_3?
-    """
-    )
+    """)
 
     return w
 

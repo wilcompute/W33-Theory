@@ -33,8 +33,7 @@ def explain_dual_interpretation():
     print("=" * 70)
     print("THE DUAL INTERPRETATION OF W33")
     print("=" * 70)
-    print(
-        """
+    print("""
     INTERPRETATION 1: ORTHOGONALITY GRAPH (Standard)
     ────────────────────────────────────────────────
     Vertices = 40 quantum states
@@ -61,8 +60,7 @@ def explain_dual_interpretation():
 
     The 27 NON-NEIGHBORS = states that interfere with measurement!
     This is why 27 keeps appearing - it's the "interference count"!
-    """
-    )
+    """)
 
 
 # ============================================================
@@ -147,15 +145,13 @@ def build_bases_and_contexts():
     print("\n" + "-" * 50)
     print("KOCHEN-SPECKER CONTEXTUALITY TEST")
     print("-" * 50)
-    print(
-        """
+    print("""
     Can we assign each state a "value" (0 or 1) such that:
     - In each basis, exactly one state has value 1?
 
     If NO, then quantum mechanics exhibits CONTEXTUALITY:
     the "value" of a state depends on which basis we measure.
-    """
-    )
+    """)
 
     # Try to find a valid coloring
     # This is equivalent to finding an independent set that hits each clique once
@@ -213,8 +209,7 @@ def build_bases_and_contexts():
     # For Witting configuration, the Penrose proof shows this is impossible
     # The geometric structure prevents any consistent assignment
 
-    print(
-        """
+    print("""
     RESULT: No valid assignment exists!
 
     This is the KOCHEN-SPECKER THEOREM for the Witting configuration:
@@ -225,8 +220,7 @@ def build_bases_and_contexts():
     - Use the dodecahedron geometry to show inconsistency
     - Maximum consistent assignment covers 34/40 bases (85%)
     - 6 bases will always have 0 or 2 marked states (contradiction)
-    """
-    )
+    """)
 
     return bases, state_to_bases
 
@@ -277,8 +271,7 @@ def analyze_e8_to_witting():
     # The factor of 6 comes from the Z6 action
     print(f"\n240 / 6 = {240 // 6} = number of Witting rays!")
 
-    print(
-        """
+    print("""
     THE QUOTIENT:
     ─────────────
     E8 has 240 roots, but they come in antipodal pairs: ±r
@@ -294,14 +287,12 @@ def analyze_e8_to_witting():
     - E8's 240 = complete symmetry before quantum quotient
     - Witting's 40 = quantum states (rays in projective space)
     - W33's 240 edges = "shadow" of E8's 240 roots!
-    """
-    )
+    """)
 
     # The W33 graph has 240 edges = |E8 roots|
     # This can't be coincidence - there must be a bijection!
 
-    print(
-        """
+    print("""
     THE 240 EDGES OF W33:
     ────────────────────
     W33 has 40 vertices, each with degree 12
@@ -315,8 +306,7 @@ def analyze_e8_to_witting():
 
     where each E8 root corresponds to an orthogonal pair
     of Witting states!
-    """
-    )
+    """)
 
     return e8_roots
 
@@ -333,8 +323,7 @@ def explain_qkd_protocol():
     print("\n" + "=" * 70)
     print("W33 IN QUANTUM KEY DISTRIBUTION")
     print("=" * 70)
-    print(
-        """
+    print("""
     VLASOV'S QKD PROTOCOL:
     ─────────────────────
 
@@ -378,8 +367,7 @@ def explain_qkd_protocol():
     This large symmetry group provides:
     - Protocol flexibility (many equivalent implementations)
     - Cryptographic security (hard to distinguish equivalent setups)
-    """
-    )
+    """)
 
 
 # ============================================================
@@ -394,8 +382,7 @@ def complete_picture():
     print("\n" + "=" * 70)
     print("THE COMPLETE MATHEMATICAL PICTURE")
     print("=" * 70)
-    print(
-        """
+    print("""
     ╔══════════════════════════════════════════════════════════════════╗
     ║                     THE W33 HIERARCHY                            ║
     ╠══════════════════════════════════════════════════════════════════╣
@@ -445,8 +432,7 @@ def complete_picture():
     ║  • Spin-3/2 systems (Penrose dodecahedron)                       ║
     ║                                                                  ║
     ╚══════════════════════════════════════════════════════════════════╝
-    """
-    )
+    """)
 
 
 # ============================================================
@@ -461,8 +447,7 @@ def open_questions():
     print("\n" + "=" * 70)
     print("OPEN QUESTIONS")
     print("=" * 70)
-    print(
-        """
+    print("""
     MATHEMATICAL QUESTIONS:
     ───────────────────────
     1. What is the explicit bijection E8 roots ↔ W33 edges?
@@ -506,8 +491,7 @@ def open_questions():
        - PSp(4,F3) ⋊ Z2 ≅ W(E6)
        - What is the geometric meaning of this isomorphism?
        - Can it be visualized?
-    """
-    )
+    """)
 
 
 # ============================================================

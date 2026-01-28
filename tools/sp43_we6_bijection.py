@@ -309,8 +309,7 @@ def main():
     print("KEY INSIGHT: THE BIJECTION STRUCTURE")
     print("=" * 60)
 
-    print(
-        """
+    print("""
 The bijection W33 edges <-> E8 roots should be:
 
 1. EQUIVARIANT under Sp(4,3) = W(E6) action
@@ -335,8 +334,7 @@ The explicit construction requires:
 This is a COMPUTATIONAL GROUP THEORY problem:
 Given the isomorphism phi: Sp(4,3) -> W(E6),
 the bijection is: e |-> phi(g) . r0 where g.e0 = e
-"""
-    )
+""")
 
     # Save results
     results = {

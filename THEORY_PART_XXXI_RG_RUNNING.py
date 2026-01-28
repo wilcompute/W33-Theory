@@ -15,8 +15,7 @@ from fractions import Fraction
 
 import numpy as np
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════╗
 ║             THEORY OF EVERYTHING - PART XXXI                         ║
 ║                                                                      ║
@@ -24,8 +23,7 @@ print(
 ║                                                                      ║
 ║         Can W33 structure predict sin²θ_W = 40/173 exactly?          ║
 ╚══════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # STANDARD MODEL BETA FUNCTIONS
@@ -36,8 +34,7 @@ print("STANDARD MODEL BETA FUNCTIONS (1-LOOP)")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 The running of gauge couplings in the SM is governed by:
 
     dα_i/d(ln μ) = b_i × α_i² / (2π)
@@ -52,8 +49,7 @@ These include contributions from:
     - Gauge boson loops (negative)
     - Fermion loops (positive)
     - Higgs loops (positive)
-"""
-)
+""")
 
 # Beta coefficients (1-loop, Standard Model with 1 Higgs doublet)
 b1 = 41 / 10  # U(1)_Y
@@ -74,8 +70,7 @@ print("GUT NORMALIZATION")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 In GUT theories, the U(1) coupling needs to be properly normalized.
 
 Standard convention (SU(5) normalization):
@@ -89,8 +84,7 @@ The Weinberg angle at ANY scale is defined by:
 
 Or equivalently:
     sin²θ_W = g'² / (g² + g'²)
-"""
-)
+""")
 
 # GUT normalization factor
 k1 = 5 / 3  # SU(5) normalization for U(1)
@@ -107,8 +101,7 @@ print("RUNNING EQUATIONS")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 The solution to the 1-loop RG equations is:
 
     1/α_i(μ) = 1/α_i(μ₀) - (b_i/2π) × ln(μ/μ₀)
@@ -119,8 +112,7 @@ At the GUT scale, assuming unification:
 Then at scale μ:
     1/α₁(μ) = 1/α_GUT - (b₁/2π) × ln(μ/M_GUT)
     1/α₂(μ) = 1/α_GUT - (b₂/2π) × ln(μ/M_GUT)
-"""
-)
+""")
 
 
 def run_coupling(alpha_GUT, b, M_GUT, mu):
@@ -180,12 +172,10 @@ print("STANDARD MODEL UNIFICATION TEST")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 First, let's check: Do the SM couplings actually unify?
 We run each coupling UP from M_Z and see where they meet.
-"""
-)
+""")
 
 
 def find_unification_scale():
@@ -237,8 +227,7 @@ print("W33 PREDICTION: REVERSE ENGINEERING")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 QUESTION: What GUT-scale sin²θ_W would give sin²θ_W(M_Z) = 40/173?
 
 At the GUT scale, in many GUT models:
@@ -246,8 +235,7 @@ At the GUT scale, in many GUT models:
     sin²θ_W(GUT) = 3/7 ≈ 0.429  [some E6 models]
 
 Let's work backwards from 40/173 to see what's needed.
-"""
-)
+""")
 
 sin2_w33 = 40 / 173
 
@@ -266,8 +254,7 @@ print("THE 173 PUZZLE")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 In W33 theory:
     sin²θ_W = 40/173
 
@@ -276,8 +263,7 @@ where:
     173 = ???
 
 Let's decompose 173:
-"""
-)
+""")
 
 print(f"  173 = 121 + 52 = W33_total + dim(F4)")
 print(f"  173 = 81 + 92  = cycles + ???")
@@ -295,8 +281,7 @@ print("  ║  DISCOVERY: 173 = 40 + 133 = W33_points + dim(E7)!           ║")
 print("  ╚═══════════════════════════════════════════════════════════════╝")
 print()
 
-print(
-    """
+print("""
 This gives a BEAUTIFUL interpretation:
 
     sin²θ_W = 40 / (40 + 133)
@@ -304,8 +289,7 @@ This gives a BEAUTIFUL interpretation:
             = GEOMETRY / (GEOMETRY + LIE_ALGEBRA)
 
 The electroweak mixing is the ratio of geometric to algebraic structure!
-"""
-)
+""")
 
 # =============================================================================
 # RUNNING FROM E6 GUT SCALE
@@ -316,16 +300,14 @@ print("E6 GUT RUNNING ANALYSIS")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 In E6 unification, the GUT-scale Weinberg angle depends on the
 breaking chain. For E6 → SO(10) → SM:
 
     sin²θ_W(GUT) = 3/8 = 0.375
 
 Let's compute what sin²θ_W(M_Z) would be starting from 3/8.
-"""
-)
+""")
 
 # GUT-scale value for E6 → SO(10)
 sin2_GUT = 3 / 8
@@ -346,8 +328,7 @@ sin2_GUT = 3 / 8
 # At GUT scale with SU(5) relations: g' = √(3/5) g_Y where g_Y² = 5/3 g'²
 # This is getting confusing. Let me be more careful.
 
-print(
-    """
+print("""
 ═══ Careful Analysis of E6 Running ═══
 
 The key is that β₁ > 0 and β₂ < 0, so:
@@ -361,8 +342,7 @@ But we observe sin²θ_W(M_Z) ≈ 0.231, which is indeed lower! Wait, that's
 the opposite of what I said...
 
 Let me recalculate carefully.
-"""
-)
+""")
 
 # At high scale, if couplings unify: α₁ = α₂ = α_GUT
 # Then sin²θ = α₁/(α₁+α₂) = 1/2
@@ -448,14 +428,12 @@ print("REVERSE ENGINEERING: WHAT GIVES 40/173 EXACTLY?")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 We want to find M_GUT and α_GUT such that:
     sin²θ_W(M_Z) = 40/173 exactly
 
 This is an inverse problem. Let's solve it.
-"""
-)
+""")
 
 
 def find_GUT_params_for_target(
@@ -526,8 +504,7 @@ print("KEY INSIGHT: α_GUT FROM W33 STRUCTURE")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 What if α_GUT itself comes from W33?
 
 Candidates:
@@ -535,8 +512,7 @@ Candidates:
     1/α_GUT = 40 (W33 points)
     1/α_GUT = 27 (E6 fundamental)
     1/α_GUT = 121/3 ≈ 40.3 (W33 total / generations)
-"""
-)
+""")
 
 # Test each W33-motivated α_GUT
 print("═══ Testing W33-motivated α_GUT values ═══")
@@ -582,8 +558,7 @@ print("ANALYSIS OF THE 0.036 CORRECTION TO α⁻¹")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 The fine structure constant at low energy:
     α⁻¹(0) = 137.035999...
 
@@ -593,8 +568,7 @@ The correction Δ = 0.036 should come from:
     1. QED radiative corrections (running from M_Z to 0)
     2. Hadronic contributions
     3. Weak contributions
-"""
-)
+""")
 
 # At M_Z, α_EM⁻¹ ≈ 127.95
 # At low energy (Thompson limit), α_EM⁻¹ ≈ 137.036
@@ -608,16 +582,14 @@ print(f"  α⁻¹(M_Z) = 127.95")
 print(f"  Running: Δα⁻¹ = {delta_alpha_inv:.2f}")
 print()
 
-print(
-    """
+print("""
 The running from M_Z to 0 is KNOWN (QED + hadronic):
     Δα⁻¹ ≈ 9.1 (from SM calculations)
 
 This is dominated by:
     - Lepton loops: ~3.2
     - Light quark loops: ~5.9
-"""
-)
+""")
 
 print()
 print("  The 0.036 is the DIFFERENCE between:")
@@ -652,8 +624,7 @@ print("TWO-LOOP ANALYSIS")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 The 2-loop beta coefficients change the running significantly.
 
 For E6 → SM breaking through SO(10) × U(1):
@@ -662,8 +633,7 @@ For E6 → SM breaking through SO(10) × U(1):
 
 If W33 structure determines these thresholds, we might get
 exactly 40/173.
-"""
-)
+""")
 
 # =============================================================================
 # FINAL SYNTHESIS
@@ -674,8 +644,7 @@ print("SYNTHESIS: THE W33 WEINBERG ANGLE FORMULA")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 ╔═══════════════════════════════════════════════════════════════════════╗
 ║                     THE FORMULA                                       ║
 ╠═══════════════════════════════════════════════════════════════════════╣
@@ -708,8 +677,7 @@ This suggests that:
     - Algebra (E7) gives rise to WEAK ISOSPIN (SU(2)_L)
 
 The mixing angle is the "geometric fraction" of the total structure!
-"""
-)
+""")
 
 # =============================================================================
 # WHAT WOULD MAKE THIS RIGOROUS
@@ -720,8 +688,7 @@ print("WHAT WOULD MAKE THIS RIGOROUS")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 To make the W33 Weinberg angle prediction truly rigorous:
 
 1. DERIVE 173 = 40 + 133 from first principles
@@ -746,8 +713,7 @@ CURRENT STATUS:
    - The NUMEROLOGY is striking: 40/173 matches experiment to 0.1σ
    - The INTERPRETATION (W33 + E7) is beautiful
    - The DERIVATION needs more work
-"""
-)
+""")
 
 print()
 print("=" * 72)

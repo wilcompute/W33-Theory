@@ -100,8 +100,7 @@ else:
         if 0 in b:
             print(f"  Basis containing state 0: {sorted(b)}")
 
-print(
-    """
+print("""
 IMPORTANT OBSERVATION:
 ======================
 
@@ -116,8 +115,7 @@ So if BOTH parties measure in basis {0,1,2,3}, they get:
 - They ALWAYS agree: P(same) = 1/4 + 1/4 + 1/4 + 1/4 = 1
 
 But if Alice uses a DIFFERENT Witting basis, the correlations change.
-"""
-)
+""")
 
 # =====================================================
 # CORRELATION IN STANDARD BASIS
@@ -172,8 +170,7 @@ print("\n" + "=" * 70)
 print("GENERAL SAME-BASIS CORRELATION")
 print("=" * 70)
 
-print(
-    """
+print("""
 KEY PROPERTY:
 =============
 
@@ -183,8 +180,7 @@ they get perfectly correlated outcomes.
 This is because |Σ⟩ is invariant under U ⊗ U* for any unitary U.
 
 But wait - for SAME U on both sides (not U*), we need to think more carefully...
-"""
-)
+""")
 
 # Check correlations for all 40 bases
 same_basis_correlations = []
@@ -207,8 +203,7 @@ print("\n" + "=" * 70)
 print("CORRELATION STRUCTURE ANALYSIS")
 print("=" * 70)
 
-print(
-    """
+print("""
 OBSERVATION:
 ============
 
@@ -221,8 +216,7 @@ For perfect correlation in a general basis B = {|b_0⟩, |b_1⟩, |b_2⟩, |b_3�
 the state should be expressible as Σ_i |b_i⟩|b_i⟩/2.
 
 This requires |Σ⟩ to be symmetric under the basis transformation.
-"""
-)
+""")
 
 # Analyze which bases give perfect correlation
 perfect_corr_bases = [
@@ -252,8 +246,7 @@ print("\n" + "=" * 70)
 print("CONSTRUCTING THE UNIVERSAL ENTANGLED STATE")
 print("=" * 70)
 
-print(
-    """
+print("""
 For device-independent QKD, we need an entangled state that gives
 perfect correlation in EVERY basis.
 
@@ -270,8 +263,7 @@ For SAME measurement (U = V), we need:
   ⟨Φ|(U† ⊗ V†)|ψ ⊗ φ⟩ where Alice gets |ψ⟩, Bob gets |φ⟩
 
 Let's verify this properly...
-"""
-)
+""")
 
 # The CORRECT protocol uses:
 # - Alice measures in basis B = {|b_i⟩}
@@ -328,8 +320,7 @@ print("\n" + "=" * 70)
 print("PART CXLV COMPLETE")
 print("=" * 70)
 
-print(
-    """
+print("""
 KEY FINDING:
 ============
 
@@ -356,5 +347,4 @@ The security still follows from:
 - Kochen-Specker obstruction (contextuality)
 - Bell inequality violation
 - Device-independent guarantees
-"""
-)
+""")

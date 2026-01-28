@@ -119,16 +119,14 @@ print("\n" + "=" * 70)
 print("THE SRG PARAMETER λ = 2")
 print("=" * 70)
 
-print(
-    """
+print("""
 From SRG(40, 12, 2, 4):
 - λ = 2: Adjacent vertices share exactly 2 common neighbors
 - μ = 4: Non-adjacent vertices share exactly 4 common neighbors
 
 These 2 (or 4) shared states are the intersection of the
 two ℂ³ subspaces at the adjacent (or non-adjacent) vertices!
-"""
-)
+""")
 
 # Verify
 print("Verification:")
@@ -147,8 +145,7 @@ print("\n" + "=" * 70)
 print("GEOMETRIC INTERPRETATION")
 print("=" * 70)
 
-print(
-    """
+print("""
 When two vertices v₁ ⊥ v₂ (adjacent in Sp₄(3)):
 - v₁ spans a ℂ¹ subspace
 - Neighbors of v₁ span v₁^⊥ ≅ ℂ³
@@ -159,8 +156,7 @@ When two vertices v₁ ⊥ v₂ (adjacent in Sp₄(3)):
 When two vertices v₁ ⟂̸ v₂ (non-adjacent):
 - The intersection v₁^⊥ ∩ v₂^⊥ is larger
 - Contains exactly 4 states (μ = 4)
-"""
-)
+""")
 
 # =====================================================
 # DETAILED LOOK AT SHARED STATES
@@ -252,14 +248,12 @@ print("\nEdge count distribution among 4 shared states:")
 for count in sorted(edge_counts.keys()):
     print(f"  {count} edges: {edge_counts[count]} pairs")
 
-print(
-    """
+print("""
 INTERPRETATION:
 - 2 edges among 4 states = P₄ (path) or 2K₂ (matching)
 - 4 edges = C₄ (cycle) or K₄-e (almost complete)
 - 0 edges = independent set (no orthogonalities)
-"""
-)
+""")
 
 # =====================================================
 # WHICH GRAPHS APPEAR?
@@ -341,8 +335,7 @@ print("\n" + "=" * 70)
 print("PART CLI COMPLETE")
 print("=" * 70)
 
-print(
-    """
+print("""
 SUMMARY OF SHARING STRUCTURE:
 =============================
 
@@ -364,5 +357,4 @@ SUMMARY OF SHARING STRUCTURE:
 
 IMPLICATION: While bases aren't shared, the FABRIC of
 individual states is intricately woven between the 40 MUB systems.
-"""
-)
+""")

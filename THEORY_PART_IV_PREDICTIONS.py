@@ -10,15 +10,13 @@ from W33 that can be tested against experiment.
 import math
 from fractions import Fraction
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════╗
 ║             THEORY OF EVERYTHING - PART IV                           ║
 ║                                                                      ║
 ║              PREDICTIONS AND EXPERIMENTAL TESTS                      ║
 ╚══════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # PRECISION CALCULATIONS
@@ -104,8 +102,7 @@ print("MASS RATIO PREDICTIONS")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 Mass ratios in W33 should come from the representation structure
 of E6 and its subgroups. Key numbers:
 
@@ -114,8 +111,7 @@ of E6 and its subgroups. Key numbers:
   3 = number of generations
 
 Let's see what ratios emerge naturally:
-"""
-)
+""")
 
 # Top/Bottom mass ratio
 m_top = 172.76  # GeV
@@ -176,8 +172,7 @@ print("GENERATION STRUCTURE")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 WHY EXACTLY 3 GENERATIONS?
 
 In W33:
@@ -196,8 +191,7 @@ PREDICTION: There are EXACTLY 3 generations.
   • 4th generation: FORBIDDEN
   • Hidden generations: FORBIDDEN
   • Any deviation: W33 falsified
-"""
-)
+""")
 
 # =============================================================================
 # DARK MATTER PREDICTION
@@ -208,8 +202,7 @@ print("DARK MATTER PREDICTION")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 From Part II, we derived:
 
   E7 decomposition: 56 → 27 + 27* + 1 + 1
@@ -223,8 +216,7 @@ For mass density, we need to account for:
   1. Number of degrees of freedom
   2. Thermal history
   3. Mass scales
-"""
-)
+""")
 
 # Observed ratio
 dm_ratio_obs = 5.4  # Dark/Visible ≈ 5.4
@@ -284,8 +276,7 @@ print("COSMOLOGICAL CONSTANT")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 The cosmological constant problem: Why is Λ so small?
 
   Observed: Λ ≈ 10⁻¹²² (in Planck units)
@@ -294,8 +285,7 @@ The cosmological constant problem: Why is Λ so small?
   This is off by 122 orders of magnitude!
 
 W33 APPROACH:
-"""
-)
+""")
 
 # The number 122 is interesting
 print("═══ The Number 122 ═══")
@@ -340,8 +330,7 @@ print("PROTON DECAY PREDICTION")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 In GUT theories, proton decay is mediated by heavy gauge bosons.
 
 Standard GUT prediction:
@@ -351,8 +340,7 @@ Current limit:
   τ_p > 2.4 × 10³⁴ years (Super-Kamiokande)
 
 W33 PREDICTION:
-"""
-)
+""")
 
 # W33 prediction for proton lifetime
 print("═══ W33 Analysis ═══")
@@ -387,13 +375,11 @@ print("NEUTRINO MASSES")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 Neutrino masses are tiny: m_ν ~ 0.01 - 0.1 eV
 
 W33 EXPLANATION:
-"""
-)
+""")
 
 print("═══ Seesaw Mechanism ═══")
 print()
@@ -472,8 +458,7 @@ print("SUMMARY OF TESTABLE PREDICTIONS")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 ╔════════════════════════════════════════════════════════════════════════════╗
 ║  QUANTITY              W33 FORMULA              PREDICTED    OBSERVED     ║
 ╠════════════════════════════════════════════════════════════════════════════╣
@@ -492,8 +477,7 @@ print(
 ║  Proton lifetime       ~10³⁵ years              Testable     ⏳ 2027+     ║
 ║  M_SUSY (GeV)          M_EW×√(90/40)            ~370         ⏳ TBD       ║
 ╚════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # FALSIFICATION CRITERIA
@@ -504,8 +488,7 @@ print("FALSIFICATION CRITERIA")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 W33 THEORY WOULD BE FALSIFIED IF:
 
   1. A 4th generation is discovered
@@ -537,8 +520,7 @@ W33 THEORY WOULD BE FALSIFIED IF:
 
 These are CONCRETE, TESTABLE predictions with TIMELINES.
 W33 is falsifiable - it is real science.
-"""
-)
+""")
 
 print("=" * 72)
 print("END OF PART IV: PREDICTIONS AND TESTS")

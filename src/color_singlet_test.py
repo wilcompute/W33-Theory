@@ -262,8 +262,7 @@ if __name__ == "__main__":
     print("\n" + "=" * 70)
     print("PHYSICS INTERPRETATION")
     print("=" * 70)
-    print(
-        """
+    print("""
 The color singlet hypothesis is CONFIRMED:
 
 1. ALL 90 K4 components have Z3 = 0 (mod 12)
@@ -290,5 +289,4 @@ The color singlet hypothesis is CONFIRMED:
    - Does the Z4 holonomy (weak isospin part) also have constraints?
    - Are there only certain Z4 values allowed?
    - What is the distribution of Z4 holonomies?
-"""
-    )
+""")

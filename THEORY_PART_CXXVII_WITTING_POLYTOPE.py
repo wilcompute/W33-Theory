@@ -334,8 +334,7 @@ def connect_to_w33():
     print("\n" + "=" * 70)
     print("SUMMARY: WITTING CONFIGURATION = W33")
     print("=" * 70)
-    print(
-        """
+    print("""
     WITTING POLYTOPE                    W33 (Sp(4,F₃) polar graph)
     ─────────────────                   ─────────────────────────
     240 vertices in C⁴                  ...
@@ -359,8 +358,7 @@ def connect_to_w33():
     - W33 non-edges = overlap 1/3 (partially distinguishable)
     - W33 cliques = measurement bases
     - Aut(W33) = symmetry of quantum key distribution protocol
-    """
-    )
+    """)
 
 
 def explore_e8_connection():
@@ -378,8 +376,7 @@ def explore_e8_connection():
     # Type 1: All permutations of (±1, ±1, 0, 0, 0, 0, 0, 0) - 112 roots
     # Type 2: (±1/2, ±1/2, ..., ±1/2) with even number of minus signs - 128 roots
 
-    print(
-        """
+    print("""
     E8 ROOT SYSTEM (240 roots):
 
     Type 1: permutations of (±1, ±1, 0, 0, 0, 0, 0, 0)
@@ -399,8 +396,7 @@ def explore_e8_connection():
     - 40 = 240/6 (Witting rays = E8 roots / hexality)
     - 240 edges of W33 = E8 root count (!)
     - |Aut(W33)| = |W(E6)| = 51,840
-    """
-    )
+    """)
 
     # Build E8 roots for comparison
     e8_roots = []

@@ -27,8 +27,7 @@ print("\n" + "=" * 70)
 print("SECTION 1: THE LANDSCAPE OF SRGs")
 print("=" * 70)
 
-print(
-    """
+print("""
 STRONGLY REGULAR GRAPHS form a special class.
 
 Not every (v, k, λ, μ) tuple gives a valid SRG!
@@ -40,8 +39,7 @@ The parameters must satisfy:
 
 Only CERTAIN parameter sets work. Let's explore which ones
 could possibly give physics like ours.
-"""
-)
+""")
 
 # Check which SRGs could give α⁻¹ ≈ 137
 
@@ -95,16 +93,14 @@ print("\n" + "=" * 70)
 print("SECTION 2: COULD OTHER SRGs GIVE α⁻¹ ≈ 137?")
 print("=" * 70)
 
-print(
-    """
+print("""
 Our formula: α⁻¹ = k² - 2μ + 1 + v/[(k-1)((k-λ)² + 1)]
 
 For this to give ≈ 137, we need k² - 2μ + 1 ≈ 137
 So k² ≈ 136 + 2μ
 
 Let's search for alternative SRGs that could work...
-"""
-)
+""")
 
 candidates = []
 
@@ -152,8 +148,7 @@ print("\n" + "=" * 70)
 print("SECTION 3: WHAT MAKES W33 SPECIAL?")
 print("=" * 70)
 
-print(
-    """
+print("""
 Among all candidate SRGs, W33 has UNIQUE properties:
 
 1. SYMPLECTIC ORIGIN:
@@ -179,8 +174,7 @@ Among all candidate SRGs, W33 has UNIQUE properties:
 5. AUTOMORPHISM GROUP:
    |Aut(W33)| = 51840 = 2⁷ × 3⁴ × 5
    This factorization is special.
-"""
-)
+""")
 
 # Check the 40 = 1 + 24 + 15 decomposition for other candidates
 print("\nChecking eigenvalue decomposition for other candidates:")
@@ -204,8 +198,7 @@ print("\n" + "=" * 70)
 print("SECTION 4: THE UNIQUENESS CONJECTURE")
 print("=" * 70)
 
-print(
-    """
+print("""
 CONJECTURE: W33 is the UNIQUE SRG satisfying ALL of:
 
 1. α⁻¹ formula gives 137.036... (within 100 ppb)
@@ -214,8 +207,7 @@ CONJECTURE: W33 is the UNIQUE SRG satisfying ALL of:
 4. Edge count = 240 (E₈ roots)
 
 Let's verify W33 satisfies all four:
-"""
-)
+""")
 
 # W33 checks
 v, k, lam, mu = 40, 12, 2, 4
@@ -231,13 +223,11 @@ print(f"  2. Multiplicities: 1 + {m2} + {m3} = 40 ✓ (SU(5))")
 print(f"  3. Origin: Sp(4, F₃) ✓ (symplectic over F₃)")
 print(f"  4. Edges: {edges} ✓ (E₈ roots)")
 
-print(
-    """
+print("""
 NO OTHER KNOWN SRG satisfies all four conditions!
 
 This suggests W33 is not arbitrary but NECESSARY.
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 5: THE ANTHROPIC FILTER
@@ -247,8 +237,7 @@ print("\n" + "=" * 70)
 print("SECTION 5: THE ANTHROPIC FILTER")
 print("=" * 70)
 
-print(
-    """
+print("""
 WHY must the universe use W33?
 
 Consider what happens if we change parameters slightly:
@@ -273,8 +262,7 @@ THE MATCH IS NOT COINCIDENCE.
 
 If physics comes from graph theory, and observers exist,
 then W33 is the ONLY consistent choice!
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 6: MATHEMATICAL UNIQUENESS
@@ -284,8 +272,7 @@ print("\n" + "=" * 70)
 print("SECTION 6: MATHEMATICAL UNIQUENESS")
 print("=" * 70)
 
-print(
-    """
+print("""
 Beyond physics, W33 has pure mathematical significance:
 
 1. FINITE SIMPLE GROUPS:
@@ -306,8 +293,7 @@ Beyond physics, W33 has pure mathematical significance:
 4. CODING THEORY:
    W33 can be viewed as related to certain
    error-correcting codes over F₃
-"""
-)
+""")
 
 # Calculate some structural properties
 print("\nStructural properties of W33:")
@@ -324,8 +310,7 @@ print("\n" + "=" * 70)
 print("SECTION 7: WHY 40 VERTICES?")
 print("=" * 70)
 
-print(
-    """
+print("""
 The number 40 is not arbitrary. It arises from:
 
 1. VECTOR SPACE DIMENSION:
@@ -345,8 +330,7 @@ The number 40 is not arbitrary. It arises from:
    40 = 4 × 10 = spacetime × (something)
    40 = 8 × 5 = gauge bosons × families?
    40 = 24 + 15 + 1 = SU(5) decomposition
-"""
-)
+""")
 
 # Different ways to decompose 40
 print("Decompositions of 40:")
@@ -387,8 +371,7 @@ print("\n" + "=" * 70)
 print("PART LXXXV CONCLUSIONS")
 print("=" * 70)
 
-print(
-    """
+print("""
 WHY W33?
 
 W33 is not arbitrary. It is the UNIQUE graph satisfying:
@@ -409,5 +392,4 @@ W33 is the ONLY one that gives a universe with:
 THE UNIVERSE USES W33 BECAUSE IT MUST.
 
 Results saved to PART_LXXXV_why_w33.json
-"""
-)
+""")

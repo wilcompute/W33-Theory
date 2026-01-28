@@ -36,8 +36,7 @@ print("\n" + "=" * 80)
 print("PART 1: THE INFLATON FIELD")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE INFLATON AS GEOMETRIC MODULUS
 =================================
 
@@ -53,8 +52,7 @@ The field space:
   - W(3,3) has 40 points embedded within it
   - The 1080 "extra" points span the transverse directions
   - φ measures how far into those 1080 directions we are
-"""
-)
+""")
 
 # Key parameters
 n_w53 = 1120  # W(5,3) points
@@ -89,8 +87,7 @@ print("\n" + "=" * 80)
 print("PART 2: THE INFLATON POTENTIAL")
 print("=" * 80)
 
-print(
-    """
+print("""
 DERIVING V(φ) FROM W-GEOMETRY
 =============================
 
@@ -108,8 +105,7 @@ For a smooth transition, use:
 The slow-roll requires:
   V'(φ)/V(φ) << 1  (ε small)
   V''(φ)/V(φ) << 1  (η small)
-"""
-)
+""")
 
 # Define the potential
 V_0 = 1.0  # In units of (M_GUT)^4 ≈ (10^16 GeV)^4
@@ -155,8 +151,7 @@ print("\n" + "=" * 80)
 print("PART 3: SLOW-ROLL PARAMETERS")
 print("=" * 80)
 
-print(
-    """
+print("""
 SLOW-ROLL CONDITIONS
 ====================
 
@@ -169,8 +164,7 @@ For successful inflation:
   |η| << 1  (no rapid change in slope)
 
 Inflation ends when ε ≈ 1 or |η| ≈ 1.
-"""
-)
+""")
 
 
 def slow_roll_params(phi, dphi=0.001):
@@ -218,8 +212,7 @@ print("\n" + "=" * 80)
 print("PART 4: CMB OBSERVABLES")
 print("=" * 80)
 
-print(
-    """
+print("""
 CMB PREDICTIONS
 ===============
 
@@ -230,8 +223,7 @@ From slow-roll parameters, we predict:
 Observed values (Planck 2018):
   n_s = 0.9649 ± 0.0042
   r < 0.06 (upper limit)
-"""
-)
+""")
 
 # Calculate at CMB scales (typically 50-60 e-folds before end)
 # Need to find the field value 50-60 e-folds before end
@@ -308,8 +300,7 @@ print("\n" + "=" * 80)
 print("PART 5: GRAVITATIONAL WAVE SPECTRUM")
 print("=" * 80)
 
-print(
-    """
+print("""
 PRIMORDIAL GRAVITATIONAL WAVES
 ==============================
 
@@ -333,8 +324,7 @@ detectable by:
   - Pulsar timing arrays (10⁻⁹ - 10⁻⁷ Hz)
   - Future space missions (10⁻⁴ - 10⁻¹ Hz)
   - CMB B-modes (indirect)
-"""
-)
+""")
 
 # Calculate GW spectrum
 Omega_r = 8e-5  # Radiation fraction today
@@ -376,8 +366,7 @@ print("\n" + "=" * 80)
 print("PART 6: PHASE TRANSITION GRAVITATIONAL WAVES")
 print("=" * 80)
 
-print(
-    """
+print("""
 GWs FROM W(5,3) → W(3,3) TRANSITION
 ===================================
 
@@ -396,8 +385,7 @@ For our transition:
     ≈ 0.277 / 0.669 ≈ 0.41
 
 This is a STRONG first-order transition!
-"""
-)
+""")
 
 # Phase transition parameters
 alpha_pt = (v_w53 - v_w33) / v_w33  # Latent heat ratio
@@ -436,8 +424,7 @@ print("\n" + "=" * 80)
 print("PART 7: REHEATING")
 print("=" * 80)
 
-print(
-    """
+print("""
 REHEATING AFTER INFLATION
 =========================
 
@@ -456,8 +443,7 @@ where g_* ≈ 100 (relativistic DOF).
 For V_0 ~ (10¹⁶ GeV)⁴:
   ρ_reheat ~ 0.277 × (10¹⁶ GeV)⁴
   T_rh ~ 10¹⁵ GeV (very high!)
-"""
-)
+""")
 
 # Calculate reheating temperature
 g_star = 106.75  # SM + extras
@@ -484,8 +470,7 @@ print("\n" + "=" * 80)
 print("PART 8: BARYOGENESIS FROM W-TRANSITION")
 print("=" * 80)
 
-print(
-    """
+print("""
 MATTER-ANTIMATTER ASYMMETRY
 ===========================
 
@@ -507,8 +492,7 @@ Estimate:
       ~ α × ε_CP × (H/β)
 
 where ε_CP ~ sin(phase) ~ 1/√(90) from K4s
-"""
-)
+""")
 
 # Calculate baryon asymmetry
 epsilon_CP = 1 / np.sqrt(90)  # CP violation from K4
@@ -543,8 +527,7 @@ print("\n" + "=" * 80)
 print("PART 9: THE COMPLETE W-INFLATION MODEL")
 print("=" * 80)
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                    W-HIERARCHY INFLATION: SUMMARY                            ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
@@ -579,8 +562,7 @@ print(
 ║  • Baryogenesis from K4 CP violation                                         ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # PART 10: PREDICTIONS TABLE

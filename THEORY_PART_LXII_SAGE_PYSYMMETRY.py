@@ -505,15 +505,13 @@ print("\n" + "=" * 70)
 print("SECTION 7: GRAPH SPECTRUM → PHYSICS CONNECTION")
 print("=" * 70)
 
-print(
-    """
+print("""
 INSIGHT: The eigenvalues of W33 might encode physical information!
 
 W33 eigenvalues: 12 (×1), 2 (×?), -4 (×?)
 
 Let's explore what these mean:
-"""
-)
+""")
 
 # The eigenvalues of SRG(40,12,2,4) are:
 # k = 12, r = 2, s = -4
@@ -539,8 +537,7 @@ print(f"  2 with multiplicity {m_r}")
 print(f"  -4 with multiplicity {m_s}")
 print(f"  Total: 1 + {m_r} + {m_s} = {1 + m_r + m_s}")
 
-print(
-    f"""
+print(f"""
 PHYSICAL INTERPRETATION:
 ========================
 
@@ -556,8 +553,7 @@ The eigenvalue pattern (1, 24, 15) sums to 40!
 
 Could this relate to gauge symmetry breaking?
   SU(5) [24] → SU(4) [15] → ... ?
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 8: MODULAR ARITHMETIC PATTERNS
@@ -567,11 +563,9 @@ print("\n" + "=" * 70)
 print("SECTION 8: MODULAR PATTERNS (mod 3)")
 print("=" * 70)
 
-print(
-    """
+print("""
 W33 is built over F_3, so let's look at key numbers mod 3:
-"""
-)
+""")
 
 key_numbers = {
     "alpha_inv": 137,
@@ -591,8 +585,7 @@ print("-" * 50)
 for name, val in key_numbers.items():
     print(f"{name:<15} {val:<8} {val % 3:<8} {val % 9:<8} {val % 27}")
 
-print(
-    """
+print("""
 OBSERVATION:
 • 137 ≡ 2 (mod 3), 2 (mod 9), 2 (mod 27)
 • 173 ≡ 2 (mod 3), 2 (mod 9), 11 (mod 27)
@@ -604,8 +597,7 @@ So 137 ≡ 56 (mod 27)!
 And 137 - 56 = 81 = 3⁴, divisible by 27.
 
 This confirms: α⁻¹ = 81 + 56 + ε where ε is small correction!
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 9: OUTSIDE THE BOX - SPECTRAL GAP AND MASS GAP
@@ -615,8 +607,7 @@ print("\n" + "=" * 70)
 print("SECTION 9: SPECTRAL GAP → MASS GAP?")
 print("=" * 70)
 
-print(
-    """
+print("""
 WILD IDEA: Could the W33 spectral gap relate to the QCD mass gap?
 
 W33 spectral gap: 12 - 2 = 10 (between largest and second eigenvalue)
@@ -639,8 +630,7 @@ These are simple ratios! Could encode:
 • 6 = number of quarks
 • 3 = number of colors
 • 1/2 = fermion spin
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 10: GENERATE COMPREHENSIVE SAGE SCRIPT
@@ -871,8 +861,7 @@ print("\n" + "=" * 70)
 print("PART LXII CONCLUSIONS")
 print("=" * 70)
 
-print(
-    """
+print("""
 COMPUTATIONAL VERIFICATION COMPLETE:
 
 1. ✓ Constructed W33 as isotropic 1-spaces in F_3^4
@@ -896,6 +885,5 @@ This might connect W33 to GUT gauge group breaking:
 Run the .sage files in SageMath for full verification.
 
 Results saved to PART_LXII_sage_pysymmetry_results.json
-"""
-)
+""")
 print("=" * 70)

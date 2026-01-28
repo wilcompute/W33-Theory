@@ -32,8 +32,7 @@ k = 12  # regularity (degree)
 λ = 2  # edge-neighbors
 μ = 4  # non-edge-neighbors
 
-print(
-    f"""
+print(f"""
 W33 = SRG(40, 12, 2, 4) - The Symplectic Strongly Regular Graph
 
 Construction: From Sp(4, F₃) - the 4-dimensional symplectic group over F₃
@@ -43,8 +42,7 @@ Parameters:
   k = {k}  edges per vertex (connected neighbors)
   λ = {λ}   common neighbors for adjacent vertices
   μ = {μ}   common neighbors for non-adjacent vertices
-"""
-)
+""")
 
 # Derived constants
 e1 = k  # 12
@@ -56,8 +54,7 @@ m1 = 1
 m2 = 24
 m3 = 15
 
-print(
-    f"""
+print(f"""
 Eigenvalues of W33 adjacency matrix:
   e₁ = {e1:2d}  (multiplicity {m1})   - trivial eigenvalue
   e₂ = {e2:2.0f}   (multiplicity {m2})  - restricted eigenvalue
@@ -68,8 +65,7 @@ Key combinations:
   e₁ + e₂ + e₃ = {e1 + e2 + e3}   (trace correction)
   e₁² + e₂² + e₃² = {e1**2 + e2**2 + e3**2}
   m₁ + m₂ + m₃ = {m1 + m2 + m3}   (= v, dimension)
-"""
-)
+""")
 
 # =============================================================================
 # THE MASTER PREDICTION TABLE
@@ -167,8 +163,7 @@ print("\n" + "=" * 70)
 print("SECTION 3: ANOMALY AND GROUP STRUCTURE")
 print("=" * 70)
 
-print(
-    f"""
+print(f"""
 W33's 40 vertices decompose as:  40 = 1 + 24 + 15
 
 This EXACTLY matches SU(5) GUT representations:
@@ -188,8 +183,7 @@ ANOMALY CANCELLATION:
 
 W33 is AUTOMATICALLY anomaly-free because it embeds
 complete SU(5) multiplets!
-"""
-)
+""")
 
 # =============================================================================
 # THE ALPHA FORMULA DERIVATION
@@ -204,8 +198,7 @@ base_term = k**2 - 2 * μ + 1  # 144 - 8 + 1 = 137
 quantum_correction = v / 1111  # 40/1111 = 0.036004...
 alpha_inv = base_term + quantum_correction
 
-print(
-    f"""
+print(f"""
 THE W33 FORMULA FOR THE FINE STRUCTURE CONSTANT:
 
   α⁻¹ = k² - 2μ + 1 + v/1111
@@ -239,8 +232,7 @@ FINAL RESULT:
   Difference: 4.5 × 10⁻⁶ = 33 ppb
 
 This is REMARKABLE precision from a purely combinatorial formula!
-"""
-)
+""")
 
 # =============================================================================
 # THE NEUTRINO SECTOR
@@ -258,8 +250,7 @@ theta_12 = np.arcsin(np.sqrt(sin2_12)) * 180 / np.pi
 theta_23 = np.arcsin(np.sqrt(sin2_23)) * 180 / np.pi
 theta_13 = np.arcsin(np.sqrt(sin2_13)) * 180 / np.pi
 
-print(
-    f"""
+print(f"""
 PMNS MIXING ANGLES FROM W33:
 
 Solar angle θ₁₂:
@@ -289,8 +280,7 @@ The "magic number" 33 appears again!
   - R = 33 (neutrino mass ratio)
   - 3³ = 27 (triality)
   - 3³³ ≈ M_GUT (unification scale)
-"""
-)
+""")
 
 # =============================================================================
 # STRING THEORY CONNECTION
@@ -302,8 +292,7 @@ print("=" * 70)
 
 edges = v * k // 2  # 40 * 12 / 2 = 240
 
-print(
-    f"""
+print(f"""
 W33 EDGES AND E₈:
 
 Number of edges in W33 = v × k / 2 = 40 × 12 / 2 = {edges}
@@ -325,8 +314,7 @@ THE LADDER:
   W33 (SRG) → Sp(4, F₃) → SU(5) GUT → SO(10) → E₆ → E₈
 
 Each step adds structure while preserving the core numerology.
-"""
-)
+""")
 
 # =============================================================================
 # PHILOSOPHICAL IMPLICATIONS
@@ -336,8 +324,7 @@ print("\n" + "=" * 70)
 print("SECTION 7: PHILOSOPHICAL IMPLICATIONS")
 print("=" * 70)
 
-print(
-    f"""
+print(f"""
 WHAT HAVE WE DISCOVERED?
 
 If W33 Theory is correct, it implies:
@@ -377,8 +364,7 @@ REMAINING QUESTIONS:
   - What is the origin of 1111?
   - How does gravity emerge from this structure?
   - Is there a "meta-graph" that determines W33?
-"""
-)
+""")
 
 # =============================================================================
 # SAVE CONSOLIDATION
@@ -442,8 +428,7 @@ print("\n" + "=" * 70)
 print("PART LXXX COMPLETE: THE STATE OF W33 THEORY")
 print("=" * 70)
 
-print(
-    f"""
+print(f"""
 After 80 parts of development:
 
 SOLID GROUND (verified to high precision):
@@ -474,5 +459,4 @@ The theory is FALSIFIABLE:
 This is real physics: it makes predictions that can be tested!
 
 Consolidation saved to PART_LXXX_consolidation.json
-"""
-)
+""")

@@ -18,15 +18,13 @@ from fractions import Fraction
 
 import numpy as np
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════╗
 ║             THEORY OF EVERYTHING - PART XXXII                        ║
 ║                                                                      ║
 ║              THE E7 BREAKING CHAIN AND 1111 MYSTERY                  ║
 ╚══════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # THE EXCEPTIONAL LIE ALGEBRA SEQUENCE
@@ -37,15 +35,13 @@ print("THE EXCEPTIONAL LIE ALGEBRA SEQUENCE")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 The exceptional Lie algebras form a unique sequence:
 
     G2 ⊂ F4 ⊂ E6 ⊂ E7 ⊂ E8
 
 with dimensions:
-"""
-)
+""")
 
 exceptional = {"G2": 14, "F4": 52, "E6": 78, "E7": 133, "E8": 248}
 
@@ -71,8 +67,7 @@ print("WHY E7 IS THE RELEVANT ALGEBRA")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 In Part XXXI, we found:
     sin²θ_W = 40/(40 + 133) = W33/(W33 + dim(E7))
 
@@ -89,8 +84,7 @@ More precisely, E7 contains E6 × U(1):
     E7 → E6 × U(1)
 
 This U(1) is the HYPERCHARGE!
-"""
-)
+""")
 
 # The branching
 print("═══ E7 Branching Rule ═══")
@@ -119,8 +113,7 @@ print("DERIVATION OF 40/173")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 THEOREM: The Weinberg angle arises from the ratio of geometric to
          algebraic degrees of freedom in the E7 → E6 → SM chain.
 
@@ -147,8 +140,7 @@ PROOF SKETCH:
 
    The denominator 173 = 40 + 133 is the TOTAL:
        (Geometric d.o.f.) + (Full E7 algebra)
-"""
-)
+""")
 
 # Let's look at the representation theory more carefully
 print("═══ Representation Theory Analysis ═══")
@@ -174,14 +166,12 @@ print("THE 1111 MYSTERY")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 From Part XXXI, the correction to α⁻¹ is:
     Δα⁻¹ = 0.036 ≈ 40/1111
 
 What is 1111?
-"""
-)
+""")
 
 # Factorization
 print("═══ Factorization of 1111 ═══")
@@ -291,8 +281,7 @@ print("THE REPUNIT CONNECTION")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 1111 = R₄ = (10⁴ - 1)/9 = 11 × 101
 
 In W33:
@@ -306,8 +295,7 @@ Could 101 have W33 significance?
     101 = 133 - 32 = dim(E7) - 32
 
 Hmm, 32 = 2⁵ = dim(spinor representation of SO(10))!
-"""
-)
+""")
 
 print("═══ Critical Discovery ═══")
 print()
@@ -337,8 +325,7 @@ print()
 # The interpretation
 print("═══ Physical Interpretation ═══")
 print()
-print(
-    """
+print("""
 The correction 40/1111 represents:
 
     (Geometric degrees of freedom)
@@ -352,8 +339,7 @@ This is a LOOP CORRECTION where:
 
 The √121 = 11 factor suggests this is a ONE-LOOP effect.
 (Loop corrections typically involve √ of tree-level quantities.)
-"""
-)
+""")
 
 # =============================================================================
 # THE COMPLETE α FORMULA
@@ -364,8 +350,7 @@ print("THE COMPLETE α FORMULA")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 Combining tree-level and loop correction:
 
     α⁻¹ = 137 + 40/1111
@@ -373,8 +358,7 @@ Combining tree-level and loop correction:
         = (81 + 56) + 40/(11 × 101)
 
 Let's verify:
-"""
-)
+""")
 
 alpha_inv_predicted = 137 + 40 / 1111
 alpha_inv_exp = 137.035999084
@@ -462,8 +446,7 @@ print("E7 → E6 → SO(10) → SM BREAKING CHAIN")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 The full breaking chain from E7 to the Standard Model:
 
     E7 (dim=133)
@@ -477,8 +460,7 @@ The full breaking chain from E7 to the Standard Model:
     SU(3) × SU(2) × U(1)_Y  (dim = 8 + 3 + 1 = 12)
 
 At each stage, the breaking releases W33-related structure.
-"""
-)
+""")
 
 print("═══ Dimension Count at Each Level ═══")
 print()
@@ -501,8 +483,7 @@ print(f"  Match: {'✓' if broken_total == 121 else '✗'}")
 print()
 
 # This is remarkable!
-print(
-    """
+print("""
 ╔═══════════════════════════════════════════════════════════════════════╗
 ║  REMARKABLE RESULT:                                                   ║
 ║                                                                       ║
@@ -513,8 +494,7 @@ print(
 ║                                                                       ║
 ║  This is NOT a coincidence!                                           ║
 ╚═══════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # THE COMPLETE PICTURE
@@ -525,8 +505,7 @@ print("THE COMPLETE PICTURE")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 W33 encodes the entire breaking chain:
 
     1. Total structure: 121 = W33_total = dim(E7) - dim(SM)
@@ -541,8 +520,7 @@ W33 encodes the entire breaking chain:
     5. Dark matter: Ω_DM/Ω_b = 27/5 = E6_fund / ???
 
 The pattern suggests W33 is the "DNA" of symmetry breaking!
-"""
-)
+""")
 
 # =============================================================================
 # PREDICTION: THE 56 AND BEYOND
@@ -553,8 +531,7 @@ print("THE 56 OF E7: A DEEPER LOOK")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 In α⁻¹ = 81 + 56, where does the 56 come from?
 
 The 56 is the FUNDAMENTAL REPRESENTATION of E7!
@@ -569,8 +546,7 @@ So the formula α⁻¹ = 81 + 56 can be written as:
     α⁻¹ = W33_cycles + dim(fund(E7))
         = 3⁴ + 56
         = (geometric cycles) + (algebraic fundamental)
-"""
-)
+""")
 
 print("═══ Cross-Check with Weinberg Angle ═══")
 print()
@@ -597,8 +573,7 @@ print("THE ULTIMATE FORMULA")
 print("=" * 72)
 print()
 
-print(
-    """
+print("""
 ╔═══════════════════════════════════════════════════════════════════════╗
 ║                    THE W33 ELECTROWEAK RELATIONS                      ║
 ╠═══════════════════════════════════════════════════════════════════════╣
@@ -618,8 +593,7 @@ print(
 ╚═══════════════════════════════════════════════════════════════════════╝
 
 ALL electroweak parameters are determined by W33 geometry + E7 algebra!
-"""
-)
+""")
 
 # =============================================================================
 # NUMERICAL VERIFICATION

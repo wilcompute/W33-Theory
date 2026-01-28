@@ -444,8 +444,7 @@ def main():
     print("SUMMARY")
     print("=" * 60)
 
-    print(
-        """
+    print("""
 The bijection exists but is not captured by simple invariants.
 
 Key observations:
@@ -462,8 +461,7 @@ HOWEVER, the STRUCTURAL correspondence is established:
 - 240 edges <-> 240 roots (numerical)
 - 120 line pairs <-> 120 root lines (structural via triality)
 - Group actions match (both order 51,840)
-"""
-    )
+""")
 
     # Save results
     results = {

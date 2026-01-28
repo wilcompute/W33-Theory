@@ -378,8 +378,7 @@ def main():
     print("BIJECTION CONSTRUCTION INSIGHT")
     print("=" * 70)
 
-    print(
-        """
+    print("""
 The 240 W33 edges correspond to 240 E8 roots through:
 
 1. ORBIT CORRESPONDENCE:
@@ -397,8 +396,7 @@ The 240 W33 edges correspond to 240 E8 roots through:
 
 The explicit bijection is: edge {v_i, v_j} <-> r_k where r_k
 encodes the relationship between the 6+6 Witting vertices in rays i,j.
-"""
-    )
+""")
 
     # Save results
     results = {

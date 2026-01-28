@@ -14,8 +14,7 @@ from fractions import Fraction
 
 import numpy as np
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                   THEORY OF EVERYTHING - PART XIX                            ║
 ║                                                                              ║
@@ -23,8 +22,7 @@ print(
 ║                                                                              ║
 ║     Every number tells a story about the universe!                           ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # THE WITTING NUMBERS
@@ -296,8 +294,7 @@ print("PART 5: THE COMPLETE CHAIN")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                      THE DESCENT FROM E8 TO PHYSICS                          ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
@@ -342,8 +339,7 @@ print(
 ║  • All particle masses and couplings                                         ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # NUMERICAL COINCIDENCES OR DEEP TRUTHS?
@@ -354,8 +350,7 @@ print("PART 6: ARE THESE COINCIDENCES?")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 Consider the probability that these are random coincidences:
 
   1. Witting diameters = 40 = W33 points
@@ -386,8 +381,7 @@ Combined probability of ALL being coincidence:
 This is essentially ZERO.
 
 CONCLUSION: These connections are REAL, not coincidental!
-"""
-)
+""")
 
 # Calculate combined probability
 p = 0.025 * 0.01 * 0.01 * 0.03 * 0.04 * 0.001 * 0.00003
@@ -403,8 +397,7 @@ print("PART 7: OPEN QUESTIONS")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 What we still need to understand:
 
 1. WHY does complex projection (E8 → Witting) preserve physics?
@@ -428,8 +421,7 @@ What we still need to understand:
    - How does dynamics emerge?
 
 These questions point to Part XX and beyond...
-"""
-)
+""")
 
 print("=" * 80)
 print("END OF PART XIX: DEEP WITTING NUMEROLOGY")

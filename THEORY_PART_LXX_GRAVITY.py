@@ -29,8 +29,7 @@ print("\n" + "=" * 70)
 print("SECTION 1: THE HIERARCHY PROBLEM")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE FUNDAMENTAL MYSTERY:
 
 Why is gravity so weak compared to other forces?
@@ -46,8 +45,7 @@ In terms of mass scales:
   Ratio: M_P / M_W ≈ 1.5 × 10^17
 
 Can W33 explain this enormous ratio?
-"""
-)
+""")
 
 # Physical constants
 M_Planck = 1.221e19  # GeV
@@ -68,8 +66,7 @@ print("\n" + "=" * 70)
 print("SECTION 2: W33 AND LARGE NUMBERS")
 print("=" * 70)
 
-print(
-    """
+print("""
 W33 generates large numbers through exponentiation:
 
   3^4 = 81
@@ -86,8 +83,7 @@ And 40 = W33 vertices!
 
 This suggests:
   M_Planck / (1 GeV) ≈ 3^v = 3^40
-"""
-)
+""")
 
 # Check
 planck_ratio = 3**40
@@ -103,8 +99,7 @@ print("\n" + "=" * 70)
 print("SECTION 3: PLANCK MASS FROM W33")
 print("=" * 70)
 
-print(
-    """
+print("""
 HYPOTHESIS: The Planck mass is determined by W33:
 
   M_Planck = 3^v × (fundamental scale)
@@ -126,8 +121,7 @@ The ratio is:
 Very close! The correction might come from alpha:
   M_Planck = 3^40 × (1 + alpha) GeV
            ≈ 3^40 × 1.0073 GeV
-"""
-)
+""")
 
 ratio = M_Planck / (3**40)
 print(f"\nM_Planck / 3^40 = {ratio:.6f}")
@@ -142,8 +136,7 @@ print("\n" + "=" * 70)
 print("SECTION 4: ELECTROWEAK SCALE FROM W33")
 print("=" * 70)
 
-print(
-    """
+print("""
 The Higgs VEV v = 246 GeV sets the electroweak scale.
 
 In W33:
@@ -163,8 +156,7 @@ Attempt 2: v from W33 numbers
 
 So: v_Higgs = 3 × 3^4 + 3 = 3 × (81 + 1) = 3 × 82 = 246
     = 3(3^4 + 1) GeV
-"""
-)
+""")
 
 # Check Higgs VEV formula
 v_higgs_w33 = 3 * (81 + 1)
@@ -180,8 +172,7 @@ print("\n" + "=" * 70)
 print("SECTION 5: W AND Z MASSES")
 print("=" * 70)
 
-print(
-    """
+print("""
 The W and Z boson masses are:
   M_W = g*v/2 ≈ 80.4 GeV
   M_Z = M_W / cos(theta_W) ≈ 91.2 GeV
@@ -197,8 +188,7 @@ For M_Z:
   cos(theta_W) = sqrt(133/173) ≈ 0.877
 
   M_Z = 81 / 0.877 ≈ 92.4 GeV [1.3% error]
-"""
-)
+""")
 
 # W mass
 M_W_w33 = 81
@@ -224,8 +214,7 @@ print("\n" + "=" * 70)
 print("SECTION 6: THE HIERARCHY EXPLAINED")
 print("=" * 70)
 
-print(
-    """
+print("""
 =======================================================
     THE W33 SOLUTION TO THE HIERARCHY PROBLEM
 =======================================================
@@ -254,8 +243,7 @@ Close! The factor of 2 might come from
 radiative corrections.
 
 =======================================================
-"""
-)
+""")
 
 hierarchy_w33 = 3**36
 hierarchy_exp = M_Planck / M_W
@@ -271,8 +259,7 @@ print("\n" + "=" * 70)
 print("SECTION 7: NEWTON'S CONSTANT G")
 print("=" * 70)
 
-print(
-    """
+print("""
 Newton's gravitational constant:
   G_N = hbar * c / M_Planck^2
       = 6.674 × 10^{-11} m^3/(kg*s^2)
@@ -291,8 +278,7 @@ FORMULA:
       = 1 / (3^40)^2
 
 This is EXACTLY the inverse square of the Planck mass!
-"""
-)
+""")
 
 G_natural_units = 1 / (3**40) ** 2
 G_actual = 1 / M_Planck**2
@@ -309,8 +295,7 @@ print("\n" + "=" * 70)
 print("SECTION 8: MASS SPECTRUM FROM W33")
 print("=" * 70)
 
-print(
-    """
+print("""
 W33 determines ALL fundamental mass scales:
 
 SCALE         W33 FORMULA              VALUE
@@ -326,8 +311,7 @@ The pattern:
   M_n = 3^n GeV for various n from W33 structure
 
 All mass scales are powers of 3!
-"""
-)
+""")
 
 # Check various scales
 scales = {
@@ -356,8 +340,7 @@ print("\n" + "=" * 70)
 print("SECTION 9: THE COSMOLOGICAL CONSTANT")
 print("=" * 70)
 
-print(
-    """
+print("""
 The cosmological constant problem:
 
 Observed: Lambda ≈ (2.4 meV)^4 ≈ 10^{-122} M_P^4
@@ -380,8 +363,7 @@ SPECULATIVE:
   M_P × 3^{-64} ≈ 10^{-12} GeV = meV scale
 
   This matches the observed dark energy scale!
-"""
-)
+""")
 
 # Check cosmological constant
 Lambda_obs_quarter = 2.4e-3  # eV
@@ -400,8 +382,7 @@ print("\n" + "=" * 70)
 print("SECTION 10: GRAND SYNTHESIS")
 print("=" * 70)
 
-print(
-    """
+print("""
 =======================================================
     W33 DETERMINES ALL FUNDAMENTAL SCALES
 =======================================================
@@ -433,8 +414,7 @@ The ratio 10^17 between M_P and M_W comes from
 the difference between 40 vertices and 4 (eigenvalue).
 
 =======================================================
-"""
-)
+""")
 
 # =============================================================================
 # SAVE RESULTS
@@ -474,8 +454,7 @@ print("\n" + "=" * 70)
 print("PART LXX CONCLUSIONS")
 print("=" * 70)
 
-print(
-    """
+print("""
 GRAVITY FROM W33!
 
 Key discoveries:
@@ -497,6 +476,5 @@ It's built into the W33 graph structure:
   40 vertices vs 4 eigenvalue = 36 orders of magnitude!
 
 Results saved to PART_LXX_gravity.json
-"""
-)
+""")
 print("=" * 70)

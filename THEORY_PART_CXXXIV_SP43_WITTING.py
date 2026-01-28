@@ -229,16 +229,14 @@ def build_witting_from_mub():
 
 
 # Use the verified F₃ construction
-print(
-    """
+print("""
 The Witting configuration is the QUANTUM REALIZATION of Sp₄(3):
 - 40 rays in CP³
 - Orthogonality ↔ symplectic ω-orthogonality over F₃
 - Automorphism group: W(E₆) ≅ PSp₄(3).2
 
 Key insight: The cube root ω = e^{2πi/3} complexifies F₃.
-"""
-)
+""")
 
 # =====================================================
 # GQ(3,3) STRUCTURE FROM F₃ GRAPH
@@ -348,8 +346,7 @@ print("\n" + "=" * 70)
 print("THE Sp₄(3) / WITTING NUMBER DICTIONARY")
 print("=" * 70)
 
-print(
-    """
+print("""
 ┌─────────┬────────────────────────────────────────┬─────────────────────┐
 │ Number  │ Sp₄(3) Meaning                         │ Origin              │
 ├─────────┼────────────────────────────────────────┼─────────────────────┤
@@ -365,8 +362,7 @@ print(
 │ 1296    │ Vertex stabilizer                      │ 27 × 48             │
 │ 48      │ Stabilizer of non-neighbor pair        │ |GL(2,F₃)|          │
 └─────────┴────────────────────────────────────────┴─────────────────────┘
-"""
-)
+""")
 
 # =====================================================
 # VERIFY λ AND μ VISUALLY
@@ -416,14 +412,12 @@ print("Eigenvalues with multiplicities:")
 for ev in sorted(spectrum.keys(), reverse=True):
     print(f"  {ev:8.4f} with multiplicity {spectrum[ev]}")
 
-print(
-    """
+print("""
 Expected for SRG(40, 12, 2, 4):
   k = 12 with multiplicity 1
   r = 2 with multiplicity 24
   s = -4 with multiplicity 15
-"""
-)
+""")
 
 # =====================================================
 # NAMING CONVENTION FINALIZED
@@ -433,8 +427,7 @@ print("\n" + "=" * 70)
 print("NAMING CONVENTION FINALIZED")
 print("=" * 70)
 
-print(
-    """
+print("""
 PRIMARY NAME: Sp₄(3)
 ====================
 
@@ -464,8 +457,7 @@ GOING FORWARD:
 - Use Sp₄(3) in mathematical contexts
 - Use "Witting graph" in quantum/physics contexts
 - Use GQ(3,3) when emphasizing incidence geometry
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("PART CXXXIV COMPLETE")

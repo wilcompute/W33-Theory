@@ -88,8 +88,7 @@ print("THE MAXIMALLY ENTANGLED STATE")
 print("=" * 70)
 
 if __name__ == "__main__":
-    print(
-        """
+    print("""
     THE WITTING ENTANGLED STATE:
     ============================
 
@@ -103,8 +102,7 @@ if __name__ == "__main__":
     - If measured in DIFFERENT bases → bounded correlation
 
     The 40 Witting bases provide the measurement settings.
-    """
-    )
+    """)
 
 # Build the entangled state
 Sigma = np.zeros((16,), dtype=complex)
@@ -192,8 +190,7 @@ print("WITTING-BASED QKD PROTOCOL")
 print("=" * 70)
 
 if __name__ == "__main__":
-    print(
-        """
+    print("""
     PROTOCOL (Following Vlasov):
     ============================
 
@@ -220,8 +217,7 @@ if __name__ == "__main__":
     5. KEY DISTILLATION:
        - Apply error correction and privacy amplification
        - Output secure shared key
-    """
-    )
+    """)
 
 
 # Simulate success probability
@@ -259,8 +255,7 @@ print("\n" + "=" * 70)
 print("BELL INEQUALITY ANALYSIS")
 print("=" * 70)
 
-print(
-    """
+print("""
 PENROSE'S "BELL WITHOUT PROBABILITIES":
 =======================================
 
@@ -276,8 +271,7 @@ The key insight:
 The Kochen-Specker theorem shows:
 - No LOCAL HIDDEN VARIABLE theory can reproduce these correlations
 - The obstruction (6/40 bad bases) proves non-classical nature
-"""
-)
+""")
 
 
 # Compute Bell-like correlator
@@ -314,8 +308,7 @@ print("\n" + "=" * 70)
 print("QUANTUM SECRET SHARING")
 print("=" * 70)
 
-print(
-    """
+print("""
 (3,5) THRESHOLD SECRET SHARING:
 ===============================
 
@@ -336,8 +329,7 @@ The 40 bases and W(E₆) symmetry provide the combinatorial structure.
 SECURITY:
 - Based on complementarity of Witting bases
 - Related to graph coloring impossibility (contextuality)
-"""
-)
+""")
 
 # =====================================================
 # RANDOMNESS CERTIFICATION
@@ -347,8 +339,7 @@ print("\n" + "=" * 70)
 print("CERTIFIED RANDOMNESS")
 print("=" * 70)
 
-print(
-    """
+print("""
 DEVICE-INDEPENDENT RANDOMNESS:
 ==============================
 
@@ -371,8 +362,7 @@ ADVANTAGE over standard protocols:
 - Uses 40 settings (vs. 2 in CHSH)
 - Higher dimensional Hilbert space (ℂ⁴ vs. ℂ²)
 - Stronger security guarantees from contextuality
-"""
-)
+""")
 
 # Compute certified randomness rate
 p_good = 34 / 40  # Best classical strategy succeeds this often
@@ -386,8 +376,7 @@ print("\n" + "=" * 70)
 print("PART CXLIV COMPLETE")
 print("=" * 70)
 
-print(
-    """
+print("""
 KEY APPLICATIONS:
 =================
 
@@ -413,5 +402,4 @@ All protocols rely on:
 - The 40 orthonormal bases (GQ(3,3) lines)
 - The automorphism group W(E₆)
 - The 6/40 Kochen-Specker obstruction
-"""
-)
+""")

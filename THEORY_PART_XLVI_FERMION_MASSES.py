@@ -15,8 +15,7 @@ import math
 
 import numpy as np
 
-print(
-    """
+print("""
 ╔════════════════════════════════════════════════════════════════════════════╗
 ║                                                                            ║
 ║                    THEORY OF EVERYTHING - PART XLVI                        ║
@@ -26,8 +25,7 @@ print(
 ║         Quarks • Leptons • Neutrinos • Yukawa Couplings                   ║
 ║                                                                            ║
 ╚════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # FUNDAMENTAL SCALES AND W33 STRUCTURE
@@ -60,16 +58,14 @@ print("SECTION 1: THE YUKAWA HIERARCHY PRINCIPLE")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 Fermion masses come from Yukawa couplings: m_f = y_f × v/√2
 
 The Yukawa couplings y_f are dimensionless numbers that span ~6 orders
 of magnitude from y_t ≈ 1 to y_e ≈ 2×10⁻⁶.
 
 W33 PRINCIPLE: Each Yukawa coupling is a RATIO of W33/exceptional numbers!
-"""
-)
+""")
 
 print()
 print("═══ YUKAWA COUPLING FORMULA ═══")
@@ -291,16 +287,14 @@ print("SECTION 5: NEUTRINO MASSES")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 Neutrino masses are tiny: m_ν ~ 0.01 - 0.1 eV
 This is explained by the SEESAW MECHANISM:
 
   m_ν = m_D² / M_R
 
 where m_D ~ electroweak scale, M_R ~ GUT scale
-"""
-)
+""")
 print()
 
 # Seesaw parameters
@@ -361,12 +355,10 @@ print("SECTION 6: YUKAWA MATRIX TEXTURE FROM W33")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 The Yukawa matrices have a specific TEXTURE (pattern of zeros and hierarchies)
 that arises from W33 geometry.
-"""
-)
+""")
 print()
 
 # Up-type Yukawa matrix
@@ -455,8 +447,7 @@ print("COMPLETE FERMION MASS SUMMARY")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 ┌─────────────────┬─────────────────────────────────┬───────────┬───────────┐
 │ FERMION         │ W33 FORMULA                     │ PREDICTED │ OBSERVED  │
 ├─────────────────┼─────────────────────────────────┼───────────┼───────────┤
@@ -486,11 +477,9 @@ print(
 
   Units: All masses derived from v = 246.22 GeV
          W33 numbers are dimensionless [geometric counts]
-"""
-)
+""")
 
-print(
-    """
+print("""
 ═══════════════════════════════════════════════════════════════════════════════
                     END OF PART XLVI: THE FERMION MASS MATRIX
 
@@ -505,5 +494,4 @@ print(
   it is UNIQUELY determined by W33 geometry!
 
 ═══════════════════════════════════════════════════════════════════════════════
-"""
-)
+""")

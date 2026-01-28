@@ -27,8 +27,7 @@ print("\n" + "=" * 70)
 print("SECTION 1: THE STABILITY PROBLEM")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE PUZZLE:
 
 Quantum mechanics is fragile. Superpositions decohere.
@@ -47,15 +46,13 @@ This would mean:
   - W33 encodes that information redundantly
   - Errors (quantum fluctuations) are automatically corrected
   - This is why physics is stable and predictable
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("SECTION 2: CLASSICAL ERROR CORRECTING CODES")
 print("=" * 70)
 
-print(
-    """
+print("""
 CLASSICAL CODES FROM GRAPHS:
 
 Strongly regular graphs naturally define error correcting codes!
@@ -64,8 +61,7 @@ For W33 = SRG(40, 12, 2, 4):
   - 40 vertices = 40 "bits" of information
   - Adjacency structure = parity check constraints
   - The code corrects errors in the "physical" bits
-"""
-)
+""")
 
 # Code parameters from SRG
 # For an SRG(v, k, λ, μ), we can construct various codes
@@ -97,8 +93,7 @@ print("\n" + "=" * 70)
 print("SECTION 3: QUANTUM CODES AND EIGENSPACES")
 print("=" * 70)
 
-print(
-    """
+print("""
 STABILIZER CODES:
 
 Quantum error correcting codes often use "stabilizer" formalism.
@@ -112,8 +107,7 @@ These automorphisms could act as stabilizer elements!
 |Aut(W33)| = 51840 = 2⁷ × 3⁴ × 5
 
 This is large enough to provide significant error correction.
-"""
-)
+""")
 
 # Check if 51840 relates to known code structures
 aut_order = 51840
@@ -136,8 +130,7 @@ print("\n" + "=" * 70)
 print("SECTION 4: HOLOGRAPHIC CODES")
 print("=" * 70)
 
-print(
-    """
+print("""
 HOLOGRAPHIC QUANTUM CODES:
 
 Recent work connects holography and quantum error correction.
@@ -156,8 +149,7 @@ The eigenspace decomposition 40 = 1 + 24 + 15 might represent:
   - 15 = "boundary" (matter, accessible)
 
 Information flows from bulk to boundary via the W33 structure!
-"""
-)
+""")
 
 # The ratio of logical to physical qubits
 code_rate = m2 / v
@@ -170,8 +162,7 @@ print("\n" + "=" * 70)
 print("SECTION 5: ERROR CORRECTION IN PHYSICS")
 print("=" * 70)
 
-print(
-    """
+print("""
 IF W33 IS AN ERROR CORRECTING CODE, WHAT ERRORS DOES IT CORRECT?
 
 Possible "errors" in physics:
@@ -189,8 +180,7 @@ This explains:
   - Why physics is deterministic at large scales (errors averaged out)
   - Why quantum mechanics works (code preserves superpositions)
   - Why fundamental constants are constant (protected by code)
-"""
-)
+""")
 
 # Distance of the code relates to how many errors can be corrected
 # For SRG, the distance relates to the graph structure
@@ -211,8 +201,7 @@ print("\n" + "=" * 70)
 print("SECTION 6: THE UNIVERSE AS COMPUTATION")
 print("=" * 70)
 
-print(
-    """
+print("""
 IF W33 IS A CODE, WHAT IS BEING COMPUTED?
 
 HYPOTHESIS: The universe is computing its own existence.
@@ -236,8 +225,7 @@ THIS NUMBER AGAIN:
   10^120 ≈ 10^(122-2) ≈ 10^(k² - m₂ + λ - λ)
 
 The cosmological constant (Λ ~ 10^-122) and computation are linked!
-"""
-)
+""")
 
 # Lloyd's number
 lloyd_ops = 10**120
@@ -257,8 +245,7 @@ print("\n" + "=" * 70)
 print("SECTION 7: QUANTUM GRAVITY AS ERROR CORRECTION")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE DEEPEST IDEA:
 
 Quantum gravity might BE quantum error correction!
@@ -288,8 +275,7 @@ In error correction terms:
 
 The hierarchy problem (why M_Planck >> M_EW) becomes:
   Error correction is very efficient at the Planck scale!
-"""
-)
+""")
 
 # Hierarchy in terms of code
 hierarchy = 3**36  # M_Planck / M_EW
@@ -302,8 +288,7 @@ print("\n" + "=" * 70)
 print("SECTION 8: DECOHERENCE AND MEASUREMENT")
 print("=" * 70)
 
-print(
-    """
+print("""
 QUANTUM MEASUREMENT PROBLEM:
 
 Why do superpositions "collapse" when measured?
@@ -329,8 +314,7 @@ W33 explains why:
   - Large systems become classical (many errors, exceed code distance)
 
 The boundary between quantum and classical is set by W33's code distance!
-"""
-)
+""")
 
 # Code distance and decoherence
 print("\nDECOHERENCE THRESHOLD:")
@@ -343,8 +327,7 @@ print("\n" + "=" * 70)
 print("SECTION 9: INFORMATION PARADOXES RESOLVED")
 print("=" * 70)
 
-print(
-    """
+print("""
 BLACK HOLE INFORMATION PARADOX:
 
 Does information disappear when things fall into black holes?
@@ -369,15 +352,13 @@ W33 answer: No firewalls needed!
   - Error correction smoothly transfers information
   - No violent breakdown at horizon
   - Consistent with general relativity
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("SECTION 10: TESTABLE PREDICTIONS")
 print("=" * 70)
 
-print(
-    """
+print("""
 IF W33 IS A QUANTUM CODE, WE PREDICT:
 
 1. DISCRETE STRUCTURE AT PLANCK SCALE
@@ -401,15 +382,13 @@ IF W33 IS A QUANTUM CODE, WE PREDICT:
    - Λ ~ 10^-122 M_Pl^4 is NOT fine-tuned
    - It follows from W33 code structure
    - Should not "run" with energy (it's topological)
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("PART LXXXIX CONCLUSIONS")
 print("=" * 70)
 
-print(
-    """
+print("""
 W33 AS THE UNIVERSE'S ERROR CORRECTING CODE!
 
 KEY INSIGHTS:
@@ -433,8 +412,7 @@ KEY INSIGHTS:
    Information is always preserved by the code
 
 THE UNIVERSE COMPUTES ITSELF USING W33 AS ITS OPERATING SYSTEM!
-"""
-)
+""")
 
 # Save results
 results = {

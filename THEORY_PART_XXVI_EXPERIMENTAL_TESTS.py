@@ -11,8 +11,7 @@ How to test W33 at upcoming experiments.
 import math
 from fractions import Fraction
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║               W33 THEORY OF EVERYTHING - PART XXVI                           ║
@@ -20,8 +19,7 @@ print(
 ║                     FUTURE EXPERIMENTAL TESTS                                ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # PRECISION ELECTROWEAK TESTS
@@ -32,8 +30,7 @@ print("TEST 1: PRECISION ELECTROWEAK (FCC-ee, ILC, CEPC)")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 W33 PREDICTION: sin²θ_W = 40/173 = 0.2312138728...
 
 CURRENT STATUS:
@@ -42,8 +39,7 @@ CURRENT STATUS:
   Difference:   0.1σ deviation
 
 FUTURE PRECISION:
-"""
-)
+""")
 
 # Current and future precision
 current_error = 0.00004
@@ -100,8 +96,7 @@ print("TEST 2: PROTON DECAY (Hyper-Kamiokande)")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 W33 PREDICTION: τ_proton ~ exp(81) × (fundamental time)
                         ~ 10³⁵ years (from 81 cycles)
 
@@ -110,8 +105,7 @@ CURRENT LIMITS (Super-Kamiokande):
   p → ν̄K⁺:   τ > 6.6 × 10³³ years
 
 HYPER-KAMIOKANDE (starting ~2027):
-"""
-)
+""")
 
 # Hyper-K sensitivity
 tau_current_limit = 2.4e34  # years
@@ -144,16 +138,14 @@ print("TEST 3: NEUTRINO CP VIOLATION (DUNE, Hyper-K)")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 W33 PREDICTION: δ_PMNS - δ_CKM ≈ 2π/3 = 120°
 
 Given δ_CKM ≈ 68.8°:
   δ_PMNS ≈ 68.8° + 120° ≈ 189° (or equivalently ~-171°)
 
 Current hint: δ_PMNS ≈ 195° ± 50° (T2K/NOvA)
-"""
-)
+""")
 
 delta_ckm = 68.8
 delta_pmns_w33 = delta_ckm + 120  # Witting phase shift
@@ -190,16 +182,14 @@ print("TEST 4: DARK MATTER (Direct Detection, LHC)")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 W33 PREDICTION: Ω_DM/Ω_b = 27/5 = 5.40
 
 Current observation: Ω_DM/Ω_b = 5.41 ± 0.03
 
 This is already an excellent match!
 But what IS the dark matter particle?
-"""
-)
+""")
 
 print("═══ W33 Dark Matter Candidates ═══")
 print()
@@ -242,8 +232,7 @@ print("TEST 5: NEW PARTICLES (LHC, FCC-hh)")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 W33 PREDICTION: E6 GUT structure should produce new particles
 
 Expected from E6:
@@ -251,8 +240,7 @@ Expected from E6:
   • Leptoquarks (carry both color and lepton number)
   • Extra Higgs bosons (from extended Higgs sector)
   • Vector-like fermions (from 27 of E6)
-"""
-)
+""")
 
 print("═══ Z' Boson ═══")
 print()
@@ -283,8 +271,7 @@ print("TEST 6: GRAVITATIONAL WAVES (LISA, Einstein Telescope)")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 W33 PREDICTION: Phase transitions at E6/GUT scale
 
 If the universe underwent phase transitions at:
@@ -292,8 +279,7 @@ If the universe underwent phase transitions at:
   • SO(10) → SM breaking
 
 These could produce gravitational wave signals!
-"""
-)
+""")
 
 print("═══ Stochastic Background ═══")
 print()
@@ -321,8 +307,7 @@ print("TEST 7: COSMOLOGICAL OBSERVATIONS")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 W33 PREDICTIONS FOR COSMOLOGY:
 
 1. Dark Matter/Baryon Ratio: 27/5 = 5.40
@@ -333,8 +318,7 @@ W33 PREDICTIONS FOR COSMOLOGY:
 
 3. Number of effective neutrinos: N_eff ≈ 3.044
    (from 3 generations + small corrections)
-"""
-)
+""")
 
 print("═══ Future Measurements ═══")
 print()
@@ -365,14 +349,12 @@ print("TEST 8: QUANTUM FOUNDATIONS (Lab tests)")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 W33 is fundamentally about QUANTUM CONTEXTUALITY.
 
 The 40 "quantum cards" (Witting configuration) can be tested directly
 in quantum optics and quantum computing experiments!
-"""
-)
+""")
 
 print("═══ Contextuality Tests ═══")
 print()
@@ -402,8 +384,7 @@ print("EXPERIMENTAL TIMELINE")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 ╔════════════════════════════════════════════════════════════════════════════════╗
 ║                           W33 TEST TIMELINE                                    ║
 ╠════════════════════════════════════════════════════════════════════════════════╣
@@ -429,8 +410,7 @@ print(
 ║    • Ultimate precision tests of W33                                           ║
 ║                                                                                ║
 ╚════════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # FALSIFICATION CRITERIA
@@ -441,8 +421,7 @@ print("FALSIFICATION CRITERIA")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 W33 WOULD BE FALSIFIED IF:
 
   ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -459,8 +438,7 @@ W33 WOULD BE FALSIFIED IF:
   ╚══════════════════════════════════════════════════════════════════════════════╝
 
 W33 IS FALSIFIABLE. IT IS REAL SCIENCE.
-"""
-)
+""")
 
 # =============================================================================
 # SUMMARY
@@ -471,8 +449,7 @@ print("PART XXVI SUMMARY")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 KEY EXPERIMENTAL TESTS:
 
 1. PRECISION ELECTROWEAK (FCC-ee): sin²θ_W = 40/173 to 10⁻⁵ precision
@@ -497,8 +474,7 @@ Either W33 is the Theory of Everything,
 or it will be falsified by experiment.
 
 THIS IS HOW SCIENCE WORKS.
-"""
-)
+""")
 
 print()
 print("=" * 80)

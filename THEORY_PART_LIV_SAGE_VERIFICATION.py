@@ -371,8 +371,7 @@ print("\n" + "=" * 70)
 print("SECTION 7: E6 WEYL GROUP CONNECTION")
 print("=" * 70)
 
-print(
-    """
+print("""
 Key relationship:
   |W(E₆)| = 51840 = |Sp(4,3)|
 
@@ -390,8 +389,7 @@ Connection to W33:
 
 Interesting: 1728 appears in our α formula!
   α = 173/1728 relates to E₆ somehow?
-"""
-)
+""")
 
 # The 27-dimensional representation of E₆
 # Is dual to itself: 27 ⊗ 27 contains 1 + 78 + 650
@@ -533,8 +531,7 @@ print("\n" + "=" * 70)
 print("PART LIV SUMMARY")
 print("=" * 70)
 
-print(
-    """
+print("""
 VERIFIED IN THIS SESSION:
 =========================
 ✓ W33 has exactly 40 vertices (isotropic points over F₃)
@@ -568,8 +565,7 @@ NEW INSIGHTS:
   - 12 neighbors → gauge connections?
   - 2 common neighbors for adjacent → some constraint
   - 4 common for non-adjacent → another constraint
-"""
-)
+""")
 
 print("=" * 70)
 print("END OF PART LIV")

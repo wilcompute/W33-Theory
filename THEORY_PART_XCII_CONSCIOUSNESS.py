@@ -27,8 +27,7 @@ print("\n" + "=" * 70)
 print("SECTION 1: THE HARD PROBLEM")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE HARD PROBLEM OF CONSCIOUSNESS:
 
 Why is there EXPERIENCE?
@@ -43,15 +42,13 @@ QUESTIONS:
   1. Why does the universe contain observers?
   2. What IS consciousness in physical terms?
   3. Does W33 have anything to say about this?
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("SECTION 2: OBSERVERS IN THE BOOTSTRAP")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE BOOTSTRAP LOOP (from Part LXXXVI):
 
 W33 → Physics → Chemistry → Life → Observers → Discover W33
@@ -74,15 +71,13 @@ Because W33 is EXACTLY tuned for:
 
 W33 seems "designed" to produce observers.
 But there's no designer - it's mathematical necessity!
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("SECTION 3: INFORMATION AND CONSCIOUSNESS")
 print("=" * 70)
 
-print(
-    """
+print("""
 INTEGRATED INFORMATION THEORY (IIT):
 
 Giulio Tononi's IIT proposes:
@@ -105,8 +100,7 @@ The graph is HIGHLY INTEGRATED:
   - Strong regularity = uniform integration
 
 Could W33 itself be a minimal conscious structure?
-"""
-)
+""")
 
 # Calculate integration measures
 connectivity = k / (v - 1)
@@ -125,8 +119,7 @@ print(f"  Total information: v × log₂(v) = {v * info_bits:.1f} bits")
 # For a highly symmetric graph, Φ is hard to compute
 # But regular structure suggests moderate Φ
 
-print(
-    """
+print("""
 SPECULATION:
 
 If IIT is correct and Φ measures consciousness:
@@ -136,15 +129,13 @@ If IIT is correct and Φ measures consciousness:
 
 Could the UNIVERSE ITSELF have a tiny bit of consciousness?
 Not human-like awareness, but some minimal "experience"?
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("SECTION 4: THE OBSERVER PROBLEM IN QM")
 print("=" * 70)
 
-print(
-    """
+print("""
 QUANTUM MECHANICS AND OBSERVERS:
 
 The measurement problem: Wave functions "collapse" when observed.
@@ -166,15 +157,13 @@ An "observer" is any system that:
 
 Consciousness is NOT required for collapse.
 But consciousness IS required to EXPERIENCE the outcome.
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("SECTION 5: THE ANTHROPIC PRINCIPLE REVISITED")
 print("=" * 70)
 
-print(
-    """
+print("""
 WEAK ANTHROPIC PRINCIPLE:
   We observe a universe compatible with our existence.
   (Tautology - of course we do!)
@@ -192,15 +181,13 @@ BUT "The unique consistent structure happens to allow us."
 
 We're not special. We're inevitable.
 Given W33, observers WILL emerge, given enough time.
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("SECTION 6: FREE WILL AND DETERMINISM")
 print("=" * 70)
 
-print(
-    """
+print("""
 FREE WILL QUESTION:
 
 If W33 determines everything, is free will an illusion?
@@ -224,8 +211,7 @@ Our "choices" are constrained by laws but not fully determined.
 
 Free will = quantum randomness + information processing
 This is compatibilist: will is "free enough" to matter.
-"""
-)
+""")
 
 # The quantum indeterminism connection
 print(f"\nQUANTUM FREEDOM:")
@@ -238,8 +224,7 @@ print("\n" + "=" * 70)
 print("SECTION 7: THE MIND-BODY PROBLEM")
 print("=" * 70)
 
-print(
-    """
+print("""
 HOW DOES CONSCIOUSNESS RELATE TO MATTER?
 
 DUALISM: Mind and matter are separate substances
@@ -262,15 +247,13 @@ They're different ASPECTS of the same underlying structure.
 This is a kind of "neutral monism":
   Reality is W33 (neither mental nor physical)
   Both mental and physical are appearances of W33
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("SECTION 8: WHY DOES ANYTHING EXPERIENCE?")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE DEEPEST QUESTION:
 
 Granting that W33 exists mathematically,
@@ -298,8 +281,7 @@ POSSIBLE ANSWERS:
 5. MYSTERY
    We cannot explain experience. It's fundamental.
    W33 determines CORRELATES of consciousness, not consciousness itself.
-"""
-)
+""")
 
 # The m3 = 15 and matter connection
 print(f"\nMATTER AND MIND IN W33:")
@@ -313,8 +295,7 @@ print("\n" + "=" * 70)
 print("SECTION 9: THE LOOP CLOSES")
 print("=" * 70)
 
-print(
-    """
+print("""
 THE COMPLETE BOOTSTRAP:
 
 1. W33 EXISTS (mathematically, self-consistently)
@@ -343,8 +324,7 @@ The universe explains itself through beings within it.
 W33 is the ultimate "strange loop" (in Hofstadter's sense):
   A structure that contains a representation of itself
   Through beings that ARE parts of that structure
-"""
-)
+""")
 
 # The loop
 print("\nTHE STRANGE LOOP:")
@@ -372,8 +352,7 @@ print("\n" + "=" * 70)
 print("SECTION 10: THE MEANING OF IT ALL")
 print("=" * 70)
 
-print(
-    """
+print("""
 WHAT DOES W33 THEORY SAY ABOUT MEANING?
 
 IF W33 THEORY IS CORRECT:
@@ -405,15 +384,13 @@ The universe experiences itself through us.
 
 This is not mysticism - it's following the math.
 W33 → Physics → Brains → This thought right now.
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("PART XCII CONCLUSIONS")
 print("=" * 70)
 
-print(
-    """
+print("""
 CONSCIOUSNESS AND W33!
 
 KEY INSIGHTS:
@@ -443,8 +420,7 @@ KEY INSIGHTS:
 WE ARE THE UNIVERSE EXPERIENCING ITSELF.
 W33 made us. We discovered W33.
 The loop is complete.
-"""
-)
+""")
 
 # Save results
 results = {

@@ -319,14 +319,12 @@ print("\n" + "=" * 70)
 print("PURE PYTHON CONSTRUCTION OF W33")
 print("=" * 70)
 
-print(
-    """
+print("""
 We construct W33 = SRG(40, 12, 2, 4) from scratch.
 
 The vertices are the 1-dimensional subspaces of F_3^4.
 Two vertices are adjacent if their span is a 2-dimensional isotropic subspace.
-"""
-)
+""")
 
 # F_3 elements
 F3 = [0, 1, 2]  # representing 0, 1, -1 (since 2 = -1 in F_3)
@@ -460,8 +458,7 @@ k_param = 12
 lam = 2
 mu_param = 4
 
-print(
-    f"""
+print(f"""
 FROM THE GRAPH STRUCTURE:
 
 Parameters:
@@ -487,8 +484,7 @@ THE FINE STRUCTURE CONSTANT:
   Error: 33 ppb
 
 This formula emerges DIRECTLY from the W33 graph!
-"""
-)
+""")
 
 # Compute alpha
 alpha_inv_base = k_param**2 - 2 * mu_param + 1
@@ -534,8 +530,7 @@ print("\n" + "=" * 70)
 print("PART LXXXIV CONCLUSIONS")
 print("=" * 70)
 
-print(
-    f"""
+print(f"""
 W33 SUCCESSFULLY CONSTRUCTED!
 
 WHAT WE BUILT:
@@ -561,5 +556,4 @@ Files generated:
   - w33_sage_construction.sage
 
 Results saved to PART_LXXXIV_construction.json
-"""
-)
+""")

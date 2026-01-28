@@ -22,8 +22,7 @@ Key questions:
 
 import numpy as np
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                    THEORY OF EVERYTHING - PART LI                            ║
@@ -33,8 +32,7 @@ print(
 ║       Newton's Constant • Einstein Field Equations • Quantum Gravity         ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # W33 CONSTANTS (Dimensionless geometric counts)
@@ -72,14 +70,12 @@ print("SECTION 1: NEWTON'S GRAVITATIONAL CONSTANT FROM W33")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 Newton's constant G sets the strength of gravity.
 In Planck units: G = 1/M_Planck²
 
 But what determines M_Planck? W33 must answer this!
-"""
-)
+""")
 
 # The hierarchy: M_Planck >> v
 hierarchy = M_Planck / v
@@ -140,16 +136,14 @@ print("SECTION 2: GRAVITON SPIN-2 FROM W33")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 Why is the graviton spin-2?
 
 In GR, the metric g_μν is a symmetric 2-tensor.
 In 4D, a massless spin-2 has exactly 2 d.o.f.
 
 W33 MUST explain this!
-"""
-)
+""")
 
 # Gravitational degrees of freedom
 # 90 K4 / 45 = 2
@@ -206,13 +200,11 @@ print("SECTION 3: EINSTEIN FIELD EQUATIONS FROM W33")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 Einstein's equations: G_μν + Λg_μν = 8πG T_μν
 
 Can W33 derive these from pure geometry?
-"""
-)
+""")
 
 # The Einstein tensor
 print(f"  EINSTEIN TENSOR STRUCTURE:")
@@ -263,12 +255,10 @@ print("SECTION 4: GRAVITATIONAL WAVE PREDICTIONS")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 LIGO/Virgo/KAGRA detect gravitational waves.
 W33 must match all observations!
-"""
-)
+""")
 
 # GW polarizations - already shown to be 2
 print(f"  POLARIZATIONS:")
@@ -319,12 +309,10 @@ print("SECTION 5: QUANTUM GRAVITY IN W33")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 Quantum gravity is the holy grail of theoretical physics.
 Can W33 provide a finite theory of quantum gravity?
-"""
-)
+""")
 
 # Planck scale
 l_Planck = 1.616e-35  # meters
@@ -393,12 +381,10 @@ print("SECTION 6: BLACK HOLES IN W33")
 print("=" * 80)
 print()
 
-print(
-    """
+print("""
 Black holes probe the strong-field regime of gravity.
 W33 must be consistent with black hole physics!
-"""
-)
+""")
 
 # Schwarzschild radius
 print(f"  SCHWARZSCHILD RADIUS:")

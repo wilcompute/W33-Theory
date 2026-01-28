@@ -475,8 +475,7 @@ print("\n" + "=" * _sage_const_70)
 print(" SECTION 13: SUMMARY OF RIGOROUS RESULTS")
 print("=" * _sage_const_70)
 
-print(
-    """
+print("""
 VERIFIED WITH SAGEMATH:
 
 1. W33 CONSTRUCTION
@@ -505,8 +504,7 @@ VERIFIED WITH SAGEMATH:
    ✓ Three 8-dimensional representations
 
 THE MATHEMATICAL CONNECTIONS ARE RIGOROUS AND EXACT.
-"""
-)
+""")
 
 # =========================================================================
 # Save results

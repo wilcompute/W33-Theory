@@ -195,15 +195,13 @@ def compute_sp43_edge_orbits():
     # We already computed this: PSp(4,3) has order 25920 and acts
     # transitively on 240 edges (single orbit)
 
-    print(
-        """
+    print("""
 From orbit_bijection.py:
 - PSp(4,3) order: 25920
 - Edge orbits: [240] (single orbit of size 240)
 
 Key insight: PSp(4,3) acts TRANSITIVELY on 240 edges!
-"""
-    )
+""")
 
 
 def find_bijection_strategy():
@@ -212,8 +210,7 @@ def find_bijection_strategy():
     print("BIJECTION STRATEGY")
     print("=" * 70)
 
-    print(
-        """
+    print("""
 GROUPS AND ACTIONS:
 1. W(E6) has order 51840
 2. Sp(4,3) has order 51840
@@ -233,8 +230,7 @@ FOR THE BIJECTION:
 Alternatively:
 - The 240 W33 edges might correspond to a DIFFERENT 240-element W(E6) set
 - Not the E8 roots themselves, but derived from them
-"""
-    )
+""")
 
 
 def check_alternative_240_sets():

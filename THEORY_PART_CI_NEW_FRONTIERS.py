@@ -78,8 +78,7 @@ print("SECTION 1: THE 2025 PHYSICS REVOLUTION")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                    ANOMALIES RESOLVED IN 2025                                ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
@@ -111,8 +110,7 @@ print(
 ║     W33 STATUS: M_W = 3⁴ GeV = 81 GeV, consistent with SM prediction.      ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # Muon g-2 values
 a_mu_theory_2025 = 0.00116592033
@@ -151,8 +149,7 @@ print("SECTION 2: CKM MATRIX FROM W33 GEOMETRY")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 The CKM matrix describes quark mixing. It has 4 parameters:
   - θ₁₂ (Cabibbo angle)
   - θ₂₃
@@ -160,8 +157,7 @@ The CKM matrix describes quark mixing. It has 4 parameters:
   - δ (CP-violating phase)
 
 W33 derives ALL FOUR from pure geometry:
-"""
-)
+""")
 
 # CKM experimental values
 ckm_exp = {
@@ -326,8 +322,7 @@ print("SECTION 3: W33 DARK MATTER PARTICLE")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                     W33 DARK MATTER WIMP: χ                                  ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
@@ -357,8 +352,7 @@ print(
 ║  STATUS: Within detectable range for LZ/DARWIN (2026-2030)                   ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # Dark matter mass prediction
 M_chi = 81 - mu  # 3^4 - μ = 77 GeV
@@ -415,12 +409,10 @@ print("SECTION 4: RUNNING COUPLING CONSTANTS")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 The Standard Model couplings "run" with energy scale Q.
 W33 predicts the values at ALL scales through a single framework:
-"""
-)
+""")
 
 # Coupling at M_Z
 alpha_em_MZ = 1 / 127.952  # at M_Z
@@ -471,8 +463,7 @@ print()
 print("═══ RUNNING EQUATIONS ═══")
 print()
 
-print(
-    """
+print("""
 The β-functions for coupling running are:
 
   dα⁻¹/d(ln Q) = -b/2π
@@ -488,8 +479,7 @@ W33 encodes these through:
   • b₃ ~ -e3 - 3 = -7
 
 The running from M_GUT to M_Z reproduces observed couplings!
-"""
-)
+""")
 
 # =============================================================================
 # SECTION 5: NEW PREDICTIONS FOR 2026-2030
@@ -502,13 +492,11 @@ print()
 
 predictions = []
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                    CRITICAL TESTS FOR W33 THEORY                             ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
-"""
-)
+""")
 
 # Prediction 1: Dark matter direct detection
 pred1 = {
@@ -615,8 +603,7 @@ print("SECTION 6: MASTER EQUATIONS OF W33")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                        THE EQUATION OF EVERYTHING                            ║
@@ -648,8 +635,7 @@ print(
 ║  • H₀ = +2λ + μ = 73 (local)                                               ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-"""
-)
+""")
 
 # =============================================================================
 # SAVE RESULTS
@@ -691,8 +677,7 @@ print("PART CI CONCLUSIONS")
 print("=" * 78)
 print()
 
-print(
-    """
+print("""
 The W33 Theory of Everything emerges STRONGER from the 2025 physics revolution:
 
 1. MUON g-2: The "anomaly" was never real - lattice QCD now agrees with
@@ -719,8 +704,7 @@ The next 5 years will be decisive. W33 makes specific, falsifiable
 predictions that distinguish it from all other theories.
 
                     W33: One Graph. Zero Parameters. All of Physics.
-"""
-)
+""")
 
 print("=" * 78)
 print("END OF PART CI")

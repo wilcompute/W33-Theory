@@ -75,8 +75,7 @@ print("\n" + "=" * 70)
 print("MAPPING TO PARTICLE PHYSICS")
 print("=" * 70)
 
-print(
-    """
+print("""
 Based on v23 structure:
 
 ACENTRIC (0 centers): 2880 triangles
@@ -113,15 +112,13 @@ This might relate to:
   - Quark flavor families
   - Lepton flavor families
   - SU(5) representation theory
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("UNEXPECTED DISCOVERY: 2/3 RATIO")
 print("=" * 70)
 
-print(
-    f"""
+print(f"""
 Fermion triangles: {len(parity1)}
 Boson triangles:   {len(parity0)}
 Ratio: {len(parity1)}/{len(parity0)} = {len(parity1)/len(parity0):.4f}
@@ -141,8 +138,7 @@ Our 2/3 = 40 fermions to 60 bosons
        = 8 × 5 to 12 × 5
 
 Might indicate fundamental fermion-boson content!
-"""
-)
+""")
 
 print("\n" + "=" * 70)
 print("S3 TRANSPOSITION vs 3CYCLE ASYMMETRY")
@@ -157,14 +153,12 @@ print(f"  3-cycles: {cycle}")
 print(f"  Transpositions: {trans}")
 print(f"  Ratio 3cycle:transposition = {cycle}/{trans} = {cycle/trans:.3f}")
 
-print(
-    f"""
+print(f"""
 This {cycle/trans:.1f}:1 ratio might indicate:
   - Different classes of fermions
   - Color triplet vs singlet couplings
   - Generation structure (if ratio relates to 3 generations)
-"""
-)
+""")
 
 # Save summary
 summary_text = f"""

@@ -347,16 +347,14 @@ def verify_connections():
 
     print("\n6. THE UNIFIED PICTURE")
     print("-" * 40)
-    print(
-        """
+    print("""
     W(3,3) ←→ E6 ←→ 27 Lines ←→ M-theory
           ↘     ↓     ↙
             51,840
 
     Four independent structures, ONE number.
     This is not coincidence - it is deep mathematical unity.
-    """
-    )
+    """)
 
     print("\n7. WEINBERG ANGLE CONFIRMATION")
     print("-" * 40)

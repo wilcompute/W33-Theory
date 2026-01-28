@@ -292,8 +292,7 @@ def verify_e7_connection():
 
     print("\n4. FREUDENTHAL MAGIC SQUARE")
     print("-" * 40)
-    print(
-        """
+    print("""
               R       C       H       O
          ┌────────────────────────────────┐
     R    │  A₁     A₂     C₃     F₄     │
@@ -303,8 +302,7 @@ def verify_e7_connection():
          └────────────────────────────────┘
 
     Key: (H, O) and (O, H) both give E7!
-    """
-    )
+    """)
 
     print("\n5. N=8 SUPERGRAVITY AND E7")
     print("-" * 40)
@@ -324,16 +322,14 @@ def verify_e7_connection():
     e7_fund = 56
     alpha_inv = cycles + e7_fund
 
-    print(
-        f"""
+    print(f"""
     α⁻¹ = |Cycles(W33)| + dim(E7 fundamental)
         = {cycles} + {e7_fund}
         = {alpha_inv}
 
     Experimental: α⁻¹ = 137.036
     Discrepancy: {137.036 - alpha_inv:.3f} ({(137.036 - alpha_inv)/alpha_inv * 100:.3f}%)
-    """
-    )
+    """)
 
     print("\n7. WEINBERG ANGLE FORMULA")
     print("-" * 40)
@@ -342,16 +338,14 @@ def verify_e7_connection():
     total = 173  # Our empirical denominator
     sin2_w = points / total
 
-    print(
-        f"""
+    print(f"""
     sin²θ_W = |Points(W33)| / Total
             = {points} / {total}
             = {sin2_w:.5f}
 
     Experimental: 0.23120 ± 0.00015
     Agreement: {abs(sin2_w - 0.23120)/0.00015:.2f}σ
-    """
-    )
+    """)
 
     print("\n8. DIMENSIONS CHECK")
     print("-" * 40)

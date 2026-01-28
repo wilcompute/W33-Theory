@@ -260,8 +260,7 @@ def main():
     print("\n" + "=" * 70)
     print("CONCLUSION")
     print("=" * 70)
-    print(
-        """
+    print("""
     THEOREM VERIFIED:
 
     The 90 K4 components in W33 form exactly 45 dual pairs
@@ -277,8 +276,7 @@ def main():
     - The v23 field equation (centers -> parity -> holonomy)
 
     Both describe the same discrete spin structure on GQ(4,2).
-    """
-    )
+    """)
 
 
 if __name__ == "__main__":

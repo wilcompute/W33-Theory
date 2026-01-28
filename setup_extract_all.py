@@ -9,6 +9,7 @@ import zipfile
 from pathlib import Path
 
 # Use the directory where this script is located as the ROOT
+ROOT = Path(__file__).parent.resolve()
 EXTRACT_BASE = ROOT / "extracted"
 
 # Create extraction directory

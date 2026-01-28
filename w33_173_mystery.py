@@ -221,8 +221,7 @@ print("\n" + "=" * 80)
 print("SUMMARY: THE EXCEPTIONAL LIE ALGEBRA THREAD")
 print("=" * 80)
 
-print(
-    """
+print("""
 Key Discoveries:
 
 1. 173 = |W33| + dim(F4) = 121 + 52
@@ -239,8 +238,7 @@ Key Discoveries:
 
 The exceptional Lie algebras F4, E6, E7, E8 are deeply
 intertwined with W33 and physics constants.
-"""
-)
+""")
 
 # Save results
 results = {
