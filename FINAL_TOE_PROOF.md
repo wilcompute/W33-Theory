@@ -73,6 +73,14 @@ This matches the standard E6×A2 decomposition:
 ```
 240 = 72 (E6 roots) + 6 (A2 roots) + 27×3 + 27bar×3bar
 ```
+**A2^4 check (new).** We explicitly searched the full E8 root system for four
+mutually orthogonal A2 subsystems (A2^4). We found 1120 distinct A2 subsystems
+and an explicit orthogonal 4‑tuple (24 roots total). Those A2 roots do **not**
+sit inside any single 27‑orbit; intersections with 27‑orbits are sparse and
+split across multiple orbits. This supports the view that the Magic‑Star A2^4
+structure is a **global** E8 feature rather than a sub‑feature of any one
+Schläfli copy. See `artifacts/a2_4_decomposition.json`.
+
 Computed in Sage; see:
 ```
 tools/sage_we6_orbits_on_e8_roots.py
@@ -98,6 +106,18 @@ tools/explicit_bijection_decomposition.py
 The W33 edge decomposition used is:
 ```
 240 = 108 (H27 edges) + 108 (cross edges) + 12 (H12 edges) + 12 (incident edges)
+```
+
+**Generator map (Sp(4,3) → W(E6) on roots).** Using the explicit edge→root
+mapping above, each symplectic generator induces a permutation of the 240
+E8 roots. We verified these permutations preserve root inner products and
+the W(E6) orbit partition (72 + 6×27 + 6×1). The generator map is recorded in:
+```
+artifacts/sp43_we6_generator_map.json
+```
+and computed by:
+```
+tools/derive_sp43_we6_generator_map.py
 ```
 
 **Explicit bijection (W(E6)-orbit aligned).** Using the computed W(E6) orbit
