@@ -410,6 +410,15 @@ structure is already restricted to a tiny subgroup, so enlarging to
 
 Artifact: \texttt{artifacts/orbit\_adj\_gram\_auts.json}
 
+\textbf{CSP impossibility (computed):} Treating each line's orbit as
+fixed and allowing \textbf{all Gram‑preserving permutations} inside each
+orbit (sizes 2/4/12), AC‑3 constraint propagation already yields
+\textbf{no solution} before backtracking. This is a proof‑by‑exhaustion
+that \textbf{no equivariant bijection} exists under the Coxeter‑6
+partition even after relaxing per‑line ordering to every orbit‑isometry.
+
+Artifact: \texttt{artifacts/equivariant\_csp\_orbit\_iso.json}
+
 \textbf{B. Canonical perfect matching (legacy):} - Build bipartite
 graph: left = 240 roots, right = 240 W33 edges\\
 (root \emph{r} adjacent to edge (A,B) iff its orbit is A or B).\\
