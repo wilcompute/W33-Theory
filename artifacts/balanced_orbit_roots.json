@@ -8,5 +8,11 @@
   "root_neighbor_degree_distribution": {
     "16": 27
   },
+  "common_neighbors_adjacent": {
+    "10": 216
+  },
+  "common_neighbors_nondjacent": {
+    "8": 135
+  },
   "a2_triangle_count": 0
 }

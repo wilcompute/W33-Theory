@@ -311,8 +311,14 @@ inner products: 0 -> 135 pairs, 1 -> 216 pairs
 ```
 The induced “root‑neighbor” graph (edges for inner product 1) is **regular of
 degree 16** on all 27 nodes, and there are **no A2 triangles** (no triples with
-pairwise inner product −1). This indicates the balanced 27‑orbit is a **very
-non‑root‑subsystem** subset, but still carries a strong regularity signature.
+pairwise inner product −1). Moreover, the common‑neighbor counts are uniform:
+```
+adjacent pairs: 10 common neighbors
+non‑adjacent pairs: 8 common neighbors
+```
+Thus this graph is **SRG(27,16,10,8)**. The balanced 27‑orbit therefore defines
+a **highly regular** 27‑vertex structure inside E8 that is *not* itself a root
+subsystem, but is tightly constrained combinatorially.
 
 Artifacts:
 ```
