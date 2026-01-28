@@ -446,6 +446,22 @@ relabelings yields the \textbf{same 8 pattern types} (with one type
 appearing twice). Thus the pattern mismatch is \textbf{rigid} under the
 natural automorphism subgroup and cannot be removed by reindexing.
 
+\textbf{Z3 phase assignment from F3\^{}4 (computed).} Despite the
+Coxeter‑pattern heterogeneity, there exists a \textbf{large family of
+affine Z3 colorings} of the 27 lines (via their
+H27\ensuremath{\leftrightarrow}W33 vertex coordinates) such that
+\textbf{every triangle is rainbow} and the colors are balanced
+\textbf{9/9/9}. Specifically: - There are \textbf{162} affine solutions
+f(x)=c·x+b (mod 3). - These fall into \textbf{27 projective classes} of
+c, each with 6 (b, scalar) choices. - The set of valid c is exactly the
+projective hyperplane \textbf{x4 \ensuremath{\neq} 0}, i.e.~an affine
+\textbf{F3\^{}3} (27 points).
+
+A canonical choice is simply \textbf{phase = x4} (the 4th coordinate of
+the W33 projective point), which yields a consistent SU(3)/Z3 phase on
+the 27 lines and makes all 9 triangles rainbow. This is a concrete
+\textbf{Z3 gauge} emerging directly from the F3\^{}4 geometry.
+
 Artifacts:
 
 \begin{verbatim}
@@ -459,6 +475,10 @@ tools/analyze_a2_triangles_we6_orbits.py
 artifacts/a2_triangles_we6_orbits.json
 tools/triangle_relabeling_search_exhaustive.py
 artifacts/triangle_relabeling_search_exhaustive.json
+tools/search_z3_phase_from_f3.py
+artifacts/z3_phase_linear_search.json
+tools/analyze_z3_phase_solutions.py
+artifacts/z3_phase_linear_analysis.json
 \end{verbatim}
 
 Artifacts:
@@ -1887,6 +1907,28 @@ Verification}\label{h27-jordan-heisenberg-verification}
   \item
     Output:
     \texttt{artifacts/triangle\_relabeling\_search\_exhaustive.json}
+  \end{itemize}
+\item
+  \texttt{python3\ tools/search\_z3\_phase\_from\_f3.py}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Searches affine Z3 colorings f(x)=c·x+b making all triangles
+    rainbow.
+  \item
+    Output: \texttt{artifacts/z3\_phase\_linear\_search.json}
+  \end{itemize}
+\item
+  \texttt{python3\ tools/analyze\_z3\_phase\_solutions.py}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Classifies the c‑vectors (27 projective classes, affine F3\^{}3
+    hyperplane).
+  \item
+    Output: \texttt{artifacts/z3\_phase\_linear\_analysis.json}
   \end{itemize}
 \end{itemize}
 

@@ -205,6 +205,20 @@ one of the 1440 relabelings yields the **same 8 pattern types** (with one type
 appearing twice). Thus the pattern mismatch is **rigid** under the natural
 automorphism subgroup and cannot be removed by reindexing.
 
+**Z3 phase assignment from F3^4 (computed).** Despite the Coxeter‑pattern
+heterogeneity, there exists a **large family of affine Z3 colorings** of the
+27 lines (via their H27↔W33 vertex coordinates) such that **every triangle is
+rainbow** and the colors are balanced **9/9/9**. Specifically:
+- There are **162** affine solutions f(x)=c·x+b (mod 3).
+- These fall into **27 projective classes** of c, each with 6 (b, scalar) choices.
+- The set of valid c is exactly the projective hyperplane **x4 ≠ 0**, i.e. an
+  affine **F3^3** (27 points).
+
+A canonical choice is simply **phase = x4** (the 4th coordinate of the W33
+projective point), which yields a consistent SU(3)/Z3 phase on the 27 lines and
+makes all 9 triangles rainbow. This is a concrete **Z3 gauge** emerging directly
+from the F3^4 geometry.
+
 Artifacts:
 ```
 tools/analyze_h27_schlafli_triangles_structure.py
@@ -217,6 +231,10 @@ tools/analyze_a2_triangles_we6_orbits.py
 artifacts/a2_triangles_we6_orbits.json
 tools/triangle_relabeling_search_exhaustive.py
 artifacts/triangle_relabeling_search_exhaustive.json
+tools/search_z3_phase_from_f3.py
+artifacts/z3_phase_linear_search.json
+tools/analyze_z3_phase_solutions.py
+artifacts/z3_phase_linear_analysis.json
 ```
 
 Artifacts:
@@ -1087,6 +1105,12 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `python3 tools/triangle_relabeling_search_exhaustive.py`
   - Exhaustive S6×Z2 relabeling test of triangle Coxeter‑pattern homogeneity.
   - Output: `artifacts/triangle_relabeling_search_exhaustive.json`
+- `python3 tools/search_z3_phase_from_f3.py`
+  - Searches affine Z3 colorings f(x)=c·x+b making all triangles rainbow.
+  - Output: `artifacts/z3_phase_linear_search.json`
+- `python3 tools/analyze_z3_phase_solutions.py`
+  - Classifies the c‑vectors (27 projective classes, affine F3^3 hyperplane).
+  - Output: `artifacts/z3_phase_linear_analysis.json`
 
 ### Physics Signal Checks (Tier‑1 Evidence)
 - `python -X utf8 src/color_singlet_test.py`
