@@ -1,0 +1,17 @@
+{
+  "balanced_degree": 16,
+  "schlafli_degree": 16,
+  "balanced_triangles": 720,
+  "schlafli_triangles": 720,
+  "balanced_seidel_spectrum": {
+    "-9.0": 6,
+    "-6.0": 1,
+    "3.0": 20
+  },
+  "schlafli_seidel_spectrum": {
+    "-9.0": 6,
+    "-6.0": 1,
+    "3.0": 20
+  },
+  "seidel_match": true
+}

@@ -326,6 +326,16 @@ match the **Schläfli graph** (the complement of the 27‑line intersection grap
 suggesting the balanced 27‑orbit recovers the **Schläfli geometry** directly
 inside the E8 root subset.
 
+**Schläfli confirmation (computed).** Comparing the balanced‑orbit root graph
+to the Schläfli (skew) graph yields a complete invariant match:
+```
+degree: 16 vs 16
+triangles: 720 vs 720
+Seidel spectrum: {3^20, -9^6, -6^1} vs {3^20, -9^6, -6^1}
+```
+This strongly indicates the balanced 27‑orbit root graph is **isomorphic** (or
+at least switching‑equivalent) to the Schläfli graph.
+
 Artifacts:
 ```
 tools/analyze_h27_schlafli_triangles_structure.py
@@ -358,6 +368,8 @@ tools/analyze_balanced_orbit_subgraph.py
 artifacts/balanced_orbit_subgraph.json
 tools/analyze_balanced_orbit_roots.py
 artifacts/balanced_orbit_roots.json
+tools/compare_balanced_to_schlafli.py
+artifacts/balanced_vs_schlafli.json
 ```
 
 Artifacts:
