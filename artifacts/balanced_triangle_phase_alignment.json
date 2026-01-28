@@ -1,0 +1,314 @@
+{
+  "phase_trip_counts": {
+    "(0, 0, 0)": 2,
+    "(0, 1, 1)": 1,
+    "(0, 1, 2)": 1,
+    "(0, 2, 2)": 1,
+    "(1, 1, 2)": 2,
+    "(1, 2, 2)": 2
+  },
+  "root_trip_counts": {
+    "('half', 'half', 'integral')": 8,
+    "('integral', 'integral', 'integral')": 1
+  },
+  "line_trip_counts": {
+    "('C', 'E', 'L')": 6,
+    "('L', 'L', 'L')": 3
+  },
+  "triangles": [
+    {
+      "lines": [
+        [
+          "E",
+          1
+        ],
+        [
+          "C",
+          3
+        ],
+        [
+          "L",
+          1,
+          3
+        ]
+      ],
+      "phases": [
+        0,
+        0,
+        0
+      ],
+      "root_types": [
+        "integral",
+        "half",
+        "half"
+      ],
+      "line_types": [
+        "E",
+        "C",
+        "L"
+      ]
+    },
+    {
+      "lines": [
+        [
+          "E",
+          2
+        ],
+        [
+          "C",
+          1
+        ],
+        [
+          "L",
+          1,
+          2
+        ]
+      ],
+      "phases": [
+        1,
+        1,
+        2
+      ],
+      "root_types": [
+        "half",
+        "half",
+        "integral"
+      ],
+      "line_types": [
+        "E",
+        "C",
+        "L"
+      ]
+    },
+    {
+      "lines": [
+        [
+          "E",
+          3
+        ],
+        [
+          "C",
+          2
+        ],
+        [
+          "L",
+          2,
+          3
+        ]
+      ],
+      "phases": [
+        2,
+        2,
+        1
+      ],
+      "root_types": [
+        "integral",
+        "integral",
+        "integral"
+      ],
+      "line_types": [
+        "E",
+        "C",
+        "L"
+      ]
+    },
+    {
+      "lines": [
+        [
+          "E",
+          4
+        ],
+        [
+          "C",
+          6
+        ],
+        [
+          "L",
+          4,
+          6
+        ]
+      ],
+      "phases": [
+        0,
+        0,
+        0
+      ],
+      "root_types": [
+        "integral",
+        "half",
+        "half"
+      ],
+      "line_types": [
+        "E",
+        "C",
+        "L"
+      ]
+    },
+    {
+      "lines": [
+        [
+          "E",
+          5
+        ],
+        [
+          "C",
+          4
+        ],
+        [
+          "L",
+          4,
+          5
+        ]
+      ],
+      "phases": [
+        1,
+        2,
+        0
+      ],
+      "root_types": [
+        "integral",
+        "half",
+        "half"
+      ],
+      "line_types": [
+        "E",
+        "C",
+        "L"
+      ]
+    },
+    {
+      "lines": [
+        [
+          "E",
+          6
+        ],
+        [
+          "C",
+          5
+        ],
+        [
+          "L",
+          5,
+          6
+        ]
+      ],
+      "phases": [
+        0,
+        1,
+        1
+      ],
+      "root_types": [
+        "integral",
+        "half",
+        "half"
+      ],
+      "line_types": [
+        "E",
+        "C",
+        "L"
+      ]
+    },
+    {
+      "lines": [
+        [
+          "L",
+          1,
+          4
+        ],
+        [
+          "L",
+          2,
+          6
+        ],
+        [
+          "L",
+          3,
+          5
+        ]
+      ],
+      "phases": [
+        1,
+        2,
+        2
+      ],
+      "root_types": [
+        "half",
+        "integral",
+        "half"
+      ],
+      "line_types": [
+        "L",
+        "L",
+        "L"
+      ]
+    },
+    {
+      "lines": [
+        [
+          "L",
+          1,
+          5
+        ],
+        [
+          "L",
+          2,
+          4
+        ],
+        [
+          "L",
+          3,
+          6
+        ]
+      ],
+      "phases": [
+        0,
+        2,
+        2
+      ],
+      "root_types": [
+        "half",
+        "integral",
+        "half"
+      ],
+      "line_types": [
+        "L",
+        "L",
+        "L"
+      ]
+    },
+    {
+      "lines": [
+        [
+          "L",
+          1,
+          6
+        ],
+        [
+          "L",
+          2,
+          5
+        ],
+        [
+          "L",
+          3,
+          4
+        ]
+      ],
+      "phases": [
+        1,
+        1,
+        2
+      ],
+      "root_types": [
+        "half",
+        "integral",
+        "half"
+      ],
+      "line_types": [
+        "L",
+        "L",
+        "L"
+      ]
+    }
+  ]
+}
