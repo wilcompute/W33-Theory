@@ -283,6 +283,16 @@ tools/infer_multiplet_mapping.py
 artifacts/pattern_class_multiplet_inference.json
 ```
 
+**Weighted adjacency fit (heuristic).** A weighted assignment using the full
+quotient‑graph edge counts yields a specific 6‑node labeling (still imperfect,
+score < 0). This confirms that adjacency alone is insufficient for a canonical
+E6 labeling and that additional invariants (K4/triangle/line fingerprints) are
+required.
+```
+tools/multiplet_assignment_solver.py
+artifacts/multiplet_assignment_solver.json
+```
+
 **Exceptional vertex triplet.** Exactly **3** Coxeter‑6 orbits contain the
 size‑1 W(E6) roots. These correspond to three explicit F₃⁴ projective points:
 ```
@@ -883,6 +893,9 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `python3 tools/infer_multiplet_mapping.py`
   - Heuristic mapping of pattern classes to E6/A2 nodes via quotient graph adjacency.
   - Output: `artifacts/pattern_class_multiplet_inference.json`
+- `python3 tools/multiplet_assignment_solver.py`
+  - Weighted adjacency fit for E6 node labeling (heuristic).
+  - Output: `artifacts/multiplet_assignment_solver.json`
 - `python tools/explicit_bijection_decomposition.py`
   - Builds the explicit 240↔240 W33-edge→E8-root mapping.
   - Output: `artifacts/explicit_bijection_decomposition.json`
