@@ -253,6 +253,15 @@ artifacts/pattern_class_feature_table.json
 This is the quantitative basis for mapping pattern classes to physical
 multiplets (work in progress).
 
+**Uniform K4 incidence.** Every W33 vertex participates in exactly **9** K4
+components as an outer point and **9** as a center point, **independent of
+pattern class**. This confirms that K4 incidence is an intrinsic W33 invariant,
+not a pattern‑class feature. See:
+```
+tools/pattern_class_vertex_k4_incidence.py
+artifacts/pattern_class_vertex_k4_incidence.json
+```
+
 **Exceptional vertex triplet.** Exactly **3** Coxeter‑6 orbits contain the
 size‑1 W(E6) roots. These correspond to three explicit F₃⁴ projective points:
 ```
@@ -841,6 +850,12 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `python3 tools/pattern_class_feature_table.py`
   - Consolidated pattern‑class feature table (sizes, K4, neighbors).
   - Output: `artifacts/pattern_class_feature_table.json`
+- `python3 tools/pattern_class_support_sizes.py`
+  - Support‑size distribution (nonzero coordinates) per pattern class.
+  - Output: `artifacts/pattern_class_support_sizes.json`
+- `python3 tools/pattern_class_vertex_k4_incidence.py`
+  - Per‑vertex K4 incidence (outer/center) aggregated by pattern class.
+  - Output: `artifacts/pattern_class_vertex_k4_incidence.json`
 - `python tools/explicit_bijection_decomposition.py`
   - Builds the explicit 240↔240 W33-edge→E8-root mapping.
   - Output: `artifacts/explicit_bijection_decomposition.json`
