@@ -1,0 +1,51 @@
+{
+  "triangles": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      13,
+      14,
+      15
+    ],
+    [
+      16,
+      17,
+      18
+    ],
+    [
+      19,
+      20,
+      21
+    ]
+  ],
+  "selected_triangles": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      13,
+      14,
+      15
+    ]
+  ],
+  "counts": {
+    "h27_edges": 108,
+    "cross_AB": 54,
+    "cross_rest": 54,
+    "h12_edges": 12,
+    "incident_edges": 12,
+    "size27_orbits": 6,
+    "size1_roots": 6,
+    "size72_roots": 72
+  },
+  "mapping": {
+    "h27_edges_to_4x27": true,
+    "cross_AB_to_2x27": true,
+    "remaining_to_72plus6": true
+  }
+}

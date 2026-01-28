@@ -100,6 +100,26 @@ The W33 edge decomposition used is:
 240 = 108 (H27 edges) + 108 (cross edges) + 12 (H12 edges) + 12 (incident edges)
 ```
 
+**Explicit bijection (W(E6)-orbit aligned).** Using the computed W(E6) orbit
+decomposition of E8 roots (**72 + 6×27 + 6×1**), a fully explicit mapping
+is constructed with a deterministic rule that assigns:
+```
+H27–H27 edges (108) -> 4 of the 27-orbits
+Cross edges from 2 H12 triangles (54) -> remaining 2 of the 27-orbits
+Remaining 78 edges -> 72-orbit + 6 fixed roots
+```
+This mapping is written to:
+```
+artifacts/edge_to_e8_root_we6_orbits.json
+artifacts/e8_root_to_edge_we6_orbits.json
+artifacts/edge_root_we6_orbit_mapping_summary.json
+```
+and produced by:
+```
+tools/map_edges_to_we6_orbits.py
+tools/sage_we6_orbit_labels.py
+```
+
 ### 1.4 Explicit E8 -> W33 via Coxeter 6-cycles (Computed)
 
 **Lemma (Coxeter 6-cycle partition).** Let `c` be the Coxeter element of W(E8)
@@ -667,9 +687,15 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `docker run --rm -v "$PWD":/workspace -w /workspace sagemath/sagemath:10.7 sage -python tools/sage_we6_orbits_on_e8_roots.py`
   - Sage: W(E6) orbits on E8 roots via parabolic subgroup (sizes 72 + 6×27 + 6×1).
   - Output: `artifacts/we6_orbits_on_e8_roots.json`
+- `docker run --rm -v "$PWD":/workspace -w /workspace sagemath/sagemath:10.7 sage -python tools/sage_we6_orbit_labels.py`
+  - Sage: labels each E8 root by W(E6) orbit id/size.
+  - Output: `artifacts/we6_orbit_labels.json`
 - `python tools/explicit_bijection_decomposition.py`
   - Builds the explicit 240↔240 W33-edge→E8-root mapping.
   - Output: `artifacts/explicit_bijection_decomposition.json`
+- `python3 tools/map_edges_to_we6_orbits.py`
+  - Builds explicit W33-edge→E8-root map aligned to W(E6) orbits.
+  - Output: `artifacts/edge_to_e8_root_we6_orbits.json`
 
 ### H27 / Jordan / Heisenberg Verification
 - `python tools/h27_heisenberg_model.py`
