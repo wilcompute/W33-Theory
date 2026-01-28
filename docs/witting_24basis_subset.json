@@ -187,5 +187,6 @@
     "(1,-w^2,0,w^2)/sqrt3",
     "(1,w^2,w^2,0)/sqrt3"
   ],
-  "heuristic_max_satisfied_bases": 23
+  "heuristic_max_satisfied_bases": 23,
+  "exact_max_satisfied_bases": 23
 }

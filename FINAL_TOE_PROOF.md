@@ -1069,14 +1069,21 @@ Script: `tools/witting_ks_reduce_bases.py`
 
 **Photonic cookbook (generated):**  
 We generated a **24‑basis cookbook** with explicit ray vectors and basis lists
-for experimental implementation, plus a **heuristic noncontextual bound**
-from local search.
+for experimental implementation, plus the **exact noncontextual bound**
+for this subset.
 
 Docs:  
 `docs/witting_24basis_cookbook.md`  
 `docs/witting_24basis_vectors.csv`  
 `docs/witting_24basis_subset.json`  
 Script: `tools/witting_24basis_cookbook.py`
+
+**Exact bound (computed):**  
+The exact maximum number of bases satisfiable by any noncontextual 0/1
+assignment is **23/24**.
+
+Artifact: `artifacts/witting_24basis_exact_bound.json`  
+Script: `tools/witting_24basis_exact_bound.py`
 
 **Unitary implementation (computed):**  
 For each of the 24 bases, a 4×4 unitary is provided with the basis rays as
