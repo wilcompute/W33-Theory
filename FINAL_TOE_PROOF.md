@@ -293,6 +293,16 @@ tools/multiplet_assignment_solver.py
 artifacts/multiplet_assignment_solver.json
 ```
 
+**Composite optimizer (heuristic).** We combined support‑size distributions,
+neighbor‑class profiles, and K4 participation into a composite feature vector
+and fit it to an E6 distance‑template. This yields a different candidate
+labeling, confirming that **richer invariants change the inferred mapping** and
+that a truly canonical assignment likely requires additional physics input.
+```
+tools/composite_multiplet_optimizer.py
+artifacts/composite_multiplet_optimizer.json
+```
+
 **Exceptional vertex triplet.** Exactly **3** Coxeter‑6 orbits contain the
 size‑1 W(E6) roots. These correspond to three explicit F₃⁴ projective points:
 ```
@@ -896,6 +906,9 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `python3 tools/multiplet_assignment_solver.py`
   - Weighted adjacency fit for E6 node labeling (heuristic).
   - Output: `artifacts/multiplet_assignment_solver.json`
+- `python3 tools/composite_multiplet_optimizer.py`
+  - Composite feature optimizer for E6 node labeling (heuristic).
+  - Output: `artifacts/composite_multiplet_optimizer.json`
 - `python tools/explicit_bijection_decomposition.py`
   - Builds the explicit 240↔240 W33-edge→E8-root mapping.
   - Output: `artifacts/explicit_bijection_decomposition.json`
