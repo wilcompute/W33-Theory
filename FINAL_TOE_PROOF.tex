@@ -552,6 +552,24 @@ size 1) are \texttt{\{0,1,4,13\}}; only vertices \textbf{4} and
 \textbf{1} and \textbf{4}, respectively. This adds another asymmetry
 that is \textbf{not} explained by W33 automorphisms.
 
+\textbf{Balanced‑orbit induced line‑graph (computed).} Consider the
+line‑graph restricted to the 27 balanced edges (edges adjacent if they
+share a vertex). This induced subgraph has \textbf{two components} of
+sizes \textbf{24} and \textbf{3}. The 3‑edge component is entirely
+\textbf{integral‑root} edges (3/3 integral), with shell counts
+\textbf{H12--H27:2, H12--H12:1}. The 24‑edge component contains
+\textbf{16 half‑roots} and \textbf{8 integral roots}, and is
+overwhelmingly \textbf{cross‑shell}:
+
+\begin{verbatim}
+size 24: H12–H27 = 21, H12–H12 = 2, H27–H27 = 1
+size 3 : H12–H27 = 2,  H12–H12 = 1,  H27–H27 = 0
+\end{verbatim}
+
+This shows the balanced orbit decomposes into a \textbf{dominant mixed
+component} and a \textbf{small integral triangle}, sharpening the
+internal SU(3)‑phase geometry.
+
 Artifacts:
 
 \begin{verbatim}
@@ -581,6 +599,8 @@ tools/analyze_balanced_orbit_geometry.py
 artifacts/balanced_orbit_geometry.json
 tools/analyze_balanced_orbit_stabilizer.py
 artifacts/balanced_orbit_stabilizer.json
+tools/analyze_balanced_orbit_subgraph.py
+artifacts/balanced_orbit_subgraph.json
 \end{verbatim}
 
 Artifacts:

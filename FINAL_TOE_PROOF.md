@@ -289,6 +289,19 @@ subset of E8 root types and is not confined to the 112‑root integral sector.
 incidence counts **1** and **4**, respectively. This adds another asymmetry that
 is **not** explained by W33 automorphisms.
 
+**Balanced‑orbit induced line‑graph (computed).** Consider the line‑graph
+restricted to the 27 balanced edges (edges adjacent if they share a vertex).
+This induced subgraph has **two components** of sizes **24** and **3**. The
+3‑edge component is entirely **integral‑root** edges (3/3 integral), with shell
+counts **H12–H27:2, H12–H12:1**. The 24‑edge component contains **16 half‑roots**
+and **8 integral roots**, and is overwhelmingly **cross‑shell**:
+```
+size 24: H12–H27 = 21, H12–H12 = 2, H27–H27 = 1
+size 3 : H12–H27 = 2,  H12–H12 = 1,  H27–H27 = 0
+```
+This shows the balanced orbit decomposes into a **dominant mixed component**
+and a **small integral triangle**, sharpening the internal SU(3)‑phase geometry.
+
 Artifacts:
 ```
 tools/analyze_h27_schlafli_triangles_structure.py
@@ -317,6 +330,8 @@ tools/analyze_balanced_orbit_geometry.py
 artifacts/balanced_orbit_geometry.json
 tools/analyze_balanced_orbit_stabilizer.py
 artifacts/balanced_orbit_stabilizer.json
+tools/analyze_balanced_orbit_subgraph.py
+artifacts/balanced_orbit_subgraph.json
 ```
 
 Artifacts:
