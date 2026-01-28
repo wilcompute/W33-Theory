@@ -1,0 +1,50 @@
+{
+  "balanced_orbit_id": 4,
+  "balanced_edge_count": 27,
+  "group_order": 25920,
+  "orbit_size_of_edge_set": 25920,
+  "stabilizer_size": 1,
+  "root_type_counts": {
+    "half": 16,
+    "integral": 11
+  },
+  "axis_vertices": [
+    0,
+    1,
+    4,
+    13
+  ],
+  "axis_incidence": {
+    "4": 1,
+    "13": 4
+  },
+  "induced_orbit_sizes_on_27_edges": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ]
+}

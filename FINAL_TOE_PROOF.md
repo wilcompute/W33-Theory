@@ -271,6 +271,24 @@ and **none** incident to v0. This indicates the balanced orbit is largely a
 **bridge** between the neighbor shell and non‑neighbor shell, rather than a
 purely internal H27 structure.
 
+**Balanced‑orbit stabilizer (computed).** Enumerating **PSp(4,3)** on 40 vertices
+shows the balanced 27‑edge set has **trivial setwise stabilizer** (size 1) and
+its orbit under PSp(4,3) has size **25920**. In other words, this 27‑edge set is
+**rigid**: no nontrivial projective symplectic automorphism preserves it as a
+set. Consequently, the induced action on the 27 edges has **27 singleton orbits**
+(no internal symmetry). This is a strong indication that the balanced orbit is
+**canonically pinned** by the SU(3) phase structure rather than by W33 symmetry.
+
+**Root‑type mix inside 27_4 (computed).** Using the explicit edge→root map,
+the balanced orbit splits into **11 integral roots** and **16 half‑integral**
+roots (in the scaled coordinate model). Thus the balanced 27‑orbit is a **mixed**
+subset of E8 root types and is not confined to the 112‑root integral sector.
+
+**Axis‑vertex incidence (computed).** The 4 axis vertices (support size 1) are
+`{0,1,4,13}`; only vertices **4** and **13** appear in the balanced orbit, with
+incidence counts **1** and **4**, respectively. This adds another asymmetry that
+is **not** explained by W33 automorphisms.
+
 Artifacts:
 ```
 tools/analyze_h27_schlafli_triangles_structure.py
@@ -297,6 +315,8 @@ tools/su3_phase_orbit_bias.py
 artifacts/su3_phase_orbit_bias.json
 tools/analyze_balanced_orbit_geometry.py
 artifacts/balanced_orbit_geometry.json
+tools/analyze_balanced_orbit_stabilizer.py
+artifacts/balanced_orbit_stabilizer.json
 ```
 
 Artifacts:
