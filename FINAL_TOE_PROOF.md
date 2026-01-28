@@ -1164,6 +1164,49 @@ phase sum collapses to **±π/6 or ±π/2**.
 Doc: `docs/witting_overlap_phase_spectrum.md`  
 Script: `tools/witting_overlap_phase_spectrum.py`
 
+**Family‑structured phase rule (computed):**  
+Label the 40 rays as **B** (4 basis rays) and four 9‑ray families **F0–F3**
+corresponding to the explicit Witting formulas. Then:
+- **Pairs (B, F·)** only realize the **π/3 lattice** phases.  
+- **Pairs (F·, F·)** realize the **odd π/6 lattice** phases.  
+- **Triangles with a basis ray** have **only ±π/6** phases (no ±π/2).  
+- **Triangles with three non‑basis families** generate the **±π/2** phase
+  signatures.
+
+Docs:  
+`docs/witting_pair_phase_family_table.md`  
+`docs/witting_triangle_family_phase.md`  
+Scripts:  
+`tools/witting_pair_phase_family_table.py`  
+`tools/witting_triangle_family_phase.py`
+
+**Negative result (computed):**  
+No orthonormal basis **inside the 40‑ray set** yields a unitary that maps the
+full set to the naive cube‑root grid form. The best alignment score is **4/40**
+(the basis itself). Thus the F₃⁴ symplectic description requires a **non‑trivial
+external unitary**, not just a change of basis within the ray set.
+
+Doc: `docs/witting_basis_alignment_search.md`  
+Script: `tools/witting_basis_alignment_search.py`
+
+**Monomial phase‑symmetry breaking (computed):**  
+The full monomial symmetry group preserving the 40‑ray set has size **243**,
+but **only 3** elements preserve the pair‑phase classes. Thus the π/6 lattice
+structure **breaks** almost all monomial symmetry—this phase fingerprint is
+highly discriminating.
+
+Doc: `docs/witting_phase_orbit_invariance.md`  
+Script: `tools/witting_phase_orbit_invariance.py`
+
+**Naive F₃⁴ mapping fails (computed):**  
+A direct cube‑root rounding map from rays to F₃⁴ projective points does **not**
+reproduce the symplectic orthogonality graph (large FP/FN counts). This confirms
+the W(3,3) interpretation is **unitary‑equivalent but non‑trivial** in the ray
+coordinates.
+
+Doc: `docs/witting_f3_projective_map_test.md`  
+Script: `tools/witting_f3_projective_map_test.py`
+
 **Example triangles (computed):**  
 Explicit ray triples with phases ±π/6 and ±π/2 are listed here:  
 `docs/witting_pancharatnam_examples.md`  
