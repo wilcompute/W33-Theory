@@ -435,6 +435,17 @@ This confirms the A2 partition does \textbf{not} align cleanly to a
 single E6 orbit type; it mixes the 72‑sector and the 27‑sectors in
 multiple inequivalent ways.
 
+\textbf{Automorphism relabeling test (computed).} We exhaustively
+searched all
+\texttt{S6\ \textbackslash{}ensuremath\{\textbackslash{}times\}\ Z2}
+relabelings of the 27‑line configuration (permuting indices 1..6 and
+optionally swapping E\ensuremath{\leftrightarrow}C), which are standard
+Schläfli automorphisms. \textbf{No} relabeling reduces the
+Coxeter‑pattern heterogeneity of the 9 triangles: every one of the 1440
+relabelings yields the \textbf{same 8 pattern types} (with one type
+appearing twice). Thus the pattern mismatch is \textbf{rigid} under the
+natural automorphism subgroup and cannot be removed by reindexing.
+
 Artifacts:
 
 \begin{verbatim}
@@ -446,6 +457,8 @@ tools/analyze_a2_triangle_adjacency.py
 artifacts/a2_triangle_adjacency.json
 tools/analyze_a2_triangles_we6_orbits.py
 artifacts/a2_triangles_we6_orbits.json
+tools/triangle_relabeling_search_exhaustive.py
+artifacts/triangle_relabeling_search_exhaustive.json
 \end{verbatim}
 
 Artifacts:
@@ -1862,6 +1875,18 @@ Verification}\label{h27-jordan-heisenberg-verification}
     6\ensuremath{\times}27 + 6\ensuremath{\times}1).
   \item
     Output: \texttt{artifacts/a2\_triangles\_we6\_orbits.json}
+  \end{itemize}
+\item
+  \texttt{python3\ tools/triangle\_relabeling\_search\_exhaustive.py}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Exhaustive S6\ensuremath{\times}Z2 relabeling test of triangle
+    Coxeter‑pattern homogeneity.
+  \item
+    Output:
+    \texttt{artifacts/triangle\_relabeling\_search\_exhaustive.json}
   \end{itemize}
 \end{itemize}
 

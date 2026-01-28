@@ -197,6 +197,14 @@ total counts (72‑orbit, 27‑orbits, 1‑orbits) across triangles are:
 This confirms the A2 partition does **not** align cleanly to a single E6 orbit
 type; it mixes the 72‑sector and the 27‑sectors in multiple inequivalent ways.
 
+**Automorphism relabeling test (computed).** We exhaustively searched all
+`S6 × Z2` relabelings of the 27‑line configuration (permuting indices 1..6 and
+optionally swapping E↔C), which are standard Schläfli automorphisms. **No**
+relabeling reduces the Coxeter‑pattern heterogeneity of the 9 triangles: every
+one of the 1440 relabelings yields the **same 8 pattern types** (with one type
+appearing twice). Thus the pattern mismatch is **rigid** under the natural
+automorphism subgroup and cannot be removed by reindexing.
+
 Artifacts:
 ```
 tools/analyze_h27_schlafli_triangles_structure.py
@@ -207,6 +215,8 @@ tools/analyze_a2_triangle_adjacency.py
 artifacts/a2_triangle_adjacency.json
 tools/analyze_a2_triangles_we6_orbits.py
 artifacts/a2_triangles_we6_orbits.json
+tools/triangle_relabeling_search_exhaustive.py
+artifacts/triangle_relabeling_search_exhaustive.json
 ```
 
 Artifacts:
@@ -1074,6 +1084,9 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `python3 tools/analyze_a2_triangles_we6_orbits.py`
   - Triangle root‑content vectors across W(E6) orbits (72 + 6×27 + 6×1).
   - Output: `artifacts/a2_triangles_we6_orbits.json`
+- `python3 tools/triangle_relabeling_search_exhaustive.py`
+  - Exhaustive S6×Z2 relabeling test of triangle Coxeter‑pattern homogeneity.
+  - Output: `artifacts/triangle_relabeling_search_exhaustive.json`
 
 ### Physics Signal Checks (Tier‑1 Evidence)
 - `python -X utf8 src/color_singlet_test.py`
