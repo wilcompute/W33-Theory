@@ -173,6 +173,14 @@ Artifacts:
 `artifacts/equivariant_single_gen_solution.json`  
 `artifacts/e8_order6_partition_found.json`
 
+**Orbit‑level rigidity (computed):** For each Coxeter‑6 orbit, the automorphism
+group that preserves **Gram values on adjacent edge‑pairs** inside a line has
+size **2, 4, or 12** (never 720). This means any per‑line assignment that
+respects adjacency‑pair Gram structure is already restricted to a tiny subgroup,
+so enlarging to S₆ cannot resolve equivariance.
+
+Artifact: `artifacts/orbit_adj_gram_auts.json`
+
 **B. Canonical perfect matching (legacy):**
 - Build bipartite graph: left = 240 roots, right = 240 W33 edges  
   (root *r* adjacent to edge (A,B) iff its orbit is A or B).  
