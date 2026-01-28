@@ -141,10 +141,18 @@ not **switching‑equivalent** to them (Seidel spectra differ). This sharpens
 the E6–H27 relation: the 27‑line configuration is the **E6 orbit** object,
 while H27 is a **distinct 27‑vertex Heisenberg Cayley graph** inside W33.
 
+**Stronger obstruction (computed).** We searched for a **graph monomorphism**
+from H27 into the Schläfli **skew** graph (i.e., a permutation of 27 vertices
+such that every H27 edge is a skew‑edge). The search found **no embedding**:
+H27 is **not** a spanning 8‑regular subgraph of the skew‑line graph. This rules
+out a simple “edge‑subset” explanation for H27.
+
 Artifacts:
 ```
 tools/schlafli_h27_switching.py
 artifacts/schlafli_h27_switching.json
+tools/search_h27_in_schlafli_skew.py
+artifacts/h27_in_schlafli_skew.json
 ```
 
 ### 1.4 Explicit E8 -> W33 via Coxeter 6-cycles (Computed)
@@ -979,6 +987,9 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `python3 tools/schlafli_h27_switching.py`
   - Compares H27 to Schläfli intersection/complement graphs and switching invariants.
   - Output: `artifacts/schlafli_h27_switching.json`
+- `python3 tools/search_h27_in_schlafli_skew.py`
+  - Searches for an H27 edge‑subset embedding into the Schläfli skew graph.
+  - Output: `artifacts/h27_in_schlafli_skew.json`
 
 ### Physics Signal Checks (Tier‑1 Evidence)
 - `python -X utf8 src/color_singlet_test.py`
