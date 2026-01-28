@@ -28,5 +28,5 @@ repos:
     rev: v1.19.1
     hooks:
       - id: mypy
-        args: ["--exclude", "phase_aware_v1.*scripts_recompute_w33_ray_holonomy.py"]
+        args: ["--exclude", "bundles[\\\/]phase_aware_v1.*scripts_recompute_w33_ray_holonomy.py"]
         additional_dependencies: ["types-python-dateutil"]
