@@ -115,6 +115,8 @@ def main():
             break
 
     out = {
+        "src_rays": len(src),
+        "tgt_rays": len(tgt),
         "src_bases": len(bases_src),
         "tgt_bases": len(bases_tgt),
         "best": best,
@@ -127,6 +129,8 @@ def main():
     md_path = ROOT / "docs" / "witting_external_unitary_search.md"
     with md_path.open("w", encoding="utf-8") as f:
         f.write("# External Unitary Search (Witting → F3^4 Grid)\n\n")
+        f.write(f"Source rays: **{len(src)}**\n")
+        f.write(f"Target rays (naive ω‑grid): **{len(tgt)}**\n")
         f.write(f"Source bases: **{len(bases_src)}**\n")
         f.write(f"Target bases: **{len(bases_tgt)}**\n\n")
         f.write(f"Best score: **{best['score']} / 40**\n")
