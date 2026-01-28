@@ -228,6 +228,22 @@ tools/pattern_class_k4_profile.py
 artifacts/pattern_class_k4_profile.json
 ```
 
+**Triangle/line pattern profiles.** The full 160 triangles and 40 lines of W33
+also exhibit non‑uniform pattern‑class multisets, giving a second layer of
+geometry–physics structure beyond K4s. The dominant triangle class‑types include:
+```
+(1,2,3), (0,2,3), (0,3,4), (2,2,3), (0,1,3)
+```
+and dominant line class‑types include:
+```
+(1,2,3,4), (1,1,2,3), (0,2,2,3), (0,1,3,3), (0,1,2,3)
+```
+See:
+```
+tools/pattern_class_physics_profile.py
+artifacts/pattern_class_physics_profile.json
+```
+
 **Exceptional vertex triplet.** Exactly **3** Coxeter‑6 orbits contain the
 size‑1 W(E6) roots. These correspond to three explicit F₃⁴ projective points:
 ```
@@ -810,6 +826,9 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `python3 tools/pattern_class_k4_profile.py`
   - Computes pattern‑class profiles of all 90 K4 components (outer/center).
   - Output: `artifacts/pattern_class_k4_profile.json`
+- `python3 tools/pattern_class_physics_profile.py`
+  - Computes pattern‑class profiles for all triangles and lines.
+  - Output: `artifacts/pattern_class_physics_profile.json`
 - `python tools/explicit_bijection_decomposition.py`
   - Builds the explicit 240↔240 W33-edge→E8-root mapping.
   - Output: `artifacts/explicit_bijection_decomposition.json`
