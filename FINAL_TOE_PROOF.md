@@ -203,6 +203,18 @@ scripts/sage/compare_edge_we6_conjugacy.py
 artifacts/edge_we6_conjugacy.json
 ```
 
+**Conjugacy check (edge‑pair action vs W(E6) line action).** We paired each edge
+with its opposite edge on the unique 4‑clique line, producing **120** invariant
+edge‑pairs. The induced PSp(4,3) action on these 120 pairs is **not conjugate**
+to the true W(E6) even action on the 120 root lines. This rules out a direct
+equivariant identification at the **line‑pair** level as well. See:
+```
+tools/build_edge_pair_action.py
+artifacts/sp43_edgepair_generators.json
+scripts/sage/compare_edgepair_we6_line_conjugacy.py
+artifacts/edgepair_we6line_conjugacy.json
+```
+
 **Central extension from true W(E6) action (resolved).** Using the **true**
 W(E6) even action (which preserves antipodal pairs), we built the signed line
 extension on 120 root lines. The resulting signed action has order **25,920**,
