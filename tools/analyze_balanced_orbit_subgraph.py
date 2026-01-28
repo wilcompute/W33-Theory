@@ -167,7 +167,7 @@ def main():
         # If component is tiny, record its internal adjacency
         comp_adj = None
         if len(comp) <= 4:
-            comp_list = list(comp)
+            comp_list = [int(x) for x in comp]
             comp_adj = [[int(adj[i, j]) for j in comp_list] for i in comp_list]
         comp_summaries.append({
             "size": len(comp),
@@ -176,6 +176,7 @@ def main():
             "degree_dist": dict(Counter(comp_degrees)),
             "adjacency": comp_adj,
             "edges": comp_edges if len(comp) <= 3 else None,
+            "nodes": comp_list if len(comp) <= 3 else None,
         })
 
     # Spectrum

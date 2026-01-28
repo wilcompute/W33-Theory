@@ -380,6 +380,18 @@ root triples: (half,half,integral)×8, (integral,integral,integral)×1
 So the **A2×A2×A2** triangle partition survives, but the SU(3) phase now
 **reweights** it, with only a single perfectly rainbow triangle.
 
+**Canonical Schläfli normalization (computed).** We fixed the residual labeling
+ambiguity by anchoring two rigid features:
+1) the **unique all‑integral** triangle is normalized to **(E1, C2, L12)**, and
+2) the **axis V‑shape** (the 3‑edge component in the balanced line‑graph) is
+normalized to contain **C2 and two E‑lines** with lexicographically minimal
+indices. This yields a unique index permutation
+```
+perm = (3,2,1,4,5,6),  E/C swap = False
+```
+and a **canonical balanced‑orbit labeling**. This removes the last ambiguity in
+the balanced Schläfli embedding and fixes a concrete edge→root→line map.
+
 **No simple index formula (computed).** We searched for an affine Z3 rule
 expressing the phase purely in terms of Schläfli indices (i mod 3), allowing
 all S6 permutations of indices and an optional E↔C swap:
@@ -430,6 +442,8 @@ tools/isomorphism_balanced_to_schlafli.py
 artifacts/balanced_orbit_schlafli_isomorphism.json
 tools/analyze_balanced_triangle_phase_alignment.py
 artifacts/balanced_triangle_phase_alignment.json
+tools/canonicalize_balanced_mapping.py
+artifacts/balanced_orbit_canonical_mapping.json
 tools/search_phase_formula_schlafli.py
 artifacts/schlafli_phase_formula.json
 tools/search_phase_formula_with_permutations.py
