@@ -673,6 +673,19 @@ So the \textbf{A2\ensuremath{\times}A2\ensuremath{\times}A2} triangle
 partition survives, but the SU(3) phase now \textbf{reweights} it, with
 only a single perfectly rainbow triangle.
 
+\textbf{No simple index formula (computed).} We searched for an affine
+Z3 rule expressing the phase purely in terms of Schläfli indices (i mod
+3), allowing all S6 permutations of indices and an optional
+E\ensuremath{\leftrightarrow}C swap:
+
+\begin{verbatim}
+E_i = a*i+b,  C_i = c*i+d,  L_ij = e*i+f*j+g   (mod 3)
+\end{verbatim}
+
+No solution exists. The SU(3) phase assignment is therefore
+\textbf{genuinely non‑affine} in Schläfli index space and not reducible
+to a simple modular pattern, even after full index relabeling.
+
 Artifacts:
 
 \begin{verbatim}
@@ -714,6 +727,10 @@ tools/isomorphism_balanced_to_schlafli.py
 artifacts/balanced_orbit_schlafli_isomorphism.json
 tools/analyze_balanced_triangle_phase_alignment.py
 artifacts/balanced_triangle_phase_alignment.json
+tools/search_phase_formula_schlafli.py
+artifacts/schlafli_phase_formula.json
+tools/search_phase_formula_with_permutations.py
+artifacts/schlafli_phase_formula_perm.json
 \end{verbatim}
 
 Artifacts:
