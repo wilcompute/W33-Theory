@@ -1098,14 +1098,14 @@ Full measurement order and ray definitions for the 24‑basis experiment:
 Script: `tools/witting_24basis_runsheet.py`
 
 **Lab protocol (PDF/TeX):**  
-Integrated photonics protocol for the KS test + Z₃ phase measurement:  
+Integrated photonics protocol for the KS test + **π/6, π/2 Pancharatnam** phase measurement:  
 `docs/photonics_protocol.pdf`  
 `docs/photonics_protocol.tex`  
 `docs/photonics_protocol.md`  
 Script: `scripts/build_photonics_protocol_pdf.sh`
 
 **Experiment pack (PDF/TeX):**  
-Unified KS + Z₃ phase experiment pack:  
+Unified KS + **π/6, π/2 Pancharatnam** phase experiment pack:  
 `docs/experiment_pack.pdf`  
 `docs/experiment_pack.tex`  
 `docs/experiment_pack.md`  
@@ -1123,29 +1123,30 @@ Step‑by‑step measurement order and scoring instructions:
 `docs/witting_24basis_labscript.md`  
 Script: `tools/witting_24basis_labscript.py`
 
-### 1.9 Z₃ Pancharatnam Phase Signature (Computed)
+### 1.9 Discrete Pancharatnam Phase Signature (Computed)
 
 **Hunch tested:** Non‑orthogonal triangles in the 40‑ray Witting set should
-carry a **quantized geometric phase** (Pancharatnam/Bargmann), revealing an
-intrinsic Z₃ holonomy aligned with the F₃ origin of the construction.
+carry a **quantized geometric phase** (Pancharatnam/Bargmann), revealing a
+discrete holonomy aligned with the F₃ origin of the construction.
 
 **Result:** Across all non‑orthogonal triples (3,240), the triangle phase
-clusters **almost entirely at 0**, with two symmetric **±2π/3** satellites:
+clusters **exclusively at ±π/6 and ±π/2**:
 
 ```
-phase ≈ 0       : 2880 triples
-phase ≈ +2π/3   :  180 triples
-phase ≈ −2π/3   :  180 triples
+phase ≈ +π/6   : 1440 triples
+phase ≈ −π/6   : 1440 triples
+phase ≈ +π/2   :  180 triples
+phase ≈ −π/2   :  180 triples
 ```
 
-This is a clean Z₃ geometric‑phase fingerprint that can be probed
-interferometrically in photonic implementations.
+This is a sharp **π/6‑quantized** geometric‑phase fingerprint that can be
+probed interferometrically in photonic implementations.
 
 Artifact: `artifacts/witting_pancharatnam_triangles.json`  
 Script: `tools/witting_pancharatnam_triangles.py`
 
 **Example triangles (computed):**  
-Explicit ray triples with phases 0 and ±2π/3 are listed here:  
+Explicit ray triples with phases ±π/6 and ±π/2 are listed here:  
 `docs/witting_pancharatnam_examples.md`  
 Script: `tools/witting_pancharatnam_examples.py`
 
@@ -1168,7 +1169,7 @@ Artifact: `artifacts/witting_24basis_symmetry.json`
 Script: `tools/witting_24basis_symmetry.py`
 
 **Interferometric protocol (computed):**  
-A concrete measurement protocol for the Z₃ Pancharatnam phase using
+A concrete measurement protocol for the **π/6, π/2** Pancharatnam phase using
 explicit Witting‑ray triangles:  
 `docs/witting_pancharatnam_protocol.md`  
 Script: `tools/witting_pancharatnam_protocol.py`

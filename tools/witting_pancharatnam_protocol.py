@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Generate an interferometric protocol to measure Z3 Pancharatnam phase.
+"""Generate an interferometric protocol to measure Pancharatnam phase.
 
-Uses explicit triangle examples with phases 0 and ±2π/3.
+Uses explicit triangle examples with phases ±π/6 and ±π/2.
 Outputs a concise photonic protocol with ray vectors.
 """
 from __future__ import annotations
@@ -53,13 +53,13 @@ def main():
 
     md_path = DOCS / "witting_pancharatnam_protocol.md"
     with md_path.open("w", encoding="utf-8") as f:
-        f.write("# Pancharatnam Z3 Phase Protocol (Witting Rays)\n\n")
+        f.write("# Pancharatnam Phase Protocol (π/6, π/2) for Witting Rays\n\n")
         f.write("This protocol measures the geometric phase for a 3‑ray loop:\n")
         f.write("\n")
         f.write("Φ = arg(⟨a|b⟩⟨b|c⟩⟨c|a⟩)\n\n")
-        f.write("The Witting set exhibits phase quantization at 0 and ±2π/3.\n\n")
+        f.write("The Witting set exhibits phase quantization at ±π/6 and ±π/2.\n\n")
 
-        for label in ["0", "+2pi/3", "-2pi/3"]:
+        for label in ["+pi/6", "-pi/6", "+pi/2", "-pi/2"]:
             triple = examples.get(label)
             if not triple:
                 continue
@@ -80,7 +80,7 @@ def main():
 
         f.write("## Notes\n")
         f.write("- Use any standard Pancharatnam/Berry phase interferometer.\n")
-        f.write("- Phase quantization at ±2π/3 is the Z3 signature.\n")
+        f.write("- Phase quantization at ±π/6 and ±π/2 is the observed discrete signature.\n")
         f.write("- This is state‑preparation independent (depends only on ray overlaps).\n")
 
     print(f"Wrote {md_path}")
