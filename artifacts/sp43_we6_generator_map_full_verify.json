@@ -1,0 +1,56 @@
+{
+  "generator_checks": [
+    {
+      "gen_index": 0,
+      "gram_invariant": false,
+      "orbit_size_invariant": false
+    },
+    {
+      "gen_index": 1,
+      "gram_invariant": false,
+      "orbit_size_invariant": false
+    },
+    {
+      "gen_index": 2,
+      "gram_invariant": false,
+      "orbit_size_invariant": false
+    },
+    {
+      "gen_index": 3,
+      "gram_invariant": false,
+      "orbit_size_invariant": false
+    },
+    {
+      "gen_index": 4,
+      "gram_invariant": false,
+      "orbit_size_invariant": false
+    },
+    {
+      "gen_index": 5,
+      "gram_invariant": false,
+      "orbit_size_invariant": false
+    },
+    {
+      "gen_index": 6,
+      "gram_invariant": false,
+      "orbit_size_invariant": false
+    },
+    {
+      "gen_index": 7,
+      "gram_invariant": false,
+      "orbit_size_invariant": false
+    },
+    {
+      "gen_index": 8,
+      "gram_invariant": false,
+      "orbit_size_invariant": false
+    },
+    {
+      "gen_index": 9,
+      "gram_invariant": false,
+      "orbit_size_invariant": false
+    }
+  ],
+  "all_gram_ok": false,
+  "all_orbit_ok": false
+}

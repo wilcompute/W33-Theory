@@ -81,6 +81,8 @@ split across multiple orbits. This supports the view that the Magic‑Star A2^4
 structure is a **global** E8 feature rather than a sub‑feature of any one
 Schläfli copy. See `artifacts/a2_4_decomposition.json`.
 
+\input{latex/magic_star_a2_4.tex}
+
 Computed in Sage; see:
 ```
 tools/sage_we6_orbits_on_e8_roots.py
@@ -133,6 +135,13 @@ for the edge action:
 ```
 artifacts/sp43_we6_generator_map_sage_verify.json
 scripts/sage/verify_sp43_image_group.sage
+```
+**Full invariance harness.** A complete Gram‑matrix check confirms that each
+generator preserves all E8 inner products (not just sampled pairs), and each
+root’s W(E6) orbit size (72/27/1). See:
+```
+artifacts/sp43_we6_generator_map_full_verify.json
+tools/verify_generator_map_full.py
 ```
 **Exported bijection tables.** The full explicit edge↔root bijection is now
 exported for inspection and downstream analysis:
@@ -1537,6 +1546,13 @@ We capture these connections in:
 `EXTERNAL_READING_NOTES_JAN28_2026.md`
 
 ---
+
+## Appendix: Canonical Edge–Root Bijection (Ordered)
+
+The appendix below lists the full explicit edge↔root bijection ordered by
+canonical word length in the symplectic generators (a deterministic ordering).
+
+\input{latex/appendix_bijection.tex}
 
 ## FINAL STATEMENT
 

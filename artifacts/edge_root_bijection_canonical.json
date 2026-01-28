@@ -1,0 +1,5920 @@
+[
+  {
+    "edge_index": 0,
+    "word_len": 0,
+    "word": [],
+    "v_i": 0,
+    "v_j": 1,
+    "root_index": 112,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 6,
+    "word_len": 1,
+    "word": [
+      0
+    ],
+    "v_i": 0,
+    "v_j": 16,
+    "root_index": 1,
+    "root_coords": [
+      2,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 15,
+    "word_len": 1,
+    "word": [
+      1
+    ],
+    "v_i": 1,
+    "v_j": 5,
+    "root_index": 24,
+    "root_coords": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 2,
+    "word_len": 1,
+    "word": [
+      4
+    ],
+    "v_i": 0,
+    "v_j": 3,
+    "root_index": 111,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      -2
+    ],
+    "we6_orbit_id": 10,
+    "we6_orbit_size": 1
+  },
+  {
+    "edge_index": 13,
+    "word_len": 1,
+    "word": [
+      5
+    ],
+    "v_i": 1,
+    "v_j": 3,
+    "root_index": 14,
+    "root_coords": [
+      -2,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 3,
+    "word_len": 1,
+    "word": [
+      6
+    ],
+    "v_i": 0,
+    "v_j": 13,
+    "root_index": 108,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      2
+    ],
+    "we6_orbit_id": 8,
+    "we6_orbit_size": 1
+  },
+  {
+    "edge_index": 14,
+    "word_len": 1,
+    "word": [
+      7
+    ],
+    "v_i": 1,
+    "v_j": 4,
+    "root_index": 20,
+    "root_coords": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 9,
+    "word_len": 2,
+    "word": [
+      0,
+      0
+    ],
+    "v_i": 0,
+    "v_j": 19,
+    "root_index": 6,
+    "root_coords": [
+      -2,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 56,
+    "word_len": 2,
+    "word": [
+      0,
+      1
+    ],
+    "v_i": 5,
+    "v_j": 16,
+    "root_index": 30,
+    "root_coords": [
+      0,
+      -2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 8,
+    "word_len": 2,
+    "word": [
+      0,
+      4
+    ],
+    "v_i": 0,
+    "v_j": 18,
+    "root_index": 5,
+    "root_coords": [
+      2,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 36,
+    "word_len": 2,
+    "word": [
+      0,
+      5
+    ],
+    "v_i": 3,
+    "v_j": 25,
+    "root_index": 233,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 45,
+    "word_len": 2,
+    "word": [
+      0,
+      7
+    ],
+    "v_i": 4,
+    "v_j": 16,
+    "root_index": 18,
+    "root_coords": [
+      -2,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 16,
+    "word_len": 2,
+    "word": [
+      1,
+      1
+    ],
+    "v_i": 1,
+    "v_j": 6,
+    "root_index": 44,
+    "root_coords": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 34,
+    "word_len": 2,
+    "word": [
+      1,
+      4
+    ],
+    "v_i": 3,
+    "v_j": 23,
+    "root_index": 230,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 21,
+    "word_len": 2,
+    "word": [
+      1,
+      5
+    ],
+    "v_i": 1,
+    "v_j": 11,
+    "root_index": 84,
+    "root_coords": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      2
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 55,
+    "word_len": 2,
+    "word": [
+      1,
+      6
+    ],
+    "v_i": 5,
+    "v_j": 13,
+    "root_index": 4,
+    "root_coords": [
+      2,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 54,
+    "word_len": 2,
+    "word": [
+      4,
+      1
+    ],
+    "v_i": 5,
+    "v_j": 11,
+    "root_index": 55,
+    "root_coords": [
+      0,
+      0,
+      -2,
+      -2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 1,
+    "word_len": 2,
+    "word": [
+      4,
+      4
+    ],
+    "v_i": 0,
+    "v_j": 2,
+    "root_index": 208,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 23,
+    "word_len": 2,
+    "word": [
+      4,
+      5
+    ],
+    "v_i": 2,
+    "v_j": 3,
+    "root_index": 17,
+    "root_coords": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 5,
+    "word_len": 2,
+    "word": [
+      4,
+      6
+    ],
+    "v_i": 0,
+    "v_j": 15,
+    "root_index": 239,
+    "root_coords": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 43,
+    "word_len": 2,
+    "word": [
+      4,
+      7
+    ],
+    "v_i": 4,
+    "v_j": 10,
+    "root_index": 7,
+    "root_coords": [
+      -2,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 154,
+    "word_len": 2,
+    "word": [
+      5,
+      0
+    ],
+    "v_i": 16,
+    "v_j": 18,
+    "root_index": 110,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      2
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 12,
+    "word_len": 2,
+    "word": [
+      5,
+      5
+    ],
+    "v_i": 1,
+    "v_j": 2,
+    "root_index": 13,
+    "root_coords": [
+      2,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 133,
+    "word_len": 2,
+    "word": [
+      5,
+      6
+    ],
+    "v_i": 13,
+    "v_j": 15,
+    "root_index": 89,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      -2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 20,
+    "word_len": 2,
+    "word": [
+      5,
+      7
+    ],
+    "v_i": 1,
+    "v_j": 10,
+    "root_index": 80,
+    "root_coords": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      2,
+      0
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 33,
+    "word_len": 2,
+    "word": [
+      6,
+      5
+    ],
+    "v_i": 3,
+    "v_j": 22,
+    "root_index": 229,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 44,
+    "word_len": 2,
+    "word": [
+      6,
+      7
+    ],
+    "v_i": 4,
+    "v_j": 13,
+    "root_index": 0,
+    "root_coords": [
+      2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 57,
+    "word_len": 3,
+    "word": [
+      0,
+      0,
+      1
+    ],
+    "v_i": 5,
+    "v_j": 19,
+    "root_index": 33,
+    "root_coords": [
+      0,
+      2,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 10,
+    "word_len": 3,
+    "word": [
+      0,
+      0,
+      4
+    ],
+    "v_i": 0,
+    "v_j": 20,
+    "root_index": 9,
+    "root_coords": [
+      2,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 39,
+    "word_len": 3,
+    "word": [
+      0,
+      0,
+      5
+    ],
+    "v_i": 3,
+    "v_j": 28,
+    "root_index": 236,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 46,
+    "word_len": 3,
+    "word": [
+      0,
+      0,
+      7
+    ],
+    "v_i": 4,
+    "v_j": 19,
+    "root_index": 29,
+    "root_coords": [
+      0,
+      2,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 67,
+    "word_len": 3,
+    "word": [
+      0,
+      1,
+      1
+    ],
+    "v_i": 6,
+    "v_j": 16,
+    "root_index": 34,
+    "root_coords": [
+      0,
+      -2,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 169,
+    "word_len": 3,
+    "word": [
+      0,
+      1,
+      4
+    ],
+    "v_i": 18,
+    "v_j": 23,
+    "root_index": 165,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 118,
+    "word_len": 3,
+    "word": [
+      0,
+      1,
+      5
+    ],
+    "v_i": 11,
+    "v_j": 25,
+    "root_index": 132,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 62,
+    "word_len": 3,
+    "word": [
+      0,
+      4,
+      1
+    ],
+    "v_i": 5,
+    "v_j": 36,
+    "root_index": 91,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      -2,
+      -2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 11,
+    "word_len": 3,
+    "word": [
+      0,
+      4,
+      2
+    ],
+    "v_i": 0,
+    "v_j": 21,
+    "root_index": 10,
+    "root_coords": [
+      -2,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 7,
+    "word_len": 3,
+    "word": [
+      0,
+      4,
+      4
+    ],
+    "v_i": 0,
+    "v_j": 17,
+    "root_index": 2,
+    "root_coords": [
+      -2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 41,
+    "word_len": 3,
+    "word": [
+      0,
+      4,
+      5
+    ],
+    "v_i": 3,
+    "v_j": 30,
+    "root_index": 238,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 51,
+    "word_len": 3,
+    "word": [
+      0,
+      4,
+      7
+    ],
+    "v_i": 4,
+    "v_j": 34,
+    "root_index": 35,
+    "root_coords": [
+      0,
+      -2,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 171,
+    "word_len": 3,
+    "word": [
+      0,
+      5,
+      0
+    ],
+    "v_i": 18,
+    "v_j": 37,
+    "root_index": 168,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 37,
+    "word_len": 3,
+    "word": [
+      0,
+      5,
+      3
+    ],
+    "v_i": 3,
+    "v_j": 26,
+    "root_index": 234,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 31,
+    "word_len": 3,
+    "word": [
+      0,
+      5,
+      4
+    ],
+    "v_i": 2,
+    "v_j": 38,
+    "root_index": 223,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 27,
+    "word_len": 3,
+    "word": [
+      0,
+      5,
+      5
+    ],
+    "v_i": 2,
+    "v_j": 34,
+    "root_index": 215,
+    "root_coords": [
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 147,
+    "word_len": 3,
+    "word": [
+      0,
+      5,
+      6
+    ],
+    "v_i": 15,
+    "v_j": 28,
+    "root_index": 191,
+    "root_coords": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 106,
+    "word_len": 3,
+    "word": [
+      0,
+      5,
+      7
+    ],
+    "v_i": 10,
+    "v_j": 18,
+    "root_index": 58,
+    "root_coords": [
+      0,
+      0,
+      -2,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 168,
+    "word_len": 3,
+    "word": [
+      0,
+      7,
+      4
+    ],
+    "v_i": 18,
+    "v_j": 22,
+    "root_index": 164,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 48,
+    "word_len": 3,
+    "word": [
+      0,
+      7,
+      5
+    ],
+    "v_i": 4,
+    "v_j": 25,
+    "root_index": 15,
+    "root_coords": [
+      -2,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 35,
+    "word_len": 3,
+    "word": [
+      1,
+      1,
+      4
+    ],
+    "v_i": 3,
+    "v_j": 24,
+    "root_index": 231,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 19,
+    "word_len": 3,
+    "word": [
+      1,
+      1,
+      5
+    ],
+    "v_i": 1,
+    "v_j": 9,
+    "root_index": 68,
+    "root_coords": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 66,
+    "word_len": 3,
+    "word": [
+      1,
+      1,
+      6
+    ],
+    "v_i": 6,
+    "v_j": 13,
+    "root_index": 8,
+    "root_coords": [
+      2,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 120,
+    "word_len": 3,
+    "word": [
+      1,
+      4,
+      1
+    ],
+    "v_i": 11,
+    "v_j": 32,
+    "root_index": 22,
+    "root_coords": [
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 26,
+    "word_len": 3,
+    "word": [
+      1,
+      4,
+      4
+    ],
+    "v_i": 2,
+    "v_j": 33,
+    "root_index": 104,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      2
+    ],
+    "we6_orbit_id": 12,
+    "we6_orbit_size": 1
+  },
+  {
+    "edge_index": 114,
+    "word_len": 3,
+    "word": [
+      1,
+      4,
+      6
+    ],
+    "v_i": 11,
+    "v_j": 15,
+    "root_index": 36,
+    "root_coords": [
+      0,
+      2,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 108,
+    "word_len": 3,
+    "word": [
+      1,
+      4,
+      7
+    ],
+    "v_i": 10,
+    "v_j": 24,
+    "root_index": 120,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 160,
+    "word_len": 3,
+    "word": [
+      1,
+      5,
+      0
+    ],
+    "v_i": 16,
+    "v_j": 36,
+    "root_index": 154,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 22,
+    "word_len": 3,
+    "word": [
+      1,
+      5,
+      3
+    ],
+    "v_i": 1,
+    "v_j": 12,
+    "root_index": 92,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      2,
+      0
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 18,
+    "word_len": 3,
+    "word": [
+      1,
+      5,
+      5
+    ],
+    "v_i": 1,
+    "v_j": 8,
+    "root_index": 64,
+    "root_coords": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 139,
+    "word_len": 3,
+    "word": [
+      1,
+      5,
+      6
+    ],
+    "v_i": 13,
+    "v_j": 33,
+    "root_index": 88,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 135,
+    "word_len": 3,
+    "word": [
+      1,
+      6,
+      4
+    ],
+    "v_i": 13,
+    "v_j": 23,
+    "root_index": 56,
+    "root_coords": [
+      0,
+      0,
+      2,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 117,
+    "word_len": 3,
+    "word": [
+      1,
+      6,
+      5
+    ],
+    "v_i": 11,
+    "v_j": 22,
+    "root_index": 130,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 64,
+    "word_len": 3,
+    "word": [
+      4,
+      1,
+      1
+    ],
+    "v_i": 6,
+    "v_j": 9,
+    "root_index": 145,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 65,
+    "word_len": 3,
+    "word": [
+      4,
+      1,
+      3
+    ],
+    "v_i": 6,
+    "v_j": 12,
+    "root_index": 146,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 201,
+    "word_len": 3,
+    "word": [
+      4,
+      1,
+      4
+    ],
+    "v_i": 23,
+    "v_j": 30,
+    "root_index": 212,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 85,
+    "word_len": 3,
+    "word": [
+      4,
+      1,
+      5
+    ],
+    "v_i": 8,
+    "v_j": 11,
+    "root_index": 67,
+    "root_coords": [
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 61,
+    "word_len": 3,
+    "word": [
+      4,
+      1,
+      6
+    ],
+    "v_i": 5,
+    "v_j": 33,
+    "root_index": 79,
+    "root_coords": [
+      0,
+      0,
+      0,
+      -2,
+      0,
+      -2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 53,
+    "word_len": 3,
+    "word": [
+      4,
+      1,
+      8
+    ],
+    "v_i": 5,
+    "v_j": 8,
+    "root_index": 43,
+    "root_coords": [
+      0,
+      -2,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 4,
+    "word_len": 3,
+    "word": [
+      4,
+      4,
+      6
+    ],
+    "v_i": 0,
+    "v_j": 14,
+    "root_index": 143,
+    "root_coords": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 42,
+    "word_len": 3,
+    "word": [
+      4,
+      4,
+      7
+    ],
+    "v_i": 4,
+    "v_j": 7,
+    "root_index": 3,
+    "root_coords": [
+      -2,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 161,
+    "word_len": 3,
+    "word": [
+      4,
+      5,
+      0
+    ],
+    "v_i": 17,
+    "v_j": 18,
+    "root_index": 155,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 140,
+    "word_len": 3,
+    "word": [
+      4,
+      5,
+      6
+    ],
+    "v_i": 14,
+    "v_j": 15,
+    "root_index": 90,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      -2,
+      2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 75,
+    "word_len": 3,
+    "word": [
+      4,
+      5,
+      7
+    ],
+    "v_i": 7,
+    "v_j": 10,
+    "root_index": 180,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 38,
+    "word_len": 3,
+    "word": [
+      4,
+      6,
+      5
+    ],
+    "v_i": 3,
+    "v_j": 27,
+    "root_index": 235,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 50,
+    "word_len": 3,
+    "word": [
+      4,
+      6,
+      7
+    ],
+    "v_i": 4,
+    "v_j": 31,
+    "root_index": 31,
+    "root_coords": [
+      0,
+      -2,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 196,
+    "word_len": 3,
+    "word": [
+      4,
+      7,
+      4
+    ],
+    "v_i": 22,
+    "v_j": 29,
+    "root_index": 102,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      2,
+      0
+    ],
+    "we6_orbit_id": 11,
+    "we6_orbit_size": 1
+  },
+  {
+    "edge_index": 174,
+    "word_len": 3,
+    "word": [
+      5,
+      0,
+      0
+    ],
+    "v_i": 19,
+    "v_j": 20,
+    "root_index": 172,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 175,
+    "word_len": 3,
+    "word": [
+      5,
+      0,
+      2
+    ],
+    "v_i": 19,
+    "v_j": 21,
+    "root_index": 179,
+    "root_coords": [
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 210,
+    "word_len": 3,
+    "word": [
+      5,
+      0,
+      5
+    ],
+    "v_i": 25,
+    "v_j": 30,
+    "root_index": 226,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 158,
+    "word_len": 3,
+    "word": [
+      5,
+      0,
+      7
+    ],
+    "v_i": 16,
+    "v_j": 34,
+    "root_index": 151,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 153,
+    "word_len": 3,
+    "word": [
+      5,
+      0,
+      8
+    ],
+    "v_i": 16,
+    "v_j": 17,
+    "root_index": 109,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      -2
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 132,
+    "word_len": 3,
+    "word": [
+      5,
+      5,
+      6
+    ],
+    "v_i": 13,
+    "v_j": 14,
+    "root_index": 78,
+    "root_coords": [
+      0,
+      0,
+      0,
+      -2,
+      0,
+      2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 17,
+    "word_len": 3,
+    "word": [
+      5,
+      5,
+      7
+    ],
+    "v_i": 1,
+    "v_j": 7,
+    "root_index": 48,
+    "root_coords": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 195,
+    "word_len": 3,
+    "word": [
+      5,
+      6,
+      5
+    ],
+    "v_i": 22,
+    "v_j": 27,
+    "root_index": 98,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      2
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 137,
+    "word_len": 3,
+    "word": [
+      5,
+      6,
+      7
+    ],
+    "v_i": 13,
+    "v_j": 31,
+    "root_index": 72,
+    "root_coords": [
+      0,
+      0,
+      0,
+      2,
+      2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 40,
+    "word_len": 3,
+    "word": [
+      5,
+      7,
+      4
+    ],
+    "v_i": 3,
+    "v_j": 29,
+    "root_index": 237,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 24,
+    "word_len": 3,
+    "word": [
+      6,
+      5,
+      4
+    ],
+    "v_i": 2,
+    "v_j": 31,
+    "root_index": 96,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      2
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 105,
+    "word_len": 3,
+    "word": [
+      6,
+      5,
+      6
+    ],
+    "v_i": 10,
+    "v_j": 15,
+    "root_index": 32,
+    "root_coords": [
+      0,
+      2,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 134,
+    "word_len": 3,
+    "word": [
+      6,
+      7,
+      4
+    ],
+    "v_i": 13,
+    "v_j": 22,
+    "root_index": 52,
+    "root_coords": [
+      0,
+      0,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 47,
+    "word_len": 3,
+    "word": [
+      6,
+      7,
+      5
+    ],
+    "v_i": 4,
+    "v_j": 22,
+    "root_index": 11,
+    "root_coords": [
+      -2,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 68,
+    "word_len": 4,
+    "word": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "v_i": 6,
+    "v_j": 19,
+    "root_index": 37,
+    "root_coords": [
+      0,
+      2,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 184,
+    "word_len": 4,
+    "word": [
+      0,
+      0,
+      1,
+      4
+    ],
+    "v_i": 20,
+    "v_j": 23,
+    "root_index": 190,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 119,
+    "word_len": 4,
+    "word": [
+      0,
+      0,
+      1,
+      5
+    ],
+    "v_i": 11,
+    "v_j": 28,
+    "root_index": 136,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 60,
+    "word_len": 4,
+    "word": [
+      0,
+      0,
+      4,
+      1
+    ],
+    "v_i": 5,
+    "v_j": 29,
+    "root_index": 75,
+    "root_coords": [
+      0,
+      0,
+      0,
+      -2,
+      -2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 49,
+    "word_len": 4,
+    "word": [
+      0,
+      0,
+      4,
+      7
+    ],
+    "v_i": 4,
+    "v_j": 28,
+    "root_index": 19,
+    "root_coords": [
+      -2,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 29,
+    "word_len": 4,
+    "word": [
+      0,
+      0,
+      5,
+      4
+    ],
+    "v_i": 2,
+    "v_j": 36,
+    "root_index": 221,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 30,
+    "word_len": 4,
+    "word": [
+      0,
+      0,
+      5,
+      5
+    ],
+    "v_i": 2,
+    "v_j": 37,
+    "root_index": 222,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 150,
+    "word_len": 4,
+    "word": [
+      0,
+      0,
+      5,
+      6
+    ],
+    "v_i": 15,
+    "v_j": 34,
+    "root_index": 205,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 107,
+    "word_len": 4,
+    "word": [
+      0,
+      0,
+      5,
+      7
+    ],
+    "v_i": 10,
+    "v_j": 21,
+    "root_index": 61,
+    "root_coords": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      -2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 183,
+    "word_len": 4,
+    "word": [
+      0,
+      0,
+      7,
+      4
+    ],
+    "v_i": 20,
+    "v_j": 22,
+    "root_index": 189,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 170,
+    "word_len": 4,
+    "word": [
+      0,
+      1,
+      1,
+      4
+    ],
+    "v_i": 18,
+    "v_j": 24,
+    "root_index": 166,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 100,
+    "word_len": 4,
+    "word": [
+      0,
+      1,
+      1,
+      5
+    ],
+    "v_i": 9,
+    "v_j": 25,
+    "root_index": 114,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 233,
+    "word_len": 4,
+    "word": [
+      0,
+      1,
+      4,
+      1
+    ],
+    "v_i": 32,
+    "v_j": 36,
+    "root_index": 135,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 190,
+    "word_len": 4,
+    "word": [
+      0,
+      1,
+      4,
+      2
+    ],
+    "v_i": 21,
+    "v_j": 26,
+    "root_index": 198,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 167,
+    "word_len": 4,
+    "word": [
+      0,
+      1,
+      4,
+      4
+    ],
+    "v_i": 17,
+    "v_j": 33,
+    "root_index": 163,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 230,
+    "word_len": 4,
+    "word": [
+      0,
+      1,
+      4,
+      5
+    ],
+    "v_i": 30,
+    "v_j": 38,
+    "root_index": 131,
+    "root_coords": [
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 116,
+    "word_len": 4,
+    "word": [
+      0,
+      1,
+      4,
+      6
+    ],
+    "v_i": 11,
+    "v_j": 21,
+    "root_index": 73,
+    "root_coords": [
+      0,
+      0,
+      0,
+      2,
+      -2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 208,
+    "word_len": 4,
+    "word": [
+      0,
+      1,
+      4,
+      7
+    ],
+    "v_i": 24,
+    "v_j": 34,
+    "root_index": 224,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 239,
+    "word_len": 4,
+    "word": [
+      0,
+      1,
+      5,
+      0
+    ],
+    "v_i": 36,
+    "v_j": 37,
+    "root_index": 142,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 127,
+    "word_len": 4,
+    "word": [
+      0,
+      1,
+      5,
+      3
+    ],
+    "v_i": 12,
+    "v_j": 26,
+    "root_index": 66,
+    "root_coords": [
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 93,
+    "word_len": 4,
+    "word": [
+      0,
+      1,
+      5,
+      5
+    ],
+    "v_i": 8,
+    "v_j": 34,
+    "root_index": 99,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 222,
+    "word_len": 4,
+    "word": [
+      0,
+      1,
+      5,
+      6
+    ],
+    "v_i": 28,
+    "v_j": 33,
+    "root_index": 97,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 124,
+    "word_len": 4,
+    "word": [
+      0,
+      1,
+      5,
+      7
+    ],
+    "v_i": 12,
+    "v_j": 18,
+    "root_index": 74,
+    "root_coords": [
+      0,
+      0,
+      0,
+      -2,
+      2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 70,
+    "word_len": 4,
+    "word": [
+      0,
+      4,
+      1,
+      1
+    ],
+    "v_i": 6,
+    "v_j": 27,
+    "root_index": 152,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 63,
+    "word_len": 4,
+    "word": [
+      0,
+      4,
+      1,
+      2
+    ],
+    "v_i": 5,
+    "v_j": 39,
+    "root_index": 144,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 73,
+    "word_len": 4,
+    "word": [
+      0,
+      4,
+      1,
+      3
+    ],
+    "v_i": 6,
+    "v_j": 35,
+    "root_index": 177,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 126,
+    "word_len": 4,
+    "word": [
+      0,
+      4,
+      1,
+      4
+    ],
+    "v_i": 12,
+    "v_j": 23,
+    "root_index": 50,
+    "root_coords": [
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 59,
+    "word_len": 4,
+    "word": [
+      0,
+      4,
+      1,
+      8
+    ],
+    "v_i": 5,
+    "v_j": 26,
+    "root_index": 63,
+    "root_coords": [
+      0,
+      0,
+      -2,
+      0,
+      0,
+      -2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 52,
+    "word_len": 4,
+    "word": [
+      0,
+      4,
+      2,
+      7
+    ],
+    "v_i": 4,
+    "v_j": 37,
+    "root_index": 39,
+    "root_coords": [
+      0,
+      -2,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 151,
+    "word_len": 4,
+    "word": [
+      0,
+      4,
+      5,
+      6
+    ],
+    "v_i": 15,
+    "v_j": 35,
+    "root_index": 206,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 113,
+    "word_len": 4,
+    "word": [
+      0,
+      4,
+      5,
+      7
+    ],
+    "v_i": 10,
+    "v_j": 39,
+    "root_index": 129,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 78,
+    "word_len": 4,
+    "word": [
+      0,
+      5,
+      0,
+      0
+    ],
+    "v_i": 7,
+    "v_j": 20,
+    "root_index": 41,
+    "root_coords": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 192,
+    "word_len": 4,
+    "word": [
+      0,
+      5,
+      0,
+      2
+    ],
+    "v_i": 21,
+    "v_j": 31,
+    "root_index": 201,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 173,
+    "word_len": 4,
+    "word": [
+      0,
+      5,
+      0,
+      3
+    ],
+    "v_i": 18,
+    "v_j": 39,
+    "root_index": 170,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 97,
+    "word_len": 4,
+    "word": [
+      0,
+      5,
+      0,
+      4
+    ],
+    "v_i": 9,
+    "v_j": 17,
+    "root_index": 54,
+    "root_coords": [
+      0,
+      0,
+      -2,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 178,
+    "word_len": 4,
+    "word": [
+      0,
+      5,
+      0,
+      5
+    ],
+    "v_i": 19,
+    "v_j": 30,
+    "root_index": 183,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 189,
+    "word_len": 4,
+    "word": [
+      0,
+      5,
+      0,
+      6
+    ],
+    "v_i": 21,
+    "v_j": 25,
+    "root_index": 197,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 186,
+    "word_len": 4,
+    "word": [
+      0,
+      5,
+      0,
+      7
+    ],
+    "v_i": 20,
+    "v_j": 34,
+    "root_index": 194,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 162,
+    "word_len": 4,
+    "word": [
+      0,
+      5,
+      0,
+      8
+    ],
+    "v_i": 17,
+    "v_j": 28,
+    "root_index": 156,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 121,
+    "word_len": 4,
+    "word": [
+      0,
+      5,
+      3,
+      1
+    ],
+    "v_i": 11,
+    "v_j": 35,
+    "root_index": 26,
+    "root_coords": [
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 25,
+    "word_len": 4,
+    "word": [
+      0,
+      5,
+      3,
+      5
+    ],
+    "v_i": 2,
+    "v_j": 32,
+    "root_index": 100,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      2,
+      0
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 148,
+    "word_len": 4,
+    "word": [
+      0,
+      5,
+      3,
+      6
+    ],
+    "v_i": 15,
+    "v_j": 29,
+    "root_index": 199,
+    "root_coords": [
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 109,
+    "word_len": 4,
+    "word": [
+      0,
+      5,
+      3,
+      7
+    ],
+    "v_i": 10,
+    "v_j": 27,
+    "root_index": 121,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 88,
+    "word_len": 4,
+    "word": [
+      0,
+      5,
+      4,
+      1
+    ],
+    "v_i": 8,
+    "v_j": 20,
+    "root_index": 53,
+    "root_coords": [
+      0,
+      0,
+      2,
+      -2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 143,
+    "word_len": 4,
+    "word": [
+      0,
+      5,
+      4,
+      6
+    ],
+    "v_i": 14,
+    "v_j": 27,
+    "root_index": 171,
+    "root_coords": [
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 81,
+    "word_len": 4,
+    "word": [
+      0,
+      5,
+      4,
+      7
+    ],
+    "v_i": 7,
+    "v_j": 29,
+    "root_index": 23,
+    "root_coords": [
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 144,
+    "word_len": 4,
+    "word": [
+      0,
+      5,
+      5,
+      6
+    ],
+    "v_i": 14,
+    "v_j": 37,
+    "root_index": 173,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 77,
+    "word_len": 4,
+    "word": [
+      0,
+      5,
+      5,
+      7
+    ],
+    "v_i": 7,
+    "v_j": 17,
+    "root_index": 38,
+    "root_coords": [
+      0,
+      -2,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 152,
+    "word_len": 4,
+    "word": [
+      0,
+      5,
+      6,
+      4
+    ],
+    "v_i": 15,
+    "v_j": 36,
+    "root_index": 207,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 221,
+    "word_len": 4,
+    "word": [
+      0,
+      5,
+      6,
+      5
+    ],
+    "v_i": 27,
+    "v_j": 37,
+    "root_index": 93,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 112,
+    "word_len": 4,
+    "word": [
+      0,
+      5,
+      7,
+      1
+    ],
+    "v_i": 10,
+    "v_j": 36,
+    "root_index": 128,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 115,
+    "word_len": 4,
+    "word": [
+      0,
+      5,
+      7,
+      3
+    ],
+    "v_i": 11,
+    "v_j": 18,
+    "root_index": 62,
+    "root_coords": [
+      0,
+      0,
+      -2,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 163,
+    "word_len": 4,
+    "word": [
+      0,
+      5,
+      7,
+      4
+    ],
+    "v_i": 17,
+    "v_j": 29,
+    "root_index": 157,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 110,
+    "word_len": 4,
+    "word": [
+      0,
+      5,
+      7,
+      5
+    ],
+    "v_i": 10,
+    "v_j": 30,
+    "root_index": 122,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 198,
+    "word_len": 4,
+    "word": [
+      0,
+      7,
+      4,
+      1
+    ],
+    "v_i": 22,
+    "v_j": 36,
+    "root_index": 209,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 165,
+    "word_len": 4,
+    "word": [
+      0,
+      7,
+      4,
+      4
+    ],
+    "v_i": 17,
+    "v_j": 31,
+    "root_index": 161,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 228,
+    "word_len": 4,
+    "word": [
+      0,
+      7,
+      4,
+      5
+    ],
+    "v_i": 30,
+    "v_j": 31,
+    "root_index": 126,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 199,
+    "word_len": 4,
+    "word": [
+      0,
+      7,
+      5,
+      4
+    ],
+    "v_i": 22,
+    "v_j": 38,
+    "root_index": 210,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 123,
+    "word_len": 4,
+    "word": [
+      1,
+      1,
+      4,
+      6
+    ],
+    "v_i": 12,
+    "v_j": 15,
+    "root_index": 40,
+    "root_coords": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 111,
+    "word_len": 4,
+    "word": [
+      1,
+      1,
+      4,
+      7
+    ],
+    "v_i": 10,
+    "v_j": 33,
+    "root_index": 124,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 157,
+    "word_len": 4,
+    "word": [
+      1,
+      1,
+      5,
+      0
+    ],
+    "v_i": 16,
+    "v_j": 27,
+    "root_index": 150,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 136,
+    "word_len": 4,
+    "word": [
+      1,
+      1,
+      5,
+      6
+    ],
+    "v_i": 13,
+    "v_j": 24,
+    "root_index": 60,
+    "root_coords": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 99,
+    "word_len": 4,
+    "word": [
+      1,
+      1,
+      6,
+      5
+    ],
+    "v_i": 9,
+    "v_j": 22,
+    "root_index": 113,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 96,
+    "word_len": 4,
+    "word": [
+      1,
+      4,
+      1,
+      1
+    ],
+    "v_i": 9,
+    "v_j": 14,
+    "root_index": 28,
+    "root_coords": [
+      0,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 129,
+    "word_len": 4,
+    "word": [
+      1,
+      4,
+      1,
+      3
+    ],
+    "v_i": 12,
+    "v_j": 31,
+    "root_index": 82,
+    "root_coords": [
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      2,
+      0
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 71,
+    "word_len": 4,
+    "word": [
+      1,
+      4,
+      1,
+      4
+    ],
+    "v_i": 6,
+    "v_j": 30,
+    "root_index": 160,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 102,
+    "word_len": 4,
+    "word": [
+      1,
+      4,
+      1,
+      6
+    ],
+    "v_i": 9,
+    "v_j": 33,
+    "root_index": 116,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 89,
+    "word_len": 4,
+    "word": [
+      1,
+      4,
+      1,
+      8
+    ],
+    "v_i": 8,
+    "v_j": 24,
+    "root_index": 71,
+    "root_coords": [
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 86,
+    "word_len": 4,
+    "word": [
+      1,
+      4,
+      4,
+      6
+    ],
+    "v_i": 8,
+    "v_j": 14,
+    "root_index": 16,
+    "root_coords": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 82,
+    "word_len": 4,
+    "word": [
+      1,
+      4,
+      4,
+      7
+    ],
+    "v_i": 7,
+    "v_j": 32,
+    "root_index": 27,
+    "root_coords": [
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 149,
+    "word_len": 4,
+    "word": [
+      1,
+      4,
+      6,
+      4
+    ],
+    "v_i": 15,
+    "v_j": 30,
+    "root_index": 203,
+    "root_coords": [
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 90,
+    "word_len": 4,
+    "word": [
+      1,
+      4,
+      6,
+      5
+    ],
+    "v_i": 8,
+    "v_j": 27,
+    "root_index": 83,
+    "root_coords": [
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 225,
+    "word_len": 4,
+    "word": [
+      1,
+      4,
+      7,
+      4
+    ],
+    "v_i": 29,
+    "v_j": 32,
+    "root_index": 119,
+    "root_coords": [
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 177,
+    "word_len": 4,
+    "word": [
+      1,
+      5,
+      0,
+      0
+    ],
+    "v_i": 19,
+    "v_j": 29,
+    "root_index": 182,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 181,
+    "word_len": 4,
+    "word": [
+      1,
+      5,
+      0,
+      2
+    ],
+    "v_i": 19,
+    "v_j": 39,
+    "root_index": 187,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 159,
+    "word_len": 4,
+    "word": [
+      1,
+      5,
+      0,
+      3
+    ],
+    "v_i": 16,
+    "v_j": 35,
+    "root_index": 153,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 156,
+    "word_len": 4,
+    "word": [
+      1,
+      5,
+      0,
+      8
+    ],
+    "v_i": 16,
+    "v_j": 26,
+    "root_index": 149,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 138,
+    "word_len": 4,
+    "word": [
+      1,
+      5,
+      3,
+      6
+    ],
+    "v_i": 13,
+    "v_j": 32,
+    "root_index": 76,
+    "root_coords": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 92,
+    "word_len": 4,
+    "word": [
+      1,
+      6,
+      5,
+      5
+    ],
+    "v_i": 8,
+    "v_j": 31,
+    "root_index": 95,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 205,
+    "word_len": 4,
+    "word": [
+      4,
+      1,
+      1,
+      4
+    ],
+    "v_i": 24,
+    "v_j": 26,
+    "root_index": 217,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 95,
+    "word_len": 4,
+    "word": [
+      4,
+      1,
+      1,
+      5
+    ],
+    "v_i": 9,
+    "v_j": 12,
+    "root_index": 107,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 9,
+    "we6_orbit_size": 1
+  },
+  {
+    "edge_index": 69,
+    "word_len": 4,
+    "word": [
+      4,
+      1,
+      1,
+      6
+    ],
+    "v_i": 6,
+    "v_j": 24,
+    "root_index": 148,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 206,
+    "word_len": 4,
+    "word": [
+      4,
+      1,
+      3,
+      4
+    ],
+    "v_i": 24,
+    "v_j": 28,
+    "root_index": 218,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 72,
+    "word_len": 4,
+    "word": [
+      4,
+      1,
+      3,
+      6
+    ],
+    "v_i": 6,
+    "v_j": 32,
+    "root_index": 176,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 193,
+    "word_len": 4,
+    "word": [
+      4,
+      1,
+      4,
+      1
+    ],
+    "v_i": 21,
+    "v_j": 32,
+    "root_index": 202,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 235,
+    "word_len": 4,
+    "word": [
+      4,
+      1,
+      4,
+      4
+    ],
+    "v_i": 33,
+    "v_j": 34,
+    "root_index": 138,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 236,
+    "word_len": 4,
+    "word": [
+      4,
+      1,
+      4,
+      5
+    ],
+    "v_i": 33,
+    "v_j": 38,
+    "root_index": 139,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 209,
+    "word_len": 4,
+    "word": [
+      4,
+      1,
+      4,
+      7
+    ],
+    "v_i": 24,
+    "v_j": 39,
+    "root_index": 225,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 216,
+    "word_len": 4,
+    "word": [
+      4,
+      1,
+      5,
+      0
+    ],
+    "v_i": 26,
+    "v_j": 36,
+    "root_index": 49,
+    "root_coords": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 202,
+    "word_len": 4,
+    "word": [
+      4,
+      1,
+      5,
+      6
+    ],
+    "v_i": 23,
+    "v_j": 33,
+    "root_index": 213,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 58,
+    "word_len": 4,
+    "word": [
+      4,
+      1,
+      6,
+      4
+    ],
+    "v_i": 5,
+    "v_j": 23,
+    "root_index": 59,
+    "root_coords": [
+      0,
+      0,
+      -2,
+      0,
+      -2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 200,
+    "word_len": 4,
+    "word": [
+      4,
+      1,
+      8,
+      4
+    ],
+    "v_i": 23,
+    "v_j": 25,
+    "root_index": 211,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 182,
+    "word_len": 4,
+    "word": [
+      4,
+      5,
+      0,
+      0
+    ],
+    "v_i": 20,
+    "v_j": 21,
+    "root_index": 188,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 212,
+    "word_len": 4,
+    "word": [
+      4,
+      5,
+      0,
+      7
+    ],
+    "v_i": 25,
+    "v_j": 34,
+    "root_index": 232,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 218,
+    "word_len": 4,
+    "word": [
+      4,
+      5,
+      6,
+      5
+    ],
+    "v_i": 27,
+    "v_j": 29,
+    "root_index": 69,
+    "root_coords": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 197,
+    "word_len": 4,
+    "word": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "v_i": 22,
+    "v_j": 31,
+    "root_index": 106,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      2
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 172,
+    "word_len": 4,
+    "word": [
+      4,
+      6,
+      5,
+      0
+    ],
+    "v_i": 18,
+    "v_j": 38,
+    "root_index": 169,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 32,
+    "word_len": 4,
+    "word": [
+      4,
+      6,
+      5,
+      4
+    ],
+    "v_i": 2,
+    "v_j": 39,
+    "root_index": 227,
+    "root_coords": [
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 28,
+    "word_len": 4,
+    "word": [
+      4,
+      6,
+      5,
+      8
+    ],
+    "v_i": 2,
+    "v_j": 35,
+    "root_index": 219,
+    "root_coords": [
+      1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 231,
+    "word_len": 4,
+    "word": [
+      4,
+      7,
+      4,
+      4
+    ],
+    "v_i": 31,
+    "v_j": 35,
+    "root_index": 133,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 232,
+    "word_len": 4,
+    "word": [
+      4,
+      7,
+      4,
+      8
+    ],
+    "v_i": 31,
+    "v_j": 39,
+    "root_index": 134,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 214,
+    "word_len": 4,
+    "word": [
+      5,
+      0,
+      0,
+      5
+    ],
+    "v_i": 26,
+    "v_j": 28,
+    "root_index": 25,
+    "root_coords": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 176,
+    "word_len": 4,
+    "word": [
+      5,
+      0,
+      0,
+      7
+    ],
+    "v_i": 19,
+    "v_j": 28,
+    "root_index": 181,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 179,
+    "word_len": 4,
+    "word": [
+      5,
+      0,
+      2,
+      7
+    ],
+    "v_i": 19,
+    "v_j": 37,
+    "root_index": 185,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 131,
+    "word_len": 4,
+    "word": [
+      5,
+      0,
+      5,
+      0
+    ],
+    "v_i": 12,
+    "v_j": 37,
+    "root_index": 94,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      2,
+      0
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 237,
+    "word_len": 4,
+    "word": [
+      5,
+      0,
+      5,
+      4
+    ],
+    "v_i": 34,
+    "v_j": 38,
+    "root_index": 140,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 223,
+    "word_len": 4,
+    "word": [
+      5,
+      0,
+      5,
+      6
+    ],
+    "v_i": 28,
+    "v_j": 35,
+    "root_index": 101,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 7,
+    "we6_orbit_size": 1
+  },
+  {
+    "edge_index": 155,
+    "word_len": 4,
+    "word": [
+      5,
+      0,
+      7,
+      5
+    ],
+    "v_i": 16,
+    "v_j": 25,
+    "root_index": 147,
+    "root_coords": [
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 122,
+    "word_len": 4,
+    "word": [
+      5,
+      7,
+      4,
+      1
+    ],
+    "v_i": 11,
+    "v_j": 38,
+    "root_index": 46,
+    "root_coords": [
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 76,
+    "word_len": 4,
+    "word": [
+      6,
+      5,
+      4,
+      6
+    ],
+    "v_i": 7,
+    "v_j": 14,
+    "root_index": 12,
+    "root_coords": [
+      2,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 185,
+    "word_len": 5,
+    "word": [
+      0,
+      0,
+      1,
+      1,
+      4
+    ],
+    "v_i": 20,
+    "v_j": 24,
+    "root_index": 193,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 101,
+    "word_len": 5,
+    "word": [
+      0,
+      0,
+      1,
+      1,
+      5
+    ],
+    "v_i": 9,
+    "v_j": 28,
+    "root_index": 115,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 142,
+    "word_len": 5,
+    "word": [
+      0,
+      0,
+      1,
+      4,
+      2
+    ],
+    "v_i": 14,
+    "v_j": 26,
+    "root_index": 167,
+    "root_coords": [
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 194,
+    "word_len": 5,
+    "word": [
+      0,
+      0,
+      1,
+      4,
+      4
+    ],
+    "v_i": 21,
+    "v_j": 33,
+    "root_index": 204,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 217,
+    "word_len": 5,
+    "word": [
+      0,
+      0,
+      1,
+      4,
+      5
+    ],
+    "v_i": 26,
+    "v_j": 38,
+    "root_index": 65,
+    "root_coords": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 128,
+    "word_len": 5,
+    "word": [
+      0,
+      0,
+      1,
+      5,
+      3
+    ],
+    "v_i": 12,
+    "v_j": 29,
+    "root_index": 70,
+    "root_coords": [
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 229,
+    "word_len": 5,
+    "word": [
+      0,
+      0,
+      1,
+      5,
+      4
+    ],
+    "v_i": 30,
+    "v_j": 36,
+    "root_index": 127,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 94,
+    "word_len": 5,
+    "word": [
+      0,
+      0,
+      1,
+      5,
+      5
+    ],
+    "v_i": 8,
+    "v_j": 37,
+    "root_index": 103,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 125,
+    "word_len": 5,
+    "word": [
+      0,
+      0,
+      1,
+      5,
+      7
+    ],
+    "v_i": 12,
+    "v_j": 21,
+    "root_index": 77,
+    "root_coords": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      -2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 74,
+    "word_len": 5,
+    "word": [
+      0,
+      0,
+      4,
+      1,
+      1
+    ],
+    "v_i": 6,
+    "v_j": 38,
+    "root_index": 178,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 203,
+    "word_len": 5,
+    "word": [
+      0,
+      0,
+      4,
+      1,
+      4
+    ],
+    "v_i": 23,
+    "v_j": 35,
+    "root_index": 214,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 146,
+    "word_len": 5,
+    "word": [
+      0,
+      0,
+      5,
+      4,
+      6
+    ],
+    "v_i": 14,
+    "v_j": 39,
+    "root_index": 175,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 83,
+    "word_len": 5,
+    "word": [
+      0,
+      0,
+      5,
+      4,
+      7
+    ],
+    "v_i": 7,
+    "v_j": 35,
+    "root_index": 47,
+    "root_coords": [
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 141,
+    "word_len": 5,
+    "word": [
+      0,
+      0,
+      5,
+      5,
+      6
+    ],
+    "v_i": 14,
+    "v_j": 25,
+    "root_index": 159,
+    "root_coords": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 215,
+    "word_len": 5,
+    "word": [
+      0,
+      0,
+      7,
+      4,
+      5
+    ],
+    "v_i": 26,
+    "v_j": 31,
+    "root_index": 45,
+    "root_coords": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 191,
+    "word_len": 5,
+    "word": [
+      0,
+      1,
+      1,
+      4,
+      2
+    ],
+    "v_i": 21,
+    "v_j": 27,
+    "root_index": 200,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 166,
+    "word_len": 5,
+    "word": [
+      0,
+      1,
+      1,
+      4,
+      4
+    ],
+    "v_i": 17,
+    "v_j": 32,
+    "root_index": 162,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 80,
+    "word_len": 5,
+    "word": [
+      0,
+      1,
+      1,
+      5,
+      3
+    ],
+    "v_i": 7,
+    "v_j": 26,
+    "root_index": 192,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 130,
+    "word_len": 5,
+    "word": [
+      0,
+      1,
+      1,
+      5,
+      5
+    ],
+    "v_i": 12,
+    "v_j": 34,
+    "root_index": 86,
+    "root_coords": [
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      2
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 238,
+    "word_len": 5,
+    "word": [
+      0,
+      1,
+      4,
+      1,
+      2
+    ],
+    "v_i": 35,
+    "v_j": 39,
+    "root_index": 141,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 104,
+    "word_len": 5,
+    "word": [
+      0,
+      1,
+      4,
+      1,
+      6
+    ],
+    "v_i": 9,
+    "v_j": 39,
+    "root_index": 118,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 207,
+    "word_len": 5,
+    "word": [
+      0,
+      1,
+      4,
+      2,
+      5
+    ],
+    "v_i": 24,
+    "v_j": 32,
+    "root_index": 220,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 188,
+    "word_len": 5,
+    "word": [
+      0,
+      1,
+      4,
+      2,
+      8
+    ],
+    "v_i": 20,
+    "v_j": 36,
+    "root_index": 196,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 211,
+    "word_len": 5,
+    "word": [
+      0,
+      1,
+      4,
+      4,
+      7
+    ],
+    "v_i": 25,
+    "v_j": 32,
+    "root_index": 228,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 2,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 224,
+    "word_len": 5,
+    "word": [
+      0,
+      1,
+      4,
+      5,
+      3
+    ],
+    "v_i": 28,
+    "v_j": 37,
+    "root_index": 105,
+    "root_coords": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 220,
+    "word_len": 5,
+    "word": [
+      0,
+      1,
+      4,
+      5,
+      6
+    ],
+    "v_i": 27,
+    "v_j": 35,
+    "root_index": 85,
+    "root_coords": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 227,
+    "word_len": 5,
+    "word": [
+      0,
+      1,
+      4,
+      5,
+      7
+    ],
+    "v_i": 29,
+    "v_j": 39,
+    "root_index": 125,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 213,
+    "word_len": 5,
+    "word": [
+      0,
+      1,
+      5,
+      0,
+      6
+    ],
+    "v_i": 25,
+    "v_j": 39,
+    "root_index": 21,
+    "root_coords": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 187,
+    "word_len": 5,
+    "word": [
+      0,
+      1,
+      5,
+      0,
+      7
+    ],
+    "v_i": 20,
+    "v_j": 35,
+    "root_index": 195,
+    "root_coords": [
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 103,
+    "word_len": 5,
+    "word": [
+      0,
+      1,
+      5,
+      3,
+      8
+    ],
+    "v_i": 9,
+    "v_j": 36,
+    "root_index": 117,
+    "root_coords": [
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 204,
+    "word_len": 5,
+    "word": [
+      0,
+      1,
+      5,
+      5,
+      6
+    ],
+    "v_i": 23,
+    "v_j": 37,
+    "root_index": 216,
+    "root_coords": [
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    "we6_orbit_id": 5,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 79,
+    "word_len": 5,
+    "word": [
+      0,
+      4,
+      1,
+      2,
+      4
+    ],
+    "v_i": 7,
+    "v_j": 23,
+    "root_index": 184,
+    "root_coords": [
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 98,
+    "word_len": 5,
+    "word": [
+      0,
+      5,
+      0,
+      4,
+      2
+    ],
+    "v_i": 9,
+    "v_j": 20,
+    "root_index": 57,
+    "root_coords": [
+      0,
+      0,
+      2,
+      0,
+      -2,
+      0,
+      0,
+      0
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 180,
+    "word_len": 5,
+    "word": [
+      0,
+      5,
+      0,
+      5,
+      8
+    ],
+    "v_i": 19,
+    "v_j": 38,
+    "root_index": 186,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 226,
+    "word_len": 5,
+    "word": [
+      0,
+      5,
+      0,
+      7,
+      1
+    ],
+    "v_i": 29,
+    "v_j": 34,
+    "root_index": 123,
+    "root_coords": [
+      1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 145,
+    "word_len": 5,
+    "word": [
+      0,
+      5,
+      4,
+      6,
+      0
+    ],
+    "v_i": 14,
+    "v_j": 38,
+    "root_index": 174,
+    "root_coords": [
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 3,
+    "we6_orbit_size": 72
+  },
+  {
+    "edge_index": 164,
+    "word_len": 5,
+    "word": [
+      0,
+      5,
+      4,
+      6,
+      2
+    ],
+    "v_i": 17,
+    "v_j": 30,
+    "root_index": 158,
+    "root_coords": [
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      -1
+    ],
+    "we6_orbit_id": 1,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 84,
+    "word_len": 5,
+    "word": [
+      0,
+      5,
+      4,
+      7,
+      1
+    ],
+    "v_i": 7,
+    "v_j": 38,
+    "root_index": 51,
+    "root_coords": [
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 91,
+    "word_len": 5,
+    "word": [
+      0,
+      5,
+      4,
+      7,
+      3
+    ],
+    "v_i": 8,
+    "v_j": 30,
+    "root_index": 87,
+    "root_coords": [
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      -2
+    ],
+    "we6_orbit_id": 0,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 87,
+    "word_len": 5,
+    "word": [
+      0,
+      5,
+      5,
+      7,
+      3
+    ],
+    "v_i": 8,
+    "v_j": 17,
+    "root_index": 42,
+    "root_coords": [
+      0,
+      -2,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "we6_orbit_id": 4,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 219,
+    "word_len": 5,
+    "word": [
+      0,
+      5,
+      6,
+      4,
+      1
+    ],
+    "v_i": 27,
+    "v_j": 33,
+    "root_index": 81,
+    "root_coords": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      -2,
+      0
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  },
+  {
+    "edge_index": 234,
+    "word_len": 5,
+    "word": [
+      4,
+      1,
+      1,
+      4,
+      4
+    ],
+    "v_i": 32,
+    "v_j": 37,
+    "root_index": 137,
+    "root_coords": [
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "we6_orbit_id": 6,
+    "we6_orbit_size": 27
+  }
+]

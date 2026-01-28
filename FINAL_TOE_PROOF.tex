@@ -80,6 +80,7 @@
 \usepackage{fancyvrb}
 \usepackage{framed}
 \usepackage{xcolor}
+\usepackage{tikz}
 \newcounter{none}
 \newcommand{\real}[1]{#1}
 
@@ -289,6 +290,8 @@ orbits. This supports the view that the Magic‑Star A2\^{}4 structure is
 a \textbf{global} E8 feature rather than a sub‑feature of any one
 Schläfli copy. See \texttt{artifacts/a2\_4\_decomposition.json}.
 
+\input{latex/magic_star_a2_4.tex}
+
 Computed in Sage; see:
 
 \begin{verbatim}
@@ -356,6 +359,15 @@ image (PSp(4,3)), as expected for the edge action:
 \begin{verbatim}
 artifacts/sp43_we6_generator_map_sage_verify.json
 scripts/sage/verify_sp43_image_group.sage
+\end{verbatim}
+
+\textbf{Full invariance harness.} A complete Gram‑matrix check confirms
+that each generator preserves all E8 inner products (not just sampled
+pairs), and each root's W(E6) orbit size (72/27/1). See:
+
+\begin{verbatim}
+artifacts/sp43_we6_generator_map_full_verify.json
+tools/verify_generator_map_full.py
 \end{verbatim}
 
 \textbf{Exported bijection tables.} The full explicit
@@ -2551,6 +2563,15 @@ We capture these connections in:
 \texttt{EXTERNAL\_READING\_NOTES\_JAN28\_2026.md}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Appendix: Canonical Edge--Root Bijection
+(Ordered)}\label{appendix-canonical-edgeroot-bijection-ordered}
+
+The appendix below lists the full explicit
+edge\ensuremath{\leftrightarrow}root bijection ordered by canonical word
+length in the symplectic generators (a deterministic ordering).
+
+\input{latex/appendix_bijection.tex}
 
 \subsection{FINAL STATEMENT}\label{final-statement}
 
