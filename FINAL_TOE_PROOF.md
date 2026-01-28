@@ -1118,6 +1118,12 @@ Explicit ray triples with phases 0 and ±2π/3 are listed here:
 `docs/witting_pancharatnam_examples.md`  
 Script: `tools/witting_pancharatnam_examples.py`
 
+**Interferometric protocol (computed):**  
+A concrete measurement protocol for the Z₃ Pancharatnam phase using
+explicit Witting‑ray triangles:  
+`docs/witting_pancharatnam_protocol.md`  
+Script: `tools/witting_pancharatnam_protocol.py`
+
 **Unitary implementation (computed):**  
 For each of the 24 bases, a 4×4 unitary is provided with the basis rays as
 columns (direct experimental settings).
