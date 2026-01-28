@@ -1085,12 +1085,40 @@ assignment is **23/24**.
 Artifact: `artifacts/witting_24basis_exact_bound.json`  
 Script: `tools/witting_24basis_exact_bound.py`
 
+### 1.9 Z₃ Pancharatnam Phase Signature (Computed)
+
+**Hunch tested:** Non‑orthogonal triangles in the 40‑ray Witting set should
+carry a **quantized geometric phase** (Pancharatnam/Bargmann), revealing an
+intrinsic Z₃ holonomy aligned with the F₃ origin of the construction.
+
+**Result:** Across all non‑orthogonal triples (3,240), the triangle phase
+clusters **almost entirely at 0**, with two symmetric **±2π/3** satellites:
+
+```
+phase ≈ 0       : 2880 triples
+phase ≈ +2π/3   :  180 triples
+phase ≈ −2π/3   :  180 triples
+```
+
+This is a clean Z₃ geometric‑phase fingerprint that can be probed
+interferometrically in photonic implementations.
+
+Artifact: `artifacts/witting_pancharatnam_triangles.json`  
+Script: `tools/witting_pancharatnam_triangles.py`
+
 **Unitary implementation (computed):**  
 For each of the 24 bases, a 4×4 unitary is provided with the basis rays as
 columns (direct experimental settings).
 
 Docs: `docs/witting_24basis_unitaries.json`  
 Script: `tools/witting_24basis_unitaries.py`
+
+**Reck‑style optical decomposition (computed):**  
+Each 4×4 unitary is decomposed into a sequence of 2×2 complex Givens rotations
+(beam‑splitter‑like operations) plus diagonal phases.
+
+Docs: `docs/witting_24basis_reck.json`  
+Script: `tools/witting_24basis_reck_decomp.py`
 
 **Interpretation:** The Witting set is **contextual but not parity‑contextual**
 in its full 40‑basis form. Photonic tests should therefore target a **KS
