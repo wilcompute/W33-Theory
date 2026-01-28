@@ -346,6 +346,24 @@ cross‑color edges: (0,1)=51, (0,2)=51, (1,2)=55
 So the SU(3) phase remains **balanced but entangled** with the Schläfli
 adjacency; it does not isolate independent color classes.
 
+**Explicit Schläfli labeling (computed).** We constructed a concrete
+graph‑isomorphism between the balanced 27‑orbit root graph and the Schläfli
+skew graph (verified). This assigns each balanced node to a line type
+E/C/L with the expected totals **(6,6,15)**. The Z3 phase classes split by
+line type as:
+```
+phase 0: E=3, C=2, L=4
+phase 1: E=2, C=2, L=5
+phase 2: E=1, C=2, L=6
+```
+Integral vs half‑integral roots split by line type as:
+```
+integral: E=5, C=1, L=5
+half:     E=1, C=5, L=10
+```
+So the balanced orbit respects the Schläfli 6+6+15 split, but the SU(3) phase
+tilts toward the L‑sector and the half‑integral roots concentrate on L and C.
+
 Artifacts:
 ```
 tools/analyze_h27_schlafli_triangles_structure.py
@@ -382,6 +400,8 @@ tools/compare_balanced_to_schlafli.py
 artifacts/balanced_vs_schlafli.json
 tools/analyze_balanced_orbit_color_graph.py
 artifacts/balanced_orbit_color_graph.json
+tools/isomorphism_balanced_to_schlafli.py
+artifacts/balanced_orbit_schlafli_isomorphism.json
 ```
 
 Artifacts:
