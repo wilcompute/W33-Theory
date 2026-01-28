@@ -1154,6 +1154,16 @@ phase signature is driven purely by the **relative arguments** of overlaps.
 Doc: `docs/witting_ray_overlap_structure.md`  
 Script: `tools/witting_ray_overlap_structure.py`
 
+**Pair‑phase spectrum (computed):**  
+The arguments of non‑orthogonal overlaps lie on a strict **π/6 grid**:
+{0, ±π/6, ±π/3, ±π/2, ±2π/3, ±5π/6, π}. Moreover, pairs involving a **basis ray**
+use only the **π/3 lattice** {0, ±π/3, ±2π/3, π}, while non‑basis pairs use
+the **odd π/6 lattice** {±π/6, ±π/2, ±5π/6}. This explains why the triangle
+phase sum collapses to **±π/6 or ±π/2**.
+
+Doc: `docs/witting_overlap_phase_spectrum.md`  
+Script: `tools/witting_overlap_phase_spectrum.py`
+
 **Example triangles (computed):**  
 Explicit ray triples with phases ±π/6 and ±π/2 are listed here:  
 `docs/witting_pancharatnam_examples.md`  
