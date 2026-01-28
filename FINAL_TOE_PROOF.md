@@ -120,6 +120,33 @@ tools/map_edges_to_we6_orbits.py
 tools/sage_we6_orbit_labels.py
 ```
 
+### 1.3a H27 vs the 27‑line (Schläfli) graphs (Computed)
+
+The 27 lines on a smooth cubic surface define two classical graphs:
+- **Intersection graph**: adjacency = lines intersect, degree **10**, SRG(27,10,1,5).
+- **Skew‑line graph** (complement): adjacency = lines disjoint, degree **16**, SRG(27,16,10,8).
+
+The induced **H27** subgraph in W33 (non‑neighbors of any vertex) is:
+- **27 vertices, degree 8**, **108 edges**.
+- **Not SRG**: λ = 1 and μ ∈ {0,3} (two μ values).
+
+We compared **Seidel eigenvalue spectra** (switching‑class invariants) and
+**triangle counts**, obtaining:
+- **H27**: 36 triangles; Seidel spectrum differs from both 27‑line graphs.
+- **Schläfli (intersection)**: 45 triangles.
+- **Schläfli (skew)**: 720 triangles.
+
+**Conclusion.** H27 is **not isomorphic** to either 27‑line graph, and is
+not **switching‑equivalent** to them (Seidel spectra differ). This sharpens
+the E6–H27 relation: the 27‑line configuration is the **E6 orbit** object,
+while H27 is a **distinct 27‑vertex Heisenberg Cayley graph** inside W33.
+
+Artifacts:
+```
+tools/schlafli_h27_switching.py
+artifacts/schlafli_h27_switching.json
+```
+
 ### 1.4 Explicit E8 -> W33 via Coxeter 6-cycles (Computed)
 
 **Lemma (Coxeter 6-cycle partition).** Let `c` be the Coxeter element of W(E8)
@@ -949,6 +976,9 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `python tools/h27_jordan_algebra_test.py`
   - Verifies Jordan algebra constraints for H27.
   - Output: `artifacts/h27_jordan_algebra_test.json`
+- `python3 tools/schlafli_h27_switching.py`
+  - Compares H27 to Schläfli intersection/complement graphs and switching invariants.
+  - Output: `artifacts/schlafli_h27_switching.json`
 
 ### Physics Signal Checks (Tier‑1 Evidence)
 - `python -X utf8 src/color_singlet_test.py`
