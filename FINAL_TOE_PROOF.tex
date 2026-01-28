@@ -462,6 +462,15 @@ the W33 projective point), which yields a consistent SU(3)/Z3 phase on
 the 27 lines and makes all 9 triangles rainbow. This is a concrete
 \textbf{Z3 gauge} emerging directly from the F3\^{}4 geometry.
 
+\textbf{A2 weight embedding (computed).} Using the canonical phase
+\texttt{x4}, the 27 lines split into \textbf{9/9/9} across phases. Each
+of the 9 Schläfli triangles is exactly of phase type \textbf{(0,1,2)},
+and mapping phases to A2 fundamental weights
+\texttt{(1,0),\ (-1,1),\ (0,-1)} gives \textbf{zero total weight} for
+every triangle. This realizes the 9 triangles as \textbf{A2 weight‑zero
+triplets} and gives an explicit SU(3) interpretation inside the 27‑line
+geometry.
+
 Artifacts:
 
 \begin{verbatim}
@@ -479,6 +488,10 @@ tools/search_z3_phase_from_f3.py
 artifacts/z3_phase_linear_search.json
 tools/analyze_z3_phase_solutions.py
 artifacts/z3_phase_linear_analysis.json
+tools/su3_a2_root_mapping.py
+artifacts/su3_a2_root_mapping.json
+tools/e8_coxeter_phase_from_f3.py
+artifacts/e8_coxeter_phase_vs_f3.json
 \end{verbatim}
 
 Artifacts:
@@ -1929,6 +1942,27 @@ Verification}\label{h27-jordan-heisenberg-verification}
     hyperplane).
   \item
     Output: \texttt{artifacts/z3\_phase\_linear\_analysis.json}
+  \end{itemize}
+\item
+  \texttt{python3\ tools/su3\_a2\_root\_mapping.py}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Builds explicit SU(3)/A2 weight embedding from the Z3 phase.
+  \item
+    Output: \texttt{artifacts/su3\_a2\_root\_mapping.json}
+  \end{itemize}
+\item
+  \texttt{python3\ tools/e8\_coxeter\_phase\_from\_f3.py}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Compares Coxeter‑6 orbit phases to the canonical F3 phase
+    assignment.
+  \item
+    Output: \texttt{artifacts/e8\_coxeter\_phase\_vs\_f3.json}
   \end{itemize}
 \end{itemize}
 
