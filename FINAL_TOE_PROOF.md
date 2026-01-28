@@ -162,6 +162,9 @@ negative cocycle values on dozens of root lines (full histogram recorded).
 In particular, the global sign‑flip does **not** commute with the induced
 generator permutations, and the generated group with sign‑flip grows beyond
 25,920. This further confirms the obstruction is not a mere relabeling.
+Even more sharply, there exists a **length‑2** word in the generators that
+returns a root line to itself with **sign −1**, giving an explicit minimal
+cocycle witness.
 See:
 ```
 tools/align_root_signs_for_we6.py
@@ -172,6 +175,8 @@ tools/compute_sign_cocycle.py
 artifacts/root_line_sign_cocycle_stats.json
 tools/compute_group_order_with_signflip.py
 artifacts/signflip_group_order.json
+tools/find_negative_sign_word.py
+artifacts/root_line_sign_negative_word.json
 ```
 **Exported bijection tables.** The full explicit edge↔root bijection is now
 exported for inspection and downstream analysis:
