@@ -189,6 +189,8 @@ size‑1 W(E6) roots. These correspond to three explicit F₃⁴ projective poin
 ```
 [1,1,0,1], [0,1,1,0], [1,0,1,1]
 ```
+In the W33 point graph, these three vertices form a **length‑2 path**
+(two adjacencies and one non‑adjacency), i.e. they are not collinear.
 See:
 ```
 tools/report_exceptional_patterns.py
