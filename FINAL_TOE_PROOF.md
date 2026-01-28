@@ -1243,6 +1243,16 @@ higher‑order cocycle interpretation.
 Doc: `docs/witting_pair_phase_symplectic.md`  
 Script: `tools/witting_pair_phase_symplectic.py`
 
+**Gauge‑fixed pair‑phase search (computed):**  
+We allowed per‑ray phase shifts sᵢ (mod 3) and tried to solve
+`k_ij + s_i − s_j = f(x_i, x_j)` for **bilinear+linear** and **full quadratic**
+polynomials f over GF(3). **No solution exists** in either case. Thus even after
+optimal U(1) rephasing, the pairwise phase classes do **not** collapse to any
+low‑degree algebraic rule in F₃⁴ coordinates.
+
+Doc: `docs/witting_pair_phase_gauge_fit.md`  
+Script: `tools/witting_pair_phase_gauge_fit.py`
+
 **Isomorphism orbit class (computed):**  
 Under the **monomial subgroup** (order 243), the explicit graph isomorphism
 falls into **81 distinct mappings**. This shows the ray→F₃⁴ labeling is **not**
