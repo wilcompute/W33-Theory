@@ -241,11 +241,21 @@ def main():
         if not ok:
             break
 
+    # Build full mapping payload: balanced index -> line, phase, root type
+    mapping_full = {}
+    for u in range(len(phases)):
+        mapping_full[str(u)] = {
+            "line": bal_to_line[u],
+            "phase": int(phases[u]),
+            "root_type": root_types[u],
+        }
+
     results = {
         "line_type_counts": dict(line_type_counts),
         "phase_line_counts": {str(k): dict(v) for k, v in phase_line_counts.items()},
         "root_line_counts": {k: dict(v) for k, v in root_line_counts.items()},
         "mapping_sample": {str(k): bal_to_line[k] for k in sorted(bal_to_line.keys())[:10]},
+        "mapping_full": mapping_full,
         "isomorphism_verified": ok,
     }
 

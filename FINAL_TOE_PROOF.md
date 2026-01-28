@@ -364,6 +364,22 @@ half:     E=1, C=5, L=10
 So the balanced orbit respects the Schläfli 6+6+15 split, but the SU(3) phase
 tilts toward the L‑sector and the half‑integral roots concentrate on L and C.
 
+**Triangle alignment (computed).** Using the Schläfli labeling, we overlaid the
+canonical 9‑triangle partition of the 27 lines with the balanced‑orbit phase
+labels. The 9 triangles are still **6 mixed (E,C,L)** and **3 LLL**, but the
+phase patterns are **not** uniformly rainbow:
+```
+phase triples: (0,0,0)×2, (0,1,1)×1, (0,1,2)×1,
+               (0,2,2)×1, (1,1,2)×2, (1,2,2)×2
+```
+Only **one** triangle is rainbow (0,1,2). The LLL triangles carry phase patterns
+(1,2,2), (0,2,2), and (1,1,2). Root‑type triples are overwhelmingly mixed:
+```
+root triples: (half,half,integral)×8, (integral,integral,integral)×1
+```
+So the **A2×A2×A2** triangle partition survives, but the SU(3) phase now
+**reweights** it, with only a single perfectly rainbow triangle.
+
 Artifacts:
 ```
 tools/analyze_h27_schlafli_triangles_structure.py
@@ -402,6 +418,8 @@ tools/analyze_balanced_orbit_color_graph.py
 artifacts/balanced_orbit_color_graph.json
 tools/isomorphism_balanced_to_schlafli.py
 artifacts/balanced_orbit_schlafli_isomorphism.json
+tools/analyze_balanced_triangle_phase_alignment.py
+artifacts/balanced_triangle_phase_alignment.json
 ```
 
 Artifacts:
