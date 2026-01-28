@@ -88,6 +88,17 @@ def main():
                 adj[i, j] = adj[j, i] = 1
     degrees = Counter(int(x) for x in adj.sum(axis=1))
 
+    # Common neighbor counts for adjacent vs non-adjacent pairs
+    cn_adj = Counter()
+    cn_non = Counter()
+    for i in range(n):
+        for j in range(i+1, n):
+            cn = int(np.dot(adj[i], adj[j]))
+            if adj[i, j] == 1:
+                cn_adj[cn] += 1
+            else:
+                cn_non[cn] += 1
+
     # Count A2 triangles: triples with pairwise ip = -1
     a2_count = 0
     for i, j, k in combinations(range(n), 3):
@@ -102,6 +113,8 @@ def main():
         "root_count": len(roots),
         "inner_product_counts": {str(k): v for k, v in sorted(ip_counts.items())},
         "root_neighbor_degree_distribution": dict(degrees),
+        "common_neighbors_adjacent": {str(k): v for k, v in sorted(cn_adj.items())},
+        "common_neighbors_nondjacent": {str(k): v for k, v in sorted(cn_non.items())},
         "a2_triangle_count": a2_count,
     }
 
