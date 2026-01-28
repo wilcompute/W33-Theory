@@ -336,6 +336,16 @@ Seidel spectrum: {3^20, -9^6, -6^1} vs {3^20, -9^6, -6^1}
 This strongly indicates the balanced 27‑orbit root graph is **isomorphic** (or
 at least switching‑equivalent) to the Schläfli graph.
 
+**Z3 phase coloring on the balanced root graph (computed).** The phase‑sum
+coloring (phase = x4) on the 27 balanced edges gives a perfectly balanced
+**9/9/9** split, but it is *not* a proper 3‑coloring of the Schläfli graph:
+```
+internal edges per color: c0=21, c1=19, c2=19
+cross‑color edges: (0,1)=51, (0,2)=51, (1,2)=55
+```
+So the SU(3) phase remains **balanced but entangled** with the Schläfli
+adjacency; it does not isolate independent color classes.
+
 Artifacts:
 ```
 tools/analyze_h27_schlafli_triangles_structure.py
@@ -370,6 +380,8 @@ tools/analyze_balanced_orbit_roots.py
 artifacts/balanced_orbit_roots.json
 tools/compare_balanced_to_schlafli.py
 artifacts/balanced_vs_schlafli.json
+tools/analyze_balanced_orbit_color_graph.py
+artifacts/balanced_orbit_color_graph.json
 ```
 
 Artifacts:
