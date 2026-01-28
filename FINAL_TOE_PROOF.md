@@ -1141,6 +1141,12 @@ Script: `tools/witting_24basis_reck_decomp.py`
 Readable schedule: `docs/witting_24basis_reck_schedule.md`  
 Script: `tools/witting_24basis_reck_schedule.py`
 
+**MZI‑ready schedule (computed):**  
+Reck rotations converted to Mach–Zehnder reflectivities and phases:  
+`docs/witting_24basis_mzi_schedule.md`  
+`docs/witting_24basis_mzi_schedule.json`  
+Script: `tools/witting_24basis_mzi_schedule.py`
+
 **Interpretation:** The Witting set is **contextual but not parity‑contextual**
 in its full 40‑basis form. Photonic tests should therefore target a **KS
 inequality** (state‑independent contextuality) rather than a parity proof.
