@@ -219,6 +219,13 @@ projective point), which yields a consistent SU(3)/Z3 phase on the 27 lines and
 makes all 9 triangles rainbow. This is a concrete **Z3 gauge** emerging directly
 from the F3^4 geometry.
 
+**A2 weight embedding (computed).** Using the canonical phase `x4`, the 27 lines
+split into **9/9/9** across phases. Each of the 9 Schläfli triangles is exactly
+of phase type **(0,1,2)**, and mapping phases to A2 fundamental weights
+`(1,0), (-1,1), (0,-1)` gives **zero total weight** for every triangle. This
+realizes the 9 triangles as **A2 weight‑zero triplets** and gives an explicit
+SU(3) interpretation inside the 27‑line geometry.
+
 Artifacts:
 ```
 tools/analyze_h27_schlafli_triangles_structure.py
@@ -235,6 +242,10 @@ tools/search_z3_phase_from_f3.py
 artifacts/z3_phase_linear_search.json
 tools/analyze_z3_phase_solutions.py
 artifacts/z3_phase_linear_analysis.json
+tools/su3_a2_root_mapping.py
+artifacts/su3_a2_root_mapping.json
+tools/e8_coxeter_phase_from_f3.py
+artifacts/e8_coxeter_phase_vs_f3.json
 ```
 
 Artifacts:
@@ -1111,6 +1122,12 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `python3 tools/analyze_z3_phase_solutions.py`
   - Classifies the c‑vectors (27 projective classes, affine F3^3 hyperplane).
   - Output: `artifacts/z3_phase_linear_analysis.json`
+- `python3 tools/su3_a2_root_mapping.py`
+  - Builds explicit SU(3)/A2 weight embedding from the Z3 phase.
+  - Output: `artifacts/su3_a2_root_mapping.json`
+- `python3 tools/e8_coxeter_phase_from_f3.py`
+  - Compares Coxeter‑6 orbit phases to the canonical F3 phase assignment.
+  - Output: `artifacts/e8_coxeter_phase_vs_f3.json`
 
 ### Physics Signal Checks (Tier‑1 Evidence)
 - `python -X utf8 src/color_singlet_test.py`
