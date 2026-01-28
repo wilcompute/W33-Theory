@@ -204,6 +204,16 @@ tools/search_coxeter_choice_gauge.py
 artifacts/coxeter_gauge_search.json
 ```
 
+**H12/H27 neighborhood profile.** Each of the 8 pattern classes has a distinct
+neighbor‑class profile and distinct distributions of H12 triangle class‑types.
+This provides a structural “fingerprint” for how each E6×A2 class sits inside
+the local W33 geometry (neighbors + triangle structure), and is the natural
+bridge to mapping pattern classes onto physical multiplets. See:
+```
+tools/pattern_class_h12_h27_profile.py
+artifacts/pattern_class_h12_h27_profile.json
+```
+
 **Exceptional vertex triplet.** Exactly **3** Coxeter‑6 orbits contain the
 size‑1 W(E6) roots. These correspond to three explicit F₃⁴ projective points:
 ```
@@ -780,6 +790,9 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `docker run --rm -v "$PWD":/workspace -w /workspace sagemath/sagemath:10.7 sage -python tools/search_coxeter_choice_gauge.py`
   - Random Coxeter orderings; checks robustness of 8‑class pattern histogram.
   - Output: `artifacts/coxeter_gauge_search.json`
+- `python3 tools/pattern_class_h12_h27_profile.py`
+  - Computes neighbor‑class and triangle‑type profiles per pattern class.
+  - Output: `artifacts/pattern_class_h12_h27_profile.json`
 - `python tools/explicit_bijection_decomposition.py`
   - Builds the explicit 240↔240 W33-edge→E8-root mapping.
   - Output: `artifacts/explicit_bijection_decomposition.json`
