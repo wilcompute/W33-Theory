@@ -1,0 +1,302 @@
+{
+  "class_count": 8,
+  "class_summary": {
+    "0": {
+      "size": 9,
+      "support_size_counts": {},
+      "avg_neighbor_class_counts": [
+        2.2222222222222223,
+        2.5555555555555554,
+        2.0,
+        2.7777777777777777,
+        1.4444444444444444,
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "k4_outer_count": 81,
+      "k4_center_count": 81
+    },
+    "1": {
+      "size": 8,
+      "support_size_counts": {},
+      "avg_neighbor_class_counts": [
+        2.875,
+        2.0,
+        2.625,
+        2.375,
+        1.125,
+        0.25,
+        0.375,
+        0.375
+      ],
+      "k4_outer_count": 72,
+      "k4_center_count": 72
+    },
+    "2": {
+      "size": 8,
+      "support_size_counts": {},
+      "avg_neighbor_class_counts": [
+        2.25,
+        2.625,
+        2.25,
+        3.0,
+        0.875,
+        0.25,
+        0.375,
+        0.375
+      ],
+      "k4_outer_count": 72,
+      "k4_center_count": 72
+    },
+    "3": {
+      "size": 8,
+      "support_size_counts": {},
+      "avg_neighbor_class_counts": [
+        3.125,
+        2.375,
+        3.0,
+        1.75,
+        1.25,
+        0.375,
+        0.0,
+        0.125
+      ],
+      "k4_outer_count": 72,
+      "k4_center_count": 72
+    },
+    "4": {
+      "size": 4,
+      "support_size_counts": {},
+      "avg_neighbor_class_counts": [
+        3.25,
+        2.25,
+        1.75,
+        2.5,
+        1.5,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "k4_outer_count": 36,
+      "k4_center_count": 36
+    },
+    "5": {
+      "size": 1,
+      "support_size_counts": {},
+      "avg_neighbor_class_counts": [
+        3.0,
+        2.0,
+        2.0,
+        3.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "k4_outer_count": 9,
+      "k4_center_count": 9
+    },
+    "6": {
+      "size": 1,
+      "support_size_counts": {},
+      "avg_neighbor_class_counts": [
+        3.0,
+        3.0,
+        3.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "k4_outer_count": 9,
+      "k4_center_count": 9
+    },
+    "7": {
+      "size": 1,
+      "support_size_counts": {},
+      "avg_neighbor_class_counts": [
+        3.0,
+        3.0,
+        3.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "k4_outer_count": 9,
+      "k4_center_count": 9
+    }
+  },
+  "exceptional_orbits": [
+    {
+      "orbit": 23,
+      "row": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "point": [
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "orbit": 29,
+      "row": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "point": [
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "orbit": 32,
+      "row": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "point": [
+        1,
+        0,
+        1,
+        1
+      ]
+    }
+  ],
+  "quotient_graph": {
+    "num_classes": 8,
+    "class_sizes": {
+      "0": 9,
+      "1": 8,
+      "2": 8,
+      "3": 8,
+      "4": 4,
+      "5": 1,
+      "6": 1,
+      "7": 1
+    },
+    "adjacency_counts": [
+      [
+        10,
+        23,
+        18,
+        25,
+        13,
+        3,
+        3,
+        3
+      ],
+      [
+        23,
+        8,
+        21,
+        19,
+        9,
+        2,
+        3,
+        3
+      ],
+      [
+        18,
+        21,
+        9,
+        24,
+        7,
+        2,
+        3,
+        3
+      ],
+      [
+        25,
+        19,
+        24,
+        7,
+        10,
+        3,
+        0,
+        1
+      ],
+      [
+        13,
+        9,
+        7,
+        10,
+        3,
+        1,
+        1,
+        1
+      ],
+      [
+        3,
+        2,
+        2,
+        3,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        3,
+        3,
+        3,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        3,
+        3,
+        3,
+        1,
+        1,
+        0,
+        1,
+        0
+      ]
+    ]
+  }
+}
