@@ -173,10 +173,27 @@ These 9 triangles are **pairwise disjoint** (no shared lines), and each of the
 partition of the 27 lines into 9 triples, compatible with the H27 embedding
 and strongly suggestive of the SU(3) factor in the E6×A2 decomposition.
 
+**Triangle incidence regularity (computed).** Although the 9 triangles are
+line‑disjoint, every triangle intersects every other triangle in exactly
+**3 line–line incidences** (uniform 3×3 count). This is the classical
+“9 tritangent planes” partition of the 27 lines: each triangle is a maximal
+clique of mutually intersecting lines, and the partition is regular.
+
+**Coxeter‑pattern alignment (computed).** When each line is labeled by the
+Coxeter‑6 pattern class of its corresponding W33 vertex (via the H27 embedding),
+the 9 triangles are **not** pattern‑homogeneous; their class triples vary
+across eight distinct patterns (one pattern repeated twice). This shows the
+A2 partition is **not** aligned to the 8 Coxeter‑pattern classes and is therefore
+an **extrinsic E6 structure** rather than an intrinsic W33 invariant.
+
 Artifacts:
 ```
 tools/analyze_h27_schlafli_triangles_structure.py
 artifacts/h27_schlafli_triangle_structure.json
+tools/analyze_a2_triangles_vs_coxeter_patterns.py
+artifacts/a2_triangles_vs_coxeter_patterns.json
+tools/analyze_a2_triangle_adjacency.py
+artifacts/a2_triangle_adjacency.json
 ```
 
 Artifacts:
@@ -1035,6 +1052,12 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `python3 tools/analyze_h27_schlafli_triangles_structure.py`
   - Analyzes the 9 Schläfli triangles (E/C/L taxonomy, A2×A2×A2 split).
   - Output: `artifacts/h27_schlafli_triangle_structure.json`
+- `python3 tools/analyze_a2_triangles_vs_coxeter_patterns.py`
+  - Labels triangle lines by Coxeter‑6 pattern classes; reports class triples.
+  - Output: `artifacts/a2_triangles_vs_coxeter_patterns.json`
+- `python3 tools/analyze_a2_triangle_adjacency.py`
+  - Triangle‑to‑triangle line‑intersection counts (uniform 3×3 incidence).
+  - Output: `artifacts/a2_triangle_adjacency.json`
 
 ### Physics Signal Checks (Tier‑1 Evidence)
 - `python -X utf8 src/color_singlet_test.py`
