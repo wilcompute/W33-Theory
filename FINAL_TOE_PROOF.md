@@ -184,6 +184,16 @@ tools/analyze_pattern_quotient_graph.py
 artifacts/pattern_quotient_graph.json
 ```
 
+**Candidate E6 + A2 split (graph‑theoretic).** A search for a 6+2 partition
+of the 8 pattern classes that minimizes cross‑edges in the quotient graph
+picks classes **{6,7}** as the 2‑node block (single edge between them), with
+the remaining 6 classes forming the larger block. This is a plausible A2/E6
+candidate split at the pattern‑class level (heuristic, not yet canonical). See:
+```
+tools/quotient_graph_analysis.py
+artifacts/quotient_graph_analysis.json
+```
+
 **Symmetry breaking note.** The 8 pattern classes are **not preserved** by the
 intrinsic automorphism group of W33 (PSp(4,3)). A direct check shows that no
 standard symplectic generator preserves the pattern coloring; the color‑preserving
@@ -838,6 +848,9 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `docker run --rm -v "$PWD":/workspace -w /workspace sagemath/sagemath:10.7 sage -python tools/search_coxeter_choice_gauge.py`
   - Random Coxeter orderings; checks robustness of 8‑class pattern histogram.
   - Output: `artifacts/coxeter_gauge_search.json`
+- `python3 tools/quotient_graph_analysis.py`
+  - Finds 6+2 partition minimizing cross‑edges (candidate E6+A2 split).
+  - Output: `artifacts/quotient_graph_analysis.json`
 - `python3 tools/pattern_class_h12_h27_profile.py`
   - Computes neighbor‑class and triangle‑type profiles per pattern class.
   - Output: `artifacts/pattern_class_h12_h27_profile.json`

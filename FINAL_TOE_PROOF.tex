@@ -421,6 +421,18 @@ tools/analyze_pattern_quotient_graph.py
 artifacts/pattern_quotient_graph.json
 \end{verbatim}
 
+\textbf{Candidate E6 + A2 split (graph‑theoretic).} A search for a 6+2
+partition of the 8 pattern classes that minimizes cross‑edges in the
+quotient graph picks classes \textbf{\{6,7\}} as the 2‑node block
+(single edge between them), with the remaining 6 classes forming the
+larger block. This is a plausible A2/E6 candidate split at the
+pattern‑class level (heuristic, not yet canonical). See:
+
+\begin{verbatim}
+tools/quotient_graph_analysis.py
+artifacts/quotient_graph_analysis.json
+\end{verbatim}
+
 \textbf{Symmetry breaking note.} The 8 pattern classes are \textbf{not
 preserved} by the intrinsic automorphism group of W33 (PSp(4,3)). A
 direct check shows that no standard symplectic generator preserves the
@@ -1406,6 +1418,16 @@ Mapping}\label{e6e8-orbit-structure-explicit-mapping}
     histogram.
   \item
     Output: \texttt{artifacts/coxeter\_gauge\_search.json}
+  \end{itemize}
+\item
+  \texttt{python3\ tools/quotient\_graph\_analysis.py}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Finds 6+2 partition minimizing cross‑edges (candidate E6+A2 split).
+  \item
+    Output: \texttt{artifacts/quotient\_graph\_analysis.json}
   \end{itemize}
 \item
   \texttt{python3\ tools/pattern\_class\_h12\_h27\_profile.py}
