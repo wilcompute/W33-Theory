@@ -215,6 +215,17 @@ scripts/sage/compare_edgepair_we6_line_conjugacy.py
 artifacts/edgepair_we6line_conjugacy.json
 ```
 
+**Exhaustive index‑120 action search.** We enumerated **all** conjugacy classes
+of subgroups of index 120 in PSp(4,3) (116 classes total) and tested each coset
+action for conjugacy to the true W(E6) line action on 120 root lines. **No**
+index‑120 action matches. This definitively rules out any hidden 120‑set
+identification between the W33 edge action and the W(E6) line action.
+See:
+```
+scripts/gap/psp43_index120_actions.g
+artifacts/psp43_index120_actions.json
+```
+
 **Central extension from true W(E6) action (resolved).** Using the **true**
 W(E6) even action (which preserves antipodal pairs), we built the signed line
 extension on 120 root lines. The resulting signed action has order **25,920**,
