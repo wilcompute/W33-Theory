@@ -163,6 +163,22 @@ double‑six labeling:
 (L14, L26, L35), (L15, L24, L36), (L16, L25, L34)
 ```
 
+**Triangle taxonomy (computed).** The 9 triangles split cleanly into:
+- **Six mixed triangles** of type **(E, C, L)**: each contains exactly one
+  exceptional line E_i, one conic C_j, and one line L_ij.
+- **Three pure triangles** of type **(L, L, L)**: each contains three L_ij lines.
+
+These 9 triangles are **pairwise disjoint** (no shared lines), and each of the
+27 lines appears **exactly once**. This is a canonical **A2×A2×A2**-style
+partition of the 27 lines into 9 triples, compatible with the H27 embedding
+and strongly suggestive of the SU(3) factor in the E6×A2 decomposition.
+
+Artifacts:
+```
+tools/analyze_h27_schlafli_triangles_structure.py
+artifacts/h27_schlafli_triangle_structure.json
+```
+
 Artifacts:
 ```
 tools/schlafli_h27_switching.py
@@ -1016,6 +1032,9 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `python3 tools/analyze_h27_schlafli_decomposition.py`
   - Computes the 9 disjoint triangles removed from the Schläfli intersection graph.
   - Output: `artifacts/h27_schlafli_leftover_cycles.json`
+- `python3 tools/analyze_h27_schlafli_triangles_structure.py`
+  - Analyzes the 9 Schläfli triangles (E/C/L taxonomy, A2×A2×A2 split).
+  - Output: `artifacts/h27_schlafli_triangle_structure.json`
 
 ### Physics Signal Checks (Tier‑1 Evidence)
 - `python -X utf8 src/color_singlet_test.py`
