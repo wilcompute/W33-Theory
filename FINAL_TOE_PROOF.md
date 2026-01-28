@@ -226,6 +226,17 @@ of phase type **(0,1,2)**, and mapping phases to A2 fundamental weights
 realizes the 9 triangles as **A2 weight‑zero triplets** and gives an explicit
 SU(3) interpretation inside the 27‑line geometry.
 
+**SU(3) phase lift to the full edge→root map (computed).** Using the explicit
+edge→root bijection, we propagate the Z3 phase from W33 vertices to **all 240
+edges** and summarize phase‑pair statistics by W(E6) orbit type:
+```
+Edges by orbit size: 27‑orbits = 162, 72‑orbit = 72, 1‑orbits = 6
+27‑orbit phase sums: (0,1,2) = (48, 56, 58)
+72‑orbit phase sums: (0,1,2) = (30, 20, 22)
+```
+Thus the SU(3) phase is **not confined** to the 27‑sector; it threads through
+the full E6×A2 decomposition in a **nontrivial, but near‑balanced** way.
+
 Artifacts:
 ```
 tools/analyze_h27_schlafli_triangles_structure.py
@@ -246,6 +257,8 @@ tools/su3_a2_root_mapping.py
 artifacts/su3_a2_root_mapping.json
 tools/e8_coxeter_phase_from_f3.py
 artifacts/e8_coxeter_phase_vs_f3.json
+tools/su3_phase_edge_lift.py
+artifacts/su3_phase_edge_lift.json
 ```
 
 Artifacts:
@@ -1128,6 +1141,9 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `python3 tools/e8_coxeter_phase_from_f3.py`
   - Compares Coxeter‑6 orbit phases to the canonical F3 phase assignment.
   - Output: `artifacts/e8_coxeter_phase_vs_f3.json`
+- `python3 tools/su3_phase_edge_lift.py`
+  - Lifts Z3 phase to the full edge→root map; summarizes by W(E6) orbit size.
+  - Output: `artifacts/su3_phase_edge_lift.json`
 
 ### Physics Signal Checks (Tier‑1 Evidence)
 - `python -X utf8 src/color_singlet_test.py`
