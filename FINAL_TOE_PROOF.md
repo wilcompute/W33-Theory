@@ -1104,6 +1104,13 @@ Integrated photonics protocol for the KS test + Z₃ phase measurement:
 `docs/photonics_protocol.md`  
 Script: `scripts/build_photonics_protocol_pdf.sh`
 
+**Experiment pack (PDF/TeX):**  
+Unified KS + Z₃ phase experiment pack:  
+`docs/experiment_pack.pdf`  
+`docs/experiment_pack.tex`  
+`docs/experiment_pack.md`  
+Script: `scripts/build_experiment_pack_pdf.sh`
+
 **Noise threshold (computed):**  
 Under depolarizing noise in d=4, the inequality remains violated for
 visibility **v ≥ 0.944444** (noise fraction **p ≤ 0.055556**).
