@@ -1256,6 +1256,15 @@ symmetry group, but **not** under the full graph automorphism group.
 Doc: `docs/witting_phase_law_monomial_subgroup.md`  
 Script: `tools/witting_phase_law_monomial_subgroup.py`
 
+**Full PSp(4,3) scan (computed):**  
+Enumerating the entire **PSp(4,3)** automorphism group (size 25,920) shows that
+**only the identity** preserves the phase law. So the phase law is **maximally
+symmetry‑breaking** inside the symplectic automorphism group: it is compatible
+with the **unitary monomial subgroup** but not with generic graph automorphisms.
+
+Doc: `docs/witting_phase_law_full_aut.md`  
+Script: `tools/witting_phase_law_full_aut.py`
+
 **External unitary search (computed):**  
 We attempted to map Witting rays to the **naive F₃⁴ grid rays**
 (v = (ω^a, ω^b, ω^c, ω^d)) via basis‑aligned unitaries. The target grid has
