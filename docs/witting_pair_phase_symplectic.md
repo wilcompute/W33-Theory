@@ -25,13 +25,21 @@ We attempted to fit the phase class `k mod 3` as a **bilinear+linear** form over
 k mod 3 = x^T A y + a^T x + b^T y + c  (over GF(3))
 ```
 
-**Result:** no solution exists (linear system inconsistent). So even the **mod-3** phase
-class is **not** captured by any bilinear+linear form in the F3^4 coordinates.
+**Result:** no solution exists (linear system inconsistent).
+
+## Quadratic search (mod 3)
+We then allowed a **full quadratic polynomial** in the 8 variables (x0..x3, y0..y3):
+
+```
+k mod 3 = sum_i ai vi + sum_i bi vi^2 + sum_{i<j} cij vi vj + c
+```
+
+**Result:** no solution exists. Even quadratic degree does **not** capture the mod-3 class.
 
 ## Conclusion
 Pairwise phases are **more structured than omega**, but **not** reducible to a low-degree
-bilinear rule in the symplectic coordinates. This supports the view that the phase structure
-is a **higher-order cocycle** (or requires additional discrete labels beyond F3^4).
+algebraic rule in the symplectic coordinates. This supports the view that the pair-phase
+structure is a **higher-order cocycle** (or requires additional discrete labels beyond F3^4).
 
 Script: `tools/witting_pair_phase_symplectic.py`
 Output: `artifacts/witting_pair_phase_symplectic.json`

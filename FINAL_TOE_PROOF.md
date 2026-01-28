@@ -1235,8 +1235,10 @@ coordinates. The phase distribution within ω=1 and ω=2 classes is **broad**,
 so ω alone does not determine pair phase. We also solved the full linear
 system for a bilinear+linear rule
 `k mod 3 = x^T A y + a^T x + b^T y + c` over GF(3) and found **no solution**.
-Thus even the **mod‑3** phase class is not captured by any bilinear+linear form,
-supporting a higher‑order cocycle interpretation.
+We further allowed a **full quadratic** polynomial in the eight F₃ variables
+(x0..x3, y0..y3) and still found **no solution**. Thus even the **mod‑3** phase
+class is not captured by any low‑degree algebraic form, supporting a
+higher‑order cocycle interpretation.
 
 Doc: `docs/witting_pair_phase_symplectic.md`  
 Script: `tools/witting_pair_phase_symplectic.py`
