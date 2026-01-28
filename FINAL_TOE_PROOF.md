@@ -1264,6 +1264,19 @@ the phase structure is genuinely higher-order and not reducible to edge data.
 Doc: `docs/witting_triangle_cocycle.md`  
 Script: `tools/witting_triangle_cocycle.py`
 
+**Cocycle orbit under monomial symmetry (computed):**  
+We transported the triangle cocycle under all **243 monomial symmetries** and
+tested cohomology equivalence (difference is a coboundary). Results:
+- **Z2 magnitude** class: **243/243** cohomologous (invariant).
+- **Z2 sign** class: **243/243** cohomologous (invariant).
+- **Z3** class (k mod 3): **only 3/243** cohomologous; **240** move to distinct
+  cohomology classes.
+Thus the Z3 cocycle is **maximally symmetry-breaking**, while its Z2 reductions
+are rigid under monomial symmetry.
+
+Doc: `docs/witting_triangle_cocycle_orbit.md`  
+Script: `tools/witting_triangle_cocycle_orbit.py`
+
 **Cohomology of the non-orth 2-complex (computed):**  
 Computing the cohomology of the 2-complex (vertices=40, edges=540, triangles=3240)
 over GF(2) and GF(3) yields **H^1 = 0** and a huge **H^2 dimension = 2739** in both
