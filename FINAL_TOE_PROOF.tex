@@ -486,6 +486,24 @@ Thus the SU(3) phase is \textbf{not confined} to the 27‑sector; it
 threads through the full E6\ensuremath{\times}A2 decomposition in a
 \textbf{nontrivial, but near‑balanced} way.
 
+\textbf{27‑orbit phase bias (computed).} Refining to the \textbf{six
+distinct 27‑orbits} (orbit ids 0,1,2,4,5,6), the phase‑sum distribution
+varies mildly by orbit. One orbit is exactly balanced \textbf{(9,9,9)};
+the others show small biases such as
+
+\begin{verbatim}
+27_0: (0,1,2) = (6,11,10)
+27_5: (0,1,2) = (9,6,12)
+27_6: (0,1,2) = (6,11,10)
+27_2: (0,1,2) = (9,8,10)
+27_1: (0,1,2) = (9,11,7)
+27_4: (0,1,2) = (9,9,9)  ← perfectly balanced
+\end{verbatim}
+
+This suggests the SU(3) phase \textbf{distinguishes} the six 27‑orbits
+but does not select a single privileged orbit; instead it yields a
+\textbf{controlled, near‑uniform} phase bias across the 27‑sector.
+
 Artifacts:
 
 \begin{verbatim}
@@ -509,6 +527,8 @@ tools/e8_coxeter_phase_from_f3.py
 artifacts/e8_coxeter_phase_vs_f3.json
 tools/su3_phase_edge_lift.py
 artifacts/su3_phase_edge_lift.json
+tools/su3_phase_orbit_bias.py
+artifacts/su3_phase_orbit_bias.json
 \end{verbatim}
 
 Artifacts:
@@ -1991,6 +2011,16 @@ Verification}\label{h27-jordan-heisenberg-verification}
     summarizes by W(E6) orbit size.
   \item
     Output: \texttt{artifacts/su3\_phase\_edge\_lift.json}
+  \end{itemize}
+\item
+  \texttt{python3\ tools/su3\_phase\_orbit\_bias.py}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Phase‑sum biases for each 27‑orbit (ids 0,1,2,4,5,6).
+  \item
+    Output: \texttt{artifacts/su3\_phase\_orbit\_bias.json}
   \end{itemize}
 \end{itemize}
 
