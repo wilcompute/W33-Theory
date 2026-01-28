@@ -1124,6 +1124,11 @@ explicit Witting‑ray triangles:
 `docs/witting_pancharatnam_protocol.md`  
 Script: `tools/witting_pancharatnam_protocol.py`
 
+**Run‑sheet (computed):**  
+Explicit ray triples plus amplitude/phase tables for lab execution:  
+`docs/witting_pancharatnam_runsheet.md`  
+Script: `tools/witting_pancharatnam_runsheet.py`
+
 **Unitary implementation (computed):**  
 For each of the 24 bases, a 4×4 unitary is provided with the basis rays as
 columns (direct experimental settings).
@@ -1157,6 +1162,12 @@ Each 2×2 rotation approximated by **QWP–HWP–QWP** angles (up to global phas
 `docs/witting_24basis_waveplates.md`  
 `docs/witting_24basis_waveplates.json`  
 Script: `tools/witting_24basis_waveplate_fit.py`
+
+**Waveplate schedule (degrees):**  
+Same schedule in fast‑axis degrees (mod 180°):  
+`docs/witting_24basis_waveplates_deg.md`  
+`docs/witting_24basis_waveplates_deg.json`  
+Script: `tools/witting_24basis_waveplate_degrees.py`
 
 **Interpretation:** The Witting set is **contextual but not parity‑contextual**
 in its full 40‑basis form. Photonic tests should therefore target a **KS
