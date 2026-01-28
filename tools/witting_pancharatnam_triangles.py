@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Compute Pancharatnam (Bargmann) phase for non-orthogonal triangles in Witting 40 rays.
 
+Observed quantization clusters at ±π/6 and ±π/2.
 We compute phase of <a|b><b|c><c|a> for all triples where all overlaps are nonzero.
 """
 from __future__ import annotations
@@ -56,22 +57,21 @@ def main():
         if ph is not None:
             phases.append(np.angle(ph))
 
-    # Cluster phases around multiples of 2pi/3
+    # Cluster phases around observed quantization targets: ±pi/6, ±pi/2
     clusters = Counter()
     for ang in phases:
         # wrap to (-pi, pi]
         a = np.arctan2(np.sin(ang), np.cos(ang))
-        # nearest multiple of 2pi/3
-        targets = [0, 2*np.pi/3, -2*np.pi/3]
+        targets = [np.pi/6, -np.pi/6, np.pi/2, -np.pi/2]
         nearest = min(targets, key=lambda t: abs(a - t))
-        clusters[round(nearest, 6)] += 1
+        clusters[round(float(nearest), 6)] += 1
 
     raw_counts = Counter(round(float(np.arctan2(np.sin(a), np.cos(a))), 6) for a in phases)
 
     print("Witting Pancharatnam triangle phases")
     print("=" * 45)
     print(f"Triples analyzed: {len(phases)}")
-    print("Nearest 2pi/3 cluster counts:")
+    print("Nearest cluster counts (targets: ±pi/6, ±pi/2):")
     for k, v in sorted(clusters.items()):
         print(f"  {k}: {v}")
 

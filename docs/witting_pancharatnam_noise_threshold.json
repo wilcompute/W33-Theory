@@ -2,27 +2,39 @@
   "results": [
     {
       "sigma": 0.01,
-      "accuracy": 1.0
+      "acc_pi6": 1.0,
+      "acc_pi2": 1.0,
+      "acc_avg": 1.0
     },
     {
       "sigma": 0.05,
-      "accuracy": 1.0
+      "acc_pi6": 1.0,
+      "acc_pi2": 1.0,
+      "acc_avg": 1.0
     },
     {
       "sigma": 0.1,
-      "accuracy": 1.0
+      "acc_pi6": 1.0,
+      "acc_pi2": 1.0,
+      "acc_avg": 1.0
     },
     {
       "sigma": 0.15,
-      "accuracy": 1.0
+      "acc_pi6": 1.0,
+      "acc_pi2": 1.0,
+      "acc_avg": 1.0
     },
     {
       "sigma": 0.2,
-      "accuracy": 1.0
+      "acc_pi6": 0.9976,
+      "acc_pi2": 0.9994,
+      "acc_avg": 0.9984999999999999
     },
     {
       "sigma": 0.25,
-      "accuracy": 1.0
+      "acc_pi6": 0.9703,
+      "acc_pi2": 0.98535,
+      "acc_avg": 0.9778249999999999
     }
   ]
 }

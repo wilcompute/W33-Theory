@@ -4,7 +4,7 @@
 Deliver a **lab‑ready** experimental plan that tests two falsifiable signatures:
 
 1. **State‑independent contextuality** via the 24‑basis KS inequality.
-2. **Z₃ geometric phase** via Pancharatnam triangle loops.
+2. **Discrete Pancharatnam phase** via triangle loops (quantized at **±π/6, ±π/2**).
 
 ---
 
@@ -38,9 +38,9 @@ Noise robustness:
 
 ---
 
-## 4. Z₃ Pancharatnam Phase Test
+## 4. Pancharatnam Phase Test (π/6, π/2)
 
-**Key signature:** phase quantization in {0, ±2π/3}.
+**Key signature:** phase quantization in **{±π/6, ±π/2}**.
 
 Docs:
 - Protocol: `docs/witting_pancharatnam_protocol.md`
@@ -55,13 +55,13 @@ Docs:
 1. Calibrate phase reference across all interferometric measurements.
 2. Verify basis orthonormality (unitary columns).
 3. Run KS bases in order and compute score S.
-4. Measure Pancharatnam triangles and verify Z₃ phase clustering.
+4. Measure Pancharatnam triangles and verify π/6, π/2 phase clustering.
 
 ---
 
 ## 6. Expected Outcomes
 
 - **KS violation:** S = 24 (noncontextual bound 23).
-- **Z₃ phase:** Φ ∈ {0, ±2π/3} with robust clustering.
+- **Pancharatnam phase:** Φ ∈ {±π/6, ±π/2} with robust clustering.
 
 Any failure falsifies the Witting/W33 photonic realization.

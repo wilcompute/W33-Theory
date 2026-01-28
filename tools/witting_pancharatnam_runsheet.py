@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Generate a run-sheet for the Z3 Pancharatnam phase measurement.
+"""Generate a run-sheet for the Pancharatnam phase measurement.
 
-Uses explicit triangle examples and the ray amplitude/phase table.
+Uses explicit triangle examples (±π/6, ±π/2) and the ray amplitude/phase table.
 """
 from __future__ import annotations
 
@@ -36,12 +36,12 @@ def main():
 
     md_path = DOCS / "witting_pancharatnam_runsheet.md"
     with md_path.open("w", encoding="utf-8") as f:
-        f.write("# Pancharatnam Z3 Phase Run‑Sheet\n\n")
+        f.write("# Pancharatnam Phase Run‑Sheet (π/6, π/2)\n\n")
         f.write("This run‑sheet gives concrete ray triples and state‑prep tables.\n\n")
         f.write("## Measurement loop\n")
         f.write("1. Prepare |a⟩\n2. Measure phase of ⟨a|b⟩\n3. Prepare |b⟩ and measure phase of ⟨b|c⟩\n4. Prepare |c⟩ and measure phase of ⟨c|a⟩\n5. Sum phases → Φ\n\n")
 
-        for label in ["0", "+2pi/3", "-2pi/3"]:
+        for label in ["+pi/6", "-pi/6", "+pi/2", "-pi/2"]:
             triple = examples.get(label)
             if not triple:
                 continue

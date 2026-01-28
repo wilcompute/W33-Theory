@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Find explicit triangle examples with Pancharatnam phase 0 and ±2π/3."""
+"""Find explicit triangle examples with Pancharatnam phase ±π/6 and ±π/2."""
 from __future__ import annotations
 
 import json
@@ -41,7 +41,7 @@ def main():
     rays = construct_witting_40_rays()
     n = len(rays)
 
-    target = {"0": None, "+2pi/3": None, "-2pi/3": None}
+    target = {"+pi/6": None, "-pi/6": None, "+pi/2": None, "-pi/2": None}
 
     for i, j, k in itertools.combinations(range(n), 3):
         if abs(np.vdot(rays[i], rays[j])) < 1e-8:
@@ -58,12 +58,18 @@ def main():
         # normalize to (-pi, pi]
         ang = np.arctan2(np.sin(ang), np.cos(ang))
 
-        if target["0"] is None and abs(ang - 0) < 1e-3:
-            target["0"] = (i, j, k, float(ang))
-        if target["+2pi/3"] is None and abs(ang - 2*np.pi/3) < 1e-3:
-            target["+2pi/3"] = (i, j, k, float(ang))
-        if target["-2pi/3"] is None and abs(ang + 2*np.pi/3) < 1e-3:
-            target["-2pi/3"] = (i, j, k, float(ang))
+        # classify by nearest observed angle (±pi/6, ±pi/2)
+        targets = [np.pi/6, -np.pi/6, np.pi/2, -np.pi/2]
+        nearest = min(targets, key=lambda t: abs(ang - t))
+        if abs(ang - nearest) < 1e-2:
+            if abs(nearest - np.pi/6) < 1e-6 and target["+pi/6"] is None:
+                target["+pi/6"] = (i, j, k, float(ang))
+            elif abs(nearest + np.pi/6) < 1e-6 and target["-pi/6"] is None:
+                target["-pi/6"] = (i, j, k, float(ang))
+            elif abs(nearest - np.pi/2) < 1e-6 and target["+pi/2"] is None:
+                target["+pi/2"] = (i, j, k, float(ang))
+            elif abs(nearest + np.pi/2) < 1e-6 and target["-pi/2"] is None:
+                target["-pi/2"] = (i, j, k, float(ang))
 
         if all(target.values()):
             break

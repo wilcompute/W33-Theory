@@ -65,7 +65,7 @@ def phase_invariant_error(U, V):
     return float(np.linalg.norm(diff))
 
 
-def fit_angles(U, trials=50, step=0.1, refinements=4):
+def fit_angles(U, trials=200, step=0.2, refinements=6):
     best = (1e9, (0.0, 0.0, 0.0))
     rng = random.Random(0)
 
