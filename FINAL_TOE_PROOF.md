@@ -1228,6 +1228,19 @@ the π/6 phase lattice.
 Doc: `docs/witting_phase_symplectic_mapped.md`  
 Script: `tools/witting_phase_symplectic_mapped.py`
 
+**Pair‑phase vs symplectic form (computed):**  
+Using the same ray→F₃⁴ labeling, we tested whether the **pairwise** phase
+arg⟨ri|rj⟩ can be expressed as a low‑degree algebraic function of the F₃
+coordinates. The phase distribution within ω=1 and ω=2 classes is **broad**,
+so ω alone does not determine pair phase. We also solved the full linear
+system for a bilinear+linear rule
+`k mod 3 = x^T A y + a^T x + b^T y + c` over GF(3) and found **no solution**.
+Thus even the **mod‑3** phase class is not captured by any bilinear+linear form,
+supporting a higher‑order cocycle interpretation.
+
+Doc: `docs/witting_pair_phase_symplectic.md`  
+Script: `tools/witting_pair_phase_symplectic.py`
+
 **Isomorphism orbit class (computed):**  
 Under the **monomial subgroup** (order 243), the explicit graph isomorphism
 falls into **81 distinct mappings**. This shows the ray→F₃⁴ labeling is **not**
