@@ -184,6 +184,17 @@ tools/analyze_pattern_quotient_graph.py
 artifacts/pattern_quotient_graph.json
 ```
 
+**Exceptional vertex triplet.** Exactly **3** Coxeter‑6 orbits contain the
+size‑1 W(E6) roots. These correspond to three explicit F₃⁴ projective points:
+```
+[1,1,0,1], [0,1,1,0], [1,0,1,1]
+```
+See:
+```
+tools/report_exceptional_patterns.py
+artifacts/exceptional_we6_patterns.json
+```
+
 ---
 
 ### 1.5 Explicit Root-to-Edge Bijection (Computed)
@@ -738,6 +749,9 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `python3 tools/analyze_pattern_quotient_graph.py`
   - Builds the 8‑class quotient graph by W(E6) intersection patterns.
   - Output: `artifacts/pattern_quotient_graph.json`
+- `python3 tools/report_exceptional_patterns.py`
+  - Lists the 3 Coxeter‑6 orbits involving size‑1 W(E6) roots and their F₃⁴ points.
+  - Output: `artifacts/exceptional_we6_patterns.json`
 - `python tools/explicit_bijection_decomposition.py`
   - Builds the explicit 240↔240 W33-edge→E8-root mapping.
   - Output: `artifacts/explicit_bijection_decomposition.json`
