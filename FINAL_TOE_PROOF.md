@@ -143,6 +143,20 @@ root’s W(E6) orbit size (72/27/1). See:
 artifacts/sp43_we6_generator_map_full_verify.json
 tools/verify_generator_map_full.py
 ```
+
+**Attempted lift to full W(E6) (sign‑flip obstruction).** We tried to extend
+the generator image by adjoining the global sign flip (r → −r). However, the
+resulting action does **not** admit a consistent global sign assignment on the
+120 root lines; a 2‑coloring constraint system on line representatives is
+inconsistent. This indicates a nontrivial Z2 cocycle in the edge→root mapping:
+the PSp(4,3) action is **equivariant up to sign**, but cannot be globally
+lifted to a sign‑consistent 240‑root action by a single relabeling. This is a
+precise, testable obstruction and narrows the remaining group‑theoretic gap.
+See:
+```
+tools/align_root_signs_for_we6.py
+artifacts/root_line_sign_assignment.json
+```
 **Exported bijection tables.** The full explicit edge↔root bijection is now
 exported for inspection and downstream analysis:
 ```
