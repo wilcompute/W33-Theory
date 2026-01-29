@@ -57,6 +57,9 @@ bundles/v23_toe_finish/v23/
 # But allow follow-up TDA outputs to be tracked
 !bundles/v23_toe_finish/v23/gbs_threshold_tda_followup_*
 !bundles/v23_toe_finish/v23/gbs_threshold_tda_followup_summary.*
+# Allow correlation summaries and plots
+!bundles/v23_toe_finish/v23/gbs_tda_correlation_summary.json
+!bundles/v23_toe_finish/v23/gbs_tda_w_vs_js_correlation.png
 
 # Tools and external runtimes (often large, installed by user)
 tools/
