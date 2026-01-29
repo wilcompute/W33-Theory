@@ -40,4 +40,9 @@ Recommended next steps for reviewer:
 2. Run high-precision scripts locally if resources permit (see `run_gbs_threshold_sweep_highshots.py`).
 3. Check `bundles/v23_toe_finish/v23/` for produced JSON/PNG/PDF artifacts and review `docs/QUANTUM_PHOTONICS_README.md`.
 
+TDA prototype (new):
+- A small TDA prototype script `scripts/quantum_photonics/run_gbs_tda_proto.py` computes persistence diagrams for small-sample GBS runs and writes `bundles/v23_toe_finish/v23/gbs_threshold_tda_runtime.json`.
+- To run locally: ensure TDA packages are available (e.g., `pip install ripser persim giotto-tda`) and run `python scripts/quantum_photonics/run_gbs_tda_proto.py`.
+- The notebook `notebooks/quantum_photonics/gbs_benchmark_full.ipynb` contains a TDA section that demonstrates Betti curves and a Wasserstein vs JS comparison for small-sample runs.
+
 If you want, I can try to push again if you enable SSH or provide instructions to use HTTPS.
