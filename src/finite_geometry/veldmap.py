@@ -167,5 +167,5 @@ if __name__ == "__main__":
 
     summary = summarize_veldkamp(Path(args.csv))
     with open(args.out, "w", encoding="utf-8") as f:
-        json.dump(summary, f, indent=2)
+        json.dump(summary, f, indent=2, default=str)
     print("Wrote", args.out)

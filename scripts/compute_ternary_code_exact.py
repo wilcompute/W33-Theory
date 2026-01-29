@@ -184,11 +184,11 @@ def main():
         'low_weight_orbit_reps_count': len(rep_map),
     }
     with OUT_JSON.open('w', encoding='utf-8') as f:
-        json.dump(out, f, indent=2)
+        json.dump(out, f, indent=2, default=str)
     # write orbits map (sample limited)
     sample_orbits = {str(k): v for k, v in list(rep_map.items())[:1000]}
     with OUT_ORBITS.open('w', encoding='utf-8') as f:
-        json.dump({'n_orbits': len(rep_map), 'sample_orbits': sample_orbits}, f, indent=2)
+        json.dump({'n_orbits': len(rep_map), 'sample_orbits': sample_orbits}, f, indent=2, default=str)
     print('Wrote', OUT_JSON, OUT_ORBITS)
 
 if __name__ == '__main__':

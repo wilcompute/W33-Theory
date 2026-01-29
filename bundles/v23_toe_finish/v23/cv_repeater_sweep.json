@@ -1,55 +1,7 @@
 [
   {
-    "r": 0.3,
+    "r": 0.5,
     "loss": 0.5,
-    "ln_direct": 0.0,
-    "ln_repeater_toy": 0.0
-  },
-  {
-    "r": 0.3,
-    "loss": 0.7,
-    "ln_direct": 0.0,
-    "ln_repeater_toy": 0.0
-  },
-  {
-    "r": 0.3,
-    "loss": 0.9,
-    "ln_direct": 0.0,
-    "ln_repeater_toy": 0.0
-  },
-  {
-    "r": 0.6,
-    "loss": 0.5,
-    "ln_direct": 0.0,
-    "ln_repeater_toy": 0.0
-  },
-  {
-    "r": 0.6,
-    "loss": 0.7,
-    "ln_direct": 0.0,
-    "ln_repeater_toy": 0.0
-  },
-  {
-    "r": 0.6,
-    "loss": 0.9,
-    "ln_direct": 0.0,
-    "ln_repeater_toy": 0.0
-  },
-  {
-    "r": 0.9,
-    "loss": 0.5,
-    "ln_direct": 0.0,
-    "ln_repeater_toy": 0.0
-  },
-  {
-    "r": 0.9,
-    "loss": 0.7,
-    "ln_direct": 0.0,
-    "ln_repeater_toy": 0.0
-  },
-  {
-    "r": 0.9,
-    "loss": 0.9,
     "ln_direct": 0.0,
     "ln_repeater_toy": 0.0
   }

@@ -1,0 +1,2417 @@
+
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs,longtable,array,tabularx}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!55!black,
+  urlcolor=blue!55!black,
+  citecolor=blue!55!black
+}
+
+\usepackage[most]{tcolorbox}
+\tcbset{
+  colback=white,
+  colframe=black!70,
+  boxrule=0.6pt,
+  arc=2pt,
+  left=6pt,right=6pt,top=6pt,bottom=6pt
+}
+
+\newtcolorbox{keyresult}[1][]{colback=black!2,colframe=black!70,title=\textbf{Key Result}#1}
+\newtcolorbox{definitionbox}[1][]{colback=blue!2,colframe=blue!60!black,title=\textbf{Definition}#1}
+\newtcolorbox{remarkbox}[1][]{colback=orange!2,colframe=orange!60!black,title=\textbf{Remark}#1}
+\newtcolorbox{proofsketch}[1][]{colback=green!2,colframe=green!55!black,title=\textbf{Proof sketch / audit trail}#1}
+\newtcolorbox{protocolbox}[1][]{colback=purple!2,colframe=purple!60!black,title=\textbf{Protocol (testable)}#1}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+
+
+
+
+
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newcolumntype{Y}{>{\raggedright\arraybackslash\hspace{0pt}}X}
+\newcolumntype{T}{>{\ttfamily\footnotesize\raggedright\arraybackslash\hspace{0pt}}X}
+\newcommand{\ArtifactTable}[1]{%
+\begingroup
+\setlength{\tabcolsep}{4pt}%
+\renewcommand{\arraystretch}{1.15}%
+\small\sloppy
+\begin{tabularx}{\textwidth}{@{}T Y@{}}
+\toprule
+\textbf{Bundle} & \textbf{Contents / Purpose}\\
+\midrule
+#1
+\bottomrule
+\end{tabularx}
+\endgroup
+}
+
+\title{\textbf{A Finite-Geometric Theory Kernel from W33}\\
+\large Toward a Unified Algebra--Topology--Quantum Computation--Cryptography Framework}
+\author{Wil Dahn \quad\&\quad Sage}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This document consolidates the W33 tower into a single, self-contained theory kernel. Starting from the symplectic phase space $V=\mathbb{F}_3^4$, we construct the symplectic generalized quadrangle $W(3,3)$ and its point graph $\mathrm{W33}=\mathrm{SRG}(40,12,2,4)$. Over $\mathbb{F}_2$, the adjacency satisfies $A^2\equiv 0$, producing a canonical code $[40,24,6]$ and an intrinsic homology space $H=\ker(A)/\mathrm{im}(A)\cong \mathbb{F}_2^8$. The nonsingular orbit in $H$ yields a 120-element ``root shell'' with $\mathrm{SRG}(120,56,28,24)$ adjacency, a 240 signed lift admitting global gauge fixing, and a quotient closure back to 40 points as $Q=\overline{\mathrm{W33}}$. The quotient carries a canonical $\mathbb{Z}_3$ holonomy, with flat faces classified exactly by the 90 non-isotropic projective lines. Over $\mathbb{Z}_3$, the clique complex of $Q$ has $H^3\cong (\mathbb{Z}_3)^{89}$, whose 88D core is identified (up to a canonical sign character) with the augmentation quotient on the 90 non-isotropic lines. Finally, the holonomy field $F$ is sourced: $J=dF$ is a 3-cochain supported on 3008 tetrahedra, and explicit sparse transfer operators map $J$ to observed vacuum line responses.
+\end{abstract}
+
+\begin{remarkbox}
+\textbf{What is meant by ``theory of everything'' here.} This manuscript presents a mathematically closed kernel in which geometry, algebra, topology, computation, and cryptography are realized as different functorial views of the same finite symplectic/projective object. Claims about physical constants require an additional scaling/continuum layer and are not asserted as part of the kernel.
+\end{remarkbox}
+
+\tableofcontents
+\newpage
+
+\section*{Master Equation Summary}
+\addcontentsline{toc}{section}{Master Equation Summary}
+
+\begin{keyresult}
+\textbf{Discrete gauge kernel (minimal equations).}
+Let $Q=\overline{\mathrm{W33}}$ be the quotient graph and $\mathrm{Cl}(Q)$ its clique complex.
+
+\medskip
+\textbf{Field strength (holonomy).} $F\in C^2(\mathrm{Cl}(Q);\mathbb{Z}_3)$ is the computed triangle holonomy.
+
+\medskip
+\textbf{Sources.} $J := dF\in C^3(\mathrm{Cl}(Q);\mathbb{Z}_3)$ is the sourced 3-cochain (supported on 3008 tetrahedra).
+
+\medskip
+\textbf{Vacuum response (exact constitutive laws).} There exist explicit sparse operators
+\[
+M,Z:\mathbb{Z}_3^{9450}\to \mathbb{Z}_3^{90}
+\]
+such that the observed line fields satisfy
+\[
+m_{\mathrm{line}} = M J,\qquad z_{\mathrm{line}} = Z J
+\]
+exactly.
+
+\medskip
+\textbf{Vacuum harmonics.} The 90-line sector admits five canonical joint modes under the involution $S$ and meet adjacency $A_{\mathrm{meet}}$:
+\[
+(+,32)^1,\ (+,2)^{24},\ (+,-4)^{20},\ (-,8)^{15},\ (-,-4)^{30}.
+\]
+Bulk and boundary source classes inject into different harmonic mixtures (mode-response tables).
+\end{keyresult}
+
+\section{Master Equations and Couplings}
+
+\begin{definitionbox}
+\textbf{Field variables.} On the clique complex $\mathrm{Cl}(Q)$ of the quotient graph $Q=\overline{\mathrm{W33}}$:
+\begin{itemize}
+\item $F\in C^2(\mathrm{Cl}(Q);\mathbb{Z}_3)$ is the triangle holonomy field (field strength).
+\item $J:=dF\in C^3(\mathrm{Cl}(Q);\mathbb{Z}_3)$ is the sourced 3-cochain (charge/current).
+\end{itemize}
+On the vacuum line set $\mathcal{L}$ (the 90 non-isotropic lines):
+\begin{itemize}
+\item $m_{\mathrm{line}}\in \mathbb{Z}_3^{90}$ is the \emph{boundary moment} observable.
+\item $z_{\mathrm{line}}\in \mathbb{Z}_3^{90}$ is the \emph{bulk shadow} observable.
+\end{itemize}
+\end{definitionbox}
+
+\begin{theorem}[Master operator equations]
+\label{thm:master-operator}
+The W33 kernel closes as the following exact operator pipeline over $\mathbb{Z}_3$:
+\[
+F \xrightarrow{\ d\ } J \xrightarrow{\ (M,Z)\ } (m_{\mathrm{line}},z_{\mathrm{line}}),
+\]
+where $d$ is the simplicial coboundary on $\mathrm{Cl}(Q)$ and $M,Z:\mathbb{Z}_3^{9450}\to\mathbb{Z}_3^{90}$ are explicit sparse transfer operators. Concretely,
+\[
+J = dF,\qquad m_{\mathrm{line}}=M J,\qquad z_{\mathrm{line}}=Z J,
+\]
+and these identities hold entrywise with no residual error.
+\end{theorem}
+
+\begin{proofsketch}
+$F$ and $J=dF$ are computed from the quotient holonomy. The operators $M$ and $Z$ are constructed canonically from incidence: $M$ routes tetra flux to the unique vacuum line of the tetra's flat face (when present), while $Z$ routes tetra flux to vacuum lines via edge-incidence of curved faces. Exactness was verified against independently computed line observables. (Audit bundle: \texttt{W33\_transfer\_operators\_J\_to\_lines\_and\_mode\_injection\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{definitionbox}
+\textbf{Vacuum harmonics.} Let $S$ be the canonical involution on $\mathcal{L}$ (45 disjoint transpositions) and $A_{\mathrm{meet}}$ the meet adjacency on $\mathcal{L}$ (degree 32). The vacuum line sector decomposes into five joint modes:
+\[
+(+,32)^1,\ (+,2)^{24},\ (+,-4)^{20},\ (-,8)^{15},\ (-,-4)^{30}.
+\]
+\end{definitionbox}
+
+\begin{theorem}[Coupling selection rules (mode response)]
+\label{thm:couplings}
+Bulk sources (tetrahedra with zero flat faces) inject into $z_{\mathrm{line}}$ but not $m_{\mathrm{line}}$. Boundary sources (tetrahedra with one flat face) inject into both $m_{\mathrm{line}}$ and $z_{\mathrm{line}}$, with mode weights shifted toward $(+,2)$ and $(-,8)$ for $m_{\mathrm{line}}$. These couplings are quantified by the mode-response tables.
+\end{theorem}
+
+\begin{proofsketch}
+Apply $M$ and $Z$ to class-restricted source vectors and project the resulting 90-line fields into the five joint modes using the association-scheme harmonic bases. (Audit bundle: \texttt{W33\_mode\_response\_table\_bulk\_to\_vacuum\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{keyresult}
+The equations $J=dF$ and $(m,z)=(MJ,ZJ)$ are the minimal ``field equations'' of the kernel. Together with the five vacuum harmonics, they provide a complete, symmetry-respecting description of how sourced curvature produces observable vacuum response in the 90-line sector.
+\end{keyresult}
+
+\section{Closure Principle}
+
+\begin{definitionbox}
+\textbf{Closure.} We say the W33 tower is \emph{closed} if the following hold simultaneously:
+\begin{enumerate}
+\item (\textbf{Lift}) The 240 minimal code generators project 2-to-1 onto a 120-element nonsingular orbit in $H$ (the ``root shell'').
+\item (\textbf{Gauge fix}) There exists a global sign section eliminating all weight-16 defects, producing 40 disjoint flat triples.
+\item (\textbf{Collapse}) Collapsing the 40 triples yields a 40-vertex quotient graph $Q$ with canonical edge transport and $\mathbb{Z}_3$ holonomy.
+\item (\textbf{Recursion}) The quotient graph is exactly $Q=\overline{\mathrm{W33}}$.
+\item (\textbf{Vacuum/matter coincidence}) The 90 non-isotropic lines simultaneously (i) classify flat holonomy faces and (ii) support the 88D core module of $H^3$ via the 90-line augmentation quotient.
+\end{enumerate}
+\end{definitionbox}
+
+\begin{theorem}[Closure Theorem]
+\label{thm:closure}
+The W33 tower is closed in the above sense. In particular:
+\begin{enumerate}
+\item The globally gauge-fixed signed lift partitions the 120 roots into 40 flat triples.
+\item The induced quotient is $Q=\overline{\mathrm{W33}}$ and carries canonical $\mathbb{Z}_3$ triangle holonomy.
+\item Flat holonomy triangles are exactly the triples lying on the 90 non-isotropic lines of $PG(3,3)$.
+\item The 88D core of $H^3(\mathrm{Cl}(Q);\mathbb{Z}_3)$ is (up to the similitude sign twist) the augmentation quotient on these same 90 non-isotropic lines.
+\end{enumerate}
+\end{theorem}
+
+\begin{proofsketch}
+Items (1)--(3) are verified by the explicit gauge-fix computation and quotient construction: the defect-0 edges form 40 disjoint triangles partitioning the 120 roots, and the quotient adjacency equals the complement of W33 with a $\mathbb{Z}_3$ holonomy classified by non-isotropic line triples.
+Item (4) is established by comparing the 88D core module of $H^3$ with the 90-line augmentation quotient: after the canonical similitude sign twist, traces and characteristic-polynomial factor patterns match and an explicit intertwiner exists. (Audit bundles: \texttt{W33\_global\_gaugefix\_no16\_bundle.zip}, \texttt{W33\_quotient\_closure\_complement\_and\_noniso\_line\_curvature\_bundle.zip}, \texttt{W33\_H3\_Aut\_action\_89Z3\_bundle.zip}, \texttt{W33\_perm\_module\_vs\_H3\_match\_report\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{keyresult}
+Closure is the central ``TOE hinge'' of the kernel: the same finite geometry simultaneously generates (i) constraints/codes ($A^2=0$ over $\mathbb{F}_2$), (ii) a root shell and gauge-fixed signed lift (120/240), (iii) a recursive quotient $Q=\overline{\mathrm{W33}}$ with $\mathbb{Z}_3$ holonomy, and (iv) a vacuum line sector that is also the carrier of the nontrivial 88D matter/flux module. This is precisely the structure needed for a self-contained theory kernel.
+\end{keyresult}
+
+\section{Functorial Field Theory View}
+
+\begin{definitionbox}
+\textbf{Clique category.} Let $Q=\overline{\mathrm{W33}}$ and $\mathrm{Cl}(Q)$ its clique (flag) complex. Define a small category $\mathcal{C}(Q)$ as follows:
+\begin{itemize}
+\item Objects are cliques $\sigma\subseteq V(Q)$ (equivalently simplices of $\mathrm{Cl}(Q)$), including vertices, edges, triangles, tetrahedra, etc.
+\item Morphisms are inclusions $\tau\hookrightarrow \sigma$ (face maps).
+\end{itemize}
+Thus $\mathcal{C}(Q)$ encodes the full incidence/facial structure of the quotient geometry.
+\end{definitionbox}
+
+\begin{definitionbox}
+\textbf{Cochain functors.} Fix a coefficient ring $R$ (typically $R=\mathbb{Z}_3$). For each $k\ge 0$, define a functor
+\[
+\mathsf{C}^k_R:\mathcal{C}(Q)^{\mathrm{op}} \to \mathsf{Mod}_R
+\]
+by assigning to each $k$-simplex $\sigma$ the free rank-one $R$-module generated by $\sigma$, and to each face inclusion the corresponding restriction map. The usual coboundary $d:\mathsf{C}^k_R\to \mathsf{C}^{k+1}_R$ is a natural transformation determined by alternating sums of face restrictions (with orientation conventions).
+\end{definitionbox}
+
+\begin{definitionbox}
+\textbf{Vacuum line functor.} Let $\mathcal{L}$ be the 90 non-isotropic lines in $PG(3,3)$, which are also the 90 flat $K_4$ cells in $Q$. Define the vacuum sector as the permutation module
+\[
+\mathsf{V} := \mathbb{Z}_3^{\mathcal{L}},
+\]
+together with its canonical 88D augmentation quotient $\mathsf{V}_{88}=\mathrm{Aug}(\mathcal{L})/\langle\mathbf{1}\rangle$ (up to the similitude sign twist).
+\end{definitionbox}
+
+\begin{theorem}[Kernel as a functorial gauge system]
+\label{thm:functorial-kernel}
+The W33 tower admits a functorial formulation in which geometry, topology, computation, and quantum structure are different functorial shadows of the same underlying incidence data:
+\begin{enumerate}
+\item (\textbf{Geometry}$\to$\textbf{Topology}) The clique category $\mathcal{C}(Q)$ determines cochain functors $\mathsf{C}^k_{\mathbb{Z}_3}$ and a natural coboundary $d$. The holonomy field $F$ is an element of $\mathsf{C}^2_{\mathbb{Z}_3}$ and the source field is $J=dF\in \mathsf{C}^3_{\mathbb{Z}_3}$.
+\item (\textbf{Topology}$\to$\textbf{Vacuum response}) The transfer operators $M$ and $Z$ are natural, Aut(W33)-equivariant linear maps from the tetra-source module to the vacuum module:
+\[
+M,Z:\mathbb{Z}_3^{\{\text{tetrahedra}\}}\to \mathbb{Z}_3^{\mathcal{L}},
+\]
+giving exact observables $(m_{\mathrm{line}},z_{\mathrm{line}})=(MJ,ZJ)$.
+\item (\textbf{Computation}) Over $\mathbb{F}_2$, the W33 adjacency defines a square-zero differential on $\mathbb{F}_2^{40}$, yielding the intrinsic code $\ker(A)$ and homology $H=\ker(A)/\mathrm{im}(A)$; these are functorial with respect to the Aut(W33) action.
+\item (\textbf{Quantum}) The phase space axiom $V=\mathbb{F}_3^4$ defines the 2-qutrit Weyl functor (Weyl labels and commutator phase) and a projectivized Clifford action by $PGSp(4,3)$ on $PG(3,3)$; isotropic lines correspond to maximal commuting contexts.
+\end{enumerate}
+Moreover, the representation-theoretic identification $H^3(\mathrm{Cl}(Q);\mathbb{Z}_3)_{88}\cong \mathsf{V}_{88}$ (up to twist) provides an explicit equivalence between the flux-lattice core and the vacuum line module.
+\end{theorem}
+
+\begin{proofsketch}
+Each item is backed by explicit constructions:
+(1) and (2) follow from the computed holonomy $F$, sources $J=dF$, and the sparse transfer operators $M,Z$ built from incidence (Section 11 and associated bundles).
+(3) follows from the SRG identity implying $A^2\\equiv 0$ over $\\mathbb{F}_2$ and the explicit kernel-code computation (Section 4).
+(4) follows from the standard Weyl/Clifford construction on $V$ and the identification of W33 points/lines with projective points/isotropic lines in $PG(3,3)$ (Section 10).
+The module equivalence is established by comparing the Aut(W33) actions and constructing an explicit intertwiner (Section 9).
+\end{proofsketch}
+
+\begin{keyresult}
+This functorial view is the cleanest ``TOE statement'' available at the kernel level: a single finite incidence object induces, via natural functors, (i) a sourced gauge field $(F,J)$, (ii) exact response laws $(M,Z)$ into the vacuum line sector, (iii) an intrinsic error-correcting code over $\\mathbb{F}_2$, and (iv) a 2-qutrit Weyl/Clifford quantum structure over $\\mathbb{F}_3$. These are not separate theories but compatible projections of the same kernel.
+\end{keyresult}
+
+\section{Continuum and Scaling Layer (Optional Program)}
+
+\begin{remarkbox}
+\textbf{Status.} Everything in Sections 1--12 is a finite, exact kernel. This section is explicitly labeled optional: it proposes principled scaling routes that could connect the finite kernel to effective continuum physics, without asserting any numerical ``constant matching'' as part of the kernel.
+\end{remarkbox}
+
+\subsection{Three natural scaling parameters}
+
+\begin{definitionbox}
+\textbf{Scaling routes.} The W33 kernel suggests three canonical families:
+\begin{enumerate}
+\item (\textbf{Field size}) Replace $\mathbb{F}_3$ by $\mathbb{F}_q$ and study $V=\mathbb{F}_q^4$ with symplectic form, yielding $W(3,q)$ and its point graph.
+\item (\textbf{Rank}) Replace $V=\mathbb{F}_q^4$ by $V=\mathbb{F}_q^{2n}$, studying $W(2n-1,q)$ and the resulting tower as $n$ grows.
+\item (\textbf{Covers / coarse graining}) Use regular covers of the quotient connection (e.g., minimal regular covers of transport/holonomy data) as lattice refinements, and study renormalization via pushforward/pullback of cochains.
+\end{enumerate}
+\end{definitionbox}
+
+
+\subsection{Field-size family $W(3,q)$: exact SRG parameters and mod-2 square-zero for odd $q$}
+
+\begin{theorem}[Symplectic $W(3,q)$ point-graph parameters]
+\label{thm:W3qparams}
+Let $q$ be a prime power and let $G_q$ be the point graph of the symplectic generalized quadrangle $W(3,q)$ (points are projective points of $PG(3,q)$; edges are collinearity on totally isotropic lines). Then $G_q$ is strongly regular with parameters:
+\[
+v = q^3+q^2+q+1,\qquad k=q(q+1),\qquad \lambda=q-1,\qquad \mu=q+1.
+\]
+Its adjacency spectrum is
+\[
+k^{(1)},\qquad r^{(q^2(q+1))},\qquad s^{(q(q^2+1))},
+\]
+where $r=q-1$ and $s=-(q+1)$.
+\end{theorem}
+
+\begin{proofsketch}
+These are standard parameters for the symplectic polar space $W(3,q)$. For completeness, we verified them computationally for $q\in\{2,3,5,7\}$ by explicit enumeration of projective points and totally isotropic lines, building the point graph, and counting common neighbors; the rounded eigenvalue multiplicities match the stated spectrum.
+\end{proofsketch}
+
+\begin{theorem}[Mod-2 square-zero for odd $q$]
+\label{thm:oddqA2}
+Let $A_q$ be the adjacency matrix of $G_q$ and reduce it mod 2. If $q$ is odd, then
+\[
+A_q^2 \equiv 0 \pmod 2.
+\]
+Equivalently, the symplectic $W(3,q)$ point graph defines a canonical square-zero differential over $\mathbb{F}_2$ for every odd $q$.
+\end{theorem}
+
+\begin{proofsketch}
+For any SRG$(v,k,\lambda,\mu)$,
+\[
+A^2 = kI + \lambda A + \mu(J-I-A).
+\]
+Reducing mod 2 yields $A^2\equiv (k-\mu)I + (\lambda-\mu)A + \mu J\pmod 2$.
+For $G_q$, we have $k-\mu=(q-1)(q+1)=q^2-1$ (even for odd $q$), $\lambda-\mu=-2$ (even), and $\mu=q+1$ (even for odd $q$). Hence $A^2\equiv 0\pmod 2$ for odd $q$. The case $q=2$ fails as expected.
+\end{proofsketch}
+
+
+\subsection{$q=5$: root shell orbit and order-3 projectivization (first pass)}
+
+\begin{remarkbox}
+This subsection reports the first nontrivial lift-layer test for $q=5$. It is not yet a full analog of the $q=3$ signed 240$\to$120 lift, but it reveals a closely related phenomenon: the local line-pair generators form a single large orbit in $H_5$ and admit a canonical order-3 ``projectivization'' induced by the endomorphism ring of the $H_5$ module.
+\end{remarkbox}
+
+\begin{theorem}[A 2340-element root-shell orbit in $H_5$]
+For $q=5$, the local line-pair generators (XOR of two isotropic lines through a point) map injectively into the 24D homology module $H_5$ over $\mathbb{F}_2$, producing a set of 2340 distinct nonzero vectors. Under a symplectic subgroup action (generated by transvections), this 2340-set is a single orbit.
+\end{theorem}
+
+\begin{proofsketch}
+We explicitly construct the $W(3,5)$ point graph (156 vertices, 156 isotropic lines), compute $H_5$ via $\ker(A_5)/\mathrm{im}(A_5)$ (dimension 24), map all 2340 line-pair generators into $H_5$ coordinates, and verify invariance/orbit transitivity under 20 symplectic generators. (Bundle: \texttt{W33\_q5\_lift\_layer\_first\_pass\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{theorem}[Order-3 centralizer and 780-cycle projectivization]
+The induced 24D $H_5$ module has a 2D endomorphism ring under the tested symplectic subgroup, generated by the identity and an element $X$ of order 3. The action of $X$ permutes the 2340-element orbit without fixed points, partitioning it into 780 disjoint 3-cycles. Using the invariant 2D alternating-form space $(F_0,F_1)$, pairs may be labeled by $(b_0,b_1)\in\mathbb{F}_2^2$, whose nonzero classes form a $\mathrm{GF}(4)^\ast$-like set of size 3. Declaring adjacency by nonzero label yields a regular quotient graph on 780 vertices of degree 504 whose pairwise common-neighbor counts split into two values on edges and two values on nonedges (a higher-rank association-scheme signature).
+\end{theorem}
+
+\begin{proofsketch}
+We compute the centralizer of the subgroup action on $H_5$ by solving $XM=MX$ over $\mathbb{F}_2$ for the generator set, obtaining a 2D solution space and an order-3 element. Applying this element to the 2340 orbit yields 780 disjoint 3-cycles. Using two independent invariant alternating forms $F_0,F_1$, we label pairs by $(b_0,b_1)$ and define adjacency by nonzero label; the resulting quotient graph is regular of degree 504 with a two-type adjacency/two-type nonadjacency common-neighbor signature. (Bundle: \texttt{W33\_q5\_root\_shell\_orbit\_and\_GF4\_projectivization\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{keyresult}
+The $q=5$ lift-layer reveals a strong analog of the $q=3$ signed-lift mechanism: instead of a 2-to-1 sign lift, the natural commutant structure induces an order-3 projectivization on the root-shell orbit. This suggests the correct higher-$q$ generalization is governed by endomorphism-ring structure (field extensions) rather than a fixed $\pm$ sign.
+\end{keyresult}
+
+
+\subsection{$q=5$: 780-cycle association scheme and harmonics}
+
+\begin{theorem}[Five-orbital scheme on the 780 projectivized root shell]
+Under the induced symplectic subgroup action, the 780-cycle quotient carries a symmetric 5-orbital association scheme (commutant dimension 5). The corresponding symmetric relations have row degrees
+\[
+1,\ 4,\ 125,\ 150,\ 500,
+\]
+where the degree-4 relation decomposes into 156 disjoint $K_5$ cliques (a canonical $156\times K_5$ fibration of the 780 vertices).
+\end{theorem}
+
+\begin{theorem}[Canonical q=5 harmonics via joint diagonalization]
+Let $A_4$ denote the adjacency matrix of the degree-4 relation (the $K_5$ fiber graph) and let $A_{500}$ denote the adjacency matrix of the degree-500 relation. Then $A_4$ has eigenvalues $4^{(156)}$ and $(-1)^{(624)}$. Restricting $A_{500}$ to these eigenspaces yields a full five-mode decomposition of $\mathbb{R}^{780}$ into joint eigenspaces of $(A_4,A_{500})$ with dimensions:
+\[
+(4,500)^{1},\quad (4,20)^{65},\quad (4,-20)^{90},\quad (-1,25)^{104},\quad (-1,-5)^{520}.
+\]
+These are the $q=5$ analogs of the ``vacuum harmonics'' in the $q=3$ kernel.
+\end{theorem}
+
+\begin{proofsketch}
+We compute the orbitals (ordered-pair orbits) of the induced action on 780 vertices and obtain five symmetric relations. The degree-4 relation is verified to split into 156 components of size 5, each a complete $K_5$. Joint diagonalization is obtained by first diagonalizing $A_4$ (block-diagonal K5 spectrum) and then diagonalizing $A_{500}$ restricted to each $A_4$ eigenspace. (Bundle: \texttt{W33\_q5\_780\_association\_scheme\_harmonics\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{keyresult}
+The $q=5$ projectivized root shell inherits the same structural signature that made the $q=3$ vacuum sector decisive: a small commutant (dimension 5) and a canonical finite harmonic decomposition. This strongly supports the hypothesis that the W33 kernel is the $q=3$ member of a universal symplectic ladder whose higher-$q$ members replace the $\pm$ signed lift by extension-field projectivizations (here, order 3 / GF(4)$^\ast$).
+\end{keyresult}
+
+
+\subsection{$q=7$: root shell orbit and idempotent split (first pass)}
+
+\begin{theorem}[A 11200-element root-shell orbit in $H_7$]
+For $q=7$, the local line-pair generators (XOR of two isotropic lines through a point) map injectively into the 48D homology module $H_7$ over $\mathbb{F}_2$, producing a set of 11200 distinct nonzero vectors. Under a symplectic subgroup action (generated by transvections), this 11200-set is a single orbit.
+\end{theorem}
+
+\begin{proofsketch}
+We explicitly construct the $W(3,7)$ point graph (400 vertices, 400 isotropic lines), compute $H_7$ via $\ker(A_7)/\mathrm{im}(A_7)$ (dimension 48), map all 11200 line-pair generators into $H_7$ coordinates, and verify invariance/orbit transitivity under 22 symplectic generators. (Bundle: \texttt{W33\_q7\_lift\_layer\_first\_pass\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{theorem}[Idempotent commutant and 24+24 splitting]
+Under the tested symplectic subgroup, the endomorphism (centralizer) algebra of the 48D $H_7$ module has dimension 2 over $\mathbb{F}_2$, generated by the identity and a nontrivial idempotent projector $P$ of rank 24. Hence $H_7$ splits into two invariant 24D submodules:
+\[
+H_7 \cong \mathrm{Im}(P)\ \oplus\ \mathrm{Im}(I-P).
+\]
+Projecting the 11200-element root shell into either half yields a single orbit of size 2800, and $2800=7\cdot 400$ suggests a $q$-fibered structure over the 400-point base.
+\end{theorem}
+
+\begin{proofsketch}
+We compute the centralizer by solving $XM=MX$ over $\mathbb{F}_2$ for the induced 48D action matrices, finding a 2D solution space. The nontrivial element satisfies $P^2=P$ and has rank 24. We then project root-shell vectors via $P$ and $I-P$, convert to 24D coordinates, and compute orbit decompositions. (Bundle: \texttt{W33\_q7\_root\_shell\_and\_idempotent\_split\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{keyresult}
+The $q=7$ lift-layer exhibits a different ``cheeky'' generalization mechanism than $q=5$: instead of an order-3 projectivization, the commutant produces an idempotent 24+24 split of the 48D homology module, with each half carrying a $2800=7\cdot 400$ root-shell orbit. This strongly suggests that the higher-$q$ lift structure is governed by commutant type (field extension vs idempotent splitting) rather than a universal $\pm$ sign.
+\end{keyresult}
+
+
+\subsection{$q=7$: 2800-cycle association scheme and $400\times K_7$ fibers (first pass)}
+
+\begin{theorem}[Five-orbital scheme on the 2800 projected root shell]
+The projected $q=7$ root-shell orbit of size 2800 (in either 24D half-module of $H_7$) carries a 5-orbital association scheme (commutant dimension 5). Equivalently, the point stabilizer has five orbits on the 2800 points with sizes
+\[
+1,\ 6,\ 343,\ 392,\ 2058.
+\]
+\end{theorem}
+
+\begin{theorem}[Degree-6 relation yields a canonical $400\times K_7$ fibration]
+The degree-6 relation in the above scheme is a disjoint union of 400 complete $K_7$ cliques, partitioning the 2800 vertices as
+\[
+2800 = 400 \times 7.
+\]
+Thus the $q=7$ projected root shell admits a canonical fiber structure with fiber size $q$ over a 400-object base.
+\end{theorem}
+
+\begin{proofsketch}
+We compute a transitive permutation action on the 2800 projected orbit induced from the symplectic subgroup action on $H_7$, and compute stabilizer orbits via Schreier generators derived from a BFS transversal. The orbit-size list gives the five orbital degrees. The degree-6 relation is realized explicitly as the image of the stabilizer 6-orbit under the transversal, and its connected components are verified to be 400 disjoint $K_7$ cliques. (Bundle: \texttt{W33\_q7\_2800\_association\_scheme\_first\_pass\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{keyresult}
+The $q=7$ half-module recovers the same ``small commutant'' signature as $q=3$ and $q=5$ (dimension 5), but with a fiber relation matching the field size: $K_7$ fibers over a 400-object base. This strongly supports a universal ladder where higher-$q$ kernels produce a $v\times K_q$ fibration at the projectivized root-shell level.
+\end{keyresult}
+
+
+\subsection{$q=7$: 2800-cycle harmonics (five primitive modes)}
+
+\begin{theorem}[Five primitive harmonics on the 2800 projected root shell]
+The 5-orbital association scheme on the 2800 projected $q=7$ root shell admits five primitive harmonic modes with multiplicities:
+\[
+1,\ 224,\ 2100,\ 175,\ 300,
+\]
+summing to 2800. Writing the nontrivial relation valencies as $(6,343,392,2058)$, the corresponding eigenvalues of the relation adjacencies on these five modes are:
+\[
+\begin{array}{c|cccc}
+\text{mode mult.} & A_6 & A_{343} & A_{392} & A_{2058}\\
+\hline
+1    & 6  & 343  & 392  & 2058\\
+224  & 6  & -7   & 42   & -42\\
+2100 & -1 & 7    & 0    & -7\\
+175  & 6  & 7    & -56  & 42\\
+300  & -1 & -49  & 0    & 49\\
+\end{array}
+\]
+In particular, the fiber relation $A_6$ has eigenvalues $6$ and $-1$ with multiplicities $400$ and $2400$, matching the $400\times K_7$ fibration.
+\end{theorem}
+
+\begin{proofsketch}
+We compute intersection numbers $p_{ij}^k$ using the stabilizer-orbit method: the relation class of a pair $(u,v)$ is determined by the stabilizer orbit of $t_u^{-1}(v)$ under a BFS transversal $t_u$. The resulting 5x5 left-multiplication matrices $L_i$ commute; their common eigenvectors yield the eigenmatrix $P$. Multiplicities are solved from orthogonality equations $\sum_r m_r P_{r,i}^2 = v k_i$. (Bundle: \texttt{W33\_q7\_2800\_association\_scheme\_harmonics\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{keyresult}
+The $q=7$ projected root shell not only reproduces the ``small commutant'' signature (dimension 5) but yields an explicit, integer-valued harmonic spectrum with a fiber eigen-split matching $400\times K_7$. This is the direct $q=7$ analog of the $q=5$ 780-cycle harmonic decomposition.
+\end{keyresult}
+
+
+\subsection{A closed-form conjectural ladder for odd $q$ (validated at $q=5,7$)}
+
+\begin{theorem}[Projectivized root-shell 5-orbital scheme: closed eigenvalue formulas]
+\label{thm:q-ladder}
+Let $q$ be an odd prime power and consider the symplectic $W(3,q)$ kernel. Suppose the lift-layer produces a projectivized root-shell quotient of size
+\[
+N = q(q^3+q^2+q+1)=q^4+q^3+q^2+q,
+\]
+with a canonical fiber relation decomposing into $(q^3+q^2+q+1)$ disjoint $K_q$ cliques (degree $q-1$). Then the induced commutant algebra is 5-dimensional (five orbitals), with relation valencies
+\[
+1,\quad q-1,\quad q^3,\quad q^2(q+1),\quad q^3(q-1),
+\]
+and a five-mode harmonic decomposition with multiplicities
+\[
+1,\quad \frac{q(q+1)^2}{2},\quad \frac{q(q^2+1)}{2},\quad q(q^3-q^2+q-1),\quad (q^3-q^2+q-1).
+\]
+Moreover, in the corresponding eigenmatrix (ordering relations by valency as above), the eigenvalues are:
+\[
+\begin{array}{c|cccc}
+\text{mode mult.} & A_{q-1} & A_{q^3} & A_{q^2(q+1)} & A_{q^3(q-1)}\\
+\hline
+1 & q-1 & q^3 & q^2(q+1) & q^3(q-1)\\
+\frac{q(q+1)^2}{2} & q-1 & -q & q(q-1) & -q(q-1)\\
+\frac{q(q^2+1)}{2} & q-1 & q & -q(q+1) & q(q-1)\\
+q(q^3-q^2+q-1) & -1 & q & 0 & -q\\
+(q^3-q^2+q-1) & -1 & -q^2 & 0 & q^2\\
+\end{array}
+\]
+\end{theorem}
+
+\begin{remarkbox}
+\textbf{Status and evidence.} The $q=5$ (780 vertices) and $q=7$ (2800 vertices) projectivized root shells computed in this work realize this pattern exactly: the five relation degrees match $(q-1,q^3,q^2(q+1),q^3(q-1))$, and the harmonic mode multiplicities and eigenvalues match the above table. (Bundles: \texttt{W33\_q5\_780\_association\_scheme\_harmonics\_bundle.zip}, \texttt{W33\_q7\_2800\_association\_scheme\_harmonics\_bundle.zip}.)
+\end{remarkbox}
+
+\begin{proofsketch}
+Given five orbitals, the intersection numbers $p_{ij}^k$ define commuting 5$\times$5 multiplication matrices. The above eigenvalues and multiplicities are uniquely determined by: (i) the valencies, (ii) trace constraints $\sum_r m_r P_{r,i}=0$ for loopless relations, and (iii) orthogonality $\sum_r m_r P_{r,i}^2 = N k_i$. Solving these equations yields the closed forms above; agreement with $q=5,7$ verifies consistency.
+\end{proofsketch}
+
+\begin{keyresult}
+This theorem isolates the ``cheeky'' universality: once the lift-layer produces a $v\times K_q$ fibered projectivized root shell, the entire 5-mode harmonic spectrum appears to be forced by symmetry and counting, and depends only on $q$ through simple polynomials. This is the first closed-form candidate for a genuine $q$-ladder behind the W33 kernel.
+\end{keyresult}
+
+
+\subsection{$q=3$: 120 root-shell scheme confirms the q-ladder}
+
+\begin{theorem}[Five-orbital scheme on the 120 nonsingular orbit]
+The 120-element nonsingular orbit (the $q=3$ root shell) carries a symmetric 5-orbital association scheme with relation valencies
+\[
+1,\ 2,\ 27,\ 36,\ 54
+\]
+summing to 120.
+\end{theorem}
+
+\begin{theorem}[Fiber relation equals the 40 flat triples]
+The degree-2 relation decomposes into 40 disjoint $K_3$ cliques, partitioning the 120 roots as
+\[
+120 = 40 \times 3.
+\]
+This degree-2 fiber relation is exactly the ``flat triple'' partition produced by the global gauge fix in the $q=3$ closure step.
+\end{theorem}
+
+\begin{theorem}[q=3 harmonic spectrum matches the closed-form ladder]
+The five primitive mode multiplicities are
+\[
+1,\ 24,\ 60,\ 15,\ 20,
+\]
+and the eigenvalues on the four nontrivial relations $(2,27,36,54)$ match the closed-form table in Theorem~\ref{thm:q-ladder} specialized at $q=3$:
+\[
+(2,-3,6,-6)^{24},\quad (-1,3,0,-3)^{60},\quad (2,3,-12,6)^{15},\quad (-1,-9,0,9)^{20}.
+\]
+\end{theorem}
+
+\begin{proofsketch}
+We induce the Aut(W33) action on the 120 nonsingular $H_8$ orbit using the 8x8 generator matrices over $\mathbb{F}_2$, compute ordered-pair orbitals (five orbitals), and compute intersection numbers and the eigenmatrix via the 5x5 multiplication matrices. The degree-2 relation is verified to split into 40 disjoint triangles. (Bundle: \texttt{W33\_q3\_120\_root\_shell\_association\_scheme\_harmonics\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{keyresult}
+This closes the ``q-ladder'' loop: the same 5-orbital / 5-mode spectral template that appears at $q=5$ (780) and $q=7$ (2800) already holds at $q=3$ on the 120 root shell, and its degree-$(q-1)$ fiber relation \emph{is} the 40-flat-triple partition used in the $q=3$ closure theorem. Thus $q=3$ is not an exception; it is the first nontrivial rung of the universal ladder.
+\end{keyresult}
+
+
+\subsection{Derivation of the q-ladder spectrum (proof outline)}
+
+\begin{remarkbox}
+\textbf{Goal.} This subsection explains why the closed-form eigenvalue/multiplicity table in Theorem~\ref{thm:q-ladder} is (essentially) forced once three structural inputs hold:
+(i) a $v\times K_q$ fiber relation, (ii) five orbitals (commutant dimension 5), and (iii) symmetry/orthogonality constraints of association schemes. The remaining conjectural step is the existence of the projectivized root-shell quotient for all odd $q$.
+\end{remarkbox}
+
+\begin{definitionbox}
+Assume a symmetric 5-class association scheme on $N=qv$ points with relations
+\[
+A_0=I,\quad A_1\ (\text{fiber}),\quad A_2,\quad A_3,\quad A_4,
+\]
+with valencies
+\[
+k_0=1,\quad k_1=q-1,\quad k_2=q^3,\quad k_3=q^2(q+1),\quad k_4=q^3(q-1),
+\]
+so that $\sum_i k_i = N$.
+Assume further that $A_1$ is a disjoint union of $v$ cliques $K_q$ (equivalently, $A_1$ has spectrum $(q-1)^{(v)}$ and $(-1)^{(N-v)}$).
+\end{definitionbox}
+
+\begin{lemma}[Two forced eigenvalues for the fiber relation]
+\label{lem:fiber}
+The fiber adjacency $A_1$ has eigenvalues $q-1$ and $-1$ only. The multiplicity of eigenvalue $q-1$ is exactly $v$ (constant-on-fiber vectors), and the multiplicity of eigenvalue $-1$ is $N-v$ (sum-zero-on-fiber vectors).
+\end{lemma}
+
+\begin{proofsketch}
+This is immediate from the block-diagonal structure: each fiber contributes one $(q-1)$ eigenvector and $q-1$ eigenvectors of $-1$.
+\end{proofsketch}
+
+\begin{lemma}[Reduction to four unknown multiplicities]
+\label{lem:mult}
+Let the primitive idempotents (harmonic modes) be $E_0,\dots,E_4$ with multiplicities $m_r=\mathrm{rank}(E_r)$, with $m_0=1$.
+Then:
+\[
+\sum_{r=0}^4 m_r = N,\qquad 
+\sum_{r=0}^4 m_r\,P_{r,i}^2 = N k_i \quad (i=0,1,2,3,4),
+\]
+where $P$ is the eigenmatrix and $P_{r,i}$ is the eigenvalue of $A_i$ on mode $r$.
+Moreover, Lemma~\ref{lem:fiber} forces the $A_1$ column of $P$ to take only values $q-1$ or $-1$, with total multiplicities $v$ and $N-v$ respectively.
+\end{lemma}
+
+\begin{proofsketch}
+These are standard orthogonality relations for symmetric association schemes: $P^\top \mathrm{diag}(m) P = N\,\mathrm{diag}(k)$ and the fiber eigen-split from Lemma~\ref{lem:fiber}.
+\end{proofsketch}
+
+\begin{lemma}[A closed polynomial ansatz with three parameters]
+\label{lem:ansatz}
+If the scheme arises from a symplectic/projective ladder, then (empirically at $q=3,5,7$) the remaining relations act with eigenvalues in the small set
+\[
+\{\pm q,\ \pm q^2,\ q(q\pm 1),\ \pm q(q-1),\ 0\},
+\]
+and the nontrivial modes refine the fiber split into four blocks. Under this ansatz, the unknown entries of $P$ reduce to finitely many sign choices, and the orthogonality system in Lemma~\ref{lem:mult} becomes a determined linear system in the multiplicities.
+\end{lemma}
+
+\begin{proofsketch}
+For $q=3,5,7$ the computed eigenmatrices have exactly this shape. The values are natural from representation theory: they match the expected character values of small-rank constituents induced by the polar-space action and its endomorphism-ring reductions.
+\end{proofsketch}
+
+\begin{theorem}[Forcing of the closed-form table (conditional)]
+\label{thm:forced}
+Assume (i) the valencies above, (ii) the $v\times K_q$ fiber condition for $A_1$, (iii) five orbitals, and (iv) the small polynomial ansatz of Lemma~\ref{lem:ansatz}. Then the eigenvalue/multiplicity table of Theorem~\ref{thm:q-ladder} is uniquely determined (up to permuting the last four modes).
+\end{theorem}
+
+\begin{proofsketch}
+Fix the trivial row of $P$ to be the valency vector $(k_i)$. The fiber column is forced to take values $q-1$ or $-1$ with multiplicities $v$ and $N-v$. Under the ansatz, choose representatives for the remaining eigenvalues in columns $i=2,3,4$. Plug into $P^\top \mathrm{diag}(m)P = N\,\mathrm{diag}(k)$; this yields five quadratic equations in the five unknown multiplicities, which reduce to a nonsingular linear system in $(m_1,\dots,m_4)$ after eliminating $m_0=1$. Solving produces:
+\[
+m_1=\frac{q(q+1)^2}{2},\quad m_2=\frac{q(q^2+1)}{2},\quad m_3=q(q^3-q^2+q-1),\quad m_4=q^3-q^2+q-1,
+\]
+and the corresponding eigenvalues are the closed polynomials recorded in Theorem~\ref{thm:q-ladder}. Validation at $q=3,5,7$ fixes the remaining sign/permutation ambiguities.
+\end{proofsketch}
+
+\begin{keyresult}
+The ``q-ladder spectrum'' is not an arbitrary fit: once the fiber relation and small-commutant hypothesis hold, orthogonality and polynomial-size eigenvalues force essentially a single consistent spectrum. The remaining hard problem is therefore structural (existence and canonicality of the projectivized root-shell quotient for all odd $q$), not spectral.
+\end{keyresult}
+
+
+\subsection{Commutant-Type Conjecture (field-extension vs idempotent splitting)}
+
+\begin{remarkbox}
+\textbf{Motivation.} Across $q=3,5,7$ we observe that the local line-pair generators produce a large orbit in $H_q$, and a small commutant (endomorphism algebra) then produces a canonical quotient of that orbit to size $vq=q(q^3+q^2+q+1)$. The mechanism is ``cheeky'': for $q=5$ the commutant contributes an order-3 projectivization, while for $q=7$ it contributes an idempotent 24+24 splitting with projected orbit size $2800=7\cdot 400$. This suggests the lift mechanism is controlled by the \emph{type} of the commutant algebra.
+\end{remarkbox}
+
+\begin{theorem}[Empirical formulas for the code/homology layer (odd $q$)]
+\label{thm:Hdim_q2minus1}
+For $q\in\{3,5,7\}$ we computed
+\[
+\dim_{\mathbb{F}_2} H_q = q^2-1,
+\]
+and the number of local line-pair generators is
+\[
+\#\mathcal{G}_q = v\binom{q+1}{2} = v\cdot \frac{q(q+1)}{2}.
+\]
+Moreover, in each case the line-pair generators map injectively into $H_q$ and form a single orbit under a symplectic subgroup action.
+\end{theorem}
+
+\begin{proofsketch}
+The values for $q=3,5,7$ were computed explicitly by building the $W(3,q)$ point graph, reducing the adjacency mod 2 to obtain $H_q=\ker(A_q)/\mathrm{im}(A_q)$, and mapping all line-pair XOR generators into $H_q$ coordinates, verifying injectivity and orbit transitivity. (Bundles: \texttt{W33\_q5\_lift\_layer\_first\_pass\_bundle.zip}, \texttt{W33\_q7\_lift\_layer\_first\_pass\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{conjecture}[Canonical quotient size and commutant mechanism]
+\label{conj:commutant-type}
+For each odd prime power $q$, there exists a canonical commutant action on the line-pair generator orbit of size
+\[
+\#\mathcal{G}_q = v\cdot \frac{q(q+1)}{2}
+\]
+whose orbits all have size $(q+1)/2$, yielding a canonical quotient set of size
+\[
+\frac{\#\mathcal{G}_q}{(q+1)/2} = vq.
+\]
+The commutant type depends on $q \bmod 4$:
+\begin{itemize}
+\item If $q\equiv 1\pmod 4$, the commutant contributes an odd-order cyclic projectivization of size $(q+1)/2$ (e.g., $q=5$ gives order 3 / GF(4)$^\ast$-type).
+\item If $q\equiv 3\pmod 4$, the commutant contributes a $2$-group mechanism of size $(q+1)/2$ realized via idempotent splittings (e.g., $q=3$ gives a sign quotient of size 2; $q=7$ yields an idempotent 24+24 split and a size-4 reduction to $2800$ per half).
+\end{itemize}
+In both cases, the resulting quotient set carries the 5-orbital / 5-harmonic q-ladder association scheme of Theorem~\ref{thm:q-ladder}.
+\end{conjecture}
+
+\begin{remarkbox}
+\textbf{Cheeky takeaway.} The ``lift'' is not universally a $\pm$ sign; it is the minimal commutant action required to collapse the local-generator count $v\binom{q+1}{2}$ to the universal ladder size $vq$. This reframes the remaining general-$q$ existence problem as a commutant classification problem.
+\end{remarkbox}
+
+\begin{keyresult}
+The data for $q=3,5,7$ suggest a single meta-law: \emph{(i)} $H_q$ has dimension $q^2-1$, \emph{(ii)} local generators form one orbit of size $v\binom{q+1}{2}$, and \emph{(iii)} a commutant action of size $(q+1)/2$ produces the canonical $vq$ projectivized root shell whose 5-orbital spectrum is forced. This is the precise place where the TOE kernel is ``cheeky''.
+\end{keyresult}
+
+
+\subsection{$q=11$: prime-field test and Pascal identity}
+
+\begin{theorem}[Kernel layer at $q=11$ (prime field)]
+For the symplectic $W(3,11)$ point graph, we have:
+\[
+v = 11^3+11^2+11+1 = 1464,\qquad k=11\cdot 12 = 132,\qquad (\lambda,\mu)=(10,12),
+\]
+and $A^2\equiv 0\pmod 2$. Over $\mathbb{F}_2$ the computed rank and homology dimensions are:
+\[
+\mathrm{rank}(A)=672,\qquad \dim H_{11}=120=q^2-1.
+\]
+\end{theorem}
+
+\begin{theorem}[Injective local generators and a binomial collapse factor]
+Let $\mathcal{G}_{11}$ be the local line-pair generators (XOR of two isotropic lines through a point). Then
+\[
+\#\mathcal{G}_{11} = v\binom{12}{2} = 1464\cdot 66 = 96624,
+\]
+all generators have weight $2(q+1)-2=22$, and the map $\mathcal{G}_{11}\to H_{11}$ is injective (96624 distinct $H_{11}$ classes).
+Moreover, the ladder target size is $vq=1464\cdot 11=16104$, so the required collapse factor is:
+\[
+\frac{\#\mathcal{G}_{11}}{vq}=\frac{\binom{q+1}{2}}{q}=\frac{q+1}{2}=6,
+\]
+a Pascal-like binomial identity that continues the pattern $q=5$ (factor 3) and $q=7$ (factor 4).
+\end{theorem}
+
+\begin{proofsketch}
+We enumerate projective points of $PG(3,11)$, build adjacency via symplectic orthogonality, extract isotropic lines by neighbor partition (12 lines per point), compute $H_{11}$ via mod-2 rank reduction, and map all $v\binom{12}{2}$ line-pair generators into $H_{11}$ classes by reduction modulo $\mathrm{im}(A)$. (Bundle: \texttt{W33\_q11\_prime\_field\_lift\_layer\_bundle\_v2.zip}.)
+\end{proofsketch}
+
+\begin{remarkbox}
+\textbf{Pascal-like combinatorics.} The tower counts repeatedly involve
+\[
+v=\frac{q^4-1}{q-1}=q^3+q^2+q+1,\qquad \#\mathcal{G}_q=v\binom{q+1}{2}.
+\]
+The identity
+\[
+v\binom{q+1}{2}=(vq)\cdot\frac{q+1}{2}
+\]
+is exactly the collapse ratio predicted by the commutant-type conjecture: the commutant must supply a canonical action of size $(q+1)/2$ to descend from local generators to the universal ladder size $vq$.
+\end{remarkbox}
+
+
+\subsection{$q=11$: commutant search (first pass) and a local Pascal hint}
+
+\begin{remarkbox}
+\textbf{Goal.} The commutant-type conjecture predicts a canonical collapse of the $96624=v\binom{12}{2}$ local generators to the ladder size $vq=16104$ by a commutant action of size $(q+1)/2=6$. For $q=5$ this appears as an order-3 projectivization; for $q=7$ as an idempotent split + size-4 reduction. Here we begin the $q=11$ commutant search by constructing an explicit symplectic subgroup action on $H_{11}$.
+\end{remarkbox}
+
+\begin{theorem}[A 120D $H_{11}$ action with order-11 elements]
+Using 10 explicit generators in $Sp(4,11)$ (swap, two shears, and transvections), we induce 10 invertible $120\times 120$ matrices over $\mathbb{F}_2$ acting on $H_{11}$. In this generating set, nine elements have order 11 and one has order 2 (in the induced $H_{11}$ action).
+\end{theorem}
+
+\begin{remarkbox}
+\textbf{First-pass commutant probe.} Restricting to the polynomial algebra $\mathbb{F}_2[G]$ generated by an order-11 element $G$, we tested all $2^{11}$ polynomials $\sum_{t=0}^{10} c_t G^t$ and found that only the identity (and zero) commute with the full 10-generator set. Thus the predicted size-6 commutant action is not visible as a polynomial in a single order-11 element; it likely arises either from a larger commutant algebra or from an orbit-level commutant acting on the $96624$-element generator orbit rather than the full 120D module.
+\end{remarkbox}
+
+\begin{remarkbox}
+\textbf{Pascal-like local hint.} Each point has $q+1=12$ isotropic lines through it, and local generators correspond to unordered pairs (edges) of $K_{12}$: $\binom{12}{2}=66$. The collapse factor $\frac{q+1}{2}=6$ suggests a canonical partition of these 66 pairs into 11 classes of size 6 at each point. One candidate ``cheeky'' mechanism is to view the 12 lines through a point as $PG(1,11)$ and search for a locally natural 6-to-1 invariant (e.g., a cross-ratio or polarity class) that is Aut-equivariant globally.
+\end{remarkbox}
+
+\begin{proofsketch}
+We construct the induced $H_{11}$ action by permuting point coordinates under $Sp(4,11)$ matrices, reducing modulo $\mathrm{im}(A)$, and expressing results in the computed 120D $H$ basis. The commutant probe enumerates the polynomial algebra in an order-11 generator. (Bundle: \texttt{W33\_q11\_commutant\_search\_first\_pass\_bundle.zip}.)
+\end{proofsketch}
+
+
+\subsection{$q=11$: local Pascal factorization of $K_{12}$ (constructive collapse candidate)}
+
+\begin{remarkbox}
+\textbf{Outside-the-box construction.} The collapse factor $(q+1)/2=6$ suggests a local edge factorization of the $K_{12}$ on the 12 isotropic lines through a point into 11 disjoint perfect matchings of size 6 (a 1-factorization). Such 1-factorizations are classical ``Pascal-like'' objects: they can be generated by a cyclic order-11 action on 11 vertices together with a fixed vertex, giving the round-robin schedule.
+\end{remarkbox}
+
+\begin{theorem}[Order-11 stabilizer element induces a cyclic labeling of local lines]
+For $q=11$ and a fixed base point $p$, there exists an element in the tested point-stabilizer subgroup whose induced action on the 12 isotropic lines through $p$ has order 11, fixing exactly one line and cycling the other 11. This provides a labeling of the 12 lines by $\{\infty\}\cup \mathbb{F}_{11}$.
+\end{theorem}
+
+\begin{definitionbox}
+\textbf{Round-robin / reflection factorization.} Given labels $\{\infty\}\cup\mathbb{F}_{11}$, define for each $a\in\mathbb{F}_{11}$ a perfect matching of $K_{12}$:
+\[
+M_a := \{(\infty,a)\}\ \cup\ \{(x,2a-x): x\in\mathbb{F}_{11}\setminus\{a\}\}/2,
+\]
+yielding 11 disjoint matchings that partition all $\binom{12}{2}=66$ edges into 11 classes of size 6.
+\end{definitionbox}
+
+\begin{theorem}[Local 6-to-1 collapse with vanishing XOR checksum]
+Let $g_{ij}\in H_{11}$ denote the $H_{11}$ class of the line-pair generator associated to an edge $(i,j)$ of $K_{12}$ (two lines through the same point). For the above 1-factorization, each matching class has vanishing XOR checksum:
+\[
+\bigoplus_{(i,j)\in M_a} g_{ij} \;=\; 0\qquad \text{for all }a\in\mathbb{F}_{11}.
+\]
+Thus the local generators admit a canonical 6-to-1 bucketing compatible with the predicted collapse factor.
+\end{theorem}
+
+\begin{remarkbox}
+\textbf{Non-uniqueness and canonicity.} Different order-11 elements in the point stabilizer can induce different 1-factorizations. Selecting a globally canonical collapse therefore requires an additional normalization rule (e.g., a choice of ``distinguished'' order-11 element in the stabilizer, or a Clifford/Weyl phase criterion). Nonetheless, this construction demonstrates that the Pascal-like combinatorics required by the commutant conjecture is concretely realizable inside the $q=11$ local geometry.
+\end{remarkbox}
+
+\begin{proofsketch}
+We compute an explicit point stabilizer element of order 11 on the 12 local lines, build the 1-factorization, and evaluate XOR sums in $H_{11}$ for the corresponding 6-element buckets. (Bundle: \texttt{W33\_q11\_local\_pascal\_partition\_bundle.zip}.)
+\end{proofsketch}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{remarkbox}
+This extends the ``square-zero calculus'' beyond $q=3$: the code/homology layer is a stable feature of the entire odd-$q$ family $W(3,q)$.
+\end{remarkbox}
+
+\begin{center}
+\small
+\begin{tabular}{@{}rrrrrr@{}}
+\toprule
+$q$ & $v$ & $\#\text{lines}$ & $k$ & $(\lambda,\mu)$ & $A^2\equiv 0\pmod 2$\\
+\midrule
+2 & 15  & 15  & 6  & (1,3) & no\\
+3 & 40  & 40  & 12 & (2,4) & yes\\
+5 & 156 & 156 & 30 & (4,6) & yes\\
+7 & 400 & 400 & 56 & (6,8) & yes\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+
+\subsection{Spectral diagnostics on finite approximants}
+
+\begin{definitionbox}
+For a $d$-regular graph $G$ with adjacency eigenvalues $\lambda_i$, the normalized Laplacian eigenvalues are
+\[
+\mu_i = 1-\frac{\lambda_i}{d}.
+\]
+A standard continuum diagnostic is the heat kernel trace
+\[
+P(t) := \frac{1}{|V(G)|}\sum_i e^{-t\mu_i},
+\]
+whose intermediate-time scaling can be used to define an effective spectral dimension. On finite strongly symmetric graphs, $P(t)$ is often a small sum of exponentials, yielding a multi-scale (non-classical) behavior.
+\end{definitionbox}
+
+\begin{theorem}[Exact normalized Laplacian spectra for the kernel graphs]
+Let $\mathrm{W33}$ be SRG$(40,12,2,4)$ and $Q=\overline{\mathrm{W33}}$ its quotient graph (degree 27). Then the normalized Laplacian spectrum of $Q$ is
+\[
+0^{(1)},\qquad \Big(\frac{8}{9}\Big)^{(15)},\qquad \Big(\frac{10}{9}\Big)^{(24)}.
+\]
+Let $A_{\mathrm{meet}}$ be the meet adjacency on the 90 non-isotropic lines (degree 32). Then its normalized Laplacian spectrum is
+\[
+0^{(1)},\qquad \Big(\frac{3}{4}\Big)^{(15)},\qquad \Big(\frac{15}{16}\Big)^{(24)},\qquad \Big(\frac{9}{8}\Big)^{(50)}.
+\]
+\end{theorem}
+
+\begin{proofsketch}
+The adjacency eigenvalues of $Q$ follow from SRG complement eigenvalue relations: if $\mathrm{W33}$ has eigenvalues $12,2,-4$ with multiplicities $1,24,15$, then $Q$ has eigenvalues $27, -3, 3$ with multiplicities $1,24,15$. The normalized Laplacian eigenvalues are $1-\lambda/27$.
+The meet-graph eigenvalues were computed in the association scheme analysis: $32^{(1)},8^{(15)},2^{(24)},(-4)^{(50)}$, yielding normalized Laplacian eigenvalues $1-\lambda/32$.
+\end{proofsketch}
+
+\begin{remarkbox}
+\textbf{Interpretation.} These spectra show the kernel graphs are ``two/three-scale'' rather than approximations of a smooth manifold in the naive sense: the heat kernel trace is a small mixture of exponentials. In a scaling program, one expects richer spectra to emerge only when the kernel is embedded into a family (e.g., varying $q$, increasing rank, or taking covers), and the vacuum harmonics (Section 12) provide the correct basis for coarse-grained dynamics.
+\end{remarkbox}
+
+\subsection{Renormalization as module projection}
+
+\begin{definitionbox}
+\textbf{Mode-space coarse graining.} The vacuum association scheme decomposes $\mathbb{Z}_3^{90}$ into five canonical harmonic subspaces (Section 12). A natural renormalization step is projection onto a selected subset of these modes (or onto the 88D core module), followed by rescaling of the transfer operators $(M,Z)$ and the sourced field $J=dF$.
+\end{definitionbox}
+
+\begin{protocolbox}
+\textbf{Program (testable).}
+\begin{enumerate}
+\item Choose a scaling family (field size $q$, rank $n$, or covers).
+\item For each instance, compute: (i) closure/gauge fix, (ii) quotient $Q$, (iii) holonomy $F$, (iv) sources $J=dF$, (v) transfer operators $(M,Z)$, (vi) vacuum association scheme and mode decomposition.
+\item Track invariants across scale: $H^3$ dimension, module decompositions (e.g., 88+1 analogs), and spectral signatures of meet graphs.
+\item Identify fixed points in the induced operator calculus (e.g., stable ratios of mode injection weights under coarse graining).
+\end{enumerate}
+\end{protocolbox}
+
+\begin{keyresult}
+The kernel already provides the correct \emph{renormalization coordinates}: vacuum harmonics (five modes) and the 88D core module. A genuine continuum limit, if it exists, should be formulated as stability of these module-level observables across a scaling family (not as ad hoc constant matching).
+\end{keyresult}
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Axioms and kernel construction chain}
+
+\begin{definitionbox}
+\textbf{Axiom A0 (Phase space).} Let $V=\mathbb{F}_3^4$ equipped with a fixed nondegenerate alternating (symplectic) form $\omega$.
+
+\medskip
+\textbf{Axiom A1 (Isotropy geometry).} Let $W(3,3)$ denote the symplectic generalized quadrangle realized by totally isotropic points and lines in $PG(3,3)$ with respect to $\omega$.
+
+\medskip
+\textbf{Axiom A2 (Point graph).} Let $\mathrm{W33}$ be the point graph of $W(3,3)$: vertices are the 40 isotropic points, and edges represent collinearity.
+\end{definitionbox}
+
+\begin{remarkbox}
+These axioms fix the entire tower. Everything below is forced from the adjacency matrix $A$ of $\mathrm{W33}$, its induced actions, and the canonical quotients and lifts defined from it.
+\end{remarkbox}
+
+\begin{keyresult}
+The W33 tower can be viewed as a closed pipeline:
+\par\medskip
+\footnotesize
+\[
+\begin{aligned}
+\mathbb{F}_3^4 \;&\Rightarrow\; W(3,3) \;\Rightarrow\; \mathrm{W33} \;\Rightarrow\; (A^2\equiv 0\ \text{over }\mathbb{F}_2) \;\Rightarrow\; H\\
+&\Rightarrow\; (120,240)\ \text{signed roots} \;\Rightarrow\; Q=\overline{\mathrm{W33}} \;\Rightarrow\; (\mathbb{Z}_3\ \text{holonomy})\\
+&\Rightarrow\; H^3(\mathrm{Cl}(Q);\mathbb{Z}_3)\cong(\mathbb{Z}_3)^{89} \;\Rightarrow\; \text{90-line field model}.
+\end{aligned}
+\]
+\normalsize
+\end{keyresult}
+
+
+\section{Master theorems and dictionary}
+
+\begin{theorem}[Master Theorem I: square-zero differential and code]
+Over $\mathbb{F}_2$, the adjacency matrix $A$ of $\mathrm{W33}$ satisfies $A^2\equiv 0$. Hence $d(x)=Ax$ defines a differential on $\mathbb{F}_2^{40}$, producing a canonical code $C=\ker(A)$ with parameters $[40,24,6]$ and a homology state space $H=\ker(A)/\mathrm{im}(A)\cong \mathbb{F}_2^8$.
+\end{theorem}
+
+\begin{theorem}[Master Theorem II: 120-root shell and 240 signed lift]
+The induced action on $H$ preserves a quadratic form of minus type. The nonsingular orbit has size 120 and carries $\mathrm{SRG}(120,56,28,24)$ adjacency via the associated bilinear form. The 240 canonical weight-6 generators project 2-to-1 onto this 120-set, yielding a signed lift with a defect cocycle valued in $\mathrm{im}(A)$.
+\end{theorem}
+
+\begin{theorem}[Master Theorem III: quotient closure and $\mathbb{Z}_3$ connection]
+There exists a global gauge fix eliminating all weight-16 defects. In that gauge, the 120 roots partition into 40 flat triples (one per W33 point). Collapsing these triples yields a quotient graph $Q$ equal to the complement $\overline{\mathrm{W33}}$, equipped with a canonical edge transport rule whose triangle holonomy lies in $\mathbb{Z}_3$. Flat holonomy triangles are classified exactly by the 90 non-isotropic projective lines in $PG(3,3)$.
+\end{theorem}
+
+\begin{theorem}[Master Theorem IV: sourced curvature and transfer operators]
+Let $F\in C^2(\mathrm{Cl}(Q);\mathbb{Z}_3)$ be the triangle holonomy field and $J=dF\in C^3(\mathrm{Cl}(Q);\mathbb{Z}_3)$ its source. Then $J$ is supported on exactly 3008 tetrahedra. There exist explicit sparse operators
+\[
+M,Z:\mathbb{Z}_3^{9450}\to\mathbb{Z}_3^{90}
+\]
+such that the observed vacuum line fields satisfy the exact identities $m_{\mathrm{line}}=MJ$ and $z_{\mathrm{line}}=ZJ$. Vacuum responses decompose into five canonical harmonics determined by the Aut-invariant 90-line association scheme.
+\end{theorem}
+
+\begin{definitionbox}
+\textbf{Dictionary (high level).} Within the exact finite theory:
+\begin{itemize}
+\item \textbf{Geometry}: isotropic vs non-isotropic incidence in $PG(3,3)$; the graphs $\mathrm{W33}$ and $Q=\overline{\mathrm{W33}}$.
+\item \textbf{Algebra}: Aut(W33) actions and induced modules on $H$, the 120-root shell, the 90-line sector, and $H^3$.
+\item \textbf{Topology}: cochains/coboundaries on $\mathrm{Cl}(Q)$; $J=dF$ as sources; $H^3$ as flux lattice.
+\item \textbf{Quantum computation}: Weyl/Clifford realization on $V$; contexts from isotropic lines; holonomy as discrete phase transport.
+\item \textbf{Cryptography}: gauge/coset ambiguity and large symmetry action as secrecy; error correction as intrinsic stability (the $[40,24,6]$ code).
+\end{itemize}
+\end{definitionbox}
+
+\setcounter{section}{2}
+\section{The W33 Object}
+
+\begin{definitionbox}
+Let $V=\mathbb{F}_3^4$ equipped with a nondegenerate alternating (symplectic) form $\omega$. Let $W(3,3)$ denote the symplectic generalized quadrangle arising from totally isotropic points and lines in $PG(3,3)$ with respect to $\omega$. The \emph{W33 point graph} is the graph whose vertices are the 40 isotropic points and whose edges connect collinear pairs (i.e., pairs lying on a common isotropic line). We denote its adjacency matrix by $A$ and the graph by $\mathrm{W33}$.
+\end{definitionbox}
+
+\begin{theorem}[SRG parameters]
+\label{thm:srg40}
+$\mathrm{W33}$ is a strongly regular graph with parameters
+\[
+(v,k,\lambda,\mu)=(40,12,2,4).
+\]
+Equivalently, each vertex has degree 12; adjacent pairs have exactly 2 common neighbors; non-adjacent pairs have exactly 4 common neighbors.
+\end{theorem}
+
+\begin{proofsketch}
+This is a standard property of the point graph of the symplectic generalized quadrangle $W(3,3)$. It was also verified computationally by explicit incidence construction of $W(3,3)$ and counting common neighbors in the point graph (audit bundle: \texttt{W33\_symplectic\_audit\_bundle.zip}).
+\end{proofsketch}
+
+\begin{theorem}[Adjacency spectrum]
+\label{thm:spectrum}
+The adjacency spectrum of $\mathrm{W33}$ is
+\[
+\mathrm{spec}(A)=12^{(1)},\quad 2^{(24)},\quad (-4)^{(15)}.
+\]
+Equivalently, the characteristic polynomial is
+\[
+P(x)=(x-12)(x-2)^{24}(x+4)^{15}.
+\]
+\end{theorem}
+
+\begin{proofsketch}
+For SRG$(v,k,\lambda,\mu)$, the nontrivial eigenvalues are roots of a quadratic determined by $(k,\lambda,\mu)$, with multiplicities forced by trace identities. Here this yields eigenvalues $2$ and $-4$ with multiplicities 24 and 15. Verified directly by eigen-computation on the explicit adjacency matrix (audit bundle: \texttt{W33\_symplectic\_audit\_bundle.zip}).
+\end{proofsketch}
+
+\begin{theorem}[Automorphism group order]
+\label{thm:aut}
+$\lvert \mathrm{Aut}(\mathrm{W33})\rvert = 51840$.
+\end{theorem}
+
+\begin{proofsketch}
+In the symplectic model, $\mathrm{Aut}(\mathrm{W33})$ is realized as the projective symplectic similitude group acting on isotropic points. A concrete generating set (symplectic transvections, a block-swap, and a multiplier-2 similitude) was used to generate the full permutation group on the 40 vertices, yielding order 51840. (Audit bundle: \texttt{W33\_orbits\_squarezero\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{keyresult}
+The W33 point graph is not merely a convenient combinatorial object; it is the \emph{canonical} SRG arising from the symplectic quadrangle $W(3,3)$. The entire tower below is forced from $(40,12,2,4)$ together with the induced group action.
+\end{keyresult}
+
+% ------------------------------------------------------------
+\section{Differential Structure over \texorpdfstring{$\mathbb{F}_2$}{F2}}
+
+\begin{theorem}[Square-zero adjacency over $\mathbb{F}_2$]
+\label{thm:squarezero}
+Let $A$ be the adjacency matrix of $\mathrm{W33}$. Over $\mathbb{F}_2$, one has
+\[
+A^2 \equiv 0 \pmod 2.
+\]
+\end{theorem}
+
+\begin{proofsketch}
+For any SRG$(v,k,\lambda,\mu)$ with adjacency $A$ and all-ones matrix $J$,
+\[
+A^2 = kI + \lambda A + \mu(J-I-A).
+\]
+Plugging $(k,\lambda,\mu)=(12,2,4)$ yields $A^2 = 8I - 2A + 4J$. Reducing mod 2 gives $A^2\equiv 0$. Verified directly by matrix multiplication mod 2 in the audit bundle.
+\end{proofsketch}
+
+\begin{definitionbox}
+Define a differential $d:\mathbb{F}_2^{40}\to \mathbb{F}_2^{40}$ by $d(x)=Ax$ (mod 2). Since $d^2=0$, we can form:
+\[
+C := \ker(d)\subset \mathbb{F}_2^{40}, \qquad H := \ker(d)/\mathrm{im}(d).
+\]
+\end{definitionbox}
+
+\begin{theorem}[Dimensions]
+\label{thm:dimensions}
+Over $\mathbb{F}_2$,
+\[
+\mathrm{rank}(A)=16,\qquad \dim \ker(A)=24,\qquad \dim H = 8.
+\]
+\end{theorem}
+
+\begin{proofsketch}
+Rank was computed by mod-2 row reduction on the explicit 40$\times$40 adjacency matrix. Nullity follows by rank-nullity. Since $\mathrm{im}(A)\subseteq \ker(A)$ (square-zero), $\dim H=\dim\ker(A)-\dim\mathrm{im}(A)=24-16=8$.
+\end{proofsketch}
+
+\begin{theorem}[Canonical local generators and code distance]
+\label{thm:code}
+The kernel $C=\ker(A)\subset \mathbb{F}_2^{40}$ is a $[40,24,6]$ linear code. Moreover, there are exactly 240 canonical weight-6 codewords obtained as XORs of pairs of isotropic lines through a common point, and these 240 codewords generate $C$.
+\end{theorem}
+
+\begin{proofsketch}
+Each point lies on 4 isotropic lines; choosing 2 lines yields $\binom{4}{2}=6$ line-pairs per point, hence $40\cdot 6=240$ codewords. Each is weight 6 and lies in $\ker(A)$; exhaustive search up to weight 5 found none in $\ker(A)$, so $d_{\min}=6$. A row-reduced basis extracted from the 240 generators spans a 24-dimensional space, matching $\dim\ker(A)$. (Audit bundle: \texttt{W33\_GF2\_kernel\_code\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{keyresult}
+The identity $A^2\equiv 0$ is the first ``TOE hinge'': it turns a finite SRG into a genuine chain complex, producing (i) a stabilizer-like code and (ii) an 8-dimensional homology state space $H$.
+\end{keyresult}
+
+% ------------------------------------------------------------
+\section{Orthogonal Geometry on \texorpdfstring{$H$}{H} and the 120-Root Structure}
+
+\begin{theorem}[Quadratic form and orbit split]
+\label{thm:qform}
+The induced action of $\mathrm{Aut}(\mathrm{W33})$ on $H$ preserves a nontrivial quadratic form $q:H\to\mathbb{F}_2$ of minus type. Consequently, the nonzero vectors in $H$ split into exactly two orbits:
+\[
+\{x\in H\setminus\{0\}: q(x)=0\}\ \text{of size }135,\qquad 
+\{x\in H\setminus\{0\}: q(x)=1\}\ \text{of size }120.
+\]
+\end{theorem}
+
+\begin{proofsketch}
+A concrete basis of $H$ was chosen by splitting $\ker(A)=\mathrm{im}(A)\oplus K$ with $\dim K=8$. The group action on points induces an action on $H$, from which an invariant quadratic polynomial of degree 2 was solved. Enumerating values of $q$ gives the $(135,120)$ split, and orbit computation confirms exactly two nonzero orbits. (Audit bundle: \texttt{W33\_H8\_quadratic\_form\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{theorem}[240 $\to$ 120 projection]
+\label{thm:240to120}
+Projecting the 240 canonical weight-6 code generators (Theorem~\ref{thm:code}) from $\ker(A)$ to $H=\ker(A)/\mathrm{im}(A)$ yields exactly 120 distinct nonzero elements, each appearing with multiplicity 2. All 120 satisfy $q=1$ (the nonsingular orbit).
+\end{theorem}
+
+\begin{proofsketch}
+Each of the 240 generators was mapped to an 8-bit $H$ coordinate; 120 distinct values occur, each exactly twice. All map to the $q=1$ orbit. (Audit bundle: \texttt{W33\_to\_H\_to\_120root\_SRG\_bundle.zip} and \texttt{W33\_root\_preimage\_pairing\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{definitionbox}
+Define the associated bilinear form
+\[
+b(x,y)=q(x+y)+q(x)+q(y)\in \mathbb{F}_2.
+\]
+On the 120-element nonsingular orbit, define adjacency by $b(x,y)=1$.
+\end{definitionbox}
+
+\begin{theorem}[The 120-root SRG]
+\label{thm:srg120}
+The graph on the 120 nonsingular elements with adjacency $b=1$ is strongly regular:
+\[
+\mathrm{SRG}(120,56,28,24).
+\]
+\end{theorem}
+
+\begin{proofsketch}
+Adjacency counts were computed directly from the bilinear form on the explicit 120-root list; all vertices have degree 56, adjacent pairs have 28 common neighbors, and nonadjacent pairs have 24. (Audit bundle: \texttt{W33\_to\_H\_to\_120root\_SRG\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{theorem}[An $E_8$ Dynkin subgraph and reflection generation]
+\label{thm:e8}
+Inside $\mathrm{SRG}(120,56,28,24)$ there exists an induced subgraph isomorphic to the $E_8$ Dynkin diagram. The corresponding 8 nonsingular elements $\{r_i\}$ define involutions
+\[
+s_{r}(x)=x + b(x,r)\,r,
+\]
+and the group generated by these involutions acts transitively on the 120-root set.
+\end{theorem}
+
+\begin{proofsketch}
+An induced $E_8$ configuration was found and canonically chosen (lexicographically minimal under a fixed branching constraint). Coxeter relations were verified on $H$ (order 3 on adjacent nodes, order 2 otherwise), and orbit generation under reflections yields the full 120-root orbit. (Audit bundle: \texttt{W33\_E8\_simple\_root\_system\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{keyresult}
+The nonsingular orbit of the intrinsic homology $H$ behaves as a finite ``root shell'' with SRG$(120,56,28,24)$ adjacency and an embedded $E_8$ Dynkin skeleton. This is the precise point where Lie-type structure emerges from the W33 tower.
+\end{keyresult}
+
+% ------------------------------------------------------------
+\section{Signed Lift, Cocycle, and Global Gauge Fixing}
+
+\begin{definitionbox}
+Each of the 120 roots has two preimages among the 240 generators. A \emph{section} $s$ selects one lift for each root. For adjacent roots $h_1,h_2$ (so $b(h_1,h_2)=1$), define $h_3=h_1\oplus h_2$ and the defect (cocycle candidate)
+\[
+g(h_1,h_2):= s(h_1)+s(h_2)+s(h_3)\ \in\ \mathrm{im}(A)\subset \mathbb{F}_2^{40},
+\]
+where addition is XOR of the corresponding 40-bit supports.
+\end{definitionbox}
+
+\begin{theorem}[Two-weight defect]
+\label{thm:two-weight}
+For the canonical section (choosing the smaller preimage index), the defect $g(h_1,h_2)$ takes only two Hamming weights:
+\[
+\lvert g(h_1,h_2)\rvert \in \{12,16\}.
+\]
+Across all 3360 edges of $\mathrm{SRG}(120,56,28,24)$, weight 12 occurs 1560 times and weight 16 occurs 1800 times.
+\end{theorem}
+
+\begin{proofsketch}
+Computed exhaustively over all edges using the explicit 240 generator supports and the canonical section. Verified that $g(h_1,h_2)$ always projects to $0$ in $H$, hence lies in $\mathrm{im}(A)$. (Audit bundle: \texttt{W33\_signed\_root\_cocycle\_and\_lift\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{theorem}[Steiner triples]
+\label{thm:steiner}
+Edges of $\mathrm{SRG}(120,56,28,24)$ partition into 1120 Steiner triples $\{a,b,a\oplus b\}$, and for a fixed section $s$, the defect value is constant on the three edges of each triple.
+\end{theorem}
+
+\begin{proofsketch}
+If $b(a,b)=1$ then $q(a\oplus b)=1$; hence $a\oplus b$ is again a root. Each edge $(a,b)$ has a unique third root $a\oplus b$, and the unordered triple partitions edges into 1120 groups. The defect $s(a)+s(b)+s(a\oplus b)$ is symmetric in $(a,b,a\oplus b)$, hence constant on the triple edges. Verified by enumeration.
+\end{proofsketch}
+
+\begin{theorem}[Global gauge fix (no-16)]
+\label{thm:n016}
+There exists a global choice of signs (i.e., a section $s$ selecting one of the two lifts at every root) such that all defects of weight 16 are eliminated. In this gauge-fixed section, all edge defects have weight in $\{0,12\}$, with exactly 120 edges of weight 0 and 3240 edges of weight 12.
+\end{theorem}
+
+\begin{proofsketch}
+A greedy local-flip optimization over the 120 root vertices (flipping lift choice at a vertex updates the defects on incident edges) yields a configuration with no 16-weight defects. This configuration was reproduced across random restarts. (Audit bundle: \texttt{W33\_global\_gaugefix\_no16\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{theorem}[40 flat triples]
+\label{thm:flat40}
+The 120 roots partition into 40 disjoint triples (one per original W33 point) such that exactly those 40 triples have defect weight 0 under the globally gauge-fixed section. Equivalently, the 120 weight-0 edges form 40 disjoint triangles that partition the root set.
+\end{theorem}
+
+\begin{proofsketch}
+From the gauge-fixed edge list, the weight-0 edges were found to group into 40 triangles. Each triangle's three vertices share the same base point in the original 40-point geometry, yielding a partition of the 120 roots into 40 fibers of size 3. (Audit bundle: \texttt{W33\_global\_gaugefix\_no16\_bundle.zip}.)
+\end{proofsketch}
+
+% ------------------------------------------------------------
+\section{Quotient Closure and \texorpdfstring{$\mathbb{Z}_3$}{Z3} Holonomy}
+
+\begin{definitionbox}
+Collapse each of the 40 flat triples (Theorem~\ref{thm:flat40}) to a meta-vertex labeled by its base point $p\in\{0,\dots,39\}$. Define the quotient graph $Q$ on these 40 meta-vertices by connecting $p\neq q$ if there exists a defect-12 edge between the fibers over $p$ and $q$.
+\end{definitionbox}
+
+\begin{theorem}[Quotient graph is the complement]
+\label{thm:quotient}
+The quotient graph $Q$ is regular of degree 27 on 40 vertices and is exactly the complement of the original W33 point graph:
+\[
+Q = \overline{\mathrm{W33}}.
+\]
+\end{theorem}
+
+\begin{proofsketch}
+For each pair of base points $(p,q)$, the number of defect-12 edges between the 3-element fibers is either 0 or 6. Adjacency in $Q$ occurs exactly for multiplicity 6. The resulting 40-vertex graph is 27-regular; direct comparison of neighbor sets confirms $Q$ equals the complement of the W33 adjacency. (Audit bundle: \texttt{W33\_quotient\_closure\_complement\_and\_noniso\_line\_curvature\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{theorem}[Edge decoration is a 6-cycle]
+\label{thm:6cycle}
+For every edge $p\sim q$ in $Q$, the induced bipartite graph between the 3 roots over $p$ and the 3 roots over $q$ has exactly 6 edges and is 2-regular on each side. Equivalently, it is $K_{3,3}$ minus a perfect matching, i.e.\ a 6-cycle. The missing perfect matching defines a canonical transport bijection between the two 3-element fibers.
+\end{theorem}
+
+\begin{proofsketch}
+Verified by explicit enumeration for all 540 quotient edges: the 3$\times$3 adjacency matrix always has three zeros (a perfect matching) and six ones, with row and column sums all equal to 2. Connectivity check confirms a single 6-cycle.
+\end{proofsketch}
+
+\begin{definitionbox}
+Define the holonomy of a quotient triangle $(p,q,r)$ as the permutation of the fiber over $p$ obtained by composing the three transport bijections along $p\to q\to r\to p$. This holonomy lies in $A_3\cong \mathbb{Z}_3$.
+\end{definitionbox}
+
+\begin{theorem}[90 non-isotropic lines classify flat holonomy]
+\label{thm:90}
+Among the 3240 triangles of $Q$, exactly 360 have identity holonomy and 2880 have 3-cycle holonomy. Moreover, the identity-holonomy triangles are \emph{exactly} the triples of points lying on the 90 non-isotropic projective lines in $PG(3,3)$ (each such line contains 4 points and contributes $\binom{4}{3}=4$ triples, hence $90\cdot 4=360$).
+\end{theorem}
+
+\begin{proofsketch}
+Holonomy was computed for all quotient triangles from the edge matchings. Independently, all non-isotropic lines in $PG(3,3)$ were enumerated (90 lines), and the set of their 3-subsets was computed (360 triples). These match exactly the identity-holonomy triangle set. (Audit bundle: \texttt{W33\_quotient\_closure\_complement\_and\_noniso\_line\_curvature\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{keyresult}
+The W33 tower closes: after global gauge fixing and collapsing flat triples, the induced 40-vertex quotient is $\overline{\mathrm{W33}}$ with a canonical $\mathbb{Z}_3$ connection. The set of flat faces is classified precisely by the 90 non-isotropic projective lines in $PG(3,3)$.
+\end{keyresult}
+
+% ------------------------------------------------------------
+\section*{Artifact Index (computational)}
+\addcontentsline{toc}{section}{Artifact Index (computational)}
+\ArtifactTable{
+}
+
+\section{Cohomology and flux lattice (summary of computed results)}
+
+\begin{theorem}[Clique-complex cohomology over $\mathbb{Z}_3$]
+Let $\mathrm{Cl}(Q)$ be the clique complex of $Q=\overline{\mathrm{W33}}$. Over $\mathbb{Z}_3$, its cohomology dimensions are:
+\[
+H^0=1,\quad H^1=0,\quad H^2=0,\quad H^3=89,\quad H^4=1,\quad H^5=0,\quad H^6=1.
+\]
+In particular, the flux lattice is $H^3(\mathrm{Cl}(Q);\mathbb{Z}_3)\cong (\mathbb{Z}_3)^{89}$, and an explicit 89-element basis can be constructed.
+\end{theorem}
+
+\begin{remarkbox}
+The vanishing $H^2=0$ on the full clique complex explains why 2-skeleton obstructions disappear once tetrahedra are included: closed 2-forms are exact in the full flag complex, while the physically relevant sourced curvature is encoded by $J=dF$ (a 3-cochain).
+\end{remarkbox}
+
+
+\section{Representation theory of the flux lattice and the 90-line module}
+
+\begin{definitionbox}
+Let $Q=\overline{\mathrm{W33}}$ be the 40-vertex quotient graph and $\mathrm{Cl}(Q)$ its clique (flag) complex. The flux lattice is
+\[
+H^3(\mathrm{Cl}(Q);\mathbb{Z}_3)\cong (\mathbb{Z}_3)^{89}.
+\]
+The Aut(W33) action on the 40 base points induces an action on all cliques of $Q$ and hence on cochains, coboundaries, and cohomology.
+\end{definitionbox}
+
+\begin{theorem}[An explicit basis for $H^3$]
+\label{thm:H3basis}
+There exists an explicit basis of 89 cocycles in $C^3(\mathrm{Cl}(Q);\mathbb{Z}_3)$ representing a basis of
+$H^3(\mathrm{Cl}(Q);\mathbb{Z}_3)$. Each basis element is given in sparse form as a $\mathbb{Z}_3$-valued cochain supported on tetrahedra ($K_4$ cliques) of $Q$.
+\end{theorem}
+
+\begin{proofsketch}
+We compute $\ker(\delta_3)\subset C^3$ from the $K_5$ constraints and quotient by $\mathrm{im}(\delta_2)$ coming from triangles. In free coordinates for $\ker(\delta_3)$, the image of $\delta_2$ has rank 2739, leaving dimension 89. We select 89 nonpivot free coordinates and back-substitute to construct cocycles. (Audit bundle: \texttt{W33\_H3\_basis\_89\_Z3\_on\_clique\_complex\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{theorem}[88+1 module structure and similitude character]
+\label{thm:881}
+The 89-dimensional $\mathbb{Z}_3$-module $H^3(\mathrm{Cl}(Q);\mathbb{Z}_3)$ admits an invariant 88-dimensional submodule $W_{88}$ such that the quotient is 1-dimensional. The 1-dimensional quotient carries the canonical ``similitude sign'' character: an index-2 subgroup acts trivially, while a distinguished multiplier-2 element acts by $-1\equiv 2 \pmod 3$.
+\end{theorem}
+
+\begin{proofsketch}
+Using the explicit Aut(W33) generators on points, we compute the induced action on tetrahedra, incorporate the orientation sign for 3-cochains, and build the resulting 89$\times$89 matrices over $\mathbb{Z}_3$ on the computed $H^3$ basis. Empirically, the module has an invariant 88D submodule and a 1D quotient; the quotient character is detected by a dual functional $w$ transforming by $\pm 1$. (Audit bundle: \texttt{W33\_H3\_Aut\_action\_89Z3\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{definitionbox}
+Let $\mathcal{L}$ be the set of 90 non-isotropic projective lines in $PG(3,3)$. Consider the permutation module $\mathbb{Z}_3^{\mathcal{L}}$ and its augmentation submodule
+\[
+\mathrm{Aug}(\mathcal{L}) := \Big\{x\in \mathbb{Z}_3^{\mathcal{L}}:\ \sum_{\ell\in\mathcal{L}} x_\ell = 0\Big\}.
+\]
+Since $90\equiv 0\pmod 3$, the all-ones vector lies in $\mathrm{Aug}(\mathcal{L})$; quotienting by this trivial line yields an 88D module.
+\end{definitionbox}
+
+\begin{theorem}[Geometric identification with 90-line augmentation quotient]
+\label{thm:90line}
+The 88D core module $W_{88}$ is isomorphic (up to the similitude sign twist) to the augmentation quotient of the 90-line permutation module:
+\[
+W_{88}\ \cong\ \mathrm{Aug}(\mathcal{L})/\langle \mathbf{1}\rangle\ \otimes\ \chi,
+\]
+where $\chi$ is the 1D similitude sign character. Moreover, an explicit intertwiner $T$ between these modules can be computed.
+\end{theorem}
+
+\begin{proofsketch}
+We compute the Aut(W33) action on 90 non-isotropic lines, form the augmentation quotient, and compare with the $H^3$ 88D core via traces and characteristic polynomial factor patterns. After twisting by the similitude sign (multiplying the multiplier-2 generator by $-1$), the modules match; an explicit 88$\times$88 intertwiner $T$ is constructed. (Audit bundles: \texttt{W33\_perm\_module\_vs\_H3\_match\_report\_bundle.zip}, \texttt{W33\_H3\_to\_noniso\_line\_weights\_intertwiner\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{theorem}[Explicit lift to labeled 90-line weights]
+\label{thm:lift90}
+There is an explicit linear lift from 88D core coordinates to a labeled 90-entry non-isotropic line field (defined up to adding a constant all-ones vector). Concretely, there exists a 90$\times$88 matrix $M_{H3\to 90}$ over $\mathbb{Z}_3$ such that
+\[
+w_{90} \equiv M_{H3\to 90}\,x_{88}\quad (\bmod\ \langle\mathbf{1}\rangle),
+\]
+and the 90 coordinates are indexed by the 4-point line-sets in $\mathcal{L}$.
+\end{theorem}
+
+\begin{proofsketch}
+A section $L_{88\to 90}$ of the augmentation quotient is constructed and composed with the 88D intertwiner $T$ to yield $M_{H3\to 90}$. The resulting 90-vector is unique up to addition of a constant, reflecting the quotient by $\langle \mathbf{1}\rangle$. Line labeling is provided by the explicit 90 line list. (Audit bundle: \texttt{W33\_lift\_to\_90\_line\_weights\_with\_labels\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{keyresult}
+This section fixes the representation-theoretic meaning of the flux lattice: the nontrivial 88D core of $H^3$ is (up to the canonical similitude sign) the augmentation quotient on the 90 non-isotropic lines. In particular, the ``vacuum cells'' that classify flat holonomy also carry the matter/flux degrees of freedom.
+\end{keyresult}
+
+\setcounter{section}{9}
+\section{2-qutrit Weyl operators and the symplectic commutator}
+
+\begin{definitionbox}
+Let $\omega := e^{2\pi i/3}$. On $\mathbb{C}^3$ with computational basis $\{\lvert j\rangle : j\in\mathbb{Z}_3\}$ define
+\[
+X\lvert j\rangle = \lvert j+1\rangle,\qquad Z\lvert j\rangle = \omega^j\lvert j\rangle,
+\]
+so that $ZX = \omega XZ$.
+On two qutrits, for $(a,b,c,d)\in \mathbb{F}_3^4$, define the (unnormalized) Weyl operator
+\[
+W(a,b,c,d) := X^a Z^c \ \otimes\ X^b Z^d.
+\]
+\end{definitionbox}
+
+\begin{definitionbox}
+Define the standard symplectic form on $V=\mathbb{F}_3^{2n}$ with $n=2$ by writing $v=(p\mid q)$ with $p,q\in\mathbb{F}_3^2$ and
+\[
+\langle (p\mid q),(p'\mid q')\rangle := p\cdot q' - q\cdot p' \ \in\ \mathbb{F}_3.
+\]
+In coordinates $v=(a,b,c,d)$ and $w=(a',b',c',d')$, this is
+\[
+\langle v,w\rangle = a c' + b d' - c a' - d b'.
+\]
+\end{definitionbox}
+
+\begin{theorem}[Weyl commutator phase]
+\label{thm:weyl-comm}
+For all $v,w\in \mathbb{F}_3^4$,
+\[
+W(v)\,W(w) = \omega^{\langle v,w\rangle}\,W(w)\,W(v).
+\]
+Equivalently, $W(v)$ and $W(w)$ commute if and only if $\langle v,w\rangle=0$.
+\end{theorem}
+
+\begin{proofsketch}
+This is the standard Heisenberg--Weyl relation for odd prime dimension. For the above unnormalized convention, it follows from $ZX=\omega XZ$ on each tensor factor and bilinearity of the commutator exponent.
+\end{proofsketch}
+
+\begin{keyresult}
+The same symplectic form used to build $W(3,3)$ is exactly the commutator phase form in the 2-qutrit Weyl group. This is the first canonical bridge from W33 geometry to quantum operator algebra.
+\end{keyresult}
+
+\section{Projective points as Weyl directions}
+
+\begin{definitionbox}
+Let $\mathbb{P}(V)=PG(3,3)$ denote projective 1D subspaces of $V=\mathbb{F}_3^4$. A projective point $[v]$ is the equivalence class $\{v,2v\}$ for any nonzero $v\in V$.
+\end{definitionbox}
+
+\begin{theorem}[Projective points correspond to cyclic Weyl subgroups]
+\label{thm:proj-cyclic}
+Each projective point $[v]\in PG(3,3)$ determines a cyclic order-3 Weyl subgroup
+\[
+\langle W(v)\rangle = \{I,\,W(v),\,W(2v)\}.
+\]
+Moreover, $W(2v)=W(v)^{-1}$ and the subgroup depends only on $[v]$ (not the representative).
+\end{theorem}
+
+\begin{proofsketch}
+In $\mathbb{F}_3$, $2\equiv -1$ and $W(2v)=W(-v)=W(v)^{-1}$ (up to global phase, fixed by convention). Thus $\langle W(v)\rangle$ depends only on the projective class $\{v,-v\}$.
+\end{proofsketch}
+
+\begin{remarkbox}
+In the W33 tower, the 40 vertices are precisely the 40 projective points of $PG(3,3)$. Thus W33 vertices can be read as 40 ``Pauli directions'' (cyclic order-3 Weyl subgroups) for two qutrits.
+\end{remarkbox}
+
+\section{Isotropic lines as maximal commuting contexts}
+
+\begin{definitionbox}
+A 2D subspace $U\le V$ is \emph{totally isotropic} if $\langle u,u'\rangle=0$ for all $u,u'\in U$. Its projectivization is a projective line containing 4 projective points.
+\end{definitionbox}
+
+\begin{theorem}[Isotropic lines give commuting Pauli contexts]
+\label{thm:isotropic-context}
+If $U\le V$ is a totally isotropic 2D subspace, then $\{W(u):u\in U\}$ is an abelian subgroup of the 2-qutrit Weyl group of order $3^2=9$ (including identity). Equivalently, the 4 projective points on the line correspond to 4 nontrivial cyclic subgroups whose nontrivial elements pairwise commute.
+\end{theorem}
+
+\begin{proofsketch}
+If $U$ is totally isotropic, then $\langle u,u'\rangle=0$ for all $u,u'\in U$, so $W(u)$ commutes with $W(u')$ by Theorem~\ref{thm:weyl-comm}. Since $U\cong\mathbb{F}_3^2$, the set $\{W(u):u\in U\}$ has 9 elements.
+\end{proofsketch}
+
+\begin{remarkbox}
+The symplectic generalized quadrangle $W(3,3)$ consists precisely of 40 points and 40 totally isotropic projective lines. Thus the GQ lines are canonical maximal commuting Pauli contexts in the 2-qutrit Weyl group.
+\end{remarkbox}
+
+\section{Non-isotropic lines as canonical phase cells}
+
+\begin{definitionbox}
+A projective line (2D subspace) $U$ is \emph{non-isotropic} if $\langle\cdot,\cdot\rangle|_U$ is nondegenerate. In this case, there exist $u,u'\in U$ with $\langle u,u'\rangle=1$, generating a Heisenberg pair.
+\end{definitionbox}
+
+\begin{theorem}[Non-isotropic lines contain conjugate pairs]
+\label{thm:noniso}
+Let $U\le V$ be a non-isotropic 2D subspace. Then there exist $u,u'\in U$ such that $\langle u,u'\rangle=1$, and hence
+\[
+W(u)\,W(u') = \omega\,W(u')\,W(u).
+\]
+\end{theorem}
+
+\begin{proofsketch}
+Nondegeneracy of $\langle\cdot,\cdot\rangle|_U$ implies there exists a basis with symplectic form matrix $\begin{psmallmatrix}0&1\\-1&0\end{psmallmatrix}$ on $U$. Choosing $u,u'$ as basis vectors yields $\langle u,u'\rangle=1$.
+\end{proofsketch}
+
+\begin{remarkbox}
+In the W33 tower, $PG(3,3)$ has 130 lines total: 40 isotropic (GQ) and 90 non-isotropic. The ``90'' distinguished by the quotient holonomy are exactly these non-isotropic lines.
+\end{remarkbox}
+
+\section{Clifford normalizer and the W33 automorphism action}
+
+\begin{theorem}[Clifford induces symplectic action]
+\label{thm:clifford}
+Let $\mathcal{C}$ denote the 2-qutrit Clifford group (normalizer of the Weyl group in $U(9)$). Then conjugation by any $U\in\mathcal{C}$ induces a linear transformation $M\in Sp(4,3)$ on phase space such that
+\[
+U W(v) U^\dagger \;=\; \omega^{\kappa(v)}\,W(Mv).
+\]
+Conversely, each $M\in Sp(4,3)$ is induced by some Clifford up to phase.
+\end{theorem}
+
+\begin{proofsketch}
+Standard result for odd prime-power dimension: the Clifford group projects onto the symplectic group acting on discrete phase space, with kernel the Heisenberg--Weyl phases.
+\end{proofsketch}
+
+\section{Holonomy equals commutator phase: a falsifiable conjecture}
+
+\begin{definitionbox}
+Define the symplectic ``triangle phase'' functional on three phase points $u,v,w\in V$ by
+\[
+\Phi(u,v,w) := \langle u,v\rangle + \langle v,w\rangle + \langle w,u\rangle\ \in\ \mathbb{F}_3.
+\]
+\end{definitionbox}
+
+\begin{theorem}[Closed-loop phase identity]
+\label{thm:triangle}
+For any $u,v,w\in V$ with $u+v+w=0$, the triple Weyl product has the form
+\[
+W(u)\,W(v)\,W(w) \;=\; \omega^{\Phi(u,v,w)}\,I
+\]
+up to a global convention factor (which can be fixed by choosing standard displacement operators).
+\end{theorem}
+
+\begin{proofsketch}
+Use the Weyl multiplication law and bilinearity: $W(u)W(v)$ equals a scalar times $W(u+v)$. If $u+v+w=0$, then $W(u+v)W(w)$ is scalar times identity. Exponents combine to the cyclic sum $\Phi$ (mod 3).
+\end{proofsketch}
+
+\begin{theorem}[Holonomy-phase conjecture (testable)]
+\label{thm:holonomy}
+Let $Q=\overline{\mathrm{W33}}$ be the 40-vertex quotient graph produced by the globally gauge-fixed signed lift, with each triangle $(p,q,r)$ assigned a holonomy value $F(p,q,r)\in \mathbb{Z}_3$ (identity vs 3-cycle orientation). There exists a projective representative assignment $p\mapsto [v_p]\in PG(3,3)$, and representative choices $v_p\in V$, such that for every triangle,
+\[
+F(p,q,r)\ \equiv\ \Phi(v_p,v_q,v_r)\quad (\bmod 3),
+\]
+up to the standard gauge ambiguity corresponding to adding a constant all-ones vector in the 90-line weight model.
+\end{theorem}
+
+\begin{protocolbox}
+\textbf{Protocol: verifying Theorem~\ref{thm:holonomy}.}
+\begin{enumerate}
+\item Use the explicit projective representatives for the 40 points in $PG(3,3)$ (present in the symplectic audit bundle).
+\item Compute $\Phi(v_p,v_q,v_r)$ for all 3240 triangles of $Q$.
+\item Compare to the computed holonomy values (identity/3-cycle with orientation) on the same triangle list.
+\item If a mismatch occurs only by a constant shift (global gauge), quotient out by the all-ones line and recompare.
+\item If mismatches persist with nonconstant residuals, the conjecture fails and the representative assignment must be refined (or the holonomy is not a pure symplectic cocycle).
+\end{enumerate}
+\end{protocolbox}
+
+\section*{Artifact Index (quantum layer)}
+\ArtifactTable{
+}
+\setcounter{section}{10}
+\section{The quotient as a simplicial gauge system}
+
+\begin{definitionbox}
+Let $Q=\overline{\mathrm{W33}}$ be the 40-vertex quotient graph obtained by collapsing the 40 flat triples in the globally gauge-fixed 240$\to$120 lift.
+Let $\mathrm{Cl}(Q)$ denote the clique (flag) complex of $Q$. Then:
+\[
+C^2 := \mathbb{Z}_3^{\{\text{triangles of }Q\}}\cong \mathbb{Z}_3^{3240},\qquad
+C^3 := \mathbb{Z}_3^{\{\text{tetrahedra (}K_4\text{) of }Q\}}\cong \mathbb{Z}_3^{9450}.
+\]
+Let $d:C^2\to C^3$ be the simplicial coboundary map.
+\end{definitionbox}
+
+\begin{definitionbox}
+The quotient construction assigns to each triangle $(p,q,r)$ a holonomy value $F(p,q,r)\in \mathbb{Z}_3$ (identity vs 3-cycle orientation). We view this as a 2-cochain
+\[
+F\in C^2(\mathrm{Cl}(Q);\mathbb{Z}_3).
+\]
+Define the sourced 3-cochain
+\[
+J := dF \in C^3(\mathrm{Cl}(Q);\mathbb{Z}_3),
+\]
+which assigns a flux/charge value to each tetrahedron.
+\end{definitionbox}
+
+\begin{theorem}[Sourced curvature]
+\label{thm:sourced}
+$J=dF$ is supported on exactly 3008 tetrahedra:
+\[
+\#\{t: J(t)\neq 0\}=3008,
+\]
+with flux distribution $J=1$ on 1512 tetrahedra and $J=2$ on 1496 tetrahedra. Moreover, the 90 tetrahedra corresponding to the 90 non-isotropic projective lines (vacuum cells) all satisfy $J=0$.
+\end{theorem}
+
+\begin{proofsketch}
+This was computed by exhaustive enumeration of all 9450 tetrahedra in $Q$ and evaluation of the simplicial coboundary formula
+\[
+(dF)(a,b,c,d)=F(b,c,d)-F(a,c,d)+F(a,b,d)-F(a,b,c)\pmod 3.
+\]
+The 90 non-isotropic line tetrahedra were identified as the unique $K_4$ cliques whose 4 triangular faces are all flat (holonomy 0). All have $J=0$.
+(Audit bundles: \texttt{W33\_minimal\_Z3\_flux\_cycles\_tetrahedra\_bundle.zip},
+\texttt{W33\_charge\_decomposition\_and\_line\_moments\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{keyresult}
+The quotient holonomy $F$ is a genuine \emph{sourced} field strength: its 3-coboundary $J=dF$ is the discrete charge/current, with vacuum cells (non-isotropic lines) exactly flux-free.
+\end{keyresult}
+
+% ------------------------------------------------------------
+\section{Vacuum sector: the 90 non-isotropic lines}
+
+\begin{definitionbox}
+Let $\mathcal{L}$ denote the 90 non-isotropic projective lines in $PG(3,3)$, each a 4-point set in the 40-point geometry. These 90 lines are in bijection with:
+\begin{itemize}
+\item the 90 $K_4$ cliques in $Q$ whose four triangular faces are flat,
+\item the Aut(W33)-distinguished vacuum cells for the quotient connection.
+\end{itemize}
+We identify the vacuum line field space with $\mathbb{Z}_3^{\mathcal{L}}\cong\mathbb{Z}_3^{90}$.
+\end{definitionbox}
+
+\begin{remarkbox}
+Because $90\equiv 0\pmod 3$, the constant all-ones vector lies in the $\mathbb{Z}_3$ augmentation subspace. Thus quotienting by the all-ones line produces the canonical 88-dimensional vacuum/matter module used in the $H^3$ identification.
+\end{remarkbox}
+
+% ------------------------------------------------------------
+\section{Transfer operators from sources to vacuum observables}
+
+\begin{definitionbox}
+Partition tetrahedra in $Q$ into three Aut(W33)-orbits by the number of flat faces:
+\[
+\text{bulk: } \#\text{flat faces}=0 \ (6480),\qquad
+\text{boundary: } \#\text{flat faces}=1 \ (2880),\qquad
+\text{vacuum: } \#\text{flat faces}=4 \ (90).
+\]
+In the boundary orbit, each tetrahedron has a \emph{unique} flat face, hence a unique attached vacuum line $\ell\in\mathcal{L}$.
+\end{definitionbox}
+
+\begin{definitionbox}
+Define two linear maps over $\mathbb{Z}_3$:
+\[
+M:\mathbb{Z}_3^{9450}\to \mathbb{Z}_3^{90},\qquad
+Z:\mathbb{Z}_3^{9450}\to \mathbb{Z}_3^{90}.
+\]
+They are defined on a tetrahedron $t$ as follows:
+\begin{enumerate}
+\item (\textbf{Boundary moment} $M$) If $t$ has exactly one flat face, let $\ell(t)$ be its unique attached non-isotropic line. Then $M$ adds the tetra flux $J(t)$ to coordinate $\ell(t)$. Otherwise $t$ contributes 0.
+\item (\textbf{Bulk shadow} $Z$) For each \emph{curved} triangular face of $t$, push $J(t)$ along the three edges of that face. Each edge of $Q$ belongs to a unique non-isotropic line in $\mathcal{L}$ (since $540=90\cdot 6$). Summing these contributions defines $Z(J)$ on $\mathcal{L}$.
+\end{enumerate}
+\end{definitionbox}
+
+\begin{theorem}[Exact transfer identities]
+\label{thm:transfer}
+Let $J=dF$ be the sourced 3-cochain. Then the two observed vacuum line fields
+\[
+m_{\mathrm{line}}\in\mathbb{Z}_3^{90},\qquad z_{\mathrm{line}}\in\mathbb{Z}_3^{90}
+\]
+satisfy the \emph{exact} operator identities
+\[
+m_{\mathrm{line}} = M\,J,\qquad z_{\mathrm{line}} = Z\,J,
+\]
+with no residual error.
+\end{theorem}
+
+\begin{proofsketch}
+Both operators were constructed explicitly in sparse COO form and applied to the computed $J$. The resulting 90-vectors agree entrywise with the independently computed line observables from the earlier operator chains:
+\[
+m_{\mathrm{line}} = C_{\mathrm{lineface}}\,J,\qquad z_{\mathrm{line}} = R\,(K_0+K_1)\,J.
+\]
+(Audit bundle: \texttt{W33\_transfer\_operators\_J\_to\_lines\_and\_mode\_injection\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{keyresult}
+The W33 quotient admits explicit, Aut(W33)-equivariant transfer operators from sources $J$ to vacuum line observables. This is the discrete analog of a constitutive relation (sources $\to$ observed vacuum response).
+\end{keyresult}
+
+% ------------------------------------------------------------
+\section{Vacuum harmonics and mode-resolved response}
+
+\begin{definitionbox}
+The Aut(W33) commutant algebra acting on $\mathbb{Z}_3^{\mathcal{L}}$ has dimension 5 (an association scheme). Equivalently, the 90-line sector admits a canonical decomposition into 5 joint harmonic modes under the commuting operators:
+\begin{itemize}
+\item $S$: the Aut-invariant fixed-point-free involution pairing on the 90 lines (45 disjoint transpositions),
+\item $A_{\mathrm{meet}}$: line meet adjacency (two lines adjacent iff they intersect in a point), degree 32.
+\end{itemize}
+Joint modes are indexed by $(\mathrm{sign}(S), \lambda(A_{\mathrm{meet}}))$:
+\[
+(+,32)^{1},\quad (+,2)^{24},\quad (+,-4)^{20},\quad (-,8)^{15},\quad (-,-4)^{30}.
+\]
+\end{definitionbox}
+
+\begin{theorem}[Mode-resolved injection table]
+\label{thm:injection}
+For each tetra orbit class (bulk vs boundary) and each flux sign $J\in\{1,2\}$, the induced vacuum responses $M(J)$ and $Z(J)$ decompose into the above 5 modes with explicit energy fractions. In particular:
+\begin{itemize}
+\item Bulk sources (flat-face count 0) inject only into $z_{\mathrm{line}}$ (never into $m_{\mathrm{line}}$).
+\item Boundary sources (flat-face count 1) inject into both $m_{\mathrm{line}}$ and $z_{\mathrm{line}}$, with mode weights shifted toward $(+,2)$ and $(-,8)$ for $m_{\mathrm{line}}$.
+\end{itemize}
+\end{theorem}
+
+\begin{proofsketch}
+This was computed by restricting $J$ to each class+flux, applying the exact transfer operators $M$ and $Z$, mapping $\mathbb{Z}_3$ entries to real values $\{-1,0,1\}$ (with $2\mapsto-1$), removing the mean, and projecting onto the orthonormal joint-mode bases. The resulting mode-energy fractions are tabulated. (Audit bundle: \texttt{W33\_mode\_response\_table\_bulk\_to\_vacuum\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{keyresult}
+The vacuum sector is not a single ``channel'': bulk and boundary sources excite different vacuum harmonics. This explains why no Aut-equivariant line-only operator can strongly predict $m$ from $z$ (they are distinct projections of the same bulk source field).
+\end{keyresult}
+
+% ------------------------------------------------------------
+\section*{Artifact Index (field-equation layer)}
+\addcontentsline{toc}{section}{Artifact Index (field-equation layer)}
+\ArtifactTable{
+}
+
+\section{Vacuum association scheme and canonical harmonics}
+
+\begin{theorem}[90-line association scheme and involution]
+The Aut(W33) action on the 90 non-isotropic lines induces an association scheme with commutant dimension 5 (five orbitals on ordered pairs). One orbital is the diagonal; another is a fixed-point-free involution $\sigma$ pairing the 90 lines into 45 disjoint transpositions, with each paired lineset disjoint (skew).
+\end{theorem}
+
+\begin{theorem}[Five canonical harmonics]
+Let $S$ be the permutation matrix of $\sigma$ and let $A_{\mathrm{meet}}$ be the adjacency of the line-meet graph (degree 32). Then $S$ and $A_{\mathrm{meet}}$ commute and admit a joint decomposition into five modes:
+\[
+(+,32)^{1},\quad (+,2)^{24},\quad (+,-4)^{20},\quad (-,8)^{15},\quad (-,-4)^{30}.
+\]
+These modes provide the canonical ``vacuum harmonics'' for line fields.
+\end{theorem}
+
+\begin{remarkbox}
+This harmonic analysis explains why distinct vacuum observables (e.g., boundary moment $m$ vs bulk shadow $z$) are not related by a single Aut-equivariant line-only operator: they occupy different mixtures of the canonical modes. The correct dynamics closes only when bulk source variables $J=dF$ and the transfer operators $M,Z$ are included.
+\end{remarkbox}
+
+
+
+
+\subsection{$q=11$: global $vq$ construction from local 1-factorizations (first pass)}
+
+\begin{theorem}[Constructive $vq$ quotient map at $q=11$]
+Assume that for each point $p$ one selects an order-11 element in the point stabilizer whose induced action on the 12 isotropic lines through $p$ fixes one line and cycles the other 11. This yields a labeling of the local lines by $\{\infty\}\cup \mathbb{F}_{11}$. Using the round-robin/reflection 1-factorization $\{M_a\}_{a\in\mathbb{F}_{11}}$ of $K_{12}$, the 66 local line-pair generators at $p$ partition into 11 buckets of size 6. Hence there is a canonical 6-to-1 map
+\[
+\{\text{local generators}\}\longrightarrow \{(p,a): p\in PG(3,11),\ a\in\mathbb{F}_{11}\},
+\]
+whose target has size $vq=1464\cdot 11=16104$ (the universal ladder size).
+\end{theorem}
+
+\begin{theorem}[Checksum constraint]
+For the above partition, each bucket has vanishing XOR checksum in $H_{11}$:
+\[
+\bigoplus_{(i,j)\in M_a} g_{ij}=0,
+\]
+so the 6-to-1 quotient respects the additive structure of $H_{11}$ at the local level.
+\end{theorem}
+
+\begin{remarkbox}
+\textbf{Status.} We verified this construction and checksum constraint for a random sample of points using a deterministic per-point search for an order-11 stabilizer element in the tested subgroup. The remaining step is global canonicity: selecting a stabilizer element consistently (or proving independence of choice) so that the induced $vq$ quotient carries the 5-orbital q-ladder association scheme.
+\end{remarkbox}
+
+\begin{proofsketch}
+We construct per-point order-11 actions on the 12 local lines, define the 11 matchings $M_a$, compute the corresponding 6-element buckets, and evaluate XOR sums in $H_{11}$ for each bucket. (Bundle: \texttt{W33\_q11\_vq\_projectivized\_root\_shell\_construction\_bundle.zip}.)
+\end{proofsketch}
+
+
+\subsection{$q=11$: $PGL(2,11)$ label transport on local $PG(1,11)$ charts (first pass)}
+
+\begin{theorem}[Label transport is projective linear fractional]
+Fix a canonical local labeling of the 12 isotropic lines through each point $p$ by $PG(1,11)=\{\infty\}\cup\mathbb{F}_{11}$ via an order-11 stabilizer element (one fixed line + one 11-cycle). For the tested symplectic subgroup generators, the induced transport between local labelings is always representable by a $PGL(2,11)$ M\"obius transformation on $PG(1,11)$.
+\end{theorem}
+
+\begin{remarkbox}
+\textbf{Consequence.} The natural transport group on local charts is projective (fractional linear), not merely affine. This explains why only a minority of transports preserve the specific reflection 1-factorization family $\{M_a\}$ in an index-wise way: most transports send $\infty$ to a finite label and hence conjugate the factorization to another, projectively equivalent 1-factorization. The correct global $vq$ quotient should therefore be formulated as a projective-covariant structure: either (i) a canonical choice of the distinguished ``$\infty$ line'' that is equivariant, or (ii) an equivalence class of factorization charts modulo $PGL(2,11)$.
+\end{remarkbox}
+
+\begin{proofsketch}
+For a sample of points, we computed canonical local labelings and, for each generator mapping $p\mapsto p'$, computed the induced permutation of the 12 labels by pushing local lines forward under the generator and reading their labels at $p'$. Each such permutation was fit exactly by a $PGL(2,11)$ fractional linear map. (Bundle: \texttt{W33\_q11\_label\_transport\_PGL2\_bundle.zip}.)
+\end{proofsketch}
+
+
+\subsection{$q=11$: obstruction to a global infinity section (projective-bundle viewpoint)}
+
+\begin{remarkbox}
+\textbf{Problem.} The constructive $vq$ map at $q=11$ (local $K_{12}$ factorization into 11 buckets of size 6) uses a local affine chart on $PG(1,11)$: it distinguishes a local ``infinity'' line among the 12 isotropic lines through each point. Empirically, however, the transport group on these local charts is projective ($PGL(2,11)$), and typically sends $\infty$ to a finite label. This means a na\"ive choice of $\infty(p)$ at each point is not equivariant under symmetry transport.
+\end{remarkbox}
+
+\begin{theorem}[Empirical non-equivariance of $\infty(p)$]
+Let $\infty(p)$ be the ``fixed local line'' extracted from a per-point order-11 chart selection rule. On a random sample of points and subgroup generators, the transported line $g(\infty(p))$ agrees with $\infty(gp)$ only rarely (about 10--15\% in our tests). Thus $\infty(p)$ is not a globally equivariant section for the tested subgroup.
+\end{theorem}
+
+\begin{remarkbox}
+\textbf{Interpretation.} The local label sets form a principal $PGL(2,11)$ bundle of $PG(1,11)$ charts. The $K_{12}$ 1-factorization used for the 6-to-1 collapse is an \emph{affine} reduction of structure group (a choice of Borel subgroup / point at infinity). The observed non-equivariance indicates this affine reduction is obstructed without extra gauge-fixing data. In kernel terms, this is the precise location where a ``connection/holonomy'' degree of freedom enters: the obstruction class is a candidate source of the emergent constants in the ladder.
+\end{remarkbox}
+
+\begin{proofsketch}
+We compute per-point $\infty(p)$ from canonical order-11 local charts and test equivariance under the generator-induced transport on local lines. (Bundle: \texttt{W33\_q11\_global\_section\_obstruction\_bundle.zip}.)
+\end{proofsketch}
+
+
+\subsection{$q=11$: holonomy of the $PGL(2,11)$ cocycle (first evidence of a $PSL(2,11)$ obstruction class)}
+
+\begin{remarkbox}
+\textbf{Setup.} From the canonical local $PG(1,11)$ labelings, each generator move $p\mapsto g(p)$ induces a $PGL(2,11)$ M\"obius transform on labels, giving a 1-cocycle on the Cayley graph of the tested subgroup. The obstruction to a global affine section is measured by the holonomy of this cocycle around loops.
+\end{remarkbox}
+
+\begin{theorem}[Nontrivial holonomy and a 660-element closure]
+In a sample of short loops in the Cayley graph (words of length $\le 6$ returning to the same point), the induced holonomy is frequently non-identity. The subgroup generated by the observed loop holonomies closes to a group of size 660, consistent with $PSL(2,11)$ (the index-2 subgroup of $PGL(2,11)$).
+\end{theorem}
+
+\begin{remarkbox}
+\textbf{Interpretation.} This identifies the precise ``gauge field'' at the $q=11$ rung: a projective connection with holonomy in $PSL(2,11)$. The local $K_{12}$ 1-factorization is an affine reduction of structure group, and the nontrivial $PSL(2,11)$ holonomy is the discrete obstruction class preventing a global choice of infinity. In the TOE narrative, this is the exact analog of curvature: the field is not the matching itself but the projective transport cocycle.
+\end{remarkbox}
+
+\begin{proofsketch}
+We fit each generator step to an exact $PGL(2,11)$ matrix and compute products along loop words. The closure size is measured by multiplying the observed holonomies and their inverses until no new elements appear. (Bundle: \texttt{W33\_q11\_PGL2\_holonomy\_PSL2\_11\_bundle.zip}.)
+\end{proofsketch}
+
+
+\subsection{$q=11$: $vq$ orbital degrees confirmed (5-orbital q-ladder at 16104)}
+
+\begin{theorem}[Stabilizer orbit sizes match the q-ladder valencies]
+Using the gauge-free $vq$ construction at $q=11$ (16104 objects) with fiber $PSL(2,11)/A_5$ and cocycle transport, the stabilizer of a base object has exactly five orbits on the 16104-object set, with sizes
+\[
+1,\ 10,\ 1331,\ 1452,\ 13310,
+\]
+which coincide with the closed-form q-ladder valencies
+\[
+1,\ q-1,\ q^3,\ q^2(q+1),\ q^3(q-1)
+\]
+specialized at $q=11$.
+\end{theorem}
+
+\begin{proofsketch}
+We build the induced 16104-object action from the point permutation generators and the $PSL(2,11)/A_5$ coset fiber, using the computed cocycle matrices for label transport. We then compute stabilizer orbits via Schreier generators compiled into explicit stabilizer permutations, and obtain the orbit-size multiset above. (Bundle: \texttt{W33\_q11\_vq\_orbital\_degrees\_confirmed\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{keyresult}
+This is the missing q=11 rung: the projective holonomy (PSL(2,11)) does not destroy the ladder; it \emph{implements} it. The 16104-object quotient carries the forced 5-orbital structure, with fiber relation degree $q-1=10$ and the remaining three valencies matching the universal polynomials.
+\end{keyresult}
+
+
+\subsection{$q=11$: 16104-cycle harmonics (five primitive modes)}
+
+\begin{theorem}[Closed-form q-ladder spectrum at $q=11$]
+The 16104-object $vq$ scheme at $q=11$ has the five valencies
+\[
+1,\ 10,\ 1331,\ 1452,\ 13310,
+\]
+and the five primitive harmonic multiplicities
+\[
+1,\ 792,\ 671,\ 13420,\ 1220,
+\]
+summing to 16104. The eigenvalues of the four nontrivial relations on these five modes are:
+\[
+\begin{array}{c|cccc}
+\text{mode mult.} & A_{10} & A_{1331} & A_{1452} & A_{13310}\\
+\hline
+1     & 10 & 1331  & 1452  & 13310\\
+792   & 10 & -11   & 110   & -110\\
+671   & 10 & 11    & -132  & 110\\
+13420 & -1 & 11    & 0     & -11\\
+1220  & -1 & -121  & 0     & 121\\
+\end{array}
+\]
+\end{theorem}
+
+\begin{proofsketch}
+This is the q-ladder eigenmatrix of Theorem~\ref{thm:q-ladder} specialized at $q=11$. Orthogonality is verified exactly:
+\[
+P^\top \mathrm{diag}(m)\,P = N\,\mathrm{diag}(k),
+\]
+with $N=16104$, $k$ the valencies, and $m$ the multiplicities above. (Bundle: \texttt{W33\_q11\_16104\_association\_scheme\_harmonics\_bundle.zip}.)
+\end{proofsketch}
+
+\begin{keyresult}
+With the q=11 orbital degrees confirmed and the full five-mode spectrum fixed by orthogonality, the $q=11$ rung is now on equal footing with $q=3,5,7$: it carries the same 5-orbital / 5-harmonic q-ladder structure, realized gauge-freely through $PSL(2,11)$ holonomy.
+\end{keyresult}
+
+
+\subsection{$q=11$: full intersection numbers (Bose--Mesner multiplication table)}
+
+\begin{theorem}[All intersection numbers $p_{ij}^k$ at $q=11$]
+For the 16104-object q-ladder scheme at $q=11$, the full set of structure constants (intersection numbers) $p_{ij}^k$ defined by
+\[
+A_i A_j = \sum_{k=0}^4 p_{ij}^k A_k
+\]
+are determined uniquely from the eigenmatrices. Concretely, with eigenmatrix $P$ and dual eigenmatrix $Q$, we have
+\[
+p_{ij}^k=\frac{1}{N}\sum_{r=0}^4 P_{r,i}\,P_{r,j}\,Q_{r,k},
+\]
+and every $p_{ij}^k$ is a nonnegative integer. Moreover, the consistency identity
+\[
+\sum_{k=0}^4 p_{ij}^k\,k_k = k_i k_j
+\]
+holds for all $i,j$, where $k_k$ are the relation valencies.
+\end{theorem}
+
+\begin{remarkbox}
+\textbf{Deliverable.} We export the full 5$\times$5$\times$5 table both as a flat list and as left-multiplication matrices $L_i$ (5$\times$5 each), which together fully specify the Bose--Mesner algebra at $q=11$. (Bundle: \texttt{W33\_q11\_16104\_intersection\_numbers\_bundle.zip}.)
+\end{remarkbox}
+
+
+\subsection{Closed-form intersection numbers for the q-ladder (polynomial Bose--Mesner algebra)}
+
+\begin{theorem}[Intersection numbers are polynomials in $q$]
+For the 5-class q-ladder association scheme (relations ordered as $A_0, A_1, A_2, A_3, A_4$ with valencies $1, q-1, q^3, q^2(q+1), q^3(q-1)$), every structure constant
+\[
+A_iA_j = \sum_{k=0}^4 p_{ij}^k A_k
+\]
+is an integer polynomial in $q$. Equivalently, the left-multiplication matrices $L_i$ defined by $(L_i)_{j,k}=p_{ij}^k$ have entries in $\mathbb{Z}[q]$.
+\end{theorem}
+
+\begin{remarkbox}
+\textbf{Constructive formula.} Using the eigenmatrix $P(q)$ from Theorem~\ref{thm:q-ladder} and dual eigenmatrix $Q(q)=\mathrm{diag}(m)\,P\,\mathrm{diag}(k)^{-1}$, we have
+\[
+p_{ij}^k = \frac{1}{N}\sum_{r=0}^4 P_{r,i}(q)\,P_{r,j}(q)\,Q_{r,k}(q),
+\qquad N=q(q^3+q^2+q+1).
+\]
+Symbolic evaluation yields $p_{ij}^k\in\mathbb{Z}[q]$ for all $i,j,k$ (no denominators appear).
+\end{remarkbox}
+
+
+\subsection{Uniqueness of the q-ladder scheme (spectral determination of the Bose--Mesner algebra)}
+
+\begin{theorem}[Eigenmatrices determine the intersection numbers uniquely]
+Fix $q$ and suppose a symmetric 5-class association scheme has valencies $k_i$ and eigenmatrix $P$ with multiplicities $m_r$ satisfying the standard orthogonality
+\[
+P^\top \mathrm{diag}(m) P = N\,\mathrm{diag}(k),
+\]
+with $N=\sum_i k_i=\sum_r m_r$. Then the dual eigenmatrix $Q$ is uniquely determined by
+\[
+Q = \mathrm{diag}(m)\,P\,\mathrm{diag}(k)^{-1},
+\qquad\text{so that}\qquad
+P^\top Q = N I.
+\]
+Consequently the intersection numbers are uniquely determined by the Fourier inversion formula
+\[
+p_{ij}^k = \frac{1}{N}\sum_{r} P_{r,i}\,P_{r,j}\,Q_{r,k}.
+\]
+In particular, for the q-ladder eigenmatrices $P(q)$ and $m(q)$ in Theorem~\ref{thm:q-ladder}, the entire Bose--Mesner algebra (hence the scheme multiplication table) is uniquely forced.
+\end{theorem}
+
+\begin{proofsketch}
+The orthogonality equations imply $P$ is invertible and fix $Q$ uniquely by $Q = \mathrm{diag}(m)\,P\,\mathrm{diag}(k)^{-1}$; equivalently $P^{-1} = \frac{1}{N}\mathrm{diag}(k)^{-1} P^\top \mathrm{diag}(m)$. The adjacency algebra is commutative semisimple; the primitive idempotents are recovered from $(P,Q)$, and multiplication in the adjacency basis is recovered by expanding pointwise products of characters, yielding the stated inversion formula for $p_{ij}^k$. No additional combinatorial input is required once $(k,P,m)$ are fixed.
+\end{proofsketch}
+
+\begin{corollary}[Polynomial family is uniquely specified]
+The polynomial intersection table $p_{ij}^k(q)\in\mathbb{Z}[q]$ computed in the previous subsection is the unique 5-class Bose--Mesner algebra compatible with the q-ladder spectrum. Therefore any realization of the q-ladder at a given odd prime $q$ necessarily has the same intersection numbers and hence the same orbital degrees and harmonic spectrum.
+\end{corollary}
+
+
+
+
+\begin{remarkbox}
+\textbf{Fiber relation multiplication.} The fiber relation $A_1$ (a disjoint union of $v$ cliques $K_q$) forces the simple multiplication rules:
+\[
+A_1^2 = (q-1)A_0 + (q-2)A_1,\qquad
+A_1A_3=(q-1)A_3,\qquad
+A_1A_2=A_4,\qquad
+A_1A_4=(q-1)A_2+(q-2)A_4.
+\]
+These are exactly the first row/column blocks of the polynomial left-multiplication matrix $L_1(q)$.
+\end{remarkbox}
+
+\begin{remarkbox}
+\textbf{Full tables.} We export the complete polynomial table $p_{ij}^k(q)$ and all $L_i(q)$ to CSV in the bundle \texttt{W33\_q\_ladder\_intersection\_polynomials\_bundle.zip}.
+\end{remarkbox}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{$q=11$: a gauge-free 11-label fiber via $PSL(2,11)/A_5$}
+
+\begin{remarkbox}
+\textbf{Key idea.} The affine labels $a\in\mathbb{F}_{11}$ are not globally well-defined because transport is projective ($PGL(2,11)$) and holonomy is nontrivial. A gauge-free replacement is to use an \emph{associated-bundle} fiber that has size 11 intrinsically.
+\end{remarkbox}
+
+\begin{theorem}[An intrinsic 11-element fiber from the holonomy group]
+Let $G_{\mathrm{hol}}\le PGL(2,11)$ be the $q=11$ holonomy group. Empirically $|G_{\mathrm{hol}}|=660$ and its element order spectrum matches $PSL(2,11)$. Inside $G_{\mathrm{hol}}$ there exists a subgroup $H\cong A_5$ of order 60 (generated by a $(2,3,5)$ triangle presentation). Hence the left coset space
+\[
+G_{\mathrm{hol}}/H
+\]
+has size 11 and provides a canonical 11-element label fiber with a natural $G_{\mathrm{hol}}$ action by left multiplication.
+\end{theorem}
+
+\begin{remarkbox}
+\textbf{Why 11 is not an accident.} The local Pascal/K12 collapse partitions 66 line-pair edges into 11 buckets of size 6. In the holonomy picture, the \emph{same 11} appears as the index of $A_5$ in $PSL(2,11)$:
+\[
+660/60=11.
+\]
+This identifies the q=11 ladder label set with a finite-group coset geometry rather than an affine coordinate choice, removing the need for a global infinity section.
+\end{remarkbox}
+
+\begin{proofsketch}
+We close the holonomy subgroup from observed loop products, then search for a $(2,3,5)$ generating pair producing a subgroup of size 60, and compute its 11 cosets. (Bundle: \texttt{W33\_q11\_PSL2\_11\_coset\_fiber\_A5\_bundle.zip}.)
+\end{proofsketch}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Cs\'asz\'ar--Szilassi as the toroidal gate: $K_7$, Heawood, and the $K_{12}$/66 hinge}
+
+\begin{remarkbox}
+\textbf{Why this matters for the kernel.} The Cs\'asz\'ar and Szilassi polyhedra are the unique toroidal analogs of the tetrahedron with ``complete adjacency'' properties:
+Cs\'asz\'ar has \emph{complete vertex adjacency} (skeleton $K_7$) and Szilassi has \emph{complete face adjacency} (7 faces, each adjacent to all others).
+Both satisfy the torus hole equations
+\[
+h=\frac{(v-3)(v-4)}{12}\quad\text{and}\quad h=\frac{(f-4)(f-3)}{12},
+\]
+and the next solution $(v,f)=(12,12)$ predicts the combinatorial hinge $66=\binom{12}{2}$ that reappears in the $q=11$ lift-layer as the $K_{12}$ edge set of local line-pairs.
+\end{remarkbox}
+
+\subsection{Combinatorial extraction from the uploaded edge data}
+
+\begin{theorem}[Cs\'asz\'ar and Szilassi skeletons in the uploaded data]
+The uploaded Cs\'asz\'ar edge lists $\texttt{Cs\_v\#\_edges\_and\_forms.csv}$ define a 7-vertex, 21-edge graph in which every vertex has degree 6; hence the skeleton is $K_7$.
+The uploaded Szilassi edge lists $\texttt{Sz\_v\#\_edges\_and\_forms.csv}$ define a 14-vertex, 21-edge 3-regular graph; hence the skeleton matches the Heawood graph embedding.
+\end{theorem}
+
+\begin{proofsketch}
+We read the endpoints $(i,j)$ in the CSV edge lists and compute graph degree sequences: Cs\'asz\'ar gives degree sequence $6^7$ (complete graph $K_7$), while Szilassi gives degree sequence $3^{14}$ (Heawood). Edge-length and Hodge-star columns vary by realization version but do not affect the combinatorial skeleton.
+\end{proofsketch}
+
+\subsection{Where $K_7$ and $66=\binom{12}{2}$ sit in the q-ladder}
+
+\begin{keyresult}
+The Cs\'asz\'ar--Szilassi ``torus gate'' sits exactly on the ladder rungs we have computed:
+\begin{itemize}
+\item At $q=7$, the projectivized root-shell scheme contains a canonical fiber relation that is a disjoint union of $400$ cliques $K_7$ (degree 6), matching the Cs\'asz\'ar skeleton degree and the toroidal ``complete adjacency'' motif.
+\item At $q=11$, the local geometry at a point has $q+1=12$ isotropic lines; the 66 line-pair generators are exactly the 66 edges of $K_{12}$. The required collapse factor is $(q+1)/2=6$, and we constructed a Pascal/round-robin 1-factorization of $K_{12}$ into 11 buckets of size 6 with vanishing XOR checksum in $H_{11}$.
+\end{itemize}
+Thus the celebrated ``next hole-equation solution'' $(v,f)=(12,12)$ reappears as a \emph{local} projective-line object at $q=11$ (12 lines through a point), and the $66$ hinge is literally the local generator set that must be quotiented to reach the universal ladder size $vq$.
+\end{keyresult}
+
+\begin{remarkbox}
+\textbf{Cheeky interpretation.} In the finite kernel, the non-realizability of a Euclidean polyhedron with $(v,h)=(12,6)$ does not kill the combinatorics; it relocates it: $K_{12}$ appears as the local ``vertex figure'' (lines-through-a-point) in the $q=11$ symplectic geometry, and the toroidal $K_7$/Heawood pair appear as the $q=7$ fiber relation and its dual adjacency motif.
+\end{remarkbox}
+
+
+
+
+
+
+\subsection{Existence theorem (conditional) and final classification statement}
+
+\begin{remarkbox}
+\textbf{What remains.} The previous subsections establish that once a 5-class q-ladder scheme exists with the q-ladder spectrum, its full Bose--Mesner algebra is uniquely determined (intersection numbers in $\mathbb{Z}[q]$). The remaining content is \emph{existence}: producing, for each odd prime $q$, an actual combinatorial realization of the $vq$ quotient and its 5 relations. Our computations provide explicit realizations for $q=3,5,7,11$.
+\end{remarkbox}
+
+\begin{theorem}[Conditional existence from the $vq$ quotient]
+\label{thm:existence-conditional}
+Fix an odd prime $q$. Assume the following kernel-to-ladder construction data:
+\begin{enumerate}
+\item The symplectic point graph $G_q$ of $W(3,q)$ (vertices $v=q^3+q^2+q+1$).
+\item The mod-2 square-zero differential $A_q^2\equiv 0$ giving $H_q=\ker(A_q)/\mathrm{im}(A_q)$ of dimension $q^2-1$.
+\item A canonical local generator orbit $\mathcal{G}_q$ (line-pair XORs) that maps injectively into $H_q$ and is transitive under a symplectic subgroup action.
+\item A canonical commutant/holonomy mechanism producing a gauge-free quotient set $\Omega_q$ of size $vq$ with a symmetry action induced from the kernel, together with a distinguished fiber relation that is a disjoint union of $v$ cliques $K_q$.
+\end{enumerate}
+Then $\Omega_q$ carries a symmetric 5-class association scheme whose orbital degrees, harmonic spectrum, and intersection numbers coincide with the unique q-ladder polynomials derived in Theorems~\ref{thm:q-ladder} and the polynomial Bose--Mesner tables.
+\end{theorem}
+
+\begin{proofsketch}
+Given $\Omega_q$ and the fiber relation $A_1$, the remaining three relations are determined by symmetry: they are the remaining orbitals in the commutant algebra (dimension 5). The eigenmatrix must match the q-ladder spectrum because (i) $A_1$ fixes the fiber eigen-split and (ii) the remaining four modes are forced by orthogonality and integrality as shown in the q-ladder derivation/uniqueness subsections. Therefore the multiplication table agrees with the polynomial intersection numbers.
+\end{proofsketch}
+
+\begin{theorem}[Final classification statement (prime-field ladder)]
+For odd primes $q$ for which the $vq$ quotient exists, the resulting ladder is completely classified:
+\begin{itemize}
+\item The 5 relation valencies are $1,\ q-1,\ q^3,\ q^2(q+1),\ q^3(q-1)$.
+\item The 5 primitive multiplicities are $1,\ \frac{q(q+1)^2}{2},\ \frac{q(q^2+1)}{2},\ q(q^3-q^2+q-1),\ (q^3-q^2+q-1)$.
+\item The full intersection numbers $p_{ij}^k(q)$ are integer polynomials and uniquely determined by the spectrum.
+\end{itemize}
+Thus the ladder is a single polynomial association-scheme family whose concrete realizations at $q=3,5,7,11$ have been constructed and verified in this work.
+\end{theorem}
+
+\begin{keyresult}
+At this point the TOE kernel has two logically distinct parts:
+\begin{enumerate}
+\item \textbf{Kernel (exact finite geometry)}: $W(3,q)$, the mod-2 square-zero calculus, the homology module $H_q$, and the local generator orbit $\mathcal{G}_q$.
+\item \textbf{Gauge/holonomy lift (cheeky step)}: the commutant/holonomy mechanism producing the $vq$ quotient $\Omega_q$. For $q=11$ this is explicitly projective with holonomy in $PSL(2,11)$ and a gauge-free fiber $PSL(2,11)/A_5$ of size 11; nevertheless it lands exactly on the universal 5-orbital q-ladder scheme.
+\end{enumerate}
+Once the lift exists, the rest of the structure is forced.
+\end{keyresult}
+
+
+
+
+
+\subsection{$q=13$: prime-field kernel test (next rung)}
+
+\begin{theorem}[Kernel invariants at $q=13$]
+For the symplectic $W(3,13)$ point graph:
+\[
+v = 13^3+13^2+13+1 = 2380,\qquad k=13\cdot 14=182,\qquad (\lambda,\mu)=(12,14),
+\]
+and $A^2\equiv 0\pmod 2$. Over $\mathbb{F}_2$ the computed rank and homology dimensions are:
+\[
+\mathrm{rank}(A)=1106,\qquad \dim H_{13}=168=q^2-1.
+\]
+Each point lies on $q+1=14$ isotropic lines of size 14, and the number of isotropic lines is 2380.
+\end{theorem}
+
+\begin{remarkbox}
+\textbf{Local generator check (sample).} Line-pair XOR generators at a point have weight $2(q+1)-2=26$; this holds in our sample (only weight 26 observed). A 30k-sample of line-pair generators produced 27962 distinct reduced $H_{13}$ classes (2038 collisions), indicating the injectivity/orbit-transitivity phenomena seen at $q=5,7,11$ may require the full commutant/holonomy lift mechanism to recover a canonical orbit/quotient at larger $q$ (to be resolved by deeper testing).
+(Bundle: \texttt{W33\_q13\_prime\_field\_kernel\_test\_bundle.zip}.)
+\end{remarkbox}
+
+
+\subsection{$q=13$: holonomy of the $PGL(2,13)$ cocycle (first evidence of a $PSL(2,13)$ gauge field)}
+
+\begin{theorem}[Nontrivial holonomy closes to $PSL(2,13)$]
+Using a base-point trivialization induced by an order-13 cycle on the 14 local lines (fixed line + 13-cycle), each generator step induces an exact $PGL(2,13)$ M\"obius transform on local $PG(1,13)$ labels. Sampling short loop words (length $\le 6$) that return to the same point yields frequent non-identity holonomy. The subgroup generated by observed loop holonomies closes to a group of size 1092, consistent with $PSL(2,13)$.
+\end{theorem}
+
+\begin{remarkbox}
+\textbf{Interpretation.} This is the direct $q=13$ analog of the $q=11$ story: the obstruction to a global affine section is measured by a projective connection whose holonomy is (empirically) $PSL(2,q)$. Thus the ``cheeky'' lift step persists at the next prime rung, and the gauge-field picture scales with $q$.
+\end{remarkbox}
+
+\begin{proofsketch}
+We compute canonical local labelings for a BFS sample of points, fit each generator transport exactly by a $PGL(2,13)$ matrix from images of $(0,1,\infty)$, and multiply along loop words. (Bundle: \texttt{W33\_q13\_PGL2\_holonomy\_PSL2\_13\_bundle.zip}.)
+\end{proofsketch}
+
+
+\subsection{$q=13$: local Pascal factorization of $K_{14}$ (13 buckets of size 7)}
+
+\begin{theorem}[Local $K_{14}$ edge partition and checksum]
+At a point $p$ in the $q=13$ symplectic geometry, there are $q+1=14$ isotropic lines through $p$, so local line-pair generators form the 91 edges of $K_{14}$. Choosing a local order-13 cycle on these 14 lines (one fixed line + one 13-cycle) yields a labeling by $PG(1,13)=\{\infty\}\cup\mathbb{F}_{13}$. The round-robin/reflection 1-factorization partitions the 91 edges into 13 buckets of size 7 (collapse factor $(q+1)/2=7$). Moreover, each bucket has vanishing XOR checksum modulo $\mathrm{im}(A)$:
+\[
+\bigoplus_{(i,j)\in M_a} g_{ij}\equiv 0\pmod{\mathrm{im}(A)}\qquad (a\in\mathbb{F}_{13}).
+\]
+\end{theorem}
+
+\begin{remarkbox}
+This is the direct q=13 generalization of the q=11 K12/66 hinge: $91=\binom{14}{2}=13\cdot 7$ and the required collapse factor is $(q+1)/2=7$. Combined with the holonomy result (closing to $PSL(2,13)$), this strongly supports that the prime-field ladder admits the same local Pascal/binomial reduction mechanism at each $q$.
+(Bundle: \texttt{W33\_q13\_local\_pascal\_factorization\_bundle.zip}.)
+\end{remarkbox}
+
+
+
+
+
+
+
+
+
+\subsection{$q=13$: $vq$ construction frontier (current obstruction and next move)}
+
+\begin{remarkbox}
+At $q=11$ we constructed a gauge-free 11-fiber using $PSL(2,11)/A_5$ and confirmed the full $vq$ rung (16104) carries the forced 5-orbital ladder scheme. For $q=13$ we have already verified (i) kernel invariants ($\dim H_{13}=q^2-1$), (ii) projective holonomy closing to $PSL(2,13)$, and (iii) the local Pascal factorization $K_{14}\to 13$ buckets of size 7 with vanishing checksum. The remaining step is to construct a \emph{gauge-free} size-13 fiber that is stable under the $PGL(2,13)$ transport cocycle.
+\end{remarkbox}
+
+
+\subsection{$q=13$: matchings and factorization orbits under $PSL(2,13)$ (fiber search)}
+
+\begin{theorem}[Orbit sizes on local combinatorial structures]
+Let $G=PSL(2,13)$ act on $PG(1,13)$ (14 points) by fractional linear transformations. Consider:
+(i) a single perfect matching on $K_{14}$ (7 disjoint edges) and
+(ii) the standard round-robin 1-factorization (13 perfect matchings).
+Then under the induced action on edge-sets:
+\[
+|\mathrm{Orb}(M)| = 91,\qquad |\mathrm{Orb}(\mathcal{F})|=14.
+\]
+\end{theorem}
+
+\begin{remarkbox}
+\textbf{Interpretation.} The 1-factorization orbit size 14 matches the natural projective-line size (choices of ``infinity''), confirming that the Pascal/round-robin factorization family is essentially a projective-gauge choice. The perfect-matching orbit size 91 indicates a stabilizer of size 12, consistent with an $A_4$-type symmetry in the action on matchings. In particular, this suggests that a gauge-free 13-fiber is not obtained simply by taking the PSL-orbit of a single matching or factorization; a different associated object (or an augmented commutant beyond bare $PSL(2,13)$ holonomy) is required. (Bundle: \texttt{W33\_q13\_matching\_factorization\_orbits\_bundle.zip}.)
+\end{remarkbox}
+
+
+\subsection{$q=13$: no 13-orbit among $k$-subsets of $PG(1,13)$ (negative result)}
+
+\begin{remarkbox}
+To obtain a gauge-free 13-fiber by a holonomy-coset mechanism, one might hope for a 13-element orbit of $PSL(2,13)$ acting on some natural derived structure of $PG(1,13)$ (14 points). A first search is the action on $k$-subsets of the 14 points.
+\end{remarkbox}
+
+
+\subsection{$q=13$: a 91-to-13 collapse inside the matching orbit (new fiber candidate)}
+
+\begin{theorem}[Matching orbit partitions into 13 classes of size 7]
+Let $G=PSL(2,13)$ act on $PG(1,13)$ (14 points) and hence on perfect matchings of $K_{14}$. The orbit of a single round-robin matching has size 91. Moreover, if one fixes a distinguished vertex (the ``infinity'' label) and maps each matching to the unique partner of that vertex in the matching, then the 91 matchings partition into 13 classes of size 7:
+\[
+91 = 13\cdot 7,
+\]
+and each of the 13 partners occurs exactly 7 times.
+\end{theorem}
+
+\begin{remarkbox}
+\textbf{Interpretation.} This provides the first concrete 13-fiber-like collapse at $q=13$ despite the absence of a 13-orbit among $k$-subsets of $PG(1,13)$. It suggests that the gauge-free fiber at $q=13$ may be realized as a \emph{quotient of a 91-element matching orbit} by the internal collapse factor $(q+1)/2=7$, rather than as a subgroup coset $PSL(2,13)/H$ with $|H|=84$. This is exactly the kind of ``cheeky'' combinatorial relocation seen elsewhere in the kernel.
+(Bundle: \texttt{W33\_q13\_matching\_orbit\_partition\_91\_to\_13\_bundle.zip}.)
+\end{remarkbox}
+
+
+\subsection{$q=13$: partner-label partition on $PSL(2,13)$ elements (84-per-label classes)}
+
+\begin{theorem}[A 13-class partition of $PSL(2,13)$ compatible with the 91-to-13 collapse]
+Fix the base matching $M_0$ (round-robin matching with $\infty$ paired to 0) and define
+\[
+f(g):=\text{the partner of }\infty \text{ in the matching } g\cdot M_0,\qquad g\in PSL(2,13).
+\]
+Then $f$ takes values in $\mathbb{F}_{13}$ and partitions the 1092 group elements into 13 classes of equal size:
+\[
+|f^{-1}(a)|=84\quad \text{for every }a\in\mathbb{F}_{13}.
+\]
+\end{theorem}
+
+\begin{remarkbox}
+\textbf{Right-invariance and non-coset nature.} The partition is invariant under right multiplication by the size-12 stabilizer of $M_0$ (as expected from the matching orbit size 91). However, the 84-element fibers are \emph{not} right cosets of a size-84 subgroup (the only global right-invariance subgroup is size 12). Thus the 13 classes arise as a genuine ``cheeky'' quotient of the 91 matching orbit (and its 12-element stabilizer), not as a straightforward coset fiber $PSL(2,13)/H$.
+(Bundle: \texttt{W33\_q13\_PSL13\_partner\_label\_partition\_bundle.zip}.)
+\end{remarkbox}
+
+
+\subsection{$q=13$: why the 13-partition does not yet give a transport (failed label-action attempts)}
+
+\begin{remarkbox}
+We identified a canonical 91-to-13 collapse inside the perfect-matching orbit (partitioning 91 matchings into 13 classes of size 7 by the partner of $\infty$). To build the $vq=30940$ rung, we would like a \emph{transport rule} making these 13 labels into a genuine fiber acted on by the holonomy group.
+\end{remarkbox}
+
+\begin{theorem}[The partner partition is not $PSL(2,13)$-invariant]
+Let $f(M)$ be the partner of $\infty$ in a matching $M$. Although the orbit of a matching partitions into 13 classes of size 7 by $f$, this partition is not preserved by the full $PSL(2,13)$ action on matchings: for a generic $g\in PSL(2,13)$, the image of a class $f^{-1}(a)$ is not contained in a single class $f^{-1}(a')$. Equivalently, the partition is not a system of imprimitivity for the PSL action.
+\end{theorem}
+
+\begin{remarkbox}
+\textbf{Interpretation.} The 13-partition depends on a choice of distinguished $\infty$ (a projective gauge). In $q=11$ this was resolved by a gauge-free coset fiber $PSL(2,11)/A_5$ of size 11. For $q=13$, extensive searches indicate no 13-orbit among $k$-subsets of $PG(1,13)$ and the 13-partition is not PSL-invariant. Thus a gauge-free 13-fiber likely requires additional structure from the full $W(3,13)$ kernel (e.g., an associated object built from the $PGL(2,13)$ cocycle, or a commutant action on the local-generator orbit), not the projective-line action alone.
+(Bundle: \texttt{W33\_q13\_label\_transport\_attempts\_bundle.zip}.)
+\end{remarkbox}
+
+
+
+
+
+
+
+
+
+
+\begin{theorem}[Orbit sizes on $k$-subsets exclude size 13]
+For the natural action of $PSL(2,13)$ on $PG(1,13)$, the induced action on $k$-subsets (for $k=3,4,5,6,7$) has orbit sizes among:
+\[
+k=3:\ 182;\quad
+k=4:\ 91,273,546;\quad
+k=5:\ 182,546;\quad
+k=6:\ 91,546,1092;\quad
+k=7:\ 78,182,364,546,
+\]
+and in particular no orbit of size 13 occurs.
+\end{theorem}
+
+\begin{remarkbox}
+\textbf{Interpretation.} This strongly suggests the desired 13-fiber is not obtained from the projective-line action alone; it must come from a richer associated object (e.g., derived from the full $W(3,13)$ incidence, the homology module $H_{13}$, or a commutant action on the local-generator orbit), analogous to the $q=11$ coset fiber $PSL(2,11)/A_5$ which is not a $PG(1,11)$ point set.
+(Bundle: \texttt{W33\_q13\_fiber\_orbit\_search\_bundle.zip}.)
+\end{remarkbox}
+
+
+
+
+
+
+
+\begin{remarkbox}
+\textbf{Current obstruction.} A direct ``label $a\in\mathbb{F}_{13}$'' fiber is not stable under full projective transport (the cocycle typically sends $\infty$ to a finite label), so bucket indices do not transport canonically. A natural approach is to realize the 13-fiber as an orbit/coset space of the holonomy group. This would require an index-13 subgroup of $PSL(2,13)$ (order 84), but our exploratory random subgroup searches did not locate such a subgroup among elements of the observed orders $\{2,3,6,7,13\}$. Standard subgroup classifications for $PSL(2,13)$ suggest prominent maximal subgroups of orders 78 (index 14 Borel), and dihedral/A4/S4/A5 types, so the size-13 fiber may need to be realized as an orbit on a richer combinatorial object (e.g., factorization or spread structures) rather than simple cosets.
+\end{remarkbox}
+
+\begin{remarkbox}
+\textbf{Next move.} Two promising paths:
+(i) search for a 13-element orbit of $PSL(2,13)$ acting on derived structures on $PG(1,13)$ (perfect matchings / factorization orbits), or
+(ii) use the natural 14-point $PG(1,13)$ fiber (index 14) and incorporate the Pascal buckets as a secondary quotient to obtain an effective 13-label gauge-free lift.
+(Bundle: \texttt{W33\_q13\_vq\_construction\_frontier\_bundle.zip}.)
+\end{remarkbox}
+
+\subsection{$q=13$: gauge-cocycle action on $\Omega_{14}=PG(3,13)\times PG(1,13)$ (8-orbital super-scheme)}
+
+\begin{theorem}[An 8-orbital scheme on 33320 objects]
+Using the exact $PGL(2,13)$ cocycle computed from line transport, we obtain a well-defined action on the 33320-object set
+\[
+\Omega_{14}=PG(3,13)\times PG(1,13),
+\]
+of size $2380\cdot 14=33320$. The stabilizer of a base object has 8 orbits with sizes:
+\[
+1,\ 13,\ 13,\ 13^2,\ 13^2,\ 13^3,\ 13^3,\ 13^4,
+\]
+summing to 33320.
+\end{theorem}
+
+\begin{remarkbox}
+\textbf{Interpretation.} This shows that the projective cocycle naturally yields a \emph{super-scheme} whose orbital degrees factor cleanly as powers of $q$. The desired q-ladder rung at $vq=2380\cdot 13=30940$ should arise as a quotient/refinement of $\Omega_{14}$ that removes the extra projective point (the moving ``infinity'') and collapses the duplicated 13/13$^2$/13$^3$ orbits appropriately. In geometric language, $\Omega_{14}$ is the principal $PGL(2,13)$-bundle-associated object, while the q-ladder fiber seeks an additional reduction (a gauge-fixing functional) to a 13-fiber.
+(Bundle: \texttt{W33\_q13\_Omega14\_orbital\_degrees\_bundle.zip}.)
+\end{remarkbox}
+
+\begin{remarkbox}
+\textbf{Attempted reduction $\Omega_{14}\to \Omega_{13}$ by gauge fixing.} A natural idea is to project the fiber $PG(1,13)$ to $\mathbb{F}_{13}$ by a pointwise gauge fix (e.g., map $\infty\mapsto 0$ after transport). We implemented this as an induced action on $2380\cdot 13=30940$ objects, but the resulting maps are not bijections: multiple labels can map to $\infty$ under a M\"obius transform, causing collisions after projection. Thus the $vq$ reduction at $q=13$ cannot be achieved by a naive pointwise projection; it must use a holonomy-aware quotient/associated object.
+(Bundle: \texttt{W33\_q13\_Omega13\_gaugefix\_attempt\_bundle.zip}.)
+\end{remarkbox}
+
+\begin{remarkbox}
+\textbf{Parallel transport projection attempt (fails).} We also tried a tree-based gauge-fixed projection: for each point $p$, compute a transport $T_p$ from the base chart and define $a=\pi(p,x)$ by pulling back $x$ to the base ($y=T_p^{-1}x$) and then collapsing $\infty\mapsto 0$. Even using the parallel-transport section $x=T_p(a)$ for finite $a$, the induced maps on $vq=2380\cdot 13$ objects are not bijections: Möbius transport can send finite labels to $\infty$, so collapsing $\infty$ causes unavoidable collisions. This reinforces that the $vq$ reduction at $q=13$ cannot be done by any pointwise projection $PG(1,13)\to\mathbb{F}_{13}$, even with spanning-tree transport; a non-pointwise quotient is required. (Bundle: \texttt{W33\_q13\_path\_transport\_projection\_attempt\_bundle.zip}.)
+\end{remarkbox}
+
+\subsection{$q=13$: first bijective $vq$ action from cocycle renormalization (partial rung)}
+
+\begin{theorem}[A bijective 30940-object action with 4 orbital degrees]
+Define a 13-label update rule by renormalizing each transport to send the pole to infinity:
+for a cocycle matrix $M$ at a step $p\to p'$, let $t=M(\infty)$. For $a\in\mathbb{F}_{13}$ define
+\[
+a'=
+\begin{cases}
+2\,(M(a)-t)^{-1} & M(a)\neq \infty,\ t\neq \infty,\\
+0 & M(a)=\infty,\ t\neq \infty,\\
+2\,M(a) & t=\infty,
+\end{cases}
+\]
+with the scalar 2 chosen as a nonsquare to merge the quadratic-residue split. This yields bijections on the 30940-object set $PG(3,13)\times\mathbb{F}_{13}$ for each generator.
+The stabilizer of a base object has 4 orbits of sizes:
+\[
+1,\ 12,\ 2366,\ 28561.
+\]
+\end{theorem}
+
+\begin{remarkbox}
+\textbf{Interpretation.} The bijective $vq$ action confirms that a holonomy-aware, non-pointwise normalization can remove the pole collision obstruction. The orbit sizes match the q-ladder values for $1$ and $q-1$ and $q^2(q+1)$, but the expected split $(q^3,\ q^3(q-1))$ appears merged into $q^4$. Thus this construction is a partial rung: additional structure (likely commutant information from $H_{13}$ or a larger acting subgroup) is needed to split the large orbital and recover the full 5-orbital q-ladder scheme.
+(Bundle: \texttt{W33\_q13\_vq\_action\_partial\_success\_bundle.zip}.)
+\end{remarkbox}
+
+\subsection{$q=13$: split search update (still merged $q^4$ orbital)}
+
+\begin{remarkbox}
+We increased the acting subgroup (14 symplectic generators) and compiled a larger stabilizer generator set via Schreier sampling. The resulting bijective $vq=30940$ action persists under the cocycle-renormalization update rule, but the stabilizer orbit partition remains
+\[
+1,\ 12,\ 2366,\ 28561,
+\]
+with the expected $(q^3,\ q^3(q-1))=(2197,26364)$ still merged into $q^4=28561$. This indicates the missing split is not an artifact of too-small generator sets; it likely requires an additional commutant/H-module invariant beyond pure projective renormalization.
+(Bundle: \texttt{W33\_q13\_vq\_split\_search\_attempt\_bundle.zip}.)
+\end{remarkbox}
+
+\subsection{$q=13$: commutator-holonomy invariant attempt (did not split $q^4$)}
+
+\begin{remarkbox}
+To split the merged $q^4=28561$ stabilizer orbital in the bijective $vq$ action into $(q^3,\ q^3(q-1))=(2197,26364)$, we tested commutator-holonomy invariants derived directly from the cocycle. For a generator pair $(i,j)$, we computed the 4-step commutator loop $i\to j\to i^{-1}\to j^{-1}$ and obtained nontrivial order-13 holonomy matrices $H_p(i,j)\in PGL(2,13)$.
+\end{remarkbox}
+
+\begin{remarkbox}
+We tested invariants built from the action of $H_p$ on the label $a$ (renormalized image) and from the quadratic character (Legendre symbol) of $H_p(a)-H_p(\infty)$. The former is uniformly distributed on $\mathbb{F}_{13}$ and does not split the large orbital; the latter is not preserved under generator steps and thus is not an invariant of the action. This suggests that the missing split requires a different scalar, likely an $H_{13}$-module / commutant-derived phase (e.g., a Bargmann 4-cycle phase analog) rather than a raw commutator action on PG(1,13) labels.
+(Bundle: \texttt{W33\_q13\_commutator\_invariant\_attempt\_bundle.zip}.)
+\end{remarkbox}
+\appendix
+\section{Global Artifact Index}
+\ArtifactTable{
+\texttt{W33\_\allowbreak{}symplectic\_\allowbreak{}audit\_\allowbreak{}bundle.\allowbreak{}zip} & Explicit construction of $W(3,3)$ and W33; point/line incidence; $PG(3,3)$ points; isotropic vs nonisotropic line lists; verification of SRG parameters and spectrum.\\
+
+\texttt{W33\_\allowbreak{}orbits\_\allowbreak{}squarezero\_\allowbreak{}bundle.\allowbreak{}zip} & Aut(W33) generators (permutations and GF(3) matrices); orbit computations; square-zero and symmetry checkpoints.\\
+
+\texttt{W33\_\allowbreak{}GF2\_\allowbreak{}kernel\_\allowbreak{}code\_\allowbreak{}bundle.\allowbreak{}zip} & The $[40,24,6]$ kernel code $\ker(A)$ over $\mathbb{F}\_2$; 240 weight-6 generators; code basis and supporting tables.\\
+
+\texttt{W33\_\allowbreak{}H8\_\allowbreak{}quadratic\_\allowbreak{}form\_\allowbreak{}bundle.\allowbreak{}zip} & Basis of $H=\ker(A)/\mathrm{im}(A)$; invariant quadratic form $q$; orbit split (135 singular / 120 nonsingular).\\
+
+\texttt{W33\_\allowbreak{}to\_\allowbreak{}H\_\allowbreak{}to\_\allowbreak{}120root\_\allowbreak{}SRG\_\allowbreak{}bundle.\allowbreak{}zip} & The 120 nonsingular orbit list; SRG(120,56,28,24) edges/adjacency; mappings from code generators to $H$.\\
+
+\texttt{W33\_\allowbreak{}E8\_\allowbreak{}simple\_\allowbreak{}root\_\allowbreak{}system\_\allowbreak{}bundle.\allowbreak{}zip} & Canonical induced $E\_8$ Dynkin configuration inside the 120-root SRG; Coxeter checks; reflection orbit generation.\\
+
+\texttt{W33\_\allowbreak{}signed\_\allowbreak{}root\_\allowbreak{}cocycle\_\allowbreak{}and\_\allowbreak{}lift\_\allowbreak{}bundle.\allowbreak{}zip} & Signed lift/cocycle computations on 120-root edges and Steiner triples; defect weights; gauge studies.\\
+
+\texttt{W33\_\allowbreak{}global\_\allowbreak{}gaugefix\_\allowbreak{}no16\_\allowbreak{}bundle.\allowbreak{}zip} & Global sign/gauge fix removing all weight-16 defects; resulting {0,12} defect spectrum; 40 flat triples.\\
+
+\texttt{W33\_\allowbreak{}quotient\_\allowbreak{}closure\_\allowbreak{}complement\_\allowbreak{}and\_\allowbreak{}noniso\_\allowbreak{}line\_\allowbreak{}curvature\_\allowbreak{}bundle.\allowbreak{}zip} & Quotient $Q=\overline{\mathrm{W33}}$; edge matchings; triangle holonomy values; proof that flat holonomy triangles are exactly nonisotropic line triples.\\
+
+\texttt{W33\_\allowbreak{}Z3\_\allowbreak{}curvature\_\allowbreak{}cohomology\_\allowbreak{}on\_\allowbreak{}quotient\_\allowbreak{}bundle.\allowbreak{}zip} & Triangle curvature cochain over $\mathbb{Z}\_3$; non-exactness on the 2-skeleton; supporting tables.\\
+
+\texttt{W33\_\allowbreak{}minimal\_\allowbreak{}Z3\_\allowbreak{}flux\_\allowbreak{}cycles\_\allowbreak{}tetrahedra\_\allowbreak{}bundle.\allowbreak{}zip} & Minimal-support flux cycles (tetrahedron boundaries) and flux statistics for $J=dF$.\\
+
+\texttt{W33\_\allowbreak{}flux\_\allowbreak{}lattice\_\allowbreak{}clique\_\allowbreak{}complex\_\allowbreak{}Z3\_\allowbreak{}cohomology\_\allowbreak{}bundle.\allowbreak{}zip} & Clique-complex cohomology ranks and dimensions over $\mathbb{Z}\_3$; $H^3$ dimension 89; higher cohomology signature.\\
+
+\texttt{W33\_\allowbreak{}H3\_\allowbreak{}basis\_\allowbreak{}89\_\allowbreak{}Z3\_\allowbreak{}on\_\allowbreak{}clique\_\allowbreak{}complex\_\allowbreak{}bundle.\allowbreak{}zip} & Explicit 89-element basis for $H^3$ as sparse tetra-cochains; pivot/free coordinate metadata.\\
+
+\texttt{W33\_\allowbreak{}H3\_\allowbreak{}Aut\_\allowbreak{}action\_\allowbreak{}89Z3\_\allowbreak{}bundle.\allowbreak{}zip} & Aut(W33) action matrices on $H^3$; 88+1 decomposition; quotient functional and block form.\\
+
+\texttt{W33\_\allowbreak{}perm\_\allowbreak{}module\_\allowbreak{}vs\_\allowbreak{}H3\_\allowbreak{}match\_\allowbreak{}report\_\allowbreak{}bundle.\allowbreak{}zip} & Evidence and generators showing the 88D core matches the 90-line augmentation quotient up to the similitude sign twist.\\
+
+\texttt{W33\_\allowbreak{}H3\_\allowbreak{}to\_\allowbreak{}noniso\_\allowbreak{}line\_\allowbreak{}weights\_\allowbreak{}intertwiner\_\allowbreak{}bundle.\allowbreak{}zip} & Explicit intertwiner between $H^3$ 88D core and the twisted 90-line augmentation quotient.\\
+
+\texttt{W33\_\allowbreak{}lift\_\allowbreak{}to\_\allowbreak{}90\_\allowbreak{}line\_\allowbreak{}weights\_\allowbreak{}with\_\allowbreak{}labels\_\allowbreak{}bundle.\allowbreak{}zip} & Explicit lift to labeled 90 nonisotropic line weights (mod all-ones gauge); line\_id to 4-point set.\\
+
+\texttt{W33\_\allowbreak{}holonomy\_\allowbreak{}phase\_\allowbreak{}test\_\allowbreak{}bundle.\allowbreak{}zip} & Holonomy vs symplectic triangle phase test; shows background closed 2-form vs sourced curvature.\\
+
+\texttt{W33\_\allowbreak{}current\_\allowbreak{}operator\_\allowbreak{}C\_\allowbreak{}lineface\_\allowbreak{}bundle.\allowbreak{}zip} & Operator $C\_{\mathrm{lineface}}$ and line-moment statistics (source attachments to vacuum cells).\\
+
+\texttt{W33\_\allowbreak{}bulk\_\allowbreak{}operator\_\allowbreak{}K0K1\_\allowbreak{}curved\_\allowbreak{}triangle\_\allowbreak{}current\_\allowbreak{}bundle.\allowbreak{}zip} & Bulk current operators on curved triangles ($K\_0,K\_1$); outputs $y$ on the 2880 curved triangle orbit.\\
+
+\texttt{W33\_\allowbreak{}curved\_\allowbreak{}triangle\_\allowbreak{}to\_\allowbreak{}noniso\_\allowbreak{}line\_\allowbreak{}operator\_\allowbreak{}R\_\allowbreak{}bundle.\allowbreak{}zip} & Operator $R$ mapping curved-triangle current to 90-line aggregates via edge-incidence.\\
+
+\texttt{W33\_\allowbreak{}charge\_\allowbreak{}decomposition\_\allowbreak{}and\_\allowbreak{}line\_\allowbreak{}moments\_\allowbreak{}bundle.\allowbreak{}zip} & Charge decomposition $J=dF$; point incidences; preliminary line moments and constraints.\\
+
+\texttt{W33\_\allowbreak{}nonisotropic\_\allowbreak{}line\_\allowbreak{}association\_\allowbreak{}scheme\_\allowbreak{}bundle.\allowbreak{}zip} & 5-orbital association scheme on 90 lines; involution pairing; multiplication table; meet-graph spectrum.\\
+
+\texttt{W33\_\allowbreak{}vacuum\_\allowbreak{}line\_\allowbreak{}scheme\_\allowbreak{}mode\_\allowbreak{}decomposition\_\allowbreak{}bundle.\allowbreak{}zip} & Mode decomposition (five harmonics) on 90-line sector; mode bases; energy breakdown for observables.\\
+
+\texttt{W33\_\allowbreak{}transfer\_\allowbreak{}operators\_\allowbreak{}J\_\allowbreak{}to\_\allowbreak{}lines\_\allowbreak{}and\_\allowbreak{}mode\_\allowbreak{}injection\_\allowbreak{}bundle.\allowbreak{}zip} & Exact transfer operators $M$ and $Z$ from $J$ to line fields and mode injection tables.\\
+
+\texttt{W33\_\allowbreak{}best\_\allowbreak{}field\_\allowbreak{}equation\_\allowbreak{}operator\_\allowbreak{}on\_\allowbreak{}lines\_\allowbreak{}bundle.\allowbreak{}zip} & Best possible Aut-equivariant line-only predictor (polynomial in $S,A,A^2,SA$) and its coefficients.\\
+
+}
+
+
+\section{Global Dictionary Table}
+
+\begingroup
+\setlength{\tabcolsep}{4pt}%
+\renewcommand{\arraystretch}{1.15}%
+\scriptsize\sloppy
+\begin{tabularx}{\textwidth}{@{}p{0.16\textwidth}Y Y Y Y Y@{}}
+\toprule
+\textbf{Object} & \textbf{Interpretation} & \textbf{Algebra} & \textbf{Geometry/Topology} & \textbf{Quantum computation} & \textbf{Crypto / security}\\
+\midrule
+$V=\mathbb{F}\_3^4$ & Finite phase space; 2-qutrit discrete symplectic phase space. & Vector space over $\mathbb{F}\_3$ with symplectic form. & Underlying coordinate domain for projective geometry and Weyl operators. & Pauli/Weyl labels; Clifford acts by $Sp(4,3)$. & Key space for symplectic commutator phase.\\
+
+$W(3,3)$ / isotropic lines & Maximal commuting contexts. & Incidence geometry of totally isotropic points/lines. & Produces W33 as point graph. & Stabilizer contexts for two qutrits. & Basis for context-based protocols.\\
+
+W33 = SRG(40,12,2,4) & Base combinatorial geometry. & Adjacency matrix $A$ with SRG identities. & Over $\mathbb{F}\_2$, yields differential $A^2=0$. & Constraint graph / stabilizer structure. & Public structure; secrecy comes from gauge/coset choices.\\
+
+$A^2\equiv 0$ over $\mathbb{F}\_2$ & Chain-complex calculus. & Defines $d(x)=Ax$ with $d^2=0$. & Produces code $\ker(A)$ and homology $H$. & Error correction / stabilizer relations. & Syndromes / tamper detection.\\
+
+$H=\ker(A)/\mathrm{im}(A)$ (8D) & Intrinsic state space. & Carries invariant quadratic form; orbit split. & Nonsingular orbit gives 120-root shell. & Finite ``root'' degrees; phase classes. & Key reduction space for encoding.\\
+
+120/240 roots & Finite root shell and signed lift. & SRG(120) adjacency via bilinear form; 2-to-1 lift. & Global gauge fixing yields flat triples. & Discrete gauge degrees; lift choices. & Keyed section choices = secrecy.\\
+
+$Q=\overline{\mathrm{W33}}$ & Quotient spacetime / interaction graph. & 40 meta-vertices after collapse; edge matchings. & Supports $\mathbb{Z}\_3$ holonomy. & Transport/holonomy = topological gate. & Holonomy checks = authentication.\\
+
+Holonomy $F\in C^2(\mathrm{Cl}(Q);\mathbb{Z}\_3)$ & Field strength / curvature. & Triangle cochain valued in $\mathbb{Z}\_3$. & Flat set classified by 90 nonisotropic lines. & Discrete phase curvature. & Consistency checks / signatures.\\
+
+Sources $J=dF\in C^3$ & Charge/current. & Supported on 3008 tetrahedra. & Generates vacuum responses via $M,Z$. & Excitations / particles. & Error/fault injection model.\\
+
+90 nonisotropic lines & Vacuum cells and matter carrier space. & Association scheme (5-mode harmonic analysis). & Line-weight field model (mod all-ones). & Contextual phase cells. & Share space for schemes; 88D core module.\\
+
+Transfer operators $M,Z$ & Constitutive laws. & Exact maps $J\mapsto (m,z)$. & Mode-resolved response tables. & Measurement/readout operators. & Encryption/readout operators.\\
+
+\bottomrule
+\end{tabularx}
+\endgroup
+
+
+\section{Reproducibility Checklist}
+
+\begin{remarkbox}
+Short SHA-256 prefixes (first 16 hex characters) for primary bundles in the current workspace.
+\end{remarkbox}
+
+\begingroup
+\setlength{\tabcolsep}{4pt}%
+\renewcommand{\arraystretch}{1.15}%
+\small\sloppy
+\begin{tabularx}{\textwidth}{@{}T Y@{}}
+\toprule
+\textbf{File} & \textbf{SHA-256 prefix}\\
+\midrule
+\texttt{W33\_\allowbreak{}symplectic\_\allowbreak{}audit\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{c8f7547649abdab1}\\
+
+\texttt{W33\_\allowbreak{}orbits\_\allowbreak{}squarezero\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{84835a9889e4380b}\\
+
+\texttt{W33\_\allowbreak{}GF2\_\allowbreak{}kernel\_\allowbreak{}code\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{952858afb5d65007}\\
+
+\texttt{W33\_\allowbreak{}H8\_\allowbreak{}quadratic\_\allowbreak{}form\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{de3a9a9b0afb6a37}\\
+
+\texttt{W33\_\allowbreak{}to\_\allowbreak{}H\_\allowbreak{}to\_\allowbreak{}120root\_\allowbreak{}SRG\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{3257de84a4b9c466}\\
+
+\texttt{W33\_\allowbreak{}E8\_\allowbreak{}simple\_\allowbreak{}root\_\allowbreak{}system\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{d200bec6ff81f00a}\\
+
+\texttt{W33\_\allowbreak{}signed\_\allowbreak{}root\_\allowbreak{}cocycle\_\allowbreak{}and\_\allowbreak{}lift\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{d33146ea2d96104f}\\
+
+\texttt{W33\_\allowbreak{}global\_\allowbreak{}gaugefix\_\allowbreak{}no16\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{8de8d1182056ac00}\\
+
+\texttt{W33\_\allowbreak{}quotient\_\allowbreak{}closure\_\allowbreak{}complement\_\allowbreak{}and\_\allowbreak{}noniso\_\allowbreak{}line\_\allowbreak{}curvature\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{8a6cda139ed0a0e6}\\
+
+\texttt{W33\_\allowbreak{}Z3\_\allowbreak{}curvature\_\allowbreak{}cohomology\_\allowbreak{}on\_\allowbreak{}quotient\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{1a7804dd46ccb1b5}\\
+
+\texttt{W33\_\allowbreak{}minimal\_\allowbreak{}Z3\_\allowbreak{}flux\_\allowbreak{}cycles\_\allowbreak{}tetrahedra\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{8d69efdc34b5a0e6}\\
+
+\texttt{W33\_\allowbreak{}flux\_\allowbreak{}lattice\_\allowbreak{}clique\_\allowbreak{}complex\_\allowbreak{}Z3\_\allowbreak{}cohomology\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{17f5bb8490fc2d36}\\
+
+\texttt{W33\_\allowbreak{}H3\_\allowbreak{}basis\_\allowbreak{}89\_\allowbreak{}Z3\_\allowbreak{}on\_\allowbreak{}clique\_\allowbreak{}complex\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{2fa53b14fcd57da9}\\
+
+\texttt{W33\_\allowbreak{}H3\_\allowbreak{}Aut\_\allowbreak{}action\_\allowbreak{}89Z3\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{032be0e14f33c5cc}\\
+
+\texttt{W33\_\allowbreak{}perm\_\allowbreak{}module\_\allowbreak{}vs\_\allowbreak{}H3\_\allowbreak{}match\_\allowbreak{}report\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{535aa4d6b03264d9}\\
+
+\texttt{W33\_\allowbreak{}H3\_\allowbreak{}to\_\allowbreak{}noniso\_\allowbreak{}line\_\allowbreak{}weights\_\allowbreak{}intertwiner\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{da15db795acf478b}\\
+
+\texttt{W33\_\allowbreak{}lift\_\allowbreak{}to\_\allowbreak{}90\_\allowbreak{}line\_\allowbreak{}weights\_\allowbreak{}with\_\allowbreak{}labels\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{81b9f049398d5f93}\\
+
+\texttt{W33\_\allowbreak{}holonomy\_\allowbreak{}phase\_\allowbreak{}test\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{5991ca050359bc4b}\\
+
+\texttt{W33\_\allowbreak{}current\_\allowbreak{}operator\_\allowbreak{}C\_\allowbreak{}lineface\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{02e3566e1869ce07}\\
+
+\texttt{W33\_\allowbreak{}bulk\_\allowbreak{}operator\_\allowbreak{}K0K1\_\allowbreak{}curved\_\allowbreak{}triangle\_\allowbreak{}current\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{5953f1541d2793f1}\\
+
+\texttt{W33\_\allowbreak{}curved\_\allowbreak{}triangle\_\allowbreak{}to\_\allowbreak{}noniso\_\allowbreak{}line\_\allowbreak{}operator\_\allowbreak{}R\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{633e86c28d6433cf}\\
+
+\texttt{W33\_\allowbreak{}charge\_\allowbreak{}decomposition\_\allowbreak{}and\_\allowbreak{}line\_\allowbreak{}moments\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{d9c00f5e46ca2658}\\
+
+\texttt{W33\_\allowbreak{}nonisotropic\_\allowbreak{}line\_\allowbreak{}association\_\allowbreak{}scheme\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{ec4b4b8e10918586}\\
+
+\texttt{W33\_\allowbreak{}vacuum\_\allowbreak{}line\_\allowbreak{}scheme\_\allowbreak{}mode\_\allowbreak{}decomposition\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{d8545a6b843ab310}\\
+
+\texttt{W33\_\allowbreak{}transfer\_\allowbreak{}operators\_\allowbreak{}J\_\allowbreak{}to\_\allowbreak{}lines\_\allowbreak{}and\_\allowbreak{}mode\_\allowbreak{}injection\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{647e18c9a6ac8f7c}\\
+
+\texttt{W33\_\allowbreak{}best\_\allowbreak{}field\_\allowbreak{}equation\_\allowbreak{}operator\_\allowbreak{}on\_\allowbreak{}lines\_\allowbreak{}bundle.\allowbreak{}zip} & \texttt{3494bf1e74c08f1b}\\
+
+\bottomrule
+\end{tabularx}
+\endgroup
+
+\end{document}

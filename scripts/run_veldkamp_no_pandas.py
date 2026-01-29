@@ -44,7 +44,7 @@ try:
     }
     out = Path('bundles/v23_toe_finish/v23/veld_summary.json')
     with out.open('w', encoding='utf-8') as f:
-        json.dump(summary, f, indent=2)
+        json.dump(summary, f, indent=2, default=str)
     # small stdout confirmation so human-readable logs are available if terminal captures them
     print(f"Wrote summary to {out} (n_triangles={summary['n_triangles']}, n_points={summary['n_points']})")
 except Exception:
