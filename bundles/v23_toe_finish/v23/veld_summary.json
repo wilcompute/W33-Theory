@@ -1,0 +1,16 @@
+{
+  "n_points": 45,
+  "n_triangles": 5280,
+  "n_generators": 45,
+  "generator_size_hist": {
+    "33": 45
+  },
+  "gf2_rank": 45,
+  "expected_n_veldkamp": 35184372088832,
+  "n_veldkamp": 35184372088832,
+  "veldkamp_enumerated": false,
+  "veldkamp_size_hist": {},
+  "degree_hist": {
+    "32": 45
+  }
+}
