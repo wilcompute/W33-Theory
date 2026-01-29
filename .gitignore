@@ -60,6 +60,9 @@ bundles/v23_toe_finish/v23/
 # Allow correlation summaries and plots
 !bundles/v23_toe_finish/v23/gbs_tda_correlation_summary.json
 !bundles/v23_toe_finish/v23/gbs_tda_w_vs_js_correlation.png
+# Allow walrus / tex parsing outputs
+!bundles/v23_toe_finish/v23/walrus_sf_comparison.json
+!bundles/v23_toe_finish/v23/tex_claims_summary.json
 
 # Tools and external runtimes (often large, installed by user)
 tools/
