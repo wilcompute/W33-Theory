@@ -14,6 +14,16 @@ Notes:
   - git push -u origin photonic/threshold-sweeps
   - gh pr create --title "Add GBS threshold-sweep scripts" --body "See PR_DRAFT_photonic_threshold_sweeps.md" --base main
 
+Related work & TDA methods (added):
+- We add an optional Topological Data Analysis (TDA) pathway to the notebook to capture multi-scale geometric signatures in GBS sample spaces. Key references:
+  - Nicolau, Levine & Carlsson, *Science* 2011 (Mapper in genomics)
+  - Rabadan & Blumberg, *Topological Data Analysis for Genomics and Evolution* (overview)
+  - Emmett et al., *Parametric inference using persistence diagrams* (population genetics case study, arXiv:1406.4582)
+  - Lesnick, Rabadán & Rosenbloom (topological approaches to reticulate evolution, arXiv:1804.01398)
+  - Benjamin et al., *Multiscale topology for spatial transcriptomics* (arXiv:2212.06505)
+- Tooling: `ripser`, `persim`/`ripser.py`, `giotto-tda` are recommended and added to `requirements.txt` as optional dependencies for running the TDA prototype.
+- Reproducibility note: A short TDA prototype cell computes persistence diagrams and Betti curves from the GBS photon-count point clouds and compares Wasserstein/bottleneck distances to Jensen–Shannon divergence across (modes, η). See `notebooks/quantum_photonics/gbs_benchmark_full.ipynb` for usage and examples.
+
 Files of interest (partial list):
 - scripts/quantum_photonics/run_gbs_threshold_sweep_quick.py
 - scripts/quantum_photonics/run_gbs_threshold_sweep_minimal.py
