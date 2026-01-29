@@ -48,3 +48,17 @@ Thumbs.db
 .claude/
 # Local generated plots/artifacts
 sp4_spectrum_test.png
+
+# Ignore editor settings and temporary workspace files
+.vscode/
+
+# Ignore large generated bundles for local experiments (keep repo lightweight)
+bundles/v23_toe_finish/v23/
+
+# Tools and external runtimes (often large, installed by user)
+tools/
+
+# Jupyter and transient process artifacts
+.ipynb_checkpoints/
+*.pid
+*.err
