@@ -4,6 +4,7 @@ Usage: python scripts/quantum_photonics/run_cv_repeater.py --r 0.8 --loss 0.9
 Simulate two-mode squeezed states, lossy channels, and entanglement swapping using Strawberry Fields Gaussian backend.
 """
 import argparse
+import json
 import numpy as np
 
 try:
