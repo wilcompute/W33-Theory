@@ -684,7 +684,8 @@
         34,
         35
       ]
-    ]
+    ],
+    "estimated_group_size": 103680
   },
   "ternary": {
     "dim3": 15,

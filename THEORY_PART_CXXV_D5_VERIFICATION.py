@@ -67,14 +67,14 @@ def analyze_D5_inner_products(roots):
 
 def build_W33_symplectic():
     """
-    Build W33 as the symplectic polar graph Sp(4, F₃).
+    Build W33 as the symplectic polar graph Sp(4, F3).
 
-    Vertices: maximal totally isotropic 2-subspaces of F₃⁴ with symplectic form
+    Vertices: maximal totally isotropic 2-subspaces of F3^4 with symplectic form
     Edges: subspaces that intersect in a 1-dimensional subspace
 
-    Symplectic form: ω((x₁,x₂,x₃,x₄), (y₁,y₂,y₃,y₄)) = x₁y₂ - x₂y₁ + x₃y₄ - x₄y₃
+    Symplectic form: omega((x1,x2,x3,x4), (y1,y2,y3,y4)) = x1*y2 - x2*y1 + x3*y4 - x4*y3
     """
-    print("\n  Building W33 as Sp(4, F₃) polar graph...")
+    print("\n  Building W33 as Sp(4, F3) polar graph...")
 
     F3 = [0, 1, 2]  # F₃ elements
 
@@ -102,7 +102,7 @@ def build_W33_symplectic():
                     if v != (0, 0, 0, 0):
                         all_vectors.append(v)
 
-    print(f"  Total non-zero vectors in F₃⁴: {len(all_vectors)}")
+    print(f"  Total non-zero vectors in F3^4: {len(all_vectors)}")
 
     # Find all maximal totally isotropic 2-subspaces
     # A 2-subspace is spanned by two linearly independent vectors

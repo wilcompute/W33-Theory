@@ -333,6 +333,9 @@ def main():
     # automorphisms
     aut = compute_automorphism_data(M)
     out['automorphism'] = aut
+    # ensure estimated_group_size present for compatibility
+    if 'estimated_group_size' not in out['automorphism'] and 'exact_order' in out['automorphism']:
+        out['automorphism']['estimated_group_size'] = out['automorphism']['exact_order']
 
     # ternary code sampling
     tern = ternary_code_sampling(M, dim3=out['gf3_rank_incidence'], samples=RANDOM_SAMPLES)
@@ -341,7 +344,7 @@ def main():
     # write JSON and markdown
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     with OUT_JSON.open('w', encoding='utf-8') as f:
-        json.dump(out, f, indent=2)
+        json.dump(out, f, indent=2, default=str)
     write_markdown_report(out)
     print('Wrote', OUT_JSON, OUT_MD)
 
