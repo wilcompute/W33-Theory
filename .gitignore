@@ -54,6 +54,9 @@ sp4_spectrum_test.png
 
 # Ignore large generated bundles for local experiments (keep repo lightweight)
 bundles/v23_toe_finish/v23/
+# But allow follow-up TDA outputs to be tracked
+!bundles/v23_toe_finish/v23/gbs_threshold_tda_followup_*
+!bundles/v23_toe_finish/v23/gbs_threshold_tda_followup_summary.*
 
 # Tools and external runtimes (often large, installed by user)
 tools/
