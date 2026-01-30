@@ -1,0 +1,487 @@
+
+
+  [1XReferences[101X
+
+  [[20XAMW82[120X]  [16XArrell,  D.  G., Manrai, S. and Worboys, M. F.[116X ([1m[31mCampbell, C. M. and
+  Robertson,  E.  F.[15X,  Eds.),  [17XA  procedure  for obtaining simplified defining
+  relations  for  a  subgroup[117X,  in  Groups–St Andrews 1981 (St Andrews, 1981),
+  Cambridge  Univ.  Press,  London Math. Soc. Lecture Note Ser., [19X71[119X, Cambridge
+  (1982), 155–159.
+
+  [[20XAR84[120X] [16XArrell, D. G. and Robertson, E. F.[116X ([1m[31mAtkinson, M. D.[15X, Ed.), [17XA modified
+  Todd-Coxeter  algorithm[117X,  in  Computational  group  theory  (Durham,  1982),
+  Academic Press, London (1984), 27–32.
+
+  [[20XArt73[120X]  [16XArtin, E.[116X, [17XGaloissche Theorie[117X, Verlag Harri Deutsch, Zurich (1973),
+  86  pages,  (Übersetzung  nach  der  zweiten  englischen Auflage besorgt von
+  Viktor  Ziegler,  Mit  einem  Anhang von N. A. Milgram, Zweite, unveränderte
+  Auflage, Deutsch-Taschenbücher, No. 21).
+
+  [[20XBak84[120X]  [16XBaker,  A.[116X,  [17XA  concise  introduction  to  the  theory  of numbers[117X,
+  Cambridge University Press, Cambridge (1984), xiii+95 pages.
+
+  [[20XBC76[120X]  [16XBeetham, M. J. and Campbell, C. M.[116X, [17XA note on the Todd-Coxeter coset
+  enumeration algorithm[117X, [18XProc. Edinburgh Math. Soc. (2)[118X, [19X20[119X, 1 (1976), 73–79.
+
+  [[20XBC89[120X]  [16XBrent,  R.  P.  and  Cohen, G. L.[116X, [17XA new lower bound for odd perfect
+  numbers[117X, [18XMath. Comp.[118X, [19X53[119X, 187 (1989), 431–437, S7–S24.
+
+  [[20XBC94[120X]  [16XBaum,  U.  and Clausen, M.[116X, [17XComputing irreducible representations of
+  supersolvable groups[117X, [18XMath. Comp.[118X, [19X63[119X, 207 (1994), 351–359.
+
+  [[20XBCFS91[120X]  [16XBabai,  L.,  Cooperman, G., Finkelstein, L. and Seress, Á.[116X, [17XNearly
+  Linear  Time  Algorithms  for  Permutation  Groups  with  a  Small  Base[117X, in
+  Proceedings  of  the  International  Symposium  on  Symbolic  and  Algebraic
+  Computation (ISSAC'91), Bonn 1991, ACM Press (1991), 200–209.
+
+  [[20XBE99[120X]  [16XBesche,  H.  U.  and  Eick,  B.[116X,  [17XConstruction  of finite groups[117X, [18XJ.
+  Symbolic Comput.[118X, [19X27[119X, 4 (1999), 387–404.
+
+  [[20XBer76[120X] [16XBerger, T. R.[116X, [17XCharacters and derived length in groups of odd order[117X,
+  [18XJ. Algebra[118X, [19X39[119X, 1 (1976), 199–207.
+
+  [[20XBes92[120X]  [16XBesche,  H.  U.[116X, [17XDie Berechnung von Charaktergraden und Charakteren
+  endlicher  auflösbarer  Gruppen  im Computeralgebrasystem GAP[117X, Diplomarbeit,
+  Lehrstuhl  D  für  Mathematik, Rheinisch Westfälische Technische Hochschule,
+  Aachen, Germany (1992).
+
+  [[20XBFS79[120X]  [16XBeyl,  F.  R.,  Felgner,  U. and Schmid, P.[116X, [17XOn groups occurring as
+  center factor groups[117X, [18XJ. Algebra[118X, [19X61[119X, 1 (1979), 161–177.
+
+  [[20XBJR87[120X] [16XBrown, R., Johnson, D. L. and Robertson, E. F.[116X, [17XSome computations of
+  nonabelian tensor products of groups[117X, [18XJ. Algebra[118X, [19X111[119X, 1 (1987), 177–202.
+
+  [[20XBL98[120X]  [16XBreuer,  T.  and  Linton,  S.[116X,  [17XThe  GAP 4  Type  System. Organizing
+  Algebraic  Algorithms[117X,  in  ISSAC '98: Proceedings of the 1998 international
+  symposium  on  Symbolic  and algebraic computation, ACM Press, New York, NY,
+  USA (1998), 38–45, (Chairman: Volker Weispfenning and Barry Trager).
+
+  [[20XBLS75[120X]  [16XBrillhart, J., Lehmer, D. and Selfridge, J.[116X, [17XNew primality criteria
+  and  factorizations  of  2^m  ±  1[117X,  [18XMathematics  of Computation[118X, [19X29[119X (1975),
+  620–647.
+
+  [[20XBou70[120X]  [16XBourbaki,  N.[116X,  [17XÉléments de mathématique. Algèbre. Chapitres 1 à 3[117X,
+  Hermann, Paris (1970), xiii+635 pp. (not consecutively paged) pages.
+
+  [[20XBP98[120X] [16XBreuer, T. and Pfeiffer, G.[116X, [17XFinding possible permutation characters[117X,
+  [18XJ. Symbolic Comput.[118X, [19X26[119X, 3 (1998), 343–354.
+
+  [[20XBre91[120X]     [16XBreuer,     T.[116X,     [17XPotenzabbildungen,     Untergruppenfusionen,
+  Tafel-Automorphismen[117X,  Diplomarbeit,  Lehrstuhl  D für Mathematik, Rheinisch
+  Westfälische Technische Hochschule, Aachen, Germany (1991).
+
+  [[20XBre97[120X] [16XBreuer, T.[116X, [17XIntegral bases for subfields of cyclotomic fields[117X, [18XAppl.
+  Algebra Engrg. Comm. Comput.[118X, [19X8[119X, 4 (1997), 279–289.
+
+  [[20XBre99[120X]  [16XBreuer, T.[116X, [17XComputing possible class fusions from character tables[117X,
+  [18XComm. Algebra[118X, [19X27[119X, 6 (1999), 2733–2748.
+
+  [[20XBTW93[120X]   [16XBeauzamy,   B.,   Trevisan,   V.   and  Wang,  P.  S.[116X,  [17XPolynomial
+  factorization:  sharp bounds, efficient algorithms[117X, [18XJ. Symbolic Comput.[118X, [19X15[119X,
+  4 (1993), 393–413.
+
+  [[20XBur55[120X]  [16XBurnside,  W.[116X, [17XTheory of groups of finite order[117X, Dover Publications
+  Inc.,  New  York  (1955),  xxiv+512  pages, (Unabridged republication of the
+  second edition, published in 1911).
+
+  [[20XCan73[120X]  [16XCannon, J. J.[116X, [17XConstruction of defining relators for finite groups[117X,
+  [18XDiscrete Math.[118X, [19X5[119X (1973), 105–129.
+
+  [[20XCar72[120X]  [16XCarter,  R.  W.[116X,  [17XSimple  groups  of  Lie  type[117X, John Wiley & Sons,
+  London-New   York-Sydney   (1972),   viii+331   pages,   (Pure  and  Applied
+  Mathematics, Vol. 28).
+
+  [[20XCCN+85[120X]  [16XConway,  J.  H.,  Curtis,  R. T., Norton, S. P., Parker, R. A. and
+  Wilson,  R.  A.[116X,  [17XAtlas  of  finite groups[117X, Oxford University Press, Eynsham
+  (1985),  xxxiv+252  pages,  (Maximal  subgroups  and ordinary characters for
+  simple groups, With computational assistance from J. G. Thackray).
+
+  [[20XCLO97[120X]  [16XCox,  D.,  Little,  J.  and  O'Shea,  D.[116X,  [17XIdeals,  varieties,  and
+  algorithms[117X,   Springer-Verlag,   Second   edition,  Undergraduate  Texts  in
+  Mathematics,   New   York   (1997),   xiv+536  pages,  (An  introduction  to
+  computational algebraic geometry and commutative algebra).
+
+  [[20XCoh93[120X]  [16XCohen,  H.[116X,  [17XA  course  in  computational  algebraic number theory[117X,
+  Springer-Verlag,  Graduate Texts in Mathematics, [19X138[119X, Berlin (1993), xii+534
+  pages.
+
+  [[20XCon90a[120X]  [16XConlon,  S.  B.[116X,  [17XCalculating  characters of p-groups[117X, [18XJ. Symbolic
+  Comput.[118X, [19X9[119X, 5-6 (1990), 535–550, (Computational group theory, Part 1).
+
+  [[20XCon90b[120X]  [16XConlon,  S. B.[116X, [17XComputing modular and projective character degrees
+  of   soluble   groups[117X,   [18XJ.   Symbolic  Comput.[118X,  [19X9[119X,  5-6  (1990),  551–570,
+  (Computational group theory, Part 1).
+
+  [[20XDix67[120X]  [16XDixon,  J.  D.[116X,  [17XHigh speed computation of group characters[117X, [18XNumer.
+  Math.[118X, [19X10[119X (1967), 446–450.
+
+  [[20XDix93[120X] [16XDixon, J. D.[116X ([1m[31mFinkelstein, L. and Kantor, W. M.[15X, Eds.), [17XConstructing
+  representations  of finite groups[117X, in Groups and computation (New Brunswick,
+  NJ,  1991),  Amer.  Math.  Soc., DIMACS Ser. Discrete Math. Theoret. Comput.
+  Sci., [19X11[119X, Providence, RI (1993), 105–112.
+
+  [[20XDre69[120X]  [16XDress,  A.[116X,  [17XA  characterisation  of solvable groups[117X, [18XMath. Z.[118X, [19X110[119X
+  (1969), 213–217.
+
+  [[20XEH01[120X]  [16XEick,  B.  and  Hulpke,  A.[116X,  [17XComputing  the  maximal subgroups of a
+  permutation group I[117X, 155–168.
+
+  [[20XEic97[120X]  [16XEick,  B.[116X  ([1m[31mFinkelstein,  L.  and  Kantor,  W.  M.[15X,  Eds.), [17XSpecial
+  presentations   for  finite  soluble  groups  and  computing  (pre-)Frattini
+  subgroups[117X,  in  Groups  and computation, II (New Brunswick, NJ, 1995), Amer.
+  Math.   Soc.,   DIMACS  Ser.  Discrete  Math.  Theoret.  Comput.  Sci.,  [19X28[119X,
+  Providence, RI (1997), 101–112.
+
+  [[20XEll98[120X]  [16XEllis,  G.[116X, [17XOn the capability of groups[117X, [18XProc. Edinburgh Math. Soc.
+  (2)[118X, [19X41[119X, 3 (1998), 487–495.
+
+  [[20XFJNT95[120X]  [16XFelsch,  V., Johnson, D. L., Neubüser, J. and Tsaranov, S. V.[116X, [17XThe
+  structure of certain Coxeter groups[117X, in Groups '93 Galway/St Andrews, Vol. 1
+  (Galway,  1993), Cambridge Univ. Press, London Math. Soc. Lecture Note Ser.,
+  [19X211[119X, Cambridge (1995), 177–190.
+
+  [[20XFN79[120X]  [16XFelsch,  V.  and Neubüser, J.[116X ([1m[31mNg, E. W.[15X, Ed.), [17XAn algorithm for the
+  computation  of  conjugacy classes and centralizers in p-groups[117X, in Symbolic
+  and algebraic computation (EUROSAM '79, Internat. Sympos., Marseille, 1979),
+  Springer,  Lecture  Notes  in  Comput.  Sci.,  [19X72[119X,  Berlin  (1979), 452–465,
+  (EUROSAM '79, an International Symposium held in Marseille, June 1979).
+
+  [[20XFra82[120X]  [16XFrame,  J.  S.[116X,  [17XRecursive  computation of tensor power components[117X,
+  [18XBayreuth. Math. Schr.[118X, [19X10[119X (1982), 153–159.
+
+  [[20XGW95[120X]  [16XGow,  R.  and  Willems,  W.[116X,  [17XMethods  to decide if simple self-dual
+  modules  over  fields of characteristic 2 are of quadratic type[117X, [18XJ. Algebra[118X,
+  [19X175[119X, 3 (1995), 1067–1081.
+
+  [[20XHal34[120X]  [16XHall,  P.[116X,  [17XA  contribution  to the theory of groups of prime-power
+  order[117X,  [18XProceedings  of  the  London  Mathematical Society[118X, [19Xs2-36[119X, 1 (1934),
+  29–95.
+
+  [[20XHal36[120X]  [16XHall,  P.[116X,  [17XOn  a  Theorem  of Frobenius[117X, [18XProceedings of the London
+  Mathematical Society[118X, [19Xs2-40[119X, 1 (1936), 468–501.
+
+  [[20XHav69[120X]  [16XHavas,  G.[116X,  [17XSymbolic  and  Algebraic Calculation[117X, Basser Computing
+  Dept.,  Technical  Report, Basser Department of Computer Science, University
+  of Sydney, 89, Sydney, Australia (1969).
+
+  [[20XHav74[120X]  [16XHavas, G.[116X ([1m[31mNewman, M. F.[15X, Ed.), [17XA Reidemeister-Schreier program[117X, in
+  Proceedings  of  the Second International Conference on the Theory of Groups
+  (Australian  Nat.  Univ., Canberra, 1973), Springer, Lecture Notes in Math.,
+  [19X372[119X,  Berlin (1974), 347–356. Lecture Notes in Math., Vol. 372, (Held at the
+  Australian  National  University,  Canberra,  August  13–24,  1973,  With an
+  introduction by B. H. Neumann, Lecture Notes in Mathematics, Vol. 372).
+
+  [[20XHB82[120X]  [16XHuppert,  B.  and Blackburn, N.[116X, [17XFinite groups. II[117X, Springer-Verlag,
+  Grundlehren Math. Wiss., [19X242[119X, Berlin (1982), xiii+531 pages.
+
+  [[20XHIÖ89[120X] [16XHawkes, T., Isaacs, I. M. and Özaydin, M.[116X, [17XOn the Möbius function of
+  a finite group[117X, [18XRocky Mountain J. Math.[118X, [19X19[119X, 4 (1989), 1003–1034.
+
+  [[20XHJ59[120X] [16XHall Jr., M.[116X, [17XThe theory of groups[117X, The Macmillan Co., New York, N.Y.
+  (1959), xiii+434 pages.
+
+  [[20XHJLP[120X]  [16XHiss,  G.,  Jansen,  C.,  Lux,  K.  and Parker, R. A.[116X, [17XComputational
+  Modular Character Theory[117X, http://www.math.rwth-aachen.de/~MOC/CoMoChaT/.
+
+  [[20XHKRR84[120X]  [16XHavas,  G.,  Kenne,  P. E., Richardson, J. S. and Robertson, E. F.[116X
+  ([1m[31mAtkinson,  M.  D.[15X,  Ed.), [17XA Tietze transformation program[117X, in Computational
+  group theory (Durham, 1982), Academic Press, London (1984), 69–73.
+
+  [[20XHow76[120X]  [16XHowie,  J.  M.[116X, [17XAn introduction to semigroup theory[117X, Academic Press
+  [Harcourt  Brace Jovanovich Publishers], London (1976), x+272 pages, (L.M.S.
+  Monographs, No. 7).
+
+  [[20XHP89[120X]  [16XHolt,  D.  F.  and  Plesken, W.[116X, [17XPerfect groups[117X, The Clarendon Press
+  Oxford  University  Press,  Oxford Mathematical Monographs, New York (1989),
+  xii+364   pages,   (With   an   appendix   by  W.  Hanrath,  Oxford  Science
+  Publications).
+
+  [[20XHR94[120X]  [16XHolt,  D.  F.  and  Rees, S.[116X, [17XTesting modules for irreducibility[117X, [18XJ.
+  Austral. Math. Soc. Ser. A[118X, [19X57[119X, 1 (1994), 1–16.
+
+  [[20XHul93[120X]  [16XHulpke,  A.[116X,  [17XZur  Berechnung  von  Charaktertafeln[117X,  Diplomarbeit,
+  Lehrstuhl  D  für  Mathematik,  Rheinisch Westfälische Technische Hochschule
+  (1993).
+
+  [[20XHul96[120X]    [16XHulpke,   A.[116X,   [17XKonstruktion   transitiver   Permutationsgruppen[117X,
+  Dissertation,   Verlag   der   Augustinus  Buchhandlung,  Aachen,  Rheinisch
+  Westfälische Technische Hochschule, Aachen, Germany (1996).
+
+  [[20XHul98[120X]  [16XHulpke,  A.[116X, [17XComputing normal subgroups[117X, in Proceedings of the 1998
+  International  Symposium  on  Symbolic  and Algebraic Computation (Rostock),
+  ACM,  New  York (1998), 194–198 (electronic), (Chairman: Volker Weispfenning
+  and Barry Trager).
+
+  [[20XHul99[120X]   [16XHulpke,   A.[116X,   [17XComputing  subgroups  invariant  under  a  set  of
+  automorphisms[117X, [18XJ. Symbolic Comput.[118X, [19X27[119X, 4 (1999), 415–427.
+
+  [[20XHul00[120X]  [16XHulpke,  A.[116X,  [17XConjugacy  classes  in  finite permutation groups via
+  homomorphic images[117X, [18XMath. Comp.[118X, [19X69[119X, 232 (2000), 1633–1651.
+
+  [[20XHul01[120X]  [16XHulpke,  A.[116X, [17XRepresenting subgroups of finitely presented groups by
+  quotient subgroups[117X, [18XExperiment. Math.[118X, [19X10[119X, 3 (2001), 369–381.
+
+  [[20XHum72[120X]  [16XHumphreys,  J.  E.[116X, [17XIntroduction to Lie algebras and representation
+  theory[117X,  Springer-Verlag, New York (1972), xii+169 pages, (Graduate Texts in
+  Mathematics, Vol. 9).
+
+  [[20XHum78[120X]  [16XHumphreys,  J.  E.[116X, [17XIntroduction to Lie algebras and representation
+  theory[117X,  Springer-Verlag, Graduate Texts in Mathematics, [19X9[119X, New York (1978),
+  xii+171 pages, (Second printing, revised).
+
+  [[20XHup67[120X]  [16XHuppert,  B.[116X, [17XEndliche Gruppen. I[117X, Springer-Verlag, Die Grundlehren
+  der Mathematischen Wissenschaften, Band 134, Berlin (1967), xii+793 pages.
+
+  [[20XIE94[120X]   [16XIshibashi,  H.  and  Earnest,  A.  G.[116X,  [17XTwo-element  generation  of
+  orthogonal groups over finite fields[117X, [18XJ. Algebra[118X, [19X165[119X, 1 (1994), 164–171.
+
+  [[20XIsa76[120X]  [16XIsaacs,  I.  M.[116X,  [17XCharacter theory of finite groups[117X, Academic Press
+  [Harcourt  Brace  Jovanovich  Publishers],  New  York (1976), xii+303 pages,
+  (Pure and Applied Mathematics, No. 69).
+
+  [[20XJK81[120X]  [16XJames, G. and Kerber, A.[116X, [17XThe representation theory of the symmetric
+  group[117X,  Addison-Wesley  Publishing  Co.,  Reading,  Mass.,  Encyclopedia  of
+  Mathematics  and  its  Applications,  [19X16[119X  (1981),  xxviii+510 pages, (With a
+  foreword by P. M. Cohn, With an introduction by Gilbert de B. Robinson).
+
+  [[20XJLPW95[120X]  [16XJansen, C., Lux, K., Parker, R. and Wilson, R.[116X, [17XAn atlas of Brauer
+  characters[117X, The Clarendon Press Oxford University Press, London Mathematical
+  Society  Monographs.  New  Series,  [19X11[119X,  New  York  (1995), xviii+327 pages,
+  (Appendix 2 by T. Breuer and S. Norton, Oxford Science Publications).
+
+  [[20XJoh97[120X] [16XJohnson, D. L.[116X, [17XPresentations of groups[117X, Cambridge University Press,
+  Second  edition,  London  Mathematical  Society Student Texts, [19X15[119X, Cambridge
+  (1997), xii+216 pages.
+
+  [[20XKau92[120X]   [16XKaup,   A.[116X,   [17XGitterbasen   und   Charaktere   endlicher  Gruppen[117X,
+  Diplomarbeit,  Lehrstuhl D für Mathematik, Rheinisch Westfälische Technische
+  Hochschule, Aachen, Germany (1992).
+
+  [[20XKL90[120X]  [16XKleidman,  P.  and Liebeck, M.[116X, [17XThe subgroup structure of the finite
+  classical  groups[117X,  Cambridge  University Press, London Mathematical Society
+  Lecture Note Series, [19X129[119X, Cambridge (1990), x+303 pages.
+
+  [[20XKli66[120X]  [16XKlimyk,  A.  U.[116X, [17XDecomposition of the direct product of irreducible
+  representations of semisimple Lie algebras into irreducible representations[117X,
+  [18XUkrain. Mat. Ž.[118X, [19X18[119X, 5 (1966), 19–27.
+
+  [[20XKli68[120X]  [16XKlimyk,  A.  U.[116X,  [17XDecomposition  of a direct product of irreducible
+  representations    of    a   semisimple   Lie   algebra   into   irreducible
+  representations[117X,  in  American  Mathematical Society Translations. Series 2,
+  American Mathematical Society, [19X76[119X, Providence, R.I. (1968), 63–73.
+
+  [[20XKLM01[120X]  [16XKemper,  G.,  Lübeck, F. and Magaard, K.[116X, [17XMatrix generators for the
+  Ree groups ^2G_2(q)[117X, [18XComm. Algebra[118X, [19X29[119X, 1 (2001), 407–413.
+
+  [[20XKnu98[120X]   [16XKnuth,   D.  E.[116X,  [17XThe  Art  of  Computer  Programming,  Volume  2:
+  Seminumerical Algorithms[117X, Addison-Wesley, third edition (1998).
+
+  [[20XLan70[120X]  [16XLang,  S.[116X,  [17XAlgebraic number theory[117X, Addison-Wesley Publishing Co.,
+  Reading, Mass.-London-Don Mills, Ont. (1970), xi+354 pages.
+
+  [[20XLeo91[120X]  [16XLeon,  J.  S.[116X, [17XPermutation group algorithms based on partitions. I.
+  Theory  and  algorithms[117X,  [18XJ.  Symbolic  Comput.[118X,  [19X12[119X,  4-5  (1991), 533–583,
+  (Computational group theory, Part 2).
+
+  [[20XLLJL82[120X]  [16XLenstra,  A.  K.,  Lenstra  Jr.,  H.  W. and Lovász, L.[116X, [17XFactoring
+  polynomials with rational coefficients[117X, [18XMath. Ann.[118X, [19X261[119X, 4 (1982), 515–534.
+
+  [[20XLNS84[120X] [16XLaue, R., Neubüser, J. and Schoenwaelder, U.[116X ([1m[31mAtkinson, M. D.[15X, Ed.),
+  [17XAlgorithms  for finite soluble groups and the SOGOS system[117X, in Computational
+  group theory (Durham, 1982), Academic Press, London (1984), 105–135.
+
+  [[20XLP91[120X]  [16XLux,  K.  and Pahlings, H.[116X ([1m[31mMichler, G. O. and Ringel, C. M.[15X, Eds.),
+  [17XComputational   aspects  of  representation  theory  of  finite  groups[117X,  in
+  Representation  theory  of  finite  groups  and  finite-dimensional algebras
+  (Bielefeld, 1991), Birkhäuser, Progr. Math., [19X95[119X, Basel (1991), 37–64.
+
+  [[20XLRW97[120X]  [16XLuks,  E. M., Rákóczi, F. and Wright, C. R. B.[116X, [17XSome algorithms for
+  nilpotent permutation groups[117X, [18XJ. Symbolic Comput.[118X, [19X23[119X, 4 (1997), 335–354.
+
+  [[20XLüb03[120X]   [16XLübeck,   F.[116X,   [17XConway   polynomials  for  finite  fields[117X  (2003),
+  http://www.math.rwth-aachen.de:8001/~Frank.Luebeck/data/ConwayPol.
+
+  [[20XMaa10[120X]  [16XMaas,  L.[116X,  [17XOn  a construction of the basic spin representations of
+  symmetric groups[117X, [18XCommunications in Algebra[118X, [19X38[119X (2010), 4545–4552.
+
+  [[20XMac81[120X]  [16XMacdonald,  I.  G.[116X,  [17XNumbers  of  conjugacy  classes in some finite
+  classical groups[117X, [18XBull. Austral. Math. Soc.[118X, [19X23[119X, 1 (1981), 23–48.
+
+  [[20XMN89[120X]  [16XMecky,  M.  and  Neubüser,  J.[116X,  [17XSome  remarks on the computation of
+  conjugacy  classes  of  soluble  groups[117X,  [18XBull.  Austral.  Math. Soc.[118X, [19X40[119X, 2
+  (1989), 281–292.
+
+  [[20XMur58[120X] [16XMurnaghan, F. D.[116X, [17XThe orthogonal and symplectic groups[117X, [18XComm. Dublin
+  Inst. Adv. Studies. Ser. A, no.[118X, [19X13[119X (1958), 146.
+
+  [[20XMV97[120X]  [16XMahajan,  M.  and Vinay, V.[116X, [17XDeterminant: combinatorics, algorithms,
+  and  complexity[117X,  [18XChicago J. Theoret. Comput. Sci.[118X (1997), Article 5, 26 pp.
+  (electronic).
+
+  [[20XMY79[120X]  [16XMcKay,  J.  and  Young, K. C.[116X, [17XThe nonabelian simple groups G, |G| <
+  10^6–minimal generating pairs[117X, [18XMath. Comp.[118X, [19X33[119X, 146 (1979), 812–814.
+
+  [[20XNeb95[120X]   [16XNebe,   G.[116X,   [17XEndliche   rationale   Matrixgruppen  vom  Grad  24[117X,
+  Dissertation,   Rheinisch   Westfälische   Technische  Hochschule,  Aachener
+  Beiträge zur Mathematik, [19X12[119X, Aachen, Germany (1995).
+
+  [[20XNeb96[120X]  [16XNebe,  G.[116X,  [17XFinite  subgroups  of  GL_n(Q)  for  25 ≤ n ≤ 31[117X, [18XComm.
+  Algebra[118X, [19X24[119X, 7 (1996), 2341–2397.
+
+  [[20XNeu82[120X]  [16XNeubüser,  J.[116X  ([1m[31mCampbell,  C.  M.  and  Robertson, E. F.[15X, Eds.), [17XAn
+  elementary  introduction  to  coset  table  methods  in  computational group
+  theory[117X, in Groups–St Andrews 1981 (St Andrews, 1981), Cambridge Univ. Press,
+  London Math. Soc. Lecture Note Ser., [19X71[119X, Cambridge (1982), 1–45.
+
+  [[20XNeu92[120X]   [16XNeukirch,   J.[116X,   [17XAlgebraische  Zahlentheorie[117X,  Springer,  Berlin,
+  Heidelberg and New York (1992).
+
+  [[20XNew90[120X]  [16XNewman, M. F.[116X, [17XProving a group infinite[117X, [18XArch. Math. (Basel)[118X, [19X54[119X, 3
+  (1990), 209–211.
+
+  [[20XNP95b[120X]  [16XNebe,  G.  and Plesken, W.[116X, [17XFinite rational matrix groups of degree
+  16[117X, [18XMem. Amer. Math. Soc.[118X, AMS, [19X116[119X, 556 (1995), 74–144.
+
+  [[20XNPP84[120X]  [16XNeubüser,  J., Pahlings, H. and Plesken, W.[116X ([1m[31mAtkinson, M. D.[15X, Ed.),
+  [17XCAS;  design  and  use  of a system for the handling of characters of finite
+  groups[117X, in Computational group theory (Durham, 1982), Academic Press, London
+  (1984), 195–247.
+
+  [[20XPah93[120X]  [16XPahlings, H.[116X, [17XOn the Möbius function of a finite group[117X, [18XArch. Math.
+  (Basel)[118X, [19X60[119X, 1 (1993), 7–14.
+
+  [[20XPar84[120X]  [16XParker,  R.  A.[116X ([1m[31mAtkinson, M. D.[15X, Ed.), [17XThe computer calculation of
+  modular  characters  (the  meat-axe)[117X, in Computational group theory (Durham,
+  1982), Academic Press, London (1984), 267–274.
+
+  [[20XPfe91[120X]   [16XPfeiffer,   G.[116X,   [17XVon  Permutationscharakteren  und  Markentafeln[117X,
+  Diplomarbeit,  Lehrstuhl D für Mathematik, Rheinisch Westfälische Technische
+  Hochschule, Aachen, Germany (1991).
+
+  [[20XPfe97[120X]  [16XPfeiffer, G.[116X, [17XThe subgroups of M_24, or how to compute the table of
+  marks of a finite group[117X, [18XExperiment. Math.[118X, [19X6[119X, 3 (1997), 247–270.
+
+  [[20XPle85[120X]   [16XPlesken,   W.[116X,  [17XFinite  unimodular  groups  of  prime  degree  and
+  circulants[117X, [18XJ. Algebra[118X, [19X97[119X, 1 (1985), 286–312.
+
+  [[20XPle95[120X]  [16XPlesken,  W.[116X,  [17XSolving XX^ tr = A over the integers[117X, [18XLinear Algebra
+  Appl.[118X, [19X226/228[119X (1995), 331--344.
+
+  [[20XPN95[120X]  [16XPlesken,  W. and Nebe, G.[116X, [17XFinite rational matrix groups[117X, [18XMem. Amer.
+  Math. Soc.[118X, AMS, [19X116[119X, 556 (1995), 1–73.
+
+  [[20XPoh87[120X]  [16XPohst,  M.[116X,  [17XA  modification  of  the  LLL  reduction algorithm[117X, [18XJ.
+  Symbolic Comput.[118X, [19X4[119X, 1 (1987), 123–127.
+
+  [[20XPP77[120X] [16XPlesken, W. and Pohst, M.[116X, [17XOn maximal finite irreducible Subgroups of
+  GL(n,Z).  I.  The  five and seven dimensional cases, II. The six dimensional
+  case[117X, [18XMath. Comp.[118X, [19X31[119X (1977), 536–576.
+
+  [[20XPP80[120X] [16XPlesken, W. and Pohst, M.[116X, [17XOn maximal finite irreducible Subgroups of
+  GL(n,Z). III. The nine dimensional case, IV. Remarks on even dimensions with
+  application  to  n  =  8,  V.  The  eight  dimensional  case  and a complete
+  description of dimensions less than ten[117X, [18XMath. Comp.[118X, [19X34[119X (1980), 245–301.
+
+  [[20XRin93[120X]  [16XRinge,  M.[116X, [17XThe C MeatAxe, Release 1.5[117X, Lehrstuhl D für Mathematik,
+  Rheinisch Westfälische Technische Hochschule, Aachen, Germany (1993).
+
+  [[20XRob88[120X]  [16XRobertson,  E.  F.[116X,  [17XTietze transformations with weighted substring
+  search[117X, [18XJ. Symbolic Comput.[118X, [19X6[119X, 1 (1988), 59–64.
+
+  [[20XRT98[120X]  [16XRylands,  L.  J.  and  Taylor,  D.  E.[116X,  [17XMatrix  generators  for the
+  orthogonal groups[117X, [18XJ. Symbolic Comput.[118X, [19X25[119X, 3 (1998), 351–360.
+
+  [[20XSch11[120X]   [16XSchur,   J.[116X,  [17XÜber  die  Darstellung  der  symmetrischen  und  der
+  alternierenden  Gruppe  durch gebrochene lineare Substitutionen[117X, [18XJournal für
+  die reine und angewandte Mathematik[118X, [19X139[119X (1911), 155–250.
+
+  [[20XSch90[120X] [16XSchneider, G. J. A.[116X, [17XDixon's character table algorithm revisited[117X, [18XJ.
+  Symbolic  Comput.[118X, [19X9[119X, 5-6 (1990), 601–606, (Computational group theory, Part
+  1).
+
+  [[20XSch92[120X]  [16XScherner, M.[116X, [17XErweiterung einer Arithmetik von Kreisteilungskörpern
+  auf   deren  Teilkörper  und  deren  Implementation  in  GAP[117X,  Diplomarbeit,
+  Lehrstuhl  D  für  Mathematik, Rheinisch Westfälische Technische Hochschule,
+  Aachen, Germany (1992).
+
+  [[20XSch94[120X]  [16XSchiffer,  U.[116X,  [17XCliffordmatrizen[117X,  Diplomarbeit,  Lehrstuhl  D  für
+  Mathematik,  Rheinisch  Westfälische  Technische Hochschule, Aachen, Germany
+  (1994).
+
+  [[20XSco73[120X]  [16XScott,  L.  L.[116X,  [17XModular  permutation representations[117X, [18XTrans. Amer.
+  Math. Soc.[118X, [19X175[119X (1973), 101–121.
+
+  [[20XSer03[120X] [16XSeress, Á.[116X, [17XPermutation Group Algorithms[117X, Cambridge University Press
+  (2003).
+
+  [[20XSim70[120X]  [16XSims, C. C.[116X ([1m[31mLeech, J.[15X, Ed.), [17XComputational methods in the study of
+  permutation  groups[117X,  in  Computational  Problems in Abstract Algebra (Proc.
+  Conf.,  Oxford, 1967) , Pergamon, Proceedings of a Conference held at Oxford
+  under   the  auspices  of  the  Science  Research  Council,  Atlas  Computer
+  Laboratory, [19X29[119X, Oxford (1970), 169–183, RUSSIAN translation in: Computations
+  in  algebra  and  number  theory (Russian), edited by B. B. Venkov and D. K.
+  Faddeev, pp. 129–147, Matematika, Novoie v Zarubeznoi Naukie, vol. 2, Izdat.
+  MIR, Moscow, 1976.
+
+  [[20XSim90[120X] [16XSims, C. C.[116X, [17XComputing the order of a solvable permutation group[117X, [18XJ.
+  Symbolic  Comput.[118X, [19X9[119X, 5-6 (1990), 699–705, (Computational group theory, Part
+  1).
+
+  [[20XSim94[120X]  [16XSims,  C. C.[116X, [17XComputation with finitely presented groups[117X, Cambridge
+  University  Press,  Encyclopedia  of  Mathematics  and its Applications, [19X48[119X,
+  Cambridge (1994), xiii+604 pages.
+
+  [[20XSim97[120X]  [16XSims,  C.  C.[116X  ([1m[31mKüchlin,  W.[15X,  Ed.),  [17XComputing  with  subgroups of
+  automorphism   groups   of   finite  groups[117X,  in  Proceedings  of  the  1997
+  International  Symposium  on Symbolic and Algebraic Computation (Kihei, HI),
+  The  Association  for  Computing  Machinery,  ACM,  New York (1997), 400–403
+  (electronic), (Held in Kihei, HI, July 21–23, 1997).
+
+  [[20XSM85[120X]  [16XSoicher,  L.  and  McKay,  J.[116X,  [17XComputing  Galois  groups  over  the
+  rationals[117X, [18XJ. Number Theory[118X, [19X20[119X, 3 (1985), 273–281.
+
+  [[20XSou94[120X]  [16XSouvignier, B.[116X, [17XIrreducible finite integral matrix groups of degree
+  8   and   10[117X,  [18XMath.  Comp.[118X,  [19X63[119X,  207  (1994),  335–350,  (With  microfiche
+  supplement).
+
+  [[20XSPA89[120X]  [17XSPAS - Subgroup Presentation Algorithms System, version 2.5, User's
+  reference   manual[117X,  Lehrstuhl  D  für  Mathematik,  Rheinisch  Westfälische
+  Technische Hochschule, Aachen, Germany (1989).
+
+  [[20XTay87[120X]  [16XTaylor, D. E.[116X, [17XPairs of Generators for Matrix Groups. I[117X, [18XThe Cayley
+  Bulletin[118X, [19X3[119X (1987).
+
+  [[20XThe93[120X]  [16XTheißen,  H.[116X, [17XMethoden zur Bestimmung der rationalen Konjugiertheit
+  in  endlichen  Gruppen[117X,  Diplomarbeit, Lehrstuhl D für Mathematik, Rheinisch
+  Westfälische Technische Hochschule, Aachen, Germany (1993).
+
+  [[20XThe97[120X]   [16XTheißen,   H.[116X,   [17XEine   Methode   zur   Normalisatorberechnung  in
+  Permutationsgruppen  mit Anwendungen in der Konstruktion primitiver Gruppen[117X,
+  Dissertation,  Rheinisch Westfälische Technische Hochschule, Aachen, Germany
+  (1997).
+
+  [[20XTho86[120X] [16XThompson, J. G.[116X, [17XSome finite groups which appear as GalL/K, where K⊆
+  Q(μ_n)[117X,  in  Group  theory, Beijing 1984, Springer, Berlin, Lecture Notes in
+  Math., [19X1185[119X (1986), 210–230.
+
+  [[20XvdW76[120X]  [16Xvan  der Waall, R. W.[116X, [17XOn symplectic primitive modules and monomial
+  groups[117X, [18XNederl. Akad. Wetensch. Proc. Ser. A 79, Indag. Math.[118X, [19X38[119X, 4 (1976),
+  362–375.
+
+  [[20XWag90[120X]  [16XWagon,  S.[116X, [17XEditor's corner: the Euclidean algorithm strikes again[117X,
+  [18XAmer. Math. Monthly[118X, [19X97[119X, 2 (1990), 125–129.
+
+  [[20XWie69[120X]  [16XWielandt,  H.[116X,  [17XPermutation  groups through invariant relations and
+  invariant  functions[117X,  Lecture  Notes,  Department  of Mathematics, The Ohio
+  State University (1969).
+
+  [[20XZag90[120X]  [16XZagier,  D.[116X, [17XA one-sentence proof that every prime p ≡ 1 mod 4 is a
+  sum of two squares[117X, [18XAmer. Math. Monthly[118X, [19X97[119X, 2 (1990), 144.
+
+  [[20XZum89[120X]  [16XZumbroich,  M.[116X, [17XGrundlagen einer Arithmetik in Kreisteilungskörpern
+  und  ihre  Implementation  in CAS[117X, Diplomarbeit, Lehrstuhl D für Mathematik,
+  Rheinisch Westfälische Technische Hochschule, Aachen, Germany (1989).
+
+
+
+  [32X

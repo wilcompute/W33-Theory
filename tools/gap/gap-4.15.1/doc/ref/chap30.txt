@@ -1,0 +1,1055 @@
+
+  [1X30 [33X[0;0YCollections[133X[101X
+
+  [33X[0;0YA  [13Xcollection[113X in [5XGAP[105X consists of elements in the same family (see [14X13.1[114X). The
+  most  important  kinds  of  collections  are  [13Xhomogeneous lists[113X (see [14X21[114X) and
+  [13Xdomains[113X  (see [14X12.4[114X).  Note  that  a  list is never a domain, and a domain is
+  never  a  list.  A  list  is  a collection if and only if it is nonempty and
+  homogeneous.[133X
+
+  [33X[0;0YBasic  operations for collections are [2XSize[102X ([14X30.4-6[114X) and [2XEnumerator[102X ([14X30.3-2[114X);
+  for  [13Xfinite[113X  collections,  [2XEnumerator[102X  ([14X30.3-2[114X) admits to delegate the other
+  operations  for  collections  (see [14X30.4[114X  and [14X30.5[114X)  to  functions  for lists
+  (see [14X21[114X).  Obviously,  special methods depending on the arguments are needed
+  for the computation of e.g. the intersection of two [13Xinfinite[113X domains.[133X
+
+
+  [1X30.1 [33X[0;0YIsCollection (Filter)[133X[101X
+
+  [1X30.1-1 IsCollection[101X
+
+  [33X[1;0Y[29X[2XIsCollection[102X( [3Xobj[103X ) [32X Category[133X
+
+  [33X[0;0Ytests whether an object is a collection.[133X
+
+  [33X[0;0YSome of the functions for lists and collections are described in the chapter
+  about  lists,  mainly  in Section [14X21.20[114X. In the current chapter, we describe
+  those  functions  for which the [21Xcollection aspect[121X seems to be more important
+  than the [21Xlist aspect[121X.[133X
+
+
+  [1X30.2 [33X[0;0YCollection Families[133X[101X
+
+  [1X30.2-1 CollectionsFamily[101X
+
+  [33X[1;0Y[29X[2XCollectionsFamily[102X( [3XFam[103X ) [32X attribute[133X
+
+  [33X[0;0YFor  a  family  [3XFam[103X, [2XCollectionsFamily[102X returns the family of all collections
+  over [3XFam[103X, that is, of all dense lists and domains that consist of objects in
+  [3XFam[103X.[133X
+
+  [33X[0;0YThe  [2XNewFamily[102X  ([14X13.1-2[114X) call in the standard method of [2XCollectionsFamily[102X is
+  executed  with  second argument [2XIsCollection[102X ([14X30.1-1[114X), since every object in
+  the  collections  family  must  be a collection, and with third argument the
+  collections  categories  of the involved categories in the implied filter of
+  [3XFam[103X.[133X
+
+  [33X[0;0YNote  that  families  (see [14X13.1[114X)  are  used  to  describe  relations between
+  objects.  Important  such  relations  are that between an element [22Xe[122X and each
+  collection  of  elements  that lie in the same family as [22Xe[122X, and that between
+  two  collections  whose  elements  lie  in  the  same family. Therefore, all
+  collections   of   elements   in   the   family  [3XFam[103X  form  the  new  family
+  [10XCollectionsFamily( [3XFam[103X[10X )[110X.[133X
+
+  [1X30.2-2 IsCollectionFamily[101X
+
+  [33X[1;0Y[29X[2XIsCollectionFamily[102X( [3Xobj[103X ) [32X Category[133X
+
+  [33X[0;0Yis [9Xtrue[109X if [3XFam[103X is a family of collections, and [9Xfalse[109X otherwise.[133X
+
+  [1X30.2-3 ElementsFamily[101X
+
+  [33X[1;0Y[29X[2XElementsFamily[102X( [3XFam[103X ) [32X attribute[133X
+
+  [33X[0;0YIf  [3XFam[103X  is  a  collections  family  (see [2XIsCollectionFamily[102X  ([14X30.2-2[114X)) then
+  [2XElementsFamily[102X   returns   the   family   from  which  [3XFam[103X  was  created  by
+  [2XCollectionsFamily[102X  ([14X30.2-1[114X).  The  way  a  collections family is created, it
+  always  has  its  elements family stored. If [3XFam[103X is not a collections family
+  then an error is signalled.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xfam:= FamilyObj( (1,2) );;[127X[104X
+    [4X[25Xgap>[125X [27Xcollfam:= CollectionsFamily( fam );;[127X[104X
+    [4X[25Xgap>[125X [27Xfam = collfam;  fam = ElementsFamily( collfam );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xcollfam = FamilyObj( [ (1,2,3) ] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xcollfam = FamilyObj( Group( () ) );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xcollfam = CollectionsFamily( collfam );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+
+  [1X30.2-4 CategoryCollections[101X
+
+  [33X[1;0Y[29X[2XCategoryCollections[102X( [3Xfilter[103X ) [32X function[133X
+
+  [33X[0;0YLet [3Xfilter[103X be a filter that is [9Xtrue[109X for all elements of a family [3XFam[103X, by the
+  construction  of  [3XFam[103X.  Then  [2XCategoryCollections[102X  returns  the  [13Xcollections
+  category[113X  of  [3Xfilter[103X.  This  is  a category that is [9Xtrue[109X for all elements in
+  [10XCollectionsFamily( [3XFam[103X[10X )[110X.[133X
+
+  [33X[0;0YFor example, the construction of [2XPermutationsFamily[102X ([14X42.1-3[114X) guarantees that
+  each of its elements lies in the filter [2XIsPerm[102X ([14X42.1-1[114X), and each collection
+  of  permutations  (permutation  group or dense list of permutations) lies in
+  the  category  [10XCategoryCollections( IsPerm )[110X. [10XCategoryCollections( IsPerm )[110X.
+  Note  that this works only if the collections category is created [13Xbefore[113X the
+  collections  family. So it is necessary to construct interesting collections
+  categories immediately after the underlying category has been created.[133X
+
+  [1X30.2-5 DeclareCategoryCollections[101X
+
+  [33X[1;0Y[29X[2XDeclareCategoryCollections[102X( [3Xname[103X ) [32X function[133X
+
+  [33X[0;0YCalls  [2XCategoryCollections[102X  ([14X30.2-4[114X)  on  the  category that is bound to the
+  global variable with name [3Xname[103X to obtain its collections category, and binds
+  the  latter  to the global variable with name [10Xnname[110X. This name is defined as
+  follows:  If  [3Xname[103X  is  of the form [10X[3XSomething[103X[10XCollection[110X then [10Xnname[110X is set to
+  [10X[3XSomething[103X[10XCollColl[110X, if [3Xname[103X is of the form [10X[3XSomething[103X[10XColl[110X then [10Xnname[110X is set to
+  [10X[3XSomething[103X[10XCollColl[110X, otherwise we set [10Xnname[110X to [10X[3Xname[103X[10XCollection[110X.[133X
+
+
+  [1X30.3 [33X[0;0YLists and Collections[133X[101X
+
+  [33X[0;0YThe  following functions take a [13Xlist or collection[113X as argument, and return a
+  corresponding  [13Xlist[113X.  They differ in whether or not the result is mutable or
+  immutable  (see [14X12.6[114X),  guaranteed to be sorted, or guaranteed to admit list
+  access in constant time (see [2XIsConstantTimeAccessList[102X ([14X21.1-6[114X)).[133X
+
+  [1X30.3-1 IsListOrCollection[101X
+
+  [33X[1;0Y[29X[2XIsListOrCollection[102X( [3Xobj[103X ) [32X Category[133X
+
+  [33X[0;0YSeveral  functions  are  defined for both lists and collections, for example
+  [2XIntersection[102X    ([14X30.5-2[114X),    [2XIterator[102X   ([14X30.8-1[114X),   and   [2XRandom[102X   ([14X30.7-1[114X).
+  [2XIsListOrCollection[102X  is  a  supercategory of [2XIsList[102X ([14X21.1-1[114X) and [2XIsCollection[102X
+  ([14X30.1-1[114X) (that is, all lists and collections lie in this category), which is
+  used to describe the arguments of functions such as the ones listed above.[133X
+
+  [1X30.3-2 Enumerator[101X
+
+  [33X[1;0Y[29X[2XEnumerator[102X( [3Xlistorcoll[103X ) [32X attribute[133X
+
+  [33X[0;0Y[2XEnumerator[102X  returns an immutable list [22Xenum[122X. If the argument is a list (which
+  may contain holes), then [10XLength( [110X[22Xenum[122X[10X )[110X is the length of this list, and [22Xenum[122X
+  contains  the  elements  (and  holes) of this list in the same order. If the
+  argument  is  a  collection  that  is not a list, then [10XLength( [110X[22Xenum[122X[10X )[110X is the
+  number  of different elements of [3XC[103X, and [22Xenum[122X contains the different elements
+  of  the  collection  in  an unspecified order, which may change for repeated
+  calls   of   [2XEnumerator[102X.   [22Xenum[pos][122X   may  not  execute  in  constant  time
+  (see [2XIsConstantTimeAccessList[102X  ([14X21.1-6[114X)),  and the size of [22Xenum[122X in memory is
+  as small as is feasible.[133X
+
+  [33X[0;0YFor  lists,  the  default method is [2XImmutable[102X ([14X12.6-3[114X). For collections that
+  are not lists, there is no default method.[133X
+
+  [1X30.3-3 EnumeratorSorted[101X
+
+  [33X[1;0Y[29X[2XEnumeratorSorted[102X( [3Xlistorcoll[103X ) [32X attribute[133X
+
+  [33X[0;0Y[2XEnumeratorSorted[102X  returns  an  immutable  list  [22Xenum[122X. The argument must be a
+  collection  or  a list [3Xlistorcoll[103X which may contain holes but whose elements
+  lie in the same family (see [14X13.1[114X). [10XLength( [110X[22Xenum[122X[10X )[110X is the number of different
+  elements of the argument, and [22Xenum[122X contains the different elements in sorted
+  order,    w.r.t. [10X<[110X.   [22Xenum[pos][122X   may   not   execute   in   constant   time
+  (see [2XIsConstantTimeAccessList[102X  ([14X21.1-6[114X)),  and the size of [22Xenum[122X in memory is
+  as small as is feasible.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XEnumerator( [ 1, 3,, 2 ] );[127X[104X
+    [4X[28X[ 1, 3,, 2 ][128X[104X
+    [4X[25Xgap>[125X [27Xenum:= Enumerator( Rationals );;  elm:= enum[ 10^6 ];[127X[104X
+    [4X[28X-69/907[128X[104X
+    [4X[25Xgap>[125X [27XPosition( enum, elm );[127X[104X
+    [4X[28X1000000[128X[104X
+    [4X[25Xgap>[125X [27XIsMutable( enum );  IsSortedList( enum );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsConstantTimeAccessList( enum );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XEnumeratorSorted( [ 1, 3,, 2 ] );[127X[104X
+    [4X[28X[ 1, 2, 3 ][128X[104X
+  [4X[32X[104X
+
+  [1X30.3-4 EnumeratorByFunctions[101X
+
+  [33X[1;0Y[29X[2XEnumeratorByFunctions[102X( [3XD[103X, [3Xrecord[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XEnumeratorByFunctions[102X( [3XFam[103X, [3Xrecord[103X ) [32X function[133X
+
+  [33X[0;0Y[2XEnumeratorByFunctions[102X  returns  an immutable, dense, and duplicate-free list
+  [22Xenum[122X  for  which  [2XIsBound[102X ([14X21.5-1[114X), element access via [2X\[\][102X ([14X21.2-1[114X), [2XLength[102X
+  ([14X21.17-5[114X), and [2XPosition[102X ([14X21.16-1[114X) are computed via prescribed functions.[133X
+
+  [33X[0;0YLet [3Xrecord[103X be a record with at least the following components.[133X
+
+  [8X[10XElementNumber[110X[8X[108X
+        [33X[0;6Ya  function taking two arguments [3Xenum[103X and [3Xpos[103X, which returns [10X[3Xenum[103X[10X[ [3Xpos[103X[10X
+        ][110X  (see [14X21.2[114X);  it  can be assumed that the argument [3Xpos[103X is a positive
+        integer,  but [3Xpos[103X may be larger than the length of [3Xenum[103X (in which case
+        an  error  must  be signalled); note that the result must be immutable
+        since [3Xenum[103X itself is immutable,[133X
+
+  [8X[10XNumberElement[110X[8X[108X
+        [33X[0;6Ya  function taking two arguments [3Xenum[103X and [3Xelm[103X, which returns [10XPosition(
+        [3Xenum[103X[10X, [3Xelm[103X[10X )[110X (see [2XPosition[102X ([14X21.16-1[114X)); it cannot be assumed that [3Xelm[103X is
+        really contained in [3Xenum[103X (and [9Xfail[109X must be returned if not); note that
+        for  the three argument version of [2XPosition[102X ([14X21.16-1[114X), the method that
+        is available for duplicate-free lists suffices.[133X
+
+  [33X[0;0YFurther  (data)  components  may be contained in [3Xrecord[103X which can be used by
+  these function.[133X
+
+  [33X[0;0YIf  the  first  argument is a domain [3XD[103X then [3Xenum[103X lists the elements of [3XD[103X (in
+  general  [3Xenum[103X  is  [13Xnot[113X  sorted),  and  methods for [2XLength[102X ([14X21.17-5[114X), [2XIsBound[102X
+  ([14X21.5-1[114X), and [2XPrintObj[102X ([14X6.3-5[114X) may use [3XD[103X.[133X
+
+  [33X[0;0YIf  one  wants  to  describe  the  result without creating a domain then the
+  elements  are  given  implicitly  by  the functions in [3Xrecord[103X, and the first
+  argument  must be a family [3XFam[103X which will become the family of [3Xenum[103X; if [3Xenum[103X
+  is  not  homogeneous  then [3XFam[103X must be [10XListsFamily[110X, otherwise it must be the
+  collections  family  of  any element in [3Xenum[103X. In this case, additionally the
+  following component in [3Xrecord[103X is needed.[133X
+
+  [8X[10XLength[110X[8X[108X
+        [33X[0;6Ya  function taking the argument [3Xenum[103X, which returns the length of [3Xenum[103X
+        (see [2XLength[102X ([14X21.17-5[114X)).[133X
+
+  [33X[0;0YThe following components are optional; they are used if they are present but
+  default methods are installed for the case that they are missing.[133X
+
+  [8X[10XIsBound\[\][110X[8X[108X
+        [33X[0;6Ya  function  taking  two  arguments [3Xenum[103X and [3Xk[103X, which returns [10XIsBound(
+        [3Xenum[103X[10X[  [3Xk[103X[10X  ]  )[110X  (see [14X21.2[114X);  if  this component is missing then [2XLength[102X
+        ([14X21.17-5[114X) is used for computing the result,[133X
+
+  [8X[10XMembership[110X[8X[108X
+        [33X[0;6Ya  function  taking  two arguments [3Xelm[103X and [3Xenum[103X, which returns [9Xtrue[109X is
+        [3Xelm[103X  is  an  element  of [3Xenum[103X, and [9Xfalse[109X otherwise (see [14X21.2[114X); if this
+        component  is  missing  then  [10XNumberElement[110X  is used for computing the
+        result,[133X
+
+  [8X[10XAsList[110X[8X[108X
+        [33X[0;6Ya  function  taking  one  argument [3Xenum[103X, which returns a list with the
+        property that the access to each of its elements will take roughly the
+        same  time  (see [2XIsConstantTimeAccessList[102X ([14X21.1-6[114X)); if this component
+        is missing then [2XConstantTimeAccessList[102X ([14X21.17-6[114X) is used for computing
+        the result,[133X
+
+  [8X[10XViewObj[110X[8X and [10XPrintObj[110X[8X[108X
+        [33X[0;6Ytwo  functions that print what one wants to be printed when [10XView( [3Xenum[103X[10X
+        )[110X  or  [10XPrint(  [3Xenum[103X[10X )[110X is called (see [14X6.3[114X), if the [10XViewObj[110X component is
+        missing then the [10XPrintObj[110X method is used as a default.[133X
+
+  [33X[0;0YIf  the result is known to have additional properties such as being strictly
+  sorted  (see [2XIsSSortedList[102X  ([14X21.17-4[114X))  then  it  can be useful to set these
+  properties  after  the construction of the enumerator, before it is used for
+  the  first time. And in the case that a new sorted enumerator of a domain is
+  implemented via [2XEnumeratorByFunctions[102X, and this construction is installed as
+  a  method for the operation [2XEnumerator[102X ([14X30.3-2[114X), then it should be installed
+  also as a method for [2XEnumeratorSorted[102X ([14X30.3-3[114X).[133X
+
+  [33X[0;0YNote  that  it  is  [13Xnot[113X  checked that [2XEnumeratorByFunctions[102X really returns a
+  dense and duplicate-free list. [2XEnumeratorByFunctions[102X does [13Xnot[113X make a shallow
+  copy of [3Xrecord[103X, this record is changed in place, see [14X79.1[114X.[133X
+
+  [33X[0;0YIt  would  be easy to implement a slightly generalized setup for enumerators
+  that  need  not  be  duplicate-free  (where  the  three  argument version of
+  [2XPosition[102X ([14X21.16-1[114X) is supported), but the resulting overhead for the methods
+  seems not to be justified.[133X
+
+  [1X30.3-5 List[101X
+
+  [33X[1;0Y[29X[2XList[102X( [3XC[103X ) [32X function[133X
+
+  [33X[0;0YFor  a  collection [3XC[103X (see [14X30[114X) that is not a list, [2XList[102X returns a new mutable
+  list  [3Xnew[103X  such that [10XLength( [3Xnew[103X[10X )[110X is the number of different elements of [3XC[103X,
+  and  [3Xnew[103X  contains the different elements of [3XC[103X in an unspecified order which
+  may   change   for  repeated  calls.  [10X[3Xnew[103X[10X[[3Xpos[103X[10X][110X  executes  in  constant  time
+  (see [2XIsConstantTimeAccessList[102X ([14X21.1-6[114X)), and the size of [3Xnew[103X is proportional
+  to  its length. The generic method for this case is [10XShallowCopy( Enumerator(
+  [3XC[103X[10X ) )[110X.[133X
+
+  [33X[0;0YDevelopers  who  wish to adapt this for custom list or collection types need
+  to install suitable methods for the operation [10XListOp[110X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:= List( Group( (1,2,3) ) );[127X[104X
+    [4X[28X[ (), (1,3,2), (1,2,3) ][128X[104X
+    [4X[25Xgap>[125X [27XIsMutable( l );  IsSortedList( l );  IsConstantTimeAccessList( l );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0Y(See also [2XList[102X ([14X21.20-18[114X).)[133X
+
+  [1X30.3-6 SortedList[101X
+
+  [33X[1;0Y[29X[2XSortedList[102X( [3Xlistorcoll[103X[, [3Xfunc[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XSortedListBy[102X( [3Xlistorcoll[103X, [3Xfunc[103X ) [32X operation[133X
+
+  [33X[0;0Y[2XSortedList[102X  returns a new mutable and dense list [3Xnew[103X. The argument must be a
+  collection or list [3Xlistorcoll[103X which may contain holes but whose elements lie
+  in  the  same  family (see [14X13.1[114X). [10XLength( [3Xnew[103X[10X )[110X is the number of elements of
+  [3Xlistorcoll[103X,  and [3Xnew[103X contains the elements in sorted order, w.r.t. [10X<[110X or [3Xfunc[103X
+  if it is specified. For details, please refer to [2XSort[102X ([14X21.18-1[114X).[133X
+
+  [33X[0;0Y[2XSortedListBy[102X  also  returns  a  new  mutable  and  dense list [3Xnew[103X. The first
+  argument must be a collection or list [3Xlistorcoll[103X which may contain holes but
+  whose  elements  lie  in  the  same  family (see [14X13.1[114X). [10XLength( [3Xnew[103X[10X )[110X is the
+  number of elements of [3Xlistorcoll[103X, and [3Xnew[103X has elements in an order such that
+  [10Xfunc(new[i])  <=  func(new[i+1])[110X  for  all  relevant  [3Xi[103X. [3Xfunc[103X must thus be a
+  function  on  one  argument  which returns values that can be compared. Each
+  [10Xfunc(listorcoll[i])[110X  is  computed  just  once  and  stored, making this more
+  efficient than using the two-argument version of [2XSortedList[102X in many cases.[133X
+
+  [33X[0;0YIn     both     cases,     [10X[3Xnew[103X[10X[[3Xpos[103X[10X][110X     executes     in     constant    time
+  (see [2XIsConstantTimeAccessList[102X  ([14X21.1-6[114X)),  and  the size of [3Xnew[103X in memory is
+  proportional to its length.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:= SortedList( Group( (1,2,3) ) );[127X[104X
+    [4X[28X[ (), (1,2,3), (1,3,2) ][128X[104X
+    [4X[25Xgap>[125X [27XIsMutable( l );  IsSortedList( l );  IsConstantTimeAccessList( l );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XSortedList( [ 1, 2, 1,, 3, 2 ] );[127X[104X
+    [4X[28X[ 1, 1, 2, 2, 3 ][128X[104X
+    [4X[25Xgap>[125X [27XSortedListBy(SymmetricGroup(3), Order);[127X[104X
+    [4X[28X[ (), (1,3), (2,3), (1,2), (1,2,3), (1,3,2) ][128X[104X
+    [4X[25Xgap>[125X [27XSortedListBy( [ 3, 1,,, -6, 5, -2,, -5, 3, 3,,, -1 ], x -> x^2 );[127X[104X
+    [4X[28X[ 1, -1, -2, 3, 3, 3, 5, -5, -6 ][128X[104X
+    [4X[25Xgap>[125X [27Xl:=SortedListBy( [ 2, 1,, 1, -5,, 3, -5 ], x -> x^3);[127X[104X
+    [4X[28X[ -5, -5, 1, 1, 2, 3 ][128X[104X
+    [4X[25Xgap>[125X [27XIsMutable( l );  IsSortedList( l );  IsConstantTimeAccessList( l );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+
+  [1X30.3-7 SSortedList[101X
+
+  [33X[1;0Y[29X[2XSSortedList[102X( [3Xlistorcoll[103X[, [3Xfun[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XSet[102X( [3XC[103X[, [3Xfun[103X] ) [32X operation[133X
+
+  [33X[0;0Y[2XSSortedList[102X  ([21Xstrictly  sorted  list[121X)  returns  a  new  dense,  mutable, and
+  duplicate  free  list  [3Xnew[103X.  The  argument  must  be  a  collection  or list
+  [3Xlistorcoll[103X which may contain holes.[133X
+
+  [33X[0;0YIf  the  optional argument [3Xfun[103X is not given then [10XLength( [3Xnew[103X[10X )[110X is the number
+  of different elements of [3Xlistorcoll[103X, and [3Xnew[103X contains the different elements
+  in  strictly sorted order, w.r.t. [2X\<[102X ([14X31.11-1[114X). For that, any two entries of
+  [3Xlistorcoll[103X  must be comparable via [2X\<[102X ([14X31.11-1[114X). (Typically, the entries lie
+  in the same family, see [14X13.1[114X.)[133X
+
+  [33X[0;0YIf  [3Xfun[103X  is  given  then  it  must be a unary function. In this case, [3Xfun[103X is
+  applied  to  all  elements  of [3Xlistorcoll[103X, [3Xnew[103X contains the different return
+  values  in  strictly  sorted  order,  and  [10XLength(  [3Xnew[103X[10X  )[110X  is the number of
+  different  such  values.  For that, any two return values must be comparable
+  via [2X\<[102X ([14X31.11-1[114X).[133X
+
+  [33X[0;0Y[10X[3Xnew[103X[10X[[3Xpos[103X[10X][110X  executes in constant time (see [2XIsConstantTimeAccessList[102X ([14X21.1-6[114X)),
+  and the size of [3Xnew[103X in memory is proportional to its length.[133X
+
+  [33X[0;0Y[2XSet[102X is simply a synonym for [2XSSortedList[102X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:= SSortedList( Group( (1,2,3) ) );[127X[104X
+    [4X[28X[ (), (1,2,3), (1,3,2) ][128X[104X
+    [4X[25Xgap>[125X [27XIsMutable( l );  IsSSortedList( l );  IsConstantTimeAccessList( l );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XSSortedList( Group( (1,2,3) ), Order );[127X[104X
+    [4X[28X[ 1, 3 ][128X[104X
+    [4X[25Xgap>[125X [27XSSortedList( [ 1, 2, 1,, 3, 2 ] );[127X[104X
+    [4X[28X[ 1, 2, 3 ][128X[104X
+    [4X[25Xgap>[125X [27XSSortedList( [ 1, 2, 1,, 3, 2 ], x -> x^2 );[127X[104X
+    [4X[28X[ 1, 4, 9 ][128X[104X
+  [4X[32X[104X
+
+  [1X30.3-8 AsList[101X
+
+  [33X[1;0Y[29X[2XAsList[102X( [3Xlistorcoll[103X ) [32X attribute[133X
+
+  [33X[0;0Y[2XAsList[102X  returns  a  immutable list [3Ximm[103X. If the argument is a list (which may
+  contain  holes),  then  [10XLength(  [3Ximm[103X[10X )[110X is the [2XLength[102X ([14X21.17-5[114X) value of this
+  list,  and  [3Ximm[103X  contains  the  elements (and holes) of the list in the same
+  order.  If the argument is a collection that is not a list, then [10XLength( [3Ximm[103X[10X
+  )[110X  is  the number of different elements of this collection, and [3Ximm[103X contains
+  the  different elements of the collection in an unspecified order, which may
+  change  for  repeated  calls  of  [2XAsList[102X. [10X[3Ximm[103X[10X[[3Xpos[103X[10X][110X executes in constant time
+  (see [2XIsConstantTimeAccessList[102X  ([14X21.1-6[114X)),  and  the size of [3Ximm[103X in memory is
+  proportional to its length.[133X
+
+  [33X[0;0YIf  you  expect  to do many element tests in the resulting list, it might be
+  worth to use a sorted list instead, using [2XAsSSortedList[102X ([14X30.3-10[114X).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:= AsList( [ 1, 3, 3,, 2 ] );[127X[104X
+    [4X[28X[ 1, 3, 3,, 2 ][128X[104X
+    [4X[25Xgap>[125X [27XIsMutable( l );  IsSortedList( l );  IsConstantTimeAccessList( l );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XAsList( Group( (1,2,3), (1,2) ) );[127X[104X
+    [4X[28X[ (), (2,3), (1,3,2), (1,3), (1,2,3), (1,2) ][128X[104X
+  [4X[32X[104X
+
+  [1X30.3-9 AsSortedList[101X
+
+  [33X[1;0Y[29X[2XAsSortedList[102X( [3Xlistorcoll[103X ) [32X attribute[133X
+
+  [33X[0;0Y[2XAsSortedList[102X  returns a dense and immutable list [3Ximm[103X. The argument must be a
+  collection or list [3Xlistorcoll[103X which may contain holes but whose elements lie
+  in  the  same  family (see [14X13.1[114X). [10XLength( [3Ximm[103X[10X )[110X is the number of elements of
+  the  argument,  and  [3Ximm[103X  contains  the elements in sorted order, w.r.t. [10X<=[110X.
+  [10X[3Xnew[103X[10X[[3Xpos[103X[10X][110X  executes in constant time (see [2XIsConstantTimeAccessList[102X ([14X21.1-6[114X)),
+  and the size of [3Ximm[103X in memory is proportional to its length.[133X
+
+  [33X[0;0YThe   only   difference   to  the  operation  [2XSortedList[102X  ([14X30.3-6[114X)  is  that
+  [2XAsSortedList[102X returns an [13Ximmutable[113X list.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:= AsSortedList( [ 1, 3, 3,, 2 ] );[127X[104X
+    [4X[28X[ 1, 2, 3, 3 ][128X[104X
+    [4X[25Xgap>[125X [27XIsMutable( l );  IsSortedList( l );  IsConstantTimeAccessList( l );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsSSortedList( l );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+
+  [1X30.3-10 AsSSortedList[101X
+
+  [33X[1;0Y[29X[2XAsSSortedList[102X( [3Xlistorcoll[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XAsSet[102X( [3Xlistorcoll[103X ) [32X attribute[133X
+
+  [33X[0;0Y[2XAsSSortedList[102X  ([21Xas  strictly  sorted  list[121X)  returns a dense, immutable, and
+  duplicate  free  list  [3Ximm[103X.  The  argument  must  be  a  collection  or list
+  [3Xlistorcoll[103X which may contain holes but whose elements lie in the same family
+  (see [14X13.1[114X). [10XLength( [3Ximm[103X[10X )[110X is the number of different elements of [3Xlistorcoll[103X,
+  and  [3Ximm[103X contains the different elements in strictly sorted order, w.r.t. [2X\<[102X
+  ([14X31.11-1[114X).  [10X[3Ximm[103X[10X[[3Xpos[103X[10X][110X executes in constant time (see [2XIsConstantTimeAccessList[102X
+  ([14X21.1-6[114X)), and the size of [3Ximm[103X in memory is proportional to its length.[133X
+
+  [33X[0;0YBecause  the comparisons required for sorting can be very expensive for some
+  kinds  of  objects,  you  should  use  [2XAsList[102X ([14X30.3-8[114X) instead if you do not
+  require the result to be sorted.[133X
+
+  [33X[0;0YThe   only   difference  to  the  operation  [2XSSortedList[102X  ([14X30.3-7[114X)  is  that
+  [2XAsSSortedList[102X returns an [13Ximmutable[113X list.[133X
+
+  [33X[0;0Y[2XAsSet[102X is simply a synonym for [2XAsSSortedList[102X.[133X
+
+  [33X[0;0YIn  general  a  function  that  returns  a  set of elements is free, in fact
+  encouraged,  to  return  a domain instead of the proper set of its elements.
+  This  allows  one to keep a given structure, and moreover the representation
+  by  a  domain  object is usually more space efficient. [2XAsSSortedList[102X must of
+  course  [13Xnot[113X  do  this,  its  only  purpose  is  to  create the proper set of
+  elements.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:= AsSSortedList( l );[127X[104X
+    [4X[28X[ 1, 2, 3 ][128X[104X
+    [4X[25Xgap>[125X [27XIsMutable( l );  IsSSortedList( l );  IsConstantTimeAccessList( l );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XAsSSortedList( Group( (1,2,3), (1,2) ) );[127X[104X
+    [4X[28X[ (), (2,3), (1,2), (1,2,3), (1,3,2), (1,3) ][128X[104X
+  [4X[32X[104X
+
+  [1X30.3-11 Elements[101X
+
+  [33X[1;0Y[29X[2XElements[102X( [3XC[103X ) [32X function[133X
+
+  [33X[0;0Y[2XElements[102X does the same as [2XAsSSortedList[102X ([14X30.3-10[114X), that is, the return value
+  is a strictly sorted list of the elements in the list or collection [3XC[103X.[133X
+
+  [33X[0;0Y[2XElements[102X  is only supported for backwards compatibility. In many situations,
+  the  sortedness  of the [21Xelement list[121X for a collection is in fact not needed,
+  and  one can save a lot of time by asking for a list that is [13Xnot[113X necessarily
+  sorted,  using  [2XAsList[102X ([14X30.3-8[114X). If one is really interested in the strictly
+  sorted  list  of  elements  in  [3XC[103X  then  one  should  use [2XAsSet[102X ([14X30.3-10[114X) or
+  [2XAsSSortedList[102X ([14X30.3-10[114X) instead.[133X
+
+
+  [1X30.4 [33X[0;0YAttributes and Properties for Collections[133X[101X
+
+  [1X30.4-1 IsEmpty[101X
+
+  [33X[1;0Y[29X[2XIsEmpty[102X( [3Xlistorcoll[103X ) [32X property[133X
+
+  [33X[0;0Y[2XIsEmpty[102X  returns [9Xtrue[109X if the collection or list [3Xlistorcoll[103X is [13Xempty[113X (that is
+  it contains no elements), and [9Xfalse[109X otherwise.[133X
+
+  [1X30.4-2 IsFinite[101X
+
+  [33X[1;0Y[29X[2XIsFinite[102X( [3XC[103X ) [32X property[133X
+
+  [33X[0;0Y[2XIsFinite[102X returns [9Xtrue[109X if the collection [3XC[103X is finite, and [9Xfalse[109X otherwise.[133X
+
+  [33X[0;0YThe default method for [2XIsFinite[102X checks the size (see [2XSize[102X ([14X30.4-6[114X)) of [3XC[103X.[133X
+
+  [33X[0;0YMethods  for  [2XIsFinite[102X may call [2XSize[102X ([14X30.4-6[114X), but methods for [2XSize[102X ([14X30.4-6[114X)
+  must [13Xnot[113X call [2XIsFinite[102X.[133X
+
+  [1X30.4-3 IsTrivial[101X
+
+  [33X[1;0Y[29X[2XIsTrivial[102X( [3XC[103X ) [32X property[133X
+
+  [33X[0;0Y[2XIsTrivial[102X returns [9Xtrue[109X if the collection [3XC[103X consists of exactly one element.[133X
+
+  [1X30.4-4 IsNonTrivial[101X
+
+  [33X[1;0Y[29X[2XIsNonTrivial[102X( [3XC[103X ) [32X property[133X
+
+  [33X[0;0Y[2XIsNonTrivial[102X  returns  [9Xtrue[109X  if  the collection [3XC[103X is empty or consists of at
+  least two elements (see [2XIsTrivial[102X ([14X30.4-3[114X)).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsEmpty( [] ); IsEmpty( [ 1 .. 100 ] ); IsEmpty( Group( (1,2,3) ) );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsFinite( [ 1 .. 100 ] );  IsFinite( Integers );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsTrivial( Integers );  IsTrivial( Group( () ) );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsNonTrivial( Integers );  IsNonTrivial( Group( () ) );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+
+  [1X30.4-5 IsWholeFamily[101X
+
+  [33X[1;0Y[29X[2XIsWholeFamily[102X( [3XC[103X ) [32X property[133X
+
+  [33X[0;0Y[2XIsWholeFamily[102X  returns  [9Xtrue[109X  if  the collection [3XC[103X contains the whole family
+  (see [14X13.1[114X) of its elements.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsWholeFamily( Integers )[127X[104X
+    [4X[25X>[125X [27X   ;  # all rationals and cyclotomics lie in the family[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsWholeFamily( Integers mod 3 )[127X[104X
+    [4X[25X>[125X [27X   ;  # all finite field elements in char. 3 lie in this family[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsWholeFamily( Integers mod 4 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsWholeFamily( FreeGroup( 2 ) );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+
+  [1X30.4-6 Size[101X
+
+  [33X[1;0Y[29X[2XSize[102X( [3Xlistorcoll[103X ) [32X attribute[133X
+
+  [33X[0;0Y[2XSize[102X  returns the size of the list or collection [3Xlistorcoll[103X, which is either
+  an  integer  or [2Xinfinity[102X ([14X18.2-1[114X). If the argument is a list then the result
+  is its length (see [2XLength[102X ([14X21.17-5[114X)).[133X
+
+  [33X[0;0YThe  default  method  for  [2XSize[102X  checks  the  length  of  an  enumerator  of
+  [3Xlistorcoll[103X.[133X
+
+  [33X[0;0YMethods  for  [2XIsFinite[102X ([14X30.4-2[114X) may call [2XSize[102X, but methods for [2XSize[102X must not
+  call [2XIsFinite[102X ([14X30.4-2[114X).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSize( [1,2,3] );  Size( Group( () ) );  Size( Integers );[127X[104X
+    [4X[28X3[128X[104X
+    [4X[28X1[128X[104X
+    [4X[28Xinfinity[128X[104X
+  [4X[32X[104X
+
+  [1X30.4-7 Representative[101X
+
+  [33X[1;0Y[29X[2XRepresentative[102X( [3XC[103X ) [32X attribute[133X
+
+  [33X[0;0Y[2XRepresentative[102X returns a [13Xrepresentative[113X of the collection [3XC[103X.[133X
+
+  [33X[0;0YNote  that  [2XRepresentative[102X is free in choosing a representative if there are
+  several elements in [3XC[103X. It is not even guaranteed that [2XRepresentative[102X returns
+  the  same  representative  if it is called several times for one collection.
+  The  main  difference  between  [2XRepresentative[102X  and  [2XRandom[102X ([14X30.7-1[114X) is that
+  [2XRepresentative[102X  is  free  to  choose a value that is cheap to compute, while
+  [2XRandom[102X ([14X30.7-1[114X) must make an effort to randomly distribute its answers.[133X
+
+  [33X[0;0YIf [3XC[103X is a domain then there are methods for [2XRepresentative[102X that try to fetch
+  an   element  from  any  known  generator  list  of  [3XC[103X,  see [14X31[114X.  Note  that
+  [2XRepresentative[102X  does not try to [13Xcompute[113X generators of [3XC[103X, thus [2XRepresentative[102X
+  may give up and signal an error if [3XC[103X has no generators stored at all.[133X
+
+  [1X30.4-8 RepresentativeSmallest[101X
+
+  [33X[1;0Y[29X[2XRepresentativeSmallest[102X( [3XC[103X ) [32X attribute[133X
+
+  [33X[0;0Yreturns  the  smallest  element  in the collection [3XC[103X, w.r.t. the ordering [2X\<[102X
+  ([14X31.11-1[114X).  While  the  operation defaults to comparing all elements, better
+  methods are installed for some collections.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRepresentative( Rationals );[127X[104X
+    [4X[28X0[128X[104X
+    [4X[25Xgap>[125X [27XRepresentative( [ -1, -2 .. -100 ] );[127X[104X
+    [4X[28X-1[128X[104X
+    [4X[25Xgap>[125X [27XRepresentativeSmallest( [ -1, -2 .. -100 ] );[127X[104X
+    [4X[28X-100[128X[104X
+  [4X[32X[104X
+
+
+  [1X30.5 [33X[0;0YOperations for Collections[133X[101X
+
+  [1X30.5-1 IsSubset[101X
+
+  [33X[1;0Y[29X[2XIsSubset[102X( [3XC1[103X, [3XC2[103X ) [32X operation[133X
+
+  [33X[0;0Y[2XIsSubset[102X  returns [9Xtrue[109X if [3XC2[103X, which must be a collection, is a [13Xsubset[113X of [3XC1[103X,
+  which also must be a collection, and [9Xfalse[109X otherwise.[133X
+
+  [33X[0;0Y[3XC2[103X is considered a subset of [3XC1[103X if and only if each element of [3XC2[103X is also an
+  element  of  [3XC1[103X.  That is [2XIsSubset[102X behaves as if implemented as [10XIsSubsetSet(
+  AsSSortedList(  [3XC1[103X[10X  ),  AsSSortedList(  [3XC2[103X[10X  )  )[110X,  except  that it will also
+  sometimes,  but  not always, work for infinite collections, and that it will
+  usually work much faster than the above definition. Either argument may also
+  be a proper set (see [14X21.19[114X).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsSubset( Rationals, Integers );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsSubset( Integers, [ 1, 2, 3 ] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsSubset( Group( (1,2,3,4) ), [ (1,2,3) ] );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+
+
+  [1X30.5-2 [33X[0;0YIntersection[133X[101X
+
+  [33X[1;0Y[29X[2XIntersection[102X( [3XC1[103X, [3XC2[103X, [3X...[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XIntersection[102X( [3Xlist[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XIntersection2[102X( [3XC1[103X, [3XC2[103X ) [32X operation[133X
+
+  [33X[0;0YIn  the  first form [2XIntersection[102X returns the intersection of the collections
+  [3XC1[103X,  [3XC2[103X, etc. In the second form [3Xlist[103X must be a [13Xnonempty[113X list of collections
+  and  [2XIntersection[102X  returns  the  intersection  of  those  collections.  Each
+  argument or element of [3Xlist[103X respectively may also be a homogeneous list that
+  is  not  a  proper  set,  in  which  case  [2XIntersection[102X silently applies [2XSet[102X
+  ([14X30.3-7[114X) to it first.[133X
+
+  [33X[0;0YThe  result  of [2XIntersection[102X is the set of elements that lie in every of the
+  collections [3XC1[103X, [3XC2[103X, etc. If the result is a list then it is mutable and new,
+  i.e., not identical to any of [3XC1[103X, [3XC2[103X, etc.[133X
+
+  [33X[0;0YMethods can be installed for the operation [2XIntersection2[102X that takes only two
+  arguments. [2XIntersection[102X calls [2XIntersection2[102X.[133X
+
+  [33X[0;0YMethods  for  [2XIntersection2[102X  should  try  to  maintain  as much structure as
+  possible,  for example the intersection of two permutation groups is again a
+  permutation group.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X# this is one of the rare cases where the intersection of two[127X[104X
+    [4X[25Xgap>[125X [27X# infinite domains works ('CF' is a shorthand for 'CyclotomicField'):[127X[104X
+    [4X[25Xgap>[125X [27XIntersection( CyclotomicField(9), CyclotomicField(12) );[127X[104X
+    [4X[28XCF(3)[128X[104X
+    [4X[25Xgap>[125X [27XD12 := Group( (2,6)(3,5), (1,2)(3,6)(4,5) );;[127X[104X
+    [4X[25Xgap>[125X [27XIntersection( D12, Group( (1,2), (1,2,3,4,5) ) );[127X[104X
+    [4X[28XGroup([ (1,5)(2,4) ])[128X[104X
+    [4X[25Xgap>[125X [27XIntersection( D12, [ (1,3)(4,6), (1,2)(3,4) ] )[127X[104X
+    [4X[25X>[125X [27X   ;  # note that the second argument is not a proper set[127X[104X
+    [4X[28X[ (1,3)(4,6) ][128X[104X
+    [4X[25Xgap>[125X [27X# although the result is mathematically a group it is returned as a[127X[104X
+    [4X[25Xgap>[125X [27X# proper set because the second argument is not regarded as a group:[127X[104X
+    [4X[25Xgap>[125X [27XIntersection( D12, [ (), (1,2)(3,4), (1,3)(4,6), (1,4)(5,6) ] );[127X[104X
+    [4X[28X[ (), (1,3)(4,6) ][128X[104X
+    [4X[25Xgap>[125X [27XIntersection( Group( () ), [1,2,3] );[127X[104X
+    [4X[28X[  ][128X[104X
+    [4X[25Xgap>[125X [27XIntersection( [2,4,6,8,10], [3,6,9,12,15], [5,10,15,20,25] )[127X[104X
+    [4X[25X>[125X [27X   ;  # two or more lists or collections as arguments are legal[127X[104X
+    [4X[28X[  ][128X[104X
+    [4X[25Xgap>[125X [27XIntersection( [ [1,2,4], [2,3,4], [1,3,4] ] )[127X[104X
+    [4X[25X>[125X [27X   ;  # or one list of lists or collections[127X[104X
+    [4X[28X[ 4 ][128X[104X
+  [4X[32X[104X
+
+
+  [1X30.5-3 [33X[0;0YUnion[133X[101X
+
+  [33X[1;0Y[29X[2XUnion[102X( [3XC1[103X, [3XC2[103X, [3X...[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XUnion[102X( [3Xlist[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XUnion2[102X( [3XC1[103X, [3XC2[103X ) [32X operation[133X
+
+  [33X[0;0YIn the first form [2XUnion[102X returns the union of the collections [3XC1[103X, [3XC2[103X, etc. In
+  the  second  form  [3Xlist[103X  must be a list of collections and [2XUnion[102X returns the
+  union  of  those  collections. Each argument or element of [3Xlist[103X respectively
+  may also be a homogeneous list that is not a proper set, in which case [2XUnion[102X
+  silently applies [2XSet[102X ([14X30.3-7[114X) to it first.[133X
+
+  [33X[0;0YThe  result  of  [2XUnion[102X  is  the  set  of  elements  that  lie  in any of the
+  collections [3XC1[103X, [3XC2[103X, etc. If the result is a list then it is mutable and new,
+  i.e., not identical to any of [3XC1[103X, [3XC2[103X, etc.[133X
+
+  [33X[0;0YMethods  can  be  installed  for  the  operation  [2XUnion2[102X that takes only two
+  arguments. [2XUnion[102X calls [2XUnion2[102X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XUnion( [ (1,2,3), (1,2,3,4) ], Group( (1,2,3), (1,2) ) );[127X[104X
+    [4X[28X[ (), (2,3), (1,2), (1,2,3), (1,2,3,4), (1,3,2), (1,3) ][128X[104X
+    [4X[25Xgap>[125X [27XUnion( [2,4,6,8,10], [3,6,9,12,15], [5,10,15,20,25] )[127X[104X
+    [4X[25X>[125X [27X   ;  # two or more lists or collections as arguments are legal[127X[104X
+    [4X[28X[ 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 20, 25 ][128X[104X
+    [4X[25Xgap>[125X [27XUnion( [ [1,2,4], [2,3,4], [1,3,4] ] )[127X[104X
+    [4X[25X>[125X [27X   ;  # or one list of lists or collections[127X[104X
+    [4X[28X[ 1 .. 4 ][128X[104X
+    [4X[25Xgap>[125X [27XUnion( [ ] );[127X[104X
+    [4X[28X[  ][128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YWhen  computing  the  Union  of  lists or sets of small integers and ranges,
+  every attempt is made to return the result as a range and to avoid expanding
+  ranges provided as input.[133X
+
+  [1X30.5-4 Difference[101X
+
+  [33X[1;0Y[29X[2XDifference[102X( [3XC1[103X, [3XC2[103X ) [32X operation[133X
+
+  [33X[0;0Y[2XDifference[102X  returns  the set difference of the collections [3XC1[103X and [3XC2[103X. Either
+  argument  may  also be a homogeneous list that is not a proper set, in which
+  case [2XDifference[102X silently applies [2XSet[102X ([14X30.3-7[114X) to it first.[133X
+
+  [33X[0;0YThe  result  of  [2XDifference[102X is the set of elements that lie in [3XC1[103X but not in
+  [3XC2[103X.  Note  that  [3XC2[103X need not be a subset of [3XC1[103X. The elements of [3XC2[103X, however,
+  that  are not elements of [3XC1[103X play no role for the result. If the result is a
+  list then it is mutable and new, i.e., not identical to [3XC1[103X or [3XC2[103X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDifference( [ (1,2,3), (1,2,3,4) ], Group( (1,2,3), (1,2) ) );[127X[104X
+    [4X[28X[ (1,2,3,4) ][128X[104X
+  [4X[32X[104X
+
+
+  [1X30.6 [33X[0;0YMembership Test for Collections[133X[101X
+
+  [1X30.6-1 \in[101X
+
+  [33X[1;0Y[29X[2X\in[102X( [3Xobj[103X, [3XC[103X ) [32X operation[133X
+
+  [33X[0;0Yreturns  [9Xtrue[109X  if  the  object  [3Xobj[103X  lies  in  the  collection  [3XC[103X, and [9Xfalse[109X
+  otherwise.[133X
+
+  [33X[0;0YThe infix version of the command[133X
+
+  [33X[0;0Y[3Xobj[103X [9Xin[109X [3XC[103X[133X
+
+  [33X[0;0Ycalls the operation [2X\in[102X, for which methods can be installed.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X13 in Integers;  [ 1, 2 ] in Integers;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xg:= Group( (1,2) );;  (1,2) in g;  (1,2,3) in g;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+
+
+  [1X30.7 [33X[0;0YRandom Elements[133X[101X
+
+  [33X[0;0YThe  method  used  by  [5XGAP[105X  to obtain random elements may depend on the type
+  object.[133X
+
+  [33X[0;0YMost methods which produce random elements in [5XGAP[105X use a global random number
+  generator (see [2XGlobalMersenneTwister[102X ([14X14.7-4[114X)). This random number generator
+  is  (deliberately)  initialized  to  the same values when [5XGAP[105X is started, so
+  different  runs  of  [5XGAP[105X  with  the  same input will always produce the same
+  result, even if random calculations are involved.[133X
+
+  [33X[0;0YSee  [2XReset[102X  ([14X14.7-3[114X)  for  a  description  of how to reset the random number
+  generator to a previous state.[133X
+
+  [1X30.7-1 Random[101X
+
+  [33X[1;0Y[29X[2XRandom[102X( [3Xlistorcoll[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XRandom[102X( [3Xfrom[103X, [3Xto[103X ) [32X operation[133X
+
+  [33X[0;0Y[2XRandom[102X  returns  a  (pseudo-)random  element  of the dense, nonempty list or
+  nonempty  collection [3Xlistorcoll[103X. The behaviour for non-dense or empty lists,
+  and  for  empty  collections (see [2XIsDenseList[102X ([14X21.1-2[114X), [2XIsEmpty[102X ([14X30.4-1[114X)) is
+  undefined.[133X
+
+  [33X[0;0YAs  lists  or ranges are restricted in length ([22X2^28-1[122X or [22X2^60-1[122X depending on
+  your  system), the second form returns a random integer in the range [3Xfrom[103X to
+  [3Xto[103X (inclusive) for arbitrary integers [3Xfrom[103X and [3Xto[103X. The behaviour in the case
+  that [3Xfrom[103X is larger than [3Xto[103X is undefined.[133X
+
+  [33X[0;0YSee Section [14X14.7[114X for more about computing random elements, in particular for
+  [2XRandom[102X ([14X14.7-2[114X) methods that take a random source as the first argument.[133X
+
+  [33X[0;0YThe distribution of elements returned by [2XRandom[102X depends on the argument. For
+  a dense, nonempty list the distribution is uniform (all elements are equally
+  likely).  The  same holds usually for finite collections that are not lists.
+  For infinite collections some reasonable distribution is used.[133X
+
+  [33X[0;0YSee  the  chapters of the various collections to find out which distribution
+  is being used.[133X
+
+  [33X[0;0YFor some collections ensuring a reasonable distribution can be difficult and
+  require  substantial runtime (for example for large finite groups). If speed
+  is more important than a guaranteed distribution, the operation [2XPseudoRandom[102X
+  ([14X30.7-2[114X) should be used instead.[133X
+
+  [33X[0;0YNote that [2XRandom[102X is of course [13Xnot[113X an attribute.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRandom([1..6]);[127X[104X
+    [4X[28X6[128X[104X
+    [4X[25Xgap>[125X [27XRandom(1, 2^100);[127X[104X
+    [4X[28X866227015645295902682304086250[128X[104X
+    [4X[25Xgap>[125X [27Xg:= Group( (1,2,3) );;  Random( g );  Random( g );[127X[104X
+    [4X[28X(1,3,2)[128X[104X
+    [4X[28X()[128X[104X
+    [4X[25Xgap>[125X [27XRandom(Rationals);[127X[104X
+    [4X[28X-4[128X[104X
+  [4X[32X[104X
+
+  [1X30.7-2 PseudoRandom[101X
+
+  [33X[1;0Y[29X[2XPseudoRandom[102X( [3Xlistorcoll[103X ) [32X operation[133X
+
+  [33X[0;0Y[2XPseudoRandom[102X  returns  a  pseudo  random  element  of the list or collection
+  [3Xlistorcoll[103X,  which  can  be  roughly  described  as  follows.  For  a  list,
+  [2XPseudoRandom[102X  returns  the same as [2XRandom[102X ([14X30.7-1[114X). For collections that are
+  not lists, the elements returned by [2XPseudoRandom[102X are [13Xnot[113X necessarily equally
+  distributed,  even  for finite collections; the idea is that [2XRandom[102X ([14X30.7-1[114X)
+  returns  elements  according  to  a  reasonable  distribution,  [2XPseudoRandom[102X
+  returns  elements that are cheap to compute but need not satisfy this strong
+  condition,  and [2XRepresentative[102X ([14X30.4-7[114X) returns arbitrary elements, probably
+  the same element for each call.[133X
+
+  [1X30.7-3 RandomList[101X
+
+  [33X[1;0Y[29X[2XRandomList[102X( [[3Xrs[103X, ][3Xlist[103X ) [32X function[133X
+
+  [33X[0;0YFor  a  dense  list  [3Xlist[103X, [2XRandomList[102X returns a (pseudo-)random element with
+  equal distribution.[133X
+
+  [33X[0;0YThe  random source [3Xrs[103X (see [14X14.7[114X) is used to choose a random number. If [3Xrs[103X is
+  absent, this function uses the [2XGlobalMersenneTwister[102X ([14X14.7-4[114X) to produce the
+  random elements (a source of high quality random numbers).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRandomList( [ 1 .. 6 ] );[127X[104X
+    [4X[28X3[128X[104X
+    [4X[25Xgap>[125X [27Xelms:= AsList( Group( (1,2,3) ) );;[127X[104X
+    [4X[25Xgap>[125X [27XRandomList( elms );  RandomList( elms );[127X[104X
+    [4X[28X(1,3,2)[128X[104X
+    [4X[28X(1,2,3)[128X[104X
+    [4X[25Xgap>[125X [27Xrs:= RandomSource( IsMersenneTwister, 1 );[127X[104X
+    [4X[28X<RandomSource in IsMersenneTwister>[128X[104X
+    [4X[25Xgap>[125X [27XRandomList( rs, elms );[127X[104X
+    [4X[28X(1,3,2)[128X[104X
+  [4X[32X[104X
+
+
+  [1X30.8 [33X[0;0YIterators[133X[101X
+
+  [1X30.8-1 Iterator[101X
+
+  [33X[1;0Y[29X[2XIterator[102X( [3Xlistorcoll[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XIsStandardIterator[102X( [3Xlistorcoll[103X ) [32X filter[133X
+
+  [33X[0;0YIterators  provide  a possibility to loop over the elements of a (countable)
+  collection  or  list [3Xlistorcoll[103X, without repetition. For many collections [22XC[122X,
+  an  iterator  of  [22XC[122X  need  not  store  all  elements of [22XC[122X, for example it is
+  possible  to  construct  an  iterator  of some infinite domains, such as the
+  field of rational numbers.[133X
+
+  [33X[0;0Y[2XIterator[102X  returns a mutable [13Xiterator[113X [22Xiter[122X for its argument. If this argument
+  is  a  list  (which may contain holes), then [22Xiter[122X iterates over the elements
+  (but  not  the  holes)  of  this  list  in  the same order (see [2XIteratorList[102X
+  ([14X30.8-6[114X)  for details). If this argument is a collection but not a list then
+  [22Xiter[122X  iterates over the elements of this collection in an unspecified order,
+  which  may change for repeated calls of [2XIterator[102X. Because iterators returned
+  by  [2XIterator[102X  are  mutable  (see [14X12.6[114X),  each  call of [2XIterator[102X for the same
+  argument  returns  a  [13Xnew[113X  iterator.  Therefore [2XIterator[102X is not an attribute
+  (see [14X13.5[114X).[133X
+
+  [33X[0;0YThe  only operations for iterators are [2XIsDoneIterator[102X ([14X30.8-4[114X), [2XNextIterator[102X
+  ([14X30.8-5[114X),  and  [2XShallowCopy[102X  ([14X12.7-1[114X). In particular, it is only possible to
+  access  the next element of the iterator with [2XNextIterator[102X ([14X30.8-5[114X) if there
+  is one, and this can be checked with [2XIsDoneIterator[102X ([14X30.8-4[114X) For an iterator
+  [22Xiter[122X, [2XShallowCopy[102X ([14X12.7-1[114X) returns a mutable iterator [22Xnew[122X that iterates over
+  the  remaining  elements  independent of [22Xiter[122X; the results of [2XIsDoneIterator[102X
+  ([14X30.8-4[114X)  for  [22Xiter[122X  and [22Xnew[122X are equal, and if [22Xiter[122X is mutable then also the
+  results  of [2XNextIterator[102X ([14X30.8-5[114X) for [22Xiter[122X and [22Xnew[122X are equal; note that [10X=[110X is
+  not  defined  for  iterators,  so  the  equality  of two iterators cannot be
+  checked with [10X=[110X.[133X
+
+  [33X[0;0YWhen  [2XIterator[102X  is  called for a [13Xmutable[113X collection [22XC[122X then it is not defined
+  whether [22Xiter[122X respects changes to [22XC[122X occurring after the construction of [22Xiter[122X,
+  except  if  the  documentation  explicitly promises a certain behaviour. The
+  latter  is  the  case  if  the  argument is a mutable list (see [2XIteratorList[102X
+  ([14X30.8-6[114X) for subtleties in this case).[133X
+
+  [33X[0;0YIt  is  possible  to  have  [9Xfor[109X-loops  run over mutable iterators instead of
+  lists.[133X
+
+  [33X[0;0YIn some situations, one can construct iterators with a special succession of
+  elements,  see [2XIteratorByBasis[102X ([14X61.6-6[114X) for the possibility to loop over the
+  elements of a vector space w.r.t. a given basis.[133X
+
+  [33X[0;0YFor lists, [2XIterator[102X is implemented by [2XIteratorList[102X ([14X30.8-6[114X). For collections
+  [22XC[122X that are not lists, the default method is [10XIteratorList( Enumerator( [110X[22XC[122X[10X ) )[110X.
+  Better methods depending on [22XC[122X should be provided if possible.[133X
+
+  [33X[0;0YFor  random  access  to  the  elements  of a (possibly infinite) collection,
+  [13Xenumerators[113X  are  used. See [14X21.23[114X for the facility to compute a list from [22XC[122X,
+  which provides a (partial) mapping from [22XC[122X to the positive integers.[133X
+
+  [33X[0;0YThe  filter  [2XIsStandardIterator[102X  means that the iterator is implemented as a
+  component  object  and  has components [10XIsDoneIterator[110X and [10XNextIterator[110X which
+  are  bound  to  the  methods  of  the  operations  of the same name for this
+  iterator.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xiter:= Iterator( GF(5) );[127X[104X
+    [4X[28X<iterator>[128X[104X
+    [4X[25Xgap>[125X [27Xl:= [];;[127X[104X
+    [4X[25Xgap>[125X [27Xfor i in iter do Add( l, i ); od; l;[127X[104X
+    [4X[28X[ 0*Z(5), Z(5)^0, Z(5), Z(5)^2, Z(5)^3 ][128X[104X
+    [4X[25Xgap>[125X [27Xiter:= Iterator( [ 1, 2, 3, 4 ] );;  l:= [];;[127X[104X
+    [4X[25Xgap>[125X [27Xfor i in iter do[127X[104X
+    [4X[25X>[125X [27X     new:= ShallowCopy( iter );[127X[104X
+    [4X[25X>[125X [27X     for j in new do Add( l, j ); od;[127X[104X
+    [4X[25X>[125X [27X   od; l;[127X[104X
+    [4X[28X[ 2, 3, 4, 3, 4, 4 ][128X[104X
+  [4X[32X[104X
+
+  [1X30.8-2 IteratorSorted[101X
+
+  [33X[1;0Y[29X[2XIteratorSorted[102X( [3Xlistorcoll[103X ) [32X operation[133X
+
+  [33X[0;0Y[2XIteratorSorted[102X returns a mutable iterator. The argument must be a collection
+  or  a  list that is not necessarily dense but whose elements lie in the same
+  family (see [14X13.1[114X). It loops over the different elements in sorted order.[133X
+
+  [33X[0;0YFor  a  collection [22XC[122X that is not a list, the generic method is [10XIteratorList(
+  EnumeratorSorted( [110X[3XC[103X[10X ) )[110X.[133X
+
+  [1X30.8-3 IsIterator[101X
+
+  [33X[1;0Y[29X[2XIsIterator[102X( [3Xobj[103X ) [32X Category[133X
+
+  [33X[0;0YEvery iterator lies in the category [10XIsIterator[110X.[133X
+
+  [1X30.8-4 IsDoneIterator[101X
+
+  [33X[1;0Y[29X[2XIsDoneIterator[102X( [3Xiter[103X ) [32X operation[133X
+
+  [33X[0;0YIf  [3Xiter[103X  is  an  iterator for the list or collection [22XC[122X then [10XIsDoneIterator(
+  [3Xiter[103X[10X  )[110X  is  [9Xtrue[109X  if  all  elements  of  [22XC[122X  have  been  returned already by
+  [10XNextIterator( [3Xiter[103X[10X )[110X, and [9Xfalse[109X otherwise.[133X
+
+  [1X30.8-5 NextIterator[101X
+
+  [33X[1;0Y[29X[2XNextIterator[102X( [3Xiter[103X ) [32X operation[133X
+
+  [33X[0;0YLet   [3Xiter[103X  be  a  mutable  iterator  for  the  list  or  collection  [22XC[122X.  If
+  [10XIsDoneIterator( [3Xiter[103X[10X )[110X is [9Xfalse[109X then [2XNextIterator[102X is applicable to [3Xiter[103X, and
+  the  result is the next element of [22XC[122X, according to the succession defined by
+  [3Xiter[103X.[133X
+
+  [33X[0;0YIf  [10XIsDoneIterator(  [3Xiter[103X[10X )[110X is [9Xtrue[109X then it is not defined what happens when
+  [2XNextIterator[102X  is  called  for  [3Xiter[103X; that is, it may happen that an error is
+  signalled  or  that  something  meaningless  is  returned,  or even that [5XGAP[105X
+  crashes.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xiter:= Iterator( [ 1, 2, 3, 4 ] );[127X[104X
+    [4X[28X<iterator>[128X[104X
+    [4X[25Xgap>[125X [27Xsum:= 0;;[127X[104X
+    [4X[25Xgap>[125X [27Xwhile not IsDoneIterator( iter ) do[127X[104X
+    [4X[25X>[125X [27X     sum:= sum + NextIterator( iter );[127X[104X
+    [4X[25X>[125X [27X   od;[127X[104X
+    [4X[25Xgap>[125X [27XIsDoneIterator( iter ); sum;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28X10[128X[104X
+    [4X[25Xgap>[125X [27Xir:= Iterator( Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27Xl:= [];; for i in [1..20] do Add( l, NextIterator( ir ) ); od; l;[127X[104X
+    [4X[28X[ 0, 1, -1, 1/2, 2, -1/2, -2, 1/3, 2/3, 3/2, 3, -1/3, -2/3, -3/2, -3,[128X[104X
+    [4X[28X  1/4, 3/4, 4/3, 4, -1/4 ][128X[104X
+    [4X[25Xgap>[125X [27Xfor i in ir do[127X[104X
+    [4X[25X>[125X [27X     if DenominatorRat( i ) > 10 then break; fi;[127X[104X
+    [4X[25X>[125X [27X   od;[127X[104X
+    [4X[25Xgap>[125X [27Xi;[127X[104X
+    [4X[28X1/11[128X[104X
+  [4X[32X[104X
+
+  [1X30.8-6 IteratorList[101X
+
+  [33X[1;0Y[29X[2XIteratorList[102X( [3Xlist[103X ) [32X function[133X
+
+  [33X[0;0Y[2XIteratorList[102X  returns a new iterator that allows iteration over the elements
+  of the list [3Xlist[103X (which may have holes) in the same order.[133X
+
+  [33X[0;0YIf [3Xlist[103X is mutable then it is in principle possible to change [3Xlist[103X after the
+  call  of  [2XIteratorList[102X.  In  this case all changes concerning positions that
+  have  not  yet  been reached in the iteration will also affect the iterator.
+  For  example,  if  [3Xlist[103X is enlarged then the iterator will iterate also over
+  the new elements at the end of the changed list.[133X
+
+  [33X[0;0Y[13XNote[113X that changes of [3Xlist[103X will also affect all shallow copies of [3Xlist[103X.[133X
+
+  [1X30.8-7 TrivialIterator[101X
+
+  [33X[1;0Y[29X[2XTrivialIterator[102X( [3Xelm[103X ) [32X function[133X
+
+  [33X[0;0Yis  a  mutable  iterator for the collection [10X[ [3Xelm[103X[10X ][110X that consists of exactly
+  one element [3Xelm[103X (see [2XIsTrivial[102X ([14X30.4-3[114X)).[133X
+
+  [1X30.8-8 IteratorByFunctions[101X
+
+  [33X[1;0Y[29X[2XIteratorByFunctions[102X( [3Xrecord[103X ) [32X function[133X
+
+  [33X[0;0Y[2XIteratorByFunctions[102X returns a (mutable) iterator [3Xiter[103X for which [2XNextIterator[102X
+  ([14X30.8-5[114X), [2XIsDoneIterator[102X ([14X30.8-4[114X), and [2XShallowCopy[102X ([14X12.7-1[114X) are computed via
+  prescribed functions.[133X
+
+  [33X[0;0YLet [3Xrecord[103X be a record with at least the following components.[133X
+
+  [8X[10XNextIterator[110X[8X[108X
+        [33X[0;6Ya function taking one argument [3Xiter[103X, which returns the next element of
+        [3Xiter[103X (see [2XNextIterator[102X ([14X30.8-5[114X)); for that, the components of [3Xiter[103X are
+        changed,[133X
+
+  [8X[10XIsDoneIterator[110X[8X[108X
+        [33X[0;6Ya  function taking one argument [3Xiter[103X, which returns the [2XIsDoneIterator[102X
+        ([14X30.8-4[114X) value of [3Xiter[103X,[133X
+
+  [8X[10XShallowCopy[110X[8X[108X
+        [33X[0;6Ya  function taking one argument [3Xiter[103X, which returns a record for which
+        [2XIteratorByFunctions[102X  can  be  called in order to create a new iterator
+        that  is  independent  of  [3Xiter[103X  but  behaves  like  [3Xiter[103X  w.r.t.  the
+        operations [2XNextIterator[102X ([14X30.8-5[114X) and [2XIsDoneIterator[102X ([14X30.8-4[114X).[133X
+
+  [8X[10XViewObj[110X[8X and [10XPrintObj[110X[8X[108X
+        [33X[0;6Ytwo  functions that print what one wants to be printed when [10XView( [3Xiter[103X[10X
+        )[110X  or  [10XPrint(  [3Xitem[103X[10X )[110X is called (see [14X6.3[114X), if the [10XViewObj[110X component is
+        missing then the [10XPrintObj[110X method is used as a default.[133X
+
+  [33X[0;0YFurther  (data)  components  may be contained in [3Xrecord[103X which can be used by
+  these function.[133X
+
+  [33X[0;0Y[2XIteratorByFunctions[102X  does  [13Xnot[113X make a shallow copy of [3Xrecord[103X, this record is
+  changed in place (see Section  [14X79.1[114X).[133X
+
+  [33X[0;0YIterators   constructed   with   [2XIteratorByFunctions[102X   are   in  the  filter
+  [2XIsStandardIterator[102X ([14X30.8-1[114X).[133X
+

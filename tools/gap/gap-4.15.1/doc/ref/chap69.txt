@@ -1,0 +1,657 @@
+
+  [1X69 [33X[0;0YThe MeatAxe[133X[101X
+
+  [33X[0;0YThe  MeatAxe  [Par84] is a tool for the examination of submodules of a group
+  algebra.  It  is  a  basic  tool  for  the  examination  of group actions on
+  finite-dimensional modules.[133X
+
+  [33X[0;0Y[5XGAP[105X  uses  the  improved  MeatAxe  of  Derek  Holt  and Sarah Rees, and also
+  incorporates further improvements of Ivanyos and Lux.[133X
+
+  [33X[0;0YPlease  note  that,  consistently with the convention for group actions, the
+  action  of  the  [5XGAP[105X  MeatAxe  is  always that of matrices on row vectors by
+  multiplication  on  the  right.  If you want to investigate left modules you
+  will have to transpose the matrices.[133X
+
+
+  [1X69.1 [33X[0;0YMeatAxe Modules[133X[101X
+
+
+  [1X69.1-1 [33X[0;0YGModuleByMats[133X[101X
+
+  [33X[1;0Y[29X[2XGModuleByMats[102X( [3Xgens[103X, [3Xfield[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XGModuleByMats[102X( [3Xemptygens[103X, [3Xdim[103X, [3Xfield[103X ) [32X function[133X
+
+  [33X[0;0Ycreates  a MeatAxe module over [3Xfield[103X from a list of invertible matrices [3Xgens[103X
+  which  reflect  a  group's  action.  If the list of generators is empty, the
+  dimension must be given as second argument.[133X
+
+  [33X[0;0YMeatAxe routines are on a level with Gaussian elimination. Therefore they do
+  not  deal  with  [5XGAP[105X modules but essentially with lists of matrices. For the
+  MeatAxe, a module is a record with components[133X
+
+  [8X[10Xgenerators[110X[8X[108X
+        [33X[0;6YA  list  of  matrices  which  represent  a group operation on a finite
+        dimensional row vector space.[133X
+
+  [8X[10Xdimension[110X[8X[108X
+        [33X[0;6YThe  dimension  of  the vector space (this is the common length of the
+        row vectors (see [2XDimensionOfVectors[102X ([14X61.9-6[114X))).[133X
+
+  [8X[10Xfield[110X[8X[108X
+        [33X[0;6YThe field over which the vector space is defined.[133X
+
+  [33X[0;0YOnce a module has been created its entries may not be changed. A MeatAxe may
+  create  a  new  component  [3XNameOfMeatAxe[103X  in  which  it  can  store  private
+  information.  By a MeatAxe [21Xsubmodule[121X or [21Xfactor module[121X we denote actually the
+  [13Xinduced  action[113X  on the submodule, respectively factor module. Therefore the
+  submodules  or  factor modules are again MeatAxe modules. The arrangement of
+  [10Xgenerators[110X  is  guaranteed  to  be  the same for the induced modules, but to
+  obtain  the  complete  relation  to  the original module, the bases used are
+  needed as well.[133X
+
+
+  [1X69.2 [33X[0;0YModule Constructions[133X[101X
+
+
+  [1X69.2-1 [33X[0;0YNaturalGModule[133X[101X
+
+  [33X[1;0Y[29X[2XNaturalGModule[102X( [3Xgroup[103X[, [3Xfield[103X] ) [32X function[133X
+
+  [33X[0;0Ycreates  a MeatAxe module over [3Xfield[103X from the generators of the matrix group
+  [3Xgroup[103X.   If   [3Xfield[103X   is   not   provided   then   the   value  returned  by
+  [2XDefaultFieldOfMatrixGroup[102X ([14X44.2-2[114X) is used instead.[133X
+
+  [1X69.2-2 PermutationGModule[101X
+
+  [33X[1;0Y[29X[2XPermutationGModule[102X( [3XG[103X, [3XF[103X ) [32X function[133X
+
+  [33X[0;0YCalled  with  a  permutation  group  [3XG[103X  and  a  field [3XF[103X ([3XF[103X may be infinite),
+  [2XPermutationGModule[102X  returns  the natural permutation module [22XM[122X over [3XF[103X for the
+  group  of  permutation matrices that acts on the canonical basis of [22XM[122X in the
+  same   way  as  [3XG[103X  acts  on  the  points  up  to  its  largest  moved  point
+  (see [2XLargestMovedPoint[102X ([14X42.3-2[114X)).[133X
+
+  [1X69.2-3 TrivialGModule[101X
+
+  [33X[1;0Y[29X[2XTrivialGModule[102X( [3XG[103X, [3XF[103X ) [32X function[133X
+
+  [33X[0;0YCalled  with  a  group  [3XG[103X  and a field [3XF[103X ([3XF[103X may be infinite), [2XTrivialGModule[102X
+  returns the trivial module over [3XF[103X.[133X
+
+  [1X69.2-4 TensorProductGModule[101X
+
+  [33X[1;0Y[29X[2XTensorProductGModule[102X( [3Xm1[103X, [3Xm2[103X ) [32X function[133X
+
+  [33X[0;0Y[2XTensorProductGModule[102X calculates the tensor product of the modules [3Xm1[103X and [3Xm2[103X.
+  They are assumed to be modules over the same algebra so, in particular, they
+  should have the same number of generators.[133X
+
+  [1X69.2-5 WedgeGModule[101X
+
+  [33X[1;0Y[29X[2XWedgeGModule[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Y[2XWedgeGModule[102X  calculates the wedge product of a [3XG[103X-module. That is the action
+  on antisymmetric tensors.[133X
+
+
+  [1X69.3 [33X[0;0YSelecting a Different MeatAxe[133X[101X
+
+  [1X69.3-1 MTX[101X
+
+  [33X[1;0Y[29X[2XMTX[102X [32X global variable[133X
+
+  [33X[0;0YAll  MeatAxe  routines  are accessed via the global variable [2XMTX[102X, which is a
+  record  whose  components hold the various functions. It is possible to have
+  several  implementations of a MeatAxe available. Each MeatAxe represents its
+  routines  in  an  own  global  variable  and  assigning [2XMTX[102X to this variable
+  selects the corresponding MeatAxe.[133X
+
+
+  [1X69.4 [33X[0;0YAccessing a Module[133X[101X
+
+  [33X[0;0YEven  though  a  MeatAxe  module is a record, its components should never be
+  accessed  outside  of  MeatAxe  functions.  Instead the following operations
+  should be used:[133X
+
+  [1X69.4-1 MTX.Generators[101X
+
+  [33X[1;0Y[29X[2XMTX.Generators[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yreturns a list of matrix generators of [3Xmodule[103X.[133X
+
+  [1X69.4-2 MTX.Dimension[101X
+
+  [33X[1;0Y[29X[2XMTX.Dimension[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yreturns the dimension in which the matrices act.[133X
+
+  [1X69.4-3 MTX.Field[101X
+
+  [33X[1;0Y[29X[2XMTX.Field[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yreturns the field over which [3Xmodule[103X is defined.[133X
+
+
+  [1X69.5 [33X[0;0YIrreducibility Tests[133X[101X
+
+  [1X69.5-1 MTX.IsIrreducible[101X
+
+  [33X[1;0Y[29X[2XMTX.IsIrreducible[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Ytests  whether  the  module  [3Xmodule[103X  is irreducible (i.e. contains no proper
+  submodules.)[133X
+
+  [1X69.5-2 MTX.IsAbsolutelyIrreducible[101X
+
+  [33X[1;0Y[29X[2XMTX.IsAbsolutelyIrreducible[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0YA  module  is  absolutely  irreducible  if  it  remains irreducible over the
+  algebraic  closure of the field. (Formally: If the tensor product [22XL ⊗_K M[122X is
+  irreducible  where  [22XM[122X  is  the  module defined over [22XK[122X and [22XL[122X is the algebraic
+  closure of [22XK[122X.)[133X
+
+  [1X69.5-3 MTX.DegreeSplittingField[101X
+
+  [33X[1;0Y[29X[2XMTX.DegreeSplittingField[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yreturns the degree of the splitting field as extension of the prime field.[133X
+
+
+  [1X69.6 [33X[0;0YDecomposition of modules[133X[101X
+
+  [33X[0;0YA  module  is  [13Xdecomposable[113X  if  it  can be written as the direct sum of two
+  proper  submodules  (and  [13Xindecomposable[113X  if  not).  Obviously  every finite
+  dimensional  module  is  a  direct  sum  of  its  indecomposable  parts. The
+  [13Xhomogeneous  components[113X  of  a  module  are  the  direct  sums of isomorphic
+  indecomposable components. They are uniquely determined.[133X
+
+  [1X69.6-1 MTX.IsIndecomposable[101X
+
+  [33X[1;0Y[29X[2XMTX.IsIndecomposable[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yreturns whether [3Xmodule[103X is indecomposable.[133X
+
+  [1X69.6-2 MTX.Indecomposition[101X
+
+  [33X[1;0Y[29X[2XMTX.Indecomposition[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yreturns a decomposition of [3Xmodule[103X as a direct sum of indecomposable modules.
+  It returns a list, each entry is a list of form [[3XB[103X,[3Xind[103X] where [3XB[103X is a list of
+  basis  vectors  for  the indecomposable component and [3Xind[103X the induced module
+  action on this component. (Such a decomposition is not unique.)[133X
+
+  [1X69.6-3 MTX.HomogeneousComponents[101X
+
+  [33X[1;0Y[29X[2XMTX.HomogeneousComponents[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Ycomputes   the   homogeneous   components   of   [3Xmodule[103X  given  as  sums  of
+  indecomposable  components. The function returns a list, each entry of which
+  is  a  record  corresponding  to  one  isomorphism  type  of  indecomposable
+  components. The record has the following components.[133X
+
+  [8X[10Xindices[110X[8X[108X
+        [33X[0;6Ythe  index  numbers  of  the  indecomposable  components,  as given by
+        [2XMTX.Indecomposition[102X ([14X69.6-2[114X), that are in the homogeneous component,[133X
+
+  [8X[10Xcomponent[110X[8X[108X
+        [33X[0;6Yone of the indecomposable components,[133X
+
+  [8X[10Ximages[110X[8X[108X
+        [33X[0;6Ya  list  of  the  remaining indecomposable components, each given as a
+        record  with  the  components  [10Xcomponent[110X  (the  component  itself) and
+        [10Xisomorphism[110X (an isomorphism from the defining component to this one).[133X
+
+
+  [1X69.7 [33X[0;0YFinding Submodules[133X[101X
+
+  [1X69.7-1 MTX.SubmoduleGModule[101X
+
+  [33X[1;0Y[29X[2XMTX.SubmoduleGModule[102X( [3Xmodule[103X, [3Xsubspace[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XMTX.SubGModule[102X( [3Xmodule[103X, [3Xsubspace[103X ) [32X function[133X
+
+  [33X[0;0Y[3Xsubspace[103X  should  be  a  subspace  of (or a vector in) the underlying vector
+  space  of  [3Xmodule[103X i.e. the full row space of the same dimension and over the
+  same  field  as  [3Xmodule[103X.  A  normalized  basis  of  the  submodule of [3Xmodule[103X
+  generated by [3Xsubspace[103X is returned.[133X
+
+  [1X69.7-2 MTX.ProperSubmoduleBasis[101X
+
+  [33X[1;0Y[29X[2XMTX.ProperSubmoduleBasis[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yreturns  the  basis  of  a  proper submodule of [3Xmodule[103X and [9Xfail[109X if no proper
+  submodule exists.[133X
+
+  [1X69.7-3 MTX.BasesSubmodules[101X
+
+  [33X[1;0Y[29X[2XMTX.BasesSubmodules[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yreturns a list containing a basis for every submodule.[133X
+
+  [1X69.7-4 MTX.BasesMinimalSubmodules[101X
+
+  [33X[1;0Y[29X[2XMTX.BasesMinimalSubmodules[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yreturns a list of bases of all minimal submodules.[133X
+
+  [1X69.7-5 MTX.BasesMaximalSubmodules[101X
+
+  [33X[1;0Y[29X[2XMTX.BasesMaximalSubmodules[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yreturns a list of bases of all maximal submodules.[133X
+
+  [1X69.7-6 MTX.BasisRadical[101X
+
+  [33X[1;0Y[29X[2XMTX.BasisRadical[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yreturns a basis of the radical of [3Xmodule[103X.[133X
+
+  [1X69.7-7 MTX.BasisSocle[101X
+
+  [33X[1;0Y[29X[2XMTX.BasisSocle[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yreturns a basis of the socle of [3Xmodule[103X.[133X
+
+  [1X69.7-8 MTX.BasesMinimalSupermodules[101X
+
+  [33X[1;0Y[29X[2XMTX.BasesMinimalSupermodules[102X( [3Xmodule[103X, [3Xsub[103X ) [32X function[133X
+
+  [33X[0;0Yreturns  a  list of bases of all minimal supermodules of the submodule given
+  by the basis [3Xsub[103X.[133X
+
+  [1X69.7-9 MTX.BasesCompositionSeries[101X
+
+  [33X[1;0Y[29X[2XMTX.BasesCompositionSeries[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yreturns  a  list of bases of submodules in a composition series in ascending
+  order.[133X
+
+  [1X69.7-10 MTX.CompositionFactors[101X
+
+  [33X[1;0Y[29X[2XMTX.CompositionFactors[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yreturns a list of composition factors of [3Xmodule[103X in ascending order.[133X
+
+  [1X69.7-11 MTX.CollectedFactors[101X
+
+  [33X[1;0Y[29X[2XMTX.CollectedFactors[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yreturns  a  list  giving  all  irreducible  composition  factors  with their
+  frequencies.[133X
+
+
+  [1X69.8 [33X[0;0YInduced Actions[133X[101X
+
+  [1X69.8-1 MTX.NormedBasisAndBaseChange[101X
+
+  [33X[1;0Y[29X[2XMTX.NormedBasisAndBaseChange[102X( [3Xsub[103X ) [32X function[133X
+
+  [33X[0;0Yreturns  a  list [10X[[3Xbas[103X[10X, [3Xchange[103X[10X ][110X where [3Xbas[103X is a normed basis (i.e. in echelon
+  form with pivots normed to 1) for [3Xsub[103X and [3Xchange[103X is the base change from [3Xbas[103X
+  to [3Xsub[103X (the basis vectors of [3Xbas[103X expressed in coefficients for [3Xsub[103X).[133X
+
+  [1X69.8-2 MTX.InducedActionSubmodule[101X
+
+  [33X[1;0Y[29X[2XMTX.InducedActionSubmodule[102X( [3Xmodule[103X, [3Xsub[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XMTX.InducedActionSubmoduleNB[102X( [3Xmodule[103X, [3Xsub[103X ) [32X function[133X
+
+  [33X[0;0Ycreates  a  new  module  corresponding  to  the  action  of  [3Xmodule[103X  on  the
+  non-trivial  submodule  [3Xsub[103X. In the [10XNB[110X version the basis [3Xsub[103X must be normed.
+  (That   is   it   must   be  in  echelon  form  with  pivots  normed  to  1,
+  see [2XMTX.NormedBasisAndBaseChange[102X ([14X69.8-1[114X).)[133X
+
+  [1X69.8-3 MTX.InducedActionFactorModule[101X
+
+  [33X[1;0Y[29X[2XMTX.InducedActionFactorModule[102X( [3Xmodule[103X, [3Xsub[103X[, [3Xcompl[103X] ) [32X function[133X
+
+  [33X[0;0Ycreates  a new module corresponding to the action of [3Xmodule[103X on the factor of
+  the  proper  submodule  [3Xsub[103X.  If  [3Xcompl[103X  is given, it has to be a basis of a
+  (vector space-)complement of [3Xsub[103X. The action then will correspond to [3Xcompl[103X.[133X
+
+  [33X[0;0YThe basis [3Xsub[103X has to be given in normed form. (That is it must be in echelon
+  form with pivots normed to 1, see [2XMTX.NormedBasisAndBaseChange[102X ([14X69.8-1[114X))[133X
+
+  [1X69.8-4 MTX.InducedActionSubMatrix[101X
+
+  [33X[1;0Y[29X[2XMTX.InducedActionSubMatrix[102X( [3Xmat[103X, [3Xsub[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XMTX.InducedActionSubMatrixNB[102X( [3Xmat[103X, [3Xsub[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XMTX.InducedActionFactorMatrix[102X( [3Xmat[103X, [3Xsub[103X[, [3Xcompl[103X] ) [32X function[133X
+
+  [33X[0;0Ywork the same way as the above functions for modules, but take as input only
+  a single matrix.[133X
+
+  [1X69.8-5 MTX.InducedAction[101X
+
+  [33X[1;0Y[29X[2XMTX.InducedAction[102X( [3Xmodule[103X, [3Xsub[103X[, [3Xtype[103X] ) [32X function[133X
+
+  [33X[0;0YComputes  induced  actions  on submodules or factor modules and also returns
+  the  corresponding  bases.  The  action  taken  is binary encoded in [3Xtype[103X: [10X1[110X
+  stands  for  subspace  action,  [10X2[110X for factor action, and [10X4[110X for action of the
+  full  module  on  a subspace adapted basis. The routine returns the computed
+  results  in  a list in sequence ([3Xsub[103X,[3Xquot[103X,[3Xboth[103X,[3Xbasis[103X) where [3Xbasis[103X is a basis
+  for  the  whole  space,  extending  [3Xsub[103X. (Actions which are not computed are
+  omitted,  so  the  returned list may be shorter.) If no [3Xtype[103X is given, it is
+  assumed to be [10X7[110X. The basis given in [3Xsub[103X must be normed![133X
+
+  [33X[0;0YAll these routines return [9Xfail[109X if [3Xsub[103X is not a proper subspace.[133X
+
+
+  [1X69.9 [33X[0;0YModule Homomorphisms[133X[101X
+
+  [1X69.9-1 MTX.BasisModuleHomomorphisms[101X
+
+  [33X[1;0Y[29X[2XMTX.BasisModuleHomomorphisms[102X( [3Xmodule1[103X, [3Xmodule2[103X ) [32X function[133X
+
+  [33X[0;0Yreturns  a  basis  of  all  module  homomorphisms  from  [3Xmodule1[103X to [3Xmodule2[103X.
+  Homomorphisms  are  by  matrices, whose rows give the images of the standard
+  basis vectors of [3Xmodule1[103X in the standard basis of [3Xmodule2[103X.[133X
+
+  [1X69.9-2 MTX.BasisModuleEndomorphisms[101X
+
+  [33X[1;0Y[29X[2XMTX.BasisModuleEndomorphisms[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yreturns a basis of all module homomorphisms from [3Xmodule[103X to [3Xmodule[103X.[133X
+
+  [1X69.9-3 MTX.IsomorphismModules[101X
+
+  [33X[1;0Y[29X[2XMTX.IsomorphismModules[102X( [3Xmodule1[103X, [3Xmodule2[103X ) [32X function[133X
+
+  [33X[0;0YIf  [3Xmodule1[103X  and  [3Xmodule2[103X  are  isomorphic modules, this function returns an
+  isomorphism  from [3Xmodule1[103X to [3Xmodule2[103X in form of a matrix. It returns [9Xfail[109X if
+  the modules are not isomorphic.[133X
+
+  [1X69.9-4 MTX.ModuleAutomorphisms[101X
+
+  [33X[1;0Y[29X[2XMTX.ModuleAutomorphisms[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yreturns the module automorphisms of [3Xmodule[103X (the set of all isomorphisms from
+  [3Xmodule[103X to itself) as a matrix group.[133X
+
+
+  [1X69.10 [33X[0;0YModule Homomorphisms for irreducible modules[133X[101X
+
+  [33X[0;0YThe   following   are   lower-level   functions  that  provide  homomorphism
+  functionality for irreducible modules. Generic code should use the functions
+  in Section [14X69.9[114X instead.[133X
+
+  [1X69.10-1 MTX.IsEquivalent[101X
+
+  [33X[1;0Y[29X[2XMTX.IsEquivalent[102X( [3Xmodule1[103X, [3Xmodule2[103X ) [32X function[133X
+
+  [33X[0;0Ytests two irreducible modules for equivalence.[133X
+
+  [1X69.10-2 MTX.IsomorphismIrred[101X
+
+  [33X[1;0Y[29X[2XMTX.IsomorphismIrred[102X( [3Xmodule1[103X, [3Xmodule2[103X ) [32X function[133X
+
+  [33X[0;0Yreturns  an  isomorphism  from  [3Xmodule1[103X to [3Xmodule2[103X (if one exists), and [9Xfail[109X
+  otherwise.  It  requires that one of the modules is known to be irreducible.
+  It  implicitly  assumes that the same group is acting, otherwise the results
+  are  unpredictable.  The isomorphism is given by a matrix [22XM[122X, whose rows give
+  the images of the standard basis vectors of [3Xmodule1[103X in the standard basis of
+  [3Xmodule2[103X. That is, conjugation of the generators of [3Xmodule2[103X with [22XM[122X yields the
+  generators of [3Xmodule1[103X.[133X
+
+  [1X69.10-3 MTX.Homomorphism[101X
+
+  [33X[1;0Y[29X[2XMTX.Homomorphism[102X( [3Xmodule1[103X, [3Xmodule2[103X, [3Xmat[103X ) [32X function[133X
+
+  [33X[0;0Y[3Xmat[103X  should  be a [3Xdim1[103X [22X×[122X [3Xdim2[103X matrix defining a homomorphism from [3Xmodule1[103X to
+  [3Xmodule2[103X.  This  function  verifies  that  [3Xmat[103X  really  does  define a module
+  homomorphism,  and  then  returns the corresponding homomorphism between the
+  underlying  row  spaces  of  the  modules.  This  can  be used for computing
+  kernels, images and pre-images.[133X
+
+  [1X69.10-4 MTX.Homomorphisms[101X
+
+  [33X[1;0Y[29X[2XMTX.Homomorphisms[102X( [3Xmodule1[103X, [3Xmodule2[103X ) [32X function[133X
+
+  [33X[0;0Yreturns  a  basis  of  the  space  of all homomorphisms from the irreducible
+  module [3Xmodule1[103X to [3Xmodule2[103X.[133X
+
+  [1X69.10-5 MTX.Distinguish[101X
+
+  [33X[1;0Y[29X[2XMTX.Distinguish[102X( [3Xcf[103X, [3Xnr[103X ) [32X function[133X
+
+  [33X[0;0YLet  [3Xcf[103X  be the output of [2XMTX.CollectedFactors[102X ([14X69.7-11[114X). This routine tries
+  to  find  a  group  algebra element that has nullity zero on all composition
+  factors except number [3Xnr[103X.[133X
+
+
+  [1X69.11 [33X[0;0YMeatAxe Functionality for Invariant Forms[133X[101X
+
+  [33X[0;0YThe  functions  in  this  section  can  only  be  applied  to  an absolutely
+  irreducible MeatAxe module.[133X
+
+  [1X69.11-1 MTX.InvariantBilinearForm[101X
+
+  [33X[1;0Y[29X[2XMTX.InvariantBilinearForm[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yreturns   an   invariant   bilinear   form,   which   may  be  symmetric  or
+  anti-symmetric, of [3Xmodule[103X, or [9Xfail[109X if no such form exists.[133X
+
+  [1X69.11-2 MTX.InvariantSesquilinearForm[101X
+
+  [33X[1;0Y[29X[2XMTX.InvariantSesquilinearForm[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yreturns an invariant hermitian (= self-adjoint) sesquilinear form of [3Xmodule[103X,
+  which  must  be defined over a finite field whose order is a square, or [9Xfail[109X
+  if no such form exists.[133X
+
+  [1X69.11-3 MTX.InvariantQuadraticForm[101X
+
+  [33X[1;0Y[29X[2XMTX.InvariantQuadraticForm[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yreturns  either  the matrix of an invariant quadratic form of the absolutely
+  irreducible module [3Xmodule[103X, or [9Xfail[109X.[133X
+
+  [33X[0;0YIf  the characteristic of [3Xmodule[103X is odd then [9Xfail[109X is returned if there is no
+  nonzero  invariant  bilinear  form,  otherwise a matrix of the bilinear form
+  divided  by  [22X2[122X  is  returned; note that this matrix may be antisymmetric and
+  thus  describe the zero quadratic form. If the characteristic of [3Xmodule[103X is [22X2[122X
+  then  [9Xfail[109X  is  returned  if [3Xmodule[103X does not admit a nonzero quadratic form,
+  otherwise a lower triangular matrix describing the form is returned.[133X
+
+  [33X[0;0YAn error is signalled if [3Xmodule[103X is not absolutely irreducible.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:= SO(-1, 4, 2);;[127X[104X
+    [4X[25Xgap>[125X [27Xm:= NaturalGModule( g );;[127X[104X
+    [4X[25Xgap>[125X [27XDisplay( MTX.InvariantQuadraticForm( m ) );[127X[104X
+    [4X[28X . . . .[128X[104X
+    [4X[28X 1 . . .[128X[104X
+    [4X[28X . . 1 .[128X[104X
+    [4X[28X . . 1 1[128X[104X
+    [4X[25Xgap>[125X [27Xg:= Sp(4, 2);;[127X[104X
+    [4X[25Xgap>[125X [27Xm:= NaturalGModule( g );;[127X[104X
+    [4X[25Xgap>[125X [27XMTX.InvariantQuadraticForm( m );[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27Xg:= Sp(4, 3);;[127X[104X
+    [4X[25Xgap>[125X [27Xm:= NaturalGModule( g );;[127X[104X
+    [4X[25Xgap>[125X [27Xq:= MTX.InvariantQuadraticForm( m );;[127X[104X
+    [4X[25Xgap>[125X [27Xq = - TransposedMat( q );  # antisymmetric inv. bilinear form[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+
+  [1X69.11-4 MTX.BasisInOrbit[101X
+
+  [33X[1;0Y[29X[2XMTX.BasisInOrbit[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yreturns  a basis of the underlying vector space of [3Xmodule[103X which is contained
+  in an orbit of the action of the generators of module on that space. This is
+  used by [2XMTX.InvariantQuadraticForm[102X ([14X69.11-3[114X) in characteristic 2.[133X
+
+  [1X69.11-5 MTX.OrthogonalSign[101X
+
+  [33X[1;0Y[29X[2XMTX.OrthogonalSign[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0YLet  [3Xmodule[103X  be an absolutely irreducible [22XG[122X-module. If [3Xmodule[103X does not fix a
+  nondegenerate  quadratic  form see [2XMTX.InvariantQuadraticForm[102X ([14X69.11-3[114X) then
+  [9Xfail[109X  is returned. Otherwise the sign [22Xϵ ∈ { -1, 0, 1 }[122X is returned such that
+  [22XG[122X  embeds  into the general orthogonal group [22XGO^ϵ(d, q)[122X w.r.t. the invariant
+  quadratic  form, see [2XGeneralOrthogonalGroup[102X ([14X50.2-6[114X). That is, [10X0[110X is returned
+  if [3Xmodule[103X has odd dimension, and [10X1[110X or [10X-1[110X is returned if the orthogonal group
+  has plus or minus type, respectively.[133X
+
+  [33X[0;0YAn error is signalled if [3Xmodule[103X is not absolutely irreducible.[133X
+
+  [33X[0;0YThe [10XSMTX[110X implementation uses an algorithm due to Jon Thackray.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmats:= GeneratorsOfGroup( GO(1,4,2) );;[127X[104X
+    [4X[25Xgap>[125X [27XMTX.OrthogonalSign( GModuleByMats( mats, GF(2) ) );[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27Xmats:= GeneratorsOfGroup( GO(-1,4,2) );;[127X[104X
+    [4X[25Xgap>[125X [27XMTX.OrthogonalSign( GModuleByMats( mats, GF(2) ) );[127X[104X
+    [4X[28X-1[128X[104X
+    [4X[25Xgap>[125X [27Xmats:= GeneratorsOfGroup( GO(5,3) );;[127X[104X
+    [4X[25Xgap>[125X [27XMTX.OrthogonalSign( GModuleByMats( mats, GF(3) ) );[127X[104X
+    [4X[28X0[128X[104X
+    [4X[25Xgap>[125X [27Xmats:= GeneratorsOfGroup( SP(4,2) );;[127X[104X
+    [4X[25Xgap>[125X [27XMTX.OrthogonalSign( GModuleByMats( mats, GF(2) ) );[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+
+
+  [1X69.12 [33X[0;0YThe Smash MeatAxe[133X[101X
+
+  [33X[0;0YThe  standard MeatAxe provided in the [5XGAP[105X library is based on the MeatAxe in
+  the  [5XGAP[105X 3  package  [5XSmash[105X,  originally written by Derek Holt and Sarah Rees
+  [HR94].  It  is  accessible  via  the variable [10XSMTX[110X to which [2XMTX[102X ([14X69.3-1[114X) is
+  assigned  by  default.  For  the sake of completeness the remaining sections
+  document more technical functions of this MeatAxe.[133X
+
+  [1X69.12-1 SMTX.RandomIrreducibleSubGModule[101X
+
+  [33X[1;0Y[29X[2XSMTX.RandomIrreducibleSubGModule[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yreturns the module action on a random irreducible submodule.[133X
+
+  [1X69.12-2 SMTX.GoodElementGModule[101X
+
+  [33X[1;0Y[29X[2XSMTX.GoodElementGModule[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yfinds  an  element  with  minimal  possible nullspace dimension if [3Xmodule[103X is
+  known to be irreducible.[133X
+
+  [1X69.12-3 SMTX.SortHomGModule[101X
+
+  [33X[1;0Y[29X[2XSMTX.SortHomGModule[102X( [3Xmodule1[103X, [3Xmodule2[103X, [3Xhoms[103X ) [32X function[133X
+
+  [33X[0;0YFunction to sort the output of [10XHomomorphisms[110X.[133X
+
+  [1X69.12-4 SMTX.MinimalSubGModules[101X
+
+  [33X[1;0Y[29X[2XSMTX.MinimalSubGModules[102X( [3Xmodule1[103X, [3Xmodule2[103X[, [3Xmax[103X] ) [32X function[133X
+
+  [33X[0;0Yreturns (at most [3Xmax[103X) bases of submodules of [3Xmodule2[103X which are isomorphic to
+  the irreducible module [3Xmodule1[103X.[133X
+
+  [1X69.12-5 SMTX.Setter[101X
+
+  [33X[1;0Y[29X[2XSMTX.Setter[102X( [3Xstring[103X ) [32X function[133X
+
+  [33X[0;0Yreturns a setter function for the component [10XsmashMeataxe.(string)[110X.[133X
+
+  [1X69.12-6 SMTX.Getter[101X
+
+  [33X[1;0Y[29X[2XSMTX.Getter[102X( [3Xstring[103X ) [32X function[133X
+
+  [33X[0;0Yreturns a getter function for the component [10XsmashMeataxe.(string)[110X.[133X
+
+  [1X69.12-7 SMTX.IrreducibilityTest[101X
+
+  [33X[1;0Y[29X[2XSMTX.IrreducibilityTest[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0YTests  for  irreducibility and sets a subbasis if reducible. It neither sets
+  an  irreducibility  flag,  nor tests it. Thus the routine also can simply be
+  called to obtain a random submodule.[133X
+
+  [1X69.12-8 SMTX.AbsoluteIrreducibilityTest[101X
+
+  [33X[1;0Y[29X[2XSMTX.AbsoluteIrreducibilityTest[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0YTests  for  absolute  irreducibility  and  sets  splitting  field degree. It
+  neither sets an absolute irreducibility flag, nor tests it.[133X
+
+  [1X69.12-9 SMTX.MinimalSubGModule[101X
+
+  [33X[1;0Y[29X[2XSMTX.MinimalSubGModule[102X( [3Xmodule[103X, [3Xcf[103X, [3Xnr[103X ) [32X function[133X
+
+  [33X[0;0Yreturns  the basis of a minimal submodule of [3Xmodule[103X containing the indicated
+  composition factor. It assumes [10XDistinguish[110X has been called already.[133X
+
+  [1X69.12-10 SMTX.MatrixSum[101X
+
+  [33X[1;0Y[29X[2XSMTX.MatrixSum[102X( [3Xmatrices1[103X, [3Xmatrices2[103X ) [32X function[133X
+
+  [33X[0;0Ycreates the direct sum of two matrix lists.[133X
+
+  [1X69.12-11 SMTX.CompleteBasis[101X
+
+  [33X[1;0Y[29X[2XSMTX.CompleteBasis[102X( [3Xmodule[103X, [3Xpbasis[103X ) [32X function[133X
+
+  [33X[0;0Yextends  the  partial basis [3Xpbasis[103X to a basis of the full space by action of
+  [3Xmodule[103X. It returns whether it succeeded.[133X
+
+
+  [1X69.13 [33X[0;0YSmash MeatAxe Flags[133X[101X
+
+  [33X[0;0YThe  following  getter routines access internal flags. For each routine, the
+  appropriate setter's name is prefixed with [10XSet[110X.[133X
+
+  [1X69.13-1 SMTX.Subbasis[101X
+
+  [33X[1;0Y[29X[2XSMTX.Subbasis[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0YBasis of a submodule.[133X
+
+  [1X69.13-2 SMTX.AlgEl[101X
+
+  [33X[1;0Y[29X[2XSMTX.AlgEl[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Ylist [10X[newgens,coefflist][110X giving an algebra element used for chopping.[133X
+
+  [1X69.13-3 SMTX.AlgElMat[101X
+
+  [33X[1;0Y[29X[2XSMTX.AlgElMat[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Ymatrix of [2XSMTX.AlgEl[102X ([14X69.13-2[114X).[133X
+
+  [1X69.13-4 SMTX.AlgElCharPol[101X
+
+  [33X[1;0Y[29X[2XSMTX.AlgElCharPol[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yminimal polynomial of [2XSMTX.AlgEl[102X ([14X69.13-2[114X).[133X
+
+  [1X69.13-5 SMTX.AlgElCharPolFac[101X
+
+  [33X[1;0Y[29X[2XSMTX.AlgElCharPolFac[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yuses factor of [2XSMTX.AlgEl[102X ([14X69.13-2[114X).[133X
+
+  [1X69.13-6 SMTX.AlgElNullspaceVec[101X
+
+  [33X[1;0Y[29X[2XSMTX.AlgElNullspaceVec[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Ynullspace of the matrix evaluated under this factor.[133X
+
+  [1X69.13-7 SMTX.AlgElNullspaceDimension[101X
+
+  [33X[1;0Y[29X[2XSMTX.AlgElNullspaceDimension[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Ydimension of the nullspace.[133X
+
+  [1X69.13-8 SMTX.CentMat[101X
+
+  [33X[1;0Y[29X[2XSMTX.CentMat[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Ymatrix  centralising  all  generators  which  is  computed as a byproduct of
+  [2XSMTX.AbsoluteIrreducibilityTest[102X ([14X69.12-8[114X).[133X
+
+  [1X69.13-9 SMTX.CentMatMinPoly[101X
+
+  [33X[1;0Y[29X[2XSMTX.CentMatMinPoly[102X( [3Xmodule[103X ) [32X function[133X
+
+  [33X[0;0Yminimal polynomial of [2XSMTX.CentMat[102X ([14X69.13-8[114X).[133X
+

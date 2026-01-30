@@ -1,0 +1,1360 @@
+
+  [1X6 [33X[0;0YMain Loop and Break Loop[133X[101X
+
+  [33X[0;0YThis  chapter  is  a  first  of  a  series  of  chapters  that  describe the
+  interactive environment in which you use [5XGAP[105X.[133X
+
+
+  [1X6.1 [33X[0;0YMain Loop[133X[101X
+
+  [33X[0;0YThe  normal  interaction  with  [5XGAP[105X happens in the so-called [13Xread-eval-print[113X
+  loop.  This  means that you type an input, [5XGAP[105X first reads it, evaluates it,
+  and  then  shows the result. Note that the term [13Xprint[113X may be confusing since
+  there  is a [5XGAP[105X function called [2XPrint[102X ([14X6.3-4[114X) (see [14X6.3[114X) which is in fact [13Xnot[113X
+  used  in  the read-eval-print loop, but traditions are hard to break. In the
+  following,  whenever  we  want to express that [5XGAP[105X places some characters on
+  the standard output, we will say that [5XGAP[105X [13Xshows[113X something.[133X
+
+  [33X[0;0YThe exact sequence in the read-eval-print loop is as follows.[133X
+
+  [33X[0;0YTo  signal that it is ready to accept your input, [5XGAP[105X shows the [13Xprompt[113X [10Xgap>[110X.
+  When you see this, you know that [5XGAP[105X is waiting for your input.[133X
+
+  [33X[0;0YNote  that  every statement must be terminated by a semicolon. You must also
+  enter  [12XReturn[112X  (i.e.,  strike  the [12XReturn[112X key) before [5XGAP[105X starts to read and
+  evaluate  your  input.  (The [12XReturn[112X key may actually be marked with the word
+  [12XEnter[112X  and  a  returning  arrow  on  your terminal.) Because [5XGAP[105X does not do
+  anything  until  you  enter [12XReturn[112X, you can edit your input to fix typos and
+  only  when everything is correct enter [12XReturn[112X and have [5XGAP[105X take a look at it
+  (see [14X6.8[114X).  It  is  also  possible to enter several statements as input on a
+  single line. Of course each statement must be terminated by a semicolon.[133X
+
+  [33X[0;0YIt  is  absolutely  acceptable to enter a single statement on several lines.
+  When you have entered the beginning of a statement, but the statement is not
+  yet complete, and you enter [12XReturn[112X, [5XGAP[105X will show the [13Xpartial prompt[113X [10X>[110X. When
+  you  see  this,  you know that [5XGAP[105X is waiting for the rest of the statement.
+  This  happens also when you forget the semicolon [10X;[110X that terminates every [5XGAP[105X
+  statement.  Note that when [12XReturn[112X has been entered and the current statement
+  is not yet complete, [5XGAP[105X will already evaluate those parts of the input that
+  are complete, for example function calls that appear as arguments in another
+  function call which needs several input lines. So it may happen that one has
+  to wait some time for the partial prompt.[133X
+
+  [33X[0;0YWhen  you  enter  [12XReturn[112X,  [5XGAP[105X  first  checks  your  input  to  see if it is
+  syntactically  correct  (see  Chapter [14X4[114X  for the definition of syntactically
+  correct). If it is not, [5XGAP[105X prints an error message of the following form[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X1 * ;[127X[104X
+    [4X[28XSyntax error: Expression expected[128X[104X
+    [4X[28X1 * ;[128X[104X
+    [4X[28X    ^[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YThe  first  line tells you what is wrong about the input, in this case the [10X*[110X
+  operator  takes  two  expressions as operands, so obviously the right one is
+  missing.  If  the  input came from a file (see [2XRead[102X ([14X9.8-1[114X)), this line will
+  also  contain the filename and the line number. The second line is a copy of
+  the  input. And the third line contains a caret pointing to the place in the
+  previous  line  where [5XGAP[105X realized that something is wrong. This need not be
+  the exact place where the error is, but it is usually quite close.[133X
+
+  [33X[0;0YSometimes,  you  will  also  see  a partial prompt after you have entered an
+  input that is syntactically incorrect. This is because [5XGAP[105X is so confused by
+  your  input, that it thinks that there is still something to follow. In this
+  case  you  should enter [10X;[110X[12XReturn[112X repeatedly, ignoring further error messages,
+  until  you see the full prompt again. When you see the full prompt, you know
+  that  [5XGAP[105X  forgave  you  and  is  now  ready  to accept your next –hopefully
+  correct– input.[133X
+
+  [33X[0;0YIf  your input is syntactically correct, [5XGAP[105X evaluates or executes it, i.e.,
+  performs  the required computations (see Chapter [14X4[114X for the definition of the
+  evaluation).[133X
+
+  [33X[0;0YIf  you do not see a prompt, you know that [5XGAP[105X is still working on your last
+  input.  Of  course,  you  can  [13Xtype  ahead[113X, i.e., already start entering new
+  input,  but  it  will  not  be  accepted  by [5XGAP[105X until [5XGAP[105X has completed the
+  ongoing computation.[133X
+
+  [33X[0;0YWhen  [5XGAP[105X is ready it will usually show the result of the computation, i.e.,
+  the  value  computed.  Note  that  not  all  statements produce a value, for
+  example,  if  you enter a [9Xfor[109X loop, nothing will be printed, because the [9Xfor[109X
+  loop does not produce a value that could be shown.[133X
+
+  [33X[0;0YAlso  sometimes  you  do not want to see the result. For example if you have
+  computed  a  value  and  now  want  to  assign the result to a variable, you
+  probably do not want to see the value again. You can terminate statements by
+  [13Xtwo semicolons[113X to suppress showing the result.[133X
+
+  [33X[0;0YIf you have entered several statements on a single line [5XGAP[105X will first read,
+  evaluate,  and  show the first one, then read, evaluate, and show the second
+  one,  and  so  on.  This  means  that  the second statement will not even be
+  checked  for  syntactical  correctness  until  [5XGAP[105X  has  completed the first
+  computation.[133X
+
+  [33X[0;0YAfter  the  result  has been shown [5XGAP[105X will display another prompt, and wait
+  for  your next input. And the whole process starts all over again. Note that
+  if  you  have entered several statements on a single line, a new prompt will
+  only be printed after [5XGAP[105X has read, evaluated, and shown the last statement.[133X
+
+  [33X[0;0YIn  each statement that you enter, the result of the previous statement that
+  produced  a  value  is  available in the variable [10Xlast[110X. The next to previous
+  result  is  available  in  [10Xlast2[110X  and  the  result  produced  before that is
+  available in [10Xlast3[110X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X1;2;3;[127X[104X
+    [4X[28X1[128X[104X
+    [4X[28X2[128X[104X
+    [4X[28X3[128X[104X
+    [4X[25Xgap>[125X [27Xlast3 + last2 * last;[127X[104X
+    [4X[28X7[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YAlso  in  each  statement  the  time spent by the last statement, whether it
+  produced  a value or not, is available in the variable [2Xtime[102X ([14X7.6-4[114X). This is
+  an  integer  that  holds the number of milliseconds. Similarly the amount of
+  memory  allocated during that statement (in bytes) is stored in the variable
+  [2Xmemory_allocated[102X ([14X7.7-2[114X). The variables [10Xlast[110X, [10Xlast2[110X, [10Xlast3[110X, [2Xtime[102X ([14X7.6-4[114X) and
+  [2Xmemory_allocated[102X ([14X7.7-2[114X) are all write-protected.[133X
+
+
+  [1X6.2 [33X[0;0YSpecial Rules for Input Lines[133X[101X
+
+  [33X[0;0YThe  input  for  some [5XGAP[105X objects may not fit on one line, in particular big
+  integers,  long  strings  or  long identifiers. In these cases you can still
+  type  or  paste  them  in  long single lines. For nicer display you can also
+  specify  the  input on several lines. This is achieved by ending a line by a
+  backslash  or  by a backslash and a carriage return character, then continue
+  the  input  on  the  beginning  of the next line. When reading this [5XGAP[105X will
+  ignore such continuation backslashes, carriage return characters and newline
+  characters. [5XGAP[105X also prints long strings and integers this way.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xn := 1234\[127X[104X
+    [4X[25X>[125X [27X567890;[127X[104X
+    [4X[28X1234567890[128X[104X
+    [4X[25Xgap>[125X [27X"This is a very long string that does not fit on a line \[127X[104X
+    [4X[25X>[125X [27Xand is therefore continued on the next line.";[127X[104X
+    [4X[28X"This is a very long string that does not fit on a line and is therefo\[128X[104X
+    [4X[28Xre continued on the next line."[128X[104X
+    [4X[25Xgap>[125X [27Xbla\[127X[104X
+    [4X[25X>[125X [27Xbla := 5;; blabla;[127X[104X
+    [4X[28X5[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YThere  is  a  special rule about [5XGAP[105X prompts in input lines: In line editing
+  mode  (usual  user  input and [5XGAP[105X started without [10X-n[110X) in lines starting with
+  whitespace following [10Xgap> [110X, [10X> [110X or [10Xbrk> [110X this beginning part is removed. This
+  rule  is very convenient because it allows to cut and paste input from other
+  [5XGAP[105X sessions or manual examples easily into your current session.[133X
+
+
+  [1X6.3 [33X[0;0YView and Print[133X[101X
+
+  [33X[0;0Y[5XGAP[105X  has  three  different  operations  to display or print objects: [2XDisplay[102X
+  ([14X6.3-6[114X),  [2XViewObj[102X  ([14X6.3-5[114X)  and  [2XPrintObj[102X  ([14X6.3-5[114X),  and  these  three  have
+  different  purposes as follows. The first, [2XDisplay[102X ([14X6.3-6[114X), should print the
+  object  to  the  standard output in a human-readable relatively complete and
+  verbose  form.  The  second, [2XViewObj[102X ([14X6.3-5[114X), should print the object to the
+  standard  output  in  a  short  and  concise  form,  it  is used in the main
+  read-eval-print  loop  to display the resulting object of a computation. The
+  third, [2XPrintObj[102X ([14X6.3-5[114X), should print the object to the standard output in a
+  complete  form  which  is [5XGAP[105X-readable if at all possible, such that reading
+  the output into [5XGAP[105X produces an object which is equal to the original one.[133X
+
+  [33X[0;0YAll  three  operations  have  corresponding  operations  which  do not print
+  anything  to  standard  output  but return the output as a string. These are
+  [2XDisplayString[102X   ([14X27.7-1[114X),   [2XViewString[102X  ([14X27.7-3[114X)  and  [2XPrintString[102X  ([14X27.7-5[114X)
+  (corresponding  to [2XPrintObj[102X ([14X6.3-5[114X)). Additionally, there is [2XString[102X ([14X27.7-6[114X)
+  which  is  very  similar to [2XPrintString[102X ([14X27.7-5[114X) but does not insert control
+  characters for line breaks.[133X
+
+  [33X[0;0YFor  implementation  convenience it is allowed that some of these operations
+  have  methods which delegate to some other of these operations. However, the
+  rules  for  this  are  that  a method may only delegate to another operation
+  which appears further down in the following table:[133X
+
+      ┌────────────────────────┐
+      │    [2XDisplay[102X ([14X6.3-6[114X)     │
+      ├────────────────────────┤
+      │    [2XViewObj[102X ([14X6.3-5[114X)     │
+      ├────────────────────────┤
+      │    [2XPrintObj[102X ([14X6.3-5[114X)    │
+      ├────────────────────────┤
+      │ [2XDisplayString[102X ([14X27.7-1[114X) │
+      ├────────────────────────┤
+      │  [2XViewString[102X ([14X27.7-3[114X)   │
+      ├────────────────────────┤
+      │  [2XPrintString[102X ([14X27.7-5[114X)  │
+      ├────────────────────────┤
+      │    [2XString[102X ([14X27.7-6[114X)     │
+      └────────────────────────┘
+
+  [33X[0;0YThis is to avoid circular delegations.[133X
+
+  [33X[0;0YNote  in  particular  that  none  of  the  methods  of  the string producing
+  operations  may delegate to the corresponding printing operations. Note also
+  that  the  above mentioned purposes of the different operations suggest that
+  delegations  between  different  operations  will  be  sub-optimal  in  most
+  scenarios.[133X
+
+
+  [1X6.3-1 [33X[0;0YDefault delegations in the library[133X[101X
+
+  [33X[0;0YThe library contains the following low ranked default methods:[133X
+
+  [30X    [33X[0;6YA  method  for [2XDisplayString[102X ([14X27.7-1[114X) which returns the constant value
+        of the global variable [2XDEFAULTDISPLAYSTRING[102X ([14X27.7-2[114X).[133X
+
+  [30X    [33X[0;6YA  method  for [2XViewString[102X ([14X27.7-3[114X) which returns the constant value of
+        the global variable [2XDEFAULTVIEWSTRING[102X ([14X27.7-4[114X).[133X
+
+  [30X    [33X[0;6YA  method for [2XDisplay[102X ([14X6.3-6[114X) which first calls [2XDisplayString[102X ([14X27.7-1[114X)
+        and   prints   the   result,   if   it  is  a  different  object  than
+        [2XDEFAULTDISPLAYSTRING[102X  ([14X27.7-2[114X).  Otherwise  the  method  delegates  to
+        [2XPrintObj[102X ([14X6.3-5[114X).[133X
+
+  [30X    [33X[0;6YA method for [2XViewObj[102X ([14X6.3-5[114X) which first calls [2XViewString[102X ([14X27.7-3[114X) and
+        prints  the result, if it is a different object than [2XDEFAULTVIEWSTRING[102X
+        ([14X27.7-4[114X). Otherwise the method delegates to [2XPrintObj[102X ([14X6.3-5[114X).[133X
+
+  [30X    [33X[0;6YA  method  for [2XPrintObj[102X ([14X6.3-5[114X) which prints the result of [2XPrintString[102X
+        ([14X27.7-5[114X).[133X
+
+  [30X    [33X[0;6YA  method  for [2XPrintString[102X ([14X27.7-5[114X) which returns the result of [2XString[102X
+        ([14X27.7-6[114X)[133X
+
+
+  [1X6.3-2 [33X[0;0YRecommendations for the implementation[133X[101X
+
+  [33X[0;0YThis  subsection  describes what methods for printing and viewing one should
+  implement for new [5XGAP[105X objects.[133X
+
+  [33X[0;0YOne  should  at  the  very  least  install a [2XString[102X ([14X27.7-6[114X) method to allow
+  printing.  Using  the  standard  delegations  this enables a limited form of
+  viewing, displaying and printing.[133X
+
+  [33X[0;0YIf,  for  larger objects, nicer line breaks are needed, one should install a
+  separate  [2XPrintString[102X  ([14X27.7-5[114X) method which puts in positions for good line
+  breaks using the control characters [10X\<[110X (ASCII 1) and [10X\>[110X (ASCII 2).[133X
+
+  [33X[0;0YIf,  for  even  larger objects, output performance and memory usage matters,
+  one should install a separate [2XPrintObj[102X ([14X6.3-5[114X) method.[133X
+
+  [33X[0;0YOne  should  usually  install a [2XViewString[102X ([14X27.7-3[114X) method, unless the above
+  [2XString[102X  ([14X27.7-6[114X)  method  is  good  enough  for  [2XViewObj[102X  ([14X6.3-5[114X)  purposes.
+  Performance   and  memory  should  never  matter  here,  so  it  is  usually
+  unnecessary to install a separate [2XViewObj[102X ([14X6.3-5[114X) method.[133X
+
+  [33X[0;0YIf  the  type  of  object  calls  for  it one should install a [2XDisplayString[102X
+  ([14X27.7-1[114X)  method.  This  is  the  case  if  a human readable verbose form is
+  required.[133X
+
+  [33X[0;0YIf  the performance and memory usage for [2XDisplay[102X ([14X6.3-6[114X) matters, one should
+  install a separate [2XDisplay[102X ([14X6.3-6[114X) method.[133X
+
+  [33X[0;0YNote  that  if  only  a  [2XString[102X  ([14X27.7-6[114X)  method is installed, then [2XViewObj[102X
+  ([14X6.3-5[114X)  works  and  [2XViewString[102X ([14X27.7-3[114X) returns [2XDEFAULTVIEWSTRING[102X ([14X27.7-4[114X).
+  Likewise,   [2XDisplay[102X   ([14X6.3-6[114X)   works  and  [2XDisplayString[102X  ([14X27.7-1[114X)  returns
+  [2XDEFAULTDISPLAYSTRING[102X  ([14X27.7-2[114X).  If  you  want  to  avoid  this then install
+  methods for these operations as well.[133X
+
+  [1X6.3-3 View[101X
+
+  [33X[1;0Y[29X[2XView[102X( [3Xobj1[103X, [3Xobj2...[103X ) [32X function[133X
+
+  [33X[0;0Y[2XView[102X  shows  the  objects [3Xobj1[103X, [3Xobj2[103X... etc. [13Xin a short form[113X on the standard
+  output  by  calling  the  [2XViewObj[102X ([14X6.3-5[114X) operation on each of them. [2XView[102X is
+  called  in  the read-eval-print loop, thus the output looks exactly like the
+  representation  of the objects shown by the main loop. Note that no space or
+  newline is printed between the objects.[133X
+
+  [1X6.3-4 Print[101X
+
+  [33X[1;0Y[29X[2XPrint[102X( [3Xobj1[103X, [3Xobj2[103X, [3X...[103X ) [32X function[133X
+
+  [33X[0;0YAlso  [2XPrint[102X shows the objects [3Xobj1[103X, [3Xobj2[103X... etc. on the standard output. The
+  difference compared to [2XView[102X ([14X6.3-3[114X) is in general that the shown form is not
+  required  to be short, and that in many cases the form shown by [2XPrint[102X is [5XGAP[105X
+  readable.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xz:= Z(2);[127X[104X
+    [4X[28XZ(2)^0[128X[104X
+    [4X[25Xgap>[125X [27Xv:= [ z, z, z, z, z, z, z ];[127X[104X
+    [4X[28X[ Z(2)^0, Z(2)^0, Z(2)^0, Z(2)^0, Z(2)^0, Z(2)^0, Z(2)^0 ][128X[104X
+    [4X[25Xgap>[125X [27XConvertToVectorRep(v);; v;[127X[104X
+    [4X[28X<a GF2 vector of length 7>[128X[104X
+    [4X[25Xgap>[125X [27XPrint( v, "\n" );[127X[104X
+    [4X[28X[ Z(2)^0, Z(2)^0, Z(2)^0, Z(2)^0, Z(2)^0, Z(2)^0, Z(2)^0 ][128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YAnother difference is that [2XPrint[102X shows strings without the enclosing quotes,
+  so  [2XPrint[102X  can be used to produce formatted text on the standard output (see
+  also  chapter [14X27[114X).  Some characters preceded by a backslash, such as [10X\n[110X, are
+  processed specially (see chapter [14X27.2[114X). [2XPrintTo[102X ([14X9.8-3[114X) can be used to print
+  to a file.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xfor i in [1..5] do[127X[104X
+    [4X[25X>[125X [27X     Print( i, " ", i^2, " ", i^3, "\n" );[127X[104X
+    [4X[25X>[125X [27X   od;[127X[104X
+    [4X[28X1 1 1[128X[104X
+    [4X[28X2 4 8[128X[104X
+    [4X[28X3 9 27[128X[104X
+    [4X[28X4 16 64[128X[104X
+    [4X[28X5 25 125[128X[104X
+    [4X[25Xgap>[125X [27Xg:= SmallGroup(12,5);[127X[104X
+    [4X[28X<pc group of size 12 with 3 generators>[128X[104X
+    [4X[25Xgap>[125X [27XPrint( g, "\n" );[127X[104X
+    [4X[28XGroup( [ f1, f2, f3 ] )[128X[104X
+    [4X[25Xgap>[125X [27XView( g );  Print( "\n" );[127X[104X
+    [4X[28X<pc group of size 12 with 3 generators>[128X[104X
+  [4X[32X[104X
+
+  [1X6.3-5 ViewObj[101X
+
+  [33X[1;0Y[29X[2XViewObj[102X( [3Xobj[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XPrintObj[102X( [3Xobj[103X ) [32X operation[133X
+
+  [33X[0;0YThe  functions  [2XView[102X  ([14X6.3-3[114X) and [2XPrint[102X ([14X6.3-4[114X) actually call the operations
+  [2XViewObj[102X and [2XPrintObj[102X, respectively, for each argument. By installing special
+  methods  for  these  operations,  it is possible to achieve special printing
+  behavior  for  certain  objects  (see  chapter [14X78[114X).  The only exceptions are
+  strings (see Chapter [14X27[114X), for which the default [2XPrintObj[102X and [2XViewObj[102X methods
+  as  well as the function [2XView[102X ([14X6.3-3[114X) print also the enclosing doublequotes,
+  whereas [2XPrint[102X ([14X6.3-4[114X) strips the doublequotes.[133X
+
+  [33X[0;0YThe  default  method for [2XViewObj[102X is to call [2XPrintObj[102X. So it is sufficient to
+  have  a  [2XPrintObj[102X  method  for an object in order to [2XView[102X ([14X6.3-3[114X) it. If one
+  wants  to supply a [21Xshort form[121X for [2XView[102X ([14X6.3-3[114X), one can install additionally
+  a method for [2XViewObj[102X.[133X
+
+  [1X6.3-6 Display[101X
+
+  [33X[1;0Y[29X[2XDisplay[102X( [3Xobj[103X ) [32X operation[133X
+
+  [33X[0;0YDisplays  the object [3Xobj[103X in a nice, formatted way which is easy to read (but
+  might  be  difficult for machines to understand). The actual format used for
+  this  depends  on  the  type  of  [3Xobj[103X.  Each  method  should print a newline
+  character as last character.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDisplay( [ [ 1, 2, 3 ], [ 4, 5, 6 ] ] * Z(5) );[127X[104X
+    [4X[28X 2 4 1[128X[104X
+    [4X[28X 3 . 2[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YOne  can assign a string to an object that [2XPrint[102X ([14X6.3-4[114X) will use instead of
+  the default used by [2XPrint[102X ([14X6.3-4[114X), via [2XSetName[102X ([14X12.8-1[114X). Also, [2XName[102X ([14X12.8-2[114X)
+  returns  the  string  previously  assigned  to  the object for printing, via
+  [2XSetName[102X ([14X12.8-1[114X). The following is an example in the context of domains.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:= Group( (1,2,3,4) );[127X[104X
+    [4X[28XGroup([ (1,2,3,4) ])[128X[104X
+    [4X[25Xgap>[125X [27XSetName( g, "C4" ); g;[127X[104X
+    [4X[28XC4[128X[104X
+    [4X[25Xgap>[125X [27XName( g );[127X[104X
+    [4X[28X"C4"[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YWhen setting up examples, in particular if for beginning users, it sometimes
+  can  be  convenient  to  hide the structure behind a printing name. For many
+  objects,  such  as  groups,  this can be done using [2XSetName[102X ([14X12.8-1[114X). If the
+  objects   however   is  represented  internally,  for  example  permutations
+  representing  group  elements,  this function is not applicable. Instead the
+  function  [2XSetNameObject[102X  ([14X6.3-7[114X)  can  be used to interface with the display
+  routines on a lower level.[133X
+
+  [1X6.3-7 SetNameObject[101X
+
+  [33X[1;0Y[29X[2XSetNameObject[102X( [3Xo[103X, [3Xs[103X ) [32X function[133X
+
+  [33X[0;0Y[2XSetNameObject[102X  sets  the  string  [3Xs[103X  as  display  name  for  object  [3Xo[103X in an
+  interactive  session. When applying [2XView[102X ([14X6.3-3[114X) to object [3Xo[103X, for example in
+  the  system's  main loop, [5XGAP[105X will print the string [3Xs[103X. Calling [2XSetNameObject[102X
+  for  the  same  object  [3Xo[103X  with  [3Xs[103X  set to [2Xfail[102X ([14X20.2-1[114X) deletes the special
+  viewing  setup.  Since use of this features potentially slows down the whole
+  print process, this function should be used sparingly.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSetNameObject(3,"three");[127X[104X
+    [4X[25Xgap>[125X [27XFiltered([1..10],IsPrimeInt);[127X[104X
+    [4X[28X[ 2, three, 5, 7 ][128X[104X
+    [4X[25Xgap>[125X [27XSetNameObject(3,fail);[127X[104X
+    [4X[25Xgap>[125X [27XFiltered([1..10],IsPrimeInt);[127X[104X
+    [4X[28X[ 2, 3, 5, 7 ][128X[104X
+  [4X[32X[104X
+
+
+  [1X6.4 [33X[0;0YBreak Loops[133X[101X
+
+  [33X[0;0YWhen  an  error  has  occurred or when you interrupt [5XGAP[105X (usually by hitting
+  [12XCtrl-C[112X) [5XGAP[105X enters a break loop, that is in most respects like the main read
+  eval  print  loop  (see [14X6.1[114X).  That  is, you can enter statements, [5XGAP[105X reads
+  them, evaluates them, and shows the result if any. However those evaluations
+  happen  within  the  context in which the error occurred. So you can look at
+  the arguments and local variables of the functions that were active when the
+  error happened and even change them. The prompt is changed from [10Xgap>[110X to [10Xbrk>[110X
+  to indicate that you are in a break loop.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X1/0;[127X[104X
+    [4X[28XRational operations: <divisor> must not be zero[128X[104X
+    [4X[28Xnot in any function[128X[104X
+    [4X[28XEntering break read-eval-print loop ...[128X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou can replace <divisor> via 'return <divisor>;' to continue[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YIf  errors  occur  within  a  break  loop [5XGAP[105X enters another break loop at a
+  [13Xdeeper level[113X. This is indicated by a number appended to [10Xbrk[110X:[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[26Xbrk>[126X [27X1/0;[127X[104X
+    [4X[28XRational operations: <divisor> must not be zero[128X[104X
+    [4X[28Xnot in any function[128X[104X
+    [4X[28XEntering break read-eval-print loop ...[128X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou can replace <divisor> via 'return <divisor>;' to continue[128X[104X
+    [4X[26Xbrk_02>[126X[104X
+  [4X[32X[104X
+
+  [33X[0;0YThere are two ways to leave a break loop, see [14X6.4-1[114X and [14X6.4-2[114X.[133X
+
+
+  [1X6.4-1 [33X[0;0Yquit from a break loop[133X[101X
+
+  [33X[0;0YThe  first  way  to leave a break loop is to [13Xquit[113X the break loop. To do this
+  you  enter  [10Xquit;[110X  or type the [13Xeof[113X ([13Xe[113Xnd [13Xo[113Xf [13Xf[113Xile) character, which is usually
+  [12XCtrl-D[112X except when using the [10X-e[110X option (see Section [14X3.1[114X). Note that [5XGAP[105X code
+  between [10Xquit;[110X and the end of the input line is ignored.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[26Xbrk_02>[126X [27Xquit;[127X[104X
+    [4X[26Xbrk>[126X[104X
+  [4X[32X[104X
+
+  [33X[0;0YIn  this  case  control  returns to the break loop one level above or to the
+  main  loop,  respectively. So iterated break loops must be left iteratively.
+  Note  also  that  if  you  type  [10Xquit;[110X  from  a  [10Xgap>[110X  prompt, [5XGAP[105X will exit
+  (see [14X6.7[114X).[133X
+
+  [33X[0;0Y[13XNote:[113X If you leave a break loop with [9Xquit[109X without completing a command it is
+  possible  (though not very likely) that data structures will be corrupted or
+  incomplete  data  have been stored in objects. Therefore no guarantee can be
+  given  that calculations afterwards will return correct results! If you have
+  been  using options [9Xquit[109Xting a break loop generally leaves the options stack
+  with  options  you  no  longer  want. The function [2XResetOptionsStack[102X ([14X8.1-3[114X)
+  removes  all  options  on  the  options stack, and this is the sole intended
+  purpose of this function.[133X
+
+
+  [1X6.4-2 [33X[0;0Yreturn from a break loop[133X[101X
+
+  [33X[0;0YThe  other  way  to leave a break loop is to [13Xreturn[113X from a break loop. To do
+  this  you type [10Xreturn;[110X or [10Xreturn [3Xobj[103X[10X;[110X. If the break loop was entered because
+  you  interrupted  [5XGAP[105X, then you can continue by typing [10Xreturn;[110X. If the break
+  loop  was  entered  due  to  an error, you may have to modify the value of a
+  variable before typing [10Xreturn;[110X (see the example for [2XIsDenseList[102X ([14X21.1-2[114X)) or
+  you  may  have  to return an object [3Xobj[103X (by typing: [10Xreturn [3Xobj[103X[10X;[110X) to continue
+  the computation; in any case, the message printed on entering the break loop
+  will  tell  you which of these alternatives is possible. For example, if the
+  break  loop  was entered because a variable had no assigned value, the value
+  to  be  returned is often a value that this variable should have to continue
+  the computation.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[26Xbrk>[126X [27Xreturn 9;  # we had tried to enter the divisor 9 but typed 0 ...[127X[104X
+    [4X[28X1/9[128X[104X
+    [4X[25Xgap>[125X [27X[127X[104X
+  [4X[32X[104X
+
+  [1X6.4-3 OnBreak[101X
+
+  [33X[1;0Y[29X[2XOnBreak[102X(  ) [32X function[133X
+
+  [33X[0;0YBy  default,  when  a  break  loop  is  entered,  [5XGAP[105X  prints a trace of the
+  innermost  5  commands  currently  being  executed.  This  behaviour  can be
+  configured  by  changing  the  value  of the global variable [2XOnBreak[102X. When a
+  break loop is entered, the value of [2XOnBreak[102X is checked. If it is a function,
+  then  it  is  called  with no arguments. By default, the value of [2XOnBreak[102X is
+  [2XWhere[102X ([14X6.4-5[114X).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XOnBreak := function() Print("Hello\n"); end;[127X[104X
+    [4X[28Xfunction(  ) ... end[128X[104X
+  [4X[32X[104X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XError("!\n");[127X[104X
+    [4X[28XError, ![128X[104X
+    [4X[28XHello[128X[104X
+    [4X[28XEntering break read-eval-print loop ...[128X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou can 'return;' to continue[128X[104X
+    [4X[26Xbrk>[126X [27Xquit;[127X[104X
+  [4X[32X[104X
+
+  [33X[0;0YIn  cases  where  a  break loop is entered during a function that was called
+  with  options  (see Chapter [14X8[114X), a [10Xquit;[110X will also cause the options stack to
+  be  reset  and  an  [10XInfo[110X-ed  warning  stating this is emitted at [2XInfoWarning[102X
+  ([14X7.4-8[114X) level 1 (see Chapter [14X7.4[114X).[133X
+
+  [33X[0;0YNote  that  for  break  loops  entered by a call to [2XError[102X ([14X6.6-1[114X), the lines
+  after [21X[10XEntering break read-eval-print loop ...[110X[121X and before the [10Xbrk>[110X prompt can
+  also be customised, namely by redefining [2XOnBreakMessage[102X ([14X6.4-4[114X).[133X
+
+  [33X[0;0YAlso,  note  that one can achieve the effect of changing [2XOnBreak[102X [13Xlocally[113X. As
+  mentioned above, the default value of [2XOnBreak[102X is [2XWhere[102X ([14X6.4-5[114X). Thus, a call
+  to  [2XError[102X  ([14X6.6-1[114X) generally gives a trace back up to five levels of calling
+  functions.  Conceivably, we might like to have a function like [2XError[102X ([14X6.6-1[114X)
+  that  does not trace back without globally changing [2XOnBreak[102X. Such a function
+  we  might  call  [10XErrorNoTraceBack[110X  and here is how we might define it. (Note
+  [10XErrorNoTraceBack[110X is [13Xnot[113X a [5XGAP[105X function.)[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XErrorNoTraceBack := function(arg) # arg is special variable that GAP[127X[104X
+    [4X[25X>[125X [27X                                     # knows to treat as list of arg's[127X[104X
+    [4X[25X>[125X [27X     local SavedOnBreak, ENTBOnBreak;[127X[104X
+    [4X[25X>[125X [27X     SavedOnBreak := OnBreak;        # save current value of OnBreak[127X[104X
+    [4X[25X>[125X [27X[127X[104X
+    [4X[25X>[125X [27X     ENTBOnBreak := function()       # our `local' OnBreak[127X[104X
+    [4X[25X>[125X [27X     local s;[127X[104X
+    [4X[25X>[125X [27X       for s in arg do[127X[104X
+    [4X[25X>[125X [27X         Print(s);[127X[104X
+    [4X[25X>[125X [27X       od;[127X[104X
+    [4X[25X>[125X [27X       OnBreak := SavedOnBreak;      # restore OnBreak afterwards[127X[104X
+    [4X[25X>[125X [27X     end;[127X[104X
+    [4X[25X>[125X [27X[127X[104X
+    [4X[25X>[125X [27X     OnBreak := ENTBOnBreak;[127X[104X
+    [4X[25X>[125X [27X     Error();[127X[104X
+    [4X[25X>[125X [27X   end;[127X[104X
+    [4X[28Xfunction( arg... ) ... end[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YHere is a somewhat trivial demonstration of the use of [10XErrorNoTraceBack[110X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XErrorNoTraceBack("Gidday!", " How's", " it", " going?\n");[127X[104X
+    [4X[28XError, Gidday! How's it going?[128X[104X
+    [4X[28XEntering break read-eval-print loop ...[128X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou can 'return;' to continue[128X[104X
+    [4X[26Xbrk>[126X [27Xquit;[127X[104X
+  [4X[32X[104X
+
+  [33X[0;0YNow we call [2XError[102X ([14X6.6-1[114X) with the same arguments to show the difference.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XError("Gidday!", " How's", " it", " going?\n");[127X[104X
+    [4X[28XError, Gidday! How's it going?[128X[104X
+    [4X[28XHello[128X[104X
+    [4X[28XEntering break read-eval-print loop ...[128X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou can 'return;' to continue[128X[104X
+    [4X[26Xbrk>[126X [27Xquit;[127X[104X
+  [4X[32X[104X
+
+  [33X[0;0YObserve  that  the  value  of  [2XOnBreak[102X  before the [10XErrorNoTraceBack[110X call was
+  restored. However, we had changed [2XOnBreak[102X from its default value; to restore
+  [2XOnBreak[102X to its default value, we should do the following.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XOnBreak := Where;;[127X[104X
+  [4X[32X[104X
+
+  [1X6.4-4 OnBreakMessage[101X
+
+  [33X[1;0Y[29X[2XOnBreakMessage[102X(  ) [32X function[133X
+
+  [33X[0;0YWhen  a  break  loop is entered by a call to [2XError[102X ([14X6.6-1[114X) the message after
+  the [21X[10XEntering break read-eval-print loop ...[110X[121X line is produced by the function
+  [10XOnBreakMessage[110X,  which  just  like  [2XOnBreak[102X  ([14X6.4-3[114X)  is a user-configurable
+  global variable that is a [13Xfunction[113X with [13Xno arguments[113X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XOnBreakMessage(); # By default, OnBreakMessage prints the following[127X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou can 'return;' to continue[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YPerhaps  you are familiar with what's possible in a break loop, and so don't
+  need  to  be reminded. In this case, you might wish to do the following (the
+  first line just makes it easy to restore the default value later).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XNormalOnBreakMessage := OnBreakMessage;; # save the default value[127X[104X
+    [4X[25Xgap>[125X [27XOnBreakMessage := function() end;        # do-nothing function[127X[104X
+    [4X[28Xfunction(  ) ... end[128X[104X
+    [4X[25Xgap>[125X [27XOnBreakMessage();[127X[104X
+    [4X[25Xgap>[125X [27XOnBreakMessage := NormalOnBreakMessage;; # reset[127X[104X
+  [4X[32X[104X
+
+  [33X[0;0YWith  [2XOnBreak[102X  ([14X6.4-3[114X)  still set away from its default value, calling [2XError[102X
+  ([14X6.6-1[114X) as we did above, now produces:[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XError("!\n");[127X[104X
+    [4X[28XError, ![128X[104X
+    [4X[28XHello[128X[104X
+    [4X[28XEntering break read-eval-print loop ...[128X[104X
+    [4X[26Xbrk>[126X [27Xquit; # to get back to outer loop[127X[104X
+  [4X[32X[104X
+
+  [33X[0;0YHowever, suppose you are writing a function which detects an error condition
+  and  [10XOnBreakMessage[110X needs to be changed only [13Xlocally[113X, i.e., the instructions
+  on  how to recover from the break loop need to be specific to that function.
+  The  same  idea used to define [10XErrorNoTraceBack[110X (see [2XOnBreak[102X ([14X6.4-3[114X)) can be
+  adapted  to achieve this. The function [2XCosetTableFromGensAndRels[102X ([14X47.6-5[114X) is
+  an example in the [5XGAP[105X code where the idea is actually used.[133X
+
+  [1X6.4-5 Where[101X
+
+  [33X[1;0Y[29X[2XWhere[102X( [3Xnr[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XWhereWithVars[102X( [3Xnr[103X ) [32X function[133X
+
+  [33X[0;0Yshows the last [3Xnr[103X commands on the execution stack during whose execution the
+  error  occurred.  If not given, [3Xnr[103X defaults to 5. (Assume, for the following
+  example,  that  after  the last example [2XOnBreak[102X ([14X6.4-3[114X) has been set back to
+  its default value.). [2XWhereWithVars[102X acts the same as [2XWhere[102X while also showing
+  the arguments and local variables of each function.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XStabChain(SymmetricGroup(100)); # After this we typed ^C[127X[104X
+    [4X[28Xuser interrupt at[128X[104X
+    [4X[28Xbpt := S.orbit[1];[128X[104X
+    [4X[28X called from[128X[104X
+    [4X[28XSiftedPermutation( S, (g * rep) ^ -1 ) called from[128X[104X
+    [4X[28XStabChainStrong( S.stabilizer, [ sch ], options ); called from[128X[104X
+    [4X[28XStabChainStrong( S.stabilizer, [ sch ], options ); called from[128X[104X
+    [4X[28XStabChainStrong( S, GeneratorsOfGroup( G ), options ); called from[128X[104X
+    [4X[28XStabChainOp( G, rec([128X[104X
+    [4X[28X     ) ) called from[128X[104X
+    [4X[28X...[128X[104X
+    [4X[28XEntering break read-eval-print loop ...[128X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou can 'return;' to continue[128X[104X
+    [4X[26Xbrk>[126X [27XWhere(2);[127X[104X
+    [4X[28X called from[128X[104X
+    [4X[28XSiftedPermutation( S, (g * rep) ^ -1 ) called from[128X[104X
+    [4X[28XStabChainStrong( S.stabilizer, [ sch ], options ); called from[128X[104X
+    [4X[28X...[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YNote  that  the variables displayed even in the first line of the [2XWhere[102X list
+  (after the [10Xcalled from[110X line) may be already one environment level higher and
+  [2XDownEnv[102X ([14X6.5-1[114X) may be necessary to access them.[133X
+
+  [33X[0;0YAt  the  moment this backtrace does not work from within compiled code (this
+  includes the method selection which by default is compiled into the kernel).
+  If  this  creates  problems  for  debugging,  call  [5XGAP[105X  with  the [10X-M[110X option
+  (see [14X3.1[114X) to avoid loading compiled code.[133X
+
+  [33X[0;0Y(Function  calls to [2XInfo[102X ([14X7.4-6[114X) and methods installed for binary operations
+  are handled in a special way. In rare circumstances it is possible therefore
+  that  they  do  not  show  up  in a [2XWhere[102X log but the log refers to the [13Xlast[113X
+  proper function call that happened before.)[133X
+
+  [33X[0;0YThe  command  line  option [10X-T[110X to [5XGAP[105X disables the break loop. This is mainly
+  intended  for  testing purposes and for special applications. If this option
+  is given then errors simply cause [5XGAP[105X to return to the main loop.[133X
+
+
+  [1X6.5 [33X[0;0YVariable Access in a Break Loop[133X[101X
+
+  [33X[0;0YIn  a  break  loop access to variables of the current break level and higher
+  levels  is  possible,  but  if  the same variable name is used for different
+  objects  or  if  a  function  calls  itself  recursively, of course only the
+  variable at the lowest level can be accessed.[133X
+
+
+  [1X6.5-1 [33X[0;0YDownEnv and UpEnv[133X[101X
+
+  [33X[1;0Y[29X[2XDownEnv[102X( [3Xnr[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XUpEnv[102X( [3Xnr[103X ) [32X function[133X
+
+  [33X[0;0Y[2XDownEnv[102X  moves  down  [3Xnr[103X  steps in the environment and allows one to inspect
+  variables  on  this  level; if [3Xnr[103X is negative it steps up in the environment
+  again; [3Xnr[103X defaults to 1 if not given. [2XUpEnv[102X acts similarly to [2XDownEnv[102X but in
+  the  reverse direction (the mnemonic rule to remember the difference between
+  [2XDownEnv[102X  and [2XUpEnv[102X is the order in which commands on the execution stack are
+  displayed by [2XWhere[102X ([14X6.4-5[114X)).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XOnBreak := function() Where(0); end;; # eliminate back-tracing on[127X[104X
+    [4X[25Xgap>[125X [27X                                      # entry to break loop[127X[104X
+    [4X[25Xgap>[125X [27Xtest:= function( n )[127X[104X
+    [4X[25X>[125X [27X   if n > 3 then Error( "!\n" ); fi; test( n+1 ); end;;[127X[104X
+    [4X[25Xgap>[125X [27Xtest( 1 );[127X[104X
+    [4X[28XError, ![128X[104X
+    [4X[28XEntering break read-eval-print loop ...[128X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou can 'return;' to continue[128X[104X
+    [4X[26Xbrk>[126X [27XWhere();[127X[104X
+    [4X[28X called from[128X[104X
+    [4X[28Xtest( n + 1 ); called from[128X[104X
+    [4X[28Xtest( n + 1 ); called from[128X[104X
+    [4X[28Xtest( n + 1 ); called from[128X[104X
+    [4X[28X<function>( <arguments> ) called from read-eval-loop[128X[104X
+    [4X[26Xbrk>[126X [27Xn;[127X[104X
+    [4X[28X4[128X[104X
+    [4X[26Xbrk>[126X [27XDownEnv();[127X[104X
+    [4X[26Xbrk>[126X [27Xn;[127X[104X
+    [4X[28X3[128X[104X
+    [4X[26Xbrk>[126X [27XWhere();[127X[104X
+    [4X[28X called from[128X[104X
+    [4X[28Xtest( n + 1 ); called from[128X[104X
+    [4X[28Xtest( n + 1 ); called from[128X[104X
+    [4X[28X<function>( <arguments> ) called from read-eval-loop[128X[104X
+    [4X[26Xbrk>[126X [27XDownEnv( 2 );[127X[104X
+    [4X[26Xbrk>[126X [27Xn;[127X[104X
+    [4X[28X1[128X[104X
+    [4X[26Xbrk>[126X [27XWhere();[127X[104X
+    [4X[28X called from[128X[104X
+    [4X[28X<function>( <arguments> ) called from read-eval-loop[128X[104X
+    [4X[26Xbrk>[126X [27XDownEnv( -2 );[127X[104X
+    [4X[26Xbrk>[126X [27Xn;[127X[104X
+    [4X[28X3[128X[104X
+    [4X[26Xbrk>[126X [27Xquit;[127X[104X
+    [4X[25Xgap>[125X [27XOnBreak := Where;; # restore OnBreak to its default value[127X[104X
+  [4X[32X[104X
+
+  [33X[0;0YNote  that  the  change  of  the  environment caused by [2XDownEnv[102X only affects
+  variable  access  in  the  break  loop.  If  you  use  [9Xreturn[109X  to continue a
+  calculation [5XGAP[105X automatically jumps to the right environment level again.[133X
+
+  [33X[0;0YNote  also  that  search  for  variables  looks  first in the chain of outer
+  functions  which  enclosed the definition of a currently executing function,
+  before  it  looks at the chain of calling functions which led to the current
+  invocation of the function.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xfoo := function()[127X[104X
+    [4X[25X>[125X [27Xlocal x; x := 1;[127X[104X
+    [4X[25X>[125X [27Xreturn function() local y; y := x*x; Error("!!\n"); end;[127X[104X
+    [4X[25X>[125X [27Xend;[127X[104X
+    [4X[28Xfunction(  ) ... end[128X[104X
+    [4X[25Xgap>[125X [27Xbar := foo();[127X[104X
+    [4X[28Xfunction(  ) ... end[128X[104X
+    [4X[25Xgap>[125X [27Xfun := function() local x; x := 3; bar(); end;[127X[104X
+    [4X[28Xfunction(  ) ... end[128X[104X
+    [4X[25Xgap>[125X [27Xfun();[127X[104X
+    [4X[28XError, !![128X[104X
+    [4X[28X called from[128X[104X
+    [4X[28Xbar(  ); called from[128X[104X
+    [4X[28X<function>( <arguments> ) called from read-eval-loop[128X[104X
+    [4X[28XEntering break read-eval-print loop ...[128X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou can 'return;' to continue[128X[104X
+    [4X[26Xbrk>[126X [27Xx;[127X[104X
+    [4X[28X1[128X[104X
+    [4X[26Xbrk>[126X [27XDownEnv(1);[127X[104X
+    [4X[26Xbrk>[126X [27Xx;[127X[104X
+    [4X[28X3[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YHere the [10Xx[110X of [10Xfoo[110X which contained the definition of [10Xbar[110X is found before that
+  of  [10Xfun[110X  which  caused its execution. Using [2XDownEnv[102X we can access the [10Xx[110X from
+  [10Xfun[110X.[133X
+
+
+  [1X6.6 [33X[0;0YError and ErrorCount[133X[101X
+
+  [1X6.6-1 Error[101X
+
+  [33X[1;0Y[29X[2XError[102X( [3Xmessages[103X, [3X...[103X ) [32X function[133X
+
+  [33X[0;0Y[2XError[102X  signals  an error from within a function. First the messages [3Xmessages[103X
+  are  printed, this is done exactly as if [2XPrint[102X ([14X6.3-4[114X) (see [14X6.3[114X) were called
+  with  these  arguments.  Then  a break loop (see [14X6.4[114X) is entered, unless the
+  standard  error  output  is  not connected to a terminal. You can leave this
+  break  loop  with [10Xreturn;[110X to continue execution with the statement following
+  the  call  to  [2XError[102X.  [2XErrorNoReturn[102X  ([14X6.6-2[114X) operates identically to [2XError[102X,
+  except it does not allow using [10Xreturn;[110X to continue execution.[133X
+
+  [1X6.6-2 ErrorNoReturn[101X
+
+  [33X[1;0Y[29X[2XErrorNoReturn[102X( [3Xmessages[103X, [3X...[103X ) [32X function[133X
+
+  [33X[0;0Y[2XErrorNoReturn[102X  signals  an  error from within a function. First the messages
+  [3Xmessages[103X  are  printed,  this  is done exactly as if [2XPrint[102X ([14X6.3-4[114X) (see [14X6.3[114X)
+  were  called  with  these arguments. Then a break loop (see [14X6.4[114X) is entered,
+  unless  the standard error output is not connected to a terminal. This break
+  loop  can only be exited with [10Xquit;[110X. The function differs from [2XError[102X ([14X6.6-1[114X)
+  by not allowing execution to continue.[133X
+
+  [1X6.6-3 ErrorCount[101X
+
+  [33X[1;0Y[29X[2XErrorCount[102X(  ) [32X function[133X
+
+  [33X[0;0Y[2XErrorCount[102X  returns  a  count  of  the  number  of  errors  (including  user
+  interruptions)  which  have occurred in the [5XGAP[105X session so far. The count is
+  incremented  by  each  error,  even if [5XGAP[105X was started with the [10X-T[110X option to
+  disable the break loop.[133X
+
+
+  [1X6.7 [33X[0;0YLeaving GAP[133X[101X
+
+  [33X[0;0YThe normal way to terminate a [5XGAP[105X session is to enter either [10Xquit;[110X (note the
+  semicolon)  or an end-of-file character (usually [12XCtrl-D[112X) at the [10Xgap> [110X prompt
+  in the main read eval print loop.[133X
+
+  [1X6.7-1 QUIT[101X
+
+  [33X[1;0Y[29X[2XQUIT[102X [32X global variable[133X
+
+  [33X[0;0YAn  emergency  way  to  leave  [5XGAP[105X  is  to enter [9XQUIT[109X at any [10Xgap>[110X or [10Xbrk>[110X or
+  [10Xbrk_[3Xnn[103X[10X>[110X prompt.[133X
+
+  [1X6.7-2 GapExitCode[101X
+
+  [33X[1;0Y[29X[2XGapExitCode[102X( [[3Xret[103X] ) [32X function[133X
+
+  [33X[0;0Y[2XGapExitCode[102X  sets  the  exit value which is returned to the operating system
+  (or  parent  process)  when  [5XGAP[105X  exits. This may be an integer in the range
+  [-128..127]  (other  values  are  reduced  modulo  256),  or a boolean. [9Xtrue[109X
+  corresponds  to  the  return  value  0,  which  by  convention is treated as
+  "success".  [9Xfalse[109X  corresponds to the return value 1, which by convention is
+  treated as "failure". The exit value is not changed if no argument is given.[133X
+
+  [33X[0;0YThe [13Xprevious[113X exit code is returned.[133X
+
+  [1X6.7-3 QuitGap[101X
+
+  [33X[1;0Y[29X[2XQuitGap[102X( [[3Xret[103X] ) [32X function[133X
+
+  [33X[0;0Y[2XQuitGap[102X  acts  similarly  to  the keyword [10XQUIT[110X, except [10XQUIT[110X cannot be called
+  from  a function. It exits [5XGAP[105X cleanly, calling any function installed using
+  [2XInstallAtExit[102X   ([14X6.7-5[114X).  The  optional  argument  [3Xret[103X  will  be  passed  to
+  [2XGapExitCode[102X ([14X6.7-2[114X).[133X
+
+  [1X6.7-4 ForceQuitGap[101X
+
+  [33X[1;0Y[29X[2XForceQuitGap[102X( [[3Xret[103X] ) [32X function[133X
+
+  [33X[0;0Y[2XForceQuitGap[102X  is similar to [2XQuitGap[102X ([14X6.7-3[114X), except it ignores any functions
+  installed with [2XInstallAtExit[102X ([14X6.7-5[114X), or any other functions normally run at
+  GAP  exit, such as flushing any partially outputted lines to both the screen
+  and  files,  and  exits  GAP  immediately. The optional argument [3Xret[103X will be
+  passed to [2XGapExitCode[102X ([14X6.7-2[114X).[133X
+
+  [1X6.7-5 InstallAtExit[101X
+
+  [33X[1;0Y[29X[2XInstallAtExit[102X( [3Xfunc[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XQUITTING[102X [32X global variable[133X
+
+  [33X[0;0YBefore  actually  terminating,  [5XGAP[105X will call (with no arguments) all of the
+  functions  that  have  been  installed  using [2XInstallAtExit[102X. These typically
+  perform  tasks  such  as  cleaning  up  temporary  files  created during the
+  session,  and closing open files. If an error occurs during the execution of
+  one  of these functions, that function is simply abandoned, no break loop is
+  entered.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XInstallAtExit(function() Print("bye\n"); end);[127X[104X
+    [4X[25Xgap>[125X [27Xquit;[127X[104X
+    [4X[28Xbye[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YDuring  execution  of  these functions, the global variable [10XQUITTING[110X will be
+  set  to  [9Xtrue[109X  if  [5XGAP[105X  is  exiting  because  the  user typed [9XQUIT[109X and [9Xfalse[109X
+  otherwise.  Since  [9XQUIT[109X  is  considered  as  an emergency measure, different
+  action may be appropriate.[133X
+
+  [1X6.7-6 SaveOnExitFile[101X
+
+  [33X[1;0Y[29X[2XSaveOnExitFile[102X [32X global variable[133X
+
+  [33X[0;0YIf,  when  [5XGAP[105X  is  exiting  due to a [9Xquit[109X or end-of-file (i.e. not due to a
+  [9XQUIT[109X)  the  variable  [2XSaveOnExitFile[102X  is  bound  to a string value, then the
+  system  will  try  to save the [5XGAP[105X workspace to that file, see [2XSaveWorkspace[102X
+  ([14X3.3-1[114X).[133X
+
+
+  [1X6.8 [33X[0;0YLine Editing[133X[101X
+
+  [33X[0;0YIn  most  installations [5XGAP[105X will be compiled to use the Gnu readline library
+  (see  the  line  [10XLibs  used:[110X  on [5XGAP[105X startup). In that case skip to the next
+  section  [14X6.9[114X.  (The  line  editing  commands  described  in the rest of this
+  section  were  available  in previous versions of [5XGAP[105X, they will work almost
+  the same in the standard configuration of the Gnu readline library.)[133X
+
+  [33X[0;0Y[5XGAP[105X  allows  one you to edit the current input line with a number of editing
+  commands.  Those commands are accessible either as [13Xcontrol keys[113X or as [13Xescape
+  keys[113X.  You  enter  a  control key by pressing the [12XCtrl[112X key, and, while still
+  holding  the [12XCtrl[112X key down, hitting another key [10Xkey[110X. You enter an escape key
+  by  hitting  [12XEsc[112X  and  then hitting another key [10Xkey[110X. Below we denote control
+  keys  by  [12XCtrl-[112X[10Xkey[110X  and  escape  keys  by  [12XEsc-[112X[10Xkey[110X. The case of [10Xkey[110X does not
+  matter, i.e., [12XCtrl-A[112X and [12XCtrl-a[112X are equivalent.[133X
+
+  [33X[0;0YNormally,  line  editing  will  be  enabled  if  the input is connected to a
+  terminal.  Line  editing  can  be enabled or disabled using the command line
+  options  [10X-f[110X  and  [10X-n[110X  respectively  (see [14X3.1[114X),  however  this  is  a machine
+  dependent feature of [5XGAP[105X.[133X
+
+  [33X[0;0YTyping [12XCtrl-key[112X or [12XEsc-key[112X for characters not mentioned below always inserts
+  [12XCtrl-[112X[10Xkey[110X resp. [12XEsc-[112X[10Xkey[110X at the current cursor position.[133X
+
+  [33X[0;0YThe first few commands allow you to move the cursor on the current line.[133X
+
+  [8X[12XCtrl-A[112X[108X
+        [33X[0;6Ymove the cursor to the beginning of the line.[133X
+
+  [8X[12XEsc-B[112X[108X
+        [33X[0;6Ymove the cursor to the beginning of the previous word.[133X
+
+  [8X[12XCtrl-B[112X[108X
+        [33X[0;6Ymove the cursor backward one character.[133X
+
+  [8X[12XCtrl-F[112X[108X
+        [33X[0;6Ymove the cursor forward one character.[133X
+
+  [8X[12XEsc-F[112X[108X
+        [33X[0;6Ymove the cursor to the end of the next word.[133X
+
+  [8X[12XCtrl-E[112X[108X
+        [33X[0;6Ymove the cursor to the end of the line.[133X
+
+  [33X[0;0YThe  next  commands  delete  or  kill  text.  The  last  killed  text can be
+  reinserted, possibly at a different position, with the [21Xyank[121X command [12XCtrl-Y[112X.[133X
+
+  [8X[12XCtrl-H[112X or [3Xdel[103X[8X[108X
+        [33X[0;6Ydelete the character left of the cursor.[133X
+
+  [8X[12XCtrl-D[112X[108X
+        [33X[0;6Ydelete the character under the cursor.[133X
+
+  [8X[12XCtrl-K[112X[108X
+        [33X[0;6Ykill up to the end of the line.[133X
+
+  [8X[12XEsc-D[112X[108X
+        [33X[0;6Ykill forward to the end of the next word.[133X
+
+  [8X[12XEsc-del[112X[108X
+        [33X[0;6Ykill backward to the beginning of the last word.[133X
+
+  [8X[12XCtrl-X[112X[108X
+        [33X[0;6Ykill entire input line, and discard all pending input.[133X
+
+  [8X[12XCtrl-Y[112X[108X
+        [33X[0;6Yinsert (yank) a just killed text.[133X
+
+  [33X[0;0YThe next commands allow you to change the input.[133X
+
+  [8X[12XCtrl-T[112X[108X
+        [33X[0;6Yexchange (twiddle) current and previous character.[133X
+
+  [8X[12XEsc-U[112X[108X
+        [33X[0;6Yuppercase next word.[133X
+
+  [8X[12XEsc-L[112X[108X
+        [33X[0;6Ylowercase next word.[133X
+
+  [8X[12XEsc-C[112X[108X
+        [33X[0;6Ycapitalize next word.[133X
+
+  [33X[0;0YThe  [12XTab[112X  character,  which  is in fact the control key [12XCtrl-I[112X, looks at the
+  characters  before  the  cursor,  interprets  them  as  the  beginning of an
+  identifier  and tries to complete this identifier. If there is more than one
+  possible  completion, it completes to the longest common prefix of all those
+  completions.  If  the  characters  to the left of the cursor are already the
+  longest  common  prefix  of  all  completions hitting [12XTab[112X a second time will
+  display all possible completions.[133X
+
+  [8X[12Xtab[112X[108X
+        [33X[0;6Ycomplete the identifier before the cursor.[133X
+
+  [33X[0;0YThe next commands allow you to fetch previous lines, e.g., to correct typos,
+  etc.[133X
+
+  [8X[12XCtrl-L[112X[108X
+        [33X[0;6Yinsert last input line before current character.[133X
+
+  [8X[12XCtrl-P[112X[108X
+        [33X[0;6Yredisplay  the last input line, another [12XCtrl-P[112X will redisplay the line
+        before  that,  etc.  If the cursor is not in the first column only the
+        lines starting with the string to the left of the cursor are taken.[133X
+
+  [8X[12XCtrl-N[112X[108X
+        [33X[0;6YLike [12XCtrl-P[112X but goes the other way round through the history.[133X
+
+  [8X[12XEsc-<[112X[108X
+        [33X[0;6Ygoes to the beginning of the history.[133X
+
+  [8X[12XEsc->[112X[108X
+        [33X[0;6Ygoes to the end of the history.[133X
+
+  [8X[12XCtrl-O[112X[108X
+        [33X[0;6Yaccepts this line and perform a [12XCtrl-N[112X.[133X
+
+  [33X[0;0YFinally there are a few miscellaneous commands.[133X
+
+  [8X[12XCtrl-V[112X[108X
+        [33X[0;6Yenter  next  character  literally, i.e., enter it even if it is one of
+        the control keys.[133X
+
+  [8X[12XCtrl-U[112X[108X
+        [33X[0;6Yexecute the next line editing command 4 times.[133X
+
+  [8X[12XEsc-[112X[10Xnum[110X[8X[108X
+        [33X[0;6Yexecute the next line editing command [10Xnum[110X times.[133X
+
+  [8X[12XEsc-Ctrl-L[112X[108X
+        [33X[0;6Yredisplay input line.[133X
+
+  [33X[0;0YThe  four  arrow  keys  (cursor keys) can be used instead of [12XCtrl-B[112X, [12XCtrl-F[112X,
+  [12XCtrl-P[112X, and [12XCtrl-N[112X, respectively.[133X
+
+
+  [1X6.9 [33X[0;0YEditing using the [10Xreadline[110X[101X[1X library[133X[101X
+
+  [33X[0;0YThe  descriptions  in  this  section are valid only if your [5XGAP[105X installation
+  uses  the  [10Xreadline[110X  library  for  command  line  editing.  You can check by
+  [10XIsBound(GAPInfo.UseReadline);[110X if this is the case.[133X
+
+  [33X[0;0YYou  can  use  all  the  features  of  [10Xreadline[110X, as for example explained in
+  [7Xhttps://tiswww.case.edu/php/chet/readline/rluserman.html[107X.    Therefore   the
+  command  line  editing  in  [5XGAP[105X  is similar to the [10Xbash[110X shell and many other
+  programs.  On  a  Unix/Linux  system  you  may  also have a manpage, try [10Xman
+  readline[110X.[133X
+
+  [33X[0;0YCompared to the command line editing which was used in [5XGAP[105X up to version 4.4
+  (or  compared  to not using the [10Xreadline[110X library) using [10Xreadline[110X has several
+  advantages:[133X
+
+  [30X    [33X[0;6YMost  keys  still  do  the  same  as  explained in [14X6.8[114X (in the default
+        configuration).[133X
+
+  [30X    [33X[0;6YThere  are  many  additional  commands, e.g. undoing ([12XCtrl-_[112X, keyboard
+        macros  ([12XCtrl-x([112X,  [12XCtrl-x)[112X and [12XCtrl-xe[112X), file name completion (hit [12XEsc[112X
+        two  or  four  times),  showing  matching  parentheses,  [10Xvi[110X-style  key
+        bindings, deleting and yanking text, ...[133X
+
+  [30X    [33X[0;6YLines which are longer than a physical terminal row can be edited more
+        conveniently.[133X
+
+  [30X    [33X[0;6YArbitrary unicode characters can be typed into string literals.[133X
+
+  [30X    [33X[0;6YThe key bindings can be configured, either via your [11X~/.inputrc[111X file or
+        by [5XGAP[105X commands, see [14X6.9-1[114X.[133X
+
+  [30X    [33X[0;6YThe  command  line  history  can be saved to and read from a file, see
+        [14X6.9-2[114X.[133X
+
+  [30X    [33X[0;6YAdventurous  users  can  even  implement  completely  new command line
+        editing functions on [5XGAP[105X level, see [14X6.9-4[114X.[133X
+
+
+  [1X6.9-1 [33X[0;0YReadline customization[133X[101X
+
+  [33X[0;0YYou can use your readline init file (by default [11X~/.inputrc[111X on Unix/Linux) to
+  customize key bindings. If you want settings be used only within [5XGAP[105X you can
+  write  them  between  lines  containing  [10X$if  GAP[110X and [10X$endif[110X. For a detailed
+  documentation   of   the   available   settings   and   functions  see  here
+  ([7Xhttps://tiswww.case.edu/php/chet/readline/rluserman.html[107X).[133X
+
+  [4X[32X  From readline init file  [32X[104X
+    [4X$if GAP[104X
+    [4X  set blink-matching-paren on[104X
+    [4X  "\C-x\C-o": dump-functions[104X
+    [4X  "\ep": kill-region[104X
+    [4X$endif[104X
+  [4X[32X[104X
+
+  [33X[0;0YAlternatively,  from  within  [5XGAP[105X the command [10XReadlineInitLine([3Xline[103X[10X);[110X can be
+  used, where [3Xline[103X is a string containing a line as in the init file.[133X
+
+  [33X[0;0YCaveat:  [5XGAP[105X  overwrites  the  following  keys (after reading the [11X~/.inputrc[111X
+  file):  [10X\C-g[110X,  [10X\C-i[110X,  [10X\C-n[110X, [10X\C-o[110X, [10X\C-p[110X, [10X\C-r[110X, [10X\C-\[110X, [10X\e<[110X, [10X\e>[110X, [10XUp[110X, [10XDown[110X, [10XTAB[110X,
+  [10XSpace[110X, [10XPageUp[110X, [10XPageDown[110X. So, do not redefine these in your [11X~/.inputrc[111X.[133X
+
+  [33X[0;0YNote  that  after  pressing  [12XCtrl-v[112X  the  next  special  character  is input
+  verbatim.  This  is  very useful to bind keys or key sequences. For example,
+  binding  the  function  key  [12XF3[112X  to the command [10Xkill-whole-line[110X by using the
+  sequence    [12XCtrl-v[112X    [12XF3[112X    looks    on    many    terminals    like   this:
+  [10XReadlineInitLine("\"^[OR\":kill-whole-line");[110X.  (You  can  get the line back
+  later with [12XCtrl-y[112X.)[133X
+
+  [33X[0;0YThe  [12XCtrl-g[112X key can be used to type any unicode character by its code point.
+  The  number of the character can either be given as a count, or if the count
+  is  one  the input characters before the cursor are taken (as decimal number
+  or  as  hex  number  which  starts  with  [10X0x[110X. For example, the double stroke
+  character  ℤ can be input by any of the three key sequences [12XEsc 8484 Ctrl-g[112X,
+  [12X8484 Ctrl-g[112X or [12X0x2124 Ctrl-g[112X.[133X
+
+  [33X[0;0YSome  terminals bind the [12XCtrl-s[112X and [12XCtrl-q[112X keys to stop and restart terminal
+  output.  Furthermore,  sometimes  [12XCtrl-\[112X  quits  a  program. To disable this
+  behaviour  (and  maybe  use these keys for command line editing) you can use
+  [10XExec("stty  stop  undef;  stty  start  undef; stty quit undef");[110X in your [5XGAP[105X
+  session or your [11Xgaprc[111X file (see [14X3.2[114X).[133X
+
+
+  [1X6.9-2 [33X[0;0YThe command line history[133X[101X
+
+  [33X[0;0Y[5XGAP[105X  can  save  your  input  lines for later reuse. The keys [12XCtrl-p[112X (or [12XUp[112X),
+  [12XCtrl-n[112X  (or  [12XDown[112X),  [12XESC<[112X  and  [12XESC>[112X work as documented in [14X6.8[114X, that is they
+  scroll  backward  and  forward in the history or go to its beginning or end.
+  Also,  [12XCtrl-o[112X  works as documented, it is useful for repeating a sequence of
+  previous lines. (But [12XCtrl-l[112X clears the screen as in other programs.)[133X
+
+  [33X[0;0YThe command line history can be used across several instances of [5XGAP[105X via the
+  following two commands.[133X
+
+  [1X6.9-3 SaveCommandLineHistory[101X
+
+  [33X[1;0Y[29X[2XSaveCommandLineHistory[102X( [[3Xfname[103X][,] [[3Xapp[103X] ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xfail[109X or number of saved lines[133X
+
+  [33X[1;0Y[29X[2XReadCommandLineHistory[102X( [[3Xfname[103X][,] [[3Xapp[103X] ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xfail[109X or number of added lines[133X
+
+  [33X[0;0YThe  first  command  saves the lines in the command line history to the file
+  given  by  the  string [3Xfname[103X. The default for [3Xfname[103X is [11Xhistory[111X in the user's
+  [5XGAP[105X  root  path  [10XGAPInfo.UserGapRoot[110X or [11X"~/.gap_hist"[111X if this directory does
+  not  exist. If the optional argument [3Xapp[103X is [9Xtrue[109X then the lines are appended
+  to that file otherwise the file is overwritten.[133X
+
+  [33X[0;0YThe  second  command is the converse, it reads the lines from file [3Xfname[103X. If
+  the  optional  argument  [3Xapp[103X  is true the lines are appended to the history,
+  else it [13Xprepends[113X them.[133X
+
+  [33X[0;0YBy  default, the command line history stores up to 1000 input lines. command
+  line   history.   This   number  may  be  restricted  or  enlarged  via  via
+  [10XSetUserPreference("HistoryMaxLines",  num);[110X  which  may  be  set  to  a  non
+  negative  number  [10Xnum[110X to store up to [10Xnum[110X input lines or to [9Xinfinity[109X to store
+  arbitrarily  many  lines.  An automatic storing and restoring of the command
+  line          history          can         be         configured         via
+  [10XSetUserPreference("SaveAndRestoreHistory", true);[110X.[133X
+
+  [33X[0;0YNote  that  these  functions are only available if your [5XGAP[105X is configured to
+  use the [10Xreadline[110X library.[133X
+
+
+  [1X6.9-4 [33X[0;0YWriting your own command line editing functions[133X[101X
+
+  [33X[0;0YIt  is  possible  to  write  new  command  line  editing functions in [5XGAP[105X as
+  follows.[133X
+
+  [33X[0;0YThe  functions  have one argument [3Xl[103X which is a list with five entries of the
+  form [10X[count, key, line, cursorpos, markpos][110X where [10Xcount[110X and [10Xkey[110X are the last
+  pressed  key  and  its  count  (these  are  not so useful here because users
+  probably do not want to overwrite the binding of a single key), then [10Xline[110X is
+  a string containing the line typed so far, [10Xcursorpos[110X is the current position
+  of the cursor (point), and [10Xmarkpos[110X the current position of the mark.[133X
+
+  [33X[0;0YThe result of such a function must be a list which can have various forms:[133X
+
+  [8X[10X[str][110X[8X[108X
+        [33X[0;6Ywith a string [10Xstr[110X. In this case the text [10Xstr[110X is inserted at the cursor
+        position.[133X
+
+  [8X[10X[kill, begin, end][110X[8X[108X
+        [33X[0;6Ywhere  [10Xkill[110X  is  [9Xtrue[109X  or [9Xfalse[109X and [10Xbegin[110X and [10Xend[110X are positions on the
+        input  line.  This  removes the text from the lower position to before
+        the  higher  position. If [10Xkill[110X is [9Xtrue[109X the text is killed, i.e. put in
+        the kill ring for later yanking.[133X
+
+  [8X[10X[begin, end, str][110X[8X[108X
+        [33X[0;6Ywhere  [10Xbegin[110X  and  [10Xend[110X  are  positions  on the input line and [10Xstr[110X is a
+        string. Then the text from position [10Xbegin[110X to before [10Xend[110X is substituted
+        by [10Xstr[110X.[133X
+
+  [8X[10X[1, lstr][110X[8X[108X
+        [33X[0;6Ywhere [10Xlstr[110X is a list of strings. Then these strings are displayed like
+        a list of possible completions. The input line is not changed.[133X
+
+  [8X[10X[2, chars][110X[8X[108X
+        [33X[0;6Ywhere  [10Xchars[110X  is  a  string. The characters from [10Xchars[110X are used as the
+        next characters from the input. (At most 512 characters are possible.)[133X
+
+  [8X[10X[100][110X[8X[108X
+        [33X[0;6YThis rings the bell as configured in the terminal.[133X
+
+  [33X[0;0YIn the first three cases the result list can contain a position as a further
+  entry, this becomes the new cursor position. Or it can contain two positions
+  as  further  entries,  these  become  the  new  cursor  position and the new
+  position of the mark.[133X
+
+  [33X[0;0YSuch   a   function   can   be   installed  as  a  macro  for  [10Xreadline[110X  via
+  [10XInstallReadlineMacro(name,  fun);[110X where [10Xname[110X is a string used as name of the
+  macro  and  [10Xfun[110X  is  a  function as above. This macro can be called by a key
+  sequence which is returned by [10XInvocationReadlineMacro(name);[110X.[133X
+
+  [33X[0;0YAs  an example we define a function which puts double quotes around the word
+  under  or before the cursor position. The space character, the characters in
+  [10X"(,)"[110X,  and  the  beginning  and  end  of  the  line  are considered as word
+  boundaries.  The  function is then installed as a macro and bound to the key
+  sequence [12XEsc[112X [12XQ[112X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XEditAddQuotes := function(l)[127X[104X
+    [4X[25X>[125X [27X  local str, pos, i, j, new;[127X[104X
+    [4X[25X>[125X [27X  str := l[3];[127X[104X
+    [4X[25X>[125X [27X  pos := l[4];[127X[104X
+    [4X[25X>[125X [27X  i := pos;[127X[104X
+    [4X[25X>[125X [27X  while i > 1 and (not str[i-1] in ",( ") do[127X[104X
+    [4X[25X>[125X [27X    i := i-1;[127X[104X
+    [4X[25X>[125X [27X  od;[127X[104X
+    [4X[25X>[125X [27X  j := pos;[127X[104X
+    [4X[25X>[125X [27X  while IsBound(str[j]) and not str[j] in ",) " do[127X[104X
+    [4X[25X>[125X [27X    j := j+1;[127X[104X
+    [4X[25X>[125X [27X  od;[127X[104X
+    [4X[25X>[125X [27X  new := "\"";[127X[104X
+    [4X[25X>[125X [27X  Append(new, str{[i..j-1]});[127X[104X
+    [4X[25X>[125X [27X  Append(new, "\"");[127X[104X
+    [4X[25X>[125X [27X  return [i, j, new];[127X[104X
+    [4X[25X>[125X [27Xend;;[127X[104X
+    [4X[25Xgap>[125X [27XInstallReadlineMacro("addquotes", EditAddQuotes);[127X[104X
+    [4X[25Xgap>[125X [27Xinvl := InvocationReadlineMacro("addquotes");;[127X[104X
+    [4X[25Xgap>[125X [27XReadlineInitLine(Concatenation("\"\\eQ\":\"",invl,"\""));;[127X[104X
+  [4X[32X[104X
+
+
+  [1X6.10 [33X[0;0YEditing Files[133X[101X
+
+  [33X[0;0YIn  most  cases,  it is preferable to create longer input (in particular [5XGAP[105X
+  programs)  separately  in  an  editor,  and  to  read in the result via [2XRead[102X
+  ([14X9.8-1[114X). Note that [2XRead[102X ([14X9.8-1[114X) by default reads from the directory in which
+  [5XGAP[105X was started (respectively under Windows the directory containing the [5XGAP[105X
+  binary), so you might have to give an absolute path to the file.[133X
+
+  [33X[0;0YIf  you cannot create several windows, the [2XEdit[102X ([14X6.10-1[114X) command may be used
+  to leave [5XGAP[105X, start an editor, and read in the edited file automatically.[133X
+
+  [1X6.10-1 Edit[101X
+
+  [33X[1;0Y[29X[2XEdit[102X( [3Xfilename[103X ) [32X function[133X
+
+  [33X[0;0Y[2XEdit[102X  starts  an  editor with the file whose filename is given by the string
+  [3Xfilename[103X, and reads the file back into [5XGAP[105X when you exit the editor again.[133X
+
+  [33X[0;0Y[5XGAP[105X  will call your preferred editor if you call [10XSetUserPreference("Editor",
+  [3Xpath[103X[10X);[110X where [3Xpath[103X is the path to your editor, e.g., [11X/usr/bin/vim[111X. On Windows
+  you can use [10Xedit.com[110X.[133X
+
+  [33X[0;0YUnder  macOS, you should use [10XSetUserPreference("Editor", "open");[110X, this will
+  open     the    file    in    the    default    editor.    If    you    call
+  [10XSetUserPreference("EditorOptions", ["-t"]);[110X, the file will open in [11XTextEdit[111X,
+  and [10XSetUserPreference("EditorOptions", ["-a", "<appl>"]);[110X will open the file
+  using the application [10X<appl>[110X.[133X
+
+  [33X[0;0YThis can for example be done in your [11Xgap.ini[111X file, see Section [14X3.2-1[114X.[133X
+
+
+  [1X6.11 [33X[0;0YEditor Support[133X[101X
+
+  [33X[0;0YIn  the [11Xetc[111X subdirectory of the [5XGAP[105X installation we provide some setup files
+  for the editor [10Xvim[110X.[133X
+
+  [33X[0;0Y[10Xvim[110X is a powerful editor that understands the basic [10Xvi[110X commands but provides
+  much  more  functionality.  You  can  find  more  information  about it (and
+  download it) from [7Xhttps://www.vim.org[107X.[133X
+
+  [33X[0;0YTo  get  support  for  [5XGAP[105X  syntax  in  vim, create in your home directory a
+  directory  [11X.vim[111X  with subdirectories [11X.vim/syntax[111X and [11X.vim/indent[111X (If you are
+  not  using  Unix,  refer  to  the [10Xvim[110X documentation on where to place syntax
+  files).  Then  copy  the file [11Xetc/vim/gap.vim[111X to [11X.vim/syntax/gap.vim[111X and the
+  file [11Xetc/vim/gap_indent.vim[111X to [11X.vim/indent/gap.vim[111X.[133X
+
+  [33X[0;0YThen  edit  the  [11X.vimrc[111X  file  in  your  home directory. Add lines as in the
+  following example:[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[28Xif has("syntax")[128X[104X
+    [4X[28X  syntax on             " Default to no syntax highlighting[128X[104X
+    [4X[28Xendif[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X" For GAP files[128X[104X
+    [4X[28Xaugroup gap[128X[104X
+    [4X[28X  " Remove all gap autocommands[128X[104X
+    [4X[28X  au![128X[104X
+    [4X[28Xautocmd BufRead,BufNewFile *.g,*.gi,*.gd set filetype=gap comments=s:##\ \ ,m:##\ \ ,e:##\ \ b:#[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X" I'm using the external program `par' for formatting comment lines starting[128X[104X
+    [4X[28X" with `##  '. Include these lines only when you have par installed.[128X[104X
+    [4X[28X  autocmd BufRead,BufNewFile *.g,*.gi,*.gd set formatprg="par w76p4s0j"[128X[104X
+    [4X[28X  autocmd BufWritePost,FileWritePost *.g,*.gi,*.gd set formatprg="par w76p0s0j"[128X[104X
+    [4X[28Xaugroup END[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YSee  the  headers  of  the  two  mentioned files for additional comments and
+  adjust   details  according  to  your  personal  taste.  Send  comments  and
+  suggestions to [7Xmailto:support@gap-system.org[107X.[133X
+
+  [33X[0;0YUsers  of [10Xemacs[110X/[10Xxemacs[110X may wish to take a look at the major-mode for editing
+  GAP files ([7Xhttps://melpa.org/#/gap-mode[107X) by Ivan Andrus.[133X
+
+
+  [1X6.12 [33X[0;0YChanging the Screen Size[133X[101X
+
+  [1X6.12-1 SizeScreen[101X
+
+  [33X[1;0Y[29X[2XSizeScreen[102X( [[3Xsz[103X] ) [32X function[133X
+
+  [33X[0;0YCalled  with  no  arguments,  [2XSizeScreen[102X returns the size of the screen as a
+  list  with  two entries. The first is the length of each line, the second is
+  the number of lines.[133X
+
+  [33X[0;0YCalled  with one argument that is a list [3Xsz[103X, [2XSizeScreen[102X sets the size of the
+  screen; The first entry of [3Xsz[103X, if bound, is the length of each line, and the
+  second entry of [3Xsz[103X, if bound, is the number of lines. The values for unbound
+  entries of [3Xsz[103X are left unaffected. The function returns the new values.[133X
+
+  [33X[0;0YNote  that those parameters can also be set with the command line options [10X-x[110X
+  for the line length and [10X-y[110X for the number of lines (see Section [14X3.1[114X).[133X
+
+  [33X[0;0YTo   check/change  whether  line  breaking  occurs  for  files  and  streams
+  see [2XPrintFormattingStatus[102X ([14X10.4-8[114X) and [2XSetPrintFormattingStatus[102X ([14X10.4-8[114X).[133X
+
+  [33X[0;0YThe  line  length must be between [22X20[122X and [22X4096[122X characters (inclusive) and the
+  number  of  lines  must  be  at  least [22X10[122X. Values outside this range will be
+  adjusted to the nearest endpoint of the range.[133X
+
+
+  [1X6.13 [33X[0;0YTeaching Mode[133X[101X
+
+  [33X[0;0YWhen  using  [5XGAP[105X  in  the  context  of  (undergraduate) teaching it is often
+  desirable  to  simplify some of the system output and functionality defaults
+  (potentially  at the cost of making the printing of objects more expensive).
+  This can be achieved by turning on a teaching mode:[133X
+
+  [1X6.13-1 TeachingMode[101X
+
+  [33X[1;0Y[29X[2XTeachingMode[102X( [[3Xswitch[103X] ) [32X function[133X
+
+  [33X[0;0YWhen called with a boolean argument [3Xswitch[103X, this function will turn teaching
+  mode respectively on or off.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xa:=Z(11)^3;[127X[104X
+    [4X[28XZ(11)^3[128X[104X
+    [4X[25Xgap>[125X [27XTeachingMode(true);[127X[104X
+    [4X[28X#I  Teaching mode is turned ON[128X[104X
+    [4X[25Xgap>[125X [27Xa;[127X[104X
+    [4X[28XZmodnZObj(8,11)[128X[104X
+    [4X[25Xgap>[125X [27XTeachingMode(false);[127X[104X
+    [4X[28X#I  Teaching mode is turned OFF[128X[104X
+    [4X[25Xgap>[125X [27Xa;[127X[104X
+    [4X[28XZ(11)^3[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YAt the moment, teaching mode changes the following things[133X
+
+  [8XPrime Field Elements[108X
+        [33X[0;6YElements  of  fields  of prime order are printed as [2XZmodnZObj[102X ([14X14.5-3[114X)
+        instead as power of a primitive root.[133X
+
+  [8XQuadratic Irrationalities[108X
+        [33X[0;6YElements  of  a quadratic extension of the rationals are printed using
+        the square root [2XER[102X ([14X18.4-2[114X) instead of using roots of unity.[133X
+
+  [8XCreation of some small groups[108X
+        [33X[0;6YThe   group   creator  functions  [2XCyclicGroup[102X  ([14X50.1-2[114X),  [2XAbelianGroup[102X
+        ([14X50.1-3[114X),  [2XElementaryAbelianGroup[102X ([14X50.1-4[114X), and [2XDihedralGroup[102X ([14X50.1-6[114X)
+        create  by  default (if no other representation is specified) not a pc
+        group,  but  a  finitely  presented  group, which makes the generators
+        easier to interpret.[133X
+

@@ -1,0 +1,204 @@
+
+  [1X77 [33X[0;0YReplaced and Removed Command Names[133X[101X
+
+  [33X[0;0YIn  general  we try to keep [5XGAP[105X 4 compatible with former releases as much as
+  possible.  Nevertheless,  from  time  to time it seems appropriate to remove
+  some  commands  or  to change the names of some commands or variables. There
+  are  various  reasons  for  that:  Some  functionality  was improved and got
+  another  (hopefully better) interface, names turned out to be too special or
+  too  general  for  the  underlying  functionality,  or names are found to be
+  unintuitive or inconsistent with other names.[133X
+
+  [33X[0;0YIn  this  chapter  we  collect such old names while pointing to the sections
+  which  explain  how to substitute them. Usually, old names will be available
+  for  several  releases;  they may be removed when they don't seem to be used
+  any more.[133X
+
+  [33X[0;0YInformation  about  obsolete  names  is  printed  by  [2XInfo[102X ([14X7.4-6[114X) using the
+  [2XInfoObsolete[102X ([14X77.4-1[114X) Info class. By default [2XInfoObsolete[102X ([14X77.4-1[114X) is set to
+  1. Newly obsoleted identifiers should at first be outputted at info level 2.
+  Once  they have been removed from all packages, they should then be moved to
+  info  level  1,  so they are visible to normal users, for at least one major
+  release before being removed.[133X
+
+  [33X[0;0YThe  functions [10XDeclareObsoleteSynonym[110X and [10XDeclareObsoleteSynonymAttr[110X take an
+  optional  final  parameter,  specifying  the  info  level at which the given
+  obsolete symbol should be reported. It defaults to 2 and 1, respectively.[133X
+
+  [33X[0;0YThe obsolete [5XGAP[105X code is collected in two library files, [11Xlib/obsolete.gd[111X and
+  [11Xlib/obsolete.gi[111X.  By  default,  these files are read when [5XGAP[105X is started. It
+  may be useful to omit reading these files, for example in order to make sure
+  that  one's  own [5XGAP[105X code does not rely on the obsolete variables. For that,
+  one  can use the [10X-O[110X command line option (see [14X3.1[114X) or set the user preference
+  [10XReadObsolete[110X  in  the  file  [11Xgap.ini[111X  to  [9Xfalse[109X  (see [14X3.2[114X). Note that the [10X-O[110X
+  command line option overrides [10XReadObsolete[110X.[133X
+
+  [33X[0;0Y(Note  that  the  condition  whether the library files with the obsolete [5XGAP[105X
+  code  shall  be  read  has changed. In [5XGAP[105X 4.3 and 4.4, the global variables
+  [10XGAP_OBSOLESCENT[110X  and  [10XGAPInfo.ReadObsolete[110X  –to  be set in the user's [11X.gaprc[111X
+  file– were used to control this behaviour.)[133X
+
+
+  [1X77.1 [33X[0;0YGroup Actions – Name Changes[133X[101X
+
+  [33X[0;0YThe concept of a group action is sometimes referred to as a [21Xgroup operation[121X.
+  In  [5XGAP[105X 3  as well as in older versions of [5XGAP[105X 4 the term [10XOperation[110X was used
+  instead  of  [10XAction[110X.  We decided to change the names to avoid confusion with
+  the term [21Xoperation[121X as in [2XDeclareOperation[102X ([14X78.1-5[114X) and [21Xoperations for Xyz[121X.[133X
+
+  [33X[0;0YHere are some examples of such name changes.[133X
+
+        [13XOLD[113X                     │ [13XNOW USE[113X
+        ────────────────────────┼──────────────────────────────
+        [10XOperation[110X               │ [2XAction[102X ([14X41.7-2[114X)
+        [10XRepresentativeOperation[110X │ [2XRepresentativeAction[102X ([14X41.6-1[114X)
+        [10XOperationHomomorphism[110X   │ [2XActionHomomorphism[102X ([14X41.7-1[114X)
+        [10XFunctionOperation[110X       │ [2XFunctionAction[102X ([14X41.12-4[114X)
+        [10XIsLexicographicallyLess[110X │ [2X\<[102X ([14X31.11-1[114X)
+
+
+  [1X77.2 [33X[0;0YPackage Interface – Obsolete Functions and Name Changes[133X[101X
+
+  [33X[0;0YWith  [5XGAP[105X 4.4  the  package  interface  was  changed. Thereby some functions
+  became obsolete and the names of some others were made more consistent.[133X
+
+  [33X[0;0YThe    following   functions   are   no   longer   needed:   [10XDeclarePackage[110X,
+  [10XDeclareAutoPackage[110X,              [10XDeclarePackageDocumentation[110X             and
+  [10XDeclarePackageAutoDocumentation[110X.  They  are  substituted  by  entries in the
+  packages' [11XPackageInfo.g[111X files, see [14X76.3-15[114X.[133X
+
+  [33X[0;0YFurthermore,  the  global  variable  [10XPACKAGES_VERSIONS[110X  is no longer needed,
+  since  this  information is now contained in the [10XGAPInfo.PackagesInfo[110X record
+  (see  [14X3.5-1[114X).  The global variable [10XRevisions[110X is also no longer needed, since
+  the  function  [10XDisplayRevision[110X  was  made obsolete in [5XGAP[105X 4.5 and removed in
+  [5XGAP[105X 4.7.[133X
+
+  [33X[0;0YThe following function names were changed.[133X
+
+        [13XOLD[113X            │ [13XNOW USE[113X
+        ───────────────┼───────────────────────
+        [10XRequirePackage[110X │ [2XLoadPackage[102X ([14X76.2-1[114X)
+        [10XReadPkg[110X        │ [2XReadPackage[102X ([14X76.3-1[114X)
+        [10XRereadPkg[110X      │ [2XRereadPackage[102X ([14X76.3-1[114X)
+
+
+  [1X77.3 [33X[0;0YNormal Forms of Integer Matrices – Name Changes[133X[101X
+
+  [33X[0;0YFormer  versions  of  [5XGAP[105X 4  documented  several functions for computing the
+  Smith  or  Hermite  normal form of integer matrices. Some of them were never
+  implemented  and  it was unclear which commands to use. The functionality of
+  all  of these commands is now available with [2XNormalFormIntMat[102X ([14X25.2-9[114X) and a
+  few interface functions.[133X
+
+
+  [1X77.4 [33X[0;0YMiscellaneous Name Changes or Removed Names[133X[101X
+
+  [33X[0;0YIn  former  releases of [5XGAP[105X 4 there were some global variable names bound to
+  general  information  about  the  running [5XGAP[105X, such as path names or command
+  line options. Although they were not officially documented they were used by
+  several  users  and in some packages. We mention here [10XBANNER[110X and [10XQUIET[110X. This
+  type of information is now collected in the global record [2XGAPInfo[102X ([14X3.5-1[114X).[133X
+
+  [33X[0;0YHere are some further name changes.[133X
+
+        [13XOLD[113X                     │ [13XNOW USE[113X
+        ────────────────────────┼────────────────────────────────
+        [10XMonomialTotalDegreeLess[110X │ [2XMonomialExtGrlexLess[102X ([14X66.17-14[114X)
+        [10XMultRowVector[110X           │ [2XMultVectorLeft[102X ([14X23.4-3[114X)
+        [10XMutableCopyMat[110X          │ [2XMutableCopyMatrix[102X ([14X26.11-4[114X)
+        [10XMutableIdentityMat[110X      │ [2XIdentityMat[102X ([14X24.5-1[114X)
+        [10XMutableNullMat[110X          │ [2XNullMat[102X ([14X24.5-2[114X)
+        [10XNormedVectors[110X           │ [2XNormedRowVectors[102X ([14X61.9-11[114X)
+        [10XRadicalGroup[110X            │ [2XSolvableRadical[102X ([14X39.12-9[114X)
+
+  [30X    [33X[0;6YThe  operation  [10XPositionFirstComponent[110X  has been deprecated in GAP 4.8
+        due  to  issues  with  its  documentation  and implementation, and was
+        removed  in GAP 4.10. Instead of [10XPositionFirstComponent(list,obj)[110X, you
+        may            use            [10XPositionSorted(list,[obj])[110X            or
+        [10XPositionProperty(list,x->x[1]=obj)[110X as a replacement, depending on your
+        specific use case.[133X
+
+  [30X    [33X[0;6YThe  five  argument  version  of  the operation [10XMultRowVector[110X has been
+        deprecated  in  GAP  4.10  since  it was unused and only available for
+        coefficient  lists.  Note  that  [10XMultRowVector[110X  was  also  renamed  to
+        [10XMultVectorLeft[110X.[133X
+
+  [30X    [33X[0;6YThe  function  [10XTemporaryGlobalVarName[110X has been deprecated in GAP 4.11.
+        Code  using  it  typically can be restructured to not need it, e.g. by
+        using [2XEvalString[102X ([14X27.9-5[114X).[133X
+
+  [30X    [33X[0;6YA  bunch of synonyms have been deprecated in GAP 4.13. The alternative
+        names have always existed and so are safe to use even in code which is
+        meant to run in older GAP versions.[133X
+
+        [13XDeprecated[113X          │ [13XRecommended alternative[113X
+        ────────────────────┼──────────────────────────────────────────────────────────────
+        [10XOneSM[110X               │ [2XOneSameMutability[102X ([14X31.10-2[114X)
+        [10XInverseSM[110X           │ [2XInverseSameMutability[102X ([14X31.10-8[114X)
+        [10XZeroSM[110X              │ [2XZeroSameMutability[102X ([14X31.10-3[114X)
+        [10XAdditiveInverseSM[110X   │ [2XAdditiveInverseSameMutability[102X ([14X31.10-9[114X)
+        [10XOneAttr[110X             │ [2XOne[102X ([14X31.10-2[114X), [2XOneImmutable[102X ([14X31.10-2[114X)
+        [10XInverseAttr[110X         │ [2XInverse[102X ([14X31.10-8[114X), [2XInverseImmutable[102X ([14X31.10-8[114X)
+        [10XZeroAttr[110X            │ [2XZero[102X ([14X31.10-3[114X), [2XZeroImmutable[102X ([14X31.10-3[114X)
+        [10XAdditiveInverseAttr[110X │ [2XAdditiveInverse[102X ([14X31.10-9[114X), [2XAdditiveInverseImmutable[102X ([14X31.10-9[114X)
+
+  [1X77.4-1 InfoObsolete[101X
+
+  [33X[1;0Y[29X[2XInfoObsolete[102X [32X info class[133X
+
+  [33X[0;0Yis  an  info class to display warnings when an obsolete variable is used. By
+  default,  the  info  level  for this class is set to 1, which will only show
+  variables which will be removed in the next major version of GAP. Setting it
+  to  2  will  trigger  further warnings, for variables which have alternative
+  names,  or  may  be removed in future. This class can be set to 0 to disable
+  all obsolete warnings.[133X
+
+  [33X[0;0YTo  check  that  the [5XGAP[105X code does not use any obsolete variables at parsing
+  time, and not at a runtime, use the [10X-O[110X command line option, see [14X3.1[114X.[133X
+
+
+  [1X77.5 [33X[0;0YThe former .gaprc file[133X[101X
+
+  [33X[0;0YUp to [5XGAP[105X 4.4, a file [11X.gaprc[111X in the user's home directory (if available, and
+  [5XGAP[105X  was  started  without [10X-r[110X option) was read automatically during startup,
+  early enough for influencing the autoloading of packages and late enough for
+  being  allowed  to  execute  any [5XGAP[105X code. On Windows machines this file was
+  called [11Xgap.rc[111X.[133X
+
+  [33X[0;0YIn [5XGAP[105X 4.5 the startup mechanism has changed, see [14X3.2[114X for details. These new
+  configuration files are now contained in a directory [10XGAPInfo.UserGapRoot[110X.[133X
+
+  [33X[0;0YFor  the  sake  of  partial  backwards  compatibility,  also the former file
+  [11X~/.gaprc[111X  is still supported for such initializations, but this file is read
+  only  if  the directory [10XGAPInfo.UserGapRoot[110X does not exist. In that case the
+  [11X~/.gaprc[111X  is  read  at the same time as [11Xgaprc[111X would be read, i. e., too late
+  for influencing the startup of [5XGAP[105X.[133X
+
+  [33X[0;0YAs before, the command line option [10X-r[110X disables reading [11X~/.gaprc[111X, see [14X3.1[114X.[133X
+
+  [33X[0;0YTo  migrate from the old setup to the new one introduced with [5XGAP[105X 4.5, first
+  have  a  look  at the function [2XWriteGapIniFile[102X ([14X3.2-3[114X). Many users will find
+  that  all  or  most of what was set in the old [11X~/.gaprc[111X file can now be done
+  via  the  user  preferences  in  a  [11Xgap.ini[111X  file.  If  you had code for new
+  functions  or  abbreviations  in  your old [11X~/.gaprc[111X file or you were reading
+  additional  files,  then  move this into the file [11Xgaprc[111X (without the leading
+  dot,   same   name   for   all   operating   systems)   in   the   directory
+  [10XGAPInfo.UserGapRoot[110X.[133X
+
+
+  [1X77.6 [33X[0;0YSemigroup properties[133X[101X
+
+  [33X[0;0YUntil  Version  4.8  of  [5XGAP[105X  there  was  inconsistent  use of the following
+  properties   of  semigroups:  [10XIsGroupAsSemigroup[110X,  [10XIsMonoidAsSemigroup[110X,  and
+  [10XIsSemilatticeAsSemigroup[110X.  [10XIsGroupAsSemigroup[110X  was  true for semigroups that
+  mathematically  defined  a group, and for semigroups in the category [2XIsGroup[102X
+  ([14X39.2-7[114X);  [10XIsMonoidAsSemigroup[110X  was  true for semigroups that mathematically
+  defined  monoids,  but did not belong to the category [2XIsMonoid[102X ([14X51.2-1[114X); and
+  [10XIsSemilatticeAsSemigroup[110X  was  simply  a property of semigroups, there is no
+  category [10XIsSemilattice[110X.[133X
+
+  [33X[0;0YFrom Version 4.8 onwards, [10XIsMonoidAsSemigroup[110X returns [9Xtrue[109X for semigroups in
+  the  category [2XIsMonoid[102X ([14X51.2-1[114X), and [10XIsSemilatticeAsSemigroup[110X has been moved
+  to   the   [5XSemigroups[105X   under   the   new  name  [2XIsSemilattice[102X  ([14XSemigroups:
+  IsSemilattice[114X).[133X
+

@@ -1,0 +1,527 @@
+
+  [1X75 [33X[0;0YMonomiality Questions[133X[101X
+
+  [33X[0;0YThis  chapter  describes  functions  dealing  with the monomiality of finite
+  (solvable) groups and their characters.[133X
+
+  [33X[0;0YAll  these  functions  assume  [13Xcharacters[113X  to  be  class function objects as
+  described in Chapter [14X72[114X, lists of character [13Xvalues[113X are not allowed.[133X
+
+  [33X[0;0YThe  usual  [13Xproperty  tests[113X  of [5XGAP[105X that return either [9Xtrue[109X or [9Xfalse[109X are not
+  sufficient  for  us.  When  we ask whether a group character [22Xχ[122X has a certain
+  property,  such  as  quasiprimitivity, we usually want more information than
+  just  yes or no. Often we are interested in the reason [13Xwhy[113X a group character
+  [22Xχ[122X  was proved to have a certain property, e.g., whether monomiality of [22Xχ[122X was
+  proved by the observation that the underlying group is nilpotent, or whether
+  it  was necessary to construct a linear character of a subgroup from which [22Xχ[122X
+  can  be induced. In the latter case we also may be interested in this linear
+  character.  Therefore we need test functions that return a record containing
+  such  useful  information.  For example, the record returned by the function
+  [2XTestQuasiPrimitive[102X  ([14X75.3-3[114X)  contains the component [10XisQuasiPrimitive[110X (which
+  is the known boolean property flag), and additionally the component [10Xcomment[110X,
+  a string telling the reason for the value of the [10XisQuasiPrimitive[110X component,
+  and  in  the  case  that  the  argument  [22Xχ[122X  was  [13Xnot[113X quasiprimitive also the
+  component [10Xcharacter[110X, which is an irreducible constituent of a nonhomogeneous
+  restriction  of  [22Xχ[122X  to a normal subgroup. Besides these test functions there
+  are  also the known properties, e.g., the property [2XIsQuasiPrimitive[102X ([14X75.3-3[114X)
+  which  will  call  the attribute [2XTestQuasiPrimitive[102X ([14X75.3-3[114X), and return the
+  value of the [10XisQuasiPrimitive[110X component of the result.[133X
+
+  [33X[0;0YA few words about how to use the monomiality functions seem to be necessary.
+  Monomiality  questions  usually  involve  computations in many subgroups and
+  factor  groups  of  a  given  group,  and  for  these groups often expensive
+  calculations  such  as  that  of  the  character table are necessary. So one
+  should  be  careful  not  to  construct  the same group over and over again,
+  instead  the  same  group  object  should be reused, such that its character
+  table  need  to  be  computed  only  once.  For example, suppose you want to
+  restrict a character to a normal subgroup [22XN[122X that was constructed as a normal
+  closure  of  some group elements, and suppose that you have already computed
+  with   normal   subgroups   (by   calls   to  [2XNormalSubgroups[102X  ([14X39.19-9[114X)  or
+  [2XMaximalNormalSubgroups[102X  ([14X39.19-10[114X))  and  their  character  tables. Then you
+  should  look  in the lists of known normal subgroups whether [22XN[122X is contained,
+  and  if  so you can use the known character table. A mechanism that supports
+  this for normal subgroups is described in [14X71.23[114X.[133X
+
+  [33X[0;0YAlso  the  following  hint  may  be useful in this context. If you know that
+  sooner  or  later  you will compute the character table of a group [22XG[122X then it
+  may be advisable to compute it as soon as possible. For example, if you need
+  the  normal subgroups of [22XG[122X then they can be computed more efficiently if the
+  character  table  of  [22XG[122X  is  known, and they can be stored compatibly to the
+  contained  [22XG[122X-conjugacy  classes.  This  correspondence  of  classes list and
+  normal subgroup can be used very often.[133X
+
+  [33X[0;0YSeveral [13Xexamples[113X in this chapter use the symmetric group [22XS_4[122X and the special
+  linear  group  [22XSL(2,3)[122X.  For running the examples, you must first define the
+  groups, for example as follows.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS4:= SymmetricGroup( 4 );;  SetName( S4, "S4" );[127X[104X
+    [4X[25Xgap>[125X [27XSl23:= SL( 2, 3 );;[127X[104X
+  [4X[32X[104X
+
+
+  [1X75.1 [33X[0;0YInfoMonomial (Info Class)[133X[101X
+
+  [1X75.1-1 InfoMonomial[101X
+
+  [33X[1;0Y[29X[2XInfoMonomial[102X [32X info class[133X
+
+  [33X[0;0YMost  of  the  functions  described  in  this  chapter print some (hopefully
+  useful)  [13Xinformation[113X  if the info level of the info class [2XInfoMonomial[102X is at
+  least [22X1[122X, see [14X7.4[114X for details.[133X
+
+
+  [1X75.2 [33X[0;0YCharacter Degrees and Derived Length[133X[101X
+
+  [1X75.2-1 Alpha[101X
+
+  [33X[1;0Y[29X[2XAlpha[102X( [3XG[103X ) [32X attribute[133X
+
+  [33X[0;0YFor  a group [3XG[103X, [2XAlpha[102X returns a list whose [22Xi[122X-th entry is the maximal derived
+  length  of  groups  [22X[3XG[103X  /  ker(χ)[122X  for  [22Xχ ∈ Irr([3XG[103X)[122X with [22Xχ(1)[122X at most the [22Xi[122X-th
+  irreducible degree of [3XG[103X.[133X
+
+  [1X75.2-2 Delta[101X
+
+  [33X[1;0Y[29X[2XDelta[102X( [3XG[103X ) [32X attribute[133X
+
+  [33X[0;0YFor  a  group  [3XG[103X, [2XDelta[102X returns the list [22X[ 1, alp[2] - alp[1], ..., alp[[3Xn[103X] -
+  alp[[3Xn[103X-1] ][122X, where [22Xalp =[122X[10XAlpha( [3XG[103X[10X )[110X (see [2XAlpha[102X ([14X75.2-1[114X)).[133X
+
+
+  [1X75.2-3 [33X[0;0YIsBergerCondition[133X[101X
+
+  [33X[1;0Y[29X[2XIsBergerCondition[102X( [3XG[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsBergerCondition[102X( [3Xchi[103X ) [32X property[133X
+
+  [33X[0;0YCalled  with  an  irreducible  character [3Xchi[103X of a group [22XG[122X, [2XIsBergerCondition[102X
+  returns  [9Xtrue[109X  if [3Xchi[103X satisfies [22XM' ≤ ker(χ)[122X for every normal subgroup [22XM[122X of [22XG[122X
+  with the property that [22XM ≤ ker(ψ)[122X holds for all [22Xψ ∈ Irr(G)[122X with [22Xψ(1) < χ(1)[122X,
+  and [9Xfalse[109X otherwise.[133X
+
+  [33X[0;0YCalled  with  a  group  [3XG[103X, [2XIsBergerCondition[102X returns [9Xtrue[109X if all irreducible
+  characters of [3XG[103X satisfy the inequality above, and [9Xfalse[109X otherwise.[133X
+
+  [33X[0;0YFor  groups  of  odd  order  the  result  is  always  [9Xtrue[109X  by  a theorem of
+  T. R. Berger (see [Ber76, Thm. 2.2]).[133X
+
+  [33X[0;0YIn  the  case  that  [9Xfalse[109X  is returned, [2XInfoMonomial[102X ([14X75.1-1[114X) tells about a
+  degree for which the inequality is violated.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XAlpha( Sl23 );[127X[104X
+    [4X[28X[ 1, 3, 3 ][128X[104X
+    [4X[25Xgap>[125X [27XAlpha( S4 );[127X[104X
+    [4X[28X[ 1, 2, 3 ][128X[104X
+    [4X[25Xgap>[125X [27XDelta( Sl23 );[127X[104X
+    [4X[28X[ 1, 2, 0 ][128X[104X
+    [4X[25Xgap>[125X [27XDelta( S4 );[127X[104X
+    [4X[28X[ 1, 1, 1 ][128X[104X
+    [4X[25Xgap>[125X [27XIsBergerCondition( S4 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsBergerCondition( Sl23 );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XList( Irr( Sl23 ), IsBergerCondition );[127X[104X
+    [4X[28X[ true, true, true, false, false, false, true ][128X[104X
+    [4X[25Xgap>[125X [27XList( Irr( Sl23 ), Degree );[127X[104X
+    [4X[28X[ 1, 1, 1, 2, 2, 2, 3 ][128X[104X
+  [4X[32X[104X
+
+
+  [1X75.3 [33X[0;0YPrimitivity of Characters[133X[101X
+
+  [1X75.3-1 TestHomogeneous[101X
+
+  [33X[1;0Y[29X[2XTestHomogeneous[102X( [3Xchi[103X, [3XN[103X ) [32X function[133X
+
+  [33X[0;0YFor  a  group  character  [3Xchi[103X  of  a  group  [22XG[122X and a normal subgroup [3XN[103X of [22XG[122X,
+  [2XTestHomogeneous[102X returns a record with information whether the restriction of
+  [3Xchi[103X to [3XN[103X is homogeneous, i.e., is a multiple of an irreducible character.[133X
+
+  [33X[0;0Y[3XN[103X  may  be  given  also  as  list  of  conjugacy  class positions w.r.t. the
+  character table of [22XG[122X.[133X
+
+  [33X[0;0YThe components of the result are[133X
+
+  [8X[10XisHomogeneous[110X[8X[108X
+        [33X[0;6Y[9Xtrue[109X or [9Xfalse[109X,[133X
+
+  [8X[10Xcomment[110X[8X[108X
+        [33X[0;6Ya  string  telling  a  reason  for  the  value  of  the  [10XisHomogeneous[110X
+        component,[133X
+
+  [8X[10Xcharacter[110X[8X[108X
+        [33X[0;6Yirreducible   constituent  of  the  restriction,  only  bound  if  the
+        restriction had to be checked,[133X
+
+  [8X[10Xmultiplicity[110X[8X[108X
+        [33X[0;6Ymultiplicity of the [10Xcharacter[110X component in the restriction of [3Xchi[103X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xn:= DerivedSubgroup( Sl23 );;[127X[104X
+    [4X[25Xgap>[125X [27Xchi:= Irr( Sl23 )[7];[127X[104X
+    [4X[28XCharacter( CharacterTable( SL(2,3) ), [ 3, 0, 0, 3, 0, 0, -1 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xtest:= TestHomogeneous( chi, n );;[127X[104X
+    [4X[25Xgap>[125X [27Xtest.isHomogeneous;  test.comment;  test.multiplicity;[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28X"restriction checked"[128X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XDegree( test.character );[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27Xchi:= Irr( Sl23 )[4];[127X[104X
+    [4X[28XCharacter( CharacterTable( SL(2,3) ), [ 2, 1, 1, -2, -1, -1, 0 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xcln:= ClassPositionsOfNormalSubgroup( CharacterTable( Sl23 ), n );[127X[104X
+    [4X[28X[ 1, 4, 7 ][128X[104X
+    [4X[25Xgap>[125X [27XTestHomogeneous( chi, cln );[127X[104X
+    [4X[28Xrec( comment := "restricts irreducibly", isHomogeneous := true )[128X[104X
+  [4X[32X[104X
+
+  [1X75.3-2 IsPrimitiveCharacter[101X
+
+  [33X[1;0Y[29X[2XIsPrimitiveCharacter[102X( [3Xchi[103X ) [32X property[133X
+
+  [33X[0;0YFor  a  character [3Xchi[103X of a group [22XG[122X, [2XIsPrimitiveCharacter[102X returns [9Xtrue[109X if [3Xchi[103X
+  is not induced from any proper subgroup, and [9Xfalse[109X otherwise. This currently
+  only works for characters of soluble groups.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsPrimitiveCharacter( Irr( Sl23 )[4] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsPrimitiveCharacter( Irr( Sl23 )[7] );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+
+  [1X75.3-3 TestQuasiPrimitive[101X
+
+  [33X[1;0Y[29X[2XTestQuasiPrimitive[102X( [3Xchi[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XIsQuasiPrimitive[102X( [3Xchi[103X ) [32X property[133X
+
+  [33X[0;0Y[2XTestQuasiPrimitive[102X  returns a record with information about quasiprimitivity
+  of  the  group  character  [3Xchi[103X, i.e., whether [3Xchi[103X restricts homogeneously to
+  every  normal subgroup of its group. The result record contains at least the
+  components [10XisQuasiPrimitive[110X (with value either [9Xtrue[109X or [9Xfalse[109X) and [10Xcomment[110X (a
+  string telling a reason for the value of the component [10XisQuasiPrimitive[110X). If
+  [3Xchi[103X  is not quasiprimitive then there is additionally a component [10Xcharacter[110X,
+  with  value  an  irreducible  constituent of a nonhomogeneous restriction of
+  [3Xchi[103X.[133X
+
+  [33X[0;0Y[2XIsQuasiPrimitive[102X  returns  [9Xtrue[109X or [9Xfalse[109X, depending on whether the character
+  [3Xchi[103X is quasiprimitive.[133X
+
+  [33X[0;0YNote  that  for solvable groups, quasiprimitivity is the same as primitivity
+  (see [2XIsPrimitiveCharacter[102X ([14X75.3-2[114X)).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xchi:= Irr( Sl23 )[4];[127X[104X
+    [4X[28XCharacter( CharacterTable( SL(2,3) ), [ 2, 1, 1, -2, -1, -1, 0 ] )[128X[104X
+    [4X[25Xgap>[125X [27XTestQuasiPrimitive( chi );[127X[104X
+    [4X[28Xrec( comment := "all restrictions checked", isQuasiPrimitive := true )[128X[104X
+    [4X[25Xgap>[125X [27Xchi:= Irr( Sl23 )[7];[127X[104X
+    [4X[28XCharacter( CharacterTable( SL(2,3) ), [ 3, 0, 0, 3, 0, 0, -1 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xtest:= TestQuasiPrimitive( chi );;[127X[104X
+    [4X[25Xgap>[125X [27Xtest.isQuasiPrimitive;  test.comment;[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28X"restriction checked"[128X[104X
+    [4X[25Xgap>[125X [27XDegree( test.character );[127X[104X
+    [4X[28X1[128X[104X
+  [4X[32X[104X
+
+  [1X75.3-4 TestInducedFromNormalSubgroup[101X
+
+  [33X[1;0Y[29X[2XTestInducedFromNormalSubgroup[102X( [3Xchi[103X[, [3XN[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XIsInducedFromNormalSubgroup[102X( [3Xchi[103X ) [32X property[133X
+
+  [33X[0;0Y[2XTestInducedFromNormalSubgroup[102X  returns a record with information whether the
+  irreducible  character  [3Xchi[103X  of  the group [22XG[122X is induced from a proper normal
+  subgroup  of  [22XG[122X. If the second argument [3XN[103X is present, which must be a normal
+  subgroup  of  [22XG[122X or the list of class positions of a normal subgroup of [22XG[122X, it
+  is checked whether [3Xchi[103X is induced from [3XN[103X.[133X
+
+  [33X[0;0YThe  result  contains always the components [10XisInduced[110X (either [9Xtrue[109X or [9Xfalse[109X)
+  and  [10Xcomment[110X  (a  string  telling  a  reason  for the value of the component
+  [10XisInduced[110X). In the [9Xtrue[109X case there is a component [10Xcharacter[110X which contains a
+  character of a maximal normal subgroup from which [3Xchi[103X is induced.[133X
+
+  [33X[0;0Y[2XIsInducedFromNormalSubgroup[102X  returns  [9Xtrue[109X  if  [3Xchi[103X is induced from a proper
+  normal subgroup of [22XG[122X, and [9Xfalse[109X otherwise.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XList( Irr( Sl23 ), IsInducedFromNormalSubgroup );[127X[104X
+    [4X[28X[ false, false, false, false, false, false, true ][128X[104X
+    [4X[25Xgap>[125X [27XList( Irr( S4 ){ [ 1, 3, 4 ] },[127X[104X
+    [4X[25X>[125X [27X         TestInducedFromNormalSubgroup );[127X[104X
+    [4X[28X[ rec( comment := "linear character", isInduced := false ),[128X[104X
+    [4X[28X  rec( character := Character( CharacterTable( Alt( [ 1 .. 4 ] ) ),[128X[104X
+    [4X[28X        [ 1, 1, E(3), E(3)^2 ] ),[128X[104X
+    [4X[28X      comment := "induced from component '.character'",[128X[104X
+    [4X[28X      isInduced := true ),[128X[104X
+    [4X[28X  rec( comment := "all maximal normal subgroups checked",[128X[104X
+    [4X[28X      isInduced := false ) ][128X[104X
+  [4X[32X[104X
+
+
+  [1X75.4 [33X[0;0YTesting Monomiality[133X[101X
+
+  [33X[0;0YA  character [22Xχ[122X of a finite group [22XG[122X is called [13Xmonomial[113X if [22Xχ[122X is induced from a
+  linear character of a subgroup of [22XG[122X. A finite group [22XG[122X is called [13Xmonomial[113X (or
+  [13X[22XM[122X-group[113X) if each ordinary irreducible character of [22XG[122X is monomial.[133X
+
+
+  [1X75.4-1 [33X[0;0YTestMonomial[133X[101X
+
+  [33X[1;0Y[29X[2XTestMonomial[102X( [3Xchi[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XTestMonomial[102X( [3XG[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XTestMonomial[102X( [3Xchi[103X, [3Xuselattice[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XTestMonomial[102X( [3XG[103X, [3Xuselattice[103X ) [32X operation[133X
+
+  [33X[0;0YCalled  with  a  group  character  [3Xchi[103X  of a group [3XG[103X, [2XTestMonomial[102X returns a
+  record  containing information about monomiality of the group [3XG[103X or the group
+  character [3Xchi[103X, respectively.[133X
+
+  [33X[0;0YIf  [2XTestMonomial[102X  proves  the  character  [3Xchi[103X to be monomial then the result
+  contains  components [10XisMonomial[110X (with value [9Xtrue[109X), [10Xcomment[110X (a string telling
+  a  reason  for  monomiality),  and  if  it was necessary to compute a linear
+  character from which [3Xchi[103X is induced, also a component [10Xcharacter[110X.[133X
+
+  [33X[0;0YIf  [2XTestMonomial[102X  proves  [3Xchi[103X  or  [3XG[103X to be nonmonomial then the value of the
+  component  [10XisMonomial[110X is [9Xfalse[109X, and in the case of [3XG[103X a nonmonomial character
+  is  the value of the component [10Xcharacter[110X if it had been necessary to compute
+  it.[133X
+
+  [33X[0;0YA  Boolean can be entered as the second argument [3Xuselattice[103X; if the value is
+  [9Xtrue[109X then the subgroup lattice of the underlying group is used if necessary,
+  if  the  value is [9Xfalse[109X then the subgroup lattice is used only for groups of
+  order   at  most  [2XTestMonomialUseLattice[102X  ([14X75.4-2[114X).  The  default  value  of
+  [3Xuselattice[103X is [9Xfalse[109X.[133X
+
+  [33X[0;0YFor  a group whose lattice must not be used, it may happen that [2XTestMonomial[102X
+  cannot  prove  or  disprove monomiality; then the result record contains the
+  component  [10XisMonomial[110X  with  value  [10X"?"[110X.  This case occurs in the call for a
+  character [3Xchi[103X if and only if [3Xchi[103X is not induced from the inertia subgroup of
+  a component of any reducible restriction to a normal subgroup. It can happen
+  that  [3Xchi[103X is monomial in this situation. For a group, this case occurs if no
+  irreducible character can be proved to be nonmonomial, and if no decision is
+  possible for at least one irreducible character.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTestMonomial( S4 );[127X[104X
+    [4X[28Xrec( comment := "abelian by supersolvable group", isMonomial := true )[128X[104X
+    [4X[25Xgap>[125X [27XTestMonomial( Sl23 );[127X[104X
+    [4X[28Xrec( comment := "list Delta( G ) contains entry > 1",[128X[104X
+    [4X[28X  isMonomial := false )[128X[104X
+  [4X[32X[104X
+
+  [1X75.4-2 TestMonomialUseLattice[101X
+
+  [33X[1;0Y[29X[2XTestMonomialUseLattice[102X [32X global variable[133X
+
+  [33X[0;0YThis  global  variable  controls for which groups the operation [2XTestMonomial[102X
+  ([14X75.4-1[114X)  may  compute  the  subgroup  lattice.  The  value  can be set to a
+  positive integer or [2Xinfinity[102X ([14X18.2-1[114X), the default is [22X1000[122X.[133X
+
+  [1X75.4-3 IsMonomialNumber[101X
+
+  [33X[1;0Y[29X[2XIsMonomialNumber[102X( [3Xn[103X ) [32X property[133X
+
+  [33X[0;0YFor  a  positive  integer [3Xn[103X, [2XIsMonomialNumber[102X returns [9Xtrue[109X if every solvable
+  group  of  order  [3Xn[103X  is  monomial,  and  [9Xfalse[109X  otherwise.  One can also use
+  [10XIsMonomial[110X instead.[133X
+
+  [33X[0;0YLet  [22Xν_p(n)[122X  denote  the  multiplicity  of  the  prime [22Xp[122X as factor of [22Xn[122X, and
+  [22Xord(p,q)[122X the multiplicative order of [22Xp mod q[122X.[133X
+
+  [33X[0;0YThen there exists a solvable nonmonomial group of order [22Xn[122X if and only if one
+  of the following conditions is satisfied.[133X
+
+  [8X1.[108X
+        [33X[0;6Y[22Xν_2(n) ≥ 2[122X and there is a [22Xp[122X such that [22Xν_p(n) ≥ 3[122X and [22Xp ≡ -1 mod 4[122X,[133X
+
+  [8X2.[108X
+        [33X[0;6Y[22Xν_2(n) ≥ 3[122X and there is a [22Xp[122X such that [22Xν_p(n) ≥ 3[122X and [22Xp ≡ 1 mod 4[122X,[133X
+
+  [8X3.[108X
+        [33X[0;6Ythere  are  odd prime divisors [22Xp[122X and [22Xq[122X of [22Xn[122X such that [22Xord(p,q)[122X is even
+        and [22Xord(p,q) < ν_p(n)[122X (especially [22Xν_p(n) ≥ 3[122X),[133X
+
+  [8X4.[108X
+        [33X[0;6Ythere  is  a  prime  divisor  [22Xq[122X of [22Xn[122X such that [22Xν_2(n) ≥ 2 ord(2,q) + 2[122X
+        (especially [22Xν_2(n) ≥ 4[122X),[133X
+
+  [8X5.[108X
+        [33X[0;6Y[22Xν_2(n)  ≥  2[122X  and there is a [22Xp[122X such that [22Xp ≡ 1 mod 4[122X, [22Xord(p,q)[122X is odd,
+        and [22X2 ord(p,q) < ν_p(n)[122X (especially [22Xν_p(n) ≥ 3[122X).[133X
+
+  [33X[0;0YThese  five  possibilities  correspond to the five types of solvable minimal
+  nonmonomial  groups (see [2XMinimalNonmonomialGroup[102X ([14X75.5-2[114X)) that can occur as
+  subgroups and factor groups of groups of order [3Xn[103X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XFiltered( [ 1 .. 111 ], x -> not IsMonomial( x ) );[127X[104X
+    [4X[28X[ 24, 48, 72, 96, 108 ][128X[104X
+  [4X[32X[104X
+
+
+  [1X75.4-4 [33X[0;0YTestMonomialQuick[133X[101X
+
+  [33X[1;0Y[29X[2XTestMonomialQuick[102X( [3Xchi[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XTestMonomialQuick[102X( [3XG[103X ) [32X attribute[133X
+
+  [33X[0;0Y[2XTestMonomialQuick[102X  does  some  cheap tests whether the irreducible character
+  [3Xchi[103X  or  the  group  [3XG[103X,  respectively,  is  monomial.  Here  [21Xcheap[121X  means in
+  particular  that no computations of character tables are involved, and it is
+  [13Xnot[113X  checked whether [3Xchi[103X is a character and irreducible. The return value is
+  a record with components[133X
+
+  [8X[10XisMonomial[110X[8X[108X
+        [33X[0;6Yeither  [9Xtrue[109X  or  [9Xfalse[109X  or  the  string  [10X"?"[110X,  depending  on  whether
+        (non)monomiality could be proved, and[133X
+
+  [8X[10Xcomment[110X[8X[108X
+        [33X[0;6Ya string telling the reason for the value of the [10XisMonomial[110X component.[133X
+
+  [33X[0;0YA group [3XG[103X is proved to be monomial by [2XTestMonomialQuick[102X if [3XG[103X is nilpotent or
+  Sylow  abelian  by  supersolvable,  or if [3XG[103X is solvable and its order is not
+  divisible by the third power of a prime, Nonsolvable groups are proved to be
+  nonmonomial by [2XTestMonomialQuick[102X.[133X
+
+  [33X[0;0YAn irreducible character [3Xchi[103X is proved to be monomial if it is linear, or if
+  its  codegree  is a prime power, or if its group knows to be monomial, or if
+  the  factor  group  modulo  the  kernel  can  be  proved  to  be monomial by
+  [2XTestMonomialQuick[102X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTestMonomialQuick( Irr( S4 )[3] );[127X[104X
+    [4X[28Xrec( comment := "whole group is monomial", isMonomial := true )[128X[104X
+    [4X[25Xgap>[125X [27XTestMonomialQuick( S4 );[127X[104X
+    [4X[28Xrec( comment := "abelian by supersolvable group", isMonomial := true )[128X[104X
+    [4X[25Xgap>[125X [27XTestMonomialQuick( Sl23 );[127X[104X
+    [4X[28Xrec( comment := "no decision by cheap tests", isMonomial := "?" )[128X[104X
+  [4X[32X[104X
+
+
+  [1X75.4-5 [33X[0;0YTestSubnormallyMonomial[133X[101X
+
+  [33X[1;0Y[29X[2XTestSubnormallyMonomial[102X( [3XG[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XTestSubnormallyMonomial[102X( [3Xchi[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XIsSubnormallyMonomial[102X( [3XG[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsSubnormallyMonomial[102X( [3Xchi[103X ) [32X property[133X
+
+  [33X[0;0YAn  irreducible  character of the group [22XG[122X is called [13Xsubnormally monomial[113X ([13XSM[113X
+  for  short) if it is induced from a linear character of a subnormal subgroup
+  of [22XG[122X. A group [22XG[122X is called SM if all its irreducible characters are SM.[133X
+
+  [33X[0;0Y[2XTestSubnormallyMonomial[102X  returns a record with information whether the group
+  [3XG[103X or the irreducible character [3Xchi[103X of [3XG[103X is SM.[133X
+
+  [33X[0;0YThe  result  has the components [10XisSubnormallyMonomial[110X (either [9Xtrue[109X or [9Xfalse[109X)
+  and  [10Xcomment[110X  (a  string  telling  a  reason  for the value of the component
+  [10XisSubnormallyMonomial[110X); in the case that the [10XisSubnormallyMonomial[110X component
+  has  value  [9Xfalse[109X  there  is  also  a  component  [10Xcharacter[110X,  with  value an
+  irreducible character of [22XG[122X that is not SM.[133X
+
+  [33X[0;0Y[2XIsSubnormallyMonomial[102X returns [9Xtrue[109X if the group [3XG[103X or the group character [3Xchi[103X
+  is subnormally monomial, and [9Xfalse[109X otherwise.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTestSubnormallyMonomial( S4 );[127X[104X
+    [4X[28Xrec( character := Character( CharacterTable( S4 ), [ 3, -1, -1, 0, 1[128X[104X
+    [4X[28X     ] ), comment := "found non-SM character",[128X[104X
+    [4X[28X  isSubnormallyMonomial := false )[128X[104X
+    [4X[25Xgap>[125X [27XTestSubnormallyMonomial( Irr( S4 )[4] );[127X[104X
+    [4X[28Xrec( comment := "all subnormal subgroups checked",[128X[104X
+    [4X[28X  isSubnormallyMonomial := false )[128X[104X
+    [4X[25Xgap>[125X [27XTestSubnormallyMonomial( DerivedSubgroup( S4 ) );[127X[104X
+    [4X[28Xrec( comment := "all irreducibles checked",[128X[104X
+    [4X[28X  isSubnormallyMonomial := true )[128X[104X
+  [4X[32X[104X
+
+
+  [1X75.4-6 [33X[0;0YTestRelativelySM[133X[101X
+
+  [33X[1;0Y[29X[2XTestRelativelySM[102X( [3XG[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XTestRelativelySM[102X( [3Xchi[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XTestRelativelySM[102X( [3XG[103X, [3XN[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XTestRelativelySM[102X( [3Xchi[103X, [3XN[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XIsRelativelySM[102X( [3XG[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsRelativelySM[102X( [3Xchi[103X ) [32X property[133X
+
+  [33X[0;0YIn  the  first two cases, [2XTestRelativelySM[102X returns a record with information
+  whether the argument, which must be a SM group [3XG[103X or an irreducible character
+  [3Xchi[103X  of a SM group [22XG[122X, is relatively SM with respect to every normal subgroup
+  of [3XG[103X.[133X
+
+  [33X[0;0YIn  the  second  two cases, a normal subgroup [3XN[103X of [3XG[103X is the second argument.
+  Here  [2XTestRelativelySM[102X  returns  a record with information whether the first
+  argument  is  relatively  SM  with  respect  to  [3XN[103X,  i.e, whether there is a
+  subnormal  subgroup  [22XH[122X  of  [22XG[122X  that  contains  [3XN[103X such that the character [3Xchi[103X
+  resp. every  irreducible  character  of [22XG[122X is induced from a character [22Xψ[122X of [22XH[122X
+  such that the restriction of [22Xψ[122X to [3XN[103X is irreducible.[133X
+
+  [33X[0;0YThe  result record has the components [10XisRelativelySM[110X (with value either [9Xtrue[109X
+  or [9Xfalse[109X) and [10Xcomment[110X (a string that describes a reason). If the argument is
+  a  group  [3XG[103X that is not relatively SM with respect to a normal subgroup then
+  additionally  the  component [10Xcharacter[110X is bound, with value a not relatively
+  SM character of such a normal subgroup.[133X
+
+  [33X[0;0Y[2XIsRelativelySM[102X  returns  [9Xtrue[109X if the SM group [3XG[103X or the irreducible character
+  [3Xchi[103X of the SM group [3XG[103X is relatively SM with respect to every normal subgroup
+  of [3XG[103X, and [9Xfalse[109X otherwise.[133X
+
+  [33X[0;0Y[13XNote[113X that it is [13Xnot[113X checked whether [3XG[103X is SM.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsSubnormallyMonomial( DerivedSubgroup( S4 ) );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XTestRelativelySM( DerivedSubgroup( S4 ) );[127X[104X
+    [4X[28Xrec([128X[104X
+    [4X[28X  comment := "normal subgroups are abelian or have nilpotent factor gr\[128X[104X
+    [4X[28Xoup", isRelativelySM := true )[128X[104X
+  [4X[32X[104X
+
+
+  [1X75.5 [33X[0;0YMinimal Nonmonomial Groups[133X[101X
+
+  [1X75.5-1 IsMinimalNonmonomial[101X
+
+  [33X[1;0Y[29X[2XIsMinimalNonmonomial[102X( [3XG[103X ) [32X property[133X
+
+  [33X[0;0YA group [3XG[103X is called [13Xminimal nonmonomial[113X if it is nonmonomial, and all proper
+  subgroups and factor groups are monomial.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsMinimalNonmonomial( Sl23 );  IsMinimalNonmonomial( S4 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+
+  [1X75.5-2 MinimalNonmonomialGroup[101X
+
+  [33X[1;0Y[29X[2XMinimalNonmonomialGroup[102X( [3Xp[103X, [3Xfactsize[103X ) [32X function[133X
+
+  [33X[0;0Yis a solvable minimal nonmonomial group described by the parameters [3Xfactsize[103X
+  and [3Xp[103X if such a group exists, and [9Xfalse[109X otherwise.[133X
+
+  [33X[0;0YSuppose  that  the required group [22XK[122X exists. Then [3Xfactsize[103X is the size of the
+  Fitting  factor [22XK / F(K)[122X, and this value is 4, 8, an odd prime, twice an odd
+  prime, or four times an odd prime. In the case that [3Xfactsize[103X is twice an odd
+  prime,  the  centre [22XZ(K)[122X is cyclic of order [22X2^{[3Xp[103X+1}[122X. In all other cases [3Xp[103X is
+  the (unique) prime that divides the order of [22XF(K)[122X.[133X
+
+  [33X[0;0YThe  solvable  minimal  nonmonomial groups were classified by van der Waall,
+  see [vdW76].[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XMinimalNonmonomialGroup(  2,  3 ); # the group SL(2,3)[127X[104X
+    [4X[28X2^(1+2):3[128X[104X
+    [4X[25Xgap>[125X [27XMinimalNonmonomialGroup(  3,  4 );[127X[104X
+    [4X[28X3^(1+2):4[128X[104X
+    [4X[25Xgap>[125X [27XMinimalNonmonomialGroup(  5,  8 );[127X[104X
+    [4X[28X5^(1+2):Q8[128X[104X
+    [4X[25Xgap>[125X [27XMinimalNonmonomialGroup( 13, 12 );[127X[104X
+    [4X[28X13^(1+2):2.D6[128X[104X
+    [4X[25Xgap>[125X [27XMinimalNonmonomialGroup(  1, 14 );[127X[104X
+    [4X[28X2^(1+6):D14[128X[104X
+    [4X[25Xgap>[125X [27XMinimalNonmonomialGroup(  2, 14 );[127X[104X
+    [4X[28X(2^(1+6)Y4):D14[128X[104X
+  [4X[32X[104X
+

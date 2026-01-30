@@ -1,0 +1,2567 @@
+
+  [1X72 [33X[0;0YClass Functions[133X[101X
+
+  [33X[0;0YThis  chapter describes operations for [13Xclass functions of finite groups[113X. For
+  operations concerning [13Xcharacter tables[113X, see Chapter [14X71[114X.[133X
+
+  [33X[0;0YSeveral  examples in this chapter require the [5XGAP[105X Character Table Library to
+  be available. If it is not yet loaded then we load it now.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "ctbllib" );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+
+
+  [1X72.1 [33X[0;0YWhy Class Functions?[133X[101X
+
+  [33X[0;0YIn  principle  it  is possible to represent group characters or more general
+  class  functions  by  the  plain  lists  of  their  values, and in fact many
+  operations  for  class  functions  work  with  plain lists of class function
+  values. But this has two disadvantages.[133X
+
+  [33X[0;0YFirst,  it  is  then necessary to regard a values list explicitly as a class
+  function  of a particular character table, by supplying this character table
+  as  an  argument.  In practice this means that with this setup, the user has
+  the task to put the objects into the right context. For example, forming the
+  scalar  product  or  the tensor product of two class functions or forming an
+  induced  class  function  or  a  conjugate  class  function then needs three
+  arguments  in  this  case;  this is particularly inconvenient in cases where
+  infix  operations  cannot be used because of the additional argument, as for
+  tensor products and induced class functions.[133X
+
+  [33X[0;0YSecond,  when one says that [21X[22Xχ[122X is a character of a group [22XG[122X[121X then this object [22Xχ[122X
+  carries  a  lot  of  information.  [22Xχ[122X  has  certain  properties such as being
+  irreducible  or  not.  Several  subgroups of [22XG[122X are related to [22Xχ[122X, such as the
+  kernel  and  the  centre  of  [22Xχ[122X.  Other  attributes  of  characters  are the
+  determinant  and the central character. This knowledge cannot be stored in a
+  plain list.[133X
+
+  [33X[0;0YFor  dealing  with  a  group  together  with  its characters, and maybe also
+  subgroups  and their characters, it is desirable that [5XGAP[105X keeps track of the
+  interpretation  of  characters.  On  the  other  hand,  for using characters
+  without  accessing  their  groups, such as characters of tables from the [5XGAP[105X
+  table  library,  dealing  just  with  values  lists  is often sufficient. In
+  particular,  if  one deals with incomplete character tables then it is often
+  necessary to specify the arguments explicitly, for example one has to choose
+  a fusion map or power map from a set of possibilities.[133X
+
+  [33X[0;0YThe  main idea behind class function objects is that a class function object
+  is  equal to its values list in the sense of [2X\=[102X ([14X31.11-1[114X), so class function
+  objects  can  be used wherever their values lists can be used, but there are
+  operations  for  class  function  objects  that do not work just with values
+  lists.  [5XGAP[105X library functions prefer to return class function objects rather
+  than  returning just values lists, for example [2XIrr[102X ([14X71.8-2[114X) lists consist of
+  class  function  objects,  and  [2XTrivialCharacter[102X  ([14X72.7-1[114X)  returns  a class
+  function object.[133X
+
+  [33X[0;0YHere is an [13Xexample[113X that shows both approaches. First we define some groups.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS4:= SymmetricGroup( 4 );;  SetName( S4, "S4" );[127X[104X
+    [4X[25Xgap>[125X [27XD8:= SylowSubgroup( S4, 2 );; SetName( D8, "D8" );[127X[104X
+  [4X[32X[104X
+
+  [33X[0;0YWe do some computations using the functions described later in this Chapter,
+  first with class function objects.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XirrS4:= Irr( S4 );;[127X[104X
+    [4X[25Xgap>[125X [27XirrD8:= Irr( D8 );;[127X[104X
+    [4X[25Xgap>[125X [27Xchi:= irrD8[4];[127X[104X
+    [4X[28XCharacter( CharacterTable( D8 ), [ 1, -1, 1, -1, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xchi * chi;[127X[104X
+    [4X[28XCharacter( CharacterTable( D8 ), [ 1, 1, 1, 1, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xind:= chi ^ S4;[127X[104X
+    [4X[28XCharacter( CharacterTable( S4 ), [ 3, -1, -1, 0, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27XList( irrS4, x -> ScalarProduct( x, ind ) );[127X[104X
+    [4X[28X[ 0, 1, 0, 0, 0 ][128X[104X
+    [4X[25Xgap>[125X [27Xdet:= Determinant( ind );[127X[104X
+    [4X[28XCharacter( CharacterTable( S4 ), [ 1, 1, 1, 1, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xcent:= CentralCharacter( ind );[127X[104X
+    [4X[28XClassFunction( CharacterTable( S4 ), [ 1, -2, -1, 0, 2 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xrest:= Restricted( cent, D8 );[127X[104X
+    [4X[28XClassFunction( CharacterTable( D8 ), [ 1, -2, -1, -1, 2 ] )[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YNow  we repeat these calculations with plain lists of character values. Here
+  we need the character tables in some places.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XtS4:= CharacterTable( S4 );;[127X[104X
+    [4X[25Xgap>[125X [27XtD8:= CharacterTable( D8 );;[127X[104X
+    [4X[25Xgap>[125X [27Xchi:= ValuesOfClassFunction( irrD8[4] );[127X[104X
+    [4X[28X[ 1, -1, 1, -1, 1 ][128X[104X
+    [4X[25Xgap>[125X [27XTensored( [ chi ], [ chi ] )[1];[127X[104X
+    [4X[28X[ 1, 1, 1, 1, 1 ][128X[104X
+    [4X[25Xgap>[125X [27Xind:= InducedClassFunction( tD8, chi, tS4 );[127X[104X
+    [4X[28XClassFunction( CharacterTable( S4 ), [ 3, -1, -1, 0, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27XList( Irr( tS4 ), x -> ScalarProduct( tS4, x, ind ) );[127X[104X
+    [4X[28X[ 0, 1, 0, 0, 0 ][128X[104X
+    [4X[25Xgap>[125X [27Xdet:= DeterminantOfCharacter( tS4, ind );[127X[104X
+    [4X[28XClassFunction( CharacterTable( S4 ), [ 1, 1, 1, 1, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xcent:= CentralCharacter( tS4, ind );[127X[104X
+    [4X[28XClassFunction( CharacterTable( S4 ), [ 1, -2, -1, 0, 2 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xrest:= Restricted( tS4, cent, tD8 );[127X[104X
+    [4X[28XClassFunction( CharacterTable( D8 ), [ 1, -2, -1, -1, 2 ] )[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YIf  one  deals with character tables from the [5XGAP[105X table library then one has
+  no  access  to their groups, but often the tables provide enough information
+  for  computing  induced or restricted class functions, symmetrizations etc.,
+  because  the  relevant  class  fusions  and  power  maps are often stored on
+  library  tables.  In these cases it is possible to use the tables instead of
+  the   groups  as  arguments.  (If  necessary  information  is  not  uniquely
+  determined by the tables then an error is signalled.)[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xs5 := CharacterTable( "A5.2" );; irrs5 := Irr( s5  );;[127X[104X
+    [4X[25Xgap>[125X [27Xm11:= CharacterTable( "M11"  );; irrm11:= Irr( m11 );;[127X[104X
+    [4X[25Xgap>[125X [27Xchi:= TrivialCharacter( s5 );[127X[104X
+    [4X[28XCharacter( CharacterTable( "A5.2" ), [ 1, 1, 1, 1, 1, 1, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xchi ^ m11;[127X[104X
+    [4X[28XCharacter( CharacterTable( "M11" ), [ 66, 10, 3, 2, 1, 1, 0, 0, 0, 0[128X[104X
+    [4X[28X ] )[128X[104X
+    [4X[25Xgap>[125X [27XDeterminant( irrs5[4] );[127X[104X
+    [4X[28XCharacter( CharacterTable( "A5.2" ), [ 1, 1, 1, 1, -1, -1, -1 ] )[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YFunctions   that   compute  [13Xnormal[113X  subgroups  related  to  characters  have
+  counterparts  that return the list of class positions corresponding to these
+  groups.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XClassPositionsOfKernel( irrs5[2] );[127X[104X
+    [4X[28X[ 1, 2, 3, 4 ][128X[104X
+    [4X[25Xgap>[125X [27XClassPositionsOfCentre( irrs5[2] );[127X[104X
+    [4X[28X[ 1, 2, 3, 4, 5, 6, 7 ][128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YNon-normal  subgroups  cannot  be described this way, so for example inertia
+  subgroups  (see [2XInertiaSubgroup[102X  ([14X72.8-13[114X))  can  in general not be computed
+  from character tables without access to their groups.[133X
+
+  [1X72.1-1 IsClassFunction[101X
+
+  [33X[1;0Y[29X[2XIsClassFunction[102X( [3Xobj[103X ) [32X Category[133X
+
+  [33X[0;0YA [13Xclass function[113X (in characteristic [22Xp[122X) of a finite group [22XG[122X is a map from the
+  set  of  ([22Xp[122X-regular)  elements  in  [22XG[122X  to  the  field of cyclotomics that is
+  constant on conjugacy classes of [22XG[122X.[133X
+
+  [33X[0;0YEach class function in [5XGAP[105X is represented by an [13Ximmutable list[113X, where at the
+  [22Xi[122X-th  position  the value on the [22Xi[122X-th conjugacy class of the character table
+  of [22XG[122X is stored. The ordering of the conjugacy classes is the one used in the
+  underlying  character  table. Note that if the character table has access to
+  its underlying group then the ordering of conjugacy classes in the group and
+  in  the  character table may differ (see [14X71.6[114X); class functions always refer
+  to the ordering of classes in the character table.[133X
+
+  [33X[0;0Y[13XClass  function  objects[113X  in  [5XGAP[105X  are  not just plain lists, they store the
+  character   table   of   the   group   [22XG[122X   as   value   of   the   attribute
+  [2XUnderlyingCharacterTable[102X ([14X72.2-1[114X). The group [22XG[122X itself is accessible only via
+  the  character  table and thus only if the character table stores its group,
+  as  value  of the attribute [2XUnderlyingGroup[102X ([14X71.6-1[114X). The reason for this is
+  that many computations with class functions are possible without using their
+  groups, for example class functions of character tables in the [5XGAP[105X character
+  table library do in general not have access to their underlying groups.[133X
+
+  [33X[0;0YThere  are  (at  least)  two  reasons  why  class  functions  in [5XGAP[105X are [13Xnot[113X
+  implemented  as  mappings.  First, we want to distinguish class functions in
+  different  characteristics,  for  example to be able to define the Frobenius
+  character  of  a  given  Brauer  character;  viewed as mappings, the trivial
+  characters  in  all  characteristics  coprime  to  the order of [22XG[122X are equal.
+  Second,  the product of two class functions shall be again a class function,
+  whereas the product of general mappings is defined as composition.[133X
+
+  [33X[0;0YA further argument is that the typical operations for mappings such as [2XImage[102X
+  ([14X32.4-6[114X) and [2XPreImage[102X ([14X32.5-6[114X) play no important role for class functions.[133X
+
+
+  [1X72.2 [33X[0;0YBasic Operations for Class Functions[133X[101X
+
+  [33X[0;0YBasic  operations for class functions are [2XUnderlyingCharacterTable[102X ([14X72.2-1[114X),
+  [2XValuesOfClassFunction[102X   ([14X72.2-2[114X),   and   the  basic  operations  for  lists
+  (see [14X21.2[114X).[133X
+
+  [1X72.2-1 UnderlyingCharacterTable[101X
+
+  [33X[1;0Y[29X[2XUnderlyingCharacterTable[102X( [3Xpsi[103X ) [32X attribute[133X
+
+  [33X[0;0YFor  a class function [3Xpsi[103X of a group [22XG[122X the character table of [22XG[122X is stored as
+  value  of  [2XUnderlyingCharacterTable[102X. The ordering of entries in the list [3Xpsi[103X
+  (see [2XValuesOfClassFunction[102X  ([14X72.2-2[114X))  refers  to  the ordering of conjugacy
+  classes in this character table.[133X
+
+  [33X[0;0YIf  [3Xpsi[103X is an ordinary class function then the underlying character table is
+  the  ordinary character table of [22XG[122X (see [2XOrdinaryCharacterTable[102X ([14X71.8-4[114X)), if
+  [3Xpsi[103X  is  a  class  function  in  characteristic  [22Xp  ≠  0[122X then the underlying
+  character  table  is  the  [22Xp[122X-modular  Brauer  table  of  [22XG[122X  (see [2XBrauerTable[102X
+  ([14X71.3-2[114X)).  So the underlying characteristic of [3Xpsi[103X can be read off from the
+  underlying character table.[133X
+
+  [1X72.2-2 ValuesOfClassFunction[101X
+
+  [33X[1;0Y[29X[2XValuesOfClassFunction[102X( [3Xpsi[103X ) [32X attribute[133X
+
+  [33X[0;0Yis  the  list  of values of the class function [3Xpsi[103X, the [22Xi[122X-th entry being the
+  value  on  the  [22Xi[122X-th  conjugacy  class  of  the  underlying  character table
+  (see [2XUnderlyingCharacterTable[102X ([14X72.2-1[114X)).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:= SymmetricGroup( 4 );[127X[104X
+    [4X[28XSym( [ 1 .. 4 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xpsi:= TrivialCharacter( g );[127X[104X
+    [4X[28XCharacter( CharacterTable( Sym( [ 1 .. 4 ] ) ), [ 1, 1, 1, 1, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27XUnderlyingCharacterTable( psi );[127X[104X
+    [4X[28XCharacterTable( Sym( [ 1 .. 4 ] ) )[128X[104X
+    [4X[25Xgap>[125X [27XValuesOfClassFunction( psi );[127X[104X
+    [4X[28X[ 1, 1, 1, 1, 1 ][128X[104X
+    [4X[25Xgap>[125X [27XIsList( psi );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xpsi[1];[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XLength( psi );[127X[104X
+    [4X[28X5[128X[104X
+    [4X[25Xgap>[125X [27XIsBound( psi[6] );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XConcatenation( psi, [ 2, 3 ] );[127X[104X
+    [4X[28X[ 1, 1, 1, 1, 1, 2, 3 ][128X[104X
+  [4X[32X[104X
+
+
+  [1X72.3 [33X[0;0YComparison of Class Functions[133X[101X
+
+  [33X[0;0YWith  respect  to  [2X\=[102X  ([14X31.11-1[114X)  and  [2X\<[102X  ([14X31.11-1[114X), class functions behave
+  equally  to  their  lists of values (see [2XValuesOfClassFunction[102X ([14X72.2-2[114X)). So
+  two  class  functions  are  equal  if  and only if their lists of values are
+  equal,  no  matter  whether  they  are class functions of the same character
+  table,  of  the  same  group  but  w.r.t. different  class  ordering,  or of
+  different groups.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xgrps:= Filtered( AllSmallGroups( 8 ), g -> not IsAbelian( g ) );[127X[104X
+    [4X[28X[ <pc group of size 8 with 3 generators>,[128X[104X
+    [4X[28X  <pc group of size 8 with 3 generators> ][128X[104X
+    [4X[25Xgap>[125X [27Xt1:= CharacterTable( grps[1] );  SetName( t1, "t1" );[127X[104X
+    [4X[28XCharacterTable( <pc group of size 8 with 3 generators> )[128X[104X
+    [4X[25Xgap>[125X [27Xt2:= CharacterTable( grps[2] );  SetName( t2, "t2" );[127X[104X
+    [4X[28XCharacterTable( <pc group of size 8 with 3 generators> )[128X[104X
+    [4X[25Xgap>[125X [27XCharacterDegrees( t1 );[127X[104X
+    [4X[28X[ [ 1, 4 ], [ 2, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xirr1:= Irr( grps[1] );;[127X[104X
+    [4X[25Xgap>[125X [27Xirr2:= Irr( grps[2] );;[127X[104X
+    [4X[25Xgap>[125X [27Xirr1 = irr2;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xirr1[1];[127X[104X
+    [4X[28XCharacter( t1, [ 1, 1, 1, 1, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xirr1[5];[127X[104X
+    [4X[28XCharacter( t1, [ 2, 0, 0, -2, 0 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xirr2[1];[127X[104X
+    [4X[28XCharacter( t2, [ 1, 1, 1, 1, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27XIsSSortedList( irr1 );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xirr1[1] < irr1[2];  # the triv. character has no '-1'[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xirr1[2] < irr1[5];[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+
+
+  [1X72.4 [33X[0;0YArithmetic Operations for Class Functions[133X[101X
+
+  [33X[0;0YClass  functions  are  [13Xrow vectors[113X of cyclotomics. The [13Xadditive[113X behaviour of
+  class  functions  is  defined such that they are equal to the plain lists of
+  class function values except that the results are represented again as class
+  functions  whenever this makes sense. The [13Xmultiplicative[113X behaviour, however,
+  is different. This is motivated by the fact that the tensor product of class
+  functions  is  a more interesting operation than the vector product of plain
+  lists. (Another candidate for a multiplication of compatible class functions
+  would  have  been  the  inner product, which is implemented via the function
+  [2XScalarProduct[102X  ([14X72.8-5[114X).  In  terms  of  filters,  the  arithmetic  of class
+  functions  is  based on the decision that they lie in [2XIsGeneralizedRowVector[102X
+  ([14X21.12-1[114X),   with  additive  nesting  depth  [22X1[122X,  but  they  do  [13Xnot[113X  lie  in
+  [2XIsMultiplicativeGeneralizedRowVector[102X ([14X21.12-2[114X).[133X
+
+  [33X[0;0YMore specifically, the scalar multiple of a class function with a cyclotomic
+  is  a  class function, and the sum and the difference of two class functions
+  of   the   same  underlying  character  table  (see [2XUnderlyingCharacterTable[102X
+  ([14X72.2-1[114X))  are  again  class  functions  of  this  table.  The  sum  and the
+  difference  of  a class function and a list that is [13Xnot[113X a class function are
+  plain lists, as well as the sum and the difference of two class functions of
+  different character tables.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:= SymmetricGroup( 4 );;  tbl:= CharacterTable( g );;[127X[104X
+    [4X[25Xgap>[125X [27XSetName( tbl, "S4" );  irr:= Irr( g );[127X[104X
+    [4X[28X[ Character( S4, [ 1, -1, 1, 1, -1 ] ),[128X[104X
+    [4X[28X  Character( S4, [ 3, -1, -1, 0, 1 ] ),[128X[104X
+    [4X[28X  Character( S4, [ 2, 0, 2, -1, 0 ] ),[128X[104X
+    [4X[28X  Character( S4, [ 3, 1, -1, 0, -1 ] ),[128X[104X
+    [4X[28X  Character( S4, [ 1, 1, 1, 1, 1 ] ) ][128X[104X
+    [4X[25Xgap>[125X [27X2 * irr[5];[127X[104X
+    [4X[28XCharacter( S4, [ 2, 2, 2, 2, 2 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xirr[1] / 7;[127X[104X
+    [4X[28XClassFunction( S4, [ 1/7, -1/7, 1/7, 1/7, -1/7 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xlincomb:= irr[3] + irr[1] - irr[5];[127X[104X
+    [4X[28XVirtualCharacter( S4, [ 2, -2, 2, -1, -2 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xlincomb:= lincomb + 2 * irr[5];[127X[104X
+    [4X[28XVirtualCharacter( S4, [ 4, 0, 4, 1, 0 ] )[128X[104X
+    [4X[25Xgap>[125X [27XIsCharacter( lincomb );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xlincomb;[127X[104X
+    [4X[28XCharacter( S4, [ 4, 0, 4, 1, 0 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xirr[5] + 2;[127X[104X
+    [4X[28X[ 3, 3, 3, 3, 3 ][128X[104X
+    [4X[25Xgap>[125X [27Xirr[5] + [ 1, 2, 3, 4, 5 ];[127X[104X
+    [4X[28X[ 2, 3, 4, 5, 6 ][128X[104X
+    [4X[25Xgap>[125X [27Xzero:= 0 * irr[1];[127X[104X
+    [4X[28XVirtualCharacter( S4, [ 0, 0, 0, 0, 0 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xzero + Z(3);[127X[104X
+    [4X[28X[ Z(3), Z(3), Z(3), Z(3), Z(3) ][128X[104X
+    [4X[25Xgap>[125X [27Xirr[5] + TrivialCharacter( DihedralGroup( 8 ) );[127X[104X
+    [4X[28X[ 2, 2, 2, 2, 2 ][128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YThe product of two class functions of the same character table is the tensor
+  product  (pointwise  product)  of these class functions. Thus the set of all
+  class  functions  of  a  fixed  group  forms  a ring, and for any field [22XF[122X of
+  cyclotomics, the [22XF[122X-span of a given set of class functions forms an algebra.[133X
+
+  [33X[0;0YThe  product of two class functions of [13Xdifferent[113X tables and the product of a
+  class  function  and a list that is [13Xnot[113X a class function are not defined, an
+  error  is  signalled  in  these  cases.  Note  that  in  this respect, class
+  functions  behave differently from their values lists, for which the product
+  is defined as the standard scalar product.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtens:= irr[3] * irr[4];[127X[104X
+    [4X[28XCharacter( S4, [ 6, 0, -2, 0, 0 ] )[128X[104X
+    [4X[25Xgap>[125X [27XValuesOfClassFunction( irr[3] ) * ValuesOfClassFunction( irr[4] );[127X[104X
+    [4X[28X4[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YClass  functions  without zero values are invertible, the [13Xinverse[113X is defined
+  pointwise.  As a consequence, for example groups of linear characters can be
+  formed.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtens / irr[1];[127X[104X
+    [4X[28XCharacter( S4, [ 6, 0, -2, 0, 0 ] )[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YOther  (somewhat  strange)  implications  of  the  definition  of arithmetic
+  operations  for  class  functions,  together  with the general rules of list
+  arithmetic  (see [14X21.11[114X),  apply  to  the case of products involving [13Xlists[113X of
+  class  functions.  No  inverse  of  the  list of irreducible characters as a
+  matrix  is  defined; if one is interested in the inverse matrix then one can
+  compute it from the matrix of class function values.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XInverse( List( irr, ValuesOfClassFunction ) );[127X[104X
+    [4X[28X[ [ 1/24, 1/8, 1/12, 1/8, 1/24 ], [ -1/4, -1/4, 0, 1/4, 1/4 ],[128X[104X
+    [4X[28X  [ 1/8, -1/8, 1/4, -1/8, 1/8 ], [ 1/3, 0, -1/3, 0, 1/3 ],[128X[104X
+    [4X[28X  [ -1/4, 1/4, 0, -1/4, 1/4 ] ][128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YAlso the product of a class function with a list of class functions is [13Xnot[113X a
+  vector-matrix product but the list of pointwise products.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xirr[1] * irr{ [ 1 .. 3 ] };[127X[104X
+    [4X[28X[ Character( S4, [ 1, 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X  Character( S4, [ 3, 1, -1, 0, -1 ] ),[128X[104X
+    [4X[28X  Character( S4, [ 2, 0, 2, -1, 0 ] ) ][128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YAnd  the  product  of two lists of class functions is [13Xnot[113X the matrix product
+  but the sum of the pointwise products.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xirr * irr;[127X[104X
+    [4X[28XCharacter( S4, [ 24, 4, 8, 3, 4 ] )[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YThe [13Xpowering[113X operator [2X\^[102X ([14X31.12-1[114X) has several meanings for class functions.
+  The power of a class function by a nonnegative integer is clearly the tensor
+  power.  The  power  of  a  class  function by an element that normalizes the
+  underlying  group  or  by  a  Galois  automorphism  is  the  conjugate class
+  function.  (As  a consequence, the application of the permutation induced by
+  such  an  action  cannot  be  denoted  by  [2X\^[102X ([14X31.12-1[114X); instead one can use
+  [2XPermuted[102X  ([14X21.20-17[114X).)  The  power  of  a  class  function  by  a group or a
+  character  table  is  the  induced  class function (see [2XInducedClassFunction[102X
+  ([14X72.9-3[114X)).  The  power  of  a group element by a class function is the class
+  function value at (the conjugacy class containing) this element.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xirr[3] ^ 3;[127X[104X
+    [4X[28XCharacter( S4, [ 8, 0, 8, -1, 0 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xlin:= LinearCharacters( DerivedSubgroup( g ) );[127X[104X
+    [4X[28X[ Character( CharacterTable( Alt( [ 1 .. 4 ] ) ), [ 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( Alt( [ 1 .. 4 ] ) ),[128X[104X
+    [4X[28X  [ 1, 1, E(3), E(3)^2 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( Alt( [ 1 .. 4 ] ) ),[128X[104X
+    [4X[28X  [ 1, 1, E(3)^2, E(3) ] ) ][128X[104X
+    [4X[25Xgap>[125X [27XList( lin, chi -> chi ^ (1,2) );[127X[104X
+    [4X[28X[ Character( CharacterTable( Alt( [ 1 .. 4 ] ) ), [ 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( Alt( [ 1 .. 4 ] ) ),[128X[104X
+    [4X[28X  [ 1, 1, E(3)^2, E(3) ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( Alt( [ 1 .. 4 ] ) ),[128X[104X
+    [4X[28X  [ 1, 1, E(3), E(3)^2 ] ) ][128X[104X
+    [4X[25Xgap>[125X [27XOrbit( GaloisGroup( CF(3) ), lin[2] );[127X[104X
+    [4X[28X[ Character( CharacterTable( Alt( [ 1 .. 4 ] ) ),[128X[104X
+    [4X[28X  [ 1, 1, E(3), E(3)^2 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( Alt( [ 1 .. 4 ] ) ),[128X[104X
+    [4X[28X  [ 1, 1, E(3)^2, E(3) ] ) ][128X[104X
+    [4X[25Xgap>[125X [27Xlin[1]^g;[127X[104X
+    [4X[28XCharacter( S4, [ 2, 0, 2, 2, 0 ] )[128X[104X
+    [4X[25Xgap>[125X [27X(1,2,3)^lin[2];[127X[104X
+    [4X[28XE(3)[128X[104X
+  [4X[32X[104X
+
+  [1X72.4-1 Characteristic[101X
+
+  [33X[1;0Y[29X[2XCharacteristic[102X( [3Xchi[103X ) [32X attribute[133X
+
+  [33X[0;0YThe  [13Xcharacteristic[113X  of  class  functions  is  zero,  as  for  all  list  of
+  cyclotomics.  For  class  functions  of a [22Xp[122X-modular character table, such as
+  Brauer  characters,  the  prime  [22Xp[122X  is given by the [2XUnderlyingCharacteristic[102X
+  ([14X71.9-5[114X) value of the character table.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XCharacteristic( irr[1] );[127X[104X
+    [4X[28X0[128X[104X
+    [4X[25Xgap>[125X [27Xirrmod2:= Irr( g, 2 );[127X[104X
+    [4X[28X[ Character( BrauerTable( Sym( [ 1 .. 4 ] ), 2 ), [ 1, 1 ] ),[128X[104X
+    [4X[28X  Character( BrauerTable( Sym( [ 1 .. 4 ] ), 2 ), [ 2, -1 ] ) ][128X[104X
+    [4X[25Xgap>[125X [27XCharacteristic( irrmod2[1] );[127X[104X
+    [4X[28X0[128X[104X
+    [4X[25Xgap>[125X [27XUnderlyingCharacteristic( UnderlyingCharacterTable( irrmod2[1] ) );[127X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+
+  [1X72.4-2 ComplexConjugate[101X
+
+  [33X[1;0Y[29X[2XComplexConjugate[102X( [3Xchi[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XGaloisCyc[102X( [3Xchi[103X, [3Xk[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XPermuted[102X( [3Xchi[103X, [3Xpi[103X ) [32X method[133X
+
+  [33X[0;0YThe  operations  [2XComplexConjugate[102X,  [2XGaloisCyc[102X,  and  [2XPermuted[102X return a class
+  function  when  they are called with a class function; The complex conjugate
+  of a class function that is known to be a (virtual) character is again known
+  to  be  a (virtual) character, and applying an arbitrary Galois automorphism
+  to an ordinary (virtual) character yields a (virtual) character.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XComplexConjugate( lin[2] );[127X[104X
+    [4X[28XCharacter( CharacterTable( Alt( [ 1 .. 4 ] ) ),[128X[104X
+    [4X[28X [ 1, 1, E(3)^2, E(3) ] )[128X[104X
+    [4X[25Xgap>[125X [27XGaloisCyc( lin[2], 5 );[127X[104X
+    [4X[28XCharacter( CharacterTable( Alt( [ 1 .. 4 ] ) ),[128X[104X
+    [4X[28X [ 1, 1, E(3)^2, E(3) ] )[128X[104X
+    [4X[25Xgap>[125X [27XPermuted( lin[2], (2,3,4) );[127X[104X
+    [4X[28XClassFunction( CharacterTable( Alt( [ 1 .. 4 ] ) ),[128X[104X
+    [4X[28X [ 1, E(3)^2, 1, E(3) ] )[128X[104X
+  [4X[32X[104X
+
+  [1X72.4-3 Order[101X
+
+  [33X[1;0Y[29X[2XOrder[102X( [3Xchi[103X ) [32X attribute[133X
+
+  [33X[0;0YBy  definition of [2XOrder[102X ([14X31.10-10[114X) for arbitrary monoid elements, the return
+  value  of [2XOrder[102X ([14X31.10-10[114X) for a character must be its multiplicative order.
+  The   [13Xdeterminantal   order[113X   (see [2XDeterminantOfCharacter[102X  ([14X72.8-18[114X))  of  a
+  character [3Xchi[103X can be computed as [10XOrder( Determinant( [3Xchi[103X[10X ) )[110X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xdet:= Determinant( irr[3] );[127X[104X
+    [4X[28XCharacter( S4, [ 1, -1, 1, 1, -1 ] )[128X[104X
+    [4X[25Xgap>[125X [27XOrder( det );[127X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+
+
+  [1X72.5 [33X[0;0YPrinting Class Functions[133X[101X
+
+  [1X72.5-1 ViewObj[101X
+
+  [33X[1;0Y[29X[2XViewObj[102X( [3Xchi[103X ) [32X method[133X
+
+  [33X[0;0YThe  default  [2XViewObj[102X  ([14X6.3-5[114X)  methods for class functions print one of the
+  strings   [10X"ClassFunction"[110X,  [10X"VirtualCharacter"[110X,  [10X"Character"[110X  (depending  on
+  whether  the class function is known to be a character or virtual character,
+  see [2XIsCharacter[102X  ([14X72.8-1[114X),  [2XIsVirtualCharacter[102X  ([14X72.8-2[114X)),  followed  by the
+  [2XViewObj[102X  ([14X6.3-5[114X)  output for the underlying character table (see [14X71.13[114X), and
+  the  list  of  values.  The  table is chosen (and not the group) in order to
+  distinguish   class   functions   of   different  underlying  characteristic
+  (see [2XUnderlyingCharacteristic[102X ([14X71.9-5[114X)).[133X
+
+  [1X72.5-2 PrintObj[101X
+
+  [33X[1;0Y[29X[2XPrintObj[102X( [3Xchi[103X ) [32X method[133X
+
+  [33X[0;0YThe  default  [2XPrintObj[102X  ([14X6.3-5[114X)  method for class functions does the same as
+  [2XViewObj[102X ([14X6.3-5[114X), except that the character table is [2XPrint[102X ([14X6.3-4[114X)-ed instead
+  of [2XView[102X ([14X6.3-3[114X)-ed.[133X
+
+  [33X[0;0Y[13XNote[113X  that  if  a  class  function  is  shown  only  with one of the strings
+  [10X"ClassFunction"[110X,  [10X"VirtualCharacter"[110X,  it  may still be that it is in fact a
+  character;  just  this was not known at the time when the class function was
+  printed.[133X
+
+  [33X[0;0YIn  order  to  reduce the space that is needed to print a class function, it
+  may be useful to give a name (see [2XName[102X ([14X12.8-2[114X)) to the underlying character
+  table.[133X
+
+  [1X72.5-3 Display[101X
+
+  [33X[1;0Y[29X[2XDisplay[102X( [3Xchi[103X ) [32X method[133X
+
+  [33X[0;0YThe  default  [2XDisplay[102X  ([14X6.3-6[114X) method for a class function [3Xchi[103X calls [2XDisplay[102X
+  ([14X6.3-6[114X) for its underlying character table (see [14X71.13[114X), with [3Xchi[103X as the only
+  entry in the [10Xchars[110X list of the options record.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xchi:= TrivialCharacter( CharacterTable( "A5" ) );[127X[104X
+    [4X[28XCharacter( CharacterTable( "A5" ), [ 1, 1, 1, 1, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27XDisplay( chi );[127X[104X
+    [4X[28XA5[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X     2  2  2  .  .  .[128X[104X
+    [4X[28X     3  1  .  1  .  .[128X[104X
+    [4X[28X     5  1  .  .  1  1[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X       1a 2a 3a 5a 5b[128X[104X
+    [4X[28X    2P 1a 1a 3a 5b 5a[128X[104X
+    [4X[28X    3P 1a 2a 1a 5b 5a[128X[104X
+    [4X[28X    5P 1a 2a 3a 1a 1a[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XY.1     1  1  1  1  1[128X[104X
+  [4X[32X[104X
+
+
+  [1X72.6 [33X[0;0YCreating Class Functions from Values Lists[133X[101X
+
+  [1X72.6-1 ClassFunction[101X
+
+  [33X[1;0Y[29X[2XClassFunction[102X( [3Xtbl[103X, [3Xvalues[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XClassFunction[102X( [3XG[103X, [3Xvalues[103X ) [32X operation[133X
+
+  [33X[0;0YIn the first form, [2XClassFunction[102X returns the class function of the character
+  table [3Xtbl[103X with values given by the list [3Xvalues[103X of cyclotomics. In the second
+  form,  [3XG[103X  must  be a group, and the class function of its ordinary character
+  table is returned.[133X
+
+  [33X[0;0YNote that [3Xtbl[103X determines the underlying characteristic of the returned class
+  function (see [2XUnderlyingCharacteristic[102X ([14X71.9-5[114X)).[133X
+
+  [1X72.6-2 VirtualCharacter[101X
+
+  [33X[1;0Y[29X[2XVirtualCharacter[102X( [3Xtbl[103X, [3Xvalues[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XVirtualCharacter[102X( [3XG[103X, [3Xvalues[103X ) [32X operation[133X
+
+  [33X[0;0Y[2XVirtualCharacter[102X   returns  the  virtual  character  (see [2XIsVirtualCharacter[102X
+  ([14X72.8-2[114X))  of  the  character  table  [3Xtbl[103X or the group [3XG[103X, respectively, with
+  values given by the list [3Xvalues[103X.[133X
+
+  [33X[0;0YIt  is  [13Xnot[113X  checked  whether  the  given  values  really describe a virtual
+  character.[133X
+
+  [1X72.6-3 Character[101X
+
+  [33X[1;0Y[29X[2XCharacter[102X( [3Xtbl[103X, [3Xvalues[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XCharacter[102X( [3XG[103X, [3Xvalues[103X ) [32X operation[133X
+
+  [33X[0;0Y[2XCharacter[102X  returns the character (see [2XIsCharacter[102X ([14X72.8-1[114X)) of the character
+  table  [3Xtbl[103X  or  the  group  [3XG[103X,  respectively,  with values given by the list
+  [3Xvalues[103X.[133X
+
+  [33X[0;0YIt is [13Xnot[113X checked whether the given values really describe a character.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:= DihedralGroup( 8 );  tbl:= CharacterTable( g );[127X[104X
+    [4X[28X<pc group of size 8 with 3 generators>[128X[104X
+    [4X[28XCharacterTable( <pc group of size 8 with 3 generators> )[128X[104X
+    [4X[25Xgap>[125X [27XSetName( tbl, "D8" );[127X[104X
+    [4X[25Xgap>[125X [27Xphi:= ClassFunction( g, [ 1, -1, 0, 2, -2 ] );[127X[104X
+    [4X[28XClassFunction( D8, [ 1, -1, 0, 2, -2 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xpsi:= ClassFunction( tbl,[127X[104X
+    [4X[25X>[125X [27X             List( Irr( g ), chi -> ScalarProduct( chi, phi ) ) );[127X[104X
+    [4X[28XClassFunction( D8, [ -3/8, 9/8, 5/8, 1/8, -1/4 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xchi:= VirtualCharacter( g, [ 0, 0, 8, 0, 0 ] );[127X[104X
+    [4X[28XVirtualCharacter( D8, [ 0, 0, 8, 0, 0 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xreg:= Character( tbl, [ 8, 0, 0, 0, 0 ] );[127X[104X
+    [4X[28XCharacter( D8, [ 8, 0, 0, 0, 0 ] )[128X[104X
+  [4X[32X[104X
+
+  [1X72.6-4 ClassFunctionSameType[101X
+
+  [33X[1;0Y[29X[2XClassFunctionSameType[102X( [3Xtbl[103X, [3Xchi[103X, [3Xvalues[103X ) [32X function[133X
+
+  [33X[0;0YLet [3Xtbl[103X be a character table, [3Xchi[103X a class function object ([13Xnot[113X necessarily a
+  class    function   of   [3Xtbl[103X),   and   [3Xvalues[103X   a   list   of   cyclotomics.
+  [2XClassFunctionSameType[102X  returns  the class function [22Xψ[122X of [3Xtbl[103X with values list
+  [3Xvalues[103X, constructed with [2XClassFunction[102X ([14X72.6-1[114X).[133X
+
+  [33X[0;0YIf  [3Xchi[103X  is  known  to be a (virtual) character then [22Xψ[122X is also known to be a
+  (virtual) character.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xh:= Centre( g );;[127X[104X
+    [4X[25Xgap>[125X [27Xcentbl:= CharacterTable( h );;  SetName( centbl, "C2" );[127X[104X
+    [4X[25Xgap>[125X [27XClassFunctionSameType( centbl, phi, [ 1, 1 ] );[127X[104X
+    [4X[28XClassFunction( C2, [ 1, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27XClassFunctionSameType( centbl, chi, [ 1, 1 ] );[127X[104X
+    [4X[28XVirtualCharacter( C2, [ 1, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27XClassFunctionSameType( centbl, reg, [ 1, 1 ] );[127X[104X
+    [4X[28XCharacter( C2, [ 1, 1 ] )[128X[104X
+  [4X[32X[104X
+
+
+  [1X72.7 [33X[0;0YCreating Class Functions using Groups[133X[101X
+
+
+  [1X72.7-1 [33X[0;0YTrivialCharacter[133X[101X
+
+  [33X[1;0Y[29X[2XTrivialCharacter[102X( [3Xtbl[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XTrivialCharacter[102X( [3XG[103X ) [32X attribute[133X
+
+  [33X[0;0Yis  the  [13Xtrivial  character[113X  of  the  group  [3XG[103X  or  its character table [3Xtbl[103X,
+  respectively.  This  is  the  class  function with value equal to [22X1[122X for each
+  class.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTrivialCharacter( CharacterTable( "A5" ) );[127X[104X
+    [4X[28XCharacter( CharacterTable( "A5" ), [ 1, 1, 1, 1, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27XTrivialCharacter( SymmetricGroup( 3 ) );[127X[104X
+    [4X[28XCharacter( CharacterTable( Sym( [ 1 .. 3 ] ) ), [ 1, 1, 1 ] )[128X[104X
+  [4X[32X[104X
+
+  [1X72.7-2 NaturalCharacter[101X
+
+  [33X[1;0Y[29X[2XNaturalCharacter[102X( [3XG[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XNaturalCharacter[102X( [3Xhom[103X ) [32X attribute[133X
+
+  [33X[0;0YIf  the  argument is a permutation group [3XG[103X then [2XNaturalCharacter[102X returns the
+  (ordinary)  character  of the natural permutation representation of [3XG[103X on the
+  set  of  moved points (see [2XMovedPoints[102X ([14X42.3-3[114X)), that is, the value on each
+  class  is the number of points among the moved points of [3XG[103X that are fixed by
+  any permutation in that class.[133X
+
+  [33X[0;0YIf   the   argument  is  a  matrix  group  [3XG[103X  in  characteristic  zero  then
+  [2XNaturalCharacter[102X  returns  the  (ordinary)  character  of the natural matrix
+  representation  of  [3XG[103X,  that is, the value on each class is the trace of any
+  matrix in that class.[133X
+
+  [33X[0;0YIf  the  argument  is  a group homomorphism [3Xhom[103X whose image is a permutation
+  group or a matrix group then [2XNaturalCharacter[102X returns the restriction of the
+  natural character of the image of [3Xhom[103X to the preimage of [3Xhom[103X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XNaturalCharacter( SymmetricGroup( 3 ) );[127X[104X
+    [4X[28XCharacter( CharacterTable( Sym( [ 1 .. 3 ] ) ), [ 3, 1, 0 ] )[128X[104X
+    [4X[25Xgap>[125X [27XNaturalCharacter( Group( [ [ 0, -1 ], [ 1, -1 ] ] ) );[127X[104X
+    [4X[28XCharacter( CharacterTable( Group([ [ [ 0, -1 ], [ 1, -1 ] ] ]) ),[128X[104X
+    [4X[28X[ 2, -1, -1 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xd8:= DihedralGroup( 8 );;  hom:= RegularActionHomomorphism( d8 );;[127X[104X
+    [4X[25Xgap>[125X [27XNaturalCharacter( hom );[127X[104X
+    [4X[28XCharacter( CharacterTable( <pc group of size 8 with 3 generators> ),[128X[104X
+    [4X[28X[ 8, 0, 0, 0, 0 ] )[128X[104X
+  [4X[32X[104X
+
+
+  [1X72.7-3 [33X[0;0YPermutationCharacter[133X[101X
+
+  [33X[1;0Y[29X[2XPermutationCharacter[102X( [3XG[103X, [3XD[103X, [3Xopr[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XPermutationCharacter[102X( [3XG[103X, [3XU[103X ) [32X operation[133X
+
+  [33X[0;0YCalled  with  a  group  [3XG[103X,  an  action domain or proper set [3XD[103X, and an action
+  function  [3Xopr[103X (see Chapter [14X41[114X), [2XPermutationCharacter[102X returns the [13Xpermutation
+  character[113X  of the action of [3XG[103X on [3XD[103X via [3Xopr[103X, that is, the value on each class
+  is  the  number  of  points  in [3XD[103X that are fixed by an element in this class
+  under the action [3Xopr[103X.[133X
+
+  [33X[0;0YIf   the   arguments   are   a   group   [3XG[103X  and  a  subgroup  [3XU[103X  of  [3XG[103X  then
+  [2XPermutationCharacter[102X returns the permutation character of the action of [3XG[103X on
+  the right cosets of [3XU[103X via right multiplication.[133X
+
+  [33X[0;0YTo  compute the permutation character of a [13Xtransitive permutation group[113X [3XG[103X on
+  the  cosets of a point stabilizer [3XU[103X, the attribute [2XNaturalCharacter[102X ([14X72.7-2[114X)
+  of [3XG[103X can be used instead of [10XPermutationCharacter( [3XG[103X[10X, [3XU[103X[10X )[110X.[133X
+
+  [33X[0;0YMore  facilities concerning permutation characters are the transitivity test
+  (see  Section [14X72.8[114X)  and  several  tools  for computing possible permutation
+  characters (see [14X72.13[114X, [14X72.14[114X).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPermutationCharacter( GL(2,2), AsSSortedList( GF(2)^2 ), OnRight );[127X[104X
+    [4X[28XCharacter( CharacterTable( SL(2,2) ), [ 4, 2, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xs3:= SymmetricGroup( 3 );;  a3:= DerivedSubgroup( s3 );;[127X[104X
+    [4X[25Xgap>[125X [27XPermutationCharacter( s3, a3 );[127X[104X
+    [4X[28XCharacter( CharacterTable( Sym( [ 1 .. 3 ] ) ), [ 2, 0, 2 ] )[128X[104X
+  [4X[32X[104X
+
+
+  [1X72.8 [33X[0;0YOperations for Class Functions[133X[101X
+
+  [33X[0;0YIn  the description of the following operations, the optional first argument
+  [3Xtbl[103X  is  needed  only  if  the  argument [3Xchi[103X is a plain list and not a class
+  function  object.  In  this  case, [3Xtbl[103X must always be the character table of
+  which [3Xchi[103X shall be regarded as a class function.[133X
+
+  [1X72.8-1 IsCharacter[101X
+
+  [33X[1;0Y[29X[2XIsCharacter[102X( [[3Xtbl[103X, ][3Xchi[103X ) [32X property[133X
+
+  [33X[0;0YAn [13Xordinary character[113X of a group [22XG[122X is a class function of [22XG[122X whose values are
+  the traces of a complex matrix representation of [22XG[122X.[133X
+
+  [33X[0;0YA  [13XBrauer  character[113X of [22XG[122X in characteristic [22Xp[122X is a class function of [22XG[122X whose
+  values  are  the  complex lifts of a matrix representation of [22XG[122X with image a
+  finite field of characteristic [22Xp[122X.[133X
+
+  [1X72.8-2 IsVirtualCharacter[101X
+
+  [33X[1;0Y[29X[2XIsVirtualCharacter[102X( [[3Xtbl[103X, ][3Xchi[103X ) [32X property[133X
+
+  [33X[0;0YA  [13Xvirtual  character[113X  is  a  class  function  that  can  be  written as the
+  difference of two proper characters (see [2XIsCharacter[102X ([14X72.8-1[114X)).[133X
+
+  [1X72.8-3 IsIrreducibleCharacter[101X
+
+  [33X[1;0Y[29X[2XIsIrreducibleCharacter[102X( [[3Xtbl[103X, ][3Xchi[103X ) [32X property[133X
+
+  [33X[0;0YA  character  is  [13Xirreducible[113X  if  it  cannot  be  written as the sum of two
+  characters.  For  ordinary  characters  this can be checked using the scalar
+  product   of   class  functions  (see [2XScalarProduct[102X  ([14X72.8-5[114X)).  For  Brauer
+  characters there is no generic method for checking irreducibility.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS4:= SymmetricGroup( 4 );;  SetName( S4, "S4" );[127X[104X
+    [4X[25Xgap>[125X [27Xpsi:= ClassFunction( S4, [ 1, 1, 1, -2, 1 ] );[127X[104X
+    [4X[28XClassFunction( CharacterTable( S4 ), [ 1, 1, 1, -2, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27XIsVirtualCharacter( psi );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsCharacter( psi );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xchi:= ClassFunction( S4, SizesCentralizers( CharacterTable( S4 ) ) );[127X[104X
+    [4X[28XClassFunction( CharacterTable( S4 ), [ 24, 4, 8, 3, 4 ] )[128X[104X
+    [4X[25Xgap>[125X [27XIsCharacter( chi );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsIrreducibleCharacter( chi );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsIrreducibleCharacter( TrivialCharacter( S4 ) );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+
+  [1X72.8-4 DegreeOfCharacter[101X
+
+  [33X[1;0Y[29X[2XDegreeOfCharacter[102X( [3Xchi[103X ) [32X attribute[133X
+
+  [33X[0;0Yis  the value of the character [3Xchi[103X on the identity element. This can also be
+  obtained as [3Xchi[103X[10X[1][110X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XList( Irr( S4 ), DegreeOfCharacter );[127X[104X
+    [4X[28X[ 1, 3, 2, 3, 1 ][128X[104X
+    [4X[25Xgap>[125X [27Xnat:= NaturalCharacter( S4 );[127X[104X
+    [4X[28XCharacter( CharacterTable( S4 ), [ 4, 2, 0, 1, 0 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xnat[1];[127X[104X
+    [4X[28X4[128X[104X
+  [4X[32X[104X
+
+  [1X72.8-5 ScalarProduct[101X
+
+  [33X[1;0Y[29X[2XScalarProduct[102X( [[3Xtbl[103X, ][3Xchi[103X, [3Xpsi[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ythe  scalar  product  of  the  class  functions [3Xchi[103X and [3Xpsi[103X, which
+            belong to the same character table [3Xtbl[103X.[133X
+
+  [33X[0;0YIf  [3Xchi[103X  and [3Xpsi[103X are class function objects, the argument [3Xtbl[103X is not needed,
+  but [3Xtbl[103X is necessary if at least one of [3Xchi[103X, [3Xpsi[103X is just a plain list.[133X
+
+  [33X[0;0YThe  scalar  product  of  two  [13Xordinary[113X class functions [22Xχ[122X, [22Xψ[122X of a group [22XG[122X is
+  defined as[133X
+
+  [33X[0;0Y[22X( ∑_{g ∈ G} χ(g) ψ(g^{-1}) ) / |G|[122X.[133X
+
+  [33X[0;0YFor two [13X[22Xp[122X-modular[113X class functions, the scalar product is defined as [22X( ∑_{g ∈
+  S} χ(g) ψ(g^{-1}) ) / |G|[122X, where [22XS[122X is the set of [22Xp[122X-regular elements in [22XG[122X.[133X
+
+  [1X72.8-6 MatScalarProducts[101X
+
+  [33X[1;0Y[29X[2XMatScalarProducts[102X( [[3Xtbl[103X, ][3Xlist[103X[, [3Xlist2[103X] ) [32X operation[133X
+
+  [33X[0;0YCalled  with  two lists [3Xlist[103X, [3Xlist2[103X of class functions of the same character
+  table  (which  may  be given as the argument [3Xtbl[103X), [2XMatScalarProducts[102X returns
+  the  matrix  of scalar products (see [2XScalarProduct[102X ([14X72.8-5[114X)) More precisely,
+  this matrix contains in the [22Xi[122X-th row the list of scalar products of [22X[3Xlist2[103X[i][122X
+  with the entries of [3Xlist[103X.[133X
+
+  [33X[0;0YIf  only  one  list [3Xlist[103X of class functions is given then a lower triangular
+  matrix  of  scalar  products is returned, containing (for [22Xj ≤ i[122X) in the [22Xi[122X-th
+  row in column [22Xj[122X the value [10XScalarProduct[110X[22X( [3Xtbl[103X, [3Xlist[103X[j], [3Xlist[103X[i] )[122X.[133X
+
+  [1X72.8-7 Norm[101X
+
+  [33X[1;0Y[29X[2XNorm[102X( [[3Xtbl[103X, ][3Xchi[103X ) [32X attribute[133X
+
+  [33X[0;0YFor an ordinary class function [3Xchi[103X of a group [22XG[122X we have [22X[3Xchi[103X = ∑_{χ ∈ Irr(G)}
+  a_χ  χ[122X,  with complex coefficients [22Xa_χ[122X. The [13Xnorm[113X of [3Xchi[103X is defined as [22X∑_{χ ∈
+  Irr(G)} a_χ overline{a_χ}[122X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtbl:= CharacterTable( "A5" );;[127X[104X
+    [4X[25Xgap>[125X [27XScalarProduct( TrivialCharacter( tbl ), Sum( Irr( tbl ) ) );[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XScalarProduct( tbl, [ 1, 1, 1, 1, 1 ], Sum( Irr( tbl ) ) );[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27Xtbl2:= tbl mod 2;[127X[104X
+    [4X[28XBrauerTable( "A5", 2 )[128X[104X
+    [4X[25Xgap>[125X [27Xchi:= Irr( tbl2 )[1];[127X[104X
+    [4X[28XCharacter( BrauerTable( "A5", 2 ), [ 1, 1, 1, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27XScalarProduct( chi, chi );[127X[104X
+    [4X[28X3/4[128X[104X
+    [4X[25Xgap>[125X [27XScalarProduct( tbl2, [ 1, 1, 1, 1 ], [ 1, 1, 1, 1 ] );[127X[104X
+    [4X[28X3/4[128X[104X
+    [4X[25Xgap>[125X [27Xchars:= Irr( tbl ){ [ 2 .. 4 ] };;[127X[104X
+    [4X[25Xgap>[125X [27Xchars:= Set( Tensored( chars, chars ) );;[127X[104X
+    [4X[25Xgap>[125X [27XMatScalarProducts( Irr( tbl ), chars );[127X[104X
+    [4X[28X[ [ 0, 0, 0, 1, 1 ], [ 1, 1, 0, 0, 1 ], [ 1, 0, 1, 0, 1 ],[128X[104X
+    [4X[28X  [ 0, 1, 0, 1, 1 ], [ 0, 0, 1, 1, 1 ], [ 1, 1, 1, 1, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27XMatScalarProducts( tbl, chars );[127X[104X
+    [4X[28X[ [ 2 ], [ 1, 3 ], [ 1, 2, 3 ], [ 2, 2, 1, 3 ], [ 2, 1, 2, 2, 3 ],[128X[104X
+    [4X[28X  [ 2, 3, 3, 3, 3, 5 ] ][128X[104X
+    [4X[25Xgap>[125X [27XList( chars, Norm );[127X[104X
+    [4X[28X[ 2, 3, 3, 3, 3, 5 ][128X[104X
+  [4X[32X[104X
+
+  [1X72.8-8 ConstituentsOfCharacter[101X
+
+  [33X[1;0Y[29X[2XConstituentsOfCharacter[102X( [[3Xtbl[103X, ][3Xchi[103X ) [32X attribute[133X
+
+  [33X[0;0YLet  [3Xchi[103X  be  an  ordinary or modular (virtual) character. If an ordinary or
+  modular  character  table  [3Xtbl[103X  is  given  then  [3Xchi[103X  may  also be a list of
+  character values.[133X
+
+  [33X[0;0Y[2XConstituentsOfCharacter[102X returns the set of those irreducible characters that
+  occur in the decomposition of [3Xchi[103X with nonzero coefficient.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xnat:= NaturalCharacter( S4 );[127X[104X
+    [4X[28XCharacter( CharacterTable( S4 ), [ 4, 2, 0, 1, 0 ] )[128X[104X
+    [4X[25Xgap>[125X [27XConstituentsOfCharacter( nat );[127X[104X
+    [4X[28X[ Character( CharacterTable( S4 ), [ 1, 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( S4 ), [ 3, 1, -1, 0, -1 ] ) ][128X[104X
+  [4X[32X[104X
+
+  [1X72.8-9 KernelOfCharacter[101X
+
+  [33X[1;0Y[29X[2XKernelOfCharacter[102X( [[3Xtbl[103X, ][3Xchi[103X ) [32X attribute[133X
+
+  [33X[0;0YFor  a class function [3Xchi[103X of a group [22XG[122X, [2XKernelOfCharacter[102X returns the normal
+  subgroup  of [22XG[122X that is formed by those conjugacy classes for which the value
+  of  [3Xchi[103X  equals  the degree of [3Xchi[103X. If the underlying character table of [3Xchi[103X
+  does    not    store   the   group   [22XG[122X   then   an   error   is   signalled.
+  (See [2XClassPositionsOfKernel[102X  ([14X72.8-10[114X)  for  a  way  to  handle  the  kernel
+  implicitly, by listing the positions of conjugacy classes in the kernel.)[133X
+
+  [33X[0;0YThe  returned  group  is  the kernel of any representation of [22XG[122X that affords
+  [3Xchi[103X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XList( Irr( S4 ), chi -> StructureDescription(KernelOfCharacter(chi)) );[127X[104X
+    [4X[28X[ "A4", "1", "C2 x C2", "1", "S4" ][128X[104X
+  [4X[32X[104X
+
+  [1X72.8-10 ClassPositionsOfKernel[101X
+
+  [33X[1;0Y[29X[2XClassPositionsOfKernel[102X( [3Xchi[103X ) [32X attribute[133X
+
+  [33X[0;0Yis  the list of positions of those conjugacy classes that form the kernel of
+  the  character  [3Xchi[103X,  that is, those positions with character value equal to
+  the character degree.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XList( Irr( S4 ), ClassPositionsOfKernel );[127X[104X
+    [4X[28X[ [ 1, 3, 4 ], [ 1 ], [ 1, 3 ], [ 1 ], [ 1, 2, 3, 4, 5 ] ][128X[104X
+  [4X[32X[104X
+
+  [1X72.8-11 CentreOfCharacter[101X
+
+  [33X[1;0Y[29X[2XCentreOfCharacter[102X( [[3Xtbl[103X, ][3Xchi[103X ) [32X attribute[133X
+
+  [33X[0;0YFor  a  character  [3Xchi[103X of a group [22XG[122X, [2XCentreOfCharacter[102X returns the [13Xcentre[113X of
+  [3Xchi[103X,  that  is, the normal subgroup of all those elements of [22XG[122X for which the
+  quotient of the value of [3Xchi[103X by the degree of [3Xchi[103X is a root of unity.[133X
+
+  [33X[0;0YIf  the underlying character table of [3Xpsi[103X does not store the group [22XG[122X then an
+  error  is  signalled.  (See [2XClassPositionsOfCentre[102X  ([14X72.8-12[114X)  for  a way to
+  handle  the centre implicitly, by listing the positions of conjugacy classes
+  in the centre.)[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XList( Irr( S4 ), chi -> StructureDescription(CentreOfCharacter(chi)) );[127X[104X
+    [4X[28X[ "S4", "1", "C2 x C2", "1", "S4" ][128X[104X
+  [4X[32X[104X
+
+  [1X72.8-12 ClassPositionsOfCentre[101X
+
+  [33X[1;0Y[29X[2XClassPositionsOfCentre[102X( [3Xchi[103X ) [32X attribute[133X
+
+  [33X[0;0Yis  the list of positions of classes forming the centre of the character [3Xchi[103X
+  (see [2XCentreOfCharacter[102X ([14X72.8-11[114X)).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XList( Irr( S4 ), ClassPositionsOfCentre );[127X[104X
+    [4X[28X[ [ 1, 2, 3, 4, 5 ], [ 1 ], [ 1, 3 ], [ 1 ], [ 1, 2, 3, 4, 5 ] ][128X[104X
+  [4X[32X[104X
+
+  [1X72.8-13 InertiaSubgroup[101X
+
+  [33X[1;0Y[29X[2XInertiaSubgroup[102X( [[3Xtbl[103X, ][3XG[103X, [3Xchi[103X ) [32X operation[133X
+
+  [33X[0;0YLet [3Xchi[103X be a character of a group [22XH[122X and [3Xtbl[103X the character table of [22XH[122X; if the
+  argument  [3Xtbl[103X  is  not  given  then  the  underlying  character table of [3Xchi[103X
+  (see [2XUnderlyingCharacterTable[102X  ([14X72.2-1[114X)) is used instead. Furthermore, let [3XG[103X
+  be a group that contains [22XH[122X as a normal subgroup.[133X
+
+  [33X[0;0Y[2XInertiaSubgroup[102X  returns  the stabilizer in [3XG[103X of [3Xchi[103X, w.r.t. the action of [3XG[103X
+  on the classes of [22XH[122X via conjugation. In other words, [2XInertiaSubgroup[102X returns
+  the group of all those elements [22Xg ∈ [3XG[103X[122X that satisfy [22X[3Xchi[103X^g = [3Xchi[103X[122X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xder:= DerivedSubgroup( S4 );[127X[104X
+    [4X[28XAlt( [ 1 .. 4 ] )[128X[104X
+    [4X[25Xgap>[125X [27XList( Irr( der ), chi -> InertiaSubgroup( S4, chi ) );[127X[104X
+    [4X[28X[ S4, S4, Alt( [ 1 .. 4 ] ), Alt( [ 1 .. 4 ] ) ][128X[104X
+  [4X[32X[104X
+
+  [1X72.8-14 CycleStructureClass[101X
+
+  [33X[1;0Y[29X[2XCycleStructureClass[102X( [[3Xtbl[103X, ][3Xchi[103X, [3Xclass[103X ) [32X operation[133X
+
+  [33X[0;0YLet  [3Xpermchar[103X  be  a  permutation  character, and [3Xclass[103X be the position of a
+  conjugacy  class  of  the  character  table of [3Xpermchar[103X. [2XCycleStructureClass[102X
+  returns a list describing the cycle structure of each element in class [3Xclass[103X
+  in  the  underlying  permutation  representation,  in the same format as the
+  result of [2XCycleStructurePerm[102X ([14X42.4-2[114X).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xnat:= NaturalCharacter( S4 );[127X[104X
+    [4X[28XCharacter( CharacterTable( S4 ), [ 4, 2, 0, 1, 0 ] )[128X[104X
+    [4X[25Xgap>[125X [27XList( [ 1 .. 5 ], i -> CycleStructureClass( nat, i ) );[127X[104X
+    [4X[28X[ [  ], [ 1 ], [ 2 ], [ , 1 ], [ ,, 1 ] ][128X[104X
+  [4X[32X[104X
+
+  [1X72.8-15 IsTransitive[101X
+
+  [33X[1;0Y[29X[2XIsTransitive[102X( [[3Xtbl[103X, ][3Xchi[103X ) [32X property[133X
+
+  [33X[0;0YFor a permutation character [3Xchi[103X of the group [22XG[122X that corresponds to an action
+  on  the  [22XG[122X-set [22XΩ[122X (see [2XPermutationCharacter[102X ([14X72.7-3[114X)), [2XIsTransitive[102X ([14X41.10-1[114X)
+  returns [9Xtrue[109X if the action of [22XG[122X on [22XΩ[122X is transitive, and [9Xfalse[109X otherwise.[133X
+
+  [1X72.8-16 Transitivity[101X
+
+  [33X[1;0Y[29X[2XTransitivity[102X( [[3Xtbl[103X, ][3Xchi[103X ) [32X attribute[133X
+
+  [33X[0;0YFor a permutation character [3Xchi[103X of the group [22XG[122X that corresponds to an action
+  on the [22XG[122X-set [22XΩ[122X (see [2XPermutationCharacter[102X ([14X72.7-3[114X)), [2XTransitivity[102X returns the
+  maximal   nonnegative  integer  [22Xk[122X  such  that  the  action  of  [22XG[122X  on  [22XΩ[122X  is
+  [22Xk[122X-transitive.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsTransitive( nat );  Transitivity( nat );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28X4[128X[104X
+    [4X[25Xgap>[125X [27XTransitivity( 2 * TrivialCharacter( S4 ) );[127X[104X
+    [4X[28X0[128X[104X
+  [4X[32X[104X
+
+  [1X72.8-17 CentralCharacter[101X
+
+  [33X[1;0Y[29X[2XCentralCharacter[102X( [[3Xtbl[103X, ][3Xchi[103X ) [32X attribute[133X
+
+  [33X[0;0YFor  a  character  [3Xchi[103X  of  a  group [22XG[122X, [2XCentralCharacter[102X returns the [13Xcentral
+  character[113X of [3Xchi[103X.[133X
+
+  [33X[0;0YThe  central  character  of  [22Xχ[122X is the class function [22Xω_χ[122X defined by [22Xω_χ(g) =
+  |g^G| ⋅ χ(g)/χ(1)[122X for each [22Xg ∈ G[122X.[133X
+
+  [1X72.8-18 DeterminantOfCharacter[101X
+
+  [33X[1;0Y[29X[2XDeterminantOfCharacter[102X( [[3Xtbl[103X, ][3Xchi[103X ) [32X attribute[133X
+
+  [33X[0;0Y[2XDeterminantOfCharacter[102X  returns  the  [13Xdeterminant character[113X of the character
+  [3Xchi[103X.  This is defined to be the character obtained by taking the determinant
+  of   representing   matrices   of  any  representation  affording  [3Xchi[103X;  the
+  determinant can be computed using [2XEigenvaluesChar[102X ([14X72.8-19[114X).[133X
+
+  [33X[0;0YIt   is   also   possible   to   call   [2XDeterminant[102X   ([14X24.4-4[114X)   instead  of
+  [2XDeterminantOfCharacter[102X.[133X
+
+  [33X[0;0YNote that the determinant character is well-defined for virtual characters.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XCentralCharacter( TrivialCharacter( S4 ) );[127X[104X
+    [4X[28XClassFunction( CharacterTable( S4 ), [ 1, 6, 3, 8, 6 ] )[128X[104X
+    [4X[25Xgap>[125X [27XDeterminantOfCharacter( Irr( S4 )[3] );[127X[104X
+    [4X[28XCharacter( CharacterTable( S4 ), [ 1, -1, 1, 1, -1 ] )[128X[104X
+  [4X[32X[104X
+
+  [1X72.8-19 EigenvaluesChar[101X
+
+  [33X[1;0Y[29X[2XEigenvaluesChar[102X( [[3Xtbl[103X, ][3Xchi[103X, [3Xclass[103X ) [32X operation[133X
+
+  [33X[0;0YLet  [3Xchi[103X  be  a character of a group [22XG[122X. For an element [22Xg ∈ G[122X in the [3Xclass[103X-th
+  conjugacy class, of order [22Xn[122X, let [22XM[122X be a matrix of a representation affording
+  [3Xchi[103X.[133X
+
+  [33X[0;0Y[2XEigenvaluesChar[102X  returns  the  list  of  length  [22Xn[122X  where  at position [22Xk[122X the
+  multiplicity of [10XE[110X[22X(n)^k = exp(2 π i k / n)[122X as an eigenvalue of [22XM[122X is stored.[133X
+
+  [33X[0;0YWe  have  [10X[3Xchi[103X[10X[  [3Xclass[103X[10X ] = List( [ 1 .. n ], k -> E(n)^k ) * EigenvaluesChar(
+  [3Xtbl[103X[10X, [3Xchi[103X[10X, [3Xclass[103X[10X )[110X.[133X
+
+  [33X[0;0YIt is also possible to call [2XEigenvalues[102X ([14X24.8-3[114X) instead of [2XEigenvaluesChar[102X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xchi:= Irr( CharacterTable( "A5" ) )[2];[127X[104X
+    [4X[28XCharacter( CharacterTable( "A5" ),[128X[104X
+    [4X[28X[ 3, -1, 0, -E(5)-E(5)^4, -E(5)^2-E(5)^3 ] )[128X[104X
+    [4X[25Xgap>[125X [27XList( [ 1 .. 5 ], i -> Eigenvalues( chi, i ) );[127X[104X
+    [4X[28X[ [ 3 ], [ 2, 1 ], [ 1, 1, 1 ], [ 0, 1, 1, 0, 1 ], [ 1, 0, 0, 1, 1 ] ][128X[104X
+  [4X[32X[104X
+
+  [1X72.8-20 Tensored[101X
+
+  [33X[1;0Y[29X[2XTensored[102X( [3Xchars1[103X, [3Xchars2[103X ) [32X operation[133X
+
+  [33X[0;0YLet  [3Xchars1[103X  and [3Xchars2[103X be lists of (values lists of) class functions of the
+  same  character  table.  [2XTensored[102X returns the list of tensor products of all
+  entries in [3Xchars1[103X with all entries in [3Xchars2[103X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xirra5:= Irr( CharacterTable( "A5" ) );;[127X[104X
+    [4X[25Xgap>[125X [27Xchars1:= irra5{ [ 1 .. 3 ] };;  chars2:= irra5{ [ 2, 3 ] };;[127X[104X
+    [4X[25Xgap>[125X [27XTensored( chars1, chars2 );[127X[104X
+    [4X[28X[ Character( CharacterTable( "A5" ),[128X[104X
+    [4X[28X    [ 3, -1, 0, -E(5)-E(5)^4, -E(5)^2-E(5)^3 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ),[128X[104X
+    [4X[28X    [ 3, -1, 0, -E(5)^2-E(5)^3, -E(5)-E(5)^4 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ),[128X[104X
+    [4X[28X    [ 9, 1, 0, -2*E(5)-E(5)^2-E(5)^3-2*E(5)^4,[128X[104X
+    [4X[28X      -E(5)-2*E(5)^2-2*E(5)^3-E(5)^4 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 9, 1, 0, -1, -1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 9, 1, 0, -1, -1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ),[128X[104X
+    [4X[28X    [ 9, 1, 0, -E(5)-2*E(5)^2-2*E(5)^3-E(5)^4,[128X[104X
+    [4X[28X      -2*E(5)-E(5)^2-E(5)^3-2*E(5)^4 ] ) ][128X[104X
+  [4X[32X[104X
+
+  [1X72.8-21 TensorProduct[101X
+
+  [33X[1;0Y[29X[2XTensorProduct[102X( [3Xchi[103X, [3Xpsi[103X ) [32X operation[133X
+
+  [33X[0;0YFor   two  characters  [3Xchi[103X  and  [3Xpsi[103X  afforded  by  the  modules  [22XV[122X  and  [22XW[122X,
+  [2XTensorProduct[102X  returns  the character that is afforded by the tensor product
+  of [22XV[122X and [22XW[122X.[133X
+
+  [33X[0;0YThe result can also be computed as [3Xchi[103X[10X*[110X[3Xpsi[103X, see also [2XTensored[102X ([14X72.8-20[114X).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xt:= CharacterTable( "A5" );;[127X[104X
+    [4X[25Xgap>[125X [27Xchi:= Irr( t )[2];[127X[104X
+    [4X[28XCharacter( CharacterTable( "A5" ),[128X[104X
+    [4X[28X [ 3, -1, 0, -E(5)-E(5)^4, -E(5)^2-E(5)^3 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xpsi:= Irr( t )[3];[127X[104X
+    [4X[28XCharacter( CharacterTable( "A5" ),[128X[104X
+    [4X[28X [ 3, -1, 0, -E(5)^2-E(5)^3, -E(5)-E(5)^4 ] )[128X[104X
+    [4X[25Xgap>[125X [27XTensorProduct( chi, psi );[127X[104X
+    [4X[28XCharacter( CharacterTable( "A5" ), [ 9, 1, 0, -1, -1 ] )[128X[104X
+  [4X[32X[104X
+
+
+  [1X72.9 [33X[0;0YRestricted and Induced Class Functions[133X[101X
+
+  [33X[0;0YFor  restricting  a  class  function  of  a  group [22XG[122X to a subgroup [22XH[122X and for
+  inducing  a  class  function of [22XH[122X to [22XG[122X, the [13Xclass fusion[113X from [22XH[122X to [22XG[122X must be
+  known (see [14X73.3[114X).[133X
+
+  [33X[0;0YIf  [22XF[122X  is  the  factor  group  of [22XG[122X by the normal subgroup [22XN[122X then each class
+  function  of [22XF[122X can be naturally regarded as a class function of [22XG[122X, with [22XN[122X in
+  its kernel. For a class function of [22XF[122X, the corresponding class function of [22XG[122X
+  is  called  the  [13Xinflated[113X  class  function. Restriction and inflation are in
+  principle   the  same,  namely  indirection  of  a  class  function  by  the
+  appropriate  fusion  map,  and  thus  no  extra operation is needed for this
+  process. But note that contrary to the case of a subgroup fusion, the factor
+  fusion  can  in  general not be computed from the groups [22XG[122X and [22XF[122X; either one
+  needs  the natural homomorphism, or the factor fusion to the character table
+  of  [22XF[122X  must  be stored on the table of [22XG[122X. This explains the different syntax
+  for computing restricted and inflated class functions.[133X
+
+  [33X[0;0YIn the following, the meaning of the optional first argument [3Xtbl[103X is the same
+  as in Section [14X72.8[114X.[133X
+
+  [1X72.9-1 RestrictedClassFunction[101X
+
+  [33X[1;0Y[29X[2XRestrictedClassFunction[102X( [[3Xtbl[103X, ][3Xchi[103X, [3Xtarget[103X ) [32X operation[133X
+
+  [33X[0;0YLet [3Xchi[103X be a class function of a group [22XG[122X and let [3Xtarget[103X be either a subgroup
+  [22XH[122X of [22XG[122X or an injective homomorphism from [22XH[122X to [22XG[122X or the character table of [3XH[103X.
+  Then  [2XRestrictedClassFunction[102X  returns  the  class function of [22XH[122X obtained by
+  restricting [3Xchi[103X to [22XH[122X.[133X
+
+  [33X[0;0YIf  [3Xchi[103X is a class function of a [13Xfactor group[113X [22XG[122X of [22XH[122X, where [3Xtarget[103X is either
+  the  group  [22XH[122X or a homomorphism from [22XH[122X to [22XG[122X or the character table of [22XH[122X then
+  the  restriction  can  be  computed  in the case of the homomorphism; in the
+  other  cases,  this  is  possible  only  if the factor fusion from [22XH[122X to [22XG[122X is
+  stored on the character table of [22XH[122X.[133X
+
+  [1X72.9-2 RestrictedClassFunctions[101X
+
+  [33X[1;0Y[29X[2XRestrictedClassFunctions[102X( [[3Xtbl[103X, ][3Xchars[103X, [3Xtarget[103X ) [32X operation[133X
+
+  [33X[0;0Y[2XRestrictedClassFunctions[102X is similar to [2XRestrictedClassFunction[102X ([14X72.9-1[114X), the
+  only  difference is that it takes a list [3Xchars[103X of class functions instead of
+  one class function, and returns the list of restricted class functions.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xa5:= CharacterTable( "A5" );;  s5:= CharacterTable( "S5" );;[127X[104X
+    [4X[25Xgap>[125X [27XRestrictedClassFunction( Irr( s5 )[2], a5 );[127X[104X
+    [4X[28XCharacter( CharacterTable( "A5" ), [ 1, 1, 1, 1, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27XRestrictedClassFunctions( Irr( s5 ), a5 );[127X[104X
+    [4X[28X[ Character( CharacterTable( "A5" ), [ 1, 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 1, 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 6, -2, 0, 1, 1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 4, 0, 1, -1, -1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 4, 0, 1, -1, -1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 5, 1, -1, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 5, 1, -1, 0, 0 ] ) ][128X[104X
+    [4X[25Xgap>[125X [27Xhom:= NaturalHomomorphismByNormalSubgroup( S4, der );;[127X[104X
+    [4X[25Xgap>[125X [27XRestrictedClassFunctions( Irr( Image( hom ) ), hom );[127X[104X
+    [4X[28X[ Character( CharacterTable( S4 ), [ 1, 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( S4 ), [ 1, -1, 1, 1, -1 ] ) ][128X[104X
+  [4X[32X[104X
+
+
+  [1X72.9-3 [33X[0;0YInducedClassFunction[133X[101X
+
+  [33X[1;0Y[29X[2XInducedClassFunction[102X( [[3Xtbl[103X, ][3Xchi[103X, [3XH[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XInducedClassFunction[102X( [[3Xtbl[103X, ][3Xchi[103X, [3Xhom[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XInducedClassFunction[102X( [[3Xtbl[103X, ][3Xchi[103X, [3Xsuptbl[103X ) [32X operation[133X
+
+  [33X[0;0YLet  [3Xchi[103X  be  a  class  function  of  a  group  [22XG[122X and let [3Xtarget[103X be either a
+  supergroup  [22XH[122X of [22XG[122X or an injective homomorphism from [22XH[122X to [22XG[122X or the character
+  table  of  [3XH[103X.  Then  [2XInducedClassFunction[102X  returns  the  class function of [22XH[122X
+  obtained by inducing [3Xchi[103X to [22XH[122X.[133X
+
+  [1X72.9-4 InducedClassFunctions[101X
+
+  [33X[1;0Y[29X[2XInducedClassFunctions[102X( [[3Xtbl[103X, ][3Xchars[103X, [3Xtarget[103X ) [32X operation[133X
+
+  [33X[0;0Y[2XInducedClassFunctions[102X  is similar to [2XInducedClassFunction[102X ([14X72.9-3[114X), the only
+  difference  is  that it takes a list [3Xchars[103X of class functions instead of one
+  class function, and returns the list of induced class functions.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XInducedClassFunctions( Irr( a5 ), s5 );[127X[104X
+    [4X[28X[ Character( CharacterTable( "A5.2" ), [ 2, 2, 2, 2, 0, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5.2" ), [ 6, -2, 0, 1, 0, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5.2" ), [ 6, -2, 0, 1, 0, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5.2" ), [ 8, 0, 2, -2, 0, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5.2" ), [ 10, 2, -2, 0, 0, 0, 0 ] ) ][128X[104X
+  [4X[32X[104X
+
+  [1X72.9-5 InducedClassFunctionsByFusionMap[101X
+
+  [33X[1;0Y[29X[2XInducedClassFunctionsByFusionMap[102X( [3Xsubtbl[103X, [3Xtbl[103X, [3Xchars[103X, [3Xfusionmap[103X ) [32X function[133X
+
+  [33X[0;0YLet [3Xsubtbl[103X and [3Xtbl[103X be two character tables of groups [22XH[122X and [22XG[122X, such that [22XH[122X is
+  a  subgroup  of [22XG[122X, let [3Xchars[103X be a list of class functions of [3Xsubtbl[103X, and let
+  [3Xfusionmap[103X  be a fusion map from [3Xsubtbl[103X to [3Xtbl[103X. The function returns the list
+  of induced class functions of [3Xtbl[103X that correspond to [3Xchars[103X, w.r.t. the given
+  fusion map.[133X
+
+  [33X[0;0Y[2XInducedClassFunctionsByFusionMap[102X  is  the  function  that  does the work for
+  [2XInducedClassFunction[102X ([14X72.9-3[114X) and [2XInducedClassFunctions[102X ([14X72.9-4[114X).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xfus:= PossibleClassFusions( a5, s5 );[127X[104X
+    [4X[28X[ [ 1, 2, 3, 4, 4 ] ][128X[104X
+    [4X[25Xgap>[125X [27XInducedClassFunctionsByFusionMap( a5, s5, Irr( a5 ), fus[1] );[127X[104X
+    [4X[28X[ Character( CharacterTable( "A5.2" ), [ 2, 2, 2, 2, 0, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5.2" ), [ 6, -2, 0, 1, 0, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5.2" ), [ 6, -2, 0, 1, 0, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5.2" ), [ 8, 0, 2, -2, 0, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5.2" ), [ 10, 2, -2, 0, 0, 0, 0 ] ) ][128X[104X
+  [4X[32X[104X
+
+  [1X72.9-6 InducedCyclic[101X
+
+  [33X[1;0Y[29X[2XInducedCyclic[102X( [3Xtbl[103X[, [3Xclasses[103X][, [3X"all"[103X] ) [32X operation[133X
+
+  [33X[0;0Y[2XInducedCyclic[102X  calculates characters induced up from cyclic subgroups of the
+  ordinary character table [3Xtbl[103X to [3Xtbl[103X, and returns the strictly sorted list of
+  the induced characters.[133X
+
+  [33X[0;0YIf  the  string  [10X"all"[110X is specified then all irreducible characters of these
+  subgroups  are  induced,  otherwise  only  the  permutation  characters  are
+  calculated.[133X
+
+  [33X[0;0YIf a list [3Xclasses[103X is specified then only those cyclic subgroups generated by
+  these classes are considered, otherwise all classes of [3Xtbl[103X are considered.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XInducedCyclic( a5, "all" );[127X[104X
+    [4X[28X[ Character( CharacterTable( "A5" ), [ 12, 0, 0, 2, 2 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ),[128X[104X
+    [4X[28X    [ 12, 0, 0, E(5)^2+E(5)^3, E(5)+E(5)^4 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ),[128X[104X
+    [4X[28X    [ 12, 0, 0, E(5)+E(5)^4, E(5)^2+E(5)^3 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 20, 0, -1, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 20, 0, 2, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 30, -2, 0, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 30, 2, 0, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 60, 0, 0, 0, 0 ] ) ][128X[104X
+  [4X[32X[104X
+
+
+  [1X72.10 [33X[0;0YReducing Virtual Characters[133X[101X
+
+  [33X[0;0YThe  following operations are intended for the situation that one is given a
+  list  of  virtual  characters  of a character table and is interested in the
+  irreducible  characters  of  this  table.  The  idea  is  to compute virtual
+  characters  of  small  norm  from  the  given ones, hoping to get eventually
+  virtual characters of norm [22X1[122X.[133X
+
+  [1X72.10-1 ReducedClassFunctions[101X
+
+  [33X[1;0Y[29X[2XReducedClassFunctions[102X( [[3Xtbl[103X, ][[3Xconstituents[103X, ][3Xreducibles[103X ) [32X operation[133X
+
+  [33X[0;0YLet  [3Xreducibles[103X  be  a  list of ordinary virtual characters of a group [22XG[122X. If
+  [3Xconstituents[103X  is  given  then  it  must  also  be a list of ordinary virtual
+  characters  of  [22XG[122X, otherwise we have [3Xconstituents[103X equal to [3Xreducibles[103X in the
+  following.[133X
+
+  [33X[0;0Y[2XReducedClassFunctions[102X  returns  a  record with the components [10Xremainders[110X and
+  [10Xirreducibles[110X,   both  lists  of  virtual  characters  of  [22XG[122X.  These  virtual
+  characters are computed as follows.[133X
+
+  [33X[0;0YLet [10Xrems[110X be the set of nonzero class functions obtained by subtraction of[133X
+
+
+  [24X[33X[0;6Y∑_χ ( [[3Xreducibles[103X[i], χ] / [χ, χ] ) ⋅ χ[133X[124X
+
+  [33X[0;0Yfrom  [22X[3Xreducibles[103X[i][122X,  where  the summation runs over [3Xconstituents[103X and [22X[χ, ψ][122X
+  denotes  the  scalar  product  of [22XG[122X-class functions. Let [10Xirrs[110X be the list of
+  irreducible characters in [10Xrems[110X.[133X
+
+  [33X[0;0YWe project [10Xrems[110X into the orthogonal space of [10Xirrs[110X and all those irreducibles
+  found  this  way until no new irreducibles arise. Then the [10Xirreducibles[110X list
+  is  the  set of all found irreducible characters, and the [10Xremainders[110X list is
+  the set of all nonzero remainders.[133X
+
+  [1X72.10-2 ReducedCharacters[101X
+
+  [33X[1;0Y[29X[2XReducedCharacters[102X( [[3Xtbl[103X, ][3Xconstituents[103X, [3Xreducibles[103X ) [32X operation[133X
+
+  [33X[0;0Y[2XReducedCharacters[102X  is  similar  to [2XReducedClassFunctions[102X ([14X72.10-1[114X), the only
+  difference  is  that  [3Xconstituents[103X and [3Xreducibles[103X are assumed to be lists of
+  characters.  This means that only those scalar products must be formed where
+  the  degree  of  the character in [3Xconstituents[103X does not exceed the degree of
+  the character in [3Xreducibles[103X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtbl:= CharacterTable( "A5" );;[127X[104X
+    [4X[25Xgap>[125X [27Xchars:= Irr( tbl ){ [ 2 .. 4 ] };;[127X[104X
+    [4X[25Xgap>[125X [27Xchars:= Set( Tensored( chars, chars ) );;[127X[104X
+    [4X[25Xgap>[125X [27Xred:= ReducedClassFunctions( chars );[127X[104X
+    [4X[28Xrec([128X[104X
+    [4X[28X  irreducibles :=[128X[104X
+    [4X[28X    [ Character( CharacterTable( "A5" ), [ 1, 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "A5" ),[128X[104X
+    [4X[28X        [ 3, -1, 0, -E(5)-E(5)^4, -E(5)^2-E(5)^3 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "A5" ),[128X[104X
+    [4X[28X        [ 3, -1, 0, -E(5)^2-E(5)^3, -E(5)-E(5)^4 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "A5" ), [ 4, 0, 1, -1, -1 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "A5" ), [ 5, 1, -1, 0, 0 ] ) ],[128X[104X
+    [4X[28X  remainders := [  ] )[128X[104X
+  [4X[32X[104X
+
+  [1X72.10-3 IrreducibleDifferences[101X
+
+  [33X[1;0Y[29X[2XIrreducibleDifferences[102X( [3Xtbl[103X, [3Xreducibles[103X, [3Xreducibles2[103X[, [3Xscprmat[103X] ) [32X function[133X
+
+  [33X[0;0Y[2XIrreducibleDifferences[102X  returns  the  list  of  irreducible characters which
+  occur  as  difference  of  an  element  of  [3Xreducibles[103X  and  an  element  of
+  [3Xreducibles2[103X,  where  these two arguments are lists of class functions of the
+  character table [3Xtbl[103X.[133X
+
+  [33X[0;0YIf  [3Xreducibles2[103X is the string [10X"triangle"[110X then the differences of elements in
+  [3Xreducibles[103X are considered.[133X
+
+  [33X[0;0YIf  [3Xscprmat[103X  is  not specified then it will be calculated, otherwise we must
+  have  [10X[3Xscprmat[103X[10X = MatScalarProducts( [3Xtbl[103X[10X, [3Xreducibles[103X[10X, [3Xreducibles2[103X[10X )[110X or [10X[3Xscprmat[103X[10X
+  = MatScalarProducts( [3Xtbl[103X[10X, [3Xreducibles[103X[10X )[110X, respectively.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIrreducibleDifferences( a5, chars, "triangle" );[127X[104X
+    [4X[28X[ Character( CharacterTable( "A5" ),[128X[104X
+    [4X[28X    [ 3, -1, 0, -E(5)-E(5)^4, -E(5)^2-E(5)^3 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ),[128X[104X
+    [4X[28X    [ 3, -1, 0, -E(5)^2-E(5)^3, -E(5)-E(5)^4 ] ) ][128X[104X
+  [4X[32X[104X
+
+  [1X72.10-4 LLL[101X
+
+  [33X[1;0Y[29X[2XLLL[102X( [3Xtbl[103X, [3Xcharacters[103X[, [3Xy[103X][, [3X"sort"[103X][, [3X"linearcomb"[103X] ) [32X function[133X
+
+  [33X[0;0Y[2XLLL[102X  calls  the  LLL algorithm (see [2XLLLReducedBasis[102X ([14X25.5-1[114X)) in the case of
+  lattices  spanned  by  the  virtual  characters  [3Xcharacters[103X  of the ordinary
+  character table [3Xtbl[103X (see [2XScalarProduct[102X ([14X72.8-5[114X)). By finding shorter vectors
+  in  the  lattice  spanned by [3Xcharacters[103X, i.e., virtual characters of smaller
+  norm, in some cases [2XLLL[102X is able to find irreducible characters.[133X
+
+  [33X[0;0Y[2XLLL[102X  returns  a  record  with  at least components [10Xirreducibles[110X (the list of
+  found  irreducible  characters),  [10Xremainders[110X  (a  list  of reducible virtual
+  characters),  and  [10Xnorms[110X  (the  list of norms of the vectors in [10Xremainders[110X).
+  [10Xirreducibles[110X  together with [10Xremainders[110X form a basis of the [22Xℤ[122X-lattice spanned
+  by [3Xcharacters[103X.[133X
+
+  [33X[0;0YNote  that  the vectors in the [10Xremainders[110X list are in general [13Xnot[113X orthogonal
+  (see [2XReducedClassFunctions[102X  ([14X72.10-1[114X))  to  the  irreducible  characters  in
+  [10Xirreducibles[110X.[133X
+
+  [33X[0;0YOptional arguments of [2XLLL[102X are[133X
+
+  [8X[3Xy[103X[8X[108X
+        [33X[0;6Ycontrols   the   sensitivity  of  the  algorithm,  see [2XLLLReducedBasis[102X
+        ([14X25.5-1[114X),[133X
+
+  [8X[3X"sort"[103X[8X[108X
+        [33X[0;6Y[2XLLL[102X  sorts  [3Xcharacters[103X  and  the  [10Xremainders[110X  component  of the result
+        according to the degrees,[133X
+
+  [8X[3X"linearcomb"[103X[8X[108X
+        [33X[0;6Ythe  returned  record  contains  components [10Xirreddecomp[110X and [10Xreddecomp[110X,
+        which  are decomposition matrices of [10Xirreducibles[110X and [10Xremainders[110X, with
+        respect to [3Xcharacters[103X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xs4:= CharacterTable( "Symmetric", 4 );;[127X[104X
+    [4X[25Xgap>[125X [27Xchars:= [ [ 8, 0, 0, -1, 0 ], [ 6, 0, 2, 0, 2 ],[127X[104X
+    [4X[25X>[125X [27X    [ 12, 0, -4, 0, 0 ], [ 6, 0, -2, 0, 0 ], [ 24, 0, 0, 0, 0 ],[127X[104X
+    [4X[25X>[125X [27X    [ 12, 0, 4, 0, 0 ], [ 6, 0, 2, 0, -2 ], [ 12, -2, 0, 0, 0 ],[127X[104X
+    [4X[25X>[125X [27X    [ 8, 0, 0, 2, 0 ], [ 12, 2, 0, 0, 0 ], [ 1, 1, 1, 1, 1 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27XLLL( s4, chars );[127X[104X
+    [4X[28Xrec([128X[104X
+    [4X[28X  irreducibles :=[128X[104X
+    [4X[28X    [ Character( CharacterTable( "Sym(4)" ), [ 2, 0, 2, -1, 0 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "Sym(4)" ), [ 1, 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "Sym(4)" ), [ 3, 1, -1, 0, -1 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "Sym(4)" ), [ 3, -1, -1, 0, 1 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "Sym(4)" ), [ 1, -1, 1, 1, -1 ] ) ],[128X[104X
+    [4X[28X  norms := [  ], remainders := [  ] )[128X[104X
+  [4X[32X[104X
+
+  [1X72.10-5 Extract[101X
+
+  [33X[1;0Y[29X[2XExtract[102X( [3Xtbl[103X, [3Xreducibles[103X, [3Xgrammat[103X[, [3Xmissing[103X] ) [32X function[133X
+
+  [33X[0;0YLet  [3Xtbl[103X  be an ordinary character table, [3Xreducibles[103X a list of characters of
+  [3Xtbl[103X,   and   [3Xgrammat[103X   the   matrix   of   scalar   products  of  [3Xreducibles[103X
+  (see [2XMatScalarProducts[102X   ([14X72.8-6[114X)).   [2XExtract[102X   tries  to  find  irreducible
+  characters  by  drawing  conclusions  out  of  the  scalar  products,  using
+  combinatorial and backtrack means.[133X
+
+  [33X[0;0YThe   optional  argument  [3Xmissing[103X  is  the  maximal  number  of  irreducible
+  characters  that  occur  as  constituents  of  [3Xreducibles[103X.  Specification of
+  [3Xmissing[103X may accelerate [2XExtract[102X.[133X
+
+  [33X[0;0Y[2XExtract[102X  returns a record [3Xext[103X with the components [10Xsolution[110X and [10Xchoice[110X, where
+  the  value of [10Xsolution[110X is a list [22X[ M_1, ..., M_n ][122X of decomposition matrices
+  [22XM_i[122X  (up to permutations of rows) with the property that [22XM_i^tr ⋅ X[122X is equal
+  to  the sublist at the positions [3Xext[103X[10X.choice[i][110X of [3Xreducibles[103X, for a matrix [22XX[122X
+  of  irreducible  characters; the value of [10Xchoice[110X is a list of length [22Xn[122X whose
+  entries are lists of indices.[133X
+
+  [33X[0;0YSo the [22Xj[122X-th column in each matrix [22XM_i[122X corresponds to [22X[3Xreducibles[103X[j][122X, and each
+  row  in [22XM_i[122X corresponds to an irreducible character. [2XDecreased[102X ([14X72.10-7[114X) can
+  be used to examine the solution for computable irreducibles.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xs4:= CharacterTable( "Symmetric", 4 );;[127X[104X
+    [4X[25Xgap>[125X [27Xred:= [ [ 5, 1, 5, 2, 1 ], [ 2, 0, 2, 2, 0 ], [ 3, -1, 3, 0, -1 ],[127X[104X
+    [4X[25X>[125X [27X           [ 6, 0, -2, 0, 0 ], [ 4, 0, 0, 1, 2 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27Xgram:= MatScalarProducts( s4, red, red );[127X[104X
+    [4X[28X[ [ 6, 3, 2, 0, 2 ], [ 3, 2, 1, 0, 1 ], [ 2, 1, 2, 0, 0 ],[128X[104X
+    [4X[28X  [ 0, 0, 0, 2, 1 ], [ 2, 1, 0, 1, 2 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xext:= Extract( s4, red, gram, 5 );[127X[104X
+    [4X[28Xrec( choice := [ [ 2, 5, 3, 4, 1 ] ],[128X[104X
+    [4X[28X  solution :=[128X[104X
+    [4X[28X    [[128X[104X
+    [4X[28X      [ [ 1, 1, 0, 0, 2 ], [ 1, 0, 1, 0, 1 ], [ 0, 1, 0, 1, 0 ],[128X[104X
+    [4X[28X          [ 0, 0, 1, 0, 1 ], [ 0, 0, 0, 1, 0 ] ] ] )[128X[104X
+    [4X[25Xgap>[125X [27Xdec:= Decreased( s4, red, ext.solution[1], ext.choice[1] );[127X[104X
+    [4X[28Xrec([128X[104X
+    [4X[28X  irreducibles :=[128X[104X
+    [4X[28X    [ Character( CharacterTable( "Sym(4)" ), [ 1, 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "Sym(4)" ), [ 3, -1, -1, 0, 1 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "Sym(4)" ), [ 1, -1, 1, 1, -1 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "Sym(4)" ), [ 3, 1, -1, 0, -1 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "Sym(4)" ), [ 2, 0, 2, -1, 0 ] ) ],[128X[104X
+    [4X[28X  matrix := [  ], remainders := [  ] )[128X[104X
+  [4X[32X[104X
+
+  [1X72.10-6 OrthogonalEmbeddingsSpecialDimension[101X
+
+  [33X[1;0Y[29X[2XOrthogonalEmbeddingsSpecialDimension[102X( [3Xtbl[103X, [3Xreducibles[103X, [3Xgrammat[103X[, [3X"positive"[103X], [3Xdim[103X ) [32X function[133X
+
+  [33X[0;0Y[2XOrthogonalEmbeddingsSpecialDimension[102X  is  a  variant of [2XOrthogonalEmbeddings[102X
+  ([14X25.6-1[114X)  for  the  situation  that  [3Xtbl[103X  is  an  ordinary  character table,
+  [3Xreducibles[103X  is a list of virtual characters of [3Xtbl[103X, [3Xgrammat[103X is the matrix of
+  scalar  products (see [2XMatScalarProducts[102X ([14X72.8-6[114X)), and [3Xdim[103X is an upper bound
+  for  the  number of irreducible characters of [3Xtbl[103X that occur as constituents
+  of  [3Xreducibles[103X;  if  the  vectors  in  [3Xreducibles[103X  are  known  to  be proper
+  characters  then  the  string  [10X"positive"[110X may be entered as fourth argument.
+  (See [2XOrthogonalEmbeddings[102X ([14X25.6-1[114X) for information why this may help.)[133X
+
+  [33X[0;0Y[2XOrthogonalEmbeddingsSpecialDimension[102X    first    uses   [2XOrthogonalEmbeddings[102X
+  ([14X25.6-1[114X)  to  compute  all  orthogonal embeddings of [3Xgrammat[103X into a standard
+  lattice  of dimension up to [3Xdim[103X, and then calls [2XDecreased[102X ([14X72.10-7[114X) in order
+  to find irreducible characters of [3Xtbl[103X.[133X
+
+  [33X[0;0Y[2XOrthogonalEmbeddingsSpecialDimension[102X  returns  a  record  with the following
+  components.[133X
+
+  [8X[10Xirreducibles[110X[8X[108X
+        [33X[0;6Ya  list  of  found  irreducibles,  the  intersection  of  all lists of
+        irreducibles   found   by   [2XDecreased[102X   ([14X72.10-7[114X),  for  all  possible
+        embeddings, and[133X
+
+  [8X[10Xremainders[110X[8X[108X
+        [33X[0;6Ya list of remaining reducible virtual characters.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xs6:= CharacterTable( "S6" );;[127X[104X
+    [4X[25Xgap>[125X [27Xred:= InducedCyclic( s6, "all" );;[127X[104X
+    [4X[25Xgap>[125X [27XAdd( red, TrivialCharacter( s6 ) );[127X[104X
+    [4X[25Xgap>[125X [27Xlll:= LLL( s6, red );;[127X[104X
+    [4X[25Xgap>[125X [27Xirred:= lll.irreducibles;[127X[104X
+    [4X[28X[ Character( CharacterTable( "A6.2_1" ),[128X[104X
+    [4X[28X    [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A6.2_1" ),[128X[104X
+    [4X[28X    [ 9, 1, 0, 0, 1, -1, -3, -3, 1, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A6.2_1" ),[128X[104X
+    [4X[28X    [ 16, 0, -2, -2, 0, 1, 0, 0, 0, 0, 0 ] ) ][128X[104X
+    [4X[25Xgap>[125X [27XSet( Flat( MatScalarProducts( s6, irred, lll.remainders ) ) );[127X[104X
+    [4X[28X[ 0 ][128X[104X
+    [4X[25Xgap>[125X [27Xdim:= NrConjugacyClasses( s6 ) - Length( lll.irreducibles );[127X[104X
+    [4X[28X8[128X[104X
+    [4X[25Xgap>[125X [27Xrem:= lll.remainders;;  Length( rem );[127X[104X
+    [4X[28X8[128X[104X
+    [4X[25Xgap>[125X [27Xgram:= MatScalarProducts( s6, rem, rem );;  RankMat( gram );[127X[104X
+    [4X[28X8[128X[104X
+    [4X[25Xgap>[125X [27Xemb1:= OrthogonalEmbeddings( gram, 8 );[127X[104X
+    [4X[28Xrec( norms := [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],[128X[104X
+    [4X[28X  solutions := [ [ 1, 2, 3, 7, 11, 12, 13, 15 ],[128X[104X
+    [4X[28X      [ 1, 2, 4, 8, 10, 12, 13, 14 ], [ 1, 2, 5, 6, 9, 12, 13, 16 ] ],[128X[104X
+    [4X[28X  vectors :=[128X[104X
+    [4X[28X    [ [ -1, 0, 1, 0, 1, 0, 1, 0 ], [ 1, 0, 0, 1, 0, 1, 0, 0 ],[128X[104X
+    [4X[28X      [ 0, 1, 1, 0, 0, 0, 1, 1 ], [ 0, 1, 1, 0, 0, 0, 1, 0 ],[128X[104X
+    [4X[28X      [ 0, 1, 1, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 1, 0 ],[128X[104X
+    [4X[28X      [ 0, -1, 0, 0, 0, 0, 0, 1 ], [ 0, 1, 0, 0, 0, 0, 0, 0 ],[128X[104X
+    [4X[28X      [ 0, 0, 1, 0, 0, 0, 1, 1 ], [ 0, 0, 1, 0, 0, 0, 0, 1 ],[128X[104X
+    [4X[28X      [ 0, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, -1, 1, 0, 0, 0 ],[128X[104X
+    [4X[28X      [ 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 1 ],[128X[104X
+    [4X[28X      [ 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1 ] ] )[128X[104X
+    [4X[25Xgap>[125X [27Xemb2:= OrthogonalEmbeddingsSpecialDimension( s6, rem, gram, 8 );[127X[104X
+    [4X[28Xrec([128X[104X
+    [4X[28X  irreducibles :=[128X[104X
+    [4X[28X    [ Character( CharacterTable( "A6.2_1" ),[128X[104X
+    [4X[28X        [ 5, 1, -1, 2, -1, 0, 1, -3, -1, 1, 0 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "A6.2_1" ),[128X[104X
+    [4X[28X        [ 5, 1, 2, -1, -1, 0, -3, 1, -1, 0, 1 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "A6.2_1" ),[128X[104X
+    [4X[28X        [ 10, -2, 1, 1, 0, 0, -2, 2, 0, 1, -1 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "A6.2_1" ),[128X[104X
+    [4X[28X        [ 10, -2, 1, 1, 0, 0, 2, -2, 0, -1, 1 ] ) ],[128X[104X
+    [4X[28X  remainders :=[128X[104X
+    [4X[28X    [ VirtualCharacter( CharacterTable( "A6.2_1" ),[128X[104X
+    [4X[28X        [ 0, 0, 3, -3, 0, 0, 4, -4, 0, 1, -1 ] ),[128X[104X
+    [4X[28X      VirtualCharacter( CharacterTable( "A6.2_1" ),[128X[104X
+    [4X[28X        [ 6, 2, 3, 0, 0, 1, 2, -2, 0, -1, -2 ] ),[128X[104X
+    [4X[28X      VirtualCharacter( CharacterTable( "A6.2_1" ),[128X[104X
+    [4X[28X        [ 10, 2, 1, 1, 2, 0, 2, 2, -2, -1, -1 ] ),[128X[104X
+    [4X[28X      VirtualCharacter( CharacterTable( "A6.2_1" ),[128X[104X
+    [4X[28X        [ 14, 2, 2, -1, 0, -1, 6, 2, 0, 0, -1 ] ) ] )[128X[104X
+  [4X[32X[104X
+
+  [1X72.10-7 Decreased[101X
+
+  [33X[1;0Y[29X[2XDecreased[102X( [3Xtbl[103X, [3Xchars[103X, [3Xdecompmat[103X[, [3Xchoice[103X] ) [32X function[133X
+
+  [33X[0;0YLet  [3Xtbl[103X  be an ordinary character table, [3Xchars[103X a list of virtual characters
+  of  [3Xtbl[103X,  and [3Xdecompmat[103X a decomposition matrix, that is, a matrix [22XM[122X with the
+  property  that  [22XM^tr  ⋅  X  =  [3Xchars[103X[122X holds, where [22XX[122X is a list of irreducible
+  characters  of  [3Xtbl[103X.  [2XDecreased[102X tries to compute the irreducibles in [22XX[122X or at
+  least some of them.[133X
+
+  [33X[0;0YUsually  [2XDecreased[102X  is  applied  to  the  output  of  [2XExtract[102X  ([14X72.10-5[114X)  or
+  [2XOrthogonalEmbeddings[102X    ([14X25.6-1[114X)   or   [2XOrthogonalEmbeddingsSpecialDimension[102X
+  ([14X72.10-6[114X).   In   the  case  of  [2XExtract[102X  ([14X72.10-5[114X),  the  choice  component
+  corresponding to the decomposition matrix must be entered as argument [3Xchoice[103X
+  of [2XDecreased[102X.[133X
+
+  [33X[0;0Y[2XDecreased[102X  returns  [9Xfail[109X  if  it  can  prove  that  no list [22XX[122X of irreducible
+  characters  corresponding  to  the  arguments  exists;  otherwise  [2XDecreased[102X
+  returns a record with the following components.[133X
+
+  [8X[10Xirreducibles[110X[8X[108X
+        [33X[0;6Ythe list of found irreducible characters,[133X
+
+  [8X[10Xremainders[110X[8X[108X
+        [33X[0;6Ythe remaining reducible characters, and[133X
+
+  [8X[10Xmatrix[110X[8X[108X
+        [33X[0;6Ythe   decomposition   matrix  of  the  characters  in  the  [10Xremainders[110X
+        component.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xs4:= CharacterTable( "Symmetric", 4 );;[127X[104X
+    [4X[25Xgap>[125X [27Xx:= Irr( s4 );;[127X[104X
+    [4X[25Xgap>[125X [27Xred:= [ x[1]+x[2], -x[1]-x[3], -x[1]+x[3], -x[2]-x[4] ];;[127X[104X
+    [4X[25Xgap>[125X [27Xmat:= MatScalarProducts( s4, red, red );[127X[104X
+    [4X[28X[ [ 2, -1, -1, -1 ], [ -1, 2, 0, 0 ], [ -1, 0, 2, 0 ],[128X[104X
+    [4X[28X  [ -1, 0, 0, 2 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xemb:= OrthogonalEmbeddings( mat );[127X[104X
+    [4X[28Xrec( norms := [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],[128X[104X
+    [4X[28X  solutions := [ [ 1, 6, 7, 12 ], [ 2, 5, 8, 11 ], [ 3, 4, 9, 10 ] ],[128X[104X
+    [4X[28X  vectors := [ [ -1, 1, 1, 0 ], [ -1, 1, 0, 1 ], [ 1, -1, 0, 0 ],[128X[104X
+    [4X[28X      [ -1, 0, 1, 1 ], [ -1, 0, 1, 0 ], [ -1, 0, 0, 1 ],[128X[104X
+    [4X[28X      [ 0, -1, 1, 0 ], [ 0, -1, 0, 1 ], [ 0, 1, 0, 0 ],[128X[104X
+    [4X[28X      [ 0, 0, -1, 1 ], [ 0, 0, 1, 0 ], [ 0, 0, 0, 1 ] ] )[128X[104X
+    [4X[25Xgap>[125X [27Xdec:= Decreased( s4, red, emb.vectors{ emb.solutions[1] } );[127X[104X
+    [4X[28Xrec([128X[104X
+    [4X[28X  irreducibles :=[128X[104X
+    [4X[28X    [ Character( CharacterTable( "Sym(4)" ), [ 3, -1, -1, 0, 1 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "Sym(4)" ), [ 1, -1, 1, 1, -1 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "Sym(4)" ), [ 2, 0, 2, -1, 0 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "Sym(4)" ), [ 3, 1, -1, 0, -1 ] ) ],[128X[104X
+    [4X[28X  matrix := [  ], remainders := [  ] )[128X[104X
+    [4X[25Xgap>[125X [27XDecreased( s4, red, emb.vectors{ emb.solutions[2] } );[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27XDecreased( s4, red, emb.vectors{ emb.solutions[3] } );[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+
+  [1X72.10-8 DnLattice[101X
+
+  [33X[1;0Y[29X[2XDnLattice[102X( [3Xtbl[103X, [3Xgrammat[103X, [3Xreducibles[103X ) [32X function[133X
+
+  [33X[0;0YLet  [3Xtbl[103X  be  an  ordinary character table, and [3Xreducibles[103X a list of virtual
+  characters of [3Xtbl[103X.[133X
+
+  [33X[0;0Y[2XDnLattice[102X  searches for sublattices isomorphic to root lattices of type [22XD_n[122X,
+  for  [22Xn  ≥  4[122X, in the lattice that is generated by [3Xreducibles[103X; each vector in
+  [3Xreducibles[103X   must   have   norm   [22X2[122X,  and  the  matrix  of  scalar  products
+  (see [2XMatScalarProducts[102X  ([14X72.8-6[114X))  of [3Xreducibles[103X must be entered as argument
+  [3Xgrammat[103X.[133X
+
+  [33X[0;0Y[2XDnLattice[102X  is  able  to find irreducible characters if there is a lattice of
+  type  [22XD_n[122X  with  [22Xn  >  4[122X. In the case [22Xn = 4[122X, [2XDnLattice[102X may fail to determine
+  irreducibles.[133X
+
+  [33X[0;0Y[2XDnLattice[102X returns a record with components[133X
+
+  [8X[10Xirreducibles[110X[8X[108X
+        [33X[0;6Ythe list of found irreducible characters,[133X
+
+  [8X[10Xremainders[110X[8X[108X
+        [33X[0;6Ythe list of remaining reducible virtual characters, and[133X
+
+  [8X[10Xgram[110X[8X[108X
+        [33X[0;6Ythe Gram matrix of the vectors in [10Xremainders[110X.[133X
+
+  [33X[0;0YThe  [10Xremainders[110X  list is transformed in such a way that the [10Xgram[110X matrix is a
+  block  diagonal  matrix that exhibits the structure of the lattice generated
+  by  the vectors in [10Xremainders[110X. So [2XDnLattice[102X might be useful even if it fails
+  to find irreducible characters.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xs4:= CharacterTable( "Symmetric", 4 );;[127X[104X
+    [4X[25Xgap>[125X [27Xred:= [ [ 2, 0, 2, 2, 0 ], [ 4, 0, 0, 1, 2 ],[127X[104X
+    [4X[25X>[125X [27X           [ 5, -1, 1, -1, 1 ], [ -1, 1, 3, -1, -1 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27Xgram:= MatScalarProducts( s4, red, red );[127X[104X
+    [4X[28X[ [ 2, 1, 0, 0 ], [ 1, 2, 1, -1 ], [ 0, 1, 2, 0 ], [ 0, -1, 0, 2 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xdn:= DnLattice( s4, gram, red );[127X[104X
+    [4X[28Xrec( gram := [  ],[128X[104X
+    [4X[28X  irreducibles :=[128X[104X
+    [4X[28X    [ Character( CharacterTable( "Sym(4)" ), [ 2, 0, 2, -1, 0 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "Sym(4)" ), [ 1, -1, 1, 1, -1 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "Sym(4)" ), [ 1, 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "Sym(4)" ), [ 3, -1, -1, 0, 1 ] ) ],[128X[104X
+    [4X[28X  remainders := [  ] )[128X[104X
+  [4X[32X[104X
+
+  [1X72.10-9 DnLatticeIterative[101X
+
+  [33X[1;0Y[29X[2XDnLatticeIterative[102X( [3Xtbl[103X, [3Xreducibles[103X ) [32X function[133X
+
+  [33X[0;0YLet  [3Xtbl[103X  be  an  ordinary  character table, and [3Xreducibles[103X either a list of
+  virtual  characters of [3Xtbl[103X or a record with components [10Xremainders[110X and [10Xnorms[110X,
+  for example a record returned by [2XLLL[102X ([14X72.10-4[114X).[133X
+
+  [33X[0;0Y[2XDnLatticeIterative[102X  was  designed  for iterative use of [2XDnLattice[102X ([14X72.10-8[114X).
+  [2XDnLatticeIterative[102X  selects  the  vectors  of norm [22X2[122X among the given virtual
+  character,   calls   [2XDnLattice[102X  ([14X72.10-8[114X)  for  them,  reduces  the  virtual
+  characters  with found irreducibles, calls [2XDnLattice[102X ([14X72.10-8[114X) again for the
+  remaining  virtual  characters,  and  so  on,  until no new irreducibles are
+  found.[133X
+
+  [33X[0;0Y[2XDnLatticeIterative[102X  returns a record with the same components and meaning of
+  components as [2XLLL[102X ([14X72.10-4[114X).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xs4:= CharacterTable( "Symmetric", 4 );;[127X[104X
+    [4X[25Xgap>[125X [27Xred:= [ [ 2, 0, 2, 2, 0 ], [ 4, 0, 0, 1, 2 ],[127X[104X
+    [4X[25X>[125X [27X           [ 5, -1, 1, -1, 1 ], [ -1, 1, 3, -1, -1 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27Xdn:= DnLatticeIterative( s4, red );[127X[104X
+    [4X[28Xrec([128X[104X
+    [4X[28X  irreducibles :=[128X[104X
+    [4X[28X    [ Character( CharacterTable( "Sym(4)" ), [ 2, 0, 2, -1, 0 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "Sym(4)" ), [ 1, -1, 1, 1, -1 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "Sym(4)" ), [ 1, 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X      Character( CharacterTable( "Sym(4)" ), [ 3, -1, -1, 0, 1 ] ) ],[128X[104X
+    [4X[28X  norms := [  ], remainders := [  ] )[128X[104X
+  [4X[32X[104X
+
+
+  [1X72.11 [33X[0;0YSymmetrizations of Class Functions[133X[101X
+
+  [1X72.11-1 Symmetrizations[101X
+
+  [33X[1;0Y[29X[2XSymmetrizations[102X( [[3Xtbl[103X, ][3Xcharacters[103X, [3Xn[103X ) [32X operation[133X
+
+  [33X[0;0Y[2XSymmetrizations[102X  returns  the  list  of  symmetrizations  of  the characters
+  [3Xcharacters[103X of the ordinary character table [3Xtbl[103X with the ordinary irreducible
+  characters of the symmetric group of degree [3Xn[103X; instead of the integer [3Xn[103X, the
+  character table of the symmetric group can be entered.[133X
+
+  [33X[0;0YThe  symmetrization  [22Xχ^[λ][122X of the character [22Xχ[122X of [3Xtbl[103X with the character [22Xλ[122X of
+  the symmetric group [22XS_n[122X of degree [22Xn[122X is defined by[133X
+
+
+  [24X[33X[0;6Yχ^[λ](g) = ( ∑_{ρ ∈ S_n} λ(ρ) ∏_{k=1}^n χ(g^k)^{a_k(ρ)} ) / n! ,[133X[124X
+
+  [33X[0;0Ywhere [22Xa_k(ρ)[122X is the number of cycles of length [22Xk[122X in [22Xρ[122X.[133X
+
+  [33X[0;0Y[13XNote[113X that the returned list may contain zero class functions, and duplicates
+  are not deleted.[133X
+
+  [33X[0;0YFor   special   kinds   of  symmetrizations,  see [2XSymmetricParts[102X  ([14X72.11-2[114X),
+  [2XAntiSymmetricParts[102X      ([14X72.11-3[114X),      [2XMinusCharacter[102X      ([14X73.6-5[114X)     and
+  [2XOrthogonalComponents[102X      ([14X72.11-6[114X),     [2XSymplecticComponents[102X     ([14X72.11-7[114X),
+  [2XExteriorPower[102X ([14X72.11-4[114X), [2XSymmetricPower[102X ([14X72.11-5[114X).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtbl:= CharacterTable( "A5" );;[127X[104X
+    [4X[25Xgap>[125X [27XSymmetrizations( Irr( tbl ){ [ 1 .. 3 ] }, 3 );[127X[104X
+    [4X[28X[ VirtualCharacter( CharacterTable( "A5" ), [ 0, 0, 0, 0, 0 ] ),[128X[104X
+    [4X[28X  VirtualCharacter( CharacterTable( "A5" ), [ 0, 0, 0, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 1, 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 1, 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ),[128X[104X
+    [4X[28X    [ 8, 0, -1, -E(5)-E(5)^4, -E(5)^2-E(5)^3 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 10, -2, 1, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 1, 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ),[128X[104X
+    [4X[28X    [ 8, 0, -1, -E(5)^2-E(5)^3, -E(5)-E(5)^4 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 10, -2, 1, 0, 0 ] ) ][128X[104X
+  [4X[32X[104X
+
+  [1X72.11-2 SymmetricParts[101X
+
+  [33X[1;0Y[29X[2XSymmetricParts[102X( [3Xtbl[103X, [3Xcharacters[103X, [3Xn[103X ) [32X function[133X
+
+  [33X[0;0Yis the list of symmetrizations of the characters [3Xcharacters[103X of the character
+  table  [3Xtbl[103X  with  the  trivial  character of the symmetric group of degree [3Xn[103X
+  (see [2XSymmetrizations[102X ([14X72.11-1[114X)).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtbl:= CharacterTable( "A5" );;[127X[104X
+    [4X[25Xgap>[125X [27XSymmetricParts( tbl, Irr( tbl ), 3 );[127X[104X
+    [4X[28X[ Character( CharacterTable( "A5" ), [ 1, 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 10, -2, 1, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 10, -2, 1, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 20, 0, 2, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 35, 3, 2, 0, 0 ] ) ][128X[104X
+  [4X[32X[104X
+
+  [1X72.11-3 AntiSymmetricParts[101X
+
+  [33X[1;0Y[29X[2XAntiSymmetricParts[102X( [3Xtbl[103X, [3Xcharacters[103X, [3Xn[103X ) [32X function[133X
+
+  [33X[0;0Yis the list of symmetrizations of the characters [3Xcharacters[103X of the character
+  table  [3Xtbl[103X  with  the  sign  character  of  the  symmetric group of degree [3Xn[103X
+  (see [2XSymmetrizations[102X ([14X72.11-1[114X)).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtbl:= CharacterTable( "A5" );;[127X[104X
+    [4X[25Xgap>[125X [27XAntiSymmetricParts( tbl, Irr( tbl ), 3 );[127X[104X
+    [4X[28X[ VirtualCharacter( CharacterTable( "A5" ), [ 0, 0, 0, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 1, 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 1, 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 4, 0, 1, -1, -1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 10, -2, 1, 0, 0 ] ) ][128X[104X
+  [4X[32X[104X
+
+  [1X72.11-4 ExteriorPower[101X
+
+  [33X[1;0Y[29X[2XExteriorPower[102X( [3Xchi[103X, [3Xn[103X ) [32X operation[133X
+
+  [33X[0;0YFor  a  character  [3Xchi[103X  afforded  by  the module [22XV[122X and a positive integer [3Xn[103X,
+  [2XExteriorPower[102X  returns  the  class  function  that  is  afforded by the [3Xn[103X-th
+  exterior power of [22XV[122X.[133X
+
+  [33X[0;0YThis  exterior power is the symmetrization of [3Xchi[103X with the sign character of
+  the  symmetric  group  of  degree  [3Xn[103X, see also [2XSymmetrizations[102X ([14X72.11-1[114X) and
+  [2XAntiSymmetricParts[102X ([14X72.11-3[114X).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xt:= CharacterTable( "A5" );;[127X[104X
+    [4X[25Xgap>[125X [27XList( Irr( t ), chi -> ExteriorPower( chi, 3 ) );[127X[104X
+    [4X[28X[ VirtualCharacter( CharacterTable( "A5" ), [ 0, 0, 0, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 1, 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 1, 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 4, 0, 1, -1, -1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 10, -2, 1, 0, 0 ] ) ][128X[104X
+  [4X[32X[104X
+
+  [1X72.11-5 SymmetricPower[101X
+
+  [33X[1;0Y[29X[2XSymmetricPower[102X( [3Xchi[103X, [3Xn[103X ) [32X operation[133X
+
+  [33X[0;0YFor  a  character  [3Xchi[103X  afforded  by  the module [22XV[122X and a positive integer [3Xn[103X,
+  [2XSymmetricPower[102X  returns  the  class  function  that  is afforded by the [3Xn[103X-th
+  symmetric power of [22XV[122X.[133X
+
+  [33X[0;0YThis symmetric power is the symmetrization of [3Xchi[103X with the trivial character
+  of  the  symmetric group of degree [3Xn[103X, see also [2XSymmetrizations[102X ([14X72.11-1[114X) and
+  [2XSymmetricParts[102X ([14X72.11-2[114X).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xt:= CharacterTable( "A5" );;[127X[104X
+    [4X[25Xgap>[125X [27XList( Irr( t ), chi -> SymmetricPower( chi, 3 ) );[127X[104X
+    [4X[28X[ Character( CharacterTable( "A5" ), [ 1, 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 10, -2, 1, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 10, -2, 1, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 20, 0, 2, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 35, 3, 2, 0, 0 ] ) ][128X[104X
+  [4X[32X[104X
+
+  [1X72.11-6 OrthogonalComponents[101X
+
+  [33X[1;0Y[29X[2XOrthogonalComponents[102X( [3Xtbl[103X, [3Xchars[103X, [3Xm[103X ) [32X function[133X
+
+  [33X[0;0YIf  [22Xχ[122X  is a nonlinear character with indicator [22X+1[122X, a splitting of the tensor
+  power [22Xχ^m[122X is given by the so-called Murnaghan functions (see [Mur58]). These
+  components   in   general  have  fewer  irreducible  constituents  than  the
+  symmetrizations  with  the  symmetric group of degree [3Xm[103X (see [2XSymmetrizations[102X
+  ([14X72.11-1[114X)).[133X
+
+  [33X[0;0Y[2XOrthogonalComponents[102X  returns  the  Murnaghan  components  of  the nonlinear
+  characters  of  the character table [3Xtbl[103X in the list [3Xchars[103X up to the power [3Xm[103X,
+  where [3Xm[103X is an integer between 2 and 6.[133X
+
+  [33X[0;0YThe Murnaghan functions are implemented as in [Fra82].[133X
+
+  [33X[0;0Y[13XNote[113X:  If  [3Xchars[103X  is  a list of character objects (see [2XIsCharacter[102X ([14X72.8-1[114X))
+  then  also  the result consists of class function objects. It is not checked
+  whether  all  characters  in [3Xchars[103X do really have indicator [22X+1[122X; if there are
+  characters  with  indicator  [22X0[122X  or  [22X-1[122X,  the  result  might  contain virtual
+  characters  (see also [2XSymplecticComponents[102X ([14X72.11-7[114X)), therefore the entries
+  of the result do in general not know that they are characters.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtbl:= CharacterTable( "A8" );;  chi:= Irr( tbl )[2];[127X[104X
+    [4X[28XCharacter( CharacterTable( "A8" ), [ 7, -1, 3, 4, 1, -1, 1, 2, 0, -1,[128X[104X
+    [4X[28X  0, 0, -1, -1 ] )[128X[104X
+    [4X[25Xgap>[125X [27XOrthogonalComponents( tbl, [ chi ], 3 );[127X[104X
+    [4X[28X[ ClassFunction( CharacterTable( "A8" ),[128X[104X
+    [4X[28X    [ 21, -3, 1, 6, 0, 1, -1, 1, -2, 0, 0, 0, 1, 1 ] ),[128X[104X
+    [4X[28X  ClassFunction( CharacterTable( "A8" ),[128X[104X
+    [4X[28X    [ 27, 3, 7, 9, 0, -1, 1, 2, 1, 0, -1, -1, -1, -1 ] ),[128X[104X
+    [4X[28X  ClassFunction( CharacterTable( "A8" ),[128X[104X
+    [4X[28X    [ 105, 1, 5, 15, -3, 1, -1, 0, -1, 1, 0, 0, 0, 0 ] ),[128X[104X
+    [4X[28X  ClassFunction( CharacterTable( "A8" ),[128X[104X
+    [4X[28X    [ 35, 3, -5, 5, 2, -1, -1, 0, 1, 0, 0, 0, 0, 0 ] ),[128X[104X
+    [4X[28X  ClassFunction( CharacterTable( "A8" ),[128X[104X
+    [4X[28X    [ 77, -3, 13, 17, 2, 1, 1, 2, 1, 0, 0, 0, 2, 2 ] ) ][128X[104X
+  [4X[32X[104X
+
+  [1X72.11-7 SymplecticComponents[101X
+
+  [33X[1;0Y[29X[2XSymplecticComponents[102X( [3Xtbl[103X, [3Xchars[103X, [3Xm[103X ) [32X function[133X
+
+  [33X[0;0YIf [22Xχ[122X is a (nonlinear) character with indicator [22X-1[122X, a splitting of the tensor
+  power   [22Xχ^m[122X   is  given  in  terms  of  the  so-called  Murnaghan  functions
+  (see [Mur58]).   These   components   in   general  have  fewer  irreducible
+  constituents  than  the symmetrizations with the symmetric group of degree [3Xm[103X
+  (see [2XSymmetrizations[102X ([14X72.11-1[114X)).[133X
+
+  [33X[0;0Y[2XSymplecticComponents[102X returns the symplectic symmetrizations of the nonlinear
+  characters  of  the character table [3Xtbl[103X in the list [3Xchars[103X up to the power [3Xm[103X,
+  where [3Xm[103X is an integer between [22X2[122X and [22X5[122X.[133X
+
+  [33X[0;0Y[13XNote[113X:  If  [3Xchars[103X  is  a list of character objects (see [2XIsCharacter[102X ([14X72.8-1[114X))
+  then  also  the result consists of class function objects. It is not checked
+  whether  all  characters  in [3Xchars[103X do really have indicator [22X-1[122X; if there are
+  characters  with  indicator  [22X0[122X  or  [22X+1[122X,  the  result  might  contain virtual
+  characters  (see also [2XOrthogonalComponents[102X ([14X72.11-6[114X)), therefore the entries
+  of the result do in general not know that they are characters.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtbl:= CharacterTable( "U3(3)" );;  chi:= Irr( tbl )[2];[127X[104X
+    [4X[28XCharacter( CharacterTable( "U3(3)" ),[128X[104X
+    [4X[28X[ 6, -2, -3, 0, -2, -2, 2, 1, -1, -1, 0, 0, 1, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27XSymplecticComponents( tbl, [ chi ], 3 );[127X[104X
+    [4X[28X[ ClassFunction( CharacterTable( "U3(3)" ),[128X[104X
+    [4X[28X    [ 14, -2, 5, -1, 2, 2, 2, 1, 0, 0, 0, 0, -1, -1 ] ),[128X[104X
+    [4X[28X  ClassFunction( CharacterTable( "U3(3)" ),[128X[104X
+    [4X[28X    [ 21, 5, 3, 0, 1, 1, 1, -1, 0, 0, -1, -1, 1, 1 ] ),[128X[104X
+    [4X[28X  ClassFunction( CharacterTable( "U3(3)" ),[128X[104X
+    [4X[28X    [ 64, 0, -8, -2, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ] ),[128X[104X
+    [4X[28X  ClassFunction( CharacterTable( "U3(3)" ),[128X[104X
+    [4X[28X    [ 14, 6, -4, 2, -2, -2, 2, 0, 0, 0, 0, 0, -2, -2 ] ),[128X[104X
+    [4X[28X  ClassFunction( CharacterTable( "U3(3)" ),[128X[104X
+    [4X[28X    [ 56, -8, 2, 2, 0, 0, 0, -2, 0, 0, 0, 0, 0, 0 ] ) ][128X[104X
+  [4X[32X[104X
+
+
+  [1X72.12 [33X[0;0YMolien Series[133X[101X
+
+  [1X72.12-1 MolienSeries[101X
+
+  [33X[1;0Y[29X[2XMolienSeries[102X( [[3Xtbl[103X, ][3Xpsi[103X[, [3Xchi[103X] ) [32X function[133X
+
+  [33X[0;0YThe  [13XMolien  series[113X  of the character [22Xψ[122X, relative to the character [22Xχ[122X, is the
+  rational  function  given  by  the series [22XM_{ψ,χ}(z) = ∑_{d = 0}^∞ [χ,ψ^[d]]
+  z^d[122X,  where [22Xψ^[d][122X denotes the symmetrization of [22Xψ[122X with the trivial character
+  of the symmetric group [22XS_d[122X (see [2XSymmetricParts[102X ([14X72.11-2[114X)).[133X
+
+  [33X[0;0Y[2XMolienSeries[102X  returns  the  Molien series of [3Xpsi[103X, relative to [3Xchi[103X, where [3Xpsi[103X
+  and  [3Xchi[103X  must be characters of the same character table; this table must be
+  entered  as  [3Xtbl[103X  if  [3Xchi[103X  and  [3Xpsi[103X  are only lists of character values. The
+  default for [3Xchi[103X is the trivial character of [3Xtbl[103X.[133X
+
+  [33X[0;0YThe   return  value  of  [2XMolienSeries[102X  stores  a  value  for  the  attribute
+  [2XMolienSeriesInfo[102X  ([14X72.12-2[114X).  This admits the computation of coefficients of
+  the  series  with  [2XValueMolienSeries[102X  ([14X72.12-3[114X). Furthermore, this attribute
+  gives  access  to  numerator  and denominator of the Molien series viewed as
+  rational  function, where the denominator is a product of polynomials of the
+  form  [22X(1-z^r)^k[122X; the Molien series is also displayed in this form. Note that
+  such     a     representation     is     not    unique,    one    can    use
+  [2XMolienSeriesWithGivenDenominator[102X  ([14X72.12-4[114X)  to  obtain  the  series  with a
+  prescribed denominator.[133X
+
+  [33X[0;0YFor more information about Molien series, see [NPP84].[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xt:= CharacterTable( AlternatingGroup( 5 ) );;[127X[104X
+    [4X[25Xgap>[125X [27Xpsi:= First( Irr( t ), x -> Degree( x ) = 3 );;[127X[104X
+    [4X[25Xgap>[125X [27Xmol:= MolienSeries( psi );[127X[104X
+    [4X[28X( 1-z^2-z^3+z^6+z^7-z^9 ) / ( (1-z^5)*(1-z^3)*(1-z^2)^2 )[128X[104X
+  [4X[32X[104X
+
+  [1X72.12-2 MolienSeriesInfo[101X
+
+  [33X[1;0Y[29X[2XMolienSeriesInfo[102X( [3Xratfun[103X ) [32X attribute[133X
+
+  [33X[0;0YIf the rational function [3Xratfun[103X was constructed by [2XMolienSeries[102X ([14X72.12-1[114X), a
+  representation as quotient of polynomials is known such that the denominator
+  is  a product of terms of the form [22X(1-z^r)^k[122X. This information is encoded as
+  value of [2XMolienSeriesInfo[102X. Additionally, there is a special [2XPrintObj[102X ([14X6.3-5[114X)
+  method for Molien series based on this.[133X
+
+  [33X[0;0Y[2XMolienSeriesInfo[102X  returns  a  record  that  describes  the rational function
+  [3Xratfun[103X as a Molien series. The components of this record are[133X
+
+  [8X[10Xnumer[110X[8X[108X
+        [33X[0;6Ynumerator  of  [3Xratfun[103X (in general a multiple of the numerator one gets
+        by [2XNumeratorOfRationalFunction[102X ([14X66.4-2[114X)),[133X
+
+  [8X[10Xdenom[110X[8X[108X
+        [33X[0;6Ydenominator  of  [3Xratfun[103X  (in general a multiple of the denominator one
+        gets by [2XNumeratorOfRationalFunction[102X ([14X66.4-2[114X)),[133X
+
+  [8X[10Xratfun[110X[8X[108X
+        [33X[0;6Ythe rational function [3Xratfun[103X itself,[133X
+
+  [8X[10Xnumerstring[110X[8X[108X
+        [33X[0;6Ystring corresponding to the polynomial [10Xnumer[110X, expressed in terms of [10Xz[110X,[133X
+
+  [8X[10Xdenomstring[110X[8X[108X
+        [33X[0;6Ystring corresponding to the polynomial [10Xdenom[110X, expressed in terms of [10Xz[110X,[133X
+
+  [8X[10Xdenominfo[110X[8X[108X
+        [33X[0;6Ya list of the form [22X[ [ r_1, k_1 ], ..., [ r_n, k_n ] ][122X such that [10Xdenom[110X
+        is [22X∏_{i = 1}^n (1-z^{r_i})^{k_i}[122X.[133X
+
+  [8X[10Xsummands[110X[8X[108X
+        [33X[0;6Ya  list  of  records,  each  with  the  components  [10Xnumer[110X,  [10Xr[110X,  and [10Xk[110X,
+        describing the summand [10Xnumer[110X[22X/ (1-z^r)^k[122X,[133X
+
+  [8X[10Xpol[110X[8X[108X
+        [33X[0;6Ya  list  of coefficients, describing a final polynomial which is added
+        to those described by [10Xsummands[110X,[133X
+
+  [8X[10Xsize[110X[8X[108X
+        [33X[0;6Ythe order of the underlying matrix group,[133X
+
+  [8X[10Xdegree[110X[8X[108X
+        [33X[0;6Ythe degree of the underlying matrix representation.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XHasMolienSeriesInfo( mol );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XMolienSeriesInfo( mol );[127X[104X
+    [4X[28Xrec( degree := 3,[128X[104X
+    [4X[28X  denom := x_1^12-2*x_1^10-x_1^9+x_1^8+x_1^7+x_1^5+x_1^4-x_1^3-2*x_1^2\[128X[104X
+    [4X[28X+1, denominfo := [ 5, 1, 3, 1, 2, 2 ],[128X[104X
+    [4X[28X  denomstring := "(1-z^5)*(1-z^3)*(1-z^2)^2",[128X[104X
+    [4X[28X  numer := -x_1^9+x_1^7+x_1^6-x_1^3-x_1^2+1,[128X[104X
+    [4X[28X  numerstring := "1-z^2-z^3+z^6+z^7-z^9", pol := [  ],[128X[104X
+    [4X[28X  ratfun := ( 1-z^2-z^3+z^6+z^7-z^9 ) / ( (1-z^5)*(1-z^3)*(1-z^2)^2 ),[128X[104X
+    [4X[28X  size := 60,[128X[104X
+    [4X[28X  summands := [ rec( k := 1, numer := [ -24, -12, -24 ], r := 5 ),[128X[104X
+    [4X[28X      rec( k := 1, numer := [ -20 ], r := 3 ),[128X[104X
+    [4X[28X      rec( k := 2, numer := [ -45/4, 75/4, -15/4, -15/4 ], r := 2 ),[128X[104X
+    [4X[28X      rec( k := 3, numer := [ -1 ], r := 1 ),[128X[104X
+    [4X[28X      rec( k := 1, numer := [ -15/4 ], r := 1 ) ] )[128X[104X
+  [4X[32X[104X
+
+  [1X72.12-3 ValueMolienSeries[101X
+
+  [33X[1;0Y[29X[2XValueMolienSeries[102X( [3Xmolser[103X, [3Xi[103X ) [32X function[133X
+
+  [33X[0;0Yis the [3Xi[103X-th coefficient of the Molien series [3Xseries[103X computed by [2XMolienSeries[102X
+  ([14X72.12-1[114X).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XList( [ 0 .. 20 ], i -> ValueMolienSeries( mol, i ) );[127X[104X
+    [4X[28X[ 1, 0, 1, 0, 1, 0, 2, 0, 2, 0, 3, 0, 4, 0, 4, 1, 5, 1, 6, 1, 7 ][128X[104X
+  [4X[32X[104X
+
+  [1X72.12-4 MolienSeriesWithGivenDenominator[101X
+
+  [33X[1;0Y[29X[2XMolienSeriesWithGivenDenominator[102X( [3Xmolser[103X, [3Xlist[103X ) [32X function[133X
+
+  [33X[0;0Yis  a  Molien  series  equal  to  [3Xmolser[103X as rational function, but viewed as
+  quotient  with denominator [22X∏_{i = 1}^n (1-z^{r_i})[122X, where [22X[3Xlist[103X = [ r_1, r_2,
+  ..., r_n ][122X. If [3Xmolser[103X cannot be represented this way, [9Xfail[109X is returned.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XMolienSeriesWithGivenDenominator( mol, [ 2, 6, 10 ] );[127X[104X
+    [4X[28X( 1+z^15 ) / ( (1-z^10)*(1-z^6)*(1-z^2) )[128X[104X
+  [4X[32X[104X
+
+
+  [1X72.13 [33X[0;0YPossible Permutation Characters[133X[101X
+
+  [33X[0;0YFor  groups  [22XH[122X and [22XG[122X with [22XH ≤ G[122X, the induced character [22X(1_G)^H[122X is called the
+  [13Xpermutation  character[113X  of  the  operation of [22XG[122X on the right cosets of [22XH[122X. If
+  only  the  character table of [22XG[122X is available and not the group [22XG[122X itself, one
+  can  try  to  get information about possible subgroups of [22XG[122X by inspection of
+  those  [22XG[122X-class  functions  that  might be permutation characters, using that
+  such  a  class  function [22Xπ[122X must have at least the following properties. (For
+  details, see [Isa76, Theorem 5.18.]),[133X
+
+  [8X(a)[108X
+        [33X[0;6Y[22Xπ[122X is a character of [22XG[122X,[133X
+
+  [8X(b)[108X
+        [33X[0;6Y[22Xπ(g)[122X is a nonnegative integer for all [22Xg ∈ G[122X,[133X
+
+  [8X(c)[108X
+        [33X[0;6Y[22Xπ(1)[122X divides [22X|G|[122X,[133X
+
+  [8X(d)[108X
+        [33X[0;6Y[22Xπ(g^n) ≥ π(g)[122X for [22Xg ∈ G[122X and integers [22Xn[122X,[133X
+
+  [8X(e)[108X
+        [33X[0;6Y[22X[π, 1_G] = 1[122X,[133X
+
+  [8X(f)[108X
+        [33X[0;6Ythe  multiplicity  of  any  rational  irreducible  [22XG[122X-character  [22Xψ[122X as a
+        constituent of [22Xπ[122X is at most [22Xψ(1)/[ψ, ψ][122X,[133X
+
+  [8X(g)[108X
+        [33X[0;6Y[22Xπ(g) = 0[122X if the order of [22Xg[122X does not divide [22X|G|/π(1)[122X,[133X
+
+  [8X(h)[108X
+        [33X[0;6Y[22Xπ(1) |N_G(g)|[122X divides [22Xπ(g) |G|[122X for all [22Xg ∈ G[122X,[133X
+
+  [8X(i)[108X
+        [33X[0;6Y[22Xπ(g)  ≤  (|G|  - π(1)) / (|g^G| |Gal_G(g)|)[122X for all nonidentity [22Xg ∈ G[122X,
+        where  [22X|Gal_G(g)|[122X  denotes  the  number of conjugacy classes of [22XG[122X that
+        contain generators of the group [22X⟨ g ⟩[122X,[133X
+
+  [8X(j)[108X
+        [33X[0;6Yif  [22Xp[122X  is a prime that divides [22X|G|/π(1)[122X only once then [22Xs/(p-1)[122X divides
+        [22X|G|/π(1)[122X  and  is  congruent  to  [22X1[122X modulo [22Xp[122X, where [22Xs[122X is the number of
+        elements  of  order  [22Xp[122X  in the (hypothetical) subgroup [22XH[122X for which [22Xπ =
+        (1_H)^G[122X  holds.  (Note  that  [22Xs/(p-1)[122X  equals  the  number  of Sylow [22Xp[122X
+        subgroups in [22XH[122X.)[133X
+
+  [33X[0;0YAny  [22XG[122X-class function with these properties is called a [13Xpossible permutation
+  character[113X in [5XGAP[105X.[133X
+
+  [33X[0;0Y(Condition  (d)  is checked only for those power maps that are stored in the
+  character table of [22XG[122X; clearly (d) holds for all integers if it holds for all
+  prime divisors of the group order [22X|G|[122X.)[133X
+
+  [33X[0;0Y[5XGAP[105X  provides  some  algorithms  to  compute possible permutation characters
+  (see [2XPermChars[102X  ([14X72.14-1[114X)),  and also provides functions to check a few more
+  criteria whether a given character can be a transitive permutation character
+  (see [2XTestPerm1[102X ([14X72.14-2[114X)).[133X
+
+  [33X[0;0YSome  information  about the subgroup [22XU[122X can be computed from the permutation
+  character [22X(1_U)^G[122X using [2XPermCharInfo[102X ([14X72.13-1[114X).[133X
+
+  [1X72.13-1 PermCharInfo[101X
+
+  [33X[1;0Y[29X[2XPermCharInfo[102X( [3Xtbl[103X, [3Xpermchars[103X[, [3Xformat[103X] ) [32X function[133X
+
+  [33X[0;0YLet [3Xtbl[103X be the ordinary character table of the group [22XG[122X, and [3Xpermchars[103X either
+  the  permutation character [22X(1_U)^G[122X, for a subgroup [22XU[122X of [22XG[122X, or a list of such
+  permutation  characters.  [2XPermCharInfo[102X  returns  a record with the following
+  components.[133X
+
+  [8X[10Xcontained[110X[8X:[108X
+        [33X[0;6Ya list containing, for each character [22Xψ = (1_U)^G[122X in [3Xpermchars[103X, a list
+        containing  at position [22Xi[122X the number [22Xψ[i] |U| /[122X [10XSizesCentralizers( [110X[3Xtbl[103X[10X
+        )[110X[22X[i][122X,  which  equals  the  number  of  those  elements  of  [22XU[122X that are
+        contained in class [22Xi[122X of [3Xtbl[103X,[133X
+
+  [8X[10Xbound[110X[8X:[108X
+        [33X[0;6Ya list containing, for each character [22Xψ = (1_U)^G[122X in [3Xpermchars[103X, a list
+        containing at position [22Xi[122X the number [22X|U| / gcd( |U|,[122X [10XSizesCentralizers(
+        [3Xtbl[103X[10X )[110X[22X[i] )[122X, which divides the class length in [22XU[122X of an element in class
+        [22Xi[122X of [3Xtbl[103X,[133X
+
+  [8X[10Xdisplay[110X[8X:[108X
+        [33X[0;6Ya  record  that  can  be used as second argument of [2XDisplay[102X ([14X6.3-6[114X) to
+        display  each permutation character in [3Xpermchars[103X and the corresponding
+        components  [10Xcontained[110X  and [10Xbound[110X, for those classes where at least one
+        character of [3Xpermchars[103X is nonzero,[133X
+
+  [8X[10XATLAS[110X[8X:[108X
+        [33X[0;6Ya  list  of  strings  describing  the decomposition of the permutation
+        characters  in [3Xpermchars[103X into the irreducible characters of [3Xtbl[103X, given
+        in   an   [5XAtlas[105X-like   notation.   This  means  that  the  irreducible
+        constituents  are  indicated  by  their degrees followed by lower case
+        letters  [10Xa[110X,  [10Xb[110X,  [10Xc[110X,  [22X...[122X,  which  indicate  the successive irreducible
+        characters of [3Xtbl[103X of that degree, in the order in which they appear in
+        [10XIrr(  [110X[3Xtbl[103X[10X  )[110X.  A  sequence of small letters (not necessarily distinct)
+        after  a single number indicates a sum of irreducible constituents all
+        of  the same degree, an exponent [3Xn[103X for the letter [3Xlett[103X means that [3Xlett[103X
+        is  repeated  [3Xn[103X  times.  The  default  notation  for exponentiation is
+        [10X[3Xlett[103X[10X^{[3Xn[103X[10X}[110X, this is also chosen if the optional third argument [3Xformat[103X is
+        the  string  [10X"LaTeX"[110X;  if the third argument is the string [10X"HTML"[110X then
+        exponentiation is denoted by [10X[3Xlett[103X[10X<sup>[3Xn[103X[10X</sup>[110X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xt:= CharacterTable( "A6" );;[127X[104X
+    [4X[25Xgap>[125X [27Xpsi:= Sum( Irr( t ){ [ 1, 3, 6 ] } );[127X[104X
+    [4X[28XCharacter( CharacterTable( "A6" ), [ 15, 3, 0, 3, 1, 0, 0 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xinfo:= PermCharInfo( t, psi );[127X[104X
+    [4X[28Xrec( ATLAS := [ "1a+5b+9a" ], bound := [ [ 1, 3, 8, 8, 6, 24, 24 ] ],[128X[104X
+    [4X[28X  contained := [ [ 1, 9, 0, 8, 6, 0, 0 ] ],[128X[104X
+    [4X[28X  display :=[128X[104X
+    [4X[28X    rec([128X[104X
+    [4X[28X      chars := [ [ 15, 3, 0, 3, 1, 0, 0 ], [ 1, 9, 0, 8, 6, 0, 0 ],[128X[104X
+    [4X[28X          [ 1, 3, 8, 8, 6, 24, 24 ] ], classes := [ 1, 2, 4, 5 ],[128X[104X
+    [4X[28X      letter := "I" ) )[128X[104X
+    [4X[25Xgap>[125X [27XDisplay( t, info.display );[127X[104X
+    [4X[28XA6[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X     2  3  3  .  2[128X[104X
+    [4X[28X     3  2  .  2  .[128X[104X
+    [4X[28X     5  1  .  .  .[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X       1a 2a 3b 4a[128X[104X
+    [4X[28X    2P 1a 1a 3b 2a[128X[104X
+    [4X[28X    3P 1a 2a 1a 4a[128X[104X
+    [4X[28X    5P 1a 2a 3b 4a[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XI.1    15  3  3  1[128X[104X
+    [4X[28XI.2     1  9  8  6[128X[104X
+    [4X[28XI.3     1  3  8  6[128X[104X
+    [4X[25Xgap>[125X [27Xj1:= CharacterTable( "J1" );;[127X[104X
+    [4X[25Xgap>[125X [27Xpsi:= TrivialCharacter( CharacterTable( "7:6" ) )^j1;[127X[104X
+    [4X[28XCharacter( CharacterTable( "J1" ), [ 4180, 20, 10, 0, 0, 2, 1, 0, 0,[128X[104X
+    [4X[28X  0, 0, 0, 0, 0, 0 ] )[128X[104X
+    [4X[25Xgap>[125X [27XPermCharInfo( j1, psi ).ATLAS;[127X[104X
+    [4X[28X[ "1a+56aabb+76aaab+77aabbcc+120aaabbbccc+133a^{4}bbcc+209a^{5}" ][128X[104X
+  [4X[32X[104X
+
+  [1X72.13-2 PermCharInfoRelative[101X
+
+  [33X[1;0Y[29X[2XPermCharInfoRelative[102X( [3Xtbl[103X, [3Xtbl2[103X, [3Xpermchars[103X ) [32X function[133X
+
+  [33X[0;0YLet  [3Xtbl[103X  and  [3Xtbl2[103X  be the ordinary character tables of two groups [22XH[122X and [22XG[122X,
+  respectively,  where  [22XH[122X  is  of  index  two  in  [22XG[122X, and [3Xpermchars[103X either the
+  permutation  character  [22X(1_U)^G[122X,  for  a  subgroup [22XU[122X of [22XG[122X, or a list of such
+  permutation  characters. [2XPermCharInfoRelative[102X returns a record with the same
+  components as [2XPermCharInfo[102X ([14X72.13-1[114X), the only exception is that the entries
+  of the [10XATLAS[110X component are names relative to [3Xtbl[103X.[133X
+
+  [33X[0;0YMore precisely, the [22Xi[122X-th entry of the [10XATLAS[110X component is a string describing
+  the   decomposition  of  the  [22Xi[122X-th  entry  in  [3Xpermchars[103X.  The  degrees  and
+  distinguishing letters of the constituents refer to the irreducibles of [3Xtbl[103X,
+  as  follows.  The two irreducible characters of [3Xtbl2[103X of degree [22XN[122X that extend
+  the  irreducible  character  [22XN[122X  [10Xa[110X  of [3Xtbl[103X are denoted by [22XN[122X [10Xa[110X[22X^+[122X and [22XN[122X[10Xa[110X[22X^-[122X. The
+  irreducible  character  of [3Xtbl2[103X of degree [22X2N[122X whose restriction to [3Xtbl[103X is the
+  sum  of  the  irreducible  characters  [22XN[122X  [10Xa[110X  and  [22XN[122X  [10Xb[110X  is  denoted as [22XN[122X [10Xab[110X.
+  Multiplicities larger than [22X1[122X of constituents are denoted by exponents.[133X
+
+  [33X[0;0Y(This format is useful mainly for multiplicity free permutation characters.)[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xt:= CharacterTable( "A5" );;[127X[104X
+    [4X[25Xgap>[125X [27Xt2:= CharacterTable( "A5.2" );;[127X[104X
+    [4X[25Xgap>[125X [27XList( Irr( t2 ), x -> x[1] );[127X[104X
+    [4X[28X[ 1, 1, 6, 4, 4, 5, 5 ][128X[104X
+    [4X[25Xgap>[125X [27XList( Irr( t ), x -> x[1] );[127X[104X
+    [4X[28X[ 1, 3, 3, 4, 5 ][128X[104X
+    [4X[25Xgap>[125X [27Xpermchars:= List( [ [1], [1,2], [1,7], [1,3,4,4,6,6,7] ],[127X[104X
+    [4X[25X>[125X [27X                     l -> Sum( Irr( t2 ){ l } ) );[127X[104X
+    [4X[28X[ Character( CharacterTable( "A5.2" ), [ 1, 1, 1, 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5.2" ), [ 2, 2, 2, 2, 0, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5.2" ), [ 6, 2, 0, 1, 0, 2, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5.2" ), [ 30, 2, 0, 0, 6, 0, 0 ] ) ][128X[104X
+    [4X[25Xgap>[125X [27Xinfo:= PermCharInfoRelative( t, t2, permchars );;[127X[104X
+    [4X[25Xgap>[125X [27Xinfo.ATLAS;[127X[104X
+    [4X[28X[ "1a^+", "1a^{\\pm}", "1a^++5a^-",[128X[104X
+    [4X[28X  "1a^++3ab+4(a^+)^{2}+5a^+a^{\\pm}" ][128X[104X
+  [4X[32X[104X
+
+
+  [1X72.14 [33X[0;0YComputing Possible Permutation Characters[133X[101X
+
+  [1X72.14-1 PermChars[101X
+
+  [33X[1;0Y[29X[2XPermChars[102X( [3Xtbl[103X[, [3Xcond[103X] ) [32X function[133X
+
+  [33X[0;0Y[5XGAP[105X provides several algorithms to determine possible permutation characters
+  from  a  given  character table. They are described in detail in [BP98]. The
+  algorithm  is  selected  from  the choice of the optional argument [3Xcond[103X. The
+  user  is  encouraged  to  try different approaches, especially if one choice
+  fails to come to an end.[133X
+
+  [33X[0;0YRegardless  of  the  algorithm  used in a specific case, [2XPermChars[102X returns a
+  list of [13Xall[113X possible permutation characters with the properties described by
+  [3Xcond[103X.  There  is  no  guarantee  that  a character of this list is in fact a
+  permutation   character.  But  an  empty  list  always  means  there  is  no
+  permutation character with these properties (e.g., of a certain degree).[133X
+
+  [33X[0;0YCalled  with only one argument, a character table [3Xtbl[103X, [2XPermChars[102X returns the
+  list of all possible permutation characters of the group with this character
+  table.  This  list  might be rather long for big groups, and its computation
+  might  take much time. The algorithm is described in [BP98, Section 3.2]; it
+  depends  on  a  preprocessing  step, where the inequalities arising from the
+  condition [22Xπ(g) ≥ 0[122X are transformed into a system of inequalities that guides
+  the  search  (see [2XInequalities[102X ([14X72.14-5[114X)). So the following commands compute
+  the list of 39 possible permutation characters of the Mathieu group [22XM_11[122X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm11:= CharacterTable( "M11" );;[127X[104X
+    [4X[25Xgap>[125X [27XSetName( m11, "m11" );[127X[104X
+    [4X[25Xgap>[125X [27Xperms:= PermChars( m11 );;[127X[104X
+    [4X[25Xgap>[125X [27XLength( perms );[127X[104X
+    [4X[28X39[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YThere  are  two  different search strategies for this algorithm. The default
+  strategy  simply  constructs all characters with nonnegative values and then
+  tests  for  each such character whether its degree is a divisor of the order
+  of  the group. The other strategy uses the inequalities to predict whether a
+  character  of a certain degree can lie in the currently searched part of the
+  search  tree. To choose this strategy, enter a record as the second argument
+  of  [2XPermChars[102X,  and  set its component [10Xdegree[110X to the range of degrees (which
+  might  also  be a range containing all divisors of the group order) you want
+  to   look  for;  additionally,  the  record  component  [10Xineq[110X  can  take  the
+  inequalities computed by [2XInequalities[102X ([14X72.14-5[114X) if they are needed more than
+  once.[133X
+
+  [33X[0;0YIf  a  positive  integer  is  given  as  the second argument [3Xcond[103X, [2XPermChars[102X
+  returns  the  list  of  all possible permutation characters of [3Xtbl[103X that have
+  degree  [3Xcond[103X.  For  that  purpose,  a  preprocessing step is performed where
+  essentially  the  rational character table is inverted in order to determine
+  boundary points for the simplex in which the possible permutation characters
+  of  the  given  degree must lie (see [2XPermBounds[102X ([14X72.14-3[114X)). The algorithm is
+  described at the end of [BP98, Section 3.2]. Note that inverting big integer
+  matrices  needs a lot of time and space. So this preprocessing is restricted
+  to groups with less than 100 classes, say.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xdeg220:= PermChars( m11, 220 );[127X[104X
+    [4X[28X[ Character( m11, [ 220, 4, 4, 0, 0, 4, 0, 0, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( m11, [ 220, 12, 4, 4, 0, 0, 0, 0, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( m11, [ 220, 20, 4, 0, 0, 2, 0, 0, 0, 0 ] ) ][128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YIf a record is given as the second argument [3Xcond[103X, [2XPermChars[102X returns the list
+  of all possible permutation characters that have the properties described by
+  the  components of this record. One such situation has been mentioned above.
+  If  [3Xcond[103X  contains  a  degree  as  value of the record component [10Xdegree[110X then
+  [2XPermChars[102X will behave exactly as if this degree was entered as [3Xcond[103X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xdeg220 = PermChars( m11, rec( degree:= 220 ) );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YFor   the   meaning   of  additional  components  of  [3Xcond[103X  besides  [10Xdegree[110X,
+  see [2XPermComb[102X ([14X72.14-4[114X).[133X
+
+  [33X[0;0YInstead  of  [10Xdegree[110X,  [3Xcond[103X may have the component [10Xtorso[110X bound to a list that
+  contains  some  known  values  of  the  required  characters  at  the  right
+  positions;  at  least  the  degree [3Xcond[103X[10X.torso[1][110X must be an integer. In this
+  case,  the  algorithm  described  in  [BP98,  Section  3.3]  is  chosen. The
+  component  [10Xchars[110X, if present, holds a list of all those [13Xrational[113X irreducible
+  characters of [3Xtbl[103X that might be constituents of the required characters.[133X
+
+  [33X[0;0Y([13XNote[113X:  If [3Xcond[103X[10X.chars[110X is bound and does not contain [13Xall[113X rational irreducible
+  characters  of  [3Xtbl[103X,  [5XGAP[105X  checks  whether  the scalar products of all class
+  functions   in  the  result  list  with  the  omitted  rational  irreducible
+  characters of [3Xtbl[103X are nonnegative; so there should be nontrivial reasons for
+  excluding  a  character that is known to be not a constituent of the desired
+  possible permutation characters.)[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPermChars( m11, rec( torso:= [ 220 ] ) );[127X[104X
+    [4X[28X[ Character( m11, [ 220, 4, 4, 0, 0, 4, 0, 0, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( m11, [ 220, 20, 4, 0, 0, 2, 0, 0, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( m11, [ 220, 12, 4, 4, 0, 0, 0, 0, 0, 0 ] ) ][128X[104X
+    [4X[25Xgap>[125X [27XPermChars( m11, rec( torso:= [ 220,,,,, 2 ] ) );[127X[104X
+    [4X[28X[ Character( m11, [ 220, 20, 4, 0, 0, 2, 0, 0, 0, 0 ] ) ][128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YAn  additional  restriction  on the possible permutation characters computed
+  can  be  forced  if  [3Xcon[103X  contains,  in  addition  to  [10Xtorso[110X, the components
+  [10Xnormalsubgroup[110X  and  [10Xnonfaithful[110X, with values a list of class positions of a
+  normal subgroup [22XN[122X of the group [22XG[122X of [3Xtbl[103X and a possible permutation character
+  [22Xπ[122X  of  [22XG[122X, respectively, such that [22XN[122X is contained in the kernel of [22Xπ[122X. In this
+  case,  [2XPermChars[102X returns the list of those possible permutation characters [22Xψ[122X
+  of  [3Xtbl[103X  coinciding  with [10Xtorso[110X wherever its values are bound and having the
+  property  that  no  irreducible constituent of [22Xψ - π[122X has [22XN[122X in its kernel. If
+  the  component  [10Xchars[110X  is  bound in [3Xcond[103X then the above statements apply. An
+  interpretation  of  the  computed characters is the following. Suppose there
+  exists  a  subgroup  [22XV[122X  of  [22XG[122X  such  that  [22Xπ = (1_V)^G[122X; Then [22XN ≤ V[122X, and if a
+  computed  character  is of the form [22X(1_U)^G[122X, for a subgroup [22XU[122X of [22XG[122X, then [22XV =
+  UN[122X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xs4:= CharacterTable( "Symmetric", 4 );;[127X[104X
+    [4X[25Xgap>[125X [27Xnsg:= ClassPositionsOfDerivedSubgroup( s4 );;[127X[104X
+    [4X[25Xgap>[125X [27Xpi:= TrivialCharacter( s4 );;[127X[104X
+    [4X[25Xgap>[125X [27XPermChars( s4, rec( torso:= [ 12 ], normalsubgroup:= nsg,[127X[104X
+    [4X[25X>[125X [27X                       nonfaithful:= pi ) );[127X[104X
+    [4X[28X[ Character( CharacterTable( "Sym(4)" ), [ 12, 2, 0, 0, 0 ] ) ][128X[104X
+    [4X[25Xgap>[125X [27Xpi:= Sum( Filtered( Irr( s4 ),[127X[104X
+    [4X[25X>[125X [27X             chi -> IsSubset( ClassPositionsOfKernel( chi ), nsg ) ) );[127X[104X
+    [4X[28XCharacter( CharacterTable( "Sym(4)" ), [ 2, 0, 2, 2, 0 ] )[128X[104X
+    [4X[25Xgap>[125X [27XPermChars( s4, rec( torso:= [ 12 ], normalsubgroup:= nsg,[127X[104X
+    [4X[25X>[125X [27X                       nonfaithful:= pi ) );[127X[104X
+    [4X[28X[ Character( CharacterTable( "Sym(4)" ), [ 12, 0, 4, 0, 0 ] ) ][128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YThe  class  functions  returned  by  [2XPermChars[102X have the properties tested by
+  [2XTestPerm1[102X  ([14X72.14-2[114X),  [2XTestPerm2[102X ([14X72.14-2[114X), and [2XTestPerm3[102X ([14X72.14-2[114X). So they
+  are  possible  permutation  characters. See [2XTestPerm1[102X ([14X72.14-2[114X) for criteria
+  whether  a  possible  permutation  character  can  in  fact be a permutation
+  character.[133X
+
+
+  [1X72.14-2 [33X[0;0YTestPerm1, ..., TestPerm5[133X[101X
+
+  [33X[1;0Y[29X[2XTestPerm1[102X( [3Xtbl[103X, [3Xchar[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XTestPerm2[102X( [3Xtbl[103X, [3Xchar[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XTestPerm3[102X( [3Xtbl[103X, [3Xchars[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XTestPerm4[102X( [3Xtbl[103X, [3Xchars[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XTestPerm5[102X( [3Xtbl[103X, [3Xchars[103X, [3Xmodtbl[103X ) [32X function[133X
+
+  [33X[0;0YThe  first  three  of  these  functions implement tests of the properties of
+  possible  permutation  characters  listed  in  Section [14X72.13[114X,  The other two
+  implement  test  of additional properties. Let [3Xtbl[103X be the ordinary character
+  table  of  a  group [22XG[122X, [3Xchar[103X a rational character of [3Xtbl[103X, and [3Xchars[103X a list of
+  rational  characters  of  [3Xtbl[103X.  For  applying  [2XTestPerm5[102X, the knowledge of a
+  [22Xp[122X-modular  Brauer  table  [3Xmodtbl[103X  of  [22XG[122X is required. [2XTestPerm4[102X and [2XTestPerm5[102X
+  expect  the  characters  in  [3Xchars[103X  to  satisfy  the  conditions  checked by
+  [2XTestPerm1[102X and [2XTestPerm2[102X (see below).[133X
+
+  [33X[0;0YThe  return values of the functions were chosen parallel to the tests listed
+  in [NPP84].[133X
+
+  [33X[0;0Y[2XTestPerm1[102X return [10X1[110X or [10X2[110X if [3Xchar[103X fails because of (T1) or (T2), respectively;
+  this  corresponds  to  the  criteria (b) and (d). Note that only those power
+  maps  are  considered  that  are  stored  on  [3Xtbl[103X.  If  [3Xchar[103X  satisfies  the
+  conditions, [10X0[110X is returned.[133X
+
+  [33X[0;0Y[2XTestPerm2[102X  returns  [10X1[110X if [3Xchar[103X fails because of the criterion (c), it returns
+  [10X3[110X, [10X4[110X, or [10X5[110X if [3Xchar[103X fails because of (T3), (T4), or (T5), respectively; these
+  tests  correspond  to  (g), a weaker form of (h), and (j). If [3Xchar[103X satisfies
+  the conditions, [10X0[110X is returned.[133X
+
+  [33X[0;0Y[2XTestPerm3[102X  returns  the  list of all those class functions in the list [3Xchars[103X
+  that satisfy criterion (h); this is a stronger version of (T6).[133X
+
+  [33X[0;0Y[2XTestPerm4[102X  returns  the  list of all those class functions in the list [3Xchars[103X
+  that satisfy (T8) and (T9) for each prime divisor [22Xp[122X of the order of [22XG[122X; these
+  tests  use modular representation theory but do not require the knowledge of
+  decomposition matrices (cf. [2XTestPerm5[102X below).[133X
+
+  [33X[0;0Y(T8) implements the test of the fact that in the case that [22Xp[122X divides [22X|G|[122X and
+  the  degree  of  a  transitive  permutation  character  [22Xπ[122X  exactly once, the
+  projective  cover  of the trivial character is a summand of [22Xπ[122X. (This test is
+  omitted if the projective cover cannot be identified.)[133X
+
+  [33X[0;0YGiven  a  permutation  character  [22Xπ[122X  of a group [22XG[122X and a prime integer [22Xp[122X, the
+  restriction  [22Xπ_B[122X  to  a  [22Xp[122X-block [22XB[122X of [22XG[122X has the following property, which is
+  checked  by (T9). For each [22Xg ∈ G[122X such that [22Xg^n[122X is a [22Xp[122X-element of [22XG[122X, [22Xπ_B(g^n)[122X
+  is  a nonnegative integer that satisfies [22X|π_B(g)| ≤ π_B(g^n) ≤ π(g^n)[122X. (This
+  is [Sco73, Corollary A on p. 113].)[133X
+
+  [33X[0;0Y[2XTestPerm5[102X  requires the [22Xp[122X-modular Brauer table [3Xmodtbl[103X of [22XG[122X, for some prime [22Xp[122X
+  dividing  the  order  of  [22XG[122X, and checks whether those characters in the list
+  [3Xchars[103X  whose  degree  is  divisible  by  the [22Xp[122X-part of the order of [22XG[122X can be
+  decomposed  into projective indecomposable characters; [2XTestPerm5[102X returns the
+  sublist  of all those characters in [3Xchars[103X that either satisfy this condition
+  or to which the test does not apply.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtbl:= CharacterTable( "A5" );;[127X[104X
+    [4X[25Xgap>[125X [27Xrat:= RationalizedMat( Irr( tbl ) );[127X[104X
+    [4X[28X[ Character( CharacterTable( "A5" ), [ 1, 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 6, -2, 0, 1, 1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 4, 0, 1, -1, -1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A5" ), [ 5, 1, -1, 0, 0 ] ) ][128X[104X
+    [4X[25Xgap>[125X [27Xtup:= Filtered( Tuples( [ 0, 1 ], 4 ), x -> not IsZero( x ) );[127X[104X
+    [4X[28X[ [ 0, 0, 0, 1 ], [ 0, 0, 1, 0 ], [ 0, 0, 1, 1 ], [ 0, 1, 0, 0 ],[128X[104X
+    [4X[28X  [ 0, 1, 0, 1 ], [ 0, 1, 1, 0 ], [ 0, 1, 1, 1 ], [ 1, 0, 0, 0 ],[128X[104X
+    [4X[28X  [ 1, 0, 0, 1 ], [ 1, 0, 1, 0 ], [ 1, 0, 1, 1 ], [ 1, 1, 0, 0 ],[128X[104X
+    [4X[28X  [ 1, 1, 0, 1 ], [ 1, 1, 1, 0 ], [ 1, 1, 1, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xlincomb:= List( tup, coeff -> coeff * rat );;[127X[104X
+    [4X[25Xgap>[125X [27XList( lincomb, psi -> TestPerm1( tbl, psi ) );[127X[104X
+    [4X[28X[ 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0 ][128X[104X
+    [4X[25Xgap>[125X [27XList( lincomb, psi -> TestPerm2( tbl, psi ) );[127X[104X
+    [4X[28X[ 0, 5, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1 ][128X[104X
+    [4X[25Xgap>[125X [27XSet( TestPerm3(tbl, lincomb), x -> Position(lincomb, x) );[127X[104X
+    [4X[28X[ 1, 4, 6, 7, 8, 9, 10, 11, 13 ][128X[104X
+    [4X[25Xgap>[125X [27Xtbl:= CharacterTable( "A7" );[127X[104X
+    [4X[28XCharacterTable( "A7" )[128X[104X
+    [4X[25Xgap>[125X [27Xperms:= PermChars( tbl, rec( degree:= 315 ) );[127X[104X
+    [4X[28X[ Character( CharacterTable( "A7" ), [ 315, 3, 0, 0, 3, 0, 0, 0, 0 ] )[128X[104X
+    [4X[28X    , Character( CharacterTable( "A7" ),[128X[104X
+    [4X[28X    [ 315, 15, 0, 0, 1, 0, 0, 0, 0 ] ) ][128X[104X
+    [4X[25Xgap>[125X [27XTestPerm4( tbl, perms );[127X[104X
+    [4X[28X[ Character( CharacterTable( "A7" ), [ 315, 15, 0, 0, 1, 0, 0, 0, 0[128X[104X
+    [4X[28X     ] ) ][128X[104X
+    [4X[25Xgap>[125X [27Xperms:= PermChars( tbl, rec( degree:= 15 ) );[127X[104X
+    [4X[28X[ Character( CharacterTable( "A7" ), [ 15, 3, 0, 3, 1, 0, 0, 1, 1 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "A7" ), [ 15, 3, 3, 0, 1, 0, 3, 1, 1 ] )[128X[104X
+    [4X[28X ][128X[104X
+    [4X[25Xgap>[125X [27XTestPerm5( tbl, perms, tbl mod 5 );[127X[104X
+    [4X[28X[ Character( CharacterTable( "A7" ), [ 15, 3, 0, 3, 1, 0, 0, 1, 1 ] )[128X[104X
+    [4X[28X ][128X[104X
+  [4X[32X[104X
+
+  [1X72.14-3 PermBounds[101X
+
+  [33X[1;0Y[29X[2XPermBounds[102X( [3Xtbl[103X, [3Xd[103X ) [32X function[133X
+
+  [33X[0;0YLet  [3Xtbl[103X  be the ordinary character table of the group [22XG[122X. All [22XG[122X-characters [22Xπ[122X
+  satisfying  [22Xπ(g)  >  0[122X  and [22Xπ(1) = [3Xd[103X[122X, for a given degree [3Xd[103X, lie in a simplex
+  described  by  these  conditions. [2XPermBounds[102X computes the boundary points of
+  this  simplex  for [22Xd = 0[122X, from which the boundary points for any other [3Xd[103X are
+  easily  derived.  (Some  conditions  from  the  power  maps  of [3Xtbl[103X are also
+  involved.)  For  this  purpose,  a  matrix similar to the rational character
+  table  of  [22XG[122X has to be inverted. These boundary points are used by [2XPermChars[102X
+  ([14X72.14-1[114X)  to construct all possible permutation characters (see [14X72.13[114X) of a
+  given  degree.  [2XPermChars[102X  ([14X72.14-1[114X)  either  calls [2XPermBounds[102X or takes this
+  information from the [10Xbounds[110X component of its argument record.[133X
+
+  [1X72.14-4 PermComb[101X
+
+  [33X[1;0Y[29X[2XPermComb[102X( [3Xtbl[103X, [3Xarec[103X ) [32X function[133X
+
+  [33X[0;0Y[2XPermComb[102X computes possible permutation characters of the character table [3Xtbl[103X
+  by  the  improved  combinatorial  approach  described  at  the end of [BP98,
+  Section 3.2].[133X
+
+  [33X[0;0YFor  computing  the  possible linear combinations [13Xwithout[113X prescribing better
+  bounds (i.e., when the computation of bounds shall be suppressed), enter[133X
+
+  [33X[0;0Y[10X[3Xarec[103X[10X:= rec( degree := [3Xdegree[103X[10X, bounds := false )[110X,[133X
+
+  [33X[0;0Ywhere  [3Xdegree[103X  is the character degree; this is useful if the multiplicities
+  are expected to be small, and if this is forced by high irreducible degrees.[133X
+
+  [33X[0;0YA  list  of  upper bounds on the multiplicities of the rational irreducibles
+  characters can be explicitly prescribed as a [10Xmaxmult[110X component in [3Xarec[103X.[133X
+
+  [1X72.14-5 Inequalities[101X
+
+  [33X[1;0Y[29X[2XInequalities[102X( [3Xtbl[103X, [3Xchars[103X[, [3Xoption[103X] ) [32X operation[133X
+
+  [33X[0;0YLet [3Xtbl[103X be the ordinary character table of a group [22XG[122X. The condition [22Xπ(g) ≥ 0[122X
+  for  every  possible permutation character [22Xπ[122X of [22XG[122X places restrictions on the
+  multiplicities  [22Xa_i[122X  of  the irreducible constituents [22Xχ_i[122X of [22Xπ = ∑_{i = 1}^r
+  a_i  χ_i[122X.  For  every element [22Xg ∈ G[122X, we have [22X∑_{i = 1}^r a_i χ_i(g) ≥ 0[122X. The
+  power maps provide even stronger conditions.[133X
+
+  [33X[0;0YThis  system  of inequalities is kind of diagonalized, resulting in a system
+  of  inequalities  restricting [22Xa_i[122X in terms of [22Xa_j[122X, [22Xj < i[122X. These inequalities
+  are  used  to  construct  characters  with nonnegative values (see [2XPermChars[102X
+  ([14X72.14-1[114X)).  [2XPermChars[102X  ([14X72.14-1[114X)  either  calls  [2XInequalities[102X or takes this
+  information from the [10Xineq[110X component of its argument record.[133X
+
+  [33X[0;0YThe  number  of  inequalities  arising in the process of diagonalization may
+  grow very strongly.[133X
+
+  [33X[0;0YThere are two ways to organize the projection. The first, which is chosen if
+  no  [3Xoption[103X  argument  is  present,  is the straight approach which takes the
+  rational  irreducible  characters  in  their  original  order  and  by  this
+  guarantees  the  character  with the smallest degree to be considered first.
+  The  other  way,  which  is chosen if the string [10X"small"[110X is entered as third
+  argument [3Xoption[103X, tries to keep the number of intermediate inequalities small
+  by eventually changing the order of characters.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtbl:= CharacterTable( "M11" );;[127X[104X
+    [4X[25Xgap>[125X [27XPermComb( tbl, rec( degree:= 110 ) );[127X[104X
+    [4X[28X[ Character( CharacterTable( "M11" ),[128X[104X
+    [4X[28X    [ 110, 6, 2, 2, 0, 0, 2, 2, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "M11" ),[128X[104X
+    [4X[28X    [ 110, 6, 2, 6, 0, 0, 0, 0, 0, 0 ] ),[128X[104X
+    [4X[28X  Character( CharacterTable( "M11" ), [ 110, 14, 2, 2, 0, 2, 0, 0, 0,[128X[104X
+    [4X[28X      0 ] ) ][128X[104X
+    [4X[25Xgap>[125X [27X# Now compute only multiplicity free permutation characters.[127X[104X
+    [4X[25Xgap>[125X [27Xbounds:= List( RationalizedMat( Irr( tbl ) ), x -> 1 );;[127X[104X
+    [4X[25Xgap>[125X [27XPermComb( tbl, rec( degree:= 110, maxmult:= bounds ) );[127X[104X
+    [4X[28X[ Character( CharacterTable( "M11" ),[128X[104X
+    [4X[28X    [ 110, 6, 2, 2, 0, 0, 2, 2, 0, 0 ] ) ][128X[104X
+  [4X[32X[104X
+
+
+  [1X72.15 [33X[0;0YOperations for Brauer Characters[133X[101X
+
+  [1X72.15-1 FrobeniusCharacterValue[101X
+
+  [33X[1;0Y[29X[2XFrobeniusCharacterValue[102X( [3Xvalue[103X, [3Xp[103X ) [32X function[133X
+
+  [33X[0;0YLet  [3Xvalue[103X  be a cyclotomic whose coefficients over the rationals are in the
+  ring  [22Xℤ_[3Xp[103X[122X  of [3Xp[103X-local numbers, where [3Xp[103X is a prime integer. Assume that [3Xvalue[103X
+  lies in [22Xℤ_[3Xp[103X[ζ][122X for [22Xζ = exp([3Xp[103X^n-1)[122X, for some positive integer [22Xn[122X.[133X
+
+  [33X[0;0Y[2XFrobeniusCharacterValue[102X   returns   the   image  of  [3Xvalue[103X  under  the  ring
+  homomorphism from [22Xℤ_[3Xp[103X[ζ][122X to the field with [22X[3Xp[103X^n[122X elements that is defined with
+  the   help  of  Conway  polynomials  (see [2XConwayPolynomial[102X  ([14X59.5-1[114X)),  more
+  information can be found in [JLPW95, Sections 2-5].[133X
+
+  [33X[0;0YIf [3Xvalue[103X is a Brauer character value in characteristic [3Xp[103X then the result can
+  be described as the corresponding value of the Frobenius character, that is,
+  as the trace of a representing matrix with the given Brauer character value.[133X
+
+  [33X[0;0YIf  the  result of [2XFrobeniusCharacterValue[102X cannot be expressed as an element
+  of  a  finite  field  in  [5XGAP[105X  (see Chapter [14X59[114X) then [2XFrobeniusCharacterValue[102X
+  returns [9Xfail[109X.[133X
+
+  [33X[0;0YIf the Conway polynomial of degree [22Xn[122X is required for the computation then it
+  is computed only if [2XIsCheapConwayPolynomial[102X ([14X59.5-2[114X) returns [9Xtrue[109X when it is
+  called with [3Xp[103X and [22Xn[122X, otherwise [9Xfail[109X is returned.[133X
+
+  [1X72.15-2 BrauerCharacterValue[101X
+
+  [33X[1;0Y[29X[2XBrauerCharacterValue[102X( [3Xmat[103X ) [32X attribute[133X
+
+  [33X[0;0YFor  an  invertible  matrix  [3Xmat[103X over a finite field [22XF[122X, [2XBrauerCharacterValue[102X
+  returns  the Brauer character value of [3Xmat[103X if the order of [3Xmat[103X is coprime to
+  the characteristic of [22XF[122X, and [9Xfail[109X otherwise.[133X
+
+  [33X[0;0YThe  [13XBrauer  character  value[113X of a matrix is the sum of complex lifts of its
+  eigenvalues.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:= SL(2,4);;           # 2-dim. irreducible representation of A5[127X[104X
+    [4X[25Xgap>[125X [27Xccl:= ConjugacyClasses( g );;[127X[104X
+    [4X[25Xgap>[125X [27Xrep:= List( ccl, Representative );;[127X[104X
+    [4X[25Xgap>[125X [27XList( rep, Order );[127X[104X
+    [4X[28X[ 1, 2, 5, 5, 3 ][128X[104X
+    [4X[25Xgap>[125X [27Xphi:= List( rep, BrauerCharacterValue );[127X[104X
+    [4X[28X[ 2, fail, E(5)^2+E(5)^3, E(5)+E(5)^4, -1 ][128X[104X
+    [4X[25Xgap>[125X [27XList( phi{ [ 1, 3, 4, 5 ] }, x -> FrobeniusCharacterValue( x, 2 ) );[127X[104X
+    [4X[28X[ 0*Z(2), Z(2^2), Z(2^2)^2, Z(2)^0 ][128X[104X
+    [4X[25Xgap>[125X [27XList( rep{ [ 1, 3, 4, 5 ] }, TraceMat );[127X[104X
+    [4X[28X[ 0*Z(2), Z(2^2), Z(2^2)^2, Z(2)^0 ][128X[104X
+  [4X[32X[104X
+
+  [1X72.15-3 SizeOfFieldOfDefinition[101X
+
+  [33X[1;0Y[29X[2XSizeOfFieldOfDefinition[102X( [3Xval[103X, [3Xp[103X ) [32X function[133X
+
+  [33X[0;0YFor  a  cyclotomic  or  a  list  of  cyclotomics [3Xval[103X, and a prime integer [3Xp[103X,
+  [2XSizeOfFieldOfDefinition[102X  returns  the  size  of the smallest finite field in
+  characteristic [3Xp[103X that contains the [3Xp[103X-modular reduction of [3Xval[103X if this can be
+  determined, and [9Xfail[109X otherwise.[133X
+
+  [33X[0;0YThe  latter  happens  if [3Xval[103X is not closed under Galois conjugacy and if the
+  [3Xp[103X-modular  reduction  of  some  value  cannot be determined via the function
+  [2XFrobeniusCharacterValue[102X ([14X72.15-1[114X). Note that the reduction map is defined as
+  in [JLPW95],  that  is,  the  complex [22X([3Xp[103X^d-1)[122X-th root of unity [22Xexp([3Xp[103X^d-1)[122X is
+  mapped  to  the residue class of the indeterminate, modulo the ideal spanned
+  by  the  Conway  polynomial (see [2XConwayPolynomial[102X ([14X59.5-1[114X)) of degree [22Xd[122X over
+  the field with [22Xp[122X elements.[133X
+
+  [33X[0;0YIf  [3Xval[103X  is  closed under Galois conjugacy then the result can be determined
+  without  explicitly  computing  the [3Xp[103X-modular reduction of [3Xval[103X. This happens
+  for example if [3Xval[103X is a Brauer character.[133X
+
+  [33X[0;0YIf  [3Xval[103X  is  an  irreducible Brauer character then the value returned is the
+  size  of  the  smallest  finite  field  in  characteristic  [3Xp[103X over which the
+  corresponding representation lives.[133X
+
+  [1X72.15-4 RealizableBrauerCharacters[101X
+
+  [33X[1;0Y[29X[2XRealizableBrauerCharacters[102X( [3Xmatrix[103X, [3Xq[103X ) [32X function[133X
+
+  [33X[0;0YFor   a   list   [3Xmatrix[103X  of  absolutely  irreducible  Brauer  characters  in
+  characteristic  [22Xp[122X,  and a power [3Xq[103X of [22Xp[122X, [2XRealizableBrauerCharacters[102X returns a
+  duplicate-free  list  of sums of Frobenius conjugates of the rows of [3Xmatrix[103X,
+  each irreducible over the field with [3Xq[103X elements.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xirr:= Irr( CharacterTable( "A5" ) mod 2 );[127X[104X
+    [4X[28X[ Character( BrauerTable( "A5", 2 ), [ 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X  Character( BrauerTable( "A5", 2 ),[128X[104X
+    [4X[28X    [ 2, -1, E(5)+E(5)^4, E(5)^2+E(5)^3 ] ),[128X[104X
+    [4X[28X  Character( BrauerTable( "A5", 2 ),[128X[104X
+    [4X[28X    [ 2, -1, E(5)^2+E(5)^3, E(5)+E(5)^4 ] ),[128X[104X
+    [4X[28X  Character( BrauerTable( "A5", 2 ), [ 4, 1, -1, -1 ] ) ][128X[104X
+    [4X[25Xgap>[125X [27XList( irr, phi -> SizeOfFieldOfDefinition( phi, 2 ) );[127X[104X
+    [4X[28X[ 2, 4, 4, 2 ][128X[104X
+    [4X[25Xgap>[125X [27XRealizableBrauerCharacters( irr, 2 );[127X[104X
+    [4X[28X[ Character( BrauerTable( "A5", 2 ), [ 1, 1, 1, 1 ] ),[128X[104X
+    [4X[28X  ClassFunction( BrauerTable( "A5", 2 ), [ 4, -2, -1, -1 ] ),[128X[104X
+    [4X[28X  Character( BrauerTable( "A5", 2 ), [ 4, 1, -1, -1 ] ) ][128X[104X
+  [4X[32X[104X
+
+
+  [1X72.16 [33X[0;0YDomains Generated by Class Functions[133X[101X
+
+  [33X[0;0Y[5XGAP[105X  supports  groups,  vector  spaces,  and  algebras  generated  by  class
+  functions.[133X
+

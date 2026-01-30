@@ -1,0 +1,1597 @@
+
+  [1X48 [33X[0;0YPresentations and Tietze Transformations[133X[101X
+
+  [33X[0;0YA finite presentation describes a group, but usually there is a multitude of
+  presentations  that  describe isomorphic groups. Therefore a presentation in
+  [5XGAP[105X  is  different  from a finitely presented group though there are ways to
+  translate between both.[133X
+
+  [33X[0;0YAn  important  feature  of  presentations  is that they can be modified (see
+  sections [14X48.5[114X to [14X48.8[114X).[133X
+
+  [33X[0;0YIf  you  only  want  to  get  new  presentations for subgroups of a finitely
+  presented  group  (and  do  not  want to manipulate presentations yourself),
+  chances  are  that  the  operation [2XIsomorphismFpGroup[102X ([14X47.11-1[114X) already does
+  what you want (see [14X47.12[114X).[133X
+
+
+  [1X48.1 [33X[0;0YCreating Presentations[133X[101X
+
+  [33X[0;0YMost  of  the  functions creating presentations and all functions performing
+  Tietze  transformations on them sort the relators by increasing lengths. The
+  function [2XPresentationFpGroup[102X ([14X48.1-1[114X) is an exception because it is intended
+  to  reflect  the relators that were used to define the involved f. p. group.
+  You may use the command [2XTzSort[102X ([14X48.1-2[114X) to sort the presentation.[133X
+
+  [1X48.1-1 PresentationFpGroup[101X
+
+  [33X[1;0Y[29X[2XPresentationFpGroup[102X( [3XG[103X[, [3Xprintlevel[103X] ) [32X function[133X
+
+  [33X[0;0Ycreates  a  presentation,  i.  e.,  a  Tietze object, for the given finitely
+  presented  group [3XG[103X. This presentation will be exactly as the presentation of
+  [3XG[103X and [13Xno[113X initial Tietze transformations are applied to it.[133X
+
+  [33X[0;0YThe  optional  [3Xprintlevel[103X parameter can be used to restrict or to extend the
+  amount  of  output  provided  by  Tietze  transformation commands when being
+  applied  to  the  created  presentation. The default value 1 is designed for
+  interactive  use  and  implies  explicit messages to be displayed by most of
+  these  commands.  A  [3Xprintlevel[103X  value  of  0  will suppress these messages,
+  whereas a [3Xprintlevel[103X value of 2 will enforce some additional output.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := FreeGroup( "a", "b" );[127X[104X
+    [4X[28X<free group on the generators [ a, b ]>[128X[104X
+    [4X[25Xgap>[125X [27Xg := f / [ f.1^3, f.2^2, (f.1*f.2)^3 ];[127X[104X
+    [4X[28X<fp group on the generators [ a, b ]>[128X[104X
+    [4X[25Xgap>[125X [27Xp := PresentationFpGroup( g );[127X[104X
+    [4X[28X<presentation with 2 gens and 3 rels of total length 11>[128X[104X
+  [4X[32X[104X
+
+  [1X48.1-2 TzSort[101X
+
+  [33X[1;0Y[29X[2XTzSort[102X( [3XP[103X ) [32X function[133X
+
+  [33X[0;0Ysorts  the relators of the given presentation [3XP[103X by increasing lengths. There
+  is  no  particular  ordering  defined for the relators of equal length. Note
+  that [2XTzSort[102X does not return a new object. It changes the given presentation.[133X
+
+  [1X48.1-3 GeneratorsOfPresentation[101X
+
+  [33X[1;0Y[29X[2XGeneratorsOfPresentation[102X( [3XP[103X ) [32X function[133X
+
+  [33X[0;0Yreturns  a  list  of free generators that is a shallow copy (see [2XShallowCopy[102X
+  ([14X12.7-1[114X)) of the current generators of the presentation [3XP[103X.[133X
+
+  [1X48.1-4 FpGroupPresentation[101X
+
+  [33X[1;0Y[29X[2XFpGroupPresentation[102X( [3XP[103X[, [3Xnam[103X] ) [32X function[133X
+
+  [33X[0;0Yconstructs an f. p. group as defined by the given Tietze presentation [3XP[103X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xh := FpGroupPresentation( p );[127X[104X
+    [4X[28X<fp group on the generators [ a, b ]>[128X[104X
+    [4X[25Xgap>[125X [27Xh = g;[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+
+  [1X48.1-5 PresentationViaCosetTable[101X
+
+  [33X[1;0Y[29X[2XPresentationViaCosetTable[102X( [3XG[103X[, [3XF[103X, [3Xwords[103X] ) [32X function[133X
+
+  [33X[0;0Yconstructs  a presentation for a given concrete finite group. It applies the
+  relations finding algorithm which has been described in [Can73] and [Neu82].
+  It automatically applies Tietze transformations to the presentation found.[133X
+
+  [33X[0;0YIf only a group [3XG[103X has been specified, the single stage algorithm is applied.[133X
+
+  [33X[0;0YThe operation [2XIsomorphismFpGroup[102X ([14X47.11-1[114X) in contrast uses a multiple-stage
+  algorithm  using  a chief series and stabilizer chains. It usually should be
+  used  rather  than  [2XPresentationViaCosetTable[102X.  (It  does  not  apply Tietze
+  transformations automatically.)[133X
+
+  [33X[0;0YIf  the two stage algorithm is to be used, [2XPresentationViaCosetTable[102X expects
+  a  subgroup  [3XH[103X of [3XG[103X to be provided in form of two additional arguments [3XF[103X and
+  [3Xwords[103X,  where [3XF[103X is a free group with the same number of generators as [3XG[103X, and
+  [3Xwords[103X  is  a  list  of  words  in the generators of [3XF[103X which supply a list of
+  generators  of  [3XH[103X  if  they  are  evaluated  as  words  in the corresponding
+  generators of [3XG[103X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := GeneralLinearGroup( 2, 7 );[127X[104X
+    [4X[28XGL(2,7)[128X[104X
+    [4X[25Xgap>[125X [27XGeneratorsOfGroup( G );[127X[104X
+    [4X[28X[ [ [ Z(7), 0*Z(7) ], [ 0*Z(7), Z(7)^0 ] ],[128X[104X
+    [4X[28X  [ [ Z(7)^3, Z(7)^0 ], [ Z(7)^3, 0*Z(7) ] ] ][128X[104X
+    [4X[25Xgap>[125X [27XSize( G );[127X[104X
+    [4X[28X2016[128X[104X
+    [4X[25Xgap>[125X [27XP := PresentationViaCosetTable( G );[127X[104X
+    [4X[28X<presentation with 2 gens and 5 rels of total length 46>[128X[104X
+    [4X[25Xgap>[125X [27XTzPrintRelators( P );[127X[104X
+    [4X[28X#I  1. f2^3[128X[104X
+    [4X[28X#I  2. f1^6[128X[104X
+    [4X[28X#I  3. (f1*f2)^6[128X[104X
+    [4X[28X#I  4. f1*f2*f1^-1*f2*f1*f2^-1*f1^-1*f2*f1*f2*f1^-1*f2^-1[128X[104X
+    [4X[28X#I  5. f1^-3*f2*f1*f2*(f1^-1*f2^-1)^2*f1^-2*f2[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YThe  two  stage algorithm saves an essential amount of space by constructing
+  two  coset tables of lengths [22X|H|[122X and [22X|G|/|H|[122X instead of just one coset table
+  of  length  [22X|G|[122X. The next example shows an application of this option in the
+  case  of a subgroup of size 7920 and index 12 in a permutation group of size
+  95040.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XM12 := Group( [ (1,2,3,4,5,6,7,8,9,10,11), (3,7,11,8)(4,10,5,6),[127X[104X
+    [4X[25X>[125X [27X(1,12)(2,11)(3,6)(4,8)(5,9)(7,10) ], () );;[127X[104X
+    [4X[25Xgap>[125X [27XF := FreeGroup( "a", "b", "c" );[127X[104X
+    [4X[28X<free group on the generators [ a, b, c ]>[128X[104X
+    [4X[25Xgap>[125X [27Xwords := [ F.1, F.2 ];[127X[104X
+    [4X[28X[ a, b ][128X[104X
+    [4X[25Xgap>[125X [27XP := PresentationViaCosetTable( M12, F, words );[127X[104X
+    [4X[28X<presentation with 3 gens and 10 rels of total length 97>[128X[104X
+    [4X[25Xgap>[125X [27XG := FpGroupPresentation( P );[127X[104X
+    [4X[28X<fp group on the generators [ a, b, c ]>[128X[104X
+    [4X[25Xgap>[125X [27XRelatorsOfFpGroup( G );[127X[104X
+    [4X[28X[ c^2, b^4, (a*c)^3, (a*b^-2)^3, a^11,[128X[104X
+    [4X[28X  a^2*b*a^-2*b^-1*(b^-1*a)^2*a*b^-1, (a*(b*a^-1)^2*b^-1)^2,[128X[104X
+    [4X[28X  a^2*b*a^2*b^-2*a^-1*b*(a^-1*b^-1)^2,[128X[104X
+    [4X[28X  a^2*b^-1*a^-1*b^-1*a*c*b*c*(a*b)^2, a^2*(a^2*b)^2*a^-2*c*a*b*a^-1*c[128X[104X
+    [4X[28X ][128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YBefore  it  is  returned,  the resulting presentation is being simplified by
+  appropriate  calls of the function [2XSimplifyPresentation[102X ([14X48.6-2[114X) (see [14X48.6[114X),
+  but  without  allowing  any  eliminations  of  generators.  This restriction
+  guarantees  that  we get a bijection between the list of generators of [3XG[103X and
+  the  list  of  generators in the presentation. Hence, if the generators of [3XG[103X
+  are redundant and if you don't care for the bijection, you may get a shorter
+  presentation  by  calling  the  function  [2XSimplifyPresentation[102X ([14X48.6-2[114X), now
+  without this restriction, once more yourself.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XH := Group([127X[104X
+    [4X[25X>[125X [27X[ (2,5,3), (2,7,5), (1,8,4), (1,8,6), (4,8,6), (3,5,7) ], () );;[127X[104X
+    [4X[25Xgap>[125X [27XP := PresentationViaCosetTable( H );[127X[104X
+    [4X[28X<presentation with 6 gens and 12 rels of total length 42>[128X[104X
+    [4X[25Xgap>[125X [27XSimplifyPresentation( P );[127X[104X
+    [4X[28X#I  there are 4 generators and 10 relators of total length 36[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YIf  you  apply  the  function  [2XFpGroupPresentation[102X ([14X48.1-4[114X) to the resulting
+  presentation  you will get a finitely presented group isomorphic to [3XG[103X. Note,
+  however,  that  the function [2XIsomorphismFpGroup[102X ([14X47.11-1[114X) is recommended for
+  this purpose.[133X
+
+  [1X48.1-6 SimplifiedFpGroup[101X
+
+  [33X[1;0Y[29X[2XSimplifiedFpGroup[102X( [3XG[103X ) [32X function[133X
+
+  [33X[0;0Yapplies  Tietze  transformations  to a copy of the presentation of the given
+  finitely  presented group [3XG[103X in order to reduce it with respect to the number
+  of generators, the number of relators, and the relator lengths.[133X
+
+  [33X[0;0Y[2XSimplifiedFpGroup[102X  returns  a  group  isomorphic  to  the  given  one with a
+  presentation which has been tried to simplify via Tietze transformations.[133X
+
+  [33X[0;0YIf  the  connection  to  the original group is important, then the operation
+  [2XIsomorphismSimplifiedFpGroup[102X ([14X47.12-1[114X) should be used instead.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XF6 := FreeGroup( 6, "G" );;[127X[104X
+    [4X[25Xgap>[125X [27XG := F6 / [ F6.1^2, F6.2^2, F6.4*F6.6^-1, F6.5^2, F6.6^2,[127X[104X
+    [4X[25X>[125X [27XF6.1*F6.2^-1*F6.3, F6.1*F6.5*F6.3^-1, F6.2*F6.4^-1*F6.3,[127X[104X
+    [4X[25X>[125X [27XF6.3*F6.4*F6.5^-1, F6.1*F6.6*F6.3^-2, F6.3^4 ];;[127X[104X
+    [4X[25Xgap>[125X [27XH := SimplifiedFpGroup( G );[127X[104X
+    [4X[28X<fp group on the generators [ G1, G3 ]>[128X[104X
+    [4X[25Xgap>[125X [27XRelatorsOfFpGroup( H );[127X[104X
+    [4X[28X[ G1^2, (G1*G3^-1)^2, G3^4 ][128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YIn fact, the command[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[28XH := SimplifiedFpGroup( G );[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0Yis an abbreviation of the command sequence[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[28XP := PresentationFpGroup( G, 0 );;[128X[104X
+    [4X[28XSimplifyPresentation( P );[128X[104X
+    [4X[28XH := FpGroupPresentation( P );[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0Ywhich  applies  a rather simple-minded strategy of Tietze transformations to
+  the  intermediate presentation [3XP[103X. If, for some concrete group, the resulting
+  presentation  is  unsatisfying,  then  you  should try a more sophisticated,
+  interactive use of the available Tietze transformation commands (see [14X48.6[114X).[133X
+
+
+  [1X48.2 [33X[0;0YSubgroup Presentations[133X[101X
+
+  [1X48.2-1 PresentationSubgroup[101X
+
+  [33X[1;0Y[29X[2XPresentationSubgroup[102X( [3XG[103X, [3XH[103X[, [3Xstring[103X] ) [32X function[133X
+
+  [33X[0;0Y[2XPresentationSubgroup[102X is a synonym for [2XPresentationSubgroupRrs[102X ([14X48.2-2[114X).[133X
+
+
+  [1X48.2-2 [33X[0;0YPresentationSubgroupRrs[133X[101X
+
+  [33X[1;0Y[29X[2XPresentationSubgroupRrs[102X( [3XG[103X, [3XH[103X[, [3Xstring[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XPresentationSubgroupRrs[102X( [3XG[103X, [3Xtable[103X[, [3Xstring[103X] ) [32X function[133X
+
+  [33X[0;0Yuses  the  Reduced  Reidemeister-Schreier method to compute a presentation [3XP[103X
+  for  a  subgroup  [3XH[103X  of  a finitely presented group [3XG[103X. The generators in the
+  resulting  presentation  will  be  named  [3Xstring[103X[10X1[110X, [3Xstring[103X[10X2[110X, [22X...[122X, the default
+  string is [10X"_x"[110X. You may access the [22Xi[122X-th of these generators by [3XP[103X[10X!.[110X[22Xi[122X.[133X
+
+  [33X[0;0YAlternatively  to the subgroup [3XH[103X, its coset table [3Xtable[103X in [3XG[103X may be given as
+  second argument.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := FreeGroup( "a", "b" );;[127X[104X
+    [4X[25Xgap>[125X [27Xg := f / [ f.1^2, f.2^3, (f.1*f.2)^5 ];[127X[104X
+    [4X[28X<fp group on the generators [ a, b ]>[128X[104X
+    [4X[25Xgap>[125X [27Xg1 := Size( g );[127X[104X
+    [4X[28X60[128X[104X
+    [4X[25Xgap>[125X [27Xu := Subgroup( g, [ g.1, g.1^g.2 ] );[127X[104X
+    [4X[28XGroup([ a, b^-1*a*b ])[128X[104X
+    [4X[25Xgap>[125X [27Xp := PresentationSubgroup( g, u, "g" );[127X[104X
+    [4X[28X<presentation with 3 gens and 4 rels of total length 12>[128X[104X
+    [4X[25Xgap>[125X [27Xgens := GeneratorsOfPresentation( p );[127X[104X
+    [4X[28X[ g1, g2, g3 ][128X[104X
+    [4X[25Xgap>[125X [27XTzPrintRelators( p );[127X[104X
+    [4X[28X#I  1. g1^2[128X[104X
+    [4X[28X#I  2. g2^2[128X[104X
+    [4X[28X#I  3. g3*g2*g1[128X[104X
+    [4X[28X#I  4. g3^5[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YNote that you cannot call the generators by their names. These names are not
+  variables,  but  just  display  figures.  So,  if  you  want  to  access the
+  generators  by  their names, you first will have to introduce the respective
+  variables and to assign the generators to them.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xgens[1] = g1;[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xg1;[127X[104X
+    [4X[28X60[128X[104X
+    [4X[25Xgap>[125X [27Xg1 := gens[1];; g2 := gens[2];; g3 := gens[3];;[127X[104X
+    [4X[25Xgap>[125X [27Xg1;[127X[104X
+    [4X[28Xg1[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YThe  Reduced  Reidemeister-Schreier  algorithm  is  a  modification  of  the
+  Reidemeister-Schreier  algorithm of George Havas [Hav74]. It was proposed by
+  Joachim  Neubüser  and  first  implemented  in  1986  by Andrea Lucchini and
+  Volkmar  Felsch  in  the SPAS system [SPA89]. Like the Reidemeister-Schreier
+  algorithm  of  George Havas, it needs only the presentation of [3XG[103X and a coset
+  table of [3XH[103X in [3XG[103X to construct a presentation of [3XH[103X.[133X
+
+  [33X[0;0YWhenever  you  call  the command [2XPresentationSubgroupRrs[102X, it first obtains a
+  coset  table  of  [3XH[103X  in  [3XG[103X  if  not given. Next, a set of generators of [3XH[103X is
+  determined by reconstructing the coset table and introducing in that process
+  as  many Schreier generators of [3XH[103X in [3XG[103X as are needed to do a Felsch strategy
+  coset  enumeration  without any coincidences. (In general, though containing
+  redundant  generators,  this  set  will  be much smaller than the set of all
+  Schreier   generators.   That   is  why  we  call  the  method  the  [13XReduced[113X
+  Reidemeister-Schreier.)[133X
+
+  [33X[0;0YAfter  having  constructed this set of [13Xprimary subgroup generators[113X, say, the
+  coset  table  is  extended  to  an [13Xaugmented coset table[113X which describes the
+  action  of  the group generators on coset representatives, i.e., on elements
+  instead  of  cosets.  For  this  purpose,  suitable  words  in the (primary)
+  subgroup  generators  have  to  be associated to the coset table entries. In
+  order  to  keep  the  lengths  of  these  words  short, additional [13Xsecondary
+  subgroup  generators[113X  are  introduced  as  abbreviations  of subwords. Their
+  number may be large.[133X
+
+  [33X[0;0YFinally,  a  Reidemeister rewriting process is used to get defining relators
+  for  [3XH[103X  from  the  relators  of  [3XG[103X.  As the resulting presentation of [3XH[103X is a
+  presentation  on  primary [13Xand[113X secondary generators, in general you will have
+  to  simplify  it  by appropriate Tietze transformations (see [14X48.6[114X) or by the
+  command [2XDecodeTree[102X ([14X48.10-1[114X) before you can use it. Therefore it is returned
+  in the form of a presentation, [3XP[103X say.[133X
+
+  [33X[0;0YCompared  with the Modified Todd-Coxeter method described below, the Reduced
+  Reidemeister-Schreier     method     (as    well    as    Havas'    original
+  Reidemeister-Schreier  program)  has  the advantage that it does not require
+  generators  of  [3XH[103X  to  be  given  if  a coset table of [3XH[103X in [3XG[103X is known. This
+  provides  a possibility to compute a presentation of the normal closure of a
+  given subgroup (see [2XPresentationNormalClosureRrs[102X ([14X48.2-5[114X)).[133X
+
+  [33X[0;0YFor  certain  applications  you may be interested in getting not only just a
+  presentation for [3XH[103X, but also a relation between the involved generators of [3XH[103X
+  and  the  generators  of  [3XG[103X. The subgroup generators in the presentation are
+  sorted  such  that  the  primary  generators  precede  the  secondary  ones.
+  Moreover,  for  each  secondary subgroup generator there is a relator in the
+  presentation  which  expresses  this  generator as a word in preceding ones.
+  Hence,  all  we  need  in addition is a list of words in the generators of [3XG[103X
+  which  express  the  primary  subgroup  generators.  In fact, such a list is
+  provided  in  the  attribute [2XPrimaryGeneratorWords[102X ([14X48.2-3[114X) of the resulting
+  presentation.[133X
+
+  [1X48.2-3 PrimaryGeneratorWords[101X
+
+  [33X[1;0Y[29X[2XPrimaryGeneratorWords[102X( [3XP[103X ) [32X attribute[133X
+
+  [33X[0;0Yis  an  attribute  of  the presentation [3XP[103X which holds a list of words in the
+  associated group generators (of the underlying free group) which express the
+  primary subgroup generators of [3XP[103X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPrimaryGeneratorWords( p );[127X[104X
+    [4X[28X[ a, b^-1*a*b ][128X[104X
+  [4X[32X[104X
+
+  [1X48.2-4 PresentationSubgroupMtc[101X
+
+  [33X[1;0Y[29X[2XPresentationSubgroupMtc[102X( [3XG[103X, [3XH[103X[, [3Xstring[103X][, [3Xprint[103X, [3Xlevel[103X] ) [32X function[133X
+
+  [33X[0;0Yuses  the  Modified  Todd-Coxeter coset representative enumeration method to
+  compute  a  presentation [22XP[122X for a subgroup [3XH[103X of a finitely presented group [3XG[103X.
+  The  presentation  returned is in generators corresponding to the generators
+  of  [3XH[103X.  The  generators in the resulting presentation will be named [3Xstring[103X[10X1[110X,
+  [3Xstring[103X[10X2[110X,  [22X...[122X,  the default string is [10X"_x"[110X. You may access the [22Xi[122X-th of these
+  generators by [22XP[122X[10X!.[110X[22Xi[122X.[133X
+
+  [33X[0;0YThe  default  print  level  is  [22X1[122X.  If the print level is set to [22X0[122X, then the
+  printout  of  the  implicitly  called  function [2XDecodeTree[102X ([14X48.10-1[114X) will be
+  suppressed.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xp := PresentationSubgroupMtc( g, u );[127X[104X
+    [4X[28X<presentation with 2 gens and 3 rels of total length 14>[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YThe  so  called  Modified  Todd-Coxeter  method  was  proposed,  in slightly
+  different  forms,  by  Nathan S. Mendelsohn and William O. J. Moser in 1966.
+  Moser's  method  was  proved  in  [BC76]. It has been generalized to cover a
+  broad spectrum of different versions (see the survey [Neu82]).[133X
+
+  [33X[0;0YThe   [13XModified   Todd-Coxeter[113X   method  performs  an  enumeration  of  coset
+  representatives.  It proceeds like an ordinary coset enumeration (see [14X47.6[114X),
+  but  as  the  product  of a coset representative by a group generator or its
+  inverse need not be a coset representative itself, the Modified Todd-Coxeter
+  has  to store a kind of correction element for each coset table entry. Hence
+  it  builds  up a so called [13Xaugmented coset table[113X of [3XH[103X in [3XG[103X consisting of the
+  ordinary  coset  table  and  a  second  table in parallel which contains the
+  associated subgroup elements.[133X
+
+  [33X[0;0YTheoretically,  these  subgroup  elements could be expressed as words in the
+  given   generators  of  [3XH[103X,  but  in  general  these  words  tend  to  become
+  unmanageable   because  of  their  enormous  lengths.  Therefore,  a  highly
+  redundant  list  of  subgroup generators is built up starting from the given
+  ([21Xprimary[121X) generators of [3XH[103X and adding additional ([21Xsecondary[121X) generators which
+  are  defined  as  abbreviations  of  suitable  words  of  length  two in the
+  preceding  generators  such  that  each  of  the  subgroup  elements  in the
+  augmented  coset  table  can be expressed as a word of length at most one in
+  the resulting (primary [13Xand[113X secondary) subgroup generators.[133X
+
+  [33X[0;0YThen  a  rewriting  process  (which  is  essentially  a kind of Reidemeister
+  rewriting  process) is used to get relators for [3XH[103X from the defining relators
+  of [3XG[103X.[133X
+
+  [33X[0;0YThe  resulting  presentation  involves  all  the  primary,  but  not all the
+  secondary  generators  of  [3XH[103X.  In  fact,  it  contains  only those secondary
+  generators  which  explicitly  occur  in  the  augmented  coset table. If we
+  extended  this  presentation by those secondary generators which are not yet
+  contained  in  it  as  additional  generators, and by the definitions of all
+  secondary  generators as additional relators, we would get a presentation of
+  [3XH[103X,  but,  in  general, we would end up with a large number of generators and
+  relators.[133X
+
+  [33X[0;0YOn the other hand, if we avoid this extension, the current presentation will
+  not  necessarily  define  [3XH[103X although we have used the same rewriting process
+  which in the case of the [2XPresentationSubgroupRrs[102X ([14X48.2-2[114X) command computes a
+  defining  set  of  relators for [3XH[103X from an augmented coset table and defining
+  relators  of  [3XG[103X.  The  different  behaviour  here is caused by the fact that
+  coincidences   may   have   occurred  in  the  Modified  Todd-Coxeter  coset
+  enumeration.[133X
+
+  [33X[0;0YTo overcome this problem without extending the presentation by all secondary
+  generators,  the  [2XPresentationSubgroupMtc[102X  command  applies  the  so  called
+  [13Xdecoding  tree[113X  algorithm  which  provides  a  more economical approach. The
+  reader  is  strongly  recommended to carefully read section [14X48.10[114X where this
+  algorithm  is  described in more detail. Here we will only mention that this
+  procedure  may  add  a lot of intermediate generators and relators (and even
+  change  the  isomorphism  type)  in  a  process which in fact eliminates all
+  secondary  generators  from  the  presentation  and hence finally provides a
+  presentation  of [3XH[103X on the primary, i.e., the originally given, generators of
+  [3XH[103X.  This  is  a  remarkable advantage of the command [2XPresentationSubgroupMtc[102X
+  compared to the command [2XPresentationSubgroupRrs[102X ([14X48.2-2[114X). But note that, for
+  some  particular  subgroup [3XH[103X, the Reduced Reidemeister-Schreier method might
+  quite well produce a more concise presentation.[133X
+
+  [33X[0;0YThe resulting presentation is returned in the form of a presentation, [22XP[122X say.[133X
+
+  [33X[0;0YAs  the function [2XPresentationSubgroupRrs[102X ([14X48.2-2[114X) described above (see there
+  for  details),  the  function  [2XPresentationSubgroupMtc[102X returns a list of the
+  primary  subgroup  generators  of  [3XH[103X  in the attribute [2XPrimaryGeneratorWords[102X
+  ([14X48.2-3[114X)  of  [22XP[122X.  In fact, this list is not very exciting here because it is
+  just  a shallow copy of the value of [2XGeneratorsOfPresentation[102X ([14X48.1-3[114X) of [3XH[103X,
+  however  it is needed to guarantee a certain consistency between the results
+  of the different functions for computing subgroup presentations.[133X
+
+  [33X[0;0YThough   the  decoding  tree  routine  already  involves  a  lot  of  Tietze
+  transformations, we recommend that you try to further simplify the resulting
+  presentation by appropriate Tietze transformations (see [14X48.6[114X).[133X
+
+  [1X48.2-5 PresentationNormalClosureRrs[101X
+
+  [33X[1;0Y[29X[2XPresentationNormalClosureRrs[102X( [3XG[103X, [3XH[103X[, [3Xstring[103X] ) [32X function[133X
+
+  [33X[0;0Yuses  the  Reduced  Reidemeister-Schreier method to compute a presentation [22XP[122X
+  for  the normal closure of a subgroup [3XH[103X of a finitely presented group [3XG[103X. The
+  generators  in  the  resulting  presentation will be named [3Xstring[103X[10X1[110X, [3Xstring[103X[10X2[110X,
+  [22X...[122X, the default string is [10X"_x"[110X. You may access the [22Xi[122X-th of these generators
+  by [22XP[122X[10X!.[110X[22Xi[122X.[133X
+
+  [1X48.2-6 PresentationNormalClosure[101X
+
+  [33X[1;0Y[29X[2XPresentationNormalClosure[102X( [3XG[103X, [3XH[103X[, [3Xstring[103X] ) [32X function[133X
+
+  [33X[0;0Y[2XPresentationNormalClosure[102X  is  a  synonym  for  [2XPresentationNormalClosureRrs[102X
+  ([14X48.2-5[114X).[133X
+
+
+  [1X48.3 [33X[0;0YRelators in a Presentation[133X[101X
+
+  [33X[0;0YIn  order  to speed up the Tietze transformation routines, each relator in a
+  presentation  is  internally  represented  by a list of positive or negative
+  generator  numbers,  i.e., each factor of the proper [5XGAP[105X word is represented
+  by  the  position  number of the corresponding generator with respect to the
+  current  list  of  generators,  or by the respective negative number, if the
+  factor  is  the  inverse  of  a  generator.  Note  that the numbering of the
+  generators  in Tietze words is always relative to a generator list and bears
+  no  relation  to  the  internal  numbering  of  generators  in  a  family of
+  associative words.[133X
+
+  [1X48.3-1 TietzeWordAbstractWord[101X
+
+  [33X[1;0Y[29X[2XTietzeWordAbstractWord[102X( [3Xword[103X, [3Xfgens[103X ) [32X operation[133X
+
+  [33X[0;0Yassumes  [3Xfgens[103X  to  be  a  list  of  free group generators and [3Xword[103X to be an
+  abstract  word  in these generators. It converts [3Xword[103X into a Tietze word, i.
+  e., a list of positive or negative generator numbers.[133X
+
+  [33X[0;0YThis function simply calls [2XLetterRepAssocWord[102X ([14X37.6-8[114X).[133X
+
+  [1X48.3-2 AbstractWordTietzeWord[101X
+
+  [33X[1;0Y[29X[2XAbstractWordTietzeWord[102X( [3Xword[103X, [3Xfgens[103X ) [32X function[133X
+
+  [33X[0;0Yassumes  [3Xfgens[103X to be a list of free group generators and [3Xword[103X to be a Tietze
+  word  in  these  generators, i. e., a list of positive or negative generator
+  numbers. It converts [3Xword[103X to an abstract word.[133X
+
+  [33X[0;0YThis function simply calls [2XAssocWordByLetterRep[102X ([14X37.6-9[114X).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XF := FreeGroup( "a", "b", "c" ,"d");[127X[104X
+    [4X[28X<free group on the generators [ a, b, c, d ]>[128X[104X
+    [4X[25Xgap>[125X [27Xtzword := TietzeWordAbstractWord([127X[104X
+    [4X[25X>[125X [27XComm(F.4,F.2) * (F.3^2 * F.2)^-1, GeneratorsOfGroup( F ){[2,3,4]} );[127X[104X
+    [4X[28X[ -3, -1, 3, -2, -2 ][128X[104X
+    [4X[25Xgap>[125X [27XAbstractWordTietzeWord( tzword, GeneratorsOfGroup( F ){[2,3,4]} );[127X[104X
+    [4X[28Xd^-1*b^-1*d*c^-2[128X[104X
+  [4X[32X[104X
+
+
+  [1X48.4 [33X[0;0YPrinting Presentations[133X[101X
+
+  [33X[0;0YWhenever  you  create a presentation [22XP[122X, or assign it to a variable, [5XGAP[105X will
+  respond  by  printing  [22XP[122X.  However, as [22XP[122X may contain a lot of generators and
+  many  relators  of  large length, it would be annoying if the standard print
+  facilities  displayed  all  this information in detail. So they restrict the
+  printout  to  just one line of text containing the number of generators, the
+  number  of  relators,  and  the  total  length  of  all  relators  of  [22XP[122X. As
+  compensation,  [5XGAP[105X  offers some special print commands which display various
+  details of a presentation. Note that there is also a function [2XTzPrintOptions[102X
+  ([14X48.11-2[114X). It is described in Section [14X48.11[114X.[133X
+
+  [1X48.4-1 TzPrintGenerators[101X
+
+  [33X[1;0Y[29X[2XTzPrintGenerators[102X( [3XP[103X[, [3Xlist[103X] ) [32X function[133X
+
+  [33X[0;0Yprints  the  generators of the given Tietze presentation [3XP[103X together with the
+  number  of  their  occurrences in the relators. The optional second argument
+  can be used to specify the numbers of the generators to be printed. Default:
+  all generators are printed.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := Group( [ (1,2,3,4,5), (2,3,5,4), (1,6)(3,4) ], () );[127X[104X
+    [4X[28XGroup([ (1,2,3,4,5), (2,3,5,4), (1,6)(3,4) ])[128X[104X
+    [4X[25Xgap>[125X [27XP := PresentationViaCosetTable( G );[127X[104X
+    [4X[28X<presentation with 3 gens and 6 rels of total length 28>[128X[104X
+    [4X[25Xgap>[125X [27XTzPrintGenerators( P );[127X[104X
+    [4X[28X#I  1.  f1   11 occurrences[128X[104X
+    [4X[28X#I  2.  f2   10 occurrences[128X[104X
+    [4X[28X#I  3.  f3   7 occurrences   involution[128X[104X
+  [4X[32X[104X
+
+  [1X48.4-2 TzPrintRelators[101X
+
+  [33X[1;0Y[29X[2XTzPrintRelators[102X( [3XP[103X[, [3Xlist[103X] ) [32X function[133X
+
+  [33X[0;0Yprints  the relators of the given Tietze presentation [3XP[103X. The optional second
+  argument  [3Xlist[103X  can  be  used  to  specify the numbers of the relators to be
+  printed. Default: all relators are printed.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTzPrintRelators( P );[127X[104X
+    [4X[28X#I  1. f3^2[128X[104X
+    [4X[28X#I  2. f2^4[128X[104X
+    [4X[28X#I  3. (f2*f3)^2[128X[104X
+    [4X[28X#I  4. f1^5[128X[104X
+    [4X[28X#I  5. f1^2*f2*f1*f2^-1[128X[104X
+    [4X[28X#I  6. f1*f2^-2*f3*f1*f3*f1^-1*f3[128X[104X
+  [4X[32X[104X
+
+  [1X48.4-3 TzPrintLengths[101X
+
+  [33X[1;0Y[29X[2XTzPrintLengths[102X( [3XP[103X ) [32X function[133X
+
+  [33X[0;0Yprints just a list of all relator lengths of the given presentation [3XP[103X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTzPrintLengths( P );[127X[104X
+    [4X[28X[ 2, 4, 4, 5, 5, 8 ][128X[104X
+  [4X[32X[104X
+
+  [1X48.4-4 TzPrintStatus[101X
+
+  [33X[1;0Y[29X[2XTzPrintStatus[102X( [3XP[103X[, [3Xnorepeat[103X] ) [32X function[133X
+
+  [33X[0;0Yis  an internal function which is used by the Tietze transformation routines
+  to  print  the  number  of generators, the number of relators, and the total
+  length  of  all  relators in the given Tietze presentation [3XP[103X. If [3Xnorepeat[103X is
+  specified  as  [9Xtrue[109X,  the printing is suppressed if none of the three values
+  has changed since the last call.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTzPrintStatus( P );[127X[104X
+    [4X[28X#I  there are 3 generators and 6 relators of total length 28[128X[104X
+  [4X[32X[104X
+
+  [1X48.4-5 TzPrintPresentation[101X
+
+  [33X[1;0Y[29X[2XTzPrintPresentation[102X( [3XP[103X ) [32X function[133X
+
+  [33X[0;0Yprints the generators and the relators of a Tietze presentation. In fact, it
+  is   an   abbreviation  for  the  successive  call  of  the  three  commands
+  [2XTzPrintGenerators[102X  ([14X48.4-1[114X),  [2XTzPrintRelators[102X  ([14X48.4-2[114X),  and  [2XTzPrintStatus[102X
+  ([14X48.4-4[114X), each with the presentation [3XP[103X as only argument.[133X
+
+  [1X48.4-6 TzPrint[101X
+
+  [33X[1;0Y[29X[2XTzPrint[102X( [3XP[103X[, [3Xlist[103X] ) [32X function[133X
+
+  [33X[0;0Yprints  the  current  generators of the given presentation [3XP[103X, and prints the
+  relators  of  [3XP[103X  as  Tietze  words (without converting them back to abstract
+  words  as  the  functions  [2XTzPrintRelators[102X  ([14X48.4-2[114X) and [2XTzPrintPresentation[102X
+  ([14X48.4-5[114X)  do).  The  optional  second  argument  can  be used to specify the
+  numbers of the relators to be printed. Default: all relators are printed.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTzPrint( P );[127X[104X
+    [4X[28X#I  generators: [ f1, f2, f3 ][128X[104X
+    [4X[28X#I  relators:[128X[104X
+    [4X[28X#I  1.  2  [ 3, 3 ][128X[104X
+    [4X[28X#I  2.  4  [ 2, 2, 2, 2 ][128X[104X
+    [4X[28X#I  3.  4  [ 2, 3, 2, 3 ][128X[104X
+    [4X[28X#I  4.  5  [ 1, 1, 1, 1, 1 ][128X[104X
+    [4X[28X#I  5.  5  [ 1, 1, 2, 1, -2 ][128X[104X
+    [4X[28X#I  6.  8  [ 1, -2, -2, 3, 1, 3, -1, 3 ][128X[104X
+  [4X[32X[104X
+
+  [1X48.4-7 TzPrintPairs[101X
+
+  [33X[1;0Y[29X[2XTzPrintPairs[102X( [3XP[103X[, [3Xn[103X] ) [32X function[133X
+
+  [33X[0;0Yprints  the [3Xn[103X most often occurring relator subwords of the form [22Xa b[122X, where [22Xa[122X
+  and  [22Xb[122X are different generators or inverses of generators, together with the
+  number  of their occurrences. The default value of [3Xn[103X is 10. A value [3Xn[103X = 0 is
+  interpreted as [2Xinfinity[102X ([14X18.2-1[114X).[133X
+
+  [33X[0;0YThe function [2XTzPrintPairs[102X is useful in the context of Tietze transformations
+  which  introduce  new  generators  by  substituting  words  in  the  current
+  generators (see [14X48.8[114X). It gives some evidence for an appropriate choice of a
+  word of length 2 to be substituted.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTzPrintPairs( P, 3 );[127X[104X
+    [4X[28X#I  1.  3  occurrences of  f2^-1 * f3[128X[104X
+    [4X[28X#I  2.  2  occurrences of  f2 * f3[128X[104X
+    [4X[28X#I  3.  2  occurrences of  f1^-1 * f3[128X[104X
+  [4X[32X[104X
+
+
+  [1X48.5 [33X[0;0YChanging Presentations[133X[101X
+
+  [33X[0;0YThe   functions   described  in  this  section  may  be  used  to  change  a
+  presentation.  Note,  however,  that  in  general they do not perform Tietze
+  transformations  because  they  change or may change the isomorphism type of
+  the group defined by the presentation.[133X
+
+  [1X48.5-1 AddGenerator[101X
+
+  [33X[1;0Y[29X[2XAddGenerator[102X( [3XP[103X ) [32X function[133X
+
+  [33X[0;0Yextends the presentation [3XP[103X by a new generator.[133X
+
+  [33X[0;0YLet  [22Xi[122X  be  the  smallest  positive integer which has not yet been used as a
+  generator  number  in  the  given  presentation.  [2XAddGenerator[102X defines a new
+  abstract  generator  [22Xx_i[122X  with  the  name  [10X"_x[110X[22Xi[122X[10X"[110X  and adds it to the list of
+  generators of [3XP[103X.[133X
+
+  [33X[0;0YYou  may  access  the  generator  [22Xx_i[122X  by typing [3XP[103X[10X!.[110X[22Xi[122X. However, this is only
+  practicable  if  you are running an interactive job because you have to know
+  the value of [22Xi[122X. Hence the proper way to access the new generator is to write
+  [10XLast(GeneratorsOfPresentation(P))[110X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := PerfectGroup(IsFpGroup, 120 );;[127X[104X
+    [4X[25Xgap>[125X [27XH := Subgroup( G, [ G.1^G.2, G.3 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XP := PresentationSubgroup( G, H );[127X[104X
+    [4X[28X<presentation with 4 gens and 7 rels of total length 21>[128X[104X
+    [4X[25Xgap>[125X [27XAddGenerator( P );[127X[104X
+    [4X[28X#I  now the presentation has 5 generators, the new generator is _x7[128X[104X
+    [4X[25Xgap>[125X [27Xgens := GeneratorsOfPresentation( P );[127X[104X
+    [4X[28X[ _x1, _x2, _x4, _x5, _x7 ][128X[104X
+    [4X[25Xgap>[125X [27Xgen := Last(gens);[127X[104X
+    [4X[28X_x7[128X[104X
+    [4X[25Xgap>[125X [27Xgen = P!.7;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+
+  [1X48.5-2 TzNewGenerator[101X
+
+  [33X[1;0Y[29X[2XTzNewGenerator[102X( [3XP[103X ) [32X function[133X
+
+  [33X[0;0Yis  an  internal function which defines a new abstract generator and adds it
+  to  the presentation [3XP[103X. It is called by [2XAddGenerator[102X ([14X48.5-1[114X) and by several
+  Tietze  transformation commands. As it does not know which global lists have
+  to  be kept consistent, you should not call it. Instead, you should call the
+  function [2XAddGenerator[102X ([14X48.5-1[114X), if needed.[133X
+
+  [1X48.5-3 AddRelator[101X
+
+  [33X[1;0Y[29X[2XAddRelator[102X( [3XP[103X, [3Xword[103X ) [32X function[133X
+
+  [33X[0;0Yadds  the  relator  [3Xword[103X  to the presentation [3XP[103X, probably changing the group
+  defined by [3XP[103X. [3Xword[103X must be an abstract word in the generators of [3XP[103X.[133X
+
+  [1X48.5-4 RemoveRelator[101X
+
+  [33X[1;0Y[29X[2XRemoveRelator[102X( [3XP[103X, [3Xn[103X ) [32X function[133X
+
+  [33X[0;0Yremoves  the  [3Xn[103X-th  relator  from  the presentation [3XP[103X, probably changing the
+  group defined by [3XP[103X.[133X
+
+
+  [1X48.6 [33X[0;0YTietze Transformations[133X[101X
+
+  [33X[0;0YThe  commands in this section can be used to modify a presentation by Tietze
+  transformations.[133X
+
+  [33X[0;0YIn  general,  the  aim  of  such modifications will be to [13Xsimplify[113X the given
+  presentation,  i.e.,  to  reduce  the number of generators and the number of
+  relators without increasing too much the sum of all relator lengths which we
+  will  call  the  [13Xtotal length[113X of the presentation. Depending on the concrete
+  presentation  under  investigation  one  may  end  up  with  a  nice,  short
+  presentation or with a very huge one.[133X
+
+  [33X[0;0YUnfortunately  there  is  no  algorithm  which  could be applied to find the
+  shortest presentation which can be obtained by Tietze transformations from a
+  given   one.   Therefore,  what  [5XGAP[105X  offers  are  some  lower-level  Tietze
+  transformation  commands  and, in addition, some higher-level commands which
+  apply  the  lower-level  ones  in a kind of default strategy which of course
+  cannot be the optimal choice for all presentations.[133X
+
+  [33X[0;0YThe  design  of these commands follows closely the concept of the ANU Tietze
+  transformation  program  [Hav69]  and  its  later  revisions  (see [HKRR84],
+  [Rob88]).[133X
+
+  [1X48.6-1 TzGo[101X
+
+  [33X[1;0Y[29X[2XTzGo[102X( [3XP[103X[, [3Xsilent[103X] ) [32X function[133X
+
+  [33X[0;0Yautomatically   performs   suitable  Tietze  transformations  of  the  given
+  presentation  [3XP[103X. It is perhaps the most convenient one among the interactive
+  Tietze  transformation commands. It offers a kind of default strategy which,
+  in  general,  saves  you from explicitly calling the lower-level commands it
+  involves.[133X
+
+  [33X[0;0YIf  [3Xsilent[103X  is specified as [9Xtrue[109X, the printing of the status line by [2XTzGo[102X is
+  suppressed if the Tietze option [10XprintLevel[110X (see [14X48.11[114X) has a value less than
+  [22X2[122X.[133X
+
+  [1X48.6-2 SimplifyPresentation[101X
+
+  [33X[1;0Y[29X[2XSimplifyPresentation[102X( [3XP[103X ) [32X function[133X
+
+  [33X[0;0Y[2XSimplifyPresentation[102X is a synonym for [2XTzGo[102X ([14X48.6-1[114X).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XF2 := FreeGroup( "a", "b" );;[127X[104X
+    [4X[25Xgap>[125X [27XG := F2 / [ F2.1^9, F2.2^2, (F2.1*F2.2)^4, (F2.1^2*F2.2)^3 ];;[127X[104X
+    [4X[25Xgap>[125X [27Xa := G.1;; b := G.2;;[127X[104X
+    [4X[25Xgap>[125X [27XH := Subgroup( G, [ (a*b)^2, (a^-1*b)^2 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XIndex( G, H );[127X[104X
+    [4X[28X408[128X[104X
+    [4X[25Xgap>[125X [27XP := PresentationSubgroup( G, H );[127X[104X
+    [4X[28X<presentation with 8 gens and 36 rels of total length 111>[128X[104X
+    [4X[25Xgap>[125X [27XPrimaryGeneratorWords( P );[127X[104X
+    [4X[28X[ b, a*b*a ][128X[104X
+    [4X[25Xgap>[125X [27XTzOptions( P ).protected := 2;[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XTzOptions( P ).printLevel := 2;[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XSimplifyPresentation( P );[127X[104X
+    [4X[28X#I  eliminating _x7 = _x5^-1[128X[104X
+    [4X[28X#I  eliminating _x5 = _x4[128X[104X
+    [4X[28X#I  eliminating _x18 = _x3[128X[104X
+    [4X[28X#I  eliminating _x8 = _x3[128X[104X
+    [4X[28X#I  there are 4 generators and 8 relators of total length 21[128X[104X
+    [4X[28X#I  there are 4 generators and 7 relators of total length 18[128X[104X
+    [4X[28X#I  eliminating _x4 = _x3^-1*_x2^-1[128X[104X
+    [4X[28X#I  eliminating _x3 = _x2*_x1^-1[128X[104X
+    [4X[28X#I  there are 2 generators and 4 relators of total length 14[128X[104X
+    [4X[28X#I  there are 2 generators and 4 relators of total length 13[128X[104X
+    [4X[28X#I  there are 2 generators and 3 relators of total length 9[128X[104X
+    [4X[25Xgap>[125X [27XTzPrintRelators( P );[127X[104X
+    [4X[28X#I  1. _x1^2[128X[104X
+    [4X[28X#I  2. _x2^3[128X[104X
+    [4X[28X#I  3. (_x2*_x1)^2[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YRoughly  speaking,  [2XTzGo[102X  ([14X48.6-1[114X) consists of a loop over a procedure which
+  involves  two  phases:  In  the  [13Xsearch phase[113X it calls [2XTzSearch[102X ([14X48.7-2[114X) and
+  [2XTzSearchEqual[102X  ([14X48.7-3[114X)  described  below  which  try  to reduce the relator
+  lengths  by  substituting  common  subwords  of relators, in the [13Xelimination
+  phase[113X  it  calls  the command [2XTzEliminate[102X ([14X48.7-1[114X) described below (or, more
+  precisely,  a  subroutine  of  [2XTzEliminate[102X  ([14X48.7-1[114X)  in  order to save some
+  administrative  overhead)  which  tries  to eliminate generators that can be
+  expressed as words in the remaining generators.[133X
+
+  [33X[0;0YIf  [2XTzGo[102X  ([14X48.6-1[114X) succeeds in reducing the number of generators, the number
+  of relators, or the total length of all relators, it displays the new status
+  before  returning  (provided  that you did not set the print level to zero).
+  However,  it  does  not  provide  any  output if all these three values have
+  remained  unchanged, even if the command [2XTzSearchEqual[102X ([14X48.7-3[114X) involved has
+  changed  the  presentation  such  that  another  call of [2XTzGo[102X ([14X48.6-1[114X) might
+  provide further progress. Hence, in such a case it makes sense to repeat the
+  call  of  the  command  for  several  times  (or  to call the command [2XTzGoGo[102X
+  ([14X48.6-3[114X) instead).[133X
+
+  [1X48.6-3 TzGoGo[101X
+
+  [33X[1;0Y[29X[2XTzGoGo[102X( [3XP[103X ) [32X function[133X
+
+  [33X[0;0Ycalls the command [2XTzGo[102X ([14X48.6-1[114X) again and again until it does not reduce the
+  presentation any more.[133X
+
+  [33X[0;0YThe  result  of  the Tietze transformations can be affected substantially by
+  the  options  parameters  (see  [14X48.11[114X).  To  demonstrate  the  effect of the
+  [10XeliminationsLimit[110X  parameter,  we  will give an example in which we handle a
+  subgroup  of index 240 in a group of order 40320 given by a presentation due
+  to  B. H.  Neumann.  First  we construct a presentation of the subgroup, and
+  then we apply to it the command [2XTzGoGo[102X for different values of the parameter
+  [10XeliminationsLimit[110X  (including the default value 100). In fact, we also alter
+  the [10XprintLevel[110X parameter, but this is only done in order to suppress most of
+  the  output. In all cases the resulting presentations cannot be improved any
+  more  by  applying the command [2XTzGoGo[102X again, i.e., they are the best results
+  which we can get without substituting new generators.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XF3 := FreeGroup( "a", "b", "c" );;[127X[104X
+    [4X[25Xgap>[125X [27XG := F3 / [ F3.1^3, F3.2^3, F3.3^3, (F3.1*F3.2)^5,[127X[104X
+    [4X[25X>[125X [27X(F3.1^-1*F3.2)^5, (F3.1*F3.3)^4, (F3.1*F3.3^-1)^4,[127X[104X
+    [4X[25X>[125X [27XF3.1*F3.2^-1*F3.1*F3.2*F3.3^-1*F3.1*F3.3*F3.1*F3.3^-1,[127X[104X
+    [4X[25X>[125X [27X(F3.2*F3.3)^3, (F3.2^-1*F3.3)^4 ];;[127X[104X
+    [4X[25Xgap>[125X [27Xa := G.1;; b := G.2;; c := G.3;;[127X[104X
+    [4X[25Xgap>[125X [27XH := Subgroup( G, [ a, c ] );;[127X[104X
+    [4X[25Xgap>[125X [27Xfor i in [ 61, 62, 63, 90, 97 ] do[127X[104X
+    [4X[25X>[125X [27XPi := PresentationSubgroup( G, H );[127X[104X
+    [4X[25X>[125X [27XTzOptions( Pi ).eliminationsLimit := i;[127X[104X
+    [4X[25X>[125X [27XPrint("#I eliminationsLimit set to ",i,"\n");[127X[104X
+    [4X[25X>[125X [27XTzOptions( Pi ).printLevel := 0;[127X[104X
+    [4X[25X>[125X [27XTzGoGo( Pi );[127X[104X
+    [4X[25X>[125X [27XTzPrintStatus( Pi );[127X[104X
+    [4X[25X>[125X [27Xod;[127X[104X
+    [4X[28X#I eliminationsLimit set to 61[128X[104X
+    [4X[28X#I  there are 2 generators and 104 relators of total length 7012[128X[104X
+    [4X[28X#I eliminationsLimit set to 62[128X[104X
+    [4X[28X#I  there are 2 generators and 7 relators of total length 56[128X[104X
+    [4X[28X#I eliminationsLimit set to 63[128X[104X
+    [4X[28X#I  there are 3 generators and 97 relators of total length 5998[128X[104X
+    [4X[28X#I eliminationsLimit set to 90[128X[104X
+    [4X[28X#I  there are 3 generators and 11 relators of total length 68[128X[104X
+    [4X[28X#I eliminationsLimit set to 97[128X[104X
+    [4X[28X#I  there are 4 generators and 109 relators of total length 3813[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YSimilarly,  we  demonstrate the influence of the [10XsaveLimit[110X parameter by just
+  continuing  the preceding example for some different values of the [10XsaveLimit[110X
+  parameter  (including  its  default  value  10),  but  without  changing the
+  [10XeliminationsLimit[110X parameter which keeps its default value 100.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xfor i in [ 7 .. 11 ] do[127X[104X
+    [4X[25X>[125X [27XPi := PresentationSubgroup( G, H );[127X[104X
+    [4X[25X>[125X [27XTzOptions( Pi ).saveLimit := i;[127X[104X
+    [4X[25X>[125X [27XPrint( "#I saveLimit set to ", i, "\n" );[127X[104X
+    [4X[25X>[125X [27XTzOptions( Pi ).printLevel := 0;[127X[104X
+    [4X[25X>[125X [27XTzGoGo( Pi );[127X[104X
+    [4X[25X>[125X [27XTzPrintStatus( Pi );[127X[104X
+    [4X[25X>[125X [27Xod;[127X[104X
+    [4X[28X#I saveLimit set to 7[128X[104X
+    [4X[28X#I  there are 3 generators and 99 relators of total length 2713[128X[104X
+    [4X[28X#I saveLimit set to 8[128X[104X
+    [4X[28X#I  there are 2 generators and 103 relators of total length 11982[128X[104X
+    [4X[28X#I saveLimit set to 9[128X[104X
+    [4X[28X#I  there are 2 generators and 6 relators of total length 41[128X[104X
+    [4X[28X#I saveLimit set to 10[128X[104X
+    [4X[28X#I  there are 3 generators and 118 relators of total length 13713[128X[104X
+    [4X[28X#I saveLimit set to 11[128X[104X
+    [4X[28X#I  there are 3 generators and 11 relators of total length 58[128X[104X
+  [4X[32X[104X
+
+
+  [1X48.7 [33X[0;0YElementary Tietze Transformations[133X[101X
+
+
+  [1X48.7-1 [33X[0;0YTzEliminate[133X[101X
+
+  [33X[1;0Y[29X[2XTzEliminate[102X( [3XP[103X[, [3Xgen[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XTzEliminate[102X( [3XP[103X[, [3Xn[103X] ) [32X function[133X
+
+  [33X[0;0Ytries   to   eliminate   a  generator  from  a  presentation  [3XP[103X  via  Tietze
+  transformations.[133X
+
+  [33X[0;0YAny  relator  which  contains  some  generator  just  once  can  be  used to
+  substitute  that  generator  by  a word in the remaining generators. If such
+  generators  and  relators  exist,  then  [2XTzEliminate[102X chooses a generator for
+  which  the  product  of  its  number  of  occurrences  and the length of the
+  substituting word is minimal, and then it eliminates this generator from the
+  presentation,  provided that the resulting total length of the relators does
+  not  exceed  the  associated Tietze option parameter [10XspaceLimit[110X (see [14X48.11[114X).
+  The  default value of that parameter is [2Xinfinity[102X ([14X18.2-1[114X), but you may alter
+  it appropriately.[133X
+
+  [33X[0;0YIf  a  generator  [3Xgen[103X  has  been  specified,  [2XTzEliminate[102X  eliminates  it if
+  possible,  i.  e. if there is a relator in which [3Xgen[103X occurs just once. If no
+  second  argument has been specified, [2XTzEliminate[102X eliminates some appropriate
+  generator if possible and if the resulting total length of the relators will
+  not exceed the Tietze options parameter [10XlengthLimit[110X.[133X
+
+  [33X[0;0YIf  an  integer [3Xn[103X has been specified, [2XTzEliminate[102X tries to eliminate up to [3Xn[103X
+  generators.  Note  that  the  calls  [10XTzEliminate([3XP[103X[10X)[110X and [10XTzEliminate([3XP[103X[10X,1)[110X are
+  equivalent.[133X
+
+  [1X48.7-2 TzSearch[101X
+
+  [33X[1;0Y[29X[2XTzSearch[102X( [3XP[103X ) [32X function[133X
+
+  [33X[0;0Ysearches  for  relator subwords which, in some relator, have a complement of
+  shorter  length  and  which  occur  in other relators, too, and uses them to
+  reduce these other relators.[133X
+
+  [33X[0;0YThe  idea  is  to  find pairs of relators [22Xr_1[122X and [22Xr_2[122X of length [22Xl_1[122X and [22Xl_2[122X,
+  respectively,  such  that [22Xl_1 ≤ l_2[122X and [22Xr_1[122X and [22Xr_2[122X coincide (possibly after
+  inverting  or  conjugating  one of them) in some maximal subword [22Xw[122X of length
+  greater  than  [22Xl_1/2[122X,  and  then  to substitute each copy of [22Xw[122X in [22Xr_2[122X by the
+  inverse complement of [22Xw[122X in [22Xr_1[122X.[133X
+
+  [33X[0;0YTwo  of  the  Tietze option parameters which are listed in section [14X48.11[114X may
+  strongly  influence the performance and the results of the command [2XTzSearch[102X.
+  These are the parameters [10XsaveLimit[110X and [10XsearchSimultaneous[110X. The first of them
+  has the following effect:[133X
+
+  [33X[0;0YWhen  [2XTzSearch[102X  has  finished  its  main  loop  over  all relators, then, in
+  general,  there  are relators which have changed and hence should be handled
+  again  in another run through the whole procedure. However, experience shows
+  that  it  really  does  not  pay to continue this way until no more relators
+  change. Therefore, [2XTzSearch[102X starts a new loop only if the loop just finished
+  has reduced the total length of the relators by at least [10XsaveLimit[110X per cent.[133X
+
+  [33X[0;0YThe default value of [10XsaveLimit[110X is 10 per cent.[133X
+
+  [33X[0;0YTo  understand  the effect of the option [10XsearchSimultaneous[110X, we have to look
+  in more detail at how [2XTzSearch[102X proceeds:[133X
+
+  [33X[0;0YFirst, it sorts the list of relators by increasing lengths. Then it performs
+  a  loop  over  this  list. In each step of this loop, the current relator is
+  treated  as  [13Xshort  relator[113X [22Xr_1[122X, and a subroutine is called which loops over
+  the  succeeding  relators, treating them as [13Xlong relators[113X [22Xr_2[122X and performing
+  the respective comparisons and substitutions.[133X
+
+  [33X[0;0YAs   this  subroutine  performs  a  very  expensive  process,  it  has  been
+  implemented  as  a C routine in the [5XGAP[105X kernel. For the given relator [22Xr_1[122X of
+  length  [22Xl_1[122X it first determines the [13Xminimal match length[113X [22Xl[122X which is [22Xl_1/2+1[122X,
+  if  [22Xl_1[122X  is even, or [22X(l_1+1)/2[122X, otherwise. Then it builds up a hash list for
+  all subwords of length [22Xl[122X occurring in the conjugates of [22Xr_1[122X or [22Xr_1^{-1}[122X, and
+  finally  it loops over all long relators [22Xr_2[122X and compares the hash values of
+  their subwords of length [22Xl[122X against this list. A comparison of subwords which
+  is much more expensive is only done if a hash match has been found.[133X
+
+  [33X[0;0YTo  improve the efficiency of this process we allow the subroutine to handle
+  several  short  relators  simultaneously  provided  that  they have the same
+  minimal  match  length.  If,  for  example,  it  handles  [22Xn[122X  short  relators
+  simultaneously,  then  you  save [22Xn - 1[122X loops over the long relators [22Xr_2[122X, but
+  you  pay for it by additional fruitless subword comparisons. In general, you
+  will  not  get  the best performance by always choosing the maximal possible
+  number  of short relators to be handled simultaneously. In fact, the optimal
+  choice  of  the  number  will  depend  on  the  concrete  presentation under
+  investigation.  You can use the parameter [10XsearchSimultaneous[110X to prescribe an
+  upper bound for the number of short relators to be handled simultaneously.[133X
+
+  [33X[0;0YThe default value of [10XsearchSimultaneous[110X is 20.[133X
+
+  [1X48.7-3 TzSearchEqual[101X
+
+  [33X[1;0Y[29X[2XTzSearchEqual[102X( [3XP[103X ) [32X function[133X
+
+  [33X[0;0Ysearches  for  Tietze  relator  subwords  which,  in  some  relator,  have a
+  complement  of equal length and which occur in other relators, too, and uses
+  them to modify these other relators.[133X
+
+  [33X[0;0YThe  idea  is  to  find pairs of relators [22Xr_1[122X and [22Xr_2[122X of length [22Xl_1[122X and [22Xl_2[122X,
+  respectively,  such  that  [22Xl_1[122X  is even, [22Xl_1 ≤ l_2[122X, and [22Xr_1[122X and [22Xr_2[122X coincide
+  (possibly  after  inverting  or  conjugating  one  of  them) in some maximal
+  subword  [22Xw[122X  of length at least [22Xl_1/2[122X. Let [22Xl[122X be the length of [22Xw[122X. Then, if [22Xl >
+  l_1/2[122X, the pair is handled as in [2XTzSearch[102X ([14X48.7-2[114X). Otherwise, if [22Xl = l_1/2[122X,
+  then  [2XTzSearchEqual[102X  substitutes  each  copy  of  [22Xw[122X  in  [22Xr_2[122X  by the inverse
+  complement of [22Xw[122X in [22Xr_1[122X.[133X
+
+  [33X[0;0YThe  Tietze  option parameter [10XsearchSimultaneous[110X is used by [2XTzSearchEqual[102X in
+  the same way as described for [2XTzSearch[102X ([14X48.7-2[114X). However, [2XTzSearchEqual[102X does
+  not  use  the  parameter  [10XsaveLimit[110X:  The loop over the relators is executed
+  exactly once.[133X
+
+  [1X48.7-4 TzFindCyclicJoins[101X
+
+  [33X[1;0Y[29X[2XTzFindCyclicJoins[102X( [3XP[103X ) [32X function[133X
+
+  [33X[0;0Ysearches  for  power  and  commutator  relators  in  order  to find pairs of
+  generators  which  generate a common cyclic subgroup. It uses these pairs to
+  introduce  new  relators, but it does not introduce any new generators as is
+  done by [2XTzSubstituteCyclicJoins[102X ([14X48.8-2[114X).[133X
+
+  [33X[0;0YMore  precisely:  [2XTzFindCyclicJoins[102X searches for pairs of generators [22Xa[122X and [22Xb[122X
+  such that (possibly after inverting or conjugating some relators) the set of
+  relators  contains  the  commutator [22X[a,b][122X, a power [22Xa^n[122X, and a product of the
+  form  [22Xa^s  b^t[122X with [22Xs[122X prime to [22Xn[122X. For each such pair, [2XTzFindCyclicJoins[102X uses
+  the Euclidean algorithm to express [22Xa[122X as a power of [22Xb[122X, and then it eliminates
+  [22Xa[122X.[133X
+
+
+  [1X48.8 [33X[0;0YTietze Transformations that introduce new Generators[133X[101X
+
+  [33X[0;0YSome  of  the  Tietze  transformation  commands  listed so far may eliminate
+  generators  and  hence  change the given presentation to a presentation on a
+  subset  of  the  given  set of generators, but they all do [13Xnot[113X introduce new
+  generators.  However, sometimes there will be the need to substitute certain
+  words  as  new  generators in order to improve a presentation. Therefore [5XGAP[105X
+  offers  the  two  commands [2XTzSubstitute[102X ([14X48.8-1[114X) and [2XTzSubstituteCyclicJoins[102X
+  ([14X48.8-2[114X) which introduce new generators.[133X
+
+
+  [1X48.8-1 [33X[0;0YTzSubstitute[133X[101X
+
+  [33X[1;0Y[29X[2XTzSubstitute[102X( [3XP[103X, [3Xword[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XTzSubstitute[102X( [3XP[103X[, [3Xn[103X[, [3Xeliminate[103X]] ) [32X function[133X
+
+  [33X[0;0YIn the first form [2XTzSubstitute[102X expects [3XP[103X to be a presentation and [3Xword[103X to be
+  either  an  abstract  word  or  a  Tietze  word  in  the generators of [3XP[103X. It
+  substitutes the given word as a new generator of [3XP[103X. This is done as follows:
+  First,  [2XTzSubstitute[102X creates a new abstract generator, [22Xg[122X say, and adds it to
+  the presentation, then it adds a new relator [22Xg^{-1} ⋅ [3Xword[103X[122X.[133X
+
+  [33X[0;0YIn  its  second form, [2XTzSubstitute[102X substitutes a squarefree word of length 2
+  as  a  new  generator  and  then  eliminates  a  generator from the extended
+  generator list. We will describe this process in more detail below.[133X
+
+  [33X[0;0YThe  parameters  [3Xn[103X  and [3Xeliminate[103X are optional. If you specify arguments for
+  them, then [3Xn[103X is expected to be a positive integer, and [3Xeliminate[103X is expected
+  to be 0, 1, or 2. The default values are [3Xn[103X [22X= 1[122X and [3Xeliminate[103X [22X= 0[122X.[133X
+
+  [33X[0;0Y[2XTzSubstitute[102X  first  determines  the  [3Xn[103X  most  frequently  occurring relator
+  subwords  of the form [22Xg_1 g_2[122X, where [22Xg_1[122X and [22Xg_2[122X are different generators or
+  their inverses, and sorts them by decreasing numbers of occurrences.[133X
+
+  [33X[0;0YLet  [22Xa  b[122X  be the last word in that list, and let [22Xi[122X be the smallest positive
+  integer  which  has  not  yet  been  used  as  a  generator  number  in  the
+  presentation  [3XP[103X  so  far.  [2XTzSubstitute[102X defines a new abstract generator [22Xx_i[122X
+  named  [10X"_x[3Xi[103X[10X"[110X  and adds it to [3XP[103X (see [2XAddGenerator[102X ([14X48.5-1[114X)). Then it adds the
+  word  [22Xx_i^{-1} a b[122X as a new relator to [3XP[103X and replaces all occurrences of [22Xa b[122X
+  in  the relators by [22Xx_i[122X. Finally, it eliminates some suitable generator from
+  [3XP[103X.[133X
+
+  [33X[0;0YThe  choice of the generator to be eliminated depends on the actual value of
+  the parameter [3Xeliminate[103X:[133X
+
+  [33X[0;0YIf  [3Xeliminate[103X  is  zero,  [2XTzSubstitute[102X  just  calls the function [2XTzEliminate[102X
+  ([14X48.7-1[114X).  So  it  may  happen  that it is the just introduced generator [22Xx_i[122X
+  which  now is deleted again so that you don't get any remarkable progress in
+  simplifying  your  presentation.  On  the  first  glance  this does not look
+  reasonable,  but  it  is  a  consequence  of  the  request  that  a  call of
+  [2XTzSubstitute[102X  with  [3Xeliminate[103X  = 0 must not increase the total length of the
+  relators.[133X
+
+  [33X[0;0YOtherwise,  if  [3Xeliminate[103X  is 1 or 2, [2XTzSubstitute[102X eliminates the respective
+  factor  of the substituted word [22Xa b[122X, i. e., it eliminates [22Xa[122X if [3Xeliminate[103X = 1
+  or  [22Xb[122X if [3Xeliminate[103X = 2. In this case, it may happen that the total length of
+  the  relators increases, but sometimes such an intermediate extension is the
+  only way to finally reduce a given presentation.[133X
+
+  [33X[0;0YThere  is still another property of the command [2XTzSubstitute[102X which should be
+  mentioned. If, for instance, [10Xword[110X is an abstract word, a call[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[28XTzSubstitute( P, word );[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0Yis more or less equivalent to[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[28XAddGenerator( P );[128X[104X
+    [4X[28Xg := Last(GeneratorsOfPresentation(P));[128X[104X
+    [4X[28XAddRelator( P, g^-1 * word );[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YHowever,  there  is  a  difference:  If you are tracing generator images and
+  preimages  of  [3XP[103X through the Tietze transformations applied to [3XP[103X (see [14X48.9[114X),
+  then [2XTzSubstitute[102X, as a Tietze transformation of [3XP[103X, will update and save the
+  respective  lists,  whereas  a  call  of  the function [2XAddGenerator[102X ([14X48.5-1[114X)
+  (which does not perform a Tietze transformation) will delete these lists and
+  hence terminate the tracing.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := PerfectGroup( IsSubgroupFpGroup, 960, 1 );[127X[104X
+    [4X[28XA5 2^4[128X[104X
+    [4X[25Xgap>[125X [27XP := PresentationFpGroup( G );[127X[104X
+    [4X[28X<presentation with 6 gens and 21 rels of total length 84>[128X[104X
+    [4X[25Xgap>[125X [27XGeneratorsOfPresentation( P );[127X[104X
+    [4X[28X[ a, b, s, t, u, v ][128X[104X
+    [4X[25Xgap>[125X [27XTzGoGo( P );[127X[104X
+    [4X[28X#I  there are 3 generators and 10 relators of total length 81[128X[104X
+    [4X[28X#I  there are 3 generators and 10 relators of total length 80[128X[104X
+    [4X[25Xgap>[125X [27XTzPrintGenerators( P );[127X[104X
+    [4X[28X#I  1.  a   31 occurrences   involution[128X[104X
+    [4X[28X#I  2.  b   26 occurrences[128X[104X
+    [4X[28X#I  3.  t   23 occurrences   involution[128X[104X
+    [4X[25Xgap>[125X [27Xa := GeneratorsOfPresentation( P )[1];;[127X[104X
+    [4X[25Xgap>[125X [27Xb := GeneratorsOfPresentation( P )[2];;[127X[104X
+    [4X[25Xgap>[125X [27XTzSubstitute( P, a*b );[127X[104X
+    [4X[28X#I  now the presentation has 4 generators, the new generator is _x7[128X[104X
+    [4X[28X#I  substituting new generator _x7 defined by a*b[128X[104X
+    [4X[28X#I  there are 4 generators and 11 relators of total length 83[128X[104X
+    [4X[25Xgap>[125X [27XTzGo( P );[127X[104X
+    [4X[28X#I  there are 3 generators and 10 relators of total length 74[128X[104X
+    [4X[25Xgap>[125X [27XTzPrintGenerators( P );[127X[104X
+    [4X[28X#I  1.  a   23 occurrences   involution[128X[104X
+    [4X[28X#I  2.  t   23 occurrences   involution[128X[104X
+    [4X[28X#I  3.  _x7   28 occurrences[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YAs  an  example  of an application of the command [2XTzSubstitute[102X in its second
+  form we handle a subgroup of index 266 in the Janko group [22XJ_1[122X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XF2 := FreeGroup( "a", "b" );;[127X[104X
+    [4X[25Xgap>[125X [27XJ1 := F2 / [ F2.1^2, F2.2^3, (F2.1*F2.2)^7,[127X[104X
+    [4X[25X>[125X [27XComm(F2.1,F2.2)^10, Comm(F2.1,F2.2^-1*(F2.1*F2.2)^2)^6 ];;[127X[104X
+    [4X[25Xgap>[125X [27Xa := J1.1;; b := J1.2;;[127X[104X
+    [4X[25Xgap>[125X [27XH := Subgroup ( J1, [ a, b^(a*b*(a*b^-1)^2) ] );;[127X[104X
+    [4X[25Xgap>[125X [27XP := PresentationSubgroup( J1, H );[127X[104X
+    [4X[28X<presentation with 23 gens and 82 rels of total length 530>[128X[104X
+    [4X[25Xgap>[125X [27XTzGoGo( P );[127X[104X
+    [4X[28X#I  there are 3 generators and 47 relators of total length 1368[128X[104X
+    [4X[28X#I  there are 2 generators and 46 relators of total length 3773[128X[104X
+    [4X[28X#I  there are 2 generators and 46 relators of total length 2570[128X[104X
+    [4X[25Xgap>[125X [27XTzGoGo( P );[127X[104X
+    [4X[28X#I  there are 2 generators and 46 relators of total length 2568[128X[104X
+    [4X[25Xgap>[125X [27XTzGoGo( P );[127X[104X
+  [4X[32X[104X
+
+  [33X[0;0YHere we do not get any more progress without substituting a new generator.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTzSubstitute( P );[127X[104X
+    [4X[28X#I  substituting new generator _x28 defined by _x6*_x23^-1[128X[104X
+    [4X[28X#I  eliminating _x28 = _x6*_x23^-1[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0Y[5XGAP[105X cannot substitute a new generator without extending the total length, so
+  we  have  to  explicitly  ask for it by using the second form of the command
+  [2XTzSubstitute[102X.  Our problem is to choose appropriate values for the arguments
+  [3Xn[103X  and  [3Xeliminate[103X. For this purpose it may be helpful to print out a list of
+  the most frequently occurring squarefree relator subwords of length 2.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTzPrintPairs( P );[127X[104X
+    [4X[28X#I  1.  504  occurrences of  _x6 * _x23^-1[128X[104X
+    [4X[28X#I  2.  504  occurrences of  _x6^-1 * _x23[128X[104X
+    [4X[28X#I  3.  448  occurrences of  _x6 * _x23[128X[104X
+    [4X[28X#I  4.  448  occurrences of  _x6^-1 * _x23^-1[128X[104X
+    [4X[25Xgap>[125X [27XTzSubstitute( P, 2, 1 );[127X[104X
+    [4X[28X#I  substituting new generator _x29 defined by _x6^-1*_x23[128X[104X
+    [4X[28X#I  eliminating _x6 = _x23*_x29^-1[128X[104X
+    [4X[28X#I  there are 2 generators and 46 relators of total length 2867[128X[104X
+    [4X[25Xgap>[125X [27XTzGoGo( P );[127X[104X
+    [4X[28X#I  there are 2 generators and 45 relators of total length 2417[128X[104X
+    [4X[28X#I  there are 2 generators and 45 relators of total length 2122[128X[104X
+    [4X[25Xgap>[125X [27XTzSubstitute( P, 1, 2 );[127X[104X
+    [4X[28X#I  substituting new generator _x30 defined by _x23*_x29^-1[128X[104X
+    [4X[28X#I  eliminating _x29 = _x30^-1*_x23[128X[104X
+    [4X[28X#I  there are 2 generators and 45 relators of total length 2192[128X[104X
+    [4X[25Xgap>[125X [27XTzGoGo( P );[127X[104X
+    [4X[28X#I  there are 2 generators and 42 relators of total length 1637[128X[104X
+    [4X[28X#I  there are 2 generators and 40 relators of total length 1286[128X[104X
+    [4X[28X#I  there are 2 generators and 36 relators of total length 807[128X[104X
+    [4X[28X#I  there are 2 generators and 32 relators of total length 625[128X[104X
+    [4X[28X#I  there are 2 generators and 22 relators of total length 369[128X[104X
+    [4X[28X#I  there are 2 generators and 18 relators of total length 213[128X[104X
+    [4X[28X#I  there are 2 generators and 13 relators of total length 141[128X[104X
+    [4X[28X#I  there are 2 generators and 12 relators of total length 121[128X[104X
+    [4X[28X#I  there are 2 generators and 10 relators of total length 101[128X[104X
+    [4X[25Xgap>[125X [27XTzPrintPairs( P );[127X[104X
+    [4X[28X#I  1.  19  occurrences of  _x23 * _x30^-1[128X[104X
+    [4X[28X#I  2.  19  occurrences of  _x23^-1 * _x30[128X[104X
+    [4X[28X#I  3.  14  occurrences of  _x23 * _x30[128X[104X
+    [4X[28X#I  4.  14  occurrences of  _x23^-1 * _x30^-1[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YIf we save a copy of the current presentation, then later we will be able to
+  restart the computation from the current state.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XP1 := ShallowCopy( P );[127X[104X
+    [4X[28X<presentation with 2 gens and 10 rels of total length 101>[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YJust for demonstration we make an inconvenient choice:[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTzSubstitute( P, 3, 1 );[127X[104X
+    [4X[28X#I  substituting new generator _x31 defined by _x23*_x30[128X[104X
+    [4X[28X#I  eliminating _x23 = _x31*_x30^-1[128X[104X
+    [4X[28X#I  there are 2 generators and 10 relators of total length 122[128X[104X
+    [4X[25Xgap>[125X [27XTzGoGo( P );[127X[104X
+    [4X[28X#I  there are 2 generators and 9 relators of total length 105[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YThis  presentation  is  worse than the one we have saved, so we restart from
+  that presentation again.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XP := ShallowCopy( P1 );[127X[104X
+    [4X[28X<presentation with 2 gens and 10 rels of total length 101>[128X[104X
+    [4X[25Xgap>[125X [27XTzSubstitute( P, 2, 1);[127X[104X
+    [4X[28X#I  substituting new generator _x31 defined by _x23^-1*_x30[128X[104X
+    [4X[28X#I  eliminating _x23 = _x30*_x31^-1[128X[104X
+    [4X[28X#I  there are 2 generators and 10 relators of total length 107[128X[104X
+    [4X[25Xgap>[125X [27XTzGoGo( P );[127X[104X
+    [4X[28X#I  there are 2 generators and 9 relators of total length 84[128X[104X
+    [4X[28X#I  there are 2 generators and 8 relators of total length 75[128X[104X
+    [4X[25Xgap>[125X [27XTzSubstitute( P, 2, 1);[127X[104X
+    [4X[28X#I  substituting new generator _x32 defined by _x30^-1*_x31[128X[104X
+    [4X[28X#I  eliminating _x30 = _x31*_x32^-1[128X[104X
+    [4X[28X#I  there are 2 generators and 8 relators of total length 71[128X[104X
+    [4X[25Xgap>[125X [27XTzGoGo( P );[127X[104X
+    [4X[28X#I  there are 2 generators and 7 relators of total length 56[128X[104X
+    [4X[28X#I  there are 2 generators and 5 relators of total length 36[128X[104X
+    [4X[25Xgap>[125X [27XTzPrintRelators( P );[127X[104X
+    [4X[28X#I  1. _x32^5[128X[104X
+    [4X[28X#I  2. _x31^5[128X[104X
+    [4X[28X#I  3. (_x31^-1*_x32^-1)^3[128X[104X
+    [4X[28X#I  4. _x31*(_x32*_x31^-1)^2*_x32*_x31*_x32^-2[128X[104X
+    [4X[28X#I  5. _x31^-1*_x32^2*(_x31*_x32^-1*_x31)^2*_x32^2[128X[104X
+  [4X[32X[104X
+
+  [1X48.8-2 TzSubstituteCyclicJoins[101X
+
+  [33X[1;0Y[29X[2XTzSubstituteCyclicJoins[102X( [3XP[103X ) [32X function[133X
+
+  [33X[0;0Ytries  to  find pairs of commuting generators [22Xa[122X and [22Xb[122X such that the exponent
+  of  [22Xa[122X (i. e. the least currently known positive integer [22Xn[122X such that [22Xa^n[122X is a
+  relator  in  [3XP[103X)  is  prime  to  the exponent of [22Xb[122X. For each such pair, their
+  product [22Xa b[122X is substituted as a new generator, and [22Xa[122X and [22Xb[122X are eliminated.[133X
+
+
+  [1X48.9 [33X[0;0YTracing generator images through Tietze transformations[133X[101X
+
+  [33X[0;0YAny  sequence  of Tietze transformations applied to a presentation, starting
+  from some presentation [22XP_1[122X and ending up with some presentation [22XP_2[122X, defines
+  an  isomorphism,  [22Xφ[122X  say,  between  the  groups  defined  by  [22XP_1[122X  and  [22XP_2[122X,
+  respectively.  Sometimes  it  is  desirable  to know the images of the (old)
+  generators  of  [22XP_1[122X or the preimages of the (new) generators of [22XP_2[122X under [22Xφ[122X.
+  The [5XGAP[105X Tietze transformation functions are able to trace these images. This
+  is  not automatically done because the involved words may grow to tremendous
+  length,  but it will be done if you explicitly request for it by calling the
+  function [2XTzInitGeneratorImages[102X ([14X48.9-1[114X).[133X
+
+  [1X48.9-1 TzInitGeneratorImages[101X
+
+  [33X[1;0Y[29X[2XTzInitGeneratorImages[102X( [3XP[103X ) [32X function[133X
+
+  [33X[0;0Yexpects  [3XP[103X to be a presentation. It defines the current generators to be the
+  [21Xold   generators[121X   of   [3XP[103X   and  initializes  the  (pre)image  tracing.  See
+  [2XTzImagesOldGens[102X ([14X48.9-3[114X) and [2XTzPreImagesNewGens[102X ([14X48.9-4[114X) for details.[133X
+
+  [33X[0;0YYou  can reinitialize the tracing of the generator images at any later state
+  by just calling the function [2XTzInitGeneratorImages[102X again.[133X
+
+  [33X[0;0YNote: A subsequent call of the function [2XDecodeTree[102X ([14X48.10-1[114X) will imply that
+  the  images  and  preimages are deleted and reinitialized after decoding the
+  tree.[133X
+
+  [33X[0;0YMoreover,  if  you  introduce  a  new  generator  by  calling  the  function
+  [2XAddGenerator[102X  ([14X48.5-1[114X)  described in Section [14X48.5[114X, this new generator cannot
+  be  traced  in  the  old  generators.  Therefore  [2XAddGenerator[102X ([14X48.5-1[114X) will
+  terminate  the  tracing of the generator images and preimages and delete the
+  respective lists whenever it is called.[133X
+
+  [1X48.9-2 OldGeneratorsOfPresentation[101X
+
+  [33X[1;0Y[29X[2XOldGeneratorsOfPresentation[102X( [3XP[103X ) [32X function[133X
+
+  [33X[0;0Yassumes  that  [3XP[103X  is  a  presentation  for  which  the  generator images and
+  preimages are being traced under Tietze transformations. It returns the list
+  of old generators of [3XP[103X.[133X
+
+  [1X48.9-3 TzImagesOldGens[101X
+
+  [33X[1;0Y[29X[2XTzImagesOldGens[102X( [3XP[103X ) [32X function[133X
+
+  [33X[0;0Yassumes  that  [3XP[103X  is  a  presentation  for  which  the  generator images and
+  preimages are being traced under Tietze transformations. It returns a list [22Xl[122X
+  of  words in the (current) [2XGeneratorsOfPresentation[102X ([14X48.1-3[114X) value of [3XP[103X such
+  that  the  [22Xi[122X-th word [22Xl[i][122X represents the [22Xi[122X-th old generator of [3XP[103X, i. e., the
+  [22Xi[122X-th entry of the [2XOldGeneratorsOfPresentation[102X ([14X48.9-2[114X) value of [3XP[103X.[133X
+
+  [1X48.9-4 TzPreImagesNewGens[101X
+
+  [33X[1;0Y[29X[2XTzPreImagesNewGens[102X( [3XP[103X ) [32X function[133X
+
+  [33X[0;0Yassumes  that  [3XP[103X  is  a  presentation  for  which  the  generator images and
+  preimages are being traced under Tietze transformations. It returns a list [22Xl[122X
+  of  words  in  the  old  generators  of  [3XP[103X  (the [2XOldGeneratorsOfPresentation[102X
+  ([14X48.9-2[114X)  value  of  [3XP[103X)  such  that  the [22Xi[122X-th entry of [22Xl[122X represents the [22Xi[122X-th
+  (current) generator of [3XP[103X (the [2XGeneratorsOfPresentation[102X ([14X48.1-3[114X) value of [3XP[103X).[133X
+
+  [1X48.9-5 TzPrintGeneratorImages[101X
+
+  [33X[1;0Y[29X[2XTzPrintGeneratorImages[102X( [3XP[103X ) [32X function[133X
+
+  [33X[0;0Yassumes  that  [3XP[103X  is  a  presentation  for  which  the  generator images and
+  preimages  are  being  traced  under Tietze transformations. It displays the
+  preimages  of  the current generators as Tietze words in the old generators,
+  and  the  images  of  the  old  generators  as  Tietze  words in the current
+  generators.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := PerfectGroup( IsSubgroupFpGroup, 960, 1 );[127X[104X
+    [4X[28XA5 2^4[128X[104X
+    [4X[25Xgap>[125X [27XP := PresentationFpGroup( G );[127X[104X
+    [4X[28X<presentation with 6 gens and 21 rels of total length 84>[128X[104X
+    [4X[25Xgap>[125X [27XTzInitGeneratorImages( P );[127X[104X
+    [4X[25Xgap>[125X [27XTzGo( P );[127X[104X
+    [4X[28X#I  there are 3 generators and 11 relators of total length 96[128X[104X
+    [4X[28X#I  there are 3 generators and 10 relators of total length 81[128X[104X
+    [4X[25Xgap>[125X [27XTzPrintGeneratorImages( P );[127X[104X
+    [4X[28X#I  preimages of current generators as Tietze words in the old ones:[128X[104X
+    [4X[28X#I  1. [ 1 ][128X[104X
+    [4X[28X#I  2. [ 2 ][128X[104X
+    [4X[28X#I  3. [ 4 ][128X[104X
+    [4X[28X#I  images of old generators as Tietze words in the current ones:[128X[104X
+    [4X[28X#I  1. [ 1 ][128X[104X
+    [4X[28X#I  2. [ 2 ][128X[104X
+    [4X[28X#I  3. [ 1, -2, 1, 3, 1, 2, 1 ][128X[104X
+    [4X[28X#I  4. [ 3 ][128X[104X
+    [4X[28X#I  5. [ -2, 1, 3, 1, 2 ][128X[104X
+    [4X[28X#I  6. [ 1, 3, 1 ][128X[104X
+    [4X[25Xgap>[125X [27Xgens := GeneratorsOfPresentation( P );[127X[104X
+    [4X[28X[ a, b, t ][128X[104X
+    [4X[25Xgap>[125X [27Xoldgens := OldGeneratorsOfPresentation( P );[127X[104X
+    [4X[28X[ a, b, s, t, u, v ][128X[104X
+    [4X[25Xgap>[125X [27XTzImagesOldGens( P );[127X[104X
+    [4X[28X[ a, b, a*b^-1*a*t*a*b*a, t, b^-1*a*t*a*b, a*t*a ][128X[104X
+    [4X[25Xgap>[125X [27Xfor i in [ 1 .. Length( oldgens ) ] do[127X[104X
+    [4X[25X>[125X [27XPrint( oldgens[i], " = ", TzImagesOldGens( P )[i], "\n" );[127X[104X
+    [4X[25X>[125X [27Xod;[127X[104X
+    [4X[28Xa = a[128X[104X
+    [4X[28Xb = b[128X[104X
+    [4X[28Xs = a*b^-1*a*t*a*b*a[128X[104X
+    [4X[28Xt = t[128X[104X
+    [4X[28Xu = b^-1*a*t*a*b[128X[104X
+    [4X[28Xv = a*t*a[128X[104X
+  [4X[32X[104X
+
+
+  [1X48.10 [33X[0;0YThe Decoding Tree Procedure[133X[101X
+
+  [1X48.10-1 DecodeTree[101X
+
+  [33X[1;0Y[29X[2XDecodeTree[102X( [3XP[103X ) [32X function[133X
+
+  [33X[0;0Yassumes   that  [3XP[103X  is  a  subgroup  presentation  provided  by  the  Reduced
+  Reidemeister-Schreier   or   by   the   Modified  Todd-Coxeter  method  (see
+  [2XPresentationSubgroupRrs[102X   ([14X48.2-2[114X),  [2XPresentationNormalClosureRrs[102X  ([14X48.2-5[114X),
+  [2XPresentationSubgroupMtc[102X ([14X48.2-4[114X)). It eliminates the secondary generators of
+  [3XP[103X (see Section [14X48.2[114X) by applying the so called [21Xdecoding tree[121X procedure.[133X
+
+  [33X[0;0Y[2XDecodeTree[102X  is  called  automatically by the command [2XPresentationSubgroupMtc[102X
+  ([14X48.2-4[114X)  where  it  reduces  [3XP[103X  to  a  presentation  on the given (primary)
+  subgroup generators.[133X
+
+  [33X[0;0YIn  order  to  explain  the  effect  of this command we need to insert a few
+  remarks on the subgroup presentation commands described in section [14X48.2[114X. All
+  these  commands have the common property that in the process of constructing
+  a  presentation  for a given subgroup [3XH[103X of a finitely presented group [3XG[103X they
+  first  build up a highly redundant list of generators of [3XH[103X which consists of
+  an (in general small) list of [21Xprimary[121X generators, followed by an (in general
+  large)  list  of [21Xsecondary[121X generators, and then construct a presentation [22XP_0[122X
+  [13Xon  a  sublist  of these generators[113X by rewriting the defining relators of [3XG[103X.
+  This  sublist contains all primary, but, at least in general, by far not all
+  secondary generators.[133X
+
+  [33X[0;0YThe  role  of  the  primary generators depends on the concrete choice of the
+  subgroup  presentation command. If the Modified Todd-Coxeter method is used,
+  they  are just the given generators of [3XH[103X, whereas in the case of the Reduced
+  Reidemeister-Schreier algorithm they are constructed by the program.[133X
+
+  [33X[0;0YEach  of  the secondary generators is defined by a word of length two in the
+  preceding  generators and their inverses. By historical reasons, the list of
+  these  definitions  is called the [13Xsubgroup generators tree[113X though in fact it
+  is not a tree but rather a kind of bush.[133X
+
+  [33X[0;0YNow  we  have  to  distinguish two cases. If [22XP_0[122X has been constructed by the
+  Reduced  Reidemeister-Schreier routines, it is a presentation of [3XH[103X. However,
+  if  the  Modified  Todd-Coxeter  routines  have  been used instead, then the
+  relators  in [22XP_0[122X are valid relators of [3XH[103X, but they do not necessarily define
+  [3XH[103X. We handle these cases in turn, starting with the latter one.[133X
+
+  [33X[0;0YIn fact, we could easily receive a presentation of [3XH[103X also in this case if we
+  extended  [22XP_0[122X by adding to it all the secondary generators which are not yet
+  contained  in  it  and  all  the  definitions  from  the  generators tree as
+  additional  generators and relators. Then we could recursively eliminate all
+  secondary  generators  by  Tietze  transformations  using  the new relators.
+  However, this procedure turns out to be too inefficient to be of interest.[133X
+
+  [33X[0;0YInstead, we use the so called [13Xdecoding tree[113X procedure (see [AMW82], [AR84]).
+  It proceeds as follows.[133X
+
+  [33X[0;0YStarting from [22XP = P_0[122X, it runs through a number of steps in each of which it
+  eliminates  the  current  [21Xlast[121X  generator  (with  respect to the list of all
+  primary  and  secondary  generators).  If  the last generator [3Xg[103X is a primary
+  generator,  then the procedure terminates. Otherwise it checks whether there
+  is  a  relator in the current presentation which can be used to substitute [3Xg[103X
+  by  a  Tietze transformation. If so, this is done. Otherwise, and only then,
+  the  tree definition of [3Xg[103X is added to [3XP[103X as a new relator, and the generators
+  involved  are added as new generators if they have not yet been contained in
+  [3XP[103X. Subsequently, [3Xg[103X is eliminated.[133X
+
+  [33X[0;0YNote  that  the  extension of [3XP[103X by one or two new generators is [13Xnot[113X a Tietze
+  transformation. In general, it will change the isomorphism type of the group
+  defined  by  [3XP[103X. However, it is a remarkable property of this procedure, that
+  at  the end, i.e., as soon as all secondary generators have been eliminated,
+  it provides a presentation [22XP = P_1[122X, say, which defines a group isomorphic to
+  [3XH[103X.  In  fact,  it  is  this  presentation  which  is returned by the command
+  [2XDecodeTree[102X and hence by the command [2XPresentationSubgroupMtc[102X ([14X48.2-4[114X).[133X
+
+  [33X[0;0YIf,  in  the  other  case,  the presentation [22XP_0[122X has been constructed by the
+  Reduced  Reidemeister-Schreier  algorithm, then [22XP_0[122X itself is a presentation
+  of    [3XH[103X,    and    the    corresponding    subgroup   presentation   command
+  ([2XPresentationSubgroupRrs[102X  ([14X48.2-2[114X) or [2XPresentationNormalClosureRrs[102X ([14X48.2-5[114X))
+  just returns [22XP_0[122X.[133X
+
+  [33X[0;0YAs  mentioned  in  section  [14X48.2[114X,  we  recommend  to  further  simplify this
+  presentation before you use it. The standard way to do this is to start from
+  [22XP_0[122X  and  to  apply  suitable  Tietze transformations, e. g., by calling the
+  commands  [2XTzGo[102X  ([14X48.6-1[114X)  or  [2XTzGoGo[102X  ([14X48.6-3[114X).  This  is  probably the most
+  efficient  approach,  but  you  will  end  up  with  a  presentation on some
+  unpredictable  set  of  generators.  As  an  alternative, [5XGAP[105X offers you the
+  [2XDecodeTree[102X  command  which you can use to eliminate all secondary generators
+  (provided  that  there are no space or time problems). For this purpose, the
+  subgroup   presentation   commands   do   not   only  return  the  resulting
+  presentation,  but  also the tree (together with some associated lists) as a
+  kind of side result in a component [3XP[103X[10X!.tree[110X of the resulting presentation [3XP[103X.[133X
+
+  [33X[0;0YNote,  however,  that the decoding tree routines will not work correctly any
+  more on a presentation from which generators have already been eliminated by
+  Tietze transformations. Therefore, to prevent you from getting wrong results
+  by calling [2XDecodeTree[102X in such a situation, [5XGAP[105X will automatically remove the
+  subgroup  generators  tree  from  a  presentation  as  soon  as  one  of the
+  generators is substituted by a Tietze transformation.[133X
+
+  [33X[0;0YNevertheless, a certain misuse of the command is still possible, and we want
+  to  explicitly  warn  you  from  this.  The reason is that the Tietze option
+  parameters described in Section [14X48.11[114X apply to [2XDecodeTree[102X as well. Hence, in
+  case of inadequate values of these parameters, it may happen that [2XDecodeTree[102X
+  stops  before  all  the secondary generators have vanished. In this case [5XGAP[105X
+  will  display  an appropriate warning. Then you should change the respective
+  parameters  and continue the process by calling [2XDecodeTree[102X again. Otherwise,
+  if  you  would  apply Tietze transformations, it might happen because of the
+  convention described above that the tree is removed and that you end up with
+  a wrong presentation.[133X
+
+  [33X[0;0YAfter  a  successful  run of [2XDecodeTree[102X it is convenient to further simplify
+  the resulting presentation by suitable Tietze transformations.[133X
+
+  [33X[0;0YAs an example of an explicit call of [2XDecodeTree[102X we compute two presentations
+  of  a  subgroup  of order [22X384[122X in a group of order [22X6912[122X. In both cases we use
+  the  Reduced  Reidemeister-Schreier  algorithm, but in the first run we just
+  apply the Tietze transformations offered by the [2XTzGoGo[102X ([14X48.6-3[114X) command with
+  its  default  parameters,  whereas  in the second run we call the [2XDecodeTree[102X
+  command before.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XF2 := FreeGroup( "a", "b" );;[127X[104X
+    [4X[25Xgap>[125X [27XG := F2 / [ F2.1*F2.2^2*F2.1^-1*F2.2^-1*F2.1^3*F2.2^-1,[127X[104X
+    [4X[25X>[125X [27X               F2.2*F2.1^2*F2.2^-1*F2.1^-1*F2.2^3*F2.1^-1 ];;[127X[104X
+    [4X[25Xgap>[125X [27Xa := G.1;;  b := G.2;;[127X[104X
+    [4X[25Xgap>[125X [27XH := Subgroup( G, [ Comm(a^-1,b^-1), Comm(a^-1,b), Comm(a,b) ] );;[127X[104X
+  [4X[32X[104X
+
+  [33X[0;0YWe   use  the  Reduced  Reidemeister  Schreier  method  and  default  Tietze
+  transformations to get a presentation for [3XH[103X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XP := PresentationSubgroupRrs( G, H );[127X[104X
+    [4X[28X<presentation with 18 gens and 35 rels of total length 169>[128X[104X
+    [4X[25Xgap>[125X [27XTzGoGo( P );[127X[104X
+    [4X[28X#I  there are 3 generators and 20 relators of total length 488[128X[104X
+    [4X[28X#I  there are 3 generators and 20 relators of total length 466[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YWe end up with 20 relators of total length 466. Now we repeat the procedure,
+  but   we   call   the  decoding  tree  algorithm  before  doing  the  Tietze
+  transformations.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XP := PresentationSubgroupRrs( G, H );[127X[104X
+    [4X[28X<presentation with 18 gens and 35 rels of total length 169>[128X[104X
+    [4X[25Xgap>[125X [27XDecodeTree( P );[127X[104X
+    [4X[28X#I  there are 9 generators and 26 relators of total length 185[128X[104X
+    [4X[28X#I  there are 6 generators and 23 relators of total length 213[128X[104X
+    [4X[28X#I  there are 3 generators and 20 relators of total length 252[128X[104X
+    [4X[28X#I  there are 3 generators and 20 relators of total length 244[128X[104X
+    [4X[25Xgap>[125X [27XTzGoGo( P );[127X[104X
+    [4X[28X#I  there are 3 generators and 19 relators of total length 168[128X[104X
+    [4X[28X#I  there are 3 generators and 17 relators of total length 138[128X[104X
+    [4X[28X#I  there are 3 generators and 15 relators of total length 114[128X[104X
+    [4X[28X#I  there are 3 generators and 13 relators of total length 96[128X[104X
+    [4X[28X#I  there are 3 generators and 12 relators of total length 84[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YThis time we end up with a shorter presentation.[133X
+
+
+  [1X48.11 [33X[0;0YTietze Options[133X[101X
+
+  [33X[0;0YSeveral of the Tietze transformation commands described above are controlled
+  by  certain  parameters,  the  [13XTietze options[113X, which often have a tremendous
+  influence  on their performance and results. However, in each application of
+  the  commands,  an appropriate choice of these option parameters will depend
+  on   the  concrete  presentation  under  investigation.  Therefore  we  have
+  implemented the Tietze options in such a way that they are associated to the
+  presentation:   Each  presentation  keeps  its  own  set  of  Tietze  option
+  parameters as an attribute.[133X
+
+  [1X48.11-1 TzOptions[101X
+
+  [33X[1;0Y[29X[2XTzOptions[102X( [3XP[103X ) [32X attribute[133X
+
+  [33X[0;0Yis  a  record  whose  components direct the heuristics applied by the Tietze
+  transformation functions.[133X
+
+  [33X[0;0YYou  may  alter the value of any of these Tietze options by just assigning a
+  new value to the respective record component.[133X
+
+  [33X[0;0YThe following Tietze options are recognized by [5XGAP[105X:[133X
+
+  [8X[10Xprotected[110X[8X:[108X
+        [33X[0;6YThe  first [10Xprotected[110X generators in a presentation [3XP[103X are protected from
+        being  eliminated  by  the Tietze transformations functions. There are
+        only  two exceptions: The option [10Xprotected[110X is ignored by the functions
+        [2XTzEliminate[102X ([14X48.7-1[114X) and [2XTzSubstitute[102X ([14X48.8-1[114X) because they explicitly
+        specify the generator to be eliminated. The default value of [10Xprotected[110X
+        is 0.[133X
+
+  [8X[10XeliminationsLimit[110X[8X:[108X
+        [33X[0;6YWhenever the elimination phase of the [2XTzGo[102X ([14X48.6-1[114X) command is entered
+        for a presentation [3XP[103X, then it will eliminate at most [10XeliminationsLimit[110X
+        generators  (except  for  further  ones  which  have  turned out to be
+        trivial). Hence you may use the [10XeliminationsLimit[110X parameter as a break
+        criterion  for  the  [2XTzGo[102X  ([14X48.6-1[114X) command. Note, however, that it is
+        ignored  by  the  [2XTzEliminate[102X  ([14X48.7-1[114X)  command. The default value of
+        [10XeliminationsLimit[110X is 100.[133X
+
+  [8X[10XexpandLimit[110X[8X:[108X
+        [33X[0;6YWhenever  the  routine for eliminating more than 1 generator is called
+        for  a  presentation  [3XP[103X  by  the  [2XTzEliminate[102X  ([14X48.7-1[114X) command or the
+        elimination  phase  of  the  [2XTzGo[102X  ([14X48.6-1[114X) command, then it saves the
+        given  total  length  of  the relators, and subsequently it checks the
+        current total length against its value before each elimination. If the
+        total  length  has  increased to more than [10XexpandLimit[110X per cent of its
+        original  value,  then  the  routine  returns  instead  of eliminating
+        another  generator.  Hence  you may use the [10XexpandLimit[110X parameter as a
+        break  criterion  for  the [2XTzGo[102X ([14X48.6-1[114X) command. The default value of
+        [10XexpandLimit[110X is 150.[133X
+
+  [8X[10XgeneratorsLimit[110X[8X:[108X
+        [33X[0;6YWhenever the elimination phase of the [2XTzGo[102X ([14X48.6-1[114X) command is entered
+        for a presentation [3XP[103X with [22Xn[122X generators, then it will eliminate at most
+        [22Xn -[122X[10XgeneratorsLimit[110X generators (except for generators which turn out to
+        be  trivial).  Hence  you  may  use the [10XgeneratorsLimit[110X parameter as a
+        break  criterion  for  the [2XTzGo[102X ([14X48.6-1[114X) command. The default value of
+        [10XgeneratorsLimit[110X is 0.[133X
+
+  [8X[10XlengthLimit[110X[8X:[108X
+        [33X[0;6YThe Tietze transformation commands will never eliminate a generator of
+        a  presentation  [3XP[103X,  if  they  cannot exclude the possibility that the
+        resulting  total  length  of the relators exceeds the maximal [5XGAP[105X list
+        length  of  [22X2^31-1[122X or the value of the option [10XlengthLimit[110X. The default
+        value of [10XlengthLimit[110X is [22X2^31-1[122X.[133X
+
+  [8X[10XloopLimit[110X[8X:[108X
+        [33X[0;6YWhenever  the  [2XTzGo[102X  ([14X48.6-1[114X)  command is called for a presentation [3XP[103X,
+        then it will loop over at most [10XloopLimit[110X of its basic steps. Hence you
+        may  use  the  [10XloopLimit[110X  parameter  as a break criterion for the [2XTzGo[102X
+        ([14X48.6-1[114X) command. The default value of [10XloopLimit[110X is [2Xinfinity[102X ([14X18.2-1[114X).[133X
+
+  [8X[10XprintLevel[110X[8X:[108X
+        [33X[0;6YWhenever  Tietze transformation commands are called for a presentation
+        [3XP[103X  with  [10XprintLevel[110X  [22X=  0[122X, they will not provide any output except for
+        error  messages.  If [10XprintLevel[110X [22X= 1[122X, they will display some reasonable
+        amount  of  output  which  allows  you  to  watch  the progress of the
+        computation  and  to  decide  about  your  next  commands. In the case
+        [10XprintLevel[110X  [22X=  2[122X,  you will get a much more generous amount of output.
+        Finally,  if [10XprintLevel[110X [22X= 3[122X, various messages on internal details will
+        be added. The default value of [10XprintLevel[110X is 1.[133X
+
+  [8X[10XsaveLimit[110X[8X:[108X
+        [33X[0;6YWhenever the [2XTzSearch[102X ([14X48.7-2[114X) command has finished its main loop over
+        all  relators  of a presentation [3XP[103X, then it checks whether during this
+        loop  the  total  length  of the relators has been reduced by at least
+        [10XsaveLimit[110X  per  cent.  If  this  is  the  case, then [2XTzSearch[102X ([14X48.7-2[114X)
+        repeats  its  procedure  instead  of  returning. Hence you may use the
+        [10XsaveLimit[110X  parameter  as  a  break criterion for the [2XTzSearch[102X ([14X48.7-2[114X)
+        command  and, in particular, for the search phase of the [2XTzGo[102X ([14X48.6-1[114X)
+        command. The default value of [10XsaveLimit[110X is 10.[133X
+
+  [8X[10XsearchSimultaneous[110X[8X:[108X
+        [33X[0;6YWhenever  the  [2XTzSearch[102X ([14X48.7-2[114X) or the [2XTzSearchEqual[102X ([14X48.7-3[114X) command
+        is  called  for  a  presentation [3XP[103X, then it is allowed to handle up to
+        [10XsearchSimultaneous[110X  short relators simultaneously (see the description
+        of the [2XTzSearch[102X ([14X48.7-2[114X) command for more details). The choice of this
+        parameter  may heavily influence the performance as well as the result
+        of  the  [2XTzSearch[102X ([14X48.7-2[114X) and the [2XTzSearchEqual[102X ([14X48.7-3[114X) commands and
+        hence  also  of  the  search  phase  of the [2XTzGo[102X ([14X48.6-1[114X) command. The
+        default value of [10XsearchSimultaneous[110X is 20.[133X
+
+  [1X48.11-2 TzPrintOptions[101X
+
+  [33X[1;0Y[29X[2XTzPrintOptions[102X( [3XP[103X ) [32X function[133X
+
+  [33X[0;0Yprints the current values of the Tietze options of the presentation [3XP[103X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTzPrintOptions( P );[127X[104X
+    [4X[28X#I  protected          = 0[128X[104X
+    [4X[28X#I  eliminationsLimit  = 100[128X[104X
+    [4X[28X#I  expandLimit        = 150[128X[104X
+    [4X[28X#I  generatorsLimit    = 0[128X[104X
+    [4X[28X#I  lengthLimit        = 2147483647[128X[104X
+    [4X[28X#I  loopLimit          = infinity[128X[104X
+    [4X[28X#I  printLevel         = 1[128X[104X
+    [4X[28X#I  saveLimit          = 10[128X[104X
+    [4X[28X#I  searchSimultaneous = 20[128X[104X
+  [4X[32X[104X
+
