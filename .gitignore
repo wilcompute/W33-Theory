@@ -71,3 +71,4 @@ tools/
 .ipynb_checkpoints/
 *.pid
 *.err
+\n# local backups\nbackups/
