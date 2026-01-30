@@ -41,6 +41,8 @@ external/sage/
 
 # local workspace data
 claude_workspace/data/
+# Secrets baseline (should not be tracked)
+.secrets.baseline
 
 # Editor / OS files
 .DS_Store
