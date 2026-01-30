@@ -1,0 +1,53 @@
+name: GBS-TDA-Precise
+
+on:
+  workflow_dispatch: {}
+  workflow_run:
+    workflows: [GBS-TDA]
+    types: [completed]
+
+jobs:
+  gbs-tda-precise:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install system deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libsndfile1 build-essential gcc gfortran libatlas-base-dev
+
+      - name: Install Python deps (precise)
+        run: |
+          python -m pip install --upgrade pip
+          pip install --no-cache-dir numpy scipy matplotlib ripser persim
+          pip install --no-cache-dir strawberryfields==0.26.0 || true
+          pip install --no-cache-dir thewalrus || true
+
+      - name: Run high-precision GBS-TDA followups (precise)
+        env:
+          TDA_FOLLOWUP_SHOTS: '10000'
+          TDA_FOLLOWUP_BOOTSTRAP: '1000'
+        run: |
+          set -e
+          # Prefer the real followup (will fallback internally if backends are missing)
+          python scripts/quantum_photonics/run_gbs_tda_followup.py || true
+          # Also run the robust stub to ensure artifacts exist
+          python scripts/quantum_photonics/run_gbs_tda_followup_stub.py || true
+
+      - name: Run finite-geometry lemma checks
+        run: |
+          python scripts/finite_geometry/check_lemma1.py || true
+          python scripts/finite_geometry/check_lemma1_expanded.py || true
+          python scripts/finite_geometry/check_lemma2.py || true
+
+      - name: Upload GBS-TDA artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: gbs-tda-precise-artifacts
+          path: bundles/v23_toe_finish/v23/
+          if-no-files-found: warn

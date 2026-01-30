@@ -1,0 +1,6 @@
+# Template .gitattributes entries for large artifacts (example)
+# Add chosen entries to .gitattributes and run `git lfs track` before committing
+
+# Example (replace with files discovered by scripts/find_large_files.py):
+# bundles/v23_toe_finish/v23/gbs_threshold_sweep.json filter=lfs diff=lfs merge=lfs -text
+# bundles/v23_toe_finish/v23/large_numeric_artifact.bin filter=lfs diff=lfs merge=lfs -text

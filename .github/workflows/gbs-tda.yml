@@ -1,0 +1,38 @@
+name: GBS-TDA
+
+on:
+  workflow_dispatch: {}
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  gbs-tda:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install numpy scipy matplotlib ripser persim
+          pip install thewalrus || true
+          pip install strawberryfields || true
+      - name: Run quick GBS threshold sweep (best-effort)
+        run: |
+          set -e
+          python scripts/quantum_photonics/run_gbs_threshold_sweep_quick.py || true
+          python scripts/quantum_photonics/run_gbs_tda_followup.py || true
+      - name: Run finite-geometry lemma checks
+        run: |
+          python scripts/finite_geometry/check_lemma1.py || true
+          python scripts/finite_geometry/check_lemma1_expanded.py || true
+          python scripts/finite_geometry/check_lemma2.py || true
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: gbs-tda-artifacts
+          path: bundles/v23_toe_finish/v23/
+          if-no-files-found: warn

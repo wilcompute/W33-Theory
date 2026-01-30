@@ -1,0 +1,21 @@
+# Dockerfile for reproducible GBS-TDA runs with Strawberry Fields and TheWalrus
+# Based on python:3.11-slim. Install system deps, then Python deps.
+FROM python:3.11-slim
+
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential gcc gfortran libatlas-base-dev libsndfile1 git curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Upgrade pip and install key Python deps
+RUN python -m pip install --upgrade pip
+RUN pip install numpy scipy matplotlib ripser persim
+# Try to install Strawberry Fields and The Walrus; allow failures but keep logs
+RUN pip install --no-cache-dir strawberryfields==0.26.0 || true
+RUN pip install --no-cache-dir thewalrus || true
+
+WORKDIR /work
+COPY . /work
+
+# Default entrypoint to run followup stub (fast fallback) if SF not available
+ENTRYPOINT ["python", "scripts/quantum_photonics/run_gbs_tda_followup_stub.py"]
