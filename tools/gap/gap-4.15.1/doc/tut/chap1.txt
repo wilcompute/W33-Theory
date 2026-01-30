@@ -1,0 +1,186 @@
+  
+  [1X1 [33X[0;0YPreface[133X[101X
+  
+  [33X[0;0YWelcome  to  [5XGAP[105X. This preface serves not only to introduce this manual, [21Xthe
+  [5XGAP[105X Tutorial[121X, but also as an introduction to the system as a whole.[133X
+  
+  [33X[0;0Y[5XGAP[105X  stands  for  [13XGroups, Algorithms and Programming[113X. The name was chosen to
+  reflect  the aim of the system, which is introduced in this tutorial manual.
+  Since that choice, the system has become somewhat broader, and you will also
+  find  information  about  algorithms  and  programming  for  other algebraic
+  structures, such as semigroups and algebras.[133X
+  
+  [33X[0;0YIn  addition  to  this  manual,  there  are  [13X[5XGAP[105X Reference Manual[113X containing
+  detailed documentation of the mathematical functionality of [5XGAP[105X, and [13XHPC-GAP
+  Reference Manual[113X documenting a multi-threaded version of GAP.[133X
+  
+  [33X[0;0YThere  is  also  a  document  [11XCHANGES.md[111X  in  the root directory on the most
+  essential  changes from previous [5XGAP[105X releases. A lot of the functionality of
+  the  system  and  a  number  of  contributed  extensions are provided as [21X[5XGAP[105X
+  packages[121X and each of these has its own manual.[133X
+  
+  [33X[0;0YSubsequent  sections of this preface explain the structure of the system and
+  list sources of further information about [5XGAP[105X.[133X
+  
+  
+  [1X1.1 [33X[0;0YThe [5XGAP[105X[101X[1X System[133X[101X
+  
+  [33X[0;0Y[5XGAP[105X  is  a  [13Xfree[113X,  [13Xopen[113X  and  [13Xextensible[113X software package for computation in
+  discrete  abstract  algebra. The terms [21Xfree[121X and [21Xopen[121X describe the conditions
+  under  which  the  system  is  distributed -- in brief, it is [13Xfree of charge[113X
+  (except  possibly  for the immediate costs of delivering it to you), you are
+  [13Xfree  to  pass  it  on[113X within certain limits, and all of the workings of the
+  system  are  [13Xopen for you to examine and change[113X. Details of these conditions
+  can be found in Section [14X'Reference: Copyright and License'[114X.[133X
+  
+  [33X[0;0YThe  system is [21Xextensible[121X in that you can write your own programs in the [5XGAP[105X
+  language,  and use them in just the same way as the programs which form part
+  of  the  system (the [21Xlibrary[121X). Indeed, we actively support the contribution,
+  refereeing  and distribution of extensions to the system, in the form of [21X[5XGAP[105X
+  packages[121X.  Further details of this can be found in Chapter [14X'Reference: Using
+  and Developing GAP Packages'[114X, and on our website.[133X
+  
+  [33X[0;0YDevelopment  of  [5XGAP[105X began at Lehrstuhl D für Mathematik, RWTH-Aachen, under
+  the leadership of Joachim Neubüser in 1985. Version 2.4 was released in 1988
+  and  version  3.1 in 1992. In 1997 coordination of [5XGAP[105X development, now very
+  much  an  international  effort,  was  transferred to St Andrews. A complete
+  internal  redesign  and  almost complete rewrite of the system was completed
+  over  the  following years and version 4.1 was released in July 1999. A sign
+  of  the  further internationalization of the project was the [5XGAP[105X 4.4 release
+  in  2004,  which  has  been coordinated from Colorado State University, Fort
+  Collins.[133X
+  
+  [33X[0;0YMore  information  on  the motivation and development of [5XGAP[105X to date, can be
+  found   on   our  website  in  a  section  entitled  [21XSome  History  of  [5XGAP[105X[121X:
+  [7Xhttps://www.gap-system.org/Doc/History/history.html[107X.[133X
+  
+  [33X[0;0YFor  those  readers  who have used an earlier version of [5XGAP[105X, an overview of
+  the  changes  from  [5XGAP[105X 4.4  and  a  brief  summary  of changes from earlier
+  versions is given in [11XCHANGES.md[111X file in the main directory.[133X
+  
+  [33X[0;0YThe  system  that you are getting now consists of a [21Xcore system[121X and a number
+  of packages. The core system consists of four main parts.[133X
+  
+  [31X1[131X   [33X[0;6YA [13Xkernel[113X, written in C, which provides the user with[133X
+  
+        [30X    [33X[0;12Yautomatic  dynamic  storage  management,  which the user needn't
+              bother about when programming;[133X
+  
+        [30X    [33X[0;12Ya   set  of  time-critical  basic  functions,  e.g.  [21Xarithmetic[121X,
+              operations  for integers, finite fields, permutations and words,
+              as well as natural operations for lists and records;[133X
+  
+        [30X    [33X[0;12Yan  interpreter  for  the  [5XGAP[105X  language,  an untyped imperative
+              programming  language  with functions as first class objects and
+              some  extra  built-in data types such as permutations and finite
+              field  elements. The language supports a form of object-oriented
+              programming, similar to that supported by languages like C++ and
+              Java but with some important differences.[133X
+  
+        [30X    [33X[0;12Ya  small  set of system functions allowing the [5XGAP[105X programmer to
+              handle  files  and  execute  external programs in a uniform way,
+              regardless of the particular operating system in use.[133X
+  
+        [30X    [33X[0;12Ya  set  of  programming tools for testing, debugging, and timing
+              algorithms.[133X
+  
+        [30X    [33X[0;12Ya [21Xread-eval-view[121X style user interface.[133X
+  
+  [31X2[131X   [33X[0;6YA  much  larger  [13Xlibrary of [5XGAP[105X functions[113X that implement algebraic and
+        other  algorithms. Since this is written entirely in the [5XGAP[105X language,
+        the [5XGAP[105X language is both the main implementation language and the user
+        language  of  the  system.  Therefore  a  user  can,  as easily as the
+        original  programmers,  investigate and vary algorithms of the library
+        and add new ones to it, first for their own use and eventually for the
+        benefit of all [5XGAP[105X users.[133X
+  
+  [31X3[131X   [33X[0;6YA  [13Xlibrary  of group theoretical data[113X which contains various libraries
+        of  groups,  including  the  library  of  small groups (containing all
+        groups  of order at most 2000, except those of order 1024) and others.
+        Large  libraries of ordinary and Brauer character tables and Tables of
+        Marks are included as packages.[133X
+  
+  [31X4[131X   [33X[0;6YThe  [13Xdocumentation[113X.  This  is  available as on-line help, as printable
+        files in PDF format and as HTML for viewing with a Web browser.[133X
+  
+  [33X[0;0YAlso  included  with  the  core  system  are some test files and a few small
+  utilities which we hope you will find useful.[133X
+  
+  [33X[0;0Y[5XGAP[105X  [13Xpackages[113X  are  self-contained  extensions to the core system. A package
+  contains  [5XGAP[105X code and its own documentation and may also contain data files
+  or  external  programs  to  which  the [5XGAP[105X code provides an interface. These
+  packages   may   be  loaded  into  [5XGAP[105X  using  the  [2XLoadPackage[102X  ([14XReference:
+  LoadPackage[114X)  command,  and  both the package and its documentation are then
+  available  just  as if they were parts of the core system. Some packages may
+  be  loaded  automatically,  when  [5XGAP[105X  is started, if they are present. Some
+  packages, because they depend on external programs, may only be available on
+  the operating systems where those programs are available (usually UNIX). You
+  should note that, while the packages included with this release are the most
+  recent  versions  ready  for  release  at  this  time,  new packages and new
+  versions  may  be  released  at any time and can be easily installed in your
+  copy of [5XGAP[105X.[133X
+  
+  [33X[0;0YWith  [5XGAP[105X  there  are  two  packages  (the  library  of  ordinary and Brauer
+  character  tables,  and  the  library  of  tables  of  marks)  which contain
+  functionality  developed  from parts of the [5XGAP[105X core system. These have been
+  moved  into packages for ease of maintenance and to allow new versions to be
+  released  independently  of  new releases of the core system. The library of
+  small  groups  should  also  be  regarded as a package, although it does not
+  currently  use  the  standard  package  mechanism.  Other  packages  contain
+  functionality  which  has never been part of the core system, and may extend
+  it   substantially,   implementing   specific   algorithms  to  enhance  its
+  capabilities, providing data libraries, interfaces to other computer algebra
+  systems  and  data  sources  such  as the electronic version of the Atlas of
+  Finite  Group Representations; therefore, installation and usage of packages
+  is recommended.[133X
+  
+  [33X[0;0YFurther details about [5XGAP[105X packages can be found in chapter [14X'Reference: Using
+  and   Developing   GAP   Packages'[114X,   and   on   the   [5XGAP[105X   website   here:
+  [7Xhttps://www.gap-system.org/Packages/packages.html[107X.[133X
+  
+  
+  [1X1.2 [33X[0;0YFurther Information about [5XGAP[105X[101X[1X[133X[101X
+  
+  [33X[0;0YInformation   about   [5XGAP[105X   is   best   obtained   from   the   [5XGAP[105X  website
+  [7Xhttps://www.gap-system.org[107X. There you will find, amongst other things:[133X
+  
+  [30X    [33X[0;6Ydirections  to  the  sites from which you can download the current [5XGAP[105X
+        distribution, all accepted and deposited [5XGAP[105X packages, and a selection
+        of other contributions.[133X
+  
+  [30X    [33X[0;6Ythe [5XGAP[105X manual and an archive of the [10Xgap-forum[110X mailing list, formatted
+        for reading with a Web browser, and indexed for searching.[133X
+  
+  [30X    [33X[0;6Yinformation  about  [5XGAP[105X  developers,  and  about  the  email addresses
+        available for comment, discussion and support.[133X
+  
+  [33X[0;0YWe would particularly ask you to note the following things:[133X
+  
+  [30X    [33X[0;6YThe [5XGAP[105X Forum – an email discussion forum for comments, discussions or
+        questions  about  [5XGAP[105X.  You  must subscribe to the list before you can
+        post  to  it,  see  the  website  for  details.  In particular we will
+        announce new releases in this mailing list.[133X
+  
+  [30X    [33X[0;6YThe email address [7Xmailto:support@gap-system.org[107X to which you are asked
+        to send any questions or bug reports which do not seem likely to be of
+        interest  to  the  whole [5XGAP[105X Forum. Please give a (short, if possible)
+        self-contained  excerpt  of  a  [5XGAP[105X  session containing both input and
+        output  that  illustrates  your problem (including comments of why you
+        think  it  is  a  bug)  and  state  the type of the machine, operating
+        system,  (compiler used, if UNIX/Linux) and the version of [5XGAP[105X you are
+        using  (the  first  line  after the [5XGAP[105X 4 banner starting [10XGAP, Version
+        4...[110X).[133X
+  
+  [30X    [33X[0;6YWe     also    ask    you    to    send    a    brief    message    to
+        [7Xmailto:support@gap-system.org[107X when you install [5XGAP[105X.[133X
+  
+  [30X    [33X[0;6YThe correct form of citation of [5XGAP[105X, which we ask you use whenever you
+        publish scientific results obtained using [5XGAP[105X.[133X
+  
+  [33X[0;0YIt finally remains for us to wish you all pleasure and success in using [5XGAP[105X,
+  and to invite your constructive comment and criticism.[133X
+  
+  [33X[0;0YThe GAP Group,[133X
+  
+  [33X[0;0Y2025-10-18[133X
+  

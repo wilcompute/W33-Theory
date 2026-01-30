@@ -1,0 +1,464 @@
+  
+  [1X29 [33X[0;0YRecords[133X[101X
+  
+  [33X[0;0Y[13XRecords[113X  are  next  to  lists  the  most  important  way  to collect objects
+  together.  A  record  is  a  collection  of [13Xcomponents[113X. Each component has a
+  unique [13Xname[113X, which is an identifier that distinguishes this component, and a
+  [13Xvalue[113X,  which is an object of arbitrary type. We often abbreviate [13Xvalue of a
+  component[113X  to  [13Xelement[113X. We also say that a record [13Xcontains[113X its elements. You
+  can access and change the elements of a record using its name.[133X
+  
+  [33X[0;0YRecord  literals are written by writing down the components in order between
+  [21X[10Xrec([110X[121X  and [21X[10X)[110X[121X, and separating them by commas [21X[10X,[110X[121X. Each component consists of the
+  name, the assignment operator [21X[10X:=[110X[121X, and the value. The [13Xempty record[113X, i.e., the
+  record with no components, is written as [10Xrec()[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xrec( a := 1, b := "2" ); # a record with two components[127X[104X
+    [4X[28Xrec( a := 1, b := "2" )[128X[104X
+    [4X[25Xgap>[125X [27Xrec( a := 1, b := rec( c := 2 ) ); # record may contain records[127X[104X
+    [4X[28Xrec( a := 1, b := rec( c := 2 ) )[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe  may  use the [2XDisplay[102X ([14X6.3-6[114X) function to illustrate the hierarchy of the
+  record components.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDisplay( last );[127X[104X
+    [4X[28Xrec([128X[104X
+    [4X[28X  a := 1,[128X[104X
+    [4X[28X  b := rec([128X[104X
+    [4X[28X      c := 2 ) )[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YRecords  usually  contain  elements of various types, i.e., they are usually
+  not homogeneous like lists.[133X
+  
+  
+  [1X29.1 [33X[0;0YIsRecord and RecNames[133X[101X
+  
+  [1X29.1-1 IsRecord[101X
+  
+  [33X[1;0Y[29X[2XIsRecord[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsRecordCollection[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsRecordCollColl[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsRecord( rec( a := 1, b := 2 ) );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsRecord( IsRecord );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X29.1-2 RecNames[101X
+  
+  [33X[1;0Y[29X[2XRecNames[102X( [3Xrecord[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  a  duplicate-free list of strings corresponding to the names of the
+  record components of the record [3Xrecord[103X.[133X
+  
+  [33X[0;0YThe list is sorted by [2XRNamObj[102X ([14X29.7-2[114X) for reasons of efficiency; see [2XSortBy[102X
+  ([14X21.18-1[114X).  Therefore the ordering is consistent within one [5XGAP[105X session, but
+  it  is  not  necessarily  consistent  across different sessions. To obtain a
+  result  that  is  consistent  across [5XGAP[105X sessions, apply [2XSet[102X ([14X30.3-7[114X) to the
+  returned list.[133X
+  
+  [33X[0;0YNote that given a string [10Xname[110X containing the name of a record component, you
+  can  access  the  record  component  via  [10X[3Xrecord[103X[10X.(name)[110X,  see  Sections [14X29.2[114X
+  and [14X29.3[114X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xr := rec( a := 1, b := 2 );;[127X[104X
+    [4X[25Xgap>[125X [27XSet(RecNames( r )); # 'Set' because ordering depends on GAP session[127X[104X
+    [4X[28X[ "a", "b" ][128X[104X
+    [4X[25Xgap>[125X [27XSet(RecNames( r ), x -> r.(x));[127X[104X
+    [4X[28X[ 1, 2 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote that it is most efficient to assign components to a (new or old) record
+  in the order given by [2XRecNames[102X.[133X
+  
+  
+  [1X29.2 [33X[0;0YAccessing Record Elements[133X[101X
+  
+  [33X[0;0Y[10X[3Xr[103X[10X.[3Xname[103X[10X[110X[133X
+  
+  [33X[0;0YThe  above construct evaluates to the value of the record component with the
+  name  [3Xname[103X  in the record [3Xr[103X. Note that the [3Xname[103X is not evaluated, i.e. it is
+  taken literal.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xr := rec( a := 1, b := 2 );;[127X[104X
+    [4X[25Xgap>[125X [27Xr.a;[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27Xr.b;[127X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[10X[3Xr[103X[10X.([3Xname[103X[10X)[110X[133X
+  
+  [33X[0;0YThis construct is similar to the above construct. The difference is that the
+  second operand [3Xname[103X is evaluated. It must evaluate to a string or an integer
+  otherwise an error is signalled. The construct then evaluates to the element
+  of the record [3Xr[103X whose name is, as a string, equal to [3Xname[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xold := rec( a := 1, b := 2 );;[127X[104X
+    [4X[25Xgap>[125X [27Xnew := rec();[127X[104X
+    [4X[28Xrec(  )[128X[104X
+    [4X[25Xgap>[125X [27Xfor i in RecNames( old ) do[127X[104X
+    [4X[25X>[125X [27X new.(i) := old.(i);[127X[104X
+    [4X[25X>[125X [27Xod;[127X[104X
+    [4X[25Xgap>[125X [27XDisplay( new );[127X[104X
+    [4X[28Xrec([128X[104X
+    [4X[28X  a := 1,[128X[104X
+    [4X[28X  b := 2 )[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X29.3 [33X[0;0YRecord Assignment[133X[101X
+  
+  [33X[0;0Y[10X[3Xr[103X[10X.[3Xname[103X[10X := [3Xobj[103X[10X[110X[133X
+  
+  [33X[0;0YThe  record  assignment  assigns  the  object [3Xobj[103X, which may be an object of
+  arbitrary type, to the record component with the name [3Xname[103X, which must be an
+  identifier, of the record [3Xr[103X. That means that accessing the element with name
+  [3Xname[103X  of the record [3Xr[103X will return [3Xobj[103X after this assignment. If the record [3Xr[103X
+  has no component with the name [3Xname[103X, the record is automatically extended to
+  make room for the new component.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xr := rec( a := 1, b := 2 );;[127X[104X
+    [4X[25Xgap>[125X [27Xr.a := 10;;[127X[104X
+    [4X[25Xgap>[125X [27XDisplay( r );[127X[104X
+    [4X[28Xrec([128X[104X
+    [4X[28X  a := 10,[128X[104X
+    [4X[28X  b := 2 )[128X[104X
+    [4X[25Xgap>[125X [27Xr.c := 3;;[127X[104X
+    [4X[25Xgap>[125X [27XDisplay( r );[127X[104X
+    [4X[28Xrec([128X[104X
+    [4X[28X  a := 10,[128X[104X
+    [4X[28X  b := 2,[128X[104X
+    [4X[28X  c := 3 )[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote that assigning to a record changes the record.[133X
+  
+  [33X[0;0YThe  function  [2XIsBound[102X  ([14X29.6-1[114X)  can  be  used  to  test  if a record has a
+  component  with  a certain name, the function [2XUnbind[102X ([14X29.6-2[114X) can be used to
+  remove a component with a certain name again.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsBound(r.a);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsBound(r.d);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XUnbind(r.b);[127X[104X
+    [4X[25Xgap>[125X [27XDisplay( r );[127X[104X
+    [4X[28Xrec([128X[104X
+    [4X[28X  a := 10,[128X[104X
+    [4X[28X  c := 3 )[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[10X[3Xr[103X[10X.([3Xname[103X[10X) := [3Xobj[103X[10X[110X[133X
+  
+  [33X[0;0YThis construct is similar to the above construct. The difference is that the
+  second operand [3Xname[103X is evaluated. It must evaluate to a string or an integer
+  otherwise  an  error  is  signalled.  The  construct then assigns [3Xobj[103X to the
+  record component of the record [3Xr[103X whose name is, as a string, equal to [3Xname[103X.[133X
+  
+  
+  [1X29.4 [33X[0;0YIdentical Records[133X[101X
+  
+  [33X[0;0YWith  the  record  assignment  (see [14X29.3[114X) it is possible to change a record.
+  This  section  describes  the  semantic  consequences of this fact which are
+  essentially the same as for lists (see [14X21.6[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xr := rec( a := 1 );[128X[104X
+    [4X[28Xr := rec( a := 1, b := 2 );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe second assignment does not change the first record, instead it assigns a
+  new  record  to  the variable [10Xr[110X. On the other hand, in the following example
+  the record is changed by the second assignment.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xr := rec( a := 1 );[128X[104X
+    [4X[28Xr.b := 2;[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YTo  understand  the  difference  first  think of a variable as a name for an
+  object.  The  important point is that a record can have several names at the
+  same time. An assignment [10X[3Xvar[103X[10X := [3Xr[103X[10X[110X means in this interpretation that [3Xvar[103X is a
+  name  for the object [3Xr[103X. At the end of the following example [10Xr2[110X still has the
+  value [10Xrec( a := 1 )[110X as this record has not been changed and nothing else has
+  been assigned to [10Xr2[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xr1 := rec( a := 1 );[128X[104X
+    [4X[28Xr2 := r1;[128X[104X
+    [4X[28Xr1 := rec( a := 1, b := 2 );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YBut  after  the following example the record for which [10Xr2[110X is a name has been
+  changed and thus the value of [10Xr2[110X is now [10Xrec( a := 1, b := 2 )[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xr1 := rec( a := 1 );[128X[104X
+    [4X[28Xr2 := r1;[128X[104X
+    [4X[28Xr1.b := 2;[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe  shall  say  that  two records are [13Xidentical[113X if changing one of them by a
+  record  assignment  also  changes the other one. This is slightly incorrect,
+  because  if [13Xtwo[113X records are identical, there are actually only two names for
+  [13Xone[113X  record. However, the correct usage would be very awkward and would only
+  add to the confusion. Note that two identical records must be equal, because
+  there  is  only  one  records  with two different names. Thus identity is an
+  equivalence relation that is a refinement of equality.[133X
+  
+  [33X[0;0YLet us now consider under which circumstances two records are identical.[133X
+  
+  [33X[0;0YIf  you  enter a record literal then the record denoted by this literal is a
+  new  record that is not identical to any other record. Thus in the following
+  example [10Xr1[110X and [10Xr2[110X are not identical, though they are equal of course.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xr1 := rec( a := 1 );[128X[104X
+    [4X[28Xr2 := rec( a := 1 );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAlso in the following example, no records in the list [10Xl[110X are identical.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xl := [];[128X[104X
+    [4X[28Xfor i in [1..10] do[128X[104X
+    [4X[28X  l[i] := rec( a := 1 );[128X[104X
+    [4X[28Xod;[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIf  you  assign  a  record  to a variable no new record is created. Thus the
+  record  value  of  the  variable on the left hand side and the record on the
+  right hand side of the assignment are identical. So in the following example
+  [10Xr1[110X and [10Xr2[110X are identical records.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xr1 := rec( a := 1 );[128X[104X
+    [4X[28Xr2 := r1;[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIf  you  pass  a  record as argument, the old record and the argument of the
+  function are identical. Also if you return a record from a function, the old
+  record and the value of the function call are identical. So in the following
+  example [10Xr1[110X and [10Xr2[110X are identical records.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xr1 := rec( a := 1 );[128X[104X
+    [4X[28Xf := function ( r ) return r; end;[128X[104X
+    [4X[28Xr2 := f( r1 );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  functions  [2XStructuralCopy[102X  ([14X12.7-2[114X)  and  [2XShallowCopy[102X ([14X12.7-1[114X) accept a
+  record  and  return a new record that is equal to the old record but that is
+  [13Xnot[113X  identical  to  the  old  record.  The difference between [2XStructuralCopy[102X
+  ([14X12.7-2[114X)  and  [2XShallowCopy[102X  ([14X12.7-1[114X)  is  that  in  the  case of [2XShallowCopy[102X
+  ([14X12.7-1[114X) the corresponding components of the new and the old records will be
+  identical,  whereas in the case of [2XStructuralCopy[102X ([14X12.7-2[114X) they will only be
+  equal. So in the following example [10Xr1[110X and [10Xr2[110X are not identical records.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xr1 := rec( a := 1 );[128X[104X
+    [4X[28Xr2 := ShallowCopy( r1 );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIf  you  change  a  record  it  keeps  its identity. Thus if two records are
+  identical  and  you  change one of them, you also change the other, and they
+  are  still identical afterwards. On the other hand, two records that are not
+  identical  will  never become identical if you change one of them. So in the
+  following example both [10Xr1[110X and [10Xr2[110X are changed, and are still identical.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xr1 := rec( a := 1 );[128X[104X
+    [4X[28Xr2 := r1;[128X[104X
+    [4X[28Xr1.b := 2;[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X29.5 [33X[0;0YComparisons of Records[133X[101X
+  
+  [33X[0;0Y[10X[3Xrec1[103X[10X = [3Xrec2[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xrec1[103X[10X <> [3Xrec2[103X[10X[110X[133X
+  
+  [33X[0;0YTwo  records  are  considered equal, if for each component of one record the
+  other  record  has a component of the same name with an equal value and vice
+  versa.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xrec( a := 1, b := 2 ) = rec( b := 2, a := 1 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xrec( a := 1, b := 2 ) = rec( a := 2, b := 1 );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xrec( a := 1 ) = rec( a := 1, b := 2 );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xrec( a := 1 ) = 1;[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[10X[3Xrec1[103X[10X < [3Xrec2[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xrec1[103X[10X <= [3Xrec2[103X[10X[110X[133X
+  
+  [33X[0;0YTo compare records we imagine that the components of both records are sorted
+  according  to  their  names  (the  sorting  depends on the [5XGAP[105X session, more
+  precisely  the  order  in  which  component names were first used). Then the
+  records  are  compared  lexicographically  with  unbound elements considered
+  smaller  than  anything  else.  Precisely one record [3Xrec1[103X is considered less
+  than  another record [3Xrec2[103X if [3Xrec2[103X has a component with name [3Xname2[103X and either
+  [3Xrec1[103X has no component with this name or [10X[3Xrec1[103X[10X.[3Xname2[103X[10X < [3Xrec2[103X[10X.[3Xname2[103X[10X[110X and for each
+  component  of  [3Xrec1[103X  with  name [10X[3Xname1[103X[10X < [3Xname2[103X[10X[110X [3Xrec2[103X has a component with this
+  name and [10X[3Xrec1[103X[10X.[3Xname1[103X[10X = [3Xrec2[103X[10X.[3Xname1[103X[10X[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xrec( axy := 1, bxy := 2 ) < rec( bxy := 2, axy := 1 ); # are equal[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xrec( axy := 1 ) < rec( axy := 1, bxy := 2 ); # unbound is < 2[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27X# in new session the .axy components are compared first[127X[104X
+    [4X[25Xgap>[125X [27Xrec( axy := 1, bxy := 2 ) < rec( axy := 2, bxy := 0 ); # 1 < 2[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xrec( axy := 1 ) < rec( axy := 0, bxy := 2 ); # 0 < 1[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xrec( bxy := 1 ) < rec( bxy := 0, axy := 2 ); # unbound is < 2[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X29.6 [33X[0;0YIsBound and Unbind for Records[133X[101X
+  
+  [1X29.6-1 IsBound[101X
+  
+  [33X[1;0Y[29X[2XIsBound[102X( [3Xr.name[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XIsBound[102X  returns  [9Xtrue[109X  if  the  record [3Xr[103X has a component with the name [3Xname[103X
+  (which  must  be  an  identifier)  and [9Xfalse[109X otherwise. [3Xr[103X must evaluate to a
+  record, otherwise an error is signalled.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xr := rec( a := 1, b := 2 );;[127X[104X
+    [4X[25Xgap>[125X [27XIsBound( r.a );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsBound( r.c );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X29.6-2 Unbind[101X
+  
+  [33X[1;0Y[29X[2XUnbind[102X( [3Xr.name[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XUnbind[102X  deletes  the  component with the name [3Xname[103X in the record [3Xr[103X. That is,
+  after  execution  of  [2XUnbind[102X,  [3Xr[103X  no longer has a record component with this
+  name. Note that it is not an error to unbind a nonexisting record component.
+  [3Xr[103X must evaluate to a record, otherwise an error is signalled.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xr := rec( a := 1, b := 2 );;[127X[104X
+    [4X[25Xgap>[125X [27XUnbind( r.a ); r;[127X[104X
+    [4X[28Xrec( b := 2 )[128X[104X
+    [4X[25Xgap>[125X [27XUnbind( r.c ); r;[127X[104X
+    [4X[28Xrec( b := 2 )[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  [2XIsBound[102X  ([14X29.6-1[114X)  and  [2XUnbind[102X  are  special in that they do not
+  evaluate  their  argument, otherwise [2XIsBound[102X ([14X29.6-1[114X) would always signal an
+  error  when it is supposed to return [9Xfalse[109X and there would be no way to tell
+  [2XUnbind[102X which component to remove.[133X
+  
+  
+  [1X29.7 [33X[0;0YRecord Access Operations[133X[101X
+  
+  [33X[0;0YInternally,  record  accesses  are  done using the operations listed in this
+  section.  For  the  records  implemented  in  the kernel, kernel methods are
+  provided  for  all  these operations but otherwise it is possible to install
+  methods  for  these  operations  for  any  object.  This  permits objects to
+  simulate record behavior.[133X
+  
+  [33X[0;0YTo save memory, records do not store a list of all component names, but only
+  numbers  identifying  the  components.  There  numbers are called [13XRNams[113X. [5XGAP[105X
+  keeps  a  global  list of all RNams that are used and provides the functions
+  [2XNameRNam[102X  ([14X29.7-1[114X)  and  [2XRNamObj[102X ([14X29.7-2[114X) to translate RNams to strings that
+  give the component names and vice versa.[133X
+  
+  [1X29.7-1 NameRNam[101X
+  
+  [33X[1;0Y[29X[2XNameRNam[102X( [3Xnr[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  a  string representing the component name corresponding to the RNam
+  [3Xnr[103X.[133X
+  
+  [1X29.7-2 RNamObj[101X
+  
+  [33X[1;0Y[29X[2XRNamObj[102X( [3Xstr[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XRNamObj[102X( [3Xint[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  a  number  (the  RNam)  corresponding to the string [3Xstr[103X. It is also
+  possible  to pass a positive integer [3Xint[103X in which case the decimal expansion
+  of [3Xint[103X is used as a string.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XNameRNam(798);[127X[104X
+    [4X[28X"BravaisSupergroups"[128X[104X
+    [4X[25Xgap>[125X [27XRNamObj("blubberflutsch");[127X[104X
+    [4X[28X2075[128X[104X
+    [4X[25Xgap>[125X [27XNameRNam(last);[127X[104X
+    [4X[28X"blubberflutsch"[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe correspondence between strings and RNams is not predetermined ab initio,
+  but RNams are assigned to component names dynamically on a [21Xfirst come, first
+  serve[121X  basis.  Therefore,  depending  on  the version of the library you are
+  using  and  on  the  assignments done so far, the [13Xsame[113X component name may be
+  represented by [13Xdifferent[113X RNams in different [5XGAP[105X sessions.[133X
+  
+  [1X29.7-3 \.[101X
+  
+  [33X[1;0Y[29X[2X\.[102X( [3Xobj[103X, [3Xrnam[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XIsBound\.[102X( [3Xobj[103X, [3Xrnam[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2X\.\:\=[102X( [3Xobj[103X, [3Xrnam[103X, [3Xval[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XUnbind\.[102X( [3Xobj[103X, [3Xrnam[103X ) [32X operation[133X
+  
+  [33X[0;0YThese  operations  are  called  for record accesses to arbitrary objects. If
+  applicable  methods  are  installed,  they  are  called  when  the object is
+  accessed as a record.[133X
+  
+  [33X[0;0YFor  records,  the  operations  implement component access, test for element
+  boundness,  component assignment and removal of the component represented by
+  the RNam [3Xrnam[103X.[133X
+  
+  [33X[0;0YThe component identifier [3Xrnam[103X is always required to be in [2XIsPosInt[102X ([14X14.2-2[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xr:= rec( a:= 1 );;[127X[104X
+    [4X[25Xgap>[125X [27XIsBound\.( r, RNamObj( "a" ) );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27X\.( r, RNamObj( "a" ) );[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XIsBound\.( r, RNamObj( "b" ) );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27X\.\:\=( r, RNamObj( "b" ), 2 );[127X[104X
+    [4X[25Xgap>[125X [27Xr;[127X[104X
+    [4X[28Xrec( a := 1, b := 2 )[128X[104X
+    [4X[25Xgap>[125X [27XUnbind\.( r, RNamObj( "b" ) );[127X[104X
+    [4X[25Xgap>[125X [27Xr;[127X[104X
+    [4X[28Xrec( a := 1 )[128X[104X
+    [4X[25Xgap>[125X [27XG:= SymmetricGroup( 4 );;[127X[104X
+    [4X[25Xgap>[125X [27XG.1;[127X[104X
+    [4X[28X(1,2,3,4)[128X[104X
+    [4X[25Xgap>[125X [27X\.( G, RNamObj( 1 ) );[127X[104X
+    [4X[28X(1,2,3,4)[128X[104X
+    [4X[25Xgap>[125X [27Xmeth:= ApplicableMethod( \., [ G, 4711 ] );;[127X[104X
+    [4X[25Xgap>[125X [27Xmeth( G, RNamObj( 1 ) );[127X[104X
+    [4X[28X(1,2,3,4)[128X[104X
+  [4X[32X[104X
+  

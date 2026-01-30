@@ -1,0 +1,140 @@
+  
+  [1X8 [33X[0;0YOptions Stack[133X[101X
+  
+  [33X[0;0Y[5XGAP[105X supports a [13Xglobal options system[113X. This is intended as a way for the user
+  to  provide  guidance  to  various  algorithms  that  might  be  used  in  a
+  computation.   Such   guidance   should   not   change   mathematically  the
+  specification of the computation to be performed, although it may change the
+  algorithm  used.  A  typical  example is the selection of a strategy for the
+  Todd-Coxeter coset enumeration procedure. An example of something not suited
+  to  the  options  mechanism  is  the  imposition  of  exponent  laws  in the
+  [22Xp[122X-Quotient algorithm.[133X
+  
+  [33X[0;0YThe  basis  of  this system is a global stack of records. All the entries of
+  each record are thought of as options settings, and the effective setting of
+  an  option  is  given  by  the topmost record in which the relevant field is
+  bound.[133X
+  
+  [33X[0;0YThe reason for the choice of a stack is the intended pattern of use:[133X
+  
+  [33X[0;0Y[10XPushOptions( rec( [3Xstuff[103X[10X ) );[110X[133X
+  
+  [33X[0;0Y[10XDoSomething( [3Xargs[103X[10X );[110X[133X
+  
+  [33X[0;0Y[10XPopOptions();[110X[133X
+  
+  [33X[0;0YThis  can  be  abbreviated,  to  [10XDoSomething(  [3Xargs[103X[10X  : [3Xstuff[103X[10X );[110X with a small
+  additional abbreviation of [3Xstuff[103X permitted. See [14X4.12-2[114X for details. The full
+  form  can be used where the same options are to run across several calls, or
+  where  the  [10XDoSomething[110X  procedure  is  actually an infix operator, or other
+  function with special syntax.[133X
+  
+  [33X[0;0YAn alternative to this system is the use of additional optional arguments in
+  procedure  calls.  This  is not felt to be sufficient because many procedure
+  calls  might  cause, for example, a coset enumeration and each would need to
+  make  provision  for  the possibility of extra arguments. In this system the
+  options  are  pushed  when the user-level procedure is called, and remain in
+  effect (unless altered) for all procedures called by it.[133X
+  
+  [33X[0;0YNote  that  in some places in the system optional records containing options
+  which  are  valid only for the immediate function or method call are in fact
+  used.[133X
+  
+  
+  [1X8.1 [33X[0;0YFunctions Dealing with the Options Stack[133X[101X
+  
+  [1X8.1-1 PushOptions[101X
+  
+  [33X[1;0Y[29X[2XPushOptions[102X( [3Xoptions_record[103X ) [32X function[133X
+  
+  [33X[0;0YThis  function pushes a record of options onto the global option stack. Note
+  that [10XPushOptions( rec( [3Xopt[103X[10X:= fail ) )[110X has the effect of resetting the option
+  [3Xopt[103X,  since an option that has never been set has the value [9Xfail[109X returned by
+  [2XValueOption[102X ([14X8.1-5[114X).[133X
+  
+  [33X[0;0YNote that there is no check for misspelt or undefined options.[133X
+  
+  [1X8.1-2 PopOptions[101X
+  
+  [33X[1;0Y[29X[2XPopOptions[102X(  ) [32X function[133X
+  
+  [33X[0;0YThis  function removes the top-most options record from the options stack if
+  there is one.[133X
+  
+  [1X8.1-3 ResetOptionsStack[101X
+  
+  [33X[1;0Y[29X[2XResetOptionsStack[102X(  ) [32X function[133X
+  
+  [33X[0;0Yunbinds (i.e. removes) all the options records from the options stack.[133X
+  
+  [33X[0;0Y[13XNote:[113X  [2XResetOptionsStack[102X  should [13Xnot[113X be used within a function. Its intended
+  use  is  to  clean  up the options stack in the event that the user has [9Xquit[109X
+  from   a  [9Xbreak[109X  loop,  so  leaving  a  stack  of  no-longer-needed  options
+  (see [14X6.4-1[114X).[133X
+  
+  [1X8.1-4 OnQuit[101X
+  
+  [33X[1;0Y[29X[2XOnQuit[102X(  ) [32X function[133X
+  
+  [33X[0;0Ycalled  when  a  user selects to [10Xquit;[110X a break loop entered via execution of
+  [2XError[102X ([14X6.6-1[114X). As [5XGAP[105X starts up, [2XOnQuit[102X is defined to do nothing, in case an
+  error  is  encountered  during [5XGAP[105X start-up. Later in the loading process we
+  redefine  [2XOnQuit[102X  to do a variant of [2XResetOptionsStack[102X ([14X8.1-3[114X) to ensure the
+  options  stack  is  empty  after a user quits an [2XError[102X ([14X6.6-1[114X)-induced break
+  loop.  ([2XOnQuit[102X  differs from [2XResetOptionsStack[102X ([14X8.1-3[114X) in that it warns when
+  it does something rather than the other way round.) Currently, [2XOnQuit[102X is not
+  advertised, since exception handling may make it obsolete.[133X
+  
+  [1X8.1-5 ValueOption[101X
+  
+  [33X[1;0Y[29X[2XValueOption[102X( [3Xopt[103X ) [32X function[133X
+  
+  [33X[0;0YThis  function  is a method for accessing the options stack without changing
+  it;  [3Xopt[103X  should  be  the name of an option, i.e. a string. A function which
+  makes  decisions that might be affected by options should examine the result
+  of [2XValueOption[102X. If [3Xopt[103X is currently not set then [9Xfail[109X is returned.[133X
+  
+  [1X8.1-6 DisplayOptionsStack[101X
+  
+  [33X[1;0Y[29X[2XDisplayOptionsStack[102X(  ) [32X function[133X
+  
+  [33X[0;0YThis function prints a human-readable display of the complete options stack.[133X
+  
+  [1X8.1-7 InfoOptions[101X
+  
+  [33X[1;0Y[29X[2XInfoOptions[102X [32X info class[133X
+  
+  [33X[0;0YThis  info  class can be used to enable messages about options being changed
+  (level 1) or accessed (level 2).[133X
+  
+  
+  [1X8.2 [33X[0;0YOptions Stack – an Example[133X[101X
+  
+  [33X[0;0YThe  example  below  shows  simple  manipulation of the Options Stack, first
+  using  [2XPushOptions[102X ([14X8.1-1[114X) and [2XPopOptions[102X ([14X8.1-2[114X) and then using the special
+  function calling syntax.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xfoo := function()[127X[104X
+    [4X[25X>[125X [27XPrint("myopt1 = ", ValueOption("myopt1"),[127X[104X
+    [4X[25X>[125X [27X      " myopt2 = ",ValueOption("myopt2"),"\n");[127X[104X
+    [4X[25X>[125X [27Xend;[127X[104X
+    [4X[28Xfunction(  ) ... end[128X[104X
+    [4X[25Xgap>[125X [27Xfoo();[127X[104X
+    [4X[28Xmyopt1 = fail myopt2 = fail[128X[104X
+    [4X[25Xgap>[125X [27XPushOptions(rec(myopt1 := 17));[127X[104X
+    [4X[25Xgap>[125X [27Xfoo();[127X[104X
+    [4X[28Xmyopt1 = 17 myopt2 = fail[128X[104X
+    [4X[25Xgap>[125X [27XDisplayOptionsStack();[127X[104X
+    [4X[28X[ rec([128X[104X
+    [4X[28X      myopt1 := 17 ) ][128X[104X
+    [4X[25Xgap>[125X [27XPopOptions();[127X[104X
+    [4X[25Xgap>[125X [27Xfoo();[127X[104X
+    [4X[28Xmyopt1 = fail myopt2 = fail[128X[104X
+    [4X[25Xgap>[125X [27Xfoo( : myopt1, myopt2 := [Z(3),"aardvark"]);[127X[104X
+    [4X[28Xmyopt1 = true myopt2 = [ Z(3), "aardvark" ][128X[104X
+    [4X[25Xgap>[125X [27XDisplayOptionsStack();[127X[104X
+    [4X[28X[  ][128X[104X
+    [4X[25Xgap>[125X [27X[127X[104X
+  [4X[32X[104X
+  

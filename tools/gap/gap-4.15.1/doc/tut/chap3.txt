@@ -1,0 +1,886 @@
+  
+  [1X3 [33X[0;0YLists and Records[133X[101X
+  
+  [33X[0;0YModern  mathematics,  especially  algebra, is based on set theory. When sets
+  are  represented  in  a computer, they inadvertently turn into lists. That's
+  why  we  start  our  survey  of  the  various  objects [5XGAP[105X can handle with a
+  description  of  lists and their manipulation. [5XGAP[105X regards sets as a special
+  kind of lists, namely as lists without holes or duplicates whose entries are
+  ordered with respect to the precedence relation [10X<[110X.[133X
+  
+  [33X[0;0YAfter  the  introduction  of the basic manipulations with lists in [14X3.1[114X, some
+  difficulties  concerning  identity  and  mutability  of  lists are discussed
+  in [14X3.2[114X  and [14X3.3[114X.  Sets,  ranges, row vectors, and matrices are introduced as
+  special  kinds  of  lists  in [14X3.4[114X, [14X3.5[114X, [14X3.8[114X. Handy list operations are shown
+  in [14X3.7[114X. Finally we explain how to use records in [14X3.9[114X.[133X
+  
+  
+  [1X3.1 [33X[0;0YPlain Lists[133X[101X
+  
+  [33X[0;0YA  [13Xlist[113X  is  a  collection  of  objects  separated by commas and enclosed in
+  brackets.  Let  us  for  example  construct the list [10Xprimes[110X of the first ten
+  prime numbers.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xprimes:= [2, 3, 5, 7, 11, 13, 17, 19, 23, 29];[127X[104X
+    [4X[28X[ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe next two primes are 31 and 37. They may be appended to the existing list
+  by  the  function  [10XAppend[110X  which  takes  the  existing list as its first and
+  another  list  as  a second argument. The second argument is appended to the
+  list  [10Xprimes[110X  and  no value is returned. Note that by appending another list
+  the object [10Xprimes[110X is changed.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XAppend(primes, [31, 37]);[127X[104X
+    [4X[25Xgap>[125X [27Xprimes;[127X[104X
+    [4X[28X[ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YYou  can  as  well add single new elements to existing lists by the function
+  [10XAdd[110X which takes the existing list as its first argument and a new element as
+  its  second  argument. The new element is added to the list [10Xprimes[110X and again
+  no value is returned but the list [10Xprimes[110X is changed.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XAdd(primes, 41);[127X[104X
+    [4X[25Xgap>[125X [27Xprimes;[127X[104X
+    [4X[28X[ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YSingle  elements of a list are referred to by their position in the list. To
+  get  the  value  of the seventh prime, that is the seventh entry in our list
+  [10Xprimes[110X, you simply type[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xprimes[7];[127X[104X
+    [4X[28X17[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis  value can be handled like any other value, for example multiplied by 2
+  or  assigned  to  a variable. On the other hand this mechanism allows one to
+  assign a value to a position in a list. So the next prime 43 may be inserted
+  in  the  list directly after the last occupied position of [10Xprimes[110X. This last
+  occupied position is returned by the function [10XLength[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLength(primes);[127X[104X
+    [4X[28X13[128X[104X
+    [4X[25Xgap>[125X [27Xprimes[14]:= 43;[127X[104X
+    [4X[28X43[128X[104X
+    [4X[25Xgap>[125X [27Xprimes;[127X[104X
+    [4X[28X[ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  this  operation  again  has  changed the object [10Xprimes[110X. The next
+  position  after the end of a list is not the only position capable of taking
+  a  new  value. If you know that 71 is the 20th prime, you can enter it right
+  now  in  the  20th position of [10Xprimes[110X. This will result in a list with holes
+  which is however still a list and now has length 20.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xprimes[20]:= 71;[127X[104X
+    [4X[28X71[128X[104X
+    [4X[25Xgap>[125X [27Xprimes;[127X[104X
+    [4X[28X[ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43,,,,,, 71 ][128X[104X
+    [4X[25Xgap>[125X [27XLength(primes);[127X[104X
+    [4X[28X20[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  list  itself  however  must  exist  before a value can be assigned to a
+  position of the list. This list may be the empty list [10X[ ][110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xlll[1]:= 2;[127X[104X
+    [4X[28XError, Variable: 'lll' must have a value[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27Xlll:= []; lll[1]:= 2;[127X[104X
+    [4X[28X[  ][128X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YOf  course existing entries of a list can be changed by this mechanism, too.
+  We  will  not  do  it  here  because  [10Xprimes[110X then may no longer be a list of
+  primes. Try for yourself to change the 17 in the list into a 9.[133X
+  
+  [33X[0;0YTo  get  the  position  of  17  in the list [10Xprimes[110X use the function [2XPosition[102X
+  ([14XReference:  Position[114X)  which  takes  the list as its first argument and the
+  element  as  its  second  argument  and  returns  the  position of the first
+  occurrence  of  the  element  17  in  the list [10Xprimes[110X. If the element is not
+  contained  in  the  list then [2XPosition[102X ([14XReference: Position[114X) will return the
+  special object [9Xfail[109X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPosition(primes, 17);[127X[104X
+    [4X[28X7[128X[104X
+    [4X[25Xgap>[125X [27XPosition(primes, 20);[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIn  all  of  the  above  changes  to  the  list  [10Xprimes[110X,  the  list has been
+  automatically resized. There is no need for you to tell [5XGAP[105X how big you want
+  a list to be. This is all done dynamically.[133X
+  
+  [33X[0;0YIt  is  not  necessary for the objects collected in a list to be of the same
+  type.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xlll:= [true, "This is a String",,, 3];[127X[104X
+    [4X[28X[ true, "This is a String",,, 3 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIn the same way a list may be part of another list.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xlll[3]:= [4,5,6];; lll;[127X[104X
+    [4X[28X[ true, "This is a String", [ 4, 5, 6 ],, 3 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YA list may even be part of itself.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xlll[4]:= lll;[127X[104X
+    [4X[28X[ true, "This is a String", [ 4, 5, 6 ], ~, 3 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNow  the  tilde  in  the  fourth  position of [10Xlll[110X denotes the object that is
+  currently  printed. Note that the result of the last operation is the actual
+  value of the object [10Xlll[110X on the right hand side of the assignment. In fact it
+  is identical to the value of the whole list [10Xlll[110X on the left hand side of the
+  assignment.[133X
+  
+  [33X[0;0YA [13Xstring[113X is a special type of list, namely a dense list of [13Xcharacters[113X, where
+  [13Xdense[113X  means  that  the  list has no holes. Here, [13Xcharacters[113X are special [5XGAP[105X
+  objects  representing  an  element  of  the  character  set of the operating
+  system.  The  input  of  printable characters is by enclosing them in single
+  quotes [10X'[110X.  A  string literal can either be entered as the list of characters
+  or  by  writing  the  characters between doublequotes [10X"[110X. Strings are handled
+  specially by [2XPrint[102X ([14XReference: Print[114X). You can learn much more about strings
+  in the reference manual.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xs1 := ['H','a','l','l','o',' ','w','o','r','l','d','.'];[127X[104X
+    [4X[28X"Hallo world."[128X[104X
+    [4X[25Xgap>[125X [27Xs1 = "Hallo world.";[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xs1[7];[127X[104X
+    [4X[28X'w'[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YSublists  of  lists  can easily be extracted and assigned using the operator
+  [10X[3Xlist[103X[10X{ [3Xpositions[103X[10X }[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xsl := lll{ [ 1, 2, 3 ] };[127X[104X
+    [4X[28X[ true, "This is a String", [ 4, 5, 6 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xsl{ [ 2, 3 ] } := [ "New String", false ];[127X[104X
+    [4X[28X[ "New String", false ][128X[104X
+    [4X[25Xgap>[125X [27Xsl;[127X[104X
+    [4X[28X[ true, "New String", false ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis way you get a new list whose [22Xi[122X-th entry is that element of the original
+  list whose position is the [22Xi[122X-th entry of the argument in the curly braces.[133X
+  
+  
+  [1X3.2 [33X[0;0YIdentical Lists[133X[101X
+  
+  [33X[0;0YThis  second  section  about  lists  is  dedicated  to the subtle difference
+  between [13Xequality[113X and [13Xidentity[113X of lists. It is really important to understand
+  this  difference  in  order  to  understand  how complex data structures are
+  realized  in  [5XGAP[105X.  This  section  applies  to  all  [5XGAP[105X  objects  that have
+  subobjects,  e.g.,  to  lists  and to records. After reading the section [14X3.9[114X
+  about  records  you  should return to this section and translate it into the
+  record context.[133X
+  
+  [33X[0;0YTwo  lists  are  [13Xequal[113X  if  all their entries are equal. This means that the
+  equality operator [10X=[110X returns [9Xtrue[109X for the comparison of two lists if and only
+  if  these  two lists are of the same length and for each position the values
+  in the respective lists are equal.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xnumbers := primes;; numbers = primes;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe  assigned the list [10Xprimes[110X to the variable [10Xnumbers[110X and, of course they are
+  equal  as  they  have both the same length and the same entries. Now we will
+  change the third number to 4 and compare the result again with [10Xprimes[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xnumbers[3]:= 4;; numbers = primes;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YYou  see that [10Xnumbers[110X and [10Xprimes[110X are still equal, check this by printing the
+  value  of  [10Xprimes[110X.  The  list [10Xprimes[110X is no longer a list of primes! What has
+  happened?  The truth is that the lists [10Xprimes[110X and [10Xnumbers[110X are not only equal
+  but  they  are also [13Xidentical[113X. [10Xprimes[110X and [10Xnumbers[110X are two variables pointing
+  to  the  same  list.  If you change the value of the subobject [10Xnumbers[3][110X of
+  [10Xnumbers[110X  this  will  also change [10Xprimes[110X. Variables do [13Xnot[113X point to a certain
+  block of storage memory but they do point to an object that occupies storage
+  memory.  So  the assignment [10Xnumbers := primes[110X did [13Xnot[113X create a new list in a
+  different place of memory but only created the new name [10Xnumbers[110X for the same
+  old list of primes.[133X
+  
+  [33X[0;0YFrom this we see that [13Xthe same object can have several names.[113X[133X
+  
+  [33X[0;0YIf  you want to change a list with the contents of [10Xprimes[110X independently from
+  [10Xprimes[110X  you  will  have to make a copy of [10Xprimes[110X by the function [10XShallowCopy[110X
+  which  takes  an  object as its argument and returns a copy of the argument.
+  (We will first restore the old value of [10Xprimes[110X.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xprimes[3]:= 5;; primes;[127X[104X
+    [4X[28X[ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43,,,,,, 71 ][128X[104X
+    [4X[25Xgap>[125X [27Xnumbers:= ShallowCopy(primes);; numbers = primes;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xnumbers[3]:= 4;; numbers = primes;[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNow  [10Xnumbers[110X  is  no  longer  equal  to [10Xprimes[110X and [10Xprimes[110X still is a list of
+  primes. Check this by printing the values of [10Xnumbers[110X and [10Xprimes[110X.[133X
+  
+  [33X[0;0YLists and records can be changed this way because [5XGAP[105X objects of these types
+  have   subobjects.   To   clarify  this  statement  consider  the  following
+  assignments.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xi:= 1;; j:= i;; i:= i+1;;[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YBy  adding  1  to [10Xi[110X the value of [10Xi[110X has changed. What happens to [10Xj[110X? After the
+  second  statement [10Xj[110X points to the same object as [10Xi[110X, namely to the integer 1.
+  The addition does [13Xnot[113X change the object [10X1[110X but creates a new object according
+  to the instruction [10Xi+1[110X. It is actually the assignment that changes the value
+  of  [10Xi[110X. Therefore [10Xj[110X still points to the object [10X1[110X. Integers (like permutations
+  and  booleans)  have no subobjects. Objects of these types cannot be changed
+  but can only be replaced by other objects. And a replacement does not change
+  the  values  of other variables. In the above example an assignment of a new
+  value to the variable [10Xnumbers[110X would also not change the value of [10Xprimes[110X.[133X
+  
+  [33X[0;0YFinally try the following examples and explain the results.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:= [];; l:= [l];[127X[104X
+    [4X[28X[ [  ] ][128X[104X
+    [4X[25Xgap>[125X [27Xl[1]:= l;[127X[104X
+    [4X[28X[ ~ ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNow return to Section [14X3.1[114X and find out whether the functions [2XAdd[102X ([14XReference:
+  Add[114X) and [2XAppend[102X ([14XReference: Append[114X) change their arguments.[133X
+  
+  
+  [1X3.3 [33X[0;0YImmutability[133X[101X
+  
+  [33X[0;0Y[5XGAP[105X  has  a mechanism that protects lists against changes like the ones that
+  have   bothered  us  in  Section [14X3.2[114X.  The  function  [2XImmutable[102X  ([14XReference:
+  Immutable[114X)  takes  as  argument  a list and returns an immutable copy of it,
+  i.e.,  a  list  which  looks  exactly  like  the  old one, but has two extra
+  properties:  (1) The  new  list  is immutable, i.e., the list itself and its
+  subobjects  cannot  be  changed. (2) In constructing the copy, every part of
+  the  list  that  can  be changed has been copied, so that changes to the old
+  list  will  not  affect  the  new  one.  In other words, the new list has no
+  mutable subobjects in common with the old list.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xlist := [ 1, 2, "three", [ 4 ] ];; copy := Immutable( list );;[127X[104X
+    [4X[25Xgap>[125X [27Xlist[3][5] := 'w';; list; copy;[127X[104X
+    [4X[28X[ 1, 2, "threw", [ 4 ] ][128X[104X
+    [4X[28X[ 1, 2, "three", [ 4 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xcopy[3][5] := 'w';[127X[104X
+    [4X[28XList Assignment: <list> must be a mutable list[128X[104X
+    [4X[28Xnot in any function[128X[104X
+    [4X[28XEntering break read-eval-print loop ...[128X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou can 'return;' and ignore the assignment to continue[128X[104X
+    [4X[26Xbrk>[126X [27Xquit;[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAs  a  consequence  of  these  rules,  in the immutable copy of a list which
+  contains  an  already  immutable list as subobject, this immutable subobject
+  need  not  be copied, because it is unchangeable. Immutable lists are useful
+  in  many  complex  [5XGAP[105X objects, for example as generator lists of groups. By
+  making  them  immutable,  [5XGAP[105X ensures that no generators can be added to the
+  list,  removed  or  exchanged.  Such changes would of course lead to serious
+  inconsistencies  with  other knowledge that may already have been calculated
+  for the group.[133X
+  
+  [33X[0;0YA  converse  function  to  [2XImmutable[102X  ([14XReference:  Immutable[114X) is [2XShallowCopy[102X
+  ([14XReference: ShallowCopy[114X), which produces a new mutable list whose [22Xi[122X-th entry
+  is  the  [22Xi[122X-th entry of the old list. The single entries are not copied, they
+  are just placed in the new list. If the old list is immutable, and hence the
+  list entries are immutable themselves, the result of [2XShallowCopy[102X ([14XReference:
+  ShallowCopy[114X) is mutable only on the top level.[133X
+  
+  [33X[0;0YIt  should be noted that also other objects than lists can appear in mutable
+  or immutable form. Records (see Section [14X3.9[114X) provide another example.[133X
+  
+  
+  [1X3.4 [33X[0;0YSets[133X[101X
+  
+  [33X[0;0Y[5XGAP[105X  knows  several  special  kinds  of  lists.  A [13Xset[113X in [5XGAP[105X is a list that
+  contains  no  holes  (such  a  list  is called [13Xdense[113X) and whose elements are
+  strictly  sorted  w.r.t. [10X<[110X;  in particular, a set cannot contain duplicates.
+  (More  precisely,  the  elements  of a set in [5XGAP[105X are required to lie in the
+  same  [13Xfamily[113X,  but  roughly this means that they can be compared using the [10X<[110X
+  operator.)[133X
+  
+  [33X[0;0YThis provides a natural model for mathematical sets whose elements are given
+  by an explicit enumeration.[133X
+  
+  [33X[0;0Y[5XGAP[105X  also calls a set a [13Xstrictly sorted list[113X, and the function [2XIsSSortedList[102X
+  ([14XReference: IsSSortedList[114X) tests whether a given list is a set. It returns a
+  boolean  value. For almost any list whose elements are contained in the same
+  family,  there  exists  a  corresponding set. This set is constructed by the
+  function  [2XSet[102X  ([14XReference:  Set[114X)  which  takes  the list as its argument and
+  returns  a  set obtained from this list by ignoring holes and duplicates and
+  by sorting the elements.[133X
+  
+  [33X[0;0YThe elements of the sets used in the examples of this section are strings.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xfruits:= ["apple", "strawberry", "cherry", "plum"];[127X[104X
+    [4X[28X[ "apple", "strawberry", "cherry", "plum" ][128X[104X
+    [4X[25Xgap>[125X [27XIsSSortedList(fruits);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xfruits:= Set(fruits);[127X[104X
+    [4X[28X[ "apple", "cherry", "plum", "strawberry" ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  the  original  list  [10Xfruits[110X  is  not changed by the function [2XSet[102X
+  ([14XReference: Set[114X). We have to make a new assignment to the variable [10Xfruits[110X in
+  order to make it a set.[133X
+  
+  [33X[0;0YThe operator [9Xin[109X is used to test whether an object is an element of a set. It
+  returns a boolean value [9Xtrue[109X or [9Xfalse[109X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X"apple" in fruits;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27X"banana" in fruits;[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  operator  [9Xin[109X  can also be applied to ordinary lists. It is however much
+  faster  to  perform  a membership test for sets since sets are always sorted
+  and a binary search can be used instead of a linear search. New elements may
+  be added to a set by the function [2XAddSet[102X ([14XReference: AddSet[114X) which takes the
+  set  [10Xfruits[110X  as its first argument and an element as its second argument and
+  adds the element to the set if it wasn't already there. Note that the object
+  [10Xfruits[110X is changed.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XAddSet(fruits, "banana");[127X[104X
+    [4X[25Xgap>[125X [27Xfruits;  #  The banana is inserted in the right place.[127X[104X
+    [4X[28X[ "apple", "banana", "cherry", "plum", "strawberry" ][128X[104X
+    [4X[25Xgap>[125X [27XAddSet(fruits, "apple");[127X[104X
+    [4X[25Xgap>[125X [27Xfruits;  #  fruits has not changed.[127X[104X
+    [4X[28X[ "apple", "banana", "cherry", "plum", "strawberry" ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that inserting new elements into a set with [2XAddSet[102X ([14XReference: AddSet[114X)
+  is  usually  more  expensive than simply adding new elements at the end of a
+  list.[133X
+  
+  [33X[0;0YSets   can   be   intersected   by  the  function  [2XIntersection[102X  ([14XReference:
+  Intersection[114X) and united by the function [2XUnion[102X ([14XReference: Union[114X) which both
+  take  two sets as their arguments and return the intersection resp. union of
+  the two sets as a new object.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xbreakfast:= ["tea", "apple", "egg"];[127X[104X
+    [4X[28X[ "tea", "apple", "egg" ][128X[104X
+    [4X[25Xgap>[125X [27XIntersection(breakfast, fruits);[127X[104X
+    [4X[28X[ "apple" ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  arguments  of  the functions [2XIntersection[102X ([14XReference: Intersection[114X) and
+  [2XUnion[102X  ([14XReference:  Union[114X)  could  be  ordinary lists, while their result is
+  always  a  set.  Note that in the preceding example at least one argument of
+  [2XIntersection[102X   ([14XReference:  Intersection[114X)  was  not  a  set.  The  functions
+  [2XIntersectSet[102X  ([14XReference:  IntersectSet[114X)  and [2XUniteSet[102X ([14XReference: UniteSet[114X)
+  also  form  the  intersection resp. union of two sets. They will however not
+  return the result but change their first argument to be the result. Try them
+  carefully.[133X
+  
+  
+  [1X3.5 [33X[0;0YRanges[133X[101X
+  
+  [33X[0;0YA  [13Xrange[113X  is  a  finite  arithmetic progression of integers. This is another
+  special  kind  of list. A range is described by the first two values and the
+  last  value  of  the  arithmetic  progression  which  are  given in the form
+  [10X[[3Xfirst[103X[10X,[3Xsecond[103X[10X..[3Xlast[103X[10X][110X.  In the usual case of an ascending list of consecutive
+  integers the second entry may be omitted.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X[1..999999];     #  a range of almost a million numbers[127X[104X
+    [4X[28X[ 1 .. 999999 ][128X[104X
+    [4X[25Xgap>[125X [27X[1, 2..999999];  #  this is equivalent[127X[104X
+    [4X[28X[ 1 .. 999999 ][128X[104X
+    [4X[25Xgap>[125X [27X[1, 3..999999];  #  here the step is 2[127X[104X
+    [4X[28X[ 1, 3 .. 999999 ][128X[104X
+    [4X[25Xgap>[125X [27XLength( last );[127X[104X
+    [4X[28X500000[128X[104X
+    [4X[25Xgap>[125X [27X[ 999999, 999997 .. 1 ];[127X[104X
+    [4X[28X[ 999999, 999997 .. 1 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis  compact  printed representation of a fairly long list corresponds to a
+  compact  internal  representation. The function [2XIsRange[102X ([14XReference: IsRange[114X)
+  tests   whether  an  object  is  a  range,  the  function  [2XConvertToRangeRep[102X
+  ([14XReference:  ConvertToRangeRep[114X) changes the representation of a list that is
+  in fact a range to this compact internal representation.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xa:= [-2,-1,0,1,2,3,4,5];[127X[104X
+    [4X[28X[ -2, -1, 0, 1, 2, 3, 4, 5 ][128X[104X
+    [4X[25Xgap>[125X [27XIsRange( a );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XConvertToRangeRep( a );;  a;[127X[104X
+    [4X[28X[ -2 .. 5 ][128X[104X
+    [4X[25Xgap>[125X [27Xa[1]:= 0;; IsRange( a );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  this  change  of representation does [13Xnot[113X change the value of the
+  list  [10Xa[110X. The list [10Xa[110X still behaves in any context in the same way as it would
+  have in the long representation.[133X
+  
+  
+  [1X3.6 [33X[0;0YFor and While Loops[133X[101X
+  
+  [33X[0;0YGiven  a list [10Xpp[110X of permutations we can form their product by means of a [9Xfor[109X
+  loop instead of writing down the product explicitly.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xpp:= [ (1,3,2,6,8)(4,5,9), (1,6)(2,7,8), (1,5,7)(2,3,8,6),[127X[104X
+    [4X[25X>[125X [27X          (1,8,9)(2,3,5,6,4), (1,9,8,6,3,4,7,2)];;[127X[104X
+    [4X[25Xgap>[125X [27Xprod:= ();[127X[104X
+    [4X[28X()[128X[104X
+    [4X[25Xgap>[125X [27Xfor p in pp do[127X[104X
+    [4X[25X>[125X [27X      prod:= prod*p;[127X[104X
+    [4X[25X>[125X [27X   od;[127X[104X
+    [4X[25Xgap>[125X [27Xprod;[127X[104X
+    [4X[28X(1,8,4,2,3,6,5,9)[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YFirst  a  new  variable  [10Xprod[110X is initialized to the identity permutation [10X()[110X.
+  Then  the loop variable [10Xp[110X takes as its value one permutation after the other
+  from  the list [10Xpp[110X and is multiplied with the present value of [10Xprod[110X resulting
+  in a new value which is then assigned to [10Xprod[110X.[133X
+  
+  [33X[0;0YThe [9Xfor[109X loop has the following syntax[133X
+  
+  [33X[0;0Y[9Xfor[109X [3Xvar[103X [9Xin[109X [3Xlist[103X [9Xdo[109X [3Xstatements[103X [9Xod[109X[10X;[110X[133X
+  
+  [33X[0;0YThe effect of the [9Xfor[109X loop is to execute the [3Xstatements[103X for every element of
+  the [3Xlist[103X. A [9Xfor[109X loop is a statement and therefore terminated by a semicolon.
+  The list of [3Xstatements[103X is enclosed by the keywords [9Xdo[109X and [9Xod[109X (reverse [9Xdo[109X). A
+  [9Xfor[109X  loop returns no value. Therefore we had to ask explicitly for the value
+  of [10Xprod[110X in the preceding example.[133X
+  
+  [33X[0;0YThe [9Xfor[109X loop can loop over any kind of list, even a list with holes. In many
+  programming languages the [9Xfor[109X loop has the form[133X
+  
+  [33X[0;0Y[10Xfor [3Xvar[103X[10X from [3Xfirst[103X[10X to [3Xlast[103X[10X do [3Xstatements[103X[10X od;[110X[133X
+  
+  [33X[0;0YIn  [5XGAP[105X  this  is  merely  a special case of the general [9Xfor[109X loop as defined
+  above where the [3Xlist[103X in the loop body is a range (see [14X3.5[114X):[133X
+  
+  [33X[0;0Y[9Xfor[109X [3Xvar[103X [9Xin[109X [10X[[3Xfirst[103X[10X..[3Xlast[103X[10X][110X [9Xdo[109X [3Xstatements[103X [9Xod[109X[10X;[110X[133X
+  
+  [33X[0;0YYou  can  for instance loop over a range to compute the factorial [22X15![122X of the
+  number [22X15[122X in the following way.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xff:= 1;[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27Xfor i in [1..15] do[127X[104X
+    [4X[25X>[125X [27X      ff:= ff * i;[127X[104X
+    [4X[25X>[125X [27X   od;[127X[104X
+    [4X[25Xgap>[125X [27Xff;[127X[104X
+    [4X[28X1307674368000[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe [9Xwhile[109X loop has the following syntax[133X
+  
+  [33X[0;0Y[9Xwhile[109X [3Xcondition[103X [9Xdo[109X [3Xstatements[103X [9Xod[109X[10X;[110X[133X
+  
+  [33X[0;0YThe  [9Xwhile[109X loop loops over the [3Xstatements[103X as long as the [3Xcondition[103X evaluates
+  to  [9Xtrue[109X.  Like  the [9Xfor[109X loop the [9Xwhile[109X loop is terminated by the keyword [9Xod[109X
+  followed by a semicolon.[133X
+  
+  [33X[0;0YWe  can use our list [10Xprimes[110X to perform a very simple factorization. We begin
+  by  initializing  a  list [10Xfactors[110X to the empty list. In this list we want to
+  collect  the  prime  factors of the number 1333. Remember that a list has to
+  exist  before  any  values can be assigned to positions of the list. Then we
+  will  loop  over  the list [10Xprimes[110X and test for each prime whether it divides
+  the  number.  If  it does we will divide the number by that prime, add it to
+  the list [10Xfactors[110X and continue.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xn:= 1333;;[127X[104X
+    [4X[25Xgap>[125X [27Xfactors:= [];;[127X[104X
+    [4X[25Xgap>[125X [27Xfor p in primes do[127X[104X
+    [4X[25X>[125X [27X      while n mod p = 0 do[127X[104X
+    [4X[25X>[125X [27X         n:= n/p;[127X[104X
+    [4X[25X>[125X [27X         Add(factors, p);[127X[104X
+    [4X[25X>[125X [27X      od;[127X[104X
+    [4X[25X>[125X [27X   od;[127X[104X
+    [4X[25Xgap>[125X [27Xfactors;[127X[104X
+    [4X[28X[ 31, 43 ][128X[104X
+    [4X[25Xgap>[125X [27Xn;[127X[104X
+    [4X[28X1[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAs  [10Xn[110X  now  has  the  value  1 all prime factors of 1333 have been found and
+  [10Xfactors[110X  contains  a  complete  factorization of 1333. This can of course be
+  verified by multiplying 31 and 43.[133X
+  
+  [33X[0;0YThis  loop  may  be  applied  to  arbitrary  numbers  in order to find prime
+  factors.  But  as  [10Xprimes[110X is not a complete list of all primes this loop may
+  fail  to  find all prime factors of a number greater than 2000, say. You can
+  try to improve it in such a way that new primes are added to the list [10Xprimes[110X
+  if needed.[133X
+  
+  [33X[0;0YYou  have already seen that list objects may be changed. This of course also
+  holds  for the list in a loop body. In most cases you have to be careful not
+  to  change  this  list, but there are situations where this is quite useful.
+  The following example shows a quick way to determine the primes smaller than
+  1000  by  a  sieve  method.  Here we will make use of the function [10XUnbind[110X to
+  delete entries from a list, and the [10Xif[110X statement covered in [14X4.2[114X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xprimes:= [];;[127X[104X
+    [4X[25Xgap>[125X [27Xnumbers:= [2..1000];;[127X[104X
+    [4X[25Xgap>[125X [27Xfor p in numbers do[127X[104X
+    [4X[25X>[125X [27X      Add(primes, p);[127X[104X
+    [4X[25X>[125X [27X      for n in numbers do[127X[104X
+    [4X[25X>[125X [27X         if n mod p = 0 then[127X[104X
+    [4X[25X>[125X [27X            Unbind(numbers[n-1]);[127X[104X
+    [4X[25X>[125X [27X         fi;[127X[104X
+    [4X[25X>[125X [27X      od;[127X[104X
+    [4X[25X>[125X [27X   od;[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  inner  loop  removes all entries from [10Xnumbers[110X that are divisible by the
+  last detected prime [10Xp[110X. This is done by the function [10XUnbind[110X which deletes the
+  binding  of the list position [10Xnumbers[n-1][110X to the value [10Xn[110X so that afterwards
+  [10Xnumbers[n-1][110X  no  longer has an assigned value. The next element encountered
+  in [10Xnumbers[110X by the outer loop necessarily is the next prime.[133X
+  
+  [33X[0;0YIn  a  similar  way it is possible to enlarge the list which is looped over.
+  This  yields a nice and short orbit algorithm for the action of a group, for
+  example.[133X
+  
+  [33X[0;0YMore  about  [9Xfor[109X  and  [9Xwhile[109X  loops can be found in the sections [14X'Reference:
+  While'[114X and [14X'Reference: For'[114X.[133X
+  
+  
+  [1X3.7 [33X[0;0YList Operations[133X[101X
+  
+  [33X[0;0YThere  is  a more comfortable way than that given in the previous section to
+  compute the product of a list of numbers or permutations.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XProduct([1..15]);[127X[104X
+    [4X[28X1307674368000[128X[104X
+    [4X[25Xgap>[125X [27XProduct(pp);[127X[104X
+    [4X[28X(1,8,4,2,3,6,5,9)[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  function  [2XProduct[102X ([14XReference: Product[114X) takes a list as its argument and
+  computes  the product of the elements of the list. This is possible whenever
+  a  multiplication  of  the  elements  of  the  list  is  defined. So [2XProduct[102X
+  ([14XReference: Product[114X) executes a loop over all elements of the list.[133X
+  
+  [33X[0;0YThere  are  other  often  used  loops available as functions. Guess what the
+  function  [2XSum[102X  ([14XReference: Sum[114X) does. The function [2XList[102X ([14XReference: list and
+  non-list  difference[114X)  may  take  a list and a function as its arguments. It
+  will  then  apply  the  function  to each element of the list and return the
+  corresponding  list  of results. A list of cubes is produced as follows with
+  the function [10Xcubed[110X from Section [14X4[114X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xcubed:= x -> x^3;;[127X[104X
+    [4X[25Xgap>[125X [27XList([2..10], cubed);[127X[104X
+    [4X[28X[ 8, 27, 64, 125, 216, 343, 512, 729, 1000 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YTo  add  all these cubes we might apply the function [2XSum[102X ([14XReference: Sum[114X) to
+  the last list. But we may as well give the function [10Xcubed[110X to [2XSum[102X ([14XReference:
+  Sum[114X) as an additional argument.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSum(last) = Sum([2..10], cubed);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  primes  less  than  30  can  be  retrieved  out of the list [10Xprimes[110X from
+  Section [14X3.1[114X  by  the  function [2XFiltered[102X ([14XReference: Filtered[114X). This function
+  takes  the  list  [10Xprimes[110X and a property as its arguments and will return the
+  list  of  those elements of [10Xprimes[110X which have this property. Such a property
+  will  be  represented  by  a  function that returns a boolean value. In this
+  example  the  property  of  being  less  than  30  can be represented by the
+  function  [10Xx  ->  x < 30[110X since [10Xx < 30[110X will evaluate to [9Xtrue[109X for values [10Xx[110X less
+  than 30 and to [9Xfalse[109X otherwise.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XFiltered(primes, x -> x < 30);[127X[104X
+    [4X[28X[ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe  have  already mentioned the operator [10X{ }[110X that forms sublists. It takes a
+  list  of positions as its argument and will return the list of elements from
+  the original list corresponding to these positions.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xprimes{ [1 .. 10] };[127X[104X
+    [4X[28X[ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YFinally  we  mention  the  function  [2XForAll[102X  ([14XReference: ForAll[114X) that checks
+  whether  a  property  holds  for  all  elements  of  a list. It takes as its
+  arguments  a  list  and  a  function  that  returns  a boolean value. [2XForAll[102X
+  ([14XReference:  ForAll[114X)  checks  whether  the  function  returns  [9Xtrue[109X  for all
+  elements of the list.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xlist:= [ 1, 2, 3, 4 ];;[127X[104X
+    [4X[25Xgap>[125X [27XForAll( list, x -> x > 0 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XForAll( list, x -> x in primes );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YYou will find more predefined [9Xfor[109X loops in chapter [14X'Reference: Lists'[114X.[133X
+  
+  
+  [1X3.8 [33X[0;0YVectors and Matrices[133X[101X
+  
+  [33X[0;0YThis  section  describes  how  [5XGAP[105X  uses  lists to represent row vectors and
+  matrices.  A  [13Xrow  vector[113X is a dense list of elements from a common field. A
+  [13Xmatrix[113X  is  a  dense  list  of  row vectors over a common field and of equal
+  length.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xv:= [3, 6, 2, 5/2];;  IsRowVector(v);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YRow  vectors  may  be  added  and  multiplied  by  scalars from their field.
+  Multiplication  of  row  vectors  of  equal  length  results in their scalar
+  product.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X2 * v;  v * 1/3;[127X[104X
+    [4X[28X[ 6, 12, 4, 5 ][128X[104X
+    [4X[28X[ 1, 2, 2/3, 5/6 ][128X[104X
+    [4X[25Xgap>[125X [27Xv * v;   # the scalar product of `v' with itself[127X[104X
+    [4X[28X221/4[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that the expression [10Xv * 1/3[110X is actually evaluated by first multiplying
+  [10Xv[110X  by  1  (which  yields again [10Xv[110X) and by then dividing by 3. This is also an
+  allowed scalar operation. The expression [10Xv/3[110X would result in the same value.[133X
+  
+  [33X[0;0YSuch  arithmetical  operations  (if the results are again vectors) result in
+  [13Xmutable[113X  vectors  except  if  the  operation is binary and both operands are
+  immutable; thus the vectors shown in the examples above are all mutable.[133X
+  
+  [33X[0;0YSo  if  you want to produce a mutable list with 100 entries equal to 25, you
+  can  simply  say  [10X25  +  0 * [ 1 .. 100 ][110X. Note that ranges are also vectors
+  (over the rationals), and that [10X[ 1 .. 100 ][110X is mutable.[133X
+  
+  [33X[0;0YA matrix is a dense list of row vectors of equal length.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm:= [[1,-1, 1],[127X[104X
+    [4X[25X>[125X [27X        [2, 0,-1],[127X[104X
+    [4X[25X>[125X [27X        [1, 1, 1]];[127X[104X
+    [4X[28X[ [ 1, -1, 1 ], [ 2, 0, -1 ], [ 1, 1, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xm[2][1];[127X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YSyntactically a matrix is a list of lists. So the number 2 in the second row
+  and  the first column of the matrix [10Xm[110X is referred to as the first element of
+  the second element of the list [10Xm[110X via [10Xm[2][1][110X.[133X
+  
+  [33X[0;0YA  matrix  may be multiplied by scalars, row vectors and other matrices. (If
+  the  row  vectors and matrices involved in such a multiplication do not have
+  suitable  dimensions  then  the [21Xmissing[121X entries are treated as zeros, so the
+  results may look unexpectedly in such cases.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X[1, 0, 0] * m;[127X[104X
+    [4X[28X[ 1, -1, 1 ][128X[104X
+    [4X[25Xgap>[125X [27X[1, 0, 0, 2] * m;[127X[104X
+    [4X[28X[ 1, -1, 1 ][128X[104X
+    [4X[25Xgap>[125X [27Xm * [1, 0, 0];[127X[104X
+    [4X[28X[ 1, 2, 1 ][128X[104X
+    [4X[25Xgap>[125X [27Xm * [1, 0, 0, 2];[127X[104X
+    [4X[28X[ 1, 2, 1 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  multiplication  of  a  row vector with a matrix will result in a
+  linear  combination  of  the  rows  of the matrix, while multiplication of a
+  matrix  with  a row vector results in a linear combination of the columns of
+  the  matrix.  In  the  latter  case the row vector is considered as a column
+  vector.[133X
+  
+  [33X[0;0YA  vector  or  matrix of integers can also be multiplied with a finite field
+  scalar  and  vice  versa.  Such  products result in a matrix over the finite
+  field  with  the  integers  mapped into the finite field in the obvious way.
+  Finite  field matrices are nicer to read when they are [10XDisplay[110Xed rather than
+  [10XPrint[110Xed.  (Here we write [10XZ(q)[110X to denote a primitive root of the finite field
+  with [10Xq[110X elements.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDisplay( m * One( GF(5) ) );[127X[104X
+    [4X[28X 1 4 1[128X[104X
+    [4X[28X 2 . 4[128X[104X
+    [4X[28X 1 1 1[128X[104X
+    [4X[25Xgap>[125X [27XDisplay( m^2 * Z(2) + m * Z(4) );[127X[104X
+    [4X[28Xz = Z(4)[128X[104X
+    [4X[28X z^1 z^1 z^2[128X[104X
+    [4X[28X   1   1 z^2[128X[104X
+    [4X[28X z^1 z^1 z^2[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YSubmatrices can easily be extracted using the expression [10X[3Xmat[103X[10X{[3Xrows[103X[10X}{[3Xcolumns[103X[10X}[110X.
+  They  can  also be assigned to, provided the big matrix is mutable (which it
+  is not if it is the result of an arithmetical operation, see above).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xsm := m{ [ 1, 2 ] }{ [ 2, 3 ] };[127X[104X
+    [4X[28X[ [ -1, 1 ], [ 0, -1 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xsm{ [ 1, 2 ] }{ [2] } := [[-2],[0]];;  sm;[127X[104X
+    [4X[28X[ [ -1, -2 ], [ 0, 0 ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  first  curly brackets contain the selection of rows, the second that of
+  columns.[133X
+  
+  [33X[0;0YMatrices  appear  not  only  in  linear algebra, but also as group elements,
+  provided  they  are  invertible.  Here  we  have  the  opportunity to meet a
+  group-theoretical  function, namely [2XOrder[102X ([14XReference: Order[114X), which computes
+  the order of a group element.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XOrder( m * One( GF(5) ) );[127X[104X
+    [4X[28X8[128X[104X
+    [4X[25Xgap>[125X [27XOrder( m );[127X[104X
+    [4X[28Xinfinity[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YFor  matrices  whose  entries are more complex objects, for example rational
+  functions, [5XGAP[105X's [2XOrder[102X ([14XReference: Order[114X) methods might not be able to prove
+  that the matrix has infinite order, and one gets the following warning.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X#I  Order: warning, order of <mat> might be infinite[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIn such a case, if the order of the matrix really is infinite, you will have
+  to  interrupt [5XGAP[105X by pressing [10X[3Xctl[103X[10X-C[110X (followed by [10X[3Xctl[103X[10X-D[110X or [10Xquit;[110X to leave the
+  break loop).[133X
+  
+  [33X[0;0YTo  prove that the order of [10Xm[110X is infinite, we also could look at the minimal
+  polynomial of [10Xm[110X over the rationals.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:= MinimalPolynomial( Rationals, m );;  Factors( f );[127X[104X
+    [4X[28X[ x_1-2, x_1^2+3 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[2XFactors[102X  ([14XReference:  Factors[114X)  returns a list of irreducible factors of the
+  polynomial  [10Xf[110X.  The  first  irreducible  factor  [22XX-2[122X  reveals  that  2 is an
+  eigenvalue of [10Xm[110X, hence its order cannot be finite.[133X
+  
+  
+  [1X3.9 [33X[0;0YPlain Records[133X[101X
+  
+  [33X[0;0YA  record  provides  another way to build new data structures. Like a list a
+  record  contains  subobjects. In a record the elements, the so-called [13Xrecord
+  components[113X, are not indexed by numbers but by names.[133X
+  
+  [33X[0;0YIn  this  section you will see how to define and how to use records. Records
+  are  changed  by  assignments  to  record  components or by unbinding record
+  components.[133X
+  
+  [33X[0;0YInitially  a  record  is defined as a comma separated list of assignments to
+  its record components.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xdate:= rec(year:= 1997,[127X[104X
+    [4X[25X>[125X [27X              month:= "Jul",[127X[104X
+    [4X[25X>[125X [27X              day:= 14);[127X[104X
+    [4X[28Xrec( day := 14, month := "Jul", year := 1997 )[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  value  of  a  record component is accessible by the record name and the
+  record component name separated by one dot as the record component selector.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xdate.year;[127X[104X
+    [4X[28X1997[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAssignments  to  new  record  components  are  possible in the same way. The
+  record is automatically resized to hold the new component.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xdate.time:= rec(hour:= 19, minute:= 23, second:= 12);[127X[104X
+    [4X[28Xrec( hour := 19, minute := 23, second := 12 )[128X[104X
+    [4X[25Xgap>[125X [27Xdate;[127X[104X
+    [4X[28Xrec( day := 14, month := "Jul",[128X[104X
+    [4X[28X  time := rec( hour := 19, minute := 23, second := 12 ), year := 1997 )[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YRecords are objects that may be changed. An assignment to a record component
+  changes  the original object. The remarks made in Sections [14X3.2[114X and [14X3.3[114X about
+  identity and mutability of lists are also true for records.[133X
+  
+  [33X[0;0YSometimes it is interesting to know which components of a certain record are
+  bound.  This information is available from the function [2XRecNames[102X ([14XReference:
+  RecNames[114X),  which takes a record as its argument and returns a list of names
+  of all bound components of this record as a list of strings.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRecNames(date);[127X[104X
+    [4X[28X[ "time", "year", "month", "day" ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNow return to Sections [14X3.2[114X and [14X3.3[114X and find out what these sections mean for
+  records.[133X
+  
+  
+  [1X3.10 [33X[0;0YFurther Information about Lists[133X[101X
+  
+  [33X[0;0Y(The following cross-references point to the [5XGAP[105X Reference Manual.)[133X
+  
+  [33X[0;0YYou  will  find  more  about  lists, sets, and ranges in Chapter [14X'Reference:
+  Lists'[114X,  in  particular  more  about  identical lists in Section [14X'Reference:
+  Identical  Lists'[114X.  A  more  detailed description of strings is contained in
+  Chapter [14X'Reference:   Strings  and  Characters'[114X.  Fields  are  described  in
+  Chapter [14X'Reference: Fields and Division Rings'[114X, some known fields in [5XGAP[105X are
+  described  in  Chapters [14X'Reference:  Rational  Numbers'[114X, [14X'Reference: Abelian
+  Number Fields'[114X, and [14X'Reference: Finite Fields'[114X. Row vectors and matrices are
+  described    in   more   detail   in   Chapters [14X'Reference:   Row   Vectors'[114X
+  and [14X'Reference:  Matrices'[114X;  note  that [5XGAP[105X supports also linear algebra for
+  objects  which  are  [13Xnot[113X  lists,  see  Chapter [14X'Reference: Vector and Matrix
+  Objects'[114X. Vector spaces are described in Chapter [14X'Reference: Vector Spaces'[114X,
+  further  matrix  related  structures  are  described in Chapters [14X'Reference:
+  Matrix Groups'[114X, [14X'Reference: Algebras'[114X, and [14X'Reference: Lie Algebras'[114X.[133X
+  
+  [33X[0;0YYou will find more list operations in Chapter [14X'Reference: Lists'[114X.[133X
+  
+  [33X[0;0YRecords   and   functions   for   records   are   described   in  detail  in
+  Chapter [14X'Reference: Records'[114X.[133X
+  

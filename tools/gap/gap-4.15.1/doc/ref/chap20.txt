@@ -1,0 +1,194 @@
+  
+  [1X20 [33X[0;0YBooleans[133X[101X
+  
+  [33X[0;0YThe  two  main [13Xboolean[113X values are [9Xtrue[109X and [9Xfalse[109X. They stand for the [13Xlogical[113X
+  values  of  the  same  name.  They  appear  as  values  of the conditions in
+  [9Xif[109X-statements  and [9Xwhile[109X-loops. Booleans are also important as return values
+  of  [13Xfilters[113X  (see [14X13.2[114X)  such as [2XIsFinite[102X ([14X30.4-2[114X) and [2XIsBool[102X ([14X20.1-1[114X). Note
+  that  it  is  a  convention that the name of a function that returns [9Xtrue[109X or
+  [9Xfalse[109X according to the outcome, starts with [10XIs[110X.[133X
+  
+  [33X[0;0YFor  technical  reasons,  also  the  value  [9Xfail[109X (see [14X20.2[114X) is regarded as a
+  boolean.[133X
+  
+  
+  [1X20.1 [33X[0;0YIsBool (Filter)[133X[101X
+  
+  [1X20.1-1 IsBool[101X
+  
+  [33X[1;0Y[29X[2XIsBool[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0Ytests whether [3Xobj[103X is [9Xtrue[109X, [9Xfalse[109X or [9Xfail[109X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsBool( true );  IsBool( false );  IsBool( 17 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X20.2 [33X[0;0YFail (Variable)[133X[101X
+  
+  [1X20.2-1 fail[101X
+  
+  [33X[1;0Y[29X[2Xfail[102X [32X global variable[133X
+  
+  [33X[0;0YThe value [9Xfail[109X is used to indicate situations when an operation could not be
+  performed  for  the  given  arguments, either because of shortcomings of the
+  arguments or because of restrictions in the implementation or computability.
+  So for example [2XPosition[102X ([14X21.16-1[114X) will return [9Xfail[109X if the point searched for
+  is not in the list.[133X
+  
+  [33X[0;0Y[9Xfail[109X  is  simply  an  object  that is different from every other object than
+  itself.[133X
+  
+  [33X[0;0YFor technical reasons, [9Xfail[109X is a boolean value. But note that [9Xfail[109X cannot be
+  used to form boolean expressions with [9Xand[109X, [9Xor[109X, and [9Xnot[109X (see [14X20.4[114X below), and
+  [9Xfail[109X cannot appear in boolean lists (see Chapter [14X22[114X).[133X
+  
+  
+  [1X20.3 [33X[0;0YComparisons of Booleans[133X[101X
+  
+  
+  [1X20.3-1 [33X[0;0YEquality and inequality of Booleans[133X[101X
+  
+  [33X[0;0Y[10X[3Xbool1[103X[10X = [3Xbool2[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xbool1[103X[10X <> [3Xbool2[103X[10X[110X[133X
+  
+  [33X[0;0YThe  equality  operator  [10X=[110X evaluates to [9Xtrue[109X if the two boolean values [3Xbool1[103X
+  and [3Xbool2[103X are equal, i.e., both are [9Xtrue[109X or both are [9Xfalse[109X or both [9Xfail[109X, and
+  [9Xfalse[109X  otherwise.  The  inequality  operator [10X<>[110X evaluates to [9Xtrue[109X if the two
+  boolean  values  [3Xbool1[103X,  [3Xbool2[103X  are  different,  and  [9Xfalse[109X  otherwise. This
+  operation  is  also  called  the  [13Xexclusive or[113X, because its value is [9Xtrue[109X if
+  exactly one of [3Xbool1[103X or [3Xbool2[103X is [9Xtrue[109X.[133X
+  
+  [33X[0;0YYou  can  compare boolean values with objects of other types. Of course they
+  are never equal.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtrue = false;[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xfalse = (true = fail);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xtrue <> 17;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X20.3-2 [33X[0;0YOrdering of Booleans[133X[101X
+  
+  [33X[0;0Y[3Xbool1[103X [10X<[110X [3Xbool2[103X[133X
+  
+  [33X[0;0YThe  ordering  of  boolean values is defined by [9Xtrue[109X [10X<[110X [9Xfalse[109X [10X<[110X [9Xfail[109X. For the
+  comparison of booleans with other [5XGAP[105X objects, see Section [14X4.13[114X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtrue < false;  fail >= false;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X20.4 [33X[0;0YOperations for Booleans[133X[101X
+  
+  [33X[0;0YThe following boolean operations are only applicable to [9Xtrue[109X and [9Xfalse[109X.[133X
+  
+  
+  [1X20.4-1 [33X[0;0YLogical disjunction[133X[101X
+  
+  [33X[0;0Y[3Xbool1[103X [9Xor[109X [3Xbool2[103X[133X
+  
+  [33X[0;0YThe logical operator [9Xor[109X evaluates to [9Xtrue[109X if at least one of the two boolean
+  operands [3Xbool1[103X and [3Xbool2[103X is [9Xtrue[109X, and to [9Xfalse[109X otherwise.[133X
+  
+  [33X[0;0Y[9Xor[109X first evaluates [3Xbool1[103X. If the value is neither [9Xtrue[109X nor [9Xfalse[109X an error is
+  signalled.  If  the  value  is [9Xtrue[109X, then [9Xor[109X returns [9Xtrue[109X [13Xwithout[113X evaluating
+  [3Xbool2[103X.  If  the value is [9Xfalse[109X, then [9Xor[109X evaluates [3Xbool2[103X. Again, if the value
+  is  neither  [9Xtrue[109X  nor [9Xfalse[109X an error is signalled. Otherwise [9Xor[109X returns the
+  value of [3Xbool2[103X. This [13Xshort-circuited[113X evaluation is important if the value of
+  [3Xbool1[103X  is  [9Xtrue[109X  and  evaluation  of  [3Xbool2[103X would take much time or cause an
+  error.[133X
+  
+  [33X[0;0Y[9Xor[109X  is  associative,  i.e.,  it is allowed to write [3Xb1[103X [9Xor[109X [3Xb2[103X [9Xor[109X [3Xb3[103X, which is
+  interpreted as ([3Xb1[103X [9Xor[109X [3Xb2[103X) [9Xor[109X [3Xb3[103X. [9Xor[109X has the lowest precedence of the logical
+  operators.  All  logical operators have lower precedence than the comparison
+  operators [10X=[110X, [10X<[110X, [9Xin[109X, etc.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtrue or false;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xfalse or false;[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xi := -1;; l := [1,2,3];;[127X[104X
+    [4X[25Xgap>[125X [27Xif i <= 0 or l[i] = false then     # this does not cause an error,[127X[104X
+    [4X[25X>[125X [27X   Print("aha\n"); fi;                # because `l[i]' is not evaluated[127X[104X
+    [4X[28Xaha[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X20.4-2 [33X[0;0YLogical conjunction[133X[101X
+  
+  [33X[0;0Y[3Xbool1[103X [9Xand[109X [3Xbool2[103X[133X
+  
+  [33X[0;0Y[3Xfil1[103X [9Xand[109X [3Xfil2[103X[133X
+  
+  [33X[0;0YThe  logical  operator [9Xand[109X evaluates to [9Xtrue[109X if both boolean operands [3Xbool1[103X,
+  [3Xbool2[103X are [9Xtrue[109X, and to [9Xfalse[109X otherwise.[133X
+  
+  [33X[0;0Y[9Xand[109X  first  evaluates [3Xbool1[103X. If the value is neither [9Xtrue[109X nor [9Xfalse[109X an error
+  is  signalled.  If  the  value  is  [9Xfalse[109X,  then  [9Xand[109X  returns [9Xfalse[109X [13Xwithout[113X
+  evaluating  [3Xbool2[103X. If the value is [9Xtrue[109X, then [9Xand[109X evaluates [3Xbool2[103X. Again, if
+  the  value  is  neither  [9Xtrue[109X nor [9Xfalse[109X an error is signalled. Otherwise [9Xand[109X
+  returns  the value of [3Xbool2[103X. This [13Xshort-circuited[113X evaluation is important if
+  the  value of [3Xbool1[103X is [9Xfalse[109X and evaluation of [3Xbool2[103X would take much time or
+  cause an error.[133X
+  
+  [33X[0;0Y[9Xand[109X  is associative, i.e., it is allowed to write [3Xb1[103X [9Xand[109X [3Xb2[103X [9Xand[109X [3Xb3[103X, which is
+  interpreted  as  ([3Xb1[103X  [9Xand[109X  [3Xb2[103X)  [9Xand[109X  [3Xb3[103X.  [9Xand[109X has higher precedence than the
+  logical  [9Xor[109X  operator,  but  lower  than the unary logical [9Xnot[109X operator. All
+  logical  operators have lower precedence than the comparison operators [10X=[110X, [10X<[110X,
+  [9Xin[109X, etc.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtrue and false;[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xtrue and true;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xfalse and 17;  # does not cause error, because 17 is never looked at[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[9Xand[109X can also be applied to filters. It returns a filter that when applied to
+  some argument [3Xx[103X, tests [3Xfil1[103X[22X(x)[122X [9Xand[109X [3Xfil2[103X[22X(x)[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xandfilt:= IsPosRat and IsInt;;[127X[104X
+    [4X[25Xgap>[125X [27Xandfilt( 17 );  andfilt( 1/2 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X20.4-3 [33X[0;0YLogical negation[133X[101X
+  
+  [33X[0;0Y[9Xnot[109X [3Xbool[103X[133X
+  
+  [33X[0;0YThe  logical  operator  [9Xnot[109X returns [9Xtrue[109X if the boolean value [3Xbool[103X is [9Xfalse[109X,
+  and  [9Xtrue[109X otherwise. An error is signalled if [3Xbool[103X does not evaluate to [9Xtrue[109X
+  or [9Xfalse[109X.[133X
+  
+  [33X[0;0Y[9Xnot[109X  has higher precedence than the other logical operators, [9Xor[109X and [9Xand[109X. All
+  logical  operators have lower precedence than the comparison operators [10X=[110X, [10X<[110X,
+  [9Xin[109X, etc.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtrue and false;[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xnot true;[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xnot false;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  

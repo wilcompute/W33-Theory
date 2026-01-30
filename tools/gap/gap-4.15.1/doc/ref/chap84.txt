@@ -1,0 +1,221 @@
+  
+  [1X84 [33X[0;0YInterface to the GAP Help System[133X[101X
+  
+  [33X[0;0YIn  this chapter we describe which information the help system needs about a
+  manual  book  and how to tell it this information. The code which implements
+  this interface can be found in [11Xlib/helpbase.gi[111X.[133X
+  
+  [33X[0;0YIf  you  are intending to use a documentation format that is already used by
+  some  other  help  book  you  probably don't need to know anything from this
+  chapter.  However,  if you want to create a new format and make it available
+  to [5XGAP[105X then hopefully you will find the necessary information here.[133X
+  
+  [33X[0;0YThe  basic  idea of the help system is as follows: One tells [5XGAP[105X a directory
+  which  contains  a  file  [11Xmanual.six[111X,  see [14X84.1[114X.  When the [5XGAP[105X help is asked
+  something  about  this book it reads in some basic information from the file
+  [11Xmanual.six[111X:  strings like section headers, function names, and index entries
+  to  be  searched by the online help; information about the available formats
+  of  this book like text, html, dvi, and pdf; the actual files containing the
+  documentation,  corresponding  section numbers, and page numbers: and so on.
+  See [14X84.2[114X for a description of the format of the [11Xmanual.six[111X file.[133X
+  
+  [33X[0;0YIt  turns  out  that  there  is  almost  no restriction on the format of the
+  [11Xmanual.six[111X  file,  except  that  it must provide a string, say [10X"myownformat"[110X
+  which  identifies  the  format of the help book. Then the basic actions on a
+  help  book are delegated by the help system to handler functions stored in a
+  record   [10XHELP_BOOK_HANDLER.myownformat[110X.   See [14X84.3[114X   for  information  which
+  functions  must be provided by the handler and what they are supposed to do.
+  The  main  work  to teach [5XGAP[105X to use a new document format is to write these
+  handler functions and to produce an appropriate [11Xmanual.six[111X file.[133X
+  
+  
+  [1X84.1 [33X[0;0YInstalling and Removing a Help Book[133X[101X
+  
+  [1X84.1-1 HELP_ADD_BOOK[101X
+  
+  [33X[1;0Y[29X[2XHELP_ADD_BOOK[102X( [3Xshort[103X, [3Xlong[103X, [3Xdir[103X ) [32X function[133X
+  
+  [33X[0;0YThis  command  tells  [5XGAP[105X  that  in  directory [3Xdir[103X (given as either a string
+  describing  the path relative to the [5XGAP[105X root directory [10XGAPInfo.RootPaths[1][110X
+  or  as  directory  object) contains the basic information about a help book.
+  The  string [3Xshort[103X is used as an identifying name for that book by the online
+  help.  The  string  [3Xlong[103X should be a short explanation of the content of the
+  book.  Both  strings  together  should  easily fit on a line, since they are
+  displayed with [10X?books[110X.[133X
+  
+  [33X[0;0YIt  is possible to reinstall a book with different strings [3Xshort[103X, [3Xlong[103X; (for
+  example,  documentation  of  a  not-loaded [5XGAP[105X package indicates this in the
+  string  [3Xshort[103X  and  if  you  later load the package, [5XGAP[105X quietly changes the
+  string [3Xshort[103X as it reinstalls its documentation).[133X
+  
+  [33X[0;0YThe  only  condition  necessary  to make the installation of a book [13Xvalid[113X is
+  that  the  directory  [3Xdir[103X  must  contain a file [11Xmanual.six[111X. The next section
+  explains how this file must look.[133X
+  
+  [1X84.1-2 HELP_REMOVE_BOOK[101X
+  
+  [33X[1;0Y[29X[2XHELP_REMOVE_BOOK[102X( [3Xshort[103X ) [32X function[133X
+  
+  [33X[0;0YThis  command tells [5XGAP[105X not to use the help book with identifying name [3Xshort[103X
+  any more. The book can be re-installed using [2XHELP_ADD_BOOK[102X ([14X84.1-1[114X).[133X
+  
+  
+  [1X84.2 [33X[0;0YThe manual.six File[133X[101X
+  
+  [33X[0;0YThe first non-empty line of [11Xmanual.six[111X should be of the form[133X
+  
+  [33X[0;0Y[10X#SIXFORMAT[110X [3Xmyownformat[103X[133X
+  
+  [33X[0;0Ywhere  [3Xmyownformat[103X  is an identifying string for this format. The reading of
+  the   (remainder   of   the)   file   is  then  delegated  to  the  function
+  [10XHELP_BOOK_HANDLER.[3Xmyownformat[103X[10X.ReadSix[110X  which  must  exist. Thus there are no
+  further  regulations  for the format of the [11Xmanual.six[111X file, other that what
+  you  yourself  impose. If such a line is missing then it is assumed that the
+  [11Xmanual.six[111X  file  complies with the [11Xgapmacro.tex[111X documentation format, which
+  internally  is  referred to as the [10Xdefault[110X format for historical reasons. In
+  that      case      reading      the      file      is      delegated     to
+  [10XHELP_BOOK_HANDLER.default.ReadSix[110X.[133X
+  
+  [33X[0;0YSection      [14X84.3[114X      explains      how     the     return     value     of
+  [10XHELP_BOOK_HANDLER.[3Xmyownformat[103X[10X.ReadSix[110X  should  look  like  and which further
+  function should be contained in [10XHELP_BOOK_HANDLER.[3Xmyownformat[103X[10X[110X.[133X
+  
+  
+  [1X84.3 [33X[0;0YThe Help Book Handler[133X[101X
+  
+  [33X[0;0YFor   each   document   format   [3Xmyownformat[103X   there   must   be   a  record
+  [10XHELP_BOOK_HANDLER.[3Xmyownformat[103X[10X[110X  of  functions  with  the  following names and
+  functionality.[133X
+  
+  [33X[0;0YAn  implementation example of such a set of handler functions is the [10Xdefault[110X
+  format,  which  is  the  format name used for the [11Xgapmacro.tex[111X documentation
+  format, and this is contained in the file [11Xlib/helpdef.gi[111X.[133X
+  
+  [33X[0;0YThe  package  [5XGAPDoc[105X  (see  Chapter [14X'GAPDoc: Introduction and Example'[114X) also
+  defines  a  format  (as  it  should) which is called: [10XGapDocGAP[110X (the case [13Xis[113X
+  significant).[133X
+  
+  [33X[0;0YAs you can see by the above two examples, the name for a document format can
+  be anything, but it should be in some way meaningful.[133X
+  
+  [8X [10XReadSix( [3Xstream[103X[8X[10X )[110X[8X[108X
+        [33X[0;6YFor an input text stream [3Xstream[103X to a [11Xmanual.six[111X file, this must return
+        a  record  [3Xinfo[103X  which  has  at  least  the  following two components:
+        [10Xbookname[110X  which  is  the  short identifying name of the help book, and
+        [10Xentries[110X.  Here  [3Xinfo[103X[10X.entries[110X  must be a list with one entry per search
+        string  (which can be a section header, function name, index entry, or
+        whatever  seems  sensible to be searched for matching a help query). A
+        [13Xmatch[113X  for the [5XGAP[105X help is a pair ([3Xinfo[103X, [3Xi[103X) where [3Xi[103X refers to an index
+        for  the  list [3Xinfo[103X[10X.entries[110X and this corresponds to a certain position
+        in the document. There is one further regulation for the format of the
+        entries  of  [3Xinfo[103X[10X.entries[110X. They must be lists and the first element of
+        such  a list must be a string which is printed by [5XGAP[105X for example when
+        several matches are found for a query (so it should essentially be the
+        string  which  is  searched  for the match, except that it may contain
+        upper  and  lower  case  letters  or  some markup). There may be other
+        components  in [3Xinfo[103X which are needed by the functions below, but their
+        names and formats are not prescribed. The [3Xstream[103X argument is typically
+        generated using [2XInputTextFile[102X ([14X10.5-1[114X), e.g.[133X
+  
+  [4X      [32X  Example  [32X[104X
+          [4X[25Xgap>[125X [27Xdirs := DirectoriesLibrary( "doc/ref" );;[127X[104X
+          [4X[25Xgap>[125X [27Xfile := Filename( dirs, "manual.six" );;[127X[104X
+          [4X[25Xgap>[125X [27Xstream := InputTextFile( file );;[127X[104X
+        [4X[32X[104X
+  
+  [8X[10XShowChapters( [3Xinfo[103X[8X[10X )[110X[8X [108X
+        [33X[0;6YThis  must  return  a text string or list of text lines which contains
+        the chapter headers of the book [3Xinfo[103X[10X.bookname[110X.[133X
+  
+  [8X[10XShowSection( [3Xinfo[103X[8X[10X )[110X[8X [108X
+        [33X[0;6YThis  must  return  a text string or list of text lines which contains
+        the section (and chapter) headers of the book [3Xinfo[103X[10X.bookname[110X.[133X
+  
+  [8X[10XSearchMatches( [3Xinfo[103X[8X[10X, [3Xtopic[103X[8X[10X, [3Xfrombegin[103X[8X[10X )[110X[8X [108X
+        [33X[0;6YThis  function  must  return  a  list  of  indices of [3Xinfo[103X[10X.entries[110X for
+        entries which match the search string [3Xtopic[103X. If [3Xfrombegin[103X is [9Xtrue[109X then
+        those  parts  of  [3Xtopic[103X  which  are  separated  by  spaces  should  be
+        considered  as  the  beginnings  of  words  to decide the matching. It
+        [3Xfrombegin[103X is [9Xfalse[109X, a substring search should be performed. The string
+        [3Xtopic[103X  can  be  assumed to be already normalized (transformed to lower
+        case, and whitespace normalized). The function must return a list with
+        two  entries  [10X[exact,  match][110X  where  [10Xexact[110X is the list of indices for
+        exact matches and [10Xmatch[110X a list of indices of the remaining matches.[133X
+  
+  [8X[10XMatchPrevChap( [3Xinfo[103X[8X[10X, [3Xi[103X[8X[10X )[110X[8X [108X
+        [33X[0;6YThis  should  return the match [[3Xinfo[103X, [10Xj[110X] which points to the beginning
+        of  the  chapter  containing  match  [[3Xinfo[103X,  [3Xi[103X],  respectively  to the
+        beginning  of  the  previous  chapter  if  [[3Xinfo[103X,  [3Xi[103X]  is  already the
+        beginning of a chapter. (Corresponds to [10X?<<[110X.)[133X
+  
+  [8X[10XMatchNextChap( [3Xinfo[103X[8X[10X, [3Xi[103X[8X[10X )[110X[8X [108X
+        [33X[0;6YLike  the previous function except that it should return the match for
+        the beginning of the next chapter. (Corresponds to [10X?>>[110X.)[133X
+  
+  [8X[10XMatchPrev( [3Xinfo[103X[8X[10X, [3Xi[103X[8X[10X )[110X[8X [108X
+        [33X[0;6YThis should return the previous section (or appropriate portion of the
+        document). (Corresponds to [10X?<[110X.)[133X
+  
+  [8X[10XMatchNext( [3Xinfo[103X[8X[10X, [3Xi[103X[8X[10X )[110X[8X [108X
+        [33X[0;6YLike  the  previous  function  except  that  it should return the next
+        section (or appropriate portion of the document). (Corresponds to [10X?>[110X.)[133X
+  
+  [8X[10XHelpData( [3Xinfo[103X[8X[10X, [3Xi[103X[8X[10X, [3Xtype[103X[8X[10X )[110X[8X [108X
+        [33X[0;6YThis returns for match [[3Xinfo[103X, [3Xi[103X] some data whose format depends on the
+        string  [3Xtype[103X,  or  [9Xfail[109X if these data are not available. The values of
+        [3Xtype[103X  which  currently  must  be  handled and the corresponding result
+        format are described in the list below.[133X
+  
+  [8X[10XSubsectionNumber( [3Xinfo[103X[8X[10X, [3Xi[103X[8X[10X )[110X[8X [108X
+        [33X[0;6YThis  returns some [5XGAP[105X object that identifies the position in the book
+        where  the  display  of  this  entry is started. This can be useful to
+        detect if several help book entries actually point to the same place.[133X
+  
+  [33X[0;0YThe   [10XHELP_BOOK_HANDLER.[3Xmyownformat[103X[10X.HelpData[110X  function  must  recognize  the
+  following values of the [3Xtype[103X argument.[133X
+  
+  [8X [10X"text"[110X[8X [108X
+        [33X[0;6YThis  must return a corresponding text string in a format which can be
+        fed into the [10XPager[110X, see [2XPager[102X ([14X2.4-1[114X).[133X
+  
+  [8X[10X"url"[110X[8X [108X
+        [33X[0;6YIf  the  help book is available in HTML format this must return an URL
+        as  a  string (Probably a [10Xfile://[110X URL containing a label for the exact
+        start position in that file). Otherwise it returns [9Xfail[109X.[133X
+  
+  [8X[10X"dvi"[110X[8X [108X
+        [33X[0;6YIf  the help book is available in dvi-format this must return a record
+        of  form  [10Xrec(  file  :=  [3Xfilename[103X[10X, page := [3Xpagenumber[103X[10X )[110X. Otherwise it
+        returns [9Xfail[109X.[133X
+  
+  [8X[10X"pdf"[110X[8X [108X
+        [33X[0;6YSame as case [10X"dvi"[110X, but for the corresponding pdf-file.[133X
+  
+  [8X[10X"secnr"[110X[8X [108X
+        [33X[0;6YThis  must  return  a  pair  like  [10X[[3,3,1],  "3.3.1"][110X which gives the
+        section  number  as  chapter number, section number, subsection number
+        triple  and  a  corresponding string (a chapter itself is encoded like
+        [10X[[4,0,0], "4."][110X). Useful for cross-referencing between help books.[133X
+  
+  
+  [1X84.4 [33X[0;0YIntroducing new Viewer for the Online Help[133X[101X
+  
+  [33X[0;0YTo  introduce a new viewer for the online help, one should extend the global
+  record [2XHELP_VIEWER_INFO[102X ([14X84.4-1[114X), the structure of which is explained below.[133X
+  
+  [1X84.4-1 HELP_VIEWER_INFO[101X
+  
+  [33X[1;0Y[29X[2XHELP_VIEWER_INFO[102X [32X global variable[133X
+  
+  [33X[0;0YThe  record  [2XHELP_VIEWER_INFO[102X  contains  one component for each help viewer.
+  Each such component is a record with two components: [10X.type[110X and [10X.show[110X.[133X
+  
+  [33X[0;0YThe  component  [10X.type[110X  refers to one of the [10Xtype[110Xs recognized by the [10XHelpData[110X
+  handler function explained in the previous section (currently one of [10X"text"[110X,
+  [10X"url"[110X, [10X"dvi"[110X, or [10X"pdf"[110X).[133X
+  
+  [33X[0;0YThe  component  [10X.show[110X  is  a  function  which  gets as input the result of a
+  corresponding  [10XHelpData[110X  handler call, if it was not [9Xfail[109X. This function has
+  to perform the actual display of the data. (E.g., by calling a function like
+  [2XPager[102X ([14X2.4-1[114X) or by starting up an external viewer program.)[133X
+  

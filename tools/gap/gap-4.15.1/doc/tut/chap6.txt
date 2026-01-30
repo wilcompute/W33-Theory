@@ -1,0 +1,547 @@
+  
+  [1X6 [33X[0;0YVector Spaces and Algebras[133X[101X
+  
+  [33X[0;0YThis  chapter  contains  an  introduction into vector spaces and algebras in
+  [5XGAP[105X.[133X
+  
+  
+  [1X6.1 [33X[0;0YVector Spaces[133X[101X
+  
+  [33X[0;0YA  [13Xvector  space[113X  [22XV[122X  over  a  field [22XF[122X is an (abelian) additive group that is
+  closed under scalar multiplication by elements in [22XF[122X, such that[133X
+  
+  [31X1[131X   [33X[0;6Y[22X1v=v[122X,[133X
+  
+  [31X2[131X   [33X[0;6Y[22Xa(bv)=(ab)v[122X,[133X
+  
+  [31X3[131X   [33X[0;6Y[22Xa(v+w)=av+aw[122X, and[133X
+  
+  [31X4[131X   [33X[0;6Y[22X(a+b)v=av+bv[122X,[133X
+  
+  [33X[0;0Yfor  all  [22Xa,b  ∈  F[122X  and  all  [22Xv,w  ∈ V[122X. In [5XGAP[105X, only those domains that are
+  constructed  as  vector spaces are regarded as vector spaces. In particular,
+  an  additive  group  that does not know about an acting domain of scalars is
+  not regarded as a vector space in [5XGAP[105X.[133X
+  
+  [33X[0;0YProbably  the  most  common [22XF[122X-vector spaces in [5XGAP[105X are so-called [13Xrow spaces[113X.
+  They  consist of row vectors, that is, lists whose elements lie in [22XF[122X. In the
+  following  example  we compute the vector space spanned by the row vectors [10X[
+  1, 1, 1 ][110X and [10X[ 1, 0, 2 ][110X over the rationals.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XF:= Rationals;;[127X[104X
+    [4X[25Xgap>[125X [27XV:= VectorSpace( F, [ [ 1, 1, 1 ], [ 1, 0, 2 ] ] );[127X[104X
+    [4X[28X<vector space over Rationals, with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27X[ 2, 1, 3 ] in V;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe full row space [22XF^n[122X is created by commands like:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XF:= GF( 7 );;[127X[104X
+    [4X[25Xgap>[125X [27XV:= F^3;   # The full row space over F of dimension 3.[127X[104X
+    [4X[28X( GF(7)^3 )[128X[104X
+    [4X[25Xgap>[125X [27X[ 1, 2, 3 ] * One( F ) in V;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIn  the  same  way we can also create matrix spaces. Here the short notation
+  [10X[3Xfield[103X[10X^[[3Xdim1[103X[10X,[3Xdim2[103X[10X][110X can be used:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm1:= [ [ 1, 2 ], [ 3, 4 ] ];; m2:= [ [ 0, 1 ], [ 1, 0 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27XV:= VectorSpace( Rationals, [ m1, m2 ] );[127X[104X
+    [4X[28X<vector space over Rationals, with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xm1+m2 in V;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XW:= Rationals^[3,2];[127X[104X
+    [4X[28X( Rationals^[ 3, 2 ] )[128X[104X
+    [4X[25Xgap>[125X [27X[ [ 1, 1 ], [ 2, 2 ], [ 3, 3 ] ] in W;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YA field is naturally a vector space over itself.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsVectorSpace( Rationals );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIf  [22XΦ[122X  is  an algebraic extension of [22XF[122X, then [22XΦ[122X is also a vector space over [22XF[122X
+  (and  indeed over any subfield of [22XΦ[122X that contains [22XF[122X). This field [22XF[122X is stored
+  in the attribute [2XLeftActingDomain[102X ([14XReference: LeftActingDomain[114X). In [5XGAP[105X, the
+  default  is  to view fields as vector spaces over their [13Xprime[113X fields. By the
+  function  [2XAsVectorSpace[102X  ([14XReference:  AsVectorSpace[114X),  we can view fields as
+  vector spaces over fields other than the prime field.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XF:= GF( 16 );;[127X[104X
+    [4X[25Xgap>[125X [27XLeftActingDomain( F );[127X[104X
+    [4X[28XGF(2)[128X[104X
+    [4X[25Xgap>[125X [27XG:= AsVectorSpace( GF( 4 ), F );[127X[104X
+    [4X[28XAsField( GF(2^2), GF(2^4) )[128X[104X
+    [4X[25Xgap>[125X [27XF = G;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XLeftActingDomain( G );[127X[104X
+    [4X[28XGF(2^2)[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YA  vector space has three important attributes: its [13Xfield[113X of definition, its
+  [13Xdimension[113X  and a [13Xbasis[113X. We already encountered the function [2XLeftActingDomain[102X
+  ([14XReference: LeftActingDomain[114X) in the example above. It extracts the field of
+  definition  of a vector space. The function [2XDimension[102X ([14XReference: Dimension[114X)
+  provides the dimension of the vector space.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XF:= GF( 9 );;[127X[104X
+    [4X[25Xgap>[125X [27Xm:= [ [ Z(3)^0, 0*Z(3), 0*Z(3) ], [ 0*Z(3), Z(3)^0, Z(3)^0 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27XV:= VectorSpace( F, m );[127X[104X
+    [4X[28X<vector space over GF(3^2), with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27XDimension( V );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XW:= AsVectorSpace( GF( 3 ), V );[127X[104X
+    [4X[28X<vector space over GF(3), with 4 generators>[128X[104X
+    [4X[25Xgap>[125X [27XV = W;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XDimension( W );[127X[104X
+    [4X[28X4[128X[104X
+    [4X[25Xgap>[125X [27XLeftActingDomain( W );[127X[104X
+    [4X[28XGF(3)[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YOne  of  the most important attributes is a [13Xbasis[113X. For a given basis [22XB[122X of [22XV[122X,
+  every  vector  [22Xv[122X  in  [22XV[122X can be expressed uniquely as [22Xv = ∑_b ∈ B c_b b[122X, with
+  coefficients [22Xc_b ∈ F[122X.[133X
+  
+  [33X[0;0YIn  [5XGAP[105X,  bases  are  special lists of vectors. They are used mainly for the
+  computation of coefficients and linear combinations.[133X
+  
+  [33X[0;0YGiven  a  vector  space  [22XV[122X,  a basis of [22XV[122X is obtained by simply applying the
+  function  [2XBasis[102X ([14XReference: Basis[114X) to [22XV[122X. The vectors that form the basis are
+  extracted from the basis by [2XBasisVectors[102X ([14XReference: BasisVectors[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm1:= [ [ 1, 2 ], [ 3, 4 ] ];; m2:= [ [ 1, 1 ], [ 1, 0 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27XV:= VectorSpace( Rationals, [ m1, m2 ] );[127X[104X
+    [4X[28X<vector space over Rationals, with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27XB:= Basis( V );[127X[104X
+    [4X[28XSemiEchelonBasis( <vector space over Rationals, with[128X[104X
+    [4X[28X2 generators>, ... )[128X[104X
+    [4X[25Xgap>[125X [27XBasisVectors( Basis( V ) );[127X[104X
+    [4X[28X[ [ [ 1, 2 ], [ 3, 4 ] ], [ [ 0, 1 ], [ 2, 4 ] ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  coefficients  of  a  vector  relative to a given basis are found by the
+  function   [2XCoefficients[102X   ([14XReference:   Coefficients[114X).  Furthermore,  linear
+  combinations  of  the  basis vectors are constructed using [2XLinearCombination[102X
+  ([14XReference: LinearCombination[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XV:= VectorSpace( Rationals, [ [ 1, 2 ], [ 3, 4 ] ] );[127X[104X
+    [4X[28X<vector space over Rationals, with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27XB:= Basis( V );[127X[104X
+    [4X[28XSemiEchelonBasis( <vector space over Rationals, with[128X[104X
+    [4X[28X2 generators>, ... )[128X[104X
+    [4X[25Xgap>[125X [27XBasisVectors( Basis( V ) );[127X[104X
+    [4X[28X[ [ 1, 2 ], [ 0, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27XCoefficients( B, [ 1, 0 ] );[127X[104X
+    [4X[28X[ 1, -2 ][128X[104X
+    [4X[25Xgap>[125X [27XLinearCombination( B, [ 1, -2 ] );[127X[104X
+    [4X[28X[ 1, 0 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIn the above examples we have seen that [5XGAP[105X often chooses the basis it wants
+  to  work  with. It is also possible to construct bases with prescribed basis
+  vectors  by  giving  a  list  of  these  vectors as second argument to [2XBasis[102X
+  ([14XReference: Basis[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XV:= VectorSpace( Rationals, [ [ 1, 2 ], [ 3, 4 ] ] );;[127X[104X
+    [4X[25Xgap>[125X [27XB:= Basis( V, [ [ 1, 0 ], [ 0, 1 ] ] );[127X[104X
+    [4X[28XSemiEchelonBasis( <vector space over Rationals, with 2 generators>,[128X[104X
+    [4X[28X[ [ 1, 0 ], [ 0, 1 ] ] )[128X[104X
+    [4X[25Xgap>[125X [27XCoefficients( B, [ 1, 2 ] );[127X[104X
+    [4X[28X[ 1, 2 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe can construct subspaces and quotient spaces of vector spaces. The natural
+  projection  map  (constructed  by  [2XNaturalHomomorphismBySubspace[102X ([14XReference:
+  NaturalHomomorphismBySubspace[114X)),  connects  a vector space with its quotient
+  space.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XV:= Rationals^4;[127X[104X
+    [4X[28X( Rationals^4 )[128X[104X
+    [4X[25Xgap>[125X [27XW:= Subspace( V, [ [ 1, 2, 3, 4 ], [ 0, 9, 8, 7 ] ] );[127X[104X
+    [4X[28X<vector space over Rationals, with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27XVmodW:= V/W;[127X[104X
+    [4X[28X( Rationals^2 )[128X[104X
+    [4X[25Xgap>[125X [27Xh:= NaturalHomomorphismBySubspace( V, W );[127X[104X
+    [4X[28X<linear mapping by matrix, ( Rationals^4 ) -> ( Rationals^2 )>[128X[104X
+    [4X[25Xgap>[125X [27XImage( h, [ 1, 2, 3, 4 ] );[127X[104X
+    [4X[28X[ 0, 0 ][128X[104X
+    [4X[25Xgap>[125X [27XPreImagesRepresentative( h, [ 1, 0 ] );[127X[104X
+    [4X[28X[ 1, 0, 0, 0 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X6.2 [33X[0;0YAlgebras[133X[101X
+  
+  [33X[0;0YIf  a bilinear multiplication is defined for the elements of a vector space,
+  and  if  the  vector  space  is  closed under this multiplication then it is
+  called an [13Xalgebra[113X. For example, every field is an algebra:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:= GF(8); IsAlgebra( f );[127X[104X
+    [4X[28XGF(2^3)[128X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YOne  of  the  most  important classes of algebras are sub-algebras of matrix
+  algebras.  On the set of all [22Xn × n[122X matrices over a field [22XF[122X it is possible to
+  define  a  multiplication  in  many ways. The most frequent are the ordinary
+  matrix multiplication and the Lie multiplication.[133X
+  
+  [33X[0;0YEach  matrix  constructed  as  [22X[  [3Xrow1[103X, [3Xrow2[103X, ... ][122X is regarded by [5XGAP[105X as an
+  [13Xordinary[113X  matrix,  its  multiplication  is  the  ordinary associative matrix
+  multiplication.  The  sum  and  product  of  two ordinary matrices are again
+  ordinary matrices.[133X
+  
+  [33X[0;0YThe [13Xfull[113X matrix associative algebra can be created as follows:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XF:= GF( 9 );;[127X[104X
+    [4X[25Xgap>[125X [27XA:= F^[3,3];[127X[104X
+    [4X[28X( GF(3^2)^[ 3, 3 ] )[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAn  algebra  can  be  constructed from generators using the function [2XAlgebra[102X
+  ([14XReference:  Algebra[114X). It takes as arguments the field of coefficients and a
+  list  of generators. Of course the coefficient field and the generators must
+  fit  together;  if  we want to construct an algebra of ordinary matrices, we
+  may take the field generated by the entries of the generating matrices, or a
+  subfield or extension field.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm1:= [ [ 1, 1 ], [ 0, 0 ] ];; m2:= [ [ 0, 0 ], [ 0, 1 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27XA:= Algebra( Rationals, [ m1, m2 ] );[127X[104X
+    [4X[28X<algebra over Rationals, with 2 generators>[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAn  interesting  class  of  algebras  for  which many special algorithms are
+  implemented is the class of [13XLie algebras[113X. They arise for example as algebras
+  of matrices whose product is defined by the Lie bracket [22X[ A, B ] = A * B - B
+  * A[122X, where [22X*[122X denotes the ordinary matrix product.[133X
+  
+  [33X[0;0YSince  the  multiplication  of  objects  in  [5XGAP[105X is always assumed to be the
+  operation  [10X*[110X  (resp.  the  infix operator [10X*[110X), and since there is already the
+  [21Xordinary[121X  matrix  product defined for ordinary matrices, as mentioned above,
+  we  must use a different construction for matrices that occur as elements of
+  Lie  algebras. Such Lie matrices can be constructed by [2XLieObject[102X ([14XReference:
+  LieObject[114X)  from  ordinary matrices, the sum and product of Lie matrices are
+  again Lie matrices.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm:= LieObject( [ [ 1, 1 ], [ 1, 1 ] ] );[127X[104X
+    [4X[28XLieObject( [ [ 1, 1 ], [ 1, 1 ] ] )[128X[104X
+    [4X[25Xgap>[125X [27Xm*m;[127X[104X
+    [4X[28XLieObject( [ [ 0, 0 ], [ 0, 0 ] ] )[128X[104X
+    [4X[25Xgap>[125X [27XIsOrdinaryMatrix( m1 ); IsOrdinaryMatrix( m );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsLieMatrix( m1 ); IsLieMatrix( m );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YGiven  a field [10XF[110X and a list [10Xmats[110X of Lie objects over [10XF[110X, we can construct the
+  Lie  algebra  generated  by  [10Xmats[110X  using  the  function  [2XAlgebra[102X ([14XReference:
+  Algebra[114X).  Alternatively, if we do not want to be bothered with the function
+  [2XLieObject[102X  ([14XReference:  LieObject[114X),  we  can  use  the  function  [2XLieAlgebra[102X
+  ([14XReference:  LieAlgebra for an associative algebra[114X) that takes a field and a
+  list  of  ordinary matrices, and constructs the Lie algebra generated by the
+  corresponding  Lie matrices. Note that this means that the ordinary matrices
+  used  in  the  call  of [2XLieAlgebra[102X ([14XReference: LieAlgebra for an associative
+  algebra[114X) are not contained in the returned Lie algebra.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm1:= [ [ 0, 1 ], [ 0, 0 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27Xm2:= [ [ 0, 0 ], [ 1, 0 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27XL:= LieAlgebra( Rationals, [ m1, m2 ] );[127X[104X
+    [4X[28X<Lie algebra over Rationals, with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xm1 in L;[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YA second way of creating an algebra is by specifying a multiplication table.
+  Let  [22XA[122X be a finite dimensional algebra with basis [22X(x_1, x_2, ..., x_n)[122X, then
+  for  [22X1  ≤  i,  j  ≤  n[122X  the product [22Xx_i x_j[122X is a linear combination of basis
+  elements,  i.e.,  there  are  [22Xc_ij^k[122X in the ground field such that [22Xx_i x_j =
+  ∑_k=1^n  c_ij^k  x_k.[122X  It is not difficult to show that the constants [22Xc_ij^k[122X
+  determine  the  multiplication  completely. Therefore, the [22Xc_ij^k[122X are called
+  [13Xstructure  constants[113X.  In  [5XGAP[105X we can create a finite dimensional algebra by
+  specifying an array of structure constants.[133X
+  
+  [33X[0;0YIn  [5XGAP[105X  such a table of structure constants is represented using lists. The
+  obvious way to do this would be to construct a [21Xthree-dimensional[121X list [10XT[110X such
+  that  [10XT[i][j][k][110X  equals  [22Xc_ij^k[122X.  But  it  often happens that many of these
+  constants vanish. Therefore a more complicated structure is used in order to
+  be  able  to  omit  the  zeros.  A  multiplication table of an [22Xn[122X-dimensional
+  algebra  is  an [22Xn × n[122X array [10XT[110X such that [10XT[i][j][110X describes the product of the
+  [10Xi[110X-th  and  the  [10Xj[110X-th basis element. This product is encoded in the following
+  way.  The  entry  [10XT[i][j][110X is a list of two elements. The first of these is a
+  list  of indices [22Xk[122X such that [22Xc_ij^k[122X is nonzero. The second list contains the
+  corresponding constants [22Xc_ij^k[122X. Suppose, for example, that [10XS[110X is the table of
+  an algebra with basis [22X(x_1, x_2, ..., x_8)[122X and that [10XS[3][7][110X equals [10X[ [ 2, 4,
+  6  ],  [ 1/2, 2, 2/3 ] ][110X. Then in the algebra we have the relation [22Xx_3 x_7 =
+  (1/2)  x_2  + 2 x_4 + (2/3) x_6.[122X Furthermore, if [10XS[6][1] = [ [ ], [ ] ][110X then
+  the product of the sixth and first basis elements is zero.[133X
+  
+  [33X[0;0YFinally  two  numbers are added to the table. The first number can be 1, -1,
+  or  0.  If  it is 1, then the table is known to be symmetric, i.e., [22Xc_ij^k =
+  c_ji^k[122X.  If  this  number is -1, then the table is known to be antisymmetric
+  (this happens for instance when the algebra is a Lie algebra). The remaining
+  case,  0,  occurs in all other cases. The second number that is added is the
+  zero element of the field over which the algebra is defined.[133X
+  
+  [33X[0;0YEmpty  structure  constants  tables are created by the function [2XEmptySCTable[102X
+  ([14XReference:  EmptySCTable[114X), which takes a dimension [22Xd[122X, a zero element [22Xz[122X, and
+  optionally  one  of the strings [10X"symmetric"[110X, [10X"antisymmetric"[110X, and returns an
+  empty  structure  constants table [22XT[122X corresponding to a [22Xd[122X-dimensional algebra
+  over  a  field  with zero element [22Xz[122X. Structure constants can be entered into
+  the table [22XT[122X using the function [2XSetEntrySCTable[102X ([14XReference: SetEntrySCTable[114X).
+  It  takes  four  arguments, namely [22XT[122X, two indices [22Xi[122X and [22Xj[122X, and a list of the
+  form   [22X[   c_ij^{k_1},  k_1,  c_ij^{k_2},  k_2,  ...  ][122X.  In  this  call  to
+  [10XSetEntrySCTable[110X,  the  product  of the [22Xi[122X-th and the [22Xj[122X-th basis vector in any
+  algebra  described  by [22XT[122X is set to [22X∑_l c_ij^{k_l} x_{k_l}[122X. (Note that in the
+  empty  table, this product was zero.) If [22XT[122X knows that it is (anti)symmetric,
+  then at the same time also the product of the [22Xj[122X-th and the [22Xi[122X-th basis vector
+  is set appropriately.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XT:= EmptySCTable( 2, 0, "symmetric" );[127X[104X
+    [4X[28X[ [ [ [  ], [  ] ], [ [  ], [  ] ] ],[128X[104X
+    [4X[28X  [ [ [  ], [  ] ], [ [  ], [  ] ] ], 1, 0 ][128X[104X
+    [4X[25Xgap>[125X [27XSetEntrySCTable( T, 1, 2, [1/2,1,1/3,2] );  T;[127X[104X
+    [4X[28X[ [ [ [  ], [  ] ], [ [ 1, 2 ], [ 1/2, 1/3 ] ] ],[128X[104X
+    [4X[28X  [ [ [ 1, 2 ], [ 1/2, 1/3 ] ], [ [  ], [  ] ] ], 1, 0 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIf  we  have  defined a structure constants table, then we can construct the
+  corresponding    algebra    by    [2XAlgebraByStructureConstants[102X    ([14XReference:
+  AlgebraByStructureConstants[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:= AlgebraByStructureConstants( Rationals, T );[127X[104X
+    [4X[28X<algebra of dimension 2 over Rationals>[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIf  we  know that a structure constants table defines a Lie algebra, then we
+  can      construct      the      corresponding      Lie      algebra      by
+  [2XLieAlgebraByStructureConstants[102X  ([14XReference: LieAlgebraByStructureConstants[114X);
+  the algebra returned by this function knows that it is a Lie algebra, so [5XGAP[105X
+  need not check the Jacobi identity.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XT:= EmptySCTable( 2, 0, "antisymmetric" );;[127X[104X
+    [4X[25Xgap>[125X [27XSetEntrySCTable( T, 1, 2, [2/3,1] );[127X[104X
+    [4X[25Xgap>[125X [27XL:= LieAlgebraByStructureConstants( Rationals, T );[127X[104X
+    [4X[28X<Lie algebra of dimension 2 over Rationals>[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIn  [5XGAP[105X  an algebra is naturally a vector space. Hence all the functionality
+  for vector spaces is also available for algebras.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XF:= GF(2);;[127X[104X
+    [4X[25Xgap>[125X [27Xz:= Zero( F );;  o:= One( F );;[127X[104X
+    [4X[25Xgap>[125X [27XT:= EmptySCTable( 3, z, "antisymmetric" );;[127X[104X
+    [4X[25Xgap>[125X [27XSetEntrySCTable( T, 1, 2, [ o, 1, o, 3 ] );[127X[104X
+    [4X[25Xgap>[125X [27XSetEntrySCTable( T, 1, 3, [ o, 1 ] );[127X[104X
+    [4X[25Xgap>[125X [27XSetEntrySCTable( T, 2, 3, [ o, 3 ] );[127X[104X
+    [4X[25Xgap>[125X [27XA:= AlgebraByStructureConstants( F, T );[127X[104X
+    [4X[28X<algebra of dimension 3 over GF(2)>[128X[104X
+    [4X[25Xgap>[125X [27XDimension( A );[127X[104X
+    [4X[28X3[128X[104X
+    [4X[25Xgap>[125X [27XLeftActingDomain( A );[127X[104X
+    [4X[28XGF(2)[128X[104X
+    [4X[25Xgap>[125X [27XBasis( A );[127X[104X
+    [4X[28XCanonicalBasis( <algebra of dimension 3 over GF(2)> )[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YSubalgebras  and ideals of an algebra can be constructed by specifying a set
+  of  generators for the subalgebra or ideal. The quotient space of an algebra
+  by an ideal is naturally an algebra itself.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm:= [ [ 1, 2, 3 ], [ 0, 1, 6 ], [ 0, 0, 1 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27XA:= Algebra( Rationals, [ m ] );;[127X[104X
+    [4X[25Xgap>[125X [27XsubA:= Subalgebra( A, [ m-m^2 ] );[127X[104X
+    [4X[28X<algebra over Rationals, with 1 generator>[128X[104X
+    [4X[25Xgap>[125X [27XDimension( subA );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XidA:= Ideal( A, [ m-m^3 ] );[127X[104X
+    [4X[28X<two-sided ideal in <algebra of dimension 3 over Rationals>,[128X[104X
+    [4X[28X  (1 generator)>[128X[104X
+    [4X[25Xgap>[125X [27XDimension( idA );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XB:= A/idA;[127X[104X
+    [4X[28X<algebra of dimension 1 over Rationals>[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  call  [10XB:=  A/idA[110X  creates  a  new  algebra that does not [21Xknow[121X about its
+  connection  with  [10XA[110X.  If we want to connect an algebra with its factor via a
+  homomorphism,    then   we   first   have   to   create   the   homomorphism
+  ([2XNaturalHomomorphismByIdeal[102X  ([14XReference: NaturalHomomorphismByIdeal[114X)). After
+  this  we  create  the  factor  algebra from the homomorphism by the function
+  [2XImagesSource[102X  ([14XReference:  ImagesSource[114X).  In  the next example we divide an
+  algebra  [10XA[110X  by its radical and lift the central idempotents of the factor to
+  the original algebra [10XA[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm1:=[[1,0,0],[0,2,0],[0,0,3]];;[127X[104X
+    [4X[25Xgap>[125X [27Xm2:=[[0,1,0],[0,0,2],[0,0,0]];;[127X[104X
+    [4X[25Xgap>[125X [27XA:= Algebra( Rationals, [ m1, m2 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XDimension( A );[127X[104X
+    [4X[28X6[128X[104X
+    [4X[25Xgap>[125X [27XR:= RadicalOfAlgebra( A );[127X[104X
+    [4X[28X<algebra of dimension 3 over Rationals>[128X[104X
+    [4X[25Xgap>[125X [27Xh:= NaturalHomomorphismByIdeal( A, R );[127X[104X
+    [4X[28X<linear mapping by matrix, <algebra of dimension[128X[104X
+    [4X[28X6 over Rationals> -> <algebra of dimension 3 over Rationals>>[128X[104X
+    [4X[25Xgap>[125X [27XAmodR:= ImagesSource( h );[127X[104X
+    [4X[28X<algebra of dimension 3 over Rationals>[128X[104X
+    [4X[25Xgap>[125X [27Xid:= CentralIdempotentsOfAlgebra( AmodR );[127X[104X
+    [4X[28X[ v.3, v.2+(-3)*v.3, v.1+(-2)*v.2+(3)*v.3 ][128X[104X
+    [4X[25Xgap>[125X [27XPreImagesRepresentative( h, id[1] );[127X[104X
+    [4X[28X[ [ 0, 0, 0 ], [ 0, 0, 0 ], [ 0, 0, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27XPreImagesRepresentative( h, id[2] );[127X[104X
+    [4X[28X[ [ 0, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 0 ] ][128X[104X
+    [4X[25Xgap>[125X [27XPreImagesRepresentative( h, id[3] );[127X[104X
+    [4X[28X[ [ 1, 0, 0 ], [ 0, 0, 0 ], [ 0, 0, 0 ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YStructure  constants  tables for the simple Lie algebras are present in [5XGAP[105X.
+  They  can  be  constructed  using  the function [2XSimpleLieAlgebra[102X ([14XReference:
+  SimpleLieAlgebra[114X). The Lie algebras constructed by this function come with a
+  root system attached.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "G", 2, Rationals );[127X[104X
+    [4X[28X<Lie algebra of dimension 14 over Rationals>[128X[104X
+    [4X[25Xgap>[125X [27XR:= RootSystem( L );[127X[104X
+    [4X[28X<root system of rank 2>[128X[104X
+    [4X[25Xgap>[125X [27XPositiveRoots( R );[127X[104X
+    [4X[28X[ [ 2, -1 ], [ -3, 2 ], [ -1, 1 ], [ 1, 0 ], [ 3, -1 ], [ 0, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27XCartanMatrix( R );[127X[104X
+    [4X[28X[ [ 2, -1 ], [ -3, 2 ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAnother  example of algebras is provided by [13Xquaternion algebras[113X. We define a
+  quaternion  algebra  over  an  extension  field of the rationals, namely the
+  field  generated by [22Xsqrt{5}[122X. (The number [10XEB(5)[110X is equal to [22X1/2 (-1+sqrt{5})[122X.
+  The field is printed as [10XNF(5,[ 1, 4 ])[110X.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xb5:= EB(5);[127X[104X
+    [4X[28XE(5)+E(5)^4[128X[104X
+    [4X[25Xgap>[125X [27Xq:= QuaternionAlgebra( FieldByGenerators( [ b5 ] ) );[127X[104X
+    [4X[28X<algebra-with-one of dimension 4 over NF(5,[ 1, 4 ])>[128X[104X
+    [4X[25Xgap>[125X [27Xgens:= GeneratorsOfAlgebra( q );[127X[104X
+    [4X[28X[ e, i, j, k ][128X[104X
+    [4X[25Xgap>[125X [27Xe:= gens[1];; i:= gens[2];; j:= gens[3];; k:= gens[4];;[127X[104X
+    [4X[25Xgap>[125X [27XIsAssociative( q );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsCommutative( q );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xi*j; j*i;[127X[104X
+    [4X[28Xk[128X[104X
+    [4X[28X(-1)*k[128X[104X
+    [4X[25Xgap>[125X [27XOne( q );[127X[104X
+    [4X[28Xe[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIf  the coefficient field is a real subfield of the complex numbers then the
+  quaternion algebra is in fact a division ring.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsDivisionRing( q );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XInverse( e+i+j );[127X[104X
+    [4X[28X(1/3)*e+(-1/3)*i+(-1/3)*j[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YSo  [5XGAP[105X  knows  about  this  fact.  As in any ring, we can look at groups of
+  units.  (The  function  [2XStarCyc[102X ([14XReference: StarCyc[114X) used below computes the
+  unique  algebraic  conjugate  of  an  element  in  a quadratic subfield of a
+  cyclotomic field.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xc5:= StarCyc( b5 );[127X[104X
+    [4X[28XE(5)^2+E(5)^3[128X[104X
+    [4X[25Xgap>[125X [27Xg1:= 1/2*( b5*e + i - c5*j );[127X[104X
+    [4X[28X(1/2*E(5)+1/2*E(5)^4)*e+(1/2)*i+(-1/2*E(5)^2-1/2*E(5)^3)*j[128X[104X
+    [4X[25Xgap>[125X [27XOrder( g1 );[127X[104X
+    [4X[28X5[128X[104X
+    [4X[25Xgap>[125X [27Xg2:= 1/2*( -c5*e + i + b5*k );[127X[104X
+    [4X[28X(-1/2*E(5)^2-1/2*E(5)^3)*e+(1/2)*i+(1/2*E(5)+1/2*E(5)^4)*k[128X[104X
+    [4X[25Xgap>[125X [27XOrder( g2 );[127X[104X
+    [4X[28X10[128X[104X
+    [4X[25Xgap>[125X [27Xg:=Group( g1, g2 );;[127X[104X
+    [4X[28X#I  default `IsGeneratorsOfMagmaWithInverses' method returns `true' for[128X[104X
+    [4X[28X  [ (1/2*E(5)+1/2*E(5)^4)*e+(1/2)*i+(-1/2*E(5)^2-1/2*E(5)^3)*j,[128X[104X
+    [4X[28X  (-1/2*E(5)^2-1/2*E(5)^3)*e+(1/2)*i+(1/2*E(5)+1/2*E(5)^4)*k ][128X[104X
+    [4X[25Xgap>[125X [27XSize( g );[127X[104X
+    [4X[28X120[128X[104X
+    [4X[25Xgap>[125X [27XIsPerfect( g );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YSince  there  is  only one perfect group of order 120, up to isomorphism, we
+  see  that  the  group  [10Xg[110X  is  isomorphic to [22XSL_2(5)[122X. As usual, a permutation
+  representation  of  the  group can be constructed using a suitable action of
+  the group.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xcos:= RightCosets( g, Subgroup( g, [ g1 ] ) );;[127X[104X
+    [4X[25Xgap>[125X [27XLength( cos );[127X[104X
+    [4X[28X24[128X[104X
+    [4X[25Xgap>[125X [27Xhom:= ActionHomomorphism( g, cos, OnRight );;[127X[104X
+    [4X[25Xgap>[125X [27Xim:= Image( hom );[127X[104X
+    [4X[28XGroup([ (2,3,5,9,15)(4,7,12,8,14)(10,17,23,20,24)(11,19,22,16,13),[128X[104X
+    [4X[28X  (1,2,4,8,3,6,11,20,17,19)(5,10,18,7,13,22,12,21,24,15)(9,16)(14,23) ])[128X[104X
+    [4X[25Xgap>[125X [27XSize( im );[127X[104X
+    [4X[28X120[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YTo  get  a  matrix  representation  of  [10Xg[110X or of the whole algebra [10Xq[110X, we must
+  specify  a  basis of the vector space on which the algebra acts, and compute
+  the linear action of elements w.r.t. this basis.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xbas:= CanonicalBasis( q );;[127X[104X
+    [4X[25Xgap>[125X [27XBasisVectors( bas );[127X[104X
+    [4X[28X[ e, i, j, k ][128X[104X
+    [4X[25Xgap>[125X [27Xop:= OperationAlgebraHomomorphism( q, bas, OnRight );[127X[104X
+    [4X[28X<op. hom. AlgebraWithOne( NF(5,[ 1, 4 ]),[128X[104X
+    [4X[28X[ e, i, j, k ] ) -> matrices of dim. 4>[128X[104X
+    [4X[25Xgap>[125X [27XImagesRepresentative( op, e );[127X[104X
+    [4X[28X[ [ 1, 0, 0, 0 ], [ 0, 1, 0, 0 ], [ 0, 0, 1, 0 ], [ 0, 0, 0, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27XImagesRepresentative( op, i );[127X[104X
+    [4X[28X[ [ 0, 1, 0, 0 ], [ -1, 0, 0, 0 ], [ 0, 0, 0, -1 ], [ 0, 0, 1, 0 ] ][128X[104X
+    [4X[25Xgap>[125X [27XImagesRepresentative( op, g1 );[127X[104X
+    [4X[28X[ [ 1/2*E(5)+1/2*E(5)^4, 1/2, -1/2*E(5)^2-1/2*E(5)^3, 0 ],[128X[104X
+    [4X[28X  [ -1/2, 1/2*E(5)+1/2*E(5)^4, 0, -1/2*E(5)^2-1/2*E(5)^3 ],[128X[104X
+    [4X[28X  [ 1/2*E(5)^2+1/2*E(5)^3, 0, 1/2*E(5)+1/2*E(5)^4, -1/2 ],[128X[104X
+    [4X[28X  [ 0, 1/2*E(5)^2+1/2*E(5)^3, 1/2, 1/2*E(5)+1/2*E(5)^4 ] ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X6.3 [33X[0;0YFurther Information about Vector Spaces and Algebras[133X[101X
+  
+  [33X[0;0YMore  information  about  vector  spaces can be found in Chapter [14X'Reference:
+  Vector  Spaces'[114X.  Chapter [14X'Reference: Algebras'[114X deals with the functionality
+  for  general  algebras.  Furthermore,  concerning  special functions for Lie
+  algebras, there is Chapter [14X'Reference: Lie Algebras'[114X.[133X
+  

@@ -1,0 +1,432 @@
+  
+  [1X82 [33X[0;0YAn Example – Designing Arithmetic Operations[133X[101X
+  
+  [33X[0;0YIn  this  chapter, we give a –hopefully typical– example of extending [5XGAP[105X by
+  new  objects  with  prescribed  arithmetic operations (for a simple approach
+  that  may  be  useful  to  get started though does not permit to exploit all
+  potential features, see also [2XArithmeticElementCreator[102X ([14X80.9-1[114X)).[133X
+  
+  
+  [1X82.1 [33X[0;0YNew Arithmetic Operations vs. New Objects[133X[101X
+  
+  [33X[0;0YA  usual  procedure  in  mathematics is the definition of new operations for
+  given  objects;  here are a few typical examples. The Lie bracket defines an
+  interesting  new  multiplicative structure on a given (associative) algebra.
+  Forming  a  group  ring  can  be  viewed  as defining a new addition for the
+  elements  of  the  given  group, and extending the multiplication to sums of
+  group  elements  in  a  natural way. Forming the exterior algebra of a given
+  vector  space can be viewed as defining a new multiplication for the vectors
+  in a natural way.[133X
+  
+  [33X[0;0Y[5XGAP[105X  does  [13Xnot[113X support such a procedure. The main reason for this is that in
+  [5XGAP[105X,  the multiplication in a group, a ring etc. is always written as [10X*[110X, and
+  the  addition  in  a  vector  space,  a  ring  etc.  is always written as [10X+[110X.
+  Therefore  it  is  not  possible  to  define  the  Lie  bracket  as a [21Xsecond
+  multiplication[121X   for   the  elements  of  a  given  algebra;  in  fact,  the
+  multiplication  in  Lie  algebras  in  [5XGAP[105X  is  denoted  by  [10X*[110X. Analogously,
+  constructing  the  group ring as sketched above is impossible if an addition
+  is  already  defined for the elements; note the difference between the usual
+  addition  of  matrices and the addition in the group ring of a matrix group!
+  (See   Chapter [14X65[114X   for   an   example.)   Similarly,  there  is  already  a
+  multiplication  defined  for  row  vectors  (yielding  the  standard  scalar
+  product), hence these vectors cannot be regarded as elements of the exterior
+  algebra of the space.[133X
+  
+  [33X[0;0YIn  situations  such as the ones mentioned above, [5XGAP[105X's way to deal with the
+  structures  in question is the following. Instead of defining [13Xnew[113X operations
+  for the [13Xgiven[113X objects, [13Xnew[113X objects are created to which the [13Xgiven[113X arithmetic
+  operations [10X*[110X and [10X+[110X are then made applicable.[133X
+  
+  [33X[0;0YWith  this  construction,  matrix  Lie algebras consist of matrices that are
+  different  from  the  matrices with associative multiplication; technically,
+  the  type  of  a  matrix determines how it is multiplied with other matrices
+  (see [2XIsMatrix[102X ([14X24.2-1[114X)). A matrix with the Lie bracket as its multiplication
+  can  be  created with the function [2XLieObject[102X ([14X64.1-1[114X) from a matrix with the
+  usual associative multiplication.[133X
+  
+  [33X[0;0YGroup  rings  (more general: magma rings, see Chapter [14X65[114X) can be constructed
+  with  [2XFreeMagmaRing[102X  ([14X65.1-1[114X)  from  a  coefficient  ring  and  a group. The
+  elements of the group are not contained in such a group ring, one has to use
+  an  embedding  map  for  creating a group ring element that corresponds to a
+  given group element.[133X
+  
+  [33X[0;0YIt should be noted that the [5XGAP[105X approach to the construction of Lie algebras
+  from  associative  algebras  is generic in the sense that all objects in the
+  filter  [2XIsLieObject[102X  ([14X64.1-2[114X)  use  the  same  methods  for  their addition,
+  multiplication  etc.,  by  delegating  to  the  [21Xunderlying[121X  objects  of  the
+  associative algebra, no matter what these objects actually are. Analogously,
+  also the construction of group rings is generic.[133X
+  
+  
+  [1X82.2 [33X[0;0YDesigning new Multiplicative Objects[133X[101X
+  
+  [33X[0;0YThe  goal  of  this  section  is  to  implement  objects  with  a prescribed
+  multiplication.  Let us assume that we are given a field [22XF[122X, and that we want
+  to define a new multiplication [22X*[122X on [22XF[122X that is given by [22Xa * b = a b - a - b +
+  2[122X; here [22Xa b[122X denotes the ordinary product in [22XF[122X.[133X
+  
+  [33X[0;0YBy  the  discussion  in  Section [14X82.1[114X,  we  know that we cannot define a new
+  multiplication on [22XF[122X itself but have to create new objects.[133X
+  
+  [33X[0;0YWe  want  to  distinguish  these  new objects from all other [5XGAP[105X objects, in
+  order to describe for example the situation that two of our objects shall be
+  multiplied.  This  distinction  is  made  via  the [13Xtype[113X of the objects. More
+  precisely, we declare a new [13Xfilter[113X, a function that will return [9Xtrue[109X for our
+  new  objects,  and  [9Xfalse[109X  for  all  other  [5XGAP[105X objects. This can be done by
+  calling  [2XDeclareFilter[102X  ([14X13.8-2[114X),  but since our objects will know about the
+  value  already  when  they  are  constructed, the filter can be created with
+  [2XDeclareCategory[102X ([14X13.3-5[114X) or [2XNewCategory[102X ([14X13.3-4[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XDeclareCategory( "IsMyObject", IsObject );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  idea  is that the new multiplication will be installed only for objects
+  that [21Xlie in the category [10XIsMyObject[110X[121X.[133X
+  
+  [33X[0;0YThe  next question is what internal data our new objects store, and how they
+  are  accessed.  The  easiest solution is to store the [21Xunderlying[121X object from
+  the  field  [22XF[122X.  [5XGAP[105X  provides  two  general possibilities how to store this,
+  namely   record-like   and  list-like  structures  (for  examples,  see [14X79.2[114X
+  and [14X79.3[114X). We decide to store the data in a list-like structure, at position
+  1. This [13Xrepresentation[113X is declared as follows.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XDeclareRepresentation( "IsMyObjectListRep", IsPositionalObjectRep, [ 1 ] );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YOf  course  we  can  argue  that this declaration is superfluous because [13Xall[113X
+  objects  in  the  category  [10XIsMyObject[110X  will  be represented this way; it is
+  possible to proceed like that, but often (in more complicated situations) it
+  turns  out  to  be useful that several representations are available for [21Xthe
+  same element[121X.[133X
+  
+  [33X[0;0YFor  creating  the  type  of our objects, we need to specify to which [13Xfamily[113X
+  (see [14X13.1[114X)  the  objects  shall  belong.  For  the  moment,  we need not say
+  anything  about relations to other [5XGAP[105X objects, thus the only requirement is
+  that  all  new  objects  lie  in  the [13Xsame[113X family; therefore we create a [13Xnew[113X
+  family.  Also  we  are not interested in properties that some of our objects
+  have  and  others do not have, thus we need only one type, and store it in a
+  global variable.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XMyType:= NewType( NewFamily( "MyFamily" ),[128X[104X
+    [4X[28X                  IsMyObject and IsMyObjectListRep );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  next step is to write a function that creates a new object. It may look
+  as follows.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XMyObject:= val -> Objectify( MyType, [ Immutable( val ) ] );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote that we store an [13Ximmutable copy[113X of the argument in the returned object;
+  without doing so, for example if the argument would be a mutable matrix then
+  the corresponding new object would be changed whenever the matrix is changed
+  (see [14X12.6[114X for more details about mutability).[133X
+  
+  [33X[0;0YHaving entered the above [5XGAP[105X code, we can create some of our objects.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xa:= MyObject( 3 );  b:= MyObject( 5 );[127X[104X
+    [4X[28X<object>[128X[104X
+    [4X[28X<object>[128X[104X
+    [4X[25Xgap>[125X [27Xa![1];  b![1];[127X[104X
+    [4X[28X3[128X[104X
+    [4X[28X5[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YBut   clearly   a  lot  is  missing.  Besides  the  fact  that  the  desired
+  multiplication  is  not  yet  installed,  we  see  that also the way how the
+  objects are printed is not satisfactory.[133X
+  
+  [33X[0;0YLet  us  improve  the latter first. There are two [5XGAP[105X functions [2XView[102X ([14X6.3-3[114X)
+  and [2XPrint[102X ([14X6.3-4[114X) for showing objects on the screen. [2XView[102X ([14X6.3-3[114X) is thought
+  to  show a short and human readable form of the object, and [2XPrint[102X ([14X6.3-4[114X) is
+  thought  to  show a not necessarily short form that is [5XGAP[105X readable whenever
+  this  makes sense. We decide to show [10Xa[110X as [10X[3X3[103X[10X[110X by [2XView[102X ([14X6.3-3[114X), and to show the
+  construction  [10XMyObject(  3 )[110X by [2XPrint[102X ([14X6.3-4[114X); the methods are installed for
+  the underlying operations [2XViewObj[102X ([14X6.3-5[114X) and [2XPrintObj[102X ([14X6.3-5[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallMethod( ViewObj,[128X[104X
+    [4X[28X    "for object in `IsMyObject'",[128X[104X
+    [4X[28X    [ IsMyObject and IsMyObjectListRep ],[128X[104X
+    [4X[28X    function( obj )[128X[104X
+    [4X[28X    Print( "<", obj![1], ">" );[128X[104X
+    [4X[28X    end );[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XInstallMethod( PrintObj,[128X[104X
+    [4X[28X    "for object in `IsMyObject'",[128X[104X
+    [4X[28X    [ IsMyObject and IsMyObjectListRep ],[128X[104X
+    [4X[28X    function( obj )[128X[104X
+    [4X[28X    Print( "MyObject( ", obj![1], " )" );[128X[104X
+    [4X[28X    end );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis is the result of the above installations.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xa; Print( a, "\n" );[127X[104X
+    [4X[28X<3>[128X[104X
+    [4X[28XMyObject( 3 )[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAnd now we try to install the multiplication.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallMethod( \*,[128X[104X
+    [4X[28X    "for two objects in `IsMyObject'",[128X[104X
+    [4X[28X    [ IsMyObject and IsMyObjectListRep,[128X[104X
+    [4X[28X      IsMyObject and IsMyObjectListRep ],[128X[104X
+    [4X[28X    function( a, b )[128X[104X
+    [4X[28X    return MyObject( a![1] * b![1] - a![1] - b![1] + 2 );[128X[104X
+    [4X[28X    end );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWhen  we  enter  the  above code, [5XGAP[105X runs into an error. This is due to the
+  fact  that the operation [2X\*[102X ([14X31.12-1[114X) is declared for two arguments that lie
+  in the category [2XIsMultiplicativeElement[102X ([14X31.14-10[114X). One could circumvent the
+  check  whether  the  method  matches  the  declaration  of the operation, by
+  calling  [2XInstallOtherMethod[102X  ([14X78.3-2[114X) instead of [2XInstallMethod[102X ([14X78.3-1[114X). But
+  it  would  make  sense  if  our objects would lie in [2XIsMultiplicativeElement[102X
+  ([14X31.14-10[114X),  for  example  because  some  generic  methods  for objects with
+  multiplication  would  be  available  then,  such  as  powering  by positive
+  integers   via  repeated  squaring.  So  we  want  that  [10XIsMyObject[110X  implies
+  [2XIsMultiplicativeElement[102X   ([14X31.14-10[114X).   The  easiest  way  to  achieve  such
+  implications  is  to  use  the  implied  filter  as  second  argument of the
+  [2XDeclareCategory[102X  ([14X13.3-5[114X)  call;  but since we do not want to start anew, we
+  can also install the implication afterwards.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallTrueMethod( IsMultiplicativeElement, IsMyObject );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAfterwards,  installing the multiplication works without problems. Note that
+  [10XMyType[110X  and  therefore also [10Xa[110X and [10Xb[110X are [13Xnot[113X affected by this implication, so
+  we construct them anew.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XMyType:= NewType( NewFamily( "MyFamily" ),[127X[104X
+    [4X[25X>[125X [27X                     IsMyObject and IsMyObjectListRep );;[127X[104X
+    [4X[25Xgap>[125X [27Xa:= MyObject( 3 );;  b:= MyObject( 5 );;[127X[104X
+    [4X[25Xgap>[125X [27Xa*b;  a^27;[127X[104X
+    [4X[28X<9>[128X[104X
+    [4X[28X<134217729>[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YPowering  the  new objects by negative integers is not possible yet, because
+  [5XGAP[105X  does not know how to compute the inverse of an element [22Xa[122X, say, which is
+  defined as the unique element [22Xa'[122X such that both [22Xa a'[122X and [22Xa' a[122X are [21Xthe unique
+  multiplicative neutral element that belongs to [22Xa[122X[121X.[133X
+  
+  [33X[0;0YAnd  also  this  neutral element, if it exists, cannot be computed by [5XGAP[105X in
+  our  current  situation.  It  does,  however,  make  sense  to  ask  for the
+  multiplicative  neutral  element  of  a  given  magma,  and  for inverses of
+  elements in the magma.[133X
+  
+  [33X[0;0YBut  before  we  can  form  domains  of our objects, we must define when two
+  objects  are  regarded  as  equal;  note  that this is necessary in order to
+  decide  about  the  uniqueness  of  neutral  and  inverse  elements.  In our
+  situation,  equality  is  defined in the obvious way. For being able to form
+  sets of our objects, also an ordering via [2X\<[102X ([14X31.11-1[114X) is defined for them.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallMethod( \=,[128X[104X
+    [4X[28X    "for two objects in `IsMyObject'",[128X[104X
+    [4X[28X    [ IsMyObject and IsMyObjectListRep,[128X[104X
+    [4X[28X      IsMyObject and IsMyObjectListRep ],[128X[104X
+    [4X[28X    function( a, b )[128X[104X
+    [4X[28X    return a![1] = b![1];[128X[104X
+    [4X[28X    end );[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XInstallMethod( \<,[128X[104X
+    [4X[28X    "for two objects in `IsMyObject'",[128X[104X
+    [4X[28X    [ IsMyObject and IsMyObjectListRep,[128X[104X
+    [4X[28X      IsMyObject and IsMyObjectListRep ],[128X[104X
+    [4X[28X    function( a, b )[128X[104X
+    [4X[28X    return a![1] < b![1];[128X[104X
+    [4X[28X    end );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YLet  us look at an example. We start with finite field elements because then
+  the domains are finite, hence the generic methods for such domains will have
+  a chance to succeed.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xa:= MyObject( Z(7) );[127X[104X
+    [4X[28X<Z(7)>[128X[104X
+    [4X[25Xgap>[125X [27Xm:= Magma( a );[127X[104X
+    [4X[28X<magma with 1 generator>[128X[104X
+    [4X[25Xgap>[125X [27Xe:= MultiplicativeNeutralElement( m );[127X[104X
+    [4X[28X<Z(7)^2>[128X[104X
+    [4X[25Xgap>[125X [27Xelms:= AsList( m );[127X[104X
+    [4X[28X[ <Z(7)>, <Z(7)^2>, <Z(7)^5> ][128X[104X
+    [4X[25Xgap>[125X [27XForAll( elms, x -> ForAny( elms, y -> x*y = e and y*x = e ) );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XList( elms, x -> First( elms, y -> x*y = e and y*x = e ) );[127X[104X
+    [4X[28X[ <Z(7)^5>, <Z(7)^2>, <Z(7)> ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YSo  a  multiplicative  neutral  element  exists, in fact all elements in the
+  magma [10Xm[110X are invertible. But what about the following.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xb:= MyObject( Z(7)^0 );  m:= Magma( a, b );[127X[104X
+    [4X[28X<Z(7)^0>[128X[104X
+    [4X[28X<magma with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xelms:= AsList( m );[127X[104X
+    [4X[28X[ <Z(7)^0>, <Z(7)>, <Z(7)^2>, <Z(7)^5> ][128X[104X
+    [4X[25Xgap>[125X [27Xe:= MultiplicativeNeutralElement( m );[127X[104X
+    [4X[28X<Z(7)^2>[128X[104X
+    [4X[25Xgap>[125X [27XForAll( elms, x -> ForAny( elms, y -> x*y = e and y*x = e ) );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XList( elms, x -> b * x );[127X[104X
+    [4X[28X[ <Z(7)^0>, <Z(7)^0>, <Z(7)^0>, <Z(7)^0> ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YHere  we  found a multiplicative neutral element, but the element [10Xb[110X does not
+  have  an  inverse.  If an addition would be defined for our elements then we
+  would say that [10Xb[110X behaves like a zero element.[133X
+  
+  [33X[0;0YWhen  we  started  to  implement  the new objects, we said that we wanted to
+  define the new multiplication for elements of a given field [22XF[122X. In principle,
+  the  current  implementation would admit also something like [10XMyObject( 2 ) *
+  MyObject( Z(7) )[110X. But if we decide that our initial assumption holds, we may
+  define  the  identity  and  the  inverse  of  the  object  [10X<a>[110X  as [10X<2*e>[110X and
+  [10X<a/(a-e)>[110X,  respectively, where [10Xe[110X is the identity element in [22XF[122X and [10X/[110X denotes
+  the division in [22XF[122X; note that the element [10X<e>[110X is not invertible, and that the
+  above  definitions  are  determined  by  the  multiplication defined for our
+  objects.  Further  note  that after the installations shown below, also [10XOne(
+  MyObject( 1 ) )[110X is defined.[133X
+  
+  [33X[0;0Y(For  technical  reasons,  we  do  not  install the intended methods for the
+  attributes  [2XOne[102X ([14X31.10-2[114X) and [2XInverse[102X ([14X31.10-8[114X) but for the operations [2XOneOp[102X
+  ([14X31.10-2[114X)  and  [2XInverseOp[102X  ([14X31.10-8[114X).  This  is because for certain kinds of
+  objects –mainly matrices– one wants to support a method to compute a [13Xmutable[113X
+  identity  or  inverse, and the attribute needs only a method that takes this
+  object,  makes  it immutable, and then returns this object. As stated above,
+  we  only  want  to  deal  with immutable objects, so this distinction is not
+  really interesting for us.)[133X
+  
+  [33X[0;0YA  more  interesting  point  to  note  is that we should mark our objects as
+  likely to be invertible, since we add the possibility to invert them. Again,
+  this  could have been part of the declaration of [10XIsMyObject[110X, but we may also
+  formulate an implication for the existing category.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallTrueMethod( IsMultiplicativeElementWithInverse, IsMyObject );[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XInstallMethod( OneOp,[128X[104X
+    [4X[28X    "for an object in `IsMyObject'",[128X[104X
+    [4X[28X    [ IsMyObject and IsMyObjectListRep ],[128X[104X
+    [4X[28X    a -> MyObject( 2 * One( a![1] ) ) );[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XInstallMethod( InverseOp,[128X[104X
+    [4X[28X    "for an object in `IsMyObject'",[128X[104X
+    [4X[28X    [ IsMyObject and IsMyObjectListRep ],[128X[104X
+    [4X[28X    a -> MyObject( a![1] / ( a![1] - One( a![1] ) ) ) );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNow we can form groups of our (nonzero) elements.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XMyType:= NewType( NewFamily( "MyFamily" ),[127X[104X
+    [4X[25X>[125X [27X                  IsMyObject and IsMyObjectListRep );;[127X[104X
+    [4X[28Xgap>[128X[104X
+    [4X[25Xgap>[125X [27Xa:= MyObject( Z(7) );[127X[104X
+    [4X[28X<Z(7)>[128X[104X
+    [4X[25Xgap>[125X [27Xb:= MyObject( 0*Z(7) );  g:= Group( a, b );[127X[104X
+    [4X[28X<0*Z(7)>[128X[104X
+    [4X[28X<group with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27XSize( g );[127X[104X
+    [4X[28X6[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe are completely free to define an [13Xaddition[113X for our elements, a natural one
+  is  given by [10X<a> + <b> = <a+b-1>[110X. As we did for the multiplication, we first
+  change [10XIsMyObject[110X such that the additive structure is also known.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallTrueMethod( IsAdditiveElementWithInverse, IsMyObject );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNext  we  install  the  methods  for  the addition, and those to compute the
+  additive neutral element and the additive inverse.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallMethod( \+,[128X[104X
+    [4X[28X    "for two objects in `IsMyObject'",[128X[104X
+    [4X[28X    [ IsMyObject and IsMyObjectListRep,[128X[104X
+    [4X[28X      IsMyObject and IsMyObjectListRep ],[128X[104X
+    [4X[28X    function( a, b )[128X[104X
+    [4X[28X    return MyObject( a![1] + b![1] - 1 );[128X[104X
+    [4X[28X    end );[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XInstallMethod( ZeroOp,[128X[104X
+    [4X[28X    "for an object in `IsMyObject'",[128X[104X
+    [4X[28X    [ IsMyObject and IsMyObjectListRep ],[128X[104X
+    [4X[28X    a -> MyObject( One( a![1] ) ) );[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XInstallMethod( AdditiveInverseOp,[128X[104X
+    [4X[28X    "for an object in `IsMyObject'",[128X[104X
+    [4X[28X    [ IsMyObject and IsMyObjectListRep ],[128X[104X
+    [4X[28X    a -> MyObject( a![1] / ( a![1] - One( a![1] ) ) ) );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YLet us try whether the addition works.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XMyType:= NewType( NewFamily( "MyFamily" ),[127X[104X
+    [4X[25X>[125X [27X                  IsMyObject and IsMyObjectListRep );;[127X[104X
+    [4X[25Xgap>[125X [27Xa:= MyObject( Z(7) );;  b:= MyObject( 0*Z(7) );;[127X[104X
+    [4X[25Xgap>[125X [27Xm:= AdditiveMagma( a, b );[127X[104X
+    [4X[28X<additive magma with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27XSize( m );[127X[104X
+    [4X[28X7[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YSimilar  as  installing  a  multiplication  automatically  makes powering by
+  integers  available, multiplication with integers becomes available with the
+  addition.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X2 * a;[127X[104X
+    [4X[28X<Z(7)^5>[128X[104X
+    [4X[25Xgap>[125X [27Xa+a;[127X[104X
+    [4X[28X<Z(7)^5>[128X[104X
+    [4X[25Xgap>[125X [27XMyObject( 2*Z(7)^0 ) * a;[127X[104X
+    [4X[28X<Z(7)>[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIn  particular  we  see  that this multiplication does [13Xnot[113X coincide with the
+  multiplication  of two of our objects, that is, an integer [13Xcannot[113X be used as
+  a shorthand for one of the new objects in a multiplication.[133X
+  
+  [33X[0;0Y(It  should  be  possible  to create a [13Xfield[113X with the new multiplication and
+  addition. Currently this fails, due to missing methods for computing several
+  kinds  of generators from field generators, for computing the characteristic
+  in the case that the family does not know this in advance, for checking with
+  [2XAsField[102X  ([14X58.1-9[114X)  whether  a  domain  is in fact a field, for computing the
+  closure as a field.)[133X
+  
+  [33X[0;0YIt  should  be  emphasized  that  the  mechanism  described above may be not
+  suitable  for  the  situation  that  one  wants  to  consider many different
+  multiplications  [21Xon the same set of objects[121X, since the installation of a new
+  multiplication  requires  the declaration of at least one new filter and the
+  installation  of  several methods. But the design of [5XGAP[105X is not suitable for
+  such dynamic method installations.[133X
+  
+  [33X[0;0YTurning  this  argument  the  other way round, the implementation of the new
+  arithmetics  defined  by  the above multiplication and addition is available
+  for any field [22XF[122X, one need not repeat it for each field one is interested in.[133X
+  
+  [33X[0;0YSimilar  to  the above situation, the construction of a magma ring [22XRM[122X from a
+  coefficient  ring  [22XR[122X  and  a  magma  [22XM[122X  is  implemented only once, since the
+  definition   of   the  arithmetic  operations  depends  only  on  the  given
+  multiplication  of [22XM[122X and not on [22XM[122X itself. So the addition is not implemented
+  for  the  elements  in [22XM[122X or –more precisely– for an isomorphic copy. In some
+  sense, the addition is installed [21Xfor the multiplication[121X, and as mentioned in
+  Section [14X82.1[114X, there is only one multiplication [2X\*[102X ([14X31.12-1[114X) in [5XGAP[105X.[133X
+  

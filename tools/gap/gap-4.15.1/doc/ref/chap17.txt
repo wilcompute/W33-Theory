@@ -1,0 +1,155 @@
+  
+  [1X17 [33X[0;0YRational Numbers[133X[101X
+  
+  [33X[0;0YThe  [13Xrationals[113X  form  a  very  important  field.  On  the one hand it is the
+  quotient field of the integers (see chapter [14X14[114X). On the other hand it is the
+  prime field of the fields of characteristic zero (see chapter [14X60[114X).[133X
+  
+  [33X[0;0YThe  former comment suggests the representation actually used. A rational is
+  represented  as  a  pair  of  integers,  called  [13Xnumerator[113X  and [13Xdenominator[113X.
+  Numerator  and  denominator are [13Xreduced[113X, i.e., their greatest common divisor
+  is  1.  If  the  denominator is 1, the rational is in fact an integer and is
+  represented  as such. The numerator holds the sign of the rational, thus the
+  denominator is always positive.[133X
+  
+  [33X[0;0YBecause  the  underlying  integer arithmetic can compute with arbitrary size
+  integers,  the rational arithmetic is always exact, even for rationals whose
+  numerators and denominators have thousands of digits.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X2/3;[127X[104X
+    [4X[28X2/3[128X[104X
+    [4X[25Xgap>[125X [27X66/123;  # numerator and denominator are made relatively prime[127X[104X
+    [4X[28X22/41[128X[104X
+    [4X[25Xgap>[125X [27X17/-13;  # the numerator carries the sign;[127X[104X
+    [4X[28X-17/13[128X[104X
+    [4X[25Xgap>[125X [27X121/11;  # rationals with denominator 1 (when canceled) are integers[127X[104X
+    [4X[28X11[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X17.1 [33X[0;0YRationals: Global Variables[133X[101X
+  
+  [1X17.1-1 Rationals[101X
+  
+  [33X[1;0Y[29X[2XRationals[102X [32X global variable[133X
+  [33X[1;0Y[29X[2XIsRationals[102X( [3Xobj[103X ) [32X filter[133X
+  
+  [33X[0;0Y[2XRationals[102X  is  the  field  [22Xℚ[122X  of  rational  integers, as a set of cyclotomic
+  numbers,  see  Chapter [14X18[114X  for  basic  operations,  Functions  for the field
+  [2XRationals[102X can be found in the chapters [14X58[114X and [14X60[114X.[133X
+  
+  [33X[0;0Y[2XIsRationals[102X  returns  [9Xtrue[109X  for  a  prime  field that consists of cyclotomic
+  numbers  –for  example the [5XGAP[105X object [2XRationals[102X– and [9Xfalse[109X for all other [5XGAP[105X
+  objects.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSize( Rationals ); 2/3 in Rationals;[127X[104X
+    [4X[28Xinfinity[128X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X17.2 [33X[0;0YElementary Operations for Rationals[133X[101X
+  
+  [1X17.2-1 IsRat[101X
+  
+  [33X[1;0Y[29X[2XIsRat[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YEvery  rational number lies in the category [2XIsRat[102X, which is a subcategory of
+  [2XIsCyc[102X ([14X18.1-3[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsRat( 2/3 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsRat( 17/-13 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsRat( 11 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsRat( IsRat );  # `IsRat' is a function, not a rational[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X17.2-2 IsPosRat[101X
+  
+  [33X[1;0Y[29X[2XIsPosRat[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YEvery positive rational number lies in the category [2XIsPosRat[102X.[133X
+  
+  [1X17.2-3 IsNegRat[101X
+  
+  [33X[1;0Y[29X[2XIsNegRat[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YEvery negative rational number lies in the category [2XIsNegRat[102X.[133X
+  
+  [1X17.2-4 NumeratorRat[101X
+  
+  [33X[1;0Y[29X[2XNumeratorRat[102X( [3Xrat[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XNumeratorRat[102X  returns  the  numerator  of  the  rational  [3Xrat[103X.  Because  the
+  numerator holds the sign of the rational it may be any integer. Integers are
+  rationals with denominator [22X1[122X, thus [2XNumeratorRat[102X is the identity function for
+  integers.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XNumeratorRat( 2/3 );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27X# numerator and denominator are made relatively prime:[127X[104X
+    [4X[25Xgap>[125X [27XNumeratorRat( 66/123 );[127X[104X
+    [4X[28X22[128X[104X
+    [4X[25Xgap>[125X [27XNumeratorRat( 17/-13 );  # numerator holds the sign of the rational[127X[104X
+    [4X[28X-17[128X[104X
+    [4X[25Xgap>[125X [27XNumeratorRat( 11 );      # integers are rationals with denominator 1[127X[104X
+    [4X[28X11[128X[104X
+  [4X[32X[104X
+  
+  [1X17.2-5 DenominatorRat[101X
+  
+  [33X[1;0Y[29X[2XDenominatorRat[102X( [3Xrat[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XDenominatorRat[102X  returns  the  denominator  of  the rational [3Xrat[103X. Because the
+  numerator  holds  the  sign  of  the  rational  the  denominator is always a
+  positive  integer.  Integers  are  rationals  with  the  denominator 1, thus
+  [2XDenominatorRat[102X returns 1 for integers.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDenominatorRat( 2/3 );[127X[104X
+    [4X[28X3[128X[104X
+    [4X[25Xgap>[125X [27X# numerator and denominator are made relatively prime:[127X[104X
+    [4X[25Xgap>[125X [27XDenominatorRat( 66/123 );[127X[104X
+    [4X[28X41[128X[104X
+    [4X[25Xgap>[125X [27X# the denominator holds the sign of the rational:[127X[104X
+    [4X[25Xgap>[125X [27XDenominatorRat( 17/-13 );[127X[104X
+    [4X[28X13[128X[104X
+    [4X[25Xgap>[125X [27XDenominatorRat( 11 ); # integers are rationals with denominator 1[127X[104X
+    [4X[28X1[128X[104X
+  [4X[32X[104X
+  
+  [1X17.2-6 Rat[101X
+  
+  [33X[1;0Y[29X[2XRat[102X( [3Xelm[103X ) [32X attribute[133X
+  
+  [33X[0;0Y[2XRat[102X returns a rational number [3Xrat[103X whose meaning depends on the type of [3Xelm[103X.[133X
+  
+  [33X[0;0YIf  [3Xelm[103X  is a string consisting of digits [10X'0'[110X, [10X'1'[110X, [22X...[122X, [10X'9'[110X and [10X'-'[110X (at the
+  first  position),  [10X'/'[110X  and  the  decimal  dot  [10X'.'[110X then [3Xrat[103X is the rational
+  described by this string. If [3Xelm[103X is a rational number, then [10XRat[110X returns [3Xelm[103X.
+  The  operation  [2XString[102X ([14X27.7-6[114X) can be used to compute a string for rational
+  numbers, in fact for all cyclotomics.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRat( "1/2" );  Rat( "35/14" );  Rat( "35/-27" );  Rat( "3.14159" );[127X[104X
+    [4X[28X1/2[128X[104X
+    [4X[28X5/2[128X[104X
+    [4X[28X-35/27[128X[104X
+    [4X[28X314159/100000[128X[104X
+  [4X[32X[104X
+  
+  [1X17.2-7 Random[101X
+  
+  [33X[1;0Y[29X[2XRandom[102X( [3XRationals[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XRandom[102X  for rationals returns pseudo random rationals which are the quotient
+  of two random integers. See the description of [2XRandom[102X ([14X14.2-13[114X) for details.
+  (Also see [2XRandom[102X ([14X30.7-1[114X).)[133X
+  

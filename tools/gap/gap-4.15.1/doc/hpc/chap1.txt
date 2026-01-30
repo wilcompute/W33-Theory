@@ -1,0 +1,409 @@
+  
+  [1X1 [33X[0;0YTasks[133X[101X
+  
+  
+  [1X1.1 [33X[0;0YOverview[133X[101X
+  
+  [33X[0;0YTasks  provide  mid- to high-level functionality for programmers to describe
+  asynchronous  workflows.  A  task  is  an  asynchronously  or  synchronously
+  executing   job;   functions   exist  to  create  tasks  that  are  executed
+  concurrently,  on  demand,  or  in  the  current  thread;  to wait for their
+  completion, check their status, and retrieve any results.[133X
+  
+  [33X[0;0YHere is a simple example of sorting a list in the background:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtask := RunTask(x -> SortedList(x), [3,2,1]);;[127X[104X
+    [4X[25Xgap>[125X [27XWaitTask(task);[127X[104X
+    [4X[25Xgap>[125X [27XTaskResult(task);[127X[104X
+    [4X[28X[ 1, 2, 3 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[2XRunTask[102X  ([14X1.2-1[114X)  dispatches  a  task  to  run  in the background; a task is
+  described  by  a  function  and  zero  or  more arguments that are passed to
+  [2XRunTask[102X  ([14X1.2-1[114X).  [2XWaitTask[102X  ([14X1.2-9[114X)  waits  for  the  task to complete; and
+  [10XTaskResult[110X returns the result of the task.[133X
+  
+  [33X[0;0Y[2XTaskResult[102X  ([14X1.2-11[114X)  does  an implicit [2XWaitTask[102X ([14X1.2-9[114X), so the second line
+  above can actually be omitted:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtask := RunTask(x -> SortedList(x), [3,2,1]);;[127X[104X
+    [4X[25Xgap>[125X [27XTaskResult(task);[127X[104X
+    [4X[28X[ 1, 2, 3 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIt  is  simple  to run two tasks in parallel. Let's compute the factorial of
+  10000 by splitting the work between two tasks:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtask1 := RunTask(Product, [1..5000]);;[127X[104X
+    [4X[25Xgap>[125X [27Xtask2 := RunTask(Product, [5001..10000]);;[127X[104X
+    [4X[25Xgap>[125X [27XTaskResult(task1) * TaskResult(task2) = Factorial(10000);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YYou  can  use [2XDelayTask[102X ([14X1.2-3[114X) to delay executing the task until its result
+  is actually needed.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtask1 := DelayTask(Product, [1..5000]);;[127X[104X
+    [4X[25Xgap>[125X [27Xtask2 := DelayTask(Product, [5001..10000]);;[127X[104X
+    [4X[25Xgap>[125X [27XWaitTask(task1, task2);[127X[104X
+    [4X[25Xgap>[125X [27XTaskResult(task1) * TaskResult(task2) = Factorial(10000);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  [2XWaitTask[102X  ([14X1.2-9[114X) is used here to start execution of both tasks;
+  otherwise,  [10Xtask2[110X  would  not  be  started  until [10XTaskResult(task1)[110X has been
+  evaluated.[133X
+  
+  [33X[0;0YTo start execution of a delayed task, you can also use [10XExecuteTask[110X. This has
+  no effect if a task has already been running.[133X
+  
+  [33X[0;0YFor  convenience,  you  can also use [2XImmediateTask[102X ([14X1.2-7[114X) to execute a task
+  synchronously  (i.e.,  the task is started immediately and the call does not
+  return until the task has completed).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtask := ImmediateTask(x -> SortedList(x), [3,2,1]);;[127X[104X
+    [4X[25Xgap>[125X [27XTaskResult(task);[127X[104X
+    [4X[28X[ 1, 2, 3 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis  is  indistinguishable from calling the function directly, but provides
+  the same interface as normal tasks.[133X
+  
+  [33X[0;0YIf  e.g.  you  want  to call a function only for its side-effects, it can be
+  useful  to  ignore  the  result of a task. [2XRunAsyncTask[102X ([14X1.2-4[114X) provides the
+  necessary functionality. Such a task cannot be waited for and its result (if
+  any) is ignored.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRunAsyncTask(function() Print("Hello, world!\n"); end);;[127X[104X
+    [4X[25Xgap>[125X [27X!list[127X[104X
+    [4X[28X--- Thread 0 [0][128X[104X
+    [4X[28X--- Thread 5 [5] (pending output)[128X[104X
+    [4X[25Xgap>[125X [27X!5[127X[104X
+    [4X[28X--- Switching to thread 5[128X[104X
+    [4X[28X[5] Hello, world![128X[104X
+    [4X[28X!0[128X[104X
+    [4X[28X--- Switching to thread 0[128X[104X
+    [4X[28Xgap>[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YFor more information on the multi-threaded user interface, see Chapter [14X4[114X.[133X
+  
+  [33X[0;0YTask  arguments are generally copied so that both the task that created them
+  and the task that uses them can access the data concurrently without fear of
+  race conditions. To avoid copying, arguments should be made shared or public
+  (see  the  relevant  parts  of  section  [14X3.6[114X  on  migrating  objects between
+  regions); shared and public arguments will not be copied.[133X
+  
+  [33X[0;0YHPC-GAP  currently  has  multiple implementations of the task API. To use an
+  alternative  implementation  to the one documented here, set the environment
+  variable [10XGAP_WORKSTEALING[110X to a non-empty value before starting GAP.[133X
+  
+  
+  [1X1.2 [33X[0;0YRunning tasks[133X[101X
+  
+  [1X1.2-1 RunTask[101X
+  
+  [33X[1;0Y[29X[2XRunTask[102X( [3Xfunc[103X[, [3Xarg1[103X, [3X...[103X, [3Xargn[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XRunTask[102X  prepares a task for execution and starts it. The task will call the
+  function  [3Xfunc[103X  with  arguments  [3Xarg1[103X through [3Xargn[103X (if provided). The return
+  value  of  [3Xfunc[103X is the result of the task. The [2XRunTask[102X call itself returns a
+  task object that can be used by functions that expect a task argument.[133X
+  
+  [1X1.2-2 ScheduleTask[101X
+  
+  [33X[1;0Y[29X[2XScheduleTask[102X( [3Xcondition[103X, [3Xfunc[103X[, [3Xarg1[103X, [3X...[103X, [3Xargn[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XScheduleTask[102X prepares a task for execution, but, unlike [2XRunTask[102X ([14X1.2-1[114X) does
+  not  start  it  until  [3Xcondition[103X is met. See on how to construct conditions.
+  Simple  examples  of conditions are individual tasks, where execution occurs
+  after  the  task  completes, or lists of tasks, where execution occurs after
+  all tasks in the list complete.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xt1 := RunTask(x->x*x, 3);;[127X[104X
+    [4X[25Xgap>[125X [27Xt2 := RunTask(x->x*x, 4);;[127X[104X
+    [4X[25Xgap>[125X [27Xt := ScheduleTask([t1, t2], function()[127X[104X
+    [4X[25X>[125X [27X          return TaskResult(t1) + TaskResult(t2);[127X[104X
+    [4X[25X>[125X [27X   end);;[127X[104X
+    [4X[25Xgap>[125X [27XTaskResult(t);[127X[104X
+    [4X[28X25[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWhile  the above example could also be achieved with [2XRunTask[102X ([14X1.2-1[114X) in lieu
+  of  [2XScheduleTask[102X,  since  [2XTaskResult[102X  ([14X1.2-11[114X)  would  wait for [3Xt1[103X and [3Xt2[103X to
+  complete,  the  above  implementation does not actually start the final task
+  until the others are complete, making it more efficient, since no additional
+  worker thread needs to be occupied.[133X
+  
+  [1X1.2-3 DelayTask[101X
+  
+  [33X[1;0Y[29X[2XDelayTask[102X( [3Xfunc[103X[, [3Xarg1[103X, [3X...[103X, [3Xargn[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XDelayTask[102X  works  as  [2XRunTask[102X  ([14X1.2-1[114X), but its start is delayed until it is
+  being waited for (including implicitly by calling [2XTaskResult[102X ([14X1.2-11[114X)).[133X
+  
+  [1X1.2-4 RunAsyncTask[101X
+  
+  [33X[1;0Y[29X[2XRunAsyncTask[102X( [3Xfunc[103X[, [3Xarg1[103X, [3X...[103X, [3Xargn[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XRunAsyncTask[102X  creates  an  asynchronous task. It works like [2XRunTask[102X ([14X1.2-1[114X),
+  except that its result will be ignored.[133X
+  
+  [1X1.2-5 ScheduleAsyncTask[101X
+  
+  [33X[1;0Y[29X[2XScheduleAsyncTask[102X( [3Xcondition[103X, [3Xfunc[103X[, [3Xarg1[103X, [3X...[103X, [3Xargn[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XScheduleAsyncTask[102X  creates  an asynchronous task. It works like [2XScheduleTask[102X
+  ([14X1.2-2[114X), except that its result will be ignored.[133X
+  
+  [1X1.2-6 MakeTaskAsync[101X
+  
+  [33X[1;0Y[29X[2XMakeTaskAsync[102X( [3Xtask[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XMakeTaskAsync[102X turns a synchronous task into an asynchronous task that cannot
+  be waited for and whose result will be ignored.[133X
+  
+  [1X1.2-7 ImmediateTask[101X
+  
+  [33X[1;0Y[29X[2XImmediateTask[102X( [3Xfunc[103X[, [3Xarg1[103X, [3X...[103X, [3Xargn[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XImmediateTask[102X  executes  the  task specified by its arguments synchronously,
+  usually within the current thread.[133X
+  
+  [1X1.2-8 ExecuteTask[101X
+  
+  [33X[1;0Y[29X[2XExecuteTask[102X( [3Xtask[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XExecuteTask[102X  starts [3Xtask[103X if it is not already running. It has only an effect
+  if  its argument is a task returned by [2XDelayTask[102X ([14X1.2-3[114X); otherwise, it is a
+  no-op.[133X
+  
+  [1X1.2-9 WaitTask[101X
+  
+  [33X[1;0Y[29X[2XWaitTask[102X( [3Xtask1[103X, [3X...[103X, [3Xtaskn[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XWaitTask[102X( [3Xcondition[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XWaitTasks[102X( [3Xtask1[103X, [3X...[103X, [3Xtaskn[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XWaitTask[102X  waits  until  [3Xtask1[103X  through  [3Xtaskn[103X have completed; after that, it
+  returns.  Alternatively,  a  condition can be passed to [2XWaitTask[102X in order to
+  wait until a condition is met. See on how to construct conditions. [2XWaitTasks[102X
+  is an alias for [2XWaitTask[102X.[133X
+  
+  [1X1.2-10 WaitAnyTask[101X
+  
+  [33X[1;0Y[29X[2XWaitAnyTask[102X( [3Xtask1[103X, [3X...[103X, [3Xtaskn[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XWaitAnyTask[102X  function  waits  for  any of its arguments to finish, then
+  returns the number of that task.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtask1 := DelayTask(x->SortedList(x), [3,2,1]);;[127X[104X
+    [4X[25Xgap>[125X [27Xtask2 := DelayTask(x->SortedList(x), [6,5,4]);;[127X[104X
+    [4X[25Xgap>[125X [27Xwhich := WaitAnyTask(task1, task2);[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27Xif which = 1 then[127X[104X
+    [4X[25X>[125X [27X     Display(TaskResult(task1));Display(TaskResult(task2));[127X[104X
+    [4X[25X>[125X [27X   else[127X[104X
+    [4X[25X>[125X [27X     Display(TaskResult(task2));Display(TaskResult(task1));[127X[104X
+    [4X[25X>[125X [27X   fi;[127X[104X
+    [4X[28X[ 4, 5, 6 ][128X[104X
+    [4X[28X[ 1, 2, 3 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YOne   can   pass   a   list   of   tasks  to  [10XWaitAnyTask[110X  as  an  argument;
+  [10XWaitAnyTask([task1,  ...,  taskn])[110X behaves identically to [10XWaitAnyTask(task1,
+  ..., taskn)[110X.[133X
+  
+  [1X1.2-11 TaskResult[101X
+  
+  [33X[1;0Y[29X[2XTaskResult[102X( [3Xtask[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XTaskResult[102X  function  returns the result of a task. It implicitly calls
+  [2XWaitTask[102X  ([14X1.2-9[114X)  if  that is necessary. Multiple invocations of [2XTaskResult[102X
+  with the same task argument will not do repeated waits and always return the
+  same value.[133X
+  
+  [33X[0;0YIf  the  function  executed  by [3Xtask[103X encounters an error, [2XTaskResult[102X returns
+  [9Xfail[109X.  Whether  [3Xtask[103X  encountered  an  error  can be checked via [2XTaskSuccess[102X
+  ([14X1.3-1[114X).  In  case  of  an  error,  the  error  message can be retrieved via
+  [2XTaskError[102X ([14X1.3-2[114X).[133X
+  
+  [1X1.2-12 CullIdleTasks[101X
+  
+  [33X[1;0Y[29X[2XCullIdleTasks[102X(  ) [32X function[133X
+  
+  [33X[0;0YThis function terminates unused worker threads.[133X
+  
+  
+  [1X1.3 [33X[0;0YInformation about tasks[133X[101X
+  
+  [1X1.3-1 TaskSuccess[101X
+  
+  [33X[1;0Y[29X[2XTaskSuccess[102X( [3Xtask[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XTaskSuccess[102X  waits  for  [3Xtask[103X  and  returns  [9Xtrue[109X if the it finished without
+  encountering an error. Otherwise the function returns [9Xfalse[109X.[133X
+  
+  [1X1.3-2 TaskError[101X
+  
+  [33X[1;0Y[29X[2XTaskError[102X( [3Xtask[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XTaskError[102X waits for [3Xtask[103X and returns its error message, if it encountered an
+  error. If it did not encounter an error, the function returns [9Xfail[109X.[133X
+  
+  [1X1.3-3 CurrentTask[101X
+  
+  [33X[1;0Y[29X[2XCurrentTask[102X(  ) [32X function[133X
+  
+  [33X[0;0YThe [2XCurrentTask[102X returns the currently running task.[133X
+  
+  [1X1.3-4 RunningTasks[101X
+  
+  [33X[1;0Y[29X[2XRunningTasks[102X(  ) [32X function[133X
+  
+  [33X[0;0YThis function returns the number of currently running tasks. Note that it is
+  only an approximation and can change as new tasks are being started by other
+  threads.[133X
+  
+  [1X1.3-5 TaskStarted[101X
+  
+  [33X[1;0Y[29X[2XTaskStarted[102X( [3Xtask[103X ) [32X function[133X
+  
+  [33X[0;0YThis  function returns true if the task has started executing (i.e., for any
+  non-delayed task), false otherwise.[133X
+  
+  [1X1.3-6 TaskFinished[101X
+  
+  [33X[1;0Y[29X[2XTaskFinished[102X( [3Xtask[103X ) [32X function[133X
+  
+  [33X[0;0YThis function returns true if the task has finished executing and its result
+  is available, false otherwise.[133X
+  
+  [1X1.3-7 TaskIsAsync[101X
+  
+  [33X[1;0Y[29X[2XTaskIsAsync[102X( [3Xtask[103X ) [32X function[133X
+  
+  [33X[0;0YThis function returns true if the task is asynchronous, true otherwise.[133X
+  
+  
+  [1X1.4 [33X[0;0YCancelling tasks[133X[101X
+  
+  [33X[0;0YHPC-GAP  uses  a  cooperative  model for task cancellation. A programmer can
+  request the cancellation of another task, but it is up to that other task to
+  actually  terminate  itself.  The  tasks  library  has  functions to request
+  cancellation,  to  test for the cancellation state of a task, and to perform
+  actions in response to cancellation requests.[133X
+  
+  [1X1.4-1 CancelTask[101X
+  
+  [33X[1;0Y[29X[2XCancelTask[102X( [3Xtask[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XCancelTask[102X submits a request that [3Xtask[103X is to be cancelled.[133X
+  
+  [1X1.4-2 TaskCancellationRequested[101X
+  
+  [33X[1;0Y[29X[2XTaskCancellationRequested[102X( [3Xtask[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XTaskCancellationRequested[102X returns true if [2XCancelTask[102X ([14X1.4-1[114X) has been called
+  for [3Xtask[103X, false otherwise.[133X
+  
+  [1X1.4-3 OnTaskCancellation[101X
+  
+  [33X[1;0Y[29X[2XOnTaskCancellation[102X( [3Xexit_func[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XOnTaskCancellation[102X  tests  if  cancellation  for  the  current task has been
+  requested.  If  so,  then  [3Xexit_func[103X  will  be  called  (as  a parameterless
+  function)  and  the  current task will be aborted. The result of the current
+  task will be the value of [3Xexit_func()[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtask := RunTask(function()[127X[104X
+    [4X[25X>[125X [27X     while true do[127X[104X
+    [4X[25X>[125X [27X       OnTaskCancellation(function() return 314; end);[127X[104X
+    [4X[25X>[125X [27X     od;[127X[104X
+    [4X[25X>[125X [27X   end);;[127X[104X
+    [4X[25Xgap>[125X [27XCancelTask(task);[127X[104X
+    [4X[25Xgap>[125X [27XTaskResult(task);[127X[104X
+    [4X[28X314[128X[104X
+  [4X[32X[104X
+  
+  [1X1.4-4 OnTaskCancellationReturn[101X
+  
+  [33X[1;0Y[29X[2XOnTaskCancellationReturn[102X( [3Xvalue[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XOnTaskCancellationReturn[102X  is  a  convenience function that does the same as:
+  [10XOnTaskCancellation(function() return value; end);[110X[133X
+  
+  
+  [1X1.5 [33X[0;0YConditions[133X[101X
+  
+  [33X[0;0Y[2XScheduleTask[102X  ([14X1.2-2[114X)  and  [2XWaitTask[102X  ([14X1.2-9[114X)  can  be  made to wait on more
+  complex  conditions  than  just  tasks. A condition is either a milestone, a
+  task,  or  a  list  of milestones and tasks. [2XScheduleTask[102X ([14X1.2-2[114X) starts its
+  task  and  [2XWaitTask[102X  ([14X1.2-9[114X)  returns  when  the  condition  has been met. A
+  condition  represented  by  a  task  is  met  when the task has completed. A
+  condition  represented  by  a  milestone  is met when the milestone has been
+  achieved  (see  below).  A  condition  represented by a list is met when all
+  conditions in the list have been met.[133X
+  
+  
+  [1X1.6 [33X[0;0YMilestones[133X[101X
+  
+  [33X[0;0YMilestones  are  a  way  to  represent abstract conditions to which multiple
+  tasks can contribute.[133X
+  
+  [1X1.6-1 NewMilestone[101X
+  
+  [33X[1;0Y[29X[2XNewMilestone[102X( [[3Xlist[103X] ) [32X function[133X
+  
+  [33X[0;0YThe [2XNewMilestone[102X function creates a new milestone. Its argument is a list of
+  targets,  which  must  be a list of integers and/or strings. If omitted, the
+  list defaults to [10X[0][110X.[133X
+  
+  [1X1.6-2 ContributeToMilestone[101X
+  
+  [33X[1;0Y[29X[2XContributeToMilestone[102X( [3Xmilestone[103X, [3Xtarget[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XContributeToMilestone[102X  milestone  function  contributes  the  specified
+  target  to  the  milestone.  Once  all  targets  have  been contributed to a
+  milestone, it has been achieved.[133X
+  
+  [1X1.6-3 AchieveMilestone[101X
+  
+  [33X[1;0Y[29X[2XAchieveMilestone[102X( [3Xmilestone[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XAchieveMilestone[102X  function allows a program to achieve a milestone in a
+  single  step without adding individual targets to it. This is most useful in
+  conjunction with the default value for [2XNewMilestone[102X ([14X1.6-1[114X), e.g.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm := NewMilestone();;[127X[104X
+    [4X[25Xgap>[125X [27XAchieveMilestone(m);[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y>[133X
+  
+  [1X1.6-4 IsMilestoneAchieved[101X
+  
+  [33X[1;0Y[29X[2XIsMilestoneAchieved[102X( [3Xmilestone[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XIsMilestoneAchieved[102X  tests  explicitly  if a milestone has been achieved. It
+  returns [9Xtrue[109X on success, [9Xfalse[109X otherwise.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm := NewMilestone([1,2]);;[127X[104X
+    [4X[25Xgap>[125X [27XContributeToMilestone(m, 1);[127X[104X
+    [4X[25Xgap>[125X [27XIsMilestoneAchieved(m);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XContributeToMilestone(m, 2);[127X[104X
+    [4X[25Xgap>[125X [27XIsMilestoneAchieved(m);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  

@@ -1,0 +1,792 @@
+[
+  {
+    "file": "W33_FORMAL_THEORY.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "edges=240",
+        "verified": true,
+        "computed": 240
+      }
+    ],
+    "excerpt": "[Witting-W33-E8 Correspondence]\nThe following three sets are in natural bijection:\n\\begin{enumerate}[label=(\\roman*)]\n    \\item The 40 points of W(3,3)\n    \\item The 40 diameters of the Witting polyto"
+  },
+  {
+    "file": "W33_FORMAL_THEORY.tex",
+    "env": "proposition",
+    "matches": [
+      {
+        "claim": "27 non-neighbors",
+        "verified": true,
+        "computed": {
+          "vertex_0_count": 27,
+          "all_counts": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ]
+        }
+      }
+    ],
+    "excerpt": "$\\dim(J_3(\\mathbb{O})) = 27 = \\dim(\\mathrm{fund}(E_6))$"
+  },
+  {
+    "file": "W33_FORMAL_THEORY.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "27 non-neighbors",
+        "verified": true,
+        "computed": {
+          "vertex_0_count": 27,
+          "all_counts": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ]
+        }
+      }
+    ],
+    "excerpt": "[Koide Parameter]\nThe charged lepton mass parameter satisfies:\n\\begin{equation}\n    Q = \\frac{m_e + m_\\mu + m_\\tau}{(\\sqrt{m_e} + \\sqrt{m_\\mu} + \\sqrt{m_\\tau})^2} = \\frac{2 \\times 27}{81} = \\frac{2}{3"
+  },
+  {
+    "file": "W33_FORMAL_THEORY.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "27 non-neighbors",
+        "verified": true,
+        "computed": {
+          "vertex_0_count": 27,
+          "all_counts": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ]
+        }
+      }
+    ],
+    "excerpt": "[Dark Matter Ratio]\n\\begin{equation}\n    \\boxed{\\frac{\\Omega_{\\mathrm{DM}}}{\\Omega_b} = \\frac{\\dim(\\mathrm{fund}(E_6))}{\\dim(E_7) - \\dim(\\mathrm{spinor})} = \\frac{27}{133 - 128} = \\frac{27}{5} = 5.4}\n"
+  },
+  {
+    "file": "W33_FORMAL_THEORY.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "27 non-neighbors",
+        "verified": true,
+        "computed": {
+          "vertex_0_count": 27,
+          "all_counts": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ]
+        }
+      }
+    ],
+    "excerpt": "[Generation Count]\n\\begin{equation}\n    \\boxed{N_{\\mathrm{gen}} = \\frac{W_{33,\\text{cycles}}}{\\dim(\\mathrm{fund}(E_6))} = \\frac{81}{27} = 3}\n\\end{equation}"
+  },
+  {
+    "file": "W33_FORMAL_THEORY.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "27 non-neighbors",
+        "verified": true,
+        "computed": {
+          "vertex_0_count": 27,
+          "all_counts": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ]
+        }
+      }
+    ],
+    "excerpt": "[Cosmological Constant]\n\\begin{equation}\n    \\boxed{-\\log_{10}\\left(\\frac{\\Lambda}{\\Planck^4}\\right) = \\Wtotal + \\frac{1}{2} + \\frac{1}{27} = 121.537}\n\\end{equation}"
+  },
+  {
+    "file": "W33_FORMAL_THEORY.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "27 non-neighbors",
+        "verified": true,
+        "computed": {
+          "vertex_0_count": 27,
+          "all_counts": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ]
+        }
+      }
+    ],
+    "excerpt": "[CKM from W33]\n\\begin{align}\n    |V_{us}| &= \\frac{\\overbrace{9}^{\\text{gen}^2}}{\\underbrace{40}_{\\text{pts}}} = 0.225 \\quad (\\text{obs: } 0.2243 \\pm 0.0005\\text{ \\cite{pdg}}) \\\\[0.5em]\n    |V_{cb}| &"
+  },
+  {
+    "file": "W33_FORMAL_THEORY.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "27 non-neighbors",
+        "verified": true,
+        "computed": {
+          "vertex_0_count": 27,
+          "all_counts": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ]
+        }
+      }
+    ],
+    "excerpt": "[CP Phase from W33]\n\\begin{equation}\n    \\delta_{CP} = \\frac{4\\pi}{\\sqrt{\\underbrace{121}_{\\text{total}}}} = \\frac{4\\pi}{11} = 1.142\\,\\text{rad} = 65.45^\\circ\n\\end{equation}\nObserved: $\\delta_{CP} = 1"
+  },
+  {
+    "file": "W33_FORMAL_THEORY.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "27 non-neighbors",
+        "verified": true,
+        "computed": {
+          "vertex_0_count": 27,
+          "all_counts": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ]
+        }
+      }
+    ],
+    "excerpt": "[GUT Coupling]\n\\begin{equation}\n    \\alpha_{\\text{GUT}}^{-1} = \\underbrace{27}_{E_6\\text{ fund}} - \\underbrace{3}_{\\text{gen}} = 24\n\\end{equation}\nStandard GUT predictions: $\\alpha_{\\text{GUT}}^{-1} \\"
+  },
+  {
+    "file": "W33_FORMAL_THEORY.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "27 non-neighbors",
+        "verified": true,
+        "computed": {
+          "vertex_0_count": 27,
+          "all_counts": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ]
+        }
+      }
+    ],
+    "excerpt": "[Inflation from E7]\n\\begin{align}\n    N_{\\text{e-folds}} &= \\underbrace{56}_{E_7\\text{ fund}} \\\\[0.5em]\n    n_s &= 1 - \\frac{2}{56} = \\frac{\\overbrace{27}^{E_6\\text{ f}}}{28} = 0.9643 \\quad (\\text{obs"
+  },
+  {
+    "file": "W33_FORMAL_THEORY.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "27 non-neighbors",
+        "verified": true,
+        "computed": {
+          "vertex_0_count": 27,
+          "all_counts": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ]
+        }
+      }
+    ],
+    "excerpt": "[Number of Light Higgs Bosons]\nFrom the E6 decomposition $27 = 16 + 10 + 1$ under SO(10):\n\\begin{equation}\n    N_{\\text{light Higgs}} = 1\n\\end{equation}\nAdditional Higgs states from the 27 are decoupl"
+  },
+  {
+    "file": "W33_FORMAL_THEORY.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "27 non-neighbors",
+        "verified": true,
+        "computed": {
+          "vertex_0_count": 27,
+          "all_counts": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ]
+        }
+      }
+    ],
+    "excerpt": "[Dirac CP Phase]\n\\begin{equation}\n    \\delta_{CP} = \\pi + \\arcsin\\left(\\frac{\\overbrace{27}^{E_6\\text{ f}}}{\\underbrace{133}_{E_7\\text{ adj}}}\\right) = \\pi + 11.7^\\circ = 191.7^\\circ\n\\end{equation}\nEx"
+  },
+  {
+    "file": "W33_FORMAL_THEORY.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "27 non-neighbors",
+        "verified": true,
+        "computed": {
+          "vertex_0_count": 27,
+          "all_counts": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ]
+        }
+      }
+    ],
+    "excerpt": "[No Light Sterile Neutrinos]\nThe E6 singlet in $27 = 16 + 10 + 1$ has mass $\\sim M_{\\text{GUT}}$:\n\\begin{equation}\n    N_{\\text{sterile}} = 0 \\quad \\text{(at accessible energies)}\n\\end{equation}"
+  },
+  {
+    "file": "W33_FORMAL_THEORY.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "edges=240",
+        "verified": true,
+        "computed": 240
+      },
+      {
+        "claim": "27 non-neighbors",
+        "verified": true,
+        "computed": {
+          "vertex_0_count": 27,
+          "all_counts": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ]
+        }
+      }
+    ],
+    "excerpt": "[Strong Coupling from W33]\n\\begin{equation}\n    \\boxed{\\alpha_s(M_Z) = \\frac{\\overbrace{27}^{E_6\\text{ fund}}}{\\underbrace{240}_{E_8\\text{ roots}} - \\underbrace{11}_{\\sqrt{\\text{tot}}}} = \\frac{27}{22"
+  },
+  {
+    "file": "W33_FORMAL_THEORY.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "edges=240",
+        "verified": true,
+        "computed": 240
+      },
+      {
+        "claim": "27 non-neighbors",
+        "verified": true,
+        "computed": {
+          "vertex_0_count": 27,
+          "all_counts": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ]
+        }
+      }
+    ],
+    "excerpt": "[Proton Mass from W33]\n\\begin{equation}\n    \\boxed{m_p = \\frac{v\\,[\\text{GeV}]}{\\overbrace{240}^{E_8\\text{ roots}} + \\underbrace{27}_{E_6\\text{ f}} - \\underbrace{3}_{\\text{gen}}} = \\frac{v}{264} = 0.9"
+  },
+  {
+    "file": "W33_TOE_COMPLETE_v31_EXECUTEDPATCH.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "edges=240",
+        "verified": true,
+        "computed": 240
+      }
+    ],
+    "excerpt": "[Master Theorem II: 120-root shell and 240 signed lift]\nThe induced action on $H$ preserves a quadratic form of minus type. The nonsingular orbit has size 120 and carries $\\mathrm{SRG}(120,56,28,24)$ "
+  },
+  {
+    "file": "W33_TOE_COMPLETE_v31_EXECUTEDPATCH.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "Aut(W33)=51840",
+        "verified": true,
+        "computed": 51840
+      }
+    ],
+    "excerpt": "[Automorphism group order]\n\\label{thm:aut}\n$\\lvert \\mathrm{Aut}(\\mathrm{W33})\\rvert = 51840$."
+  },
+  {
+    "file": "W33_TOE_COMPLETE_v31_EXECUTEDPATCH.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "edges=240",
+        "verified": true,
+        "computed": 240
+      }
+    ],
+    "excerpt": "[Canonical local generators and code distance]\n\\label{thm:code}\nThe kernel $C=\\ker(A)\\subset \\mathbb{F}_2^{40}$ is a $[40,24,6]$ linear code. Moreover, there are exactly 240 canonical weight-6 codewor"
+  },
+  {
+    "file": "W33_TOE_COMPLETE_v31_EXECUTEDPATCH.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "edges=240",
+        "verified": true,
+        "computed": 240
+      }
+    ],
+    "excerpt": "[240 $\\to$ 120 projection]\n\\label{thm:240to120}\nProjecting the 240 canonical weight-6 code generators (Theorem~\\ref{thm:code}) from $\\ker(A)$ to $H=\\ker(A)/\\mathrm{im}(A)$ yields exactly 120 distinct "
+  },
+  {
+    "file": "W33_TOE_COMPLETE_v31_EXECUTEDPATCH.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "edges=240",
+        "verified": true,
+        "computed": 240
+      }
+    ],
+    "excerpt": "[Global gauge fix (no-16)]\n\\label{thm:n016}\nThere exists a global choice of signs (i.e., a section $s$ selecting one of the two lifts at every root) such that all defects of weight 16 are eliminated. "
+  },
+  {
+    "file": "W33_TOE_COMPLETE_v31_EXECUTEDPATCH.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "27 non-neighbors",
+        "verified": true,
+        "computed": {
+          "vertex_0_count": 27,
+          "all_counts": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ]
+        }
+      }
+    ],
+    "excerpt": "[Quotient graph is the complement]\n\\label{thm:quotient}\nThe quotient graph $Q$ is regular of degree 27 on 40 vertices and is exactly the complement of the original W33 point graph:\n\\[\nQ = \\overline{\\m"
+  },
+  {
+    "file": "W33_TOE_COMPLETE_v31_EXECUTEDPATCH.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "edges=240",
+        "verified": true,
+        "computed": 240
+      }
+    ],
+    "excerpt": "[90 non-isotropic lines classify flat holonomy]\n\\label{thm:90}\nAmong the 3240 triangles of $Q$, exactly 360 have identity holonomy and 2880 have 3-cycle holonomy. Moreover, the identity-holonomy trian"
+  },
+  {
+    "file": "W33_TEX_AND_PDF_COMPLETE_BUNDLE_v50\\W33_TOE_COMPLETE_v49.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "27 non-neighbors",
+        "verified": true,
+        "computed": {
+          "vertex_0_count": 27,
+          "all_counts": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ]
+        }
+      }
+    ],
+    "excerpt": "[Five-orbital scheme on the 120 nonsingular orbit]\nThe 120-element nonsingular orbit (the $q=3$ root shell) carries a symmetric 5-orbital association scheme with relation valencies\n\\[\n1,\\ 2,\\ 27,\\ 36,"
+  },
+  {
+    "file": "W33_TEX_AND_PDF_COMPLETE_BUNDLE_v50\\W33_TOE_COMPLETE_v49.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "27 non-neighbors",
+        "verified": true,
+        "computed": {
+          "vertex_0_count": 27,
+          "all_counts": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ]
+        }
+      }
+    ],
+    "excerpt": "[q=3 harmonic spectrum matches the closed-form ladder]\nThe five primitive mode multiplicities are\n\\[\n1,\\ 24,\\ 60,\\ 15,\\ 20,\n\\]\nand the eigenvalues on the four nontrivial relations $(2,27,36,54)$ match"
+  },
+  {
+    "file": "W33_TEX_AND_PDF_COMPLETE_BUNDLE_v50\\W33_TOE_COMPLETE_v49.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "edges=240",
+        "verified": true,
+        "computed": 240
+      }
+    ],
+    "excerpt": "[Master Theorem II: 120-root shell and 240 signed lift]\nThe induced action on $H$ preserves a quadratic form of minus type. The nonsingular orbit has size 120 and carries $\\mathrm{SRG}(120,56,28,24)$ "
+  },
+  {
+    "file": "W33_TEX_AND_PDF_COMPLETE_BUNDLE_v50\\W33_TOE_COMPLETE_v49.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "Aut(W33)=51840",
+        "verified": true,
+        "computed": 51840
+      }
+    ],
+    "excerpt": "[Automorphism group order]\n\\label{thm:aut}\n$\\lvert \\mathrm{Aut}(\\mathrm{W33})\\rvert = 51840$."
+  },
+  {
+    "file": "W33_TEX_AND_PDF_COMPLETE_BUNDLE_v50\\W33_TOE_COMPLETE_v49.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "edges=240",
+        "verified": true,
+        "computed": 240
+      }
+    ],
+    "excerpt": "[Canonical local generators and code distance]\n\\label{thm:code}\nThe kernel $C=\\ker(A)\\subset \\mathbb{F}_2^{40}$ is a $[40,24,6]$ linear code. Moreover, there are exactly 240 canonical weight-6 codewor"
+  },
+  {
+    "file": "W33_TEX_AND_PDF_COMPLETE_BUNDLE_v50\\W33_TOE_COMPLETE_v49.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "edges=240",
+        "verified": true,
+        "computed": 240
+      }
+    ],
+    "excerpt": "[240 $\\to$ 120 projection]\n\\label{thm:240to120}\nProjecting the 240 canonical weight-6 code generators (Theorem~\\ref{thm:code}) from $\\ker(A)$ to $H=\\ker(A)/\\mathrm{im}(A)$ yields exactly 120 distinct "
+  },
+  {
+    "file": "W33_TEX_AND_PDF_COMPLETE_BUNDLE_v50\\W33_TOE_COMPLETE_v49.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "edges=240",
+        "verified": true,
+        "computed": 240
+      }
+    ],
+    "excerpt": "[Global gauge fix (no-16)]\n\\label{thm:n016}\nThere exists a global choice of signs (i.e., a section $s$ selecting one of the two lifts at every root) such that all defects of weight 16 are eliminated. "
+  },
+  {
+    "file": "W33_TEX_AND_PDF_COMPLETE_BUNDLE_v50\\W33_TOE_COMPLETE_v49.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "27 non-neighbors",
+        "verified": true,
+        "computed": {
+          "vertex_0_count": 27,
+          "all_counts": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ]
+        }
+      }
+    ],
+    "excerpt": "[Quotient graph is the complement]\n\\label{thm:quotient}\nThe quotient graph $Q$ is regular of degree 27 on 40 vertices and is exactly the complement of the original W33 point graph:\n\\[\nQ = \\overline{\\m"
+  },
+  {
+    "file": "W33_TEX_AND_PDF_COMPLETE_BUNDLE_v50\\W33_TOE_COMPLETE_v49.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "edges=240",
+        "verified": true,
+        "computed": 240
+      }
+    ],
+    "excerpt": "[90 non-isotropic lines classify flat holonomy]\n\\label{thm:90}\nAmong the 3240 triangles of $Q$, exactly 360 have identity holonomy and 2880 have 3-cycle holonomy. Moreover, the identity-holonomy trian"
+  },
+  {
+    "file": "W33_TEX_AND_PDF_COMPLETE_BUNDLE_v50\\W33_TOE_COMPLETE_v49.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "27 non-neighbors",
+        "verified": true,
+        "computed": {
+          "vertex_0_count": 27,
+          "all_counts": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ]
+        }
+      }
+    ],
+    "excerpt": "[Orbit sizes on $k$-subsets exclude size 13]\nFor the natural action of $PSL(2,13)$ on $PG(1,13)$, the induced action on $k$-subsets (for $k=3,4,5,6,7$) has orbit sizes among:\n\\[\nk=3:\\ 182;\\quad\nk=4:\\ "
+  },
+  {
+    "file": "W33_TEX_AND_PDF_COMPLETE_BUNDLE_v50\\W33_TOE_COMPLETE_v50.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "27 non-neighbors",
+        "verified": true,
+        "computed": {
+          "vertex_0_count": 27,
+          "all_counts": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ]
+        }
+      }
+    ],
+    "excerpt": "[Five-orbital scheme on the 120 nonsingular orbit]\nThe 120-element nonsingular orbit (the $q=3$ root shell) carries a symmetric 5-orbital association scheme with relation valencies\n\\[\n1,\\ 2,\\ 27,\\ 36,"
+  },
+  {
+    "file": "W33_TEX_AND_PDF_COMPLETE_BUNDLE_v50\\W33_TOE_COMPLETE_v50.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "27 non-neighbors",
+        "verified": true,
+        "computed": {
+          "vertex_0_count": 27,
+          "all_counts": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ]
+        }
+      }
+    ],
+    "excerpt": "[q=3 harmonic spectrum matches the closed-form ladder]\nThe five primitive mode multiplicities are\n\\[\n1,\\ 24,\\ 60,\\ 15,\\ 20,\n\\]\nand the eigenvalues on the four nontrivial relations $(2,27,36,54)$ match"
+  },
+  {
+    "file": "W33_TEX_AND_PDF_COMPLETE_BUNDLE_v50\\W33_TOE_COMPLETE_v50.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "edges=240",
+        "verified": true,
+        "computed": 240
+      }
+    ],
+    "excerpt": "[Master Theorem II: 120-root shell and 240 signed lift]\nThe induced action on $H$ preserves a quadratic form of minus type. The nonsingular orbit has size 120 and carries $\\mathrm{SRG}(120,56,28,24)$ "
+  },
+  {
+    "file": "W33_TEX_AND_PDF_COMPLETE_BUNDLE_v50\\W33_TOE_COMPLETE_v50.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "Aut(W33)=51840",
+        "verified": true,
+        "computed": 51840
+      }
+    ],
+    "excerpt": "[Automorphism group order]\n\\label{thm:aut}\n$\\lvert \\mathrm{Aut}(\\mathrm{W33})\\rvert = 51840$."
+  },
+  {
+    "file": "W33_TEX_AND_PDF_COMPLETE_BUNDLE_v50\\W33_TOE_COMPLETE_v50.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "edges=240",
+        "verified": true,
+        "computed": 240
+      }
+    ],
+    "excerpt": "[Canonical local generators and code distance]\n\\label{thm:code}\nThe kernel $C=\\ker(A)\\subset \\mathbb{F}_2^{40}$ is a $[40,24,6]$ linear code. Moreover, there are exactly 240 canonical weight-6 codewor"
+  },
+  {
+    "file": "W33_TEX_AND_PDF_COMPLETE_BUNDLE_v50\\W33_TOE_COMPLETE_v50.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "edges=240",
+        "verified": true,
+        "computed": 240
+      }
+    ],
+    "excerpt": "[240 $\\to$ 120 projection]\n\\label{thm:240to120}\nProjecting the 240 canonical weight-6 code generators (Theorem~\\ref{thm:code}) from $\\ker(A)$ to $H=\\ker(A)/\\mathrm{im}(A)$ yields exactly 120 distinct "
+  },
+  {
+    "file": "W33_TEX_AND_PDF_COMPLETE_BUNDLE_v50\\W33_TOE_COMPLETE_v50.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "edges=240",
+        "verified": true,
+        "computed": 240
+      }
+    ],
+    "excerpt": "[Global gauge fix (no-16)]\n\\label{thm:n016}\nThere exists a global choice of signs (i.e., a section $s$ selecting one of the two lifts at every root) such that all defects of weight 16 are eliminated. "
+  },
+  {
+    "file": "W33_TEX_AND_PDF_COMPLETE_BUNDLE_v50\\W33_TOE_COMPLETE_v50.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "27 non-neighbors",
+        "verified": true,
+        "computed": {
+          "vertex_0_count": 27,
+          "all_counts": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ]
+        }
+      }
+    ],
+    "excerpt": "[Quotient graph is the complement]\n\\label{thm:quotient}\nThe quotient graph $Q$ is regular of degree 27 on 40 vertices and is exactly the complement of the original W33 point graph:\n\\[\nQ = \\overline{\\m"
+  },
+  {
+    "file": "W33_TEX_AND_PDF_COMPLETE_BUNDLE_v50\\W33_TOE_COMPLETE_v50.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "edges=240",
+        "verified": true,
+        "computed": 240
+      }
+    ],
+    "excerpt": "[90 non-isotropic lines classify flat holonomy]\n\\label{thm:90}\nAmong the 3240 triangles of $Q$, exactly 360 have identity holonomy and 2880 have 3-cycle holonomy. Moreover, the identity-holonomy trian"
+  },
+  {
+    "file": "W33_TEX_AND_PDF_COMPLETE_BUNDLE_v50\\W33_TOE_COMPLETE_v50.tex",
+    "env": "theorem",
+    "matches": [
+      {
+        "claim": "27 non-neighbors",
+        "verified": true,
+        "computed": {
+          "vertex_0_count": 27,
+          "all_counts": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ]
+        }
+      }
+    ],
+    "excerpt": "[Orbit sizes on $k$-subsets exclude size 13]\nFor the natural action of $PSL(2,13)$ on $PG(1,13)$, the induced action on $k$-subsets (for $k=3,4,5,6,7$) has orbit sizes among:\n\\[\nk=3:\\ 182;\\quad\nk=4:\\ "
+  }
+]

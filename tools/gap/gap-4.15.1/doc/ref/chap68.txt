@@ -1,0 +1,203 @@
+  
+  [1X68 [33X[0;0Yp-adic Numbers (preliminary)[133X[101X
+  
+  [33X[0;0YIn this chapter [22Xp[122X is always a (fixed) prime integer.[133X
+  
+  [33X[0;0YThe  [22Xp[122X-adic  numbers  [22XQ_p[122X  are  the  completion of the rational numbers with
+  respect to the valuation [22Xν_p( p^v ⋅ a / b) = v[122X if [22Xp[122X divides neither [22Xa[122X nor [22Xb[122X.
+  They  form  a  field  of  characteristic  0  which  nevertheless  shows some
+  behaviour of the finite field with [22Xp[122X elements.[133X
+  
+  [33X[0;0YA  [22Xp[122X-adic  numbers can be represented by a [21X[22Xp[122X-adic expansion[121X which is similar
+  to  the  decimal  expansion  used  for  the  reals (but written from left to
+  right).  So  for  example if [22Xp = 2[122X, the numbers [22X1[122X, [22X2[122X, [22X3[122X, [22X4[122X, [22X1/2[122X, and [22X4/5[122X are
+  represented  as  [22X1(2)[122X,  [22X0.1(2)[122X,  [22X1.1(2)[122X,  [22X0.01(2)[122X,  [22X10(2)[122X,  and the infinite
+  periodic   expansion   [22X0.010110011001100...(2)[122X.   [22Xp[122X-adic   numbers   can  be
+  approximated  by  ignoring  higher  powers  of [22Xp[122X, so for example with only 2
+  digits accuracy [22X4/5[122X would be approximated as [22X0.01(2)[122X. This is different from
+  the  decimal approximation of real numbers in that [22Xp[122X-adic approximation is a
+  ring  homomorphism  on  the  subrings  of  [22Xp[122X-adic numbers whose valuation is
+  bounded  from  below  so  that rounding errors do not increase with repeated
+  calculations.[133X
+  
+  [33X[0;0YIn  [5XGAP[105X,  [22Xp[122X-adic  numbers  are  always represented by such approximations. A
+  family  of  approximated  [22Xp[122X-adic  numbers  consists of [22Xp[122X-adic numbers with a
+  fixed  prime [22Xp[122X and a certain precision, and arithmetic with these numbers is
+  done with this precision.[133X
+  
+  
+  [1X68.1 [33X[0;0YPure p-adic Numbers[133X[101X
+  
+  [33X[0;0YPure [22Xp[122X-adic numbers are the [22Xp[122X-adic numbers described so far.[133X
+  
+  [1X68.1-1 PurePadicNumberFamily[101X
+  
+  [33X[1;0Y[29X[2XPurePadicNumberFamily[102X( [3Xp[103X, [3Xprecision[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  the  family  of pure [22Xp[122X-adic numbers over the prime [3Xp[103X with [3Xprecision[103X
+  [21Xdigits[121X.  That  is to say, the approximate value will differ from the correct
+  value by a multiple of [22Xp^digits[122X.[133X
+  
+  [1X68.1-2 PadicNumber[101X
+  
+  [33X[1;0Y[29X[2XPadicNumber[102X( [3Xfam[103X, [3Xrat[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  element  of the [22Xp[122X-adic number family [3Xfam[103X that approximates the
+  rational number [3Xrat[103X.[133X
+  
+  [33X[0;0Y[22Xp[122X-adic numbers allow the usual operations for fields.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xfam:=PurePadicNumberFamily(2,20);;[127X[104X
+    [4X[25Xgap>[125X [27Xa:=PadicNumber(fam,4/5);[127X[104X
+    [4X[28X0.010110011001100110011(2)[128X[104X
+    [4X[25Xgap>[125X [27Xfam:=PurePadicNumberFamily(2,3);;[127X[104X
+    [4X[25Xgap>[125X [27Xa:=PadicNumber(fam,4/5);[127X[104X
+    [4X[28X0.0101(2)[128X[104X
+    [4X[25Xgap>[125X [27X3*a;[127X[104X
+    [4X[28X0.0111(2)[128X[104X
+    [4X[25Xgap>[125X [27Xa/2;[127X[104X
+    [4X[28X0.101(2)[128X[104X
+    [4X[25Xgap>[125X [27Xa*10;[127X[104X
+    [4X[28X0.001(2)[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YSee [2XPadicNumber[102X ([14X68.2-2[114X) for other methods for [2XPadicNumber[102X.[133X
+  
+  [1X68.1-3 Valuation[101X
+  
+  [33X[1;0Y[29X[2XValuation[102X( [3Xobj[103X ) [32X operation[133X
+  
+  [33X[0;0YThe  valuation  is  the  [22Xp[122X-part  of  the  [22Xp[122X-adic number. See also [2XPValuation[102X
+  ([14X15.7-1[114X).[133X
+  
+  [1X68.1-4 ShiftedPadicNumber[101X
+  
+  [33X[1;0Y[29X[2XShiftedPadicNumber[102X( [3Xpadic[103X, [3Xint[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XShiftedPadicNumber[102X  takes  a  [22Xp[122X-adic  number  [3Xpadic[103X and an integer [3Xshift[103X and
+  returns the [22Xp[122X-adic number [22Xc[122X, that is [3Xpadic[103X [10X*[110X [22Xp[122X[10X^[110X[3Xshift[103X.[133X
+  
+  [1X68.1-5 IsPurePadicNumber[101X
+  
+  [33X[1;0Y[29X[2XIsPurePadicNumber[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YThe category of pure [22Xp[122X-adic numbers.[133X
+  
+  [1X68.1-6 IsPurePadicNumberFamily[101X
+  
+  [33X[1;0Y[29X[2XIsPurePadicNumberFamily[102X( [3Xfam[103X ) [32X Category[133X
+  
+  [33X[0;0YThe family of pure [22Xp[122X-adic numbers.[133X
+  
+  
+  [1X68.2 [33X[0;0YExtensions of the p-adic Numbers[133X[101X
+  
+  [33X[0;0YThe  usual Kronecker construction with an irreducible polynomial can be used
+  to  construct  extensions of the [22Xp[122X-adic numbers. Let [22XL[122X be such an extension.
+  Then there is a subfield [22XK < L[122X such that [22XK[122X is an unramified extension of the
+  [22Xp[122X-adic numbers and [22XL/K[122X is purely ramified.[133X
+  
+  [33X[0;0Y(For  an  explanation of [21Xramification[121X see for example [Neu92, Section II.7],
+  or  another  book on algebraic number theory. Essentially, an extension [22XL[122X of
+  the  [22Xp[122X-adic  numbers generated by a rational polynomial [22Xf[122X is unramified if [22Xf[122X
+  remains  squarefree  modulo  [22Xp[122X  and  is  completely ramified if modulo [22Xp[122X the
+  polynomial  [22Xf[122X is a power of a linear factor while remaining irreducible over
+  the [22Xp[122X-adic numbers.)[133X
+  
+  [33X[0;0YThe  representation of extensions of [22Xp[122X-adic numbers in [5XGAP[105X uses the subfield
+  [22XK[122X.[133X
+  
+  [1X68.2-1 PadicExtensionNumberFamily[101X
+  
+  [33X[1;0Y[29X[2XPadicExtensionNumberFamily[102X( [3Xp[103X, [3Xprecision[103X, [3Xunram[103X, [3Xram[103X ) [32X function[133X
+  
+  [33X[0;0YAn  extended  [22Xp[122X-adic  field  [22XL[122X  is  given  by  two  polynomials [22Xh[122X and [22Xg[122X with
+  coefficient  lists [3Xunram[103X (for the unramified part) and [3Xram[103X (for the ramified
+  part). Then [22XL[122X is isomorphic to [22XQ_p[x,y]/(h(x),g(y))[122X.[133X
+  
+  [33X[0;0YThis  function  takes the prime number [3Xp[103X and the two coefficient lists [3Xunram[103X
+  and [3Xram[103X for the two polynomials. The polynomial given by the coefficients in
+  [3Xunram[103X  must  be a cyclotomic polynomial and the polynomial given by [3Xram[103X must
+  be either an Eisenstein polynomial or [22X1+x[122X. [13XThis is not checked by [5XGAP[105X.[113X[133X
+  
+  [33X[0;0YEvery  number in [22XL[122X is represented as a coefficient list w. r. t. the basis [22X{
+  1,  x,  x^2,  ...,  y,  xy,  x^2 y, ... }[122X of [22XL[122X. The integer [3Xprecision[103X is the
+  number of [21Xdigits[121X that all the coefficients have.[133X
+  
+  [33X[0;0Y[13XA general comment:[113X[133X
+  
+  [33X[0;0YThe  polynomials  with  which [2XPadicExtensionNumberFamily[102X is called define an
+  extension  of  [22XQ_p[122X.  It  must  be  ensured  that both polynomials are really
+  irreducible  over  [22XQ_p[122X!  For  example  [22Xx^2+x+1[122X  is [13Xnot[113X irreducible over [22XQ_p[122X.
+  Therefore  the  [21Xextension[121X  [10XPadicExtensionNumberFamily(3,  4, [1,1,1], [1,1])[110X
+  contains  non-invertible  [21Xpseudo-p-adic numbers[121X. Conversely, if an [21Xextension[121X
+  contains noninvertible elements then one of the defining polynomials was not
+  irreducible.[133X
+  
+  [1X68.2-2 PadicNumber[101X
+  
+  [33X[1;0Y[29X[2XPadicNumber[102X( [3Xfam[103X, [3Xrat[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XPadicNumber[102X( [3Xpurefam[103X, [3Xlist[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XPadicNumber[102X( [3Xextfam[103X, [3Xlist[103X ) [32X operation[133X
+  
+  [33X[0;0Y(see also [2XPadicNumber[102X ([14X68.1-2[114X)).[133X
+  
+  [33X[0;0Y[2XPadicNumber[102X  creates  a  [22Xp[122X-adic number in the [22Xp[122X-adic numbers family [3Xfam[103X. The
+  first form returns the [22Xp[122X-adic number corresponding to the rational [3Xrat[103X.[133X
+  
+  [33X[0;0YThe  second  form takes a pure [22Xp[122X-adic numbers family [3Xpurefam[103X and a list [3Xlist[103X
+  of  length  two,  and  returns  the  number  [22Xp[122X[10X^[110X[3Xlist[103X[10X[1] * [110X[3Xlist[103X[10X[2][110X. It must be
+  guaranteed  that no entry of [3Xlist[103X[10X[2][110X is divisible by the prime [22Xp[122X. (Otherwise
+  precision will get lost.)[133X
+  
+  [33X[0;0YThe  third form creates a number in the family [3Xextfam[103X of a [22Xp[122X-adic extension.
+  The  second  argument must be a list [3Xlist[103X of length two such that [3Xlist[103X[10X[2][110X is
+  the  list  of coefficients w.r.t. the basis [22X{ 1, ..., x^{f-1} ⋅ y^{e-1} }[122X of
+  the  extended  [22Xp[122X-adic  field  and  [3Xlist[103X[10X[1][110X  is  a common [22Xp[122X-part of all these
+  coefficients.[133X
+  
+  [33X[0;0Y[22Xp[122X-adic numbers admit the usual field operations.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xefam:=PadicExtensionNumberFamily(3, 5, [1,1,1], [1,1]);;[127X[104X
+    [4X[25Xgap>[125X [27XPadicNumber(efam,7/9);[127X[104X
+    [4X[28Xpadic(120(3),0(3))[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[13XA word of warning:[113X[133X
+  
+  [33X[0;0YDepending  on  the actual representation of quotients, precision may seem to
+  [21Xvanish[121X.  For example in [10XPadicExtensionNumberFamily(3, 5, [1,1,1], [1,1])[110X the
+  number  [10X(1.2000,  0.1210)(3)[110X can be represented as [10X[ 0, [ 1.2000, 0.1210 ] ][110X
+  or  as  [10X[  -1,  [  12.000,  1.2100  ]  ][110X  (here  the coefficients have to be
+  multiplied by [22Xp^{-1}[122X).[133X
+  
+  [33X[0;0YSo  there  may be a number [10X(1.2, 2.2)(3)[110X which seems to have only two digits
+  of  precision instead of the declared 5. But internally the number is stored
+  as [10X[ -3, [ 0.0012, 0.0022 ] ][110X and so has in fact maximum precision.[133X
+  
+  [1X68.2-3 IsPadicExtensionNumber[101X
+  
+  [33X[1;0Y[29X[2XIsPadicExtensionNumber[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YThe category of elements of the extended [22Xp[122X-adic field.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X efam:=PadicExtensionNumberFamily(3, 5, [1,1,1], [1,1]);;[127X[104X
+    [4X[25Xgap>[125X [27XIsPadicExtensionNumber(PadicNumber(efam,7/9));[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X68.2-4 IsPadicExtensionNumberFamily[101X
+  
+  [33X[1;0Y[29X[2XIsPadicExtensionNumberFamily[102X( [3Xfam[103X ) [32X Category[133X
+  
+  [33X[0;0YFamily of elements of the extended [22Xp[122X-adic field.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xefam:=PadicExtensionNumberFamily(3, 5, [1,1,1], [1,1]);;[127X[104X
+    [4X[25Xgap>[125X [27XIsPadicExtensionNumberFamily(efam);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  

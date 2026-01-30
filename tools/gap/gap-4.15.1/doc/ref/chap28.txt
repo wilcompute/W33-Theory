@@ -1,0 +1,316 @@
+  
+  [1X28 [33X[0;0YDictionaries and General Hash Tables[133X[101X
+  
+  [33X[0;0YPeople   and  computers  spend  a  large  amount  of  time  with  searching.
+  Dictionaries  are an abstract data structure which facilitates searching for
+  objects.  Depending  on  the  kind  of objects the implementation will use a
+  variety  of  possible  internal storage methods that will aim to provide the
+  fastest possible access to objects. These internal methods include[133X
+  
+  [8XHash Tables[108X
+        [33X[0;6Yfor objects for which a hash function has been defined.[133X
+  
+  [8XDirect Indexing[108X
+        [33X[0;6Yif the domain is small and cheaply enumerable[133X
+  
+  [8XSorted Lists[108X
+        [33X[0;6Yif a total order can be computed easily[133X
+  
+  [8XPlain lists[108X
+        [33X[0;6Yfor objects for which nothing but an equality test is available.[133X
+  
+  
+  [1X28.1 [33X[0;0YUsing Dictionaries[133X[101X
+  
+  [33X[0;0YThe  standard way to use dictionaries is to first create a dictionary (using
+  [2XNewDictionary[102X   ([14X28.2-1[114X),   and   then  to  store  objects  (and  associated
+  information) in it and look them up.[133X
+  
+  [33X[0;0YFor  the  creation  of  objects  the  user has to make a few choices: Is the
+  dictionary  only  to  be used to check whether objects are known already, or
+  whether associated information is to be stored with the objects. This second
+  case  is  called a [13Xlookup dictionary[113X and is selected by the second parameter
+  of [2XNewDictionary[102X ([14X28.2-1[114X).[133X
+  
+  [33X[0;0YThe  second  choice  is  to indicate which kind of objects are to be stored.
+  This  choice  will decide the internal storage used. This kind of objects is
+  specified  by  the  first  parameter  to  [2XNewDictionary[102X ([14X28.2-1[114X), which is a
+  [21Xsample[121X object.[133X
+  
+  [33X[0;0YIn  some  cases  however  such  a  sample object is not specific enough. For
+  example  when  storing  vectors  over  a finite field, it would not be clear
+  whether  all  vectors  will be over a prime field or over a field extension.
+  Such an issue can be resolved by indicating in an (optional) third parameter
+  to  [2XNewDictionary[102X  ([14X28.2-1[114X)  a [13Xdomain[113X which has to be a collection that will
+  contain all objects to be used with this dictionary. (Such a domain may also
+  be used internally to decide that direct indexing can be used).[133X
+  
+  [33X[0;0YThe reason for this choice of giving two parameters is that in some cases no
+  suitable  collection  of  objects  has been defined in [5XGAP[105X - for example for
+  permutations  there  is  no  object  representing  the  symmetric  group  on
+  infinitely many points.[133X
+  
+  [33X[0;0YOnce   a   dictionary   has   been   created,   it   is   possible   to  use
+  [2XRepresentationsOfObject[102X  ([14X13.4-3[114X)  to  check which representation is used by
+  [5XGAP[105X.[133X
+  
+  [33X[0;0YIn  the following example, we create a dictionary to store permutations with
+  associated information.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xd:=NewDictionary((1,2,3),true);;[127X[104X
+    [4X[25Xgap>[125X [27XAddDictionary(d,(1,2),1);[127X[104X
+    [4X[25Xgap>[125X [27XAddDictionary(d,(5,6),9);[127X[104X
+    [4X[25Xgap>[125X [27XAddDictionary(d,(4,7),2);[127X[104X
+    [4X[25Xgap>[125X [27XLookupDictionary(d,(5,6));[127X[104X
+    [4X[28X9[128X[104X
+    [4X[25Xgap>[125X [27XLookupDictionary(d,(5,7));[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YA typical example of this use would be in an orbit algorithm. The dictionary
+  would  be  used to store the elements known in the orbit together with their
+  respective orbit positions.[133X
+  
+  [33X[0;0YWe  observe  that  this dictionary is stored internally by a sorted list. On
+  the other hand, if we have an explicit, sorted element list, direct indexing
+  is to be used.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRepresentationsOfObject(d);[127X[104X
+    [4X[28X[ "IsComponentObjectRep", "IsNonAtomicComponentObjectRep",[128X[104X
+    [4X[28X  "IsDictionaryDefaultRep", "IsListDictionary",[128X[104X
+    [4X[28X  "IsListLookupDictionary", "IsSortDictionary",[128X[104X
+    [4X[28X  "IsSortLookupDictionary" ][128X[104X
+    [4X[25Xgap>[125X [27Xd:=NewDictionary((1,2,3),true,Elements(SymmetricGroup(5)));;[127X[104X
+    [4X[25Xgap>[125X [27XRepresentationsOfObject(d);[127X[104X
+    [4X[28X[ "IsComponentObjectRep", "IsNonAtomicComponentObjectRep",[128X[104X
+    [4X[28X  "IsDictionaryDefaultRep", "IsPositionDictionary",[128X[104X
+    [4X[28X  "IsPositionLookupDictionary" ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y(Just indicating [10XSymmetricGroup(5)[110X as a third parameter would still keep the
+  first  storage  method,  as  indexing  would be too expensive if no explicit
+  element list is known.)[133X
+  
+  [33X[0;0YThe  same  effect  happens  in  the following example, in which we work with
+  vectors: Indicating only a vector only enables sorted index, as it cannot be
+  known whether all vectors will be defined over the prime field. On the other
+  hand,  providing the vector space (and thus limiting the domain) enables the
+  use of hashing (which will be faster).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xv:=GF(2)^7;;[127X[104X
+    [4X[25Xgap>[125X [27Xd:=NewDictionary(Zero(v),true);;[127X[104X
+    [4X[25Xgap>[125X [27XRepresentationsOfObject(d);[127X[104X
+    [4X[28X[ "IsComponentObjectRep", "IsNonAtomicComponentObjectRep",[128X[104X
+    [4X[28X  "IsDictionaryDefaultRep", "IsListDictionary",[128X[104X
+    [4X[28X  "IsListLookupDictionary", "IsSortDictionary",[128X[104X
+    [4X[28X  "IsSortLookupDictionary" ][128X[104X
+    [4X[25Xgap>[125X [27Xd:=NewDictionary(Zero(v),true,v);;[127X[104X
+    [4X[25Xgap>[125X [27XRepresentationsOfObject(d);[127X[104X
+    [4X[28X[ "IsComponentObjectRep", "IsNonAtomicComponentObjectRep",[128X[104X
+    [4X[28X  "IsDictionaryDefaultRep", "IsPositionDictionary",[128X[104X
+    [4X[28X  "IsPositionLookupDictionary" ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X28.2 [33X[0;0YDictionaries[133X[101X
+  
+  [33X[0;0YThis   section  contains  the  formal  declarations  for  dictionaries.  For
+  information  on  how to use them, please refer to the previous section [14X28.1[114X.
+  There are several ways how dictionaries are implemented: As lists, as sorted
+  lists,  as hash tables or via binary lists. A user however will just have to
+  call [2XNewDictionary[102X ([14X28.2-1[114X) and obtain a [21Xsuitable[121X dictionary for the kind of
+  objects  she  wants  to create. It is possible however to create hash tables
+  (see [14X28.4[114X)  and  dictionaries  using  binary lists (see [2XDictionaryByPosition[102X
+  ([14X28.3-1[114X)).[133X
+  
+  [33X[0;0YThe  use  of  two  objects,  [3Xobj[103X  and  [3Xobjcoll[103X  to parametrize the objects a
+  dictionary  is  able  to  store  might  look  confusing.  However  there are
+  situations where either of them might be needed:[133X
+  
+  [33X[0;0YThe  first  situation  is  that  of  objects, for which no formal [21Xcollection
+  object[121X  has  been  defined.  A  typical example here might be subspaces of a
+  vector  space.  [5XGAP[105X does not formally define a [21XGrassmannian[121X or anything else
+  to  represent the multitude of all subspaces. So it is only possible to give
+  the dictionary a [21Xsample object[121X.[133X
+  
+  [33X[0;0YThe  other situation is that of an object which might represent quite varied
+  domains.  The  permutation  [22X(1,10^6)[122X  might  be  the nontrivial element of a
+  cyclic  group  of  order 2, it might be a representative of [22XS_{10^6}[122X. In the
+  first  situation the best approach might be just to have two entries for the
+  two possible objects, in the second situation a much more elaborate approach
+  might be needed.[133X
+  
+  [33X[0;0YAn algorithm that creates a dictionary will usually know a priori, from what
+  domain  all  the  objects  will be, giving this domain permits to use a more
+  efficient dictionary.[133X
+  
+  [33X[0;0YThis  is  particularly  true  for  vectors.  From a single vector one cannot
+  decide  whether  a  calculation  will  take  place  over  the smallest field
+  containing all its entries or over a larger field.[133X
+  
+  [1X28.2-1 NewDictionary[101X
+  
+  [33X[1;0Y[29X[2XNewDictionary[102X( [3Xobj[103X, [3Xlook[103X[, [3Xobjcoll[103X] ) [32X function[133X
+  
+  [33X[0;0Ycreates  a  new  dictionary for objects such as [3Xobj[103X. If [3Xobjcoll[103X is given the
+  dictionary  will  be for objects only from this collection, knowing this can
+  improve  the performance. If [3Xobjcoll[103X is given, [3Xobj[103X may be replaced by [9Xfalse[109X,
+  i.e. no sample object is needed.[133X
+  
+  [33X[0;0YThe  function  tries  to  find  the  right  kind of dictionary for the basic
+  dictionary  functions to be quick. If [3Xlook[103X is [9Xtrue[109X, the dictionary will be a
+  lookup dictionary, otherwise it is an ordinary dictionary.[133X
+  
+  
+  [1X28.3 [33X[0;0YDictionaries via Binary Lists[133X[101X
+  
+  [33X[0;0YAs  there  are  situations where the approach via binary lists is explicitly
+  desired, such dictionaries can be created deliberately.[133X
+  
+  [1X28.3-1 DictionaryByPosition[101X
+  
+  [33X[1;0Y[29X[2XDictionaryByPosition[102X( [3Xlist[103X, [3Xlookup[103X ) [32X function[133X
+  
+  [33X[0;0Ycreates  a new (lookup) dictionary which uses [2XPositionCanonical[102X ([14X21.16-3[114X) in
+  [3Xlist[103X  for indexing. The dictionary will have an entry [3Xdict[103X[10X!.blist[110X which is a
+  bit list corresponding to [3Xlist[103X indicating the known values. If [3Xlook[103X is [9Xtrue[109X,
+  the  dictionary  will  be  a  lookup dictionary, otherwise it is an ordinary
+  dictionary.[133X
+  
+  [1X28.3-2 IsDictionary[101X
+  
+  [33X[1;0Y[29X[2XIsDictionary[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YA dictionary is a growable collection of objects that permits to add objects
+  (with associated values) and to check whether an object is already known.[133X
+  
+  [1X28.3-3 IsLookupDictionary[101X
+  
+  [33X[1;0Y[29X[2XIsLookupDictionary[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YA [13Xlookup dictionary[113X is a dictionary, which permits not only to check whether
+  an  object  is  contained, but also to retrieve associated values, using the
+  operation [2XLookupDictionary[102X ([14X28.3-6[114X).[133X
+  
+  [1X28.3-4 AddDictionary[101X
+  
+  [33X[1;0Y[29X[2XAddDictionary[102X( [3Xdict[103X, [3Xkey[103X[, [3Xval[103X] ) [32X operation[133X
+  
+  [33X[0;0Yadds  [3Xkey[103X  to  the dictionary [3Xdict[103X, storing the associated value [3Xval[103X in case
+  [3Xdict[103X  is  a lookup dictionary. If [3Xkey[103X is not an object of the kind for which
+  the  dictionary  was  specified,  or  if  [3Xkey[103X  is known already to [3Xdict[103X, the
+  results are unpredictable.[133X
+  
+  [1X28.3-5 KnowsDictionary[101X
+  
+  [33X[1;0Y[29X[2XKnowsDictionary[102X( [3Xdict[103X, [3Xkey[103X ) [32X operation[133X
+  
+  [33X[0;0Ychecks,  whether  [3Xkey[103X  is  known to the dictionary [3Xdict[103X, and returns [9Xtrue[109X or
+  [9Xfalse[109X  accordingly.  [3Xkey[103X  [13Xmust[113X  be  an  object  of  the  kind  for which the
+  dictionary was specified, otherwise the results are unpredictable.[133X
+  
+  [1X28.3-6 LookupDictionary[101X
+  
+  [33X[1;0Y[29X[2XLookupDictionary[102X( [3Xdict[103X, [3Xkey[103X ) [32X operation[133X
+  
+  [33X[0;0Ylooks up [3Xkey[103X in the lookup dictionary [3Xdict[103X and returns the associated value.
+  If [3Xkey[103X is not known to the dictionary, [9Xfail[109X is returned.[133X
+  
+  
+  [1X28.4 [33X[0;0YGeneral Hash Tables[133X[101X
+  
+  [33X[0;0YThese  sections  describe  some  particularities  for hash tables. These are
+  intended  mainly  for extending the implementation - programs requiring hash
+  functionality ought to use the dictionary interface described above.[133X
+  
+  [33X[0;0YWe  hash  by  keys  and  also store a value. Keys cannot be removed from the
+  table,  but the corresponding value can be changed. Fast access to last hash
+  index  allows  you  to efficiently store more than one array of values –this
+  facility should be used with care.[133X
+  
+  [33X[0;0YThis  code  works  for  any  kind of object, provided you have a [2XDenseIntKey[102X
+  ([14X28.5-1[114X)  method  to  convert  the  key into a positive integer. This method
+  should ideally be implemented efficiently in the core.[133X
+  
+  [33X[0;0YNote that, for efficiency, it is currently impossible to create a hash table
+  with non-positive integers.[133X
+  
+  
+  [1X28.5 [33X[0;0YHash keys[133X[101X
+  
+  [33X[0;0YThe  crucial  step of hashing is to transform key objects into integers such
+  that equal objects produce the same integer.[133X
+  
+  [33X[0;0YThe actual function used will vary very much on the type of objects. However
+  [5XGAP[105X provides already key functions for some commonly encountered objects.[133X
+  
+  [1X28.5-1 DenseIntKey[101X
+  
+  [33X[1;0Y[29X[2XDenseIntKey[102X( [3Xobjcoll[103X, [3Xobj[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns a function that can be used as hash key function for objects such as
+  [3Xobj[103X in the collection [3Xobjcoll[103X. Typically, [3Xobjcoll[103X will be a large domain. If
+  the domain is not available, it can be given as [9Xfalse[109X in which case the hash
+  key function will be determined only based on [3Xobj[103X. (For a further discussion
+  of these two arguments see [2XNewDictionary[102X ([14X28.2-1[114X)).[133X
+  
+  [33X[0;0YThe  function returned by [2XDenseIntKey[102X is guaranteed to give different values
+  for different objects. If no suitable hash key function has been predefined,
+  [9Xfail[109X is returned.[133X
+  
+  [1X28.5-2 SparseIntKey[101X
+  
+  [33X[1;0Y[29X[2XSparseIntKey[102X( [3Xobjcoll[103X, [3Xobj[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns a function that can be used as hash key function for objects such as
+  [3Xobj[103X  in  the  collection  [3Xobjcoll[103X.  In contrast to [2XDenseIntKey[102X ([14X28.5-1[114X), the
+  function returned may return the same key value for different objects. If no
+  suitable hash key function has been predefined, [9Xfail[109X is returned.[133X
+  
+  
+  [1X28.6 [33X[0;0YDense hash tables[133X[101X
+  
+  [33X[0;0YDense  hash  tables  are  used for hashing dense sets without collisions, in
+  particular  integers.  Keys are stored as an unordered list and values as an
+  array  with holes. The position of a value is given by the function returned
+  by [2XDenseIntKey[102X ([14X28.5-1[114X), and so [10XKeyIntDense[110X must be one-to-one.[133X
+  
+  [1X28.6-1 DenseHashTable[101X
+  
+  [33X[1;0Y[29X[2XDenseHashTable[102X(  ) [32X function[133X
+  
+  [33X[0;0YConstruct  an  empty  dense  hash  table.  This  is  the only correct way to
+  construct such a table.[133X
+  
+  
+  [1X28.7 [33X[0;0YSparse hash tables[133X[101X
+  
+  [33X[0;0YSparse hash tables are used for hashing sparse sets. Stores keys as an array
+  with  fail denoting an empty position, stores values as an array with holes.
+  Uses   the   result   of   calling   [2XSparseIntKey[102X   ([14X28.5-2[114X))  of  the  key.
+  [10XDefaultHashLength[110X  is  the  default starting hash table length; the table is
+  doubled when it becomes half full.[133X
+  
+  [33X[0;0YIn  sparse  hash  tables,  the  integer  obtained  from the hash key is then
+  transformed  to an index position by taking it modulo the length of the hash
+  array.[133X
+  
+  [1X28.7-1 SparseHashTable[101X
+  
+  [33X[1;0Y[29X[2XSparseHashTable[102X( [[3Xintkeyfun[103X[, [3Xstartlength[103X]] ) [32X function[133X
+  
+  [33X[0;0YConstruct  an  empty  sparse  hash  table.  This  is the only correct way to
+  construct  such  a  table. If the argument [3Xintkeyfun[103X is given, this function
+  will  be  used  to  obtain  numbers  for  the  keys  passed  to  it. If also
+  [3Xstartlength[103X is given, the hash table will be initialized at that size.[133X
+  
+  [1X28.7-2 DoubleHashArraySize[101X
+  
+  [33X[1;0Y[29X[2XDoubleHashArraySize[102X( [3Xhash[103X ) [32X function[133X
+  
+  [33X[0;0YDouble the size of the hash array and rehash all the entries. This will also
+  happen automatically when the hash array is half full.[133X
+  

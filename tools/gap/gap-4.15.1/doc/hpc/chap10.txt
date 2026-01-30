@@ -1,0 +1,116 @@
+  
+  [1X10 [33X[0;0YSerialization support[133X[101X
+  
+  
+  [1X10.1 [33X[0;0YSerialization support[133X[101X
+  
+  [33X[0;0YHPC-GAP  has  support  to  serialize  most  GAP  data.  While  functions  in
+  particular  cannot  be serialized, it is possible to serialize all primitive
+  types  (booleans, integers, cyclotomics, permutations, floats, etc.) as well
+  as all lists and records.[133X
+  
+  [33X[0;0YCustom  serialization  support  can  be written for data objects, positional
+  objects,  and  component  objects;  serialization  of  compressed vectors is
+  already supported by the standard library.[133X
+  
+  [1X10.1-1 SerializeToNativeString[101X
+  
+  [33X[1;0Y[29X[2XSerializeToNativeString[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XSerializeToNativeString[102X  takes the object passed as an argument and turns it
+  into  a  string,  from  which  a copy of the original can be extracted using
+  [2XDeserializeNativeString[102X ([14X10.1-2[114X).[133X
+  
+  [1X10.1-2 DeserializeNativeString[101X
+  
+  [33X[1;0Y[29X[2XDeserializeNativeString[102X( [3Xstr[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XDeserializeNativeString[102X reverts the serialization process.[133X
+  
+  [33X[0;0YExample:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDeserializeNativeString(SerializeToNativeString([1,2,3]));[127X[104X
+    [4X[28X[ 1, 2, 3 ][128X[104X
+  [4X[32X[104X
+  
+  [1X10.1-3 InstallTypeSerializationTag[101X
+  
+  [33X[1;0Y[29X[2XInstallTypeSerializationTag[102X( [3Xtype[103X, [3Xtag[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XInstallTypeSerializationTag[102X   allows  the  serialization  of  data  objects,
+  positional  objects,  and component objects. The value of [3Xtag[103X must be unique
+  for  each  type;  it  can  be a string or integer. Non-negative integers are
+  reserved for use by the standard library; users should use negative integers
+  or strings instead.[133X
+  
+  [33X[0;0YObjects  of  such  a  type  are  serialized in a straightforward way: During
+  serialization,  data  objects  are  converted  into byte streams, positional
+  objects  into  lists,  and component objects into records. These objects are
+  then  serialized  along  with  their  tags;  deserialization  uses  the type
+  corresponding   to   the  tag  in  conjunction  with  [2XObjectify[102X  ([14XReference:
+  Objectify[114X) to reconstruct a copy of the original object.[133X
+  
+  [33X[0;0YNote that this functionality may be inadequate for objects that have complex
+  data  structures attached that are not meant to be replicated. The following
+  alternative is meant for such objects.[133X
+  
+  [1X10.1-4 InstallSerializer[101X
+  
+  [33X[1;0Y[29X[2XInstallSerializer[102X( [3Xdescription[103X, [3Xfilters[103X, [3Xmethod[103X ) [32X function[133X
+  
+  [33X[0;0YThe   more   general   [2XInstallSerializer[102X   allows  for  arbitrarily  complex
+  serialization  code.  It  installs [3Xmethod[103X as the method to serialize objects
+  matching  [3Xfilters[103X;  [3Xdescription[103X  has  the  same  role  as  for [2XInstallMethod[102X
+  ([14XReference: InstallMethod[114X).[133X
+  
+  [33X[0;0YThe  method  must  return a plain list matching a specific format. The first
+  element  must  be  a  non-negative  integer,  the  second  must  be a string
+  descriptor  that  is unique to the serializer; these can then be followed by
+  an arbitrary number of arguments.[133X
+  
+  [33X[0;0YAs  many  of  the arguments (starting with the third element of the list) as
+  specified  by  the  first  element  of the list will be converted from their
+  object  representation into a serializable representation. Data objects will
+  be converted into untyped data objects, positional objects will be converted
+  into  plain  lists,  and component objects into records. Conversion will not
+  modify  the  objects  in  place, but work on copies. The remaining arguments
+  will remain untouched.[133X
+  
+  [33X[0;0YUpon deserialization, these arguments will be passed to a function specified
+  by the second element of the list.[133X
+  
+  [33X[0;0YExample:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallSerializer("8-bit vectors", [ Is8BitVectorRep ], function(obj)[128X[104X
+    [4X[28X  return [1, "Vec8Bit", obj, Q_VEC8BIT(obj), IS_MUTABLE_OBJ(obj)];[128X[104X
+    [4X[28Xend);[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YHere,  [10Xobj[110X  will  be converted into its underlying representation, while the
+  remaining  arguments  are  left alone. [10X"Vec8Bit"[110X is the name that is used to
+  look up the deserializer function.[133X
+  
+  [1X10.1-5 InstallDeserializer[101X
+  
+  [33X[1;0Y[29X[2XInstallDeserializer[102X( [3Xdescriptor[103X, [3Xfunc[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [3Xdescriptor[103X  value  must  be  the same as the second element of the list
+  returned  by  the  serializer;  [3Xfunc[103X  must  be a function that takes as many
+  arguments as there were arguments after the second element of that list. For
+  deserialization,   this   function  is  invoked  and  needs  to  return  the
+  deserialized object constructed from the arguments.[133X
+  
+  [33X[0;0YExample:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallDeserializer("Vec8Bit", function(obj, q, mut)[128X[104X
+    [4X[28X  SET_TYPE_OBJ(obj, TYPE_VEC8BIT(q, mut));[128X[104X
+    [4X[28X  return obj;[128X[104X
+    [4X[28Xend);[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YHere,  the untyped [10Xobj[110X that was passed to the deserializer needs to be given
+  the correct type, which is calculated from [10Xq[110X and [10Xmut[110X.[133X
+  

@@ -1,0 +1,10 @@
+  
+  [1X63 [33X[0;0YFinitely Presented Algebras[133X[101X
+  
+  [33X[0;0YCurrently  the  [5XGAP[105X library contains only few functions dealing with general
+  finitely presented algebras, so this chapter is merely a placeholder.[133X
+  
+  [33X[0;0YThe  special  case of finitely presented [13XLie[113X algebras is described in [14X64.11[114X,
+  and  there  is also a [5XGAP[105X package [10Xfplsa[110X for computing structure constants of
+  [13Xf[113Xinitely [13Xp[113Xresented [13XL[113Xie ([13Xs[113Xuper)[13Xa[113Xlgebras.[133X
+  

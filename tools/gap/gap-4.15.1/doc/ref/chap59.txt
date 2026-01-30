@@ -1,0 +1,597 @@
+  
+  [1X59 [33X[0;0YFinite Fields[133X[101X
+  
+  [33X[0;0YThis  chapter  describes  the  special functionality which exists in [5XGAP[105X for
+  finite  fields  and  their elements. Of course the general functionality for
+  fields (see Chapter [14X58[114X) also applies to finite fields.[133X
+  
+  [33X[0;0YIn  the  following,  the  term  [13Xfinite  field  element[113X is used to denote [5XGAP[105X
+  objects  in  the  category  [2XIsFFE[102X  ([14X59.1-1[114X),  and [13Xfinite field[113X means a field
+  consisting  of  such  elements.  Note  that in principle we must distinguish
+  these  fields  from  (abstract) finite fields. For example, the image of the
+  embedding  of  a finite field into a field of rational functions in the same
+  characteristic is of course a finite field but its elements are not in [2XIsFFE[102X
+  ([14X59.1-1[114X), and in fact [5XGAP[105X does currently not support such fields.[133X
+  
+  [33X[0;0YSpecial representations exist for row vectors and matrices over small finite
+  fields (see sections [14X23.3[114X and [14X24.14[114X).[133X
+  
+  
+  [1X59.1 [33X[0;0YFinite Field Elements[133X[101X
+  
+  [1X59.1-1 IsFFE[101X
+  
+  [33X[1;0Y[29X[2XIsFFE[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsFFECollection[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsFFECollColl[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsFFECollCollColl[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YObjects  in  the  category  [2XIsFFE[102X  are  used to implement elements of finite
+  fields. In this manual, the term [13Xfinite field element[113X always means an object
+  in [2XIsFFE[102X. All finite field elements of the same characteristic form a family
+  in  [5XGAP[105X  (see [14X13.1[114X).  Any  collection  of  finite field elements of the same
+  characteristic  (see [2XIsCollection[102X  ([14X30.1-1[114X))  lies in [2XIsFFECollection[102X, and a
+  collection  of  such  collections  (e.g., a matrix of finite field elements)
+  lies in [2XIsFFECollColl[102X.[133X
+  
+  [1X59.1-2 Z[101X
+  
+  [33X[1;0Y[29X[2XZ[102X( [3Xp^d[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XZ[102X( [3Xp[103X, [3Xd[103X ) [32X function[133X
+  
+  [33X[0;0YFor  creating  elements  of  a finite field, the function [2XZ[102X can be used. The
+  call  [10XZ([3Xp[103X[10X,[3Xd[103X[10X)[110X  (alternatively [10XZ([3Xp[103X[10X^[3Xd[103X[10X)[110X) returns the designated generator of the
+  multiplicative  group  of  the  finite  field with [3Xp^d[103X elements. [3Xp[103X must be a
+  prime integer.[133X
+  
+  [33X[0;0Y[5XGAP[105X can represent elements of all finite fields [10XGF([3Xp^d[103X[10X)[110X such that either (1)
+  [3Xp^d[103X  [22X<=  65536[122X (in which case an extremely efficient internal representation
+  is  used);  (2) d = 1, (in which case, for large [3Xp[103X, the field is represented
+  using  the machinery of residue class rings (see section [14X14.5[114X) or (3) if the
+  Conway  polynomial  of  degree [3Xd[103X over the field with [3Xp[103X elements is known, or
+  can be computed (see [2XConwayPolynomial[102X ([14X59.5-1[114X)).[133X
+  
+  [33X[0;0YIf  you  attempt  to construct an element of [10XGF([3Xp^d[103X[10X)[110X for which [3Xd[103X [22X> 1[122X and the
+  relevant  Conway  polynomial  is not known, and not necessarily easy to find
+  (see [2XIsCheapConwayPolynomial[102X ([14X59.5-2[114X)), then [5XGAP[105X will stop with an error and
+  enter  the  break loop. If you leave this break loop by entering [10Xreturn;[110X [5XGAP[105X
+  will  attempt  to  compute the Conway polynomial, which may take a very long
+  time.[133X
+  
+  [33X[0;0YThe  root  returned  by  [2XZ[102X is a generator of the multiplicative group of the
+  finite field with [3Xp^d[103X elements, which is cyclic. The order of the element is
+  of  course  [3Xp^d[103X  [22X-1[122X. The [3Xp^d[103X [22X-1[122X different powers of the root are exactly the
+  nonzero elements of the finite field.[133X
+  
+  [33X[0;0YThus  all  nonzero  elements  of  the  finite field with [3Xp^d[103X elements can be
+  entered as [10XZ([3Xp^d[103X[10X)^[110X[22Xi[122X. Note that this is also the form that [5XGAP[105X uses to output
+  those  elements  when  they  are  stored  in the internal representation. In
+  larger  fields,  it is more convenient to enter and print elements as linear
+  combinations of powers of the primitive element, see section [14X59.6[114X.[133X
+  
+  [33X[0;0YThe additive neutral element is [10X0 * Z([3Xp[103X[10X)[110X. It is different from the integer [10X0[110X
+  in  subtle  ways.  First [10XIsInt( 0 * Z([3Xp[103X[10X) )[110X (see [2XIsInt[102X ([14X14.2-1[114X)) is [9Xfalse[109X and
+  [10XIsFFE( 0 * Z([3Xp[103X[10X) )[110X (see [2XIsFFE[102X ([14X59.1-1[114X)) is [9Xtrue[109X, whereas it is just the other
+  way around for the integer [10X0[110X.[133X
+  
+  [33X[0;0YThe  multiplicative  neutral  element  is  [10XZ([3Xp[103X[10X)^0[110X.  It is different from the
+  integer  [10X1[110X  in  subtle  ways.  First [10XIsInt( Z([3Xp[103X[10X)^0 )[110X (see [2XIsInt[102X ([14X14.2-1[114X)) is
+  [9Xfalse[109X  and  [10XIsFFE( Z([3Xp[103X[10X)^0 )[110X (see [2XIsFFE[102X ([14X59.1-1[114X)) is [9Xtrue[109X, whereas it is just
+  the other way around for the integer [10X1[110X. Also [10X1+1[110X is [10X2[110X, whereas, e.g., [10XZ(2)^0
+  + Z(2)^0[110X is [10X0 * Z(2)[110X.[133X
+  
+  [33X[0;0YThe various roots returned by [2XZ[102X for finite fields of the same characteristic
+  are compatible in the following sense. If the field [10XGF([3Xp[103X[10X,[110X[22Xn[122X[10X)[110X is a subfield of
+  the field [10XGF([3Xp[103X[10X,[110X[22Xm[122X[10X)[110X, i.e., [22Xn[122X divides [22Xm[122X, then [10XZ[110X[22X([3Xp[103X^n) =[122X[10XZ[110X[22X([3Xp[103X^m)^{([3Xp[103X^m-1)/([3Xp[103X^n-1)}[122X.
+  Note that this is the simplest relation that may hold between a generator of
+  [10XGF([3Xp[103X[10X,[110X[22Xn[122X[10X)[110X and [10XGF([3Xp[103X[10X,[110X[22Xm[122X[10X)[110X, since [10XZ[110X[22X([3Xp[103X^n)[122X is an element of order [22X[3Xp[103X^m-1[122X and [10XZ[110X[22X([3Xp[103X^m)[122X is
+  an element of order [22X[3Xp[103X^n-1[122X. This is achieved by choosing [10XZ([3Xp[103X[10X)[110X as the smallest
+  primitive  root  modulo [3Xp[103X and [10XZ([110X[3Xp^n[103X[10X)[110X as a root of the [22Xn[122X-th [13XConway polynomial[113X
+  (see [2XConwayPolynomial[102X  ([14X59.5-1[114X)) of characteristic [3Xp[103X. Those polynomials were
+  defined by J. H. Conway, and many of them were computed by R. A. Parker.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xa:= Z( 32 );[127X[104X
+    [4X[28XZ(2^5)[128X[104X
+    [4X[25Xgap>[125X [27Xa+a;[127X[104X
+    [4X[28X0*Z(2)[128X[104X
+    [4X[25Xgap>[125X [27Xa*a;[127X[104X
+    [4X[28XZ(2^5)^2[128X[104X
+    [4X[25Xgap>[125X [27Xb := Z(3,12);[127X[104X
+    [4X[28Xz[128X[104X
+    [4X[25Xgap>[125X [27Xb*b;[127X[104X
+    [4X[28Xz2[128X[104X
+    [4X[25Xgap>[125X [27Xb+b;[127X[104X
+    [4X[28X2z[128X[104X
+    [4X[25Xgap>[125X [27XPrint(b^100,"\n");[127X[104X
+    [4X[28XZ(3)^0+Z(3,12)^5+Z(3,12)^6+2*Z(3,12)^8+Z(3,12)^10+Z(3,12)^11[128X[104X
+  [4X[32X[104X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XZ(11,40);[127X[104X
+    [4X[28XError, Conway Polynomial 11^40 will need to computed and might be slow[128X[104X
+    [4X[28Xreturn to continue called from[128X[104X
+    [4X[28XFFECONWAY.ZNC( p, d ) called from[128X[104X
+    [4X[28X<function>( <arguments> ) called from read-eval-loop[128X[104X
+    [4X[28XEntering break read-eval-print loop ...[128X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou can 'return;' to continue[128X[104X
+    [4X[26Xbrk>[126X[104X
+  [4X[32X[104X
+  
+  [1X59.1-3 IsLexOrderedFFE[101X
+  
+  [33X[1;0Y[29X[2XIsLexOrderedFFE[102X( [3Xffe[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsLogOrderedFFE[102X( [3Xffe[103X ) [32X Category[133X
+  
+  [33X[0;0YElements  of  finite fields can be compared using the operators [10X=[110X and [10X<[110X. The
+  call [10X[3Xa[103X[10X = [3Xb[103X[10X[110X returns [9Xtrue[109X if and only if the finite field elements [3Xa[103X and [3Xb[103X are
+  equal.  Furthermore  [10X[3Xa[103X[10X  <  [3Xb[103X[10X[110X  tests  whether  [3Xa[103X is smaller than [3Xb[103X. The exact
+  behaviour  of  this  comparison depends on which of two categories the field
+  elements belong to:[133X
+  
+  [33X[0;0YFinite  field  elements  are  ordered  in  [5XGAP[105X  (by  [2X\<[102X  ([14X31.11-1[114X)) first by
+  characteristic  and  then  by  their  degree (i.e. the sizes of the smallest
+  fields  containing them). Amongst irreducible elements of a given field, the
+  ordering  depends  on  which  of  these categories the elements of the field
+  belong  to  (all  irreducible elements of a given field should belong to the
+  same one)[133X
+  
+  [33X[0;0YElements   in   [2XIsLexOrderedFFE[102X   are  ordered  lexicographically  by  their
+  coefficients with respect to the canonical basis of the field.[133X
+  
+  [33X[0;0YElements   in  [2XIsLogOrderedFFE[102X  are  ordered  according  to  their  discrete
+  logarithms  with  respect  to  the  [2XPrimitiveRoot[102X  ([14X59.3-3[114X) attribute of the
+  field.  For  the comparison of finite field elements with other [5XGAP[105X objects,
+  see [14X4.13[114X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XZ( 16 )^10 = Z( 4 )^2;  # illustrates embedding of GF(4) in GF(16)[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27X0 < 0*Z(101);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XZ(256) > Z(101);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XZ(2,20) < Z(2,20)^2; # this illustrates the lexicographic ordering[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X59.2 [33X[0;0YOperations for Finite Field Elements[133X[101X
+  
+  [33X[0;0YSince  finite  field  elements  are  scalars,  the operations [2XCharacteristic[102X
+  ([14X31.10-1[114X), [2XOne[102X ([14X31.10-2[114X), [2XZero[102X ([14X31.10-3[114X), [2XInverse[102X ([14X31.10-8[114X), [2XAdditiveInverse[102X
+  ([14X31.10-9[114X),  [2XOrder[102X ([14X31.10-10[114X) can be applied to them (see [14X31.10[114X). Contrary to
+  the  situation  with other scalars, [2XOrder[102X ([14X31.10-10[114X) is defined also for the
+  zero element in a finite field, with value [10X0[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XCharacteristic( Z( 16 )^10 );  Characteristic( Z( 9 )^2 );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[28X3[128X[104X
+    [4X[25Xgap>[125X [27XCharacteristic( [ Z(4), Z(8) ] );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XOne( Z(9) );  One( 0*Z(4) );[127X[104X
+    [4X[28XZ(3)^0[128X[104X
+    [4X[28XZ(2)^0[128X[104X
+    [4X[25Xgap>[125X [27XInverse( Z(9) );  AdditiveInverse( Z(9) );[127X[104X
+    [4X[28XZ(3^2)^7[128X[104X
+    [4X[28XZ(3^2)^5[128X[104X
+    [4X[25Xgap>[125X [27XOrder( Z(9)^7 );[127X[104X
+    [4X[28X8[128X[104X
+  [4X[32X[104X
+  
+  [1X59.2-1 DegreeFFE[101X
+  
+  [33X[1;0Y[29X[2XDegreeFFE[102X( [3Xz[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XDegreeFFE[102X( [3Xvec[103X ) [32X method[133X
+  [33X[1;0Y[29X[2XDegreeFFE[102X( [3Xmat[103X ) [32X method[133X
+  
+  [33X[0;0Y[2XDegreeFFE[102X  returns  the degree of the smallest finite field [3XF[103X containing the
+  element  [3Xz[103X,  respectively  all  elements of the row vector [3Xvec[103X over a finite
+  field (see [14X23[114X), or the matrix [3Xmat[103X over a finite field (see [14X24[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDegreeFFE( Z( 16 )^10 );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XDegreeFFE( Z( 16 )^11 );[127X[104X
+    [4X[28X4[128X[104X
+    [4X[25Xgap>[125X [27XDegreeFFE( [ Z(2^13), Z(2^10) ] );[127X[104X
+    [4X[28X130[128X[104X
+  [4X[32X[104X
+  
+  [1X59.2-2 LogFFE[101X
+  
+  [33X[1;0Y[29X[2XLogFFE[102X( [3Xz[103X, [3Xr[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XLogFFE[102X  returns  the  discrete  logarithm of the element [3Xz[103X in a finite field
+  with  respect  to  the  root  [3Xr[103X. An error is signalled if [3Xz[103X is zero. [9Xfail[109X is
+  returned if [3Xz[103X is not a power of [3Xr[103X.[133X
+  
+  [33X[0;0YThe  [13Xdiscrete  logarithm[113X  of the element [3Xz[103X with respect to the root [3Xr[103X is the
+  smallest nonnegative integer [22Xi[122X such that [22X[3Xr[103X^i = [3Xz[103X[122X holds.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLogFFE( Z(409)^116, Z(409) );  LogFFE( Z(409)^116, Z(409)^2 );[127X[104X
+    [4X[28X116[128X[104X
+    [4X[28X58[128X[104X
+  [4X[32X[104X
+  
+  [1X59.2-3 IntFFE[101X
+  
+  [33X[1;0Y[29X[2XIntFFE[102X( [3Xz[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XInt[102X( [3Xz[103X ) [32X method[133X
+  
+  [33X[0;0Y[2XIntFFE[102X returns the integer corresponding to the element [3Xz[103X, which must lie in
+  a  finite  prime  field.  That  is,  [2XIntFFE[102X returns the smallest nonnegative
+  integer [22Xi[122X such that [22Xi[122X[10X * One( [110X[3Xz[103X[10X ) = [110X[3Xz[103X.[133X
+  
+  [33X[0;0YThe   correspondence   between   elements  from  a  finite  prime  field  of
+  characteristic  [22Xp[122X  (for  [22Xp  <  2^16[122X)  and  the integers between [22X0[122X and [22Xp-1[122X is
+  defined by choosing [10XZ([110X[22Xp[122X[10X)[110X the element corresponding to the smallest primitive
+  root mod [22Xp[122X (see [2XPrimitiveRootMod[102X ([14X15.3-4[114X)).[133X
+  
+  [33X[0;0Y[2XIntFFE[102X is installed as a method for the operation [2XInt[102X ([14X14.2-3[114X) with argument
+  a finite field element.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIntFFE( Z(13) );  PrimitiveRootMod( 13 );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XIntFFE( Z(409) );[127X[104X
+    [4X[28X21[128X[104X
+    [4X[25Xgap>[125X [27XIntFFE( Z(409)^116 );  21^116 mod 409;[127X[104X
+    [4X[28X311[128X[104X
+    [4X[28X311[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YSee also [2XIntFFESymm[102X ([14X59.2-4[114X).[133X
+  
+  [1X59.2-4 IntFFESymm[101X
+  
+  [33X[1;0Y[29X[2XIntFFESymm[102X( [3Xz[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XIntFFESymm[102X( [3Xvec[103X ) [32X attribute[133X
+  
+  [33X[0;0YFor  a  finite  prime  field element [3Xz[103X, [2XIntFFESymm[102X returns the corresponding
+  integer  of smallest absolute value. That is, [2XIntFFESymm[102X returns the integer
+  [22Xi[122X of smallest absolute value such that [22Xi[122X[10X * One( [110X[3Xz[103X[10X ) = [110X[3Xz[103X holds.[133X
+  
+  [33X[0;0YFor  a  vector  [3Xvec[103X  of  FFEs,  the operation returns the result of applying
+  [2XIntFFESymm[102X to every entry of the vector.[133X
+  
+  [33X[0;0YThe   correspondence   between   elements  from  a  finite  prime  field  of
+  characteristic  [22Xp[122X  (for  [22Xp  < 2^16[122X) and the integers between [22X-p/2[122X and [22Xp/2[122X is
+  defined  by choosing [10XZ([110X[22Xp[122X[10X)[110X the element corresponding to the smallest positive
+  primitive root mod [22Xp[122X (see [2XPrimitiveRootMod[102X ([14X15.3-4[114X)) and reducing results to
+  the [22X-p/2 .. p/2[122X range.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIntFFE(Z(13)^2);IntFFE(Z(13)^3);[127X[104X
+    [4X[28X4[128X[104X
+    [4X[28X8[128X[104X
+    [4X[25Xgap>[125X [27XIntFFESymm(Z(13)^2);IntFFESymm(Z(13)^3);[127X[104X
+    [4X[28X4[128X[104X
+    [4X[28X-5[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YSee also [2XIntFFE[102X ([14X59.2-3[114X)[133X
+  
+  [1X59.2-5 IntVecFFE[101X
+  
+  [33X[1;0Y[29X[2XIntVecFFE[102X( [3Xvecffe[103X ) [32X operation[133X
+  
+  [33X[0;0Yis  the  list of integers corresponding to the vector [3Xvecffe[103X of finite field
+  elements in a prime field (see [2XIntFFE[102X ([14X59.2-3[114X)).[133X
+  
+  [1X59.2-6 AsInternalFFE[101X
+  
+  [33X[1;0Y[29X[2XAsInternalFFE[102X( [3Xffe[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturn an internal FFE equal to [3Xffe[103X if one exists, otherwise [10Xfail[110X[133X
+  
+  [1X59.2-7 RootFFE[101X
+  
+  [33X[1;0Y[29X[2XRootFFE[102X( [3XF[103X, [3Xz[103X, [3Xk[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XRootFFE[102X returns a finite field element [3Xr[103X from [3XF[103X whose [3Xk[103X-th power is [3Xz[103X. If no
+  such element exists then [9Xfail[109X is returned.[133X
+  
+  
+  [1X59.3 [33X[0;0YCreating Finite Fields[133X[101X
+  
+  [1X59.3-1 DefaultField[101X
+  
+  [33X[1;0Y[29X[2XDefaultField[102X( [3Xlist[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XDefaultRing[102X( [3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XDefaultField[102X and [2XDefaultRing[102X for finite field elements are defined to return
+  the [13Xsmallest[113X field containing the given elements.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDefaultField( [ Z(4), Z(4)^2 ] );  DefaultField( [ Z(4), Z(8) ] );[127X[104X
+    [4X[28XGF(2^2)[128X[104X
+    [4X[28XGF(2^6)[128X[104X
+  [4X[32X[104X
+  
+  [1X59.3-2 GaloisField[101X
+  
+  [33X[1;0Y[29X[2XGaloisField[102X( [3Xp^d[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XGF[102X( [3Xp^d[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XGaloisField[102X( [3Xp[103X, [3Xd[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XGF[102X( [3Xp[103X, [3Xd[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XGaloisField[102X( [3Xsubfield[103X, [3Xd[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XGF[102X( [3Xsubfield[103X, [3Xd[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XGaloisField[102X( [3Xp[103X, [3Xpol[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XGF[102X( [3Xp[103X, [3Xpol[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XGaloisField[102X( [3Xsubfield[103X, [3Xpol[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XGF[102X( [3Xsubfield[103X, [3Xpol[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XGaloisField[102X  returns  a  finite  field.  It  takes  two  arguments. The form
+  [10XGaloisField(  [3Xp[103X[10X,  [3Xd[103X[10X  )[110X,  where  [3Xp[103X,  [3Xd[103X  are  integers,  can  also be given as
+  [10XGaloisField( [3Xp[103X[10X^[3Xd[103X[10X )[110X. [2XGF[102X is an abbreviation for [2XGaloisField[102X.[133X
+  
+  [33X[0;0YThe  first  argument specifies the subfield [22XS[122X over which the new field is to
+  be  taken.  It can be a prime integer or a finite field. If it is a prime [3Xp[103X,
+  the subfield is the prime field of this characteristic.[133X
+  
+  [33X[0;0YThe  second  argument  specifies  the  extension. It can be an integer or an
+  irreducible  polynomial  over  the  field  [22XS[122X. If it is an integer [3Xd[103X, the new
+  field   is  constructed  as  the  polynomial  extension  w.r.t.  the  Conway
+  polynomial  (see [2XConwayPolynomial[102X  ([14X59.5-1[114X)) of degree [3Xd[103X over [22XS[122X. If it is an
+  irreducible  polynomial  [3Xpol[103X  over  [22XS[122X,  the  new  field  is  constructed  as
+  polynomial  extension  of  [22XS[122X  with  this  polynomial;  in  this case, [3Xpol[103X is
+  accessible  as  the  value of [2XDefiningPolynomial[102X ([14X58.2-7[114X) for the new field,
+  and  a  root  of  [3Xpol[103X  in  the  new  field  is  accessible  as  the value of
+  [2XRootOfDefiningPolynomial[102X ([14X58.2-8[114X).[133X
+  
+  [33X[0;0YNote  that  the  subfield over which a field was constructed determines over
+  which  field  the Galois group, conjugates, norm, trace, minimal polynomial,
+  and  trace  polynomial  are  computed  (see [2XGaloisGroup[102X ([14X58.3-1[114X), [2XConjugates[102X
+  ([14X58.3-6[114X),   [2XNorm[102X   ([14X58.3-4[114X),  [2XTrace[102X  ([14X58.3-5[114X),  [2XMinimalPolynomial[102X  ([14X58.3-2[114X),
+  [2XTracePolynomial[102X ([14X58.3-3[114X)).[133X
+  
+  [33X[0;0YThe field is regarded as a vector space (see [14X61[114X) over the given subfield, so
+  this determines the dimension and the canonical basis of the field.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf1:= GF( 2^4 );[127X[104X
+    [4X[28XGF(2^4)[128X[104X
+    [4X[25Xgap>[125X [27XSize( GaloisGroup ( f1 ) );[127X[104X
+    [4X[28X4[128X[104X
+    [4X[25Xgap>[125X [27XBasisVectors( Basis( f1 ) );[127X[104X
+    [4X[28X[ Z(2)^0, Z(2^4), Z(2^4)^2, Z(2^4)^3 ][128X[104X
+    [4X[25Xgap>[125X [27Xf2:= GF( GF(4), 2 );[127X[104X
+    [4X[28XAsField( GF(2^2), GF(2^4) )[128X[104X
+    [4X[25Xgap>[125X [27XSize( GaloisGroup( f2 ) );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XBasisVectors( Basis( f2 ) );[127X[104X
+    [4X[28X[ Z(2)^0, Z(2^4) ][128X[104X
+  [4X[32X[104X
+  
+  [1X59.3-3 PrimitiveRoot[101X
+  
+  [33X[1;0Y[29X[2XPrimitiveRoot[102X( [3XF[103X ) [32X attribute[133X
+  
+  [33X[0;0YA  [13Xprimitive  root[113X  of  a  finite field is a generator of its multiplicative
+  group.  A primitive root is always a primitive element (see [2XPrimitiveElement[102X
+  ([14X58.2-3[114X)), the converse is in general not true.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:= GF( 3^5 );[127X[104X
+    [4X[28XGF(3^5)[128X[104X
+    [4X[25Xgap>[125X [27XPrimitiveRoot( f );[127X[104X
+    [4X[28XZ(3^5)[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X59.4 [33X[0;0YFrobenius Automorphisms[133X[101X
+  
+  [1X59.4-1 FrobeniusAutomorphism[101X
+  
+  [33X[1;0Y[29X[2XFrobeniusAutomorphism[102X( [3XF[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the  Frobenius  automorphism  of  the  finite  field  [3XF[103X  as a field
+  homomorphism (see [14X32.12[114X).[133X
+  
+  [33X[0;0YThe  [13XFrobenius automorphism[113X [22Xf[122X of a finite field [22XF[122X of characteristic [22Xp[122X is the
+  function  that  takes  each  element  [22Xz[122X  of  [22XF[122X to its [22Xp[122X-th power. Each field
+  automorphism  of  [22XF[122X  is  a  power of [22Xf[122X. Thus [22Xf[122X is a generator for the Galois
+  group  of  [22XF[122X relative to the prime field of [22XF[122X, and an appropriate power of [22Xf[122X
+  is  a  generator  of  the Galois group of [22XF[122X over a subfield (see [2XGaloisGroup[102X
+  ([14X58.3-1[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := GF(16);[127X[104X
+    [4X[28XGF(2^4)[128X[104X
+    [4X[25Xgap>[125X [27Xx := FrobeniusAutomorphism( f );[127X[104X
+    [4X[28XFrobeniusAutomorphism( GF(2^4) )[128X[104X
+    [4X[25Xgap>[125X [27XZ(16) ^ x;[127X[104X
+    [4X[28XZ(2^4)^2[128X[104X
+    [4X[25Xgap>[125X [27Xx^2;[127X[104X
+    [4X[28XFrobeniusAutomorphism( GF(2^4) )^2[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  image  of  an  element  [22Xz[122X  under the [22Xi[122X-th power of [22Xf[122X is computed as the
+  [22Xp^i[122X-th  power of [22Xz[122X. The product of the [22Xi[122X-th power and the [22Xj[122X-th power of [22Xf[122X is
+  the  [22Xk[122X-th power of [22Xf[122X, where [22Xk[122X is [22Xi j mod[122X [10XSize([3XF[103X[10X)[110X[22X-1[122X. The zeroth power of [22Xf[122X is
+  [10XIdentityMapping( [3XF[103X[10X )[110X.[133X
+  
+  
+  [1X59.5 [33X[0;0YConway Polynomials[133X[101X
+  
+  [1X59.5-1 ConwayPolynomial[101X
+  
+  [33X[1;0Y[29X[2XConwayPolynomial[102X( [3Xp[103X, [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Yis  the Conway polynomial of the finite field [22XGF(p^n)[122X as polynomial over the
+  prime field in characteristic [3Xp[103X.[133X
+  
+  [33X[0;0YThe  [13XConway  polynomial[113X  [22XΦ_{n,p}[122X  of  [22XGF(p^n)[122X  is  defined  by the following
+  properties.[133X
+  
+  [33X[0;0YFirst  define an ordering of polynomials of degree [22Xn[122X over [22XGF(p)[122X, as follows.
+  [22Xf  =  ∑_{i  = 0}^n (-1)^i f_i x^i[122X is smaller than [22Xg = ∑_{i = 0}^n (-1)^i g_i
+  x^i[122X  if  and only if there is an index [22Xm ≤ n[122X such that [22Xf_i = g_i[122X for all [22Xi >
+  m[122X,  and [22Xtilde{f_m} < tilde{g_m}[122X, where [22Xtilde{c}[122X denotes the integer value in
+  [22X{  0,  1,  ...,  p-1  }[122X  that  is  mapped  to  [22Xc ∈ GF(p)[122X under the canonical
+  epimorphism that maps the integers onto [22XGF(p)[122X.[133X
+  
+  [33X[0;0Y[22XΦ_{n,p}[122X  is [13Xprimitive[113X over [22XGF(p)[122X (see [2XIsPrimitivePolynomial[102X ([14X66.4-12[114X)). That
+  is,  [22XΦ_{n,p}[122X  is  irreducible,  monic,  and  is  the minimal polynomial of a
+  primitive root of [22XGF(p^n)[122X.[133X
+  
+  [33X[0;0YFor   all   divisors   [22Xd[122X   of   [22Xn[122X   the   compatibility  condition  [22XΦ_{d,p}(
+  x^{frac{p^n-1}{p^m-1}}   )  ≡  0  mod  {Φ_{n,p}(x)}[122X  holds.  (That  is,  the
+  appropriate  power  of  a zero of [22XΦ_{n,p}[122X is a zero of the Conway polynomial
+  [22XΦ_{d,p}[122X.)[133X
+  
+  [33X[0;0YWith respect to the ordering defined above, [22XΦ_{n,p}[122X shall be minimal.[133X
+  
+  [33X[0;0YThe  computation of Conway polynomials can be time consuming. Therefore, [5XGAP[105X
+  comes  with  a list of precomputed polynomials. If a requested polynomial is
+  not  stored  then  [5XGAP[105X  prints  a  warning  and  computes it by checking all
+  polynomials  in the order defined above for the defining conditions. If [22Xn[122X is
+  not a prime this is probably a very long computation. (Some previously known
+  polynomials  with  prime  [22Xn[122X  are  not stored in [5XGAP[105X because they are quickly
+  recomputed.)  Use  the function [2XIsCheapConwayPolynomial[102X ([14X59.5-2[114X) to check in
+  advance if [2XConwayPolynomial[102X will give a result after a short time.[133X
+  
+  [33X[0;0YNote  that  primitivity  of  a  polynomial  can  only  be checked if [5XGAP[105X can
+  factorize  [22Xp^n-1[122X. A sufficiently new version of the [5XFactInt[105X package contains
+  many   precomputed  factors  of  such  numbers  from  various  factorization
+  projects.[133X
+  
+  [33X[0;0YSee [Lüb03] for further information on known Conway polynomials.[133X
+  
+  [33X[0;0YAn  interactive  overview of the Conway polynomials known to [5XGAP[105X is provided
+  by  the  function  [10XBrowseConwayPolynomials[110X  from the [5XGAP[105X package [5XBrowse[105X, see
+  [2XBrowseGapData[102X ([14XBrowse: BrowseGapData[114X).[133X
+  
+  [33X[0;0YIf [3Xpol[103X is a result returned by [2XConwayPolynomial[102X the command [10XPrint( InfoText(
+  [3Xpol[103X[10X ) );[110X will print some info on the origin of that particular polynomial.[133X
+  
+  [33X[0;0YFor  some  purposes it may be enough to have any primitive polynomial for an
+  extension   of   a   finite   field   instead   of  the  Conway  polynomial,
+  see [2XRandomPrimitivePolynomial[102X ([14X59.5-3[114X) below.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XConwayPolynomial( 2, 5 );  ConwayPolynomial( 3, 7 );[127X[104X
+    [4X[28Xx_1^5+x_1^2+Z(2)^0[128X[104X
+    [4X[28Xx_1^7-x_1^2+Z(3)^0[128X[104X
+  [4X[32X[104X
+  
+  [1X59.5-2 IsCheapConwayPolynomial[101X
+  
+  [33X[1;0Y[29X[2XIsCheapConwayPolynomial[102X( [3Xp[103X, [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0YReturns  [9Xtrue[109X  if  [10XConwayPolynomial( [3Xp[103X[10X, [3Xn[103X[10X )[110X will give a result in [13Xreasonable[113X
+  time.  This is either the case when this polynomial is pre-computed, or if [3Xn[103X
+  is a not too big prime.[133X
+  
+  [1X59.5-3 RandomPrimitivePolynomial[101X
+  
+  [33X[1;0Y[29X[2XRandomPrimitivePolynomial[102X( [3XF[103X, [3Xn[103X[, [3Xi[103X] ) [32X function[133X
+  
+  [33X[0;0YFor  a  finite  field  [3XF[103X  and  a  positive integer [3Xn[103X this function returns a
+  primitive  polynomial  of degree [3Xn[103X over [3XF[103X, that is a zero of this polynomial
+  has  maximal multiplicative order [22X|[3XF[103X|^n-1[122X. If [3Xi[103X is given then the polynomial
+  is  written  in  variable  number [3Xi[103X over [3XF[103X (see [2XIndeterminate[102X ([14X66.1-1[114X)), the
+  default for [3Xi[103X is 1.[133X
+  
+  [33X[0;0YAlternatively,  [3XF[103X  can  be a prime power q, then [3XF[103X = GF(q) is assumed. And [3Xi[103X
+  can  be  a  univariate polynomial over [3XF[103X, then the result is a polynomial in
+  the same variable.[133X
+  
+  [33X[0;0YThis  function  can  work for much larger fields than those for which Conway
+  polynomials are available, of course [5XGAP[105X must be able to factorize [22X|[3XF[103X|^n-1[122X.[133X
+  
+  
+  [1X59.6 [33X[0;0YPrinting, Viewing and Displaying Finite Field Elements[133X[101X
+  
+  [1X59.6-1 ViewObj[101X
+  
+  [33X[1;0Y[29X[2XViewObj[102X( [3Xz[103X ) [32X method[133X
+  [33X[1;0Y[29X[2XPrintObj[102X( [3Xz[103X ) [32X method[133X
+  [33X[1;0Y[29X[2XDisplay[102X( [3Xz[103X ) [32X method[133X
+  
+  [33X[0;0YInternal  finite  field  elements  are  viewed,  printed  and displayed (see
+  section  [14X6.3[114X for the distinctions between these operations) as powers of the
+  primitive  root  (except for the zero element, which is displayed as 0 times
+  the primitive root). Thus:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XZ(2);[127X[104X
+    [4X[28XZ(2)^0[128X[104X
+    [4X[25Xgap>[125X [27XZ(5)+Z(5);[127X[104X
+    [4X[28XZ(5)^2[128X[104X
+    [4X[25Xgap>[125X [27XZ(256);[127X[104X
+    [4X[28XZ(2^8)[128X[104X
+    [4X[25Xgap>[125X [27XZero(Z(125));[127X[104X
+    [4X[28X0*Z(5)[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  also  that  each  element  is  displayed as an element of the field it
+  generates,  and  that  the  size  of  the field is printed as a power of the
+  characteristic.[133X
+  
+  [33X[0;0YElements  of  larger  fields  are printed as [5XGAP[105X expressions which represent
+  them as sums of low powers of the primitive root:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPrint( Z(3,20)^100, "\n" );[127X[104X
+    [4X[28X2*Z(3,20)^2+Z(3,20)^4+Z(3,20)^6+Z(3,20)^7+2*Z(3,20)^9+2*Z(3,20)^10+2*Z\[128X[104X
+    [4X[28X(3,20)^12+2*Z(3,20)^15+2*Z(3,20)^17+Z(3,20)^18+Z(3,20)^19[128X[104X
+    [4X[25Xgap>[125X [27XPrint( Z(3,20)^((3^20-1)/(3^10-1)), "\n" );[127X[104X
+    [4X[28XZ(3,20)^3+2*Z(3,20)^4+2*Z(3,20)^7+Z(3,20)^8+2*Z(3,20)^10+Z(3,20)^11+2*\[128X[104X
+    [4X[28XZ(3,20)^12+Z(3,20)^13+Z(3,20)^14+Z(3,20)^15+Z(3,20)^17+Z(3,20)^18+2*Z(\[128X[104X
+    [4X[28X3,20)^19[128X[104X
+    [4X[25Xgap>[125X [27XZ(3,20)^((3^20-1)/(3^10-1)) = Z(3,10);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  from  the  second  example  above,  that these elements are not always
+  written over the smallest possible field before being output.[133X
+  
+  [33X[0;0YThe  [2XViewObj[102X and [2XDisplay[102X methods for these large finite field elements use a
+  slightly  more  compact,  but  mathematically equivalent representation. The
+  primitive  root  is  represented by [10Xz[110X; its [22Xi[122X-th power by [10Xz[110X[22Xi[122X and [22Xk[122X times this
+  power by [22Xk[122X[10Xz[110X[22Xi[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XZ(5,20)^100;[127X[104X
+    [4X[28Xz2+z4+4z5+2z6+z8+3z9+4z10+3z12+z13+2z14+4z16+3z17+2z18+2z19[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis  output  format is always used for [2XDisplay[102X. For [2XViewObj[102X it is used only
+  if  its  length  would  not exceed the number of lines specified in the user
+  preference  [10XViewLength[110X  (see  [2XSetUserPreference[102X  ([14X3.2-3[114X).  Longer  output is
+  replaced by [10X<<an element of GF([3Xp[103X[10X, [3Xd[103X[10X)>>[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XZ(2,409)^100000;[127X[104X
+    [4X[28X<<an element of GF(2, 409)>>[128X[104X
+    [4X[25Xgap>[125X [27XDisplay(Z(2,409)^100000);[127X[104X
+    [4X[28Xz2+z3+z4+z5+z6+z7+z8+z10+z11+z13+z17+z19+z20+z29+z32+z34+z35+z37+z40+z\[128X[104X
+    [4X[28X45+z46+z48+z50+z52+z54+z55+z58+z59+z60+z66+z67+z68+z70+z74+z79+z80+z81\[128X[104X
+    [4X[28X+z82+z83+z86+z91+z93+z94+z95+z96+z98+z99+z100+z101+z102+z104+z106+z109\[128X[104X
+    [4X[28X+z110+z112+z114+z115+z118+z119+z123+z126+z127+z135+z138+z140+z142+z143\[128X[104X
+    [4X[28X+z146+z147+z154+z159+z161+z162+z168+z170+z171+z173+z174+z181+z182+z183\[128X[104X
+    [4X[28X+z186+z188+z189+z192+z193+z194+z195+z196+z199+z202+z204+z205+z207+z208\[128X[104X
+    [4X[28X+z209+z211+z212+z213+z214+z215+z216+z218+z219+z220+z222+z223+z229+z232\[128X[104X
+    [4X[28X+z235+z236+z237+z238+z240+z243+z244+z248+z250+z251+z256+z258+z262+z263\[128X[104X
+    [4X[28X+z268+z270+z271+z272+z274+z276+z282+z286+z288+z289+z294+z295+z299+z300\[128X[104X
+    [4X[28X+z301+z302+z303+z304+z305+z306+z307+z308+z309+z310+z312+z314+z315+z316\[128X[104X
+    [4X[28X+z320+z321+z322+z324+z325+z326+z327+z330+z332+z335+z337+z338+z341+z344\[128X[104X
+    [4X[28X+z348+z350+z352+z353+z356+z357+z358+z360+z362+z364+z366+z368+z372+z373\[128X[104X
+    [4X[28X+z374+z375+z378+z379+z380+z381+z383+z384+z386+z387+z390+z395+z401+z402\[128X[104X
+    [4X[28X+z406+z408[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YFinally note that elements of large prime fields are stored and displayed as
+  residue class objects. So[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XZ(65537);[127X[104X
+    [4X[28XZmodpZObj( 3, 65537 )[128X[104X
+  [4X[32X[104X
+  

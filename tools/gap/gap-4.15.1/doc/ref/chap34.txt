@@ -1,0 +1,369 @@
+  
+  [1X34 [33X[0;0YOrderings[133X[101X
+  
+  [33X[0;0YIn  [5XGAP[105X  an  ordering is a relation defined on a family, which is reflexive,
+  anti-symmetric and transitive.[133X
+  
+  
+  [1X34.1 [33X[0;0YIsOrdering (Filter)[133X[101X
+  
+  [1X34.1-1 IsOrdering[101X
+  
+  [33X[1;0Y[29X[2XIsOrdering[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0Yreturns [9Xtrue[109X if and only if the object [3Xord[103X is an ordering.[133X
+  
+  [1X34.1-2 OrderingsFamily[101X
+  
+  [33X[1;0Y[29X[2XOrderingsFamily[102X( [3Xfam[103X ) [32X attribute[133X
+  
+  [33X[0;0Yfor a family [3Xfam[103X, returns the family of all orderings on elements of [3Xfam[103X.[133X
+  
+  
+  [1X34.2 [33X[0;0YBuilding new orderings[133X[101X
+  
+  [1X34.2-1 OrderingByLessThanFunctionNC[101X
+  
+  [33X[1;0Y[29X[2XOrderingByLessThanFunctionNC[102X( [3Xfam[103X, [3Xlt[103X[, [3Xl[103X] ) [32X operation[133X
+  
+  [33X[0;0YCalled with two arguments, [2XOrderingByLessThanFunctionNC[102X returns the ordering
+  on  the  elements  of  the  elements  of  the  family  [3Xfam[103X, according to the
+  [2XLessThanFunction[102X  ([14X34.3-5[114X)  value  given  by [3Xlt[103X, where [3Xlt[103X is a function that
+  takes two arguments in [3Xfam[103X and returns [9Xtrue[109X or [9Xfalse[109X.[133X
+  
+  [33X[0;0YCalled  with three arguments, for a family [3Xfam[103X, a function [3Xlt[103X that takes two
+  arguments  in  [3Xfam[103X  and returns [9Xtrue[109X or [9Xfalse[109X, and a list [3Xl[103X of properties of
+  orderings, [2XOrderingByLessThanFunctionNC[102X returns the ordering on the elements
+  of  [3Xfam[103X  with  [2XLessThanFunction[102X  ([14X34.3-5[114X)  value  given  by  [3Xlt[103X and with the
+  properties from [3Xl[103X set to [9Xtrue[109X.[133X
+  
+  [1X34.2-2 OrderingByLessThanOrEqualFunctionNC[101X
+  
+  [33X[1;0Y[29X[2XOrderingByLessThanOrEqualFunctionNC[102X( [3Xfam[103X, [3Xlteq[103X[, [3Xl[103X] ) [32X operation[133X
+  
+  [33X[0;0YCalled  with  two arguments, [2XOrderingByLessThanOrEqualFunctionNC[102X returns the
+  ordering  on the elements of the elements of the family [3Xfam[103X according to the
+  [2XLessThanOrEqualFunction[102X  ([14X34.3-6[114X)  value  given  by  [3Xlteq[103X,  where  [3Xlteq[103X is a
+  function that takes two arguments in [3Xfam[103X and returns [9Xtrue[109X or [9Xfalse[109X.[133X
+  
+  [33X[0;0YCalled  with  three  arguments, for a family [3Xfam[103X, a function [3Xlteq[103X that takes
+  two  arguments  in [3Xfam[103X and returns [9Xtrue[109X or [9Xfalse[109X, and a list [3Xl[103X of properties
+  of  orderings,  [2XOrderingByLessThanOrEqualFunctionNC[102X  returns the ordering on
+  the  elements  of  [3Xfam[103X  with [2XLessThanOrEqualFunction[102X ([14X34.3-6[114X) value given by
+  [3Xlteq[103X and with the properties from [3Xl[103X set to [9Xtrue[109X.[133X
+  
+  [33X[0;0YNotice  that  these  functions  do  not check whether [3Xfam[103X and [3Xlt[103X or [3Xlteq[103X are
+  compatible, and whether the properties listed in [3Xl[103X are indeed satisfied.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := FreeSemigroup("a","b");;[127X[104X
+    [4X[25Xgap>[125X [27Xa := GeneratorsOfSemigroup(f)[1];;[127X[104X
+    [4X[25Xgap>[125X [27Xb := GeneratorsOfSemigroup(f)[2];;[127X[104X
+    [4X[25Xgap>[125X [27Xlt := function(x,y) return Length(x)<Length(y); end;[127X[104X
+    [4X[28Xfunction( x, y ) ... end[128X[104X
+    [4X[25Xgap>[125X [27Xfam := FamilyObj(a);;[127X[104X
+    [4X[25Xgap>[125X [27Xord := OrderingByLessThanFunctionNC(fam,lt);[127X[104X
+    [4X[28XOrdering[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X34.3 [33X[0;0YProperties and basic functionality[133X[101X
+  
+  [1X34.3-1 IsWellFoundedOrdering[101X
+  
+  [33X[1;0Y[29X[2XIsWellFoundedOrdering[102X( [3Xord[103X ) [32X property[133X
+  
+  [33X[0;0Yfor  an  ordering  [3Xord[103X,  returns  [9Xtrue[109X  if  and only if the ordering is well
+  founded. An ordering [3Xord[103X is well founded if it admits no infinite descending
+  chains.  Normally  this  property  is  set  at  the  time of creation of the
+  ordering  and there is no general method to check whether a certain ordering
+  is well founded.[133X
+  
+  [1X34.3-2 IsTotalOrdering[101X
+  
+  [33X[1;0Y[29X[2XIsTotalOrdering[102X( [3Xord[103X ) [32X property[133X
+  
+  [33X[0;0Yfor  an  ordering [3Xord[103X, returns true if and only if the ordering is total. An
+  ordering [3Xord[103X is total if any two elements of the family are comparable under
+  [3Xord[103X.  Normally  this property is set at the time of creation of the ordering
+  and there is no general method to check whether a certain ordering is total.[133X
+  
+  [1X34.3-3 IsIncomparableUnder[101X
+  
+  [33X[1;0Y[29X[2XIsIncomparableUnder[102X( [3Xord[103X, [3Xel1[103X, [3Xel2[103X ) [32X operation[133X
+  
+  [33X[0;0Yfor  an  ordering  [3Xord[103X on the elements of the family of [3Xel1[103X and [3Xel2[103X, returns
+  [9Xtrue[109X      if     [3Xel1[103X     [22X≠[122X     [3Xel2[103X     and     [10XIsLessThanUnder[110X([3Xord[103X,[3Xel1[103X,[3Xel2[103X),
+  [10XIsLessThanUnder[110X([3Xord[103X,[3Xel2[103X,[3Xel1[103X) are both [9Xfalse[109X; and returns [9Xfalse[109X otherwise.[133X
+  
+  [1X34.3-4 FamilyForOrdering[101X
+  
+  [33X[1;0Y[29X[2XFamilyForOrdering[102X( [3Xord[103X ) [32X attribute[133X
+  
+  [33X[0;0Yfor  an  ordering  [3Xord[103X, returns the family of elements that the ordering [3Xord[103X
+  compares.[133X
+  
+  [1X34.3-5 LessThanFunction[101X
+  
+  [33X[1;0Y[29X[2XLessThanFunction[102X( [3Xord[103X ) [32X attribute[133X
+  
+  [33X[0;0Yfor  an ordering [3Xord[103X, returns a function [22Xf[122X which takes two elements [22Xel1[122X, [22Xel2[122X
+  in  [10XFamilyForOrdering[110X([3Xord[103X) and returns [9Xtrue[109X if [22Xel1[122X is strictly less than [22Xel2[122X
+  (with respect to [3Xord[103X), and returns [9Xfalse[109X otherwise.[133X
+  
+  [1X34.3-6 LessThanOrEqualFunction[101X
+  
+  [33X[1;0Y[29X[2XLessThanOrEqualFunction[102X( [3Xord[103X ) [32X attribute[133X
+  
+  [33X[0;0Yfor  an ordering [3Xord[103X, returns a function that takes two elements [22Xel1[122X, [22Xel2[122X in
+  [10XFamilyForOrdering[110X([3Xord[103X)  and returns [9Xtrue[109X if [22Xel1[122X is less than [13Xor equal to[113X [22Xel2[122X
+  (with respect to [3Xord[103X), and returns [9Xfalse[109X otherwise.[133X
+  
+  [1X34.3-7 IsLessThanUnder[101X
+  
+  [33X[1;0Y[29X[2XIsLessThanUnder[102X( [3Xord[103X, [3Xel1[103X, [3Xel2[103X ) [32X operation[133X
+  
+  [33X[0;0Yfor  an  ordering  [3Xord[103X on the elements of the family of [3Xel1[103X and [3Xel2[103X, returns
+  [9Xtrue[109X  if  [3Xel1[103X  is  (strictly)  less  than [3Xel2[103X with respect to [3Xord[103X, and [9Xfalse[109X
+  otherwise.[133X
+  
+  [1X34.3-8 IsLessThanOrEqualUnder[101X
+  
+  [33X[1;0Y[29X[2XIsLessThanOrEqualUnder[102X( [3Xord[103X, [3Xel1[103X, [3Xel2[103X ) [32X operation[133X
+  
+  [33X[0;0Yfor  an  ordering  [3Xord[103X on the elements of the family of [3Xel1[103X and [3Xel2[103X, returns
+  [9Xtrue[109X  if  [3Xel1[103X  is  less  than or equal to [3Xel2[103X with respect to [3Xord[103X, and [9Xfalse[109X
+  otherwise.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsLessThanUnder(ord,a,a*b);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsLessThanOrEqualUnder(ord,a*b,a*b);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsIncomparableUnder(ord,a,b);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XFamilyForOrdering(ord) = FamilyObj(a);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X34.4 [33X[0;0YOrderings on families of associative words[133X[101X
+  
+  [33X[0;0YWe now consider orderings on families of associative words.[133X
+  
+  [33X[0;0YExamples  of families of associative words are the families of elements of a
+  free  semigroup  or  a free monoid; these are the two cases that we consider
+  mostly.  Associated  with  those  families  is  an  alphabet,  which  is the
+  semigroup  (resp. monoid) generating set of the correspondent free semigroup
+  (resp.  free  monoid). For definitions of the orderings considered, see Sims
+  [Sim94].[133X
+  
+  [1X34.4-1 IsOrderingOnFamilyOfAssocWords[101X
+  
+  [33X[1;0Y[29X[2XIsOrderingOnFamilyOfAssocWords[102X( [3Xord[103X ) [32X property[133X
+  
+  [33X[0;0Yfor  an  ordering  [3Xord[103X,  returns true if [3Xord[103X is an ordering over a family of
+  associative words.[133X
+  
+  [1X34.4-2 IsTranslationInvariantOrdering[101X
+  
+  [33X[1;0Y[29X[2XIsTranslationInvariantOrdering[102X( [3Xord[103X ) [32X property[133X
+  
+  [33X[0;0Yfor  an  ordering  [3Xord[103X on a family of associative words, returns [9Xtrue[109X if and
+  only if the ordering is translation invariant.[133X
+  
+  [33X[0;0YThis  is  a  property  of  orderings  on  families  of associative words. An
+  ordering  [3Xord[103X  over  a family [22XF[122X, with alphabet [22XX[122X is translation invariant if
+  [10XIsLessThanUnder([110X   [3Xord[103X,   [22Xu[122X,   [22Xv[122X  [10X)[110X  implies  that  for  any  [22Xa,  b  ∈  X^*[122X,
+  [10XIsLessThanUnder([110X [3Xord[103X, [22Xa*u*b[122X, [22Xa*v*b[122X [10X)[110X.[133X
+  
+  [1X34.4-3 IsReductionOrdering[101X
+  
+  [33X[1;0Y[29X[2XIsReductionOrdering[102X( [3Xord[103X ) [32X property[133X
+  
+  [33X[0;0Yfor  an  ordering  [3Xord[103X on a family of associative words, returns [9Xtrue[109X if and
+  only if the ordering is a reduction ordering. An ordering [3Xord[103X is a reduction
+  ordering if it is well founded and translation invariant.[133X
+  
+  [1X34.4-4 OrderingOnGenerators[101X
+  
+  [33X[1;0Y[29X[2XOrderingOnGenerators[102X( [3Xord[103X ) [32X attribute[133X
+  
+  [33X[0;0Yfor  an  ordering  [3Xord[103X  on  a family of associative words, returns a list in
+  which  the  generators  are considered. This could be indeed the ordering of
+  the  generators in the ordering, but, for example, if a weight is associated
+  to  each  generator  then  this  is  not  true  anymore. See the example for
+  [2XWeightLexOrdering[102X ([14X34.4-8[114X).[133X
+  
+  [1X34.4-5 LexicographicOrdering[101X
+  
+  [33X[1;0Y[29X[2XLexicographicOrdering[102X( [3XD[103X[, [3Xgens[103X] ) [32X operation[133X
+  
+  [33X[0;0YLet  [3XD[103X  be a free semigroup, a free monoid, or the elements family of such a
+  domain.  Called  with  only  argument  [3XD[103X,  [2XLexicographicOrdering[102X returns the
+  lexicographic ordering on the elements of [3XD[103X.[133X
+  
+  [33X[0;0YThe  optional  argument [3Xgens[103X can be either the list of free generators of [3XD[103X,
+  in the desired order, or a list of the positions of these generators, in the
+  desired  order, and [2XLexicographicOrdering[102X returns the lexicographic ordering
+  on the elements of [3XD[103X with the ordering on the generators as given.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := FreeSemigroup(3);[127X[104X
+    [4X[28X<free semigroup on the generators [ s1, s2, s3 ]>[128X[104X
+    [4X[25Xgap>[125X [27Xlex := LexicographicOrdering(f,[2,3,1]);[127X[104X
+    [4X[28XOrdering[128X[104X
+    [4X[25Xgap>[125X [27XIsLessThanUnder(lex,f.2*f.3,f.3);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsLessThanUnder(lex,f.3,f.2);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X34.4-6 ShortLexOrdering[101X
+  
+  [33X[1;0Y[29X[2XShortLexOrdering[102X( [3XD[103X[, [3Xgens[103X] ) [32X operation[133X
+  
+  [33X[0;0YLet  [3XD[103X  be a free semigroup, a free monoid, or the elements family of such a
+  domain.  Called  with only argument [3XD[103X, [2XShortLexOrdering[102X returns the shortlex
+  ordering on the elements of [3XD[103X.[133X
+  
+  [33X[0;0YThe  optional  argument [3Xgens[103X can be either the list of free generators of [3XD[103X,
+  in the desired order, or a list of the positions of these generators, in the
+  desired  order,  and  [2XShortLexOrdering[102X  returns the shortlex ordering on the
+  elements of [3XD[103X with the ordering on the generators as given.[133X
+  
+  [1X34.4-7 IsShortLexOrdering[101X
+  
+  [33X[1;0Y[29X[2XIsShortLexOrdering[102X( [3Xord[103X ) [32X property[133X
+  
+  [33X[0;0Yfor  an  ordering  [3Xord[103X of a family of associative words, returns [9Xtrue[109X if and
+  only if [3Xord[103X is a shortlex ordering.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := FreeSemigroup(3);[127X[104X
+    [4X[28X<free semigroup on the generators [ s1, s2, s3 ]>[128X[104X
+    [4X[25Xgap>[125X [27Xsl := ShortLexOrdering(f,[2,3,1]);[127X[104X
+    [4X[28XOrdering[128X[104X
+    [4X[25Xgap>[125X [27XIsLessThanUnder(sl,f.1,f.2);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsLessThanUnder(sl,f.3,f.2);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsLessThanUnder(sl,f.3,f.1);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X34.4-8 WeightLexOrdering[101X
+  
+  [33X[1;0Y[29X[2XWeightLexOrdering[102X( [3XD[103X, [3Xgens[103X, [3Xwt[103X ) [32X operation[133X
+  
+  [33X[0;0YLet  [3XD[103X  be a free semigroup, a free monoid, or the elements family of such a
+  domain.  [3Xgens[103X can be either the list of free generators of [3XD[103X, in the desired
+  order, or a list of the positions of these generators, in the desired order.
+  Let  [3Xwt[103X  be  a  list  of  weights.  [2XWeightLexOrdering[102X  returns the weightlex
+  ordering  on  the  elements  of  [3XD[103X  with  the ordering on the generators and
+  weights of the generators as given.[133X
+  
+  [1X34.4-9 IsWeightLexOrdering[101X
+  
+  [33X[1;0Y[29X[2XIsWeightLexOrdering[102X( [3Xord[103X ) [32X property[133X
+  
+  [33X[0;0Yfor  an  ordering  [3Xord[103X on a family of associative words, returns [9Xtrue[109X if and
+  only if [3Xord[103X is a weightlex ordering.[133X
+  
+  [1X34.4-10 WeightOfGenerators[101X
+  
+  [33X[1;0Y[29X[2XWeightOfGenerators[102X( [3Xord[103X ) [32X attribute[133X
+  
+  [33X[0;0Yfor  a  weightlex  ordering  [3Xord[103X, returns a list with length the size of the
+  alphabet of the family. This list gives the weight of each of the letters of
+  the  alphabet  which  are  used  for weightlex orderings with respect to the
+  ordering given by [2XOrderingOnGenerators[102X ([14X34.4-4[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := FreeSemigroup(3);[127X[104X
+    [4X[28X<free semigroup on the generators [ s1, s2, s3 ]>[128X[104X
+    [4X[25Xgap>[125X [27Xwtlex := WeightLexOrdering(f,[f.2,f.3,f.1],[3,2,1]);[127X[104X
+    [4X[28XOrdering[128X[104X
+    [4X[25Xgap>[125X [27XIsLessThanUnder(wtlex,f.1,f.2);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsLessThanUnder(wtlex,f.3,f.2);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsLessThanUnder(wtlex,f.3,f.1);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XOrderingOnGenerators(wtlex);[127X[104X
+    [4X[28X[ s2, s3, s1 ][128X[104X
+    [4X[25Xgap>[125X [27XWeightOfGenerators(wtlex);[127X[104X
+    [4X[28X[ 3, 2, 1 ][128X[104X
+  [4X[32X[104X
+  
+  [1X34.4-11 BasicWreathProductOrdering[101X
+  
+  [33X[1;0Y[29X[2XBasicWreathProductOrdering[102X( [3XD[103X[, [3Xgens[103X] ) [32X operation[133X
+  
+  [33X[0;0YLet  [3XD[103X  be a free semigroup, a free monoid, or the elements family of such a
+  domain.  Called with only argument [3XD[103X, [2XBasicWreathProductOrdering[102X returns the
+  basic wreath product ordering on the elements of [3XD[103X.[133X
+  
+  [33X[0;0YThe  optional  argument [3Xgens[103X can be either the list of free generators of [3XD[103X,
+  in the desired order, or a list of the positions of these generators, in the
+  desired  order,  and  [2XBasicWreathProductOrdering[102X  returns  the lexicographic
+  ordering on the elements of [3XD[103X with the ordering on the generators as given.[133X
+  
+  [1X34.4-12 IsBasicWreathProductOrdering[101X
+  
+  [33X[1;0Y[29X[2XIsBasicWreathProductOrdering[102X( [3Xord[103X ) [32X property[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := FreeSemigroup(3);[127X[104X
+    [4X[28X<free semigroup on the generators [ s1, s2, s3 ]>[128X[104X
+    [4X[25Xgap>[125X [27Xbasic := BasicWreathProductOrdering(f,[2,3,1]);[127X[104X
+    [4X[28XOrdering[128X[104X
+    [4X[25Xgap>[125X [27XIsLessThanUnder(basic,f.3,f.1);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsLessThanUnder(basic,f.3*f.2,f.1);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsLessThanUnder(basic,f.3*f.2*f.1,f.1*f.3);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X34.4-13 WreathProductOrdering[101X
+  
+  [33X[1;0Y[29X[2XWreathProductOrdering[102X( [3XD[103X[, [3Xgens[103X], [3Xlevels[103X ) [32X operation[133X
+  
+  [33X[0;0YLet  [3XD[103X  be a free semigroup, a free monoid, or the elements family of such a
+  domain,  let [3Xgens[103X be either the list of free generators of [3XD[103X, in the desired
+  order, or a list of the positions of these generators, in the desired order,
+  and  let  [3Xlevels[103X  be a list of levels for the generators. If [3Xgens[103X is omitted
+  then the default ordering is taken. [2XWreathProductOrdering[102X returns the wreath
+  product ordering on the elements of [3XD[103X with the ordering on the generators as
+  given.[133X
+  
+  [1X34.4-14 IsWreathProductOrdering[101X
+  
+  [33X[1;0Y[29X[2XIsWreathProductOrdering[102X( [3Xord[103X ) [32X property[133X
+  
+  [33X[0;0Yspecifies   whether   an   ordering   is  a  wreath  product  ordering  (see
+  [2XWreathProductOrdering[102X ([14X34.4-13[114X)).[133X
+  
+  [1X34.4-15 LevelsOfGenerators[101X
+  
+  [33X[1;0Y[29X[2XLevelsOfGenerators[102X( [3Xord[103X ) [32X attribute[133X
+  
+  [33X[0;0Yfor  a  wreath product ordering [3Xord[103X, returns the levels of the generators as
+  given at creation (with respect to [2XOrderingOnGenerators[102X ([14X34.4-4[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := FreeSemigroup(3);[127X[104X
+    [4X[28X<free semigroup on the generators [ s1, s2, s3 ]>[128X[104X
+    [4X[25Xgap>[125X [27Xwrp := WreathProductOrdering(f,[1,2,3],[1,1,2,]);[127X[104X
+    [4X[28XOrdering[128X[104X
+    [4X[25Xgap>[125X [27XIsLessThanUnder(wrp,f.3,f.1);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsLessThanUnder(wrp,f.3,f.2);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsLessThanUnder(wrp,f.1,f.2);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XLevelsOfGenerators(wrp);[127X[104X
+    [4X[28X[ 1, 1, 2 ][128X[104X
+  [4X[32X[104X
+  

@@ -1,0 +1,420 @@
+  
+  [1X49 [33X[0;0YGroup Products[133X[101X
+  
+  [33X[0;0YThis  chapter  describes  the  various  group product constructions that are
+  possible in [5XGAP[105X.[133X
+  
+  [33X[0;0YAt  the  moment  for some of the products methods are available only if both
+  factors  are  given  in the same representation or only for certain types of
+  groups  such  as  permutation  groups  and pc groups when the product can be
+  naturally represented as a group of the same kind.[133X
+  
+  [33X[0;0Y[5XGAP[105X  does not guarantee that a product of two groups will be in a particular
+  representation.  (Exceptions are [2XWreathProductImprimitiveAction[102X ([14X49.4-2[114X) and
+  [2XWreathProductProductAction[102X  ([14X49.4-3[114X) which are construction that makes sense
+  only for permutation groups, see [2XWreathProduct[102X ([14X49.4-1[114X)).[133X
+  
+  [33X[0;0Y[5XGAP[105X  however  will try to choose an efficient representation, so products of
+  permutation  groups or pc groups often will be represented as a group of the
+  same kind again.[133X
+  
+  [33X[0;0YTherefore  the only guaranteed way to relate a product to its factors is via
+  the embedding and projection homomorphisms, see [14X49.6[114X.[133X
+  
+  
+  [1X49.1 [33X[0;0YDirect Products[133X[101X
+  
+  [33X[0;0YThe  direct  product  of  groups  is  the  cartesian  product  of the groups
+  (considered as element sets) with component-wise multiplication.[133X
+  
+  [1X49.1-1 DirectProduct[101X
+  
+  [33X[1;0Y[29X[2XDirectProduct[102X( [3XG[103X[, [3XH[103X, [3X...[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XDirectProductOp[102X( [3Xlist[103X, [3Xexpl[103X ) [32X operation[133X
+  
+  [33X[0;0YThese  functions  construct  the  direct  product  of  the  groups  given as
+  arguments. [2XDirectProduct[102X takes an arbitrary positive number of arguments and
+  calls  the  operation  [2XDirectProductOp[102X,  which  takes exactly two arguments,
+  namely  a  nonempty list [3Xlist[103X of groups and one of these groups, [3Xexpl[103X. (This
+  somewhat  strange  syntax allows the method selection to choose a reasonable
+  method  for  special cases, e.g., if all groups are permutation groups or pc
+  groups.)[133X
+  
+  [33X[0;0Y[5XGAP[105X  will  try to choose an efficient representation for the direct product.
+  For  example  the direct product of permutation groups will be a permutation
+  group again and the direct product of pc groups will be a pc group.[133X
+  
+  [33X[0;0YIf the groups are in different representations a generic direct product will
+  be  formed  which  may  not be particularly efficient for many calculations.
+  Instead  it  may  be worth to convert all factors to a common representation
+  first, before forming the product.[133X
+  
+  [33X[0;0YFor  a direct product [22XP[122X, calling [2XEmbedding[102X ([14X32.2-11[114X) with [22XP[122X and [22Xn[122X yields the
+  homomorphism  embedding the [22Xn[122X-th factor into [22XP[122X; calling [2XProjection[102X ([14X32.2-12[114X)
+  with [3XP[103X and [3Xn[103X yields the projection of [22XP[122X onto the [22Xn[122X-th factor, see [14X49.6[114X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,2,3),(1,2));;[127X[104X
+    [4X[25Xgap>[125X [27Xd:=DirectProduct(g,g,g);[127X[104X
+    [4X[28XGroup([ (1,2,3), (1,2), (4,5,6), (4,5), (7,8,9), (7,8) ])[128X[104X
+    [4X[25Xgap>[125X [27XSize(d);[127X[104X
+    [4X[28X216[128X[104X
+    [4X[25Xgap>[125X [27Xe:=Embedding(d,2);[127X[104X
+    [4X[28X2nd embedding into Group([ (1,2,3), (1,2), (4,5,6), (4,5), (7,8,9),[128X[104X
+    [4X[28X  (7,8) ])[128X[104X
+    [4X[25Xgap>[125X [27XImage(e,(1,2));[127X[104X
+    [4X[28X(4,5)[128X[104X
+    [4X[25Xgap>[125X [27XImage(Projection(d,2),(1,2,3)(4,5)(8,9));[127X[104X
+    [4X[28X(1,2)[128X[104X
+    [4X[25Xgap>[125X [27Xf:=FreeGroup("a","b");;[127X[104X
+    [4X[25Xgap>[125X [27Xg:=f/ParseRelators(f,"a2,b3,(ab)5");[127X[104X
+    [4X[28X<fp group on the generators [ a, b ]>[128X[104X
+    [4X[25Xgap>[125X [27Xf2:=FreeGroup("x","y");;[127X[104X
+    [4X[25Xgap>[125X [27Xh:=f2/ParseRelators(f2,"x2,y4,xy=Yx");[127X[104X
+    [4X[28X<fp group on the generators [ x, y ]>[128X[104X
+    [4X[25Xgap>[125X [27Xd:=DirectProduct(g,h);[127X[104X
+    [4X[28X<fp group on the generators [ a, b, x, y ]>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X49.2 [33X[0;0YSemidirect Products[133X[101X
+  
+  [33X[0;0YThe  semidirect  product  of  a  group  [22XN[122X  with  a group [22XG[122X acting on [22XN[122X via a
+  homomorphism  [22Xα[122X  from  [22XG[122X  into  the automorphism group of [22XN[122X is the cartesian
+  product [22XG × N[122X with the multiplication [22X(g, n) ⋅ (h, m) = (gh, n^{h^α}m)[122X.[133X
+  
+  
+  [1X49.2-1 [33X[0;0YSemidirectProduct[133X[101X
+  
+  [33X[1;0Y[29X[2XSemidirectProduct[102X( [3XG[103X, [3Xalpha[103X, [3XN[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XSemidirectProduct[102X( [3Xautgp[103X, [3XN[103X ) [32X operation[133X
+  
+  [33X[0;0Yconstructs  the  semidirect product of [3XN[103X with [3XG[103X acting via [3Xalpha[103X, which must
+  be a homomorphism from [3XG[103X into a group of automorphisms of [3XN[103X.[133X
+  
+  [33X[0;0YIf  [3XN[103X  is  a  group,  [3Xalpha[103X  must  be  a homomorphism from [3XG[103X into a group of
+  automorphisms of [3XN[103X.[133X
+  
+  [33X[0;0YIf [3XN[103X is a full row space over a field [3XF[103X, [3Xalpha[103X must be a homomorphism from [3XG[103X
+  into  a  matrix group of the right dimension over a subfield of [3XF[103X, or into a
+  permutation group (in this case permutation matrices are taken).[133X
+  
+  [33X[0;0YIn  the  second variant, [3Xautgp[103X must be a group of automorphism of [3XN[103X, it is a
+  shorthand  for  [10XSemidirectProduct([3Xautgp[103X[10X,IdentityMapping([3Xautgp[103X[10X),[3XN[103X[10X)[110X. Note that
+  (unless   [3Xautgrp[103X  has  been  obtained  by  the  operation  [2XAutomorphismGroup[102X
+  ([14X40.7-1[114X))  you  have  to  test [2XIsGroupOfAutomorphisms[102X ([14X40.7-2[114X) for [3Xautgrp[103X to
+  ensure that [5XGAP[105X knows that [3Xautgrp[103X consists of group automorphisms.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xn:=AbelianGroup(IsPcGroup,[5,5]);[127X[104X
+    [4X[28X<pc group of size 25 with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xau:=DerivedSubgroup(AutomorphismGroup(n));;[127X[104X
+    [4X[25Xgap>[125X [27XSize(au);[127X[104X
+    [4X[28X120[128X[104X
+    [4X[25Xgap>[125X [27Xp:=SemidirectProduct(au,n);;[127X[104X
+    [4X[25Xgap>[125X [27XSize(p);[127X[104X
+    [4X[28X3000[128X[104X
+    [4X[25Xgap>[125X [27Xn:=Group((1,2),(3,4));;[127X[104X
+    [4X[25Xgap>[125X [27Xau:=AutomorphismGroup(n);;[127X[104X
+    [4X[25Xgap>[125X [27Xau:=First(AsSet(au),i->Order(i)=3);;[127X[104X
+    [4X[25Xgap>[125X [27Xau:=Group(au);[127X[104X
+    [4X[28X<group with 1 generator>[128X[104X
+    [4X[25Xgap>[125X [27XIsGroupOfAutomorphisms(au);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XSemidirectProduct(au,n);[127X[104X
+    [4X[28X<pc group with 3 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xn:=AbelianGroup(IsPcGroup,[2,2]);[127X[104X
+    [4X[28X<pc group of size 4 with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xau:=AutomorphismGroup(n);;[127X[104X
+    [4X[25Xgap>[125X [27Xapc:=IsomorphismPcGroup(au);;[127X[104X
+    [4X[25Xgap>[125X [27Xg:=Image(apc);[127X[104X
+    [4X[28XGroup([ f1, f2 ])[128X[104X
+    [4X[25Xgap>[125X [27Xapci:=InverseGeneralMapping(apc);;[127X[104X
+    [4X[25Xgap>[125X [27XIsGroupHomomorphism(apci);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xp:=SemidirectProduct(g,apci,n);[127X[104X
+    [4X[28X<pc group of size 24 with 4 generators>[128X[104X
+    [4X[25Xgap>[125X [27XIsomorphismGroups(p,Group((1,2,3,4),(1,2))) <> fail;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XSemidirectProduct(SU(3,3),GF(9)^3);[127X[104X
+    [4X[28X<matrix group of size 4408992 with 3 generators>[128X[104X
+    [4X[25Xgap>[125X [27XSemidirectProduct(Group((1,2,3),(2,3,4)),GF(5)^4);[127X[104X
+    [4X[28X<matrix group of size 7500 with 3 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((3,4,5),(1,2,3));;[127X[104X
+    [4X[25Xgap>[125X [27Xmats:=[[[Z(2^2),0*Z(2)],[0*Z(2),Z(2^2)^2]],[127X[104X
+    [4X[25X>[125X [27X         [[Z(2)^0,Z(2)^0], [Z(2)^0,0*Z(2)]]];;[127X[104X
+    [4X[25Xgap>[125X [27Xhom:=GroupHomomorphismByImages(g,Group(mats),[g.1,g.2],mats);;[127X[104X
+    [4X[25Xgap>[125X [27XSemidirectProduct(g,hom,GF(4)^2);[127X[104X
+    [4X[28X<matrix group of size 960 with 3 generators>[128X[104X
+    [4X[25Xgap>[125X [27XSemidirectProduct(g,hom,GF(16)^2);[127X[104X
+    [4X[28X<matrix group of size 15360 with 4 generators>[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YFor  a  semidirect product [22XP[122X of [3XG[103X with [3XN[103X, calling [2XEmbedding[102X ([14X32.2-11[114X) with [22XP[122X
+  and  [10X1[110X  yields  the embedding of [3XG[103X, calling [2XEmbedding[102X ([14X32.2-11[114X) with [22XP[122X and [10X2[110X
+  yields  the  embedding  of [3XN[103X; calling [2XProjection[102X ([14X32.2-12[114X) with [3XP[103X yields the
+  projection of [22XP[122X onto [3XG[103X, see [14X49.6[114X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSize(Image(Embedding(p,1)));[127X[104X
+    [4X[28X6[128X[104X
+    [4X[25Xgap>[125X [27XEmbedding(p,2);[127X[104X
+    [4X[28X[ f1, f2 ] -> [ f3, f4 ][128X[104X
+    [4X[25Xgap>[125X [27XProjection(p);[127X[104X
+    [4X[28X[ f1, f2, f3, f4 ] -> [ f1, f2, <identity> of ..., <identity> of ... ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X49.3 [33X[0;0YSubdirect Products[133X[101X
+  
+  [33X[0;0YThe subdirect product of the groups [22XG[122X and [22XH[122X with respect to the epimorphisms
+  [22Xφ:  G  → A[122X and [22Xψ: H → A[122X (for a common group [22XA[122X) is the subgroup of the direct
+  product  [22XG  ×  H[122X consisting of the elements [22X(g,h)[122X for which [22Xg^φ = h^ψ[122X. It is
+  the pull-back of the following diagram.[133X
+  
+                     G
+                     | phi
+               psi   V
+            H  --->  A
+  
+  [1X49.3-1 SubdirectProduct[101X
+  
+  [33X[1;0Y[29X[2XSubdirectProduct[102X( [3XG[103X, [3XH[103X, [3XGhom[103X, [3XHhom[103X ) [32X function[133X
+  
+  [33X[0;0Yconstructs the subdirect product of [3XG[103X and [3XH[103X with respect to the epimorphisms
+  [3XGhom[103X from [3XG[103X onto a group [22XA[122X and [3XHhom[103X from [3XH[103X onto the same group [22XA[122X.[133X
+  
+  [33X[0;0YFor  a subdirect product [22XP[122X, calling [2XProjection[102X ([14X32.2-12[114X) with [22XP[122X and [22Xn[122X yields
+  the projection on the [22Xn[122X-th factor. (In general the factors do not embed into
+  a subdirect product.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,2,3),(1,2));[127X[104X
+    [4X[28XGroup([ (1,2,3), (1,2) ])[128X[104X
+    [4X[25Xgap>[125X [27Xhom:=GroupHomomorphismByImagesNC(g,g,[(1,2,3),(1,2)],[(),(1,2)]);[127X[104X
+    [4X[28X[ (1,2,3), (1,2) ] -> [ (), (1,2) ][128X[104X
+    [4X[25Xgap>[125X [27Xs:=SubdirectProduct(g,g,hom,hom);[127X[104X
+    [4X[28XGroup([ (1,2,3), (1,2)(4,5), (4,5,6) ])[128X[104X
+    [4X[25Xgap>[125X [27XSize(s);[127X[104X
+    [4X[28X18[128X[104X
+    [4X[25Xgap>[125X [27Xp:=Projection(s,2);[127X[104X
+    [4X[28X2nd projection of Group([ (1,2,3), (1,2)(4,5), (4,5,6) ])[128X[104X
+    [4X[25Xgap>[125X [27XImage(p,(1,3,2)(4,5,6));[127X[104X
+    [4X[28X(1,2,3)[128X[104X
+  [4X[32X[104X
+  
+  [1X49.3-2 SubdirectProducts[101X
+  
+  [33X[1;0Y[29X[2XSubdirectProducts[102X( [3XG[103X, [3XH[103X ) [32X function[133X
+  
+  [33X[0;0Ythis  function computes all subdirect products of [3XG[103X and [3XH[103X up to conjugacy in
+  the  direct  product  of Parent([3XG[103X) and Parent([3XH[103X). The subdirect products are
+  returned as subgroups of this direct product.[133X
+  
+  
+  [1X49.4 [33X[0;0YWreath Products[133X[101X
+  
+  [33X[0;0YThe  wreath  product  of  a  group  [22XG[122X with a permutation group [22XP[122X acting on [22Xn[122X
+  points is the semidirect product of the normal subgroup [22X[3XG[103X^n[122X with the group [22XP[122X
+  which acts on [22X[3XG[103X^n[122X by permuting the components.[133X
+  
+  [33X[0;0YNote  that  [5XGAP[105X always considers the domain of a permutation group to be the
+  points  moved  by elements of the group as returned by [2XMovedPoints[102X ([14X42.3-3[114X),
+  i.e. it is not possible to have a domain to include fixed points, I.e. [22XP = ⟨
+  (1,2,3)  ⟩[122X  and  [22XP  =  ⟨ (1,3,5) ⟩[122X result in isomorphic wreath products. (If
+  fixed  points  are  desired the wreath product [22XG ≀ T[122X has to be formed with a
+  transitive overgroup [22XT[122X of [22XP[122X and then the pre-image of [22XP[122X under the projection
+  [22XG ≀ T → T[122X has to be taken.)[133X
+  
+  [1X49.4-1 WreathProduct[101X
+  
+  [33X[1;0Y[29X[2XWreathProduct[102X( [3XG[103X, [3XH[103X[, [3Xhom[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XStandardWreathProduct[102X( [3XG[103X, [3XH[103X ) [32X operation[133X
+  
+  [33X[0;0Y[10XWreathProduct[110X constructs the wreath product of the group [3XG[103X with the group [3XH[103X,
+  acting as a permutation group.[133X
+  
+  [33X[0;0YIf  a  third  argument [3Xhom[103X is given, it must be a homomorphism from [3XH[103X into a
+  permutation  group,  and  the  action  of  this group on its moved points is
+  considered.[133X
+  
+  [33X[0;0YIf only two arguments are given, [3XH[103X must be a permutation group.[133X
+  
+  [33X[0;0Y[10XStandardWreathProduct[110X  returns  the  wreath  product for the (right regular)
+  permutation action of [3XH[103X on its elements.[133X
+  
+  [33X[0;0YFor a wreath product [22XW[122X of [3XG[103X with a permutation group [22XP[122X of degree [22Xn[122X and [22X1 ≤ i
+  ≤  n[122X  calling  [2XEmbedding[102X ([14X32.2-11[114X) with [22XW[122X and [22Xi[122X yields the embedding of [3XG[103X in
+  the [22Xi[122X-th component of the direct product of the base group [22X[3XG[103X^n[122X of [22XW[122X. For [22Xi =
+  n+1[122X,  [2XEmbedding[102X  ([14X32.2-11[114X)  yields  the  embedding  of  [22XP[122X  into  [22XW[122X.  Calling
+  [2XProjection[102X  ([14X32.2-12[114X)  with [22XW[122X yields the projection onto the acting group [22XP[122X,
+  see [14X49.6[114X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,2,3),(1,2));[127X[104X
+    [4X[28XGroup([ (1,2,3), (1,2) ])[128X[104X
+    [4X[25Xgap>[125X [27Xp:=Group((1,2,3));[127X[104X
+    [4X[28XGroup([ (1,2,3) ])[128X[104X
+    [4X[25Xgap>[125X [27Xw:=WreathProduct(g,p);[127X[104X
+    [4X[28XGroup([ (1,2,3), (1,2), (4,5,6), (4,5), (7,8,9), (7,8),[128X[104X
+    [4X[28X  (1,4,7)(2,5,8)(3,6,9) ])[128X[104X
+    [4X[25Xgap>[125X [27XSize(w);[127X[104X
+    [4X[28X648[128X[104X
+    [4X[25Xgap>[125X [27XEmbedding(w,1);[127X[104X
+    [4X[28X1st embedding into Group( [ (1,2,3), (1,2), (4,5,6), (4,5), (7,8,9),[128X[104X
+    [4X[28X  (7,8), (1,4,7)(2,5,8)(3,6,9) ] )[128X[104X
+    [4X[25Xgap>[125X [27XImage(Embedding(w,3));[127X[104X
+    [4X[28XGroup([ (7,8,9), (7,8) ])[128X[104X
+    [4X[25Xgap>[125X [27XImage(Embedding(w,4));[127X[104X
+    [4X[28XGroup([ (1,4,7)(2,5,8)(3,6,9) ])[128X[104X
+    [4X[25Xgap>[125X [27XImage(Projection(w),(1,4,8,2,6,7,3,5,9));[127X[104X
+    [4X[28X(1,2,3)[128X[104X
+  [4X[32X[104X
+  
+  [1X49.4-2 WreathProductImprimitiveAction[101X
+  
+  [33X[1;0Y[29X[2XWreathProductImprimitiveAction[102X( [3XG[103X, [3XH[103X ) [32X function[133X
+  
+  [33X[0;0YFor  two  permutation  groups  [3XG[103X  and [3XH[103X, this function constructs the wreath
+  product of [3XG[103X and [3XH[103X in the imprimitive action. If [3XG[103X acts on [22Xl[122X points and [3XH[103X on
+  [22Xm[122X  points this action will be on [22Xl ⋅ m[122X points, it will be imprimitive with [22Xm[122X
+  blocks of size [22Xl[122X each.[133X
+  
+  [33X[0;0YThe  operations [2XEmbedding[102X ([14X32.2-11[114X) and [2XProjection[102X ([14X32.2-12[114X) operate on this
+  product as described for general wreath products.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xw:=WreathProductImprimitiveAction(g,p);;[127X[104X
+    [4X[25Xgap>[125X [27XLargestMovedPoint(w);[127X[104X
+    [4X[28X9[128X[104X
+  [4X[32X[104X
+  
+  [1X49.4-3 WreathProductProductAction[101X
+  
+  [33X[1;0Y[29X[2XWreathProductProductAction[102X( [3XG[103X, [3XH[103X ) [32X function[133X
+  
+  [33X[0;0YFor  two  permutation  groups  [3XG[103X  and [3XH[103X, this function constructs the wreath
+  product  in  product  action.  If  [3XG[103X acts on [22Xl[122X points and [3XH[103X on [22Xm[122X points this
+  action will be on [22Xl^m[122X points.[133X
+  
+  [33X[0;0YThe  operations [2XEmbedding[102X ([14X32.2-11[114X) and [2XProjection[102X ([14X32.2-12[114X) operate on this
+  product as described for general wreath products.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xw:=WreathProductProductAction(g,p);[127X[104X
+    [4X[28X<permutation group of size 648 with 7 generators>[128X[104X
+    [4X[25Xgap>[125X [27XLargestMovedPoint(w);[127X[104X
+    [4X[28X27[128X[104X
+  [4X[32X[104X
+  
+  [1X49.4-4 KuKGenerators[101X
+  
+  [33X[1;0Y[29X[2XKuKGenerators[102X( [3XG[103X, [3Xbeta[103X, [3Xalpha[103X ) [32X function[133X
+  
+  [33X[0;0YIf  [3Xbeta[103X is a homomorphism from [3XG[103X into a transitive permutation group, [22XU[122X the
+  full preimage of the point stabilizer and [3Xalpha[103X a homomorphism defined on (a
+  superset)  of  [22XU[122X,  this  function returns images of the generators of [3XG[103X when
+  mapping  to  the  wreath  product  [22X(U  [3Xalpha[103X)  ≀  ([3XG[103X  [3Xbeta[103X)[122X.  (This  is  the
+  Krasner-Kaloujnine embedding theorem.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,2,3,4),(1,2));;[127X[104X
+    [4X[25Xgap>[125X [27Xhom:=GroupHomomorphismByImages(g,Group((1,2)),[127X[104X
+    [4X[25X>[125X [27XGeneratorsOfGroup(g),[(1,2),(1,2)]);;[127X[104X
+    [4X[25Xgap>[125X [27Xu:=PreImage(hom,Stabilizer(Image(hom),1));[127X[104X
+    [4X[28XGroup([ (2,3,4), (1,2,4) ])[128X[104X
+    [4X[25Xgap>[125X [27Xhom2:=GroupHomomorphismByImages(u,Group((1,2,3)),[127X[104X
+    [4X[25X>[125X [27XGeneratorsOfGroup(u),[ (1,2,3), (1,2,3) ]);;[127X[104X
+    [4X[25Xgap>[125X [27XKuKGenerators(g,hom,hom2);[127X[104X
+    [4X[28X[ (1,4)(2,5)(3,6), (1,6)(2,4)(3,5) ][128X[104X
+  [4X[32X[104X
+  
+  [1X49.4-5 ListWreathProductElement[101X
+  
+  [33X[1;0Y[29X[2XListWreathProductElement[102X( [3XG[103X, [3Xx[103X[, [3XtestDecomposition[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XListWreathProductElementNC[102X( [3XG[103X, [3Xx[103X, [3XtestDecomposition[103X ) [32X operation[133X
+  
+  [33X[0;0YLet  [3Xx[103X  be  an element of a wreath product [3XG[103X where [22XG = K ≀ H[122X and [22XH[122X acts as a
+  finite  permutation  group of degree [22Xm[122X. We can identify the element [3Xx[103X with a
+  tuple  [22X(f_1, ..., f_m; h)[122X, where [22Xf_i ∈ K[122X is the [22Xi[122X-th base component of [3Xx[103X and
+  [22Xh ∈ H[122X is the top component of [3Xx[103X.[133X
+  
+  [33X[0;0Y[2XListWreathProductElement[102X  returns  a  list [22X[f_1, ..., f_m, h][122X containing the
+  components of [3Xx[103X or [9Xfail[109X if [3Xx[103X cannot be decomposed in the wreath product.[133X
+  
+  [33X[0;0YIf   omitted,   the   argument   [3XtestDecomposition[103X   defaults  to  true.  If
+  [3XtestDecomposition[103X  is  true, [2XListWreathProductElement[102X makes additional tests
+  to  ensure  that  the computed decomposition of [3Xx[103X is correct, i.e. it checks
+  that [3Xx[103X is an element of the parent wreath product of [3XG[103X:[133X
+  
+  [33X[0;0YIf [22XK ≤ Sym(l)[122X, this ensures that [22Xx ∈ Sym(l) ≀ Sym(m)[122X where the parent wreath
+  product  is  considered  in the same action as [3XG[103X, i.e. either in imprimitive
+  action or product action.[133X
+  
+  [33X[0;0YIf [22XK ≤ GL(n,q)[122X, this ensures that [22Xx ∈ GL(n,q) ≀ Sym(m)[122X.[133X
+  
+  [1X49.4-6 WreathProductElementList[101X
+  
+  [33X[1;0Y[29X[2XWreathProductElementList[102X( [3XG[103X, [3Xlist[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XWreathProductElementListNC[102X( [3XG[103X, [3Xlist[103X ) [32X operation[133X
+  
+  [33X[0;0YLet  [3Xlist[103X be equal to [22X[f_1, ..., f_m, h][122X and [3XG[103X be a wreath product where [22XG =
+  K ≀ H[122X, [22XH[122X acts as a finite permutation group of degree [22Xm[122X, [22Xf_i ∈ K[122X and [22Xh ∈ H[122X.[133X
+  
+  [33X[0;0Y[2XWreathProductElementList[102X  returns  the element [22Xx ∈ G[122X identified by the tuple
+  [22X(f_1, ..., f_m; h)[122X.[133X
+  
+  
+  [1X49.5 [33X[0;0YFree Products[133X[101X
+  
+  [33X[0;0YLet  [22XG[122X  and  [22XH[122X  be  groups  with  presentations  [22X⟨  X  ∣  R ⟩[122X and [22X⟨ Y ∣ S ⟩[122X,
+  respectively. Then the free product [22XG*H[122X is the group with presentation [22X⟨ X ∪
+  Y  ∣ R ∪ S ⟩[122X. This construction can be generalized to an arbitrary number of
+  groups.[133X
+  
+  
+  [1X49.5-1 [33X[0;0YFreeProduct[133X[101X
+  
+  [33X[1;0Y[29X[2XFreeProduct[102X( [3XG[103X[, [3XH[103X, [3X...[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XFreeProduct[102X( [3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0Yconstructs  a  finitely  presented  group  which  is the free product of the
+  groups given as arguments. If the group arguments are not finitely presented
+  groups, then [2XIsomorphismFpGroup[102X ([14X47.11-1[114X) must be defined for them.[133X
+  
+  [33X[0;0YThe operation [2XEmbedding[102X ([14X32.2-11[114X) operates on this product.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg := DihedralGroup(8);;[127X[104X
+    [4X[25Xgap>[125X [27Xh := CyclicGroup(5);;[127X[104X
+    [4X[25Xgap>[125X [27Xfp := FreeProduct(g,h,h);[127X[104X
+    [4X[28X<fp group on the generators [ f1, f2, f3, f4, f5 ]>[128X[104X
+    [4X[25Xgap>[125X [27Xfp := FreeProduct([g,h,h]);[127X[104X
+    [4X[28X<fp group on the generators [ f1, f2, f3, f4, f5 ]>[128X[104X
+    [4X[25Xgap>[125X [27XEmbedding(fp,2);[127X[104X
+    [4X[28X[ f1 ] -> [ f4 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X49.6 [33X[0;0YEmbeddings and Projections for Group Products[133X[101X
+  
+  [33X[0;0YThe  relation  between  a  group  product  and  its  factors is provided via
+  homomorphisms,  the  embeddings  in the product and the projections from the
+  product. Depending on the kind of product only some of these are defined.[133X
+  
+  [1X49.6-1 Embedding[101X
+  
+  [33X[1;0Y[29X[2XEmbedding[102X( [3XP[103X, [3Xnr[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  [3Xnr[103X-th  embedding in the group product [3XP[103X. The actual meaning of
+  this  embedding  is  described  in  the  manual  section for the appropriate
+  product.[133X
+  
+  [1X49.6-2 Projection[101X
+  
+  [33X[1;0Y[29X[2XProjection[102X( [3XP[103X, [3Xnr[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns the ([3Xnr[103X-th) projection of the group product [3XP[103X. The actual meaning of
+  the  projection  returned  is  described  in  the  manual  section  for  the
+  appropriate product.[133X
+  

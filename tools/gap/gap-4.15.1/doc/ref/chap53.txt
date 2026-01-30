@@ -1,0 +1,1420 @@
+  
+  [1X53 [33X[0;0YTransformations[133X[101X
+  
+  [33X[0;0YThis chapter describes the functions in [5XGAP[105X for transformations.[133X
+  
+  [33X[0;0YA  [13Xtransformation[113X  in [5XGAP[105X is simply a function from the positive integers to
+  the   positive  integers.  Transformations  are  to  semigroup  theory  what
+  permutations  are  to group theory, in the sense that every semigroup can be
+  realised as a semigroup of transformations. In [5XGAP[105X transformation semigroups
+  are  always  finite,  and  so only finite semigroups can be realised in this
+  way.[133X
+  
+  [33X[0;0YA  transformation  in  [5XGAP[105X  acts  on  the  positive  integers  (up  to  some
+  architecture  dependent  limit) on the right. The image of a point [10Xi[110X under a
+  transformation  [10Xf[110X  is  expressed  as  [10Xi  ^  f[110X  in  [5XGAP[105X.  This action is also
+  implemented by the function [2XOnPoints[102X ([14X41.2-1[114X). If [10Xi ^ f[110X is different from [10Xi[110X,
+  then  [10Xi[110X is [13Xmoved[113X by [13Xf[113X and otherwise it is [13Xfixed[113X by [10Xf[110X. Transformations in [5XGAP[105X
+  are created using the operations described in Section [14X53.2[114X.[133X
+  
+  [33X[0;0YThe  [13Xdegree[113X of a transformation [10Xf[110X is usually defined as the largest positive
+  integer  where  [10Xf[110X  is  defined. In previous versions of [5XGAP[105X, transformations
+  were  only  defined on positive integers less than their degree, it was only
+  possible  to  multiply transformations of equal degree, and a transformation
+  did  not act on any point exceeding its degree. Starting with version 4.7 of
+  [5XGAP[105X,  transformations  behave  more  like  permutations,  in  that  they fix
+  unspecified points and it is possible to multiply arbitrary transformations;
+  see  Chapter  [14X42[114X.  The definition of the degree of a transformation [10Xf[110X in the
+  current  version of [5XGAP[105X is the largest value [10Xn[110X such that [10Xn ^ f <> n[110X or [10Xi ^ f
+  =  n[110X  for  some  [10Xi <> n[110X. Equivalently, the degree of a transformation is the
+  least value [10Xn[110X such that [10X[ n + 1, n + 2, ... ][110X is fixed pointwise by [10Xf[110X.[133X
+  
+  [33X[0;0YThe  transformations  of  a  given  degree belong to the full transformation
+  semigroup   of   that   degree;  see  [2XFullTransformationSemigroup[102X  ([14X53.7-3[114X).
+  Transformation semigroups are hence subsemigroups of the full transformation
+  semigroup.[133X
+  
+  [33X[0;0YIt  is  possible  to  use  transformations  in  [5XGAP[105X without reference to the
+  degree, much as it is possible to use permutations in this way. However, for
+  backwards  compatibility, and because it is sometimes useful, it is possible
+  to  access  the  degree  of  a  transformation  using [2XDegreeOfTransformation[102X
+  ([14X53.5-1[114X).  Certain  attributes  of  transformations are also calculated with
+  respect  to the degree, such as the rank, image set, or kernel (these values
+  can  also  be  calculated  with  respect to any positive integer). So, it is
+  possible  to ignore the degree of a transformation if you prefer to think of
+  transformations  as  acting  on  the  positive  integers in a similar way to
+  permutations.  For  example,  this approach is used in the [5XFR[105X package. It is
+  also  possible  to  think  of transformations as only acting on the positive
+  integers  not  exceeding  their  degree.  For example, this was the approach
+  formerly used in [5XGAP[105X and it is also useful in the [5XSemigroups[105X package.[133X
+  
+  [33X[0;0YTransformations are displayed, by default, using the list [10X[ 1 ^ f .. n ^ f ][110X
+  where  [10Xn[110X is the degree of [10Xf[110X. This behaviour differs from that of versions of
+  [5XGAP[105X earlier than 4.7. See Section [14X53.6[114X for more information.[133X
+  
+  [33X[0;0YThe  [13Xrank[113X of a transformation on the positive integers up to [10Xn[110X is the number
+  of  distinct  points in [10X[ 1 ^ f .. n ^ f ][110X. The [13Xkernel[113X of a transformation [10Xf[110X
+  on  [10X[ 1 .. n ][110X is the equivalence relation on [10X[ 1 .. n ][110X consisting of those
+  pairs  [10X(i,  j)[110X of positive integers such that [10Xi ^ f = j ^ f[110X. The kernel of a
+  transformation  is  represented in two ways: as a partition of [10X[ 1 .. n ][110X or
+  as  the image list of a transformation [10Xg[110X such that the kernel of [10Xg[110X on [10X[ 1 ..
+  n  ][110X equals the kernel of [10Xf[110X and [10Xj ^ g = i[110X for all [10Xj[110X in [10Xi[110Xth class. The latter
+  is  referred  to as the [13Xflat kernel[113X of [10Xf[110X. For any given transformation [10Xf[110X and
+  value [10Xn[110X, there is a unique transformation [10Xg[110X with this property.[133X
+  
+  [33X[0;0YA  [13Xfunctional  digraph[113X is a directed graph where every vertex has out-degree
+  [22X1[122X.  A  transformation  [3Xf[103X  can  be  thought  of  as a functional digraph with
+  vertices  the  positive  integers  and  edges from [10Xi[110X to [10Xi ^ f[110X for every [10Xi[110X. A
+  [13Xcomponent[113X of a transformation is defined as a component of the corresponding
+  functional  digraph. More specifically, [10Xi[110X and [10Xj[110X are in the same component if
+  and  only  if  there  are  [22Xi  =  v_0,  v_1,  ...,  v_n  = j[122X such that either
+  [22Xv_k+1=v_k^f[122X or [22Xv_k=v_k+1^f[122X for all [22Xk[122X. A [13Xcycle[113X of a transformation is defined
+  as a cycle (or strongly connected component) of the corresponding functional
+  digraph.  More  specifically,  [10Xi[110X belongs to a cycle of [3Xf[103X if there are [22Xi=v_0,
+  v_1, ..., v_n=i[122X such that either [22Xv_k+1=v_k^f[122X or [22Xv_k=v_k+1^f[122X for all [22Xk[122X.[133X
+  
+  [33X[0;0YInternally, [5XGAP[105X stores a transformation [10Xf[110X as a list consisting of the images
+  [10Xi  ^ f[110X for all values of [10Xi[110X less than a value which is at least the degree of
+  [10Xf[110X  and which is determined at the time of the creation of [10Xf[110X. When the degree
+  of  a  transformation  [10Xf[110X  is at most 65536, the images of points under [10Xf[110X are
+  stored  as  16-bit  integers,  the  kernel and image set are subobjects of [10Xf[110X
+  which  are plain lists of [5XGAP[105X integers. When the degree of [10Xf[110X is greater than
+  65536,  the  images  of  points  under  [10Xf[110X are stored as 32-bit integers; the
+  kernel  and image set are stored in the same way as before. A transformation
+  belongs  to  [10XIsTrans2Rep[110X  if  it  is  stored  using  16-bit  integers and to
+  [10XIsTrans4Rep[110X if it is stored using 32-bit integers.[133X
+  
+  
+  [1X53.1 [33X[0;0YThe family and categories of transformations[133X[101X
+  
+  [1X53.1-1 IsTransformation[101X
+  
+  [33X[1;0Y[29X[2XIsTransformation[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YEvery  transformation in [5XGAP[105X belongs to the category [10XIsTransformation[110X. Basic
+  operations   for  transformations  are  [2XImageListOfTransformation[102X  ([14X53.5-2[114X),
+  [2XImageSetOfTransformation[102X    ([14X53.5-3[114X),    [2XKernelOfTransformation[102X   ([14X53.5-12[114X),
+  [2XFlatKernelOfTransformation[102X    ([14X53.5-11[114X),    [2XRankOfTransformation[102X   ([14X53.5-4[114X),
+  [2XDegreeOfTransformation[102X  ([14X53.5-1[114X),  multiplication of two transformations via
+  [9X*[109X,  and  exponentiation  with  the  first  argument a positive integer [10Xi[110X and
+  second  argument  a  transformation [10Xf[110X where the result is the image [10Xi ^ f[110X of
+  the point [10Xi[110X under [10Xf[110X.[133X
+  
+  [1X53.1-2 IsTransformationCollection[101X
+  
+  [33X[1;0Y[29X[2XIsTransformationCollection[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YEvery    collection    of    transformations   belongs   to   the   category
+  [10XIsTransformationCollection[110X. For example, transformation semigroups belong to
+  [10XIsTransformationCollection[110X.[133X
+  
+  [1X53.1-3 TransformationFamily[101X
+  
+  [33X[1;0Y[29X[2XTransformationFamily[102X [32X family[133X
+  
+  [33X[0;0YThe family of all transformations is [10XTransformationFamily[110X.[133X
+  
+  
+  [1X53.2 [33X[0;0YCreating transformations[133X[101X
+  
+  [33X[0;0YThere  are  several  ways  of  creating  transformations  in  [5XGAP[105X, which are
+  described in this section.[133X
+  
+  [1X53.2-1 Transformation[101X
+  
+  [33X[1;0Y[29X[2XTransformation[102X( [3Xlist[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XTransformation[102X( [3Xlist[103X, [3Xfunc[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XTransformationList[102X( [3Xlist[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA transformation.[133X
+  
+  [33X[0;0Y[10XTransformationList[110X returns the transformation [10Xf[110X such that [10Xi ^ [3Xf[103X[10X = [3Xlist[103X[10X[i][110X if
+  [10Xi[110X  is between [10X1[110X and the length of [3Xlist[103X and [10Xi ^ [3Xf[103X[10X = i[110X if [10Xi[110X is larger than the
+  length  of  [3Xlist[103X.  An  error will occur in [10XTransformationList[110X if [3Xlist[103X is not
+  dense,  if  [3Xlist[103X  contains an element which is not a positive integer, or if
+  [3Xlist[103X contains an integer not in [10X[ 1 .. Length( [3Xlist[103X[10X ) ][110X.[133X
+  
+  [33X[0;0Y[10XTransformationList[110X  is  the  analogue  in  the context of transformations of
+  [2XPermList[102X  ([14X42.5-2[114X).  [10XTransformation[110X  is a synonym of [10XTransformationList[110X when
+  the argument is a list.[133X
+  
+  [33X[0;0YWhen the arguments are a list of positive integers [3Xlist[103X and a function [3Xfunc[103X,
+  [10XTransformation[110X  returns  the  transformation [10Xf[110X such that [10X[3Xlist[103X[10X[i] ^ f = [3Xfunc[103X[10X(
+  [3Xlist[103X[10X[i] )[110X if [10Xi[110X is in the range [10X[ 1 .. Length( [3Xlist[103X[10X ) ][110X and [10Xf[110X fixes all other
+  points.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSetUserPreference( "NotationForTransformations", "input" );[127X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 11, 10, 2, 11, 4, 4, 7, 6, 9, 10, 1, 11 ] );[127X[104X
+    [4X[28XTransformation( [ 11, 10, 2, 11, 4, 4, 7, 6, 9, 10, 1, 11 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xf := TransformationList( [ 2, 3, 3, 1 ] );[127X[104X
+    [4X[28XTransformation( [ 2, 3, 3, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27XSetUserPreference( "NotationForTransformations", "fr" );[127X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 10, 11 ], x -> x ^ 2 );[127X[104X
+    [4X[28X<transformation: 1,2,3,4,5,6,7,8,9,100,121>[128X[104X
+    [4X[25Xgap>[125X [27XSetUserPreference( "NotationForTransformations", "input" );[127X[104X
+  [4X[32X[104X
+  
+  [1X53.2-2 Transformation[101X
+  
+  [33X[1;0Y[29X[2XTransformation[102X( [3Xsrc[103X, [3Xdst[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XTransformationListList[102X( [3Xsrc[103X, [3Xdst[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA transformation.[133X
+  
+  [33X[0;0YIf  [3Xsrc[103X and [3Xdst[103X are lists of positive integers of the same length, such that
+  [3Xsrc[103X  contains  no  element  twice,  then  [10XTransformationListList( [3Xsrc[103X[10X, [3Xdst[103X[10X )[110X
+  returns a transformation [10Xf[110X such that [10Xsrc[i] ^ [3Xf[103X[10X = dst[i][110X. The transformation
+  [3Xf[103X fixes all points larger than the maximum of the entries in [3Xsrc[103X and [3Xdst[103X.[133X
+  
+  [33X[0;0Y[10XTransformationListList[110X  is the analogue in the context of transformations of
+  [2XMappingPermListList[102X    ([14X42.5-3[114X).    [10XTransformation[110X    is    a   synonym   of
+  [10XTransformationListList[110X   when  its  arguments  are  two  lists  of  positive
+  integers.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTransformation( [ 10, 11 ],[ 11, 12 ] );[127X[104X
+    [4X[28XTransformation( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 12 ] )[128X[104X
+    [4X[25Xgap>[125X [27XTransformationListList( [ 1, 2, 3 ], [ 4, 5, 6 ] );[127X[104X
+    [4X[28XTransformation( [ 4, 5, 6, 4, 5, 6 ] )[128X[104X
+  [4X[32X[104X
+  
+  [1X53.2-3 TransformationByImageAndKernel[101X
+  
+  [33X[1;0Y[29X[2XTransformationByImageAndKernel[102X( [3Xim[103X, [3Xker[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA transformation or [9Xfail[109X.[133X
+  
+  [33X[0;0YThis  operation  returns the transformation [10Xf[110X where [10Xi ^ f = [3Xim[103X[10X[[3Xker[103X[10X[i]][110X for [10Xi[110X
+  in  the  range  [10X[  1 .. Length( [3Xker[103X[10X ) ][110X. This transformation has flat kernel
+  equal to [3Xker[103X and image set equal to [10XSet( [3Xim[103X[10X )[110X.[133X
+  
+  [33X[0;0YThe argument [3Xim[103X should be a duplicate free list of positive integers and [3Xker[103X
+  should  be the flat kernel of a transformation with rank equal to the length
+  of  [3Xim[103X.  If  the  arguments  do  not  fulfil  these conditions, then [9Xfail[109X is
+  returned.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTransformationByImageAndKernel( [ 8, 1, 3, 4 ],[127X[104X
+    [4X[25X>[125X [27X                                   [ 1, 2, 3, 1, 2, 1, 2, 4 ] );[127X[104X
+    [4X[28XTransformation( [ 8, 1, 3, 8, 1, 8, 1, 4 ] )[128X[104X
+    [4X[25Xgap>[125X [27XTransformationByImageAndKernel( [ 1, 3, 8, 4 ],[127X[104X
+    [4X[25X>[125X [27X                                   [ 1, 2, 3, 1, 2, 1, 2, 4 ] );[127X[104X
+    [4X[28XTransformation( [ 1, 3, 8, 1, 3, 1, 3, 4 ] )[128X[104X
+  [4X[32X[104X
+  
+  [1X53.2-4 Idempotent[101X
+  
+  [33X[1;0Y[29X[2XIdempotent[102X( [3Xim[103X, [3Xker[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA transformation or [9Xfail[109X.[133X
+  
+  [33X[0;0Y[2XIdempotent[102X  returns the idempotent transformation with image set [3Xim[103X and flat
+  kernel  [3Xker[103X  if  such  a transformation exists and [9Xfail[109X if it does not. More
+  specifically,  a transformation is returned when the argument [3Xim[103X is a set of
+  positive  integers  and [3Xker[103X is the flat kernel of a transformation with rank
+  equal to the length of [3Xim[103X and where [3Xim[103X has one element in every class of the
+  kernel corresponding to [3Xker[103X.[133X
+  
+  [33X[0;0YNote that this is function does not always return the same transformation as
+  [10XTransformationByImageAndKernel[110X with the same arguments.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIdempotent( [ 2, 4, 6, 7, 8, 10, 11 ],[127X[104X
+    [4X[25X>[125X [27X               [ 1, 2, 1, 3, 3, 4, 5, 1, 6, 6, 7, 5 ] );[127X[104X
+    [4X[28XTransformation( [ 8, 2, 8, 4, 4, 6, 7, 8, 10, 10, 11, 7 ] )[128X[104X
+    [4X[25Xgap>[125X [27XTransformationByImageAndKernel( [ 2, 4, 6, 7, 8, 10, 11 ],[127X[104X
+    [4X[25X>[125X [27X                     [ 1, 2, 1, 3, 3, 4, 5, 1, 6, 6, 7, 5 ] );[127X[104X
+    [4X[28XTransformation( [ 2, 4, 2, 6, 6, 7, 8, 2, 10, 10, 11, 8 ] )[128X[104X
+  [4X[32X[104X
+  
+  [1X53.2-5 TransformationOp[101X
+  
+  [33X[1;0Y[29X[2XTransformationOp[102X( [3Xobj[103X, [3Xlist[103X[, [3Xfunc[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XTransformationOpNC[102X( [3Xobj[103X, [3Xlist[103X[, [3Xfunc[103X] ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA transformation or [9Xfail[109X.[133X
+  
+  [33X[0;0Y[2XTransformationOp[102X  returns  the transformation that corresponds to the action
+  of  the  object [3Xobj[103X on the domain or list [3Xlist[103X via the function [3Xfunc[103X. If the
+  optional  third  argument  [3Xfunc[103X  is  not specified, then the action [2XOnPoints[102X
+  ([14X41.2-1[114X) is used by default. Note that the returned transformation refers to
+  the positions in [3Xlist[103X even if [3Xlist[103X itself consists of integers.[133X
+  
+  [33X[0;0YThis  function  is  the  analogue  in  the  context  of  transformations  of
+  [2XPermutation[102X ([14X41.9-1[114X).[133X
+  
+  [33X[0;0YIf [3Xobj[103X does not map elements of [3Xlist[103X into [3Xlist[103X, then [9Xfail[109X is returned.[133X
+  
+  [33X[0;0Y[2XTransformationOpNC[102X does not check that [3Xobj[103X maps elements of [3Xlist[103X to elements
+  of [3Xlist[103X or that a transformation is defined by the action of [3Xobj[103X on [3Xlist[103X via
+  [3Xfunc[103X.  This  function  should  be  used only with caution, and in situations
+  where it is guaranteed that the arguments have the required properties.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 10, 2, 3, 10, 5, 10, 7, 2, 5, 6 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XTransformationOp( f, [ 2, 3 ] );[127X[104X
+    [4X[28XIdentityTransformation[128X[104X
+    [4X[25Xgap>[125X [27XTransformationOp( f, [ 1, 2, 3 ] );[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27XS := SemigroupByMultiplicationTable( [ [ 1, 1, 1 ],[127X[104X
+    [4X[25X>[125X [27X                                          [ 1, 1, 1 ],[127X[104X
+    [4X[25X>[125X [27X                                          [ 1, 1, 2 ] ] );;[127X[104X
+    [4X[25Xgap>[125X [27XTransformationOp( Elements( S )[1], S, OnRight );[127X[104X
+    [4X[28XTransformation( [ 1, 1, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27XTransformationOp( Elements( S )[3], S, OnRight );[127X[104X
+    [4X[28XTransformation( [ 1, 1, 2 ] )[128X[104X
+  [4X[32X[104X
+  
+  [1X53.2-6 TransformationNumber[101X
+  
+  [33X[1;0Y[29X[2XTransformationNumber[102X( [3Xm[103X, [3Xn[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XNumberTransformation[102X( [3Xf[103X[, [3Xn[103X] ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA transformation or a number.[133X
+  
+  [33X[0;0YThese  functions  implement a bijection from the transformations with degree
+  at most [3Xn[103X to the numbers [10X[ 1 .. [3Xn[103X[10X ^ [3Xn[103X[10X ][110X.[133X
+  
+  [33X[0;0YMore  precisely, if [3Xm[103X and [3Xn[103X are positive integers such that [3Xm[103X is at most [10X[3Xn[103X[10X ^
+  [3Xn[103X[10X[110X,  then  [10XTransformationNumber[110X returns the [3Xm[103Xth transformation with degree at
+  most [3Xn[103X.[133X
+  
+  [33X[0;0YIf  [3Xf[103X is a transformation and [3Xn[103X is a positive integer, which is greater than
+  or equal to the degree of [3Xf[103X, then [10XNumberTransformation[110X returns the number in
+  [10X[  1  .. [3Xn[103X[10X ^ [3Xn[103X[10X ][110X that corresponds to [3Xf[103X. If the optional second argument [3Xn[103X is
+  not specified, then the degree of [3Xf[103X is used by default.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 3, 3, 5, 3, 3 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XNumberTransformation( f, 5 );[127X[104X
+    [4X[28X1613[128X[104X
+    [4X[25Xgap>[125X [27XNumberTransformation( f, 10 );[127X[104X
+    [4X[28X2242256790[128X[104X
+    [4X[25Xgap>[125X [27XTransformationNumber( 2242256790, 10 );[127X[104X
+    [4X[28XTransformation( [ 3, 3, 5, 3, 3 ] )[128X[104X
+    [4X[25Xgap>[125X [27XTransformationNumber( 1613, 5 );[127X[104X
+    [4X[28XTransformation( [ 3, 3, 5, 3, 3 ] )[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X53.2-7 [33X[0;0YRandomTransformation[133X[101X
+  
+  [33X[1;0Y[29X[2XRandomTransformation[102X( [3Xn[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA random transformation.[133X
+  
+  [33X[0;0YIf  [3Xn[103X  is  a  positive  integer,  then [10XRandomTransformation[110X returns a random
+  transformation with degree at most [3Xn[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRandomTransformation( 6 );[127X[104X
+    [4X[28XTransformation( [ 2, 1, 2, 1, 1, 2 ] )[128X[104X
+  [4X[32X[104X
+  
+  [1X53.2-8 IdentityTransformation[101X
+  
+  [33X[1;0Y[29X[2XIdentityTransformation[102X [32X global variable[133X
+  
+  [33X[0;0YThis variable is bound to the identity transformation, which has degree [10X0[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIdentityTransformation;[127X[104X
+    [4X[28XIdentityTransformation[128X[104X
+  [4X[32X[104X
+  
+  [1X53.2-9 ConstantTransformation[101X
+  
+  [33X[1;0Y[29X[2XConstantTransformation[102X( [3Xm[103X, [3Xn[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA transformation.[133X
+  
+  [33X[0;0YThis  function  returns  a constant transformation [10Xf[110X such that [10Xi ^ f = [3Xn[103X[10X[110X for
+  all [10Xi[110X less than or equal to [3Xm[103X, when [3Xn[103X and [3Xm[103X are positive integers.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XConstantTransformation( 5, 1 );[127X[104X
+    [4X[28XTransformation( [ 1, 1, 1, 1, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27XConstantTransformation( 6, 4 );[127X[104X
+    [4X[28XTransformation( [ 4, 4, 4, 4, 4, 4 ] )[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X53.3 [33X[0;0YChanging the representation of a transformation[133X[101X
+  
+  [33X[0;0YIt  is  possible  that a transformation in [5XGAP[105X can be represented as another
+  type  of  object, or that another type of [5XGAP[105X object can be represented as a
+  transformation.[133X
+  
+  [33X[0;0YThe operations [2XAsPermutation[102X ([14X42.5-6[114X) and [2XAsPartialPerm[102X ([14X54.4-2[114X) can be used
+  to  convert transformations into permutations or partial permutations, where
+  appropriate.  In  this  section  we  describe functions for converting other
+  types of objects into transformations.[133X
+  
+  [1X53.3-1 AsTransformation[101X
+  
+  [33X[1;0Y[29X[2XAsTransformation[102X( [3Xf[103X[, [3Xn[103X] ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA transformation.[133X
+  
+  [33X[0;0Y[10XAsTransformation[110X    returns   the   permutation,   transformation,   partial
+  permutation or binary relation [3Xf[103X as a transformation.[133X
+  
+  [8Xfor permutations[108X
+        [33X[0;6YIf  [3Xf[103X  is  a  permutation  and  [3Xn[103X  is  a  non-negative  integer,  then
+        [10XAsTransformation(  [3Xf[103X[10X, [3Xn[103X[10X )[110X returns the transformation [10Xg[110X such that [10Xi ^ g
+        = i ^ f[110X for all [10Xi[110X in the range [10X[ 1 .. [3Xn[103X[10X ][110X.[133X
+  
+        [33X[0;6YIf  no  non-negative  integer  [3Xn[103X  is specified, then the largest moved
+        point of [3Xf[103X is used as the value for [3Xn[103X; see [2XLargestMovedPoint[102X ([14X42.3-2[114X).[133X
+  
+  [8Xfor transformations[108X
+        [33X[0;6YIf [3Xf[103X is a transformation and [3Xn[103X is a non-negative integer less than the
+        degree  of  [3Xf[103X  such  that  [3Xf[103X  is  a transformation of [10X[ 1 .. [3Xn[103X[10X ][110X, then
+        [10XAsTransformation[110X returns the restriction of [3Xf[103X to [10X[ 1 .. [3Xn[103X[10X ][110X.[133X
+  
+        [33X[0;6YIf  [3Xf[103X is a transformation and [3Xn[103X is not specified or is greater than or
+        equal to the degree of [3Xf[103X, then [3Xf[103X is returned.[133X
+  
+  [8Xfor partial permutations[108X
+        [33X[0;6YA  partial  permutation  [3Xf[103X can be converted into a transformation [10Xg[110X as
+        follows.  The  degree [10Xm[110X of [10Xg[110X is equal to the maximum of [3Xn[103X, the largest
+        moved  point  of [3Xf[103X plus [10X1[110X, and the largest image of a moved point plus
+        [10X1[110X.  The transformation [10Xg[110X agrees with [3Xf[103X on the domain of [3Xf[103X and maps the
+        points  in [10X[ 1 .. m ][110X, which are not in the domain of [3Xf[103X to [10Xn[110X, i.e. [10Xi ^
+        g  = i ^ [3Xf[103X[10X[110X for all [10Xi[110X in the domain of [3Xf[103X, [10Xi ^ g = n[110X for all [10Xi[110X in [10X[ 1 ..
+        n  ][110X,  and  [10Xi  ^ g = i[110X for all [10Xi[110X greater than [3Xn[103X. [10XAsTransformation( [3Xf[103X[10X )[110X
+        returns the transformation [10Xg[110X defined in the previous sentences.[133X
+  
+        [33X[0;6YIf  the  optional argument [3Xn[103X is not present, then the default value of
+        the  maximum  of  the  largest  moved point and the largest image of a
+        moved point of [3Xf[103X plus [10X1[110X is used.[133X
+  
+  [8Xfor binary relations[108X
+        [33X[0;6YIn   the   case   that  [3Xf[103X  is  a  binary  relation,  which  defines  a
+        transformation, [10XAsTransformation[110X returns that transformation.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 3, 5, 3, 4, 1, 2 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XAsTransformation( f, 5 );[127X[104X
+    [4X[28XTransformation( [ 3, 5, 3, 4, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27XAsTransformation( f, 10 );[127X[104X
+    [4X[28XTransformation( [ 3, 5, 3, 4, 1, 2 ] )[128X[104X
+    [4X[25Xgap>[125X [27XAsTransformation( (1,3)(2,4) );[127X[104X
+    [4X[28XTransformation( [ 3, 4, 1, 2 ] )[128X[104X
+    [4X[25Xgap>[125X [27XAsTransformation( (1,3)(2,4), 10 );[127X[104X
+    [4X[28XTransformation( [ 3, 4, 1, 2 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xf := PartialPerm( [ 1, 2, 3, 4, 5, 6 ], [ 6, 7, 1, 4, 3, 2 ] );[127X[104X
+    [4X[28X[5,3,1,6,2,7](4)[128X[104X
+    [4X[25Xgap>[125X [27XAsTransformation( f, 11 );[127X[104X
+    [4X[28XTransformation( [ 6, 7, 1, 4, 3, 2, 11, 11, 11, 11, 11 ] )[128X[104X
+    [4X[25Xgap>[125X [27XAsPartialPerm( last, DomainOfPartialPerm( f ) );[127X[104X
+    [4X[28X[5,3,1,6,2,7](4)[128X[104X
+    [4X[25Xgap>[125X [27XAsTransformation( f, 14 );[127X[104X
+    [4X[28XTransformation( [ 6, 7, 1, 4, 3, 2, 14, 14, 14, 14, 14, 14, 14, 14 ] )[128X[104X
+    [4X[25Xgap>[125X [27XAsPartialPerm( last, DomainOfPartialPerm( f ) );[127X[104X
+    [4X[28X[5,3,1,6,2,7](4)[128X[104X
+    [4X[25Xgap>[125X [27XAsTransformation( f );[127X[104X
+    [4X[28XTransformation( [ 6, 7, 1, 4, 3, 2, 8, 8 ] )[128X[104X
+    [4X[25Xgap>[125X [27XAsTransformation( Transformation( [ 1, 1, 2 ] ), 0 );[127X[104X
+    [4X[28XIdentityTransformation[128X[104X
+  [4X[32X[104X
+  
+  [1X53.3-2 RestrictedTransformation[101X
+  
+  [33X[1;0Y[29X[2XRestrictedTransformation[102X( [3Xf[103X, [3Xlist[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YA transformation.[133X
+  
+  [33X[0;0Y[10XRestrictedTransformation[110X returns the new transformation [10Xg[110X such that [10X i ^ g =
+  i ^ [3Xf[103X[10X[110X for all [10Xi[110X in [3Xlist[103X and such that [10Xi ^ g = i[110X for all [10Xi[110X not in [3Xlist[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 2, 10, 5, 9, 10, 9, 6, 3, 8, 4, 6, 5 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XRestrictedTransformation( f, [ 1, 2, 3, 10, 11, 12 ] );[127X[104X
+    [4X[28XTransformation( [ 2, 10, 5, 4, 5, 6, 7, 8, 9, 4, 6, 5 ] )[128X[104X
+  [4X[32X[104X
+  
+  [1X53.3-3 PermutationOfImage[101X
+  
+  [33X[1;0Y[29X[2XPermutationOfImage[102X( [3Xf[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YA permutation or [9Xfail[109X.[133X
+  
+  [33X[0;0YIf  the  transformation  [3Xf[103X is a permutation of the points in its image, then
+  [10XPermutationOfImage[110X  returns  this  permutation.  If  [3Xf[103X  does not permute its
+  image, then [9Xfail[109X is returned.[133X
+  
+  [33X[0;0YIf  [3Xf[103X  happens  to be a permutation, then [10XPermutationOfImage[110X with argument [3Xf[103X
+  returns the same value as [10XAsPermutation[110X with argument [3Xf[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 5, 8, 3, 5, 8, 6, 2, 2, 7, 8 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XPermutationOfImage( f );[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 8, 2, 10, 2, 4, 4, 7, 6, 9, 10 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XPermutationOfImage( f );[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 1, 3, 6, 6, 2, 10, 2, 3, 10, 5 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XPermutationOfImage( f );[127X[104X
+    [4X[28X(2,3,6,10,5)[128X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 5, 2, 8, 4, 1, 8, 10, 3, 5, 7 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XPermutationOfImage( f );[127X[104X
+    [4X[28X(1,5)(3,8)(7,10)[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X53.4 [33X[0;0YOperators for transformations[133X[101X
+  
+  [1X53.4-1 \^[101X
+  
+  [33X[1;0Y[29X[2X\^[102X( [3Xi[103X, [3Xf[103X ) [32X method[133X
+  
+  [33X[0;0Y[10X[3Xi[103X[10X  ^  [3Xf[103X[10X[110X returns the image of the positive integer [3Xi[103X under the transformation
+  [3Xf[103X.[133X
+  
+  [1X53.4-2 \^[101X
+  
+  [33X[1;0Y[29X[2X\^[102X( [3Xf[103X, [3Xg[103X ) [32X method[133X
+  
+  [33X[0;0Y[10X[3Xf[103X[10X  ^  [3Xg[103X[10X[110X  returns  [10X[3Xg[103X[10X  ^  -1  *  [3Xf[103X[10X  *  [3Xg[103X[10X[110X when [3Xf[103X is a transformation and [3Xg[103X is a
+  permutation  [2X\^[102X  ([14X31.12-1[114X).  This  operation  requires  essentially the same
+  number  of  steps as multiplying a transformation by a permutation, which is
+  approximately  one  third of the number required to first invert [3Xg[103X, take the
+  product with [3Xf[103X, and then the product with [3Xg[103X.[133X
+  
+  [1X53.4-3 \*[101X
+  
+  [33X[1;0Y[29X[2X\*[102X( [3Xf[103X, [3Xg[103X ) [32X method[133X
+  
+  [33X[0;0Y[10X[3Xf[103X[10X * [3Xg[103X[10X[110X returns the composition of [3Xf[103X and [3Xg[103X when [3Xf[103X and [3Xg[103X are transformations or
+  permutations.  The product of a permutation and a transformation is returned
+  as a transformation.[133X
+  
+  [1X53.4-4 \/[101X
+  
+  [33X[1;0Y[29X[2X\/[102X( [3Xf[103X, [3Xg[103X ) [32X method[133X
+  
+  [33X[0;0Y[10X[3Xf[103X[10X  / [3Xg[103X[10X[110X returns [10X[3Xf[103X[10X * [3Xg[103X[10X ^ -1[110X when [3Xf[103X is a transformation and [3Xg[103X is a permutation.
+  This  operation requires essentially the same number of steps as multiplying
+  a  transformation  by  a permutation, which is approximately half the number
+  required to first invert [3Xg[103X and then take the product with [3Xf[103X.[133X
+  
+  [1X53.4-5 LeftQuotient[101X
+  
+  [33X[1;0Y[29X[2XLeftQuotient[102X( [3Xg[103X, [3Xf[103X ) [32X method[133X
+  
+  [33X[0;0Yreturns  [10X[3Xg[103X[10X  ^ -1 * [3Xf[103X[10X[110X when [3Xf[103X is a transformation and [3Xg[103X is a permutation. This
+  operation  uses  essentially  the  same  number  of  steps  as multiplying a
+  transformation  by  a  permutation,  which  is approximately half the number
+  required to first invert [3Xg[103X and then take the product with [3Xf[103X.[133X
+  
+  [1X53.4-6 \<[101X
+  
+  [33X[1;0Y[29X[2X\<[102X( [3Xi[103X, [3Xf[103X ) [32X method[133X
+  
+  [33X[0;0Y[10X[3Xf[103X[10X < [3Xg[103X[10X[110X returns [9Xtrue[109X if the image list of [3Xf[103X is lexicographically less than the
+  image list of [3Xg[103X and [9Xfalse[109X if it is not.[133X
+  
+  [1X53.4-7 \=[101X
+  
+  [33X[1;0Y[29X[2X\=[102X( [3Xf[103X, [3Xg[103X ) [32X method[133X
+  
+  [33X[0;0Y[10X[3Xf[103X[10X  =  [3Xg[103X[10X[110X returns [9Xtrue[109X if the transformation [3Xf[103X equals the transformation [3Xg[103X and
+  returns [9Xfalse[109X if it does not.[133X
+  
+  [1X53.4-8 PermLeftQuoTransformation[101X
+  
+  [33X[1;0Y[29X[2XPermLeftQuoTransformation[102X( [3Xf[103X, [3Xg[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XPermLeftQuoTransformationNC[102X( [3Xf[103X, [3Xg[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YA permutation.[133X
+  
+  [33X[0;0YReturns the permutation on the image set of [3Xf[103X induced by [10X[3Xf[103X[10X ^ -1 * [3Xg[103X[10X[110X when the
+  transformations [3Xf[103X and [3Xg[103X have equal kernel and image set.[133X
+  
+  [33X[0;0Y[10XPermLeftQuoTransformation[110X verifies that [3Xf[103X and [3Xg[103X have equal kernels and image
+  sets,  and returns an error if they do not. [10XPermLeftQuoTransformationNC[110X does
+  no checks.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 5, 6, 7, 1, 4, 3, 2, 7 ] );;[127X[104X
+    [4X[25Xgap>[125X [27Xg := Transformation( [ 5, 7, 1, 6, 4, 3, 2, 1 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XPermLeftQuoTransformation( f, g );[127X[104X
+    [4X[28X(1,6,7)[128X[104X
+    [4X[25Xgap>[125X [27XPermLeftQuoTransformation( g, f );[127X[104X
+    [4X[28X(1,7,6)[128X[104X
+  [4X[32X[104X
+  
+  [1X53.4-9 IsInjectiveListTrans[101X
+  
+  [33X[1;0Y[29X[2XIsInjectiveListTrans[102X( [3Xlist[103X, [3Xobj[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X.[133X
+  
+  [33X[0;0YThe  argument  [3Xobj[103X  should  be  a  transformation or the list of images of a
+  transformation   and   [3Xlist[103X   should   be   a  list  of  positive  integers.
+  [10XIsInjectiveListTrans[110X checks if [3Xobj[103X is injective on [3Xlist[103X.[133X
+  
+  [33X[0;0YMore  precisely,  if [3Xobj[103X is a transformation, then we define [10Xf := [3Xobj[103X[10X[110X and if
+  [3Xobj[103X is the image list of a transformation we define [10Xf := Transformation( [3Xobj[103X[10X
+  )[110X.  [10XIsInjectiveListTrans[110X returns [9Xtrue[109X if [10Xf[110X is injective on [3Xlist[103X and [9Xfalse[109X if
+  it is not. If [3Xlist[103X is not duplicate free, then [9Xfalse[109X is returned.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 2, 6, 7, 2, 6, 9, 9, 1, 1, 5 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XIsInjectiveListTrans( [ 1, 5 ], f );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsInjectiveListTrans( [ 5, 1 ], f );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsInjectiveListTrans( [ 5, 1, 5, 1, 1, ], f );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsInjectiveListTrans( [ 5, 1, 2, 3 ], [ 1, 2, 3, 4, 5 ] );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X53.4-10 ComponentTransformationInt[101X
+  
+  [33X[1;0Y[29X[2XComponentTransformationInt[102X( [3Xf[103X, [3Xn[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA list of positive integers.[133X
+  
+  [33X[0;0YIf   [3Xf[103X   is   a   transformation   and   [3Xn[103X   is  a  positive  integer,  then
+  [10XComponentTransformationInt[110X  returns those elements [10Xi[110X such that [10X[3Xn[103X[10X ^ [3Xf[103X[10X ^ j = i[110X
+  for  some  positive  integer  [10Xj[110X,  i.e.  the  elements  of the component of [3Xf[103X
+  containing [3Xn[103X that can be obtained by applying powers of [3Xf[103X to [3Xn[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 6, 2, 8, 4, 7, 5, 8, 3, 5, 8 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XComponentTransformationInt( f, 1 );[127X[104X
+    [4X[28X[ 1, 6, 5, 7, 8, 3 ][128X[104X
+    [4X[25Xgap>[125X [27XComponentTransformationInt( f, 12 );[127X[104X
+    [4X[28X[ 12 ][128X[104X
+    [4X[25Xgap>[125X [27XComponentTransformationInt( f, 5 );[127X[104X
+    [4X[28X[ 5, 7, 8, 3 ][128X[104X
+  [4X[32X[104X
+  
+  [1X53.4-11 PreImagesOfTransformation[101X
+  
+  [33X[1;0Y[29X[2XPreImagesOfTransformation[102X( [3Xf[103X, [3Xn[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA set of positive integers.[133X
+  
+  [33X[0;0YReturns  the preimages of the positive integer [3Xn[103X under the transformation [3Xf[103X,
+  i.e. the positive integers [10Xi[110X such that [10Xi ^ [3Xf[103X[10X = n[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 2, 6, 7, 2, 6, 9, 9, 1, 1, 5 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XPreImagesOfTransformation( f, 1 );[127X[104X
+    [4X[28X[ 8, 9 ][128X[104X
+    [4X[25Xgap>[125X [27XPreImagesOfTransformation( f, 3 );[127X[104X
+    [4X[28X[  ][128X[104X
+    [4X[25Xgap>[125X [27XPreImagesOfTransformation( f, 100 );[127X[104X
+    [4X[28X[ 100 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X53.5 [33X[0;0YAttributes for transformations[133X[101X
+  
+  [33X[0;0YIn  this  section  we  describe  the  functions available in [5XGAP[105X for finding
+  various properties and attributes of transformations.[133X
+  
+  [1X53.5-1 DegreeOfTransformation[101X
+  
+  [33X[1;0Y[29X[2XDegreeOfTransformation[102X( [3Xf[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XDegreeOfTransformationCollection[102X( [3Xcoll[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA positive integer.[133X
+  
+  [33X[0;0YThe  [13Xdegree[113X  of a transformation [3Xf[103X is the largest value such that [10Xn ^ [3Xf[103X[10X <> n[110X
+  or  [10Xi  ^ [3Xf[103X[10X = n[110X for some [10Xi <> n[110X. Equivalently, the degree of a transformation
+  is  the  least value [10Xn[110X such that [10X[ n + 1, n + 2, ... ][110X is fixed pointwise by
+  [3Xf[103X.[133X
+  
+  [33X[0;0YThe  degree of a collection of transformations [3Xcoll[103X is the maximum degree of
+  any transformation in [3Xcoll[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDegreeOfTransformation( IdentityTransformation );[127X[104X
+    [4X[28X0[128X[104X
+    [4X[25Xgap>[125X [27XDegreeOfTransformationCollection([127X[104X
+    [4X[25X>[125X [27X[ Transformation( [ 1, 3, 4, 1 ] ),[127X[104X
+    [4X[25X>[125X [27X  Transformation( [ 3, 1, 1, 3, 4 ] ),[127X[104X
+    [4X[25X>[125X [27X  Transformation( [ 2, 4, 1, 2 ] ) ] );[127X[104X
+    [4X[28X5[128X[104X
+  [4X[32X[104X
+  
+  [1X53.5-2 ImageListOfTransformation[101X
+  
+  [33X[1;0Y[29X[2XImageListOfTransformation[102X( [3Xf[103X[, [3Xn[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XListTransformation[102X( [3Xf[103X[, [3Xn[103X] ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YThe list of images of a transformation.[133X
+  
+  [33X[0;0YReturns  the  list of images of [10X[ 1 .. [3Xn[103X[10X ][110X under the transformation [3Xf[103X, which
+  is  [10X[  1  ^  [3Xf[103X[10X .. [3Xn[103X[10X ^ [3Xf[103X[10X ][110X. If the optional second argument [3Xn[103X is not present,
+  then the degree of [3Xf[103X is used by default.[133X
+  
+  [33X[0;0YThis   is   the  analogue  for  transformations  of  [2XListPerm[102X  ([14X42.5-1[114X)  for
+  permutations.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 2 ,3, 4, 2, 4 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XImageListOfTransformation( f );[127X[104X
+    [4X[28X[ 2, 3, 4, 2, 4 ][128X[104X
+    [4X[25Xgap>[125X [27XImageListOfTransformation( f, 10 );[127X[104X
+    [4X[28X[ 2, 3, 4, 2, 4, 6, 7, 8, 9, 10 ][128X[104X
+  [4X[32X[104X
+  
+  [1X53.5-3 ImageSetOfTransformation[101X
+  
+  [33X[1;0Y[29X[2XImageSetOfTransformation[102X( [3Xf[103X[, [3Xn[103X] ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YThe set of images of the transformation.[133X
+  
+  [33X[0;0YReturns  the set of points in the list of images of [10X[ 1 .. [3Xn[103X[10X ][110X under [3Xf[103X, i.e.
+  the  sorted  list  of images with duplicates removed. If the optional second
+  argument [3Xn[103X is not given, then the degree of [3Xf[103X is used.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 5, 6, 7, 1, 4, 3, 2, 7 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XImageSetOfTransformation( f );[127X[104X
+    [4X[28X[ 1, 2, 3, 4, 5, 6, 7 ][128X[104X
+    [4X[25Xgap>[125X [27XImageSetOfTransformation( f, 10 );[127X[104X
+    [4X[28X[ 1, 2, 3, 4, 5, 6, 7, 9, 10 ][128X[104X
+  [4X[32X[104X
+  
+  [1X53.5-4 RankOfTransformation[101X
+  
+  [33X[1;0Y[29X[2XRankOfTransformation[102X( [3Xf[103X[, [3Xn[103X] ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRankOfTransformation[102X( [3Xf[103X[, [3Xlist[103X] ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YThe rank of a transformation.[133X
+  
+  [33X[0;0YWhen  the  arguments  are  a  transformation  [3Xf[103X  and  a  positive integer [3Xn[103X,
+  [10XRankOfTransformation[110X   returns  the  size  of  the  set  of  images  of  the
+  transformation  [3Xf[103X in the range [10X[ 1 .. [3Xn[103X[10X ][110X. If the optional second argument [3Xn[103X
+  is not specified, then the degree of [3Xf[103X is used.[133X
+  
+  [33X[0;0YWhen  the  arguments  are  a  transformation  [3Xf[103X  and a list [3Xlist[103X of positive
+  integers,  this  function  returns  the  size  of  the  set of images of the
+  transformation [3Xf[103X on [3Xlist[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 8, 5, 8, 2, 2, 8, 4, 7, 3, 1 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XImageSetOfTransformation( f );[127X[104X
+    [4X[28X[ 1, 2, 3, 4, 5, 7, 8 ][128X[104X
+    [4X[25Xgap>[125X [27XRankOfTransformation( f );[127X[104X
+    [4X[28X7[128X[104X
+    [4X[25Xgap>[125X [27XRankOfTransformation( f, 100 );[127X[104X
+    [4X[28X97[128X[104X
+    [4X[25Xgap>[125X [27XRankOfTransformation( f, [ 2, 5, 8 ] );[127X[104X
+    [4X[28X3[128X[104X
+  [4X[32X[104X
+  
+  [1X53.5-5 MovedPoints[101X
+  
+  [33X[1;0Y[29X[2XMovedPoints[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XMovedPoints[102X( [3Xcoll[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA set of positive integers.[133X
+  
+  [33X[0;0YWhen  the  argument  is  a  transformation,  [10XMovedPoints[110X  returns the set of
+  positive integers [10Xi[110X such that [10Xi ^ [3Xf[103X[10X <> i[110X.[133X
+  
+  [33X[0;0Y[10XMovedPoints[110X  returns  the  set  of  points  moved  by  some  element  of the
+  collection of transformations [3Xcoll[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 6, 10, 1, 4, 6, 5, 1, 2, 3, 3 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XMovedPoints( f );[127X[104X
+    [4X[28X[ 1, 2, 3, 5, 6, 7, 8, 9, 10 ][128X[104X
+    [4X[25Xgap>[125X [27Xf := IdentityTransformation;[127X[104X
+    [4X[28XIdentityTransformation[128X[104X
+    [4X[25Xgap>[125X [27XMovedPoints( f );[127X[104X
+    [4X[28X[  ][128X[104X
+  [4X[32X[104X
+  
+  [1X53.5-6 NrMovedPoints[101X
+  
+  [33X[1;0Y[29X[2XNrMovedPoints[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XNrMovedPoints[102X( [3Xcoll[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA positive integer.[133X
+  
+  [33X[0;0YWhen  the  argument  is a transformation,[10XNrMovedPoints[110X returns the number of
+  positive integers [10Xi[110X such that [10Xi ^ [3Xf[103X[10X <> i[110X.[133X
+  
+  [33X[0;0Y[10XMovedPoints[110X  returns  the  number  of points which are moved by at least one
+  element of the collection of transformations [3Xcoll[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 7, 1, 4, 3, 2, 7, 7, 6, 6, 5 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XNrMovedPoints( f );[127X[104X
+    [4X[28X9[128X[104X
+    [4X[25Xgap>[125X [27XNrMovedPoints( IdentityTransformation );[127X[104X
+    [4X[28X0[128X[104X
+  [4X[32X[104X
+  
+  [1X53.5-7 SmallestMovedPoint[101X
+  
+  [33X[1;0Y[29X[2XSmallestMovedPoint[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XSmallestMovedPoint[102X( [3Xcoll[103X ) [32X method[133X
+  [6XReturns:[106X  [33X[0;10YA positive integer or [9Xinfinity[109X.[133X
+  
+  [33X[0;0Y[10XSmallestMovedPoint[110X  returns  the smallest positive integer [10Xi[110X such that [10Xi ^ [3Xf[103X[10X
+  <> i[110X if such an [10Xi[110X exists. If [3Xf[103X is the identity transformation, then [9Xinfinity[109X
+  is returned.[133X
+  
+  [33X[0;0YIf  the  argument is a collection of transformations [3Xcoll[103X, then the smallest
+  point  which is moved by at least one element of [3Xcoll[103X is returned, if such a
+  point   exists.   If  [3Xcoll[103X  only  contains  identity  transformations,  then
+  [10XSmallestMovedPoint[110X returns [9Xinfinity[109X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS := FullTransformationSemigroup( 5 );[127X[104X
+    [4X[28X<full transformation monoid of degree 5>[128X[104X
+    [4X[25Xgap>[125X [27XSmallestMovedPoint( S );[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XS := Semigroup( IdentityTransformation );[127X[104X
+    [4X[28X<trivial transformation group of degree 0 with 1 generator>[128X[104X
+    [4X[25Xgap>[125X [27XSmallestMovedPoint( S );[127X[104X
+    [4X[28Xinfinity[128X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 1, 2, 3, 6, 6, 6 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XSmallestMovedPoint( f );[127X[104X
+    [4X[28X4[128X[104X
+  [4X[32X[104X
+  
+  [1X53.5-8 LargestMovedPoint[101X
+  
+  [33X[1;0Y[29X[2XLargestMovedPoint[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLargestMovedPoint[102X( [3Xcoll[103X ) [32X method[133X
+  [6XReturns:[106X  [33X[0;10YA positive integer.[133X
+  
+  [33X[0;0Y[10XLargestMovedPoint[110X returns the largest positive integers [10Xi[110X such that [10Xi ^ [3Xf[103X[10X <>
+  i[110X  if  such  an  [10Xi[110X  exists.  If  [3Xf[103X is the identity transformation, then [10X0[110X is
+  returned.[133X
+  
+  [33X[0;0YIf  the  argument  is a collection of transformations [3Xcoll[103X, then the largest
+  point  which is moved by at least one element of [3Xcoll[103X is returned, if such a
+  point   exists.   If  [3Xcoll[103X  only  contains  identity  transformations,  then
+  [10XLargestMovedPoint[110X returns [10X0[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS := FullTransformationSemigroup( 5 );[127X[104X
+    [4X[28X<full transformation monoid of degree 5>[128X[104X
+    [4X[25Xgap>[125X [27XLargestMovedPoint( S );[127X[104X
+    [4X[28X5[128X[104X
+    [4X[25Xgap>[125X [27XS := Semigroup( IdentityTransformation );[127X[104X
+    [4X[28X<trivial transformation group of degree 0 with 1 generator>[128X[104X
+    [4X[25Xgap>[125X [27XLargestMovedPoint( S );[127X[104X
+    [4X[28X0[128X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 1, 2, 3, 6, 6, 6 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XLargestMovedPoint( f );[127X[104X
+    [4X[28X5[128X[104X
+  [4X[32X[104X
+  
+  [1X53.5-9 SmallestImageOfMovedPoint[101X
+  
+  [33X[1;0Y[29X[2XSmallestImageOfMovedPoint[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XSmallestImageOfMovedPoint[102X( [3Xcoll[103X ) [32X method[133X
+  [6XReturns:[106X  [33X[0;10YA positive integer or [9Xinfinity[109X.[133X
+  
+  [33X[0;0Y[10XSmallestImageOfMovedPoint[110X  returns  the smallest positive integer [10Xi ^ [3Xf[103X[10X[110X such
+  that  [10Xi  ^  [3Xf[103X[10X <> i[110X if such an [10Xi[110X exists. If [3Xf[103X is the identity transformation,
+  then [9Xinfinity[109X is returned.[133X
+  
+  [33X[0;0YIf  the  argument is a collection of transformations [3Xcoll[103X, then the smallest
+  integer  which is the image a point moved by at least one element of [3Xcoll[103X is
+  returned,   if   such  a  point  exists.  If  [3Xcoll[103X  only  contains  identity
+  transformations, then [10XSmallestImageOfMovedPoint[110X returns [9Xinfinity[109X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS := FullTransformationSemigroup( 5 );[127X[104X
+    [4X[28X<full transformation monoid of degree 5>[128X[104X
+    [4X[25Xgap>[125X [27XSmallestImageOfMovedPoint( S );[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XS := Semigroup( IdentityTransformation );[127X[104X
+    [4X[28X<trivial transformation group of degree 0 with 1 generator>[128X[104X
+    [4X[25Xgap>[125X [27XSmallestImageOfMovedPoint( S );[127X[104X
+    [4X[28Xinfinity[128X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 1, 2, 3, 6, 6, 6 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XSmallestImageOfMovedPoint( f );[127X[104X
+    [4X[28X6[128X[104X
+  [4X[32X[104X
+  
+  [1X53.5-10 LargestImageOfMovedPoint[101X
+  
+  [33X[1;0Y[29X[2XLargestImageOfMovedPoint[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLargestImageOfMovedPoint[102X( [3Xcoll[103X ) [32X method[133X
+  [6XReturns:[106X  [33X[0;10YA positive integer.[133X
+  
+  [33X[0;0Y[10XLargestImageOfMovedPoint[110X  returns  the  largest  positive integer [10Xi ^ [3Xf[103X[10X[110X such
+  that  [10Xi  ^  [3Xf[103X[10X <> i[110X if such an [10Xi[110X exists. If [3Xf[103X is the identity transformation,
+  then [10X0[110X is returned.[133X
+  
+  [33X[0;0YIf  the  argument  is a collection of transformations [3Xcoll[103X, then the largest
+  integer  which is the image a point moved by at least one element of [3Xcoll[103X is
+  returned,   if   such  a  point  exists.  If  [3Xcoll[103X  only  contains  identity
+  transformations, then [10XLargestImageOfMovedPoint[110X returns [10X0[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS := FullTransformationSemigroup( 5 );[127X[104X
+    [4X[28X<full transformation monoid of degree 5>[128X[104X
+    [4X[25Xgap>[125X [27XLargestImageOfMovedPoint( S );[127X[104X
+    [4X[28X5[128X[104X
+    [4X[25Xgap>[125X [27XS := Semigroup( IdentityTransformation );;[127X[104X
+    [4X[25Xgap>[125X [27XLargestImageOfMovedPoint( S );[127X[104X
+    [4X[28X0[128X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 1, 2, 3, 6, 6, 6 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XLargestImageOfMovedPoint( f );[127X[104X
+    [4X[28X6[128X[104X
+  [4X[32X[104X
+  
+  [1X53.5-11 FlatKernelOfTransformation[101X
+  
+  [33X[1;0Y[29X[2XFlatKernelOfTransformation[102X( [3Xf[103X[, [3Xn[103X] ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YThe flat kernel of a transformation.[133X
+  
+  [33X[0;0YIf  the  kernel classes of the transformation [3Xf[103X on [10X[ 1 .. [3Xn[103X[10X ][110X are [22XK_1, dots,
+  K_r[122X, then [10XFlatKernelOfTransformation[110X returns a list [10XL[110X such that [10XL[i] = j[110X for
+  all  [10Xi[110X in [22XK_j[122X. For a given transformation and positive integer [3Xn[103X, there is a
+  unique such list.[133X
+  
+  [33X[0;0YIf  the  optional  second argument [3Xn[103X is not present, then the degree of [3Xf[103X is
+  used by default.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 10, 3, 7, 10, 1, 5, 9, 2, 6, 10 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XFlatKernelOfTransformation( f );[127X[104X
+    [4X[28X[ 1, 2, 3, 1, 4, 5, 6, 7, 8, 1 ][128X[104X
+  [4X[32X[104X
+  
+  [1X53.5-12 KernelOfTransformation[101X
+  
+  [33X[1;0Y[29X[2XKernelOfTransformation[102X( [3Xf[103X[, [3Xn[103X, [3Xbool[103X] ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YThe kernel of a transformation.[133X
+  
+  [33X[0;0YWhen  the  arguments are a transformation [3Xf[103X, a positive integer [3Xn[103X, and [9Xtrue[109X,
+  [10XKernelOfTransformation[110X  returns the kernel of the transformation [3Xf[103X on [10X[ 1 ..
+  [3Xn[103X[10X  ][110X  as  a set of sets of positive integers. If the argument [3Xbool[103X is [9Xfalse[109X,
+  then only the non-singleton classes are returned.[133X
+  
+  [33X[0;0YThe  second  and  third  arguments  are optional, the default values are the
+  degree of [3Xf[103X and [9Xtrue[109X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 2, 6, 7, 2, 6, 9, 9, 1, 11, 1, 12, 5 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XKernelOfTransformation( f );[127X[104X
+    [4X[28X[ [ 1, 4 ], [ 2, 5 ], [ 3 ], [ 6, 7 ], [ 8, 10 ], [ 9 ], [ 11 ],[128X[104X
+    [4X[28X  [ 12 ] ][128X[104X
+    [4X[25Xgap>[125X [27XKernelOfTransformation( f, 5 );[127X[104X
+    [4X[28X[ [ 1, 4 ], [ 2, 5 ], [ 3 ] ][128X[104X
+    [4X[25Xgap>[125X [27XKernelOfTransformation( f, 5, false );[127X[104X
+    [4X[28X[ [ 1, 4 ], [ 2, 5 ] ][128X[104X
+    [4X[25Xgap>[125X [27XKernelOfTransformation( f, 15 );[127X[104X
+    [4X[28X[ [ 1, 4 ], [ 2, 5 ], [ 3 ], [ 6, 7 ], [ 8, 10 ], [ 9 ], [ 11 ],[128X[104X
+    [4X[28X  [ 12 ], [ 13 ], [ 14 ], [ 15 ] ][128X[104X
+    [4X[25Xgap>[125X [27XKernelOfTransformation( f, false );[127X[104X
+    [4X[28X[ [ 1, 4 ], [ 2, 5 ], [ 6, 7 ], [ 8, 10 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X53.5-13 InverseOfTransformation[101X
+  
+  [33X[1;0Y[29X[2XInverseOfTransformation[102X( [3Xf[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YA transformation.[133X
+  
+  [33X[0;0Y[10XInverseOfTransformation[110X  returns a semigroup inverse of the transformation [3Xf[103X
+  in  the full transformation semigroup. An [13Xinverse[113X of [3Xf[103X is any transformation
+  [10Xg[110X  such  that  [10X[3Xf[103X[10X  * g * [3Xf[103X[10X = [3Xf[103X[10X[110X and [10Xg * [3Xf[103X[10X * g = g[110X. Every transformation has at
+  least one inverse.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 2, 6, 7, 2, 6, 9, 9, 1, 1, 5 ] );;[127X[104X
+    [4X[25Xgap>[125X [27Xg := InverseOfTransformation( f );[127X[104X
+    [4X[28XTransformation( [ 8, 1, 1, 1, 10, 2, 3, 1, 6, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xf * g * f;[127X[104X
+    [4X[28XTransformation( [ 2, 6, 7, 2, 6, 9, 9, 1, 1, 5 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xg * f * g;[127X[104X
+    [4X[28XTransformation( [ 8, 1, 1, 1, 10, 2, 3, 1, 6, 1 ] )[128X[104X
+  [4X[32X[104X
+  
+  [1X53.5-14 Inverse[101X
+  
+  [33X[1;0Y[29X[2XInverse[102X( [3Xf[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA transformation.[133X
+  
+  [33X[0;0YIf  the  transformation [3Xf[103X is a bijection, then [10XInverse[110X or [10X[3Xf[103X[10X ^ -1[110X returns the
+  inverse of [3Xf[103X. If [3Xf[103X is not a bijection, then [9Xfail[109X is returned.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTransformation( [ 3, 8, 12, 1, 11, 9, 9, 4, 10, 5, 10, 6 ] ) ^ -1;[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27XTransformation( [ 2, 3, 1 ] ) ^ -1;[127X[104X
+    [4X[28XTransformation( [ 3, 1, 2 ] )[128X[104X
+  [4X[32X[104X
+  
+  [1X53.5-15 IndexPeriodOfTransformation[101X
+  
+  [33X[1;0Y[29X[2XIndexPeriodOfTransformation[102X( [3Xf[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YA pair of positive integers.[133X
+  
+  [33X[0;0YReturns  the  least positive integers [10Xm[110X and [10Xr[110X such that [10X[3Xf[103X[10X ^ (m + r) = [3Xf[103X[10X ^ m[110X,
+  which are known as the [13Xindex[113X and [13Xperiod[113X of the transformation [3Xf[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 3, 4, 4, 6, 1, 3, 3, 7, 1 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XIndexPeriodOfTransformation( f );[127X[104X
+    [4X[28X[ 2, 3 ][128X[104X
+    [4X[25Xgap>[125X [27Xf ^ 2 = f ^ 5;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIndexPeriodOfTransformation( IdentityTransformation );[127X[104X
+    [4X[28X[ 1, 1 ][128X[104X
+    [4X[25Xgap>[125X [27XIndexPeriodOfTransformation( Transformation( [ 1, 2, 1 ] ) );[127X[104X
+    [4X[28X[ 1, 1 ][128X[104X
+    [4X[25Xgap>[125X [27XIndexPeriodOfTransformation( Transformation( [ 1, 2, 3 ] ) );[127X[104X
+    [4X[28X[ 1, 1 ][128X[104X
+    [4X[25Xgap>[125X [27XIndexPeriodOfTransformation( Transformation( [ 1, 3, 2 ] ) );[127X[104X
+    [4X[28X[ 1, 2 ][128X[104X
+  [4X[32X[104X
+  
+  [1X53.5-16 SmallestIdempotentPower[101X
+  
+  [33X[1;0Y[29X[2XSmallestIdempotentPower[102X( [3Xf[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA positive integer.[133X
+  
+  [33X[0;0YThis   function   returns  the  least  positive  integer  [10Xn[110X  such  that  the
+  transformation [10X[3Xf[103X[10X ^ n[110X is an idempotent. The smallest idempotent power of [3Xf[103X is
+  the  least  multiple of the period of [3Xf[103X that is greater than or equal to the
+  index of [3Xf[103X; see [2XIndexPeriodOfTransformation[102X ([14X53.5-15[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 6, 7, 4, 1, 7, 4, 6, 1, 3, 4 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XSmallestIdempotentPower( f );[127X[104X
+    [4X[28X3[128X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 6, 6, 6, 2, 7, 1, 5, 3, 10, 6 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XSmallestIdempotentPower( f );[127X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+  
+  [1X53.5-17 ComponentsOfTransformation[101X
+  
+  [33X[1;0Y[29X[2XComponentsOfTransformation[102X( [3Xf[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA list of lists of positive integers.[133X
+  
+  [33X[0;0Y[10XComponentsOfTransformation[110X   returns   a  list  of  the  components  of  the
+  transformation    [3Xf[103X.    Each   component   is   a   subset   of   [10X[   1   ..
+  DegreeOfTransformation(  f  )  ][110X,  and the union of the components is [10X[ 1 ..
+  DegreeOfTransformation( f ) ][110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 6, 12, 11, 1, 7, 6, 2, 8, 4, 7, 5, 12 ] );[127X[104X
+    [4X[28XTransformation( [ 6, 12, 11, 1, 7, 6, 2, 8, 4, 7, 5, 12 ] )[128X[104X
+    [4X[25Xgap>[125X [27XComponentsOfTransformation( f );[127X[104X
+    [4X[28X[ [ 1, 6, 4, 9 ], [ 2, 12, 3, 11, 5, 7, 10 ], [ 8 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xf := AsTransformation( (1,8,2,4,11,5,10)(3,7)(9,12) );[127X[104X
+    [4X[28XTransformation( [ 8, 4, 7, 11, 10, 6, 3, 2, 12, 1, 5, 9 ] )[128X[104X
+    [4X[25Xgap>[125X [27XComponentsOfTransformation( f );[127X[104X
+    [4X[28X[ [ 1, 8, 2, 4, 11, 5, 10 ], [ 3, 7 ], [ 6 ], [ 9, 12 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X53.5-18 NrComponentsOfTransformation[101X
+  
+  [33X[1;0Y[29X[2XNrComponentsOfTransformation[102X( [3Xf[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA positive integer.[133X
+  
+  [33X[0;0Y[10XNrComponentsOfTransformation[110X   returns  the  number  of  components  of  the
+  transformation [3Xf[103X on the range [10X[ 1 .. DegreeOfTransformation( [3Xf[103X[10X ) ][110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 6, 12, 11, 1, 7, 6, 2, 8, 4, 7, 5, 12 ] );[127X[104X
+    [4X[28XTransformation( [ 6, 12, 11, 1, 7, 6, 2, 8, 4, 7, 5, 12 ] )[128X[104X
+    [4X[25Xgap>[125X [27XNrComponentsOfTransformation( f );[127X[104X
+    [4X[28X3[128X[104X
+    [4X[25Xgap>[125X [27Xf := AsTransformation( (1,8,2,4,11,5,10)(3,7)(9,12) );[127X[104X
+    [4X[28XTransformation( [ 8, 4, 7, 11, 10, 6, 3, 2, 12, 1, 5, 9 ] )[128X[104X
+    [4X[25Xgap>[125X [27XNrComponentsOfTransformation( f );[127X[104X
+    [4X[28X4[128X[104X
+  [4X[32X[104X
+  
+  [1X53.5-19 ComponentRepsOfTransformation[101X
+  
+  [33X[1;0Y[29X[2XComponentRepsOfTransformation[102X( [3Xf[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA list of lists of positive integers.[133X
+  
+  [33X[0;0Y[10XComponentRepsOfTransformation[110X  returns the representatives, in the following
+  sense,  of  the  components  of  the transformation [3Xf[103X. For every [10Xi[110X in [10X[ 1 ..
+  DegreeOfTransformation( f ) ][110X there exists a representative [10Xj[110X and a positive
+  integer  [10Xk[110X  such  that  [10Xi  ^  ([3Xf[103X[10X  ^  k) = j[110X. The representatives returned by
+  [10XComponentRepsOfTransformation[110X  are  partitioned  according  to the component
+  they  belong  to.  [10XComponentRepsOfTransformation[110X returns the least number of
+  representatives.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 6, 12, 11, 1, 7, 6, 2, 8, 4, 7, 5, 12 ] );[127X[104X
+    [4X[28XTransformation( [ 6, 12, 11, 1, 7, 6, 2, 8, 4, 7, 5, 12 ] )[128X[104X
+    [4X[25Xgap>[125X [27XComponentRepsOfTransformation( f );[127X[104X
+    [4X[28X[ [ 3, 10 ], [ 9 ], [ 8 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xf := AsTransformation( (1,8,2,4,11,5,10)(3,7)(9,12) );[127X[104X
+    [4X[28XTransformation( [ 8, 4, 7, 11, 10, 6, 3, 2, 12, 1, 5, 9 ] )[128X[104X
+    [4X[25Xgap>[125X [27XComponentRepsOfTransformation( f );[127X[104X
+    [4X[28X[ [ 1 ], [ 3 ], [ 6 ], [ 9 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X53.5-20 CyclesOfTransformation[101X
+  
+  [33X[1;0Y[29X[2XCyclesOfTransformation[102X( [3Xf[103X[, [3Xlist[103X] ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA list of lists of positive integers.[133X
+  
+  [33X[0;0YWhen  the arguments of this function are a transformation [3Xf[103X and a list [3Xlist[103X,
+  it  returns  a  list  of  the  cycles  of the components of [3Xf[103X containing any
+  element of [3Xlist[103X.[133X
+  
+  [33X[0;0YIf  the  optional  second  argument  is  not  present, then the range [10X[ 1 ..
+  DegreeOfTransformation( [3Xf[103X[10X ) ][110X is used as the default value for [3Xlist[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 6, 12, 11, 1, 7, 6, 2, 8, 4, 7, 5, 12 ] );[127X[104X
+    [4X[28XTransformation( [ 6, 12, 11, 1, 7, 6, 2, 8, 4, 7, 5, 12 ] )[128X[104X
+    [4X[25Xgap>[125X [27XCyclesOfTransformation( f );[127X[104X
+    [4X[28X[ [ 6 ], [ 12 ], [ 8 ] ][128X[104X
+    [4X[25Xgap>[125X [27XCyclesOfTransformation( f, [ 1, 2, 4 ] );[127X[104X
+    [4X[28X[ [ 6 ], [ 12 ] ][128X[104X
+    [4X[25Xgap>[125X [27XCyclesOfTransformation( f, [ 1 .. 17 ] );[127X[104X
+    [4X[28X[ [ 6 ], [ 12 ], [ 8 ], [ 13 ], [ 14 ], [ 15 ], [ 16 ], [ 17 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X53.5-21 CycleTransformationInt[101X
+  
+  [33X[1;0Y[29X[2XCycleTransformationInt[102X( [3Xf[103X, [3Xn[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA list of positive integers.[133X
+  
+  [33X[0;0YIf   [3Xf[103X   is   a   transformation   and   [3Xn[103X   is  a  positive  integer,  then
+  [10XCycleTransformationInt[110X returns the cycle of the component of [3Xf[103X containing [3Xn[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 6, 2, 8, 4, 7, 5, 8, 3, 5, 8 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XCycleTransformationInt( f, 1 );[127X[104X
+    [4X[28X[ 8, 3 ][128X[104X
+    [4X[25Xgap>[125X [27XCycleTransformationInt( f, 12 );[127X[104X
+    [4X[28X[ 12 ][128X[104X
+    [4X[25Xgap>[125X [27XCycleTransformationInt( f, 5 );[127X[104X
+    [4X[28X[ 8, 3 ][128X[104X
+  [4X[32X[104X
+  
+  [1X53.5-22 LeftOne[101X
+  
+  [33X[1;0Y[29X[2XLeftOne[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRightOne[102X( [3Xf[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA transformation.[133X
+  
+  [33X[0;0Y[10XLeftOne[110X  returns  an  idempotent transformation [10Xe[110X such that the kernel (with
+  respect  to  the degree of [3Xf[103X) of [10Xe[110X equals the kernel of the transformation [3Xf[103X
+  and [10Xe * [3Xf[103X[10X = f[110X.[133X
+  
+  [33X[0;0Y[10XRightOne[110X  returns  an  idempotent  transformation  [10Xe[110X such that the image set
+  (with respect to the degree of [3Xf[103X) of [10Xe[110X equals the image set of [3Xf[103X and [10X[3Xf[103X[10X * e =
+  f[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 11, 10, 2, 11, 4, 4, 7, 6, 9, 10, 1, 11 ] );;[127X[104X
+    [4X[25Xgap>[125X [27Xe := RightOne( f );[127X[104X
+    [4X[28XTransformation( [ 1, 2, 2, 4, 4, 6, 7, 7, 9, 10, 11, 11 ] )[128X[104X
+    [4X[25Xgap>[125X [27XIsIdempotent( e );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xf * e = f;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xe := LeftOne( f );[127X[104X
+    [4X[28XTransformation( [ 1, 2, 3, 1, 5, 5, 7, 8, 9, 2, 11, 1 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xe * f = f;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsIdempotent( e );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X53.5-23 TrimTransformation[101X
+  
+  [33X[1;0Y[29X[2XTrimTransformation[102X( [3Xf[103X[, [3Xn[103X] ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YNothing.[133X
+  
+  [33X[0;0YIt can happen that the internal representation of a transformation uses more
+  memory   than  necessary.  For  example,  this  can  happen  when  composing
+  transformations  where  it  is  possible that the resulting transformation [3Xf[103X
+  belongs  to [10XIsTrans4Rep[110X and stores its images as 32-bit integers, while none
+  of  its  moved points exceeds 65536. The purpose of [10XTrimTransformation[110X is to
+  change the internal representation of such an [3Xf[103X to remove the trailing fixed
+  points in the internal representation of [3Xf[103X.[133X
+  
+  [33X[0;0YIf   the   optional  second  argument  [3Xn[103X  is  provided,  then  the  internal
+  representation  of  [3Xf[103X  is  reduced  to  the  images  of the first [3Xn[103X positive
+  integers.  Please note that it must be the case that [10Xi ^ [3Xf[103X[10X <= n[110X for all [10Xi[110X in
+  the  range  [10X[  1  ..  [3Xn[103X[10X  ][110X  otherwise the resulting object will not define a
+  transformation.[133X
+  
+  [33X[0;0YIf  the  optional  second  argument is not included, then the degree of [3Xf[103X is
+  used by default.[133X
+  
+  [33X[0;0YThe  transformation  [3Xf[103X  is changed in-place, and nothing is returned by this
+  function.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 1 .. 2 ^ 16 ], x -> x + 1 );[127X[104X
+    [4X[28X<transformation on 65537 pts with rank 65536>[128X[104X
+    [4X[25Xgap>[125X [27Xg := Transformation( [ 1 .. 2 ^ 16 + 1 ],[127X[104X
+    [4X[25X>[125X [27Xfunction( x )[127X[104X
+    [4X[25X>[125X [27X  if x = 1 or x = 65537 then[127X[104X
+    [4X[25X>[125X [27X    return x;[127X[104X
+    [4X[25X>[125X [27X  else[127X[104X
+    [4X[25X>[125X [27X    return x - 1;[127X[104X
+    [4X[25X>[125X [27X  fi;[127X[104X
+    [4X[25X>[125X [27Xend );[127X[104X
+    [4X[28X<transformation on 65536 pts with rank 65535>[128X[104X
+    [4X[25Xgap>[125X [27Xh := g * f;[127X[104X
+    [4X[28XTransformation( [ 2, 2 ] )[128X[104X
+    [4X[25Xgap>[125X [27XDegreeOfTransformation( h ); IsTrans4Rep( h ); MemoryUsage( h );[127X[104X
+    [4X[28X65537[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28X262188[128X[104X
+    [4X[25Xgap>[125X [27XTrimTransformation( h ); h;[127X[104X
+    [4X[28XTransformation( [ 2, 2 ] )[128X[104X
+    [4X[25Xgap>[125X [27XDegreeOfTransformation( h ); IsTrans4Rep( h ); MemoryUsage( h );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28X44[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X53.6 [33X[0;0YDisplaying transformations[133X[101X
+  
+  [33X[0;0YIt is possible to change the way that [5XGAP[105X displays transformations using the
+  user  preferences [10XTransformationDisplayLimit[110X and [10XNotationForTransformations[110X;
+  see   Section   [2XUserPreference[102X  ([14X3.2-3[114X)  for  more  information  about  user
+  preferences.[133X
+  
+  [33X[0;0YIf  [10Xf[110X  is  a transformation where the degree [10Xn[110X of [10Xf[110X exceeds the value of the
+  user preference [10XTransformationDisplayLimit[110X, then [10Xf[110X is displayed as:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X<transformation on n pts with rank r>[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Ywhere  [10Xr[110X  is  the  rank  of  [10Xf[110X  relative to [10Xn[110X. The idea is to abbreviate the
+  display of transformations defined on many points. The default value for the
+  [10XTransformationDisplayLimit[110X is [10X100[110X.[133X
+  
+  [33X[0;0YIf  the degree of [10Xf[110X does not exceed the value of [10XTransformationDisplayLimit[110X,
+  then  how  [10Xf[110X  is  displayed  depends  on  the  value  of the user preference
+  [10XNotationForTransformations[110X.[133X
+  
+  [33X[0;0YThere are two possible values for [10XNotationForTransformations[110X:[133X
+  
+  [8Xinput[108X
+        [33X[0;6YWith   this   option   a   transformation   [3Xf[103X   is  displayed  in  as:
+        [10XTransformation(  ImageListOfTransformation(  [3Xf[103X[10X,  n  ) )[110X where [10Xn[110X is the
+        degree  of [3Xf[103X. The only exception is the identity transformation, which
+        is displayed as: [10XIdentityTransformation[110X.[133X
+  
+  [8Xfr[108X
+        [33X[0;6YWith   this   option   a   transformation   [3Xf[103X   is  displayed  in  as:
+        [10X<transformation:  ImageListOfTransformation(  [3Xf[103X[10X,  n  )>[110X where [10Xn[110X is the
+        largest  moved  point  of  [3Xf[103X.  The  only  exception  is  the  identity
+        transformation, which is displayed as: [10X<identity transformation>[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSetUserPreference( "TransformationDisplayLimit", 12 );[127X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 3, 8, 12, 1, 11, 9, 9, 4, 10, 5, 10, 6 ] );[127X[104X
+    [4X[28X<transformation on 12 pts with rank 10>[128X[104X
+    [4X[25Xgap>[125X [27XSetUserPreference( "TransformationDisplayLimit", 100 );[127X[104X
+    [4X[25Xgap>[125X [27Xf;[127X[104X
+    [4X[28XTransformation( [ 3, 8, 12, 1, 11, 9, 9, 4, 10, 5, 10, 6 ] )[128X[104X
+    [4X[25Xgap>[125X [27XSetUserPreference( "NotationForTransformations", "fr" );[127X[104X
+    [4X[25Xgap>[125X [27Xf;[127X[104X
+    [4X[28X<transformation: 3,8,12,1,11,9,9,4,10,5,10,6>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X53.7 [33X[0;0YSemigroups of transformations[133X[101X
+  
+  [33X[0;0YAs mentioned at the start of the chapter, every semigroup is isomorphic to a
+  semigroup  of transformations, and in this section we describe the functions
+  in  [5XGAP[105X  specific  to  transformation semigroups. For more information about
+  semigroups in general see Chapter [14X51[114X.[133X
+  
+  [33X[0;0YThe  [5XSemigroups[105X  package  contains many additional functions and methods for
+  computing  with  semigroups  of  transformations.  In particular, [5XSemigroups[105X
+  contains more efficient methods than those available in the [5XGAP[105X library (and
+  in  many  cases  more  efficient  than  any  other  software)  for  creating
+  semigroups  of  transformations,  calculating  their  Green's classes, size,
+  elements,  group  of  units,  minimal  ideal, small generating sets, testing
+  membership,  finding the inverses of a regular element, factorizing elements
+  over  the  generators,  and more. Since a transformation semigroup is also a
+  transformation   collection,  there  are  special  methods  for  [2XMovedPoints[102X
+  ([14X53.5-5[114X),     [2XNrMovedPoints[102X     ([14X53.5-6[114X),     [2XLargestMovedPoint[102X    ([14X53.5-8[114X),
+  [2XSmallestMovedPoint[102X   ([14X53.5-7[114X),   [2XLargestImageOfMovedPoint[102X   ([14X53.5-10[114X),   and
+  [2XSmallestImageOfMovedPoint[102X   ([14X53.5-9[114X),   when  applied  to  a  transformation
+  semigroup.[133X
+  
+  [1X53.7-1 IsTransformationSemigroup[101X
+  
+  [33X[1;0Y[29X[2XIsTransformationSemigroup[102X( [3Xobj[103X ) [32X Synonym[133X
+  [33X[1;0Y[29X[2XIsTransformationMonoid[102X( [3Xobj[103X ) [32X Synonym[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X.[133X
+  
+  [33X[0;0YA   [13Xtransformation   semigroup[113X   is   simply   a   semigroup  consisting  of
+  transformations.  An  object  [3Xobj[103X is a transformation semigroup in [5XGAP[105X if it
+  satisfies [2XIsSemigroup[102X ([14X51.1-1[114X) and [2XIsTransformationCollection[102X ([14X53.1-2[114X).[133X
+  
+  [33X[0;0YA [13Xtransformation monoid[113X is a monoid consisting of transformations. An object
+  [3Xobj[103X  is a transformation monoid in [5XGAP[105X if it satisfies [2XIsMonoid[102X ([14X51.2-1[114X) and
+  [2XIsTransformationCollection[102X ([14X53.1-2[114X).[133X
+  
+  [33X[0;0YNote  that  it  is  possible  for  a  transformation  semigroup  to  have  a
+  multiplicative neutral element (i.e. an identity element) but not to satisfy
+  [10XIsTransformationMonoid[110X. For example,[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := Transformation( [ 2, 6, 7, 2, 6, 9, 9, 1, 1, 5 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XS := Semigroup( f, One( f ) );[127X[104X
+    [4X[28X<commutative transformation monoid of degree 10 with 1 generator>[128X[104X
+    [4X[25Xgap>[125X [27XIsMonoid( S );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsTransformationMonoid( S );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XS := Semigroup([127X[104X
+    [4X[25X>[125X [27XTransformation( [ 3, 8, 1, 4, 5, 6, 7, 1, 10, 10 ] ),[127X[104X
+    [4X[25X>[125X [27XTransformation( [ 1, 2, 3, 4, 5, 6, 7, 8, 10, 10 ] ) );[127X[104X
+    [4X[28X<transformation semigroup of degree 10 with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27XOne( S );[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27XMultiplicativeNeutralElement( S );[127X[104X
+    [4X[28XTransformation( [ 1, 2, 3, 4, 5, 6, 7, 8, 10, 10 ] )[128X[104X
+    [4X[25Xgap>[125X [27XIsMonoid( S );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIn  this example [10XS[110X cannot be converted into a monoid using [2XAsMonoid[102X ([14X51.2-5[114X)
+  since  the [2XOne[102X ([14X31.10-2[114X) of any element in [10XS[110X differs from the multiplicative
+  neutral element.[133X
+  
+  [33X[0;0YFor more details see [2XIsMagmaWithOne[102X ([14X35.1-2[114X).[133X
+  
+  [1X53.7-2 DegreeOfTransformationSemigroup[101X
+  
+  [33X[1;0Y[29X[2XDegreeOfTransformationSemigroup[102X( [3XS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA non-negative integer.[133X
+  
+  [33X[0;0YThe  [13Xdegree[113X  of  a  transformation  semigroup  [3XS[103X  is just the maximum of the
+  degrees of the elements of [3XS[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS := Semigroup([127X[104X
+    [4X[25X>[125X [27XTransformation( [ 3, 8, 1, 4, 5, 6, 7, 1, 10, 10, 11 ] ),[127X[104X
+    [4X[25X>[125X [27XTransformation( [ 1, 2, 3, 4, 5, 6, 7, 8, 1, 1, 11 ] ) );[127X[104X
+    [4X[28X<transformation semigroup of degree 10 with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27XDegreeOfTransformationSemigroup( S );[127X[104X
+    [4X[28X10[128X[104X
+  [4X[32X[104X
+  
+  [1X53.7-3 FullTransformationSemigroup[101X
+  
+  [33X[1;0Y[29X[2XFullTransformationSemigroup[102X( [3Xn[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XFullTransformationMonoid[102X( [3Xn[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YThe full transformation semigroup of degree [3Xn[103X.[133X
+  
+  [33X[0;0YIf  [3Xn[103X  is  a  positive integer, then [10XFullTransformationSemigroup[110X returns the
+  monoid  consisting  of all transformations with degree at most [3Xn[103X, called the
+  [13Xfull transformation semigroup[113X.[133X
+  
+  [33X[0;0YThe  full  transformation  semigroup  is regular, has [10X[3Xn[103X[10X ^ [3Xn[103X[10X[110X elements, and is
+  generated  by any set containing transformations that generate the symmetric
+  group on [3Xn[103X points and any transformation of rank [10X[3Xn[103X[10X - 1[110X.[133X
+  
+  [33X[0;0Y[10XFulTransformationMonoid[110X is a synonym for [10XFullTransformationSemigroup[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XFullTransformationSemigroup( 1234 );[127X[104X
+    [4X[28X<full transformation monoid of degree 1234>[128X[104X
+  [4X[32X[104X
+  
+  [1X53.7-4 IsFullTransformationSemigroup[101X
+  
+  [33X[1;0Y[29X[2XIsFullTransformationSemigroup[102X( [3XS[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsFullTransformationMonoid[102X( [3XS[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X.[133X
+  
+  [33X[0;0YIf  the transformation semigroup [3XS[103X of degree [10Xn[110X contains every transformation
+  of  degree  at  most  [10Xn[110X, then [10XIsFullTransformationSemigroup[110X returns [9Xtrue[109X and
+  otherwise it returns [9Xfalse[109X.[133X
+  
+  [33X[0;0Y[10XIsFullTransformationMonoid[110X is a synonym of [10XIsFullTransformationSemigroup[110X. It
+  is  common  in  the  literature  for  the  full  transformation monoid to be
+  referred to as the full transformation semigroup.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS := Semigroup( AsTransformation( (1,3,4,2), 5 ),[127X[104X
+    [4X[25X>[125X [27X                   AsTransformation( (1,3,5), 5 ),[127X[104X
+    [4X[25X>[125X [27X                   Transformation( [ 1, 1, 2, 3, 4 ] ) );[127X[104X
+    [4X[28X<transformation semigroup of degree 5 with 3 generators>[128X[104X
+    [4X[25Xgap>[125X [27XIsFullTransformationSemigroup( S );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XS;[127X[104X
+    [4X[28X<full transformation monoid of degree 5>[128X[104X
+    [4X[25Xgap>[125X [27XIsFullTransformationMonoid( S );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XS := FullTransformationSemigroup( 5 );;[127X[104X
+    [4X[25Xgap>[125X [27XIsFullTransformationSemigroup( S );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X53.7-5 IsomorphismTransformationSemigroup[101X
+  
+  [33X[1;0Y[29X[2XIsomorphismTransformationSemigroup[102X( [3XS[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XIsomorphismTransformationMonoid[102X( [3XS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YAn isomorphism to a transformation semigroup or monoid.[133X
+  
+  [33X[0;0YReturns  an  isomorphism  from  the  finite  semigroup [3XS[103X to a transformation
+  semigroup.   For   most   types  of  objects  in  [5XGAP[105X  the  degree  of  this
+  transformation semigroup will be equal to the size of [3XS[103X plus [10X1[110X.[133X
+  
+  [33X[0;0YLet  [10X[3XS[103X[10X  ^  1[110X  denote  the  monoid  obtained  from [3XS[103X by adjoining an identity
+  element. Then [3XS[103X acts faithfully on [10X[3XS[103X[10X ^ 1[110X by right multiplication, i.e. every
+  element  of [3XS[103X describes a transformation on [10X1, .. , |S| + 1[110X. The isomorphism
+  from  [3XS[103X  to the transformation semigroup described in this way is called the
+  [13Xright     regular     representation[113X     of     [3XS[103X.     In     most    cases,
+  [10XIsomorphismTransformationSemigroup[110X    will    return   the   right   regular
+  representation of [3XS[103X.[133X
+  
+  [33X[0;0YAs exceptions, if [3XS[103X is a permutation group or a partial perm semigroup, then
+  the  elements  of  [3XS[103X  act naturally and faithfully by transformations on the
+  values from [10X1[110X to the largest moved point of [3XS[103X.[133X
+  
+  [33X[0;0YIf  [3XS[103X is a finitely presented semigroup, then the Todd-Coxeter approach will
+  be attempted.[133X
+  
+  [33X[0;0Y[10XIsomorphismTransformationMonoid[110X                 differs                 from
+  [10XIsomorphismTransformationSemigroup[110X   only   in   that   its   range   is   a
+  transformation  monoid,  and not only a semigroup, when the semigroup [3XS[103X is a
+  monoid.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS := Semigroup( [ [ [ Z(3), 0*Z(3) ], [ 0*Z(3), Z(3) ^ 0 ] ],[127X[104X
+    [4X[25X>[125X [27X [ [ Z(3), Z(3)^0 ], [ Z(3), 0*Z(3) ] ],[127X[104X
+    [4X[25X>[125X [27X [ [ Z(3)^0, 0*Z(3) ], [ 0*Z(3), 0*Z(3) ] ] ] );;[127X[104X
+    [4X[25Xgap>[125X [27XSize( S );[127X[104X
+    [4X[28X81[128X[104X
+    [4X[25Xgap>[125X [27XIsomorphismTransformationSemigroup( S );;[127X[104X
+    [4X[25Xgap>[125X [27XS := SymmetricInverseSemigroup( 4 );[127X[104X
+    [4X[28X<symmetric inverse monoid of degree 4>[128X[104X
+    [4X[25Xgap>[125X [27XIsomorphismTransformationMonoid( S );[127X[104X
+    [4X[28XMappingByFunction( <symmetric inverse monoid of degree 4>,[128X[104X
+    [4X[28X<transformation monoid of degree 5 with 4 generators>[128X[104X
+    [4X[28X , function( x ) ... end, <Operation "AsPartialPerm"> )[128X[104X
+    [4X[25Xgap>[125X [27XG := Group( (1,2,3) );[127X[104X
+    [4X[28XGroup([ (1,2,3) ])[128X[104X
+    [4X[25Xgap>[125X [27XIsomorphismTransformationMonoid( G );[127X[104X
+    [4X[28XMappingByFunction( Group([ (1,2,3) ]), <commutative transformation[128X[104X
+    [4X[28X monoid of degree 3 with 1 generator>[128X[104X
+    [4X[28X , function( x ) ... end, function( x ) ... end )[128X[104X
+  [4X[32X[104X
+  
+  [1X53.7-6 AntiIsomorphismTransformationSemigroup[101X
+  
+  [33X[1;0Y[29X[2XAntiIsomorphismTransformationSemigroup[102X( [3XS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YAn anti-isomorphism.[133X
+  
+  [33X[0;0YIf  [3XS[103X is a semigroup, then [10XAntiIsomorphismTransformationSemigroup[110X returns an
+  anti-isomorphism  from  [3XS[103X  to  a  transformation  semigroup. At present, the
+  degree  of  the resulting transformation semigroup equals the size of [3XS[103X plus
+  [22X1[122X, and, consequently, this function is of limited use.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS := Semigroup( Transformation( [ 5, 5, 1, 1, 3 ] ),[127X[104X
+    [4X[25X>[125X [27X                   Transformation( [ 2, 4, 1, 5, 5 ] ) );[127X[104X
+    [4X[28X<transformation semigroup of degree 5 with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27XSize( S );[127X[104X
+    [4X[28X172[128X[104X
+    [4X[25Xgap>[125X [27XAntiIsomorphismTransformationSemigroup( S );[127X[104X
+    [4X[28XMappingByFunction( <transformation semigroup of size 172, degree 5[128X[104X
+    [4X[28X with 2 generators>, <transformation semigroup of degree 173 with 2[128X[104X
+    [4X[28X generators>, function( x ) ... end, function( x ) ... end )[128X[104X
+  [4X[32X[104X
+  

@@ -1,0 +1,1197 @@
+  
+  [1X13 [33X[0;0YTypes of Objects[133X[101X
+  
+  [33X[0;0YEvery  [5XGAP[105X object has a [13Xtype[113X. The type of an object is the information which
+  is  used  to decide whether an operation is admissible or possible with that
+  object  as  an  argument,  and  if  so,  how  it  is  to  be  performed (see
+  Chapter [14X78[114X).[133X
+  
+  [33X[0;0YFor  example,  the types determine whether two objects can be multiplied and
+  what  function is called to compute the product. Analogously, the type of an
+  object determines whether and how the size of the object can be computed. It
+  is  sometimes  useful  in discussing the type system, to identify types with
+  the  set  of  objects  that  have  this type. Partial types can then also be
+  regarded as sets, such that any type is the intersection of its parts.[133X
+  
+  [33X[0;0YThe  type  of an object consists of two main parts, which describe different
+  aspects of the object.[133X
+  
+  [33X[0;0YThe  [13Xfamily[113X  determines  the  relation  of  the object to other objects. For
+  example,  all  permutations  form  a  family. Another family consists of all
+  collections  of  permutations,  this  family contains the set of permutation
+  groups  as  a subset. A third family consists of all rational functions with
+  coefficients in a certain family.[133X
+  
+  [33X[0;0YThe  other  part  of a type is a collection of [13Xfilters[113X (actually stored as a
+  bit-list  indicating,  from  the complete set of possible filters, which are
+  included  in this particular type). These filters are all treated equally by
+  the  method  selection,  but,  from the viewpoint of their creation and use,
+  they  can  be  divided  (with a small number of unimportant exceptions) into
+  categories, representations, attribute testers and properties. Each of these
+  is described in more detail below.[133X
+  
+  [33X[0;0YThis  chapter does not describe how types and their constituent parts can be
+  created. Information about this topic can be found in Chapter [14X79[114X.[133X
+  
+  [33X[0;0Y[13XNote:[113X  Detailed understanding of the type system is not required to use [5XGAP[105X.
+  It  can  be  helpful,  however,  to  understand  how things work and why [5XGAP[105X
+  behaves the way it does.[133X
+  
+  [33X[0;0YA discussion of the type system can be found in [BL98].[133X
+  
+  
+  [1X13.1 [33X[0;0YFamilies[133X[101X
+  
+  [33X[0;0YThe family of an object determines its relationship to other objects.[133X
+  
+  [33X[0;0YMore  precisely,  the families form a partition of all [5XGAP[105X objects such that
+  the  following  two  conditions hold: objects that are equal w.r.t. [10X=[110X lie in
+  the  same  family; and the family of the result of an operation depends only
+  on the families of its operands.[133X
+  
+  [33X[0;0YThe first condition means that a family can be regarded as a set of elements
+  instead of a set of objects. Note that this does not hold for categories and
+  representations  (see  below),  two objects that are equal w.r.t. [10X=[110X need not
+  lie  in  the  same  categories  and representations. For example, a sparsely
+  represented  matrix can be equal to a densely represented matrix. Similarly,
+  each  domain  is  equal  w.r.t.  [10X=[110X to the sorted list of its elements, but a
+  domain is not a list, and a list is not a domain.[133X
+  
+  [33X[0;0YFamilies are probably the least obvious part of the [5XGAP[105X type system, so some
+  remarks  about  the  role of families are necessary. When one uses [5XGAP[105X as it
+  is,  one  will (better: should) not meet families at all. The two situations
+  where families come into play are the following.[133X
+  
+  [33X[0;0YFirst,  since  families  are used to describe relations between arguments of
+  operations  in  the  method  selection  mechanism  (see Chapter [14X78[114X, and also
+  Chapter [14X13[114X),   one   has  to  prescribe  such  a  relation  in  each  method
+  installation (see [14X78.3[114X); usual relations are [2XReturnTrue[102X ([14X5.4-1[114X) (which means
+  that  any  relation  of  the actual arguments is admissible), [2XIsIdenticalObj[102X
+  ([14X12.5-1[114X)  (which  means  that  there  are two arguments that lie in the same
+  family),  and  [10XIsCollsElms[110X  (which  means  that there are two arguments, the
+  first  being  a  collection  of  elements that lie in the same family as the
+  second argument).[133X
+  
+  [33X[0;0YSecond  –and  this is the more complicated situation– whenever one creates a
+  new  kind of objects, one has to decide what its family shall be. If the new
+  object  shall  be  equal  to  existing  objects,  for  example if it is just
+  represented  in a different way, there is no choice: The new object must lie
+  in  the same family as all objects that shall be equal to it. So only if the
+  new  object is different (w.r.t. the equality [21X[10X=[110X[121X) from all other [5XGAP[105X objects,
+  we are likely to create a new family for it. Note that enlarging an existing
+  family  by  such new objects may be problematic because of implications that
+  have been installed for all objects of the family in question. The choice of
+  families  depends  on  the applications one has in mind. For example, if the
+  new  objects  in  question  are not likely to be arguments of operations for
+  which   family   relations  are  relevant  (for  example  binary  arithmetic
+  operations), one could create one family for all such objects, and regard it
+  as [21Xthe family of all those [5XGAP[105X objects that would in fact not need a family[121X.
+  On the other extreme, if one wants to create domains of the new objects then
+  one  has  to choose the family in such a way that all intended elements of a
+  domain  do  in  fact  lie  in  the same family. (Remember that a domain is a
+  collection,  see Chapter [14X12.4[114X, and that a collection consists of elements in
+  the same family, see Chapter [14X30[114X and Section [14X13.1[114X.)[133X
+  
+  [33X[0;0YLet  us  look  at  an example. Suppose that no permutations are available in
+  [5XGAP[105X,  and that we want to implement permutations. Clearly we want to support
+  permutation  groups,  but it is not a priori clear how to distribute the new
+  permutations  into  families.  We  can put all permutations into one family;
+  this  is  how in fact permutations are implemented in [5XGAP[105X. But it would also
+  be possible to put all permutations of a given degree into a family of their
+  own;  this  would  for  example  mean  that  for each degree, there would be
+  distinguished  trivial  permutations, and that the stabilizer of the point [10X5[110X
+  in  the  symmetric group on the points [10X1[110X, [10X2[110X, [22X...[122X, [10X5[110X is not regarded as equal
+  to  the  symmetric  group on [10X1[110X, [10X2[110X, [10X3[110X, [10X4[110X. Note that the latter approach would
+  have  the  advantage  that  it  is  no problem to construct permutations and
+  permutation  groups  acting  on  arbitrary  (finite)  sets,  for  example by
+  constructing  first  the  symmetric group on the set and then generating any
+  desired permutation group as a subgroup of this symmetric group.[133X
+  
+  [33X[0;0YSo  one  aspect  concerning  a  reasonable choice of families is to make the
+  families large enough for being able to form interesting domains of elements
+  in  the  family.  But on the other hand, it is useful to choose the families
+  small  enough  for  admitting  meaningful  relations  between  objects.  For
+  example,  the  elements  of  different  free  groups in [5XGAP[105X lie in different
+  families;  the  multiplication  of free group elements is installed only for
+  the  case that the two operands lie in the same family, with the effect that
+  one  cannot  erroneously  form  the  product of elements from different free
+  groups.  In  this  case,  families  appear  as  a  tool for providing useful
+  restrictions.[133X
+  
+  [33X[0;0YAs  another  example,  note that an element and a collection containing this
+  element  never  lie  in  the  same  family, by the general implementation of
+  collections;  namely,  the  family of a collection of elements in the family
+  [3XFam[103X  is the collections family of [3XFam[103X (see [2XCollectionsFamily[102X ([14X30.2-1[114X)). This
+  means  that  for  a collection, we need not (because we cannot) decide about
+  its family.[133X
+  
+  [33X[0;0YA  few  functions in [5XGAP[105X return families, see [2XCollectionsFamily[102X ([14X30.2-1[114X) and
+  [2XElementsFamily[102X ([14X30.2-3[114X).[133X
+  
+  [1X13.1-1 FamilyObj[101X
+  
+  [33X[1;0Y[29X[2XFamilyObj[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the family of the object [3Xobj[103X.[133X
+  
+  [33X[0;0YThe   family  of  the  object  [3Xobj[103X  is  itself  an  object,  its  family  is
+  [10XFamilyOfFamilies[110X.[133X
+  
+  [33X[0;0YIt  should  be emphasized that families may be created when they are needed.
+  For example, the family of elements of a finitely presented group is created
+  only  after  the  presentation  has  been constructed. Thus families are the
+  dynamic  part  of the type system, that is, the part that is not fixed after
+  the initialisation of [5XGAP[105X.[133X
+  
+  [33X[0;0YFamilies  can  be  parametrized.  For example, the elements of each finitely
+  presented  group form a family of their own. Here the family of elements and
+  the  finitely  presented  group  coincide  when  viewed  as  sets. Note that
+  elements  in  different finitely presented groups lie in different families.
+  This  distinction  allows  [5XGAP[105X  to  forbid  multiplications  of  elements in
+  different finitely presented groups.[133X
+  
+  [33X[0;0YAs  a  special  case,  families  can  be  parametrized by other families. An
+  important  example  is the family of [13Xcollections[113X that can be formed for each
+  family.  A collection consists of objects that lie in the same family, it is
+  either a nonempty dense list of objects from the same family or a domain.[133X
+  
+  [33X[0;0YNote  that  every  domain  is  a  collection, that is, it is not possible to
+  construct  domains  whose elements lie in different families. For example, a
+  polynomial  ring over the rationals cannot contain the integer [10X0[110X because the
+  family  that  contains the integers does not contain polynomials. So one has
+  to distinguish the integer zero from each zero polynomial.[133X
+  
+  [33X[0;0YLet  us  look  at this example from a different viewpoint. A polynomial ring
+  and  its coefficients ring lie in different families, hence the coefficients
+  ring cannot be embedded [21Xnaturally[121X into the polynomial ring in the sense that
+  it  is a subset. But it is possible to allow, e.g., the multiplication of an
+  integer  and  a  polynomial  over  the  integers.  The  relation between the
+  arguments,  namely that one is a coefficient and the other a polynomial, can
+  be  detected from the relation of their families. Moreover, this analysis is
+  easier  than  in  a  situation  where  the rationals would lie in one family
+  together  with all polynomials over the rationals, because then the relation
+  of families would not distinguish the multiplication of two polynomials, the
+  multiplication  of two coefficients, and the multiplication of a coefficient
+  with a polynomial. So the wish to describe relations between elements can be
+  taken as a motivation for the introduction of families.[133X
+  
+  [1X13.1-2 NewFamily[101X
+  
+  [33X[1;0Y[29X[2XNewFamily[102X( [3Xname[103X[, [3Xreq[103X[, [3Ximp[103X[, [3Xfamfilter[103X]]] ) [32X function[133X
+  
+  [33X[0;0Y[2XNewFamily[102X  returns  a  new  family  [3Xfam[103X with name [3Xname[103X. The argument [3Xreq[103X, if
+  present,  is a filter of which [3Xfam[103X shall be a subset. If one tries to create
+  an  object  in  [3Xfam[103X that does not lie in the filter [3Xreq[103X, an error message is
+  printed.  Also  the argument [3Ximp[103X, if present, is a filter of which [3Xfam[103X shall
+  be  a  subset.  Any  object  that  is  created  in  the  family [3Xfam[103X will lie
+  automatically in the filter [3Ximp[103X.[133X
+  
+  [33X[0;0YThe  filter  [3Xfamfilter[103X,  if given, specifies a filter that will hold for the
+  family [3Xfam[103X (not for objects in [3Xfam[103X).[133X
+  
+  [33X[0;0YFamilies  are always represented as component objects (see [14X79.2[114X). This means
+  that components can be used to store and access useful information about the
+  family.[133X
+  
+  
+  [1X13.2 [33X[0;0YFilters[133X[101X
+  
+  [33X[0;0YA  [13Xfilter[113X is a special unary [5XGAP[105X function that returns either [9Xtrue[109X or [9Xfalse[109X,
+  depending  on  whether  or  not  the argument lies in the set defined by the
+  filter. Filters are used to express different aspects of information about a
+  [5XGAP[105X  object,  which  are  described below (see [14X13.3[114X, [14X13.4[114X, [14X13.5[114X, [14X13.6[114X, [14X13.7[114X,
+  [14X13.8[114X).[133X
+  
+  [33X[0;0YPresently  any  filter in [5XGAP[105X is implemented as a function which corresponds
+  to  a  set  of positions in the bitlist which forms part of the type of each
+  [5XGAP[105X  object,  and returns [9Xtrue[109X if and only if the bitlist of the type of the
+  argument has the value [9Xtrue[109X at all of these positions.[133X
+  
+  [33X[0;0YThe intersection (or meet) of two filters [3Xfilt1[103X, [3Xfilt2[103X is again a filter, it
+  can be formed as[133X
+  
+  [33X[0;0Y[3Xfilt1[103X [9Xand[109X [3Xfilt2[103X[133X
+  
+  [33X[0;0YSee [14X20.4[114X for more details.[133X
+  
+  [33X[0;0YFor  example,  [10XIsList  and  IsEmpty[110X  is  a  filter  that returns [9Xtrue[109X if its
+  argument  is an empty list, and [9Xfalse[109X otherwise. The filter [2XIsGroup[102X ([14X39.2-7[114X)
+  is  defined as the intersection of the category [2XIsMagmaWithInverses[102X ([14X35.1-4[114X)
+  and the property [2XIsAssociative[102X ([14X35.4-7[114X).[133X
+  
+  [33X[0;0YA  filter  that  is not the meet of other filters is called a [13Xsimple filter[113X.
+  For  example,  each  attribute  tester  (see [14X13.6[114X)  is a simple filter. Each
+  simple  filter  corresponds  to  a position in the bitlist currently used as
+  part of the data structure representing a type.[133X
+  
+  [33X[0;0YEvery  filter  has  a [13Xrank[113X, which is used to define a ranking of the methods
+  installed  for  an  operation, see Section [14X78.3[114X. The rank of a filter can be
+  accessed with [2XRankFilter[102X ([14X13.2-1[114X).[133X
+  
+  [1X13.2-1 RankFilter[101X
+  
+  [33X[1;0Y[29X[2XRankFilter[102X( [3Xfilt[103X ) [32X function[133X
+  
+  [33X[0;0YFor  simple  filters,  an  [13Xincremental  rank[113X  is  defined when the filter is
+  created,  see  the  sections  about  the  creation  of  filters: [2XNewCategory[102X
+  ([14X13.3-4[114X),  [2XNewRepresentation[102X  ([14X13.4-4[114X),  [2XNewAttribute[102X  ([14X13.5-3[114X), [2XNewProperty[102X
+  ([14X13.7-4[114X),  [2XNewFilter[102X ([14X13.8-1[114X). For an arbitrary filter, its rank is given by
+  the sum of the incremental ranks of the [13Xinvolved[113X simple filters; in addition
+  to  the  implied  filters, these are also the required filters of attributes
+  (again  see the sections about the creation of filters). In other words, for
+  the  purpose  of  computing  the  rank  and [13Xonly[113X for this purpose, attribute
+  testers  are  treated  as  if  they  would  imply  the requirements of their
+  attributes.[133X
+  
+  [1X13.2-2 NamesFilter[101X
+  
+  [33X[1;0Y[29X[2XNamesFilter[102X( [3Xfilt[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XNamesFilter[102X  returns  a  list  of names of the [13Ximplied[113X simple filters of the
+  filter  [3Xfilt[103X,  these are all those simple filters [10Ximp[110X such that every object
+  in   [3Xfilt[103X   also   lies  in  [10Ximp[110X.  For  implications  between  filters,  see
+  [2XShowImpliedFilters[102X  ([14X13.2-4[114X) as well as sections [14X78.8[114X, [2XNewCategory[102X ([14X13.3-4[114X),
+  [2XNewRepresentation[102X ([14X13.4-4[114X), [2XNewAttribute[102X ([14X13.5-3[114X), [2XNewProperty[102X ([14X13.7-4[114X).[133X
+  
+  [1X13.2-3 FilterByName[101X
+  
+  [33X[1;0Y[29X[2XFilterByName[102X( [3Xname[103X ) [32X function[133X
+  
+  [33X[0;0Yfinds  the  filter with name [3Xname[103X in the global FILTERS list. This is useful
+  to find filters that were created but not bound to a global variable.[133X
+  
+  [1X13.2-4 ShowImpliedFilters[101X
+  
+  [33X[1;0Y[29X[2XShowImpliedFilters[102X( [3Xfilter[103X ) [32X function[133X
+  
+  [33X[0;0YDisplays  information  about the filters that may be implied by [3Xfilter[103X. They
+  are given by their names. [2XShowImpliedFilters[102X first displays the names of all
+  filters  that  are  unconditionally  implied  by  [3Xfilter[103X.  It  then displays
+  implications that require further filters to be present (indicating by [10X+[110X the
+  required further filters).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XShowImpliedFilters(IsNilpotentGroup);[127X[104X
+    [4X[28XImplies:[128X[104X
+    [4X[28X   IsListOrCollection[128X[104X
+    [4X[28X   IsCollection[128X[104X
+    [4X[28X   IsDuplicateFree[128X[104X
+    [4X[28X   IsExtLElement[128X[104X
+    [4X[28X   CategoryCollections(IsExtLElement)[128X[104X
+    [4X[28X   IsExtRElement[128X[104X
+    [4X[28X   CategoryCollections(IsExtRElement)[128X[104X
+    [4X[28X   CategoryCollections(IsMultiplicativeElement)[128X[104X
+    [4X[28X   CategoryCollections(IsMultiplicativeElementWithOne)[128X[104X
+    [4X[28X   CategoryCollections(IsMultiplicativeElementWithInverse)[128X[104X
+    [4X[28X   IsGeneralizedDomain[128X[104X
+    [4X[28X   IsMagma[128X[104X
+    [4X[28X   IsMagmaWithOne[128X[104X
+    [4X[28X   IsMagmaWithInversesIfNonzero[128X[104X
+    [4X[28X   IsMagmaWithInverses[128X[104X
+    [4X[28X   IsAssociative[128X[104X
+    [4X[28X   HasMultiplicativeNeutralElement[128X[104X
+    [4X[28X   IsGeneratorsOfSemigroup[128X[104X
+    [4X[28X   IsSimpleSemigroup[128X[104X
+    [4X[28X   IsRegularSemigroup[128X[104X
+    [4X[28X   IsInverseSemigroup[128X[104X
+    [4X[28X   IsCompletelyRegularSemigroup[128X[104X
+    [4X[28X   IsGroupAsSemigroup[128X[104X
+    [4X[28X   IsMonoidAsSemigroup[128X[104X
+    [4X[28X   IsOrthodoxSemigroup[128X[104X
+    [4X[28X   IsSupersolvableGroup[128X[104X
+    [4X[28X   IsSolvableGroup[128X[104X
+    [4X[28X   IsNilpotentByFinite[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XMay imply with:[128X[104X
+    [4X[28X+IsFinitelyGeneratedGroup[128X[104X
+    [4X[28X   IsPolycyclicGroup[128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [1X13.2-5 FiltersType[101X
+  
+  [33X[1;0Y[29X[2XFiltersType[102X( [3Xtype[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XFiltersObj[102X( [3Xobject[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns a list of the filters in the type [3Xtype[103X, or in the type of the object
+  [3Xobject[103X respectively.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XFiltersObj(fail);[127X[104X
+    [4X[28X[ <Category "IsBool">, <Representation "IsInternalRep"> ][128X[104X
+    [4X[25Xgap>[125X [27XFiltersType(TypeOfTypes);[127X[104X
+    [4X[28X[ <Representation "IsPositionalObjectRep">, <Category "IsType">, <Representation "IsTypeDefaultRep"> ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X13.3 [33X[0;0YCategories[133X[101X
+  
+  [33X[0;0YThe  [13Xcategories[113X  of  an  object  are  filters (see [14X13.2[114X) that determine what
+  operations  an object admits. For example, all integers form a category, all
+  rationals  form  a  category, and all rational functions form a category. An
+  object  which  claims  to  lie  in  a  certain  category  is  accepting  the
+  requirement  that it should have methods for certain operations (and perhaps
+  that  their behaviour should satisfy certain axioms). For example, an object
+  lying  in  the  category  [2XIsList[102X  ([14X21.1-1[114X)  must  have  methods  for  [2XLength[102X
+  ([14X21.17-5[114X),  [2XIsBound\[\][102X  ([14X21.2-1[114X) and the list element access operation [2X\[\][102X
+  ([14X21.2-1[114X).[133X
+  
+  [33X[0;0YAn  object  can lie in several categories. For example, a row vector lies in
+  the  categories  [2XIsList[102X  ([14X21.1-1[114X) and [2XIsVector[102X ([14X31.14-14[114X); each list lies in
+  the  category  [2XIsCopyable[102X  ([14X12.6-1[114X),  and  depending on whether or not it is
+  mutable, it may lie in the category [2XIsMutable[102X ([14X12.6-2[114X). Every domain lies in
+  the category [2XIsDomain[102X ([14X31.9-1[114X).[133X
+  
+  [33X[0;0YOf  course some categories of a mutable object may change when the object is
+  changed.  For  example,  after  assigning  values  to positions of a mutable
+  non-dense  list,  this  list  may  become  part  of the category [2XIsDenseList[102X
+  ([14X21.1-2[114X).[133X
+  
+  [33X[0;0YHowever,  if an object is immutable then the set of categories it lies in is
+  fixed.[133X
+  
+  [33X[0;0YAll  categories  in  the  library  are  created  during  initialization,  in
+  particular they are not created dynamically at runtime.[133X
+  
+  [33X[0;0YThe  following  list gives an overview of important categories of arithmetic
+  objects.  Indented  categories  are to be understood as subcategories of the
+  non indented category listed above it.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X    IsObject[128X[104X
+    [4X[28X        IsExtLElement[128X[104X
+    [4X[28X        IsExtRElement[128X[104X
+    [4X[28X            IsMultiplicativeElement[128X[104X
+    [4X[28X                IsMultiplicativeElementWithOne[128X[104X
+    [4X[28X                    IsMultiplicativeElementWithInverse[128X[104X
+    [4X[28X        IsExtAElement[128X[104X
+    [4X[28X            IsAdditiveElement[128X[104X
+    [4X[28X                IsAdditiveElementWithZero[128X[104X
+    [4X[28X                    IsAdditiveElementWithInverse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YEvery object lies in the category [2XIsObject[102X ([14X12.1-1[114X).[133X
+  
+  [33X[0;0YThe  categories  [2XIsExtLElement[102X ([14X31.14-8[114X) and [2XIsExtRElement[102X ([14X31.14-9[114X) contain
+  objects  that  can  be multiplied with other objects via [10X*[110X from the left and
+  from the right, respectively. These categories are required for the operands
+  of the operation [10X*[110X.[133X
+  
+  [33X[0;0YThe category [2XIsMultiplicativeElement[102X ([14X31.14-10[114X) contains objects that can be
+  multiplied  from  the  left  and  from  the right with objects from the same
+  family.  [2XIsMultiplicativeElementWithOne[102X  ([14X31.14-11[114X) contains objects [10Xobj[110X for
+  which  a multiplicatively neutral element can be obtained by taking the [22X0[122X-th
+  power  [10Xobj^0[110X. [2XIsMultiplicativeElementWithInverse[102X ([14X31.14-13[114X) contains objects
+  [10Xobj[110X for which a multiplicative inverse can be obtained by forming [10Xobj^-1[110X.[133X
+  
+  [33X[0;0YLikewise,   the   categories   [2XIsExtAElement[102X   ([14X31.14-1[114X),  [2XIsAdditiveElement[102X
+  ([14X31.14-3[114X),          [2XIsAdditiveElementWithZero[102X          ([14X31.14-5[114X)         and
+  [2XIsAdditiveElementWithInverse[102X ([14X31.14-7[114X) contain objects that can be added via
+  [10X+[110X to other objects, objects that can be added to objects of the same family,
+  objects  for  which  an  additively  neutral  element  can  be  obtained  by
+  multiplication  with  zero, and objects for which an additive inverse can be
+  obtained by multiplication with [10X-1[110X.[133X
+  
+  [33X[0;0YSo  a  vector  lies  in [2XIsExtLElement[102X ([14X31.14-8[114X), [2XIsExtRElement[102X ([14X31.14-9[114X) and
+  [2XIsAdditiveElementWithInverse[102X ([14X31.14-7[114X). A ring element must additionally lie
+  in [2XIsMultiplicativeElement[102X ([14X31.14-10[114X).[133X
+  
+  [33X[0;0YAs  stated  above  it is not guaranteed by the categories of objects whether
+  the  result  of an operation with these objects as arguments is defined. For
+  example,    the   category   [2XIsMatrix[102X   ([14X24.2-1[114X)   is   a   subcategory   of
+  [2XIsMultiplicativeElementWithInverse[102X  ([14X31.14-13[114X). Clearly not every matrix has
+  a  multiplicative  inverse.  But  the  category [2XIsMatrix[102X ([14X24.2-1[114X) makes each
+  matrix  an admissible argument of the operation [2XInverse[102X ([14X31.10-8[114X), which may
+  sometimes return [9Xfail[109X. Likewise, two matrices can be multiplied only if they
+  are of appropriate shapes.[133X
+  
+  [33X[0;0YAnalogous  to the categories of arithmetic elements, there are categories of
+  domains of these elements.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X    IsObject[128X[104X
+    [4X[28X        IsDomain[128X[104X
+    [4X[28X            IsMagma[128X[104X
+    [4X[28X                IsMagmaWithOne[128X[104X
+    [4X[28X                    IsMagmaWithInversesIfNonzero[128X[104X
+    [4X[28X                        IsMagmaWithInverses[128X[104X
+    [4X[28X            IsAdditiveMagma[128X[104X
+    [4X[28X                IsAdditiveMagmaWithZero[128X[104X
+    [4X[28X                    IsAdditiveMagmaWithInverses[128X[104X
+    [4X[28X            IsExtLSet[128X[104X
+    [4X[28X            IsExtRSet[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YOf  course [2XIsDomain[102X ([14X31.9-1[114X) is a subcategory of [2XIsObject[102X ([14X12.1-1[114X). A domain
+  that  is  closed under multiplication [10X*[110X is called a magma and it lies in the
+  category  [2XIsMagma[102X  ([14X35.1-1[114X). If a magma is closed under taking the identity,
+  it  lies  in  [2XIsMagmaWithOne[102X ([14X35.1-2[114X), and if it is also closed under taking
+  inverses,   it   lies   in   [2XIsMagmaWithInverses[102X   ([14X35.1-4[114X).   The  category
+  [2XIsMagmaWithInversesIfNonzero[102X  ([14X35.1-3[114X) denotes closure under taking inverses
+  only for nonzero elements, every division ring lies in this category.[133X
+  
+  [33X[0;0YNote  that every set of categories constitutes its own notion of generation,
+  for  example  a  group  may  be  generated  as a magma with inverses by some
+  elements, but to generate it as a magma with one it may be necessary to take
+  the union of these generators and their inverses.[133X
+  
+  [1X13.3-1 IsCategory[101X
+  
+  [33X[1;0Y[29X[2XIsCategory[102X( [3Xobject[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns [9Xtrue[109X if [3Xobject[103X is a category (see [14X13.3[114X), and [9Xfalse[109X otherwise.[133X
+  
+  [33X[0;0YNote that [5XGAP[105X categories are [13Xnot[113X categories in the usual mathematical sense.[133X
+  
+  [1X13.3-2 CategoriesOfObject[101X
+  
+  [33X[1;0Y[29X[2XCategoriesOfObject[102X( [3Xobject[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns a list of the names of the categories in which [3Xobject[103X lies.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,2),(1,2,3));;[127X[104X
+    [4X[25Xgap>[125X [27XCategoriesOfObject(g);[127X[104X
+    [4X[28X[ "IsListOrCollection", "IsCollection", "IsExtLElement",[128X[104X
+    [4X[28X  "CategoryCollections(IsExtLElement)", "IsExtRElement",[128X[104X
+    [4X[28X  "CategoryCollections(IsExtRElement)",[128X[104X
+    [4X[28X  "CategoryCollections(IsMultiplicativeElement)",[128X[104X
+    [4X[28X  "CategoryCollections(IsMultiplicativeElementWithOne)",[128X[104X
+    [4X[28X  "CategoryCollections(IsMultiplicativeElementWithInverse)",[128X[104X
+    [4X[28X  "CategoryCollections(IsAssociativeElement)",[128X[104X
+    [4X[28X  "CategoryCollections(IsFiniteOrderElement)", "IsGeneralizedDomain",[128X[104X
+    [4X[28X  "CategoryCollections(IsPerm)", "IsMagma", "IsMagmaWithOne",[128X[104X
+    [4X[28X  "IsMagmaWithInversesIfNonzero", "IsMagmaWithInverses" ][128X[104X
+  [4X[32X[104X
+  
+  [1X13.3-3 CategoryByName[101X
+  
+  [33X[1;0Y[29X[2XCategoryByName[102X( [3Xname[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the category with name [3Xname[103X if it is found, or fail otherwise.[133X
+  
+  [1X13.3-4 NewCategory[101X
+  
+  [33X[1;0Y[29X[2XNewCategory[102X( [3Xname[103X, [3Xsuper[103X[, [3Xrank[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XNewCategory[102X  returns  a  new  category  [3Xcat[103X  that  has  the name [3Xname[103X and is
+  contained in the filter [3Xsuper[103X, see [14X13.2[114X. This means that every object in [3Xcat[103X
+  lies  automatically  also  in  [3Xsuper[103X.  We  say also that [3Xsuper[103X is an implied
+  filter of [3Xcat[103X.[133X
+  
+  [33X[0;0YFor  example, if one wants to create a category of group elements then [3Xsuper[103X
+  should  be [2XIsMultiplicativeElementWithInverse[102X ([14X31.14-13[114X) or a subcategory of
+  it.  If  no  specific  supercategory  of [3Xcat[103X is known, [3Xsuper[103X may be [2XIsObject[102X
+  ([14X12.1-1[114X).[133X
+  
+  [33X[0;0YThe  optional third argument [3Xrank[103X denotes the incremental rank (see [14X13.2[114X) of
+  [3Xcat[103X, the default value is 1.[133X
+  
+  [1X13.3-5 DeclareCategory[101X
+  
+  [33X[1;0Y[29X[2XDeclareCategory[102X( [3Xname[103X, [3Xsuper[103X[, [3Xrank[103X] ) [32X function[133X
+  
+  [33X[0;0Ydoes  the  same  as  [2XNewCategory[102X  ([14X13.3-4[114X)  and then binds the result to the
+  global  variable [3Xname[103X. The variable must previously be writable, and is made
+  read-only by this function.[133X
+  
+  [1X13.3-6 CategoryFamily[101X
+  
+  [33X[1;0Y[29X[2XCategoryFamily[102X( [3Xcat[103X ) [32X function[133X
+  
+  [33X[0;0YFor  a category [3Xcat[103X, [2XCategoryFamily[102X returns the [13Xfamily category[113X of [3Xcat[103X. This
+  is  a  category in which all families lie that know from their creation that
+  all their elements are in the category [3Xcat[103X, see [14X13.1[114X.[133X
+  
+  [33X[0;0YFor   example,   a   family   of   associative  words  is  in  the  category
+  [10XCategoryFamily(  IsAssocWord  )[110X,  and one can distinguish such a family from
+  others by this category. So it is possible to install methods for operations
+  that require one argument to be a family of associative words.[133X
+  
+  [33X[0;0Y[2XCategoryFamily[102X is quite technical, and in fact of minor importance.[133X
+  
+  [33X[0;0YSee also [2XCategoryCollections[102X ([14X30.2-4[114X).[133X
+  
+  
+  [1X13.4 [33X[0;0YRepresentation[133X[101X
+  
+  [33X[0;0YThe  [13Xrepresentation[113X  of  an  object  is  a  set  of  filters (see [14X13.2[114X) that
+  determines how an object is actually represented. For example, a matrix or a
+  polynomial  can  be stored sparsely or densely; all dense polynomials form a
+  representation. An object which claims to lie in a certain representation is
+  accepting  the  requirement  that  certain  fields  in the data structure be
+  present and have specified meanings.[133X
+  
+  
+  [1X13.4-1 [33X[0;0YBasic Representations of Objects[133X[101X
+  
+  [33X[1;0Y[29X[2XIsInternalRep[102X( [3Xobj[103X ) [32X Representation[133X
+  [33X[1;0Y[29X[2XIsDataObjectRep[102X( [3Xobj[103X ) [32X Representation[133X
+  [33X[1;0Y[29X[2XIsPositionalObjectRep[102X( [3Xobj[103X ) [32X Representation[133X
+  [33X[1;0Y[29X[2XIsComponentObjectRep[102X( [3Xobj[103X ) [32X Representation[133X
+  
+  [33X[0;0Y[5XGAP[105X  distinguishes  four  essentially  different  ways to represent objects.
+  First  there are the representations [2XIsInternalRep[102X for internal objects such
+  as integers and permutations, and [2XIsDataObjectRep[102X for other objects that are
+  created  and  whose  data  are accessible only by kernel functions. The data
+  structures underlying such objects cannot be manipulated at the [5XGAP[105X level.[133X
+  
+  [33X[0;0YAll  other  objects are either in the representation [2XIsComponentObjectRep[102X or
+  in the representation [2XIsPositionalObjectRep[102X, see [14X79.2[114X and [14X79.3[114X.[133X
+  
+  [33X[0;0YAn object can belong to several representations in the sense that it lies in
+  several     subrepresentations     of     [2XIsComponentObjectRep[102X     or     of
+  [2XIsPositionalObjectRep[102X. The representations to which an object belongs should
+  form a chain and either two representations are disjoint or one is contained
+  in   the  other.  So  the  subrepresentations  of  [2XIsComponentObjectRep[102X  and
+  [2XIsPositionalObjectRep[102X  each  form  trees. In the language of Object Oriented
+  Programming, we support only single inheritance for representations.[133X
+  
+  [33X[0;0YThese trees are typically rather shallow, since for one representation to be
+  contained  in  another implies that all the components of the data structure
+  implied  by the containing representation, are present in, and have the same
+  meaning  in,  the  smaller  representation  (whose data structure presumably
+  contains some additional components).[133X
+  
+  [33X[0;0YObjects  may  change  their  representation,  for  example a mutable list of
+  characters can be converted into a string.[133X
+  
+  [33X[0;0YAll  representations  in  the  library are created during initialization, in
+  particular they are not created dynamically at runtime.[133X
+  
+  [33X[0;0YExamples  of  subrepresentations  of [2XIsPositionalObjectRep[102X are [10XIsModulusRep[110X,
+  which   is   used   for  residue  classes  in  the  ring  of  integers,  and
+  [10XIsDenseCoeffVectorRep[110X,  which  is  used  for  elements  of algebras that are
+  defined by structure constants.[133X
+  
+  [33X[0;0YAn     important     subrepresentation     of     [2XIsComponentObjectRep[102X    is
+  [2XIsAttributeStoringRep[102X  ([14X13.5-5[114X),  which  is  used  for many domains and some
+  other  objects.  It  provides automatic storing of all attribute values (see
+  Section [14X13.5[114X).[133X
+  
+  [1X13.4-2 IsRepresentation[101X
+  
+  [33X[1;0Y[29X[2XIsRepresentation[102X( [3Xobject[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns [9Xtrue[109X if [3Xobject[103X is a representation (see [14X13.4[114X), and [9Xfalse[109X otherwise.[133X
+  
+  [1X13.4-3 RepresentationsOfObject[101X
+  
+  [33X[1;0Y[29X[2XRepresentationsOfObject[102X( [3Xobject[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns a list of the names of the representations [3Xobject[103X has.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,2),(1,2,3));;[127X[104X
+    [4X[25Xgap>[125X [27XRepresentationsOfObject(g);[127X[104X
+    [4X[28X[ "IsComponentObjectRep", "IsAttributeStoringRep" ][128X[104X
+  [4X[32X[104X
+  
+  [1X13.4-4 NewRepresentation[101X
+  
+  [33X[1;0Y[29X[2XNewRepresentation[102X( [3Xname[103X, [3Xsuper[103X[, [3Xslots[103X[, [3Xreq[103X]] ) [32X function[133X
+  
+  [33X[0;0Y[2XNewRepresentation[102X  returns  a  new representation [3Xrep[103X that has the name [3Xname[103X
+  and  is  a  subrepresentation  of  the representation [3Xsuper[103X. This means that
+  every object in [3Xrep[103X lies automatically also in [3Xsuper[103X. We say also that [3Xsuper[103X
+  is an implied filter of [3Xrep[103X.[133X
+  
+  [33X[0;0YEach representation in [5XGAP[105X is a subrepresentation of exactly one of the four
+  representations    [2XIsInternalRep[102X    ([14X13.4-1[114X),    [2XIsDataObjectRep[102X   ([14X13.4-1[114X),
+  [2XIsComponentObjectRep[102X  ([14X13.4-1[114X),  [2XIsPositionalObjectRep[102X  ([14X13.4-1[114X).  The  data
+  describing  objects  in  the  former two can be accessed only via [5XGAP[105X kernel
+  functions,  the data describing objects in the latter two is accessible also
+  in library functions, see [14X79.2[114X and [14X79.3[114X for the details.[133X
+  
+  [33X[0;0YThe  optional third and fourth arguments [3Xslots[103X and [3Xreq[103X are (and always were)
+  unused  and  are  only provided for backwards compatibility. Note that [3Xslots[103X
+  was required (but still unused) before GAP 4.12.[133X
+  
+  [33X[0;0YThe incremental rank (see [14X13.2[114X) of [3Xrep[103X is 1.[133X
+  
+  [33X[0;0YExamples  for  the  use of [2XNewRepresentation[102X can be found in [14X79.2[114X, [14X79.3[114X, and
+  also in [14X81.3[114X.[133X
+  
+  [1X13.4-5 DeclareRepresentation[101X
+  
+  [33X[1;0Y[29X[2XDeclareRepresentation[102X( [3Xname[103X, [3Xsuper[103X[, [3Xslots[103X[, [3Xreq[103X]] ) [32X function[133X
+  
+  [33X[0;0Ydoes the same as [2XNewRepresentation[102X ([14X13.4-4[114X) and then binds the result to the
+  global  variable [3Xname[103X. The variable must previously be writable, and is made
+  read-only by this function.[133X
+  
+  
+  [1X13.5 [33X[0;0YAttributes[133X[101X
+  
+  [33X[0;0YThe attributes of an object describe knowledge about it.[133X
+  
+  [33X[0;0YAn attribute is a unary operation without side-effects.[133X
+  
+  [33X[0;0YAn  object  may store values of its attributes once they have been computed,
+  and  claim  that  it knows these values. Note that [21Xstore[121X and [21Xknow[121X have to be
+  understood  in  the sense that it is very cheap to get such a value when the
+  attribute is called again.[133X
+  
+  [33X[0;0YThe  value  returned  by  an  attribute  is in general immutable (see [14X12.6[114X),
+  except if the attribute had been specially constructed as [21Xmutable attribute[121X,
+  see [2XNewAttribute[102X ([14X13.5-3[114X).[133X
+  
+  [33X[0;0YNote  that  functions installed as methods for attributes may return mutable
+  objects,  the  attribute  returns  the  value  of [2XImmutable[102X ([14X12.6-3[114X) for the
+  result. Thus it is recommended that these methods ensure their return values
+  are  immutable, e.g., by calling [2XMakeImmutable[102X ([14X12.6-4[114X) if this is possible,
+  in order to avoid that [2XImmutable[102X ([14X12.6-3[114X) creates an unnecessary copy of the
+  object.[133X
+  
+  [33X[0;0YIt  depends  on  the  representation of an object (see [14X13.4[114X) which attribute
+  values    it   stores.   An   immutable   object   in   the   representation
+  [2XIsAttributeStoringRep[102X  ([14X13.5-5[114X)  stores  [13Xall[113X  attribute values once they are
+  computed.[133X
+  
+  [33X[0;0YNote  that  it  is impossible to get rid of a stored attribute value because
+  the system may have drawn conclusions from the old attribute value, and just
+  removing the value might leave the data structures in an inconsistent state.
+  If necessary, a new object can be constructed.[133X
+  
+  [33X[0;0YEach  method  that  is installed for an attribute via [2XInstallMethod[102X ([14X78.3-1[114X)
+  must  require  exactly  one argument, and this must lie in the filter [3Xfilter[103X
+  that   was  entered  as  second  argument  of  [2XNewAttribute[102X  ([14X13.5-3[114X)  resp.
+  [2XNewProperty[102X ([14X13.7-4[114X).[133X
+  
+  [33X[0;0YAs  for  any  operation,  for  attributes one can install a method taking an
+  argument  that  does  not  lie in [3Xfilt[103X via [2XInstallOtherMethod[102X ([14X78.3-2[114X), or a
+  method for more than one argument. For example, [2XIsTransitive[102X ([14X41.10-1[114X) is an
+  attribute for a [22XG[122X-set that can also be called for the two arguments, being a
+  group  [22XG[122X  and its action domain. If attributes are called with more than one
+  argument then the return value is not stored in any of the arguments.[133X
+  
+  [33X[0;0YProperties  are  a  special  form  of attributes that have the value [9Xtrue[109X or
+  [9Xfalse[109X, see section [14X13.7[114X.[133X
+  
+  [33X[0;0YExamples  of  attributes  for multiplicative elements are [2XInverse[102X ([14X31.10-8[114X),
+  [2XOne[102X  ([14X31.10-2[114X),  and  [2XOrder[102X  ([14X31.10-10[114X).  [2XSize[102X  ([14X30.4-6[114X) is an attribute for
+  domains,  [2XCentre[102X  ([14X35.4-5[114X)  is  an attribute for magmas, and [2XDerivedSubgroup[102X
+  ([14X39.12-3[114X) is an attribute for groups.[133X
+  
+  [1X13.5-1 IsAttribute[101X
+  
+  [33X[1;0Y[29X[2XIsAttribute[102X( [3Xobject[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns [9Xtrue[109X if [3Xobject[103X is an attribute (see [14X13.5[114X), and [9Xfalse[109X otherwise.[133X
+  
+  [1X13.5-2 KnownAttributesOfObject[101X
+  
+  [33X[1;0Y[29X[2XKnownAttributesOfObject[102X( [3Xobject[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  a  list  of  the names of the attributes whose values are known for
+  [3Xobject[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,2),(1,2,3));;Size(g);;[127X[104X
+    [4X[25Xgap>[125X [27XKnownAttributesOfObject(g);[127X[104X
+    [4X[28X[ "Size", "OneImmutable", "NrMovedPoints", "MovedPoints",[128X[104X
+    [4X[28X  "GeneratorsOfMagmaWithInverses", "MultiplicativeNeutralElement",[128X[104X
+    [4X[28X  "HomePcgs", "Pcgs", "StabChainMutable", "StabChainOptions" ][128X[104X
+  [4X[32X[104X
+  
+  [1X13.5-3 NewAttribute[101X
+  
+  [33X[1;0Y[29X[2XNewAttribute[102X( [3Xname[103X, [3Xfilter[103X[, [3X"mutable"[103X][, [3Xrank[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XNewAttribute[102X  returns  a  new  attribute  getter  with  name  [3Xname[103X  that  is
+  applicable to objects with the property [3Xfilter[103X.[133X
+  
+  [33X[0;0YContrary to the situation with categories and representations, the tester of
+  the  new  attribute  does  [13Xnot[113X  imply [3Xfilter[103X. This is exactly because of the
+  possibility to install methods that do not require [3Xfilter[103X.[133X
+  
+  [33X[0;0YFor  example, the attribute [2XSize[102X ([14X30.4-6[114X) was created with second argument a
+  list  or  a collection, but there is also a method for [2XSize[102X ([14X30.4-6[114X) that is
+  applicable to a character table, which is neither a list nor a collection.[133X
+  
+  [33X[0;0YFor  the  optional  third  and  fourth  arguments,  there  are the following
+  possibilities.[133X
+  
+  [30X    [33X[0;6YThe  integer  argument  [3Xrank[103X  causes the attribute tester to have this
+        incremental rank (see [14X13.2[114X),[133X
+  
+  [30X    [33X[0;6YIf  the  argument [3Xmutable[103X is the string [10X"mutable"[110X or the boolean [9Xtrue[109X,
+        then the values of the attribute are mutable.[133X
+  
+  [30X    [33X[0;6YIf  the  argument [3Xmutable[103X is the boolean [9Xfalse[109X, then the values of the
+        attribute are immutable.[133X
+  
+  [33X[0;0YWhen  a  value  of  such  mutable attribute is set then this value itself is
+  stored,  not an immutable copy of it, and it is the user's responsibility to
+  set  an  object that is mutable. This is useful for an attribute whose value
+  is  some partial information that may be completed later. For example, there
+  is  an  attribute  [10XComputedSylowSubgroups[110X  for  the list holding those Sylow
+  subgroups  of  a  group  that  have  been  computed  already by the function
+  [2XSylowSubgroup[102X  ([14X39.13-1[114X),  and  this list is mutable because one may want to
+  enter groups into it as they are computed.[133X
+  
+  [33X[0;0YIf no argument for [3Xrank[103X is given, then the rank of the tester is 1.[133X
+  
+  [33X[0;0YEach  method for the new attribute that does [13Xnot[113X require its argument to lie
+  in [3Xfilter[103X must be installed using [2XInstallOtherMethod[102X ([14X78.3-2[114X).[133X
+  
+  [1X13.5-4 DeclareAttribute[101X
+  
+  [33X[1;0Y[29X[2XDeclareAttribute[102X( [3Xname[103X, [3Xfilter[103X[, [3X"mutable"[103X][, [3Xrank[103X] ) [32X function[133X
+  
+  [33X[0;0Ydoes  the  same  as  [2XNewAttribute[102X  ([14X13.5-3[114X) and then binds the result to the
+  global  variable [3Xname[103X. The variable must previously be writable, and is made
+  read-only  by  this  function. It also binds read-only global variables with
+  names  [10XHas[3Xname[103X[10X[110X  and  [10XSet[3Xname[103X[10X[110X for the tester and setter of the attribute (see
+  Section [14X13.6[114X).[133X
+  
+  [1X13.5-5 IsAttributeStoringRep[101X
+  
+  [33X[1;0Y[29X[2XIsAttributeStoringRep[102X( [3Xobj[103X ) [32X Representation[133X
+  
+  [33X[0;0YObjects  in this representation have default methods to get stored values of
+  attributes   and   –if   they  are  immutable–  to  store  attribute  values
+  automatically  once  they  have been computed. (These methods are called the
+  [21Xsystem getter[121X and the [21Xsystem setter[121X of the attribute, respectively.)[133X
+  
+  [33X[0;0YAs a consequence, for immutable objects in [2XIsAttributeStoringRep[102X, subsequent
+  calls to an attribute will return the [13Xsame[113X object.[133X
+  
+  [33X[0;0Y[13XMutable[113X  objects  in [2XIsAttributeStoringRep[102X are allowed, but attribute values
+  are  not  stored automatically in them. Such objects are useful because they
+  may  later  be  made  immutable using [2XMakeImmutable[102X ([14X12.6-4[114X), at which point
+  they will start storing all attribute values.[133X
+  
+  [33X[0;0YNote  that one can force an attribute value to be stored in a mutable object
+  in  [2XIsAttributeStoringRep[102X,  by explicitly calling the attribute setter. This
+  feature  should  be  used  with care. For example, think of a mutable matrix
+  whose  rank  or  trace  gets  stored, and the values later become wrong when
+  somebody changes the matrix entries.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:= Group( (1,2)(3,4), (1,3)(2,4) );;[127X[104X
+    [4X[25Xgap>[125X [27XIsAttributeStoringRep( g );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XHasSize( g );  Size( g );  HasSize( g );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28X4[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xr:= 7/4;;[127X[104X
+    [4X[25Xgap>[125X [27XIsAttributeStoringRep( r );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XInt( r );  HasInt( r );[127X[104X
+    [4X[28X1[128X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X13.6 [33X[0;0YSetter and Tester for Attributes[133X[101X
+  
+  [33X[0;0YFor  every  attribute,  the  [13Xattribute  setter[113X  and the [13Xattribute tester[113X are
+  defined.[133X
+  
+  [33X[0;0YTo  check  whether an object belongs to an attribute [3Xattr[103X, the tester of the
+  attribute  is  used, see [2XTester[102X ([14X13.6-1[114X). To store a value for the attribute
+  [3Xattr[103X in an object, the setter of the attribute is used, see [2XSetter[102X ([14X13.6-2[114X).[133X
+  
+  [1X13.6-1 Tester[101X
+  
+  [33X[1;0Y[29X[2XTester[102X( [3Xattr[103X ) [32X function[133X
+  
+  [33X[0;0YFor an attribute [3Xattr[103X, [10XTester([3Xattr[103X[10X)[110X is a filter (see [14X13.2[114X) that returns [9Xtrue[109X
+  or  [9Xfalse[109X,  depending  on whether or not the value of [3Xattr[103X for the object is
+  known.  For example, [10XTester( Size )( [3Xobj[103X[10X )[110X is [9Xtrue[109X if the size of the object
+  [3Xobj[103X is known.[133X
+  
+  [1X13.6-2 Setter[101X
+  
+  [33X[1;0Y[29X[2XSetter[102X( [3Xattr[103X ) [32X function[133X
+  
+  [33X[0;0YFor  an  attribute  [3Xattr[103X,  [10XSetter([3Xattr[103X[10X)[110X  is  called  automatically  when the
+  attribute  value  has  been  computed for an immutable object which does not
+  already  have  a  value  stored  for  [3Xattr[103X.  One  can  also  call the setter
+  explicitly,  for example, [10XSetter( Size )( [3Xobj[103X[10X, [3Xval[103X[10X )[110X sets [3Xval[103X as size of the
+  object [3Xobj[103X if the size was not yet known.[133X
+  
+  [33X[0;0YFor  each  attribute  [3Xattr[103X  that  is declared with [2XDeclareAttribute[102X ([14X13.5-4[114X)
+  resp. [2XDeclareProperty[102X  ([14X13.7-5[114X),  tester  and  setter are automatically made
+  accessible  by the names [10XHas[3Xattr[103X[10X[110X and [10XSet[3Xattr[103X[10X[110X, respectively. For example, the
+  tester  for  [2XSize[102X  ([14X30.4-6[114X)  is  called  [10XHasSize[110X,  and  the setter is called
+  [10XSetSize[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,2,3,4),(1,2));;Size(g);[127X[104X
+    [4X[28X24[128X[104X
+    [4X[25Xgap>[125X [27XHasSize(g);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XSetSize(g,99);[127X[104X
+    [4X[25Xgap>[125X [27XSize(g);[127X[104X
+    [4X[28X24[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YFor  two  properties  [3Xprop1[103X  and  [3Xprop2[103X,  the  intersection  [10X[3Xprop1[103X[10X and [3Xprop2[103X[10X[110X
+  (see [14X13.2[114X)  is  again  a  property  for  which  a setter and a tester exist.
+  Setting the value of this intersection to [9Xtrue[109X for a [5XGAP[105X object means to set
+  the values of [3Xprop1[103X and [3Xprop2[103X to [9Xtrue[109X for this object.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xprop:= IsFinite and IsCommutative;[127X[104X
+    [4X[28X<Property "(IsFinite and IsCommutative)">[128X[104X
+    [4X[25Xgap>[125X [27Xg:= Group( (1,2,3), (4,5) );;[127X[104X
+    [4X[25Xgap>[125X [27XTester( prop )( g );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XSetter( prop )( g, true );[127X[104X
+    [4X[25Xgap>[125X [27XTester( prop )( g );  prop( g );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIt  is  [13Xnot allowed[113X to set the value of such an intersection to [9Xfalse[109X for an
+  object.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSetter( prop )( Rationals, false );[127X[104X
+    [4X[28XYou cannot set an "and-filter" except to true[128X[104X
+    [4X[28Xnot in any function[128X[104X
+    [4X[28XEntering break read-eval-print loop ...[128X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou can type 'return true;' to set all components true[128X[104X
+    [4X[28X(but you might really want to reset just one component) to continue[128X[104X
+    [4X[26Xbrk>[126X[104X
+  [4X[32X[104X
+  
+  [1X13.6-3 AttributeValueNotSet[101X
+  
+  [33X[1;0Y[29X[2XAttributeValueNotSet[102X( [3Xattr[103X, [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0YIf   the   value   of   the  attribute  [3Xattr[103X  is  already  stored  for  [3Xobj[103X,
+  [2XAttributeValueNotSet[102X simply returns this value. Otherwise the value of [10X[3Xattr[103X[10X(
+  [3Xobj[103X[10X )[110X is computed and returned [13Xwithout storing it[113X in [3Xobj[103X. This can be useful
+  when [21Xlarge[121X attribute values (such as element lists) are needed only once and
+  shall not be stored in the object.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XHasAsSSortedList(g);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XAttributeValueNotSet(AsSSortedList,g);[127X[104X
+    [4X[28X[ (), (4,5), (1,2,3), (1,2,3)(4,5), (1,3,2), (1,3,2)(4,5) ][128X[104X
+    [4X[25Xgap>[125X [27XHasAsSSortedList(g);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  normal  behaviour of attributes (when called with just one argument) is
+  that  once a method has been selected and executed, and has returned a value
+  the  setter  of  the  attribute  is called, to (possibly) store the computed
+  value.  In  special circumstances, this behaviour can be altered dynamically
+  on     an     attribute-by-attribute     basis,    using    the    functions
+  [2XDisableAttributeValueStoring[102X    ([14X13.6-5[114X)   and   [2XEnableAttributeValueStoring[102X
+  ([14X13.6-6[114X).[133X
+  
+  [33X[0;0YIn  general,  the  code  in the library assumes, for efficiency, but not for
+  correctness,  that attribute values [13Xwill[113X be stored (in suitable objects), so
+  disabling storing may cause substantial computations to be repeated.[133X
+  
+  [1X13.6-4 InfoAttributes[101X
+  
+  [33X[1;0Y[29X[2XInfoAttributes[102X [32X info class[133X
+  
+  [33X[0;0YThis  info  class  (together  with [2XInfoWarning[102X ([14X7.4-8[114X)) is used for messages
+  about attributes. Messages are shown under the following circumstances:[133X
+  
+  [30X    [33X[0;6Y[2XEnableAttributeValueStoring[102X ([14X13.6-6[114X) is used (level 2).[133X
+  
+  [30X    [33X[0;6Y[2XDisableAttributeValueStoring[102X ([14X13.6-5[114X) is used (level 3).[133X
+  
+  [30X    [33X[0;6YWhen trying to assign to non-mutable attribute which already is set to
+        a different value (level 3).[133X
+  
+  [30X    [33X[0;6YWhen  the  test  filter for an attribute (i.e., [10XHasFOO[110X) is set, but no
+        value is assigned (level 3).[133X
+  
+  [1X13.6-5 DisableAttributeValueStoring[101X
+  
+  [33X[1;0Y[29X[2XDisableAttributeValueStoring[102X( [3Xattr[103X ) [32X function[133X
+  
+  [33X[0;0Ydisables  the  usual call of [10XSetter( [3Xattr[103X[10X )[110X when a method for [3Xattr[103X returns a
+  value.  In  consequence the values will never be stored. Note that [3Xattr[103X must
+  be an attribute and [13Xnot[113X a property.[133X
+  
+  [1X13.6-6 EnableAttributeValueStoring[101X
+  
+  [33X[1;0Y[29X[2XEnableAttributeValueStoring[102X( [3Xattr[103X ) [32X function[133X
+  
+  [33X[0;0Yenables  the  usual  call of [10XSetter( [3Xattr[103X[10X )[110X when a method for [3Xattr[103X returns a
+  value.  In  consequence  the values may be stored. This will usually have no
+  effect unless [2XDisableAttributeValueStoring[102X ([14X13.6-5[114X) has previously been used
+  for [3Xattr[103X. Note that [3Xattr[103X must be an attribute and [13Xnot[113X a property.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg := Group((1,2,3,4,5),(1,2,3));[127X[104X
+    [4X[28XGroup([ (1,2,3,4,5), (1,2,3) ])[128X[104X
+    [4X[25Xgap>[125X [27XKnownAttributesOfObject(g);[127X[104X
+    [4X[28X[ "LargestMovedPoint", "GeneratorsOfMagmaWithInverses",[128X[104X
+    [4X[28X  "MultiplicativeNeutralElement" ][128X[104X
+    [4X[25Xgap>[125X [27XSetInfoLevel(InfoAttributes,3);[127X[104X
+    [4X[25Xgap>[125X [27XDisableAttributeValueStoring(Size);[127X[104X
+    [4X[28X#I  Disabling value storing for Size[128X[104X
+    [4X[25Xgap>[125X [27XSize(g);[127X[104X
+    [4X[28X60[128X[104X
+    [4X[25Xgap>[125X [27XKnownAttributesOfObject(g);[127X[104X
+    [4X[28X[ "OneImmutable", "LargestMovedPoint", "NrMovedPoints",[128X[104X
+    [4X[28X  "MovedPoints", "GeneratorsOfMagmaWithInverses",[128X[104X
+    [4X[28X  "MultiplicativeNeutralElement", "StabChainMutable",[128X[104X
+    [4X[28X  "StabChainOptions" ][128X[104X
+    [4X[25Xgap>[125X [27XSize(g);[127X[104X
+    [4X[28X60[128X[104X
+    [4X[25Xgap>[125X [27XEnableAttributeValueStoring(Size);[127X[104X
+    [4X[28X#I  Enabling value storing for Size[128X[104X
+    [4X[25Xgap>[125X [27XSize(g);[127X[104X
+    [4X[28X60[128X[104X
+    [4X[25Xgap>[125X [27XKnownAttributesOfObject(g);[127X[104X
+    [4X[28X[ "Size", "OneImmutable", "LargestMovedPoint", "NrMovedPoints",[128X[104X
+    [4X[28X  "MovedPoints", "GeneratorsOfMagmaWithInverses",[128X[104X
+    [4X[28X  "MultiplicativeNeutralElement", "StabChainMutable",[128X[104X
+    [4X[28X  "StabChainOptions" ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X13.7 [33X[0;0YProperties[133X[101X
+  
+  [33X[0;0YThe  properties  of  an  object are those of its attributes (see [14X13.5[114X) whose
+  values can only be [9Xtrue[109X or [9Xfalse[109X.[133X
+  
+  [33X[0;0YThe  main  difference  between  attributes and properties is that a property
+  defines  two  sets of objects, namely the usual set of all objects for which
+  the  value is known, and the set of all objects for which the value is known
+  to be [9Xtrue[109X.[133X
+  
+  [33X[0;0Y(Note  that  it  makes  no  sense to consider a third set, namely the set of
+  objects  for  which  the  value  of  a property is [9Xtrue[109X whether or not it is
+  known,  since  there  may  be  objects for which the containment in this set
+  cannot be decided.)[133X
+  
+  [33X[0;0YFor  a  property  [3Xprop[103X, the containment of an object [3Xobj[103X in the first set is
+  checked  again by applying [10XTester( [3Xprop[103X[10X )[110X to [3Xobj[103X, and [3Xobj[103X lies in the second
+  set if and only if [10XTester( [3Xprop[103X[10X )( [3Xobj[103X[10X ) and [3Xprop[103X[10X( [3Xobj[103X[10X )[110X is [9Xtrue[109X.[133X
+  
+  [33X[0;0YIf a property value is known for an immutable object then this value is also
+  stored,  as  part of the type of the object. To some extent, property values
+  of  mutable  objects  also  can be stored, for example a mutable list all of
+  whose  entries  are  immutable can store whether it is strictly sorted. When
+  the  object is mutated (for example by list assignment) the type may need to
+  be adjusted.[133X
+  
+  [33X[0;0YImportant  properties  for domains are [2XIsAssociative[102X ([14X35.4-7[114X), [2XIsCommutative[102X
+  ([14X35.4-9[114X),   [2XIsAnticommutative[102X   ([14X56.4-6[114X),   [2XIsLDistributive[102X   ([14X56.4-3[114X)   and
+  [2XIsRDistributive[102X  ([14X56.4-4[114X), which mean that the multiplication of elements in
+  the domain satisfies [22X( a * b ) * c = a * ( b * c )[122X, [22Xa * b = b * a[122X, [22Xa * b = -
+  ( b * a )[122X, [22Xa * ( b + c ) = a * b + a * c[122X, and [22X( a + b ) * c = a * c + b * c[122X,
+  respectively, for all [22Xa[122X, [22Xb[122X, [22Xc[122X in the domain.[133X
+  
+  [1X13.7-1 IsProperty[101X
+  
+  [33X[1;0Y[29X[2XIsProperty[102X( [3Xobject[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns [9Xtrue[109X if [3Xobject[103X is a property (see [14X13.7[114X), and [9Xfalse[109X otherwise.[133X
+  
+  [1X13.7-2 KnownPropertiesOfObject[101X
+  
+  [33X[1;0Y[29X[2XKnownPropertiesOfObject[102X( [3Xobject[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  a  list  of  the names of the properties whose values are known for
+  [3Xobject[103X.[133X
+  
+  [1X13.7-3 KnownTruePropertiesOfObject[101X
+  
+  [33X[1;0Y[29X[2XKnownTruePropertiesOfObject[102X( [3Xobject[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns a list of the names of the properties known to be [9Xtrue[109X for [3Xobject[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,2),(1,2,3));;[127X[104X
+    [4X[25Xgap>[125X [27XKnownPropertiesOfObject(g);[127X[104X
+    [4X[28X[ "IsEmpty", "IsTrivial", "IsNonTrivial", "IsFinite",[128X[104X
+    [4X[28X  "CanEasilyCompareElements", "CanEasilySortElements",[128X[104X
+    [4X[28X  "IsDuplicateFree", "IsGeneratorsOfMagmaWithInverses",[128X[104X
+    [4X[28X  "IsAssociative", "IsFinitelyGeneratedMagma",[128X[104X
+    [4X[28X  "IsGeneratorsOfSemigroup", "IsSimpleSemigroup",[128X[104X
+    [4X[28X  "IsRegularSemigroup", "IsInverseSemigroup",[128X[104X
+    [4X[28X  "IsCompletelyRegularSemigroup", "IsCompletelySimpleSemigroup",[128X[104X
+    [4X[28X  "IsGroupAsSemigroup", "IsMonoidAsSemigroup", "IsOrthodoxSemigroup",[128X[104X
+    [4X[28X  "IsFinitelyGeneratedMonoid", "IsFinitelyGeneratedGroup",[128X[104X
+    [4X[28X  "IsSubsetLocallyFiniteGroup", "KnowsHowToDecompose",[128X[104X
+    [4X[28X  "IsInfiniteAbelianizationGroup", "IsNilpotentByFinite",[128X[104X
+    [4X[28X  "IsTorsionFree", "IsFreeAbelian" ][128X[104X
+    [4X[25Xgap>[125X [27XSize(g);[127X[104X
+    [4X[28X6[128X[104X
+    [4X[25Xgap>[125X [27XKnownPropertiesOfObject(g);[127X[104X
+    [4X[28X[ "IsEmpty", "IsTrivial", "IsNonTrivial", "IsFinite",[128X[104X
+    [4X[28X  "CanEasilyCompareElements", "CanEasilySortElements",[128X[104X
+    [4X[28X  "IsDuplicateFree", "IsGeneratorsOfMagmaWithInverses",[128X[104X
+    [4X[28X  "IsAssociative", "IsFinitelyGeneratedMagma",[128X[104X
+    [4X[28X  "IsGeneratorsOfSemigroup", "IsSimpleSemigroup",[128X[104X
+    [4X[28X  "IsRegularSemigroup", "IsInverseSemigroup",[128X[104X
+    [4X[28X  "IsCompletelyRegularSemigroup", "IsCompletelySimpleSemigroup",[128X[104X
+    [4X[28X  "IsGroupAsSemigroup", "IsMonoidAsSemigroup", "IsOrthodoxSemigroup",[128X[104X
+    [4X[28X  "IsFinitelyGeneratedMonoid", "IsFinitelyGeneratedGroup",[128X[104X
+    [4X[28X  "IsSubsetLocallyFiniteGroup", "KnowsHowToDecompose",[128X[104X
+    [4X[28X  "IsPerfectGroup", "IsSolvableGroup", "IsPolycyclicGroup",[128X[104X
+    [4X[28X  "IsInfiniteAbelianizationGroup", "IsNilpotentByFinite",[128X[104X
+    [4X[28X  "IsTorsionFree", "IsFreeAbelian" ][128X[104X
+    [4X[25Xgap>[125X [27XKnownTruePropertiesOfObject(g);[127X[104X
+    [4X[28X[ "IsNonTrivial", "IsFinite", "CanEasilyCompareElements",[128X[104X
+    [4X[28X  "CanEasilySortElements", "IsDuplicateFree",[128X[104X
+    [4X[28X  "IsGeneratorsOfMagmaWithInverses", "IsAssociative",[128X[104X
+    [4X[28X  "IsFinitelyGeneratedMagma", "IsGeneratorsOfSemigroup",[128X[104X
+    [4X[28X  "IsSimpleSemigroup", "IsRegularSemigroup", "IsInverseSemigroup",[128X[104X
+    [4X[28X  "IsCompletelyRegularSemigroup", "IsCompletelySimpleSemigroup",[128X[104X
+    [4X[28X  "IsGroupAsSemigroup", "IsMonoidAsSemigroup", "IsOrthodoxSemigroup",[128X[104X
+    [4X[28X  "IsFinitelyGeneratedMonoid", "IsFinitelyGeneratedGroup",[128X[104X
+    [4X[28X  "IsSubsetLocallyFiniteGroup", "KnowsHowToDecompose",[128X[104X
+    [4X[28X  "IsSolvableGroup", "IsPolycyclicGroup", "IsNilpotentByFinite" ][128X[104X
+  [4X[32X[104X
+  
+  [1X13.7-4 NewProperty[101X
+  
+  [33X[1;0Y[29X[2XNewProperty[102X( [3Xname[103X, [3Xfilter[103X[, [3Xrank[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XNewProperty[102X  returns a new property [3Xprop[103X with name [3Xname[103X (see also [14X13.7[114X). The
+  filter  [3Xfilter[103X  describes  the  involved  filters of [3Xprop[103X. As in the case of
+  attributes, [3Xfilter[103X is not implied by [3Xprop[103X.[133X
+  
+  [33X[0;0YThe  optional third argument [3Xrank[103X denotes the incremental rank (see [14X13.2[114X) of
+  the property [3Xprop[103X itself, i.e. [13Xnot[113X of its tester; the default value is 1.[133X
+  
+  [1X13.7-5 DeclareProperty[101X
+  
+  [33X[1;0Y[29X[2XDeclareProperty[102X( [3Xname[103X, [3Xfilter[103X[, [3Xrank[103X] ) [32X function[133X
+  
+  [33X[0;0Ydoes  the  same  as  [2XNewProperty[102X  ([14X13.7-4[114X)  and then binds the result to the
+  global  variable [3Xname[103X. The variable must previously be writable, and is made
+  read-only  by  this  function. It also binds read-only global variables with
+  names  [10XHas[3Xname[103X[10X[110X  and  [10XSet[3Xname[103X[10X[110X  for the tester and setter of the property (see
+  Section [14X13.6[114X).[133X
+  
+  
+  [1X13.8 [33X[0;0YOther Filters[133X[101X
+  
+  [33X[0;0YThere  are situations where one wants to express a kind of knowledge that is
+  based on some heuristic.[133X
+  
+  [33X[0;0YFor  example,  the  filters (see [14X13.2[114X) [2XCanEasilyTestMembership[102X ([14X39.26-1[114X) and
+  [2XCanEasilyComputePcgs[102X ([14X45.2-3[114X) are defined in the [5XGAP[105X library. Note that such
+  filters  do not correspond to a mathematical concept, contrary to properties
+  (see [14X13.7[114X).  Also  it need not be defined what [21Xeasily[121X means for an arbitrary
+  [5XGAP[105X  object,  and in this case one cannot compute the value for an arbitrary
+  [5XGAP[105X  object. In order to access this kind of knowledge as a part of the type
+  of  an object, [5XGAP[105X provides filters for which the value is [9Xfalse[109X by default,
+  and  it is changed to [9Xtrue[109X in certain situations, either explicitly (for the
+  given object) or via a logical implication (see [14X78.8[114X) from other filters.[133X
+  
+  [33X[0;0YFor example, a [9Xtrue[109X value of [2XCanEasilyComputePcgs[102X ([14X45.2-3[114X) for a group means
+  that  certain  methods  are  applicable  that  use a pcgs (see [14X45.1[114X) for the
+  group.  There  are  logical implications to set the filter value to [9Xtrue[109X for
+  permutation  groups  that are known to be solvable, and for groups that have
+  already  a  (sufficiently  nice) pcgs stored. In the case one has a solvable
+  matrix  group  and  wants to enable methods that use a pcgs, one can set the
+  [2XCanEasilyComputePcgs[102X ([14X45.2-3[114X) value to [9Xtrue[109X for this particular group.[133X
+  
+  [33X[0;0YA filter [3Xfilt[103X of the kind described here is different from the other filters
+  introduced  in  the previous sections. In particular, [3Xfilt[103X is not a category
+  (see [14X13.3[114X) or a property (see [14X13.7[114X) because its value may change for a given
+  object,  and  [3Xfilt[103X is not a representation (see [14X13.4[114X) because it has nothing
+  to  do  with the way an object is made up from some data. [3Xfilt[103X is similar to
+  an  attribute  tester  (see [14X13.6[114X), the only difference is that [3Xfilt[103X does not
+  refer  to an attribute value; note that [3Xfilt[103X is also used in the same way as
+  an  attribute  tester;  namely,  the  [9Xtrue[109X value may be required for certain
+  methods to be applicable.[133X
+  
+  [33X[0;0YIn  order to change the value of [3Xfilt[103X for an object [3Xobj[103X, one can use logical
+  implications (see [14X78.8[114X) or [2XSetFilterObj[102X ([14X13.8-3[114X), [2XResetFilterObj[102X ([14X13.8-4[114X).[133X
+  
+  [1X13.8-1 NewFilter[101X
+  
+  [33X[1;0Y[29X[2XNewFilter[102X( [3Xname[103X[, [3Ximplied[103X][, [3Xrank[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XNewFilter[102X returns a simple filter with name [3Xname[103X (see [14X13.8[114X).[133X
+  
+  [33X[0;0YThe  optional argument [3Ximplied[103X, if given, must be a filter, meaning that for
+  each object in the new filter, also [3Ximplied[103X will be set. Note that resetting
+  the  new  filter with [2XResetFilterObj[102X ([14X13.8-4[114X) does [13Xnot[113X reset [3Ximplied[103X. If the
+  new filter is intended to be set or reset manually for existing objects then
+  the argument [3Ximplied[103X will cause trouble; if the filter is not intended to be
+  set  or  reset  manually  then  perhaps calling [2XNewCategory[102X ([14X13.3-4[114X) is more
+  appropriate than calling [2XNewFilter[102X.[133X
+  
+  [33X[0;0YThe  optional  argument  [3Xrank[103X denotes the incremental rank (see [14X13.2[114X) of the
+  filter, the default value is 1.[133X
+  
+  [33X[0;0YThe default value of the new simple filter for each object is [9Xfalse[109X.[133X
+  
+  [1X13.8-2 DeclareFilter[101X
+  
+  [33X[1;0Y[29X[2XDeclareFilter[102X( [3Xname[103X[, [3Ximplied[103X][, [3Xrank[103X] ) [32X function[133X
+  
+  [33X[0;0Ydoes  the same as [2XNewFilter[102X ([14X13.8-1[114X) and then binds the result to the global
+  variable  [3Xname[103X.  The  variable  must  previously  be  writable,  and is made
+  read-only by this function.[133X
+  
+  [1X13.8-3 SetFilterObj[101X
+  
+  [33X[1;0Y[29X[2XSetFilterObj[102X( [3Xobj[103X, [3Xfilter[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XSetFilterObj[102X sets the value of [3Xfilter[103X (and of all filters implied by [3Xfilter[103X)
+  for [3Xobj[103X to [9Xtrue[109X.[133X
+  
+  [33X[0;0YThis may trigger immediate methods.[133X
+  
+  [1X13.8-4 ResetFilterObj[101X
+  
+  [33X[1;0Y[29X[2XResetFilterObj[102X( [3Xobj[103X, [3Xfilter[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XResetFilterObj[102X  sets  the value of [3Xfilter[103X for [3Xobj[103X to [9Xfalse[109X. (Implied filters
+  of  [3Xfilt[103X  are  not  touched.  This  might  create inconsistent situations if
+  applied carelessly).[133X
+  
+  
+  [1X13.9 [33X[0;0YTypes[133X[101X
+  
+  [33X[0;0YWe  stated  above  (see [14X13[114X) that, for an object [3Xobj[103X, its [13Xtype[113X is formed from
+  its  family  and its filters. There is also a third component, used in a few
+  situations, namely defining data of the type.[133X
+  
+  [1X13.9-1 TypeObj[101X
+  
+  [33X[1;0Y[29X[2XTypeObj[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the type of the object [3Xobj[103X.[133X
+  
+  [33X[0;0YThe type of an object is itself an object.[133X
+  
+  [33X[0;0YTwo  types  are  equal  if  and  only if the two families are identical, the
+  filters  are equal, and, if present, also the defining data of the types are
+  equal.[133X
+  
+  [1X13.9-2 DataType[101X
+  
+  [33X[1;0Y[29X[2XDataType[102X( [3Xtype[103X ) [32X function[133X
+  
+  [33X[0;0YThe  last part of the type, defining data, has not been mentioned before and
+  seems  to  be of minor importance. It can be used, e.g., for cosets [22XU g[122X of a
+  group  [22XU[122X,  where  the type of each coset may contain the group [22XU[122X as defining
+  data.  As  a consequence, two such cosets mod [22XU[122X and [22XV[122X can have the same type
+  only  if  [22XU  =  V[122X.  The  defining  data of the type [3Xtype[103X can be accessed via
+  [2XDataType[102X.[133X
+  
+  [1X13.9-3 NewType[101X
+  
+  [33X[1;0Y[29X[2XNewType[102X( [3Xfamily[103X, [3Xfilter[103X[, [3Xdata[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XNewType[102X  returns  the type given by the family [3Xfamily[103X and the filter [3Xfilter[103X.
+  The optional third argument [3Xdata[103X is any object that denotes defining data of
+  the desired type.[133X
+  
+  [33X[0;0YFor  examples  where  [2XNewType[102X  is  used,  see [14X79.2[114X, [14X79.3[114X, and the example in
+  Chapter [14X81[114X.[133X
+  

@@ -1,0 +1,250 @@
+  
+  [1X7 [33X[0;0YDomains[133X[101X
+  
+  [33X[0;0Y[13XDomain[113X is [5XGAP[105X's name for structured sets. We already saw examples of domains
+  in  Chapters [14X5[114X  and [14X6[114X:  the  groups  [10Xs8[110X  and  [10Xa8[110X in Section [14X5.1[114X are domains,
+  likewise the field [10Xf[110X and the vector space [10Xv[110X in Section [14X6.1[114X are domains. They
+  were  constructed  by  functions  such  as  [2XGroup[102X  ([14XReference: Group[114X) and [2XGF[102X
+  ([14XReference:  GF  for  field  size[114X), and they could be passed as arguments to
+  other  functions  such  as  [2XDerivedSubgroup[102X ([14XReference: DerivedSubgroup[114X) and
+  [2XDimension[102X ([14XReference: Dimension[114X).[133X
+  
+  
+  [1X7.1 [33X[0;0YDomains as Sets[133X[101X
+  
+  [33X[0;0YFirst  of  all,  a  domain  [22XD[122X  is a set. If [22XD[122X is finite then a list with the
+  elements  of  this set can be computed with the functions [2XAsList[102X ([14XReference:
+  AsList[114X)   and   [2XAsSortedList[102X  ([14XReference:  AsSortedList[114X).  For  infinite  [22XD[122X,
+  [2XEnumerator[102X   ([14XReference:   Enumerator[114X)   and   [2XEnumeratorSorted[102X  ([14XReference:
+  EnumeratorSorted[114X)  may  work, but it is also possible that one gets an error
+  message.[133X
+  
+  [33X[0;0YDomains  can  be  used  as  arguments  of set functions such as [2XIntersection[102X
+  ([14XReference:  Intersection[114X) and [2XUnion[102X ([14XReference: Union[114X). [5XGAP[105X tries to return
+  a  domain  in these cases, moreover it tries to return a domain with as much
+  structure  as  possible.  For  example,  the  intersection  of two groups is
+  (either  empty  or) again a group, and [5XGAP[105X will try to return it as a group.
+  For  [2XUnion[102X  ([14XReference: Union[114X), the situation is different because the union
+  of two groups is in general not a group.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:= Group( (1,2), (3,4) );;[127X[104X
+    [4X[25Xgap>[125X [27Xh:= Group( (3,4), (5,6) );;[127X[104X
+    [4X[25Xgap>[125X [27XIntersection( g, h );[127X[104X
+    [4X[28XGroup([ (3,4) ])[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YTwo  domains are regarded as equal w.r.t. the operator [21X[10X=[110X[121X if and only if they
+  are equal [13Xas sets[113X, regardless of the additional structure of the domains.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmats:= [ [ [ 0*Z(2), Z(2)^0 ], [ Z(2)^0, 0*Z(2) ] ],[127X[104X
+    [4X[25X>[125X [27X            [ [ Z(2)^0, 0*Z(2) ], [ 0*Z(2), Z(2)^0 ] ] ];;[127X[104X
+    [4X[25Xgap>[125X [27XRing( mats ) = VectorSpace( GF(2), mats );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAdditionally,  a  domain  is  regarded  as  equal  to the sorted list of its
+  elements.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:= Group( (1,2) );;[127X[104X
+    [4X[25Xgap>[125X [27Xl:= AsSortedList( g );[127X[104X
+    [4X[28X[ (), (1,2) ][128X[104X
+    [4X[25Xgap>[125X [27Xg = l;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsGroup( l ); IsList( g );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X7.2 [33X[0;0YAlgebraic Structure[133X[101X
+  
+  [33X[0;0YThe additional structure of [22XD[122X is constituted by the facts that [22XD[122X is known to
+  be  closed  under certain operations such as addition or multiplication, and
+  that  these  operations  have  additional properties. For example, if [22XD[122X is a
+  group  then  it  is  closed under multiplication ([22XD × D → D[122X, [22X(g,h) ↦ g * h[122X),
+  under taking inverses ([22XD → D[122X, [22Xg ↦ g^-1[122X) and under taking the identity [22Xg[122X[10X^0[110X of
+  each element [22Xg[122X in [22XD[122X; additionally, the multiplication in [22XD[122X is associative.[133X
+  
+  [33X[0;0YThe  same  set  of  elements  can  carry different algebraic structures. For
+  example,  a  semigroup  is  defined  as  being  closed  under an associative
+  multiplication,  so  each  group  is also a semigroup. Likewise, a monoid is
+  defined  as  a  semigroup  [22XD[122X  in which the identity [22Xg[122X[10X^0[110X is defined for every
+  element [22Xg[122X, so each group is a monoid, and each monoid is a semigroup.[133X
+  
+  [33X[0;0YOther  examples  of domains are vector spaces, which are defined as additive
+  groups  that  are  closed  under  (left)  multiplication  with elements in a
+  certain  domain of scalars. Also conjugacy classes in a group [22XD[122X are domains,
+  they are closed under the conjugation action of [22XD[122X.[133X
+  
+  
+  [1X7.3 [33X[0;0YNotions of Generation[133X[101X
+  
+  [33X[0;0YWe  have  seen  that  a domain is closed under certain operations. Usually a
+  domain   is  constructed  as  the  closure  of  some  elements  under  these
+  operations. In this situation, we say that the elements [13Xgenerate[113X the domain.[133X
+  
+  [33X[0;0YFor example, a list of matrices of the same shape over a common field can be
+  used  to generate an additive group or a vector space over a suitable field;
+  if  the  matrices are square then we can also use the matrices as generators
+  of  a  semigroup,  a  ring,  or  an  algebra.  We  illustrate  some of these
+  possibilities:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmats:= [ [ [ 0*Z(2), Z(2)^0 ],[127X[104X
+    [4X[25X>[125X [27X              [ Z(2)^0, 0*Z(2) ] ],[127X[104X
+    [4X[25X>[125X [27X            [ [ Z(2)^0, 0*Z(2) ],[127X[104X
+    [4X[25X>[125X [27X              [ 0*Z(2), Z(2)^0 ] ] ];;[127X[104X
+    [4X[25Xgap>[125X [27XSize( AdditiveMagma( mats ) );[127X[104X
+    [4X[28X4[128X[104X
+    [4X[25Xgap>[125X [27XSize( VectorSpace( GF(8), mats ) );[127X[104X
+    [4X[28X64[128X[104X
+    [4X[25Xgap>[125X [27XSize( Algebra( GF(2), mats ) );[127X[104X
+    [4X[28X4[128X[104X
+    [4X[25Xgap>[125X [27XSize( Group( mats ) );[127X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YEach  combination of operations under which a domain could be closed gives a
+  notion  of generation. So each group has group generators, and since it is a
+  monoid, one can also ask for monoid generators of a group.[133X
+  
+  [33X[0;0YNote that one cannot simply ask for [21Xthe generators of a domain[121X, it is always
+  necessary  to  specify  what  notion  of  generation is meant. Access to the
+  different  generators  is  provided  by  functions  with  names  of the form
+  [10XGeneratorsOfSomething[110X.    For    example,    [2XGeneratorsOfGroup[102X   ([14XReference:
+  GeneratorsOfGroup[114X)  denotes group generators, [2XGeneratorsOfMonoid[102X ([14XReference:
+  GeneratorsOfMonoid[114X)  denotes  monoid  generators,  and  so on. The result of
+  [2XGeneratorsOfVectorSpace[102X ([14XReference: GeneratorsOfVectorSpace[114X) is of course to
+  be  understood  relative  to  the  field  of  scalars of the vector space in
+  question.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XGeneratorsOfVectorSpace( GF(4)^2 );[127X[104X
+    [4X[28X[ [ Z(2)^0, 0*Z(2) ], [ 0*Z(2), Z(2)^0 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xv:= AsVectorSpace( GF(2), GF(4)^2 );;[127X[104X
+    [4X[25Xgap>[125X [27XGeneratorsOfVectorSpace( v );[127X[104X
+    [4X[28X[ [ Z(2)^0, 0*Z(2) ], [ 0*Z(2), Z(2)^0 ], [ Z(2^2), 0*Z(2) ],[128X[104X
+    [4X[28X  [ 0*Z(2), Z(2^2) ] ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X7.4 [33X[0;0YDomain Constructors[133X[101X
+  
+  [33X[0;0YA  group  can  be constructed from a list of group generators [3Xgens[103X by [10XGroup(
+  [3Xgens[103X[10X  )[110X,  likewise  one  can construct rings and algebras with the functions
+  [2XRing[102X ([14XReference: Ring[114X) and [2XAlgebra[102X ([14XReference: Algebra[114X).[133X
+  
+  [33X[0;0YNote  that  it  is  not  always or completely checked that [3Xgens[103X is in fact a
+  valid list of group generators, for example whether the elements of [3Xgens[103X can
+  be  multiplied  or  whether  they are invertible. This means that [5XGAP[105X trusts
+  you, at least to some extent, that the desired domain [10XSomething( [3Xgens[103X[10X )[110X does
+  exist.[133X
+  
+  
+  [1X7.5 [33X[0;0YForming Closures of Domains[133X[101X
+  
+  [33X[0;0YBesides  constructing domains from generators, one can also form the closure
+  of  a  given  domain  with an element or another domain. There are different
+  notions  of  closure, one has to specify one according to the desired result
+  and  the  structure  of  the given domain. The functions to compute closures
+  have  names  such  as [10XClosureSomething[110X. For example, if [3XD[103X is a group and one
+  wants  to  construct  the group generated by [3XD[103X and an element [3Xg[103X then one can
+  use [10XClosureGroup( [3XD[103X[10X, [3Xg[103X[10X )[110X.[133X
+  
+  
+  [1X7.6 [33X[0;0YChanging the Structure[133X[101X
+  
+  [33X[0;0YThe  same  set  of  elements  can  have  different algebraic structures. For
+  example,  it may happen that a monoid [22XM[122X does in fact contain the inverses of
+  all of its elements, and thus [22XM[122X is equal to the group formed by the elements
+  of [22XM[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm:= Monoid( mats );;[127X[104X
+    [4X[25Xgap>[125X [27Xm = Group( mats );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsGroup( m );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  last result in the above example may be surprising. But the monoid [10Xm[110X is
+  not  regarded as a group in [5XGAP[105X, and moreover there is no way to turn [10Xm[110X into
+  a group. Let us formulate this as a rule:[133X
+  
+  [33X[0;0Y[13XThe  set  of  operations  under  which  the domain is closed is fixed in the
+  construction of a domain, and cannot be changed later.[113X[133X
+  
+  [33X[0;0Y(Contrary  to  this, a domain [13Xcan[113X acquire knowledge about properties such as
+  whether the multiplication is associative or commutative.)[133X
+  
+  [33X[0;0YIf one needs a domain with a different structure than the given one, one can
+  construct  a  new  domain with the required structure. The functions that do
+  these  constructions  have  names  such as [10XAsSomething[110X, they return a domain
+  that  has  the  same  elements as the argument in question but the structure
+  [10XSomething[110X. In the above situation, one can use [2XAsGroup[102X ([14XReference: AsGroup[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:= AsGroup( m );;[127X[104X
+    [4X[25Xgap>[125X [27Xm = g;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsGroup( g );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIf  it  is  impossible  to  construct  the  desired  domain, the [10XAsSomething[110X
+  functions return [9Xfail[109X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XAsVectorSpace( GF(4), GF(2)^2 );[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  functions  [2XAsList[102X  ([14XReference:  AsList[114X)  and  [2XAsSortedList[102X  ([14XReference:
+  AsSortedList[114X)  mentioned  above do not return domains, but they fit into the
+  general  pattern  in  the  sense  that  they forget all the structure of the
+  argument,  including  the  fact that it is a domain, and return an immutable
+  list with the same elements as the argument has.[133X
+  
+  
+  [1X7.7 [33X[0;0YSubdomains[133X[101X
+  
+  [33X[0;0YIt  is possible to construct a domain as a subset of an existing domain. The
+  respective  functions  have  names such as [10XSubsomething[110X, they return domains
+  with the structure [10XSomething[110X. (Note that the second [10Xs[110X in [10XSubsomething[110X is not
+  capitalized.)  For  example,  if  one wants to deal with the subgroup of the
+  domain  [3XD[103X  that  is  generated by the elements in the list [3Xgens[103X, one can use
+  [10XSubgroup(  [3XD[103X[10X, [3Xgens[103X[10X )[110X. It is not required that [3XD[103X is itself a group, only that
+  the group generated by [3Xgens[103X must be a subset of [3XD[103X.[133X
+  
+  [33X[0;0YThe  superset  of a domain [3XS[103X that was constructed by a [10XSubsomething[110X function
+  can be accessed as [10XParent( [3XS[103X[10X )[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:= SymmetricGroup( 5 );;[127X[104X
+    [4X[25Xgap>[125X [27Xgens:= [ (1,2), (1,2,3,4) ];;[127X[104X
+    [4X[25Xgap>[125X [27Xs:= Subgroup( g, gens );;[127X[104X
+    [4X[25Xgap>[125X [27Xh:= Group( gens );;[127X[104X
+    [4X[25Xgap>[125X [27Xs = h;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XParent( s ) = g;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YMany  functions return subdomains of their arguments, for example the result
+  of [10XSylowSubgroup( [3XG[103X[10X, [3Xprime[103X[10X )[110X is a group with parent group [3XG[103X.[133X
+  
+  [33X[0;0YIf you are sure that the domain [10XSomething( [3Xgens[103X[10X )[110X is contained in the domain
+  [3XD[103X  then you can also call [10XSubsomethingNC( [3XD[103X[10X, [3Xgens[103X[10X )[110X instead of [10XSubsomething(
+  [3XD[103X[10X,  [3Xgens[103X[10X  )[110X.  The  [10XNC[110X stands for [21Xno check[121X, and the functions whose names end
+  with [10XNC[110X omit the check of containment.[133X
+  
+  
+  [1X7.8 [33X[0;0YFurther Information about Domains[133X[101X
+  
+  [33X[0;0YMore information about domains can be found in Chapter [14X'Reference: Domains'[114X.
+  Many  other  chapters  deal  with  specific  types of domain such as groups,
+  vector spaces or algebras.[133X
+  

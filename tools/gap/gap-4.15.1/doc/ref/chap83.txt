@@ -1,0 +1,128 @@
+  
+  [1X83 [33X[0;0YLibrary Files[133X[101X
+  
+  [33X[0;0YThis  chapter  describes  some  of  the  conventions used in the [5XGAP[105X library
+  files. These conventions are intended as a help on how to read library files
+  and  how  to find information in them. So everybody is recommended to follow
+  these  conventions,  although they do not prescribe a compulsory programming
+  style –[5XGAP[105X itself will not bother with the formatting of files.[133X
+  
+  [33X[0;0YFilenames  have  traditionally [5XGAP[105X adhered to the 8+3 convention (to make it
+  possible to use the same filenames even on a MS-DOS file system) and been in
+  lower  case  (systems  that  do  not recognize lower case in file names will
+  convert  them  automatically to upper case). It is no longer so important to
+  adhere  to  these conventions, but at the very least filenames should adhere
+  to a 16+5 convention, and be distinct even after identifying upper and lower
+  case.  Directory  names  of  packages,  however,  [13Xmust[113X be in lower case (the
+  [2XLoadPackage[102X ([14X76.2-1[114X) command assumes this).[133X
+  
+  
+  [1X83.1 [33X[0;0YFile Types[133X[101X
+  
+  [33X[0;0YThe  [5XGAP[105X  library consists of the following types of files, distinguished by
+  their suffixes:[133X
+  
+  [8X[10X.g[110X[8X [108X
+        [33X[0;6YFiles  which  contain  parts of the [21Xinner workings[121X of [5XGAP[105X. These files
+        usually   do   not  contain  mathematical  functionality,  except  for
+        providing links to kernel functions.[133X
+  
+  [8X[10X.gd[110X[8X [108X
+        [33X[0;6YDeclaration files. These files contain declarations of all categories,
+        attributes, operations, and global functions. These files also contain
+        the operation definitions in comments.[133X
+  
+  [8X[10X.gi[110X[8X [108X
+        [33X[0;6YImplementation files. These files contain all installations of methods
+        and global functions. Usually declarations of representations are also
+        considered to be part of the implementation and are therefore found in
+        the [10X.gi[110X files.[133X
+  
+  [33X[0;0YAs a rule of thumb, all [10X.gd[110X files are read in before the [10X.gi[110X files are read.
+  Therefore  a  [10X.gi[110X  file usually may use any operation or global function (it
+  has  been declared before), and no care has to be taken towards the order in
+  which the [10X.gi[110X files are read.[133X
+  
+  
+  [1X83.2 [33X[0;0YFinding Implementations in the Library[133X[101X
+  
+  [33X[0;0YFor  a  concretely  given  function,  you  can  use [2XFilenameFunc[102X ([14X5.1-4[114X) and
+  [2XStartlineFunc[102X  ([14X5.1-5[114X)  for finding the file where this function is defined,
+  and the line in this file where the definition of this function starts. This
+  does  not work for arbitrary functions, see Section [2XFilenameFunc[102X ([14X5.1-4[114X) for
+  the restrictions.[133X
+  
+  [33X[0;0YIf  you are interested in getting the function which implements a method for
+  specific arguments, you can use [14X7.2-1[114X. If [2XFilenameFunc[102X ([14X5.1-4[114X) does not work
+  for  this  method then setting the print level of [14X7.2-1[114X higher will give you
+  the  installation string for this method, which can be used for searching in
+  library files.[133X
+  
+  [33X[0;0YTo   find   the  occurrence  of  functions,  methods,  function  names,  and
+  installation  strings  in the library, one can use the [10Xgrep[110X tool under UNIX.
+  To find a function, search for the function name in the [10X.gd[110X files; as global
+  variables  are  usually declared only once, only few files will show up. The
+  function installation is likely to occur in the corresponding [10X.gi[110X file.[133X
+  
+  [33X[0;0YTo  find a method from the known operation name and the installation string,
+  search  for the string [21X[10XMethod([110X[121X (this catches both [2XInstallMethod[102X ([14X78.3-1[114X) and
+  [2XInstallOtherMethod[102X  ([14X78.3-2[114X))  and  the installation string or the operation
+  name.[133X
+  
+  [33X[0;0YThe  following  tools  from the [5XGAP[105X package [5XBrowse[105X can be used for accessing
+  the code of functions.[133X
+  
+  [30X    [33X[0;6Y[2XBrowseGapMethods[102X ([14XBrowse: BrowseGapMethods see BrowseGapData[114X) shows an
+        overview  of  [5XGAP[105X's operations and methods, and allows one to navigate
+        through  the  files  that  contain the implementations of the methods,
+        using a pager.[133X
+  
+  [30X    [33X[0;6Y[2XBrowseProfile[102X ([14XBrowse: BrowseProfile[114X) shows profiling results (similar
+        to  [2XDisplayProfile[102X  ([14X7.8-9[114X))  and  allows  one to navigate through the
+        files  that  contain  the  implementations  of the functions that were
+        actually used, using a pager.[133X
+  
+  
+  [1X83.3 [33X[0;0YUndocumented Variables[133X[101X
+  
+  [33X[0;0YFor  several  global  variables  in [5XGAP[105X, no information is available via the
+  help  system (see Section [14X'Tutorial: Help'[114X, for a quick overview of the help
+  system,  or  Chapter [14X2[114X, for details). There are various reasons for [21Xhiding[121X a
+  variable  from  the  user;  namely, the variable may be regarded as of minor
+  importance  (for  example,  it  may  be  a function called by documented [5XGAP[105X
+  functions  that  first  compute  many  input parameters for the undocumented
+  function),  or it belongs to a part of [5XGAP[105X that is still experimental in the
+  sense  that  the meaning of the variable has not yet been fixed or even that
+  it  is  not  clear  whether  the  variable  will  vanish in a more developed
+  version.[133X
+  
+  [33X[0;0YAs a consequence, it is dangerous to use undocumented variables because they
+  are not guaranteed to exist or to behave the same in future versions of [5XGAP[105X.[133X
+  
+  [33X[0;0YConversely,  for [13Xdocumented[113X variables, the definitions in the [5XGAP[105X manual can
+  be relied on for future [5XGAP[105X versions (unless they turn out to be erroneous);
+  if  the  [5XGAP[105X  developers  find  that  some  piece  of  minor, but documented
+  functionality  is an insurmountable obstacle to important developments, they
+  may  make  the smallest possible incompatible change to the functionality at
+  the  time of a major release. However, in any such case it will be announced
+  clearly in the [5XGAP[105X Forum what has been changed and why.[133X
+  
+  [33X[0;0YSo  on  the  one  hand,  the  developers  of [5XGAP[105X want to keep the freedom of
+  changing  undocumented  [5XGAP[105X code. On the other hand, users may be interested
+  in using undocumented variables.[133X
+  
+  [33X[0;0YIn  this case, whenever you write [5XGAP[105X code involving undocumented variables,
+  and  want  to  make sure that this code will work in future versions of [5XGAP[105X,
+  you  may  ask  at  [7Xmailto:support@gap-system.org[107X for documentation about the
+  variables  in  question.  The  [5XGAP[105X  developers  then  decide  whether  these
+  variables shall be documented or not, and if yes, what the definitions shall
+  be.[133X
+  
+  [33X[0;0YIn  the  former case, the new documentation is added to the [5XGAP[105X manual, this
+  means that from then on, this definition is protected against changes.[133X
+  
+  [33X[0;0YIn the latter case (which may occur for example if the variables in question
+  are  still  experimental), you may add the current values of these variables
+  to  your  private  code  if  you want to be sure that nothing will be broken
+  later due to changes in [5XGAP[105X.[133X
+  

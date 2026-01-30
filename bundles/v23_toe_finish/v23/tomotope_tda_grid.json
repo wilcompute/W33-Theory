@@ -1,0 +1,102 @@
+[
+  {
+    "modes": 4,
+    "kind": "structured",
+    "shots": 1000,
+    "js_w_sf": 0.28195835764166766,
+    "mean_h1_walrus": 0.0,
+    "mean_h1_sf": 0.0,
+    "walrus_samples": 1000,
+    "sf_samples": 1000
+  },
+  {
+    "modes": 4,
+    "kind": "random",
+    "shots": 1000,
+    "js_w_sf": 0.13691439238275843,
+    "mean_h1_walrus": 0.0,
+    "mean_h1_sf": 0.0,
+    "walrus_samples": 0,
+    "sf_samples": 1000
+  },
+  {
+    "modes": 5,
+    "kind": "structured",
+    "shots": 1000,
+    "js_w_sf": 0.34822077465717316,
+    "mean_h1_walrus": 0.0,
+    "mean_h1_sf": 0.0,
+    "walrus_samples": 1000,
+    "sf_samples": 1000
+  },
+  {
+    "modes": 5,
+    "kind": "random",
+    "shots": 1000,
+    "js_w_sf": 0.2806318720365731,
+    "mean_h1_walrus": 0.0,
+    "mean_h1_sf": 0.0,
+    "walrus_samples": 1000,
+    "sf_samples": 1000
+  },
+  {
+    "modes": 6,
+    "kind": "structured",
+    "shots": 1000,
+    "js_w_sf": 0.41081846760367424,
+    "mean_h1_walrus": 0.0,
+    "mean_h1_sf": 0.0,
+    "walrus_samples": 1000,
+    "sf_samples": 1000
+  },
+  {
+    "modes": 6,
+    "kind": "random",
+    "shots": 1000,
+    "js_w_sf": 0.3415908987089356,
+    "mean_h1_walrus": 0.0,
+    "mean_h1_sf": 0.0,
+    "walrus_samples": 1000,
+    "sf_samples": 1000
+  },
+  {
+    "modes": 7,
+    "kind": "structured",
+    "shots": 1000,
+    "js_w_sf": 0.41818825873179877,
+    "mean_h1_walrus": 0.0,
+    "mean_h1_sf": 0.0,
+    "walrus_samples": 1000,
+    "sf_samples": 1000
+  },
+  {
+    "modes": 7,
+    "kind": "random",
+    "shots": 1000,
+    "js_w_sf": 0.377789342313705,
+    "mean_h1_walrus": 0.0,
+    "mean_h1_sf": 0.0,
+    "walrus_samples": 1000,
+    "sf_samples": 1000
+  },
+  {
+    "modes": 8,
+    "kind": "structured",
+    "shots": 1000,
+    "js_w_sf": 0.4428047725983609,
+    "mean_h1_walrus": 0.0,
+    "mean_h1_sf": 0.0,
+    "walrus_samples": 1000,
+    "sf_samples": 1000
+  },
+  {
+    "modes": 8,
+    "kind": "random",
+    "shots": 1000,
+    "js_w_sf": 0.43097012408492097,
+    "mean_h1_walrus": 0.0,
+    "mean_h1_sf": 0.0,
+    "walrus_samples": 1000,
+    "sf_samples": 1000
+  }
+]

@@ -1,0 +1,1321 @@
+  
+  [1X45 [33X[0;0YPolycyclic Groups[133X[101X
+  
+  [33X[0;0YA  group  [3XG[103X is [13Xpolycyclic[113X if there exists a subnormal series [22XG = C_1 > C_2 >
+  ...  > C_n > C_{n+1} = { 1 }[122X with cyclic factors. Such a series is called [13Xpc
+  series[113X of [3XG[103X.[133X
+  
+  [33X[0;0YEvery  polycyclic  group  is  solvable  and  every  finite solvable group is
+  polycyclic.  However,  there  are  infinite  solvable  groups  which are not
+  polycyclic.[133X
+  
+  [33X[0;0YIn  [5XGAP[105X  there  exists a large number of methods for polycyclic groups which
+  are  based  upon the polycyclic structure of these groups. These methods are
+  usually  very  efficient,  especially  for  groups  which  are  given  by  a
+  pc-presentation  (see  chapter  [14X46[114X),  and  can  be  applied to many types of
+  groups.  Hence  [5XGAP[105X  tries  to  use them whenever possible, for example, for
+  permutation groups and matrix groups over finite fields that are known to be
+  polycyclic  (the  only exception is the representation as finitely presented
+  group for which the polycyclic methods cannot be used in general).[133X
+  
+  [33X[0;0YAt  the current state of implementations the [5XGAP[105X library contains methods to
+  compute  with  finite polycyclic groups, while the [5XGAP[105X package [5XPolycyclic[105X by
+  Bettina  Eick  and  Werner  Nickel  allows  also  computations with infinite
+  polycyclic groups which are given by a pc-presentation.[133X
+  
+  
+  [1X45.1 [33X[0;0YPolycyclic Generating Systems[133X[101X
+  
+  [33X[0;0YLet  [3XG[103X  be  a  polycyclic  group  with  a  pc  series as above. A [13Xpolycyclic
+  generating sequence[113X ([13Xpcgs[113X for short) of [3XG[103X is a sequence [22XP := (g_1, ..., g_n)[122X
+  of  elements  of [3XG[103X such that [22XC_i = ⟨ C_{i+1}, g_i ⟩[122X for [22X1 ≤ i ≤ n[122X. Note that
+  each  polycyclic  group has a pcgs, but except for very small groups, a pcgs
+  is not unique.[133X
+  
+  [33X[0;0YFor each index [22Xi[122X the subsequence of elements [22X(g_i, ..., g_n)[122X forms a pcgs of
+  the  subgroup  [22XC_i[122X. In particular, these [13Xtails[113X generate the subgroups of the
+  pc series and hence we say that the pc series is [13Xdetermined[113X by [22XP[122X.[133X
+  
+  [33X[0;0YLet  [22Xr_i[122X  be  the  index of [22XC_{i+1}[122X in [22XC_i[122X which is either a finite positive
+  number  or  infinity.  Then  [22Xr_i[122X is the order of [22Xg_i C_{i+1}[122X and we call the
+  resulting list of indices the [13Xrelative orders[113X of the pcgs [3XP[103X.[133X
+  
+  [33X[0;0YMoreover,  with  respect to a given pcgs [22X(g_1, ..., g_n)[122X each element [3Xg[103X of [3XG[103X
+  can  be represented in a unique way as a product [22Xg = g_1^{e_1} ⋅ g_2^{e_2} ⋯
+  g_n^{e_n}[122X  with exponents [22Xe_i ∈ {0, ..., r_i-1}[122X, if [22Xr_i[122X is finite, and [22Xe_i ∈
+  ℤ[122X  otherwise.  Words of this form are called [13Xnormal words[113X or [13Xwords in normal
+  form[113X.  Then  the  integer  vector  [22X[  e_1, ..., e_n ][122X is called the [13Xexponent
+  vector[113X of the element [22Xg[122X. Furthermore, the smallest index [22Xk[122X such that [22Xe_k ≠ 0[122X
+  is called the [13Xdepth[113X of [3Xg[103X and [22Xe_k[122X is the [13Xleading exponent[113X of [3Xg[103X.[133X
+  
+  [33X[0;0YFor many applications we have to assume that each of the relative orders [22Xr_i[122X
+  is  either  a prime or infinity. This is equivalent to saying that there are
+  no  trivial factors in the pc series and the finite factors of the pc series
+  are  maximal  refined. Then we obtain that [22Xr_i[122X is the order of [22Xg C_{i+1}[122X for
+  all  elements  [22Xg[122X  in [22XC_i ∖ C_{i+1}[122X and we call [22Xr_i[122X the [13Xrelative order[113X of the
+  element [22Xg[122X.[133X
+  
+  
+  [1X45.2 [33X[0;0YComputing a Pcgs[133X[101X
+  
+  [33X[0;0YSuppose  a  group  [3XG[103X is given; for example, let [3XG[103X be a permutation or matrix
+  group.  Then  we  can  ask  [5XGAP[105X to compute a pcgs of this group. If [3XG[103X is not
+  polycyclic, the result will be [9Xfail[109X.[133X
+  
+  [33X[0;0YNote  that  these  methods can only be applied if [3XG[103X is not given as finitely
+  presented group. For finitely presented groups one can try to compute a pcgs
+  via the polycyclic quotient methods, see [14X47.14[114X.[133X
+  
+  [33X[0;0YNote also that a pcgs behaves like a list.[133X
+  
+  [1X45.2-1 Pcgs[101X
+  
+  [33X[1;0Y[29X[2XPcgs[102X( [3XG[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns a pcgs for the group [3XG[103X. If [3Xgrp[103X is not polycyclic it returns [9Xfail[109X [13Xand
+  this result is not stored as attribute value[113X, in particular in this case the
+  filter [10XHasPcgs[110X is [13Xnot[113X set for [3XG[103X![133X
+  
+  [1X45.2-2 IsPcgs[101X
+  
+  [33X[1;0Y[29X[2XIsPcgs[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YThe category of pcgs.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := Group((1,2,3,4),(1,2));;[127X[104X
+    [4X[25Xgap>[125X [27Xp := Pcgs(G);[127X[104X
+    [4X[28XPcgs([ (3,4), (2,4,3), (1,4)(2,3), (1,3)(2,4) ])[128X[104X
+    [4X[25Xgap>[125X [27XIsPcgs( p );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xp[1];[127X[104X
+    [4X[28X(3,4)[128X[104X
+    [4X[25Xgap>[125X [27XG := Group((1,2,3,4,5),(1,2));;[127X[104X
+    [4X[25Xgap>[125X [27XPcgs(G);[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [1X45.2-3 CanEasilyComputePcgs[101X
+  
+  [33X[1;0Y[29X[2XCanEasilyComputePcgs[102X( [3Xgrp[103X ) [32X filter[133X
+  
+  [33X[0;0YThis  filter  indicates  whether  it  is  possible to compute a pcgs for [3Xgrp[103X
+  cheaply.  Clearly,  [3Xgrp[103X  must  be  polycyclic in this case. However, not for
+  every  polycyclic  group  there  is a method to compute a pcgs at low costs.
+  This  filter  is  used in the method selection mainly. Note that this filter
+  may change its value from [9Xfalse[109X to [9Xtrue[109X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := Group( (1,2,3,4),(1,2) );[127X[104X
+    [4X[28XGroup([ (1,2,3,4), (1,2) ])[128X[104X
+    [4X[25Xgap>[125X [27XCanEasilyComputePcgs(G);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XPcgs(G);[127X[104X
+    [4X[28XPcgs([ (3,4), (2,4,3), (1,4)(2,3), (1,3)(2,4) ])[128X[104X
+    [4X[25Xgap>[125X [27XCanEasilyComputePcgs(G);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X45.3 [33X[0;0YDefining a Pcgs Yourself[133X[101X
+  
+  [33X[0;0YIn a number of situations it might be useful to supply a pcgs to a group.[133X
+  
+  [33X[0;0YNote  that  the  elementary  operations  for  such  a  pcgs  might be rather
+  inefficient,  since [5XGAP[105X has to use generic methods in this case. It might be
+  helpful  to  supply  the relative orders of the self-defined pcgs as well by
+  [10XSetRelativeOrder[110X. See also [2XIsPrimeOrdersPcgs[102X ([14X45.4-3[114X).[133X
+  
+  [1X45.3-1 PcgsByPcSequence[101X
+  
+  [33X[1;0Y[29X[2XPcgsByPcSequence[102X( [3Xfam[103X, [3Xpcs[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XPcgsByPcSequenceNC[102X( [3Xfam[103X, [3Xpcs[103X ) [32X operation[133X
+  
+  [33X[0;0Yconstructs  a pcgs for the elements family [3Xfam[103X from the elements in the list
+  [3Xpcs[103X.  The  elements  must lie in the family [3Xfam[103X. [2XPcgsByPcSequence[102X and its [10XNC[110X
+  variant will always create a new pcgs which is not induced by any other pcgs
+  (cf. [2XInducedPcgsByPcSequence[102X ([14X45.7-2[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xfam := FamilyObj( (1,2) );; # the family of permutations[127X[104X
+    [4X[25Xgap>[125X [27Xp := PcgsByPcSequence( fam, [(1,2),(1,2,3)] );[127X[104X
+    [4X[28XPcgs([ (1,2), (1,2,3) ])[128X[104X
+    [4X[25Xgap>[125X [27XRelativeOrders(p);[127X[104X
+    [4X[28X[ 2, 3 ][128X[104X
+    [4X[25Xgap>[125X [27XExponentsOfPcElement( p, (1,3,2) );[127X[104X
+    [4X[28X[ 0, 2 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X45.4 [33X[0;0YElementary Operations for a Pcgs[133X[101X
+  
+  [1X45.4-1 RelativeOrders[101X
+  
+  [33X[1;0Y[29X[2XRelativeOrders[102X( [3Xpcgs[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns the list of relative orders of the pcgs [3Xpcgs[103X.[133X
+  
+  [1X45.4-2 IsFiniteOrdersPcgs[101X
+  
+  [33X[1;0Y[29X[2XIsFiniteOrdersPcgs[102X( [3Xpcgs[103X ) [32X property[133X
+  
+  [33X[0;0Ytests whether the relative orders of [3Xpcgs[103X are all finite.[133X
+  
+  [1X45.4-3 IsPrimeOrdersPcgs[101X
+  
+  [33X[1;0Y[29X[2XIsPrimeOrdersPcgs[102X( [3Xpcgs[103X ) [32X property[133X
+  
+  [33X[0;0Ytests whether the relative orders of [3Xpcgs[103X are prime numbers. Many algorithms
+  require      a      pcgs      to      have      this      property.      The
+  operation [2XIsomorphismRefinedPcGroup[102X ([14X46.4-8[114X) can be of help here.[133X
+  
+  [1X45.4-4 PcSeries[101X
+  
+  [33X[1;0Y[29X[2XPcSeries[102X( [3Xpcgs[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns the subnormal series determined by [3Xpcgs[103X.[133X
+  
+  [1X45.4-5 GroupOfPcgs[101X
+  
+  [33X[1;0Y[29X[2XGroupOfPcgs[102X( [3Xpcgs[103X ) [32X attribute[133X
+  
+  [33X[0;0YThe group generated by [3Xpcgs[103X.[133X
+  
+  [1X45.4-6 OneOfPcgs[101X
+  
+  [33X[1;0Y[29X[2XOneOfPcgs[102X( [3Xpcgs[103X ) [32X attribute[133X
+  
+  [33X[0;0YThe identity of the group generated by [3Xpcgs[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := Group( (1,2,3,4),(1,2) );; p := Pcgs(G);;[127X[104X
+    [4X[25Xgap>[125X [27XRelativeOrders(p);[127X[104X
+    [4X[28X[ 2, 3, 2, 2 ][128X[104X
+    [4X[25Xgap>[125X [27XIsFiniteOrdersPcgs(p);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsPrimeOrdersPcgs(p);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XPcSeries(p);[127X[104X
+    [4X[28X[ Group([ (3,4), (2,4,3), (1,4)(2,3), (1,3)(2,4) ]),[128X[104X
+    [4X[28X  Group([ (2,4,3), (1,4)(2,3), (1,3)(2,4) ]),[128X[104X
+    [4X[28X  Group([ (1,4)(2,3), (1,3)(2,4) ]), Group([ (1,3)(2,4) ]), Group(())[128X[104X
+    [4X[28X ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X45.5 [33X[0;0YElementary Operations for a Pcgs and an Element[133X[101X
+  
+  [1X45.5-1 RelativeOrderOfPcElement[101X
+  
+  [33X[1;0Y[29X[2XRelativeOrderOfPcElement[102X( [3Xpcgs[103X, [3Xelm[103X ) [32X operation[133X
+  
+  [33X[0;0YThe relative order of [3Xelm[103X with respect to the prime order pcgs [3Xpcgs[103X.[133X
+  
+  [1X45.5-2 ExponentOfPcElement[101X
+  
+  [33X[1;0Y[29X[2XExponentOfPcElement[102X( [3Xpcgs[103X, [3Xelm[103X, [3Xpos[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns the [3Xpos[103X-th exponent of [3Xelm[103X with respect to [3Xpcgs[103X.[133X
+  
+  [1X45.5-3 ExponentsOfPcElement[101X
+  
+  [33X[1;0Y[29X[2XExponentsOfPcElement[102X( [3Xpcgs[103X, [3Xelm[103X[, [3Xposran[103X] ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  exponents  of  [3Xelm[103X  with  respect  to [3Xpcgs[103X. The three argument
+  version returns the exponents in the positions given in [3Xposran[103X.[133X
+  
+  [1X45.5-4 DepthOfPcElement[101X
+  
+  [33X[1;0Y[29X[2XDepthOfPcElement[102X( [3Xpcgs[103X, [3Xelm[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns the depth of the element [3Xelm[103X with respect to [3Xpcgs[103X.[133X
+  
+  [1X45.5-5 LeadingExponentOfPcElement[101X
+  
+  [33X[1;0Y[29X[2XLeadingExponentOfPcElement[102X( [3Xpcgs[103X, [3Xelm[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns the leading exponent of [3Xelm[103X with respect to [3Xpcgs[103X.[133X
+  
+  [1X45.5-6 PcElementByExponents[101X
+  
+  [33X[1;0Y[29X[2XPcElementByExponents[102X( [3Xpcgs[103X, [3Xlist[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XPcElementByExponentsNC[102X( [3Xpcgs[103X[, [3Xbasisind[103X], [3Xlist[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  element corresponding to the exponent vector [3Xlist[103X with respect
+  to [3Xpcgs[103X. The exponents in [3Xlist[103X must be in the range of permissible exponents
+  for  [3Xpcgs[103X.  [13XIt  is  not guaranteed that [2XPcElementByExponents[102X will reduce the
+  exponents  modulo  the  relative  orders[113X.  (You  should  use  the  operation
+  [2XLinearCombinationPcgs[102X  ([14X45.5-7[114X)  for  this purpose.) The [10XNC[110X version does not
+  check  that  the  lengths  of  the lists fit together and does not check the
+  exponent range.[133X
+  
+  [33X[0;0YThe  three  argument  version  gives exponents only w.r.t. the generators in
+  [3Xpcgs[103X indexed by [3Xbasisind[103X.[133X
+  
+  [1X45.5-7 LinearCombinationPcgs[101X
+  
+  [33X[1;0Y[29X[2XLinearCombinationPcgs[102X( [3Xpcgs[103X, [3Xlist[103X[, [3Xone[103X] ) [32X function[133X
+  
+  [33X[0;0Yreturns    the    product    [22X∏_i    [3Xpcgs[103X[i]^{[3Xlist[103X[i]}[122X.    In   contrast   to
+  [2XPcElementByExponents[102X ([14X45.5-6[114X) this permits negative exponents. [3Xpcgs[103X might be
+  a  list of group elements. In this case, an appropriate identity element [3Xone[103X
+  must be given. [3Xlist[103X can be empty.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := Group( (1,2,3,4),(1,2) );; P := Pcgs(G);;[127X[104X
+    [4X[25Xgap>[125X [27Xg := PcElementByExponents(P, [0,1,1,1]);[127X[104X
+    [4X[28X(1,2,3)[128X[104X
+    [4X[25Xgap>[125X [27XExponentsOfPcElement(P, g);[127X[104X
+    [4X[28X[ 0, 1, 1, 1 ][128X[104X
+  [4X[32X[104X
+  
+  [1X45.5-8 SiftedPcElement[101X
+  
+  [33X[1;0Y[29X[2XSiftedPcElement[102X( [3Xpcgs[103X, [3Xelm[103X ) [32X operation[133X
+  
+  [33X[0;0Ysifts [3Xelm[103X through [3Xpcgs[103X, reducing it if the depth is the same as the depth of
+  one  of the generators in [3Xpcgs[103X. Thus the identity is returned if [3Xelm[103X lies in
+  the group generated by [3Xpcgs[103X. [3Xpcgs[103X must be an induced pcgs (see section [14X45.7[114X)
+  and [3Xelm[103X must lie in the span of the parent of [3Xpcgs[103X.[133X
+  
+  [1X45.5-9 CanonicalPcElement[101X
+  
+  [33X[1;0Y[29X[2XCanonicalPcElement[102X( [3Xipcgs[103X, [3Xelm[103X ) [32X operation[133X
+  
+  [33X[0;0Yreduces [3Xelm[103X at the induces pcgs [3Xipcgs[103X such that the exponents of the reduced
+  result  [3Xr[103X  are  zero  at the depths for which there are generators in [3Xipcgs[103X.
+  Elements, whose quotient lies in the group generated by [3Xipcgs[103X yield the same
+  canonical element.[133X
+  
+  [1X45.5-10 ReducedPcElement[101X
+  
+  [33X[1;0Y[29X[2XReducedPcElement[102X( [3Xpcgs[103X, [3Xx[103X, [3Xy[103X ) [32X operation[133X
+  
+  [33X[0;0Yreduces the element [3Xx[103X by dividing off (from the left) a power of [3Xy[103X such that
+  the leading coefficient of the result with respect to [3Xpcgs[103X becomes zero. The
+  elements [3Xx[103X and [3Xy[103X therefore have to have the same depth.[133X
+  
+  [1X45.5-11 CleanedTailPcElement[101X
+  
+  [33X[1;0Y[29X[2XCleanedTailPcElement[102X( [3Xpcgs[103X, [3Xelm[103X, [3Xdep[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  an  element  in  the  span of [3Xpcgs[103X whose exponents for indices [22X1[122X to
+  [22X[3Xdep[103X-1[122X  with  respect  to  [3Xpcgs[103X  are  the same as those of [3Xelm[103X, the remaining
+  exponents  are undefined. This can be used to obtain more [21Xsimple[121X elements if
+  only representatives in a factor are required, see [14X45.9[114X.[133X
+  
+  [33X[0;0YThe  difference  to [2XHeadPcElementByNumber[102X ([14X45.5-12[114X) is that this function is
+  guaranteed to zero out trailing coefficients while [2XCleanedTailPcElement[102X will
+  only do this if it can be done cheaply.[133X
+  
+  [1X45.5-12 HeadPcElementByNumber[101X
+  
+  [33X[1;0Y[29X[2XHeadPcElementByNumber[102X( [3Xpcgs[103X, [3Xelm[103X, [3Xdep[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  an  element  in  the  span of [3Xpcgs[103X whose exponents for indices [22X1[122X to
+  [3Xdep[103X[22X-1[122X  with  respect  to  [3Xpcgs[103X  are  the same as those of [3Xelm[103X, the remaining
+  exponents  are zero. This can be used to obtain more [21Xsimple[121X elements if only
+  representatives in a factor are required.[133X
+  
+  
+  [1X45.6 [33X[0;0YExponents of Special Products[133X[101X
+  
+  [33X[0;0YThere are certain products of elements whose exponents are used often within
+  algorithms,  and  which  might be obtained more easily than by computing the
+  product first and to obtain its exponents afterwards. The operations in this
+  section provide a way to obtain such exponent vectors directly.[133X
+  
+  [33X[0;0Y(The  circumstances  under which these operations give a speedup depend very
+  much  on  the  pcgs  and the representation of elements that is used. So the
+  following  operations  are  not  guaranteed to give a speedup in every case,
+  however  the default methods are not slower than to compute the exponents of
+  a product and thus these operations should [13Xalways[113X be used if applicable.)[133X
+  
+  [33X[0;0YThe  second  class are exponents of products of the generators which make up
+  the  pcgs.  If the pcgs used is a family pcgs (see [2XFamilyPcgs[102X ([14X46.1-1[114X)) then
+  these exponents can be looked up and do not need to be computed.[133X
+  
+  [1X45.6-1 ExponentsConjugateLayer[101X
+  
+  [33X[1;0Y[29X[2XExponentsConjugateLayer[102X( [3Xmpcgs[103X, [3Xelm[103X, [3Xe[103X ) [32X operation[133X
+  
+  [33X[0;0YComputes  the  exponents  of [3Xelm[103X[10X^[110X[3Xe[103X with respect to [3Xmpcgs[103X; [3Xelm[103X must be in the
+  span  of  [3Xmpcgs[103X,  [3Xe[103X a pc element in the span of the parent pcgs of [3Xmpcgs[103X and
+  [3Xmpcgs[103X  must be the modulo pcgs for an abelian layer. (This is the usual case
+  when  acting  on  a  chief  factor). In this case if [3Xmpcgs[103X is induced by the
+  family  pcgs  (see  section [14X45.7[114X), the exponents can be computed directly by
+  looking  up  exponents  without having to compute in the group and having to
+  collect a potential tail.[133X
+  
+  [1X45.6-2 ExponentsOfRelativePower[101X
+  
+  [33X[1;0Y[29X[2XExponentsOfRelativePower[102X( [3Xpcgs[103X, [3Xi[103X ) [32X operation[133X
+  
+  [33X[0;0YFor  [22Xp  =  [3Xpcgs[103X[[3Xi[103X][122X this function returns the exponent vector with respect to
+  [3Xpcgs[103X  of the element [22Xp^e[122X where [22Xe[122X is the relative order of [3Xp[103X in [3Xpcgs[103X. For the
+  family  pcgs  or pcgs induced by it (see section [14X45.7[114X), this might be faster
+  than computing the element and computing its exponent vector.[133X
+  
+  [1X45.6-3 ExponentsOfConjugate[101X
+  
+  [33X[1;0Y[29X[2XExponentsOfConjugate[102X( [3Xpcgs[103X, [3Xi[103X, [3Xj[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  exponents  of  [10X[3Xpcgs[103X[10X[[3Xi[103X[10X]^[3Xpcgs[103X[10X[[3Xj[103X[10X][110X  with  respect to [3Xpcgs[103X. For the
+  family  pcgs  or pcgs induced by it (see section [14X45.7[114X), this might be faster
+  than computing the element and computing its exponent vector.[133X
+  
+  [1X45.6-4 ExponentsOfCommutator[101X
+  
+  [33X[1;0Y[29X[2XExponentsOfCommutator[102X( [3Xpcgs[103X, [3Xi[103X, [3Xj[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  exponents  of  the  commutator  [10XComm(  [110X[22X[3Xpcgs[103X[[3Xi[103X], [3Xpcgs[103X[[3Xj[103X][122X[10X )[110X with
+  respect  to  [3Xpcgs[103X.  For  the family pcgs or pcgs induced by it, (see section
+  [14X45.7[114X),  this  might  be  faster than computing the element and computing its
+  exponent vector.[133X
+  
+  
+  [1X45.7 [33X[0;0YSubgroups of Polycyclic Groups – Induced Pcgs[133X[101X
+  
+  [33X[0;0YLet  [3XU[103X  be  a  subgroup  of  [3XG[103X and let [3XP[103X be a pcgs of [3XG[103X as above such that [3XP[103X
+  determines  the  subnormal  series [22XG = C_1 > ... > C_{n+1} = { 1 }[122X. Then the
+  series  of  subgroups  [22XU  ∩  C_i[122X  is  a subnormal series of [3XU[103X with cyclic or
+  trivial factors. Hence, if we choose an element [22Xu_{i_j} ∈ (U ∩ C_{i_j}) ∖ (U
+  ∩  C_{i_j+1})[122X whenever this factor is non-trivial, then we obtain a pcgs [22XQ =
+  (u_{i_1},  ..., u_{i_m})[122X of [22XU[122X. We say that [22XQ[122X is an [13Xinduced pcgs[113X with respect
+  to [3XP[103X. The pcgs [3XP[103X is the [13Xparent pcgs[113X to the induced pcgs [3XQ[103X.[133X
+  
+  [33X[0;0YNote  that the pcgs [22XQ[122X is induced with respect to [3XP[103X if and only if the matrix
+  of  exponent  vectors  of the elements [22Xu_{i_j}[122X with respect to [3XP[103X is in upper
+  triangular form. Thus [22XQ[122X is not unique in general.[133X
+  
+  [33X[0;0YIn  particular,  the  elements  of  an  induced pcgs do [13Xnot necessarily[113X have
+  leading   coefficient  1  relative  to  the  inducing  pcgs.  The  attribute
+  [2XLeadCoeffsIGS[102X  ([14X45.7-7[114X)  holds the leading coefficients in case they have to
+  be renormed in an algorithm.[133X
+  
+  [33X[0;0YEach  induced  pcgs is a pcgs and hence allows all elementary operations for
+  pcgs.  On the other hand each pcgs could be transformed into an induced pcgs
+  for  the  group  defined  by the pcgs, but note that an arbitrary pcgs is in
+  general not an induced pcgs for technical reasons.[133X
+  
+  [33X[0;0YAn induced pcgs is [21Xcompatible[121X with its parent, see [2XParentPcgs[102X ([14X45.7-3[114X).[133X
+  
+  [33X[0;0YIn  [LNS84]  a  [21Xnon-commutative  Gauss[121X  algorithm is described to compute an
+  induced pcgs of a subgroup [3XU[103X from a generating set of [3XU[103X. For calling this in
+  [5XGAP[105X, see [14X45.7-4[114X to [14X45.7-8[114X.[133X
+  
+  [33X[0;0YTo create a subgroup generated by an induced pcgs such that the induced pcgs
+  gets stored automatically, use [2XSubgroupByPcgs[102X ([14X45.7-9[114X).[133X
+  
+  [1X45.7-1 IsInducedPcgs[101X
+  
+  [33X[1;0Y[29X[2XIsInducedPcgs[102X( [3Xpcgs[103X ) [32X Category[133X
+  
+  [33X[0;0YThe category of induced pcgs. This a subcategory of pcgs.[133X
+  
+  [1X45.7-2 InducedPcgsByPcSequence[101X
+  
+  [33X[1;0Y[29X[2XInducedPcgsByPcSequence[102X( [3Xpcgs[103X, [3Xpcs[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XInducedPcgsByPcSequenceNC[102X( [3Xpcgs[103X, [3Xpcs[103X[, [3Xdepths[103X] ) [32X operation[133X
+  
+  [33X[0;0YIf  [3Xpcs[103X is a list of elements that form an induced pcgs with respect to [3Xpcgs[103X
+  this operation returns an induced pcgs with these elements.[133X
+  
+  [33X[0;0YIn  the  third  version, the depths of [3Xpcs[103X with respect to [3Xpcgs[103X can be given
+  (they are computed anew otherwise).[133X
+  
+  [1X45.7-3 ParentPcgs[101X
+  
+  [33X[1;0Y[29X[2XParentPcgs[102X( [3Xpcgs[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the  pcgs  by  which  [3Xpcgs[103X was induced. If [3Xpcgs[103X was not induced, it
+  simply returns [3Xpcgs[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := Group( (1,2,3,4),(1,2) );;[127X[104X
+    [4X[25Xgap>[125X [27XP := Pcgs(G);;[127X[104X
+    [4X[25Xgap>[125X [27XK := InducedPcgsByPcSequence( P, [(1,2,3,4),(1,3)(2,4)] );[127X[104X
+    [4X[28XPcgs([ (1,2,3,4), (1,3)(2,4) ])[128X[104X
+    [4X[25Xgap>[125X [27XParentPcgs( K );[127X[104X
+    [4X[28XPcgs([ (3,4), (2,4,3), (1,4)(2,3), (1,3)(2,4) ])[128X[104X
+    [4X[25Xgap>[125X [27XIsInducedPcgs( K );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X45.7-4 InducedPcgs[101X
+  
+  [33X[1;0Y[29X[2XInducedPcgs[102X( [3Xpcgs[103X, [3Xgrp[103X ) [32X function[133X
+  
+  [33X[0;0Ycomputes a pcgs for [3Xgrp[103X which is induced by [3Xpcgs[103X. If [3Xpcgs[103X has a parent pcgs,
+  then the result is induced with respect to this parent pcgs.[133X
+  
+  [33X[0;0Y[2XInducedPcgs[102X  is a wrapper function only. Therefore, methods for computing an
+  induced pcgs should be installed for the operation [10XInducedPcgsOp[110X.[133X
+  
+  [1X45.7-5 InducedPcgsByGenerators[101X
+  
+  [33X[1;0Y[29X[2XInducedPcgsByGenerators[102X( [3Xpcgs[103X, [3Xgens[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XInducedPcgsByGeneratorsNC[102X( [3Xpcgs[103X, [3Xgens[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  an  induced pcgs with respect to [3Xpcgs[103X for the subgroup generated by
+  [3Xgens[103X.[133X
+  
+  [1X45.7-6 InducedPcgsByPcSequenceAndGenerators[101X
+  
+  [33X[1;0Y[29X[2XInducedPcgsByPcSequenceAndGenerators[102X( [3Xpcgs[103X, [3Xind[103X, [3Xgens[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  an  induced  pcgs with respect to [3Xpcgs[103X of the subgroup generated by
+  [3Xind[103X  and  [3Xgens[103X.  Here [3Xind[103X must be an induced pcgs with respect to [3Xpcgs[103X (or a
+  list of group elements that form such an igs) and it will be used as initial
+  sequence for the computation.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := Group( (1,2,3,4),(1,2) );;  P := Pcgs(G);;[127X[104X
+    [4X[25Xgap>[125X [27XI := InducedPcgsByGenerators( P, [(1,2,3,4)] );[127X[104X
+    [4X[28XPcgs([ (1,2,3,4), (1,3)(2,4) ])[128X[104X
+    [4X[25Xgap>[125X [27XJ := InducedPcgsByPcSequenceAndGenerators( P, I, [(1,2)] );[127X[104X
+    [4X[28XPcgs([ (1,2,3,4), (2,4,3), (1,4)(2,3), (1,3)(2,4) ])[128X[104X
+  [4X[32X[104X
+  
+  [1X45.7-7 LeadCoeffsIGS[101X
+  
+  [33X[1;0Y[29X[2XLeadCoeffsIGS[102X( [3Xigs[103X ) [32X attribute[133X
+  
+  [33X[0;0YThis  attribute  is  used  to store leading coefficients with respect to the
+  parent  pcgs.  the  [3Xi[103X-th  entry  –if  bound–  is the leading exponent of the
+  element  of  [3Xigs[103X that has depth [3Xi[103X in the parent. (It cannot be assigned to a
+  component in the object created by [2XInducedPcgsByPcSequenceNC[102X ([14X45.7-2[114X) as the
+  permutation  group  methods  call  it from within the postprocessing, before
+  this postprocessing however no coefficients may be computed.)[133X
+  
+  [1X45.7-8 ExtendedPcgs[101X
+  
+  [33X[1;0Y[29X[2XExtendedPcgs[102X( [3XN[103X, [3Xgens[103X ) [32X operation[133X
+  
+  [33X[0;0Yextends the pcgs [3XN[103X (induced w.r.t. [3Xhome[103X) to a new induced pcgs by prepending
+  [3Xgens[103X. No checks are performed that this really yields an induced pcgs.[133X
+  
+  [1X45.7-9 SubgroupByPcgs[101X
+  
+  [33X[1;0Y[29X[2XSubgroupByPcgs[102X( [3XG[103X, [3Xpcgs[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns a subgroup of [3XG[103X generated by the elements of [3Xpcgs[103X.[133X
+  
+  
+  [1X45.8 [33X[0;0YSubgroups of Polycyclic Groups – Canonical Pcgs[133X[101X
+  
+  [33X[0;0YThe  induced  pcgs  [3XQ[103X  of  [3XU[103X  is  called [13Xcanonical[113X if the matrix of exponent
+  vectors  contains  normed  vectors  only and above each leading entry in the
+  matrix  there  are  0's  only.  The canonical pcgs of [3XU[103X with respect to [3XP[103X is
+  unique and hence such pcgs can be used to compare subgroups.[133X
+  
+  [1X45.8-1 IsCanonicalPcgs[101X
+  
+  [33X[1;0Y[29X[2XIsCanonicalPcgs[102X( [3Xpcgs[103X ) [32X property[133X
+  
+  [33X[0;0YAn  induced  pcgs  is canonical if the matrix of the exponent vectors of the
+  elements of [3Xpcgs[103X with respect to the [2XParentPcgs[102X ([14X45.7-3[114X) value of [3Xpcgs[103X is in
+  Hermite normal form (see [LNS84]). While a subgroup can have various induced
+  pcgs with respect to a parent pcgs a canonical pcgs is unique.[133X
+  
+  [1X45.8-2 CanonicalPcgs[101X
+  
+  [33X[1;0Y[29X[2XCanonicalPcgs[102X( [3Xpcgs[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns the canonical pcgs corresponding to the induced pcgs [3Xpcgs[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := Group((1,2,3,4),(5,6,7));[127X[104X
+    [4X[28XGroup([ (1,2,3,4), (5,6,7) ])[128X[104X
+    [4X[25Xgap>[125X [27XP := Pcgs(G);[127X[104X
+    [4X[28XPcgs([ (5,6,7), (1,2,3,4), (1,3)(2,4) ])[128X[104X
+    [4X[25Xgap>[125X [27XI := InducedPcgsByPcSequence(P, [(5,6,7)*(1,3)(2,4),(1,3)(2,4)] );[127X[104X
+    [4X[28XPcgs([ (1,3)(2,4)(5,6,7), (1,3)(2,4) ])[128X[104X
+    [4X[25Xgap>[125X [27XCanonicalPcgs(I);[127X[104X
+    [4X[28XPcgs([ (5,6,7), (1,3)(2,4) ])[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X45.9 [33X[0;0YFactor Groups of Polycyclic Groups – Modulo Pcgs[133X[101X
+  
+  [33X[0;0YLet  [3XN[103X  be a normal subgroup of [3XG[103X such that [3XG/N[103X is polycyclic with pcgs [22X(h_1
+  N,  ...,  h_r  N)[122X.  Then  we call the sequence of preimages [22X(h_1, ... h_r)[122X a
+  [13Xmodulo  pcgs[113X  of  [3XG/N[103X. [3XG[103X is called the [13Xnumerator[113X of the modulo pcgs and [3XN[103X is
+  the [13Xdenominator[113X of the modulo pcgs.[133X
+  
+  [33X[0;0YModulo  pcgs are often used to facilitate efficient computations with factor
+  groups,  since  they  allow computations with factor groups without formally
+  defining the factor group at all.[133X
+  
+  [33X[0;0YAll  elementary  operations  of  pcgs,  see Sections [14X45.4[114X and [14X45.5[114X, apply to
+  modulo  pcgs  as  well.  However,  it  is in general not possible to compute
+  induced pcgs with respect to a modulo pcgs.[133X
+  
+  [33X[0;0YTwo  more  elementary  operations  for modulo pcgs are [2XNumeratorOfModuloPcgs[102X
+  ([14X45.9-3[114X) and [2XDenominatorOfModuloPcgs[102X ([14X45.9-4[114X).[133X
+  
+  [1X45.9-1 ModuloPcgs[101X
+  
+  [33X[1;0Y[29X[2XModuloPcgs[102X( [3XG[103X, [3XN[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns a modulo pcgs for the factor [22X[3XG[103X/[3XN[103X[122X which must be solvable, while [3XN[103X may
+  be  non-solvable.  [2XModuloPcgs[102X will return [13Xa[113X pcgs for the factor, there is no
+  guarantee  that  it  will  be  [21Xcompatible[121X  with  any  other pcgs. If this is
+  required, the [9Xmod[109X operator must be used on induced pcgs, see [2X\mod[102X ([14X45.9-5[114X).[133X
+  
+  [1X45.9-2 IsModuloPcgs[101X
+  
+  [33X[1;0Y[29X[2XIsModuloPcgs[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YThe  category  of  modulo pcgs. Note that each pcgs is a modulo pcgs for the
+  trivial subgroup.[133X
+  
+  [1X45.9-3 NumeratorOfModuloPcgs[101X
+  
+  [33X[1;0Y[29X[2XNumeratorOfModuloPcgs[102X( [3Xpcgs[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns a generating set for the numerator of the modulo pcgs [3Xpcgs[103X.[133X
+  
+  [1X45.9-4 DenominatorOfModuloPcgs[101X
+  
+  [33X[1;0Y[29X[2XDenominatorOfModuloPcgs[102X( [3Xpcgs[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns a generating set for the denominator of the modulo pcgs [3Xpcgs[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := Group( (1,2,3,4,5),(1,2) );[127X[104X
+    [4X[28XGroup([ (1,2,3,4,5), (1,2) ])[128X[104X
+    [4X[25Xgap>[125X [27XP := ModuloPcgs(G, DerivedSubgroup(G) );[127X[104X
+    [4X[28XPcgs([ (4,5) ])[128X[104X
+    [4X[25Xgap>[125X [27XNumeratorOfModuloPcgs(P);[127X[104X
+    [4X[28X[ (1,2,3,4,5), (1,2) ][128X[104X
+    [4X[25Xgap>[125X [27XDenominatorOfModuloPcgs(P);[127X[104X
+    [4X[28X[ (1,3,2), (1,4,3), (2,5,4) ][128X[104X
+    [4X[25Xgap>[125X [27XRelativeOrders(P);[127X[104X
+    [4X[28X[ 2 ][128X[104X
+    [4X[25Xgap>[125X [27XExponentsOfPcElement( P, (1,2,3,4,5) );[127X[104X
+    [4X[28X[ 0 ][128X[104X
+    [4X[25Xgap>[125X [27XExponentsOfPcElement( P, (4,5) );[127X[104X
+    [4X[28X[ 1 ][128X[104X
+  [4X[32X[104X
+  
+  [1X45.9-5 \mod[101X
+  
+  [33X[1;0Y[29X[2X\mod[102X( [3XP[103X, [3XI[103X ) [32X method[133X
+  
+  [33X[0;0YModulo Pcgs can also be built from compatible induced pcgs. Let [22XG[122X be a group
+  with  pcgs  [3XP[103X  and  let  [3XI[103X  be  an induced pcgs of a normal subgroup [22XN[122X of [22XG[122X.
+  (Respectively: [3XP[103X and [3XI[103X are both induced with respect to the [13Xsame[113X Pcgs.) Then
+  we can compute a modulo pcgs of [22XG[122X mod [22XN[122X by[133X
+  
+  [33X[0;0Y[3XP[103X [9Xmod[109X [3XI[103X[133X
+  
+  [33X[0;0YNote  that  in  this  case  we  obtain  the  advantage  that  the  values of
+  [2XNumeratorOfModuloPcgs[102X ([14X45.9-3[114X) and [2XDenominatorOfModuloPcgs[102X ([14X45.9-4[114X) are just
+  [3XP[103X and [3XI[103X, respectively, and hence are unique.[133X
+  
+  [33X[0;0YThe  resulting  modulo  pcgs  will  consist  of  a  subset  of [3XP[103X and will be
+  [21Xcompatible[121X with [3XP[103X (or its parent).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := Group((1,2,3,4));;[127X[104X
+    [4X[25Xgap>[125X [27XP := Pcgs(G);[127X[104X
+    [4X[28XPcgs([ (1,2,3,4), (1,3)(2,4) ])[128X[104X
+    [4X[25Xgap>[125X [27XI := InducedPcgsByGenerators(P, [(1,3)(2,4)]);[127X[104X
+    [4X[28XPcgs([ (1,3)(2,4) ])[128X[104X
+    [4X[25Xgap>[125X [27XM := P mod I;[127X[104X
+    [4X[28X[ (1,2,3,4) ][128X[104X
+    [4X[25Xgap>[125X [27XNumeratorOfModuloPcgs(M);[127X[104X
+    [4X[28XPcgs([ (1,2,3,4), (1,3)(2,4) ])[128X[104X
+    [4X[25Xgap>[125X [27XDenominatorOfModuloPcgs(M);[127X[104X
+    [4X[28XPcgs([ (1,3)(2,4) ])[128X[104X
+  [4X[32X[104X
+  
+  [1X45.9-6 CorrespondingGeneratorsByModuloPcgs[101X
+  
+  [33X[1;0Y[29X[2XCorrespondingGeneratorsByModuloPcgs[102X( [3Xmpcgs[103X, [3Ximgs[103X ) [32X function[133X
+  
+  [33X[0;0YLet [3Xmpcgs[103X be a modulo pcgs for a factor of a group [22XG[122X and let [22XU[122X be a subgroup
+  of  [22XG[122X  generated  by [3Ximgs[103X such that [22XU[122X covers the factor for the modulo pcgs.
+  Then this function computes elements in [22XU[122X corresponding to the generators of
+  the modulo pcgs.[133X
+  
+  [33X[0;0YNote  that  the  computation  of induced generating sets is not possible for
+  some modulo pcgs.[133X
+  
+  [1X45.9-7 CanonicalPcgsByGeneratorsWithImages[101X
+  
+  [33X[1;0Y[29X[2XCanonicalPcgsByGeneratorsWithImages[102X( [3Xpcgs[103X, [3Xgens[103X, [3Ximgs[103X ) [32X operation[133X
+  
+  [33X[0;0Ycomputes   a   canonical,  [3Xpcgs[103X-induced  pcgs  for  the  span  of  [3Xgens[103X  and
+  simultaneously  does  the  same  transformations  on [3Ximgs[103X, preserving thus a
+  correspondence  between  [3Xgens[103X  and [3Ximgs[103X. This operation is used to represent
+  homomorphisms from a pc group.[133X
+  
+  
+  [1X45.10 [33X[0;0YFactor Groups of Polycyclic Groups in their Own Representation[133X[101X
+  
+  [33X[0;0YIf  substantial calculations are done in a factor it might be worth still to
+  construct the factor group in its own representation (for example by calling
+  [2XPcGroupWithPcgs[102X ([14X46.5-1[114X) on a modulo pcgs.[133X
+  
+  [33X[0;0YThe following functions are intended for working with factor groups obtained
+  by  factoring  out the tail of a pcgs. They provide a way to map elements or
+  induced  pcgs quickly in the factor (respectively to take preimages) without
+  the need to construct a homomorphism.[133X
+  
+  [33X[0;0YThe  setup is always a pcgs [3Xpcgs[103X of [3XG[103X and a pcgs [3Xfpcgs[103X of a factor group [22XH =
+  [3XG[103X/[3XN[103X[122X which corresponds to a head of [3Xpcgs[103X.[133X
+  
+  [33X[0;0YNo tests for validity of the input are performed.[133X
+  
+  [1X45.10-1 ProjectedPcElement[101X
+  
+  [33X[1;0Y[29X[2XProjectedPcElement[102X( [3Xpcgs[103X, [3Xfpcgs[103X, [3Xelm[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the image in [3XH[103X of an element [3Xelm[103X of [3XG[103X.[133X
+  
+  [1X45.10-2 ProjectedInducedPcgs[101X
+  
+  [33X[1;0Y[29X[2XProjectedInducedPcgs[102X( [3Xpcgs[103X, [3Xfpcgs[103X, [3Xipcgs[103X ) [32X function[133X
+  
+  [33X[0;0Y[3Xipcgs[103X  must  be an induced pcgs with respect to [3Xpcgs[103X. This operation returns
+  an induced pcgs with respect to [3Xfpcgs[103X consisting of the nontrivial images of
+  [3Xipcgs[103X.[133X
+  
+  [1X45.10-3 LiftedPcElement[101X
+  
+  [33X[1;0Y[29X[2XLiftedPcElement[102X( [3Xpcgs[103X, [3Xfpcgs[103X, [3Xelm[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns a preimage in [3XG[103X of an element [3Xelm[103X of [3XH[103X.[133X
+  
+  [1X45.10-4 LiftedInducedPcgs[101X
+  
+  [33X[1;0Y[29X[2XLiftedInducedPcgs[102X( [3Xpcgs[103X, [3Xfpcgs[103X, [3Xipcgs[103X, [3Xker[103X ) [32X function[133X
+  
+  [33X[0;0Y[3Xipcgs[103X  must be an induced pcgs with respect to [3Xfpcgs[103X. This operation returns
+  an  induced  pcgs with respect to [3Xpcgs[103X consisting of the preimages of [3Xipcgs[103X,
+  appended  by  the elements in [3Xker[103X (assuming there is a bijection of [3Xpcgs[103X mod
+  [3Xker[103X to [3Xfpcgs[103X). [3Xker[103X might be a simple element list.[133X
+  
+  
+  [1X45.11 [33X[0;0YPcgs and Normal Series[133X[101X
+  
+  [33X[0;0YBy  definition,  a  pcgs  determines  a  pc  series of its underlying group.
+  However,  in  many  applications  it  will  be necessary that this pc series
+  refines  a  normal  series  with  certain  properties; for example, a normal
+  series with abelian factors.[133X
+  
+  [33X[0;0YThere  are  functions  in [5XGAP[105X to compute a pcgs through a normal series with
+  elementary  abelian factors, a central series or the lower p-central series.
+  See also Section [14X45.13[114X for a more explicit possibility.[133X
+  
+  [1X45.11-1 IsPcgsElementaryAbelianSeries[101X
+  
+  [33X[1;0Y[29X[2XIsPcgsElementaryAbelianSeries[102X( [3Xpcgs[103X ) [32X property[133X
+  
+  [33X[0;0Yreturns  [9Xtrue[109X  if  the  pcgs  [3Xpcgs[103X  refines  an  elementary  abelian series.
+  [2XIndicesEANormalSteps[102X  ([14X45.11-3[114X) then gives the indices in the Pcgs, at which
+  the subgroups of this series start.[133X
+  
+  [1X45.11-2 PcgsElementaryAbelianSeries[101X
+  
+  [33X[1;0Y[29X[2XPcgsElementaryAbelianSeries[102X( [3XG[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XPcgsElementaryAbelianSeries[102X( [3Xlist[103X ) [32X attribute[133X
+  
+  [33X[0;0Ycomputes   a   pcgs  for  [3XG[103X  that  refines  an  elementary  abelian  series.
+  [2XIndicesEANormalSteps[102X  ([14X45.11-3[114X)  gives the indices in the pcgs, at which the
+  normal  subgroups  of  this  series start. The second variant returns a pcgs
+  that runs through the normal subgroups in the list [3Xlist[103X.[133X
+  
+  [1X45.11-3 IndicesEANormalSteps[101X
+  
+  [33X[1;0Y[29X[2XIndicesEANormalSteps[102X( [3Xpcgs[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XIndicesEANormalStepsBounded[102X( [3Xpcgs[103X, [3Xbound[103X ) [32X function[133X
+  
+  [33X[0;0YLet [3Xpcgs[103X be a pcgs obtained as corresponding to a series of normal subgroups
+  with    elementary    abelian    factors    (for    example   from   calling
+  [2XPcgsElementaryAbelianSeries[102X  ([14X45.11-2[114X))  Then [2XIndicesEANormalSteps[102X returns a
+  sorted  list  of integers, indicating the tails of [3Xpcgs[103X which generate these
+  normal  subgroup of [3XG[103X. If [22Xi[122X is an element of this list, [22X(g_i, ..., g_n)[122X is a
+  normal  subgroup  of  [3XG[103X.  The  list  always starts with [22X1[122X and ends with [22Xn+1[122X.
+  (These  indices  form  [13Xone[113X  series  with  elementary abelian subfactors, not
+  necessarily the most refined one.)[133X
+  
+  [33X[0;0YThe  attribute  [2XEANormalSeriesByPcgs[102X  ([14X45.11-4[114X) returns the actual series of
+  subgroups.[133X
+  
+  [33X[0;0YFor  arbitrary pcgs not obtained as belonging to a special series such a set
+  of   indices   not  necessarily  exists,  and  [2XIndicesEANormalSteps[102X  is  not
+  guaranteed to work in this situation.[133X
+  
+  [33X[0;0YTypically,   [2XIndicesEANormalSteps[102X   is  set  by  [2XPcgsElementaryAbelianSeries[102X
+  ([14X45.11-2[114X).[133X
+  
+  [33X[0;0YThe  variant  [2XIndicesEANormalStepsBounded[102X  will aim to ensure that no factor
+  will be larger than the given bound.[133X
+  
+  [1X45.11-4 EANormalSeriesByPcgs[101X
+  
+  [33X[1;0Y[29X[2XEANormalSeriesByPcgs[102X( [3Xpcgs[103X ) [32X attribute[133X
+  
+  [33X[0;0YLet [3Xpcgs[103X be a pcgs obtained as corresponding to a series of normal subgroups
+  with    elementary    abelian    factors    (for    example   from   calling
+  [2XPcgsElementaryAbelianSeries[102X  ([14X45.11-2[114X)).  This  attribute returns the actual
+  series of normal subgroups, corresponding to [2XIndicesEANormalSteps[102X ([14X45.11-3[114X).[133X
+  
+  [1X45.11-5 IsPcgsCentralSeries[101X
+  
+  [33X[1;0Y[29X[2XIsPcgsCentralSeries[102X( [3Xpcgs[103X ) [32X property[133X
+  
+  [33X[0;0Yreturns  [9Xtrue[109X if the pcgs [3Xpcgs[103X refines an central elementary abelian series.
+  [2XIndicesCentralNormalSteps[102X  ([14X45.11-7[114X)  then gives the indices in the pcgs, at
+  which the subgroups of this series start.[133X
+  
+  [1X45.11-6 PcgsCentralSeries[101X
+  
+  [33X[1;0Y[29X[2XPcgsCentralSeries[102X( [3XG[103X ) [32X attribute[133X
+  
+  [33X[0;0Ycomputes  a  pcgs  for  [3XG[103X  that refines a central elementary abelian series.
+  [2XIndicesCentralNormalSteps[102X  ([14X45.11-7[114X) gives the indices in the pcgs, at which
+  the normal subgroups of this series start.[133X
+  
+  [1X45.11-7 IndicesCentralNormalSteps[101X
+  
+  [33X[1;0Y[29X[2XIndicesCentralNormalSteps[102X( [3Xpcgs[103X ) [32X attribute[133X
+  
+  [33X[0;0YLet [3Xpcgs[103X be a pcgs obtained as corresponding to a series of normal subgroups
+  with   central   elementary   abelian  factors  (for  example  from  calling
+  [2XPcgsCentralSeries[102X   ([14X45.11-6[114X)).  Then  [2XIndicesCentralNormalSteps[102X  returns  a
+  sorted  list  of integers, indicating the tails of [3Xpcgs[103X which generate these
+  normal subgroups of [3XG[103X. If [22Xi[122X is an element of this list, [22X(g_i, ..., g_n)[122X is a
+  normal  subgroup  of  [3XG[103X.  The  list  always starts with [22X1[122X and ends with [22Xn+1[122X.
+  (These  indices  form [13Xone[113X series with central elementary abelian subfactors,
+  not necessarily the most refined one.)[133X
+  
+  [33X[0;0YThe  attribute [2XCentralNormalSeriesByPcgs[102X ([14X45.11-8[114X) returns the actual series
+  of subgroups.[133X
+  
+  [33X[0;0YFor  arbitrary pcgs not obtained as belonging to a special series such a set
+  of  indices  not  necessarily  exists,  and [2XIndicesCentralNormalSteps[102X is not
+  guaranteed to work in this situation.[133X
+  
+  [33X[0;0YTypically, [2XIndicesCentralNormalSteps[102X is set by [2XPcgsCentralSeries[102X ([14X45.11-6[114X).[133X
+  
+  [1X45.11-8 CentralNormalSeriesByPcgs[101X
+  
+  [33X[1;0Y[29X[2XCentralNormalSeriesByPcgs[102X( [3Xpcgs[103X ) [32X attribute[133X
+  
+  [33X[0;0YLet [3Xpcgs[103X be a pcgs obtained as corresponding to a series of normal subgroups
+  with   central   elementary   abelian  factors  (for  example  from  calling
+  [2XPcgsCentralSeries[102X  ([14X45.11-6[114X)).  This  attribute returns the actual series of
+  normal subgroups, corresponding to [2XIndicesCentralNormalSteps[102X ([14X45.11-7[114X).[133X
+  
+  [1X45.11-9 IsPcgsPCentralSeriesPGroup[101X
+  
+  [33X[1;0Y[29X[2XIsPcgsPCentralSeriesPGroup[102X( [3Xpcgs[103X ) [32X property[133X
+  
+  [33X[0;0Yreturns  [9Xtrue[109X if the pcgs [3Xpcgs[103X refines a [22Xp[122X-central elementary abelian series
+  for  a  [22Xp[122X-group.  [2XIndicesPCentralNormalStepsPGroup[102X ([14X45.11-11[114X) then gives the
+  indices in the pcgs, at which the subgroups of this series start.[133X
+  
+  [1X45.11-10 PcgsPCentralSeriesPGroup[101X
+  
+  [33X[1;0Y[29X[2XPcgsPCentralSeriesPGroup[102X( [3XG[103X ) [32X attribute[133X
+  
+  [33X[0;0Ycomputes  a  pcgs  for  the  [22Xp[122X-group  [3XG[103X  that refines a [22Xp[122X-central elementary
+  abelian   series.   [2XIndicesPCentralNormalStepsPGroup[102X  ([14X45.11-11[114X)  gives  the
+  indices in the pcgs, at which the normal subgroups of this series start.[133X
+  
+  [1X45.11-11 IndicesPCentralNormalStepsPGroup[101X
+  
+  [33X[1;0Y[29X[2XIndicesPCentralNormalStepsPGroup[102X( [3Xpcgs[103X ) [32X attribute[133X
+  
+  [33X[0;0YLet [3Xpcgs[103X be a pcgs obtained as corresponding to a series of normal subgroups
+  with   [22Xp[122X-central  elementary  abelian  factors  (for  example  from  calling
+  [2XPcgsPCentralSeriesPGroup[102X  ([14X45.11-10[114X)). Then [2XIndicesPCentralNormalStepsPGroup[102X
+  returns  a  sorted  list  of  integers,  indicating  the tails of [3Xpcgs[103X which
+  generate these normal subgroups of [3XG[103X. If [22Xi[122X is an element of this list, [22X(g_i,
+  ...,  g_n)[122X is a normal subgroup of [3XG[103X. The list always starts with [22X1[122X and ends
+  with  [22Xn+1[122X.  (These  indices  form [13Xone[113X series with central elementary abelian
+  subfactors, not necessarily the most refined one.)[133X
+  
+  [33X[0;0YThe attribute [2XPCentralNormalSeriesByPcgsPGroup[102X ([14X45.11-12[114X) returns the actual
+  series of subgroups.[133X
+  
+  [33X[0;0YFor  arbitrary pcgs not obtained as belonging to a special series such a set
+  of  indices  not necessarily exists, and [2XIndicesPCentralNormalStepsPGroup[102X is
+  not guaranteed to work in this situation.[133X
+  
+  [33X[0;0YTypically,       [2XIndicesPCentralNormalStepsPGroup[102X       is       set      by
+  [2XPcgsPCentralSeriesPGroup[102X ([14X45.11-10[114X).[133X
+  
+  [1X45.11-12 PCentralNormalSeriesByPcgsPGroup[101X
+  
+  [33X[1;0Y[29X[2XPCentralNormalSeriesByPcgsPGroup[102X( [3Xpcgs[103X ) [32X attribute[133X
+  
+  [33X[0;0YLet [3Xpcgs[103X be a pcgs obtained as corresponding to a series of normal subgroups
+  with   [22Xp[122X-central  elementary  abelian  factors  (for  example  from  calling
+  [2XPcgsPCentralSeriesPGroup[102X  ([14X45.11-10[114X)).  This  attribute  returns  the actual
+  series        of        normal       subgroups,       corresponding       to
+  [2XIndicesPCentralNormalStepsPGroup[102X ([14X45.11-11[114X).[133X
+  
+  [1X45.11-13 IsPcgsChiefSeries[101X
+  
+  [33X[1;0Y[29X[2XIsPcgsChiefSeries[102X( [3Xpcgs[103X ) [32X property[133X
+  
+  [33X[0;0Yreturns    [9Xtrue[109X    if    the    pcgs    [3Xpcgs[103X   refines   a   chief   series.
+  [2XIndicesChiefNormalSteps[102X  ([14X45.11-15[114X)  then  gives the indices in the pcgs, at
+  which the subgroups of this series start.[133X
+  
+  [1X45.11-14 PcgsChiefSeries[101X
+  
+  [33X[1;0Y[29X[2XPcgsChiefSeries[102X( [3XG[103X ) [32X attribute[133X
+  
+  [33X[0;0Ycomputes  a  pcgs for [3XG[103X that refines a chief series. [2XIndicesChiefNormalSteps[102X
+  ([14X45.11-15[114X)  gives  the indices in the pcgs, at which the normal subgroups of
+  this series start.[133X
+  
+  [1X45.11-15 IndicesChiefNormalSteps[101X
+  
+  [33X[1;0Y[29X[2XIndicesChiefNormalSteps[102X( [3Xpcgs[103X ) [32X attribute[133X
+  
+  [33X[0;0YLet  [3Xpcgs[103X  be a pcgs obtained as corresponding to a chief series for example
+  from   calling  [2XPcgsChiefSeries[102X  ([14X45.11-14[114X)).  Then  [2XIndicesChiefNormalSteps[102X
+  returns  a  sorted  list  of  integers,  indicating  the tails of [3Xpcgs[103X which
+  generate these normal subgroups of [3XG[103X. If [22Xi[122X is an element of this list, [22X(g_i,
+  ...,  g_n)[122X is a normal subgroup of [3XG[103X. The list always starts with [22X1[122X and ends
+  with [22Xn+1[122X. (These indices form [13Xone[113X series with elementary abelian subfactors,
+  not necessarily the most refined one.)[133X
+  
+  [33X[0;0YThe  attribute  [2XChiefNormalSeriesByPcgs[102X ([14X45.11-16[114X) returns the actual series
+  of subgroups.[133X
+  
+  [33X[0;0YFor  arbitrary pcgs not obtained as belonging to a special series such a set
+  of  indices  not  necessarily  exists,  and  [2XIndicesChiefNormalSteps[102X  is not
+  guaranteed to work in this situation.[133X
+  
+  [33X[0;0YTypically, [2XIndicesChiefNormalSteps[102X is set by [2XPcgsChiefSeries[102X ([14X45.11-14[114X).[133X
+  
+  [1X45.11-16 ChiefNormalSeriesByPcgs[101X
+  
+  [33X[1;0Y[29X[2XChiefNormalSeriesByPcgs[102X( [3Xpcgs[103X ) [32X attribute[133X
+  
+  [33X[0;0YLet  [3Xpcgs[103X be a pcgs obtained as corresponding to a chief series (for example
+  from  calling [2XPcgsChiefSeries[102X ([14X45.11-14[114X)). This attribute returns the actual
+  series   of   normal  subgroups,  corresponding  to  [2XIndicesChiefNormalSteps[102X
+  ([14X45.11-15[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,2,3,4),(1,2));;[127X[104X
+    [4X[25Xgap>[125X [27Xp:=PcgsElementaryAbelianSeries(g);[127X[104X
+    [4X[28XPcgs([ (3,4), (2,4,3), (1,4)(2,3), (1,3)(2,4) ])[128X[104X
+    [4X[25Xgap>[125X [27XIndicesEANormalSteps(p);[127X[104X
+    [4X[28X[ 1, 2, 3, 5 ][128X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,2,3,4),(1,5)(2,6)(3,7)(4,8));;[127X[104X
+    [4X[25Xgap>[125X [27Xp:=PcgsCentralSeries(g);[127X[104X
+    [4X[28XPcgs([ (1,5)(2,6)(3,7)(4,8), (5,6,7,8), (5,7)(6,8),[128X[104X
+    [4X[28X  (1,4,3,2)(5,6,7,8), (1,3)(2,4)(5,7)(6,8) ])[128X[104X
+    [4X[25Xgap>[125X [27XIndicesCentralNormalSteps(p);[127X[104X
+    [4X[28X[ 1, 2, 4, 5, 6 ][128X[104X
+    [4X[25Xgap>[125X [27Xq:=PcgsPCentralSeriesPGroup(g);[127X[104X
+    [4X[28XPcgs([ (1,5)(2,6)(3,7)(4,8), (5,6,7,8), (5,7)(6,8),[128X[104X
+    [4X[28X  (1,4,3,2)(5,6,7,8), (1,3)(2,4)(5,7)(6,8) ])[128X[104X
+    [4X[25Xgap>[125X [27XIndicesPCentralNormalStepsPGroup(q);[127X[104X
+    [4X[28X[ 1, 3, 5, 6 ][128X[104X
+  [4X[32X[104X
+  
+  [1X45.11-17 IndicesNormalSteps[101X
+  
+  [33X[1;0Y[29X[2XIndicesNormalSteps[102X( [3Xpcgs[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the  indices of [13Xall[113X steps in the pc series, which are normal in the
+  group defined by the pcgs.[133X
+  
+  [33X[0;0Y(In  general,  this  function  yields  a  slower  performance  than the more
+  specialized index functions for elementary abelian series etc.)[133X
+  
+  [1X45.11-18 NormalSeriesByPcgs[101X
+  
+  [33X[1;0Y[29X[2XNormalSeriesByPcgs[102X( [3Xpcgs[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the  subgroups the pc series, which are normal in the group defined
+  by the pcgs.[133X
+  
+  [33X[0;0Y(In  general,  this  function  yields  a  slower  performance  than the more
+  specialized index functions for elementary abelian series etc.)[133X
+  
+  
+  [1X45.12 [33X[0;0YSum and Intersection of Pcgs[133X[101X
+  
+  [1X45.12-1 SumFactorizationFunctionPcgs[101X
+  
+  [33X[1;0Y[29X[2XSumFactorizationFunctionPcgs[102X( [3Xparentpcgs[103X, [3Xn[103X, [3Xu[103X, [3Xkerpcgs[103X ) [32X operation[133X
+  
+  [33X[0;0Ycomputes  the  sum and intersection of the lists [3Xn[103X and [3Xu[103X whose elements form
+  modulo pcgs induced by [3Xparentpcgs[103X for two subgroups modulo a kernel given by
+  [3Xkerpcgs[103X.  If  [3Xkerpcgs[103X  is a tail if the [3Xparent-pcgs[103X it is sufficient to give
+  the starting depth, this can be more efficient than to construct an explicit
+  pcgs.  The  factor  group  modulo  [3Xkerpcgs[103X generated by [3Xn[103X must be elementary
+  abelian and normal under [3Xu[103X.[133X
+  
+  [33X[0;0YThe function returns a record with components[133X
+  
+  [8X[10Xsum[110X[8X[108X
+        [33X[0;6Yelements that form a modulo pcgs for the span of both subgroups.[133X
+  
+  [8X[10Xintersection[110X[8X[108X
+        [33X[0;6Yelements  that  form  a  modulo  pcgs  for  the  intersection  of both
+        subgroups.[133X
+  
+  [8X[10Xfactorization[110X[8X[108X
+        [33X[0;6Ya  function  that returns for an element [3Xx[103X in the span of [10Xsum[110X a record
+        with components [10Xu[110X and [10Xn[110X that give its decomposition.[133X
+  
+  [33X[0;0YThe record components [10Xsum[110X and [10Xintersection[110X are [13Xnot[113X pcgs but only lists of pc
+  elements (to avoid unnecessary creation of induced pcgs).[133X
+  
+  
+  [1X45.13 [33X[0;0YSpecial Pcgs[133X[101X
+  
+  [33X[0;0YIn  short,  a special pcgs is a pcgs which has particularly nice properties,
+  for  example it always refines an elementary abelian series, for [22Xp[122X-groups it
+  even  refines  a  central  series. These nice properties permit particularly
+  efficient algorithms.[133X
+  
+  [33X[0;0YLet  [3XG[103X  be a finite polycyclic group. A [13Xspecial pcgs[113X of [3XG[103X is a pcgs which is
+  closely  related to a Hall system and the maximal subgroups of [3XG[103X. These pcgs
+  have  been  introduced  by C. R. Leedham-Green who also gave an algorithm to
+  compute  them. Improvements to this algorithm are due to Bettina Eick. For a
+  more detailed account of their definition the reader is referred to [Eic97][133X
+  
+  [33X[0;0YTo  introduce  the  definition  of  special pcgs we first need to define the
+  [13XLG-series[113X and [13Xhead complements[113X of a finite polycyclic group [3XG[103X. Let [22XG = G_1 >
+  G_2 > ... G_m > G_{m+1} = { 1 }[122X be the lower nilpotent series of [22XG[122X; that is,
+  [22XG_i[122X  is  the  smallest  normal subgroup of [22XG_{i-1}[122X with nilpotent factor. To
+  obtain  the  LG-series  of  [3XG[103X we need to refine this series. Thus consider a
+  factor  [22XF_i  := G_i / G_{i+1}[122X. Since [22XF_i[122X is finite nilpotent, it is a direct
+  product  of  its  Sylow  subgroups [22XF_i = P_{i,1} ⋯ P_{i,r_i}[122X. For each Sylow
+  [22Xp_j[122X-subgroup [22XP_{i,j}[122X we can consider its lower [22Xp_j[122X-central series. To obtain
+  a  characteristic  central  series with elementary abelian factors of [22XF_i[122X we
+  loop over its Sylow subgroups. Each time we consider [22XP_{i,j}[122X in this process
+  we  take  the  next  step of its lower [22Xp_j[122X-central series into the series of
+  [22XF_i[122X.  If  there  is  no  next  step,  then we just skip the consideration of
+  [22XP_{i,j}[122X.  Note  that  the  second  term  of  the lower [22Xp[122X-central series of a
+  [22Xp[122X-group  is in fact its Frattini subgroup. Thus the Frattini subgroup of [22XF_i[122X
+  is  contained  in  the computed series of this group. We denote the Frattini
+  subgroup of [22XF_i = G_i / G_{i+1}[122X by [22XG_i^* / G_{i+1}[122X.[133X
+  
+  [33X[0;0YThe  factors  [22XG_i  /  G_i^*[122X  are  called the heads of [22XG[122X, while the (possibly
+  trivial)  factors [22XG_i^* / G_{i+1}[122X are the tails of [22XG[122X. A head complement of [22XG[122X
+  is  a  subgroup [22XU[122X of [22XG[122X such that [22XU / G_i^*[122X is a complement to the head [22XG_i /
+  G_i^*[122X in [22XG / G_i^*[122X for some [22Xi[122X.[133X
+  
+  [33X[0;0YNow  we are able to define a special pcgs of [3XG[103X. It is a pcgs of [3XG[103X with three
+  additional  properties.  First, the pc series determined by the pcgs refines
+  the  LG-series  of  [3XG[103X.  Second, a special pcgs [13Xexhibits[113X a Hall system of the
+  group  [3XG[103X;  that  is,  for each set of primes [22Xπ[122X the elements of the pcgs with
+  relative  order in [22Xπ[122X form a pcgs of a Hall [22Xπ[122X-subgroup in a Hall system of [3XG[103X.
+  Third, a special pcgs exhibits a head complement for each head of [3XG[103X.[133X
+  
+  [33X[0;0YTo  record  information  about the LG-series with the special pcgs we define
+  the [13XLGWeights[113X of the special pcgs. These weights are a list which contains a
+  weight [22Xw[122X for each elements [22Xg[122X of the special pcgs. Such a weight [22Xw[122X represents
+  the smallest subgroup of the LG-series containing [22Xg[122X.[133X
+  
+  [33X[0;0YSince the LG-series is defined in terms of the lower nilpotent series, Sylow
+  subgroups  of  the factors and lower [22Xp[122X-central series of the Sylow subgroup,
+  the  weight [22Xw[122X is a triple. More precisely, [22Xg[122X is contained in the [22Xw[1][122Xth term
+  [22XU[122X  of  the  lower  nilpotent series of [3XG[103X, but not in the next smaller one [22XV[122X.
+  Then  [22Xw[3][122X  is a prime such that [22Xg V[122X is contained in the Sylow [22Xw[3][122X-subgroup
+  [22XP/V[122X  of  [22XU/V[122X.  Moreover,  [22XgV[122X  is  contained  in the [22Xw[2][122Xth term of the lower
+  [22Xp[122X-central series of [22XP/V[122X.[133X
+  
+  [33X[0;0YThere are two more attributes of a special pcgs containing information about
+  the  LG-series:  the  list [13XLGLayers[113X and the list [13XLGFirst[113X. The list of layers
+  corresponds to the elements of the special pcgs and denotes the layer of the
+  LG-series  in  which  an  element  lies. The list LGFirst corresponds to the
+  LG-series  and  gives the number of the first element in the special pcgs of
+  the corresponding subgroup.[133X
+  
+  [1X45.13-1 IsSpecialPcgs[101X
+  
+  [33X[1;0Y[29X[2XIsSpecialPcgs[102X( [3Xobj[103X ) [32X property[133X
+  
+  [33X[0;0Ytests whether [3Xobj[103X is a special pcgs.[133X
+  
+  
+  [1X45.13-2 [33X[0;0YSpecialPcgs[133X[101X
+  
+  [33X[1;0Y[29X[2XSpecialPcgs[102X( [3Xpcgs[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XSpecialPcgs[102X( [3XG[103X ) [32X attribute[133X
+  
+  [33X[0;0Ycomputes a special pcgs for the group defined by [3Xpcgs[103X or for [3XG[103X.[133X
+  
+  [1X45.13-3 LGWeights[101X
+  
+  [33X[1;0Y[29X[2XLGWeights[102X( [3Xpcgs[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns the LGWeights of the special pcgs [3Xpcgs[103X.[133X
+  
+  [1X45.13-4 LGLayers[101X
+  
+  [33X[1;0Y[29X[2XLGLayers[102X( [3Xpcgs[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns the layers of the special pcgs [3Xpcgs[103X.[133X
+  
+  [1X45.13-5 LGFirst[101X
+  
+  [33X[1;0Y[29X[2XLGFirst[102X( [3Xpcgs[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns the first indices for each layer of the special pcgs [3Xpcgs[103X.[133X
+  
+  [1X45.13-6 LGLength[101X
+  
+  [33X[1;0Y[29X[2XLGLength[102X( [3XG[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the  length  of the LG-series of the group [3XG[103X, if [3XG[103X is solvable, and
+  [9Xfail[109X otherwise.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := SmallGroup( 96, 220 );[127X[104X
+    [4X[28X<pc group of size 96 with 6 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xspec := SpecialPcgs( G );[127X[104X
+    [4X[28XPcgs([ f1, f2, f3, f4, f5, f6 ])[128X[104X
+    [4X[25Xgap>[125X [27XLGWeights(spec);[127X[104X
+    [4X[28X[ [ 1, 1, 2 ], [ 1, 1, 2 ], [ 1, 1, 2 ], [ 1, 1, 2 ], [ 1, 1, 3 ],[128X[104X
+    [4X[28X  [ 1, 2, 2 ] ][128X[104X
+    [4X[25Xgap>[125X [27XLGLayers(spec);[127X[104X
+    [4X[28X[ 1, 1, 1, 1, 2, 3 ][128X[104X
+    [4X[25Xgap>[125X [27XLGFirst(spec);[127X[104X
+    [4X[28X[ 1, 5, 6, 7 ][128X[104X
+    [4X[25Xgap>[125X [27XLGLength( G );[127X[104X
+    [4X[28X3[128X[104X
+    [4X[25Xgap>[125X [27Xp := SpecialPcgs( Pcgs( SmallGroup( 96, 120 ) ) );[127X[104X
+    [4X[28XPcgs([ f1, f2, f3, f4, f5, f6 ])[128X[104X
+    [4X[25Xgap>[125X [27XLGWeights(p);[127X[104X
+    [4X[28X[ [ 1, 1, 2 ], [ 1, 1, 2 ], [ 1, 1, 2 ], [ 1, 2, 2 ], [ 1, 3, 2 ],[128X[104X
+    [4X[28X  [ 2, 1, 3 ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThus  the  first group, [10XSmallGroup(96, 220)[110X, has a lower nilpotent series of
+  length  [22X1[122X;  that  is,  the group is nilpotent. It is a direct product of its
+  Sylow  subgroups. Moreover the Sylow [22X2[122X-subgroup is generated by the elements
+  [10Xf1,  f2,  f3, f4, f6[110X, and the Sylow [22X3[122X-subgroup is generated by [10Xf5[110X. The lower
+  [22X2[122X-central  series  of  the  Sylow  [22X2[122X-subgroup  has  length  [22X2[122X and the second
+  subgroup in this series is generated by [10Xf6[110X.[133X
+  
+  [33X[0;0YThe  second  group,  [10XSmallGroup(96,  120)[110X,  has  a lower nilpotent series of
+  length  [22X2[122X  and hence is not nilpotent. The second subgroup in this series is
+  just  the Sylow [22X3[122X-subgroup and it is generated by [10Xf6[110X. The subgroup generated
+  by [10Xf1[110X, [22X...[122X, [10Xf5[110X is a Sylow [22X2[122X-subgroup of the group and also a head complement
+  to the second head of the group. Its lower [22X2[122X-central series has length [22X2[122X.[133X
+  
+  [33X[0;0YIn  this  example  the  [2XFamilyPcgs[102X  ([14X46.1-1[114X)  value of the groups used was a
+  special  pcgs, but this is not necessarily the case. For performance reasons
+  it can be worth to enforce this, see [2XIsomorphismSpecialPcGroup[102X ([14X46.5-3[114X).[133X
+  
+  [1X45.13-7 IsInducedPcgsWrtSpecialPcgs[101X
+  
+  [33X[1;0Y[29X[2XIsInducedPcgsWrtSpecialPcgs[102X( [3Xpcgs[103X ) [32X property[133X
+  
+  [33X[0;0Ytests whether [3Xpcgs[103X is induced with respect to a special pcgs.[133X
+  
+  [1X45.13-8 InducedPcgsWrtSpecialPcgs[101X
+  
+  [33X[1;0Y[29X[2XInducedPcgsWrtSpecialPcgs[102X( [3XG[103X ) [32X attribute[133X
+  
+  [33X[0;0Ycomputes  an  induced pcgs with respect to the special pcgs of the parent of
+  [3XG[103X.[133X
+  
+  [33X[0;0Y[2XInducedPcgsWrtSpecialPcgs[102X  will  return  a  pcgs  induced  by [13Xa[113X special pcgs
+  (which  might  differ  from the one you had in mind). If you need an induced
+  pcgs  compatible with a [13Xgiven[113X special pcgs use [2XInducedPcgs[102X ([14X45.7-4[114X) for this
+  special pcgs.[133X
+  
+  
+  [1X45.14 [33X[0;0YAction on Subfactors Defined by a Pcgs[133X[101X
+  
+  [33X[0;0YWhen  working  with  a  polycyclic  group, one often needs to compute matrix
+  operations of the group on a factor of the group. For this purpose there are
+  the functions described in [14X45.14-1[114X to [14X45.14-3[114X.[133X
+  
+  [33X[0;0YIn  certain  situations,  for  example  within  the computation of conjugacy
+  classes  of  finite soluble groups as described in [MN89], affine actions of
+  groups   are   required.   For  this  purpose  we  introduce  the  functions
+  [2XAffineAction[102X ([14X45.14-4[114X) and [2XAffineActionLayer[102X ([14X45.14-5[114X).[133X
+  
+  [1X45.14-1 VectorSpaceByPcgsOfElementaryAbelianGroup[101X
+  
+  [33X[1;0Y[29X[2XVectorSpaceByPcgsOfElementaryAbelianGroup[102X( [3Xmpcgs[103X, [3Xfld[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  the  vector  space over [3Xfld[103X corresponding to the modulo pcgs [3Xmpcgs[103X.
+  Note  that  [3Xmpcgs[103X has to define an elementary abelian [22Xp[122X-group where [22Xp[122X is the
+  characteristic of [3Xfld[103X.[133X
+  
+  [1X45.14-2 LinearAction[101X
+  
+  [33X[1;0Y[29X[2XLinearAction[102X( [3Xgens[103X, [3Xbasisvectors[103X, [3Xlinear[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XLinearOperation[102X( [3Xgens[103X, [3Xbasisvectors[103X, [3Xlinear[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  a list of matrices, one for each element of [3Xgens[103X, which corresponds
+  to  the  matrix action of the elements in [3Xgens[103X on the basis [3Xbasisvectors[103X via
+  [3Xlinear[103X.[133X
+  
+  [1X45.14-3 LinearActionLayer[101X
+  
+  [33X[1;0Y[29X[2XLinearActionLayer[102X( [3XG[103X, [3Xgens[103X, [3Xpcgs[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XLinearOperationLayer[102X( [3XG[103X, [3Xgens[103X, [3Xpcgs[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  a list of matrices, one for each element of [3Xgens[103X, which corresponds
+  to  the  matrix  action of [3XG[103X on the vector space corresponding to the modulo
+  pcgs [3Xpcgs[103X.[133X
+  
+  [1X45.14-4 AffineAction[101X
+  
+  [33X[1;0Y[29X[2XAffineAction[102X( [3Xgens[103X, [3Xbasisvectors[103X, [3Xlinear[103X, [3Xtransl[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturn  a  list of matrices, one for each element of [3Xgens[103X, which corresponds
+  to  the  affine action of the elements in [3Xgens[103X on the basis [3Xbasisvectors[103X via
+  [3Xlinear[103X with translation [3Xtransl[103X.[133X
+  
+  [1X45.14-5 AffineActionLayer[101X
+  
+  [33X[1;0Y[29X[2XAffineActionLayer[102X( [3XG[103X, [3Xgens[103X, [3Xpcgs[103X, [3Xtransl[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  a list of matrices, one for each element of [3Xgens[103X, which corresponds
+  to  the  affine  action of [3XG[103X on the vector space corresponding to the modulo
+  pcgs [3Xpcgs[103X with translation [3Xtransl[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := SmallGroup( 96, 51 );[127X[104X
+    [4X[28X<pc group of size 96 with 6 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xspec := SpecialPcgs( G );[127X[104X
+    [4X[28XPcgs([ f1, f2, f3, f4, f5, f6 ])[128X[104X
+    [4X[25Xgap>[125X [27XLGWeights( spec );[127X[104X
+    [4X[28X[ [ 1, 1, 2 ], [ 1, 1, 2 ], [ 1, 1, 3 ], [ 1, 2, 2 ], [ 1, 2, 2 ],[128X[104X
+    [4X[28X  [ 1, 3, 2 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xmpcgs := InducedPcgsByPcSequence( spec, spec{[4,5,6]} );[127X[104X
+    [4X[28XPcgs([ f4, f5, f6 ])[128X[104X
+    [4X[25Xgap>[125X [27Xnpcgs := InducedPcgsByPcSequence( spec, spec{[6]} );[127X[104X
+    [4X[28XPcgs([ f6 ])[128X[104X
+    [4X[25Xgap>[125X [27Xmodu := mpcgs mod npcgs;[127X[104X
+    [4X[28X[ f4, f5 ][128X[104X
+    [4X[25Xgap>[125X [27Xmat:=LinearActionLayer( G, spec{[1,2,3]}, modu );[127X[104X
+    [4X[28X[ <an immutable 2x2 matrix over GF2>,[128X[104X
+    [4X[28X  <an immutable 2x2 matrix over GF2>,[128X[104X
+    [4X[28X  <an immutable 2x2 matrix over GF2> ][128X[104X
+    [4X[25Xgap>[125X [27XPrint( mat, "\n" );[127X[104X
+    [4X[28X[ [ [ Z(2)^0, 0*Z(2) ], [ 0*Z(2), Z(2)^0 ] ],[128X[104X
+    [4X[28X  [ [ Z(2)^0, 0*Z(2) ], [ 0*Z(2), Z(2)^0 ] ],[128X[104X
+    [4X[28X  [ [ Z(2)^0, 0*Z(2) ], [ 0*Z(2), Z(2)^0 ] ] ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X45.15 [33X[0;0YOrbit Stabilizer Methods for Polycyclic Groups[133X[101X
+  
+  [33X[0;0YIf  a  pcgs  [3Xpcgs[103X is known for a group [3XG[103X, then orbits and stabilizers can be
+  computed  by  a  special  method  which is particularly efficient. Note that
+  within  this  function  only the elements in [3Xpcgs[103X and the relative orders of
+  [3Xpcgs[103X  are  needed.  Hence  this  function  works  effectively  even  if  the
+  elementary operations for [3Xpcgs[103X are slow.[133X
+  
+  [1X45.15-1 StabilizerPcgs[101X
+  
+  [33X[1;0Y[29X[2XStabilizerPcgs[102X( [3Xpcgs[103X, [3Xpnt[103X[, [3Xacts[103X][, [3Xact[103X] ) [32X function[133X
+  
+  [33X[0;0Ycomputes  the stabilizer in the group generated by [3Xpcgs[103X of the point [3Xpnt[103X. If
+  given,  [3Xacts[103X  are  elements  by which [3Xpcgs[103X acts, [3Xact[103X is the acting function.
+  This  function  returns  a  pcgs  for the stabilizer which is induced by the
+  [10XParentPcgs[110X of [3Xpcgs[103X, that is it is compatible with [3Xpcgs[103X.[133X
+  
+  [1X45.15-2 Pcgs_OrbitStabilizer[101X
+  
+  [33X[1;0Y[29X[2XPcgs_OrbitStabilizer[102X( [3Xpcgs[103X, [3Xdomain[103X, [3Xpnt[103X, [3Xoprs[103X, [3Xopr[103X ) [32X function[133X
+  
+  [33X[0;0Yruns a solvable group orbit-stabilizer algorithm on [3Xpnt[103X with [3Xpcgs[103X acting via
+  the  images  [3Xoprs[103X  and  the operation function [3Xopr[103X. The domain [3Xdomain[103X can be
+  used to speed up search, if it is not known, [9Xfalse[109X can be given instead. The
+  function  returns  a record with components [10Xorbit[110X, [10Xstabpcgs[110X and [10Xlengths[110X, the
+  latter  indicating  the  lengths of the orbit whenever it got extended. This
+  can  be used to recompute transversal elements. This function should be used
+  only inside algorithms when speed is essential.[133X
+  
+  
+  [1X45.16 [33X[0;0YOperations which have Special Methods for Groups with Pcgs[133X[101X
+  
+  [33X[0;0YFor  the following operations there are special methods for groups with pcgs
+  installed:[133X
+  
+  [33X[0;0Y[2XIsNilpotentGroup[102X  ([14X39.15-3[114X),  [2XIsSupersolvableGroup[102X ([14X39.15-8[114X), [2XSize[102X ([14X30.4-6[114X),
+  [2XCompositionSeries[102X   ([14X39.17-5[114X),   [2XConjugacyClasses[102X   ([14X39.10-2[114X),   [2XCentralizer[102X
+  ([14X35.4-4[114X),   [2XFrattiniSubgroup[102X   ([14X39.12-6[114X),   [2XPrefrattiniSubgroup[102X   ([14X39.12-7[114X),
+  [2XMaximalSubgroups[102X  ([14X39.19-8[114X) and related operations, [2XHallSystem[102X ([14X39.13-6[114X) and
+  related   operations,   [2XMinimalGeneratingSet[102X   ([14X39.22-3[114X),  [2XCentre[102X  ([14X35.4-5[114X),
+  [2XIntersection[102X   ([14X30.5-2[114X),   [2XAutomorphismGroup[102X   ([14X40.7-1[114X),  [2XIrreducibleModules[102X
+  ([14X71.15-1[114X).[133X
+  
+  
+  [1X45.17 [33X[0;0YConjugacy Classes in Solvable Groups[133X[101X
+  
+  [33X[0;0YThere  are  a  variety  of  algorithms  to  compute  conjugacy  classes  and
+  centralizers  in  solvable  groups  via  epimorphic  images ([FN79], [MN89],
+  [The93]).  Usually  these are only invoked as methods, but it is possible to
+  access the algorithm directly.[133X
+  
+  [1X45.17-1 ClassesSolvableGroup[101X
+  
+  [33X[1;0Y[29X[2XClassesSolvableGroup[102X( [3XG[103X, [3Xmode[103X[, [3Xopt[103X] ) [32X function[133X
+  
+  [33X[0;0Ycomputes  conjugacy  classes  and  centralizers in solvable groups. [3XG[103X is the
+  acting group. [3Xmode[103X indicates the type of the calculation:[133X
+  
+  [33X[0;0Y0 Conjugacy classes[133X
+  
+  [33X[0;0Y4 Conjugacy test for the two elements in [3Xopt[103X[10X.candidates[110X[133X
+  
+  [33X[0;0YIn  mode  0  the  function  returns  a list of records containing components
+  [3Xrepresentative[103X and [3Xcentralizer[103X. In mode 4 it returns a conjugating element.[133X
+  
+  [33X[0;0YThe  optional  record  [3Xopt[103X  may  contain  the following components that will
+  affect the algorithm's behaviour:[133X
+  
+  [8X[10Xpcgs[110X[8X[108X
+        [33X[0;6Yis  a  pcgs  that  will  be  used  for  the calculation. The attribute
+        [2XEANormalSeriesByPcgs[102X  ([14X45.11-4[114X)  must  return an appropriate series of
+        normal  subgroups  with  elementary  abelian  factors  among them. The
+        algorithm  will  step down this series. In the case of the calculation
+        of rational classes, it must be a pcgs refining a central series.[133X
+  
+  [8X[10Xcandidates[110X[8X[108X
+        [33X[0;6Yis  a  list  of elements for which canonical representatives are to be
+        computed  or  for  which  a conjugacy test is performed. Both elements
+        must  lie  in [3XG[103X, but this is not tested. In mode 4 these elements must
+        be  given.  In mode 0 a list of classes corresponding to [10Xcandidates[110X is
+        returned  (which  may  contain duplicates). The [10Xrepresentative[110Xs chosen
+        are  canonical with respect to [10Xpcgs[110X. The records returned also contain
+        components [10Xoperator[110X such that [10Xcandidate ^ operator = representative[110X.[133X
+  
+  [8X[10Xconsider[110X[8X[108X
+        [33X[0;6Yis a function [10Xconsider( fhome, rep, cenp, K, L )[110X. Here [10Xfhome[110X is a home
+        pcgs  for  the factor group [22XF[122X in which the calculation currently takes
+        place,  [10Xrep[110X  is  an  element  of the factor and [10Xcenp[110X is a pcgs for the
+        centralizer  of  [10Xrep[110X modulo [10XK[110X. In mode 0, when lifting from [22XF[122X/[10XK[110X to [22XF[122X/[10XL[110X
+        (note: for efficiency reasons, [22XF[122X can be different from [3XG[103X or [10XL[110X might be
+        not  trivial)  this  function  is  called before performing the actual
+        lifting  and  only those representatives for which it returns [9Xtrue[109X are
+        passed  to the next level. This permits for example the calculation of
+        only  those  classes  with small centralizers or classes of restricted
+        orders.[133X
+  
+  [1X45.17-2 CentralizerSizeLimitConsiderFunction[101X
+  
+  [33X[1;0Y[29X[2XCentralizerSizeLimitConsiderFunction[102X( [3Xsz[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  a  function (with arguments [10Xfhome[110X, [10Xrep[110X, [10Xcen[110X, [10XK[110X, [10XL[110X) that can be used
+  in  [2XClassesSolvableGroup[102X  ([14X45.17-1[114X) as the [10Xconsider[110X component of the options
+  record. It will restrict the lifting to those classes, for which the size of
+  the centralizer (in the factor) is at most [3Xsz[103X.[133X
+  
+  [33X[0;0YSee also [2XSubgroupsSolvableGroup[102X ([14X39.21-3[114X).[133X
+  

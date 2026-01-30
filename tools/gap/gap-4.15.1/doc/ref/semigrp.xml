@@ -1,0 +1,149 @@
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %% -->
+<!-- %A  semigrp.xml                GAP documentation                Thomas Breuer -->
+<!-- %% -->
+<!-- %% -->
+<!-- %Y  (C) 1998 School Math and Comp. Sci., University of St Andrews, Scotland -->
+<!-- %Y  Copyright (C) 2002 The GAP Group -->
+<!-- %% -->
+
+<Chapter Label="Semigroups">
+<Heading>Semigroups and Monoids</Heading>
+
+This chapter describes functions for creating semigroups and monoids
+and determining information about them.
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="sect:IsSemigroup">
+<Heading>Semigroups</Heading>
+
+<#Include Label="IsSemigroup">
+<#Include Label="Semigroup">
+<#Include Label="Subsemigroup">
+<#Include Label="IsSubsemigroup">
+<#Include Label="SemigroupByGenerators">
+<#Include Label="AsSemigroup">
+<#Include Label="AsSubsemigroup">
+<#Include Label="GeneratorsOfSemigroup">
+<#Include Label="IsGeneratorsOfSemigroup">
+<#Include Label="FreeSemigroup">
+<#Include Label="SemigroupByMultiplicationTable">
+
+</Section>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+<Section Label="sect:IsMonoid">
+<Heading>Monoids</Heading>
+
+<#Include Label="IsMonoid">
+<#Include Label="Monoid">
+<#Include Label="Submonoid">
+<#Include Label="MonoidByGenerators">
+<#Include Label="AsMonoid">
+<#Include Label="AsSubmonoid">
+<#Include Label="GeneratorsOfMonoid">
+<#Include Label="TrivialSubmonoid">
+<#Include Label="FreeMonoid">
+<#Include Label="MonoidByMultiplicationTable">
+
+</Section>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+<#Include SYSTEM "invsgp.xml">
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Properties of Semigroups">
+<Heading>Properties of Semigroups</Heading>
+
+The following functions determine information
+about semigroups.
+
+<#Include Label="IsRegularSemigroup">
+<#Include Label="IsRegularSemigroupElement">
+<#Include Label="InversesOfSemigroupElement">
+<#Include Label="IsSimpleSemigroup">
+<#Include Label="IsZeroSimpleSemigroup">
+<#Include Label="IsZeroGroup">
+<#Include Label="IsReesCongruenceSemigroup">
+<#Include Label="IsInverseSemigroup">
+
+</Section>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Ideals of semigroups">
+<Heading>Ideals of semigroups</Heading>
+
+Ideals of semigroups are the same as ideals of the semigroup when
+considered as a magma.
+For documentation on ideals for magmas, see <Ref Func="Magma"/>.
+
+<#Include Label="SemigroupIdealByGenerators">
+<#Include Label="ReesCongruenceOfSemigroupIdeal">
+<#Include Label="IsLeftSemigroupIdeal">
+</Section>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Congruences on semigroups">
+<Heading>Congruences on semigroups</Heading>
+
+An equivalence or a congruence on a semigroup is the
+equivalence or congruence on the semigroup considered as a magma.
+So, to deal with equivalences and congruences on semigroups,
+magma functions are used.
+For documentation on equivalences and congruences on magmas,
+see <Ref Func="Magma"/>.
+
+<#Include Label="IsSemigroupCongruence">
+<#Include Label="IsReesCongruence">
+
+</Section>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Quotients">
+<Heading>Quotients</Heading>
+
+Given a semigroup and a congruence on the semigroup, one
+can construct a new semigroup: the quotient semigroup.
+The following functions deal with quotient semigroups in &GAP;.
+
+<#Include Label="[1]{semiquo}">
+<#Include Label="IsQuotientSemigroup">
+<#Include Label="HomomorphismQuotientSemigroup">
+<#Include Label="QuotientSemigroupPreimage">
+
+</Section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Green's Relations">
+<Heading>Green's Relations</Heading>
+
+<#Include Label="[1]{semirel}">
+<#Include Label="GreensRRelation">
+<#Include Label="IsGreensRelation">
+<#Include Label="IsGreensClass">
+<#Include Label="IsGreensLessThanOrEqual">
+<#Include Label="RClassOfHClass">
+<#Include Label="EggBoxOfDClass">
+<#Include Label="DisplayEggBoxOfDClass">
+<#Include Label="GreensRClassOfElement">
+<#Include Label="GreensRClasses">
+<#Include Label="GroupHClassOfGreensDClass">
+<#Include Label="IsGroupHClass">
+<#Include Label="IsRegularDClass">
+<#Include Label="DisplaySemigroup">
+
+</Section>
+
+<#Include SYSTEM "reesmat.xml">
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+</Chapter>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %% -->
+<!-- %E -->
+

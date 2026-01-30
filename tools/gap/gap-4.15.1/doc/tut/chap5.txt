@@ -1,0 +1,1086 @@
+  
+  [1X5 [33X[0;0YGroups and Homomorphisms[133X[101X
+  
+  [33X[0;0YIn  this  chapter  we  will show some computations with groups. The examples
+  deal  mostly with permutation groups, because they are the easiest to input.
+  The   functions   mentioned   here,  like  [2XGroup[102X  ([14XReference:  Group[114X),  [2XSize[102X
+  ([14XReference:  Size[114X) or [2XSylowSubgroup[102X ([14XReference: SylowSubgroup[114X), however, are
+  the  same for all kinds of groups, although the algorithms which compute the
+  information of course will be different in most cases.[133X
+  
+  
+  [1X5.1 [33X[0;0YPermutation groups[133X[101X
+  
+  [33X[0;0YPermutation  groups  are  so  easy  to  input  because their elements, i.e.,
+  permutations,  are  so  easy  to  type:  they  are  entered and displayed in
+  disjoint cycle notation. So let's construct a permutation group:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xs8 := Group( (1,2), (1,2,3,4,5,6,7,8) );[127X[104X
+    [4X[28XGroup([ (1,2), (1,2,3,4,5,6,7,8) ])[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe   formed   the   group   generated   by   the   permutations   [10X(1,2)[110X  and
+  [10X(1,2,3,4,5,6,7,8)[110X,  which  is  well  known  to be the symmetric group [22XS_8[122X on
+  eight  points,  and  assigned  it to the identifier [10Xs8[110X. Now [22XS_8[122X contains the
+  alternating  group  on  eight points which can be described in several ways,
+  e.g.,  as  the  group  of  all  even  permutations  in [10Xs8[110X, or as its derived
+  subgroup.  Once  we ask [5XGAP[105X to verify that the group is an alternating group
+  acting  in  its  natural permutation representation, the system will display
+  the group accordingly.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xa8 := DerivedSubgroup( s8 );[127X[104X
+    [4X[28XGroup([ (1,2,3), (2,4,3), (2,4,5), (2,5,6,3,4), (3,7,4), (2,6)[128X[104X
+    [4X[28X(4,7,8,5) ])[128X[104X
+    [4X[25Xgap>[125X [27XSize( a8 ); IsAbelian( a8 ); IsPerfect( a8 );[127X[104X
+    [4X[28X20160[128X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsNaturalAlternatingGroup(a8);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xa8;[127X[104X
+    [4X[28XAlt( [ 1 .. 8 ] )[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YOnce information about a group like [10Xs8[110X or [10Xa8[110X has been computed, it is stored
+  in  the  group so that it can simply be looked up when it is required again.
+  This holds for all pieces of information in the previous example. Namely, [10Xa8[110X
+  stores  its  order  and that it is nonabelian and perfect, and [10Xs8[110X stores its
+  derived  subgroup  [10Xa8[110X.  Had  we computed [10Xa8[110X as [10XCommutatorSubgroup( s8, s8 )[110X,
+  however,  it  would  not  have  been stored, because it would then have been
+  computed  as  a function of [13Xtwo[113X arguments, and hence one could not attribute
+  it  to  just  one  of  them.  (Of  course  the  function  [2XCommutatorSubgroup[102X
+  ([14XReference:  CommutatorSubgroup[114X)  can compute the commutator subgroup of [13Xtwo[113X
+  arbitrary   subgroups.)   The   situation  is  a  bit  different  for  Sylow
+  [22Xp[122X-subgroups:  The  function  [2XSylowSubgroup[102X  ([14XReference:  SylowSubgroup[114X) also
+  requires  two  arguments,  namely  a  group and a prime [22Xp[122X, but the result is
+  stored  in the group –namely together with the prime [22Xp[122X in a list that can be
+  accessed  with  [10XComputedSylowSubgroups[110X,  but  we  won't dwell on the details
+  here.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xsyl2 := SylowSubgroup( a8, 2 );; Size( syl2 );[127X[104X
+    [4X[28X64[128X[104X
+    [4X[25Xgap>[125X [27XNormalizer( a8, syl2 ) = syl2;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xcent := Centralizer( a8, Centre( syl2 ) );; Size( cent );[127X[104X
+    [4X[28X192[128X[104X
+    [4X[25Xgap>[125X [27XDerivedSeries( cent );; List( last, Size );[127X[104X
+    [4X[28X[ 192, 96, 32, 2, 1 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe  have  typed double semicolons after some commands to avoid the output of
+  the  groups (which would be printed by their generator lists). Nevertheless,
+  the  beginner is encouraged to type a single semicolon instead and study the
+  full output. This remark also applies for the rest of this tutorial.[133X
+  
+  [33X[0;0YWith  the  next  examples,  we  want to calculate a subgroup of [10Xa8[110X, then its
+  normalizer and finally determine the structure of the extension. We begin by
+  forming  a  subgroup  generated  by  three  commuting  involutions,  i.e., a
+  subgroup isomorphic to the additive group of the vector space [22X2^3[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xelab := Group( (1,2)(3,4)(5,6)(7,8), (1,3)(2,4)(5,7)(6,8),[127X[104X
+    [4X[25X>[125X [27X                  (1,5)(2,6)(3,7)(4,8) );;[127X[104X
+    [4X[25Xgap>[125X [27XSize( elab );[127X[104X
+    [4X[28X8[128X[104X
+    [4X[25Xgap>[125X [27XIsElementaryAbelian( elab );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAs  usual,  [5XGAP[105X  prints  the group by giving all its generators. This can be
+  annoying,  especially  if  there  are  many  of  them or if they are of huge
+  degree.  It  also  makes  it  difficult to recognize a particular group when
+  there are already several around. Note that although it is no problem for [13Xus[113X
+  to  specify a particular group to [5XGAP[105X, by using well-chosen identifiers such
+  as  [10Xa8[110X  and  [10Xelab[110X,  it  is  impossible for [5XGAP[105X to use these identifiers when
+  printing a group for us, because the group does not know which identifier(s)
+  point  to  it,  in fact there can be several. In order to give a name to the
+  group  itself  (rather  than  to  the  identifier), you can use the function
+  [2XSetName[102X  ([14XReference: Name[114X). We do this with the name [10X2^3[110X here which reflects
+  the  mathematical  properties  of  the group. From now on, [5XGAP[105X will use this
+  name  when  printing  the group for us, but we still cannot use this name to
+  specify  the  group to [5XGAP[105X, because the name does not know to which group it
+  was  assigned (after all, you could assign the same name to several groups).
+  When talking to the computer, you must always use identifiers.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSetName( elab, "<group of type 2^3>" ); elab;[127X[104X
+    [4X[28X<group of type 2^3>[128X[104X
+    [4X[25Xgap>[125X [27Xnorm := Normalizer( a8, elab );; Size( norm );[127X[104X
+    [4X[28X1344[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNow  that  we have the subgroup [10Xnorm[110X of order 1344 and its subgroup [10Xelab[110X, we
+  want  to  look at its factor group. But since we also want to find preimages
+  of  factor  group  elements  in  [10Xnorm[110X, we really want to look at the [13Xnatural
+  homomorphism[113X  defined on [10Xnorm[110X with kernel [10Xelab[110X and whose image is the factor
+  group.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xhom := NaturalHomomorphismByNormalSubgroup( norm, elab );[127X[104X
+    [4X[28X[ (2,3)(6,7), (3,4)(7,8), (3,5)(4,6), (5,7)(6,8), (5,6)(7,8),[128X[104X
+    [4X[28X  (1,2)(3,4)(5,6)(7,8), (1,3)(2,4)(5,7)(6,8), (1,6)(2,5)(3,8)(4,7)[128X[104X
+    [4X[28X ] -> [ (1,2)(5,6), (2,3)(6,7), (2,4)(3,5), (4,6)(5,7), (4,5)(6,7),[128X[104X
+    [4X[28X  (), (), () ][128X[104X
+    [4X[25Xgap>[125X [27Xf := Image( hom );[127X[104X
+    [4X[28XGroup([ (1,2)(5,6), (2,3)(6,7), (2,4)(3,5), (4,6)(5,7), (4,5)(6,7),[128X[104X
+    [4X[28X  (), (), () ])[128X[104X
+    [4X[25Xgap>[125X [27XSize( f );[127X[104X
+    [4X[28X168[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe factor group is again represented as a permutation group (its last three
+  generators  are  trivial,  meaning  that  the  last  three generators of the
+  preimage  are  in  the  kernel  of  [10Xhom[110X). However, the action domain of this
+  factor  group  has  nothing  to  do with the action domain of [10Xnorm[110X. (It only
+  happens  that  both  are  subsets  of  the natural numbers.) We can now form
+  images and preimages under the natural homomorphism. The set of preimages of
+  an  element  under [10Xhom[110X is a coset modulo [10Xelab[110X. We use the function [2XPreImages[102X
+  ([14XReference: PreImages[114X) here because [10Xhom[110X is not a bijection, so an element of
+  the range can have several preimages or none at all.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xker:= Kernel( hom );[127X[104X
+    [4X[28XGroup([ (1,2)(3,4)(5,6)(7,8), (1,3)(2,4)(5,7)(6,8), (1,5)(2,6)(3,7)[128X[104X
+    [4X[28X  (4,8) ])[128X[104X
+    [4X[25Xgap>[125X [27Xx := (1,8,3,5,7,6,2);; Image( hom, x );[127X[104X
+    [4X[28X(1,7,5,6,2,3,4)[128X[104X
+    [4X[25Xgap>[125X [27Xcoset := PreImages( hom, last );[127X[104X
+    [4X[28XRightCoset(Group([ (1,2)(3,4)(5,6)(7,8), (1,3)(2,4)(5,7)(6,8), (1,5)[128X[104X
+    [4X[28X (2,6)(3,7)(4,8) ]),(2,8,6,7,3,4,5))[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  [5XGAP[105X  is  free  to  choose  any  representative  for the coset of
+  preimages.  Of course the quotient of two representatives lies in the kernel
+  of the homomorphism.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xrep:= Representative( coset );[127X[104X
+    [4X[28X(2,8,6,7,3,4,5)[128X[104X
+    [4X[25Xgap>[125X [27Xx * rep^-1 in ker;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  factor group [10Xf[110X is a simple group, i.e., it is a non-trivial group whose
+  only  normal  subgroups  are its trivial subgroup and itself. [5XGAP[105X can detect
+  this  fact, and it can then also find the name by which this simple group is
+  known  among  group  theorists.  (Such names are of course not available for
+  non-simple groups.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsSimple( f ); IsomorphismTypeInfoFiniteSimpleGroup( f );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xrec([128X[104X
+    [4X[28X  name := "A(1,7) = L(2,7) ~ B(1,7) = O(3,7) ~ C(1,7) = S(2,7) ~ 2A(1,\[128X[104X
+    [4X[28X7) = U(2,7) ~ A(2,2) = L(3,2)", parameter := [ 2, 7 ], series := "L",[128X[104X
+    [4X[28X  shortname := "L3(2)" )[128X[104X
+    [4X[25Xgap>[125X [27XSetName( f, "L_3(2)" );[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe  give  [10Xf[110X the name [10XL_3(2)[110X because the last part of the name string reveals
+  that  it  is  isomorphic  to  the  simple  linear  group [22XL_3(2)[122X. This group,
+  however,  also  has  a lot of other names. Names that are connected with a [10X=[110X
+  sign  are different names for the same matrix group, e.g., [10XA(2,2)[110X is the Lie
+  type  notation  for  the classical notation [10XL(3,2)[110X. Other pairs of names are
+  connected  via  [10X~[110X,  these  then  specify  other  classical  groups  that are
+  isomorphic  to  that  linear group (e.g., the symplectic group [10XS(2,7)[110X, whose
+  Lie type notation would be [10XC(1,7)[110X).[133X
+  
+  [33X[0;0YThe  group  [10Xnorm[110X  acts  on the eight elements of its normal subgroup [10Xelab[110X by
+  conjugation,  yielding  a  representation  of  [22XL_3(2)[122X in [10Xs8[110X which leaves one
+  point  fixed  (namely  point [10X1[110X).  The  image  of  this representation can be
+  computed  with  the function [2XAction[102X ([14XReference: Action homomorphisms[114X); it is
+  even contained in the group [10Xnorm[110X and we can show that [10Xnorm[110X is indeed a split
+  extension of the elementary abelian group [22X2^3[122X with this image of [22XL_3(2)[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xop := Action( norm, elab );[127X[104X
+    [4X[28XGroup([ (), (), (), (5,6)(7,8), (5,7)(6,8), (3,4)(7,8), (3,5)(4,6),[128X[104X
+    [4X[28X  (2,3)(6,7) ])[128X[104X
+    [4X[25Xgap>[125X [27XIsSubgroup( a8, op ); IsSubgroup( norm, op );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsTrivial( Intersection( elab, op ) );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XSetName( norm, "2^3:L_3(2)" );[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YBy  the  way,  you  should  not  try  the operator [10X<[110X instead of the function
+  [2XIsSubgroup[102X ([14XReference: IsSubgroup[114X). Something like[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xelab < a8;[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Ywill  not cause an error, but the result does not signify anything about the
+  inclusion  of  one group in another; [10X<[110X tests which of the two groups is less
+  in some total order. On the other hand, the equality operator [10X=[110X in fact does
+  test the equality of its arguments.[133X
+  
+  [33X[0;0Y[13XSummary.[113X  In  this  section  we  have used the elementary group functions to
+  determine  the  structure  of  a  normalizer.  We have assigned names to the
+  involved  groups  which  reflect  their  mathematical structure and [5XGAP[105X uses
+  these names when printing the groups.[133X
+  
+  
+  [1X5.2 [33X[0;0YActions of Groups[133X[101X
+  
+  [33X[0;0YIn  order  to  get another representation of [10Xa8[110X, we consider another action,
+  namely that on the elements of a certain conjugacy class by conjugation.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xccl := ConjugacyClasses( a8 );; Length( ccl );[127X[104X
+    [4X[28X14[128X[104X
+    [4X[25Xgap>[125X [27XList( ccl, c -> Order( Representative( c ) ) );[127X[104X
+    [4X[28X[ 1, 2, 2, 3, 6, 3, 4, 4, 5, 15, 15, 6, 7, 7 ][128X[104X
+    [4X[25Xgap>[125X [27XList( ccl, Size );[127X[104X
+    [4X[28X[ 1, 210, 105, 112, 1680, 1120, 2520, 1260, 1344, 1344, 1344, 3360,[128X[104X
+    [4X[28X  2880, 2880 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  the  difference  between  [2XOrder[102X  ([14XReference:  Order[114X)  (which means the
+  element  order),  [2XSize[102X  ([14XReference:  Size[114X)  (which  means  the  size  of the
+  conjugacy class) and [2XLength[102X ([14XReference: Length[114X) (which means the length of a
+  list). We choose to let [10Xa8[110X operate on the class of length 112.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xclass := First( ccl, c -> Size(c) = 112 );;[127X[104X
+    [4X[25Xgap>[125X [27Xop := Action( a8, AsList( class ),OnPoints );;[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe use [2XAsList[102X ([14XReference: AsList[114X) here to convert the conjugacy class into a
+  list  of  its elements whereas we wrote [10XAction( norm, elab )[110X directly in the
+  previous  section.  The reason is that the elementary abelian group [10Xelab[110X can
+  be  quickly  enumerated  by  [5XGAP[105X whereas the standard enumeration method for
+  conjugacy  classes is slower than just explicit calculation of the elements.
+  However,  [5XGAP[105X  is reluctant to construct explicit element lists, because for
+  really large groups this direct method is infeasible.[133X
+  
+  [33X[0;0YNote  also  the  function  [2XFirst[102X  ([14XReference: First[114X), used to find the first
+  element in a list which passes some test.[133X
+  
+  [33X[0;0YIn  this example, we have specified the action function [2XOnPoints[102X ([14XReference:
+  OnPoints[114X)  in  this  example,  which is defined as [10XOnPoints( [110X[22Xd[122X[10X, [110X[22Xg[122X[10X ) = [110X[22Xd[122X[10X ^ [110X[22Xg[122X.
+  This [21Xcaret[121X operator denotes conjugation in a group if both arguments [22Xd[122X and [22Xg[122X
+  are  group  elements  (contained in a common group), but it also denotes the
+  natural  action  of permutations on positive integers (and exponentiation of
+  integers  as  well, of course). It is in fact the default action and will be
+  supplied  by  the  system if not given. Another common action is for example
+  [2XOnRight[102X ([14XReference: OnRight[114X), which means right multiplication, defined as [22Xd[122X[10X
+  * [110X[22Xg[122X. (Group actions in [5XGAP[105X are always from the right.)[133X
+  
+  [33X[0;0YWe now have a permutation representation [10Xop[110X on 112 points, which we test for
+  primitivity.  If  it  is not primitive, we can obtain a minimal block system
+  (i.e.,  one  where  the  blocks  have minimal length) by the function [2XBlocks[102X
+  ([14XReference: Blocks[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsPrimitive( op, [ 1 .. 112 ] );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xblocks := Blocks( op, [ 1 .. 112 ] );;[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote that we must specify the domain of the action. You might think that the
+  functions   [2XIsPrimitive[102X  ([14XReference:  IsPrimitive[114X)  and  [2XBlocks[102X  ([14XReference:
+  Blocks[114X) could use [10X[ 1 .. 112 ][110X as default domain if no domain was given. But
+  this  is not so easy, for example would the default domain of [10XGroup( (2,3,4)
+  )[110X  be  [10X[  1  ..  4 ][110X or [10X[ 2 .. 4 ][110X? To avoid confusion, all action functions
+  require  that  you  specify the domain of action. If we had specified [10X[ 1 ..
+  113 ][110X in the primitivity test above, point 113 would have been a fixed point
+  (and the action would not even have been transitive).[133X
+  
+  [33X[0;0YNow  [10Xblocks[110X  is  a  list  of blocks (i.e., a list of lists), which we do not
+  print  here  for the sake of saving paper (try it for yourself). In fact all
+  we want to know is the size of the blocks, or rather how many there are (the
+  product  of  these  two numbers must of course be 112). Then we can obtain a
+  new permutation group of the corresponding degree by letting [10Xop[110X act on these
+  blocks setwise.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLength( blocks[1] );  Length( blocks );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[28X56[128X[104X
+    [4X[25Xgap>[125X [27Xop2 := Action( op, blocks, OnSets );;[127X[104X
+    [4X[25Xgap>[125X [27XIsPrimitive( op2, [ 1 .. 56 ] );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  we give a third argument (the action function [2XOnSets[102X ([14XReference:
+  OnSets[114X)) to indicate that the action is not the default action on points but
+  an   action   on   sets   of   elements  given  as  strictly  sorted  lists.
+  (Section [14X'Reference:  Basic  Actions'[114X lists all actions that are pre-defined
+  by [5XGAP[105X.)[133X
+  
+  [33X[0;0YThe  action  of [10Xop[110X on the given block system gave us a new representation on
+  56  points  which  is  primitive,  i.e.,  the  point stabilizer is a maximal
+  subgroup.  We  compute  its  preimage  in the representation on eight points
+  using  the associated action homomorphisms (which of course in this case are
+  monomorphisms). We construct the composition of two homomorphisms with the [10X*[110X
+  operator, reading left-to-right.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xophom := ActionHomomorphism( a8, op );;[127X[104X
+    [4X[25Xgap>[125X [27Xophom2 := ActionHomomorphism( op, op2 );;[127X[104X
+    [4X[25Xgap>[125X [27Xcomposition := ophom * ophom2;;[127X[104X
+    [4X[25Xgap>[125X [27Xstab := Stabilizer( op2, 2 );;[127X[104X
+    [4X[25Xgap>[125X [27Xpreim := PreImages( composition, stab );[127X[104X
+    [4X[28XGroup([ (1,2,4), (6,7,8), (3,6,8), (5,8,6), (1,2)(3,8) ])[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAlternatively,  it  is  possible  to create action homomorphisms immediately
+  (without  creating  the action first) by giving the same set of arguments to
+  [2XActionHomomorphism[102X ([14XReference: ActionHomomorphism[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xnophom := ActionHomomorphism( a8, AsList(class) );[127X[104X
+    [4X[28X<action homomorphism>[128X[104X
+    [4X[25Xgap>[125X [27XIsSurjective(nophom);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XImage(nophom,(1,2,3));[127X[104X
+    [4X[28X(2,43,14)(3,44,20)(4,45,26)(5,46,32)(6,47,38)(8,13,48)(9,19,53)(10,25,[128X[104X
+    [4X[28X58)(11,31,63)(12,37,68)(15,49,73)(16,50,74)(17,51,75)(18,52,76)(21,54,[128X[104X
+    [4X[28X77)(22,55,78)(23,56,79)(24,57,80)(27,59,81)(28,60,82)(29,61,83)(30,62,[128X[104X
+    [4X[28X84)(33,64,85)(34,65,86)(35,66,87)(36,67,88)(39,69,89)(40,70,90)(41,71,[128X[104X
+    [4X[28X91)(42,72,92)[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIn this situation, however (for performance reasons, avoiding computation an
+  image that might never be needed) the homomorphism is defined to be not into
+  the  [13XImage[113X  of the action, but into the [13Xfull symmetric group[113X, i.e. it is not
+  automatically  surjective. Surjectivity can be enforced by giving the string
+  [10X"surjective"[110X as an extra last argument. The [10XImage[110X of the action homomorphism
+  of course is the same group in either case.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSize(Range(nophom));[127X[104X
+    [4X[28X1974506857221074023536820372759924883412778680349753377966562950949028\[128X[104X
+    [4X[28X5896977181144089422435502777936659795733823785363827233491968638562181\[128X[104X
+    [4X[28X1850780464277094400000000000000000000000000[128X[104X
+    [4X[25Xgap>[125X [27XSize(Range(ophom));[127X[104X
+    [4X[28X20160[128X[104X
+    [4X[25Xgap>[125X [27Xnophom := ActionHomomorphism( a8, AsList(class),"surjective" );[127X[104X
+    [4X[28X<action epimorphism>[128X[104X
+    [4X[25Xgap>[125X [27XSize(Range(nophom));[127X[104X
+    [4X[28X20160[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YContinuing  the example, the normalizer of an element in the conjugacy class
+  [10Xclass[110X  is  a  group  of  order  360,  too. In fact, it is a conjugate of the
+  maximal  subgroup  we  had  found before, and a conjugating element in [10Xa8[110X is
+  found      by      the     function     [2XRepresentativeAction[102X     ([14XReference:
+  RepresentativeAction[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xsgp := Normalizer( a8, Subgroup(a8,[Representative(class)]) );;[127X[104X
+    [4X[25Xgap>[125X [27XSize( sgp );[127X[104X
+    [4X[28X360[128X[104X
+    [4X[25Xgap>[125X [27XRepresentativeAction( a8, sgp, preim );[127X[104X
+    [4X[28X(2,4,3)[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YOne of the most prominent actions of a group is on the cosets of a subgroup.
+  Naïvely  this  can  be done by constructing the cosets and acting on them by
+  right multiplication.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xcosets:=RightCosets(a8,norm);;[127X[104X
+    [4X[25Xgap>[125X [27Xop:=Action(a8,cosets,OnRight);[127X[104X
+    [4X[28XGroup([ (1,2,3)(4,6,5)(7,8,9)(10,12,11)(13,14,15), (1,2,3)(4,13,9)[128X[104X
+    [4X[28X(5,7,11)(6,10,15)(8,14,12), (1,11,6)(2,15,4)(3,9,5)(7,13,10)[128X[104X
+    [4X[28X(8,12,14), (1,10,12,3,13)(2,7,15,14,5)(4,6,8,9,11), (1,12,15)(2,10,5)[128X[104X
+    [4X[28X(3,11,8)(4,9,13)(6,14,7), (1,4,13,10)(2,15,14,3)(5,12,11,6)(7,9) ])[128X[104X
+    [4X[25Xgap>[125X [27XNrMovedPoints(op);[127X[104X
+    [4X[28X15[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YA  problem  with this approach is that creating (and storing) all cosets can
+  be  very memory intensive if the subgroup index gets large. Because of this,
+  [5XGAP[105X  provides  special objects which act like a list of elements, but do not
+  actually store elements but compute them on the go. Such a simulated list is
+  called  an [13Xenumerator[113X. The easiest example of this concept is the [2XEnumerator[102X
+  ([14XReference:  Enumerator[114X)  of  a  group.  While  it  behaves  like  a list of
+  elements,  it  requires  far  less storage, and is applicable to potentially
+  huge  groups  for  which it would be completely infeasible to write down all
+  elements:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xenum:=Enumerator(SymmetricGroup(20));[127X[104X
+    [4X[28X<enumerator of perm group>[128X[104X
+    [4X[25Xgap>[125X [27XLength(enum);[127X[104X
+    [4X[28X2432902008176640000[128X[104X
+    [4X[25Xgap>[125X [27Xenum[123456789012345];[127X[104X
+    [4X[28X(1,4,15,3,14,11,8,17,6,18,5,7,20,13,10,9,2,12)[128X[104X
+    [4X[25Xgap>[125X [27XPosition(enum,(1,2,3,4,5,6,7,8,9,10));[127X[104X
+    [4X[28X71948729603[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YFor  the  action  on  cosets  the object of interest is the [2XRightTransversal[102X
+  ([14XReference:  RightTransversal[114X)  of  a subgroup. Again, it does not write out
+  actual elements and thus can be created even for subgroups of large index.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xt:=RightTransversal(a8,norm);[127X[104X
+    [4X[28XRightTransversal(Alt( [ 1 .. 8 ] ),2^3:L_3(2))[128X[104X
+    [4X[25Xgap>[125X [27Xt[7];[127X[104X
+    [4X[28X(4,6,5)[128X[104X
+    [4X[25Xgap>[125X [27XPosition(t,(4,6,7,8,5));[127X[104X
+    [4X[28X8[128X[104X
+    [4X[25Xgap>[125X [27XPosition(t,(1,2,3));[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YFor  the  action  on  cosets  there is the added complication that not every
+  group  element  is  in  the  transversal (as the last example shows) but the
+  action  on  cosets  of  a subgroup usually will not preserve a chosen set of
+  coset  representatives.  Because  of  this  issue,  all action functionality
+  actually  uses  [2XPositionCanonical[102X  ([14XReference: PositionCanonical[114X) instead of
+  [2XPosition[102X  ([14XReference:  Position[114X).  In  general,  for elements contained in a
+  list,  [2XPositionCanonical[102X  ([14XReference: PositionCanonical[114X) returns the same as
+  [10XPosition[110X.  If  the  element  is  not  contained in the list (and for special
+  lists,  such  as  transversals),  [10XPositionCanonical[110X returns the list element
+  representing the same objects, e.g. the transversal element representing the
+  same coset.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPositionCanonical(t,(1,2,3));[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27Xt[2];[127X[104X
+    [4X[28X(6,7,8)[128X[104X
+    [4X[25Xgap>[125X [27Xt[2]/(1,2,3);[127X[104X
+    [4X[28X(1,3,2)(6,7,8)[128X[104X
+    [4X[25Xgap>[125X [27Xlast in norm;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThus,  acting on a [10XRightTransversal[110X with the [10XOnRight[110X action will in fact (in
+  a  slight abuse of definitions) produce the action of a group on cosets of a
+  subgroup and is in general the most efficient way of creating this action.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XAction(a8,RightTransversal(a8,norm),OnRight);[127X[104X
+    [4X[28XGroup([ (1,2,3)(4,6,5)(7,8,9)(10,12,11)(13,14,15), (1,2,3)(4,13,9)[128X[104X
+    [4X[28X(5,7,11)(6,10,15)(8,14,12), (1,11,6)(2,15,4)(3,9,5)(7,13,10)[128X[104X
+    [4X[28X(8,12,14), (1,10,12,3,13)(2,7,15,14,5)(4,6,8,9,11), (1,12,15)(2,10,5)[128X[104X
+    [4X[28X(3,11,8)(4,9,13)(6,14,7), (1,4,13,10)(2,15,14,3)(5,12,11,6)(7,9) ])[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[13XSummary.[113X  In  this  section  we  have  learned how groups can operate on [5XGAP[105X
+  objects such as integers and group elements. We have used [2XActionHomomorphism[102X
+  ([14XReference:    ActionHomomorphism[114X),   among   others,   to   construct   the
+  corresponding  actions  and homomorphisms and have seen how transversals can
+  be used to create the action on cosets of a subgroup.[133X
+  
+  
+  [1X5.3 [33X[0;0YSubgroups as Stabilizers[133X[101X
+  
+  [33X[0;0YAction  functions  can  also  be used to construct subgroups. We will try to
+  find several subgroups in [10Xa8[110X as stabilizers of such actions. One subgroup is
+  immediately  available, namely the stabilizer of one point. The index of the
+  stabilizer must of course be equal to the length of the orbit, i.e., 8.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xu8 := Stabilizer( a8, 1 );[127X[104X
+    [4X[28XGroup([ (2,3,4,5,6,7,8), (2,4,5,6,7,8,3) ])[128X[104X
+    [4X[25Xgap>[125X [27XIndex( a8, u8 );[127X[104X
+    [4X[28X8[128X[104X
+    [4X[25Xgap>[125X [27XOrbit( a8, 1 ); Length( last );[127X[104X
+    [4X[28X[ 1, 3, 2, 4, 5, 6, 7, 8 ][128X[104X
+    [4X[28X8[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis  gives  us  a  hint how to find further subgroups. Each subgroup is the
+  stabilizer of a point of an appropriate transitive action (namely the action
+  on  the cosets of that subgroup or another action that is equivalent to this
+  action).  So the question is how to find other actions. The obvious thing is
+  to  operate  on  pairs  of  points. So using the function [2XTuples[102X ([14XReference:
+  Tuples[114X) we first generate a list of all pairs.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xpairs := Tuples( [1..8], 2 );;[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNow  we  would like to have [10Xa8[110X operate on this domain. But we cannot use the
+  default  action  [2XOnPoints[102X ([14XReference: OnPoints[114X) because powering a list by a
+  permutation  via  the  caret  operator [10X^[110X is not defined. So we must tell the
+  functions  from  the  actions  package how the group elements operate on the
+  elements  of  the domain (here and below, the word [21Xpackage[121X refers to the [5XGAP[105X
+  functionality  for  group  actions, not to a [5XGAP[105X package). In our example we
+  can  do  this  by simply passing [2XOnPairs[102X ([14XReference: OnPairs[114X) as an optional
+  last  argument.  All  functions  from  the  actions  package  accept such an
+  optional  argument  that  describes  the action. One example is [2XIsTransitive[102X
+  ([14XReference: IsTransitive[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsTransitive( a8, pairs, OnPairs );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  action is of course not transitive, since the pairs [10X[ 1, 1 ][110X and [10X[ 1, 2
+  ][110X  cannot lie in the same orbit. So we want to find out what the orbits are.
+  The  function [2XOrbits[102X ([14XReference: Orbits[114X) does that for us. It returns a list
+  of  all the orbits. We look at the orbit lengths and representatives for the
+  orbits.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xorbs := Orbits( a8, pairs, OnPairs );; Length( orbs );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XList( orbs, Length );[127X[104X
+    [4X[28X[ 8, 56 ][128X[104X
+    [4X[25Xgap>[125X [27XList( orbs, o -> o[1] );[127X[104X
+    [4X[28X[ [ 1, 1 ], [ 1, 2 ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  action  of [10Xa8[110X on the first orbit (this is the one containing [10X[1,1][110X, try
+  [10X[1,1]  in  orbs[1][110X)  is  of  course equivalent to the original action, so we
+  ignore it and work with the second orbit.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xu56 := Stabilizer( a8, orbs[2][1], OnPairs );; Index( a8, u56 );[127X[104X
+    [4X[28X56[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YSo now we have found a second subgroup. To make the following computations a
+  little bit easier and more efficient we would now like to work on the points
+  [10X[  1  ..  56 ][110X instead of the list of pairs. The function [2XActionHomomorphism[102X
+  ([14XReference: ActionHomomorphism[114X) does what we need. It creates a homomorphism
+  defined  on  [10Xa8[110X  whose  image is a new group that acts on [10X[ 1 .. 56 ][110X in the
+  same way that [10Xa8[110X acts on the second orbit.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xh56 := ActionHomomorphism( a8, orbs[2], OnPairs );;[127X[104X
+    [4X[25Xgap>[125X [27Xa8_56 := Image( h56 );;[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe  would  now like to know if the subgroup [10Xu56[110X of index 56 that we found is
+  maximal  or  not.  As  we  have  used  already in Section [14X5.2[114X, a subgroup is
+  maximal  if  and  only  if  the  action  on  the  cosets of this subgroup is
+  primitive.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsPrimitive( a8_56, [1..56] );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YRemember  that we can leave out the function if we mean [2XOnPoints[102X ([14XReference:
+  OnPoints[114X)  but  that  we  have  to  specify the action domain for all action
+  functions.[133X
+  
+  [33X[0;0YWe  see that [10Xa8_56[110X is not primitive. This means of course that the action of
+  [10Xa8[110X  on [10Xorb[2][110X is not primitive, because those two actions are equivalent. So
+  the  stabilizer  [10Xu56[110X  is not maximal. Let us try to find its supergroups. We
+  use  the  function  [2XBlocks[102X  ([14XReference:  Blocks[114X) to find a block system. The
+  (optional)  third argument in the following example tells [2XBlocks[102X ([14XReference:
+  Blocks[114X) that we want a block system where 1 and 3 lie in one block.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xblocks := Blocks( a8_56, [1..56], [1,3] );;[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  result  is  a  list of sets, such that [10Xa8_56[110X acts on those sets. Now we
+  would  like  the  stabilizer  of this action on the sets. Because we want to
+  operate  on  the  sets  we  have to pass [2XOnSets[102X ([14XReference: OnSets[114X) as third
+  argument.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xu8_56 := Stabilizer( a8_56, blocks[1], OnSets );;[127X[104X
+    [4X[25Xgap>[125X [27XIndex( a8_56, u8_56 );[127X[104X
+    [4X[28X8[128X[104X
+    [4X[25Xgap>[125X [27Xu8b := PreImages( h56, u8_56 );; Index( a8, u8b );[127X[104X
+    [4X[28X8[128X[104X
+    [4X[25Xgap>[125X [27XIsConjugate( a8, u8, u8b );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YSo  we have found a supergroup of [10Xu56[110X that is conjugate in [10Xa8[110X to [10Xu8[110X. This is
+  not  surprising,  since  [10Xu8[110X  is  a  point stabilizer, and [10Xu56[110X is a two point
+  stabilizer in the natural action of [10Xa8[110X on eight points.[133X
+  
+  [33X[0;0YHere  is  a  [13Xwarning[113X:  If  you  specify  [2XOnSets[102X ([14XReference: OnSets[114X) as third
+  argument  to a function like [2XStabilizer[102X ([14XReference: Stabilizer[114X), you have to
+  make  sure  that  the  point  (i.e.  the  second  argument) is indeed a set.
+  Otherwise  you  will  get a puzzling error message or even wrong results! In
+  the  above  example,  the  second  argument [10Xblocks[1][110X came from the function
+  [2XBlocks[102X  ([14XReference: Blocks[114X), which returns a list of sets, so everything was
+  OK.[133X
+  
+  [33X[0;0YActually  there  is a third block system of [10Xa8_56[110X that gives rise to a third
+  subgroup.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xseed:=First(AllBlocks(a8_56),x->Length(x)=2);;[127X[104X
+    [4X[25Xgap>[125X [27Xblocks := Blocks( a8_56, [1..56], seed);;[127X[104X
+    [4X[25Xgap>[125X [27Xu28_56 := Stabilizer( a8_56, seed, OnSets );;[127X[104X
+    [4X[25Xgap>[125X [27Xu28 := PreImages( h56, u28_56 );;[127X[104X
+    [4X[25Xgap>[125X [27XIndex( a8, u28 );[127X[104X
+    [4X[28X28[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe  know  that the subgroup [10Xu28[110X of index 28 is maximal, because we know that
+  [10Xa8[110X  has no subgroups of index 2, 4, or 7. However we can also quickly verify
+  this by checking that [10Xa8_56[110X acts primitively on the 28 blocks.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsPrimitive( a8_56, blocks, OnSets );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[2XStabilizer[102X  ([14XReference: Stabilizer[114X) is not only applicable to groups like [10Xa8[110X
+  but  also  to  their  subgroups  like  [10Xu56[110X.  So another method to find a new
+  subgroup is to compute the stabilizer of another point in [10Xu56[110X. Note that [10Xu56[110X
+  already leaves 1 and 2 fixed.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xu336 := Stabilizer( u56, 3 );;[127X[104X
+    [4X[25Xgap>[125X [27XIndex( a8, u336 );[127X[104X
+    [4X[28X336[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YOther  functions  are also applicable to subgroups. In the following we show
+  that  [10Xu336[110X  acts  regularly on the 60 triples of [10X[ 4 .. 8 ][110X which contain no
+  element  twice.  We construct the list of these 60 triples with the function
+  [2XOrbit[102X  ([14XReference:  Orbit[114X)  (using  [2XOnTuples[102X  ([14XReference:  OnTuples[114X)  as the
+  natural  generalization of [2XOnPairs[102X ([14XReference: OnPairs[114X)) and then pass it as
+  action domain to the function [2XIsRegular[102X ([14XReference: IsRegular[114X). The positive
+  result  of  the  regularity test means that this action is equivalent to the
+  actions of [10Xu336[110X on its 60 elements from the right.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsRegular( u336, Orbit( u336, [4,5,6], OnTuples ), OnTuples );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YJust  as  we  did  in  the  case  of  the  action on the pairs above, we now
+  construct  a new permutation group that acts on [10X[ 1 .. 336 ][110X in the same way
+  that  [10Xa8[110X  acts  on  the cosets of [10Xu336[110X. But this time we let [10Xa8[110X operate on a
+  right transversal, just like [10Xnorm[110X did in the natural homomorphism above.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xt := RightTransversal( a8, u336 );;[127X[104X
+    [4X[25Xgap>[125X [27Xa8_336 := Action( a8, t, OnRight );;[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YTo find subgroups above [10Xu336[110X we again look for nontrivial block systems.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xblocks := Blocks( a8_336, [1..336] );; blocks[1];[127X[104X
+    [4X[28X[ 1, 43, 85 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe see that the union of [10Xu336[110X with its 43rd and its 85th coset is a subgroup
+  in  [10Xa8_336[110X, its index is 112. We can obtain it as the closure of [10Xu336[110X with a
+  representative  of the 43rd coset, which can be found as the 43rd element of
+  the  transversal [10Xt[110X.  Note  that  in the representation [10Xa8_336[110X on 336 points,
+  this subgroup corresponds to the stabilizer of the block [10X[ 1, 43, 85 ][110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xu112 := ClosureGroup( u336, t[43] );;[127X[104X
+    [4X[25Xgap>[125X [27XIndex( a8, u112 );[127X[104X
+    [4X[28X112[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAbove  this  subgroup of index 112 lies a subgroup of index 56, which is not
+  conjugate to [10Xu56[110X. In fact, unlike [10Xu56[110X it is maximal. We obtain this subgroup
+  in  the same way that we obtained [10Xu112[110X, this time forcing two points, namely
+  7 and 43 into the first block.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xblocks := Blocks( a8_336, [1..336], [1,7,43] );;[127X[104X
+    [4X[25Xgap>[125X [27XLength( blocks );[127X[104X
+    [4X[28X56[128X[104X
+    [4X[25Xgap>[125X [27Xu56b := ClosureGroup( u112, t[7] );; Index( a8, u56b );[127X[104X
+    [4X[28X56[128X[104X
+    [4X[25Xgap>[125X [27XIsPrimitive( a8_336, blocks, OnSets );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe already mentioned in Section [14X5.2[114X that there is another standard action of
+  permutations,  namely  the  conjugation.  E.g.,  since  no  other  action is
+  specified  in  the  following  example, [2XOrbitLength[102X ([14XReference: OrbitLength[114X)
+  simply  acts via [2XOnPoints[102X ([14XReference: OnPoints[114X), and because [3Xperm_1[103X[10X ^ [110X[3Xperm_2[103X
+  is  defined  as  the conjugation of [3Xperm_2[103X on [3Xperm_1[103X, in fact we compute the
+  length of the conjugacy class of [10X(1,2)(3,4)(5,6)(7,8)[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XOrbitLength( a8, (1,2)(3,4)(5,6)(7,8) );[127X[104X
+    [4X[28X105[128X[104X
+    [4X[25Xgap>[125X [27Xorb := Orbit( a8, (1,2)(3,4)(5,6)(7,8) );;[127X[104X
+    [4X[25Xgap>[125X [27Xu105 := Stabilizer( a8, (1,2)(3,4)(5,6)(7,8) );; Index( a8, u105 );[127X[104X
+    [4X[28X105[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  although the length of a conjugacy class of any element [22Xg[122X in any
+  finite  group  [22XG[122X  can  be computed as [10XOrbitLength( [110X[22XG[122X[10X, [110X[22Xg[122X[10X )[110X, the command [10XSize(
+  ConjugacyClass( [110X[22XG[122X[10X, [110X[22Xg[122X[10X ) )[110X is probably more efficient.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSize( ConjugacyClass( a8, (1,2)(3,4)(5,6)(7,8) ) );[127X[104X
+    [4X[28X105[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YOf  course  the  stabilizer  [10Xu105[110X  is in fact the centralizer of the element
+  [10X(1,2)(3,4)(5,6)(7,8)[110X.  [2XStabilizer[102X  ([14XReference:  Stabilizer[114X) notices that and
+  computes  the  stabilizer  using  the  centralizer algorithm for permutation
+  groups. In the usual way we now look for the subgroups above [10Xu105[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xorb:=Set(orb);;[127X[104X
+    [4X[25Xgap>[125X [27Xblocks := Blocks( a8, orb );; Length( blocks );[127X[104X
+    [4X[28X15[128X[104X
+    [4X[25Xgap>[125X [27XSet(blocks[1]);[127X[104X
+    [4X[28X[ (1,2)(3,4)(5,6)(7,8), (1,3)(2,4)(5,7)(6,8), (1,4)(2,3)(5,8)(6,7),[128X[104X
+    [4X[28X  (1,5)(2,6)(3,7)(4,8), (1,6)(2,5)(3,8)(4,7), (1,7)(2,8)(3,5)(4,6),[128X[104X
+    [4X[28X  (1,8)(2,7)(3,6)(4,5) ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YTo  find  the  subgroup  of  index 15 we again use closure. Now we must be a
+  little   bit   careful  to  avoid  confusion.  [10Xu105[110X  is  the  stabilizer  of
+  [10X(1,2)(3,4)(5,6)(7,8)[110X.  We  know  that  there is a correspondence between the
+  points  of  the orbit and the cosets of [10Xu105[110X. The point [10X(1,2)(3,4)(5,6)(7,8)[110X
+  corresponds to [10Xu105[110X. To get the subgroup above [10Xu105[110X that has index 15 in [10Xa8[110X,
+  we  must  form  the  closure  of  [10Xu105[110X  with  an  element  of the coset that
+  corresponds  to  any  other point in the first block. If we choose the point
+  [10X(1,3)(2,4)(5,7)(6,8)[110X,   we   must   use   an   element   of   [10Xa8[110X  that  maps
+  [10X(1,2)(3,4)(5,6)(7,8)[110X      to      [10X(1,3)(2,4)(5,7)(6,8)[110X.     The     function
+  [2XRepresentativeAction[102X ([14XReference: RepresentativeAction[114X) does what we need. It
+  takes  a  group and two points and returns an element of the group that maps
+  the  first  point  to  the second. In fact it also allows you to specify the
+  action  as  an  optional  fourth  argument as usual, but we do not need this
+  here. If no such element exists in the group, i.e., if the two points do not
+  lie   in   one  orbit  under  the  group,  [2XRepresentativeAction[102X  ([14XReference:
+  RepresentativeAction[114X) returns [9Xfail[109X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xrep := RepresentativeAction( a8, (1,2)(3,4)(5,6)(7,8),[127X[104X
+    [4X[25X>[125X [27X                                       (1,3)(2,4)(5,7)(6,8) );[127X[104X
+    [4X[28X(2,3)(6,7)[128X[104X
+    [4X[25Xgap>[125X [27Xu15 := ClosureGroup( u105, rep );; Index( a8, u15 );[127X[104X
+    [4X[28X15[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[10Xu15[110X  is of course a maximal subgroup, because [10Xa8[110X has no subgroups of index 3
+  or 5.  There  is  in  fact another class of subgroups of index 15 above [10Xu105[110X
+  that we get by adding [10X(2,3)(6,8)[110X to [10Xu105[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xu15b := ClosureGroup( u105, (2,3)(6,8) );; Index( a8, u15b );[127X[104X
+    [4X[28X15[128X[104X
+    [4X[25Xgap>[125X [27XRepresentativeAction( a8, u15, u15b );[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[2XRepresentativeAction[102X  ([14XReference:  RepresentativeAction[114X) tells us that there
+  is  no  element [22Xg[122X in [10Xa8[110X such that [10Xu15 ^ [110X[22Xg[122X[10X = u15b[110X. Because [10X^[110X also denotes the
+  conjugation of subgroups this tells us that [10Xu15[110X and [10Xu15b[110X are not conjugate.[133X
+  
+  [33X[0;0Y[13XSummary.[113X  In  this  section  we  have  demonstrated  some functions from the
+  actions  package.  There  is  a  whole  class  of  functions that we did not
+  mention, namely those that take a single element instead of a whole group as
+  first  argument,  e.g., [2XCycle[102X ([14XReference: Cycle[114X) and [2XPermutation[102X ([14XReference:
+  Permutation[114X).  These  are  fully  described  in  Chapter  [14X'Reference:  Group
+  Actions'[114X.[133X
+  
+  
+  [1X5.4 [33X[0;0YGroup Homomorphisms by Images[133X[101X
+  
+  [33X[0;0YWe  have  already seen examples of group homomorphisms in the last sections,
+  namely  natural  homomorphisms  and action homomorphisms. In this section we
+  will  show  how  to  construct  a  group  homomorphism [22XG → H[122X by specifying a
+  generating  set  for  [22XG[122X  and the images of these generators in [22XH[122X. We use the
+  function  [10XGroupHomomorphismByImages(  [3XG[103X[10X,  [3XH[103X[10X,  [3Xgens[103X[10X,  [3Ximgs[103X[10X  )[110X where [3Xgens[103X is a
+  generating  set  for  [3XG[103X  and  [3Ximgs[103X is a list whose [22Xi[122Xth entry is the image of
+  [22X[3Xgens[103X[i][122X under the homomorphism.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xs4 := Group((1,2,3,4),(1,2));; s3 := Group((1,2,3),(1,2));;[127X[104X
+    [4X[25Xgap>[125X [27Xhom := GroupHomomorphismByImages( s4, s3,[127X[104X
+    [4X[25X>[125X [27X          GeneratorsOfGroup(s4), [(1,2),(2,3)] );[127X[104X
+    [4X[28X[ (1,2,3,4), (1,2) ] -> [ (1,2), (2,3) ][128X[104X
+    [4X[25Xgap>[125X [27XKernel( hom );[127X[104X
+    [4X[28XGroup([ (1,4)(2,3), (1,3)(2,4) ])[128X[104X
+    [4X[25Xgap>[125X [27XImage( hom, (1,2,3) );[127X[104X
+    [4X[28X(1,2,3)[128X[104X
+    [4X[25Xgap>[125X [27XSize( Image( hom, DerivedSubgroup(s4) ) );[127X[104X
+    [4X[28X3[128X[104X
+  [4X[32X[104X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPreImage( hom, (1,2,3) );[127X[104X
+    [4X[28XError, <map> must be an inj. and surj. mapping called from[128X[104X
+    [4X[28X<function "PreImage">( <arguments> )[128X[104X
+    [4X[28X called from read-eval loop at line 4 of *stdin*[128X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou can 'return;' to continue[128X[104X
+    [4X[26Xbrk>[126X [27Xquit;[127X[104X
+  [4X[32X[104X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPreImagesRepresentative( hom, (1,2,3) );[127X[104X
+    [4X[28X(1,4,2)[128X[104X
+    [4X[25Xgap>[125X [27XPreImage( hom, TrivialSubgroup(s3) );  # the kernel[127X[104X
+    [4X[28XGroup([ (1,4)(2,3), (1,3)(2,4) ])[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis  homomorphism  from  [22XS_4[122X  onto  [22XS_3[122X is well known from elementary group
+  theory.  Images  of  elements and subgroups under [10Xhom[110X can be calculated with
+  the  function  [2XImage[102X  ([14XReference:  Image[114X).  But since the mapping [10Xhom[110X is not
+  bijective,  we  cannot  use  the function [2XPreImage[102X ([14XReference: PreImage[114X) for
+  preimages of elements (they can have several preimages). Instead, we have to
+  use   [2XPreImagesRepresentative[102X  ([14XReference:  PreImagesRepresentative[114X),  which
+  returns  one  preimage if at least one exists (and would return [9Xfail[109X if none
+  exists,  which  cannot  occur for our surjective [10Xhom[110X). On the other hand, we
+  can  use  [2XPreImage[102X  ([14XReference:  PreImage[114X)  for the preimage of a set (which
+  always exists, even if it is empty).[133X
+  
+  [33X[0;0YSuppose  we  mistype  the  input  when trying to construct a homomorphism as
+  below.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XGroupHomomorphismByImages( s4, s3,[127X[104X
+    [4X[25X>[125X [27X       GeneratorsOfGroup(s4), [(1,2,3),(2,3)] );[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThere is no such homomorphism, hence [9Xfail[109X is returned. But note that because
+  of  this,  [2XGroupHomomorphismByImages[102X  ([14XReference: GroupHomomorphismByImages[114X)
+  must  do  some checks, and this was also done for the mapping [10Xhom[110X above. One
+  can  avoid  these checks if one is sure that the desired homomorphism really
+  exists.  For  that,  the  function  [2XGroupHomomorphismByImagesNC[102X  ([14XReference:
+  GroupHomomorphismByImagesNC[114X) can be used; the [10XNC[110X stands for [21Xno check[121X.[133X
+  
+  [33X[0;0YBut  note  that  horrible  things  can happen if [2XGroupHomomorphismByImagesNC[102X
+  ([14XReference:  GroupHomomorphismByImagesNC[114X)  is  used  when the input does not
+  describe a homomorphism.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xhom2 := GroupHomomorphismByImagesNC( s4, s3,[127X[104X
+    [4X[25X>[125X [27X           GeneratorsOfGroup(s4), [(1,2,3),(2,3)] );[127X[104X
+    [4X[28X[ (1,2,3,4), (1,2) ] -> [ (1,2,3), (2,3) ][128X[104X
+    [4X[25Xgap>[125X [27XSize( Kernel(hom2) );[127X[104X
+    [4X[28X24[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIn  other  words,  [5XGAP[105X  claims  that  the  kernel  is  the full [10Xs4[110X, yet [10Xhom2[110X
+  obviously  has  some non-trivial images! Clearly there is no such thing as a
+  homomorphism  which  maps  an  element  of order 4 (namely, (1,2,3,4)) to an
+  element   of   order 3  (namely,  (1,2,3)).  [13XBut  if  you  use  the  command
+  [2XGroupHomomorphismByImagesNC[102X  ([14XReference:  GroupHomomorphismByImagesNC[114X),  [5XGAP[105X
+  trusts you.[113X[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsGroupHomomorphism( hom2 );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAnd then it produces serious nonsense if the thing is not a homomorphism, as
+  seen above![133X
+  
+  [33X[0;0YBesides    the    safe    command    [2XGroupHomomorphismByImages[102X   ([14XReference:
+  GroupHomomorphismByImages[114X), which returns [9Xfail[109X if the requested homomorphism
+  does   not   exist,   there   is  the  function  [2XGroupGeneralMappingByImages[102X
+  ([14XReference:  GroupGeneralMappingByImages[114X),  which  returns a general mapping
+  (that  is,  a  possibly  multi-valued  mapping)  that  can  be  tested  with
+  [2XIsGroupHomomorphism[102X ([14XReference: IsGroupHomomorphism[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xhom2 := GroupGeneralMappingByImages( s4, s3,[127X[104X
+    [4X[25X>[125X [27X           GeneratorsOfGroup(s4), [(1,2,3),(2,3)] );;[127X[104X
+    [4X[25Xgap>[125X [27XIsGroupHomomorphism( hom2 );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YBut  the  possibility  of  testing  for being a homomorphism is not the only
+  reason  why  [5XGAP[105X  offers  [13Xgroup  general mappings[113X. Another (more important?)
+  reason  is  that their existence allows [21Xreversal of arrows[121X in a homomorphism
+  such  as  our  original  [10Xhom[110X.  By this we mean the [2XGroupHomomorphismByImages[102X
+  ([14XReference:  GroupHomomorphismByImages[114X) with left and right sides exchanged,
+  in   which  case  it  is  of  course  merely  a  [2XGroupGeneralMappingByImages[102X
+  ([14XReference: GroupGeneralMappingByImages[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xrev := GroupGeneralMappingByImages( s3, s4,[127X[104X
+    [4X[25X>[125X [27X          [(1,2),(2,3)], GeneratorsOfGroup(s4) );;[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNow  [22Xhom[122X  maps [22Xa[122X to [22Xb[122X if and only if [22Xrev[122X maps [22Xb[122X to [22Xa[122X, for [22Xa ∈[122X [10Xs4[110X and [22Xb ∈[122X [10Xs3[110X.
+  Since  every  such  [22Xb[122X  has  four preimages under [10Xhom[110X, it now has four images
+  under  [10Xrev[110X. Just as the four preimages form a coset of the kernel [22XV_4 ≤[122X[10Xs4[110X of
+  [10Xhom[110X,  they  also  form  a coset of the [13Xcokernel[113X [22XV_4 ≤[122X[10Xs4[110X of [10Xrev[110X. The cokernel
+  itself  is  the  set of all images of [10XOne( s3 )[110X. (It is a normal subgroup in
+  the  group  of  all  images  under  [10Xrev[110X.) The operation [2XOne[102X ([14XReference: One[114X)
+  returns  the  identity  element  of  a  group.  And this is why [5XGAP[105X wants to
+  perform   such  a  reversal  of  arrows:  it  calculates  the  kernel  of  a
+  homomorphism  like [10Xhom[110X as the cokernel of the reversed group general mapping
+  (here [10Xrev[110X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XCoKernel( rev );[127X[104X
+    [4X[28XGroup([ (1,4)(2,3), (1,3)(2,4) ])[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  reason  why  [10Xrev[110X  is not a homomorphism is that it is not single-valued
+  (because [10Xhom[110X was not injective). But there is another critical condition: If
+  we  reverse  the  arrows of a non-surjective homomorphism, we obtain a group
+  general  mapping  which  is not defined everywhere, i.e., which is not total
+  (although   it  will  be  single-valued  if  the  original  homomorphism  is
+  injective). [5XGAP[105X requires that a group homomorphism be both single-valued and
+  total,  so  you  will  get  [9Xfail[109X if you say [10XGroupHomomorphismByImages( [3XG[103X[10X, [3XH[103X[10X,
+  [3Xgens[103X[10X,  [3Ximgs[103X[10X  )[110X  where  [3Xgens[103X  does  not generate [3XG[103X (even if this would give a
+  decent  homomorphism  on  the  subgroup  generated  by  [3Xgens[103X).  For  a  full
+  description, see Chapter [14X'Reference: Group Homomorphisms'[114X.[133X
+  
+  [33X[0;0YThe  last  example  of  this  section  shows  that  the notion of kernel and
+  cokernel  naturally  extends  even  to  the  case where neither [10Xhom2[110X nor its
+  inverse general mapping (with arrows reversed) is a homomorphism.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XCoKernel( hom2 );  Kernel( hom2 );[127X[104X
+    [4X[28XGroup([ (2,3), (1,3) ])[128X[104X
+    [4X[28XGroup([ (3,4), (2,3,4), (1,2,4) ])[128X[104X
+    [4X[25Xgap>[125X [27XIsGroupHomomorphism( InverseGeneralMapping( hom2 ) );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[13XSummary.[113X  In  this  section  we have constructed homomorphisms by specifying
+  images for a set of generators. We have seen that by reversing the direction
+  of   the  mapping,  we  get  group  general  mappings,  which  need  not  be
+  single-valued  (unless  the  mapping  was  injective)  nor total (unless the
+  mapping was surjective).[133X
+  
+  
+  [1X5.5 [33X[0;0YNice Monomorphisms[133X[101X
+  
+  [33X[0;0YFor  some  types of groups, the best method for calculations in it is to use
+  instead  an  isomorphic group in a [21Xbetter[121X representation (say, a permutation
+  group). We call an injective homomorphism, that will give such an isomorphic
+  image a [21Xnice monomorphism[121X.[133X
+  
+  [33X[0;0YFor  example  in  the  case  of a matrix group we can take the action on the
+  underlying   vector   space   (or  a  suitable  subset)  to  obtain  such  a
+  monomorphism:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xgrp:=GL(2,3);;[127X[104X
+    [4X[25Xgap>[125X [27Xdom:=GF(3)^2;;[127X[104X
+    [4X[25Xgap>[125X [27Xhom := ActionHomomorphism( grp, dom );; IsInjective( hom );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xp := Image( hom,grp );[127X[104X
+    [4X[28XGroup([ (4,7)(5,8)(6,9), (2,7,6)(3,4,8) ])[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YTo demonstrate the technique of nice monomorphisms, we compute the conjugacy
+  classes  of  the  permutation group and lift them back into the matrix group
+  with  the monomorphism [10Xhom[110X. Lifting back a conjugacy class means finding the
+  preimage  of the representative and of the centralizer; the latter is called
+  [2XStabilizerOfExternalSet[102X ([14XReference: StabilizerOfExternalSet[114X) in [5XGAP[105X (because
+  conjugacy  classes are represented as external sets, see Section [14X'Reference:
+  Conjugacy Classes'[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xpcls := ConjugacyClasses( p );; gcls := [  ];;[127X[104X
+    [4X[25Xgap>[125X [27Xfor pc  in pcls  do[127X[104X
+    [4X[25X>[125X [27X     gc:=ConjugacyClass(grp,[127X[104X
+    [4X[25X>[125X [27X                  PreImagesRepresentative(hom,Representative(pc)));[127X[104X
+    [4X[25X>[125X [27X     SetStabilizerOfExternalSet(gc,PreImage(hom,[127X[104X
+    [4X[25X>[125X [27X                                     StabilizerOfExternalSet(pc)));[127X[104X
+    [4X[25X>[125X [27X     Add( gcls, gc );[127X[104X
+    [4X[25X>[125X [27X   od;[127X[104X
+    [4X[25Xgap>[125X [27XList( gcls, Size );[127X[104X
+    [4X[28X[ 1, 8, 12, 1, 8, 6, 6, 6 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAll  the  steps we have made above are automatically performed by [5XGAP[105X if you
+  simply ask for [10XConjugacyClasses( grp )[110X, provided that [5XGAP[105X already knows that
+  [10Xgrp[110X  is  finite (e.g., because you asked [10XIsFinite( grp )[110X before). The reason
+  for  this  is  that  a  finite  matrix  group  like [10Xgrp[110X is [21Xhandled by a nice
+  monomorphism[121X.  For  such  groups,  [5XGAP[105X  uses  the  command  [2XNiceMonomorphism[102X
+  ([14XReference:  NiceMonomorphism[114X)  to construct a monomorphism (such as the [10Xhom[110X
+  in the previous example) and then proceeds as we have done above.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xgrp:=GL(2,3);;[127X[104X
+    [4X[25Xgap>[125X [27XIsHandledByNiceMonomorphism( grp );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xhom := NiceMonomorphism( grp );[127X[104X
+    [4X[28X<action isomorphism>[128X[104X
+    [4X[25Xgap>[125X [27Xp :=Image(hom,grp);[127X[104X
+    [4X[28XGroup([ (4,7)(5,8)(6,9), (2,7,6)(3,4,8) ])[128X[104X
+    [4X[25Xgap>[125X [27Xcc := ConjugacyClasses( grp );; ForAll(cc, x-> x in gcls);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XForAll(gcls, x->x in cc); # cc and gcls might be ordered differently[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  a  nice monomorphism might be defined on a larger group than [10Xgrp[110X
+  –so we have to use [10XImage( hom, grp )[110X and not only [10XImage( hom )[110X.[133X
+  
+  [33X[0;0YNice  monomorphisms  are not only used for matrix groups, but also for other
+  kinds  of  groups  in  which  one cannot calculate easily enough. As another
+  example,  let us show that the automorphism group of the quaternion group of
+  order 8  is  isomorphic  to the symmetric group of degree 4 by examining the
+  [21Xnice object[121X associated with that automorphism group.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xp:=Group((1,7,6,8)(2,5,3,4), (1,2,6,3)(4,8,5,7));;[127X[104X
+    [4X[25Xgap>[125X [27Xaut := AutomorphismGroup( p );; NiceMonomorphism(aut);;[127X[104X
+    [4X[25Xgap>[125X [27Xniceaut := NiceObject( aut );[127X[104X
+    [4X[28XGroup([ (1,4,2,3), (1,5,4)(2,6,3), (1,2)(3,4), (3,4)(5,6) ])[128X[104X
+    [4X[25Xgap>[125X [27XIsomorphismGroups( niceaut, SymmetricGroup( 4 ) );[127X[104X
+    [4X[28X[ (1,4,2,3), (1,5,4)(2,6,3), (1,2)(3,4), (3,4)(5,6) ] ->[128X[104X
+    [4X[28X[ (1,4,2,3), (1,4,2), (1,2)(3,4), (1,3)(2,4) ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  range  of  a  nice  monomorphism  is in most cases a permutation group,
+  because  nice  monomorphisms are mostly action homomorphisms. In some cases,
+  like  in  our  last example, the group is solvable and you might prefer a pc
+  group  as  nice  object.  You  cannot  change  the  nice monomorphism of the
+  automorphism   group   (because   it   is   the   value   of  the  attribute
+  [2XNiceMonomorphism[102X ([14XReference: NiceMonomorphism[114X)), but you can compose it with
+  an  isomorphism  from  the  permutation  group  to a pc group to obtain your
+  personal  nicer monomorphism. If you reconstruct the automorphism group, you
+  can  even  prescribe  it  this  nicer  monomorphism  as its [2XNiceMonomorphism[102X
+  ([14XReference:  NiceMonomorphism[114X),  because  a newly-constructed group will not
+  yet have a [2XNiceMonomorphism[102X ([14XReference: NiceMonomorphism[114X) set.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xnicer := NiceMonomorphism(aut) * IsomorphismPcGroup(niceaut);;[127X[104X
+    [4X[25Xgap>[125X [27Xaut2 := GroupByGenerators( GeneratorsOfGroup( aut ) );;[127X[104X
+    [4X[25Xgap>[125X [27XSetIsHandledByNiceMonomorphism( aut2, true );[127X[104X
+    [4X[25Xgap>[125X [27XSetNiceMonomorphism( aut2, nicer );[127X[104X
+    [4X[25Xgap>[125X [27XNiceObject( aut2 );  # a pc group[127X[104X
+    [4X[28XGroup([ f1*f2, f2^2*f3, f4, f3 ])[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe star [10X*[110X denotes composition of mappings from the left to the right, as we
+  have seen in Section [14X5.2[114X above. Reconstructing the automorphism group may of
+  course  result  in  the  loss of other information [5XGAP[105X had already gathered,
+  besides the (not-so-)nice monomorphism.[133X
+  
+  [33X[0;0YPrescribing a known map as the nice monomorphism of a group is possible only
+  if  this  map  knows that it is injective. In the above example, this is the
+  case  because  the  map  is  created  as the composition of two maps (a nice
+  monomorphism  and  an  isomorphism)  which  know that they are injective. In
+  general,  the  injectivity  flag  of  a  map  [10Xmap[110X  gets set if one tests the
+  property by calling [10XIsInjective( map )[110X; if one is sure that [10Xmap[110X is injective
+  and  wants to avoid the potentially expensive test then one can set the flag
+  by explicitly calling [10XSetIsInjective( map, true )[110X.[133X
+  
+  [33X[0;0Y[13XSummary.[113X  In  this  section  we  have seen how calculations in groups can be
+  carried  out  in  isomorphic  images  in nicer groups. We have seen that [5XGAP[105X
+  pursues  this  technique  automatically for certain classes of groups, e.g.,
+  for matrix groups that are known to be finite.[133X
+  
+  
+  [1X5.6 [33X[0;0YFurther Information about Groups and Homomorphisms[133X[101X
+  
+  [33X[0;0YGroups  and  the  functions  for  groups  are treated in Chapter [14X'Reference:
+  Groups'[114X.  There  are  several  chapters  dealing  with  groups  in  specific
+  representations,  for  example  Chapter [14X'Reference:  Permutation  Groups'[114X on
+  permutation  groups, [14X'Reference: Polycyclic Groups'[114X on polycyclic (including
+  finite  solvable)  groups,  [14X'Reference:  Matrix Groups'[114X on matrix groups and
+  [14X'Reference:   Finitely  Presented  Groups'[114X  on  finitely  presented  groups.
+  Chapter [14X'Reference:   Group   Actions'[114X   deals  with  group  actions.  Group
+  homomorphisms are the subject of Chapter [14X'Reference: Group Homomorphisms'[114X.[133X
+  

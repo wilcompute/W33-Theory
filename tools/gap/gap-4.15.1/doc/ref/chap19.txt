@@ -1,0 +1,517 @@
+  
+  [1X19 [33X[0;0YFloats[133X[101X
+  
+  [33X[0;0YStarting  with  version  4.5,  [5XGAP[105X  has  built-in support for floating-point
+  numbers    in    machine   format,   and   allows   package   to   implement
+  arbitrary-precision  floating-point arithmetic in a uniform manner. For now,
+  one  such  package,  [5XFloat[105X  exists,  and is based on the arbitrary-precision
+  routines in [5Xmpfr[105X.[133X
+  
+  [33X[0;0YA  word of caution: [5XGAP[105X deals primarily with algebraic objects, which can be
+  represented   exactly  in  a  computer.  Numerical  imprecision  means  that
+  floating-point  numbers  do not form a ring in the strict [5XGAP[105X sense, because
+  addition  is  in general not associative ([10X(1.0e-100+1.0)-1.0[110X is not the same
+  as [10X1.0e-100+(1.0-1.0)[110X, in the default precision setting).[133X
+  
+  [33X[0;0YMost  algorithms  in  [5XGAP[105X  which require ring elements will therefore not be
+  applicable  to  floating-point  elements. In some cases, such a notion would
+  not  even  make  any  sense  (what  is  the  greatest  common divisor of two
+  floating-point numbers?)[133X
+  
+  
+  [1X19.1 [33X[0;0YA sample run[133X[101X
+  
+  [33X[0;0YFloating-point  numbers can be input into [5XGAP[105X in the standard floating-point
+  notation:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X3.14;[127X[104X
+    [4X[28X3.14[128X[104X
+    [4X[25Xgap>[125X [27Xlast^2/6;[127X[104X
+    [4X[28X1.64327[128X[104X
+    [4X[25Xgap>[125X [27Xh := 6.62606896e-34;[127X[104X
+    [4X[28X6.62607e-34[128X[104X
+    [4X[25Xgap>[125X [27Xpi := 4*Atan(1.0);[127X[104X
+    [4X[28X3.14159[128X[104X
+    [4X[25Xgap>[125X [27Xhbar := h/(2*pi);[127X[104X
+    [4X[28X1.05457e-34[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YFloating-point  numbers  can  also  be  created using [10XFloat[110X, from strings or
+  rational numbers; and can be converted back using [10XString,Rat,Int[110X.[133X
+  
+  [33X[0;0Y[5XGAP[105X allows rational and floating-point numbers to be mixed in the elementary
+  operations [10X+,-,*,/[110X. However, floating-point numbers and rational numbers may
+  not be compared. Conversions are performed using the creator [10XFloat[110X:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XFloat("3.1416");[127X[104X
+    [4X[28X3.1416[128X[104X
+    [4X[25Xgap>[125X [27XFloat(355/113);[127X[104X
+    [4X[28X3.14159[128X[104X
+    [4X[25Xgap>[125X [27XRat(last);[127X[104X
+    [4X[28X355/113[128X[104X
+    [4X[25Xgap>[125X [27XRat(0.33333);[127X[104X
+    [4X[28X1/3[128X[104X
+    [4X[25Xgap>[125X [27XInt(1.e10);[127X[104X
+    [4X[28X10000000000[128X[104X
+    [4X[25Xgap>[125X [27XInt(1.e20);[127X[104X
+    [4X[28X100000000000000000000[128X[104X
+    [4X[25Xgap>[125X [27XInt(1.e30);[127X[104X
+    [4X[28X1000000000000000019884624838656[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X19.2 [33X[0;0YMethods[133X[101X
+  
+  [33X[0;0YFloating-point  numbers  may be directly input, as in any usual mathematical
+  software  or  language;  with the exception that every floating-point number
+  must  contain  a decimal digit. Therefore [10X.1[110X, [10X.1e1[110X, [10X-.999[110X etc. are all valid
+  [5XGAP[105X inputs.[133X
+  
+  [33X[0;0YFloating-point  numbers  so  entered  in [5XGAP[105X are stored as strings. They are
+  converted  to  floating-point  when they are first used. This means that, if
+  the  floating-point precision is increased, the constants are reevaluated to
+  fit the new format.[133X
+  
+  [33X[0;0YFloating-point  numbers  may  be  followed by an underscore, as in [10X1._[110X. This
+  means   that   they   are   to  be  immediately  converted  to  the  current
+  floating-point  format.  The  underscore may be followed by a single letter,
+  which  specifies which format/precision to use. By default, [5XGAP[105X has a single
+  floating-point  handler,  with  fixed  (53  bits)  precision, and its format
+  specifier is [10X'l'[110X as in [10X1._l[110X. Higher-precision floating-point computations is
+  available via external packages; [5Xfloat[105X for example.[133X
+  
+  [33X[0;0YA  record,  [2XFLOAT[102X  ([14X19.2-5[114X), contains all relevant constants for the current
+  floating-point format; see its documentation for details. Typical fields are
+  [10XFLOAT.MANT_DIG=53[110X,  the  constant  [10XFLOAT.VIEW_DIG=6[110X specifying the number of
+  digits to view, and [10XFLOAT.PI[110X for the constant [22Xπ[122X. The constants have the same
+  name as their C counterparts, except for the missing initial [10XDBL_[110X or [10XM_[110X.[133X
+  
+  [33X[0;0YFloating-point  numbers  may  be  created  using  the  single function [2XFloat[102X
+  ([14X19.2-1[114X),  which  accepts  as  arguments rational, string, or floating-point
+  numbers.  Floating-point  numbers may also be created, in any floating-point
+  representation,        using       [2XNewFloat[102X       ([14X19.2-1[114X)       as       in
+  [10XNewFloat(IsIEEE754FloatRep,355/113)[110X, by supplying the category filter of the
+  desired  new  floating-point  number;  or  using  [2XMakeFloat[102X  ([14X19.2-1[114X)  as in
+  [10XMakeFloat(1.0,355/113)[110X, by supplying a sample floating-point number.[133X
+  
+  [33X[0;0YFloating-point  numbers may also be converted to other [5XGAP[105X formats using the
+  usual commands [2XInt[102X ([14X14.2-3[114X), [2XRat[102X ([14X17.2-6[114X), [2XString[102X ([14X27.7-6[114X).[133X
+  
+  [33X[0;0YExact  conversion  to  and  from  floating-point  format  may  be done using
+  external  representations. The "external representation" of a floating-point
+  number     [10Xx[110X     is    a    pair    [10X[m,e][110X    of    integers,    such    that
+  [10Xx=m*2^(-1+e-LogInt(AbsInt(m),2))[110X.    Conversion   to   and   from   external
+  representation   is  performed  as  usual  using  [2XExtRepOfObj[102X  ([14X79.8-1[114X)  and
+  [2XObjByExtRep[102X ([14X79.8-1[114X):[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XExtRepOfObj(3.14);[127X[104X
+    [4X[28X[ 7070651414971679, 2 ][128X[104X
+    [4X[25Xgap>[125X [27XObjByExtRep(IEEE754FloatsFamily,last);[127X[104X
+    [4X[28X3.14[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YComputations  with floating-point numbers never raise any error. Division by
+  zero is allowed, and produces a signed infinity. Illegal operations, such as
+  [10X0./0.[110X,  produce [9XNaN[109X's (not-a-number); this is the only floating-point number
+  [10Xx[110X such that [10Xnot EqFloat(x+0.0,x)[110X.[133X
+  
+  [33X[0;0YThe  IEEE754  standard  requires [9XNaN[109X to be non-equal to itself. On the other
+  hand,  [5XGAP[105X  requires  every  object  to  be  equal to itself. To respect the
+  IEEE754 standard, the function [2XEqFloat[102X ([14X19.2-6[114X) should be used instead of [10X=[110X.[133X
+  
+  [33X[0;0YThe  category  a  floating-point belongs to can be checked using the filters
+  [2XIsFinite[102X ([14X30.4-2[114X), [2XIsPInfinity[102X ([14X19.2-13[114X), [2XIsNInfinity[102X ([14X19.2-13[114X), [2XIsXInfinity[102X
+  ([14X19.2-13[114X), [2XIsNaN[102X ([14X19.2-13[114X).[133X
+  
+  [33X[0;0YComparisons  between  floating-point  numbers  and  rationals are explicitly
+  forbidden.  The  rationale  is  that objects belonging to different families
+  should  in general not be comparable in [5XGAP[105X. Floating-point numbers are also
+  approximations  of  real  numbers, and don't follow the same rules; consider
+  for example, using the default [5XGAP[105X implementation of floating-point numbers,[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X1.0/3.0 = Float(1/3);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27X(1.0/3.0)^5 = Float((1/3)^5);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X19.2-1 [33X[0;0YFloat creators[133X[101X
+  
+  [33X[1;0Y[29X[2XFloat[102X( [3Xobj[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XNewFloat[102X( [3Xfilter[103X, [3Xobj[103X ) [32X constructor[133X
+  [33X[1;0Y[29X[2XMakeFloat[102X( [3Xsample[103X, [3Xobj[103X, [3Xobj[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA new floating-point number, based on [3Xobj[103X[133X
+  
+  [33X[0;0YThis function creates a new floating-point number.[133X
+  
+  [33X[0;0YIf  [3Xobj[103X  is a rational number, the created number is created with sufficient
+  precision so that the number can (usually) be converted back to the original
+  number  (see  [2XRat[102X  ([14XReference:  Rat[114X)  and [2XRat[102X ([14X17.2-6[114X)). For an integer, the
+  precision,  if unspecified, is chosen sufficient so that [10XInt(Float(obj))=obj[110X
+  always holds, but at least 64 bits.[133X
+  
+  [33X[0;0Y[3Xobj[103X  may  also be a string, which may be of the form [10X"3.14e0"[110X or [10X".314e1"[110X or
+  [10X".314@1"[110X etc.[133X
+  
+  [33X[0;0YAn option may be passed to specify, it bits, a desired precision. The format
+  is  [10XFloat("3.14":PrecisionFloat:=1000)[110X to create a 1000-bit approximation of
+  [22X3.14[122X.[133X
+  
+  [33X[0;0YIn   particular,   if   [3Xobj[103X   is   already  a  floating-point  number,  then
+  [10XFloat(obj:PrecisionFloat:=prec)[110X  creates a copy of [3Xobj[103X with a new precision.
+  prec[133X
+  
+  [1X19.2-2 Rat[101X
+  
+  [33X[1;0Y[29X[2XRat[102X( [3Xf[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA rational approximation to [3Xf[103X[133X
+  
+  [33X[0;0YThis  command  constructs  a  rational  approximation  to the floating-point
+  number  [3Xf[103X.  Of  course, it is not guaranteed to return the original rational
+  number [3Xf[103X was created from, though it returns the most `reasonable' one given
+  the precision of [3Xf[103X.[133X
+  
+  [33X[0;0YTwo options control the precision of the rational approximation: In the form
+  [10XRat(f:maxdenom:=md,maxpartial:=mp)[110X,  the  rational returned is such that the
+  denominator  is  at  most  [3Xmd[103X  and  the  partials  in its continued fraction
+  expansion  are  at  most  [3Xmp[103X.  The  default values are [10Xmaxpartial:=10000[110X and
+  [10Xmaxdenom:=2^(precision/2)[110X.[133X
+  
+  [1X19.2-3 Cyc[101X
+  
+  [33X[1;0Y[29X[2XCyc[102X( [3Xf[103X[, [3Xdegree[103X] ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA cyclotomic approximation to [3Xf[103X[133X
+  
+  [33X[0;0YThis  command  constructs  a  cyclotomic approximation to the floating-point
+  number  [3Xf[103X.  Of  course, it is not guaranteed to return the original rational
+  number [3Xf[103X was created from, though it returns the most `reasonable' one given
+  the precision of [3Xf[103X. An optional argument [3Xdegree[103X specifies the maximal degree
+  of the cyclotomic to be constructed.[133X
+  
+  [33X[0;0YThe method used is LLL lattice reduction.[133X
+  
+  [1X19.2-4 SetFloats[101X
+  
+  [33X[1;0Y[29X[2XSetFloats[102X( [3Xrec[103X[, [3Xbits[103X][, [3Xinstall[103X] ) [32X function[133X
+  
+  [33X[0;0YInstalls a new interface to floating-point numbers in [5XGAP[105X, optionally with a
+  desired  precision [3Xbits[103X in binary digits. The last optional argument [3Xinstall[103X
+  is  a  boolean  value;  if false, it only installs the eager handler and the
+  precision for the floateans, without making them the default.[133X
+  
+  [1X19.2-5 FLOAT[101X
+  
+  [33X[1;0Y[29X[2XFLOAT[102X [32X global variable[133X
+  
+  [33X[0;0YThis record contains useful floating-point constants:[133X
+  
+  [8XDECIMAL_DIG[108X
+        [33X[0;6YMaximal number of useful digits;[133X
+  
+  [8XDIG[108X
+        [33X[0;6YNumber of significant digits;[133X
+  
+  [8XVIEW_DIG[108X
+        [33X[0;6YNumber of digits to print in short view;[133X
+  
+  [8XEPSILON[108X
+        [33X[0;6YSmallest number such that [22X1≠1+ϵ[122X;[133X
+  
+  [8XMANT_DIG[108X
+        [33X[0;6YNumber of bits in the mantissa;[133X
+  
+  [8XMAX[108X
+        [33X[0;6YMaximal representable number;[133X
+  
+  [8XMAX_10_EXP[108X
+        [33X[0;6YMaximal decimal exponent;[133X
+  
+  [8XMAX_EXP[108X
+        [33X[0;6YMaximal binary exponent;[133X
+  
+  [8XMIN[108X
+        [33X[0;6YMinimal positive representable number;[133X
+  
+  [8XMIN_10_EXP[108X
+        [33X[0;6YMinimal decimal exponent;[133X
+  
+  [8XMIN_EXP[108X
+        [33X[0;6YMinimal exponent;[133X
+  
+  [8XINFINITY[108X
+        [33X[0;6YPositive infinity;[133X
+  
+  [8XNINFINITY[108X
+        [33X[0;6YNegative infinity;[133X
+  
+  [8XNAN[108X
+        [33X[0;6YNot-a-number,[133X
+  
+  [33X[0;0Yas  well  as  mathematical  constants [10XE[110X, [10XLOG2E[110X, [10XLOG10E[110X, [10XLN2[110X, [10XLN10[110X, [10XPI[110X, [10XPI_2[110X,
+  [10XPI_4[110X, [10X1_PI[110X, [10X2_PI[110X, [10X2_SQRTPI[110X, [10XSQRT2[110X, [10XSQRT1_2[110X.[133X
+  
+  [1X19.2-6 EqFloat[101X
+  
+  [33X[1;0Y[29X[2XEqFloat[102X( [3Xx[103X, [3Xy[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YWhether the floateans [3Xx[103X and [3Xy[103X are equal[133X
+  
+  [33X[0;0YThis  function compares two floating-point numbers, and returns [9Xtrue[109X if they
+  are  equal,  and  [9Xfalse[109X  otherwise;  with  the  exception that [9XNaN[109X is always
+  considered to be different from itself.[133X
+  
+  [1X19.2-7 PrecisionFloat[101X
+  
+  [33X[1;0Y[29X[2XPrecisionFloat[102X( [3Xx[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YThe precision of [3Xx[103X[133X
+  
+  [33X[0;0YThis  function returns the precision, counted in number of binary digits, of
+  the floating-point number [3Xx[103X.[133X
+  
+  [1X19.2-8 SignBit[101X
+  
+  [33X[1;0Y[29X[2XSignBit[102X( [3Xx[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XSignFloat[102X( [3Xx[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YThe sign of [3Xx[103X.[133X
+  
+  [33X[0;0YThe first function [10XSignBit[110X returns the sign bit of the floating-point number
+  [3Xx[103X: [9Xtrue[109X if [3Xx[103X is negative (including [10X-0.[110X) and [9Xfalse[109X otherwise.[133X
+  
+  [33X[0;0YThe  second function [10XSignFloat[110X returns the integer [9X-1[109X if [3Xx<0[103X, [9X0[109X if [3Xx=0[103X and [9X1[109X
+  if [3Xx>0[103X.[133X
+  
+  [1X19.2-9 SinCos[101X
+  
+  [33X[1;0Y[29X[2XSinCos[102X( [3Xx[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YThe list [10X[sin(x), cos(x)][110X.[133X
+  
+  [33X[0;0YThe function returns a list with [10Xsin[110X and [10Xcos[110X of [3Xx[103X.[133X
+  
+  [1X19.2-10 Atan2[101X
+  
+  [33X[1;0Y[29X[2XAtan2[102X( [3Xy[103X, [3Xx[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YThe polar angle of [3X(x, y)[103X in the plane as float.[133X
+  
+  [33X[0;0YReturns  the  principal value of the argument (polar angle) of [22X([3Xx[103X, [3Xy[103X)[122X in the
+  plane.  The  returned value will always be in [22X(-π , π][122X and is not defined on
+  [22X(0,0)[122X.  This  function  is  defined  in  accordance  with IEEE 1788-2015 and
+  imported from IEEE 754.[133X
+  
+  [1X19.2-11 Log1p[101X
+  
+  [33X[1;0Y[29X[2XLog1p[102X( [3Xx[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XExpm1[102X( [3Xx[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YThe natural logarithm of [22X[3Xx[103X+1[122X or exponential [22X-1[122X of [3Xx[103X respectively.[133X
+  
+  [33X[0;0YThe first function [10XLog1p[110X returns the natural logarithm [22Xlog([3Xx[103X+1)[122X.[133X
+  
+  [33X[0;0YThe second function [10XExpm1[110X returns the exponential function [22Xexp([3Xx[103X)-1[122X[133X
+  
+  [33X[0;0YThese two functions are inverse to each other.[133X
+  
+  [1X19.2-12 Erf[101X
+  
+  [33X[1;0Y[29X[2XErf[102X( [3Xx[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YThe error function given by the Gaussian integral[133X
+  
+  [33X[0;0YReturns the error function imported from IEEE 754 given by the formula:[133X
+  
+  
+  [24X[33X[0;6YErf(x) := \frac{2}{\sqrt{\pi}} \int_{0}^{x} exp(- t^2 ) dt[133X
+  
+  [124X
+  
+  
+  [1X19.2-13 [33X[0;0YInfinity testers[133X[101X
+  
+  [33X[1;0Y[29X[2XIsPInfinity[102X( [3Xx[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsNInfinity[102X( [3Xx[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsXInfinity[102X( [3Xx[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsFinite[102X( [3Xx[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsNaN[102X( [3Xx[103X ) [32X property[133X
+  
+  [33X[0;0YReturns  [9Xtrue[109X  if  the  floating-point  number [3Xx[103X is respectively [22X+∞[122X, [22X-∞[122X, [22X±∞[122X,
+  finite, or `not a number', such as the result of [10X0.0/0.0[110X.[133X
+  
+  
+  [1X19.2-14 [33X[0;0YStandard mathematical operations[133X[101X
+  
+  [33X[1;0Y[29X[2XSin[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XCos[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XTan[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XSec[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XCsc[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XCot[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XAsin[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XAcos[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XAtan[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XSinh[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XCosh[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XTanh[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XSech[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XCsch[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XCoth[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XAsinh[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XAcosh[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XAtanh[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLog[102X( [3Xf[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XLog2[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLog10[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XExp[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XExp2[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XExp10[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XCubeRoot[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XSquare[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XHypothenuse[102X( [3Xx[103X, [3Xy[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XCeil[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XFloor[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRound[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XTrunc[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XFrExp[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLdExp[102X( [3Xf[103X, [3Xexp[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XAbsoluteValue[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XNorm[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XFrac[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XZeta[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XGamma[102X( [3Xf[103X ) [32X attribute[133X
+  
+  [33X[0;0YStandard  math  functions.  Functions ending in an integer like [10XLog2[110X, [10XLog10[110X,
+  [10XExp2[110X  and  [10XExp10[110X  indicate the base used, in [10Xlog[110X and [10Xexp[110X the natural base is
+  used, i.e. [22Xe[122X.[133X
+  
+  
+  [1X19.3 [33X[0;0YHigh-precision-specific methods[133X[101X
+  
+  [33X[0;0Y[5XGAP[105X  provides  a  mechanism  for  packages  to  implement new floating-point
+  numerical   interfaces.  The  following  describes  that  mechanism,  actual
+  examples of packages are documented separately.[133X
+  
+  [33X[0;0YA package must create a record with fields (all optional)[133X
+  
+  [8Xcreator[108X
+        [33X[0;6Ya function converting strings to floating-point;[133X
+  
+  [8Xeager[108X
+        [33X[0;6Ya character allowing immediate conversion to floating-point;[133X
+  
+  [8Xobjbyextrep[108X
+        [33X[0;6Ya   function   creating   a   floating-point  number  out  of  a  list
+        [10X[mantissa,exponent][110X;[133X
+  
+  [8Xfilter[108X
+        [33X[0;6Ya filter for the new floating-point objects;[133X
+  
+  [8Xconstants[108X
+        [33X[0;6Ya  record  containing numerical constants, such as [10XMANT_DIG[110X, [10XMAX[110X, [10XMIN[110X,
+        [10XNAN[110X.[133X
+  
+  [33X[0;0YThe  package  must  install  methods  [10XInt[110X,  [10XRat[110X, [10XString[110X for its objects, and
+  creators [10XNewFloat(filter,IsRat)[110X, [10XNewFloat(IsString)[110X.[133X
+  
+  [33X[0;0YIt  must  then  install methods for all arithmetic and numerical operations:
+  [10XSUM[110X, [10XExp[110X, ...[133X
+  
+  [33X[0;0YThe  user chooses that implementation by calling [2XSetFloats[102X ([14X19.2-4[114X) with the
+  record  as  argument,  and  with  an  optional  second argument requesting a
+  precision in binary digits.[133X
+  
+  
+  [1X19.4 [33X[0;0YComplex arithmetic[133X[101X
+  
+  [33X[0;0YComplex  arithmetic may be implemented in packages, and is present in [5Xfloat[105X.
+  Complex  numbers  are  treated  as  usual numbers; they may be input with an
+  extra  "i"  as  in  [10X-0.5+0.866i[110X.  They  may  also  be created using [2XNewFloat[102X
+  ([14X19.2-1[114X)  with  three  arguments:  the  float filter, the real part, and the
+  imaginary part.[133X
+  
+  [33X[0;0YMethods  should  then  be  implemented  for  [10XNorm[110X,  [10XRealPart[110X, [10XImaginaryPart[110X,
+  [10XComplexConjugate[110X, ...[133X
+  
+  [1X19.4-1 Argument[101X
+  
+  [33X[1;0Y[29X[2XArgument[102X( [3Xz[103X ) [32X attribute[133X
+  
+  [33X[0;0YReturns   the   argument   of   the  complex  number  [3Xz[103X,  namely  the  value
+  [10XAtan2(ImaginaryPart(z),RealPart(z))[110X.[133X
+  
+  
+  [1X19.5 [33X[0;0YInterval-specific methods[133X[101X
+  
+  [33X[0;0YInterval  arithmetic  may  also be implemented in packages. Intervals are in
+  fact efficient implementations of sets of real numbers. The only non-trivial
+  issue is how they should be compared. The standard [10XEQ[110X tests if the intervals
+  are  equal; however, it is usually more useful to know if intervals overlap,
+  or are disjoint, or are contained in each other.[133X
+  
+  [33X[0;0YNote  the  usual convention that intervals are compared as in [22X[a,b]≤[c,d][122X if
+  and only if [22Xa≤ c[122X and [22Xb≤ d[122X.[133X
+  
+  [1X19.5-1 Sup[101X
+  
+  [33X[1;0Y[29X[2XSup[102X( [3Xx[103X ) [32X attribute[133X
+  
+  [33X[0;0YReturns the supremum of the interval [3Xx[103X.[133X
+  
+  [1X19.5-2 Inf[101X
+  
+  [33X[1;0Y[29X[2XInf[102X( [3Xx[103X ) [32X attribute[133X
+  
+  [33X[0;0YReturns the infimum of the interval [3Xx[103X.[133X
+  
+  [1X19.5-3 Mid[101X
+  
+  [33X[1;0Y[29X[2XMid[102X( [3Xx[103X ) [32X attribute[133X
+  
+  [33X[0;0YReturns the midpoint of the interval [3Xx[103X.[133X
+  
+  [1X19.5-4 AbsoluteDiameter[101X
+  
+  [33X[1;0Y[29X[2XAbsoluteDiameter[102X( [3Xx[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XDiameter[102X( [3Xx[103X ) [32X operation[133X
+  
+  [33X[0;0YReturns  the  absolute  diameter  of  the  interval [3Xx[103X, namely the difference
+  [10XSup(x)-Inf(x)[110X.[133X
+  
+  [1X19.5-5 RelativeDiameter[101X
+  
+  [33X[1;0Y[29X[2XRelativeDiameter[102X( [3Xx[103X ) [32X attribute[133X
+  
+  [33X[0;0YReturns    the    relative    diameter    of    the   interval   [3Xx[103X,   namely
+  [10X(Sup(x)-Inf(x))/AbsoluteValue(Min(x))[110X.[133X
+  
+  [1X19.5-6 IsDisjoint[101X
+  
+  [33X[1;0Y[29X[2XIsDisjoint[102X( [3Xx1[103X, [3Xx2[103X ) [32X operation[133X
+  
+  [33X[0;0YReturns [9Xtrue[109X if the two intervals [3Xx1[103X, [3Xx2[103X are disjoint.[133X
+  
+  [1X19.5-7 IsSubset[101X
+  
+  [33X[1;0Y[29X[2XIsSubset[102X( [3Xx1[103X, [3Xx2[103X ) [32X operation[133X
+  
+  [33X[0;0YReturns [9Xtrue[109X if the interval [3Xx1[103X contains [3Xx2[103X.[133X
+  
+  [1X19.5-8 IncreaseInterval[101X
+  
+  [33X[1;0Y[29X[2XIncreaseInterval[102X( [3Xx[103X, [3Xdelta[103X ) [32X operation[133X
+  
+  [33X[0;0YReturns  an interval with same midpoint as [3Xx[103X but absolute diameter increased
+  by [3Xdelta[103X.[133X
+  
+  [1X19.5-9 BlowupInterval[101X
+  
+  [33X[1;0Y[29X[2XBlowupInterval[102X( [3Xx[103X, [3Xratio[103X ) [32X operation[133X
+  
+  [33X[0;0YReturns  an interval with same midpoint as [3Xx[103X but relative diameter increased
+  by [3Xratio[103X.[133X
+  
+  [1X19.5-10 BisectInterval[101X
+  
+  [33X[1;0Y[29X[2XBisectInterval[102X( [3Xx[103X ) [32X operation[133X
+  
+  [33X[0;0YReturns a list of two intervals whose union equals the interval [3Xx[103X.[133X
+  

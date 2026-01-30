@@ -1,0 +1,327 @@
+  
+  [1X57 [33X[0;0YModules[133X[101X
+  
+  
+  [1X57.1 [33X[0;0YGenerating modules[133X[101X
+  
+  [1X57.1-1 IsLeftOperatorAdditiveGroup[101X
+  
+  [33X[1;0Y[29X[2XIsLeftOperatorAdditiveGroup[102X( [3XD[103X ) [32X Category[133X
+  
+  [33X[0;0YA  domain  [3XD[103X  lies in [10XIsLeftOperatorAdditiveGroup[110X if it is an additive group
+  that  is closed under scalar multiplication from the left, and such that [22Xλ *
+  (  x + y ) = λ * x + λ * y[122X for all scalars [22Xλ[122X and elements [22Xx, y ∈ D[122X (here and
+  below by scalars we mean elements of a domain acting on [3XD[103X from left or right
+  as appropriate).[133X
+  
+  [1X57.1-2 IsLeftModule[101X
+  
+  [33X[1;0Y[29X[2XIsLeftModule[102X( [3XM[103X ) [32X Category[133X
+  
+  [33X[0;0YA  domain  [3XM[103X lies in [10XIsLeftModule[110X if it lies in [10XIsLeftOperatorAdditiveGroup[110X,
+  [13Xand[113X  the  set  of  scalars forms a ring, [13Xand[113X [22X(λ + μ) * x = λ * x + μ * x[122X for
+  scalars [22Xλ, μ[122X and [22Xx ∈ M[122X, [13Xand[113X scalar multiplication satisfies [22Xλ * (μ * x) = (λ
+  * μ) * x[122X for scalars [22Xλ, μ[122X and [22Xx ∈ M[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XV:= FullRowSpace( Rationals, 3 );[127X[104X
+    [4X[28X( Rationals^3 )[128X[104X
+    [4X[25Xgap>[125X [27XIsLeftModule( V );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X57.1-3 GeneratorsOfLeftOperatorAdditiveGroup[101X
+  
+  [33X[1;0Y[29X[2XGeneratorsOfLeftOperatorAdditiveGroup[102X( [3XD[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns a list of elements of [3XD[103X that generates [3XD[103X as a left operator additive
+  group.[133X
+  
+  [1X57.1-4 GeneratorsOfLeftModule[101X
+  
+  [33X[1;0Y[29X[2XGeneratorsOfLeftModule[102X( [3XM[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns a list of elements of [3XM[103X that generate [3XM[103X as a left module.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XV:= FullRowSpace( Rationals, 3 );;[127X[104X
+    [4X[25Xgap>[125X [27XGeneratorsOfLeftModule( V );[127X[104X
+    [4X[28X[ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X57.1-5 AsLeftModule[101X
+  
+  [33X[1;0Y[29X[2XAsLeftModule[102X( [3XR[103X, [3XD[103X ) [32X operation[133X
+  
+  [33X[0;0Yif  the  domain  [3XD[103X  forms  an  additive  group  and  is  closed  under  left
+  multiplication  by  the elements of [3XR[103X, then [10XAsLeftModule( [3XR[103X[10X, [3XD[103X[10X )[110X returns the
+  domain [3XD[103X viewed as a left module.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xcoll:= [[0*Z(2),0*Z(2)], [Z(2),0*Z(2)], [0*Z(2),Z(2)], [Z(2),Z(2)]];[127X[104X
+    [4X[28X[ [ 0*Z(2), 0*Z(2) ], [ Z(2)^0, 0*Z(2) ], [ 0*Z(2), Z(2)^0 ],[128X[104X
+    [4X[28X  [ Z(2)^0, Z(2)^0 ] ][128X[104X
+    [4X[25Xgap>[125X [27XAsLeftModule( GF(2), coll );[127X[104X
+    [4X[28X<vector space of dimension 2 over GF(2)>[128X[104X
+  [4X[32X[104X
+  
+  [1X57.1-6 IsRightOperatorAdditiveGroup[101X
+  
+  [33X[1;0Y[29X[2XIsRightOperatorAdditiveGroup[102X( [3XD[103X ) [32X Category[133X
+  
+  [33X[0;0YA  domain  [3XD[103X lies in [10XIsRightOperatorAdditiveGroup[110X if it is an additive group
+  that is closed under scalar multiplication from the right, and such that [22X( x
+  + y ) * λ = x * λ + y * λ[122X for all scalars [22Xλ[122X and elements [22Xx, y ∈ D[122X.[133X
+  
+  [1X57.1-7 IsRightModule[101X
+  
+  [33X[1;0Y[29X[2XIsRightModule[102X( [3XM[103X ) [32X Category[133X
+  
+  [33X[0;0YA domain [3XM[103X lies in [10XIsRightModule[110X if it lies in [10XIsRightOperatorAdditiveGroup[110X,
+  [13Xand[113X  the  set  of  scalars forms a ring, [13Xand[113X [22Xx * (λ + μ) = x * λ + x * μ[122X for
+  scalars  [22Xλ, μ[122X and [22Xx ∈ M[122X, [13Xand[113X scalar multiplication satisfies [22X(x * μ) * λ = x
+  * (μ * λ)[122X for scalars [22Xλ, μ[122X and [22Xx ∈ M[122X.[133X
+  
+  [1X57.1-8 GeneratorsOfRightOperatorAdditiveGroup[101X
+  
+  [33X[1;0Y[29X[2XGeneratorsOfRightOperatorAdditiveGroup[102X( [3XD[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  a  list  of  elements  of  [3XD[103X  that  generates [3XD[103X as a right operator
+  additive group.[133X
+  
+  [1X57.1-9 GeneratorsOfRightModule[101X
+  
+  [33X[1;0Y[29X[2XGeneratorsOfRightModule[102X( [3XM[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns a list of elements of [3XM[103X that generate [3XM[103X as a left module.[133X
+  
+  [1X57.1-10 LeftModuleByGenerators[101X
+  
+  [33X[1;0Y[29X[2XLeftModuleByGenerators[102X( [3XR[103X, [3Xgens[103X[, [3Xzero[103X] ) [32X operation[133X
+  
+  [33X[0;0Yreturns the left module over [3XR[103X generated by [3Xgens[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xcoll:= [ [Z(2),0*Z(2)], [0*Z(2),Z(2)], [Z(2),Z(2)] ];;[127X[104X
+    [4X[25Xgap>[125X [27XV:= LeftModuleByGenerators( GF(16), coll );[127X[104X
+    [4X[28X<vector space over GF(2^4), with 3 generators>[128X[104X
+  [4X[32X[104X
+  
+  [1X57.1-11 LeftActingDomain[101X
+  
+  [33X[1;0Y[29X[2XLeftActingDomain[102X( [3XD[103X ) [32X attribute[133X
+  
+  [33X[0;0YLet  [3XD[103X  be  an external left set, that is, [3XD[103X is closed under the action of a
+  domain [22XL[122X by multiplication from the left. Then [22XL[122X can be accessed as value of
+  [10XLeftActingDomain[110X for [3XD[103X.[133X
+  
+  
+  [1X57.2 [33X[0;0YSubmodules[133X[101X
+  
+  [1X57.2-1 Submodule[101X
+  
+  [33X[1;0Y[29X[2XSubmodule[102X( [3XM[103X, [3Xgens[103X[, [3X"basis"[103X] ) [32X function[133X
+  
+  [33X[0;0Yis  the  left module generated by the collection [3Xgens[103X, with parent module [3XM[103X.
+  If the string [10X"basis"[110X is entered as the third argument then the submodule of
+  [3XM[103X is created for which the list [3Xgens[103X is known to be a list of basis vectors;
+  in  this case, it is [13Xnot[113X checked whether [3Xgens[103X really is linearly independent
+  and whether all in [3Xgens[103X lie in [3XM[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xcoll:= [ [Z(2),0*Z(2)], [0*Z(2),Z(2)], [Z(2),Z(2)] ];;[127X[104X
+    [4X[25Xgap>[125X [27XV:= LeftModuleByGenerators( GF(16), coll );;[127X[104X
+    [4X[25Xgap>[125X [27XW:= Submodule( V, [ coll[1], coll[2] ] );[127X[104X
+    [4X[28X<vector space over GF(2^4), with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27XParent( W ) = V;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X57.2-2 SubmoduleNC[101X
+  
+  [33X[1;0Y[29X[2XSubmoduleNC[102X( [3XM[103X, [3Xgens[103X[, [3X"basis"[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XSubmoduleNC[102X  does  the  same  as [2XSubmodule[102X ([14X57.2-1[114X), except that it does not
+  check whether all in [3Xgens[103X lie in [3XM[103X.[133X
+  
+  [1X57.2-3 ClosureLeftModule[101X
+  
+  [33X[1;0Y[29X[2XClosureLeftModule[102X( [3XM[103X, [3Xm[103X ) [32X operation[133X
+  
+  [33X[0;0Yis  the  left  module  generated  by the left module generators of [3XM[103X and the
+  element [3Xm[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XV:= LeftModuleByGenerators(Rationals, [ [ 1, 0, 0 ], [ 0, 1, 0 ] ]);[127X[104X
+    [4X[28X<vector space over Rationals, with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27XClosureLeftModule( V, [ 1, 1, 1 ] );[127X[104X
+    [4X[28X<vector space over Rationals, with 3 generators>[128X[104X
+  [4X[32X[104X
+  
+  [1X57.2-4 TrivialSubmodule[101X
+  
+  [33X[1;0Y[29X[2XTrivialSubmodule[102X( [3XM[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns the zero submodule of [3XM[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XV:= LeftModuleByGenerators(Rationals, [[ 1, 0, 0 ], [ 0, 1, 0 ]]);;[127X[104X
+    [4X[25Xgap>[125X [27XTrivialSubmodule( V );[127X[104X
+    [4X[28X<vector space of dimension 0 over Rationals>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X57.3 [33X[0;0YFree Modules[133X[101X
+  
+  [1X57.3-1 IsFreeLeftModule[101X
+  
+  [33X[1;0Y[29X[2XIsFreeLeftModule[102X( [3XM[103X ) [32X Category[133X
+  
+  [33X[0;0YA  left  module  is  free  as  module if it is isomorphic to a direct sum of
+  copies of its left acting domain.[133X
+  
+  [33X[0;0YFree left modules can have bases.[133X
+  
+  [33X[0;0YThe  characteristic  (see [2XCharacteristic[102X ([14X31.10-1[114X)) of a free left module is
+  defined    as    the    characteristic    of    its   left   acting   domain
+  (see [2XLeftActingDomain[102X ([14X57.1-11[114X)).[133X
+  
+  [1X57.3-2 FreeLeftModule[101X
+  
+  [33X[1;0Y[29X[2XFreeLeftModule[102X( [3XR[103X, [3Xgens[103X[, [3Xzero[103X][, [3X"basis"[103X] ) [32X function[133X
+  
+  [33X[0;0Y[10XFreeLeftModule( [3XR[103X[10X, [3Xgens[103X[10X )[110X is the free left module over the ring [3XR[103X, generated
+  by the vectors in the collection [3Xgens[103X.[133X
+  
+  [33X[0;0YIf  there are three arguments, a ring [3XR[103X and a collection [3Xgens[103X and an element
+  [3Xzero[103X,  then  [10XFreeLeftModule(  [3XR[103X[10X,  [3Xgens[103X[10X,  [3Xzero[103X[10X  )[110X  is  the [3XR[103X-free left module
+  generated by [3Xgens[103X, with zero element [3Xzero[103X.[133X
+  
+  [33X[0;0YIf  the  last  argument  is  the string [10X"basis"[110X then the vectors in [3Xgens[103X are
+  known to form a basis of the free module.[133X
+  
+  [33X[0;0YIt  should  be noted that the generators [3Xgens[103X must be vectors, that is, they
+  must  support  an addition and a scalar action of [3XR[103X via left multiplication.
+  (See  also  Section [14X31.3[114X  for  the general meaning of [21Xgenerators[121X in [5XGAP[105X.) In
+  particular,  [2XFreeLeftModule[102X  is  [13Xnot[113X  an  equivalent  of  commands  such  as
+  [2XFreeGroup[102X ([14X37.2-1[114X) in the sense of a constructor of a free group on abstract
+  generators.  Such  a construction seems to be unnecessary for vector spaces,
+  for  that  one can use for example row spaces (see [2XFullRowSpace[102X ([14X61.9-4[114X)) in
+  the   finite  dimensional  case  and  polynomial  rings  (see [2XPolynomialRing[102X
+  ([14X66.15-1[114X))  in  the infinite dimensional case. Moreover, the definition of a
+  [21Xnatural[121X  addition  for  elements of a given magma (for example a permutation
+  group) is possible via the construction of magma rings (see Chapter [14X65[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XV:= FreeLeftModule(Rationals, [[ 1, 0, 0 ], [ 0, 1, 0 ]], "basis");[127X[104X
+    [4X[28X<vector space of dimension 2 over Rationals>[128X[104X
+  [4X[32X[104X
+  
+  [1X57.3-3 Dimension[101X
+  
+  [33X[1;0Y[29X[2XDimension[102X( [3XM[103X ) [32X attribute[133X
+  
+  [33X[0;0YA  free left module has dimension [22Xn[122X if it is isomorphic to a direct sum of [22Xn[122X
+  copies of its left acting domain.[133X
+  
+  [33X[0;0Y(We  do  [13Xnot[113X mark [2XDimension[102X as invariant under isomorphisms since we want to
+  call  [2XUseIsomorphismRelation[102X  ([14X31.13-3[114X)  also  for  free  left  modules over
+  different left acting domains.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XV:= FreeLeftModule( Rationals, [ [ 1, 0 ], [ 0, 1 ], [ 1, 1 ] ] );;[127X[104X
+    [4X[25Xgap>[125X [27XDimension( V );[127X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+  
+  [1X57.3-4 IsFiniteDimensional[101X
+  
+  [33X[1;0Y[29X[2XIsFiniteDimensional[102X( [3XM[103X ) [32X property[133X
+  
+  [33X[0;0Yis  [9Xtrue[109X if [3XM[103X is a free left module that is finite dimensional over its left
+  acting domain, and [9Xfalse[109X otherwise.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XV:= FreeLeftModule( Rationals, [ [ 1, 0 ], [ 0, 1 ], [ 1, 1 ] ] );;[127X[104X
+    [4X[25Xgap>[125X [27XIsFiniteDimensional( V );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X57.3-5 UseBasis[101X
+  
+  [33X[1;0Y[29X[2XUseBasis[102X( [3XV[103X, [3Xgens[103X ) [32X operation[133X
+  
+  [33X[0;0YThe  vectors  in  the  list  [3Xgens[103X are known to form a basis of the free left
+  module  [3XV[103X.  [2XUseBasis[102X  stores  information in [3XV[103X that can be derived form this
+  fact, namely[133X
+  
+  [30X    [33X[0;6Y[3Xgens[103X  are  stored as left module generators if no such generators were
+        bound (this is useful especially if [3XV[103X is an algebra),[133X
+  
+  [30X    [33X[0;6Ythe dimension of [3XV[103X is stored.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XV:= FreeLeftModule( Rationals, [ [ 1, 0 ], [ 0, 1 ], [ 1, 1 ] ] );;[127X[104X
+    [4X[25Xgap>[125X [27XUseBasis( V, [ [ 1, 0 ], [ 1, 1 ] ] );[127X[104X
+    [4X[25Xgap>[125X [27XV;  # now V knows its dimension[127X[104X
+    [4X[28X<vector space of dimension 2 over Rationals>[128X[104X
+  [4X[32X[104X
+  
+  [1X57.3-6 IsRowModule[101X
+  
+  [33X[1;0Y[29X[2XIsRowModule[102X( [3XV[103X ) [32X property[133X
+  
+  [33X[0;0YA [13Xrow module[113X is a free left module whose elements are row vectors.[133X
+  
+  [1X57.3-7 IsMatrixModule[101X
+  
+  [33X[1;0Y[29X[2XIsMatrixModule[102X( [3XV[103X ) [32X property[133X
+  
+  [33X[0;0YA [13Xmatrix module[113X is a free left module whose elements are matrices.[133X
+  
+  [1X57.3-8 IsFullRowModule[101X
+  
+  [33X[1;0Y[29X[2XIsFullRowModule[102X( [3XM[103X ) [32X property[133X
+  
+  [33X[0;0YA [13Xfull row module[113X is a module [22XR^n[122X, for a ring [22XR[122X and a nonnegative integer [22Xn[122X.[133X
+  
+  [33X[0;0YMore  precisely,  a full row module is a free left module over a ring [22XR[122X such
+  that the elements are row vectors of the same length [22Xn[122X and with entries in [22XR[122X
+  and such that the dimension is equal to [22Xn[122X.[133X
+  
+  [33X[0;0YSeveral  functions  delegate  their  tasks  to full row modules, for example
+  [2XIterator[102X ([14X30.8-1[114X) and [2XEnumerator[102X ([14X30.3-2[114X).[133X
+  
+  [1X57.3-9 FullRowModule[101X
+  
+  [33X[1;0Y[29X[2XFullRowModule[102X( [3XR[103X, [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Yis the row module [10X[3XR[103X[10X^[3Xn[103X[10X[110X, for a ring [3XR[103X and a nonnegative integer [3Xn[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XV:= FullRowModule( Integers, 5 );[127X[104X
+    [4X[28X( Integers^5 )[128X[104X
+  [4X[32X[104X
+  
+  [1X57.3-10 IsFullMatrixModule[101X
+  
+  [33X[1;0Y[29X[2XIsFullMatrixModule[102X( [3XM[103X ) [32X property[133X
+  
+  [33X[0;0YA [13Xfull matrix module[113X is a module [22XR^{[m,n]}[122X, for a ring [22XR[122X and two nonnegative
+  integers [22Xm[122X, [22Xn[122X.[133X
+  
+  [33X[0;0YMore  precisely,  a  full  matrix module is a free left module over a ring [22XR[122X
+  such  that  the elements are [22Xm[122X by [22Xn[122X matrices with entries in [22XR[122X and such that
+  the dimension is equal to [22Xm n[122X.[133X
+  
+  [1X57.3-11 FullMatrixModule[101X
+  
+  [33X[1;0Y[29X[2XFullMatrixModule[102X( [3XR[103X, [3Xm[103X, [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Yis the matrix module [10X[3XR[103X[10X^[[3Xm[103X[10X,[3Xn[103X[10X][110X, for a ring [3XR[103X and nonnegative integers [3Xm[103X and [3Xn[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XFullMatrixModule( GaussianIntegers, 3, 6 );[127X[104X
+    [4X[28X( GaussianIntegers^[ 3, 6 ] )[128X[104X
+  [4X[32X[104X
+  

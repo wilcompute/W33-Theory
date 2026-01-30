@@ -1,0 +1,467 @@
+  
+  [1X12 [33X[0;0YObjects and Elements[133X[101X
+  
+  [33X[0;0YAn  [13Xobject[113X  is anything in [5XGAP[105X that can be assigned to a variable, so nearly
+  everything in [5XGAP[105X is an object.[133X
+  
+  [33X[0;0YDifferent  objects  can be regarded as equal with respect to the equivalence
+  relation [21X[10X=[110X[121X, in this case we say that the objects describe the same [13Xelement[113X.[133X
+  
+  
+  [1X12.1 [33X[0;0YObjects[133X[101X
+  
+  [33X[0;0YNearly all things one deals with in [5XGAP[105X are [13Xobjects[113X. For example, an integer
+  is an object, as is a list of integers, a matrix, a permutation, a function,
+  a  list  of  functions, a record, a group, a coset or a conjugacy class in a
+  group.[133X
+  
+  [33X[0;0YExamples  of things that are not objects are comments which are only lexical
+  constructs,   [9Xwhile[109X   loops  which  are  only  syntactical  constructs,  and
+  expressions,  such  as  [10X1  + 1[110X; but note that the value of an expression, in
+  this case the integer [10X2[110X, is an object.[133X
+  
+  [33X[0;0YObjects can be assigned to variables, and everything that can be assigned to
+  a  variable  is  an object. Analogously, objects can be used as arguments of
+  functions, and can be returned by functions.[133X
+  
+  [1X12.1-1 IsObject[101X
+  
+  [33X[1;0Y[29X[2XIsObject[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0Y[2XIsObject[102X returns [9Xtrue[109X if the object [3Xobj[103X is an object. Obviously it can never
+  return [9Xfalse[109X.[133X
+  
+  [33X[0;0YIt  can  be  used  as  a  filter  in  [2XInstallMethod[102X ([14X78.3-1[114X) when one of the
+  arguments can be anything.[133X
+  
+  
+  [1X12.2 [33X[0;0YElements as equivalence classes[133X[101X
+  
+  [33X[0;0YThe equality operation [21X[10X=[110X[121X defines an equivalence relation on all [5XGAP[105X objects.
+  The equivalence classes are called [13Xelements[113X.[133X
+  
+  [33X[0;0YThere  are  basically  three  reasons  to regard different objects as equal.
+  Firstly the same information may be stored in different places. Secondly the
+  same  information may be stored in different ways; for example, a polynomial
+  can  be  stored  sparsely  or  densely. Thirdly different information may be
+  equal modulo a mathematical equivalence relation. For example, in a finitely
+  presented  group  with  the relation [22Xa^2 = 1[122X the different objects [22Xa[122X and [22Xa^3[122X
+  describe the same element.[133X
+  
+  [33X[0;0YAs  an  example of all three reasons, consider the possibility of storing an
+  integer  in  several  places of the memory, of representing it as a fraction
+  with   denominator  1,  or  of  representing  it  as  a  fraction  with  any
+  denominator, and numerator a suitable multiple of the denominator.[133X
+  
+  
+  [1X12.3 [33X[0;0YSets[133X[101X
+  
+  [33X[0;0YIn [5XGAP[105X there is no category whose definition corresponds to the mathematical
+  property  of  being  a  set, however in the manual we will often refer to an
+  object  as  a  [13Xset[113X  in  order to convey the fact that mathematically, we are
+  thinking  of  it  as a set. In particular, two sets [22XA[122X and [22XB[122X are equal if and
+  only if, [22Xx ∈ A <=> x ∈ B[122X.[133X
+  
+  [33X[0;0YThere  are  two  types of object in [5XGAP[105X which exhibit this kind of behaviour
+  with  respect to equality, namely domains (see Section [14X12.4[114X) and lists whose
+  elements are strictly sorted see [2XIsSSortedList[102X ([14X21.17-4[114X). In general, [13Xset[113X in
+  this manual will mean an object of one of these types.[133X
+  
+  [33X[0;0YMore  precisely: two domains can be compared with [21X{[10X=[110X}[121X, the answer being [9Xtrue[109X
+  if  and only if the sets of elements are equal (regardless of any additional
+  structure) and; a domain and a list can be compared with [21X[10X=[110X[121X, the answer being
+  [9Xtrue[109X  if  and  only  if  the  list  is  equal to the strictly sorted list of
+  elements of the domain.[133X
+  
+  [33X[0;0YA discussion about sorted lists and sets can be found in Section [14X21.19[114X.[133X
+  
+  
+  [1X12.4 [33X[0;0YDomains[133X[101X
+  
+  [33X[0;0YAn  especially  important class of objects in [5XGAP[105X are those whose underlying
+  mathematical abstraction is that of a structured set, for example a group, a
+  conjugacy  class,  or  a  vector space. Such objects are called [13Xdomains[113X. The
+  equality  relation  between  domains is always equality [13Xas sets[113X, so that two
+  domains are equal if and only if they contain the same elements.[133X
+  
+  [33X[0;0YDomains  play  a  central  role in [5XGAP[105X. In a sense, the only reason that [5XGAP[105X
+  supports  objects  such  as  integers  and  permutations is the wish to form
+  domains of them and compute the properties of those domains.[133X
+  
+  [33X[0;0YDomains are described in Chapter [14X31[114X.[133X
+  
+  
+  [1X12.5 [33X[0;0YIdentical Objects[133X[101X
+  
+  [33X[0;0YTwo  objects  that  are equal [13Xas objects[113X (that is they actually refer to the
+  same  area  of  computer memory) and not only w.r.t. the equality relation [21X[10X=[110X[121X
+  are  called  [13Xidentical[113X.  Identical  objects  do  of course describe the same
+  element.[133X
+  
+  [1X12.5-1 IsIdenticalObj[101X
+  
+  [33X[1;0Y[29X[2XIsIdenticalObj[102X( [3Xobj1[103X, [3Xobj2[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XIsIdenticalObj[102X  tests  whether the objects [3Xobj1[103X and [3Xobj2[103X are identical (that
+  is  they  are  either equal immediate objects or are both stored at the same
+  location in memory.[133X
+  
+  [33X[0;0YIf two copies of a simple constant object (see section [14X12.6[114X) are created, it
+  is  not  defined whether [5XGAP[105X will actually store two equal but non-identical
+  objects,  or  just  a  single  object.  For  mutable objects, however, it is
+  important  to  know  whether  two values refer to identical or non-identical
+  objects,  and  the  documentation  of  operations that return mutable values
+  should  make  clear whether the values returned are new, or may be identical
+  to values stored elsewhere.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsIdenticalObj( 10^6, 10^6);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsIdenticalObj( 10^30, 10^30);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsIdenticalObj( true, true);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YGenerally, one may compute with objects but think of the results in terms of
+  the  underlying  elements  because  one  is  not  interested in locations in
+  memory, data formats or information beyond underlying equivalence relations.
+  But  there  are  cases  where  it  is important to distinguish the relations
+  identity and equality. This is best illustrated with an example. (The reader
+  who  is  not  familiar  with  lists in [5XGAP[105X, in particular element access and
+  assignment, is referred to Chapter [14X21[114X.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl1:= [ 1, 2, 3 ];; l2:= [ 1, 2, 3 ];;[127X[104X
+    [4X[25Xgap>[125X [27Xl1 = l2;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsIdenticalObj( l1, l2 );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xl1[3]:= 4;; l1; l2;[127X[104X
+    [4X[28X[ 1, 2, 4 ][128X[104X
+    [4X[28X[ 1, 2, 3 ][128X[104X
+    [4X[25Xgap>[125X [27Xl1 = l2;[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  two  lists  [10Xl1[110X  and [10Xl2[110X are equal but not identical. Thus a change in [10Xl1[110X
+  does not affect [10Xl2[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl1:= [ 1, 2, 3 ];; l2:= l1;;[127X[104X
+    [4X[25Xgap>[125X [27Xl1 = l2;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsIdenticalObj( l1, l2 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xl1[3]:= 4;; l1; l2;[127X[104X
+    [4X[28X[ 1, 2, 4 ][128X[104X
+    [4X[28X[ 1, 2, 4 ][128X[104X
+    [4X[25Xgap>[125X [27Xl1 = l2;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YHere,  [10Xl1[110X  and [10Xl2[110X are identical objects, so changing [10Xl1[110X means a change to [10Xl2[110X
+  as well.[133X
+  
+  [1X12.5-2 IsNotIdenticalObj[101X
+  
+  [33X[1;0Y[29X[2XIsNotIdenticalObj[102X( [3Xobj1[103X, [3Xobj2[103X ) [32X function[133X
+  
+  [33X[0;0Ytests whether the objects [3Xobj1[103X and [3Xobj2[103X are not identical.[133X
+  
+  
+  [1X12.6 [33X[0;0YMutability and Copyability[133X[101X
+  
+  [33X[0;0YAn  object  in  [5XGAP[105X  is  said  to be [13Ximmutable[113X if its mathematical value (as
+  defined  by [22X=[122X) does not change under any operation. More explicitly, suppose
+  [22Xa[122X is immutable and [22XO[122X is some operation on [22Xa[122X, then if [22Xa = b[122X evaluates to [9Xtrue[109X
+  before  executing  [22XO(a)[122X,  [22Xa = b[122X also evaluates to [9Xtrue[109X afterwards. (Examples
+  for  operations  [22XO[122X  that  change mutable objects are [2XAdd[102X ([14X21.4-2[114X) and [2XUnbind[102X
+  ([14X21.5-3[114X)  which  are  used  to  change  list  objects,  see  Chapter [14X21[114X.) An
+  immutable  object  [13Xmay[113X  change,  for example to store new information, or to
+  adopt  a  more  efficient  representation,  but  this  does  not  affect its
+  behaviour under [22X=[122X.[133X
+  
+  [33X[0;0YThere  are  two  points here to note. Firstly, [21Xoperation[121X above refers to the
+  functions  and  methods which can legitimately be applied to the object, and
+  not  the  [10X!.[110X  operation whereby virtually any aspect of any [5XGAP[105X level object
+  may  be  changed.  The  second  point  which follows from this, is that when
+  implementing  new types of objects, it is the programmer's responsibility to
+  ensure  that  the  functions  and  methods they write never change immutable
+  objects mathematically.[133X
+  
+  [33X[0;0YIn  fact,  most  objects  with  which  one  deals  in [5XGAP[105X are immutable. For
+  instance, the permutation [10X(1,2)[110X will never become a different permutation or
+  a  non-permutation (although a variable which previously had [10X(1,2)[110X stored in
+  it may subsequently have some other value).[133X
+  
+  [33X[0;0YFor many purposes, however, [13Xmutable[113X objects are useful. These objects may be
+  changed  to  represent different mathematical objects during their life. For
+  example, mutable lists can be changed by assigning values to positions or by
+  unbinding  values  at certain positions. Similarly, one can assign values to
+  components of a mutable record, or unbind them.[133X
+  
+  [1X12.6-1 IsCopyable[101X
+  
+  [33X[1;0Y[29X[2XIsCopyable[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YIf  a mutable form of an object [3Xobj[103X can be made in [5XGAP[105X, the object is called
+  [13Xcopyable[113X.  Examples  of  copyable objects are of course lists and records. A
+  new  mutable  version  of the object can always be obtained by the operation
+  [2XShallowCopy[102X ([14X12.7-1[114X).[133X
+  
+  [33X[0;0YObjects for which only an immutable form exists in [5XGAP[105X are called [13Xconstants[113X.
+  Examples of constants are integers, permutations, and domains. Called with a
+  constant  as  argument,  [2XImmutable[102X  ([14X12.6-3[114X) and [2XShallowCopy[102X ([14X12.7-1[114X) return
+  this argument.[133X
+  
+  [1X12.6-2 IsMutable[101X
+  
+  [33X[1;0Y[29X[2XIsMutable[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0Ytests whether [3Xobj[103X is mutable.[133X
+  
+  [33X[0;0YIf  an object is mutable then it is also copyable (see [2XIsCopyable[102X ([14X12.6-1[114X)),
+  and  a  [2XShallowCopy[102X  ([14X12.7-1[114X)  method  should  be supplied for it. Note that
+  [2XIsMutable[102X  must  not be implied by another filter, since otherwise [2XImmutable[102X
+  ([14X12.6-3[114X)  would  be  able  to  create  paradoxical objects in the sense that
+  [2XIsMutable[102X  for such an object is [9Xfalse[109X but the filter that implies [2XIsMutable[102X
+  is [9Xtrue[109X.[133X
+  
+  [33X[0;0YIn many situations, however, one wants to ensure that objects are [13Ximmutable[113X.
+  For  example,  take the identity of a matrix group. Since this matrix may be
+  referred  to  as  the  identity  of the group in several places, it would be
+  fatal  to  modify  its  entries,  or  add  or  unbind rows. We can obtain an
+  immutable copy of an object with [2XImmutable[102X ([14X12.6-3[114X).[133X
+  
+  [1X12.6-3 Immutable[101X
+  
+  [33X[1;0Y[29X[2XImmutable[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns an immutable structural copy (see [2XStructuralCopy[102X ([14X12.7-2[114X)) of [3Xobj[103X in
+  which  the  subobjects are immutable [13Xcopies[113X of the subobjects of [3Xobj[103X. If [3Xobj[103X
+  is immutable then [2XImmutable[102X returns [3Xobj[103X itself.[133X
+  
+  [33X[0;0Y[5XGAP[105X will complain with an error if one tries to change an immutable object.[133X
+  
+  [1X12.6-4 MakeImmutable[101X
+  
+  [33X[1;0Y[29X[2XMakeImmutable[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0YOne  can  turn  the  (mutable or immutable) object [3Xobj[103X into an immutable one
+  with  [2XMakeImmutable[102X;  note  that  this  also  makes  all  subobjects  of [3Xobj[103X
+  immutable,  so  one  should  call  [2XMakeImmutable[102X only if [3Xobj[103X and its mutable
+  subobjects  are  newly  created.  If  one  is not sure about this, [2XImmutable[102X
+  ([14X12.6-3[114X) should be used.[133X
+  
+  [33X[0;0YNote that it is [13Xnot[113X possible to turn an immutable object into a mutable one;
+  only mutable copies can be made (see [14X12.7[114X).[133X
+  
+  [33X[0;0YUsing  [2XImmutable[102X  ([14X12.6-3[114X),  it  is  possible to store an immutable identity
+  matrix  or an immutable list of generators, and to pass around references to
+  this immutable object safely. Only when a mutable copy is really needed does
+  the  actual  object have to be duplicated. Compared to the situation without
+  immutable  objects,  much  unnecessary  copying is avoided this way. Another
+  advantage  of  immutability  is that lists of immutable objects may remember
+  whether  they  are  sorted  (see [14X21.19[114X),  which is not possible for lists of
+  mutable objects.[133X
+  
+  [33X[0;0YSince  the  operation [2XImmutable[102X ([14X12.6-3[114X) must work for any object in [5XGAP[105X, it
+  follows  that an immutable form of every object must be possible, even if it
+  is  not sensible, and user-defined objects must allow for the possibility of
+  becoming immutable without notice.[133X
+  
+  
+  [1X12.6-5 [33X[0;0YMutability of Iterators[133X[101X
+  
+  [33X[0;0YAn interesting example of mutable (and thus copyable) objects is provided by
+  [13Xiterators[113X, see [14X30.8[114X. (Of course an immutable form of an iterator is not very
+  useful,  but  clearly  [2XImmutable[102X  ([14X12.6-3[114X) will yield such an object.) Every
+  call  of  [2XNextIterator[102X  ([14X30.8-5[114X)  changes  a  mutable  iterator  until it is
+  exhausted,  and  this  is  the  only  way to change an iterator. [2XShallowCopy[102X
+  ([14X12.7-1[114X)  for an iterator [3Xiter[103X is defined so as to return a mutable iterator
+  that  has  no  mutable data in common with [3Xiter[103X, and that behaves equally to
+  [3Xiter[103X  w.r.t. [2XIsDoneIterator[102X  ([14X30.8-4[114X)  and (if [3Xiter[103X is mutable) [2XNextIterator[102X
+  ([14X30.8-5[114X).  Note that this meaning of the [21Xshallow copy[121X of an iterator that is
+  returned by [2XShallowCopy[102X ([14X12.7-1[114X) is not as obvious as for lists and records,
+  and must be explicitly defined.[133X
+  
+  
+  [1X12.6-6 [33X[0;0YMutability of Results of Arithmetic Operations[133X[101X
+  
+  [33X[0;0YMany   operations  return  immutable  results,  among  those  in  particular
+  attributes  (see [14X13.5[114X).  Examples  of  attributes  are  [2XSize[102X  ([14X30.4-6[114X), [2XZero[102X
+  ([14X31.10-3[114X),  [2XAdditiveInverse[102X ([14X31.10-9[114X), [2XOne[102X ([14X31.10-2[114X), and [2XInverse[102X ([14X31.10-8[114X).
+  Arithmetic  operations,  such  as the binary infix operations [10X+[110X, [10X-[110X, [10X*[110X, [10X/[110X, [10X^[110X,
+  [9Xmod[109X,  the  unary  [10X-[110X,  and operations such as [2XComm[102X ([14X31.12-3[114X) and [2XLeftQuotient[102X
+  ([14X31.12-2[114X), return [13Xmutable[113X results, [13Xexcept[113X if all arguments are immutable. So
+  the  product of two matrices or of a vector and a matrix is immutable if and
+  only  if  the  two  matrices or both the vector and the matrix are immutable
+  (see  also [14X21.11[114X).  There  is one exception to this rule, which arises where
+  the  result  is  less deeply nested than at least one of the argument, where
+  mutable arguments may sometimes lead to an immutable result. For instance, a
+  mutable  matrix with immutable rows, multiplied by an immutable vector gives
+  an immutable vector result. The exact rules are given in [14X21.11[114X.[133X
+  
+  [33X[0;0YIt  should be noted that [10X0 * [3Xobj[103X[10X[110X is equivalent to [10XZeroSameMutability( [3Xobj[103X[10X )[110X,
+  [10X-[3Xobj[103X[10X[110X  is  equivalent  to  [10XAdditiveInverseSameMutability(  [3Xobj[103X[10X  )[110X,  [10X[3Xobj[103X[10X^0[110X  is
+  equivalent   to   [10XOneSameMutability(  [3Xobj[103X[10X)[110X,  and  [10X[3Xobj[103X[10X^-1[110X  is  equivalent  to
+  [10XInverseSameMutability(  [3Xobj[103X[10X  )[110X. The suffix [21XSameMutability[121X indicates that the
+  result is mutable if and only if the argument is mutable.[133X
+  
+  [33X[0;0YThe   operations   [2XZeroOp[102X   ([14X31.10-3[114X),  [2XAdditiveInverseOp[102X  ([14X31.10-9[114X),  [2XOneOp[102X
+  ([14X31.10-2[114X), and [2XInverseOp[102X ([14X31.10-8[114X) return [13Xmutable[113X results whenever a mutable
+  version  of  the  result  exists, contrary to the attributes [2XZero[102X ([14X31.10-3[114X),
+  [2XAdditiveInverse[102X ([14X31.10-9[114X), [2XOne[102X ([14X31.10-2[114X), and [2XInverse[102X ([14X31.10-8[114X).[133X
+  
+  [33X[0;0YIf  one  introduces new arithmetic objects then one need not install methods
+  for  the  attributes [2XOne[102X ([14X31.10-2[114X), [2XZero[102X ([14X31.10-3[114X), etc. The methods for the
+  associated  operations  [2XOneOp[102X ([14X31.10-2[114X) and [2XZeroOp[102X ([14X31.10-3[114X) will be called,
+  and then the results made immutable.[133X
+  
+  [33X[0;0YAll methods installed for the arithmetic operations must obey the rule about
+  the  mutability  of  the  result.  This  means that one may try to avoid the
+  perhaps  expensive  creation of a new object if both operands are immutable,
+  and of course no problems of this kind arise at all in the (usual) case that
+  the  objects  in  question  do  not  admit  a mutable form, i.e., that these
+  objects are not copyable.[133X
+  
+  [33X[0;0YIn  a  few,  relatively  low-level  algorithms, one wishes to treat a matrix
+  partly as a data structure, and manipulate and change its entries. For this,
+  the  matrix  needs  to  be  mutable,  and the rule that attribute values are
+  immutable  is  an  obstacle.  For  these  situations, a number of additional
+  operations   are   provided,   for   example  [2XTransposedMatMutable[102X  ([14X24.5-7[114X)
+  constructs  a  mutable  matrix  (contrary  to  the  attribute  [2XTransposedMat[102X
+  ([14X24.5-7[114X)),  while  [2XTriangulizeMat[102X  ([14X24.7-3[114X)  modifies  a  mutable matrix (in
+  place) into upper triangular form.[133X
+  
+  [33X[0;0YNote  that being immutable does not forbid an object to store knowledge. For
+  example,  if  it is found out that an immutable list is strictly sorted then
+  the list may store this information. More precisely, an immutable object may
+  change  in  any  way,  provided  that  it  continues  to  represent the same
+  mathematical object.[133X
+  
+  
+  [1X12.7 [33X[0;0YDuplication of Objects[133X[101X
+  
+  [1X12.7-1 ShallowCopy[101X
+  
+  [33X[1;0Y[29X[2XShallowCopy[102X( [3Xobj[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XShallowCopy[102X  returns  a [13Xnew mutable[113X object [13Xequal[113X to its argument, if this is
+  possible.  The  subobjects  of  [10XShallowCopy(  [3Xobj[103X[10X  )[110X  are  [13Xidentical[113X  to the
+  subobjects of [3Xobj[103X.[133X
+  
+  [33X[0;0YIf  [5XGAP[105X  does  not  support  a  mutable  form  of  the  immutable object [3Xobj[103X
+  (see [14X12.6[114X) then [2XShallowCopy[102X returns [3Xobj[103X itself.[133X
+  
+  [33X[0;0YSince [2XShallowCopy[102X is an operation, the concrete meaning of [21Xsubobject[121X depends
+  on  the  type of [3Xobj[103X. But for any copyable object [3Xobj[103X, the definition should
+  reflect the idea of [21Xfirst level copying[121X.[133X
+  
+  [33X[0;0YThe  definition of [2XShallowCopy[102X for lists (in particular for matrices) can be
+  found in [14X21.7[114X.[133X
+  
+  [1X12.7-2 StructuralCopy[101X
+  
+  [33X[1;0Y[29X[2XStructuralCopy[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0YIn  a  few  situations, one wants to make a [13Xstructural copy[113X [10Xscp[110X of an object
+  [3Xobj[103X.  This  is  defined  as  follows.  [10Xscp[110X  and  [3Xobj[103X are identical if [3Xobj[103X is
+  immutable.  Otherwise, [10Xscp[110X is a mutable copy of [3Xobj[103X such that each subobject
+  of  [10Xscp[110X  is  a  structural  copy  of  the  corresponding  subobject  of [3Xobj[103X.
+  Furthermore,   if  two  subobjects  of  [3Xobj[103X  are  identical  then  also  the
+  corresponding subobjects of [10Xscp[110X are identical.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xobj:= [ [ 0, 1 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27Xobj[2]:= obj[1];;[127X[104X
+    [4X[25Xgap>[125X [27Xobj[3]:= Immutable( obj[1] );;[127X[104X
+    [4X[25Xgap>[125X [27Xscp:= StructuralCopy( obj );;[127X[104X
+    [4X[25Xgap>[125X [27Xscp = obj; IsIdenticalObj( scp, obj );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsIdenticalObj( scp[1], obj[1] );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsIdenticalObj( scp[3], obj[3] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsIdenticalObj( scp[1], scp[2] );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThat  both  [2XShallowCopy[102X  ([14X12.7-1[114X) and [2XStructuralCopy[102X return the argument [3Xobj[103X
+  itself if it is not copyable is consistent with this definition, since there
+  is no way to change [3Xobj[103X by modifying the result of any of the two functions,
+  because in fact there is no way to change this result at all.[133X
+  
+  
+  [1X12.8 [33X[0;0YOther Operations Applicable to any Object[133X[101X
+  
+  [33X[0;0YThere are a number of general operations which can be applied, in principle,
+  to  any  object  in  [5XGAP[105X. Some of these are documented elsewhere –see [2XString[102X
+  ([14X27.7-6[114X),  [2XPrintObj[102X  ([14X6.3-5[114X) and [2XDisplay[102X ([14X6.3-6[114X). Others are mainly somewhat
+  technical.[133X
+  
+  [1X12.8-1 SetName[101X
+  
+  [33X[1;0Y[29X[2XSetName[102X( [3Xobj[103X, [3Xname[103X ) [32X operation[133X
+  
+  [33X[0;0Yfor a suitable object [3Xobj[103X sets that object to have name [3Xname[103X (a string).[133X
+  
+  [1X12.8-2 Name[101X
+  
+  [33X[1;0Y[29X[2XName[102X( [3Xobj[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns the name, a string, previously assigned to [3Xobj[103X via a call to [2XSetName[102X
+  ([14X12.8-1[114X). The name of an object is used [13Xonly[113X for viewing the object via this
+  name.[133X
+  
+  [33X[0;0YThere  are no methods installed for computing names of objects, but the name
+  may be set for suitable objects, using [2XSetName[102X ([14X12.8-1[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XR := PolynomialRing(Integers,2);[127X[104X
+    [4X[28XIntegers[x_1,x_2][128X[104X
+    [4X[25Xgap>[125X [27XSetName(R,"Z[x,y]");[127X[104X
+    [4X[25Xgap>[125X [27XR;[127X[104X
+    [4X[28XZ[x,y][128X[104X
+    [4X[25Xgap>[125X [27XName(R);[127X[104X
+    [4X[28X"Z[x,y]"[128X[104X
+  [4X[32X[104X
+  
+  [1X12.8-3 InfoText[101X
+  
+  [33X[1;0Y[29X[2XInfoText[102X( [3Xobj[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis  a  mutable  string  with  information  about the object [3Xobj[103X. There is no
+  default method to create an info text.[133X
+  
+  [1X12.8-4 IsInternallyConsistent[101X
+  
+  [33X[1;0Y[29X[2XIsInternallyConsistent[102X( [3Xobj[103X ) [32X operation[133X
+  
+  [33X[0;0YFor  debugging  purposes,  it  may  be useful to check the consistency of an
+  object [3Xobj[103X that is composed from other (composed) objects.[133X
+  
+  [33X[0;0YThere  is  a  default method of [2XIsInternallyConsistent[102X, with rank zero, that
+  returns  [9Xtrue[109X.  So it is possible (and recommended) to check the consistency
+  of subobjects of [3Xobj[103X recursively by [2XIsInternallyConsistent[102X.[133X
+  
+  [33X[0;0Y(Note that [2XIsInternallyConsistent[102X is not an attribute.)[133X
+  
+  [1X12.8-5 MemoryUsage[101X
+  
+  [33X[1;0Y[29X[2XMemoryUsage[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0YReturns  the  amount  of  memory  in  bytes  used  by the object [3Xobj[103X and its
+  subobjects.  Note  that in general, objects can reference each other in very
+  difficult  ways  such  that  determining  the  memory  usage  is a recursive
+  procedure.  In  particular,  computing  the  memory  usage  of a complicated
+  structure  itself  uses  some  additional memory, which is however no longer
+  used  after completion of this operation. This procedure descends into lists
+  and  records, positional and component objects; however it deliberately does
+  not  take  into  account the type and family objects. For functions, it only
+  takes  the  memory  usage of the function body, not of the local context the
+  function  was created in, although the function keeps a reference to that as
+  well.[133X
+  

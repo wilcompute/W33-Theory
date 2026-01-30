@@ -1,0 +1,303 @@
+  
+  [1X55 [33X[0;0YAdditive Magmas[133X[101X
+  
+  [33X[0;0YThis  chapter deals with domains that are closed under addition [10X+[110X, which are
+  called  [13Xnear-additive  magmas[113X in [5XGAP[105X. Together with the domains closed under
+  multiplication  [10X*[110X (see [14X35[114X), they are the basic algebraic structures. In many
+  cases,  the  addition is commutative (see [2XIsAdditivelyCommutative[102X ([14X55.3-1[114X)),
+  the  domain  is called an [13Xadditive magma[113X then. Every module (see [14X57[114X), vector
+  space  (see [14X61[114X),  ring  (see [14X56[114X), or field (see [14X58[114X) is an additive magma. In
+  the   cases   of  all  [13X(near-)additive  magma-with-zero[113X  or  [13X(near-)additive
+  magma-with-inverses[113X, additional additive structure is present (see [14X55.1[114X).[133X
+  
+  
+  [1X55.1 [33X[0;0Y(Near-)Additive Magma Categories[133X[101X
+  
+  [1X55.1-1 IsNearAdditiveMagma[101X
+  
+  [33X[1;0Y[29X[2XIsNearAdditiveMagma[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YA  [13Xnear-additive  magma[113X  in  [5XGAP[105X  is  a domain [22XA[122X with an associative but not
+  necessarily commutative addition [10X+[110X[22X: A × A → A[122X.[133X
+  
+  [1X55.1-2 IsNearAdditiveMagmaWithZero[101X
+  
+  [33X[1;0Y[29X[2XIsNearAdditiveMagmaWithZero[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YA  [13Xnear-additive  magma-with-zero[113X  in [5XGAP[105X is a near-additive magma [22XA[122X with an
+  operation [10X0*[110X (or [2XZero[102X ([14X31.10-3[114X)) that yields the zero element of [22XA[122X.[133X
+  
+  [33X[0;0YSo a near-additive magma-with-zero [3XA[103X does always contain a unique additively
+  neutral  element  [22Xz[122X,  i.e.,  [22Xz  +  a  =  a  =  a  +  z[122X  holds  for all [22Xa ∈ A[122X
+  (see [2XAdditiveNeutralElement[102X  ([14X55.3-5[114X)).  This zero element [22Xz[122X can be computed
+  with  the operation [2XZero[102X ([14X31.10-3[114X), by applying this function to [22XA[122X or to any
+  element [22Xa[122X in [22XA[122X. The zero element can be computed also as [10X0 * [110X[22Xa[122X, for any [22Xa[122X in
+  [22XA[122X.[133X
+  
+  [33X[0;0Y[13XNote[113X  that  it  may happen that a near-additive magma containing a zero does
+  [13Xnot[113X lie in the category [2XIsNearAdditiveMagmaWithZero[102X (see [14X31.6[114X).[133X
+  
+  [1X55.1-3 IsNearAdditiveGroup[101X
+  
+  [33X[1;0Y[29X[2XIsNearAdditiveGroup[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsNearAdditiveMagmaWithInverses[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YA  [13Xnear-additive  group[113X  in [5XGAP[105X is a near-additive magma-with-zero [22XA[122X with an
+  operation  [10X-1*[110X[22X:  A → A[122X that maps each element [22Xa[122X of [22XA[122X to its additive inverse
+  [10X-1*[110X[22Xa[122X (or [10XAdditiveInverse( [110X[3Xa[103X[10X )[110X, see [2XAdditiveInverse[102X ([14X31.10-9[114X)).[133X
+  
+  [33X[0;0YThe  addition  [10X+[110X of [22XA[122X is assumed to be associative, so a near-additive group
+  is     not     more     than     a     [13Xnear-additive    magma-with-inverses[113X.
+  [2XIsNearAdditiveMagmaWithInverses[102X  is  just a synonym for [2XIsNearAdditiveGroup[102X,
+  and  can  be  used  alternatively in all function names involving the string
+  [10X"NearAdditiveGroup"[110X.[133X
+  
+  [33X[0;0YNote   that  not  every  trivial  near-additive  magma  is  a  near-additive
+  magma-with-zero,  but  every  trivial  near-additive  magma-with-zero  is  a
+  near-additive group.[133X
+  
+  [1X55.1-4 IsAdditiveMagma[101X
+  
+  [33X[1;0Y[29X[2XIsAdditiveMagma[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YAn  [13Xadditive  magma[113X in [5XGAP[105X is a domain [22XA[122X with an associative and commutative
+  addition   [10X+[110X[22X:   A   ×   A   →   A[122X,   see [2XIsNearAdditiveMagma[102X   ([14X55.1-1[114X)  and
+  [2XIsAdditivelyCommutative[102X ([14X55.3-1[114X).[133X
+  
+  [1X55.1-5 IsAdditiveMagmaWithZero[101X
+  
+  [33X[1;0Y[29X[2XIsAdditiveMagmaWithZero[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YAn   [13Xadditive   magma-with-zero[113X   in   [5XGAP[105X  is  an  additive  magma  [22XA[122X  (see
+  [2XIsAdditiveMagma[102X  ([14X55.1-4[114X)  with  an  operation  [10X0*[110X  (or [2XZero[102X ([14X31.10-3[114X)) that
+  yields the zero of [22XA[122X.[133X
+  
+  [33X[0;0YSo  an  additive  magma-with-zero  [22XA[122X does always contain a unique additively
+  neutral  element  [22Xz[122X,  i.e.,  [22Xz  +  a  =  a  =  a  +  z[122X  holds  for all [22Xa ∈ A[122X
+  (see [2XAdditiveNeutralElement[102X  ([14X55.3-5[114X)).  This element [22Xz[122X can be computed with
+  the  operation [2XZero[102X ([14X31.10-3[114X) as [10XZero( [110X[22XA[122X[10X )[110X, and [22Xz[122X is also equal to [10XZero( [110X[22Xa[122X[10X )[110X
+  and to [10X0*[110X[22Xa[122X for each element [22Xa[122X in [22XA[122X.[133X
+  
+  [33X[0;0Y[13XNote[113X  that  it  may happen that an additive magma containing a zero does [13Xnot[113X
+  lie in the category [2XIsAdditiveMagmaWithZero[102X (see [14X31.6[114X).[133X
+  
+  [1X55.1-6 IsAdditiveGroup[101X
+  
+  [33X[1;0Y[29X[2XIsAdditiveGroup[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsAdditiveMagmaWithInverses[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YAn  [13Xadditive group[113X in [5XGAP[105X is an additive magma-with-zero [22XA[122X with an operation
+  [10X-1*[110X[22X:  A  →  A[122X that maps each element [22Xa[122X of [22XA[122X to its additive inverse [10X-1*[110X[22Xa[122X (or
+  [10XAdditiveInverse( [110X[22Xa[122X[10X )[110X, see [2XAdditiveInverse[102X ([14X31.10-9[114X)).[133X
+  
+  [33X[0;0YThe  addition  [10X+[110X  of  [22XA[122X  is assumed to be commutative and associative, so an
+  additive   group   is   not   more  than  an  [13Xadditive  magma-with-inverses[113X.
+  [2XIsAdditiveMagmaWithInverses[102X  is  just a synonym for [2XIsAdditiveGroup[102X, and can
+  be   used   alternatively   in  all  function  names  involving  the  string
+  [10X"AdditiveGroup"[110X.[133X
+  
+  [33X[0;0YNote  that  not every trivial additive magma is an additive magma-with-zero,
+  but every trivial additive magma-with-zero is an additive group.[133X
+  
+  
+  [1X55.2 [33X[0;0Y(Near-)Additive Magma Generation[133X[101X
+  
+  [33X[0;0YThis section describes functions that create additive magmas from generators
+  (see   [2XNearAdditiveMagma[102X   ([14X55.2-1[114X),   [2XNearAdditiveMagmaWithZero[102X   ([14X55.2-2[114X),
+  [2XNearAdditiveGroup[102X ([14X55.2-3[114X)), the underlying operations for which methods can
+  be      installed      (see      [2XNearAdditiveMagmaByGenerators[102X     ([14X55.2-4[114X),
+  [2XNearAdditiveMagmaWithZeroByGenerators[102X                              ([14X55.2-5[114X),
+  [2XNearAdditiveGroupByGenerators[102X  ([14X55.2-6[114X))  and functions for forming additive
+  submagmas  (see  [2XSubnearAdditiveMagma[102X ([14X55.2-7[114X), [2XSubnearAdditiveMagmaWithZero[102X
+  ([14X55.2-8[114X), [2XSubnearAdditiveGroup[102X ([14X55.2-9[114X)).[133X
+  
+  [1X55.2-1 NearAdditiveMagma[101X
+  
+  [33X[1;0Y[29X[2XNearAdditiveMagma[102X( [[3XFam[103X, ][3Xgens[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the (near-)additive magma [22XA[122X that is generated by the elements in the
+  list  [3Xgens[103X, that is, the closure of [3Xgens[103X under addition [10X+[110X. The family [3XFam[103X of
+  [22XA[122X can be entered as first argument; this is obligatory if [3Xgens[103X is empty (and
+  hence also [22XA[122X is empty).[133X
+  
+  [1X55.2-2 NearAdditiveMagmaWithZero[101X
+  
+  [33X[1;0Y[29X[2XNearAdditiveMagmaWithZero[102X( [[3XFam[103X, ][3Xgens[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  the  (near-)additive  magma-with-zero  [22XA[122X  that  is generated by the
+  elements in the list [3Xgens[103X, that is, the closure of [3Xgens[103X under addition [10X+[110X and
+  [2XZero[102X  ([14X31.10-3[114X).  The family [3XFam[103X of [22XA[122X can be entered as first argument; this
+  is obligatory if [3Xgens[103X is empty (and hence [22XA[122X is trivial).[133X
+  
+  [1X55.2-3 NearAdditiveGroup[101X
+  
+  [33X[1;0Y[29X[2XNearAdditiveGroup[102X( [[3XFam[103X, ][3Xgens[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the (near-)additive group [22XA[122X that is generated by the elements in the
+  list  [3Xgens[103X,  that  is, the closure of [3Xgens[103X under addition [10X+[110X, [2XZero[102X ([14X31.10-3[114X),
+  and  [2XAdditiveInverse[102X  ([14X31.10-9[114X). The family [3XFam[103X of [22XA[122X can be entered as first
+  argument; this is obligatory if [3Xgens[103X is empty (and hence [22XA[122X is trivial).[133X
+  
+  [1X55.2-4 NearAdditiveMagmaByGenerators[101X
+  
+  [33X[1;0Y[29X[2XNearAdditiveMagmaByGenerators[102X( [[3XFam[103X, ][3Xgens[103X ) [32X operation[133X
+  
+  [33X[0;0YAn underlying operation for [2XNearAdditiveMagma[102X ([14X55.2-1[114X).[133X
+  
+  [1X55.2-5 NearAdditiveMagmaWithZeroByGenerators[101X
+  
+  [33X[1;0Y[29X[2XNearAdditiveMagmaWithZeroByGenerators[102X( [[3XFam[103X, ][3Xgens[103X ) [32X operation[133X
+  
+  [33X[0;0YAn underlying operation for [2XNearAdditiveMagmaWithZero[102X ([14X55.2-2[114X).[133X
+  
+  [1X55.2-6 NearAdditiveGroupByGenerators[101X
+  
+  [33X[1;0Y[29X[2XNearAdditiveGroupByGenerators[102X( [[3XFam[103X, ][3Xgens[103X ) [32X operation[133X
+  
+  [33X[0;0YAn underlying operation for [2XNearAdditiveGroup[102X ([14X55.2-3[114X).[133X
+  
+  [1X55.2-7 SubnearAdditiveMagma[101X
+  
+  [33X[1;0Y[29X[2XSubnearAdditiveMagma[102X( [3XD[103X, [3Xgens[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XSubadditiveMagma[102X( [3XD[103X, [3Xgens[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XSubnearAdditiveMagmaNC[102X( [3XD[103X, [3Xgens[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XSubadditiveMagmaNC[102X( [3XD[103X, [3Xgens[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XSubnearAdditiveMagma[102X  returns  the  near-additive  magma  generated  by  the
+  elements  in the list [3Xgens[103X, with parent the domain [3XD[103X. [2XSubnearAdditiveMagmaNC[102X
+  does  the  same,  except that it does not check whether the elements of [3Xgens[103X
+  lie in [3XD[103X.[133X
+  
+  [33X[0;0Y[2XSubadditiveMagma[102X   and   [2XSubadditiveMagmaNC[102X   are  just  synonyms  of  these
+  functions.[133X
+  
+  [1X55.2-8 SubnearAdditiveMagmaWithZero[101X
+  
+  [33X[1;0Y[29X[2XSubnearAdditiveMagmaWithZero[102X( [3XD[103X, [3Xgens[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XSubadditiveMagmaWithZero[102X( [3XD[103X, [3Xgens[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XSubnearAdditiveMagmaWithZeroNC[102X( [3XD[103X, [3Xgens[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XSubadditiveMagmaWithZeroNC[102X( [3XD[103X, [3Xgens[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XSubnearAdditiveMagmaWithZero[102X   returns   the  near-additive  magma-with-zero
+  generated  by  the  elements  in  the  list  [3Xgens[103X, with parent the domain [3XD[103X.
+  [2XSubnearAdditiveMagmaWithZeroNC[102X  does the same, except that it does not check
+  whether the elements of [3Xgens[103X lie in [3XD[103X.[133X
+  
+  [33X[0;0Y[2XSubadditiveMagmaWithZero[102X and [2XSubadditiveMagmaWithZeroNC[102X are just synonyms of
+  these functions.[133X
+  
+  [1X55.2-9 SubnearAdditiveGroup[101X
+  
+  [33X[1;0Y[29X[2XSubnearAdditiveGroup[102X( [3XD[103X, [3Xgens[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XSubadditiveGroup[102X( [3XD[103X, [3Xgens[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XSubnearAdditiveGroupNC[102X( [3XD[103X, [3Xgens[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XSubadditiveGroupNC[102X( [3XD[103X, [3Xgens[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XSubnearAdditiveGroup[102X  returns  the  near-additive  group  generated  by  the
+  elements in the list [3Xgens[103X, with parent the domain [3XD[103X. [2XSubadditiveGroupNC[102X does
+  the  same, except that it does not check whether the elements of [3Xgens[103X lie in
+  [3XD[103X.[133X
+  
+  [33X[0;0Y[2XSubadditiveGroup[102X   and   [2XSubadditiveGroupNC[102X   are  just  synonyms  of  these
+  functions.[133X
+  
+  
+  [1X55.3 [33X[0;0YAttributes and Properties for (Near-)Additive Magmas[133X[101X
+  
+  [1X55.3-1 IsAdditivelyCommutative[101X
+  
+  [33X[1;0Y[29X[2XIsAdditivelyCommutative[102X( [3XA[103X ) [32X property[133X
+  
+  [33X[0;0YA near-additive magma [3XA[103X in [5XGAP[105X is [13Xadditively commutative[113X if for all elements
+  [22Xa, b ∈ [3XA[103X[122X the equality [22Xa + b = b + a[122X holds.[133X
+  
+  [33X[0;0YNote  that  the  commutativity  of  the [13Xmultiplication[113X [10X*[110X in a multiplicative
+  structure can be tested with [2XIsCommutative[102X ([14X35.4-9[114X).[133X
+  
+  [1X55.3-2 GeneratorsOfNearAdditiveMagma[101X
+  
+  [33X[1;0Y[29X[2XGeneratorsOfNearAdditiveMagma[102X( [3XA[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XGeneratorsOfAdditiveMagma[102X( [3XA[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis  a  list  of  elements of the near-additive magma [3XA[103X that generates [3XA[103X as a
+  near-additive magma, that is, the closure of this list under addition is [3XA[103X.[133X
+  
+  [1X55.3-3 GeneratorsOfNearAdditiveMagmaWithZero[101X
+  
+  [33X[1;0Y[29X[2XGeneratorsOfNearAdditiveMagmaWithZero[102X( [3XA[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XGeneratorsOfAdditiveMagmaWithZero[102X( [3XA[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis  a list of elements of the near-additive magma-with-zero [3XA[103X that generates
+  [3XA[103X  as  a  near-additive  magma-with-zero,  that is, the closure of this list
+  under addition and [2XZero[102X ([14X31.10-3[114X) is [3XA[103X.[133X
+  
+  [1X55.3-4 GeneratorsOfNearAdditiveGroup[101X
+  
+  [33X[1;0Y[29X[2XGeneratorsOfNearAdditiveGroup[102X( [3XA[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XGeneratorsOfAdditiveGroup[102X( [3XA[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis  a  list  of  elements of the near-additive group [3XA[103X that generates [3XA[103X as a
+  near-additive  group,  that  is,  the  closure  of this list under addition,
+  taking  the  zero element, and taking additive inverses (see [2XAdditiveInverse[102X
+  ([14X31.10-9[114X)) is [3XA[103X.[133X
+  
+  [1X55.3-5 AdditiveNeutralElement[101X
+  
+  [33X[1;0Y[29X[2XAdditiveNeutralElement[102X( [3XA[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the element [22Xz[122X in the near-additive magma [3XA[103X with the property that [22Xz
+  +  a  =  a = a + z[122X holds for all [22Xa ∈[122X [3XA[103X, if such an element exists. Otherwise
+  [9Xfail[109X is returned.[133X
+  
+  [33X[0;0YA  near-additive  magma that is not a near-additive magma-with-zero can have
+  an additive neutral element [22Xz[122X; in this case, [22Xz[122X [13Xcannot[113X be obtained as [10XZero( [3XA[103X[10X
+  )[110X or as [10X0*[110X[22Xa[122X for an element [22Xa[122X in [3XA[103X, see [2XZero[102X ([14X31.10-3[114X).[133X
+  
+  [1X55.3-6 TrivialSubnearAdditiveMagmaWithZero[101X
+  
+  [33X[1;0Y[29X[2XTrivialSubnearAdditiveMagmaWithZero[102X( [3XA[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis  the  additive  magma-with-zero  that  has  the zero of the near-additive
+  magma-with-zero [3XA[103X as its only element.[133X
+  
+  
+  [1X55.4 [33X[0;0YOperations for (Near-)Additive Magmas[133X[101X
+  
+  
+  [1X55.4-1 [33X[0;0YClosureNearAdditiveGroup[133X[101X
+  
+  [33X[1;0Y[29X[2XClosureNearAdditiveGroup[102X( [3XA[103X, [3Xa[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XClosureNearAdditiveGroup[102X( [3XA[103X, [3XB[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the closure of the near-additive magma [3XA[103X with the element [3Xa[103X or with
+  the  near-additive  magma  [3XB[103X,  w.r.t. addition, taking the zero element, and
+  taking additive inverses.[133X
+  
+  [1X55.4-2 ShowAdditionTable[101X
+  
+  [33X[1;0Y[29X[2XShowAdditionTable[102X( [3XR[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XShowMultiplicationTable[102X( [3XM[103X ) [32X function[133X
+  
+  [33X[0;0YFor  a  structure  [3XR[103X with an addition given by [10X+[110X, respectively a structure [3XM[103X
+  with  a  multiplication  given  by  [10X*[110X,  this  command  displays the addition
+  (multiplication) table of the structure in a pretty way.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XShowAdditionTable(GF(4));[127X[104X
+    [4X[28X+        | 0*Z(2)   Z(2)^0   Z(2^2)   Z(2^2)^2[128X[104X
+    [4X[28X---------+------------------------------------[128X[104X
+    [4X[28X0*Z(2)   | 0*Z(2)   Z(2)^0   Z(2^2)   Z(2^2)^2[128X[104X
+    [4X[28XZ(2)^0   | Z(2)^0   0*Z(2)   Z(2^2)^2 Z(2^2)[128X[104X
+    [4X[28XZ(2^2)   | Z(2^2)   Z(2^2)^2 0*Z(2)   Z(2)^0[128X[104X
+    [4X[28XZ(2^2)^2 | Z(2^2)^2 Z(2^2)   Z(2)^0   0*Z(2)[128X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XShowMultiplicationTable(GF(4));[127X[104X
+    [4X[28X*        | 0*Z(2)   Z(2)^0   Z(2^2)   Z(2^2)^2[128X[104X
+    [4X[28X---------+------------------------------------[128X[104X
+    [4X[28X0*Z(2)   | 0*Z(2)   0*Z(2)   0*Z(2)   0*Z(2)[128X[104X
+    [4X[28XZ(2)^0   | 0*Z(2)   Z(2)^0   Z(2^2)   Z(2^2)^2[128X[104X
+    [4X[28XZ(2^2)   | 0*Z(2)   Z(2^2)   Z(2^2)^2 Z(2)^0[128X[104X
+    [4X[28XZ(2^2)^2 | 0*Z(2)   Z(2^2)^2 Z(2)^0   Z(2^2)[128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  

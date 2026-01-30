@@ -1,0 +1,602 @@
+  
+  [1X23 [33X[0;0YRow Vectors[133X[101X
+  
+  [33X[0;0YJust  as  in  mathematics,  a  vector  in  [5XGAP[105X  is any object which supports
+  appropriate  addition and scalar multiplication operations (see Chapter [14X61[114X).
+  As  in  mathematics,  an  especially  important  class  of vectors are those
+  represented  by  a  list  of  coefficients with respect to some basis. These
+  correspond roughly to the [5XGAP[105X concept of [13Xrow vectors[113X.[133X
+  
+  
+  [1X23.1 [33X[0;0YIsRowVector (Filter)[133X[101X
+  
+  [1X23.1-1 IsRowVector[101X
+  
+  [33X[1;0Y[29X[2XIsRowVector[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YA  [13Xrow  vector[113X  is  a  vector  (see [2XIsVector[102X  ([14X31.14-14[114X))  that  is  also  a
+  homogeneous list of odd additive nesting depth (see [14X21.12[114X). Typical examples
+  are  lists  of integers and rationals, lists of finite field elements of the
+  same characteristic, and lists of polynomials from a common polynomial ring.
+  Note  that  matrices are [13Xnot[113X regarded as row vectors, because they have even
+  additive nesting depth.[133X
+  
+  [33X[0;0YThe  additive operations of the vector must thus be compatible with that for
+  lists,  implying  that  the  list entries are the coefficients of the vector
+  with respect to some basis.[133X
+  
+  [33X[0;0YNote  that  not all row vectors admit a multiplication via [10X*[110X (which is to be
+  understood  as  a  scalar  product);  for  example,  class functions are row
+  vectors  but  the  product  of two class functions is defined in a different
+  way. For the installation of a scalar product of row vectors, the entries of
+  the  vector  must be ring elements; note that the default method expects the
+  row  vectors  to  lie  in  [10XIsRingElementList[110X,  and  this category may not be
+  implied  by  [2XIsRingElement[102X ([14X31.14-16[114X) for all entries of the row vector (see
+  the comment in [2XIsVector[102X ([14X31.14-14[114X)).[133X
+  
+  [33X[0;0YNote  that methods for special types of row vectors really must be installed
+  with  the  requirement  [2XIsRowVector[102X, since [2XIsVector[102X ([14X31.14-14[114X) may lead to a
+  rank  of  the  method  below that of the default method for row vectors (see
+  file [11Xlib/vecmat.gi[111X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsRowVector([1,2,3]);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YBecause  row  vectors  are  just a special case of lists, all operations and
+  functions  for lists are applicable to row vectors as well (see Chapter [14X21[114X).
+  This  especially  includes  accessing  elements  of a row vector (see [14X21.3[114X),
+  changing  elements  of  a  mutable  row vector (see [14X21.4[114X), and comparing row
+  vectors (see [14X21.10[114X).[133X
+  
+  [33X[0;0YNote  that,  unless  your  algorithms specifically require you to be able to
+  change  entries  of  your vectors, it is generally better and faster to work
+  with immutable row vectors. See Section [14X12.6[114X for more details.[133X
+  
+  
+  [1X23.2 [33X[0;0YOperators for Row Vectors[133X[101X
+  
+  [33X[0;0YThe  rules  for  arithmetic  operations  involving  row  vectors are in fact
+  special   cases   of  those  for  the  arithmetic  of  lists,  as  given  in
+  Section [14X21.11[114X and the following sections, here we reiterate that definition,
+  in the language of vectors.[133X
+  
+  [33X[0;0YNote that the additive behaviour sketched below is defined only for lists in
+  the   category  [2XIsGeneralizedRowVector[102X  ([14X21.12-1[114X),  and  the  multiplicative
+  behaviour     is    defined    only    for    lists    in    the    category
+  [2XIsMultiplicativeGeneralizedRowVector[102X ([14X21.12-2[114X).[133X
+  
+  [33X[0;0Y[10X[3Xvec1[103X[10X + [3Xvec2[103X[10X[110X[133X
+  
+  [33X[0;0Yreturns  the  sum  of  the  two row vectors [3Xvec1[103X and [3Xvec2[103X. Probably the most
+  usual  situation  is that [3Xvec1[103X and [3Xvec2[103X have the same length and are defined
+  over  a common field; in this case the sum is a new row vector over the same
+  field  where  each  entry  is  the  sum  of the corresponding entries of the
+  vectors.[133X
+  
+  [33X[0;0YIn  more  general  situations,  the sum of two row vectors need not be a row
+  vector,  for  example adding an integer vector [3Xvec1[103X and a vector [3Xvec2[103X over a
+  finite  field  yields the list of pointwise sums, which will be a mixture of
+  finite field elements and integers if [3Xvec1[103X is longer than [3Xvec2[103X.[133X
+  
+  [33X[0;0Y[10X[3Xscalar[103X[10X + [3Xvec[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xvec[103X[10X + [3Xscalar[103X[10X[110X[133X
+  
+  [33X[0;0Yreturns  the  sum  of the scalar [3Xscalar[103X and the row vector [3Xvec[103X. Probably the
+  most  usual situation is that the elements of [3Xvec[103X lie in a common field with
+  [3Xscalar[103X;  in  this case the sum is a new row vector over the same field where
+  each  entry  is  the  sum  of  the scalar and the corresponding entry of the
+  vector.[133X
+  
+  [33X[0;0YMore  general  situations are for example the sum of an integer scalar and a
+  vector  over  a  finite  field,  or the sum of a finite field element and an
+  integer vector.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X[ 1, 2, 3 ] + [ 1/2, 1/3, 1/4 ];[127X[104X
+    [4X[28X[ 3/2, 7/3, 13/4 ][128X[104X
+    [4X[25Xgap>[125X [27X [ 1/2, 3/2, 1/2 ] + 1/2;[127X[104X
+    [4X[28X[ 1, 2, 1 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[10X[3Xvec1[103X[10X - [3Xvec2[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xscalar[103X[10X - [3Xvec[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xvec[103X[10X - [3Xscalar[103X[10X[110X[133X
+  
+  [33X[0;0YSubtracting a vector or scalar is defined as adding its additive inverse, so
+  the statements for the addition hold likewise.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X[ 1, 2, 3 ] - [ 1/2, 1/3, 1/4 ];[127X[104X
+    [4X[28X[ 1/2, 5/3, 11/4 ][128X[104X
+    [4X[25Xgap>[125X [27X[ 1/2, 3/2, 1/2 ] - 1/2;[127X[104X
+    [4X[28X[ 0, 1, 0 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[10X[3Xscalar[103X[10X * [3Xvec[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xvec[103X[10X * [3Xscalar[103X[10X[110X[133X
+  
+  [33X[0;0Yreturns  the  product  of the scalar [3Xscalar[103X and the row vector [3Xvec[103X. Probably
+  the  most  usual situation is that the elements of [3Xvec[103X lie in a common field
+  with  [3Xscalar[103X;  in  this  case  the product is a new row vector over the same
+  field  where  each  entry is the product of the scalar and the corresponding
+  entry of the vector.[133X
+  
+  [33X[0;0YMore general situations are for example the product of an integer scalar and
+  a  vector  over a finite field, or the product of a finite field element and
+  an integer vector.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X[ 1/2, 3/2, 1/2 ] * 2;[127X[104X
+    [4X[28X[ 1, 3, 1 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[10X[3Xvec1[103X[10X * [3Xvec2[103X[10X[110X[133X
+  
+  [33X[0;0Yreturns  the  standard scalar product of [3Xvec1[103X and [3Xvec2[103X, i.e., the sum of the
+  products  of  the  corresponding  entries  of the vectors. Probably the most
+  usual  situation  is that [3Xvec1[103X and [3Xvec2[103X have the same length and are defined
+  over a common field; in this case the sum is an element of this field.[133X
+  
+  [33X[0;0YMore  general  situations  are  for  example the inner product of an integer
+  vector  and  a  vector  over a finite field, or the inner product of two row
+  vectors of different lengths.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X[ 1, 2, 3 ] * [ 1/2, 1/3, 1/4 ];[127X[104X
+    [4X[28X23/12[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YFor the mutability of results of arithmetic operations, see [14X12.6[114X.[133X
+  
+  [33X[0;0YFurther  operations  with  vectors  as  operands  are  defined by the matrix
+  operations, see [14X24.3[114X.[133X
+  
+  [1X23.2-1 NormedRowVector[101X
+  
+  [33X[1;0Y[29X[2XNormedRowVector[102X( [3Xv[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  a  scalar  multiple [10X[3Xw[103X[10X = [3Xc[103X[10X * [3Xv[103X[10X[110X of the row vector [3Xv[103X with the property
+  that  the  first  nonzero  entry of [3Xw[103X is an identity element in the sense of
+  [2XIsOne[102X ([14X31.10-5[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XNormedRowVector( [ 5, 2, 3 ] );[127X[104X
+    [4X[28X[ 1, 2/5, 3/5 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X23.3 [33X[0;0YRow Vectors over Finite Fields[133X[101X
+  
+  [33X[0;0Y[5XGAP[105X  can  use  compact  formats to store row vectors over fields of order at
+  most  256,  based  on  those  used by the Meat-Axe [Rin93]. This format also
+  permits  extremely  efficient  vector  arithmetic. On the other hand element
+  access and assignment is significantly slower than for plain lists.[133X
+  
+  [33X[0;0YThe  function  [2XConvertToVectorRep[102X  ([14X23.3-1[114X) is used to convert a list into a
+  compressed  vector,  or  to  rewrite a compressed vector over another field.
+  Note  that  this  function is [13Xmuch[113X faster when it is given a field (or field
+  size)  as  an  argument,  rather  than  having to scan the vector and try to
+  decide  the  field. Supplying the field can also avoid errors and/or loss of
+  performance, when one vector from some collection happens to have all of its
+  entries over a smaller field than the [21Xnatural[121X field of the problem.[133X
+  
+  
+  [1X23.3-1 [33X[0;0YConvertToVectorRep[133X[101X
+  
+  [33X[1;0Y[29X[2XConvertToVectorRep[102X( [3Xlist[103X[, [3Xfield[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XConvertToVectorRep[102X( [3Xlist[103X[, [3Xfieldsize[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XConvertToVectorRepNC[102X( [3Xlist[103X[, [3Xfield[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XConvertToVectorRepNC[102X( [3Xlist[103X[, [3Xfieldsize[103X] ) [32X function[133X
+  
+  [33X[0;0YCalled  with  one  argument  [3Xlist[103X,  [2XConvertToVectorRep[102X  converts  [3Xlist[103X to an
+  internal row vector representation if possible.[133X
+  
+  [33X[0;0YCalled  with  a  list  [3Xlist[103X  and  a  finite  field [3Xfield[103X, [2XConvertToVectorRep[102X
+  converts [3Xlist[103X to an internal row vector representation appropriate for a row
+  vector over [3Xfield[103X.[133X
+  
+  [33X[0;0YInstead of a [3Xfield[103X also its size [3Xfieldsize[103X may be given.[133X
+  
+  [33X[0;0YIt  is  forbidden to call this function unless [3Xlist[103X is a plain list or a row
+  vector,  [3Xfield[103X  is a field, and all elements of [3Xlist[103X lie in [3Xfield[103X. Violation
+  of  this  condition  can  lead to unpredictable behaviour or a system crash.
+  (Setting  the  assertion  level  to  at  least 2 might catch some violations
+  before a crash, see [2XSetAssertionLevel[102X ([14X7.5-1[114X).)[133X
+  
+  [33X[0;0Y[3Xlist[103X  may  already  be  a  compressed  vector.  In this case, if no [3Xfield[103X or
+  [3Xfieldsize[103X is given, then nothing happens. If one is given then the vector is
+  rewritten  as  a  compressed  vector  over the given [3Xfield[103X unless it has the
+  filter [10XIsLockedRepresentationVector[110X, in which case it is not changed.[133X
+  
+  [33X[0;0YThe  return  value  is  the  size of the field over which the vector ends up
+  written, if it is written in a compressed representation.[133X
+  
+  [33X[0;0YIn  this  example,  we first create a row vector and then ask [5XGAP[105X to rewrite
+  it, first over [10XGF(2)[110X and then over [10XGF(4)[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xv := [Z(2)^0,Z(2),Z(2),0*Z(2)];[127X[104X
+    [4X[28X[ Z(2)^0, Z(2)^0, Z(2)^0, 0*Z(2) ][128X[104X
+    [4X[25Xgap>[125X [27XRepresentationsOfObject(v);[127X[104X
+    [4X[28X[ "IsPlistRep", "IsInternalRep" ][128X[104X
+    [4X[25Xgap>[125X [27XConvertToVectorRep(v);[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27Xv;[127X[104X
+    [4X[28X<a GF2 vector of length 4>[128X[104X
+    [4X[25Xgap>[125X [27XConvertToVectorRep(v,4);[127X[104X
+    [4X[28X4[128X[104X
+    [4X[25Xgap>[125X [27Xv;[127X[104X
+    [4X[28X[ Z(2)^0, Z(2)^0, Z(2)^0, 0*Z(2) ][128X[104X
+    [4X[25Xgap>[125X [27XRepresentationsOfObject(v);[127X[104X
+    [4X[28X[ "IsDataObjectRep", "Is8BitVectorRep" ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YA vector in the special representation over [10XGF(2)[110X is always viewed as [10X<a GF2
+  vector of length ...>[110X. Over fields of orders 3 to 256, a vector of length 10
+  or  less  is  viewed  as  the  list of its coefficients, but a longer one is
+  abbreviated.[133X
+  
+  [33X[0;0YArithmetic  operations  (see [14X21.11[114X  and the following sections) preserve the
+  compression  status  of  row  vectors in the sense that if all arguments are
+  compressed  row  vectors written over the same field and the result is a row
+  vector  then  also  the  result is a compressed row vector written over this
+  field.[133X
+  
+  [1X23.3-2 ImmutableVector[101X
+  
+  [33X[1;0Y[29X[2XImmutableVector[102X( [3Xfield[103X, [3Xvector[103X[, [3Xchange[103X] ) [32X operation[133X
+  
+  [33X[0;0YLet  [3Xvector[103X  be  an  object  for  which  [2XIsRowVector[102X ([14X23.1-1[114X) or [2XIsVectorObj[102X
+  ([14X26.2-1[114X)   returns  [9Xtrue[109X.  In  the  former  case,  [3Xvector[103X  is  a  list,  and
+  [2XImmutableVector[102X  returns  an immutable object for which [2XIsRowVector[102X ([14X23.1-1[114X)
+  returns  [9Xtrue[109X  (in  particular  again a list), which is equal to [3Xvector[103X, and
+  which  is  in  the optimal (concerning space and runtime) representation for
+  vectors  defined  over  [3Xfield[103X,  provided  that  the entries of [3Xvector[103X lie in
+  [3Xfield[103X.  In  the  latter  case,  if  [3Xvector[103X  is  not in [2XIsRowVector[102X ([14X23.1-1[114X),
+  [2XImmutableVector[102X  returns  an immutable object that is equal to the result of
+  [2XChangedBaseDomain[102X ([14X26.6-3[114X) when this is called with [3Xvector[103X and [3Xfield[103X.[133X
+  
+  [33X[0;0YThis means that vectors obtained by several calls of [2XImmutableVector[102X for the
+  same  [3Xfield[103X  are  compatible  for  fast  arithmetic  without  need for field
+  conversion.[133X
+  
+  [33X[0;0YIf  the  input vector [3Xvector[103X is in [2XIsRowVector[102X ([14X23.1-1[114X) then it might change
+  its  representation  as  a side effect of this function. However, one cannot
+  rely  on  this  side  effect.  Also,  if [3Xvector[103X is already immutable and the
+  result  of  [2XImmutableVector[102X  has the same internal representation as [3Xvector[103X,
+  the result is not necessarily [13Xidentical[113X to [3Xvector[103X.[133X
+  
+  [33X[0;0YIf [3Xchange[103X is [9Xtrue[109X, then [3Xvector[103X may be changed to become immutable; otherwise
+  it is copied first.[133X
+  
+  [1X23.3-3 NumberFFVector[101X
+  
+  [33X[1;0Y[29X[2XNumberFFVector[102X( [3Xvec[103X, [3Xsz[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns an integer that gives the position minus one of the finite field row
+  vector  [3Xvec[103X  in  the  sorted  list of all row vectors over the field with [3Xsz[103X
+  elements  in  the  same dimension as [3Xvec[103X. [2XNumberFFVector[102X returns [9Xfail[109X if the
+  vector cannot be represented over the field with [3Xsz[103X elements.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xv:=[0,1,2,0]*Z(3);;[127X[104X
+    [4X[25Xgap>[125X [27XNumberFFVector(v, 3);[127X[104X
+    [4X[28X21[128X[104X
+    [4X[25Xgap>[125X [27XNumberFFVector(Zero(v),3);[127X[104X
+    [4X[28X0[128X[104X
+    [4X[25Xgap>[125X [27XV:=EnumeratorSorted(GF(3)^4);[127X[104X
+    [4X[28X<enumerator of ( GF(3)^4 )>[128X[104X
+    [4X[25Xgap>[125X [27XV[21+1] = v;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X23.4 [33X[0;0YCoefficient List Arithmetic[133X[101X
+  
+  [33X[0;0YThe  following  operations  all  perform arithmetic on row vectors, given as
+  homogeneous  lists  of the same length, containing elements of a commutative
+  ring.[133X
+  
+  [33X[0;0YThere  are  two  reasons  for  using  [2XAddRowVector[102X ([14X23.4-1[114X) in preference to
+  arithmetic  operators.  Firstly,  the three argument form has no single-step
+  equivalent.  Secondly  [2XAddRowVector[102X  ([14X23.4-1[114X)  changes  its  first  argument
+  in-place,  rather  than  allocating a new vector to hold the result, and may
+  thus produce less garbage.[133X
+  
+  [1X23.4-1 AddVector[101X
+  
+  [33X[1;0Y[29X[2XAddVector[102X( [3Xdst[103X, [3Xsrc[103X[, [3Xmul[103X[, [3Xfrom[103X, [3Xto[103X]] ) [32X operation[133X
+  [33X[1;0Y[29X[2XAddRowVector[102X( [3Xdst[103X, [3Xsrc[103X[, [3Xmul[103X[, [3Xfrom[103X, [3Xto[103X]] ) [32X operation[133X
+  
+  [33X[0;0YAdds  the  product  of  [3Xsrc[103X and [3Xmul[103X to [3Xdst[103X, changing [3Xdst[103X. If [3Xfrom[103X and [3Xto[103X are
+  given then only the index range [10X[ [3Xfrom[103X[10X .. [3Xto[103X[10X ][110X is guaranteed to be affected.
+  Other  indices [13Xmay[113X be affected, if it is more convenient to do so. Even when
+  [3Xfrom[103X and [3Xto[103X are given, [3Xdst[103X and [3Xsrc[103X must be row vectors of the [13Xsame[113X length.[133X
+  
+  [33X[0;0YIf [3Xmul[103X is not given either then this operation simply adds [3Xsrc[103X to [3Xdst[103X.[133X
+  
+  [1X23.4-2 AddCoeffs[101X
+  
+  [33X[1;0Y[29X[2XAddCoeffs[102X( [3Xlist1[103X[, [3Xposs1[103X], [3Xlist2[103X[, [3Xposs2[103X[, [3Xmul[103X]] ) [32X operation[133X
+  
+  [33X[0;0Y[2XAddCoeffs[102X adds the entries of [3Xlist2[103X[10X{[110X[3Xposs2[103X[10X}[110X, multiplied by the scalar [3Xmul[103X, to
+  [3Xlist1[103X[10X{[110X[3Xposs1[103X[10X}[110X.  Unbound entries in [3Xlist1[103X are assumed to be zero. The position
+  of the right-most non-zero element is returned.[133X
+  
+  [33X[0;0YIf  the  ranges  [3Xposs1[103X and [3Xposs2[103X are not given, they are assumed to span the
+  whole vectors. If the scalar [3Xmul[103X is omitted, one is used as a default.[133X
+  
+  [33X[0;0YNote  that  it  is the responsibility of the caller to ensure that [3Xlist2[103X has
+  elements  at  position  [3Xposs2[103X and that the result (in [3Xlist1[103X) will be a dense
+  list.[133X
+  
+  [33X[0;0YThe function is free to remove trailing (right-most) zeros.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:=[1,2,3,4];;m:=[5,6,7];;AddCoeffs(l,m);[127X[104X
+    [4X[28X4[128X[104X
+    [4X[25Xgap>[125X [27Xl;[127X[104X
+    [4X[28X[ 6, 8, 10, 4 ][128X[104X
+  [4X[32X[104X
+  
+  [1X23.4-3 MultVector[101X
+  
+  [33X[1;0Y[29X[2XMultVector[102X( [3Xlist1[103X, [3Xmul[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XMultVectorLeft[102X( [3Xlist1[103X, [3Xmul[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ynothing[133X
+  
+  [33X[0;0YThis operation calculates [3Xmul[103X*[3Xlist1[103X in-place.[133X
+  
+  [33X[0;0YNote that [10XMultVector[110X is just a synonym for [10XMultVectorLeft[110X.[133X
+  
+  [1X23.4-4 CoeffsMod[101X
+  
+  [33X[1;0Y[29X[2XCoeffsMod[102X( [3Xlist1[103X[, [3Xlen1[103X], [3Xmodulus[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  coefficient  list  obtained  by  reducing the entries in [3Xlist1[103X
+  modulo  [3Xmodulus[103X.  After  reducing  it  shrinks  the  list to remove trailing
+  zeroes.  If  the  optional argument [3Xlen1[103X is used, it reduces only first [3Xlen1[103X
+  elements of the list.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:=[1,2,3,4];;CoeffsMod(l,2);[127X[104X
+    [4X[28X[ 1, 0, 1 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X23.5 [33X[0;0YShifting and Trimming Coefficient Lists[133X[101X
+  
+  [33X[0;0YThe following functions change coefficient lists by shifting or trimming.[133X
+  
+  [1X23.5-1 LeftShiftRowVector[101X
+  
+  [33X[1;0Y[29X[2XLeftShiftRowVector[102X( [3Xlist[103X, [3Xshift[103X ) [32X operation[133X
+  
+  [33X[0;0Ychanges  [3Xlist[103X  by  assigning  [3Xlist[103X[22X[i][122X[10X:=  [110X[3Xlist[103X[22X[i+[3Xshift[103X][122X and removing the last
+  [3Xshift[103X entries of the result.[133X
+  
+  [1X23.5-2 RightShiftRowVector[101X
+  
+  [33X[1;0Y[29X[2XRightShiftRowVector[102X( [3Xlist[103X, [3Xshift[103X, [3Xfill[103X ) [32X operation[133X
+  
+  [33X[0;0Ychanges  [3Xlist[103X  by  assigning [3Xlist[103X[22X[i+[3Xshift[103X][122X[10X:= [110X[3Xlist[103X[22X[i][122X and filling each of the
+  [3Xshift[103X first entries with [3Xfill[103X.[133X
+  
+  [1X23.5-3 ShrinkRowVector[101X
+  
+  [33X[1;0Y[29X[2XShrinkRowVector[102X( [3Xlist[103X ) [32X operation[133X
+  
+  [33X[0;0Yremoves trailing zeroes from the list [3Xlist[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:=[1,0,0];;ShrinkRowVector(l);l;[127X[104X
+    [4X[28X[ 1 ][128X[104X
+  [4X[32X[104X
+  
+  [1X23.5-4 RemoveOuterCoeffs[101X
+  
+  [33X[1;0Y[29X[2XRemoveOuterCoeffs[102X( [3Xlist[103X, [3Xcoef[103X ) [32X operation[133X
+  
+  [33X[0;0Yremoves  [3Xcoef[103X at the beginning and at the end of [3Xlist[103X and returns the number
+  of elements removed at the beginning.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:=[1,1,2,1,2,1,1,2,1];; RemoveOuterCoeffs(l,1);[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27Xl;[127X[104X
+    [4X[28X[ 2, 1, 2, 1, 1, 2 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X23.6 [33X[0;0YFunctions for Coding Theory[133X[101X
+  
+  [33X[0;0YThe   following  functions  perform  operations  on  finite  fields  vectors
+  considered as code words in a linear code.[133X
+  
+  [1X23.6-1 WeightVecFFE[101X
+  
+  [33X[1;0Y[29X[2XWeightVecFFE[102X( [3Xvec[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  weight  of  the  finite  field  vector [3Xvec[103X, i.e. the number of
+  nonzero entries.[133X
+  
+  [1X23.6-2 DistanceVecFFE[101X
+  
+  [33X[1;0Y[29X[2XDistanceVecFFE[102X( [3Xvec1[103X, [3Xvec2[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the distance between the two vectors [3Xvec1[103X and [3Xvec2[103X, which must have
+  the  same length and whose elements must lie in a common field. The distance
+  is the number of places where [3Xvec1[103X and [3Xvec2[103X differ.[133X
+  
+  [1X23.6-3 DistancesDistributionVecFFEsVecFFE[101X
+  
+  [33X[1;0Y[29X[2XDistancesDistributionVecFFEsVecFFE[102X( [3Xvecs[103X, [3Xvec[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  distances distribution of the vector [3Xvec[103X to the vectors in the
+  list  [3Xvecs[103X. All vectors must have the same length, and all elements must lie
+  in  a  common  field.  The  distances  distribution  is  a  list [22Xd[122X of length
+  [10XLength([3Xvec[103X[10X)+1[110X,  such  that  the  value [22Xd[i][122X is the number of vectors in [3Xvecs[103X
+  that have distance [22Xi+1[122X to [3Xvec[103X.[133X
+  
+  [1X23.6-4 DistancesDistributionMatFFEVecFFE[101X
+  
+  [33X[1;0Y[29X[2XDistancesDistributionMatFFEVecFFE[102X( [3Xmat[103X, [3XF[103X, [3Xvec[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  distances distribution of the vector [3Xvec[103X to the vectors in the
+  vector  space  generated by the rows of the matrix [3Xmat[103X over the finite field
+  [3XF[103X.  The  length  of the rows of [3Xmat[103X and the length of [3Xvec[103X must be equal, and
+  all entries must lie in [3XF[103X. The rows of [3Xmat[103X must be linearly independent. The
+  distances  distribution  is  a list [22Xd[122X of length [10XLength([3Xvec[103X[10X)+1[110X, such that the
+  value  [22Xd[i][122X  is  the  number of vectors in the vector space generated by the
+  rows of [3Xmat[103X that have distance [22Xi+1[122X to [3Xvec[103X.[133X
+  
+  [1X23.6-5 AClosestVectorCombinationsMatFFEVecFFE[101X
+  
+  [33X[1;0Y[29X[2XAClosestVectorCombinationsMatFFEVecFFE[102X( [3Xmat[103X, [3Xf[103X, [3Xvec[103X, [3Xcnt[103X, [3Xstop[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XAClosestVectorCombinationsMatFFEVecFFECoords[102X( [3Xmat[103X, [3Xf[103X, [3Xvec[103X, [3Xcnt[103X, [3Xstop[103X ) [32X operation[133X
+  
+  [33X[0;0YThese  functions run through the [3Xf[103X-linear combinations of the vectors in the
+  rows of the matrix [3Xmat[103X that can be written as linear combinations of exactly
+  [3Xcnt[103X  rows  (that  is without using zero as a coefficient). The length of the
+  rows  of  [3Xmat[103X and the length of [3Xvec[103X must be equal, and all elements must lie
+  in   the   field   [3Xf[103X.   The  rows  of  [3Xmat[103X  must  be  linearly  independent.
+  [2XAClosestVectorCombinationsMatFFEVecFFE[102X  returns  a vector from these that is
+  closest  to  the  vector [3Xvec[103X. If it finds a vector of distance at most [3Xstop[103X,
+  which  must  be a nonnegative integer, then it stops immediately and returns
+  this vector.[133X
+  
+  [33X[0;0Y[2XAClosestVectorCombinationsMatFFEVecFFECoords[102X   returns   a   length  2  list
+  containing  the  same  closest  vector  and also a vector [3Xv[103X with exactly [3Xcnt[103X
+  non-zero entries, such that [3Xv[103X times [3Xmat[103X is the closest vector.[133X
+  
+  [1X23.6-6 CosetLeadersMatFFE[101X
+  
+  [33X[1;0Y[29X[2XCosetLeadersMatFFE[102X( [3Xmat[103X, [3Xf[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  a  list  of  representatives  of minimal weight for the cosets of a
+  code.  [3Xmat[103X must be a [13Xcheck matrix[113X for the code, the code is defined over the
+  finite  field [3Xf[103X. All rows of [3Xmat[103X must have the same length, and all elements
+  must lie in the field [3Xf[103X. The rows of [3Xmat[103X must be linearly independent.[133X
+  
+  
+  [1X23.7 [33X[0;0YVectors as coefficients of polynomials[133X[101X
+  
+  [33X[0;0YA  list  of  ring elements can be interpreted as a row vector or the list of
+  coefficients of a polynomial. There are a couple of functions that implement
+  arithmetic  operations  based  on these interpretations. [5XGAP[105X contains proper
+  support  for  polynomials (see [14X66[114X), the operations described in this section
+  are on a lower level.[133X
+  
+  [33X[0;0YThe  following  operations  all perform arithmetic on univariate polynomials
+  given by their coefficient lists. These lists can have different lengths but
+  must  be  dense homogeneous lists containing elements of a commutative ring.
+  Not all input lists may be empty.[133X
+  
+  [33X[0;0YIn  the  following  descriptions  we  will  always  assume that [3Xlist1[103X is the
+  coefficient  list  of  the polynomial [3Xpol1[103X and so forth. If length parameter
+  [3Xleni[103X is not given, it is set to the length of [3Xlisti[103X by default.[133X
+  
+  [1X23.7-1 ValuePol[101X
+  
+  [33X[1;0Y[29X[2XValuePol[102X( [3Xcoeff[103X, [3Xx[103X ) [32X operation[133X
+  
+  [33X[0;0YLet  [3Xcoeff[103X  be  the  coefficients list of a univariate polynomial [22Xf[122X, and [3Xx[103X a
+  ring element. Then [2XValuePol[102X returns the value [22Xf([3Xx[103X)[122X.[133X
+  
+  [33X[0;0YThe  coefficient  of  [22X[3Xx[103X^i[122X  is  assumed  to  be stored at position [22Xi+1[122X in the
+  coefficients list.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XValuePol([1,2,3],4);[127X[104X
+    [4X[28X57[128X[104X
+  [4X[32X[104X
+  
+  [1X23.7-2 ProductCoeffs[101X
+  
+  [33X[1;0Y[29X[2XProductCoeffs[102X( [3Xlist1[103X[, [3Xlen1[103X], [3Xlist2[103X[, [3Xlen2[103X] ) [32X operation[133X
+  
+  [33X[0;0YLet [22Xp1[122X (and [22Xp2[122X) be polynomials given by the first [3Xlen1[103X ([3Xlen2[103X) entries of the
+  coefficient  list  [3Xlist2[103X ([3Xlist2[103X). If [3Xlen1[103X and [3Xlen2[103X are omitted, they default
+  to  the  lengths  of [3Xlist1[103X and [3Xlist2[103X. This operation returns the coefficient
+  list of the product of [22Xp1[122X and [22Xp2[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:=[1,2,3,4];;m:=[5,6,7];;ProductCoeffs(l,m);[127X[104X
+    [4X[28X[ 5, 16, 34, 52, 45, 28 ][128X[104X
+  [4X[32X[104X
+  
+  [1X23.7-3 ReduceCoeffs[101X
+  
+  [33X[1;0Y[29X[2XReduceCoeffs[102X( [3Xlist1[103X[, [3Xlen1[103X], [3Xlist2[103X[, [3Xlen2[103X] ) [32X operation[133X
+  
+  [33X[0;0YLet [22Xp1[122X (and [22Xp2[122X) be polynomials given by the first [3Xlen1[103X ([3Xlen2[103X) entries of the
+  coefficient  list  [3Xlist1[103X ([3Xlist2[103X). If [3Xlen1[103X and [3Xlen2[103X are omitted, they default
+  to  the  lengths  of  [3Xlist1[103X  and  [3Xlist2[103X.  [2XReduceCoeffs[102X  changes [3Xlist1[103X to the
+  coefficient  list  of  the  remainder when dividing [3Xp1[103X by [3Xp2[103X. This operation
+  changes  [3Xlist1[103X which therefore must be a mutable list. The operation returns
+  the  position of the last non-zero entry of the result but is not guaranteed
+  to remove trailing zeroes.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:=[1,2,3,4];;m:=[5,6,7];;ReduceCoeffs(l,m);[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27Xl;[127X[104X
+    [4X[28X[ 64/49, -24/49, 0, 0 ][128X[104X
+  [4X[32X[104X
+  
+  [1X23.7-4 ReduceCoeffsMod[101X
+  
+  [33X[1;0Y[29X[2XReduceCoeffsMod[102X( [3Xlist1[103X[, [3Xlen1[103X], [3Xlist2[103X[, [3Xlen2[103X], [3Xmodulus[103X ) [32X operation[133X
+  
+  [33X[0;0YLet [22Xp1[122X (and [22Xp2[122X) be polynomials given by the first [3Xlen1[103X ([3Xlen2[103X) entries of the
+  coefficient  list  [3Xlist1[103X ([3Xlist2[103X). If [3Xlen1[103X and [3Xlen2[103X are omitted, they default
+  to  the  lengths  of  [3Xlist1[103X  and [3Xlist2[103X. [2XReduceCoeffsMod[102X changes [3Xlist1[103X to the
+  coefficient  list  of  the  remainder when dividing [3Xp1[103X by [3Xp2[103X modulo [3Xmodulus[103X,
+  which  must  be  a  positive  integer.  This  operation  changes [3Xlist1[103X which
+  therefore  must be a mutable list. The operation returns the position of the
+  last  non-zero  entry of the result but is not guaranteed to remove trailing
+  zeroes.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:=[1,2,3,4];;m:=[5,6,7];;ReduceCoeffsMod(l,m,3);[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27Xl;[127X[104X
+    [4X[28X[ 1, 0, 0, 0 ][128X[104X
+  [4X[32X[104X
+  
+  [1X23.7-5 PowerModCoeffs[101X
+  
+  [33X[1;0Y[29X[2XPowerModCoeffs[102X( [3Xlist1[103X[, [3Xlen1[103X], [3Xexp[103X, [3Xlist2[103X[, [3Xlen2[103X] ) [32X operation[133X
+  
+  [33X[0;0YLet  [22Xp1[122X and [22Xp2[122X be polynomials whose coefficients are given by the first [3Xlen1[103X
+  resp.  [3Xlen2[103X  entries of the lists [3Xlist1[103X and [3Xlist2[103X, respectively. If [3Xlen1[103X and
+  [3Xlen2[103X are omitted, they default to the lengths of [3Xlist1[103X and [3Xlist2[103X. Let [3Xexp[103X be
+  a  positive  integer.  [2XPowerModCoeffs[102X  returns  the  coefficient list of the
+  remainder  when  dividing the [3Xexp[103X-th power of [22Xp1[122X by [22Xp2[122X. The coefficients are
+  reduced  already  while powers are computed, therefore avoiding an explosion
+  in list length.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:=[1,2,3,4];;m:=[5,6,7];;PowerModCoeffs(l,5,m);[127X[104X
+    [4X[28X[ -839462813696/678223072849, -7807439437824/678223072849 ][128X[104X
+  [4X[32X[104X
+  
+  [1X23.7-6 ShiftedCoeffs[101X
+  
+  [33X[1;0Y[29X[2XShiftedCoeffs[102X( [3Xlist[103X, [3Xshift[103X ) [32X operation[133X
+  
+  [33X[0;0Yproduces  a  new  coefficient  list  [10Xnew[110X obtained by the rule [10Xnew[i+[3Xshift[103X[10X]:=
+  [3Xlist[103X[10X[i][110X and filling initial holes by the appropriate zero.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:=[1,2,3];;ShiftedCoeffs(l,2);ShiftedCoeffs(l,-2);[127X[104X
+    [4X[28X[ 0, 0, 1, 2, 3 ][128X[104X
+    [4X[28X[ 3 ][128X[104X
+  [4X[32X[104X
+  

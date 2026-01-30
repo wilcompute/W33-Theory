@@ -1,0 +1,1707 @@
+  
+  [1X4 [33X[0;0YThe Programming Language[133X[101X
+  
+  [33X[0;0YThis chapter describes the [5XGAP[105X programming language. It should allow you, in
+  principle,  to  predict the result of each and every input. In order to know
+  what we are talking about, we first have to look more closely at the process
+  of interpretation and the various representations of data involved.[133X
+  
+  
+  [1X4.1 [33X[0;0YLanguage Overview[133X[101X
+  
+  [33X[0;0YFirst  we  have the input to [5XGAP[105X, given as a string of characters. How those
+  characters  enter  [5XGAP[105X  is  operating  system dependent, e.g., they might be
+  entered  at  a  terminal,  pasted with a mouse into a window, or read from a
+  file.  The  mechanism does not matter. This representation of expressions by
+  characters  is  called  the [13Xexternal representation[113X of the expression. Every
+  expression  has  at least one external representation that can be entered to
+  get exactly this expression.[133X
+  
+  [33X[0;0YThe  input,  i.e.,  the external representation, is transformed in a process
+  called  [13Xreading[113X  to  an  internal representation. At this point the input is
+  analyzed  and  inputs that are not legal external representations, according
+  to  the  rules  given below, are rejected as errors. Those rules are usually
+  called the [13Xsyntax[113X of a programming language.[133X
+  
+  [33X[0;0YThe   internal  representation  created  by  reading  is  called  either  an
+  [13Xexpression[113X  or  a  [13Xstatement[113X.  Later  we  will distinguish between those two
+  terms.  However  for now we will use them interchangeably. The exact form of
+  the  internal  representation  does  not  matter.  It  could  be a string of
+  characters  equal  to the external representation, in which case the reading
+  would  only  need  to  check  for  errors.  It  could be a series of machine
+  instructions  for  the  processor on which [5XGAP[105X is running, in which case the
+  reading  would  more  appropriately  be  called compilation. It is in fact a
+  tree-like structure.[133X
+  
+  [33X[0;0YAfter  the  input  has been read it is again transformed in a process called
+  [13Xevaluation[113X  or  [13Xexecution[113X. Later we will distinguish between those two terms
+  too,  but for the moment we will use them interchangeably. The name hints at
+  the  nature of this process, it replaces an expression with the value of the
+  expression.  This  works  recursively, i.e., to evaluate an expression first
+  the  subexpressions  are  evaluated  and then the value of the expression is
+  computed  from  those values according to rules given below. Those rules are
+  usually called the [13Xsemantics[113X of a programming language.[133X
+  
+  [33X[0;0YThe result of the evaluation is, not surprisingly, called a [13Xvalue[113X. Again the
+  form  in which such a value is represented internally does not matter. It is
+  in fact a tree-like structure again.[133X
+  
+  [33X[0;0YThe  last  process  is  called  [13Xprinting[113X. It takes the value produced by the
+  evaluation  and  creates  an  external  representation,  i.e.,  a  string of
+  characters  again.  What  you  do with this external representation is up to
+  you.  You  can  look  at it, paste it with the mouse into another window, or
+  write it to a file.[133X
+  
+  [33X[0;0YLets  look  at  an  example to make this more clear. Suppose you type in the
+  following string of 8 characters[133X
+  
+  [4X[32X[104X
+    [4X1 + 2 * 3;[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[5XGAP[105X  takes  this  external  representation  and creates a tree-like internal
+  representation, which we can picture as follows[133X
+  
+  [4X[32X[104X
+    [4X  +[104X
+    [4X / \[104X
+    [4X1   *[104X
+    [4X   / \[104X
+    [4X  2   3[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis  expression is then evaluated. To do this [5XGAP[105X first evaluates the right
+  subexpression  [10X2*3[110X. Again, to do this [5XGAP[105X first evaluates its subexpressions
+  2  and  3.  However they are so simple that they are their own value, we say
+  that  they  are  self-evaluating.  After  this has been done, the rule for [10X*[110X
+  tells  us  that  the  value  is  the  product  of  the  values  of  the  two
+  subexpressions,  which  in  this  case is clearly 6. Combining this with the
+  value  of the left operand of the [10X+[110X, which is self-evaluating, too, gives us
+  the  value  of the whole expression 7. This is then printed, i.e., converted
+  into the external representation consisting of the single character [10X7[110X.[133X
+  
+  [33X[0;0YIn  this  fashion  we can predict the result of every input when we know the
+  syntactic  rules  that  govern the process of reading and the semantic rules
+  that  tell us for every expression how its value is computed in terms of the
+  values of the subexpressions. The syntactic rules are given in sections [14X4.2[114X,
+  [14X4.3[114X,  [14X4.4[114X,  [14X4.5[114X, and [14X4.6[114X, the semantic rules are given in sections [14X4.7[114X, [14X4.8[114X,
+  [14X4.12[114X,  [14X4.13[114X,  [14X4.14[114X,  [14X4.15[114X,  [14X4.15-1[114X,  [14X4.15-2[114X, [14X4.15-3[114X, [14X4.15-4[114X, [14X4.15-5[114X, [14X4.15-6[114X,
+  [14X4.11[114X, and the chapters describing the individual data types.[133X
+  
+  
+  [1X4.2 [33X[0;0YLexical Structure[133X[101X
+  
+  [33X[0;0YMost input of [5XGAP[105X consists of sequences of the following characters.[133X
+  
+  [33X[0;0YDigits, uppercase and lowercase letters, [12XSpace[112X, [12XTab[112X, [12XNewline[112X, [12XReturn[112X and the
+  special characters[133X
+  
+  [4X[32X[104X
+    [4X"    '    (    )    *    +    ,    -    #[104X
+    [4X.    /    :    ;    <    =    >    ~[104X
+    [4X[    \    ]    ^    _    {    }    ![104X
+  [4X[32X[104X
+  
+  [33X[0;0YIt  is possible to use other characters in identifiers by escaping them with
+  backslashes, but we do not recommend the use of this feature. Inside strings
+  (see  section [14X4.3[114X  and chapter [14X27[114X) and comments (see [14X4.4[114X) the full character
+  set supported by the computer is allowed.[133X
+  
+  
+  [1X4.3 [33X[0;0YSymbols[133X[101X
+  
+  [33X[0;0YThe  process of reading, i.e., of assembling the input into expressions, has
+  a subprocess, called [13Xscanning[113X, that assembles the characters into symbols. A
+  [13Xsymbol[113X  is  a  sequence  of  characters that form a lexical unit. The set of
+  symbols  consists  of keywords, identifiers, strings, integers, and operator
+  and delimiter symbols.[133X
+  
+  [33X[0;0YA  [13Xkeyword[113X  is  a  reserved  word  (see [14X4.5[114X). An [13Xidentifier[113X is a sequence of
+  letters, digits and underscores (or other characters escaped by backslashes)
+  that  contains  at  least  one  non-digit and is not a keyword (see [14X4.6[114X). An
+  integer is a sequence of digits (see [14X14[114X), possibly prepended by [10X-[110X and [10X+[110X sign
+  characters.  A  [13Xstring[113X  is  a  sequence  of arbitrary characters enclosed in
+  double quotes (see [14X27[114X).[133X
+  
+  [33X[0;0YOperator and delimiter symbols are[133X
+  
+  [4X[32X[104X
+    [4X+    -    *    /    ^    ~   !.[104X
+    [4X=    <>   <    <=   >    >=  ![[104X
+    [4X:=   .    ..   ->   ,    ;   [[104X
+    [4X]    {    }    (    )    :[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote also that during the process of scanning all whitespace is removed (see
+  [14X4.4[114X).[133X
+  
+  
+  [1X4.4 [33X[0;0YWhitespaces[133X[101X
+  
+  [33X[0;0YThe  characters  [12XSpace[112X,  [12XTab[112X,  [12XNewline[112X,  and  [12XReturn[112X  are  called [13Xwhitespace
+  characters[113X.  Whitespace  is  used  as necessary to separate lexical symbols,
+  such  as  integers,  identifiers,  or  keywords.  For example [10XThorondor[110X is a
+  single  identifier,  while  [10XTh  or  ondor[110X  is the keyword [9Xor[109X between the two
+  identifiers  [10XTh[110X and [10Xondor[110X. Whitespace may occur between any two symbols, but
+  not  within  a  symbol.  Two  or  more  adjacent  whitespace  characters are
+  equivalent  to  a  single  whitespace.  Apart  from the role as separator of
+  symbols,  whitespace  characters  are  otherwise  insignificant.  Whitespace
+  characters  may  also  occur  inside  a  string, where they are significant.
+  Whitespace characters should also be used freely for improved readability.[133X
+  
+  [33X[0;0YA  [13Xcomment[113X  starts  with the character [10X#[110X, which is sometimes called sharp or
+  hatch,  and  continues to the end of the line on which the comment character
+  appears. The whole comment, including [10X#[110X and the [12XNewline[112X character is treated
+  as  a  single whitespace. Inside a string, the comment character [10X#[110X loses its
+  role and is just an ordinary character.[133X
+  
+  [33X[0;0YFor example, the following statement[133X
+  
+  [4X[32X[104X
+    [4Xif i<0 then a:=-i;else a:=i;fi;[104X
+  [4X[32X[104X
+  
+  [33X[0;0Yis equivalent to[133X
+  
+  [4X[32X[104X
+    [4Xif i < 0 then   # if i is negative[104X
+    [4X  a := -i;      #   take its additive inverse[104X
+    [4Xelse            # otherwise[104X
+    [4X  a := i;       #   take itself[104X
+    [4Xfi;[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y(which  by the way shows that it is possible to write superfluous comments).
+  However the first statement is [13Xnot[113X equivalent to[133X
+  
+  [4X[32X[104X
+    [4Xifi<0thena:=-i;elsea:=i;fi;[104X
+  [4X[32X[104X
+  
+  [33X[0;0Ysince  the  keyword  [9Xif[109X  must  be  separated  from  the  identifier  [10Xi[110X  by a
+  whitespace, and similarly [9Xthen[109X and [10Xa[110X, and [9Xelse[109X and [10Xa[110X must be separated.[133X
+  
+  
+  [1X4.5 [33X[0;0YKeywords[133X[101X
+  
+  [33X[0;0Y[13XKeywords[113X  are  reserved  words that are used to denote special operations or
+  are  part  of  statements. They must not be used as identifiers. The list of
+  keywords  is  contained  in  the  [10XGAPInfo.Keywords[110X  component of the [10XGAPInfo[110X
+  record  (see  [14X3.5-1[114X).  We  will  show  how  to  print  it  in  a nice table,
+  demonstrating at the same time some list manipulation techniques:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xkeys:=SortedList( GAPInfo.Keywords );; l:=Length( keys );;[127X[104X
+    [4X[25Xgap>[125X [27Xarr:= List( [ 0 .. Int( l/4 )-1 ], i-> keys{ 4*i + [ 1 .. 4 ] } );;[127X[104X
+    [4X[25Xgap>[125X [27Xif l mod 4 <> 0 then Add( arr, keys{[ 4*Int(l/4) + 1 .. l ]} ); fi;[127X[104X
+    [4X[25Xgap>[125X [27XLength( keys ); PrintArray( arr );[127X[104X
+    [4X[28X35[128X[104X
+    [4X[28X[ [         Assert,           Info,        IsBound,           QUIT ],[128X[104X
+    [4X[28X  [  TryNextMethod,         Unbind,            and,         atomic ],[128X[104X
+    [4X[28X  [          break,       continue,             do,           elif ],[128X[104X
+    [4X[28X  [           else,            end,          false,             fi ],[128X[104X
+    [4X[28X  [            for,       function,             if,             in ],[128X[104X
+    [4X[28X  [          local,            mod,            not,             od ],[128X[104X
+    [4X[28X  [             or,           quit,       readonly,      readwrite ],[128X[104X
+    [4X[28X  [            rec,         repeat,         return,           then ],[128X[104X
+    [4X[28X  [           true,          until,          while ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  (almost) all keywords are written in lowercase and that they are
+  case sensitive. For example [9Xelse[109X is a keyword; [10XElse[110X, [10XeLsE[110X, [10XELSE[110X and so forth
+  are  ordinary identifiers. Keywords must not contain whitespace, for example
+  [10Xel if[110X is not the same as [9Xelif[109X.[133X
+  
+  [33X[0;0Y[13XNote[113X: Several tokens from the list of keywords above may appear to be normal
+  identifiers  representing  functions  or  literals  of various kinds but are
+  actually implemented as keywords for technical reasons. The only consequence
+  of this is that those identifiers cannot be re-assigned, and do not actually
+  have  function  objects  bound  to  them,  which  could be assigned to other
+  variables  or  passed  to  functions. These keywords are [9Xtrue[109X, [9Xfalse[109X, [2XAssert[102X
+  ([14X7.5-3[114X),  [2XIsBound[102X  ([14X4.8-1[114X),  [2XUnbind[102X  ([14X4.8-2[114X), [2XInfo[102X ([14X7.4-6[114X) and [2XTryNextMethod[102X
+  ([14X78.5-1[114X).[133X
+  
+  [33X[0;0YKeywords  [10Xatomic[110X,  [10Xreadonly[110X,  [10Xreadwrite[110X are not used at the moment. They are
+  reserved  for  the  future version of GAP to prevent their accidental use as
+  identifiers.[133X
+  
+  
+  [1X4.6 [33X[0;0YIdentifiers[133X[101X
+  
+  [33X[0;0YAn  [13Xidentifier[113X  is  used  to  refer  to  a variable (see [14X4.8[114X). An identifier
+  usually consists of letters, digits, underscores [10X_[110X, and [21Xat[121X-characters [10X@[110X, and
+  must  contain  at  least  one  non-digit. An identifier is terminated by the
+  first  character  not in this class. Note that the [21Xat[121X-character [10X@[110X is used to
+  implement namespaces, see Section [14X4.10[114X for details.[133X
+  
+  [33X[0;0YExamples of valid identifiers are[133X
+  
+  [4X[32X[104X
+    [4Xa           foo         aLongIdentifier[104X
+    [4Xhello       Hello       HELLO[104X
+    [4Xx100        100x       _100[104X
+    [4Xsome_people_prefer_underscores_to_separate_words[104X
+    [4XWePreferMixedCaseToSeparateWords[104X
+    [4Xabc@def[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  case is significant, so the three identifiers in the second line
+  are distinguished.[133X
+  
+  [33X[0;0YThe  backslash  [10X\[110X  can be used to include other characters in identifiers; a
+  backslash  followed  by  a  character is equivalent to the character, except
+  that  this  escape  sequence  is  considered  to  be an ordinary letter. For
+  example[133X
+  
+  [4X[32X[104X
+    [4XG\(2\,5\)[104X
+  [4X[32X[104X
+  
+  [33X[0;0Yis an identifier, not a call to a function [10XG[110X.[133X
+  
+  [33X[0;0YAn  identifier  that  starts  with  a  backslash  is never a keyword, so for
+  example [10X\*[110X and [10X\mod[110X are identifiers.[133X
+  
+  [33X[0;0YThe  length  of  identifiers  is  not  limited,  however only the first [22X1023[122X
+  characters  are significant. The escape sequence [10X\[110X[12Xnewline[112X is ignored, making
+  it possible to split long identifiers over multiple lines.[133X
+  
+  [1X4.6-1 IsValidIdentifier[101X
+  
+  [33X[1;0Y[29X[2XIsValidIdentifier[102X( [3Xstr[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  [9Xtrue[109X  if the string [3Xstr[103X would form a valid identifier consisting of
+  letters,  digits  and  underscores;  otherwise it returns [9Xfalse[109X. It does not
+  check whether [3Xstr[103X contains characters escaped by a backslash [10X\[110X.[133X
+  
+  [33X[0;0YNote  that  the  [21Xat[121X-character  is  used  to  implement namespaces for global
+  variables in packages. See [14X4.10[114X for details.[133X
+  
+  
+  [1X4.6-2 [33X[0;0YConventions about Identifiers[133X[101X
+  
+  [33X[0;0Y(The  following  rule  is stated also in Section [14X'Tutorial: Variables versus
+  Objects'[114X.)[133X
+  
+  [33X[0;0YThe  name  of  almost  every  global  variable in the [5XGAP[105X library and in [5XGAP[105X
+  packages  starts  with  a  [13Xcapital  letter[113X.  (See  Section  [14X6.1[114X  for the few
+  exceptions.) For user variables, we recommend only choosing names that start
+  with a [13Xlower case letter[113X, in order to avoid name clashes.[133X
+  
+  [33X[0;0YFor  example,  valid [5XGAP[105X input which assigns some user variables whose names
+  start  with  capital letters may run into errors with a newer version of [5XGAP[105X
+  or  in a [5XGAP[105X session with more or newer packages, because it may happen that
+  these variables are predefined global variables in this situation.[133X
+  
+  
+  [1X4.7 [33X[0;0YExpressions[133X[101X
+  
+  [33X[0;0YAn [13Xexpression[113X is a construct that evaluates to a value. Syntactic constructs
+  that  are  executed  to produce a side effect and return no value are called
+  [13Xstatements[113X (see [14X4.15[114X). Expressions appear as right hand sides of assignments
+  (see  [14X4.15-1[114X),  as  actual  arguments  in  function calls (see [14X4.12[114X), and in
+  statements.[133X
+  
+  [33X[0;0YNote that an expression is not the same as a value. For example [10X1 + 11[110X is an
+  expression,  whose  value  is the integer 12. The external representation of
+  this  integer is the character sequence [10X12[110X, i.e., this sequence is output if
+  the  integer  is printed. This sequence is another expression whose value is
+  the integer [22X12[122X. The process of finding the value of an expression is done by
+  the interpreter and is called the [13Xevaluation[113X of the expression.[133X
+  
+  [33X[0;0YThe simplest cases of expressions are the following:[133X
+  
+  [30X    [33X[0;6Yvariables (see Section [14X4.8[114X),[133X
+  
+  [30X    [33X[0;6Yfunction literals (see Section [14X4.11[114X),[133X
+  
+  [30X    [33X[0;6Yfunction calls (see Section [14X4.12[114X),[133X
+  
+  [30X    [33X[0;6Yinteger literals (see Chapter [14X14[114X),[133X
+  
+  [30X    [33X[0;6Yfloating point literals (see Chapter [14X19[114X),[133X
+  
+  [30X    [33X[0;6Ypermutation literals (see Chapter [14X42[114X),[133X
+  
+  [30X    [33X[0;6Ystring literals (see Chapter [14X27[114X),[133X
+  
+  [30X    [33X[0;6Ycharacter literals (see Chapter [14X27[114X),[133X
+  
+  [30X    [33X[0;6Ylist literals (see Chapter [14X21[114X), and[133X
+  
+  [30X    [33X[0;6Yrecord literals (see Chapter [14X29[114X).[133X
+  
+  [33X[0;0YExpressions,  for  example  the  simple  expressions mentioned above, can be
+  combined  with  the  operators  to  form more complex expressions. Of course
+  those  expressions  can  then be combined further with the operators to form
+  even  more  complex  expressions. The [13Xoperators[113X fall into three classes. The
+  [13Xcomparisons[113X  are  [10X=[110X,  [10X<>[110X,  [10X<[110X,  [10X<=[110X,  [10X>[110X,  [10X>=[110X,  and [9Xin[109X (see [14X4.13[114X and [14X30.6[114X). The
+  [13Xarithmetic  operators[113X  are  [10X+[110X,  [10X-[110X,  [10X*[110X, [10X/[110X, [9Xmod[109X, and [10X^[110X (see [14X4.14[114X). The [13Xlogical
+  operators[113X are [9Xnot[109X, [9Xand[109X, and [9Xor[109X (see [14X20.4[114X).[133X
+  
+  [33X[0;0YThe following example shows a very simple expression with value 4 and a more
+  complex expression.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X2 * 2;[127X[104X
+    [4X[28X4[128X[104X
+    [4X[25Xgap>[125X [27X2 * 2 + 9 = Fibonacci(7) and Fibonacci(13) in Primes;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  following  table  lists  all  operators  by precedence, from highest to
+  lowest,  and  also  indicates  whether the operator is left associative (aka
+  left-to-right) or right associative (aka right-to-left) or neither.[133X
+  
+        [13Xoperator[113X                          [13Xassociativity[113X   
+        ───────────────────────────────   ─────────────  
+        [13Xarithmetic (see [14X4.14[114X)[113X                             
+            [10X^[110X                             none            
+            unary [10X+[110X, unary [10X-[110X              right-to-left   
+            [10X*[110X, [10X/[110X, [9Xmod[109X                     left-to-right   
+            binary [10X+[110X, binary [10X-[110X            left-to-right   
+        ───────────────────────────────   ─────────────  
+        [13Xcomparison (see [14X4.13[114X)[113X                             
+            [10X=[110X, [10X<>[110X, [10X<[110X, [10X<=[110X, [10X>[110X, [10X>=[110X, and [9Xin[109X   none            
+        ───────────────────────────────   ─────────────  
+        [13Xlogical (see [14X20.4[114X)[113X                                
+            [9Xnot[109X                           right-to-left   
+            [9Xand[109X                           left-to-right   
+            [9Xor[109X                            left-to-right   
+  
+  
+  [1X4.8 [33X[0;0YVariables[133X[101X
+  
+  [33X[0;0YA [13Xvariable[113X is a location in a [5XGAP[105X program that points to a value. We say the
+  variable  is [13Xbound[113X to this value. If a variable is evaluated it evaluates to
+  this value.[133X
+  
+  [33X[0;0YInitially  an  ordinary variable is not bound to any value. The variable can
+  be  bound  to  a value by [13Xassigning[113X this value to the variable (see [14X4.15-1[114X).
+  Because  of  this  we sometimes say that a variable that is not bound to any
+  value  has  no assigned value. Assignment is in fact the only way by which a
+  variable,  which  is not an argument of a function, can be bound to a value.
+  After a variable has been bound to a value an assignment can also be used to
+  bind the variable to another value.[133X
+  
+  [33X[0;0YA  special  class  of variables is the class of [13Xarguments[113X of functions. They
+  behave  similarly  to other variables, except they are bound to the value of
+  the actual arguments upon a function call (see [14X4.12[114X).[133X
+  
+  [33X[0;0YEach variable has a name that is also called its [13Xidentifier[113X. This is because
+  in  a  given  scope  an identifier identifies a unique variable (see [14X4.6[114X). A
+  [13Xscope[113X  is  a  lexical part of a program text. There is the [13Xglobal scope[113X that
+  encloses the entire program text, and there are local scopes that range from
+  the  [9Xfunction[109X  keyword,  denoting the beginning of a function definition, to
+  the corresponding [9Xend[109X keyword. A [13Xlocal scope[113X introduces new variables, whose
+  identifiers  are given in the formal argument list and the [9Xlocal[109X declaration
+  of  the function (see [14X4.11[114X). Usage of an identifier in a program text refers
+  to the variable in the innermost scope that has this identifier as its name.
+  Because  this mapping from identifiers to variables is done when the program
+  is  read,  not when it is executed, [5XGAP[105X is said to have [13Xlexical scoping[113X. The
+  following  example shows how one identifier refers to different variables at
+  different points in the program text.[133X
+  
+  [4X[32X[104X
+    [4Xg := 0;      # global variable g[104X
+    [4Xx := function ( a, b, c )[104X
+    [4X  local  y;[104X
+    [4X  g := c;     # c refers to argument c of function x[104X
+    [4X  y := function ( y )[104X
+    [4X    local d, e, f;[104X
+    [4X    d := y;   # y refers to argument y of function y[104X
+    [4X    e := b;   # b refers to argument b of function x[104X
+    [4X    f := g;   # g refers to global variable g[104X
+    [4X    return d + e + f;[104X
+    [4X  end;[104X
+    [4X  return y( a ); # y refers to local y of function x[104X
+    [4Xend;[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIt  is  important  to  note  that  the concept of a variable in [5XGAP[105X is quite
+  different  from  the  concept  of  a  variable  in most compiled programming
+  languages.[133X
+  
+  [33X[0;0YIn  those  languages  a variable denotes a block of memory. The value of the
+  variable  is  stored  in this block. So in those languages two variables can
+  have  the same value, but they can never have identical values, because they
+  denote different blocks of memory. Note that some languages have the concept
+  of  a  reference  argument. It seems as if such an argument and the variable
+  used  in  the  actual  function call have the same value, since changing the
+  argument's  value  also changes the value of the variable used in the actual
+  function  call.  But  this  is  not so; the reference argument is actually a
+  pointer  to  the  variable  used  in the actual function call, and it is the
+  compiler  that  inserts enough magic to make the pointer invisible. In order
+  for this to work the compiler needs enough information to compute the amount
+  of  memory needed for each variable in a program, which is readily available
+  in the declarations.[133X
+  
+  [33X[0;0YIn [5XGAP[105X on the other hand each variable just points to a value, and different
+  variables can share the same value.[133X
+  
+  [1X4.8-1 IsBound[101X
+  
+  [33X[1;0Y[29X[2XIsBound[102X( [3Xident[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XIsBound[102X  returns  [9Xtrue[109X  if  the  variable [3Xident[103X points to a value, and [9Xfalse[109X
+  otherwise.[133X
+  
+  [33X[0;0YFor  records  and  lists  [2XIsBound[102X can be used to check whether components or
+  entries, respectively, are bound (see Chapters [14X29[114X and [14X21[114X).[133X
+  
+  [1X4.8-2 Unbind[101X
+  
+  [33X[1;0Y[29X[2XUnbind[102X( [3Xident[103X ) [32X function[133X
+  
+  [33X[0;0Ydeletes  the identifier [3Xident[103X. If there is no other variable pointing to the
+  same  value  as  [3Xident[103X  was,  this value will be removed by the next garbage
+  collection.  Therefore  [2XUnbind[102X  can  be  used  to  get rid of unwanted large
+  objects.[133X
+  
+  [33X[0;0YFor  records  and  lists [2XUnbind[102X can be used to delete components or entries,
+  respectively (see Chapters [14X29[114X and [14X21[114X).[133X
+  
+  
+  [1X4.9 [33X[0;0YMore About Global Variables[133X[101X
+  
+  [33X[0;0YThe  vast  majority  of variables in [5XGAP[105X are defined at the outer level (the
+  global  scope).  They are used to access functions and other objects created
+  either in the [5XGAP[105X library or packages or in the user's code.[133X
+  
+  [33X[0;0YNote  that  for  packages  there  is  a mechanism to implement package local
+  namespaces on top of this global namespace. See Section [14X4.10[114X for details.[133X
+  
+  [33X[0;0YCertain  special  facilities  are provided for manipulating global variables
+  which are not available for other types of variable (such as local variables
+  or function arguments).[133X
+  
+  [33X[0;0YFirst,  such  variables  may  be  marked  [13Xread-only[113X using [2XMakeReadOnlyGlobal[102X
+  ([14X4.9-2[114X). In which case attempts to change them will fail. Most of the global
+  variables  defined in the [5XGAP[105X library are so marked. [13Xread-only[113X variables can
+  be  made  read-write  again by calling [2XMakeReadWriteGlobal[102X ([14X4.9-3[114X). GAP also
+  features [13Xconstant[113X variables, which are created by calling [2XMakeConstantGlobal[102X
+  ([14X4.9-4[114X).  Constant  variables  can  never be changed. In some cases, GAP can
+  optimise  code  which uses [13Xconstant[113X variables, as their value never changes.
+  In  this  version  GAP  these  optimisations can be observed by printing the
+  function back out, but this behaviour may change in future.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xglobali := 1 + 2;;[127X[104X
+    [4X[25Xgap>[125X [27Xglobalb := true;;[127X[104X
+    [4X[25Xgap>[125X [27XMakeConstantGlobal("globali");[127X[104X
+    [4X[25Xgap>[125X [27XMakeConstantGlobal("globalb");[127X[104X
+    [4X[25Xgap>[125X [27Xf := function()[127X[104X
+    [4X[25X>[125X [27X    if globalb then[127X[104X
+    [4X[25X>[125X [27X        return globali + 1;[127X[104X
+    [4X[25X>[125X [27X    else[127X[104X
+    [4X[25X>[125X [27X        return globali + 2;[127X[104X
+    [4X[25X>[125X [27X    fi;[127X[104X
+    [4X[25X>[125X [27Xend;;[127X[104X
+    [4X[25Xgap>[125X [27XPrint(f);[127X[104X
+    [4X[28Xfunction (  )[128X[104X
+    [4X[28X    return 3 + 1;[128X[104X
+    [4X[28Xend[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YSecond,  a  group  of  functions are supplied for accessing and altering the
+  values assigned to global variables. Use of these functions differs from the
+  use  of  assignment,  [2XUnbind[102X  ([14X4.8-2[114X) and [2XIsBound[102X ([14X4.8-1[114X) statements, in two
+  ways.  First,  these functions always affect global variables, even if local
+  variables  of the same names exist. Second, the variable names are passed as
+  strings, rather than being written directly into the statements.[133X
+  
+  [33X[0;0YNote  that  the functions [2XNamesGVars[102X ([14X4.9-9[114X), [2XNamesSystemGVars[102X ([14X4.9-10[114X), and
+  [2XNamesUserGVars[102X ([14X4.9-11[114X), deal with the [13Xglobal namespace[113X.[133X
+  
+  [1X4.9-1 IsReadOnlyGlobal[101X
+  
+  [33X[1;0Y[29X[2XIsReadOnlyGlobal[102X( [3Xname[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  [9Xtrue[109X  if  the global variable named by the string [3Xname[103X is read-only
+  and [9Xfalse[109X otherwise (the default).[133X
+  
+  [1X4.9-2 MakeReadOnlyGlobal[101X
+  
+  [33X[1;0Y[29X[2XMakeReadOnlyGlobal[102X( [3Xname[103X ) [32X function[133X
+  
+  [33X[0;0Ymarks the global variable named by the string [3Xname[103X as read-only.[133X
+  
+  [33X[0;0YA  warning  is  given  if  [3Xname[103X has no value bound to it or if it is already
+  read-only.[133X
+  
+  [1X4.9-3 MakeReadWriteGlobal[101X
+  
+  [33X[1;0Y[29X[2XMakeReadWriteGlobal[102X( [3Xname[103X ) [32X function[133X
+  
+  [33X[0;0Ymarks the global variable named by the string [3Xname[103X as read-write.[133X
+  
+  [33X[0;0YA warning is given if [3Xname[103X is already read-write.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xxx := 17;[127X[104X
+    [4X[28X17[128X[104X
+    [4X[25Xgap>[125X [27XIsReadOnlyGlobal("xx");[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xxx := 15;[127X[104X
+    [4X[28X15[128X[104X
+    [4X[25Xgap>[125X [27XMakeReadOnlyGlobal("xx");[127X[104X
+    [4X[25Xgap>[125X [27Xxx := 16;[127X[104X
+    [4X[28XVariable: 'xx' is read only[128X[104X
+    [4X[28Xnot in any function[128X[104X
+    [4X[28XEntering break read-eval-print loop ...[128X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou can 'return;' after making it writable to continue[128X[104X
+    [4X[26Xbrk>[126X [27Xquit;[127X[104X
+    [4X[25Xgap>[125X [27XIsReadOnlyGlobal("xx");[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XMakeReadWriteGlobal("xx");[127X[104X
+    [4X[25Xgap>[125X [27Xxx := 16;[127X[104X
+    [4X[28X16[128X[104X
+    [4X[25Xgap>[125X [27XIsReadOnlyGlobal("xx");[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X4.9-4 MakeConstantGlobal[101X
+  
+  [33X[1;0Y[29X[2XMakeConstantGlobal[102X( [3Xname[103X ) [32X function[133X
+  
+  [33X[0;0YMakeConstantGlobal  (  [3Xname[103X  ) marks the global variable named by the string
+  [3Xname[103X  as  constant.  A  constant  variable  can  never be reassigned or made
+  read-write again.[133X
+  
+  [33X[0;0YA warning is given if [3Xname[103X is already constant.[133X
+  
+  [1X4.9-5 ValueGlobal[101X
+  
+  [33X[1;0Y[29X[2XValueGlobal[102X( [3Xname[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the value currently bound to the global variable named by the string
+  [3Xname[103X. An error is raised if no value is currently bound.[133X
+  
+  [1X4.9-6 IsBoundGlobal[101X
+  
+  [33X[1;0Y[29X[2XIsBoundGlobal[102X( [3Xname[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  [9Xtrue[109X if a value currently bound to the global variable named by the
+  string [3Xname[103X and [9Xfalse[109X otherwise.[133X
+  
+  [1X4.9-7 UnbindGlobal[101X
+  
+  [33X[1;0Y[29X[2XUnbindGlobal[102X( [3Xname[103X ) [32X function[133X
+  
+  [33X[0;0Yremoves any value currently bound to the global variable named by the string
+  [3Xname[103X. Nothing is returned.[133X
+  
+  [33X[0;0YA  warning is given if [3Xname[103X was not bound. The global variable named by [3Xname[103X
+  must be writable, otherwise an error is raised.[133X
+  
+  [1X4.9-8 BindGlobal[101X
+  
+  [33X[1;0Y[29X[2XBindGlobal[102X( [3Xname[103X, [3Xval[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XBindConstant[102X( [3Xname[103X, [3Xval[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XBindGlobal[102X and [2XBindConstant[102X set the global variable named by the string [3Xname[103X
+  to  the  value [3Xval[103X, provided that variable is writable. [2XBindGlobal[102X makes the
+  resulting  variable read-only, while [2XBindConstant[102X makes it constant. If [3Xname[103X
+  already had a value, a warning message is printed.[133X
+  
+  [33X[0;0YThis  is  intended  to  be  the normal way to create and set [21Xofficial[121X global
+  variables (such as operations, filters and constants).[133X
+  
+  [33X[0;0YCaution   should   be   exercised   in  using  these  functions,  especially
+  [2XUnbindGlobal[102X  ([14X4.9-7[114X)  as unexpected changes in global variables can be very
+  confusing for the user.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xxx := 16;[127X[104X
+    [4X[28X16[128X[104X
+    [4X[25Xgap>[125X [27XIsReadOnlyGlobal("xx");[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XValueGlobal("xx");[127X[104X
+    [4X[28X16[128X[104X
+    [4X[25Xgap>[125X [27XIsBoundGlobal("xx");[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XBindGlobal("xx",17);[127X[104X
+    [4X[28X#W BIND_GLOBAL: variable `xx' already has a value[128X[104X
+    [4X[25Xgap>[125X [27Xxx;[127X[104X
+    [4X[28X17[128X[104X
+    [4X[25Xgap>[125X [27XIsReadOnlyGlobal("xx");[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XMakeReadWriteGlobal("xx");[127X[104X
+    [4X[25Xgap>[125X [27XUnbind(xx);[127X[104X
+  [4X[32X[104X
+  
+  [1X4.9-9 NamesGVars[101X
+  
+  [33X[1;0Y[29X[2XNamesGVars[102X(  ) [32X function[133X
+  
+  [33X[0;0YThis function returns an immutable (see [14X12.6[114X) sorted (see [14X21.19[114X) list of all
+  the  global  variable  names  known  to  the  system. This includes names of
+  variables  which  were  bound but have now been unbound and some other names
+  which  have  never been bound but have become known to the system by various
+  routes.[133X
+  
+  [1X4.9-10 NamesSystemGVars[101X
+  
+  [33X[1;0Y[29X[2XNamesSystemGVars[102X(  ) [32X function[133X
+  
+  [33X[0;0YThis  function  returns  an immutable sorted list of all the global variable
+  names created by the [5XGAP[105X library when [5XGAP[105X was started.[133X
+  
+  [1X4.9-11 NamesUserGVars[101X
+  
+  [33X[1;0Y[29X[2XNamesUserGVars[102X(  ) [32X function[133X
+  
+  [33X[0;0YThis  function returns an immutable sorted list of the global variable names
+  created since the library was read, to which a value is currently bound.[133X
+  
+  
+  [1X4.10 [33X[0;0YNamespaces for [5XGAP[105X[101X[1X packages[133X[101X
+  
+  [33X[0;0YAs  mentioned  in  Section  [14X4.9[114X  above  all  global variables share a common
+  namespace.  This  can  relatively easily lead to name clashes, in particular
+  when  many  [5XGAP[105X packages are loaded at the same time. To give package code a
+  way   to   have   a   package  local  namespace  without  breaking  backward
+  compatibility  of  the  [5XGAP[105X  language,  the  following  simple rule has been
+  devised:[133X
+  
+  [33X[0;0YIf  in  package  code  a global variable that ends with an [21Xat[121X-character [10X@[110X is
+  accessed  in  any  way, the name of the package is appended before accessing
+  it.  Here,  [21Xpackage code[121X refers to everything which is read with [2XReadPackage[102X
+  ([14X76.3-1[114X).  As  the  name  of  the  package  the  entry  [10XPackageName[110X  in  its
+  [11XPackageInfo.g[111X  file  is  taken.  As  for  all identifiers, this name is case
+  sensitive.[133X
+  
+  [33X[0;0YFor  example,  if  the  following is done in the code of a package with name
+  [10XxYz[110X:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xa@ := 12;[127X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThen  actually the global variable [10Xa@xYz[110X is assigned. Further accesses to [10Xa@[110X
+  within  the  package code will all be redirected to [10Xa@xYz[110X. This includes all
+  the  functions  described  in  Section  [14X4.9[114X  and  indeed  all  the functions
+  described Section [14X79.10[114X like for example [2XDeclareCategory[102X ([14X13.3-5[114X). Note that
+  from code in the same package it is still possible to access the same global
+  variable via [10Xa@xYz[110X explicitly.[133X
+  
+  [33X[0;0YAll  other  code  outside the package as well as interactive user input that
+  wants to refer to that variable [10Xa@xYz[110X must do so explicitly by using [10Xa@xYz[110X.[133X
+  
+  [33X[0;0YSince  in  earlier  releases  of  [5XGAP[105X  the  [21Xat[121X-character  [10X@[110X  was not a legal
+  character  (without using backslashes), this small extension of the language
+  does not break any old code.[133X
+  
+  
+  [1X4.11 [33X[0;0YFunction[133X[101X
+  
+  [33X[0;0Y[10Xfunction( [ [3Xarg-ident[103X[10X {, [3Xarg-ident[103X[10X} ] )[110X[133X
+  
+  [33X[0;0Y[10X  [local [3Xloc-ident[103X[10X {, [3Xloc-ident[103X[10X} ; ][110X[133X
+  
+  [33X[0;0Y[10X  [3Xstatements[103X[10X[110X[133X
+  
+  [33X[0;0Y[10Xend[110X[133X
+  
+  [33X[0;0YA  function  literal can be assigned to a variable or to a list element or a
+  record component. Later this function can be called as described in [14X4.12[114X.[133X
+  
+  [33X[0;0YThe  following  is  an example of a function definition. It is a function to
+  compute values of the Fibonacci sequence (see [2XFibonacci[102X ([14X16.3-1[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xfib := function ( n )[127X[104X
+    [4X[25X>[125X [27X    local f1, f2, f3, i;[127X[104X
+    [4X[25X>[125X [27X    f1 := 1; f2 := 1;[127X[104X
+    [4X[25X>[125X [27X    for i in [3..n] do[127X[104X
+    [4X[25X>[125X [27X      f3 := f1 + f2;[127X[104X
+    [4X[25X>[125X [27X      f1 := f2;[127X[104X
+    [4X[25X>[125X [27X      f2 := f3;[127X[104X
+    [4X[25X>[125X [27X    od;[127X[104X
+    [4X[25X>[125X [27X    return f2;[127X[104X
+    [4X[25X>[125X [27X  end;;[127X[104X
+    [4X[25Xgap>[125X [27XList( [1..10], fib );[127X[104X
+    [4X[28X[ 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YBecause  for  each  of  the  formal  arguments [3Xarg-ident[103X and for each of the
+  formal  locals  [3Xloc-ident[103X  a  new variable is allocated when the function is
+  called  (see  [14X4.12[114X),  it  is  possible that a function calls itself. This is
+  usually  called  [13Xrecursion[113X.  The  following  is  a  recursive  function that
+  computes values of the Fibonacci sequence.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xfib := function ( n )[127X[104X
+    [4X[25X>[125X [27X    if n < 3 then[127X[104X
+    [4X[25X>[125X [27X      return 1;[127X[104X
+    [4X[25X>[125X [27X    else[127X[104X
+    [4X[25X>[125X [27X      return fib(n-1) + fib(n-2);[127X[104X
+    [4X[25X>[125X [27X    fi;[127X[104X
+    [4X[25X>[125X [27X  end;;[127X[104X
+    [4X[25Xgap>[125X [27XList( [1..10], fib );[127X[104X
+    [4X[28X[ 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that the recursive version needs [10X2 * fib([3Xn[103X[10X)-1[110X steps to compute [10Xfib([3Xn[103X[10X)[110X,
+  while  the  iterative  version  of  [10Xfib[110X  needs  only [10X[3Xn[103X[10X-2[110X steps. Both are not
+  optimal  however,  the  library function [2XFibonacci[102X ([14X16.3-1[114X) only needs about
+  [10XLog([3Xn[103X[10X)[110X steps.[133X
+  
+  [33X[0;0YAs  noted  in  Section [14X4.12[114X,  the  case  where a function's last argument is
+  followed  by [10X...[110X is special. It provides a way of defining a function with a
+  variable  number  of  arguments.  The  values  of  the  actual arguments are
+  computed  and the first ones are assigned to the new variables corresponding
+  to  the formal arguments before the last argument, if any. The values of all
+  the  remaining  actual  arguments  are  stored  in  a  list and this list is
+  assigned  to  the  new  variable corresponding to the final formal argument.
+  There  are  two  typical  scenarios  for  wanting such a possibility: having
+  optional arguments and having any number of arguments.[133X
+  
+  [33X[0;0YThe  following  example  shows  one way that the function [2XPosition[102X ([14X21.16-1[114X)
+  might be encoded and demonstrates the [21Xoptional argument[121X scenario.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xposition := function ( list, obj, arg... )[127X[104X
+    [4X[25X>[125X [27X    local pos;[127X[104X
+    [4X[25X>[125X [27X    if 0 = Length(arg) then[127X[104X
+    [4X[25X>[125X [27X      pos := 0;[127X[104X
+    [4X[25X>[125X [27X    else[127X[104X
+    [4X[25X>[125X [27X      pos := arg[1];[127X[104X
+    [4X[25X>[125X [27X    fi;[127X[104X
+    [4X[25X>[125X [27X    repeat[127X[104X
+    [4X[25X>[125X [27X      pos := pos + 1;[127X[104X
+    [4X[25X>[125X [27X      if pos > Length(list) then[127X[104X
+    [4X[25X>[125X [27X        return fail;[127X[104X
+    [4X[25X>[125X [27X      fi;[127X[104X
+    [4X[25X>[125X [27X    until list[pos] = obj;[127X[104X
+    [4X[25X>[125X [27X    return pos;[127X[104X
+    [4X[25X>[125X [27X   end;[127X[104X
+    [4X[28Xfunction( list, obj, arg... ) ... end[128X[104X
+    [4X[25Xgap>[125X [27Xposition([1, 4, 2], 4);[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27Xposition([1, 4, 2], 3);[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27Xposition([1, 4, 2], 4, 2);[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe following example demonstrates the [21Xany number of arguments[121X scenario.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xsum := function ( l... )[127X[104X
+    [4X[25X>[125X [27X    local total, x;[127X[104X
+    [4X[25X>[125X [27X    total := 0;[127X[104X
+    [4X[25X>[125X [27X    for x in l do[127X[104X
+    [4X[25X>[125X [27X      total := total + x;[127X[104X
+    [4X[25X>[125X [27X    od;[127X[104X
+    [4X[25X>[125X [27X    return total;[127X[104X
+    [4X[25X>[125X [27X   end;[127X[104X
+    [4X[28Xfunction( l... ) ... end[128X[104X
+    [4X[25Xgap>[125X [27Xsum(1, 2, 3);[127X[104X
+    [4X[28X6[128X[104X
+    [4X[25Xgap>[125X [27Xsum(1, 2, 3, 4);[127X[104X
+    [4X[28X10[128X[104X
+    [4X[25Xgap>[125X [27Xsum();[127X[104X
+    [4X[28X0[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  user  should  compare  the  above  with the [5XGAP[105X function [2XSum[102X ([14X21.20-26[114X)
+  which,  for  example,  may  take  a  list argument and optionally an initial
+  element (which zero should the sum of an empty list return?).[133X
+  
+  [33X[0;0YGAP  will  also special case a function with a single argument with the name
+  [10Xarg[110X as function with a variable length list of arguments, as if the user had
+  written [10Xarg...[110X.[133X
+  
+  [33X[0;0YNote    that    if    a    function    [3Xf[103X    is   defined   as   above   then
+  [10XNumberArgumentsFunction([3Xf[103X[10X)[110X  returns  minus  the  number  of formal arguments
+  (including the final argument) (see [2XNumberArgumentsFunction[102X ([14X5.1-2[114X)).[133X
+  
+  [33X[0;0YUsing  the  [10X...[110X  notation  on a function [3Xf[103X with only a single named argument
+  tells  [5XGAP[105X  that  when it encounters [3Xf[103X that it should form a list out of the
+  arguments  of [3Xf[103X. What if one wishes to do the [21Xopposite[121X: tell [5XGAP[105X that a list
+  should  be  [21Xunwrapped[121X  and  passed  as  several arguments to a function. The
+  function [2XCallFuncList[102X ([14X5.2-1[114X) is provided for this purpose.[133X
+  
+  [33X[0;0YAlso see Chapter [14X5[114X.[133X
+  
+  [33X[0;0Y[10X{ [3Xarg-list[103X[10X } -> [3Xexpr[103X[10X[110X[133X
+  
+  [33X[0;0YThis is a shorthand for[133X
+  
+  [33X[0;0Y[10Xfunction ( [3Xarg-list[103X[10X ) return [3Xexpr[103X[10X; end.[110X[133X
+  
+  [33X[0;0Y[3Xarg-list[103X is a (possibly empty) argument list. Any arguments list which would
+  be  valid  for  a normal GAP function is also valid here (including variadic
+  arguments).[133X
+  
+  [33X[0;0YThe following gives a couple of examples of a typical use of such a function[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSum( List( [1..100], {x} -> x^2 ) );[127X[104X
+    [4X[28X338350[128X[104X
+    [4X[25Xgap>[125X [27Xlist := [3, 5, 2, 1, 3];;[127X[104X
+    [4X[25Xgap>[125X [27XSort(list, {x,y} -> x > y);[127X[104X
+    [4X[25Xgap>[125X [27Xlist;[127X[104X
+    [4X[28X[ 5, 3, 3, 2, 1 ][128X[104X
+    [4X[25Xgap>[125X [27Xf := {x,y...} -> y;;[127X[104X
+    [4X[25Xgap>[125X [27Xf(1,2,3,4);[127X[104X
+    [4X[28X[ 2, 3, 4 ][128X[104X
+    [4X[25Xgap>[125X [27Xf := {} -> 2;[127X[104X
+    [4X[28Xfunction(  ) ... end[128X[104X
+    [4X[25Xgap>[125X [27XPrint(f);[127X[104X
+    [4X[28Xfunction (  )[128X[104X
+    [4X[28X    return 2;[128X[104X
+    [4X[28Xend[128X[104X
+    [4X[25Xgap>[125X [27Xf();[127X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe [10X{[110X and [10X}[110X may be omitted for functions with one argument:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSum( List( [1..100], {x} -> x^2 ) );[127X[104X
+    [4X[28X338350[128X[104X
+    [4X[25Xgap>[125X [27XSum( List( [1..100], x -> x^2 ) );[127X[104X
+    [4X[28X338350[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWhen  the definition of a function [3Xfun1[103X is evaluated inside another function
+  [3Xfun2[103X,  [5XGAP[105X  binds  all  the  identifiers  inside  the function [3Xfun1[103X that are
+  identifiers of an argument or a local of [3Xfun2[103X to the corresponding variable.
+  This  set  of  bindings is called the environment of the function [3Xfun1[103X. When
+  [3Xfun1[103X  is  called,  its  body  is executed in this environment. The following
+  implementation  of  a  simple stack uses this. Values can be pushed onto the
+  stack and then later be popped off again. The interesting thing here is that
+  the  functions [10Xpush[110X and [10Xpop[110X in the record returned by [10XStack[110X access the local
+  variable  [10Xstack[110X  of  [10XStack[110X.  When  [10XStack[110X  is  called, a new variable for the
+  identifier  [10Xstack[110X  is created. When the function definitions of [10Xpush[110X and [10Xpop[110X
+  are then evaluated (as part of the [9Xreturn[109X statement) each reference to [10Xstack[110X
+  is  bound to this new variable. Note also that the two stacks [10XA[110X and [10XB[110X do not
+  interfere, because each call of [10XStack[110X creates a new variable for [10Xstack[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XStack := function()[127X[104X
+    [4X[25X>[125X [27X    local  stack;[127X[104X
+    [4X[25X>[125X [27X    stack := [];[127X[104X
+    [4X[25X>[125X [27X    return rec([127X[104X
+    [4X[25X>[125X [27X      push := function( value )[127X[104X
+    [4X[25X>[125X [27X        Add( stack, value );[127X[104X
+    [4X[25X>[125X [27X      end,[127X[104X
+    [4X[25X>[125X [27X      pop := function()[127X[104X
+    [4X[25X>[125X [27X        return Remove( stack) ;[127X[104X
+    [4X[25X>[125X [27X      end[127X[104X
+    [4X[25X>[125X [27X    );[127X[104X
+    [4X[25X>[125X [27X end;;[127X[104X
+    [4X[25Xgap>[125X [27XA := Stack();;[127X[104X
+    [4X[25Xgap>[125X [27XB := Stack();;[127X[104X
+    [4X[25Xgap>[125X [27XA.push( 1 ); A.push( 2 ); A.push( 3 );[127X[104X
+    [4X[25Xgap>[125X [27XB.push( 4 ); B.push( 5 ); B.push( 6 );[127X[104X
+    [4X[25Xgap>[125X [27XA.pop(); A.pop(); A.pop();[127X[104X
+    [4X[28X3[128X[104X
+    [4X[28X2[128X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XB.pop(); B.pop(); B.pop();[127X[104X
+    [4X[28X6[128X[104X
+    [4X[28X5[128X[104X
+    [4X[28X4[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis  feature  should be used rarely, since its implementation in [5XGAP[105X is not
+  very efficient.[133X
+  
+  
+  [1X4.12 [33X[0;0YFunction Calls[133X[101X
+  
+  
+  [1X4.12-1 [33X[0;0YFunction Call With Arguments[133X[101X
+  
+  [33X[0;0Y[10X[3Xfunction-var[103X[10X( [[3Xarg-expr[103X[10X[, [3Xarg-expr[103X[10X, ...]] )[110X[133X
+  
+  [33X[0;0YThe  function  call has the effect of calling the function [3Xfunction-var[103X. The
+  precise semantics are as follows.[133X
+  
+  [33X[0;0YFirst  [5XGAP[105X  evaluates  the [3Xfunction-var[103X. Usually [3Xfunction-var[103X is a variable,
+  and  [5XGAP[105X  does  nothing  more  than taking the value of this variable. It is
+  allowed  though  that  [3Xfunction-var[103X  is a more complex expression, such as a
+  reference to an element of a list (see Chapter [14X21[114X) [10X[3Xlist-var[103X[10X[[3Xint-expr[103X[10X][110X, or to
+  a  component  of a record (see Chapter [14X29[114X) [10X[3Xrecord-var[103X[10X.[3Xident[103X[10X[110X. In any case [5XGAP[105X
+  tests whether the value is a function. If it is not, [5XGAP[105X signals an error.[133X
+  
+  [33X[0;0YNext  [5XGAP[105X  checks  that the number of actual arguments [3Xarg-expr[103Xs agrees with
+  the  number of [13Xformal arguments[113X as given in the function definition. If they
+  do  not  agree  [5XGAP[105X  signals  an  error.  An  exception is the case when the
+  function has a variable length argument list, which is denoted by adding [10X...[110X
+  after the final argument. In this case there must be at least as many actual
+  arguments as there are formal arguments [13Xbefore the final argument[113X and can be
+  any larger number (see [14X4.11[114X for examples).[133X
+  
+  [33X[0;0YNow  [5XGAP[105X  allocates for each formal argument and for each [13Xformal local[113X (that
+  is,  the identifiers in the [9Xlocal[109X declaration) a new variable. Remember that
+  a  variable  is a location in a [5XGAP[105X program that points to a value. Thus for
+  each formal argument and for each formal local such a location is allocated.[133X
+  
+  [33X[0;0YNext  the  arguments  [3Xarg-expr[103Xs  are  evaluated  from left to right, and the
+  values  are  assigned  to  the  newly created variables corresponding to the
+  formal  arguments. Of course the first value is assigned to the new variable
+  corresponding  to the first formal argument, the second value is assigned to
+  the  new variable corresponding to the second formal argument, and so on. An
+  exception again occurs if the last formal argument has the name [10Xarg[110X. In this
+  case the values of all the actual arguments not assigned to the other formal
+  parameters  are  stored  in  a  list  and  this  list is assigned to the new
+  variable corresponding to the formal argument [10Xarg[110X.[133X
+  
+  [33X[0;0YThe new variables corresponding to the formal locals are initially not bound
+  to  any  value.  So  trying to evaluate those variables before something has
+  been assigned to them will signal an error.[133X
+  
+  [33X[0;0YNow  the  body  of  the  function, which is a statement, is executed. If the
+  identifier  of  one  of the formal arguments or formal locals appears in the
+  body  of  the  function it refers to the new variable that was allocated for
+  this  formal  argument  or  formal local, and evaluates to the value of this
+  variable.[133X
+  
+  [33X[0;0YIf  during the execution of the body of the function a [9Xreturn[109X statement with
+  an  expression (see [14X4.15-9[114X) is executed, execution of the body is terminated
+  and  the  value  of  the function call is the value of the expression of the
+  [9Xreturn[109X.  If  during  the execution of the body a [9Xreturn[109X statement without an
+  expression is executed, execution of the body is terminated and the function
+  call  does  not produce a value, in which case we call this call a procedure
+  call  (see [14X4.15-2[114X). If the execution of the body completes without execution
+  of  a [9Xreturn[109X statement, the function call again produces no value, and again
+  we talk about a procedure call.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XFibonacci( 11 );[127X[104X
+    [4X[28X89[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  above  example  shows  a  call  to the function [2XFibonacci[102X ([14X16.3-1[114X) with
+  actual  argument  [10X11[110X,  the  following  one  shows  a  call  to the operation
+  [2XRightCosets[102X  ([14X39.7-2[114X)  where  the second actual argument is another function
+  call.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRightCosets( G, Intersection( U, V ) );;[127X[104X
+  [4X[32X[104X
+  
+  
+  [1X4.12-2 [33X[0;0YFunction Call With Options[133X[101X
+  
+  [33X[0;0Y[10X[3Xfunction-var[103X[10X(  [3Xarg-expr[103X[10X[,  [3Xarg-expr[103X[10X,  ...][  :  [ [3Xoption-expr[103X[10X [,[3Xoption-expr[103X[10X,
+  ....]]])[110X[133X
+  
+  [33X[0;0YAs well as passing arguments to a function, providing the mathematical input
+  to its calculation, it is sometimes useful to supply [21Xhints[121X suggesting to [5XGAP[105X
+  how  the  desired result may be computed more quickly, or specifying a level
+  of tolerance for random errors in a Monte Carlo algorithm.[133X
+  
+  [33X[0;0YSuch  hints  may  be  supplied  to  a  function-call  [13Xand  to all subsidiary
+  functions  called  from  that  call[113X using the options mechanism. Options are
+  separated  from  the  actual  arguments  by a colon [10X:[110X and have much the same
+  syntax  as  the components of a record expression. The one exception to this
+  is that a component name may appear without a value, in which case the value
+  [9Xtrue[109X is silently inserted.[133X
+  
+  [33X[0;0YOptions  are evaluated from left to right, but only after all arguments have
+  been evaluated.[133X
+  
+  [33X[0;0YThe following example shows a call to [2XSize[102X ([14X30.4-6[114X) passing the options [10Xhard[110X
+  (with the value [9Xtrue[109X) and [10Xtcselection[110X (with the string [10X"external"[110X as value).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSize( fpgrp : hard, tcselection := "external" );[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YOptions  supplied  with function calls in this way are passed down using the
+  global  options  stack  described  in  chapter  [14X8[114X, so that the call above is
+  exactly equivalent to[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPushOptions( rec( hard := true, tcselection := "external") );[127X[104X
+    [4X[25Xgap>[125X [27XSize( fpgrp );[127X[104X
+    [4X[25Xgap>[125X [27XPopOptions( );[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[13XNote[113X  that any option may be passed with any function, whether or not it has
+  any  actual  meaning  for  that  function, or any function called by it. The
+  system provides no safeguard against misspelled option names.[133X
+  
+  
+  [1X4.13 [33X[0;0YComparisons[133X[101X
+  
+  [33X[0;0Y[10X[3Xleft-expr[103X[10X = [3Xright-expr[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xleft-expr[103X[10X <> [3Xright-expr[103X[10X[110X[133X
+  
+  [33X[0;0YThe  operator [10X=[110X tests for equality of its two operands and evaluates to [9Xtrue[109X
+  if  they  are equal and to [9Xfalse[109X otherwise. Likewise [10X<>[110X tests for inequality
+  of  its two operands. For each type of objects the definition of equality is
+  given  in  the  respective chapter. Objects in different families (see [14X13.1[114X)
+  are  never  equal, i.e., [10X=[110X evaluates in this case to [9Xfalse[109X, and [10X<>[110X evaluates
+  to [9Xtrue[109X.[133X
+  
+  [33X[0;0Y[10X[3Xleft-expr[103X[10X < [3Xright-expr[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xleft-expr[103X[10X > [3Xright-expr[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xleft-expr[103X[10X <= [3Xright-expr[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xleft-expr[103X[10X >= [3Xright-expr[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X<[110X  denotes  less than, [10X<=[110X less than or equal, [10X>[110X greater than, and [10X>=[110X greater
+  than  or  equal of its two operands. For each kind of objects the definition
+  of the ordering is given in the respective chapter.[133X
+  
+  [33X[0;0YNote  that  [10X<[110X  implements a [13Xtotal ordering[113X of objects (which can be used for
+  example  to  sort  a  list  of elements). Therefore in general [10X<[110X will not be
+  compatible  with  any inclusion relation (which can be tested using [2XIsSubset[102X
+  ([14X30.5-1[114X)). (For example, it is possible to compare permutation groups with [10X<[110X
+  in  a  total  ordering  of  all permutation groups, but this ordering is not
+  compatible with the relation of being a subgroup.)[133X
+  
+  [33X[0;0YOnly  for  the  following  kinds of objects, an ordering via [10X<[110X of objects in
+  [13Xdifferent[113X  families  (see [14X13.1[114X) is supported. Rationals (see [2XIsRat[102X ([14X17.2-1[114X))
+  are  smallest, next are cyclotomics (see [2XIsCyclotomic[102X ([14X18.1-3[114X)), followed by
+  finite  field  elements  (see [2XIsFFE[102X  ([14X59.1-1[114X));  finite  field  elements  in
+  different  characteristics  are compared via their characteristics, next are
+  permutations  (see [2XIsPerm[102X  ([14X42.1-1[114X)),  followed  by the boolean values [9Xtrue[109X,
+  [9Xfalse[109X,   and  [9Xfail[109X  (see [2XIsBool[102X  ([14X20.1-1[114X)),  characters  (such  as  [10X{[110X}a{'}',
+  see [2XIsChar[102X ([14X27.1-1[114X)), and lists (see [2XIsList[102X ([14X21.1-1[114X)) are largest; note that
+  two  lists  can  be  compared with [10X<[110X if and only if their elements are again
+  objects that can be compared with [10X<[110X.[133X
+  
+  [33X[0;0YFor  other  objects,  [5XGAP[105X does [13Xnot[113X provide an ordering via [10X<[110X. The reason for
+  this  is  that a total ordering of all [5XGAP[105X objects would be hard to maintain
+  when  new  kinds  of  objects  are  introduced, and such a total ordering is
+  hardly used in its full generality.[133X
+  
+  [33X[0;0YHowever,  for  objects  in  the filters listed above, the ordering via [10X<[110X has
+  turned  out  to be useful. For example, one can form [13Xsorted lists[113X containing
+  integers  and  nested  lists  of  integers,  and  then  search in them using
+  [10XPositionSorted[110X (see [14X21.16[114X).[133X
+  
+  [33X[0;0YOf course it would in principle be possible to define an ordering via [10X<[110X also
+  for  certain  other  objects,  by  installing  appropriate  methods  for the
+  operation  [10X\<[110X.  But  this may lead to problems at least as soon as one loads
+  [5XGAP[105X  code  in  which  the  same  is  done,  under the assumption that one is
+  completely  free to define an ordering via [10X<[110X for other objects than the ones
+  for which the [21Xofficial[121X [5XGAP[105X provides already an ordering via [10X<[110X.[133X
+  
+  [33X[0;0YComparison   operators,  including  the  operator  [9Xin[109X  (see [14X21.8[114X),  are  not
+  associative,  Hence  it is not allowed to write [10X[3Xa[103X[10X = [3Xb[103X[10X <> [3Xc[103X[10X = [3Xd[103X[10X[110X, you must use
+  [10X([3Xa[103X[10X  = [3Xb[103X[10X) <> ([3Xc[103X[10X = [3Xd[103X[10X)[110X instead. The comparison operators have higher precedence
+  than  the  logical  operators  (see [14X20.4[114X),  but  lower  precedence  than the
+  arithmetic  operators  (see [14X4.14[114X).  Thus,  for  instance, [10X[3Xa[103X[10X * [3Xb[103X[10X = [3Xc[103X[10X and [3Xd[103X[10X[110X is
+  interpreted as [10X(([3Xa[103X[10X * [3Xb[103X[10X) = [3Xc[103X[10X) and [3Xd[103X[10X)[110X.[133X
+  
+  [33X[0;0YThe  following  example  shows  a  comparison  where  the left operand is an
+  expression.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X2 * 2 + 9 = Fibonacci(7);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YFor the underlying operations of the operators introduced above, see [14X31.11[114X.[133X
+  
+  
+  [1X4.14 [33X[0;0YArithmetic Operators[133X[101X
+  
+  [33X[0;0Y[10X+ [3Xright-expr[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X- [3Xright-expr[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xleft-expr[103X[10X + [3Xright-expr[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xleft-expr[103X[10X - [3Xright-expr[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xleft-expr[103X[10X * [3Xright-expr[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xleft-expr[103X[10X / [3Xright-expr[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xleft-expr[103X[10X mod [3Xright-expr[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xleft-expr[103X[10X ^ [3Xright-expr[103X[10X[110X[133X
+  
+  [33X[0;0YThe  arithmetic  operators  are  [10X+[110X,  [10X-[110X,  [10X*[110X,  [10X/[110X,  [9Xmod[109X,  and  [10X^[110X.  The meanings
+  (semantics) of those operators generally depend on the types of the operands
+  involved, and they are defined in the various chapters describing the types.
+  However basically the meanings are as follows.[133X
+  
+  [33X[0;0Y[10X[3Xa[103X[10X + [3Xb[103X[10X[110X denotes the addition of additive elements [3Xa[103X and [3Xb[103X.[133X
+  
+  [33X[0;0Y[10X[3Xa[103X[10X - [3Xb[103X[10X[110X denotes the addition of [3Xa[103X and the additive inverse of [3Xb[103X.[133X
+  
+  [33X[0;0Y[10X[3Xa[103X[10X * [3Xb[103X[10X[110X denotes the multiplication of multiplicative elements [3Xa[103X and [3Xb[103X.[133X
+  
+  [33X[0;0Y[10X[3Xa[103X[10X / [3Xb[103X[10X[110X denotes the multiplication of [3Xa[103X with the multiplicative inverse of [3Xb[103X.[133X
+  
+  [33X[0;0Y[10X[3Xa[103X[10X  mod  [3Xb[103X[10X[110X,  for  integer or rational left operand [3Xa[103X and for non-zero integer
+  right  operand [3Xb[103X, is defined as follows. If [3Xa[103X and [3Xb[103X are both integers, [10X[3Xa[103X[10X mod
+  [3Xb[103X[10X[110X  is the integer [3Xr[103X in the integer range [10X0 .. |[3Xb[103X[10X| - 1[110X satisfying [10X[3Xa[103X[10X = [3Xr[103X[10X + [3Xb[103X[10X[3Xq[103X[10X[110X,
+  for  some integer [3Xq[103X (where the operations occurring have their usual meaning
+  over the integers, of course).[133X
+  
+  [33X[0;0YIf [3Xa[103X is a rational number and [3Xb[103X is a non-zero integer, and [10X[3Xa[103X[10X = [3Xm[103X[10X / [3Xn[103X[10X[110X where [3Xm[103X
+  and [3Xn[103X are coprime integers with [3Xn[103X positive, then [10X[3Xa[103X[10X mod [3Xb[103X[10X[110X is the integer [3Xr[103X in
+  the  integer range [10X0 .. |[3Xb[103X[10X| - 1[110X such that [3Xm[103X is congruent to [10X[3Xr[103X[10X[3Xn[103X[10X[110X modulo [3Xb[103X, and
+  [3Xr[103X is called the [21Xmodular remainder[121X of [3Xa[103X modulo [3Xb[103X. Also, [10X1 / [3Xn[103X[10X mod [3Xb[103X[10X[110X is called
+  the [21Xmodular inverse[121X of [3Xn[103X modulo [3Xb[103X. (A pair of integers is said to be [13Xcoprime[113X
+  (or [13Xrelatively prime[113X) if their greatest common divisor is 1.)[133X
+  
+  [33X[0;0YWith the above definition, [10X4 / 6 mod 32[110X equals [10X2 / 3 mod 32[110X and hence exists
+  (and is equal to 22), despite the fact that 6 has no inverse modulo 32.[133X
+  
+  [33X[0;0Y[13XNote:[113X For rational [3Xa[103X, [10X[3Xa[103X[10X mod [3Xb[103X[10X[110X could have been defined to be the non-negative
+  rational  [3Xc[103X  less  than [10X|[3Xb[103X[10X|[110X such that [10X[3Xa[103X[10X - [3Xc[103X[10X[110X is a multiple of [3Xb[103X. However this
+  definition is seldom useful and [13Xnot[113X the one chosen for [5XGAP[105X.[133X
+  
+  [33X[0;0Y[10X+[110X  and  [10X-[110X  can also be used as unary operations. The unary [10X+[110X is ignored. The
+  unary [10X-[110X returns the additive inverse of its operand; over the integers it is
+  equivalent to multiplication by [10X-1[110X.[133X
+  
+  [33X[0;0Y[10X^[110X  denotes  powering  of a multiplicative element if the right operand is an
+  integer, and is also used to denote the action of a group element on a point
+  of  a  set if the right operand is a group element. In the special case that
+  both  operands  are  group  elements,  [10X^[110X denotes conjugation, that is, [22Xg[122X[10X^[110X[22Xh =
+  h^{-1} g h[122X.[133X
+  
+  [33X[0;0YThe [13Xprecedence[113X of those operators is as follows. The powering operator [10X^[110X has
+  the  highest  precedence, followed by the unary operators [10X+[110X and [10X-[110X, which are
+  followed  by  the  multiplicative  operators [10X*[110X, [10X/[110X, and [9Xmod[109X, and the additive
+  binary  operators  [10X+[110X  and  [10X-[110X have the lowest precedence. That means that the
+  expression  [10X-2  ^  -2 * 3 + 1[110X is interpreted as [10X(-(2 ^ (-2)) * 3) + 1[110X. If in
+  doubt use parentheses to clarify your intention.[133X
+  
+  [33X[0;0YThe  [13Xassociativity[113X  of  the  arithmetic  operators  is  as follows. [10X^[110X is not
+  associative,  i.e., it is invalid to write [10X2^3^4[110X, use parentheses to clarify
+  whether  you  mean [10X(2^3)^4[110X or [10X2^(3^4)[110X. The unary operators [10X+[110X and [10X-[110X are right
+  associative,  because  they are written to the left of their operands. [10X*[110X, [10X/[110X,
+  [9Xmod[109X,  [10X+[110X,  and  [10X-[110X  are  all  left  associative, i.e., [10X1-2-3[110X is interpreted as
+  [10X(1-2)-3[110X  not  as [10X1-(2-3)[110X. Again, if in doubt use parentheses to clarify your
+  intentions.[133X
+  
+  [33X[0;0YThe   arithmetic  operators  have  higher  precedence  than  the  comparison
+  operators  (see [14X4.13[114X  and [14X30.6[114X)  and the logical operators (see [14X20.4[114X). Thus,
+  for example, [10X[3Xa[103X[10X * [3Xb[103X[10X = [3Xc[103X[10X and [3Xd[103X[10X[110X is interpreted, [10X(([3Xa[103X[10X * [3Xb[103X[10X) = [3Xc[103X[10X) and [3Xd[103X[10X[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X2 * 2 + 9;  # a very simple arithmetic expression[127X[104X
+    [4X[28X13[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YFor  other  arithmetic  operations, and for the underlying operations of the
+  operators introduced above, see [14X31.12[114X.[133X
+  
+  
+  [1X4.15 [33X[0;0YStatements[133X[101X
+  
+  [33X[0;0Y[5XGAP[105X  programs  consist  of a sequence of so-called [13Xstatements[113X. The following
+  types of statements exist:[133X
+  
+  [30X    [33X[0;6YAssignments (see Section [14X4.15-1[114X),[133X
+  
+  [30X    [33X[0;6YProcedure calls (see Section [14X4.15-2[114X),[133X
+  
+  [30X    [33X[0;6Y[9Xif[109X statements (see Section [14X4.15-3[114X),[133X
+  
+  [30X    [33X[0;6Y[9Xwhile[109X loops (see Section [14X4.15-4[114X),[133X
+  
+  [30X    [33X[0;6Y[9Xrepeat[109X loops (see Section [14X4.15-5[114X),[133X
+  
+  [30X    [33X[0;6Y[9Xfor[109X loops (see Section [14X4.15-6[114X),[133X
+  
+  [30X    [33X[0;6Y[9Xbreak[109X statements (see Section [14X4.15-7[114X),[133X
+  
+  [30X    [33X[0;6Y[9Xcontinue[109X statements (see Section [14X4.15-8[114X), and[133X
+  
+  [30X    [33X[0;6Y[9Xreturn[109X statements (see Section [14X4.15-9[114X).[133X
+  
+  [33X[0;0YThey can be entered interactively or be part of a function definition. Every
+  statement must be terminated by a semicolon.[133X
+  
+  [33X[0;0YStatements,  unlike  expressions,  have  no value. They are executed only to
+  produce  an  effect. For example an assignment has the effect of assigning a
+  value  to  a  variable,  a  [9Xfor[109X loop has the effect of executing a statement
+  sequence for all elements in a list and so on. We will talk about [13Xevaluation[113X
+  of   expressions  but  about  [13Xexecution[113X  of  statements  to  emphasize  this
+  difference.[133X
+  
+  [33X[0;0YUsing expressions as statements is treated as syntax error.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xi := 7;;[127X[104X
+    [4X[25Xgap>[125X [27Xif i <> 0 then k = 16/i; fi;[127X[104X
+    [4X[28XSyntax error: := expected[128X[104X
+    [4X[28Xif i <> 0 then k = 16/i; fi;[128X[104X
+    [4X[28X                 ^[128X[104X
+    [4X[28Xgap>[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAs  you  can  see  from  the example this warning does in particular address
+  those  users  who  are  used  to  languages  where  [10X=[110X  instead of [10X:=[110X denotes
+  assignment.[133X
+  
+  [33X[0;0YEmpty statements are permitted and have no effect.[133X
+  
+  [33X[0;0YA  sequence of one or more statements is a [13Xstatement sequence[113X, and may occur
+  everywhere  instead of a single statement. Each construct is terminated by a
+  keyword. The simplest statement sequence is a single semicolon, which can be
+  used  as an empty statement sequence. In fact an empty statement sequence as
+  in  [10Xfor  i  in [ 1 .. 2 ] do od[110X is also permitted and is silently translated
+  into the sequence containing just a semicolon.[133X
+  
+  
+  [1X4.15-1 [33X[0;0YAssignments[133X[101X
+  
+  [33X[0;0Y[10X[3Xvar[103X[10X := [3Xexpr[103X[10X;[110X[133X
+  
+  [33X[0;0YThe [13Xassignment[113X has the effect of assigning the value of the expressions [3Xexpr[103X
+  to the variable [3Xvar[103X.[133X
+  
+  [33X[0;0YThe  variable  [3Xvar[103X  may  be  an  ordinary variable (see [14X4.8[114X), a list element
+  selection  [10X[3Xlist-var[103X[10X[[3Xint-expr[103X[10X][110X  (see  [14X21.4[114X)  or  a record component selection
+  [10X[3Xrecord-var[103X[10X.[3Xident[103X[10X[110X  (see [14X29.3[114X). Since a list element or a record component may
+  itself  be  a  list  or  a record the left hand side of an assignment may be
+  arbitrarily complex.[133X
+  
+  [33X[0;0YNote  that  variables  do not have a type. Thus any value may be assigned to
+  any variable. For example a variable with an integer value may be assigned a
+  permutation or a list or anything else.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xdata:= rec( numbers:= [ 1, 2, 3 ] );[127X[104X
+    [4X[28Xrec( numbers := [ 1, 2, 3 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xdata.string:= "string";; data;[127X[104X
+    [4X[28Xrec( numbers := [ 1, 2, 3 ], string := "string" )[128X[104X
+    [4X[25Xgap>[125X [27Xdata.numbers[2]:= 4;; data;[127X[104X
+    [4X[28Xrec( numbers := [ 1, 4, 3 ], string := "string" )[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIf  the  expression [3Xexpr[103X is a function call then this function must return a
+  value. If the function does not return a value an error is signalled and you
+  enter  a  break  loop  (see [14X6.4[114X). As usual you can leave the break loop with
+  [10Xquit;[110X.  If  you  enter  [10Xreturn  [3Xreturn-expr[103X[10X;[110X  the  value  of  the expression
+  [3Xreturn-expr[103X  is  assigned to the variable, and execution continues after the
+  assignment.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf1:= function( x ) Print( "value: ", x, "\n" ); end;;[127X[104X
+    [4X[25Xgap>[125X [27Xf2:= function( x ) return f1( x ); end;;[127X[104X
+    [4X[25Xgap>[125X [27Xf2( 4 );[127X[104X
+    [4X[28Xvalue: 4[128X[104X
+    [4X[28XFunction Calls: <func> must return a value at[128X[104X
+    [4X[28Xreturn f1( x );[128X[104X
+    [4X[28X called from[128X[104X
+    [4X[28X<function>( <arguments> ) called from read-eval-loop[128X[104X
+    [4X[28XEntering break read-eval-print loop ...[128X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou can supply one by 'return <value>;' to continue[128X[104X
+    [4X[26Xbrk>[126X [27Xreturn "hello";[127X[104X
+    [4X[28X"hello"[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIn the above example, the function [10Xf2[110X calls [10Xf1[110X with argument [10X4[110X, and since [10Xf1[110X
+  does  not  return  a  value  (but only prints a line [21X[10Xvalue: ...[110X[121X), the [9Xreturn[109X
+  statement  of  [10Xf2[110X  cannot  be  executed.  The  error message says that it is
+  possible  to return an appropriate value, and the returned string [10X"hello"[110X is
+  used by [10Xf2[110X instead of the missing return value of [10Xf1[110X.[133X
+  
+  
+  [1X4.15-2 [33X[0;0YProcedure Calls[133X[101X
+  
+  [33X[0;0Y[10X[3Xprocedure-var[103X[10X( [[3Xarg-expr[103X[10X [,[3Xarg-expr[103X[10X, ...]] );[110X[133X
+  
+  [33X[0;0YThe  [13Xprocedure call[113X has the effect of calling the procedure [3Xprocedure-var[103X. A
+  procedure  call  is  done  exactly  like  a  function  call  (see [14X4.12[114X). The
+  distinction  between  functions  and  procedures is only for the sake of the
+  discussion, [5XGAP[105X does not distinguish between them. So we state the following
+  conventions.[133X
+  
+  [33X[0;0YA  [13Xfunction[113X  does  return  a  value but does not produce a side effect. As a
+  convention  the  name  of  a  function is a noun, denoting what the function
+  returns, e.g., [10X"Length"[110X, [10X"Concatenation"[110X and [10X"Order"[110X.[133X
+  
+  [33X[0;0YA  [13Xprocedure[113X  is  a  function that does not return a value but produces some
+  effect. Procedures are called only for this effect. As a convention the name
+  of  a  procedure is a verb, denoting what the procedure does, e.g., [10X"Print"[110X,
+  [10X"Append"[110X and [10X"Sort"[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRead( "myfile.g" );   # a call to the procedure Read[127X[104X
+    [4X[25Xgap>[125X [27Xl := [ 1, 2 ];;[127X[104X
+    [4X[25Xgap>[125X [27XAppend( l, [3,4,5] );  # a call to the procedure Append[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThere  are a few exceptions of [5XGAP[105X functions that do both return a value and
+  produce  some  effect. An example is [2XSortex[102X ([14X21.18-3[114X) which sorts a list and
+  returns the corresponding permutation of the entries.[133X
+  
+  
+  [1X4.15-3 [33X[0;0YIf[133X[101X
+  
+  [33X[0;0Y[10Xif  [3Xbool-expr1[103X[10X  then  [3Xstatements1[103X[10X { elif [3Xbool-expr2[103X[10X then [3Xstatements2[103X[10X }[ else
+  [3Xstatements3[103X[10X ] fi;[110X[133X
+  
+  [33X[0;0YThe  [9Xif[109X statement allows one to execute statements depending on the value of
+  some boolean expression. The execution is done as follows.[133X
+  
+  [33X[0;0YFirst  the  expression  [3Xbool-expr1[103X  following  the  [9Xif[109X  is  evaluated. If it
+  evaluates to [9Xtrue[109X the statement sequence [3Xstatements1[103X after the first [9Xthen[109X is
+  executed, and the execution of the [9Xif[109X statement is complete.[133X
+  
+  [33X[0;0YOtherwise  the  expressions  [3Xbool-expr2[103X  following the [9Xelif[109X are evaluated in
+  turn.  There  may be any number of [9Xelif[109X parts, possibly none at all. As soon
+  as  an  expression  evaluates  to  [9Xtrue[109X the corresponding statement sequence
+  [3Xstatements2[103X is executed and execution of the [9Xif[109X statement is complete.[133X
+  
+  [33X[0;0YIf the [9Xif[109X expression and all, if any, [9Xelif[109X expressions evaluate to [9Xfalse[109X and
+  there is an [9Xelse[109X part, which is optional, its statement sequence [3Xstatements3[103X
+  is  executed  and the execution of the [9Xif[109X statement is complete. If there is
+  no  [9Xelse[109X  part  the [9Xif[109X statement is complete without executing any statement
+  sequence.[133X
+  
+  [33X[0;0YSince  the [9Xif[109X statement is terminated by the [9Xfi[109X keyword there is no question
+  where an [9Xelse[109X part belongs, i.e., [5XGAP[105X has no [21Xdangling else[121X. In[133X
+  
+  [4X[32X[104X
+    [4Xif expr1 then if expr2 then stats1 else stats2 fi; fi;[104X
+  [4X[32X[104X
+  
+  [33X[0;0Ythe [9Xelse[109X part belongs to the second [9Xif[109X statement, whereas in[133X
+  
+  [4X[32X[104X
+    [4Xif expr1 then if expr2 then stats1 fi; else stats2 fi;[104X
+  [4X[32X[104X
+  
+  [33X[0;0Ythe [9Xelse[109X part belongs to the first [9Xif[109X statement.[133X
+  
+  [33X[0;0YSince an [9Xif[109X statement is not an expression it is not possible to write[133X
+  
+  [4X[32X[104X
+    [4Xabs := if x > 0 then x; else -x; fi;[104X
+  [4X[32X[104X
+  
+  [33X[0;0Ywhich  would,  even  if legal syntax, be meaningless, since the [9Xif[109X statement
+  does not produce a value that could be assigned to [10Xabs[110X.[133X
+  
+  [33X[0;0YIf  one of the expressions [3Xbool-expr1[103X, [3Xbool-expr2[103X is evaluated and its value
+  is  neither  [9Xtrue[109X nor [9Xfalse[109X an error is signalled and a break loop (see [14X6.4[114X)
+  is  entered.  As usual you can leave the break loop with [10Xquit;[110X. If you enter
+  [10Xreturn  true;[110X,  execution of the [9Xif[109X statement continues as if the expression
+  whose evaluation failed had evaluated to [9Xtrue[109X. Likewise, if you enter [10Xreturn
+  false;[110X,  execution  of the [9Xif[109X statement continues as if the expression whose
+  evaluation failed had evaluated to [9Xfalse[109X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xi := 10;;[127X[104X
+    [4X[25Xgap>[125X [27Xif 0 < i then[127X[104X
+    [4X[25X>[125X [27X   s := 1;[127X[104X
+    [4X[25X>[125X [27X elif i < 0 then[127X[104X
+    [4X[25X>[125X [27X   s := -1;[127X[104X
+    [4X[25X>[125X [27X else[127X[104X
+    [4X[25X>[125X [27X   s := 0;[127X[104X
+    [4X[25X>[125X [27X fi;[127X[104X
+    [4X[25Xgap>[125X [27Xs;  # the sign of i[127X[104X
+    [4X[28X1[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X4.15-4 [33X[0;0YWhile[133X[101X
+  
+  [33X[0;0Y[10Xwhile [3Xbool-expr[103X[10X do [3Xstatements[103X[10X od;[110X[133X
+  
+  [33X[0;0YThe  [9Xwhile[109X  loop  executes  the  statement  sequence  [3Xstatements[103X  while  the
+  condition [3Xbool-expr[103X evaluates to [9Xtrue[109X.[133X
+  
+  [33X[0;0YFirst  [3Xbool-expr[103X  is  evaluated.  If  it evaluates to [9Xfalse[109X execution of the
+  [9Xwhile[109X loop terminates and the statement immediately following the [9Xwhile[109X loop
+  is  executed  next.  Otherwise  if  it  evaluates to [9Xtrue[109X the [3Xstatements[103X are
+  executed and the whole process begins again.[133X
+  
+  [33X[0;0YThe difference between the [9Xwhile[109X loop and the [9Xrepeat[109X [9Xuntil[109X loop (see [14X4.15-5[114X)
+  is  that the [3Xstatements[103X in the [9Xrepeat[109X [9Xuntil[109X loop are executed at least once,
+  while  the [3Xstatements[103X in the [9Xwhile[109X loop are not executed at all if [3Xbool-expr[103X
+  is [9Xfalse[109X at the first iteration.[133X
+  
+  [33X[0;0YIf  [3Xbool-expr[103X does not evaluate to [9Xtrue[109X or [9Xfalse[109X an error is signalled and a
+  break  loop (see [14X6.4[114X) is entered. As usual you can leave the break loop with
+  [10Xquit;[110X.  If  you  enter  [10Xreturn  false;[110X,  execution  continues  with the next
+  statement  immediately  following the [9Xwhile[109X loop. If you enter [10Xreturn true;[110X,
+  execution  continues  at  [3Xstatements[103X,  after  which  the  next evaluation of
+  [3Xbool-expr[103X may cause another error.[133X
+  
+  [33X[0;0YThe  following example shows a [9Xwhile[109X loop that sums up the squares [22X1^2, 2^2,
+  ...[122X until the sum exceeds [22X200[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xi := 0;; s := 0;;[127X[104X
+    [4X[25Xgap>[125X [27Xwhile s <= 200 do[127X[104X
+    [4X[25X>[125X [27X   i := i + 1; s := s + i^2;[127X[104X
+    [4X[25X>[125X [27X od;[127X[104X
+    [4X[25Xgap>[125X [27Xs;[127X[104X
+    [4X[28X204[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YA [9Xwhile[109X loop may be left prematurely using [9Xbreak[109X, see [14X4.15-7[114X.[133X
+  
+  
+  [1X4.15-5 [33X[0;0YRepeat[133X[101X
+  
+  [33X[0;0Y[10Xrepeat [3Xstatements[103X[10X until [3Xbool-expr[103X[10X;[110X[133X
+  
+  [33X[0;0YThe  [9Xrepeat[109X  loop  executes  the  statement  sequence  [3Xstatements[103X  until the
+  condition [3Xbool-expr[103X evaluates to [9Xtrue[109X.[133X
+  
+  [33X[0;0YFirst  [3Xstatements[103X are executed. Then [3Xbool-expr[103X is evaluated. If it evaluates
+  to  [9Xtrue[109X  the [9Xrepeat[109X loop terminates and the statement immediately following
+  the  [9Xrepeat[109X  loop  is  executed next. Otherwise if it evaluates to [9Xfalse[109X the
+  whole process begins again with the execution of the [3Xstatements[103X.[133X
+  
+  [33X[0;0YThe difference between the [9Xwhile[109X loop (see [14X4.15-4[114X) and the [9Xrepeat[109X [9Xuntil[109X loop
+  is  that the [3Xstatements[103X in the [9Xrepeat[109X [9Xuntil[109X loop are executed at least once,
+  while  the [3Xstatements[103X in the [9Xwhile[109X loop are not executed at all if [3Xbool-expr[103X
+  is [9Xfalse[109X at the first iteration.[133X
+  
+  [33X[0;0YIf  [3Xbool-expr[103X does not evaluate to [9Xtrue[109X or [9Xfalse[109X an error is signalled and a
+  break  loop (see [14X6.4[114X) is entered. As usual you can leave the break loop with
+  [10Xquit;[110X.  If  you  enter  [10Xreturn  true;[110X,  execution  continues  with  the next
+  statement immediately following the [9Xrepeat[109X loop. If you enter [10Xreturn false;[110X,
+  execution  continues  at  [3Xstatements[103X,  after  which  the  next evaluation of
+  [3Xbool-expr[103X may cause another error.[133X
+  
+  [33X[0;0YThe  [9Xrepeat[109X  loop in the following example has the same purpose as the [9Xwhile[109X
+  loop  in  the  preceding example, namely to sum up the squares [22X1^2, 2^2, ...[122X
+  until the sum exceeds [22X200[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xi := 0;; s := 0;;[127X[104X
+    [4X[25Xgap>[125X [27Xrepeat[127X[104X
+    [4X[25X>[125X [27X   i := i + 1; s := s + i^2;[127X[104X
+    [4X[25X>[125X [27X until s > 200;[127X[104X
+    [4X[25Xgap>[125X [27Xs;[127X[104X
+    [4X[28X204[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YA [9Xrepeat[109X loop may be left prematurely using [9Xbreak[109X, see [14X4.15-7[114X.[133X
+  
+  
+  [1X4.15-6 [33X[0;0YFor[133X[101X
+  
+  [33X[0;0Y[10Xfor [3Xsimple-var[103X[10X in [3Xlist-expr[103X[10X do [3Xstatements[103X[10X od;[110X[133X
+  
+  [33X[0;0YThe [9Xfor[109X loop executes the statement sequence [3Xstatements[103X for every element of
+  the list [3Xlist-expr[103X.[133X
+  
+  [33X[0;0YThe statement sequence [3Xstatements[103X is first executed with [3Xsimple-var[103X bound to
+  the  first  element of the list [3Xlist-expr[103X, then with [3Xsimple-var[103X bound to the
+  second element of [3Xlist-expr[103X and so on. [3Xsimple-var[103X must be a simple variable,
+  it  must  not  be  a  list  element selection [10X[3Xlist-var[103X[10X[[3Xint-expr[103X[10X][110X or a record
+  component selection [10X[3Xrecord-var[103X[10X.[3Xident[103X[10X[110X.[133X
+  
+  [33X[0;0YThe  execution  of  the  [9Xfor[109X  loop  over a list is exactly equivalent to the
+  following [9Xwhile[109X loop.[133X
+  
+  [4X[32X[104X
+    [4Xloop_list := list;[104X
+    [4Xloop_index := 1;[104X
+    [4Xwhile loop_index <= Length(loop_list) do[104X
+    [4X  variable := loop_list[loop_index];[104X
+    [4X  statements[104X
+    [4X  loop_index := loop_index + 1;[104X
+    [4Xod;[104X
+  [4X[32X[104X
+  
+  [33X[0;0Ywith the exception that [21Xloop_list[121X and [21Xloop_index[121X are different variables for
+  each [9Xfor[109X loop, i.e., these variables of different [9Xfor[109X loops do not interfere
+  with each other.[133X
+  
+  [33X[0;0YThe list [3Xlist-expr[103X is very often a range (see [14X21.22[114X).[133X
+  
+  [33X[0;0Y[10Xfor [3Xvariable[103X[10X in [[3Xfrom[103X[10X..[3Xto[103X[10X] do [3Xstatements[103X[10X od;[110X[133X
+  
+  [33X[0;0Ycorresponds to the more common[133X
+  
+  [33X[0;0Y[10Xfor [3Xvariable[103X[10X from [3Xfrom[103X[10X to [3Xto[103X[10X do [3Xstatements[103X[10X od;[110X[133X
+  
+  [33X[0;0Yin other programming languages.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xs := 0;;[127X[104X
+    [4X[25Xgap>[125X [27Xfor i in [1..100] do[127X[104X
+    [4X[25X>[125X [27X   s := s + i;[127X[104X
+    [4X[25X>[125X [27Xod;[127X[104X
+    [4X[25Xgap>[125X [27Xs;[127X[104X
+    [4X[28X5050[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  in  the following example how the modification of the [13Xlist[113X in the loop
+  body causes the loop body also to be executed for the new values.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl := [ 1, 2, 3, 4, 5, 6 ];;[127X[104X
+    [4X[25Xgap>[125X [27Xfor i in l do[127X[104X
+    [4X[25X>[125X [27X   Print( i, " " );[127X[104X
+    [4X[25X>[125X [27X   if i mod 2 = 0 then Add( l, 3 * i / 2 ); fi;[127X[104X
+    [4X[25X>[125X [27Xod; Print( "\n" );[127X[104X
+    [4X[28X1 2 3 4 5 6 3 6 9 9[128X[104X
+    [4X[25Xgap>[125X [27Xl;[127X[104X
+    [4X[28X[ 1, 2, 3, 4, 5, 6, 3, 6, 9, 9 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  in  the  following  example that the modification of the [13Xvariable[113X that
+  holds the list has no influence on the loop.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl := [ 1, 2, 3, 4, 5, 6 ];;[127X[104X
+    [4X[25Xgap>[125X [27Xfor i in l do[127X[104X
+    [4X[25X>[125X [27X   Print( i, " " );[127X[104X
+    [4X[25X>[125X [27X   l := [];[127X[104X
+    [4X[25X>[125X [27Xod; Print( "\n" );[127X[104X
+    [4X[28X1 2 3 4 5 6[128X[104X
+    [4X[25Xgap>[125X [27Xl;[127X[104X
+    [4X[28X[  ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[10Xfor [3Xvariable[103X[10X in [3Xiterator[103X[10X do [3Xstatements[103X[10X od;[110X[133X
+  
+  [33X[0;0YIt  is  also possible to have a [9Xfor[109X-loop run over an iterator (see [14X30.8[114X). In
+  this case the [9Xfor[109X-loop is equivalent to[133X
+  
+  [4X[32X[104X
+    [4Xwhile not IsDoneIterator(iterator) do[104X
+    [4X  variable := NextIterator(iterator)[104X
+    [4X  statements[104X
+    [4Xod;[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[10Xfor [3Xvariable[103X[10X in [3Xobject[103X[10X do [3Xstatements[103X[10X od;[110X[133X
+  
+  [33X[0;0YFinally, if an object [3Xobject[103X which is not a list or an iterator appears in a
+  [9Xfor[109X-loop,   then   [5XGAP[105X   will   attempt   to   evaluate  the  function  call
+  [10XIterator([3Xobject[103X[10X)[110X.  If  this is successful then the loop is taken to run over
+  the iterator returned.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg := Group((1,2,3,4,5),(1,2)(3,4)(5,6));[127X[104X
+    [4X[28XGroup([ (1,2,3,4,5), (1,2)(3,4)(5,6) ])[128X[104X
+    [4X[25Xgap>[125X [27Xcount := 0;; sumord := 0;;[127X[104X
+    [4X[25Xgap>[125X [27Xfor x in g do[127X[104X
+    [4X[25X>[125X [27Xcount := count + 1; sumord := sumord + Order(x); od;[127X[104X
+    [4X[25Xgap>[125X [27Xcount;[127X[104X
+    [4X[28X120[128X[104X
+    [4X[25Xgap>[125X [27Xsumord;[127X[104X
+    [4X[28X471[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe effect of[133X
+  
+  [33X[0;0Y[10Xfor [3Xvariable[103X[10X in [3Xdomain[103X[10X do[110X[133X
+  
+  [33X[0;0Yshould thus normally be the same as[133X
+  
+  [33X[0;0Y[10Xfor [3Xvariable[103X[10X in AsList([3Xdomain[103X[10X) do[110X[133X
+  
+  [33X[0;0Ybut  may  use  much less storage, as the iterator may be more compact than a
+  list of all the elements.[133X
+  
+  [33X[0;0YSee [14X30.8[114X for details about iterators.[133X
+  
+  [33X[0;0YA  [9Xfor[109X  loop  may be left prematurely using [9Xbreak[109X, see [14X4.15-7[114X. This combines
+  especially  well with a loop over an iterator, as a way of searching through
+  a domain for an element with some useful property.[133X
+  
+  
+  [1X4.15-7 [33X[0;0YBreak[133X[101X
+  
+  [33X[0;0Y[10Xbreak;[110X[133X
+  
+  [33X[0;0YThe  statement  [10Xbreak;[110X  causes  an  immediate  exit  from the innermost loop
+  enclosing it.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg := Group((1,2,3,4,5),(1,2)(3,4)(5,6));[127X[104X
+    [4X[28XGroup([ (1,2,3,4,5), (1,2)(3,4)(5,6) ])[128X[104X
+    [4X[25Xgap>[125X [27Xfor x in g do[127X[104X
+    [4X[25X>[125X [27Xif Order(x) = 3 then[127X[104X
+    [4X[25X>[125X [27Xbreak;[127X[104X
+    [4X[25X>[125X [27Xfi; od;[127X[104X
+    [4X[25Xgap>[125X [27Xx;[127X[104X
+    [4X[28X(1,5,2)(3,4,6)[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIt is an error to use this statement other than inside a loop.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xbreak;[127X[104X
+    [4X[28XSyntax error: 'break' statement not enclosed in a loop[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X4.15-8 [33X[0;0YContinue[133X[101X
+  
+  [33X[0;0Y[10Xcontinue;[110X[133X
+  
+  [33X[0;0YThe  statement  [10Xcontinue;[110X  causes  the  rest of the current iteration of the
+  innermost loop enclosing it to be skipped.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg := Group((1,2,3),(1,2));[127X[104X
+    [4X[28XGroup([ (1,2,3), (1,2) ])[128X[104X
+    [4X[25Xgap>[125X [27Xfor x in g do[127X[104X
+    [4X[25X>[125X [27Xif Order(x) = 3 then[127X[104X
+    [4X[25X>[125X [27Xcontinue;[127X[104X
+    [4X[25X>[125X [27Xfi; Print(x,"\n"); od;[127X[104X
+    [4X[28X()[128X[104X
+    [4X[28X(2,3)[128X[104X
+    [4X[28X(1,3)[128X[104X
+    [4X[28X(1,2)[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIt is an error to use this statement other than inside a loop.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xcontinue;[127X[104X
+    [4X[28XSyntax error: 'continue' statement not enclosed in a loop[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X4.15-9 [33X[0;0YReturn (With or without Value)[133X[101X
+  
+  [33X[0;0Y[10Xreturn;[110X[133X
+  
+  [33X[0;0YIn  this  form  [9Xreturn[109X terminates the call of the innermost function that is
+  currently  executing,  and control returns to the calling function. An error
+  is  signalled if no function is currently executing. No value is returned by
+  the function.[133X
+  
+  [33X[0;0Y[10Xreturn [3Xexpr[103X[10X;[110X[133X
+  
+  [33X[0;0YIn  this  form  [9Xreturn[109X terminates the call of the innermost function that is
+  currently  executing,  and returns the value of the expression [3Xexpr[103X. Control
+  returns  to  the  calling  function. An error is signalled if no function is
+  currently executing.[133X
+  
+  [33X[0;0YBoth  statements  can also be used in break loops (see [14X6.4[114X). [10Xreturn;[110X has the
+  effect  that  the computation continues where it was interrupted by an error
+  or  the  user hitting [12XCtrl-C[112X. [10Xreturn [3Xexpr[103X[10X;[110X can be used to continue execution
+  after  an  error. What happens with the value [3Xexpr[103X depends on the particular
+  error.[133X
+  
+  [33X[0;0YFor  examples  of  [9Xreturn[109X  statements,  see  the  functions [10Xfib[110X and [10XStack[110X in
+  Section [14X4.11[114X.[133X
+  
+  
+  [1X4.16 [33X[0;0YSyntax Trees[133X[101X
+  
+  [33X[0;0YThis section describes the tools available to handle [5XGAP[105X syntax trees.[133X
+  
+  [1X4.16-1 SyntaxTree[101X
+  
+  [33X[1;0Y[29X[2XSyntaxTree[102X( [3Xf[103X ) [32X function[133X
+  
+  [33X[0;0YTakes a GAP function [3Xf[103X and returns its syntax tree.[133X
+  

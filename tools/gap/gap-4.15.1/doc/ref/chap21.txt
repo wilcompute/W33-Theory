@@ -1,0 +1,3186 @@
+  
+  [1X21 [33X[0;0YLists[133X[101X
+  
+  [33X[0;0YLists  are the most important way to treat objects together. A [13Xlist[113X arranges
+  objects in a definite order. So each list implies a partial mapping from the
+  integers  to  the  elements of the list. I.e., there is a first element of a
+  list,  a second, a third, and so on. Lists can occur in mutable or immutable
+  form,  see [14X12.6[114X  for  the  concept  of  mutability, and [14X21.7[114X for the case of
+  lists.[133X
+  
+  [33X[0;0YThis  chapter  deals  mainly  with  the  aspect  of  lists  in  [5XGAP[105X  as [13Xdata
+  structures[113X.  Chapter [14X30[114X  tells  more  about the [13Xcollection[113X aspect of certain
+  lists,  and  more  about  lists  as  [13Xarithmetic  objects[113X can be found in the
+  chapters [14X23[114X and [14X24[114X.[133X
+  
+  [33X[0;0YLists  are  used  to implement ranges (see [14X21.22[114X), sets (see [14X21.19[114X), strings
+  (see [14X27[114X),  row  vectors  and  matrices  (see [14X23[114X  and  [14X24[114X,  but note that [5XGAP[105X
+  supports  also  linear  algebra  for  objects  which are [13Xnot[113X lists, see [14X26[114X);
+  boolean lists (see [14X22[114X) are a further special kind of lists.[133X
+  
+  [33X[0;0YSeveral  operations  for  lists,  such  as  [2XIntersection[102X ([14X30.5-2[114X) and [2XRandom[102X
+  ([14X30.7-1[114X), will be described in Chapter [14X30[114X, in particular see [14X30.3[114X.[133X
+  
+  
+  [1X21.1 [33X[0;0YList Categories[133X[101X
+  
+  [33X[0;0YA  list  can be written by writing down the elements in order between square
+  brackets  [10X[[110X,  [10X][110X,  and  separating them with commas [10X,[110X. An [13Xempty list[113X, i.e., a
+  list with no elements, is written as [10X[][110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X[ 1, 2, 3 ];              # a list with three elements[127X[104X
+    [4X[28X[ 1, 2, 3 ][128X[104X
+    [4X[25Xgap>[125X [27X[ [], [ 1 ], [ 1, 2 ] ];  # a list may contain other lists[127X[104X
+    [4X[28X[ [  ], [ 1 ], [ 1, 2 ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YEach list constructed this way is mutable (see [14X12.6[114X).[133X
+  
+  [1X21.1-1 IsList[101X
+  
+  [33X[1;0Y[29X[2XIsList[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0Ytests whether [3Xobj[103X is a list.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsList( [ 1, 3, 5, 7 ] );  IsList( 1 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X21.1-2 IsDenseList[101X
+  
+  [33X[1;0Y[29X[2XIsDenseList[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YA  list  is  [13Xdense[113X  if  it  has no holes, i.e., contains an element at every
+  position  up to the length. It is absolutely legal to have lists with holes.
+  They are created by leaving the entry between the commas empty. Holes at the
+  end  of  a  list are ignored. Lists with holes are sometimes convenient when
+  the  list represents a mapping from a finite, but not consecutive, subset of
+  the positive integers.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsDenseList( [ 1, 2, 3 ] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xl := [ , 4, 9,, 25,, 49,,,, 121 ];;  IsDenseList( l );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xl[3];[127X[104X
+    [4X[28X9[128X[104X
+    [4X[25Xgap>[125X [27Xl[4];[127X[104X
+    [4X[28XList Element: <list>[4] must have an assigned value[128X[104X
+    [4X[28Xnot in any function[128X[104X
+    [4X[28XEntering break read-eval-print loop ...[128X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou can 'return;' after assigning a value to continue[128X[104X
+    [4X[26Xbrk>[126X [27Xl[4] := 16;;  # assigning a value[127X[104X
+    [4X[26Xbrk>[126X [27Xreturn;       # to escape the break-loop[127X[104X
+    [4X[28X16[128X[104X
+    [4X[28Xgap>[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YObserve  that  requesting  the value of [10Xl[4][110X, which was not assigned, caused
+  the  entry  of  a  [9Xbreak[109X-loop (see Section [14X6.4[114X). After assigning a value and
+  typing  [10Xreturn;[110X,  [5XGAP[105X  is  finally  able  to  comply  with  our  request (by
+  responding with [10X16[110X).[133X
+  
+  [1X21.1-3 IsHomogeneousList[101X
+  
+  [33X[1;0Y[29X[2XIsHomogeneousList[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0Yreturns [9Xtrue[109X if [3Xobj[103X is a list and it is homogeneous, and [9Xfalse[109X otherwise.[133X
+  
+  [33X[0;0YA  [13Xhomogeneous[113X  list  is  a dense list whose elements lie in the same family
+  (see [14X13.1[114X).  The  empty list is homogeneous but not a collection (see [14X30[114X), a
+  nonempty homogeneous list is also a collection.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsHomogeneousList( [ 1, 2, 3 ] );  IsHomogeneousList( [] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsHomogeneousList( [ 1, false, () ] );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X21.1-4 IsTable[101X
+  
+  [33X[1;0Y[29X[2XIsTable[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YA  [13Xtable[113X  is  a  nonempty  list  of  homogeneous lists which lie in the same
+  family. Typical examples of tables are matrices (see [14X24[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsTable( [ [ 1, 2 ], [ 3, 4 ] ] );    # in fact a matrix[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsTable( [ [ 1 ], [ 2, 3 ] ] );       # not rectangular but a table[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsTable( [ [ 1, 2 ], [ () , (1,2) ] ] );  # not homogeneous[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X21.1-5 IsRectangularTable[101X
+  
+  [33X[1;0Y[29X[2XIsRectangularTable[102X( [3Xlist[103X ) [32X property[133X
+  
+  [33X[0;0YA  list  lies in [10XIsRectangularTable[110X when it is nonempty and its elements are
+  all homogeneous lists of the same family and the same length.[133X
+  
+  [1X21.1-6 IsConstantTimeAccessList[101X
+  
+  [33X[1;0Y[29X[2XIsConstantTimeAccessList[102X( [3Xlist[103X ) [32X Category[133X
+  
+  [33X[0;0YThis  category indicates whether the access to each element of the list [3Xlist[103X
+  will  take  roughly the same time. This is implied for example by [10XIsList and
+  IsInternalRep[110X,  so  all  strings,  Boolean  lists,  ranges,  and  internally
+  represented plain lists are in this category.[133X
+  
+  [33X[0;0YBut  also  other  enumerators  (see [14X21.23[114X)  can lie in this category if they
+  guarantee constant time access to their elements.[133X
+  
+  
+  [1X21.2 [33X[0;0YBasic Operations for Lists[133X[101X
+  
+  [33X[0;0YThe  basic operations for lists are element access (see [14X21.3[114X), assignment of
+  elements  to  a  list  (see [14X21.4[114X), fetching the length of a list (see [2XLength[102X
+  ([14X21.17-5[114X)),  the  test  for  a  hole  at  a given position, and unbinding an
+  element at a given position (see [14X21.5[114X).[133X
+  
+  [33X[0;0YThe  term  basic  operation  means  that  each  other  list operation can be
+  formulated  in  terms  of  the basic operations. (But note that often a more
+  efficient method than this one is implemented.)[133X
+  
+  [33X[0;0YAny  [5XGAP[105X  object [3Xlist[103X in the category [2XIsList[102X ([14X21.1-1[114X) is regarded as a list,
+  and  if  methods  for  the basic list operations are installed for [3Xlist[103X then
+  [3Xlist[103X can be used also for the other list operations.[133X
+  
+  [33X[0;0YFor  internally represented lists, kernel methods are provided for the basic
+  list  operations  with  positive  integer  indices. For other lists or other
+  indices, it is possible to install appropriate methods for these operations.
+  This  permits the implementation of lists that do not need to store all list
+  elements  (see  also [14X21.23[114X); for example, the elements might be described by
+  an  algorithm,  such  as the elements list of a group. For this reduction of
+  space  requirements,  however,  a  price  in access time may have to be paid
+  (see [2XConstantTimeAccessList[102X ([14X21.17-6[114X)).[133X
+  
+  [1X21.2-1 \[\][101X
+  
+  [33X[1;0Y[29X[2X\[\][102X( [3Xlist[103X, [3Xix[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XIsBound\[\][102X( [3Xlist[103X, [3Xix[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2X\[\]\:\=[102X( [3Xlist[103X, [3Xpos[103X, [3Xix[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XUnbind\[\][102X( [3Xlist[103X, [3Xix[103X ) [32X operation[133X
+  
+  [33X[0;0YThese  operations  implement  element  access, test for element boundedness,
+  list element assignment, and removal of the element with index [3Xix[103X.[133X
+  
+  [33X[0;0YNote  that  the  special  characters  [10X[[110X,  [10X][110X, [10X:[110X, and [10X=[110X must be escaped with a
+  backslash [10X\[110X (see [14X4.3[114X); so [2X\[\][102X denotes the operation for element access in a
+  list,  whereas [10X[][110X denotes an empty list. (Maybe the variable names involving
+  special   characters   look   strange,   but  nevertheless  they  are  quite
+  suggestive.)[133X
+  
+  [33X[0;0Y[10X\[\](  [3Xlist[103X[10X, [3Xix[103X[10X )[110X is equivalent to [10X[3Xlist[103X[10X[ [3Xix[103X[10X ][110X, which clearly will usually be
+  preferred;  the former is useful mainly if one wants to access the operation
+  itself, for example if one wants to install a method for element access in a
+  special kind of lists.[133X
+  
+  [33X[0;0YSimilarly, [2XIsBound\[\][102X is used explicitly mainly in method installations. In
+  other situations, one can simply call [2XIsBound[102X ([14X21.5-1[114X), which then delegates
+  to [2XIsBound\[\][102X if the first argument is a list, and to [2XIsBound\.[102X ([14X29.7-3[114X) if
+  the first argument is a record.[133X
+  
+  [33X[0;0YAnalogous statements hold for [2X\[\]\:\=[102X and [2XUnbind\[\][102X.[133X
+  
+  
+  [1X21.3 [33X[0;0YList Elements[133X[101X
+  
+  [33X[0;0Y[10X[3Xlist[103X[10X[ [3Xix[103X[10X ][110X[133X
+  
+  [33X[0;0YThe above construct evaluates to the element of the list [3Xlist[103X with index [3Xix[103X.
+  For  built-in  list  types  and collections, indexing is done with origin 1,
+  i.e., the first element of the list is the element with index 1.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl := [ 2, 3, 5, 7, 11, 13 ];;  l[1];  l[2];  l[6];[127X[104X
+    [4X[28X2[128X[104X
+    [4X[28X3[128X[104X
+    [4X[28X13[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIf  [3Xlist[103X  is  not  a  built-in  list,  or [3Xix[103X does not evaluate to a positive
+  integer,  method selection is invoked to try and find a way of indexing [3Xlist[103X
+  with  index [3Xix[103X. If this fails, or the selected method finds that [10X[3Xlist[103X[10X[[3Xix[103X[10X][110X is
+  unbound, an error is signalled.[133X
+  
+  [33X[0;0Y[10X[3Xlist[103X[10X{ [3Xposs[103X[10X }[110X[133X
+  
+  [33X[0;0YThe  above  construct  evaluates  to  a  new list [3Xnew[103X whose first element is
+  [10X[3Xlist[103X[10X[[3Xposs[103X[10X[1]][110X, whose second element is [10X[3Xlist[103X[10X[[3Xposs[103X[10X[2]][110X, and so on. However, it
+  does not need to be sorted and may contain duplicate elements. If for any [22Xi[122X,
+  [10X[3Xlist[103X[10X[ [3Xposs[103X[10X[[110X[22Xi[122X[10X] ][110X is unbound, an error is signalled.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl := [ 2, 3, 5, 7, 11, 13, 17, 19 ];;[127X[104X
+    [4X[25Xgap>[125X [27Xl{[4..6]};  l{[1,7,1,8]};[127X[104X
+    [4X[28X[ 7, 11, 13 ][128X[104X
+    [4X[28X[ 2, 17, 2, 19 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  result  is  a  [13Xnew[113X  list,  that is not identical to any other list. The
+  elements  of that list, however, are identical to the corresponding elements
+  of the left operand (see [14X21.6[114X).[133X
+  
+  [33X[0;0YIt  is  possible  to  nest  such  [13Xsublist extractions[113X, as can be seen in the
+  example below.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm := [ [1,2,3], [4,5,6], [7,8,9], [10,11,12] ];;  m{[1,2,3]}{[3,2]};[127X[104X
+    [4X[28X[ [ 3, 2 ], [ 6, 5 ], [ 9, 8 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xl := m{[1,2,3]};; l{[3,2]};[127X[104X
+    [4X[28X[ [ 7, 8, 9 ], [ 4, 5, 6 ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  the  difference between the two examples. The latter extracts elements
+  1,  2,  and  3 from [3Xm[103X and then extracts the elements 3 and 2 from [13Xthis list[113X.
+  The  former  extracts  elements  1,  2,  and  3 from [3Xm[103X and then extracts the
+  elements 3 and 2 from [13Xeach of those element lists[113X.[133X
+  
+  [33X[0;0YTo  be precise: With each selector [10X[[3Xpos[103X[10X][110X or [10X{[3Xposs[103X[10X}[110X we associate a [13Xlevel[113X that
+  is  defined as the number of selectors of the form [10X{[3Xposs[103X[10X}[110X to its left in the
+  same expression. For example[133X
+  
+  [4X[32X[104X
+    [4X    l[pos1]{poss2}{poss3}[pos4]{poss5}[pos6][104X
+    [4Xlevel   0      0      1     2      2     3[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThen    a    selector    [10X[3Xlist[103X[10X[[3Xpos[103X[10X][110X   of   level   [3Xlevel[103X   is   computed   as
+  [10XListElement([3Xlist[103X[10X,[3Xpos[103X[10X,[3Xlevel[103X[10X)[110X,  where [10XListElement[110X is defined as follows. (Note
+  that [10XListElement[110X is [13Xnot[113X a [5XGAP[105X function.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XListElement := function ( list, pos, level )[128X[104X
+    [4X[28X if level = 0 then[128X[104X
+    [4X[28X  return list[pos];[128X[104X
+    [4X[28X else[128X[104X
+    [4X[28X  return List( list, elm -> ListElement(elm,pos,level-1) );[128X[104X
+    [4X[28X fi;[128X[104X
+    [4X[28Xend;[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Yand    a    selector    [10X[3Xlist[103X[10X{[3Xposs[103X[10X}[110X   of   level   [3Xlevel[103X   is   computed   as
+  [10XListElements([3Xlist[103X[10X,[3Xposs[103X[10X,[3Xlevel[103X[10X)[110X,  where  [10XListElements[110X  is  defined as follows.
+  (Note that [10XListElements[110X is [13Xnot[113X a [5XGAP[105X function.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XListElements := function ( list, poss, level )[128X[104X
+    [4X[28X if level = 0 then[128X[104X
+    [4X[28X  return list{poss};[128X[104X
+    [4X[28X  else[128X[104X
+    [4X[28X   return List( list, elm -> ListElements(elm,poss,level-1) );[128X[104X
+    [4X[28X  fi;[128X[104X
+    [4X[28Xend;[128X[104X
+  [4X[32X[104X
+  
+  [1X21.3-1 \{\}[101X
+  
+  [33X[1;0Y[29X[2X\{\}[102X( [3Xlist[103X, [3Xposs[103X ) [32X operation[133X
+  
+  [33X[0;0YThis  operation  implements [13Xsublist access[113X. For any list, the default method
+  is to loop over the entries in the list [3Xposs[103X, and to delegate to the element
+  access  operation.  (For  nested  sublist  extractions,  cf. [14X21.3[114X.  For  the
+  somewhat strange variable name, cf. [14X21.2[114X.)[133X
+  
+  
+  [1X21.4 [33X[0;0YList Assignment[133X[101X
+  
+  [33X[0;0Y[10X[3Xlist[103X[10X[ [3Xix[103X[10X ] := [3Xobject[103X[10X;[110X[133X
+  
+  [33X[0;0YThe  list  element assignment assigns the object [3Xobject[103X, which can be of any
+  type,  to  the list with index [3Xix[103X, in the mutable (see [14X12.6[114X) list [3Xlist[103X. That
+  means  that  accessing the [3Xix[103X-th element of the list [3Xlist[103X will return [3Xobject[103X
+  after this assignment.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl := [ 1, 2, 3 ];;[127X[104X
+    [4X[25Xgap>[125X [27Xl[1] := 3;; l;             # assign a new object[127X[104X
+    [4X[28X[ 3, 2, 3 ][128X[104X
+    [4X[25Xgap>[125X [27Xl[2] := [ 4, 5, 6 ];; l;   # <object> may be of any type[127X[104X
+    [4X[28X[ 3, [ 4, 5, 6 ], 3 ][128X[104X
+    [4X[25Xgap>[125X [27Xl[ l[1] ] := 10;; l;       # <index> may be an expression[127X[104X
+    [4X[28X[ 3, [ 4, 5, 6 ], 10 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIf  the  index [3Xix[103X is an integer larger than the length of the list [3Xlist[103X (see
+  [2XLength[102X  ([14X21.17-5[114X)),  the list is automatically enlarged to make room for the
+  new element. Note that it is possible to generate lists with holes that way.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl[4] := "another entry";; l;  # <list> is enlarged[127X[104X
+    [4X[28X[ 3, [ 4, 5, 6 ], 10, "another entry" ][128X[104X
+    [4X[25Xgap>[125X [27Xl[ 10 ] := 1;; l;             # now <list> has a hole[127X[104X
+    [4X[28X[ 3, [ 4, 5, 6 ], 10, "another entry",,,,,, 1 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  function  [2XAdd[102X  ([14X21.4-2[114X) should be used if you want to add an element to
+  the end of the list.[133X
+  
+  [33X[0;0YNote  that  assigning  to  a  list  changes the list, thus this list must be
+  mutable (see [14X12.6[114X). See [14X21.6[114X for subtleties of changing lists.[133X
+  
+  [33X[0;0YIf  [3Xlist[103X  does  not  evaluate to a list, [3Xpos[103X does not evaluate to a positive
+  integer,  method selection is invoked to try and find a way of indexing [3Xlist[103X
+  with  index  [3Xpos[103X. If this fails, or the selected method finds that [10X[3Xlist[103X[10X[[3Xpos[103X[10X][110X
+  is  unbound,  or  if  [3Xobject[103X is a call to a function which does not return a
+  value (for example [10XPrint[110X) an error is signalled.[133X
+  
+  [33X[0;0Y[10X[3Xlist[103X[10X{ [3Xposs[103X[10X } := [3Xobjects[103X[10X;[110X[133X
+  
+  [33X[0;0YThe  sublist  assignment  assigns the object [10X[3Xobjects[103X[10X[1][110X, which can be of any
+  type,  to  the  list  [3Xlist[103X at the position [10X[3Xposs[103X[10X[1][110X, the object [10X[3Xobjects[103X[10X[2][110X to
+  [10X[3Xlist[103X[10X[[3Xposs[103X[10X[2]][110X, and so on. [3Xposs[103X must be a dense list of positive integers, it
+  need,  however,  not  be  sorted and may contain duplicate elements. [3Xobjects[103X
+  must be a dense list and must have the same length as [3Xposs[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl := [ 2, 3, 5, 7, 11, 13, 17, 19 ];;[127X[104X
+    [4X[25Xgap>[125X [27Xl{[1..4]} := [10..13];; l;[127X[104X
+    [4X[28X[ 10, 11, 12, 13, 11, 13, 17, 19 ][128X[104X
+    [4X[25Xgap>[125X [27Xl{[1,7,1,10]} := [ 1, 2, 3, 4 ];; l;[127X[104X
+    [4X[28X[ 3, 11, 12, 13, 11, 13, 2, 19,, 4 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe next example shows that it is possible to nest such sublist assignments.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm := [ [1,2,3], [4,5,6], [7,8,9], [10,11,12] ];;[127X[104X
+    [4X[25Xgap>[125X [27Xm{[1,2,3]}{[3,2]} := [ [11,12], [13,14], [15,16] ];; m;[127X[104X
+    [4X[28X[ [ 1, 12, 11 ], [ 4, 14, 13 ], [ 7, 16, 15 ], [ 10, 11, 12 ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  exact behaviour is defined in the same way as for list extractions (see
+  [14X21.3[114X).  Namely, with each selector [10X[[3Xpos[103X[10X][110X or [10X{[3Xposs[103X[10X}[110X we associate a [13Xlevel[113X that
+  is  defined as the number of selectors of the form [10X{[3Xposs[103X[10X}[110X to its left in the
+  same expression. For example[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X    l[pos1]{poss2}{poss3}[pos4]{poss5}[pos6][128X[104X
+    [4X[28Xlevel   0      0      1     1      1     2[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThen  a  list  assignment  [10X[3Xlist[103X[10X[[3Xpos[103X[10X]  := [3Xvals[103X[10X;[110X of level [3Xlevel[103X is computed as
+  [10XListAssignment( [3Xlist[103X[10X, [3Xpos[103X[10X, [3Xvals[103X[10X, [3Xlevel[103X[10X )[110X, where [10XListAssignment[110X is defined as
+  follows. (Note that [10XListAssignment[110X is [13Xnot[113X a [5XGAP[105X function.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XListAssignment := function ( list, pos, vals, level )[128X[104X
+    [4X[28X local i;[128X[104X
+    [4X[28X if level = 0 then[128X[104X
+    [4X[28X  list[pos] := vals;[128X[104X
+    [4X[28X else[128X[104X
+    [4X[28X  for i in [1..Length(list)] do[128X[104X
+    [4X[28X   ListAssignment( list[i], pos, vals[i], level-1 );[128X[104X
+    [4X[28X  od;[128X[104X
+    [4X[28X fi;[128X[104X
+    [4X[28Xend;[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Yand  a  list  assignment  [10X[3Xlist[103X[10X{[3Xposs[103X[10X}  :=  [3Xvals[103X[10X[110X of level [3Xlevel[103X is computed as
+  [10XListAssignments( [3Xlist[103X[10X, [3Xposs[103X[10X, [3Xvals[103X[10X, [3Xlevel[103X[10X )[110X, where [10XListAssignments[110X is defined
+  as follows. (Note that [10XListAssignments[110X is [13Xnot[113X a [5XGAP[105X function.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XListAssignments := function ( list, poss, vals, level )[128X[104X
+    [4X[28X local i;[128X[104X
+    [4X[28X if level = 0 then[128X[104X
+    [4X[28X  list{poss} := vals;[128X[104X
+    [4X[28X else[128X[104X
+    [4X[28X  for i in [1..Length(list)] do[128X[104X
+    [4X[28X   ListAssignments( list[i], poss, vals[i], level-1 );[128X[104X
+    [4X[28X  od;[128X[104X
+    [4X[28X fi;[128X[104X
+    [4X[28Xend;[128X[104X
+  [4X[32X[104X
+  
+  [1X21.4-1 \{\}\:\=[101X
+  
+  [33X[1;0Y[29X[2X\{\}\:\=[102X( [3Xlist[103X, [3Xposs[103X, [3Xval[103X ) [32X operation[133X
+  
+  [33X[0;0YThis  operation  implements  sublist  assignment.  For any list, the default
+  method  is to loop over the entries in the list [3Xposs[103X, and to delegate to the
+  element  assignment  operation.  (For  the  somewhat  strange variable name,
+  cf. [14X21.2[114X.)[133X
+  
+  [1X21.4-2 Add[101X
+  
+  [33X[1;0Y[29X[2XAdd[102X( [3Xlist[103X, [3Xobj[103X[, [3Xpos[103X] ) [32X operation[133X
+  
+  [33X[0;0Yadds the element [3Xobj[103X to the mutable list [3Xlist[103X. The two argument version adds
+  [3Xobj[103X  at  the  end  of  [3Xlist[103X,  i.e., it is equivalent to the assignment [10X[3Xlist[103X[10X[
+  Length([3Xlist[103X[10X) + 1 ] := [3Xobj[103X[10X[110X, see [14X21.4[114X.[133X
+  
+  [33X[0;0YThe  three  argument  version  adds  [3Xobj[103X  in  position [3Xpos[103X, moving all later
+  elements  of  the  list  (if  any) up by one position. Any holes at or after
+  position  [3Xpos[103X  are  also moved up by one position, and new holes are created
+  before [3Xpos[103X if they are needed.[133X
+  
+  [33X[0;0YNothing is returned by [2XAdd[102X, the function is only called for its side effect.[133X
+  
+  [1X21.4-3 Remove[101X
+  
+  [33X[1;0Y[29X[2XRemove[102X( [3Xlist[103X[, [3Xpos[103X] ) [32X operation[133X
+  
+  [33X[0;0Yremoves  an  element  from  [3Xlist[103X.  The  one  argument  form removes the last
+  element.  The  two argument form removes the element in position [3Xpos[103X, moving
+  all  subsequent elements down one position. Any holes after position [3Xpos[103X are
+  also moved down by one position.[133X
+  
+  [33X[0;0YThe  one argument form always returns the removed element. In this case [3Xlist[103X
+  must be non-empty.[133X
+  
+  [33X[0;0YThe  two  argument  form returns the old value of [3Xlist[103X[[3Xpos[103X] if it was bound,
+  and nothing if it was not. Note that accessing or assigning the return value
+  of  this  form of the [2XRemove[102X operation is only safe when you [13Xknow[113X that there
+  will be a value, otherwise it will cause an error.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl := [ 2, 3, 5 ];; Add( l, 7 ); l;[127X[104X
+    [4X[28X[ 2, 3, 5, 7 ][128X[104X
+    [4X[25Xgap>[125X [27XAdd(l,4,2); l;[127X[104X
+    [4X[28X[ 2, 4, 3, 5, 7 ][128X[104X
+    [4X[25Xgap>[125X [27XRemove(l,2); l;[127X[104X
+    [4X[28X4[128X[104X
+    [4X[28X[ 2, 3, 5, 7 ][128X[104X
+    [4X[25Xgap>[125X [27XRemove(l); l;[127X[104X
+    [4X[28X7[128X[104X
+    [4X[28X[ 2, 3, 5 ][128X[104X
+    [4X[25Xgap>[125X [27XRemove(l,5); l;[127X[104X
+    [4X[28X[ 2, 3, 5 ][128X[104X
+  [4X[32X[104X
+  
+  [1X21.4-4 CopyListEntries[101X
+  
+  [33X[1;0Y[29X[2XCopyListEntries[102X( [3Xfromlst[103X, [3Xfromind[103X, [3Xfromstep[103X, [3Xtolst[103X, [3Xtoind[103X, [3Xtostep[103X, [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0YThis  function  copies [3Xn[103X elements from [3Xfromlst[103X, starting at position [3Xfromind[103X
+  and  incrementing the position by [3Xfromstep[103X each time, into [3Xtolst[103X starting at
+  position  [3Xtoind[103X  and  incrementing the position by [3Xtostep[103X each time. [3Xfromlst[103X
+  and  [3Xtolst[103X  must  be  plain  lists.  [3Xfromstep[103X and/or [3Xtostep[103X can be negative.
+  Unbound positions of [3Xfromlst[103X are simply copied to [3Xtolst[103X.[133X
+  
+  [33X[0;0Y[2XCopyListEntries[102X  is  used  in  methods  for  the operations [2XAdd[102X ([14X21.4-2[114X) and
+  [2XRemove[102X ([14X21.4-3[114X).[133X
+  
+  [1X21.4-5 Append[101X
+  
+  [33X[1;0Y[29X[2XAppend[102X( [3Xlist1[103X, [3Xlist2[103X ) [32X operation[133X
+  
+  [33X[0;0Yadds  the  elements  of the list [3Xlist2[103X to the end of the mutable list [3Xlist1[103X,
+  see [14X21.4[114X.  [3Xlist2[103X  may contain holes, in which case the corresponding entries
+  in [3Xlist1[103X will be left unbound. [2XAppend[102X returns nothing, it is only called for
+  its side effect.[133X
+  
+  [33X[0;0YNote  that  [2XAppend[102X changes its first argument, while [2XConcatenation[102X ([14X21.20-1[114X)
+  creates a new list and leaves its arguments unchanged.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl := [ 2, 3, 5 ];; Append( l, [ 7, 11, 13 ] ); l;[127X[104X
+    [4X[28X[ 2, 3, 5, 7, 11, 13 ][128X[104X
+    [4X[25Xgap>[125X [27XAppend( l, [ 17,, 23 ] ); l;[127X[104X
+    [4X[28X[ 2, 3, 5, 7, 11, 13, 17,, 23 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X21.5 [33X[0;0YIsBound and Unbind for Lists[133X[101X
+  
+  [1X21.5-1 IsBound[101X
+  
+  [33X[1;0Y[29X[2XIsBound[102X( [3Xlist[103X[, [3Xn[103X] ) [32X operation[133X
+  
+  [33X[0;0Y[2XIsBound[102X  returns  [9Xtrue[109X if the list [3Xlist[103X has an element at index [3Xn[103X, and [9Xfalse[109X
+  otherwise.  [3Xlist[103X  must  evaluate  to  a  list,  or  to an object for which a
+  suitable  method  for  [10XIsBound\[\][110X has been installed, otherwise an error is
+  signalled.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl := [ , 2, 3, , 5, , 7, , , , 11 ];;[127X[104X
+    [4X[25Xgap>[125X [27XIsBound( l[7] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsBound( l[4] );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsBound( l[101] );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X21.5-2 GetWithDefault[101X
+  
+  [33X[1;0Y[29X[2XGetWithDefault[102X( [3Xlist[103X, [3Xn[103X, [3Xdefault[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XGetWithDefault[102X returns the [3Xn[103Xth element of the list [3Xlist[103X, if [3Xlist[103X has a value
+  at index [3Xn[103X, and [3Xdefault[103X otherwise.[133X
+  
+  [33X[0;0YWhile  this  method  can  be used on any list, it is particularly useful for
+  Weak Pointer lists [14X86.1[114X where the value of the list can change.[133X
+  
+  [33X[0;0YTo  distinguish  between  the [3Xn[103Xth element being unbound, or [3Xdefault[103X being in
+  [3Xlist[103X,   users   can   create  a  new  mutable  object,  such  as  a  string.
+  [2XIsIdenticalObj[102X ([14X12.5-1[114X) returns [9Xfalse[109X for different mutable strings, even if
+  their contents are the same.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl := [1,2,,"a"];[127X[104X
+    [4X[28X[ 1, 2,, "a" ][128X[104X
+    [4X[25Xgap>[125X [27Xnewobj := "a";[127X[104X
+    [4X[28X"a"[128X[104X
+    [4X[25Xgap>[125X [27XGetWithDefault(l, 2, newobj);[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XGetWithDefault(l, 3, newobj);[127X[104X
+    [4X[28X"a"[128X[104X
+    [4X[25Xgap>[125X [27XGetWithDefault(l, 4, newobj);[127X[104X
+    [4X[28X"a"[128X[104X
+    [4X[25Xgap>[125X [27XIsIdenticalObj(GetWithDefault(l, 3, newobj), newobj);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsIdenticalObj(GetWithDefault(l, 4, newobj), newobj);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X21.5-3 Unbind[101X
+  
+  [33X[1;0Y[29X[2XUnbind[102X( [3Xlist[103X[, [3Xn[103X] ) [32X operation[133X
+  
+  [33X[0;0Y[2XUnbind[102X  deletes  the element with index [3Xn[103X in the mutable list [3Xlist[103X. That is,
+  after  execution  of [2XUnbind[102X, [3Xlist[103X no longer has an assigned value with index
+  [3Xn[103X.  Thus  [2XUnbind[102X can be used to produce holes in a list. Note that it is not
+  an error to unbind a nonexistent list element. [3Xlist[103X must evaluate to a list,
+  or  to  an  object  for  which  a  suitable  method  for [10XUnbind\[\][110X has been
+  installed, otherwise an error is signalled.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl := [ , 2, 3, 5, , 7, , , , 11 ];;[127X[104X
+    [4X[25Xgap>[125X [27XUnbind( l[3] ); l;[127X[104X
+    [4X[28X[ , 2,, 5,, 7,,,, 11 ][128X[104X
+    [4X[25Xgap>[125X [27XUnbind( l[4] ); l;[127X[104X
+    [4X[28X[ , 2,,,, 7,,,, 11 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  [2XIsBound[102X  ([14X21.5-1[114X)  and  [2XUnbind[102X  are  special in that they do not
+  evaluate  their  argument, otherwise [2XIsBound[102X ([14X21.5-1[114X) would always signal an
+  error  when it is supposed to return [9Xfalse[109X and there would be no way to tell
+  [2XUnbind[102X which component to remove.[133X
+  
+  
+  [1X21.6 [33X[0;0YIdentical Lists[133X[101X
+  
+  [33X[0;0YWith the list assignment (see [14X21.4[114X) it is possible to change a mutable list.
+  This  section  describes  the  semantic  consequences  of  this  fact.  (See
+  also [14X12.5[114X.)[133X
+  
+  [33X[0;0YFirst we define what it means when we say that [21Xan object is changed[121X. You may
+  think  that  in  the  following  example  the  second assignment changes the
+  integer.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xi := 3;[128X[104X
+    [4X[28Xi := i + 1;[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YBut  in this example it is not the [13Xinteger[113X [10X3[110X which is changed, by adding one
+  to  it.  Instead  the  [13Xvariable[113X  [10Xi[110X is changed by assigning the value of [10Xi+1[110X,
+  which happens to be [10X4[110X, to [10Xi[110X. The same thing happens in the example below.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xl := [ 1, 2 ];[128X[104X
+    [4X[28Xl := [ 1, 2, 3 ];[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  second  assignment does not change the first list, instead it assigns a
+  new  list to the variable [10Xl[110X. On the other hand, in the following example the
+  list [13Xis[113X changed by the second assignment.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xl := [ 1, 2 ];[128X[104X
+    [4X[28Xl[3] := 3;[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YTo  understand  the difference, think of a variable as a name for an object.
+  The  important point is that a list can have several names at the same time.
+  An  assignment  [10X[3Xvar[103X[10X:=  [3Xlist[103X[10X;[110X means in this interpretation that [3Xvar[103X is a name
+  for  the  object  [3Xlist[103X. At the end of the following example [10Xl2[110X still has the
+  value  [10X[  1, 2 ][110X as this list has not been changed and nothing else has been
+  assigned to it.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xl1 := [ 1, 2 ];[128X[104X
+    [4X[28Xl2 := l1;[128X[104X
+    [4X[28Xl1 := [ 1, 2, 3 ];[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YBut  after  the  following  example the list for which [10Xl2[110X is a name has been
+  changed and thus the value of [10Xl2[110X is now [10X[ 1, 2, 3 ][110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xl1 := [ 1, 2 ];[128X[104X
+    [4X[28Xl2 := l1;[128X[104X
+    [4X[28Xl1[3] := 3;[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe  say  that  two  lists  are  [13Xidentical[113X  if changing one of them by a list
+  assignment  also  changes the other one. This is slightly incorrect, because
+  if  [13Xtwo[113X lists are identical, there are actually only two names for [13Xone[113X list.
+  However,  the  correct usage would be very awkward and would only add to the
+  confusion.  Note  that  two  identical lists must be equal, because there is
+  only  one  list  with  two  different names. Thus identity is an equivalence
+  relation  that  is  a  refinement  of  equality.  Identity of objects can be
+  detected using [2XIsIdenticalObj[102X ([14X12.5-1[114X).[133X
+  
+  [33X[0;0YLet us now consider under which circumstances two lists are identical.[133X
+  
+  [33X[0;0YIf  you  enter a list literal then the list denoted by this literal is a new
+  list  that is not identical to any other list. Thus in the following example
+  [10Xl1[110X and [10Xl2[110X are not identical, though they are equal of course.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xl1 := [ 1, 2 ];[128X[104X
+    [4X[28Xl2 := [ 1, 2 ];[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAlso in the following example, no lists in the list [10Xl[110X are identical.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xl := [];[128X[104X
+    [4X[28Xfor i in [1..10] do l[i] := [ 1, 2 ]; od;[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIf  you  assign  a  list to a variable no new list is created. Thus the list
+  value  of  the variable on the left hand side and the list on the right hand
+  side  of the assignment are identical. So in the following example [10Xl1[110X and [10Xl2[110X
+  are identical lists.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xl1 := [ 1, 2 ];[128X[104X
+    [4X[28Xl2 := l1;[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIf  you  pass  a  list  as an argument, the old list and the argument of the
+  function  are  identical. Also if you return a list from a function, the old
+  list  and  the value of the function call are identical. So in the following
+  example [10Xl1[110X and [10Xl2[110X are identical lists:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xl1 := [ 1, 2 ];[128X[104X
+    [4X[28Xf := function ( l ) return l; end;[128X[104X
+    [4X[28Xl2 := f( l1 );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIf  you change a list it keeps its identity. Thus if two lists are identical
+  and  you  change  one of them, you also change the other, and they are still
+  identical  afterwards.  On  the other hand, two lists that are not identical
+  will  never  become identical if you change one of them. So in the following
+  example both [10Xl1[110X and [10Xl2[110X are changed, and are still identical.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xl1 := [ 1, 2 ];[128X[104X
+    [4X[28Xl2 := l1;[128X[104X
+    [4X[28Xl1[1] := 2;[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X21.7 [33X[0;0YDuplication of Lists[133X[101X
+  
+  [33X[0;0YHere  we  describe  the  meaning  of [2XShallowCopy[102X ([14X12.7-1[114X) and [2XStructuralCopy[102X
+  ([14X12.7-2[114X) for lists. For the general definition of these functions, see [14X12.7[114X.[133X
+  
+  [33X[0;0YThe  subobjects  (see [2XShallowCopy[102X  ([14X12.7-1[114X))  of  a  list  are  exactly  its
+  elements.[133X
+  
+  [33X[0;0YThis  means  that  for any list [3Xlist[103X, [2XShallowCopy[102X ([14X12.7-1[114X) returns a mutable
+  [13Xnew[113X  list  [3Xnew[103X that is [13Xnot identical[113X to any other list (see [14X21.6[114X), and whose
+  elements are identical to the elements of [3Xlist[103X.[133X
+  
+  [33X[0;0YAnalogously,  for  a  [13Xmutable[113X  list  [3Xlist[103X, [2XStructuralCopy[102X ([14X12.7-2[114X) returns a
+  mutable  [13Xnew[113X  list  [3Xscp[103X  that  is [13Xnot identical[113X to any other list, and whose
+  elements  are  structural  copies  (defined  recursively) of the elements of
+  [3Xlist[103X;  an element of [3Xscp[103X is mutable (and then a [13Xnew[113X list) if and only if the
+  corresponding element of [3Xlist[103X is mutable.[133X
+  
+  [33X[0;0YIn  both  cases,  modifying the copy [3Xnew[103X resp. [3Xscp[103X by assignments (see [14X21.4[114X)
+  does not modify the original object [3Xlist[103X.[133X
+  
+  [33X[0;0Y[2XShallowCopy[102X ([14X12.7-1[114X) basically executes the following code for lists.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xnew := [];[128X[104X
+    [4X[28Xfor i in [ 1 .. Length( list ) ] do[128X[104X
+    [4X[28X  if IsBound( list[i] ) then[128X[104X
+    [4X[28X    new[i] := list[i];[128X[104X
+    [4X[28X  fi;[128X[104X
+    [4X[28Xod;[128X[104X
+  [4X[32X[104X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xlist1 := [ [ 1, 2 ], [ 3, 4 ] ];;  list2 := ShallowCopy( list1 );;[127X[104X
+    [4X[25Xgap>[125X [27XIsIdenticalObj( list1, list2 );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsIdenticalObj( list1[1], list2[1] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xlist2[1] := 0;;  list1;  list2;[127X[104X
+    [4X[28X[ [ 1, 2 ], [ 3, 4 ] ][128X[104X
+    [4X[28X[ 0, [ 3, 4 ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[2XStructuralCopy[102X ([14X12.7-2[114X) basically executes the following code for lists.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xnew := [];[128X[104X
+    [4X[28Xfor i in [ 1 .. Length( list ) ] do[128X[104X
+    [4X[28X  if IsBound( list[i] ) then[128X[104X
+    [4X[28X    new[i] := StructuralCopy( list[i] );[128X[104X
+    [4X[28X  fi;[128X[104X
+    [4X[28Xod;[128X[104X
+  [4X[32X[104X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xlist1 := [ [ 1, 2 ], [ 3, 4 ] ];;  list2 := StructuralCopy( list1 );;[127X[104X
+    [4X[25Xgap>[125X [27XIsIdenticalObj( list1, list2 );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsIdenticalObj( list1[1], list2[1] );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xlist2[1][1] := 0;;  list1;  list2;[127X[104X
+    [4X[28X[ [ 1, 2 ], [ 3, 4 ] ][128X[104X
+    [4X[28X[ [ 0, 2 ], [ 3, 4 ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  above  code  is  not  entirely  correct.  If the object [3Xlist[103X contains a
+  mutable  object  twice this object is not copied twice, as would happen with
+  the  above  definition,  but only once. This means that the copy [3Xnew[103X and the
+  object [3Xlist[103X have exactly the same structure when viewed as a general graph.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xsub := [ 1, 2 ];; list1 := [ sub, sub ];;[127X[104X
+    [4X[25Xgap>[125X [27Xlist2 := StructuralCopy( list1 );[127X[104X
+    [4X[28X[ [ 1, 2 ], [ 1, 2 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xlist2[1][1] := 0;; list2;[127X[104X
+    [4X[28X[ [ 0, 2 ], [ 0, 2 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xlist1;[127X[104X
+    [4X[28X[ [ 1, 2 ], [ 1, 2 ] ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X21.8 [33X[0;0YMembership Test for Lists[133X[101X
+  
+  [1X21.8-1 \in[101X
+  
+  [33X[1;0Y[29X[2X\in[102X( [3Xobj[103X, [3Xlist[103X ) [32X operation[133X
+  
+  [33X[0;0YThis function call or the infix variant [3Xobj[103X [9Xin[109X [3Xlist[103X tests whether there is a
+  positive integer [22Xi[122X such that [3Xlist[103X[22X[i] =[122X [3Xobj[103X holds.[133X
+  
+  [33X[0;0YIf  the  list  [3Xlist[103X  knows  that  it  is  strictly sorted (see [2XIsSSortedList[102X
+  ([14X21.17-4[114X)), the membership test is much quicker, because a binary search can
+  be  used  instead  of  the  linear  search used for arbitrary lists, see [2X\in[102X
+  ([14X21.19-1[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X1 in [ 2, 2, 1, 3 ];  1 in [ 4, -1, 0, 3 ];[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xs := SSortedList( [2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32] );;[127X[104X
+    [4X[25Xgap>[125X [27X17 in s;  # uses binary search and only 4 comparisons[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YFor finding the position of an element in a list, see [14X21.16[114X.[133X
+  
+  
+  [1X21.9 [33X[0;0YEnlarging Internally Represented Lists[133X[101X
+  
+  [33X[0;0YSection [14X21.4[114X  told  you  (among  other things) that it is possible to assign
+  beyond  the logical end of a mutable list, automatically enlarging the list.
+  This section tells you how this is done for internally represented lists.[133X
+  
+  [33X[0;0YIt  would be extremely wasteful to make all lists large enough so that there
+  is  room  for  all assignments, because some lists may have more than 100000
+  elements, while most lists have less than 10 elements.[133X
+  
+  [33X[0;0YOn the other hand suppose every assignment beyond the end of a list would be
+  done by allocating new space for the list and copying all entries to the new
+  space.  Then  creating  a  list of 1000 elements by assigning them in order,
+  would  take  half a million copy operations and also create a lot of garbage
+  that the garbage collector would have to reclaim.[133X
+  
+  [33X[0;0YSo  the  following strategy is used. If a list is created it is created with
+  exactly  the  correct  size. If a list is enlarged, because of an assignment
+  beyond the end of the list, it is enlarged by at least [10X[3Xlength[103X[10X/8 + 4[110X entries.
+  Therefore  the  next  assignments  beyond the end of the list do not need to
+  enlarge  the list. For example creating a list of 1000 elements by assigning
+  them in order, would now take only 32 enlargements.[133X
+  
+  [33X[0;0YThe  result  of  this is of course that the [13Xphysical length[113X of a list may be
+  larger than the [13Xlogical length[113X, which is usually called simply the length of
+  the  list.  Aside  from the implications for the performance you need not be
+  aware  of the physical length. In fact all you can ever observe, for example
+  by calling [2XLength[102X ([14X21.17-5[114X), is the logical length.[133X
+  
+  [33X[0;0YSuppose  that  [2XLength[102X  ([14X21.17-5[114X)  would have to take the physical length and
+  then  test  how many entries at the end of a list are unassigned, to compute
+  the  logical  length of the list. That would take too much time. In order to
+  make  [2XLength[102X  ([14X21.17-5[114X),  and  other functions that need to know the logical
+  length, more efficient, the length of a list is stored along with the list.[133X
+  
+  [33X[0;0YFor  fine  tuning code dealing with plain lists we provide the following two
+  functions.[133X
+  
+  [1X21.9-1 EmptyPlist[101X
+  
+  [33X[1;0Y[29X[2XEmptyPlist[102X( [3Xlen[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10Ya plain list[133X
+  
+  [33X[1;0Y[29X[2XShrinkAllocationPlist[102X( [3Xl[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10Ynothing[133X
+  
+  [33X[0;0YThe  function [2XEmptyPlist[102X returns an empty plain list which has enough memory
+  allocated  for  [3Xlen[103X  entries.  This can be useful for creating and filling a
+  plain list with a known number of entries.[133X
+  
+  [33X[0;0YThe  function  [2XShrinkAllocationPlist[102X  gives back to [5XGAP[105X's memory manager the
+  physical  memory  which  is allocated for the plain list [3Xl[103X but not needed by
+  the current number of entries.[133X
+  
+  [33X[0;0YNote   that   there   are   similar   functions   [2XEmptyString[102X  ([14X27.4-5[114X)  and
+  [2XShrinkAllocationString[102X ([14X27.4-5[114X) for strings instead of plain lists.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:=[]; for i in [1..160] do Add(l, i^2); od;[127X[104X
+    [4X[28X[  ][128X[104X
+    [4X[25Xgap>[125X [27Xm:=EmptyPlist(160); for i in [1..160] do Add(m, i^2); od;[127X[104X
+    [4X[28X[  ][128X[104X
+    [4X[25Xgap>[125X [27X# now l uses about 25% more memory than the equal list m[127X[104X
+    [4X[25Xgap>[125X [27XShrinkAllocationPlist(l);[127X[104X
+    [4X[25Xgap>[125X [27X# now l and m use the same amount of memory[127X[104X
+  [4X[32X[104X
+  
+  
+  [1X21.10 [33X[0;0YComparisons of Lists[133X[101X
+  
+  [33X[0;0Y[10X[3Xlist1[103X[10X = [3Xlist2[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xlist1[103X[10X <> [3Xlist2[103X[10X[110X[133X
+  
+  [33X[0;0YTwo lists [3Xlist1[103X and [3Xlist2[103X are equal if and only if for every index [22Xi[122X, either
+  both  entries  [3Xlist1[103X[22X[i][122X  and [3Xlist2[103X[22X[i][122X are unbound, or both are bound and are
+  equal, i.e., [3Xlist1[103X[22X[i] =[122X [3Xlist2[103X[22X[i][122X is [9Xtrue[109X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X[ 1, 2, 3 ] = [ 1, 2, 3 ];[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27X[ , 2, 3 ] = [ 1, 2, ];[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27X[ 1, 2, 3 ] = [ 3, 2, 1 ];[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis  definition will cause problems with lists which are their own entries.
+  Comparing  two  such lists for equality may lead to an infinite recursion in
+  the  kernel if the list comparison has to compare the list entries which are
+  in fact the lists themselves, and then [5XGAP[105X crashes.[133X
+  
+  [33X[0;0Y[10X[3Xlist1[103X[10X < [3Xlist2[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xlist1[103X[10X <= [3Xlist2[103X[10X[110X[133X
+  
+  [33X[0;0YLists  are  ordered  [13Xlexicographically[113X. Unbound entries are smaller than any
+  bound  entry.  That  implies  the following behaviour. Let [22Xi[122X be the smallest
+  positive  integer  [22Xi[122X  such  that [3Xlist1[103X and [3Xlist2[103X at position [22Xi[122X differ, i.e.,
+  either  exactly one of [3Xlist1[103X[22X[i][122X, [3Xlist2[103X[22X[i][122X is bound or both entries are bound
+  and differ. Then [3Xlist1[103X is less than [3Xlist2[103X if either [3Xlist1[103X[22X[i][122X is unbound (and
+  [3Xlist2[103X[22X[i][122X is not) or both are bound and [3Xlist1[103X[22X[i][122X < [3Xlist2[103X[22X[i][122X is [9Xtrue[109X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X[ 1, 2, 3, 4 ] < [ 1, 2, 4, 8 ]; # <list1>[3] < <list2>[3][127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27X[ 1, 2, 3 ] < [ 1, 2, 3, 5 ];  # <list1>[4] is unbound and thus < 5[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27X[ 1, , 3, 4 ] < [ 1, -1, 3 ];  # <list1>[2] is unbound and thus < -1[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote that for comparing two lists with [10X<[110X or [10X<=[110X, the (relevant) list elements
+  must  be  comparable  with  [10X<[110X,  which is usually [13Xnot[113X the case for objects in
+  different families, see [14X13.1[114X. Also for the possibility to compare lists with
+  other objects, see [14X13.1[114X.[133X
+  
+  
+  [1X21.11 [33X[0;0YArithmetic for Lists[133X[101X
+  
+  [33X[0;0YIt  is  convenient  to  have  arithmetic operations for lists, in particular
+  because in [5XGAP[105X row vectors and matrices are special kinds of lists. However,
+  it  is  the  wide  variety  of  list  objects  because of which we prescribe
+  arithmetic  operations  [13Xnot  for  all[113X of them. (Keep in mind that [21Xlist[121X means
+  just an object in the category [2XIsList[102X ([14X21.1-1[114X).)[133X
+  
+  [33X[0;0Y(Due  to  the  intended generality and flexibility, the definitions given in
+  the  following  sections  are  quite  technical. But for not too complicated
+  cases  such  as matrices (see [14X24.3[114X) and row vectors (see [14X23.2[114X) whose entries
+  aren't lists, the resulting behaviour should be intuitive.)[133X
+  
+  [33X[0;0YFor example, we want to deal with matrices which can be added and multiplied
+  in  the  usual  way,  via  the infix operators [10X+[110X and [10X*[110X; and we want also Lie
+  matrices,  with  the  same  additive  behaviour  but with the multiplication
+  defined  by the Lie bracket. Both kinds of matrices shall be lists, with the
+  usual  access  to  their rows, with [2XLength[102X ([14X21.17-5[114X) returning the number of
+  rows etc.[133X
+  
+  [33X[0;0YFor  the  categories and attributes that control the arithmetic behaviour of
+  lists, see [14X21.12[114X.[133X
+  
+  [33X[0;0YFor   the  definition  of  return  values  of  additive  and  multiplicative
+  operations  whose arguments are lists in these filters, see [14X21.13[114X and [14X21.14[114X,
+  respectively. It should be emphasized that these sections describe only what
+  the return values are, and not how they are computed.[133X
+  
+  [33X[0;0YFor  the  mutability status of the return values, see [14X21.15[114X. (Note that this
+  is not dealt with in the sections about the result values.)[133X
+  
+  [33X[0;0YFurther  details  about the special cases of row vectors and matrices can be
+  found  in [14X23.2[114X  and  in [14X24.3[114X,  the  compression status is dealt with in [14X23.3[114X
+  and [14X24.14[114X.[133X
+  
+  
+  [1X21.12 [33X[0;0YFilters Controlling the Arithmetic Behaviour of Lists[133X[101X
+  
+  [33X[0;0YThe  arithmetic  behaviour  of  lists  is  controlled  by  their  types. The
+  following categories and attributes are used for that.[133X
+  
+  [33X[0;0YNote that we distinguish additive and multiplicative behaviour. For example,
+  Lie   matrices   have  the  usual  additive  behaviour  but  not  the  usual
+  multiplicative behaviour.[133X
+  
+  [1X21.12-1 IsGeneralizedRowVector[101X
+  
+  [33X[1;0Y[29X[2XIsGeneralizedRowVector[102X( [3Xlist[103X ) [32X Category[133X
+  
+  [33X[0;0YFor  a  list  [3Xlist[103X, the value [9Xtrue[109X for [2XIsGeneralizedRowVector[102X indicates that
+  the  additive  arithmetic behaviour of [3Xlist[103X is as defined in [14X21.13[114X, and that
+  the  attribute  [2XNestingDepthA[102X  ([14X21.12-4[114X)  will  return  a nonzero value when
+  called with [3Xlist[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsList( "abc" ); IsGeneralizedRowVector( "abc" );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xliemat:= LieObject( [ [ 1, 2 ], [ 3, 4 ] ] );[127X[104X
+    [4X[28XLieObject( [ [ 1, 2 ], [ 3, 4 ] ] )[128X[104X
+    [4X[25Xgap>[125X [27XIsGeneralizedRowVector( liemat );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X21.12-2 IsMultiplicativeGeneralizedRowVector[101X
+  
+  [33X[1;0Y[29X[2XIsMultiplicativeGeneralizedRowVector[102X( [3Xlist[103X ) [32X Category[133X
+  
+  [33X[0;0YFor  a  list  [3Xlist[103X,  the value [9Xtrue[109X for [2XIsMultiplicativeGeneralizedRowVector[102X
+  indicates that the multiplicative arithmetic behaviour of [3Xlist[103X is as defined
+  in  [14X21.14[114X,  and  that  the  attribute  [2XNestingDepthM[102X ([14X21.12-5[114X) will return a
+  nonzero value when called with [3Xlist[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsMultiplicativeGeneralizedRowVector( liemat );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xbas:= CanonicalBasis( FullRowSpace( Rationals, 3 ) );[127X[104X
+    [4X[28XCanonicalBasis( ( Rationals^3 ) )[128X[104X
+    [4X[25Xgap>[125X [27XIsMultiplicativeGeneralizedRowVector( bas );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote      that     the     filters     [2XIsGeneralizedRowVector[102X     ([14X21.12-1[114X),
+  [2XIsMultiplicativeGeneralizedRowVector[102X  do  [13Xnot[113X  enable  default  methods  for
+  addition or multiplication (cf. [2XIsListDefault[102X ([14X21.12-3[114X)).[133X
+  
+  [1X21.12-3 IsListDefault[101X
+  
+  [33X[1;0Y[29X[2XIsListDefault[102X( [3Xlist[103X ) [32X Category[133X
+  
+  [33X[0;0YFor  a  list  [3Xlist[103X,  [2XIsListDefault[102X  indicates  that  the default methods for
+  arithmetic   operations   of   lists,   such   as   pointwise  addition  and
+  multiplication  as  inner  product or matrix product, shall be applicable to
+  [3Xlist[103X.[133X
+  
+  [33X[0;0Y[2XIsListDefault[102X      implies      [2XIsGeneralizedRowVector[102X     ([14X21.12-1[114X)     and
+  [2XIsMultiplicativeGeneralizedRowVector[102X ([14X21.12-2[114X).[133X
+  
+  [33X[0;0YAll internally represented lists are in this category, and also all lists in
+  the  representations  [10XIsGF2VectorRep[110X,  [10XIs8BitVectorRep[110X,  [10XIsGF2MatrixRep[110X, and
+  [10XIs8BitMatrixRep[110X  (see [14X23.3[114X and [14X24.14[114X). Note that the result of an arithmetic
+  operation  with  lists  in  [2XIsListDefault[102X  will  in general be an internally
+  represented   list,   so   most   [21Xwrapped  list  objects[121X  will  not  lie  in
+  [2XIsListDefault[102X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xv:= [ 1, 2 ];;  m:= [ v, 2*v ];;[127X[104X
+    [4X[25Xgap>[125X [27XIsListDefault( v );  IsListDefault( m );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsListDefault( bas );  IsListDefault( liemat );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X21.12-4 NestingDepthA[101X
+  
+  [33X[1;0Y[29X[2XNestingDepthA[102X( [3Xobj[103X ) [32X attribute[133X
+  
+  [33X[0;0YFor  a  [5XGAP[105X  object [3Xobj[103X, [2XNestingDepthA[102X returns the [13Xadditive nesting depth[113X of
+  [3Xobj[103X.  This  is  defined  recursively  as  the  integer  [22X0[122X  if  [3Xobj[103X is not in
+  [2XIsGeneralizedRowVector[102X  ([14X21.12-1[114X),  as the integer [22X1[122X if [3Xobj[103X is an empty list
+  in  [2XIsGeneralizedRowVector[102X  ([14X21.12-1[114X),  and  as  [22X1[122X plus the additive nesting
+  depth of the first bound entry in [3Xobj[103X otherwise.[133X
+  
+  [1X21.12-5 NestingDepthM[101X
+  
+  [33X[1;0Y[29X[2XNestingDepthM[102X( [3Xobj[103X ) [32X attribute[133X
+  
+  [33X[0;0YFor a [5XGAP[105X object [3Xobj[103X, [2XNestingDepthM[102X returns the [13Xmultiplicative nesting depth[113X
+  of  [3Xobj[103X.  This  is  defined  recursively  as  the integer [22X0[122X if [3Xobj[103X is not in
+  [2XIsMultiplicativeGeneralizedRowVector[102X  ([14X21.12-2[114X),  as the integer [22X1[122X if [3Xobj[103X is
+  an  empty  list  in [2XIsMultiplicativeGeneralizedRowVector[102X ([14X21.12-2[114X), and as [22X1[122X
+  plus  the  multiplicative  nesting  depth  of  the  first bound entry in [3Xobj[103X
+  otherwise.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XNestingDepthA( v );  NestingDepthM( v );[127X[104X
+    [4X[28X1[128X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XNestingDepthA( m );  NestingDepthM( m );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XNestingDepthA( liemat );  NestingDepthM( liemat );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[28X0[128X[104X
+    [4X[25Xgap>[125X [27Xl1:= [ [ 1, 2 ], 3 ];;  l2:= [ 1, [ 2, 3 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27XNestingDepthA( l1 );  NestingDepthM( l1 );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XNestingDepthA( l2 );  NestingDepthM( l2 );[127X[104X
+    [4X[28X1[128X[104X
+    [4X[28X1[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X21.13 [33X[0;0YAdditive Arithmetic for Lists[133X[101X
+  
+  [33X[0;0YIn  this  general context, we define the results of additive operations only
+  in  the  following  situations.  For  unary  operations  (zero  and additive
+  inverse),  the  unique argument must be in [2XIsGeneralizedRowVector[102X ([14X21.12-1[114X);
+  for binary operations (addition and subtraction), at least one argument must
+  be  in  [2XIsGeneralizedRowVector[102X ([14X21.12-1[114X), and the other either is not a list
+  or also in [2XIsGeneralizedRowVector[102X ([14X21.12-1[114X).[133X
+  
+  [33X[0;0Y(For  non-list  [5XGAP[105X objects, defining the results of unary operations is not
+  an   issue   here,   and  if  at  least  one  argument  is  a  list  not  in
+  [2XIsGeneralizedRowVector[102X  ([14X21.12-1[114X), it shall be left to this argument whether
+  the result in question is defined and what it is.)[133X
+  
+  
+  [1X21.13-1 [33X[0;0YZero for lists[133X[101X
+  
+  [33X[0;0YThe  zero  (see [2XZero[102X  ([14X31.10-3[114X))  of  a  list  [22Xx[122X  in  [2XIsGeneralizedRowVector[102X
+  ([14X21.12-1[114X)  is  defined  as the list whose entry at position [22Xi[122X is the zero of
+  [22Xx[i][122X if this entry is bound, and is unbound otherwise.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XZero( [ 1, 2, 3 ] );  Zero( [ [ 1, 2 ], 3 ] );  Zero( liemat );[127X[104X
+    [4X[28X[ 0, 0, 0 ][128X[104X
+    [4X[28X[ [ 0, 0 ], 0 ][128X[104X
+    [4X[28XLieObject( [ [ 0, 0 ], [ 0, 0 ] ] )[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X21.13-2 [33X[0;0YAdditiveInverse for lists[133X[101X
+  
+  [33X[0;0YThe  additive  inverse  (see [2XAdditiveInverse[102X  ([14X31.10-9[114X))  of  a  list  [22Xx[122X  in
+  [2XIsGeneralizedRowVector[102X  ([14X21.12-1[114X)  is  defined  as  the  list whose entry at
+  position  [22Xi[122X  is  the additive inverse of [22Xx[i][122X if this entry is bound, and is
+  unbound otherwise.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XAdditiveInverse( [ 1, 2, 3 ] );  AdditiveInverse( [ [ 1, 2 ], 3 ] );[127X[104X
+    [4X[28X[ -1, -2, -3 ][128X[104X
+    [4X[28X[ [ -1, -2 ], -3 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X21.13-3 [33X[0;0YAddition of lists[133X[101X
+  
+  [33X[0;0YIf  [22Xx[122X  and  [22Xy[122X  are  in  [2XIsGeneralizedRowVector[102X  ([14X21.12-1[114X)  and have the same
+  additive  nesting  depth  (see [2XNestingDepthA[102X  ([14X21.12-4[114X)),  the  sum [22Xx + y[122X is
+  defined  [13Xpointwise[113X,  in  the  sense that the result is a list whose entry at
+  position  [22Xi[122X  is  [22Xx[i]  +  y[i][122X if these entries are bound, is a shallow copy
+  (see [2XShallowCopy[102X  ([14X12.7-1[114X))  of  [22Xx[i][122X  or  [22Xy[i][122X if the other argument is not
+  bound  at position [22Xi[122X, and is unbound if both [22Xx[122X and [22Xy[122X are unbound at position
+  [22Xi[122X.[133X
+  
+  [33X[0;0YIf    [22Xx[122X    is    in   [2XIsGeneralizedRowVector[102X   ([14X21.12-1[114X)   and   [22Xy[122X   is   in
+  [2XIsGeneralizedRowVector[102X ([14X21.12-1[114X) and has lower additive nesting depth, or is
+  neither  a list nor a domain, the sum [22Xx + y[122X is defined as a list whose entry
+  at  position  [22Xi[122X  is  [22Xx[i] + y[122X if [22Xx[122X is bound at position [22Xi[122X, and is unbound if
+  not.  The  equivalent  holds  in  the  reversed case, where the order of the
+  summands is kept, as addition is not always commutative.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X1 + [ 1, 2, 3 ];  [ 1, 2, 3 ] + [ 0, 2, 4 ];  [ 1, 2 ] + [ Z(2) ];[127X[104X
+    [4X[28X[ 2, 3, 4 ][128X[104X
+    [4X[28X[ 1, 4, 7 ][128X[104X
+    [4X[28X[ 0*Z(2), 2 ][128X[104X
+    [4X[25Xgap>[125X [27Xl1:= [ 1, , 3, 4 ];;             l2:= [ , 2, 3, 4, 5 ];;[127X[104X
+    [4X[25Xgap>[125X [27Xl3:= [ [ 1, 2 ], , [ 5, 6 ] ];;  l4:= [ , [ 3, 4 ], [ 5, 6 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27XNestingDepthA( l1 );  NestingDepthA( l2 );[127X[104X
+    [4X[28X1[128X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XNestingDepthA( l3 );  NestingDepthA( l4 );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27Xl1 + l2;[127X[104X
+    [4X[28X[ 1, 2, 6, 8, 5 ][128X[104X
+    [4X[25Xgap>[125X [27Xl1 + l3;[127X[104X
+    [4X[28X[ [ 2, 2, 3, 4 ],, [ 6, 6, 3, 4 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xl2 + l4;[127X[104X
+    [4X[28X[ , [ 3, 6, 3, 4, 5 ], [ 5, 8, 3, 4, 5 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xl3 + l4;[127X[104X
+    [4X[28X[ [ 1, 2 ], [ 3, 4 ], [ 10, 12 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xl1 + [];[127X[104X
+    [4X[28X[ 1,, 3, 4 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X21.13-4 [33X[0;0YSubtraction of lists[133X[101X
+  
+  [33X[0;0YFor  two  [5XGAP[105X  objects  [22Xx[122X  and  [22Xy[122X  of which one is in [2XIsGeneralizedRowVector[102X
+  ([14X21.12-1[114X)  and  the  other is also in [2XIsGeneralizedRowVector[102X ([14X21.12-1[114X) or is
+  neither a list nor a domain, [22Xx - y[122X is defined as [22Xx + (-y)[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl1 - l2;[127X[104X
+    [4X[28X[ 1, -2, 0, 0, -5 ][128X[104X
+    [4X[25Xgap>[125X [27Xl1 - l3;[127X[104X
+    [4X[28X[ [ 0, -2, 3, 4 ],, [ -4, -6, 3, 4 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xl2 - l4;[127X[104X
+    [4X[28X[ , [ -3, -2, 3, 4, 5 ], [ -5, -4, 3, 4, 5 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xl3 - l4;[127X[104X
+    [4X[28X[ [ 1, 2 ], [ -3, -4 ], [ 0, 0 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xl1 - [];[127X[104X
+    [4X[28X[ 1,, 3, 4 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X21.14 [33X[0;0YMultiplicative Arithmetic for Lists[133X[101X
+  
+  [33X[0;0YIn  this general context, we define the results of multiplicative operations
+  only  in  the  following situations. For unary operations (one and inverse),
+  the   unique   argument   must  be  in  [2XIsMultiplicativeGeneralizedRowVector[102X
+  ([14X21.12-2[114X); for binary operations (multiplication and division), at least one
+  argument  must be in [2XIsMultiplicativeGeneralizedRowVector[102X ([14X21.12-2[114X), and the
+  other  either  not  a  list  or also in [2XIsMultiplicativeGeneralizedRowVector[102X
+  ([14X21.12-2[114X).[133X
+  
+  [33X[0;0Y(For  non-list  [5XGAP[105X objects, defining the results of unary operations is not
+  an   issue   here,   and  if  at  least  one  argument  is  a  list  not  in
+  [2XIsMultiplicativeGeneralizedRowVector[102X  ([14X21.12-2[114X),  it  shall  be left to this
+  argument whether the result in question is defined and what it is.)[133X
+  
+  
+  [1X21.14-1 [33X[0;0YOne for lists[133X[101X
+  
+  [33X[0;0YThe     one    (see [2XOne[102X    ([14X31.10-2[114X))    of    a    dense    list    [3Xx[103X    in
+  [2XIsMultiplicativeGeneralizedRowVector[102X   ([14X21.12-2[114X)   such   that  [3Xx[103X  has  even
+  multiplicative  nesting depth and has the same length as each of its rows is
+  defined  as  the  usual identity matrix on the outer two levels, that is, an
+  identity matrix of the same dimensions, with diagonal entries [10XOne( [3Xx[103X[10X[1][1] )[110X
+  and off-diagonal entries [10XZero( [3Xx[103X[10X[1][1] )[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XOne( [ [ 1, 2 ], [ 3, 4 ] ] );[127X[104X
+    [4X[28X[ [ 1, 0 ], [ 0, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27XOne( [ [ [ [ 1 ] ], [ [ 2 ] ] ], [ [ [ 3 ] ], [ [ 4 ] ] ] ] );[127X[104X
+    [4X[28X[ [ [ [ 1 ] ], [ [ 0 ] ] ], [ [ [ 0 ] ], [ [ 1 ] ] ] ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X21.14-2 [33X[0;0YInverse for lists[133X[101X
+  
+  [33X[0;0YThe  inverse  (see [2XInverse[102X  ([14X31.10-8[114X))  of  an  invertible square table [3Xx[103X in
+  [2XIsMultiplicativeGeneralizedRowVector[102X ([14X21.12-2[114X) whose entries lie in a common
+  field is defined as the usual inverse [22Xy[122X, i.e., a square matrix over the same
+  field such that [22X[3Xx[103X y[122X and [22Xy [3Xx[103X[122X is equal to [10XOne( [3Xx[103X[10X )[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XInverse( [ [ 1, 2 ], [ 3, 4 ] ] );[127X[104X
+    [4X[28X[ [ -2, 1 ], [ 3/2, -1/2 ] ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X21.14-3 [33X[0;0YMultiplication of lists[133X[101X
+  
+  [33X[0;0YThere  are  three  possible  computations  that  might  be  triggered  by  a
+  multiplication  involving  a  list  in  [2XIsMultiplicativeGeneralizedRowVector[102X
+  ([14X21.12-2[114X). Namely, [22Xx * y[122X might be[133X
+  
+  [8X(I)[108X
+        [33X[0;6Ythe  inner  product [22Xx[1] * y[1] + x[2] * y[2] + ⋯ + x[n] * y[n][122X, where
+        summands are omitted for which the entry in [22Xx[122X or [22Xy[122X is unbound (if this
+        leaves no summand then the multiplication is an error), or[133X
+  
+  [8X(L)[108X
+        [33X[0;6Ythe  left scalar multiple, i.e., a list whose entry at position [22Xi[122X is [22Xx
+        * y[i][122X if [22Xy[122X is bound at position [22Xi[122X, and is unbound if not, or[133X
+  
+  [8X(R)[108X
+        [33X[0;6Ythe  right  scalar multiple, i.e., a list whose entry at position [22Xi[122X is
+        [22Xx[i] * y[122X if [22Xx[122X is bound at position [22Xi[122X, and is unbound if not.[133X
+  
+  [33X[0;0YOur  aim  is  to  generalize  the basic arithmetic of simple row vectors and
+  matrices, so we first summarize the situations that shall be covered.[133X
+  
+            │ scl   vec   mat   
+        ────┼────   ───   ───  
+        scl │       (L)   (L)   
+        vec │ (R)   (I)   (I)   
+        mat │ (R)   (R)   (R)   
+  
+  [33X[0;0YThis  means  for  example  that  the product of a scalar (scl) with a vector
+  (vec)  or  a  matrix  (mat)  is computed according to (L). Note that this is
+  asymmetric.[133X
+  
+  [33X[0;0YNow we can state the general multiplication rules.[133X
+  
+  [33X[0;0YIf exactly one argument is in [2XIsMultiplicativeGeneralizedRowVector[102X ([14X21.12-2[114X)
+  then  we  regard  the  other  argument  (which  is then neither a list nor a
+  domain) as a scalar, and specify result (L) or (R), depending on ordering.[133X
+  
+  [33X[0;0YIn     the     remaining     cases,     both     [22Xx[122X     and    [22Xy[122X    are    in
+  [2XIsMultiplicativeGeneralizedRowVector[102X   ([14X21.12-2[114X),  and  we  distinguish  the
+  possibilities  by  their multiplicative nesting depths. An argument with [13Xodd[113X
+  multiplicative  nesting  depth is regarded as a vector, and an argument with
+  [13Xeven[113X multiplicative nesting depth is regarded as a scalar or a matrix.[133X
+  
+  [33X[0;0YSo  if  both  arguments  have  odd  multiplicative nesting depth, we specify
+  result (I).[133X
+  
+  [33X[0;0YIf  exactly  one  argument  has odd nesting depth, the other is treated as a
+  scalar  if  it  has  lower  multiplicative  nesting  depth,  and as a matrix
+  otherwise.  In  the  former case, we specify result (L) or (R), depending on
+  ordering;  in  the  latter  case, we specify result (L) or (I), depending on
+  ordering.[133X
+  
+  [33X[0;0YWe are left with the case that each argument has even multiplicative nesting
+  depth.  If  the  two  depths are equal, we treat the computation as a matrix
+  product,  and specify result (R). Otherwise, we treat the less deeply nested
+  argument  as  a  scalar and the other as a matrix, and specify result (L) or
+  (R), depending on ordering.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X[ (), (2,3), (1,2), (1,2,3), (1,3,2), (1,3) ] * (1,4);[127X[104X
+    [4X[28X[ (1,4), (1,4)(2,3), (1,2,4), (1,2,3,4), (1,3,2,4), (1,3,4) ][128X[104X
+    [4X[25Xgap>[125X [27X[ 1, 2, , 4 ] * 2;[127X[104X
+    [4X[28X[ 2, 4,, 8 ][128X[104X
+    [4X[25Xgap>[125X [27X[ 1, 2, 3 ] * [ 1, 3, 5, 7 ];[127X[104X
+    [4X[28X22[128X[104X
+    [4X[25Xgap>[125X [27Xm:= [ [ 1, 2 ], 3 ];;  m * m;[127X[104X
+    [4X[28X[ [ 7, 8 ], [ [ 3, 6 ], 9 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xm * m = [ m[1] * m, m[2] * m ];[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xn:= [ 1, [ 2, 3 ] ];;  n * n;[127X[104X
+    [4X[28X14[128X[104X
+    [4X[25Xgap>[125X [27Xn * n = n[1] * n[1] + n[2] * n[2];[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X21.14-4 [33X[0;0YDivision of lists[133X[101X
+  
+  [33X[0;0YFor    two    [5XGAP[105X    objects    [22Xx[122X    and    [22Xy[122X    of    which   one   is   in
+  [2XIsMultiplicativeGeneralizedRowVector[102X  ([14X21.12-2[114X)  and  the  other  is also in
+  [2XIsMultiplicativeGeneralizedRowVector[102X  ([14X21.12-2[114X)  or  is neither a list nor a
+  domain, [22Xx / y[122X is defined as [22Xx * y^{-1}[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X[ 1, 2, 3 ] / 2;  [ 1, 2 ] / [ [ 1, 2 ], [ 3, 4 ] ];[127X[104X
+    [4X[28X[ 1/2, 1, 3/2 ][128X[104X
+    [4X[28X[ 1, 0 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X21.14-5 [33X[0;0Ymod for lists[133X[101X
+  
+  [33X[0;0YIf  [3Xx[103X  and  [3Xy[103X are in [2XIsMultiplicativeGeneralizedRowVector[102X ([14X21.12-2[114X) and have
+  the same multiplicative nesting depth (see [2XNestingDepthM[102X ([14X21.12-5[114X)), [10X[3Xx[103X[10X mod [3Xy[103X[10X[110X
+  is  defined [13Xpointwise[113X, in the sense that the result is a list whose entry at
+  position  [22Xi[122X  is  [10X[3Xx[103X[10X[i] mod [3Xy[103X[10X[i][110X if these entries are bound, is a shallow copy
+  (see [2XShallowCopy[102X  ([14X12.7-1[114X))  of  [22Xx[i][122X  or  [22Xy[i][122X if the other argument is not
+  bound  at position [22Xi[122X, and is unbound if both [22Xx[122X and [22Xy[122X are unbound at position
+  [22Xi[122X.[133X
+  
+  [33X[0;0YIf  [22Xx[122X  is  in  [2XIsMultiplicativeGeneralizedRowVector[102X  ([14X21.12-2[114X)  and  [22Xy[122X is in
+  [2XIsMultiplicativeGeneralizedRowVector[102X  ([14X21.12-2[114X) and has lower multiplicative
+  nesting  depth  or  is  neither a list nor a domain, [10X[3Xx[103X[10X mod [3Xy[103X[10X[110X is defined as a
+  list  whose  entry  at position [22Xi[122X is [10X[3Xx[103X[10X[i] mod [3Xy[103X[10X[110X if [3Xx[103X is bound at position [22Xi[122X,
+  and  is unbound if not. The equivalent holds in the reversed case, where the
+  order of the arguments is kept.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X4711 mod [ 2, 3,, 5, 7 ];[127X[104X
+    [4X[28X[ 1, 1,, 1, 0 ][128X[104X
+    [4X[25Xgap>[125X [27X[ 2, 3, 4, 5, 6 ] mod 3;[127X[104X
+    [4X[28X[ 2, 0, 1, 2, 0 ][128X[104X
+    [4X[25Xgap>[125X [27X[ 10, 12, 14, 16 ] mod [ 3, 5, 7 ];[127X[104X
+    [4X[28X[ 1, 2, 0, 16 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X21.14-6 [33X[0;0YLeft quotients of lists[133X[101X
+  
+  [33X[0;0YFor    two    [5XGAP[105X    objects    [22Xx[122X    and    [22Xy[122X    of    which   one   is   in
+  [2XIsMultiplicativeGeneralizedRowVector[102X  ([14X21.12-2[114X)  and  the  other  is also in
+  [2XIsMultiplicativeGeneralizedRowVector[102X  ([14X21.12-2[114X)  or  is neither a list nor a
+  domain, [10XLeftQuotient( [3Xx[103X[10X, [3Xy[103X[10X )[110X is defined as [22Xx^{-1} * y[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLeftQuotient( [ [ 1, 2 ], [ 3, 4 ] ], [ 1, 2 ] );[127X[104X
+    [4X[28X[ 0, 1/2 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X21.15 [33X[0;0YMutability Status and List Arithmetic[133X[101X
+  
+  [33X[0;0YMany  results  of  arithmetic  operations,  when applied to lists, are again
+  lists,  and  it  is of interest whether their entries are mutable or not (if
+  applicable). Note that the mutability status of the result itself is already
+  defined  by  the general rule for any result of an arithmetic operation, not
+  only for lists (see [14X12.6[114X).[133X
+  
+  [33X[0;0YHowever,  we do [13Xnot[113X define exactly the mutability status for each element on
+  each  level of a nested list returned by an arithmetic operation. (Of course
+  it  would be possible to define this recursively, but since the methods used
+  are  in general not recursive, in particular for efficient multiplication of
+  compressed  matrices,  such  a general definition would be a burden in these
+  cases.)  Instead  we  consider,  for  a  list  [22Xx[122X  in  [2XIsGeneralizedRowVector[102X
+  ([14X21.12-1[114X),  the  sequence  [22Xx  = x_1, x_2, ... x_n[122X where [22Xx_{i+1}[122X is the first
+  bound  entry in [22Xx_i[122X if exists (that is, if [22Xx_i[122X is a nonempty list), and [22Xn[122X is
+  the  largest  [22Xi[122X  such that [22Xx_i[122X lies in [2XIsGeneralizedRowVector[102X ([14X21.12-1[114X). The
+  [13Ximmutability  level[113X  of  [22Xx[122X  is  defined  as  infinity if [22Xx[122X is immutable, and
+  otherwise  the number of [22Xx_i[122X which are immutable. (So the immutability level
+  of a mutable empty list is [22X0[122X.)[133X
+  
+  [33X[0;0YThus  a  fully mutable matrix has immutability level [22X0[122X, and a mutable matrix
+  with  immutable  first  row  has  immutability  level  [22X1[122X (independent of the
+  mutability of other rows).[133X
+  
+  [33X[0;0YThe  immutability  level  of  the  result  of  any  of the binary operations
+  discussed  here  is the minimum of the immutability levels of the arguments,
+  provided that objects of the required mutability status exist in [5XGAP[105X.[133X
+  
+  [33X[0;0YMoreover,  the results have a [21Xhomogeneous[121X mutability status, that is, if the
+  first bound entry at nesting depth [22Xi[122X is immutable (mutable) then all entries
+  at  nesting  depth [22Xi[122X are immutable (mutable, provided that a mutable version
+  of this entry exists in [5XGAP[105X).[133X
+  
+  [33X[0;0YThus  the  sum  of  two  mutable  matrices whose first rows are mutable is a
+  matrix  all of whose rows are mutable, and the product of two matrices whose
+  first  rows  are  immutable  is  a  matrix  all of whose rows are immutable,
+  independent of the mutability status of the other rows of the arguments.[133X
+  
+  [33X[0;0YFor   example,  the  sum  of  a  matrix  (mutable  or  immutable,  i.e.,  of
+  immutability  level  one  of  [22X0[122X,  [22X1[122X,  or  [22X2[122X) and a mutable row vector (i.e.,
+  immutability  level [22X0[122X) is a fully mutable matrix. The product of two mutable
+  row  vectors  of  integers  is  an  integer,  and since [5XGAP[105X does not support
+  mutable integers, the result is immutable.[133X
+  
+  [33X[0;0YFor  unary  arithmetic  operations, there are three operations available, an
+  attribute  that returns an immutable result ([2XZero[102X ([14X31.10-3[114X), [2XAdditiveInverse[102X
+  ([14X31.10-9[114X),  [2XOne[102X  ([14X31.10-2[114X),  [2XInverse[102X ([14X31.10-8[114X)), an operation that returns a
+  result that is mutable ([2XZeroOp[102X ([14X31.10-3[114X), [2XAdditiveInverseOp[102X ([14X31.10-9[114X), [2XOneOp[102X
+  ([14X31.10-2[114X),  [2XInverseOp[102X ([14X31.10-8[114X)), and an operation whose result has the same
+  immutability   level   as   the   argument   ([2XZeroSameMutability[102X  ([14X31.10-3[114X),
+  [2XAdditiveInverseSameMutability[102X    ([14X31.10-9[114X),   [2XOneSameMutability[102X   ([14X31.10-2[114X),
+  [2XInverseSameMutability[102X  ([14X31.10-8[114X)). The last kind of operations is equivalent
+  to the corresponding infix operations [10X0 * [3Xlist[103X[10X[110X, [10X- [3Xlist[103X[10X[110X, [10X[3Xlist[103X[10X^0[110X, and [10X[3Xlist[103X[10X^-1[110X.
+  (This holds not only for lists, see [14X12.6[114X.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsMutable( l1 );  IsMutable( 2 * Immutable( [ 1, 2, 3 ] ) );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsMutable( l2 );  IsMutable( l3 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAn example motivating the mutability rule is the use of syntactic constructs
+  such  as  [10X[3Xobj[103X[10X  *  [3Xlist[103X[10X[110X  and [10X- [3Xlist[103X[10X[110X as an elegant and efficient way to create
+  mutable  lists  needed  for  further  manipulations  from  mutable lists. In
+  particular one can construct a mutable zero vector of length [22Xn[122X by [10X0 * [ 1 ..
+  [110X[22Xn[122X[10X ][110X. The latter can be done also using [2XListWithIdenticalEntries[102X ([14X21.15-1[114X).[133X
+  
+  [1X21.15-1 ListWithIdenticalEntries[101X
+  
+  [33X[1;0Y[29X[2XListWithIdenticalEntries[102X( [3Xn[103X, [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0Yis  a  list  [3Xlist[103X  of length [3Xn[103X that has the object [3Xobj[103X stored at each of the
+  positions  from  [10X1[110X  to  [3Xn[103X.  Note  that  all elements of [3Xlists[103X are identical,
+  see [14X21.6[114X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XListWithIdenticalEntries( 10, 0 );[127X[104X
+    [4X[28X[ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X21.16 [33X[0;0YFinding Positions in Lists[133X[101X
+  
+  [1X21.16-1 Position[101X
+  
+  [33X[1;0Y[29X[2XPosition[102X( [3Xlist[103X, [3Xobj[103X[, [3Xfrom[103X] ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the position of the first occurrence [3Xobj[103X in [3Xlist[103X, or [9Xfail[109X if [3Xobj[103X is
+  not  contained  in  [3Xlist[103X.  If a starting index [3Xfrom[103X is given, it returns the
+  position of the first occurrence starting the search [13Xafter[113X position [3Xfrom[103X.[133X
+  
+  [33X[0;0YEach call to the two argument version is translated into a call of the three
+  argument  version,  with third argument the integer zero [10X0[110X. (Methods for the
+  two argument version must be installed as methods for the version with three
+  arguments, the third being described by [10XIsZeroCyc[110X.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPosition( [ 2, 2, 1, 3 ], 1 );[127X[104X
+    [4X[28X3[128X[104X
+    [4X[25Xgap>[125X [27XPosition( [ 2, 1, 1, 3 ], 1 );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XPosition( [ 2, 1, 1, 3 ], 1, 2 );[127X[104X
+    [4X[28X3[128X[104X
+    [4X[25Xgap>[125X [27XPosition( [ 2, 1, 1, 3 ], 1, 3 );[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [1X21.16-2 Positions[101X
+  
+  [33X[1;0Y[29X[2XPositions[102X( [3Xlist[103X, [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the set of positions of [13Xall[113X occurrences of [3Xobj[103X in [3Xlist[103X.[133X
+  
+  [33X[0;0YDevelopers  who  wish  to  adapt  this for custom list types need to install
+  suitable methods for the operation [10XPositionsOp[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPositions([1,2,1,2,3,2,2],2);[127X[104X
+    [4X[28X[ 2, 4, 6, 7 ][128X[104X
+    [4X[25Xgap>[125X [27XPositions([1,2,1,2,3,2,2],4);[127X[104X
+    [4X[28X[  ][128X[104X
+  [4X[32X[104X
+  
+  [1X21.16-3 PositionCanonical[101X
+  
+  [33X[1;0Y[29X[2XPositionCanonical[102X( [3Xlist[103X, [3Xobj[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  position  of  the  canonical  associate  of  [3Xobj[103X  in [3Xlist[103X. The
+  definition  of  this  associate  depends on [3Xlist[103X. For internally represented
+  lists  it  is  defined  as  the  element  itself (and [2XPositionCanonical[102X thus
+  defaults  to  [2XPosition[102X  ([14X21.16-1[114X),  but  for example for certain enumerators
+  (see [14X21.23[114X) other canonical associates can be defined.[133X
+  
+  [33X[0;0YFor  example [2XRightTransversal[102X ([14X39.8-1[114X) defines the canonical associate to be
+  the  element  in  the transversal defining the same coset of a subgroup in a
+  group.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,2,3,4),(1,2));;u:=Subgroup(g,[(1,2)(3,4),(1,3)(2,4)]);;[127X[104X
+    [4X[25Xgap>[125X [27Xrt:=RightTransversal(g,u);;AsList(rt);[127X[104X
+    [4X[28X[ (), (3,4), (2,3), (2,3,4), (2,4,3), (2,4) ][128X[104X
+    [4X[25Xgap>[125X [27XPosition(rt,(1,2));[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27XPositionCanonical(rt,(1,2));[127X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+  
+  [1X21.16-4 PositionNthOccurrence[101X
+  
+  [33X[1;0Y[29X[2XPositionNthOccurrence[102X( [3Xlist[103X, [3Xobj[103X, [3Xn[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the position of the [3Xn[103X-th occurrence of [3Xobj[103X in [3Xlist[103X and returns [9Xfail[109X
+  if [3Xobj[103X does not occur [3Xn[103X times.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPositionNthOccurrence([1,2,3,2,4,2,1],1,1);[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XPositionNthOccurrence([1,2,3,2,4,2,1],1,2);[127X[104X
+    [4X[28X7[128X[104X
+    [4X[25Xgap>[125X [27XPositionNthOccurrence([1,2,3,2,4,2,1],2,3);[127X[104X
+    [4X[28X6[128X[104X
+    [4X[25Xgap>[125X [27XPositionNthOccurrence([1,2,3,2,4,2,1],2,4);[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [1X21.16-5 PositionSorted[101X
+  
+  [33X[1;0Y[29X[2XPositionSorted[102X( [3Xlist[103X, [3Xelm[103X[, [3Xfunc[103X] ) [32X function[133X
+  
+  [33X[0;0YCalled  with  two  arguments,  [2XPositionSorted[102X  returns  the  position of the
+  element [3Xelm[103X in the sorted list [3Xlist[103X.[133X
+  
+  [33X[0;0YCalled  with  three  arguments,  [2XPositionSorted[102X  returns the position of the
+  element  [3Xelm[103X  in  the  list [3Xlist[103X, which must be sorted with respect to [3Xfunc[103X.
+  [3Xfunc[103X  must  be  a  function  of two arguments that returns [9Xtrue[109X if the first
+  argument is less than the second argument, and [9Xfalse[109X otherwise.[133X
+  
+  [33X[0;0Y[2XPositionSorted[102X  returns  [3Xpos[103X  such that [22X[3Xlist[103X[[3Xpos[103X-1] < [3Xelm[103X ≤ [3Xlist[103X[[3Xpos[103X][122X holds.
+  That  means,  if  [3Xelm[103X appears once in [3Xlist[103X, its position is returned. If [3Xelm[103X
+  appears  several  times  in  [3Xlist[103X,  the  position of the first occurrence is
+  returned.  If  [3Xelm[103X  is  not  an element of [3Xlist[103X, the index where [3Xelm[103X must be
+  inserted to keep the list sorted is returned.[133X
+  
+  [33X[0;0Y[2XPositionSorted[102X uses binary search, whereas [2XPosition[102X ([14X21.16-1[114X) can in general
+  use  only  linear  search,  see  the  remark  at the beginning of [14X21.19[114X. For
+  sorting   lists,   see [14X21.18[114X,   for   testing  whether  a  list  is  sorted,
+  see [2XIsSortedList[102X ([14X21.17-3[114X) and [2XIsSSortedList[102X ([14X21.17-4[114X).[133X
+  
+  [33X[0;0YDevelopers  who  wish  to  adapt  this for custom list types need to install
+  suitable methods for the operation [10XPositionSortedOp[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPositionSorted( [1,4,5,5,6,7], 0 );[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XPositionSorted( [1,4,5,5,6,7], 2 );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XPositionSorted( [1,4,5,5,6,7], 4 );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XPositionSorted( [1,4,5,5,6,7], 5 );[127X[104X
+    [4X[28X3[128X[104X
+    [4X[25Xgap>[125X [27XPositionSorted( [1,4,5,5,6,7], 8 );[127X[104X
+    [4X[28X7[128X[104X
+  [4X[32X[104X
+  
+  [1X21.16-6 PositionSortedBy[101X
+  
+  [33X[1;0Y[29X[2XPositionSortedBy[102X( [3Xlist[103X, [3Xval[103X, [3Xfunc[103X ) [32X function[133X
+  
+  [33X[0;0YThis   function   returns   the   same  value  that  would  be  returned  by
+  [10XPositionSorted(List(list,  func),  val)[110X, but computes it in a more efficient
+  way.[133X
+  
+  [33X[0;0YTo  be  more  precise, [3Xfunc[103X must be a function on one argument which returns
+  values  that  can  be  compared  to  [3Xval[103X,  and [3Xlist[103X must be a list for which
+  [10Xfunc(list[i])  <= func(list[i+1])[110X holds for all relevant [3Xi[103X. This property is
+  not verified, and if the input violates it, then the result is undefined.[133X
+  
+  [33X[0;0Y[2XPositionSortedBy[102X   returns   [3Xpos[103X   such   that  [22X[3Xfunc[103X([3Xlist[103X[[3Xpos[103X-1])  <  [3Xval[103X  ≤
+  [3Xfunc[103X([3Xlist[103X[[3Xpos[103X])[122X  holds.  That  means,  if there are elements [10Xelm[110X in [3Xlist[103X for
+  which  [22X[3Xfunc[103X(elm) = [3Xval[103X[122X holds, then the position of the first such element is
+  returned.  If  no  element of [3Xlist[103X satisfies this condition, then the lowest
+  index  where  an  element [3Xelm[103X satisfying [22X[3Xfunc[103X(elm) = [3Xval[103X[122X must be inserted to
+  preserve the property [10Xfunc(list[i]) <= func(list[i+1])[110X is returned.[133X
+  
+  [33X[0;0Y[2XPositionSortedBy[102X  uses binary search. Each [10Xfunc(list[i])[110X is computed at most
+  once.[133X
+  
+  [33X[0;0YDevelopers  who  wish  to  adapt  this for custom list types need to install
+  suitable methods for the operation [10XPositionSortedByOp[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPositionSortedBy( [ "", "ab", ], -1, Length );[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XPositionSortedBy( [ "", "ab", ], 0, Length );[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XPositionSortedBy( [ "", "ab", ], 1, Length );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XPositionSortedBy( [ "", "ab", ], 2, Length );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XPositionSortedBy( [ "", "ab", ], 3, Length );[127X[104X
+    [4X[28X3[128X[104X
+  [4X[32X[104X
+  
+  [1X21.16-7 PositionSet[101X
+  
+  [33X[1;0Y[29X[2XPositionSet[102X( [3Xlist[103X, [3Xobj[103X[, [3Xfunc[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XPositionSet[102X  is  a  slight  variation  of [2XPositionSorted[102X ([14X21.16-5[114X). The only
+  difference  to  [2XPositionSorted[102X ([14X21.16-5[114X) is that [2XPositionSet[102X returns [9Xfail[109X if
+  [3Xobj[103X is not in [3Xlist[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPositionSet( [1,4,5,5,6,7], 0 );[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27XPositionSet( [1,4,5,5,6,7], 2 );[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27XPositionSet( [1,4,5,5,6,7], 4 );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XPositionSet( [1,4,5,5,6,7], 5 );[127X[104X
+    [4X[28X3[128X[104X
+    [4X[25Xgap>[125X [27XPositionSet( [1,4,5,5,6,7], 8 );[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [1X21.16-8 PositionMaximum[101X
+  
+  [33X[1;0Y[29X[2XPositionMaximum[102X( [3Xlist[103X[, [3Xfunc[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XPositionMinimum[102X( [3Xlist[103X[, [3Xfunc[103X] ) [32X function[133X
+  
+  [33X[0;0Yreturns  the  position  of  maximum  (with [2XPositionMaximum[102X) or minimum (with
+  [2XPositionMinimum[102X)  entry  in  the  list  [3Xlist[103X.  If  a second argument [3Xfunc[103X is
+  passed,  then  return  instead the position of the largest/smallest entry in
+  [10XList(  [3Xlist[103X[10X  ,  [3Xfunc[103X[10X  )[110X.  If  several  entries  of the list are equal to the
+  maximum/minimum, the first such position is returned.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPositionMaximum( [2,4,-6,2,4] );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XPositionMaximum( [2,4,-6,2,4], x -> -x);[127X[104X
+    [4X[28X3[128X[104X
+    [4X[25Xgap>[125X [27XPositionMinimum( [2,4,-6,2,4] );[127X[104X
+    [4X[28X3[128X[104X
+    [4X[25Xgap>[125X [27XPositionMinimum( [2,4,-6,2,4], x -> -x);[127X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[2XMaximum[102X  ([14X21.20-12[114X)  and [2XMinimum[102X ([14X21.20-13[114X) allow you to find the maximum or
+  minimum element of a list directly.[133X
+  
+  [1X21.16-9 PositionProperty[101X
+  
+  [33X[1;0Y[29X[2XPositionProperty[102X( [3Xlist[103X, [3Xfunc[103X[, [3Xfrom[103X] ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  position  of  the  first  entry in the list [3Xlist[103X for which the
+  property tester function [3Xfunc[103X returns [9Xtrue[109X, or [9Xfail[109X if no such entry exists.
+  If  a  starting  index  [3Xfrom[103X  is given, it returns the position of the first
+  entry satisfying [3Xfunc[103X, starting the search [13Xafter[113X position [3Xfrom[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPositionProperty( [10^7..10^8], IsPrime );[127X[104X
+    [4X[28X20[128X[104X
+    [4X[25Xgap>[125X [27XPositionProperty( [10^5..10^6],[127X[104X
+    [4X[25X>[125X [27X       n -> not IsPrime(n) and IsPrimePowerInt(n) );[127X[104X
+    [4X[28X490[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[2XFirst[102X  ([14X21.20-21[114X)  allows  you  to  extract the first element of a list that
+  satisfies a certain property.[133X
+  
+  [1X21.16-10 PositionsProperty[101X
+  
+  [33X[1;0Y[29X[2XPositionsProperty[102X( [3Xlist[103X, [3Xfunc[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the set of all those positions in the list [3Xlist[103X which are bound and
+  for which the property tester function [3Xfunc[103X returns [9Xtrue[109X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:= [ -5 .. 5 ];;[127X[104X
+    [4X[25Xgap>[125X [27XPositionsProperty( l, IsPosInt );[127X[104X
+    [4X[28X[ 7, 8, 9, 10, 11 ][128X[104X
+    [4X[25Xgap>[125X [27XPositionsProperty( l, IsPrimeInt );[127X[104X
+    [4X[28X[ 1, 3, 4, 8, 9, 11 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[2XPositionProperty[102X  ([14X21.16-9[114X)  allows you to extract the position of the first
+  element in a list that satisfies a certain property.[133X
+  
+  [1X21.16-11 PositionBound[101X
+  
+  [33X[1;0Y[29X[2XPositionBound[102X( [3Xlist[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  first  bound  position of the list [3Xlist[103X. For the empty list it
+  returns [9Xfail[109X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPositionBound([1,2,3]);[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XPositionBound([,1,2,3]);[127X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+  
+  [1X21.16-12 PositionsBound[101X
+  
+  [33X[1;0Y[29X[2XPositionsBound[102X( [3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the set of all bound positions in the list [3Xlist[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPositionsBound([1,2,3]);[127X[104X
+    [4X[28X[ 1 .. 3 ][128X[104X
+    [4X[25Xgap>[125X [27XPositionsBound([,1,,3]);[127X[104X
+    [4X[28X[ 2, 4 ][128X[104X
+    [4X[25Xgap>[125X [27XPositionsBound([]);[127X[104X
+    [4X[28X[][128X[104X
+  [4X[32X[104X
+  
+  [1X21.16-13 PositionNot[101X
+  
+  [33X[1;0Y[29X[2XPositionNot[102X( [3Xlist[103X, [3Xval[103X[, [3Xfrom[103X] ) [32X operation[133X
+  
+  [33X[0;0YFor  a  list  [3Xlist[103X  and  an  object  [3Xval[103X,  [2XPositionNot[102X  returns the smallest
+  nonnegative  integer  [22Xn[122X  such that [22X[3Xlist[103X[n][122X is either unbound or not equal to
+  [3Xval[103X.  If  a starting index [3Xfrom[103X is given, it returns the first position with
+  this property starting the search [13Xafter[113X position [3Xfrom[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:= [ 1, 1, 2, 3, 2 ];;  PositionNot( l, 1 );[127X[104X
+    [4X[28X3[128X[104X
+    [4X[25Xgap>[125X [27XPositionNot( l, 1, 4 );  PositionNot( l, 2, 4 );[127X[104X
+    [4X[28X5[128X[104X
+    [4X[28X6[128X[104X
+  [4X[32X[104X
+  
+  [1X21.16-14 PositionNonZero[101X
+  
+  [33X[1;0Y[29X[2XPositionNonZero[102X( [3Xvec[103X[, [3Xfrom[103X] ) [32X operation[133X
+  
+  [33X[0;0YFor  a  row  vector  [3Xvec[103X,  [2XPositionNonZero[102X returns the position of the first
+  non-zero element of [3Xvec[103X, or [10XLength([110X [3Xvec[103X [10X)+1[110X if all entries of [3Xvec[103X are zero.[133X
+  
+  [33X[0;0YIf  a  starting  index  [3Xfrom[103X  is given, it returns the position of the first
+  occurrence starting the search [13Xafter[113X position [3Xfrom[103X.[133X
+  
+  [33X[0;0Y[2XPositionNonZero[102X implements a special case of [2XPositionNot[102X ([14X21.16-13[114X). Namely,
+  the  element  to  be  avoided  is the zero element, and the list must be (at
+  least)  homogeneous  because  otherwise the zero element cannot be specified
+  implicitly.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPositionNonZero( [ 1, 1, 2, 3, 2 ] );[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XPositionNonZero( [ 2, 3, 4, 5 ] * Z(2) );[127X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+  
+  [1X21.16-15 PositionSublist[101X
+  
+  [33X[1;0Y[29X[2XPositionSublist[102X( [3Xlist[103X, [3Xsub[103X[, [3Xfrom[103X] ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the smallest index in the list [3Xlist[103X at which a sublist equal to [3Xsub[103X
+  starts.  If  [3Xsub[103X does not occur the operation returns [9Xfail[109X. The version with
+  given [3Xfrom[103X starts searching [13Xafter[113X position [3Xfrom[103X.[133X
+  
+  [33X[0;0YTo  determine  whether  [3Xsub[103X  matches  [3Xlist[103X  at  a  particular  position, use
+  [2XIsMatchingSublist[102X ([14X21.17-1[114X) instead.[133X
+  
+  
+  [1X21.17 [33X[0;0YProperties and Attributes for Lists[133X[101X
+  
+  [33X[0;0YA  list  that  contains mutable objects (like lists or records) [13Xcannot[113X store
+  attribute  values  that depend on the values of its entries, such as whether
+  it  is  homogeneous,  sorted,  or  strictly sorted, as changes in any of its
+  entries could change such property values, like the following example shows.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:=[[1],[2]];[127X[104X
+    [4X[28X[ [ 1 ], [ 2 ] ][128X[104X
+    [4X[25Xgap>[125X [27XIsSSortedList(l);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xl[1][1]:=3;[127X[104X
+    [4X[28X3[128X[104X
+    [4X[25Xgap>[125X [27XIsSSortedList(l);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YFor  such  lists  these  property values must be computed anew each time the
+  property is asked for. For example, if [3Xlist[103X is a list of mutable row vectors
+  then  the call of [2XPosition[102X ([14X21.16-1[114X) with [3Xlist[103X as first argument cannot take
+  advantage  of  the fact that [3Xlist[103X is in fact sorted. One solution is to call
+  explicitly [2XPositionSorted[102X ([14X21.16-5[114X) in such a situation, another solution is
+  to replace [3Xlist[103X by an immutable copy using [2XImmutable[102X ([14X12.6-3[114X).[133X
+  
+  [1X21.17-1 IsMatchingSublist[101X
+  
+  [33X[1;0Y[29X[2XIsMatchingSublist[102X( [3Xlist[103X, [3Xsub[103X[, [3Xat[103X] ) [32X operation[133X
+  
+  [33X[0;0Yreturns  [9Xtrue[109X  if [3Xsub[103X matches a sublist of [3Xlist[103X from position [10X1[110X (or position
+  [3Xat[103X,  in  the  case of three arguments), or [9Xfalse[109X, otherwise. If [3Xsub[103X is empty
+  [9Xtrue[109X is returned. If [3Xlist[103X is empty but [3Xsub[103X is non-empty [9Xfalse[109X is returned.[133X
+  
+  [33X[0;0YIf   you   actually   want  to  know  whether  there  is  an  [3Xat[103X  for  which
+  [10XIsMatchingSublist(  [3Xlist[103X[10X,  [3Xsub[103X[10X,  [3Xat[103X[10X  )[110X  is  true,  use  a  construction like
+  [10XPositionSublist(   [3Xlist[103X[10X,   [3Xsub[103X[10X   )  <>  fail[110X  instead  (see  [2XPositionSublist[102X
+  ([14X21.16-15[114X)); it's more efficient.[133X
+  
+  [1X21.17-2 IsDuplicateFree[101X
+  
+  [33X[1;0Y[29X[2XIsDuplicateFree[102X( [3Xobj[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsDuplicateFreeList[102X( [3Xobj[103X ) [32X filter[133X
+  
+  [33X[0;0Y[2XIsDuplicateFree[102X  returns [9Xtrue[109X if [3Xobj[103X is both a list or collection, and it is
+  duplicate free; otherwise it returns [9Xfalse[109X. [2XIsDuplicateFreeList[102X is a synonym
+  for [10XIsDuplicateFree and IsList[110X.[133X
+  
+  [33X[0;0YA  list  is [13Xduplicate free[113X if it is dense and does not contain equal entries
+  in different positions. Every domain (see [14X12.4[114X) is duplicate free.[133X
+  
+  [33X[0;0YNote that [5XGAP[105X cannot compare arbitrary objects (by equality). This can cause
+  that  [2XIsDuplicateFree[102X  runs  into  an  error,  if  [3Xobj[103X  is  a list with some
+  non-comparable entries.[133X
+  
+  [1X21.17-3 IsSortedList[101X
+  
+  [33X[1;0Y[29X[2XIsSortedList[102X( [3Xobj[103X ) [32X property[133X
+  
+  [33X[0;0Yreturns [9Xtrue[109X if [3Xobj[103X is a list and it is sorted, and [9Xfalse[109X otherwise.[133X
+  
+  [33X[0;0YA  list  [3Xlist[103X  is  [13Xsorted[113X  if  it  is  dense  (see [2XIsDenseList[102X ([14X21.1-2[114X)) and
+  satisfies  the relation [22X[3Xlist[103X[i] ≤ [3Xlist[103X[j][122X whenever [22Xi < j[122X. Note that a sorted
+  list  is  not  necessarily duplicate free (see [2XIsDuplicateFree[102X ([14X21.17-2[114X) and
+  [2XIsSSortedList[102X ([14X21.17-4[114X)).[133X
+  
+  [33X[0;0YMany  sorted lists are in fact homogeneous (see [2XIsHomogeneousList[102X ([14X21.1-3[114X)),
+  but also non-homogeneous lists may be sorted (see [14X31.11[114X).[133X
+  
+  [33X[0;0YIn  sorted  lists, membership test and computing of positions can be done by
+  binary search, see [14X21.19[114X.[133X
+  
+  [33X[0;0YNote  that  [5XGAP[105X  cannot  compare  (by less than) arbitrary objects. This can
+  cause  that  [2XIsSortedList[102X  runs  into  an  error, if [3Xobj[103X is a list with some
+  non-comparable entries.[133X
+  
+  [1X21.17-4 IsSSortedList[101X
+  
+  [33X[1;0Y[29X[2XIsSSortedList[102X( [3Xobj[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsSet[102X( [3Xobj[103X ) [32X property[133X
+  
+  [33X[0;0Yreturns  [9Xtrue[109X  if  [3Xobj[103X  is  a  list  and  it  is  strictly sorted, and [9Xfalse[109X
+  otherwise. [2XIsSSortedList[102X is short for [21Xis strictly sorted list[121X; [2XIsSet[102X is just
+  a synonym for [2XIsSSortedList[102X.[133X
+  
+  [33X[0;0YA  list [3Xlist[103X is [13Xstrictly sorted[113X if it is sorted (see [2XIsSortedList[102X ([14X21.17-3[114X))
+  and  satisfies the relation [22X[3Xlist[103X[i] < [3Xlist[103X[j][122X whenever [22Xi < j[122X. In particular,
+  such lists are duplicate free (see [2XIsDuplicateFree[102X ([14X21.17-2[114X)).[133X
+  
+  [33X[0;0Y(Currently  there  is  little special treatment of lists that are sorted but
+  not  strictly  sorted.  In particular, internally represented lists will [13Xnot[113X
+  store that they are sorted but not strictly sorted.)[133X
+  
+  [33X[0;0YNote  that  [5XGAP[105X  cannot  compare  (by less than) arbitrary objects. This can
+  cause  that  [2XIsSSortedList[102X  runs  into  an error, if [3Xobj[103X is a list with some
+  non-comparable entries.[133X
+  
+  [1X21.17-5 Length[101X
+  
+  [33X[1;0Y[29X[2XLength[102X( [3Xlist[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns the [13Xlength[113X of the list [3Xlist[103X, which is defined to be the index of the
+  last bound entry in [3Xlist[103X.[133X
+  
+  [1X21.17-6 ConstantTimeAccessList[101X
+  
+  [33X[1;0Y[29X[2XConstantTimeAccessList[102X( [3Xlist[103X ) [32X attribute[133X
+  
+  [33X[0;0Y[2XConstantTimeAccessList[102X   returns  an  immutable  list  containing  the  same
+  elements  as the list [3Xlist[103X (which may have holes) in the same order. If [3Xlist[103X
+  is  already  a  constant time access list, [2XConstantTimeAccessList[102X returns an
+  immutable copy of [3Xlist[103X directly. Otherwise it puts all elements and holes of
+  [3Xlist[103X into a new list and makes that list immutable.[133X
+  
+  
+  [1X21.18 [33X[0;0YSorting Lists[133X[101X
+  
+  [33X[0;0YGAP  implements  three different families of sorting algorithms. The default
+  algorithm  is  pattern-defeating  quicksort,  a  variant  of quicksort which
+  performs better on partially sorted lists and has good worst-case behaviour.
+  The  functions  which  begin [10XStable[110X are stable (equal elements keep the same
+  relative  order  in  the  sorted  list)  and  use  merge  sort. Finally, the
+  functions  which  begin  [10XShell[110X  use  the  shell sort which was GAP's default
+  search  algorithm before 4.9. [2XSortex[102X ([14X21.18-3[114X) and [2XSortingPerm[102X ([14X21.18-4[114X) are
+  also stable.[133X
+  
+  [1X21.18-1 Sort[101X
+  
+  [33X[1;0Y[29X[2XSort[102X( [3Xlist[103X[, [3Xfunc[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XSortBy[102X( [3Xlist[103X, [3Xfunc[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XStableSort[102X( [3Xlist[103X[, [3Xfunc[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XStableSortBy[102X( [3Xlist[103X[, [3Xfunc[103X] ) [32X operation[133X
+  
+  [33X[0;0Y[2XSort[102X  sorts the list [3Xlist[103X in increasing order. In the one argument form [2XSort[102X
+  uses the operator [10X<[110X to compare the elements. (If the list is not homogeneous
+  it  is the user's responsibility to ensure that [10X<[110X is defined for all element
+  pairs,  see [14X31.11[114X)  In  the two argument form [2XSort[102X uses the function [3Xfunc[103X to
+  compare  elements. [3Xfunc[103X must be a function taking two arguments that returns
+  [9Xtrue[109X if the first is regarded as strictly smaller than the second, and [9Xfalse[109X
+  otherwise.[133X
+  
+  [33X[0;0Y[2XStableSort[102X  behaves  identically  to  [2XSort[102X, except that [2XStableSort[102X will keep
+  elements  which  compare  equal  in  the same relative order, while [2XSort[102X may
+  change their relative order.[133X
+  
+  [33X[0;0Y[2XSort[102X  does  not  return  anything,  it  just  changes the argument [3Xlist[103X. Use
+  [2XShallowCopy[102X ([14X12.7-1[114X) if you want to keep [3Xlist[103X. Use [2XReversed[102X ([14X21.20-7[114X) if you
+  want to get a new list that is sorted in decreasing order.[133X
+  
+  [33X[0;0Y[2XSortBy[102X  sorts  the  list  [3Xlist[103X  into  an  order  such  that [10Xfunc(list[i]) <=
+  func(list[i+1])[110X  for  all  relevant  [3Xi[103X.  [3Xfunc[103X must thus be a function on one
+  argument  which  returns  values that can be compared. Each [10Xfunc(list[i])[110X is
+  computed  just  once  and  stored, making this more efficient than using the
+  two-argument version of [2XSort[102X in many cases.[133X
+  
+  [33X[0;0Y[2XStableSortBy[102X  behaves  the  same  as [2XSortBy[102X except that, like [2XStableSort[102X, it
+  keeps  pairs  of  values which compare equal when [10Xfunc[110X is applied to them in
+  the same relative order.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xlist := [ 5, 4, 6, 1, 7, 5 ];; Sort( list ); list;[127X[104X
+    [4X[28X[ 1, 4, 5, 5, 6, 7 ][128X[104X
+    [4X[25Xgap>[125X [27XSortBy(list, x -> x mod 3);[127X[104X
+    [4X[25Xgap>[125X [27Xlist; # Sorted by mod 3[127X[104X
+    [4X[28X[ 6, 1, 4, 7, 5, 5][128X[104X
+    [4X[25Xgap>[125X [27Xlist := [ [0,6], [1,2], [1,3], [1,5], [0,4], [3,4] ];;[127X[104X
+    [4X[25Xgap>[125X [27XSort( list, function(v,w) return v*v < w*w; end );[127X[104X
+    [4X[25Xgap>[125X [27Xlist;  # sorted according to the Euclidean distance from [0,0][127X[104X
+    [4X[28X[ [ 1, 2 ], [ 1, 3 ], [ 0, 4 ], [ 3, 4 ], [ 1, 5 ], [ 0, 6 ] ][128X[104X
+    [4X[25Xgap>[125X [27XSortBy( list, function(v) return v[1] + v[2]; end );[127X[104X
+    [4X[25Xgap>[125X [27Xlist;  # sorted according to Manhattan distance from [0,0][127X[104X
+    [4X[28X[ [ 1, 2 ], [ 1, 3 ], [ 0, 4 ], [ 1, 5 ], [ 0, 6 ], [ 3, 4 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xlist := [ [0,6], [1,3], [3,4], [1,5], [1,2], [0,4], ];;[127X[104X
+    [4X[25Xgap>[125X [27XSort( list, function(v,w) return v[1] < w[1]; end );[127X[104X
+    [4X[25Xgap>[125X [27X# note the random order of the elements with equal first component:[127X[104X
+    [4X[25Xgap>[125X [27Xlist;[127X[104X
+    [4X[28X[ [ 0, 6 ], [ 0, 4 ], [ 1, 3 ], [ 1, 5 ], [ 1, 2 ], [ 3, 4 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X21.18-2 SortParallel[101X
+  
+  [33X[1;0Y[29X[2XSortParallel[102X( [3Xlist1[103X, [3Xlist2[103X[, [3Xfunc[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XStableSortParallel[102X( [3Xlist1[103X, [3Xlist2[103X[, [3Xfunc[103X] ) [32X operation[133X
+  
+  [33X[0;0Y[2XSortParallel[102X sorts the list [3Xlist1[103X in increasing order just as [2XSort[102X ([14X21.18-1[114X)
+  does.  In  parallel it applies the same exchanges that are necessary to sort
+  [3Xlist1[103X to the list [3Xlist2[103X, which must of course have at least as many elements
+  as [3Xlist1[103X does.[133X
+  
+  [33X[0;0Y[2XStableSortParallel[102X  behaves  identically  to  [2XSortParallel[102X,  except it keeps
+  elements in [3Xlist1[103X which compare equal in the same relative order.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xlist1 := [ 5, 4, 6, 1, 7, 5 ];;[127X[104X
+    [4X[25Xgap>[125X [27Xlist2 := [ 2, 3, 5, 7, 8, 9 ];;[127X[104X
+    [4X[25Xgap>[125X [27XSortParallel( list1, list2 );[127X[104X
+    [4X[25Xgap>[125X [27Xlist1;[127X[104X
+    [4X[28X[ 1, 4, 5, 5, 6, 7 ][128X[104X
+    [4X[25Xgap>[125X [27Xlist2;[127X[104X
+    [4X[28X[ 7, 3, 2, 9, 5, 8 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote that [10X[ 7, 3, 2, 9, 5, 8 ][110X or [10X[ 7, 3, 9, 2, 5, 8 ][110X are possible results.
+  [2XStableSortParallel[102X will always return [10X[ 7, 3, 2, 9, 5, 8][110X.[133X
+  
+  [1X21.18-3 Sortex[101X
+  
+  [33X[1;0Y[29X[2XSortex[102X( [3Xlist[103X[, [3Xfunc[103X] ) [32X operation[133X
+  
+  [33X[0;0Ysorts the list [3Xlist[103X and returns a permutation that can be applied to [3Xlist[103X to
+  obtain  the sorted list. The one argument form sorts via the operator [10X<[110X, the
+  two  argument  form sorts w.r.t. the function [3Xfunc[103X. The permutation returned
+  by [2XSortex[102X will keep elements which compare equal in the same relative order.
+  (If  the  list  is not homogeneous it is the user's responsibility to ensure
+  that [10X<[110X is defined for all element pairs, see [14X31.11[114X)[133X
+  
+  [33X[0;0Y[2XPermuted[102X  ([14X21.20-17[114X)  allows  you  to  rearrange a list according to a given
+  permutation.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xlist1 := [ 5, 4, 6, 1, 7, 5 ];;[127X[104X
+    [4X[25Xgap>[125X [27Xlist2 := ShallowCopy( list1 );;[127X[104X
+    [4X[25Xgap>[125X [27Xperm := Sortex( list1 );[127X[104X
+    [4X[28X(1,3,5,6,4)[128X[104X
+    [4X[25Xgap>[125X [27Xlist1;[127X[104X
+    [4X[28X[ 1, 4, 5, 5, 6, 7 ][128X[104X
+    [4X[25Xgap>[125X [27XPermuted( list2, perm );[127X[104X
+    [4X[28X[ 1, 4, 5, 5, 6, 7 ][128X[104X
+  [4X[32X[104X
+  
+  [1X21.18-4 SortingPerm[101X
+  
+  [33X[1;0Y[29X[2XSortingPerm[102X( [3Xlist[103X ) [32X attribute[133X
+  
+  [33X[0;0Y[2XSortingPerm[102X  returns  the  same  as [2XSortex[102X ([14X21.18-3[114X) but does [13Xnot[113X change the
+  argument.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xlist1 := [ 5, 4, 6, 1, 7, 5 ];;[127X[104X
+    [4X[25Xgap>[125X [27Xlist2 := ShallowCopy( list1 );;[127X[104X
+    [4X[25Xgap>[125X [27Xperm := SortingPerm( list1 );[127X[104X
+    [4X[28X(1,3,5,6,4)[128X[104X
+    [4X[25Xgap>[125X [27Xlist1;[127X[104X
+    [4X[28X[ 5, 4, 6, 1, 7, 5 ][128X[104X
+    [4X[25Xgap>[125X [27XPermuted( list2, perm );[127X[104X
+    [4X[28X[ 1, 4, 5, 5, 6, 7 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X21.19 [33X[0;0YSorted Lists and Sets[133X[101X
+  
+  [33X[0;0YSearching  objects  in  a list works much quicker if the list is known to be
+  sorted.  Currently  [5XGAP[105X exploits the sortedness of a list automatically only
+  if  the  list  is  [13Xstrictly  sorted[113X,  which  is  indicated  by  the property
+  [2XIsSSortedList[102X ([14X21.17-4[114X).[133X
+  
+  [33X[0;0YRemember  that  a  list  of [13Xmutable[113X objects cannot store that it is strictly
+  sorted  but  has  to test it anew whenever it is asked whether it is sorted,
+  see  the  remark  in [14X21.17[114X.  Therefore  [5XGAP[105X  cannot  take  advantage  of the
+  sortedness of a list if this list has mutable entries. Moreover, if a sorted
+  list  [3Xlist[103X  with  mutable elements is used as an argument of a function that
+  [13Xexpects[113X  this  argument  to  be  sorted,  for  example [2XUniteSet[102X ([14X21.19-6[114X) or
+  [2XRemoveSet[102X ([14X21.19-5[114X), then it is checked whether [3Xlist[103X is in fact sorted; this
+  check  can  have the effect actually to slow down the computations, compared
+  to computations with sorted lists of immutable elements or computations that
+  do not involve functions that do automatically check sortedness.[133X
+  
+  [33X[0;0YStrictly  sorted  lists are used to represent [13Xsets[113X in [5XGAP[105X. More precisely, a
+  strictly  sorted  list  is called a [13Xproper set[113X in the following, in order to
+  avoid confusion with domains (see [14X12.4[114X) which also represent sets.[133X
+  
+  [33X[0;0YIn  short  proper  sets  are  represented  by sorted lists without holes and
+  duplicates  in  [5XGAP[105X.  Note that we guarantee this representation, so you may
+  make  use  of  the  fact  that a set is represented by a sorted list in your
+  functions.[133X
+  
+  [33X[0;0YIn some contexts (for example see [14X16[114X), we also want to talk about multisets.
+  A [13Xmultiset[113X is like a set, except that an element may appear several times in
+  a  multiset.  Such  multisets  are represented by sorted lists without holes
+  that may have duplicates.[133X
+  
+  [33X[0;0YThis  section  lists  only  those functions that are defined exclusively for
+  proper  sets.  Set  theoretic  functions  for  general  collections, such as
+  [2XIntersection[102X  ([14X30.5-2[114X)  and  [2XUnion[102X ([14X30.5-3[114X), are described in Chapter [14X30[114X. In
+  particular,  for  the  construction of proper sets, see [2XSSortedList[102X ([14X30.3-7[114X)
+  and   [2XAsSSortedList[102X  ([14X30.3-10[114X).  For  finding  positions  in  sorted  lists,
+  see [2XPositionSorted[102X ([14X21.16-5[114X).[133X
+  
+  [33X[0;0YThere  are  nondestructive counterparts of the functions [2XUniteSet[102X ([14X21.19-6[114X),
+  [2XIntersectSet[102X ([14X21.19-7[114X), and [2XSubtractSet[102X ([14X21.19-8[114X) available for proper sets.
+  These are [10XUnionSet[110X, [10XIntersectionSet[110X, and [2XDifference[102X ([14X30.5-4[114X). The former two
+  are  methods for the more general operations [2XUnion[102X ([14X30.5-3[114X) and [2XIntersection[102X
+  ([14X30.5-2[114X), the latter is itself an operation (see [2XDifference[102X ([14X30.5-4[114X)).[133X
+  
+  [33X[0;0YThe result of [10XIntersectionSet[110X and [10XUnionSet[110X is always a new list, that is not
+  identical to any other list. The elements of that list however are identical
+  to  the  corresponding  elements  of the first argument [3Xset[103X. If [3Xset[103X is not a
+  proper set it is not specified to which of a number of equal elements in [3Xset[103X
+  the  element in the result is identical (see [14X21.6[114X). The following functions,
+  if not explicitly stated differently, take two arguments, [3Xset[103X and [3Xobj[103X, where
+  [3Xset[103X  must  be  a  proper set, otherwise an error is signalled; If the second
+  argument  [3Xobj[103X  is  a  list  that  is  not  a proper set then [2XSet[102X ([14X30.3-7[114X) is
+  silently applied to it first.[133X
+  
+  [1X21.19-1 \in[101X
+  
+  [33X[1;0Y[29X[2X\in[102X( [3Xobj[103X, [3Xlist[103X ) [32X method[133X
+  
+  [33X[0;0YFor  a  list  [3Xlist[103X that stores that it is strictly sorted, the test with [2X\in[102X
+  whether the object [3Xobj[103X is an entry of [3Xlist[103X uses binary search. This test can
+  be entered also with the infix notation [3Xobj[103X [9Xin[109X [3Xlist[103X.[133X
+  
+  [1X21.19-2 IsEqualSet[101X
+  
+  [33X[1;0Y[29X[2XIsEqualSet[102X( [3Xlist1[103X, [3Xlist2[103X ) [32X operation[133X
+  
+  [33X[0;0Ytests  whether  [3Xlist1[103X  and  [3Xlist2[103X  are equal [13Xwhen viewed as sets[113X, that is if
+  every  element  of  [3Xlist1[103X  is  an  element  of  [3Xlist2[103X and vice versa. Either
+  argument of [2XIsEqualSet[102X may also be a list that is not a proper set, in which
+  case [2XSet[102X ([14X30.3-7[114X) is applied to it first.[133X
+  
+  [33X[0;0YIf  both  lists are proper sets then they are of course equal if and only if
+  they  are also equal as lists. Thus [10XIsEqualSet( [3Xlist1[103X[10X, [3Xlist2[103X[10X )[110X is equivalent
+  to  [10XSet(  [3Xlist1[103X[10X  ) = Set( [3Xlist2[103X[10X )[110X (see [2XSet[102X ([14X30.3-7[114X)), but the former is more
+  efficient.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsEqualSet( [2,3,5,7,11], [11,7,5,3,2] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsEqualSet( [2,3,5,7,11], [2,3,5,7,11,13] );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X21.19-3 IsSubsetSet[101X
+  
+  [33X[1;0Y[29X[2XIsSubsetSet[102X( [3Xlist1[103X, [3Xlist2[103X ) [32X operation[133X
+  
+  [33X[0;0Ytests  whether every element of [3Xlist2[103X is contained in [3Xlist1[103X. Either argument
+  of  [2XIsSubsetSet[102X  may  also be a list that is not a proper set, in which case
+  [2XSet[102X ([14X30.3-7[114X) is applied to it first.[133X
+  
+  [1X21.19-4 AddSet[101X
+  
+  [33X[1;0Y[29X[2XAddSet[102X( [3Xset[103X, [3Xobj[103X ) [32X operation[133X
+  
+  [33X[0;0Yadds  the  element [3Xobj[103X to the proper set [3Xset[103X. If [3Xobj[103X is already contained in
+  [3Xset[103X  then  [3Xset[103X  is  not  changed.  Otherwise  [3Xobj[103X is inserted at the correct
+  position such that [3Xset[103X is again a proper set afterwards.[133X
+  
+  [33X[0;0YNote that [3Xobj[103X must be in the same family as each element of [3Xset[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xs := [2,3,7,11];;[127X[104X
+    [4X[25Xgap>[125X [27XAddSet( s, 5 );  s;[127X[104X
+    [4X[28X[ 2, 3, 5, 7, 11 ][128X[104X
+    [4X[25Xgap>[125X [27XAddSet( s, 13 );  s;[127X[104X
+    [4X[28X[ 2, 3, 5, 7, 11, 13 ][128X[104X
+    [4X[25Xgap>[125X [27XAddSet( s, 3 );  s;[127X[104X
+    [4X[28X[ 2, 3, 5, 7, 11, 13 ][128X[104X
+  [4X[32X[104X
+  
+  [1X21.19-5 RemoveSet[101X
+  
+  [33X[1;0Y[29X[2XRemoveSet[102X( [3Xset[103X, [3Xobj[103X ) [32X operation[133X
+  
+  [33X[0;0Yremoves  the element [3Xobj[103X from the proper set [3Xset[103X. If [3Xobj[103X is not contained in
+  [3Xset[103X  then  [3Xset[103X is not changed. If [3Xobj[103X is an element of [3Xset[103X it is removed and
+  all the following elements in the list are moved one position forward.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xs := [ 2, 3, 4, 5, 6, 7 ];;[127X[104X
+    [4X[25Xgap>[125X [27XRemoveSet( s, 6 ); s;[127X[104X
+    [4X[28X[ 2, 3, 4, 5, 7 ][128X[104X
+    [4X[25Xgap>[125X [27XRemoveSet( s, 10 ); s;[127X[104X
+    [4X[28X[ 2, 3, 4, 5, 7 ][128X[104X
+  [4X[32X[104X
+  
+  [1X21.19-6 UniteSet[101X
+  
+  [33X[1;0Y[29X[2XUniteSet[102X( [3Xset[103X, [3Xlist[103X ) [32X operation[133X
+  
+  [33X[0;0Yunites  the  proper  set  [3Xset[103X  with  [3Xlist[103X.  This is equivalent to adding all
+  elements of [3Xlist[103X to [3Xset[103X (see [2XAddSet[102X ([14X21.19-4[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xset := [ 2, 3, 5, 7, 11 ];;[127X[104X
+    [4X[25Xgap>[125X [27XUniteSet( set, [ 4, 8, 9 ] );  set;[127X[104X
+    [4X[28X[ 2, 3, 4, 5, 7, 8, 9, 11 ][128X[104X
+    [4X[25Xgap>[125X [27XUniteSet( set, [ 16, 9, 25, 13, 16 ] );  set;[127X[104X
+    [4X[28X[ 2, 3, 4, 5, 7, 8, 9, 11, 13, 16, 25 ][128X[104X
+  [4X[32X[104X
+  
+  [1X21.19-7 IntersectSet[101X
+  
+  [33X[1;0Y[29X[2XIntersectSet[102X( [3Xset[103X, [3Xlist[103X ) [32X operation[133X
+  
+  [33X[0;0Yintersects the proper set [3Xset[103X with [3Xlist[103X. This is equivalent to removing from
+  [3Xset[103X all elements of [3Xset[103X that are not contained in [3Xlist[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xset := [ 2, 3, 4, 5, 7, 8, 9, 11, 13, 16 ];;[127X[104X
+    [4X[25Xgap>[125X [27XIntersectSet( set, [ 3, 5, 7, 9, 11, 13, 15, 17 ] );  set;[127X[104X
+    [4X[28X[ 3, 5, 7, 9, 11, 13 ][128X[104X
+    [4X[25Xgap>[125X [27XIntersectSet( set, [ 9, 4, 6, 8 ] );  set;[127X[104X
+    [4X[28X[ 9 ][128X[104X
+  [4X[32X[104X
+  
+  [1X21.19-8 SubtractSet[101X
+  
+  [33X[1;0Y[29X[2XSubtractSet[102X( [3Xset[103X, [3Xlist[103X ) [32X operation[133X
+  
+  [33X[0;0Ysubtracts  [3Xlist[103X from the proper set [3Xset[103X. This is equivalent to removing from
+  [3Xset[103X all elements of [3Xlist[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xset := [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ];;[127X[104X
+    [4X[25Xgap>[125X [27XSubtractSet( set, [ 6, 10 ] );  set;[127X[104X
+    [4X[28X[ 2, 3, 4, 5, 7, 8, 9, 11 ][128X[104X
+    [4X[25Xgap>[125X [27XSubtractSet( set, [ 9, 4, 6, 8 ] );  set;[127X[104X
+    [4X[28X[ 2, 3, 5, 7, 11 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X21.20 [33X[0;0YOperations for Lists[133X[101X
+  
+  [33X[0;0YSeveral  of the following functions expect the first argument to be either a
+  list  or a collection (see [14X30[114X), with possibly slightly different meaning for
+  lists and non-list collections.[133X
+  
+  [1X21.20-1 Concatenation[101X
+  
+  [33X[1;0Y[29X[2XConcatenation[102X( [3Xlist1[103X, [3Xlist2[103X, [3X...[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XConcatenation[102X( [3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0YIn  the  first  form  [2XConcatenation[102X  returns  the concatenation of the lists
+  [3Xlist1[103X,  [3Xlist2[103X,  etc.  The  [13Xconcatenation[113X  is  the  list that begins with the
+  elements  of  [3Xlist1[103X, followed by the elements of [3Xlist2[103X, and so on. Each list
+  may  also contain holes, in which case the concatenation also contains holes
+  at the corresponding positions.[133X
+  
+  [33X[0;0YIn  the  second  form [3Xlist[103X must be a dense list of lists [3Xlist1[103X, [3Xlist2[103X, etc.,
+  and [2XConcatenation[102X returns the concatenation of those lists.[133X
+  
+  [33X[0;0YThe  result  is a new mutable list, that is not identical to any other list.
+  The  elements  of  that  list  however  are  identical  to the corresponding
+  elements of [3Xlist1[103X, [3Xlist2[103X, etc. (see [14X21.6[114X).[133X
+  
+  [33X[0;0YNote  that  [2XConcatenation[102X  creates  a  new  list  and  leaves  its arguments
+  unchanged,  while  [2XAppend[102X ([14X21.4-5[114X) changes its first argument. For computing
+  the union of proper sets, [2XUnion[102X ([14X30.5-3[114X) can be used, see also [14X21.19[114X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XConcatenation( [ 1, 2, 3 ], [ 4, 5 ] );[127X[104X
+    [4X[28X[ 1, 2, 3, 4, 5 ][128X[104X
+    [4X[25Xgap>[125X [27XConcatenation( [2,3,,5,,7], [11,,13,,,,17,,19] );[127X[104X
+    [4X[28X[ 2, 3,, 5,, 7, 11,, 13,,,, 17,, 19 ][128X[104X
+    [4X[25Xgap>[125X [27XConcatenation( [ [1,2,3], [2,3,4], [3,4,5] ] );[127X[104X
+    [4X[28X[ 1, 2, 3, 2, 3, 4, 3, 4, 5 ][128X[104X
+  [4X[32X[104X
+  
+  [1X21.20-2 Compacted[101X
+  
+  [33X[1;0Y[29X[2XCompacted[102X( [3Xlist[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  a  new  mutable list that contains the elements of [3Xlist[103X in the same
+  order but omitting the holes.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:=[,1,,,3,,,4,[5,,,6],7];;  Compacted( l );[127X[104X
+    [4X[28X[ 1, 3, 4, [ 5,,, 6 ], 7 ][128X[104X
+  [4X[32X[104X
+  
+  [1X21.20-3 Collected[101X
+  
+  [33X[1;0Y[29X[2XCollected[102X( [3Xlist[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns a new list [3Xnew[103X that contains for each element [3Xelm[103X of the list [3Xlist[103X a
+  list  of  length two, the first element of this is [3Xelm[103X itself and the second
+  element is the number of times [3Xelm[103X appears in [3Xlist[103X. The order of those pairs
+  in  [3Xnew[103X  corresponds to the ordering of the elements elm, so that the result
+  is sorted.[133X
+  
+  [33X[0;0YFor all pairs of elements in [3Xlist[103X the comparison via [10X<[110X must be defined.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XFactors( Factorial( 10 ) );[127X[104X
+    [4X[28X[ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 7 ][128X[104X
+    [4X[25Xgap>[125X [27XCollected( last );[127X[104X
+    [4X[28X[ [ 2, 8 ], [ 3, 4 ], [ 5, 2 ], [ 7, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27XCollected( last );[127X[104X
+    [4X[28X[ [ [ 2, 8 ], 1 ], [ [ 3, 4 ], 1 ], [ [ 5, 2 ], 1 ], [ [ 7, 1 ], 1 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X21.20-4 DuplicateFreeList[101X
+  
+  [33X[1;0Y[29X[2XDuplicateFreeList[102X( [3Xlist[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XUnique[102X( [3Xlist[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  a  new mutable list whose entries are the elements of the list [3Xlist[103X
+  with  duplicates  removed.  [2XDuplicateFreeList[102X only uses the [10X=[110X comparison and
+  will  not  sort  the result. Therefore [2XDuplicateFreeList[102X can be used even if
+  the  elements  of  [3Xlist[103X  do  not  lie in the same family. Otherwise, if [3Xlist[103X
+  contains objects that can be compared with [2X\<[102X ([14X31.11-1[114X) then it is much more
+  efficient to use [2XSet[102X ([14X30.3-7[114X) instead of [2XDuplicateFreeList[102X.[133X
+  
+  [33X[0;0Y[2XUnique[102X is a synonym for [2XDuplicateFreeList[102X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:=[1,Z(3),1,"abc",Group((1,2,3),(1,2)),Z(3),Group((1,2),(2,3))];;[127X[104X
+    [4X[25Xgap>[125X [27XDuplicateFreeList( l );[127X[104X
+    [4X[28X[ 1, Z(3), "abc", Group([ (1,2,3), (1,2) ]) ][128X[104X
+  [4X[32X[104X
+  
+  [1X21.20-5 AsDuplicateFreeList[101X
+  
+  [33X[1;0Y[29X[2XAsDuplicateFreeList[102X( [3Xlist[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the  same  result  as  [2XDuplicateFreeList[102X ([14X21.20-4[114X), except that the
+  result is immutable.[133X
+  
+  [1X21.20-6 Flat[101X
+  
+  [33X[1;0Y[29X[2XFlat[102X( [3Xlist[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the list of all elements that are contained in the list [3Xlist[103X or its
+  sublists. That is, [2XFlat[102X first makes a new empty list [3Xnew[103X. Then it loops over
+  the elements [3Xelm[103X of [3Xlist[103X. If [3Xelm[103X is not a list it is added to [3Xnew[103X, otherwise
+  [2XFlat[102X appends [10XFlat( [3Xelm[103X[10X )[110X to [3Xnew[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XFlat( [ 1, [ 2, 3 ], [ [ 1, 2 ], 3 ] ] );[127X[104X
+    [4X[28X[ 1, 2, 3, 1, 2, 3 ][128X[104X
+    [4X[25Xgap>[125X [27XFlat( [ ] );[127X[104X
+    [4X[28X[  ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YTo  reconstruct  a  matrix  from  the  list obtained by applying [2XFlat[102X to the
+  matrix, the sublist operator can be used, as follows.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:=[9..14];;w:=2;; # w is the length of each row[127X[104X
+    [4X[25Xgap>[125X [27Xsub:=[1..w];;List([1..Length(l)/w],i->l{(i-1)*w+sub});[127X[104X
+    [4X[28X[ [ 9, 10 ], [ 11, 12 ], [ 13, 14 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X21.20-7 Reversed[101X
+  
+  [33X[1;0Y[29X[2XReversed[102X( [3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  a  new mutable list, containing the elements of the dense list [3Xlist[103X
+  in reversed order.[133X
+  
+  [33X[0;0YThe  argument  list is unchanged. The result list is a new list, that is not
+  identical to any other list. The elements of that list however are identical
+  to the corresponding elements of the argument list (see [14X21.6[114X).[133X
+  
+  [33X[0;0Y[2XReversed[102X  implements  a  special  case of list assignment, which can also be
+  formulated in terms of the [10X{}[110X operator (see [14X21.4[114X).[133X
+  
+  [33X[0;0YDevelopers  who  wish  to  adapt  this for custom list types need to install
+  suitable methods for the operation [10XReversedOp[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XReversed( [ 1, 4, 9, 5, 6, 7 ] );[127X[104X
+    [4X[28X[ 7, 6, 5, 9, 4, 1 ][128X[104X
+  [4X[32X[104X
+  
+  [1X21.20-8 Shuffle[101X
+  
+  [33X[1;0Y[29X[2XShuffle[102X( [3Xlist[103X ) [32X operation[133X
+  
+  [33X[0;0YThe  argument [3Xlist[103X must be a dense mutable list. This operation permutes the
+  entries of [3Xlist[103X randomly (in place), and returns [3Xlist[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XReset(GlobalMersenneTwister, 12345);; # make manual tester happy[127X[104X
+    [4X[25Xgap>[125X [27Xl := [1..20];[127X[104X
+    [4X[28X[ 1 .. 20 ][128X[104X
+    [4X[25Xgap>[125X [27Xm := Shuffle(ShallowCopy(l));[127X[104X
+    [4X[28X[ 8, 13, 1, 3, 20, 15, 4, 7, 5, 18, 6, 12, 16, 11, 2, 10, 19, 17, 9,[128X[104X
+    [4X[28X  14 ][128X[104X
+    [4X[25Xgap>[125X [27Xl;[127X[104X
+    [4X[28X[ 1 .. 20 ][128X[104X
+    [4X[25Xgap>[125X [27XShuffle(l);;[127X[104X
+    [4X[25Xgap>[125X [27Xl;[127X[104X
+    [4X[28X[ 19, 5, 7, 20, 16, 1, 10, 15, 12, 11, 13, 2, 14, 3, 4, 17, 6, 8, 9,[128X[104X
+    [4X[28X  18 ][128X[104X
+  [4X[32X[104X
+  
+  [1X21.20-9 Apply[101X
+  
+  [33X[1;0Y[29X[2XApply[102X( [3Xlist[103X, [3Xfunc[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XApply[102X  applies  the  function [3Xfunc[103X to every element of the dense and mutable
+  list  [3Xlist[103X,  and  replaces  each  element  entry by the corresponding return
+  value.[133X
+  
+  [33X[0;0Y[2XApply[102X  changes its argument. The nondestructive counterpart of [2XApply[102X is [2XList[102X
+  ([14X30.3-5[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:= [ 1, 2, 3 ];;  Apply( l, i -> i^2 );  l;[127X[104X
+    [4X[28X[ 1, 4, 9 ][128X[104X
+  [4X[32X[104X
+  
+  [1X21.20-10 Perform[101X
+  
+  [33X[1;0Y[29X[2XPerform[102X( [3Xlist[103X, [3Xfunc[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XPerform[102X  applies  the  function  [3Xfunc[103X  to  every  element  of the list [3Xlist[103X,
+  discarding any return values. It does not return a value.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl := [1, 2, 3];; Perform(l,[127X[104X
+    [4X[25X>[125X [27Xfunction(x) if IsPrimeInt(x) then Print(x,"\n"); fi; end);[127X[104X
+    [4X[28X2[128X[104X
+    [4X[28X3[128X[104X
+  [4X[32X[104X
+  
+  [1X21.20-11 PermListList[101X
+  
+  [33X[1;0Y[29X[2XPermListList[102X( [3Xlist1[103X, [3Xlist2[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  a  permutation [22Xp[122X of [10X[ 1 .. Length( [3Xlist1[103X[10X ) ][110X such that [3Xlist1[103X[22X[i[122X[10X^[110X[22Xp] =[122X
+  [3Xlist2[103X[22X[i][122X. It returns [9Xfail[109X if there is no such permutation.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xlist1 := [ 5, 4, 6, 1, 7, 5 ];;[127X[104X
+    [4X[25Xgap>[125X [27Xlist2 := [ 4, 1, 7, 5, 5, 6 ];;[127X[104X
+    [4X[25Xgap>[125X [27Xperm := PermListList(list1, list2);[127X[104X
+    [4X[28X(1,2,4)(3,5,6)[128X[104X
+    [4X[25Xgap>[125X [27XPermuted( list2, perm );[127X[104X
+    [4X[28X[ 5, 4, 6, 1, 7, 5 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X21.20-12 [33X[0;0YMaximum[133X[101X
+  
+  [33X[1;0Y[29X[2XMaximum[102X( [3Xobj1[103X, [3Xobj2[103X, [3X...[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XMaximum[102X( [3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0YIn  the  first  form [2XMaximum[102X returns the [13Xmaximum[113X of its arguments, i.e., one
+  argument [3Xobj[103X for which [22X[3Xobj[103X ≥ [3Xobj1[103X[122X, [22X[3Xobj[103X ≥ [3Xobj2[103X[122X etc.[133X
+  
+  [33X[0;0YIn  the  second  form  [2XMaximum[102X takes a homogeneous list [3Xlist[103X and returns the
+  maximum of the elements in this list.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XMaximum( -123, 700, 123, 0, -1000 );[127X[104X
+    [4X[28X700[128X[104X
+    [4X[25Xgap>[125X [27XMaximum( [ -123, 700, 123, 0, -1000 ] );[127X[104X
+    [4X[28X700[128X[104X
+    [4X[25Xgap>[125X [27X# lists are compared elementwise:[127X[104X
+    [4X[25Xgap>[125X [27XMaximum( [1,2], [0,15], [1,5], [2,-11] );[127X[104X
+    [4X[28X[ 2, -11 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YTo get the index of the maximum element use [2XPositionMaximum[102X ([14X21.16-8[114X)[133X
+  
+  
+  [1X21.20-13 [33X[0;0YMinimum[133X[101X
+  
+  [33X[1;0Y[29X[2XMinimum[102X( [3Xobj1[103X, [3Xobj2[103X, [3X...[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XMinimum[102X( [3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0YIn  the  first  form [2XMinimum[102X returns the [13Xminimum[113X of its arguments, i.e., one
+  argument [3Xobj[103X for which [22X[3Xobj[103X ≤ [3Xobj1[103X[122X, [22X[3Xobj[103X ≤ [3Xobj2[103X[122X etc.[133X
+  
+  [33X[0;0YIn  the  second  form  [2XMinimum[102X takes a homogeneous list [3Xlist[103X and returns the
+  minimum of the elements in this list.[133X
+  
+  [33X[0;0YNote  that  for  both  [2XMaximum[102X  ([14X21.20-12[114X) and [2XMinimum[102X the comparison of the
+  objects  [3Xobj1[103X, [3Xobj2[103X etc. must be defined; for that, usually they must lie in
+  the same family (see [14X13.1[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XMinimum( -123, 700, 123, 0, -1000 );[127X[104X
+    [4X[28X-1000[128X[104X
+    [4X[25Xgap>[125X [27XMinimum( [ -123, 700, 123, 0, -1000 ] );[127X[104X
+    [4X[28X-1000[128X[104X
+    [4X[25Xgap>[125X [27XMinimum( [ 1, 2 ], [ 0, 15 ], [ 1, 5 ], [ 2, -11 ] );[127X[104X
+    [4X[28X[ 0, 15 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YTo get the index of the minimum element use [2XPositionMinimum[102X ([14X21.16-8[114X)[133X
+  
+  
+  [1X21.20-14 [33X[0;0YMaximumList and MinimumList[133X[101X
+  
+  [33X[1;0Y[29X[2XMaximumList[102X( [3Xlist[103X[, [3Xseed[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XMinimumList[102X( [3Xlist[103X[, [3Xseed[103X] ) [32X operation[133X
+  
+  [33X[0;0Yreturn  the maximum resp. the minimum of the elements in the list [3Xlist[103X. They
+  are  the  operations  called by [2XMaximum[102X ([14X21.20-12[114X) resp. [2XMinimum[102X ([14X21.20-13[114X).
+  Methods  can be installed for special kinds of lists. For example, there are
+  special  methods  to  compute  the  maximum  resp. the  minimum  of  a range
+  (see [14X21.22[114X).[133X
+  
+  [33X[0;0YIf  a  second  argument  [3Xseed[103X  is  supplied,  then the result is the maximum
+  resp. minimum  of the union of [3Xlist[103X and [3Xseed[103X. In this manner, the operations
+  may be applied to empty lists.[133X
+  
+  
+  [1X21.20-15 [33X[0;0YCartesian[133X[101X
+  
+  [33X[1;0Y[29X[2XCartesian[102X( [3Xlist1[103X, [3Xlist2[103X, [3X...[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XCartesian[102X( [3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0YIn  the  first  form  [2XCartesian[102X  returns  the cartesian product of the lists
+  [3Xlist1[103X, [3Xlist2[103X, etc.[133X
+  
+  [33X[0;0YIn  the  second  form  [3Xlist[103X  must be a list of lists [3Xlist1[103X, [3Xlist2[103X, etc., and
+  [2XCartesian[102X returns the cartesian product of those lists.[133X
+  
+  [33X[0;0YThe  [13Xcartesian  product[113X  is  a  list  [3Xcart[103X of lists [3Xtup[103X, such that the first
+  element  of  [3Xtup[103X  is  an  element  of [3Xlist1[103X, the second element of [3Xtup[103X is an
+  element  of  [3Xlist2[103X,  and  so on. The total number of elements in [3Xcart[103X is the
+  product of the lengths of the argument lists. In particular [3Xcart[103X is empty if
+  and  only if at least one of the argument lists is empty. Also [3Xcart[103X contains
+  duplicates  if  and  only  if  no  argument  list  is empty and at least one
+  contains duplicates.[133X
+  
+  [33X[0;0YThe  last index runs fastest. That means that the first element [3Xtup1[103X of [3Xcart[103X
+  contains  the  first  element  from  [3Xlist1[103X, from [3Xlist2[103X and so on. The second
+  element  [3Xtup2[103X  of [3Xcart[103X contains the first element from [3Xlist1[103X, the first from
+  [3Xlist2[103X,  and so on, but the last element of [3Xtup2[103X is the second element of the
+  last  argument  list.  This implies that [3Xcart[103X is a proper set if and only if
+  all argument lists are proper sets (see [14X21.19[114X).[133X
+  
+  [33X[0;0YThe  function  [2XTuples[102X  ([14X16.2-8[114X)  computes  the [3Xk[103X-fold cartesian product of a
+  list.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XCartesian( [1,2], [3,4], [5,6] );[127X[104X
+    [4X[28X[ [ 1, 3, 5 ], [ 1, 3, 6 ], [ 1, 4, 5 ], [ 1, 4, 6 ], [ 2, 3, 5 ],[128X[104X
+    [4X[28X  [ 2, 3, 6 ], [ 2, 4, 5 ], [ 2, 4, 6 ] ][128X[104X
+    [4X[25Xgap>[125X [27XCartesian( [1,2,2], [1,1,2] );[127X[104X
+    [4X[28X[ [ 1, 1 ], [ 1, 1 ], [ 1, 2 ], [ 2, 1 ], [ 2, 1 ], [ 2, 2 ],[128X[104X
+    [4X[28X  [ 2, 1 ], [ 2, 1 ], [ 2, 2 ] ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X21.20-16 [33X[0;0YIteratorOfCartesianProduct[133X[101X
+  
+  [33X[1;0Y[29X[2XIteratorOfCartesianProduct[102X( [3Xlist1[103X, [3Xlist2[103X, [3X...[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XIteratorOfCartesianProduct[102X( [3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0YIn  the first form [2XIteratorOfCartesianProduct[102X returns an iterator (see [14X30.8[114X)
+  of  all  elements of the cartesian product (see [2XCartesian[102X ([14X21.20-15[114X)) of the
+  lists [3Xlist1[103X, [3Xlist2[103X, etc.[133X
+  
+  [33X[0;0YIn  the  second  form  [3Xlist[103X  must be a list of lists [3Xlist1[103X, [3Xlist2[103X, etc., and
+  [2XIteratorOfCartesianProduct[102X  returns  an iterator of the cartesian product of
+  those lists.[133X
+  
+  [33X[0;0YResulting  tuples  will  be  returned  in  the lexicographic order. Usage of
+  iterators  of  cartesian  products  is  recommended  in  the  case  when the
+  resulting  cartesian  product  is  big enough, so its generating and storage
+  will  require  essential amount of runtime and memory. For smaller cartesian
+  products  it  is  faster  to generate the full set of tuples using [2XCartesian[102X
+  ([14X21.20-15[114X)  and  then  loop  over  its elements (with some minor overhead of
+  needing more memory).[133X
+  
+  [1X21.20-17 Permuted[101X
+  
+  [33X[1;0Y[29X[2XPermuted[102X( [3Xlist[103X, [3Xperm[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  a new list [3Xnew[103X that contains the elements of the list [3Xlist[103X permuted
+  according  to  the  permutation [3Xperm[103X. That is [10X[3Xnew[103X[10X[[3Xi[103X[10X^[3Xperm[103X[10X] = [3Xlist[103X[10X[[3Xi[103X[10X][110X whenever
+  [10X[3Xlist[103X[10X[[3Xi[103X[10X][110X is bound.[133X
+  
+  [33X[0;0Y[2XSortex[102X ([14X21.18-3[114X) allows you to compute a permutation that must be applied to
+  a list in order to get the sorted list.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPermuted( [ 5, 4, 6, 1, 7, 5 ], (1,3,5,6,4) );[127X[104X
+    [4X[28X[ 1, 4, 5, 5, 6, 7 ][128X[104X
+    [4X[25Xgap>[125X [27XPermuted( [ 5, 4, 6,, 7, 5 ], (1,3,5,6,4) );[127X[104X
+    [4X[28X[ , 4, 5, 5, 6, 7 ][128X[104X
+  [4X[32X[104X
+  
+  [1X21.20-18 List[101X
+  
+  [33X[1;0Y[29X[2XList[102X( [3Xlist[103X[, [3Xfunc[103X] ) [32X function[133X
+  
+  [33X[0;0YThis  function returns a new mutable list [10Xnew[110X of the same length as the list
+  [3Xlist[103X  (which  may  have  holes).  The  entry [10Xnew[i][110X is unbound if [10X[3Xlist[103X[10X[i][110X is
+  unbound.  Otherwise [10Xnew[i] = [3Xfunc[103X[10X([3Xlist[103X[10X[i])[110X. If the argument [3Xfunc[103X is omitted,
+  its default is [2XIdFunc[102X ([14X5.4-6[114X), so this function does the same as [2XShallowCopy[102X
+  ([14X12.7-1[114X) (see also [14X21.7[114X).[133X
+  
+  [33X[0;0YDevelopers  who  wish to adapt this for custom list or collection types need
+  to install suitable methods for the operation [10XListOp[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XList( [1,2,3], i -> i^2 );[127X[104X
+    [4X[28X[ 1, 4, 9 ][128X[104X
+    [4X[25Xgap>[125X [27XList( [1..10], IsPrime );[127X[104X
+    [4X[28X[ false, true, true, false, true, false, true, false, false, false ][128X[104X
+    [4X[25Xgap>[125X [27XList([,1,,3,4], x-> x > 2);[127X[104X
+    [4X[28X[ , false,, true, true ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y(See also [2XList[102X ([14X30.3-5[114X).)[133X
+  
+  [1X21.20-19 Filtered[101X
+  
+  [33X[1;0Y[29X[2XFiltered[102X( [3Xlistorcoll[103X, [3Xfunc[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  a  new  list that contains those elements of the list or collection
+  [3Xlistorcoll[103X (see [14X30[114X), respectively, for which the unary function [3Xfunc[103X returns
+  [9Xtrue[109X.[133X
+  
+  [33X[0;0YIf  the first argument is a list, the order of the elements in the result is
+  the  same  as  the  order  of the corresponding elements of this list. If an
+  element  for  which  [3Xfunc[103X  returns [9Xtrue[109X appears several times in the list it
+  will  also  appear the same number of times in the result. The argument list
+  may contain holes, they are ignored by [2XFiltered[102X.[133X
+  
+  [33X[0;0YFor  each  element  of  [3Xlistorcoll[103X,  [3Xfunc[103X  must return either [9Xtrue[109X or [9Xfalse[109X,
+  otherwise an error is signalled.[133X
+  
+  [33X[0;0YThe  result  is  a  new  list  that  is not identical to any other list. The
+  elements of that list however are identical to the corresponding elements of
+  the argument list (see [14X21.6[114X).[133X
+  
+  [33X[0;0YList  assignment  using the operator [2X\{\}[102X ([14X21.3-1[114X) (see [14X21.4[114X) can be used to
+  extract elements of a list according to indices given in another list.[133X
+  
+  [33X[0;0YDevelopers  who  wish to adapt this for custom list or collection types need
+  to install suitable methods for the operation [10XFilteredOp[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XFiltered( [1..20], IsPrime );[127X[104X
+    [4X[28X[ 2, 3, 5, 7, 11, 13, 17, 19 ][128X[104X
+    [4X[25Xgap>[125X [27XFiltered( [ 1, 3, 4, -4, 4, 7, 10, 6 ], IsPrimePowerInt );[127X[104X
+    [4X[28X[ 3, 4, 4, 7 ][128X[104X
+    [4X[25Xgap>[125X [27XFiltered( [ 1, 3, 4, -4, 4, 7, 10, 6 ],[127X[104X
+    [4X[25X>[125X [27X             n -> IsPrimePowerInt(n) and n mod 2 <> 0 );[127X[104X
+    [4X[28X[ 3, 7 ][128X[104X
+    [4X[25Xgap>[125X [27XFiltered( Group( (1,2), (1,2,3) ), x -> Order( x ) = 2 );[127X[104X
+    [4X[28X[ (2,3), (1,2), (1,3) ][128X[104X
+  [4X[32X[104X
+  
+  [1X21.20-20 Number[101X
+  
+  [33X[1;0Y[29X[2XNumber[102X( [3Xlistorcoll[103X[, [3Xfunc[103X] ) [32X function[133X
+  
+  [33X[0;0YCalled with a list [3Xlistorcoll[103X, [2XNumber[102X returns the number of bound entries in
+  this  list.  For  dense  lists  [2XNumber[102X,  [2XLength[102X ([14X21.17-5[114X), and [2XSize[102X ([14X30.4-6[114X)
+  return  the  same  value;  for lists with holes [2XNumber[102X returns the number of
+  bound  entries, [2XLength[102X ([14X21.17-5[114X) returns the largest index of a bound entry,
+  and [2XSize[102X ([14X30.4-6[114X) signals an error.[133X
+  
+  [33X[0;0YCalled  with  two  arguments,  a  list  or collection [3Xlistorcoll[103X and a unary
+  function [3Xfunc[103X, [2XNumber[102X returns the number of elements of [3Xlistorcoll[103X for which
+  [3Xfunc[103X returns [9Xtrue[109X. If an element for which [3Xfunc[103X returns [9Xtrue[109X appears several
+  times in [3Xlistorcoll[103X it will also be counted the same number of times.[133X
+  
+  [33X[0;0YFor  each  element  of  [3Xlistorcoll[103X,  [3Xfunc[103X  must return either [9Xtrue[109X or [9Xfalse[109X,
+  otherwise an error is signalled.[133X
+  
+  [33X[0;0Y[2XFiltered[102X ([14X21.20-19[114X) allows you to extract the elements of a list that have a
+  certain property.[133X
+  
+  [33X[0;0YDevelopers  who  wish to adapt this for custom list or collection types need
+  to install suitable methods for the operation [10XNumberOp[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XNumber( [ 2, 3, 5, 7 ] );[127X[104X
+    [4X[28X4[128X[104X
+    [4X[25Xgap>[125X [27XNumber( [, 2, 3,, 5,, 7,,,, 11 ] );[127X[104X
+    [4X[28X5[128X[104X
+    [4X[25Xgap>[125X [27XNumber( [1..20], IsPrime );[127X[104X
+    [4X[28X8[128X[104X
+    [4X[25Xgap>[125X [27XNumber( [ 1, 3, 4, -4, 4, 7, 10, 6 ], IsPrimePowerInt );[127X[104X
+    [4X[28X4[128X[104X
+    [4X[25Xgap>[125X [27XNumber( [ 1, 3, 4, -4, 4, 7, 10, 6 ],[127X[104X
+    [4X[25X>[125X [27X           n -> IsPrimePowerInt(n) and n mod 2 <> 0 );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XNumber( Group( (1,2), (1,2,3) ), x -> Order( x ) = 2 );[127X[104X
+    [4X[28X3[128X[104X
+  [4X[32X[104X
+  
+  [1X21.20-21 First[101X
+  
+  [33X[1;0Y[29X[2XFirst[102X( [3Xlist[103X[, [3Xfunc[103X] ) [32X operation[133X
+  
+  [33X[0;0Y[2XFirst[102X  returns  the  first  element  of  the  list  [3Xlist[103X for which the unary
+  function  [3Xfunc[103X  returns  [9Xtrue[109X;  if  [3Xfunc[103X  is not given, the first element is
+  returned.  [3Xlist[103X may contain holes. [3Xfunc[103X must return either [9Xtrue[109X or [9Xfalse[109X for
+  each element of [3Xlist[103X, otherwise an error is signalled. If [3Xfunc[103X returns [9Xfalse[109X
+  for all elements of [3Xlist[103X then [2XFirst[102X returns [9Xfail[109X.[133X
+  
+  [33X[0;0Y[2XPositionProperty[102X  ([14X21.16-9[114X)  allows  you  to  find the position of the first
+  element in a list that satisfies a certain property.[133X
+  
+  [33X[0;0YBefore  [5XGAP[105X  4.12, developers who wished to adapt this for custom list types
+  needed  to install suitable methods for the operation [10XFirstOp[110X. This is still
+  possible  for backwards compatibility, but [10XFirstOp[110X now is just a synonym for
+  [2XFirst[102X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XFirst( [10^7..10^8], IsPrime );[127X[104X
+    [4X[28X10000019[128X[104X
+    [4X[25Xgap>[125X [27XFirst( [10^5..10^6],[127X[104X
+    [4X[25X>[125X [27X     n -> not IsPrime(n) and IsPrimePowerInt(n) );[127X[104X
+    [4X[28X100489[128X[104X
+    [4X[25Xgap>[125X [27XFirst( [ 1 .. 20 ], x -> x < 0 );[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27XFirst( [ fail ], x -> x = fail );[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [1X21.20-22 Last[101X
+  
+  [33X[1;0Y[29X[2XLast[102X( [3Xlist[103X[, [3Xfunc[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XLast[102X  returns the last element of the list [3Xlist[103X for which the unary function
+  [3Xfunc[103X  returns [9Xtrue[109X; if [3Xfunc[103X is not given, the last element is returned. [3Xlist[103X
+  may contain holes. [3Xfunc[103X must return either [9Xtrue[109X or [9Xfalse[109X for each element of
+  [3Xlist[103X,  otherwise  an  error  is  signalled.  If  [3Xfunc[103X  returns [9Xfalse[109X for all
+  elements of [3Xlist[103X then [2XLast[102X returns [9Xfail[109X.[133X
+  
+  [33X[0;0YDevelopers  who  wish  to  adapt  this for custom list types need to install
+  suitable methods for the operation [10XLastOp[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLast( [10^7..10^8], IsPrime );[127X[104X
+    [4X[28X99999989[128X[104X
+    [4X[25Xgap>[125X [27XLast( [10^5..10^6],[127X[104X
+    [4X[25X>[125X [27X     n -> not IsPrime(n) and IsPrimePowerInt(n) );[127X[104X
+    [4X[28X994009[128X[104X
+    [4X[25Xgap>[125X [27XLast( [ 1 .. 20 ], x -> x < 0 );[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27XLast( [ fail ], x -> x = fail );[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [1X21.20-23 ForAll[101X
+  
+  [33X[1;0Y[29X[2XForAll[102X( [3Xlistorcoll[103X, [3Xfunc[103X ) [32X function[133X
+  
+  [33X[0;0Ytests  whether  the unary function [3Xfunc[103X returns [9Xtrue[109X for all elements in the
+  list or collection [3Xlistorcoll[103X.[133X
+  
+  [33X[0;0YDevelopers  who  wish to adapt this for custom list or collection types need
+  to install suitable methods for the operation [10XForAllOp[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XForAll( [1..20], IsPrime );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XForAll( [2,3,4,5,8,9], IsPrimePowerInt );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XForAll( [2..14], n -> IsPrimePowerInt(n) or n mod 2 = 0 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XForAll( Group( (1,2), (1,2,3) ), i -> SignPerm(i) = 1 );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X21.20-24 ForAny[101X
+  
+  [33X[1;0Y[29X[2XForAny[102X( [3Xlistorcoll[103X, [3Xfunc[103X ) [32X function[133X
+  
+  [33X[0;0Ytests  whether the unary function [3Xfunc[103X returns [9Xtrue[109X for at least one element
+  in the list or collection [3Xlistorcoll[103X.[133X
+  
+  [33X[0;0YDevelopers  who  wish to adapt this for custom list or collection types need
+  to install suitable methods for the operation [10XForAnyOp[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XForAny( [1..20], IsPrime );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XForAny( [2,3,4,5,8,9], IsPrimePowerInt );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XForAny( [2..14],[127X[104X
+    [4X[25X>[125X [27X   n -> IsPrimePowerInt(n) and n mod 5 = 0 and not IsPrime(n) );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XForAny( Integers, i ->     i > 0[127X[104X
+    [4X[25X>[125X [27X                          and ForAll( [0,2..4], j -> IsPrime(i+j) ) );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X21.20-25 Product[101X
+  
+  [33X[1;0Y[29X[2XProduct[102X( [3Xlistorcoll[103X[, [3Xfunc[103X][, [3Xinit[103X] ) [32X function[133X
+  
+  [33X[0;0YCalled  with  one  argument,  a dense list or collection [3Xlistorcoll[103X, [2XProduct[102X
+  returns the product of the elements of [3Xlistorcoll[103X (see [14X30[114X).[133X
+  
+  [33X[0;0YCalled with a dense list or collection [3Xlistorcoll[103X and a function [3Xfunc[103X, which
+  must be a function taking one argument, [2XProduct[102X applies the function [3Xfunc[103X to
+  the  elements  of  [3Xlistorcoll[103X,  and  returns  the product of the results. In
+  either case [2XProduct[102X returns [10X1[110X if the first argument is empty.[133X
+  
+  [33X[0;0YThe general rules for arithmetic operations apply (see [14X21.15[114X), so the result
+  is immutable if and only if all summands are immutable.[133X
+  
+  [33X[0;0YIf  [3Xlistorcoll[103X  contains exactly one element then this element (or its image
+  under  [3Xfunc[103X  if  applicable)  itself is returned, not a shallow copy of this
+  element.[133X
+  
+  [33X[0;0YIf an additional initial value [3Xinit[103X is given, [2XProduct[102X returns the product of
+  [3Xinit[103X  and the elements of the first argument resp. of their images under the
+  function [3Xfunc[103X. This is useful for example if the first argument is empty and
+  a different identity than [10X1[110X is desired, in which case [3Xinit[103X is returned.[133X
+  
+  [33X[0;0YDevelopers  who  wish to adapt this for custom list or collection types need
+  to install suitable methods for the operation [10XProductOp[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XProduct( [ 2, 3, 5, 7, 11, 13, 17, 19 ] );[127X[104X
+    [4X[28X9699690[128X[104X
+    [4X[25Xgap>[125X [27XProduct( [1..10], x->x^2 );[127X[104X
+    [4X[28X13168189440000[128X[104X
+    [4X[25Xgap>[125X [27XProduct( [ (1,2), (1,3), (1,4), (2,3), (2,4), (3,4) ] );[127X[104X
+    [4X[28X(1,4)(2,3)[128X[104X
+    [4X[25Xgap>[125X [27XProduct( GF(8) );[127X[104X
+    [4X[28X0*Z(2)[128X[104X
+  [4X[32X[104X
+  
+  [1X21.20-26 Sum[101X
+  
+  [33X[1;0Y[29X[2XSum[102X( [3Xlistorcoll[103X[, [3Xfunc[103X][, [3Xinit[103X] ) [32X function[133X
+  
+  [33X[0;0YCalled with one argument, a dense list or collection [3Xlistorcoll[103X, [2XSum[102X returns
+  the sum of the elements of [3Xlistorcoll[103X (see [14X30[114X).[133X
+  
+  [33X[0;0YCalled with a dense list or collection [3Xlistorcoll[103X and a function [3Xfunc[103X, which
+  must be a function taking one argument, [2XSum[102X applies the function [3Xfunc[103X to the
+  elements  of  [3Xlistorcoll[103X, and returns the sum of the results. In either case
+  [2XSum[102X returns [10X0[110X if the first argument is empty.[133X
+  
+  [33X[0;0YThe general rules for arithmetic operations apply (see [14X21.15[114X), so the result
+  is immutable if and only if all summands are immutable.[133X
+  
+  [33X[0;0YIf  [3Xlistorcoll[103X  contains exactly one element then this element (or its image
+  under  [3Xfunc[103X  if  applicable)  itself is returned, not a shallow copy of this
+  element.[133X
+  
+  [33X[0;0YIf  an  additional  initial value [3Xinit[103X is given, [2XSum[102X returns the sum of [3Xinit[103X
+  and  the  elements  of  the  first  argument resp. of their images under the
+  function [3Xfunc[103X. This is useful for example if the first argument is empty and
+  a different zero than [10X0[110X is desired, in which case [3Xinit[103X is returned.[133X
+  
+  [33X[0;0YDevelopers  who  wish to adapt this for custom list or collection types need
+  to install suitable methods for the operation [10XSumOp[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSum( [ 2, 3, 5, 7, 11, 13, 17, 19 ] );[127X[104X
+    [4X[28X77[128X[104X
+    [4X[25Xgap>[125X [27XSum( [1..10], x->x^2 );[127X[104X
+    [4X[28X385[128X[104X
+    [4X[25Xgap>[125X [27XSum( [ [1,2], [3,4], [5,6] ] );[127X[104X
+    [4X[28X[ 9, 12 ][128X[104X
+    [4X[25Xgap>[125X [27XSum( GF(8) );[127X[104X
+    [4X[28X0*Z(2)[128X[104X
+  [4X[32X[104X
+  
+  [1X21.20-27 Iterated[101X
+  
+  [33X[1;0Y[29X[2XIterated[102X( [3Xlist[103X, [3Xf[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns the result of the iterated application of the function [3Xf[103X, which must
+  take  two  arguments,  to  the elements of the list [3Xlist[103X. More precisely, if
+  [3Xlist[103X  has  length  [22Xn[122X  then  [2XIterated[102X  returns  the  result  of the following
+  application, [22X[3Xf[103X( ... [3Xf[103X( [3Xf[103X( [3Xlist[103X[1], [3Xlist[103X[2] ), [3Xlist[103X[3] ), ..., [3Xlist[103X[n] )[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIterated( [ 126, 66, 105 ], Gcd );[127X[104X
+    [4X[28X3[128X[104X
+  [4X[32X[104X
+  
+  [1X21.20-28 ListN[101X
+  
+  [33X[1;0Y[29X[2XListN[102X( [3Xlist1[103X, [3Xlist2[103X, [3X...[103X, [3Xlistn[103X, [3Xf[103X ) [32X function[133X
+  
+  [33X[0;0Yapplies  the  [22Xn[122X-argument function [3Xf[103X to the lists. That is, [2XListN[102X returns the
+  list whose [22Xi[122X-th entry is [22X[3Xf[103X([3Xlist1[103X[i], [3Xlist2[103X[i], ..., [3Xlistn[103X[i])[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XListN( [1,2], [3,4], \+ );[127X[104X
+    [4X[28X[ 4, 6 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X21.21 [33X[0;0YAdvanced List Manipulations[133X[101X
+  
+  [33X[0;0YThe  following functions are generalizations of [2XList[102X ([14X30.3-5[114X), [2XSet[102X ([14X30.3-7[114X),
+  [2XSum[102X ([14X21.20-26[114X), and [2XProduct[102X ([14X21.20-25[114X).[133X
+  
+  [1X21.21-1 ListX[101X
+  
+  [33X[1;0Y[29X[2XListX[102X( [3Xarg1[103X, [3Xarg2[103X, [3X...[103X, [3Xargn[103X, [3Xfunc[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XListX[102X returns a new list constructed from the arguments.[133X
+  
+  [33X[0;0YEach of the arguments [3Xarg1[103X, [3Xarg2[103X, [22X...[122X [3Xargn[103X must be one of the following:[133X
+  
+  [8Xa list or collection[108X
+        [33X[0;6Ythis introduces a new for-loop in the sequence of nested for-loops and
+        if-statements;[133X
+  
+  [8Xa function returning a list or collection[108X
+        [33X[0;6Ythis introduces a new for-loop in the sequence of nested for-loops and
+        if-statements, where the loop-range depends on the values of the outer
+        loop-variables; or[133X
+  
+  [8Xa function returning [9Xtrue[109X or [9Xfalse[109X[108X
+        [33X[0;6Ythis introduces a new if-statement in the sequence of nested for-loops
+        and if-statements.[133X
+  
+  [33X[0;0YThe  last  argument  [3Xfunc[103X must be a function, it is applied to the values of
+  the loop-variables and the results are collected.[133X
+  
+  [33X[0;0YThus [10XListX( [3Xlist[103X[10X, [3Xfunc[103X[10X )[110X is the same as [10XList( [3Xlist[103X[10X, [3Xfunc[103X[10X )[110X, and [10XListX( [3Xlist[103X[10X,
+  [3Xfunc[103X[10X, x -> x )[110X is the same as [10XFiltered( [3Xlist[103X[10X, [3Xfunc[103X[10X )[110X.[133X
+  
+  [33X[0;0YAs  a more elaborate example, assume [3Xarg1[103X is a list or collection, [3Xarg2[103X is a
+  function  returning  [9Xtrue[109X  or  [9Xfalse[109X, [3Xarg3[103X is a function returning a list or
+  collection, and [3Xarg4[103X is another function returning [9Xtrue[109X or [9Xfalse[109X, then[133X
+  
+  [33X[0;0Y[10X[3Xresult[103X[10X := ListX( [3Xarg1[103X[10X, [3Xarg2[103X[10X, [3Xarg3[103X[10X, [3Xarg4[103X[10X, [3Xfunc[103X[10X );[110X[133X
+  
+  [33X[0;0Yis equivalent to[133X
+  
+  [4X[32X[104X
+    [4Xresult := [];[104X
+    [4Xfor v1 in arg1 do[104X
+    [4X  if arg2( v1 ) then[104X
+    [4X    for v2 in arg3( v1 ) do[104X
+    [4X      if arg4( v1, v2 ) then[104X
+    [4X        Add( result, func( v1, v2 ) );[104X
+    [4X      fi;[104X
+    [4X    od;[104X
+    [4X  fi;[104X
+    [4Xod;[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  following  example shows how [2XListX[102X can be used to compute all pairs and
+  all strictly sorted pairs of elements in a list.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:= [ 1, 2, 3, 4 ];;[127X[104X
+    [4X[25Xgap>[125X [27Xpair:= function( x, y ) return [ x, y ]; end;;[127X[104X
+    [4X[25Xgap>[125X [27XListX( l, l, pair );[127X[104X
+    [4X[28X[ [ 1, 1 ], [ 1, 2 ], [ 1, 3 ], [ 1, 4 ], [ 2, 1 ], [ 2, 2 ],[128X[104X
+    [4X[28X  [ 2, 3 ], [ 2, 4 ], [ 3, 1 ], [ 3, 2 ], [ 3, 3 ], [ 3, 4 ],[128X[104X
+    [4X[28X  [ 4, 1 ], [ 4, 2 ], [ 4, 3 ], [ 4, 4 ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIn the following example, [2X\<[102X ([14X31.11-1[114X) is the comparison operation:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XListX( l, l, \<, pair );[127X[104X
+    [4X[28X[ [ 1, 2 ], [ 1, 3 ], [ 1, 4 ], [ 2, 3 ], [ 2, 4 ], [ 3, 4 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X21.21-2 SetX[101X
+  
+  [33X[1;0Y[29X[2XSetX[102X( [3Xarg1[103X, [3Xarg2[103X, [3X...[103X, [3Xfunc[103X ) [32X function[133X
+  
+  [33X[0;0YThe only difference between [2XSetX[102X and [2XListX[102X ([14X21.21-1[114X) is that the result list
+  of [2XSetX[102X is strictly sorted.[133X
+  
+  [1X21.21-3 SumX[101X
+  
+  [33X[1;0Y[29X[2XSumX[102X( [3Xarg1[103X, [3Xarg2[103X, [3X...[103X, [3Xfunc[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XSumX[102X returns the sum of the elements in the list obtained by [2XListX[102X ([14X21.21-1[114X)
+  when this is called with the same arguments.[133X
+  
+  [1X21.21-4 ProductX[101X
+  
+  [33X[1;0Y[29X[2XProductX[102X( [3Xarg1[103X, [3Xarg2[103X, [3X...[103X, [3Xfunc[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XProductX[102X  returns  the product of the elements in the list obtained by [2XListX[102X
+  ([14X21.21-1[114X) when this is called with the same arguments.[133X
+  
+  
+  [1X21.22 [33X[0;0YRanges[133X[101X
+  
+  [33X[0;0YA  [13Xrange[113X  is  a  dense  list  of  integers  in  arithmetic  progression  (or
+  degression).  This  is  a  list of integers such that the difference between
+  consecutive  elements  is a nonzero constant. Ranges can be abbreviated with
+  the syntactic construct[133X
+  
+  [33X[0;0Y[10X[ [3Xfirst[103X[10X, [3Xsecond[103X[10X .. [3Xlast[103X[10X ][110X[133X
+  
+  [33X[0;0Yor, if the difference between consecutive elements is 1, as[133X
+  
+  [33X[0;0Y[10X[ [3Xfirst[103X[10X .. [3Xlast[103X[10X ][110X.[133X
+  
+  [33X[0;0YIf [10X[3Xfirst[103X[10X > [3Xlast[103X[10X[110X, [10X[ [3Xfirst[103X[10X .. [3Xlast[103X[10X ][110X is the empty list, which by definition is
+  also  a range; also, if [10X[3Xsecond[103X[10X > [3Xfirst[103X[10X > [3Xlast[103X[10X[110X or [10X[3Xsecond[103X[10X < [3Xfirst[103X[10X < [3Xlast[103X[10X[110X, then
+  [10X[  [3Xfirst[103X[10X,  [3Xsecond[103X[10X  ..  [3Xlast[103X[10X  ][110X  is the empty list. If [10X[3Xfirst[103X[10X = [3Xlast[103X[10X[110X, [10X[ [3Xfirst[103X[10X,
+  [3Xsecond[103X[10X  .. [3Xlast[103X[10X ][110X is a singleton list, which is a range, too. Note that [10X[3Xlast[103X[10X
+  -  [3Xfirst[103X[10X[110X  must  be  divisible  by the increment [10X[3Xsecond[103X[10X - [3Xfirst[103X[10X[110X, otherwise an
+  error is signalled.[133X
+  
+  [33X[0;0YCurrently,  the  integers  [3Xfirst[103X,  [3Xsecond[103X and [3Xlast[103X and the length of a range
+  must be [13Xsmall integers[113X as defined in chapter [14X14[114X.[133X
+  
+  [33X[0;0YNote also that a range is just a special case of a list. Thus you can access
+  elements in a range (see [14X21.3[114X), test for membership etc. You can even assign
+  to  such  a  range if it is mutable (see [14X21.4[114X). Of course, unless you assign
+  [10X[3Xlast[103X[10X  +  [3Xsecond[103X[10X  -  [3Xfirst[103X[10X[110X  to  the  entry  [10X[3Xrange[103X[10X[ Length( [3Xrange[103X[10X ) + 1 ][110X, the
+  resulting list will no longer be a range. Note that assigning to an entry of
+  [3Xrange[103X will convert it back into a plain list.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xr := [10..20];[127X[104X
+    [4X[28X[ 10 .. 20 ][128X[104X
+    [4X[25Xgap>[125X [27XLength( r );[127X[104X
+    [4X[28X11[128X[104X
+    [4X[25Xgap>[125X [27Xr[3];[127X[104X
+    [4X[28X12[128X[104X
+    [4X[25Xgap>[125X [27X17 in r;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27X# r still is a range but is now represented as a plain list[127X[104X
+    [4X[25Xgap>[125X [27Xr[1] := 10;; r;[127X[104X
+    [4X[28X[ 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ][128X[104X
+    [4X[25Xgap>[125X [27XIsRange(r);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27X# r is no longer a range[127X[104X
+    [4X[25Xgap>[125X [27Xr[12] := 25;;[127X[104X
+    [4X[25Xgap>[125X [27XIsRange(r);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xr := [1,3..17];[127X[104X
+    [4X[28X[ 1, 3 .. 17 ][128X[104X
+    [4X[25Xgap>[125X [27XLength( r );[127X[104X
+    [4X[28X9[128X[104X
+    [4X[25Xgap>[125X [27Xr[4];[127X[104X
+    [4X[28X7[128X[104X
+    [4X[25Xgap>[125X [27Xr := [0,-1..-9];[127X[104X
+    [4X[28X[ 0, -1 .. -9 ][128X[104X
+    [4X[25Xgap>[125X [27Xr[5];[127X[104X
+    [4X[28X-4[128X[104X
+    [4X[25Xgap>[125X [27Xr := [ 1, 4 .. 32 ];[127X[104X
+    [4X[28XError, Range: <last>-<first> (31) must be divisible by <inc> (3)[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YMost often ranges are used in connection with the [9Xfor[109X-loop see [14X4.15-6[114X). Here
+  the construct[133X
+  
+  [33X[0;0Y[10Xfor [3Xvar[103X[10X in [ [3Xfirst[103X[10X .. [3Xlast[103X[10X ] do [3Xstatements[103X[10X od[110X[133X
+  
+  [33X[0;0Yreplaces the[133X
+  
+  [33X[0;0Y[10Xfor [3Xvar[103X[10X from [3Xfirst[103X[10X to [3Xlast[103X[10X do [3Xstatements[103X[10X od[110X[133X
+  
+  [33X[0;0Ywhich is more usual in other programming languages.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xs := [];; for i in [10..20] do Add( s, i^2 ); od; s;[127X[104X
+    [4X[28X[ 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  a range with [10X[3Xlast[103X[10X >= [3Xfirst[103X[10X[110X is at the same time also a proper set
+  (see [14X21.19[114X),  because  it contains no holes or duplicates and is sorted, and
+  also  a  row  vector (see [14X23[114X), because it contains no holes and all elements
+  are integers.[133X
+  
+  [1X21.22-1 IsRange[101X
+  
+  [33X[1;0Y[29X[2XIsRange[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0Ytests if the object [3Xobj[103X is a range, i.e. is a dense list of integers that is
+  also a range (see [14X21.22[114X for a definition of [21Xrange[121X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsRange( [1,2,3] );  IsRange( [7,5,3,1] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsRange( [1 .. 3] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsRange( [1,2,4,5] );  IsRange( [1,,3,,5,,7] );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsRange( [] );  IsRange( [1] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X21.22-2 IsRangeRep[101X
+  
+  [33X[1;0Y[29X[2XIsRangeRep[102X( [3Xobj[103X ) [32X Representation[133X
+  
+  [33X[0;0YTests  whether  [3Xobj[103X is represented as a range, that is by internally storing
+  only the first value, the in- or decrement, and the last value of the range.[133X
+  
+  [33X[0;0YTo  test  whether  a  list  is a range in the mathematical sense see [2XIsRange[102X
+  ([14X21.22-1[114X).[133X
+  
+  [33X[0;0YLists  created  by  the  syntactic  construct [10X[ [3Xfirst[103X[10X, [3Xsecond[103X[10X .. [3Xlast[103X[10X ][110X, see
+  [14X21.22[114X, are in [2XIsRangeRep[102X.[133X
+  
+  [33X[0;0YNote  that  if  you  modify  an [2XIsRangeRep[102X object by assigning to one of its
+  entries,  or by using [2XAdd[102X ([14X21.4-2[114X) or [2XAppend[102X ([14X21.4-5[114X), then the range may be
+  converted  into  a plain list, even though the resulting list may still be a
+  range, mathematically.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsRangeRep( [1 .. 3] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsRangeRep( [1, 2, 3] );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xl := [1..3];;[127X[104X
+    [4X[25Xgap>[125X [27Xl[1] := 1;;[127X[104X
+    [4X[25Xgap>[125X [27Xl;[127X[104X
+    [4X[28X[ 1, 2, 3 ][128X[104X
+  [4X[32X[104X
+  
+  [1X21.22-3 ConvertToRangeRep[101X
+  
+  [33X[1;0Y[29X[2XConvertToRangeRep[102X( [3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0YFor  some  lists  the  [5XGAP[105X  kernel knows that they are in fact ranges. Those
+  lists  are  represented  internally  in  a compact way, namely in [2XIsRangeRep[102X
+  ([14X21.22-2[114X),  instead of as plain lists. A list that is represented as a plain
+  list might still be a range but [5XGAP[105X may not know this.[133X
+  
+  [33X[0;0YIf [3Xlist[103X is a range then [2XConvertToRangeRep[102X changes the representation of [3Xlist[103X
+  to  [2XIsRangeRep[102X ([14X21.22-2[114X). A call of [2XConvertToRangeRep[102X for a list that is not
+  a range is ignored.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xr:= [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];[127X[104X
+    [4X[28X[ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ][128X[104X
+    [4X[25Xgap>[125X [27XConvertToRangeRep( r );  r;[127X[104X
+    [4X[28X[ 1 .. 10 ][128X[104X
+    [4X[25Xgap>[125X [27Xl:= [ 1, 2, 4, 5 ];;  ConvertToRangeRep( l );  l;[127X[104X
+    [4X[28X[ 1, 2, 4, 5 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X21.23 [33X[0;0YEnumerators[133X[101X
+  
+  [33X[0;0YAn  [13Xenumerator[113X  is  an  immutable  list  that  need  not  store its elements
+  explicitly  but  knows,  from a set of basic data, how to determine the [22Xi[122X-th
+  element  and  the position of a given object. A typical example of this is a
+  vector  space  over a finite field with [22Xq[122X elements for which it is very easy
+  to enumerate all elements using [22Xq[122X-adic expansions of integers.[133X
+  
+  [33X[0;0YUsing  this enumeration can be even quicker than a binary search in a sorted
+  list of vectors, see [2XIsQuickPositionList[102X ([14X21.23-1[114X).[133X
+  
+  [33X[0;0YOn  the  one  hand,  element access to an enumerator may take more time than
+  element  access  to  an  internally  represented  list  containing  the same
+  elements. On the other hand, an enumerator may save a vast amount of memory.
+  Take  for  example  a  permutation  group  of  size a few millions. Even for
+  moderate degree it is unlikely that a list of all its elements will fit into
+  memory whereas it is no problem to construct an enumerator from a stabilizer
+  chain (see [14X43.6[114X).[133X
+  
+  [33X[0;0YThere  are  situations  where  one only wants to loop over the elements of a
+  domain,  without  using  the special facilities of an enumerator, namely the
+  particular  order  of  elements  and the possibility to find the position of
+  elements. For such cases, [5XGAP[105X provides iterators (see [14X30.8[114X).[133X
+  
+  [33X[0;0YThe  functions  [2XEnumerator[102X  ([14X30.3-2[114X)  and  [2XEnumeratorSorted[102X  ([14X30.3-3[114X) return
+  enumerators  of  domains. Most of the special implementations of enumerators
+  in  the  [5XGAP[105X  library are based on the general interface that is provided by
+  [2XEnumeratorByFunctions[102X  ([14X30.3-4[114X);  one  generic  example is [2XEnumeratorByBasis[102X
+  ([14X61.6-5[114X),  which  can  be  used to get an enumerator of a finite dimensional
+  free module.[133X
+  
+  [33X[0;0YAlso    enumerators    for    non-domains    can    be    implemented    via
+  [2XEnumeratorByFunctions[102X ([14X30.3-4[114X); for a discussion, see [14X79.5[114X.[133X
+  
+  [1X21.23-1 IsQuickPositionList[101X
+  
+  [33X[1;0Y[29X[2XIsQuickPositionList[102X( [3Xlist[103X ) [32X filter[133X
+  
+  [33X[0;0YThis  filter  indicates that a position test in [3Xlist[103X is quicker than about 5
+  or  6  element  comparisons  for  [21Xsmaller[121X.  If  this  is  the case it can be
+  beneficial  to  use  [2XPosition[102X  ([14X21.16-1[114X) in [3Xlist[103X and a bit list than ordered
+  lists to represent subsets of [3Xlist[103X.[133X
+  
+  
+  [1X21.24 [33X[0;0YPlain Lists[133X[101X
+  
+  [33X[0;0YPlain  lists  are  the  default  kind of lists in [5XGAP[105X, in the sense that [5XGAP[105X
+  stores  the  list  entries and does not know how to do better (as opposed to
+  ranges  or strings, which are also lists). Often it is not necessary to know
+  how a given list is represented internally, the operations defined for lists
+  apply to all lists.[133X
+  
+  [33X[0;0YTypical  situations  where  the representation matters are when one wants to
+  make  sure  that the given list is [13Xnot[113X a plain list and thus will be handled
+  more  efficiently,  for  example when one installs a method for a particular
+  operation,  where  an  argument  is  required  to  be a list in a particular
+  representation.[133X
+  
+  [1X21.24-1 PlainListCopy[101X
+  
+  [33X[1;0Y[29X[2XPlainListCopy[102X( [3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0YThis  function  returns  a  list  equal  to  its  argument,  in a plain list
+  representation  (see  [2XIsPlistRep[102X  ([14X21.24-2[114X)).  This  is  intended for use in
+  certain rare situations, such as before objectifying, or calling some kernel
+  functions.[133X
+  
+  [1X21.24-2 IsPlistRep[101X
+  
+  [33X[1;0Y[29X[2XIsPlistRep[102X( [3Xobj[103X ) [32X Representation[133X
+  
+  [33X[0;0Y[5XGAP[105X  lists created by entering comma separated values in square brackets are
+  usually   represented   internally   as   so-called   [13Xplain   lists[113X.   Other
+  representations  of  lists  are  [2XIsBlistRep[102X  ([14X22.5-1[114X), [2XIsRangeRep[102X ([14X21.22-2[114X),
+  [2XIsStringRep[102X   ([14X27.4-1[114X),  or  the  ones  that  are  chosen  for  implementing
+  enumerators, see Section [14X21.23[114X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsPlistRep( [ 1, 2, 3 ] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsPlistRep( "abc" );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsPlistRep( [ 1 .. 5 ] );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsPlistRep( BlistList( [ 1 .. 5 ], [ 1 ] ) );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsPlistRep( 0 );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  

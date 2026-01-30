@@ -1,0 +1,297 @@
+/* src/config.h.in.  Generated from configure.ac by autoheader.  */
+
+/* Define if building universal (internal helper macro) */
+#undef AC_APPLE_UNIVERSAL_BUILD
+
+/* define as least offset which is still safe for an unaligned access */
+#undef C_STACK_ALIGN
+
+/* the GAP architecture, for kernel extensions */
+#undef GAPARCH
+
+/* to enable backtraces upon crashes */
+#undef GAP_PRINT_BACKTRACE
+
+/* Defined if backtrace() could be fully identified. */
+#undef HAVE_BACKTRACE
+
+/* Define to 1 if you have the 'clock_getres' function. */
+#undef HAVE_CLOCK_GETRES
+
+/* Define to 1 if you have the 'clock_gettime' function. */
+#undef HAVE_CLOCK_GETTIME
+
+/* define if the compiler supports basic C++11 syntax */
+#undef HAVE_CXX11
+
+/* define as 1 if you have `dlopen' and `dlsym' */
+#undef HAVE_DLOPEN
+
+/* Define to 1 if you have the <execinfo.h> header file. */
+#undef HAVE_EXECINFO_H
+
+/* Define to 1 if you have the 'exp10' function. */
+#undef HAVE_EXP10
+
+/* Define to 1 if you have the 'fork' function. */
+#undef HAVE_FORK
+
+/* Define to 1 if the system has the `always_inline' function attribute */
+#undef HAVE_FUNC_ATTRIBUTE_ALWAYS_INLINE
+
+/* Define to 1 if the system has the `constructor' function attribute */
+#undef HAVE_FUNC_ATTRIBUTE_CONSTRUCTOR
+
+/* Define to 1 if the system has the `fallthrough' function attribute */
+#undef HAVE_FUNC_ATTRIBUTE_FALLTHROUGH
+
+/* Define to 1 if the system has the `format' function attribute */
+#undef HAVE_FUNC_ATTRIBUTE_FORMAT
+
+/* Define to 1 if the system has the `noinline' function attribute */
+#undef HAVE_FUNC_ATTRIBUTE_NOINLINE
+
+/* Define to 1 if the system has the `noreturn' function attribute */
+#undef HAVE_FUNC_ATTRIBUTE_NORETURN
+
+/* Define to 1 if the system has the `pure' function attribute */
+#undef HAVE_FUNC_ATTRIBUTE_PURE
+
+/* Define to 1 if you have the 'getrusage' function. */
+#undef HAVE_GETRUSAGE
+
+/* Define to 1 if you have the 'gettimeofday' function. */
+#undef HAVE_GETTIMEOFDAY
+
+/* Define to 1 if you have the 'grantpt' function. */
+#undef HAVE_GRANTPT
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#undef HAVE_INTTYPES_H
+
+/* Define if you have lib(e)readline */
+#undef HAVE_LIBREADLINE
+
+/* Define to 1 if you have the <libutil.h> header file. */
+#undef HAVE_LIBUTIL_H
+
+/* Define to 1 if you have the 'madvise' function. */
+#undef HAVE_MADVISE
+
+/* define as 1 if you have `openpty' */
+#undef HAVE_OPENPTY
+
+/* Define to 1 if you have the 'popen' function. */
+#undef HAVE_POPEN
+
+/* Define to 1 if you have the 'posix_openpt' function. */
+#undef HAVE_POSIX_OPENPT
+
+/* Define to 1 if you have the 'posix_spawn' function. */
+#undef HAVE_POSIX_SPAWN
+
+/* Define to 1 if you have the 'posix_spawn_file_actions_addchdir' function.
+   */
+#undef HAVE_POSIX_SPAWN_FILE_ACTIONS_ADDCHDIR
+
+/* Define to 1 if you have the 'posix_spawn_file_actions_addchdir_np'
+   function. */
+#undef HAVE_POSIX_SPAWN_FILE_ACTIONS_ADDCHDIR_NP
+
+/* Define if you have POSIX threads libraries and header files. */
+#undef HAVE_PTHREAD
+
+/* Have PTHREAD_PRIO_INHERIT. */
+#undef HAVE_PTHREAD_PRIO_INHERIT
+
+/* Define to 1 if you have the 'ptsname' function. */
+#undef HAVE_PTSNAME
+
+/* Define to 1 if you have the <pty.h> header file. */
+#undef HAVE_PTY_H
+
+/* Define to 1 if you have the 'sbrk' function. */
+#undef HAVE_SBRK
+
+/* Define to 1 if you have the 'select' function. */
+#undef HAVE_SELECT
+
+/* Define to 1 if you have the 'setitimer' function. */
+#undef HAVE_SETITIMER
+
+/* Define to 1 if you have the 'setpgid' function. */
+#undef HAVE_SETPGID
+
+/* Define to 1 if you have the 'sigaction' function. */
+#undef HAVE_SIGACTION
+
+/* Define to 1 if you have the 'signal' function. */
+#undef HAVE_SIGNAL
+
+/* Define to 1 if you have the <signal.h> header file. */
+#undef HAVE_SIGNAL_H
+
+/* Check for sig_atomic_t */
+#undef HAVE_SIG_ATOMIC_T
+
+/* Define to 1 if you have the <spawn.h> header file. */
+#undef HAVE_SPAWN_H
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#undef HAVE_STDINT_H
+
+/* Define to 1 if you have the <stdio.h> header file. */
+#undef HAVE_STDIO_H
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#undef HAVE_STDLIB_H
+
+/* Define to 1 if you have the <strings.h> header file. */
+#undef HAVE_STRINGS_H
+
+/* Define to 1 if you have the <string.h> header file. */
+#undef HAVE_STRING_H
+
+/* Define to 1 if you have the 'sysconf' function. */
+#undef HAVE_SYSCONF
+
+/* Define to 1 if you have the <sys/ioctl.h> header file. */
+#undef HAVE_SYS_IOCTL_H
+
+/* Define to 1 if you have the <sys/resource.h> header file. */
+#undef HAVE_SYS_RESOURCE_H
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#undef HAVE_SYS_STAT_H
+
+/* Define to 1 if you have the <sys/time.h> header file. */
+#undef HAVE_SYS_TIME_H
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#undef HAVE_SYS_TYPES_H
+
+/* Define to 1 if you have <sys/wait.h> that is POSIX.1 compatible. */
+#undef HAVE_SYS_WAIT_H
+
+/* Define to 1 if you have the <termios.h> header file. */
+#undef HAVE_TERMIOS_H
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#undef HAVE_UNISTD_H
+
+/* Define to 1 if you have the 'unlockpt' function. */
+#undef HAVE_UNLOCKPT
+
+/* Define to 1 if you have the <util.h> header file. */
+#undef HAVE_UTIL_H
+
+/* Define to 1 if you have the 'vfork' function. */
+#undef HAVE_VFORK
+
+/* Define to 1 if you have the <vfork.h> header file. */
+#undef HAVE_VFORK_H
+
+/* Define to 1 if you have the 'vm_allocate' function. */
+#undef HAVE_VM_ALLOCATE
+
+/* Define to 1 if 'fork' works. */
+#undef HAVE_WORKING_FORK
+
+/* Define to 1 if 'vfork' works. */
+#undef HAVE_WORKING_VFORK
+
+/* Define to 1 if the system has the `__builtin_clz' built-in function */
+#undef HAVE___BUILTIN_CLZ
+
+/* Define to 1 if the system has the `__builtin_clzl' built-in function */
+#undef HAVE___BUILTIN_CLZL
+
+/* Define to 1 if the system has the `__builtin_clzll' built-in function */
+#undef HAVE___BUILTIN_CLZLL
+
+/* Define to 1 if the system has the `__builtin_mul_overflow' built-in
+   function */
+#undef HAVE___BUILTIN_MUL_OVERFLOW
+
+/* Define to 1 if the system has the `__builtin_popcountl' built-in function
+   */
+#undef HAVE___BUILTIN_POPCOUNTL
+
+/* Define to the address where bug reports for this package should be sent. */
+#undef PACKAGE_BUGREPORT
+
+/* Define to the full name of this package. */
+#undef PACKAGE_NAME
+
+/* Define to the full name and version of this package. */
+#undef PACKAGE_STRING
+
+/* Define to the one symbol short name of this package. */
+#undef PACKAGE_TARNAME
+
+/* Define to the home page for this package. */
+#undef PACKAGE_URL
+
+/* Define to the version of this package. */
+#undef PACKAGE_VERSION
+
+/* Define to necessary symbol if this constant uses a non-standard name on
+   your system. */
+#undef PTHREAD_CREATE_JOINABLE
+
+/* The size of 'int', as computed by sizeof. */
+#undef SIZEOF_INT
+
+/* The size of 'long', as computed by sizeof. */
+#undef SIZEOF_LONG
+
+/* The size of 'long long', as computed by sizeof. */
+#undef SIZEOF_LONG_LONG
+
+/* The size of 'void *', as computed by sizeof. */
+#undef SIZEOF_VOID_P
+
+/* Define to 1 if all of the C89 standard headers exist (not just the ones
+   required in a freestanding environment). This macro is provided for
+   backward compatibility; new code need not use it. */
+#undef STDC_HEADERS
+
+/* define as 1 on SPARC architecture to flush register windows */
+#undef SYS_IS_SPARC
+
+/* define as 1 if we should try and use the __builtin_popcountl function if
+   available */
+#undef USE_POPCNT
+
+/* Define WORDS_BIGENDIAN to 1 if your processor stores words with the most
+   significant byte first (like Motorola and SPARC, unlike Intel). */
+#if defined AC_APPLE_UNIVERSAL_BUILD
+# if defined __BIG_ENDIAN__
+#  define WORDS_BIGENDIAN 1
+# endif
+#else
+# ifndef WORDS_BIGENDIAN
+#  undef WORDS_BIGENDIAN
+# endif
+#endif
+
+/* Number of bits in a file offset, on hosts where this is settable. */
+#undef _FILE_OFFSET_BITS
+
+/* Define to 1 on platforms where this makes off_t a 64-bit type. */
+#undef _LARGE_FILES
+
+/* Number of bits in time_t, on hosts where this is settable. */
+#undef _TIME_BITS
+
+/* Define to 1 on platforms where this makes time_t a 64-bit type. */
+#undef __MINGW_USE_VC2005_COMPAT
+
+/* Defined to return type of backtrace(). */
+#undef backtrace_size_t
+
+/* Define as a signed integer type capable of holding a process identifier. */
+#undef pid_t
+
+/* Define as 'fork' if 'vfork' does not work. */
+#undef vfork

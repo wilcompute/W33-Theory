@@ -1,0 +1,1917 @@
+  
+  [1X66 [33X[0;0YPolynomials and Rational Functions[133X[101X
+  
+  [33X[0;0YLet  [22XR[122X  be a commutative ring-with-one. We call a free associative algebra [22XA[122X
+  over  [22XR[122X  a  [13Xpolynomial  ring[113X  over  [22XR[122X.  The  free generators of [22XA[122X are called
+  [13Xindeterminates[113X (to avoid naming conflicts with the word [13Xvariables[113X which will
+  be  used  to  denote  [5XGAP[105X variables only) , they are usually denoted by [22Xx_1,
+  x_2, ...[122X. The number of indeterminates is called the [13Xrank[113X of [22XA[122X. The elements
+  of   [22XA[122X  are  called  [13Xpolynomials[113X.  Products  of  indeterminates  are  called
+  [13Xmonomials[113X,  every polynomial can be expressed as a finite sum of products of
+  monomials  with ring elements in a form like [22Xr_{1,0} x_1 + r_{1,1} x_1 x_2 +
+  r_{0,1} x_2 + ⋯[122X with [22Xr_{i,j} ∈ R[122X.[133X
+  
+  [33X[0;0YA  polynomial  ring  of  rank 1 is called an [13Xunivariate[113X polynomial ring, its
+  elements are [13Xunivariate polynomials[113X.[133X
+  
+  [33X[0;0YPolynomial rings of smaller rank naturally embed in rings of higher rank; if
+  [22XS[122X  is  a  subring  of  [22XR[122X then a polynomial ring over [22XS[122X naturally embeds in a
+  polynomial  ring  over  [22XR[122X  of  the same rank. Note however that [5XGAP[105X does not
+  consider  [22XR[122X as a subset of a polynomial ring over [22XR[122X; for example the zero of
+  [22XR[122X ([22X0[122X) and the zero of the polynomial ring ([22X0x^0[122X) are different objects.[133X
+  
+  [33X[0;0YInternally,  indeterminates  are represented by positive integers, but it is
+  possible  to give names to them to have them printed in a nicer way. Beware,
+  however  that  there  is  not  necessarily  any  relation between the way an
+  indeterminate  is  called  and  the  way it is printed. See section [14X66.1[114X for
+  details.[133X
+  
+  [33X[0;0YIf  [22XR[122X  is  an  integral  domain, the polynomial ring [22XA[122X over [22XR[122X is an integral
+  domain  as  well and one can therefore form its quotient field [22XQ[122X. This field
+  is called a [13Xfield of rational functions[113X. Again [22XA[122X embeds naturally into [22XQ[122X and
+  [5XGAP[105X  will perform this embedding implicitly. (In fact it implements the ring
+  of  rational functions over [22XR[122X.) To avoid problems with leading coefficients,
+  however, [22XR[122X must be a unique factorization domain.[133X
+  
+  
+  [1X66.1 [33X[0;0YIndeterminates[133X[101X
+  
+  [33X[0;0YInternally,  indeterminates are created for a [13Xfamily[113X of objects (for example
+  all elements of finite fields in characteristic [22X3[122X are in one family). Thus a
+  variable  [21Xx[121X  over  the  rationals is also an [21Xx[121X over the integers, while an [21Xx[121X
+  over [10XGF(3)[110X is different.[133X
+  
+  [33X[0;0YWithin  one  family,  every  indeterminate has a number [3Xnr[103X and as long as no
+  other  names  have  been  assigned,  this indeterminate will be displayed as
+  [21X[10Xx_[3Xnr[103X[10X[110X[121X. Indeterminate numbers can be arbitrary nonnegative integers.[133X
+  
+  [33X[0;0YIt  is  possible  to assign names to indeterminates; these names are strings
+  and  only  provide  a  means  for printing the indeterminates in a nice way.
+  Indeterminates that have not been assigned a name will be printed as [21X[10Xx_[3Xnr[103X[10X[110X[121X.[133X
+  
+  [33X[0;0Y(Because of this printing convention, the name [10Xx_[3Xnr[103X[10X[110X is interpreted specially
+  to always denote the variable with internal number [3Xnr[103X.)[133X
+  
+  [33X[0;0YThe  indeterminate  names  have  not  necessarily  any relations to variable
+  names:  this  means that an indeterminate whose name is [21X[10Xx[110X[121X cannot be accessed
+  using the variable [10Xx[110X, unless [10Xx[110X was defined to be that indeterminate.[133X
+  
+  [33X[0;0YWhen asking for indeterminates with certain names, [5XGAP[105X usually will take the
+  first  (with  respect to the internal numbering) indeterminates that are not
+  yet  named,  name  these  accordingly  and return them. Thus when asking for
+  named  indeterminates,  no  relation between names and indeterminate numbers
+  can            be            guaranteed.            The            attribute
+  [10XIndeterminateNumberOfLaurentPolynomial([3Xindet[103X[10X)[110X  will return the number of the
+  indeterminate [3Xindet[103X.[133X
+  
+  [33X[0;0YWhen  asked  to  create an indeterminate with a name that exists already for
+  the  family,  [5XGAP[105X will by default return this existing indeterminate. If you
+  explicitly  want a [13Xnew[113X indeterminate, distinct from the already existing one
+  with  the  [13Xsame[113X name, you can add the [10Xnew[110X option to the function call. (This
+  is in most cases not a good idea.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XR:=PolynomialRing(GF(3),["x","y","z"]);[127X[104X
+    [4X[28XGF(3)[x,y,z][128X[104X
+    [4X[25Xgap>[125X [27XList(IndeterminatesOfPolynomialRing(R),[127X[104X
+    [4X[25X>[125X [27X  IndeterminateNumberOfLaurentPolynomial);[127X[104X
+    [4X[28X[ 1, 2, 3 ][128X[104X
+    [4X[25Xgap>[125X [27XR:=PolynomialRing(GF(3),["z"]);[127X[104X
+    [4X[28XGF(3)[z][128X[104X
+    [4X[25Xgap>[125X [27XList(IndeterminatesOfPolynomialRing(R),[127X[104X
+    [4X[25X>[125X [27X  IndeterminateNumberOfLaurentPolynomial);[127X[104X
+    [4X[28X[ 3 ][128X[104X
+    [4X[25Xgap>[125X [27XR:=PolynomialRing(GF(3),["x","y","z"]:new);[127X[104X
+    [4X[28XGF(3)[x,y,z][128X[104X
+    [4X[25Xgap>[125X [27XList(IndeterminatesOfPolynomialRing(R),[127X[104X
+    [4X[25X>[125X [27X  IndeterminateNumberOfLaurentPolynomial);[127X[104X
+    [4X[28X[ 4, 5, 6 ][128X[104X
+    [4X[25Xgap>[125X [27XR:=PolynomialRing(GF(3),["z"]);[127X[104X
+    [4X[28XGF(3)[z][128X[104X
+    [4X[25Xgap>[125X [27XList(IndeterminatesOfPolynomialRing(R),[127X[104X
+    [4X[25X>[125X [27X  IndeterminateNumberOfLaurentPolynomial);[127X[104X
+    [4X[28X[ 3 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X66.1-1 [33X[0;0YIndeterminate[133X[101X
+  
+  [33X[1;0Y[29X[2XIndeterminate[102X( [3XR[103X[, [3Xnr[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XIndeterminate[102X( [3XR[103X[, [3Xname[103X][, [3Xavoid[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XIndeterminate[102X( [3Xfam[103X, [3Xnr[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XX[102X( [3XR[103X[, [3Xnr[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XX[102X( [3XR[103X[, [3Xname[103X][, [3Xavoid[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XX[102X( [3Xfam[103X, [3Xnr[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  indeterminate number [3Xnr[103X over the ring [3XR[103X. If [3Xnr[103X is not given it
+  defaults to 1. If the number is not specified a list [3Xavoid[103X of indeterminates
+  may  be  given. The function will return an indeterminate that is guaranteed
+  to  be  different  from  all the indeterminates in the list [3Xavoid[103X. The third
+  usage returns an indeterminate called [3Xname[103X (also avoiding the indeterminates
+  in [3Xavoid[103X if given).[133X
+  
+  [33X[0;0Y[2XX[102X is simply a synonym for [2XIndeterminate[102X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xx:=Indeterminate(GF(3),"x");[127X[104X
+    [4X[28Xx[128X[104X
+    [4X[25Xgap>[125X [27Xy:=X(GF(3),"y");z:=X(GF(3),"X");[127X[104X
+    [4X[28Xy[128X[104X
+    [4X[28XX[128X[104X
+    [4X[25Xgap>[125X [27XX(GF(3),2);[127X[104X
+    [4X[28Xy[128X[104X
+    [4X[25Xgap>[125X [27XX(GF(3),"x_3");[127X[104X
+    [4X[28XX[128X[104X
+    [4X[25Xgap>[125X [27XX(GF(3),[y,z]);[127X[104X
+    [4X[28Xx[128X[104X
+  [4X[32X[104X
+  
+  [1X66.1-2 IndeterminateNumberOfUnivariateRationalFunction[101X
+  
+  [33X[1;0Y[29X[2XIndeterminateNumberOfUnivariateRationalFunction[102X( [3Xrfun[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the  number  of  the indeterminate in which the univariate rational
+  function  [3Xrfun[103X  is expressed. (This also provides a way to obtain the number
+  of a given indeterminate.)[133X
+  
+  [33X[0;0YA  constant  rational function might not possess an indeterminate number. In
+  this  case [2XIndeterminateNumberOfUnivariateRationalFunction[102X will default to a
+  value  of 1. Therefore two univariate polynomials may be considered to be in
+  the  same  univariate  polynomial ring if their indeterminates have the same
+  number  or  one  if  of  them  is  constant.  (see  also [2XCIUnivPols[102X ([14X66.1-5[114X)
+  and [2XIsLaurentPolynomialDefaultRep[102X ([14X66.21-7[114X)).[133X
+  
+  [1X66.1-3 IndeterminateOfUnivariateRationalFunction[101X
+  
+  [33X[1;0Y[29X[2XIndeterminateOfUnivariateRationalFunction[102X( [3Xrfun[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the indeterminate in which the univariate rational function [3Xrfun[103X is
+  expressed. (cf. [2XIndeterminateNumberOfUnivariateRationalFunction[102X ([14X66.1-2[114X).)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIndeterminateNumberOfUnivariateRationalFunction(z);[127X[104X
+    [4X[28X3[128X[104X
+    [4X[25Xgap>[125X [27XIndeterminateOfUnivariateRationalFunction(z^5+z);[127X[104X
+    [4X[28XX[128X[104X
+  [4X[32X[104X
+  
+  [1X66.1-4 IndeterminateName[101X
+  
+  [33X[1;0Y[29X[2XIndeterminateName[102X( [3Xfam[103X, [3Xnr[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XHasIndeterminateName[102X( [3Xfam[103X, [3Xnr[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XSetIndeterminateName[102X( [3Xfam[103X, [3Xnr[103X, [3Xname[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XSetIndeterminateName[102X  assigns  the  name  [3Xname[103X  to  indeterminate  [3Xnr[103X in the
+  rational  functions  family [3Xfam[103X. It issues an error if the indeterminate was
+  already named.[133X
+  
+  [33X[0;0Y[2XIndeterminateName[102X  returns  the name of the [3Xnr[103X-th indeterminate (and returns
+  [9Xfail[109X if no name has been assigned).[133X
+  
+  [33X[0;0Y[2XHasIndeterminateName[102X   tests  whether  indeterminate  [3Xnr[103X  has  already  been
+  assigned a name.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIndeterminateName(FamilyObj(x),2);[127X[104X
+    [4X[28X"y"[128X[104X
+    [4X[25Xgap>[125X [27XHasIndeterminateName(FamilyObj(x),4);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XSetIndeterminateName(FamilyObj(x),10,"bla");[127X[104X
+    [4X[25Xgap>[125X [27XIndeterminate(GF(3),10);[127X[104X
+    [4X[28Xbla[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAs  a  convenience there is a special method installed for [10XSetName[110X that will
+  assign a name to an indeterminate.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xa:=Indeterminate(GF(3),5);[127X[104X
+    [4X[28Xx_5[128X[104X
+    [4X[25Xgap>[125X [27XSetName(a,"ah");[127X[104X
+    [4X[25Xgap>[125X [27Xa^5+a;[127X[104X
+    [4X[28Xah^5+ah[128X[104X
+  [4X[32X[104X
+  
+  [1X66.1-5 CIUnivPols[101X
+  
+  [33X[1;0Y[29X[2XCIUnivPols[102X( [3Xupol1[103X, [3Xupol2[103X ) [32X function[133X
+  
+  [33X[0;0YThis  function  (whose  name  stands  for [21Xcommon indeterminate of univariate
+  polynomials[121X)   takes  two  univariate  polynomials  as  arguments.  If  both
+  polynomials  are given in the same indeterminate number [3Xindnum[103X (in this case
+  they  are  [21Xcompatible[121X  as  univariate polynomials) it returns [3Xindnum[103X. In all
+  other cases it returns [9Xfail[109X. [2XCIUnivPols[102X also accepts if either polynomial is
+  constant  but formally expressed in another indeterminate, in this situation
+  the indeterminate of the other polynomial is selected.[133X
+  
+  
+  [1X66.2 [33X[0;0YOperations for Rational Functions[133X[101X
+  
+  [33X[0;0YThe rational functions form a field, therefore all arithmetic operations are
+  applicable to rational functions.[133X
+  
+  [33X[0;0Y[10X[3Xf[103X[10X + [3Xg[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xf[103X[10X - [3Xg[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xf[103X[10X * [3Xg[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xf[103X[10X / [3Xg[103X[10X[110X[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xx:=Indeterminate(Rationals,1);;y:=Indeterminate(Rationals,2);;[127X[104X
+    [4X[25Xgap>[125X [27Xf:=3+x*y+x^5;;g:=5+x^2*y+x*y^2;;[127X[104X
+    [4X[25Xgap>[125X [27Xa:=g/f;[127X[104X
+    [4X[28X(x_1^2*x_2+x_1*x_2^2+5)/(x_1^5+x_1*x_2+3)[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  the  quotient  [10X[3Xf[103X[10X/[3Xg[103X[10X[110X  of two polynomials might be represented as a
+  rational  function  again.  If [3Xg[103X is known to divide [3Xf[103X the call [10XQuotient([3Xf[103X[10X,[3Xg[103X[10X)[110X
+  (see [2XQuotient[102X ([14X56.1-9[114X)) should be used instead.[133X
+  
+  [33X[0;0Y[10X[3Xf[103X[10X mod [3Xg[103X[10X[110X[133X
+  
+  [33X[0;0YFor  two  Laurent  polynomials  [3Xf[103X  and [3Xg[103X, [10X[3Xf[103X[10X mod [3Xg[103X[10X[110X is the Euclidean remainder
+  (see [2XEuclideanRemainder[102X ([14X56.6-4[114X)) of [3Xf[103X modulo [3Xg[103X.[133X
+  
+  [33X[0;0YAs  calculating  a  multivariate  Gcd can be expensive, it is not guaranteed
+  that  rational functions will always be represented as a quotient of coprime
+  polynomials.  In  certain unfortunate situations this might lead to a degree
+  explosion.   To  ensure  cancellation  you  can  use  [2XGcd[102X  ([14X56.7-1[114X)  on  the
+  [2XNumeratorOfRationalFunction[102X   ([14X66.4-2[114X)   and   [2XDenominatorOfRationalFunction[102X
+  ([14X66.4-3[114X) values of a given rational function.[133X
+  
+  [33X[0;0YAll  polynomials  as  well  as  all  the  univariate polynomials in the same
+  indeterminate  form  subrings  of  this field. If two rational functions are
+  known  to be in the same subring, the result will be expressed as element in
+  this subring.[133X
+  
+  
+  [1X66.3 [33X[0;0YComparison of Rational Functions[133X[101X
+  
+  [33X[0;0Y[10X[3Xf[103X[10X = [3Xg[103X[10X[110X[133X
+  
+  [33X[0;0YTwo  rational  functions  [3Xf[103X  and  [3Xg[103X  are equal if the product [10XNumerator([3Xf[103X[10X) *
+  Denominator([3Xg[103X[10X)[110X equals [10XNumerator([3Xg[103X[10X) * Denominator([3Xf[103X[10X)[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xx:=Indeterminate(Rationals,"x");;y:=Indeterminate(Rationals,"y");;[127X[104X
+    [4X[25Xgap>[125X [27Xf:=3+x*y+x^5;;g:=5+x^2*y+x*y^2;;[127X[104X
+    [4X[25Xgap>[125X [27Xa:=g/f;[127X[104X
+    [4X[28X(x^2*y+x*y^2+5)/(x^5+x*y+3)[128X[104X
+    [4X[25Xgap>[125X [27Xb:=(g*f)/(f^2);[127X[104X
+    [4X[28X(x^7*y+x^6*y^2+5*x^5+x^3*y^2+x^2*y^3+3*x^2*y+3*x*y^2+5*x*y+15)/(x^10+2\[128X[104X
+    [4X[28X*x^6*y+6*x^5+x^2*y^2+6*x*y+9)[128X[104X
+    [4X[25Xgap>[125X [27Xa=b;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[10X[3Xf[103X[10X < [3Xg[103X[10X[110X[133X
+  
+  [33X[0;0YThe  ordering  of  rational functions is defined in several steps. Monomials
+  (products   of   indeterminates)   are   sorted   first   by   degree,  then
+  lexicographically   (with  [22Xx_1>x_2[122X)  (see [2XMonomialGrlexOrdering[102X  ([14X66.17-8[114X)).
+  Products of monomials with ring elements ([21Xterms[121X) are compared first by their
+  monomials and then by their coefficients.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xx>y;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xx^2*y<x*y^2;[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xx*y<x^2*y;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xx^2*y < 5* y*x^2;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YPolynomials  are  compared by comparing the largest terms in turn until they
+  differ.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xx+y<y;[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xx<x+1;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YRational  functions  are compared by comparing the polynomial [10XNumerator([3Xf[103X[10X) *
+  Denominator([3Xg[103X[10X)[110X  with  the  polynomial [10XNumerator([3Xg[103X[10X) * Denominator([3Xf[103X[10X)[110X. (As the
+  ordering  of monomials used by [5XGAP[105X is invariant under multiplication this is
+  independent of common factors in numerator and denominator.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf/g<g/f;[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xf/g<(g*g)/(f*g);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YFor univariate polynomials this reduces to an ordering first by total degree
+  and then lexicographically on the coefficients.[133X
+  
+  
+  [1X66.4 [33X[0;0YProperties and Attributes of Rational Functions[133X[101X
+  
+  [33X[0;0YAll  these tests are applicable to [13Xevery[113X rational function. Depending on the
+  internal  representation  of  the  rational  function, however some of these
+  tests (in particular, univariateness) might be expensive in some cases.[133X
+  
+  [33X[0;0YFor  reasons  of performance within algorithms it can be useful to use other
+  attributes,  which  give  a  slightly  more  technical  representation.  See
+  section [14X66.20[114X for details.[133X
+  
+  [1X66.4-1 IsPolynomialFunction[101X
+  
+  [33X[1;0Y[29X[2XIsPolynomialFunction[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsRationalFunction[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YA rational function is an element of the quotient field of a polynomial ring
+  over  an  UFD.  It  is  represented  as  a  quotient of two polynomials, its
+  numerator  (see [2XNumeratorOfRationalFunction[102X  ([14X66.4-2[114X))  and  its denominator
+  (see [2XDenominatorOfRationalFunction[102X ([14X66.4-3[114X))[133X
+  
+  [33X[0;0YA polynomial function is an element of a polynomial ring (not necessarily an
+  UFD), or a rational function.[133X
+  
+  [33X[0;0Y[5XGAP[105X considers [2XIsRationalFunction[102X as a subcategory of [2XIsPolynomialFunction[102X.[133X
+  
+  [1X66.4-2 NumeratorOfRationalFunction[101X
+  
+  [33X[1;0Y[29X[2XNumeratorOfRationalFunction[102X( [3Xratfun[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns the numerator of the rational function [3Xratfun[103X.[133X
+  
+  [33X[0;0YAs  no  proper  multivariate  gcd  has  been implemented yet, numerators and
+  denominators are not guaranteed to be reduced![133X
+  
+  [1X66.4-3 DenominatorOfRationalFunction[101X
+  
+  [33X[1;0Y[29X[2XDenominatorOfRationalFunction[102X( [3Xratfun[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns the denominator of the rational function [3Xratfun[103X.[133X
+  
+  [33X[0;0YAs  no  proper  multivariate  gcd  has  been implemented yet, numerators and
+  denominators are not guaranteed to be reduced![133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xx:=Indeterminate(Rationals,1);;y:=Indeterminate(Rationals,2);;[127X[104X
+    [4X[25Xgap>[125X [27XDenominatorOfRationalFunction((x*y+x^2)/y);[127X[104X
+    [4X[28Xy[128X[104X
+    [4X[25Xgap>[125X [27XNumeratorOfRationalFunction((x*y+x^2)/y);[127X[104X
+    [4X[28Xx^2+x*y[128X[104X
+  [4X[32X[104X
+  
+  [1X66.4-4 IsPolynomial[101X
+  
+  [33X[1;0Y[29X[2XIsPolynomial[102X( [3Xratfun[103X ) [32X property[133X
+  
+  [33X[0;0YA  polynomial  is  a  rational  function  whose  denominator is one. (If the
+  coefficients  family  forms  a  field  this is equivalent to the denominator
+  being constant.)[133X
+  
+  [33X[0;0YIf  the  base  family  is not a field, it may be impossible to represent the
+  quotient  of  a  polynomial  by a ring element as a polynomial again, but it
+  will have to be represented as a rational function.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsPolynomial((x*y+x^2*y^3)/y);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsPolynomial((x*y+x^2)/y);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X66.4-5 AsPolynomial[101X
+  
+  [33X[1;0Y[29X[2XAsPolynomial[102X( [3Xpoly[103X ) [32X attribute[133X
+  
+  [33X[0;0YIf  [3Xpoly[103X  is a rational function that is a polynomial this attribute returns
+  an  equal  rational function [22Xp[122X such that [22Xp[122X is equal to its numerator and the
+  denominator of [22Xp[122X is one.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XAsPolynomial((x*y+x^2*y^3)/y);[127X[104X
+    [4X[28Xx^2*y^2+x[128X[104X
+  [4X[32X[104X
+  
+  [1X66.4-6 IsUnivariateRationalFunction[101X
+  
+  [33X[1;0Y[29X[2XIsUnivariateRationalFunction[102X( [3Xratfun[103X ) [32X property[133X
+  
+  [33X[0;0YA  rational  function is univariate if its numerator and its denominator are
+  both   polynomials   in   the   same   one   indeterminate.   The  attribute
+  [2XIndeterminateNumberOfUnivariateRationalFunction[102X  ([14X66.1-2[114X)  can  be  used  to
+  obtain the number of this common indeterminate.[133X
+  
+  [1X66.4-7 CoefficientsOfUnivariateRationalFunction[101X
+  
+  [33X[1;0Y[29X[2XCoefficientsOfUnivariateRationalFunction[102X( [3Xrfun[103X ) [32X attribute[133X
+  
+  [33X[0;0Yif  [3Xrfun[103X  is a univariate rational function, this attribute returns a list [10X[
+  [3Xncof[103X[10X,  [3Xdcof[103X[10X,  [3Xval[103X[10X  ][110X where [3Xncof[103X and [3Xdcof[103X are coefficient lists of univariate
+  polynomials [3Xn[103X and [3Xd[103X and a valuation [3Xval[103X such that [22X[3Xrfun[103X = x^[3Xval[103X ⋅ [3Xn[103X / [3Xd[103X[122X where
+  [22Xx[122X      is      the     variable     with     the     number     given     by
+  [2XIndeterminateNumberOfUnivariateRationalFunction[102X   ([14X66.1-2[114X).   Numerator  and
+  denominator are guaranteed to be cancelled.[133X
+  
+  [1X66.4-8 IsUnivariatePolynomial[101X
+  
+  [33X[1;0Y[29X[2XIsUnivariatePolynomial[102X( [3Xratfun[103X ) [32X property[133X
+  
+  [33X[0;0YA univariate polynomial is a polynomial in only one indeterminate.[133X
+  
+  [1X66.4-9 CoefficientsOfUnivariatePolynomial[101X
+  
+  [33X[1;0Y[29X[2XCoefficientsOfUnivariatePolynomial[102X( [3Xpol[103X ) [32X attribute[133X
+  
+  [33X[0;0Y[2XCoefficientsOfUnivariatePolynomial[102X  returns  the  coefficient  list  of  the
+  polynomial [3Xpol[103X, sorted in ascending order. (It returns the empty list if [3Xpol[103X
+  is 0.)[133X
+  
+  [1X66.4-10 IsLaurentPolynomial[101X
+  
+  [33X[1;0Y[29X[2XIsLaurentPolynomial[102X( [3Xratfun[103X ) [32X property[133X
+  
+  [33X[0;0YA  Laurent polynomial is a univariate rational function whose denominator is
+  a monomial. Therefore every univariate polynomial is a Laurent polynomial.[133X
+  
+  [33X[0;0YThe  attribute  [2XCoefficientsOfLaurentPolynomial[102X  ([14X66.13-2[114X)  gives  a compact
+  representation as Laurent polynomial.[133X
+  
+  [1X66.4-11 IsConstantRationalFunction[101X
+  
+  [33X[1;0Y[29X[2XIsConstantRationalFunction[102X( [3Xratfun[103X ) [32X property[133X
+  
+  [33X[0;0YA  constant  rational function is a function whose numerator and denominator
+  are polynomials of degree 0.[133X
+  
+  [1X66.4-12 IsPrimitivePolynomial[101X
+  
+  [33X[1;0Y[29X[2XIsPrimitivePolynomial[102X( [3XF[103X, [3Xpol[103X ) [32X operation[133X
+  
+  [33X[0;0YFor  a  univariate  polynomial  [3Xpol[103X of degree [22Xd[122X in the indeterminate [22XX[122X, with
+  coefficients  in  a  finite  field  [3XF[103X with [22Xq[122X elements, [2XIsPrimitivePolynomial[102X
+  returns [9Xtrue[109X if[133X
+  
+  [31X1[131X   [33X[0;6Y[3Xpol[103X divides [22XX^{q^d-1} - 1[122X, and[133X
+  
+  [31X2[131X   [33X[0;6Yfor each prime divisor [22Xp[122X of [22Xq^d - 1[122X, [3Xpol[103X does not divide [22XX^{(q^d-1)/p}
+        - 1[122X,[133X
+  
+  [33X[0;0Yand [9Xfalse[109X otherwise.[133X
+  
+  [1X66.4-13 SplittingField[101X
+  
+  [33X[1;0Y[29X[2XSplittingField[102X( [3Xf[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the  smallest  field  which  contains the coefficients of [3Xf[103X and the
+  roots of [3Xf[103X.[133X
+  
+  
+  [1X66.5 [33X[0;0YUnivariate Polynomials[133X[101X
+  
+  [33X[0;0YSome  of the operations are actually defined on the larger domain of Laurent
+  polynomials  (see  [14X66.13[114X).  For  this section you can simply ignore the word
+  [21XLaurent[121X if it occurs in a description.[133X
+  
+  [1X66.5-1 UnivariatePolynomial[101X
+  
+  [33X[1;0Y[29X[2XUnivariatePolynomial[102X( [3Xring[103X, [3Xcofs[103X[, [3Xind[103X] ) [32X operation[133X
+  
+  [33X[0;0Yconstructs  an univariate polynomial over the ring [3Xring[103X in the indeterminate
+  [3Xind[103X with the coefficients given by [3Xcofs[103X.[133X
+  
+  [1X66.5-2 UnivariatePolynomialByCoefficients[101X
+  
+  [33X[1;0Y[29X[2XUnivariatePolynomialByCoefficients[102X( [3Xfam[103X, [3Xcofs[103X, [3Xind[103X ) [32X operation[133X
+  
+  [33X[0;0Yconstructs  an univariate polynomial over the coefficients family [3Xfam[103X and in
+  the  indeterminate  [3Xind[103X  with  the coefficients given by [3Xcofs[103X. This function
+  should  be  used  in  algorithms to create polynomials as it avoids overhead
+  associated with [2XUnivariatePolynomial[102X ([14X66.5-1[114X).[133X
+  
+  [1X66.5-3 DegreeOfLaurentPolynomial[101X
+  
+  [33X[1;0Y[29X[2XDegreeOfLaurentPolynomial[102X( [3Xpol[103X ) [32X attribute[133X
+  
+  [33X[0;0YThe  degree of a univariate (Laurent) polynomial [3Xpol[103X is the largest exponent
+  [22Xn[122X of a monomial [22Xx^n[122X of [3Xpol[103X. The degree of a zero polynomial is defined to be
+  [10X-infinity[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xp:=UnivariatePolynomial(Rationals,[1,2,3,4],1);[127X[104X
+    [4X[28X4*x^3+3*x^2+2*x+1[128X[104X
+    [4X[25Xgap>[125X [27XUnivariatePolynomialByCoefficients(FamilyObj(1),[9,2,3,4],73);[127X[104X
+    [4X[28X4*x_73^3+3*x_73^2+2*x_73+9[128X[104X
+    [4X[25Xgap>[125X [27XCoefficientsOfUnivariatePolynomial(p);[127X[104X
+    [4X[28X[ 1, 2, 3, 4 ][128X[104X
+    [4X[25Xgap>[125X [27XDegreeOfLaurentPolynomial(p);[127X[104X
+    [4X[28X3[128X[104X
+    [4X[25Xgap>[125X [27XDegreeOfLaurentPolynomial(Zero(p));[127X[104X
+    [4X[28X-infinity[128X[104X
+    [4X[25Xgap>[125X [27XIndeterminateNumberOfLaurentPolynomial(p);[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XIndeterminateOfLaurentPolynomial(p);[127X[104X
+    [4X[28Xx[128X[104X
+  [4X[32X[104X
+  
+  [1X66.5-4 RootsOfPolynomial[101X
+  
+  [33X[1;0Y[29X[2XRootsOfPolynomial[102X( [[3XR[103X, ][3Xp[103X ) [32X function[133X
+  
+  [33X[0;0YFor a univariate polynomial [3Xp[103X, this function returns all roots of [3Xp[103X over the
+  ring  [3XR[103X.  If the ring is not specified, it defaults to the ring specified by
+  the coefficients of [3Xp[103X via [2XDefaultRing[102X ([14X56.1-3[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xx:=X(Rationals,"x");;p:=x^4-1;[127X[104X
+    [4X[28Xx^4-1[128X[104X
+    [4X[25Xgap>[125X [27XRootsOfPolynomial(p);[127X[104X
+    [4X[28X[ 1, -1 ][128X[104X
+    [4X[25Xgap>[125X [27XRootsOfPolynomial(CF(4),p);[127X[104X
+    [4X[28X[ 1, -1, E(4), -E(4) ][128X[104X
+  [4X[32X[104X
+  
+  [1X66.5-5 RootsOfUPol[101X
+  
+  [33X[1;0Y[29X[2XRootsOfUPol[102X( [[3Xfield[103X, ][3Xupol[103X ) [32X function[133X
+  
+  [33X[0;0YThis  function returns a list of all roots of the univariate polynomial [3Xupol[103X
+  in  its  default  domain. If the optional argument [3Xfield[103X is a field then the
+  roots  in  this  field are computed. If [3Xfield[103X is the string [10X"split"[110X then the
+  splitting field of the polynomial is taken.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRootsOfUPol(50-45*x-6*x^2+x^3);[127X[104X
+    [4X[28X[ 10, 1, -5 ][128X[104X
+  [4X[32X[104X
+  
+  [1X66.5-6 QuotRemLaurpols[101X
+  
+  [33X[1;0Y[29X[2XQuotRemLaurpols[102X( [3Xleft[103X, [3Xright[103X, [3Xmode[103X ) [32X function[133X
+  
+  [33X[0;0YThis  internal  function  for  euclidean  division  of polynomials takes two
+  polynomials [3Xleft[103X and [3Xright[103X and computes their quotient. No test is performed
+  whether  the  arguments  indeed  are  polynomials.  Depending on the integer
+  variable  [3Xmode[103X,  which  may  take  values in a range from 1 to 4, it returns
+  respectively:[133X
+  
+  [31X1[131X   [33X[0;6Ythe quotient (there might be some remainder),[133X
+  
+  [31X2[131X   [33X[0;6Ythe remainder,[133X
+  
+  [31X3[131X   [33X[0;6Ya list [10X[[3Xq[103X[10X,[3Xr[103X[10X][110X of quotient and remainder,[133X
+  
+  [31X4[131X   [33X[0;6Ythe quotient if there is no remainder and [9Xfail[109X otherwise.[133X
+  
+  [1X66.5-7 UnivariatenessTestRationalFunction[101X
+  
+  [33X[1;0Y[29X[2XUnivariatenessTestRationalFunction[102X( [3Xf[103X ) [32X function[133X
+  
+  [33X[0;0Ytakes  a  rational  function  [3Xf[103X  and tests whether it is univariate rational
+  function  (or  even  a Laurent polynomial). It returns a list [10X[isunivariate,
+  indet, islaurent, cofs][110X.[133X
+  
+  [33X[0;0YIf  [3Xf[103X  is a univariate rational function then [10Xisunivariate[110X is [9Xtrue[109X and [10Xindet[110X
+  is the number of the appropriate indeterminate.[133X
+  
+  [33X[0;0YFurthermore,  if  [3Xf[103X is a Laurent polynomial, then [10Xislaurent[110X is also [9Xtrue[109X. In
+  this   case   the  fourth  entry,  [10Xcofs[110X,  is  the  value  of  the  attribute
+  [2XCoefficientsOfLaurentPolynomial[102X ([14X66.13-2[114X) for [3Xf[103X.[133X
+  
+  [33X[0;0YIf  [10Xisunivariate[110X  is  [9Xtrue[109X but [10Xislaurent[110X is [9Xfalse[109X, then [10Xcofs[110X is the value of
+  the attribute [2XCoefficientsOfUnivariateRationalFunction[102X ([14X66.4-7[114X) for [3Xf[103X.[133X
+  
+  [33X[0;0YOtherwise,  each entry of the returned list is equal to [9Xfail[109X. As there is no
+  proper  multivariate  gcd,  this  may  also happen for the rational function
+  which may be reduced to univariate (see example).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XUnivariatenessTestRationalFunction( 50-45*x-6*x^2+x^3 );[127X[104X
+    [4X[28X[ true, 1, true, [ [ 50, -45, -6, 1 ], 0 ] ][128X[104X
+    [4X[25Xgap>[125X [27XUnivariatenessTestRationalFunction( (-6*y^2+y^3) / (y+1) );[127X[104X
+    [4X[28X[ true, 2, false, [ [ -6, 1 ], [ 1, 1 ], 2 ] ][128X[104X
+    [4X[25Xgap>[125X [27XUnivariatenessTestRationalFunction( (-6*y^2+y^3) / (x+1));[127X[104X
+    [4X[28X[ false, fail, false, fail ][128X[104X
+    [4X[25Xgap>[125X [27XUnivariatenessTestRationalFunction( ((y+2)*(x+1)) / ((y-1)*(x+1)) );[127X[104X
+    [4X[28X[ fail, fail, fail, fail ][128X[104X
+  [4X[32X[104X
+  
+  [1X66.5-8 InfoPoly[101X
+  
+  [33X[1;0Y[29X[2XInfoPoly[102X [32X info class[133X
+  
+  [33X[0;0Yis the info class for univariate polynomials.[133X
+  
+  [33X[0;0YWe  remark  that  some functions for multivariate polynomials (which will be
+  defined  in the following sections) permit a different syntax for univariate
+  polynomials  which  drops  the  requirement  to  specify  the indeterminate.
+  Examples  are  [2XValue[102X  ([14X66.7-1[114X),  [2XDiscriminant[102X ([14X66.6-6[114X), [2XDerivative[102X ([14X66.6-5[114X),
+  [2XLeadingCoefficient[102X ([14X66.6-3[114X) and [2XLeadingMonomial[102X ([14X66.6-4[114X):[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xp:=UnivariatePolynomial(Rationals,[1,2,3,4],1);[127X[104X
+    [4X[28X4*x^3+3*x^2+2*x+1[128X[104X
+    [4X[25Xgap>[125X [27XValue(p,Z(5));[127X[104X
+    [4X[28XZ(5)^2[128X[104X
+    [4X[25Xgap>[125X [27XLeadingCoefficient(p);[127X[104X
+    [4X[28X4[128X[104X
+    [4X[25Xgap>[125X [27XDerivative(p);[127X[104X
+    [4X[28X12*x^2+6*x+2[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X66.6 [33X[0;0YPolynomials as Univariate Polynomials in one Indeterminate[133X[101X
+  
+  [1X66.6-1 DegreeIndeterminate[101X
+  
+  [33X[1;0Y[29X[2XDegreeIndeterminate[102X( [3Xpol[103X, [3Xind[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns   the  degree  of  the  polynomial  [3Xpol[103X  in  the  indeterminate  (or
+  indeterminate number) [3Xind[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=x^5+3*x*y+9*y^7+4*y^5*x+3*y+2;[127X[104X
+    [4X[28X9*y^7+4*x*y^5+x^5+3*x*y+3*y+2[128X[104X
+    [4X[25Xgap>[125X [27XDegreeIndeterminate(f,1);[127X[104X
+    [4X[28X5[128X[104X
+    [4X[25Xgap>[125X [27XDegreeIndeterminate(f,y);[127X[104X
+    [4X[28X7[128X[104X
+  [4X[32X[104X
+  
+  [1X66.6-2 PolynomialCoefficientsOfPolynomial[101X
+  
+  [33X[1;0Y[29X[2XPolynomialCoefficientsOfPolynomial[102X( [3Xpol[103X, [3Xind[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XPolynomialCoefficientsOfPolynomial[102X   returns  the  coefficient  list  (whose
+  entries  are polynomials not involving the indeterminate [3Xind[103X) describing the
+  polynomial  [3Xpol[103X viewed as a polynomial in [3Xind[103X. Instead of the indeterminate,
+  [3Xind[103X can also be an indeterminate number.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPolynomialCoefficientsOfPolynomial(f,2);[127X[104X
+    [4X[28X[ x^5+2, 3*x+3, 0, 0, 0, 4*x, 0, 9 ][128X[104X
+  [4X[32X[104X
+  
+  [1X66.6-3 LeadingCoefficient[101X
+  
+  [33X[1;0Y[29X[2XLeadingCoefficient[102X( [3Xpol[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  leading  coefficient  (that  is the coefficient of the leading
+  monomial, see [2XLeadingMonomial[102X ([14X66.6-4[114X)) of the polynomial [3Xpol[103X.[133X
+  
+  [1X66.6-4 LeadingMonomial[101X
+  
+  [33X[1;0Y[29X[2XLeadingMonomial[102X( [3Xpol[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  leading  monomial  (with  respect  to  the  ordering  given by
+  [2XMonomialExtGrlexLess[102X  ([14X66.17-14[114X)) of the polynomial [3Xpol[103X as a list containing
+  indeterminate numbers and exponents.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLeadingCoefficient(f,1);[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XLeadingCoefficient(f,2);[127X[104X
+    [4X[28X9[128X[104X
+    [4X[25Xgap>[125X [27XLeadingMonomial(f);[127X[104X
+    [4X[28X[ 2, 7 ][128X[104X
+    [4X[25Xgap>[125X [27XLeadingCoefficient(f);[127X[104X
+    [4X[28X9[128X[104X
+  [4X[32X[104X
+  
+  [1X66.6-5 Derivative[101X
+  
+  [33X[1;0Y[29X[2XDerivative[102X( [3Xratfun[103X[, [3Xind[103X] ) [32X attribute[133X
+  
+  [33X[0;0YIf  [3Xratfun[103X  is  a  univariate  rational function then [2XDerivative[102X returns the
+  [13Xderivative[113X of [3Xufun[103X by its indeterminate. For a rational function [3Xratfun[103X, the
+  derivative  by  the  indeterminate  [3Xind[103X  is  returned,  regarding  [3Xratfun[103X as
+  univariate  in [3Xind[103X. Instead of the desired indeterminate, also the number of
+  this indeterminate can be given as [3Xind[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDerivative(f,2);[127X[104X
+    [4X[28X63*y^6+20*x*y^4+3*x+3[128X[104X
+  [4X[32X[104X
+  
+  [1X66.6-6 Discriminant[101X
+  
+  [33X[1;0Y[29X[2XDiscriminant[102X( [3Xpol[103X[, [3Xind[103X] ) [32X operation[133X
+  
+  [33X[0;0YIf [3Xpol[103X is a univariate polynomial then [2XDiscriminant[102X returns the [13Xdiscriminant[113X
+  of  [3Xpol[103X by its indeterminate. The two-argument form returns the discriminant
+  of  a  polynomial  [3Xpol[103X  by  the  indeterminate  number [3Xind[103X, regarding [3Xpol[103X as
+  univariate  in  this indeterminate. Instead of the indeterminate number, the
+  indeterminate itself can also be given as [3Xind[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDiscriminant(f,1);[127X[104X
+    [4X[28X20503125*y^28+262144*y^25+27337500*y^22+19208040*y^21+1474560*y^17+136\[128X[104X
+    [4X[28X68750*y^16+18225000*y^15+6075000*y^14+1105920*y^13+3037500*y^10+648972\[128X[104X
+    [4X[28X0*y^9+4050000*y^8+900000*y^7+62208*y^5+253125*y^4+675000*y^3+675000*y^\[128X[104X
+    [4X[28X2+300000*y+50000[128X[104X
+    [4X[25Xgap>[125X [27XDiscriminant(f,1) = Discriminant(f,x);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X66.6-7 Resultant[101X
+  
+  [33X[1;0Y[29X[2XResultant[102X( [3Xpol1[103X, [3Xpol2[103X, [3Xind[103X ) [32X operation[133X
+  
+  [33X[0;0Ycomputes  the resultant of the polynomials [3Xpol1[103X and [3Xpol2[103X with respect to the
+  indeterminate [3Xind[103X, or indeterminate number [3Xind[103X. The resultant considers [3Xpol1[103X
+  and  [3Xpol2[103X  as  univariate in [3Xind[103X and returns an element of the corresponding
+  base ring (which might be a polynomial ring).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XResultant(x^4+y,y^4+x,1);[127X[104X
+    [4X[28Xy^16+y[128X[104X
+    [4X[25Xgap>[125X [27XResultant(x^4+y,y^4+x,2);[127X[104X
+    [4X[28Xx^16+x[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X66.7 [33X[0;0YMultivariate Polynomials[133X[101X
+  
+  
+  [1X66.7-1 [33X[0;0YValue[133X[101X
+  
+  [33X[1;0Y[29X[2XValue[102X( [3Xratfun[103X, [3Xindets[103X, [3Xvals[103X[, [3Xone[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XValue[102X( [3Xupol[103X, [3Xvalue[103X[, [3Xone[103X] ) [32X operation[133X
+  
+  [33X[0;0YThe  first  variant  takes  a  rational  function [3Xratfun[103X and specializes the
+  indeterminates  given  in  [3Xindets[103X to the values given in [3Xvals[103X, replacing the
+  [22Xi[122X-th  entry  in  [3Xindets[103X  by  the  [22Xi[122X-th entry in [3Xvals[103X. If this specialization
+  results  in  a  constant  polynomial,  an element of the coefficient ring is
+  returned.  If  the specialization would specialize the denominator of [3Xratfun[103X
+  to zero, an error is raised.[133X
+  
+  [33X[0;0YA  variation  is  the  evaluation at elements of another ring [22XR[122X, for which a
+  multiplication  with elements of the coefficient ring of [3Xratfun[103X are defined.
+  In  this  situation  the  identity  element  of  [22XR[122X may be given by a further
+  argument [3Xone[103X which will be used for [22Xx^0[122X for any specialized indeterminate [22Xx[122X.[133X
+  
+  [33X[0;0YThe second version takes an univariate rational function and specializes the
+  value  of  its  indeterminate to [3Xval[103X. Again, an optional argument [3Xone[103X may be
+  given. [10XValue( [3Xupol[103X[10X, [3Xval[103X[10X )[110X can also be expressed as [10Xupol( [3Xval[103X[10X )[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XValue(x*y+y+x^7,[x,y],[5,7]);[127X[104X
+    [4X[28X78167[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that the default values for [3Xone[103X can lead to different results than one
+  would  expect:  For  example  for  a  matrix [22XM[122X, the values [22XM+M^0[122X and [22XM+1[122X are
+  [13Xdifferent[113X.  As  [2XValue[102X  defaults  to  the  one  of the coefficient ring, when
+  evaluating matrices in polynomials always the correct [3Xone[103X should be given![133X
+  
+  
+  [1X66.8 [33X[0;0YMinimal Polynomials[133X[101X
+  
+  [1X66.8-1 MinimalPolynomial[101X
+  
+  [33X[1;0Y[29X[2XMinimalPolynomial[102X( [3XR[103X, [3Xelm[103X[, [3Xind[103X] ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  [13Xminimal  polynomial[113X  of  [3Xelm[103X over the ring [3XR[103X, expressed in the
+  indeterminate number [3Xind[103X. If [3Xind[103X is not given, it defaults to 1.[133X
+  
+  [33X[0;0YThe  minimal  polynomial  is  the  monic  polynomial of smallest degree with
+  coefficients in [3XR[103X that has value zero at [3Xelm[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XMinimalPolynomial(Rationals,[[2,0],[0,2]]);[127X[104X
+    [4X[28Xx-2[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X66.9 [33X[0;0YCyclotomic Polynomials[133X[101X
+  
+  [1X66.9-1 CyclotomicPolynomial[101X
+  
+  [33X[1;0Y[29X[2XCyclotomicPolynomial[102X( [3XF[103X, [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Yis the [3Xn[103X-th cyclotomic polynomial over the ring [3XF[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XCyclotomicPolynomial(Rationals,5);[127X[104X
+    [4X[28Xx^4+x^3+x^2+x+1[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X66.10 [33X[0;0YPolynomial Factorization[133X[101X
+  
+  [33X[0;0YAt the moment [5XGAP[105X provides only methods to factorize polynomials over finite
+  fields   (see   Chapter [14X59[114X),   over  subfields  of  cyclotomic  fields  (see
+  Chapter [14X60[114X), and over algebraic extensions of these (see Chapter [14X67[114X).[133X
+  
+  [1X66.10-1 Factors[101X
+  
+  [33X[1;0Y[29X[2XFactors[102X( [[3XR[103X, ][3Xpoly[103X[, [3Xopt[103X] ) [32X method[133X
+  
+  [33X[0;0Yreturns  a  list  of  the  irreducible factors of the polynomial [3Xpoly[103X in the
+  polynomial  ring  [3XR[103X.  (That  is  factors over the [2XCoefficientsRing[102X ([14X66.15-3[114X)
+  value of [3XR[103X.)[133X
+  
+  [33X[0;0YFor  univariate  factorizations,  it  is  possible to pass a record [3Xopt[103X as a
+  third argument. This record can contain the following components:[133X
+  
+  [8X[10Xonlydegs[110X[8X[108X
+        [33X[0;6Yis  a  set  of  positive  integers. The factorization assumes that all
+        irreducible factors have a degree in this set.[133X
+  
+  [8X[10Xstopdegs[110X[8X[108X
+        [33X[0;6Yis  a  set  of  positive  integers. The factorization will stop once a
+        factor  of  degree  in  [10Xstopdegs[110X  has  been  found and will return the
+        factorization found so far.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:= CyclotomicPolynomial( GF(2), 7 );[127X[104X
+    [4X[28Xx_1^6+x_1^5+x_1^4+x_1^3+x_1^2+x_1+Z(2)^0[128X[104X
+    [4X[25Xgap>[125X [27XFactors( f );[127X[104X
+    [4X[28X[ x_1^3+x_1+Z(2)^0, x_1^3+x_1^2+Z(2)^0 ][128X[104X
+    [4X[25Xgap>[125X [27XFactors( PolynomialRing( GF(8) ), f );[127X[104X
+    [4X[28X[ x_1+Z(2^3), x_1+Z(2^3)^2, x_1+Z(2^3)^3, x_1+Z(2^3)^4, x_1+Z(2^3)^5,[128X[104X
+    [4X[28X  x_1+Z(2^3)^6 ][128X[104X
+    [4X[25Xgap>[125X [27Xf:= MinimalPolynomial( Rationals, E(4) );[127X[104X
+    [4X[28Xx^2+1[128X[104X
+    [4X[25Xgap>[125X [27XFactors( f );[127X[104X
+    [4X[28X[ x^2+1 ][128X[104X
+    [4X[25Xgap>[125X [27XFactors( PolynomialRing( Rationals ), f );[127X[104X
+    [4X[28X[ x^2+1 ][128X[104X
+    [4X[25Xgap>[125X [27XFactors( PolynomialRing( CF(4) ), f );[127X[104X
+    [4X[28X[ x+(-E(4)), x+E(4) ][128X[104X
+  [4X[32X[104X
+  
+  [1X66.10-2 FactorsSquarefree[101X
+  
+  [33X[1;0Y[29X[2XFactorsSquarefree[102X( [3Xpring[103X, [3Xupol[103X, [3Xopt[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns a factorization of the squarefree, monic, univariate polynomial [3Xupol[103X
+  in  the  polynomial  ring  [3Xpring[103X;  [3Xopt[103X  must be a (possibly empty) record of
+  options.  [3Xupol[103X  must  not  have zero as a root. This function is used by the
+  factoring algorithms.[133X
+  
+  [33X[0;0YThe  current  method  for  multivariate  factorization reduces to univariate
+  factorization  by use of a reduction homomorphism of the form [22Xf(x_1,x_2,x_3)
+  ↦ f(x,x^p,x^{p^2})[122X. It can be very time intensive for larger degrees.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XFactors(x^10-y^10);[127X[104X
+    [4X[28X[ x-y, x+y, x^4-x^3*y+x^2*y^2-x*y^3+y^4, x^4+x^3*y+x^2*y^2+x*y^3+y^4 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X66.11 [33X[0;0YPolynomials over the Rationals[133X[101X
+  
+  [33X[0;0YThe  following  functions  are  only  available to polynomials with rational
+  coefficients:[133X
+  
+  [1X66.11-1 PrimitivePolynomial[101X
+  
+  [33X[1;0Y[29X[2XPrimitivePolynomial[102X( [3Xf[103X ) [32X operation[133X
+  
+  [33X[0;0Ytakes  a  polynomial  [3Xf[103X  with  rational  coefficients  and  computes  a  new
+  polynomial  with integral coefficients, obtained by multiplying with the Lcm
+  of the denominators of the coefficients and casting out the content (the Gcd
+  of  the  coefficients).  The  operation  returns  a list [[3Xnewpol[103X,[3Xcoeff[103X] with
+  rational [3Xcoeff[103X such that [10X[3Xcoeff[103X[10X*[3Xnewpol[103X[10X=[3Xf[103X[10X[110X.[133X
+  
+  [1X66.11-2 PolynomialModP[101X
+  
+  [33X[1;0Y[29X[2XPolynomialModP[102X( [3Xpol[103X, [3Xp[103X ) [32X function[133X
+  
+  [33X[0;0Yfor  a  rational  polynomial [3Xpol[103X this function returns a polynomial over the
+  field with [3Xp[103X elements, obtained by reducing the coefficients modulo [3Xp[103X.[133X
+  
+  [1X66.11-3 GaloisType[101X
+  
+  [33X[1;0Y[29X[2XGaloisType[102X( [3Xf[103X ) [32X attribute[133X
+  
+  [33X[0;0YLet [3Xf[103X be an irreducible polynomial with rational coefficients. This function
+  returns  the type of Gal([3Xf[103X) (considered as a transitive permutation group of
+  the  roots  of [3Xf[103X). It returns a number [3Xi[103X if Gal([3Xf[103X) is permutation isomorphic
+  to [10XTransitiveGroup([3Xn[103X[10X,[3Xi[103X[10X)[110X where [3Xn[103X is the degree of [3Xf[103X.[133X
+  
+  [33X[0;0YIdentification  is  performed  by factoring appropriate Galois resolvents as
+  proposed  in  [SM85].  This function is provided for rational polynomials of
+  degree  up  to  15.  However, in some cases the required calculations become
+  unfeasibly large.[133X
+  
+  [33X[0;0YFor  a  few  polynomials  of degree 14, a complete discrimination is not yet
+  possible,  as  it  would  require  computations,  that are not feasible with
+  current factoring methods.[133X
+  
+  [33X[0;0YThis  function  requires  the transitive groups library to be installed (see
+  [14X'transgrp: Transitive Permutation Groups'[114X).[133X
+  
+  [1X66.11-4 ProbabilityShapes[101X
+  
+  [33X[1;0Y[29X[2XProbabilityShapes[102X( [3Xf[103X ) [32X function[133X
+  
+  [33X[0;0YLet [3Xf[103X be an irreducible polynomial with rational coefficients. This function
+  returns  a  list  of  the  most  likely  type(s)  of  Gal([3Xf[103X) (see [2XGaloisType[102X
+  ([14X66.11-3[114X)),  based on factorization modulo a set of primes. It is very fast,
+  but the result is only probabilistic.[133X
+  
+  [33X[0;0YThis  function  requires  the transitive groups library to be installed (see
+  [14X'transgrp: Transitive Permutation Groups'[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=x^9-9*x^7+27*x^5-39*x^3+36*x-8;;[127X[104X
+    [4X[25Xgap>[125X [27XGaloisType(f);[127X[104X
+    [4X[28X25[128X[104X
+    [4X[25Xgap>[125X [27XTransitiveGroup(9,25);[127X[104X
+    [4X[28X[1/2.S(3)^3]3[128X[104X
+    [4X[25Xgap>[125X [27XProbabilityShapes(f);[127X[104X
+    [4X[28X[ 25 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X66.12 [33X[0;0YFactorization of Polynomials over the Rationals[133X[101X
+  
+  [33X[0;0YThe  following operations are used by [5XGAP[105X inside the factorization algorithm
+  but might be of interest also in other contexts.[133X
+  
+  [1X66.12-1 BombieriNorm[101X
+  
+  [33X[1;0Y[29X[2XBombieriNorm[102X( [3Xpol[103X ) [32X function[133X
+  
+  [33X[0;0Ycomputes  weighted  Norm  [[3Xpol[103X][22X_2[122X  of [3Xpol[103X which is a good measure for factor
+  coefficients (see [BTW93]).[133X
+  
+  [1X66.12-2 MinimizedBombieriNorm[101X
+  
+  [33X[1;0Y[29X[2XMinimizedBombieriNorm[102X( [3Xf[103X ) [32X attribute[133X
+  
+  [33X[0;0YThis  function applies linear Tschirnhaus transformations ([22Xx ↦ x + i[122X) to the
+  polynomial  [3Xf[103X, trying to get the Bombieri norm of [3Xf[103X small. It returns a list
+  [10X[[3Xnew_polynomial[103X[10X, [3Xi_of_transformation[103X[10X][110X.[133X
+  
+  [1X66.12-3 HenselBound[101X
+  
+  [33X[1;0Y[29X[2XHenselBound[102X( [3Xpol[103X[, [3Xminpol[103X, [3Xden[103X] ) [32X function[133X
+  
+  [33X[0;0Yreturns  the  Hensel  bound  of the polynomial [3Xpol[103X. If the computation takes
+  place  over  an  algebraic extension, then the minimal polynomial [3Xminpol[103X and
+  denominator [3Xden[103X must be given.[133X
+  
+  [1X66.12-4 OneFactorBound[101X
+  
+  [33X[1;0Y[29X[2XOneFactorBound[102X( [3Xpol[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the coefficient bound for a single factor of the rational polynomial
+  [3Xpol[103X.[133X
+  
+  
+  [1X66.13 [33X[0;0YLaurent Polynomials[133X[101X
+  
+  [33X[0;0YA  univariate  polynomial  can  be written in the form [22Xr_0 + r_1 x + ⋯ + r_n
+  x^n[122X,  with [22Xr_i ∈ R[122X. Formally, there is no reason to start with 0, if [22Xm[122X is an
+  integer, we can consider objects of the form [22Xr_m x^m + r_{m+1} x^{m+1} + ⋯ +
+  r_n  x^n[122X. We call these [13XLaurent polynomials[113X. Laurent polynomials also can be
+  considered  as  quotients  of  a  univariate  polynomial  by  a power of the
+  indeterminate.  The  addition  and  multiplication of univariate polynomials
+  extends to Laurent polynomials (though it might be impossible to interpret a
+  Laurent  polynomial  as  a  function)  and  many  functions  for  univariate
+  polynomials  extend to Laurent polynomials (or extended versions for Laurent
+  polynomials exist).[133X
+  
+  [1X66.13-1 LaurentPolynomialByCoefficients[101X
+  
+  [33X[1;0Y[29X[2XLaurentPolynomialByCoefficients[102X( [3Xfam[103X, [3Xcofs[103X, [3Xval[103X[, [3Xind[103X] ) [32X operation[133X
+  
+  [33X[0;0Yconstructs  a Laurent polynomial over the coefficients family [3Xfam[103X and in the
+  indeterminate  [3Xind[103X (defaulting to 1) with the coefficients given by [3Xcofs[103X and
+  valuation [3Xval[103X.[133X
+  
+  [1X66.13-2 CoefficientsOfLaurentPolynomial[101X
+  
+  [33X[1;0Y[29X[2XCoefficientsOfLaurentPolynomial[102X( [3Xlaurent[103X ) [32X attribute[133X
+  
+  [33X[0;0YFor  a  Laurent polynomial [3Xlaurent[103X, this function returns a pair [10X[[3Xcof[103X[10X, [3Xval[103X[10X][110X,
+  consisting  of  the  coefficient  list  (in  ascending  order)  [3Xcof[103X  and the
+  valuation [3Xval[103X of [3Xlaurent[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xp:=LaurentPolynomialByCoefficients(FamilyObj(1),[127X[104X
+    [4X[25X>[125X [27X[1,2,3,4,5],-2);[127X[104X
+    [4X[28X5*x^2+4*x+3+2*x^-1+x^-2[128X[104X
+    [4X[25Xgap>[125X [27XNumeratorOfRationalFunction(p);DenominatorOfRationalFunction(p);[127X[104X
+    [4X[28X5*x^4+4*x^3+3*x^2+2*x+1[128X[104X
+    [4X[28Xx^2[128X[104X
+    [4X[25Xgap>[125X [27XCoefficientsOfLaurentPolynomial(p*p);[127X[104X
+    [4X[28X[ [ 1, 4, 10, 20, 35, 44, 46, 40, 25 ], -4 ][128X[104X
+  [4X[32X[104X
+  
+  [1X66.13-3 IndeterminateNumberOfLaurentPolynomial[101X
+  
+  [33X[1;0Y[29X[2XIndeterminateNumberOfLaurentPolynomial[102X( [3Xpol[103X ) [32X attribute[133X
+  
+  [33X[0;0YIs a synonym for [2XIndeterminateNumberOfUnivariateRationalFunction[102X ([14X66.1-2[114X).[133X
+  
+  
+  [1X66.14 [33X[0;0YUnivariate Rational Functions[133X[101X
+  
+  [1X66.14-1 UnivariateRationalFunctionByCoefficients[101X
+  
+  [33X[1;0Y[29X[2XUnivariateRationalFunctionByCoefficients[102X( [3Xfam[103X, [3Xncof[103X, [3Xdcof[103X, [3Xval[103X[, [3Xind[103X] ) [32X operation[133X
+  
+  [33X[0;0Yconstructs  a  univariate rational function over the coefficients family [3Xfam[103X
+  and   in  the  indeterminate  [3Xind[103X  (defaulting  to  1)  with  numerator  and
+  denominator coefficients given by [3Xncof[103X and [3Xdcof[103X and valuation [3Xval[103X.[133X
+  
+  [1X66.14-2 TaylorSeriesRationalFunction[101X
+  
+  [33X[1;0Y[29X[2XTaylorSeriesRationalFunction[102X( [3Xratfun[103X, [3Xat[103X, [3Xdeg[103X] ) [32X attribute[133X
+  
+  [33X[0;0YComputes the taylor series up to degree [3Xdeg[103X of [3Xratfun[103X at [3Xat[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTaylorSeriesRationalFunction((x^5+3*x+7)/(x^5+x+1),0,11);[127X[104X
+    [4X[28X-50*x^11+36*x^10-26*x^9+22*x^8-18*x^7+14*x^6-10*x^5+4*x^4-4*x^3+4*x^2-4*x+7[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X66.15 [33X[0;0YPolynomial Rings and Function Fields[133X[101X
+  
+  [33X[0;0YWhile  polynomials depend only on the family of the coefficients, polynomial
+  rings  [22XA[122X  are defined over a base ring [22XR[122X. A polynomial is an element of [22XA[122X if
+  and  only  if  all  its  coefficients  are contained in [22XR[122X. Besides providing
+  domains  and  an easy way to create polynomials, polynomial rings can affect
+  the behavior of operations like factorization into irreducibles.[133X
+  
+  [33X[0;0YIf  you  need  to  work  with  a  polynomial ring and its indeterminates the
+  following  two  approaches will produce a ring that contains given variables
+  (see  section [14X66.1[114X  for details about the internal numbering): Either, first
+  create    the    ring    and    then    get    the    indeterminates    with
+  [2XIndeterminatesOfPolynomialRing[102X ([14X66.15-2[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xr := PolynomialRing(Rationals,["a","b"]);;[127X[104X
+    [4X[25Xgap>[125X [27Xindets := IndeterminatesOfPolynomialRing(r);;[127X[104X
+    [4X[25Xgap>[125X [27Xa := indets[1]; a := indets[2];[127X[104X
+    [4X[28Xa[128X[104X
+    [4X[28Xb[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAlternatively,  first  create  the  indeterminates  and then create the ring
+  including these indeterminates.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xa:=Indeterminate(Rationals,"a":old);;[127X[104X
+    [4X[25Xgap>[125X [27Xb:=Indeterminate(Rationals,"b":old);;[127X[104X
+    [4X[25Xgap>[125X [27XPolynomialRing(Rationals,[a,b]);;[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAs  a convenient shortcut, intended mainly for interactive working, the [22Xi[122X-th
+  indeterminate  of  a  polynomial  ring  [22XR[122X  can  be  accessed  as  [22XR.i[122X, which
+  corresponds  exactly to [10XIndeterminatesOfPolynomialRing[110X[22X( R )[i][122X or, if it has
+  the  name  [10Xnam[110X,  as  [22XR[122X[10X.nam[110X.  [13XNote[113X  that  the  number [22Xi[122X is in general [13Xnot[113X the
+  indeterminate number, but simply an index into the indeterminates list of [22XR[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xr := PolynomialRing(Rationals, ["a", "b"]:old );;[127X[104X
+    [4X[25Xgap>[125X [27Xr.1; r.2; r.a; r.b;[127X[104X
+    [4X[28Xa[128X[104X
+    [4X[28Xb[128X[104X
+    [4X[28Xa[128X[104X
+    [4X[28Xb[128X[104X
+    [4X[25Xgap>[125X [27XIndeterminateNumberOfLaurentPolynomial(r.1);[127X[104X
+    [4X[28X3[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YPolynomials as [5XGAP[105X objects can exist without a polynomial ring being defined
+  and  polynomials  cannot be associated to a particular polynomial ring. (For
+  example  dividing  a  polynomial  which  is  in  a  polynomial ring over the
+  integers  by another integer will result in a polynomial over the rationals,
+  not in a rational function over the integers.)[133X
+  
+  
+  [1X66.15-1 [33X[0;0YPolynomialRing[133X[101X
+  
+  [33X[1;0Y[29X[2XPolynomialRing[102X( [3XR[103X, [3Xrank[103X[, [3Xavoid[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XPolynomialRing[102X( [3XR[103X, [3Xnames[103X[, [3Xavoid[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XPolynomialRing[102X( [3XR[103X, [3Xindets[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XPolynomialRing[102X( [3XR[103X, [3Xindetnums[103X ) [32X operation[133X
+  
+  [33X[0;0Ycreates  a  polynomial  ring  over the ring [3XR[103X. If a positive integer [3Xrank[103X is
+  given,  this  creates  the  polynomial  ring  in  [3Xrank[103X indeterminates. These
+  indeterminates  will  have  the internal index numbers 1 to [3Xrank[103X. The second
+  usage  takes  a  list  [3Xnames[103X  of  strings  and  returns a polynomial ring in
+  indeterminates  labelled  by  [3Xnames[103X.  These indeterminates have [21Xnew[121X internal
+  index  numbers  as  if  they  had  been  created  by  calls to [2XIndeterminate[102X
+  ([14X66.1-1[114X).  (If  the  argument [3Xavoid[103X is given it contains indeterminates that
+  should  be  avoided,  in this case internal index numbers are incremented to
+  skip these variables.) In the third version, a list of indeterminates [3Xindets[103X
+  is  given.  This  creates  the polynomial ring in the indeterminates [3Xindets[103X.
+  Finally, the fourth version specifies indeterminates by their index numbers.[133X
+  
+  [33X[0;0YTo     get     the    indeterminates    of    a    polynomial    ring    use
+  [2XIndeterminatesOfPolynomialRing[102X     ([14X66.15-2[114X).     (Indeterminates    created
+  independently  with  [2XIndeterminate[102X ([14X66.1-1[114X) will usually differ, though they
+  might be given the same name and display identically, see Section [14X66.1[114X.)[133X
+  
+  [1X66.15-2 IndeterminatesOfPolynomialRing[101X
+  
+  [33X[1;0Y[29X[2XIndeterminatesOfPolynomialRing[102X( [3Xpring[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XIndeterminatesOfFunctionField[102X( [3Xffield[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  a  list  of  the  indeterminates  of  the  polynomial  ring  [3Xpring[103X,
+  respectively the function field [3Xffield[103X.[133X
+  
+  [1X66.15-3 CoefficientsRing[101X
+  
+  [33X[1;0Y[29X[2XCoefficientsRing[102X( [3Xpring[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the  ring of coefficients of the polynomial ring [3Xpring[103X, that is the
+  ring over which [3Xpring[103X was defined.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xr:=PolynomialRing(GF(7));[127X[104X
+    [4X[28XGF(7)[x_1][128X[104X
+    [4X[25Xgap>[125X [27Xr:=PolynomialRing(GF(7),3);[127X[104X
+    [4X[28XGF(7)[x_1,x_2,x_3][128X[104X
+    [4X[25Xgap>[125X [27XIndeterminatesOfPolynomialRing(r);[127X[104X
+    [4X[28X[ x_1, x_2, x_3 ][128X[104X
+    [4X[25Xgap>[125X [27Xr2:=PolynomialRing(GF(7),[5,7,12]);[127X[104X
+    [4X[28XGF(7)[x_5,x_7,x_12][128X[104X
+    [4X[25Xgap>[125X [27XCoefficientsRing(r);[127X[104X
+    [4X[28XGF(7)[128X[104X
+    [4X[25Xgap>[125X [27Xr:=PolynomialRing(GF(7),3);[127X[104X
+    [4X[28XGF(7)[x_1,x_2,x_3][128X[104X
+    [4X[25Xgap>[125X [27Xr2:=PolynomialRing(GF(7),3,IndeterminatesOfPolynomialRing(r));[127X[104X
+    [4X[28XGF(7)[x_4,x_5,x_6][128X[104X
+    [4X[25Xgap>[125X [27Xr:=PolynomialRing(GF(7),["x","y","z","z2"]);[127X[104X
+    [4X[28XGF(7)[x,y,z,z2][128X[104X
+  [4X[32X[104X
+  
+  [1X66.15-4 IsPolynomialRing[101X
+  
+  [33X[1;0Y[29X[2XIsPolynomialRing[102X( [3Xpring[103X ) [32X Category[133X
+  
+  [33X[0;0Yis the category of polynomial rings[133X
+  
+  [1X66.15-5 IsFiniteFieldPolynomialRing[101X
+  
+  [33X[1;0Y[29X[2XIsFiniteFieldPolynomialRing[102X( [3Xpring[103X ) [32X Category[133X
+  
+  [33X[0;0Yis the category of polynomial rings over a finite field (see Chapter [14X59[114X).[133X
+  
+  [1X66.15-6 IsAbelianNumberFieldPolynomialRing[101X
+  
+  [33X[1;0Y[29X[2XIsAbelianNumberFieldPolynomialRing[102X( [3Xpring[103X ) [32X Category[133X
+  
+  [33X[0;0Yis  the  category  of  polynomial rings over a field of cyclotomics (see the
+  chapters [14X18[114X and [14X60[114X).[133X
+  
+  [1X66.15-7 IsRationalsPolynomialRing[101X
+  
+  [33X[1;0Y[29X[2XIsRationalsPolynomialRing[102X( [3Xpring[103X ) [32X Category[133X
+  
+  [33X[0;0Yis the category of polynomial rings over the rationals (see Chapter [14X17[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xr := PolynomialRing(Rationals, ["a", "b"] );;[127X[104X
+    [4X[25Xgap>[125X [27XIsPolynomialRing(r);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsFiniteFieldPolynomialRing(r);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsRationalsPolynomialRing(r);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X66.15-8 [33X[0;0YFunctionField[133X[101X
+  
+  [33X[1;0Y[29X[2XFunctionField[102X( [3XR[103X, [3Xrank[103X[, [3Xavoid[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XFunctionField[102X( [3XR[103X, [3Xnames[103X[, [3Xavoid[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XFunctionField[102X( [3XR[103X, [3Xindets[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XFunctionField[102X( [3XR[103X, [3Xindetnums[103X ) [32X operation[133X
+  
+  [33X[0;0Ycreates  a  function  field  over the integral ring [3XR[103X. If a positive integer
+  [3Xrank[103X is given, this creates the function field in [3Xrank[103X indeterminates. These
+  indeterminates  will  have  the internal index numbers 1 to [3Xrank[103X. The second
+  usage  takes  a  list  [3Xnames[103X  of  strings  and  returns  a function field in
+  indeterminates  labelled  by  [3Xnames[103X.  These indeterminates have [21Xnew[121X internal
+  index  numbers  as  if  they  had  been  created  by  calls to [2XIndeterminate[102X
+  ([14X66.1-1[114X).  (If  the  argument [3Xavoid[103X is given it contains indeterminates that
+  should  be  avoided,  in this case internal index numbers are incremented to
+  skip these variables.) In the third version, a list of indeterminates [3Xindets[103X
+  is  given.  This  creates  the  function field in the indeterminates [3Xindets[103X.
+  Finally, the fourth version specifies indeterminates by their index number.[133X
+  
+  [33X[0;0YTo     get     the     indeterminates    of    a    function    field    use
+  [2XIndeterminatesOfFunctionField[102X     ([14X66.15-2[114X).     (Indeterminates     created
+  independently  with  [2XIndeterminate[102X ([14X66.1-1[114X) will usually differ, though they
+  might be given the same name and display identically, see Section [14X66.1[114X.)[133X
+  
+  [1X66.15-9 IsFunctionField[101X
+  
+  [33X[1;0Y[29X[2XIsFunctionField[102X( [3Xffield[103X ) [32X Category[133X
+  
+  [33X[0;0Yis the category of function fields[133X
+  
+  
+  [1X66.16 [33X[0;0YUnivariate Polynomial Rings[133X[101X
+  
+  
+  [1X66.16-1 [33X[0;0YUnivariatePolynomialRing[133X[101X
+  
+  [33X[1;0Y[29X[2XUnivariatePolynomialRing[102X( [3XR[103X[, [3Xnr[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XUnivariatePolynomialRing[102X( [3XR[103X[, [3Xname[103X][, [3Xavoid[103X] ) [32X operation[133X
+  
+  [33X[0;0Yreturns  a  univariate polynomial ring in the indeterminate [3Xnr[103X over the base
+  ring [3XR[103X. If [3Xnr[103X is not given it defaults to 1.[133X
+  
+  [33X[0;0YIf  the number is not specified a list [3Xavoid[103X of indeterminates may be given.
+  Then  the function will return a ring in an indeterminate that is guaranteed
+  to be different from all the indeterminates in [3Xavoid[103X.[133X
+  
+  [33X[0;0YAlso a string [3Xname[103X can be prescribed as the name of the indeterminate chosen
+  (also avoiding the indeterminates in the list [3Xavoid[103X if given).[133X
+  
+  [1X66.16-2 IsUnivariatePolynomialRing[101X
+  
+  [33X[1;0Y[29X[2XIsUnivariatePolynomialRing[102X( [3Xpring[103X ) [32X Category[133X
+  
+  [33X[0;0Yis the category of polynomial rings with one indeterminate.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xr:=UnivariatePolynomialRing(Rationals,"p");[127X[104X
+    [4X[28XRationals[p][128X[104X
+    [4X[25Xgap>[125X [27Xr2:=PolynomialRing(Rationals,["q"]);[127X[104X
+    [4X[28XRationals[q][128X[104X
+    [4X[25Xgap>[125X [27XIsUnivariatePolynomialRing(r);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsUnivariatePolynomialRing(r2);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X66.17 [33X[0;0YMonomial Orderings[133X[101X
+  
+  [33X[0;0YIt  is  often  desirable to consider the monomials within a polynomial to be
+  arranged  with  respect  to a certain ordering. Such an ordering is called a
+  [13Xmonomial  ordering[113X if it is total, invariant under multiplication with other
+  monomials  and admits no infinite descending chains. For details on monomial
+  orderings see [CLO97].[133X
+  
+  [33X[0;0YIn  [5XGAP[105X, monomial orderings are represented by objects that provide a way to
+  compare monomials (as polynomials as well as –for efficiency purposes within
+  algorithms– in the internal representation as lists).[133X
+  
+  [33X[0;0YNormally  the  ordering  chosen  should  be  [13Xadmissible[113X,  i.e.  it  must  be
+  compatible  with  products: If [22Xa < b[122X then [22Xca < cb[122X for all monomials [22Xa, b[122X and
+  [22Xc[122X.[133X
+  
+  [33X[0;0YEach monomial ordering provides the two functions [2XMonomialComparisonFunction[102X
+  ([14X66.17-5[114X)  and  [2XMonomialExtrepComparisonFun[102X  ([14X66.17-6[114X) to compare monomials.
+  These  functions  work as [21Xis less than[121X, i.e. they return [9Xtrue[109X if and only if
+  the left argument is smaller.[133X
+  
+  [1X66.17-1 IsMonomialOrdering[101X
+  
+  [33X[1;0Y[29X[2XIsMonomialOrdering[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YA  monomial  ordering  is  an  object  representing a monomial ordering. Its
+  attributes          [2XMonomialComparisonFunction[102X         ([14X66.17-5[114X)         and
+  [2XMonomialExtrepComparisonFun[102X ([14X66.17-6[114X) are actual comparison functions.[133X
+  
+  [1X66.17-2 LeadingMonomialOfPolynomial[101X
+  
+  [33X[1;0Y[29X[2XLeadingMonomialOfPolynomial[102X( [3Xpol[103X, [3Xord[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  leading  monomial  (with  respect  to the ordering [3Xord[103X) of the
+  polynomial [3Xpol[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xx:=Indeterminate(Rationals,"x");;[127X[104X
+    [4X[25Xgap>[125X [27Xy:=Indeterminate(Rationals,"y");;[127X[104X
+    [4X[25Xgap>[125X [27Xz:=Indeterminate(Rationals,"z");;[127X[104X
+    [4X[25Xgap>[125X [27Xlexord:=MonomialLexOrdering();grlexord:=MonomialGrlexOrdering();[127X[104X
+    [4X[28XMonomialLexOrdering()[128X[104X
+    [4X[28XMonomialGrlexOrdering()[128X[104X
+    [4X[25Xgap>[125X [27Xf:=2*x+3*y+4*z+5*x^2-6*z^2+7*y^3;[127X[104X
+    [4X[28X7*y^3+5*x^2-6*z^2+2*x+3*y+4*z[128X[104X
+    [4X[25Xgap>[125X [27XLeadingMonomialOfPolynomial(f,lexord);[127X[104X
+    [4X[28Xx^2[128X[104X
+    [4X[25Xgap>[125X [27XLeadingMonomialOfPolynomial(f,grlexord);[127X[104X
+    [4X[28Xy^3[128X[104X
+  [4X[32X[104X
+  
+  [1X66.17-3 LeadingTermOfPolynomial[101X
+  
+  [33X[1;0Y[29X[2XLeadingTermOfPolynomial[102X( [3Xpol[103X, [3Xord[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  leading  term  (with  respect  to  the  ordering  [3Xord[103X)  of the
+  polynomial  [3Xpol[103X,  i.e.  the  product  of  leading  coefficient  and  leading
+  monomial.[133X
+  
+  [1X66.17-4 LeadingCoefficientOfPolynomial[101X
+  
+  [33X[1;0Y[29X[2XLeadingCoefficientOfPolynomial[102X( [3Xpol[103X, [3Xord[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  leading  coefficient  (that  is the coefficient of the leading
+  monomial, see [2XLeadingMonomialOfPolynomial[102X ([14X66.17-2[114X)) of the polynomial [3Xpol[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLeadingTermOfPolynomial(f,lexord);[127X[104X
+    [4X[28X5*x^2[128X[104X
+    [4X[25Xgap>[125X [27XLeadingTermOfPolynomial(f,grlexord);[127X[104X
+    [4X[28X7*y^3[128X[104X
+    [4X[25Xgap>[125X [27XLeadingCoefficientOfPolynomial(f,lexord);[127X[104X
+    [4X[28X5[128X[104X
+  [4X[32X[104X
+  
+  [1X66.17-5 MonomialComparisonFunction[101X
+  
+  [33X[1;0Y[29X[2XMonomialComparisonFunction[102X( [3XO[103X ) [32X attribute[133X
+  
+  [33X[0;0YIf [3XO[103X is an object representing a monomial ordering, this attribute returns a
+  [13Xfunction[113X  that  can  be  used  to compare or sort monomials (and polynomials
+  which  will  be  compared  by  their  monomials in decreasing order) in this
+  order.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XMonomialComparisonFunction(lexord);[127X[104X
+    [4X[28Xfunction( a, b ) ... end[128X[104X
+    [4X[25Xgap>[125X [27Xl:=[f,Derivative(f,x),Derivative(f,y),Derivative(f,z)];;[127X[104X
+    [4X[25Xgap>[125X [27XSort(l,MonomialComparisonFunction(lexord));l;[127X[104X
+    [4X[28X[ -12*z+4, 21*y^2+3, 10*x+2, 7*y^3+5*x^2-6*z^2+2*x+3*y+4*z ][128X[104X
+  [4X[32X[104X
+  
+  [1X66.17-6 MonomialExtrepComparisonFun[101X
+  
+  [33X[1;0Y[29X[2XMonomialExtrepComparisonFun[102X( [3XO[103X ) [32X attribute[133X
+  
+  [33X[0;0YIf [3XO[103X is an object representing a monomial ordering, this attribute returns a
+  [13Xfunction[113X  that  can  be  used to compare or sort monomials [13Xin their external
+  representation[113X (as lists). This comparison variant is used inside algorithms
+  that manipulate the external representation.[133X
+  
+  [1X66.17-7 MonomialLexOrdering[101X
+  
+  [33X[1;0Y[29X[2XMonomialLexOrdering[102X( [[3Xvari[103X] ) [32X function[133X
+  
+  [33X[0;0YThis  function creates a lexicographic ordering for monomials. Monomials are
+  compared  first by the exponents of the largest variable, then the exponents
+  of the second largest variable and so on.[133X
+  
+  [33X[0;0YThe  variables are ordered according to their (internal) index, i.e., [22Xx_1[122X is
+  larger  than  [22Xx_2[122X and so on. If [3Xvari[103X is given, and is a list of variables or
+  variable  indices,  instead  this  arrangement  of  variables (in descending
+  order;  i.e.  the  first  variable is larger than the second) is used as the
+  underlying order of variables.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:=List(Tuples([1..3],3),i->x^(i[1]-1)*y^(i[2]-1)*z^(i[3]-1));[127X[104X
+    [4X[28X[ 1, z, z^2, y, y*z, y*z^2, y^2, y^2*z, y^2*z^2, x, x*z, x*z^2, x*y,[128X[104X
+    [4X[28X  x*y*z, x*y*z^2, x*y^2, x*y^2*z, x*y^2*z^2, x^2, x^2*z, x^2*z^2,[128X[104X
+    [4X[28X  x^2*y, x^2*y*z, x^2*y*z^2, x^2*y^2, x^2*y^2*z, x^2*y^2*z^2 ][128X[104X
+    [4X[25Xgap>[125X [27XSort(l,MonomialComparisonFunction(MonomialLexOrdering()));l;[127X[104X
+    [4X[28X[ 1, z, z^2, y, y*z, y*z^2, y^2, y^2*z, y^2*z^2, x, x*z, x*z^2, x*y,[128X[104X
+    [4X[28X  x*y*z, x*y*z^2, x*y^2, x*y^2*z, x*y^2*z^2, x^2, x^2*z, x^2*z^2,[128X[104X
+    [4X[28X  x^2*y, x^2*y*z, x^2*y*z^2, x^2*y^2, x^2*y^2*z, x^2*y^2*z^2 ][128X[104X
+    [4X[25Xgap>[125X [27XSort(l,MonomialComparisonFunction(MonomialLexOrdering([y,z,x])));l;[127X[104X
+    [4X[28X[ 1, x, x^2, z, x*z, x^2*z, z^2, x*z^2, x^2*z^2, y, x*y, x^2*y, y*z,[128X[104X
+    [4X[28X  x*y*z, x^2*y*z, y*z^2, x*y*z^2, x^2*y*z^2, y^2, x*y^2, x^2*y^2,[128X[104X
+    [4X[28X  y^2*z, x*y^2*z, x^2*y^2*z, y^2*z^2, x*y^2*z^2, x^2*y^2*z^2 ][128X[104X
+    [4X[25Xgap>[125X [27XSort(l,MonomialComparisonFunction(MonomialLexOrdering([z,x,y])));l;[127X[104X
+    [4X[28X[ 1, y, y^2, x, x*y, x*y^2, x^2, x^2*y, x^2*y^2, z, y*z, y^2*z, x*z,[128X[104X
+    [4X[28X  x*y*z, x*y^2*z, x^2*z, x^2*y*z, x^2*y^2*z, z^2, y*z^2, y^2*z^2,[128X[104X
+    [4X[28X  x*z^2, x*y*z^2, x*y^2*z^2, x^2*z^2, x^2*y*z^2, x^2*y^2*z^2 ][128X[104X
+  [4X[32X[104X
+  
+  [1X66.17-8 MonomialGrlexOrdering[101X
+  
+  [33X[1;0Y[29X[2XMonomialGrlexOrdering[102X( [[3Xvari[103X] ) [32X function[133X
+  
+  [33X[0;0YThis  function  creates  a  degree/lexicographic  ordering. In this ordering
+  monomials  are  compared first by their total degree, then lexicographically
+  (see [2XMonomialLexOrdering[102X ([14X66.17-7[114X)).[133X
+  
+  [33X[0;0YThe  variables are ordered according to their (internal) index, i.e., [22Xx_1[122X is
+  larger  than  [22Xx_2[122X and so on. If [3Xvari[103X is given, and is a list of variables or
+  variable  indices,  instead  this  arrangement  of  variables (in descending
+  order;  i.e.  the  first  variable is larger than the second) is used as the
+  underlying order of variables.[133X
+  
+  [1X66.17-9 MonomialGrevlexOrdering[101X
+  
+  [33X[1;0Y[29X[2XMonomialGrevlexOrdering[102X( [[3Xvari[103X] ) [32X function[133X
+  
+  [33X[0;0YThis  function  creates  a  [21Xgrevlex[121X ordering. In this ordering monomials are
+  compared  first  by total degree and then backwards lexicographically. (This
+  is different than [21Xgrlex[121X ordering with variables reversed.)[133X
+  
+  [33X[0;0YThe  variables are ordered according to their (internal) index, i.e., [22Xx_1[122X is
+  larger  than  [22Xx_2[122X and so on. If [3Xvari[103X is given, and is a list of variables or
+  variable  indices,  instead  this  arrangement  of  variables (in descending
+  order;  i.e.  the  first  variable is larger than the second) is used as the
+  underlying order of variables.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSort(l,MonomialComparisonFunction(MonomialGrlexOrdering()));l;[127X[104X
+    [4X[28X[ 1, z, y, x, z^2, y*z, y^2, x*z, x*y, x^2, y*z^2, y^2*z, x*z^2,[128X[104X
+    [4X[28X  x*y*z, x*y^2, x^2*z, x^2*y, y^2*z^2, x*y*z^2, x*y^2*z, x^2*z^2,[128X[104X
+    [4X[28X  x^2*y*z, x^2*y^2, x*y^2*z^2, x^2*y*z^2, x^2*y^2*z, x^2*y^2*z^2 ][128X[104X
+    [4X[25Xgap>[125X [27XSort(l,MonomialComparisonFunction(MonomialGrevlexOrdering()));l;[127X[104X
+    [4X[28X[ 1, z, y, x, z^2, y*z, x*z, y^2, x*y, x^2, y*z^2, x*z^2, y^2*z,[128X[104X
+    [4X[28X  x*y*z, x^2*z, x*y^2, x^2*y, y^2*z^2, x*y*z^2, x^2*z^2, x*y^2*z,[128X[104X
+    [4X[28X  x^2*y*z, x^2*y^2, x*y^2*z^2, x^2*y*z^2, x^2*y^2*z, x^2*y^2*z^2 ][128X[104X
+    [4X[25Xgap>[125X [27XSort(l,MonomialComparisonFunction(MonomialGrlexOrdering([z,y,x])));l;[127X[104X
+    [4X[28X[ 1, x, y, z, x^2, x*y, y^2, x*z, y*z, z^2, x^2*y, x*y^2, x^2*z,[128X[104X
+    [4X[28X  x*y*z, y^2*z, x*z^2, y*z^2, x^2*y^2, x^2*y*z, x*y^2*z, x^2*z^2,[128X[104X
+    [4X[28X  x*y*z^2, y^2*z^2, x^2*y^2*z, x^2*y*z^2, x*y^2*z^2, x^2*y^2*z^2 ][128X[104X
+  [4X[32X[104X
+  
+  [1X66.17-10 EliminationOrdering[101X
+  
+  [33X[1;0Y[29X[2XEliminationOrdering[102X( [3Xelim[103X[, [3Xrest[103X] ) [32X function[133X
+  
+  [33X[0;0YThis  function creates an elimination ordering for eliminating the variables
+  in  [3Xelim[103X.  Two  monomials are compared first by the exponent vectors for the
+  variables  listed  in  [3Xelim[103X  (a lexicographic comparison with respect to the
+  ordering   indicated   in   [3Xelim[103X).  If  these  submonomial  are  equal,  the
+  submonomials  given  by  the  other  variables  are  compared  by  a  graded
+  lexicographic ordering (with respect to the variable order given in [3Xrest[103X, if
+  called with two parameters).[133X
+  
+  [33X[0;0YBoth [3Xelim[103X and [3Xrest[103X may be a list of variables or a list of variable indices.[133X
+  
+  [1X66.17-11 PolynomialReduction[101X
+  
+  [33X[1;0Y[29X[2XPolynomialReduction[102X( [3Xpoly[103X, [3Xgens[103X, [3Xorder[103X ) [32X function[133X
+  
+  [33X[0;0Yreduces  the  polynomial  [3Xpoly[103X  by the ideal generated by the polynomials in
+  [3Xgens[103X, using the order [3Xorder[103X of monomials. Unless [3Xgens[103X is a Gröbner basis the
+  result is not guaranteed to be unique.[133X
+  
+  [33X[0;0YThe operation returns a list of length two, the first entry is the remainder
+  after  the  reduction. The second entry is a list of quotients corresponding
+  to [3Xgens[103X.[133X
+  
+  [33X[0;0YNote that the strategy used by [2XPolynomialReduction[102X differs from the standard
+  textbook      reduction      algorithm,     which     is     provided     by
+  [2XPolynomialDivisionAlgorithm[102X ([14X66.17-13[114X).[133X
+  
+  [1X66.17-12 PolynomialReducedRemainder[101X
+  
+  [33X[1;0Y[29X[2XPolynomialReducedRemainder[102X( [3Xpoly[103X, [3Xgens[103X, [3Xorder[103X ) [32X function[133X
+  
+  [33X[0;0Ythis  operation does the same way as [2XPolynomialReduction[102X ([14X66.17-11[114X) but does
+  not keep track of the actual quotients and returns only the remainder (it is
+  therefore slightly faster).[133X
+  
+  [1X66.17-13 PolynomialDivisionAlgorithm[101X
+  
+  [33X[1;0Y[29X[2XPolynomialDivisionAlgorithm[102X( [3Xpoly[103X, [3Xgens[103X, [3Xorder[103X ) [32X function[133X
+  
+  [33X[0;0YThis function implements the division algorithm for multivariate polynomials
+  as  given  in  [CLO97,  Theorem  3  in  Chapter 2]. (It might be slower than
+  [2XPolynomialReduction[102X  ([14X66.17-11[114X)  but  the remainders are guaranteed to agree
+  with the textbook.)[133X
+  
+  [33X[0;0YThe operation returns a list of length two, the first entry is the remainder
+  after  the  reduction. The second entry is a list of quotients corresponding
+  to [3Xgens[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xbas:=[x^3*y*z,x*y^2*z,z*y*z^3+x];;[127X[104X
+    [4X[25Xgap>[125X [27Xpol:=x^7*z*bas[1]+y^5*bas[3]+x*z;;[127X[104X
+    [4X[25Xgap>[125X [27XPolynomialReduction(pol,bas,MonomialLexOrdering());[127X[104X
+    [4X[28X[ -y*z^5, [ x^7*z, 0, y^5+z ] ][128X[104X
+    [4X[25Xgap>[125X [27XPolynomialReducedRemainder(pol,bas,MonomialLexOrdering());[127X[104X
+    [4X[28X-y*z^5[128X[104X
+    [4X[25Xgap>[125X [27XPolynomialDivisionAlgorithm(pol,bas,MonomialLexOrdering());[127X[104X
+    [4X[28X[ -y*z^5, [ x^7*z, 0, y^5+z ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X66.17-14 MonomialExtGrlexLess[101X
+  
+  [33X[1;0Y[29X[2XMonomialExtGrlexLess[102X( [3Xa[103X, [3Xb[103X ) [32X function[133X
+  
+  [33X[0;0Yimplements  comparison  of  monomial  in  their external representation by a
+  [21Xgrlex[121X  order  with  [22Xx_1>x_2[122X  (This  is  exactly  the same as the ordering by
+  [2XMonomialGrlexOrdering[102X   ([14X66.17-8[114X),  see   [14X66.17[114X).  The  function  takes  two
+  monomials  [3Xa[103X and [3Xb[103X in expanded form and returns whether the first is smaller
+  than  the  second.  (This  ordering  is  also  used  by  [5XGAP[105X  internally for
+  representing polynomials as a linear combination of monomials.)[133X
+  
+  [33X[0;0YSee section [14X66.21[114X for details on the expanded form of monomials.[133X
+  
+  
+  [1X66.18 [33X[0;0YGroebner Bases[133X[101X
+  
+  [33X[0;0YA  [13XGroebner  Basis[113X of an ideal [22XI[122Xi, in a polynomial ring [22XR[122X, with respect to a
+  monomial  ordering,  is  a  set  of  ideal  generators [3XG[103X such that the ideal
+  generated  by  the leading monomials of all polynomials in [3XG[103X is equal to the
+  ideal generated by the leading monomials of all polynomials in [3XI[103X.[133X
+  
+  [33X[0;0YFor more details on Groebner bases see [CLO97].[133X
+  
+  
+  [1X66.18-1 [33X[0;0YGroebnerBasis[133X[101X
+  
+  [33X[1;0Y[29X[2XGroebnerBasis[102X( [3XL[103X, [3XO[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XGroebnerBasis[102X( [3XI[103X, [3XO[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XGroebnerBasisNC[102X( [3XL[103X, [3XO[103X ) [32X function[133X
+  
+  [33X[0;0YLet [3XO[103X be a monomial ordering and [3XL[103X be a list of polynomials that generate an
+  ideal  [3XI[103X.  This  operation returns a Groebner basis of [3XI[103X with respect to the
+  ordering [3XO[103X.[133X
+  
+  [33X[0;0Y[2XGroebnerBasisNC[102X  works like [2XGroebnerBasis[102X with the only distinction that the
+  first argument has to be a list of polynomials and that no test is performed
+  to check whether the ordering is defined for all occurring variables.[133X
+  
+  [33X[0;0YNote  that  [5XGAP[105X  at  the  moment  only  includes  a  naïve implementation of
+  Buchberger's  algorithm  (which  is  mainly intended as a teaching tool). It
+  might not be sufficient for serious problems.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:=[x^2+y^2+z^2-1,x^2+z^2-y,x-y];;[127X[104X
+    [4X[25Xgap>[125X [27XGroebnerBasis(l,MonomialLexOrdering());[127X[104X
+    [4X[28X[ x^2+y^2+z^2-1, x^2+z^2-y, x-y, -y^2-y+1, -z^2+2*y-1,[128X[104X
+    [4X[28X  1/2*z^4+2*z^2-1/2 ][128X[104X
+    [4X[25Xgap>[125X [27XGroebnerBasis(l,MonomialLexOrdering([z,x,y]));[127X[104X
+    [4X[28X[ x^2+y^2+z^2-1, x^2+z^2-y, x-y, -y^2-y+1 ][128X[104X
+    [4X[25Xgap>[125X [27XGroebnerBasis(l,MonomialGrlexOrdering());[127X[104X
+    [4X[28X[ x^2+y^2+z^2-1, x^2+z^2-y, x-y, -y^2-y+1, -z^2+2*y-1 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X66.18-2 [33X[0;0YReducedGroebnerBasis[133X[101X
+  
+  [33X[1;0Y[29X[2XReducedGroebnerBasis[102X( [3XL[103X, [3XO[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XReducedGroebnerBasis[102X( [3XI[103X, [3XO[103X ) [32X operation[133X
+  
+  [33X[0;0Ya  Groebner  basis [22XB[122X (see [2XGroebnerBasis[102X ([14X66.18-1[114X)) is [13Xreduced[113X if no monomial
+  in  a  polynomial  in  [3XB[103X  is  divisible  by  the leading monomial of another
+  polynomial  in  [22XB[122X.  This operation computes a Groebner basis with respect to
+  the monomial ordering [3XO[103X and then reduces it.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XReducedGroebnerBasis(l,MonomialGrlexOrdering());[127X[104X
+    [4X[28X[ x-y, z^2-2*y+1, y^2+y-1 ][128X[104X
+    [4X[25Xgap>[125X [27XReducedGroebnerBasis(l,MonomialLexOrdering());[127X[104X
+    [4X[28X[ z^4+4*z^2-1, -1/2*z^2+y-1/2, -1/2*z^2+x-1/2 ][128X[104X
+    [4X[25Xgap>[125X [27XReducedGroebnerBasis(l,MonomialLexOrdering([y,z,x]));[127X[104X
+    [4X[28X[ x^2+x-1, z^2-2*x+1, -x+y ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YFor  performance reasons it can be advantageous to define monomial orderings
+  once and then to reuse them:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xord:=MonomialGrlexOrdering();;[127X[104X
+    [4X[25Xgap>[125X [27XGroebnerBasis(l,ord);[127X[104X
+    [4X[28X[ x^2+y^2+z^2-1, x^2+z^2-y, x-y, -y^2-y+1, -z^2+2*y-1 ][128X[104X
+    [4X[25Xgap>[125X [27XReducedGroebnerBasis(l,ord);[127X[104X
+    [4X[28X[ x-y, z^2-2*y+1, y^2+y-1 ][128X[104X
+  [4X[32X[104X
+  
+  [1X66.18-3 StoredGroebnerBasis[101X
+  
+  [33X[1;0Y[29X[2XStoredGroebnerBasis[102X( [3XI[103X ) [32X attribute[133X
+  
+  [33X[0;0YFor  an  ideal  [3XI[103X in a polynomial ring, this attribute holds a list [22X[ B, O ][122X
+  where [22XB[122X is a Groebner basis for the monomial ordering [22XO[122X. this can be used to
+  test membership or canonical coset representatives.[133X
+  
+  [1X66.18-4 InfoGroebner[101X
+  
+  [33X[1;0Y[29X[2XInfoGroebner[102X [32X info class[133X
+  
+  [33X[0;0YThis info class gives information about Groebner basis calculations.[133X
+  
+  
+  [1X66.19 [33X[0;0YRational Function Families[133X[101X
+  
+  [33X[0;0YAll  rational  functions  defined  over  a  ring lie in the same family, the
+  rational functions family over this ring.[133X
+  
+  [33X[0;0YIn  [5XGAP[105X  therefore  the family of a polynomial depends only on the family of
+  the  coefficients, all polynomials whose coefficients lie in the same family
+  are [21Xcompatible[121X.[133X
+  
+  [1X66.19-1 RationalFunctionsFamily[101X
+  
+  [33X[1;0Y[29X[2XRationalFunctionsFamily[102X( [3Xfam[103X ) [32X attribute[133X
+  
+  [33X[0;0Ycreates a family containing rational functions with coefficients in [3Xfam[103X. All
+  elements    of    the   [2XRationalFunctionsFamily[102X   are   rational   functions
+  (see [2XIsRationalFunction[102X ([14X66.4-1[114X)).[133X
+  
+  [1X66.19-2 IsPolynomialFunctionsFamily[101X
+  
+  [33X[1;0Y[29X[2XIsPolynomialFunctionsFamily[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsRationalFunctionsFamily[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0Y[2XIsPolynomialFunctionsFamily[102X  is the category of a family of polynomials. For
+  families  over  an  UFD,  the category becomes [2XIsRationalFunctionsFamily[102X (as
+  rational  functions  and  quotients  are  only provided for families over an
+  UFD.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xfam:=RationalFunctionsFamily(FamilyObj(1));[127X[104X
+    [4X[28XNewFamily( "RationalFunctionsFamily(...)", [ 618, 620 ],[128X[104X
+    [4X[28X[ 82, 85, 89, 93, 97, 100, 103, 107, 111, 618, 620 ] )[128X[104X
+  [4X[32X[104X
+  
+  [1X66.19-3 CoefficientsFamily[101X
+  
+  [33X[1;0Y[29X[2XCoefficientsFamily[102X( [3Xrffam[103X ) [32X attribute[133X
+  
+  [33X[0;0YIf  [3Xrffam[103X  has  been created as [10XRationalFunctionsFamily([3Xcfam[103X[10X)[110X this attribute
+  holds the coefficients family [3Xcfam[103X.[133X
+  
+  [33X[0;0Y[5XGAP[105X   does   [13Xnot[113X   embed  the  base  ring  in  the  polynomial  ring.  While
+  multiplication  and  addition  of  base  ring elements to rational functions
+  return  the  expected  results,  polynomials  and rational functions are not
+  equal.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X1=Indeterminate(Rationals)^0;[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X66.20 [33X[0;0YThe Representations of Rational Functions[133X[101X
+  
+  [33X[0;0Y[5XGAP[105X  uses  four  representations  of  rational functions: Rational functions
+  given   by  numerator  and  denominator,  polynomials,  univariate  rational
+  functions  (given  by  coefficient  lists  for numerator and denominator and
+  valuation)   and   Laurent   polynomials  (given  by  coefficient  list  and
+  valuation).[133X
+  
+  [33X[0;0YThese  representations  do  not necessarily reflect mathematical properties:
+  While  an object in the Laurent polynomials representation must be a Laurent
+  polynomial it might turn out that a rational function given by numerator and
+  denominator  is  actually  a  Laurent  polynomial  and the property tests in
+  section [14X66.4[114X will find this out.[133X
+  
+  [33X[0;0YEach  representation  is  associated one or several [21Xdefining attributes[121X that
+  give  an  [21Xexternal[121X  representation  (see [14X66.21[114X) of the representation in the
+  form  of  lists  and  are  the  defining  information  that tells a rational
+  function what it is.[133X
+  
+  [33X[0;0Y[5XGAP[105X  also  implements  methods  to  compute  these  attributes  for rational
+  functions in [13Xother[113X representations, provided it would be possible to express
+  an  [13Xmathematically  equal[113X rational function in the representation associated
+  with  the  attribute.  (That  is  one can always get a numerator/denominator
+  representation  of  a  polynomial  while an arbitrary function of course can
+  compute a polynomial representation only if it is a polynomial.)[133X
+  
+  [33X[0;0YTherefore  these  attributes can be thought of as [21Xconceptual[121X representations
+  that  allow  us  –as  far  as  possible– to consider an object as a rational
+  function,  a polynomial or a Laurent polynomial, regardless of the way it is
+  represented in the computer.[133X
+  
+  [33X[0;0YFunctions  thus  usually  do  not need to care about the representation of a
+  rational  function.  Depending  on  its (known in the context or determined)
+  properties, they can access the attribute representing the rational function
+  in the desired way.[133X
+  
+  [33X[0;0YConsequently,  methods  for  rational functions are installed for properties
+  and not for representations.[133X
+  
+  [33X[0;0YWhen  [13Xcreating[113X new rational functions however they must be created in one of
+  the three representations. In most cases this will be the representation for
+  which the [21Xconceptual[121X representation in which the calculation was done is the
+  defining attribute.[133X
+  
+  [33X[0;0YIterated  operations  (like  forming the product over a list) therefore will
+  tend  to  stay  in  the  most suitable representation and the calculation of
+  another  conceptual  representation (which may be comparatively expensive in
+  certain circumstances) is not necessary.[133X
+  
+  
+  [1X66.21 [33X[0;0YThe Defining Attributes of Rational Functions[133X[101X
+  
+  [33X[0;0YIn  general,  rational  functions  are given in terms of monomials. They are
+  represented by lists, using numbers (see [14X66.1[114X) for the indeterminates.[133X
+  
+  [33X[0;0YA monomial is a product of powers of indeterminates. A monomial is stored as
+  a  list  (we  call  this  the  [13Xexpanded  form[113X  of  the monomial) of the form
+  [10X[[3Xinum[103X[10X,[3Xexp[103X[10X,[3Xinum[103X[10X,[3Xexp[103X[10X,...][110X  where  each  [3Xinum[103X is the number of an indeterminate
+  and [3Xexp[103X the corresponding exponent. The list must be sorted according to the
+  numbers of the indeterminates. Thus for example, if [22Xx[122X, [22Xy[122X and [22Xz[122X are the first
+  three indeterminates, the expanded form of the monomial [22Xx^5 z^8 = z^8 x^5[122X is
+  [10X[  1,  5,  3, 8 ][110X. The representation of a polynomials is a list of the form
+  [10X[[3Xmon[103X[10X,[3Xcoeff[103X[10X,[3Xmon[103X[10X,[3Xcoeff[103X[10X,...][110X  where [3Xmon[103X is a monomial in expanded form (that is
+  given  as  list)  and  [3Xcoeff[103X  its  coefficient. The monomials must be sorted
+  according to the total degree/lexicographic order (This is the same as given
+  by  the  [21Xgrlex[121X  monomial  ordering, see [2XMonomialGrlexOrdering[102X ([14X66.17-8[114X)). We
+  call  this  the  [13Xexternal  representation[113X  of  a polynomial. (The reason for
+  ordering  is  that  addition  of polynomials becomes linear in the number of
+  monomials instead of quadratic; the reason for the particular ordering chose
+  is  that  it  is  compatible  with  multiplication and thus gives acceptable
+  performance for quotient calculations.)[133X
+  
+  [33X[0;0YThe  attributes  that  give  a  representation  of  a rational function as a
+  Laurent   polynomial   are   [2XCoefficientsOfLaurentPolynomial[102X  ([14X66.13-2[114X)  and
+  [2XIndeterminateNumberOfUnivariateRationalFunction[102X ([14X66.1-2[114X).[133X
+  
+  [33X[0;0YAlgorithms  should  use only the attributes [2XExtRepNumeratorRatFun[102X ([14X66.21-2[114X),
+  [2XExtRepDenominatorRatFun[102X    ([14X66.21-3[114X),    [2XExtRepPolynomialRatFun[102X   ([14X66.21-6[114X),
+  [2XCoefficientsOfLaurentPolynomial[102X ([14X66.13-2[114X) and –if the univariate function is
+  not  constant–  [2XIndeterminateNumberOfUnivariateRationalFunction[102X  ([14X66.1-2[114X) as
+  the  low-level interface to work with a polynomial. They should not refer to
+  the actual representation used.[133X
+  
+  [1X66.21-1 IsRationalFunctionDefaultRep[101X
+  
+  [33X[1;0Y[29X[2XIsRationalFunctionDefaultRep[102X( [3Xobj[103X ) [32X Representation[133X
+  
+  [33X[0;0Yis  the default representation of rational functions. A rational function in
+  this  representation  is  defined  by  the  attributes [2XExtRepNumeratorRatFun[102X
+  ([14X66.21-2[114X)  and  [2XExtRepDenominatorRatFun[102X  ([14X66.21-3[114X),  the values of which are
+  external representations of polynomials.[133X
+  
+  [1X66.21-2 ExtRepNumeratorRatFun[101X
+  
+  [33X[1;0Y[29X[2XExtRepNumeratorRatFun[102X( [3Xratfun[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the  external  representation  of  the  numerator polynomial of the
+  rational function [3Xratfun[103X. Numerator and denominator are not guaranteed to be
+  cancelled against each other.[133X
+  
+  [1X66.21-3 ExtRepDenominatorRatFun[101X
+  
+  [33X[1;0Y[29X[2XExtRepDenominatorRatFun[102X( [3Xratfun[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the  external  representation  of the denominator polynomial of the
+  rational function [3Xratfun[103X. Numerator and denominator are not guaranteed to be
+  cancelled against each other.[133X
+  
+  [1X66.21-4 ZeroCoefficientRatFun[101X
+  
+  [33X[1;0Y[29X[2XZeroCoefficientRatFun[102X( [3Xratfun[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the zero of the coefficient ring. This might be needed to represent
+  the  zero  polynomial for which the external representation of the numerator
+  is the empty list.[133X
+  
+  [1X66.21-5 IsPolynomialDefaultRep[101X
+  
+  [33X[1;0Y[29X[2XIsPolynomialDefaultRep[102X( [3Xobj[103X ) [32X Representation[133X
+  
+  [33X[0;0Yis   the  default  representation  of  polynomials.  A  polynomial  in  this
+  representation  is  defined  by  the  components  and  [2XExtRepNumeratorRatFun[102X
+  ([14X66.21-2[114X)    where   [2XExtRepNumeratorRatFun[102X   ([14X66.21-2[114X)   is   the   external
+  representation of the polynomial.[133X
+  
+  [1X66.21-6 ExtRepPolynomialRatFun[101X
+  
+  [33X[1;0Y[29X[2XExtRepPolynomialRatFun[102X( [3Xpolynomial[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the  external  representation  of  a  polynomial. The difference to
+  [2XExtRepNumeratorRatFun[102X  ([14X66.21-2[114X) is that rational functions might know to be
+  a  polynomial  but  can still have a non-vanishing denominator. In this case
+  [2XExtRepPolynomialRatFun[102X has to call a quotient routine.[133X
+  
+  [1X66.21-7 IsLaurentPolynomialDefaultRep[101X
+  
+  [33X[1;0Y[29X[2XIsLaurentPolynomialDefaultRep[102X( [3Xobj[103X ) [32X Representation[133X
+  
+  [33X[0;0YThis   representation   is  used  for  Laurent  polynomials  and  univariate
+  polynomials.   It   represents  a  Laurent  polynomial  via  the  attributes
+  [2XCoefficientsOfLaurentPolynomial[102X                 ([14X66.13-2[114X)                and
+  [2XIndeterminateNumberOfLaurentPolynomial[102X ([14X66.13-3[114X).[133X
+  
+  
+  [1X66.22 [33X[0;0YCreation of Rational Functions[133X[101X
+  
+  [33X[0;0YThe operations [2XLaurentPolynomialByCoefficients[102X ([14X66.13-1[114X), [2XPolynomialByExtRep[102X
+  ([14X66.22-2[114X)  and  [2XRationalFunctionByExtRep[102X  ([14X66.22-1[114X)  are  used  to construct
+  objects in the three basic representations for rational functions.[133X
+  
+  [1X66.22-1 RationalFunctionByExtRep[101X
+  
+  [33X[1;0Y[29X[2XRationalFunctionByExtRep[102X( [3Xrfam[103X, [3Xnum[103X, [3Xden[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XRationalFunctionByExtRepNC[102X( [3Xrfam[103X, [3Xnum[103X, [3Xden[103X ) [32X function[133X
+  
+  [33X[0;0Yconstructs     a     rational     function     (in     the    representation
+  [2XIsRationalFunctionDefaultRep[102X  ([14X66.21-1[114X))  in  the  rational  function family
+  [3Xrfam[103X,  the rational function itself is given by the external representations
+  [3Xnum[103X and [3Xden[103X for numerator and denominator. No cancellation takes place.[133X
+  
+  [33X[0;0YThe  variant  [2XRationalFunctionByExtRepNC[102X  does  not  perform any test of the
+  arguments and thus potentially can create illegal objects. It only should be
+  used if speed is required and the arguments are known to be in correct form.[133X
+  
+  [1X66.22-2 PolynomialByExtRep[101X
+  
+  [33X[1;0Y[29X[2XPolynomialByExtRep[102X( [3Xrfam[103X, [3Xextrep[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XPolynomialByExtRepNC[102X( [3Xrfam[103X, [3Xextrep[103X ) [32X function[133X
+  
+  [33X[0;0Yconstructs   a  polynomial  (in  the  representation  [2XIsPolynomialDefaultRep[102X
+  ([14X66.21-5[114X))  in  the  rational function family [3Xrfam[103X, the polynomial itself is
+  given by the external representation [3Xextrep[103X.[133X
+  
+  [33X[0;0YThe  variant [2XPolynomialByExtRepNC[102X does not perform any test of the arguments
+  and  thus  potentially can create invalid objects. It only should be used if
+  speed is required and the arguments are known to be in correct form.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xfam:=RationalFunctionsFamily(FamilyObj(1));;[127X[104X
+    [4X[25Xgap>[125X [27Xp:=PolynomialByExtRep(fam,[[1,2],1,[2,1,15,7],3]);[127X[104X
+    [4X[28X3*y*x_15^7+x^2[128X[104X
+    [4X[25Xgap>[125X [27Xq:=p/(p+1);[127X[104X
+    [4X[28X(3*y*x_15^7+x^2)/(3*y*x_15^7+x^2+1)[128X[104X
+    [4X[25Xgap>[125X [27XExtRepNumeratorRatFun(q);[127X[104X
+    [4X[28X[ [ 1, 2 ], 1, [ 2, 1, 15, 7 ], 3 ][128X[104X
+    [4X[25Xgap>[125X [27XExtRepDenominatorRatFun(q);[127X[104X
+    [4X[28X[ [  ], 1, [ 1, 2 ], 1, [ 2, 1, 15, 7 ], 3 ][128X[104X
+  [4X[32X[104X
+  
+  [1X66.22-3 LaurentPolynomialByExtRep[101X
+  
+  [33X[1;0Y[29X[2XLaurentPolynomialByExtRep[102X( [3Xfam[103X, [3Xcofs[103X, [3Xval[103X, [3Xind[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XLaurentPolynomialByExtRepNC[102X( [3Xfam[103X, [3Xcofs[103X, [3Xval[103X, [3Xind[103X ) [32X function[133X
+  
+  [33X[0;0Ycreates  a  Laurent polynomial in the family [3Xfam[103X with [[3Xcofs[103X,[3Xval[103X] as value of
+  [2XCoefficientsOfLaurentPolynomial[102X   ([14X66.13-2[114X).   No  coefficient  shifting  is
+  performed.  This is the lowest level function to create a Laurent polynomial
+  but  will  rely  on  the  coefficients  being  shifted properly and will not
+  perform   any   tests.   Unless  this  is  guaranteed  for  the  parameters,
+  [2XLaurentPolynomialByCoefficients[102X ([14X66.13-1[114X) should be used.[133X
+  
+  
+  [1X66.23 [33X[0;0YArithmetic for External Representations of Polynomials[133X[101X
+  
+  [33X[0;0YThe  following  operations are used internally to perform the arithmetic for
+  polynomials in their [21Xexternal[121X representation (see [14X66.21[114X) as lists.[133X
+  
+  [33X[0;0YFunctions  to  perform  arithmetic  with  the  coefficient  lists of Laurent
+  polynomials are described in Section [14X23.4[114X.[133X
+  
+  [1X66.23-1 ZippedSum[101X
+  
+  [33X[1;0Y[29X[2XZippedSum[102X( [3Xz1[103X, [3Xz2[103X, [3Xczero[103X, [3Xfuncs[103X ) [32X operation[133X
+  
+  [33X[0;0Ycomputes  the  sum of two external representations of polynomials [3Xz1[103X and [3Xz2[103X.
+  [3Xczero[103X  is the appropriate coefficient zero and [3Xfuncs[103X a list [ [3Xmonomial_less[103X,
+  [3Xcoefficient_sum[103X  ]  containing  a  monomial  comparison  and  a  coefficient
+  addition function. This list can be found in the component [3Xfam[103X[10X!.zippedSum[110X of
+  the rational functions family.[133X
+  
+  [33X[0;0YNote  that  [3Xcoefficient_sum[103X  must  be  a  proper  [21Xsummation[121X  function, not a
+  function computing differences.[133X
+  
+  [1X66.23-2 ZippedProduct[101X
+  
+  [33X[1;0Y[29X[2XZippedProduct[102X( [3Xz1[103X, [3Xz2[103X, [3Xczero[103X, [3Xfuncs[103X ) [32X operation[133X
+  
+  [33X[0;0Ycomputes  the  product of two external representations of polynomials [3Xz1[103X and
+  [3Xz2[103X.   [3Xczero[103X  is  the  appropriate  coefficient  zero  and  [3Xfuncs[103X  a  list  [
+  [3Xmonomial_prod[103X,  [3Xmonomial_less[103X, [3Xcoefficient_sum[103X, [3Xcoefficient_prod[103X] containing
+  functions  to  multiply  and  compare  monomials,  to  add  and  to multiply
+  coefficients.  This list can be found in the component [10X[3Xfam[103X[10X!.zippedProduct[110X of
+  the rational functions family.[133X
+  
+  [1X66.23-3 QuotientPolynomialsExtRep[101X
+  
+  [33X[1;0Y[29X[2XQuotientPolynomialsExtRep[102X( [3Xfam[103X, [3Xa[103X, [3Xb[103X ) [32X function[133X
+  
+  [33X[0;0YLet  [3Xa[103X and [3Xb[103X the external representations of two polynomials in the rational
+  functions  family [3Xfam[103X. This function computes the external representation of
+  the  quotient  of  both  polynomials,  it  returns  [9Xfail[109X  if  the polynomial
+  described by [3Xb[103X does not divide the polynomial described by [3Xa[103X.[133X
+  
+  
+  [1X66.24 [33X[0;0YCancellation Tests for Rational Functions[133X[101X
+  
+  [33X[0;0YThe  operation  [2XGcd[102X  ([14X56.7-1[114X)  can be used to test for common factors of two
+  polynomials.  This  however  would  be  too  expensive  to  be  done  in the
+  arithmetic, thus uses the following operations internally to try to keep the
+  denominators as small as possible[133X
+  
+  [1X66.24-1 RationalFunctionByExtRepWithCancellation[101X
+  
+  [33X[1;0Y[29X[2XRationalFunctionByExtRepWithCancellation[102X( [3Xrfam[103X, [3Xnum[103X, [3Xden[103X ) [32X function[133X
+  
+  [33X[0;0Yconstructs  a  rational  function as [2XRationalFunctionByExtRep[102X ([14X66.22-1[114X) does
+  but tries to cancel out common factors of numerator and denominator, calling
+  [2XTryGcdCancelExtRepPolynomials[102X ([14X66.24-2[114X).[133X
+  
+  [1X66.24-2 TryGcdCancelExtRepPolynomials[101X
+  
+  [33X[1;0Y[29X[2XTryGcdCancelExtRepPolynomials[102X( [3Xfam[103X, [3Xa[103X, [3Xb[103X ) [32X function[133X
+  
+  [33X[0;0YLet  [3Xa[103X  and  [3Xb[103X  be  the  external  representations  of two polynomials. This
+  function   tries   to   cancel  common  factors  between  the  corresponding
+  polynomials  and  returns  a  list [22X[ a', b' ][122X of external representations of
+  cancelled  polynomials.  As there is no proper multivariate GCD cancellation
+  is not guaranteed to be optimal.[133X
+  
+  [1X66.24-3 HeuristicCancelPolynomialsExtRep[101X
+  
+  [33X[1;0Y[29X[2XHeuristicCancelPolynomialsExtRep[102X( [3Xfam[103X, [3Xext1[103X, [3Xext2[103X ) [32X operation[133X
+  
+  [33X[0;0Yis  called  by [2XTryGcdCancelExtRepPolynomials[102X ([14X66.24-2[114X) to perform the actual
+  work.  It  will return either [9Xfail[109X or a new list of external representations
+  of  cancelled  polynomials.  The  cancellation  performed is not necessarily
+  optimal.[133X
+  

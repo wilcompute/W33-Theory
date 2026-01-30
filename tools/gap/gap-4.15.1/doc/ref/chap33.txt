@@ -1,0 +1,478 @@
+  
+  [1X33 [33X[0;0YRelations[133X[101X
+  
+  [33X[0;0YA  [13Xbinary  relation[113X [22XR[122X on a set [22XX[122X is a subset of [22XX × X[122X. A binary relation can
+  also  be thought of as a (general) mapping from [22XX[122X to itself or as a directed
+  graph where each edge represents an element of [22XR[122X.[133X
+  
+  [33X[0;0YIn  [5XGAP[105X,  a relation is conceptually represented as a general mapping from [22XX[122X
+  to   itself.  The  category  [2XIsBinaryRelation[102X  ([14X33.1-1[114X)  is  a  synonym  for
+  [2XIsEndoGeneralMapping[102X  ([14X32.13-3[114X).  Attributes  and properties of relations in
+  [5XGAP[105X  are supported for relations, via considering relations as a subset of [22XX
+  × X[122X, or as a directed graph; examples include finding the strongly connected
+  components  of  a  relation,  via  [2XStronglyConnectedComponents[102X  ([14X33.4-5[114X), or
+  enumerating the tuples of the relation.[133X
+  
+  
+  [1X33.1 [33X[0;0YGeneral Binary Relations[133X[101X
+  
+  [33X[0;0YThis section lists general constructors of relations.[133X
+  
+  [1X33.1-1 IsBinaryRelation[101X
+  
+  [33X[1;0Y[29X[2XIsBinaryRelation[102X( [3XR[103X ) [32X property[133X
+  
+  [33X[0;0Yis  exactly  the  same category as (i.e. a synonym for) [2XIsEndoGeneralMapping[102X
+  ([14X32.13-3[114X).[133X
+  
+  [1X33.1-2 BinaryRelationByElements[101X
+  
+  [33X[1;0Y[29X[2XBinaryRelationByElements[102X( [3Xdomain[103X, [3Xelms[103X ) [32X function[133X
+  
+  [33X[0;0Yis  the binary relation on [3Xdomain[103X and with underlying relation consisting of
+  the    tuples   collection   [3Xelms[103X.   This   construction   is   similar   to
+  [2XGeneralMappingByElements[102X  ([14X32.2-1[114X)  where  the source and range are the same
+  set.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xr:=BinaryRelationByElements(Domain([1..3]),[DirectProductElement([1,2]),DirectProductElement([1,3])]);[127X[104X
+    [4X[28X<general mapping: Domain([ 1 .. 3 ]) -> Domain([ 1 .. 3 ]) >[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X33.1-3 [33X[0;0YIdentityBinaryRelation[133X[101X
+  
+  [33X[1;0Y[29X[2XIdentityBinaryRelation[102X( [3Xdegree[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XIdentityBinaryRelation[102X( [3Xdomain[103X ) [32X function[133X
+  
+  [33X[0;0Yis  the binary relation which consists of diagonal pairs, i.e., pairs of the
+  form [22X(x,x)[122X. In the first form if a positive integer [3Xdegree[103X is given then the
+  domain  is  the  set of the integers [22X{ 1, ..., [3Xdegree[103X }[122X. In the second form,
+  the objects [22Xx[122X are from the domain [3Xdomain[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIdentityBinaryRelation(5);[127X[104X
+    [4X[28X<equivalence relation on Domain([ 1 .. 5 ]) >[128X[104X
+    [4X[25Xgap>[125X [27Xs4:=SymmetricGroup(4);[127X[104X
+    [4X[28XSym( [ 1 .. 4 ] )[128X[104X
+    [4X[25Xgap>[125X [27XIdentityBinaryRelation(s4);[127X[104X
+    [4X[28XIdentityMapping( Sym( [ 1 .. 4 ] ) )[128X[104X
+  [4X[32X[104X
+  
+  [1X33.1-4 EmptyBinaryRelation[101X
+  
+  [33X[1;0Y[29X[2XEmptyBinaryRelation[102X( [3Xdegree[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XEmptyBinaryRelation[102X( [3Xdomain[103X ) [32X function[133X
+  
+  [33X[0;0Yis  the  relation with [3XR[103X empty. In the first form of the command with [3Xdegree[103X
+  an  integer,  the  domain  is  the  set of points [22X{ 1, ..., [3Xdegree[103X }[122X. In the
+  second form, the domain is that given by the argument [3Xdomain[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XEmptyBinaryRelation(3) = BinaryRelationOnPoints([ [], [], [] ]);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X33.2 [33X[0;0YProperties and Attributes of Binary Relations[133X[101X
+  
+  [1X33.2-1 IsReflexiveBinaryRelation[101X
+  
+  [33X[1;0Y[29X[2XIsReflexiveBinaryRelation[102X( [3XR[103X ) [32X property[133X
+  
+  [33X[0;0Yreturns [9Xtrue[109X if the binary relation [3XR[103X is reflexive, and [9Xfalse[109X otherwise.[133X
+  
+  [33X[0;0YA binary relation [22XR[122X (as a set of pairs) on a set [22XX[122X is [13Xreflexive[113X if for all [22Xx
+  ∈ X[122X, [22X(x,x) ∈ R[122X. Alternatively, [22XR[122X as a mapping is reflexive if for all [22Xx ∈ X[122X,
+  [22Xx[122X is an element of the image set [22XR(x)[122X.[133X
+  
+  [33X[0;0YA  reflexive  binary  relation  is  necessarily  a total endomorphic mapping
+  (tested via [2XIsTotal[102X ([14X32.3-1[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsReflexiveBinaryRelation(BinaryRelationOnPoints([[1,3],[2],[3]]));[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsReflexiveBinaryRelation(BinaryRelationOnPoints([[2],[2]]));[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X33.2-2 IsSymmetricBinaryRelation[101X
+  
+  [33X[1;0Y[29X[2XIsSymmetricBinaryRelation[102X( [3XR[103X ) [32X property[133X
+  
+  [33X[0;0Yreturns [9Xtrue[109X if the binary relation [3XR[103X is symmetric, and [9Xfalse[109X otherwise.[133X
+  
+  [33X[0;0YA binary relation [22XR[122X (as a set of pairs) on a set [22XX[122X is [13Xsymmetric[113X if [22X(x,y) ∈ R[122X
+  then [22X(y,x) ∈ R[122X. Alternatively, [22XR[122X as a mapping is symmetric if for all [22Xx ∈ X[122X,
+  the preimage set of [22Xx[122X under [22XR[122X equals the image set [22XR(x)[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsSymmetricBinaryRelation(BinaryRelationOnPoints([[2],[1]]));[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsSymmetricBinaryRelation(BinaryRelationOnPoints([[2],[2]]));[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X33.2-3 IsTransitiveBinaryRelation[101X
+  
+  [33X[1;0Y[29X[2XIsTransitiveBinaryRelation[102X( [3XR[103X ) [32X property[133X
+  
+  [33X[0;0Yreturns [9Xtrue[109X if the binary relation [3XR[103X is transitive, and [9Xfalse[109X otherwise.[133X
+  
+  [33X[0;0YA  binary  relation [3XR[103X (as a set of pairs) on a set [22XX[122X is [13Xtransitive[113X if [22X(x,y),
+  (y,z)  ∈ R[122X implies [22X(x,z) ∈ R[122X. Alternatively, [22XR[122X as a mapping is transitive if
+  for  all [22Xx ∈ X[122X, the image set [22XR(R(x))[122X of the image set [22XR(x)[122X of [22Xx[122X is a subset
+  of [22XR(x)[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsTransitiveBinaryRelation(BinaryRelationOnPoints([[1,2,3],[2,3],[]]));[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsTransitiveBinaryRelation(BinaryRelationOnPoints([[1,2],[2,3],[]]));[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X33.2-4 IsAntisymmetricBinaryRelation[101X
+  
+  [33X[1;0Y[29X[2XIsAntisymmetricBinaryRelation[102X( [3Xrel[103X ) [32X property[133X
+  
+  [33X[0;0Yreturns  [9Xtrue[109X  if  the  binary  relation  [3Xrel[103X  is  antisymmetric,  and [9Xfalse[109X
+  otherwise.[133X
+  
+  [33X[0;0YA  binary  relation  [3XR[103X  (as  a  set of pairs) on a set [22XX[122X is [13Xantisymmetric[113X if
+  [22X(x,y),  (y,x)  ∈  R[122X  implies  [22Xx  =  y[122X.  Alternatively,  [22XR[122X  as  a  mapping is
+  antisymmetric  if  for  all [22Xx ∈ X[122X, the intersection of the preimage set of [22Xx[122X
+  under [22XR[122X and the image set [22XR(x)[122X is [22X{ x }[122X.[133X
+  
+  [1X33.2-5 IsPreOrderBinaryRelation[101X
+  
+  [33X[1;0Y[29X[2XIsPreOrderBinaryRelation[102X( [3Xrel[103X ) [32X property[133X
+  
+  [33X[0;0Yreturns [9Xtrue[109X if the binary relation [3Xrel[103X is a preorder, and [9Xfalse[109X otherwise.[133X
+  
+  [33X[0;0YA [13Xpreorder[113X is a binary relation that is both reflexive and transitive.[133X
+  
+  [1X33.2-6 IsPartialOrderBinaryRelation[101X
+  
+  [33X[1;0Y[29X[2XIsPartialOrderBinaryRelation[102X( [3Xrel[103X ) [32X property[133X
+  
+  [33X[0;0Yreturns  [9Xtrue[109X  if  the  binary  relation  [3Xrel[103X  is a partial order, and [9Xfalse[109X
+  otherwise.[133X
+  
+  [33X[0;0YA [13Xpartial order[113X is a preorder which is also antisymmetric.[133X
+  
+  [1X33.2-7 IsHasseDiagram[101X
+  
+  [33X[1;0Y[29X[2XIsHasseDiagram[102X( [3Xrel[103X ) [32X property[133X
+  
+  [33X[0;0Yreturns  [9Xtrue[109X  if  the  binary  relation [3Xrel[103X is a Hasse Diagram of a partial
+  order, i.e., was computed via [2XHasseDiagramBinaryRelation[102X ([14X33.4-4[114X).[133X
+  
+  [1X33.2-8 IsEquivalenceRelation[101X
+  
+  [33X[1;0Y[29X[2XIsEquivalenceRelation[102X( [3XR[103X ) [32X property[133X
+  
+  [33X[0;0Yreturns  [9Xtrue[109X if the binary relation [3XR[103X is an equivalence relation, and [9Xfalse[109X
+  otherwise.[133X
+  
+  [33X[0;0YRecall,  that  a  relation  [3XR[103X is an [13Xequivalence relation[113X if it is symmetric,
+  transitive, and reflexive.[133X
+  
+  [1X33.2-9 Successors[101X
+  
+  [33X[1;0Y[29X[2XSuccessors[102X( [3XR[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the list of images of a binary relation [3XR[103X. If the underlying domain
+  of  the  relation is not [22X{ 1, ..., n }[122X, for some positive integer [22Xn[122X, then an
+  error is signalled.[133X
+  
+  [33X[0;0YThe  returned  value  of  [2XSuccessors[102X  is a list of lists where the lists are
+  ordered  as the elements according to the sorted order of the underlying set
+  of  [3XR[103X.  Each  list  consists of the images of the element whose index is the
+  same as the list with the underlying set in sorted order.[133X
+  
+  [33X[0;0YThe  [2XSuccessors[102X  of  a  relation is the adjacency list representation of the
+  relation.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xr1:=BinaryRelationOnPoints([[2],[3],[1]]);;[127X[104X
+    [4X[25Xgap>[125X [27XSuccessors(r1);[127X[104X
+    [4X[28X[ [ 2 ], [ 3 ], [ 1 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X33.2-10 DegreeOfBinaryRelation[101X
+  
+  [33X[1;0Y[29X[2XDegreeOfBinaryRelation[102X( [3XR[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the size of the underlying domain of the binary relation [3XR[103X. This is
+  most natural when working with a binary relation on points.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDegreeOfBinaryRelation(r1);[127X[104X
+    [4X[28X3[128X[104X
+  [4X[32X[104X
+  
+  [1X33.2-11 PartialOrderOfHasseDiagram[101X
+  
+  [33X[1;0Y[29X[2XPartialOrderOfHasseDiagram[102X( [3XHD[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis  the  partial order associated with the Hasse Diagram [3XHD[103X i.e. the partial
+  order generated by the reflexive and transitive closure of [3XHD[103X.[133X
+  
+  
+  [1X33.3 [33X[0;0YBinary Relations on Points[133X[101X
+  
+  [33X[0;0YWe  have  special construction methods when the underlying [3XX[103X of our relation
+  is the set of integers [22X{ 1, ..., n }[122X.[133X
+  
+  [1X33.3-1 BinaryRelationOnPoints[101X
+  
+  [33X[1;0Y[29X[2XBinaryRelationOnPoints[102X( [3Xlist[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XBinaryRelationOnPointsNC[102X( [3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0YGiven  a  list of [22Xn[122X lists, each containing elements from the set [22X{ 1, ..., n
+  }[122X,  this  function  constructs  a  binary relation such that [22X1[122X is related to
+  [3Xlist[103X[10X[1][110X,  [22X2[122X  to [3Xlist[103X[10X[2][110X and so on. The first version checks whether the list
+  supplied is valid. The [10XNC[110X version skips this check.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XR:=BinaryRelationOnPoints([[1,2],[2],[3]]);[127X[104X
+    [4X[28XBinary Relation on 3 points[128X[104X
+  [4X[32X[104X
+  
+  [1X33.3-2 RandomBinaryRelationOnPoints[101X
+  
+  [33X[1;0Y[29X[2XRandomBinaryRelationOnPoints[102X( [3Xdegree[103X ) [32X function[133X
+  
+  [33X[0;0Ycreates a relation on points with degree [3Xdegree[103X.[133X
+  
+  
+  [1X33.3-3 [33X[0;0YAsBinaryRelationOnPoints[133X[101X
+  
+  [33X[1;0Y[29X[2XAsBinaryRelationOnPoints[102X( [3Xtrans[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XAsBinaryRelationOnPoints[102X( [3Xperm[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XAsBinaryRelationOnPoints[102X( [3Xrel[103X ) [32X function[133X
+  
+  [33X[0;0Yreturn   the  relation  on  points  represented  by  general  relation  [3Xrel[103X,
+  transformation  [3Xtrans[103X  or  permutation  [3Xperm[103X.  If  [3Xrel[103X  is  already a binary
+  relation on points then [3Xrel[103X is returned.[133X
+  
+  [33X[0;0YTransformations  and  permutations  are special general endomorphic mappings
+  and have a natural representation as a binary relation on points.[133X
+  
+  [33X[0;0YIn  the last form, an isomorphic relation on points is constructed where the
+  points are indices of the elements of the underlying domain in sorted order.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xt:=Transformation([2,3,1]);;[127X[104X
+    [4X[25Xgap>[125X [27Xr1:=AsBinaryRelationOnPoints(t);[127X[104X
+    [4X[28XBinary Relation on 3 points[128X[104X
+    [4X[25Xgap>[125X [27Xr2:=AsBinaryRelationOnPoints((1,2,3));[127X[104X
+    [4X[28XBinary Relation on 3 points[128X[104X
+    [4X[25Xgap>[125X [27Xr1=r2;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X33.4 [33X[0;0YClosure Operations and Other Constructors[133X[101X
+  
+  [1X33.4-1 ReflexiveClosureBinaryRelation[101X
+  
+  [33X[1;0Y[29X[2XReflexiveClosureBinaryRelation[102X( [3XR[103X ) [32X operation[133X
+  
+  [33X[0;0Yis  the  smallest  binary relation containing the binary relation [3XR[103X which is
+  reflexive.  This  closure  inherits  the properties symmetric and transitive
+  from [3XR[103X. E.g., if [3XR[103X is symmetric then its reflexive closure is also.[133X
+  
+  [1X33.4-2 SymmetricClosureBinaryRelation[101X
+  
+  [33X[1;0Y[29X[2XSymmetricClosureBinaryRelation[102X( [3XR[103X ) [32X operation[133X
+  
+  [33X[0;0Yis  the  smallest  binary relation containing the binary relation [3XR[103X which is
+  symmetric.  This  closure  inherits  the properties reflexive and transitive
+  from [3XR[103X. E.g., if [3XR[103X is reflexive then its symmetric closure is also.[133X
+  
+  [1X33.4-3 TransitiveClosureBinaryRelation[101X
+  
+  [33X[1;0Y[29X[2XTransitiveClosureBinaryRelation[102X( [3Xrel[103X ) [32X operation[133X
+  
+  [33X[0;0Yis  the  smallest  binary relation containing the binary relation [3XR[103X which is
+  transitive.  This  closure  inherits  the properties reflexive and symmetric
+  from [3XR[103X. E.g., if [3XR[103X is symmetric then its transitive closure is also.[133X
+  
+  [33X[0;0Y[2XTransitiveClosureBinaryRelation[102X  is a modified version of the Floyd-Warshall
+  method  of solving the all-pairs shortest-paths problem on a directed graph.
+  Its  asymptotic  runtime is [22XO(n^3)[122X where [22Xn[122X is the size of the vertex set. It
+  only assumes there is an arbitrary (but fixed) ordering of the vertex set.[133X
+  
+  [1X33.4-4 HasseDiagramBinaryRelation[101X
+  
+  [33X[1;0Y[29X[2XHasseDiagramBinaryRelation[102X( [3Xpartial-order[103X ) [32X operation[133X
+  
+  [33X[0;0Yis  the smallest relation contained in the partial order [3Xpartial-order[103X whose
+  reflexive and transitive closure is equal to [3Xpartial-order[103X.[133X
+  
+  [1X33.4-5 StronglyConnectedComponents[101X
+  
+  [33X[1;0Y[29X[2XStronglyConnectedComponents[102X( [3XR[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns an equivalence relation on the vertices of the binary relation [3XR[103X.[133X
+  
+  [1X33.4-6 PartialOrderByOrderingFunction[101X
+  
+  [33X[1;0Y[29X[2XPartialOrderByOrderingFunction[102X( [3Xdom[103X, [3Xorderfunc[103X ) [32X function[133X
+  
+  [33X[0;0Yconstructs  a  partial  order whose elements are from the domain [3Xdom[103X and are
+  ordered using the ordering function [3Xorderfunc[103X. The ordering function must be
+  a  binary  function returning a boolean value. If the ordering function does
+  not describe a partial order then [9Xfail[109X is returned.[133X
+  
+  
+  [1X33.5 [33X[0;0YEquivalence Relations[133X[101X
+  
+  [33X[0;0YAn  [13Xequivalence  relation[113X  [3XE[103X  over  the  set  [3XX[103X  is a relation on [3XX[103X which is
+  reflexive, symmetric, and transitive. A [13Xpartition[113X [3XP[103X is a set of subsets of [3XX[103X
+  such  that  for  all  [22XR,  S  ∈  P[122X,  [22XR  ∩  S[122X is the empty set and [22X∪ P = X[122X. An
+  equivalence  relation  induces  a partition such that if [22X(x,y) ∈ E[122X then [22Xx, y[122X
+  are in the same element of [3XP[103X.[133X
+  
+  [33X[0;0YLike  all  binary  relations  in  [5XGAP[105X  equivalence relations are regarded as
+  general  endomorphic mappings (and the operations, properties and attributes
+  of general mappings are available). However, partitions provide an efficient
+  way  of representing equivalence relations. Moreover, only the non-singleton
+  classes  or blocks are listed allowing for small equivalence relations to be
+  represented  on  infinite  sets.  Hence  the  main  attribute of equivalence
+  relations   is  [2XEquivalenceRelationPartition[102X  ([14X33.6-1[114X)  which  provides  the
+  partition induced by the given equivalence.[133X
+  
+  [1X33.5-1 EquivalenceRelationByPartition[101X
+  
+  [33X[1;0Y[29X[2XEquivalenceRelationByPartition[102X( [3Xdomain[103X, [3Xlist[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XEquivalenceRelationByPartitionNC[102X( [3Xdomain[103X, [3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0Yconstructs  the  equivalence  relation over the set [3Xdomain[103X which induces the
+  partition  represented  by  [3Xlist[103X.  This  representation  includes  only  the
+  non-trivial blocks (or equivalent classes). [3Xlist[103X is a list of lists, each of
+  these lists contain elements of [3Xdomain[103X and are pairwise mutually exclusive.[133X
+  
+  [33X[0;0YThe  list of lists do not need to be in any order nor do the elements in the
+  blocks  (see  [2XEquivalenceRelationPartition[102X  ([14X33.6-1[114X)). a list of elements of
+  [3Xdomain[103X  The  partition  [3Xlist[103X  is a list of lists, each of these is a list of
+  elements  of  [3Xdomain[103X that makes up a block (or equivalent class). The [3Xdomain[103X
+  is  the  domain  over  which  the relation is defined, and [3Xlist[103X is a list of
+  lists,  each  of  these is a list of elements of [3Xdomain[103X which are related to
+  each other. [3Xlist[103X need only contain the nontrivial blocks and singletons will
+  be  ignored.  The [10XNC[110X version will not check to see if the lists are pairwise
+  mutually exclusive or that they contain only elements of the domain.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xer:=EquivalenceRelationByPartition(Domain([1..10]),[[1,3,5,7,9],[2,4,6,8,10]]);[127X[104X
+    [4X[28X<equivalence relation on Domain([ 1 .. 10 ]) >[128X[104X
+    [4X[25Xgap>[125X [27XIsEquivalenceRelation(er);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X33.5-2 EquivalenceRelationByRelation[101X
+  
+  [33X[1;0Y[29X[2XEquivalenceRelationByRelation[102X( [3Xrel[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  the  smallest  equivalence  relation containing the binary relation
+  [3Xrel[103X.[133X
+  
+  [1X33.5-3 EquivalenceRelationByPairs[101X
+  
+  [33X[1;0Y[29X[2XEquivalenceRelationByPairs[102X( [3XD[103X, [3Xelms[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XEquivalenceRelationByPairsNC[102X( [3XD[103X, [3Xelms[103X ) [32X function[133X
+  
+  [33X[0;0Yreturn  the  smallest  equivalence  relation on the domain [3XD[103X such that every
+  pair in [3Xelms[103X is in the relation.[133X
+  
+  [33X[0;0YIn the [10XNC[110X form, it is not checked that [3Xelms[103X are in the domain [3XD[103X.[133X
+  
+  [1X33.5-4 EquivalenceRelationByProperty[101X
+  
+  [33X[1;0Y[29X[2XEquivalenceRelationByProperty[102X( [3Xdomain[103X, [3Xproperty[103X ) [32X function[133X
+  
+  [33X[0;0Ycreates  an equivalence relation on [3Xdomain[103X whose only defining datum is that
+  of having the property [3Xproperty[103X.[133X
+  
+  
+  [1X33.6 [33X[0;0YAttributes of and Operations on Equivalence Relations[133X[101X
+  
+  [1X33.6-1 EquivalenceRelationPartition[101X
+  
+  [33X[1;0Y[29X[2XEquivalenceRelationPartition[102X( [3Xequiv[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns a list of lists of elements of the underlying set of the equivalence
+  relation [3Xequiv[103X. The lists are precisely the nonsingleton equivalence classes
+  of  the  equivalence.  This  allows  us  to  describe  [21Xsmall[121X equivalences on
+  infinite sets.[133X
+  
+  [1X33.6-2 GeneratorsOfEquivalenceRelationPartition[101X
+  
+  [33X[1;0Y[29X[2XGeneratorsOfEquivalenceRelationPartition[102X( [3Xequiv[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis a set of generating pairs for the equivalence relation [3Xequiv[103X. This set is
+  not  unique. The equivalence [3Xequiv[103X is the smallest equivalence relation over
+  the underlying set which contains the generating pairs.[133X
+  
+  [1X33.6-3 JoinEquivalenceRelations[101X
+  
+  [33X[1;0Y[29X[2XJoinEquivalenceRelations[102X( [3Xequiv1[103X, [3Xequiv2[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XMeetEquivalenceRelations[102X( [3Xequiv1[103X, [3Xequiv2[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XJoinEquivalenceRelations[102X   returns   the   smallest   equivalence   relation
+  containing both the equivalence relations [3Xequiv1[103X and [3Xequiv2[103X.[133X
+  
+  [33X[0;0Y[2XMeetEquivalenceRelations[102X  returns  the  intersection  of the two equivalence
+  relations [3Xequiv1[103X and [3Xequiv2[103X.[133X
+  
+  
+  [1X33.7 [33X[0;0YEquivalence Classes[133X[101X
+  
+  [1X33.7-1 IsEquivalenceClass[101X
+  
+  [33X[1;0Y[29X[2XIsEquivalenceClass[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0Yreturns [9Xtrue[109X if the object [3Xobj[103X is an equivalence class, and [9Xfalse[109X otherwise.[133X
+  
+  [33X[0;0YAn  [13Xequivalence class[113X is a collection of elements which are mutually related
+  to  each  other  in  the  associated  equivalence  relation. Note, this is a
+  special category of objects and not just a list of elements.[133X
+  
+  [1X33.7-2 EquivalenceClassRelation[101X
+  
+  [33X[1;0Y[29X[2XEquivalenceClassRelation[102X( [3XC[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns the equivalence relation of which [3XC[103X is a class.[133X
+  
+  [1X33.7-3 EquivalenceClasses[101X
+  
+  [33X[1;0Y[29X[2XEquivalenceClasses[102X( [3Xrel[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  a  list of all equivalence classes of the equivalence relation [3Xrel[103X.
+  Note  that  it  is  possible  for  different  methods  to  yield the list in
+  different  orders,  so  that  for two equivalence relations [22Xc1[122X and [22Xc2[122X we may
+  have [22Xc1 = c2[122X without having [10XEquivalenceClasses[110X[22X( c1 ) =[122X[10XEquivalenceClasses[110X[22X( c2
+  )[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xer:=EquivalenceRelationByPartition(Domain([1..10]),[[1,3,5,7,9],[2,4,6,8,10]]);[127X[104X
+    [4X[28X<equivalence relation on Domain([ 1 .. 10 ]) >[128X[104X
+    [4X[25Xgap>[125X [27Xclasses := EquivalenceClasses(er);[127X[104X
+    [4X[28X[ {1}, {2} ][128X[104X
+  [4X[32X[104X
+  
+  [1X33.7-4 EquivalenceClassOfElement[101X
+  
+  [33X[1;0Y[29X[2XEquivalenceClassOfElement[102X( [3Xrel[103X, [3Xelt[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XEquivalenceClassOfElementNC[102X( [3Xrel[103X, [3Xelt[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturn the equivalence class of [3Xelt[103X in the binary relation [3Xrel[103X, where [3Xelt[103X is
+  an  element  (i.e.  a  pair) of the domain of [3Xrel[103X. In the [10XNC[110X form, it is not
+  checked that [3Xelt[103X is in the domain over which [3Xrel[103X is defined.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XEquivalenceClassOfElement(er,3);[127X[104X
+    [4X[28X{3}[128X[104X
+  [4X[32X[104X
+  

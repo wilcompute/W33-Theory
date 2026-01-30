@@ -1,0 +1,76 @@
+  
+  [1X2 [33X[0;0YVariables in HPC-GAP[133X[101X
+  
+  [33X[0;0YVariables  with  global  scope have revised semantics in HPC-GAP in order to
+  address  concurrency  issues.  The normal semantics of global variables that
+  are only accessed by a single thread remain unaltered.[133X
+  
+  
+  [1X2.1 [33X[0;0YGlobal variables[133X[101X
+  
+  [33X[0;0YGlobal  variables  in  HPC-GAP  can  be accessed by all threads concurrently
+  without  explicit  synchronization. Concurrent access is safe, but it is not
+  deterministic.  If  multiple  threads  attempt  to  modify  the  same global
+  variable  simultaneously,  the resulting value of the variable is random; it
+  will  be  one  of  the  values assigned by a thread, but it is impossible to
+  predict with certainty which specific one will be assigned.[133X
+  
+  
+  [1X2.2 [33X[0;0YThread-local variables[133X[101X
+  
+  [33X[0;0YHPC-GAP   supports   the  notion  of  thread-local  variables.  Thread-local
+  variables  are  (after  being  declared  as such) accessed and modified like
+  global variables. However, unlike global variables, each thread can assign a
+  distinct value to a thread-local variable.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XMakeThreadLocal("x");[127X[104X
+    [4X[25Xgap>[125X [27Xx := 1;;[127X[104X
+    [4X[25Xgap>[125X [27XWaitTask(RunTask(function() x := 2; end));[127X[104X
+    [4X[25Xgap>[125X [27Xx;[127X[104X
+    [4X[28X1[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAs  can  be  seen  here,  the  assignment to [10Xx[110X in a separate thread does not
+  overwrite the value of [10Xx[110X in the main thread.[133X
+  
+  [1X2.2-1 MakeThreadLocal[101X
+  
+  [33X[1;0Y[29X[2XMakeThreadLocal[102X( [3Xname[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XMakeThreadLocal[102X   makes   the  variable  described  by  the  string  [3Xname[103X  a
+  thread-local variable. It normally does not give it an initial value; either
+  explicit  per-thread  assignment  or  a  call  to [2XBindThreadLocal[102X ([14X2.2-2[114X) or
+  [2XBindThreadLocalConstructor[102X ([14X2.2-3[114X) to provide a default value is necessary.[133X
+  
+  [33X[0;0YIf  a  global variable with the same name exists and is bound at the time of
+  the   call,  its  value  will  be  used  as  the  default  value  as  though
+  [2XBindThreadLocal[102X  ([14X2.2-2[114X)  had  been  called  with  that  value as its second
+  argument.[133X
+  
+  [1X2.2-2 BindThreadLocal[101X
+  
+  [33X[1;0Y[29X[2XBindThreadLocal[102X( [3Xname[103X, [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XBindThreadLocal[102X gives the thread-local variable described by the string [3Xname[103X
+  the  default value [3Xobj[103X. The first time the thread-local variable is accessed
+  in  a  thread  thereafter,  it will yield [3Xobj[103X as its value if it hasn't been
+  assigned a specific value yet.[133X
+  
+  [1X2.2-3 BindThreadLocalConstructor[101X
+  
+  [33X[1;0Y[29X[2XBindThreadLocalConstructor[102X( [3Xname[103X, [3Xfunc[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XBindThreadLocal[102X  ([14X2.2-2[114X)  gives  the  thread-local variable described by the
+  string  [3Xname[103X  the constructor [3Xfunc[103X. The first time the thread-local variable
+  is  accessed in a thread thereafter, it will yield [3Xfunc()[103X as its value if it
+  hasn't been assigned a specific value yet.[133X
+  
+  [1X2.2-4 ThreadVar[101X
+  
+  [33X[1;0Y[29X[2XThreadVar[102X [32X global variable[133X
+  
+  [33X[0;0YAll  thread-local variables are stored in the thread-local record [2XThreadVar[102X.
+  Thus,  if  [10Xx[110X  is  a  thread-local variable, using [10XThreadVar.x[110X is the same as
+  using [10Xx[110X.[133X
+  

@@ -1,0 +1,1154 @@
+  
+  [1X56 [33X[0;0YRings[133X[101X
+  
+  [33X[0;0YThis   chapter   deals   with   domains   that   are  additive  groups  (see
+  [2XIsAdditiveGroup[102X  ([14X55.1-6[114X) closed under multiplication [10X*[110X. Such a domain, if [10X*[110X
+  and  [10X+[110X  are distributive, is called a [13Xring[113X in [5XGAP[105X. Each division ring, field
+  (see [14X58[114X), or algebra (see [14X62[114X) is a ring. Important examples of rings are the
+  integers (see [14X14[114X) and matrix rings.[133X
+  
+  [33X[0;0YIn  the  case  of  a  [13Xring-with-one[113X,  additional multiplicative structure is
+  present,  see [2XIsRingWithOne[102X  ([14X56.3-1[114X).  There is a little support in [5XGAP[105X for
+  rings  that  have  no  additional  structure: it is possible to perform some
+  computations for small finite rings; infinite rings are handled by [5XGAP[105X in an
+  acceptable way in the case that they are algebras.[133X
+  
+  [33X[0;0YAlso,  the  [5XSONATA[105X  package  provides  support for near-rings, and a related
+  functionality  for  multiplicative  semigroups of near-rings is available in
+  the [5XSmallsemi[105X package.[133X
+  
+  [33X[0;0YSeveral  functions  for  ring elements, such as [2XIsPrime[102X ([14X56.5-8[114X) and [2XFactors[102X
+  ([14X56.5-9[114X),  are defined only relative to a ring [3XR[103X, which can be entered as an
+  optional  argument;  if  [3XR[103X is omitted then a [13Xdefault ring[113X is formed from the
+  ring elements given as arguments, see [2XDefaultRing[102X ([14X56.1-3[114X).[133X
+  
+  
+  [1X56.1 [33X[0;0YGenerating Rings[133X[101X
+  
+  [1X56.1-1 IsRing[101X
+  
+  [33X[1;0Y[29X[2XIsRing[102X( [3XR[103X ) [32X filter[133X
+  
+  [33X[0;0YA  [13Xring[113X  in  [5XGAP[105X is an additive group (see [2XIsAdditiveGroup[102X ([14X55.1-6[114X)) that is
+  also a magma (see [2XIsMagma[102X ([14X35.1-1[114X)), such that addition [10X+[110X and multiplication
+  [10X*[110X are distributive, see [2XIsDistributive[102X ([14X56.4-5[114X).[133X
+  
+  [33X[0;0YThe multiplication need [13Xnot[113X be associative (see [2XIsAssociative[102X ([14X35.4-7[114X)). For
+  example, a Lie algebra (see [14X64[114X) is regarded as a ring in [5XGAP[105X.[133X
+  
+  
+  [1X56.1-2 [33X[0;0YRing[133X[101X
+  
+  [33X[1;0Y[29X[2XRing[102X( [3Xr[103X, [3Xs[103X, [3X...[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XRing[102X( [3Xcoll[103X ) [32X function[133X
+  
+  [33X[0;0YIn  the  first  form  [2XRing[102X  returns  the smallest ring that contains all the
+  elements  [3Xr[103X,  [3Xs[103X,  [22X...[122X In the second form [2XRing[102X returns the smallest ring that
+  contains  all  the elements in the collection [3Xcoll[103X. If any element is not an
+  element  of  a  ring  or  if  the elements lie in no common ring an error is
+  raised.[133X
+  
+  [33X[0;0Y[2XRing[102X  differs from [2XDefaultRing[102X ([14X56.1-3[114X) in that it returns the smallest ring
+  in  which  the  elements lie, while [2XDefaultRing[102X ([14X56.1-3[114X) may return a larger
+  ring if that makes sense.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRing( 2, E(4) );[127X[104X
+    [4X[28X<ring with 2 generators>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X56.1-3 [33X[0;0YDefaultRing[133X[101X
+  
+  [33X[1;0Y[29X[2XDefaultRing[102X( [3Xr[103X, [3Xs[103X, [3X...[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XDefaultRing[102X( [3Xcoll[103X ) [32X function[133X
+  
+  [33X[0;0YIn  the first form [2XDefaultRing[102X returns a ring that contains all the elements
+  [3Xr[103X,  [3Xs[103X,  [22X...[122X etc. In the second form [2XDefaultRing[102X returns a ring that contains
+  all the elements in the collection [3Xcoll[103X. If any element is not an element of
+  a ring or if the elements lie in no common ring an error is raised.[133X
+  
+  [33X[0;0YThe  ring returned by [2XDefaultRing[102X need not be the smallest ring in which the
+  elements  lie.  For example for elements from cyclotomic fields, [2XDefaultRing[102X
+  may  return  the  ring of integers of the smallest cyclotomic field in which
+  the  elements  lie, which need not be the smallest ring overall, because the
+  elements  may  in  fact  lie in a smaller number field which is itself not a
+  cyclotomic field.[133X
+  
+  [33X[0;0Y(For the exact definition of the default ring of a certain type of elements,
+  look at the corresponding method installation.)[133X
+  
+  [33X[0;0Y[2XDefaultRing[102X  is  used  by  ring functions such as [2XQuotient[102X ([14X56.1-9[114X), [2XIsPrime[102X
+  ([14X56.5-8[114X), [2XFactors[102X ([14X56.5-9[114X), or [2XGcd[102X ([14X56.7-1[114X) if no explicit ring is given.[133X
+  
+  [33X[0;0Y[2XRing[102X  ([14X56.1-2[114X) differs from [2XDefaultRing[102X in that it returns the smallest ring
+  in  which  the  elements  lie, while [2XDefaultRing[102X may return a larger ring if
+  that makes sense.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDefaultRing( 2, E(4) );[127X[104X
+    [4X[28XGaussianIntegers[128X[104X
+  [4X[32X[104X
+  
+  [1X56.1-4 RingByGenerators[101X
+  
+  [33X[1;0Y[29X[2XRingByGenerators[102X( [3XC[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XRingByGenerators[102X   returns  the  ring  generated  by  the  elements  in  the
+  collection  [3XC[103X,  i. e.,  the closure of [3XC[103X under addition, multiplication, and
+  taking additive inverses.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRingByGenerators([ 2, E(4) ]);[127X[104X
+    [4X[28X<ring with 2 generators>[128X[104X
+  [4X[32X[104X
+  
+  [1X56.1-5 DefaultRingByGenerators[101X
+  
+  [33X[1;0Y[29X[2XDefaultRingByGenerators[102X( [3Xcoll[103X ) [32X operation[133X
+  
+  [33X[0;0YFor a collection [3Xcoll[103X, returns a default ring in which [3Xcoll[103X is contained.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDefaultRingByGenerators([ 2, E(4) ]);[127X[104X
+    [4X[28XGaussianIntegers[128X[104X
+  [4X[32X[104X
+  
+  [1X56.1-6 GeneratorsOfRing[101X
+  
+  [33X[1;0Y[29X[2XGeneratorsOfRing[102X( [3XR[103X ) [32X attribute[133X
+  
+  [33X[0;0Y[2XGeneratorsOfRing[102X  returns  a  list  of  elements such that the ring [3XR[103X is the
+  closure  of  these  elements  under  addition,  multiplication,  and  taking
+  additive inverses.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XR:=Ring( 2, 1/2 );[127X[104X
+    [4X[28X<ring with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27XGeneratorsOfRing( R );[127X[104X
+    [4X[28X[ 2, 1/2 ][128X[104X
+  [4X[32X[104X
+  
+  [1X56.1-7 Subring[101X
+  
+  [33X[1;0Y[29X[2XSubring[102X( [3XR[103X, [3Xgens[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XSubringNC[102X( [3XR[103X, [3Xgens[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  the  ring with parent [3XR[103X generated by the elements in [3Xgens[103X. When the
+  second  form,  [2XSubringNC[102X  is used, it is [13Xnot[113X checked whether all elements in
+  [3Xgens[103X lie in [3XR[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XR:= Integers;[127X[104X
+    [4X[28XIntegers[128X[104X
+    [4X[25Xgap>[125X [27XS:= Subring( R, [ 4, 6 ] );[127X[104X
+    [4X[28X<ring with 1 generator>[128X[104X
+    [4X[25Xgap>[125X [27XParent( S );[127X[104X
+    [4X[28XIntegers[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X56.1-8 [33X[0;0YClosureRing[133X[101X
+  
+  [33X[1;0Y[29X[2XClosureRing[102X( [3XR[103X, [3Xr[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XClosureRing[102X( [3XR[103X, [3XS[103X ) [32X operation[133X
+  
+  [33X[0;0YFor  a  ring  [3XR[103X  and either an element [3Xr[103X of its elements family or a ring [3XS[103X,
+  [2XClosureRing[102X returns the ring generated by both arguments.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XClosureRing( Integers, E(4) );[127X[104X
+    [4X[28X<ring-with-one, with 2 generators>[128X[104X
+  [4X[32X[104X
+  
+  [1X56.1-9 Quotient[101X
+  
+  [33X[1;0Y[29X[2XQuotient[102X( [[3XR[103X, ][3Xr[103X, [3Xs[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XQuotient[102X  returns a (right) quotient of the two ring elements [3Xr[103X and [3Xs[103X in the
+  ring  [3XR[103X,  if  given,  and  otherwise  in their default ring (see [2XDefaultRing[102X
+  ([14X56.1-3[114X)).  More specifically, it returns a ring element [22Xq[122X such that [22Xr = q *
+  s[122X holds, or [9Xfail[109X if no such elements exists in the respective ring.[133X
+  
+  [33X[0;0YThe result may not be unique if the ring contains zero divisors.[133X
+  
+  [33X[0;0Y(To  perform  the division in the quotient field of a ring, use the quotient
+  operator [10X/[110X.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XQuotient( 2, 3 );[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27XQuotient( 6, 3 );[127X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X56.2 [33X[0;0YIdeals of Rings[133X[101X
+  
+  [33X[0;0YA  [13Xleft  ideal[113X  in  a  ring  [22XR[122X  is  a  subring  of  [22XR[122X  that  is closed under
+  multiplication with elements of [22XR[122X from the left.[133X
+  
+  [33X[0;0YA  [13Xright  ideal[113X  in  a  ring  [22XR[122X  is  a  subring  of  [22XR[122X  that is closed under
+  multiplication with elements of [22XR[122X from the right.[133X
+  
+  [33X[0;0YA  [13Xtwo-sided  ideal[113X  or  simply [13Xideal[113X in a ring [22XR[122X is both a left ideal and a
+  right ideal in [22XR[122X.[133X
+  
+  [33X[0;0YSo  being  a  (left/right/two-sided) ideal is not a property of a domain but
+  refers  to  the acting ring(s). Hence we must ask, e. g., [10XIsIdeal( [110X[22XR, I[122X[10X )[110X if
+  we  want  to know whether the ring [22XI[122X is an ideal in the ring [22XR[122X. The property
+  [2XIsTwoSidedIdealInParent[102X  ([14X56.2-3[114X)  can be used to store whether a ring is an
+  ideal in its parent.[133X
+  
+  [33X[0;0Y(Whenever  the  term  [10X"Ideal"[110X  occurs  in an identifier without a specifying
+  prefix   [10X"Left"[110X   or  [10X"Right"[110X,  this  means  the  same  as  [10X"TwoSidedIdeal"[110X.
+  Conversely,   any  occurrence  of  [10X"TwoSidedIdeal"[110X  can  be  substituted  by
+  [10X"Ideal"[110X.)[133X
+  
+  [33X[0;0YFor  any  of  the  above  kinds  of ideals, there is a notion of generators,
+  namely  [2XGeneratorsOfLeftIdeal[102X ([14X56.2-8[114X), [2XGeneratorsOfRightIdeal[102X ([14X56.2-9[114X), and
+  [2XGeneratorsOfTwoSidedIdeal[102X  ([14X56.2-7[114X).  The  acting  rings  can be accessed as
+  [2XLeftActingRingOfIdeal[102X   ([14X56.2-10[114X)   and   [2XRightActingRingOfIdeal[102X  ([14X56.2-10[114X),
+  respectively.  Note  that  ideals  are  detected  from known values of these
+  attributes,  especially it is assumed that whenever a domain has both a left
+  and a right acting ring then these two are equal.[133X
+  
+  [33X[0;0YNote  that  we  cannot  use [2XLeftActingDomain[102X ([14X57.1-11[114X) and [10XRightActingDomain[110X
+  here,  since  ideals  in  algebras  are themselves vector spaces, and such a
+  space  can of course also be a module for an action from the right. In order
+  to  make  the  usual  vector space functionality automatically available for
+  ideals,  we have to distinguish the left and right module structure from the
+  additional closure properties of the ideal.[133X
+  
+  [33X[0;0YFurther  note  that the attributes denoting ideal generators and acting ring
+  are  used  to  create  ideals  if  this  is explicitly wanted, but the ideal
+  relation  in  the sense of [2XIsTwoSidedIdeal[102X ([14X56.2-3[114X) is of course independent
+  of the presence of the attribute values.[133X
+  
+  [33X[0;0YIdeals   are  constructed  with  [2XLeftIdeal[102X  ([14X56.2-1[114X),  [2XRightIdeal[102X  ([14X56.2-1[114X),
+  [2XTwoSidedIdeal[102X ([14X56.2-1[114X). Principal ideals of the form [22Xx * R[122X, [22XR * x[122X, [22XR * x * R[122X
+  can also be constructed with a simple multiplication.[133X
+  
+  [33X[0;0YCurrently  many methods for dealing with ideals need linear algebra to work,
+  so they are mainly applicable to ideals in algebras.[133X
+  
+  [1X56.2-1 TwoSidedIdeal[101X
+  
+  [33X[1;0Y[29X[2XTwoSidedIdeal[102X( [3XR[103X, [3Xgens[103X[, [3X"basis"[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XIdeal[102X( [3XR[103X, [3Xgens[103X[, [3X"basis"[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XLeftIdeal[102X( [3XR[103X, [3Xgens[103X[, [3X"basis"[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XRightIdeal[102X( [3XR[103X, [3Xgens[103X[, [3X"basis"[103X] ) [32X function[133X
+  
+  [33X[0;0YLet  [3XR[103X  be  a  ring,  and  [3Xgens[103X  a  list  of  collection  of  elements in [3XR[103X.
+  [2XTwoSidedIdeal[102X,  [2XLeftIdeal[102X,  and  [2XRightIdeal[102X  return  the two-sided, left, or
+  right  ideal, respectively, [22XI[122X in [3XR[103X that is generated by [3Xgens[103X. The ring [3XR[103X can
+  be  accessed  as  [2XLeftActingRingOfIdeal[102X  ([14X56.2-10[114X) or [2XRightActingRingOfIdeal[102X
+  ([14X56.2-10[114X) (or both) of [22XI[122X.[133X
+  
+  [33X[0;0YIf  [3XR[103X  is  a left [22XF[122X-module then also [22XI[122X is a left [22XF[122X-module, in particular the
+  [2XLeftActingDomain[102X ([14X57.1-11[114X) values of [3XR[103X and [22XI[122X are equal.[133X
+  
+  [33X[0;0YIf the optional argument [10X"basis"[110X is given then [3Xgens[103X are assumed to be a list
+  of  basis vectors of [22XI[122X viewed as a free [22XF[122X-module. (This is mainly applicable
+  to  ideals in algebras.) In this case, it is [13Xnot[113X checked whether [3Xgens[103X really
+  is linearly independent and whether [3Xgens[103X is a subset of [3XR[103X.[133X
+  
+  [33X[0;0Y[2XIdeal[102X is simply a synonym of [2XTwoSidedIdeal[102X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XR:= Integers;;[127X[104X
+    [4X[25Xgap>[125X [27XI:= Ideal( R, [ 2 ] );[127X[104X
+    [4X[28X<two-sided ideal in Integers, (1 generator)>[128X[104X
+  [4X[32X[104X
+  
+  [1X56.2-2 TwoSidedIdealNC[101X
+  
+  [33X[1;0Y[29X[2XTwoSidedIdealNC[102X( [3XR[103X, [3Xgens[103X[, [3X"basis"[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XIdealNC[102X( [3XR[103X, [3Xgens[103X[, [3X"basis"[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XLeftIdealNC[102X( [3XR[103X, [3Xgens[103X[, [3X"basis"[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XRightIdealNC[102X( [3XR[103X, [3Xgens[103X[, [3X"basis"[103X] ) [32X function[133X
+  
+  [33X[0;0YThe  effects  of [2XTwoSidedIdealNC[102X, [2XLeftIdealNC[102X, and [2XRightIdealNC[102X are the same
+  as  [2XTwoSidedIdeal[102X  ([14X56.2-1[114X),  [2XLeftIdeal[102X  ([14X56.2-1[114X),  and [2XRightIdeal[102X ([14X56.2-1[114X),
+  respectively, but they do not check whether all entries of [3Xgens[103X lie in [3XR[103X.[133X
+  
+  [1X56.2-3 IsTwoSidedIdeal[101X
+  
+  [33X[1;0Y[29X[2XIsTwoSidedIdeal[102X( [3XR[103X, [3XI[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XIsLeftIdeal[102X( [3XR[103X, [3XI[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XIsRightIdeal[102X( [3XR[103X, [3XI[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XIsTwoSidedIdealInParent[102X( [3XI[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsLeftIdealInParent[102X( [3XI[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsRightIdealInParent[102X( [3XI[103X ) [32X property[133X
+  
+  [33X[0;0YThe  properties  [2XIsTwoSidedIdealInParent[102X  etc., are attributes of the ideal,
+  and once known they are stored in the ideal.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:= FullMatrixAlgebra( Rationals, 3 );[127X[104X
+    [4X[28X( Rationals^[ 3, 3 ] )[128X[104X
+    [4X[25Xgap>[125X [27XI:= Ideal( A, [ Random( A ) ] );[127X[104X
+    [4X[28X<two-sided ideal in ( Rationals^[ 3, 3 ] ), (1 generator)>[128X[104X
+    [4X[25Xgap>[125X [27XIsTwoSidedIdeal( A, I );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X56.2-4 TwoSidedIdealByGenerators[101X
+  
+  [33X[1;0Y[29X[2XTwoSidedIdealByGenerators[102X( [3XR[103X, [3Xgens[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XIdealByGenerators[102X( [3XR[103X, [3Xgens[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XTwoSidedIdealByGenerators[102X returns the ring that is generated by the elements
+  of  the  collection  [3Xgens[103X under addition, multiplication, and multiplication
+  with elements of the ring [3XR[103X from the left and from the right.[133X
+  
+  [33X[0;0Y[3XR[103X    can    be    accessed    by    [2XLeftActingRingOfIdeal[102X    ([14X56.2-10[114X)    or
+  [2XRightActingRingOfIdeal[102X     ([14X56.2-10[114X),    [3Xgens[103X    can    be    accessed    by
+  [2XGeneratorsOfTwoSidedIdeal[102X ([14X56.2-7[114X).[133X
+  
+  [1X56.2-5 LeftIdealByGenerators[101X
+  
+  [33X[1;0Y[29X[2XLeftIdealByGenerators[102X( [3XR[103X, [3Xgens[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XLeftIdealByGenerators[102X  returns the ring that is generated by the elements of
+  the  collection [3Xgens[103X under addition, multiplication, and multiplication with
+  elements of the ring [3XR[103X from the left.[133X
+  
+  [33X[0;0Y[3XR[103X  can  be accessed by [2XLeftActingRingOfIdeal[102X ([14X56.2-10[114X), [3Xgens[103X can be accessed
+  by [2XGeneratorsOfLeftIdeal[102X ([14X56.2-8[114X).[133X
+  
+  [1X56.2-6 RightIdealByGenerators[101X
+  
+  [33X[1;0Y[29X[2XRightIdealByGenerators[102X( [3XR[103X, [3Xgens[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XRightIdealByGenerators[102X returns the ring that is generated by the elements of
+  the  collection [3Xgens[103X under addition, multiplication, and multiplication with
+  elements of the ring [3XR[103X from the right.[133X
+  
+  [33X[0;0Y[3XR[103X  can be accessed by [2XRightActingRingOfIdeal[102X ([14X56.2-10[114X), [3Xgens[103X can be accessed
+  by [2XGeneratorsOfRightIdeal[102X ([14X56.2-9[114X).[133X
+  
+  [1X56.2-7 GeneratorsOfTwoSidedIdeal[101X
+  
+  [33X[1;0Y[29X[2XGeneratorsOfTwoSidedIdeal[102X( [3XI[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XGeneratorsOfIdeal[102X( [3XI[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis  a  list of generators for the ideal [3XI[103X, with respect to the action of the
+  rings  that  are stored as the values of [2XLeftActingRingOfIdeal[102X ([14X56.2-10[114X) and
+  [2XRightActingRingOfIdeal[102X   ([14X56.2-10[114X),  from  the  left  and  from  the  right,
+  respectively.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:= FullMatrixAlgebra( Rationals, 3 );;[127X[104X
+    [4X[25Xgap>[125X [27XI:= Ideal( A, [ One( A ) ] );;[127X[104X
+    [4X[25Xgap>[125X [27XGeneratorsOfIdeal( I );[127X[104X
+    [4X[28X[ [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X56.2-8 GeneratorsOfLeftIdeal[101X
+  
+  [33X[1;0Y[29X[2XGeneratorsOfLeftIdeal[102X( [3XI[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis  a  list  of  generators for the left ideal [3XI[103X, with respect to the action
+  from   the   left   of   the   ring   that   is   stored  as  the  value  of
+  [2XLeftActingRingOfIdeal[102X ([14X56.2-10[114X).[133X
+  
+  [1X56.2-9 GeneratorsOfRightIdeal[101X
+  
+  [33X[1;0Y[29X[2XGeneratorsOfRightIdeal[102X( [3XI[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis  a  list  of generators for the right ideal [3XI[103X, with respect to the action
+  from   the   right   of   the   ring   that   is  stored  as  the  value  of
+  [2XRightActingRingOfIdeal[102X ([14X56.2-10[114X).[133X
+  
+  [1X56.2-10 LeftActingRingOfIdeal[101X
+  
+  [33X[1;0Y[29X[2XLeftActingRingOfIdeal[102X( [3XI[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRightActingRingOfIdeal[102X( [3XI[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns the left (resp. right) acting ring of an ideal [3XI[103X.[133X
+  
+  [1X56.2-11 AsLeftIdeal[101X
+  
+  [33X[1;0Y[29X[2XAsLeftIdeal[102X( [3XR[103X, [3XS[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XAsRightIdeal[102X( [3XR[103X, [3XS[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XAsTwoSidedIdeal[102X( [3XR[103X, [3XS[103X ) [32X operation[133X
+  
+  [33X[0;0YLet [3XS[103X be a subring of the ring [3XR[103X.[133X
+  
+  [33X[0;0YIf  [3XS[103X  is  a  left  ideal  in  [3XR[103X  then  [2XAsLeftIdeal[102X returns this left ideal,
+  otherwise [9Xfail[109X is returned.[133X
+  
+  [33X[0;0YIf  [3XS[103X  is  a  right  ideal  in [3XR[103X then [2XAsRightIdeal[102X returns this right ideal,
+  otherwise [9Xfail[109X is returned.[133X
+  
+  [33X[0;0YIf  [3XS[103X  is a two-sided ideal in [3XR[103X then [2XAsTwoSidedIdeal[102X returns this two-sided
+  ideal, otherwise [9Xfail[109X is returned.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:= FullMatrixAlgebra( Rationals, 3 );;[127X[104X
+    [4X[25Xgap>[125X [27XB:= DirectSumOfAlgebras( A, A );[127X[104X
+    [4X[28X<algebra over Rationals, with 6 generators>[128X[104X
+    [4X[25Xgap>[125X [27XC:= Subalgebra( B, Basis( B ){[1..9]} );[127X[104X
+    [4X[28X<algebra over Rationals, with 9 generators>[128X[104X
+    [4X[25Xgap>[125X [27XI:= AsTwoSidedIdeal( B, C );[127X[104X
+    [4X[28X<two-sided ideal in <algebra of dimension 18 over Rationals>,[128X[104X
+    [4X[28X  (9 generators)>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X56.3 [33X[0;0YRings With One[133X[101X
+  
+  [1X56.3-1 IsRingWithOne[101X
+  
+  [33X[1;0Y[29X[2XIsRingWithOne[102X( [3XR[103X ) [32X filter[133X
+  
+  [33X[0;0YA  [13Xring-with-one[113X  in  [5XGAP[105X  is  a  ring  (see [2XIsRing[102X ([14X56.1-1[114X)) that is also a
+  magma-with-one (see [2XIsMagmaWithOne[102X ([14X35.1-2[114X)).[133X
+  
+  [33X[0;0YNote that the identity and the zero of a ring-with-one need [13Xnot[113X be distinct.
+  This  means  that  a  ring  that  consists  only  of its zero element can be
+  regarded as a ring-with-one.[133X
+  
+  [33X[0;0YThis  is  especially  useful in the case of finitely presented rings, in the
+  sense that each factor of a ring-with-one is again a ring-with-one.[133X
+  
+  
+  [1X56.3-2 [33X[0;0YRingWithOne[133X[101X
+  
+  [33X[1;0Y[29X[2XRingWithOne[102X( [3Xr[103X, [3Xs[103X, [3X...[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XRingWithOne[102X( [3Xcoll[103X ) [32X function[133X
+  
+  [33X[0;0YIn  the  first  form  [2XRingWithOne[102X  returns  the  smallest ring with one that
+  contains  all  the elements [3Xr[103X, [3Xs[103X, [22X...[122X In the second form [2XRingWithOne[102X returns
+  the  smallest ring with one that contains all the elements in the collection
+  [3XC[103X.  If  any element is not an element of a ring or if the elements lie in no
+  common ring an error is raised.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRingWithOne( [ 4, 6 ] );[127X[104X
+    [4X[28XIntegers[128X[104X
+  [4X[32X[104X
+  
+  [1X56.3-3 RingWithOneByGenerators[101X
+  
+  [33X[1;0Y[29X[2XRingWithOneByGenerators[102X( [3Xcoll[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XRingWithOneByGenerators[102X  returns the ring-with-one generated by the elements
+  in  the  collection  [3Xcoll[103X,  i. e.,  the  closure  of  [3Xcoll[103X  under  addition,
+  multiplication,  taking  additive  inverses,  and  taking the identity of an
+  element.[133X
+  
+  [1X56.3-4 GeneratorsOfRingWithOne[101X
+  
+  [33X[1;0Y[29X[2XGeneratorsOfRingWithOne[102X( [3XR[103X ) [32X attribute[133X
+  
+  [33X[0;0Y[2XGeneratorsOfRingWithOne[102X  returns  a list of elements such that the ring [3XR[103X is
+  the  closure  of  these  elements  under  addition,  multiplication,  taking
+  additive inverses, and taking the identity element [10XOne( [3XR[103X[10X )[110X.[133X
+  
+  [33X[0;0Y[3XR[103X itself need [13Xnot[113X be known to be a ring-with-one.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XR:= RingWithOne( [ 4, 6 ] );[127X[104X
+    [4X[28XIntegers[128X[104X
+    [4X[25Xgap>[125X [27XGeneratorsOfRingWithOne( R );[127X[104X
+    [4X[28X[ 1 ][128X[104X
+  [4X[32X[104X
+  
+  [1X56.3-5 SubringWithOne[101X
+  
+  [33X[1;0Y[29X[2XSubringWithOne[102X( [3XR[103X, [3Xgens[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XSubringWithOneNC[102X( [3XR[103X, [3Xgens[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  the  ring with one with parent [3XR[103X generated by the elements in [3Xgens[103X.
+  When  the  second  form, [2XSubringWithOneNC[102X is used, it is [13Xnot[113X checked whether
+  all elements in [3Xgens[103X lie in [3XR[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XR:= SubringWithOne( Integers, [ 4, 6 ] );[127X[104X
+    [4X[28XIntegers[128X[104X
+    [4X[25Xgap>[125X [27XParent( R );[127X[104X
+    [4X[28XIntegers[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X56.4 [33X[0;0YProperties of Rings[133X[101X
+  
+  [1X56.4-1 IsIntegralRing[101X
+  
+  [33X[1;0Y[29X[2XIsIntegralRing[102X( [3XR[103X ) [32X property[133X
+  
+  [33X[0;0YA  ring-with-one  [3XR[103X is integral if it is commutative, contains no nontrivial
+  zero divisors, and if its identity is distinct from its zero.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsIntegralRing( Integers );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X56.4-2 IsUniqueFactorizationRing[101X
+  
+  [33X[1;0Y[29X[2XIsUniqueFactorizationRing[102X( [3XR[103X ) [32X Category[133X
+  
+  [33X[0;0YA  ring [3XR[103X is called a [13Xunique factorization ring[113X if every nonzero element has
+  a   unique   factorization   into   irreducible  elements,  i.e.,  a  unique
+  representation  as  product  of  irreducibles  (see [2XIsIrreducibleRingElement[102X
+  ([14X56.5-7[114X)).  Unique  in  this  context means unique up to permutations of the
+  factors  and  up  to  multiplication  of  the  factors  by  units (see [2XUnits[102X
+  ([14X56.5-2[114X)).[133X
+  
+  [33X[0;0Y(Note  that  we  cannot  install  a subset maintained method for this filter
+  since  the  factorization  of an element needs not exist in a subring. As an
+  example,  consider  the subring [22X4 ℕ + 1[122X of the ring [22X4 ℤ + 1[122X; in the subring,
+  the  element [22X3 ⋅ 3 ⋅ 11 ⋅ 7[122X has the two factorizations [22X33 ⋅ 21 = 9 ⋅ 77[122X, but
+  in  the  large  ring there is the unique factorization [22X(-3) ⋅ (-3) ⋅ (-11) ⋅
+  (-7)[122X,  and  it  is  easy  to  see that every element in [22X4 ℤ + 1[122X has a unique
+  factorization.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsUniqueFactorizationRing( PolynomialRing( Rationals, 1 ) );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X56.4-3 IsLDistributive[101X
+  
+  [33X[1;0Y[29X[2XIsLDistributive[102X( [3XC[103X ) [32X property[133X
+  
+  [33X[0;0Yis  [9Xtrue[109X if the relation [22Xa * ( b + c ) = ( a * b ) + ( a * c )[122X holds for all
+  elements [22Xa[122X, [22Xb[122X, [22Xc[122X in the collection [3XC[103X, and [9Xfalse[109X otherwise.[133X
+  
+  [1X56.4-4 IsRDistributive[101X
+  
+  [33X[1;0Y[29X[2XIsRDistributive[102X( [3XC[103X ) [32X property[133X
+  
+  [33X[0;0Yis  [9Xtrue[109X if the relation [22X( a + b ) * c = ( a * c ) + ( b * c )[122X holds for all
+  elements [22Xa[122X, [22Xb[122X, [22Xc[122X in the collection [3XC[103X, and [9Xfalse[109X otherwise.[133X
+  
+  [1X56.4-5 IsDistributive[101X
+  
+  [33X[1;0Y[29X[2XIsDistributive[102X( [3XC[103X ) [32X property[133X
+  
+  [33X[0;0Yis  [9Xtrue[109X  if  the  collection  [3XC[103X  is  both  left and right distributive (see
+  [2XIsLDistributive[102X ([14X56.4-3[114X), [2XIsRDistributive[102X ([14X56.4-4[114X)), and [9Xfalse[109X otherwise.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsDistributive( Integers );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X56.4-6 IsAnticommutative[101X
+  
+  [33X[1;0Y[29X[2XIsAnticommutative[102X( [3XR[103X ) [32X property[133X
+  
+  [33X[0;0Yis  [9Xtrue[109X  if the relation [22Xa * b = - b * a[122X holds for all elements [22Xa[122X, [22Xb[122X in the
+  ring [3XR[103X, and [9Xfalse[109X otherwise.[133X
+  
+  [1X56.4-7 IsZeroSquaredRing[101X
+  
+  [33X[1;0Y[29X[2XIsZeroSquaredRing[102X( [3XR[103X ) [32X property[133X
+  
+  [33X[0;0Yis [9Xtrue[109X if [22Xa * a[122X is the zero element of the ring [3XR[103X for all [22Xa[122X in [3XR[103X, and [9Xfalse[109X
+  otherwise.[133X
+  
+  [1X56.4-8 IsJacobianRing[101X
+  
+  [33X[1;0Y[29X[2XIsJacobianRing[102X( [3XR[103X ) [32X property[133X
+  
+  [33X[0;0Yis [9Xtrue[109X if the Jacobi identity holds in the ring [3XR[103X, and [9Xfalse[109X otherwise. The
+  Jacobi  identity  means  that [22Xx * (y * z) + z * (x * y) + y * (z * x)[122X is the
+  zero element of [3XR[103X, for all elements [22Xx[122X, [22Xy[122X, [22Xz[122X in [3XR[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= FullMatrixLieAlgebra( GF( 5 ), 7 );[127X[104X
+    [4X[28X<Lie algebra over GF(5), with 13 generators>[128X[104X
+    [4X[25Xgap>[125X [27XIsJacobianRing( L );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X56.5 [33X[0;0YUnits and Factorizations[133X[101X
+  
+  [1X56.5-1 IsUnit[101X
+  
+  [33X[1;0Y[29X[2XIsUnit[102X( [[3XR[103X, ][3Xr[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XIsUnit[102X returns [9Xtrue[109X if [3Xr[103X is a unit in the ring [3XR[103X, if given, and otherwise in
+  its  default  ring (see [2XDefaultRing[102X ([14X56.1-3[114X)). If [3Xr[103X is not a unit then [9Xfalse[109X
+  is returned.[133X
+  
+  [33X[0;0YAn element [3Xr[103X is called a [13Xunit[113X in a ring [3XR[103X, if [3Xr[103X has an inverse in [3XR[103X.[133X
+  
+  [33X[0;0Y[2XIsUnit[102X may call [2XQuotient[102X ([14X56.1-9[114X).[133X
+  
+  [1X56.5-2 Units[101X
+  
+  [33X[1;0Y[29X[2XUnits[102X( [3XR[103X ) [32X attribute[133X
+  
+  [33X[0;0Y[2XUnits[102X  returns the group of units of the ring [3XR[103X. This may either be returned
+  as a list or as a group.[133X
+  
+  [33X[0;0YAn  element  [22Xr[122X  is called a [13Xunit[113X of a ring [22XR[122X if [22Xr[122X has an inverse in [22XR[122X. It is
+  easy to see that the set of units forms a multiplicative group.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XUnits( GaussianIntegers );[127X[104X
+    [4X[28X[ -1, 1, -E(4), E(4) ][128X[104X
+    [4X[25Xgap>[125X [27XUnits( GF( 16 ) );[127X[104X
+    [4X[28X<group of size 15 with 1 generator>[128X[104X
+  [4X[32X[104X
+  
+  [1X56.5-3 IsAssociated[101X
+  
+  [33X[1;0Y[29X[2XIsAssociated[102X( [[3XR[103X, ][3Xr[103X, [3Xs[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XIsAssociated[102X returns [9Xtrue[109X if the two ring elements [3Xr[103X and [3Xs[103X are associated in
+  the  ring  [3XR[103X, if given, and otherwise in their default ring (see [2XDefaultRing[102X
+  ([14X56.1-3[114X)). If the two elements are not associated then [9Xfalse[109X is returned.[133X
+  
+  [33X[0;0YTwo  elements [3Xr[103X and [3Xs[103X of a ring [3XR[103X are called [13Xassociated[113X if there is a unit [22Xu[122X
+  of [3XR[103X such that [3Xr[103X [22Xu =[122X[3Xs[103X.[133X
+  
+  [1X56.5-4 Associates[101X
+  
+  [33X[1;0Y[29X[2XAssociates[102X( [[3XR[103X, ][3Xr[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XAssociates[102X  returns  the set of associates of [3Xr[103X in the ring [3XR[103X, if given, and
+  otherwise in its default ring (see [2XDefaultRing[102X ([14X56.1-3[114X)).[133X
+  
+  [33X[0;0YTwo  elements [3Xr[103X and [22Xs[122X of a ring [22XR[122X are called [13Xassociated[113X if there is a unit [22Xu[122X
+  of [22XR[122X such that [22X[3Xr[103X u = s[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XAssociates( Integers, 2 );[127X[104X
+    [4X[28X[ -2, 2 ][128X[104X
+    [4X[25Xgap>[125X [27XAssociates( GaussianIntegers, 2 );[127X[104X
+    [4X[28X[ -2, 2, -2*E(4), 2*E(4) ][128X[104X
+  [4X[32X[104X
+  
+  [1X56.5-5 StandardAssociate[101X
+  
+  [33X[1;0Y[29X[2XStandardAssociate[102X( [[3XR[103X, ][3Xr[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XStandardAssociate[102X  returns  the  standard associate of the ring element [3Xr[103X in
+  the  ring  [3XR[103X,  if  given, and otherwise in its default ring (see [2XDefaultRing[102X
+  ([14X56.1-3[114X)).[133X
+  
+  [33X[0;0YThe  [13Xstandard associate[113X of a ring element [3Xr[103X of [3XR[103X is an associated element of
+  [3Xr[103X  which  is,  in  a  ring  dependent  way,  distinguished  among the set of
+  associates of [3Xr[103X. For example, in the ring of integers the standard associate
+  is the absolute value.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xx:= Indeterminate( Rationals, "x" );;[127X[104X
+    [4X[25Xgap>[125X [27XStandardAssociate( -x^2-x+1 );[127X[104X
+    [4X[28Xx^2+x-1[128X[104X
+  [4X[32X[104X
+  
+  [1X56.5-6 StandardAssociateUnit[101X
+  
+  [33X[1;0Y[29X[2XStandardAssociateUnit[102X( [[3XR[103X, ][3Xr[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XStandardAssociateUnit[102X  returns  a  unit  in  the  ring  [3XR[103X such that the ring
+  element [3Xr[103X times this unit equals the standard associate of [3Xr[103X in [3XR[103X.[133X
+  
+  [33X[0;0YIf  [3XR[103X  is not given, the default ring of [3Xr[103X is used instead. (see [2XDefaultRing[102X
+  ([14X56.1-3[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xy:= Indeterminate( Rationals, "y" );;[127X[104X
+    [4X[25Xgap>[125X [27Xr:= -y^2-y+1;[127X[104X
+    [4X[28X-y^2-y+1[128X[104X
+    [4X[25Xgap>[125X [27XStandardAssociateUnit( r );[127X[104X
+    [4X[28X-1[128X[104X
+    [4X[25Xgap>[125X [27XStandardAssociateUnit( r ) * r = StandardAssociate( r );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X56.5-7 IsIrreducibleRingElement[101X
+  
+  [33X[1;0Y[29X[2XIsIrreducibleRingElement[102X( [[3XR[103X, ][3Xr[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XIsIrreducibleRingElement[102X  returns  [9Xtrue[109X if the ring element [3Xr[103X is irreducible
+  in  the ring [3XR[103X, if given, and otherwise in its default ring (see [2XDefaultRing[102X
+  ([14X56.1-3[114X)). If [3Xr[103X is not irreducible then [9Xfalse[109X is returned.[133X
+  
+  [33X[0;0YAn  element  [3Xr[103X of a ring [3XR[103X is called [13Xirreducible[113X if [3Xr[103X is not a unit in [3XR[103X and
+  if  there  is  no  nontrivial  factorization of [3Xr[103X in [3XR[103X, i.e., if there is no
+  representation  of [3Xr[103X as product [22Xs t[122X such that neither [22Xs[122X nor [22Xt[122X is a unit (see
+  [2XIsUnit[102X ([14X56.5-1[114X)). Each prime element (see [2XIsPrime[102X ([14X56.5-8[114X)) is irreducible.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsIrreducibleRingElement( Integers, 2 );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X56.5-8 IsPrime[101X
+  
+  [33X[1;0Y[29X[2XIsPrime[102X( [[3XR[103X, ][3Xr[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XIsPrime[102X  returns  [9Xtrue[109X  if  the  ring element [3Xr[103X is a prime in the ring [3XR[103X, if
+  given, and otherwise in its default ring (see [2XDefaultRing[102X ([14X56.1-3[114X)). If [3Xr[103X is
+  not a prime then [9Xfalse[109X is returned.[133X
+  
+  [33X[0;0YAn  element [3Xr[103X of a ring [3XR[103X is called [13Xprime[113X if for each pair [22Xs[122X and [22Xt[122X such that
+  [3Xr[103X divides [22Xs t[122X the element [3Xr[103X divides either [22Xs[122X or [22Xt[122X. Note that there are rings
+  where  not every irreducible element (see [2XIsIrreducibleRingElement[102X ([14X56.5-7[114X))
+  is a prime.[133X
+  
+  [1X56.5-9 Factors[101X
+  
+  [33X[1;0Y[29X[2XFactors[102X( [[3XR[103X, ][3Xr[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XFactors[102X  returns  the  factorization of the ring element [3Xr[103X in the ring [3XR[103X, if
+  given,  and  otherwise  in  its default ring (see [2XDefaultRing[102X ([14X56.1-3[114X)). The
+  factorization  is  returned as a list of primes (see [2XIsPrime[102X ([14X56.5-8[114X)). Each
+  element in the list is a standard associate (see [2XStandardAssociate[102X ([14X56.5-5[114X))
+  except  the  first  one,  which is multiplied by a unit as necessary to have
+  [10XProduct(  Factors(  [3XR[103X[10X,  [3Xr[103X[10X  )  )  = [3Xr[103X[10X[110X. This list is usually also sorted, thus
+  smallest prime factors come first. If [3Xr[103X is a unit or zero, [10XFactors( [3XR[103X[10X, [3Xr[103X[10X ) =
+  [ [3Xr[103X[10X ][110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xx:= Indeterminate( GF(2), "x" );;[127X[104X
+    [4X[25Xgap>[125X [27Xpol:= x^2+x+1;[127X[104X
+    [4X[28Xx^2+x+Z(2)^0[128X[104X
+    [4X[25Xgap>[125X [27XFactors( pol );[127X[104X
+    [4X[28X[ x^2+x+Z(2)^0 ][128X[104X
+    [4X[25Xgap>[125X [27XFactors( PolynomialRing( GF(4) ), pol );[127X[104X
+    [4X[28X[ x+Z(2^2), x+Z(2^2)^2 ][128X[104X
+  [4X[32X[104X
+  
+  [1X56.5-10 PadicValuation[101X
+  
+  [33X[1;0Y[29X[2XPadicValuation[102X( [3Xr[103X, [3Xp[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XPadicValuation[102X  is  the  operation to compute the [3Xp[103X-adic valuation of a ring
+  element [3Xr[103X.[133X
+  
+  
+  [1X56.6 [33X[0;0YEuclidean Rings[133X[101X
+  
+  [1X56.6-1 IsEuclideanRing[101X
+  
+  [33X[1;0Y[29X[2XIsEuclideanRing[102X( [3XR[103X ) [32X Category[133X
+  
+  [33X[0;0YA  ring [22XR[122X is called a Euclidean ring if it is a non-trivial commutative ring
+  and  there  exists  a  function [22Xδ[122X, called the Euclidean degree, from [22XR-{0_R}[122X
+  into  a  well-ordered  set (such as the nonnegative integers), such that for
+  every  pair [22Xr ∈ R[122X and [22Xs ∈ R-{0_R}[122X there exists an element [22Xq[122X such that either
+  [22Xr  -  q  s  =  0_R[122X  or [22Xδ(r - q s) < δ( s )[122X. In [5XGAP[105X the Euclidean degree [22Xδ[122X is
+  implicitly  built  into  a ring and cannot be changed. The existence of this
+  division  with remainder implies that the Euclidean algorithm can be applied
+  to  compute a greatest common divisor of two elements, which in turn implies
+  that [22XR[122X is a unique factorization ring.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsEuclideanRing( GaussianIntegers );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X56.6-2 EuclideanDegree[101X
+  
+  [33X[1;0Y[29X[2XEuclideanDegree[102X( [[3XR[103X, ][3Xr[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XEuclideanDegree[102X  returns  the  Euclidean degree of the ring element [3Xr[103X in the
+  ring  [3XR[103X,  if  given,  and  otherwise  in  its  default ring (see [2XDefaultRing[102X
+  ([14X56.1-3[114X)).[133X
+  
+  [33X[0;0YThe ring [3XR[103X must be a Euclidean ring (see [2XIsEuclideanRing[102X ([14X56.6-1[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XEuclideanDegree( GaussianIntegers, 3 );[127X[104X
+    [4X[28X9[128X[104X
+  [4X[32X[104X
+  
+  [1X56.6-3 EuclideanQuotient[101X
+  
+  [33X[1;0Y[29X[2XEuclideanQuotient[102X( [[3XR[103X, ][3Xr[103X, [3Xm[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XEuclideanQuotient[102X  returns the Euclidean quotient of the ring elements [3Xr[103X and
+  [3Xm[103X  in  the  ring  [3XR[103X,  if  given,  and  otherwise  in their default ring (see
+  [2XDefaultRing[102X ([14X56.1-3[114X)).[133X
+  
+  [33X[0;0YThe  ring  [3XR[103X  must  be  a  Euclidean  ring  (see  [2XIsEuclideanRing[102X ([14X56.6-1[114X)),
+  otherwise an error is signalled.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XEuclideanQuotient( 8, 3 );[127X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+  
+  [1X56.6-4 EuclideanRemainder[101X
+  
+  [33X[1;0Y[29X[2XEuclideanRemainder[102X( [[3XR[103X, ][3Xr[103X, [3Xm[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XEuclideanRemainder[102X  returns  the  Euclidean  remainder of the ring element [3Xr[103X
+  modulo  the  ring  element [3Xm[103X in the ring [3XR[103X, if given, and otherwise in their
+  default ring (see [2XDefaultRing[102X ([14X56.1-3[114X)).[133X
+  
+  [33X[0;0YThe  ring  [3XR[103X  must  be  a  Euclidean  ring  (see  [2XIsEuclideanRing[102X ([14X56.6-1[114X)),
+  otherwise an error is signalled.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XEuclideanRemainder( 8, 3 );[127X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+  
+  [1X56.6-5 QuotientRemainder[101X
+  
+  [33X[1;0Y[29X[2XQuotientRemainder[102X( [[3XR[103X, ][3Xr[103X, [3Xm[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XQuotientRemainder[102X returns the Euclidean quotient and the Euclidean remainder
+  of the ring elements [3Xr[103X and [3Xm[103X in the ring [3XR[103X, if given, and otherwise in their
+  default  ring  (see  [2XDefaultRing[102X  ([14X56.1-3[114X)).  The  result  is a pair of ring
+  elements.[133X
+  
+  [33X[0;0YThe  ring  [3XR[103X  must  be  a  Euclidean  ring  (see  [2XIsEuclideanRing[102X ([14X56.6-1[114X)),
+  otherwise an error is signalled.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XQuotientRemainder( GaussianIntegers, 8, 3 );[127X[104X
+    [4X[28X[ 3, -1 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X56.7 [33X[0;0YGcd and Lcm[133X[101X
+  
+  
+  [1X56.7-1 [33X[0;0YGcd[133X[101X
+  
+  [33X[1;0Y[29X[2XGcd[102X( [[3XR[103X, ][3Xr1[103X, [3Xr2[103X, [3X...[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XGcd[102X( [[3XR[103X, ][3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XGcd[102X  returns  the  greatest  common divisor of the ring elements [3Xr1[103X, [3Xr2[103X, [22X...[122X
+  resp.  of  the  ring  elements in the list [3Xlist[103X in the ring [3XR[103X, if given, and
+  otherwise in their default ring, see [2XDefaultRing[102X ([14X56.1-3[114X).[133X
+  
+  [33X[0;0Y[2XGcd[102X  returns  the standard associate (see [2XStandardAssociate[102X ([14X56.5-5[114X)) of the
+  greatest common divisors.[133X
+  
+  [33X[0;0YA  divisor of an element [22Xr[122X in the ring [22XR[122X is an element [22Xd∈ R[122X such that [22Xr[122X is a
+  multiple  of [22Xd[122X. A common divisor of the elements [22Xr_1, r_2, ...[122X in the ring [22XR[122X
+  is  an  element  [22Xd∈  R[122X  which is a divisor of each [22Xr_1, r_2, ...[122X. A greatest
+  common  divisor  [22Xd[122X  in  addition  has  the  property that every other common
+  divisor of [22Xr_1, r_2, ...[122X is a divisor of [22Xd[122X.[133X
+  
+  [33X[0;0YNote  that  this in particular implies the following: For the zero element [22Xz[122X
+  of [3XR[103X, we have [10XGcd( [3Xr[103X[10X, [110X[22Xz[122X[10X ) = Gcd( [110X[22Xz[122X[10X, [3Xr[103X[10X ) = StandardAssociate( [3Xr[103X[10X )[110X and [10XGcd( [110X[22Xz[122X[10X,
+  [110X[22Xz[122X[10X ) = [110X[22Xz[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XGcd( Integers, [ 10, 15 ] );[127X[104X
+    [4X[28X5[128X[104X
+  [4X[32X[104X
+  
+  [1X56.7-2 GcdOp[101X
+  
+  [33X[1;0Y[29X[2XGcdOp[102X( [[3XR[103X, ][3Xr[103X, [3Xs[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XGcdOp[102X  is  the  operation to compute the greatest common divisor of two ring
+  elements [3Xr[103X, [3Xs[103X in the ring [3XR[103X or in their default ring.[133X
+  
+  
+  [1X56.7-3 [33X[0;0YGcdRepresentation[133X[101X
+  
+  [33X[1;0Y[29X[2XGcdRepresentation[102X( [[3XR[103X, ][3Xr1[103X, [3Xr2[103X, [3X...[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XGcdRepresentation[102X( [[3XR[103X, ][3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XGcdRepresentation[102X returns a representation of the greatest common divisor of
+  the ring elements [3Xr1[103X, [3Xr2[103X, [22X...[122X resp. of the ring elements in the list [3Xlist[103X in
+  the  Euclidean  ring  [3XR[103X,  if given, and otherwise in their default ring, see
+  [2XDefaultRing[102X ([14X56.1-3[114X).[133X
+  
+  [33X[0;0YA representation of the gcd [22Xg[122X of the elements [22Xr_1, r_2, ...[122X of a ring [22XR[122X is a
+  list  of ring elements [22Xs_1, s_2, ...[122X of [22XR[122X, such that [22Xg = s_1 r_1 + s_2 r_2 +
+  ⋯[122X.  Such  representations  do  not  exist in all rings, but they do exist in
+  Euclidean rings (see [2XIsEuclideanRing[102X ([14X56.6-1[114X)), which can be shown using the
+  Euclidean algorithm, which in fact can compute those coefficients.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xa:= Indeterminate( Rationals, "a" );;[127X[104X
+    [4X[25Xgap>[125X [27XGcdRepresentation( a^2+1, a^3+1 );[127X[104X
+    [4X[28X[ -1/2*a^2-1/2*a+1/2, 1/2*a+1/2 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[2XGcdex[102X ([14X14.3-5[114X) provides similar functionality over the integers.[133X
+  
+  [1X56.7-4 GcdRepresentationOp[101X
+  
+  [33X[1;0Y[29X[2XGcdRepresentationOp[102X( [[3XR[103X, ][3Xr[103X, [3Xs[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XGcdRepresentationOp[102X  is  the  operation to compute the representation of the
+  greatest common divisor of two ring elements [3Xr[103X, [3Xs[103X in the Euclidean ring [3XR[103X or
+  in their default ring, respectively.[133X
+  
+  [1X56.7-5 ShowGcd[101X
+  
+  [33X[1;0Y[29X[2XShowGcd[102X( [3Xa[103X, [3Xb[103X ) [32X function[133X
+  
+  [33X[0;0YThis  function  takes  two elements [3Xa[103X and [3Xb[103X of an Euclidean ring and returns
+  their  greatest common divisor. It will print out the steps performed by the
+  Euclidean  algorithm, as well as the rearrangement of these steps to express
+  the gcd as a ring combination of [3Xa[103X and [3Xb[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XShowGcd(192,42);[127X[104X
+    [4X[28X192=4*42 + 24[128X[104X
+    [4X[28X42=1*24 + 18[128X[104X
+    [4X[28X24=1*18 + 6[128X[104X
+    [4X[28X18=3*6 + 0[128X[104X
+    [4X[28XThe Gcd is 6[128X[104X
+    [4X[28X = 1*24 -1*18[128X[104X
+    [4X[28X = -1*42 + 2*24[128X[104X
+    [4X[28X = 2*192 -9*42[128X[104X
+    [4X[28X6[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X56.7-6 [33X[0;0YLcm[133X[101X
+  
+  [33X[1;0Y[29X[2XLcm[102X( [[3XR[103X, ][3Xr1[103X, [3Xr2[103X, [3X...[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XLcm[102X( [[3XR[103X, ][3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XLcm[102X returns the least common multiple of the ring elements [3Xr1[103X, [3Xr2[103X, [22X...[122X resp.
+  of the ring elements in the list [3Xlist[103X in the ring [3XR[103X, if given, and otherwise
+  in their default ring, see [2XDefaultRing[102X ([14X56.1-3[114X).[133X
+  
+  [33X[0;0Y[2XLcm[102X  returns  the standard associate (see [2XStandardAssociate[102X ([14X56.5-5[114X)) of the
+  least common multiples.[133X
+  
+  [33X[0;0YA  least  common  multiple of the elements [22Xr_1, r_2, ...[122X of the ring [22XR[122X is an
+  element  [22Xm[122X  that is a multiple of [22Xr_1, r_2, ...[122X, and every other multiple of
+  these elements is a multiple of [22Xm[122X.[133X
+  
+  [33X[0;0YNote  that  this in particular implies the following: For the zero element [22Xz[122X
+  of [3XR[103X, we have [10XLcm( [3Xr[103X[10X, [110X[22Xz[122X[10X ) = Lcm( [110X[22Xz[122X[10X, [3Xr[103X[10X ) = StandardAssociate( [3Xr[103X[10X )[110X and [10XLcm( [110X[22Xz[122X[10X,
+  [110X[22Xz[122X[10X ) = [110X[22Xz[122X.[133X
+  
+  [1X56.7-7 LcmOp[101X
+  
+  [33X[1;0Y[29X[2XLcmOp[102X( [[3XR[103X, ][3Xr[103X, [3Xs[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XLcmOp[102X  is  the  operation  to  compute the least common multiple of two ring
+  elements [3Xr[103X, [3Xs[103X in the ring [3XR[103X or in their default ring, respectively.[133X
+  
+  [33X[0;0YThe default methods for this uses the equality [22Xlcm( m, n ) = m*n / gcd( m, n
+  )[122X (see [2XGcdOp[102X ([14X56.7-2[114X)).[133X
+  
+  [1X56.7-8 QuotientMod[101X
+  
+  [33X[1;0Y[29X[2XQuotientMod[102X( [[3XR[103X, ][3Xr[103X, [3Xs[103X, [3Xm[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XQuotientMod[102X  returns a quotient of the ring elements [3Xr[103X and [3Xs[103X modulo the ring
+  element  [3Xm[103X in the ring [3XR[103X, if given, and otherwise in their default ring, see
+  [2XDefaultRing[102X ([14X56.1-3[114X).[133X
+  
+  [33X[0;0Y[3XR[103X   must  be  a  Euclidean  ring  (see  [2XIsEuclideanRing[102X  ([14X56.6-1[114X))  so  that
+  [2XEuclideanRemainder[102X  ([14X56.6-4[114X)  can be applied. If no modular quotient exists,
+  [9Xfail[109X is returned.[133X
+  
+  [33X[0;0YA quotient [22Xq[122X of [3Xr[103X and [3Xs[103X modulo [3Xm[103X is an element of [3XR[103X such that [22Xq [3Xs[103X = [3Xr[103X[122X modulo
+  [22Xm[122X,  i.e., such that [22Xq [3Xs[103X - [3Xr[103X[122X is divisible by [3Xm[103X in [3XR[103X and that [22Xq[122X is either zero
+  (if  [3Xr[103X  is  divisible by [3Xm[103X) or the Euclidean degree of [22Xq[122X is strictly smaller
+  than the Euclidean degree of [3Xm[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XQuotientMod( 7, 2, 3 );[127X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+  
+  [1X56.7-9 PowerMod[101X
+  
+  [33X[1;0Y[29X[2XPowerMod[102X( [[3XR[103X, ][3Xr[103X, [3Xe[103X, [3Xm[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XPowerMod[102X  returns  the  [3Xe[103X-th  power  of  the  ring element [3Xr[103X modulo the ring
+  element  [3Xm[103X in the ring [3XR[103X, if given, and otherwise in their default ring, see
+  [2XDefaultRing[102X ([14X56.1-3[114X). [3Xe[103X must be an integer.[133X
+  
+  [33X[0;0Y[3XR[103X   must  be  a  Euclidean  ring  (see  [2XIsEuclideanRing[102X  ([14X56.6-1[114X))  so  that
+  [2XEuclideanRemainder[102X ([14X56.6-4[114X) can be applied to its elements.[133X
+  
+  [33X[0;0YIf  [3Xe[103X is positive the result is [3Xr[103X[10X^[110X[3Xe[103X modulo [3Xm[103X. If [3Xe[103X is negative then [2XPowerMod[102X
+  first  tries  to  find  the inverse of [3Xr[103X modulo [3Xm[103X, i.e., [22Xi[122X such that [22Xi [3Xr[103X = 1[122X
+  modulo  [3Xm[103X.  If  the  inverse  does  not  exist an error is signalled. If the
+  inverse does exist [2XPowerMod[102X returns [10XPowerMod( [3XR[103X[10X, [3Xi[103X[10X, -[3Xe[103X[10X, [3Xm[103X[10X )[110X.[133X
+  
+  [33X[0;0Y[2XPowerMod[102X  reduces  the  intermediate  values modulo [3Xm[103X, improving performance
+  drastically when [3Xe[103X is large and [3Xm[103X small.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPowerMod( 12, 100000, 7 );[127X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+  
+  [1X56.7-10 InterpolatedPolynomial[101X
+  
+  [33X[1;0Y[29X[2XInterpolatedPolynomial[102X( [3XR[103X, [3Xx[103X, [3Xy[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XInterpolatedPolynomial[102X returns, for given lists [3Xx[103X, [3Xy[103X of elements in a ring [3XR[103X
+  of  the  same length [22Xn[122X the unique polynomial of degree less than [22Xn[122X which has
+  value  [3Xy[103X[[22Xi[122X]  at [3Xx[103X[22X[i][122X, for all [22Xi ∈ { 1, ..., n }[122X. Note that the elements in [3Xx[103X
+  must be distinct.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XInterpolatedPolynomial( Integers, [ 1, 2, 3 ], [ 5, 7, 0 ] );[127X[104X
+    [4X[28X-9/2*x^2+31/2*x-6[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X56.8 [33X[0;0YHomomorphisms of Rings[133X[101X
+  
+  [33X[0;0YA  [13Xring  homomorphism[113X  is a mapping between two rings that respects addition
+  and multiplication.[133X
+  
+  [33X[0;0YCurrently  [5XGAP[105X  supports  ring  homomorphisms  between  finite  rings (using
+  straightforward  methods) and ring homomorphisms with additional structures,
+  where  source  and  range  are  in  fact  algebras and where also the linear
+  structure is respected, see [14X62.10[114X.[133X
+  
+  [1X56.8-1 RingGeneralMappingByImages[101X
+  
+  [33X[1;0Y[29X[2XRingGeneralMappingByImages[102X( [3XR[103X, [3XS[103X, [3Xgens[103X, [3Ximgs[103X ) [32X operation[133X
+  
+  [33X[0;0Yis  a general mapping from the ring [3XA[103X to the ring [3XS[103X. This general mapping is
+  defined  by  mapping  the  entries  in  the list [3Xgens[103X (elements of [3XR[103X) to the
+  entries  in  the  list  [3Ximgs[103X  (elements  of  [3XS[103X), and taking the additive and
+  multiplicative closure.[133X
+  
+  [33X[0;0Y[3Xgens[103X need not generate [3XR[103X as a ring, and if the specification does not define
+  an  additive and multiplicative mapping then the result will be multivalued.
+  Hence, in general it is not a mapping.[133X
+  
+  [1X56.8-2 RingHomomorphismByImages[101X
+  
+  [33X[1;0Y[29X[2XRingHomomorphismByImages[102X( [3XR[103X, [3XS[103X, [3Xgens[103X, [3Ximgs[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XRingHomomorphismByImages[102X  returns  the  ring  homomorphism with source [3XR[103X and
+  range  [3XS[103X  that is defined by mapping the list [3Xgens[103X of generators of [3XR[103X to the
+  list [3Ximgs[103X of images in [3XS[103X.[133X
+  
+  [33X[0;0YIf  [3Xgens[103X does not generate [3XR[103X or if the homomorphism does not exist (i.e., if
+  mapping  the  generators describes only a multi-valued mapping) then [9Xfail[109X is
+  returned.[133X
+  
+  [33X[0;0YOne can avoid the checks by calling [2XRingHomomorphismByImagesNC[102X ([14X56.8-3[114X), and
+  one  can  construct  multi-valued  mappings  with [2XRingGeneralMappingByImages[102X
+  ([14X56.8-1[114X).[133X
+  
+  [1X56.8-3 RingHomomorphismByImagesNC[101X
+  
+  [33X[1;0Y[29X[2XRingHomomorphismByImagesNC[102X( [3XR[103X, [3XS[103X, [3Xgens[103X, [3Ximgs[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XRingHomomorphismByImagesNC[102X  is  the operation that is called by the function
+  [2XRingHomomorphismByImages[102X   ([14X56.8-2[114X).   Its  methods  may  assume  that  [3Xgens[103X
+  generates  [3XR[103X  as  a ring and that the mapping of [3Xgens[103X to [3Ximgs[103X defines a ring
+  homomorphism. Results are unpredictable if these conditions do not hold.[133X
+  
+  [33X[0;0YFor  creating  a  possibly  multi-valued  mapping  from [3XR[103X to [3XS[103X that respects
+  addition  and  multiplication,  [2XRingGeneralMappingByImages[102X  ([14X56.8-1[114X)  can be
+  used.[133X
+  
+  [1X56.8-4 NaturalHomomorphismByIdeal[101X
+  
+  [33X[1;0Y[29X[2XNaturalHomomorphismByIdeal[102X( [3XR[103X, [3XI[103X ) [32X operation[133X
+  
+  [33X[0;0Yis  the  homomorphism  of  rings provided by the natural projection map of [3XR[103X
+  onto  the  quotient ring [3XR[103X/[3XI[103X. This map can be used to take pre-images in the
+  original ring from elements in the quotient.[133X
+  
+  
+  [1X56.9 [33X[0;0YSmall Rings[133X[101X
+  
+  [33X[0;0Y[5XGAP[105X contains a library of small (order up to 15) rings.[133X
+  
+  [1X56.9-1 SmallRing[101X
+  
+  [33X[1;0Y[29X[2XSmallRing[102X( [3Xs[103X, [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  the [22Xn[122X-th ring of order [22Xs[122X from a library of rings of small order (up
+  to isomorphism).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XR:=SmallRing(8,37);[127X[104X
+    [4X[28X<ring with 3 generators>[128X[104X
+    [4X[25Xgap>[125X [27XShowMultiplicationTable(R);[127X[104X
+    [4X[28X*     | 0*a   c     b     b+c   a     a+c   a+b   a+b+c[128X[104X
+    [4X[28X------+------------------------------------------------[128X[104X
+    [4X[28X0*a   | 0*a   0*a   0*a   0*a   0*a   0*a   0*a   0*a[128X[104X
+    [4X[28Xc     | 0*a   0*a   0*a   0*a   0*a   0*a   0*a   0*a[128X[104X
+    [4X[28Xb     | 0*a   0*a   0*a   0*a   b     b     b     b[128X[104X
+    [4X[28Xb+c   | 0*a   0*a   0*a   0*a   b     b     b     b[128X[104X
+    [4X[28Xa     | 0*a   c     b     b+c   a+b   a+b+c a     a+c[128X[104X
+    [4X[28Xa+c   | 0*a   c     b     b+c   a+b   a+b+c a     a+c[128X[104X
+    [4X[28Xa+b   | 0*a   c     b     b+c   a     a+c   a+b   a+b+c[128X[104X
+    [4X[28Xa+b+c | 0*a   c     b     b+c   a     a+c   a+b   a+b+c[128X[104X
+  [4X[32X[104X
+  
+  [1X56.9-2 NumberSmallRings[101X
+  
+  [33X[1;0Y[29X[2XNumberSmallRings[102X( [3Xs[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the number of (nonisomorphic) rings of order [22Xs[122X stored in the library
+  of small rings.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XList([1..15],NumberSmallRings);[127X[104X
+    [4X[28X[ 1, 2, 2, 11, 2, 4, 2, 52, 11, 4, 2, 22, 2, 4, 4 ][128X[104X
+  [4X[32X[104X
+  
+  [1X56.9-3 Subrings[101X
+  
+  [33X[1;0Y[29X[2XSubrings[102X( [3XR[103X ) [32X attribute[133X
+  
+  [33X[0;0Yfor a finite ring [3XR[103X this function returns a list of all subrings of [3XR[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSubrings(SmallRing(8,37));[127X[104X
+    [4X[28X[ <ring with 1 generator>, <ring with 1 generator>,[128X[104X
+    [4X[28X  <ring with 1 generator>, <ring with 1 generator>,[128X[104X
+    [4X[28X  <ring with 1 generator>, <ring with 1 generator>,[128X[104X
+    [4X[28X  <ring with 2 generators>, <ring with 2 generators>,[128X[104X
+    [4X[28X  <ring with 2 generators>, <ring with 2 generators>,[128X[104X
+    [4X[28X  <ring with 3 generators> ][128X[104X
+  [4X[32X[104X
+  
+  [1X56.9-4 Ideals[101X
+  
+  [33X[1;0Y[29X[2XIdeals[102X( [3XR[103X ) [32X attribute[133X
+  
+  [33X[0;0Yfor a finite ring [3XR[103X this function returns a list of all ideals of [3XR[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIdeals(SmallRing(8,37));[127X[104X
+    [4X[28X[ <ring with 1 generator>, <ring with 1 generator>,[128X[104X
+    [4X[28X  <ring with 1 generator>, <ring with 2 generators>,[128X[104X
+    [4X[28X  <ring with 3 generators> ][128X[104X
+  [4X[32X[104X
+  
+  [1X56.9-5 DirectSum[101X
+  
+  [33X[1;0Y[29X[2XDirectSum[102X( [3XR{[103X, [3XS}[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XDirectSumOp[102X( [3Xlist[103X, [3Xexpl[103X ) [32X operation[133X
+  
+  [33X[0;0YThese  functions  construct  the direct sum of the rings given as arguments.
+  [10XDirectSum[110X  takes  an  arbitrary  positive  number of arguments and calls the
+  operation  [10XDirectSumOp[110X, which takes exactly two arguments, namely a nonempty
+  list  of  rings and one of these rings. (This somewhat strange syntax allows
+  the method selection to choose a reasonable method for special cases.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDirectSum(SmallRing(5,1),SmallRing(5,1));[127X[104X
+    [4X[28X<ring with 2 generators>[128X[104X
+  [4X[32X[104X
+  
+  [1X56.9-6 RingByStructureConstants[101X
+  
+  [33X[1;0Y[29X[2XRingByStructureConstants[102X( [3Xmoduli[103X, [3Xsctable[103X[, [3Xnameinfo[103X] ) [32X function[133X
+  
+  [33X[0;0Yreturns  a ring [22XR[122X whose additive group is described by the list [3Xmoduli[103X, with
+  multiplication  defined  by  the  structure  constants  table  [3Xsctable[103X.  The
+  optional  argument  [3Xnameinfo[103X can be used to prescribe names for the elements
+  of  the  canonical  generators  of  [22XR[122X;  it can be either a string [3Xname[103X (then
+  [3Xname[103X[10X1[110X, [3Xname[103X[10X2[110X etc. are chosen) or a list of strings which are then chosen.[133X
+  

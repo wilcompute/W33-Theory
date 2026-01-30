@@ -1,0 +1,503 @@
+  
+  [1X52 [33X[0;0YFinitely Presented Semigroups and Monoids[133X[101X
+  
+  [33X[0;0YA  [13Xfinitely  presented  semigroup[113X  (resp.  [13Xfinitely  presented  monoid[113X) is a
+  quotient  of  a  free  semigroup  (resp.  free monoid) on a finite number of
+  generators over a finitely generated congruence on the free semigroup (resp.
+  free monoid).[133X
+  
+  [33X[0;0YFinitely  presented semigroups are obtained by factoring a free semigroup by
+  a  set  of  relations  (a generating set for the congruence), i.e., a set of
+  pairs of words in the free semigroup.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := FreeSemigroup( "a", "b" );;[127X[104X
+    [4X[25Xgap>[125X [27Xx := GeneratorsOfSemigroup( f );;[127X[104X
+    [4X[25Xgap>[125X [27Xs := f / [ [ x[1] * x[2], x[2] * x[1] ] ];[127X[104X
+    [4X[28X<fp semigroup on the generators [ a, b ]>[128X[104X
+    [4X[25Xgap>[125X [27XGeneratorsOfSemigroup( s );[127X[104X
+    [4X[28X[ a, b ][128X[104X
+    [4X[25Xgap>[125X [27XRelationsOfFpSemigroup( s );[127X[104X
+    [4X[28X[ [ a*b, b*a ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YFinitely  presented monoids are obtained by factoring a free monoid by a set
+  of relations, i.e. a set of pairs of words in the free monoid.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := FreeMonoid( "a", "b" );;[127X[104X
+    [4X[25Xgap>[125X [27Xx := GeneratorsOfMonoid( f );[127X[104X
+    [4X[28X[ a, b ][128X[104X
+    [4X[25Xgap>[125X [27Xe := Identity( f );[127X[104X
+    [4X[28X<identity ...>[128X[104X
+    [4X[25Xgap>[125X [27Xm := f / [ [ x[1] * x[2], e ] ];[127X[104X
+    [4X[28X<fp monoid on the generators [ a, b ]>[128X[104X
+    [4X[25Xgap>[125X [27XRelationsOfFpMonoid( m );[127X[104X
+    [4X[28X[ [ a*b, <identity ...> ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNotice  that for [5XGAP[105X a finitely presented monoid is not a finitely presented
+  semigroup.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsFpSemigroup( m );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YHowever,  one  can  build  a finitely presented semigroup isomorphic to that
+  finitely presented monoid (see [2XIsomorphismFpSemigroup[102X ([14X52.2-3[114X)).[133X
+  
+  [33X[0;0YAlso  note  that  is not possible to refer to the generators by their names.
+  These names are not variables, but just display figures. So, if one wants to
+  access  the  generators  by  their  names,  one  first  has to introduce the
+  respective variables and to assign the generators to them.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XUnbind( a );[127X[104X
+    [4X[25Xgap>[125X [27Xf := FreeSemigroup( "a", "b" );;[127X[104X
+    [4X[25Xgap>[125X [27Xs := f / [ [ f.1 * f.2, f.2 * f.1 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27Xa;[127X[104X
+    [4X[28XError, Variable: 'a' must have a value[128X[104X
+    [4X[25Xgap>[125X [27Xa := s.1;[127X[104X
+    [4X[28Xa[128X[104X
+    [4X[25Xgap>[125X [27Xa in f;[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xa in s;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  generators of the free semigroup (resp. free monoid) are different from
+  the generators of the finitely presented semigroup (resp. finitely presented
+  monoid)  (even though they are displayed by the same names). This means that
+  words  in  the  generators of the free semigroup (resp. free monoid) are not
+  elements  of  the  finitely  presented  semigroup  (resp. finitely presented
+  monoid).  Conversely  elements  of  the  finitely presented semigroup (resp.
+  finitely  presented  monoid) are not words of the free semigroup (resp. free
+  monoid).[133X
+  
+  [33X[0;0YCalculations  comparing  elements  of a finitely presented semigroup may run
+  into  problems:  there  are  finitely  presented  semigroups  for  which  no
+  algorithm  exists  (it  is known that no such algorithm can exist) that will
+  tell  for  two  arbitrary  words in the generators whether the corresponding
+  elements  in  the  finitely  presented  semigroup  are  equal. Therefore the
+  methods used by [5XGAP[105X to compute in finitely presented semigroups may run into
+  warning  errors, run out of memory or run forever. If the finitely presented
+  semigroup is (by theory) known to be finite the algorithms are guaranteed to
+  terminate (if there is sufficient memory available), but the time needed for
+  the  calculation  cannot  be  bounded  a  priori.  The  same can be said for
+  monoids. (See [14X52.5[114X.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xb := s.2;;[127X[104X
+    [4X[25Xgap>[125X [27Xa*b = a^5;[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xa^5 * b^2 * a = a^6 * b^2;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  elements  of  a finitely presented semigroup (or monoid) are not
+  printed in a unique way:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xa^5 * b^2 * a;[127X[104X
+    [4X[28Xa^5*b^2*a[128X[104X
+    [4X[25Xgap>[125X [27Xa^6 * b^2;[127X[104X
+    [4X[28Xa^6*b^2[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X52.1 [33X[0;0YIsSubsemigroupFpSemigroup (Filter)[133X[101X
+  
+  [1X52.1-1 IsSubsemigroupFpSemigroup[101X
+  
+  [33X[1;0Y[29X[2XIsSubsemigroupFpSemigroup[102X( [3Xt[103X ) [32X filter[133X
+  [33X[1;0Y[29X[2XIsSubmonoidFpMonoid[102X( [3Xt[103X ) [32X filter[133X
+  
+  [33X[0;0YThe  first function returns true if [3Xt[103X is a finitely presented semigroup or a
+  subsemigroup of a finitely presented semigroup. The second function does the
+  equivalent  thing  for  monoids. (Generally speaking, such a subsemigroup or
+  monoid  can  be constructed with [10XSemigroup([3Xgens[103X[10X)[110X or [10XMonoid([3Xgens[103X[10X)[110X, where [3Xgens[103X
+  is a list of elements of a finitely presented semigroup or monoid.)[133X
+  
+  [33X[0;0YA submonoid of a monoid has the same identity as the monoid.[133X
+  
+  [1X52.1-2 IsFpSemigroup[101X
+  
+  [33X[1;0Y[29X[2XIsFpSemigroup[102X( [3Xs[103X ) [32X filter[133X
+  [33X[1;0Y[29X[2XIsFpMonoid[102X( [3Xm[103X ) [32X filter[133X
+  
+  [33X[0;0YThe  first  function  is  a  synonym  for  [10XIsSubsemigroupFpSemigroup([3Xs[103X[10X)[110X  and
+  [10XIsWholeFamily([3Xs[103X[10X)[110X  (this  is  because  a subsemigroup of a finitely presented
+  semigroup is not necessarily finitely presented).[133X
+  
+  [33X[0;0YSimilarly,  the  second function is a synonym for [10XIsSubmonoidFpMonoid([3Xm[103X[10X)[110X and
+  [10XIsWholeFamily([3Xm[103X[10X)[110X.[133X
+  
+  [1X52.1-3 IsElementOfFpSemigroup[101X
+  
+  [33X[1;0Y[29X[2XIsElementOfFpSemigroup[102X( [3Xelm[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsElementOfFpMonoid[102X( [3Xelm[103X ) [32X Category[133X
+  
+  [33X[0;0Yreturns  true  if  [3Xelm[103X  is  an  element of a finitely presented semigroup or
+  monoid.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := FreeSemigroup( "a", "b" );;[127X[104X
+    [4X[25Xgap>[125X [27XIsFpSemigroup( f );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xs := f / [ [ f.1^2, f.2^2 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27XIsFpSemigroup( s );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xt := Semigroup( [ s.1^2 ] );[127X[104X
+    [4X[28X<commutative semigroup with 1 generator>[128X[104X
+    [4X[25Xgap>[125X [27XIsSubsemigroupFpSemigroup( t );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsSubsemigroupFpSemigroup( s );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsSubsemigroupFpSemigroup( f );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsElementOfFpSemigroup( t.1^3 );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X52.1-4 FpGrpMonSmgOfFpGrpMonSmgElement[101X
+  
+  [33X[1;0Y[29X[2XFpGrpMonSmgOfFpGrpMonSmgElement[102X( [3Xelm[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  finitely  presented  group,  monoid  or semigroup to which [3Xelm[103X
+  belongs.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xs = FpGrpMonSmgOfFpGrpMonSmgElement( s.1 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xs = FpGrpMonSmgOfFpGrpMonSmgElement( t.1 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xf := FreeMonoid( 2 );;[127X[104X
+    [4X[25Xgap>[125X [27Xm := f / [ [ f.1^2, f.2^2 ] ];[127X[104X
+    [4X[28X<fp monoid on the generators [ m1, m2 ]>[128X[104X
+    [4X[25Xgap>[125X [27Xm = FpGrpMonSmgOfFpGrpMonSmgElement( m.1 * m.2 );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X52.2 [33X[0;0YCreating Finitely Presented Semigroups and Monoids[133X[101X
+  
+  [1X52.2-1 \/[101X
+  
+  [33X[1;0Y[29X[2X\/[102X( [3XF[103X, [3Xrels[103X ) [32X method[133X
+  
+  [33X[0;0Ycreates a finitely presented semigroup or monoid given by the presentation [22X⟨
+  [3Xgens[103X  ∣  [3Xrels[103X  ⟩[122X where [3Xgens[103X are the generators of the free semigroup or free
+  monoid  [3XF[103X,  and  the  relations  [3Xrels[103X  are  entered as pairs of words in the
+  generators of the free semigroup or free monoid.[133X
+  
+  [33X[0;0YThe same result is obtained with the infix operator [10X/[110X, i.e. as [3XF[103X [10X/[110X [3Xrels[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xfs := FreeSemigroup( 3 );;[127X[104X
+    [4X[25Xgap>[125X [27Xx := GeneratorsOfSemigroup( fs );;[127X[104X
+    [4X[25Xgap>[125X [27Xs := fs / [ [ x[1] * x[2] * x[1], x[1] ], [ x[2]^4, x[1] ] ];[127X[104X
+    [4X[28X<fp semigroup on the generators [ s1, s2, s3 ]>[128X[104X
+  [4X[32X[104X
+  
+  [1X52.2-2 FactorFreeSemigroupByRelations[101X
+  
+  [33X[1;0Y[29X[2XFactorFreeSemigroupByRelations[102X( [3Xf[103X, [3Xrels[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XFactorFreeMonoidByRelations[102X( [3Xf[103X, [3Xrels[103X ) [32X function[133X
+  
+  [33X[0;0Yfor  a  free semigroup or free monoid [3Xf[103X and a list [3Xrels[103X of pairs of elements
+  of  [3Xf[103X.  Returns  the  finitely  presented  semigroup  or monoid which is the
+  quotient of [3Xf[103X by the least congruence on [3Xf[103X generated by the pairs in [3Xrels[103X.[133X
+  
+  [33X[0;0YUsers  should be aware that much of the code described in this chapter is in
+  need  of  substantial  revision.  In particular, the two functions described
+  here  are  [13Xnot[113X called by the operation [10X\/[110X of the previous subsection, and so
+  are liable to be removed in due course.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xfm := FreeMonoid( 3 );;[127X[104X
+    [4X[25Xgap>[125X [27Xy := GeneratorsOfMonoid( fm );;[127X[104X
+    [4X[25Xgap>[125X [27Xm := FactorFreeMonoidByRelations( fm,[127X[104X
+    [4X[25X>[125X [27X          [ [ y[1] * y[2] * y[1], y[1] ],[ y[2]^4, y[1] ] ] );[127X[104X
+    [4X[28X<fp monoid on the generators [ m1, m2, m3 ]>[128X[104X
+  [4X[32X[104X
+  
+  [1X52.2-3 IsomorphismFpSemigroup[101X
+  
+  [33X[1;0Y[29X[2XIsomorphismFpSemigroup[102X( [3Xm[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XIsomorphismFpMonoid[102X( [3Xg[103X ) [32X attribute[133X
+  
+  [33X[0;0Yfor  a  finitely presented monoid [3Xm[103X or a finitely presented group [3Xg[103X. Returns
+  an isomorphism from [3Xm[103X or [3Xg[103X to a finitely presented semigroup or monoid.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xphis := IsomorphismFpSemigroup( m );[127X[104X
+    [4X[28XMappingByFunction( <fp monoid on the generators[128X[104X
+    [4X[28X[ m1, m2, m3 ]>, <fp semigroup on the generators [ <identity ...>, m1, m2, m3[128X[104X
+    [4X[28X ]>, function( x ) ... end, function( x ) ... end )[128X[104X
+    [4X[25Xgap>[125X [27Xfg := FreeGroup( 2 );;[127X[104X
+    [4X[25Xgap>[125X [27Xg := fg / [ fg.1^4, fg.2^5 ];[127X[104X
+    [4X[28X<fp group on the generators [ f1, f2 ]>[128X[104X
+    [4X[25Xgap>[125X [27Xphim := IsomorphismFpMonoid( g );[127X[104X
+    [4X[28XMappingByFunction( <fp group on the generators[128X[104X
+    [4X[28X[ f1, f2 ]>, <fp monoid on the generators [ f1, f1^-1, f2, f2^-1[128X[104X
+    [4X[28X ]>, function( x ) ... end, function( x ) ... end )[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X52.3 [33X[0;0YComparison of Elements of Finitely Presented Semigroups[133X[101X
+  
+  [1X52.3-1 \=[101X
+  
+  [33X[1;0Y[29X[2X\=[102X( [3Xa[103X, [3Xb[103X ) [32X method[133X
+  
+  [33X[0;0YTwo  elements  [3Xa[103X,  [3Xb[103X of a finitely presented semigroup are equal if they are
+  equal  in  the  semigroup. Nevertheless they may be represented as different
+  words  in  the  generators. Because of the fundamental problems mentioned in
+  the  introduction  to this chapter such a test may take a very long time and
+  cannot be guaranteed to finish (see [14X52.5[114X).[133X
+  
+  
+  [1X52.4 [33X[0;0YPreimages in the Free Semigroup or Monoid[133X[101X
+  
+  [33X[0;0YElements  of a finitely presented semigroup or monoid are not words, but are
+  represented  using  a  word  from  the  free  semigroup  or  free  monoid as
+  representative.[133X
+  
+  [1X52.4-1 UnderlyingElement[101X
+  
+  [33X[1;0Y[29X[2XUnderlyingElement[102X( [3Xelm[103X ) [32X operation[133X
+  
+  [33X[0;0Yfor  an element [3Xelm[103X of a finitely presented semigroup or monoid. Returns the
+  word from the free semigroup or free monoid that is used as a representative
+  for [3Xelm[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xgenm := GeneratorsOfMonoid( m );;[127X[104X
+    [4X[25Xgap>[125X [27Xe := genm[2]^4;[127X[104X
+    [4X[28Xm2^4[128X[104X
+    [4X[25Xgap>[125X [27XIsWord( e );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xue := UnderlyingElement( e );[127X[104X
+    [4X[28Xm2^4[128X[104X
+    [4X[25Xgap>[125X [27XIsWord( ue );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X52.4-2 ElementOfFpSemigroup[101X
+  
+  [33X[1;0Y[29X[2XElementOfFpSemigroup[102X( [3Xfam[103X, [3Xword[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XElementOfFpMonoid[102X( [3Xfam[103X, [3Xword[103X ) [32X operation[133X
+  
+  [33X[0;0Yfor a family [3Xfam[103X of elements of a finitely presented semigroup or monoid and
+  a  word  [3Xword[103X  in  the  free  generators  underlying this finitely presented
+  semigroup or monoid. Returns the element of the finitely presented semigroup
+  or monoid with the representative [3Xword[103X in the free semigroup or free monoid.
+  These operations are inverse to [10XUnderlyingElement[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xfam := FamilyObj( genm[1] );;[127X[104X
+    [4X[25Xgap>[125X [27Xw := y[1]^3 * y[2]^4 * y[3]^5;[127X[104X
+    [4X[28Xm1^3*m2^4*m3^5[128X[104X
+    [4X[25Xgap>[125X [27Xew := ElementOfFpMonoid( fam, w );[127X[104X
+    [4X[28Xm1^3*m2^4*m3^5[128X[104X
+    [4X[25Xgap>[125X [27Xew in fm;[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xew in m;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xw = UnderlyingElement( ew );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X52.4-3 FreeSemigroupOfFpSemigroup[101X
+  
+  [33X[1;0Y[29X[2XFreeSemigroupOfFpSemigroup[102X( [3Xs[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XFreeMonoidOfFpMonoid[102X( [3Xm[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the  underlying  free  semigroup  or  free  monoid for the finitely
+  presented  semigroup  [3Xs[103X  or monoid [3Xm[103X, i.e. the free semigroup or free monoid
+  over  which  [3Xs[103X or [3Xm[103X is defined as a quotient. (This is the free semigroup or
+  free    monoid    generated    by    the   free   generators   provided   by
+  [10XFreeGeneratorsOfFpSemigroup([3Xs[103X[10X)[110X or [10XFreeGeneratorsOfFpMonoid([3Xm[103X[10X)[110X).[133X
+  
+  [1X52.4-4 FreeGeneratorsOfFpSemigroup[101X
+  
+  [33X[1;0Y[29X[2XFreeGeneratorsOfFpSemigroup[102X( [3Xs[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XFreeGeneratorsOfFpMonoid[102X( [3Xm[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the  underlying  free generators corresponding to the generators of
+  the finitely presented semigroup [3Xs[103X or monoid [3Xm[103X.[133X
+  
+  [1X52.4-5 RelationsOfFpSemigroup[101X
+  
+  [33X[1;0Y[29X[2XRelationsOfFpSemigroup[102X( [3Xs[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRelationsOfFpMonoid[102X( [3Xm[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the  relations of the finitely presented semigroup [3Xs[103X or monoid [3Xm[103X as
+  pairs     of     words     in    the    free    generators    provided    by
+  [10XFreeGeneratorsOfFpSemigroup([3Xs[103X[10X)[110X or [10XFreeGeneratorsOfFpMonoid([3Xm[103X[10X)[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xfs = FreeSemigroupOfFpSemigroup( s );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XFreeGeneratorsOfFpMonoid( m );[127X[104X
+    [4X[28X[ m1, m2, m3 ][128X[104X
+    [4X[25Xgap>[125X [27XRelationsOfFpSemigroup( s );[127X[104X
+    [4X[28X[ [ s1*s2*s1, s1 ], [ s2^4, s1 ] ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X52.5 [33X[0;0YRewriting Systems and the Knuth-Bendix Procedure[133X[101X
+  
+  [33X[0;0YIf  a  finitely  presented  semigroup  (or monoid) has a confluent rewriting
+  system  then  it has a solvable word problem, that is, there is an algorithm
+  to decide when two words in the free underlying semigroup represent the same
+  element  of  the  finitely  presented  semigroup.  Indeed,  once  we  have a
+  confluent  rewriting  system,  it  is possible to successfully test that two
+  words  represent  the  same element in the semigroup, by reducing both words
+  using  the  rewriting  system rules. This is, at the moment, the method that
+  [5XGAP[105X uses to check equality in finitely presented semigroups and monoids.[133X
+  
+  [1X52.5-1 ReducedConfluentRewritingSystem[101X
+  
+  [33X[1;0Y[29X[2XReducedConfluentRewritingSystem[102X( [3XS[103X[, [3Xordering[103X] ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  a  reduced  confluent  rewriting  system  of the finitely presented
+  semigroup  or  monoid [3XS[103X with respect to the reduction ordering [3Xordering[103X (see
+  [14X34[114X).[133X
+  
+  [33X[0;0YThe default for [3Xordering[103X is the length plus lexicographic ordering on words,
+  also  called  the  shortlex  ordering;  for  the  definition see for example
+  [Sim94].[133X
+  
+  [33X[0;0YNotice  that  this  might  not terminate. In particular, if the semigroup or
+  monoid  [3XS[103X  does not have a solvable word problem then it this will certainly
+  never end. Also, in this case, the object returned is an immutable rewriting
+  system,  because  once  we  have a confluent rewriting system for a finitely
+  presented  semigroup  or  monoid we do not want to allow it to change (as it
+  was  most  probably  very  time  consuming  to  get  it in the first place).
+  Furthermore, this is also an attribute storing object (see [14X13.4[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := FreeSemigroup( "a", "b" );;[127X[104X
+    [4X[25Xgap>[125X [27Xa := f.1;;  b := f.2;;[127X[104X
+    [4X[25Xgap>[125X [27Xs := f / [ [ a*b*a, b ], [ b*a*b, a ] ];;[127X[104X
+    [4X[25Xgap>[125X [27Xrws := ReducedConfluentRewritingSystem( s );[127X[104X
+    [4X[28XRewriting System for Semigroup( [ a, b ] ) with rules[128X[104X
+    [4X[28X[ [ a*b*a, b ], [ b*a*b, a ], [ b*a^2, a^2*b ], [ b^2, a^2 ],[128X[104X
+    [4X[28X  [ a^5, a ], [ a^3*b, b*a ] ][128X[104X
+    [4X[25Xgap>[125X [27Xc := s.1;;  d := s.2;;[127X[104X
+    [4X[25Xgap>[125X [27Xe := (c*d^2)^3;[127X[104X
+    [4X[28X(a*b^2)^3[128X[104X
+    [4X[25Xgap>[125X [27X## ReducedForm( rws, e );  gives an error![127X[104X
+    [4X[25Xgap>[125X [27Xw := UnderlyingElement( e );[127X[104X
+    [4X[28X(a*b^2)^3[128X[104X
+    [4X[25Xgap>[125X [27XReducedForm( rws, w );[127X[104X
+    [4X[28Xa[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  creation of a reduced confluent rewriting system for a semigroup or for
+  a  monoid,  in  [5XGAP[105X,  uses  the  Knuth-Bendix  procedure  for strings, which
+  manipulates  a  rewriting  system of the semigroup or monoid and attempts to
+  make  it  confluent, (see Chapter [14X38[114X and also Sims [Sim94]). (Since the word
+  problem  for semigroups/monoids is not solvable in general, the Knuth-Bendix
+  procedure cannot always terminate).[133X
+  
+  [33X[0;0YIn  order  to  apply this procedure we will build a rewriting system for the
+  semigroup  or monoid, which we will call a [13XKnuth-Bendix Rewriting System[113X (we
+  need  to  define  this  because  we  need the rewriting system to store some
+  information needed for the implementation of the Knuth-Bendix procedure).[133X
+  
+  [33X[0;0YActually,  Knuth-Bendix  Rewriting  Systems  do not only serve this purpose.
+  Indeed these are objects which are mutable and which can be manipulated (see
+  [14X38[114X).[133X
+  
+  [33X[0;0YNote  that  the  implemented  version  of the Knuth-Bendix procedure, in [5XGAP[105X
+  returns,  if  it  terminates, a confluent rewriting system which is reduced.
+  Also,  a  reduction  ordering  has to be specified when building a rewriting
+  system.  If  none  is specified, the shortlex ordering is assumed (note that
+  the  procedure  may  terminate  with a certain ordering and not with another
+  one).[133X
+  
+  [33X[0;0YOn Unix systems it is possible to replace the built-in Knuth-Bendix by other
+  routines, for example the package [5Xkbmag[105X offers such a possibility.[133X
+  
+  [1X52.5-2 KB_REW[101X
+  
+  [33X[1;0Y[29X[2XKB_REW[102X [32X global variable[133X
+  [33X[1;0Y[29X[2XGAPKB_REW[102X [32X global variable[133X
+  
+  [33X[0;0Y[10XKB_REW[110X  is  a global record variable whose components contain functions used
+  for Knuth-Bendix. By default [10XKB_REW[110X is assigned to [10XGAPKB_REW[110X, which contains
+  the KB functions provided by the GAP library.[133X
+  
+  
+  [1X52.5-3 [33X[0;0YKnuthBendixRewritingSystem[133X[101X
+  
+  [33X[1;0Y[29X[2XKnuthBendixRewritingSystem[102X( [3Xs[103X, [3Xwordord[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XKnuthBendixRewritingSystem[102X( [3Xm[103X, [3Xwordord[103X ) [32X operation[133X
+  
+  [33X[0;0Yin  the  first  form,  for  a  semigroup  [3Xs[103X and a reduction ordering for the
+  underlying  free  semigroup, it returns the Knuth-Bendix rewriting system of
+  the  finitely presented semigroup [3Xs[103X using the reduction ordering [3Xwordord[103X. In
+  the  second form, for a monoid [3Xm[103X and a reduction ordering for the underlying
+  free  monoid,  it  returns the Knuth-Bendix rewriting system of the finitely
+  presented monoid [3Xm[103X using the reduction ordering [3Xwordord[103X.[133X
+  
+  [1X52.5-4 SemigroupOfRewritingSystem[101X
+  
+  [33X[1;0Y[29X[2XSemigroupOfRewritingSystem[102X( [3Xrws[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XMonoidOfRewritingSystem[102X( [3Xrws[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns the semigroup or monoid over which [3Xrws[103X is a rewriting system.[133X
+  
+  [1X52.5-5 FreeSemigroupOfRewritingSystem[101X
+  
+  [33X[1;0Y[29X[2XFreeSemigroupOfRewritingSystem[102X( [3Xrws[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XFreeMonoidOfRewritingSystem[102X( [3Xrws[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns the free semigroup or monoid over which [3Xrws[103X is a rewriting system.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf1 := FreeSemigroupOfRewritingSystem( rws );[127X[104X
+    [4X[28X<free semigroup on the generators [ a, b ]>[128X[104X
+    [4X[25Xgap>[125X [27Xf1 = f;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xs1 := SemigroupOfRewritingSystem( rws );[127X[104X
+    [4X[28X<fp semigroup on the generators [ a, b ]>[128X[104X
+    [4X[25Xgap>[125X [27Xs1 = s;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAs  mentioned  before,  having  a confluent rewriting system, one can decide
+  whether  two  words  represent  the  same  element  of  a finitely presented
+  semigroup (or finitely presented monoid).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xd^6 = c^2;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XReducedForm( rws, UnderlyingElement( d^6 ) );[127X[104X
+    [4X[28Xa^2[128X[104X
+    [4X[25Xgap>[125X [27XReducedForm( rws, UnderlyingElement( c^2 ) );[127X[104X
+    [4X[28Xa^2[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X52.6 [33X[0;0YTodd-Coxeter Procedure[133X[101X
+  
+  [33X[0;0YThis   procedure   gives   a   standard  way  of  finding  a  transformation
+  representation  of  a  finitely  presented  semigroup.  Usually one does not
+  explicitly  call  this procedure but uses [2XIsomorphismTransformationSemigroup[102X
+  ([14X53.7-5[114X).[133X
+  
+  [1X52.6-1 CosetTableOfFpSemigroup[101X
+  
+  [33X[1;0Y[29X[2XCosetTableOfFpSemigroup[102X( [3Xr[103X ) [32X attribute[133X
+  
+  [33X[0;0Y[3Xr[103X  is  a  right congruence of an fp-semigroup [3XS[103X. This attribute is the coset
+  table  of FP semigroup [3XS[103X on a right congruence [3Xr[103X. Given a right congruence [3Xr[103X
+  we represent [3XS[103X as a set of transformations of the congruence classes of [3Xr[103X.[133X
+  
+  [33X[0;0YThe  images  of the cosets under the generators are compiled in a list [3Xtable[103X
+  such that [3Xtable[i][s][103X contains the image of coset [3Xs[103X under generator [3Xi[103X.[133X
+  

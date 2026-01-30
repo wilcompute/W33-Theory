@@ -1,0 +1,4 @@
+enable:
+- analyse-lvars
+- tabs
+- trailing-whitespace

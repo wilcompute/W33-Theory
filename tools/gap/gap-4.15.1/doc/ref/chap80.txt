@@ -1,0 +1,728 @@
+  
+  [1X80 [33X[0;0YExamples of Extending the System[133X[101X
+  
+  [33X[0;0YThis chapter gives a few examples of how one can extend the functionality of
+  [5XGAP[105X.[133X
+  
+  [33X[0;0YThey  are  arranged  in  ascending  difficulty.  We  show how to install new
+  methods, add new operations and attributes and how to implement new features
+  using categories and representations. (As we do not introduce completely new
+  kinds  of  objects  in these example it will not be necessary to declare any
+  families.)  Finally  we  show a simple way how to create new objects with an
+  own arithmetic.[133X
+  
+  [33X[0;0YThe examples given are all very rudimentary – no particular error checks are
+  performed  and  the user interface sometimes is quite clumsy. These examples
+  may   be  constructed  for  presentation  purposes  only  and  they  do  not
+  necessarily constitute parts of the [5XGAP[105X library.[133X
+  
+  [33X[0;0YEven more complex examples that create whole classes of objects anew will be
+  given in the following two chapters [14X81[114X and [14X82[114X.[133X
+  
+  
+  [1X80.1 [33X[0;0YAddition of a Method[133X[101X
+  
+  [33X[0;0YThe  easiest  case  is  the  addition  of a new algorithm as a method for an
+  existing operation for the existing structures.[133X
+  
+  [33X[0;0YFor example, assume we wanted to implement a better method for computing the
+  exponent  of  a  nilpotent  group (it is the product of the exponents of the
+  Sylow subgroups).[133X
+  
+  [33X[0;0YThe  first  task  is  to find which operation is used by [5XGAP[105X (it is [2XExponent[102X
+  ([14X39.16-2[114X))  and how it is declared. We can find this in the Reference Manual
+  (in our particular case in section [14X39.16[114X) and the declaration in the library
+  file  [11Xlib/grp.gd[111X.  The  easiest  way to find the place of the declaration is
+  usually to [10Xgrep[110X over all [10X.gd[110X and [10X.g[110X files, see section [14X83[114X.[133X
+  
+  [33X[0;0YIn our example the declaration in the library is:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XDeclareAttribute("Exponent",IsGroup);[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YSimilarly  we find that the filter [2XIsNilpotentGroup[102X ([14X39.15-3[114X) represents the
+  concept of being nilpotent.[133X
+  
+  [33X[0;0YWe  then  write a function that implements the new algorithm which takes the
+  right  set  of  arguments  and  install  it as a method. In our example this
+  installation would be:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallMethod(Exponent,"for nilpotent groups",[128X[104X
+    [4X[28X  [IsGroup and IsNilpotent],[128X[104X
+    [4X[28Xfunction(G)[128X[104X
+    [4X[28X  [function body omitted][128X[104X
+    [4X[28Xend);[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe have left out the optional rank argument of [2XInstallMethod[102X ([14X78.3-1[114X), which
+  normally  is a wise choice –[5XGAP[105X automatically uses an internal ranking based
+  on  the  filters  that  is only offset by the given rank. So our method will
+  certainly  be  regarded  as [21Xbetter[121X than a method that has been installed for
+  mere groups or for solvable groups but will be ranked lower than the library
+  method for abelian groups.[133X
+  
+  [33X[0;0YThat's  all.  Using [14X7.2-1[114X we can check for a nilpotent group that indeed our
+  new method will be used.[133X
+  
+  [33X[0;0YWhen  testing,  remember  that  the  method  selection  will  not  check for
+  properties  that  are  not  known.  (This is done internally by checking the
+  property tester first.) Therefore the method would not be applicable for the
+  group  [10Xg[110X  in  the  following  definition  but  only  for the –mathematically
+  identical  but  endowed  with  more knowledge by [5XGAP[105X– group [10Xh[110X. (Section [14X80.3[114X
+  shows a way around this.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,2),(1,3)(2,4));;[127X[104X
+    [4X[25Xgap>[125X [27Xh:=Group((1,2),(1,3)(2,4));;[127X[104X
+    [4X[25Xgap>[125X [27XIsNilpotentGroup(h); # enforce test[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XHasIsNilpotentGroup(g);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XHasIsNilpotentGroup(h);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YLet's  now look at a slightly more complicated example: We want to implement
+  a  better method for computing normalizers in a nilpotent permutation group.
+  (Such an algorithm can be found for example in [LRW97].)[133X
+  
+  [33X[0;0YWe  already know [2XIsNilpotentGroup[102X ([14X39.15-3[114X), the filter [2XIsPermGroup[102X ([14X43.1-1[114X)
+  represents the concept of being a group of permutations.[133X
+  
+  [33X[0;0Y[5XGAP[105X   uses   [2XNormalizer[102X   ([14X39.11-1[114X)  to  compute  normalizers,  however  the
+  declaration is a bit more complicated. In the library we find[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInParentFOA( "Normalizer", IsGroup, IsObject, NewAttribute );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  full  mechanism  of  [2XInParentFOA[102X  ([14X85.2-1[114X)  is described in chapter [14X85[114X,
+  however  for  our purposes it is sufficient to know that for such a function
+  the  actual  work  is  done  by  an  operation  [10XNormalizerOp[110X,  an underlying
+  operation for [2XNormalizer[102X ([14X39.11-1[114X) (and all the complications are just there
+  to  be  able  to  remember certain results) and that the declaration of this
+  operation is given by the first arguments, it would be:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XDeclareOperation( "NormalizerOp", [IsGroup, IsObject] );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis  time  we decide to enter a non-default family predicate in the call to
+  [2XInstallMethod[102X  ([14X78.3-1[114X). We could just leave it out as in the previous call;
+  this  would  yield  the  default  value,  the function [2XReturnTrue[102X ([14X5.4-1[114X) of
+  arbitrary many arguments which always returns [9Xtrue[109X. However, then the method
+  might  be  called  in  some  cases of inconsistent input (for example matrix
+  groups  in  different characteristics) that ought to fall through the method
+  selection to raise an error.[133X
+  
+  [33X[0;0YIn our situation, we want the second group to be a subgroup of the first, so
+  necessarily  both  must  have  the same family and we can use [2XIsIdenticalObj[102X
+  ([14X12.5-1[114X) as family predicate.[133X
+  
+  [33X[0;0YNow  we  can install the method. Again this manual is lazy and does not show
+  you the actual code:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallMethod(NormalizerOp,"for nilpotent permutation groups",IsIdenticalObj,[128X[104X
+    [4X[28X  [IsPermGroup and IsNilpotentGroup,[128X[104X
+    [4X[28X   IsPermGroup and IsNilpotentGroup],[128X[104X
+    [4X[28Xfunction(G,U)[128X[104X
+    [4X[28X  [ function body omitted ][128X[104X
+    [4X[28Xend);[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X80.2 [33X[0;0YExtending the Range of Definition of an Existing Operation[133X[101X
+  
+  [33X[0;0YIt  might  be  that  the operation has been defined so far only for a set of
+  objects  that  is  too restrictive for our purposes (or we want to install a
+  method  that  takes  another  number of arguments). If this is the case, the
+  call to [2XInstallMethod[102X ([14X78.3-1[114X) causes an error message. We can avoid this by
+  using [2XInstallOtherMethod[102X ([14X78.3-2[114X) instead. It is also possible to re-declare
+  an  operation  with another number of arguments and/or different filters for
+  its arguments.[133X
+  
+  
+  [1X80.3 [33X[0;0YEnforcing Property Tests[133X[101X
+  
+  [33X[0;0YAs  mentioned in Section [14X78.4[114X, [5XGAP[105X does not check unknown properties to test
+  whether  a  method  might  be applicable. In some cases one wants to enforce
+  this, however, because the gain from knowing the property outweighs the cost
+  of its determination.[133X
+  
+  [33X[0;0YIn  this  situation  one  has  to  install  a  method [13Xwithout[113X the additional
+  property  (so  it can be tried even if the property is not yet known) and at
+  high  rank  (so it will be used before other methods). The first thing to do
+  in  the  actual  function  then is to test the property and to bail out with
+  [2XTryNextMethod[102X ([14X78.5-1[114X) if it turns out to be [9Xfalse[109X.[133X
+  
+  [33X[0;0YThe above [2XExponent[102X ([14X39.16-2[114X) example thus would become:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallMethod(Exponent,"test abelianity", [IsGroup],[128X[104X
+    [4X[28X  50,# enforced high rank[128X[104X
+    [4X[28Xfunction(G)[128X[104X
+    [4X[28X  if not IsAbelian(G) then[128X[104X
+    [4X[28X    TryNextMethod();[128X[104X
+    [4X[28X  fi;[128X[104X
+    [4X[28X  [remaining function body omitted][128X[104X
+    [4X[28Xend);[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe value [21X50[121X used in this example is quite arbitrary. A better way is to use
+  values that are given by the system inherently: We want this method still to
+  be  ranked  as  high, [13Xas if it had[113X the [2XIsAbelian[102X ([14X35.4-9[114X) requirement. So we
+  have [5XGAP[105X compute the extra rank of this:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallMethod(Exponent,"test abelianity", [IsGroup],[128X[104X
+    [4X[28X  # enforced absolute rank of `IsGroup and IsAbelian' installation: Subtract[128X[104X
+    [4X[28X  # the rank of `IsGroup' and add the rank of `IsGroup and IsAbelian':[128X[104X
+    [4X[28X  RankFilter(IsGroup and IsAbelian)[128X[104X
+    [4X[28X  -RankFilter(IsGroup),[128X[104X
+    [4X[28Xfunction(G)[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Ythe  slightly  complicated  construction  of  addition  and  subtraction  is
+  necessary  because  [2XIsGroup[102X  ([14X39.2-7[114X) and [2XIsAbelian[102X ([14X35.4-9[114X) might imply the
+  [13Xsame[113X elementary filters which we otherwise would count twice.[133X
+  
+  [33X[0;0YA  somehow  similar  situation  occurs  with matrix groups. Most methods for
+  matrix groups are only applicable if the group is known to be finite.[133X
+  
+  [33X[0;0YHowever  we  should  not enforce a finiteness test early (someone else later
+  might  install  good  methods  for infinite groups while the finiteness test
+  would  be  too  expensive)  but just before [5XGAP[105X would give a [21Xno method found[121X
+  error.  This is done by redispatching, see [14X78.6[114X. For example to enforce such
+  a final finiteness test for normalizer calculations could be done by:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XRedispatchOnCondition(NormalizerOp,IsIdenticalObj,[128X[104X
+    [4X[28X  [IsMatrixGroup,IsMatrixGroup],[IsFinite,IsFinite],0);[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X80.4 [33X[0;0YAdding a new Operation[133X[101X
+  
+  [33X[0;0YNext,  we will consider how to add own operations. As an example we take the
+  Sylow  normalizer  in  a  group  of  a  given prime. This operation gets two
+  arguments, the first has to be a group, the second a prime number.[133X
+  
+  [33X[0;0YThere  is  a  function  [2XIsPrimeInt[102X ([14X14.4-2[114X), but no property for being prime
+  (which  would be pointless as integers cannot store property values anyhow).
+  So the second argument gets specified only as positive integer:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XSylowNormalizer:=NewOperation("SylowNormalizer",[IsGroup,IsPosInt]);[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y(Note  that  we  are using [2XNewOperation[102X ([14X78.1-4[114X) instead of [2XDeclareOperation[102X
+  ([14X78.1-5[114X)  as  used  in  the  library.  The  only  difference other than that
+  [2XDeclareOperation[102X  ([14X78.1-5[114X)  saves  some typing, is that it also protects the
+  variables against overwriting. When testing code (when one probably wants to
+  change  things)  this might be restricting. If this does not bother you, you
+  can use[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XDeclareOperation("SylowNormalizer",[IsGroup,IsPosInt]);[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Yas well.)[133X
+  
+  [33X[0;0YThe  filters  [2XIsGroup[102X  ([14X39.2-7[114X) and [2XIsPosInt[102X ([14X14.2-2[114X) given are [13Xonly[113X used to
+  test  that  [2XInstallMethod[102X  ([14X78.3-1[114X) installs methods with suitable arguments
+  and  will  be  completely  ignored  when  using [2XInstallOtherMethod[102X ([14X78.3-2[114X).
+  Technically  one  could  therefore  simply  use  [2XIsObject[102X  ([14X12.1-1[114X)  for all
+  arguments  in the declaration. The main point of using more specific filters
+  here  is to help documenting with which arguments the function is to be used
+  (so for example a call [10XSylowNormalizer(5,G)[110X would be invalid).[133X
+  
+  [33X[0;0YOf  course  initially  there  are  no  useful  methods  for  newly  declared
+  operations; you will have to write and install them yourself.[133X
+  
+  [33X[0;0YIf  the  operation  only  takes  one  argument  and has reproducible results
+  without  side  effects,  it  might  be  worth  declaring  it as an attribute
+  instead; see Section [14X80.5[114X.[133X
+  
+  
+  [1X80.5 [33X[0;0YAdding a new Attribute[133X[101X
+  
+  [33X[0;0YNow  we  look  at  an  example  of how to add a new attribute. As example we
+  consider the set of all primes that divide the size of a group.[133X
+  
+  [33X[0;0YFirst we have to declare the attribute:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XPrimesDividingSize:=NewAttribute("PrimesDividingSize",IsGroup);[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y(See [2XNewAttribute[102X  ([14X13.5-3[114X)).  This implicitly declares attribute tester and
+  setter, it is convenient however to assign these to variables as well:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XHasPrimesDividingSize:=Tester(PrimesDividingSize);[128X[104X
+    [4X[28XSetPrimesDividingSize:=Setter(PrimesDividingSize);[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAlternatively, there is a declaration command [2XDeclareAttribute[102X ([14X13.5-4[114X) that
+  executes  all  three  assignments  simultaneously and protects the variables
+  against overwriting:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XDeclareAttribute("PrimesDividingSize",IsGroup);[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNext  we have to install method(s) for the attribute that compute its value.
+  (This  is  not  strictly  necessary. We could use the attribute also without
+  methods  only  for  storing  and  retrieving information, but calling it for
+  objects  for  which  the  value is not known would produce a [21Xno method found[121X
+  error.)  For  this  purpose  we  can  imagine  the  attribute  simply  as an
+  one-argument operation:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallMethod(PrimesDividingSize,"for finite groups",[128X[104X
+    [4X[28X  [IsGroup and IsFinite],[128X[104X
+    [4X[28Xfunction(G)[128X[104X
+    [4X[28X  return PrimeDivisors(Size(G));[128X[104X
+    [4X[28Xend);[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  function  installed  [13Xmust[113X  always return a value (or call [2XTryNextMethod[102X
+  ([14X78.5-1[114X)).  If  the  object  is  in the representation [2XIsAttributeStoringRep[102X
+  ([14X13.5-5[114X)  this  return  value once computed will be automatically stored and
+  retrieved  if  the  attribute is called a second time. We don't have to call
+  setter  or tester ourselves. (This storage happens by [5XGAP[105X internally calling
+  the  attribute setter with the return value of the function. Retrieval is by
+  a   high-ranking   method   which   is   installed   under   the   condition
+  [10XHasPrimesDividingSize[110X.  This  method  was  installed  automatically when the
+  attribute was declared.)[133X
+  
+  
+  [1X80.6 [33X[0;0YAdding a new Representation[133X[101X
+  
+  [33X[0;0YNext,  we  look  at  the  implementation of a new representation of existing
+  objects.  In  most  cases  we want to implement this representation only for
+  efficiency reasons while keeping all the existing functionality.[133X
+  
+  [33X[0;0YFor  example,  assume we wanted (following [Wie69]) to implement permutation
+  groups defined by relations.[133X
+  
+  [33X[0;0YNext,  we have to decide a few basics about the representation. All existing
+  permutation groups in the library are attribute storing and we probably want
+  to  keep  this  for  our  new  objects.  Thus  the  representation must be a
+  subrepresentation of [2XIsComponentObjectRep[102X ([14X13.4-1[114X) and [2XIsAttributeStoringRep[102X
+  ([14X13.5-5[114X).  Furthermore  we want each object to be a permutation group and we
+  can imply this directly in the representation.[133X
+  
+  [33X[0;0YWe  also  decide  that  we store the degree (the largest point that might be
+  moved)  in  a  component  [10Xdegree[110X  and  the defining relations in a component
+  [10Xrelations[110X  (we  do  not  specify  the format of relations here. In an actual
+  implementation one would have to design this as well, but it does not affect
+  the declarations this chapter is about).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XDeclareRepresentation([128X[104X
+    [4X[28X  "IsPermutationGroupByRelations",[128X[104X
+    [4X[28X  IsComponentObjectRep and IsAttributeStoringRep and IsPermGroup,[128X[104X
+    [4X[28X  ["degree","relations"]);[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y(If  we  wanted  to  implement  sparse  matrices we might for example rather
+  settle  for  a  positional  object  in  which we store a list of the nonzero
+  entries.)[133X
+  
+  [33X[0;0YWe  can  make the new representation a subrepresentation of an existing one.
+  In  such  a  case  of course we have to provide all structure of this [21Xparent[121X
+  representation as well.[133X
+  
+  [33X[0;0YNext  we need to check in which family our new objects will be. This will be
+  the   same   family   as  of  every  other  permutation  group,  namely  the
+  [10XCollectionsFamily(PermutationsFamily)[110X (where the family [10XPermutationsFamily =
+  FamilyObj((1,2,3))[110X has been defined already in the library).[133X
+  
+  [33X[0;0YNow we can write a function to create our new objects. Usually it is helpful
+  to  look  at  functions from the library that are used in similar situations
+  (for  example  [2XGroupByGenerators[102X  ([14X39.2-2[114X) in our case) to make sure we have
+  not  forgotten  any further requirements in the declaration we might have to
+  add here. However in most cases the function is straightforward:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XPermutationGroupByRelations:=function(degree,relations)[128X[104X
+    [4X[28Xlocal g[128X[104X
+    [4X[28X  g:=Objectify(NewType(CollectionsFamily(PermutationsFamily),[128X[104X
+    [4X[28X               IsPermutationGroupByRelations),[128X[104X
+    [4X[28X               rec(degree:=degree,relations:=relations));[128X[104X
+    [4X[28X  return g;[128X[104X
+    [4X[28Xend;[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIt  also  is  a  good idea to install a [2XPrintObj[102X ([14X6.3-5[114X) and possibly also a
+  [2XViewObj[102X ([14X6.3-5[114X) method –otherwise testing becomes quite hard:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallMethod(PrintObj,"for perm grps. given by relations",[128X[104X
+    [4X[28X  [IsPermutationGroupByRelations],[128X[104X
+    [4X[28Xfunction(G)[128X[104X
+    [4X[28X  Print("PermutationGroupByRelations(", G!.degree,",",G!.relations,")");[128X[104X
+    [4X[28Xend);[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNext  we have to write enough methods for the new representation so that the
+  existing  algorithms  can  be  used. In particular we will have to implement
+  methods  for all operations for which library or kernel provides methods for
+  the existing (alternative) representations. In our particular case there are
+  no such methods. (If we would have implemented sparse matrices we would have
+  had  to  implement methods for the list access and assignment functions, see
+  [14X21.2[114X.)  However  the  existing  way permutation groups are represented is by
+  generators.  To  be able to use the existing machinery we want to be able to
+  obtain  a generating set also for groups in our new representation. This can
+  be  done  (albeit  not  very effectively) by a stabilizer calculation in the
+  symmetric group given by the [10Xdegree[110X component. The operation function to use
+  is probably a bit complicated and will depend on the format of the [10Xrelations[110X
+  (we  have  not  specified  in  this example). In the following method we use
+  [10Xoperationfunction[110X as a placeholder;[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallMethod(GeneratorsOfGroup,"for perm grps. given by relations",[128X[104X
+    [4X[28X  [IsPermutationGroupByRelations],[128X[104X
+    [4X[28Xfunction(G)[128X[104X
+    [4X[28Xlocal S,U;[128X[104X
+    [4X[28X  S:=SymmetricGroup(G!.degree);[128X[104X
+    [4X[28X  U:=Stabilizer(S,G!.relations,  operationfunction );[128X[104X
+    [4X[28X  return GeneratorsOfGroup(U);[128X[104X
+    [4X[28Xend);[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis  is all we [13Xmust[113X do. Of course for performance reasons one might want to
+  install methods for further operations as well.[133X
+  
+  
+  [1X80.7 [33X[0;0YComponents versus Attributes[133X[101X
+  
+  [33X[0;0YIn  the  last  section  we  introduced  two  new  components,  [10XG!.degree[110X and
+  [10XG!.relations[110X.  Technically,  we could have used attributes instead. There is
+  no  clear  distinction  which  variant  is  to  be  preferred:  An attribute
+  expresses  part  of the functionality available to certain objects (and thus
+  could  be  computed later and probably even for a wider class of objects), a
+  component is just part of the internal definition of an object.[133X
+  
+  [33X[0;0YSo if the data is [21Xof general interest[121X, if we want the user to have access to
+  it,  attributes  are  preferable.  Moreover,  attributes  can be used by the
+  method  selection  (by specifying the filter [10XHasAttr[110X for an attribute [10XAttr[110X).
+  They  provide a clean interface and their immutability makes it safe to hand
+  the data to a user who potentially could corrupt a components entries.[133X
+  
+  [33X[0;0YOn  the other hand more [21Xtechnical[121X data (say the encoding of a sparse matrix)
+  is  better  hidden  from  the  user  in  a  component, as declaring it as an
+  attribute would not give any advantage.[133X
+  
+  [33X[0;0YResource-wise,  attributes need more memory (the attribute setter and tester
+  are  implicitly  declared,  and  one  filter bit is required), the attribute
+  access  is one further function call in the kernel, thus components might be
+  an immeasurable bit faster.[133X
+  
+  
+  [1X80.8 [33X[0;0YAdding new Concepts[133X[101X
+  
+  [33X[0;0YNow we look how to implement a new concept for existing objects and fit this
+  in  the  method  selection.  Three  examples that will be made more explicit
+  below  would  be groups for which a [21Xlength[121X of elements (as a word in certain
+  generators)  is  defined,  groups  that  can  be  decomposed as a semidirect
+  product and M-groups.[133X
+  
+  [33X[0;0YIn  each  case  we have two possibilities for the declaration. We can either
+  declare it as a property or as a category. Both are eventually filter(s) and
+  in  this  way indistinguishable for the method selection. However, the value
+  of  a  property for a particular object can be unknown at first and later in
+  the  session  be  computed  (to  be  [9Xtrue[109X  or [9Xfalse[109X). This is implemented by
+  reserving two filters for each property, one indicating whether the property
+  value is known, and one, provided the value is known, to indicate the actual
+  boolean  value. Contrary to this, the decision whether or not an object lies
+  in  a  category  is  taken  at creation time and this is implemented using a
+  single filter.[133X
+  
+  [8XProperty:[108X
+        [33X[0;6YProperties  also  are attributes: If a property value is not known for
+        an  object,  [5XGAP[105X tries to find a method to compute the property value.
+        If no suitable method is found, an error is raised.[133X
+  
+  [8XCategory:[108X
+        [33X[0;6YAn  object  is in a category if it has been created in it. Testing the
+        category  for  an  object  simply returns this value. Existing objects
+        cannot  enter  a  new  category later in life. This means that in most
+        cases one has to write own code to create objects in a new category.[133X
+  
+        [33X[0;6YIf  we  want  to  implement  a  completely  new  concept  so  that new
+        operations   are  defined  only  for  the  new  objects  –for  example
+        bialgebras  for  which  a  second  scalar  multiplication  is defined–
+        usually a category is chosen.[133X
+  
+        [33X[0;6YTechnically,   the  behaviour  of  the  category  [10XIsXYZ[110X,  declared  as
+        subcategory  of  [10XIsABC[110X  is  therefore  exactly the same as if we would
+        declare  [10XIsXYZ[110X  to  be  a property for [10XIsABC[110X and install the following
+        method:[133X
+  
+  [4X      [32X  Example  [32X[104X
+          [4X[28XInstallMethod(IsXYZ,"return false if not known",[IsABC],ReturnFalse);[128X[104X
+        [4X[32X[104X
+  
+        [33X[0;6Y(The  word  [10Xcategory[110X also has a well-defined mathematical meaning, but
+        this  does  not  need  to concern us at this point. The set of objects
+        which is defined to be a ([5XGAP[105X) category does not need to be a category
+        in  the mathematical sense, vice versa not every mathematical category
+        is declared as a ([5XGAP[105X) category.)[133X
+  
+  [33X[0;0YEventually  the  choice between category and property often becomes a matter
+  of taste or style.[133X
+  
+  [33X[0;0YSometimes  there  is  even a third possibility (if you have [5XGAP[105X 3 experience
+  this might reflect most closely [21Xan object whose operations record is [10XXYOps[110X[121X):
+  We  might  want to indicate this new concept simply by the fact that certain
+  attributes  are  set.  In  this  case  we  could  simply  use the respective
+  attribute tester(s).[133X
+  
+  [33X[0;0YThe  examples  given  below  each  give  a short argument why the respective
+  solution was chosen, but one could argue as well for other choices.[133X
+  
+  
+  [1X80.8-1 [33X[0;0YExample: M-groups[133X[101X
+  
+  [33X[0;0YM-groups are finite groups for which all irreducible complex representations
+  are induced from linear representations of subgroups, it turns out that they
+  are  all  solvable  and  that  every  supersolvable group is an M-group. See
+  [Isa76] for further details.[133X
+  
+  [33X[0;0YSolvability  and supersolvability both are testable properties. We therefore
+  declare [10XIsMGroup[110X as a property for solvable groups:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XIsMGroup:=NewProperty("IsMGroup",IsSolvableGroup);[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  filter  [2XIsSolvableGroup[102X  ([14X39.15-6[114X)  in this declaration [13Xonly[113X means that
+  methods  for  [10XIsMGroup[110X  by default can only be installed for groups that are
+  (and  know  to be) solvable (though they could be installed for more general
+  situations  using  [2XInstallOtherMethod[102X  ([14X78.3-2[114X)). It does not yet imply that
+  M-groups  are  solvable. We must do this deliberately via an implication and
+  we  use  the  same  technique  to imply that every supersolvable group is an
+  M-group.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallTrueMethod(IsSolvableGroup,IsMGroup);[128X[104X
+    [4X[28XInstallTrueMethod(IsMGroup,IsSupersolvableGroup);[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNow  we  might  install a method that tests for solvable groups whether they
+  are M-groups:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallMethod(IsMGroup,"for solvable groups",[IsSolvableGroup],[128X[104X
+    [4X[28Xfunction(G)[128X[104X
+    [4X[28X  [... code omitted. The function must return `true' or `false' ...][128X[104X
+    [4X[28Xend);[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  this  example  of  declaring  the [10XIsMGroup[110X property for solvable
+  groups  is not a part of the [5XGAP[105X library, which uses a similar but different
+  filter [2XIsMonomialGroup[102X ([14X39.15-9[114X).[133X
+  
+  
+  [1X80.8-2 [33X[0;0YExample: Groups with a word length[133X[101X
+  
+  [33X[0;0YOur  second  example  is  that of groups for whose elements a [13Xword length[113X is
+  defined.  (We  assume that the word length is only defined in the context of
+  the  group  with  respect to a preselected generating set but not for single
+  elements  alone.  However  we  will  not  delve into any details of how this
+  length is defined and how it could be computed.)[133X
+  
+  [33X[0;0YHaving  a  word  length  is  a  feature  which enables other operations (for
+  example  a  [21Xword  length[121X  function).  This  is  exactly  what categories are
+  intended for and therefore we use one.[133X
+  
+  [33X[0;0YFirst,  we declare the category. All objects in this category are groups and
+  so we inherit the supercategory [2XIsGroup[102X ([14X39.2-7[114X):[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XDeclareCategory("IsGroupWithWordLength",IsGroup);[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe  also  define  the  operation which is [21Xenabled[121X by this category, the word
+  length  of  a  group  element,  which  is defined for a group and an element
+  (remember    that   group   elements   are   described   by   the   category
+  [2XIsMultiplicativeElementWithInverse[102X ([14X31.14-13[114X)):[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XDeclareOperation("WordLengthOfElement",[IsGroupWithWordLength,[128X[104X
+    [4X[28X  IsMultiplicativeElementWithInverse]);[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe  then  would  proceed by installing methods to compute the word length in
+  concrete  cases and might for example add further operations to get shortest
+  words in cosets.[133X
+  
+  
+  [1X80.8-3 [33X[0;0YExample: Groups with a decomposition as semidirect product[133X[101X
+  
+  [33X[0;0YThe  third  example  is  groups which have a (nontrivial) decomposition as a
+  semidirect  product.  If  this information has been found out, we want to be
+  able  to use it in algorithms. (Thus we do not only need the fact [13Xthat[113X there
+  is a decomposition, but also the decomposition itself.)[133X
+  
+  [33X[0;0YWe  also  want  this to be applicable to every group and not only for groups
+  which have been explicitly constructed via [2XSemidirectProduct[102X ([14X49.2-1[114X).[133X
+  
+  [33X[0;0YInstead  we  simply  declare an attribute [10XSemidirectProductDecomposition[110X for
+  groups.  (Again,  in  this  manual we don't go in the details of how such an
+  decomposition would look like).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XDeclareAttribute("SemidirectProductDecomposition",IsGroup);[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIf  a  decomposition  has  been  found,  it  can  be stored in a group using
+  [10XSetSemidirectProductDecomposition[110X.  (At  the  moment  all  groups in [5XGAP[105X are
+  attribute storing.)[133X
+  
+  [33X[0;0YMethods  that  rely  on  the  existence  of  such  a  decomposition then get
+  installed for the tester filter [10XHasSemidirectProductDecomposition[110X.[133X
+  
+  
+  [1X80.9 [33X[0;0YCreating Own Arithmetic Objects[133X[101X
+  
+  [33X[0;0YFinally  let's  look  at  a  way  to  create new objects with a user-defined
+  arithmetic such that one can form for example groups, rings or vector spaces
+  of  these  elements.  This  topic  is  discussed  in  much  more  detail  in
+  chapter [14X82[114X,  in this section we present a simple approach that may be useful
+  to get started but does not permit you to exploit all potential features.[133X
+  
+  [33X[0;0YThe  basic design is that the user designs some way to represent her objects
+  in  terms of [5XGAP[105Xs built-in types, for example as a list or a record. We call
+  this  the [21Xdefining data[121X of the new objects. Also provided are functions that
+  perform  arithmetic on this [21Xdefining data[121X, that is they take objects of this
+  form  and  return  objects  that  represent the result of the operation. The
+  function  [2XArithmeticElementCreator[102X  ([14X80.9-1[114X)  then  is  called  to provide a
+  wrapping  such  that  proper  new  [5XGAP[105X-objects  are  created  which  can  be
+  multiplied etc. with the default infix operations such as [10X*[110X.[133X
+  
+  [1X80.9-1 ArithmeticElementCreator[101X
+  
+  [33X[1;0Y[29X[2XArithmeticElementCreator[102X( [3Xspec[103X ) [32X function[133X
+  
+  [33X[0;0Yoffers  a  simple  interface  to create new arithmetic elements by providing
+  functions  that perform addition, multiplication and so forth, conforming to
+  the  specification  [3Xspec[103X.  [10XArithmeticElementCreator[110X  creates a new category,
+  representation and family for the new arithmetic elements being defined, and
+  returns  a  function which takes the [21Xdefining data[121X of an element and returns
+  the corresponding new arithmetic element.[133X
+  
+  [33X[0;0Y[3Xspec[103X is a record with one or more of the following components:[133X
+  
+  [8X[10XElementName[110X[8X[108X
+        [33X[0;6Ystring  used  to  identify the new type of object. A global identifier
+        [10XIs[3XElementName[103X[10X[110X  will  be  defined  to indicate a category for these now
+        objects. (Therefore it is not clever to have blanks in the name). Also
+        a  collections  category is defined. (You will get an error message if
+        the identifier [10XIs[3XElementName[103X[10X[110X is already defined.)[133X
+  
+  [8X[10XEquality[110X[8X, [10XLessThan[110X[8X, [10XOne[110X[8X, [10XZero[110X[8X, [10XMultiplication[110X[8X, [10XInverse[110X[8X, [10XAddition[110X[8X, [10XAdditiveInverse[110X[8X[108X
+        [33X[0;6Yfunctions  defining the arithmetic operations. The functions interface
+        on  the  level  of  [21Xdefining  data[121X,  the actual methods installed will
+        perform  the  unwrapping  and  wrapping  as  objects.  Components  are
+        optional,  but  of  course  if  no  multiplication is defined elements
+        cannot be multiplied and so forth.[133X
+  
+        [33X[0;6YThere  are  default  methods  for  [10XEquality[110X  and [10XLessThan[110X which simply
+        calculate  on the defining data. If one is defined, it must be ensured
+        that the other is compatible (so that [22Xa < b[122X implies not [22X(a = b)[122X)[133X
+  
+  [8X[10XPrint[110X[8X[108X
+        [33X[0;6Ya function which prints the object. By default, just the defining data
+        is printed.[133X
+  
+  [8X[10XMathInfo[110X[8X[108X
+        [33X[0;6Yfilters  determining  the  mathematical  properties  of  the  elements
+        created.       A      typical      value      is      for      example
+        [10XIsMultiplicativeElementWithInverse[110X for group elements.[133X
+  
+  [8X[10XRepInfo[110X[8X[108X
+        [33X[0;6Yfilters  determining  the  representational properties of the elements
+        created.  The objects created are always component objects, so in most
+        cases  the  only  reasonable option is [10XIsAttributeStoringRep[110X to permit
+        the storing of attributes.[133X
+  
+  [33X[0;0YAll  components  are  optional  and  will  be  filled in with default values
+  (though of course an empty record will not result in useful objects).[133X
+  
+  [33X[0;0YNote  that  the resulting objects are [13Xnot equal[113X to their defining data (even
+  though  by  default  they  print  as  only the defining data). The operation
+  [10XUnderlyingElement[110X  can  be  used  to  obtain  the  defining  data of such an
+  element.[133X
+  
+  
+  [1X80.9-2 [33X[0;0YExample: ArithmeticElementCreator[133X[101X
+  
+  [33X[0;0YAs  the  first  example  we  look  at subsets of [22X{ 1, ..., 4 }[122X and define an
+  [21Xaddition[121X  as  union and [21Xmultiplication[121X as intersection. These operations are
+  both commutative and we want the resulting elements to know this.[133X
+  
+  [33X[0;0YWe therefore use the following specification:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X# the whole set[127X[104X
+    [4X[25Xgap>[125X [27Xw := [1,2,3,4];[127X[104X
+    [4X[28X[ 1, 2, 3, 4 ][128X[104X
+    [4X[25Xgap>[125X [27XPosetElementSpec :=rec([127X[104X
+    [4X[25X>[125X [27X  # name of the new elements[127X[104X
+    [4X[25X>[125X [27X  ElementName := "PosetOn4",[127X[104X
+    [4X[25X>[125X [27X  # arithmetic operations[127X[104X
+    [4X[25X>[125X [27X  One := a -> w,[127X[104X
+    [4X[25X>[125X [27X  Zero := a -> [],[127X[104X
+    [4X[25X>[125X [27X  Multiplication := function(a, b) return Intersection(a, b); end,[127X[104X
+    [4X[25X>[125X [27X  Addition := function(a, b) return Union(a, b); end,[127X[104X
+    [4X[25X>[125X [27X  # Mathematical properties of the elements[127X[104X
+    [4X[25X>[125X [27X  MathInfo := IsCommutativeElement and[127X[104X
+    [4X[25X>[125X [27X              IsAssociativeElement and[127X[104X
+    [4X[25X>[125X [27X              IsAdditivelyCommutativeElement[127X[104X
+    [4X[25X>[125X [27X);;[127X[104X
+    [4X[25Xgap>[125X [27Xmkposet := ArithmeticElementCreator(PosetElementSpec);[127X[104X
+    [4X[28Xfunction( x ) ... end[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNow we can create new elements, perform arithmetic on them and form domains:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xa := mkposet([1,2,3]);[127X[104X
+    [4X[28X[ 1, 2, 3 ][128X[104X
+    [4X[25Xgap>[125X [27XCategoriesOfObject(a);[127X[104X
+    [4X[28X[ "IsExtAElement", "IsNearAdditiveElement",[128X[104X
+    [4X[28X  "IsNearAdditiveElementWithZero", "IsAdditiveElement",[128X[104X
+    [4X[28X  "IsExtLElement", "IsExtRElement", "IsMultiplicativeElement",[128X[104X
+    [4X[28X  "IsMultiplicativeElementWithOne", "IsAssociativeElement",[128X[104X
+    [4X[28X  "IsAdditivelyCommutativeElement", "IsCommutativeElement",[128X[104X
+    [4X[28X  "IsPosetOn4" ][128X[104X
+    [4X[25Xgap>[125X [27Xa=[1,2,3];[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XUnderlyingElement(a)=[1,2,3];[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xb:=mkposet([2,3,4]);[127X[104X
+    [4X[28X[ 2, 3, 4 ][128X[104X
+    [4X[25Xgap>[125X [27Xa+b;[127X[104X
+    [4X[28X[ 1 .. 4 ][128X[104X
+    [4X[25Xgap>[125X [27Xa*b;[127X[104X
+    [4X[28X[ 2, 3 ][128X[104X
+    [4X[25Xgap>[125X [27Xs:=Semigroup(a,b);[127X[104X
+    [4X[28X<commutative semigroup with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27XSize(s);[127X[104X
+    [4X[28X3[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  categories  [10XIsPosetOn4[110X  and [10XIsPosetOn4Collection[110X can be used to install
+  methods specific to the new objects.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsPosetOn4Collection(s);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  

@@ -1,0 +1,519 @@
+  
+  [1X35 [33X[0;0YMagmas[133X[101X
+  
+  [33X[0;0YThis   chapter   deals   with   domains   (see [14X31[114X)  that  are  closed  under
+  multiplication  [10X*[110X.  Following [Bou70],  we call them [13Xmagmas[113X in [5XGAP[105X. Together
+  with  the  domains  closed  under  addition  [10X+[110X  (see [14X55[114X), they are the basic
+  algebraic structures; every semigroup, monoid (see [14X51[114X), group (see [14X39[114X), ring
+  (see [14X56[114X),  or field (see [14X58[114X) is a magma. In the cases of a [13Xmagma-with-one[113X or
+  [13Xmagma-with-inverses[113X,   additional   multiplicative   structure  is  present,
+  see [14X35.1[114X. For functions to create free magmas, see [14X36.4[114X.[133X
+  
+  
+  [1X35.1 [33X[0;0YMagma Categories[133X[101X
+  
+  [1X35.1-1 IsMagma[101X
+  
+  [33X[1;0Y[29X[2XIsMagma[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YA   [13Xmagma[113X   in  [5XGAP[105X  is  a  domain  [22XM[122X  with  (not  necessarily  associative)
+  multiplication [10X*[110X[22X: M × M → M[122X.[133X
+  
+  [1X35.1-2 IsMagmaWithOne[101X
+  
+  [33X[1;0Y[29X[2XIsMagmaWithOne[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YA [13Xmagma-with-one[113X in [5XGAP[105X is a magma [22XM[122X with an operation [10X^0[110X (or [2XOne[102X ([14X31.10-2[114X))
+  that yields the identity of [22XM[122X.[133X
+  
+  [33X[0;0YSo  a magma-with-one [22XM[122X does always contain a unique multiplicatively neutral
+  element   [22Xe[122X,   i.e.,   [22Xe[122X[10X   *   [110X[22Xm  =  m  =  m[122X[10X  *  [110X[22Xe[122X  holds  for  all  [22Xm  ∈  M[122X
+  (see [2XMultiplicativeNeutralElement[102X ([14X35.4-10[114X)). This element [22Xe[122X can be computed
+  with  the operation [2XOne[102X ([14X31.10-2[114X) as [10XOne( [110X[22XM[122X[10X )[110X, and [22Xe[122X is also equal to [10XOne( [110X[22Xm[122X[10X
+  )[110X and to [22Xm[122X[10X^0[110X for each element [22Xm ∈ M[122X.[133X
+  
+  [33X[0;0Y[13XNote[113X  that a magma may contain a multiplicatively neutral element but [13Xnot[113X an
+  identity (see [2XOne[102X ([14X31.10-2[114X)), and a magma containing an identity may [13Xnot[113X lie
+  in the category [2XIsMagmaWithOne[102X (see Section [14X31.6[114X).[133X
+  
+  [1X35.1-3 IsMagmaWithInversesIfNonzero[101X
+  
+  [33X[1;0Y[29X[2XIsMagmaWithInversesIfNonzero[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YAn  object in this [5XGAP[105X category is a magma-with-one [22XM[122X with an operation [10X^-1[110X[22X:
+  M  ∖  Z  →  M  ∖ Z[122X that maps each element [22Xm[122X of [22XM ∖ Z[122X to its inverse [22Xm[122X[10X^-1[110X (or
+  [10XInverse(  [110X[22Xm[122X[10X  )[110X,  see [2XInverse[102X ([14X31.10-8[114X)), where [22XZ[122X is either empty or consists
+  exactly of one element of [22XM[122X.[133X
+  
+  [33X[0;0YThis  category  was  introduced mainly to describe division rings, since the
+  nonzero  elements  in  a  division  ring  form  a  group;  So an object [22XM[122X in
+  [2XIsMagmaWithInversesIfNonzero[102X  will usually have both a multiplicative and an
+  additive  structure  (see [14X55[114X),  and  the  set [22XZ[122X, if it is nonempty, contains
+  exactly the zero element (see [2XZero[102X ([14X31.10-3[114X)) of [22XM[122X.[133X
+  
+  [1X35.1-4 IsMagmaWithInverses[101X
+  
+  [33X[1;0Y[29X[2XIsMagmaWithInverses[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YA  [13Xmagma-with-inverses[113X in [5XGAP[105X is a magma-with-one [22XM[122X with an operation [10X^-1[110X[22X: M
+  →  M[122X  that  maps  each  element [22Xm[122X of [22XM[122X to its inverse [22Xm[122X[10X^-1[110X (or [10XInverse( [110X[22Xm[122X[10X )[110X,
+  see [2XInverse[102X ([14X31.10-8[114X)).[133X
+  
+  [33X[0;0YNote  that  not  every  trivial magma is a magma-with-one, but every trivial
+  magma-with-one  is a magma-with-inverses. This holds also if the identity of
+  the  magma-with-one  is  a zero element. So a magma-with-inverses-if-nonzero
+  can  be  a  magma-with-inverses  if  either  it  contains no zero element or
+  consists of a zero element that has itself as zero-th power.[133X
+  
+  
+  [1X35.2 [33X[0;0YMagma Generation[133X[101X
+  
+  [33X[0;0YThis  section  describes  functions  that create magmas from generators (see
+  [2XMagma[102X  ([14X35.2-1[114X),  [2XMagmaWithOne[102X  ([14X35.2-2[114X),  [2XMagmaWithInverses[102X  ([14X35.2-3[114X)), the
+  underlying   operations   for   which   methods   can   be   installed  (see
+  [2XMagmaByGenerators[102X      ([14X35.2-4[114X),      [2XMagmaWithOneByGenerators[102X     ([14X35.2-5[114X),
+  [2XMagmaWithInversesByGenerators[102X  ([14X35.2-6[114X)),  functions  for  forming submagmas
+  (see   [2XSubmagma[102X  ([14X35.2-7[114X),  [2XSubmagmaWithOne[102X  ([14X35.2-8[114X),  [2XSubmagmaWithInverses[102X
+  ([14X35.2-9[114X)),  and functions that form a magma equal to a given collection (see
+  [2XAsMagma[102X ([14X35.2-10[114X), [2XAsSubmagma[102X ([14X35.2-11[114X)).[133X
+  
+  [33X[0;0Y[2XInjectionZeroMagma[102X ([14X35.2-13[114X) creates a new magma which is the original magma
+  with a zero adjoined.[133X
+  
+  [1X35.2-1 Magma[101X
+  
+  [33X[1;0Y[29X[2XMagma[102X( [[3XFam[103X, ][3Xgens[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the magma [22XM[122X that is generated by the elements in the list [3Xgens[103X, that
+  is, the closure of [3Xgens[103X under multiplication [2X\*[102X ([14X31.12-1[114X). The family [3XFam[103X of
+  [22XM[122X  can be entered as the first argument; this is obligatory if [3Xgens[103X is empty
+  (and hence also [22XM[122X is empty).[133X
+  
+  [1X35.2-2 MagmaWithOne[101X
+  
+  [33X[1;0Y[29X[2XMagmaWithOne[102X( [[3XFam[103X, ][3Xgens[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  the  magma-with-one [22XM[122X that is generated by the elements in the list
+  [3Xgens[103X, that is, the closure of [3Xgens[103X under multiplication [2X\*[102X ([14X31.12-1[114X) and [2XOne[102X
+  ([14X31.10-2[114X).  The  family  [3XFam[103X  of [22XM[122X can be entered as first argument; this is
+  obligatory if [3Xgens[103X is empty (and hence [22XM[122X is trivial).[133X
+  
+  [1X35.2-3 MagmaWithInverses[101X
+  
+  [33X[1;0Y[29X[2XMagmaWithInverses[102X( [[3XFam[103X, ][3Xgens[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  the  magma-with-inverses [22XM[122X that is generated by the elements in the
+  list  [3Xgens[103X,  that is, the closure of [3Xgens[103X under multiplication [2X\*[102X ([14X31.12-1[114X),
+  [2XOne[102X  ([14X31.10-2[114X), and [2XInverse[102X ([14X31.10-8[114X). The family [3XFam[103X of [22XM[122X can be entered as
+  first  argument;  this  is  obligatory  if  [3Xgens[103X  is  empty  (and hence [22XM[122X is
+  trivial).[133X
+  
+  [1X35.2-4 MagmaByGenerators[101X
+  
+  [33X[1;0Y[29X[2XMagmaByGenerators[102X( [[3XFam[103X, ][3Xgens[103X ) [32X operation[133X
+  
+  [33X[0;0YAn underlying operation for [2XMagma[102X ([14X35.2-1[114X).[133X
+  
+  [1X35.2-5 MagmaWithOneByGenerators[101X
+  
+  [33X[1;0Y[29X[2XMagmaWithOneByGenerators[102X( [[3XFam[103X, ][3Xgens[103X ) [32X operation[133X
+  
+  [33X[0;0YAn underlying operation for [2XMagmaWithOne[102X ([14X35.2-2[114X).[133X
+  
+  [1X35.2-6 MagmaWithInversesByGenerators[101X
+  
+  [33X[1;0Y[29X[2XMagmaWithInversesByGenerators[102X( [[3XFam[103X, ][3Xgens[103X ) [32X operation[133X
+  
+  [33X[0;0YAn underlying operation for [2XMagmaWithInverses[102X ([14X35.2-3[114X).[133X
+  
+  [1X35.2-7 Submagma[101X
+  
+  [33X[1;0Y[29X[2XSubmagma[102X( [3XD[103X, [3Xgens[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XSubmagmaNC[102X( [3XD[103X, [3Xgens[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XSubmagma[102X  returns the magma generated by the elements in the list [3Xgens[103X, with
+  parent the domain [3XD[103X. [2XSubmagmaNC[102X does the same, except that it is not checked
+  whether the elements of [3Xgens[103X lie in [3XD[103X.[133X
+  
+  [1X35.2-8 SubmagmaWithOne[101X
+  
+  [33X[1;0Y[29X[2XSubmagmaWithOne[102X( [3XD[103X, [3Xgens[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XSubmagmaWithOneNC[102X( [3XD[103X, [3Xgens[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XSubmagmaWithOne[102X  returns the magma-with-one generated by the elements in the
+  list [3Xgens[103X, with parent the domain [3XD[103X. [2XSubmagmaWithOneNC[102X does the same, except
+  that it is not checked whether the elements of [3Xgens[103X lie in [3XD[103X.[133X
+  
+  [1X35.2-9 SubmagmaWithInverses[101X
+  
+  [33X[1;0Y[29X[2XSubmagmaWithInverses[102X( [3XD[103X, [3Xgens[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XSubmagmaWithInversesNC[102X( [3XD[103X, [3Xgens[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XSubmagmaWithInverses[102X   returns  the  magma-with-inverses  generated  by  the
+  elements  in the list [3Xgens[103X, with parent the domain [3XD[103X. [2XSubmagmaWithInversesNC[102X
+  does  the  same,  except that it is not checked whether the elements of [3Xgens[103X
+  lie in [3XD[103X.[133X
+  
+  [1X35.2-10 AsMagma[101X
+  
+  [33X[1;0Y[29X[2XAsMagma[102X( [3XC[103X ) [32X attribute[133X
+  
+  [33X[0;0YFor  a collection [3XC[103X whose elements form a magma, [2XAsMagma[102X returns this magma.
+  Otherwise [9Xfail[109X is returned.[133X
+  
+  [1X35.2-11 AsSubmagma[101X
+  
+  [33X[1;0Y[29X[2XAsSubmagma[102X( [3XD[103X, [3XC[103X ) [32X operation[133X
+  
+  [33X[0;0YLet  [3XD[103X  be  a  domain and [3XC[103X a collection. If [3XC[103X is a subset of [3XD[103X that forms a
+  magma  then  [2XAsSubmagma[102X returns this magma, with parent [3XD[103X. Otherwise [9Xfail[109X is
+  returned.[133X
+  
+  [1X35.2-12 IsMagmaWithZeroAdjoined[101X
+  
+  [33X[1;0Y[29X[2XIsMagmaWithZeroAdjoined[102X( [3XM[103X ) [32X Category[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X.[133X
+  
+  [33X[0;0Y[10XIsMagmaWithZeroAdjoined[110X  returns  [9Xtrue[109X  if  the  magma  [3XM[103X  was created using
+  [2XInjectionZeroMagma[102X  ([14X35.2-13[114X) or [2XMagmaWithZeroAdjoined[102X ([14X35.2-13[114X) and returns
+  [9Xfalse[109X if it was not.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS:=Semigroup(Transformation([1,1,1]), Transformation([1,3,2]));;[127X[104X
+    [4X[25Xgap>[125X [27XIsMagmaWithZeroAdjoined(S);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XM:=MagmaWithZeroAdjoined(S);[127X[104X
+    [4X[28X<<transformation semigroup of degree 3 with 2 generators>[128X[104X
+    [4X[28X  with 0 adjoined>[128X[104X
+    [4X[25Xgap>[125X [27XIsMagmaWithZeroAdjoined(M);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X35.2-13 InjectionZeroMagma[101X
+  
+  [33X[1;0Y[29X[2XInjectionZeroMagma[102X( [3XM[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XMagmaWithZeroAdjoined[102X( [3XM[103X ) [32X attribute[133X
+  
+  [33X[0;0Y[2XInjectionZeroMagma[102X  returns  an  embedding from the magma [3XM[103X into a new magma
+  formed  from [3XM[103X by adjoining a single new element which is the multiplicative
+  zero  of the resulting magma. The elements of the new magma form a family of
+  elements  in the category [2XIsMultiplicativeElementWithZero[102X ([14X31.14-12[114X) and the
+  magma itself satisfies [2XIsMagmaWithZeroAdjoined[102X ([14X35.2-12[114X).[133X
+  
+  [33X[0;0Y[10XMagmaWithZeroAdjoined[110X is just shorthand for [10XRange(InjectionZeroMagma([3XM[103X[10X)))[110X.[133X
+  
+  [33X[0;0YIf  [10XN[110X is a magma with zero adjoined, then the embedding used to create [10XN[110X can
+  be recovered using [2XUnderlyingInjectionZeroMagma[102X ([14X35.2-14[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS:=Monoid(Transformation( [ 7, 7, 5, 3, 1, 3, 7 ] ),[127X[104X
+    [4X[25X>[125X [27XTransformation( [ 5, 1, 4, 1, 4, 4, 7 ] ));;[127X[104X
+    [4X[25Xgap>[125X [27XMultiplicativeZero(S);[127X[104X
+    [4X[28XTransformation( [ 7, 7, 7, 7, 7, 7, 7 ] )[128X[104X
+    [4X[25Xgap>[125X [27XT:=MagmaWithZeroAdjoined(S);[127X[104X
+    [4X[28X<<transformation monoid of degree 7 with 2 generators>[128X[104X
+    [4X[28X  with 0 adjoined>[128X[104X
+    [4X[25Xgap>[125X [27Xmap:=UnderlyingInjectionZeroMagma(T);;[127X[104X
+    [4X[25Xgap>[125X [27Xx:=Transformation( [ 7, 7, 7, 3, 7, 3, 7 ] );;[127X[104X
+    [4X[25Xgap>[125X [27Xx^map;[127X[104X
+    [4X[28X<monoid with 0 adjoined elt: Transformation( [ 7, 7, 7, 3, 7, 3, 7 ][128X[104X
+    [4X[28X )>[128X[104X
+    [4X[25Xgap>[125X [27XPreImage(map, x^map)=x;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X35.2-14 UnderlyingInjectionZeroMagma[101X
+  
+  [33X[1;0Y[29X[2XUnderlyingInjectionZeroMagma[102X( [3XM[103X ) [32X attribute[133X
+  
+  [33X[0;0Y[10XUnderlyingInjectionZeroMagma[110X  returns the embedding used to create the magma
+  with zero adjoined [3XM[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS:=Monoid(Transformation( [ 8, 7, 5, 3, 1, 3, 8, 8 ] ),[127X[104X
+    [4X[25X>[125X [27XTransformation( [ 5, 1, 4, 1, 4, 4, 7, 8 ] ));;[127X[104X
+    [4X[25Xgap>[125X [27XMultiplicativeZero(S);[127X[104X
+    [4X[28XTransformation( [ 8, 8, 8, 8, 8, 8, 8, 8 ] )[128X[104X
+    [4X[25Xgap>[125X [27XT:=MagmaWithZeroAdjoined(S);[127X[104X
+    [4X[28X<<transformation monoid of degree 8 with 2 generators>[128X[104X
+    [4X[28X  with 0 adjoined>[128X[104X
+    [4X[25Xgap>[125X [27XUnderlyingInjectionZeroMagma(T);[127X[104X
+    [4X[28XMappingByFunction( <transformation monoid of degree 8 with 2[128X[104X
+    [4X[28X generators>, <<transformation monoid of degree 8 with 2 generators>[128X[104X
+    [4X[28X  with 0 adjoined>, function( elt ) ... end, function( x ) ... end )[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X35.3 [33X[0;0YMagmas Defined by Multiplication Tables[133X[101X
+  
+  [33X[0;0YThe most elementary (but of course usually not recommended) way to implement
+  a magma with only few elements is via a multiplication table.[133X
+  
+  [1X35.3-1 MagmaByMultiplicationTable[101X
+  
+  [33X[1;0Y[29X[2XMagmaByMultiplicationTable[102X( [3XA[103X ) [32X function[133X
+  
+  [33X[0;0YFor  a  square  matrix  [3XA[103X  with [22Xn[122X rows such that all entries of [3XA[103X are in the
+  range  [22X[  1  ..  n  ][122X,  [2XMagmaByMultiplicationTable[102X  returns  a  magma [22XM[122X with
+  multiplication [10X*[110X defined by [3XA[103X. That is, [22XM[122X consists of the elements [22Xm_1, m_2,
+  ..., m_n[122X, and [22Xm_i * m_j = m_k[122X, with [22Xk =[122X [3XA[103X[22X[i][j][122X.[133X
+  
+  [33X[0;0YThe  ordering  of  elements is defined by [22Xm_1 < m_2 < ⋯ < m_n[122X, so [22Xm_i[122X can be
+  accessed as [10XMagmaElement( [3XM[103X[10X, [3Xi[103X[10X )[110X, see [2XMagmaElement[102X ([14X35.3-4[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XMagmaByMultiplicationTable([[1,2,3],[2,3,1],[1,1,1]]);[127X[104X
+    [4X[28X<magma with 3 generators>[128X[104X
+  [4X[32X[104X
+  
+  [1X35.3-2 MagmaWithOneByMultiplicationTable[101X
+  
+  [33X[1;0Y[29X[2XMagmaWithOneByMultiplicationTable[102X( [3XA[103X ) [32X function[133X
+  
+  [33X[0;0YThe   only   differences  between  [2XMagmaByMultiplicationTable[102X  ([14X35.3-1[114X)  and
+  [2XMagmaWithOneByMultiplicationTable[102X    are   that   the   latter   returns   a
+  magma-with-one  (see [2XMagmaWithOne[102X  ([14X35.2-2[114X))  if  the magma described by the
+  matrix [3XA[103X has an identity, and returns [9Xfail[109X if not.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XMagmaWithOneByMultiplicationTable([[1,2,3],[2,3,1],[3,1,1]]);[127X[104X
+    [4X[28X<magma-with-one with 3 generators>[128X[104X
+    [4X[25Xgap>[125X [27XMagmaWithOneByMultiplicationTable([[1,2,3],[2,3,1],[1,1,1]]);[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [1X35.3-3 MagmaWithInversesByMultiplicationTable[101X
+  
+  [33X[1;0Y[29X[2XMagmaWithInversesByMultiplicationTable[102X( [3XA[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XMagmaByMultiplicationTable[102X                    ([14X35.3-1[114X)                   and
+  [2XMagmaWithInversesByMultiplicationTable[102X   differ  only  in  that  the  latter
+  returns magma-with-inverses (see [2XMagmaWithInverses[102X ([14X35.2-3[114X)) if each element
+  in  the  magma described by the matrix [3XA[103X has an inverse, and returns [9Xfail[109X if
+  not.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XMagmaWithInversesByMultiplicationTable([[1,2,3],[2,3,1],[3,1,2]]);[127X[104X
+    [4X[28X<magma-with-inverses with 3 generators>[128X[104X
+    [4X[25Xgap>[125X [27XMagmaWithInversesByMultiplicationTable([[1,2,3],[2,3,1],[3,2,1]]);[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [1X35.3-4 MagmaElement[101X
+  
+  [33X[1;0Y[29X[2XMagmaElement[102X( [3XM[103X, [3Xi[103X ) [32X function[133X
+  
+  [33X[0;0YFor  a  magma  [3XM[103X  and  a  positive  integer [3Xi[103X, [2XMagmaElement[102X returns the [3Xi[103X-th
+  element of [3XM[103X, w.r.t. the ordering [10X<[110X. If [3XM[103X has less than [3Xi[103X elements then [9Xfail[109X
+  is returned.[133X
+  
+  
+  [1X35.3-5 [33X[0;0YMultiplicationTable[133X[101X
+  
+  [33X[1;0Y[29X[2XMultiplicationTable[102X( [3Xelms[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XMultiplicationTable[102X( [3XM[103X ) [32X attribute[133X
+  
+  [33X[0;0YFor a list [3Xelms[103X of elements that form a magma [22XM[122X, [2XMultiplicationTable[102X returns
+  a  square  matrix  [22XA[122X of positive integers such that [22XA[i][j] = k[122X holds if and
+  only  if [3Xelms[103X[22X[i] *[122X [3Xelms[103X[22X[j] =[122X [3Xelms[103X[22X[k][122X. This matrix can be used to construct a
+  magma isomorphic to [22XM[122X, using [2XMagmaByMultiplicationTable[102X ([14X35.3-1[114X).[133X
+  
+  [33X[0;0YFor   a  magma  [3XM[103X,  [2XMultiplicationTable[102X  returns  the  multiplication  table
+  w.r.t. the sorted list of elements of [3XM[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:= [ (), (1,2)(3,4), (1,3)(2,4), (1,4)(2,3) ];;[127X[104X
+    [4X[25Xgap>[125X [27Xa:= MultiplicationTable( l );[127X[104X
+    [4X[28X[ [ 1, 2, 3, 4 ], [ 2, 1, 4, 3 ], [ 3, 4, 1, 2 ], [ 4, 3, 2, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xm:= MagmaByMultiplicationTable( a );[127X[104X
+    [4X[28X<magma with 4 generators>[128X[104X
+    [4X[25Xgap>[125X [27XOne( m );[127X[104X
+    [4X[28Xm1[128X[104X
+    [4X[25Xgap>[125X [27Xelm:= MagmaElement( m, 2 );  One( elm );  elm^2;[127X[104X
+    [4X[28Xm2[128X[104X
+    [4X[28Xm1[128X[104X
+    [4X[28Xm1[128X[104X
+    [4X[25Xgap>[125X [27XInverse( elm );[127X[104X
+    [4X[28Xm2[128X[104X
+    [4X[25Xgap>[125X [27XAsGroup( m );[127X[104X
+    [4X[28X<group of size 4 with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xa:= [ [ 1, 2 ], [ 2, 2 ] ];[127X[104X
+    [4X[28X[ [ 1, 2 ], [ 2, 2 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xm:= MagmaByMultiplicationTable( a );[127X[104X
+    [4X[28X<magma with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27XOne( m );  Inverse( MagmaElement( m, 2 ) );[127X[104X
+    [4X[28Xm1[128X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X35.4 [33X[0;0YAttributes and Properties for Magmas[133X[101X
+  
+  [33X[0;0Y[13XNote[113X  that [2XIsAssociative[102X ([14X35.4-7[114X) and [2XIsCommutative[102X ([14X35.4-9[114X) always refer to
+  the multiplication of a domain. If a magma [3XM[103X has also an [13Xadditive structure[113X,
+  e.g.,  if  [3XM[103X is a ring (see [14X56[114X), then the addition [10X+[110X is always assumed to be
+  associative and commutative, see [14X31.12[114X.[133X
+  
+  [1X35.4-1 GeneratorsOfMagma[101X
+  
+  [33X[1;0Y[29X[2XGeneratorsOfMagma[102X( [3XM[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis  a list [3Xgens[103X of elements of the magma [3XM[103X that generates [3XM[103X as a magma, that
+  is, the closure of [3Xgens[103X under multiplication [2X\*[102X ([14X31.12-1[114X) is [3XM[103X.[133X
+  
+  [33X[0;0YFor  a  free magma, each generator can also be accessed using the [10X.[110X operator
+  (see [2XGeneratorsOfDomain[102X ([14X31.9-2[114X)).[133X
+  
+  [1X35.4-2 GeneratorsOfMagmaWithOne[101X
+  
+  [33X[1;0Y[29X[2XGeneratorsOfMagmaWithOne[102X( [3XM[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis  a  list  [3Xgens[103X  of elements of the magma-with-one [3XM[103X that generates [3XM[103X as a
+  magma-with-one,  that  is,  the  closure  of  [3Xgens[103X  under  multiplication [2X\*[102X
+  ([14X31.12-1[114X) and [2XOne[102X ([14X31.10-2[114X) is [3XM[103X.[133X
+  
+  [33X[0;0YFor  a  free magma with one, each generator can also be accessed using the [10X.[110X
+  operator (see [2XGeneratorsOfDomain[102X ([14X31.9-2[114X)).[133X
+  
+  [1X35.4-3 GeneratorsOfMagmaWithInverses[101X
+  
+  [33X[1;0Y[29X[2XGeneratorsOfMagmaWithInverses[102X( [3XM[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis  a list [3Xgens[103X of elements of the magma-with-inverses [3XM[103X that generates [3XM[103X as
+  a  magma-with-inverses, that is, the closure of [3Xgens[103X under multiplication [2X\*[102X
+  ([14X31.12-1[114X) and taking inverses (see [2XInverse[102X ([14X31.10-8[114X)) is [3XM[103X.[133X
+  
+  
+  [1X35.4-4 [33X[0;0YCentralizer[133X[101X
+  
+  [33X[1;0Y[29X[2XCentralizer[102X( [3XM[103X, [3Xelm[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XCentralizer[102X( [3XM[103X, [3XS[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XCentralizer[102X( [3Xclass[103X ) [32X attribute[133X
+  
+  [33X[0;0YFor  an element [3Xelm[103X of the magma [3XM[103X this operation returns the [13Xcentralizer[113X of
+  [3Xelm[103X. This is the domain of those elements [3Xm[103X [22X∈[122X [3XM[103X that commute with [3Xelm[103X.[133X
+  
+  [33X[0;0YFor  a  submagma [3XS[103X it returns the domain of those elements that commute with
+  [13Xall[113X elements [3Xs[103X of [3XS[103X.[133X
+  
+  [33X[0;0YIf  [3Xclass[103X is a class of objects of a magma (this magma then is stored as the
+  [10XActingDomain[110X   of   [3Xclass[103X)   such  as  given  by  [2XConjugacyClass[102X  ([14X39.10-1[114X),
+  [2XCentralizer[102X  returns  the  centralizer  of [10XRepresentative([3Xclass[103X[10X)[110X (which is a
+  slight abuse of the notation).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,2,3,4),(1,2));;[127X[104X
+    [4X[25Xgap>[125X [27XCentralizer(g,(1,2,3));[127X[104X
+    [4X[28XGroup([ (1,2,3) ])[128X[104X
+    [4X[25Xgap>[125X [27XCentralizer(g,Subgroup(g,[(1,2,3)]));[127X[104X
+    [4X[28XGroup([ (1,2,3) ])[128X[104X
+    [4X[25Xgap>[125X [27XCentralizer(g,Subgroup(g,[(1,2,3),(1,2)]));[127X[104X
+    [4X[28XGroup(())[128X[104X
+  [4X[32X[104X
+  
+  [1X35.4-5 Centre[101X
+  
+  [33X[1;0Y[29X[2XCentre[102X( [3XM[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XCenter[102X( [3XM[103X ) [32X attribute[133X
+  
+  [33X[0;0Y[2XCentre[102X returns the [13Xcentre[113X of the magma [3XM[103X, i.e., the domain of those elements
+  [3Xm[103X  [22X∈[122X [3XM[103X that commute and associate with all elements of [3XM[103X. That is, the set [22X{
+  m ∈ M; ∀ a, b ∈ M: ma = am, (ma)b = m(ab), (am)b = a(mb), (ab)m = a(bm) }[122X.[133X
+  
+  [33X[0;0Y[2XCenter[102X is just a synonym for [2XCentre[102X.[133X
+  
+  [33X[0;0YFor  associative  magmas  we  have  that  [10XCentre( [3XM[103X[10X ) = Centralizer( [3XM[103X[10X, [3XM[103X[10X )[110X,
+  see [2XCentralizer[102X ([14X35.4-4[114X).[133X
+  
+  [33X[0;0YThe  centre  of  a magma is always commutative (see [2XIsCommutative[102X ([14X35.4-9[114X)).
+  (When one installs a new method for [2XCentre[102X, one should set the [2XIsCommutative[102X
+  ([14X35.4-9[114X)  value  of  the  result  to [9Xtrue[109X, in order to make this information
+  available.)[133X
+  
+  [1X35.4-6 Idempotents[101X
+  
+  [33X[1;0Y[29X[2XIdempotents[102X( [3XM[103X ) [32X attribute[133X
+  
+  [33X[0;0YThe set of elements of [3XM[103X which are their own squares.[133X
+  
+  [1X35.4-7 IsAssociative[101X
+  
+  [33X[1;0Y[29X[2XIsAssociative[102X( [3XM[103X ) [32X property[133X
+  
+  [33X[0;0YA  collection  [3XM[103X  of  elements  that  can  be multiplied via [2X\*[102X ([14X31.12-1[114X) is
+  [13Xassociative[113X  if  for all elements [22Xa, b, c ∈[122X [3XM[103X the equality [22X(a[122X[10X * [110X[22Xb)[122X[10X * [110X[22Xc = a[122X[10X *
+  [110X[22X(b[122X[10X * [110X[22Xc)[122X holds.[133X
+  
+  [33X[0;0YAn  associative  magma  is  called  a  [13Xsemigroup[113X  (see [14X51[114X),  an  associative
+  magma-with-one   is   called   a   [13Xmonoid[113X   (see [14X51[114X),   and  an  associative
+  magma-with-inverses is called a [13Xgroup[113X (see [14X39[114X).[133X
+  
+  [1X35.4-8 IsCentral[101X
+  
+  [33X[1;0Y[29X[2XIsCentral[102X( [3XM[103X, [3Xobj[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XIsCentral[102X returns [9Xtrue[109X if the object [3Xobj[103X, which must either be an element or
+  a magma, commutes with all elements in the magma [3XM[103X.[133X
+  
+  [1X35.4-9 IsCommutative[101X
+  
+  [33X[1;0Y[29X[2XIsCommutative[102X( [3XM[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsAbelian[102X( [3XM[103X ) [32X property[133X
+  
+  [33X[0;0YA  collection  [3XM[103X  of  elements  that  can  be multiplied via [2X\*[102X ([14X31.12-1[114X) is
+  [13Xcommutative[113X  if  for all elements [22Xa, b ∈[122X [3XM[103X the equality [22Xa[122X[10X * [110X[22Xb = b[122X[10X * [110X[22Xa[122X holds.
+  [2XIsAbelian[102X is a synonym of [2XIsCommutative[102X.[133X
+  
+  [33X[0;0YNote  that  the  commutativity  of  the [13Xaddition[113X [2X\+[102X ([14X31.12-1[114X) in an additive
+  structure can be tested with [2XIsAdditivelyCommutative[102X ([14X55.3-1[114X).[133X
+  
+  [1X35.4-10 MultiplicativeNeutralElement[101X
+  
+  [33X[1;0Y[29X[2XMultiplicativeNeutralElement[102X( [3XM[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the element [22Xe[122X in the magma [3XM[103X with the property that [22Xe[122X[10X * [110X[22Xm = m = m[122X[10X *
+  [110X[22Xe[122X  holds  for  all  [22Xm  ∈[122X  [3XM[103X,  if  such  an element exists. Otherwise [9Xfail[109X is
+  returned.[133X
+  
+  [33X[0;0YA  magma  that  is  not  a  magma-with-one can have a multiplicative neutral
+  element  [22Xe[122X;  in  this  case,  [22Xe[122X  [13Xcannot[113X  be  obtained  as  [10XOne( [3XM[103X[10X )[110X, see [2XOne[102X
+  ([14X31.10-2[114X).[133X
+  
+  [1X35.4-11 MultiplicativeZero[101X
+  
+  [33X[1;0Y[29X[2XMultiplicativeZero[102X( [3XM[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XIsMultiplicativeZero[102X( [3XM[103X, [3Xz[103X ) [32X operation[133X
+  
+  [33X[0;0Y[10XMultiplicativeZero[110X  returns  the multiplicative zero of the magma [3XM[103X which is
+  the element [10Xz[110X in [3XM[103X such that [10X[3Xz[103X[10X * [3Xm[103X[10X = [3Xm[103X[10X * [3Xz[103X[10X = [3Xz[103X[10X[110X for all [3Xm[103X in [3XM[103X.[133X
+  
+  [33X[0;0Y[10XIsMultiplicativeZero[110X returns [9Xtrue[109X if the element [3Xz[103X of the magma [3XM[103X equals the
+  multiplicative zero of [3XM[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS:=Semigroup( Transformation( [ 1, 1, 1 ] ),[127X[104X
+    [4X[25X>[125X [27XTransformation( [ 2, 3, 1 ] ) );[127X[104X
+    [4X[28X<transformation semigroup of degree 3 with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27XMultiplicativeZero(S);[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27XS:=Semigroup( Transformation( [ 1, 1, 1 ] ),[127X[104X
+    [4X[25X>[125X [27XTransformation( [ 1, 3, 2 ] ) );[127X[104X
+    [4X[28X<transformation semigroup of degree 3 with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27XMultiplicativeZero(S);[127X[104X
+    [4X[28XTransformation( [ 1, 1, 1 ] )[128X[104X
+  [4X[32X[104X
+  
+  [1X35.4-12 SquareRoots[101X
+  
+  [33X[1;0Y[29X[2XSquareRoots[102X( [3XM[103X, [3Xelm[103X ) [32X operation[133X
+  
+  [33X[0;0Yis  the  proper  set  of all elements [22Xr[122X in the magma [3XM[103X such that [22Xr * r =[122X [3Xelm[103X
+  holds.[133X
+  
+  [1X35.4-13 TrivialSubmagmaWithOne[101X
+  
+  [33X[1;0Y[29X[2XTrivialSubmagmaWithOne[102X( [3XM[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis  the magma-with-one that has the identity of the magma-with-one [3XM[103X as only
+  element.[133X
+  

@@ -1,0 +1,755 @@
+  
+  [1X46 [33X[0;0YPc Groups[133X[101X
+  
+  [33X[0;0YPc  groups  are  polycyclic  groups that use the polycyclic presentation for
+  element  arithmetic.  This  presentation  gives  them  a  [21Xnatural[121X  pcgs, the
+  [2XFamilyPcgs[102X  ([14X46.1-1[114X)  with  respect to which pcgs operations as described in
+  chapter [14X45[114X are particularly efficient.[133X
+  
+  [33X[0;0YLet  [22XG[122X be a polycyclic group with pcgs [22XP = (g_1, ..., g_n)[122X and corresponding
+  relative  orders  [22X(r_1, ..., r_n)[122X. Recall that the [22Xr_i[122X are positive integers
+  or  infinity  and let [22XI[122X be the set of indices [22Xi[122X with [22Xr_i[122X a positive integer.
+  Then  [22XG[122X  has  a  finite  presentation  on  the generators [22Xg_1, ..., g_n[122X with
+  relations of the following form.[133X
+  
+        [22Xg_i^{r_i}[122X          =   [22Xg_{i+1}^a(i,i,i+1) ⋯ g_n^a(i,i,n)[122X   
+                               for [22X1 ≤ i ≤ n[122X and [22Xi ∈ I[122X             
+        [22Xg_i^{-1} g_j g_i[122X   =   [22Xg_{i+1}^a(i,j,i+1) ⋯ g_n^a(i,j,n)[122X   
+                               for [22X1 ≤ i < j ≤ n[122X                   
+  
+  [33X[0;0YFor infinite groups we need additionally[133X
+  
+        [22Xg_i^{-1} g_j^{-1} g_i[122X   =   [22Xg_{i+1}^b(i,j,i+1) ⋯ g_n^b(i,j,n)[122X     
+                                    for [22X1 ≤ i < j ≤ n[122X and [22Xj not ∈ I[122X       
+        [22Xg_i g_j g_i^{-1}[122X        =   [22Xg_{i+1}^c(i,j,i+1) ⋯ g_n^c(i,j,n)[122X     
+                                    for [22X1 ≤ i < j ≤ n[122X and [22Xi not ∈ I[122X       
+        [22Xg_i g_j^{-1} g_i^{-1}[122X   =   [22Xg_{i+1}^d(i,j,i+1) ⋯ g_n^d(i,j,n)[122X     
+                                    for [22X1 ≤ i < j ≤ n[122X and [22Xi, j, not ∈ I[122X   
+  
+  [33X[0;0YHere  the  right hand sides are assumed to be words in normal form; that is,
+  for  [22Xk  ∈  I[122X  we  have  for  all exponents [22X0 ≤ a(i,j,k), b(i,j,k), c(i,j,k),
+  d(i,j,k) < r_k[122X.[133X
+  
+  [33X[0;0YA  finite presentation of this type is called a [13Xpower-conjugate presentation[113X
+  and  a  [13Xpc  group[113X  is  a  polycyclic  group  defined  by  a  power-conjugate
+  presentation.  Instead  of  conjugates  we  could  just  as  well  work with
+  commutators  and  then  the  presentation would be called a [13Xpower-commutator[113X
+  presentation. Both types of presentation are abbreviated as [13Xpc presentation[113X.
+  Note that a pc presentation is a rewriting system.[133X
+  
+  [33X[0;0YClearly, whenever a group [22XG[122X with pcgs [22XP[122X is given, then we can write down the
+  corresponding  pc presentation. On the other hand, one may just write down a
+  presentation  on  [22Xn[122X  abstract generators [22Xg_1, ..., g_n[122X with relations of the
+  above  form  and  define  a group [22XH[122X by this. Then the subgroups [22XC_i = ⟨ g_i,
+  ..., g_n ⟩[122X of [22XH[122X form a subnormal series whose factors are cyclic or trivial.
+  In  the  case  that  all  factors  are  non-trivial,  we  say  that  the  pc
+  presentation of [22XH[122X is [13Xconfluent[113X. Note that [5XGAP[105X 4 can only work correctly with
+  pc groups defined by a confluent pc presentation.[133X
+  
+  [33X[0;0YAt  the current state of implementations the [5XGAP[105X library contains methods to
+  compute  with  finite polycyclic groups, while the [5XGAP[105X package [5XPolycyclic[105X by
+  Bettina  Eick  and  Werner  Nickel  allows  also  computations with infinite
+  polycyclic groups which are given by a pc-presentation.[133X
+  
+  [33X[0;0YAlgorithms  for pc groups use the methods for polycyclic groups described in
+  chapter [14X45[114X.[133X
+  
+  
+  [1X46.1 [33X[0;0YThe Family Pcgs[133X[101X
+  
+  [33X[0;0YClearly,  the  generators  of a power-conjugate presentation of a pc group [22XG[122X
+  form a pcgs of the pc group. This pcgs is called the [13Xfamily pcgs[113X.[133X
+  
+  [1X46.1-1 FamilyPcgs[101X
+  
+  [33X[1;0Y[29X[2XFamilyPcgs[102X( [3Xgrp[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns,  for  a pc group [3Xgrp[103X, a [21Xnatural[121X pcgs of some group [22XG[122X which contains
+  [3Xgrp[103X and is maximal with this property.[133X
+  
+  [33X[0;0YThe  pcgs operations described in Chapter [14X45[114X are particularly efficient with
+  respect to this pcgs.[133X
+  
+  [1X46.1-2 IsFamilyPcgs[101X
+  
+  [33X[1;0Y[29X[2XIsFamilyPcgs[102X( [3Xpcgs[103X ) [32X property[133X
+  
+  [33X[0;0Yspecifies whether the pcgs is a [2XFamilyPcgs[102X ([14X46.1-1[114X) of a pc group.[133X
+  
+  [1X46.1-3 InducedPcgsWrtFamilyPcgs[101X
+  
+  [33X[1;0Y[29X[2XInducedPcgsWrtFamilyPcgs[102X( [3Xgrp[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the  pcgs  which  induced  with  respect  to  a  family  pcgs  (see
+  [2XIsParentPcgsFamilyPcgs[102X ([14X46.1-4[114X) for further details).[133X
+  
+  [1X46.1-4 IsParentPcgsFamilyPcgs[101X
+  
+  [33X[1;0Y[29X[2XIsParentPcgsFamilyPcgs[102X( [3Xpcgs[103X ) [32X property[133X
+  
+  [33X[0;0YThis  property  indicates  that  the  pcgs [3Xpcgs[103X is induced with respect to a
+  family pcgs.[133X
+  
+  [33X[0;0YThis  property  is  needed  to  distinguish  between  different  independent
+  polycyclic  generating  sequences  which  a  pc  group  may  have, since the
+  elementary  operations  for a non-family pcgs may not be as efficient as the
+  elementary operations for the family pcgs.[133X
+  
+  [33X[0;0YThis  can  have a significant influence on the performance of algorithms for
+  polycyclic  groups.  Many  algorithms  require a pcgs that corresponds to an
+  elementary  abelian  series  (see [2XPcgsElementaryAbelianSeries[102X  ([14X45.11-2[114X)) or
+  even  a  special  pcgs  (see [14X45.13[114X).  If  the  family  pcgs has the required
+  properties,  it will be used for these purposes, if not [5XGAP[105X has to work with
+  respect to a new pcgs which is [13Xnot[113X the family pcgs and thus takes longer for
+  elementary calculations like [2XExponentsOfPcElement[102X ([14X45.5-3[114X).[133X
+  
+  [33X[0;0YTherefore,  if the family pcgs chosen for arithmetic is not of importance it
+  might  be  worth to [13Xchange[113X to another, nicer, pcgs to speed up calculations.
+  This  can be achieved, for example, by using the [2XRange[102X ([14X32.3-7[114X) value of the
+  isomorphism obtained by [2XIsomorphismSpecialPcGroup[102X ([14X46.5-3[114X).[133X
+  
+  
+  [1X46.2 [33X[0;0YElements of Pc Groups[133X[101X
+  
+  
+  [1X46.2-1 [33X[0;0YComparison of elements of pc groups[133X[101X
+  
+  [33X[1;0Y[29X[2X\=[102X( [3Xpcword1[103X, [3Xpcword2[103X ) [32X method[133X
+  [33X[1;0Y[29X[2X\<[102X( [3Xpcword1[103X, [3Xpcword2[103X ) [32X method[133X
+  
+  [33X[0;0YThe  elements of a pc group [22XG[122X are always represented as words in normal form
+  with  respect to the family pcgs of [22XG[122X. Thus it is straightforward to compare
+  elements  of  a  pc  group,  since  this  boils down to a mere comparison of
+  exponent  vectors  with  respect to the family pcgs. In particular, the word
+  problem is efficiently solvable in pc groups.[133X
+  
+  
+  [1X46.2-2 [33X[0;0YArithmetic operations for elements of pc groups[133X[101X
+  
+  [33X[1;0Y[29X[2X\*[102X( [3Xpcword1[103X, [3Xpcword2[103X ) [32X method[133X
+  [33X[1;0Y[29X[2XInverse[102X( [3Xpcword[103X ) [32X attribute[133X
+  
+  [33X[0;0YHowever,  multiplication  and  inversion  of elements in pc groups is not as
+  straightforward  as  in  arbitrary  finitely presented groups where a simple
+  concatenation or reversion of the corresponding words is sufficient (but one
+  cannot solve the word problem).[133X
+  
+  [33X[0;0YTo   multiply  two  elements  in  a  pc  group,  we  first  concatenate  the
+  corresponding words and then use an algorithm called [13Xcollection[113X to transform
+  the new word into a word in normal form.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg := FamilyPcgs( SmallGroup( 24, 12 ) );[127X[104X
+    [4X[28XPcgs([ f1, f2, f3, f4 ])[128X[104X
+    [4X[25Xgap>[125X [27Xg[4] * g[1];[127X[104X
+    [4X[28Xf1*f3[128X[104X
+    [4X[25Xgap>[125X [27X(g[2] * g[3])^-1;[127X[104X
+    [4X[28Xf2^2*f3*f4[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X46.3 [33X[0;0YPc Groups versus Fp Groups[133X[101X
+  
+  [33X[0;0YIn  theory  pc  groups  are  finitely  presented  groups.  In  practice  the
+  arithmetic  in pc groups is different from the arithmetic in fp groups. Thus
+  for  technical reasons the pc groups in [5XGAP[105X do not form a subcategory of the
+  fp groups and hence the methods for fp groups cannot be applied to pc groups
+  in general.[133X
+  
+  [1X46.3-1 IsPcGroup[101X
+  
+  [33X[1;0Y[29X[2XIsPcGroup[102X( [3XG[103X ) [32X Category[133X
+  
+  [33X[0;0Ytests whether [3XG[103X is a pc group.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := SmallGroup( 24, 12 );[127X[104X
+    [4X[28X<pc group of size 24 with 4 generators>[128X[104X
+    [4X[25Xgap>[125X [27XIsPcGroup( G );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsFpGroup( G );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X46.3-2 IsomorphismFpGroupByPcgs[101X
+  
+  [33X[1;0Y[29X[2XIsomorphismFpGroupByPcgs[102X( [3Xpcgs[103X, [3Xstr[103X ) [32X function[133X
+  
+  [33X[0;0YIt  is  possible  to  convert  a pc group to a fp group in [5XGAP[105X. The function
+  [2XIsomorphismFpGroupByPcgs[102X  computes the power-commutator presentation defined
+  by  [3Xpcgs[103X. The string [3Xstr[103X can be used to give a name to the generators of the
+  fp group.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xp := FamilyPcgs( SmallGroup( 24, 12 ) );[127X[104X
+    [4X[28XPcgs([ f1, f2, f3, f4 ])[128X[104X
+    [4X[25Xgap>[125X [27Xiso := IsomorphismFpGroupByPcgs( p, "g" );[127X[104X
+    [4X[28X[ f1, f2, f3, f4 ] -> [ g1, g2, g3, g4 ][128X[104X
+    [4X[25Xgap>[125X [27XF := Image( iso );[127X[104X
+    [4X[28X<fp group of size 24 on the generators [ g1, g2, g3, g4 ]>[128X[104X
+    [4X[25Xgap>[125X [27XRelatorsOfFpGroup( F );[127X[104X
+    [4X[28X[ g1^2, g2^-1*g1^-1*g2*g1*g2^-1, g3^-1*g1^-1*g3*g1*g4^-1*g3^-1,[128X[104X
+    [4X[28X  g4^-1*g1^-1*g4*g1*g4^-1*g3^-1, g2^3, g3^-1*g2^-1*g3*g2*g4^-1*g3^-1,[128X[104X
+    [4X[28X  g4^-1*g2^-1*g4*g2*g3^-1, g3^2, g4^-1*g3^-1*g4*g3, g4^2 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X46.4 [33X[0;0YConstructing Pc Groups[133X[101X
+  
+  [33X[0;0YIf  necessary,  you can supply [5XGAP[105X with a pc presentation by hand. (Although
+  this  is  the  most  tedious  way  to  input  a  pc group.) Note that the pc
+  presentation has to be confluent in order to work with the pc group in [5XGAP[105X.[133X
+  
+  [33X[0;0Y(If  you  have  already  a  suitable  pcgs  in  another  representation, use
+  [2XPcGroupWithPcgs[102X ([14X46.5-1[114X), see below.)[133X
+  
+  [33X[0;0YOne  way  is  to define a finitely presented group with a pc presentation in
+  [5XGAP[105X  and  then convert this presentation into a pc group, see [2XPcGroupFpGroup[102X
+  ([14X46.4-1[114X).  Note  that  this  does  not  work  for arbitrary presentations of
+  polycyclic groups, see Chapter [14X47.14[114X for further information.[133X
+  
+  [33X[0;0YAnother  way  is  to create and manipulate a collector of a pc group by hand
+  and  to  use it to define a pc group. This is the most technical way and has
+  little  error  checking  and thus is intended mostly for experts who want to
+  create  a  pc  presentation  in  a  particular  way.  [5XGAP[105X provides different
+  collectors for different collecting strategies; at the moment, there are two
+  collectors  to  choose  from: the single collector for finite pc groups (see
+  [2XSingleCollector[102X   ([14X46.4-2[114X))  and  the  combinatorial  collector  for  finite
+  [22Xp[122X-groups. See [Sim94] for further information on collecting strategies.[133X
+  
+  [33X[0;0YA  collector  is  initialized with an underlying free group and the relative
+  orders of the pc series. Then one adds the right hand sides of the power and
+  the commutator or conjugate relations one by one. Note that omitted relators
+  are assumed to be trivial.[133X
+  
+  [33X[0;0YFor   performance   reasons   it   is   beneficial  to  enforce  a  [21Xsyllable[121X
+  representation in the free group (see [14X37.6[114X).[133X
+  
+  [33X[0;0YNote  that  in  the  end,  the collector has to be converted to a group, see
+  [2XGroupByRws[102X ([14X46.4-6[114X).[133X
+  
+  [33X[0;0YWith  these  methods  a  pc  group  with  arbitrary  defining  pcgs  can  be
+  constructed. However, for almost all applications within [5XGAP[105X we need to have
+  a   pc   group   whose   defining   pcgs   is   a   prime  order  pcgs,  see
+  [2XIsomorphismRefinedPcGroup[102X ([14X46.4-8[114X) and [2XRefinedPcGroup[102X ([14X46.4-9[114X).[133X
+  
+  [1X46.4-1 PcGroupFpGroup[101X
+  
+  [33X[1;0Y[29X[2XPcGroupFpGroup[102X( [3XG[103X ) [32X function[133X
+  
+  [33X[0;0Ycreates  a pc group [3XP[103X from an fp group (see Chapter [14X47[114X) [3XG[103X whose presentation
+  is  polycyclic.  The  resulting  group [3XP[103X has generators corresponding to the
+  generators  of  [3XG[103X.  They are printed in the same way as generators of [3XG[103X, but
+  they  lie  in  a  different  family.  If  the  pc  presentation  of [3XG[103X is not
+  confluent, an error message occurs.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XF := FreeGroup(IsSyllableWordsFamily,"a","b","c","d");;[127X[104X
+    [4X[25Xgap>[125X [27Xa := F.1;; b := F.2;; c := F.3;; d := F.4;;[127X[104X
+    [4X[25Xgap>[125X [27Xrels := [a^2, b^3, c^2, d^2, Comm(b,a)/b, Comm(c,a)/d, Comm(d,a),[127X[104X
+    [4X[25X>[125X [27X            Comm(c,b)/(c*d), Comm(d,b)/c, Comm(d,c)];[127X[104X
+    [4X[28X[ a^2, b^3, c^2, d^2, b^-1*a^-1*b*a*b^-1, c^-1*a^-1*c*a*d^-1,[128X[104X
+    [4X[28X  d^-1*a^-1*d*a, c^-1*b^-1*c*b*d^-1*c^-1, d^-1*b^-1*d*b*c^-1,[128X[104X
+    [4X[28X  d^-1*c^-1*d*c ][128X[104X
+    [4X[25Xgap>[125X [27XG := F / rels;[127X[104X
+    [4X[28X<fp group on the generators [ a, b, c, d ]>[128X[104X
+    [4X[25Xgap>[125X [27XH := PcGroupFpGroup( G );[127X[104X
+    [4X[28X<pc group of size 24 with 4 generators>[128X[104X
+  [4X[32X[104X
+  
+  [1X46.4-2 SingleCollector[101X
+  
+  [33X[1;0Y[29X[2XSingleCollector[102X( [3Xfgrp[103X, [3Xrelorders[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XCombinatorialCollector[102X( [3Xfgrp[103X, [3Xrelorders[103X ) [32X operation[133X
+  
+  [33X[0;0Yinitializes a single collector or a combinatorial collector, where [3Xfgrp[103X must
+  be  a  free group and [3Xrelorders[103X must be a list of the relative orders of the
+  pc series.[133X
+  
+  [33X[0;0YA combinatorial collector can only be set up for a finite [22Xp[122X-group. Here, the
+  relative orders [3Xrelorders[103X must all be equal and a prime.[133X
+  
+  [1X46.4-3 SetConjugate[101X
+  
+  [33X[1;0Y[29X[2XSetConjugate[102X( [3Xcoll[103X, [3Xj[103X, [3Xi[103X, [3Xw[103X ) [32X operation[133X
+  
+  [33X[0;0YLet  [22Xf_1,  ...,  f_n[122X  be  the generators of the underlying free group of the
+  collector [3Xcoll[103X.[133X
+  
+  [33X[0;0YFor  [3Xi[103X  [22X<[122X  [3Xj[103X, [2XSetConjugate[102X sets the conjugate [22Xf_j^{f_i}[122X to equal [3Xw[103X, which is
+  assumed  to  be  a  canonical  word  in  [22Xf_{i+1},  ..., f_n[122X. No check of the
+  arguments is performed.[133X
+  
+  [1X46.4-4 SetCommutator[101X
+  
+  [33X[1;0Y[29X[2XSetCommutator[102X( [3Xcoll[103X, [3Xj[103X, [3Xi[103X, [3Xw[103X ) [32X operation[133X
+  
+  [33X[0;0YLet  [22Xf_1,  ...,  f_n[122X  be  the generators of the underlying free group of the
+  collector [3Xcoll[103X.[133X
+  
+  [33X[0;0YFor  [3Xi[103X  [22X<[122X  [3Xj[103X,  [2XSetCommutator[102X  sets the commutator of [22Xf_j[122X and [22Xf_i[122X to equal [3Xw[103X,
+  which  is  assumed  to be a canonical word in [22Xf_{i+1}, ..., f_n[122X. No check of
+  the arguments is performed.[133X
+  
+  [1X46.4-5 SetPower[101X
+  
+  [33X[1;0Y[29X[2XSetPower[102X( [3Xcoll[103X, [3Xi[103X, [3Xw[103X ) [32X operation[133X
+  
+  [33X[0;0YLet  [22Xf_1,  ...,  f_n[122X  be  the generators of the underlying free group of the
+  collector [3Xcoll[103X, and let [22Xr_i[122X be the corresponding relative orders.[133X
+  
+  [33X[0;0Y[2XSetPower[102X  sets  the  power  [22Xf_i^{r_i}[122X  to  equal [3Xw[103X, which is assumed to be a
+  canonical word in [22Xf_{i+1}, ..., f_n[122X. No check of the arguments is performed.[133X
+  
+  [1X46.4-6 GroupByRws[101X
+  
+  [33X[1;0Y[29X[2XGroupByRws[102X( [3Xcoll[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XGroupByRwsNC[102X( [3Xcoll[103X ) [32X operation[133X
+  
+  [33X[0;0Ycreates  a group from a rewriting system. In the first version it is checked
+  whether  the  rewriting  system  is confluent, in the second version this is
+  assumed to be true.[133X
+  
+  [1X46.4-7 IsConfluent[101X
+  
+  [33X[1;0Y[29X[2XIsConfluent[102X( [3XG[103X ) [32X property[133X
+  
+  [33X[0;0Ychecks  whether  the  pc  group  [3XG[103X  has  been  built from a collector with a
+  confluent power-commutator presentation.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XF := FreeGroup(IsSyllableWordsFamily, 2 );;[127X[104X
+    [4X[25Xgap>[125X [27Xcoll1 := SingleCollector( F, [2,3] );[127X[104X
+    [4X[28X<<single collector, 8 Bits>>[128X[104X
+    [4X[25Xgap>[125X [27XSetConjugate( coll1, 2, 1, F.2 );[127X[104X
+    [4X[25Xgap>[125X [27XSetPower( coll1, 1, F.2 );[127X[104X
+    [4X[25Xgap>[125X [27XG1 := GroupByRws( coll1 );[127X[104X
+    [4X[28X<pc group of size 6 with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27XIsConfluent(G1);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsAbelian(G1);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xcoll2 := SingleCollector( F, [2,3] );[127X[104X
+    [4X[28X<<single collector, 8 Bits>>[128X[104X
+    [4X[25Xgap>[125X [27XSetConjugate( coll2, 2, 1, F.2^2 );[127X[104X
+    [4X[25Xgap>[125X [27XG2 := GroupByRws( coll2 );[127X[104X
+    [4X[28X<pc group of size 6 with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27XIsAbelian(G2);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X46.4-8 IsomorphismRefinedPcGroup[101X
+  
+  [33X[1;0Y[29X[2XIsomorphismRefinedPcGroup[102X( [3XG[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  an isomorphism from [3XG[103X onto an isomorphic pc group whose family pcgs
+  is a prime order pcgs.[133X
+  
+  [1X46.4-9 RefinedPcGroup[101X
+  
+  [33X[1;0Y[29X[2XRefinedPcGroup[102X( [3XG[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns the range of the [2XIsomorphismRefinedPcGroup[102X ([14X46.4-8[114X) value of [3XG[103X.[133X
+  
+  
+  [1X46.5 [33X[0;0YComputing Pc Groups[133X[101X
+  
+  [33X[0;0YAnother  possibility  to  get  a  pc group in [5XGAP[105X is to convert a polycyclic
+  group  given  by  some  other  representation  to  a  pc group. For finitely
+  presented groups there are various quotient methods available. For all other
+  types of groups one can use the following functions.[133X
+  
+  [1X46.5-1 PcGroupWithPcgs[101X
+  
+  [33X[1;0Y[29X[2XPcGroupWithPcgs[102X( [3Xmpcgs[103X ) [32X attribute[133X
+  
+  [33X[0;0Ycreates  a  new  pc  group [3XG[103X whose family pcgs is isomorphic to the (modulo)
+  pcgs [3Xmpcgs[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := Group( (1,2,3), (3,4,1) );;[127X[104X
+    [4X[25Xgap>[125X [27XPcGroupWithPcgs( Pcgs(G) );[127X[104X
+    [4X[28X<pc group of size 12 with 3 generators>[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIf  a pcgs is only given by a list of pc elements, [2XPcgsByPcSequence[102X ([14X45.3-1[114X)
+  can be used:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG:=Group((1,2,3,4),(1,2));;[127X[104X
+    [4X[25Xgap>[125X [27Xp:=PcgsByPcSequence(FamilyObj(One(G)),[127X[104X
+    [4X[25X>[125X [27X[ (3,4), (2,4,3), (1,4)(2,3), (1,3)(2,4) ]);[127X[104X
+    [4X[28XPcgs([ (3,4), (2,4,3), (1,4)(2,3), (1,3)(2,4) ])[128X[104X
+    [4X[25Xgap>[125X [27XPcGroupWithPcgs(p);[127X[104X
+    [4X[28X<pc group of size 24 with 4 generators>[128X[104X
+    [4X[25Xgap>[125X [27XG := SymmetricGroup( 5 );[127X[104X
+    [4X[28XSym( [ 1 .. 5 ] )[128X[104X
+    [4X[25Xgap>[125X [27XH := Subgroup( G, [(1,2,3,4,5), (3,4,5)] );[127X[104X
+    [4X[28XGroup([ (1,2,3,4,5), (3,4,5) ])[128X[104X
+    [4X[25Xgap>[125X [27Xmodu := ModuloPcgs( G, H );[127X[104X
+    [4X[28XPcgs([ (4,5) ])[128X[104X
+    [4X[25Xgap>[125X [27XPcGroupWithPcgs(modu);[127X[104X
+    [4X[28X<pc group of size 2 with 1 generator>[128X[104X
+  [4X[32X[104X
+  
+  [1X46.5-2 IsomorphismPcGroup[101X
+  
+  [33X[1;0Y[29X[2XIsomorphismPcGroup[102X( [3XG[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns an isomorphism from [3XG[103X onto an isomorphic pc group. The series chosen
+  for  this  pc  representation  depends  on  the  method  chosen. [3XG[103X must be a
+  polycyclic group of any kind, for example a solvable permutation group.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := Group( (1,2,3), (3,4,1) );;[127X[104X
+    [4X[25Xgap>[125X [27Xiso := IsomorphismPcGroup( G );[127X[104X
+    [4X[28XPcgs([ (2,4,3), (1,2)(3,4), (1,3)(2,4) ]) -> [ f1, f2, f3 ][128X[104X
+    [4X[25Xgap>[125X [27XH := Image( iso );[127X[104X
+    [4X[28XGroup([ f1, f2, f3 ])[128X[104X
+  [4X[32X[104X
+  
+  [1X46.5-3 IsomorphismSpecialPcGroup[101X
+  
+  [33X[1;0Y[29X[2XIsomorphismSpecialPcGroup[102X( [3XG[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  an isomorphism from [3XG[103X onto an isomorphic pc group whose family pcgs
+  is  a special pcgs. (This can be beneficial to the runtime of calculations.)
+  [3XG[103X  may be a polycyclic group of any kind, for example a solvable permutation
+  group.[133X
+  
+  
+  [1X46.6 [33X[0;0YSaving a Pc Group[133X[101X
+  
+  [33X[0;0YAs printing a polycyclic group does not display the presentation, one cannot
+  simply  print  a pc group to a file to save it. For this purpose we need the
+  following function.[133X
+  
+  [1X46.6-1 GapInputPcGroup[101X
+  
+  [33X[1;0Y[29X[2XGapInputPcGroup[102X( [3Xgrp[103X, [3Xstring[103X ) [32X function[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := SmallGroup( 24, 12 );[127X[104X
+    [4X[28X<pc group of size 24 with 4 generators>[128X[104X
+    [4X[25Xgap>[125X [27XPrintTo( "save", GapInputPcGroup( G, "H" ) );[127X[104X
+    [4X[25Xgap>[125X [27XRead( "save" );[127X[104X
+    [4X[28X#I A group of order 24 has been defined.[128X[104X
+    [4X[28X#I It is called H[128X[104X
+    [4X[25Xgap>[125X [27XH = G;[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIdSmallGroup( H ) = IdSmallGroup( G );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XRemoveFile( "save" );;[127X[104X
+  [4X[32X[104X
+  
+  
+  [1X46.7 [33X[0;0YOperations for Pc Groups[133X[101X
+  
+  [33X[0;0YAll  the  operations  described  in  Chapters [14X39[114X and [14X45[114X apply to a pc group.
+  Nearly  all  methods  for  pc  groups  are  methods  for groups with pcgs as
+  described  in Chapter [14X45[114X. The only method with is special for pc groups is a
+  method  to compute intersections of subgroups, since here a pcgs of a parent
+  group  is  needed  and this can only by guaranteed within pc groups. Section
+  [14X39.25[114X describes operations and methods for arbitrary finite groups.[133X
+  
+  
+  [1X46.8 [33X[0;0Y[22X2[122X[101X[1X-Cohomology and Extensions[133X[101X
+  
+  [33X[0;0YOne  of the most interesting applications of pc groups is the possibility to
+  compute  with  extensions of these groups by elementary abelian groups; that
+  is,  [22XH[122X  is  an extension of [22XG[122X by [22XM[122X, if there exists a normal subgroup [22XN[122X in [22XH[122X
+  which is isomorphic to [22XM[122X such that [22XH/N[122X is isomorphic to [22XG[122X.[133X
+  
+  [33X[0;0YPc   groups  are  particularly  suited  for  such  applications,  since  the
+  [22X2[122X-cohomology  can  be  computed  efficiently  for such groups and, moreover,
+  extensions  of  pc groups by elementary abelian groups can be represented as
+  pc groups again.[133X
+  
+  [33X[0;0YTo  define  the elementary abelian group [22XM[122X together with an action of [22XG[122X on [22XM[122X
+  we   consider   [22XM[122X   as   a   MeatAxe  module  for  [22XG[122X  over  a  finite  field
+  (section [2XIrreducibleModules[102X  ([14X71.15-1[114X)  describes functions that can be used
+  to  obtain  certain modules). For further information on meataxe modules see
+  Chapter  [14X69[114X.  Note  that the matrices defining the module must correspond to
+  the pcgs of the group [3XG[103X.[133X
+  
+  [33X[0;0YThere  exists  an  action  of  the  subgroup of [13Xcompatible pairs[113X in [22XAut(G) ×
+  Aut(M)[122X  which  acts  on  the  second  cohomology  group, see [2XCompatiblePairs[102X
+  ([14X46.8-8[114X).  [22X2[122X-cocycles  which  lie in the same orbit under this action define
+  isomorphic extensions of [22XG[122X. However, there may be isomorphic extensions of [22XG[122X
+  corresponding to cocycles in different orbits.[133X
+  
+  [33X[0;0YSee  also  the  [5XGAP[105X  package [5XGrpConst[105X by Hans Ulrich Besche and Bettina Eick
+  that  contains  methods to construct up to isomorphism the groups of a given
+  order.[133X
+  
+  [33X[0;0YFinally  we  note  that  for  the  computation of split extensions it is not
+  necessary  that [3XM[103X must correspond to an elementary abelian group. Here it is
+  possible   to  construct  split  extensions  of  arbitrary  pc  groups,  see
+  [2XSplitExtension[102X ([14X46.8-6[114X).[133X
+  
+  [1X46.8-1 TwoCoboundaries[101X
+  
+  [33X[1;0Y[29X[2XTwoCoboundaries[102X( [3XG[103X, [3XM[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  group of [22X2[122X-coboundaries of a pc group [3XG[103X by the [3XG[103X-module [3XM[103X. The
+  generators  of  [3XM[103X must correspond to the [2XPcgs[102X ([14X45.2-1[114X) value of [3XG[103X. The group
+  of coboundaries is given as vector space over the field underlying [3XM[103X.[133X
+  
+  [1X46.8-2 TwoCocycles[101X
+  
+  [33X[1;0Y[29X[2XTwoCocycles[102X( [3XG[103X, [3XM[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the [22X2[122X-cocycles of a pc group [3XG[103X by the [3XG[103X-module [3XM[103X. The generators of
+  [3XM[103X  must  correspond to the [2XPcgs[102X ([14X45.2-1[114X) value of [3XG[103X. The operation returns a
+  list of vectors over the field underlying [3XM[103X and the additive group generated
+  by these vectors is the group of [22X2[122X-cocyles.[133X
+  
+  [1X46.8-3 TwoCohomology[101X
+  
+  [33X[1;0Y[29X[2XTwoCohomology[102X( [3XG[103X, [3XM[103X ) [32X operation[133X
+  
+  [33X[0;0YThis  operation computes the second cohomology group for the special case of
+  a  Pc  Group.  It  returns  a record defining the second cohomology group as
+  factor  space  of the space of cocycles by the space of coboundaries. [3XG[103X must
+  be a pc group and the generators of [3XM[103X must correspond to the pcgs of [3XG[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := SmallGroup( 4, 2 );[127X[104X
+    [4X[28X<pc group of size 4 with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xmats := List( Pcgs( G ), x -> IdentityMat( 1, GF(2) ) );[127X[104X
+    [4X[28X[ [ <a GF2 vector of length 1> ], [ <a GF2 vector of length 1> ] ][128X[104X
+    [4X[25Xgap>[125X [27XM := GModuleByMats( mats, GF(2) );[127X[104X
+    [4X[28Xrec( IsOverFiniteField := true, dimension := 1, field := GF(2),[128X[104X
+    [4X[28X  generators := [ <an immutable 1x1 matrix over GF2>,[128X[104X
+    [4X[28X      <an immutable 1x1 matrix over GF2> ], isMTXModule := true )[128X[104X
+    [4X[25Xgap>[125X [27XTwoCoboundaries( G, M );[127X[104X
+    [4X[28X[  ][128X[104X
+    [4X[25Xgap>[125X [27XTwoCocycles( G, M );[127X[104X
+    [4X[28X[ [ Z(2)^0, 0*Z(2), 0*Z(2) ], [ 0*Z(2), Z(2)^0, 0*Z(2) ],[128X[104X
+    [4X[28X  [ 0*Z(2), 0*Z(2), Z(2)^0 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xcc := TwoCohomology( G, M );;[127X[104X
+    [4X[25Xgap>[125X [27Xcc.cohom;[127X[104X
+    [4X[28X<linear mapping by matrix, <vector space of dimension 3 over GF([128X[104X
+    [4X[28X2)> -> ( GF(2)^3 )>[128X[104X
+  [4X[32X[104X
+  
+  [1X46.8-4 Extensions[101X
+  
+  [33X[1;0Y[29X[2XExtensions[102X( [3XG[103X, [3XM[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  all  extensions  of  [3XG[103X  by  the  [3XG[103X-module [3XM[103X up to equivalence as pc
+  groups.[133X
+  
+  [1X46.8-5 Extension[101X
+  
+  [33X[1;0Y[29X[2XExtension[102X( [3XG[103X, [3XM[103X, [3Xc[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XExtensionNC[102X( [3XG[103X, [3XM[103X, [3Xc[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns the extension of [3XG[103X by the [3XG[103X-module [3XM[103X via the cocycle [3Xc[103X as pc groups.
+  The [10XNC[110X version does not check the resulting group for consistence.[133X
+  
+  [1X46.8-6 SplitExtension[101X
+  
+  [33X[1;0Y[29X[2XSplitExtension[102X( [3XG[103X, [3XM[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the split extension of [3XG[103X by the [3XG[103X-module [3XM[103X. See also [2XSplitExtension[102X
+  ([14X46.8-10[114X) for its 3-argument version.[133X
+  
+  [1X46.8-7 ModuleOfExtension[101X
+  
+  [33X[1;0Y[29X[2XModuleOfExtension[102X( [3XE[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the module of an extension [3XE[103X of [3XG[103X by [3XM[103X. This is the normal subgroup
+  of [3XE[103X which corresponds to [3XM[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := SmallGroup( 4, 2 );;[127X[104X
+    [4X[25Xgap>[125X [27Xmats := List( Pcgs( G ), x -> IdentityMat( 1, GF(2) ) );;[127X[104X
+    [4X[25Xgap>[125X [27XM := GModuleByMats( mats, GF(2) );;[127X[104X
+    [4X[25Xgap>[125X [27Xco := TwoCocycles( G, M );;[127X[104X
+    [4X[25Xgap>[125X [27XExtension( G, M, co[2] );[127X[104X
+    [4X[28X<pc group of size 8 with 3 generators>[128X[104X
+    [4X[25Xgap>[125X [27XSplitExtension( G, M );[127X[104X
+    [4X[28X<pc group of size 8 with 3 generators>[128X[104X
+    [4X[25Xgap>[125X [27XExtensions( G, M );[127X[104X
+    [4X[28X[ <pc group of size 8 with 3 generators>,[128X[104X
+    [4X[28X  <pc group of size 8 with 3 generators>,[128X[104X
+    [4X[28X  <pc group of size 8 with 3 generators>,[128X[104X
+    [4X[28X  <pc group of size 8 with 3 generators>,[128X[104X
+    [4X[28X  <pc group of size 8 with 3 generators>,[128X[104X
+    [4X[28X  <pc group of size 8 with 3 generators>,[128X[104X
+    [4X[28X  <pc group of size 8 with 3 generators>,[128X[104X
+    [4X[28X  <pc group of size 8 with 3 generators> ][128X[104X
+    [4X[25Xgap>[125X [27XList(last, IdSmallGroup);[127X[104X
+    [4X[28X[ [ 8, 5 ], [ 8, 2 ], [ 8, 3 ], [ 8, 3 ], [ 8, 2 ], [ 8, 2 ],[128X[104X
+    [4X[28X  [ 8, 3 ], [ 8, 4 ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that the extensions returned by [2XExtensions[102X ([14X46.8-4[114X) are computed up to
+  equivalence, but not up to isomorphism.[133X
+  
+  [1X46.8-8 CompatiblePairs[101X
+  
+  [33X[1;0Y[29X[2XCompatiblePairs[102X( [[3XA[103X, ][3XG[103X, [3XM[103X[, [3XD[103X] ) [32X function[133X
+  
+  [33X[0;0Yreturns  the group of compatible pairs of the group [3XG[103X with the [3XG[103X-module [3XM[103X as
+  subgroup of the direct product Aut([3XG[103X) [22X×[122X Aut([3XM[103X). Here Aut([3XM[103X) is considered as
+  subgroup  of  a  general  linear  group. The optional argument [3XD[103X should be a
+  subgroup  of Aut([3XG[103X) [22X×[122X Aut([3XM[103X). If it is given, then only the compatible pairs
+  in  [3XD[103X  are computed. If a group [3XA[103X of automorphisms of [3XG[103X is given as optional
+  first  argument,  it  is  used in place of the full automorphism group of [3XG[103X,
+  avoiding the need to compute this automorphism group.[133X
+  
+  [1X46.8-9 ExtensionRepresentatives[101X
+  
+  [33X[1;0Y[29X[2XExtensionRepresentatives[102X( [3XG[103X, [3XM[103X, [3XP[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns all extensions of [3XG[103X by the [3XG[103X-module [3XM[103X up to equivalence under action
+  of [3XP[103X where [3XP[103X has to be a subgroup of the group of compatible pairs of [3XG[103X with
+  [3XM[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := SmallGroup( 4, 2 );;[127X[104X
+    [4X[25Xgap>[125X [27Xmats := List( Pcgs( G ), x -> IdentityMat( 1, GF(2) ) );;[127X[104X
+    [4X[25Xgap>[125X [27XM := GModuleByMats( mats, GF(2) );;[127X[104X
+    [4X[25Xgap>[125X [27XA := AutomorphismGroup( G );;[127X[104X
+    [4X[25Xgap>[125X [27XB := GL( 1, 2 );;[127X[104X
+    [4X[25Xgap>[125X [27XD := DirectProduct( A, B );; Size(D);[127X[104X
+    [4X[28X6[128X[104X
+    [4X[25Xgap>[125X [27XP := CompatiblePairs( G, M, D );[127X[104X
+    [4X[28X<group of size 6 with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27XExtensionRepresentatives( G, M, P );[127X[104X
+    [4X[28X[ <pc group of size 8 with 3 generators>,[128X[104X
+    [4X[28X  <pc group of size 8 with 3 generators>,[128X[104X
+    [4X[28X  <pc group of size 8 with 3 generators>,[128X[104X
+    [4X[28X  <pc group of size 8 with 3 generators> ][128X[104X
+    [4X[25Xgap>[125X [27XExtensions( G, M );[127X[104X
+    [4X[28X[ <pc group of size 8 with 3 generators>,[128X[104X
+    [4X[28X  <pc group of size 8 with 3 generators>,[128X[104X
+    [4X[28X  <pc group of size 8 with 3 generators>,[128X[104X
+    [4X[28X  <pc group of size 8 with 3 generators>,[128X[104X
+    [4X[28X  <pc group of size 8 with 3 generators>,[128X[104X
+    [4X[28X  <pc group of size 8 with 3 generators>,[128X[104X
+    [4X[28X  <pc group of size 8 with 3 generators>,[128X[104X
+    [4X[28X  <pc group of size 8 with 3 generators> ][128X[104X
+  [4X[32X[104X
+  
+  [1X46.8-10 SplitExtension[101X
+  
+  [33X[1;0Y[29X[2XSplitExtension[102X( [3XG[103X, [3Xaut[103X, [3XN[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns the split extensions of the pc group [3XG[103X by the pc group [3XN[103X. [3Xaut[103X should
+  be a homomorphism from [3XG[103X into Aut([3XN[103X).[133X
+  
+  [33X[0;0YIn  the  following  example  we  construct  the  holomorph  of  [22XQ_8[122X as split
+  extension of [22XQ_8[122X by [22XS_4[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XN := SmallGroup( 8, 4 );[127X[104X
+    [4X[28X<pc group of size 8 with 3 generators>[128X[104X
+    [4X[25Xgap>[125X [27XIsAbelian( N );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XA := AutomorphismGroup( N );[127X[104X
+    [4X[28X<group of size 24 with 4 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xiso := IsomorphismPcGroup( A );[127X[104X
+    [4X[28XCompositionMapping( Pcgs([ (2,6,5,3), (1,3,5)(2,4,6), (2,5)(3,6),[128X[104X
+    [4X[28X  (1,4)(3,6) ]) -> [ f1, f2, f3, f4 ], <action isomorphism> )[128X[104X
+    [4X[25Xgap>[125X [27XH := Image( iso );[127X[104X
+    [4X[28XGroup([ f1, f2, f3, f4 ])[128X[104X
+    [4X[25Xgap>[125X [27XG := Subgroup( H, Pcgs(H){[1,2]} );[127X[104X
+    [4X[28XGroup([ f1, f2 ])[128X[104X
+    [4X[25Xgap>[125X [27Xinv := InverseGeneralMapping( iso );[127X[104X
+    [4X[28X[ f1*f2, f2^2*f3, f4, f3 ] ->[128X[104X
+    [4X[28X[ Pcgs([ f1, f2, f3 ]) -> [ f1*f2, f2, f3 ],[128X[104X
+    [4X[28X  Pcgs([ f1, f2, f3 ]) -> [ f2, f1*f2, f3 ],[128X[104X
+    [4X[28X  Pcgs([ f1, f2, f3 ]) -> [ f1*f3, f2, f3 ],[128X[104X
+    [4X[28X  Pcgs([ f1, f2, f3 ]) -> [ f1, f2*f3, f3 ] ][128X[104X
+    [4X[25Xgap>[125X [27XK := SplitExtension( G, inv, N );[127X[104X
+    [4X[28X<pc group of size 192 with 7 generators>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X46.9 [33X[0;0YCoding a Pc Presentation[133X[101X
+  
+  [33X[0;0YIf  one wants to store a large number of pc groups, then it can be useful to
+  store  them  in  a  compressed  format,  since pc presentations can be space
+  consuming. Here we introduce a method to code and decode pc presentations by
+  integers.  To  decode  a  given  code the size of the underlying pc group is
+  needed  as  well.  For  the  full  definition  and  the  coding and decoding
+  procedures  see  [BE99].  This  method is used with the small groups library
+  (see [14X'smallgrp: The Small Groups Library'[114X.[133X
+  
+  [1X46.9-1 CodePcgs[101X
+  
+  [33X[1;0Y[29X[2XCodePcgs[102X( [3Xpcgs[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the code corresponding to [3Xpcgs[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := CyclicGroup(512);;[127X[104X
+    [4X[25Xgap>[125X [27Xp := Pcgs( G );;[127X[104X
+    [4X[25Xgap>[125X [27XCodePcgs( p );[127X[104X
+    [4X[28X162895587718739690298008513020159[128X[104X
+  [4X[32X[104X
+  
+  [1X46.9-2 CodePcGroup[101X
+  
+  [33X[1;0Y[29X[2XCodePcGroup[102X( [3XG[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the code for a pcgs of [3XG[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := DihedralGroup(512);;[127X[104X
+    [4X[25Xgap>[125X [27XCodePcGroup( G );[127X[104X
+    [4X[28X2940208627577393070560341803949986912431725641726[128X[104X
+  [4X[32X[104X
+  
+  [1X46.9-3 PcGroupCode[101X
+  
+  [33X[1;0Y[29X[2XPcGroupCode[102X( [3Xcode[103X, [3Xsize[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  a  pc  group  of size [3Xsize[103X corresponding to [3Xcode[103X. The argument [3Xcode[103X
+  must  be a valid code for a pcgs, otherwise anything may happen. Valid codes
+  are   usually  obtained  by  one  of  the  functions  [2XCodePcgs[102X  ([14X46.9-1[114X)  or
+  [2XCodePcGroup[102X ([14X46.9-2[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG := SmallGroup( 24, 12 );;[127X[104X
+    [4X[25Xgap>[125X [27Xp := Pcgs( G );;[127X[104X
+    [4X[25Xgap>[125X [27Xcode := CodePcgs( p );[127X[104X
+    [4X[28X5790338948[128X[104X
+    [4X[25Xgap>[125X [27XH := PcGroupCode( code, 24 );[127X[104X
+    [4X[28X<pc group of size 24 with 4 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xmap := GroupHomomorphismByImages( G, H, p, FamilyPcgs(H) );[127X[104X
+    [4X[28XPcgs([ f1, f2, f3, f4 ]) -> Pcgs([ f1, f2, f3, f4 ])[128X[104X
+    [4X[25Xgap>[125X [27XIsBijective(map);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X46.10 [33X[0;0YRandom Isomorphism Testing[133X[101X
+  
+  [33X[0;0YThe generic isomorphism test for groups may be applied to pc groups as well.
+  However,  this  test is often quite time consuming. Here we describe another
+  method to test isomorphism by a probabilistic approach.[133X
+  
+  [1X46.10-1 RandomIsomorphismTest[101X
+  
+  [33X[1;0Y[29X[2XRandomIsomorphismTest[102X( [3Xcoderecs[103X, [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0YThe  first argument is a list [3Xcoderecs[103X containing records describing groups,
+  and the second argument is a non-negative integer [3Xn[103X.[133X
+  
+  [33X[0;0YThe  test  returns a sublist of [3Xcoderecs[103X where isomorphic copies detected by
+  the probabilistic test have been removed.[133X
+  
+  [33X[0;0YThe  list  [3Xcoderecs[103X  should  contain  records  with two components, [10Xcode[110X and
+  [10Xorder[110X,  describing  a  group via [10XPcGroupCode( code, order )[110X (see [2XPcGroupCode[102X
+  ([14X46.9-3[114X)).[133X
+  
+  [33X[0;0YThe  integer  [3Xn[103X  gives  a  certain amount of control over the probability to
+  detect  all  isomorphisms. If it is [22X0[122X, then nothing will be done at all. The
+  larger  [3Xn[103X  is,  the  larger  is the probability of finding all isomorphisms.
+  However, due to the underlying method we cannot guarantee that the algorithm
+  finds all isomorphisms, no matter how large [3Xn[103X is.[133X
+  

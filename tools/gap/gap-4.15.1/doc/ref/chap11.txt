@@ -1,0 +1,138 @@
+  
+  [1X11 [33X[0;0YProcesses[133X[101X
+  
+  [33X[0;0Y[5XGAP[105X  can  call other programs, such programs are called [13Xprocesses[113X. There are
+  two  kinds of processes: first there are processes that are started, run and
+  return  a  result, while [5XGAP[105X is suspended until the process terminates. Then
+  there are processes that will run in parallel to [5XGAP[105X as subprocesses and [5XGAP[105X
+  can    communicate    and    control    the    processes    using    streams
+  (see [2XInputOutputLocalProcess[102X ([14X10.8-2[114X)).[133X
+  
+  
+  [1X11.1 [33X[0;0YProcess and Exec[133X[101X
+  
+  [1X11.1-1 Process[101X
+  
+  [33X[1;0Y[29X[2XProcess[102X( [3Xdir[103X, [3Xprg[103X, [3Xstream-in[103X, [3Xstream-out[103X, [3Xoptions[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XProcess[102X  runs  a  new  process  and  returns when the process terminates. It
+  returns  the  return  value  of the process if the operating system supports
+  such a concept.[133X
+  
+  [33X[0;0YThe  first  argument  [3Xdir[103X  is a directory object (see [14X9.4[114X) which will be the
+  current  directory  (in  the usual UNIX or MS-DOS sense) when the program is
+  run.  This will only matter if the program accesses files (including running
+  other programs) via relative path names. In particular, it has nothing to do
+  with finding the binary to run.[133X
+  
+  [33X[0;0YIn  general  the  directory  will  either be the current directory, which is
+  returned  by [2XDirectoryCurrent[102X ([14X9.4-4[114X) –this was the behaviour of [5XGAP[105X 3– or a
+  temporary  directory  returned by [2XDirectoryTemporary[102X ([14X9.4-3[114X). If one expects
+  that  the  process  creates temporary or log files the latter should be used
+  because  [5XGAP[105X  will attempt to remove these directories together with all the
+  files in them when quitting.[133X
+  
+  [33X[0;0YIf  a program of a [5XGAP[105X package which does not only consist of [5XGAP[105X code needs
+  to  be  launched in a directory relative to certain data libraries, then the
+  first  entry  of  [2XDirectoriesPackageLibrary[102X  ([14X76.3-7[114X)  should  be  used. The
+  argument  of  [2XDirectoriesPackageLibrary[102X  ([14X76.3-7[114X)  should be the path to the
+  data library relative to the package directory.[133X
+  
+  [33X[0;0YIf  a  program  calls other programs and needs to be launched in a directory
+  containing  the  executables  for such a [5XGAP[105X package then the first entry of
+  [2XDirectoriesPackagePrograms[102X ([14X76.3-8[114X) should be used.[133X
+  
+  [33X[0;0YThe  latter  two  alternatives  should  only be used if absolutely necessary
+  because  otherwise  one  risks accumulating log or core files in the package
+  directory.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xls := PathSystemProgram( "ls" );;[127X[104X
+    [4X[25Xgap>[125X [27Xstdin := InputTextUser();;[127X[104X
+    [4X[25Xgap>[125X [27Xstdout := OutputTextUser();;[127X[104X
+    [4X[25Xgap>[125X [27Xpath := DirectoriesSystemPrograms();;[127X[104X
+    [4X[25Xgap>[125X [27XProcess( path[1], ls, stdin, stdout, ["-c"] );;[127X[104X
+    [4X[28Xawk    ls     mkdir[128X[104X
+    [4X[25Xgap>[125X [27X# current directory, here the root directory[127X[104X
+    [4X[25Xgap>[125X [27XProcess( DirectoryCurrent(), ls, stdin, stdout, ["-c"] );;[127X[104X
+    [4X[28Xbin    lib    trans  tst    CVS    grp    prim   thr    two[128X[104X
+    [4X[28Xsrc    dev    etc    tbl    doc    pkg    small  tom[128X[104X
+    [4X[25Xgap>[125X [27X# create a temporary directory[127X[104X
+    [4X[25Xgap>[125X [27Xtmpdir := DirectoryTemporary();;[127X[104X
+    [4X[25Xgap>[125X [27XProcess( tmpdir, ls, stdin, stdout, ["-c"] );;[127X[104X
+    [4X[25Xgap>[125X [27XPrintTo( Filename( tmpdir, "emil" ) );[127X[104X
+    [4X[25Xgap>[125X [27XProcess( tmpdir, ls, stdin, stdout, ["-c"] );;[127X[104X
+    [4X[28Xemil[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[3Xprg[103X  is  the filename of the program to launch, for portability it should be
+  the  result  of  [2XFilename[102X  ([14X9.5-1[114X) and should pass [2XIsExecutableFile[102X ([14X9.7-4[114X).
+  Note  that  [2XProcess[102X does [13Xno[113X searching through a list of directories, this is
+  done by [2XFilename[102X ([14X9.5-1[114X).[133X
+  
+  [33X[0;0Y[3Xstream-in[103X  is  the input stream that delivers the characters to the process.
+  For  portability  it should either be [2XInputTextNone[102X ([14X10.9-1[114X) (if the process
+  reads  no  characters),  [2XInputTextUser[102X  ([14X10.6-1[114X),  the  result  of a call to
+  [2XInputTextFile[102X  ([14X10.5-1[114X)  from  which  no  characters  have been read, or the
+  result of a call to [2XInputTextString[102X ([14X10.7-1[114X).[133X
+  
+  [33X[0;0Y[2XProcess[102X is free to consume [13Xall[113X the input even if the program itself does not
+  require any input at all.[133X
+  
+  [33X[0;0Y[3Xstream-out[103X  is  the  output  stream  which  receives the characters from the
+  process. For portability it should either be [2XOutputTextNone[102X ([14X10.9-2[114X) (if the
+  process writes no characters), [2XOutputTextUser[102X ([14X10.6-2[114X), the result of a call
+  to  [2XOutputTextFile[102X ([14X10.5-2[114X) to which no characters have been written, or the
+  result of a call to [2XOutputTextString[102X ([14X10.7-2[114X).[133X
+  
+  [33X[0;0Y[3Xoptions[103X is a list of strings which are passed to the process as command line
+  argument.  Note  that  no  substitutions are performed on the strings, i.e.,
+  they  are  passed  immediately  to  the  process  and are not processed by a
+  command  interpreter (shell). Further note that each string is passed as one
+  argument,  even  if  it  contains  [13Xspace[113X  characters. Note that input/output
+  redirection commands are [13Xnot[113X allowed as [3Xoptions[103X.[133X
+  
+  [33X[0;0YIn order to find a system program use [2XPathSystemProgram[102X ([14X9.5-2[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xdate := PathSystemProgram( "date" );[127X[104X
+    [4X[28X"/bin/date"[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  next  example  shows how to execute [10Xdate[110X with no argument and no input,
+  and collect the output into a string stream.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xstr := "";; a := OutputTextString(str,true);;[127X[104X
+    [4X[25Xgap>[125X [27XProcess( DirectoryCurrent(), date, InputTextNone(), a, [] );[127X[104X
+    [4X[28X0[128X[104X
+    [4X[25Xgap>[125X [27XCloseStream(a);[127X[104X
+    [4X[25Xgap>[125X [27XPrint(str);[127X[104X
+    [4X[28XFri Jul 11 09:04:23 MET DST 1997[128X[104X
+  [4X[32X[104X
+  
+  [1X11.1-2 Exec[101X
+  
+  [33X[1;0Y[29X[2XExec[102X( [3Xcmd[103X, [3Xoption1[103X, [3X...[103X, [3XoptionN[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XExec[102X  runs  a shell in the current directory to execute the command given by
+  the string [3Xcmd[103X with options [3Xoption1[103X, ..., [3XoptionN[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XExec( "date" );[127X[104X
+    [4X[28XThu Jul 24 10:04:13 BST 1997[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[3Xcmd[103X is interpreted by the shell and therefore we can make use of the various
+  features that a shell offers as in following example.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XExec( "echo \"GAP is great!\" > foo" );[127X[104X
+    [4X[25Xgap>[125X [27XExec( "cat foo" );[127X[104X
+    [4X[28XGAP is great![128X[104X
+    [4X[25Xgap>[125X [27XExec( "rm foo" );[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[2XExec[102X  calls  the  more general operation [2XProcess[102X ([14X11.1-1[114X). The function [2XEdit[102X
+  ([14X6.10-1[114X) should be used to call an editor from within [5XGAP[105X.[133X
+  

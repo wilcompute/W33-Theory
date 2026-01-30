@@ -1,0 +1,304 @@
+  
+  [1X2 [33X[0;0YThe Help System[133X[101X
+  
+  [33X[0;0YThis  chapter  describes  the [5XGAP[105X help system. The help system lets you read
+  the documentation interactively.[133X
+  
+  
+  [1X2.1 [33X[0;0YInvoking the Help[133X[101X
+  
+  [33X[0;0YThe  basic  command to read [5XGAP[105X's documentation from within a [5XGAP[105X session is
+  as follows.[133X
+  
+  [33X[0;0Y[10X?[[3Xbook[103X[10X:][?][3Xtopic[103X[10X[110X[133X
+  
+  [33X[0;0YFor an explanation and some examples see [14X'Tutorial: Help'[114X.[133X
+  
+  [33X[0;0YNote  that  the  first question mark must appear in the [13Xfirst position[113X after
+  the  [10Xgap>  [110X  prompt.  The  search strings [3Xbook[103X and [3Xtopic[103X are normalized in a
+  certain  way  (see  the  end  of this section for details) before the search
+  starts.  This  makes  the search case insensitive and there can be arbitrary
+  white space after the first question mark.[133X
+  
+  [33X[0;0YWhen  there are several manual sections that match the query a numbered list
+  of topics is displayed. These matches can be accessed with [10X?[3Xnumber[103X[10X[110X.[133X
+  
+  [33X[0;0YThere  are  some  further  specially  handled  commands  which  start with a
+  question mark. They are explained in Section [14X2.2[114X.[133X
+  
+  [33X[0;0YBy  default  [5XGAP[105X  shows  the help sections as text in the terminal (window),
+  page  by  page  if  the shown text does not fit on the screen. But there are
+  several other choices to read (other formats of) the documents: via a viewer
+  for [10Xpdf[110X files or via a web browser. This is explained below in Section [14X2.3[114X.[133X
+  
+  [33X[0;0Y[13XDetails of the string normalization process[113X[133X
+  
+  [33X[0;0YHere  is  a  precise  description  how the search strings [3Xbook[103X and [3Xtopic[103X are
+  normalized  before  a search starts: backslashes and double or single quotes
+  are  removed,  parentheses  and  braces are substituted by blanks, non-ASCII
+  characters  are considered as ISO-latin1 characters and the accented letters
+  are  substituted  by  their non-accented counterpart. Finally white space is
+  normalized.[133X
+  
+  
+  [1X2.2 [33X[0;0YBrowsing through the Sections[133X[101X
+  
+  [33X[0;0YHelp  books  for  [5XGAP[105X  are organized in chapters, sections, and subsections.
+  There are a few special commands starting with a question mark (in the first
+  position  after  the  [10Xgap>  [110X  prompt) which allow browsing a book section or
+  chapter wise.[133X
+  
+  [33X[0;0Y[10X?>[110X[133X
+  
+  [33X[0;0Y[10X?<[110X[133X
+  
+  [33X[0;0YThe  two  help  commands  [10X?<[110X and [10X?>[110X allow one to browse through a whole help
+  book.  [10X?<[110X  displays the section or subsection preceding the previously shown
+  (sub)section,  and  [10X?>[110X  takes you to the section or subsection following the
+  previously shown one.[133X
+  
+  [33X[0;0Y[10X?>>[110X[133X
+  
+  [33X[0;0Y[10X?<<[110X[133X
+  
+  [33X[0;0Y[10X?<<[110X  takes  you  back  to  the  beginning of the current chapter. If you are
+  already  at  the  start  of  a chapter [10X?<<[110X takes you to the beginning of the
+  previous chapter. [10X?>>[110X takes you to the beginning of the next chapter.[133X
+  
+  [33X[0;0Y[10X?-[110X[133X
+  
+  [33X[0;0Y[10X?+[110X[133X
+  
+  [33X[0;0Y[5XGAP[105X  remembers the last few sections that you have read. [10X?-[110X takes you to the
+  one  that  you  have  read  before  the  current one, and displays it again.
+  Further  applications  of  [10X?-[110X  take  you  further  back  in this history. [10X?+[110X
+  reverses  this process, i.e., it takes you back to the section that you have
+  read  after  the  current one. It is important to note that [10X?-[110X and [10X?+[110X do not
+  alter the history like the other help commands.[133X
+  
+  [33X[0;0Y[10X?books[110X[133X
+  
+  [33X[0;0YThis command shows a list of the books which are currently known to the help
+  system. For each book there is a short name which is used with the [3Xbook[103X part
+  of  the  basic help query and there is a long name which hopefully tells you
+  what this book is about.[133X
+  
+  [33X[0;0YA  short  name  which  ends  in  [10X(not  loaded)[110X refers to a [5XGAP[105X package whose
+  documentation  is  loaded  but  which  needs  a call of [2XLoadPackage[102X ([14X76.2-1[114X)
+  before you can use the described functions.[133X
+  
+  [33X[0;0Y[10X?[[3Xbook[103X[10X:]sections[110X[133X
+  
+  [33X[0;0Y[10X?[[3Xbook[103X[10X:][chapters][110X[133X
+  
+  [33X[0;0YThese  commands  show tables of contents for all available, respectively the
+  matching  books.  For  some  books  these commands show the same, namely the
+  whole table of contents.[133X
+  
+  [33X[0;0Y[10X?[110X[133X
+  
+  [33X[0;0Y[10X?&[110X[133X
+  
+  [33X[0;0YThese  commands  redisplay  the  last shown help section. In the form [10X?&[110X the
+  next  preferred help viewer is used for the display (provided one has chosen
+  several viewers), see [2XSetHelpViewer[102X ([14X2.3-1[114X) below.[133X
+  
+  
+  [1X2.3 [33X[0;0YChanging the Help Viewer[133X[101X
+  
+  [33X[0;0YBooks  of the [5XGAP[105X help system or package manuals can be available in several
+  formats.  Currently  the  following  formats  occur  (not all of them may be
+  available for all books):[133X
+  
+  [8Xtext[108X
+        [33X[0;6YThis  is  used  for  display  in  the  terminal window in which [5XGAP[105X is
+        running.  Complicated mathematical expressions may not be easy to read
+        in this format.[133X
+  
+  [8Xpdf[108X
+        [33X[0;6YAdobe's  [10Xpdf[110X  format. Can be used for printing and onscreen reading on
+        most  current  systems  (with  freely available software). Some manual
+        books contain hyperlinks in this format.[133X
+  
+  [8XHTML[108X
+        [33X[0;6YThe  format  of web pages. Can be used with any web browser. There may
+        be  hyperlink information available which allows a convenient browsing
+        through  the  book  via  cross-references. This format has the problem
+        that complicated formulae may be not be easy to read since there is no
+        syntax  for  formulae  in  HTML.  (Some older manual books use special
+        symbol  fonts  for formulae and need a particular configuration of the
+        web  browser  for correct display. Some manuals may use technology for
+        quite sophisticated formula display.)[133X
+  
+  [33X[0;0YDepending on your operating system and available additional software you can
+  use several of these formats with [5XGAP[105X's help system. This is configured with
+  the following command.[133X
+  
+  [1X2.3-1 SetHelpViewer[101X
+  
+  [33X[1;0Y[29X[2XSetHelpViewer[102X( [3Xviewer1[103X, [3Xviewer2[103X, [3X...[103X ) [32X function[133X
+  
+  [33X[0;0YThis  command  takes  an arbitrary number of arguments which must be strings
+  describing a viewer. The recognized viewers are explained below. A call with
+  no arguments shows the current setting.[133X
+  
+  [33X[0;0YThe  first  given  arguments  are  those with higher priority. So, if a help
+  section  is  available in the format needed by [3Xviewer1[103X, this viewer is used.
+  If  not, availability of the format for [3Xviewer2[103X is checked and so on. Recall
+  that  the  command [10X?&[110X displays the last seen section again but with the next
+  possible viewer in your list, see [14X2.2[114X.[133X
+  
+  [33X[0;0YThe  viewer [10X"screen"[110X (see below) is always silently appended since we assume
+  that each help book is available in text format.[133X
+  
+  [33X[0;0YIf  you  want  to  change  the  default  setting  you  can  use  a  call  of
+  [10XSetUserPreference(  "HelpViewers",  [  ...  ]  );[110X  (the  list  in the second
+  argument containing the viewers you want) in your [11Xgap.ini[111X file (see [14X3.2[114X).[133X
+  
+  [8X[10X"screen"[110X[8X[108X
+        [33X[0;6YThis  is  the  default setting. The help is shown in text format using
+        the  [2XPager[102X  ([14X2.4-1[114X)  command.  Hint:  Text  versions  of  manuals  are
+        formatted  assuming that your terminal displays at least 80 characters
+        per  line, if this is not the case some sections may look very bad. We
+        suggest  to  use  a terminal in [10XUTF-8[110X encoding with a fixed width font
+        (this is the default on most modern Linux/Windows/Mac systems anyway).
+        Terminals  in  [10XISO-8859-X[110X  encoding will also work reasonably well (so
+        far,  since  we  do  not  yet  use  many special characters which such
+        terminals could not display).[133X
+  
+  [8X[10X"firefox"[110X[8X, [10X"chrome"[110X[8X, [10X"mozilla"[110X[8X, [10X"netscape"[110X[8X, [10X"konqueror"[110X[8X[108X
+        [33X[0;6YIf  a  book  is  available  in  HTML  format  this  is shown using the
+        corresponding web browser. How well this works, for example by using a
+        running  instance  of  this  browser, depends on your particular start
+        script  of  this  browser.  (Note, that for some old books the browser
+        must be configured to use symbol fonts.)[133X
+  
+  [8X[10X"browser"[110X[8X[108X
+        [33X[0;6Y(for  MS  Windows)  If  a book is available in HTML format, it will be
+        opened  using  the  Windows  default  application  (typically,  a  web
+        browser).[133X
+  
+  [8X[10X"links2"[110X[8X, [10X"w3m"[110X[8X, [10X"lynx"[110X[8X[108X
+        [33X[0;6YIf  a  book  is  available in HTML format this is shown using the text
+        based   [10X"links2"[110X   (in  graphics  mode),  [10Xw3m[110X  or  [10Xlynx[110X  web  browser,
+        respectively, inside the terminal running [5XGAP[105X. (Formulae in some older
+        books which use symbol fonts may be unreadable.)[133X
+  
+  [8X[10X"mac default browser"[110X[8X, [10X"browser"[110X[8X, [10X"safari"[110X[8X, [10X"firefox"[110X[8X[108X
+        [33X[0;6Y(for  macOS)  If a book is available in HTML format this is shown in a
+        web  browser. The options [10X"safari"[110X and [10X"firefox"[110X use the corresponding
+        browsers. The other two options use the program default browser (which
+        can be set in Safari's preferences, in the "General" tab).[133X
+  
+  [8X[10X"xpdf"[110X[8X[108X
+        [33X[0;6Y(on X window systems) If a book is available in pdf format it is shown
+        with the onscreen viewer program [10Xxpdf[110X (which must be installed on your
+        system).  This  is  a nice program, once it is running it is reused by
+        [5XGAP[105X for the next displays of help sections.[133X
+  
+  [8X[10X"acroread"[110X[8X[108X
+        [33X[0;6YIf  a  book  is  available in pdf format it is shown with the onscreen
+        viewer program [10Xacroread[110X (which must be available on your system). This
+        program  does  not allow remote commands or startup with a given page.
+        Therefore  the  page numbers you have to visit are just printed on the
+        screen.  When  you  are  looking at several sections of the same book,
+        this viewer assumes that the [10Xacroread[110X window still exists. When you go
+        to another book a new acroread window is launched.[133X
+  
+  [8X[10X"pdf viewer"[110X[8X, [10X"skim"[110X[8X, [10X"preview"[110X[8X, [10X"adobe reader"[110X[8X[108X
+        [33X[0;6Y(for  macOS)  If  a book is available in pdf format this is shown in a
+        pdf  viewer.  The options [10X"skim"[110X, [10X"preview"[110X and [10X"adobe reader"[110X use the
+        corresponding  viewers. The other two options use the pdf viewer which
+        you  have  chosen  to  open  pdf files from the Finder. Note that only
+        [10X"Skim"[110X seems to be capable to open a pdf file on a given page. For the
+        other  help  viewers,  the  page  numbers where the information can be
+        found  will  just  be  printed on the screen. None of the help viewers
+        seems  to be capable of opening a pdf at a given named destination (i.
+        e.,  jump  to precisely the place where the information can be found).
+        The  pdf  viewer  [10X"Skim"[110X is open source software, it can be downloaded
+        from [11Xhttps://skim-app.sourceforge.io/[111X.[133X
+  
+  [8X[10X"less"[110X[8X or [10X"more"[110X[8X[108X
+        [33X[0;6YThis  is  the  same  as [10X"screen"[110X but additionally the user preferences
+        [10X"Pager"[110X  and  [10X"PagerOptions"[110X  are  set,  see  the section [14X2.4[114X for more
+        details.[133X
+  
+  [33X[0;0YPlease,     send     ideas     for     further     viewer     commands    to
+  [7Xmailto:support@gap-system.org[107X.[133X
+  
+  
+  [1X2.4 [33X[0;0YThe Pager Command[133X[101X
+  
+  [33X[0;0Y[5XGAP[105X contains a builtin pager which shows a text string which does not fit on
+  the  screen  page  by  page.  Its  functionality  is  very  rudimentary  and
+  self-explaining.  This  is  because (at least under UNIX) there are powerful
+  external standard programs which do this job.[133X
+  
+  [1X2.4-1 Pager[101X
+  
+  [33X[1;0Y[29X[2XPager[102X( [3Xlines[103X ) [32X function[133X
+  
+  [33X[0;0YThis  function  can be used to display a text on screen using a pager, i.e.,
+  the text is shown page by page.[133X
+  
+  [33X[0;0YThere  is a default builtin pager in [5XGAP[105X which has very limited capabilities
+  but should work on any system.[133X
+  
+  [33X[0;0YAt least on a UNIX system one should use an external pager program like [10Xless[110X
+  or  [10Xmore[110X.  [5XGAP[105X  assumes  that  this program has command line options [10X+nr[110X and
+  [10X+/str[110X which start the display of the text with line number [10Xnr[110X or at the line
+  with the first occurrence of the string [10Xstr[110X.[133X
+  
+  [33X[0;0YWhich  pager  is  used  can  be  controlled  by  setting the user preference
+  [10X"Pager"[110X.  The default value is [10X"builtin"[110X which means that the internal pager
+  is used.[133X
+  
+  [33X[0;0YOn  UNIX systems you probably want to set the user preference [10X"Pager"[110X to the
+  value  [10X"less"[110X  or  [10X"more"[110X,  you can do this for example in your [11Xgap.ini[111X file
+  (see [14X3.2[114X). In that case you can also tell [5XGAP[105X a list of standard options for
+  the external pager, via the user preference [10X"PagerOptions"[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X  SetUserPreference( "Pager", "less" );[128X[104X
+    [4X[28X  SetUserPreference( "PagerOptions", ["-f","-r","-a","-i","-M","-j2"] );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe argument [3Xlines[103X can have one of the following forms:[133X
+  
+  [31X1[131X   [33X[0;6Ya string (i.e., lines are separated by newline characters)[133X
+  
+  [31X2[131X   [33X[0;6Ya  list  of strings (without newline characters) which are interpreted
+        as lines of the text to be shown[133X
+  
+  [31X3[131X   [33X[0;6Ya  record  with  component  [10Xlines[110X  as in 1. or 2. and optional further
+        components[133X
+  
+  [33X[0;0YIn case 3. currently the following additional components are used:[133X
+  
+  [8X[10Xformatted[110X[8X[108X
+        [33X[0;6Ycan  be  [9Xfalse[109X or [9Xtrue[109X. If set to [9Xtrue[109X the builtin pager tries to show
+        the  text  exactly  as  it  is  given  (avoiding  [5XGAP[105X's automatic line
+        breaking),[133X
+  
+  [8X[10Xstart[110X[8X[108X
+        [33X[0;6Ymust  be  a positive integer or a string. An integer is interpreted as
+        the  number  of  the  first  line  shown  by  the  pager,  a string is
+        interpreted  as  a  search  string such that the first line containing
+        this  string  is the first line shown by the pager (in both cases, one
+        may see the beginning of the text via back scrolling),[133X
+  
+  [8X[10XexitAtEnd[110X[8X[108X
+        [33X[0;6Ycan  be [9Xfalse[109X or [9Xtrue[109X. If set to [9Xtrue[109X (the default), the builtin pager
+        is  terminated  as  soon  as  the  end of the list is shown; otherwise
+        entering the [12Xq[112X key is necessary in order to return from the pager.[133X
+  
+  [33X[0;0YThe  [2XPager[102X command is used by [5XGAP[105X's help system for displaying help sections
+  in text format. But, of course, it may be used for other purposes as well.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xs6 := SymmetricGroup(6);;[127X[104X
+    [4X[25Xgap>[125X [27Xwords := ["This", "is", "a", "very", "stupid", "example"];;[127X[104X
+    [4X[25Xgap>[125X [27Xl := List(s6, p-> Permuted(words, p));;[127X[104X
+    [4X[25Xgap>[125X [27XPager(List(l, a-> JoinStringsWithSeparator(a," ")));;[127X[104X
+  [4X[32X[104X
+  

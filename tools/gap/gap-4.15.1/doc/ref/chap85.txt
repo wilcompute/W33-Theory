@@ -1,0 +1,371 @@
+  
+  [1X85 [33X[0;0YFunction-Operation-Attribute Triples[133X[101X
+  
+  [33X[0;0Y[5XGAP[105X  is  eager to maintain information that it has gathered about an object,
+  possibly   by   lengthy  calculations.  The  most  important  mechanism  for
+  information  maintenance  is  the  automatic  storage and look-up that takes
+  place  for  [13Xattributes[113X; and this was already mentioned in section [14X'Tutorial:
+  Attributes'[114X.  In this chapter we will describe further mechanisms that allow
+  storage of results that are not values of attributes.[133X
+  
+  [33X[0;0YThe  idea  which is common to all sections is that certain operations, which
+  are  not  themselves  attributes, have an attribute associated with them. To
+  automatically delegate tasks to the attribute, [5XGAP[105X knows, in addition to the
+  [13Xoperation[113X  and  the  [13Xattributes[113X also a [13Xfunction[113X, which is [21Xwrapped around[121X the
+  other  two.  This [21Xwrapper function[121X is called by the user and decides whether
+  to  call  the  operation  or  the  attribute  or  possibly  both.  The whole
+  [13Xf[113Xunction-[13Xo[113Xperation-[13Xa[113Xttribute  triple  (or  [13XFOA triple[113X) is set up by a single
+  [5XGAP[105X  command  which  writes  the  wrapper function and already installs some
+  methods,  e.g., for the attribute to fall back on the operation. The idea is
+  then  that  subsequent  methods,  which  perform the actual computation, are
+  installed  only  for  the  operation,  whereas  the wrapper function remains
+  unaltered,  and  in  general  no  additional  methods  for the attribute are
+  required either.[133X
+  
+  
+  [1X85.1 [33X[0;0YKey Dependent Operations[133X[101X
+  
+  [1X85.1-1 KeyDependentOperation[101X
+  
+  [33X[1;0Y[29X[2XKeyDependentOperation[102X( [3Xname[103X, [3Xdom-req[103X, [3Xkey-req[103X, [3Xkey-test[103X ) [32X function[133X
+  
+  [33X[0;0YThere are several functions that require as first argument a domain, e.g., a
+  group,  and  as  second  argument  something  much  simpler,  e.g., a prime.
+  [2XSylowSubgroup[102X  ([14X39.13-1[114X)  is  an  example.  Since  its  value depends on two
+  arguments,  it cannot be an attribute, yet one would like to store the Sylow
+  subgroups once they have been computed.[133X
+  
+  [33X[0;0YThe   idea   is   to   provide   an   attribute   of   the   group,   called
+  [10XComputedSylowSubgroups[110X,  and  to  store  the  groups  in this list. The name
+  implies  that  the value of this attribute may change in the course of a [5XGAP[105X
+  session,  whenever  a  newly-computed  Sylow  subgroup is put into the list.
+  Therefore,  this is a [13Xmutable attribute[113X (see [14X13.5[114X). The list contains primes
+  in  each  bound  odd  position  and  a  corresponding  Sylow subgroup in the
+  following even position. More precisely, if [10X[3Xp[103X[10X = ComputedSylowSubgroups( [3XG[103X[10X )[
+  [3Xeven[103X[10X  -  1  ][110X  then  [10XComputedSylowSubgroups(  [3XG[103X[10X )[ [3Xeven[103X[10X ][110X holds the value of
+  [10XSylowSubgroup(  [3XG[103X[10X,  [3Xp[103X[10X  )[110X.  The pairs are sorted in increasing order of [3Xp[103X, in
+  particular  at  most  one  Sylow [3Xp[103X subgroup of [3XG[103X is stored for each prime [3Xp[103X.
+  This  attribute value is maintained by the function [2XSylowSubgroup[102X ([14X39.13-1[114X),
+  which  calls  the  operation [10XSylowSubgroupOp( [3XG[103X[10X, [3Xp[103X[10X )[110X to do the real work, if
+  the  prime  [3Xp[103X  cannot be found in the list. So methods that do the real work
+  should be installed for [10XSylowSubgroupOp[110X and not for [2XSylowSubgroup[102X ([14X39.13-1[114X).[133X
+  
+  [33X[0;0YThe  same  mechanism  works  for  other  functions  as well, e.g., for [2XPCore[102X
+  ([14X39.11-3[114X), but also for [2XHallSubgroup[102X ([14X39.13-3[114X), where the second argument is
+  not a prime but a set of primes.[133X
+  
+  [33X[0;0Y[2XKeyDependentOperation[102X  declares  the  two  operations  and  the attribute as
+  described  above,  with  names  [3Xname[103X,  [3Xname[103X[10XOp[110X, and [10XComputed[110X[3Xname[103X[10Xs[110X, as well as
+  tester  and  setter  operations  [10XHas[110X[3Xname[103X  and  [10XSet[110X[3Xname[103X,  respectively. Note,
+  however,  that  the  tester is not a filter. [3Xdom-req[103X and [3Xkey-req[103X specify the
+  required  filters for the first and second argument of the operation [3Xname[103X[10XOp[110X,
+  which  are  needed  to create this operation with [2XDeclareOperation[102X ([14X78.1-5[114X).
+  [3Xdom-req[103X  is  also  the  required  filter  for  the  corresponding  attribute
+  [10XComputed[110X[3Xname[103X[10Xs[110X.  The  fourth  argument  [3Xkey-test[103X  is in general a function to
+  which  the  second  argument  [3Xinfo[103X  of  [10X[3Xname[103X[10X( [3XD[103X[10X, [3Xinfo[103X[10X )[110X will be passed. This
+  function can perform tests on [3Xinfo[103X, and raise an error if appropriate.[133X
+  
+  [33X[0;0YFor   example,   to  set  up  the  three  objects  [2XSylowSubgroup[102X  ([14X39.13-1[114X),
+  [10XSylowSubgroupOp[110X,   [10XComputedSylowSubgroups[110X  together,  the  declaration  file
+  [11Xlib/grp.gd[111X contains the following line of code.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XKeyDependentOperation( "SylowSubgroup", IsGroup, IsPosInt, "prime" );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIn  this example, [3Xkey-test[103X has the value [10X"prime"[110X, which is silently replaced
+  by a function that tests whether its argument is a prime.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xs4 := Group((1,2,3,4),(1,2));;[127X[104X
+    [4X[25Xgap>[125X [27XSylowSubgroup( s4, 7 );;  ComputedSylowSubgroups( s4 );[127X[104X
+    [4X[28X[ 7, Group(()) ][128X[104X
+    [4X[25Xgap>[125X [27XSylowSubgroup( s4, 2 );;  ComputedSylowSubgroups( s4 );[127X[104X
+    [4X[28X[ 2, Group([ (3,4), (1,4)(2,3), (1,3)(2,4) ]), 7, Group(()) ][128X[104X
+    [4X[25Xgap>[125X [27XHasSylowSubgroup( s4, 5 );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XSetSylowSubgroup( s4, 5, Group(()));; ComputedSylowSubgroups( s4 );[127X[104X
+    [4X[28X[ 2, Group([ (3,4), (1,4)(2,3), (1,3)(2,4) ]), 5, Group(()), 7, Group(()) ][128X[104X
+  [4X[32X[104X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSylowSubgroup( s4, 6 );[127X[104X
+    [4X[28XError, SylowSubgroup: <p> must be a prime called from[128X[104X
+    [4X[28X<compiled or corrupted call value>  called from[128X[104X
+    [4X[28X<function>( <arguments> ) called from read-eval-loop[128X[104X
+    [4X[28XEntering break read-eval-print loop ...[128X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou can 'return;' to continue[128X[104X
+    [4X[26Xbrk>[126X [27Xquit;[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThus  the  prime  test need not be repeated in the methods for the operation
+  [10XSylowSubgroupOp[110X  (which  are  installed  to  do the real work). Note that no
+  methods    need    be    installed    for    [2XSylowSubgroup[102X   ([14X39.13-1[114X)   and
+  [10XComputedSylowSubgroups[110X. If a method is installed with [2XInstallMethod[102X ([14X78.3-1[114X)
+  for  a  wrapper  operation such as [2XSylowSubgroup[102X ([14X39.13-1[114X) then a warning is
+  signalled  provided  the  [2XInfoWarning[102X  ([14X7.4-8[114X)  level  is  at  least [10X1[110X. (Use
+  [2XInstallMethod[102X ([14X78.3-1[114X) in order to suppress the warning.)[133X
+  
+  
+  [1X85.2 [33X[0;0YIn Parent Attributes[133X[101X
+  
+  [1X85.2-1 InParentFOA[101X
+  
+  [33X[1;0Y[29X[2XInParentFOA[102X( [3Xname[103X, [3Xsuper[103X, [3Xsub[103X, [3XAorP[103X ) [32X function[133X
+  
+  [33X[0;0YThis  section  describes  how you can add new [21Xin parent attributes[121X (see [14X31.8[114X
+  and  [14X31.7[114X).  As  an  example, we describe how [2XIndex[102X ([14X39.3-2[114X) and its related
+  functions are implemented.[133X
+  
+  [33X[0;0YThere  are  two  operations  [2XIndex[102X  ([14X39.3-2[114X)  and  [10XIndexOp[110X, and an attribute
+  [10XIndexInParent[110X. They are created together as shown below, and after they have
+  been  created,  methods  need be installed only for [10XIndexOp[110X. In the creation
+  process,  [10XIndexInParent[110X  already  gets  one  default  method  installed  (in
+  addition  to  the usual system getter of each attribute, see [14X13.5[114X), namely [10XD
+  -> IndexOp( Parent( D ), D )[110X.[133X
+  
+  [33X[0;0YThe operation [2XIndex[102X ([14X39.3-2[114X) proceeds as follows.[133X
+  
+  [30X    [33X[0;6YIf  it  is  called  with  the  two  arguments  [3Xsuper[103X  and  [3Xsub[103X, and if
+        [10XHasParent(  [3Xsub[103X[10X )[110X and [10XIsIdenticalObj( [3Xsuper[103X[10X, Parent( [3Xsub[103X[10X ) )[110X are [9Xtrue[109X,
+        [10XIndexInParent[110X is called with argument [3Xsub[103X, and the result is returned.[133X
+  
+  [30X    [33X[0;6YOtherwise,  [10XIndexOp[110X  is  called  with  the  same  arguments that [2XIndex[102X
+        ([14X39.3-2[114X) was called with, and the result is returned.[133X
+  
+  [33X[0;0Y(Note  that  it  is in principle possible to install even [2XIndex[102X ([14X39.3-2[114X) and
+  [10XIndexOp[110X  methods  for  a  number  of  arguments  different  from  two,  with
+  [2XInstallOtherMethod[102X ([14X78.3-2[114X), see [14X13.5[114X).[133X
+  
+  [33X[0;0YThe  call  of  [2XInParentFOA[102X  declares  the  operations  and  the attribute as
+  described  above,  with  names [3Xname[103X, [3Xname[103X[10XOp[110X, and [3Xname[103X[10XInParent[110X. [3Xsuper-req[103X and
+  [3Xsub-req[103X  specify  the  required filters for the first and second argument of
+  the  operation  [3Xname[103X[10XOp[110X,  which  are  needed  to  create  this operation with
+  [2XDeclareOperation[102X  ([14X78.1-5[114X).  [3Xsub-req[103X  is  also  the  required filter for the
+  corresponding  attribute  [3Xname[103X[10XInParent[110X;  note that [2XHasParent[102X ([14X31.7-1[114X) is [13Xnot[113X
+  required  for  the argument [3XU[103X of [3Xname[103X[10XInParent[110X, because even without a parent
+  stored,  [10XParent(  [3XU[103X[10X  )[110X  is  legal,  meaning  [3XU[103X itself (see [14X31.7[114X). The fourth
+  argument must be [2XDeclareProperty[102X ([14X13.7-5[114X) if [3Xname[103X[10XInParent[110X takes only boolean
+  values  (for  example  in  the  case [10XIsNormalInParent[110X), and [2XDeclareAttribute[102X
+  ([14X13.5-4[114X) otherwise.[133X
+  
+  [33X[0;0YFor  example,  to  set  up  the  three  objects [2XIndex[102X ([14X39.3-2[114X), [10XIndexOp[110X, and
+  [10XIndexInParent[110X  together,  the  declaration  file  [11Xlib/domain.gd[111X contains the
+  following line of code.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInParentFOA( "Index", IsGroup, IsGroup, DeclareAttribute );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote that no methods need be installed for [2XIndex[102X ([14X39.3-2[114X) and [10XIndexInParent[110X.[133X
+  
+  
+  [1X85.3 [33X[0;0YOperation Functions[133X[101X
+  
+  [33X[0;0YChapter [14X41[114X  and,  in  particular,  the  Section [14X41.1[114X  explain  that  certain
+  operations such as [14X41.4[114X), besides their usual usage with arguments [3XG[103X, [3XD[103X, and
+  [3Xopr[103X,  can also be applied to an external set ([22XG[122X-set), in which case they can
+  be  interpreted  as  attributes.  Moreover,  they can also be interpreted as
+  attributes  for permutation groups, meaning the natural action on the set of
+  its moved points.[133X
+  
+  [33X[0;0YThe  definition  of  [14X41.4[114X  says  that  a  method  should  be a function with
+  arguments  [3XG[103X,  [3XD[103X,  [3Xgens[103X,  [3Xoprs[103X,  and  [3Xopr[103X,  as  in the case of the operation
+  [2XExternalSet[102X  ([14X41.12-2[114X)  when  specified  via  [3Xgens[103X and [3Xoprs[103X (see [14X41.12[114X). All
+  other syntax variants allowed for [14X41.4[114X (e.g., leaving out [3Xgens[103X and [3Xoprs[103X) are
+  handled by default methods.[133X
+  
+  [33X[0;0YThe default methods for [14X41.4[114X support the following behaviour.[133X
+  
+  [31X1[131X   [33X[0;6YIf  the only argument is an external set [3Xxset[103X and the attribute tester
+        [10XHasOrbits(  [3Xxset[103X[10X )[110X returns [9Xtrue[109X, the stored value of that attribute is
+        returned.[133X
+  
+  [31X2[131X   [33X[0;6YIf  the  only argument is an external set [3Xxset[103X and the attribute value
+        is  not  known,  the  default  arguments are obtained from the data of
+        [3Xxset[103X.[133X
+  
+  [31X3[131X   [33X[0;6YIf  [3Xgens[103X  and  [3Xoprs[103X  are  not  specified,  [3Xgens[103X is set to [10XPcgs( [3XG[103X[10X )[110X if
+        [10XCanEasilyComputePcgs(  [3XG[103X[10X  )[110X  is  [9Xtrue[109X,  and  to [10XGeneratorsOfGroup( [3XG[103X[10X )[110X
+        otherwise; [3Xoprs[103X is set to [3Xgens[103X.[133X
+  
+  [31X4[131X   [33X[0;6YThe default value of [3Xopr[103X is [2XOnPoints[102X ([14X41.2-1[114X).[133X
+  
+  [31X5[131X   [33X[0;6YIn the case of an operation of a permutation group [3XG[103X on [10XMovedPoints( [3XG[103X[10X
+        )[110X  via  [2XOnPoints[102X  ([14X41.2-1[114X),  if  the  attribute  tester [10XHasOrbits( [3XG[103X[10X )[110X
+        returns [9Xtrue[109X, the stored attribute value is returned.[133X
+  
+  [31X6[131X   [33X[0;6YThe operation is called as [10X[3Xresult[103X[10X:= Orbits( [3XG[103X[10X, [3XD[103X[10X, [3Xgens[103X[10X, [3Xoprs[103X[10X, [3Xopr[103X[10X )[110X.[133X
+  
+  [31X7[131X   [33X[0;6YIn  the  case  of an external set [3Xxset[103X or a permutation group [3XG[103X in its
+        natural action, the attribute setter is called to store [3Xresult[103X.[133X
+  
+  [31X8[131X   [33X[0;6Y[3Xresult[103X is returned.[133X
+  
+  [33X[0;0YThe  declaration  of  operations  that  match  the  above pattern is done as
+  follows.[133X
+  
+  [1X85.3-1 OrbitsishOperation[101X
+  
+  [33X[1;0Y[29X[2XOrbitsishOperation[102X( [3Xname[103X, [3Xreqs[103X, [3Xusetype[103X, [3XAorP[103X ) [32X function[133X
+  
+  [33X[0;0Ydeclares an attribute [10Xop[110X, with name [3Xname[103X. The second argument [3Xreqs[103X specifies
+  the  list  of required filters for the usual (five-argument) methods that do
+  the real work.[133X
+  
+  [33X[0;0YIf the third argument [3Xusetype[103X is [9Xtrue[109X, the function call [10Xop( xset )[110X will –if
+  the  value  of  [10Xop[110X  for [10Xxset[110X is not yet known– delegate to the five-argument
+  call of [10Xop[110X with second argument [10Xxset[110X rather than with [10XD[110X. This allows certain
+  methods  for  [10Xop[110X  to make use of the type of [10Xxset[110X, in which the types of the
+  external  subsets  of  [10Xxset[110X  and  of the external orbits in [10Xxset[110X are stored.
+  (This  is used to avoid repeated calls of [2XNewType[102X ([14X13.9-3[114X) in functions like
+  [10XExternalOrbits(  xset  )[110X,  which call [10XExternalOrbit( xset, pnt )[110X for several
+  values of [10Xpnt[110X.)[133X
+  
+  [33X[0;0YFor  property  testing  functions such as [2XIsTransitive[102X ([14X41.10-1[114X), the fourth
+  argument   [3XAorP[103X   must   be  [2XNewProperty[102X  ([14X13.7-4[114X),  otherwise  it  must  be
+  [2XNewAttribute[102X  ([14X13.5-3[114X);  in  the former case, a property is returned, in the
+  latter case an attribute that is not a property.[133X
+  
+  [33X[0;0YFor  example,  to set up the operation [2XOrbits[102X ([14X41.4-2[114X), the declaration file
+  [11Xlib/oprt.gd[111X contains the following line of code:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XOrbitsishOperation( "Orbits", OrbitsishReq, false, NewAttribute );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe global variable [10XOrbitsishReq[110X contains the standard requirements[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XOrbitsishReq := [ IsGroup, IsList,[128X[104X
+    [4X[28X                  IsList,[128X[104X
+    [4X[28X                  IsList,[128X[104X
+    [4X[28X                  IsFunction ];[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Ywhich are usually entered in calls to [2XOrbitsishOperation[102X.[133X
+  
+  [33X[0;0YThe  new  operation,  e.g., [2XOrbits[102X ([14X41.4-2[114X), can be called either as [10XOrbits(
+  [3Xxset[103X[10X  )[110X  for an external set [3Xxset[103X, or as [10XOrbits( [3XG[103X[10X )[110X for a permutation group
+  [3XG[103X, meaning the orbits on the moved points of [3XG[103X via [2XOnPoints[102X ([14X41.2-1[114X), or as[133X
+  
+  [33X[0;0Y[10XOrbits( [3XG[103X[10X, [3XOmega[103X[10X[, [3Xgens[103X[10X, [3Xacts[103X[10X][, [3Xact[103X[10X] )[110X,[133X
+  
+  [33X[0;0Ywith  a  group  [3XG[103X,  a  domain  or  list  [3XOmega[103X,  generators  [3Xgens[103X  of [3XG[103X, and
+  corresponding  elements  [3Xacts[103X  that  act  on [3XOmega[103X via the function [3Xact[103X; the
+  default  of [3Xgens[103X and [3Xacts[103X is a list of group generators of [3XG[103X, the default of
+  [3Xact[103X is [2XOnPoints[102X ([14X41.2-1[114X).[133X
+  
+  [33X[0;0YOnly  methods  for  the five-argument version need to be installed for doing
+  the  real work. (And of course methods for one argument in case one wants to
+  define a new meaning of the attribute.)[133X
+  
+  [1X85.3-2 OrbitishFO[101X
+  
+  [33X[1;0Y[29X[2XOrbitishFO[102X( [3Xname[103X, [3Xreqs[103X, [3Xfamrel[103X, [3Xusetype[103X, [3Xrealenum[103X ) [32X function[133X
+  
+  [33X[0;0Yis used to create operations like [2XOrbit[102X ([14X41.4-1[114X). This function is analogous
+  to  [2XOrbitsishOperation[102X  ([14X85.3-1[114X),  but  for operations [3Xorbish[103X like [10XOrbit( [3XG[103X[10X,
+  [3XOmega[103X[10X,  [3Xpnt[103X[10X  )[110X.  Since  the  return values of these operations depend on the
+  additional argument [3Xpnt[103X, there is no associated attribute.[133X
+  
+  [33X[0;0YThe  call  of [2XOrbitishFO[102X declares a wrapper function and its operation, with
+  names [3Xname[103X and [3Xname[103X[10XOp[110X.[133X
+  
+  [33X[0;0YThe  second  argument  [3Xreqs[103X  specifies  the list of required filters for the
+  operation [3Xname[103X[10XOp[110X.[133X
+  
+  [33X[0;0YThe  third  argument  [3Xfamrel[103X is used to test the family relation between the
+  second  and  third  argument  of  [10X[3Xname[103X[10X(  [3XG[103X[10X, [3XD[103X[10X, [3Xpnt[103X[10X )[110X. For example, [3Xfamrel[103X is
+  [10XIsCollsElms[110X  in the case of [2XOrbit[102X ([14X41.4-1[114X) because [3Xpnt[103X must be an element of
+  [3XD[103X.  Similarly, in the call [10XBlocks( [3XG[103X[10X, [3XD[103X[10X, [3Xseed[103X[10X )[110X, [3Xseed[103X must be a subset of [3XD[103X,
+  and the family relation must be [2XIsIdenticalObj[102X ([14X12.5-1[114X).[133X
+  
+  [33X[0;0YThe  fourth  argument  [3Xusetype[103X  serves  the  same  purpose as in the case of
+  [2XOrbitsishOperation[102X  ([14X85.3-1[114X).  [3Xusetype[103X  can  also  be  an attribute, such as
+  [10XBlocksAttr[110X  or  [10XMaximalBlocksAttr[110X.  In  this  case,  if  only one of the two
+  arguments [3XOmega[103X and [3Xpnt[103X is given, blocks with no seed are computed, they are
+  stored  as  attribute  values  according  to the rules of [2XOrbitsishOperation[102X
+  ([14X85.3-1[114X).[133X
+  
+  [33X[0;0YIf  the  5th  argument is set to [9Xtrue[109X, the action for an external set should
+  use  the  enumerator,  otherwise it uses the [2XHomeEnumerator[102X ([14X41.12-5[114X) value.
+  This will make a difference for external orbits as part of a larger domain.[133X
+  
+  
+  [1X85.3-3 [33X[0;0YExample: Orbit and OrbitOp[133X[101X
+  
+  [33X[0;0YFor example, to setup the function [2XOrbit[102X ([14X41.4-1[114X) and its operation [10XOrbitOp[110X,
+  the declaration file [11Xlib/oprt.gd[111X contains the following line of code:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XOrbitishFO( "Orbit", OrbitishReq, IsCollsElms, false, false );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe variable [10XOrbitishReq[110X contains the standard requirements[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XOrbitishReq  := [ IsGroup, IsList, IsObject,[128X[104X
+    [4X[28X                  IsList,[128X[104X
+    [4X[28X                  IsList,[128X[104X
+    [4X[28X                  IsFunction ];[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Ywhich are usually entered in calls to [2XOrbitishFO[102X ([14X85.3-2[114X).[133X
+  
+  [33X[0;0YThe  relation  test  via [3Xfamrel[103X is used to provide a uniform construction of
+  the  wrapper  functions  created  by  [2XOrbitishFO[102X  ([14X85.3-2[114X),  in spite of the
+  different  syntax  of  the  specific  functions. For example, [2XOrbit[102X ([14X41.4-1[114X)
+  admits the calls [10XOrbit( [3XG[103X[10X, [3XD[103X[10X, [3Xpnt[103X[10X, [3Xopr[103X[10X )[110X and [10XOrbit( [3XG[103X[10X, [3Xpnt[103X[10X, [3Xopr[103X[10X )[110X, i.e., the
+  second  argument [3XD[103X may be omitted; [2XBlocks[102X ([14X41.11-1[114X) admits the calls [10XBlocks(
+  [3XG[103X[10X,  [3XD[103X[10X,  [3Xseed[103X[10X, [3Xopr[103X[10X )[110X and [10XBlocks( [3XG[103X[10X, [3XD[103X[10X, [3Xopr[103X[10X )[110X, i.e., the third argument may be
+  omitted. The translation to the appropriate call of [10XOrbitOp[110X or [10XBlocksOp[110X, for
+  either operation with five or six arguments, is handled via [3Xfamrel[103X.[133X
+  
+  [33X[0;0YAs  a  consequence,  there must not only be methods for [10XOrbitOp[110X with the six
+  arguments  corresponding  to  [10XOrbitishReq[110X,  but  also  methods for only five
+  arguments  (i.e.,  without  [3XD[103X).  Plenty  of  examples  are  contained in the
+  implementation file [11Xlib/oprt.gi[111X.[133X
+  
+  [33X[0;0YIn  order  to  handle  a  few  special cases (currently [2XBlocks[102X ([14X41.11-1[114X) and
+  [2XMaximalBlocks[102X  ([14X41.11-2[114X)), also the following form of [2XOrbitishFO[102X ([14X85.3-2[114X) is
+  supported.[133X
+  
+  [33X[0;0Y[10XOrbitishFO( [3Xname[103X[10X, [3Xreqs[103X[10X, [3Xfamrel[103X[10X, [3Xattr[103X[10X )[110X[133X
+  
+  [33X[0;0YThe  functions  in  question depend upon an argument [3Xseed[103X, so they cannot be
+  regarded  as  attributes. However, they are most often called without giving
+  [3Xseed[103X,  meaning  [21Xchoose any minimal resp. maximal block system[121X. In this case,
+  the result can be stored as the value of the attribute [3Xattr[103X that was entered
+  as fourth argument of [2XOrbitishFO[102X ([14X85.3-2[114X). This attribute is considered by a
+  call  [10XBlocks(  [3XG[103X[10X,  [3XD[103X[10X,  [3Xopr[103X[10X  )[110X (i.e., without [3Xseed[103X) in the same way as [2XOrbits[102X
+  ([14X41.4-2[114X) considers [10XOrbitsAttr[110X.[133X
+  
+  [33X[0;0YTo  set  this  up,  the  declaration file [11Xlib/oprt.gd[111X contains the following
+  lines:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XDeclareAttribute( "BlocksAttr", IsExternalSet );[128X[104X
+    [4X[28XOrbitishFO( "Blocks",[128X[104X
+    [4X[28X    [ IsGroup, IsList, IsList,[128X[104X
+    [4X[28X      IsList,[128X[104X
+    [4X[28X      IsList,[128X[104X
+    [4X[28X      IsFunction ], IsIdenticalObj, BlocksAttr, true );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAnd this extraordinary FOA triple works as follows:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xs4 := Group((1,2,3,4),(1,2));;[127X[104X
+    [4X[25Xgap>[125X [27XBlocks( s4, MovedPoints(s4), [1,2] );[127X[104X
+    [4X[28X[ [ 1, 2, 3, 4 ] ][128X[104X
+    [4X[25Xgap>[125X [27XTester( BlocksAttr )( s4 );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XBlocks( s4, MovedPoints(s4) );[127X[104X
+    [4X[28X[ [ 1, 2, 3, 4 ] ][128X[104X
+    [4X[25Xgap>[125X [27XTester( BlocksAttr )( s4 );  BlocksAttr( s4 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28X[ [ 1, 2, 3, 4 ] ][128X[104X
+  [4X[32X[104X
+  

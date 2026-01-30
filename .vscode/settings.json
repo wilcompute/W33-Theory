@@ -1,0 +1,15 @@
+{
+    "claudeCodeChat.permissions.yoloMode": true,
+
+    // Auto-activate the selected Python environment in new integrated terminals
+    "python.terminal.activateEnvironment": true,
+
+    // Use PowerShell as the default integrated terminal (Windows)
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+
+    // Ensure integrated terminal inherits environment variables from VS Code
+    "terminal.integrated.inheritEnv": true,
+
+    // Helpful UI: show workspace recommendations (Python etc.)
+    "extensions.ignoreRecommendations": false
+}

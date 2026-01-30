@@ -1,0 +1,1694 @@
+  
+  [1X24 [33X[0;0YMatrices[133X[101X
+  
+  [33X[0;0YIn  [5XGAP[105X, Matrices can be represented by lists of row vectors, see [14X23[114X. (For a
+  more general way to represent vectors and matrices, see Chapter [14X26[114X). The row
+  vectors  must  all  have  the  same length, and their elements must lie in a
+  common  ring.  However,  since  checking  rectangularness  can  be expensive
+  functions  and  methods  of  operations  for matrices often will not give an
+  error  message  for non-rectangular lists of lists –in such cases the result
+  is undefined.[133X
+  
+  [33X[0;0YBecause  matrices  are  just  a  special  case  of lists, all operations and
+  functions  for  lists are applicable to matrices also (see chapter [14X21[114X). This
+  especially  includes  accessing  elements  of  a matrix (see [14X21.3[114X), changing
+  elements of a matrix (see [14X21.4[114X), and comparing matrices (see [14X21.10[114X).[133X
+  
+  [33X[0;0YNote  that,  since a matrix is a list of lists, the behaviour of [2XShallowCopy[102X
+  ([14X12.7-1[114X)  for  matrices  is  just a special case of [2XShallowCopy[102X ([14X12.7-1[114X) for
+  lists  (see [14X21.7[114X); called with an immutable matrix [3Xmat[103X, [2XShallowCopy[102X ([14X12.7-1[114X)
+  returns  a  mutable  matrix  whose rows are identical to the rows of [3Xmat[103X. In
+  particular  the  rows  are  still  immutable. To get a matrix whose rows are
+  mutable, one can use [10XList( [3Xmat[103X[10X, ShallowCopy )[110X.[133X
+  
+  
+  [1X24.1 [33X[0;0YInfoMatrix (Info Class)[133X[101X
+  
+  [1X24.1-1 InfoMatrix[101X
+  
+  [33X[1;0Y[29X[2XInfoMatrix[102X [32X info class[133X
+  
+  [33X[0;0YThe info class for matrix operations is [2XInfoMatrix[102X.[133X
+  
+  
+  [1X24.2 [33X[0;0YCategories of Matrices[133X[101X
+  
+  [1X24.2-1 IsMatrix[101X
+  
+  [33X[1;0Y[29X[2XIsMatrix[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YBy convention [13Xmatrix[113X is a list of lists of equal length whose entries lie in
+  a common ring.[133X
+  
+  [33X[0;0YFor technical reasons laid out at the top of Chapter [14X24[114X, the filter [2XIsMatrix[102X
+  is  a  synonym  for  a  table  of  ring  elements, (see [2XIsTable[102X ([14X21.1-4[114X) and
+  [2XIsRingElement[102X  ([14X31.14-16[114X)). This means that [2XIsMatrix[102X returns [9Xtrue[109X for tables
+  such  as  [10X[[1,2],[3]][110X. If necessary, [2XIsRectangularTable[102X ([14X21.1-5[114X) can be used
+  to  test  whether  an object is a list of homogeneous lists of equal lengths
+  manually.[133X
+  
+  [33X[0;0YNote  that  matrices  may  have different multiplications, besides the usual
+  matrix product there is for example the Lie product. So there are categories
+  such as [2XIsOrdinaryMatrix[102X ([14X24.2-2[114X) and [2XIsLieMatrix[102X ([14X24.2-3[114X) that describe the
+  matrix multiplication. One can form the product of two matrices only if they
+  support the same multiplication.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmat:=[[1,2,3],[4,5,6],[7,8,9]];[127X[104X
+    [4X[28X[ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ][128X[104X
+    [4X[25Xgap>[125X [27XIsMatrix(mat);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xmat:=[[1,2],[3]];[127X[104X
+    [4X[28X[ [ 1, 2 ], [ 3 ] ][128X[104X
+    [4X[25Xgap>[125X [27XIsMatrix(mat);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsRectangularTable(mat);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  the empty list [10X[][110X and more complex [21Xempty[121X structures such as [10X[[]][110X
+  are  [13Xnot[113X  matrices,  although special methods allow them be used in place of
+  matrices in some situations. See [2XEmptyMatrix[102X ([14X24.5-3[114X) below.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X[[0]]*[[]];[127X[104X
+    [4X[28X[ [  ] ][128X[104X
+    [4X[25Xgap>[125X [27XIsMatrix([[]]);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X24.2-2 IsOrdinaryMatrix[101X
+  
+  [33X[1;0Y[29X[2XIsOrdinaryMatrix[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YAn  [13Xordinary  matrix[113X is a matrix whose multiplication is the ordinary matrix
+  multiplication.[133X
+  
+  [33X[0;0YEach  matrix in internal representation is in the category [2XIsOrdinaryMatrix[102X,
+  and  arithmetic  operations  with  objects in [2XIsOrdinaryMatrix[102X produce again
+  matrices in [2XIsOrdinaryMatrix[102X.[133X
+  
+  [33X[0;0YNote  that  we  want  that Lie matrices shall be matrices that behave in the
+  same   way   as  ordinary  matrices,  except  that  they  have  a  different
+  multiplication. So we must distinguish the different matrix multiplications,
+  in  order  to  be  able to describe the applicability of multiplication, and
+  also  in  order  to  form  a  matrix  of  the  appropriate  type as the sum,
+  difference etc. of two matrices which have the same multiplication.[133X
+  
+  [1X24.2-3 IsLieMatrix[101X
+  
+  [33X[1;0Y[29X[2XIsLieMatrix[102X( [3Xmat[103X ) [32X Category[133X
+  
+  [33X[0;0YA  [13XLie  matrix[113X is a matrix whose multiplication is given by the Lie bracket.
+  (Note  that  a matrix with ordinary matrix multiplication is in the category
+  [2XIsOrdinaryMatrix[102X ([14X24.2-2[114X).)[133X
+  
+  [33X[0;0YEach  matrix  created  by [2XLieObject[102X ([14X64.1-1[114X) is in the category [2XIsLieMatrix[102X,
+  and arithmetic operations with objects in [2XIsLieMatrix[102X produce again matrices
+  in [2XIsLieMatrix[102X.[133X
+  
+  
+  [1X24.3 [33X[0;0YOperators for Matrices[133X[101X
+  
+  [33X[0;0YThe  rules  for arithmetic operations involving matrices are in fact special
+  cases  of  those for the arithmetic of lists, given in Section [14X21.11[114X and the
+  following  sections,  here  we reiterate that definition, in the language of
+  vectors and matrices.[133X
+  
+  [33X[0;0YNote that the additive behaviour sketched below is defined only for lists in
+  the   category  [2XIsGeneralizedRowVector[102X  ([14X21.12-1[114X),  and  the  multiplicative
+  behaviour     is    defined    only    for    lists    in    the    category
+  [2XIsMultiplicativeGeneralizedRowVector[102X ([14X21.12-2[114X) (see [14X21.12[114X).[133X
+  
+  [33X[0;0Y[10X[3Xmat1[103X[10X + [3Xmat2[103X[10X[110X[133X
+  
+  [33X[0;0Yreturns  the  sum of the two matrices [3Xmat1[103X and [3Xmat2[103X, Probably the most usual
+  situation  is  that  [3Xmat1[103X  and [3Xmat2[103X have the same dimensions and are defined
+  over  a  common  field;  in  this case the sum is a new matrix over the same
+  field  where  each  entry  is  the  sum  of the corresponding entries of the
+  matrices.[133X
+  
+  [33X[0;0YIn  more  general  situations, the sum of two matrices need not be a matrix,
+  for  example  adding  an integer matrix [3Xmat1[103X and a matrix [3Xmat2[103X over a finite
+  field  yields the table of pointwise sums, which will be a mixture of finite
+  field elements and integers if [3Xmat1[103X has bigger dimensions than [3Xmat2[103X.[133X
+  
+  [33X[0;0Y[10X[3Xscalar[103X[10X + [3Xmat[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xmat[103X[10X + [3Xscalar[103X[10X[110X[133X
+  
+  [33X[0;0Yreturns  the  sum of the scalar [3Xscalar[103X and the matrix [3Xmat[103X. Probably the most
+  usual  situation  is  that  the  entries  of  [3Xmat[103X lie in a common field with
+  [3Xscalar[103X;  in this case the sum is a new matrix over the same field where each
+  entry is the sum of the scalar and the corresponding entry of the matrix.[133X
+  
+  [33X[0;0YMore  general  situations are for example the sum of an integer scalar and a
+  matrix  over  a  finite  field,  or the sum of a finite field element and an
+  integer matrix.[133X
+  
+  [33X[0;0Y[10X[3Xmat1[103X[10X - [3Xmat2[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xscalar[103X[10X - [3Xmat[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xmat[103X[10X - [3Xscalar[103X[10X[110X[133X
+  
+  [33X[0;0YSubtracting a matrix or scalar is defined as adding its additive inverse, so
+  the statements for the addition hold likewise.[133X
+  
+  [33X[0;0Y[10X[3Xscalar[103X[10X * [3Xmat[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xmat[103X[10X * [3Xscalar[103X[10X[110X[133X
+  
+  [33X[0;0Yreturns  the  product  of the scalar [3Xscalar[103X and the matrix [3Xmat[103X. Probably the
+  most  usual situation is that the elements of [3Xmat[103X lie in a common field with
+  [3Xscalar[103X;  in  this case the product is a new matrix over the same field where
+  each  entry  is the product of the scalar and the corresponding entry of the
+  matrix.[133X
+  
+  [33X[0;0YMore general situations are for example the product of an integer scalar and
+  a  matrix  over a finite field, or the product of a finite field element and
+  an integer matrix.[133X
+  
+  [33X[0;0Y[10X[3Xvec[103X[10X * [3Xmat[103X[10X[110X[133X
+  
+  [33X[0;0Yreturns  the  product of the row vector [3Xvec[103X and the matrix [3Xmat[103X. Probably the
+  most  usual  situation  is  that  [3Xvec[103X  and [3Xmat[103X have the same lengths and are
+  defined  over  a  common  field,  and  that all rows of [3Xmat[103X have some common
+  length  [22Xm[122X; in this case the product is a new row vector of length [22Xm[122X over the
+  same  field which is the sum of the scalar multiples of the rows of [3Xmat[103X with
+  the corresponding entries of [3Xvec[103X.[133X
+  
+  [33X[0;0YMore general situations are for example the product of an integer vector and
+  a matrix over a finite field, or the product of a vector over a finite field
+  and an integer matrix.[133X
+  
+  [33X[0;0Y[10X[3Xmat[103X[10X * [3Xvec[103X[10X[110X[133X
+  
+  [33X[0;0Yreturns  the  product of the matrix [3Xmat[103X and the row vector [3Xvec[103X. (This is the
+  standard  product of a matrix with a [13Xcolumn[113X vector.) Probably the most usual
+  situation  is  that  the length of [3Xvec[103X and of all rows of [3Xmat[103X are equal, and
+  that  the  elements  of  [3Xmat[103X and [3Xvec[103X lie in a common field; in this case the
+  product  is  a  new  row  vector of the same length as [3Xmat[103X and over the same
+  field  which  is  the sum of the scalar multiples of the columns of [3Xmat[103X with
+  the corresponding entries of [3Xvec[103X.[133X
+  
+  [33X[0;0YMore general situations are for example the product of an integer matrix and
+  a vector over a finite field, or the product of a matrix over a finite field
+  and an integer vector.[133X
+  
+  [33X[0;0Y[10X[3Xmat1[103X[10X * [3Xmat2[103X[10X[110X[133X
+  
+  [33X[0;0YThis  form  evaluates  to  the (Cauchy) product of the two matrices [3Xmat1[103X and
+  [3Xmat2[103X.  Probably  the  most  usual situation is that the number of columns of
+  [3Xmat1[103X equals the number of rows of [3Xmat2[103X, and that the elements of [3Xmat[103X and [3Xvec[103X
+  lie  in  a  common  field; if [3Xmat1[103X is a matrix with [22Xm[122X rows and [22Xn[122X columns and
+  [3Xmat2[103X  is a matrix with [22Xn[122X rows and [22Xo[122X columns, the result is a new matrix with
+  [22Xm[122X  rows  and [22Xo[122X columns. The element in row [22Xi[122X at position [22Xj[122X of the product is
+  the sum of [22X[3Xmat1[103X[i][l] * [3Xmat2[103X[l][j][122X, with [22Xl[122X running from [22X1[122X to [22Xn[122X.[133X
+  
+  [33X[0;0Y[10XInverse( [3Xmat[103X[10X )[110X[133X
+  
+  [33X[0;0Yreturns  the  inverse  of the matrix [3Xmat[103X, which must be an invertible square
+  matrix. If [3Xmat[103X is not invertible then [9Xfail[109X is returned.[133X
+  
+  [33X[0;0Y[10X[3Xmat1[103X[10X / [3Xmat2[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xscalar[103X[10X / [3Xmat[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xmat[103X[10X / [3Xscalar[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xvec[103X[10X / [3Xmat[103X[10X[110X[133X
+  
+  [33X[0;0YIn  general,  [10X[3Xleft[103X[10X  / [3Xright[103X[10X[110X is defined as [10X[3Xleft[103X[10X * [3Xright[103X[10X^-1[110X. Thus in the above
+  forms the right operand must always be invertible.[133X
+  
+  [33X[0;0Y[10X[3Xmat[103X[10X ^ [3Xint[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xmat1[103X[10X ^ [3Xmat2[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xvec[103X[10X ^ [3Xmat[103X[10X[110X[133X
+  
+  [33X[0;0YPowering  a  square  matrix [3Xmat[103X by an integer [3Xint[103X yields the [3Xint[103X-th power of
+  [3Xmat[103X;  if  [3Xint[103X  is negative then [3Xmat[103X must be invertible, if [3Xint[103X is [10X0[110X then the
+  result is the identity matrix [10XOne( [3Xmat[103X[10X )[110X, even if [3Xmat[103X is not invertible.[133X
+  
+  [33X[0;0YPowering  a  square  matrix  [3Xmat1[103X by an invertible square matrix [3Xmat2[103X of the
+  same  dimensions  yields  the  conjugate  of  [3Xmat1[103X by [3Xmat2[103X, i.e., the matrix
+  [10X[3Xmat2[103X[10X^-1 * [3Xmat1[103X[10X * [3Xmat2[103X[10X[110X.[133X
+  
+  [33X[0;0YPowering  a row vector [3Xvec[103X by a matrix [3Xmat[103X is in every respect equivalent to
+  [10X[3Xvec[103X[10X  * [3Xmat[103X[10X[110X. This operations reflects the fact that matrices act naturally on
+  row vectors by multiplication from the right, and that the powering operator
+  is [5XGAP[105X's standard for group actions.[133X
+  
+  [33X[0;0Y[10XComm( [3Xmat1[103X[10X, [3Xmat2[103X[10X )[110X[133X
+  
+  [33X[0;0Yreturns  the  commutator  of the square invertible matrices [3Xmat1[103X and [3Xmat2[103X of
+  the  same  dimensions and over a common field, which is the matrix [10X[3Xmat1[103X[10X^-1 *
+  [3Xmat2[103X[10X^-1 * [3Xmat1[103X[10X * [3Xmat2[103X[10X[110X.[133X
+  
+  [33X[0;0YThe  following  cases are still special cases of the general list arithmetic
+  defined in [14X21.11[114X.[133X
+  
+  [33X[0;0Y[10X[3Xscalar[103X[10X + [3Xmatlist[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xmatlist[103X[10X + [3Xscalar[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xscalar[103X[10X - [3Xmatlist[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xmatlist[103X[10X - [3Xscalar[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xscalar[103X[10X * [3Xmatlist[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xmatlist[103X[10X * [3Xscalar[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xmatlist[103X[10X / [3Xscalar[103X[10X[110X[133X
+  
+  [33X[0;0YA  scalar  [3Xscalar[103X may also be added, subtracted, multiplied with, or divided
+  into  a list [3Xmatlist[103X of matrices. The result is a new list of matrices where
+  each matrix is the result of performing the operation with the corresponding
+  matrix in [3Xmatlist[103X.[133X
+  
+  [33X[0;0Y[10X[3Xmat[103X[10X * [3Xmatlist[103X[10X[110X[133X
+  
+  [33X[0;0Y[10X[3Xmatlist[103X[10X * [3Xmat[103X[10X[110X[133X
+  
+  [33X[0;0YA  matrix  [3Xmat[103X  may  also be multiplied with a list [3Xmatlist[103X of matrices. The
+  result is a new list of matrices, where each entry is the product of [3Xmat[103X and
+  the corresponding entry in [3Xmatlist[103X.[133X
+  
+  [33X[0;0Y[10X[3Xmatlist[103X[10X / [3Xmat[103X[10X[110X[133X
+  
+  [33X[0;0YDividing a list [3Xmatlist[103X of matrices by an invertible matrix [3Xmat[103X evaluates to
+  [10X[3Xmatlist[103X[10X * [3Xmat[103X[10X^-1[110X.[133X
+  
+  [33X[0;0Y[10X[3Xvec[103X[10X * [3Xmatlist[103X[10X[110X[133X
+  
+  [33X[0;0Yreturns  the  product  of  the  vector [3Xvec[103X and the list of matrices [3Xmat[103X. The
+  lengths  [3Xl[103X  of  [3Xvec[103X  and [3Xmatlist[103X must be equal. All matrices in [3Xmatlist[103X must
+  have  the  same  dimensions.  The  elements  of  [3Xvec[103X and the elements of the
+  matrices  in  [3Xmatlist[103X must lie in a common ring. The product is the sum over
+  [10X[3Xvec[103X[10X[[3Xi[103X[10X] * [3Xmatlist[103X[10X[[3Xi[103X[10X][110X with [3Xi[103X running from 1 to [3Xl[103X.[133X
+  
+  [33X[0;0YFor the mutability of results of arithmetic operations, see [14X12.6[114X.[133X
+  
+  
+  [1X24.4 [33X[0;0YProperties and Attributes of Matrices[133X[101X
+  
+  [1X24.4-1 DimensionsMat[101X
+  
+  [33X[1;0Y[29X[2XDimensionsMat[102X( [3Xmat[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis  a list of length 2, the first being the number of rows, the second being
+  the number of columns of the matrix [3Xmat[103X. If [3Xmat[103X is malformed, that is, it is
+  not a [2XIsRectangularTable[102X ([14X21.1-5[114X), returns [9Xfail[109X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDimensionsMat([[1,2,3],[4,5,6]]);[127X[104X
+    [4X[28X[ 2, 3 ][128X[104X
+    [4X[25Xgap>[125X [27XDimensionsMat([[1,2,3],[4,5]]);[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [1X24.4-2 DefaultFieldOfMatrix[101X
+  
+  [33X[1;0Y[29X[2XDefaultFieldOfMatrix[102X( [3Xmat[103X ) [32X attribute[133X
+  
+  [33X[0;0YFor   a  matrix  [3Xmat[103X,  [2XDefaultFieldOfMatrix[102X  returns  either  a  field  (not
+  necessarily the smallest one) containing all entries of [3Xmat[103X, or [9Xfail[109X.[133X
+  
+  [33X[0;0YIf  [3Xmat[103X  is  a  matrix  of finite field elements or a matrix of cyclotomics,
+  [2XDefaultFieldOfMatrix[102X  returns  the  default  field  generated  by the matrix
+  entries (see [14X59.3[114X and [14X18.1[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDefaultFieldOfMatrix([[Z(4),Z(8)]]);[127X[104X
+    [4X[28XGF(2^6)[128X[104X
+  [4X[32X[104X
+  
+  [1X24.4-3 TraceMatrix[101X
+  
+  [33X[1;0Y[29X[2XTraceMatrix[102X( [3Xmat[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XTraceMat[102X( [3Xmat[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XTrace[102X( [3Xmat[103X ) [32X attribute[133X
+  
+  [33X[0;0YThe trace of a square matrix is the sum of its diagonal entries.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTraceMatrix([[1,2,3],[4,5,6],[7,8,9]]);[127X[104X
+    [4X[28X15[128X[104X
+  [4X[32X[104X
+  
+  [1X24.4-4 DeterminantMatrix[101X
+  
+  [33X[1;0Y[29X[2XDeterminantMatrix[102X( [3Xmat[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XDeterminantMat[102X( [3Xmat[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XDeterminant[102X( [3Xmat[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns the determinant of the square matrix [3Xmat[103X.[133X
+  
+  [33X[0;0YThese  methods assume implicitly that [3Xmat[103X is defined over an integral domain
+  whose  quotient  field  is  implemented in [5XGAP[105X. For matrices defined over an
+  arbitrary commutative ring with one see [2XDeterminantMatDivFree[102X ([14X24.4-6[114X).[133X
+  
+  [1X24.4-5 DeterminantMatrixDestructive[101X
+  
+  [33X[1;0Y[29X[2XDeterminantMatrixDestructive[102X( [3Xmat[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XDeterminantMatDestructive[102X( [3Xmat[103X ) [32X operation[133X
+  
+  [33X[0;0YDoes the same as [2XDeterminantMatrix[102X ([14X24.4-4[114X), with the difference that it may
+  destroy its argument. The matrix [3Xmat[103X must be mutable.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDeterminantMatrix([[1,2],[2,1]]);[127X[104X
+    [4X[28X-3[128X[104X
+    [4X[25Xgap>[125X [27Xmm:= [[1,2],[2,1]];;[127X[104X
+    [4X[25Xgap>[125X [27XDeterminantMatrixDestructive( mm );[127X[104X
+    [4X[28X-3[128X[104X
+    [4X[25Xgap>[125X [27Xmm;[127X[104X
+    [4X[28X[ [ 1, 2 ], [ 0, -3 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.4-6 DeterminantMatrixDivFree[101X
+  
+  [33X[1;0Y[29X[2XDeterminantMatrixDivFree[102X( [3Xmat[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XDeterminantMatDivFree[102X( [3Xmat[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturn  the determinant of a square matrix [3Xmat[103X over an arbitrary commutative
+  ring with one using the division free method of Mahajan and Vinay [MV97].[133X
+  
+  [1X24.4-7 IsEmptyMatrix[101X
+  
+  [33X[1;0Y[29X[2XIsEmptyMatrix[102X( [3XM[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10YA boolean[133X
+  
+  [33X[0;0YIs  [9Xtrue[109X  if  the  matrix object [3XM[103X either has zero columns or zero rows, and
+  [9Xfalse[109X  otherwise.  In  other  words,  a  matrix object is empty if it has no
+  entries.[133X
+  
+  [1X24.4-8 IsMonomialMatrix[101X
+  
+  [33X[1;0Y[29X[2XIsMonomialMatrix[102X( [3Xmat[103X ) [32X property[133X
+  
+  [33X[0;0YA  matrix  is  monomial  if  and only if it has exactly one nonzero entry in
+  every row and every column.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsMonomialMatrix([[0,1],[1,0]]);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X24.4-9 IsDiagonalMatrix[101X
+  
+  [33X[1;0Y[29X[2XIsDiagonalMatrix[102X( [3Xmat[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsDiagonalMat[102X( [3Xmat[103X ) [32X property[133X
+  
+  [33X[0;0Yreturn  [9Xtrue[109X  if the matrix [3Xmat[103X has only zero entries off the main diagonal,
+  and [9Xfalse[109X otherwise.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsDiagonalMatrix( [ [ 1 ] ] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsDiagonalMatrix( [ [ 1, 0, 0 ], [ 0, 1, 0 ] ] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsDiagonalMatrix( [ [ 0, 1 ], [ 1, 0 ] ] );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X24.4-10 IsUpperTriangularMatrix[101X
+  
+  [33X[1;0Y[29X[2XIsUpperTriangularMatrix[102X( [3Xmat[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsUpperTriangularMat[102X( [3Xmat[103X ) [32X property[133X
+  
+  [33X[0;0Yreturn [9Xtrue[109X if the matrix [3Xmat[103X has only zero entries below the main diagonal,
+  and [9Xfalse[109X otherwise.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsUpperTriangularMatrix( [ [ 1 ] ] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsUpperTriangularMatrix( [ [ 1, 2, 3 ], [ 0, 5, 6 ] ] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsUpperTriangularMatrix( [ [ 0, 1 ], [ 1, 0 ] ] );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X24.4-11 IsLowerTriangularMatrix[101X
+  
+  [33X[1;0Y[29X[2XIsLowerTriangularMatrix[102X( [3Xmat[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsLowerTriangularMat[102X( [3Xmat[103X ) [32X property[133X
+  
+  [33X[0;0Yreturn [9Xtrue[109X if the matrix [3Xmat[103X has only zero entries above the main diagonal,
+  and [9Xfalse[109X otherwise.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsLowerTriangularMatrix( [ [ 1 ] ] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsLowerTriangularMatrix( [ [ 1, 0, 0 ], [ 2, 3, 0 ] ] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsLowerTriangularMatrix( [ [ 0, 1 ], [ 1, 0 ] ] );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X24.5 [33X[0;0YMatrix Constructions[133X[101X
+  
+  [1X24.5-1 IdentityMat[101X
+  
+  [33X[1;0Y[29X[2XIdentityMat[102X( [3Xm[103X[, [3XR[103X] ) [32X function[133X
+  
+  [33X[0;0Yreturns  a  (mutable)  [3Xm[103X[22X×[122X[3Xm[103X identity matrix over the ring given by [3XR[103X. Here, [3XR[103X
+  can be either a ring, or an element of a ring. By default, an integer matrix
+  is created.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIdentityMat(3);[127X[104X
+    [4X[28X[ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27XIdentityMat(2,Integers mod 15);[127X[104X
+    [4X[28X[ [ ZmodnZObj( 1, 15 ), ZmodnZObj( 0, 15 ) ],[128X[104X
+    [4X[28X  [ ZmodnZObj( 0, 15 ), ZmodnZObj( 1, 15 ) ] ][128X[104X
+    [4X[25Xgap>[125X [27XIdentityMat(2,Z(3));[127X[104X
+    [4X[28X[ [ Z(3)^0, 0*Z(3) ], [ 0*Z(3), Z(3)^0 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.5-2 NullMat[101X
+  
+  [33X[1;0Y[29X[2XNullMat[102X( [3Xm[103X, [3Xn[103X[, [3XR[103X] ) [32X function[133X
+  
+  [33X[0;0Yreturns a (mutable) [3Xm[103X[22X×[122X[3Xn[103X null matrix over the ring given by by [3XR[103X. Here, [3XR[103X can
+  be  either a ring, or an element of a ring. By default, an integer matrix is
+  created.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XNullMat(3,2);[127X[104X
+    [4X[28X[ [ 0, 0 ], [ 0, 0 ], [ 0, 0 ] ][128X[104X
+    [4X[25Xgap>[125X [27XNullMat(2,2,Integers mod 15);[127X[104X
+    [4X[28X[ [ ZmodnZObj( 0, 15 ), ZmodnZObj( 0, 15 ) ],[128X[104X
+    [4X[28X  [ ZmodnZObj( 0, 15 ), ZmodnZObj( 0, 15 ) ] ][128X[104X
+    [4X[25Xgap>[125X [27XNullMat(3,2,Z(3));[127X[104X
+    [4X[28X[ [ 0*Z(3), 0*Z(3) ], [ 0*Z(3), 0*Z(3) ], [ 0*Z(3), 0*Z(3) ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.5-3 EmptyMatrix[101X
+  
+  [33X[1;0Y[29X[2XEmptyMatrix[102X( [3Xchar[103X ) [32X function[133X
+  
+  [33X[0;0Yis an empty (ordinary) matrix in characteristic [3Xchar[103X that can be added to or
+  multiplied  with empty lists (representing zero-dimensional row vectors). It
+  also acts (via the operation [2X\^[102X ([14X31.12-1[114X)) on empty lists.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XEmptyMatrix(5);[127X[104X
+    [4X[28XEmptyMatrix( 5 )[128X[104X
+    [4X[25Xgap>[125X [27XAsList(last);[127X[104X
+    [4X[28X[  ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.5-4 DiagonalMat[101X
+  
+  [33X[1;0Y[29X[2XDiagonalMat[102X( [3Xvector[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns a diagonal matrix [3Xmat[103X with the diagonal entries given by [3Xvector[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDiagonalMat([1,2,3]);[127X[104X
+    [4X[28X[ [ 1, 0, 0 ], [ 0, 2, 0 ], [ 0, 0, 3 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.5-5 DiagonalMatrix[101X
+  
+  [33X[1;0Y[29X[2XDiagonalMatrix[102X( [[3Xfilt[103X, ][3XR[103X, [3Xvector[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XDiagonalMatrix[102X( [3Xvector[103X[, [3XM[103X] ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ya  square  matrix or matrix object with column number equal to the
+            length  of the dense list [3Xvector[103X, whose diagonal entries are given
+            by the entries of [3Xvector[103X, and whose off-diagonal entries are zero.[133X
+  
+  [33X[0;0YIf  a  semiring  [3XR[103X  is given then it will be the base domain (see [2XBaseDomain[102X
+  ([14X26.3-1[114X))  of  the  returned  matrix.  In  this  case,  a filter [3Xfilt[103X can be
+  specified  that  defines  the  internal  representation  of  the result (see
+  [2XConstructingFilter[102X  ([14X26.3-2[114X)). The default value for [3Xfilt[103X is determined from
+  [3XR[103X.[133X
+  
+  [33X[0;0YIf  a  matrix  object [3XM[103X is given then the returned matrix will have the same
+  internal representation and the same base domain as [3XM[103X.[133X
+  
+  [33X[0;0YIf only [3Xvector[103X is given then it is used to compute a default for [3XR[103X.[133X
+  
+  [33X[0;0YIf  the  [2XConstructingFilter[102X  ([14X26.3-2[114X) value of the result implies [2XIsCopyable[102X
+  ([14X12.6-1[114X) then the result is fully mutable.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xd1:= DiagonalMatrix( GF(9), [ 1, 2 ] * Z(3)^0 );[127X[104X
+    [4X[28X[ [ Z(3)^0, 0*Z(3) ], [ 0*Z(3), Z(3) ] ][128X[104X
+    [4X[25Xgap>[125X [27XIs8BitMatrixRep( d1 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xd2:= DiagonalMatrix( IsPlistMatrixRep, GF(9), [ 1, 2 ] * Z(3)^0 );[127X[104X
+    [4X[28X<2x2-matrix over GF(3^2)>[128X[104X
+    [4X[25Xgap>[125X [27XIsPlistMatrixRep( d2 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XDiagonalMatrix( [ 1, 2 ] );[127X[104X
+    [4X[28X<2x2-matrix over Rationals>[128X[104X
+    [4X[25Xgap>[125X [27XDiagonalMatrix( [ 1, 2 ], Matrix( Integers, [ [ 1 ] ], 1 ) );[127X[104X
+    [4X[28X<2x2-matrix over Integers>[128X[104X
+    [4X[25Xgap>[125X [27XDiagonalMatrix( [ 1, 2 ], [ [ 1 ] ] );[127X[104X
+    [4X[28X[ [ 1, 0 ], [ 0, 2 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.5-6 PermutationMat[101X
+  
+  [33X[1;0Y[29X[2XPermutationMat[102X( [3Xperm[103X, [3Xdim[103X[, [3XF[103X] ) [32X function[133X
+  
+  [33X[0;0Yreturns  a  matrix  in  dimension  [3Xdim[103X  over  the field given by [3XF[103X (i.e. the
+  smallest  field  containing the element [3XF[103X or [3XF[103X itself if it is a field) that
+  represents  the permutation [3Xperm[103X acting by permuting the basis vectors as it
+  permutes points.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPermutationMat((1,2,3),4,1);[127X[104X
+    [4X[28X[ [ 0, 1, 0, 0 ], [ 0, 0, 1, 0 ], [ 1, 0, 0, 0 ], [ 0, 0, 0, 1 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.5-7 TransposedMatImmutable[101X
+  
+  [33X[1;0Y[29X[2XTransposedMatImmutable[102X( [3Xmat[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XTransposedMat[102X( [3Xmat[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XTransposedMatMutable[102X( [3Xmat[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XTransposedMatOp[102X( [3Xmat[103X ) [32X operation[133X
+  
+  [33X[0;0YThese  functions all return the transposed of the matrix object [3Xmat[103X, i.e., a
+  matrix object [22Xtrans[122X such that [22Xtrans[i,k] = [3Xmat[103X[k,i][122X holds.[133X
+  
+  [33X[0;0YThey differ only w.r.t. the mutability of the result.[133X
+  
+  [33X[0;0Y[2XTransposedMat[102X  is  an  attribute  and  hence  returns  an  immutable result.
+  [2XTransposedMatMutable[102X is guaranteed to return a new [13Xmutable[113X matrix.[133X
+  
+  [33X[0;0Y[2XTransposedMatImmutable[102X is a synonym of [2XTransposedMat[102X, and [2XTransposedMatOp[102X is
+  a  synonym  of  [2XTransposedMatMutable[102X,  in analogy to operations such as [2XZero[102X
+  ([14X31.10-3[114X).[133X
+  
+  [1X24.5-8 TransposedMatDestructive[101X
+  
+  [33X[1;0Y[29X[2XTransposedMatDestructive[102X( [3Xmat[103X ) [32X operation[133X
+  
+  [33X[0;0YIf  [3Xmat[103X is a mutable matrix, then the transposed is computed by swapping the
+  entries  in  [3Xmat[103X.  In  this  way  [3Xmat[103X  gets  changed. In all other cases the
+  transposed is computed by [2XTransposedMat[102X ([14X24.5-7[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTransposedMat([[1,2,3],[4,5,6],[7,8,9]]);[127X[104X
+    [4X[28X[ [ 1, 4, 7 ], [ 2, 5, 8 ], [ 3, 6, 9 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xmm:= [[1,2,3],[4,5,6],[7,8,9]];;[127X[104X
+    [4X[25Xgap>[125X [27XTransposedMatDestructive( mm );[127X[104X
+    [4X[28X[ [ 1, 4, 7 ], [ 2, 5, 8 ], [ 3, 6, 9 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xmm;[127X[104X
+    [4X[28X[ [ 1, 4, 7 ], [ 2, 5, 8 ], [ 3, 6, 9 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.5-9 KroneckerProduct[101X
+  
+  [33X[1;0Y[29X[2XKroneckerProduct[102X( [3Xmat1[103X, [3Xmat2[103X ) [32X operation[133X
+  
+  [33X[0;0YThe  Kronecker product of two matrices is the matrix obtained when replacing
+  each entry [3Xa[103X of [3Xmat1[103X by the product [10X[3Xa[103X[10X*[3Xmat2[103X[10X[110X in one matrix.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XKroneckerProduct([[1,2]],[[5,7],[9,2]]);[127X[104X
+    [4X[28X[ [ 5, 7, 10, 14 ], [ 9, 2, 18, 4 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.5-10 ReflectionMat[101X
+  
+  [33X[1;0Y[29X[2XReflectionMat[102X( [3Xcoeffs[103X[, [3Xconj[103X][, [3Xroot[103X] ) [32X function[133X
+  
+  [33X[0;0YLet  [3Xcoeffs[103X  be  a  row  vector.  [2XReflectionMat[102X  returns  the  matrix of the
+  reflection in this vector.[133X
+  
+  [33X[0;0YMore  precisely,  if  [3Xcoeffs[103X is the coefficients list of a vector [22Xv[122X w.r.t. a
+  basis  [22XB[122X  (see [2XBasis[102X  ([14X61.5-2[114X))  then  the  returned  matrix  describes  the
+  reflection  in  [22Xv[122X  w.r.t.  [22XB[122X  as  a map on a row space, with action from the
+  right.[133X
+  
+  [33X[0;0YThe  optional  argument [3Xroot[103X is a root of unity that determines the order of
+  the reflection. The default is a reflection of order 2. For triflections one
+  should choose a third root of unity etc. (see [2XE[102X ([14X18.1-1[114X)).[133X
+  
+  [33X[0;0Y[3Xconj[103X  is  a  function  of  one  argument that conjugates a ring element. The
+  default is [2XComplexConjugate[102X ([14X18.5-2[114X).[133X
+  
+  [33X[0;0YThe matrix of the reflection in [22Xv[122X is defined as[133X
+  
+  
+  [24X[33X[0;6YM = I_n + [3Xconj[103X(v^tr) ⋅ ([3Xroot[103X-1) / (v ⋅ [3Xconj[103X(v^tr)) ⋅ v[133X[124X
+  
+  [33X[0;0Ywhere [22Xn[122X is the length of the coefficient list.[133X
+  
+  [33X[0;0YSo  [22Xv[122X  is  mapped  to  [3Xroot[103X[22X⋅  v[122X,  with default [22X-v[122X, and any vector [22Xx[122X with the
+  property [22Xx ⋅[122X[3Xconj[103X[22X(v^tr) = 0[122X is fixed by the reflection.[133X
+  
+  [1X24.5-11 PrintArray[101X
+  
+  [33X[1;0Y[29X[2XPrintArray[102X( [3Xarray[103X ) [32X function[133X
+  
+  [33X[0;0Ypretty-prints the array [3Xarray[103X.[133X
+  
+  
+  [1X24.6 [33X[0;0YRandom Matrices[133X[101X
+  
+  [1X24.6-1 RandomMat[101X
+  
+  [33X[1;0Y[29X[2XRandomMat[102X( [[3Xrs[103X, ][3Xm[103X, [3Xn[103X[, [3XR[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XRandomMat[102X returns a new mutable random matrix with [3Xm[103X rows and [3Xn[103X columns with
+  elements taken from the ring [3XR[103X, which defaults to [2XIntegers[102X ([14X14[114X). Optionally,
+  a random source [3Xrs[103X can be supplied.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRandomMat(2,3,GF(3));[127X[104X
+    [4X[28X[ [ Z(3), Z(3), 0*Z(3) ], [ Z(3), Z(3)^0, Z(3) ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.6-2 RandomInvertibleMat[101X
+  
+  [33X[1;0Y[29X[2XRandomInvertibleMat[102X( [[3Xrs[103X, ][3Xm[103X[, [3XR[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XRandomInvertibleMat[102X  returns  a  new mutable invertible random matrix with [3Xm[103X
+  rows  and  columns  with  elements  taken from the ring [3XR[103X, which defaults to
+  [2XIntegers[102X ([14X14[114X). Optionally, a random source [3Xrs[103X can be supplied.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm := RandomInvertibleMat(4);[127X[104X
+    [4X[28X[ [ -4, 1, 0, -1 ], [ -1, -1, 1, -1 ], [ 1, -2, -1, -2 ],[128X[104X
+    [4X[28X  [ 0, -1, 2, -2 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xm^-1;[127X[104X
+    [4X[28X[ [ -1/8, -11/24, 1/24, 1/4 ], [ 1/4, -13/12, -1/12, 1/2 ],[128X[104X
+    [4X[28X  [ -1/8, 5/24, -7/24, 1/4 ], [ -1/4, 3/4, -1/4, -1/2 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.6-3 RandomUnimodularMat[101X
+  
+  [33X[1;0Y[29X[2XRandomUnimodularMat[102X( [[3Xrs[103X, ][3Xm[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  a  new  random  mutable  [3Xm[103X[22X×[122X[3Xm[103X  matrix  with  integer entries that is
+  invertible  over  the  integers.  Optionally,  a  random  source  [3Xrs[103X  can be
+  supplied.  If  the  option  [3Xdomain[103X  is  given, random selection is made from
+  [3Xdomain[103X, otherwise from [3XIntegers[103X[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm := RandomUnimodularMat(3);[127X[104X
+    [4X[28X[ [ -5, 1, 0 ], [ 12, -2, -1 ], [ -14, 3, 0 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xm^-1;[127X[104X
+    [4X[28X[ [ -3, 0, 1 ], [ -14, 0, 5 ], [ -8, -1, 2 ] ][128X[104X
+    [4X[25Xgap>[125X [27XRandomUnimodularMat(3:domain:=[-1000..1000]);[127X[104X
+    [4X[28X[ [ 312330173, 15560030349, -125721926670 ],[128X[104X
+    [4X[28X[ -307290, -15309014, 123693281 ],[128X[104X
+    [4X[28X[ -684293792, -34090949551, 275448039848 ] ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X24.7 [33X[0;0YMatrices Representing Linear Equations and the Gaussian Algorithm[133X[101X
+  
+  [1X24.7-1 RankMatrix[101X
+  
+  [33X[1;0Y[29X[2XRankMatrix[102X( [3Xmat[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRankMat[102X( [3Xmat[103X ) [32X attribute[133X
+  
+  [33X[0;0YIf  [3Xmat[103X  is  a  matrix  object  representing a matrix whose rows span a free
+  module over the ring generated by the matrix entries and their inverses then
+  [2XRankMatrix[102X  returns  the  dimension  of  this free module. Otherwise [9Xfail[109X is
+  returned.[133X
+  
+  [33X[0;0YNote  that [2XRankMatrix[102X may perform a Gaussian elimination. For large rational
+  matrices this may take very long, because the entries may become very large.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmat:=[[1,2,3],[4,5,6],[7,8,9]];;[127X[104X
+    [4X[25Xgap>[125X [27XRankMatrix( mat );[127X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+  
+  [1X24.7-2 TriangulizedMat[101X
+  
+  [33X[1;0Y[29X[2XTriangulizedMat[102X( [3Xmat[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XRREF[102X( [3Xmat[103X ) [32X operation[133X
+  
+  [33X[0;0YComputes  an  upper  triangular  form  of  the  matrix  [3Xmat[103X via the Gaussian
+  Algorithm.  It  returns  a  mutable matrix in upper triangular form. This is
+  sometimes  also called [21XHermite normal form[121X or [21XReduced Row Echelon Form[121X. [10XRREF[110X
+  is a synonym for [10XTriangulizedMat[110X.[133X
+  
+  [1X24.7-3 TriangulizeMat[101X
+  
+  [33X[1;0Y[29X[2XTriangulizeMat[102X( [3Xmat[103X ) [32X operation[133X
+  
+  [33X[0;0YApplies  the  Gaussian  Algorithm  to the mutable matrix [3Xmat[103X and changes [3Xmat[103X
+  such  that  it  is in upper triangular normal form (sometimes called [21XHermite
+  normal form[121X or [21XReduced Row Echelon Form[121X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm:=TransposedMatMutable(mat);[127X[104X
+    [4X[28X[ [ 1, 4, 7 ], [ 2, 5, 8 ], [ 3, 6, 9 ] ][128X[104X
+    [4X[25Xgap>[125X [27XTriangulizeMat(m);m;[127X[104X
+    [4X[28X[ [ 1, 0, -1 ], [ 0, 1, 2 ], [ 0, 0, 0 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xm:=TransposedMatMutable(mat);[127X[104X
+    [4X[28X[ [ 1, 4, 7 ], [ 2, 5, 8 ], [ 3, 6, 9 ] ][128X[104X
+    [4X[25Xgap>[125X [27XTriangulizedMat(m);m;[127X[104X
+    [4X[28X[ [ 1, 0, -1 ], [ 0, 1, 2 ], [ 0, 0, 0 ] ][128X[104X
+    [4X[28X[ [ 1, 4, 7 ], [ 2, 5, 8 ], [ 3, 6, 9 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.7-4 NullspaceMat[101X
+  
+  [33X[1;0Y[29X[2XNullspaceMat[102X( [3Xmat[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XTriangulizedNullspaceMat[102X( [3Xmat[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  a  list  of  row  vectors  that form a basis of the vector space of
+  solutions to the equation [10X[3Xvec[103X[10X*[3Xmat[103X[10X=0[110X. The result is an immutable matrix. This
+  basis is not guaranteed to be in any specific form.[133X
+  
+  [33X[0;0YThe  variant  [2XTriangulizedNullspaceMat[102X  returns  a basis of the nullspace in
+  triangulized form as is often needed for algorithms.[133X
+  
+  [1X24.7-5 NullspaceMatDestructive[101X
+  
+  [33X[1;0Y[29X[2XNullspaceMatDestructive[102X( [3Xmat[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XTriangulizedNullspaceMatDestructive[102X( [3Xmat[103X ) [32X operation[133X
+  
+  [33X[0;0YThis  function  does  the same as [2XNullspaceMat[102X ([14X24.7-4[114X). However, the latter
+  function  makes  a  copy  of [3Xmat[103X to avoid having to change it. This function
+  does not do that; it returns the nullspace and may destroy [3Xmat[103X; this saves a
+  lot of memory in case [3Xmat[103X is big. The matrix [3Xmat[103X must be mutable.[133X
+  
+  [33X[0;0YThe  variant  [2XTriangulizedNullspaceMatDestructive[102X  returns  a  basis  of the
+  nullspace in triangulized form. It may destroy the matrix [3Xmat[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmat:=[[1,2,3],[4,5,6],[7,8,9]];;[127X[104X
+    [4X[25Xgap>[125X [27XNullspaceMat(mat);[127X[104X
+    [4X[28X[ [ 1, -2, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xmm:=[[1,2,3],[4,5,6],[7,8,9]];;[127X[104X
+    [4X[25Xgap>[125X [27XNullspaceMatDestructive( mm );[127X[104X
+    [4X[28X[ [ 1, -2, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xmm;[127X[104X
+    [4X[28X[ [ 1, 2, 3 ], [ 0, -3, -6 ], [ 0, 0, 0 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.7-6 SolutionMat[101X
+  
+  [33X[1;0Y[29X[2XSolutionMat[102X( [3Xmat[103X, [3Xvec[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  a row vector [3Xx[103X that is a solution of the equation [10X[3Xx[103X[10X * [3Xmat[103X[10X = [3Xvec[103X[10X[110X. It
+  returns [9Xfail[109X if no such vector exists.[133X
+  
+  [1X24.7-7 SolutionMatDestructive[101X
+  
+  [33X[1;0Y[29X[2XSolutionMatDestructive[102X( [3Xmat[103X, [3Xvec[103X ) [32X operation[133X
+  
+  [33X[0;0YDoes  the  same  as  [10XSolutionMat(  [3Xmat[103X[10X, [3Xvec[103X[10X )[110X except that it may destroy the
+  matrix [3Xmat[103X and the vector [3Xvec[103X. The matrix [3Xmat[103X must be mutable.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmat:=[[1,2,3],[4,5,6],[7,8,9]];;[127X[104X
+    [4X[25Xgap>[125X [27XSolutionMat(mat,[3,5,7]);[127X[104X
+    [4X[28X[ 5/3, 1/3, 0 ][128X[104X
+    [4X[25Xgap>[125X [27Xmm:= [[1,2,3],[4,5,6],[7,8,9]];;[127X[104X
+    [4X[25Xgap>[125X [27Xv:= [3,5,7];;[127X[104X
+    [4X[25Xgap>[125X [27XSolutionMatDestructive( mm, v );[127X[104X
+    [4X[28X[ 5/3, 1/3, 0 ][128X[104X
+    [4X[25Xgap>[125X [27Xmm;[127X[104X
+    [4X[28X[ [ 1, 2, 3 ], [ 0, -3, -6 ], [ 0, 0, 0 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xv;[127X[104X
+    [4X[28X[ 0, 0, 0 ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.7-8 BaseFixedSpace[101X
+  
+  [33X[1;0Y[29X[2XBaseFixedSpace[102X( [3Xmats[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XBaseFixedSpace[102X  returns a list of row vectors that form a base of the vector
+  space  [22XV[122X  such  that  [22Xv  M = v[122X for all [22Xv[122X in [22XV[122X and all matrices [22XM[122X in the list
+  [3Xmats[103X.  (This  is  the  common  eigenspace  of  all  matrices in [3Xmats[103X for the
+  eigenvalue 1.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XBaseFixedSpace([[[1,2],[0,1]]]);[127X[104X
+    [4X[28X[ [ 0, 1 ] ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X24.8 [33X[0;0YEigenvectors and eigenvalues[133X[101X
+  
+  [1X24.8-1 GeneralisedEigenvalues[101X
+  
+  [33X[1;0Y[29X[2XGeneralisedEigenvalues[102X( [3XF[103X, [3XA[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XGeneralizedEigenvalues[102X( [3XF[103X, [3XA[103X ) [32X operation[133X
+  
+  [33X[0;0YThe generalised eigenvalues of the matrix [3XA[103X over the field [3XF[103X.[133X
+  
+  [1X24.8-2 GeneralisedEigenspaces[101X
+  
+  [33X[1;0Y[29X[2XGeneralisedEigenspaces[102X( [3XF[103X, [3XA[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XGeneralizedEigenspaces[102X( [3XF[103X, [3XA[103X ) [32X operation[133X
+  
+  [33X[0;0YThe generalised eigenspaces of the matrix [3XA[103X over the field [3XF[103X.[133X
+  
+  [1X24.8-3 Eigenvalues[101X
+  
+  [33X[1;0Y[29X[2XEigenvalues[102X( [3XF[103X, [3XA[103X ) [32X operation[133X
+  
+  [33X[0;0YThe eigenvalues of the matrix [3XA[103X over the field [3XF[103X.[133X
+  
+  [1X24.8-4 Eigenspaces[101X
+  
+  [33X[1;0Y[29X[2XEigenspaces[102X( [3XF[103X, [3XA[103X ) [32X operation[133X
+  
+  [33X[0;0YThe eigenspaces of the matrix [3XA[103X over the field [3XF[103X.[133X
+  
+  [1X24.8-5 Eigenvectors[101X
+  
+  [33X[1;0Y[29X[2XEigenvectors[102X( [3XF[103X, [3XA[103X ) [32X operation[133X
+  
+  [33X[0;0YThe eigenvectors of the matrix [3XA[103X over the field [3XF[103X.[133X
+  
+  
+  [1X24.9 [33X[0;0YElementary Divisors[133X[101X
+  
+  [33X[0;0YSee also chapter [14X25[114X.[133X
+  
+  [1X24.9-1 ElementaryDivisorsMat[101X
+  
+  [33X[1;0Y[29X[2XElementaryDivisorsMat[102X( [[3Xring[103X, ][3Xmat[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XElementaryDivisorsMatDestructive[102X( [3Xring[103X, [3Xmat[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  a  list  of  the  elementary divisors, i.e., the unique [22Xd[122X with [22Xd[i][122X
+  divides  [22Xd[i+1][122X and [3Xmat[103X is equivalent to a diagonal matrix with the elements
+  [22Xd[i][122X  on  the diagonal. The operations are performed over the euclidean ring
+  [3Xring[103X,  which  must  contain all matrix entries. For compatibility reasons it
+  can  be  omitted  and  defaults  to  the  [2XDefaultRing[102X ([14X56.1-3[114X) of the matrix
+  entries.[133X
+  
+  [33X[0;0YThe  function  [2XElementaryDivisorsMatDestructive[102X produces the same result but
+  in the process may destroy the contents of [3Xmat[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmat:=[[1,2,3],[4,5,6],[7,8,9]];;[127X[104X
+    [4X[25Xgap>[125X [27XElementaryDivisorsMat(mat);[127X[104X
+    [4X[28X[ 1, 3, 0 ][128X[104X
+    [4X[25Xgap>[125X [27Xx:=Indeterminate(Rationals,"x");;[127X[104X
+    [4X[25Xgap>[125X [27Xmat:=mat*One(x)-x*mat^0;[127X[104X
+    [4X[28X[ [ -x+1, 2, 3 ], [ 4, -x+5, 6 ], [ 7, 8, -x+9 ] ][128X[104X
+    [4X[25Xgap>[125X [27XElementaryDivisorsMat(PolynomialRing(Rationals,1),mat);[127X[104X
+    [4X[28X[ 1, 1, x^3-15*x^2-18*x ][128X[104X
+    [4X[25Xgap>[125X [27Xmat:=KroneckerProduct(CompanionMat((x-1)^2),[127X[104X
+    [4X[25X>[125X [27X                         CompanionMat((x^3-1)*(x-1)));;[127X[104X
+    [4X[25Xgap>[125X [27Xmat:=mat*One(x)-x*mat^0;[127X[104X
+    [4X[28X[ [ -x, 0, 0, 0, 0, 0, 0, 1 ], [ 0, -x, 0, 0, -1, 0, 0, -1 ],[128X[104X
+    [4X[28X  [ 0, 0, -x, 0, 0, -1, 0, 0 ], [ 0, 0, 0, -x, 0, 0, -1, -1 ],[128X[104X
+    [4X[28X  [ 0, 0, 0, -1, -x, 0, 0, -2 ], [ 1, 0, 0, 1, 2, -x, 0, 2 ],[128X[104X
+    [4X[28X  [ 0, 1, 0, 0, 0, 2, -x, 0 ], [ 0, 0, 1, 1, 0, 0, 2, -x+2 ] ][128X[104X
+    [4X[25Xgap>[125X [27XElementaryDivisorsMat(PolynomialRing(Rationals,1),mat);[127X[104X
+    [4X[28X[ 1, 1, 1, 1, 1, 1, x-1, x^7-x^6-2*x^4+2*x^3+x-1 ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.9-2 ElementaryDivisorsTransformationsMat[101X
+  
+  [33X[1;0Y[29X[2XElementaryDivisorsTransformationsMat[102X( [[3Xring[103X, ][3Xmat[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XElementaryDivisorsTransformationsMatDestructive[102X( [3Xring[103X, [3Xmat[103X ) [32X function[133X
+  
+  [33X[0;0Y[10XElementaryDivisorsTransformations[110X,   in   addition  to  the  tasks  done  by
+  [10XElementaryDivisorsMat[110X,  also  calculates transforming matrices. It returns a
+  record  with  components  [10Xnormal[110X  (a  matrix  [22XS[122X), [10Xrowtrans[110X (a matrix [22XP[122X), and
+  [10Xcoltrans[110X (a matrix [22XQ[122X) such that [22XP A Q = S[122X. The operations are performed over
+  the  euclidean  ring  [3Xring[103X,  which  must  contain  all  matrix  entries. For
+  compatibility  reasons  it  can  be  omitted and defaults to the [2XDefaultRing[102X
+  ([14X56.1-3[114X) of the matrix entries.[133X
+  
+  [33X[0;0YThe  function  [2XElementaryDivisorsTransformationsMatDestructive[102X  produces the
+  same result but in the process destroys the contents of [3Xmat[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmat:=KroneckerProduct(CompanionMat((x-1)^2),CompanionMat((x^3-1)*(x-1)));;[127X[104X
+    [4X[25Xgap>[125X [27Xmat:=mat*One(x)-x*mat^0;[127X[104X
+    [4X[28X[ [ -x, 0, 0, 0, 0, 0, 0, 1 ], [ 0, -x, 0, 0, -1, 0, 0, -1 ],[128X[104X
+    [4X[28X  [ 0, 0, -x, 0, 0, -1, 0, 0 ], [ 0, 0, 0, -x, 0, 0, -1, -1 ],[128X[104X
+    [4X[28X  [ 0, 0, 0, -1, -x, 0, 0, -2 ], [ 1, 0, 0, 1, 2, -x, 0, 2 ],[128X[104X
+    [4X[28X  [ 0, 1, 0, 0, 0, 2, -x, 0 ], [ 0, 0, 1, 1, 0, 0, 2, -x+2 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xt:=ElementaryDivisorsTransformationsMat(PolynomialRing(Rationals,1),mat);[127X[104X
+    [4X[28Xrec( coltrans := [ [ 0, 0, 0, 0, 0, 0, 1/6*x^2-7/9*x-1/18, -3*x^3-x^2-x-1 ],[128X[104X
+    [4X[28X      [ 0, 0, 0, 0, 0, 0, -1/6*x^2+x-1, 3*x^3-3*x^2 ],[128X[104X
+    [4X[28X      [ 0, 0, 0, 0, 0, 1, -1/18*x^4+1/3*x^3-1/3*x^2-1/9*x, x^5-x^4+2*x^2-2*x[128X[104X
+    [4X[28X         ], [ 0, 0, 0, 0, -1, 0, -1/9*x^3+1/2*x^2+1/9*x, 2*x^4+x^3+x^2+2*x ],[128X[104X
+    [4X[28X      [ 0, -1, 0, 0, 0, 0, -2/9*x^2+19/18*x, 4*x^3+x^2+x ],[128X[104X
+    [4X[28X      [ 0, 0, -1, 0, 0, -x, 1/18*x^5-1/3*x^4+1/3*x^3+1/9*x^2,[128X[104X
+    [4X[28X          -x^6+x^5-2*x^3+2*x^2 ],[128X[104X
+    [4X[28X      [ 0, 0, 0, -1, x, 0, 1/9*x^4-2/3*x^3+2/3*x^2+1/18*x,[128X[104X
+    [4X[28X          -2*x^5+2*x^4-x^2+x ],[128X[104X
+    [4X[28X      [ 1, 0, 0, 0, 0, 0, 1/6*x^3-7/9*x^2-1/18*x, -3*x^4-x^3-x^2-x ] ],[128X[104X
+    [4X[28X  normal := [ [ 1, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 0 ],[128X[104X
+    [4X[28X      [ 0, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 0 ],[128X[104X
+    [4X[28X      [ 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0 ],[128X[104X
+    [4X[28X      [ 0, 0, 0, 0, 0, 0, x-1, 0 ],[128X[104X
+    [4X[28X      [ 0, 0, 0, 0, 0, 0, 0, x^7-x^6-2*x^4+2*x^3+x-1 ] ],[128X[104X
+    [4X[28X  rowtrans := [ [ 1, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 1, 0, 0, 0, 0, 0, 0 ],[128X[104X
+    [4X[28X      [ 0, 0, 1, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 1, 0, 0, 0, 0 ],[128X[104X
+    [4X[28X      [ -x+2, -x, 0, 0, 1, 0, 0, 0 ],[128X[104X
+    [4X[28X      [ 2*x^2-4*x+2, 2*x^2-x, 0, 2, -2*x+1, 0, 0, 1 ],[128X[104X
+    [4X[28X      [ 3*x^3-6*x^2+3*x, 3*x^3-2*x^2, 2, 3*x, -3*x^2+2*x, 0, 1, 2*x ],[128X[104X
+    [4X[28X      [ 1/6*x^8-7/6*x^7+2*x^6-4/3*x^5+7/3*x^4-4*x^3+13/6*x^2-7/6*x+2,[128X[104X
+    [4X[28X          1/6*x^8-17/18*x^7+13/18*x^6-5/18*x^5+35/18*x^4-31/18*x^3+1/9*x^2-x+\[128X[104X
+    [4X[28X2, 1/9*x^5-5/9*x^4+1/9*x^3-1/9*x^2+14/9*x-1/9,[128X[104X
+    [4X[28X          1/6*x^6-5/6*x^5+1/6*x^4-1/6*x^3+11/6*x^2-1/6*x,[128X[104X
+    [4X[28X          -1/6*x^7+17/18*x^6-13/18*x^5+5/18*x^4-35/18*x^3+31/18*x^2-1/9*x+1,[128X[104X
+    [4X[28X          1, 1/18*x^5-5/18*x^4+1/18*x^3-1/18*x^2+23/18*x-1/18,[128X[104X
+    [4X[28X          1/9*x^6-5/9*x^5+1/9*x^4-1/9*x^3+14/9*x^2-1/9*x ] ] )[128X[104X
+    [4X[25Xgap>[125X [27Xt.rowtrans*mat*t.coltrans;[127X[104X
+    [4X[28X[ [ 1, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 0 ],[128X[104X
+    [4X[28X  [ 0, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 0 ],[128X[104X
+    [4X[28X  [ 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0 ],[128X[104X
+    [4X[28X  [ 0, 0, 0, 0, 0, 0, x-1, 0 ],[128X[104X
+    [4X[28X  [ 0, 0, 0, 0, 0, 0, 0, x^7-x^6-2*x^4+2*x^3+x-1 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.9-3 DiagonalizeMat[101X
+  
+  [33X[1;0Y[29X[2XDiagonalizeMat[102X( [3Xring[103X, [3Xmat[103X ) [32X operation[133X
+  
+  [33X[0;0Ybrings  the  mutable  matrix  [3Xmat[103X,  considered  as  a matrix over [3Xring[103X, into
+  diagonal form by elementary row and column operations.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm:=[[1,2],[2,1]];;[127X[104X
+    [4X[25Xgap>[125X [27XDiagonalizeMat(Integers,m);m;[127X[104X
+    [4X[28X[ [ 1, 0 ], [ 0, 3 ] ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X24.10 [33X[0;0YEchelonized Matrices[133X[101X
+  
+  [1X24.10-1 SemiEchelonMat[101X
+  
+  [33X[1;0Y[29X[2XSemiEchelonMat[102X( [3Xmat[103X ) [32X attribute[133X
+  
+  [33X[0;0YA matrix over a field [22XF[122X is in semi-echelon form if the first nonzero element
+  in  each row is the identity of [22XF[122X, and all values exactly below these pivots
+  are the zero of [22XF[122X.[133X
+  
+  [33X[0;0Y[2XSemiEchelonMat[102X   returns   a   record  that  contains  information  about  a
+  semi-echelonized form of the matrix [3Xmat[103X.[133X
+  
+  [33X[0;0YThe components of this record are[133X
+  
+  [8X[10Xvectors[110X[8X[108X
+        [33X[0;6Ylist of row vectors, each with pivot element the identity of [22XF[122X,[133X
+  
+  [8X[10Xheads[110X[8X[108X
+        [33X[0;6Ylist  that  contains  at position [3Xi[103X, if nonzero, the number of the row
+        for that the pivot element is in column [3Xi[103X.[133X
+  
+  [1X24.10-2 SemiEchelonMatDestructive[101X
+  
+  [33X[1;0Y[29X[2XSemiEchelonMatDestructive[102X( [3Xmat[103X ) [32X operation[133X
+  
+  [33X[0;0YThis  does  the  same  as  [10XSemiEchelonMat(  [3Xmat[103X[10X  )[110X,  except that it may (and
+  probably will) destroy the matrix [3Xmat[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmm:=[[1,2,3],[4,5,6],[7,8,9]];;[127X[104X
+    [4X[25Xgap>[125X [27XSemiEchelonMatDestructive( mm );[127X[104X
+    [4X[28Xrec( heads := [ 1, 2, 0 ], vectors := [ [ 1, 2, 3 ], [ 0, 1, 2 ] ] )[128X[104X
+    [4X[25Xgap>[125X [27Xmm;[127X[104X
+    [4X[28X[ [ 1, 2, 3 ], [ 0, 1, 2 ], [ 0, 0, 0 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.10-3 SemiEchelonMatTransformation[101X
+  
+  [33X[1;0Y[29X[2XSemiEchelonMatTransformation[102X( [3Xmat[103X ) [32X attribute[133X
+  
+  [33X[0;0Ydoes the same as [2XSemiEchelonMat[102X ([14X24.10-1[114X) but additionally stores the linear
+  transformation  [22XT[122X  performed on the matrix. The additional components of the
+  result are[133X
+  
+  [8X[10Xcoeffs[110X[8X[108X
+        [33X[0;6Ya  list of coefficients vectors of the [10Xvectors[110X component, with respect
+        to the rows of [3Xmat[103X, that is, [10Xcoeffs * mat[110X is the [10Xvectors[110X component.[133X
+  
+  [8X[10Xrelations[110X[8X[108X
+        [33X[0;6Ya list of basis vectors for the (left) null space of [3Xmat[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSemiEchelonMatTransformation([[1,2,3],[0,0,1]]);[127X[104X
+    [4X[28Xrec( coeffs := [ [ 1, 0 ], [ 0, 1 ] ], heads := [ 1, 0, 2 ],[128X[104X
+    [4X[28X  relations := [  ], vectors := [ [ 1, 2, 3 ], [ 0, 0, 1 ] ] )[128X[104X
+  [4X[32X[104X
+  
+  [1X24.10-4 SemiEchelonMats[101X
+  
+  [33X[1;0Y[29X[2XSemiEchelonMats[102X( [3Xmats[103X ) [32X operation[133X
+  
+  [33X[0;0YA list of matrices over a field [22XF[122X is in semi-echelon form if the list of row
+  vectors   obtained   on   concatenating   the  rows  of  each  matrix  is  a
+  semi-echelonized matrix (see [2XSemiEchelonMat[102X ([14X24.10-1[114X)).[133X
+  
+  [33X[0;0Y[2XSemiEchelonMats[102X   returns   a  record  that  contains  information  about  a
+  semi-echelonized form of the list [3Xmats[103X of matrices.[133X
+  
+  [33X[0;0YThe components of this record are[133X
+  
+  [8X[10Xvectors[110X[8X[108X
+        [33X[0;6Ylist of matrices, each with pivot element the identity of [22XF[122X,[133X
+  
+  [8X[10Xheads[110X[8X[108X
+        [33X[0;6Ymatrix  that contains at position [[3Xi[103X,[3Xj[103X], if nonzero, the number of the
+        matrix that has the pivot element in this position[133X
+  
+  [1X24.10-5 SemiEchelonMatsDestructive[101X
+  
+  [33X[1;0Y[29X[2XSemiEchelonMatsDestructive[102X( [3Xmats[103X ) [32X operation[133X
+  
+  [33X[0;0YDoes  the  same as [2XSemiEchelonMats[102X ([14X24.10-4[114X), except that it may destroy its
+  argument.  Therefore  the  argument  must  be  a  list  of matrices that are
+  mutable.[133X
+  
+  
+  [1X24.11 [33X[0;0YMatrices as Basis of a Row Space[133X[101X
+  
+  [33X[0;0YSee also chapter [14X25[114X[133X
+  
+  [1X24.11-1 BaseMat[101X
+  
+  [33X[1;0Y[29X[2XBaseMat[102X( [3Xmat[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  a  basis for the row space generated by the rows of [3Xmat[103X in the form
+  of an immutable matrix.[133X
+  
+  [1X24.11-2 BaseMatDestructive[101X
+  
+  [33X[1;0Y[29X[2XBaseMatDestructive[102X( [3Xmat[103X ) [32X operation[133X
+  
+  [33X[0;0YDoes  the same as [2XBaseMat[102X ([14X24.11-1[114X), with the difference that it may destroy
+  the matrix [3Xmat[103X. The matrix [3Xmat[103X must be mutable.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmat:=[[1,2,3],[4,5,6],[7,8,9]];;[127X[104X
+    [4X[25Xgap>[125X [27XBaseMat(mat);[127X[104X
+    [4X[28X[ [ 1, 2, 3 ], [ 0, 1, 2 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xmm:= [[1,2,3],[4,5,6],[5,7,9]];;[127X[104X
+    [4X[25Xgap>[125X [27XBaseMatDestructive( mm );[127X[104X
+    [4X[28X[ [ 1, 2, 3 ], [ 0, 1, 2 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xmm;[127X[104X
+    [4X[28X[ [ 1, 2, 3 ], [ 0, 1, 2 ], [ 0, 0, 0 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.11-3 BaseOrthogonalSpaceMat[101X
+  
+  [33X[1;0Y[29X[2XBaseOrthogonalSpaceMat[102X( [3Xmat[103X ) [32X attribute[133X
+  
+  [33X[0;0YLet  [22XV[122X  be  the  row space generated by the rows of [3Xmat[103X (over any field that
+  contains  all entries of [3Xmat[103X). [10XBaseOrthogonalSpaceMat( [3Xmat[103X[10X )[110X computes a base
+  of the orthogonal space of [22XV[122X.[133X
+  
+  [33X[0;0YThe rows of [3Xmat[103X need not be linearly independent.[133X
+  
+  [1X24.11-4 SumIntersectionMat[101X
+  
+  [33X[1;0Y[29X[2XSumIntersectionMat[102X( [3XM1[103X, [3XM2[103X ) [32X operation[133X
+  
+  [33X[0;0Yperforms  Zassenhaus'  algorithm  to  compute  bases  for  the  sum  and the
+  intersection of spaces generated by the rows of the matrices [3XM1[103X, [3XM2[103X.[133X
+  
+  [33X[0;0Yreturns  a  list of length 2, at first position a base of the sum, at second
+  position  a  base  of  the intersection. Both bases are in semi-echelon form
+  (see [14X24.10[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSumIntersectionMat(mat,[[2,7,6],[5,9,4]]);[127X[104X
+    [4X[28X[ [ [ 1, 2, 3 ], [ 0, 1, 2 ], [ 0, 0, 1 ] ], [ [ 1, -3/4, -5/2 ] ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.11-5 BaseSteinitzVectors[101X
+  
+  [33X[1;0Y[29X[2XBaseSteinitzVectors[102X( [3Xbas[103X, [3Xmat[103X ) [32X function[133X
+  
+  [33X[0;0Yfind vectors extending mat to a basis spanning the span of [3Xbas[103X. Both [3Xbas[103X and
+  [3Xmat[103X  must  be  matrices  of  full  (row)  rank. It returns a record with the
+  following components:[133X
+  
+  [8X[10Xsubspace[110X[8X[108X
+        [33X[0;6Yis  a  basis of the space spanned by [3Xmat[103X in upper triangular form with
+        leading ones at all echelon steps and zeroes above these ones.[133X
+  
+  [8X[10Xfactorspace[110X[8X[108X
+        [33X[0;6Yis a list of extending vectors in upper triangular form.[133X
+  
+  [8X[10Xfactorzero[110X[8X[108X
+        [33X[0;6Yis a zero vector.[133X
+  
+  [8X[10Xheads[110X[8X[108X
+        [33X[0;6Yis  a  list  of integers which can be used to decompose vectors in the
+        basis  vectors.  The  [3Xi[103Xth  entry  indicating  the vector that gives an
+        echelon  step  at  position  [3Xi[103X. A negative number indicates an echelon
+        step  in  the  subspace,  a  positive  number  an  echelon step in the
+        complement, the absolute value gives the position of the vector in the
+        lists [10Xsubspace[110X and [10Xfactorspace[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XBaseSteinitzVectors(IdentityMat(3,1),[[11,13,15]]);[127X[104X
+    [4X[28Xrec( factorspace := [ [ 0, 1, 15/13 ], [ 0, 0, 1 ] ],[128X[104X
+    [4X[28X  factorzero := [ 0, 0, 0 ], heads := [ -1, 1, 2 ],[128X[104X
+    [4X[28X  subspace := [ [ 1, 13/11, 15/11 ] ] )[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X24.12 [33X[0;0YTriangular Matrices[133X[101X
+  
+  [1X24.12-1 DiagonalOfMatrix[101X
+  
+  [33X[1;0Y[29X[2XDiagonalOfMatrix[102X( [3Xmat[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XDiagonalOfMat[102X( [3Xmat[103X ) [32X function[133X
+  
+  [33X[0;0Yreturn  the  diagonal of the matrix [3Xmat[103X. If [3Xmat[103X is not a square matrix, then
+  the  result has the same length as the rows of [3Xmat[103X, and is padded with zeros
+  if [3Xmat[103X has fewer rows than columns.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDiagonalOfMatrix( [ [ 1, 2, 3 ], [ 4, 5, 6 ] ] );[127X[104X
+    [4X[28X[ 1, 5, 0 ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.12-2 UpperSubdiagonal[101X
+  
+  [33X[1;0Y[29X[2XUpperSubdiagonal[102X( [3Xmat[103X, [3Xpos[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns a mutable list containing the entries of the [3Xpos[103Xth upper subdiagonal
+  of the matrix [3Xmat[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XUpperSubdiagonal( [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ], 1 );[127X[104X
+    [4X[28X[ 2, 6 ][128X[104X
+    [4X[25Xgap>[125X [27XUpperSubdiagonal( [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ] ], 1 );[127X[104X
+    [4X[28X[ 2 ][128X[104X
+    [4X[25Xgap>[125X [27XUpperSubdiagonal( [ [ 1, 2, 3, 4 ], [ 5, 6, 7, 8 ] ], 1 );[127X[104X
+    [4X[28X[ 2, 7 ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.12-3 DepthOfUpperTriangularMatrix[101X
+  
+  [33X[1;0Y[29X[2XDepthOfUpperTriangularMatrix[102X( [3Xmat[103X ) [32X attribute[133X
+  
+  [33X[0;0YIf [3Xmat[103X is an upper triangular matrix this attribute returns the index of the
+  first nonzero diagonal.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDepthOfUpperTriangularMatrix([[0,1,2],[0,0,1],[0,0,0]]);[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XDepthOfUpperTriangularMatrix([[0,0,2],[0,0,0],[0,0,0]]);[127X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X24.13 [33X[0;0YMatrices as Linear Mappings[133X[101X
+  
+  [1X24.13-1 CharacteristicPolynomial[101X
+  
+  [33X[1;0Y[29X[2XCharacteristicPolynomial[102X( [[3XF[103X, [3XE[103X, ][3Xmat[103X[, [3Xind[103X] ) [32X attribute[133X
+  
+  [33X[0;0YFor a square matrix [3Xmat[103X, [2XCharacteristicPolynomial[102X returns the [13Xcharacteristic
+  polynomial[113X   of   [3Xmat[103X,  that  is,  the  [2XStandardAssociate[102X  ([14X56.5-5[114X)  of  the
+  determinant  of the matrix [22X[3Xmat[103X - X ⋅ I[122X, where [22XX[122X is an indeterminate and [22XI[122X is
+  the appropriate identity matrix.[133X
+  
+  [33X[0;0YIf  fields  [3XF[103X  and [3XE[103X are given, then [3XF[103X must be a subfield of [3XE[103X, and [3Xmat[103X must
+  have  entries in [3XE[103X. Then [2XCharacteristicPolynomial[102X returns the characteristic
+  polynomial of the [3XF[103X-linear mapping induced by [3Xmat[103X on the underlying [3XE[103X-vector
+  space  of [3Xmat[103X. In this case, the characteristic polynomial is computed using
+  [2XBlownUpMat[102X ([14X24.13-4[114X) for the field extension of [22XE/F[122X generated by the default
+  field.  Thus,  if  [22XF  =  E[122X,  the  result is the same as for the one argument
+  version.[133X
+  
+  [33X[0;0YThe  returned  polynomials are expressed in the indeterminate number [3Xind[103X. If
+  [3Xind[103X is not given, it defaults to [22X1[122X.[133X
+  
+  [33X[0;0Y[10XCharacteristicPolynomial([3XF[103X[10X,  [3XE[103X[10X, [3Xmat[103X[10X)[110X is a multiple of the minimal polynomial
+  [10XMinimalPolynomial([3XF[103X[10X, [3Xmat[103X[10X)[110X (see [2XMinimalPolynomial[102X ([14X66.8-1[114X)).[133X
+  
+  [33X[0;0YNote that, up to [5XGAP[105X version 4.4.6, [2XCharacteristicPolynomial[102X only allowed to
+  specify  one  field (corresponding to [3XF[103X) as an argument. That usage has been
+  disabled because its definition turned out to be ambiguous and may have lead
+  to  unexpected  results.  (To  ensure  backward  compatibility,  it is still
+  possible  to use the old form if [3XF[103X contains the default field of the matrix,
+  see [2XDefaultFieldOfMatrix[102X ([14X24.4-2[114X), but this feature will disappear in future
+  versions of [5XGAP[105X.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XCharacteristicPolynomial( [ [ 1, 1 ], [ 0, 1 ] ] );[127X[104X
+    [4X[28Xx^2-2*x+1[128X[104X
+    [4X[25Xgap>[125X [27Xmat := [[0,1],[E(4)-1,E(4)]];;[127X[104X
+    [4X[25Xgap>[125X [27XCharacteristicPolynomial( mat );[127X[104X
+    [4X[28Xx^2+(-E(4))*x+(1-E(4))[128X[104X
+    [4X[25Xgap>[125X [27XCharacteristicPolynomial( Rationals, CF(4), mat );[127X[104X
+    [4X[28Xx^4+3*x^2+2*x+2[128X[104X
+    [4X[25Xgap>[125X [27Xmat:= [ [ E(4), 1 ], [ 0, -E(4) ] ];;[127X[104X
+    [4X[25Xgap>[125X [27XCharacteristicPolynomial( mat );[127X[104X
+    [4X[28Xx^2+1[128X[104X
+    [4X[25Xgap>[125X [27XCharacteristicPolynomial( Rationals, CF(4), mat );[127X[104X
+    [4X[28Xx^4+2*x^2+1[128X[104X
+  [4X[32X[104X
+  
+  [1X24.13-2 RationalCanonicalFormTransform[101X
+  
+  [33X[1;0Y[29X[2XRationalCanonicalFormTransform[102X( [3Xmat[103X ) [32X function[133X
+  
+  [33X[0;0YFor  a  matrix  [10XA[110X,  return a matrix [10XP[110X such that [22XA^P[122X is in rational canonical
+  form  (also  called  Frobenius normal form). The algorithm used is the basic
+  textbook version and thus not of optimal complexity.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xaa:=[[0,-8,12,40,-36,4,0,59,15,-9],[-2,-2,-2,6,-11,1,-1,10,1,0],[127X[104X
+    [4X[25X>[125X [27X[1,5,0,-6,12,-2,0,-12,-4,2],[0,0,0,2,0,0,0,7,0,0],[127X[104X
+    [4X[25X>[125X [27X[0,2,-3,-7,8,-1,0,-7,-3,2],[-5,-4,-6,18,-30,2,-2,35,5,-1],[127X[104X
+    [4X[25X>[125X [27X[-1,-6,6,20,-28,3,0,24,10,-6],[0,0,0,-1,0,0,0,-3,0,0],[127X[104X
+    [4X[25X>[125X [27X[0,0,-1,-2,-2,0,-1,-7,0,0],[0,-8,9,21,-36,4,-2,12,12,-8]];;[127X[104X
+    [4X[25Xgap>[125X [27Xt:=RationalCanonicalFormTransform(aa);;[127X[104X
+    [4X[25Xgap>[125X [27Xaa^t;[127X[104X
+    [4X[28X[ [ 0, 0, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],[128X[104X
+    [4X[28X  [ 0, 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 0, 0, 0, 0 ],[128X[104X
+    [4X[28X  [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 ],[128X[104X
+    [4X[28X  [ 0, 0, 0, 0, 0, 1, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0, 0 ],[128X[104X
+    [4X[28X  [ 0, 0, 0, 0, 0, 0, 0, 1, 0, -1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1, -1 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.13-3 JordanDecomposition[101X
+  
+  [33X[1;0Y[29X[2XJordanDecomposition[102X( [3Xmat[103X ) [32X attribute[133X
+  
+  [33X[0;0Y[10XJordanDecomposition( [3Xmat [103X[10X )[110X returns a list [10X[S,N][110X such that [10XS[110X is a semisimple
+  matrix and [10XN[110X is nilpotent. Furthermore, [10XS[110X and [10XN[110X commute and [10X[3Xmat[103X[10X=S+N[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmat:=[[1,2,3],[4,5,6],[7,8,9]];;[127X[104X
+    [4X[25Xgap>[125X [27XJordanDecomposition(mat);[127X[104X
+    [4X[28X[ [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ],[128X[104X
+    [4X[28X  [ [ 0, 0, 0 ], [ 0, 0, 0 ], [ 0, 0, 0 ] ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.13-4 BlownUpMat[101X
+  
+  [33X[1;0Y[29X[2XBlownUpMat[102X( [3XB[103X, [3Xmat[103X ) [32X function[133X
+  
+  [33X[0;0YLet  [3XB[103X be a basis of a field extension [22XF / K[122X, and [3Xmat[103X a matrix whose entries
+  are all in [22XF[122X. (This is not checked.) [2XBlownUpMat[102X returns a matrix over [22XK[122X that
+  is  obtained  by  replacing  each entry of [3Xmat[103X by its regular representation
+  w.r.t. [3XB[103X.[133X
+  
+  [33X[0;0YMore  precisely,  regard [3Xmat[103X as the matrix of a linear transformation on the
+  row  space  [22XF^n[122X  w.r.t. the [22XF[122X-basis with vectors [22X(v_1, ..., v_n)[122X and suppose
+  that  the basis [3XB[103X consists of the vectors [22X(b_1, ..., b_m)[122X; then the returned
+  matrix  is  the  matrix  of  the linear transformation on the row space [22XK^mn[122X
+  w.r.t. the [22XK[122X-basis whose vectors are [22X(b_1 v_1, ... b_m v_1, ..., b_m v_n)[122X.[133X
+  
+  [33X[0;0YNote  that  the linear transformations act on [13Xrow[113X vectors, i.e., each row of
+  the matrix is a concatenation of vectors of [3XB[103X-coefficients.[133X
+  
+  [1X24.13-5 BlownUpVector[101X
+  
+  [33X[1;0Y[29X[2XBlownUpVector[102X( [3XB[103X, [3Xvector[103X ) [32X function[133X
+  
+  [33X[0;0YLet  [3XB[103X  be a basis of a field extension [22XF / K[122X, and [3Xvector[103X a row vector whose
+  entries  are  all  in  [22XF[122X.  [2XBlownUpVector[102X returns a row vector over [22XK[122X that is
+  obtained by replacing each entry of [3Xvector[103X by its coefficients w.r.t. [3XB[103X.[133X
+  
+  [33X[0;0YSo  [2XBlownUpVector[102X  and [2XBlownUpMat[102X ([14X24.13-4[114X) are compatible in the sense that
+  for  a  matrix  [3Xmat[103X  over  [22XF[122X,  [10XBlownUpVector(  [3XB[103X[10X, [3Xmat[103X[10X * [3Xvector[103X[10X )[110X is equal to
+  [10XBlownUpMat( [3XB[103X[10X, [3Xmat[103X[10X ) * BlownUpVector( [3XB[103X[10X, [3Xvector[103X[10X )[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XB:= Basis( CF(4), [ 1, E(4) ] );;[127X[104X
+    [4X[25Xgap>[125X [27Xmat:= [ [ 1, E(4) ], [ 0, 1 ] ];;  vec:= [ 1, E(4) ];;[127X[104X
+    [4X[25Xgap>[125X [27Xbmat:= BlownUpMat( B, mat );;  bvec:= BlownUpVector( B, vec );;[127X[104X
+    [4X[25Xgap>[125X [27XDisplay( bmat );  bvec;[127X[104X
+    [4X[28X[ [   1,   0,   0,   1 ],[128X[104X
+    [4X[28X  [   0,   1,  -1,   0 ],[128X[104X
+    [4X[28X  [   0,   0,   1,   0 ],[128X[104X
+    [4X[28X  [   0,   0,   0,   1 ] ][128X[104X
+    [4X[28X[ 1, 0, 0, 1 ][128X[104X
+    [4X[25Xgap>[125X [27Xbvec * bmat = BlownUpVector( B, vec * mat );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X24.13-6 CompanionMatrix[101X
+  
+  [33X[1;0Y[29X[2XCompanionMatrix[102X( [3Xpoly[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XCompanionMat[102X( [3Xpoly[103X ) [32X operation[133X
+  
+  [33X[0;0YReturn a fully mutable matrix that is the companion matrix of the polynomial
+  [3Xpoly[103X. The negatives of the coefficients of [3Xpoly[103X appear in the last column of
+  the result.[133X
+  
+  [33X[0;0YThe  companion  matrix  of  [3Xpoly[103X  has  [3Xpoly[103X  as  its minimal polynomial (see
+  [2XMinimalPolynomial[102X  ([14X66.8-1[114X))  and  as  its  characteristic  polynomial  (see
+  [2XCharacteristicPolynomial[102X ([14X24.13-1[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xx:= X( Rationals );;  pol:= x^3 + x^2 + 2*x + 3;;[127X[104X
+    [4X[25Xgap>[125X [27XM:= CompanionMatrix( pol );;[127X[104X
+    [4X[25Xgap>[125X [27XDisplay( M );[127X[104X
+    [4X[28X[ [   0,   0,  -3 ],[128X[104X
+    [4X[28X  [   1,   0,  -2 ],[128X[104X
+    [4X[28X  [   0,   1,  -1 ] ][128X[104X
+    [4X[25Xgap>[125X [27XMinimalPolynomial( M ) = pol;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X24.14 [33X[0;0YMatrices over Finite Fields[133X[101X
+  
+  [33X[0;0YJust   as   for   row  vectors,  (see  section  [14X23.3[114X),  [5XGAP[105X  has  a  special
+  representation for matrices over small finite fields.[133X
+  
+  [33X[0;0YTo  be  eligible to be represented in this way, each row of a matrix must be
+  able  to  be represented as a compact row vector of the same length over [13Xthe
+  same[113X finite field.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xv := Z(2)*[1,0,0,1,1];[127X[104X
+    [4X[28X[ Z(2)^0, 0*Z(2), 0*Z(2), Z(2)^0, Z(2)^0 ][128X[104X
+    [4X[25Xgap>[125X [27XConvertToVectorRep(v,2);[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27Xv;[127X[104X
+    [4X[28X<a GF2 vector of length 5>[128X[104X
+    [4X[25Xgap>[125X [27Xm := [v];; ConvertToMatrixRep(m,GF(2));; m;[127X[104X
+    [4X[28X<a 1x5 matrix over GF2>[128X[104X
+    [4X[25Xgap>[125X [27Xm := [v,v];; ConvertToMatrixRep(m,GF(2));; m;[127X[104X
+    [4X[28X<a 2x5 matrix over GF2>[128X[104X
+    [4X[25Xgap>[125X [27Xm := [v,v,v];; ConvertToMatrixRep(m,GF(2));; m;[127X[104X
+    [4X[28X<a 3x5 matrix over GF2>[128X[104X
+    [4X[25Xgap>[125X [27Xv := Z(3)*[1..8];[127X[104X
+    [4X[28X[ Z(3), Z(3)^0, 0*Z(3), Z(3), Z(3)^0, 0*Z(3), Z(3), Z(3)^0 ][128X[104X
+    [4X[25Xgap>[125X [27XConvertToVectorRep(v);[127X[104X
+    [4X[28X3[128X[104X
+    [4X[25Xgap>[125X [27Xm := [v];; ConvertToMatrixRep(m,GF(3));; m;[127X[104X
+    [4X[28X[ [ Z(3), Z(3)^0, 0*Z(3), Z(3), Z(3)^0, 0*Z(3), Z(3), Z(3)^0 ] ][128X[104X
+    [4X[25Xgap>[125X [27XRepresentationsOfObject(m);[127X[104X
+    [4X[28X[ "IsPositionalObjectRep", "Is8BitMatrixRep" ][128X[104X
+    [4X[25Xgap>[125X [27Xm := [v,v,v,v];; ConvertToMatrixRep(m,GF(3));; m;[127X[104X
+    [4X[28X< mutable compressed matrix 4x8 over GF(3) >[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAll  compressed  matrices  over GF(2) are viewed as [10X<a [3Xn[103X[10Xx[3Xm[103X[10X matrix over GF2>[110X,
+  while  over  fields  GF(q) for q between 3 and 256, matrices with 25 or more
+  entries are viewed in this way, and smaller ones as lists of lists.[133X
+  
+  [33X[0;0YMatrices  can  be converted to this special representation via the following
+  functions.[133X
+  
+  [33X[0;0YNote  that  the main advantage of this special representation of matrices is
+  in  low  dimensions,  where  various  overheads  can  be  reduced. In higher
+  dimensions,  a  list of compressed vectors will be almost as fast. Note also
+  that  list  access  and  assignment  will  be somewhat slower for compressed
+  matrices than for plain lists.[133X
+  
+  [33X[0;0YIn  order  to form a row of a compressed matrix a vector must accept certain
+  restrictions.  Specifically, it cannot change its length or change the field
+  over  which  it  is compressed. The main consequences of this are: that only
+  elements  of the appropriate field can be assigned to entries of the vector,
+  and  only  to  positions  between 1 and the original length; that the vector
+  cannot be shared between two matrices compressed over different fields.[133X
+  
+  [33X[0;0YThis  is  enforced by the filter [10XIsLockedRepresentationVector[110X. When a vector
+  becomes  part of a compressed matrix, this filter is set for it. Assignment,
+  [2XUnbind[102X   ([14X21.5-3[114X),   [2XConvertToVectorRep[102X   ([14X23.3-1[114X)   and  [2XConvertToMatrixRep[102X
+  ([14X24.14-2[114X) are all prevented from altering a vector with this filter.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xv := [Z(2),Z(2)];; ConvertToVectorRep(v,GF(2));; v;[127X[104X
+    [4X[28X<a GF2 vector of length 2>[128X[104X
+    [4X[25Xgap>[125X [27Xm := [v,v];[127X[104X
+    [4X[28X[ <a GF2 vector of length 2>, <a GF2 vector of length 2> ][128X[104X
+    [4X[25Xgap>[125X [27XConvertToMatrixRep(m,GF(2));[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27Xm2 := [m[1], [Z(4),Z(4)]]; # now try and mix in some GF(4)[127X[104X
+    [4X[28X[ <a GF2 vector of length 2>, [ Z(2^2), Z(2^2) ] ][128X[104X
+    [4X[25Xgap>[125X [27XConvertToMatrixRep(m2); # but m2[1] is locked[127X[104X
+    [4X[28X#I  ConvertToVectorRep: locked vector not converted to different field[128X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27Xm2 := [ShallowCopy(m[1]), [Z(4),Z(4)]]; # a fresh copy of row 1[127X[104X
+    [4X[28X[ <a GF2 vector of length 2>, [ Z(2^2), Z(2^2) ] ][128X[104X
+    [4X[25Xgap>[125X [27XConvertToMatrixRep(m2); # now it works[127X[104X
+    [4X[28X4[128X[104X
+    [4X[25Xgap>[125X [27Xm2;[127X[104X
+    [4X[28X[ [ Z(2)^0, Z(2)^0 ], [ Z(2^2), Z(2^2) ] ][128X[104X
+    [4X[25Xgap>[125X [27XRepresentationsOfObject(m2);[127X[104X
+    [4X[28X[ "IsPositionalObjectRep", "Is8BitMatrixRep" ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YArithmetic  operations  (see [14X21.11[114X  and the following sections) preserve the
+  compression  status  of  matrices  in  the  sense  that if all arguments are
+  compressed  matrices  written over the same field and the result is a matrix
+  then also the result is a compressed matrix written over this field.[133X
+  
+  [33X[0;0YThere  are  also two operations that are only available for matrices written
+  over finite fields.[133X
+  
+  [1X24.14-1 ImmutableMatrix[101X
+  
+  [33X[1;0Y[29X[2XImmutableMatrix[102X( [3Xfield[103X, [3Xmatrix[103X[, [3Xchange[103X] ) [32X operation[133X
+  
+  [33X[0;0YLet  [3Xmatrix[103X  be  an object for which either [2XIsMatrix[102X ([14X24.2-1[114X) or [2XIsMatrixObj[102X
+  ([14X26.2-2[114X)  returns  [9Xtrue[109X.  In the former case, [3Xmatrix[103X is a list of lists, and
+  [2XImmutableMatrix[102X  returns  an  immutable  object  for which [2XIsMatrix[102X ([14X24.2-1[114X)
+  returns  [9Xtrue[109X  (in  particular  again  a  list  of lists), which is equal to
+  [3Xmatrix[103X,  and  which  is  in  the  optimal  (concerning  space  and  runtime)
+  representation for matrices defined over [3Xfield[103X, provided that the entries of
+  [3Xmatrix[103X  lie  in  [3Xfield[103X.  In  the  latter  case,  [2XImmutableMatrix[102X  returns an
+  immutable  object  that is equal to the result of [2XChangedBaseDomain[102X ([14X26.6-3[114X)
+  when this is called with [3Xmatrix[103X and [3Xfield[103X.[133X
+  
+  [33X[0;0YThis  means  that  matrices obtained by several calls of [2XImmutableMatrix[102X for
+  the  same  [3Xfield[103X  are  compatible for fast arithmetic without need for field
+  conversion.[133X
+  
+  [33X[0;0YIf the input matrix [3Xmatrix[103X is in [2XIsMatrix[102X ([14X24.2-1[114X) then it or its rows might
+  change  their representation as a side effect of this function. However, one
+  cannot  rely  on  this side effect. Also, if [3Xmatrix[103X is already immutable and
+  the  result  of  [2XImmutableMatrix[102X  has  the  same  internal representation as
+  [3Xmatrix[103X, the result is not necessarily [13Xidentical[113X to [3Xmatrix[103X.[133X
+  
+  [33X[0;0YIf  [3Xchange[103X  is  [9Xtrue[109X,  [3Xmatrix[103X  or  its  rows  (if  there are subobjects that
+  represent  rows)  may  be changed to become immutable; otherwise the rows of
+  [3Xmatrix[103X are copied first.[133X
+  
+  [1X24.14-2 ConvertToMatrixRep[101X
+  
+  [33X[1;0Y[29X[2XConvertToMatrixRep[102X( [3Xlist[103X[, [3Xfield[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XConvertToMatrixRep[102X( [3Xlist[103X[, [3Xfieldsize[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XConvertToMatrixRepNC[102X( [3Xlist[103X[, [3Xfield[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XConvertToMatrixRepNC[102X( [3Xlist[103X[, [3Xfieldsize[103X] ) [32X function[133X
+  
+  [33X[0;0YThis  function is more technical version of [2XImmutableMatrix[102X ([14X24.14-1[114X), which
+  will  never  copy a matrix (or any rows of it) but may fail if it encounters
+  rows  locked  in  the  wrong representation, or various other more technical
+  problems.  Most  users  should use [2XImmutableMatrix[102X ([14X24.14-1[114X) instead. The NC
+  versions  of  the  function  do  less checking of the argument and may cause
+  unpredictable  results or crashes if given unsuitable arguments. Called with
+  one  argument  [3Xlist[103X,  [2XConvertToMatrixRep[102X converts [3Xlist[103X to an internal matrix
+  representation if possible.[133X
+  
+  [33X[0;0YCalled  with  a  list  [3Xlist[103X  and  a  finite  field [3Xfield[103X, [2XConvertToMatrixRep[102X
+  converts  [3Xlist[103X to an internal matrix representation appropriate for a matrix
+  over [3Xfield[103X.[133X
+  
+  [33X[0;0YInstead of a [3Xfield[103X also its size [3Xfieldsize[103X may be given.[133X
+  
+  [33X[0;0YIt  is  forbidden  to call this function unless all elements of [3Xlist[103X are row
+  vectors  with  entries  in  the field [3Xfield[103X. Violation of this condition can
+  lead  to  unpredictable  behaviour or a system crash. (Setting the assertion
+  level   to   at  least  2  might  catch  some  violations  before  a  crash,
+  see [2XSetAssertionLevel[102X ([14X7.5-1[114X).)[133X
+  
+  [33X[0;0Y[3Xlist[103X  may  already  be  a  compressed  matrix.  In this case, if no [3Xfield[103X or
+  [3Xfieldsize[103X is given, then nothing happens.[133X
+  
+  [33X[0;0YThe  return  value  is  the  size of the field over which the matrix ends up
+  written, if it is written in a compressed representation.[133X
+  
+  [1X24.14-3 ProjectiveOrder[101X
+  
+  [33X[1;0Y[29X[2XProjectiveOrder[102X( [3Xmat[103X ) [32X attribute[133X
+  
+  [33X[0;0YReturns  an  integer  n and a finite field element e such that [3XA[103X^n = eI. [3Xmat[103X
+  must be a matrix defined over a finite field.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XProjectiveOrder([[1,4],[5,2]]*Z(11)^0);[127X[104X
+    [4X[28X[ 5, Z(11)^5 ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.14-4 SimultaneousEigenvalues[101X
+  
+  [33X[1;0Y[29X[2XSimultaneousEigenvalues[102X( [3Xmatlist[103X, [3Xexpo[103X ) [32X function[133X
+  
+  [33X[0;0YThe  matrices  in  [3Xmatlist[103X  must  be  matrices  over GF([3Xq[103X) for some prime [3Xq[103X.
+  Together,  they  must generate an abelian p-group of exponent [3Xexpo[103X. Then the
+  eigenvalues  of  [3Xmat[103X in the splitting field [10XGF([3Xq[103X[10X^[3Xr[103X[10X)[110X for some [3Xr[103X are powers of
+  an   element   [22Xξ[122X   in   the   splitting  field,  which  is  of  order  [3Xexpo[103X.
+  [2XSimultaneousEigenvalues[102X  returns  a  matrix  of integers mod [3Xexpo[103X [22X(a_{i,j})[122X,
+  such  that  the  power  [22Xξ^{a_{i,j}}[122X  is  an eigenvalue of the [3Xi[103X-th matrix in
+  [3Xmatlist[103X  and  the  eigenspaces  of the different matrices to the eigenvalues
+  [22Xξ^{a_{i,j}}[122X for fixed [3Xj[103X are equal.[133X
+  
+  
+  [1X24.15 [33X[0;0YInverse and Nullspace of an Integer Matrix Modulo an Ideal[133X[101X
+  
+  [33X[0;0YThe following operations deal with matrices over a ring, but only care about
+  the  residues  of their entries modulo some ring element. In the case of the
+  integers  and  a prime number [22Xp[122X, this is effectively computation in a matrix
+  over the prime field in characteristic [22Xp[122X.[133X
+  
+  [1X24.15-1 InverseMatMod[101X
+  
+  [33X[1;0Y[29X[2XInverseMatMod[102X( [3Xmat[103X, [3Xobj[103X ) [32X operation[133X
+  
+  [33X[0;0YFor  a square matrix [3Xmat[103X, [2XInverseMatMod[102X returns a matrix [3Xinv[103X such that [10X[3Xinv[103X[10X *
+  [3Xmat[103X[10X[110X is congruent to the identity matrix modulo [3Xobj[103X, if such a matrix exists,
+  and [9Xfail[109X otherwise.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmat:= [ [ 1, 2 ], [ 3, 4 ] ];;  inv:= InverseMatMod( mat, 5 );[127X[104X
+    [4X[28X[ [ 3, 1 ], [ 4, 2 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xmat * inv;[127X[104X
+    [4X[28X[ [ 11, 5 ], [ 25, 11 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.15-2 BasisNullspaceModN[101X
+  
+  [33X[1;0Y[29X[2XBasisNullspaceModN[102X( [3XM[103X, [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Y[3XM[103X   must   be   a  matrix  of  integers  and  [3Xn[103X  a  positive  integer.  Then
+  [2XBasisNullspaceModN[102X  returns  a  set [3XB[103X of vectors such that every vector [3Xv[103X of
+  integer  modulo [3Xn[103X satisfying [3Xv[103X [3XM[103X = 0 modulo [3Xn[103X can be expressed by a Z-linear
+  combination of elements of [3XB[103X.[133X
+  
+  [1X24.15-3 NullspaceModQ[101X
+  
+  [33X[1;0Y[29X[2XNullspaceModQ[102X( [3XM[103X, [3Xq[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XNullspaceModN[102X( [3XM[103X, [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Y[3XM[103X  must be a matrix of integers and [3Xn[103X a positive integer. Then [2XNullspaceModN[102X
+  returns  the  set  of  all  vectors  of  integers  modulo [3Xn[103X, which solve the
+  homogeneous equation system [3Xv[103X [3XM[103X = 0 modulo [3Xn[103X.[133X
+  
+  [33X[0;0Y[2XNullspaceModQ[102X is a synonym for [2XNullspaceModN[102X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XNullspaceModN( [ [ 2 ] ], 8 );[127X[104X
+    [4X[28X[ [ 0 ], [ 4 ] ][128X[104X
+    [4X[25Xgap>[125X [27XNullspaceModN( [ [ 2, 1 ], [ 0, 2 ] ], 6 );[127X[104X
+    [4X[28X[ [ 0, 0 ], [ 0, 3 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xmat:= [ [ 1, 3 ], [ 1, 2 ], [ 1, 1 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27XNullspaceModN( mat, 5 );[127X[104X
+    [4X[28X[ [ 0, 0, 0 ], [ 1, 3, 1 ], [ 2, 1, 2 ], [ 3, 4, 3 ], [ 4, 2, 4 ] ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X24.16 [33X[0;0YSpecial Multiplication Algorithms for Matrices over GF(2)[133X[101X
+  
+  [33X[0;0YWhen  multiplying two compressed matrices [22XM[122X and [22XN[122X over GF(2) of dimensions [22Xa
+  × b[122X and [22Xb × c[122X, where [22Xa[122X, [22Xb[122X and [22Xc[122X are all greater than or equal to 128, [5XGAP[105X by
+  default  uses a more sophisticated matrix multiplication algorithm, in which
+  linear  combinations  of groups of 8 rows of [22XM[122X are remembered and re-used in
+  constructing  various rows of the product. This is called level 8 grease. To
+  optimise   memory   access  patterns,  these  combinations  are  stored  for
+  [22X(b+255)/256[122X  sets  of  8  rows  at  once. This number is called the blocking
+  level.[133X
+  
+  [33X[0;0YThese  levels  of  grease and blocking are found experimentally to give good
+  performance  across a range of processors and matrix sizes, but other levels
+  may  do  even better in some cases. You can control the levels exactly using
+  the functions below.[133X
+  
+  [33X[0;0YWe  plan  to  include greased blocked matrix multiplication for other finite
+  fields,  and  greased  blocked  algorithms  for  inversion  and other matrix
+  operations in a future release.[133X
+  
+  [1X24.16-1 PROD_GF2MAT_GF2MAT_SIMPLE[101X
+  
+  [33X[1;0Y[29X[2XPROD_GF2MAT_GF2MAT_SIMPLE[102X( [3Xm1[103X, [3Xm2[103X ) [32X function[133X
+  
+  [33X[0;0YThis   function   performs  the  standard  unblocked  and  ungreased  matrix
+  multiplication for matrices of any size.[133X
+  
+  [1X24.16-2 PROD_GF2MAT_GF2MAT_ADVANCED[101X
+  
+  [33X[1;0Y[29X[2XPROD_GF2MAT_GF2MAT_ADVANCED[102X( [3Xm1[103X, [3Xm2[103X, [3Xg[103X, [3Xb[103X ) [32X function[133X
+  
+  [33X[0;0YThis  function  computes  the product of [3Xm1[103X and [3Xm2[103X, which must be compressed
+  matrices over GF(2) of compatible dimensions, using level [3Xg[103X grease and level
+  [3Xb[103X blocking.[133X
+  
+  
+  [1X24.17 [33X[0;0YBlock Matrices[133X[101X
+  
+  [33X[0;0YBlock matrices are a special representation of matrices which can save a lot
+  of memory if large matrices have a block structure with lots of zero blocks.
+  [5XGAP[105X uses the representation [10XIsBlockMatrixRep[110X to store block matrices.[133X
+  
+  [1X24.17-1 AsBlockMatrix[101X
+  
+  [33X[1;0Y[29X[2XAsBlockMatrix[102X( [3Xm[103X, [3Xnrb[103X, [3Xncb[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  a  block  matrix with [3Xnrb[103X row blocks and [3Xncb[103X column blocks which is
+  equal to the ordinary matrix [3Xm[103X.[133X
+  
+  [1X24.17-2 BlockMatrix[101X
+  
+  [33X[1;0Y[29X[2XBlockMatrix[102X( [3Xblocks[103X, [3Xnrb[103X, [3Xncb[103X[, [3Xrpb[103X, [3Xcpb[103X, [3Xzero[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XBlockMatrix[102X  returns  an  immutable  matrix  in  the  sparse  representation
+  [10XIsBlockMatrixRep[110X.  The  nonzero  blocks  are described by the list [3Xblocks[103X of
+  triples  [22X[  [3Xi[103X,  [3Xj[103X, M(i,j) ][122X each consisting of a matrix [22XM(i,j)[122X and its block
+  coordinates  in the block matrix to be constructed. All matrices [22XM(i,j)[122X must
+  have  the  same  dimensions. As usual the first coordinate specifies the row
+  and  the  second one the column. The resulting matrix has [3Xnrb[103X row blocks and
+  [3Xncb[103X column blocks.[133X
+  
+  [33X[0;0YIf  [3Xblocks[103X  is  empty  (i.e.,  if  the  matrix  is  a  zero matrix) then the
+  dimensions  of  the  blocks  must  be  entered  as [3Xrpb[103X and [3Xcpb[103X, and the zero
+  element as [3Xzero[103X.[133X
+  
+  [33X[0;0YNote  that  all  blocks  must  be  ordinary  matrices  (see [2XIsOrdinaryMatrix[102X
+  ([14X24.2-2[114X)), and also the block matrix is an ordinary matrix.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XM := BlockMatrix([[1,1,[[1, 2],[ 3, 4]]],[127X[104X
+    [4X[25X>[125X [27X                     [1,2,[[9,10],[11,12]]],[127X[104X
+    [4X[25X>[125X [27X                     [2,2,[[5, 6],[ 7, 8]]]],2,2);[127X[104X
+    [4X[28X<block matrix of dimensions (2*2)x(2*2)>[128X[104X
+    [4X[25Xgap>[125X [27XDisplay(M);[127X[104X
+    [4X[28X[ [   1,   2,   9,  10 ],[128X[104X
+    [4X[28X  [   3,   4,  11,  12 ],[128X[104X
+    [4X[28X  [   0,   0,   5,   6 ],[128X[104X
+    [4X[28X  [   0,   0,   7,   8 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X24.17-3 MatrixByBlockMatrix[101X
+  
+  [33X[1;0Y[29X[2XMatrixByBlockMatrix[102X( [3Xblockmat[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns a plain ordinary matrix that is equal to the block matrix [3Xblockmat[103X.[133X
+  
+  
+  [1X24.18 [33X[0;0YLinear Programming[133X[101X
+  
+  [1X24.18-1 SimplexMethod[101X
+  
+  [33X[1;0Y[29X[2XSimplexMethod[102X( [3XA[103X, [3Xb[103X, [3Xc[103X ) [32X function[133X
+  
+  [33X[0;0YFind  a  rational  vector  [3Xx[103X  that  maximizes [22X[3Xx[103X⋅[3Xc[103X[122X, subject to the constraint
+  [22X[3XA[103X⋅[3Xx[103X≤[3Xb[103X[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=[[3,1,1,4],[1,-3,2,3],[2,1,3,-1]];;[127X[104X
+    [4X[25Xgap>[125X [27Xb:=[12,7,10];;c:=[2,4,3,1];;[127X[104X
+    [4X[25Xgap>[125X [27XSimplexMethod(A,b,c);[127X[104X
+    [4X[28X[ [ 0, 52/5, 0, 2/5 ], 42 ][128X[104X
+  [4X[32X[104X
+  

@@ -1,0 +1,1554 @@
+  
+  [1X54 [33X[0;0YPartial permutations[133X[101X
+  
+  [33X[0;0YThis chapter describes the functions in [5XGAP[105X for partial permutations.[133X
+  
+  [33X[0;0YA [13Xpartial permutation[113X in [5XGAP[105X is simply an injective function from any finite
+  set  of  positive integers to any other finite set of positive integers. The
+  largest point on which a partial permutation can be defined, and the largest
+  value  that  the  image  of  such  a  point can have, are defined by certain
+  architecture dependent limits.[133X
+  
+  [33X[0;0YEvery  inverse  semigroup  is  isomorphic to an inverse semigroup of partial
+  permutations  and,  as  such,  partial permutations are to inverse semigroup
+  theory  what  permutations  are  to  group theory and transformations are to
+  semigroup  theory.  In  this  way,  partial permutations are the elements of
+  inverse partial permutation semigroups.[133X
+  
+  [33X[0;0YA  partial  permutations in [5XGAP[105X acts on a finite set of positive integers on
+  the right. The image of a point [10Xi[110X under a partial permutation [10Xf[110X is expressed
+  as  [10Xi^f[110X  in  [5XGAP[105X.  This  action is also implemented by the function [2XOnPoints[102X
+  ([14X41.2-1[114X).  The  preimage of a point [10Xi[110X under the partial permutation [10Xf[110X can be
+  computed   using   [10Xi/f[110X  without  constructing  the  inverse  of  [10Xf[110X.  Partial
+  permutations  in  [5XGAP[105X  are created using the operations described in Section
+  [14X54.2[114X. Partial permutations are, by default, displayed in component notation,
+  which is described in Section [14X54.6[114X.[133X
+  
+  [33X[0;0YThe fundamental attributes of a partial permutation are:[133X
+  
+  [8XDomain[108X
+        [33X[0;6YThe  [13Xdomain[113X  of  a  partial  permutation  is  just the set of positive
+        integers  where  it  is  defined; see [2XDomainOfPartialPerm[102X ([14X54.3-4[114X). We
+        will denote the domain of a partial permutation [10Xf[110X by dom([10Xf[110X).[133X
+  
+  [8XDegree[108X
+        [33X[0;6YThe  [13Xdegree[113X  of  a  partial permutation [10Xf[110X is just the largest positive
+        integer  where  [10Xf[110X  is  defined. In other words, the degree of [10Xf[110X is the
+        largest element in the domain of [10Xf[110X; see [2XDegreeOfPartialPerm[102X ([14X54.3-1[114X).[133X
+  
+  [8XImage list[108X
+        [33X[0;6YThe  [13Ximage  list[113X of a partial permutation [10Xf[110X is the list [10X[i_1^f, i_2^f,
+        ..  ,  i_n^f][110X  where  the  domain  of  [10Xf[110X  is  [10X[i_1,  i_2, .., i_n][110X see
+        [2XImageListOfPartialPerm[102X ([14X54.3-6[114X). For example, the partial perm sending
+        [10X1[110X to [10X5[110X and [10X2[110X to [10X4[110X has image list [10X[ 5, 4 ][110X.[133X
+  
+  [8XImage set[108X
+        [33X[0;6YThe  [13Ximage set[113X of a partial permutation [10Xf[110X is just the set of points in
+        the  image  list  (i.e.  the  image list after it has been sorted into
+        increasing  order); see [2XImageSetOfPartialPerm[102X ([14X54.3-7[114X). We will denote
+        the image set of a partial permutation [10Xf[110X by im([10Xf[110X).[133X
+  
+  [8XCodegree[108X
+        [33X[0;6YThe  [13Xcodegree[113X  of a partial permutation [10Xf[110X is just the largest positive
+        integer  of the form [10Xi^f[110X for any [10Xi[110X in the domain of [10Xf[110X. In other words,
+        the  codegree  of  [10Xf[110X  is  the  largest  element in the image of [10Xf[110X; see
+        [2XCodegreeOfPartialPerm[102X ([14X54.3-2[114X).[133X
+  
+  [8XRank[108X
+        [33X[0;6YThe  [13Xrank[113X  of  a  partial  permutation [10Xf[110X is the size of its domain, or
+        equivalently   the   size   of  its  image  set  or  image  list;  see
+        [2XRankOfPartialPerm[102X ([14X54.3-3[114X).[133X
+  
+  [33X[0;0YA  [13Xfunctional  digraph[113X is a directed graph where every vertex has out-degree
+  [10X1[110X.  A  partial  permutation [3Xf[103X can be thought of as a functional digraph with
+  vertices  [10X[1..DegreeOfPartialPerm(f)][110X and edges from [10Xi[110X to [10Xi^f[110X for every [10Xi[110X. A
+  [13Xcomponent[113X  of  a  partial  permutation  is  defined  as  a  component of the
+  corresponding functional digraph. More specifically, [10Xi[110X and [10Xj[110X are in the same
+  component  if  and only if there are [22Xi=v_0, v_1, ..., v_n=j[122X such that either
+  [22Xv_k+1=v_k^f[122X or [22Xv_k=v_k+1^f[122X for all [10Xk[110X.[133X
+  
+  [33X[0;0YIf  [10XS[110X  is  a semigroup and [10Xs[110X is an element of [10XS[110X, then an element [10Xt[110X in [10XS[110X is a
+  [13Xsemigroup   inverse[113X  for  [10Xs[110X  if  [10Xs*t*s=s[110X  and  [10Xt*s*t=t[110X;  see,  for  example,
+  [2XInverseOfTransformation[102X  ([14X53.5-13[114X). A semigroup in which every element has a
+  unique semigroup inverse is called an [13Xinverse semigroup[113X.[133X
+  
+  [33X[0;0YEvery  partial  permutation  belongs  to  a  symmetric  inverse  monoid; see
+  [2XSymmetricInverseSemigroup[102X    ([14X54.7-3[114X).   Inverse   semigroups   of   partial
+  permutations  are  hence  inverse  subsemigroups  of  the  symmetric inverse
+  monoids.[133X
+  
+  [33X[0;0YThe  inverse  [10Xf^-1[110X  of  a  partial  permutation  [10Xf[110X  is  simply  the  partial
+  permutation  that maps [10Xi^f[110X to [10Xi[110X for all [10Xi[110X in the image of [10Xf[110X. It follows that
+  the  domain  of [10Xf^-1[110X equals the image of [10Xf[110X and that the image of [10Xf^-1[110X equals
+  the domain of [10Xf[110X. The inverse [10Xf^-1[110X is the unique partial permutation with the
+  property  that  [10Xf*f^-1*f=f[110X and [10Xf^-1*f*f^-1=f^-1[110X. In other words, [10Xf^-1[110X is the
+  unique semigroup inverse of [10Xf[110X in the symmetric inverse monoid.[133X
+  
+  [33X[0;0YIf  [10Xf[110X  and  [10Xg[110X  are  partial  permutations,  then the domain and image of the
+  product are:[133X
+  
+  
+  [24X[33X[0;6Ydom(fg)=(im(f)\cap dom(g))f^-1 and im(fg)=(im(f)\cap dom(g))g[133X
+  
+  [124X
+  
+  [33X[0;0YA  partial  permutation  is  an idempotent if and only if it is the identity
+  function on its domain. The products [10Xf*f^-1[110X and [10Xf^-1*f[110X are just the identity
+  functions on the domain and image of [10Xf[110X, respectively. It follows that [10Xf*f^-1[110X
+  is a left identity for [10Xf[110X and [10Xf^-1*f[110X is a right identity. These products will
+  be referred to here as the [13Xleft one[113X and [13Xright one[113X of the partial permutation
+  [10Xf[110X;  see  [2XLeftOne[102X  ([14X54.3-21[114X).  The  [13Xone[113X  of a partial permutation is just the
+  identity on the union of its domain and its image, and the [13Xzero[113X of a partial
+  permutation  is  just  the  empty partial permutation; see [2XOne[102X ([14X54.3-22[114X) and
+  [2XMultiplicativeZero[102X ([14X54.3-23[114X).[133X
+  
+  [33X[0;0YIf  [10XS[110X  is  an arbitrary inverse semigroup, the [13Xnatural partial order[113X on [10XS[110X is
+  defined  as follows: for elements [10Xx[110X and [10Xy[110X of [10XS[110X we say [10Xx[110X[22X≤[122X[10Xy[110X if there exists an
+  idempotent  element  [10Xe[110X  in [10XS[110X such that [10Xx=ey[110X. In the context of the symmetric
+  inverse  monoid,  a partial permutation [10Xf[110X is less than or equal to a partial
+  permutation [10Xg[110X in the natural partial order if and only if [10Xf[110X is a restriction
+  of [10Xg[110X. The natural partial order is a meet semilattice, in other words, every
+  pair  of  elements  has  a  greatest  lower  bound;  see  [2XMeetOfPartialPerms[102X
+  ([14X54.2-5[114X).[133X
+  
+  [33X[0;0YNote  that  unlike permutations, partial permutations do not fix unspecified
+  points  but  are simply undefined on such points; see Chapter [14X42[114X. Similar to
+  permutations, and unlike transformations, it is possible to multiply any two
+  partial permutations in [5XGAP[105X.[133X
+  
+  [33X[0;0YInternally,  [5XGAP[105X  stores a partial permutation [10Xf[110X as a list consisting of the
+  codegree of [10Xf[110X and the images [10Xi^f[110X of the points [10Xi[110X that are less than or equal
+  to the degree of [10Xf[110X; the value [10X0[110X is stored where [10Xi^f[110X is undefined. The domain
+  and image set of [10Xf[110X are also stored after either of these values is computed.
+  When  the  codegree  of  a  partial  permutation  [10Xf[110X  is less than 65536, the
+  codegree  and images [10Xi^f[110X are stored as 16-bit integers, the domain and image
+  set  are  subobjects  of  [10Xf[110X which are immutable plain lists of [5XGAP[105X integers.
+  When  the  codegree of [10Xf[110X is greater than or equal to 65536, the codegree and
+  images are stored as 32-bit integers; the domain and image set are stored in
+  the  same  way as before. A partial permutation belongs to [10XIsPPerm2Rep[110X if it
+  is stored using 16-bit integers and to [10XIsPPerm4Rep[110X otherwise.[133X
+  
+  [33X[0;0YIn  the  names of the [5XGAP[105X functions that deal with partial permutations, the
+  word  [21XPermutation[121X  is  usually  abbreviated  to  [21XPerm[121X,  to  save typing. For
+  example,   the   category   test   function   for  partial  permutations  is
+  [2XIsPartialPerm[102X ([14X54.1-1[114X).[133X
+  
+  
+  [1X54.1 [33X[0;0YThe family and categories of partial permutations[133X[101X
+  
+  [1X54.1-1 IsPartialPerm[101X
+  
+  [33X[1;0Y[29X[2XIsPartialPerm[102X( [3Xobj[103X ) [32X Category[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X.[133X
+  
+  [33X[0;0YEvery  partial  permutation  in  [5XGAP[105X  belongs to the category [10XIsPartialPerm[110X.
+  Basic  operations for partial permutations are [2XDomainOfPartialPerm[102X ([14X54.3-4[114X),
+  [2XImageListOfPartialPerm[102X     ([14X54.3-6[114X),     [2XImageSetOfPartialPerm[102X     ([14X54.3-7[114X),
+  [2XRankOfPartialPerm[102X  ([14X54.3-3[114X), [2XDegreeOfPartialPerm[102X ([14X54.3-1[114X), multiplication of
+  two  partial  permutations  is  via  [9X*[109X,  and  exponentiation  with the first
+  argument  a  positive  integer [10Xi[110X and second argument a partial permutation [10Xf[110X
+  where  the  result is the image [10Xi^f[110X of the point [10Xi[110X under [10Xf[110X. The inverse of a
+  partial permutation [10Xf[110X can be obtains using [10Xf^-1[110X.[133X
+  
+  [1X54.1-2 IsPartialPermCollection[101X
+  
+  [33X[1;0Y[29X[2XIsPartialPermCollection[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YEvery   collection   of   partial   permutations  belongs  to  the  category
+  [10XIsPartialPermCollection[110X.  For  example,  a semigroup of partial permutations
+  belongs in [10XIsPartialPermCollection[110X.[133X
+  
+  [1X54.1-3 PartialPermFamily[101X
+  
+  [33X[1;0Y[29X[2XPartialPermFamily[102X [32X family[133X
+  
+  [33X[0;0YThe family of all partial permutations is [10XPartialPermFamily[110X[133X
+  
+  
+  [1X54.2 [33X[0;0YCreating partial permutations[133X[101X
+  
+  [33X[0;0YThere  are  several  ways of creating partial permutations in [5XGAP[105X, which are
+  described in this section.[133X
+  
+  [1X54.2-1 PartialPerm[101X
+  
+  [33X[1;0Y[29X[2XPartialPerm[102X( [3Xdom[103X, [3Ximg[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XPartialPerm[102X( [3Xlist[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YA partial permutation.[133X
+  
+  [33X[0;0YPartial  permutations  can  be created in two ways: by giving the domain and
+  the image, or the dense image list.[133X
+  
+  [8XDomain and image[108X
+        [33X[0;6YThe  partial  permutation defined by a domain [3Xdom[103X and image [3Ximg[103X, where
+        [3Xdom[103X  is a set of positive integers and [3Ximg[103X is a duplicate free list of
+        positive  integers,  maps  [3Xdom[103X[10X[i][110X  to [3Ximg[103X[10X[i][110X. For example, the partial
+        permutation mapping [10X1[110X and [10X5[110X to [10X20[110X and [10X2[110X can be created using:[133X
+  
+  [4X      [32X  Example  [32X[104X
+          [4X[28XPartialPerm([1,5],[20,2]); [128X[104X
+        [4X[32X[104X
+  
+        [33X[0;6YIn this setting, [10XPartialPerm[110X is the analogue in the context of partial
+        permutations of [2XMappingPermListList[102X ([14X42.5-3[114X).[133X
+  
+  [8XDense image list[108X
+        [33X[0;6YThe  partial  permutation defined by a dense image list [3Xlist[103X, maps the
+        positive  integer  [10Xi[110X to [3Xlist[103X[10X[i][110X if [3Xlist[103X[10X[i]<>0[110X and is undefined at [10Xi[110X if
+        [3Xlist[103X[10X[i]=0[110X.  For example, the partial permutation mapping [10X1[110X and [10X5[110X to [10X20[110X
+        and [10X2[110X can be created using:[133X
+  
+  [4X      [32X  Example  [32X[104X
+          [4X[28XPartialPerm([20,0,0,0,2]);[128X[104X
+        [4X[32X[104X
+  
+        [33X[0;6YIn this setting, [10XPartialPerm[110X is the analogue in the context of partial
+        permutations of [2XPermList[102X ([14X42.5-2[114X).[133X
+  
+  [33X[0;0YRegardless  of  which  of  these  two  methods  are used to create a partial
+  permutation in [5XGAP[105X the internal representation is the same.[133X
+  
+  [33X[0;0YIf  the  largest  point in the domain is larger than the rank of the partial
+  permutation,  then  using  the  dense  image  list  to  define  the  partial
+  permutation  will  require  less  typing; otherwise using the domain and the
+  image will require less typing. For example, the partial permutation mapping
+  [10X10000[110X to [10X1[110X can be defined using:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XPartialPerm([10000], [1]);[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Ybut  using the dense image list would require a list with [10X9999[110X entries equal
+  to  [10X0[110X  and  the  final  entry equal to [10X1[110X. On the other hand, the identity on
+  [10X[1,2,3,4,6][110X can be defined using:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XPartialPerm([1,2,3,4,0,6]);[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YPlease  note that a partial permutation in [5XGAP[105X is never a permutation nor is
+  a  permutation  ever  a  partial  permutation.  For example, the permutation
+  [10X(1,4,2)[110X  fixes  [10X3[110X but the partial permutation [10XPartialPerm([4,1,0,2]);[110X is not
+  defined on [10X3[110X.[133X
+  
+  [1X54.2-2 PartialPermOp[101X
+  
+  [33X[1;0Y[29X[2XPartialPermOp[102X( [3Xobj[103X, [3Xlist[103X[, [3Xfunc[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XPartialPermOpNC[102X( [3Xobj[103X, [3Xlist[103X[, [3Xfunc[103X] ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA partial permutation or [9Xfail[109X.[133X
+  
+  [33X[0;0Y[2XPartialPermOp[102X returns the partial permutation that corresponds to the action
+  of  the  object [3Xobj[103X on the domain or list [3Xlist[103X via the function [3Xfunc[103X. If the
+  optional  third  argument  [3Xfunc[103X  is  not specified, then the action [2XOnPoints[102X
+  ([14X41.2-1[114X)  is  used  by  default.  Note that the returned partial permutation
+  refers to the positions in [3Xlist[103X even if [3Xlist[103X itself consists of integers.[133X
+  
+  [33X[0;0YThis  function  is  the  analogue  in the context of partial permutations of
+  [2XPermutation[102X ([14X41.9-1[114X) or [2XTransformationOp[102X ([14X53.2-5[114X).[133X
+  
+  [33X[0;0YIf [3Xobj[103X does not map the elements of [3Xlist[103X injectively, then [9Xfail[109X is returned.[133X
+  
+  [33X[0;0Y[2XPartialPermOpNC[102X does not check that [3Xobj[103X maps elements of [3Xlist[103X injectively or
+  that a partial permutation is defined by the action of [3Xobj[103X on [3Xlist[103X via [3Xfunc[103X.
+  This  function  should  be used only with caution, in situations where it is
+  guaranteed that the arguments have the required properties.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=Transformation( [ 9, 10, 4, 2, 10, 5, 9, 10, 9, 6 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XPartialPermOp(f, [ 6 .. 8 ], OnPoints);[127X[104X
+    [4X[28X[1,4][2,5][3,6][128X[104X
+  [4X[32X[104X
+  
+  [1X54.2-3 RestrictedPartialPerm[101X
+  
+  [33X[1;0Y[29X[2XRestrictedPartialPerm[102X( [3Xf[103X, [3Xset[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA partial permutation.[133X
+  
+  [33X[0;0Y[10XRestrictedPartialPerm[110X  returns  a  new  partial permutation that acts on the
+  points  in  the  set of positive integers [3Xset[103X in the same way as the partial
+  permutation [3Xf[103X, and that is undefined on those points that are not in [3Xset[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 3, 4, 7, 8, 9 ], [ 9, 4, 1, 6, 2, 8 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XRestrictedPartialPerm(f, [ 2, 3, 6, 10 ] );[127X[104X
+    [4X[28X[3,4][128X[104X
+  [4X[32X[104X
+  
+  [1X54.2-4 JoinOfPartialPerms[101X
+  
+  [33X[1;0Y[29X[2XJoinOfPartialPerms[102X( [3Xarg[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XJoinOfIdempotentPartialPermsNC[102X( [3Xarg[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YA partial permutation or [9Xfail[109X.[133X
+  
+  [33X[0;0YThe join of partial permutations [3Xf[103X and [3Xg[103X is just the join, or supremum, of [3Xf[103X
+  and [3Xg[103X under the natural partial ordering of partial permutations.[133X
+  
+  [33X[0;0Y[10XJoinOfPartialPerms[110X  returns  the  union  of  the partial permutations in its
+  argument  if  this defines a partial permutation, and [9Xfail[109X if it is not. The
+  argument  [3Xarg[103X can be a partial permutation collection or a number of partial
+  permutations.[133X
+  
+  [33X[0;0YThe function [10XJoinOfIdempotentPartialPermsNC[110X returns the join of its argument
+  which  is assumed to be a collection of idempotent partial permutations or a
+  number  of  idempotent  partial  permutations.  It  is  not checked that the
+  arguments  are  idempotents. The performance of this function is higher than
+  [10XJoinOfPartialPerms[110X  when  it is known [13Xa priori[113X that the argument consists of
+  idempotents.[133X
+  
+  [33X[0;0YThe  union  of [3Xf[103X and [3Xg[103X is a partial permutation if and only if [3Xf[103X and [3Xg[103X agree
+  on  the  intersection  dom([3Xf[103X)[22X∩[122X  dom([3Xg[103X)  of  their  domains and the images of
+  dom([3Xf[103X)[22X∖[122X dom([3Xg[103X) and dom([3Xg[103X)[22X∖[122X dom([3Xf[103X) under [3Xf[103X and [3Xg[103X, respectively, are disjoint.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 2, 3, 6, 8, 10 ], [ 2, 6, 7, 9, 1, 5 ] );[127X[104X
+    [4X[28X[3,7][8,1,2,6,9][10,5][128X[104X
+    [4X[25Xgap>[125X [27Xg:=PartialPerm( [ 11, 12, 14, 16, 18, 19 ],[127X[104X
+    [4X[25X>[125X [27X[ 17, 20, 11, 19, 14, 12 ] );[127X[104X
+    [4X[28X[16,19,12,20][18,14,11,17][128X[104X
+    [4X[25Xgap>[125X [27XJoinOfPartialPerms(f, g);[127X[104X
+    [4X[28X[3,7][8,1,2,6,9][10,5][16,19,12,20][18,14,11,17][128X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 4, 5, 6, 7 ], [ 5, 7, 3, 1, 4 ] );[127X[104X
+    [4X[28X[6,1,5,3](4,7)[128X[104X
+    [4X[25Xgap>[125X [27Xg:=PartialPerm( [ 100 ], [ 1 ] );[127X[104X
+    [4X[28X[100,1][128X[104X
+    [4X[25Xgap>[125X [27XJoinOfPartialPerms(f, g);[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 3, 4 ], [ 3, 2, 4 ] );[127X[104X
+    [4X[28X[1,3,2](4)[128X[104X
+    [4X[25Xgap>[125X [27Xg:=PartialPerm( [ 1, 2, 4 ], [ 2, 3, 4 ] );[127X[104X
+    [4X[28X[1,2,3](4)[128X[104X
+    [4X[25Xgap>[125X [27XJoinOfPartialPerms(f, g);[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1 ], [ 2 ] );[127X[104X
+    [4X[28X[1,2][128X[104X
+    [4X[25Xgap>[125X [27XJoinOfPartialPerms(f, f^-1);[127X[104X
+    [4X[28X(1,2)[128X[104X
+  [4X[32X[104X
+  
+  [1X54.2-5 MeetOfPartialPerms[101X
+  
+  [33X[1;0Y[29X[2XMeetOfPartialPerms[102X( [3Xarg[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YA partial permutation.[133X
+  
+  [33X[0;0YThe  meet of partial permutations [3Xf[103X and [3Xg[103X is just the meet, or infimum, of [3Xf[103X
+  and  [3Xg[103X  under the natural partial ordering of partial permutations. In other
+  words,  the  meet is the greatest partial permutation which is a restriction
+  of both [3Xf[103X and [3Xg[103X.[133X
+  
+  [33X[0;0YNote that unlike the join of partial permutations, the meet always exists.[133X
+  
+  [33X[0;0Y[2XMeetOfPartialPerms[102X  returns  the  meet  of  the  partial permutations in its
+  argument.  The  argument  [3Xarg[103X  can  be a partial permutation collection or a
+  number of partial permutations.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 2, 3, 6, 100000 ], [ 2, 6, 7, 1, 5 ] );[127X[104X
+    [4X[28X[3,7][100000,5](1,2,6)[128X[104X
+    [4X[25Xgap>[125X [27Xg:=PartialPerm( [ 1, 2, 3, 4, 6 ], [ 2, 4, 6, 1, 5 ] );[127X[104X
+    [4X[28X[3,6,5](1,2,4)[128X[104X
+    [4X[25Xgap>[125X [27XMeetOfPartialPerms(f, g);[127X[104X
+    [4X[28X[1,2][128X[104X
+    [4X[25Xgap>[125X [27Xg:=PartialPerm( [ 1, 2, 3, 5, 6, 7, 9, 10 ],[127X[104X
+    [4X[25X>[125X [27X[ 4, 10, 5, 6, 7, 1, 3, 2 ] );[127X[104X
+    [4X[28X[9,3,5,6,7,1,4](2,10)[128X[104X
+    [4X[25Xgap>[125X [27XMeetOfPartialPerms(f, g);[127X[104X
+    [4X[28X<empty partial perm>[128X[104X
+  [4X[32X[104X
+  
+  [1X54.2-6 EmptyPartialPerm[101X
+  
+  [33X[1;0Y[29X[2XEmptyPartialPerm[102X(  ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YThe empty partial permutation.[133X
+  
+  [33X[0;0YThe empty partial permutation is returned by this function when it is called
+  with no arguments. This is just short hand for [10XPartialPerm([]);[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XEmptyPartialPerm();[127X[104X
+    [4X[28X<empty partial perm>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X54.2-7 [33X[0;0YRandomPartialPerm[133X[101X
+  
+  [33X[1;0Y[29X[2XRandomPartialPerm[102X( [3Xn[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XRandomPartialPerm[102X( [3Xset[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XRandomPartialPerm[102X( [3Xdom[103X, [3Ximg[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YA random partial permutation.[133X
+  
+  [33X[0;0YIn  its  first  form,  [10XRandomPartialPerm[110X  returns  a randomly chosen partial
+  permutation  where  points  in the domain and image are bounded above by the
+  positive integer [3Xn[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRandomPartialPerm(10);[127X[104X
+    [4X[28X[2,9][4,1,6,5][7,3](8)[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIn  its  second  form,  [10XRandomPartialPerm[110X  returns a randomly chosen partial
+  permutation  with  points  in  the  domain and image contained in the set of
+  positive integers [3Xset[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRandomPartialPerm([1,2,3,1000]);[127X[104X
+    [4X[28X[2,3,1000](1)[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIn  its  third  form,  [10XRandomPartialPerm[110X  creates  a randomly chosen partial
+  permutation  with  domain  contained in the set of positive integers [3Xdom[103X and
+  image  contained  in the set of positive integers [3Ximg[103X. The arguments [3Xdom[103X and
+  [3Ximg[103X do not have to have equal length.[133X
+  
+  [33X[0;0YNote  that  it  is  not  guaranteed  in  either  of these cases that partial
+  permutations are chosen with a uniform distribution.[133X
+  
+  
+  [1X54.3 [33X[0;0YAttributes for partial permutations[133X[101X
+  
+  [33X[0;0YIn  this  section  we  describe  the  functions available in [5XGAP[105X for finding
+  various attributes of partial permutations.[133X
+  
+  [1X54.3-1 DegreeOfPartialPerm[101X
+  
+  [33X[1;0Y[29X[2XDegreeOfPartialPerm[102X( [3Xf[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XDegreeOfPartialPermCollection[102X( [3Xcoll[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA non-negative integer.[133X
+  
+  [33X[0;0YThe  [13Xdegree[113X of a partial permutation [3Xf[103X is the largest positive integer where
+  it is defined, i.e. the maximum element in the domain of [3Xf[103X.[133X
+  
+  [33X[0;0YThe  degree  a collection of partial permutations [3Xcoll[103X is the largest degree
+  of any partial permutation in [3Xcoll[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 2, 3, 6, 8, 10 ], [ 2, 6, 7, 9, 1, 5 ] );[127X[104X
+    [4X[28X[3,7][8,1,2,6,9][10,5][128X[104X
+    [4X[25Xgap>[125X [27XDegreeOfPartialPerm(f);[127X[104X
+    [4X[28X10[128X[104X
+  [4X[32X[104X
+  
+  [1X54.3-2 CodegreeOfPartialPerm[101X
+  
+  [33X[1;0Y[29X[2XCodegreeOfPartialPerm[102X( [3Xf[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XCodegreeOfPartialPermCollection[102X( [3Xcoll[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA non-negative integer.[133X
+  
+  [33X[0;0YThe  [13Xcodegree[113X  of a partial permutation [3Xf[103X is the largest positive integer in
+  its image.[133X
+  
+  [33X[0;0YThe  codegree  a  collection  of  partial  permutations  [3Xcoll[103X is the largest
+  codegree of any partial permutation in [3Xcoll[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 2, 3, 4, 5, 8, 10 ], [ 7, 1, 4, 3, 2, 6, 5 ] );[127X[104X
+    [4X[28X[8,6][10,5,2,1,7](3,4)[128X[104X
+    [4X[25Xgap>[125X [27XCodegreeOfPartialPerm(f);[127X[104X
+    [4X[28X7[128X[104X
+  [4X[32X[104X
+  
+  [1X54.3-3 RankOfPartialPerm[101X
+  
+  [33X[1;0Y[29X[2XRankOfPartialPerm[102X( [3Xf[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XRankOfPartialPermCollection[102X( [3Xcoll[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA non-negative integer.[133X
+  
+  [33X[0;0YThe  [13Xrank[113X  of  a  partial  permutation  [3Xf[103X  is  the  size  of  its domain, or
+  equivalently the size of its image set or image list.[133X
+  
+  [33X[0;0YThe  rank  of a partial permutation collection [3Xcoll[103X is the size of the union
+  of the domains of the elements of [3Xcoll[103X, or equivalently, the total number of
+  points  on  which  the elements of [3Xcoll[103X act. Note that this is value may not
+  the same as the size of the union of the images of the elements in [3Xcoll[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 2, 4, 6, 8, 9 ], [ 7, 10, 1, 9, 4, 2 ] );[127X[104X
+    [4X[28X[6,9,2,10][8,4,1,7][128X[104X
+    [4X[25Xgap>[125X [27XRankOfPartialPerm(f);[127X[104X
+    [4X[28X6[128X[104X
+  [4X[32X[104X
+  
+  [1X54.3-4 DomainOfPartialPerm[101X
+  
+  [33X[1;0Y[29X[2XDomainOfPartialPerm[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XDomainOfPartialPermCollection[102X( [3Xf[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA set of positive integers (maybe empty).[133X
+  
+  [33X[0;0YThe  [13Xdomain[113X of a partial permutation [3Xf[103X is the set of positive integers where
+  [3Xf[103X is defined.[133X
+  
+  [33X[0;0YThe  domain  of  a  partial  permutation collection [3Xcoll[103X is the union of the
+  domains of its elements.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 2, 3, 6, 8, 10 ], [ 2, 6, 7, 9, 1, 5 ] );[127X[104X
+    [4X[28X[3,7][8,1,2,6,9][10,5][128X[104X
+    [4X[25Xgap>[125X [27XDomainOfPartialPerm(f);[127X[104X
+    [4X[28X[ 1, 2, 3, 6, 8, 10 ][128X[104X
+  [4X[32X[104X
+  
+  [1X54.3-5 ImageOfPartialPermCollection[101X
+  
+  [33X[1;0Y[29X[2XImageOfPartialPermCollection[102X( [3Xcoll[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA set of positive integers (maybe empty).[133X
+  
+  [33X[0;0YThe  [13Ximage[113X  of  a  partial  permutation  collection [3Xcoll[103X is the union of the
+  images of its elements.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS := SymmetricInverseSemigroup(5);[127X[104X
+    [4X[28X<symmetric inverse monoid of degree 5>[128X[104X
+    [4X[25Xgap>[125X [27XImageOfPartialPermCollection(GeneratorsOfInverseSemigroup(S));[127X[104X
+    [4X[28X[ 1 .. 5 ][128X[104X
+  [4X[32X[104X
+  
+  [1X54.3-6 ImageListOfPartialPerm[101X
+  
+  [33X[1;0Y[29X[2XImageListOfPartialPerm[102X( [3Xf[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YThe list of images of a partial permutation.[133X
+  
+  [33X[0;0YThe  [13Ximage  list[113X  of  a  partial  permutation [3Xf[103X is the list of images of the
+  elements           of          the          domain          [3Xf[103X          where
+  [10XImageListOfPartialPerm([3Xf[103X[10X)[i]=DomainOfPartialPerm([3Xf[103X[10X)[i]^[3Xf[103X[10X[110X  for  any  [10Xi[110X in the
+  range from [10X1[110X to the rank of [3Xf[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 2, 3, 4, 5, 8, 10 ], [ 7, 1, 4, 3, 2, 6, 5 ] );[127X[104X
+    [4X[28X[8,6][10,5,2,1,7](3,4)[128X[104X
+    [4X[25Xgap>[125X [27XImageListOfPartialPerm(f);[127X[104X
+    [4X[28X[ 7, 1, 4, 3, 2, 6, 5 ][128X[104X
+  [4X[32X[104X
+  
+  [1X54.3-7 ImageSetOfPartialPerm[101X
+  
+  [33X[1;0Y[29X[2XImageSetOfPartialPerm[102X( [3Xf[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YThe image set of a partial permutation.[133X
+  
+  [33X[0;0YThe  [13Ximage  set[113X  of a partial permutation [10Xf[110X is just the set of points in the
+  image  list  (i.e.  the  image list after it has been sorted into increasing
+  order).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 2, 3, 5, 7, 10 ], [ 10, 2, 3, 5, 7, 6 ] );[127X[104X
+    [4X[28X[1,10,6](2)(3)(5)(7)[128X[104X
+    [4X[25Xgap>[125X [27XImageSetOfPartialPerm(f);[127X[104X
+    [4X[28X[ 2, 3, 5, 6, 7, 10 ][128X[104X
+  [4X[32X[104X
+  
+  [1X54.3-8 FixedPointsOfPartialPerm[101X
+  
+  [33X[1;0Y[29X[2XFixedPointsOfPartialPerm[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XFixedPointsOfPartialPerm[102X( [3Xcoll[103X ) [32X method[133X
+  [6XReturns:[106X  [33X[0;10YA set of positive integers.[133X
+  
+  [33X[0;0Y[10XFixedPointsOfPartialPerm[110X  returns  the  set of points [10Xi[110X in the domain of the
+  partial permutation [3Xf[103X such that [10Xi^[3Xf[103X[10X=i[110X.[133X
+  
+  [33X[0;0YWhen   the   argument   is   a  collection  of  partial  permutations  [3Xcoll[103X,
+  [10XFixedPointsOfPartialPerm[110X returns the set of points fixed by every element of
+  the collection of partial permutations [3Xcoll[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := PartialPerm( [ 1, 2, 3, 6, 7 ], [ 1, 3, 4, 7, 5 ] );[127X[104X
+    [4X[28X[2,3,4][6,7,5](1)[128X[104X
+    [4X[25Xgap>[125X [27XFixedPointsOfPartialPerm(f);[127X[104X
+    [4X[28X[ 1 ][128X[104X
+    [4X[25Xgap>[125X [27Xf := PartialPerm([1 .. 10]);;[127X[104X
+    [4X[25Xgap>[125X [27XFixedPointsOfPartialPerm(f);[127X[104X
+    [4X[28X[ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ][128X[104X
+  [4X[32X[104X
+  
+  [1X54.3-9 MovedPoints[101X
+  
+  [33X[1;0Y[29X[2XMovedPoints[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XMovedPoints[102X( [3Xcoll[103X ) [32X method[133X
+  [6XReturns:[106X  [33X[0;10YA set of positive integers.[133X
+  
+  [33X[0;0Y[10XMovedPoints[110X  returns  the  set  of  points  [10Xi[110X  in  the domain of the partial
+  permutation [3Xf[103X such that [10Xi^[3Xf[103X[10X<>i[110X.[133X
+  
+  [33X[0;0YWhen  the argument is a collection of partial permutations [3Xcoll[103X, [10XMovedPoints[110X
+  returns the set of points moved by some element of the collection of partial
+  permutations [3Xcoll[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := PartialPerm( [ 1, 2, 3, 4 ], [ 5, 7, 1, 6 ] );[127X[104X
+    [4X[28X[2,7][3,1,5][4,6][128X[104X
+    [4X[25Xgap>[125X [27XMovedPoints(f);[127X[104X
+    [4X[28X[ 1, 2, 3, 4 ][128X[104X
+    [4X[25Xgap>[125X [27XFixedPointsOfPartialPerm(f);[127X[104X
+    [4X[28X[  ][128X[104X
+    [4X[25Xgap>[125X [27XFixedPointsOfPartialPerm(PartialPerm([1 .. 4]));[127X[104X
+    [4X[28X[ 1, 2, 3, 4 ][128X[104X
+  [4X[32X[104X
+  
+  [1X54.3-10 NrFixedPoints[101X
+  
+  [33X[1;0Y[29X[2XNrFixedPoints[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XNrFixedPoints[102X( [3Xcoll[103X ) [32X method[133X
+  [6XReturns:[106X  [33X[0;10YA positive integer.[133X
+  
+  [33X[0;0Y[10XNrFixedPoints[110X  returns  the  number of points [10Xi[110X in the domain of the partial
+  permutation [3Xf[103X such that [10Xi^[3Xf[103X[10X=i[110X.[133X
+  
+  [33X[0;0YWhen   the   argument   is   a  collection  of  partial  permutations  [3Xcoll[103X,
+  [10XNrFixedPoints[110X  returns  the  number  of points fixed by every element of the
+  collection of partial permutations [3Xcoll[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := PartialPerm( [ 1, 2, 3, 4, 5 ], [ 3, 2, 4, 6, 1 ] );[127X[104X
+    [4X[28X[5,1,3,4,6](2)[128X[104X
+    [4X[25Xgap>[125X [27XNrFixedPoints(f);[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XNrFixedPoints(PartialPerm([1 .. 10]));[127X[104X
+    [4X[28X10[128X[104X
+  [4X[32X[104X
+  
+  [1X54.3-11 NrMovedPoints[101X
+  
+  [33X[1;0Y[29X[2XNrMovedPoints[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XNrMovedPoints[102X( [3Xcoll[103X ) [32X method[133X
+  [6XReturns:[106X  [33X[0;10YA positive integer.[133X
+  
+  [33X[0;0Y[10XNrMovedPoints[110X  returns  the  number of points [10Xi[110X in the domain of the partial
+  permutation [3Xf[103X such that [10Xi^[3Xf[103X[10X<>i[110X.[133X
+  
+  [33X[0;0YWhen   the   argument   is   a  collection  of  partial  permutations  [3Xcoll[103X,
+  [10XNrMovedPoints[110X  returns  the  number  of  points moved by some element of the
+  collection of partial permutations [3Xcoll[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := PartialPerm( [ 1, 2, 3, 4, 5, 7, 8 ], [ 4, 5, 6, 7, 1, 3, 2 ] );[127X[104X
+    [4X[28X[8,2,5,1,4,7,3,6][128X[104X
+    [4X[25Xgap>[125X [27XNrMovedPoints(f);[127X[104X
+    [4X[28X7[128X[104X
+    [4X[25Xgap>[125X [27XNrMovedPoints(PartialPerm([1 .. 4]));[127X[104X
+    [4X[28X0[128X[104X
+  [4X[32X[104X
+  
+  [1X54.3-12 SmallestMovedPoint[101X
+  
+  [33X[1;0Y[29X[2XSmallestMovedPoint[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XSmallestMovedPoint[102X( [3Xcoll[103X ) [32X method[133X
+  [6XReturns:[106X  [33X[0;10YA positive integer or [9Xinfinity[109X.[133X
+  
+  [33X[0;0Y[10XSmallestMovedPoint[110X  returns the smallest positive integer [10Xi[110X such that [10Xi^[3Xf[103X[10X<>i[110X
+  if  such an [10Xi[110X exists. If [3Xf[103X is an identity partial permutation, then [9Xinfinity[109X
+  is returned.[133X
+  
+  [33X[0;0YIf  the  argument  is  a  collection  of partial permutations [3Xcoll[103X, then the
+  smallest  point  which is moved by at least one element of [3Xcoll[103X is returned,
+  if such a point exists. If [3Xcoll[103X only contains identity partial permutations,
+  then [10XSmallestMovedPoint[110X returns [9Xinfinity[109X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := PartialPerm( [ 1, 3 ], [ 4, 3 ] );[127X[104X
+    [4X[28X[1,4](3)[128X[104X
+    [4X[25Xgap>[125X [27XSmallestMovedPoint(f);[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XSmallestMovedPoint(PartialPerm([1 .. 10]));[127X[104X
+    [4X[28Xinfinity[128X[104X
+  [4X[32X[104X
+  
+  [1X54.3-13 LargestMovedPoint[101X
+  
+  [33X[1;0Y[29X[2XLargestMovedPoint[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLargestMovedPoint[102X( [3Xcoll[103X ) [32X method[133X
+  [6XReturns:[106X  [33X[0;10YA positive integer or [9Xinfinity[109X.[133X
+  
+  [33X[0;0Y[10XLargestMovedPoint[110X  returns  the largest positive integers [10Xi[110X such that [10Xi^[3Xf[103X[10X<>i[110X
+  if  such  an  [10Xi[110X  exists. If [3Xf[103X is the identity partial permutation, then [10X0[110X is
+  returned.[133X
+  
+  [33X[0;0YIf  the  argument  is  a  collection  of partial permutations [3Xcoll[103X, then the
+  largest point which is moved by at least one element of [3Xcoll[103X is returned, if
+  such  a  point  exists. If [3Xcoll[103X only contains identity partial permutations,
+  then [10XLargestMovedPoint[110X returns [10X0[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := PartialPerm( [ 1, 3, 4, 5 ], [ 5, 1, 6, 4 ] );[127X[104X
+    [4X[28X[3,1,5,4,6][128X[104X
+    [4X[25Xgap>[125X [27XLargestMovedPoint(f);[127X[104X
+    [4X[28X5[128X[104X
+    [4X[25Xgap>[125X [27XLargestMovedPoint(PartialPerm([1 .. 10]));[127X[104X
+    [4X[28X0[128X[104X
+  [4X[32X[104X
+  
+  [1X54.3-14 SmallestImageOfMovedPoint[101X
+  
+  [33X[1;0Y[29X[2XSmallestImageOfMovedPoint[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XSmallestImageOfMovedPoint[102X( [3Xcoll[103X ) [32X method[133X
+  [6XReturns:[106X  [33X[0;10YA positive integer or [9Xinfinity[109X.[133X
+  
+  [33X[0;0Y[10XSmallestImageOfMovedPoint[110X  returns  the  smallest  positive integer [10Xi^[3Xf[103X[10X[110X such
+  that  [10Xi^[3Xf[103X[10X<>i[110X  if such an [10Xi[110X exists. If [3Xf[103X is the identity partial permutation,
+  then [9Xinfinity[109X is returned.[133X
+  
+  [33X[0;0YIf  the  argument  is  a  collection  of partial permutations [3Xcoll[103X, then the
+  smallest integer which is the image a point moved by at least one element of
+  [3Xcoll[103X  is  returned,  if  such a point exists. If [3Xcoll[103X only contains identity
+  partial permutations, then [10XSmallestImageOfMovedPoint[110X returns [9Xinfinity[109X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS := SymmetricInverseSemigroup(5);[127X[104X
+    [4X[28X<symmetric inverse monoid of degree 5>[128X[104X
+    [4X[25Xgap>[125X [27XSmallestImageOfMovedPoint(S);[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XS := Semigroup(PartialPerm([10 .. 100], [10 .. 100]));;[127X[104X
+    [4X[25Xgap>[125X [27XSmallestImageOfMovedPoint(S);[127X[104X
+    [4X[28Xinfinity[128X[104X
+    [4X[25Xgap>[125X [27Xf := PartialPerm( [ 1, 2, 3, 6 ] );[127X[104X
+    [4X[28X[4,6](1)(2)(3)[128X[104X
+    [4X[25Xgap>[125X [27XSmallestImageOfMovedPoint(f);[127X[104X
+    [4X[28X6[128X[104X
+  [4X[32X[104X
+  
+  [1X54.3-15 LargestImageOfMovedPoint[101X
+  
+  [33X[1;0Y[29X[2XLargestImageOfMovedPoint[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLargestImageOfMovedPoint[102X( [3Xcoll[103X ) [32X method[133X
+  [6XReturns:[106X  [33X[0;10YA positive integer.[133X
+  
+  [33X[0;0Y[10XLargestImageOfMovedPoint[110X  returns the largest positive integer [10Xi^[3Xf[103X[10X[110X such that
+  [10Xi^[3Xf[103X[10X<>i[110X  if such an [10Xi[110X exists. If [3Xf[103X is an identity partial permutation, then [10X0[110X
+  is returned.[133X
+  
+  [33X[0;0YIf  the  argument  is  a  collection  of partial permutations [3Xcoll[103X, then the
+  largest  integer which is the image of a point moved by at least one element
+  of  [3Xcoll[103X is returned, if such a point exists. If [3Xcoll[103X only contains identity
+  partial permutations, then [10XLargestImageOfMovedPoint[110X returns [10X0[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS := SymmetricInverseSemigroup(5);[127X[104X
+    [4X[28X<symmetric inverse monoid of degree 5>[128X[104X
+    [4X[25Xgap>[125X [27XLargestImageOfMovedPoint(S);[127X[104X
+    [4X[28X5[128X[104X
+    [4X[25Xgap>[125X [27XS := Semigroup(PartialPerm([10 .. 100], [10 .. 100]));;[127X[104X
+    [4X[25Xgap>[125X [27XLargestImageOfMovedPoint(S);[127X[104X
+    [4X[28X0[128X[104X
+    [4X[25Xgap>[125X [27Xf := PartialPerm( [ 1, 2, 3, 6 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XLargestImageOfMovedPoint(f);[127X[104X
+    [4X[28X6[128X[104X
+  [4X[32X[104X
+  
+  [1X54.3-16 IndexPeriodOfPartialPerm[101X
+  
+  [33X[1;0Y[29X[2XIndexPeriodOfPartialPerm[102X( [3Xf[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA pair of positive integers.[133X
+  
+  [33X[0;0YReturns  the  least  positive integers [10Xm, r[110X such that [10X[3Xf[103X[10X^(m+r)=[3Xf[103X[10X^m[110X, which are
+  known as the [13Xindex[113X and [13Xperiod[113X of the partial permutation [3Xf[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 2, 3, 5, 6, 7, 8, 11, 12, 16, 19 ],[127X[104X
+    [4X[25X>[125X [27X[ 9, 18, 20, 11, 5, 16, 8, 19, 14, 13, 1 ] );[127X[104X
+    [4X[28X[2,18][3,20][6,5,11,19,1,9][7,16,13][12,14](8)[128X[104X
+    [4X[25Xgap>[125X [27XIndexPeriodOfPartialPerm(f);[127X[104X
+    [4X[28X[ 6, 1 ][128X[104X
+    [4X[25Xgap>[125X [27Xf^6=f^7;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X54.3-17 SmallestIdempotentPower[101X
+  
+  [33X[1;0Y[29X[2XSmallestIdempotentPower[102X( [3Xf[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA positive integer.[133X
+  
+  [33X[0;0YThis  function  returns  the  least positive integer [10Xn[110X such that the partial
+  permutation  [10X[3Xf[103X[10X^n[110X is an idempotent. The smallest idempotent power of [3Xf[103X is the
+  least multiple of the period of [3Xf[103X that is greater than or equal to the index
+  of [3Xf[103X; see [2XIndexPeriodOfPartialPerm[102X ([14X54.3-16[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 2, 3, 4, 5, 7, 8, 10, 11, 13, 18, 19, 20 ],[127X[104X
+    [4X[25X>[125X [27X[ 5, 1, 7, 3, 10, 2, 12, 14, 11, 16, 6, 9, 15 ] );[127X[104X
+    [4X[28X[4,3,7,2,1,5,10,14][8,12][13,16][18,6][19,9][20,15](11)[128X[104X
+    [4X[25Xgap>[125X [27XSmallestIdempotentPower(f);[127X[104X
+    [4X[28X8[128X[104X
+    [4X[25Xgap>[125X [27Xf^8;[127X[104X
+    [4X[28X<identity partial perm on [ 11 ]>[128X[104X
+  [4X[32X[104X
+  
+  [1X54.3-18 ComponentsOfPartialPerm[101X
+  
+  [33X[1;0Y[29X[2XComponentsOfPartialPerm[102X( [3Xf[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA list of lists of positive integer.[133X
+  
+  [33X[0;0Y[10XComponentsOfPartialPerm[110X  returns  a  list  of  the components of the partial
+  permutation  [3Xf[103X. Each component is a subset of the domain of [3Xf[103X, and the union
+  of the components equals the domain.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 19 ],[127X[104X
+    [4X[25X>[125X [27X[ 20, 4, 6, 19, 9, 14, 3, 12, 17, 5, 15, 13 ] );[127X[104X
+    [4X[28X[1,20][2,4,19,13,15][7,14][8,3,6][10,12,5,9][11,17][128X[104X
+    [4X[25Xgap>[125X [27XComponentsOfPartialPerm(f);[127X[104X
+    [4X[28X[ [ 1, 20 ], [ 2, 4, 19, 13, 15 ], [ 7, 14 ], [ 8, 3, 6 ],[128X[104X
+    [4X[28X  [ 10, 12, 5, 9 ], [ 11, 17 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X54.3-19 NrComponentsOfPartialPerm[101X
+  
+  [33X[1;0Y[29X[2XNrComponentsOfPartialPerm[102X( [3Xf[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA positive integer.[133X
+  
+  [33X[0;0Y[10XNrComponentsOfPartialPerm[110X  returns  the  number of components of the partial
+  permutation [3Xf[103X on its domain.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 19 ],[127X[104X
+    [4X[25X>[125X [27X[ 20, 4, 6, 19, 9, 14, 3, 12, 17, 5, 15, 13 ] );[127X[104X
+    [4X[28X[1,20][2,4,19,13,15][7,14][8,3,6][10,12,5,9][11,17][128X[104X
+    [4X[25Xgap>[125X [27XNrComponentsOfPartialPerm(f);[127X[104X
+    [4X[28X6[128X[104X
+  [4X[32X[104X
+  
+  [1X54.3-20 ComponentRepsOfPartialPerm[101X
+  
+  [33X[1;0Y[29X[2XComponentRepsOfPartialPerm[102X( [3Xf[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA list of positive integers.[133X
+  
+  [33X[0;0Y[10XComponentRepsOfPartialPerm[110X  returns  the  representatives,  in the following
+  sense,  of the components of the partial permutation [3Xf[103X. Every component of [3Xf[103X
+  contains a unique element in the domain but not the image of [3Xf[103X; this element
+  is called the [13Xrepresentative[113X of the component. If [10Xi[110X is a representative of a
+  component  of [3Xf[103X, then for every [10Xj[110X[22Xnot=[122X[10Xi[110X in the component of [10Xi[110X, there exists a
+  positive  integer [10Xk[110X such that [10Xi ^ ([3Xf[103X[10X ^ k) = j[110X. Unlike transformations, there
+  is    exactly    one    representative    for    every   component   of   [3Xf[103X.
+  [10XComponentRepsOfPartialPerm[110X returns the least number of representatives.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 19 ],[127X[104X
+    [4X[25X>[125X [27X[ 20, 4, 6, 19, 9, 14, 3, 12, 17, 5, 15, 13 ] );[127X[104X
+    [4X[28X[1,20][2,4,19,13,15][7,14][8,3,6][10,12,5,9][11,17][128X[104X
+    [4X[25Xgap>[125X [27XComponentRepsOfPartialPerm(f);[127X[104X
+    [4X[28X[ 1, 2, 7, 8, 10, 11 ][128X[104X
+  [4X[32X[104X
+  
+  [1X54.3-21 LeftOne[101X
+  
+  [33X[1;0Y[29X[2XLeftOne[102X( [3Xf[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRightOne[102X( [3Xf[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA partial permutation.[133X
+  
+  [33X[0;0Y[10XLeftOne[110X  returns the identity partial permutation [10Xe[110X such that the domain and
+  image  of  [10Xe[110X  equal  the  domain  of the partial permutation [3Xf[103X and such that
+  [10Xe*[3Xf[103X[10X=f[110X.[133X
+  
+  [33X[0;0Y[10XRightOne[110X returns the identity partial permutation [10Xe[110X such that the domain and
+  image of [10Xe[110X equal the image of [3Xf[103X and such that [10X[3Xf[103X[10X*e=f[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 2, 4, 5, 6, 7 ], [ 10, 1, 6, 5, 8, 7 ] );[127X[104X
+    [4X[28X[2,1,10][4,6,8](5)(7)[128X[104X
+    [4X[25Xgap>[125X [27XRightOne(f);[127X[104X
+    [4X[28X<identity partial perm on [ 1, 5, 6, 7, 8, 10 ]>[128X[104X
+    [4X[25Xgap>[125X [27XLeftOne(f);[127X[104X
+    [4X[28X<identity partial perm on [ 1, 2, 4, 5, 6, 7 ]>[128X[104X
+  [4X[32X[104X
+  
+  [1X54.3-22 One[101X
+  
+  [33X[1;0Y[29X[2XOne[102X( [3Xf[103X ) [32X method[133X
+  [6XReturns:[106X  [33X[0;10YA partial permutation.[133X
+  
+  [33X[0;0YAs  described  in  [2XOneImmutable[102X  ([14X31.10-2[114X),  [10XOne[110X  returns the multiplicative
+  neutral  element of the partial permutation [3Xf[103X, which is the identity partial
+  permutation on the union of the domain and image of [3Xf[103X. Equivalently, the one
+  of [3Xf[103X is the join of the right one and left one of [3Xf[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm([ 1, 2, 3, 4, 5, 7, 10 ], [ 3, 7, 9, 6, 1, 10, 2 ]);;[127X[104X
+    [4X[25Xgap>[125X [27XOne(f);[127X[104X
+    [4X[28X<identity partial perm on [ 1, 2, 3, 4, 5, 6, 7, 9, 10 ]>[128X[104X
+  [4X[32X[104X
+  
+  [1X54.3-23 MultiplicativeZero[101X
+  
+  [33X[1;0Y[29X[2XMultiplicativeZero[102X( [3Xf[103X ) [32X method[133X
+  [6XReturns:[106X  [33X[0;10YThe empty partial permutation.[133X
+  
+  [33X[0;0YAs   described   in   [2XMultiplicativeZero[102X   ([14X35.4-11[114X),   [10XZero[110X   returns   the
+  multiplicative zero element of the partial permutation [3Xf[103X, which is the empty
+  partial permutation.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := PartialPerm([ 1, 2, 3, 4, 5, 7, 10 ], [ 3, 7, 9, 6, 1, 10, 2 ]);;[127X[104X
+    [4X[25Xgap>[125X [27XMultiplicativeZero(f);[127X[104X
+    [4X[28X<empty partial perm>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X54.4 [33X[0;0YChanging the representation of a partial permutation[133X[101X
+  
+  [33X[0;0YIt is possible that a partial permutation in [5XGAP[105X can be represented by other
+  types  of  objects, or that other types of [5XGAP[105X objects can be represented by
+  partial   permutations.   Partial   permutations  which  are  mathematically
+  permutations  can  be  converted into permutations in [5XGAP[105X using the function
+  [2XAsPermutation[102X  ([14X42.5-6[114X).  Similarly,  a partial permutation can be converted
+  into a transformation using [2XAsTransformation[102X ([14X53.3-1[114X).[133X
+  
+  [33X[0;0YIn  this section we describe functions for converting other types of objects
+  in [5XGAP[105X into partial permutations.[133X
+  
+  [1X54.4-1 AsPartialPerm[101X
+  
+  [33X[1;0Y[29X[2XAsPartialPerm[102X( [3Xf[103X, [3Xset[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XAsPartialPerm[102X( [3Xf[103X ) [32X method[133X
+  [33X[1;0Y[29X[2XAsPartialPerm[102X( [3Xf[103X, [3Xn[103X ) [32X method[133X
+  [6XReturns:[106X  [33X[0;10YA partial permutation.[133X
+  
+  [33X[0;0YA  permutation  [3Xf[103X defines a partial permutation when it is restricted to any
+  finite  set  of  positive integers. [10XAsPartialPerm[110X can be used to obtain this
+  partial permutation.[133X
+  
+  [33X[0;0YThere are several possible arguments for [10XAsPartialPerm[110X:[133X
+  
+  [8Xfor a permutation and set of positive integers[108X
+        [33X[0;6Y[10XAsPartialPerm[110X returns the partial permutation that equals [3Xf[103X on the set
+        of positive integers [3Xset[103X and that is undefined on every other positive
+        integer.[133X
+  
+        [33X[0;6YNote  that as explained in [2XPartialPerm[102X ([14X54.2-1[114X) [13Xa permutation is never
+        a  partial  permutation[113X  in  [5XGAP[105X,  please keep this in mind when using
+        [10XAsPartialPerm[110X.[133X
+  
+  [8Xfor a permutation[108X
+        [33X[0;6Y[10XAsPartialPerm[110X  returns  the  partial permutation that agrees with [3Xf[103X on
+        [10X[1..LargestMovedPoint([3Xf[103X[10X)][110X  and  that  is  not  defined  on  any  other
+        positive integer.[133X
+  
+  [8Xfor a permutation and a positive integer[108X
+        [33X[0;6Y[10XAsPartialPerm[110X  returns  the  partial permutation that agrees with [3Xf[103X on
+        [10X[1..[3Xn[103X[10X][110X,  when  [3Xn[103X is a positive integer, and that is not defined on any
+        other positive integer.[133X
+  
+  [33X[0;0YThe   operation   [2XPartialPermOp[102X   ([14X54.2-2[114X)  can  also  be  used  to  convert
+  permutations into partial permutations.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=(2,8,19,9,14,10,20,17,4,13,12,3,5,7,18,16);;[127X[104X
+    [4X[25Xgap>[125X [27XAsPartialPerm(f);[127X[104X
+    [4X[28X(1)(2,8,19,9,14,10,20,17,4,13,12,3,5,7,18,16)(6)(11)(15)[128X[104X
+    [4X[25Xgap>[125X [27XAsPartialPerm(f, [ 1, 2, 3 ] );[127X[104X
+    [4X[28X[2,8][3,5](1)[128X[104X
+  [4X[32X[104X
+  
+  [1X54.4-2 AsPartialPerm[101X
+  
+  [33X[1;0Y[29X[2XAsPartialPerm[102X( [3Xf[103X, [3Xset[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XAsPartialPerm[102X( [3Xf[103X, [3Xn[103X ) [32X method[133X
+  [6XReturns:[106X  [33X[0;10YA partial permutation or [9Xfail[109X.[133X
+  
+  [33X[0;0YA  transformation [3Xf[103X defines a partial permutation when it is restricted to a
+  set of positive integers where it is injective. [10XAsPartialPerm[110X can be used to
+  obtain this partial permutation.[133X
+  
+  [33X[0;0YThere are several possible arguments for [10XAsPartialPerm[110X:[133X
+  
+  [8Xfor a transformation and set of positive integers[108X
+        [33X[0;6Y[10XAsPartialPerm[110X  returns the partial permutation obtained by restricting
+        [3Xf[103X to the set of positive integers [3Xset[103X when:[133X
+  
+        [30X    [33X[0;12Y[3Xset[103X contains no elements exceeding the degree of [3Xf[103X;[133X
+  
+        [30X    [33X[0;12Y[3Xf[103X is injective on [3Xset[103X.[133X
+  
+  [8Xfor a transformation and a positive integer[108X
+        [33X[0;6Y[10XAsPartialPerm[110X  returns  the  partial permutation that agrees with [3Xf[103X on
+        [10X[1..[3Xn[103X[10X][110X  when  [3XA[103X  is  a  positive  integer  and  this set satisfies the
+        conditions given above.[133X
+  
+  [33X[0;0YThe   operation   [2XPartialPermOp[102X   ([14X54.2-2[114X)  can  also  be  used  to  convert
+  transformations into partial permutations.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=Transformation( [ 8, 3, 5, 9, 6, 2, 9, 7, 9 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XAsPartialPerm(f, [1, 2, 3, 5, 8]);[127X[104X
+    [4X[28X[1,8,7][2,3,5,6][128X[104X
+    [4X[25Xgap>[125X [27XAsPartialPerm(f, 3);[127X[104X
+    [4X[28X[1,8][2,3,5][128X[104X
+    [4X[25Xgap>[125X [27XAsPartialPerm(f, [ 2 .. 4 ] );[127X[104X
+    [4X[28X[2,3,5][4,9][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X54.5 [33X[0;0YOperators and operations for partial permutations[133X[101X
+  
+  [1X54.5-1 Inverse[101X
+  
+  [33X[1;0Y[29X[2XInverse[102X( [3Xf[103X ) [32X method[133X
+  
+  [33X[0;0Yreturns the inverse of the partial permutation [3Xf[103X.[133X
+  
+  [1X54.5-2 \^[101X
+  
+  [33X[1;0Y[29X[2X\^[102X( [3Xi[103X, [3Xf[103X ) [32X method[133X
+  
+  [33X[0;0Yreturns  the image of the positive integer [3Xi[103X under the partial permutation [3Xf[103X
+  if it is defined and [10X0[110X if it is not.[133X
+  
+  [1X54.5-3 \/[101X
+  
+  [33X[1;0Y[29X[2X\/[102X( [3Xi[103X, [3Xf[103X ) [32X method[133X
+  
+  [33X[0;0Yreturns the preimage of the positive integer [3Xi[103X under the partial permutation
+  [3Xf[103X  if  it  is  defined and [10X0[110X if it is not. Note that the inverse of [3Xf[103X is not
+  calculated to find the preimage of [3Xi[103X.[133X
+  
+  [1X54.5-4 \^[101X
+  
+  [33X[1;0Y[29X[2X\^[102X( [3Xf[103X, [3Xg[103X ) [32X method[133X
+  
+  [33X[0;0Y[10X[3Xf[103X[10X  ^  [3Xg[103X[10X[110X  returns  [10X[3Xg[103X[10X^-1*[3Xf[103X[10X*[3Xg[103X[10X[110X  when  [3Xf[103X  is  a  partial  permutation  and [3Xg[103X is a
+  permutation  or  partial  permutation;  see  [2X\^[102X  ([14X31.12-1[114X).  This  operation
+  requires  essentially  the  same  number  of  steps  as  multiplying partial
+  permutations, which is around one third as many as inverting and multiplying
+  twice.[133X
+  
+  [1X54.5-5 \*[101X
+  
+  [33X[1;0Y[29X[2X\*[102X( [3Xf[103X, [3Xg[103X ) [32X method[133X
+  
+  [33X[0;0Y[10X[3Xf[103X[10X  *  [3Xg[103X[10X[110X  returns  the  composition  of  [3Xf[103X  and  [3Xg[103X  when  [3Xf[103X and [3Xg[103X are partial
+  permutations  or  permutations.  The  product of a permutation and a partial
+  permutation is returned as a partial permutation.[133X
+  
+  [1X54.5-6 \/[101X
+  
+  [33X[1;0Y[29X[2X\/[102X( [3Xf[103X, [3Xg[103X ) [32X method[133X
+  
+  [33X[0;0Y[10X[3Xf[103X[10X  / [3Xg[103X[10X[110X returns [10X[3Xf[103X[10X*[3Xg[103X[10X^-1[110X when [3Xf[103X is a partial permutation and [3Xg[103X is a permutation
+  or  partial permutation. This operation requires essentially the same number
+  of  steps  as  multiplying partial permutations, which is approximately half
+  that required to first invert [3Xg[103X and then take the product with [3Xf[103X.[133X
+  
+  [1X54.5-7 LeftQuotient[101X
+  
+  [33X[1;0Y[29X[2XLeftQuotient[102X( [3Xg[103X, [3Xf[103X ) [32X method[133X
+  
+  [33X[0;0Yreturns  [10X[3Xg[103X[10X^-1*[3Xf[103X[10X[110X  when  [3Xf[103X  is a partial permutation and [3Xg[103X is a permutation or
+  partial  permutation. This operation requires essentially the same number of
+  steps  as multiplying partial permutations, which is approximately half that
+  required to first invert [3Xg[103X and then take the product with [3Xf[103X.[133X
+  
+  [1X54.5-8 \<[101X
+  
+  [33X[1;0Y[29X[2X\<[102X( [3Xf[103X, [3Xg[103X ) [32X method[133X
+  
+  [33X[0;0Y[10X[3Xf[103X[10X  < [3Xg[103X[10X[110X returns [9Xtrue[109X if the image of [3Xf[103X on the range from 1 to the degree of [3Xf[103X
+  is lexicographically less than the corresponding image for [3Xg[103X and [9Xfalse[109X if it
+  is  not.  See  [2XNaturalLeqPartialPerm[102X  ([14X54.5-13[114X)  and  [2XShortLexLeqPartialPerm[102X
+  ([14X54.5-14[114X) for additional orders for partial permutations.[133X
+  
+  [1X54.5-9 \=[101X
+  
+  [33X[1;0Y[29X[2X\=[102X( [3Xf[103X, [3Xg[103X ) [32X method[133X
+  
+  [33X[0;0Y[10X[3Xf[103X[10X  =  [3Xg[103X[10X[110X  returns  [9Xtrue[109X  if  the  partial  permutation  [3Xf[103X  equals the partial
+  permutation [3Xg[103X and returns [9Xfalse[109X if it does not.[133X
+  
+  [1X54.5-10 PermLeftQuoPartialPerm[101X
+  
+  [33X[1;0Y[29X[2XPermLeftQuoPartialPerm[102X( [3Xf[103X, [3Xg[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XPermLeftQuoPartialPermNC[102X( [3Xf[103X, [3Xg[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA permutation.[133X
+  
+  [33X[0;0YReturns  the  permutation  on  the image set of [3Xf[103X induced by [10X[3Xf[103X[10X^-1*[3Xg[103X[10X[110X when the
+  partial permutations [3Xf[103X and [3Xg[103X have equal domain and image set.[133X
+  
+  [33X[0;0Y[10XPermLeftQuoPartialPerm[110X  verifies  that  [3Xf[103X and [3Xg[103X have equal domains and image
+  sets,  and returns an error if they do not. [10XPermLeftQuoPartialPermNC[110X does no
+  checks.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 2, 3, 4, 5, 7 ], [ 7, 9, 10, 4, 2, 5 ] );[127X[104X
+    [4X[28X[1,7,5,2,9][3,10](4)[128X[104X
+    [4X[25Xgap>[125X [27Xg:=PartialPerm( [ 1, 2, 3, 4, 5, 7 ], [ 7, 4, 9, 2, 5, 10 ] );[127X[104X
+    [4X[28X[1,7,10][3,9](2,4)(5)[128X[104X
+    [4X[25Xgap>[125X [27XPermLeftQuoPartialPerm(f, g);[127X[104X
+    [4X[28X(2,5,10,9,4)[128X[104X
+  [4X[32X[104X
+  
+  [1X54.5-11 PreImagePartialPerm[101X
+  
+  [33X[1;0Y[29X[2XPreImagePartialPerm[102X( [3Xf[103X, [3Xi[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA positive integer or [9Xfail[109X.[133X
+  
+  [33X[0;0Y[10XPreImagePartialPerm[110X returns the preimage of the positive integer [3Xi[103X under the
+  partial  permutation  [3Xf[103X if [3Xi[103X belongs to the image of [3Xf[103X. If [3Xi[103X does not belong
+  to the image of [3Xf[103X, then [9Xfail[109X is returned.[133X
+  
+  [33X[0;0YThe same result can be obtained by using [10X[3Xi[103X[10X/[3Xf[103X[10X[110X as described in Section [14X54.5[114X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 2, 3, 5, 9, 10 ], [ 5, 10, 7, 8, 9, 1 ] );[127X[104X
+    [4X[28X[2,10,1,5,8][3,7](9)[128X[104X
+    [4X[25Xgap>[125X [27XPreImagePartialPerm(f, 8);[127X[104X
+    [4X[28X5[128X[104X
+    [4X[25Xgap>[125X [27XPreImagePartialPerm(f, 5);[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XPreImagePartialPerm(f, 1);[127X[104X
+    [4X[28X10[128X[104X
+    [4X[25Xgap>[125X [27XPreImagePartialPerm(f, 10);[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XPreImagePartialPerm(f, 2);[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [1X54.5-12 ComponentPartialPermInt[101X
+  
+  [33X[1;0Y[29X[2XComponentPartialPermInt[102X( [3Xf[103X, [3Xi[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA set of positive integers.[133X
+  
+  [33X[0;0Y[10XComponentPartialPermInt[110X   returns   the  elements  of  the  component  of  [3Xf[103X
+  containing [3Xi[103X that can be obtained by repeatedly applying [3Xf[103X to [3Xi[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 2, 4, 5, 6, 7, 8, 10, 14, 15, 16, 17, 18 ],[127X[104X
+    [4X[25X>[125X [27X[ 11, 4, 14, 16, 15, 3, 20, 8, 17, 19, 1, 6, 12 ] );[127X[104X
+    [4X[28X[2,4,14,17,6,15,19][5,16,1,11][7,3][10,8,20][18,12][128X[104X
+    [4X[25Xgap>[125X [27XComponentPartialPermInt(f, 4);[127X[104X
+    [4X[28X[ 4, 14, 17, 6, 15, 19 ][128X[104X
+    [4X[25Xgap>[125X [27XComponentPartialPermInt(f, 3);[127X[104X
+    [4X[28X[  ][128X[104X
+    [4X[25Xgap>[125X [27XComponentPartialPermInt(f, 10);[127X[104X
+    [4X[28X[ 10, 8, 20 ][128X[104X
+    [4X[25Xgap>[125X [27XComponentPartialPermInt(f, 100);[127X[104X
+    [4X[28X[  ][128X[104X
+  [4X[32X[104X
+  
+  [1X54.5-13 NaturalLeqPartialPerm[101X
+  
+  [33X[1;0Y[29X[2XNaturalLeqPartialPerm[102X( [3Xf[103X, [3Xg[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X.[133X
+  
+  [33X[0;0YThe  [13Xnatural  partial order[113X [22X≤[122X on an inverse semigroup [10XS[110X is defined by [10Xs[110X[22X≤[122X[10Xt[110X if
+  there  exists  an  idempotent  [10Xe[110X  in  [10XS[110X such that [10Xs=et[110X. Hence if [3Xf[103X and [3Xg[103X are
+  partial  permutations,  then [3Xf[103X[22X≤[122X[3Xg[103X if and only if [3Xf[103X is a restriction of [3Xg[103X; see
+  [2XRestrictedPartialPerm[102X ([14X54.2-3[114X).[133X
+  
+  [33X[0;0Y[10XNaturalLeqPartialPerm[110X  returns  [9Xtrue[109X if [3Xf[103X is a restriction of [3Xg[103X and [9Xfalse[109X if
+  it is not. Note that since this is a partial order and not a total order, it
+  is  possible  that  [3Xf[103X  and  [3Xg[103X  are  incomparable with respect to the natural
+  partial order.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm([127X[104X
+    [4X[25X>[125X [27X[ 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 16, 17, 18, 19 ],[127X[104X
+    [4X[25X>[125X [27X[ 3, 12, 14, 4, 11, 18, 17, 2, 9, 5, 15, 8, 20, 10, 19 ] );;[127X[104X
+    [4X[25Xgap>[125X [27Xg:=RestrictedPartialPerm(f, [ 1, 2, 3, 9, 13, 20 ] );[127X[104X
+    [4X[28X[1,3,14][2,12][128X[104X
+    [4X[25Xgap>[125X [27XNaturalLeqPartialPerm(g,f);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XNaturalLeqPartialPerm(f,g);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xg:=PartialPerm( [ 1, 2, 3, 4, 5, 8, 10 ],[127X[104X
+    [4X[25X>[125X [27X[ 7, 1, 4, 3, 2, 6, 5 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XNaturalLeqPartialPerm(f, g);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XNaturalLeqPartialPerm(g, f);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X54.5-14 ShortLexLeqPartialPerm[101X
+  
+  [33X[1;0Y[29X[2XShortLexLeqPartialPerm[102X( [3Xf[103X, [3Xg[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X.[133X
+  
+  [33X[0;0Y[10XShortLexLeqPartialPerm[110X  returns  [9Xtrue[109X if the concatenation of the domain and
+  image list of [3Xf[103X is short-lex less than the corresponding concatenation for [3Xg[103X
+  and [9Xfalse[109X otherwise.[133X
+  
+  [33X[0;0YNote  that  this  is not the natural partial order on partial permutation or
+  the same as comparing [3Xf[103X and [3Xg[103X using [10X\<[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 2, 3, 4, 6, 7, 8, 10 ],[127X[104X
+    [4X[25X>[125X [27X[ 3, 8, 1, 9, 4, 10, 5, 6 ] );[127X[104X
+    [4X[28X[2,8,5][7,10,6,4,9](1,3)[128X[104X
+    [4X[25Xgap>[125X [27Xg:=PartialPerm( [ 1, 2, 3, 4, 5, 8, 10 ],[127X[104X
+    [4X[25X>[125X [27X[ 7, 1, 4, 3, 2, 6, 5 ] );[127X[104X
+    [4X[28X[8,6][10,5,2,1,7](3,4)[128X[104X
+    [4X[25Xgap>[125X [27Xf<g;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xg<f;[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XShortLexLeqPartialPerm(f, g);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XShortLexLeqPartialPerm(g, f);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XNaturalLeqPartialPerm(f, g);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XNaturalLeqPartialPerm(g, f);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X54.5-15 TrimPartialPerm[101X
+  
+  [33X[1;0Y[29X[2XTrimPartialPerm[102X( [3Xf[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YNothing.[133X
+  
+  [33X[0;0YIt can happen that the internal representation of a partial permutation uses
+  more  memory than necessary. For example, by composing a partial permutation
+  with  codegree  less  than  65536  with  a partial permutation with codegree
+  greater  than 65535. It is possible that the resulting partial permutation [3Xf[103X
+  has  its  codegree  and  images stored as 32-bit integers, while none of its
+  image  points  exceeds  65536. The purpose of this function is to change the
+  internal  representation  of  such  an  [3Xf[103X  from using 32-bit to using 16-bit
+  integers.[133X
+  
+  [33X[0;0YNote  that  the  partial  permutation  [3Xf[103X is changed in-place, and nothing is
+  returned by this function.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 2 ], [ 3, 4 ] )[127X[104X
+    [4X[25X>[125X [27X*PartialPerm( [ 3, 5 ], [ 3, 100000 ] );[127X[104X
+    [4X[28X[1,3][128X[104X
+    [4X[25Xgap>[125X [27XIsPPerm4Rep(f);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XTrimPartialPerm(f); f;[127X[104X
+    [4X[28X[1,3][128X[104X
+    [4X[25Xgap>[125X [27XIsPPerm4Rep(f);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X54.6 [33X[0;0YDisplaying partial permutations[133X[101X
+  
+  [33X[0;0YIt  is  possible  to  change  the way that [5XGAP[105X displays partial permutations
+  using      the      user     preferences     [10XPartialPermDisplayLimit[110X     and
+  [10XNotationForPartialPerms[110X;   see   Section  [2XUserPreference[102X  ([14X3.2-3[114X)  for  more
+  information about user preferences.[133X
+  
+  [33X[0;0YIf  [10Xf[110X  is  a  partial  permutation of rank [10Xr[110X exceeding the value of the user
+  preference [10XPartialPermDisplayLimit[110X, then [10Xf[110X is displayed as:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X<partial perm on r pts with degree m, codegree n>[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Ywhere  the  degree  and  codegree  are [10Xm[110X and [10Xn[110X, respectively. The idea is to
+  abbreviate  the  display of partial permutations defined on many points. The
+  default value for the [10XPartialPermDisplayLimit[110X is [10X100[110X.[133X
+  
+  [33X[0;0YIf  the rank of [10Xf[110X does not exceed the value of [10XPartialPermDisplayLimit[110X, then
+  how   [10Xf[110X   is   displayed  depends  on  the  value  of  the  user  preference
+  [10XNotationForPartialPerms[110X  except  in  the  case  that  [10Xf[110X is the empty partial
+  permutation or an identity partial permutation.[133X
+  
+  [33X[0;0YThere are three possible values for [10XNotationForPartialPerms[110X user preference,
+  which are described below.[133X
+  
+  [8Xcomponent[108X
+        [33X[0;6YSimilar   to   permutations,   and   unlike  transformations,  partial
+        permutations can be expressed as products of disjoint permutations and
+        chains. A [13Xchain[113X is a list [10Xc[110X of some length [10Xn[110X such that:[133X
+  
+        [30X    [33X[0;12Y[10Xc[1][110X is an element of the domain of [3Xf[103X but not the image[133X
+  
+        [30X    [33X[0;12Y[10Xc[i]^[3Xf[103X[10X=c[i+1][110X for all [10Xi[110X in the range from [10X1[110X to [10Xn-1[110X.[133X
+  
+        [30X    [33X[0;12Y[10Xc[n][110X is in the image of [3Xf[103X but not the domain.[133X
+  
+        [33X[0;6YIn the display, permutations are displayed as they usually are in [5XGAP[105X,
+        except that fixed points are displayed enclosed in round brackets, and
+        chains are displayed enclosed in square brackets.[133X
+  
+  [4X      [32X  Example  [32X[104X
+          [4X[25Xgap>[125X [27Xf := PartialPerm([ 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 16, 17, 18, 19 ],[127X[104X
+          [4X[25X>[125X [27X[ 3, 12, 14, 4, 11, 18, 17, 2, 9, 5, 15, 8, 20, 10, 19 ]);[127X[104X
+          [4X[28X[1,3,14][16,8,2,12,15](4)(5,11)[6,18,10,9][7,17,20](19)[128X[104X
+        [4X[32X[104X
+  
+        [33X[0;6YThis  option  is the most compact way to display a partial permutation
+        and    is    the    default    value    of    the    user   preference
+        [10XNotationForPartialPerms[110X.[133X
+  
+  [8Xdomainimage[108X
+        [33X[0;6YWith  this  option a partial permutation [10Xf[110X is displayed in the format:
+        [10XDomainOfPartialPerm([3Xf[103X[10X)-> ImageListOfPartialPerm([3Xf[103X[10X)[110X.[133X
+  
+  [4X      [32X  Example  [32X[104X
+          [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 2, 4, 5, 6, 7 ], [ 10, 1, 6, 5, 8, 7 ]);[127X[104X
+          [4X[28X[ 1, 2, 4, 5, 6, 7 ] -> [ 10, 1, 6, 5, 8, 7 ][128X[104X
+        [4X[32X[104X
+  
+  [8Xinput[108X
+        [33X[0;6YWith   this   option   a   partial  permutation  [3Xf[103X  is  displayed  as:
+        [10XPartialPerm(DomainOfPartialPerm([3Xf[103X[10X),  ImageListOfPartialPerm([3Xf[103X[10X))[110X  which
+        corresponds  to  the input (of the first type described in [2XPartialPerm[102X
+        ([14X54.2-1[114X)).[133X
+  
+  [4X      [32X  Example  [32X[104X
+          [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 2, 3, 5, 6, 9, 10 ],[127X[104X
+          [4X[25X>[125X [27X[ 4, 7, 3, 8, 2, 1, 6 ] );[127X[104X
+          [4X[28XPartialPerm( [ 1, 2, 3, 5, 6, 9, 10 ], [ 4, 7, 3, 8, 2, 1, 6 ] )[128X[104X
+        [4X[32X[104X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSetUserPreference("PartialPermDisplayLimit", 12);[127X[104X
+    [4X[25Xgap>[125X [27XUserPreference("PartialPermDisplayLimit");[127X[104X
+    [4X[28X12[128X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm([1,2,3,4,5,6], [6,7,1,4,3,2]);[127X[104X
+    [4X[28X[5,3,1,6,2,7](4)[128X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm([127X[104X
+    [4X[25X>[125X [27X[ 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 16, 17, 18, 19 ],[127X[104X
+    [4X[25X>[125X [27X[ 3, 12, 14, 4, 11, 18, 17, 2, 9, 5, 15, 8, 20, 10, 19 ] );[127X[104X
+    [4X[28X<partial perm on 15 pts with degree 19, codegree 20>[128X[104X
+    [4X[25Xgap>[125X [27XSetUserPreference("PartialPermDisplayLimit", 100);[127X[104X
+    [4X[25Xgap>[125X [27Xf;[127X[104X
+    [4X[28X[1,3,14][6,18,10,9][7,17,20][16,8,2,12,15](4)(5,11)(19)[128X[104X
+    [4X[25Xgap>[125X [27XUserPreference("NotationForPartialPerms");[127X[104X
+    [4X[28X"component"[128X[104X
+    [4X[25Xgap>[125X [27XSetUserPreference("NotationForPartialPerms", "domainimage");[127X[104X
+    [4X[25Xgap>[125X [27Xf;[127X[104X
+    [4X[28X[ 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 16, 17, 18, 19 ] ->[128X[104X
+    [4X[28X[ 3, 12, 14, 4, 11, 18, 17, 2, 9, 5, 15, 8, 20, 10, 19 ][128X[104X
+    [4X[25Xgap>[125X [27XSetUserPreference("NotationForPartialPerms", "input");[127X[104X
+    [4X[25Xgap>[125X [27Xf;[127X[104X
+    [4X[28XPartialPerm([128X[104X
+    [4X[28X[ 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 16, 17, 18, 19 ],[128X[104X
+    [4X[28X[ 3, 12, 14, 4, 11, 18, 17, 2, 9, 5, 15, 8, 20, 10, 19 ] )[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X54.7 [33X[0;0YSemigroups and inverse semigroups of partial permutations[133X[101X
+  
+  [33X[0;0YAs  mentioned  at  the  start  of  the  chapter,  every inverse semigroup is
+  isomorphic  to  a  semigroup of partial permutations, and in this section we
+  describe  the  functions  in [5XGAP[105X specific to partial permutation semigroups.
+  For more information about semigroups and inverse semigroups see Chapter [14X51[114X.[133X
+  
+  [33X[0;0YThe  [5XSemigroups[105X  package  contains many additional functions and methods for
+  computing with semigroups of partial permutations. In particular, [5XSemigroups[105X
+  contains more efficient methods than those available in the [5XGAP[105X library (and
+  in  many  cases  more  efficient  than  any  other  software)  for  creating
+  semigroups  of  transformations,  calculating  their  Green's classes, size,
+  elements,  group  of  units,  minimal  ideal, small generating sets, testing
+  membership,  finding the inverses of a regular element, factorizing elements
+  over the generators, and more.[133X
+  
+  [33X[0;0YSince  a  partial  permutation  semigroup  is  also  a  partial  permutation
+  collection,  there  are  special  methods  for [2XDomainOfPartialPermCollection[102X
+  ([14X54.3-4[114X),  [2XImageOfPartialPermCollection[102X  ([14X54.3-5[114X),  [2XFixedPointsOfPartialPerm[102X
+  ([14X54.3-8[114X),   [2XMovedPoints[102X  ([14X54.3-9[114X),  [2XNrFixedPoints[102X  ([14X54.3-10[114X),  [2XNrMovedPoints[102X
+  ([14X54.3-11[114X),  [2XLargestMovedPoint[102X  ([14X54.3-13[114X),  and  [2XSmallestMovedPoint[102X ([14X54.3-12[114X)
+  when applied to a partial permutation semigroup.[133X
+  
+  [1X54.7-1 IsPartialPermSemigroup[101X
+  
+  [33X[1;0Y[29X[2XIsPartialPermSemigroup[102X( [3Xobj[103X ) [32X filter[133X
+  [33X[1;0Y[29X[2XIsPartialPermMonoid[102X( [3Xobj[103X ) [32X filter[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X.[133X
+  
+  [33X[0;0YA  [13Xpartial  perm  semigroup[113X  is  simply  a  semigroup  consisting of partial
+  permutations, which may or may not be an inverse semigroup. An object [3Xobj[103X in
+  [5XGAP[105X  is  a  partial  perm  semigroup if and only if it satisfies [2XIsSemigroup[102X
+  ([14X51.1-1[114X) and [2XIsPartialPermCollection[102X ([14X54.1-2[114X).[133X
+  
+  [33X[0;0YA  [13Xpartial  perm  monoid[113X  is a monoid consisting of partial permutations. An
+  object in [5XGAP[105X is a partial perm monoid if it satisfies [2XIsMonoid[102X ([14X51.2-1[114X) and
+  [2XIsPartialPermCollection[102X ([14X54.1-2[114X).[133X
+  
+  [33X[0;0YNote   that  it  is  possible  for  a  partial  perm  semigroup  to  have  a
+  multiplicative neutral element (i.e. an identity element) but not to satisfy
+  [10XIsPartialPermMonoid[110X. For example,[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := PartialPerm( [ 1, 2, 3, 6, 8, 10 ], [ 2, 6, 7, 9, 1, 5 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XS := Semigroup(f, One(f));[127X[104X
+    [4X[28X<commutative partial perm monoid of rank 9 with 1 generator>[128X[104X
+    [4X[25Xgap>[125X [27XIsMonoid(S);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsPartialPermMonoid(S);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  unlike transformation semigroups, the [2XOne[102X ([14X31.10-2[114X) of a partial
+  permutation semigroup must coincide with the multiplicative neutral element,
+  if either exists.[133X
+  
+  [33X[0;0YFor more details see [2XIsMagmaWithOne[102X ([14X35.1-2[114X).[133X
+  
+  [1X54.7-2 DegreeOfPartialPermSemigroup[101X
+  
+  [33X[1;0Y[29X[2XDegreeOfPartialPermSemigroup[102X( [3XS[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XCodegreeOfPartialPermSemigroup[102X( [3XS[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRankOfPartialPermSemigroup[102X( [3XS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA non-negative integer.[133X
+  
+  [33X[0;0YThe [13Xdegree[113X of a partial permutation semigroup [3XS[103X is the largest degree of any
+  partial permutation in [3XS[103X.[133X
+  
+  [33X[0;0YThe  [13Xcodegree[113X  of  a partial permutation semigroup [3XS[103X is the largest positive
+  integer in its image.[133X
+  
+  [33X[0;0YThe  [13Xrank[113X  of  a  partial permutation semigroup [3XS[103X is the number of points on
+  which it acts.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS := Semigroup( PartialPerm( [ 1, 5 ], [ 10000, 3 ] ) );[127X[104X
+    [4X[28X<commutative partial perm semigroup of rank 2 with 1 generator>[128X[104X
+    [4X[25Xgap>[125X [27XDegreeOfPartialPermSemigroup(S);[127X[104X
+    [4X[28X5[128X[104X
+    [4X[25Xgap>[125X [27XCodegreeOfPartialPermSemigroup(S);[127X[104X
+    [4X[28X10000[128X[104X
+    [4X[25Xgap>[125X [27XRankOfPartialPermSemigroup(S);[127X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+  
+  [1X54.7-3 SymmetricInverseSemigroup[101X
+  
+  [33X[1;0Y[29X[2XSymmetricInverseSemigroup[102X( [3Xn[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XSymmetricInverseMonoid[102X( [3Xn[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YThe symmetric inverse semigroup of degree [3Xn[103X.[133X
+  
+  [33X[0;0YIf  [3Xn[103X  is a non-negative integer, then [10XSymmetricInverseSemigroup[110X returns the
+  inverse  semigroup  consisting  of  all partial permutations with degree and
+  codegree at most [3Xn[103X. Note that [3Xn[103X must be non-negative, but in particular, can
+  equal [10X0[110X.[133X
+  
+  [33X[0;0YThe  symmetric  inverse  semigroup  is  generated by any set that of partial
+  permutations  that  generate the symmetric group on [3Xn[103X points and any partial
+  permutation of rank [10X[3Xn[103X[10X-1[110X.[133X
+  
+  [33X[0;0Y[10XSymmetricInverseMonoid[110X is a synonym for [10XSymmetricInverseSemigroup[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS := SymmetricInverseSemigroup(5);[127X[104X
+    [4X[28X<symmetric inverse monoid of degree 5>[128X[104X
+    [4X[25Xgap>[125X [27XSize(S);[127X[104X
+    [4X[28X1546[128X[104X
+    [4X[25Xgap>[125X [27XGeneratorsOfInverseMonoid(S);[127X[104X
+    [4X[28X[ (1,2,3,4,5), (1,2)(3)(4)(5), [5,4,3,2,1] ][128X[104X
+  [4X[32X[104X
+  
+  [1X54.7-4 IsSymmetricInverseSemigroup[101X
+  
+  [33X[1;0Y[29X[2XIsSymmetricInverseSemigroup[102X( [3XS[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsSymmetricInverseMonoid[102X( [3XS[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X.[133X
+  
+  [33X[0;0YIf  the  partial  perm  semigroup  [3XS[103X  of  degree  and  codegree [3Xn[103X equals the
+  symmetric  inverse  semigroup  on [3Xn[103X points, then [10XIsSymmetricInverseSemigroup[110X
+  return [9Xtrue[109X and otherwise it returns [9Xfalse[109X.[133X
+  
+  [33X[0;0Y[10XIsSymmetricInverseMonoid[110X  is a synonym of [10XIsSymmetricInverseSemigroup[110X. It is
+  common  in the literature for the symmetric inverse monoid to be referred to
+  as the symmetric inverse semigroup.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS := Semigroup(AsPartialPerm((1, 3, 4, 2), 5), AsPartialPerm((1, 3, 5), 5),[127X[104X
+    [4X[25X>[125X [27XPartialPerm( [ 1, 2, 3, 4 ] ) );[127X[104X
+    [4X[28X<partial perm semigroup of rank 5 with 3 generators>[128X[104X
+    [4X[25Xgap>[125X [27XIsSymmetricInverseSemigroup(S);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XS;[127X[104X
+    [4X[28X<symmetric inverse monoid of degree 5>[128X[104X
+  [4X[32X[104X
+  
+  [1X54.7-5 NaturalPartialOrder[101X
+  
+  [33X[1;0Y[29X[2XNaturalPartialOrder[102X( [3XS[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XReverseNaturalPartialOrder[102X( [3XS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YThe natural partial order on an inverse semigroup.[133X
+  
+  [33X[0;0YThe  [13Xnatural  partial order[113X [22X≤[122X on an inverse semigroup [3XS[103X is defined by [10Xs[110X[22X≤[122X[10Xt[110X if
+  there  exists  an  idempotent  [10Xe[110X  in  [3XS[103X such that [10Xs=et[110X. Hence if [10Xf[110X and [10Xg[110X are
+  partial  permutations,  then [10Xf[110X[22X≤[122X[10Xg[110X if and only if [10Xf[110X is a restriction of [10Xg[110X; see
+  [2XRestrictedPartialPerm[102X ([14X54.2-3[114X).[133X
+  
+  [33X[0;0Y[10XNaturalPartialOrder[110X  returns  the  natural  partial  order  on  the  inverse
+  semigroup  of  partial permutations [3XS[103X as a list of sets of positive integers
+  where  entry  [10Xi[110X  in  [10XNaturalPartialOrder([3XS[103X[10X)[110X  is  the  set  of  positions  in
+  [10XElements([3XS[103X[10X)[110X  of  elements  which  are  less  than  [10XElements([3XS[103X[10X)[i][110X.  See also
+  [2XNaturalLeqPartialPerm[102X ([14X54.5-13[114X).[133X
+  
+  [33X[0;0Y[10XReverseNaturalPartialOrder[110X  returns the reverse of the natural partial order
+  on  the  inverse  semigroup  of  partial permutations [3XS[103X as a list of sets of
+  positive  integers where entry [10Xi[110X in [10XReverseNaturalPartialOrder([3XS[103X[10X)[110X is the set
+  of   positions   in   [10XElements([3XS[103X[10X)[110X   of   elements  which  are  greater  than
+  [10XElements([3XS[103X[10X)[i][110X. See also [2XNaturalLeqPartialPerm[102X ([14X54.5-13[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS := InverseSemigroup([ PartialPerm( [ 1, 3 ], [ 1, 3 ] ),[127X[104X
+    [4X[25X>[125X [27XPartialPerm( [ 1, 2 ], [ 3, 2 ] ) ] );[127X[104X
+    [4X[28X<inverse partial perm semigroup of rank 3 with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27XSize(S);[127X[104X
+    [4X[28X11[128X[104X
+    [4X[25Xgap>[125X [27XNaturalPartialOrder(S);[127X[104X
+    [4X[28X[ [  ], [ 1 ], [ 1 ], [ 1 ], [ 1, 2, 4 ], [ 1, 3, 4 ], [ 1 ], [ 1 ],[128X[104X
+    [4X[28X  [ 1, 4, 7 ], [ 1, 4, 8 ], [ 1, 2, 8 ] ][128X[104X
+    [4X[25Xgap>[125X [27XNaturalLeqPartialPerm(Elements(S)[4], Elements(S)[10]);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XNaturalLeqPartialPerm(Elements(S)[4], Elements(S)[1]);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X54.7-6 IsomorphismPartialPermSemigroup[101X
+  
+  [33X[1;0Y[29X[2XIsomorphismPartialPermSemigroup[102X( [3XS[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XIsomorphismPartialPermMonoid[102X( [3XS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YAn isomorphism.[133X
+  
+  [33X[0;0Y[10XIsomorphismPartialPermSemigroup([3XS[103X[10X)[110X  returns  an isomorphism from the inverse
+  semigroup [3XS[103X to an inverse semigroup of partial permutations.[133X
+  
+  [33X[0;0Y[10XIsomorphismPartialPermMonoid([3XS[103X[10X)[110X  returns  an  isomorphism  from  the inverse
+  semigroup [3XS[103X to an inverse monoid of partial permutations, if possible.[133X
+  
+  [33X[0;0YWe  only describe [10XIsomorphismPartialPermMonoid[110X, the corresponding statements
+  for [10XIsomorphismPartialPermSemigroup[110X also hold.[133X
+  
+  [8XPartial permutation semigroups[108X
+        [33X[0;6YIf [3XS[103X is a partial permutation semigroup that does not satisfy [2XIsMonoid[102X
+        ([14X51.2-1[114X)   but   where   [10XMultiplicativeNeutralElement([3XS[103X[10X)<>fail[110X,   then
+        [10XIsomorphismPartialPermMonoid([3XS[103X[10X)[110X  returns  an  isomorphism from [3XS[103X to an
+        inverse monoid of partial permutations.[133X
+  
+  [8XPermutation groups[108X
+        [33X[0;6YIf [3XS[103X is a permutation group, then [10XIsomorphismPartialPermMonoid[110X returns
+        an  isomorphism from [3XS[103X to an inverse monoid of partial permutations on
+        the  set  [10XMovedPoints([3XS[103X[10X)[110X  obtained  using  [2XAsPartialPerm[102X ([14X54.4-1[114X). The
+        inverse of this isomorphism is obtained using [2XAsPermutation[102X ([14X42.5-6[114X).[133X
+  
+  [8XTransformation semigroups[108X
+        [33X[0;6YIf  [3XS[103X  is  a transformation semigroup which is mathematically a monoid
+        but  which  does  not  necessarily  belong  to  the  category [2XIsMonoid[102X
+        ([14X51.2-1[114X),  then  [10XIsomorphismPartialPermMonoid[110X  returns  an isomorphism
+        from [3XS[103X to an inverse monoid of partial permutations.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS := InverseSemigroup([127X[104X
+    [4X[25X>[125X [27XPartialPerm( [ 1, 2, 3, 4, 5 ], [ 4, 2, 3, 1, 5 ] ),[127X[104X
+    [4X[25X>[125X [27XPartialPerm( [ 1, 2, 4, 5 ], [ 3, 1, 4, 2 ] ) );;[127X[104X
+    [4X[25Xgap>[125X [27XIsMonoid(S);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XSize(S);[127X[104X
+    [4X[28X508[128X[104X
+    [4X[25Xgap>[125X [27Xiso := IsomorphismPartialPermMonoid(S);[127X[104X
+    [4X[28XMappingByFunction( <inverse partial perm semigroup of size 508,[128X[104X
+    [4X[28X rank 5 with 2 generators>, <inverse partial perm monoid of size 508,[128X[104X
+    [4X[28X rank 5 with 2 generators>[128X[104X
+    [4X[28X , function( object ) ... end, function( object ) ... end )[128X[104X
+    [4X[25Xgap>[125X [27XSize(S);[127X[104X
+    [4X[28X508[128X[104X
+    [4X[25Xgap>[125X [27XSize(Range(iso));[127X[104X
+    [4X[28X508[128X[104X
+    [4X[25Xgap>[125X [27XG := Group((1,2)(3,8)(4,6)(5,7), (1,3,4,7)(2,5,6,8), (1,4)(2,6)(3,7)(5,8));;[127X[104X
+    [4X[25Xgap>[125X [27XIsomorphismPartialPermSemigroup(G);[127X[104X
+    [4X[28XMappingByFunction( Group([ (1,2)(3,8)(4,6)(5,7), (1,3,4,7)[128X[104X
+    [4X[28X(2,5,6,8), (1,4)(2,6)(3,7)[128X[104X
+    [4X[28X(5,8) ]), <partial perm group of rank 8 with 3 generators>[128X[104X
+    [4X[28X, function( p ) ... end, <Attribute "AsPermutation"> )[128X[104X
+    [4X[25Xgap>[125X [27XS := Semigroup(Transformation( [ 2, 5, 1, 7, 3, 7, 7 ] ),[127X[104X
+    [4X[25X>[125X [27XTransformation( [ 3, 6, 5, 7, 2, 1, 7 ] ) );;[127X[104X
+    [4X[25Xgap>[125X [27Xiso := IsomorphismPartialPermMonoid(S);;[127X[104X
+    [4X[25Xgap>[125X [27XMultiplicativeNeutralElement(S) ^ iso;[127X[104X
+    [4X[28X<identity partial perm on [ 1, 2, 3, 4, 5, 6 ]>[128X[104X
+    [4X[25Xgap>[125X [27XOne(Range(iso));[127X[104X
+    [4X[28X<identity partial perm on [ 1, 2, 3, 4, 5, 6 ]>[128X[104X
+    [4X[25Xgap>[125X [27XMovedPoints(Range(iso));[127X[104X
+    [4X[28X[ 1 .. 5 ][128X[104X
+  [4X[32X[104X
+  

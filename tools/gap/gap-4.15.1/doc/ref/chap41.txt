@@ -1,0 +1,1490 @@
+  
+  [1X41 [33X[0;0YGroup Actions[133X[101X
+  
+  [33X[0;0YA  [13Xgroup action[113X is a triple [22X(G, Ω, μ)[122X, where [22XG[122X is a group, [22XΩ[122X a set and [22Xμ : Ω
+  ×  G  → Ω[122X a function that is compatible with the group arithmetic. We call [22XΩ[122X
+  the [13Xdomain[113X of the action.[133X
+  
+  [33X[0;0YIn  [5XGAP[105X, [22XΩ[122X can be a duplicate-free collection (an object that permits access
+  to  its  elements  via  the [22XΩ[n][122X operation, for example a list), it does not
+  need to be sorted (see [2XIsSet[102X ([14X21.17-4[114X)).[133X
+  
+  [33X[0;0YThe  acting function [22Xμ[122X is a binary [5XGAP[105X function that returns the image [22Xμ( x,
+  g )[122X for a point [22Xx ∈ Ω[122X and a group element [22Xg ∈ G[122X.[133X
+  
+  [33X[0;0YIn  [5XGAP[105X, groups always act from the right, that is [22Xμ( μ( x, g ), h ) = μ( x,
+  gh )[122X.[133X
+  
+  [33X[0;0Y[5XGAP[105X does not test whether the acting function [22Xμ[122X satisfies the conditions for
+  a  group  operation  but  silently  assumes  that  is does. (If it does not,
+  results are unpredictable.)[133X
+  
+  [33X[0;0YThe  first  section  of  this  chapter, [14X41.1[114X, describes the various ways how
+  operations for group actions can be called.[133X
+  
+  [33X[0;0YFunctions for several commonly used action are already built into [5XGAP[105X. These
+  are listed in section [14X41.2[114X.[133X
+  
+  [33X[0;0YThe sections [14X41.7[114X and [14X41.8[114X describe homomorphisms and mappings associated to
+  group actions as well as the permutation group image of an action.[133X
+  
+  [33X[0;0YThe  other sections then describe operations to compute orbits, stabilizers,
+  as well as properties of actions.[133X
+  
+  [33X[0;0YFinally section [14X41.12[114X describes the concept of [21Xexternal sets[121X which represent
+  the concept of a [13X[22XG[122X-set[113X and underly the actions mechanism.[133X
+  
+  
+  [1X41.1 [33X[0;0YAbout Group Actions[133X[101X
+  
+  [33X[0;0YThe  syntax  which  is  used  by  the  operations for group actions is quite
+  flexible.  For  example  we can call the operation [2XOrbitsDomain[102X ([14X41.4-3[114X) for
+  the orbits of the group [3XG[103X on the domain [3XOmega[103X in the following ways:[133X
+  
+  [8X[10XOrbitsDomain[110X[8X[22X( G, Ω[, μ] )[122X[108X
+        [33X[0;6YThe  acting  function  [22Xμ[122X is optional. If it is not given, the built-in
+        action  [2XOnPoints[102X  ([14X41.2-1[114X)  (which  defines  an  action  via the caret
+        operator [10X^[110X) is used as a default.[133X
+  
+  [8X[10XOrbitsDomain[110X[8X[22X( G, Ω, gens, acts[, μ] )[122X[108X
+        [33X[0;6YThis  second version of [2XOrbitsDomain[102X ([14X41.4-3[114X) permits one to implement
+        an  action  induced  by a homomorphism: If the group [22XH[122X acts on [22XΩ[122X via [22Xμ[122X
+        and  [22Xφ  :  G → H[122X is a homomorphism, [22XG[122X acts on [22XΩ[122X via the induced action
+        [22Xμ'( x, g ) = μ( x, g^φ )[122X.[133X
+  
+        [33X[0;6YHere [22Xgens[122X must be a set of generators of [22XG[122X and [22Xacts[122X the images of [22Xgens[122X
+        under  [22Xφ[122X.  [22Xμ[122X  is  the  acting function for [22XH[122X. Again, the function [22Xμ[122X is
+        optional and [2XOnPoints[102X ([14X41.2-1[114X) is used as a default.[133X
+  
+        [33X[0;6YThe  advantage of this notation is that [5XGAP[105X does not need to construct
+        this  homomorphism [22Xφ[122X and the range group [3XH[103X as [5XGAP[105X objects. (If a small
+        group [22XG[122X acts via complicated objects [22Xacts[122X this otherwise could lead to
+        performance problems.)[133X
+  
+        [33X[0;6Y[5XGAP[105X  does  not test whether the mapping [22Xgens ↦ acts[122X actually induces a
+        homomorphism  and  the  results  are  unpredictable if this is not the
+        case.[133X
+  
+  [8X[10XOrbitsDomain[110X[8X[22X( xset )[122X[108X
+        [33X[0;6YA  third  variant is to call the operation with an external set, which
+        then  provides  [22XG[122X,  [22XΩ[122X and [22Xμ[122X. You will find more about external sets in
+        Section [14X41.12[114X.[133X
+  
+  [33X[0;0YFor  operations  like  [2XStabilizer[102X  ([14X41.5-2[114X)  of  course  the  domain must be
+  replaced by an element of the domain of the action.[133X
+  
+  
+  [1X41.2 [33X[0;0YBasic Actions[133X[101X
+  
+  [33X[0;0Y[5XGAP[105X  already  provides  acting  functions  for  the more common actions of a
+  group.  For  built-in operations such as [2XStabilizer[102X ([14X41.5-2[114X) special methods
+  are available for many of these actions.[133X
+  
+  [33X[0;0YIf  one  needs  an  action  for  which no acting function is provided by the
+  library it can be implemented via a [5XGAP[105X function that conforms to the syntax[133X
+  
+  [33X[0;0Y[10Xactfun( omega, g )[110X[133X
+  
+  [33X[0;0Ywhere  [10Xomega[110X  is  an  element  of  the action domain, [10Xg[110X is an element of the
+  acting group, and the return value is the image of [10Xomega[110X under [10Xg[110X.[133X
+  
+  [33X[0;0YFor  example  one  could define the following function that acts on pairs of
+  polynomials via [2XOnIndeterminates[102X ([14X41.2-13[114X):[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XOnIndeterminatesPairs:= function( polypair, g )[128X[104X
+    [4X[28X  return [ OnIndeterminates( polypair[1], g ),[128X[104X
+    [4X[28X           OnIndeterminates( polypair[2], g ) ];[128X[104X
+    [4X[28Xend;[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  this function [13Xmust[113X implement a group action from the [13Xright[113X. This
+  is not verified by [5XGAP[105X and results are unpredictable otherwise.[133X
+  
+  [1X41.2-1 OnPoints[101X
+  
+  [33X[1;0Y[29X[2XOnPoints[102X( [3Xpnt[103X, [3Xg[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  [10X[3Xpnt[103X[10X  ^  [3Xg[103X[10X[110X. This is for example the action of a permutation group on
+  points,  or  the action of a group on its elements via conjugation, that is,
+  if  both [3Xpnt[103X and [3Xg[103X are elements from a common group then [10X[3Xpnt[103X[10X ^ [3Xg[103X[10X[110X is equal to
+  [3Xg[103X[22X^{-1}[122X[10X*[110X[3Xpnt[103X[10X*[110X[3Xg[103X.  The  action  of  a  matrix group on vectors from the right is
+  described by both [2XOnPoints[102X and [2XOnRight[102X ([14X41.2-2[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XOnPoints( 1, (1,2,3) );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XOnPoints( (1,2), (1,2,3) );[127X[104X
+    [4X[28X(2,3)[128X[104X
+    [4X[25Xgap>[125X [27Xg:= Group( (1,2,3), (2,3,4) );;[127X[104X
+    [4X[25Xgap>[125X [27XOrbit( g, 1, OnPoints );[127X[104X
+    [4X[28X[ 1, 2, 3, 4 ][128X[104X
+  [4X[32X[104X
+  
+  [1X41.2-2 OnRight[101X
+  
+  [33X[1;0Y[29X[2XOnRight[102X( [3Xpnt[103X, [3Xg[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  [10X[3Xpnt[103X[10X  * [3Xg[103X[10X[110X. This is for example the action of a group on its elements
+  via  right  multiplication,  or  the  action  of  a group on the cosets of a
+  subgroup.  The  action  of  a  matrix  group  on  vectors  from the right is
+  described by both [2XOnPoints[102X ([14X41.2-1[114X) and [2XOnRight[102X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XOnRight( [ 1, 2 ], [ [ 1, 2 ], [ 3, 4 ] ] );[127X[104X
+    [4X[28X[ 7, 10 ][128X[104X
+    [4X[25Xgap>[125X [27XOnRight( (1,2,3), (2,3,4) );[127X[104X
+    [4X[28X(1,3)(2,4)[128X[104X
+    [4X[25Xgap>[125X [27Xg:= Group( (1,2,3), (2,3,4) );;[127X[104X
+    [4X[25Xgap>[125X [27XOrbit( g, (), OnRight );[127X[104X
+    [4X[28X[ (), (1,2,3), (2,3,4), (1,3,2), (1,3)(2,4), (1,2)(3,4), (2,4,3),[128X[104X
+    [4X[28X  (1,4,2), (1,4,3), (1,3,4), (1,2,4), (1,4)(2,3) ][128X[104X
+  [4X[32X[104X
+  
+  [1X41.2-3 OnLeftInverse[101X
+  
+  [33X[1;0Y[29X[2XOnLeftInverse[102X( [3Xpnt[103X, [3Xg[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns [22X[3Xg[103X^{-1}[122X [10X* [3Xpnt[103X[10X[110X. Forming the inverse is necessary to make this a proper
+  action, as in [5XGAP[105X groups always act from the right.[133X
+  
+  [33X[0;0Y[2XOnLeftInverse[102X  is used for example in the representation of a right coset as
+  an  external  set  (see [14X41.12[114X), that is, a right coset [22XUg[122X is an external set
+  for the group [22XU[122X acting on it via [2XOnLeftInverse[102X.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XOnLeftInverse( [ 1, 2 ], [ [ 1, 2 ], [ 3, 4 ] ] );[127X[104X
+    [4X[28X[ 0, 1/2 ][128X[104X
+    [4X[25Xgap>[125X [27XOnLeftInverse( (1,2,3), (2,3,4) );[127X[104X
+    [4X[28X(1,2,4)[128X[104X
+    [4X[25Xgap>[125X [27Xg:= Group( (1,2,3), (2,3,4) );;[127X[104X
+    [4X[25Xgap>[125X [27XOrbit( g, (), OnLeftInverse );[127X[104X
+    [4X[28X[ (), (1,3,2), (2,4,3), (1,2,3), (1,3)(2,4), (1,2)(3,4), (2,3,4),[128X[104X
+    [4X[28X  (1,2,4), (1,3,4), (1,4,3), (1,4,2), (1,4)(2,3) ][128X[104X
+  [4X[32X[104X
+  
+  [1X41.2-4 OnSets[101X
+  
+  [33X[1;0Y[29X[2XOnSets[102X( [3Xset[103X, [3Xg[103X ) [32X function[133X
+  
+  [33X[0;0YLet [3Xset[103X be a proper set (see [14X21.19[114X). [2XOnSets[102X returns the proper set formed by
+  the images of all points [22Xx[122X of [3Xset[103X via the action function [2XOnPoints[102X ([14X41.2-1[114X),
+  applied to [22Xx[122X and [3Xg[103X.[133X
+  
+  [33X[0;0Y[2XOnSets[102X  is  for example used to compute the action of a permutation group on
+  blocks.[133X
+  
+  [33X[0;0Y([2XOnTuples[102X  ([14X41.2-5[114X)  is  an  action  on lists that preserves the ordering of
+  entries.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XOnSets( [ 1, 3 ], (1,2,3) );[127X[104X
+    [4X[28X[ 1, 2 ][128X[104X
+    [4X[25Xgap>[125X [27XOnSets( [ (2,3), (1,2) ], (1,2,3) );[127X[104X
+    [4X[28X[ (2,3), (1,3) ][128X[104X
+    [4X[25Xgap>[125X [27Xg:= Group( (1,2,3), (2,3,4) );;[127X[104X
+    [4X[25Xgap>[125X [27XOrbit( g, [ 1, 2 ], OnSets );[127X[104X
+    [4X[28X[ [ 1, 2 ], [ 2, 3 ], [ 1, 3 ], [ 3, 4 ], [ 1, 4 ], [ 2, 4 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X41.2-5 OnTuples[101X
+  
+  [33X[1;0Y[29X[2XOnTuples[102X( [3Xtup[103X, [3Xg[103X ) [32X function[133X
+  
+  [33X[0;0YLet  [3Xtup[103X  be  a  list. [2XOnTuples[102X returns the list formed by the images of all
+  points  [22Xx[122X of [3Xtup[103X via the action function [2XOnPoints[102X ([14X41.2-1[114X), applied to [22Xx[122X and
+  [3Xg[103X.[133X
+  
+  [33X[0;0Y([2XOnSets[102X  ([14X41.2-4[114X)  is an action on lists that additionally sorts the entries
+  of the result.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XOnTuples( [ 1, 3 ], (1,2,3) );[127X[104X
+    [4X[28X[ 2, 1 ][128X[104X
+    [4X[25Xgap>[125X [27XOnTuples( [ (2,3), (1,2) ], (1,2,3) );[127X[104X
+    [4X[28X[ (1,3), (2,3) ][128X[104X
+    [4X[25Xgap>[125X [27Xg:= Group( (1,2,3), (2,3,4) );;[127X[104X
+    [4X[25Xgap>[125X [27XOrbit( g, [ 1, 2 ], OnTuples );[127X[104X
+    [4X[28X[ [ 1, 2 ], [ 2, 3 ], [ 1, 3 ], [ 3, 1 ], [ 3, 4 ], [ 2, 1 ],[128X[104X
+    [4X[28X  [ 1, 4 ], [ 4, 1 ], [ 4, 2 ], [ 3, 2 ], [ 2, 4 ], [ 4, 3 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X41.2-6 OnPairs[101X
+  
+  [33X[1;0Y[29X[2XOnPairs[102X( [3Xtup[103X, [3Xg[103X ) [32X function[133X
+  
+  [33X[0;0Yis a special case of [2XOnTuples[102X ([14X41.2-5[114X) for lists [3Xtup[103X of length 2.[133X
+  
+  [1X41.2-7 OnSetsSets[101X
+  
+  [33X[1;0Y[29X[2XOnSetsSets[102X( [3Xset[103X, [3Xg[103X ) [32X function[133X
+  
+  [33X[0;0Yimplements  the  action  on sets of sets. For the special case that the sets
+  are  pairwise  disjoint,  it is possible to use [2XOnSetsDisjointSets[102X ([14X41.2-8[114X).
+  [3Xset[103X must be a sorted list whose entries are again sorted lists, otherwise an
+  error is triggered (see [14X41.3[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XOnSetsSets( [ [ 1, 2 ], [ 3, 4 ] ], (1,2,3) );[127X[104X
+    [4X[28X[ [ 1, 4 ], [ 2, 3 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xg:= Group( (1,2,3), (2,3,4) );;[127X[104X
+    [4X[25Xgap>[125X [27XOrbit( g, [ [ 1, 2 ], [ 3, 4 ] ], OnSetsSets );[127X[104X
+    [4X[28X[ [ [ 1, 2 ], [ 3, 4 ] ], [ [ 1, 4 ], [ 2, 3 ] ],[128X[104X
+    [4X[28X  [ [ 1, 3 ], [ 2, 4 ] ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X41.2-8 OnSetsDisjointSets[101X
+  
+  [33X[1;0Y[29X[2XOnSetsDisjointSets[102X( [3Xset[103X, [3Xg[103X ) [32X function[133X
+  
+  [33X[0;0Yimplements the action on sets of pairwise disjoint sets (see also [2XOnSetsSets[102X
+  ([14X41.2-7[114X)).  [3Xset[103X  must be a sorted list whose entries are again sorted lists,
+  otherwise an error is triggered (see [14X41.3[114X).[133X
+  
+  [1X41.2-9 OnSetsTuples[101X
+  
+  [33X[1;0Y[29X[2XOnSetsTuples[102X( [3Xset[103X, [3Xg[103X ) [32X function[133X
+  
+  [33X[0;0Yimplements  the  action  on  sets  of  tuples.  [3Xset[103X  must  be a sorted list,
+  otherwise an error is triggered (see [14X41.3[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XOnSetsTuples( [ [ 1, 2 ], [ 3, 4 ] ], (1,2,3) );[127X[104X
+    [4X[28X[ [ 1, 4 ], [ 2, 3 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xg:= Group( (1,2,3), (2,3,4) );;[127X[104X
+    [4X[25Xgap>[125X [27XOrbit( g, [ [ 1, 2 ], [ 3, 4 ] ], OnSetsTuples );[127X[104X
+    [4X[28X[ [ [ 1, 2 ], [ 3, 4 ] ], [ [ 1, 4 ], [ 2, 3 ] ],[128X[104X
+    [4X[28X  [ [ 1, 3 ], [ 4, 2 ] ], [ [ 2, 4 ], [ 3, 1 ] ],[128X[104X
+    [4X[28X  [ [ 2, 1 ], [ 4, 3 ] ], [ [ 3, 2 ], [ 4, 1 ] ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X41.2-10 OnTuplesSets[101X
+  
+  [33X[1;0Y[29X[2XOnTuplesSets[102X( [3Xset[103X, [3Xg[103X ) [32X function[133X
+  
+  [33X[0;0Yimplements  the  action  on tuples of sets. [3Xset[103X must be a list whose entries
+  are again sorted lists, otherwise an error is triggered (see [14X41.3[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XOnTuplesSets( [ [ 2, 3 ], [ 3, 4 ] ], (1,2,3) );[127X[104X
+    [4X[28X[ [ 1, 3 ], [ 1, 4 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xg:= Group( (1,2,3), (2,3,4) );;[127X[104X
+    [4X[25Xgap>[125X [27XOrbit( g, [ [ 1, 2 ], [ 3, 4 ] ], OnTuplesSets );[127X[104X
+    [4X[28X[ [ [ 1, 2 ], [ 3, 4 ] ], [ [ 2, 3 ], [ 1, 4 ] ],[128X[104X
+    [4X[28X  [ [ 1, 3 ], [ 2, 4 ] ], [ [ 3, 4 ], [ 1, 2 ] ],[128X[104X
+    [4X[28X  [ [ 1, 4 ], [ 2, 3 ] ], [ [ 2, 4 ], [ 1, 3 ] ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X41.2-11 OnTuplesTuples[101X
+  
+  [33X[1;0Y[29X[2XOnTuplesTuples[102X( [3Xset[103X, [3Xg[103X ) [32X function[133X
+  
+  [33X[0;0Yimplements the action on tuples of tuples.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XOnTuplesTuples( [ [ 2, 3 ], [ 3, 4 ] ], (1,2,3) );[127X[104X
+    [4X[28X[ [ 3, 1 ], [ 1, 4 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,2,3),(2,3,4));;[127X[104X
+    [4X[25Xgap>[125X [27XOrbit(g,[[1,2],[3,4]],OnTuplesTuples);[127X[104X
+    [4X[28X[ [ [ 1, 2 ], [ 3, 4 ] ], [ [ 2, 3 ], [ 1, 4 ] ],[128X[104X
+    [4X[28X  [ [ 1, 3 ], [ 4, 2 ] ], [ [ 3, 1 ], [ 2, 4 ] ],[128X[104X
+    [4X[28X  [ [ 3, 4 ], [ 1, 2 ] ], [ [ 2, 1 ], [ 4, 3 ] ],[128X[104X
+    [4X[28X  [ [ 1, 4 ], [ 2, 3 ] ], [ [ 4, 1 ], [ 3, 2 ] ],[128X[104X
+    [4X[28X  [ [ 4, 2 ], [ 1, 3 ] ], [ [ 3, 2 ], [ 4, 1 ] ],[128X[104X
+    [4X[28X  [ [ 2, 4 ], [ 3, 1 ] ], [ [ 4, 3 ], [ 2, 1 ] ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X41.2-12 OnLines[101X
+  
+  [33X[1;0Y[29X[2XOnLines[102X( [3Xvec[103X, [3Xg[103X ) [32X function[133X
+  
+  [33X[0;0YLet  [3Xvec[103X  be a [13Xnormed[113X row vector, that is, its first nonzero entry is normed
+  to  the  identity  of  the relevant field, see [2XNormedRowVector[102X ([14X23.2-1[114X). The
+  function  [2XOnLines[102X returns the row vector obtained from first multiplying [3Xvec[103X
+  from  the  right  with  [3Xg[103X  (via  [2XOnRight[102X  ([14X41.2-2[114X)) and then normalizing the
+  resulting row vector by scalar multiplication from the left.[133X
+  
+  [33X[0;0YThis  action  corresponds  to  the  projective  action  of a matrix group on
+  one-dimensional subspaces.[133X
+  
+  [33X[0;0YIf  [3Xvec[103X  is  a  zero  vector  or  is  not  normed then an error is triggered
+  (see [14X41.3[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XOnLines( [ 1, 2 ], [ [ 1, 2 ], [ 3, 4 ] ] );[127X[104X
+    [4X[28X[ 1, 10/7 ][128X[104X
+    [4X[25Xgap>[125X [27Xgl:=GL(2,5);;v:=[1,0]*Z(5)^0;[127X[104X
+    [4X[28X[ Z(5)^0, 0*Z(5) ][128X[104X
+    [4X[25Xgap>[125X [27Xh:=Action(gl,Orbit(gl,v,OnLines),OnLines);[127X[104X
+    [4X[28XGroup([ (2,3,5,6), (1,2,4)(3,6,5) ])[128X[104X
+  [4X[32X[104X
+  
+  [1X41.2-13 OnIndeterminates[101X
+  
+  [33X[1;0Y[29X[2XOnIndeterminates[102X( [3Xpoly[103X, [3Xperm[103X ) [32X function[133X
+  
+  [33X[0;0YA permutation [3Xperm[103X acts on the multivariate polynomial [3Xpoly[103X by permuting the
+  indeterminates as it permutes points.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xx:=Indeterminate(Rationals,1);; y:=Indeterminate(Rationals,2);;[127X[104X
+    [4X[25Xgap>[125X [27XOnIndeterminates(x^7*y+x*y^4,(1,17)(2,28));[127X[104X
+    [4X[28Xx_17^7*x_28+x_17*x_28^4[128X[104X
+    [4X[25Xgap>[125X [27XStabilizer(Group((1,2,3,4),(1,2)),x*y,OnIndeterminates);[127X[104X
+    [4X[28XGroup([ (1,2), (3,4) ])[128X[104X
+  [4X[32X[104X
+  
+  [1X41.2-14 Permuted[101X
+  
+  [33X[1;0Y[29X[2XPermuted[102X( [3Xlist[103X, [3Xperm[103X ) [32X method[133X
+  
+  [33X[0;0YThe  following  example  demonstrates  [2XPermuted[102X  ([14X21.20-17[114X)  being  used  to
+  implement a permutation action on a domain:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,2,3),(1,2));;[127X[104X
+    [4X[25Xgap>[125X [27Xdom:=[ "a", "b", "c" ];;[127X[104X
+    [4X[25Xgap>[125X [27XOrbit(g,dom,Permuted);[127X[104X
+    [4X[28X[ [ "a", "b", "c" ], [ "c", "a", "b" ], [ "b", "a", "c" ],[128X[104X
+    [4X[28X  [ "b", "c", "a" ], [ "a", "c", "b" ], [ "c", "b", "a" ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X41.2-15 OnSubspacesByCanonicalBasis[101X
+  
+  [33X[1;0Y[29X[2XOnSubspacesByCanonicalBasis[102X( [3Xbas[103X, [3Xmat[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XOnSubspacesByCanonicalBasisConcatenations[102X( [3Xbasvec[103X, [3Xmat[103X ) [32X function[133X
+  
+  [33X[0;0Yimplements  the  operation of a matrix group on subspaces of a vector space.
+  [3Xbas[103X  must be a list of (linearly independent) vectors which forms a basis of
+  the  subspace in Hermite normal form. [3Xmat[103X is an element of the acting matrix
+  group.  The  function  returns a mutable matrix which gives the basis of the
+  image  of  the  subspace  in  Hermite  normal  form.  (In  other  words:  it
+  triangulizes the product of [3Xbas[103X with [3Xmat[103X.)[133X
+  
+  [33X[0;0Y[3Xbas[103X  must  be  given in Hermite normal form, otherwise an error is triggered
+  (see [14X41.3[114X).[133X
+  
+  
+  [1X41.3 [33X[0;0YAction on canonical representatives[133X[101X
+  
+  [33X[0;0YA  variety of action functions assumes that the objects on which it acts are
+  given  in a particular form, for example canonical representatives. Affected
+  actions  are  for  example [2XOnSetsSets[102X ([14X41.2-7[114X), [2XOnSetsDisjointSets[102X ([14X41.2-8[114X),
+  [2XOnSetsTuples[102X   ([14X41.2-9[114X),   [2XOnTuplesSets[102X  ([14X41.2-10[114X),  [2XOnLines[102X  ([14X41.2-12[114X)  and
+  [2XOnSubspacesByCanonicalBasis[102X ([14X41.2-15[114X).[133X
+  
+  [33X[0;0YIf  orbit  seeds  or  domain elements are not given in the required form [5XGAP[105X
+  will issue an error message:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XOrbit(SymmetricGroup(5),[[2,4],[1,3]],OnSetsSets);[127X[104X
+    [4X[28XError, Action not well-defined. See the manual section[128X[104X
+    [4X[28X``Action on canonical representatives''.[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIn  this  case  the affected domain elements have to be brought in canonical
+  form,  as documented for the respective action function. For interactive use
+  this is most easily done by acting with the identity element of the group.[133X
+  
+  [33X[0;0Y(A similar error could arise if a user-defined action function is used which
+  actually does not implement an action from the right.)[133X
+  
+  
+  [1X41.4 [33X[0;0YOrbits[133X[101X
+  
+  [33X[0;0YIf  a group [22XG[122X acts on a set [22XΩ[122X, the set of all images of [22Xx ∈ Ω[122X under elements
+  of [22XG[122X is called the [13Xorbit[113X of [22Xx[122X. The set of orbits of [22XG[122X is a partition of [22XΩ[122X.[133X
+  
+  [1X41.4-1 Orbit[101X
+  
+  [33X[1;0Y[29X[2XOrbit[102X( [3XG[103X[, [3XOmega[103X], [3Xpnt[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X operation[133X
+  
+  [33X[0;0YThe orbit of the point [3Xpnt[103X is the list of all images of [3Xpnt[103X under the action
+  of  the  group  [3XG[103X  w.r.t. the action function [3Xact[103X or [2XOnPoints[102X ([14X41.2-1[114X) if no
+  action function is given.[133X
+  
+  [33X[0;0Y(Note  that  the  arrangement  of  points in this list is not defined by the
+  operation.)[133X
+  
+  [33X[0;0YThe  orbit  of  [3Xpnt[103X  will  always  contain one element that is [13Xequal[113X to [3Xpnt[103X,
+  however for performance reasons this element is not necessarily [13Xidentical[113X to
+  [3Xpnt[103X, in particular if [3Xpnt[103X is mutable.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,3,2),(2,4,3));;[127X[104X
+    [4X[25Xgap>[125X [27XOrbit(g,1);[127X[104X
+    [4X[28X[ 1, 3, 2, 4 ][128X[104X
+    [4X[25Xgap>[125X [27XOrbit(g,[1,2],OnSets);[127X[104X
+    [4X[28X[ [ 1, 2 ], [ 1, 3 ], [ 1, 4 ], [ 2, 3 ], [ 3, 4 ], [ 2, 4 ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y(See Section [14X41.2[114X for information about specific actions.)[133X
+  
+  [1X41.4-2 Orbits[101X
+  
+  [33X[1;0Y[29X[2XOrbits[102X( [3XG[103X, [3Xseeds[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XOrbits[102X( [3XG[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XOrbits[102X( [3Xxset[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  a  duplicate-free list of the orbits of the elements in [3Xseeds[103X under
+  the  action  [3Xact[103X  of  [3XG[103X  or under [2XOnPoints[102X ([14X41.2-1[114X) if no action function is
+  given.[133X
+  
+  [33X[0;0YFor  a  permutation  group  [3XG[103X,  one may also invoke this as [10XOrbits([3XG[103X[10X)[110X, which
+  returns  all  the orbits of its natural action on the set of points moved by
+  it.  For  example  the  group  [22X⟨ (1,2,3), (4,5) ⟩[122X has the orbits [22X{1,2,3}[122X and
+  [22X{4,5}[122X.[133X
+  
+  [33X[0;0Y(Note  that  the  arrangement of orbits or of points within one orbit is not
+  defined by the operation.)[133X
+  
+  
+  [1X41.4-3 [33X[0;0YOrbitsDomain[133X[101X
+  
+  [33X[1;0Y[29X[2XOrbitsDomain[102X( [3XG[103X, [3XOmega[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XOrbitsDomain[102X( [3XG[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XOrbitsDomain[102X( [3Xxset[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns a list of the orbits of [3XG[103X on the domain [3XOmega[103X (given as lists) under
+  the action [3Xact[103X or under [2XOnPoints[102X ([14X41.2-1[114X) if no action function is given.[133X
+  
+  [33X[0;0YThis  operation  is often faster than [2XOrbits[102X ([14X41.4-2[114X). The domain [3XOmega[103X must
+  be closed under the action of [3XG[103X, otherwise an error can occur.[133X
+  
+  [33X[0;0YFor  a  permutation  group  [3XG[103X,  one may also invoke this as [10XOrbitsDomain([3XG[103X[10X)[110X,
+  which  returns  all  the  orbits  of its natural action on the set of points
+  moved by it.[133X
+  
+  [33X[0;0Y(Note  that  the  arrangement of orbits or of points within one orbit is not
+  defined by the operation.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,3,2),(2,4,3));;[127X[104X
+    [4X[25Xgap>[125X [27XOrbits(g,[1..5]);[127X[104X
+    [4X[28X[ [ 1, 3, 2, 4 ], [ 5 ] ][128X[104X
+    [4X[25Xgap>[125X [27XOrbitsDomain(g,Arrangements([1..4],3),OnTuples);[127X[104X
+    [4X[28X[ [ [ 1, 2, 3 ], [ 3, 1, 2 ], [ 1, 4, 2 ], [ 2, 3, 1 ], [ 2, 1, 4 ],[128X[104X
+    [4X[28X      [ 3, 4, 1 ], [ 1, 3, 4 ], [ 4, 2, 1 ], [ 4, 1, 3 ],[128X[104X
+    [4X[28X      [ 2, 4, 3 ], [ 3, 2, 4 ], [ 4, 3, 2 ] ],[128X[104X
+    [4X[28X  [ [ 1, 2, 4 ], [ 3, 1, 4 ], [ 1, 4, 3 ], [ 2, 3, 4 ], [ 2, 1, 3 ],[128X[104X
+    [4X[28X      [ 3, 4, 2 ], [ 1, 3, 2 ], [ 4, 2, 3 ], [ 4, 1, 2 ],[128X[104X
+    [4X[28X      [ 2, 4, 1 ], [ 3, 2, 1 ], [ 4, 3, 1 ] ] ][128X[104X
+    [4X[25Xgap>[125X [27XOrbitsDomain(g,GF(2)^2,[(1,2,3),(1,4)(2,3)],[127X[104X
+    [4X[25X>[125X [27X[[[Z(2)^0,Z(2)^0],[Z(2)^0,0*Z(2)]],[[Z(2)^0,0*Z(2)],[0*Z(2),Z(2)^0]]]);[127X[104X
+    [4X[28X[ [ <an immutable GF2 vector of length 2> ],[128X[104X
+    [4X[28X  [ <an immutable GF2 vector of length 2>,[128X[104X
+    [4X[28X      <an immutable GF2 vector of length 2>,[128X[104X
+    [4X[28X      <an immutable GF2 vector of length 2> ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y(See Section [14X41.2[114X for information about specific actions.)[133X
+  
+  [1X41.4-4 OrbitLength[101X
+  
+  [33X[1;0Y[29X[2XOrbitLength[102X( [3XG[103X[, [3XOmega[103X], [3Xpnt[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X operation[133X
+  
+  [33X[0;0Ycomputes  the  length  of  the orbit of [3Xpnt[103X under the action function [3Xact[103X or
+  [2XOnPoints[102X ([14X41.2-1[114X) if no action function is given.[133X
+  
+  
+  [1X41.4-5 [33X[0;0YOrbitLengths[133X[101X
+  
+  [33X[1;0Y[29X[2XOrbitLengths[102X( [3XG[103X, [3Xseeds[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XOrbitLengths[102X( [3XG[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XOrbitLengths[102X( [3Xxset[103X ) [32X attribute[133X
+  
+  [33X[0;0Ycomputes  the  lengths  of all the orbits of the elements in [3Xseeds[103X under the
+  action [3Xact[103X of [3XG[103X.[133X
+  
+  [33X[0;0YFor  a  permutation  group  [3XG[103X,  one may also invoke this as [10XOrbitLengths([3XG[103X[10X)[110X,
+  which returns the lengths of all the orbits of its natural action on the set
+  of  points  moved  by  it.  For example the group [22X⟨ (1,2,3), (5,6) ⟩[122X has the
+  orbit lengths 2 and 3.[133X
+  
+  
+  [1X41.4-6 [33X[0;0YOrbitLengthsDomain[133X[101X
+  
+  [33X[1;0Y[29X[2XOrbitLengthsDomain[102X( [3XG[103X, [3XOmega[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XOrbitLengthsDomain[102X( [3XG[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XOrbitLengthsDomain[102X( [3Xxset[103X ) [32X attribute[133X
+  
+  [33X[0;0Ycomputes the lengths of all the orbits of [3XG[103X on [3XOmega[103X.[133X
+  
+  [33X[0;0YThis  operation is often faster than [2XOrbitLengths[102X ([14X41.4-5[114X). The domain [3XOmega[103X
+  must be closed under the action of [3XG[103X, otherwise an error can occur.[133X
+  
+  [33X[0;0YFor    a    permutation   group   [3XG[103X,   one   may   also   invoke   this   as
+  [10XOrbitLengthsDomain([3XG[103X[10X)[110X,  which  returns  the  length of all the orbits of its
+  natural action on the set of points moved by it.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,3,2),(2,4,3));;[127X[104X
+    [4X[25Xgap>[125X [27XOrbitLength(g,[1,2,3,4],OnTuples);[127X[104X
+    [4X[28X12[128X[104X
+    [4X[25Xgap>[125X [27XOrbitLengths(g,Arrangements([1..4],4),OnTuples);[127X[104X
+    [4X[28X[ 12, 12 ][128X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,2,3),(5,6,7));;[127X[104X
+    [4X[25Xgap>[125X [27XOrbitLengthsDomain(g,[1,2,3]);[127X[104X
+    [4X[28X[ 3 ][128X[104X
+    [4X[25Xgap>[125X [27XOrbitLengthsDomain(g);[127X[104X
+    [4X[28X[ 3, 3 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X41.5 [33X[0;0YStabilizers[133X[101X
+  
+  [33X[0;0YThe  [13Xstabilizer[113X of a point [22Xx[122X under the action of a group [22XG[122X is the set of all
+  those elements in [22XG[122X which fix [22Xx[122X.[133X
+  
+  [1X41.5-1 OrbitStabilizer[101X
+  
+  [33X[1;0Y[29X[2XOrbitStabilizer[102X( [3XG[103X[, [3XOmega[103X], [3Xpnt[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X operation[133X
+  
+  [33X[0;0Ycomputes  the  orbit  and  the  stabilizer of [3Xpnt[103X simultaneously in a single
+  orbit-stabilizer algorithm.[133X
+  
+  [33X[0;0YThe stabilizer will have [3XG[103X as its parent.[133X
+  
+  [1X41.5-2 Stabilizer[101X
+  
+  [33X[1;0Y[29X[2XStabilizer[102X( [3XG[103X[, [3XOmega[103X], [3Xpnt[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X function[133X
+  
+  [33X[0;0Ycomputes the stabilizer in [3XG[103X of the point [3Xpnt[103X, that is the subgroup of those
+  elements of [3XG[103X that fix [3Xpnt[103X. The stabilizer will have [3XG[103X as its parent.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,3,2),(2,4,3));;[127X[104X
+    [4X[25Xgap>[125X [27Xstab:=Stabilizer(g,4);[127X[104X
+    [4X[28XGroup([ (1,3,2) ])[128X[104X
+    [4X[25Xgap>[125X [27XParent(stab);[127X[104X
+    [4X[28XGroup([ (1,3,2), (2,4,3) ])[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  stabilizer of a set or tuple of points can be computed by specifying an
+  action of sets or tuples of points.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XStabilizer(g,[1,2],OnSets);[127X[104X
+    [4X[28XGroup([ (1,2)(3,4) ])[128X[104X
+    [4X[25Xgap>[125X [27XStabilizer(g,[1,2],OnTuples);[127X[104X
+    [4X[28XGroup(())[128X[104X
+    [4X[25Xgap>[125X [27Xorbstab:=OrbitStabilizer(g,[1,2],OnSets);[127X[104X
+    [4X[28Xrec([128X[104X
+    [4X[28X  orbit := [ [ 1, 2 ], [ 1, 3 ], [ 1, 4 ], [ 2, 3 ], [ 3, 4 ],[128X[104X
+    [4X[28X      [ 2, 4 ] ], stabilizer := Group([ (1,2)(3,4) ]) )[128X[104X
+    [4X[25Xgap>[125X [27XParent(orbstab.stabilizer);[127X[104X
+    [4X[28XGroup([ (1,3,2), (2,4,3) ])[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y(See Section [14X41.2[114X for information about specific actions.)[133X
+  
+  [33X[0;0YThe   standard  methods  for  all  these  actions  are  an  orbit-stabilizer
+  algorithm.  For  permutation  groups  backtrack  algorithms  are  used.  For
+  solvable  groups  an  orbit-stabilizer  algorithm for solvable groups, which
+  uses  the fact that the orbits of a normal subgroup form a block system (see
+  [LNS84]) is used.[133X
+  
+  [1X41.5-3 OrbitStabilizerAlgorithm[101X
+  
+  [33X[1;0Y[29X[2XOrbitStabilizerAlgorithm[102X( [3XG[103X, [3XOmega[103X, [3Xblist[103X, [3Xgens[103X, [3Xacts[103X, [3Xpntact[103X ) [32X operation[133X
+  
+  [33X[0;0YThis  operation should not be called by a user. It is documented however for
+  purposes  to  extend or maintain the group actions package (the word [21Xpackage[121X
+  here  refers  to  the  [5XGAP[105X  functionality  for  group  actions, not to a [5XGAP[105X
+  package).[133X
+  
+  [33X[0;0Y[2XOrbitStabilizerAlgorithm[102X  performs  an  orbit  stabilizer  algorithm for the
+  group  [3XG[103X  acting  with the generators [3Xgens[103X via the generator images [3Xgens[103X and
+  the  group action [3Xact[103X on the element [3Xpnt[103X. (For technical reasons [3Xpnt[103X and [3Xact[103X
+  are put in one record with components [10Xpnt[110X and [10Xact[110X respectively.)[133X
+  
+  [33X[0;0YThe  [3Xpntact[103X  record  may carry a component [3Xstabsub[103X. If given, this must be a
+  subgroup  stabilizing [13Xall[113X points in the domain and can be used to abbreviate
+  stabilizer calculations.[133X
+  
+  [33X[0;0YThe  [3Xpntact[103X  component  also  may  contain the boolean entry [10Xonlystab[110X set to
+  [9Xtrue[109X. In this case the [10Xorbit[110X component may be omitted from the result.[133X
+  
+  [33X[0;0YThe argument [3XOmega[103X (which may be replaced by [9Xfalse[109X to be ignored) is the set
+  within  which  the orbit is computed (once the orbit is the full domain, the
+  orbit  calculation  may  stop).  If  [3Xblist[103X  is  given  it must be a bit list
+  corresponding  to [3XOmega[103X in which elements which have been found already will
+  be  [21Xticked  off[121X  with [9Xtrue[109X. (In particular, the entries for the orbit of [3Xpnt[103X
+  still must be all set to [9Xfalse[109X). Again the remaining action domain (the bits
+  set  initially  to  [9Xfalse[109X)  can be used to stop if the orbit cannot grow any
+  longer.  Another  use of the bit list is if [3XOmega[103X is an enumerator which can
+  determine [2XPositionCanonical[102X ([14X21.16-3[114X) values very quickly. In this situation
+  it  can  be  worth  to  search images not in the orbit found so far, but via
+  their  position  in  [3XOmega[103X  and use a the bit list to keep track whether the
+  element is in the orbit found so far.[133X
+  
+  
+  [1X41.6 [33X[0;0YElements with Prescribed Images[133X[101X
+  
+  [1X41.6-1 RepresentativeAction[101X
+  
+  [33X[1;0Y[29X[2XRepresentativeAction[102X( [3XG[103X[, [3XOmega[103X], [3Xd[103X, [3Xe[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X function[133X
+  
+  [33X[0;0Ycomputes an element of [3XG[103X that maps [3Xd[103X to [3Xe[103X under the given action and returns
+  [9Xfail[109X if no such element exists.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,3,2),(2,4,3));;[127X[104X
+    [4X[25Xgap>[125X [27XRepresentativeAction(g,1,3);[127X[104X
+    [4X[28X(1,3)(2,4)[128X[104X
+    [4X[25Xgap>[125X [27XRepresentativeAction(g,1,3,OnPoints);[127X[104X
+    [4X[28X(1,3)(2,4)[128X[104X
+    [4X[25Xgap>[125X [27XRepresentativeAction(g,(1,2,3),(2,4,3));[127X[104X
+    [4X[28X(1,2,4)[128X[104X
+    [4X[25Xgap>[125X [27XRepresentativeAction(g,(1,2,3),(2,3,4));[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27XRepresentativeAction(g,Group((1,2,3)),Group((2,3,4)));[127X[104X
+    [4X[28X(1,2,4)[128X[104X
+    [4X[25Xgap>[125X [27X RepresentativeAction(g,[1,2,3],[1,2,4],OnSets);[127X[104X
+    [4X[28X(2,4,3)[128X[104X
+    [4X[25Xgap>[125X [27X RepresentativeAction(g,[1,2,3],[1,2,4],OnTuples);[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y(See Section [14X41.2[114X for information about specific actions.)[133X
+  
+  [33X[0;0YAgain  the  standard  method for [2XRepresentativeAction[102X is an orbit-stabilizer
+  algorithm, for permutation groups and standard actions a backtrack algorithm
+  is used.[133X
+  
+  
+  [1X41.7 [33X[0;0YThe Permutation Image of an Action[133X[101X
+  
+  [33X[0;0YWhen  a  group  [22XG[122X  acts  on  a  domain  [22XΩ[122X,  an enumeration of [22XOmega[122X yields a
+  homomorphism from [22XG[122X into the symmetric group on [22X{ 1, ..., |Ω| }[122X. In [5XGAP[105X, the
+  enumeration  of [22XΩ[122X is provided by the [2XEnumerator[102X ([14X30.3-2[114X) value of [22XΩ[122X which of
+  course is [22XΩ[122X itself if it is a list.[133X
+  
+  [33X[0;0YFor  an  action homomorphism, the operation [2XUnderlyingExternalSet[102X ([14X41.12-16[114X)
+  will return the external set on [22XΩ[122X which affords the action.[133X
+  
+  
+  [1X41.7-1 [33X[0;0YActionHomomorphism[133X[101X
+  
+  [33X[1;0Y[29X[2XActionHomomorphism[102X( [3XG[103X, [3XOmega[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X][, [3X"surjective"[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XActionHomomorphism[102X( [3Xxset[103X[, [3X"surjective"[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XActionHomomorphism[102X( [3Xaction[103X ) [32X function[133X
+  
+  [33X[0;0Ycomputes  a  homomorphism  from [3XG[103X into the symmetric group on [22X|[3XOmega[103X|[122X points
+  that  gives  the  permutation  action  of  [3XG[103X  on [3XOmega[103X. (In particular, this
+  homomorphism  is a permutation equivalence, that is the permutation image of
+  a group element is given by the positions of points in [3XOmega[103X.)[133X
+  
+  [33X[0;0YThe result is undefined if [3XG[103X does not act on [3XOmega[103X.[133X
+  
+  [33X[0;0YBy   default   the   homomorphism  returned  by  [2XActionHomomorphism[102X  is  not
+  necessarily  surjective  (its  [2XRange[102X  ([14X32.3-7[114X)  value  is the full symmetric
+  group) to avoid unnecessary computation of the image. If the optional string
+  argument [10X"surjective"[110X is given, a surjective homomorphism is created.[133X
+  
+  [33X[0;0YThe  third  version (which is supported only for [5XGAP[105X3 compatibility) returns
+  the  action  homomorphism  that  belongs  to  the  image obtained via [2XAction[102X
+  ([14X41.7-2[114X).[133X
+  
+  [33X[0;0Y(See Section [14X41.2[114X for information about specific actions.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,2,3),(1,2));;[127X[104X
+    [4X[25Xgap>[125X [27Xhom:=ActionHomomorphism(g,Arrangements([1..4],3),OnTuples);[127X[104X
+    [4X[28X<action homomorphism>[128X[104X
+    [4X[25Xgap>[125X [27XImage(hom);[127X[104X
+    [4X[28XGroup([128X[104X
+    [4X[28X[ (1,9,13)(2,10,14)(3,7,15)(4,8,16)(5,12,17)(6,11,18)(19,22,23)(20,21,[128X[104X
+    [4X[28X    24), (1,7)(2,8)(3,9)(4,10)(5,11)(6,12)(13,15)(14,16)(17,18)(19,[128X[104X
+    [4X[28X    21)(20,22)(23,24) ])[128X[104X
+    [4X[25Xgap>[125X [27XSize(Range(hom));Size(Image(hom));[127X[104X
+    [4X[28X620448401733239439360000[128X[104X
+    [4X[28X6[128X[104X
+    [4X[25Xgap>[125X [27Xhom:=ActionHomomorphism(g,Arrangements([1..4],3),OnTuples,[127X[104X
+    [4X[25X>[125X [27X"surjective");;[127X[104X
+    [4X[25Xgap>[125X [27XSize(Range(hom));[127X[104X
+    [4X[28X6[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWhen  acting  on a domain, the operation [2XPositionCanonical[102X ([14X21.16-3[114X) is used
+  to determine the position of elements in the domain. This can be used to act
+  on  a  domain given by a list of representatives for which [2XPositionCanonical[102X
+  ([14X21.16-3[114X)  is  implemented, for example the return value of [2XRightTransversal[102X
+  ([14X39.8-1[114X).[133X
+  
+  [1X41.7-2 Action[101X
+  
+  [33X[1;0Y[29X[2XAction[102X( [3XG[103X, [3XOmega[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XAction[102X( [3Xxset[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  the image group of [2XActionHomomorphism[102X ([14X41.7-1[114X) called with the same
+  parameters.[133X
+  
+  [33X[0;0YNote  that  (for  compatibility  reasons  to  be  able  to  get  the  action
+  homomorphism) this image group internally stores the action homomorphism. If
+  [3XG[103X  or  [3XOmega[103X are extremely big, this can cause memory problems. In this case
+  compute only generator images and form the image group yourself.[133X
+  
+  [33X[0;0Y(See Section [14X41.2[114X for information about specific actions.)[133X
+  
+  [33X[0;0YThe  following  code shows for example how to create the regular action of a
+  group.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,2,3),(1,2));;[127X[104X
+    [4X[25Xgap>[125X [27XAction(g,AsList(g),OnRight);[127X[104X
+    [4X[28XGroup([ (1,5,3)(2,6,4), (1,6)(2,5)(3,4) ])[128X[104X
+  [4X[32X[104X
+  
+  [1X41.7-3 SparseActionHomomorphism[101X
+  
+  [33X[1;0Y[29X[2XSparseActionHomomorphism[102X( [3XG[103X, [3Xstart[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XSortedSparseActionHomomorphism[102X( [3XG[103X, [3Xstart[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X operation[133X
+  
+  [33X[0;0Y[2XSparseActionHomomorphism[102X    computes    the    action    homomorphism   (see
+  [2XActionHomomorphism[102X ([14X41.7-1[114X)) with arguments [3XG[103X, [22XD[122X, and the optional arguments
+  given,  where  [22XD[122X is the union of the [3XG[103X-orbits of all points in [3Xstart[103X. In the
+  [2XOrbit[102X ([14X41.4-1[114X) calls that are used to create [22XD[122X, again the optional arguments
+  given are entered.)[133X
+  
+  [33X[0;0YIf  [3XG[103X  acts  on  a  very  large  domain  not  surjectively  this may yield a
+  permutation  image  of  substantially  smaller  degree than by action on the
+  whole domain.[133X
+  
+  [33X[0;0YThe   operation   [2XSparseActionHomomorphism[102X   will   only  use  [2X\=[102X  ([14X31.11-1[114X)
+  comparisons of points in the orbit. Therefore it can be used even if no good
+  [2X\<[102X  ([14X31.11-1[114X)  comparison  method for these points is available. However the
+  image group will depend on the generators [3Xgens[103X of [3XG[103X.[133X
+  
+  [33X[0;0YThe operation [2XSortedSparseActionHomomorphism[102X in contrast will sort the orbit
+  and thus produce an image group which does not depend on these generators.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xh:=Group(Z(3)*[[[1,1],[0,1]]]);[127X[104X
+    [4X[28XGroup([ [ [ Z(3), Z(3) ], [ 0*Z(3), Z(3) ] ] ])[128X[104X
+    [4X[25Xgap>[125X [27Xhom:=ActionHomomorphism(h,GF(3)^2,OnRight);;[127X[104X
+    [4X[25Xgap>[125X [27XImage(hom);[127X[104X
+    [4X[28XGroup([ (2,3)(4,9,6,7,5,8) ])[128X[104X
+    [4X[25Xgap>[125X [27Xhom:=SparseActionHomomorphism(h,[Z(3)*[1,0]],OnRight);;[127X[104X
+    [4X[25Xgap>[125X [27XImage(hom);[127X[104X
+    [4X[28XGroup([ (1,2,3,4,5,6) ])[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X41.8 [33X[0;0YAction of a group on itself[133X[101X
+  
+  [33X[0;0YOf  particular importance is the action of a group on its elements or cosets
+  of  a  subgroup.  These  actions can be obtained by using [2XActionHomomorphism[102X
+  ([14X41.7-1[114X)  for  a  suitable domain (for example a list of subgroups). For the
+  following   (frequently  used)  types  of  actions  however  special  (often
+  particularly  efficient)  functions  are  provided.  A  special  case is the
+  regular action on all elements.[133X
+  
+  [1X41.8-1 FactorCosetAction[101X
+  
+  [33X[1;0Y[29X[2XFactorCosetAction[102X( [3XG[103X, [3XU[103X[, [3XN[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XFactorCosetAction[102X( [3XG[103X, [3XL[103X ) [32X operation[133X
+  
+  [33X[0;0YThis  command  computes the action of the group [3XG[103X on the right cosets of the
+  subgroup  [3XU[103X. If a normal subgroup [3XN[103X of [3XG[103X is given, it is stored as kernel of
+  this  action. When calling [10XFactorCosetAction[110X with a list of subgroups as the
+  second argument, an action with image isomorphic to the subdirect product of
+  the  coset actions of all subgroups is computed. (However a degree reduction
+  may  take  place  if  some  of  the  actions are redundant, i.e. there is no
+  guarantee that every subgroup in the list is represented by an orbit.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,2,3,4,5),(1,2));;u:=SylowSubgroup(g,2);;Index(g,u);[127X[104X
+    [4X[28X15[128X[104X
+    [4X[25Xgap>[125X [27XFactorCosetAction(g,u);[127X[104X
+    [4X[28X[ (1,2,3,4,5), (1,2) ] -> [ (1,4,7,10,13)(2,5,8,11,14)(3,6,9,12,15),\[128X[104X
+    [4X[28X  (1,4)(2,6)(3,5)(7,8)(10,12)(13,14) ][128X[104X
+    [4X[25Xgap>[125X [27XStructureDescription(Range(last));[127X[104X
+    [4X[28X"S5"[128X[104X
+    [4X[25Xgap>[125X [27XFactorCosetAction(g,[u,SylowSubgroup(g,3)]);;[127X[104X
+    [4X[25Xgap>[125X [27XSize(Image(last));[127X[104X
+    [4X[28X120[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  correspondence  of  points  with  cosets will, for performance reasons,
+  depend  on the method used. It is not guaranteed that it will be the same as
+  used by [10XRightTransversal[110X or [10XRightCosets[110X.[133X
+  
+  [1X41.8-2 RegularActionHomomorphism[101X
+  
+  [33X[1;0Y[29X[2XRegularActionHomomorphism[102X( [3XG[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns an isomorphism from [3XG[103X onto the regular permutation representation of
+  [3XG[103X.[133X
+  
+  [1X41.8-3 AbelianSubfactorAction[101X
+  
+  [33X[1;0Y[29X[2XAbelianSubfactorAction[102X( [3XG[103X, [3XM[103X, [3XN[103X ) [32X operation[133X
+  
+  [33X[0;0YLet  [3XG[103X  be a group and [22X[3XM[103X ≥ [3XN[103X[122X be subgroups of a common parent that are normal
+  under  [3XG[103X,  such  that the subfactor [22X[3XM[103X/[3XN[103X[122X is elementary abelian. The operation
+  [2XAbelianSubfactorAction[102X  returns  a  list  [10X[ [3Xphi[103X[10X, [3Xalpha[103X[10X, [3Xbas[103X[10X ][110X where [3Xbas[103X is a
+  list of elements of [3XM[103X which are representatives for a basis of [22X[3XM[103X/[3XN[103X[122X, [3Xalpha[103X is
+  a  map  from  [3XM[103X  into a [22Xn[122X-dimensional row space over [22XGF(p)[122X where [22X[[3XM[103X:[3XN[103X] = p^n[122X
+  that  is the natural homomorphism of [3XM[103X by [3XN[103X with the quotient represented as
+  an  additive  group.  Finally [3Xphi[103X is a homomorphism from [3XG[103X into [22XGL_n(p)[122X that
+  represents the action of [3XG[103X on the factor [22X[3XM[103X/[3XN[103X[122X.[133X
+  
+  [33X[0;0YNote:  If  only  matrices  for  the  action  are  needed,  [2XLinearActionLayer[102X
+  ([14X45.14-3[114X) might be faster.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,8,10,7,3,5)(2,4,12,9,11,6),[127X[104X
+    [4X[25X>[125X [27X            (1,9,5,6,3,10)(2,11,12,8,4,7));;[127X[104X
+    [4X[25Xgap>[125X [27Xc:=ChiefSeries(g);;List(c,Size);[127X[104X
+    [4X[28X[ 96, 48, 16, 4, 1 ][128X[104X
+    [4X[25Xgap>[125X [27XHasElementaryAbelianFactorGroup(c[3],c[4]);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XSetName(c[3],"my_group");;[127X[104X
+    [4X[25Xgap>[125X [27Xa:=AbelianSubfactorAction(g,c[3],c[4]);[127X[104X
+    [4X[28X[ [ (1,8,10,7,3,5)(2,4,12,9,11,6), (1,9,5,6,3,10)(2,11,12,8,4,7) ] ->[128X[104X
+    [4X[28X    [ <an immutable 2x2 matrix over GF2>,[128X[104X
+    [4X[28X      <an immutable 2x2 matrix over GF2> ],[128X[104X
+    [4X[28X  MappingByFunction( my_group, ( GF(2)^[128X[104X
+    [4X[28X    2 ), function( e ) ... end, function( r ) ... end ),[128X[104X
+    [4X[28X  Pcgs([ (2,9,3,8)(4,11,5,10), (1,6,12,7)(4,10,5,11) ]) ][128X[104X
+    [4X[25Xgap>[125X [27Xmat:=Image(a[1],g);[127X[104X
+    [4X[28XGroup([ <an immutable 2x2 matrix over GF2>,[128X[104X
+    [4X[28X  <an immutable 2x2 matrix over GF2> ])[128X[104X
+    [4X[25Xgap>[125X [27XSize(mat);[127X[104X
+    [4X[28X3[128X[104X
+    [4X[25Xgap>[125X [27Xe:=PreImagesRepresentative(a[2],[Z(2),0*Z(2)]);[127X[104X
+    [4X[28X(2,9,3,8)(4,11,5,10)[128X[104X
+    [4X[25Xgap>[125X [27Xe in c[3];e in c[4];[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X41.9 [33X[0;0YPermutations Induced by Elements and Cycles[133X[101X
+  
+  [33X[0;0YIf only the permutation image of a single element is needed, it might not be
+  worth  to create the action homomorphism, the following operations yield the
+  permutation image and cycles of a single element.[133X
+  
+  
+  [1X41.9-1 [33X[0;0YPermutation[133X[101X
+  
+  [33X[1;0Y[29X[2XPermutation[102X( [3Xg[103X, [3XOmega[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XPermutation[102X( [3Xg[103X, [3Xxset[103X ) [32X function[133X
+  
+  [33X[0;0Ycomputes  the  permutation  that  corresponds  to  the  action  of  [3Xg[103X on the
+  permutation  domain  [3XOmega[103X  (a  list  of  objects  that are permuted). If an
+  external  set  [3Xxset[103X  is  given, the permutation domain is the [2XHomeEnumerator[102X
+  ([14X41.12-5[114X)  value  of  this  external  set (see Section [14X41.12[114X). Note that the
+  points  of the returned permutation refer to the positions in [3XOmega[103X, even if
+  [3XOmega[103X itself consists of integers.[133X
+  
+  [33X[0;0YIf  [3Xg[103X  does  not  leave  the  domain  invariant,  or does not map the domain
+  injectively then [9Xfail[109X is returned.[133X
+  
+  [1X41.9-2 PermutationCycle[101X
+  
+  [33X[1;0Y[29X[2XPermutationCycle[102X( [3Xg[103X, [3XOmega[103X, [3Xpnt[103X[, [3Xact[103X] ) [32X function[133X
+  
+  [33X[0;0Ycomputes  the  permutation that represents the cycle of [3Xpnt[103X under the action
+  of the element [3Xg[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPermutation([[Z(3),-Z(3)],[Z(3),0*Z(3)]],AsList(GF(3)^2));[127X[104X
+    [4X[28X(2,7,6)(3,4,8)[128X[104X
+    [4X[25Xgap>[125X [27XPermutation((1,2,3)(4,5)(6,7),[4..7]);[127X[104X
+    [4X[28X(1,2)(3,4)[128X[104X
+    [4X[25Xgap>[125X [27XPermutationCycle((1,2,3)(4,5)(6,7),[4..7],4);[127X[104X
+    [4X[28X(1,2)[128X[104X
+  [4X[32X[104X
+  
+  [1X41.9-3 Cycle[101X
+  
+  [33X[1;0Y[29X[2XCycle[102X( [3Xg[103X, [3XOmega[103X, [3Xpnt[103X[, [3Xact[103X] ) [32X function[133X
+  
+  [33X[0;0Yreturns  a  list  of  the points in the cycle of [3Xpnt[103X under the action of the
+  element [3Xg[103X.[133X
+  
+  [1X41.9-4 CycleLength[101X
+  
+  [33X[1;0Y[29X[2XCycleLength[102X( [3Xg[103X, [3XOmega[103X, [3Xpnt[103X[, [3Xact[103X] ) [32X function[133X
+  
+  [33X[0;0Yreturns the length of the cycle of [3Xpnt[103X under the action of the element [3Xg[103X.[133X
+  
+  [1X41.9-5 Cycles[101X
+  
+  [33X[1;0Y[29X[2XCycles[102X( [3Xg[103X, [3XOmega[103X[, [3Xact[103X] ) [32X function[133X
+  
+  [33X[0;0Yreturns  a  list  of  the  cycles  (as lists of points) of the action of the
+  element [3Xg[103X.[133X
+  
+  [1X41.9-6 CycleLengths[101X
+  
+  [33X[1;0Y[29X[2XCycleLengths[102X( [3Xg[103X, [3XOmega[103X[, [3Xact[103X] ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  lengths of all the cycles under the action of the element [3Xg[103X on
+  [3XOmega[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XCycle((1,2,3)(4,5)(6,7),[4..7],4);[127X[104X
+    [4X[28X[ 4, 5 ][128X[104X
+    [4X[25Xgap>[125X [27XCycleLength((1,2,3)(4,5)(6,7),[4..7],4);[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XCycles((1,2,3)(4,5)(6,7),[4..7]);[127X[104X
+    [4X[28X[ [ 4, 5 ], [ 6, 7 ] ][128X[104X
+    [4X[25Xgap>[125X [27XCycleLengths((1,2,3)(4,5)(6,7),[4..7]);[127X[104X
+    [4X[28X[ 2, 2 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X41.9-7 [33X[0;0YCycleIndex[133X[101X
+  
+  [33X[1;0Y[29X[2XCycleIndex[102X( [3Xg[103X, [3XOmega[103X[, [3Xact[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XCycleIndex[102X( [3XG[103X, [3XOmega[103X[, [3Xact[103X] ) [32X function[133X
+  
+  [33X[0;0YThe [13Xcycle index[113X of a permutation [3Xg[103X acting on [3XOmega[103X is defined as[133X
+  
+  
+  [24X[33X[0;6Yz([3Xg[103X) = s_1^{c_1} s_2^{c_2} ⋯ s_n^{c_n}[133X[124X
+  
+  [33X[0;0Ywhere  [22Xc_k[122X is the number of [22Xk[122X-cycles in the cycle decomposition of [3Xg[103X and the
+  [22Xs_i[122X are indeterminates.[133X
+  
+  [33X[0;0YThe [13Xcycle index[113X of a group [3XG[103X is defined as[133X
+  
+  
+  [24X[33X[0;6YZ([3XG[103X) = ( ∑_{g ∈ [3XG[103X} z(g) ) / |[3XG[103X| .[133X[124X
+  
+  [33X[0;0YThe indeterminates used by [2XCycleIndex[102X are the indeterminates [22X1[122X to [22Xn[122X over the
+  rationals (see [2XIndeterminate[102X ([14X66.1-1[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=TransitiveGroup(6,8);[127X[104X
+    [4X[28XS_4(6c) = 1/2[2^3]S(3)[128X[104X
+    [4X[25Xgap>[125X [27XCycleIndex(g);[127X[104X
+    [4X[28X1/24*x_1^6+1/8*x_1^2*x_2^2+1/4*x_1^2*x_4+1/4*x_2^3+1/3*x_3^2[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X41.10 [33X[0;0YTests for Actions[133X[101X
+  
+  
+  [1X41.10-1 [33X[0;0YIsTransitive[133X[101X
+  
+  [33X[1;0Y[29X[2XIsTransitive[102X( [3XG[103X, [3XOmega[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XIsTransitive[102X( [3XG[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsTransitive[102X( [3Xxset[103X ) [32X property[133X
+  
+  [33X[0;0Yreturns  [9Xtrue[109X if the action implied by the arguments is transitive, or [9Xfalse[109X
+  otherwise.[133X
+  
+  [33X[0;0YWe  say that a group [3XG[103X acts [13Xtransitively[113X on a domain [22XD[122X if and only if [3XG[103X acts
+  on  [22XD[122X  and for every pair of points [22Xd, e ∈ D[122X there is an element [22Xg[122X in [3XG[103X such
+  that [22Xd^g = e[122X.[133X
+  
+  [33X[0;0YFor  a  permutation  group  [3XG[103X,  one may also invoke this as [10XIsTransitive([3XG[103X[10X)[110X,
+  which  tests  whether  the  group  is transitive with respect to its natural
+  action  on  the  set  of  points  moved  by  it.  For  example  the  group [22X⟨
+  (2,3,4),(2,3) ⟩[122X is transitive on the set [22X{2, 3, 4}[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG:= Group( (2,3,4), (2,3) );;[127X[104X
+    [4X[25Xgap>[125X [27XIsTransitive( G, [ 2 .. 4 ] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsTransitive( G, [ 2, 3 ] );   # G does not act on [ 2, 3 ][127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsTransitive( G, [ 1 .. 4 ] );  # G has two orbits on [ 1 .. 4 ][127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsTransitive( G );  # G is transitive on [ 2 .. 4 ][127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsTransitive( SL(2, 3), NormedRowVectors( GF(3)^2 ) );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsTransitive( SL(2, 3), NormedRowVectors( GF(3)^2 ), OnLines );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X41.10-2 [33X[0;0YTransitivity[133X[101X
+  
+  [33X[1;0Y[29X[2XTransitivity[102X( [3XG[103X, [3XOmega[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XTransitivity[102X( [3XG[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XTransitivity[102X( [3Xxset[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the degree [22Xk[122X (a non-negative integer) of transitivity of the action
+  implied by the arguments, i.e. the largest integer [22Xk[122X such that the action is
+  [22Xk[122X-transitive. If the action is not transitive [10X0[110X is returned.[133X
+  
+  [33X[0;0YAn  action  is  [13X[22Xk[122X-transitive[113X  if  every  [22Xk[122X-tuple  of  points  can  be mapped
+  simultaneously to every other [22Xk[122X-tuple.[133X
+  
+  [33X[0;0YFor  a  permutation  group  [3XG[103X,  one may also invoke this as [10XTransitivity([3XG[103X[10X)[110X,
+  which  returns  the  degree of transitivity of the group with respect to its
+  natural  action  on  the  set of points moved by it. For example the group [22X⟨
+  (2,3,4),(2,3) ⟩[122X is 3-transitive on the set [22X{2, 3, 4}[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,3,2),(2,4,3));;[127X[104X
+    [4X[25Xgap>[125X [27XIsTransitive(g,[1..5]);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XTransitivity(g,[1..4]);[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XTransitivity(g);[127X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X41.10-3 [33X[0;0YRankAction[133X[101X
+  
+  [33X[1;0Y[29X[2XRankAction[102X( [3XG[103X, [3XOmega[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XRankAction[102X( [3Xxset[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the rank of the transitive (see [2XIsTransitive[102X ([14X41.10-1[114X)) action of [3XG[103X
+  on [3XOmega[103X, i. e., the number of orbits of any point stabilizer.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRankAction(g,Combinations([1..4],2),OnSets);[127X[104X
+    [4X[28X4[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X41.10-4 [33X[0;0YIsSemiRegular[133X[101X
+  
+  [33X[1;0Y[29X[2XIsSemiRegular[102X( [3XG[103X, [3XOmega[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XIsSemiRegular[102X( [3XG[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsSemiRegular[102X( [3Xxset[103X ) [32X property[133X
+  
+  [33X[0;0Yreturns [9Xtrue[109X if the action implied by the arguments is semiregular, or [9Xfalse[109X
+  otherwise.[133X
+  
+  [33X[0;0YAn action is [13Xsemiregular[113X if the stabilizer of each point is the identity.[133X
+  
+  [33X[0;0YFor  a  permutation  group  [3XG[103X, one may also invoke this as [10XIsSemiRegular([3XG[103X[10X)[110X,
+  which  tests  whether  the  group is semiregular with respect to its natural
+  action  on  the  set  of points moved by it. For example the group [22X⟨ (2,3,4)
+  (5,6,7) ⟩[122X is semiregular on the set [22X{2, 3, 4, 5, 6, 7}[122X.[133X
+  
+  
+  [1X41.10-5 [33X[0;0YIsRegular[133X[101X
+  
+  [33X[1;0Y[29X[2XIsRegular[102X( [3XG[103X, [3XOmega[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XIsRegular[102X( [3XG[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsRegular[102X( [3Xxset[103X ) [32X property[133X
+  
+  [33X[0;0Yreturns  [9Xtrue[109X  if  the  action implied by the arguments is regular, or [9Xfalse[109X
+  otherwise.[133X
+  
+  [33X[0;0YAn action is [13Xregular[113X if it is both semiregular (see [2XIsSemiRegular[102X ([14X41.10-4[114X))
+  and transitive (see [2XIsTransitive[102X ([14X41.10-1[114X)). In this case every point [3Xpnt[103X of
+  [3XOmega[103X defines a one-to-one correspondence between [3XG[103X and [3XOmega[103X.[133X
+  
+  [33X[0;0YFor  a  permutation group [3XG[103X, one may also invoke this as [10XIsRegular([3XG[103X[10X)[110X, which
+  tests whether the group is regular with respect to its natural action on the
+  set  of  points moved by it. For example the group [22X⟨ (2,3,4) ⟩[122X is regular on
+  the set [22X{2, 3, 4}[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsSemiRegular(g,Arrangements([1..4],3),OnTuples);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsRegular(g,Arrangements([1..4],3),OnTuples);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X41.10-6 [33X[0;0YEarns[133X[101X
+  
+  [33X[1;0Y[29X[2XEarns[102X( [3XG[103X, [3XOmega[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XEarns[102X( [3Xxset[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  a  list  of  the  elementary abelian regular (when acting on [3XOmega[103X)
+  normal subgroups of [3XG[103X.[133X
+  
+  [33X[0;0YAt the moment only methods for a primitive group [3XG[103X are implemented.[133X
+  
+  
+  [1X41.10-7 [33X[0;0YIsPrimitive[133X[101X
+  
+  [33X[1;0Y[29X[2XIsPrimitive[102X( [3XG[103X, [3XOmega[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XIsPrimitive[102X( [3XG[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsPrimitive[102X( [3Xxset[103X ) [32X property[133X
+  
+  [33X[0;0Yreturns  [9Xtrue[109X  if the action implied by the arguments is primitive, or [9Xfalse[109X
+  otherwise.[133X
+  
+  [33X[0;0YAn  action is [13Xprimitive[113X if it is transitive (see [2XIsTransitive[102X ([14X41.10-1[114X)) and
+  the  action admits no nontrivial block systems. See [14X41.11[114X for the definition
+  of block systems.[133X
+  
+  [33X[0;0YFor a permutation group [3XG[103X, one may also invoke this as [10XIsPrimitive([3XG[103X[10X)[110X, which
+  tests  whether  the group is primitive with respect to its natural action on
+  the  set  of  points moved by it. For example the group [22X⟨ (2,3,4),(2,3) ⟩[122X is
+  primitive on the set [22X{2, 3, 4}[122X.[133X
+  
+  [33X[0;0YFor an explanation of the meaning of all the inputs, please refer to  [14X41.1[114X.[133X
+  
+  [33X[0;0Y[13XNote:[113X  This  operation  does not tell whether a matrix group is primitive in
+  the  sense  of  preserving  a  direct  sum  of vector spaces. To do this use
+  [10XIsPrimitiveMatrixGroup[110X or [10XIsPrimitive[110X from the package [5XIRREDSOL[105X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsPrimitive(g,Orbit(g,(1,2)(3,4)));[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X41.11 [33X[0;0YBlock Systems[133X[101X
+  
+  [33X[0;0YA  [13Xblock  system[113X (system of imprimitivity) for the action of a group [22XG[122X on an
+  action domain [22XΩ[122X is a partition of [22XΩ[122X which –as a partition– remains invariant
+  under  the action of [22XG[122X. For operations concerning block systems, [5XGAP[105X assumes
+  that  [22XG[122X  acts  transitively  on  [22XΩ[122X (see [2XIsTransitive[102X ([14X41.10-1[114X)). One may get
+  wrong  results  or  error  messages  (perhaps at a much later stage) if this
+  condition is not satisfied.[133X
+  
+  
+  [1X41.11-1 [33X[0;0YBlocks[133X[101X
+  
+  [33X[1;0Y[29X[2XBlocks[102X( [3XG[103X, [3XOmega[103X[, [3Xseed[103X][, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XBlocks[102X( [3Xxset[103X[, [3Xseed[103X] ) [32X attribute[133X
+  
+  [33X[0;0Ycomputes  a  block  system  for  the transitive (see [2XIsTransitive[102X ([14X41.10-1[114X))
+  action  of [3XG[103X on [3XOmega[103X. If [3Xseed[103X is not given and the action is imprimitive, a
+  minimal  nontrivial  block  system  will be found. If [3Xseed[103X is given, a block
+  system in which [3Xseed[103X is the subset of one block is computed.[133X
+  
+  [33X[0;0YThe result is undefined if the action is not transitive.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=TransitiveGroup(8,3);[127X[104X
+    [4X[28XE(8)=2[x]2[x]2[128X[104X
+    [4X[25Xgap>[125X [27XBlocks(g,[1..8]);[127X[104X
+    [4X[28X[ [ 1, 8 ], [ 2, 3 ], [ 4, 5 ], [ 6, 7 ] ][128X[104X
+    [4X[25Xgap>[125X [27XBlocks(g,[1..8],[1,4]);[127X[104X
+    [4X[28X[ [ 1, 4 ], [ 2, 7 ], [ 3, 6 ], [ 5, 8 ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y(See Section [14X41.2[114X for information about specific actions.)[133X
+  
+  
+  [1X41.11-2 [33X[0;0YMaximalBlocks[133X[101X
+  
+  [33X[1;0Y[29X[2XMaximalBlocks[102X( [3XG[103X, [3XOmega[103X[, [3Xseed[103X][, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XMaximalBlocks[102X( [3Xxset[103X[, [3Xseed[103X] ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  a  block  system  that  is  maximal  (i.e., blocks are maximal with
+  respect to inclusion) for the transitive (see [2XIsTransitive[102X ([14X41.10-1[114X)) action
+  of [3XG[103X on [3XOmega[103X. If [3Xseed[103X is given, a block system is computed in which [3Xseed[103X is
+  a subset of one block.[133X
+  
+  [33X[0;0YThe result is undefined if the action is not transitive.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XMaximalBlocks(g,[1..8]);[127X[104X
+    [4X[28X[ [ 1, 2, 3, 8 ], [ 4 .. 7 ] ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X41.11-3 [33X[0;0YRepresentativesMinimalBlocks[133X[101X
+  
+  [33X[1;0Y[29X[2XRepresentativesMinimalBlocks[102X( [3XG[103X, [3XOmega[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XRepresentativesMinimalBlocks[102X( [3Xxset[103X ) [32X attribute[133X
+  
+  [33X[0;0Ycomputes  a  list  of  block representatives for all minimal (i.e blocks are
+  minimal  with  respect  to  inclusion)  nontrivial  block  systems  for  the
+  transitive (see [2XIsTransitive[102X ([14X41.10-1[114X)) action of [3XG[103X on [3XOmega[103X.[133X
+  
+  [33X[0;0YThe result is undefined if the action is not transitive.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRepresentativesMinimalBlocks(g,[1..8]);[127X[104X
+    [4X[28X[ [ 1, 2 ], [ 1, 3 ], [ 1, 4 ], [ 1, 5 ], [ 1, 6 ], [ 1, 7 ],[128X[104X
+    [4X[28X  [ 1, 8 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X41.11-4 AllBlocks[101X
+  
+  [33X[1;0Y[29X[2XAllBlocks[102X( [3XG[103X ) [32X attribute[133X
+  
+  [33X[0;0Ycomputes  a  list  of representatives of all block systems for a permutation
+  group [3XG[103X acting transitively on the points moved by the group.[133X
+  
+  [33X[0;0YEach representative in the returned list is sorted and contains the smallest
+  point moved by [3XG[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XAllBlocks(g);[127X[104X
+    [4X[28X[ [ 1, 8 ], [ 1, 2, 3, 8 ], [ 1, 4, 5, 8 ], [ 1, 6, 7, 8 ], [ 1, 3 ],[128X[104X
+    [4X[28X  [ 1, 3, 5, 7 ], [ 1, 3, 4, 6 ], [ 1, 5 ], [ 1, 2, 5, 6 ], [ 1, 2 ],[128X[104X
+    [4X[28X  [ 1, 2, 4, 7 ], [ 1, 4 ], [ 1, 7 ], [ 1, 6 ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe stabilizer of a block can be computed via the action [2XOnSets[102X ([14X41.2-4[114X):[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XStabilizer(g,[1,8],OnSets);[127X[104X
+    [4X[28XGroup([ (1,8)(2,3)(4,5)(6,7) ])[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIf  [10Xbs[110X  is  a  partition  of  the action domain, given as a set of sets, the
+  stabilizer  under the action [2XOnSetsDisjointSets[102X ([14X41.2-8[114X) returns the largest
+  subgroup which preserves [10Xbs[110X as a block system.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,2,3,4,5,6,7,8),(1,2));;[127X[104X
+    [4X[25Xgap>[125X [27Xbs:=[[1,2,3,4],[5,6,7,8]];;[127X[104X
+    [4X[25Xgap>[125X [27XStabilizer(g,bs,OnSetsDisjointSets);[127X[104X
+    [4X[28XGroup([ (6,7), (5,6), (5,8), (2,3), (3,4)(5,7), (1,4),[128X[104X
+    [4X[28X  (1,5,4,8)(2,6,3,7) ])[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X41.12 [33X[0;0YExternal Sets[133X[101X
+  
+  [33X[0;0YWhen  considering  group  actions, sometimes the concept of a [13X[22XG[122X-set[113X is used.
+  This  is  a set [22XΩ[122X endowed with an action of [22XG[122X. The elements of the [22XG[122X-set are
+  the  same  as  those of [22XΩ[122X, however concepts like equality and equivalence of
+  [22XG[122X-sets  do not only consider the underlying domain [22XΩ[122X but the group action as
+  well.[133X
+  
+  [33X[0;0YThis concept is implemented in [5XGAP[105X via [13Xexternal sets[113X.[133X
+  
+  [33X[0;0YThe   constituents   of  an  external  set  are  stored  in  the  attributes
+  [2XActingDomain[102X   ([14X41.12-3[114X),   [2XFunctionAction[102X   ([14X41.12-4[114X)   and  [2XHomeEnumerator[102X
+  ([14X41.12-5[114X).[133X
+  
+  [33X[0;0YMost  operations  for actions are applicable as an attribute for an external
+  set.[133X
+  
+  [33X[0;0YThe most prominent external subsets are orbits, see [2XExternalOrbit[102X ([14X41.12-9[114X).[133X
+  
+  [33X[0;0YMany   subsets   of   a   group,   such   as  conjugacy  classes  or  cosets
+  (see [2XConjugacyClass[102X  ([14X39.10-1[114X)  and  [2XRightCoset[102X ([14X39.7-1[114X)) are implemented as
+  external orbits.[133X
+  
+  [33X[0;0YExternal  sets  also  are  implicitly  underlying  action homomorphisms, see
+  [2XUnderlyingExternalSet[102X    ([14X41.12-16[114X)   and   [2XSurjectiveActionHomomorphismAttr[102X
+  ([14X41.12-17[114X).[133X
+  
+  [1X41.12-1 IsExternalSet[101X
+  
+  [33X[1;0Y[29X[2XIsExternalSet[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YAn  [13Xexternal  set[113X  specifies  a  group action [22Xμ: Ω × G ↦ Ω[122X of a group [22XG[122X on a
+  domain [22XΩ[122X. The external set knows the group, the domain and the actual acting
+  function.  Mathematically,  an  external  set is the set [22XΩ[122X, which is endowed
+  with  the  action  of  a group [22XG[122X via the group action [22Xμ[122X. For this reason [5XGAP[105X
+  treats  an external set as a domain whose elements are the elements of [22XΩ[122X. An
+  external set is always a union of orbits. Currently the domain [22XΩ[122X must always
+  be  finite. If [22XΩ[122X is not a list, an enumerator for [22XΩ[122X is automatically chosen,
+  see [2XEnumerator[102X ([14X30.3-2[114X).[133X
+  
+  [1X41.12-2 ExternalSet[101X
+  
+  [33X[1;0Y[29X[2XExternalSet[102X( [3XG[103X, [3XOmega[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X operation[133X
+  
+  [33X[0;0Ycreates  the  external  set  for  the action [3Xact[103X of [3XG[103X on [3XOmega[103X. [3XOmega[103X can be
+  either  a  proper set, or a domain which is represented as described in [14X12.4[114X
+  and  [14X30[114X, or (to use less memory but with a slower performance) an enumerator
+  (see [2XEnumerator[102X ([14X30.3-2[114X) ) of this domain.[133X
+  
+  [33X[0;0YThe result is undefined if [3XG[103X does not act on [3XOmega[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,2,3),(2,3,4));;[127X[104X
+    [4X[25Xgap>[125X [27Xe:=ExternalSet(g,[1..4]);[127X[104X
+    [4X[28X<xset:[ 1, 2, 3, 4 ]>[128X[104X
+    [4X[25Xgap>[125X [27Xe:=ExternalSet(g,g,OnRight);[127X[104X
+    [4X[28X<xset:[ (), (2,3,4), (2,4,3), (1,2)(3,4), (1,2,3), (1,2,4), (1,3,2),[128X[104X
+    [4X[28X  (1,3,4), (1,3)(2,4), (1,4,2), (1,4,3), (1,4)(2,3) ]>[128X[104X
+    [4X[25Xgap>[125X [27XOrbits(e);[127X[104X
+    [4X[28X[ [ (), (1,2)(3,4), (1,3)(2,4), (1,4)(2,3), (2,4,3), (1,4,2),[128X[104X
+    [4X[28X      (1,2,3), (1,3,4), (2,3,4), (1,3,2), (1,4,3), (1,2,4) ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X41.12-3 ActingDomain[101X
+  
+  [33X[1;0Y[29X[2XActingDomain[102X( [3Xxset[103X ) [32X attribute[133X
+  
+  [33X[0;0YThis  attribute  returns  the  group  with  which  the external set [3Xxset[103X was
+  defined.[133X
+  
+  [1X41.12-4 FunctionAction[101X
+  
+  [33X[1;0Y[29X[2XFunctionAction[102X( [3Xxset[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis the acting function with which the external set [3Xxset[103X was defined.[133X
+  
+  [1X41.12-5 HomeEnumerator[101X
+  
+  [33X[1;0Y[29X[2XHomeEnumerator[102X( [3Xxset[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  an enumerator of the action domain with which the external set [3Xxset[103X
+  was  defined.  For  external  subsets, this is in general different from the
+  [2XEnumerator[102X ([14X30.3-2[114X) value of [3Xxset[103X, which enumerates only the subset.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XActingDomain(e);[127X[104X
+    [4X[28XGroup([ (1,2,3), (2,3,4) ])[128X[104X
+    [4X[25Xgap>[125X [27XFunctionAction(e)=OnRight;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XHomeEnumerator(e);[127X[104X
+    [4X[28X[ (), (2,3,4), (2,4,3), (1,2)(3,4), (1,2,3), (1,2,4), (1,3,2),[128X[104X
+    [4X[28X  (1,3,4), (1,3)(2,4), (1,4,2), (1,4,3), (1,4)(2,3) ][128X[104X
+  [4X[32X[104X
+  
+  [1X41.12-6 IsExternalSubset[101X
+  
+  [33X[1;0Y[29X[2XIsExternalSubset[102X( [3Xobj[103X ) [32X Representation[133X
+  
+  [33X[0;0YAn  external subset is the restriction of an external set to a subset of the
+  domain  (which  must be invariant under the action). It is again an external
+  set.[133X
+  
+  [1X41.12-7 ExternalSubset[101X
+  
+  [33X[1;0Y[29X[2XExternalSubset[102X( [3XG[103X, [3XOmega[103X, [3Xstart[103X[, [3Xgens[103X, [3Xacts[103X], [3Xact[103X ) [32X operation[133X
+  
+  [33X[0;0Yconstructs the external subset of [3XOmega[103X on the union of orbits of the points
+  in [3Xstart[103X.[133X
+  
+  [33X[0;0YThe result is undefined if [3XG[103X does not act on [3XOmega[103X.[133X
+  
+  [1X41.12-8 IsExternalOrbit[101X
+  
+  [33X[1;0Y[29X[2XIsExternalOrbit[102X( [3Xobj[103X ) [32X Representation[133X
+  
+  [33X[0;0YAn external orbit is an external subset consisting of one orbit.[133X
+  
+  [1X41.12-9 ExternalOrbit[101X
+  
+  [33X[1;0Y[29X[2XExternalOrbit[102X( [3XG[103X, [3XOmega[103X, [3Xpnt[103X[, [3Xgens[103X, [3Xacts[103X], [3Xact[103X ) [32X operation[133X
+  
+  [33X[0;0Yconstructs  the  external  subset  on  the  orbit of [3Xpnt[103X. The [2XRepresentative[102X
+  ([14X30.4-7[114X) value of this external set is [3Xpnt[103X.[133X
+  
+  [33X[0;0YThe result is undefined if [3XG[103X does not act on [3XOmega[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xe:=ExternalOrbit(g,g,(1,2,3));[127X[104X
+    [4X[28X(1,2,3)^G[128X[104X
+  [4X[32X[104X
+  
+  [1X41.12-10 StabilizerOfExternalSet[101X
+  
+  [33X[1;0Y[29X[2XStabilizerOfExternalSet[102X( [3Xxset[103X ) [32X attribute[133X
+  
+  [33X[0;0Ycomputes the stabilizer of the [2XRepresentative[102X ([14X30.4-7[114X) value of the external
+  set [3Xxset[103X. The stabilizer will have the acting group of [3Xxset[103X as its parent.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRepresentative(e);[127X[104X
+    [4X[28X(1,2,3)[128X[104X
+    [4X[25Xgap>[125X [27XStabilizerOfExternalSet(e);[127X[104X
+    [4X[28XGroup([ (1,2,3) ])[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X41.12-11 [33X[0;0YExternalOrbits[133X[101X
+  
+  [33X[1;0Y[29X[2XExternalOrbits[102X( [3XG[103X, [3XOmega[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XExternalOrbits[102X( [3Xxset[103X ) [32X attribute[133X
+  
+  [33X[0;0Ycomputes a list of external orbits that give the orbits of [3XG[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XExternalOrbits(g,AsList(g));[127X[104X
+    [4X[28X[ ()^G, (2,3,4)^G, (2,4,3)^G, (1,2)(3,4)^G ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X41.12-12 [33X[0;0YExternalOrbitsStabilizers[133X[101X
+  
+  [33X[1;0Y[29X[2XExternalOrbitsStabilizers[102X( [3XG[103X, [3XOmega[103X[, [3Xgens[103X, [3Xacts[103X][, [3Xact[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XExternalOrbitsStabilizers[102X( [3Xxset[103X ) [32X attribute[133X
+  
+  [33X[0;0YIn  addition  to [2XExternalOrbits[102X ([14X41.12-11[114X), this operation also computes the
+  stabilizers  of the representatives of the external orbits at the same time.
+  (This  can  be  quicker  than  computing the [2XExternalOrbits[102X ([14X41.12-11[114X) value
+  first and the stabilizers afterwards.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xe:=ExternalOrbitsStabilizers(g,AsList(g));[127X[104X
+    [4X[28X[ ()^G, (2,3,4)^G, (2,4,3)^G, (1,2)(3,4)^G ][128X[104X
+    [4X[25Xgap>[125X [27XHasStabilizerOfExternalSet(e[3]);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XStabilizerOfExternalSet(e[3]);[127X[104X
+    [4X[28XGroup([ (2,4,3) ])[128X[104X
+  [4X[32X[104X
+  
+  [1X41.12-13 CanonicalRepresentativeOfExternalSet[101X
+  
+  [33X[1;0Y[29X[2XCanonicalRepresentativeOfExternalSet[102X( [3Xxset[103X ) [32X attribute[133X
+  
+  [33X[0;0YThe  canonical representative of an external set [3Xxset[103X may only depend on the
+  defining  attributes  [3XG[103X,  [3XOmega[103X,  [3Xact[103X  of  [3Xxset[103X and (in the case of external
+  subsets) [10XEnumerator( [3Xxset[103X[10X )[110X. It must [13Xnot[113X depend, e.g., on the representative
+  of  an external orbit. [5XGAP[105X does not know methods for arbitrary external sets
+  to        compute        a        canonical        representative,       see
+  [2XCanonicalRepresentativeDeterminatorOfExternalSet[102X ([14X41.12-14[114X).[133X
+  
+  [1X41.12-14 CanonicalRepresentativeDeterminatorOfExternalSet[101X
+  
+  [33X[1;0Y[29X[2XCanonicalRepresentativeDeterminatorOfExternalSet[102X( [3Xxset[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns a function that takes as its arguments the acting group and a point.
+  This  function  returns  a  list of length 1 or 3, the first entry being the
+  canonical  representative  and  the  other  entries  (if  bound)  being  the
+  stabilizer  of  the  canonical  representative  and  a  conjugating element,
+  respectively.  An  external  set  is only guaranteed to be able to compute a
+  canonical         representative         if         it         has         a
+  [2XCanonicalRepresentativeDeterminatorOfExternalSet[102X.[133X
+  
+  [1X41.12-15 ActorOfExternalSet[101X
+  
+  [33X[1;0Y[29X[2XActorOfExternalSet[102X( [3Xxset[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns       an      element      mapping      [10XRepresentative([3Xxset[103X[10X)[110X      to
+  [10XCanonicalRepresentativeOfExternalSet([3Xxset[103X[10X)[110X under the given action.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xu:=Subgroup(g,[(1,2,3)]);;[127X[104X
+    [4X[25Xgap>[125X [27Xe:=RightCoset(u,(1,2)(3,4));;[127X[104X
+    [4X[25Xgap>[125X [27XCanonicalRepresentativeOfExternalSet(e);[127X[104X
+    [4X[28X(2,4,3)[128X[104X
+    [4X[25Xgap>[125X [27XActorOfExternalSet(e);[127X[104X
+    [4X[28X(1,3,2)[128X[104X
+    [4X[25Xgap>[125X [27XFunctionAction(e)((1,2)(3,4),last);[127X[104X
+    [4X[28X(2,4,3)[128X[104X
+  [4X[32X[104X
+  
+  [1X41.12-16 UnderlyingExternalSet[101X
+  
+  [33X[1;0Y[29X[2XUnderlyingExternalSet[102X( [3Xacthom[103X ) [32X attribute[133X
+  
+  [33X[0;0YThe  underlying  set of an action homomorphism [3Xacthom[103X is the external set on
+  which it was defined.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:=Group((1,2,3),(1,2));;[127X[104X
+    [4X[25Xgap>[125X [27Xhom:=ActionHomomorphism(g,Arrangements([1..4],3),OnTuples);;[127X[104X
+    [4X[25Xgap>[125X [27Xs:=UnderlyingExternalSet(hom);[127X[104X
+    [4X[28X<xset:[[ 1, 2, 3 ],[ 1, 2, 4 ],[ 1, 3, 2 ],[ 1, 3, 4 ],[ 1, 4, 2 ],[128X[104X
+    [4X[28X[ 1, 4, 3 ],[ 2, 1, 3 ],[ 2, 1, 4 ],[ 2, 3, 1 ],[ 2, 3, 4 ],[128X[104X
+    [4X[28X[ 2, 4, 1 ],[ 2, 4, 3 ],[ 3, 1, 2 ],[ 3, 1, 4 ],[ 3, 2, 1 ], ...]>[128X[104X
+    [4X[25Xgap>[125X [27XPrint(s,"\n");[127X[104X
+    [4X[28X[ [ 1, 2, 3 ], [ 1, 2, 4 ], [ 1, 3, 2 ], [ 1, 3, 4 ], [ 1, 4, 2 ],[128X[104X
+    [4X[28X  [ 1, 4, 3 ], [ 2, 1, 3 ], [ 2, 1, 4 ], [ 2, 3, 1 ], [ 2, 3, 4 ],[128X[104X
+    [4X[28X  [ 2, 4, 1 ], [ 2, 4, 3 ], [ 3, 1, 2 ], [ 3, 1, 4 ], [ 3, 2, 1 ],[128X[104X
+    [4X[28X  [ 3, 2, 4 ], [ 3, 4, 1 ], [ 3, 4, 2 ], [ 4, 1, 2 ], [ 4, 1, 3 ],[128X[104X
+    [4X[28X  [ 4, 2, 1 ], [ 4, 2, 3 ], [ 4, 3, 1 ], [ 4, 3, 2 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X41.12-17 SurjectiveActionHomomorphismAttr[101X
+  
+  [33X[1;0Y[29X[2XSurjectiveActionHomomorphismAttr[102X( [3Xxset[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns   an  action  homomorphism  for  the  external  set  [3Xxset[103X  which  is
+  surjective.  (As  the  [2XImage[102X  ([14X32.4-6[114X)  value of this homomorphism has to be
+  computed  to  obtain  the  range,  this  may  take substantially longer than
+  [2XActionHomomorphism[102X ([14X41.7-1[114X).)[133X
+  

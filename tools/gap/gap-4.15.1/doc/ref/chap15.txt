@@ -1,0 +1,595 @@
+  
+  [1X15 [33X[0;0YNumber Theory[133X[101X
+  
+  [33X[0;0Y[5XGAP[105X  provides  a  couple  of  elementary number theoretic functions. Most of
+  these deal with the group of integers coprime to [22Xm[122X, called the [13Xprime residue
+  group[113X.  The  order  of  this  group  is  [22Xϕ(m)[122X  (see [2XPhi[102X  ([14X15.2-2[114X)), and [22Xλ(m)[122X
+  (see [2XLambda[102X ([14X15.2-3[114X)) is its exponent. This group is cyclic if and only if [22Xm[122X
+  is  2, 4, an odd prime power [22Xp^n[122X, or twice an odd prime power [22X2 p^n[122X. In this
+  case  the  generators of the group, i.e., elements of order [22Xϕ(m)[122X, are called
+  [13Xprimitive roots[113X (see [2XPrimitiveRootMod[102X ([14X15.3-4[114X)).[133X
+  
+  [33X[0;0YNote  that  neither  the  arguments  nor  the return values of the functions
+  listed below are groups or group elements in the sense of [5XGAP[105X. The arguments
+  are simply integers.[133X
+  
+  
+  [1X15.1 [33X[0;0YInfoNumtheor (Info Class)[133X[101X
+  
+  [1X15.1-1 InfoNumtheor[101X
+  
+  [33X[1;0Y[29X[2XInfoNumtheor[102X [32X info class[133X
+  
+  [33X[0;0Y[2XInfoNumtheor[102X  is  the  info  class (see [14X7.4[114X) for the functions in the number
+  theory chapter.[133X
+  
+  
+  [1X15.2 [33X[0;0YPrime Residues[133X[101X
+  
+  [1X15.2-1 PrimeResidues[101X
+  
+  [33X[1;0Y[29X[2XPrimeResidues[102X( [3Xm[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XPrimeResidues[102X returns the set of integers from the range [10X[ 0 .. Abs( [3Xm[103X[10X )-1 ][110X
+  that are coprime to the integer [3Xm[103X.[133X
+  
+  [33X[0;0Y[10XAbs([3Xm[103X[10X)[110X must be less than [22X2^28[122X, otherwise the set would probably be too large
+  anyhow.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPrimeResidues( 0 );  PrimeResidues( 1 );  PrimeResidues( 20 );[127X[104X
+    [4X[28X[  ][128X[104X
+    [4X[28X[ 0 ][128X[104X
+    [4X[28X[ 1, 3, 7, 9, 11, 13, 17, 19 ][128X[104X
+  [4X[32X[104X
+  
+  [1X15.2-2 Phi[101X
+  
+  [33X[1;0Y[29X[2XPhi[102X( [3Xm[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XPhi[102X  returns  the  number  [22Xϕ([3Xm[103X)[122X  of positive integers less than the positive
+  integer [3Xm[103X that are coprime to [3Xm[103X.[133X
+  
+  [33X[0;0YSuppose  that  [22Xm = p_1^{e_1} p_2^{e_2} ⋯ p_k^{e_k}[122X. Then [22Xϕ(m)[122X is [22Xp_1^{e_1-1}
+  (p_1-1) p_2^{e_2-1} (p_2-1) ⋯ p_k^{e_k-1} (p_k-1)[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPhi( 12 );[127X[104X
+    [4X[28X4[128X[104X
+    [4X[25Xgap>[125X [27XPhi( 2^13-1 );  # this proves that 2^(13)-1 is a prime[127X[104X
+    [4X[28X8190[128X[104X
+    [4X[25Xgap>[125X [27XPhi( 2^15-1 );[127X[104X
+    [4X[28X27000[128X[104X
+  [4X[32X[104X
+  
+  [1X15.2-3 Lambda[101X
+  
+  [33X[1;0Y[29X[2XLambda[102X( [3Xm[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XLambda[102X  returns  the exponent [22Xλ([3Xm[103X)[122X of the group of prime residues modulo the
+  integer [3Xm[103X.[133X
+  
+  [33X[0;0Y[22Xλ([3Xm[103X)[122X  is  the  smallest  positive integer [22Xl[122X such that for every [22Xa[122X relatively
+  prime  to [3Xm[103X we have [22Xa^l ≡ 1 mod [3Xm[103X[122X. Fermat's theorem asserts [22Xa^{ϕ([3Xm[103X)} ≡ 1 mod
+  [3Xm[103X[122X; thus [22Xλ([3Xm[103X)[122X divides [22Xϕ([3Xm[103X)[122X (see [2XPhi[102X ([14X15.2-2[114X)).[133X
+  
+  [33X[0;0YCarmichael's  theorem  states  that  [22Xλ[122X can be computed as follows: [22Xλ(2) = 1[122X,
+  [22Xλ(4)  =  2[122X and [22Xλ(2^e) = 2^{e-2}[122X if [22X3 ≤ e[122X, [22Xλ(p^e) = (p-1) p^{e-1}[122X (i.e. [22Xϕ(m)[122X)
+  if [22Xp[122X is an odd prime and [22Xλ(m*n) =[122X[10XLcm[110X[22X( λ(m), λ(n) )[122X if [22Xm, n[122X are coprime.[133X
+  
+  [33X[0;0YComposites  for  which  [22Xλ(m)[122X  divides [22Xm - 1[122X are called Carmichaels. If [22X6k+1[122X,
+  [22X12k+1[122X  and  [22X18k+1[122X  are primes their product is such a number. There are only
+  1547 Carmichaels below [22X10^10[122X but 455052511 primes.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLambda( 10 );[127X[104X
+    [4X[28X4[128X[104X
+    [4X[25Xgap>[125X [27XLambda( 30 );[127X[104X
+    [4X[28X4[128X[104X
+    [4X[25Xgap>[125X [27XLambda( 561 );  # 561 is the smallest Carmichael number[127X[104X
+    [4X[28X80[128X[104X
+  [4X[32X[104X
+  
+  [1X15.2-4 GeneratorsPrimeResidues[101X
+  
+  [33X[1;0Y[29X[2XGeneratorsPrimeResidues[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0YLet  [3Xn[103X  be a positive integer. [2XGeneratorsPrimeResidues[102X returns a description
+  of generators of the group of prime residues modulo [3Xn[103X. The return value is a
+  record with components[133X
+  
+  [8X[10Xprimes[110X[8X: [108X
+        [33X[0;6Ya list of the prime factors of [3Xn[103X,[133X
+  
+  [8X[10Xexponents[110X[8X: [108X
+        [33X[0;6Ya list of the exponents of these primes in the factorization of [3Xn[103X, and[133X
+  
+  [8X[10Xgenerators[110X[8X: [108X
+        [33X[0;6Ya  list  describing generators of the group of prime residues; for the
+        prime factor [22X2[122X, either a primitive root or a list of two generators is
+        stored, for each other prime factor of [3Xn[103X, a primitive root is stored.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XGeneratorsPrimeResidues( 1 );[127X[104X
+    [4X[28Xrec( exponents := [  ], generators := [  ], primes := [  ] )[128X[104X
+    [4X[25Xgap>[125X [27XGeneratorsPrimeResidues( 4*3 );[127X[104X
+    [4X[28Xrec( exponents := [ 2, 1 ], generators := [ 7, 5 ],[128X[104X
+    [4X[28X  primes := [ 2, 3 ] )[128X[104X
+    [4X[25Xgap>[125X [27XGeneratorsPrimeResidues( 8*9*5 );[127X[104X
+    [4X[28Xrec( exponents := [ 3, 2, 1 ],[128X[104X
+    [4X[28X  generators := [ [ 271, 181 ], 281, 217 ], primes := [ 2, 3, 5 ] )[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X15.3 [33X[0;0YPrimitive Roots and Discrete Logarithms[133X[101X
+  
+  [1X15.3-1 OrderMod[101X
+  
+  [33X[1;0Y[29X[2XOrderMod[102X( [3Xn[103X, [3Xm[103X[, [3Xbound[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XOrderMod[102X  returns  the  multiplicative  order  of  the  integer [3Xn[103X modulo the
+  positive integer [3Xm[103X. If [3Xn[103X and [3Xm[103X are not coprime the order of [3Xn[103X is not defined
+  and [2XOrderMod[102X will return [10X0[110X.[133X
+  
+  [33X[0;0YIf  [3Xn[103X  and  [3Xm[103X are relatively prime the multiplicative order of [3Xn[103X modulo [3Xm[103X is
+  the  smallest  positive  integer  [22Xi[122X such that [22X[3Xn[103X^i ≡ 1 mod [3Xm[103X[122X. If the group of
+  prime  residues  modulo  [3Xm[103X  is  cyclic then each element of maximal order is
+  called a primitive root modulo [3Xm[103X (see [2XIsPrimitiveRootMod[102X ([14X15.3-5[114X)).[133X
+  
+  [33X[0;0YIf  no a priori known multiple [3Xbound[103X of the desired order is given, [2XOrderMod[102X
+  usually  spends  most of its time factoring [3Xm[103X for computing [22Xλ([3Xm[103X)[122X (see [2XLambda[102X
+  ([14X15.2-3[114X)) as the default for [3Xbound[103X, and then factoring [3Xbound[103X (see [2XFactorsInt[102X
+  ([14X14.4-7[114X)).[133X
+  
+  [33X[0;0YIf an incorrect [3Xbound[103X is given then the result will be wrong.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XOrderMod( 2, 7 );[127X[104X
+    [4X[28X3[128X[104X
+    [4X[25Xgap>[125X [27XOrderMod( 3, 7 );  # 3 is a primitive root modulo 7[127X[104X
+    [4X[28X6[128X[104X
+    [4X[25Xgap>[125X [27Xm:= (5^166-1) / 167;;   # about 10^113[127X[104X
+    [4X[25Xgap>[125X [27XOrderMod( 5, m, 166 );  # needs minutes without third argument[127X[104X
+    [4X[28X166[128X[104X
+  [4X[32X[104X
+  
+  [1X15.3-2 LogMod[101X
+  
+  [33X[1;0Y[29X[2XLogMod[102X( [3Xn[103X, [3Xr[103X, [3Xm[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XLogModShanks[102X( [3Xn[103X, [3Xr[103X, [3Xm[103X ) [32X function[133X
+  
+  [33X[0;0Ycomputes  the discrete [3Xr[103X-logarithm of the integer [3Xn[103X modulo the integer [3Xm[103X. It
+  returns  a  number  [3Xl[103X  such  that  [22X[3Xr[103X^[3Xl[103X  ≡  [3Xn[103X  mod [3Xm[103X[122X if such a number exists.
+  Otherwise [9Xfail[109X is returned.[133X
+  
+  [33X[0;0Y[2XLogModShanks[102X  uses  the  Baby  Step  -  Giant Step Method of Shanks (see for
+  example  [Coh93,  section 5.4.1]) and in general requires more memory than a
+  call to [2XLogMod[102X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:= LogMod( 2, 5, 7 );  5^l mod 7 = 2;[127X[104X
+    [4X[28X4[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XLogMod( 1, 3, 3 );  LogMod( 2, 3, 3 );[127X[104X
+    [4X[28X0[128X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [1X15.3-3 DLog[101X
+  
+  [33X[1;0Y[29X[2XDLog[102X( [3Xbase[103X, [3Xx[103X[, [3Xm[103X] ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10Yan integer[133X
+  
+  [33X[0;0YThe  argument  [3Xbase[103X  must  be a multiplicative element and [3Xx[103X must lie in the
+  cyclic  group  generated  by [3Xbase[103X. The third argument [3Xm[103X must be the order of
+  [3Xbase[103X  or  its  factorization.  If [3Xm[103X is not given, it is computed first. This
+  function  returns  the  discrete  logarithm,  that is an integer [22Xe[122X such that
+  [3Xbase[103X[22X^e =[122X [3Xx[103X.[133X
+  
+  [33X[0;0YIf [3Xm[103X is prime then Shanks' algorithm is used (which needs [22XO(sqrt[3Xm[103X)[122X space and
+  time).  Otherwise  let  [3Xm[103X  [22X=  r  l[122X  and [22Xe = a + b r[122X with [22X0 ≤ a < r[122X. Then [22Xa =[122X
+  [10XDLog[110X[22X([3Xbase[103X^l, [3Xx[103X^l, r)[122X and [22Xb =[122X [10XDLog[110X[22X([3Xbase[103X^r, [3Xx[103X/[3Xbase[103X^a, l)[122X.[133X
+  
+  [33X[0;0YThis function is used for a method of [2XLogFFE[102X ([14X59.2-2[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xq:= 67^12;[127X[104X
+    [4X[28X8182718904632857144561[128X[104X
+    [4X[25Xgap>[125X [27Xz:= Z(q);;[127X[104X
+    [4X[25Xgap>[125X [27XDLog(z, z+1);[127X[104X
+    [4X[28X2874413785388345993274[128X[104X
+    [4X[25Xgap>[125X [27XDLog(z, z^2+1);[127X[104X
+    [4X[28X1667375214152688471247[128X[104X
+    [4X[25Xgap>[125X [27XDLog(z, Z(67));[127X[104X
+    [4X[28X123980589464134199160[128X[104X
+  [4X[32X[104X
+  
+  [1X15.3-4 PrimitiveRootMod[101X
+  
+  [33X[1;0Y[29X[2XPrimitiveRootMod[102X( [3Xm[103X[, [3Xstart[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XPrimitiveRootMod[102X  returns  the  smallest  primitive root modulo the positive
+  integer  [3Xm[103X and [9Xfail[109X if no such primitive root exists. If the optional second
+  integer  argument  [3Xstart[103X  is  given  [2XPrimitiveRootMod[102X  returns  the smallest
+  primitive root that is strictly larger than [3Xstart[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X# largest primitive root for a prime less than 2000:[127X[104X
+    [4X[25Xgap>[125X [27XPrimitiveRootMod( 409 );[127X[104X
+    [4X[28X21[128X[104X
+    [4X[25Xgap>[125X [27XPrimitiveRootMod( 541, 2 );[127X[104X
+    [4X[28X10[128X[104X
+    [4X[25Xgap>[125X [27X# 327 is the largest primitive root mod 337:[127X[104X
+    [4X[25Xgap>[125X [27XPrimitiveRootMod( 337, 327 );[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27X# there exists no primitive root modulo 30:[127X[104X
+    [4X[25Xgap>[125X [27XPrimitiveRootMod( 30 );[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [1X15.3-5 IsPrimitiveRootMod[101X
+  
+  [33X[1;0Y[29X[2XIsPrimitiveRootMod[102X( [3Xr[103X, [3Xm[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XIsPrimitiveRootMod[102X  returns [9Xtrue[109X if the integer [3Xr[103X is a primitive root modulo
+  the  positive  integer [3Xm[103X, and [9Xfalse[109X otherwise. If [3Xr[103X is less than 0 or larger
+  than [3Xm[103X it is replaced by its remainder.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsPrimitiveRootMod( 2, 541 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsPrimitiveRootMod( -539, 541 );  # same computation as above;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsPrimitiveRootMod( 4, 541 );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XForAny( [1..29], r -> IsPrimitiveRootMod( r, 30 ) );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27X# there is no a primitive root modulo 30[127X[104X
+  [4X[32X[104X
+  
+  
+  [1X15.4 [33X[0;0YRoots Modulo Integers[133X[101X
+  
+  [1X15.4-1 Jacobi[101X
+  
+  [33X[1;0Y[29X[2XJacobi[102X( [3Xn[103X, [3Xm[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XJacobi[102X  returns  the  value  of  the  [13XKronecker-Jacobi  symbol[113X [22XJ([3Xn[103X,[3Xm[103X)[122X of the
+  integer [3Xn[103X modulo the integer [3Xm[103X. It is defined as follows:[133X
+  
+  [33X[0;0YIf  [22Xn[122X  and  [22Xm[122X  are  not coprime then [22XJ(n,m) = 0[122X. Furthermore, [22XJ(n,1) = 1[122X and
+  [22XJ(n,-1)  = -1[122X if [22Xm < 0[122X and [22X+1[122X otherwise. And for odd [22Xn[122X it is [22XJ(n,2) = (-1)^k[122X
+  with  [22Xk  =  (n^2-1)/8[122X.  For  odd  primes  [22Xm[122X  which  are  coprime  to  [22Xn[122X  the
+  Kronecker-Jacobi   symbol   has  the  same  value  as  the  Legendre  symbol
+  (see [2XLegendre[102X ([14X15.4-2[114X)).[133X
+  
+  [33X[0;0YFor the general case suppose that [22Xm = p_1 ⋅ p_2 ⋯ p_k[122X is a product of [22X-1[122X and
+  of primes, not necessarily distinct, and that [22Xn[122X is coprime to [22Xm[122X. Then [22XJ(n,m)
+  = J(n,p_1) ⋅ J(n,p_2) ⋯ J(n,p_k)[122X.[133X
+  
+  [33X[0;0YNote  that the Kronecker-Jacobi symbol coincides with the Jacobi symbol that
+  is  defined  for  odd  [22Xm[122X in many number theory books. For odd primes [22Xm[122X and [22Xn[122X
+  coprime to [22Xm[122X it coincides with the Legendre symbol.[133X
+  
+  [33X[0;0Y[2XJacobi[102X  is  very efficient, even for large values of [3Xn[103X and [3Xm[103X, it is about as
+  fast as the Euclidean algorithm (see [2XGcd[102X ([14X56.7-1[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XJacobi( 11, 35 );  # 9^2 = 11 mod 35[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27X# this is -1, thus there is no r such that r^2 = 6 mod 35[127X[104X
+    [4X[25Xgap>[125X [27XJacobi( 6, 35 );[127X[104X
+    [4X[28X-1[128X[104X
+    [4X[25Xgap>[125X [27X# this is 1 even though there is no r with r^2 = 3 mod 35[127X[104X
+    [4X[25Xgap>[125X [27XJacobi( 3, 35 );[127X[104X
+    [4X[28X1[128X[104X
+  [4X[32X[104X
+  
+  [1X15.4-2 Legendre[101X
+  
+  [33X[1;0Y[29X[2XLegendre[102X( [3Xn[103X, [3Xm[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XLegendre[102X  returns  the  value of the [13XLegendre symbol[113X of the integer [3Xn[103X modulo
+  the positive integer [3Xm[103X.[133X
+  
+  [33X[0;0YThe  value  of  the  Legendre symbol [22XL(n/m)[122X is 1 if [22Xn[122X is a [13Xquadratic residue[113X
+  modulo  [22Xm[122X, i.e., if there exists an integer [22Xr[122X such that [22Xr^2 ≡ n mod m[122X and [22X-1[122X
+  otherwise.[133X
+  
+  [33X[0;0YIf a root of [3Xn[103X exists it can be found by [2XRootMod[102X ([14X15.4-3[114X).[133X
+  
+  [33X[0;0YWhile  the  value  of  the  Legendre  symbol usually is only defined for [3Xm[103X a
+  prime,  we have extended the definition to include composite moduli too. The
+  Jacobi  symbol  (see  [2XJacobi[102X  ([14X15.4-1[114X))  is  another  generalization  of the
+  Legendre  symbol  for  composite  moduli  that  is  much cheaper to compute,
+  because it does not need the factorization of [3Xm[103X (see [2XFactorsInt[102X ([14X14.4-7[114X)).[133X
+  
+  [33X[0;0YA  description of the Jacobi symbol, the Legendre symbol, and related topics
+  can be found in [Bak84].[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLegendre( 5, 11 );  # 4^2 = 5 mod 11[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27X# this is -1, thus there is no r such that r^2 = 6 mod 11[127X[104X
+    [4X[25Xgap>[125X [27XLegendre( 6, 11 );[127X[104X
+    [4X[28X-1[128X[104X
+    [4X[25Xgap>[125X [27X# this is -1, thus there is no r such that r^2 = 3 mod 35[127X[104X
+    [4X[25Xgap>[125X [27XLegendre( 3, 35 );[127X[104X
+    [4X[28X-1[128X[104X
+  [4X[32X[104X
+  
+  [1X15.4-3 RootMod[101X
+  
+  [33X[1;0Y[29X[2XRootMod[102X( [3Xn[103X[, [3Xk[103X], [3Xm[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XRootMod[102X  computes a [3Xk[103Xth root of the integer [3Xn[103X modulo the positive integer [3Xm[103X,
+  i.e.,  a  [22Xr[122X  such that [22Xr^[3Xk[103X ≡ [3Xn[103X mod [3Xm[103X[122X. If no such root exists [2XRootMod[102X returns
+  [9Xfail[109X. If only the arguments [3Xn[103X and [3Xm[103X are given, the default value for [3Xk[103X is [22X2[122X.[133X
+  
+  [33X[0;0YA square root of [3Xn[103X exists only if [10XLegendre([3Xn[103X[10X,[3Xm[103X[10X) = 1[110X (see [2XLegendre[102X ([14X15.4-2[114X)).
+  If  [3Xm[103X  has [22Xr[122X different prime factors then there are [22X2^r[122X different roots of [3Xn[103X
+  mod  [3Xm[103X.  It  is unspecified which one [2XRootMod[102X returns. You can, however, use
+  [2XRootsMod[102X ([14X15.4-4[114X) to compute the full set of roots.[133X
+  
+  [33X[0;0Y[2XRootMod[102X  is  efficient  even for large values of [3Xm[103X, in fact the most time is
+  usually spent factoring [3Xm[103X (see [2XFactorsInt[102X ([14X14.4-7[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X# note 'RootMod' does not return 8 in this case but -8:[127X[104X
+    [4X[25Xgap>[125X [27XRootMod( 64, 1009 );[127X[104X
+    [4X[28X1001[128X[104X
+    [4X[25Xgap>[125X [27XRootMod( 64, 3, 1009 );[127X[104X
+    [4X[28X518[128X[104X
+    [4X[25Xgap>[125X [27XRootMod( 64, 5, 1009 );[127X[104X
+    [4X[28X656[128X[104X
+    [4X[25Xgap>[125X [27XList( RootMod( 64, 1009 ) * RootsUnityMod( 1009 ),[127X[104X
+    [4X[25X>[125X [27X      x -> x mod 1009 );  # set of all square roots of 64 mod 1009[127X[104X
+    [4X[28X[ 1001, 8 ][128X[104X
+  [4X[32X[104X
+  
+  [1X15.4-4 RootsMod[101X
+  
+  [33X[1;0Y[29X[2XRootsMod[102X( [3Xn[103X[, [3Xk[103X], [3Xm[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XRootsMod[102X  computes the set of [3Xk[103Xth roots of the integer [3Xn[103X modulo the positive
+  integer  [3Xm[103X,  i.e.,  the  list  of all [22Xr[122X such that [22Xr^[3Xk[103X ≡ [3Xn[103X mod [3Xm[103X[122X. If only the
+  arguments [3Xn[103X and [3Xm[103X are given, the default value for [3Xk[103X is [22X2[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRootsMod( 1, 7*31 );  # the same as `RootsUnityMod( 7*31 )'[127X[104X
+    [4X[28X[ 1, 92, 125, 216 ][128X[104X
+    [4X[25Xgap>[125X [27XRootsMod( 7, 7*31 );[127X[104X
+    [4X[28X[ 21, 196 ][128X[104X
+    [4X[25Xgap>[125X [27XRootsMod( 5, 7*31 );[127X[104X
+    [4X[28X[  ][128X[104X
+    [4X[25Xgap>[125X [27XRootsMod( 1, 5, 7*31 );[127X[104X
+    [4X[28X[ 1, 8, 64, 78, 190 ][128X[104X
+  [4X[32X[104X
+  
+  [1X15.4-5 RootsUnityMod[101X
+  
+  [33X[1;0Y[29X[2XRootsUnityMod[102X( [[3Xk[103X, ][3Xm[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XRootsUnityMod[102X  returns  the  set  of [3Xk[103X-th roots of unity modulo the positive
+  integer  [3Xm[103X,  i.e., the list of all solutions [22Xr[122X of [22Xr^[3Xk[103X ≡ [3Xn[103X mod [3Xm[103X[122X. If only the
+  argument [3Xm[103X is given, the default value for [3Xk[103X is [22X2[122X.[133X
+  
+  [33X[0;0YIn  general  there are [22X[3Xk[103X^n[122X such roots if the modulus [3Xm[103X has [22Xn[122X different prime
+  factors  [22Xp[122X  such  that  [22Xp ≡ 1 mod [3Xk[103X[122X. If [22X[3Xk[103X^2[122X divides [3Xm[103X then there are [22X[3Xk[103X^{n+1}[122X
+  such  roots;  and especially if [22X[3Xk[103X = 2[122X and 8 divides [3Xm[103X there are [22X2^{n+2}[122X such
+  roots.[133X
+  
+  [33X[0;0YIn the current implementation [3Xk[103X must be a prime.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRootsUnityMod( 7*31 );  RootsUnityMod( 3, 7*31 );[127X[104X
+    [4X[28X[ 1, 92, 125, 216 ][128X[104X
+    [4X[28X[ 1, 25, 32, 36, 67, 149, 156, 191, 211 ][128X[104X
+    [4X[25Xgap>[125X [27XRootsUnityMod( 5, 7*31 );[127X[104X
+    [4X[28X[ 1, 8, 64, 78, 190 ][128X[104X
+    [4X[25Xgap>[125X [27XList( RootMod( 64, 1009 ) * RootsUnityMod( 1009 ),[127X[104X
+    [4X[25X>[125X [27X         x -> x mod 1009 );  # set of all square roots of 64 mod 1009[127X[104X
+    [4X[28X[ 1001, 8 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X15.5 [33X[0;0YMultiplicative Arithmetic Functions[133X[101X
+  
+  [1X15.5-1 Sigma[101X
+  
+  [33X[1;0Y[29X[2XSigma[102X( [3Xn[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XSigma[102X returns the sum of the positive divisors of the nonzero integer [3Xn[103X.[133X
+  
+  [33X[0;0Y[2XSigma[102X  is  a  multiplicative  arithmetic  function,  i.e.,  if  [22Xn[122X  and [22Xm[122X are
+  relatively prime we have that [22Xσ(n ⋅ m) = σ(n) σ(m)[122X.[133X
+  
+  [33X[0;0YTogether  with  the  formula  [22Xσ(p^k) = (p^{k+1}-1) / (p-1)[122X this allows us to
+  compute [22Xσ([3Xn[103X)[122X.[133X
+  
+  [33X[0;0YIntegers  [3Xn[103X  for  which [22Xσ([3Xn[103X) = 2 [3Xn[103X[122X are called perfect. Even perfect integers
+  are  exactly  of the form [22X2^{[3Xn[103X-1}(2^[3Xn[103X-1)[122X where [22X2^[3Xn[103X-1[122X is prime. Primes of the
+  form  [22X2^[3Xn[103X-1[122X  are  called  [13XMersenne  primes[113X,  and 42 among the known Mersenne
+  primes  are  obtained  for [3Xn[103X [22X=[122X 2, 3, 5, 7, 13, 17, 19, 31, 61, 89, 107, 127,
+  521,  607,  1279,  2203,  2281,  3217, 4253, 4423, 9689, 9941, 11213, 19937,
+  21701, 23209, 44497, 86243, 110503, 132049, 216091, 756839, 859433, 1257787,
+  1398269,   2976221,  3021377,  6972593,  13466917,  20996011,  24036583  and
+  25964951.  Please  find more up to date information about Mersenne primes at
+  [7Xhttps://www.mersenne.org[107X.  It  is  not  known  whether  odd perfect integers
+  exist,  however [BC89]  show  that  any  such integer must have at least 300
+  decimal digits.[133X
+  
+  [33X[0;0Y[2XSigma[102X usually spends most of its time factoring [3Xn[103X (see [2XFactorsInt[102X ([14X14.4-7[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSigma( 1 );[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XSigma( 1009 );  # 1009 is a prime[127X[104X
+    [4X[28X1010[128X[104X
+    [4X[25Xgap>[125X [27XSigma( 8128 ) = 2*8128;  # 8128 is a perfect number[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X15.5-2 Tau[101X
+  
+  [33X[1;0Y[29X[2XTau[102X( [3Xn[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XTau[102X returns the number of the positive divisors of the nonzero integer [3Xn[103X.[133X
+  
+  [33X[0;0Y[2XTau[102X  is  a multiplicative arithmetic function, i.e., if [22Xn[122X and [22Xm[122X are relative
+  prime  we  have [22Xτ(n ⋅ m) = τ(n) τ(m)[122X. Together with the formula [22Xτ(p^k) = k+1[122X
+  this allows us to compute [22Xτ([3Xn[103X)[122X.[133X
+  
+  [33X[0;0Y[2XTau[102X usually spends most of its time factoring [3Xn[103X (see [2XFactorsInt[102X ([14X14.4-7[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTau( 1 );[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XTau( 1013 );  # thus 1013 is a prime[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XTau( 8128 );[127X[104X
+    [4X[28X14[128X[104X
+    [4X[25Xgap>[125X [27X# result is odd if and only if argument is a perfect square:[127X[104X
+    [4X[25Xgap>[125X [27XTau( 36 );[127X[104X
+    [4X[28X9[128X[104X
+  [4X[32X[104X
+  
+  [1X15.5-3 MoebiusMu[101X
+  
+  [33X[1;0Y[29X[2XMoebiusMu[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XMoebiusMu[102X  computes  the value of Moebius inversion function for the nonzero
+  integer  [3Xn[103X. This is 0 for integers which are not squarefree, i.e., which are
+  divided  by a square [22Xr^2[122X. Otherwise it is 1 if [3Xn[103X has a even number and [22X-1[122X if
+  [3Xn[103X has an odd number of prime factors.[133X
+  
+  [33X[0;0YThe importance of [22Xμ[122X stems from the so called inversion formula. Suppose [22Xf[122X is
+  a  multiplicative  arithmetic  function defined on the positive integers and
+  let  [22Xg(n)  = ∑_{d ∣ n} f(d)[122X. Then [22Xf(n) = ∑_{d ∣ n} μ(d) g(n/d)[122X. As a special
+  case  we  have  [22Xϕ(n)  = ∑_{d ∣ n} μ(d) n/d[122X since [22Xn = ∑_{d ∣ n} ϕ(d)[122X (see [2XPhi[102X
+  ([14X15.2-2[114X)).[133X
+  
+  [33X[0;0Y[2XMoebiusMu[102X  usually  spends  all  of  its  time  factoring  [3Xn[103X (see [2XFactorsInt[102X
+  ([14X14.4-7[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XMoebiusMu( 60 );  MoebiusMu( 61 );  MoebiusMu( 62 );[127X[104X
+    [4X[28X0[128X[104X
+    [4X[28X-1[128X[104X
+    [4X[28X1[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X15.6 [33X[0;0YContinued Fractions[133X[101X
+  
+  [1X15.6-1 ContinuedFractionExpansionOfRoot[101X
+  
+  [33X[1;0Y[29X[2XContinuedFractionExpansionOfRoot[102X( [3Xf[103X, [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0YThe  first  [3Xn[103X terms of the continued fraction expansion of the only positive
+  real  root  of  the  polynomial  [3Xf[103X  with  integer  coefficients. The leading
+  coefficient  of [3Xf[103X must be positive and the value of [3Xf[103X at 0 must be negative.
+  If  the  degree of [3Xf[103X is 2 and [3Xn[103X = 0, the function computes one period of the
+  continued fraction expansion of the root in question. Anything may happen if
+  [3Xf[103X has three or more positive real roots.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xx := Indeterminate(Integers);;[127X[104X
+    [4X[25Xgap>[125X [27XContinuedFractionExpansionOfRoot(x^2-7,20);[127X[104X
+    [4X[28X[ 2, 1, 1, 1, 4, 1, 1, 1, 4, 1, 1, 1, 4, 1, 1, 1, 4, 1, 1, 1 ][128X[104X
+    [4X[25Xgap>[125X [27XContinuedFractionExpansionOfRoot(x^2-7,0);[127X[104X
+    [4X[28X[ 2, 1, 1, 1, 4 ][128X[104X
+    [4X[25Xgap>[125X [27XContinuedFractionExpansionOfRoot(x^3-2,20);[127X[104X
+    [4X[28X[ 1, 3, 1, 5, 1, 1, 4, 1, 1, 8, 1, 14, 1, 10, 2, 1, 4, 12, 2, 3 ][128X[104X
+    [4X[25Xgap>[125X [27XContinuedFractionExpansionOfRoot(x^5-x-1,50);[127X[104X
+    [4X[28X[ 1, 5, 1, 42, 1, 3, 24, 2, 2, 1, 16, 1, 11, 1, 1, 2, 31, 1, 12, 5,[128X[104X
+    [4X[28X  1, 7, 11, 1, 4, 1, 4, 2, 2, 3, 4, 2, 1, 1, 11, 1, 41, 12, 1, 8, 1,[128X[104X
+    [4X[28X  1, 1, 1, 1, 9, 2, 1, 5, 4 ][128X[104X
+  [4X[32X[104X
+  
+  [1X15.6-2 ContinuedFractionApproximationOfRoot[101X
+  
+  [33X[1;0Y[29X[2XContinuedFractionApproximationOfRoot[102X( [3Xf[103X, [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [3Xn[103Xth  continued fraction approximation of the only positive real root of
+  the  polynomial  [3Xf[103X  with  integer coefficients. The leading coefficient of [3Xf[103X
+  must  be  positive  and  the  value of [3Xf[103X at 0 must be negative. Anything may
+  happen if [3Xf[103X has three or more positive real roots.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XContinuedFractionApproximationOfRoot(x^2-2,10);[127X[104X
+    [4X[28X3363/2378[128X[104X
+    [4X[25Xgap>[125X [27X3363^2-2*2378^2;[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27Xz := ContinuedFractionApproximationOfRoot(x^5-x-1,20);[127X[104X
+    [4X[28X499898783527/428250732317[128X[104X
+    [4X[25Xgap>[125X [27Xz^5-z-1;[127X[104X
+    [4X[28X486192462527432755459620441970617283/[128X[104X
+    [4X[28X14404247382319842421697357558805709031116987826242631261357[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X15.7 [33X[0;0YMiscellaneous[133X[101X
+  
+  [1X15.7-1 PValuation[101X
+  
+  [33X[1;0Y[29X[2XPValuation[102X( [3Xn[103X, [3Xp[103X ) [32X function[133X
+  
+  [33X[0;0YFor  an  integer [3Xn[103X and a prime [3Xp[103X this function returns the [3Xp[103X-valuation of [3Xn[103X,
+  that  is the exponent [22Xe[122X such that [22Xp^e[122X is the largest power of [3Xp[103X that divides
+  [3Xn[103X. The valuation of zero is infinity.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPValuation(100,2);[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XPValuation(100,3);[127X[104X
+    [4X[28X0[128X[104X
+  [4X[32X[104X
+  
+  [1X15.7-2 TwoSquares[101X
+  
+  [33X[1;0Y[29X[2XTwoSquares[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XTwoSquares[102X  returns  a  list  of two integers [22Xx ≤ y[122X such that the sum of the
+  squares  of  [22Xx[122X  and [22Xy[122X is equal to the nonnegative integer [3Xn[103X, i.e., [22Xn = x^2 +
+  y^2[122X.   If  no  such  representation  exists  [2XTwoSquares[102X  will  return  [9Xfail[109X.
+  [2XTwoSquares[102X  will  return a representation for which the gcd of [22Xx[122X and [22Xy[122X is as
+  small  as  possible.  It  is  not  specified which representation [2XTwoSquares[102X
+  returns if there is more than one.[133X
+  
+  [33X[0;0YLet  [22Xa[122X  be  the  product  of  all  maximal powers of primes of the form [22X4k+3[122X
+  dividing [3Xn[103X. A representation of [3Xn[103X as a sum of two squares exists if and only
+  if  [22Xa[122X is a perfect square. Let [22Xb[122X be the maximal power of [22X2[122X dividing [3Xn[103X or its
+  half,  whichever is a perfect square. Then the minimal possible gcd of [22Xx[122X and
+  [22Xy[122X  is  the  square  root  [22Xc[122X  of  [22Xa  ⋅  b[122X.  The  number  of different minimal
+  representation  with  [22Xx  ≤  y[122X is [22X2^{l-1}[122X, where [22Xl[122X is the number of different
+  prime factors of the form [22X4k+1[122X of [3Xn[103X.[133X
+  
+  [33X[0;0YThe  algorithm  first  finds a square root [22Xr[122X of [22X-1[122X modulo [22X[3Xn[103X / (a ⋅ b)[122X, which
+  must  exist,  and  applies  the  Euclidean  algorithm  to [22Xr[122X and [3Xn[103X. The first
+  residues in the sequence that are smaller than [22Xsqrt{[3Xn[103X/(a ⋅ b)}[122X times [22Xc[122X are a
+  possible pair [22Xx[122X and [22Xy[122X.[133X
+  
+  [33X[0;0YBetter  descriptions  of  the  algorithm  and related topics can be found in
+  [Wag90] and [Zag90].[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTwoSquares( 5 );[127X[104X
+    [4X[28X[ 1, 2 ][128X[104X
+    [4X[25Xgap>[125X [27XTwoSquares( 11 );  # there is no representation[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27XTwoSquares( 16 );[127X[104X
+    [4X[28X[ 0, 4 ][128X[104X
+    [4X[25Xgap>[125X [27X# 3 is the minimal possible gcd because 9 divides 45:[127X[104X
+    [4X[25Xgap>[125X [27XTwoSquares( 45 );[127X[104X
+    [4X[28X[ 3, 6 ][128X[104X
+    [4X[25Xgap>[125X [27X# it is not [5,10] because their gcd is not minimal:[127X[104X
+    [4X[25Xgap>[125X [27XTwoSquares( 125 );[127X[104X
+    [4X[28X[ 2, 11 ][128X[104X
+    [4X[25Xgap>[125X [27X# [10,11] would be the other possible representation:[127X[104X
+    [4X[25Xgap>[125X [27XTwoSquares( 13*17 );[127X[104X
+    [4X[28X[ 5, 14 ][128X[104X
+    [4X[25Xgap>[125X [27XTwoSquares( 848654483879497562821 );  # argument is prime[127X[104X
+    [4X[28X[ 6305894639, 28440994650 ][128X[104X
+  [4X[32X[104X
+  

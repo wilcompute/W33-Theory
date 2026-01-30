@@ -1,0 +1,173 @@
+<Chapter Label="Thread functions">
+  <Heading>Thread functions</Heading>
+
+HPC-GAP has low-level functionality to support explicit creation of threads. In practice, programmers should use
+higher-level functionality, such as tasks, to describe concurrency. The thread functions described here exist to
+facilitate the construction of higher level libraries and are not meant to be used directly.
+
+<Section Label="section:Thread functions">
+  <Heading>Thread functions</Heading>
+
+<ManSection>
+    <Func Name="CreateThread"
+      Arg='func [, arg1, ..., argn]'/>
+
+<Description>
+New threads are created with the function <Ref Func="CreateThread"/>. The thread takes at least one function as its argument
+that it will call in the newly created thread; it also accepts zero or more parameters that will be passed to that
+function.
+<P/>
+The function returns a thread object describing the thread.
+<P/>
+Only a finite number of threads can be active at a time (that limit is system-dependent). To reclaim the resources
+occupied by one thread, use the <Ref Func="WaitThread"/> function.
+</Description>
+</ManSection>
+
+<ManSection>
+    <Func Name="WaitThread"
+      Arg='threadID'/>
+
+<Description>
+The <Ref Func="WaitThread"/> function waits for the thread identified by <A>threadID</A> to finish; it does not return any
+value. When it returns, it returns all resources occupied by the thread it waited for, such as thread-local memory and
+operating system structures, to the system.
+</Description>
+</ManSection>
+
+<ManSection>
+    <Func Name="CurrentThread"
+      Arg=''/>
+
+<Description>
+The <Ref Func="CurrentThread"/> function returns the thread object for the current thread.
+</Description>
+</ManSection>
+
+<ManSection>
+    <Func Name="ThreadID"
+      Arg='thread'/>
+
+<Description>
+The <Ref Func="ThreadID"/> function returns a numeric thread id for the given thread. The thread id of the main thread is
+always 0.
+
+<Example><![CDATA[
+gap> CurrentThread();
+<thread #0: running>
+gap> ThreadID(CurrentThread());
+0
+]]></Example>
+</Description>
+</ManSection>
+
+<ManSection>
+    <Func Name="KillThread"
+      Arg='thread'/>
+
+<Description>
+The <Ref Func="KillThread"/> function terminates the given thread. Any region locks that the thread currently holds will be
+unlocked. The thread can be specified as a thread object or via its numeric id.
+<P/>
+The implementation for <Ref Func="KillThread"/> is dependent on the interpreter actually executing statements. Threads
+performing system calls, for example, will not be terminated until the system call returns. Similarly, long-running
+kernel functions will delay termination until the kernel function returns.
+<P/>
+Use of <C>CALL_WITH_CATCH</C> will not prevent a thread from being terminated. If you wish to make sure that catch
+handlers will be visited, use <Ref Func="InterruptThread"/> instead. <Ref Func="KillThread"/> should be used for threads that
+cannot be controlled anymore in any other way but still eat system resources.
+</Description>
+</ManSection>
+
+<ManSection>
+    <Func Name="PauseThread"
+      Arg='thread'/>
+
+<Description>
+The <Ref Func="PauseThread"/> function suspends execution for the given thread. The thread can be specified as a thread object
+or via its numeric id.
+<P/>
+The implementation for <Ref Func="PauseThread"/> is dependent on the interpreter actually executing statements. Threads
+performing system calls, for example, will not pause until the system call returns. Similarly, long-running kernel
+functions will not pause until the kernel function returns.
+<P/>
+While a thread is paused, the thread that initiated the pause can access the paused thread&#39;s thread-local region.
+
+<Example><![CDATA[
+gap> loop := function() while true do Sleep(1); od; end;;
+gap> x := fail;;
+gap> th := CreateThread(function() x := [1, 2, 3]; loop(); end);;
+gap> PauseThread(th);
+gap> x;
+[ 1, 2, 3 ]
+]]></Example>
+</Description>
+</ManSection>
+
+<ManSection>
+    <Func Name="ResumeThread"
+      Arg='thread'/>
+
+<Description>
+The <Ref Func="ResumeThread"/> function resumes execution for the given thread that was paused with <Ref Func="PauseThread"/>. The
+thread can be specified as a thread object or via its numeric id.
+<P/>
+If the thread isn&#39;t paused, <Ref Func="ResumeThread"/> is a no-op.
+</Description>
+</ManSection>
+
+<ManSection>
+    <Func Name="InterruptThread"
+      Arg='thread, interrupt'/>
+
+<Description>
+The <Ref Func="InterruptThread"/> function calls an interrupt handler for the given thread. The thread can be specified as a
+thread object or via its numeric id. The interrupt is specified as an integer between 0 and <Ref Func="MAX_INTERRUPT"/>.
+<P/>
+An interrupt number of zero (or an interrupt number for which no interrupt handler has been set up with <Ref
+Func="SetInterruptHandler"/> will cause the thread to enter a break loop. Otherwise, the respective interrupt handler
+that has been created with <Ref Func="SetInterruptHandler"/> will be called.
+<P/>
+The implementation for <Ref Func="InterruptThread"/> is dependent on the interpreter actually executing statements. Threads
+performing system calls, for example, will not call interrupt handlers until the system call returns. Similarly,
+long-running kernel functions will delay invocation of the interrupt handler until the kernel function returns.
+</Description>
+</ManSection>
+
+<ManSection>
+    <Func Name="SetInterruptHandler"
+      Arg='interrupt, handler'/>
+
+<Description>
+The <Ref Func="SetInterruptHandler"/> function allows the programmer to set up interrupt handlers for the current thread. The
+interrupt number must be in the range from 1 to <Ref Func="MAX_INTERRUPT"/> (inclusive); the handler must be a
+parameterless function (or <K>fail</K> to remove a handler).
+</Description>
+</ManSection>
+
+<ManSection>
+    <Func Name="NewInterruptID"
+      Arg=''/>
+
+<Description>
+The <Ref Func="NewInterruptID"/> function returns a previously unused number (starting at 1). These numbers can be used to
+globally coordinate interrupt numbers.
+
+<Example><![CDATA[
+gap> StopTaskInterrupt := NewInterruptID();
+1
+gap> SetInterruptHandler(StopTaskInterrupt, StopTaskHandler);
+]]></Example>
+</Description>
+</ManSection>
+
+<ManSection>
+    <Var Name="MAX_INTERRUPT"/>
+
+<Description>
+The global variable <Ref Var="MAX_INTERRUPT"/> is an integer containing the maximum value for the interrupt arguments to <Ref
+Func="InterruptThread"/> and <Ref Func="SetInterruptHandler"/>.
+</Description>
+</ManSection>
+  </Section>
+</Chapter>

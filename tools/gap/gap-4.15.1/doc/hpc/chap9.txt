@@ -1,0 +1,52 @@
+  
+  [1X9 [33X[0;0YSynchronization variables[133X[101X
+  
+  
+  [1X9.1 [33X[0;0YSynchronization variables[133X[101X
+  
+  [33X[0;0YSynchronization  variables  (also  often  called  dataflow  variables in the
+  literature)  are  variables  that can be written only once; attempts to read
+  the variable block until it has been written to.[133X
+  
+  [33X[0;0YSynchronization  variables  are  created with [2XCreateSyncVar[102X ([14X9.1-1[114X), written
+  with [2XSyncWrite[102X ([14X9.1-2[114X) and read with [2XSyncRead[102X ([14X9.1-3[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xsv := CreateSyncVar();;[127X[104X
+    [4X[25Xgap>[125X [27XRunAsyncTask(function()[127X[104X
+    [4X[25X>[125X [27X     Sleep(10);[127X[104X
+    [4X[25X>[125X [27X     SyncWrite(sv, MakeImmutable([1, 2, 3]));[127X[104X
+    [4X[25X>[125X [27X   end);;[127X[104X
+    [4X[25Xgap>[125X [27XSyncRead(sv);[127X[104X
+    [4X[28X[ 1, 2, 3 ][128X[104X
+  [4X[32X[104X
+  
+  [1X9.1-1 CreateSyncVar[101X
+  
+  [33X[1;0Y[29X[2XCreateSyncVar[102X(  ) [32X function[133X
+  
+  [33X[0;0YThe   function   [2XCreateSyncVar[102X   takes   no  arguments.  It  returns  a  new
+  synchronization  variable.  There  is  no need to deallocate it; the garbage
+  collector  will  free  the  memory  and  all related resources when it is no
+  longer accessible.[133X
+  
+  [1X9.1-2 SyncWrite[101X
+  
+  [33X[1;0Y[29X[2XSyncWrite[102X( [3Xsyncvar[103X, [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XSyncWrite[102X  attempts  to assign the value [3Xobj[103X to [3Xsyncvar[103X. If [3Xsyncvar[103X has been
+  previously  assigned  a  value,  the  call  will  fail with a runtime error;
+  otherwise, [3Xobj[103X will be assigned to [3Xsyncvar[103X.[133X
+  
+  [33X[0;0YIn  order  to  make  sure  that  the  recipient can read the result, the [3Xobj[103X
+  argument  should  not  be  a  thread-local  object;  it  should  be  public,
+  read-only, or shared.[133X
+  
+  [1X9.1-3 SyncRead[101X
+  
+  [33X[1;0Y[29X[2XSyncRead[102X( [3Xsyncvar[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XSyncRead[102X  reads  the  value  previously  assigned  to [3Xsyncvar[103X with [2XSyncWrite[102X
+  ([14X9.1-2[114X).  If  no  value  has  been  assigned  yet, it blocks. It returns the
+  assigned value.[133X
+  

@@ -1,0 +1,1702 @@
+  
+  [1X64 [33X[0;0YLie Algebras[133X[101X
+  
+  [33X[0;0YA  Lie algebra [22XL[122X is an algebra such that [22Xx x = 0[122X and [22Xx(yz) + y(zx) + z(xy) =
+  0[122X  for  all [22Xx, y, z ∈ L[122X. A common way of creating a Lie algebra is by taking
+  an  associative  algebra  together with the commutator as product. Therefore
+  the  product  of  two  elements  [22Xx, y[122X of a Lie algebra is usually denoted by
+  [22X[x,y][122X,  but  in [5XGAP[105X this denotes the list of the elements [22Xx[122X and [22Xy[122X; hence the
+  product  of  elements  is  made  by the usual [10X*[110X. This gives no problems when
+  dealing  with Lie algebras given by a table of structure constants. However,
+  for  matrix  Lie  algebras  the  situation  is  not so easy as [10X*[110X denotes the
+  ordinary  (associative) matrix multiplication. In [5XGAP[105X this problem is solved
+  by  wrapping  elements  of  a  matrix Lie algebra up as [10XLieObject[110Xs, and then
+  define the [10X*[110X for [10XLieObject[110Xs to be the commutator (see [14X64.1[114X).[133X
+  
+  
+  [1X64.1 [33X[0;0YLie Objects[133X[101X
+  
+  [33X[0;0YLet  [10Xx[110X be a ring element, then [10XLieObject(x)[110X (see [2XLieObject[102X ([14X64.1-1[114X)) wraps [10Xx[110X
+  up into an object that contains the same data (namely [10Xx[110X). The multiplication
+  [10X*[110X  for  Lie  objects is formed by taking the commutator. More exactly, if [10Xl1[110X
+  and  [10Xl2[110X  are  the  Lie objects corresponding to the ring elements [10Xr1[110X and [10Xr2[110X,
+  then  [10Xl1 * l2[110X is equal to the Lie object corresponding to [10Xr1 * r2 - r2 * r1[110X.
+  Two rules for Lie objects are worth noting:[133X
+  
+  [30X    [33X[0;6YAn element is [13Xnot[113X equal to its Lie element.[133X
+  
+  [30X    [33X[0;6YIf  we  take  the  Lie object of an ordinary (associative) matrix then
+        this is again a matrix; it is therefore a collection (of its rows) and
+        a  list. But it is [13Xnot[113X a collection of collections of its entries, and
+        its family is [13Xnot[113X a collections family.[133X
+  
+  [33X[0;0YGiven  a  family  [10XF[110X  of  ring  elements,  we  can form its Lie family [10XL[110X. The
+  elements  of [10XF[110X and [10XL[110X are in bijection, only the multiplications via [10X*[110X differ
+  for  both  families.  More  exactly,  if  [10Xl1[110X  and  [10Xl2[110X  are  the Lie elements
+  corresponding  to  the elements [10Xf1[110X and [10Xf2[110X in [10XF[110X, we have [10Xl1 * l2[110X equal to the
+  Lie  element corresponding to [10Xf1 * f2 - f2 * f1[110X. Furthermore, the product of
+  Lie  elements  [10Xl1[110X,  [10Xl2[110X  and  [10Xl3[110X is left-normed, that is [10Xl1*l2*l3[110X is equal to
+  [10X(l1*l2)*l3[110X.[133X
+  
+  [33X[0;0YThe main reason to distinguish elements and Lie elements on the family level
+  is  that  this  helps to avoid forming domains that contain elements of both
+  types. For example, if we could form vector spaces of matrices then at first
+  glance  it would be no problem to have both ordinary and Lie matrices in it,
+  but  as  soon  as  we  find  out that the space is in fact an algebra (e.g.,
+  because its dimension is that of the full matrix algebra), we would run into
+  strange problems.[133X
+  
+  [33X[0;0YNote that the family situation with Lie families may be not familiar.[133X
+  
+  [30X    [33X[0;6YWe  have  to  be  careful when installing methods for certain types of
+        domains  that  may involve Lie elements. For example, the zero element
+        of  a  matrix  space  is either an ordinary matrix or its Lie element,
+        depending  on  the  space.  So either the method must be aware of both
+        cases,  or the method selection must distinguish the two cases. In the
+        latter situation, only one method may be applicable to each case; this
+        means  that  it  is  not  sufficient  to  treat  the Lie case with the
+        additional   requirement   [10XIsLieObjectCollection[110X   but  that  we  must
+        explicitly require non-Lie elements for the non-Lie case.[133X
+  
+  [30X    [33X[0;6YBeing  a  full matrix space is a property that may hold for a space of
+        ordinary  matrices  or  a  space  of Lie matrices. So methods for full
+        matrix spaces must also be aware of Lie matrices.[133X
+  
+  [1X64.1-1 LieObject[101X
+  
+  [33X[1;0Y[29X[2XLieObject[102X( [3Xobj[103X ) [32X attribute[133X
+  
+  [33X[0;0YLet  [3Xobj[103X  be  a ring element. Then [10XLieObject( [3Xobj[103X[10X )[110X is the corresponding Lie
+  object.  If  [3Xobj[103X  lies  in  the  family [10XF[110X, then [10XLieObject( [3Xobj[103X[10X )[110X lies in the
+  family [10XLieFamily( F )[110X (see [2XLieFamily[102X ([14X64.1-3[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm:= [ [ 1, 0 ], [ 0, 1 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27Xlo:= LieObject( m );[127X[104X
+    [4X[28XLieObject( [ [ 1, 0 ], [ 0, 1 ] ] )[128X[104X
+    [4X[25Xgap>[125X [27Xm*m;[127X[104X
+    [4X[28X[ [ 1, 0 ], [ 0, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xlo*lo;[127X[104X
+    [4X[28XLieObject( [ [ 0, 0 ], [ 0, 0 ] ] )[128X[104X
+  [4X[32X[104X
+  
+  [1X64.1-2 IsLieObject[101X
+  
+  [33X[1;0Y[29X[2XIsLieObject[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsLieObjectCollection[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsRestrictedLieObject[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsRestrictedLieObjectCollection[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YAn object lies in [2XIsLieObject[102X if and only if it lies in a family constructed
+  by [2XLieFamily[102X ([14X64.1-3[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm:= [ [ 1, 0 ], [ 0, 1 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27Xlo:= LieObject( m );[127X[104X
+    [4X[28XLieObject( [ [ 1, 0 ], [ 0, 1 ] ] )[128X[104X
+    [4X[25Xgap>[125X [27XIsLieObject( m );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsLieObject( lo );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X64.1-3 LieFamily[101X
+  
+  [33X[1;0Y[29X[2XLieFamily[102X( [3XFam[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis  a family [10XF[110X in bijection with the family [3XFam[103X, but with the Lie bracket as
+  infix multiplication. That is, for [10Xx[110X, [10Xy[110X in [3XFam[103X, the product of the images in
+  [10XF[110X will be the image of [10Xx * y - y * x[110X.[133X
+  
+  [33X[0;0YThe standard type of objects in a Lie family [10XF[110X is [10X[3XF[103X[10X!.packedType[110X.[133X
+  
+  [33X[0;0YThe  bijection  from [3XFam[103X to [10XF[110X is given by [10XEmbedding( [3XFam[103X[10X, F )[110X (see [2XEmbedding[102X
+  ([14X32.2-11[114X)); this bijection respects addition and additive inverses.[133X
+  
+  [1X64.1-4 UnderlyingFamily[101X
+  
+  [33X[1;0Y[29X[2XUnderlyingFamily[102X( [3XFam[103X ) [32X attribute[133X
+  
+  [33X[0;0YIf  [3XFam[103X is a Lie family then [10XUnderlyingFamily( [3XFam[103X[10X )[110X is a family [10XF[110X such that
+  [10X[3XFam[103X[10X = LieFamily( F )[110X.[133X
+  
+  [1X64.1-5 UnderlyingRingElement[101X
+  
+  [33X[1;0Y[29X[2XUnderlyingRingElement[102X( [3Xobj[103X ) [32X attribute[133X
+  
+  [33X[0;0YLet  [3Xobj[103X  be  a  Lie  object  constructed  from  a ring element [10Xr[110X by calling
+  [10XLieObject( r )[110X. Then [10XUnderlyingRingElement( [3Xobj[103X[10X )[110X returns the ring element [10Xr[110X
+  used  to  construct  [3Xobj[103X.  If  [10Xr[110X  lies in the family [10XF[110X, then [3Xobj[103X lies in the
+  family [10XLieFamily( F )[110X (see [2XLieFamily[102X ([14X64.1-3[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xlo:= LieObject( [ [ 1, 0 ], [ 0, 1 ] ] );[127X[104X
+    [4X[28XLieObject( [ [ 1, 0 ], [ 0, 1 ] ] )[128X[104X
+    [4X[25Xgap>[125X [27Xm:=UnderlyingRingElement(lo);[127X[104X
+    [4X[28X[ [ 1, 0 ], [ 0, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xlo*lo;[127X[104X
+    [4X[28XLieObject( [ [ 0, 0 ], [ 0, 0 ] ] )[128X[104X
+    [4X[25Xgap>[125X [27Xm*m;[127X[104X
+    [4X[28X[ [ 1, 0 ], [ 0, 1 ] ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X64.2 [33X[0;0YConstructing Lie algebras[133X[101X
+  
+  [33X[0;0YIn this section we describe functions that create Lie algebras. Creating and
+  working  with  subalgebras  goes  exactly  in  the  same  way as for general
+  algebras; so for that we refer to Chapter [14X62[114X.[133X
+  
+  [1X64.2-1 LieAlgebraByStructureConstants[101X
+  
+  [33X[1;0Y[29X[2XLieAlgebraByStructureConstants[102X( [3XR[103X, [3Xsct[103X[, [3Xnameinfo[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XLieAlgebraByStructureConstants[102X  does the same as [2XAlgebraByStructureConstants[102X
+  ([14X62.4-1[114X),  and  has the same meaning of arguments, except that the result is
+  assumed  to  be a Lie algebra. Note that the function does not check whether
+  [3Xsct[103X satisfies the Jacobi identity. (So if one creates a Lie algebra this way
+  with  a  table  that  does not satisfy the Jacobi identity, errors may occur
+  later on.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XT:= EmptySCTable( 2, 0, "antisymmetric" );;[127X[104X
+    [4X[25Xgap>[125X [27XSetEntrySCTable( T, 1, 2, [ 1/2, 1 ] );[127X[104X
+    [4X[25Xgap>[125X [27XL:= LieAlgebraByStructureConstants( Rationals, T );[127X[104X
+    [4X[28X<Lie algebra of dimension 2 over Rationals>[128X[104X
+  [4X[32X[104X
+  
+  [1X64.2-2 RestrictedLieAlgebraByStructureConstants[101X
+  
+  [33X[1;0Y[29X[2XRestrictedLieAlgebraByStructureConstants[102X( [3XR[103X, [3Xsct[103X[, [3Xnameinfo[103X], [3Xpmapping[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XRestrictedLieAlgebraByStructureConstants[102X      does      the      same     as
+  [2XLieAlgebraByStructureConstants[102X  ([14X64.2-1[114X),  and  has  the same meaning of all
+  arguments,  except that the result is assumed to be a restricted Lie algebra
+  (see  [14X64.8[114X)  with  the [22Xp[122X-map given by the additional argument [3Xpmapping[103X. This
+  last argument is a list of the length equal to the dimension of the algebra;
+  its [22Xi[122X-th entry specifies the [22Xp[122X-th power of the [22Xi[122X-th basis vector in the same
+  format  [10X[  coeff1,  position1,  coeff2,  position2, ... ][110X as [2XSetEntrySCTable[102X
+  ([14X62.4-5[114X) uses to specify entries of the structure constants table.[133X
+  
+  [33X[0;0YNote  that  the  function  does  not  check whether [3Xsct[103X satisfies the Jacobi
+  identity, of whether [3Xpmapping[103X specifies a legitimate [22Xp[122X-mapping.[133X
+  
+  [33X[0;0YThe  following  example  creates  a  commutative  restricted  Lie algebra of
+  dimension 3, in which the [22Xp[122X-th power of the [22Xi[122X-th basis element is the [22Xi+1[122X-th
+  basis element (except for the 3rd basis element which goes to zero).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XT:= EmptySCTable( 3, Zero(GF(5)), "antisymmetric" );;[127X[104X
+    [4X[25Xgap>[125X [27XL:= RestrictedLieAlgebraByStructureConstants([127X[104X
+    [4X[25X>[125X [27X                                    GF(5), T, [[1,2],[1,3],[]] );[127X[104X
+    [4X[28X<Lie algebra of dimension 3 over GF(5)>[128X[104X
+    [4X[25Xgap>[125X [27XList(Basis(L),PthPowerImage);[127X[104X
+    [4X[28X[ v.2, v.3, 0*v.1 ][128X[104X
+    [4X[25Xgap>[125X [27XPthPowerImage(L.1+L.2);[127X[104X
+    [4X[28Xv.2+v.3[128X[104X
+  [4X[32X[104X
+  
+  [1X64.2-3 LieAlgebra[101X
+  
+  [33X[1;0Y[29X[2XLieAlgebra[102X( [3XL[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XLieAlgebra[102X( [3XF[103X, [3Xgens[103X[, [3Xzero[103X][, [3X"basis"[103X] ) [32X function[133X
+  
+  [33X[0;0YFor  an associative algebra [3XL[103X, [10XLieAlgebra( [3XL[103X[10X )[110X is the Lie algebra isomorphic
+  to [3XL[103X as a vector space but with the Lie bracket as product.[133X
+  
+  [33X[0;0Y[10XLieAlgebra( [3XF[103X[10X, [3Xgens[103X[10X )[110X is the Lie algebra over the division ring [3XF[103X, generated
+  [13Xas  Lie  algebra[113X by the Lie objects corresponding to the vectors in the list
+  [3Xgens[103X.[133X
+  
+  [33X[0;0Y[13XNote[113X that the algebra returned by [2XLieAlgebra[102X does not contain the vectors in
+  [3Xgens[103X.  The  elements  in [3Xgens[103X are wrapped up as Lie objects (see [14X64.1[114X). This
+  allows one to create Lie algebras from ring elements with respect to the Lie
+  bracket  as  product.  But  of  course the product in the Lie algebra is the
+  usual [10X*[110X.[133X
+  
+  [33X[0;0YIf  there  are  three  arguments,  a  division ring [3XF[103X and a list [3Xgens[103X and an
+  element  [3Xzero[103X,  then  [10XLieAlgebra( [3XF[103X[10X, [3Xgens[103X[10X, [3Xzero[103X[10X )[110X is the corresponding [3XF[103X-Lie
+  algebra with zero element the Lie object corresponding to [3Xzero[103X.[133X
+  
+  [33X[0;0YIf  the  last  argument  is  the string [10X"basis"[110X then the vectors in [3Xgens[103X are
+  known to form a basis of the algebra (as an [3XF[103X-vector space).[133X
+  
+  [33X[0;0Y[13XNote[113X that even if each element in [3Xgens[103X is already a Lie element, i.e., is of
+  the form [10XLieElement( [3Xelm[103X[10X )[110X for an object [3Xelm[103X, the elements of the result lie
+  in the Lie family of the family that contains [3Xgens[103X as a subset.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:= FullMatrixAlgebra( GF( 7 ), 4 );;[127X[104X
+    [4X[25Xgap>[125X [27XL:= LieAlgebra( A );[127X[104X
+    [4X[28X<Lie algebra of dimension 16 over GF(7)>[128X[104X
+    [4X[25Xgap>[125X [27Xmats:= [ [ [ 1, 0 ], [ 0, -1 ] ], [ [ 0, 1 ], [ 0, 0 ] ],[127X[104X
+    [4X[25X>[125X [27X            [ [ 0, 0 ], [ 1, 0] ] ];;[127X[104X
+    [4X[25Xgap>[125X [27XL:= LieAlgebra( Rationals, mats );[127X[104X
+    [4X[28X<Lie algebra over Rationals, with 3 generators>[128X[104X
+  [4X[32X[104X
+  
+  [1X64.2-4 FreeLieAlgebra[101X
+  
+  [33X[1;0Y[29X[2XFreeLieAlgebra[102X( [3XR[103X, [3Xrank[103X[, [3Xname[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XFreeLieAlgebra[102X( [3XR[103X, [3Xname1[103X, [3Xname2[103X, [3X...[103X ) [32X function[133X
+  
+  [33X[0;0YReturns  a free Lie algebra of rank [3Xrank[103X over the ring [3XR[103X. [10XFreeLieAlgebra( [3XR[103X[10X,
+  [3Xname1[103X[10X,  [3Xname2[103X[10X,...)[110X  returns  a free Lie algebra over [3XR[103X with generators named
+  [3Xname1[103X,  [3Xname2[103X,  and so on. The elements of a free Lie algebra are written on
+  the Hall-Lyndon basis.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= FreeLieAlgebra( Rationals, "x", "y", "z" );[127X[104X
+    [4X[28X<Lie algebra over Rationals, with 3 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xg:= GeneratorsOfAlgebra( L );; x:= g[1];; y:=g[2];; z:= g[3];;[127X[104X
+    [4X[25Xgap>[125X [27Xz*(y*(x*(z*y)));[127X[104X
+    [4X[28X(-1)*((x*(y*z))*(y*z))+(-1)*((x*((y*z)*z))*y)+(-1)*(((x*z)*(y*z))*y)[128X[104X
+  [4X[32X[104X
+  
+  [1X64.2-5 FullMatrixLieAlgebra[101X
+  
+  [33X[1;0Y[29X[2XFullMatrixLieAlgebra[102X( [3XR[103X, [3Xn[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XMatrixLieAlgebra[102X( [3XR[103X, [3Xn[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XMatLieAlgebra[102X( [3XR[103X, [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Yis  the  full  matrix  Lie  algebra of [22X[3Xn[103X × [3Xn[103X[122X matrices over the ring [3XR[103X, for a
+  nonnegative integer [3Xn[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XFullMatrixLieAlgebra( GF(9), 10 );[127X[104X
+    [4X[28X<Lie algebra over GF(3^2), with 19 generators>[128X[104X
+  [4X[32X[104X
+  
+  [1X64.2-6 RightDerivations[101X
+  
+  [33X[1;0Y[29X[2XRightDerivations[102X( [3XB[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLeftDerivations[102X( [3XB[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XDerivations[102X( [3XB[103X ) [32X attribute[133X
+  
+  [33X[0;0YThese  functions  all  return  the  matrix Lie algebra of derivations of the
+  algebra [22XA[122X with basis [3XB[103X.[133X
+  
+  [33X[0;0Y[10XRightDerivations(  [3XB[103X[10X  )[110X  returns  the  algebra of derivations represented by
+  their  right  action  on  the algebra [22XA[122X. This means that with respect to the
+  basis  [22XB[122X of [22XA[122X, the derivation [22XD[122X is described by the matrix [22X[ d_{i,j} ][122X which
+  means that [22XD[122X maps the [22Xi[122X-th basis element [22Xb_i[122X to [22X∑_{j = 1}^n d_{i,j} b_j[122X.[133X
+  
+  [33X[0;0Y[10XLeftDerivations(  [3XB[103X[10X  )[110X returns the Lie algebra of derivations represented by
+  their left action on the algebra [22XA[122X. So the matrices contained in the algebra
+  output  by [10XLeftDerivations( [3XB[103X[10X )[110X are the transposes of the matrices contained
+  in the output of [10XRightDerivations( [3XB[103X[10X )[110X.[133X
+  
+  [33X[0;0Y[2XDerivations[102X is just a synonym for [2XRightDerivations[102X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:= OctaveAlgebra( Rationals );[127X[104X
+    [4X[28X<algebra of dimension 8 over Rationals>[128X[104X
+    [4X[25Xgap>[125X [27XL:= Derivations( Basis( A ) );[127X[104X
+    [4X[28X<Lie algebra of dimension 14 over Rationals>[128X[104X
+  [4X[32X[104X
+  
+  [1X64.2-7 SimpleLieAlgebra[101X
+  
+  [33X[1;0Y[29X[2XSimpleLieAlgebra[102X( [3Xtype[103X, [3Xn[103X, [3XF[103X ) [32X function[133X
+  
+  [33X[0;0YThis  function constructs the simple Lie algebra of type given by the string
+  [3Xtype[103X  and  rank [3Xn[103X over the field [3XF[103X. The string [3Xtype[103X must be one of [10X"A"[110X, [10X"B"[110X,
+  [10X"C"[110X,  [10X"D"[110X, [10X"E"[110X, [10X"F"[110X, [10X"G"[110X, [10X"H"[110X, [10X"K"[110X, [10X"S"[110X, [10X"W"[110X or [10X"M"[110X. For the types [10XA[110X to [10XG[110X, [3Xn[103X
+  must  be  a  positive integer. The last five types only exist over fields of
+  characteristic  [22Xp>0[122X.  If  the  type  is [10XH[110X, then [3Xn[103X must be a list of positive
+  integers of even length. If the type is [10XK[110X, then [3Xn[103X must be a list of positive
+  integers  of odd length. For the types [10XS[110X and [10XW[110X, [3Xn[103X must be a list of positive
+  integers  of  any  length.  If  the  type is [10XM[110X, then the Melikyan algebra is
+  constructed.  In  this  case [3Xn[103X must be a list of two positive integers. This
+  Lie algebra only exists over fields of characteristic [22X5[122X. This Lie algebra is
+  [22Xℤ  ×  ℤ[122X graded; and the grading can be accessed via the attribute [10XGrading(L)[110X
+  (see [2XGrading[102X  ([14X62.9-20[114X)).  In  some  cases  the Lie algebra returned by this
+  function  is  not  simple.  Examples are the Lie algebras of type [22XA_n[122X over a
+  field  of  characteristic  [22Xp>0[122X  where [22Xp[122X divides [22Xn+1[122X, and the Lie algebras of
+  type [22XK_n[122X where [22Xn[122X is a list of length 1.[133X
+  
+  [33X[0;0YIf  [3Xtype[103X  is  one of [10XA[110X, [10XB[110X, [10XC[110X, [10XD[110X, [10XE[110X, [10XF[110X, [10XG[110X, and [3XF[103X is a field of characteristic
+  zero, then the basis of the returned Lie algebra is a Chevalley basis.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSimpleLieAlgebra( "E", 6, Rationals );[127X[104X
+    [4X[28X<Lie algebra of dimension 78 over Rationals>[128X[104X
+    [4X[25Xgap>[125X [27XSimpleLieAlgebra( "A", 6, GF(5) );[127X[104X
+    [4X[28X<Lie algebra of dimension 48 over GF(5)>[128X[104X
+    [4X[25Xgap>[125X [27XSimpleLieAlgebra( "W", [1,2], GF(5) );[127X[104X
+    [4X[28X<Lie algebra of dimension 250 over GF(5)>[128X[104X
+    [4X[25Xgap>[125X [27XSimpleLieAlgebra( "H", [1,2], GF(5) );[127X[104X
+    [4X[28X<Lie algebra of dimension 123 over GF(5)>[128X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "M", [1,1], GF(5) );[127X[104X
+    [4X[28X<Lie algebra of dimension 125 over GF(5)>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X64.3 [33X[0;0YDistinguished Subalgebras[133X[101X
+  
+  [33X[0;0YHere  we describe functions that calculate well-known subalgebras and ideals
+  of  a  Lie  algebra  (such  as  the centre, the centralizer of a subalgebra,
+  etc.).[133X
+  
+  [1X64.3-1 LieCentre[101X
+  
+  [33X[1;0Y[29X[2XLieCentre[102X( [3XL[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLieCenter[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0YThe  [13XLie[113X  centre  of the Lie algebra [3XL[103X is the kernel of the adjoint mapping,
+  that is, the set [22X{ a ∈ L : ∀ x ∈ L: a x = 0 }[122X.[133X
+  
+  [33X[0;0YIn  characteristic  [22X2[122X this may differ from the usual centre (that is the set
+  of  all  [22Xa ∈ L[122X such that [22Xa x = x a[122X for all [22Xx ∈ L[122X). Therefore, this operation
+  is named [2XLieCentre[102X and not [2XCentre[102X ([14X35.4-5[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= FullMatrixLieAlgebra( GF(3), 3 );[127X[104X
+    [4X[28X<Lie algebra over GF(3), with 5 generators>[128X[104X
+    [4X[25Xgap>[125X [27XLieCentre( L );[127X[104X
+    [4X[28X<two-sided ideal in <Lie algebra of dimension 9 over GF(3)>,[128X[104X
+    [4X[28X  (dimension 1)>[128X[104X
+  [4X[32X[104X
+  
+  [1X64.3-2 LieCentralizer[101X
+  
+  [33X[1;0Y[29X[2XLieCentralizer[102X( [3XL[103X, [3XS[103X ) [32X operation[133X
+  
+  [33X[0;0Yis the annihilator of [3XS[103X in the Lie algebra [3XL[103X, that is, the set [22X{ a ∈ L : ∀ s
+  ∈ S: a*s = 0 }[122X. Here [3XS[103X may be a subspace or a subalgebra of [3XL[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "G", 2, Rationals );[127X[104X
+    [4X[28X<Lie algebra of dimension 14 over Rationals>[128X[104X
+    [4X[25Xgap>[125X [27Xb:= BasisVectors( Basis( L ) );;[127X[104X
+    [4X[25Xgap>[125X [27XLieCentralizer( L, Subalgebra( L, [ b[1], b[2] ] ) );[127X[104X
+    [4X[28X<Lie algebra of dimension 1 over Rationals>[128X[104X
+  [4X[32X[104X
+  
+  [1X64.3-3 LieNormalizer[101X
+  
+  [33X[1;0Y[29X[2XLieNormalizer[102X( [3XL[103X, [3XU[103X ) [32X operation[133X
+  
+  [33X[0;0Yis  the  normalizer of the subspace [3XU[103X in the Lie algebra [3XL[103X, that is, the set
+  [22XN_L(U) = { x ∈ L : [x,U] ⊂ U }[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "G", 2, Rationals );[127X[104X
+    [4X[28X<Lie algebra of dimension 14 over Rationals>[128X[104X
+    [4X[25Xgap>[125X [27Xb:= BasisVectors( Basis( L ) );;[127X[104X
+    [4X[25Xgap>[125X [27XLieNormalizer( L, Subalgebra( L, [ b[1], b[2] ] ) );[127X[104X
+    [4X[28X<Lie algebra of dimension 8 over Rationals>[128X[104X
+  [4X[32X[104X
+  
+  [1X64.3-4 LieDerivedSubalgebra[101X
+  
+  [33X[1;0Y[29X[2XLieDerivedSubalgebra[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis the (Lie) derived subalgebra of the Lie algebra [3XL[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X L:= FullMatrixLieAlgebra( GF( 3 ), 3 );[127X[104X
+    [4X[28X<Lie algebra over GF(3), with 5 generators>[128X[104X
+    [4X[25Xgap>[125X [27XLieDerivedSubalgebra( L );[127X[104X
+    [4X[28X<Lie algebra of dimension 8 over GF(3)>[128X[104X
+  [4X[32X[104X
+  
+  [1X64.3-5 LieNilRadical[101X
+  
+  [33X[1;0Y[29X[2XLieNilRadical[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0YThis function calculates the (Lie) nil radical of the Lie algebra [3XL[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmats:= [ [[1,0],[0,0]], [[0,1],[0,0]], [[0,0],[0,1]] ];;[127X[104X
+    [4X[25Xgap>[125X [27XL:= LieAlgebra( Rationals, mats );;[127X[104X
+    [4X[25Xgap>[125X [27XLieNilRadical( L );[127X[104X
+    [4X[28X<two-sided ideal in <Lie algebra of dimension 3 over Rationals>,[128X[104X
+    [4X[28X  (dimension 2)>[128X[104X
+  [4X[32X[104X
+  
+  [1X64.3-6 LieSolvableRadical[101X
+  
+  [33X[1;0Y[29X[2XLieSolvableRadical[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0YReturns the (Lie) solvable radical of the Lie algebra [3XL[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= FullMatrixLieAlgebra( Rationals, 3 );;[127X[104X
+    [4X[25Xgap>[125X [27XLieSolvableRadical( L );[127X[104X
+    [4X[28X<two-sided ideal in <Lie algebra of dimension 9 over Rationals>,[128X[104X
+    [4X[28X  (dimension 1)>[128X[104X
+  [4X[32X[104X
+  
+  [1X64.3-7 CartanSubalgebra[101X
+  
+  [33X[1;0Y[29X[2XCartanSubalgebra[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0YA  Cartan subalgebra of a Lie algebra [3XL[103X is defined as a nilpotent subalgebra
+  of [3XL[103X equal to its own Lie normalizer in [3XL[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "G", 2, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27XCartanSubalgebra( L );[127X[104X
+    [4X[28X<Lie algebra of dimension 2 over Rationals>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X64.4 [33X[0;0YSeries of Ideals[133X[101X
+  
+  [1X64.4-1 LieDerivedSeries[101X
+  
+  [33X[1;0Y[29X[2XLieDerivedSeries[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis the (Lie) derived series of the Lie algebra [3XL[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmats:= [ [[1,0],[0,0]], [[0,1],[0,0]], [[0,0],[0,1]] ];;[127X[104X
+    [4X[25Xgap>[125X [27XL:= LieAlgebra( Rationals, mats );;[127X[104X
+    [4X[25Xgap>[125X [27XLieDerivedSeries( L );[127X[104X
+    [4X[28X[ <Lie algebra of dimension 3 over Rationals>,[128X[104X
+    [4X[28X  <Lie algebra of dimension 1 over Rationals>,[128X[104X
+    [4X[28X  <Lie algebra of dimension 0 over Rationals> ][128X[104X
+  [4X[32X[104X
+  
+  [1X64.4-2 LieLowerCentralSeries[101X
+  
+  [33X[1;0Y[29X[2XLieLowerCentralSeries[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis the (Lie) lower central series of the Lie algebra [3XL[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmats:= [ [[ 1, 0 ], [ 0, 0 ]], [[0,1],[0,0]], [[0,0],[0,1]] ];;[127X[104X
+    [4X[25Xgap>[125X [27XL:=LieAlgebra( Rationals, mats );;[127X[104X
+    [4X[25Xgap>[125X [27XLieLowerCentralSeries( L );[127X[104X
+    [4X[28X[ <Lie algebra of dimension 3 over Rationals>,[128X[104X
+    [4X[28X  <Lie algebra of dimension 1 over Rationals> ][128X[104X
+  [4X[32X[104X
+  
+  [1X64.4-3 LieUpperCentralSeries[101X
+  
+  [33X[1;0Y[29X[2XLieUpperCentralSeries[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis the (Lie) upper central series of the Lie algebra [3XL[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmats:= [ [[ 1, 0 ], [ 0, 0 ]], [[0,1],[0,0]], [[0,0],[0,1]] ];;[127X[104X
+    [4X[25Xgap>[125X [27XL:=LieAlgebra( Rationals, mats );;[127X[104X
+    [4X[25Xgap>[125X [27XLieUpperCentralSeries( L );[127X[104X
+    [4X[28X[ <two-sided ideal in <Lie algebra of dimension 3 over Rationals>,[128X[104X
+    [4X[28X      (dimension 1)>, <Lie algebra of dimension 0 over Rationals>[128X[104X
+    [4X[28X ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X64.5 [33X[0;0YProperties of a Lie Algebra[133X[101X
+  
+  [1X64.5-1 IsLieAbelian[101X
+  
+  [33X[1;0Y[29X[2XIsLieAbelian[102X( [3XL[103X ) [32X property[133X
+  
+  [33X[0;0Yreturns  [9Xtrue[109X  if [3XL[103X is a Lie algebra such that each product of elements in [3XL[103X
+  is zero, and [9Xfalse[109X otherwise.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X T:= EmptySCTable( 5, 0, "antisymmetric" );;[127X[104X
+    [4X[25Xgap>[125X [27X L:= LieAlgebraByStructureConstants( Rationals, T );[127X[104X
+    [4X[28X<Lie algebra of dimension 5 over Rationals>[128X[104X
+    [4X[25Xgap>[125X [27XIsLieAbelian( L );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X64.5-2 IsLieNilpotent[101X
+  
+  [33X[1;0Y[29X[2XIsLieNilpotent[102X( [3XL[103X ) [32X property[133X
+  
+  [33X[0;0YA  Lie  algebra  [3XL[103X  is  defined  to  be (Lie) [13Xnilpotent[113X when its (Lie) lower
+  central series reaches the trivial subalgebra.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XT:= EmptySCTable( 5, 0, "antisymmetric" );;[127X[104X
+    [4X[25Xgap>[125X [27XL:= LieAlgebraByStructureConstants( Rationals, T );[127X[104X
+    [4X[28X<Lie algebra of dimension 5 over Rationals>[128X[104X
+    [4X[25Xgap>[125X [27XIsLieNilpotent( L );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X64.5-3 IsLieSolvable[101X
+  
+  [33X[1;0Y[29X[2XIsLieSolvable[102X( [3XL[103X ) [32X property[133X
+  
+  [33X[0;0YA  Lie  algebra  [3XL[103X  is  defined  to be (Lie) [13Xsolvable[113X when its (Lie) derived
+  series reaches the trivial subalgebra.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XT:= EmptySCTable( 5, 0, "antisymmetric" );;[127X[104X
+    [4X[25Xgap>[125X [27XL:= LieAlgebraByStructureConstants( Rationals, T );[127X[104X
+    [4X[28X<Lie algebra of dimension 5 over Rationals>[128X[104X
+    [4X[25Xgap>[125X [27XIsLieSolvable( L );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X64.6 [33X[0;0YSemisimple Lie Algebras and Root Systems[133X[101X
+  
+  [33X[0;0YThis  section  contains  some  functions  for  dealing  with  semisimple Lie
+  algebras and their root systems.[133X
+  
+  [1X64.6-1 SemiSimpleType[101X
+  
+  [33X[1;0Y[29X[2XSemiSimpleType[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0YLet  [3XL[103X  be  a  semisimple  Lie  algebra,  i.e.,  a  direct sum of simple Lie
+  algebras.  Then  [2XSemiSimpleType[102X  returns  the  type  of  [3XL[103X,  i.e.,  a string
+  containing the types of the simple summands of [3XL[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "E", 8, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27Xb:= BasisVectors( Basis( L ) );;[127X[104X
+    [4X[25Xgap>[125X [27XK:= LieCentralizer(L, Subalgebra(L, [ b[61]+b[79]+b[101]+b[102] ]));[127X[104X
+    [4X[28X<Lie algebra of dimension 102 over Rationals>[128X[104X
+    [4X[25Xgap>[125X [27Xlev:= LeviMalcevDecomposition(K);;[127X[104X
+    [4X[25Xgap>[125X [27XSemiSimpleType( lev[1] );[127X[104X
+    [4X[28X"B3 A1"[128X[104X
+  [4X[32X[104X
+  
+  [1X64.6-2 ChevalleyBasis[101X
+  
+  [33X[1;0Y[29X[2XChevalleyBasis[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0YHere [3XL[103X must be a semisimple Lie algebra with a split Cartan subalgebra. Then
+  [10XChevalleyBasis([3XL[103X[10X)[110X  returns  a  list  consisting  of three sublists. Together
+  these  sublists  form  a  Chevalley  basis of [3XL[103X. The first list contains the
+  positive  root  vectors, the second list contains the negative root vectors,
+  and the third list the Cartan elements of the Chevalley basis.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "G", 2, Rationals );[127X[104X
+    [4X[28X<Lie algebra of dimension 14 over Rationals>[128X[104X
+    [4X[25Xgap>[125X [27XChevalleyBasis( L );[127X[104X
+    [4X[28X[ [ v.1, v.2, v.3, v.4, v.5, v.6 ],[128X[104X
+    [4X[28X  [ v.7, v.8, v.9, v.10, v.11, v.12 ], [ v.13, v.14 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X64.6-3 IsRootSystem[101X
+  
+  [33X[1;0Y[29X[2XIsRootSystem[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YCategory of root systems.[133X
+  
+  [1X64.6-4 IsRootSystemFromLieAlgebra[101X
+  
+  [33X[1;0Y[29X[2XIsRootSystemFromLieAlgebra[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YCategory  of  root  systems  that  come from (semisimple) Lie algebras. They
+  often   have  special  attributes  such  as  [2XUnderlyingLieAlgebra[102X  ([14X64.6-6[114X),
+  [2XPositiveRootVectors[102X       ([14X64.6-9[114X),      [2XNegativeRootVectors[102X      ([14X64.6-10[114X),
+  [2XCanonicalGenerators[102X ([14X64.6-14[114X).[133X
+  
+  [1X64.6-5 RootSystem[101X
+  
+  [33X[1;0Y[29X[2XRootSystem[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0Y[2XRootSystem[102X calculates the root system of the semisimple Lie algebra [3XL[103X with a
+  split Cartan subalgebra.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "G", 2, Rationals );[127X[104X
+    [4X[28X<Lie algebra of dimension 14 over Rationals>[128X[104X
+    [4X[25Xgap>[125X [27XR:= RootSystem( L );[127X[104X
+    [4X[28X<root system of rank 2>[128X[104X
+    [4X[25Xgap>[125X [27XIsRootSystem( R );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsRootSystemFromLieAlgebra( R );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X64.6-6 UnderlyingLieAlgebra[101X
+  
+  [33X[1;0Y[29X[2XUnderlyingLieAlgebra[102X( [3XR[103X ) [32X attribute[133X
+  
+  [33X[0;0YFor  a root system [3XR[103X coming from a semisimple Lie algebra [10XL[110X, returns the Lie
+  algebra [10XL[110X.[133X
+  
+  [1X64.6-7 PositiveRoots[101X
+  
+  [33X[1;0Y[29X[2XPositiveRoots[102X( [3XR[103X ) [32X attribute[133X
+  
+  [33X[0;0YThe list of positive roots of the root system [3XR[103X.[133X
+  
+  [1X64.6-8 NegativeRoots[101X
+  
+  [33X[1;0Y[29X[2XNegativeRoots[102X( [3XR[103X ) [32X attribute[133X
+  
+  [33X[0;0YThe list of negative roots of the root system [3XR[103X.[133X
+  
+  [1X64.6-9 PositiveRootVectors[101X
+  
+  [33X[1;0Y[29X[2XPositiveRootVectors[102X( [3XR[103X ) [32X attribute[133X
+  
+  [33X[0;0YA  list  of positive root vectors of the root system [3XR[103X that comes from a Lie
+  algebra  [10XL[110X.  This  is  a  list in bijection with the list [10XPositiveRoots( L )[110X
+  (see [2XPositiveRoots[102X  ([14X64.6-7[114X)).  The root vector is a non-zero element of the
+  root space (in [10XL[110X) of the corresponding root.[133X
+  
+  [1X64.6-10 NegativeRootVectors[101X
+  
+  [33X[1;0Y[29X[2XNegativeRootVectors[102X( [3XR[103X ) [32X attribute[133X
+  
+  [33X[0;0YA  list  of negative root vectors of the root system [3XR[103X that comes from a Lie
+  algebra  [10XL[110X.  This  is  a  list in bijection with the list [10XNegativeRoots( L )[110X
+  (see [2XNegativeRoots[102X  ([14X64.6-8[114X)).  The root vector is a non-zero element of the
+  root space (in [10XL[110X) of the corresponding root.[133X
+  
+  [1X64.6-11 SimpleSystem[101X
+  
+  [33X[1;0Y[29X[2XSimpleSystem[102X( [3XR[103X ) [32X attribute[133X
+  
+  [33X[0;0YA list of simple roots of the root system [3XR[103X.[133X
+  
+  [1X64.6-12 CartanMatrix[101X
+  
+  [33X[1;0Y[29X[2XCartanMatrix[102X( [3XR[103X ) [32X attribute[133X
+  
+  [33X[0;0YThe  Cartan  matrix  of  the  root system [3XR[103X, relative to the simple roots in
+  [10XSimpleSystem( [3XR[103X[10X )[110X (see [2XSimpleSystem[102X ([14X64.6-11[114X)).[133X
+  
+  [1X64.6-13 BilinearFormMat[101X
+  
+  [33X[1;0Y[29X[2XBilinearFormMat[102X( [3XR[103X ) [32X attribute[133X
+  
+  [33X[0;0YThe  matrix  of  the  bilinear  form of the root system [3XR[103X. If we denote this
+  matrix  by [22XB[122X, then we have [22XB(i,j) = (α_i, α_j)[122X, where the [22Xα_i[122X are the simple
+  roots of [3XR[103X.[133X
+  
+  [1X64.6-14 CanonicalGenerators[101X
+  
+  [33X[1;0Y[29X[2XCanonicalGenerators[102X( [3XR[103X ) [32X attribute[133X
+  
+  [33X[0;0YHere  [3XR[103X  must  be a root system coming from a semisimple Lie algebra [10XL[110X. This
+  function returns [22X3l[122X generators of [3XL[103X, [22Xx_1, ..., x_l, y_1, ..., y_l, h_1, ...,
+  h_l[122X,  where [22Xx_i[122X lies in the root space corresponding to the [22Xi[122X-th simple root
+  of  the  root system of [3XL[103X, [22Xy_i[122X lies in the root space corresponding to [22X-[122X the
+  [22Xi[122X-th  simple  root, and the [22Xh_i[122X are elements of the Cartan subalgebra. These
+  elements  satisfy  the  relations [22Xh_i * h_j = 0[122X, [22Xx_i * y_j = δ_ij h_i[122X, [22Xh_j *
+  x_i = c_ij x_i[122X, [22Xh_j * y_i = -c_ij y_i[122X, where [22Xc_ij[122X is the entry of the Cartan
+  matrix on position [22Xij[122X.[133X
+  
+  [33X[0;0YAlso  if  [22Xa[122X is a root of the root system [3XR[103X (so [22Xa[122X is a list of numbers), then
+  we  have  the  relation  [22Xh_i  *  x  =  a[i]  x[122X,  where  [22Xx[122X  is  a root vector
+  corresponding to [22Xa[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "G", 2, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27XR:= RootSystem( L );;[127X[104X
+    [4X[25Xgap>[125X [27XUnderlyingLieAlgebra( R );[127X[104X
+    [4X[28X<Lie algebra of dimension 14 over Rationals>[128X[104X
+    [4X[25Xgap>[125X [27XPositiveRoots( R );[127X[104X
+    [4X[28X[ [ 2, -1 ], [ -3, 2 ], [ -1, 1 ], [ 1, 0 ], [ 3, -1 ], [ 0, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xx:= PositiveRootVectors( R );[127X[104X
+    [4X[28X[ v.1, v.2, v.3, v.4, v.5, v.6 ][128X[104X
+    [4X[25Xgap>[125X [27Xg:=CanonicalGenerators( R );[127X[104X
+    [4X[28X[ [ v.1, v.2 ], [ v.7, v.8 ], [ v.13, v.14 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xg[3][1]*x[1];[127X[104X
+    [4X[28X(2)*v.1[128X[104X
+    [4X[25Xgap>[125X [27Xg[3][2]*x[1];[127X[104X
+    [4X[28X(-1)*v.1[128X[104X
+    [4X[25Xgap>[125X [27X# i.e., x[1] is the root vector belonging to the root [ 2, -1 ][127X[104X
+    [4X[25Xgap>[125X [27XBilinearFormMat( R );[127X[104X
+    [4X[28X[ [ 1/12, -1/8 ], [ -1/8, 1/4 ] ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X64.7 [33X[0;0YSemisimple Lie Algebras and Weyl Groups of Root Systems[133X[101X
+  
+  [33X[0;0YThis  section  deals  with  the Weyl group of a root system. A Weyl group is
+  represented by its action on the weight lattice. A [13Xweight[113X is by definition a
+  linear function [22Xλ: H → F[122X (where [22XF[122X is the ground field), such that the values
+  [22Xλ(h_i)[122X  are  all  integers  (where  the  [22Xh_i[122X  are the Cartan elements of the
+  [2XCanonicalGenerators[102X  ([14X64.6-14[114X)). On the other hand each weight is determined
+  by  these  values.  Therefore we represent a weight by a vector of integers;
+  the  [22Xi[122X-th  entry of this vector is the value [22Xλ(h_i)[122X. Now the elements of the
+  Weyl  group  are  represented  by matrices, and if [10Xg[110X is an element of a Weyl
+  group  and [10Xw[110X a weight, then [10Xw*g[110X gives the result of applying [10Xg[110X to [10Xw[110X. Another
+  way  of  applying  the  [22Xi[122X-th  simple  reflection to a weight is by using the
+  function [2XApplySimpleReflection[102X ([14X64.7-4[114X).[133X
+  
+  [33X[0;0YA  Weyl  group  is generated by the simple reflections. So [2XGeneratorsOfGroup[102X
+  ([14X39.2-4[114X)  for  a Weyl group [10XW[110X gives a list of matrices and the [22Xi[122X-th entry of
+  this  list is the simple reflection corresponding to the [22Xi[122X-th simple root of
+  the corresponding root system.[133X
+  
+  [1X64.7-1 IsWeylGroup[101X
+  
+  [33X[1;0Y[29X[2XIsWeylGroup[102X( [3XG[103X ) [32X property[133X
+  
+  [33X[0;0YA  Weyl  group  is  a  group  generated  by  reflections, with the attribute
+  [2XSparseCartanMatrix[102X ([14X64.7-2[114X) set.[133X
+  
+  [1X64.7-2 SparseCartanMatrix[101X
+  
+  [33X[1;0Y[29X[2XSparseCartanMatrix[102X( [3XW[103X ) [32X attribute[133X
+  
+  [33X[0;0YThis is a sparse form of the Cartan matrix of the corresponding root system.
+  If we denote the Cartan matrix by [10XC[110X, then the sparse Cartan matrix of [3XW[103X is a
+  list  (of  length  equal to the length of the Cartan matrix), where the [10Xi[110X-th
+  entry  is a list consisting of elements [10X[ j, C[i][j] ][110X, where [10Xj[110X is such that
+  [10XC[i][j][110X is non-zero.[133X
+  
+  [1X64.7-3 WeylGroup[101X
+  
+  [33X[1;0Y[29X[2XWeylGroup[102X( [3XR[103X ) [32X attribute[133X
+  
+  [33X[0;0YThe  Weyl  group  of  the  root  system  [3XR[103X.  It  is  generated by the simple
+  reflections.  A simple reflection is represented by a matrix, and the result
+  of letting a simple reflection [10Xm[110X act on a weight [10Xw[110X is obtained by [10Xw*m[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "F", 4, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27XR:= RootSystem( L );;[127X[104X
+    [4X[25Xgap>[125X [27XW:= WeylGroup( R );[127X[104X
+    [4X[28X<matrix group with 4 generators>[128X[104X
+    [4X[25Xgap>[125X [27XIsWeylGroup( W );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XSparseCartanMatrix( W );[127X[104X
+    [4X[28X[ [ [ 1, 2 ], [ 3, -1 ] ], [ [ 2, 2 ], [ 4, -1 ] ],[128X[104X
+    [4X[28X  [ [ 1, -1 ], [ 3, 2 ], [ 4, -1 ] ],[128X[104X
+    [4X[28X  [ [ 2, -1 ], [ 3, -2 ], [ 4, 2 ] ] ][128X[104X
+    [4X[25Xgap>[125X [27Xg:= GeneratorsOfGroup( W );;[127X[104X
+    [4X[25Xgap>[125X [27X[ 1, 1, 1, 1 ]*g[2];[127X[104X
+    [4X[28X[ 1, -1, 1, 2 ][128X[104X
+  [4X[32X[104X
+  
+  [1X64.7-4 ApplySimpleReflection[101X
+  
+  [33X[1;0Y[29X[2XApplySimpleReflection[102X( [3XSC[103X, [3Xi[103X, [3Xwt[103X ) [32X operation[133X
+  
+  [33X[0;0YHere  [3XSC[103X  is the sparse Cartan matrix of a Weyl group. This function applies
+  the [3Xi[103X-th simple reflection to the weight [3Xwt[103X, thus changing [3Xwt[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "F", 4, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27XW:= WeylGroup( RootSystem( L ) );;[127X[104X
+    [4X[25Xgap>[125X [27XC:= SparseCartanMatrix( W );;[127X[104X
+    [4X[25Xgap>[125X [27Xw:= [ 1, 1, 1, 1 ];;[127X[104X
+    [4X[25Xgap>[125X [27XApplySimpleReflection( C, 2, w );[127X[104X
+    [4X[25Xgap>[125X [27Xw;[127X[104X
+    [4X[28X[ 1, -1, 1, 2 ][128X[104X
+  [4X[32X[104X
+  
+  [1X64.7-5 LongestWeylWordPerm[101X
+  
+  [33X[1;0Y[29X[2XLongestWeylWordPerm[102X( [3XW[103X ) [32X attribute[133X
+  
+  [33X[0;0YLet  [22Xg_0[122X be the longest element in the Weyl group [3XW[103X, and let [22X{ α_1, ..., α_l
+  }[122X  be a simple system of the corresponding root system. Then [22Xg_0[122X maps [22Xα_i[122X to
+  [22X-α_{σ(i)}[122X,  where  [22Xσ[122X  is a permutation of [22X(1, ..., l)[122X. This function returns
+  that permutation.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "E", 6, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27XW:= WeylGroup( RootSystem( L ) );;[127X[104X
+    [4X[25Xgap>[125X [27XLongestWeylWordPerm( W );[127X[104X
+    [4X[28X(1,6)(3,5)[128X[104X
+  [4X[32X[104X
+  
+  [1X64.7-6 ConjugateDominantWeight[101X
+  
+  [33X[1;0Y[29X[2XConjugateDominantWeight[102X( [3XW[103X, [3Xwt[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XConjugateDominantWeightWithWord[102X( [3XW[103X, [3Xwt[103X ) [32X operation[133X
+  
+  [33X[0;0YHere  [3XW[103X  is  a  Weyl  group  and  [3Xwt[103X  a  weight  (i.e., a list of integers).
+  [2XConjugateDominantWeight[102X  returns  the unique dominant weight conjugate to [3Xwt[103X
+  under [3XW[103X.[133X
+  
+  [33X[0;0Y[2XConjugateDominantWeightWithWord[102X returns a list of two elements. The first of
+  these  is  the dominant weight conjugate to [3Xwt[103X. The second element is a list
+  of  indices  of simple reflections that have to be applied to [3Xwt[103X in order to
+  get the dominant weight conjugate to it.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "E", 6, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27XW:= WeylGroup( RootSystem( L ) );;[127X[104X
+    [4X[25Xgap>[125X [27XC:= SparseCartanMatrix( W );;[127X[104X
+    [4X[25Xgap>[125X [27Xw:= [ 1, -1, 2, -2, 3, -3 ];;[127X[104X
+    [4X[25Xgap>[125X [27XConjugateDominantWeight( W, w );[127X[104X
+    [4X[28X[ 2, 1, 0, 0, 0, 0 ][128X[104X
+    [4X[25Xgap>[125X [27Xc:= ConjugateDominantWeightWithWord( W, w );[127X[104X
+    [4X[28X[ [ 2, 1, 0, 0, 0, 0 ], [ 2, 4, 2, 3, 6, 5, 4, 2, 3, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xfor i in [1..Length(c[2])] do[127X[104X
+    [4X[25X>[125X [27XApplySimpleReflection( C, c[2][i], w );[127X[104X
+    [4X[25X>[125X [27Xod;[127X[104X
+    [4X[25Xgap>[125X [27Xw;[127X[104X
+    [4X[28X[ 2, 1, 0, 0, 0, 0 ][128X[104X
+  [4X[32X[104X
+  
+  [1X64.7-7 WeylOrbitIterator[101X
+  
+  [33X[1;0Y[29X[2XWeylOrbitIterator[102X( [3XW[103X, [3Xwt[103X ) [32X operation[133X
+  
+  [33X[0;0YReturns  an  iterator for the orbit of the weight [3Xwt[103X under the action of the
+  Weyl group [3XW[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "E", 6, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27XW:= WeylGroup( RootSystem( L ) );;[127X[104X
+    [4X[25Xgap>[125X [27Xorb:= WeylOrbitIterator( W, [ 1, 1, 1, 1, 1, 1 ] );[127X[104X
+    [4X[28X<iterator>[128X[104X
+    [4X[25Xgap>[125X [27XNextIterator( orb );[127X[104X
+    [4X[28X[ 1, 1, 1, 1, 1, 1 ][128X[104X
+    [4X[25Xgap>[125X [27XNextIterator( orb );[127X[104X
+    [4X[28X[ -1, -1, -1, -1, -1, -1 ][128X[104X
+    [4X[25Xgap>[125X [27Xorb:= WeylOrbitIterator( W, [ 1, 1, 1, 1, 1, 1 ] );[127X[104X
+    [4X[28X<iterator>[128X[104X
+    [4X[25Xgap>[125X [27Xk:= 0;[127X[104X
+    [4X[28X0[128X[104X
+    [4X[25Xgap>[125X [27Xwhile not IsDoneIterator( orb ) do[127X[104X
+    [4X[25X>[125X [27Xw:= NextIterator( orb ); k:= k+1;[127X[104X
+    [4X[25X>[125X [27Xod;[127X[104X
+    [4X[25Xgap>[125X [27Xk;  # this is the size of the Weyl group of E6[127X[104X
+    [4X[28X51840[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X64.8 [33X[0;0YRestricted Lie algebras[133X[101X
+  
+  [33X[0;0YA  Lie  algebra [22XL[122X over a field of characteristic [22Xp>0[122X is called restricted if
+  there  is  a  map  [22Xx ↦ x^p[122X from [22XL[122X into [22XL[122X (called a [22Xp[122X-map) such that ad [22Xx^p =
+  ([122Xad[22Xx)^p[122X, [22X(α x)^p = α^p x^p[122X and [22X(x+y)^p = x^p + y^p + ∑_{i=1}^{p-1} s_i(x,y)[122X,
+  where  [22Xs_i:  L  ×  L → L[122X are certain Lie polynomials in two variables. Using
+  these  relations  we can calculate [22Xy^p[122X for all [22Xy ∈ L[122X, once we know [22Xx^p[122X for [22Xx[122X
+  in  a  basis  of  [22XL[122X.  Therefore  a  [22Xp[122X-map  is  represented in [5XGAP[105X  by a list
+  containing  the  images  of  the  basis  vectors of a basis [22XB[122X of [22XL[122X. For this
+  reason this list is an attribute of the basis [22XB[122X.[133X
+  
+  [1X64.8-1 IsRestrictedLieAlgebra[101X
+  
+  [33X[1;0Y[29X[2XIsRestrictedLieAlgebra[102X( [3XL[103X ) [32X property[133X
+  
+  [33X[0;0YTest whether [3XL[103X is restricted.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "W", [2], GF(5));[127X[104X
+    [4X[28X<Lie algebra of dimension 25 over GF(5)>[128X[104X
+    [4X[25Xgap>[125X [27XIsRestrictedLieAlgebra( L );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "W", [1], GF(5));[127X[104X
+    [4X[28X<Lie algebra of dimension 5 over GF(5)>[128X[104X
+    [4X[25Xgap>[125X [27XIsRestrictedLieAlgebra( L );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X64.8-2 PthPowerImages[101X
+  
+  [33X[1;0Y[29X[2XPthPowerImages[102X( [3XB[103X ) [32X attribute[133X
+  
+  [33X[0;0YHere  [3XB[103X  is  a  basis of a restricted Lie algebra. This function returns the
+  list of the images of the basis vectors of [3XB[103X under the [22Xp[122X-map.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "W", [1], GF(11) );[127X[104X
+    [4X[28X<Lie algebra of dimension 11 over GF(11)>[128X[104X
+    [4X[25Xgap>[125X [27XB:= Basis( L );[127X[104X
+    [4X[28XCanonicalBasis( <Lie algebra of dimension 11 over GF(11)> )[128X[104X
+    [4X[25Xgap>[125X [27XPthPowerImages( B );[127X[104X
+    [4X[28X[ 0*v.1, v.2, 0*v.1, 0*v.1, 0*v.1, 0*v.1, 0*v.1, 0*v.1, 0*v.1, 0*v.1,[128X[104X
+    [4X[28X  0*v.1 ][128X[104X
+  [4X[32X[104X
+  
+  [1X64.8-3 PthPowerImage[101X
+  
+  [33X[1;0Y[29X[2XPthPowerImage[102X( [3XB[103X, [3Xx[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XPthPowerImage[102X( [3Xx[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XPthPowerImage[102X( [3Xx[103X, [3Xn[103X ) [32X operation[133X
+  
+  [33X[0;0YThis function computes the image of an element [3Xx[103X of a restricted Lie algebra
+  under its [22Xp[122X-map.[133X
+  
+  [33X[0;0YIn the first form, a basis of the Lie algebra is provided; this basis stores
+  the  [22Xp[122Xth  powers  of  its elements. It is the traditional form, provided for
+  backwards compatibility.[133X
+  
+  [33X[0;0YIn  its second form, only the element [3Xx[103X is provided. It is the only form for
+  elements  of  Lie  algebras  with  no  predetermined  basis,  such  as those
+  constructed by [2XLieObject[102X ([14X64.1-1[114X).[133X
+  
+  [33X[0;0YIn  its  third  form,  an  extra  non-negative  integer  [3Xn[103X is specified; the
+  [22Xp[122X-mapping is iterated [3Xn[103X times on the element [3Xx[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "W", [1], GF(11) );;[127X[104X
+    [4X[25Xgap>[125X [27XB:= Basis( L );;[127X[104X
+    [4X[25Xgap>[125X [27Xx:= B[1]+B[11];[127X[104X
+    [4X[28Xv.1+v.11[128X[104X
+    [4X[25Xgap>[125X [27XPthPowerImage( B, x );[127X[104X
+    [4X[28Xv.1+v.11[128X[104X
+    [4X[25Xgap>[125X [27XPthPowerImage( x, 2 );[127X[104X
+    [4X[28Xv.1+v.11[128X[104X
+    [4X[25Xgap>[125X [27Xf := FreeAssociativeAlgebra(GF(2),"x","y");[127X[104X
+    [4X[28X<algebra over GF(2), with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xx := LieObject(f.1);; y := LieObject(f.2);;[127X[104X
+    [4X[25Xgap>[125X [27Xx*y; x^2; PthPowerImage(x);[127X[104X
+    [4X[28XLieObject( (Z(2)^0)*x*y+(Z(2)^0)*y*x )[128X[104X
+    [4X[28XLieObject( <zero> of ... )[128X[104X
+    [4X[28XLieObject( (Z(2)^0)*x^2 )[128X[104X
+  [4X[32X[104X
+  
+  [1X64.8-4 JenningsLieAlgebra[101X
+  
+  [33X[1;0Y[29X[2XJenningsLieAlgebra[102X( [3XG[103X ) [32X attribute[133X
+  
+  [33X[0;0YLet  [3XG[103X  be  a nontrivial [22Xp[122X-group, and let [22X[3XG[103X = G_1 ⊃ G_2 ⊃ ⋯ ⊃ G_m = 1[122X be its
+  Jennings  series  (see [2XJenningsSeries[102X  ([14X39.17-14[114X)). Then the quotients [22XG_i /
+  G_{i+1}[122X  are elementary abelian [22Xp[122X-groups, i.e., they can be viewed as vector
+  spaces  over [10XGF[110X[22X(p)[122X. Now the Jennings-Lie algebra [22XL[122X of [3XG[103X is the direct sum of
+  those vector spaces. The Lie bracket on [22XL[122X is induced by the commutator in [3XG[103X.
+  Furthermore,  the  map  [22Xg  ↦  g^p[122X  in [3XG[103X induces a [22Xp[122X-map in [22XL[122X making [22XL[122X into a
+  restricted  Lie  algebra. In the canonical basis of [22XL[122X this [22Xp[122X-map is added as
+  an  attribute.  A  Lie  algebra  created  by [2XJenningsLieAlgebra[102X is naturally
+  graded. The attribute [2XGrading[102X ([14X62.9-20[114X) is set.[133X
+  
+  [1X64.8-5 PCentralLieAlgebra[101X
+  
+  [33X[1;0Y[29X[2XPCentralLieAlgebra[102X( [3XG[103X ) [32X attribute[133X
+  
+  [33X[0;0YHere  [3XG[103X  is  a  nontrivial [22Xp[122X-group. [10XPCentralLieAlgebra( [3XG[103X[10X )[110X does the same as
+  [2XJenningsLieAlgebra[102X ([14X64.8-4[114X) except that the [22Xp[122X-central series is used instead
+  of  the  Jennings series (see [2XPCentralSeries[102X ([14X39.17-13[114X)). This function also
+  returns a graded Lie algebra. However, it is not necessarily restricted.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XG:= SmallGroup( 3^6, 123 );[127X[104X
+    [4X[28X<pc group of size 729 with 6 generators>[128X[104X
+    [4X[25Xgap>[125X [27XL:= JenningsLieAlgebra( G );[127X[104X
+    [4X[28X<Lie algebra of dimension 6 over GF(3)>[128X[104X
+    [4X[25Xgap>[125X [27XHasPthPowerImages( Basis( L ) );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XPthPowerImages( Basis( L ) );[127X[104X
+    [4X[28X[ v.6, 0*v.1, 0*v.1, 0*v.1, 0*v.1, 0*v.1 ][128X[104X
+    [4X[25Xgap>[125X [27Xg:= Grading( L );[127X[104X
+    [4X[28Xrec( hom_components := function( d ) ... end, max_degree := 3,[128X[104X
+    [4X[28X  min_degree := 1, source := Integers )[128X[104X
+    [4X[25Xgap>[125X [27XList( [1,2,3], g.hom_components );[127X[104X
+    [4X[28X[ <vector space over GF(3), with 3 generators>,[128X[104X
+    [4X[28X  <vector space over GF(3), with 2 generators>,[128X[104X
+    [4X[28X  <vector space over GF(3), with 1 generator> ][128X[104X
+  [4X[32X[104X
+  
+  [1X64.8-6 NaturalHomomorphismOfLieAlgebraFromNilpotentGroup[101X
+  
+  [33X[1;0Y[29X[2XNaturalHomomorphismOfLieAlgebraFromNilpotentGroup[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0YThis  is an attribute of Lie algebras created by [2XJenningsLieAlgebra[102X ([14X64.8-4[114X)
+  or  [2XPCentralLieAlgebra[102X  ([14X64.8-5[114X).  Then  [3XL[103X is the direct sum of quotients of
+  successive terms of the Jennings, or [22Xp[122X-central series of a [22Xp[122X-group G. Let [10XGi[110X
+  be     the     [22Xi[122X-th    term    in    this    series,    and    let    [10Xf    =
+  NaturalHomomorphismOfLieAlgebraFromNilpotentGroup( [3XL[103X[10X )[110X, then for [10Xg[110X in [10XGi[110X, [10Xf(
+  [3Xg[103X[10X,  [3Xi[103X[10X  )[110X  returns the element of [3XL[103X (lying in the [22Xi[122X-th homogeneous component)
+  corresponding to [10Xg[110X.[133X
+  
+  
+  [1X64.9 [33X[0;0YThe Adjoint Representation[133X[101X
+  
+  [33X[0;0YIn  this  section  we  show  functions  for  calculating  with  the  adjoint
+  representation  of  a  Lie algebra (and the corresponding trace form, called
+  the  Killing form) (see also [2XAdjointBasis[102X ([14X62.9-5[114X) and [2XIndicesOfAdjointBasis[102X
+  ([14X62.9-6[114X)).[133X
+  
+  [1X64.9-1 AdjointMatrix[101X
+  
+  [33X[1;0Y[29X[2XAdjointMatrix[102X( [3XB[103X, [3Xx[103X ) [32X operation[133X
+  
+  [33X[0;0Yis  the  matrix  of  the  adjoint representation of the element [3Xx[103X w.r.t. the
+  basis [3XB[103X. The adjoint map is the left multiplication by [3Xx[103X. The [22Xi[122X-th column of
+  the  resulting  matrix  represents  the  image of the [22Xi[122X-th basis vector of [3XB[103X
+  under left multiplication by [3Xx[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "A", 1, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27XAdjointMatrix( Basis( L ), Basis( L )[1] );[127X[104X
+    [4X[28X[ [ 0, 0, -2 ], [ 0, 0, 0 ], [ 0, 1, 0 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X64.9-2 AdjointAssociativeAlgebra[101X
+  
+  [33X[1;0Y[29X[2XAdjointAssociativeAlgebra[102X( [3XL[103X, [3XK[103X ) [32X operation[133X
+  
+  [33X[0;0Yis  the associative matrix algebra (with 1) generated by the matrices of the
+  adjoint representation of the subalgebra [3XK[103X on the Lie algebra [3XL[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "A", 1, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27XAdjointAssociativeAlgebra( L, L );[127X[104X
+    [4X[28X<algebra of dimension 9 over Rationals>[128X[104X
+    [4X[25Xgap>[125X [27XAdjointAssociativeAlgebra( L, CartanSubalgebra( L ) );[127X[104X
+    [4X[28X<algebra of dimension 3 over Rationals>[128X[104X
+  [4X[32X[104X
+  
+  [1X64.9-3 KillingMatrix[101X
+  
+  [33X[1;0Y[29X[2XKillingMatrix[102X( [3XB[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis  the  matrix of the Killing form [22Xκ[122X with respect to the basis [3XB[103X, i.e., the
+  matrix [22X( κ( b_i, b_j ) )[122X where [22Xb_1, b_2, ...[122X are the basis vectors of [3XB[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "A", 1, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27XKillingMatrix( Basis( L ) );[127X[104X
+    [4X[28X[ [ 0, 4, 0 ], [ 4, 0, 0 ], [ 0, 0, 8 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X64.9-4 KappaPerp[101X
+  
+  [33X[1;0Y[29X[2XKappaPerp[102X( [3XL[103X, [3XU[103X ) [32X operation[133X
+  
+  [33X[0;0Yis  the  orthogonal  complement  of the subspace [3XU[103X of the Lie algebra [3XL[103X with
+  respect  to the Killing form [22Xκ[122X, that is, the set [22XU^{perp} = { x ∈ L; κ( x, y
+  ) = 0 hbox for all y ∈ L }[122X.[133X
+  
+  [33X[0;0Y[22XU^{perp}[122X  is  a  subspace of [3XL[103X, and if [3XU[103X is an ideal of [3XL[103X then [22XU^{perp}[122X is a
+  subalgebra of [3XL[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "A", 1, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27Xb:= BasisVectors( Basis( L ) );;[127X[104X
+    [4X[25Xgap>[125X [27XV:= VectorSpace( Rationals, [b[1],b[2]] );;[127X[104X
+    [4X[25Xgap>[125X [27XKappaPerp( L, V );[127X[104X
+    [4X[28X<vector space of dimension 1 over Rationals>[128X[104X
+  [4X[32X[104X
+  
+  [1X64.9-5 IsNilpotentElement[101X
+  
+  [33X[1;0Y[29X[2XIsNilpotentElement[102X( [3XL[103X, [3Xx[103X ) [32X operation[133X
+  
+  [33X[0;0Y[3Xx[103X is nilpotent in [3XL[103X if its adjoint matrix is a nilpotent matrix.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "A", 1, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27XIsNilpotentElement( L, Basis( L )[1] );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X64.9-6 NonNilpotentElement[101X
+  
+  [33X[1;0Y[29X[2XNonNilpotentElement[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0YA  non-nilpotent element of a Lie algebra [3XL[103X is an element [22Xx[122X such that ad[22Xx[122X is
+  not  nilpotent. If [3XL[103X is not nilpotent, then by Engel's theorem non-nilpotent
+  elements  exist  in  [3XL[103X.  In  this case this function returns a non-nilpotent
+  element of [3XL[103X, otherwise (if [3XL[103X is nilpotent) [9Xfail[109X is returned.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "G", 2, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27XNonNilpotentElement( L );[127X[104X
+    [4X[28Xv.13[128X[104X
+    [4X[25Xgap>[125X [27XIsNilpotentElement( L, last );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X64.9-7 FindSl2[101X
+  
+  [33X[1;0Y[29X[2XFindSl2[102X( [3XL[103X, [3Xx[103X ) [32X function[133X
+  
+  [33X[0;0YThis  function  tries  to  find  a  subalgebra [22XS[122X of the Lie algebra [3XL[103X with [22XS[122X
+  isomorphic  to  [22Xsl_2[122X and such that the nilpotent element [3Xx[103X of [3XL[103X is contained
+  in  [22XS[122X.  If  such  an  algebra  exists then it is returned, otherwise [9Xfail[109X is
+  returned.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "G", 2, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27Xb:= BasisVectors( Basis( L ) );;[127X[104X
+    [4X[25Xgap>[125X [27XIsNilpotentElement( L, b[1] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XFindSl2( L, b[1] );[127X[104X
+    [4X[28X<Lie algebra of dimension 3 over Rationals>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X64.10 [33X[0;0YUniversal Enveloping Algebras[133X[101X
+  
+  [1X64.10-1 UniversalEnvelopingAlgebra[101X
+  
+  [33X[1;0Y[29X[2XUniversalEnvelopingAlgebra[102X( [3XL[103X[, [3XB[103X] ) [32X attribute[133X
+  
+  [33X[0;0YReturns  the universal enveloping algebra of the Lie algebra [3XL[103X. The elements
+  of this algebra are written on a Poincare-Birkhoff-Witt basis.[133X
+  
+  [33X[0;0YIf  a second argument [3XB[103X is given, it must be a basis of [3XL[103X, and an isomorphic
+  copy  of  the  universal  enveloping  algebra  is returned, generated by the
+  images (in the universal enveloping algebra) of the elements of [3XB[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "A", 1, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27XUL:= UniversalEnvelopingAlgebra( L );[127X[104X
+    [4X[28X<algebra-with-one of dimension infinity over Rationals>[128X[104X
+    [4X[25Xgap>[125X [27Xg:= GeneratorsOfAlgebraWithOne( UL );[127X[104X
+    [4X[28X[ [(1)*x.1], [(1)*x.2], [(1)*x.3] ][128X[104X
+    [4X[25Xgap>[125X [27Xg[3]^2*g[2]^2*g[1]^2;[127X[104X
+    [4X[28X[(-4)*x.1*x.2*x.3^3+(1)*x.1^2*x.2^2*x.3^2+(2)*x.3^3+(2)*x.3^4][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X64.11 [33X[0;0YFinitely Presented Lie Algebras[133X[101X
+  
+  [33X[0;0YFinitely presented Lie algebras can be constructed from free Lie algebras by
+  using  the [10X/[110X constructor, i.e., [10XFL/[r1, ..., rk][110X is the quotient of the free
+  Lie  algebra [10XFL[110X by the ideal generated by the elements [10Xr1, ..., rk[110X of [10XFL[110X. If
+  the  finitely  presented Lie algebra [10XK[110X happens to be finite dimensional then
+  an  isomorphic  structure  constants  Lie  algebra  can  be  constructed  by
+  [10XNiceAlgebraMonomorphism(K)[110X  (see [2XNiceAlgebraMonomorphism[102X  ([14X62.10-10[114X)), which
+  returns  a  surjective homomorphism. The structure constants Lie algebra can
+  then  be  accessed  by  calling  [2XRange[102X  ([14X32.3-7[114X)  for this map. Also limited
+  computations  with  elements  of  the  finitely  presented  Lie  algebra are
+  possible.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= FreeLieAlgebra( Rationals, "s", "t" );[127X[104X
+    [4X[28X<Lie algebra over Rationals, with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27XgL:= GeneratorsOfAlgebra( L );; s:= gL[1];; t:= gL[2];;[127X[104X
+    [4X[25Xgap>[125X [27XK:= L/[ s*(s*t), t*(t*(s*t)), s*(t*(s*t))-t*(s*t) ];[127X[104X
+    [4X[28X<Lie algebra over Rationals, with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xh:= NiceAlgebraMonomorphism( K );[127X[104X
+    [4X[28X[ [(1)*s], [(1)*t] ] -> [ v.1, v.2 ][128X[104X
+    [4X[25Xgap>[125X [27XU:= Range( h );[127X[104X
+    [4X[28X<Lie algebra of dimension 3 over Rationals>[128X[104X
+    [4X[25Xgap>[125X [27XIsLieNilpotent( U );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XgK:= GeneratorsOfAlgebra( K );[127X[104X
+    [4X[28X[ [(1)*s], [(1)*t] ][128X[104X
+    [4X[25Xgap>[125X [27XgK[1]*(gK[2]*gK[1]) = Zero( K );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X64.11-1 FpLieAlgebraByCartanMatrix[101X
+  
+  [33X[1;0Y[29X[2XFpLieAlgebraByCartanMatrix[102X( [3XC[103X ) [32X function[133X
+  
+  [33X[0;0YHere  [3XC[103X must be a Cartan matrix. The function returns the finitely-presented
+  Lie  algebra  over  the  field  of  rational  numbers defined by this Cartan
+  matrix.  By  Serre's  theorem, this Lie algebra is a semisimple Lie algebra,
+  and its root system has Cartan matrix [3XC[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XC:= [ [ 2, -1 ], [ -3, 2 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27XK:= FpLieAlgebraByCartanMatrix( C );[127X[104X
+    [4X[28X<Lie algebra over Rationals, with 6 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xh:= NiceAlgebraMonomorphism( K );[127X[104X
+    [4X[28X[ [(1)*x1], [(1)*x2], [(1)*x3], [(1)*x4], [(1)*x5], [(1)*x6] ] ->[128X[104X
+    [4X[28X[ v.1, v.2, v.3, v.4, v.5, v.6 ][128X[104X
+    [4X[25Xgap>[125X [27XSemiSimpleType( Range( h ) );[127X[104X
+    [4X[28X"G2"[128X[104X
+  [4X[32X[104X
+  
+  [1X64.11-2 NilpotentQuotientOfFpLieAlgebra[101X
+  
+  [33X[1;0Y[29X[2XNilpotentQuotientOfFpLieAlgebra[102X( [3XFpL[103X, [3Xmax[103X[, [3Xweights[103X] ) [32X function[133X
+  
+  [33X[0;0YHere  [3XFpL[103X  is a finitely presented Lie algebra. Let [22XK[122X be the quotient of [3XFpL[103X
+  by the [3Xmax[103X+1-th term of its lower central series. This function calculates a
+  surjective homomorphism from [3XFpL[103X onto [22XK[122X. When called with the third argument
+  [3Xweights[103X,  the  [22Xk[122X-th  generator  of [3XFpL[103X gets assigned the [22Xk[122X-th element of the
+  list  [3Xweights[103X.  In  that  case  a quotient is calculated of [3XFpL[103X by the ideal
+  generated by all elements of weight [3Xmax[103X+1. If the list [3Xweights[103X only consists
+  of  [22X1[122X's then the two calls are equivalent. The default value of [3Xweights[103X is a
+  list (of length equal to the number of generators of [3XFpL[103X) consisting of [22X1[122X's.[133X
+  
+  [33X[0;0YIf  the  relators  of  [3XFpL[103X  are  homogeneous,  then the resulting algebra is
+  naturally graded.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= FreeLieAlgebra( Rationals, "x", "y" );;[127X[104X
+    [4X[25Xgap>[125X [27Xg:= GeneratorsOfAlgebra(L);; x:= g[1]; y:= g[2];[127X[104X
+    [4X[28X(1)*x[128X[104X
+    [4X[28X(1)*y[128X[104X
+    [4X[25Xgap>[125X [27Xrr:=[ ((y*x)*x)*x-6*(y*x)*y,[127X[104X
+    [4X[25X>[125X [27X         3*((((y*x)*x)*x)*x)*x-20*(((y*x)*x)*x)*y ];[127X[104X
+    [4X[28X[ (-1)*(x*(x*(x*y)))+(6)*((x*y)*y),[128X[104X
+    [4X[28X  (-3)*(x*(x*(x*(x*(x*y)))))+(20)*(x*(x*((x*y)*y)))+([128X[104X
+    [4X[28X    -20)*((x*(x*y))*(x*y)) ][128X[104X
+    [4X[25Xgap>[125X [27XK:= L/rr;[127X[104X
+    [4X[28X<Lie algebra over Rationals, with 2 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xh:=NilpotentQuotientOfFpLieAlgebra(K, 50, [1,2] );[127X[104X
+    [4X[28X[ [(1)*x], [(1)*y] ] -> [ v.1, v.2 ][128X[104X
+    [4X[25Xgap>[125X [27XL:= Range( h );[127X[104X
+    [4X[28X<Lie algebra of dimension 50 over Rationals>[128X[104X
+    [4X[25Xgap>[125X [27XGrading( L );[127X[104X
+    [4X[28Xrec( hom_components := function( d ) ... end, max_degree := 50,[128X[104X
+    [4X[28X  min_degree := 1, source := Integers )[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X64.12 [33X[0;0YModules over Lie Algebras and Their Cohomology[133X[101X
+  
+  [33X[0;0YRepresentations  of  Lie  algebras  are  dealt  with  in  the  same  way  as
+  representations  of ordinary algebras (see [14X62.11[114X). In this section we mainly
+  deal  with  modules over general Lie algebras and their cohomology. The next
+  section  is devoted to modules over semisimple Lie algebras. An [22Xs[122X-cochain of
+  a module [22XV[122X over a Lie algebra [22XL[122X is an [22Xs[122X-linear map[133X
+  
+  
+  [24X[33X[0;6Yc: L × ⋯ × L → V ,[133X[124X
+  
+  [33X[0;0Ywith  [22Xs[122X  factors  [22XL[122X,  that  is  skew-symmetric  (meaning  that if any of the
+  arguments are interchanged, [22Xc[122X changes to [22X-c[122X).[133X
+  
+  [33X[0;0YLet [22X(x_1, ..., x_n)[122X be a basis of [22XL[122X. Then any [22Xs[122X-cochain is determined by the
+  values  [22Xc(  x_{i_1},  ..., x_{i_s} )[122X, where [22X1 ≤ i_1 < i_2 < ⋯ < i_s ≤ dim L[122X.
+  Now  this  value  again  is  a linear combination of basis elements of [22XV[122X: [22Xc(
+  x_{i_1},  ..., x_{i_s} ) = ∑ λ^k_{i_1,..., i_s} v_k[122X. Denote the dimension of
+  [22XV[122X  by  [22Xr[122X.  Then  we represent an [22Xs[122X-cocycle by a list of [22Xr[122X lists. The [22Xj[122X-th of
+  those lists consists of entries of the form[133X
+  
+  
+  [24X[33X[0;6Y[ [ i_1, i_2, ..., i_s ], λ^j_{i_1, ..., i_s} ][133X[124X
+  
+  [33X[0;0Ywhere  the  coefficient  on  the second position is non-zero. (We only store
+  those entries for which this coefficient is non-zero.) It follows that every
+  [22Xs[122X-tuple [22X(i_1, ..., i_s)[122X gives rise to [22Xr[122X basis elements.[133X
+  
+  [33X[0;0YSo the zero cochain is represented by a list of the form [10X[ [ ], [ ], \ldots,
+  [  ]  ][110X.  Furthermore,  if  [22XV[122X  is,  e.g.,  [22X4[122X-dimensional, then the [22X2[122X-cochain
+  represented by[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[ [ [ [1,2], 2] ], [ ], [ [ [1,2], 1/2 ] ], [ ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Ymaps  the  pair  [22X(x_1,  x_2)[122X to [22X2v_1 + 1/2 v_3[122X (where [22Xv_1[122X is the first basis
+  element of [22XV[122X, and [22Xv_3[122X the third), and all other pairs to zero.[133X
+  
+  [33X[0;0YBy  definition, [22X0[122X-cochains are constant maps [22Xc( x ) = v_c ∈ V[122X for all [22Xx ∈ L[122X.
+  So  [22X0[122X-cochains have a different representation: they are just represented by
+  the list [10X[ v_c ][110X.[133X
+  
+  [33X[0;0YCochains  are  constructed  using  the function [2XCochain[102X ([14X64.12-2[114X), if [3Xc[103X is a
+  cochain, then its corresponding list is returned by [10XExtRepOfObj( [3Xc[103X[10X )[110X.[133X
+  
+  [1X64.12-1 IsCochain[101X
+  
+  [33X[1;0Y[29X[2XIsCochain[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsCochainCollection[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YCategories of cochains and of collections of cochains.[133X
+  
+  [1X64.12-2 Cochain[101X
+  
+  [33X[1;0Y[29X[2XCochain[102X( [3XV[103X, [3Xs[103X, [3Xobj[103X ) [32X operation[133X
+  
+  [33X[0;0YConstructs  a  [3Xs[103X-cochain  given  by the data in [3Xobj[103X, with respect to the Lie
+  algebra module [3XV[103X. If [3Xs[103X is non-zero, then [3Xobj[103X must be a list.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "A", 1, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27XV:= AdjointModule( L );[127X[104X
+    [4X[28X<3-dimensional left-module over <Lie algebra of dimension[128X[104X
+    [4X[28X3 over Rationals>>[128X[104X
+    [4X[25Xgap>[125X [27Xc1:= Cochain( V, 2,[127X[104X
+    [4X[25X>[125X [27X              [ [ [ [ 1, 3 ], -1 ] ], [ ], [ [ [ 2, 3 ], 1/2 ] ] ]);[127X[104X
+    [4X[28X<2-cochain>[128X[104X
+    [4X[25Xgap>[125X [27XExtRepOfObj( c1 );[127X[104X
+    [4X[28X[ [ [ [ 1, 3 ], -1 ] ], [  ], [ [ [ 2, 3 ], 1/2 ] ] ][128X[104X
+    [4X[25Xgap>[125X [27Xc2:= Cochain( V, 0, Basis( V )[1] );[127X[104X
+    [4X[28X<0-cochain>[128X[104X
+    [4X[25Xgap>[125X [27XExtRepOfObj( c2 );[127X[104X
+    [4X[28Xv.1[128X[104X
+    [4X[25Xgap>[125X [27XIsCochain( c2 );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X64.12-3 CochainSpace[101X
+  
+  [33X[1;0Y[29X[2XCochainSpace[102X( [3XV[103X, [3Xs[103X ) [32X operation[133X
+  
+  [33X[0;0YReturns the space of all [3Xs[103X-cochains with respect to [3XV[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "A", 1, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27XV:= AdjointModule( L );;[127X[104X
+    [4X[25Xgap>[125X [27XC:=CochainSpace( V, 2 );[127X[104X
+    [4X[28X<vector space of dimension 9 over Rationals>[128X[104X
+    [4X[25Xgap>[125X [27XBasisVectors( Basis( C ) );[127X[104X
+    [4X[28X[ <2-cochain>, <2-cochain>, <2-cochain>, <2-cochain>, <2-cochain>,[128X[104X
+    [4X[28X  <2-cochain>, <2-cochain>, <2-cochain>, <2-cochain> ][128X[104X
+    [4X[25Xgap>[125X [27XExtRepOfObj( last[1] );[127X[104X
+    [4X[28X[ [ [ [ 1, 2 ], 1 ] ], [  ], [  ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X64.12-4 ValueCochain[101X
+  
+  [33X[1;0Y[29X[2XValueCochain[102X( [3Xc[103X, [3Xy1[103X, [3Xy2[103X, [3X...[103X, [3Xys[103X ) [32X function[133X
+  
+  [33X[0;0YHere [3Xc[103X is an [10Xs[110X-cochain. This function returns the value of [3Xc[103X when applied to
+  the  [10Xs[110X  elements  [3Xy1[103X to [3Xys[103X (that lie in the Lie algebra acting on the module
+  corresponding  to  [3Xc[103X).  It  is  also possible to call this function with two
+  arguments: first [3Xc[103X and then the list containing [10X[3Xy1[103X[10X,...,[3Xys[103X[10X[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "A", 1, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27XV:= AdjointModule( L );;[127X[104X
+    [4X[25Xgap>[125X [27XC:= CochainSpace( V, 2 );;[127X[104X
+    [4X[25Xgap>[125X [27Xc:= Basis( C )[1];[127X[104X
+    [4X[28X<2-cochain>[128X[104X
+    [4X[25Xgap>[125X [27X ValueCochain( c, Basis(L)[2], Basis(L)[1] );[127X[104X
+    [4X[28X(-1)*v.1[128X[104X
+  [4X[32X[104X
+  
+  [1X64.12-5 LieCoboundaryOperator[101X
+  
+  [33X[1;0Y[29X[2XLieCoboundaryOperator[102X( [3Xc[103X ) [32X function[133X
+  
+  [33X[0;0YThis  is  a  function that takes an [10Xs[110X-cochain [3Xc[103X, and returns an [10Xs+1[110X-cochain.
+  The coboundary operator is applied.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "A", 1, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27XV:= AdjointModule( L );;[127X[104X
+    [4X[25Xgap>[125X [27XC:= CochainSpace( V, 2 );;[127X[104X
+    [4X[25Xgap>[125X [27Xc:= Basis( C )[1];;[127X[104X
+    [4X[25Xgap>[125X [27Xc1:= LieCoboundaryOperator( c );[127X[104X
+    [4X[28X<3-cochain>[128X[104X
+    [4X[25Xgap>[125X [27Xc2:= LieCoboundaryOperator( c1 );[127X[104X
+    [4X[28X<4-cochain>[128X[104X
+  [4X[32X[104X
+  
+  [1X64.12-6 Cocycles[101X
+  
+  [33X[1;0Y[29X[2XCocycles[102X( [3XV[103X, [3Xs[103X ) [32X operation[133X
+  
+  [33X[0;0Yis  the  space  of  all [3Xs[103X-cocycles with respect to the Lie algebra module [3XV[103X.
+  That  is  the kernel of the coboundary operator when restricted to the space
+  of [3Xs[103X-cochains.[133X
+  
+  [1X64.12-7 Coboundaries[101X
+  
+  [33X[1;0Y[29X[2XCoboundaries[102X( [3XV[103X, [3Xs[103X ) [32X operation[133X
+  
+  [33X[0;0Yis the space of all [3Xs[103X-coboundaries with respect to the Lie algebra module [3XV[103X.
+  That  is  the image of the coboundary operator, when applied to the space of
+  [3Xs[103X-1-cochains. By definition the space of all 0-coboundaries is zero.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XT:= EmptySCTable( 3, 0, "antisymmetric" );;[127X[104X
+    [4X[25Xgap>[125X [27XSetEntrySCTable( T, 1, 2, [ 1, 3 ] );[127X[104X
+    [4X[25Xgap>[125X [27XL:= LieAlgebraByStructureConstants( Rationals, T );;[127X[104X
+    [4X[25Xgap>[125X [27XV:= FaithfulModule( L );[127X[104X
+    [4X[28X<left-module over <Lie algebra of dimension 3 over Rationals>>[128X[104X
+    [4X[25Xgap>[125X [27XCocycles( V, 2 );[127X[104X
+    [4X[28X<vector space of dimension 7 over Rationals>[128X[104X
+    [4X[25Xgap>[125X [27XCoboundaries( V, 2 );[127X[104X
+    [4X[28X<vector space over Rationals, with 9 generators>[128X[104X
+    [4X[25Xgap>[125X [27XDimension( last );[127X[104X
+    [4X[28X5[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X64.13 [33X[0;0YModules over Semisimple Lie Algebras[133X[101X
+  
+  [33X[0;0YThis   section   contains   functions   for   calculating   information   on
+  representations of semisimple Lie algebras. First we have some functions for
+  calculating  some  combinatorial data (set of dominant weights, the dominant
+  character,  the  decomposition  of  a  tensor  product,  the  dimension of a
+  highest-weight  module). Then there is a function for creating an admissible
+  lattice  in  the  universal  enveloping algebra of a semisimple Lie algebra.
+  Finally  we  have a function for constructing a highest-weight module over a
+  semisimple Lie algebra.[133X
+  
+  [1X64.13-1 DominantWeights[101X
+  
+  [33X[1;0Y[29X[2XDominantWeights[102X( [3XR[103X, [3Xmaxw[103X ) [32X operation[133X
+  
+  [33X[0;0YReturns  a  list  consisting  of  two lists. The first of these contains the
+  dominant  weights  (written  on  the  basis  of  fundamental weights) of the
+  irreducible  highest-weight  module,  with highest weight [3Xmaxw[103X, over the Lie
+  algebra  with  the root system [3XR[103X. The [22Xi[122X-th element of the second list is the
+  level  of  the [22Xi[122X-th dominant weight. (Where the level is defined as follows.
+  For  a  weight  [22Xμ[122X we write [22Xμ = λ - ∑_i k_i α_i[122X, where the [22Xα_i[122X are the simple
+  roots, and [22Xλ[122X the highest weight. Then the level of [22Xμ[122X is [22X∑_i k_i[122X.)[133X
+  
+  [1X64.13-2 DominantCharacter[101X
+  
+  [33X[1;0Y[29X[2XDominantCharacter[102X( [3XL[103X, [3Xmaxw[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XDominantCharacter[102X( [3XR[103X, [3Xmaxw[103X ) [32X operation[133X
+  
+  [33X[0;0YFor  a  highest weight [3Xmaxw[103X and a semisimple Lie algebra [3XL[103X, this returns the
+  dominant  weights  of  the highest-weight module over [3XL[103X, with highest weight
+  [3Xmaxw[103X.  The  output  is  a  list  of  two  lists, the first list contains the
+  dominant weights; the second list contains their multiplicities.[133X
+  
+  [33X[0;0YThe  first  argument  can  also be a root system, in which case the dominant
+  character of the highest-weight module over the corresponding semisimple Lie
+  algebra is returned.[133X
+  
+  [1X64.13-3 DecomposeTensorProduct[101X
+  
+  [33X[1;0Y[29X[2XDecomposeTensorProduct[102X( [3XL[103X, [3Xw1[103X, [3Xw2[103X ) [32X operation[133X
+  
+  [33X[0;0YHere  [3XL[103X is a semisimple Lie algebra and [3Xw1[103X, [3Xw2[103X are dominant weights. Let [22XV_i[122X
+  be  the irreducible highest-weight module over [3XL[103X with highest weight [22Xw_i[122X for
+  [22Xi  = 1, 2[122X. Let [22XW = V_1 ⊗ V_2[122X. Then in general [22XW[122X is a reducible [3XL[103X-module. Now
+  this  function returns a list of two lists. The first of these is the sorted
+  list  of  highest  weights  of  the  irreducible  modules  occurring  in the
+  decomposition  of  [22XW[122X as a direct sum of irreducible modules. The second list
+  contains  the multiplicities of these weights (i.e., the number of copies of
+  the  irreducible  module with the corresponding highest weight that occur in
+  [22XW[122X).  The  algorithm  uses  Klimyk's  formula (see [Kli68] or [Kli66] for the
+  original Russian version).[133X
+  
+  [1X64.13-4 DimensionOfHighestWeightModule[101X
+  
+  [33X[1;0Y[29X[2XDimensionOfHighestWeightModule[102X( [3XL[103X, [3Xw[103X ) [32X operation[133X
+  
+  [33X[0;0YHere  [3XL[103X  is a semisimple Lie algebra, and [3Xw[103X a dominant weight. This function
+  returns  the  dimension  of  the  highest-weight  module over [3XL[103X with highest
+  weight [3Xw[103X. The algorithm uses Weyl's dimension formula.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "F", 4, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27XR:= RootSystem( L );;[127X[104X
+    [4X[25Xgap>[125X [27XDominantWeights( R, [ 1, 1, 0, 0 ] );[127X[104X
+    [4X[28X[ [ [ 1, 1, 0, 0 ], [ 2, 0, 0, 0 ], [ 0, 0, 1, 0 ], [ 0, 1, 0, 0 ],[128X[104X
+    [4X[28X      [ 1, 0, 0, 0 ], [ 0, 0, 0, 0 ] ], [ 0, 3, 4, 8, 11, 19 ] ][128X[104X
+    [4X[25Xgap>[125X [27XDominantCharacter( L, [ 1, 1, 0, 0 ] );[127X[104X
+    [4X[28X[ [ [ 1, 1, 0, 0 ], [ 2, 0, 0, 0 ], [ 0, 0, 1, 0 ], [ 0, 1, 0, 0 ],[128X[104X
+    [4X[28X      [ 1, 0, 0, 0 ], [ 0, 0, 0, 0 ] ], [ 1, 1, 4, 6, 14, 21 ] ][128X[104X
+    [4X[25Xgap>[125X [27XDecomposeTensorProduct( L, [ 1, 0, 0, 0 ], [ 0, 0, 1, 0 ] );[127X[104X
+    [4X[28X[ [ [ 0, 0, 0, 1 ], [ 0, 0, 1, 0 ], [ 0, 1, 0, 0 ], [ 1, 0, 0, 0 ],[128X[104X
+    [4X[28X      [ 1, 0, 1, 0 ], [ 1, 1, 0, 0 ], [ 2, 0, 0, 0 ] ],[128X[104X
+    [4X[28X  [ 1, 1, 1, 1, 1, 1, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27XDimensionOfHighestWeightModule( L, [ 1, 2, 3, 4 ] );[127X[104X
+    [4X[28X79316832731136[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X64.14 [33X[0;0YAdmissible Lattices in UEA[133X[101X
+  
+  [33X[0;0YLet  [22XL[122X be a semisimple Lie algebra over a field of characteristic [22X0[122X, and let
+  [22XR[122X  be  its root system. For a positive root [22Xα[122X we let [22Xx_α[122X and [22Xy_α[122X be positive
+  and  negative  root vectors, respectively, both from a fixed Chevalley basis
+  of  [22XL[122X.  Furthermore,  [22Xh_1,  ...,  h_l[122X  are the Cartan elements from the same
+  Chevalley basis. Also we set[133X
+  
+  
+  [24X[33X[0;6Yx_α^(n) = {x_α^n over n!}, y_α^(n) = {y_α^n over n!} .[133X[124X
+  
+  [33X[0;0YFurthermore,  let  [22Xα_1,  ...,  α_s[122X  denote  the  positive  roots  of  [22XR[122X. For
+  multi-indices  [22XN  =  (n_1, ..., n_s)[122X, [22XM = (m_1, ..., m_s)[122X and [22XK = (k_1, ...,
+  k_s)[122X (where [22Xn_i, m_i, k_i ≥ 0[122X) set[133X
+  
+        [22Xx^N[122X   =   [22Xx_{α_1}^(n_1) ⋯ x_{α_s}^(n_s)[122X,        
+        [22Xy^M[122X   =   [22Xy_{α_1}^(m_1) ⋯ y_{α_s}^(m_s)[122X,        
+        [22Xh^K[122X   =   [22X{h_1 choose k_1} ⋯ {h_l choose k_l}[122X   
+  
+  [33X[0;0YThen  by a theorem of Kostant, the [22Xx_α^(n)[122X and [22Xy_α^(n)[122X generate a subring of
+  the  universal  enveloping  algebra [22XU(L)[122X spanned (as a free [22XZ[122X-module) by the
+  elements[133X
+  
+  
+  [24X[33X[0;6Yy^M h^K x^N[133X[124X
+  
+  [33X[0;0Y(see, e.g., [Hum72] or [Hum78, Section 26]) So by the Poincare-Birkhoff-Witt
+  theorem  this  subring  is  a  lattice in [22XU(L)[122X. Furthermore, this lattice is
+  invariant  under  the  [22Xx_α^(n)[122X  and  [22Xy_α^(n)[122X.  Therefore,  it  is  called an
+  admissible lattice in [22XU(L)[122X.[133X
+  
+  [33X[0;0YThe  next  functions  enable  us  to  construct  the  generators  of such an
+  admissible lattice.[133X
+  
+  [1X64.14-1 IsUEALatticeElement[101X
+  
+  [33X[1;0Y[29X[2XIsUEALatticeElement[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsUEALatticeElementCollection[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsUEALatticeElementFamily[102X( [3Xfam[103X ) [32X Category[133X
+  
+  [33X[0;0Yis  the  category  of  elements  of  an  admissible lattice in the universal
+  enveloping algebra of a semisimple Lie algebra [10XL[110X.[133X
+  
+  [1X64.14-2 LatticeGeneratorsInUEA[101X
+  
+  [33X[1;0Y[29X[2XLatticeGeneratorsInUEA[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0YHere  [3XL[103X  must be a semisimple Lie algebra of characteristic [22X0[122X. This function
+  returns  a  list  of  generators  of  an admissible lattice in the universal
+  enveloping  algebra  of  [3XL[103X,  relative  to  the  Chevalley basis contained in
+  [10XChevalleyBasis(  [3XL[103X[10X  )[110X  (see [2XChevalleyBasis[102X  ([14X64.6-2[114X)).  First are listed the
+  negative  root  vectors  (denoted  by [22Xy_1, ..., y_s[122X), then the positive root
+  vectors  (denoted  by  [22Xx_1,  ..., x_s[122X). At the end of the list there are the
+  Cartan elements. They are printed as [10X( hi/1 )[110X, which means[133X
+  
+  
+  [24X[33X[0;6Y{h_i choose 1}.[133X[124X
+  
+  [33X[0;0YIn general the printed form [10X( hi/ k )[110X means[133X
+  
+  
+  [24X[33X[0;6Y{h_i choose k}.[133X[124X
+  
+  [33X[0;0YAlso [22Xy_i^(m)[122X is printed as [10Xyi^(m)[110X, which means that entering [10Xyi^m[110X at the [5XGAP[105X
+  prompt results in the output [10Xm!*yi^(m)[110X.[133X
+  
+  [33X[0;0YProducts  of  lattice  generators  are  collected using the following order:
+  first come the [22Xy_i^(m_i)[122X (in the same order as the positive roots), then the
+  [22Xh_i  choose  k_i[122X,  and then the [22Xx_i^(n_i)[122X (in the same order as the positive
+  roots).[133X
+  
+  [1X64.14-3 ObjByExtRep[101X
+  
+  [33X[1;0Y[29X[2XObjByExtRep[102X( [3XF[103X, [3Xdescr[103X ) [32X method[133X
+  
+  [33X[0;0YAn UEALattice element is represented by a list of the form [10X[ m1, c1, m2, c2,
+  ...  ][110X,  where  the  [10Xc1[110X,  [10Xc2[110X  etc. are coefficients, and the [10Xm1[110X, [10Xm2[110X etc. are
+  monomials.  A  monomial  is  a  list of the form [10X[ ind1, e1, ind2, e2, ... ][110X
+  where  [10Xind1[110X,  [10Xind2[110X  are indices, and [10Xe1[110X, [10Xe2[110X etc. are exponents. Let [22XN[122X be the
+  number  of  positive  roots of the underlying Lie algebra [10XL[110X. The indices lie
+  between 1 and [22Xdim(L)[122X. If an index lies between 1 and [10XN[110X, then it represents a
+  negative  root  vector  (corresponding  to the root [10XNegativeRoots( R )[ind][110X,
+  where  [10XR[110X is the root system of [10XL[110X; see [2XNegativeRoots[102X ([14X64.6-8[114X)). This leads to
+  a  factor  [10Xyind1^(e1)[110X  in  the  printed  form  of the monomial (which equals
+  [10Xz^e1/e1![110X, where [10Xz[110X is a basis element of [10XL[110X). If an index lies between [22XN+1[122X and
+  [22X2N[122X,  then it represents a positive root vector. Finally, if ind lies between
+  [22X2N+1[122X  and  [22X2N+rank[122X,  then it represents an element of the Cartan subalgebra.
+  This  is  printed  as  [22X( h_1/ e_1 )[122X, meaning [22Xh_1 choose e_1[122X, where [22Xh_1, ...,
+  h_rank[122X are the canonical Cartan generators.[133X
+  
+  [33X[0;0YThe  zero  element is represented by the empty list, the identity element by
+  the list [10X[ [], 1 ][110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra( "G", 2, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27Xg:=LatticeGeneratorsInUEA( L );[127X[104X
+    [4X[28X[ y1, y2, y3, y4, y5, y6, x1, x2, x3, x4, x5, x6, ( h13/1 ),[128X[104X
+    [4X[28X  ( h14/1 ) ][128X[104X
+    [4X[25Xgap>[125X [27XIsUEALatticeElement( g[1] );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xg[1]^3;[127X[104X
+    [4X[28X6*y1^(3)[128X[104X
+    [4X[25Xgap>[125X [27Xq:= g[7]*g[1]^2;[127X[104X
+    [4X[28X-2*y1+2*y1*( h13/1 )+2*y1^(2)*x1[128X[104X
+    [4X[25Xgap>[125X [27XExtRepOfObj( q );[127X[104X
+    [4X[28X[ [ 1, 1 ], -2, [ 1, 1, 13, 1 ], 2, [ 1, 2, 7, 1 ], 2 ][128X[104X
+  [4X[32X[104X
+  
+  [1X64.14-4 IsWeightRepElement[101X
+  
+  [33X[1;0Y[29X[2XIsWeightRepElement[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsWeightRepElementCollection[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsWeightRepElementFamily[102X( [3Xfam[103X ) [32X Category[133X
+  
+  [33X[0;0YIs   a   category  of  vectors,  that  is  used  to  construct  elements  of
+  highest-weight modules (by [2XHighestWeightModule[102X ([14X64.14-5[114X)).[133X
+  
+  [33X[0;0Y[10XWeightRepElement[110Xs  are  represented  by a list of the form [10X[ v1, c1, v2, c2,
+  ....][110X,  where  the  [10Xvi[110X  are  basis  vectors,  and  the  [10Xci[110X are coefficients.
+  Furthermore a basis vector [10Xv[110X is a weight vector. It is represented by a list
+  of  the  form  [10X[  k, mon, wt ][110X, where [10Xk[110X is an integer (the basis vectors are
+  numbered  from  [22X1[122X to [22Xdim V[122X, where [22XV[122X is the highest weight module), [10Xmon[110X is an
+  [10XUEALatticeElement[110X  (which means that the result of applying [10Xmon[110X to a highest
+  weight  vector is [10Xv[110X; see [2XIsUEALatticeElement[102X ([14X64.14-1[114X)) and [10Xwt[110X is the weight
+  of  [10Xv[110X.  A  [10XWeightRepElement[110X  is  printed as [10Xmon*v0[110X, where [10Xv0[110X denotes a fixed
+  highest weight vector.[133X
+  
+  [33X[0;0YIf  [10Xv[110X is a [10XWeightRepElement[110X, then [10XExtRepOfObj( v )[110X returns the corresponding
+  list,  and  if  [10Xlist[110X  is  such a list and [3Xfam[103X a [10XWeightRepElementFamily[110X, then
+  [10XObjByExtRep( [3Xlist[103X[10X, [3Xfam[103X[10X )[110X returns the corresponding [10XWeightRepElement[110X.[133X
+  
+  [1X64.14-5 HighestWeightModule[101X
+  
+  [33X[1;0Y[29X[2XHighestWeightModule[102X( [3XL[103X, [3Xwt[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  highest weight module with highest weight [3Xwt[103X of the semisimple
+  Lie algebra [3XL[103X of characteristic [22X0[122X.[133X
+  
+  [33X[0;0YNote   that   the   elements   of   such   a  module  lie  in  the  category
+  [2XIsLeftAlgebraModuleElement[102X  ([14X62.11-9[114X)  (and in particular they do not lie in
+  the  category  [2XIsWeightRepElement[102X ([14X64.14-4[114X)). However, if [10Xv[110X is an element of
+  such a module, then [10XExtRepOfObj( v )[110X is a [10XWeightRepElement[110X.[133X
+  
+  [33X[0;0YNote  that  for  the following examples of this chapter we increase the line
+  length  limit  from  its  default  value 80 to 81 in order to make some long
+  output expressions fit into the lines.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XK1:= SimpleLieAlgebra( "G", 2, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27XK2:= SimpleLieAlgebra( "B", 2, Rationals );;[127X[104X
+    [4X[25Xgap>[125X [27XL:= DirectSumOfAlgebras( K1, K2 );[127X[104X
+    [4X[28X<Lie algebra of dimension 24 over Rationals>[128X[104X
+    [4X[25Xgap>[125X [27XV:= HighestWeightModule( L, [ 0, 1, 1, 1 ] );[127X[104X
+    [4X[28X<224-dimensional left-module over <Lie algebra of dimension[128X[104X
+    [4X[28X24 over Rationals>>[128X[104X
+    [4X[25Xgap>[125X [27Xvv:= GeneratorsOfLeftModule( V );;[127X[104X
+    [4X[25Xgap>[125X [27Xvv[100];[127X[104X
+    [4X[28Xy5*y7*y10*v0[128X[104X
+    [4X[25Xgap>[125X [27Xe:= ExtRepOfObj( vv[100] );[127X[104X
+    [4X[28Xy5*y7*y10*v0[128X[104X
+    [4X[25Xgap>[125X [27XExtRepOfObj( e );[127X[104X
+    [4X[28X[ [ 100, y5*y7*y10, [ -3, 2, -1, 1 ] ], 1 ][128X[104X
+    [4X[25Xgap>[125X [27XBasis(L)[17]^vv[100];[127X[104X
+    [4X[28X-1*y5*y7*y8*v0-1*y5*y9*v0[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X64.15 [33X[0;0YTensor Products and Exterior and Symmetric Powers of Algebra Modules[133X[101X
+  
+  [1X64.15-1 TensorProductOfAlgebraModules[101X
+  
+  [33X[1;0Y[29X[2XTensorProductOfAlgebraModules[102X( [3Xlist[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XTensorProductOfAlgebraModules[102X( [3XV[103X, [3XW[103X ) [32X operation[133X
+  
+  [33X[0;0YHere  the  elements  of  [3Xlist[103X must be algebra modules. The tensor product is
+  returned  as  an  algebra module. The two-argument version works in the same
+  way and returns the tensor product of its arguments.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra("G",2,Rationals);;[127X[104X
+    [4X[25Xgap>[125X [27XV:= HighestWeightModule( L, [ 1, 0 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XW:= TensorProductOfAlgebraModules( [ V, V, V ] );[127X[104X
+    [4X[28X<343-dimensional left-module over <Lie algebra of dimension[128X[104X
+    [4X[28X14 over Rationals>>[128X[104X
+    [4X[25Xgap>[125X [27Xw:= Basis(W)[1];[127X[104X
+    [4X[28X1*(1*v0<x>1*v0<x>1*v0)[128X[104X
+    [4X[25Xgap>[125X [27XBasis(L)[1]^w;[127X[104X
+    [4X[28X<0-tensor>[128X[104X
+    [4X[25Xgap>[125X [27XBasis(L)[7]^w;[127X[104X
+    [4X[28X1*(1*v0<x>1*v0<x>y1*v0)+1*(1*v0<x>y1*v0<x>1*v0)+1*(y[128X[104X
+    [4X[28X1*v0<x>1*v0<x>1*v0)[128X[104X
+  [4X[32X[104X
+  
+  [1X64.15-2 ExteriorPowerOfAlgebraModule[101X
+  
+  [33X[1;0Y[29X[2XExteriorPowerOfAlgebraModule[102X( [3XV[103X, [3Xk[103X ) [32X operation[133X
+  
+  [33X[0;0YHere  [3XV[103X must be an algebra module, defined over a Lie algebra. This function
+  returns the [3Xk[103X-th exterior power of [3XV[103X as an algebra module.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra("G",2,Rationals);;[127X[104X
+    [4X[25Xgap>[125X [27XV:= HighestWeightModule( L, [ 1, 0 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XW:= ExteriorPowerOfAlgebraModule( V, 3 );[127X[104X
+    [4X[28X<35-dimensional left-module over <Lie algebra of dimension[128X[104X
+    [4X[28X14 over Rationals>>[128X[104X
+    [4X[25Xgap>[125X [27Xw:= Basis(W)[1];[127X[104X
+    [4X[28X1*(1*v0/\y1*v0/\y3*v0)[128X[104X
+    [4X[25Xgap>[125X [27XBasis(L)[10]^w;[127X[104X
+    [4X[28X1*(1*v0/\y1*v0/\y6*v0)+1*(1*v0/\y3*v0/\y5*v0)+1*(y1*v0/\y3*v0/\y4*v0)[128X[104X
+  [4X[32X[104X
+  
+  [1X64.15-3 SymmetricPowerOfAlgebraModule[101X
+  
+  [33X[1;0Y[29X[2XSymmetricPowerOfAlgebraModule[102X( [3XV[103X, [3Xk[103X ) [32X operation[133X
+  
+  [33X[0;0YHere  [3XV[103X  must be an algebra module. This function returns the [3Xk[103X-th symmetric
+  power of [3XV[103X (as an algebra module).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SimpleLieAlgebra("G",2,Rationals);;[127X[104X
+    [4X[25Xgap>[125X [27XV:= HighestWeightModule( L, [ 1, 0 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XW:= SymmetricPowerOfAlgebraModule( V, 3 );[127X[104X
+    [4X[28X<84-dimensional left-module over <Lie algebra of dimension[128X[104X
+    [4X[28X14 over Rationals>>[128X[104X
+    [4X[25Xgap>[125X [27Xw:= Basis(W)[1];[127X[104X
+    [4X[28X1*(1*v0.1*v0.1*v0)[128X[104X
+    [4X[25Xgap>[125X [27XBasis(L)[2]^w;[127X[104X
+    [4X[28X<0-symmetric element>[128X[104X
+    [4X[25Xgap>[125X [27XBasis(L)[7]^w;[127X[104X
+    [4X[28X3*(1*v0.1*v0.y1*v0)[128X[104X
+  [4X[32X[104X
+  

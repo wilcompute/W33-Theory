@@ -1,0 +1,858 @@
+  
+  [1X16 [33X[0;0YCombinatorics[133X[101X
+  
+  [33X[0;0YThis  chapter  describes  functions  that deal with combinatorics. We mainly
+  concentrate  on two areas. One is about [13Xselections[113X, that is the ways one can
+  select  elements from a set. The other is about [13Xpartitions[113X, that is the ways
+  one can partition a set into the union of pairwise disjoint subsets.[133X
+  
+  
+  [1X16.1 [33X[0;0YCombinatorial Numbers[133X[101X
+  
+  [1X16.1-1 Factorial[101X
+  
+  [33X[1;0Y[29X[2XFactorial[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  the [13Xfactorial[113X [22Xn![122X of the positive integer [3Xn[103X, which is defined as the
+  product [22X1 ⋅ 2 ⋅ 3 ⋯ n[122X.[133X
+  
+  [33X[0;0Y[22Xn![122X  is  the  number  of  permutations  of a set of [22Xn[122X elements. [22X1 / n![122X is the
+  coefficient  of  [22Xx^n[122X  in  the  formal series [22Xexp(x)[122X, which is the generating
+  function for factorial.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XList( [0..10], Factorial );[127X[104X
+    [4X[28X[ 1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800 ][128X[104X
+    [4X[25Xgap>[125X [27XFactorial( 30 );[127X[104X
+    [4X[28X265252859812191058636308480000000[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[2XPermutationsList[102X ([14X16.2-12[114X) computes the set of all permutations of a list.[133X
+  
+  [1X16.1-2 Binomial[101X
+  
+  [33X[1;0Y[29X[2XBinomial[102X( [3Xn[103X, [3Xk[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  the  [13Xbinomial coefficient[113X [22X{n choose k}[122X of integers [3Xn[103X and [3Xk[103X. This is
+  defined by the conditions [22X{n choose k} = 0[122X for [22Xk < 0[122X, [22X{0 choose k} = 0[122X for [22Xk
+  ≠  0[122X, [22X{0 choose 0} = 1[122X and the relation [22X{n choose k} = {n-1 choose k} + {n-1
+  choose k-1}[122X for all [22Xn[122X and [22Xk[122X.[133X
+  
+  [33X[0;0YThere are many ways of describing this function. For example, if [22Xn ≥ 0[122X and [22X0
+  ≤  k  ≤  n[122X,  then [22X{n choose k} = n! / (k! (n-k)!)[122X and for [22Xn < 0[122X and [22Xk ≥ 0[122X we
+  have [22X{n choose k} = (-1)^k {-n+k-1 choose k}[122X.[133X
+  
+  [33X[0;0YIf [22Xn ≥ 0[122X then [22X{n choose k}[122X is the number of subsets with [22Xk[122X elements of a set
+  with  [22Xn[122X  elements.  Also,  [22X{n  choose  k}[122X  is  the coefficient of [22Xx^k[122X in the
+  polynomial  [22X(x  +  1)^n[122X,  which is the generating function for [22X{n choose .}[122X,
+  hence the name.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X# Knuth calls this the trademark of Binomial:[127X[104X
+    [4X[25Xgap>[125X [27XList( [0..4], k->Binomial( 4, k ) );[127X[104X
+    [4X[28X[ 1, 4, 6, 4, 1 ][128X[104X
+    [4X[25Xgap>[125X [27XList( [0..6], n->List( [0..6], k->Binomial( n, k ) ) );;[127X[104X
+    [4X[25Xgap>[125X [27X# the lower triangle is called Pascal's triangle:[127X[104X
+    [4X[25Xgap>[125X [27XPrintArray( last );[127X[104X
+    [4X[28X[ [   1,   0,   0,   0,   0,   0,   0 ],[128X[104X
+    [4X[28X  [   1,   1,   0,   0,   0,   0,   0 ],[128X[104X
+    [4X[28X  [   1,   2,   1,   0,   0,   0,   0 ],[128X[104X
+    [4X[28X  [   1,   3,   3,   1,   0,   0,   0 ],[128X[104X
+    [4X[28X  [   1,   4,   6,   4,   1,   0,   0 ],[128X[104X
+    [4X[28X  [   1,   5,  10,  10,   5,   1,   0 ],[128X[104X
+    [4X[28X  [   1,   6,  15,  20,  15,   6,   1 ] ][128X[104X
+    [4X[25Xgap>[125X [27XBinomial( 50, 10 );[127X[104X
+    [4X[28X10272278170[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[2XNrCombinations[102X  ([14X16.2-3[114X)  is  the  generalization of [2XBinomial[102X for multisets.
+  [2XCombinations[102X ([14X16.2-1[114X) computes the set of all combinations of a multiset.[133X
+  
+  [1X16.1-3 Bell[101X
+  
+  [33X[1;0Y[29X[2XBell[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  the  [13XBell number[113X [22XB(n)[122X. The Bell numbers are defined by [22XB(0) = 1[122X and
+  the recurrence [22XB(n+1) = ∑_{k = 0}^n {n choose k} B(k)[122X.[133X
+  
+  [33X[0;0Y[22XB(n)[122X  is  the  number of ways to partition a set of [3Xn[103X elements into pairwise
+  disjoint  nonempty  subsets  (see  [2XPartitionsSet[102X ([14X16.2-16[114X)). This implies of
+  course that [22XB(n) = ∑_{k = 0}^n S_2(n,k)[122X (see [2XStirling2[102X ([14X16.1-6[114X)). [22XB(n)/n![122X is
+  the  coefficient  of  [22Xx^n[122X in the formal series [22Xexp( exp(x)-1 )[122X, which is the
+  generating function for [22XB(n)[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XList( [0..6], n -> Bell( n ) );[127X[104X
+    [4X[28X[ 1, 1, 2, 5, 15, 52, 203 ][128X[104X
+    [4X[25Xgap>[125X [27XBell( 14 );[127X[104X
+    [4X[28X190899322[128X[104X
+  [4X[32X[104X
+  
+  [1X16.1-4 Bernoulli[101X
+  
+  [33X[1;0Y[29X[2XBernoulli[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the [3Xn[103X-th [13XBernoulli number[113X [22XB_n[122X, which is defined by [22XB_0 = 1[122X and [22XB_n =
+  -∑_{k = 0}^{n-1} {n+1 choose k} B_k/(n+1)[122X.[133X
+  
+  [33X[0;0Y[22XB_n  /  n![122X  is the coefficient of [22Xx^n[122X in the power series of [22Xx / (exp(x)-1)[122X.
+  Except for [22XB_1 = -1/2[122X the Bernoulli numbers for odd indices are zero.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XBernoulli( 4 );[127X[104X
+    [4X[28X-1/30[128X[104X
+    [4X[25Xgap>[125X [27XBernoulli( 10 );[127X[104X
+    [4X[28X5/66[128X[104X
+    [4X[25Xgap>[125X [27XBernoulli( 12 );  # there is no simple pattern in Bernoulli numbers[127X[104X
+    [4X[28X-691/2730[128X[104X
+    [4X[25Xgap>[125X [27XBernoulli( 50 );  # and they grow fairly fast[127X[104X
+    [4X[28X495057205241079648212477525/66[128X[104X
+  [4X[32X[104X
+  
+  [1X16.1-5 Stirling1[101X
+  
+  [33X[1;0Y[29X[2XStirling1[102X( [3Xn[103X, [3Xk[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the [13XStirling number of the first kind[113X [22XS_1(n,k)[122X of the integers [3Xn[103X and
+  [3Xk[103X.  Stirling numbers of the first kind are defined by [22XS_1(0,0) = 1[122X, [22XS_1(n,0)
+  = S_1(0,k) = 0[122X if [22Xn, k ne 0[122X and the recurrence [22XS_1(n,k) = (n-1) S_1(n-1,k) +
+  S_1(n-1,k-1)[122X.[133X
+  
+  [33X[0;0Y[22XS_1(n,k)[122X  is  the number of permutations of [3Xn[103X points with [3Xk[103X cycles. Stirling
+  numbers  of the first kind appear as coefficients in the series [22Xn! {x choose
+  n}  = ∑_{k = 0}^n S_1(n,k) x^k[122X which is the generating function for Stirling
+  numbers of the first kind. Note the similarity to [22Xx^n = ∑_{k = 0}^n S_2(n,k)
+  k! {x choose k}[122X (see [2XStirling2[102X ([14X16.1-6[114X)). Also the definition of [22XS_1[122X implies
+  [22XS_1(n,k) = S_2(-k,-n)[122X if [22Xn, k < 0[122X. There are many formulae relating Stirling
+  numbers  of  the  first  kind  to  Stirling numbers of the second kind, Bell
+  numbers, and Binomial coefficients.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X# Knuth calls this the trademark of S_1:[127X[104X
+    [4X[25Xgap>[125X [27XList( [0..4], k -> Stirling1( 4, k ) );[127X[104X
+    [4X[28X[ 0, 6, 11, 6, 1 ][128X[104X
+    [4X[25Xgap>[125X [27XList( [0..6], n->List( [0..6], k->Stirling1( n, k ) ) );;[127X[104X
+    [4X[25Xgap>[125X [27X# note the similarity with Pascal's triangle for Binomial numbers[127X[104X
+    [4X[25Xgap>[125X [27XPrintArray( last );[127X[104X
+    [4X[28X[ [    1,    0,    0,    0,    0,    0,    0 ],[128X[104X
+    [4X[28X  [    0,    1,    0,    0,    0,    0,    0 ],[128X[104X
+    [4X[28X  [    0,    1,    1,    0,    0,    0,    0 ],[128X[104X
+    [4X[28X  [    0,    2,    3,    1,    0,    0,    0 ],[128X[104X
+    [4X[28X  [    0,    6,   11,    6,    1,    0,    0 ],[128X[104X
+    [4X[28X  [    0,   24,   50,   35,   10,    1,    0 ],[128X[104X
+    [4X[28X  [    0,  120,  274,  225,   85,   15,    1 ] ][128X[104X
+    [4X[25Xgap>[125X [27XStirling1(50,10);[127X[104X
+    [4X[28X101623020926367490059043797119309944043405505380503665627365376[128X[104X
+  [4X[32X[104X
+  
+  [1X16.1-6 Stirling2[101X
+  
+  [33X[1;0Y[29X[2XStirling2[102X( [3Xn[103X, [3Xk[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  the  [13XStirling  number of the second kind[113X [22XS_2(n,k)[122X of the integers [3Xn[103X
+  and  [3Xk[103X.  Stirling  numbers  of  the second kind are defined by [22XS_2(0,0) = 1[122X,
+  [22XS_2(n,0)  =  S_2(0,k)  =  0[122X  if  [22Xn,  k  ne 0[122X and the recurrence [22XS_2(n,k) = k
+  S_2(n-1,k) + S_2(n-1,k-1)[122X.[133X
+  
+  [33X[0;0Y[22XS_2(n,k)[122X  is  the  number  of  ways  to partition a set of [3Xn[103X elements into [3Xk[103X
+  pairwise  disjoint  nonempty subsets (see [2XPartitionsSet[102X ([14X16.2-16[114X)). Stirling
+  numbers  of the second kind appear as coefficients in the expansion of [22Xx^n =
+  ∑_{k = 0}^n S_2(n,k) k! {x choose k}[122X. Note the similarity to [22Xn! {x choose n}
+  =  ∑_{k = 0}^n S_1(n,k) x^k[122X (see [2XStirling1[102X ([14X16.1-5[114X)). Also the definition of
+  [22XS_2[122X  implies  [22XS_2(n,k)  =  S_1(-k,-n)[122X  if  [22Xn, k < 0[122X. There are many formulae
+  relating  Stirling  numbers  of  the  second kind to Stirling numbers of the
+  first kind, Bell numbers, and Binomial coefficients.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X# Knuth calls this the trademark of S_2:[127X[104X
+    [4X[25Xgap>[125X [27XList( [0..4], k->Stirling2( 4, k ) );[127X[104X
+    [4X[28X[ 0, 1, 7, 6, 1 ][128X[104X
+    [4X[25Xgap>[125X [27XList( [0..6], n->List( [0..6], k->Stirling2( n, k ) ) );;[127X[104X
+    [4X[25Xgap>[125X [27X# note the similarity with Pascal's triangle for Binomial numbers[127X[104X
+    [4X[25Xgap>[125X [27XPrintArray( last );[127X[104X
+    [4X[28X[ [   1,   0,   0,   0,   0,   0,   0 ],[128X[104X
+    [4X[28X  [   0,   1,   0,   0,   0,   0,   0 ],[128X[104X
+    [4X[28X  [   0,   1,   1,   0,   0,   0,   0 ],[128X[104X
+    [4X[28X  [   0,   1,   3,   1,   0,   0,   0 ],[128X[104X
+    [4X[28X  [   0,   1,   7,   6,   1,   0,   0 ],[128X[104X
+    [4X[28X  [   0,   1,  15,  25,  10,   1,   0 ],[128X[104X
+    [4X[28X  [   0,   1,  31,  90,  65,  15,   1 ] ][128X[104X
+    [4X[25Xgap>[125X [27XStirling2( 50, 10 );[127X[104X
+    [4X[28X26154716515862881292012777396577993781727011[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X16.2 [33X[0;0YCombinations, Arrangements and Tuples[133X[101X
+  
+  [1X16.2-1 Combinations[101X
+  
+  [33X[1;0Y[29X[2XCombinations[102X( [3Xmset[103X[, [3Xk[103X] ) [32X function[133X
+  
+  [33X[0;0Yreturns  the set of all combinations of the multiset [3Xmset[103X (a list of objects
+  which  may  contain  the same object several times) with [3Xk[103X elements; if [3Xk[103X is
+  not given it returns all combinations of [3Xmset[103X.[133X
+  
+  [33X[0;0YA  [13Xcombination[113X  of [3Xmset[103X is an unordered selection without repetitions and is
+  represented  by a sorted sublist of [3Xmset[103X. If [3Xmset[103X is a proper set, there are
+  [22X{|[3Xmset[103X|  choose [3Xk[103X}[122X (see [2XBinomial[102X ([14X16.1-2[114X)) combinations with [3Xk[103X elements, and
+  the  set  of  all combinations is just the [13Xpower set[113X of [3Xmset[103X, which contains
+  all [13Xsubsets[113X of [3Xmset[103X and has cardinality [22X2^{|[3Xmset[103X|}[122X.[133X
+  
+  [33X[0;0YTo  loop  over  combinations of a larger multiset use [2XIteratorOfCombinations[102X
+  ([14X16.2-2[114X)  which  produces  combinations  one  by  one  and may save a lot of
+  memory.   Another  memory  efficient  representation  of  the  list  of  all
+  combinations is provided by [2XEnumeratorOfCombinations[102X ([14X16.2-2[114X).[133X
+  
+  
+  [1X16.2-2 [33X[0;0YIterator and enumerator of combinations[133X[101X
+  
+  [33X[1;0Y[29X[2XIteratorOfCombinations[102X( [3Xmset[103X[, [3Xk[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XEnumeratorOfCombinations[102X( [3Xmset[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XIteratorOfCombinations[102X  returns  an  [2XIterator[102X ([14X30.8-1[114X) for combinations (see
+  [2XCombinations[102X ([14X16.2-1[114X)) of the given multiset [3Xmset[103X. If a non-negative integer
+  [3Xk[103X  is given as second argument then only the combinations with [3Xk[103X entries are
+  produced, otherwise all combinations.[133X
+  
+  [33X[0;0Y[2XEnumeratorOfCombinations[102X   returns  an  [2XEnumerator[102X  ([14X30.3-2[114X)  of  the  given
+  multiset  [3Xmset[103X.  Currently  only  a  variant  without  second  argument [3Xk[103X is
+  implemented.[133X
+  
+  [33X[0;0YThe  ordering of combinations from these functions can be different and also
+  different from the list returned by [2XCombinations[102X ([14X16.2-1[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm:=[1..15];; Add(m, 15);[127X[104X
+    [4X[25Xgap>[125X [27XNrCombinations(m);[127X[104X
+    [4X[28X49152[128X[104X
+    [4X[25Xgap>[125X [27Xi := 0;; for c in Combinations(m) do i := i+1; od;[127X[104X
+    [4X[25Xgap>[125X [27Xi;[127X[104X
+    [4X[28X49152[128X[104X
+    [4X[25Xgap>[125X [27Xcm := EnumeratorOfCombinations(m);;[127X[104X
+    [4X[25Xgap>[125X [27Xcm[1000];[127X[104X
+    [4X[28X[ 1, 2, 3, 6, 7, 8, 9, 10 ][128X[104X
+    [4X[25Xgap>[125X [27XPosition(cm, [1,13,15,15]);[127X[104X
+    [4X[28X36866[128X[104X
+  [4X[32X[104X
+  
+  [1X16.2-3 NrCombinations[101X
+  
+  [33X[1;0Y[29X[2XNrCombinations[102X( [3Xmset[103X[, [3Xk[103X] ) [32X function[133X
+  
+  [33X[0;0Yreturns the number of [10XCombinations([3Xmset[103X[10X,[3Xk[103X[10X)[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XCombinations( [1,2,2,3] );[127X[104X
+    [4X[28X[ [  ], [ 1 ], [ 1, 2 ], [ 1, 2, 2 ], [ 1, 2, 2, 3 ], [ 1, 2, 3 ],[128X[104X
+    [4X[28X  [ 1, 3 ], [ 2 ], [ 2, 2 ], [ 2, 2, 3 ], [ 2, 3 ], [ 3 ] ][128X[104X
+    [4X[25Xgap>[125X [27X# number of different hands in a game of poker:[127X[104X
+    [4X[25Xgap>[125X [27XNrCombinations( [1..52], 5 );[127X[104X
+    [4X[28X2598960[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  function  [2XArrangements[102X  ([14X16.2-4[114X)  computes  ordered  selections without
+  repetitions,  [2XUnorderedTuples[102X  ([14X16.2-6[114X)  computes  unordered selections with
+  repetitions,   and   [2XTuples[102X   ([14X16.2-8[114X)   computes  ordered  selections  with
+  repetitions.[133X
+  
+  [1X16.2-4 Arrangements[101X
+  
+  [33X[1;0Y[29X[2XArrangements[102X( [3Xmset[103X[, [3Xk[103X] ) [32X function[133X
+  
+  [33X[0;0Yreturns  the  set  of  arrangements  of  the  multiset  [3Xmset[103X  that contain [3Xk[103X
+  elements. If [3Xk[103X is not given it returns all arrangements of [3Xmset[103X.[133X
+  
+  [33X[0;0YAn  [13Xarrangement[113X  of  [3Xmset[103X is an ordered selection without repetitions and is
+  represented  by a list that contains only elements from [3Xmset[103X, but maybe in a
+  different  order.  If  [3Xmset[103X  is a proper set there are [22X|mset|! / (|mset|-k)![122X
+  (see [2XFactorial[102X ([14X16.1-1[114X)) arrangements with [3Xk[103X elements.[133X
+  
+  [1X16.2-5 NrArrangements[101X
+  
+  [33X[1;0Y[29X[2XNrArrangements[102X( [3Xmset[103X[, [3Xk[103X] ) [32X function[133X
+  
+  [33X[0;0Yreturns the number of [10XArrangements([3Xmset[103X[10X,[3Xk[103X[10X)[110X.[133X
+  
+  [33X[0;0YAs  an  example  of  arrangements of a multiset, think of the game Scrabble.
+  Suppose  you  have  the  six characters of the word [10X"settle"[110X and you have to
+  make a four letter word. Then the possibilities are given by[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XArrangements( ["s","e","t","t","l","e"], 4 );[127X[104X
+    [4X[28X[ [ "e", "e", "l", "s" ], [ "e", "e", "l", "t" ], [ "e", "e", "s", "l" ],[128X[104X
+    [4X[28X  [ "e", "e", "s", "t" ], [ "e", "e", "t", "l" ], [ "e", "e", "t", "s" ],[128X[104X
+    [4X[28X  ... 93 more possibilities ...[128X[104X
+    [4X[28X  [ "t", "t", "l", "s" ], [ "t", "t", "s", "e" ], [ "t", "t", "s", "l" ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YCan  you  find  the  five proper English words, where [10X"lets"[110X does not count?
+  Note  that  the  fact  that  the list returned by [2XArrangements[102X ([14X16.2-4[114X) is a
+  proper  set  means  in this example that the possibilities are listed in the
+  same order as they appear in the dictionary.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XNrArrangements( ["s","e","t","t","l","e"] );[127X[104X
+    [4X[28X523[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  function  [2XCombinations[102X  ([14X16.2-1[114X)  computes unordered selections without
+  repetitions,  [2XUnorderedTuples[102X  ([14X16.2-6[114X)  computes  unordered selections with
+  repetitions,   and   [2XTuples[102X   ([14X16.2-8[114X)   computes  ordered  selections  with
+  repetitions.[133X
+  
+  [1X16.2-6 UnorderedTuples[101X
+  
+  [33X[1;0Y[29X[2XUnorderedTuples[102X( [3Xset[103X, [3Xk[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the set of all unordered tuples of length [3Xk[103X of the set [3Xset[103X.[133X
+  
+  [33X[0;0YAn  [13Xunordered  tuple[113X  of  length  [3Xk[103X  of  [3Xset[103X  is an unordered selection with
+  repetitions  of  [3Xset[103X  and  is  represented  by  a  sorted  list  of length [3Xk[103X
+  containing  elements  from  [3Xset[103X.  There  are  [22X{|set|  + k - 1 choose k}[122X (see
+  [2XBinomial[102X ([14X16.1-2[114X)) such unordered tuples.[133X
+  
+  [33X[0;0YNote  that the fact that [2XUnorderedTuples[102X returns a set implies that the last
+  index runs fastest. That means the first tuple contains the smallest element
+  from  [3Xset[103X  [3Xk[103X times, the second tuple contains the smallest element of [3Xset[103X at
+  all  positions  except  at  the last positions, where it contains the second
+  smallest element from [3Xset[103X and so on.[133X
+  
+  [1X16.2-7 NrUnorderedTuples[101X
+  
+  [33X[1;0Y[29X[2XNrUnorderedTuples[102X( [3Xset[103X, [3Xk[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the number of [10XUnorderedTuples([3Xset[103X[10X,[3Xk[103X[10X)[110X.[133X
+  
+  [33X[0;0YAs  an example for unordered tuples think of a poker-like game played with 5
+  dice.  Then  each  possible hand corresponds to an unordered five-tuple from
+  the set [22X{ 1, 2, ..., 6 }[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XNrUnorderedTuples( [1..6], 5 );[127X[104X
+    [4X[28X252[128X[104X
+    [4X[25Xgap>[125X [27XUnorderedTuples( [1..6], 5 );[127X[104X
+    [4X[28X[ [ 1, 1, 1, 1, 1 ], [ 1, 1, 1, 1, 2 ], [ 1, 1, 1, 1, 3 ], [ 1, 1, 1, 1, 4 ],[128X[104X
+    [4X[28X  [ 1, 1, 1, 1, 5 ], [ 1, 1, 1, 1, 6 ], [ 1, 1, 1, 2, 2 ], [ 1, 1, 1, 2, 3 ],[128X[104X
+    [4X[28X  ... 100 more tuples ...[128X[104X
+    [4X[28X  [ 1, 3, 5, 5, 6 ], [ 1, 3, 5, 6, 6 ], [ 1, 3, 6, 6, 6 ], [ 1, 4, 4, 4, 4 ],[128X[104X
+    [4X[28X  ... 100 more tuples ...[128X[104X
+    [4X[28X  [ 3, 3, 5, 5, 5 ], [ 3, 3, 5, 5, 6 ], [ 3, 3, 5, 6, 6 ], [ 3, 3, 6, 6, 6 ],[128X[104X
+    [4X[28X  ... 32 more tuples ...[128X[104X
+    [4X[28X  [ 5, 5, 5, 6, 6 ], [ 5, 5, 6, 6, 6 ], [ 5, 6, 6, 6, 6 ], [ 6, 6, 6, 6, 6 ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  function  [2XCombinations[102X  ([14X16.2-1[114X)  computes unordered selections without
+  repetitions,  [2XArrangements[102X  ([14X16.2-4[114X)  computes  ordered  selections  without
+  repetitions,   and   [2XTuples[102X   ([14X16.2-8[114X)   computes  ordered  selections  with
+  repetitions.[133X
+  
+  [1X16.2-8 Tuples[101X
+  
+  [33X[1;0Y[29X[2XTuples[102X( [3Xset[103X, [3Xk[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the set of all ordered tuples of length [3Xk[103X of the set [3Xset[103X.[133X
+  
+  [33X[0;0YAn  [13Xordered tuple[113X of length [3Xk[103X of [3Xset[103X is an ordered selection with repetition
+  and  is  represented by a list of length [3Xk[103X containing elements of [3Xset[103X. There
+  are [22X|[3Xset[103X|^[3Xk[103X[122X such ordered tuples.[133X
+  
+  [33X[0;0YNote  that  the  fact  that [2XTuples[102X returns a set implies that the last index
+  runs  fastest. That means the first tuple contains the smallest element from
+  [3Xset[103X  [3Xk[103X  times,  the second tuple contains the smallest element of [3Xset[103X at all
+  positions  except  at  the  last  positions,  where  it  contains the second
+  smallest element from [3Xset[103X and so on.[133X
+  
+  [1X16.2-9 EnumeratorOfTuples[101X
+  
+  [33X[1;0Y[29X[2XEnumeratorOfTuples[102X( [3Xset[103X, [3Xk[103X ) [32X function[133X
+  
+  [33X[0;0YThis  function  is referred to as an example of enumerators that are defined
+  by  functions  but are not constructed from a domain. The result is equal to
+  that  of [10XTuples( [3Xset[103X[10X, [3Xk[103X[10X )[110X. However, the entries are not stored physically in
+  the list but are created/identified on demand.[133X
+  
+  [1X16.2-10 IteratorOfTuples[101X
+  
+  [33X[1;0Y[29X[2XIteratorOfTuples[102X( [3Xset[103X, [3Xk[103X ) [32X function[133X
+  
+  [33X[0;0YFor a set [3Xset[103X and a positive integer [3Xk[103X, [2XIteratorOfTuples[102X returns an iterator
+  (see [14X30.8[114X)  of the set of all ordered tuples (see [2XTuples[102X ([14X16.2-8[114X)) of length
+  [3Xk[103X of the set [3Xset[103X. The tuples are returned in lexicographic order.[133X
+  
+  [1X16.2-11 NrTuples[101X
+  
+  [33X[1;0Y[29X[2XNrTuples[102X( [3Xset[103X, [3Xk[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the number of [10XTuples([3Xset[103X[10X,[3Xk[103X[10X)[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTuples( [1,2,3], 2 );[127X[104X
+    [4X[28X[ [ 1, 1 ], [ 1, 2 ], [ 1, 3 ], [ 2, 1 ], [ 2, 2 ], [ 2, 3 ],[128X[104X
+    [4X[28X  [ 3, 1 ], [ 3, 2 ], [ 3, 3 ] ][128X[104X
+    [4X[25Xgap>[125X [27XNrTuples( [1..10], 5 );[127X[104X
+    [4X[28X100000[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[10XTuples([3Xset[103X[10X,[3Xk[103X[10X)[110X can also be viewed as the [3Xk[103X-fold cartesian product of [3Xset[103X (see
+  [2XCartesian[102X ([14X21.20-15[114X)).[133X
+  
+  [33X[0;0YThe  function  [2XCombinations[102X  ([14X16.2-1[114X)  computes unordered selections without
+  repetitions,  [2XArrangements[102X  ([14X16.2-4[114X)  computes  ordered  selections  without
+  repetitions,  and  finally  the  function  [2XUnorderedTuples[102X ([14X16.2-6[114X) computes
+  unordered selections with repetitions.[133X
+  
+  [1X16.2-12 PermutationsList[101X
+  
+  [33X[1;0Y[29X[2XPermutationsList[102X( [3Xmset[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XPermutationsList[102X returns the set of permutations of the multiset [3Xmset[103X.[133X
+  
+  [33X[0;0YA  [13Xpermutation[113X  is  represented  by  a  list  that contains exactly the same
+  elements  as  [3Xmset[103X, but possibly in different order. If [3Xmset[103X is a proper set
+  there  are [22X|[3Xmset[103X| ![122X (see [2XFactorial[102X ([14X16.1-1[114X)) such permutations. Otherwise if
+  the  first  elements appears [22Xk_1[122X times, the second element appears [22Xk_2[122X times
+  and  so  on, the number of permutations is [22X|[3Xmset[103X| ! / (k_1! k_2! ...)[122X, which
+  is sometimes called multinomial coefficient.[133X
+  
+  [1X16.2-13 NrPermutationsList[101X
+  
+  [33X[1;0Y[29X[2XNrPermutationsList[102X( [3Xmset[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the number of [10XPermutationsList([3Xmset[103X[10X)[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPermutationsList( [1,2,3] );[127X[104X
+    [4X[28X[ [ 1, 2, 3 ], [ 1, 3, 2 ], [ 2, 1, 3 ], [ 2, 3, 1 ], [ 3, 1, 2 ],[128X[104X
+    [4X[28X  [ 3, 2, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27XPermutationsList( [1,1,2,2] );[127X[104X
+    [4X[28X[ [ 1, 1, 2, 2 ], [ 1, 2, 1, 2 ], [ 1, 2, 2, 1 ], [ 2, 1, 1, 2 ],[128X[104X
+    [4X[28X  [ 2, 1, 2, 1 ], [ 2, 2, 1, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27XNrPermutationsList( [1,2,2,3,3,3,4,4,4,4] );[127X[104X
+    [4X[28X12600[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe function [2XArrangements[102X ([14X16.2-4[114X) is the generalization of [2XPermutationsList[102X
+  ([14X16.2-12[114X)  that  allows  you  to  specify  the  size  of  the  permutations.
+  [2XDerangements[102X ([14X16.2-14[114X) computes permutations that have no fixed points.[133X
+  
+  [1X16.2-14 Derangements[101X
+  
+  [33X[1;0Y[29X[2XDerangements[102X( [3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the set of all derangements of the list [3Xlist[103X.[133X
+  
+  [33X[0;0YA  [13Xderangement[113X is a fixpointfree permutation of [3Xlist[103X and is represented by a
+  list  that  contains exactly the same elements as [3Xlist[103X, but in such an order
+  that  the  derangement  has  at no position the same element as [3Xlist[103X. If the
+  list [3Xlist[103X contains no element twice there are exactly [22X|[3Xlist[103X|! (1/2! - 1/3! +
+  1/4! - ⋯ + (-1)^n / n!)[122X derangements.[133X
+  
+  [33X[0;0YNote  that  the ratio [10XNrPermutationsList( [ 1 .. n ] ) / NrDerangements( [ 1
+  ..  n  ]  )[110X, which is [22Xn! / (n! (1/2! - 1/3! + 1/4! - ⋯ + (-1)^n / n!))[122X is an
+  approximation  for  the  base  of the natural logarithm [22Xe = 2.7182818285...[122X,
+  which is correct to about [22Xn[122X digits.[133X
+  
+  [1X16.2-15 NrDerangements[101X
+  
+  [33X[1;0Y[29X[2XNrDerangements[102X( [3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the number of [10XDerangements([3Xlist[103X[10X)[110X.[133X
+  
+  [33X[0;0YAs  an  example of derangements suppose that you have to send four different
+  letters to four different people. Then a derangement corresponds to a way to
+  send those letters such that no letter reaches the intended person.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDerangements( [1,2,3,4] );[127X[104X
+    [4X[28X[ [ 2, 1, 4, 3 ], [ 2, 3, 4, 1 ], [ 2, 4, 1, 3 ], [ 3, 1, 4, 2 ],[128X[104X
+    [4X[28X  [ 3, 4, 1, 2 ], [ 3, 4, 2, 1 ], [ 4, 1, 2, 3 ], [ 4, 3, 1, 2 ],[128X[104X
+    [4X[28X  [ 4, 3, 2, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27XNrDerangements( [1..10] );[127X[104X
+    [4X[28X1334961[128X[104X
+    [4X[25Xgap>[125X [27XInt( 10^7*NrPermutationsList([1..10])/last );[127X[104X
+    [4X[28X27182816[128X[104X
+    [4X[25Xgap>[125X [27XDerangements( [1,1,2,2,3,3] );[127X[104X
+    [4X[28X[ [ 2, 2, 3, 3, 1, 1 ], [ 2, 3, 1, 3, 1, 2 ], [ 2, 3, 1, 3, 2, 1 ],[128X[104X
+    [4X[28X  [ 2, 3, 3, 1, 1, 2 ], [ 2, 3, 3, 1, 2, 1 ], [ 3, 2, 1, 3, 1, 2 ],[128X[104X
+    [4X[28X  [ 3, 2, 1, 3, 2, 1 ], [ 3, 2, 3, 1, 1, 2 ], [ 3, 2, 3, 1, 2, 1 ],[128X[104X
+    [4X[28X  [ 3, 3, 1, 1, 2, 2 ] ][128X[104X
+    [4X[25Xgap>[125X [27XNrDerangements( [1,2,2,3,3,3,4,4,4,4] );[127X[104X
+    [4X[28X338[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe function [2XPermutationsList[102X ([14X16.2-12[114X) computes all permutations of a list.[133X
+  
+  [1X16.2-16 PartitionsSet[101X
+  
+  [33X[1;0Y[29X[2XPartitionsSet[102X( [3Xset[103X[, [3Xk[103X] ) [32X function[133X
+  
+  [33X[0;0Yreturns  the  set of all unordered partitions of the set [3Xset[103X into [3Xk[103X pairwise
+  disjoint  nonempty  sets.  If  [3Xk[103X  is  not  given  it  returns  all unordered
+  partitions of [3Xset[103X for all [3Xk[103X.[133X
+  
+  [33X[0;0YAn  [13Xunordered  partition[113X  of [3Xset[103X is a set of pairwise disjoint nonempty sets
+  with  union  [3Xset[103X and is represented by a sorted list of such sets. There are
+  [22XB( |set| )[122X (see [2XBell[102X ([14X16.1-3[114X)) partitions of the set [3Xset[103X and [22XS_2( |set|, k )[122X
+  (see [2XStirling2[102X ([14X16.1-6[114X)) partitions with [3Xk[103X elements.[133X
+  
+  [1X16.2-17 NrPartitionsSet[101X
+  
+  [33X[1;0Y[29X[2XNrPartitionsSet[102X( [3Xset[103X[, [3Xk[103X] ) [32X function[133X
+  
+  [33X[0;0Yreturns the number of [10XPartitionsSet([3Xset[103X[10X,[3Xk[103X[10X)[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPartitionsSet( [1,2,3] );[127X[104X
+    [4X[28X[ [ [ 1 ], [ 2 ], [ 3 ] ], [ [ 1 ], [ 2, 3 ] ], [ [ 1, 2 ], [ 3 ] ],[128X[104X
+    [4X[28X  [ [ 1, 2, 3 ] ], [ [ 1, 3 ], [ 2 ] ] ][128X[104X
+    [4X[25Xgap>[125X [27XPartitionsSet( [1,2,3,4], 2 );[127X[104X
+    [4X[28X[ [ [ 1 ], [ 2, 3, 4 ] ], [ [ 1, 2 ], [ 3, 4 ] ],[128X[104X
+    [4X[28X  [ [ 1, 2, 3 ], [ 4 ] ], [ [ 1, 2, 4 ], [ 3 ] ],[128X[104X
+    [4X[28X  [ [ 1, 3 ], [ 2, 4 ] ], [ [ 1, 3, 4 ], [ 2 ] ],[128X[104X
+    [4X[28X  [ [ 1, 4 ], [ 2, 3 ] ] ][128X[104X
+    [4X[25Xgap>[125X [27XNrPartitionsSet( [1..6] );[127X[104X
+    [4X[28X203[128X[104X
+    [4X[25Xgap>[125X [27XNrPartitionsSet( [1..10], 3 );[127X[104X
+    [4X[28X9330[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  [2XPartitionsSet[102X ([14X16.2-16[114X) does currently not support multisets and
+  that there is currently no ordered counterpart.[133X
+  
+  [1X16.2-18 Partitions[101X
+  
+  [33X[1;0Y[29X[2XPartitions[102X( [3Xn[103X[, [3Xk[103X] ) [32X function[133X
+  
+  [33X[0;0Yreturns the set of all (unordered) partitions of the positive integer [3Xn[103X into
+  sums  with [3Xk[103X summands. If [3Xk[103X is not given it returns all unordered partitions
+  of [3Xn[103X for all [3Xk[103X.[133X
+  
+  [33X[0;0YAn  [13Xunordered  partition[113X  is  an  unordered  sum  [22Xn = p_1 + p_2 + ⋯ + p_k[122X of
+  positive integers and is represented by the list [22Xp = [ p_1, p_2, ..., p_k ][122X,
+  in  nonincreasing  order, i.e., [22Xp_1 ≥ p_2 ≥ ... ≥ p_k[122X. We write [22Xp ⊢ n[122X. There
+  are  approximately  [22Xexp(π  sqrt{2/3 n}) / (4 sqrt{3} n)[122X such partitions, use
+  [2XNrPartitions[102X ([14X16.2-21[114X) to compute the precise number.[133X
+  
+  [33X[0;0YIf you want to loop over all partitions of some larger [3Xn[103X use the more memory
+  efficient [2XIteratorOfPartitions[102X ([14X16.2-19[114X).[133X
+  
+  [33X[0;0YIt  is  possible  to  associate  with  every  partition  of  the integer [3Xn[103X a
+  conjugacy  class of permutations in the symmetric group on [3Xn[103X points and vice
+  versa.  Therefore  [22Xp(n) :=[122X[10XNrPartitions[110X[22X(n)[122X is the number of conjugacy classes
+  of the symmetric group on [3Xn[103X points.[133X
+  
+  [33X[0;0YRamanujan  found  the  identities  [22Xp(5i+4)  = 0[122X mod 5, [22Xp(7i+5) = 0[122X mod 7 and
+  [22Xp(11i+6)  =  0[122X  mod 11 and many other fascinating things about the number of
+  partitions.[133X
+  
+  [1X16.2-19 IteratorOfPartitions[101X
+  
+  [33X[1;0Y[29X[2XIteratorOfPartitions[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0YFor   a   positive  integer  [3Xn[103X,  [2XIteratorOfPartitions[102X  returns  an  iterator
+  (see [14X30.8[114X)  of  the  set  of partitions of [3Xn[103X (see [2XPartitions[102X ([14X16.2-18[114X)). The
+  partitions of [3Xn[103X are returned in lexicographic order.[133X
+  
+  [1X16.2-20 IteratorOfPartitionsSet[101X
+  
+  [33X[1;0Y[29X[2XIteratorOfPartitionsSet[102X( [3Xset[103X[, [3Xk[103X[, [3Xflag[103X]] ) [32X function[133X
+  
+  [33X[0;0Y[2XIteratorOfPartitionsSet[102X  returns  an  iterator  (see [14X30.8[114X) for all unordered
+  partitions  of  the  set  [3Xset[103X  into  pairwise  disjoint  nonempty  sets (see
+  [2XPartitionsSet[102X  ([14X16.2-16[114X)). If [3Xk[103X given and [3Xflag[103X is omitted or equal to [9Xfalse[109X,
+  then only partitions of size [3Xk[103X are computed. If [3Xk[103X is given and [3Xflag[103X is equal
+  to [9Xtrue[109X, then only partitions of size at most [3Xk[103X are computed.[133X
+  
+  [1X16.2-21 NrPartitions[101X
+  
+  [33X[1;0Y[29X[2XNrPartitions[102X( [3Xn[103X[, [3Xk[103X] ) [32X function[133X
+  
+  [33X[0;0Yreturns the number of [10XPartitions([3Xset[103X[10X,[3Xk[103X[10X)[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPartitions( 7 );[127X[104X
+    [4X[28X[ [ 1, 1, 1, 1, 1, 1, 1 ], [ 2, 1, 1, 1, 1, 1 ], [ 2, 2, 1, 1, 1 ],[128X[104X
+    [4X[28X  [ 2, 2, 2, 1 ], [ 3, 1, 1, 1, 1 ], [ 3, 2, 1, 1 ], [ 3, 2, 2 ],[128X[104X
+    [4X[28X  [ 3, 3, 1 ], [ 4, 1, 1, 1 ], [ 4, 2, 1 ], [ 4, 3 ], [ 5, 1, 1 ],[128X[104X
+    [4X[28X  [ 5, 2 ], [ 6, 1 ], [ 7 ] ][128X[104X
+    [4X[25Xgap>[125X [27XPartitions( 8, 3 );[127X[104X
+    [4X[28X[ [ 3, 3, 2 ], [ 4, 2, 2 ], [ 4, 3, 1 ], [ 5, 2, 1 ], [ 6, 1, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27XNrPartitions( 7 );[127X[104X
+    [4X[28X15[128X[104X
+    [4X[25Xgap>[125X [27XNrPartitions( 100 );[127X[104X
+    [4X[28X190569292[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  function  [2XOrderedPartitions[102X  ([14X16.2-22[114X)  is  the  ordered counterpart of
+  [2XPartitions[102X ([14X16.2-18[114X).[133X
+  
+  [1X16.2-22 OrderedPartitions[101X
+  
+  [33X[1;0Y[29X[2XOrderedPartitions[102X( [3Xn[103X[, [3Xk[103X] ) [32X function[133X
+  
+  [33X[0;0Yreturns  the  set  of  all ordered partitions of the positive integer [3Xn[103X into
+  sums with [3Xk[103X summands. If [3Xk[103X is not given it returns all ordered partitions of
+  [3Xset[103X for all [3Xk[103X.[133X
+  
+  [33X[0;0YAn [13Xordered partition[113X is an ordered sum [22Xn = p_1 + p_2 + ... + p_k[122X of positive
+  integers  and  is  represented by the list [22X[ p_1, p_2, ..., p_k ][122X. There are
+  totally  [22X2^{n-1}[122X  ordered  partitions  and  [22X{n-1  choose  k-1}[122X (see [2XBinomial[102X
+  ([14X16.1-2[114X)) ordered partitions with [3Xk[103X summands.[133X
+  
+  [33X[0;0YDo  not  call [2XOrderedPartitions[102X with an [3Xn[103X much larger than [22X15[122X, the list will
+  simply become too large.[133X
+  
+  [1X16.2-23 NrOrderedPartitions[101X
+  
+  [33X[1;0Y[29X[2XNrOrderedPartitions[102X( [3Xn[103X[, [3Xk[103X] ) [32X function[133X
+  
+  [33X[0;0Yreturns the number of [10XOrderedPartitions([3Xset[103X[10X,[3Xk[103X[10X)[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XOrderedPartitions( 5 );[127X[104X
+    [4X[28X[ [ 1, 1, 1, 1, 1 ], [ 1, 1, 1, 2 ], [ 1, 1, 2, 1 ], [ 1, 1, 3 ],[128X[104X
+    [4X[28X  [ 1, 2, 1, 1 ], [ 1, 2, 2 ], [ 1, 3, 1 ], [ 1, 4 ], [ 2, 1, 1, 1 ],[128X[104X
+    [4X[28X  [ 2, 1, 2 ], [ 2, 2, 1 ], [ 2, 3 ], [ 3, 1, 1 ], [ 3, 2 ],[128X[104X
+    [4X[28X  [ 4, 1 ], [ 5 ] ][128X[104X
+    [4X[25Xgap>[125X [27XOrderedPartitions( 6, 3 );[127X[104X
+    [4X[28X[ [ 1, 1, 4 ], [ 1, 2, 3 ], [ 1, 3, 2 ], [ 1, 4, 1 ], [ 2, 1, 3 ],[128X[104X
+    [4X[28X  [ 2, 2, 2 ], [ 2, 3, 1 ], [ 3, 1, 2 ], [ 3, 2, 1 ], [ 4, 1, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27XNrOrderedPartitions(20);[127X[104X
+    [4X[28X524288[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe   function   [2XPartitions[102X   ([14X16.2-18[114X)  is  the  unordered  counterpart  of
+  [2XOrderedPartitions[102X ([14X16.2-22[114X).[133X
+  
+  [1X16.2-24 PartitionsGreatestLE[101X
+  
+  [33X[1;0Y[29X[2XPartitionsGreatestLE[102X( [3Xn[103X, [3Xm[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  the set of all (unordered) partitions of the integer [3Xn[103X having parts
+  less or equal to the integer [3Xm[103X.[133X
+  
+  [1X16.2-25 PartitionsGreatestEQ[101X
+  
+  [33X[1;0Y[29X[2XPartitionsGreatestEQ[102X( [3Xn[103X, [3Xm[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  the  set  of  all  (unordered)  partitions  of the integer [3Xn[103X having
+  greatest part equal to the integer [3Xm[103X.[133X
+  
+  [1X16.2-26 RestrictedPartitions[101X
+  
+  [33X[1;0Y[29X[2XRestrictedPartitions[102X( [3Xn[103X, [3Xset[103X[, [3Xk[103X] ) [32X function[133X
+  
+  [33X[0;0YIn  the  first  form  [2XRestrictedPartitions[102X returns the set of all restricted
+  partitions  of  the  positive  integer  [3Xn[103X into sums with [3Xk[103X summands with the
+  summands  of  the  partition  coming from the set [3Xset[103X. If [3Xk[103X is not given all
+  restricted partitions for all [3Xk[103X are returned.[133X
+  
+  [33X[0;0YA  [13Xrestricted  partition[113X  is  like  an  ordinary  partition  (see [2XPartitions[102X
+  ([14X16.2-18[114X))  an  unordered sum [22Xn = p_1 + p_2 + ... + p_k[122X of positive integers
+  and  is represented by the list [22Xp = [ p_1, p_2, ..., p_k ][122X, in nonincreasing
+  order.  The  difference  is  that here the [22Xp_i[122X must be elements from the set
+  [3Xset[103X, while for ordinary partitions they may be elements from [10X[ 1 .. n ][110X.[133X
+  
+  [1X16.2-27 NrRestrictedPartitions[101X
+  
+  [33X[1;0Y[29X[2XNrRestrictedPartitions[102X( [3Xn[103X, [3Xset[103X[, [3Xk[103X] ) [32X function[133X
+  
+  [33X[0;0Yreturns the number of [10XRestrictedPartitions([3Xn[103X[10X,[3Xset[103X[10X,[3Xk[103X[10X)[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRestrictedPartitions( 8, [1,3,5,7] );[127X[104X
+    [4X[28X[ [ 1, 1, 1, 1, 1, 1, 1, 1 ], [ 3, 1, 1, 1, 1, 1 ], [ 3, 3, 1, 1 ],[128X[104X
+    [4X[28X  [ 5, 1, 1, 1 ], [ 5, 3 ], [ 7, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27XNrRestrictedPartitions(50,[1,2,5,10,20,50]);[127X[104X
+    [4X[28X451[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  last example tells us that there are 451 ways to return 50 pence change
+  using 1, 2, 5, 10, 20 and 50 pence coins.[133X
+  
+  [1X16.2-28 SignPartition[101X
+  
+  [33X[1;0Y[29X[2XSignPartition[102X( [3Xpi[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the sign of a permutation with cycle structure [3Xpi[103X.[133X
+  
+  [33X[0;0YThis function actually describes a homomorphism from the symmetric group [22XS_n[122X
+  into  the  cyclic  group of order 2, whose kernel is exactly the alternating
+  group  [22XA_n[122X  (see  [2XSignPerm[102X  ([14X42.4-1[114X)).  Partitions of sign 1 are called [13Xeven[113X
+  partitions while partitions of sign [22X-1[122X are called [13Xodd[113X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSignPartition([6,5,4,3,2,1]);[127X[104X
+    [4X[28X-1[128X[104X
+  [4X[32X[104X
+  
+  [1X16.2-29 AssociatedPartition[101X
+  
+  [33X[1;0Y[29X[2XAssociatedPartition[102X( [3Xpi[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XAssociatedPartition[102X  returns  the  associated  partition of the partition [3Xpi[103X
+  which is obtained by transposing the corresponding Young diagram.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XAssociatedPartition([4,2,1]);[127X[104X
+    [4X[28X[ 3, 2, 1, 1 ][128X[104X
+    [4X[25Xgap>[125X [27XAssociatedPartition([6]);[127X[104X
+    [4X[28X[ 1, 1, 1, 1, 1, 1 ][128X[104X
+  [4X[32X[104X
+  
+  [1X16.2-30 PowerPartition[101X
+  
+  [33X[1;0Y[29X[2XPowerPartition[102X( [3Xpi[103X, [3Xk[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XPowerPartition[102X  returns  the  partition corresponding to the [3Xk[103X-th power of a
+  permutation with cycle structure [3Xpi[103X.[133X
+  
+  [33X[0;0YEach  part  [22Xl[122X  of  [3Xpi[103X  is replaced by [22Xd = gcd(l, k)[122X parts [22Xl/d[122X. So if [3Xpi[103X is a
+  partition  of [22Xn[122X then [22X[3Xpi[103X^[3Xk[103X[122X also is a partition of [22Xn[122X. [2XPowerPartition[102X describes
+  the power map of symmetric groups.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPowerPartition([6,5,4,3,2,1], 3);[127X[104X
+    [4X[28X[ 5, 4, 2, 2, 2, 2, 1, 1, 1, 1 ][128X[104X
+  [4X[32X[104X
+  
+  [1X16.2-31 PartitionTuples[101X
+  
+  [33X[1;0Y[29X[2XPartitionTuples[102X( [3Xn[103X, [3Xr[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XPartitionTuples[102X  returns  the  list  of  all  [3Xr[103X-tuples  of  partitions which
+  together form a partition of [3Xn[103X.[133X
+  
+  [33X[0;0Y[3Xr[103X-tuples  of  partitions  describe  the classes and the characters of wreath
+  products  of  groups  with [3Xr[103X conjugacy classes with the symmetric group on [3Xn[103X
+  points,       see      [2XCharacterTableWreathSymmetric[102X      ([14X71.20-6[114X)      and
+  [2XCharacterValueWreathSymmetric[102X ([14X71.20-7[114X).[133X
+  
+  [1X16.2-32 NrPartitionTuples[101X
+  
+  [33X[1;0Y[29X[2XNrPartitionTuples[102X( [3Xn[103X, [3Xr[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the number of [10XPartitionTuples( [3Xn[103X[10X, [3Xr[103X[10X )[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPartitionTuples(3, 2);[127X[104X
+    [4X[28X[ [ [ 1, 1, 1 ], [  ] ], [ [ 1, 1 ], [ 1 ] ], [ [ 1 ], [ 1, 1 ] ],[128X[104X
+    [4X[28X  [ [  ], [ 1, 1, 1 ] ], [ [ 2, 1 ], [  ] ], [ [ 1 ], [ 2 ] ],[128X[104X
+    [4X[28X  [ [ 2 ], [ 1 ] ], [ [  ], [ 2, 1 ] ], [ [ 3 ], [  ] ],[128X[104X
+    [4X[28X  [ [  ], [ 3 ] ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X16.2-33 BetaSet[101X
+  
+  [33X[1;0Y[29X[2XBetaSet[102X( [3Xalpha[103X ) [32X function[133X
+  
+  [33X[0;0YFor  a  list  [3Xalpha[103X that describes a partition of a nonnegative integer (see
+  [2XPartitions[102X  ([14X16.2-18[114X)),  [2XBetaSet[102X  returns  the  list of integers obtained by
+  reversing  the  order of [3Xalpha[103X and then adding the sequence [10X[ 0, 1, 2, ... ][110X
+  of the same length, cf. [JK81, Section 2.7].[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XBetaSet( [ 4, 2, 1 ] );[127X[104X
+    [4X[28X[ 1, 3, 6 ][128X[104X
+    [4X[25Xgap>[125X [27XBetaSet( [] );[127X[104X
+    [4X[28X[  ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X16.3 [33X[0;0YFibonacci and Lucas Sequences[133X[101X
+  
+  [1X16.3-1 Fibonacci[101X
+  
+  [33X[1;0Y[29X[2XFibonacci[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the [3Xn[103Xth number of the [13XFibonacci sequence[113X. The Fibonacci sequence [22XF_n[122X
+  is  defined  by  the  initial  conditions  [22XF_1  = F_2 = 1[122X and the recurrence
+  relation  [22XF_{n+2} = F_{n+1} + F_n[122X. For negative [22Xn[122X we define [22XF_n = (-1)^{n+1}
+  F_{-n}[122X, which is consistent with the recurrence relation.[133X
+  
+  [33X[0;0YUsing  generating functions one can prove that [22XF_n = ϕ^n - 1/ϕ^n[122X, where [22Xϕ[122X is
+  [22X(sqrt{5}  +  1)/2[122X, i.e., one root of [22Xx^2 - x - 1 = 0[122X. Fibonacci numbers have
+  the property [22Xgcd( F_m, F_n ) = F_{gcd(m,n)}[122X. But a pair of Fibonacci numbers
+  requires  more  division steps in Euclid's algorithm (see [2XGcd[102X ([14X56.7-1[114X)) than
+  any  other  pair  of  integers of the same size. [10XFibonacci([3Xk[103X[10X)[110X is the special
+  case [10XLucas(1,-1,[3Xk[103X[10X)[1][110X (see [2XLucas[102X ([14X16.3-2[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XFibonacci( 10 );[127X[104X
+    [4X[28X55[128X[104X
+    [4X[25Xgap>[125X [27XFibonacci( 35 );[127X[104X
+    [4X[28X9227465[128X[104X
+    [4X[25Xgap>[125X [27XFibonacci( -10 );[127X[104X
+    [4X[28X-55[128X[104X
+  [4X[32X[104X
+  
+  [1X16.3-2 Lucas[101X
+  
+  [33X[1;0Y[29X[2XLucas[102X( [3XP[103X, [3XQ[103X, [3Xk[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the [3Xk[103X-th values of the [13XLucas sequence[113X with parameters [3XP[103X and [3XQ[103X, which
+  must  be  integers, as a list of three integers. If [3Xk[103X is a negative integer,
+  then  the  values of the Lucas sequence may be nonintegral rational numbers,
+  with denominator roughly [3XQ[103X^[3Xk[103X.[133X
+  
+  [33X[0;0YLet  [22Xα,  β[122X  be  the two roots of [22Xx^2 - P x + Q[122X then we define [10XLucas( [3XP[103X[10X, [3XQ[103X[10X, [3Xk[103X[10X
+  )[1][110X  [22X=  U_k  = (α^k - β^k) / (α - β)[122X and [10XLucas( [3XP[103X[10X, [3XQ[103X[10X, [3Xk[103X[10X )[2][110X [22X= V_k = (α^k +
+  β^k)[122X and as a convenience [10XLucas( [3XP[103X[10X, [3XQ[103X[10X, [3Xk[103X[10X )[3][110X [22X= Q^k[122X.[133X
+  
+  [33X[0;0YThe  following  recurrence  relations are easily derived from the definition
+  [22XU_0  = 0, U_1 = 1, U_k = P U_{k-1} - Q U_{k-2}[122X and [22XV_0 = 2, V_1 = P, V_k = P
+  V_{k-1}  - Q V_{k-2}[122X. Those relations are actually used to define [2XLucas[102X if [22Xα
+  = β[122X.[133X
+  
+  [33X[0;0YAlso  the  more complex relations used in [2XLucas[102X can be easily derived [22XU_2k =
+  U_k V_k[122X, [22XU_{2k+1} = (P U_2k + V_2k) / 2[122X and [22XV_2k = V_k^2 - 2 Q^k[122X, [22XV_{2k+1} =
+  ((P^2-4Q) U_2k + P V_2k) / 2[122X.[133X
+  
+  [33X[0;0Y[10XFibonacci([3Xk[103X[10X)[110X  (see  [2XFibonacci[102X  ([14X16.3-1[114X))  is  simply [10XLucas(1,-1,[3Xk[103X[10X)[1][110X. In an
+  abuse  of  notation,  the  sequence [10XLucas(1,-1,[3Xk[103X[10X)[2][110X is sometimes called the
+  Lucas sequence.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XList( [0..10], i -> Lucas(1,-2,i)[1] );     # 2^k - (-1)^k)/3[127X[104X
+    [4X[28X[ 0, 1, 1, 3, 5, 11, 21, 43, 85, 171, 341 ][128X[104X
+    [4X[25Xgap>[125X [27XList( [0..10], i -> Lucas(1,-2,i)[2] );     # 2^k + (-1)^k[127X[104X
+    [4X[28X[ 2, 1, 5, 7, 17, 31, 65, 127, 257, 511, 1025 ][128X[104X
+    [4X[25Xgap>[125X [27XList( [0..10], i -> Lucas(1,-1,i)[1] );     # Fibonacci sequence[127X[104X
+    [4X[28X[ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 ][128X[104X
+    [4X[25Xgap>[125X [27XList( [0..10], i -> Lucas(2,1,i)[1] );      # the roots are equal[127X[104X
+    [4X[28X[ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X16.4 [33X[0;0YPermanent of a Matrix[133X[101X
+  
+  [1X16.4-1 Permanent[101X
+  
+  [33X[1;0Y[29X[2XPermanent[102X( [3Xmat[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the [13Xpermanent[113X of the matrix [3Xmat[103X. The permanent is defined by [22X∑_{p ∈
+  Sym(n)} ∏_{i = 1}^n mat[i][i^p][122X.[133X
+  
+  [33X[0;0YNote  the similarity of the definition of the permanent to the definition of
+  the  determinant  (see [2XDeterminantMat[102X ([14X24.4-4[114X)). In fact the only difference
+  is  the  missing  sign  of  the  permutation. However the permanent is quite
+  unlike the determinant, for example it is not multilinear or alternating. It
+  has however important combinatorial properties.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPermanent( [[0,1,1,1],[127X[104X
+    [4X[25X>[125X [27X     [1,0,1,1],[127X[104X
+    [4X[25X>[125X [27X     [1,1,0,1],[127X[104X
+    [4X[25X>[125X [27X     [1,1,1,0]] );  # inefficient way to compute NrDerangements([1..4])[127X[104X
+    [4X[28X9[128X[104X
+    [4X[25Xgap>[125X [27X# 24 permutations fit the projective plane of order 2:[127X[104X
+    [4X[25Xgap>[125X [27XPermanent( [[1,1,0,1,0,0,0],[127X[104X
+    [4X[25X>[125X [27X     [0,1,1,0,1,0,0],[127X[104X
+    [4X[25X>[125X [27X     [0,0,1,1,0,1,0],[127X[104X
+    [4X[25X>[125X [27X     [0,0,0,1,1,0,1],[127X[104X
+    [4X[25X>[125X [27X     [1,0,0,0,1,1,0],[127X[104X
+    [4X[25X>[125X [27X     [0,1,0,0,0,1,1],[127X[104X
+    [4X[25X>[125X [27X     [1,0,1,0,0,0,1]] );[127X[104X
+    [4X[28X24[128X[104X
+  [4X[32X[104X
+  

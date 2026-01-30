@@ -1,0 +1,97 @@
+  
+  
+                               [1XGAP --- A Tutorial[101X
+  
+  
+                           Release 4.15.1, 2025-10-18
+  
+  
+                                 The GAP Group
+  
+  
+  
+  The GAP Group
+      Email:    [7Xmailto:support@gap-system.org[107X
+      Homepage: [7Xhttps://www.gap-system.org[107X
+  
+  -------------------------------------------------------
+  [1XCopyright[101X
+  [33X[0;0YCopyright  ©  (1987-2025)  for  the  core  part of the [5XGAP[105X system by the [5XGAP[105X
+  Group.[133X
+  
+  [33X[0;0YMost  parts  of this distribution, including the core part of the [5XGAP[105X system
+  are  distributed  under  the  terms  of  the GNU General Public License, see
+  [7Xhttps://www.gnu.org/licenses/gpl.html[107X  or  the file [11XGPL[111X in the [11Xetc[111X directory
+  of the [5XGAP[105X installation.[133X
+  
+  [33X[0;0YMore  detailed  information  about  copyright  and licenses of parts of this
+  distribution can be found in [14X'Reference: Copyright and License'[114X.[133X
+  
+  [33X[0;0Y[5XGAP[105X  is  developed  over  a long time and has many authors and contributors.
+  More   detailed   information  can  be  found  in  [14X'Reference:  Authors  and
+  Maintainers'[114X.[133X
+  
+  
+  -------------------------------------------------------
+  
+  
+  [1XContents (tut)[101X
+  
+  1 [33X[0;0YPreface[133X
+    1.1 [33X[0;0YThe [5XGAP[105X System[133X
+    1.2 [33X[0;0YFurther Information about [5XGAP[105X[133X
+  2 [33X[0;0YA First Session with [5XGAP[105X[133X
+    2.1 [33X[0;0YStarting and Leaving [5XGAP[105X[133X
+    2.2 [33X[0;0YLoading Source Code from a File[133X
+    2.3 [33X[0;0YThe Read Evaluate Print Loop[133X
+    2.4 [33X[0;0YConstants and Operators[133X
+    2.5 [33X[0;0YVariables versus Objects[133X
+    2.6 [33X[0;0YObjects vs. Elements[133X
+    2.7 [33X[0;0YAbout Functions[133X
+    2.8 [33X[0;0YHelp[133X
+    2.9 [33X[0;0YFurther Information introducing the System[133X
+  3 [33X[0;0YLists and Records[133X
+    3.1 [33X[0;0YPlain Lists[133X
+    3.2 [33X[0;0YIdentical Lists[133X
+    3.3 [33X[0;0YImmutability[133X
+    3.4 [33X[0;0YSets[133X
+    3.5 [33X[0;0YRanges[133X
+    3.6 [33X[0;0YFor and While Loops[133X
+    3.7 [33X[0;0YList Operations[133X
+    3.8 [33X[0;0YVectors and Matrices[133X
+    3.9 [33X[0;0YPlain Records[133X
+    3.10 [33X[0;0YFurther Information about Lists[133X
+  4 [33X[0;0YFunctions[133X
+    4.1 [33X[0;0YWriting Functions[133X
+    4.2 [33X[0;0YIf Statements[133X
+    4.3 [33X[0;0YLocal Variables[133X
+    4.4 [33X[0;0YRecursion[133X
+    4.5 [33X[0;0YFurther Information about Functions[133X
+  5 [33X[0;0YGroups and Homomorphisms[133X
+    5.1 [33X[0;0YPermutation groups[133X
+    5.2 [33X[0;0YActions of Groups[133X
+    5.3 [33X[0;0YSubgroups as Stabilizers[133X
+    5.4 [33X[0;0YGroup Homomorphisms by Images[133X
+    5.5 [33X[0;0YNice Monomorphisms[133X
+    5.6 [33X[0;0YFurther Information about Groups and Homomorphisms[133X
+  6 [33X[0;0YVector Spaces and Algebras[133X
+    6.1 [33X[0;0YVector Spaces[133X
+    6.2 [33X[0;0YAlgebras[133X
+    6.3 [33X[0;0YFurther Information about Vector Spaces and Algebras[133X
+  7 [33X[0;0YDomains[133X
+    7.1 [33X[0;0YDomains as Sets[133X
+    7.2 [33X[0;0YAlgebraic Structure[133X
+    7.3 [33X[0;0YNotions of Generation[133X
+    7.4 [33X[0;0YDomain Constructors[133X
+    7.5 [33X[0;0YForming Closures of Domains[133X
+    7.6 [33X[0;0YChanging the Structure[133X
+    7.7 [33X[0;0YSubdomains[133X
+    7.8 [33X[0;0YFurther Information about Domains[133X
+  8 [33X[0;0YOperations and Methods[133X
+    8.1 [33X[0;0YAttributes[133X
+    8.2 [33X[0;0YProperties and Filters[133X
+    8.3 [33X[0;0YImmediate and True Methods[133X
+    8.4 [33X[0;0YOperations and Method Selection[133X
+  
+  
+  [32X

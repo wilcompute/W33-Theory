@@ -1,0 +1,159 @@
+  
+  [1X6 [33X[0;0YThread functions[133X[101X
+  
+  [33X[0;0YHPC-GAP has low-level functionality to support explicit creation of threads.
+  In  practice,  programmers  should  use  higher-level functionality, such as
+  tasks, to describe concurrency. The thread functions described here exist to
+  facilitate  the  construction of higher level libraries and are not meant to
+  be used directly.[133X
+  
+  
+  [1X6.1 [33X[0;0YThread functions[133X[101X
+  
+  [1X6.1-1 CreateThread[101X
+  
+  [33X[1;0Y[29X[2XCreateThread[102X( [3Xfunc[103X[, [3Xarg1[103X, [3X...[103X, [3Xargn[103X] ) [32X function[133X
+  
+  [33X[0;0YNew  threads are created with the function [2XCreateThread[102X. The thread takes at
+  least  one  function  as its argument that it will call in the newly created
+  thread;  it also accepts zero or more parameters that will be passed to that
+  function.[133X
+  
+  [33X[0;0YThe function returns a thread object describing the thread.[133X
+  
+  [33X[0;0YOnly  a  finite  number  of  threads  can be active at a time (that limit is
+  system-dependent).  To reclaim the resources occupied by one thread, use the
+  [2XWaitThread[102X ([14X6.1-2[114X) function.[133X
+  
+  [1X6.1-2 WaitThread[101X
+  
+  [33X[1;0Y[29X[2XWaitThread[102X( [3XthreadID[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XWaitThread[102X  function  waits  for  the  thread identified by [3XthreadID[103X to
+  finish;  it  does  not  return  any  value.  When it returns, it returns all
+  resources  occupied by the thread it waited for, such as thread-local memory
+  and operating system structures, to the system.[133X
+  
+  [1X6.1-3 CurrentThread[101X
+  
+  [33X[1;0Y[29X[2XCurrentThread[102X(  ) [32X function[133X
+  
+  [33X[0;0YThe [2XCurrentThread[102X function returns the thread object for the current thread.[133X
+  
+  [1X6.1-4 ThreadID[101X
+  
+  [33X[1;0Y[29X[2XThreadID[102X( [3Xthread[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XThreadID[102X function returns a numeric thread id for the given thread. The
+  thread id of the main thread is always 0.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XCurrentThread();[127X[104X
+    [4X[28X<thread #0: running>[128X[104X
+    [4X[25Xgap>[125X [27XThreadID(CurrentThread());[127X[104X
+    [4X[28X0[128X[104X
+  [4X[32X[104X
+  
+  [1X6.1-5 KillThread[101X
+  
+  [33X[1;0Y[29X[2XKillThread[102X( [3Xthread[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XKillThread[102X  function terminates the given thread. Any region locks that
+  the  thread currently holds will be unlocked. The thread can be specified as
+  a thread object or via its numeric id.[133X
+  
+  [33X[0;0YThe  implementation  for [2XKillThread[102X is dependent on the interpreter actually
+  executing statements. Threads performing system calls, for example, will not
+  be  terminated until the system call returns. Similarly, long-running kernel
+  functions will delay termination until the kernel function returns.[133X
+  
+  [33X[0;0YUse  of  [10XCALL_WITH_CATCH[110X will not prevent a thread from being terminated. If
+  you   wish   to   make  sure  that  catch  handlers  will  be  visited,  use
+  [2XInterruptThread[102X  ([14X6.1-8[114X) instead. [2XKillThread[102X should be used for threads that
+  cannot  be  controlled  anymore  in  any  other  way  but  still  eat system
+  resources.[133X
+  
+  [1X6.1-6 PauseThread[101X
+  
+  [33X[1;0Y[29X[2XPauseThread[102X( [3Xthread[103X ) [32X function[133X
+  
+  [33X[0;0YThe [2XPauseThread[102X function suspends execution for the given thread. The thread
+  can be specified as a thread object or via its numeric id.[133X
+  
+  [33X[0;0YThe  implementation for [2XPauseThread[102X is dependent on the interpreter actually
+  executing statements. Threads performing system calls, for example, will not
+  pause   until  the  system  call  returns.  Similarly,  long-running  kernel
+  functions will not pause until the kernel function returns.[133X
+  
+  [33X[0;0YWhile a thread is paused, the thread that initiated the pause can access the
+  paused thread's thread-local region.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xloop := function() while true do Sleep(1); od; end;;[127X[104X
+    [4X[25Xgap>[125X [27Xx := fail;;[127X[104X
+    [4X[25Xgap>[125X [27Xth := CreateThread(function() x := [1, 2, 3]; loop(); end);;[127X[104X
+    [4X[25Xgap>[125X [27XPauseThread(th);[127X[104X
+    [4X[25Xgap>[125X [27Xx;[127X[104X
+    [4X[28X[ 1, 2, 3 ][128X[104X
+  [4X[32X[104X
+  
+  [1X6.1-7 ResumeThread[101X
+  
+  [33X[1;0Y[29X[2XResumeThread[102X( [3Xthread[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XResumeThread[102X  function  resumes execution for the given thread that was
+  paused  with  [2XPauseThread[102X  ([14X6.1-6[114X).  The thread can be specified as a thread
+  object or via its numeric id.[133X
+  
+  [33X[0;0YIf the thread isn't paused, [2XResumeThread[102X is a no-op.[133X
+  
+  [1X6.1-8 InterruptThread[101X
+  
+  [33X[1;0Y[29X[2XInterruptThread[102X( [3Xthread[103X, [3Xinterrupt[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XInterruptThread[102X  function  calls  an  interrupt  handler  for the given
+  thread.  The  thread  can be specified as a thread object or via its numeric
+  id.  The  interrupt  is  specified as an integer between 0 and [2XMAX_INTERRUPT[102X
+  ([14X6.1-11[114X).[133X
+  
+  [33X[0;0YAn  interrupt  number of zero (or an interrupt number for which no interrupt
+  handler  has  been  set  up  with [2XSetInterruptHandler[102X ([14X6.1-9[114X) will cause the
+  thread  to  enter  a break loop. Otherwise, the respective interrupt handler
+  that has been created with [2XSetInterruptHandler[102X ([14X6.1-9[114X) will be called.[133X
+  
+  [33X[0;0YThe  implementation  for  [2XInterruptThread[102X  is  dependent  on the interpreter
+  actually executing statements. Threads performing system calls, for example,
+  will  not  call interrupt handlers until the system call returns. Similarly,
+  long-running kernel functions will delay invocation of the interrupt handler
+  until the kernel function returns.[133X
+  
+  [1X6.1-9 SetInterruptHandler[101X
+  
+  [33X[1;0Y[29X[2XSetInterruptHandler[102X( [3Xinterrupt[103X, [3Xhandler[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XSetInterruptHandler[102X  function allows the programmer to set up interrupt
+  handlers  for  the current thread. The interrupt number must be in the range
+  from  1  to  [2XMAX_INTERRUPT[102X  ([14X6.1-11[114X)  (inclusive);  the  handler  must  be a
+  parameterless function (or [9Xfail[109X to remove a handler).[133X
+  
+  [1X6.1-10 NewInterruptID[101X
+  
+  [33X[1;0Y[29X[2XNewInterruptID[102X(  ) [32X function[133X
+  
+  [33X[0;0YThe  [2XNewInterruptID[102X function returns a previously unused number (starting at
+  1). These numbers can be used to globally coordinate interrupt numbers.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XStopTaskInterrupt := NewInterruptID();[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XSetInterruptHandler(StopTaskInterrupt, StopTaskHandler);[127X[104X
+  [4X[32X[104X
+  
+  [1X6.1-11 MAX_INTERRUPT[101X
+  
+  [33X[1;0Y[29X[2XMAX_INTERRUPT[102X [32X global variable[133X
+  
+  [33X[0;0YThe global variable [2XMAX_INTERRUPT[102X is an integer containing the maximum value
+  for    the    interrupt    arguments    to   [2XInterruptThread[102X   ([14X6.1-8[114X)   and
+  [2XSetInterruptHandler[102X ([14X6.1-9[114X).[133X
+  

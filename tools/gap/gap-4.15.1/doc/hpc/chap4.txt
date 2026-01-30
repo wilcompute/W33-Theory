@@ -1,0 +1,252 @@
+  
+  [1X4 [33X[0;0YConsole User Interface[133X[101X
+  
+  [33X[0;0YHPC-GAP  has  a multi-threaded user interface to assist with the development
+  and  debugging  of  concurrent  programs.  This user interface is enabled by
+  default; to disable it, and use the single-threaded interface, GAP has to be
+  started with the [10X-S[110X option.[133X
+  
+  
+  [1X4.1 [33X[0;0YConsole UI commands[133X[101X
+  
+  [33X[0;0YThe  console  user  interface  provides  the user with the option to control
+  threads  by commands prefixed with an exclamation mark ("!"). Those commands
+  are listed below.[133X
+  
+  [33X[0;0YFor ease of use, users only need to type as many letters of each commands so
+  that  it can be unambiguously selected. Thus, the shell will recognize [10X!l[110X as
+  an abbreviation for [10X!list[110X.[133X
+  
+  
+  [1X4.1-1 [33X[0;0Y!shell [name][133X[101X
+  
+  [33X[0;0YStarts  a  new  shell  thread and switches to it. Optionally, a name for the
+  thread can be provided.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X!shell[127X[104X
+    [4X[28X--- Switching to thread 4[128X[104X
+    [4X[28X[4] gap>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X4.1-2 [33X[0;0Y!fork [name][133X[101X
+  
+  [33X[0;0YStarts  a new background shell thread. Optionally, a name for the thread can
+  be provided.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X!fork[127X[104X
+    [4X[28X--- Created new thread 5[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X4.1-3 [33X[0;0Y!list[133X[101X
+  
+  [33X[0;0YList  all  current threads that are interacting with the user. This does not
+  list threads created with [10XCreateThread()[110X that have not entered a break loop.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X!list[127X[104X
+    [4X[28X--- Thread 0 [0][128X[104X
+    [4X[28X--- Thread 4 [4][128X[104X
+    [4X[28X--- Thread 5 [5] (pending output)[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X4.1-4 [33X[0;0Y!kill id[133X[101X
+  
+  [33X[0;0YTerminates the specified thread.[133X
+  
+  
+  [1X4.1-5 [33X[0;0Y!break id[133X[101X
+  
+  [33X[0;0YMakes the specified thread enter a break loop.[133X
+  
+  
+  [1X4.1-6 [33X[0;0Y!name [id] name[133X[101X
+  
+  [33X[0;0YGive the thread with the numerical identifier or name [10Xid[110X the name [10Xname[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X!name 5 test[127X[104X
+    [4X[25Xgap>[125X [27X!list[127X[104X
+    [4X[28X--- Thread 0 [0][128X[104X
+    [4X[28X--- Thread 4 [4][128X[104X
+    [4X[28X--- Thread test [5] (pending output)[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X4.1-7 [33X[0;0Y!info id[133X[101X
+  
+  [33X[0;0YProvide  information  about the thread with the numerical identifier or name
+  [10Xid[110X. [13XNot yet implemented[113X.[133X
+  
+  
+  [1X4.1-8 [33X[0;0Y!hide [id|*][133X[101X
+  
+  [33X[0;0YHide output from the thread with the numerical identifier or name [10Xid[110X when it
+  is  not  the  foreground  thread.  If  no thread is specified, make this the
+  default behavior for future threads.[133X
+  
+  
+  [1X4.1-9 [33X[0;0Y!watch [id|*][133X[101X
+  
+  [33X[0;0YShow  output  from  the thread with the numerical identifier or name [10Xid[110X even
+  when  it  is not the foreground thread. If no thread is specified, make this
+  the default behavior for future threads.[133X
+  
+  
+  [1X4.1-10 [33X[0;0Y!keep num[133X[101X
+  
+  [33X[0;0YKeep [10Xnum[110X lines of output from each thread.[133X
+  
+  
+  [1X4.1-11 [33X[0;0Y!prompt (id|*) string[133X[101X
+  
+  [33X[0;0YSet the prompt for the specified thread (or for all newly created threads if
+  [10X*[110X  was specified) to be [10Xstring[110X. If the string contains the pattern [10Xid[110X, it is
+  replaced  with  the  numerical  id of the thread; if it contains the pattern
+  [10Xname[110X, it is replaced with the name of the thread; if the thread has no name,
+  the numerical id is displayed instead.[133X
+  
+  
+  [1X4.1-12 [33X[0;0Y!prefix (id|*) string[133X[101X
+  
+  [33X[0;0YPrefix  the  output  from  the  specified  thread  (or for all newly created
+  threads  if [10X*[110X was specified) with [10Xstring[110X. The same substitution rules as for
+  the [10X!prompt[110X command apply.[133X
+  
+  
+  [1X4.1-13 [33X[0;0Y!select id[133X[101X
+  
+  [33X[0;0YMake the specified thread the foreground thread.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X!select 4[127X[104X
+    [4X[25Xgap>[125X [27X!select 4[127X[104X
+    [4X[28X--- Switching to thread 4[128X[104X
+    [4X[28X[4] gap>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X4.1-14 [33X[0;0Y!next[133X[101X
+  
+  [33X[0;0YMake the next thread in numerical order the foreground thread.[133X
+  
+  
+  [1X4.1-15 [33X[0;0Y!previous[133X[101X
+  
+  [33X[0;0YMake the previous thread in numerical order the foreground thread.[133X
+  
+  
+  [1X4.1-16 [33X[0;0Y!replay num [id][133X[101X
+  
+  [33X[0;0YDisplay  the  last [10Xnum[110X lines of output of the specified thread. If no thread
+  was specified, display the last [10Xnum[110X lines of the current foreground thread.[133X
+  
+  
+  [1X4.1-17 [33X[0;0Y!id[133X[101X
+  
+  [33X[0;0Y[10X!id[110X is a shortcut for [10X!select id[110X.[133X
+  
+  
+  [1X4.1-18 [33X[0;0Y!source file[133X[101X
+  
+  [33X[0;0YRead commands from file [10Xfile[110X.[133X
+  
+  
+  [1X4.1-19 [33X[0;0Y!alias shortcut expansion[133X[101X
+  
+  [33X[0;0YCreate  an alias. After defining the alias, [10X!shortcut 'rest of line'[110X will be
+  replaced with [10X!expansion 'rest of line'[110X.[133X
+  
+  
+  [1X4.1-20 [33X[0;0Y!unalias shortcut[133X[101X
+  
+  [33X[0;0YRemoves the specified alias.[133X
+  
+  
+  [1X4.1-21 [33X[0;0Y!eval expr[133X[101X
+  
+  [33X[0;0YEvaluates [10Xexpr[110X as a command.[133X
+  
+  
+  [1X4.1-22 [33X[0;0Y!run function string[133X[101X
+  
+  [33X[0;0YCalls the function with name [10Xfunction[110X, passing it the single argument [10Xstring[110X
+  as a GAP string.[133X
+  
+  
+  [1X4.2 [33X[0;0YGAP functions to access the Shell UI[133X[101X
+  
+  [33X[0;0YThere  are  several functions to access the basic functionality of the shell
+  user  interface.  Other than [2XTextUIRegisterCommand[102X ([14X4.2-1[114X), they can only be
+  called from within a registered command.[133X
+  
+  [33X[0;0YThreads  can  be  specified either by their numerical identifier or by their
+  name  (as  a  string).  The  empty string can be used to specify the current
+  foreground thread.[133X
+  
+  [1X4.2-1 TextUIRegisterCommand[101X
+  
+  [33X[1;0Y[29X[2XTextUIRegisterCommand[102X( [3Xname[103X, [3Xfunc[103X ) [32X function[133X
+  
+  [33X[0;0YRegisters  the command [10X!name[110X with the shell UI. It will call <func> with the
+  rest of the command line passed as a string argument when typed.[133X
+  
+  [1X4.2-2 TextUIForegroundThread[101X
+  
+  [33X[1;0Y[29X[2XTextUIForegroundThread[102X(  ) [32X function[133X
+  
+  [33X[0;0YReturns the numerical identifier of the current foreground thread.[133X
+  
+  [1X4.2-3 TextUIForegroundThreadName[101X
+  
+  [33X[1;0Y[29X[2XTextUIForegroundThreadName[102X(  ) [32X function[133X
+  
+  [33X[0;0YReturns  the  name  of  the current foreground thread or [9Xfail[109X if the current
+  foreground thread has no name.[133X
+  
+  [1X4.2-4 TextUISelectThread[101X
+  
+  [33X[1;0Y[29X[2XTextUISelectThread[102X( [3Xid[103X ) [32X function[133X
+  
+  [33X[0;0YMakes  [3Xid[103X  the  current foreground thread. Returns [9Xtrue[109X or [9Xfalse[109X to indicate
+  success.[133X
+  
+  [1X4.2-5 TextUIOutputHistory[101X
+  
+  [33X[1;0Y[29X[2XTextUIOutputHistory[102X( [3Xid[103X, [3Xcount[103X ) [32X function[133X
+  
+  [33X[0;0YReturns  the  last [3Xcount[103X lines of the thread specified by [3Xid[103X (which can be a
+  numerical identifier or a name). Returns [9Xfail[109X if there is no such thread.[133X
+  
+  [1X4.2-6 TextUISetOutputHistoryLength[101X
+  
+  [33X[1;0Y[29X[2XTextUISetOutputHistoryLength[102X( [3Xlength[103X ) [32X function[133X
+  
+  [33X[0;0YBy default, retain [3Xlength[103X lines of output history from each thread.[133X
+  
+  [1X4.2-7 TextUINewSession[101X
+  
+  [33X[1;0Y[29X[2XTextUINewSession[102X( [3Xforeground[103X, [3Xname[103X ) [32X function[133X
+  
+  [33X[0;0YCreates  a  new  shell  thread.  Here,  [3Xforeground[103X  is  a  boolean  variable
+  specifying  whether  it should be made the new foreground thread and [3Xname[103X is
+  the  name  of  the  thread. The empty string can be used to leave the thread
+  without a name.[133X
+  
+  [1X4.2-8 TextUIRunCommand[101X
+  
+  [33X[1;0Y[29X[2XTextUIRunCommand[102X( [3Xcommand[103X ) [32X function[133X
+  
+  [33X[0;0YRun  the  command  denoted  by  [3Xcommand[103X  as  though a user had typed it. The
+  command must not contain a newline character.[133X
+  
+  [1X4.2-9 TextUIWritePrompt[101X
+  
+  [33X[1;0Y[29X[2XTextUIWritePrompt[102X(  ) [32X function[133X
+  
+  [33X[0;0YDisplay a prompt for the current thread.[133X
+  

@@ -1,0 +1,283 @@
+  
+  [1X7 [33X[0;0YChannels[133X[101X
+  
+  
+  [1X7.1 [33X[0;0YChannels[133X[101X
+  
+  [33X[0;0YChannels   are  FIFO  queues  that  threads  can  use  to  coordinate  their
+  activities.[133X
+  
+  [1X7.1-1 CreateChannel[101X
+  
+  [33X[1;0Y[29X[2XCreateChannel[102X( [[3Xcapacity[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XCreateChannel[102X  returns  a  FIFO  communication  channel  that can be used to
+  exchange  information  between  threads. Its optional argument is a capacity
+  (positive  integer).  If  insufficient  resources  are available to create a
+  channel,  it returns -1. If the capacity is not a positive integer, an error
+  will be raised.[133X
+  
+  [33X[0;0YIf a capacity is not provided, by default the channel can hold an indefinite
+  number  of  objects.  Otherwise,  attempts  to  store objects in the channel
+  beyond its capacity will block.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xch1:=CreateChannel();[127X[104X
+    [4X[28X<channel 0x460339c: 0 elements, 0 waiting>[128X[104X
+    [4X[25Xgap>[125X [27Xch2:=CreateChannel(5);[127X[104X
+    [4X[28X<channel 0x460324c: 0/5 elements, 0 waiting>[128X[104X
+  [4X[32X[104X
+  
+  [1X7.1-2 SendChannel[101X
+  
+  [33X[1;0Y[29X[2XSendChannel[102X( [3Xchannel[103X, [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XSendChannel[102X   accepts   two   arguments,   a   channel  object  returned  by
+  [2XCreateChannel[102X  ([14X7.1-1[114X),  and  an  arbitrary  GAP  object.  It  stores [3Xobj[103X in
+  [3Xchannel[103X.  If  [3Xchannel[103X  has  a  finite  capacity  and is currently full, then
+  [2XSendChannel[102X  will block until at least one element has been removed from the
+  channel, e.g. using [2XReceiveChannel[102X ([14X7.1-6[114X).[133X
+  
+  [33X[0;0Y[2XSendChannel[102X performs automatic region migration for thread-local objects. If
+  [3Xobj[103X  is thread-local for the current thread, it will be migrated (along with
+  all  subobjects  contained  in  the  same  region) to the receiving thread's
+  thread-local  data  space.  In  between sending and receiving, [3Xobj[103X cannot be
+  accessed by either thread.[133X
+  
+  [33X[0;0YThis example demonstrates sending messages across a channel.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xch1 := CreateChannel();;[127X[104X
+    [4X[25Xgap>[125X [27XSendChannel(ch1,1);[127X[104X
+    [4X[25Xgap>[125X [27Xch1;[127X[104X
+    [4X[28X<channel 0x460339c: 1 elements, 0 waiting>[128X[104X
+    [4X[25Xgap>[125X [27XReceiveChannel(ch1);[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27Xch1;[127X[104X
+    [4X[28X<channel 0x460339c: 0 elements, 0 waiting>[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[10XSleep[110X in the following example is used to demonstrate blocking.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xch2 := CreateChannel(5);;[127X[104X
+    [4X[25Xgap>[125X [27Xch3 := CreateChannel();;[127X[104X
+    [4X[25Xgap>[125X [27Xfor i in [1..5] do SendChannel(ch2,i); od;[127X[104X
+    [4X[25Xgap>[125X [27Xch2;[127X[104X
+    [4X[28X<channel 0x460324c: 5/5 elements, 0 waiting>[128X[104X
+    [4X[25Xgap>[125X [27Xt:=CreateThread([127X[104X
+    [4X[25X>[125X [27Xfunction()[127X[104X
+    [4X[25X>[125X [27Xlocal x;[127X[104X
+    [4X[25X>[125X [27XSleep(10);[127X[104X
+    [4X[25X>[125X [27Xx:=ReceiveChannel(ch2);[127X[104X
+    [4X[25X>[125X [27XSleep(10);[127X[104X
+    [4X[25X>[125X [27XSendChannel(ch3,x);[127X[104X
+    [4X[25X>[125X [27XPrint("Thread finished\n");[127X[104X
+    [4X[25X>[125X [27Xend);;[127X[104X
+    [4X[25X>[125X [27XSendChannel(ch2,3); # this blocks until the thread reads from ch2[127X[104X
+    [4X[25Xgap>[125X [27XReceiveChannel(ch3); # the thread is blocked until we read from ch3[127X[104X
+    [4X[28X1[128X[104X
+    [4X[28XThread finished[128X[104X
+    [4X[25Xgap>[125X [27XWaitThread(t);[127X[104X
+  [4X[32X[104X
+  
+  [1X7.1-3 TransmitChannel[101X
+  
+  [33X[1;0Y[29X[2XTransmitChannel[102X( [3Xchannel[103X, [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XTransmitChannel[102X is identical to [2XSendChannel[102X ([14X7.1-2[114X), except that it does not
+  perform automatic region migration of thread-local objects.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xch := CreateChannel(5);;[127X[104X
+    [4X[25Xgap>[125X [27Xl := [ 1, 2, 3];;[127X[104X
+    [4X[25Xgap>[125X [27Xoriginal_region := RegionOf(l);;[127X[104X
+    [4X[25Xgap>[125X [27XSendChannel(ch, l);[127X[104X
+    [4X[25Xgap>[125X [27XWaitThread(CreateThread(function()[127X[104X
+    [4X[25X>[125X [27X     local ob; ob := ReceiveChannel(ch);[127X[104X
+    [4X[25X>[125X [27X     Display(RegionOf(ob) = original_region);[127X[104X
+    [4X[25X>[125X [27X   end));[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xl := [ 1, 2, 3];;[127X[104X
+    [4X[25Xgap>[125X [27Xoriginal_region := RegionOf(l);;[127X[104X
+    [4X[25Xgap>[125X [27XTransmitChannel(ch, l);[127X[104X
+    [4X[25Xgap>[125X [27XWaitThread(CreateThread(function()[127X[104X
+    [4X[25X>[125X [27X     local ob; ob := ReceiveChannel(ch);[127X[104X
+    [4X[25X>[125X [27X     Display(RegionOf(ob) = original_region);[127X[104X
+    [4X[25X>[125X [27X   end));[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X7.1-4 TrySendChannel[101X
+  
+  [33X[1;0Y[29X[2XTrySendChannel[102X( [3Xchannel[103X, [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XTrySendChannel[102X  is  identical to [2XSendChannel[102X ([14X7.1-2[114X), except that it returns
+  if  the channel is full instead of blocking. It returns true if the send was
+  successful and false otherwise.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xch := CreateChannel(1);;[127X[104X
+    [4X[25Xgap>[125X [27XTrySendChannel(ch, 99);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XTrySendChannel(ch, 99);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X7.1-5 TryTransmitChannel[101X
+  
+  [33X[1;0Y[29X[2XTryTransmitChannel[102X( [3Xchannel[103X, [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XTryTransmitChannel[102X  is  identical  to [2XTrySendChannel[102X ([14X7.1-4[114X), except that it
+  does not perform automatic region migration of thread-local objects.[133X
+  
+  [1X7.1-6 ReceiveChannel[101X
+  
+  [33X[1;0Y[29X[2XReceiveChannel[102X( [3Xchannel[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XReceiveChannel[102X  is  used  to retrieve elements from a channel. If [3Xchannel[103X is
+  empty,  the  call  will block until an element has been added to the channel
+  via [2XSendChannel[102X ([14X7.1-2[114X) or a similar primitive.[133X
+  
+  [33X[0;0YSee [2XSendChannel[102X ([14X7.1-2[114X) for an example.[133X
+  
+  [1X7.1-7 TryReceiveChannel[101X
+  
+  [33X[1;0Y[29X[2XTryReceiveChannel[102X( [3Xchannel[103X, [3Xdefault[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XTryReceiveChannel[102X,  like  [2XReceiveChannel[102X  ([14X7.1-6[114X),  attempts  to retrieve an
+  object from [3Xchannel[103X. If it does not succeed, however, it will return [3Xdefault[103X
+  rather than blocking.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xch := CreateChannel();;[127X[104X
+    [4X[25Xgap>[125X [27XSendChannel(ch, 99);[127X[104X
+    [4X[25Xgap>[125X [27XTryReceiveChannel(ch, fail);[127X[104X
+    [4X[28X99[128X[104X
+    [4X[25Xgap>[125X [27XTryReceiveChannel(ch, fail);[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [1X7.1-8 MultiSendChannel[101X
+  
+  [33X[1;0Y[29X[2XMultiSendChannel[102X( [3Xchannel[103X, [3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XMultiSendChannel[102X allows the sending of all the objects contained in the list
+  [3Xlist[103X  to  [3Xchannel[103X  as  a single operation. The list must be dense and is not
+  modified  by  the  call. The function will send elements starting at index 1
+  until  all  elements  have  been  sent. If a channel with finite capacity is
+  full, then the operation will block until all elements can be sent.[133X
+  
+  [33X[0;0YThe  operation  is  designed  to be more efficient than sending all elements
+  individually  via  [2XSendChannel[102X  ([14X7.1-2[114X)  by minimizing potentially expensive
+  concurrency operations.[133X
+  
+  [33X[0;0YSee [2XMultiReceiveChannel[102X ([14X7.1-10[114X) for an example.[133X
+  
+  [1X7.1-9 TryMultiSendChannel[101X
+  
+  [33X[1;0Y[29X[2XTryMultiSendChannel[102X( [3Xchannel[103X, [3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XTryMultiSendChannel[102X  operates  like [2XMultiSendChannel[102X ([14X7.1-8[114X), except that it
+  returns  rather  than  blocking  if  it cannot send any more elements if the
+  channel  is  full. It returns the number of elements it has sent. If [3Xchannel[103X
+  does  not  have  finite  capacity,  [2XTryMultiSendChannel[102X will always send all
+  elements in the list.[133X
+  
+  [1X7.1-10 MultiReceiveChannel[101X
+  
+  [33X[1;0Y[29X[2XMultiReceiveChannel[102X( [3Xchannel[103X, [3Xamount[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XMultiReceiveChannel[102X   is   the  receiving  counterpart  to  [2XMultiSendChannel[102X
+  ([14X7.1-8[114X).It  will  try  to  receive up to [3Xamount[103X objects from [3Xchannel[103X. If the
+  channel  contains  less  than  [3Xamount[103X  objects,  it  will return rather than
+  blocking.[133X
+  
+  [33X[0;0YThe function returns a list of all the objects received.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xch:=CreateChannel();;[127X[104X
+    [4X[25Xgap>[125X [27XMultiSendChannel(ch, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);[127X[104X
+    [4X[25Xgap>[125X [27XMultiReceiveChannel(ch,7);[127X[104X
+    [4X[28X[ 1, 2, 3, 4, 5, 6, 7 ][128X[104X
+    [4X[25Xgap>[125X [27XMultiReceiveChannel(ch,7);[127X[104X
+    [4X[28X[ 8, 9, 10 ][128X[104X
+    [4X[25Xgap>[125X [27XMultiReceiveChannel(ch,7);[127X[104X
+    [4X[28X[  ][128X[104X
+  [4X[32X[104X
+  
+  [1X7.1-11 ReceiveAnyChannel[101X
+  
+  [33X[1;0Y[29X[2XReceiveAnyChannel[102X( [3Xchannel_1[103X, [3X...[103X, [3Xchannel_n[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XReceiveAnyChannel[102X( [3Xchannel_list[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XReceiveAnyChannel[102X  is  a  multiplexing  variant of[2XReceiveChannel[102X ([14X7.1-6[114X). It
+  blocks  until  at  least one of the channels provided contains an object. It
+  will then retrieve that object from the channel and return it.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xch1 := CreateChannel();;[127X[104X
+    [4X[25Xgap>[125X [27Xch2 := CreateChannel();;[127X[104X
+    [4X[25Xgap>[125X [27XSendChannel(ch2, [1, 2, 3]);;[127X[104X
+    [4X[25Xgap>[125X [27XReceiveAnyChannel(ch1, ch2);[127X[104X
+    [4X[28X[ 1, 2, 3 ][128X[104X
+  [4X[32X[104X
+  
+  [1X7.1-12 ReceiveAnyChannelWithIndex[101X
+  
+  [33X[1;0Y[29X[2XReceiveAnyChannelWithIndex[102X( [3Xchannel_1[103X, [3X...[103X, [3Xchannel_n[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XReceiveAnyChannelWithIndex[102X( [3Xchannel_list[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XReceiveAnyChannelWithIndex[102X  works  like  [2XReceiveAnyChannel[102X  ([14X7.1-11[114X), except
+  that  it  returns a list with two elements, the first being the object being
+  received,  the  second being the number of the channel from which the object
+  has been retrieved.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xch1 := CreateChannel();;[127X[104X
+    [4X[25Xgap>[125X [27Xch2 := CreateChannel();;[127X[104X
+    [4X[25Xgap>[125X [27XSendChannel(ch2, [1, 2, 3]);;[127X[104X
+    [4X[25Xgap>[125X [27XReceiveAnyChannelWithIndex(ch1, ch2);[127X[104X
+    [4X[28X[ [ 1, 2, 3 ], 2 ][128X[104X
+  [4X[32X[104X
+  
+  [1X7.1-13 TallyChannel[101X
+  
+  [33X[1;0Y[29X[2XTallyChannel[102X( [3Xchannel[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XTallyChannel[102X  returns  the  number  of objects that a channel contains. This
+  number  can  increase  or decrease, as data is sent to or received from this
+  channel. Send operations will only ever increase and receive operations will
+  only  ever  decrease this count. Thus, if there is only one thread receiving
+  data from the channel, it can use the result as a lower bound for the number
+  of elements that will be available in the channel.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xch := CreateChannel();;[127X[104X
+    [4X[25Xgap>[125X [27XSendChannel(ch, 2);[127X[104X
+    [4X[25Xgap>[125X [27XSendChannel(ch, 3);[127X[104X
+    [4X[25Xgap>[125X [27XSendChannel(ch, 5);[127X[104X
+    [4X[25Xgap>[125X [27XTallyChannel(ch);[127X[104X
+    [4X[28X3[128X[104X
+  [4X[32X[104X
+  
+  [1X7.1-14 InspectChannel[101X
+  
+  [33X[1;0Y[29X[2XInspectChannel[102X( [3Xchannel[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XInspectChannel[102X  returns  a list of the objects that a channel contains. Note
+  that objects that are not in the shared, public, or read-only region will be
+  temporarily  stored  in the so-called limbo region while in transit and will
+  be inaccessible through normal means until they have been received.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xch := CreateChannel();;[127X[104X
+    [4X[25Xgap>[125X [27XSendChannel(ch, 2);[127X[104X
+    [4X[25Xgap>[125X [27XSendChannel(ch, 3);[127X[104X
+    [4X[25Xgap>[125X [27XSendChannel(ch, 5);[127X[104X
+    [4X[25Xgap>[125X [27XInspectChannel(ch);[127X[104X
+    [4X[28X[ 2, 3, 5 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis function is primarily intended for debugging purposes.[133X
+  

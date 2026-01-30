@@ -1,0 +1,816 @@
+  
+  [1X18 [33X[0;0YCyclotomic Numbers[133X[101X
+  
+  [33X[0;0Y[5XGAP[105X  admits  computations in abelian extension fields of the rational number
+  field  [22Xℚ[122X,  that is fields with abelian Galois group over [22Xℚ[122X. These fields are
+  subfields  of  [13Xcyclotomic  fields[113X  [22Xℚ(e_n)[122X  where  [22Xe_n  =  exp(2  π i/n)[122X is a
+  primitive  complex  [22Xn[122X-th  root  of  unity.  The elements of these fields are
+  called [13Xcyclotomics[113X.[133X
+  
+  [33X[0;0YInformation  concerning  operations  for domains of cyclotomics, for example
+  certain integral bases of fields of cyclotomics, can be found in Chapter [14X60[114X.
+  For  more  general  operations  that  take  a field extension as a –possibly
+  optional–  argument,  e.g.,  [2XTrace[102X  ([14X58.3-5[114X)  or  [2XCoefficients[102X ([14X61.6-3[114X), see
+  Chapter [14X58[114X.[133X
+  
+  
+  [1X18.1 [33X[0;0YOperations for Cyclotomics[133X[101X
+  
+  [1X18.1-1 E[101X
+  
+  [33X[1;0Y[29X[2XE[102X( [3Xn[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XE[102X  returns  the  primitive [3Xn[103X-th root of unity [22Xe_n = exp(2π i/n)[122X. Cyclotomics
+  are  usually  entered as sums of roots of unity, with rational coefficients,
+  and  irrational  cyclotomics  are  displayed  in  such  a  way. (For special
+  cyclotomics, see [14X18.4[114X.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XE(9); E(9)^3; E(6); E(12) / 3;[127X[104X
+    [4X[28X-E(9)^4-E(9)^7[128X[104X
+    [4X[28XE(3)[128X[104X
+    [4X[28X-E(3)^2[128X[104X
+    [4X[28X-1/3*E(12)^7[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YA  particular basis is used to express cyclotomics, see [14X60.3[114X; note that [10XE(9)[110X
+  is [13Xnot[113X a basis element, as the above example shows.[133X
+  
+  [1X18.1-2 Cyclotomics[101X
+  
+  [33X[1;0Y[29X[2XCyclotomics[102X [32X global variable[133X
+  
+  [33X[0;0Yis the domain of all cyclotomics.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XE(9) in Cyclotomics; 37 in Cyclotomics; true in Cyclotomics;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAs  the cyclotomics are field elements, the usual arithmetic operators [10X+[110X, [10X-[110X,
+  [10X*[110X  and [10X/[110X (and [10X^[110X to take powers by integers) are applicable. Note that [10X^[110X does
+  [13Xnot[113X  denote  the  conjugation  of  group  elements, so it is [13Xnot[113X possible to
+  explicitly  construct  groups  of  cyclotomics.  (However, it is possible to
+  compute  the  inverse and the multiplicative order of a nonzero cyclotomic.)
+  Also,  taking  the  [22Xk[122X-th  power  of  a  root  of  unity  [22Xz[122X  defines a Galois
+  automorphism  if  and  only  if [22Xk[122X is coprime to the conductor (see [2XConductor[102X
+  ([14X18.1-7[114X)) of [22Xz[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XE(5) + E(3); (E(5) + E(5)^4) ^ 2; E(5) / E(3); E(5) * E(3);[127X[104X
+    [4X[28X-E(15)^2-2*E(15)^8-E(15)^11-E(15)^13-E(15)^14[128X[104X
+    [4X[28X-2*E(5)-E(5)^2-E(5)^3-2*E(5)^4[128X[104X
+    [4X[28XE(15)^13[128X[104X
+    [4X[28XE(15)^8[128X[104X
+    [4X[25Xgap>[125X [27XOrder( E(5) ); Order( 1+E(5) );[127X[104X
+    [4X[28X5[128X[104X
+    [4X[28Xinfinity[128X[104X
+  [4X[32X[104X
+  
+  [1X18.1-3 IsCyclotomic[101X
+  
+  [33X[1;0Y[29X[2XIsCyclotomic[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsCyc[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YEvery   object   in  the  family  [10XCyclotomicsFamily[110X  lies  in  the  category
+  [2XIsCyclotomic[102X.  This  covers  integers,  rationals,  proper  cyclotomics, the
+  object  [2Xinfinity[102X  ([14X18.2-1[114X), and unknowns (see Chapter [14X74[114X). All these objects
+  except  [2Xinfinity[102X  ([14X18.2-1[114X)  and  unknowns  lie  also  in the category [2XIsCyc[102X,
+  [2Xinfinity[102X ([14X18.2-1[114X) lies in (and can be detected from) the category [2XIsInfinity[102X
+  ([14X18.2-1[114X), and unknowns lie in [2XIsUnknown[102X ([14X74.1-3[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsCyclotomic(0); IsCyclotomic(1/2*E(3)); IsCyclotomic( infinity );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsCyc(0); IsCyc(1/2*E(3)); IsCyc( infinity );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X18.1-4 IsIntegralCyclotomic[101X
+  
+  [33X[1;0Y[29X[2XIsIntegralCyclotomic[102X( [3Xobj[103X ) [32X property[133X
+  
+  [33X[0;0YA  cyclotomic is called [13Xintegral[113X or a [13Xcyclotomic integer[113X if all coefficients
+  of  its  minimal  polynomial  over  the  rationals  are  integers. Since the
+  underlying  basis  of  the  external  representation  of  cyclotomics  is an
+  integral   basis  (see [14X60.3[114X),  the  subring  of  cyclotomic  integers  in  a
+  cyclotomic  field  is  formed  by  those  cyclotomics for which the external
+  representation  is a list of integers. For example, square roots of integers
+  are  cyclotomic  integers  (see [14X18.4[114X),  any  root  of  unity is a cyclotomic
+  integer,  character values are always cyclotomic integers, but all rationals
+  which are not integers are not cyclotomic integers.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xr:= ER( 5 );               # The square root of 5 ...[127X[104X
+    [4X[28XE(5)-E(5)^2-E(5)^3+E(5)^4[128X[104X
+    [4X[25Xgap>[125X [27XIsIntegralCyclotomic( r ); # ... is a cyclotomic integer.[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xr2:= 1/2 * r;              # This is not a cyclotomic integer, ...[127X[104X
+    [4X[28X1/2*E(5)-1/2*E(5)^2-1/2*E(5)^3+1/2*E(5)^4[128X[104X
+    [4X[25Xgap>[125X [27XIsIntegralCyclotomic( r2 );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xr3:= 1/2 * r - 1/2;        # ... but this is one.[127X[104X
+    [4X[28XE(5)+E(5)^4[128X[104X
+    [4X[25Xgap>[125X [27XIsIntegralCyclotomic( r3 );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X18.1-5 Int[101X
+  
+  [33X[1;0Y[29X[2XInt[102X( [3Xcyc[103X ) [32X method[133X
+  
+  [33X[0;0YThe  operation  [2XInt[102X  can  be  used  to  find a cyclotomic integer near to an
+  arbitrary cyclotomic, by applying [2XInt[102X ([14X14.2-3[114X) to the coefficients.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XInt( E(5)+1/2*E(5)^2 ); Int( 2/3*E(7)-3/2*E(4) );[127X[104X
+    [4X[28XE(5)[128X[104X
+    [4X[28X-E(4)[128X[104X
+  [4X[32X[104X
+  
+  [1X18.1-6 String[101X
+  
+  [33X[1;0Y[29X[2XString[102X( [3Xcyc[103X ) [32X method[133X
+  
+  [33X[0;0YThe  operation [2XString[102X returns for a cyclotomic [3Xcyc[103X a string corresponding to
+  the way the cyclotomic is printed by [2XViewObj[102X ([14X6.3-5[114X) and [2XPrintObj[102X ([14X6.3-5[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XString( E(5)+1/2*E(5)^2 ); String( 17/3 );[127X[104X
+    [4X[28X"E(5)+1/2*E(5)^2"[128X[104X
+    [4X[28X"17/3"[128X[104X
+  [4X[32X[104X
+  
+  [1X18.1-7 Conductor[101X
+  
+  [33X[1;0Y[29X[2XConductor[102X( [3Xcyc[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XConductor[102X( [3XC[103X ) [32X attribute[133X
+  
+  [33X[0;0YFor  an  element  [3Xcyc[103X  of a cyclotomic field, [2XConductor[102X returns the smallest
+  integer  [22Xn[122X  such  that  [3Xcyc[103X is contained in the [22Xn[122X-th cyclotomic field. For a
+  collection  [3XC[103X  of  cyclotomics (for example a dense list of cyclotomics or a
+  field  of  cyclotomics),  [2XConductor[102X returns the smallest integer [22Xn[122X such that
+  all elements of [3XC[103X are contained in the [22Xn[122X-th cyclotomic field.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XConductor( 0 ); Conductor( E(10) ); Conductor( E(12) );[127X[104X
+    [4X[28X1[128X[104X
+    [4X[28X5[128X[104X
+    [4X[28X12[128X[104X
+  [4X[32X[104X
+  
+  [1X18.1-8 AbsoluteValue[101X
+  
+  [33X[1;0Y[29X[2XAbsoluteValue[102X( [3Xcyc[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the  absolute  value of a cyclotomic number [3Xcyc[103X. At the moment only
+  methods for rational numbers exist.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XAbsoluteValue(-3);[127X[104X
+    [4X[28X3[128X[104X
+  [4X[32X[104X
+  
+  [1X18.1-9 RoundCyc[101X
+  
+  [33X[1;0Y[29X[2XRoundCyc[102X( [3Xcyc[103X ) [32X operation[133X
+  
+  [33X[0;0Yis  a  cyclotomic  integer [22Xz[122X (see [2XIsIntegralCyclotomic[102X ([14X18.1-4[114X)) near to the
+  cyclotomic  [3Xcyc[103X in the following sense: Let [10Xc[110X be the [22Xi[122X-th coefficient in the
+  external  representation  (see [2XCoeffsCyc[102X  ([14X18.1-10[114X))  of  [3Xcyc[103X. Then the [22Xi[122X-th
+  coefficient  in the external representation of [22Xz[122X is [10XInt( c + 1/2 )[110X or [10XInt( c
+  - 1/2 )[110X, depending on whether [10Xc[110X is nonnegative or negative, respectively.[133X
+  
+  [33X[0;0YExpressed   in  terms  of  the  Zumbroich  basis  (see [14X60.3[114X),  rounding  the
+  coefficients  of  [3Xcyc[103X  w.r.t. this  basis  to the nearest integer yields the
+  coefficients of [22Xz[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRoundCyc( E(5)+1/2*E(5)^2 ); RoundCyc( 2/3*E(7)+3/2*E(4) );[127X[104X
+    [4X[28XE(5)+E(5)^2[128X[104X
+    [4X[28X-2*E(28)^3+E(28)^4-2*E(28)^11-2*E(28)^15-2*E(28)^19-2*E(28)^23[128X[104X
+    [4X[28X -2*E(28)^27[128X[104X
+  [4X[32X[104X
+  
+  [1X18.1-10 CoeffsCyc[101X
+  
+  [33X[1;0Y[29X[2XCoeffsCyc[102X( [3Xcyc[103X, [3XN[103X ) [32X function[133X
+  
+  [33X[0;0YLet  [3Xcyc[103X  be a cyclotomic with conductor [22Xn[122X (see [2XConductor[102X ([14X18.1-7[114X)). If [3XN[103X is
+  not  a  multiple  of  [22Xn[122X  then  [2XCoeffsCyc[102X  returns [9Xfail[109X because [3Xcyc[103X cannot be
+  expressed  in  terms  of  [3XN[103X-th roots of unity. Otherwise [2XCoeffsCyc[102X returns a
+  list  of length [3XN[103X with entry at position [22Xj[122X equal to the coefficient of [22Xexp(2
+  π  i  (j-1)/[3XN[103X)[122X  if this root belongs to the [3XN[103X-th Zumbroich basis (see [14X60.3[114X),
+  and  equal  to  zero otherwise. So we have [3Xcyc[103X = [10XCoeffsCyc([110X [3Xcyc[103X, [3XN[103X [10X) * List(
+  [1..[110X[3XN[103X[10X], j -> E([110X[3XN[103X[10X)^(j-1) )[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xcyc:= E(5)+E(5)^2;[127X[104X
+    [4X[28XE(5)+E(5)^2[128X[104X
+    [4X[25Xgap>[125X [27XCoeffsCyc( cyc, 5 );  CoeffsCyc( cyc, 15 );  CoeffsCyc( cyc, 7 );[127X[104X
+    [4X[28X[ 0, 1, 1, 0, 0 ][128X[104X
+    [4X[28X[ 0, -1, 0, 0, 0, 0, 0, 0, -1, 0, 0, -1, 0, -1, 0 ][128X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [1X18.1-11 DenominatorCyc[101X
+  
+  [33X[1;0Y[29X[2XDenominatorCyc[102X( [3Xcyc[103X ) [32X function[133X
+  
+  [33X[0;0YFor  a  cyclotomic  number  [3Xcyc[103X  (see [2XIsCyclotomic[102X  ([14X18.1-3[114X)), this function
+  returns  the  smallest  positive integer [22Xn[122X such that [22Xn[122X[10X * [110X[3Xcyc[103X is a cyclotomic
+  integer  (see [2XIsIntegralCyclotomic[102X  ([14X18.1-4[114X)). For rational numbers [3Xcyc[103X, the
+  result is the same as that of [2XDenominatorRat[102X ([14X17.2-5[114X).[133X
+  
+  [1X18.1-12 ExtRepOfObj[101X
+  
+  [33X[1;0Y[29X[2XExtRepOfObj[102X( [3Xcyc[103X ) [32X method[133X
+  
+  [33X[0;0YThe  external  representation  of  a  cyclotomic  [3Xcyc[103X  with conductor [22Xn[122X (see
+  [2XConductor[102X  ([14X18.1-7[114X) is the list returned by [2XCoeffsCyc[102X ([14X18.1-10[114X), called with
+  [3Xcyc[103X and [22Xn[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XExtRepOfObj( E(5) ); CoeffsCyc( E(5), 5 );[127X[104X
+    [4X[28X[ 0, 1, 0, 0, 0 ][128X[104X
+    [4X[28X[ 0, 1, 0, 0, 0 ][128X[104X
+    [4X[25Xgap>[125X [27XCoeffsCyc( E(5), 15 );[127X[104X
+    [4X[28X[ 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, -1, 0 ][128X[104X
+  [4X[32X[104X
+  
+  [1X18.1-13 DescriptionOfRootOfUnity[101X
+  
+  [33X[1;0Y[29X[2XDescriptionOfRootOfUnity[102X( [3Xroot[103X ) [32X function[133X
+  
+  [33X[0;0YGiven  a  cyclotomic  [3Xroot[103X  that is known to be a root of unity (this is [13Xnot[113X
+  checked),  [2XDescriptionOfRootOfUnity[102X  returns  a  list  [22X[  n,  e ][122X of coprime
+  positive integers such that [3Xroot[103X [22X=[122X [10XE[110X[22X(n)^e[122X holds.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XE(9);  DescriptionOfRootOfUnity( E(9) );[127X[104X
+    [4X[28X-E(9)^4-E(9)^7[128X[104X
+    [4X[28X[ 9, 1 ][128X[104X
+    [4X[25Xgap>[125X [27XDescriptionOfRootOfUnity( -E(3) );[127X[104X
+    [4X[28X[ 6, 5 ][128X[104X
+  [4X[32X[104X
+  
+  [1X18.1-14 IsGaussInt[101X
+  
+  [33X[1;0Y[29X[2XIsGaussInt[102X( [3Xx[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XIsGaussInt[102X   returns   [9Xtrue[109X   if   the   object  [3Xx[103X  is  a  Gaussian  integer
+  (see [2XGaussianIntegers[102X  ([14X60.5-1[114X)), and [9Xfalse[109X otherwise. Gaussian integers are
+  of the form [22Xa + b[122X[10X*E(4)[110X, where [22Xa[122X and [22Xb[122X are integers.[133X
+  
+  [1X18.1-15 IsGaussRat[101X
+  
+  [33X[1;0Y[29X[2XIsGaussRat[102X( [3Xx[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XIsGaussRat[102X   returns   [9Xtrue[109X   if   the  object  [3Xx[103X  is  a  Gaussian  rational
+  (see [2XGaussianRationals[102X  ([14X60.1-3[114X)),  and  [9Xfalse[109X otherwise. Gaussian rationals
+  are of the form [22Xa + b[122X[10X*E(4)[110X, where [22Xa[122X and [22Xb[122X are rationals.[133X
+  
+  [1X18.1-16 DefaultField[101X
+  
+  [33X[1;0Y[29X[2XDefaultField[102X( [3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XDefaultField[102X  for  cyclotomics  is defined to return the smallest [13Xcyclotomic[113X
+  field containing the given elements.[133X
+  
+  [33X[0;0YNote  that  [2XField[102X  ([14X58.1-3[114X)  returns the smallest field containing all given
+  elements,  which  need  not be a cyclotomic field. In both cases, the fields
+  represent vector spaces over the rationals (see [14X60.3[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XField( E(5)+E(5)^4 );  DefaultField( E(5)+E(5)^4 );[127X[104X
+    [4X[28XNF(5,[ 1, 4 ])[128X[104X
+    [4X[28XCF(5)[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X18.2 [33X[0;0YInfinity and negative Infinity[133X[101X
+  
+  [1X18.2-1 IsInfinity[101X
+  
+  [33X[1;0Y[29X[2XIsInfinity[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsNegInfinity[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2Xinfinity[102X [32X global variable[133X
+  [33X[1;0Y[29X[2X-infinity[102X [32X global variable[133X
+  
+  [33X[0;0Y[2Xinfinity[102X   and   [2X-infinity[102X   are   special   [5XGAP[105X   objects   that   lie   in
+  [10XCyclotomicsFamily[110X. They are larger or smaller than all other objects in this
+  family  respectively.  [2Xinfinity[102X is mainly used as return value of operations
+  such  as  [2XSize[102X  ([14X30.4-6[114X)  and  [2XDimension[102X  ([14X57.3-3[114X) for infinite and infinite
+  dimensional domains, respectively.[133X
+  
+  [33X[0;0YSome  arithmetic operations are provided for convenience when using [2Xinfinity[102X
+  and [2X-infinity[102X as top and bottom element respectively.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X-infinity + 1;[127X[104X
+    [4X[28X-infinity[128X[104X
+    [4X[25Xgap>[125X [27Xinfinity + infinity;[127X[104X
+    [4X[28Xinfinity[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YOften  it  is  useful  to  distinguish [2Xinfinity[102X from [21Xproper[121X cyclotomics. For
+  that,  [2Xinfinity[102X  lies  in the category [2XIsInfinity[102X but not in [2XIsCyc[102X ([14X18.1-3[114X),
+  and  the  other  cyclotomics  lie  in the category [2XIsCyc[102X ([14X18.1-3[114X) but not in
+  [2XIsInfinity[102X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xs:= Size( Rationals );[127X[104X
+    [4X[28Xinfinity[128X[104X
+    [4X[25Xgap>[125X [27Xs = infinity; IsCyclotomic( s ); IsCyc( s ); IsInfinity( s );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xs in Rationals; s > 17;[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XSet( [ s, 2, s, E(17), s, 19 ] );[127X[104X
+    [4X[28X[ 2, 19, E(17), infinity ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X18.3 [33X[0;0YComparisons of Cyclotomics[133X[101X
+  
+  [33X[0;0YTo  compare  cyclotomics, the operators [10X<[110X, [10X<=[110X, [10X=[110X, [10X>=[110X, [10X>[110X, and [10X<>[110X can be used,
+  the  result  will be [9Xtrue[109X if the first operand is smaller, smaller or equal,
+  equal,  larger  or  equal,  larger,  or  unequal,  respectively,  and  [9Xfalse[109X
+  otherwise.[133X
+  
+  [33X[0;0YCyclotomics  are  ordered  as follows: The relation between rationals is the
+  natural one, rationals are smaller than irrational cyclotomics, and [2Xinfinity[102X
+  ([14X18.2-1[114X)  is  the  largest  cyclotomic.  For two irrational cyclotomics with
+  different   conductors  (see  [2XConductor[102X  ([14X18.1-7[114X)),  the  one  with  smaller
+  conductor  is  regarded  as  smaller.  Two  irrational cyclotomics with same
+  conductor  are  compared  via their external representation (see [2XExtRepOfObj[102X
+  ([14X18.1-12[114X)).[133X
+  
+  [33X[0;0YFor comparisons of cyclotomics and other [5XGAP[105X objects, see Section [14X4.13[114X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XE(5) < E(6);      # the latter value has conductor 3[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XE(3) < E(3)^2;    # both have conductor 3, compare the ext. repr.[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27X3 < E(3); E(5) < E(7);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X18.4 [33X[0;0YATLAS Irrationalities[133X[101X
+  
+  
+  [1X18.4-1 [33X[0;0YEB, EC, [22X...[122X[101X[1X, EH[133X[101X
+  
+  [33X[1;0Y[29X[2XEB[102X( [3XN[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XEC[102X( [3XN[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XED[102X( [3XN[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XEE[102X( [3XN[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XEF[102X( [3XN[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XEG[102X( [3XN[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XEH[102X( [3XN[103X ) [32X function[133X
+  
+  [33X[0;0YFor  a  positive  integer  [3XN[103X,  let  [22Xz  =[122X  [10XE([110X[3XN[103X[10X)[110X [22X= exp(2 π i/[3XN[103X)[122X. The following
+  so-called  [13Xatomic  irrationalities[113X (see [CCN+85, Chapter 7, Section 10]) can
+  be  entered  using  functions.  (Note  that  the  values  are  not necessary
+  irrational.)[133X
+  
+        [10XEB([110X[3XN[103X[10X)[110X   =   [22Xb_[3XN[103X[122X   =   [22X( ∑_{j = 1}^{[3XN[103X-1} z^{j^2} ) / 2[122X   ,   [22X[3XN[103X ≡ 1 mod 2[122X   
+        [10XEC([110X[3XN[103X[10X)[110X   =   [22Xc_[3XN[103X[122X   =   [22X( ∑_{j = 1}^{[3XN[103X-1} z^{j^3} ) / 3[122X   ,   [22X[3XN[103X ≡ 1 mod 3[122X   
+        [10XED([110X[3XN[103X[10X)[110X   =   [22Xd_[3XN[103X[122X   =   [22X( ∑_{j = 1}^{[3XN[103X-1} z^{j^4} ) / 4[122X   ,   [22X[3XN[103X ≡ 1 mod 4[122X   
+        [10XEE([110X[3XN[103X[10X)[110X   =   [22Xe_[3XN[103X[122X   =   [22X( ∑_{j = 1}^{[3XN[103X-1} z^{j^5} ) / 5[122X   ,   [22X[3XN[103X ≡ 1 mod 5[122X   
+        [10XEF([110X[3XN[103X[10X)[110X   =   [22Xf_[3XN[103X[122X   =   [22X( ∑_{j = 1}^{[3XN[103X-1} z^{j^6} ) / 6[122X   ,   [22X[3XN[103X ≡ 1 mod 6[122X   
+        [10XEG([110X[3XN[103X[10X)[110X   =   [22Xg_[3XN[103X[122X   =   [22X( ∑_{j = 1}^{[3XN[103X-1} z^{j^7} ) / 7[122X   ,   [22X[3XN[103X ≡ 1 mod 7[122X   
+        [10XEH([110X[3XN[103X[10X)[110X   =   [22Xh_[3XN[103X[122X   =   [22X( ∑_{j = 1}^{[3XN[103X-1} z^{j^8} ) / 8[122X   ,   [22X[3XN[103X ≡ 1 mod 8[122X   
+  
+  [33X[0;0Y(Note that in [10XEC([110X[3XN[103X[10X)[110X, [22X...[122X, [10XEH([110X[3XN[103X[10X)[110X, [3XN[103X must be a prime.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XEB(5);  EB(9);[127X[104X
+    [4X[28XE(5)+E(5)^4[128X[104X
+    [4X[28X1[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X18.4-2 [33X[0;0YEI and ER[133X[101X
+  
+  [33X[1;0Y[29X[2XEI[102X( [3XN[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XER[102X( [3XN[103X ) [32X function[133X
+  
+  [33X[0;0YFor  a  rational  number  [3XN[103X, [2XER[102X returns the square root [22Xsqrt{[3XN[103X}[122X of [3XN[103X, and [2XEI[102X
+  returns  [22Xsqrt{-[3XN[103X}[122X.  By  the  chosen  embedding of cyclotomic fields into the
+  complex  numbers,  [2XER[102X returns the positive square root if [3XN[103X is positive, and
+  if  [3XN[103X  is  negative  then  [10XER([110X[3XN[103X[10X) = EI(-[110X[3XN[103X[10X)[110X holds. In any case, [10XEI([110X[3XN[103X[10X) = E(4) *
+  ER([110X[3XN[103X[10X)[110X.[133X
+  
+  [33X[0;0Y[2XER[102X  is  installed  as  method for the operation [2XSqrt[102X ([14X31.12-5[114X), for rational
+  argument.[133X
+  
+  [33X[0;0YFrom  a  theorem  of Gauss (see [Lan70, QS4 in Ch. IV, Par. 3]) we know that
+  [22Xb_[3XN[103X =[122X[133X
+  
+        [22X(-1 + sqrt{[3XN[103X}) / 2[122X     if   [22X[3XN[103X ≡ 1 mod 4[122X    
+        [22X(-1 + i sqrt{[3XN[103X}) / 2[122X   if   [22X[3XN[103X ≡ -1 mod 4[122X   
+  
+  [33X[0;0YSo [22Xsqrt{[3XN[103X}[122X can be computed from [22Xb_[3XN[103X[122X, see [2XEB[102X ([14X18.4-1[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XER(3); EI(3);[127X[104X
+    [4X[28X-E(12)^7+E(12)^11[128X[104X
+    [4X[28XE(3)-E(3)^2[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X18.4-3 [33X[0;0YEY, EX, [22X...[122X[101X[1X, ES[133X[101X
+  
+  [33X[1;0Y[29X[2XEY[102X( [3XN[103X[, [3Xd[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XEX[102X( [3XN[103X[, [3Xd[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XEW[102X( [3XN[103X[, [3Xd[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XEV[102X( [3XN[103X[, [3Xd[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XEU[102X( [3XN[103X[, [3Xd[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XET[102X( [3XN[103X[, [3Xd[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XES[102X( [3XN[103X[, [3Xd[103X] ) [32X function[133X
+  
+  [33X[0;0YFor  the  given  integer  [3XN[103X  [22X>  2[122X,  let  [22X[3XN[103X_k[122X  denote  the first integer with
+  multiplicative order exactly [22Xk[122X modulo [3XN[103X, chosen in the order of preference[133X
+  
+  
+  [24X[33X[0;6Y1, -1, 2, -2, 3, -3, 4, -4, ... .[133X[124X
+  
+  [33X[0;0YWe define (with [22Xz = exp(2 π i/[3XN[103X)[122X)[133X
+  
+        [10XEY([110X[3XN[103X[10X)[110X   =   [22Xy_[3XN[103X[122X   =   [22Xz + z^n[122X                                 [22X(n = [3XN[103X_2)[122X   
+        [10XEX([110X[3XN[103X[10X)[110X   =   [22Xx_[3XN[103X[122X   =   [22Xz + z^n + z^{n^2}[122X                       [22X(n = [3XN[103X_3)[122X   
+        [10XEW[110X([3XN[103X[10X)[110X   =   [22Xw_[3XN[103X[122X   =   [22Xz + z^n + z^{n^2} + z^{n^3}[122X             [22X(n = [3XN[103X_4)[122X   
+        [10XEV([110X[3XN[103X[10X)[110X   =   [22Xv_[3XN[103X[122X   =   [22Xz + z^n + z^{n^2} + z^{n^3} + z^{n^4}[122X   [22X(n = [3XN[103X_5)[122X   
+        [10XEU([110X[3XN[103X[10X)[110X   =   [22Xu_[3XN[103X[122X   =   [22Xz + z^n + z^{n^2} + ... + z^{n^5}[122X       [22X(n = [3XN[103X_6)[122X   
+        [10XET([110X[3XN[103X[10X)[110X   =   [22Xt_[3XN[103X[122X   =   [22Xz + z^n + z^{n^2} + ... + z^{n^6}[122X       [22X(n = [3XN[103X_7)[122X   
+        [10XES([110X[3XN[103X[10X)[110X   =   [22Xs_[3XN[103X[122X   =   [22Xz + z^n + z^{n^2} + ... + z^{n^7}[122X       [22X(n = [3XN[103X_8)[122X   
+  
+  [33X[0;0YFor the two-argument versions of the functions, see Section [2XNK[102X ([14X18.4-5[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XEY(5);[127X[104X
+    [4X[28XE(5)+E(5)^4[128X[104X
+    [4X[25Xgap>[125X [27XEW(16,3); EW(17,2);[127X[104X
+    [4X[28X0[128X[104X
+    [4X[28XE(17)+E(17)^4+E(17)^13+E(17)^16[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X18.4-4 [33X[0;0YEM, EL, [22X...[122X[101X[1X, EJ[133X[101X
+  
+  [33X[1;0Y[29X[2XEM[102X( [3XN[103X[, [3Xd[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XEL[102X( [3XN[103X[, [3Xd[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XEK[102X( [3XN[103X[, [3Xd[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XEJ[102X( [3XN[103X[, [3Xd[103X] ) [32X function[133X
+  
+  [33X[0;0YLet [3XN[103X be an integer, [3XN[103X [22X> 2[122X. We define (with [22Xz = exp(2 π i/[3XN[103X)[122X)[133X
+  
+        [10XEM([110X[3XN[103X[10X)[110X   =   [22Xm_[3XN[103X[122X   =   [22Xz - z^n[122X                       [22X(n = [3XN[103X_2)[122X   
+        [10XEL([110X[3XN[103X[10X)[110X   =   [22Xl_[3XN[103X[122X   =   [22Xz - z^n + z^{n^2} - z^{n^3}[122X   [22X(n = [3XN[103X_4)[122X   
+        [10XEK([110X[3XN[103X[10X)[110X   =   [22Xk_[3XN[103X[122X   =   [22Xz - z^n + ... - z^{n^5}[122X       [22X(n = [3XN[103X_6)[122X   
+        [10XEJ([110X[3XN[103X[10X)[110X   =   [22Xj_[3XN[103X[122X   =   [22Xz - z^n + ... - z^{n^7}[122X       [22X(n = [3XN[103X_8)[122X   
+  
+  [33X[0;0YFor the two-argument versions of the functions, see Section [2XNK[102X ([14X18.4-5[114X).[133X
+  
+  [1X18.4-5 NK[101X
+  
+  [33X[1;0Y[29X[2XNK[102X( [3XN[103X, [3Xk[103X, [3Xd[103X ) [32X function[133X
+  
+  [33X[0;0YLet  [22X[3XN[103X_[3Xk[103X^([3Xd[103X)[122X  be  the  [22X([3Xd[103X+1)[122X-th  integer with multiplicative order exactly [3Xk[103X
+  modulo  [3XN[103X,  chosen  in the order of preference defined in Section [14X18.4-3[114X; [2XNK[102X
+  returns  [22X[3XN[103X_[3Xk[103X^([3Xd[103X)[122X;  if  there  is no integer with the required multiplicative
+  order, [2XNK[102X returns [9Xfail[109X.[133X
+  
+  [33X[0;0YWe write [22X[3XN[103X_[3Xk[103X = [3XN[103X_[3Xk[103X^(0), [3XN[103X_[3Xk[103X^' = [3XN[103X_[3Xk[103X^(1), [3XN[103X_[3Xk[103X^'' = [3XN[103X_[3Xk[103X^(2)[122X and so on.[133X
+  
+  [33X[0;0YThe algebraic numbers[133X
+  
+  
+  [24X[33X[0;6Yy_[3XN[103X^' = y_[3XN[103X^(1), y_[3XN[103X^'' = y_[3XN[103X^(2), ..., x_[3XN[103X^', x_[3XN[103X^'', ..., j_[3XN[103X^', j_[3XN[103X^'', ...[133X[124X
+  
+  [33X[0;0Yare  obtained on replacing [22X[3XN[103X_[3Xk[103X[122X in the definitions in the sections [14X18.4-3[114X and
+  [14X18.4-4[114X by [22X[3XN[103X_[3Xk[103X^', [3XN[103X_[3Xk[103X^'', ...[122X; they can be entered as[133X
+  
+        [10XEY([110X[3XN[103X,[3Xd[103X[10X)[110X    =    [22Xy_[3XN[103X^([3Xd[103X)[122X   
+        [10XEX([110X[3XN[103X,[3Xd[103X[10X)[110X    =    [22Xx_[3XN[103X^([3Xd[103X)[122X   
+                  [22X...[122X             
+        [10XEJ([110X[3XN[103X,[3Xd[103X[10X)[110X    =    [22Xj_[3XN[103X^([3Xd[103X)[122X   
+  
+  [1X18.4-6 AtlasIrrationality[101X
+  
+  [33X[1;0Y[29X[2XAtlasIrrationality[102X( [3Xirratname[103X ) [32X function[133X
+  
+  [33X[0;0YLet  [3Xirratname[103X  be  a  string that describes an irrational value as a linear
+  combination  in  terms  of  the  atomic  irrationalities  introduced  in the
+  sections [14X18.4-1[114X, [14X18.4-2[114X, [14X18.4-3[114X, [14X18.4-4[114X. These irrational values are defined
+  in  [CCN+85, Chapter 6, Section 10], and the following description is mainly
+  copied  from  there.  If  [22Xq_N[122X  is  such  a  value (e.g. [22Xy_24^''[122X) then linear
+  combinations  of  algebraic  conjugates  of  [22Xq_N[122X  are  abbreviated as in the
+  following examples:[133X
+  
+        [10X2qN+3&5-4&7+&9[110X   means   [22X2 q_N + 3 q_N^{*5} - 4 q_N^{*7} + q_N^{*9}[122X               
+        [10X4qN&3&5&7-3&4[110X    means   [22X4 (q_N + q_N^{*3} + q_N^{*5} + q_N^{*7}) - 3 q_N^{*11}[122X   
+        [10X4qN*3&5+&7[110X       means   [22X4 (q_N^{*3} + q_N^{*5}) + q_N^{*7}[122X                       
+  
+  [33X[0;0YTo  explain the [21Xampersand[121X syntax in general we remark that [21X&k[121X is interpreted
+  as  [22Xq_N^{*k}[122X, where [22Xq_N[122X is the most recently named atomic irrationality, and
+  that the scope of any premultiplying coefficient is broken by a [22X+[122X or [22X-[122X sign,
+  but  not  by [22X&[122X or [22X*k[122X. The algebraic conjugations indicated by the ampersands
+  apply  directly  to  the [13Xatomic[113X irrationality [22Xq_N[122X, even when, as in the last
+  example, [22Xq_N[122X first appears with another conjugacy [22X*k[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XAtlasIrrationality( "b7*3" );[127X[104X
+    [4X[28XE(7)^3+E(7)^5+E(7)^6[128X[104X
+    [4X[25Xgap>[125X [27XAtlasIrrationality( "y'''24" );[127X[104X
+    [4X[28XE(24)-E(24)^19[128X[104X
+    [4X[25Xgap>[125X [27XAtlasIrrationality( "-3y'''24*13&5" );[127X[104X
+    [4X[28X3*E(8)-3*E(8)^3[128X[104X
+    [4X[25Xgap>[125X [27XAtlasIrrationality( "3y'''24*13-2&5" );[127X[104X
+    [4X[28X-3*E(24)-2*E(24)^11+2*E(24)^17+3*E(24)^19[128X[104X
+    [4X[25Xgap>[125X [27XAtlasIrrationality( "3y'''24*13-&5" );[127X[104X
+    [4X[28X-3*E(24)-E(24)^11+E(24)^17+3*E(24)^19[128X[104X
+    [4X[25Xgap>[125X [27XAtlasIrrationality( "3y'''24*13-4&5&7" );[127X[104X
+    [4X[28X-7*E(24)-4*E(24)^11+4*E(24)^17+7*E(24)^19[128X[104X
+    [4X[25Xgap>[125X [27XAtlasIrrationality( "3y'''24&7" );[127X[104X
+    [4X[28X6*E(24)-6*E(24)^19[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X18.5 [33X[0;0YGalois Conjugacy of Cyclotomics[133X[101X
+  
+  [1X18.5-1 GaloisCyc[101X
+  
+  [33X[1;0Y[29X[2XGaloisCyc[102X( [3Xcyc[103X, [3Xk[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XGaloisCyc[102X( [3Xlist[103X, [3Xk[103X ) [32X operation[133X
+  
+  [33X[0;0YFor  a  cyclotomic  [3Xcyc[103X  and  an integer [3Xk[103X, [2XGaloisCyc[102X returns the cyclotomic
+  obtained by raising the roots of unity in the Zumbroich basis representation
+  of  [3Xcyc[103X to the [3Xk[103X-th power. If [3Xk[103X is coprime to the integer [22Xn[122X, [10XGaloisCyc( ., [3Xk[103X[10X
+  )[110X  acts as a Galois automorphism of the [22Xn[122X-th cyclotomic field (see [14X60.4[114X); to
+  get the Galois automorphisms themselves, use [2XGaloisGroup[102X ([14X58.3-1[114X).[133X
+  
+  [33X[0;0YThe  [13Xcomplex  conjugate[113X  of  [3Xcyc[103X  is [10XGaloisCyc( [3Xcyc[103X[10X, -1 )[110X, which can also be
+  computed using [2XComplexConjugate[102X ([14X18.5-2[114X).[133X
+  
+  [33X[0;0YFor  a  list  or  matrix  [3Xlist[103X  of  cyclotomics,  [2XGaloisCyc[102X returns the list
+  obtained by applying [2XGaloisCyc[102X to the entries of [3Xlist[103X.[133X
+  
+  [1X18.5-2 ComplexConjugate[101X
+  
+  [33X[1;0Y[29X[2XComplexConjugate[102X( [3Xz[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRealPart[102X( [3Xz[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XImaginaryPart[102X( [3Xz[103X ) [32X attribute[133X
+  
+  [33X[0;0YFor  a  cyclotomic  number  [3Xz[103X,  [2XComplexConjugate[102X returns [10XGaloisCyc( [3Xz[103X[10X, -1 )[110X,
+  see [2XGaloisCyc[102X  ([14X18.5-1[114X). For a quaternion [22X[3Xz[103X = c_1 e + c_2 i + c_3 j + c_4 k[122X,
+  [2XComplexConjugate[102X  returns  [22Xc_1  e  - c_2 i - c_3 j - c_4 k[122X, see [2XIsQuaternion[102X
+  ([14X62.8-8[114X).[133X
+  
+  [33X[0;0YWhen  [2XComplexConjugate[102X  is called with a list then the result is the list of
+  return  values of [2XComplexConjugate[102X for the list entries in the corresponding
+  positions.[133X
+  
+  [33X[0;0YWhen  [2XComplexConjugate[102X  is  defined  for  an  object  [3Xz[103X  then  [2XRealPart[102X  and
+  [2XImaginaryPart[102X   return   [10X([3Xz[103X[10X   +   ComplexConjugate(  [3Xz[103X[10X  ))  /  2[110X  and  [10X([3Xz[103X[10X  -
+  ComplexConjugate(   [3Xz[103X[10X   ))   /  2  i[110X,  respectively,  where  [10Xi[110X  denotes  the
+  corresponding imaginary unit.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XGaloisCyc( E(5) + E(5)^4, 2 );[127X[104X
+    [4X[28XE(5)^2+E(5)^3[128X[104X
+    [4X[25Xgap>[125X [27XGaloisCyc( E(5), -1 );           # the complex conjugate[127X[104X
+    [4X[28XE(5)^4[128X[104X
+    [4X[25Xgap>[125X [27XGaloisCyc( E(5) + E(5)^4, -1 );  # this value is real[127X[104X
+    [4X[28XE(5)+E(5)^4[128X[104X
+    [4X[25Xgap>[125X [27XGaloisCyc( E(15) + E(15)^4, 3 );[127X[104X
+    [4X[28XE(5)+E(5)^4[128X[104X
+    [4X[25Xgap>[125X [27XComplexConjugate( E(7) );[127X[104X
+    [4X[28XE(7)^6[128X[104X
+  [4X[32X[104X
+  
+  [1X18.5-3 StarCyc[101X
+  
+  [33X[1;0Y[29X[2XStarCyc[102X( [3Xcyc[103X ) [32X function[133X
+  
+  [33X[0;0YIf  the  cyclotomic [3Xcyc[103X is an irrational element of a quadratic extension of
+  the  rationals  then [2XStarCyc[102X returns the unique Galois conjugate of [3Xcyc[103X that
+  is  different  from  [3Xcyc[103X, otherwise [9Xfail[109X is returned. In the first case, the
+  return value is often called [3Xcyc[103X[22X*[122X (see [14X71.13[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XStarCyc( EB(5) ); StarCyc( E(5) );[127X[104X
+    [4X[28XE(5)^2+E(5)^3[128X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [1X18.5-4 Quadratic[101X
+  
+  [33X[1;0Y[29X[2XQuadratic[102X( [3Xcyc[103X ) [32X function[133X
+  
+  [33X[0;0YLet  [3Xcyc[103X be a cyclotomic integer that lies in a quadratic extension field of
+  the  rationals. Then we have [3Xcyc[103X[22X= (a + b sqrt{n}) / d[122X, for integers [22Xa[122X, [22Xb[122X, [22Xn[122X,
+  [22Xd[122X,  such  that  [22Xd[122X is either [22X1[122X or [22X2[122X. In this case, [2XQuadratic[102X returns a record
+  with  the  components  [10Xa[110X,  [10Xb[110X, [10Xroot[110X, [10Xd[110X, [10XATLAS[110X, and [10Xdisplay[110X; the values of the
+  first  four  are  [22Xa[122X,  [22Xb[122X,  [22Xn[122X,  and  [22Xd[122X,  the [10XATLAS[110X value is a (not necessarily
+  shortest)  representation  of  [3Xcyc[103X  in  terms  of  the [5XAtlas[105X irrationalities
+  [22Xb_{|n|}[122X,  [22Xi_{|n|}[122X, [22Xr_{|n|}[122X, and the [10Xdisplay[110X value is a string that expresses
+  [3Xcyc[103X in [5XGAP[105X notation, corresponding to the value of the [10XATLAS[110X component.[133X
+  
+  [33X[0;0YIf  [3Xcyc[103X is not a cyclotomic integer or does not lie in a quadratic extension
+  field of the rationals then [9Xfail[109X is returned.[133X
+  
+  [33X[0;0YIf the denominator [22Xd[122X is [22X2[122X then necessarily [22Xn[122X is congruent to [22X1[122X modulo [22X4[122X, and
+  [22Xr_n[122X,  [22Xi_n[122X are not possible; we have [10X[3Xcyc[103X[10X = x + y * EB( root )[110X with [10Xy = b[110X, [10Xx =
+  ( a + b ) / 2[110X.[133X
+  
+  [33X[0;0YIf  [22Xd  =  1[122X, we have the possibilities [22Xi_{|n|}[122X for [22Xn < -1[122X, [22Xa + b * i[122X for [22Xn =
+  -1[122X, [22Xa + b * r_n[122X for [22Xn > 0[122X. Furthermore if [22Xn[122X is congruent to [22X1[122X modulo [22X4[122X, also
+  [3Xcyc[103X  [22X=  (a+b) + 2 * b * b_{|n|}[122X is possible; the shortest string of these is
+  taken as the value for the component [10XATLAS[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XQuadratic( EB(5) ); Quadratic( EB(27) );[127X[104X
+    [4X[28Xrec( ATLAS := "b5", a := -1, b := 1, d := 2,[128X[104X
+    [4X[28X  display := "(-1+Sqrt(5))/2", root := 5 )[128X[104X
+    [4X[28Xrec( ATLAS := "1+3b3", a := -1, b := 3, d := 2,[128X[104X
+    [4X[28X  display := "(-1+3*Sqrt(-3))/2", root := -3 )[128X[104X
+    [4X[25Xgap>[125X [27XQuadratic(0); Quadratic( E(5) );[127X[104X
+    [4X[28Xrec( ATLAS := "0", a := 0, b := 0, d := 1, display := "0", root := 1 )[128X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [1X18.5-5 GaloisMat[101X
+  
+  [33X[1;0Y[29X[2XGaloisMat[102X( [3Xmat[103X ) [32X attribute[133X
+  
+  [33X[0;0YLet [3Xmat[103X be a matrix of cyclotomics. [2XGaloisMat[102X calculates the complete orbits
+  under  the operation of the Galois group of the (irrational) entries of [3Xmat[103X,
+  and  the  permutations of rows corresponding to the generators of the Galois
+  group.[133X
+  
+  [33X[0;0YIf  some rows of [3Xmat[103X are identical, only the first one is considered for the
+  permutations, and a warning will be printed.[133X
+  
+  [33X[0;0Y[2XGaloisMat[102X  returns  a  record  with  the  components  [10Xmat[110X,  [10Xgaloisfams[110X,  and
+  [10Xgenerators[110X.[133X
+  
+  [8X[10Xmat[110X[8X[108X
+        [33X[0;6Ya  list with initial segment being the rows of [3Xmat[103X ([13Xnot[113X shallow copies
+        of  these  rows); the list consists of full orbits under the action of
+        the Galois group of the entries of [3Xmat[103X defined above. The last rows in
+        the  list are those not contained in [3Xmat[103X but must be added in order to
+        complete  the  orbits; so if the orbits were already complete, [3Xmat[103X and
+        [10Xmat[110X have identical rows.[133X
+  
+  [8X[10Xgaloisfams[110X[8X[108X
+        [33X[0;6Ya  list that has the same length as the [10Xmat[110X component, its entries are
+        either 1, 0, -1, or lists.[133X
+  
+        [8X[10Xgaloisfams[i] = 1[110X[8X[108X
+              [33X[0;12Ymeans  that [10Xmat[i][110X consists of rationals, i.e., [10X[ mat[i] ][110X forms
+              an orbit;[133X
+  
+        [8X[10Xgaloisfams[i] = -1[110X[8X[108X
+              [33X[0;12Ymeans  that  [10Xmat[i][110X  contains unknowns (see Chapter [14X74[114X); in this
+              case  [10X[  mat[i]  ][110X  is regarded as an orbit, too, even if [10Xmat[i][110X
+              contains irrational entries;[133X
+  
+        [8X[10Xgaloisfams[i] = [110X[8X[22X[ l_1, l_2 ][122X[108X
+              [33X[0;12Y(a  list) means that [10Xmat[i][110X is the first element of its orbit in
+              [10Xmat[110X,  [22Xl_1[122X  is the list of positions of rows that form the orbit,
+              and  [22Xl_2[122X  is  the list of corresponding Galois automorphisms (as
+              exponents,  not  as  functions);  so  we have [10Xmat[110X[22X[ l_1[j] ][k] =[122X
+              [10XGaloisCyc( mat[110X[22X[i][k], l_2[j][122X[10X )[110X;[133X
+  
+        [8X[10Xgaloisfams[i] = 0[110X[8X[108X
+              [33X[0;12Ymeans  that  [10Xmat[i][110X  is an element of a nontrivial orbit but not
+              the first element of it.[133X
+  
+  [8X[10Xgenerators[110X[8X[108X
+        [33X[0;6Ya  list of permutations generating the permutation group corresponding
+        to the action of the Galois group on the rows of [10Xmat[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XGaloisMat( [ [ E(3), E(4) ] ] );[127X[104X
+    [4X[28Xrec( galoisfams := [ [ [ 1, 2, 3, 4 ], [ 1, 7, 5, 11 ] ], 0, 0, 0 ],[128X[104X
+    [4X[28X  generators := [ (1,2)(3,4), (1,3)(2,4) ],[128X[104X
+    [4X[28X  mat := [ [ E(3), E(4) ], [ E(3), -E(4) ], [ E(3)^2, E(4) ],[128X[104X
+    [4X[28X      [ E(3)^2, -E(4) ] ] )[128X[104X
+    [4X[25Xgap>[125X [27XGaloisMat( [ [ 1, 1, 1 ], [ 1, E(3), E(3)^2 ] ] );[127X[104X
+    [4X[28Xrec( galoisfams := [ 1, [ [ 2, 3 ], [ 1, 2 ] ], 0 ],[128X[104X
+    [4X[28X  generators := [ (2,3) ],[128X[104X
+    [4X[28X  mat := [ [ 1, 1, 1 ], [ 1, E(3), E(3)^2 ], [ 1, E(3)^2, E(3) ] ] )[128X[104X
+  [4X[32X[104X
+  
+  [1X18.5-6 RationalizedMat[101X
+  
+  [33X[1;0Y[29X[2XRationalizedMat[102X( [3Xmat[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns  the  list  of  rationalized  rows of [3Xmat[103X, which must be a matrix of
+  cyclotomics.  This  is  the  set of sums over orbits under the action of the
+  Galois  group  of  the  entries  of  [3Xmat[103X  (see  [2XGaloisMat[102X  ([14X18.5-5[114X)), so the
+  operation may be viewed as a kind of trace on the rows.[133X
+  
+  [33X[0;0YNote that no two rows of [3Xmat[103X should be equal.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmat:= [ [ 1, 1, 1 ], [ 1, E(3), E(3)^2 ], [ 1, E(3)^2, E(3) ] ];;[127X[104X
+    [4X[25Xgap>[125X [27XRationalizedMat( mat );[127X[104X
+    [4X[28X[ [ 1, 1, 1 ], [ 2, -1, -1 ] ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X18.6 [33X[0;0YInternally Represented Cyclotomics[133X[101X
+  
+  [33X[0;0YThe  implementation  of  an  [13Xinternally represented cyclotomic[113X is based on a
+  list  of  length  equal  to  its  conductor.  This  means  that the internal
+  representation  of  a cyclotomic does [13Xnot[113X refer to the smallest number field
+  but  the smallest [13Xcyclotomic[113X field containing it. The reason for this is the
+  wish to reflect the natural embedding of two cyclotomic fields into a larger
+  one  that  contains  both. With such embeddings, it is easy to construct the
+  sum  or  the  product  of  two  arbitrary cyclotomics (in possibly different
+  fields) as an element of a cyclotomic field.[133X
+  
+  [33X[0;0YThe  disadvantage  of  this approach is that the arithmetical operations are
+  quite  expensive,  so  the  use of internally represented cyclotomics is not
+  recommended  for  doing arithmetics over number fields, such as calculations
+  with  matrices  of  cyclotomics.  But internally represented cyclotomics are
+  good  enough  for  dealing  with  irrationalities  in  character tables (see
+  chapter [14X71[114X).[133X
+  
+  [33X[0;0YFor  the  representation  of  cyclotomics  one  has  to recall that the [22Xn[122X-th
+  cyclotomic  field  [22Xℚ(e_n)[122X  is  a  vector  space  of  dimension [22Xφ(n)[122X over the
+  rationals where [22Xφ[122X denotes Euler's phi-function (see [2XPhi[102X ([14X15.2-2[114X)).[133X
+  
+  [33X[0;0YA  special  integral basis of cyclotomic fields is chosen that allows one to
+  easily  convert  arbitrary sums of roots of unity into the basis, as well as
+  to  convert  a  cyclotomic  represented  w.r.t. the  basis into the smallest
+  possible  cyclotomic  field.  This  basis is accessible in [5XGAP[105X, see [14X60.3[114X for
+  more information and references.[133X
+  
+  [33X[0;0YNote  that  the set of all [22Xn[122X-th roots of unity is linearly dependent for [22Xn >
+  1[122X,  so  multiplication is [13Xnot[113X the multiplication of the group ring [22Xℚ⟨ e_n ⟩[122X;
+  given  a  [22Xℚ[122X-basis  of  [22Xℚ(e_n)[122X  the result of the multiplication (computed as
+  multiplication  of  polynomials in [22Xe_n[122X, using [22X(e_n)^n = 1[122X) will be converted
+  to the basis.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XE(5) * E(5)^2; ( E(5) + E(5)^4 ) * E(5)^2;[127X[104X
+    [4X[28XE(5)^3[128X[104X
+    [4X[28XE(5)+E(5)^3[128X[104X
+    [4X[25Xgap>[125X [27X( E(5) + E(5)^4 ) * E(5);[127X[104X
+    [4X[28X-E(5)-E(5)^3-E(5)^4[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAn  internally  represented cyclotomic is always represented in the smallest
+  cyclotomic  field  it  is  contained  in.  The  internal  coefficients  list
+  coincides   with   the   external  representation  returned  by  [2XExtRepOfObj[102X
+  ([14X18.1-12[114X).[133X
+  
+  [33X[0;0YTo  avoid calculations becoming unintentionally very long, or consuming very
+  large  amounts  of  memory,  there is a limit on the conductor of internally
+  represented  cyclotomics,  by default set to one million. This can be raised
+  (although not lowered) using [2XSetCyclotomicsLimit[102X ([14X18.6-1[114X) and accessed using
+  [2XGetCyclotomicsLimit[102X ([14X18.6-1[114X). The maximum value of the limit is [22X2^28-1[122X on [22X32[122X
+  bit  systems,  and [22X2^32-1[122X on [22X64[122X bit systems. So the maximal cyclotomic field
+  implemented in [5XGAP[105X is not really the field [22Xℚ^ab[122X.[133X
+  
+  [33X[0;0YIt  should  be emphasized that one disadvantage of representing a cyclotomic
+  in  the  smallest  [13Xcyclotomic[113X  field (and not in the smallest field) is that
+  arithmetic  operations  in  a  fixed  small  extension field of the rational
+  number  field are comparatively expensive. For example, take a prime integer
+  [22Xp[122X  and  suppose  that  we  want  to  work with a matrix group over the field
+  [22Xℚ(sqrt{p})[122X.  Then  each  matrix  entry  could  be  described by two rational
+  coefficients,  whereas  the  representation in the smallest cyclotomic field
+  requires  [22Xp-1[122X  rational coefficients for each entry. So it is worth thinking
+  about using elements in a field constructed with [2XAlgebraicExtension[102X ([14X67.1-1[114X)
+  when natural embeddings of cyclotomic fields are not needed.[133X
+  
+  [1X18.6-1 SetCyclotomicsLimit[101X
+  
+  [33X[1;0Y[29X[2XSetCyclotomicsLimit[102X( [3Xnewlimit[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XGetCyclotomicsLimit[102X(  ) [32X function[133X
+  
+  [33X[0;0Y[2XGetCyclotomicsLimit[102X  returns  the  current limit on conductors of internally
+  represented cyclotomic numbers[133X
+  
+  [33X[0;0Y[2XSetCyclotomicsLimit[102X  can  be  called  to increase the limit on conductors of
+  internally  represented  cyclotomic  numbers.  Note  that computing in large
+  cyclotomic   fields   using   this  representation  can  be  both  slow  and
+  memory-consuming, and that other approaches may be better for some problems.
+  See [14X18.6[114X.[133X
+  

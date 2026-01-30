@@ -1,0 +1,256 @@
+  
+  [1X4 [33X[0;0YFunctions[133X[101X
+  
+  [33X[0;0YYou  have already seen how to use functions in the [5XGAP[105X library, i.e., how to
+  apply them to arguments.[133X
+  
+  [33X[0;0YIn this section you will see how to write functions in the [5XGAP[105X language. You
+  will  also  see how to use the [9Xif[109X statement and declare local variables with
+  the [9Xlocal[109X statement in the function definition. Loop constructions via [9Xwhile[109X
+  and [9Xfor[109X are discussed further, as are recursive functions.[133X
+  
+  
+  [1X4.1 [33X[0;0YWriting Functions[133X[101X
+  
+  [33X[0;0YWriting  a  function  that  prints  [10Xhello,  world.[110X on the screen is a simple
+  exercise in [5XGAP[105X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xsayhello:= function()[127X[104X
+    [4X[25X>[125X [27XPrint("hello, world.\n");[127X[104X
+    [4X[25X>[125X [27Xend;[127X[104X
+    [4X[28Xfunction(  ) ... end[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis  function  when  called  will  only  execute the [10XPrint[110X statement in the
+  second line. This will print the string [10Xhello, world.[110X on the screen followed
+  by  a  newline character [10X\n[110X that causes the [5XGAP[105X prompt to appear on the next
+  line rather than immediately following the printed characters.[133X
+  
+  [33X[0;0YThe function definition has the following syntax.[133X
+  
+  [33X[0;0Y[9Xfunction[109X[10X( [3Xarguments[103X[10X ) [3Xstatements[103X[10X[110X [9Xend[109X[133X
+  
+  [33X[0;0YA  function  definition  starts  with  the  keyword [9Xfunction[109X followed by the
+  formal  parameter  list  [3Xarguments[103X  enclosed  in parenthesis [10X( )[110X. The formal
+  parameter  list  may  be  empty  as  in  the example. Several parameters are
+  separated by commas. Note that there must be [13Xno[113X semicolon behind the closing
+  parenthesis. The function definition is terminated by the keyword [9Xend[109X.[133X
+  
+  [33X[0;0YA  [5XGAP[105X function is an expression like an integer, a sum or a list. Therefore
+  it  may  be assigned to a variable. The terminating semicolon in the example
+  does  not belong to the function definition but terminates the assignment of
+  the function to the name [10Xsayhello[110X. Unlike in the case of integers, sums, and
+  lists  the  value  of  the  function  [10Xsayhello[110X  is echoed in the abbreviated
+  fashion  [10Xfunction(  )  ...  end[110X.  This  shows the most interesting part of a
+  function:  its  formal  parameter list (which is empty in this example). The
+  complete  value  of  [10Xsayhello[110X  is  returned  if  you  use the function [2XPrint[102X
+  ([14XReference: Print[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPrint(sayhello, "\n");[127X[104X
+    [4X[28Xfunction (  )[128X[104X
+    [4X[28X    Print( "hello, world.\n" );[128X[104X
+    [4X[28X    return;[128X[104X
+    [4X[28Xend[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  the  additional newline character [10X"\n"[110X in the [2XPrint[102X ([14XReference: Print[114X)
+  statement.  It is printed after the object [10Xsayhello[110X to start a new line. The
+  extra  [9Xreturn[109X  statement  is  inserted  by  [5XGAP[105X  to  simplify the process of
+  executing the function.[133X
+  
+  [33X[0;0YThe  newly  defined function [10Xsayhello[110X is executed by calling [10Xsayhello()[110X with
+  an empty argument list.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xsayhello();[127X[104X
+    [4X[28Xhello, world.[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YHowever,  this  is  not a typical example as no value is returned but only a
+  string is printed.[133X
+  
+  
+  [1X4.2 [33X[0;0YIf Statements[133X[101X
+  
+  [33X[0;0YIn the following example we define a function [10Xsign[110X which determines the sign
+  of an integer.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xsign:= function(n)[127X[104X
+    [4X[25X>[125X [27X       if n < 0 then[127X[104X
+    [4X[25X>[125X [27X          return -1;[127X[104X
+    [4X[25X>[125X [27X       elif n = 0 then[127X[104X
+    [4X[25X>[125X [27X          return 0;[127X[104X
+    [4X[25X>[125X [27X       else[127X[104X
+    [4X[25X>[125X [27X          return 1;[127X[104X
+    [4X[25X>[125X [27X       fi;[127X[104X
+    [4X[25X>[125X [27X   end;[127X[104X
+    [4X[28Xfunction( n ) ... end[128X[104X
+    [4X[25Xgap>[125X [27Xsign(0); sign(-99); sign(11);[127X[104X
+    [4X[28X0[128X[104X
+    [4X[28X-1[128X[104X
+    [4X[28X1[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis  example  also  introduces  the  [9Xif[109X  statement which is used to execute
+  statements  depending  on  a  condition.  The [9Xif[109X statement has the following
+  syntax.[133X
+  
+  [33X[0;0Y[9Xif[109X  [3Xcondition[103X [9Xthen[109X [3Xstatements[103X [9Xelif[109X [3Xcondition[103X [9Xthen[109X [3Xstatements[103X [9Xelse[109X [3Xstatements[103X
+  [9Xfi[109X[133X
+  
+  [33X[0;0YThere  may  be several [9Xelif[109X parts. The [9Xelif[109X part as well as the [9Xelse[109X part of
+  the  [9Xif[109X  statement  may be omitted. An [9Xif[109X statement is no expression and can
+  therefore  not  be  assigned to a variable. Furthermore an [9Xif[109X statement does
+  not return a value.[133X
+  
+  [33X[0;0YFibonacci  numbers  are  defined  recursively  by [22Xf(1) = f(2) = 1[122X and [22Xf(n) =
+  f(n-1)  +  f(n-2)[122X  for  [22Xn ≥ 3[122X. Since functions in [5XGAP[105X may call themselves, a
+  function [10Xfib[110X that computes Fibonacci numbers can be implemented basically by
+  typing  the  above  equations. (Note however that this is a very inefficient
+  way to compute [22Xf(n)[122X.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xfib:= function(n)[127X[104X
+    [4X[25X>[125X [27X      if n in [1, 2] then[127X[104X
+    [4X[25X>[125X [27X         return 1;[127X[104X
+    [4X[25X>[125X [27X      else[127X[104X
+    [4X[25X>[125X [27X         return fib(n-1) + fib(n-2);[127X[104X
+    [4X[25X>[125X [27X      fi;[127X[104X
+    [4X[25X>[125X [27X   end;[127X[104X
+    [4X[28Xfunction( n ) ... end[128X[104X
+    [4X[25Xgap>[125X [27Xfib(15);[127X[104X
+    [4X[28X610[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThere  should  be  additional  tests  for  the  argument  [10Xn[110X being a positive
+  integer.  This  function  [10Xfib[110X  might  lead to strange results if called with
+  other arguments. Try inserting the necessary tests into this example.[133X
+  
+  
+  [1X4.3 [33X[0;0YLocal Variables[133X[101X
+  
+  [33X[0;0YA  function [10Xgcd[110X that computes the greatest common divisor of two integers by
+  Euclid's algorithm will need a variable in addition to the formal arguments.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xgcd:= function(a, b)[127X[104X
+    [4X[25X>[125X [27X      local c;[127X[104X
+    [4X[25X>[125X [27X      while b <> 0 do[127X[104X
+    [4X[25X>[125X [27X         c:= b;[127X[104X
+    [4X[25X>[125X [27X         b:= a mod b;[127X[104X
+    [4X[25X>[125X [27X         a:= c;[127X[104X
+    [4X[25X>[125X [27X      od;[127X[104X
+    [4X[25X>[125X [27X      return c;[127X[104X
+    [4X[25X>[125X [27X   end;[127X[104X
+    [4X[28Xfunction( a, b ) ... end[128X[104X
+    [4X[25Xgap>[125X [27Xgcd(30, 63);[127X[104X
+    [4X[28X3[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  additional  variable  [10Xc[110X  is  declared  as a [13Xlocal[113X variable in the [9Xlocal[109X
+  statement  of the function definition. The [9Xlocal[109X statement, if present, must
+  be  the  first  statement  of  a  function  definition.  When  several local
+  variables  are  declared  in  only one [9Xlocal[109X statement they are separated by
+  commas.[133X
+  
+  [33X[0;0YThe  variable  [10Xc[110X  is  indeed a local variable, that is local to the function
+  [10Xgcd[110X.  If  you try to use the value of [10Xc[110X in the main loop you will see that [10Xc[110X
+  has  no  assigned  value  unless  you  have  already assigned a value to the
+  variable  [10Xc[110X  in  the  main  loop.  In this case the local nature of [10Xc[110X in the
+  function  [10Xgcd[110X  prevents  the  value  of  the  [10Xc[110X  in the main loop from being
+  overwritten.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xc:= 7;;[127X[104X
+    [4X[25Xgap>[125X [27Xgcd(30, 63);[127X[104X
+    [4X[28X3[128X[104X
+    [4X[25Xgap>[125X [27Xc;[127X[104X
+    [4X[28X7[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe  say  that in a given scope an identifier identifies a unique variable. A
+  [13Xscope[113X  is  a  lexical part of a program text. There is the global scope that
+  encloses the entire program text, and there are local scopes that range from
+  the  [9Xfunction[109X  keyword,  denoting the beginning of a function definition, to
+  the corresponding [9Xend[109X keyword. A local scope introduces new variables, whose
+  identifiers  are given in the formal argument list and the local declaration
+  of  the function. The usage of an identifier in a program text refers to the
+  variable in the innermost scope that has this identifier as its name.[133X
+  
+  
+  [1X4.4 [33X[0;0YRecursion[133X[101X
+  
+  [33X[0;0YWe  have  already seen recursion in the function [10Xfib[110X in Section [14X4.2[114X. Here is
+  another, slightly more complicated example.[133X
+  
+  [33X[0;0YWe  will  now  write  a  function to determine the number of partitions of a
+  positive  integer. A partition of a positive integer is a descending list of
+  numbers whose sum is the given integer. For example [22X[4,2,1,1][122X is a partition
+  of  8.  Note that there is just one partition of 0, namely [22X[ ][122X. The complete
+  set  of  all  partitions  of  an  integer [22Xn[122X may be divided into subsets with
+  respect  to  the  largest  element.  The number of partitions of [22Xn[122X therefore
+  equals  the  sum of the numbers of partitions of [22Xn-i[122X with elements less than
+  or equal to [22Xi[122X for all possible [22Xi[122X. More generally the number of partitions of
+  [22Xn[122X  with  elements less than [22Xm[122X is the sum of the numbers of partitions of [22Xn-i[122X
+  with  elements  less than [22Xi[122X for [22Xi[122X less than [22Xm[122X and [22Xn[122X. This description yields
+  the following function.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xnrparts:= function(n)[127X[104X
+    [4X[25X>[125X [27X   local np;[127X[104X
+    [4X[25X>[125X [27X   np:= function(n, m)[127X[104X
+    [4X[25X>[125X [27X      local i, res;[127X[104X
+    [4X[25X>[125X [27X      if n = 0 then[127X[104X
+    [4X[25X>[125X [27X         return 1;[127X[104X
+    [4X[25X>[125X [27X      fi;[127X[104X
+    [4X[25X>[125X [27X      res:= 0;[127X[104X
+    [4X[25X>[125X [27X      for i in [1..Minimum(n,m)] do[127X[104X
+    [4X[25X>[125X [27X         res:= res + np(n-i, i);[127X[104X
+    [4X[25X>[125X [27X      od;[127X[104X
+    [4X[25X>[125X [27X      return res;[127X[104X
+    [4X[25X>[125X [27X   end;[127X[104X
+    [4X[25X>[125X [27X   return np(n,n);[127X[104X
+    [4X[25X>[125X [27Xend;[127X[104X
+    [4X[28Xfunction( n ) ... end[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe wanted to write a function that takes one argument. We solved the problem
+  of  determining  the  number of partitions in terms of a recursive procedure
+  with  two  arguments. So we had to write in fact two functions. The function
+  [10Xnrparts[110X  that  can  be used to compute the number of partitions indeed takes
+  only  one  argument.  The  function  [10Xnp[110X  takes  two arguments and solves the
+  problem  in  the  indicated way. The only task of the function [10Xnrparts[110X is to
+  call [10Xnp[110X with two equal arguments.[133X
+  
+  [33X[0;0YWe  made  [10Xnp[110X  local  to  [10Xnrparts[110X. This illustrates the possibility of having
+  local  functions  in  [5XGAP[105X.  It  is however not necessary to put it there. [10Xnp[110X
+  could as well be defined on the main level, but then the identifier [10Xnp[110X would
+  be  bound  and could not be used for other purposes, and if it were used the
+  essential function [10Xnp[110X would no longer be available for [10Xnrparts[110X.[133X
+  
+  [33X[0;0YNow  have  a  look at the function [10Xnp[110X. It has two local variables [10Xres[110X and [10Xi[110X.
+  The variable [10Xres[110X is used to collect the sum and [10Xi[110X is a loop variable. In the
+  loop  the  function  [10Xnp[110X calls itself again with other arguments. It would be
+  very  disturbing  if  this  call  of [10Xnp[110X was to use the same [10Xi[110X and [10Xres[110X as the
+  calling  [10Xnp[110X. Since the new call of [10Xnp[110X creates a new scope with new variables
+  this is fortunately not the case.[133X
+  
+  [33X[0;0YNote  that  the  formal  parameters  [3Xn[103X  and  [3Xm[103X  of [10Xnp[110X are treated like local
+  variables.[133X
+  
+  [33X[0;0Y(Regardless  of  the recursive structure of an algorithm it is often cheaper
+  (in terms of computing time) to avoid a recursive implementation if possible
+  (and  it  is  possible  in  this  case), because a function call is not very
+  cheap.)[133X
+  
+  
+  [1X4.5 [33X[0;0YFurther Information about Functions[133X[101X
+  
+  [33X[0;0YThe  function  syntax is described in Section [14X'Reference: Functions'[114X. The [9Xif[109X
+  statement is described in more detail in Section [14X'Reference: If'[114X. More about
+  Fibonacci  numbers  is found in Section [2XFibonacci[102X ([14XReference: Fibonacci[114X) and
+  more about partitions in Section [2XPartitions[102X ([14XReference: Partitions[114X).[133X
+  

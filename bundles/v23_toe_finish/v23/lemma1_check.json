@@ -1,0 +1,80 @@
+{
+  "n_vertices": 40,
+  "degree_distribution": {
+    "min": 12,
+    "max": 12,
+    "deg_list": [
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12
+    ]
+  },
+  "degree_ok": true,
+  "non_neighbor_counts_example": {
+    "vertex_0_count": 27,
+    "all_counts": [
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27
+    ]
+  },
+  "non_neighbor_count_ok": true,
+  "triangles_in_non_neighbors_stats": {
+    "min": 36,
+    "max": 36,
+    "counts_sample": [
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36
+    ]
+  },
+  "tri_ok": true,
+  "expected_triangles_per_nonneighbor_induced": 36
+}

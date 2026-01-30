@@ -1,0 +1,379 @@
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!--   matobj.xml               GAP documentation        Max Neunhoeffer  -->
+<!--                                                                      -->
+<!--   Copyright (C) 2011 The GAP Group                                   -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+<Chapter Label="Vector and Matrix Objects">
+<Heading>Vector and Matrix Objects</Heading>
+
+This chapter describes an interface to vector and matrix objects
+which are not represented by plain lists (of plain lists),
+cf. Chapters <Ref Chap="Row Vectors"/> and <Ref Chap="Matrices"/>.
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Concepts and Rules for Vector and Matrix Objects">
+<Heading>Concepts and Rules for Vector and Matrix Objects</Heading>
+
+<#Include Label="MatObj_Overview">
+
+</Section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Categories of Vector and Matrix Objects">
+<Heading>Categories of Vector and Matrix Objects</Heading>
+
+Currently the following categories of vector and matrix objects
+are supported in &GAP;.
+More can be added as soon as there is need for them.
+<!-- For example, flat matrices? -->
+
+<#Include Label="IsVectorObj">
+<#Include Label="IsMatrixObj">
+<#Include Label="IsMatrixOrMatrixObj">
+<#Include Label="IsRowListMatrix">
+
+</Section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Defining Attributes of Vector and Matrix Objects">
+<Heading>Defining Attributes of Vector and Matrix Objects</Heading>
+
+<#Include Label="BaseDomain">
+<#Include Label="ConstructingFilter">
+<#Include Label="CompatibleVectorFilter">
+<#Include Label="Length_IsVectorObj">
+<#Include Label="NumberRowsNumberColumns">
+
+</Section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Constructing Vector and Matrix Objects">
+<Heading>Constructing Vector and Matrix Objects</Heading>
+
+<#Include Label="NewVector">
+<#Include Label="Vector">
+<#Include Label="VectorObj_ZeroVector">
+<#Include Label="NewMatrix">
+<#Include Label="MatObj_Matrix">
+<#Include Label="MatObj_ZeroMatrix">
+<#Include Label="MatObj_IdentityMatrix">
+
+</Section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Operations for Base Domains of Vector and Matrix Objects">
+<Heading>Operations for Base Domains of Vector and Matrix Objects</Heading>
+
+<#Include Label="OneOfBaseDomain">
+
+</Section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Operations for Vector and Matrix Objects">
+<Heading>Operations for Vector and Matrix Objects</Heading>
+
+<#Include Label="MatrixObjCompare">
+<#Include Label="Unpack">
+<#Include Label="ChangedBaseDomain">
+<#Include Label="Randomize">
+
+</Section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="List Like Operations for Vector Objects">
+<Heading>List Like Operations for Vector Objects</Heading>
+
+The following operations that are defined for lists are useful
+also for vector objects.
+(More such operations can be added if this is appropriate.)
+
+<#Include Label="ElementAccessVectorObj">
+<#Include Label="MatObj_PositionNonZero">
+<#Include Label="MatObj_PositionLastNonZero">
+<#Include Label="MatObj_ListOp">
+
+</Section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Arithmetical Operations for Vector Objects">
+<Heading>Arithmetical Operations for Vector Objects</Heading>
+
+<#Include Label="VectorObj_UnaryArithmetics">
+<#Include Label="VectorObj_BinaryArithmetics">
+<#Include Label="MatObj_AddVector">
+<#Include Label="MatObj_MultVectorLeft">
+
+</Section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Operations for Vector Objects">
+<Heading>Operations for Vector Objects</Heading>
+
+<#Include Label="MatObj_ConcatenationOfVectors">
+<#Include Label="MatObj_ExtractSubVector">
+<#Include Label="CopySubVector">
+<#Include Label="MatObj_WeightOfVector">
+<#Include Label="MatObj_DistanceOfVectors">
+
+</Section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Arithmetical Operations for Matrix Objects">
+<Heading>Arithmetical Operations for Matrix Objects</Heading>
+
+<#Include Label="MatrixObj_UnaryArithmetics">
+<#Include Label="MatrixObj_BinaryArithmetics">
+
+</Section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Operations for Matrix Objects">
+<Heading>Operations for Matrix Objects</Heading>
+
+<#Include Label="MatObj_MatElm">
+<#Include Label="MatObj_SetMatElm">
+<#Include Label="ExtractSubMatrix">
+<#Include Label="MutableCopyMatrix">
+<#Include Label="CopySubMatrix">
+<#Include Label="CompatibleVector">
+<#Include Label="RowsOfMatrix">
+<#Include Label="MatObj_CompanionMatrix">
+
+</Section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Operations for Row List Matrix Objects">
+<Heading>Operations for Row List Matrix Objects</Heading>
+
+In general, matrix objects are not lists in the sense of <Ref Filt="IsList"/>,
+and they need not behave like lists,
+that is, they need not obey all the rules for lists that are stated in
+Chapter <Ref Chap="Lists"/>.
+There are situations where one wants to have matrix objects
+that can on the one hand benefit from &GAP;'s method selection,
+as is explained in
+Section <Ref Sect="Concepts and Rules for Vector and Matrix Objects"/>,
+and do on the other hands support access to &GAP; objects that represent
+their rows (which are suitable vector objects).
+Matrix objects whose
+<Ref Attr="ConstructingFilter" Label="for a matrix object"/> value implies
+<Ref Filt="IsRowListMatrix"/> support the operations described in this
+section.
+
+<P/>
+
+One implementation of such matrices is given by the
+<Ref Attr="ConstructingFilter" Label="for a matrix object"/> value
+<Ref Filt="IsPlistMatrixRep"/>,
+and any row of these matrices is a vector object in
+<Ref Filt="IsPlistVectorRep"/>.
+Note that these objects do <E>not</E> lie in <Ref Filt="IsList"/>
+(and in particular not in <Ref Filt="IsPlistRep"/>),
+thus we are allowed to define the above operations only restrictively,
+as follows.
+
+<P/>
+
+Unbinding an entry in a row or unbinding a row in a matrix is allowed only
+in the last position,
+that is, the vector and matrix objects insist on being dense.
+All rows of a matrix must have the same length and the same base domain.
+
+<#Include Label="RowListMatObj_[]">
+<#Include Label="RowListMatObj_[]_ASS">
+<#Include Label="RowListMatObj_{}">
+<#Include Label="RowListMatObj_{}_ASS">
+<#Include Label="RowListMatObj_IsBound">
+<#Include Label="RowListMatObj_Unbind">
+<#Include Label="RowListMatObj_Add">
+<#Include Label="RowListMatObj_Remove">
+<#Include Label="RowListMatObj_Append">
+<#Include Label="RowListMatObj_ShallowCopy">
+<#Include Label="RowListMatObj_ListOp">
+
+</Section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Basic operations for row/column reductions">
+<Heading>Basic operations for row/column reductions</Heading>
+
+<#Include Label="MultMatrixRow">
+<#Include Label="MultMatrixRowRight">
+<#Include Label="MultMatrixColumn">
+<#Include Label="MultMatrixColumnLeft">
+<#Include Label="AddMatrixRows">
+<#Include Label="AddMatrixRowsRight">
+<#Include Label="AddMatrixColumns">
+<#Include Label="AddMatrixColumnsLeft">
+<#Include Label="SwapMatrixRows">
+<#Include Label="SwapMatrixColumns">
+
+</Section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Implementing New Vector and Matrix Objects Types">
+<Heading>Implementing New Vector and Matrix Objects Types</Heading>
+
+The first step in the design of a new type of vector or matrix objects
+is to create a new filter that serves as the
+<Ref Attr="ConstructingFilter" Label="for a vector object"/>
+of the new objects,
+see the sections <Ref Sect="Available Representations of Vector Objects"/>
+and <Ref Sect="Available Representations of Matrix Objects"/>
+for an overview of such filters that are already available.
+
+<P/>
+
+Here we list those operations for vector and matrix objects
+for which no default methods can be installed.
+When one implements a new type of vector or matrix objects
+then one has to install specific methods at least for these operations,
+in order to make the objects behave as described in this chapter.
+It is advisable to install specific methods also for other
+operations, for performance reasons.
+The installations of default methods can be found in the file
+<F>lib/matobj.gi</F> of the &GAP; distribution.
+There one can check for which operations it makes sense to overload them
+for the new type of vector or matrix objects.
+Note that the specific methods must be installed with
+<Ref Func="InstallTagBasedMethod"/> whenever the default method is installed
+with this function.
+
+<P/>
+
+<E>Vector objects</E>
+
+<List>
+<Item>
+  <Ref Attr="BaseDomain" Label="for a vector object"/>,
+</Item>
+<Item>
+  <Ref Attr="Length" Label="for a vector object"/>,
+</Item>
+<Item>
+  <Ref Oper="\[\]" Label="for a vector object and an integer"/>,
+</Item>
+<Item>
+  <Ref Oper="\[\]\:\=" Label="for a vector object and an integer"/>
+  (with consistency checks if the global option <C>check</C> is not set to
+  <K>false</K>),
+</Item>
+<Item>
+  <Ref Oper="\&lt;"/> (see <Ref Oper="\&lt;" Label="for two vector objects"/>),
+</Item>
+<Item>
+  <Ref Attr="ConstructingFilter" Label="for a vector object"/>,
+</Item>
+<Item>
+  <Ref Oper="NewVector"/>
+  (with consistency checks if the global option <C>check</C> is not set to
+  <K>false</K>, install the method with <Ref Func="InstallTagBasedMethod"/>).
+</Item>
+</List>
+
+<P/>
+
+<E>Matrix objects</E>
+
+<List>
+<Item>
+  <Ref Attr="BaseDomain" Label="for a matrix object"/>,
+</Item>
+<Item>
+  <Ref Attr="NumberRows" Label="for a matrix object"/>,
+</Item>
+<Item>
+  <Ref Attr="NumberColumns" Label="for a matrix object"/>,
+</Item>
+<Item>
+  <Ref Oper="MatElm"/>,
+</Item>
+<Item>
+  <Ref Oper="SetMatElm"/>
+  (with consistency checks if the global option <C>check</C> is not set to
+  <K>false</K>),
+</Item>
+<Item>
+  <Ref Oper="\&lt;"/> (see <Ref Oper="\&lt;" Label="for two matrix objects"/>),
+</Item>
+<Item>
+  <Ref Attr="ConstructingFilter" Label="for a matrix object"/>,
+</Item>
+<Item>
+  <Ref Attr="CompatibleVectorFilter" Label="for a matrix object"/>,
+</Item>
+<Item>
+  <Ref Oper="NewMatrix"/>
+  (with consistency checks if the global option <C>check</C> is not set to
+  <K>false</K>, install the method with <Ref Func="InstallTagBasedMethod"/>).
+</Item>
+</List>
+
+<P/>
+
+Methods for <Ref Oper="NewVector"/> and
+<Ref Oper="NewMatrix"/> must check their arguments for consistency
+(do the given filter and base domain fit together,
+are the entries compatible with the given base domain,
+is the number of matrix entries a multiple of the given number of columns)
+except if the global option <C>check</C> is set to <K>false</K>.
+(See Chapter <Ref Chap="Options Stack"/> for information about global
+options.)
+The same holds for methods for operations that modify mutable vector
+or matrix objects,
+such as <Ref Oper="\[\]\:\=" Label="for a vector object and an integer"/>,
+<Ref Oper="SetMatElm"/>, <Ref Oper="CopySubVector"/>,
+<Ref Oper="CopySubMatrix"/>,
+and for those methods of
+<Ref Oper="Vector" Label="for filter, base domain, and list"/> and
+<Ref Oper="Matrix" Label="for filter, base domain, list, ncols"/>
+that do not delegate to <Ref Oper="NewVector"/> and
+<Ref Oper="NewMatrix"/>, respectively.
+
+</Section>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Available Representations of Vector Objects">
+<Heading>Available Representations of Vector Objects</Heading>
+
+The following filters define vector objects for which the the functionality
+described in this chapter is supported.
+
+<#Include Label="IsGF2VectorRep">
+<#Include Label="Is8BitVectorRep">
+<#Include Label="IsPlistVectorRep">
+<#Include Label="IsZmodnZVectorRep">
+
+</Section>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Available Representations of Matrix Objects">
+<Heading>Available Representations of Matrix Objects</Heading>
+
+The following filters define matrix objects for which the the functionality
+described in this chapter is supported.
+
+<#Include Label="IsGF2MatrixRep">
+<#Include Label="Is8BitMatrixRep">
+<#Include Label="IsPlistMatrixRep">
+<#Include Label="IsZmodnZMatrixRep">
+
+</Section>
+
+</Chapter>
+

@@ -1,0 +1,112 @@
+  
+  [1X74 [33X[0;0YUnknowns[133X[101X
+  
+  [33X[0;0YSometimes  the  result  of  an operation does not allow further computations
+  with  it.  In many cases, then an error is signalled, and the computation is
+  stopped.[133X
+  
+  [33X[0;0YThis  is  not  appropriate  for  some  applications in character theory. For
+  example,  if  one  wants  to  induce  a character of a group to a supergroup
+  (see [2XInducedClassFunction[102X   ([14X72.9-3[114X))   but  the  class  fusion  is  only  a
+  parametrized  map  (see  Chapter [14X73[114X),  there  may  be  values of the induced
+  character  which  are determined by the fusion map, whereas other values are
+  not known.[133X
+  
+  [33X[0;0YFor this and other situations, [5XGAP[105X provides the data type [13Xunknown[113X. An object
+  of  this  type,  further  on called an [13Xunknown[113X, may stand for any cyclotomic
+  (see Chapter [14X18[114X), in particular its family (see [14X13.1[114X) is [10XCyclotomicsFamily[110X.[133X
+  
+  [33X[0;0YUnknowns  are  parametrized  by  positive  integers.  When  a [5XGAP[105X session is
+  started, no unknowns exist.[133X
+  
+  [33X[0;0YThe  only  ways to create unknowns are to call the function [2XUnknown[102X ([14X74.1-1[114X)
+  or a function that calls it, or to do arithmetical operations with unknowns.[133X
+  
+  [33X[0;0Y[5XGAP[105X  objects  containing  unknowns will contain [13Xfixed[113X unknowns when they are
+  printed  to  files, i.e., function calls [10XUnknown([110X[22Xn[122X[10X)[110X instead of [10XUnknown()[110X. So
+  be  careful to read files printed in different [5XGAP[105X sessions, since there may
+  be the same unknown at different places.[133X
+  
+  [33X[0;0YThe rest of this chapter contains information about the unknown constructor,
+  the  category,  and  comparison of and arithmetical operations for unknowns.
+  More is not known about unknowns in [5XGAP[105X.[133X
+  
+  
+  [1X74.1 [33X[0;0YMore about Unknowns[133X[101X
+  
+  [1X74.1-1 Unknown[101X
+  
+  [33X[1;0Y[29X[2XUnknown[102X( [[3Xn[103X] ) [32X operation[133X
+  
+  [33X[0;0YCalled  without  argument,  [2XUnknown[102X  returns  a new unknown value, i.e., the
+  first  one  that  is larger than all unknowns which exist in the current [5XGAP[105X
+  session.[133X
+  
+  [33X[0;0YCalled  with a positive integer [3Xn[103X, [2XUnknown[102X returns the [3Xn[103X-th unknown; if this
+  did not exist yet, it is created.[133X
+  
+  [1X74.1-2 LargestUnknown[101X
+  
+  [33X[1;0Y[29X[2XLargestUnknown[102X [32X global variable[133X
+  
+  [33X[0;0Y[2XLargestUnknown[102X  is  the  largest  [3Xn[103X  that is used in any [10XUnknown( [3Xn[103X[10X )[110X in the
+  current  [5XGAP[105X session. This is used in [2XUnknown[102X ([14X74.1-1[114X) which increments this
+  value when asked to make a new unknown.[133X
+  
+  [1X74.1-3 IsUnknown[101X
+  
+  [33X[1;0Y[29X[2XIsUnknown[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0Yis the category of unknowns in [5XGAP[105X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XUnknown();  List( [ 1 .. 20 ], i -> Unknown() );;[127X[104X
+    [4X[28XUnknown(1)[128X[104X
+    [4X[25Xgap>[125X [27XUnknown();   # note that we have already created 21 unknowns.[127X[104X
+    [4X[28XUnknown(22)[128X[104X
+    [4X[25Xgap>[125X [27XUnknown(2000);  Unknown();[127X[104X
+    [4X[28XUnknown(2000)[128X[104X
+    [4X[28XUnknown(2001)[128X[104X
+    [4X[25Xgap>[125X [27XLargestUnknown;[127X[104X
+    [4X[28X2001[128X[104X
+    [4X[25Xgap>[125X [27XIsUnknown( Unknown );  IsUnknown( Unknown() );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X74.1-4 [33X[0;0YComparison of Unknowns[133X[101X
+  
+  [33X[0;0YUnknowns  can  be [13Xcompared[113X via [10X=[110X and [10X<[110X with all cyclotomics and with certain
+  other  [5XGAP[105X  objects  (see [14X4.13[114X). We have [10XUnknown( [3Xn[103X[10X ) >= Unknown( [3Xm[103X[10X )[110X if and
+  only  if [10X[3Xn[103X[10X >= [3Xm[103X[10X[110X holds, unknowns are larger than all cyclotomics that are not
+  unknowns.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XUnknown() >= Unknown();  Unknown(2) < Unknown(3);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XUnknown() > 3;  Unknown() > E(3);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XUnknown() > Z(8);  Unknown() > [];[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X74.1-5 [33X[0;0YArithmetical Operations for Unknowns[133X[101X
+  
+  [33X[0;0YThe  usual  arithmetic  operations  [10X+[110X,  [10X-[110X, [10X*[110X and [10X/[110X are defined for addition,
+  subtraction,  multiplication  and  division of unknowns and cyclotomics. The
+  result will be a new unknown except in one of the following cases.[133X
+  
+  [33X[0;0YMultiplication  with  zero  yields  zero,  and  multiplication  with  one or
+  addition  of  zero  yields the old unknown. [13XNote[113X that division by an unknown
+  causes an error, since an unknown might stand for zero.[133X
+  
+  [33X[0;0YAs  unknowns  are cyclotomics, dense lists of unknowns and other cyclotomics
+  are  row  vectors  and  they  can  be added and multiplied in the usual way.
+  Consequently,  lists  of  such  row  vectors  of equal length are (ordinary)
+  matrices (see [2XIsOrdinaryMatrix[102X ([14X24.2-2[114X)).[133X
+  

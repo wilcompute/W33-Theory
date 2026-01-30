@@ -1,0 +1,1055 @@
+  
+  [1X79 [33X[0;0YCreating New Objects[133X[101X
+  
+  [33X[0;0YThis chapter is divided into three parts.[133X
+  
+  [33X[0;0YIn  the  first  part,  it is explained how to create objects with given type
+  (see [14X79.1[114X).[133X
+  
+  [33X[0;0YIn  the  second part, first a few small examples are given, for dealing with
+  the  usual  cases  of  component  objects  (see [14X79.2[114X) and positional objects
+  (see [14X79.3[114X),  and  for  the  implementation  of  new kinds of lists (see [14X79.4[114X
+  and [14X79.7[114X).  Finally,  the  external  representation of objects is introduced
+  (see [14X79.8[114X), as a tool for representation independent access to an object.[133X
+  
+  [33X[0;0YThe  third part deals with some rules concerning the organization of the [5XGAP[105X
+  library;  namely,  some commands for creating global variables are explained
+  (see [14X79.10[114X)  that  correspond to the ones discussed in the first part of the
+  chapter,  and the idea of distinguishing declaration and implementation part
+  of [5XGAP[105X packages is outlined (see [14X79.11[114X).[133X
+  
+  [33X[0;0YSee  also  Chapter [14X81[114X for examples how the functions from the first part are
+  used,  and why it is useful to have a declaration part and an implementation
+  part.[133X
+  
+  
+  [1X79.1 [33X[0;0YCreating Objects[133X[101X
+  
+  [1X79.1-1 Objectify[101X
+  
+  [33X[1;0Y[29X[2XObjectify[102X( [3Xtype[103X, [3Xdata[103X ) [32X function[133X
+  
+  [33X[0;0YNew  objects  are created by [2XObjectify[102X. [3Xdata[103X must be a plain list or a plain
+  record,  and  [3Xtype[103X is the type that the desired object shall have. [2XObjectify[102X
+  turns  [3Xdata[103X  into  an  object  with type [3Xtype[103X. That is, [3Xdata[103X is changed, and
+  afterwards  it  will  not  be a list or a record unless [3Xtype[103X is of type list
+  resp. record.[133X
+  
+  [33X[0;0YIf  [3Xdata[103X is a list then [2XObjectify[102X turns it into a positional object, if [3Xdata[103X
+  is  a  record then [2XObjectify[102X turns it into a component object (for examples,
+  see [14X79.2[114X and [14X79.3[114X).[133X
+  
+  [33X[0;0Y[2XObjectify[102X does also return the object that it made out of [3Xdata[103X.[133X
+  
+  [33X[0;0YFor  examples  where  [2XObjectify[102X  is used, see [14X79.2[114X, [14X79.3[114X, and the example in
+  Chapter [14X81[114X.[133X
+  
+  [1X79.1-2 ObjectifyWithAttributes[101X
+  
+  [33X[1;0Y[29X[2XObjectifyWithAttributes[102X( [3Xobj[103X, [3Xtype[103X, [3Xattr1[103X, [3Xval1[103X, [3Xattr2[103X, [3Xval2[103X, [3X...[103X ) [32X function[133X
+  
+  [33X[0;0YAttribute  assignments will change the type of an object. If you create many
+  objects, code of the form[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xo:=Objectify(type,rec());[128X[104X
+    [4X[28XSetMyAttribute(o,value);[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Ywill  take a lot of time for type changes. You can avoid this by setting the
+  attributes   immediately   while   the   object   is  created,  as  follows.
+  [2XObjectifyWithAttributes[102X  takes  a  plain  list or record [3Xobj[103X and turns it an
+  object  just  like [2XObjectify[102X ([14X79.1-1[114X) and sets attribute [3Xattr1[103X to [3Xval1[103X, sets
+  attribute [3Xattr2[103X to [3Xval2[103X and so forth.[133X
+  
+  [33X[0;0YIf  the  filter list of [3Xtype[103X includes that these attributes are set (and the
+  properties  also  include values of the properties) and if no special setter
+  methods  are  installed for any of the involved attributes then they are set
+  simultaneously without type changes. This can produce a substantial speedup.[133X
+  
+  [33X[0;0YIf  the  conditions  of  the  last  sentence  are not fulfilled, an ordinary
+  [2XObjectify[102X  ([14X79.1-1[114X)  with  subsequent  setter  calls  for  the attributes is
+  performed instead.[133X
+  
+  
+  [1X79.2 [33X[0;0YComponent Objects[133X[101X
+  
+  [33X[0;0YA  [13Xcomponent  object[113X is an object in the representation [2XIsComponentObjectRep[102X
+  ([14X13.4-1[114X)  or  a  subrepresentation  of it. Such an object [3Xcobj[103X is built from
+  subobjects  that  can be accessed via [10X[3Xcobj[103X[10X!.[3Xname[103X[10X[110X, similar to components of a
+  record. Also analogously to records, values can be assigned to components of
+  [3Xcobj[103X  via [10X[3Xcobj[103X[10X!.[3Xname[103X[10X:= [3Xval[103X[10X[110X. For the creation of component objects, see [14X79.1[114X.
+  One  must  be [13Xvery careful[113X when using the [10X!.[110X operator, in order to interpret
+  the  component  in  the  right  way,  and  even  more careful when using the
+  assignment  to  components using [10X!.[110X, in order to keep the information stored
+  in [3Xcobj[103X consistent.[133X
+  
+  [33X[0;0YFirst  of  all,  in  the access or assignment to a component as shown above,
+  [3Xname[103X  must be among the admissible component names for the representation of
+  [3Xcobj[103X,  see [2XNewRepresentation[102X ([14X13.4-4[114X). Second, preferably only few low level
+  functions  should  use  [10X!.[110X,  whereas  this operator should not occur in [21Xuser
+  interactions[121X.[133X
+  
+  [33X[0;0YNote  that even if [3Xcobj[103X claims that it is immutable, i.e., if [3Xcobj[103X is not in
+  the category [2XIsMutable[102X ([14X12.6-2[114X), access and assignment via [10X!.[110X and [10X!.:=[110X work.
+  This  is  necessary  for being able to store newly discovered information in
+  immutable objects.[133X
+  
+  [33X[0;0YThe following example shows the implementation of an iterator (see [14X30.8[114X) for
+  the  domain  of integers, which is represented as component object. See [14X79.3[114X
+  for  an  implementation  using  positional  objects.  (In  practice, such an
+  iterator   can  be  implemented  more  elegantly  using  [2XIteratorByFunctions[102X
+  ([14X30.8-8[114X), see [14X79.6[114X.)[133X
+  
+  [33X[0;0YThe used succession of integers is [22X0, 1, -1, 2, -2, 3, -3, ...[122X, that is, [22Xa_n
+  = n/2[122X if [22Xn[122X is even, and [22Xa_n = (1-n)/2[122X otherwise.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XDeclareRepresentation( "IsIntegersIteratorCompRep",[128X[104X
+    [4X[28X    IsComponentObjectRep, [ "counter" ] );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  above  command  creates  a  new  representation  (see [2XNewRepresentation[102X
+  ([14X13.4-4[114X))    [10XIsIntegersIteratorCompRep[110X,    as    a    subrepresentation   of
+  [2XIsComponentObjectRep[102X ([14X13.4-1[114X), and with one admissible component [10Xcounter[110X. So
+  no other components than [10Xcounter[110X will be needed.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallMethod( Iterator,[128X[104X
+    [4X[28X    "method for `Integers'",[128X[104X
+    [4X[28X    [ IsIntegers ],[128X[104X
+    [4X[28X    function( Integers )[128X[104X
+    [4X[28X    return Objectify( NewType( IteratorsFamily,[128X[104X
+    [4X[28X                                   IsIterator[128X[104X
+    [4X[28X                               and IsIntegersIteratorCompRep ),[128X[104X
+    [4X[28X                      rec( counter := 0 ) );[128X[104X
+    [4X[28X    end );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAfter  the  above  method  installation,  one  can already ask for [10XIterator(
+  Integers  )[110X.  Note  that  exactly the domain of integers is described by the
+  filter [2XIsIntegers[102X ([14X14.1-2[114X).[133X
+  
+  [33X[0;0YBy  the  call  to  [2XNewType[102X  ([14X13.9-3[114X), the returned object lies in the family
+  containing  all iterators, which is [10XIteratorsFamily[110X, it lies in the category
+  [2XIsIterator[102X  ([14X30.8-3[114X)  and  in  the representation [10XIsIntegersIteratorCompRep[110X;
+  furthermore, it has the component [10Xcounter[110X with value [10X0[110X.[133X
+  
+  [33X[0;0YWhat  is  missing now are methods for the two basic operations of iterators,
+  namely  [2XIsDoneIterator[102X  ([14X30.8-4[114X)  and [2XNextIterator[102X ([14X30.8-5[114X). The former must
+  always  return  [9Xfalse[109X,  since there are infinitely many integers. The latter
+  must  return  the  next integer in the iteration, and update the information
+  stored  in  the  iterator,  that  is,  increase  the  value of the component
+  [10Xcounter[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallMethod( IsDoneIterator,[128X[104X
+    [4X[28X    "method for iterator of `Integers'",[128X[104X
+    [4X[28X    [ IsIterator and IsIntegersIteratorCompRep ],[128X[104X
+    [4X[28X    ReturnFalse );[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XInstallMethod( NextIterator,[128X[104X
+    [4X[28X    "method for iterator of `Integers'",[128X[104X
+    [4X[28X    [ IsIntegersIteratorCompRep ],[128X[104X
+    [4X[28X    function( iter )[128X[104X
+    [4X[28X    iter!.counter:= iter!.counter + 1;[128X[104X
+    [4X[28X    if iter!.counter mod 2 = 0 then[128X[104X
+    [4X[28X      return iter!.counter / 2;[128X[104X
+    [4X[28X    else[128X[104X
+    [4X[28X      return ( 1 - iter!.counter ) / 2;[128X[104X
+    [4X[28X    fi;[128X[104X
+    [4X[28X    end );[128X[104X
+  [4X[32X[104X
+  
+  [1X79.2-1 NamesOfComponents[101X
+  
+  [33X[1;0Y[29X[2XNamesOfComponents[102X( [3Xcomobj[103X ) [32X function[133X
+  
+  [33X[0;0YFor  a component object [3Xcomobj[103X, [2XNamesOfComponents[102X returns a list of strings,
+  which are the names of components currently bound in [3Xcomobj[103X.[133X
+  
+  [33X[0;0YFor  a  record  [3Xcomobj[103X in internal representation, [2XNamesOfComponents[102X returns
+  the result of [2XRecNames[102X ([14X29.1-2[114X).[133X
+  
+  
+  [1X79.3 [33X[0;0YPositional Objects[133X[101X
+  
+  [33X[0;0YA [13Xpositional object[113X is an object in the representation [2XIsPositionalObjectRep[102X
+  ([14X13.4-1[114X)  or  a  subrepresentation  of it. Such an object [3Xpobj[103X is built from
+  subobjects  that  can  be accessed via [10X[3Xpobj[103X[10X![[3Xpos[103X[10X][110X, similar to positions in a
+  list. Also analogously to lists, values can be assigned to positions of [3Xpobj[103X
+  via [10X[3Xpobj[103X[10X![[3Xpos[103X[10X]:= [3Xval[103X[10X[110X. For the creation of positional objects, see [14X79.1[114X.[133X
+  
+  [33X[0;0YOne  must be [13Xvery careful[113X when using the [10X![][110X operator, in order to interpret
+  the  position  in  the  right  way,  and  even  more  careful when using the
+  assignment  to  positions using [10X![][110X, in order to keep the information stored
+  in [3Xpobj[103X consistent.[133X
+  
+  [33X[0;0YFirst  of all, in the access or assignment to a position as shown above, [3Xpos[103X
+  must  be  among  the  admissible  positions  for the representation of [3Xpobj[103X,
+  see [2XNewRepresentation[102X  ([14X13.4-4[114X).  Second,  preferably  only  few  low  level
+  functions  should  use  [10X![][110X,  whereas this operator should not occur in [21Xuser
+  interactions[121X.[133X
+  
+  [33X[0;0YNote  that even if [3Xpobj[103X claims that it is immutable, i.e., if [3Xpobj[103X is not in
+  the category [2XIsMutable[102X ([14X12.6-2[114X), access and assignment via [10X![][110X work. This is
+  necessary  for being able to store newly discovered information in immutable
+  objects.[133X
+  
+  [33X[0;0YThe following example shows the implementation of an iterator (see [14X30.8[114X) for
+  the  domain of integers, which is represented as positional object. See [14X79.2[114X
+  for an implementation using component objects, and more details.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XDeclareRepresentation( "IsIntegersIteratorPosRep",[128X[104X
+    [4X[28X    IsPositionalObjectRep, [ 1 ] );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  above  command  creates  a  new  representation  (see [2XNewRepresentation[102X
+  ([14X13.4-4[114X))    [10XIsIntegersIteratorPosRep[110X,    as    a    subrepresentation    of
+  [2XIsPositionalObjectRep[102X  ([14X13.4-1[114X),  and  with  only  the  first position being
+  admissible for storing data.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallMethod( Iterator,[128X[104X
+    [4X[28X    "method for `Integers'",[128X[104X
+    [4X[28X    [ IsIntegers ],[128X[104X
+    [4X[28X    function( Integers )[128X[104X
+    [4X[28X    return Objectify( NewType( IteratorsFamily,[128X[104X
+    [4X[28X                                   IsIterator[128X[104X
+    [4X[28X                               and IsIntegersIteratorPosRep ),[128X[104X
+    [4X[28X                      [ 0 ] );[128X[104X
+    [4X[28X    end );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAfter  the  above  method  installation,  one  can already ask for [10XIterator(
+  Integers  )[110X.  Note  that  exactly the domain of integers is described by the
+  filter [2XIsIntegers[102X ([14X14.1-2[114X).[133X
+  
+  [33X[0;0YBy  the  call  to  [2XNewType[102X  ([14X13.9-3[114X), the returned object lies in the family
+  containing  all iterators, which is [10XIteratorsFamily[110X, it lies in the category
+  [2XIsIterator[102X  ([14X30.8-3[114X)  and  in  the  representation [10XIsIntegersIteratorPosRep[110X;
+  furthermore, the first position has value [10X0[110X.[133X
+  
+  [33X[0;0YWhat  is  missing now are methods for the two basic operations of iterators,
+  namely  [2XIsDoneIterator[102X  ([14X30.8-4[114X)  and [2XNextIterator[102X ([14X30.8-5[114X). The former must
+  always  return  [9Xfalse[109X,  since there are infinitely many integers. The latter
+  must  return  the  next integer in the iteration, and update the information
+  stored  in  the  iterator,  that  is, increase the value stored in the first
+  position.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallMethod( IsDoneIterator,[128X[104X
+    [4X[28X    "method for iterator of `Integers'",[128X[104X
+    [4X[28X    [ IsIterator and IsIntegersIteratorPosRep ],[128X[104X
+    [4X[28X    ReturnFalse );[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XInstallMethod( NextIterator,[128X[104X
+    [4X[28X    "method for iterator of `Integers'",[128X[104X
+    [4X[28X    [ IsIntegersIteratorPosRep ],[128X[104X
+    [4X[28X    function( iter )[128X[104X
+    [4X[28X    iter![1]:= iter![1] + 1;[128X[104X
+    [4X[28X    if iter![1] mod 2 = 0 then[128X[104X
+    [4X[28X      return iter![1] / 2;[128X[104X
+    [4X[28X    else[128X[104X
+    [4X[28X      return ( 1 - iter![1] ) / 2;[128X[104X
+    [4X[28X    fi;[128X[104X
+    [4X[28X    end );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIt  should be noted that one can of course install both the methods shown in
+  Section [14X79.2[114X  and  [14X79.3[114X. The call [10XIterator( Integers )[110X will cause one of the
+  methods  to  be selected, and for the returned iterator, which will have one
+  of  the  representations  we  constructed,  the  right [2XNextIterator[102X ([14X30.8-5[114X)
+  method will be chosen.[133X
+  
+  
+  [1X79.4 [33X[0;0YImplementing New List Objects[133X[101X
+  
+  [33X[0;0YThis  section  gives some hints for the quite usual situation that one wants
+  to implement new objects that are lists. More precisely, one either wants to
+  deal  with  lists  that  have  additional  features,  or one wants that some
+  objects also behave as lists. An example can be found in [14X79.5[114X.[133X
+  
+  [33X[0;0YA [13Xlist[113X in [5XGAP[105X is an object in the category [2XIsList[102X ([14X21.1-1[114X). Basic operations
+  for  lists  are  [2XLength[102X  ([14X21.17-5[114X),  [2X\[\][102X ([14X21.2-1[114X), and [2XIsBound\[\][102X ([14X21.2-1[114X)
+  (see [14X21.2[114X).[133X
+  
+  [33X[0;0YNote  that  the access to the position [3Xpos[103X in the list [3Xlist[103X via [10X[3Xlist[103X[10X[[3Xpos[103X[10X][110X is
+  handled  by  the  call  [10X\[\]( [3Xlist[103X[10X, [3Xpos[103X[10X )[110X to the operation [2X\[\][102X ([14X21.2-1[114X). To
+  explain  the  somewhat  strange  name  [10X\[\][110X  of  this  operation,  note that
+  non-alphanumeric  characters  like  [10X[[110X  and [10X][110X may occur in [5XGAP[105X variable names
+  only if they are escaped by a [10X\[110X character.[133X
+  
+  [33X[0;0YAnalogously,  the check [10XIsBound( [3Xlist[103X[10X[[3Xpos[103X[10X] )[110X whether the position [3Xpos[103X of the
+  list  [3Xlist[103X  is  bound is handled by the call [10XIsBound\[\]( [3Xlist[103X[10X, [3Xpos[103X[10X )[110X to the
+  operation [2XIsBound\[\][102X ([14X21.2-1[114X).[133X
+  
+  [33X[0;0YFor  mutable  lists, also assignment to positions and unbinding of positions
+  via  the  operations  [2X\[\]\:\=[102X  ([14X21.2-1[114X)  and  [2XUnbind\[\][102X ([14X21.2-1[114X) are basic
+  operations.  The assignment [10X[3Xlist[103X[10X[[3Xpos[103X[10X]:= [3Xval[103X[10X[110X is handled by the call [10X\[\]\:\=(
+  [3Xlist[103X[10X, [3Xpos[103X[10X, [3Xval[103X[10X )[110X, and [10XUnbind( [3Xlist[103X[10X[[3Xpos[103X[10X] )[110X is handled by the call [10XUnbind\[\](
+  [3Xlist[103X[10X, [3Xpos[103X[10X )[110X.[133X
+  
+  [33X[0;0YAll  other  operations  for  lists, e.g., [2XAdd[102X ([14X21.4-2[114X), [2XAppend[102X ([14X21.4-5[114X), [2XSum[102X
+  ([14X21.20-26[114X),  are based on these operations. This means that it is sufficient
+  to install methods for the new list objects only for the basic operations.[133X
+  
+  [33X[0;0YSo  if  one  wants  to  implement  new list objects then one creates them as
+  objects  in  the  category  [2XIsList[102X ([14X21.1-1[114X), and installs methods for [2XLength[102X
+  ([14X21.17-5[114X),  [2X\[\][102X  ([14X21.2-1[114X), and [2XIsBound\[\][102X ([14X21.2-1[114X). If the new lists shall
+  be  mutable,  one  needs  to  install also methods for [2X\[\]\:\=[102X ([14X21.2-1[114X) and
+  [2XUnbind\[\][102X ([14X21.2-1[114X).[133X
+  
+  [33X[0;0YOne  application  for this is the implementation of [13Xenumerators[113X for domains.
+  An  enumerator  for  the  domain  [22XD[122X  is  a  dense  list whose entries are in
+  bijection  with  the  elements  of [22XD[122X. If [22XD[122X is large then it is not useful to
+  write  down  all  elements.  Instead  one  can  implement  such  a bijection
+  implicitly. This works also for infinite domains.[133X
+  
+  [33X[0;0YIn this situation, one implements a new representation of the lists that are
+  already  available  in  [5XGAP[105X,  in particular the family of such a list is the
+  same as the family of the domain [22XD[122X.[133X
+  
+  [33X[0;0YBut  it  is  also  possible  to implement new kinds of lists that lie in new
+  families, and thus are not equal to lists that were available in [5XGAP[105X before.
+  An  example  for this is the implementation of matrices whose multiplication
+  via [21X[10X*[110X[121X is the Lie product of matrices.[133X
+  
+  [33X[0;0YIn  this  situation, it makes no sense to put the new matrices into the same
+  family  as  the original matrices. Note that the product of two Lie matrices
+  shall be defined but not the product of an ordinary matrix and a Lie matrix.
+  So  it is possible to have two lists that have the same entries but that are
+  not equal w.r.t. [21X[10X=[110X[121X because they lie in different families.[133X
+  
+  
+  [1X79.5 [33X[0;0YExample – Constructing Enumerators[133X[101X
+  
+  [33X[0;0YWhen  dealing  with  countable sets, a usual task is to define enumerations,
+  i.e.,  bijections  to the positive integers. In [5XGAP[105X, this can be implemented
+  via  [13Xenumerators[113X  (see [14X21.23[114X).  These are lists containing the elements in a
+  specified  ordering,  and  the operations [2XPosition[102X ([14X21.16-1[114X) and list access
+  via  [2X\[\][102X  ([14X21.2-1[114X)  define  the desired bijection. For implementing such an
+  enumerator,  one mainly needs to install the appropriate functions for these
+  operations.[133X
+  
+  [33X[0;0YA  general  setup  for creating such lists is given by [2XEnumeratorByFunctions[102X
+  ([14X30.3-4[114X).[133X
+  
+  [33X[0;0YIf  the  set  in  question is a domain [3XD[103X for which a [2XSize[102X ([14X30.4-6[114X) method is
+  available  then  all  one  has  to  do  is  to  write down the functions for
+  computing  the  [22Xn[122X-th element of the list and for computing the position of a
+  given  [5XGAP[105X object in the list, to put them into the components [10XElementNumber[110X
+  and  [10XNumberElement[110X  of  a record, and to call [2XEnumeratorByFunctions[102X ([14X30.3-4[114X)
+  with  the  domain [3XD[103X and this record as arguments. For example, the following
+  lines  of  code install an [2XEnumerator[102X ([14X30.3-2[114X) method for the case that [3XD[103X is
+  the  domain of rational integers. (Note that [2XIsIntegers[102X ([14X14.1-2[114X) is a filter
+  that describes exactly the domain of rational integers.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallMethod( Enumerator,[128X[104X
+    [4X[28X    "for integers",[128X[104X
+    [4X[28X    [ IsIntegers ],[128X[104X
+    [4X[28X    Integers -> EnumeratorByFunctions( Integers, rec([128X[104X
+    [4X[28X                    ElementNumber := function( e, n ) ... end,[128X[104X
+    [4X[28X                    NumberElement := function( e, x ) ... end ) ) );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  bodies  of the functions have been omitted above; here is the code that
+  is actually used in [5XGAP[105X. (The ordering coincides with that for the iterators
+  for  the  domain  of  rational  integers  that  have  been discussed in [14X79.2[114X
+  and [14X79.3[114X.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xenum:= Enumerator( Integers );[127X[104X
+    [4X[28X<enumerator of Integers>[128X[104X
+    [4X[25Xgap>[125X [27XPrint( enum!.NumberElement, "\n" );[127X[104X
+    [4X[28Xfunction ( e, x )[128X[104X
+    [4X[28X    local  pos;[128X[104X
+    [4X[28X    if not IsInt( x )  then[128X[104X
+    [4X[28X        return fail;[128X[104X
+    [4X[28X    elif 0 < x  then[128X[104X
+    [4X[28X        pos := 2 * x;[128X[104X
+    [4X[28X    else[128X[104X
+    [4X[28X        pos := -2 * x + 1;[128X[104X
+    [4X[28X    fi;[128X[104X
+    [4X[28X    return pos;[128X[104X
+    [4X[28Xend[128X[104X
+    [4X[25Xgap>[125X [27XPrint( enum!.ElementNumber, "\n" );[127X[104X
+    [4X[28Xfunction ( e, n )[128X[104X
+    [4X[28X    if n mod 2 = 0  then[128X[104X
+    [4X[28X        return n / 2;[128X[104X
+    [4X[28X    else[128X[104X
+    [4X[28X        return (1 - n) / 2;[128X[104X
+    [4X[28X    fi;[128X[104X
+    [4X[28X    return;[128X[104X
+    [4X[28Xend[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  situation becomes slightly more complicated if the set [22XS[122X in question is
+  not  a  domain.  This is because one must provide also at least a method for
+  computing  the  length  of  the  list,  and because one has to determine the
+  family  in  which  it  lies  (see [14X79.1[114X).  The latter should usually not be a
+  problem  since  either  [22XS[122X  is  nonempty and all its elements lie in the same
+  family  –in  this case one takes the collections family of any element in [22XS[122X–
+  or the family of the enumerator must be [10XListsFamily[110X.[133X
+  
+  [33X[0;0YAn  example in the [5XGAP[105X library is an enumerator for the set of [22Xk[122X-tuples over
+  a finite set; the function is called [2XEnumeratorOfTuples[102X ([14X16.2-9[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPrint( EnumeratorOfTuples, "\n" );[127X[104X
+    [4X[28Xfunction ( set, k )[128X[104X
+    [4X[28X    local  enum;[128X[104X
+    [4X[28X    if k = 0  then[128X[104X
+    [4X[28X        return Immutable( [ [  ] ] );[128X[104X
+    [4X[28X    elif IsEmpty( set )  then[128X[104X
+    [4X[28X        return Immutable( [  ] );[128X[104X
+    [4X[28X    fi;[128X[104X
+    [4X[28X    enum[128X[104X
+    [4X[28X     := EnumeratorByFunctions( CollectionsFamily( FamilyObj( set ) ),[128X[104X
+    [4X[28X       rec([128X[104X
+    [4X[28X          ElementNumber := function ( enum, n )[128X[104X
+    [4X[28X                local  nn, t, i;[128X[104X
+    [4X[28X                nn := n - 1;[128X[104X
+    [4X[28X                t := [  ];[128X[104X
+    [4X[28X                for i  in [ 1 .. enum!.k ]  do[128X[104X
+    [4X[28X                    t[i] := RemInt( nn, Length( enum!.set ) ) + 1;[128X[104X
+    [4X[28X                    nn := QuoInt( nn, Length( enum!.set ) );[128X[104X
+    [4X[28X                od;[128X[104X
+    [4X[28X                if nn <> 0  then[128X[104X
+    [4X[28X                    Error( "<enum>[", n,[128X[104X
+    [4X[28X                     "] must have an assigned value" );[128X[104X
+    [4X[28X                fi;[128X[104X
+    [4X[28X                nn := enum!.set{Reversed( t )};[128X[104X
+    [4X[28X                MakeImmutable( nn );[128X[104X
+    [4X[28X                return nn;[128X[104X
+    [4X[28X            end,[128X[104X
+    [4X[28X          NumberElement := function ( enum, elm )[128X[104X
+    [4X[28X                local  n, i;[128X[104X
+    [4X[28X                if not IsList( elm )  then[128X[104X
+    [4X[28X                    return fail;[128X[104X
+    [4X[28X                fi;[128X[104X
+    [4X[28X                elm := List( elm, function ( x )[128X[104X
+    [4X[28X                        return Position( enum!.set, x );[128X[104X
+    [4X[28X                    end );[128X[104X
+    [4X[28X                if fail in elm or Length( elm ) <> enum!.k  then[128X[104X
+    [4X[28X                    return fail;[128X[104X
+    [4X[28X                fi;[128X[104X
+    [4X[28X                n := 0;[128X[104X
+    [4X[28X                for i  in [ 1 .. enum!.k ]  do[128X[104X
+    [4X[28X                    n := Length( enum!.set ) * n + elm[i] - 1;[128X[104X
+    [4X[28X                od;[128X[104X
+    [4X[28X                return n + 1;[128X[104X
+    [4X[28X            end,[128X[104X
+    [4X[28X          Length := function ( enum )[128X[104X
+    [4X[28X                return Length( enum!.set ) ^ enum!.k;[128X[104X
+    [4X[28X            end,[128X[104X
+    [4X[28X          PrintObj := function ( enum )[128X[104X
+    [4X[28X                Print( "EnumeratorOfTuples( ", enum!.set, ", ",[128X[104X
+    [4X[28X                 enum!.k, " )" );[128X[104X
+    [4X[28X                return;[128X[104X
+    [4X[28X            end,[128X[104X
+    [4X[28X          set := Set( set ),[128X[104X
+    [4X[28X          k := k ) );[128X[104X
+    [4X[28X    SetIsSSortedList( enum, true );[128X[104X
+    [4X[28X    return enum;[128X[104X
+    [4X[28Xend[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe  see  that  the  enumerator  is a homogeneous list that stores individual
+  functions  [10XElementNumber[110X, [10XNumberElement[110X, [10XLength[110X, and [10XPrintObj[110X; besides that,
+  the data components [22XS[122X and [22Xk[122X are contained.[133X
+  
+  
+  [1X79.6 [33X[0;0YExample – Constructing Iterators[133X[101X
+  
+  [33X[0;0YIterators  are a kind of objects that is implemented for several collections
+  in  the  [5XGAP[105X  library  and  which  might be interesting also in other cases,
+  see [14X30.8[114X.  A  general  setup  for  implementing new iterators is provided by
+  [2XIteratorByFunctions[102X ([14X30.8-8[114X).[133X
+  
+  [33X[0;0YAll  one has to do is to write down the functions for [2XNextIterator[102X ([14X30.8-5[114X),
+  [2XIsDoneIterator[102X   ([14X30.8-4[114X),   and   [2XShallowCopy[102X   ([14X12.7-1[114X),   and   to   call
+  [2XIteratorByFunctions[102X  ([14X30.8-8[114X) with this record as argument. For example, the
+  following  lines  of  code  install an [2XIterator[102X ([14X30.8-1[114X) method for the case
+  that the argument is the domain of rational integers.[133X
+  
+  [33X[0;0Y(Note that [2XIsIntegers[102X ([14X14.1-2[114X) is a filter that describes exactly the domain
+  of rational integers.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallMethod( Iterator,[128X[104X
+    [4X[28X    "for integers",[128X[104X
+    [4X[28X    [ IsIntegers ],[128X[104X
+    [4X[28X    Integers -> IteratorByFunctions( rec([128X[104X
+    [4X[28X                    NextIterator:= function( iter ) ... end,[128X[104X
+    [4X[28X                    IsDoneIterator := ReturnFalse,[128X[104X
+    [4X[28X                    ShallowCopy := function( iter ) ... end ) ) );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe bodies of two of the functions have been omitted above; here is the code
+  that  is  actually  used  in  [5XGAP[105X. (The ordering coincides with that for the
+  iterators  for  the  domain  of  rational  integers that have been discussed
+  in [14X79.2[114X and [14X79.3[114X.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xiter:= Iterator( Integers );[127X[104X
+    [4X[28X<iterator of Integers at 0>[128X[104X
+    [4X[25Xgap>[125X [27XPrint( iter!.NextIterator, "\n" );[127X[104X
+    [4X[28Xfunction ( iter )[128X[104X
+    [4X[28X    iter!.counter := iter!.counter + 1;[128X[104X
+    [4X[28X    if iter!.counter mod 2 = 0  then[128X[104X
+    [4X[28X        return iter!.counter / 2;[128X[104X
+    [4X[28X    else[128X[104X
+    [4X[28X        return (1 - iter!.counter) / 2;[128X[104X
+    [4X[28X    fi;[128X[104X
+    [4X[28X    return;[128X[104X
+    [4X[28Xend[128X[104X
+    [4X[25Xgap>[125X [27XPrint( iter!.ShallowCopy, "\n" );[127X[104X
+    [4X[28Xfunction ( iter )[128X[104X
+    [4X[28X    return rec([128X[104X
+    [4X[28X        counter := iter!.counter );[128X[104X
+    [4X[28Xend[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  the  [10XShallowCopy[110X component of the record must be a function that
+  does not return an iterator but a record that can be used as the argument of
+  [2XIteratorByFunctions[102X ([14X30.8-8[114X) in order to create the desired shallow copy.[133X
+  
+  
+  [1X79.7 [33X[0;0YArithmetic Issues in the Implementation of New Kinds of Lists[133X[101X
+  
+  [33X[0;0YWhen  designing  a  new kind of list objects in [5XGAP[105X, defining the arithmetic
+  behaviour of these objects is an issue.[133X
+  
+  [33X[0;0YThere  are  situations  where  arithmetic  operations  of  list  objects are
+  unimportant  in the sense that adding two such lists need not be represented
+  in  a  special  way.  In  such cases it might be useful either to support no
+  arithmetics  at  all  for the new lists, or to enable the default arithmetic
+  methods.   The   former   can   be  achieved  by  not  setting  the  filters
+  [2XIsGeneralizedRowVector[102X  ([14X21.12-1[114X)  and  [2XIsMultiplicativeGeneralizedRowVector[102X
+  ([14X21.12-2[114X)  in  the types of the lists, the latter can be achieved by setting
+  the filter [2XIsListDefault[102X ([14X21.12-3[114X). (for details, see [14X21.12[114X). An example for
+  [21Xwrapped  lists[121X with default behaviour are vector space bases; they are lists
+  with  additional  properties concerning the computation of coefficients, but
+  arithmetic  properties  are  not  important.  So it is no loss to enable the
+  default methods for these lists.[133X
+  
+  [33X[0;0YHowever,  often  the  arithmetic behaviour of new list objects is important,
+  and  one  wants  to keep these lists away from default methods for addition,
+  multiplication  etc.  For  example,  the sum and the product of (compatible)
+  block  matrices  shall  be  represented  as  a  block matrix, so the default
+  methods  for  sum  and product of matrices shall not be applicable, although
+  the  results will be equal to those of the default methods in the sense that
+  their entries at corresponding positions are equal.[133X
+  
+  [33X[0;0YSo  one  does  not set the filter [2XIsListDefault[102X ([14X21.12-3[114X) in such cases, and
+  thus  one  can  implement  one's  own methods for arithmetic operations. (Of
+  course  [21Xcan[121X  means on the other hand that one [13Xmust[113X implement such methods if
+  one is interested in arithmetics of the new lists.)[133X
+  
+  [33X[0;0YThe  specific binary arithmetic methods for the new lists will usually cover
+  the  case  that  both  arguments  are  of the new kind, and perhaps also the
+  interaction  between a list of the new kind and certain other kinds of lists
+  may be handled if this appears to be useful.[133X
+  
+  [33X[0;0YFor  the  last  situation, interaction between a new kind of lists and other
+  kinds  of  lists,  [5XGAP[105X  provides  already  a  setup.  Namely,  there are the
+  categories           [2XIsGeneralizedRowVector[102X           ([14X21.12-1[114X)          and
+  [2XIsMultiplicativeGeneralizedRowVector[102X ([14X21.12-2[114X), which are concerned with the
+  additive and the multiplicative behaviour, respectively, of lists. For lists
+  in  these  filters, the structure of the results of arithmetic operations is
+  prescribed (see [14X21.13[114X and [14X21.14[114X).[133X
+  
+  [33X[0;0YFor     example,     if     one     implements     block     matrices     in
+  [2XIsMultiplicativeGeneralizedRowVector[102X   ([14X21.12-2[114X)   then   automatically  the
+  product  of  such  a  block matrix and a (plain) list of such block matrices
+  will be defined as the obvious list of matrix products, and a default method
+  for plain lists will handle this multiplication. (Note that this method will
+  rely  on  a  method  for computing the product of the block matrices, and of
+  course  no  default  method is available for that.) Conversely, if the block
+  matrices  are not in [2XIsMultiplicativeGeneralizedRowVector[102X ([14X21.12-2[114X) then the
+  product  of  a  block  matrix  and  a  (plain) list of block matrices is not
+  defined.  (There  is no default method for it, and one can define the result
+  and provide a method for computing it.)[133X
+  
+  [33X[0;0YThus  if one decides to set the filters [2XIsGeneralizedRowVector[102X ([14X21.12-1[114X) and
+  [2XIsMultiplicativeGeneralizedRowVector[102X ([14X21.12-2[114X) for the new lists, on the one
+  hand  one  loses  freedom in defining arithmetic behaviour, but on the other
+  hand one gains several default methods for a more or less natural behaviour.[133X
+  
+  [33X[0;0YIf    a    list    in    the    filter    [2XIsGeneralizedRowVector[102X   ([14X21.12-1[114X)
+  ([2XIsMultiplicativeGeneralizedRowVector[102X        ([14X21.12-2[114X))        lies       in
+  [2XIsAttributeStoringRep[102X  ([14X13.5-5[114X),  the  values  of  additive (multiplicative)
+  nesting  depth  is  stored  in  the list and need not be calculated for each
+  arithmetic  operation. One can then store the value(s) already upon creation
+  of  the  lists,  with the effect that the default arithmetic operations will
+  access elements of these lists only if this is unavoidable. For example, the
+  sum  of  two  plain lists of [21Xwrapped matrices[121X with stored nesting depths are
+  computed  via  the  method  for  adding  two such wrapped lists, and without
+  accessing  any  of their rows (which might be expensive). In this sense, the
+  wrapped lists are treated as black boxes.[133X
+  
+  
+  [1X79.8 [33X[0;0YExternal Representation[133X[101X
+  
+  [33X[0;0YAn  operation  is  defined for elements rather than for objects in the sense
+  that  if  the  arguments  are  replaced by objects that are equal to the old
+  arguments w.r.t. the equivalence relation [21X[10X=[110X[121X then the result must be equal to
+  the old result w.r.t. [21X[10X=[110X[121X.[133X
+  
+  [33X[0;0YBut  the  implementation  of many methods is representation dependent in the
+  sense that certain representation dependent subobjects are accessed.[133X
+  
+  [33X[0;0YFor example, a method that implements the addition of univariate polynomials
+  may  access  coefficients  lists  of  its  arguments only if they are really
+  stored,  while  in  the case of sparsely represented polynomials a different
+  approach is needed.[133X
+  
+  [33X[0;0YIn  spite  of  this,  for  many operations one does not want to write an own
+  method  for  each  possible  representations  of  each argument, for example
+  because  none  of  the  methods could in fact take advantage of the actually
+  given representations of the objects. Another reason could be that one wants
+  to  install first a representation independent method, and then add specific
+  methods as they are needed to gain more efficiency, by really exploiting the
+  fact that the arguments have certain representations.[133X
+  
+  [33X[0;0YFor the purpose of admitting representation independent code, one can define
+  an  [13Xexternal representation[113X of objects in a given family, install methods to
+  compute this external representation for each representation of the objects,
+  and  then  use  this  external  representation  of the objects whenever they
+  occur.[133X
+  
+  [33X[0;0YWe  cannot  provide  conversion functions that allow us to first convert any
+  object  in  question  to  one  particular  [21Xstandard representation[121X, and then
+  access  the  data in the way defined for this representation, simply because
+  it  may be impossible to choose such a [21Xstandard representation[121X uniformly for
+  all objects in the given family.[133X
+  
+  [33X[0;0YSo  the  aim  of  an external representation of an object [3Xobj[103X is a different
+  one,  namely to describe the data from which [3Xobj[103X is composed. In particular,
+  the   external   representation  of  [3Xobj[103X  is  [13Xnot[113X  one  possible  ([21Xstandard[121X)
+  representation  of  [3Xobj[103X,  in  fact  the external representation of [3Xobj[103X is in
+  general  different  from  [3Xobj[103X  w.r.t. [21X[10X=[110X[121X,  first  of all because the external
+  representation of [3Xobj[103X does in general not lie in the same family as [3Xobj[103X.[133X
+  
+  [33X[0;0YFor  example the external representation of a rational function is a list of
+  length  two or three, the first entry being the zero coefficient, the second
+  being a list describing the coefficients and monomials of the numerator, and
+  the  third, if bound, being a list describing the coefficients and monomials
+  of  the  denominator.  In  particular,  the  external  representation  of  a
+  polynomial is a list and not a polynomial.[133X
+  
+  [33X[0;0YThe  other way round, the external representation of [3Xobj[103X encodes [3Xobj[103X in such
+  a  way  that  from this data and the family of [3Xobj[103X, one can create an object
+  that  is equal to [3Xobj[103X. Usually the external representation of an object is a
+  list or a record.[133X
+  
+  [33X[0;0YAlthough  the external representation of [3Xobj[103X is by definition independent of
+  the  actually  available  representations  for  [3Xobj[103X,  it  is  usual  that  a
+  representation  of  [3Xobj[103X  exists  for  which  the computation of the external
+  representation  is  obtained  by  just  [21Xunpacking[121X [3Xobj[103X, in the sense that the
+  desired  data  is  stored  in  a component or a position of [3Xobj[103X, if [3Xobj[103X is a
+  component object (see [14X79.2[114X) or a positional object (see [14X79.3[114X).[133X
+  
+  [33X[0;0YTo  implement  an  external  representation means to install methods for the
+  following two operations.[133X
+  
+  [1X79.8-1 ExtRepOfObj[101X
+  
+  [33X[1;0Y[29X[2XExtRepOfObj[102X( [3Xobj[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XObjByExtRep[102X( [3Xfam[103X, [3Xdata[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XExtRepOfObj[102X  returns  the  external  representation  of  its  argument,  and
+  [2XObjByExtRep[102X   returns  an  object  in  the  family  [3Xfam[103X  that  has  external
+  representation [3Xdata[103X.[133X
+  
+  [33X[0;0YOf course, [10XObjByExtRep( FamilyObj( [3Xobj[103X[10X ), ExtRepOfObj( [3Xobj[103X[10X ) )[110X must be equal
+  to  [3Xobj[103X w.r.t. the operation [2X\=[102X ([14X31.11-1[114X). But it is [13Xnot[113X required that equal
+  objects have equal external representations.[133X
+  
+  [33X[0;0YNote  that  if  one  defines  a  new  representation of objects for which an
+  external representation does already exist then one [13Xmust[113X install a method to
+  compute   this   external   representation   for  the  objects  in  the  new
+  representation.[133X
+  
+  
+  [1X79.9 [33X[0;0YMutability and Copying[133X[101X
+  
+  [33X[0;0YAny  [5XGAP[105X  object is either mutable or immutable. This can be tested with the
+  function  [2XIsMutable[102X  ([14X12.6-2[114X).  The  intended meaning of (im)mutability is a
+  mathematical one: an immutable object should never change in such a way that
+  it  represents  a  different  Element. Objects [13Xmay[113X change in other ways, for
+  instance  to  store more information, or represent an element in a different
+  way.[133X
+  
+  [33X[0;0YImmutability  is  enforced  in  different  ways  for  built-in objects (like
+  records, or lists) and for external objects (made using [2XObjectify[102X ([14X79.1-1[114X)).[133X
+  
+  [33X[0;0YFor  built-in  objects which are immutable, the kernel will prevent you from
+  changing them. Thus[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl := [1,2,4];[127X[104X
+    [4X[28X[ 1, 2, 4 ][128X[104X
+    [4X[25Xgap>[125X [27XMakeImmutable(l);[127X[104X
+    [4X[28X[ 1, 2, 4 ][128X[104X
+    [4X[25Xgap>[125X [27Xl[3] := 5;[127X[104X
+    [4X[28XError, List Assignment: <list> must be a mutable list[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YFor  external  objects, the situation is different. An external object which
+  claims  to  be immutable (i.e. its type does not contain [2XIsMutable[102X ([14X12.6-2[114X))
+  should  not  admit  any  methods which change the element it represents. The
+  kernel  does  [13Xnot[113X prevent the use of [10X!.[110X and [10X![[110X to change the underlying data
+  structure.  This  is  used  for  instance  by the code that stores attribute
+  values  for  reuse.  In  general,  these [10X![110X operations should only be used in
+  methods  which  depend  on the representation of the object. Furthermore, we
+  would   [13Xnot[113X   recommend  users  to  install  methods  which  depend  on  the
+  representations  of  objects  created  by the library or by [5XGAP[105X packages, as
+  there  is  certainly  no  guarantee of the representations being the same in
+  future versions of [5XGAP[105X.[133X
+  
+  [33X[0;0YHere  we  see  an  immutable  object (the group [22XS_4[122X), in which we improperly
+  install a new component.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg := SymmetricGroup(IsPermGroup,4);[127X[104X
+    [4X[28XSym( [ 1 .. 4 ] )[128X[104X
+    [4X[25Xgap>[125X [27XIsMutable(g);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XNamesOfComponents(g);[127X[104X
+    [4X[28X[ "Size", "NrMovedPoints", "MovedPoints",[128X[104X
+    [4X[28X  "GeneratorsOfMagmaWithInverses" ][128X[104X
+    [4X[25Xgap>[125X [27Xg!.silly := "rubbish";[127X[104X
+    [4X[28X"rubbish"[128X[104X
+    [4X[25Xgap>[125X [27XNamesOfComponents(g);[127X[104X
+    [4X[28X[ "Size", "NrMovedPoints", "MovedPoints",[128X[104X
+    [4X[28X  "GeneratorsOfMagmaWithInverses", "silly" ][128X[104X
+    [4X[25Xgap>[125X [27Xg!.silly;[127X[104X
+    [4X[28X"rubbish"[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YOn  the  other hand, if we form an immutable externally represented list, we
+  find that [5XGAP[105X will not let us change the object.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xe := Enumerator(g);[127X[104X
+    [4X[28X<enumerator of perm group>[128X[104X
+    [4X[25Xgap>[125X [27XIsMutable(e);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsList(e);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xe[3];[127X[104X
+    [4X[28X(1,2,4)[128X[104X
+    [4X[25Xgap>[125X [27Xe[3] := false;[127X[104X
+    [4X[28XError, The list you are trying to assign to is immutable[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWhen we consider copying objects, another filter [2XIsCopyable[102X ([14X12.6-1[114X), enters
+  the  game  and we find that [2XShallowCopy[102X ([14X12.7-1[114X) and [2XStructuralCopy[102X ([14X12.7-2[114X)
+  behave  quite  differently.  Objects  can  be  divided for this purpose into
+  three:  mutable  objects,  immutable  but copyable objects, and non-copyable
+  objects (called constants).[133X
+  
+  [33X[0;0YA  mutable  or  copyable  object  should  have  a  method  for the operation
+  [2XShallowCopy[102X  ([14X12.7-1[114X),  which  should make a new mutable object, sharing its
+  top-level  subobjects  with  the original. The exact definition of top-level
+  subobject may be defined by the implementor for new kinds of object.[133X
+  
+  [33X[0;0Y[2XShallowCopy[102X ([14X12.7-1[114X) applied to a constant simply returns the constant.[133X
+  
+  [33X[0;0Y[2XStructuralCopy[102X  ([14X12.7-2[114X)  is  expected to be much less used than [2XShallowCopy[102X
+  ([14X12.7-1[114X). Applied to a mutable object, it returns a new mutable object which
+  shares no mutable sub-objects with the input. Applied to an immutable object
+  (even  a  copyable  one), it just returns the object. It is not an operation
+  (indeed, it's a rather special kernel function).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xe1 := StructuralCopy(e);[127X[104X
+    [4X[28X<enumerator of perm group>[128X[104X
+    [4X[25Xgap>[125X [27XIsMutable(e1);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xe2 := ShallowCopy(e);[127X[104X
+    [4X[28X[ (), (1,4), (1,2,4), (1,3,4), (2,4), (1,4,2), (1,2), (1,3,4,2),[128X[104X
+    [4X[28X  (2,3,4), (1,4,2,3), (1,2,3), (1,3)(2,4), (3,4), (1,4,3), (1,2,4,3),[128X[104X
+    [4X[28X  (1,3), (2,4,3), (1,4,3,2), (1,2)(3,4), (1,3,2), (2,3), (1,4)(2,3),[128X[104X
+    [4X[28X  (1,2,3,4), (1,3,2,4) ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThere are two other related functions: [2XImmutable[102X ([14X12.6-3[114X), which makes a new
+  immutable  object  which  shares  no  mutable  subobjects with its input and
+  [2XMakeImmutable[102X ([14X12.6-4[114X) which changes an object and its mutable subobjects [13Xin
+  place[113X  to  be immutable. It should only be used on [21Xnew[121X objects that you have
+  just created, and which cannot share mutable subobjects with anything else.[133X
+  
+  [33X[0;0YBoth  [2XImmutable[102X ([14X12.6-3[114X) and [2XMakeImmutable[102X ([14X12.6-4[114X) work on external objects
+  by  just  resetting the [2XIsMutable[102X ([14X12.6-2[114X) filter in the object's type. This
+  should  make  ineligible  any  methods  that  might  change the object. As a
+  consequence, you must allow for the possibility of immutable versions of any
+  objects you create.[133X
+  
+  [33X[0;0YSo,  if  you are implementing your own external objects. The rules amount to
+  the following:[133X
+  
+  [31X1[131X   [33X[0;6YYou decide if your objects should be mutable or copyable or constants,
+        by fixing whether their type includes [2XIsMutable[102X ([14X12.6-2[114X) or [2XIsCopyable[102X
+        ([14X12.6-1[114X).[133X
+  
+  [31X2[131X   [33X[0;6YYou install methods for your objects respecting that decision:[133X
+  
+        [8Xfor constants:[108X
+              [33X[0;12Yno methods change the underlying elements;[133X
+  
+        [8Xfor copyables:[108X
+              [33X[0;12Yyou provide a method for [2XShallowCopy[102X ([14X12.7-1[114X);[133X
+  
+        [8Xfor mutables:[108X
+              [33X[0;12Yyou  may  have  methods  that change the underlying elements and
+              these should explicitly require [2XIsMutable[102X ([14X12.6-2[114X).[133X
+  
+  
+  [1X79.10 [33X[0;0YGlobal Variables in the Library[133X[101X
+  
+  [33X[0;0YGlobal  variables  in  the  [5XGAP[105X  library  are  usually read-only in order to
+  prevent them from being overwritten accidentally. See also Section [14X4.9[114X.[133X
+  
+  [1X79.10-1 DeclareGlobalName[101X
+  
+  [33X[1;0Y[29X[2XDeclareGlobalName[102X( [3Xname[103X ) [32X function[133X
+  
+  [33X[0;0YFor  global variables, sometimes code needs to reference them before a value
+  can  sensibly  be  assigned  to  them.  For  example, consider the following
+  definition of a recursive function:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XBindGlobal( "fun", function(n)[128X[104X
+    [4X[28X  if n > 0 then[128X[104X
+    [4X[28X    return 2*fun(n-1);[128X[104X
+    [4X[28X  fi;[128X[104X
+    [4X[28X  return 1;[128X[104X
+    [4X[28Xend );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe problem with that code is that it triggers a syntax warning about access
+  to  an unbound global variable, as [10Xfun[110X only gets assigned after the complete
+  statement has been parsed, yet that statement references [10Xfun[110X.[133X
+  
+  [33X[0;0YTo  resolve this, one can declare the variable with [2XDeclareGlobalName[102X before
+  assigning it via [2XBindGlobal[102X ([14X4.9-8[114X). This informs [5XGAP[105X that a global variable
+  with  the specified name will eventually be defined, and that thus no syntax
+  warnings pertaining to its use should be printed.[133X
+  
+  [33X[0;0YWe   recommend  using  [2XDeclareGlobalName[102X  instead  of  [2XDeclareGlobalVariable[102X
+  ([14X79.10-2[114X) or [2XDeclareGlobalFunction[102X ([14X79.10-5[114X) whenever possible.[133X
+  
+  [33X[0;0Y[2XDeclareGlobalName[102X  shall  be  used in the declaration part of the respective
+  package  (see [14X79.11[114X),  values  can  then  be assigned to the new variable as
+  usual, preferably via [2XBindGlobal[102X ([14X4.9-8[114X), in the implementation part (again,
+  see [14X79.11[114X).[133X
+  
+  [1X79.10-2 DeclareGlobalVariable[101X
+  
+  [33X[1;0Y[29X[2XDeclareGlobalVariable[102X( [3Xname[103X[, [3Xdescription[103X] ) [32X function[133X
+  
+  [33X[0;0YFor  global  variables  that  are [13Xnot[113X functions, instead of using [2XBindGlobal[102X
+  ([14X4.9-8[114X)  one  can also declare the variable with [2XDeclareGlobalVariable[102X which
+  creates a new global variable named by the string [3Xname[103X.[133X
+  
+  [33X[0;0YIn  the  past  the main application of this was to allow access to variables
+  before  they  were  assigned. Starting with [5XGAP[105X 4.12 we recommend to instead
+  use [2XDeclareGlobalName[102X ([14X79.10-1[114X) for this kind of problem. The main remaining
+  application for [2XDeclareGlobalVariable[102X is when one needs flushable values.[133X
+  
+  [33X[0;0YIf  used at all, then [2XDeclareGlobalVariable[102X shall be used in the declaration
+  part  of  the respective package (see [14X79.11[114X), values can then be assigned to
+  the   new   variable   with  [2XInstallValue[102X  ([14X79.10-3[114X),  [2XInstallFlushableValue[102X
+  ([14X79.10-3[114X)    or    [2XInstallFlushableValueFromFunction[102X   ([14X79.10-3[114X),   in   the
+  implementation part (again, see [14X79.11[114X).[133X
+  
+  [1X79.10-3 InstallValue[101X
+  
+  [33X[1;0Y[29X[2XInstallValue[102X( [3Xgvar[103X, [3Xvalue[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XInstallFlushableValue[102X( [3Xgvar[103X, [3Xvalue[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XInstallFlushableValueFromFunction[102X( [3Xgvar[103X, [3Xfunc[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XInstallValue[102X  assigns  the value [3Xvalue[103X to the global variable [3Xgvar[103X if it was
+  previously      declared      via      [2XDeclareGlobalVariable[102X      ([14X79.10-2[114X).
+  [2XInstallFlushableValue[102X does the same but additionally provides that each call
+  of  [2XFlushCaches[102X  ([14X79.10-4[114X)  will  assign a structural copy of [3Xvalue[103X to [3Xgvar[103X.
+  [2XInstallFlushableValueFromFunction[102X instead assigns the result of [3Xfunc[103X to [3Xgvar[103X
+  ([3Xfunc[103X is re-evaluated for each invocation of [2XFlushCaches[102X ([14X79.10-4[114X)[133X
+  
+  [33X[0;0Y[2XInstallValue[102X  does  [13Xnot[113X  work  if  [3Xvalue[103X  is  an  [21Ximmediate object[121X, i.e., an
+  internally  represented small integer or finite field element. It also fails
+  for  booleans.  In addition, the use of any other type of [3Xvalue[103X except for a
+  list  or record is deprecated. Furthermore, [2XInstallFlushableValue[102X works only
+  if [3Xvalue[103X is a list or a record. (Note that [2XInstallFlushableValue[102X makes sense
+  only for [13Xmutable[113X global variables.)[133X
+  
+  [1X79.10-4 FlushCaches[101X
+  
+  [33X[1;0Y[29X[2XFlushCaches[102X(  ) [32X operation[133X
+  
+  [33X[0;0Y[2XFlushCaches[102X  resets the value of each global variable that has been declared
+  with  [2XDeclareGlobalVariable[102X  ([14X79.10-2[114X)  and  for which the initial value has
+  been       set       with       [2XInstallFlushableValue[102X      ([14X79.10-3[114X)      or
+  [2XInstallFlushableValueFromFunction[102X ([14X79.10-3[114X) to this initial value.[133X
+  
+  [33X[0;0Y[2XFlushCaches[102X  should  be used only for debugging purposes, since the involved
+  global  variables  include  for  example  lists that store finite fields and
+  cyclotomic  fields  used  in the current [5XGAP[105X session, in order to avoid that
+  these  fields  are  constructed  anew  in  each  call  to [2XGF[102X ([14X59.3-2[114X) and [2XCF[102X
+  ([14X60.1-1[114X).[133X
+  
+  [1X79.10-5 DeclareGlobalFunction[101X
+  
+  [33X[1;0Y[29X[2XDeclareGlobalFunction[102X( [3Xname[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XInstallGlobalFunction[102X( [3Xoper[103X, [3Xfunc[103X ) [32X function[133X
+  
+  [33X[0;0Y[5XGAP[105X  functions that are not operations and that are intended to be called by
+  users    should    be    notified    to   [5XGAP[105X   via   [2XDeclareGlobalFunction[102X.
+  [2XDeclareGlobalFunction[102X  returns  a  function that serves as a placeholder for
+  the  function  that  will  be installed later. The placeholder will print an
+  error message if it is called. See also [2XDeclareSynonym[102X ([14X79.10-6[114X).[133X
+  
+  [33X[0;0YIn  the  past  the main application of this was to allow access to variables
+  before  they  were  assigned.  Starting  with  [5XGAP[105X  4.12 we recommend to use
+  [2XDeclareGlobalName[102X      ([14X79.10-1[114X)/[2XBindGlobal[102X      ([14X4.9-8[114X)      instead     of
+  [2XDeclareGlobalVariable[102X ([14X79.10-2[114X)/[2XInstallGlobalFunction[102X whenever possible.[133X
+  
+  [33X[0;0YIf  used  at  all, then [2XDeclareGlobalVariable[102X ([14X79.10-2[114X) shall be used in the
+  declaration part of the respective package (see [14X79.11[114X).[133X
+  
+  [33X[0;0YA global function declared with [2XDeclareGlobalFunction[102X can be given its value
+  [3Xfunc[103X  via  [2XInstallGlobalFunction[102X;  [3Xgvar[103X  is the global variable (or a string
+  denoting   its   name)   named  with  the  [3Xname[103X  argument  of  the  call  to
+  [2XDeclareGlobalFunction[102X. For example, a declaration like[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XDeclareGlobalFunction( "SumOfTwoCubes" );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Yin  the  [21Xdeclaration  part[121X  (see  Section [14X79.11[114X)  might have a corresponding
+  [21Ximplementation part[121X of:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XInstallGlobalFunction( SumOfTwoCubes, function(x, y) return x^3 + y^3; end);[128X[104X
+  [4X[32X[104X
+  
+  [1X79.10-6 DeclareSynonym[101X
+  
+  [33X[1;0Y[29X[2XDeclareSynonym[102X( [3Xname[103X, [3Xvalue[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XDeclareSynonymAttr[102X( [3Xname[103X, [3Xvalue[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XDeclareSynonym[102X assigns the string [3Xname[103X to a global variable as a synonym for
+  [3Xvalue[103X. Two typical intended usages are to declare an [21Xand-filter[121X, e.g.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XDeclareSynonym( "IsGroup", IsMagmaWithInverses and IsAssociative );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Yand  to  provide  a  previously declared global function with an alternative
+  name, e.g.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XDeclareGlobalFunction( "SizeOfSomething" );[128X[104X
+    [4X[28XDeclareSynonym( "OrderOfSomething", SizeOfSomething );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[13XNote:[113X  Before  using  [2XDeclareSynonym[102X  in the way of this second example, one
+  should  determine  whether  the  synonym  is really needed. Perhaps an extra
+  index entry in the documentation would be sufficient.[133X
+  
+  [33X[0;0YWhen  [3Xvalue[103X is actually an attribute then [2XDeclareSynonymAttr[102X should be used;
+  this  binds  also  globals  variables [10XSet[110X[3Xname[103X and [10XHas[110X[3Xname[103X for its setter and
+  tester, respectively.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XDeclareSynonymAttr( "IsField", IsDivisionRing and IsCommutative );[128X[104X
+    [4X[28XDeclareAttribute( "GeneratorsOfDivisionRing", IsDivisionRing );[128X[104X
+    [4X[28XDeclareSynonymAttr( "GeneratorsOfField", GeneratorsOfDivisionRing );[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X79.11 [33X[0;0YDeclaration and Implementation Part[133X[101X
+  
+  [33X[0;0YEach  package  of  [5XGAP[105X code consists of two parts, the [13Xdeclaration part[113X that
+  defines  the new categories and operations for the objects the package deals
+  with,  and  the  [13Ximplementation  part[113X  where  the  corresponding methods are
+  installed.  The  declaration  part  should  be  representation  independent,
+  representation   dependent   information   should   be  dealt  with  in  the
+  implementation part.[133X
+  
+  [33X[0;0Y[5XGAP[105X  functions that are not operations and that are intended to be called by
+  users   should   be   notified   to   [5XGAP[105X   in   the  declaration  part  via
+  [2XDeclareGlobalFunction[102X ([14X79.10-5[114X). Values for these functions can be installed
+  in the implementation part via [2XInstallGlobalFunction[102X ([14X79.10-5[114X).[133X
+  
+  [33X[0;0YCalls to the following functions belong to the declaration part.[133X
+  
+  [30X    [33X[0;6Y[2XDeclareAttribute[102X ([14X13.5-4[114X),[133X
+  
+  [30X    [33X[0;6Y[2XDeclareCategory[102X ([14X13.3-5[114X),[133X
+  
+  [30X    [33X[0;6Y[2XDeclareFilter[102X ([14X13.8-2[114X),[133X
+  
+  [30X    [33X[0;6Y[2XDeclareOperation[102X ([14X78.1-5[114X),[133X
+  
+  [30X    [33X[0;6Y[2XDeclareGlobalFunction[102X ([14X79.10-5[114X),[133X
+  
+  [30X    [33X[0;6Y[2XDeclareGlobalName[102X ([14X79.10-1[114X),[133X
+  
+  [30X    [33X[0;6Y[2XDeclareGlobalVariable[102X ([14X79.10-2[114X),[133X
+  
+  [30X    [33X[0;6Y[2XDeclareSynonym[102X ([14X79.10-6[114X),[133X
+  
+  [30X    [33X[0;6Y[2XDeclareSynonymAttr[102X ([14X79.10-6[114X),[133X
+  
+  [30X    [33X[0;6Y[2XDeclareProperty[102X ([14X13.7-5[114X),[133X
+  
+  [30X    [33X[0;6Y[2XInstallTrueMethod[102X ([14X78.8-1[114X).[133X
+  
+  [33X[0;0YCalls to the following functions belong to the implementation part.[133X
+  
+  [30X    [33X[0;6Y[2XDeclareRepresentation[102X ([14X13.4-5[114X),[133X
+  
+  [30X    [33X[0;6Y[2XInstallGlobalFunction[102X ([14X79.10-5[114X),[133X
+  
+  [30X    [33X[0;6Y[2XInstallValue[102X ([14X79.10-3[114X),[133X
+  
+  [30X    [33X[0;6Y[2XInstallMethod[102X ([14X78.3-1[114X),[133X
+  
+  [30X    [33X[0;6Y[2XInstallImmediateMethod[102X ([14X78.7-1[114X),[133X
+  
+  [30X    [33X[0;6Y[2XInstallOtherMethod[102X ([14X78.3-2[114X),[133X
+  
+  [30X    [33X[0;6Y[2XNewFamily[102X ([14X13.1-2[114X),[133X
+  
+  [30X    [33X[0;6Y[2XNewType[102X ([14X13.9-3[114X),[133X
+  
+  [30X    [33X[0;6Y[2XObjectify[102X ([14X79.1-1[114X).[133X
+  
+  [33X[0;0YWhenever  both  a  [10XNew[110X[3XSomething[103X and a [10XDeclare[110X[3XSomething[103X variant of a function
+  exist  (see [14X79.10[114X),  the use of [10XDeclare[110X[3XSomething[103X is recommended because this
+  protects  the  variables in question from being overwritten. Note that there
+  are  [13Xno[113X functions [10XDeclareFamily[110X and [10XDeclareType[110X since families and types are
+  created  dynamically,  hence  usually  no global variables are associated to
+  them.  Further  note  that  [2XDeclareRepresentation[102X  ([14X13.4-5[114X)  is  regarded as
+  belonging  to  the  implementation  part, because usually representations of
+  objects  are  accessed only in very few places, and all code that involves a
+  particular   representation   is   contained   in  one  file;  additionally,
+  representations  of objects are often not interesting for the user, so there
+  is   no   need   to   provide   a  user  interface  or  documentation  about
+  representations.[133X
+  
+  [33X[0;0YIt should be emphasized that [21Xdeclaration[121X means only an explicit notification
+  of  mathematical  or  technical  terms  or  of concepts to [5XGAP[105X. For example,
+  declaring  a category or property with name [10XIsInteresting[110X does of course not
+  tell   [5XGAP[105X   what  this  shall  mean,  and  it  is  necessary  to  implement
+  possibilities  to  create  objects  that  know  already  that  they  lie  in
+  [10XIsInteresting[110X  in the case that it is a category, or to install implications
+  or  methods  in order to compute for a given object whether [10XIsInteresting[110X is
+  [9Xtrue[109X or [9Xfalse[109X for it in the case that [10XIsInteresting[110X is a property.[133X
+  

@@ -1,0 +1,438 @@
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %% -->
+<!-- %W  methsel.tex               GAP manual                    Thomas Breuer -->
+<!-- %W                                                       Martin Schönert -->
+<!-- %% -->
+<!-- %% -->
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Chapter Label="Method Selection">
+<Heading>Method Selection</Heading>
+
+<Index>operation</Index><Index>method</Index>
+This chapter explains how &GAP; decides which function to call for which
+types of objects.
+It assumes that you have read the chapters about objects
+(Chapter&nbsp;<Ref Chap="Objects and Elements"/>) and types
+(Chapter&nbsp;<Ref Chap="Types of Objects"/>).
+<P/>
+An <E>operation</E> is a special &GAP; function that bundles a set of
+functions, its <E>methods</E>.
+<P/>
+All methods of an operation compute the same result.
+But each method is installed for specific types of arguments.
+<P/>
+If an operation is called with a tuple of arguments,
+one of the applicable methods is selected and called.
+<P/>
+Special cases of methods are partial methods, immediate methods,
+and logical implications.
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Operations and Methods">
+<Heading>Operations and Methods</Heading>
+<P/>
+Operations are functions in the category
+<Ref Filt="IsOperation"/>.
+<P/>
+So on the one hand, <E>operations</E> are &GAP; functions, that is,
+they can be applied to arguments and return a result or cause a
+side-effect.
+<P/>
+On the other hand, operations are more.
+Namely, an operation corresponds to a set of &GAP; functions,
+called the <E>methods</E> of the operation.
+<P/>
+Each call of an operation causes a suitable method to be selected
+and then called.
+The choice of which method to select is made according to the types
+of the arguments,
+the underlying mechanism is described in the following sections.
+<P/>
+Examples of operations are the binary infix operators <C>=</C>, <C>+</C> etc.,
+and <Ref Oper="PrintObj"/> is the operation that is called
+for each argument of <Ref Func="Print"/>.
+<P/>
+Also all attributes and properties are operations.
+Each attribute has a special method which is called
+if the attribute value is already stored;
+this method of course simply returns this value.
+<P/>
+The setter of an attribute is called automatically
+if an attribute value has been computed.
+Attribute setters are operations, too.
+They have a default method that ignores the request to store the value.
+Depending on the type of the object,
+there may be another method to store the value in a suitable way,
+and then set the attribute tester for the object to <K>true</K>.
+
+<#Include Label="IsOperation">
+<#Include Label="TypeOfOperation">
+<#Include Label="ShowDeclarationsOfOperation">
+<#Include Label="NewOperation">
+<#Include Label="DeclareOperation">
+<#Include Label="DeclareTagBasedOperation">
+
+</Section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Constructors">
+<Heading>Constructors</Heading>
+
+Constructors are a special type of operation used to make new objects. The key
+difference compared to regular operations is that method selection works
+slightly differently for them: The first argument in a call to a constructor
+must always be a filter <Ref Sect="Filters"/>. The result of a method is
+expected to lie in that filter. Moreover, while normally method selection
+matches on the type of each argument, for a constructor the first argument is
+treated differently: instead of matching its type, the argument itself (which
+is a filter) must be a subset of the filter specified by the method which is
+being tested for match. In other words, the argument filter must imply the
+method filter.
+<P/>
+
+Also, method ranking works differently: instead of the sum of the ranks of the
+types of all arguments, only the rank of the filter given as first argument is
+considered; and for it, the normal ranking order is reversed. This ensures
+that if multiple constructor methods match, the <Q>most general</Q> method is
+selected.
+
+<Example><![CDATA[
+gap> DeclareConstructor("XCons",[IsMagma,IsInt]);
+gap> InstallMethod(XCons, [IsGroup, IsInt], function(t,x) return CyclicGroup(x); end);
+gap> InstallMethod(XCons, [IsPermGroup, IsInt], function(t,x) return SymmetricGroup(x); end);
+gap> InstallMethod(XCons, [IsSemigroup, IsInt], function(t,x) return FullTransformationMonoid(x); end);
+gap> XCons(IsGroup,3);
+<pc group of size 3 with 1 generator>
+gap> XCons(IsPermGroup,3);
+Sym( [ 1 .. 3 ] )
+gap> XCons(IsSemigroup,4);
+<full transformation monoid of degree 4>
+gap> # if multiple methods match, the most general is selected:
+gap> XCons(IsMagma,3);
+<full transformation monoid of degree 3>
+]]></Example>
+
+The example above shows some basic examples (usually a constructor will
+produce isomorphic objects in different representations, not different objects
+as in this case).
+<P/>
+
+If no method has been installed which guarantees to produce a suitable
+objecty, a "No Method Found" error will be returned.
+<Log><![CDATA[
+gap> XCons(IsFullTransformationMonoid,4);
+Error, no method found! For debugging hints type ?Recovery from NoMethodFound
+Error, no 1st choice method found for `XCons' on 2 arguments called from
+<function "HANDLE_METHOD_NOT_FOUND">( <arguments> )
+ called from read-eval loop at line 8 of *stdin*
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> XCons(IsNilpotentGroup,4);
+Error, no method found! For debugging hints type ?Recovery from NoMethodFound
+Error, no 1st choice method found for `XCons' on 2 arguments called from
+<function "HANDLE_METHOD_NOT_FOUND">( <arguments> )
+ called from read-eval loop at line 9 of *stdin*
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk>
+]]></Log>
+
+Note that in both these cases there are methods that actually produce results
+of the required types, but they have not been installed with this information,
+so are not selected.
+
+<#Include Label="NewConstructor">
+<#Include Label="DeclareConstructor">
+
+</Section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Method Installation">
+<Heading>Method Installation</Heading>
+
+In order to describe what it means to select a method of an operation,
+we must describe how the methods are connected to their operations.
+<P/>
+For attributes and properties there is <Ref Func="InstallImmediateMethod"/>.
+<P/>
+For declaring that a filter is implied by other filters there is
+<Ref Func="InstallTrueMethod"/>.
+
+<#Include Label="InstallMethod">
+<#Include Label="InstallOtherMethod">
+<#Include Label="InstallEarlyMethod">
+<#Include Label="InstallMethodWithRandomSource">
+
+</Section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Applicable Methods and Method Selection">
+<Heading>Applicable Methods and Method Selection</Heading>
+
+A method installed as above is <E>applicable</E> for an arguments tuple
+if the following conditions are satisfied.
+<P/>
+The number of arguments equals the length of the list <A>args-filts</A>,
+the <M>i</M>-th argument lies in the filter <A>args-filts</A><M>[i]</M>,
+and <A>famp</A> returns <K>true</K> when applied to the families of the arguments.
+The maximal number of arguments supported for methods is six,
+one gets an error message if one tries to install a method with at least
+seven arguments.
+<P/>
+So <A>args-filt</A> describes conditions for each argument,
+and <A>famp</A> describes a relation between the arguments.
+<P/>
+For unary operations such as attributes and properties,
+there is no such relation to postulate,
+<A>famp</A> is <Ref Func="ReturnTrue"/> for these operations,
+a function that always returns <K>true</K>.
+For binary operations, the usual value of <A>famp</A> is
+<Ref Func="IsIdenticalObj"/>,
+which means that both arguments must lie in the same family.
+<P/>
+Note that any properties which occur among the filters in the filter list
+will <E>not</E> be tested by the method selection if they are not yet known.
+(More exact: if <A>prop</A> is a property then the filter implicitly uses not
+<A>prop</A> but <C>Has<A>prop</A> and <A>prop</A></C>.) If this is desired you must explicitly
+enforce a test (see section&nbsp;<Ref Sect="Redispatching"/>) below.
+<P/>
+If no method is applicable,
+the error message <Q>no method found</Q> is signaled.
+<P/>
+Otherwise, the applicable method with highest <E>rank</E> is selected and then
+called.
+This rank is usually given by the sum of the ranks of the filters in the list
+<A>args-filt</A>,
+<E>including involved filters</E>.
+This value can be modified by the optional <A>val</A> argument used in the
+call of <Ref Func="InstallMethod"/>, as follows.
+<P/>
+<List>
+<Item>
+  If <A>val</A> is an integer then add this value to the rank computed
+  from the filters.
+</Item>
+<Item>
+  If <A>val</A> is a function with zero arguments then add the value
+  returned by this function to the rank computed from the filters.
+</Item>
+<Item>
+  If <A>val</A> is a list of the form <C>[ filters ]</C> or
+  <C>[ filters, abs ]</C>, where <C>filters</C> is a list of filters
+  and <C>abs</C>, if given, is an integer, then ignore the filters in
+  <A>args-filt</A> for the rank computation, and instead take the sum of
+  the filters in <C>filters</C> (including involved filters) plus <C>abs</C>.
+</Item>
+</List>
+<P/>
+So the argument <A>val</A> can be used to raise or lower the priority
+of a method relative to other methods for <A>opr</A>.
+The variant where <A>val</A> is a function can be useful if one wants
+to shift the rank of the method by the rank of certain filters;
+note that such ranks need not be constant during a &GAP; session,
+they can grow due to implications, see <Ref Func="InstallTrueMethod"/>.
+The variant where <A>val</A> is a list can be useful for example if one wants
+that certain filters that are involved in <A>args-filt</A> are required but
+shall not count for the rank of the method.
+<P/>
+Note that for operations which are constructors special rules with respect
+to applicability and rank of the corresponding methods apply
+(see <Ref Func="NewConstructor"/>).
+<P/>
+Note that from the applicable methods
+an efficient one shall be selected.
+This is a method that needs only little time and storage for the
+computations.
+<P/>
+It seems to be impossible for &GAP; to select an optimal
+method in all cases.
+The present ranking of methods is based on the assumption
+that a method installed for a special situation shall be preferred
+to a method installed for a more general situation.
+<P/>
+For example, a method for computing a Sylow subgroup of a nilpotent
+group is expected to be more efficient than a method for arbitrary
+groups.
+So the more specific method will be selected if &GAP; knows that the
+group given as argument is nilpotent.
+<P/>
+Of course there is no obvious way to decide between the efficiency of
+incommensurable methods.
+For example, take an operation with one method for permutation groups,
+another method for nilpotent groups,
+but no method for nilpotent permutation groups,
+and call this operation with a permutation group known to be
+nilpotent.
+
+</Section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Partial Methods">
+<Heading>Partial Methods</Heading>
+
+<ManSection>
+<Func Name="TryNextMethod" Arg =""/>
+
+<Description>
+After a method has been selected and called,
+the method may recognize that it cannot compute the desired result,
+and give up by calling <C>TryNextMethod()</C>.
+<P/>
+In effect, the execution of the method is terminated,
+and the method selection calls the next method that is applicable w.r.t.
+the original arguments.
+In other words, the applicable method is called that is subsequent to the
+one that called <Ref Func="TryNextMethod"/>,
+according to decreasing rank of the methods.
+<P/>
+For example, since every finite group of odd order is solvable,
+one may install a method for the property
+<Ref Prop="IsSolvableGroup"/> that checks
+whether the size of the argument is an odd integer,
+returns <K>true</K> if so,
+and gives up otherwise.
+<P/>
+Care is  needed  if a  partial  method  might  modify the  type of  one  of its
+arguments, for example by computing an attribute  or property. If this happens,
+and the type  has   really changed, then  the  method  should not  exit   using
+<C>TryNextMethod()</C> but  should call the operation again,  as the new information
+in the type may   cause  some methods  previously   judged inapplicable to   be
+applicable. For  example, if  the  above method  for
+<Ref Prop="IsSolvableGroup"/> actually
+computes the size, (rather than  just examining  a  stored size), then it  must
+take care to check whether the type of the group has changed.
+</Description>
+</ManSection>
+
+</Section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Redispatching">
+<Heading>Redispatching</Heading>
+
+As mentioned above the method selection will not test unknown properties.
+In situations, in which algorithms are only known (or implemented) under
+certain conditions, however such a test might be actually desired.
+<P/>
+One way to achieve this would be to install the method under weaker
+conditions and explicitly test the properties first, exiting via
+<Ref Func="TryNextMethod"/> if some of them are not fulfilled.
+A problem of this approach however is that such methods then automatically
+are ranked lower and that the code does not look nice.
+<P/>
+A much better way is to use redispatching: Before deciding that no method
+has been found one tests these properties and if they turn out to be true
+the method selection is started anew (and will then find a method).
+<P/>
+This can be achieved via the following function:
+
+<#Include Label="RedispatchOnCondition">
+
+</Section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Immediate Methods">
+<Heading>Immediate Methods</Heading>
+
+Usually a method is called only if its operation has been called
+and if this method has been selected, see <Ref Func="InstallMethod"/>.
+<P/>
+For attributes and properties,
+one can install also <E>immediate methods</E>.
+
+<#Include Label="InstallImmediateMethod">
+<#Include Label="IsNoImmediateMethodsObject">
+
+</Section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Logical Implications">
+<Heading>Logical Implications</Heading>
+
+<#Include Label="InstallTrueMethod">
+<#Include Label="MethodReordering">
+
+</Section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<Section Label="Operations and Mathematical Terms">
+<Heading>Operations and Mathematical Terms</Heading>
+
+<Index>overload</Index>
+Usually an operation stands for a mathematical concept,
+and the name of the operation describes this uniquely.
+Examples are the property <Ref Prop="IsFinite"/>
+and the attribute <Ref Attr="Size"/>.
+But there are cases where the same mathematical term is used
+to denote different concepts,
+for example <C>Degree</C> is defined for polynomials, group characters,
+and permutation actions,
+and <C>Rank</C> is defined for matrices, free modules, <M>p</M>-groups,
+and transitive permutation actions.
+<P/>
+It is in principle possible to install methods for the operation
+<C>Rank</C> that are applicable to the different types of arguments,
+corresponding to the different contexts.
+But this is not the approach taken in the &GAP; library.
+Instead there are operations such as <Ref Attr="RankMat"/>
+for matrices and <Ref Attr="DegreeOfCharacter"/>
+(in fact these are attributes)
+which are installed as methods of the <Q>ambiguous</Q> operations
+<C>Rank</C> and <C>Degree</C>.
+<P/>
+The idea is to distinguish between on the one hand different ways
+to compute the same thing (e.g.&nbsp;different methods for
+<Ref Oper="\="/>,
+<Ref Attr="Size"/>, etc.),
+and on the other hand genuinely different things
+(such as the degree of a polynomial and a permutation action).
+<P/>
+The former is the basic purpose of operations and attributes.
+The latter is provided as a user convenience where mathematical usage
+forces it on us <E>and</E> where no conflicts arise.
+In programming the library, we use the underlying mathematically
+precise operations or attributes,
+such as <Ref Attr="RankMat"/> and
+<Ref Oper="RankAction" Label="for a group, an action domain, etc."/>.
+These should be attributes if appropriate, and the only role of the
+operation <C>Rank</C> is to decide which attribute the user meant.
+That way, stored information is stored with <Q>full mathematical precision</Q>
+and is less likely to be retrieved for a wrong purpose later.
+<P/>
+One word about possible conflicts.
+A typical example is the mathematical term <Q>centre</Q>,
+which is defined as <M>\{ x \in M | a * x = x * a \forall a \in M \}</M>
+for a magma <M>M</M>, and as <M>\{ x \in L | l * x = 0 \forall l \in L \}</M>
+for a Lie algebra <M>L</M>.
+Here it is <E>not</E> possible to introduce an operation
+<Ref Attr="Centre"/> that
+delegates to attributes <C>CentreOfMagma</C> and <C>CentreOfLieAlgebra</C>,
+depending on the type of the argument.
+This is because any Lie algebra in &GAP; is also a magma,
+so both <C>CentreOfMagma</C> and <C>CentreOfLieAlgebra</C> would be defined
+for a Lie algebra, with different meaning if the characteristic is two.
+So we cannot achieve that one operation in &GAP; corresponds to
+the mathematical term <Q>centre</Q>.
+<P/>
+<Q>Ambiguous</Q> operations such as <C>Rank</C> are declared in the library file
+<F>lib/overload.g</F>.
+
+</Section>
+</Chapter>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %% -->
+<!-- %E -->
+

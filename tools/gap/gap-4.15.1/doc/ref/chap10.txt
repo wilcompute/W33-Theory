@@ -1,0 +1,831 @@
+  
+  [1X10 [33X[0;0YStreams[133X[101X
+  
+  [33X[0;0Y[13XStreams[113X  provide  flexible  access  to [5XGAP[105X's input and output processing. An
+  [13Xinput  stream[113X  takes  characters  from  some source and delivers them to [5XGAP[105X
+  which  [13Xreads[113X  them  from  the stream. When an input stream has delivered all
+  characters it is at [10Xend-of-stream[110X. An [13Xoutput stream[113X receives characters from
+  [5XGAP[105X which [13Xwrites[113X them to the stream, and delivers them to some destination.[133X
+  
+  [33X[0;0YA major use of streams is to provide efficient and flexible access to files.
+  Files  can  be  read  and  written  using [2XRead[102X ([14X9.8-1[114X) and [2XAppendTo[102X ([14X9.8-3[114X),
+  however  the  former only allows a complete file to be read as [5XGAP[105X input and
+  the  latter  imposes  a high time penalty if many small pieces of output are
+  written  to  a  large file. Streams allow input files in other formats to be
+  read  and  processed, and files to be built up efficiently from small pieces
+  of  output. Streams may also be used for other purposes, for example to read
+  from and print to [5XGAP[105X strings, or to read input directly from the user.[133X
+  
+  [33X[0;0YAny  stream  is  either  a  [13Xtext  stream[113X,  which  translates the [10Xend-of-line[110X
+  character  ([10X\n[110X) to or from the system's representation of [10Xend-of-line[110X (e.g.,
+  [13Xnew-line[113X  under  UNIX  and  [13Xcarriage-return[113X-[13Xnew-line[113X under DOS), or a [13Xbinary
+  stream[113X,  which  does not translate the [10Xend-of-line[110X character. The processing
+  of other unprintable characters by text streams is undefined. Binary streams
+  pass them unchanged.[133X
+  
+  [33X[0;0YWhereas  it  is  cheap  to  append  to  a  stream, streams do consume system
+  resources,  and  only a limited number can be open at any time, therefore it
+  is  necessary  to  close  a  stream  as  soon  as possible using [2XCloseStream[102X
+  ([14X10.2-1[114X).  If  creating  a stream failed then [2XLastSystemError[102X ([14X9.1-1[114X) can be
+  used to get information about the failure.[133X
+  
+  
+  [1X10.1 [33X[0;0YCategories for Streams and the StreamsFamily[133X[101X
+  
+  [1X10.1-1 IsStream[101X
+  
+  [33X[1;0Y[29X[2XIsStream[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YStreams  are  [5XGAP[105X  objects  and  all  open  streams, input, output, text and
+  binary, lie in this category.[133X
+  
+  [1X10.1-2 IsClosedStream[101X
+  
+  [33X[1;0Y[29X[2XIsClosedStream[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YWhen  a  stream  is  closed, its type changes to lie in [2XIsClosedStream[102X. This
+  category is used to install methods that trap accesses to closed streams.[133X
+  
+  [1X10.1-3 IsInputStream[101X
+  
+  [33X[1;0Y[29X[2XIsInputStream[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YAll input streams lie in this category, and support input operations such as
+  [2XReadByte[102X ([14X10.3-3[114X) (see [14X10.3[114X)[133X
+  
+  [1X10.1-4 IsInputTextStream[101X
+  
+  [33X[1;0Y[29X[2XIsInputTextStream[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YAll  [13Xtext[113X  input  streams  lie  in  this  category.  They translate new-line
+  characters read.[133X
+  
+  [1X10.1-5 IsInputTextNone[101X
+  
+  [33X[1;0Y[29X[2XIsInputTextNone[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YIt  is  convenient to use a category to distinguish dummy streams (see [14X10.9[114X)
+  from others. Other distinctions are usually made using representations[133X
+  
+  [1X10.1-6 IsOutputStream[101X
+  
+  [33X[1;0Y[29X[2XIsOutputStream[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YAll output streams lie in this category and support basic operations such as
+  [2XWriteByte[102X ([14X10.4-1[114X) (see Section [14X10.4[114X).[133X
+  
+  [1X10.1-7 IsOutputTextStream[101X
+  
+  [33X[1;0Y[29X[2XIsOutputTextStream[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YAll  [13Xtext[113X  output  streams  lie  in  this  category  and  translate new-line
+  characters on output.[133X
+  
+  [1X10.1-8 IsOutputTextNone[101X
+  
+  [33X[1;0Y[29X[2XIsOutputTextNone[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YIt  is  convenient to use a category to distinguish dummy streams (see [14X10.9[114X)
+  from others. Other distinctions are usually made using representations[133X
+  
+  [1X10.1-9 StreamsFamily[101X
+  
+  [33X[1;0Y[29X[2XStreamsFamily[102X [32X family[133X
+  
+  [33X[0;0YAll streams lie in the [2XStreamsFamily[102X.[133X
+  
+  
+  [1X10.2 [33X[0;0YOperations applicable to All Streams[133X[101X
+  
+  [1X10.2-1 CloseStream[101X
+  
+  [33X[1;0Y[29X[2XCloseStream[102X( [3Xstream[103X ) [32X operation[133X
+  
+  [33X[0;0YIn  order  to  preserve  system  resources and to flush output streams every
+  stream should be closed as soon as it is no longer used using [2XCloseStream[102X.[133X
+  
+  [33X[0;0YIt  is  an  error  to  try  to read characters from or write characters to a
+  closed  stream.  Closing  a stream tells the [5XGAP[105X kernel and/or the operating
+  system  kernel  that  the  file  is  no longer needed. This may be necessary
+  because the [5XGAP[105X kernel and/or the operating system may impose a limit on how
+  many streams may be open simultaneously.[133X
+  
+  [1X10.2-2 FileDescriptorOfStream[101X
+  
+  [33X[1;0Y[29X[2XFileDescriptorOfStream[102X( [3Xstream[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  UNIX  file  descriptor  of the underlying file. This is mainly
+  useful  for  the  [2XUNIXSelect[102X  ([14X10.2-3[114X) function call. This is as of now only
+  available  on  UNIX-like  operating  systems  and  only for streams to local
+  processes and local files.[133X
+  
+  [1X10.2-3 UNIXSelect[101X
+  
+  [33X[1;0Y[29X[2XUNIXSelect[102X( [3Xinlist[103X, [3Xoutlist[103X, [3Xexclist[103X, [3Xtimeoutsec[103X, [3Xtimeoutusec[103X ) [32X function[133X
+  
+  [33X[0;0Ymakes  the  UNIX  C-library function [10Xselect[110X accessible from [5XGAP[105X for streams.
+  The functionality is as described in the man page (see UNIX file descriptors
+  (integers)  for  streams.  They  can  be obtained via [2XFileDescriptorOfStream[102X
+  ([14X10.2-2[114X)  for  streams  to  local processes and to local files. The argument
+  [3Xtimeoutsec[103X  is a timeout in seconds as in the [10Xstruct timeval[110X on the C level.
+  The  argument  [3Xtimeoutusec[103X is analogously in microseconds. The total timeout
+  is the sum of both. If one of those timeout arguments is not a small integer
+  then no timeout is applicable ([9Xfail[109X is allowed for the timeout arguments).[133X
+  
+  [33X[0;0YThe return value is the number of streams that are ready, this may be 0 if a
+  timeout  was specified. All file descriptors in the three lists that are not
+  yet ready are replaced by [9Xfail[109X in this function. So the lists are changed![133X
+  
+  [33X[0;0YThis  function  is only available if your operating system has [10Xselect[110X, which
+  is detected during compilation of [5XGAP[105X.[133X
+  
+  
+  [1X10.3 [33X[0;0YOperations for Input Streams[133X[101X
+  
+  [33X[0;0YTwo  operations normally used to read files: [2XRead[102X ([14X9.8-1[114X) and [2XReadAsFunction[102X
+  ([14X9.8-2[114X)  can  also  be  used  to  read [5XGAP[105X input from a stream. The input is
+  immediately  parsed  and  executed.  When reading from a stream [3Xstr[103X, the [5XGAP[105X
+  kernel generates calls to [10XReadLine([3Xstr[103X[10X)[110X to supply text to the parser.[133X
+  
+  [33X[0;0YThree  further  operations: [2XReadByte[102X ([14X10.3-3[114X), [2XReadLine[102X ([14X10.3-4[114X) and [2XReadAll[102X
+  ([14X10.3-5[114X),  support  reading  characters from an input stream without parsing
+  them. This can be used to read data in any format and process it in [5XGAP[105X.[133X
+  
+  [33X[0;0YAdditional  operations for input streams support detection of end of stream,
+  and  (for  those  streams  for which it is appropriate) random access to the
+  data.[133X
+  
+  [1X10.3-1 Read[101X
+  
+  [33X[1;0Y[29X[2XRead[102X( [3Xinput-text-stream[103X ) [32X operation[133X
+  
+  [33X[0;0Yreads the input-text-stream as input until [10Xend-of-stream[110X occurs. See [14X9.8[114X for
+  details.[133X
+  
+  [1X10.3-2 ReadAsFunction[101X
+  
+  [33X[1;0Y[29X[2XReadAsFunction[102X( [3Xinput-text-stream[103X ) [32X operation[133X
+  
+  [33X[0;0Yreads  the  input-text-stream as function and returns this function. See [14X9.8[114X
+  for details.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X# a function with local `a' does not change the global one[127X[104X
+    [4X[25Xgap>[125X [27Xa := 1;;[127X[104X
+    [4X[25Xgap>[125X [27Xi := InputTextString( "local a; a := 10; return a*10;" );;[127X[104X
+    [4X[25Xgap>[125X [27XReadAsFunction(i)();[127X[104X
+    [4X[28X100[128X[104X
+    [4X[25Xgap>[125X [27Xa;[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27X# reading it via `Read' does[127X[104X
+    [4X[25Xgap>[125X [27Xi := InputTextString( "a := 10;" );;[127X[104X
+    [4X[25Xgap>[125X [27XRead(i);[127X[104X
+    [4X[25Xgap>[125X [27Xa;[127X[104X
+    [4X[28X10[128X[104X
+  [4X[32X[104X
+  
+  [1X10.3-3 ReadByte[101X
+  
+  [33X[1;0Y[29X[2XReadByte[102X( [3Xinput-stream[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XReadByte[102X  returns  one character (returned as integer) from the input stream
+  [3Xinput-stream[103X.  [2XReadByte[102X  returns [9Xfail[109X if there is no character available, in
+  particular if it is at the end of a file.[133X
+  
+  [33X[0;0YIf  [3Xinput-stream[103X is the input stream of a input/output process, [2XReadByte[102X may
+  also return [9Xfail[109X if no byte is currently available.[133X
+  
+  [33X[0;0Y[2XReadByte[102X  is  the basic operation for input streams. If a [2XReadByte[102X method is
+  installed  for  a user-defined type of stream which does not block, then all
+  the  other  input stream operations will work (although possibly not at peak
+  efficiency).[133X
+  
+  [33X[0;0Y[2XReadByte[102X  will  wait  (block) until a byte is available. For instance if the
+  stream  is  a connection to another process, it will wait for the process to
+  output a byte.[133X
+  
+  [1X10.3-4 ReadLine[101X
+  
+  [33X[1;0Y[29X[2XReadLine[102X( [3Xinput-stream[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XReadLine[102X  returns  one  line  (returned as string [13Xwith[113X the newline) from the
+  input  stream  [3Xinput-stream[103X.  [2XReadLine[102X reads in the input until a newline is
+  read or the end-of-stream is encountered.[133X
+  
+  [33X[0;0YIf  [3Xinput-stream[103X is the input stream of a input/output process, [2XReadLine[102X may
+  also  return  [9Xfail[109X or return an incomplete line if the other process has not
+  yet  written  any more. It will always wait (block) for at least one byte to
+  be  available,  but  will then return as much input as is available, up to a
+  limit of one line.[133X
+  
+  [33X[0;0YA  default  method  is  supplied  for  [2XReadLine[102X  which simply calls [2XReadByte[102X
+  ([14X10.3-3[114X)  repeatedly.  This  is only safe for streams that cannot block. The
+  kernel  uses  calls  to  [2XReadLine[102X to supply input to the parser when reading
+  from a stream.[133X
+  
+  [1X10.3-5 ReadAll[101X
+  
+  [33X[1;0Y[29X[2XReadAll[102X( [3Xinput-stream[103X[, [3Xlimit[103X] ) [32X operation[133X
+  
+  [33X[0;0Y[2XReadAll[102X returns all characters as string from the input stream [3Xstream-in[103X. It
+  waits (blocks) until at least one character is available from the stream, or
+  until  there  is  evidence  that no characters will ever be available again.
+  This last indicates that the stream is at end-of-stream. Otherwise, it reads
+  as much input as it can from the stream without blocking further and returns
+  it  to  the  user. If the stream is already at end of file, so that no bytes
+  are available, [9Xfail[109X is returned. In the case of a file stream connected to a
+  normal  file  (not  a  pseudo-tty  or  named pipe or similar), all the bytes
+  should be immediately available and this function will read the remainder of
+  the file.[133X
+  
+  [33X[0;0YWith  a  second argument, at most [3Xlimit[103X bytes will be returned. Depending on
+  the  stream  a bounded number of additional bytes may have been read into an
+  internal buffer.[133X
+  
+  [33X[0;0YA  default  method  is  supplied  for  [2XReadAll[102X  which  simply calls [2XReadLine[102X
+  ([14X10.3-4[114X)  repeatedly.  This  is  only  really  safe for streams which cannot
+  block. Other streams should install a method for [2XReadAll[102X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xi := InputTextString( "1Hallo\nYou\n1" );;[127X[104X
+    [4X[25Xgap>[125X [27XReadByte(i);[127X[104X
+    [4X[28X49[128X[104X
+    [4X[25Xgap>[125X [27XCHAR_INT(last);[127X[104X
+    [4X[28X'1'[128X[104X
+    [4X[25Xgap>[125X [27XReadLine(i);[127X[104X
+    [4X[28X"Hallo\n"[128X[104X
+    [4X[25Xgap>[125X [27XReadLine(i);[127X[104X
+    [4X[28X"You\n"[128X[104X
+    [4X[25Xgap>[125X [27XReadLine(i);[127X[104X
+    [4X[28X"1"[128X[104X
+    [4X[25Xgap>[125X [27XReadLine(i);[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27XReadAll(i);[127X[104X
+    [4X[28X""[128X[104X
+    [4X[25Xgap>[125X [27XRewindStream(i);;[127X[104X
+    [4X[25Xgap>[125X [27XReadAll(i);[127X[104X
+    [4X[28X"1Hallo\nYou\n1"[128X[104X
+  [4X[32X[104X
+  
+  [1X10.3-6 IsEndOfStream[101X
+  
+  [33X[1;0Y[29X[2XIsEndOfStream[102X( [3Xinput-stream[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XIsEndOfStream[102X  returns  [9Xtrue[109X  if  the  input stream is at [13Xend-of-stream[113X, and
+  [9Xfalse[109X otherwise. Note that [2XIsEndOfStream[102X might return [9Xfalse[109X even if the next
+  [2XReadByte[102X ([14X10.3-3[114X) fails.[133X
+  
+  [1X10.3-7 PositionStream[101X
+  
+  [33X[1;0Y[29X[2XPositionStream[102X( [3Xinput-stream[103X ) [32X operation[133X
+  
+  [33X[0;0YSome input streams, such as string streams and file streams attached to disk
+  files,   support   a  form  of  random  access  by  way  of  the  operations
+  [2XPositionStream[102X,   [2XSeekPositionStream[102X  ([14X10.3-9[114X)  and  [2XRewindStream[102X  ([14X10.3-8[114X).
+  [2XPositionStream[102X  returns a non-negative integer denoting the current position
+  in  the  stream  (usually the number of characters [13Xbefore[113X the next one to be
+  read.[133X
+  
+  [33X[0;0YIf  this  is  not  possible,  for  example  for  an input stream attached to
+  standard input (normally the keyboard), then [9Xfail[109X is returned[133X
+  
+  [1X10.3-8 RewindStream[101X
+  
+  [33X[1;0Y[29X[2XRewindStream[102X( [3Xinput-stream[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XRewindStream[102X  attempts  to return an input stream to its starting condition,
+  so  that  all  the same characters can be read again. It returns [9Xtrue[109X if the
+  rewind succeeds and [9Xfail[109X otherwise[133X
+  
+  [33X[0;0YA default method implements RewindStream using [2XSeekPositionStream[102X ([14X10.3-9[114X).[133X
+  
+  [1X10.3-9 SeekPositionStream[101X
+  
+  [33X[1;0Y[29X[2XSeekPositionStream[102X( [3Xinput-stream[103X, [3Xpos[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XSeekPositionStream[102X attempts to rewind or wind forward an input stream to the
+  specified position. This is not possible for all streams. It returns [9Xtrue[109X if
+  the seek is successful and [9Xfail[109X otherwise.[133X
+  
+  
+  [1X10.4 [33X[0;0YOperations for Output Streams[133X[101X
+  
+  [1X10.4-1 WriteByte[101X
+  
+  [33X[1;0Y[29X[2XWriteByte[102X( [3Xoutput-stream[103X, [3Xbyte[103X ) [32X operation[133X
+  
+  [33X[0;0Ywrites   the  next  character  (given  as  [13Xinteger[113X)  to  the  output  stream
+  [3Xoutput-stream[103X.  The  function  returns  [9Xtrue[109X  if the write succeeds and [9Xfail[109X
+  otherwise.[133X
+  
+  [33X[0;0Y[2XWriteByte[102X  is  the basic operation for output streams. If a [2XWriteByte[102X method
+  is  installed  for  a user-defined type of stream, then all the other output
+  stream operations will work (although possibly not at peak efficiency).[133X
+  
+  [1X10.4-2 WriteLine[101X
+  
+  [33X[1;0Y[29X[2XWriteLine[102X( [3Xoutput-stream[103X, [3Xstring[103X ) [32X operation[133X
+  
+  [33X[0;0Yappends  [3Xstring[103X  to  [3Xoutput-stream[103X. A final newline is written. The function
+  returns [9Xtrue[109X if the write succeeds and [9Xfail[109X otherwise.[133X
+  
+  [33X[0;0YA  default  method is installed which implements [2XWriteLine[102X by repeated calls
+  to [2XWriteByte[102X ([14X10.4-1[114X).[133X
+  
+  [1X10.4-3 WriteAll[101X
+  
+  [33X[1;0Y[29X[2XWriteAll[102X( [3Xoutput-stream[103X, [3Xstring[103X ) [32X operation[133X
+  
+  [33X[0;0Yappends  [3Xstring[103X  to [3Xoutput-stream[103X. No final newline is written. The function
+  returns [9Xtrue[109X if the write succeeds and [9Xfail[109X otherwise. It will block as long
+  as  necessary  for  the write operation to complete (for example for a child
+  process to clear its input buffer )[133X
+  
+  [33X[0;0YA default method is installed which implements [2XWriteAll[102X by repeated calls to
+  [2XWriteByte[102X ([14X10.4-1[114X).[133X
+  
+  [33X[0;0YWhen  printing  or appending to a stream (using [2XPrintTo[102X ([14X9.8-3[114X), or [2XAppendTo[102X
+  ([14X9.8-3[114X)  or  when  logging  to  a  stream),  the  kernel generates a call to
+  [2XWriteAll[102X for each line output.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xstr := "";; a := OutputTextString(str,true);;[127X[104X
+    [4X[25Xgap>[125X [27XWriteByte(a,INT_CHAR('H'));[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XWriteLine(a,"allo");[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XWriteAll(a,"You\n");[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XCloseStream(a);[127X[104X
+    [4X[25Xgap>[125X [27XPrint(str);[127X[104X
+    [4X[28XHallo[128X[104X
+    [4X[28XYou[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X10.4-4 [33X[0;0YPrintTo and AppendTo (for streams)[133X[101X
+  
+  [33X[1;0Y[29X[2XPrintTo[102X( [3Xoutput-stream[103X, [3Xarg1[103X, [3X...[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XAppendTo[102X( [3Xoutput-stream[103X, [3Xarg1[103X, [3X...[103X ) [32X function[133X
+  
+  [33X[0;0YThese  functions work like [2XPrint[102X ([14X6.3-4[114X), except that the output is appended
+  to the output stream [3Xoutput-stream[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xstr := "";; a := OutputTextString(str,true);;[127X[104X
+    [4X[25Xgap>[125X [27XAppendTo( a, (1,2,3), ":", Z(3) );[127X[104X
+    [4X[25Xgap>[125X [27XCloseStream(a);[127X[104X
+    [4X[25Xgap>[125X [27XPrint( str, "\n" );[127X[104X
+    [4X[28X(1,2,3):Z(3)[128X[104X
+  [4X[32X[104X
+  
+  [1X10.4-5 LogTo[101X
+  
+  [33X[1;0Y[29X[2XLogTo[102X( [3Xstream[103X ) [32X operation[133X
+  
+  [33X[0;0Ycauses  the subsequent interaction to be logged to the output stream [3Xstream[103X.
+  It works in precisely the same way as it does for files (see [2XLogTo[102X ([14X9.8-4[114X)).[133X
+  
+  [1X10.4-6 InputLogTo[101X
+  
+  [33X[1;0Y[29X[2XInputLogTo[102X( [3Xstream[103X ) [32X operation[133X
+  
+  [33X[0;0Ycauses  the  subsequent  input  to be logged to the output stream [3Xstream[103X. It
+  works just like it does for files (see [2XInputLogTo[102X ([14X9.8-5[114X)).[133X
+  
+  [1X10.4-7 OutputLogTo[101X
+  
+  [33X[1;0Y[29X[2XOutputLogTo[102X( [3Xstream[103X ) [32X operation[133X
+  
+  [33X[0;0Ycauses  the  subsequent  output to be logged to the output stream [3Xstream[103X. It
+  works just like it does for files (see [2XOutputLogTo[102X ([14X9.8-6[114X)).[133X
+  
+  [1X10.4-8 SetPrintFormattingStatus[101X
+  
+  [33X[1;0Y[29X[2XSetPrintFormattingStatus[102X( [3Xstream[103X, [3Xnewstatus[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XPrintFormattingStatus[102X( [3Xstream[103X ) [32X operation[133X
+  
+  [33X[0;0YWhen  text  is  being  sent  to  an  output text stream via [2XPrintTo[102X ([14X9.8-3[114X),
+  [2XAppendTo[102X  ([14X9.8-3[114X),  [2XLogTo[102X ([14X10.4-5[114X), etc., it is by default formatted just as
+  it  would  be  were  it being printed to the screen. Thus, it is broken into
+  lines  of  reasonable  length  at  (where  possible)  sensible places, lines
+  containing  elements of lists or records are indented, and so forth. This is
+  appropriate  if  the  output  is  eventually  to  be  viewed by a human, and
+  harmless if it to passed as input to [5XGAP[105X, but may be unhelpful if the output
+  is to be passed as input to another program. It is possible to turn off this
+  behaviour  for a stream using the [2XSetPrintFormattingStatus[102X operation, and to
+  test whether it is on or off using [2XPrintFormattingStatus[102X.[133X
+  
+  [33X[0;0Y[2XSetPrintFormattingStatus[102X  sets  whether  output  sent  to  the output stream
+  [3Xstream[103X  via  [2XPrintTo[102X  ([14X9.8-3[114X), [2XAppendTo[102X ([14X9.8-3[114X), etc. will be formatted with
+  line  breaks  and indentation. If the second argument [3Xnewstatus[103X is [9Xtrue[109X then
+  output will be so formatted, and if [9Xfalse[109X then it will not. If the stream is
+  not a text stream, only [9Xfalse[109X is allowed.[133X
+  
+  [33X[0;0Y[2XPrintFormattingStatus[102X  returns [9Xtrue[109X if output sent to the output text stream
+  [3Xstream[103X  via  [2XPrintTo[102X  ([14X9.8-3[114X), [2XAppendTo[102X ([14X9.8-3[114X), etc. will be formatted with
+  line  breaks  and indentation, and [9Xfalse[109X otherwise. For non-text streams, it
+  returns  [9Xfalse[109X.  If as argument [3Xstream[103X the string [10X"*stdout*"[110X is given, these
+  functions  refer to the formatting status of the standard output (so usually
+  the user's terminal screen).[133X
+  
+  [33X[0;0YSimilarly,  the  string  [10X"*errout*"[110X  refers  to the formatting status of the
+  standard error output, which influences how error messages are printed.[133X
+  
+  [33X[0;0YThese  functions  do  not influence the behaviour of the low level functions
+  [2XWriteByte[102X  ([14X10.4-1[114X),  [2XWriteLine[102X  ([14X10.4-2[114X)  or [2XWriteAll[102X ([14X10.4-3[114X) which always
+  write without formatting.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xs := "";; str := OutputTextString(s,false);;[127X[104X
+    [4X[25Xgap>[125X [27XPrintTo(str,Primes{[1..30]});[127X[104X
+    [4X[25Xgap>[125X [27Xs;[127X[104X
+    [4X[28X"[ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61,\[128X[104X
+    [4X[28X \n  67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113 ]"[128X[104X
+    [4X[25Xgap>[125X [27XPrint(s,"\n");[127X[104X
+    [4X[28X[ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61,[128X[104X
+    [4X[28X  67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113 ][128X[104X
+    [4X[25Xgap>[125X [27XSetPrintFormattingStatus(str, false);[127X[104X
+    [4X[25Xgap>[125X [27XPrintTo(str,Primes{[1..30]});[127X[104X
+    [4X[25Xgap>[125X [27Xs;[127X[104X
+    [4X[28X"[ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61,\[128X[104X
+    [4X[28X \n  67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113 ][ 2, 3, 5, 7\[128X[104X
+    [4X[28X, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, \[128X[104X
+    [4X[28X79, 83, 89, 97, 101, 103, 107, 109, 113 ]"[128X[104X
+    [4X[25Xgap>[125X [27XPrint(s,"\n");[127X[104X
+    [4X[28X[ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61,[128X[104X
+    [4X[28X  67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113 ][ 2, 3, 5, 7, 1\[128X[104X
+    [4X[28X1, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79,\[128X[104X
+    [4X[28X 83, 89, 97, 101, 103, 107, 109, 113 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X10.5 [33X[0;0YFile Streams[133X[101X
+  
+  [33X[0;0YFile  streams  are streams associated with files. An input file stream reads
+  the  characters  it  delivers  from a file, an output file stream prints the
+  characters  it  receives  to  a file. The following functions can be used to
+  create  such  streams.  They  return [9Xfail[109X if an error occurred, in this case
+  [2XLastSystemError[102X ([14X9.1-1[114X) can be used to get information about the error.[133X
+  
+  [1X10.5-1 InputTextFile[101X
+  
+  [33X[1;0Y[29X[2XInputTextFile[102X( [3Xfilename[103X ) [32X operation[133X
+  
+  [33X[0;0Y[10XInputTextFile(   [3Xfilename[103X[10X   )[110X  returns  an  input  stream  in  the  category
+  [2XIsInputTextStream[102X  ([14X10.1-4[114X)  that  delivers  the  characters  from  the file
+  [3Xfilename[103X. If [3Xfilename[103X ends in [10X.gz[110X and the file is a valid gzipped file, then
+  the file will be transparently uncompressed.[133X
+  
+  [33X[0;0Y[10XInputTextFile[110X  is designed for use with text files and automatically handles
+  windows-style  line  endings.  This  means  it should [13Xnot[113X be used for binary
+  data.  The [2XIO_File[102X ([14XIO: IO_File mode[114X) function from the [5XIO[105X package should be
+  used to access binary data.[133X
+  
+  [33X[0;0YNote: At most 256 files may be open for reading or writing at the same time.
+  Use  [2XCloseStream[102X  ([14X10.2-1[114X)  to close the input stream once you have finished
+  reading from it.[133X
+  
+  [1X10.5-2 OutputTextFile[101X
+  
+  [33X[1;0Y[29X[2XOutputTextFile[102X( [3Xfilename[103X, [3Xappend[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XOutputGzipFile[102X( [3Xfilename[103X, [3Xappend[103X ) [32X operation[133X
+  
+  [33X[0;0Y[10XOutputTextFile(  [3Xfilename[103X[10X, [3Xappend[103X[10X )[110X returns an output stream in the category
+  [10XIsOutputTextFile[110X  that  writes  received characters to the file [3Xfilename[103X. If
+  [3Xappend[103X  is  [9Xfalse[109X,  then  the  file  is  emptied  first,  otherwise received
+  characters are added at the end of the file. [10XOutputGzipFile[110X acts identically
+  to [10XOutputTextFile[110X, except it compresses the output with gzip.[133X
+  
+  [33X[0;0YNote: At most 256 files may be open for reading or writing at the same time.
+  Use  [2XCloseStream[102X  ([14X10.2-1[114X) to close the output stream once you have finished
+  writing to it.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X# use a temporary directory[127X[104X
+    [4X[25Xgap>[125X [27Xname := Filename( DirectoryTemporary(), "test" );;[127X[104X
+    [4X[25Xgap>[125X [27X# create an output stream, append output, and close again[127X[104X
+    [4X[25Xgap>[125X [27Xoutput := OutputTextFile( name, true );;[127X[104X
+    [4X[25Xgap>[125X [27XAppendTo( output, "Hallo\n", "You\n" );[127X[104X
+    [4X[25Xgap>[125X [27XCloseStream(output);[127X[104X
+    [4X[25Xgap>[125X [27X# create an input, print complete contents of file, and close[127X[104X
+    [4X[25Xgap>[125X [27Xinput := InputTextFile(name);;[127X[104X
+    [4X[25Xgap>[125X [27XPrint( ReadAll(input) );[127X[104X
+    [4X[28XHallo[128X[104X
+    [4X[28XYou[128X[104X
+    [4X[25Xgap>[125X [27XCloseStream(input);[127X[104X
+    [4X[25Xgap>[125X [27X# append a single line[127X[104X
+    [4X[25Xgap>[125X [27Xoutput := OutputTextFile( name, true );;[127X[104X
+    [4X[25Xgap>[125X [27XAppendTo( output, "AppendLine\n" );[127X[104X
+    [4X[25Xgap>[125X [27X# close output stream to flush the output[127X[104X
+    [4X[25Xgap>[125X [27XCloseStream(output);[127X[104X
+    [4X[25Xgap>[125X [27X# create an input, print complete contents of file, and close[127X[104X
+    [4X[25Xgap>[125X [27Xinput := InputTextFile(name);;[127X[104X
+    [4X[25Xgap>[125X [27XPrint( ReadAll(input) );[127X[104X
+    [4X[28XHallo[128X[104X
+    [4X[28XYou[128X[104X
+    [4X[28XAppendLine[128X[104X
+    [4X[25Xgap>[125X [27XCloseStream(input);[127X[104X
+  [4X[32X[104X
+  
+  
+  [1X10.6 [33X[0;0YUser Streams[133X[101X
+  
+  [33X[0;0YThe   commands  described  in  this  section  create  streams  which  accept
+  characters from, or deliver characters to, the user, via the keyboard or the
+  [5XGAP[105X session display.[133X
+  
+  [1X10.6-1 InputTextUser[101X
+  
+  [33X[1;0Y[29X[2XInputTextUser[102X(  ) [32X function[133X
+  
+  [33X[0;0Yreturns an input text stream which delivers characters typed by the user (or
+  from  the  standard  input  device  if  it  has  been redirected). In normal
+  circumstances,  characters  are  delivered  one  by  one  as they are typed,
+  without waiting until the end of a line. No prompts are printed.[133X
+  
+  [1X10.6-2 OutputTextUser[101X
+  
+  [33X[1;0Y[29X[2XOutputTextUser[102X(  ) [32X function[133X
+  
+  [33X[0;0Yreturns an output stream which delivers characters to the user's display (or
+  the  standard  output  device  if it has been redirected). Each character is
+  delivered  immediately  it  is  written,  without waiting for a full line of
+  output.  Text  written  in  this  way is [13Xnot[113X written to the session log (see
+  [2XLogTo[102X ([14X9.8-4[114X)).[133X
+  
+  [1X10.6-3 InputFromUser[101X
+  
+  [33X[1;0Y[29X[2XInputFromUser[102X( [3Xarg[103X ) [32X function[133X
+  
+  [33X[0;0Yprints the [3Xarg[103X as a prompt, then waits until a text is typed by the user (or
+  from the standard input device if it has been redirected). This text must be
+  a  [13Xsingle[113X  expression,  followed  by  one  [13Xenter[113X.  This  is  evaluated  (see
+  [2XEvalString[102X ([14X27.9-5[114X)) and the result is returned.[133X
+  
+  
+  [1X10.7 [33X[0;0YString Streams[133X[101X
+  
+  [33X[0;0YString  streams  are streams associated with strings. An input string stream
+  reads  the  characters  it  delivers  from a string, an output string stream
+  appends  the characters it receives to a string. The following functions can
+  be used to create such streams.[133X
+  
+  [1X10.7-1 InputTextString[101X
+  
+  [33X[1;0Y[29X[2XInputTextString[102X( [3Xstring[103X ) [32X operation[133X
+  
+  [33X[0;0Y[10XInputTextString(  [3Xstring[103X[10X  )[110X  returns  an  input  stream  that  delivers  the
+  characters  from  the  string [3Xstring[103X. The [3Xstring[103X is not changed when reading
+  characters from it and changing the [3Xstring[103X after the call to [2XInputTextString[102X
+  has no influence on the input stream.[133X
+  
+  [1X10.7-2 OutputTextString[101X
+  
+  [33X[1;0Y[29X[2XOutputTextString[102X( [3Xlist[103X, [3Xappend[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  an  output  stream  that puts all received characters into the list
+  [3Xlist[103X. If [3Xappend[103X is [9Xfalse[109X, then the list is emptied first, otherwise received
+  characters are added at the end of the list.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X# read input from a string[127X[104X
+    [4X[25Xgap>[125X [27Xinput := InputTextString( "Hallo\nYou\n" );;[127X[104X
+    [4X[25Xgap>[125X [27XReadLine(input);[127X[104X
+    [4X[28X"Hallo\n"[128X[104X
+    [4X[25Xgap>[125X [27XReadLine(input);[127X[104X
+    [4X[28X"You\n"[128X[104X
+    [4X[25Xgap>[125X [27X# print to a string[127X[104X
+    [4X[25Xgap>[125X [27Xstr := "";;[127X[104X
+    [4X[25Xgap>[125X [27Xout := OutputTextString( str, true );;[127X[104X
+    [4X[25Xgap>[125X [27XPrintTo( out, 1, "\n", (1,2,3,4)(5,6), "\n" );[127X[104X
+    [4X[25Xgap>[125X [27XCloseStream(out);[127X[104X
+    [4X[25Xgap>[125X [27XPrint( str );[127X[104X
+    [4X[28X1[128X[104X
+    [4X[28X(1,2,3,4)(5,6)[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X10.8 [33X[0;0YInput-Output Streams[133X[101X
+  
+  [33X[0;0YInput-output  streams  capture  bidirectional communications between [5XGAP[105X and
+  another process, either locally or (@as yet unimplemented@) remotely.[133X
+  
+  [33X[0;0YSuch  streams support the basic operations of both input and output streams.
+  They  should  provide  some buffering, allowing output data to be written to
+  the  stream,  even  when input data is waiting to be read, but the amount of
+  this  buffering is operating system dependent, and the user should take care
+  not  to  get too far ahead in writing, or behind in reading, or deadlock may
+  occur.[133X
+  
+  [33X[0;0YAt  present  the  only  type  of  Input-Output  streams that are implemented
+  provide communication with a local child process, using a pseudo-tty.[133X
+  
+  [33X[0;0YLike  other  streams,  write  operations  are blocking, read operations will
+  block to get the first character, but not thereafter.[133X
+  
+  [33X[0;0YAs far as possible, no translation is done on characters written to, or read
+  from  the  stream,  and  no control characters have special effects, but the
+  details of particular pseudo-tty implementations may effect this.[133X
+  
+  [1X10.8-1 IsInputOutputStream[101X
+  
+  [33X[1;0Y[29X[2XIsInputOutputStream[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0Y[2XIsInputOutputStream[102X is the Category of Input-Output Streams; it returns [9Xtrue[109X
+  if the [3Xobj[103X is an input-output stream and [9Xfalse[109X otherwise.[133X
+  
+  [1X10.8-2 InputOutputLocalProcess[101X
+  
+  [33X[1;0Y[29X[2XInputOutputLocalProcess[102X( [3Xdir[103X, [3Xexecutable[103X, [3Xargs[103X ) [32X function[133X
+  
+  [33X[0;0Ystarts up a child process, whose executable file is [3Xexecutable[103X, with [21Xcommand
+  line[121X  arguments  [3Xargs[103X  in  the  directory [3Xdir[103X. (Suitable choices for [3Xdir[103X are
+  [10XDirectoryCurrent()[110X     or     [10XDirectoryTemporary()[110X     (see    Section [14X9.4[114X);
+  [10XDirectoryTemporary()[110X  may  be a good choice when [3Xexecutable[103X generates output
+  files  that  it  doesn't  itself remove afterwards.) [2XInputOutputLocalProcess[102X
+  returns  an  InputOutputStream  object.  Bytes  written  to  this stream are
+  received  by  the child process as if typed at a terminal on standard input.
+  Bytes  written  to standard output by the child process can be read from the
+  stream.[133X
+  
+  [33X[0;0YWhen  the  stream  is  closed,  the signal SIGTERM is delivered to the child
+  process, which is expected to exit.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xd := DirectoryCurrent();[127X[104X
+    [4X[28Xdir("./")[128X[104X
+    [4X[25Xgap>[125X [27Xf := PathSystemProgram("rev");[127X[104X
+    [4X[28X"/usr/bin/rev"[128X[104X
+    [4X[25Xgap>[125X [27Xs := InputOutputLocalProcess(d,f,[]);[127X[104X
+    [4X[28X< input/output stream to rev >[128X[104X
+    [4X[25Xgap>[125X [27XWriteLine(s,"The cat sat on the mat");[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XPrint(ReadLine(s));[127X[104X
+    [4X[28Xtam eht no tas tac ehT[128X[104X
+    [4X[25Xgap>[125X [27Xx := ListWithIdenticalEntries(10000,'x');;[127X[104X
+    [4X[25Xgap>[125X [27XConvertToStringRep(x);[127X[104X
+    [4X[25Xgap>[125X [27XWriteLine(s,x);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XWriteByte(s,INT_CHAR('\n'));[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xy := ReadAll(s);;[127X[104X
+    [4X[25Xgap>[125X [27XLength(y);[127X[104X
+    [4X[28X10002[128X[104X
+    [4X[25Xgap>[125X [27XCloseStream(s);[127X[104X
+    [4X[25Xgap>[125X [27Xs;[127X[104X
+    [4X[28X< closed input/output stream to rev >[128X[104X
+  [4X[32X[104X
+  
+  [1X10.8-3 ReadAllLine[101X
+  
+  [33X[1;0Y[29X[2XReadAllLine[102X( [3Xiostream[103X[, [3Xnofail[103X][, [3XIsAllLine[103X] ) [32X operation[133X
+  
+  [33X[0;0YFor  an  input/output  stream  [3Xiostream[103X  [2XReadAllLine[102X  reads  until a newline
+  character  if  any  input  is  found  or  returns [9Xfail[109X if no input is found,
+  i.e. if any input is found [2XReadAllLine[102X is non-blocking.[133X
+  
+  [33X[0;0YIf  the  argument [3Xnofail[103X (which must be [9Xfalse[109X or [9Xtrue[109X) is provided and it is
+  set  to  [9Xtrue[109X  then [2XReadAllLine[102X will wait, if necessary, for input and never
+  return [9Xfail[109X.[133X
+  
+  [33X[0;0YIf  the  argument  [3XIsAllLine[103X  (which  must be a function that takes a string
+  argument and returns either [9Xtrue[109X or [9Xfalse[109X) then it is used to determine what
+  constitutes a whole line. The default behaviour is equivalent to passing the
+  function[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xline -> 0 < Length(line) and Last(line) = '\n'[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Yfor  the  [3XIsAllLine[103X  argument.  The  purpose of the [3XIsAllLine[103X argument is to
+  cater  for  the  case where the input being read is from an external process
+  that writes a [21Xprompt[121X for data that does not terminate with a newline.[133X
+  
+  [33X[0;0YIf the first argument is an input stream but not an input/output stream then
+  [2XReadAllLine[102X  behaves  as if [2XReadLine[102X ([14X10.3-4[114X) was called with just the first
+  argument and any additional arguments are ignored.[133X
+  
+  
+  [1X10.9 [33X[0;0YDummy Streams[133X[101X
+  
+  [33X[0;0YThe  following  two  commands  create  dummy  streams which will consume all
+  characters and never deliver one.[133X
+  
+  [1X10.9-1 InputTextNone[101X
+  
+  [33X[1;0Y[29X[2XInputTextNone[102X(  ) [32X function[133X
+  
+  [33X[0;0Yreturns a dummy input text stream, which delivers no characters, i.e., it is
+  always  at end of stream. Its main use is for calls to [2XProcess[102X ([14X11.1-1[114X) when
+  the started program does not read anything.[133X
+  
+  [1X10.9-2 OutputTextNone[101X
+  
+  [33X[1;0Y[29X[2XOutputTextNone[102X(  ) [32X function[133X
+  
+  [33X[0;0Yreturns  a  dummy output stream, which discards all received characters. Its
+  main  use is for calls to [2XProcess[102X ([14X11.1-1[114X) when the started program does not
+  write anything.[133X
+  
+  
+  [1X10.10 [33X[0;0YHandling of Streams in the Background[133X[101X
+  
+  [33X[0;0YThis  section  describes  a  feature  of  the [5XGAP[105X kernel that can be used to
+  handle  pending streams somehow [21Xin the background[121X. This is only available on
+  operating systems that have [10Xselect[110X.[133X
+  
+  [33X[0;0YRight  before  [5XGAP[105X  reads  a  keypress  from  the keyboard it calls a little
+  subroutine  that can handle streams that are ready to be read or ready to be
+  written.  This  means that [5XGAP[105X can handle these streams during user input on
+  the  command line. Note that this does not work when [5XGAP[105X is in the middle of
+  some calculation.[133X
+  
+  [33X[0;0YThis feature is used in the following way. One can install handler functions
+  for  reading  or  writing  streams  via  [2XInstallCharReadHookFunc[102X  ([14X10.10-1[114X).
+  Handlers can be removed via [2XUnInstallCharReadHookFunc[102X ([14X10.10-2[114X)[133X
+  
+  [33X[0;0YNote  that  handler  functions  must not return anything and get one integer
+  argument, which refers to an index in one of the following arrays (according
+  to whether the function was installed for input, output or exceptions on the
+  stream).  Handler  functions  usually  should  not  output  anything  on the
+  standard  output  because  this  ruins  the command line during command line
+  editing.[133X
+  
+  [1X10.10-1 InstallCharReadHookFunc[101X
+  
+  [33X[1;0Y[29X[2XInstallCharReadHookFunc[102X( [3Xstream[103X, [3Xmode[103X, [3Xfunc[103X ) [32X function[133X
+  
+  [33X[0;0Yinstalls  the function [3Xfunc[103X as a handler function for the stream [3Xstream[103X. The
+  argument  [3Xmode[103X  decides,  for what operations on the stream this function is
+  installed.  [3Xmode[103X  must  be a string, in which a letter [10Xr[110X means [21Xread[121X, [10Xw[110X means
+  [21Xwrite[121X  and  [10Xx[110X  means [21Xexception[121X, according to the [10Xselect[110X function call in the
+  UNIX  C-library  (see  [10Xman  select[110X  and  [2XUNIXSelect[102X ([14X10.2-3[114X)). More than one
+  letter  is  allowed  in [3Xmode[103X. As described above the function is called in a
+  situation  when  [5XGAP[105X  is  reading  a  character  from  the keyboard. Handler
+  functions should not use much time to complete.[133X
+  
+  [33X[0;0YThis functionality only works if the operating system has a [10Xselect[110X function.[133X
+  
+  [1X10.10-2 UnInstallCharReadHookFunc[101X
+  
+  [33X[1;0Y[29X[2XUnInstallCharReadHookFunc[102X( [3Xstream[103X, [3Xfunc[103X ) [32X function[133X
+  
+  [33X[0;0Yuninstalls  the  function  [3Xfunc[103X as a handler function for the stream [3Xstream[103X.
+  All  instances  are  deinstalled, regardless of the mode of operation (read,
+  write, exception).[133X
+  
+  [33X[0;0YThis functionality only works if the operating system has a [10Xselect[110X function.[133X
+  
+  
+  [1X10.11 [33X[0;0YComma separated files[133X[101X
+  
+  [33X[0;0YIn  some situations it can be desirable to process data given in the form of
+  a  spreadsheet  (such  as  Excel).  [5XGAP[105X  can  do  this  using the CSV (comma
+  separated  values) format, which spreadsheet programs can usually read in or
+  write out.[133X
+  
+  [33X[0;0YThe  first  line  of the spreadsheet is used as labels of record components,
+  each  subsequent  line  then  corresponds  to  a record. Entries enclosed in
+  double  quotes  are  considered  as strings and are permitted to contain the
+  separation character (usually a comma).[133X
+  
+  [1X10.11-1 ReadCSV[101X
+  
+  [33X[1;0Y[29X[2XReadCSV[102X( [3Xfilename[103X[, [3Xnohead[103X][, [3Xseparator[103X] ) [32X function[133X
+  
+  [33X[0;0YThis  function  reads in a spreadsheet, saved in CSV format ([13Xc[113Xomma [13Xs[113Xeparated
+  [13Xv[113Xalues)  and  returns  its  entries as a list of records. The entries of the
+  first  line  of  the  spreadsheet are used to denote the names of the record
+  components.  Blanks  will  be  translated into underscore characters. If the
+  parameter  [3Xnohead[103X  is  given  as [9Xtrue[109X, instead the record components will be
+  called  [10Xfieldn[110X.  Each  subsequent  line  will  create  one record. If given,
+  [3Xseparator[103X is the character used to separate fields. Otherwise it defaults to
+  a comma.[133X
+  
+  [1X10.11-2 PrintCSV[101X
+  
+  [33X[1;0Y[29X[2XPrintCSV[102X( [3Xfilename[103X, [3Xlist[103X[, [3Xfields[103X] ) [32X function[133X
+  
+  [33X[0;0YThis function prints a list of records as a spreadsheet in CSV format (which
+  can  be  read in for example into Excel). The names of the record components
+  will  be  printed  as  entries  in the first line. If the argument [3Xfields[103X is
+  given  only  the  record fields listed in this list will be printed and they
+  will be printed in the same arrangement as given in this list. If the option
+  noheader  is  set  to  true the line with the record field names will not be
+  printed.[133X
+  
+  
+  [1X10.12 [33X[0;0YOpening files in the Operating System[133X[101X
+  
+  [33X[0;0YIn  some  situations  it can be desirable to open a file outside of [5XGAP[105X, for
+  example HTML files, PDFs, or pictures.[133X
+  
+  [1X10.12-1 OpenExternal[101X
+  
+  [33X[1;0Y[29X[2XOpenExternal[102X( [3Xfilename[103X ) [32X function[133X
+  
+  [33X[0;0YOpen  the  file  [3Xfilename[103X using the default application for this file in the
+  operating  system. This can be used to open files like HTML and PDF files in
+  the GUI.[133X
+  

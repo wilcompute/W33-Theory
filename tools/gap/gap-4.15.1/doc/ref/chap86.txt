@@ -1,0 +1,178 @@
+  
+  [1X86 [33X[0;0YWeak Pointers[133X[101X
+  
+  [33X[0;0YThis  chapter describes the use of the kernel feature of [13Xweak pointers[113X. This
+  feature  is  primarily intended for use only in [5XGAP[105X internals, and should be
+  used extremely carefully otherwise.[133X
+  
+  [33X[0;0YThe  garbage  collector  (see Section [14X7.12-1[114X) is the part of the kernel that
+  manages  memory  in  the user's workspace. It will normally only reclaim the
+  storage  used  by an object when the object cannot be reached as a subobject
+  of  any  [5XGAP[105X  variable, or from any reference in the kernel. We say that any
+  link  to object [22Xa[122X from object [22Xb[122X [21Xkeeps object [22Xa[122X alive[121X, as long as [22Xb[122X is alive.
+  It  is  occasionally  convenient, however, to have a link to an object which
+  [13Xdoes  not  keep it alive[113X, and this is a weak pointer. The most common use is
+  in  caches,  and  similar structures, where it is only necessary to remember
+  how to solve problem [22Xx[122X as long as some other link to [22Xx[122X exists.[133X
+  
+  [33X[0;0YThe  following  section  [14X86.1[114X  describes  the  semantics of the objects that
+  contain  weak  pointers. Following sections describe the functions available
+  to manipulate them.[133X
+  
+  
+  [1X86.1 [33X[0;0YWeak Pointer Objects[133X[101X
+  
+  [33X[0;0YA  [13Xweak  pointer  object[113X  is similar to a mutable plain list, except that it
+  does not keep its subobjects alive during a garbage collection. From the [5XGAP[105X
+  viewpoint  this  means  that  its  entries  may  become  unbound, apparently
+  spontaneously,  at  any  time.  Considerable  care  is  therefore  needed in
+  programming with such an object.[133X
+  
+  [1X86.1-1 WeakPointerObj[101X
+  
+  [33X[1;0Y[29X[2XWeakPointerObj[102X( [3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XWeakPointerObj[102X  returns  a  weak  pointer  object  which  contains  the same
+  subobjects as the list [3Xlist[103X, that is it returns a [13Xshallow[113X weak copy of [3Xlist[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xw := WeakPointerObj( [ 1, , [2,3], fail, rec( a := 1) ] );[127X[104X
+    [4X[28XWeakPointerObj( [ 1, , [ 2, 3 ], fail, rec( a := 1 ) ] )[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAfter  some  computations involving garbage collections (but not necessarily
+  in the [13Xfirst[113X garbage collection after the above assignment), [5XGAP[105X will notice
+  that the list and the record stored in [10Xw[110X are not referenced by other objects
+  than [10Xw[110X, and that therefore these entries may disappear.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XCollectGarbage( true );[127X[104X
+    [4X[28X[128X[104X
+    [4X[28X... (perhaps more computations and garbage collections) ...[128X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XCollectGarbage( true );[127X[104X
+    [4X[25Xgap>[125X [27Xw;[127X[104X
+    [4X[28XWeakPointerObj( [ 1, , , fail ] )[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  [10Xw[110X has failed to keep its list and record subobjects alive during
+  the  garbage  collections.  Certain  subobjects,  such as small integers and
+  elements of small finite fields, are not stored in the workspace, and so are
+  not  subject to garbage collection, while certain other objects, such as the
+  boolean values, are always reachable from global variables or the kernel and
+  so are never garbage collected.[133X
+  
+  [33X[0;0YSubobjects  reachable  without  going  through  a weak pointer object do not
+  evaporate, as in:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xw := WeakPointerObj( [ 1, , , fail ] );[127X[104X
+    [4X[28XWeakPointerObj( [ 1, , , fail ] )[128X[104X
+    [4X[25Xgap>[125X [27Xl := [1,2,3];;[127X[104X
+    [4X[25Xgap>[125X [27Xw[1] := l;;[127X[104X
+    [4X[25Xgap>[125X [27Xw;[127X[104X
+    [4X[28XWeakPointerObj( [ [ 1, 2, 3 ], , , fail ] )[128X[104X
+    [4X[25Xgap>[125X [27XCollectGarbage( true );[127X[104X
+    [4X[25Xgap>[125X [27Xw;[127X[104X
+    [4X[28XWeakPointerObj( [ [ 1, 2, 3 ], , , fail ] )[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  also  that the global variables [10Xlast[110X, [10Xlast2[110X and [10Xlast3[110X will keep things
+  alive –this can be confusing when debugging.[133X
+  
+  
+  [1X86.2 [33X[0;0YLow Level Access Functions for Weak Pointer Objects[133X[101X
+  
+  [1X86.2-1 SetElmWPObj[101X
+  
+  [33X[1;0Y[29X[2XSetElmWPObj[102X( [3Xwp[103X, [3Xpos[103X, [3Xval[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XUnbindElmWPObj[102X( [3Xwp[103X, [3Xpos[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XElmWPObj[102X( [3Xwp[103X, [3Xpos[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XIsBoundElmWPObj[102X( [3Xwp[103X, [3Xpos[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XLengthWPObj[102X( [3Xwp[103X ) [32X function[133X
+  
+  [33X[0;0YThe  functions  [2XSetElmWPObj[102X  and  [2XUnbindElmWPObj[102X set and unbind entries in a
+  weak pointer object.[133X
+  
+  [33X[0;0YThe  function  [2XElmWPObj[102X  returns  the  element  at  position [3Xpos[103X of the weak
+  pointer  object  [3Xwp[103X,  if there is one, and [9Xfail[109X otherwise. A return value of
+  [9Xfail[109X  can thus arise either because (a) the value [9Xfail[109X is stored at position
+  [3Xpos[103X,  or (b) no value is stored at position [3Xpos[103X. Since [9Xfail[109X cannot vanish in
+  a  garbage  collection,  these  two  cases  can safely be distinguished by a
+  [13Xsubsequent[113X call to [2XIsBoundElmWPObj[102X, which returns [9Xtrue[109X if there is currently
+  a value bound at position [3Xpos[103X of [3Xwp[103X and [9Xfalse[109X otherwise.[133X
+  
+  [33X[0;0YNote that it is [13Xnot[113X safe to write:[133X
+  
+  [33X[0;0Y[10Xif IsBoundElmWPObj(w,i) then x:= ElmWPObj(w,i); fi;[110X[133X
+  
+  [33X[0;0Yand  treat  [10Xx[110X  as reliably containing a value taken from [10Xw[110X, as a badly timed
+  garbage collection could leave [10Xx[110X containing [9Xfail[109X. Instead use[133X
+  
+  [33X[0;0Y[10Xx := ElmWPObj(w,i); if x <> fail or IsBoundElmWPObj(w,i) then . . .[110X.[133X
+  
+  [33X[0;0YHere is an example.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xw := WeakPointerObj( [ 1, , [2,3], fail, rec() ] );[127X[104X
+    [4X[28XWeakPointerObj( [ 1, , [ 2, 3 ], fail, rec(  ) ] )[128X[104X
+    [4X[25Xgap>[125X [27XSetElmWPObj(w,5,[]);[127X[104X
+    [4X[25Xgap>[125X [27Xw;[127X[104X
+    [4X[28XWeakPointerObj( [ 1, , [ 2, 3 ], fail, [  ] ] )[128X[104X
+    [4X[25Xgap>[125X [27XUnbindElmWPObj(w,1);[127X[104X
+    [4X[25Xgap>[125X [27Xw;[127X[104X
+    [4X[28XWeakPointerObj( [ , , [ 2, 3 ], fail, [  ] ] )[128X[104X
+    [4X[25Xgap>[125X [27XElmWPObj(w,3);[127X[104X
+    [4X[28X[ 2, 3 ][128X[104X
+    [4X[25Xgap>[125X [27XElmWPObj(w,1);[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNow after some computations and garbage collections [22X...[122X[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X2;; 3;; 4;; CollectGarbage( true );  # clear last, last2, last3[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[22X...[122X we get the following.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XElmWPObj(w,3);[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27Xw;[127X[104X
+    [4X[28XWeakPointerObj( [ , , , fail ] )[128X[104X
+    [4X[25Xgap>[125X [27XElmWPObj(w,4);[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27XIsBoundElmWPObj(w,3);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsBoundElmWPObj(w,4);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X86.3 [33X[0;0YAccessing Weak Pointer Objects as Lists[133X[101X
+  
+  [33X[0;0YWeak  pointer  objects  are members of [10XListsFamily[110X and the categories [2XIsList[102X
+  ([14X21.1-1[114X) and [2XIsMutable[102X ([14X12.6-2[114X). Methods based on the low-level functions in
+  the previous section, are installed for the list access operations, enabling
+  them  to be used as lists. However, it is [13Xnot recommended[113X that these be used
+  in  programming.  They  are supplied mainly as a convenience for interactive
+  working,  and  may  not  be  safe, since functions and methods for lists may
+  assume that after [10XIsBound(w[i])[110X returns [9Xtrue[109X, access to [10Xw[i][110X is safe.[133X
+  
+  
+  [1X86.4 [33X[0;0YCopying Weak Pointer Objects[133X[101X
+  
+  [33X[0;0YA  [2XShallowCopy[102X  ([14X12.7-1[114X) method is installed, which makes a new weak pointer
+  object containing the same objects as the original.[133X
+  
+  [33X[0;0YIt  is  possible  to apply [2XStructuralCopy[102X ([14X12.7-2[114X) to a weak pointer object,
+  obtaining  a new weak pointer object containing copies of the objects in the
+  original.  This  [13Xmay  not be safe[113X if a badly timed garbage collection occurs
+  during copying.[133X
+  
+  [33X[0;0YApplying  [2XImmutable[102X  ([14X12.6-3[114X) to a weak pointer object produces an immutable
+  plain  list containing immutable copies of the objects contained in the weak
+  pointer  object.  An  immutable  weak  pointer  object is a contradiction in
+  terms.[133X
+  

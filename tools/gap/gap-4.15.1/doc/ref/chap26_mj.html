@@ -1,0 +1,1331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<title>GAP (ref) - Chapter 26: Vector and Matrix Objects</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="GAPDoc2HTML" />
+<link rel="stylesheet" type="text/css" href="manual.css" />
+<script src="manual.js" type="text/javascript"></script>
+<script type="text/javascript">overwriteStyle();</script>
+</head>
+<body class="chap26"  onload="jscontent()">
+
+
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chap7_mj.html">7</a>  <a href="chap8_mj.html">8</a>  <a href="chap9_mj.html">9</a>  <a href="chap10_mj.html">10</a>  <a href="chap11_mj.html">11</a>  <a href="chap12_mj.html">12</a>  <a href="chap13_mj.html">13</a>  <a href="chap14_mj.html">14</a>  <a href="chap15_mj.html">15</a>  <a href="chap16_mj.html">16</a>  <a href="chap17_mj.html">17</a>  <a href="chap18_mj.html">18</a>  <a href="chap19_mj.html">19</a>  <a href="chap20_mj.html">20</a>  <a href="chap21_mj.html">21</a>  <a href="chap22_mj.html">22</a>  <a href="chap23_mj.html">23</a>  <a href="chap24_mj.html">24</a>  <a href="chap25_mj.html">25</a>  <a href="chap26_mj.html">26</a>  <a href="chap27_mj.html">27</a>  <a href="chap28_mj.html">28</a>  <a href="chap29_mj.html">29</a>  <a href="chap30_mj.html">30</a>  <a href="chap31_mj.html">31</a>  <a href="chap32_mj.html">32</a>  <a href="chap33_mj.html">33</a>  <a href="chap34_mj.html">34</a>  <a href="chap35_mj.html">35</a>  <a href="chap36_mj.html">36</a>  <a href="chap37_mj.html">37</a>  <a href="chap38_mj.html">38</a>  <a href="chap39_mj.html">39</a>  <a href="chap40_mj.html">40</a>  <a href="chap41_mj.html">41</a>  <a href="chap42_mj.html">42</a>  <a href="chap43_mj.html">43</a>  <a href="chap44_mj.html">44</a>  <a href="chap45_mj.html">45</a>  <a href="chap46_mj.html">46</a>  <a href="chap47_mj.html">47</a>  <a href="chap48_mj.html">48</a>  <a href="chap49_mj.html">49</a>  <a href="chap50_mj.html">50</a>  <a href="chap51_mj.html">51</a>  <a href="chap52_mj.html">52</a>  <a href="chap53_mj.html">53</a>  <a href="chap54_mj.html">54</a>  <a href="chap55_mj.html">55</a>  <a href="chap56_mj.html">56</a>  <a href="chap57_mj.html">57</a>  <a href="chap58_mj.html">58</a>  <a href="chap59_mj.html">59</a>  <a href="chap60_mj.html">60</a>  <a href="chap61_mj.html">61</a>  <a href="chap62_mj.html">62</a>  <a href="chap63_mj.html">63</a>  <a href="chap64_mj.html">64</a>  <a href="chap65_mj.html">65</a>  <a href="chap66_mj.html">66</a>  <a href="chap67_mj.html">67</a>  <a href="chap68_mj.html">68</a>  <a href="chap69_mj.html">69</a>  <a href="chap70_mj.html">70</a>  <a href="chap71_mj.html">71</a>  <a href="chap72_mj.html">72</a>  <a href="chap73_mj.html">73</a>  <a href="chap74_mj.html">74</a>  <a href="chap75_mj.html">75</a>  <a href="chap76_mj.html">76</a>  <a href="chap77_mj.html">77</a>  <a href="chap78_mj.html">78</a>  <a href="chap79_mj.html">79</a>  <a href="chap80_mj.html">80</a>  <a href="chap81_mj.html">81</a>  <a href="chap82_mj.html">82</a>  <a href="chap83_mj.html">83</a>  <a href="chap84_mj.html">84</a>  <a href="chap85_mj.html">85</a>  <a href="chap86_mj.html">86</a>  <a href="chap87_mj.html">87</a>  <a href="chapBib_mj.html">Bib</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap25_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap27_mj.html">[Next Chapter]</a>&nbsp;  </div>
+
+<p id="mathjaxlink" class="pcenter"><a href="chap26.html">[MathJax off]</a></p>
+<p><a id="X856C23B87E50F118" name="X856C23B87E50F118"></a></p>
+<div class="ChapSects"><a href="chap26_mj.html#X856C23B87E50F118">26 <span class="Heading">Vector and Matrix Objects</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap26_mj.html#X7A7275C27EC61ACE">26.1 <span class="Heading">Concepts and Rules for Vector and Matrix Objects</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap26_mj.html#X7C6CDBFE7EB083A5">26.2 <span class="Heading">Categories of Vector and Matrix Objects</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7D963FCC7E849BE0">26.2-1 IsVectorObj</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7E7617A0781D1E4B">26.2-2 IsMatrixObj</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7D1ACCBE7E9CF501">26.2-3 IsMatrixOrMatrixObj</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X78CD88A283330E72">26.2-4 IsRowListMatrix</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap26_mj.html#X877A706186C89ADB">26.3 <span class="Heading">Defining Attributes of Vector and Matrix Objects</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X8662026C7CCDB446">26.3-1 <span class="Heading">BaseDomain</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X85ABF33684865ED5">26.3-2 <span class="Heading">ConstructingFilter</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X818702FD7A2E9D90">26.3-3 <span class="Heading">CompatibleVectorFilter</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X828BA5E1849E3D06">26.3-4 Length</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X820ED34380C10E19">26.3-5 <span class="Heading">NumberRows and NumberColumns</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap26_mj.html#X7BD7D2837BFDE649">26.4 <span class="Heading">Constructing Vector and Matrix Objects</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X860E84397BD148E9">26.4-1 <span class="Heading">NewVector and NewZeroVector</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X79A6544D86261E82">26.4-2 <span class="Heading">Vector</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7DBA8BF5844F3281">26.4-3 <span class="Heading">ZeroVector</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7AD2210B8047FB01">26.4-4 <span class="Heading">NewMatrix, NewZeroMatrix, NewIdentityMatrix</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X879384D479EB1D82">26.4-5 <span class="Heading">Matrix</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X838F5B6C7C87C8E1">26.4-6 <span class="Heading">ZeroMatrix</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7D807ABC7FCB4E77">26.4-7 <span class="Heading">IdentityMatrix</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap26_mj.html#X7C7F5250855C4371">26.5 <span class="Heading">Operations for Base Domains of Vector and Matrix Objects</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X85D7A6A782B21E5C">26.5-1 <span class="Heading">OneOfBaseDomain and ZeroOfBaseDomain</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap26_mj.html#X7954E20987E0B260">26.6 <span class="Heading">Operations for Vector and Matrix Objects</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7FFC60A27FE6FA97">26.6-1 <span class="Heading">Comparison of Vector and Matrix Objects</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7FBBE79478012648">26.6-2 <span class="Heading">Unpack</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X85E896F67CE2F925">26.6-3 <span class="Heading">ChangedBaseDomain</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X83DD8B39864A2C94">26.6-4 <span class="Heading">Randomize</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap26_mj.html#X7FE662477F36A21F">26.7 <span class="Heading">List Like Operations for Vector Objects</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7D5DF49C7ADB6986">26.7-1 <span class="Heading">Element Access and Assignment for Vector Objects</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7A21731C83EE3BB0">26.7-2 PositionNonZero</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7ABDE1B685A78326">26.7-3 PositionLastNonZero</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X790013817E314B2D">26.7-4 ListOp</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap26_mj.html#X7FDF7655852AEAAE">26.8 <span class="Heading">Arithmetical Operations for Vector Objects</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7F8CE23F7A250072">26.8-1 <span class="Heading">Unary Arithmetical Operations for Vector Objects</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X85A815CA790094CC">26.8-2 <span class="Heading">Binary Arithmetical Operations for Vector Objects</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X876090A684E71C93">26.8-3 AddVector</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X8039D013817317C3">26.8-4 MultVector</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap26_mj.html#X7BE9D278852C13BC">26.9 <span class="Heading">Operations for Vector Objects</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7AC470557EC90714">26.9-1 <span class="Heading">ConcatenationOfVectors</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7DBE956E7F9C700E">26.9-2 ExtractSubVector</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X80EC354D78D7B5A6">26.9-3 CopySubVector</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X866366E587991171">26.9-4 WeightOfVector</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X81ACAE017C00F782">26.9-5 DistanceOfVectors</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap26_mj.html#X81CC13CA7A1FF4AA">26.10 <span class="Heading">Arithmetical Operations for Matrix Objects</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X819F87A07DA7E2DC">26.10-1 <span class="Heading">Unary Arithmetical Operations for Matrix Objects</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7BBB70557A7A9591">26.10-2 <span class="Heading">Binary Arithmetical Operations for Matrix Objects</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap26_mj.html#X85FAB7E778A71C19">26.11 <span class="Heading">Operations for Matrix Objects</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X870FBE817C884AB5">26.11-1 MatElm</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7C33059984635480">26.11-2 SetMatElm</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X838B45F7790E9FDF">26.11-3 ExtractSubMatrix</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X793CD4637F237915">26.11-4 MutableCopyMatrix</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7ED9E5D4809E3B50">26.11-5 CopySubMatrix</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X809A6B3F7EA5E7D8">26.11-6 CompatibleVector</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7EE70D5A81E9ED72">26.11-7 RowsOfMatrix</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7E06762479A00DF4">26.11-8 <span class="Heading">CompanionMatrix</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap26_mj.html#X7D40EE2084A6C976">26.12 <span class="Heading">Operations for Row List Matrix Objects</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X82C4FCFA808010F8">26.12-1 <span class="Heading">List Access for a Row List Matrix</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7F89BB2482D28AAE">26.12-2 <span class="Heading">List Assignment for a Row List Matrix</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X807518367C96516F">26.12-3 <span class="Heading">Sublist Access for a Row List Matrix</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X8371789181FA136B">26.12-4 <span class="Heading">Sublist Assignment for a Row List Matrix</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X872E63867803ED78"><code>26.12-5 IsBound<span>\</span>[<span>\</span>]</code></a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X79328CB280C71DDB"><code>26.12-6 Unbind<span>\</span>[<span>\</span>]</code></a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7BDD838579E4D2D6">26.12-7 Add</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X86E355D07A41C025">26.12-8 Remove</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X82D0359B81F8D442">26.12-9 Append</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7E234F717BE333EA">26.12-10 ShallowCopy</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7E9F095E85DED480">26.12-11 ListOp</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap26_mj.html#X7B86A8487B12F9BD">26.13 <span class="Heading">Basic operations for row/column reductions</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7B3997D37CC44FCA">26.13-1 MultMatrixRowLeft</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X794636447E8C5553">26.13-2 MultMatrixRowRight</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X80AF7B267E6B9CE0">26.13-3 MultMatrixColumnRight</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X843DAFE37F347471">26.13-4 MultMatrixColumnLeft</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X8662EB748629502F">26.13-5 AddMatrixRowsLeft</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7CD05EE984614AB6">26.13-6 AddMatrixRowsRight</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7B1E1E417CA267A3">26.13-7 AddMatrixColumnsRight</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X85ECB8C87DFD8F32">26.13-8 AddMatrixColumnsLeft</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X87CCA3117F6B3F0D">26.13-9 SwapMatrixRows</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X824C8A347EB9D499">26.13-10 SwapMatrixColumns</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap26_mj.html#X7BEE647484978886">26.14 <span class="Heading">Implementing New Vector and Matrix Objects Types</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap26_mj.html#X82EEE1D37A94F807">26.15 <span class="Heading">Available Representations of Vector Objects</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7C8050938691A914">26.15-1 IsGF2VectorRep</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X82A643007EC6D1CA">26.15-2 Is8BitVectorRep</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X83262B7085FA94E3">26.15-3 IsPlistVectorRep</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X8730DB7D7E7DA883">26.15-4 IsZmodnZVectorRep</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap26_mj.html#X7CFD844C7D80D541">26.16 <span class="Heading">Available Representations of Matrix Objects</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X7F6078FF81E912E7">26.16-1 IsGF2MatrixRep</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X81466B6C7CAC3A7B">26.16-2 Is8BitMatrixRep</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X80C6031C7DB31A15">26.16-3 IsPlistMatrixRep</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap26_mj.html#X84D0F3117DA86850">26.16-4 IsZmodnZMatrixRep</a></span>
+</div></div>
+</div>
+
+<h3>26 <span class="Heading">Vector and Matrix Objects</span></h3>
+
+<p>This chapter describes an interface to vector and matrix objects which are not represented by plain lists (of plain lists), cf. Chapters <a href="chap23_mj.html#X82C7E6CF7BA03391"><span class="RefLink">23</span></a> and <a href="chap24_mj.html#X812CCAB278643A59"><span class="RefLink">24</span></a>.</p>
+
+<p><a id="X7A7275C27EC61ACE" name="X7A7275C27EC61ACE"></a></p>
+
+<h4>26.1 <span class="Heading">Concepts and Rules for Vector and Matrix Objects</span></h4>
+
+<p>Traditionally, vectors and matrices in <strong class="pkg">GAP</strong> have been represented by (lists of) lists, see the chapters <a href="chap23_mj.html#X82C7E6CF7BA03391"><span class="RefLink">23</span></a> and <a href="chap24_mj.html#X812CCAB278643A59"><span class="RefLink">24</span></a>. More precisely, the term <q>vector</q> (corresponding to the filter <code class="func">IsVector</code> (<a href="chap31_mj.html#X802F34F280B29DF4"><span class="RefLink">31.14-14</span></a>)) is used in the abstract sense of an <q>element of a vector space</q>, the term <q>row vector</q> (corresponding to <code class="func">IsRowVector</code> (<a href="chap23_mj.html#X7DFB22A07836A7A9"><span class="RefLink">23.1-1</span></a>)) is used to denote a <q>coordinate vector</q> which is represented by a <strong class="pkg">GAP</strong> list (see <code class="func">IsList</code> (<a href="chap21_mj.html#X7C4CC4EA8299701E"><span class="RefLink">21.1-1</span></a>)), and the term <q>matrix</q> is used to denote a list of lists, with additional properties (see <code class="func">IsMatrix</code> (<a href="chap24_mj.html#X7E1AE46B862B185F"><span class="RefLink">24.2-1</span></a>)).</p>
+
+<p>Unfortunately, such lists (objects in <code class="func">IsPlistRep</code> (<a href="chap21_mj.html#X87BA4EBF80F16B72"><span class="RefLink">21.24-2</span></a>)) cannot store their type, and so it is impossible to use the advantages of <strong class="pkg">GAP</strong>'s method selection on them. This situation is unsustainable in the long run since more special representations (compressed, sparse, etc.) have already been and even more will be implemented. Here we describe a programming interface to vectors and matrices, which solves this problem,</p>
+
+<p>The idea of this interface is that <strong class="pkg">GAP</strong> should be able to represent vectors and matrices by objects that store their type, in order to benefit from method selection. These objects are created by <code class="func">Objectify</code> (<a href="chap79_mj.html#X7CB5C12E813F512B"><span class="RefLink">79.1-1</span></a>), we therefore refer to the them as <q>vector objects</q> and <q>matrix objects</q> respectively.</p>
+
+<p>(Of course the terminology is somewhat confusing: An <q>abstract matrix</q> in <strong class="pkg">GAP</strong> can be represented either by a list of lists or by a matrix object. It can be detected from the filter <code class="func">IsMatrixOrMatrixObj</code> (<a href="chap26_mj.html#X7D1ACCBE7E9CF501"><span class="RefLink">26.2-3</span></a>); this is the union of the filters <code class="func">IsMatrix</code> (<a href="chap24_mj.html#X7E1AE46B862B185F"><span class="RefLink">24.2-1</span></a>) –which denotes those matrices that are represented by lists of lists– and the filter <code class="func">IsMatrixObj</code> (<a href="chap26_mj.html#X7E7617A0781D1E4B"><span class="RefLink">26.2-2</span></a>) –which defines <q>proper</q> matrix objects in the above sense. In particular, we do <em>not</em> regard the objects in <code class="func">IsMatrix</code> (<a href="chap24_mj.html#X7E1AE46B862B185F"><span class="RefLink">24.2-1</span></a>) as special cases of objects in <code class="func">IsMatrixObj</code> (<a href="chap26_mj.html#X7E7617A0781D1E4B"><span class="RefLink">26.2-2</span></a>), or vice versa. Thus one can install specific methods for all three situations: just for <q>proper</q> matrix objects, just for matrices represented by lists of lists, or for both kinds of matrices. For example, a <strong class="pkg">GAP</strong> package may decide to accept only <q>proper</q> matrix objects as arguments of its functions, or it may try to support also objects in <code class="func">IsMatrix</code> (<a href="chap24_mj.html#X7E1AE46B862B185F"><span class="RefLink">24.2-1</span></a>) as far as this is possible.)</p>
+
+<p>We want to be able to write (efficient) code that is independent of the actual representation (in the sense of <strong class="pkg">GAP</strong>'s representation filters, see Section <a href="chap13_mj.html#X8698205F8648EB33"><span class="RefLink">13.4</span></a>) and preserves it.</p>
+
+<p>This latter requirement makes it necessary to distinguish between different representations of matrices: <q>Row list</q> matrices (see <code class="func">IsRowListMatrix</code> (<a href="chap26_mj.html#X78CD88A283330E72"><span class="RefLink">26.2-4</span></a>) behave basically like lists of rows, in particular the rows are individual <strong class="pkg">GAP</strong> objects that can be shared between different matrix objects. One can think of other representations of matrices, such as matrices whose subobjects represent columns, or <q>flat</q> matrices which do not have subobjects like rows or columns at all. The different kinds of matrices have to be distinguished already with respect to the definition of the operations for them.</p>
+
+<p>In particular vector and matrix objects know their base domain (see <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>)) and their dimensions. The basic condition is that the entries of vector and matrix objects must either lie in the base domain or naturally embed in the sense that addition and multiplication automatically work with elements of the base domain; for example, a matrix object over a polynomial ring may also contain entries from the coefficient ring.</p>
+
+<p>Vector and matrix objects may be mutable or immutable. Of course all operations changing an object are only allowed/implemented for mutable variants.</p>
+
+<p>Vector objects are equal with respect to <code class="func">\=</code> (<a href="chap31_mj.html#X7EF67D047F03CA6F"><span class="RefLink">31.11-1</span></a>) if they have the same length and the same entries. It is not necessary that they have the same base domain. Matrices are equal with respect to <code class="func">\=</code> (<a href="chap31_mj.html#X7EF67D047F03CA6F"><span class="RefLink">31.11-1</span></a>) if they have the same dimensions and the same entries.</p>
+
+<p>For a row list matrix object, it is not guaranteed that all its rows have the same vector type. It is for example thinkable that a matrix object stores some of its rows in a sparse representation and some in a dense one. However, it is guaranteed that the rows of two matrices in the same representation are compatible in the sense that all vector operations defined in this interface can be applied to them and that new matrices in the same representation as the original matrix can be formed out of them.</p>
+
+<p>Note that there is neither a default mapping from the set of matrix object representations to the set of vector representations nor one in the reverse direction. There is in general no <q>associated</q> vector object representation to a matrix object representation or vice versa. (However, <code class="func">CompatibleVectorFilter</code> (<a href="chap26_mj.html#X818702FD7A2E9D90"><span class="RefLink">26.3-3</span></a>) may describe a vector object representation that is compatible with a given matrix object.)</p>
+
+<p>The recommended way to write code that preserves the representation basically works by using constructing operations that take template objects to decide about the intended representation for the new object.</p>
+
+<p>Vector and matrix objects do not have to be <strong class="pkg">GAP</strong> lists in the sense of <code class="func">IsList</code> (<a href="chap21_mj.html#X7C4CC4EA8299701E"><span class="RefLink">21.1-1</span></a>). Note that objects not in the filter <code class="func">IsList</code> (<a href="chap21_mj.html#X7C4CC4EA8299701E"><span class="RefLink">21.1-1</span></a>) need not support all list operations, and their behaviour is not prescribed by the rules for lists, e.g., behaviour w.r.t. arithmetic operations. However, row list matrices behave nearly like lists of row vectors that insist on being dense and containing only vectors of the same length and with the same base domain.</p>
+
+<p>Vector and matrix objects are not likely to benefit from <strong class="pkg">GAP</strong>'s immediate methods (see section <a href="chap78_mj.html#X87D38D2584D0A8AF"><span class="RefLink">78.7</span></a>). Therefore it may be useful to set the filter <code class="func">IsNoImmediateMethodsObject</code> (<a href="chap78_mj.html#X80C3A19E7B99BB41"><span class="RefLink">78.7-2</span></a>) in the definition of new kinds of vector and matrix objects.</p>
+
+<p>For information on how to implement new <code class="func">IsMatrixObj</code> (<a href="chap26_mj.html#X7E7617A0781D1E4B"><span class="RefLink">26.2-2</span></a>) and <code class="func">IsVectorObj</code> (<a href="chap26_mj.html#X7D963FCC7E849BE0"><span class="RefLink">26.2-1</span></a>) representations see Section <a href="chap26_mj.html#X7BEE647484978886"><span class="RefLink">26.14</span></a>.</p>
+
+<p><a id="X7C6CDBFE7EB083A5" name="X7C6CDBFE7EB083A5"></a></p>
+
+<h4>26.2 <span class="Heading">Categories of Vector and Matrix Objects</span></h4>
+
+<p>Currently the following categories of vector and matrix objects are supported in <strong class="pkg">GAP</strong>. More can be added as soon as there is need for them.</p>
+
+<p><a id="X7D963FCC7E849BE0" name="X7D963FCC7E849BE0"></a></p>
+
+<h5>26.2-1 IsVectorObj</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsVectorObj</code>( <var class="Arg">obj</var> )</td><td class="tdright">(&nbsp;category&nbsp;)</td></tr></table></div>
+<p>The idea behind <em>vector objects</em> is that one wants to deal with objects like coefficient lists of fixed length over a given domain <span class="SimpleMath">\(R\)</span>, say, which can be added and can be multiplied from the left with elements from <span class="SimpleMath">\(R\)</span>. A vector object <span class="SimpleMath">\(v\)</span>, say, is always a copyable object (see <code class="func">IsCopyable</code> (<a href="chap12_mj.html#X811EFD727EBD1ADC"><span class="RefLink">12.6-1</span></a>)) in <code class="func">IsVector</code> (<a href="chap31_mj.html#X802F34F280B29DF4"><span class="RefLink">31.14-14</span></a>), which knows the values of <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) (with value <span class="SimpleMath">\(R\)</span>) and <code class="func">Length</code> (<a href="chap21_mj.html#X780769238600AFD1"><span class="RefLink">21.17-5</span></a>), where <span class="SimpleMath">\(R\)</span> is a domain (see Chapter <a href="chap12_mj.html#X7BAF69417BB925F6"><span class="RefLink">12.4</span></a>) that has methods for <code class="func">Zero</code> (<a href="chap31_mj.html#X8040AC7A79FFC442"><span class="RefLink">31.10-3</span></a>), <code class="func">One</code> (<a href="chap31_mj.html#X8046262384895B2A"><span class="RefLink">31.10-2</span></a>), <code class="func">\in</code> (<a href="chap30_mj.html#X84B7FA8C7C94400F"><span class="RefLink">30.6-1</span></a>), <code class="func">Characteristic</code> (<a href="chap31_mj.html#X81278E53800BF64D"><span class="RefLink">31.10-1</span></a>), <code class="func">IsFinite</code> (<a href="chap30_mj.html#X808A4061809A6E67"><span class="RefLink">30.4-2</span></a>). We say that <span class="SimpleMath">\(v\)</span> is defined over <span class="SimpleMath">\(R\)</span>. Typically, <span class="SimpleMath">\(R\)</span> will be at least a semiring.</p>
+
+<p>For creating new vector objects compatible with <span class="SimpleMath">\(v\)</span>, <code class="func">NewVector</code> (<a href="chap26_mj.html#X860E84397BD148E9"><span class="RefLink">26.4-1</span></a>) requires that also the value of <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) is known for <span class="SimpleMath">\(v\)</span>.</p>
+
+<p>Further, entry access <span class="SimpleMath">\(v[i]\)</span> is expected to return a <strong class="pkg">GAP</strong> object, for <span class="SimpleMath">\(1 \leq i \leq\)</span><code class="code"> Length</code><span class="SimpleMath">\(( v )\)</span>, and that these entries of <span class="SimpleMath">\(v\)</span> belong to the base domain <span class="SimpleMath">\(R\)</span>.</p>
+
+<p>Note that we do <em>not</em> require that <span class="SimpleMath">\(v\)</span> is a list in the sense of <code class="func">IsList</code> (<a href="chap21_mj.html#X7C4CC4EA8299701E"><span class="RefLink">21.1-1</span></a>), in particular the rules of list arithmetic (see the sections <a href="chap21_mj.html#X7E6A1F66781BE923"><span class="RefLink">21.13</span></a> and <a href="chap21_mj.html#X782ED7F27D8C7FC1"><span class="RefLink">21.14</span></a>) need <em>not</em> hold. For example, the sum of two vector objects of different lengths or defined over different base domains is not defined, and a plain list of vector objects is not a matrix. Also unbinding entries of vector objects is not defined.</p>
+
+<p>Scalar multiplication from the left is defined only with elements from <span class="SimpleMath">\(R\)</span>.</p>
+
+<p>The family of <span class="SimpleMath">\(v\)</span> (see <code class="func">FamilyObj</code> (<a href="chap13_mj.html#X7CF70EAC84284919"><span class="RefLink">13.1-1</span></a>)) is the same as the family of its base domain <span class="SimpleMath">\(R\)</span>. However, it is <em>not</em> required that the entries lie in <span class="SimpleMath">\(R\)</span> in the sense of <code class="func">\in</code> (<a href="chap30_mj.html#X84B7FA8C7C94400F"><span class="RefLink">30.6-1</span></a>), also values may occur that can be naturally embedded into <span class="SimpleMath">\(R\)</span>. For example, if <span class="SimpleMath">\(R\)</span> is a polynomial ring then some entries in <span class="SimpleMath">\(v\)</span> may be elements of the coefficient ring of <span class="SimpleMath">\(R\)</span>.</p>
+
+<p><a id="X7E7617A0781D1E4B" name="X7E7617A0781D1E4B"></a></p>
+
+<h5>26.2-2 IsMatrixObj</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsMatrixObj</code>( <var class="Arg">obj</var> )</td><td class="tdright">(&nbsp;category&nbsp;)</td></tr></table></div>
+<p>The idea behind <em>matrix objects</em> is that one wants to deal with objects like <span class="SimpleMath">\(m\)</span> by <span class="SimpleMath">\(n\)</span> arrays over a given domain <span class="SimpleMath">\(R\)</span>, say, which can be added and multiplied and can be multiplied from the left with elements from <span class="SimpleMath">\(R\)</span>. A matrix object <span class="SimpleMath">\(M\)</span>, say, is always a copyable object (see <code class="func">IsCopyable</code> (<a href="chap12_mj.html#X811EFD727EBD1ADC"><span class="RefLink">12.6-1</span></a>)) in <code class="func">IsVector</code> (<a href="chap31_mj.html#X802F34F280B29DF4"><span class="RefLink">31.14-14</span></a>) and <code class="func">IsScalar</code> (<a href="chap31_mj.html#X8113834E84FD0435"><span class="RefLink">31.14-20</span></a>), which knows the values of <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) (with value <span class="SimpleMath">\(R\)</span>), <code class="func">NumberRows</code> (<a href="chap26_mj.html#X820ED34380C10E19"><span class="RefLink">26.3-5</span></a>) (with value <span class="SimpleMath">\(m\)</span>), <code class="func">NumberColumns</code> (<a href="chap26_mj.html#X820ED34380C10E19"><span class="RefLink">26.3-5</span></a>) (with value <span class="SimpleMath">\(n\)</span>), where <span class="SimpleMath">\(R\)</span> is a domain (see Chapter <a href="chap12_mj.html#X7BAF69417BB925F6"><span class="RefLink">12.4</span></a>) that has methods for <code class="func">Zero</code> (<a href="chap31_mj.html#X8040AC7A79FFC442"><span class="RefLink">31.10-3</span></a>), <code class="func">One</code> (<a href="chap31_mj.html#X8046262384895B2A"><span class="RefLink">31.10-2</span></a>), <code class="func">\in</code> (<a href="chap30_mj.html#X84B7FA8C7C94400F"><span class="RefLink">30.6-1</span></a>), <code class="func">Characteristic</code> (<a href="chap31_mj.html#X81278E53800BF64D"><span class="RefLink">31.10-1</span></a>), <code class="func">IsFinite</code> (<a href="chap30_mj.html#X808A4061809A6E67"><span class="RefLink">30.4-2</span></a>). We say that <span class="SimpleMath">\(v\)</span> is defined over <span class="SimpleMath">\(R\)</span>. Typically, <span class="SimpleMath">\(R\)</span> will be at least a semiring.</p>
+
+<p>For creating new matrix objects compatible with <span class="SimpleMath">\(M\)</span>, <code class="func">NewMatrix</code> (<a href="chap26_mj.html#X7AD2210B8047FB01"><span class="RefLink">26.4-4</span></a>) requires that also the value of <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) is known for <span class="SimpleMath">\(M\)</span>.</p>
+
+<p>Further, entry access <span class="SimpleMath">\(M[i,j]\)</span> is expected to return a <strong class="pkg">GAP</strong> object, for <span class="SimpleMath">\(1 \leq i \leq m\)</span> and <span class="SimpleMath">\(1 \leq j \leq n\)</span>, and that these entries of <span class="SimpleMath">\(M\)</span> belong to the base domain <span class="SimpleMath">\(R\)</span>.</p>
+
+<p>Note that we do <em>not</em> require that <span class="SimpleMath">\(M\)</span> is a list in the sense of <code class="func">IsList</code> (<a href="chap21_mj.html#X7C4CC4EA8299701E"><span class="RefLink">21.1-1</span></a>), in particular the rules of list arithmetic (see the sections <a href="chap21_mj.html#X7E6A1F66781BE923"><span class="RefLink">21.13</span></a> and <a href="chap21_mj.html#X782ED7F27D8C7FC1"><span class="RefLink">21.14</span></a>) need <em>not</em> hold. For example, accessing <q>rows</q> of <span class="SimpleMath">\(M\)</span> via <code class="func"><span>\</span>[<span>\</span>]</code> (<a href="chap21_mj.html#X8297BBCD79642BE6"><span class="RefLink">21.2-1</span></a>) is in general not possible, and the sum of two matrix objects with different numbers of rows or columns is not defined. Also unbinding entries of matrix objects is not defined.</p>
+
+<p>Scalar multiplication from the left is defined only with elements from <span class="SimpleMath">\(R\)</span>.</p>
+
+<p>It is not assumed that the multiplication in <span class="SimpleMath">\(R\)</span> is associative, and we do not define what the <span class="SimpleMath">\(k\)</span>-th power of a matrix object is in this case, for positive integers <span class="SimpleMath">\(k\)</span>. (However, a default powering method is available.)</p>
+
+<p>The filter <code class="func">IsMatrixObj</code> alone does <em>not</em> imply that the multiplication is the usual matrix multiplication. This multiplication can be defined via the filter <code class="func">IsOrdinaryMatrix</code> (<a href="chap24_mj.html#X7CF42B8A845BC6A9"><span class="RefLink">24.2-2</span></a>); this filter together with the associativity of the base domain also implies the associativity of matrix multiplication. For example, elements of matrix Lie algebras (see <code class="func">LieObject</code> (<a href="chap64_mj.html#X87F121978775AF48"><span class="RefLink">64.1-1</span></a>)) lie in <code class="func">IsMatrixObj</code> but not in <code class="func">IsOrdinaryMatrix</code> (<a href="chap24_mj.html#X7CF42B8A845BC6A9"><span class="RefLink">24.2-2</span></a>).</p>
+
+<p>The family of <span class="SimpleMath">\(M\)</span> (see <code class="func">FamilyObj</code> (<a href="chap13_mj.html#X7CF70EAC84284919"><span class="RefLink">13.1-1</span></a>)) is the collections family (see <code class="func">CollectionsFamily</code> (<a href="chap30_mj.html#X84E5A67E87D8DD66"><span class="RefLink">30.2-1</span></a>)) of its base domain <span class="SimpleMath">\(R\)</span>. However, it is <em>not</em> required that the entries lie in <span class="SimpleMath">\(R\)</span> in the sense of <code class="func">\in</code> (<a href="chap30_mj.html#X84B7FA8C7C94400F"><span class="RefLink">30.6-1</span></a>), also values may occur that can be naturally embedded into <span class="SimpleMath">\(R\)</span>. For example, if <span class="SimpleMath">\(R\)</span> is a polynomial ring then some entries in <span class="SimpleMath">\(M\)</span> may be elements of the coefficient ring of <span class="SimpleMath">\(R\)</span>.</p>
+
+<p><a id="X7D1ACCBE7E9CF501" name="X7D1ACCBE7E9CF501"></a></p>
+
+<h5>26.2-3 IsMatrixOrMatrixObj</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsMatrixOrMatrixObj</code>( <var class="Arg">obj</var> )</td><td class="tdright">(&nbsp;category&nbsp;)</td></tr></table></div>
+<p>Several functions are defined for objects in <code class="func">IsMatrix</code> (<a href="chap24_mj.html#X7E1AE46B862B185F"><span class="RefLink">24.2-1</span></a>) and objects in <code class="func">IsMatrixObj</code> (<a href="chap26_mj.html#X7E7617A0781D1E4B"><span class="RefLink">26.2-2</span></a>). All these objects lie in the filter <code class="func">IsMatrixOrMatrixObj</code>. It should be used in situations where an object can be either a list of lists in <code class="func">IsMatrix</code> (<a href="chap24_mj.html#X7E1AE46B862B185F"><span class="RefLink">24.2-1</span></a>) or a <q>proper</q> matrix object in <code class="func">IsMatrixObj</code> (<a href="chap26_mj.html#X7E7617A0781D1E4B"><span class="RefLink">26.2-2</span></a>), for example as a requirement in the installation of a method for such an argument.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m:= IdentityMat( 2, GF(2) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsMatrix( m );  IsMatrixObj( m ); IsMatrixOrMatrixObj( m );</span>
+true
+false
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m:= NewIdentityMatrix( IsPlistMatrixRep, GF(2), 2 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsMatrix( m );  IsMatrixObj( m ); IsMatrixOrMatrixObj( m );</span>
+false
+true
+true
+</pre></div>
+
+<p><a id="X78CD88A283330E72" name="X78CD88A283330E72"></a></p>
+
+<h5>26.2-4 IsRowListMatrix</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsRowListMatrix</code>( <var class="Arg">obj</var> )</td><td class="tdright">(&nbsp;category&nbsp;)</td></tr></table></div>
+<p>A <em>row list matrix object</em> is a matrix object (see <code class="func">IsMatrixObj</code> (<a href="chap26_mj.html#X7E7617A0781D1E4B"><span class="RefLink">26.2-2</span></a>)) <span class="SimpleMath">\(M\)</span> which admits access to its rows, that is, list access <span class="SimpleMath">\(M[i]\)</span> (see <code class="func"><span>\</span>[<span>\</span>]</code> (<a href="chap21_mj.html#X8297BBCD79642BE6"><span class="RefLink">21.2-1</span></a>)) yields the <span class="SimpleMath">\(i\)</span>-th row of <span class="SimpleMath">\(M\)</span>, for <span class="SimpleMath">\(1 \leq i \leq\)</span> <code class="code">NumberRows( </code><span class="SimpleMath">\(M\)</span><code class="code"> )</code>.</p>
+
+<p>All rows are <code class="func">IsVectorObj</code> (<a href="chap26_mj.html#X7D963FCC7E849BE0"><span class="RefLink">26.2-1</span></a>) objects in the same representation. Several rows of a row list matrix object can be identical objects, and different row list matrices may share rows. Row access just gives a reference to the row object, without copying the row.</p>
+
+<p>Matrix objects in <code class="func">IsRowListMatrix</code> are <em>not</em> necessarily in <code class="func">IsList</code> (<a href="chap21_mj.html#X7C4CC4EA8299701E"><span class="RefLink">21.1-1</span></a>), and then they need not obey the general rules for lists.</p>
+
+<p><a id="X877A706186C89ADB" name="X877A706186C89ADB"></a></p>
+
+<h4>26.3 <span class="Heading">Defining Attributes of Vector and Matrix Objects</span></h4>
+
+<p><a id="X8662026C7CCDB446" name="X8662026C7CCDB446"></a></p>
+
+<h5>26.3-1 <span class="Heading">BaseDomain</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; BaseDomain</code>( <var class="Arg">vector</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; BaseDomain</code>( <var class="Arg">matrix</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>The vector object <var class="Arg">vector</var> or matrix object <var class="Arg">matrix</var>, respectively, is defined over the domain given by its <code class="func">BaseDomain</code> value.</p>
+
+<p>Note that not all entries of the object necessarily lie in its base domain with respect to <code class="func">\in</code> (<a href="chap30_mj.html#X84B7FA8C7C94400F"><span class="RefLink">30.6-1</span></a>), see Section <a href="chap26_mj.html#X7A7275C27EC61ACE"><span class="RefLink">26.1</span></a>.</p>
+
+<p><a id="X85ABF33684865ED5" name="X85ABF33684865ED5"></a></p>
+
+<h5>26.3-2 <span class="Heading">ConstructingFilter</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ConstructingFilter</code>( <var class="Arg">v</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ConstructingFilter</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a filter</p>
+
+<p>Called with a vector object <var class="Arg">v</var> or a matrix object <var class="Arg">M</var>, respectively, <code class="func">ConstructingFilter</code> returns a filter <code class="code">f</code> such that when <code class="func">NewVector</code> (<a href="chap26_mj.html#X860E84397BD148E9"><span class="RefLink">26.4-1</span></a>) or <code class="func">NewMatrix</code> (<a href="chap26_mj.html#X7AD2210B8047FB01"><span class="RefLink">26.4-4</span></a>), respectively, is called with <code class="code">f</code> then a vector object or a matrix object, respectively, in the same representation as the argument is produced.</p>
+
+<p>If the <code class="func">ConstructingFilter</code> value of <var class="Arg">v</var> or <var class="Arg">M</var> implies <code class="func">IsCopyable</code> (<a href="chap12_mj.html#X811EFD727EBD1ADC"><span class="RefLink">12.6-1</span></a>) then mutable versions of <var class="Arg">v</var> or <var class="Arg">M</var> can be created, otherwise all vector or matrix objects with this filter are immutable.</p>
+
+<p><a id="X818702FD7A2E9D90" name="X818702FD7A2E9D90"></a></p>
+
+<h5>26.3-3 <span class="Heading">CompatibleVectorFilter</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CompatibleVectorFilter</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a filter</p>
+
+<p>Called with a matrix object <var class="Arg">M</var>, <code class="func">CompatibleVectorFilter</code> returns either a filter <code class="code">f</code> such that vector objects with <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) value <code class="code">f</code> are compatible in the sense that <var class="Arg">M</var> can be multiplied with these vector objects, of <code class="keyw">fail</code> if no such filter is known.</p>
+
+<p><a id="X828BA5E1849E3D06" name="X828BA5E1849E3D06"></a></p>
+
+<h5>26.3-4 Length</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Length</code>( <var class="Arg">v</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>returns the length of the vector object <var class="Arg">v</var>, which is defined to be the number of entries of <var class="Arg">v</var>.</p>
+
+<p><a id="X820ED34380C10E19" name="X820ED34380C10E19"></a></p>
+
+<h5>26.3-5 <span class="Heading">NumberRows and NumberColumns</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; NumberRows</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; NrRows</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; NumberColumns</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; NrCols</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>For a matrix object <var class="Arg">M</var>, <code class="func">NumberRows</code> and <code class="func">NumberColumns</code> store the number of rows and columns of <var class="Arg">M</var>, respectively.</p>
+
+<p><code class="func">NrRows</code> and <code class="func">NrCols</code> are synonyms of <code class="func">NumberRows</code> and <code class="func">NumberColumns</code>, respectively.</p>
+
+<p><a id="X7BD7D2837BFDE649" name="X7BD7D2837BFDE649"></a></p>
+
+<h4>26.4 <span class="Heading">Constructing Vector and Matrix Objects</span></h4>
+
+<p><a id="X860E84397BD148E9" name="X860E84397BD148E9"></a></p>
+
+<h5>26.4-1 <span class="Heading">NewVector and NewZeroVector</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; NewVector</code>( <var class="Arg">filt</var>, <var class="Arg">R</var>, <var class="Arg">list</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; NewZeroVector</code>( <var class="Arg">filt</var>, <var class="Arg">R</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>For a filter <var class="Arg">filt</var>, a semiring <var class="Arg">R</var>, and a list <var class="Arg">list</var> of elements that belong to <var class="Arg">R</var>, <code class="func">NewVector</code> returns a vector object which has the <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) <var class="Arg">filt</var>, the <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) <var class="Arg">R</var>, and the entries in <var class="Arg">list</var>. The list <var class="Arg">list</var> is guaranteed not to be changed by this operation.</p>
+
+<p>If the global option <code class="code">check</code> is set to <code class="keyw">false</code> then <code class="func">NewVector</code> need not perform consistency checks.</p>
+
+<p>Similarly, <code class="func">NewZeroVector</code> returns a vector object of length <var class="Arg">n</var> which has <var class="Arg">filt</var> and <var class="Arg">R</var> as <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) and <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) values, and contains the zero of <var class="Arg">R</var> in each position.</p>
+
+<p>The returned object is mutable if and only if <var class="Arg">filt</var> implies <code class="func">IsCopyable</code> (<a href="chap12_mj.html#X811EFD727EBD1ADC"><span class="RefLink">12.6-1</span></a>).</p>
+
+<p><a id="X79A6544D86261E82" name="X79A6544D86261E82"></a></p>
+
+<h5>26.4-2 <span class="Heading">Vector</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Vector</code>( <var class="Arg">filt</var>, <var class="Arg">R</var>, <var class="Arg">list</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Vector</code>( <var class="Arg">filt</var>, <var class="Arg">R</var>, <var class="Arg">v</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Vector</code>( <var class="Arg">R</var>, <var class="Arg">list</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Vector</code>( <var class="Arg">R</var>, <var class="Arg">v</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Vector</code>( <var class="Arg">list</var>, <var class="Arg">v</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Vector</code>( <var class="Arg">v1</var>, <var class="Arg">v2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Vector</code>( <var class="Arg">list</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: a vector object</p>
+
+<p>If a filter <var class="Arg">filt</var> is given as the first argument then a vector object is returned that has <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) value <var class="Arg">filt</var>, is defined over the base domain <var class="Arg">R</var>, and has the entries given by the list <var class="Arg">list</var> or the vector object <var class="Arg">v</var>, respectively.</p>
+
+<p>If a semiring <var class="Arg">R</var> is given as the first argument then a vector object is returned whose <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) value is guessed from <var class="Arg">R</var>, again with base domain <var class="Arg">R</var> and entries given by the last argument.</p>
+
+<p>In the remaining cases with two arguments, the first argument is a list or a vector object that defines the entries of the result, and the second argument is a vector object whose <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) and <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) are taken for the result.</p>
+
+<p>If only a list <var class="Arg">list</var> is given then both the <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) and the <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) are guessed from this list.</p>
+
+<p>The variant <code class="code">Vector( </code><var class="Arg">v1</var><code class="code">, </code><var class="Arg">v2</var><code class="code"> )</code> is supported also for the case that <var class="Arg">v2</var> is a row vector but not a vector object. In this situation, the result is a row vector that is equal to <var class="Arg">v1</var> and whose internal representation fits to that of <var class="Arg">v2</var>.</p>
+
+<p>If the global option <code class="code">check</code> is set to <code class="keyw">false</code> then <code class="func">Vector</code> need not perform consistency checks.</p>
+
+<p>If the <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) value of the result implies <code class="func">IsCopyable</code> (<a href="chap12_mj.html#X811EFD727EBD1ADC"><span class="RefLink">12.6-1</span></a>) then the result is mutable if and only if the argument that determines the entries of the result (<var class="Arg">list</var>, <var class="Arg">v</var>, <var class="Arg">v1</var>) is mutable.</p>
+
+<p>In the case of a mutable result, it is <em>not</em> guaranteed that the given list of entries is copied.</p>
+
+<p>Default methods for <code class="func">Vector</code> delegate to <code class="func">NewVector</code> (<a href="chap26_mj.html#X860E84397BD148E9"><span class="RefLink">26.4-1</span></a>).</p>
+
+<p><a id="X7DBA8BF5844F3281" name="X7DBA8BF5844F3281"></a></p>
+
+<h5>26.4-3 <span class="Heading">ZeroVector</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ZeroVector</code>( <var class="Arg">filt</var>, <var class="Arg">R</var>, <var class="Arg">len</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ZeroVector</code>( <var class="Arg">R</var>, <var class="Arg">len</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ZeroVector</code>( <var class="Arg">len</var>, <var class="Arg">v</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ZeroVector</code>( <var class="Arg">len</var>, <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: a vector object</p>
+
+<p>For a filter <var class="Arg">filt</var>, a semiring <var class="Arg">R</var> and a nonnegative integer <var class="Arg">len</var>, this operation returns a new vector object of length <var class="Arg">len</var> over <var class="Arg">R</var> in the representation <var class="Arg">filt</var> containing only zeros.</p>
+
+<p>If only <var class="Arg">R</var> and <var class="Arg">len</var> are given, then <strong class="pkg">GAP</strong> guesses a suitable representation.</p>
+
+<p>For a vector object <var class="Arg">v</var> and a nonnegative integer <var class="Arg">len</var>, this operation returns a new vector object of length <var class="Arg">len</var> in the same representation as <var class="Arg">v</var> containing only zeros.</p>
+
+<p>For a matrix object <var class="Arg">M</var> and a nonnegative integer <var class="Arg">len</var>, this operation returns a new zero vector object of length <var class="Arg">len</var> in the representation given by the <code class="func">CompatibleVectorFilter</code> (<a href="chap26_mj.html#X818702FD7A2E9D90"><span class="RefLink">26.3-3</span></a>) value of <var class="Arg">M</var>, provided that such a representation exists.</p>
+
+<p>If the <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) value of the result implies <code class="func">IsCopyable</code> (<a href="chap12_mj.html#X811EFD727EBD1ADC"><span class="RefLink">12.6-1</span></a>) then the result is mutable.</p>
+
+<p>Default methods for <code class="func">ZeroVector</code> delegate to <code class="func">NewZeroVector</code> (<a href="chap26_mj.html#X860E84397BD148E9"><span class="RefLink">26.4-1</span></a>).</p>
+
+<p><a id="X7AD2210B8047FB01" name="X7AD2210B8047FB01"></a></p>
+
+<h5>26.4-4 <span class="Heading">NewMatrix, NewZeroMatrix, NewIdentityMatrix</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; NewMatrix</code>( <var class="Arg">filt</var>, <var class="Arg">R</var>, <var class="Arg">ncols</var>, <var class="Arg">list</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; NewZeroMatrix</code>( <var class="Arg">filt</var>, <var class="Arg">R</var>, <var class="Arg">m</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; NewIdentityMatrix</code>( <var class="Arg">filt</var>, <var class="Arg">R</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>For a filter <var class="Arg">filt</var>, a semiring <var class="Arg">R</var>, a positive integer <var class="Arg">ncols</var>, and a list <var class="Arg">list</var>, <code class="func">NewMatrix</code> returns a matrix object which has the <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) <var class="Arg">filt</var>, the <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) <var class="Arg">R</var>, <var class="Arg">n</var> columns (see <code class="func">NumberColumns</code> (<a href="chap26_mj.html#X820ED34380C10E19"><span class="RefLink">26.3-5</span></a>)), and the entries described by <var class="Arg">list</var>, which can be either a plain list of vector objects of length <var class="Arg">ncols</var> or a plain list of plain lists of length <var class="Arg">ncols</var> or a plain list of length a multiple of <var class="Arg">ncols</var> containing the entries in row major order. The list <var class="Arg">list</var> is guaranteed not to be changed by this operation.</p>
+
+<p>The corresponding entries must be in or compatible with <var class="Arg">R</var>. If <var class="Arg">list</var> already contains vector objects, they are copied.</p>
+
+<p>If the global option <code class="code">check</code> is set to <code class="keyw">false</code> then <code class="func">NewMatrix</code> need not perform consistency checks.</p>
+
+<p>Similarly, <code class="func">NewZeroMatrix</code> returns a zero matrix object with <var class="Arg">m</var> rows and <var class="Arg">n</var> columns which has <var class="Arg">filt</var> and <var class="Arg">R</var> as <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) and <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) values.</p>
+
+<p>Similarly, <code class="func">NewIdentityMatrix</code> returns an identity matrix object with <var class="Arg">n</var> rows and columns which has <var class="Arg">filt</var> and <var class="Arg">R</var> as <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) and <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) values, and contains the identity element of <var class="Arg">R</var> in the diagonal and the zero of <var class="Arg">R</var> in each off-diagonal position.</p>
+
+<p>The returned object is mutable if and only if <var class="Arg">filt</var> implies <code class="func">IsCopyable</code> (<a href="chap12_mj.html#X811EFD727EBD1ADC"><span class="RefLink">12.6-1</span></a>).</p>
+
+<p><a id="X879384D479EB1D82" name="X879384D479EB1D82"></a></p>
+
+<h5>26.4-5 <span class="Heading">Matrix</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Matrix</code>( <var class="Arg">filt</var>, <var class="Arg">R</var>, <var class="Arg">list</var>, <var class="Arg">ncols</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Matrix</code>( <var class="Arg">filt</var>, <var class="Arg">R</var>, <var class="Arg">list</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Matrix</code>( <var class="Arg">filt</var>, <var class="Arg">R</var>, <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Matrix</code>( <var class="Arg">R</var>, <var class="Arg">list</var>, <var class="Arg">ncols</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Matrix</code>( <var class="Arg">R</var>, <var class="Arg">list</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Matrix</code>( <var class="Arg">R</var>, <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Matrix</code>( <var class="Arg">list</var>, <var class="Arg">ncols</var>, <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Matrix</code>( <var class="Arg">list</var>, <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Matrix</code>( <var class="Arg">M1</var>, <var class="Arg">M2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Matrix</code>( <var class="Arg">list</var>, <var class="Arg">ncols</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Matrix</code>( <var class="Arg">list</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: a matrix object</p>
+
+<p>If a filter <var class="Arg">filt</var> is given as the first argument then a matrix object is returned that has <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) value <var class="Arg">filt</var>, is defined over the base domain <var class="Arg">R</var>, and has the entries given by the list <var class="Arg">list</var> or the matrix object <var class="Arg">M</var>, respectively. Here <var class="Arg">list</var> can be either a list of plain lists that describe the entries of the rows, or a flat list of the entries in row major order, where <var class="Arg">ncols</var> defines the number of columns.</p>
+
+<p>If a semiring <var class="Arg">R</var> is given as the first argument then a matrix object is returned whose <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) value is guessed from <var class="Arg">R</var>, again with base domain <var class="Arg">R</var> and entries given by the last argument.</p>
+
+<p>In those remaining cases where the last argument is a matrix object, the first argument is a list or a matrix object that defines (together with <var class="Arg">ncols</var> if applicable) the entries of the result, and the <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) and <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) of the last argument are taken for the result.</p>
+
+<p>Finally, if only a list <var class="Arg">list</var> and perhaps <var class="Arg">ncols</var> is given then both the <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) and the <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) are guessed from the list.</p>
+
+<p>If the global option <code class="code">check</code> is set to <code class="keyw">false</code> then <code class="func">Matrix</code> need not perform consistency checks.</p>
+
+<p>If the <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) value of the result implies <code class="func">IsCopyable</code> (<a href="chap12_mj.html#X811EFD727EBD1ADC"><span class="RefLink">12.6-1</span></a>) then the result is mutable if and only if the argument that determines the entries of the result (<var class="Arg">list</var>, <var class="Arg">M</var>, <var class="Arg">M1</var>) is mutable.</p>
+
+<p>In the case of a mutable result, it is guaranteed that the given list <var class="Arg">list</var> is copied in the sense of <code class="func">ShallowCopy</code> (<a href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>), and if <var class="Arg">list</var> is a nested list then it is <em>not</em> guaranteed that also the entries of <var class="Arg">list</var> are copied.</p>
+
+<p>Default methods for <code class="func">Matrix</code> delegate to <code class="func">NewMatrix</code> (<a href="chap26_mj.html#X7AD2210B8047FB01"><span class="RefLink">26.4-4</span></a>).</p>
+
+<p><a id="X838F5B6C7C87C8E1" name="X838F5B6C7C87C8E1"></a></p>
+
+<h5>26.4-6 <span class="Heading">ZeroMatrix</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ZeroMatrix</code>( <var class="Arg">m</var>, <var class="Arg">n</var>, <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ZeroMatrix</code>( <var class="Arg">R</var>, <var class="Arg">m</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ZeroMatrix</code>( <var class="Arg">filt</var>, <var class="Arg">R</var>, <var class="Arg">m</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: a matrix object</p>
+
+<p>For a matrix object <var class="Arg">M</var> and two nonnegative integers <var class="Arg">m</var> and <var class="Arg">n</var>, this operation returns a new matrix object with <var class="Arg">m</var> rows and <var class="Arg">n</var> columns in the same representation and over the same base domain as <var class="Arg">M</var> containing only zeros.</p>
+
+<p>If a semiring <var class="Arg">R</var> and two nonnegative integers <var class="Arg">m</var> and <var class="Arg">n</var> are given, the representation of the result is guessed from <var class="Arg">R</var>.</p>
+
+<p>If a filter <var class="Arg">filt</var> and a semiring <var class="Arg">R</var> are given as the first and second argument, they are taken as the values of <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) and <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) of the result.</p>
+
+<p>If the <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) value of the result implies <code class="func">IsCopyable</code> (<a href="chap12_mj.html#X811EFD727EBD1ADC"><span class="RefLink">12.6-1</span></a>) then the result is fully mutable.</p>
+
+<p>Default methods for <code class="func">ZeroMatrix</code> delegate to <code class="func">NewZeroMatrix</code> (<a href="chap26_mj.html#X7AD2210B8047FB01"><span class="RefLink">26.4-4</span></a>).</p>
+
+<p><a id="X7D807ABC7FCB4E77" name="X7D807ABC7FCB4E77"></a></p>
+
+<h5>26.4-7 <span class="Heading">IdentityMatrix</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IdentityMatrix</code>( <var class="Arg">n</var>, <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IdentityMatrix</code>( <var class="Arg">R</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IdentityMatrix</code>( <var class="Arg">filt</var>, <var class="Arg">R</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: a matrix object</p>
+
+<p>For a matrix object <var class="Arg">M</var> and a nonnegative integer <var class="Arg">n</var>, this operation returns a new identity matrix object with <var class="Arg">n</var> rows and columns in the same representation and over the same base domain as <var class="Arg">M</var>.</p>
+
+<p>If a semiring <var class="Arg">R</var> and a nonnegative integer <var class="Arg">n</var> is given, the representation of the result is guessed from <var class="Arg">R</var>.</p>
+
+<p>If a filter <var class="Arg">filt</var> and a semiring <var class="Arg">R</var> are given as the first and second argument, they are taken as the values of <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) and <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) of the result.</p>
+
+<p>If the <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) value of the result implies <code class="func">IsCopyable</code> (<a href="chap12_mj.html#X811EFD727EBD1ADC"><span class="RefLink">12.6-1</span></a>) then the result is fully mutable.</p>
+
+<p>Default methods for <code class="func">IdentityMatrix</code> delegate to <code class="func">NewIdentityMatrix</code> (<a href="chap26_mj.html#X7AD2210B8047FB01"><span class="RefLink">26.4-4</span></a>).</p>
+
+<p><a id="X7C7F5250855C4371" name="X7C7F5250855C4371"></a></p>
+
+<h4>26.5 <span class="Heading">Operations for Base Domains of Vector and Matrix Objects</span></h4>
+
+<p><a id="X85D7A6A782B21E5C" name="X85D7A6A782B21E5C"></a></p>
+
+<h5>26.5-1 <span class="Heading">OneOfBaseDomain and ZeroOfBaseDomain</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OneOfBaseDomain</code>( <var class="Arg">v</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OneOfBaseDomain</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ZeroOfBaseDomain</code>( <var class="Arg">v</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ZeroOfBaseDomain</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>These attributes return the identity element and the zero element of the <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) value of the vector object <var class="Arg">v</var> or the matrix object <var class="Arg">M</var>, respectively.</p>
+
+<p>If <var class="Arg">v</var> or <var class="Arg">M</var>, respectively, is a plain list (see <code class="func">IsPlistRep</code> (<a href="chap21_mj.html#X87BA4EBF80F16B72"><span class="RefLink">21.24-2</span></a>)) then computing its <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) value can be regarded as expensive, whereas calling <code class="func">OneOfBaseDomain</code> or <code class="func">ZeroOfBaseDomain</code> can be regarded as cheap. If <var class="Arg">v</var> or <var class="Arg">M</var>, respectively, is not a plain list then one can also call <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) first, without loss of performance.</p>
+
+<p><a id="X7954E20987E0B260" name="X7954E20987E0B260"></a></p>
+
+<h4>26.6 <span class="Heading">Operations for Vector and Matrix Objects</span></h4>
+
+<p><a id="X7FFC60A27FE6FA97" name="X7FFC60A27FE6FA97"></a></p>
+
+<h5>26.6-1 <span class="Heading">Comparison of Vector and Matrix Objects</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; \=</code>( <var class="Arg">v1</var>, <var class="Arg">v2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; \=</code>( <var class="Arg">M1</var>, <var class="Arg">M2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; \&lt;</code>( <var class="Arg">v1</var>, <var class="Arg">v2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; \&lt;</code>( <var class="Arg">M1</var>, <var class="Arg">M2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Two vector objects in <code class="func">IsList</code> (<a href="chap21_mj.html#X7C4CC4EA8299701E"><span class="RefLink">21.1-1</span></a>) are equal if they are equal as lists. Two matrix objects in <code class="func">IsList</code> (<a href="chap21_mj.html#X7C4CC4EA8299701E"><span class="RefLink">21.1-1</span></a>) are equal if they are equal as lists.</p>
+
+<p>Two vector objects of which at least one is not in <code class="func">IsList</code> (<a href="chap21_mj.html#X7C4CC4EA8299701E"><span class="RefLink">21.1-1</span></a>) are equal with respect to <code class="func">\=</code> (<a href="chap31_mj.html#X7EF67D047F03CA6F"><span class="RefLink">31.11-1</span></a>) if they have the same <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) value, the same <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) value, the same length, and the same entries.</p>
+
+<p>Two matrix objects of which at least one is not in <code class="func">IsList</code> (<a href="chap21_mj.html#X7C4CC4EA8299701E"><span class="RefLink">21.1-1</span></a>) are equal with respect to <code class="func">\=</code> (<a href="chap31_mj.html#X7EF67D047F03CA6F"><span class="RefLink">31.11-1</span></a>) if they have the same <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) value, the same <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) value, the same dimensions, and the same entries.</p>
+
+<p>We do <em>not</em> state a general rule how vector and matrix objects shall behave w.r.t. the comparison by <code class="func">\&lt;</code> (<a href="chap31_mj.html#X7EF67D047F03CA6F"><span class="RefLink">31.11-1</span></a>). Note that a <q>row lexicographic order</q> would be quite unnatural for matrices that are internally represented via a list of columns.</p>
+
+<p>Note that the operations <code class="func">\=</code> (<a href="chap31_mj.html#X7EF67D047F03CA6F"><span class="RefLink">31.11-1</span></a>) and <code class="func">\&lt;</code> (<a href="chap31_mj.html#X7EF67D047F03CA6F"><span class="RefLink">31.11-1</span></a>) are used to form sorted lists and sets of objects, see for example <code class="func">Sort</code> (<a href="chap21_mj.html#X7FE4975F8166884D"><span class="RefLink">21.18-1</span></a>) and <code class="func">Set</code> (<a href="chap30_mj.html#X7E399AC97FD98217"><span class="RefLink">30.3-7</span></a>).</p>
+
+<p><a id="X7FBBE79478012648" name="X7FBBE79478012648"></a></p>
+
+<h5>26.6-2 <span class="Heading">Unpack</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Unpack</code>( <var class="Arg">v</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Unpack</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: A plain list</p>
+
+<p>Returns a new mutable plain list (see <code class="func">IsPlistRep</code> (<a href="chap21_mj.html#X87BA4EBF80F16B72"><span class="RefLink">21.24-2</span></a>)) containing the entries of the vector object <var class="Arg">v</var> or the matrix object <var class="Arg">M</var>, respectively. In the case of a matrix object, the result is a plain list of plain lists.</p>
+
+<p>Changing the result does not change <var class="Arg">v</var> or <var class="Arg">M</var>, respectively. The entries themselves are not copied.</p>
+
+<p><a id="X85E896F67CE2F925" name="X85E896F67CE2F925"></a></p>
+
+<h5>26.6-3 <span class="Heading">ChangedBaseDomain</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ChangedBaseDomain</code>( <var class="Arg">v</var>, <var class="Arg">R</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ChangedBaseDomain</code>( <var class="Arg">M</var>, <var class="Arg">R</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>For a vector object <var class="Arg">v</var> (a matrix object <var class="Arg">M</var>) and a semiring <var class="Arg">R</var>, <code class="func">ChangedBaseDomain</code> returns a new vector object (matrix object) with <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) value <var class="Arg">R</var>, <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) value equal to that of <var class="Arg">v</var> (<var class="Arg">M</var>), and the same entries as <var class="Arg">v</var> (<var class="Arg">M</var>).</p>
+
+<p>The result is mutable if and only if <var class="Arg">v</var> (<var class="Arg">M</var>) is mutable.</p>
+
+<p>For example, one can create a vector defined over <code class="code">GF(4)</code> from a vector defined over <code class="code">GF(2)</code> with this operation.</p>
+
+<p><a id="X83DD8B39864A2C94" name="X83DD8B39864A2C94"></a></p>
+
+<h5>26.6-4 <span class="Heading">Randomize</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Randomize</code>( [<var class="Arg">Rs</var>, ]<var class="Arg">v</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Randomize</code>( [<var class="Arg">Rs</var>, ]<var class="Arg">M</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Replaces every entry in the mutable vector object <var class="Arg">v</var> or matrix object <var class="Arg">M</var>, respectively, with a random one from the base domain of <var class="Arg">v</var> or <var class="Arg">M</var>, respectively, and returns the argument.</p>
+
+<p>If given, the random source <var class="Arg">Rs</var> is used to compute the random elements. Note that in this case, a <code class="func">Random</code> (<a href="chap14_mj.html#X821004F286282D49"><span class="RefLink">14.7-2</span></a>) method must be available that takes a random source as its first argument and the base domain as its second argument.</p>
+
+<p><a id="X7FE662477F36A21F" name="X7FE662477F36A21F"></a></p>
+
+<h4>26.7 <span class="Heading">List Like Operations for Vector Objects</span></h4>
+
+<p>The following operations that are defined for lists are useful also for vector objects. (More such operations can be added if this is appropriate.)</p>
+
+<p><a id="X7D5DF49C7ADB6986" name="X7D5DF49C7ADB6986"></a></p>
+
+<h5>26.7-1 <span class="Heading">Element Access and Assignment for Vector Objects</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; <span>\</span>[<span>\</span>]</code>( <var class="Arg">v</var>, <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; <span>\</span>[<span>\</span>]\:\=</code>( <var class="Arg">v</var>, <var class="Arg">i</var>, <var class="Arg">obj</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; \{\}</code>( <var class="Arg">v</var>, <var class="Arg">list</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>For a vector object <var class="Arg">v</var> and a positive integer <var class="Arg">i</var> that is not larger than the length of <var class="Arg">v</var> (see <code class="func">Length</code> (<a href="chap26_mj.html#X828BA5E1849E3D06"><span class="RefLink">26.3-4</span></a>)), <var class="Arg">v</var><code class="code">[</code><var class="Arg">i</var><code class="code">]</code> is the entry at position <var class="Arg">i</var>.</p>
+
+<p>If <var class="Arg">v</var> is mutable, <var class="Arg">i</var> is as above, and <var class="Arg">obj</var> is an object from the base domain of <var class="Arg">v</var> then <var class="Arg">v</var><code class="code">[</code><var class="Arg">i</var><code class="code">]:= </code><var class="Arg">obj</var> assigns <var class="Arg">obj</var> to the <var class="Arg">i</var>-th position of <var class="Arg">v</var>.</p>
+
+<p>If <var class="Arg">list</var> is a list of positive integers that are not larger than the length of <var class="Arg">v</var> then <var class="Arg">v</var><code class="code">{</code><var class="Arg">list</var><code class="code">}</code> returns a new mutable vector object in the same representation as <var class="Arg">v</var> (see <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>)) that contains the <var class="Arg">list</var><span class="SimpleMath">\([ k ]\)</span>-th entry of <var class="Arg">v</var> at position <span class="SimpleMath">\(k\)</span>.</p>
+
+<p>If the global option <code class="code">check</code> is set to <code class="keyw">false</code> then <code class="func"><span>\</span>[<span>\</span>]\:\=</code> need not perform consistency checks.</p>
+
+<p>Note that the sublist assignment operation <code class="func">\{\}\:\=</code> (<a href="chap21_mj.html#X813FF1637F8D2B7F"><span class="RefLink">21.4-1</span></a>) is left out here since it tempts the programmer to use constructions like <code class="code">v{ [ 1 .. 3 ] }:= w{ [ 4 .. 6 ] }</code> which produces an unnecessary intermediate object; one should use <code class="func">CopySubVector</code> (<a href="chap26_mj.html#X80EC354D78D7B5A6"><span class="RefLink">26.9-3</span></a>) instead.</p>
+
+<p><a id="X7A21731C83EE3BB0" name="X7A21731C83EE3BB0"></a></p>
+
+<h5>26.7-2 PositionNonZero</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PositionNonZero</code>( <var class="Arg">v</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: An integer</p>
+
+<p>Returns the index of the first entry in the vector object <var class="Arg">v</var> that is not zero. If all entries are zero, the function returns <code class="code">Length(<var class="Arg">v</var>) + 1</code>.</p>
+
+<p><a id="X7ABDE1B685A78326" name="X7ABDE1B685A78326"></a></p>
+
+<h5>26.7-3 PositionLastNonZero</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PositionLastNonZero</code>( <var class="Arg">v</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: An integer</p>
+
+<p>Returns the index of the last entry in the vector object <var class="Arg">v</var> that is not zero. If all entries are zero, the function returns <span class="SimpleMath">\(0\)</span>.</p>
+
+<p><a id="X790013817E314B2D" name="X790013817E314B2D"></a></p>
+
+<h5>26.7-4 ListOp</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ListOp</code>( <var class="Arg">v</var>[, <var class="Arg">func</var>] )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: A plain list</p>
+
+<p>Applies the function <var class="Arg">func</var> to each entry of the vector object <var class="Arg">v</var> and returns the results as a mutable plain list. This allows for calling <code class="func">List</code> (<a href="chap30_mj.html#X7F12F40E87F3C3A7"><span class="RefLink">30.3-5</span></a>) on vector objects.</p>
+
+<p>If the argument <var class="Arg">func</var> is not given, applies <code class="func">IdFunc</code> (<a href="chap5_mj.html#X810325697BDEF899"><span class="RefLink">5.4-6</span></a>) to all entries.</p>
+
+<p><a id="X7FDF7655852AEAAE" name="X7FDF7655852AEAAE"></a></p>
+
+<h4>26.8 <span class="Heading">Arithmetical Operations for Vector Objects</span></h4>
+
+<p><a id="X7F8CE23F7A250072" name="X7F8CE23F7A250072"></a></p>
+
+<h5>26.8-1 <span class="Heading">Unary Arithmetical Operations for Vector Objects</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AdditiveInverseMutable</code>( <var class="Arg">v</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AdditiveInverseSameMutability</code>( <var class="Arg">v</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ZeroMutable</code>( <var class="Arg">v</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ZeroSameMutability</code>( <var class="Arg">v</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsZero</code>( <var class="Arg">v</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Characteristic</code>( <var class="Arg">v</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a vector object</p>
+
+<p>For a vector object <var class="Arg">v</var>, the operations for computing the additive inverse with prescribed mutability return a vector object with the same <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) and <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) values, such that the sum with <var class="Arg">v</var> is a zero vector. It is not specified what happens if the base domain does not admit the additive inverses of the entries.</p>
+
+<p>Analogously, the operations for computing a zero vector with prescribed mutability return a vector object compatible with <var class="Arg">v</var>.</p>
+
+<p><code class="func">IsZero</code> returns <code class="keyw">true</code> if all entries in <var class="Arg">v</var> are zero, and <code class="keyw">false</code> otherwise.</p>
+
+<p><code class="func">Characteristic</code> returns the corresponding value of the <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) value of <var class="Arg">v</var>.</p>
+
+<p><a id="X85A815CA790094CC" name="X85A815CA790094CC"></a></p>
+
+<h5>26.8-2 <span class="Heading">Binary Arithmetical Operations for Vector Objects</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; \+</code>( <var class="Arg">v1</var>, <var class="Arg">v2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; \-</code>( <var class="Arg">v1</var>, <var class="Arg">v2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; \*</code>( <var class="Arg">s</var>, <var class="Arg">v</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; \*</code>( <var class="Arg">v</var>, <var class="Arg">s</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; \*</code>( <var class="Arg">v1</var>, <var class="Arg">v2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ScalarProduct</code>( <var class="Arg">v1</var>, <var class="Arg">v2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; \/</code>( <var class="Arg">v</var>, <var class="Arg">s</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
+<p>The sum and the difference, respectively, of two vector objects <var class="Arg">v1</var> and <var class="Arg">v2</var> is a new mutable vector object whose entries are the sums and the differences of the entries of the arguments.</p>
+
+<p>The product of a scalar <var class="Arg">s</var> and a vector object <var class="Arg">v</var> (from the left or from the right) is a new mutable vector object whose entries are the corresponding products.</p>
+
+<p>The quotient of a vector object <var class="Arg">v</var> and a scalar <var class="Arg">s</var> is a new mutable vector object whose entries are the corresponding quotients.</p>
+
+<p>The product of two vector objects <var class="Arg">v1</var> and <var class="Arg">v2</var> as well as the result of <code class="func">ScalarProduct</code> is the standard scalar product of the two arguments (an element of the base domain of the vector objects).</p>
+
+<p>All this is defined only if the vector objects have the same length and are defined over the same base domain and have the same representation, and if the products with the given scalar belong to the base domain; otherwise it is not specified what happens. If the result is a vector object then it has the same representation and the same base domain as the given vector object(s).</p>
+
+<p><a id="X876090A684E71C93" name="X876090A684E71C93"></a></p>
+
+<h5>26.8-3 AddVector</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AddVector</code>( <var class="Arg">dst</var>, <var class="Arg">src</var>[, <var class="Arg">mul</var>[, <var class="Arg">from</var>, <var class="Arg">to</var>]] )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AddVector</code>( <var class="Arg">dst</var>, <var class="Arg">mul</var>, <var class="Arg">src</var>[, <var class="Arg">from</var>, <var class="Arg">to</var>] )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: nothing</p>
+
+<p>Called with two vector objects <var class="Arg">dst</var> and <var class="Arg">src</var>, this function replaces the entries of <var class="Arg">dst</var> in-place by the entries of the sum <var class="Arg">dst</var><code class="code"> + </code><var class="Arg">src</var>.</p>
+
+<p>If a scalar <var class="Arg">mul</var> is given as the third or second argument, respectively, then the entries of <var class="Arg">dst</var> get replaced by those of <var class="Arg">dst</var><code class="code"> + </code><var class="Arg">src</var><code class="code"> * </code><var class="Arg">mul</var> or <var class="Arg">dst</var><code class="code"> + </code><var class="Arg">mul</var><code class="code"> * </code><var class="Arg">src</var>, respectively.</p>
+
+<p>If the optional parameters <var class="Arg">from</var> and <var class="Arg">to</var> are given then only the index range <code class="code">[<var class="Arg">from</var>..<var class="Arg">to</var>]</code> is guaranteed to be affected. Other indices <em>may</em> be affected, if it is more convenient to do so. This can be helpful if entries of <var class="Arg">src</var> are known to be zero.</p>
+
+<p>If <var class="Arg">from</var> is bigger than <var class="Arg">to</var>, the operation does nothing.</p>
+
+<p><a id="X8039D013817317C3" name="X8039D013817317C3"></a></p>
+
+<h5>26.8-4 MultVector</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MultVector</code>( <var class="Arg">v</var>, <var class="Arg">mul</var>[, <var class="Arg">from</var>, <var class="Arg">to</var>] )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MultVectorLeft</code>( <var class="Arg">v</var>, <var class="Arg">mul</var>[, <var class="Arg">from</var>, <var class="Arg">to</var>] )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MultVectorRight</code>( <var class="Arg">v</var>, <var class="Arg">mul</var>[, <var class="Arg">from</var>, <var class="Arg">to</var>] )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: nothing</p>
+
+<p>These operations multiply <var class="Arg">v</var> by <var class="Arg">mul</var> in-place where <code class="func">MultVectorLeft</code> multiplies with <var class="Arg">mul</var> from the left and <code class="func">MultVectorRight</code> does so from the right.</p>
+
+<p>Note that <code class="func">MultVector</code> is just a synonym for <code class="func">MultVectorLeft</code>. This was chosen because vectors in <strong class="pkg">GAP</strong> are by default row vectors and scalar multiplication is usually written as <span class="SimpleMath">\(a \cdot v = a \cdot [v_1, ..., v_n] = [a \cdot v_1, ..., a \cdot v_n]\)</span> with scalars being applied from the left.</p>
+
+<p>If the optional parameters <var class="Arg">from</var> and <var class="Arg">to</var> are given then only the index range <code class="code">[<var class="Arg">from</var>..<var class="Arg">to</var>]</code> is guaranteed to be affected. Other indices <em>may</em> be affected, if it is more convenient to do so. This can be helpful if entries of <var class="Arg">v</var> are known to be zero. If <var class="Arg">from</var> is bigger than <var class="Arg">to</var>, the operation does nothing.</p>
+
+<p><a id="X7BE9D278852C13BC" name="X7BE9D278852C13BC"></a></p>
+
+<h4>26.9 <span class="Heading">Operations for Vector Objects</span></h4>
+
+<p><a id="X7AC470557EC90714" name="X7AC470557EC90714"></a></p>
+
+<h5>26.9-1 <span class="Heading">ConcatenationOfVectors</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ConcatenationOfVectors</code>( <var class="Arg">v1</var>, <var class="Arg">v2</var>, <var class="Arg">...</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ConcatenationOfVectors</code>( <var class="Arg">vlist</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: a vector object</p>
+
+<p>Returns a new mutable vector object in the representation of <var class="Arg">v1</var> or the first entry of the nonempty list <var class="Arg">vlist</var> of vector objects, respectively, such that the entries are the concatenation of the given vector objects.</p>
+
+<p>(Note that <code class="func">Concatenation</code> (<a href="chap21_mj.html#X840C55A77D1BB2E1"><span class="RefLink">21.20-1</span></a>) is a function for which no methods can be installed.)</p>
+
+<p><a id="X7DBE956E7F9C700E" name="X7DBE956E7F9C700E"></a></p>
+
+<h5>26.9-2 ExtractSubVector</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ExtractSubVector</code>( <var class="Arg">v</var>, <var class="Arg">l</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: a vector object</p>
+
+<p>Returns a new mutable vector object of the same vector representation as <var class="Arg">v</var>, containing the entries of <var class="Arg">v</var> at the positions in the list <var class="Arg">l</var>.</p>
+
+<p>This is the same as <var class="Arg">v</var><code class="code">{</code><var class="Arg">l</var><code class="code">}</code>, the name <code class="func">ExtractSubVector</code> was introduced in analogy to <code class="func">ExtractSubMatrix</code> (<a href="chap26_mj.html#X838B45F7790E9FDF"><span class="RefLink">26.11-3</span></a>), for which no equivalent syntax using curly brackets is available.</p>
+
+<p><a id="X80EC354D78D7B5A6" name="X80EC354D78D7B5A6"></a></p>
+
+<h5>26.9-3 CopySubVector</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CopySubVector</code>( <var class="Arg">src</var>, <var class="Arg">dst</var>, <var class="Arg">scols</var>, <var class="Arg">dcols</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: nothing</p>
+
+<p>For two vector objects <var class="Arg">src</var> and <var class="Arg">dst</var>, such that <var class="Arg">dst</var> is mutable, and two lists <var class="Arg">scols</var> and <var class="Arg">dcols</var> of positions, <code class="func">CopySubVector</code> assigns the entries <var class="Arg">src</var><code class="code">{ </code><var class="Arg">scols</var><code class="code"> }</code> (see <code class="func">ExtractSubVector</code> (<a href="chap26_mj.html#X7DBE956E7F9C700E"><span class="RefLink">26.9-2</span></a>)) to the positions <var class="Arg">dcols</var> in <var class="Arg">dst</var>, but without creating an intermediate object and thus –at least in special cases– much more efficiently.</p>
+
+<p>For certain objects like compressed vectors this might be significantly more efficient if <var class="Arg">scols</var> and <var class="Arg">dcols</var> are ranges with increment 1.</p>
+
+<p>If the global option <code class="code">check</code> is set to <code class="keyw">false</code> then <code class="func">CopySubVector</code> need not perform consistency checks.</p>
+
+<p><a id="X866366E587991171" name="X866366E587991171"></a></p>
+
+<h5>26.9-4 WeightOfVector</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; WeightOfVector</code>( <var class="Arg">v</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: an integer</p>
+
+<p>returns the Hamming weight of the vector object <var class="Arg">v</var>, i.e., the number of nonzero entries in <var class="Arg">v</var>.</p>
+
+<p><a id="X81ACAE017C00F782" name="X81ACAE017C00F782"></a></p>
+
+<h5>26.9-5 DistanceOfVectors</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DistanceOfVectors</code>( <var class="Arg">v1</var>, <var class="Arg">v2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: an integer</p>
+
+<p>returns the Hamming distance of the vector objects <var class="Arg">v1</var> and <var class="Arg">v2</var>, i.e., the number of entries in which the vectors differ. The vectors must have equal length.</p>
+
+<p><a id="X81CC13CA7A1FF4AA" name="X81CC13CA7A1FF4AA"></a></p>
+
+<h4>26.10 <span class="Heading">Arithmetical Operations for Matrix Objects</span></h4>
+
+<p><a id="X819F87A07DA7E2DC" name="X819F87A07DA7E2DC"></a></p>
+
+<h5>26.10-1 <span class="Heading">Unary Arithmetical Operations for Matrix Objects</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AdditiveInverseMutable</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AdditiveInverseSameMutability</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ZeroMutable</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ZeroSameMutability</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OneMutable</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OneSameMutability</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InverseMutable</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InverseSameMutability</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsZero</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsOne</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Characteristic</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a matrix object</p>
+
+<p>For a vector object <var class="Arg">M</var>, the operations for computing the additive inverse with prescribed mutability return a matrix object with the same <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) and <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) values, such that the sum with <var class="Arg">M</var> is a zero matrix. It is not specified what happens if the base domain does not admit the additive inverses of the entries.</p>
+
+<p>Analogously, the operations for computing a zero matrix with prescribed mutability return a matrix object compatible with <var class="Arg">M</var>.</p>
+
+<p>The operations for computing an identity matrix with prescribed mutability return a matrix object compatible with <var class="Arg">M</var>, provided that the base domain admits this and <var class="Arg">M</var> is square and nonempty.</p>
+
+<p>Analogously, the operations for computing an inverse matrix with prescribed mutability return a matrix object compatible with <var class="Arg">M</var>, provided that <var class="Arg">M</var> is invertible. (If <var class="Arg">M</var> is not invertible then the operations return <code class="keyw">fail</code>.)</p>
+
+<p><code class="func">IsZero</code> returns <code class="keyw">true</code> if all entries in <var class="Arg">M</var> are zero, and <code class="keyw">false</code> otherwise. <code class="func">IsOne</code> returns <code class="keyw">true</code> if <var class="Arg">M</var> is nonempty and square and contains the identity of the base domain in the diagonal, and zero in all other places.</p>
+
+<p><code class="func">Characteristic</code> returns the corresponding value of the <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) value of <var class="Arg">M</var>.</p>
+
+<p><a id="X7BBB70557A7A9591" name="X7BBB70557A7A9591"></a></p>
+
+<h5>26.10-2 <span class="Heading">Binary Arithmetical Operations for Matrix Objects</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; \+</code>( <var class="Arg">M1</var>, <var class="Arg">M2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; \-</code>( <var class="Arg">M1</var>, <var class="Arg">M2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; \*</code>( <var class="Arg">s</var>, <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; \*</code>( <var class="Arg">M</var>, <var class="Arg">s</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; \*</code>( <var class="Arg">M1</var>, <var class="Arg">M2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; \/</code>( <var class="Arg">M</var>, <var class="Arg">s</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; \^</code>( <var class="Arg">M</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
+<p>The sum and the difference, respectively, of two matrix objects <var class="Arg">M1</var> and <var class="Arg">M2</var> is a new fully mutable matrix object whose entries are the sums and the differences of the entries of the arguments.</p>
+
+<p>The product of a scalar <var class="Arg">s</var> and a matrix object <var class="Arg">M</var> (from the left or from the right) is a new fully mutable matrix object whose entries are the corresponding products.</p>
+
+<p>The product of two matrix objects <var class="Arg">M1</var> and <var class="Arg">M2</var> is a new fully mutable matrix object; if both <var class="Arg">M1</var> and <var class="Arg">M2</var> are in the filter <code class="func">IsOrdinaryMatrix</code> (<a href="chap24_mj.html#X7CF42B8A845BC6A9"><span class="RefLink">24.2-2</span></a>) then the entries of the result are those of the ordinary matrix product.</p>
+
+<p>The quotient of a matrix object <var class="Arg">M</var> and a scalar <var class="Arg">s</var> is a new fully mutable matrix object whose entries are the corresponding quotients.</p>
+
+<p>For a nonempty square matrix object <var class="Arg">M</var> over an associative base domain, and a positive integer <var class="Arg">n</var>, <var class="Arg">M</var><code class="code">^</code><var class="Arg">n</var> is a fully mutable matrix object whose entries are those of the <var class="Arg">n</var>-th power of <var class="Arg">M</var>. If <var class="Arg">n</var> is zero then <var class="Arg">M</var><code class="code">^</code><var class="Arg">n</var> is an identity matrix, and if <var class="Arg">n</var> is a negative integer and <var class="Arg">M</var> is invertible then <var class="Arg">M</var><code class="code">^</code><var class="Arg">n</var> is the (<code class="code">-</code><var class="Arg">n</var>)-th power of the inverse of <var class="Arg">M</var>.</p>
+
+<p>All this is defined only if the matrix objects have the same dimensions and are defined over the same base domain and have the same representation, and if the products with the given scalar belong to the base domain; otherwise it is not specified what happens. If the result is a matrix object then it has the same representation and the same base domain as the given matrix object(s).</p>
+
+<p><a id="X85FAB7E778A71C19" name="X85FAB7E778A71C19"></a></p>
+
+<h4>26.11 <span class="Heading">Operations for Matrix Objects</span></h4>
+
+<p><a id="X870FBE817C884AB5" name="X870FBE817C884AB5"></a></p>
+
+<h5>26.11-1 MatElm</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MatElm</code>( <var class="Arg">M</var>, <var class="Arg">row</var>, <var class="Arg">col</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: an entry of the matrix object</p>
+
+<p>For a matrix object <var class="Arg">M</var>, this operation returns the entry in row <var class="Arg">row</var> and column <var class="Arg">col</var>.</p>
+
+<p>Also the syntax <var class="Arg">M</var><code class="code">[ </code><var class="Arg">row</var><code class="code">, </code><var class="Arg">col</var><code class="code"> ]</code> is supported.</p>
+
+<p>Note that this is <em>not</em> equivalent to <var class="Arg">M</var><code class="code">[ </code><var class="Arg">row</var><code class="code"> ][ </code><var class="Arg">col</var><code class="code"> ]</code>, which would first try to access <var class="Arg">M</var><code class="code">[ </code><var class="Arg">row</var><code class="code"> ]</code>, and this is in general not possible.</p>
+
+<p><a id="X7C33059984635480" name="X7C33059984635480"></a></p>
+
+<h5>26.11-2 SetMatElm</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SetMatElm</code>( <var class="Arg">M</var>, <var class="Arg">row</var>, <var class="Arg">col</var>, <var class="Arg">obj</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: nothing</p>
+
+<p>For a mutable matrix object <var class="Arg">M</var>, this operation assigns the object <var class="Arg">obj</var> to the position in row <var class="Arg">row</var> and column <var class="Arg">col</var>, provided that <var class="Arg">obj</var> is compatible with the <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) value of <var class="Arg">M</var>.</p>
+
+<p>Also the syntax <var class="Arg">M</var><code class="code">[ </code><var class="Arg">row</var><code class="code">, </code><var class="Arg">col</var><code class="code"> ]:= </code><var class="Arg">obj</var> is supported.</p>
+
+<p>Note that this is <em>not</em> equivalent to <var class="Arg">M</var><code class="code">[ </code><var class="Arg">row</var><code class="code"> ][ </code><var class="Arg">col</var><code class="code"> ]:= </code><var class="Arg">obj</var>, which would first try to access <var class="Arg">M</var><code class="code">[ </code><var class="Arg">row</var><code class="code"> ]</code>, and this is in general not possible.</p>
+
+<p>If the global option <code class="code">check</code> is set to <code class="keyw">false</code> then <code class="func">SetMatElm</code> need not perform consistency checks.</p>
+
+<p><a id="X838B45F7790E9FDF" name="X838B45F7790E9FDF"></a></p>
+
+<h5>26.11-3 ExtractSubMatrix</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ExtractSubMatrix</code>( <var class="Arg">M</var>, <var class="Arg">rows</var>, <var class="Arg">cols</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Creates a copy of the submatrix described by the two lists, which mean subsets of row and column positions, respectively. This does <var class="Arg">M</var>{<var class="Arg">rows</var>}{<var class="Arg">cols</var>} and returns the result. It preserves the representation of the matrix.</p>
+
+<p>If the <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) value of the result implies <code class="func">IsCopyable</code> (<a href="chap12_mj.html#X811EFD727EBD1ADC"><span class="RefLink">12.6-1</span></a>) then the result is fully mutable.</p>
+
+<p><a id="X793CD4637F237915" name="X793CD4637F237915"></a></p>
+
+<h5>26.11-4 MutableCopyMatrix</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MutableCopyMatrix</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>For a matrix object <var class="Arg">M</var>, this operation returns a fully mutable copy of <var class="Arg">M</var>, with the same <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) and <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) values,</p>
+
+<p><a id="X7ED9E5D4809E3B50" name="X7ED9E5D4809E3B50"></a></p>
+
+<h5>26.11-5 CopySubMatrix</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CopySubMatrix</code>( <var class="Arg">src</var>, <var class="Arg">dst</var>, <var class="Arg">srows</var>, <var class="Arg">drows</var>, <var class="Arg">scols</var>, <var class="Arg">dcols</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: nothing</p>
+
+<p>Does <code class="code"><var class="Arg">dst</var>{<var class="Arg">drows</var>}{<var class="Arg">dcols</var>} := <var class="Arg">src</var>{<var class="Arg">srows</var>}{<var class="Arg">scols</var>}</code> without creating an intermediate object and thus –at least in special cases– much more efficiently. For certain objects like compressed vectors this might be significantly more efficient if <var class="Arg">scols</var> and <var class="Arg">dcols</var> are ranges with increment 1.</p>
+
+<p>If the global option <code class="code">check</code> is set to <code class="keyw">false</code> then <code class="func">CopySubMatrix</code> need not perform consistency checks.</p>
+
+<p><a id="X809A6B3F7EA5E7D8" name="X809A6B3F7EA5E7D8"></a></p>
+
+<h5>26.11-6 CompatibleVector</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CompatibleVector</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: a vector object</p>
+
+<p>Called with a matrix object <var class="Arg">M</var> with <span class="SimpleMath">\(m\)</span> rows, this operation returns a mutable zero vector object <span class="SimpleMath">\(v\)</span> of length <span class="SimpleMath">\(m\)</span> and in the representation given by the <code class="func">CompatibleVectorFilter</code> (<a href="chap26_mj.html#X818702FD7A2E9D90"><span class="RefLink">26.3-3</span></a>) value of <var class="Arg">M</var> (provided that such a representation exists).</p>
+
+<p>The idea is that there should be an efficient way to form the product <span class="SimpleMath">\(v\)</span><var class="Arg">M</var>.</p>
+
+<p><a id="X7EE70D5A81E9ED72" name="X7EE70D5A81E9ED72"></a></p>
+
+<h5>26.11-7 RowsOfMatrix</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RowsOfMatrix</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a plain list</p>
+
+<p>Called with a matrix object <var class="Arg">M</var>, this operation returns a plain list of objects in the representation given by the <code class="func">CompatibleVectorFilter</code> (<a href="chap26_mj.html#X818702FD7A2E9D90"><span class="RefLink">26.3-3</span></a>) value of <var class="Arg">M</var> (provided that such a representation exists), where the <span class="SimpleMath">\(i\)</span>-th entry describes the <span class="SimpleMath">\(i\)</span>-th row of the input.</p>
+
+<p><a id="X7E06762479A00DF4" name="X7E06762479A00DF4"></a></p>
+
+<h5>26.11-8 <span class="Heading">CompanionMatrix</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CompanionMatrix</code>( <var class="Arg">pol</var>, <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CompanionMatrix</code>( <var class="Arg">filt</var>, <var class="Arg">pol</var>, <var class="Arg">R</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CompanionMatrix</code>( <var class="Arg">pol</var>, <var class="Arg">R</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: a matrix object</p>
+
+<p>For a monic, univariate polynomial <var class="Arg">pol</var> whose coefficients lie in the base domain of the matrix object <var class="Arg">M</var>, <code class="func">CompanionMatrix</code> returns the companion matrix of <var class="Arg">pol</var>, as a matrix object with the same <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) and <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) values as <var class="Arg">M</var>.</p>
+
+<p>We use column convention, that is, the negatives of the coefficients of <var class="Arg">pol</var> appear in the last column of the result.</p>
+
+<p>If a filter <var class="Arg">filt</var> and a semiring <var class="Arg">R</var> are given then the companion matrix is returned as a matrix object with <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) value <var class="Arg">filt</var> and <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) value <var class="Arg">R</var>.</p>
+
+<p>If only <var class="Arg">pol</var> and a semiring <var class="Arg">R</var> are given, the representation of the result is guessed from <var class="Arg">R</var>.</p>
+
+<p>If the <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) value of the result implies <code class="func">IsCopyable</code> (<a href="chap12_mj.html#X811EFD727EBD1ADC"><span class="RefLink">12.6-1</span></a>) then the result is fully mutable.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">x:= X( GF(5) );;  pol:= x^3 + x^2 + 2*x + 3;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">M:= CompanionMatrix( IsPlistMatrixRep, pol, GF(25) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( M );</span>
+&lt;3x3-matrix over GF(5^2):
+[[ 0*Z(5), 0*Z(5), Z(5) ]
+ [ Z(5)^0, 0*Z(5), Z(5)^3 ]
+ [ 0*Z(5), Z(5)^0, Z(5)^2 ]
+]&gt;
+</pre></div>
+
+<p><a id="X7D40EE2084A6C976" name="X7D40EE2084A6C976"></a></p>
+
+<h4>26.12 <span class="Heading">Operations for Row List Matrix Objects</span></h4>
+
+<p>In general, matrix objects are not lists in the sense of <code class="func">IsList</code> (<a href="chap21_mj.html#X7C4CC4EA8299701E"><span class="RefLink">21.1-1</span></a>), and they need not behave like lists, that is, they need not obey all the rules for lists that are stated in Chapter <a href="chap21_mj.html#X7B256AE5780F140A"><span class="RefLink">21</span></a>. There are situations where one wants to have matrix objects that can on the one hand benefit from <strong class="pkg">GAP</strong>'s method selection, as is explained in Section <a href="chap26_mj.html#X7A7275C27EC61ACE"><span class="RefLink">26.1</span></a>, and do on the other hands support access to <strong class="pkg">GAP</strong> objects that represent their rows (which are suitable vector objects). Matrix objects whose <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) value implies <code class="func">IsRowListMatrix</code> (<a href="chap26_mj.html#X78CD88A283330E72"><span class="RefLink">26.2-4</span></a>) support the operations described in this section.</p>
+
+<p>One implementation of such matrices is given by the <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) value <code class="func">IsPlistMatrixRep</code> (<a href="chap26_mj.html#X80C6031C7DB31A15"><span class="RefLink">26.16-3</span></a>), and any row of these matrices is a vector object in <code class="func">IsPlistVectorRep</code> (<a href="chap26_mj.html#X83262B7085FA94E3"><span class="RefLink">26.15-3</span></a>). Note that these objects do <em>not</em> lie in <code class="func">IsList</code> (<a href="chap21_mj.html#X7C4CC4EA8299701E"><span class="RefLink">21.1-1</span></a>) (and in particular not in <code class="func">IsPlistRep</code> (<a href="chap21_mj.html#X87BA4EBF80F16B72"><span class="RefLink">21.24-2</span></a>)), thus we are allowed to define the above operations only restrictively, as follows.</p>
+
+<p>Unbinding an entry in a row or unbinding a row in a matrix is allowed only in the last position, that is, the vector and matrix objects insist on being dense. All rows of a matrix must have the same length and the same base domain.</p>
+
+<p><a id="X82C4FCFA808010F8" name="X82C4FCFA808010F8"></a></p>
+
+<h5>26.12-1 <span class="Heading">List Access for a Row List Matrix</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; <span>\</span>[<span>\</span>]</code>( <var class="Arg">M</var>, <var class="Arg">pos</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: a vector object</p>
+
+<p>If <var class="Arg">M</var> is a row list matrix and if <var class="Arg">pos</var> is a positive integer not larger than the number of rows of <var class="Arg">M</var>, this operation returns the <var class="Arg">pos</var>-th row of <var class="Arg">M</var>.</p>
+
+<p>It is not specified what happens if <var class="Arg">pos</var> is larger.</p>
+
+<p><a id="X7F89BB2482D28AAE" name="X7F89BB2482D28AAE"></a></p>
+
+<h5>26.12-2 <span class="Heading">List Assignment for a Row List Matrix</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; <span>\</span>[<span>\</span>]\:\=</code>( <var class="Arg">M</var>, <var class="Arg">pos</var>, <var class="Arg">v</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: nothing</p>
+
+<p>If <var class="Arg">M</var> is a row list matrix, <var class="Arg">v</var> is a vector object that can occur as a row in <var class="Arg">M</var> (that is, <var class="Arg">v</var> has the same base domain, the right length, and the right vector representation), and if <var class="Arg">pos</var> is a positive integer not larger than the number of rows of <var class="Arg">M</var> plus 1, this operation sets <var class="Arg">v</var> as the <var class="Arg">pos</var>-th row of <var class="Arg">M</var>.</p>
+
+<p>In all other situations, it is not specified what happens.</p>
+
+<p><a id="X807518367C96516F" name="X807518367C96516F"></a></p>
+
+<h5>26.12-3 <span class="Heading">Sublist Access for a Row List Matrix</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; \{\}</code>( <var class="Arg">M</var>, <var class="Arg">poss</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: a row list matrix</p>
+
+<p>For a row list matrix <var class="Arg">M</var> and a list <var class="Arg">poss</var> of positions, <var class="Arg">M</var><code class="code">{ </code><var class="Arg">poss</var><code class="code"> }</code> returns a new mutable row list matrix with the same representation as <var class="Arg">M</var>, whose rows are identical to the rows at the positions in the list <var class="Arg">poss</var> in <var class="Arg">M</var>.</p>
+
+<p><a id="X8371789181FA136B" name="X8371789181FA136B"></a></p>
+
+<h5>26.12-4 <span class="Heading">Sublist Assignment for a Row List Matrix</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; \{\}\:\=</code>( <var class="Arg">M</var>, <var class="Arg">poss</var>, <var class="Arg">M2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: nothing</p>
+
+<p>For a mutable row list matrix <var class="Arg">M</var>, a list <var class="Arg">poss</var> of positions, and a row list matrix <var class="Arg">M2</var> of the same vector type and with the same base domain, <var class="Arg">M</var><code class="code">{ </code><var class="Arg">poss</var><code class="code"> }:= </code><var class="Arg">M2</var> assigns the rows of <var class="Arg">M2</var> to the positions <var class="Arg">poss</var> in the list of rows of <var class="Arg">M</var>.</p>
+
+<p>It is not specified what happens if the resulting range of row positions is not dense.</p>
+
+<p><a id="X872E63867803ED78" name="X872E63867803ED78"></a></p>
+
+<h5><code>26.12-5 IsBound<span>\</span>[<span>\</span>]</code></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsBound<span>\</span>[<span>\</span>]</code>( <var class="Arg">M</var>, <var class="Arg">pos</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code></p>
+
+<p>For a row list matrix <var class="Arg">M</var> and a positive integer <var class="Arg">pos</var>, <code class="code">IsBound( </code><var class="Arg">M</var><code class="code">[ </code><var class="Arg">pos</var><code class="code"> ] )</code> returns <code class="keyw">true</code> if <var class="Arg">pos</var> is at most the number of rows of <var class="Arg">M</var>, and <code class="keyw">false</code> otherwise.</p>
+
+<p><a id="X79328CB280C71DDB" name="X79328CB280C71DDB"></a></p>
+
+<h5><code>26.12-6 Unbind<span>\</span>[<span>\</span>]</code></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Unbind<span>\</span>[<span>\</span>]</code>( <var class="Arg">M</var>, <var class="Arg">pos</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: nothing</p>
+
+<p>For a mutable row list matrix <var class="Arg">M</var> with <var class="Arg">pos</var> rows, <code class="code">Unbind( </code><var class="Arg">M</var><code class="code">[ </code><var class="Arg">pos</var><code class="code"> ] )</code> removes the last row. It is not specified what happens if <var class="Arg">pos</var> has another value.</p>
+
+<p><a id="X7BDD838579E4D2D6" name="X7BDD838579E4D2D6"></a></p>
+
+<h5>26.12-7 Add</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Add</code>( <var class="Arg">M</var>, <var class="Arg">v</var>[, <var class="Arg">pos</var>] )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: nothing</p>
+
+<p>For a mutable row list matrix <var class="Arg">M</var> and a vector object <var class="Arg">v</var> that is compatible with the rows of <var class="Arg">M</var>, the two argument version adds <var class="Arg">v</var> at the end of the list of rows of <var class="Arg">M</var>.</p>
+
+<p>If a positive integer <var class="Arg">pos</var> is given then <var class="Arg">v</var> is added in position <var class="Arg">pos</var>, and all later rows are shifted up by one position.</p>
+
+<p><a id="X86E355D07A41C025" name="X86E355D07A41C025"></a></p>
+
+<h5>26.12-8 Remove</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Remove</code>( <var class="Arg">M</var>[, <var class="Arg">pos</var>] )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: a vector object if the removed row exists, otherwise nothing</p>
+
+<p>For a mutable row list matrix <var class="Arg">M</var>, this operation removes the <var class="Arg">pos</var>-th row and shifts the later rows down by one position. The default for <var class="Arg">pos</var> is the number of rows of <var class="Arg">M</var>.</p>
+
+<p>If the <var class="Arg">pos</var>-th row existed in <var class="Arg">M</var> then it is returned, otherwise nothing is returned.</p>
+
+<p><a id="X82D0359B81F8D442" name="X82D0359B81F8D442"></a></p>
+
+<h5>26.12-9 Append</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Append</code>( <var class="Arg">M1</var>, <var class="Arg">M2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: nothing</p>
+
+<p>For two row list matrices <var class="Arg">M1</var>, <var class="Arg">M2</var> such that <var class="Arg">M1</var> is mutable and such that the <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) and <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) values are equal, this operation appends the rows of <var class="Arg">M2</var> to the rows of <var class="Arg">M1</var>.</p>
+
+<p><a id="X7E234F717BE333EA" name="X7E234F717BE333EA"></a></p>
+
+<h5>26.12-10 ShallowCopy</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ShallowCopy</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: a matrix object</p>
+
+<p>For a row list matrix <var class="Arg">M</var>, this operation returns a new mutable matrix with the same <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) and <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>) values as <var class="Arg">M</var>, which shares its rows with <var class="Arg">M</var>.</p>
+
+<p><a id="X7E9F095E85DED480" name="X7E9F095E85DED480"></a></p>
+
+<h5>26.12-11 ListOp</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ListOp</code>( <var class="Arg">M</var>[, <var class="Arg">func</var>] )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: a plain list</p>
+
+<p>For a row list matrix <var class="Arg">M</var>, the variant with one argument returns the plain list (see <code class="func">IsPlistRep</code> (<a href="chap21_mj.html#X87BA4EBF80F16B72"><span class="RefLink">21.24-2</span></a>)) of its rows, and the variant with two arguments returns the plain list of values of these rows under the function <var class="Arg">func</var>.</p>
+
+<p><a id="X7B86A8487B12F9BD" name="X7B86A8487B12F9BD"></a></p>
+
+<h4>26.13 <span class="Heading">Basic operations for row/column reductions</span></h4>
+
+<p><a id="X7B3997D37CC44FCA" name="X7B3997D37CC44FCA"></a></p>
+
+<h5>26.13-1 MultMatrixRowLeft</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MultMatrixRowLeft</code>( <var class="Arg">mat</var>, <var class="Arg">i</var>, <var class="Arg">elm</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MultMatrixRow</code>( <var class="Arg">mat</var>, <var class="Arg">i</var>, <var class="Arg">elm</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: nothing</p>
+
+<p>Multiplies the <var class="Arg">i</var>-th row of the mutable matrix <var class="Arg">mat</var> with the scalar <var class="Arg">elm</var> from the left in-place.</p>
+
+<p><code class="func">MultMatrixRow</code> is a synonym of <code class="func">MultMatrixRowLeft</code>. This was chosen because linear combinations of rows of matrices are usually written as <span class="SimpleMath">\( v \cdot A = [v_1, ... ,v_n] \cdot A\)</span> which multiplies scalars from the left.</p>
+
+<p><a id="X794636447E8C5553" name="X794636447E8C5553"></a></p>
+
+<h5>26.13-2 MultMatrixRowRight</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MultMatrixRowRight</code>( <var class="Arg">M</var>, <var class="Arg">i</var>, <var class="Arg">elm</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: nothing</p>
+
+<p>Multiplies the <var class="Arg">i</var>-th row of the mutable matrix <var class="Arg">M</var> with the scalar <var class="Arg">elm</var> from the right in-place.</p>
+
+<p><a id="X80AF7B267E6B9CE0" name="X80AF7B267E6B9CE0"></a></p>
+
+<h5>26.13-3 MultMatrixColumnRight</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MultMatrixColumnRight</code>( <var class="Arg">M</var>, <var class="Arg">i</var>, <var class="Arg">elm</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MultMatrixColumn</code>( <var class="Arg">M</var>, <var class="Arg">i</var>, <var class="Arg">elm</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: nothing</p>
+
+<p>Multiplies the <var class="Arg">i</var>-th column of the mutable matrix <var class="Arg">M</var> with the scalar <var class="Arg">elm</var> from the right in-place.</p>
+
+<p><code class="func">MultMatrixColumn</code> is a synonym of <code class="func">MultMatrixColumnRight</code>. This was chosen because linear combinations of columns of matrices are usually written as <span class="SimpleMath">\(A \cdot v^T = A \cdot [v_1, ... ,v_n]^T\)</span> which multiplies scalars from the right.</p>
+
+<p><a id="X843DAFE37F347471" name="X843DAFE37F347471"></a></p>
+
+<h5>26.13-4 MultMatrixColumnLeft</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MultMatrixColumnLeft</code>( <var class="Arg">M</var>, <var class="Arg">i</var>, <var class="Arg">elm</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: nothing</p>
+
+<p>Multiplies the <var class="Arg">i</var>-th column of the mutable matrix <var class="Arg">M</var> with the scalar <var class="Arg">elm</var> from the left in-place.</p>
+
+<p><a id="X8662EB748629502F" name="X8662EB748629502F"></a></p>
+
+<h5>26.13-5 AddMatrixRowsLeft</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AddMatrixRowsLeft</code>( <var class="Arg">M</var>, <var class="Arg">i</var>, <var class="Arg">j</var>, <var class="Arg">elm</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AddMatrixRows</code>( <var class="Arg">M</var>, <var class="Arg">i</var>, <var class="Arg">j</var>, <var class="Arg">elm</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: nothing</p>
+
+<p>Adds the product of <var class="Arg">elm</var> with the <var class="Arg">j</var>-th row of the mutable matrix <var class="Arg">M</var> to its <var class="Arg">i</var>-th row in-place. The <var class="Arg">j</var>-th row is multiplied with <var class="Arg">elm</var> from the left.</p>
+
+<p><code class="func">AddMatrixRows</code> is a synonym of <code class="func">AddMatrixRowsLeft</code>. This was chosen because linear combinations of rows of matrices are usually written as <span class="SimpleMath">\( v \cdot A = [v_1, ... ,v_n] \cdot A\)</span> which multiplies scalars from the left.</p>
+
+<p><a id="X7CD05EE984614AB6" name="X7CD05EE984614AB6"></a></p>
+
+<h5>26.13-6 AddMatrixRowsRight</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AddMatrixRowsRight</code>( <var class="Arg">M</var>, <var class="Arg">i</var>, <var class="Arg">j</var>, <var class="Arg">elm</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: nothing</p>
+
+<p>Adds the product of <var class="Arg">elm</var> with the <var class="Arg">j</var>-th row of the mutable matrix <var class="Arg">M</var> to its <var class="Arg">i</var>-th row in-place. The <var class="Arg">j</var>-th row is multiplied with <var class="Arg">elm</var> from the right.</p>
+
+<p><a id="X7B1E1E417CA267A3" name="X7B1E1E417CA267A3"></a></p>
+
+<h5>26.13-7 AddMatrixColumnsRight</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AddMatrixColumnsRight</code>( <var class="Arg">M</var>, <var class="Arg">i</var>, <var class="Arg">j</var>, <var class="Arg">elm</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AddMatrixColumns</code>( <var class="Arg">M</var>, <var class="Arg">i</var>, <var class="Arg">j</var>, <var class="Arg">elm</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: nothing</p>
+
+<p>Adds the product of <var class="Arg">elm</var> with the <var class="Arg">j</var>-th column of the mutable matrix <var class="Arg">M</var> to its <var class="Arg">i</var>-th column in-place. The <var class="Arg">j</var>-th column is multiplied with <var class="Arg">elm</var> from the right.</p>
+
+<p><code class="func">AddMatrixColumns</code> is a synonym of <code class="func">AddMatrixColumnsRight</code>. This was chosen because linear combinations of columns of matrices are usually written as <span class="SimpleMath">\(A \cdot v^T = A \cdot [v_1, ... ,v_n]^T\)</span> which multiplies scalars from the right.</p>
+
+<p><a id="X85ECB8C87DFD8F32" name="X85ECB8C87DFD8F32"></a></p>
+
+<h5>26.13-8 AddMatrixColumnsLeft</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AddMatrixColumnsLeft</code>( <var class="Arg">M</var>, <var class="Arg">i</var>, <var class="Arg">j</var>, <var class="Arg">elm</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: nothing</p>
+
+<p>Adds the product of <var class="Arg">elm</var> with the <var class="Arg">j</var>-th column of the mutable matrix <var class="Arg">M</var> to its <var class="Arg">i</var>-th column in-place. The <var class="Arg">j</var>-th column is multiplied with <var class="Arg">elm</var> from the left.</p>
+
+<p><a id="X87CCA3117F6B3F0D" name="X87CCA3117F6B3F0D"></a></p>
+
+<h5>26.13-9 SwapMatrixRows</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SwapMatrixRows</code>( <var class="Arg">M</var>, <var class="Arg">i</var>, <var class="Arg">j</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: nothing</p>
+
+<p>Swaps the <var class="Arg">i</var>-th row and <var class="Arg">j</var>-th row of a mutable matrix <var class="Arg">M</var>.</p>
+
+<p><a id="X824C8A347EB9D499" name="X824C8A347EB9D499"></a></p>
+
+<h5>26.13-10 SwapMatrixColumns</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SwapMatrixColumns</code>( <var class="Arg">M</var>, <var class="Arg">i</var>, <var class="Arg">j</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: nothing</p>
+
+<p>Swaps the <var class="Arg">i</var>-th column and <var class="Arg">j</var>-th column of a mutable matrix <var class="Arg">M</var>.</p>
+
+<p><a id="X7BEE647484978886" name="X7BEE647484978886"></a></p>
+
+<h4>26.14 <span class="Heading">Implementing New Vector and Matrix Objects Types</span></h4>
+
+<p>The first step in the design of a new type of vector or matrix objects is to create a new filter that serves as the <code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>) of the new objects, see the sections <a href="chap26_mj.html#X82EEE1D37A94F807"><span class="RefLink">26.15</span></a> and <a href="chap26_mj.html#X7CFD844C7D80D541"><span class="RefLink">26.16</span></a> for an overview of such filters that are already available.</p>
+
+<p>Here we list those operations for vector and matrix objects for which no default methods can be installed. When one implements a new type of vector or matrix objects then one has to install specific methods at least for these operations, in order to make the objects behave as described in this chapter. It is advisable to install specific methods also for other operations, for performance reasons. The installations of default methods can be found in the file <code class="file">lib/matobj.gi</code> of the <strong class="pkg">GAP</strong> distribution. There one can check for which operations it makes sense to overload them for the new type of vector or matrix objects. Note that the specific methods must be installed with <code class="func">InstallTagBasedMethod</code> (<a href="chap78_mj.html#X799081B4854DC003"><span class="RefLink">78.1-6</span></a>) whenever the default method is installed with this function.</p>
+
+<p><em>Vector objects</em></p>
+
+
+<ul>
+<li><p><code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>),</p>
+
+</li>
+<li><p><code class="func">Length</code> (<a href="chap26_mj.html#X828BA5E1849E3D06"><span class="RefLink">26.3-4</span></a>),</p>
+
+</li>
+<li><p><code class="func"><span>\</span>[<span>\</span>]</code> (<a href="chap26_mj.html#X7D5DF49C7ADB6986"><span class="RefLink">26.7-1</span></a>),</p>
+
+</li>
+<li><p><code class="func"><span>\</span>[<span>\</span>]\:\=</code> (<a href="chap26_mj.html#X7D5DF49C7ADB6986"><span class="RefLink">26.7-1</span></a>) (with consistency checks if the global option <code class="code">check</code> is not set to <code class="keyw">false</code>),</p>
+
+</li>
+<li><p><code class="func">\&lt;</code> (<a href="chap31_mj.html#X7EF67D047F03CA6F"><span class="RefLink">31.11-1</span></a>) (see <code class="func">\&lt;</code> (<a href="chap26_mj.html#X7FFC60A27FE6FA97"><span class="RefLink">26.6-1</span></a>)),</p>
+
+</li>
+<li><p><code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>),</p>
+
+</li>
+<li><p><code class="func">NewVector</code> (<a href="chap26_mj.html#X860E84397BD148E9"><span class="RefLink">26.4-1</span></a>) (with consistency checks if the global option <code class="code">check</code> is not set to <code class="keyw">false</code>, install the method with <code class="func">InstallTagBasedMethod</code> (<a href="chap78_mj.html#X799081B4854DC003"><span class="RefLink">78.1-6</span></a>)).</p>
+
+</li>
+</ul>
+<p><em>Matrix objects</em></p>
+
+
+<ul>
+<li><p><code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>),</p>
+
+</li>
+<li><p><code class="func">NumberRows</code> (<a href="chap26_mj.html#X820ED34380C10E19"><span class="RefLink">26.3-5</span></a>),</p>
+
+</li>
+<li><p><code class="func">NumberColumns</code> (<a href="chap26_mj.html#X820ED34380C10E19"><span class="RefLink">26.3-5</span></a>),</p>
+
+</li>
+<li><p><code class="func">MatElm</code> (<a href="chap26_mj.html#X870FBE817C884AB5"><span class="RefLink">26.11-1</span></a>),</p>
+
+</li>
+<li><p><code class="func">SetMatElm</code> (<a href="chap26_mj.html#X7C33059984635480"><span class="RefLink">26.11-2</span></a>) (with consistency checks if the global option <code class="code">check</code> is not set to <code class="keyw">false</code>),</p>
+
+</li>
+<li><p><code class="func">\&lt;</code> (<a href="chap31_mj.html#X7EF67D047F03CA6F"><span class="RefLink">31.11-1</span></a>) (see <code class="func">\&lt;</code> (<a href="chap26_mj.html#X7FFC60A27FE6FA97"><span class="RefLink">26.6-1</span></a>)),</p>
+
+</li>
+<li><p><code class="func">ConstructingFilter</code> (<a href="chap26_mj.html#X85ABF33684865ED5"><span class="RefLink">26.3-2</span></a>),</p>
+
+</li>
+<li><p><code class="func">CompatibleVectorFilter</code> (<a href="chap26_mj.html#X818702FD7A2E9D90"><span class="RefLink">26.3-3</span></a>),</p>
+
+</li>
+<li><p><code class="func">NewMatrix</code> (<a href="chap26_mj.html#X7AD2210B8047FB01"><span class="RefLink">26.4-4</span></a>) (with consistency checks if the global option <code class="code">check</code> is not set to <code class="keyw">false</code>, install the method with <code class="func">InstallTagBasedMethod</code> (<a href="chap78_mj.html#X799081B4854DC003"><span class="RefLink">78.1-6</span></a>)).</p>
+
+</li>
+</ul>
+<p>Methods for <code class="func">NewVector</code> (<a href="chap26_mj.html#X860E84397BD148E9"><span class="RefLink">26.4-1</span></a>) and <code class="func">NewMatrix</code> (<a href="chap26_mj.html#X7AD2210B8047FB01"><span class="RefLink">26.4-4</span></a>) must check their arguments for consistency (do the given filter and base domain fit together, are the entries compatible with the given base domain, is the number of matrix entries a multiple of the given number of columns) except if the global option <code class="code">check</code> is set to <code class="keyw">false</code>. (See Chapter <a href="chap8_mj.html#X7FD84061873F72A2"><span class="RefLink">8</span></a> for information about global options.) The same holds for methods for operations that modify mutable vector or matrix objects, such as <code class="func"><span>\</span>[<span>\</span>]\:\=</code> (<a href="chap26_mj.html#X7D5DF49C7ADB6986"><span class="RefLink">26.7-1</span></a>), <code class="func">SetMatElm</code> (<a href="chap26_mj.html#X7C33059984635480"><span class="RefLink">26.11-2</span></a>), <code class="func">CopySubVector</code> (<a href="chap26_mj.html#X80EC354D78D7B5A6"><span class="RefLink">26.9-3</span></a>), <code class="func">CopySubMatrix</code> (<a href="chap26_mj.html#X7ED9E5D4809E3B50"><span class="RefLink">26.11-5</span></a>), and for those methods of <code class="func">Vector</code> (<a href="chap26_mj.html#X79A6544D86261E82"><span class="RefLink">26.4-2</span></a>) and <code class="func">Matrix</code> (<a href="chap26_mj.html#X879384D479EB1D82"><span class="RefLink">26.4-5</span></a>) that do not delegate to <code class="func">NewVector</code> (<a href="chap26_mj.html#X860E84397BD148E9"><span class="RefLink">26.4-1</span></a>) and <code class="func">NewMatrix</code> (<a href="chap26_mj.html#X7AD2210B8047FB01"><span class="RefLink">26.4-4</span></a>), respectively.</p>
+
+<p><a id="X82EEE1D37A94F807" name="X82EEE1D37A94F807"></a></p>
+
+<h4>26.15 <span class="Heading">Available Representations of Vector Objects</span></h4>
+
+<p>The following filters define vector objects for which the the functionality described in this chapter is supported.</p>
+
+<p><a id="X7C8050938691A914" name="X7C8050938691A914"></a></p>
+
+<h5>26.15-1 IsGF2VectorRep</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsGF2VectorRep</code>( <var class="Arg">obj</var> )</td><td class="tdright">(&nbsp;representation&nbsp;)</td></tr></table></div>
+<p>An object <var class="Arg">obj</var> in <code class="func">IsGF2VectorRep</code> describes a vector object (see <code class="func">IsVectorObj</code> (<a href="chap26_mj.html#X7D963FCC7E849BE0"><span class="RefLink">26.2-1</span></a>)) with entries in the finite field with <span class="SimpleMath">\(2\)</span> elements.</p>
+
+<p><code class="func">IsGF2VectorRep</code> implies <code class="func">IsCopyable</code> (<a href="chap12_mj.html#X811EFD727EBD1ADC"><span class="RefLink">12.6-1</span></a>), thus vector objects in this representation can be mutable.</p>
+
+<p><a id="X82A643007EC6D1CA" name="X82A643007EC6D1CA"></a></p>
+
+<h5>26.15-2 Is8BitVectorRep</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Is8BitVectorRep</code>( <var class="Arg">obj</var> )</td><td class="tdright">(&nbsp;representation&nbsp;)</td></tr></table></div>
+<p>An object <var class="Arg">obj</var> in <code class="func">Is8BitVectorRep</code> describes a vector object (see <code class="func">IsVectorObj</code> (<a href="chap26_mj.html#X7D963FCC7E849BE0"><span class="RefLink">26.2-1</span></a>)) with entries in a finite field with <span class="SimpleMath">\(q\)</span> elements, for <span class="SimpleMath">\(3 \leq q \leq 256\)</span>. The base domain of <var class="Arg">obj</var> is not necessarily the smallest field that contains all matrix entries.</p>
+
+<p><code class="func">Is8BitVectorRep</code> implies <code class="func">IsCopyable</code> (<a href="chap12_mj.html#X811EFD727EBD1ADC"><span class="RefLink">12.6-1</span></a>), thus vector objects in this representation can be mutable.</p>
+
+<p><a id="X83262B7085FA94E3" name="X83262B7085FA94E3"></a></p>
+
+<h5>26.15-3 IsPlistVectorRep</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPlistVectorRep</code>( <var class="Arg">obj</var> )</td><td class="tdright">(&nbsp;representation&nbsp;)</td></tr></table></div>
+<p>An object <var class="Arg">obj</var> in <code class="func">IsPlistVectorRep</code> describes a vector object (see <code class="func">IsVectorObj</code> (<a href="chap26_mj.html#X7D963FCC7E849BE0"><span class="RefLink">26.2-1</span></a>)) that can occur as a row in a row list matrix (see Section <a href="chap26_mj.html#X7D40EE2084A6C976"><span class="RefLink">26.12</span></a>).</p>
+
+<p><code class="func">IsPlistVectorRep</code> implies <code class="func">IsCopyable</code> (<a href="chap12_mj.html#X811EFD727EBD1ADC"><span class="RefLink">12.6-1</span></a>), thus vector objects in this representation can be mutable.</p>
+
+<p><a id="X8730DB7D7E7DA883" name="X8730DB7D7E7DA883"></a></p>
+
+<h5>26.15-4 IsZmodnZVectorRep</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsZmodnZVectorRep</code>( <var class="Arg">obj</var> )</td><td class="tdright">(&nbsp;representation&nbsp;)</td></tr></table></div>
+<p>An object <var class="Arg">obj</var> in <code class="func">IsZmodnZVectorRep</code> describes a vector object (see <code class="func">IsVectorObj</code> (<a href="chap26_mj.html#X7D963FCC7E849BE0"><span class="RefLink">26.2-1</span></a>)) with entries in a residue class ring of the ring of integers (see <code class="func">ZmodnZ</code> (<a href="chap14_mj.html#X79CE76AD82B3E2B2"><span class="RefLink">14.5-2</span></a>)). This ring is the base domain (see <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>)) of <var class="Arg">obj</var>.</p>
+
+<p><code class="func">IsZmodnZVectorRep</code> implies <code class="func">IsCopyable</code> (<a href="chap12_mj.html#X811EFD727EBD1ADC"><span class="RefLink">12.6-1</span></a>), thus matrix objects in this representation can be mutable.</p>
+
+<p><a id="X7CFD844C7D80D541" name="X7CFD844C7D80D541"></a></p>
+
+<h4>26.16 <span class="Heading">Available Representations of Matrix Objects</span></h4>
+
+<p>The following filters define matrix objects for which the the functionality described in this chapter is supported.</p>
+
+<p><a id="X7F6078FF81E912E7" name="X7F6078FF81E912E7"></a></p>
+
+<h5>26.16-1 IsGF2MatrixRep</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsGF2MatrixRep</code>( <var class="Arg">obj</var> )</td><td class="tdright">(&nbsp;representation&nbsp;)</td></tr></table></div>
+<p>An object <var class="Arg">obj</var> in <code class="func">IsGF2MatrixRep</code> describes a matrix object (see <code class="func">IsMatrixObj</code> (<a href="chap26_mj.html#X7E7617A0781D1E4B"><span class="RefLink">26.2-2</span></a>)) with entries in the finite field with <span class="SimpleMath">\(2\)</span> elements, which behaves like the list of its rows (see <code class="func">IsRowListMatrix</code> (<a href="chap26_mj.html#X78CD88A283330E72"><span class="RefLink">26.2-4</span></a>)). The base domain of <var class="Arg">obj</var> is the field with <span class="SimpleMath">\(2\)</span> elements.</p>
+
+<p><code class="func">IsGF2MatrixRep</code> implies <code class="func">IsCopyable</code> (<a href="chap12_mj.html#X811EFD727EBD1ADC"><span class="RefLink">12.6-1</span></a>), thus vector objects in this representation can be mutable.</p>
+
+<p><a id="X81466B6C7CAC3A7B" name="X81466B6C7CAC3A7B"></a></p>
+
+<h5>26.16-2 Is8BitMatrixRep</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Is8BitMatrixRep</code>( <var class="Arg">obj</var> )</td><td class="tdright">(&nbsp;representation&nbsp;)</td></tr></table></div>
+<p>An object <var class="Arg">obj</var> in <code class="func">Is8BitMatrixRep</code> describes a matrix object (see <code class="func">IsMatrixObj</code> (<a href="chap26_mj.html#X7E7617A0781D1E4B"><span class="RefLink">26.2-2</span></a>)) that behaves like the list of its rows (see <code class="func">IsRowListMatrix</code> (<a href="chap26_mj.html#X78CD88A283330E72"><span class="RefLink">26.2-4</span></a>)). The base domain of <var class="Arg">obj</var> is a field that contains all matrix entries (but not necessarily the smallest such field), it must be a finite field with <span class="SimpleMath">\(q\)</span> elements, for <span class="SimpleMath">\(3 \leq q \leq 256\)</span>.</p>
+
+<p><code class="func">Is8BitMatrixRep</code> implies <code class="func">IsCopyable</code> (<a href="chap12_mj.html#X811EFD727EBD1ADC"><span class="RefLink">12.6-1</span></a>), thus matrix objects in this representation can be mutable.</p>
+
+<p><a id="X80C6031C7DB31A15" name="X80C6031C7DB31A15"></a></p>
+
+<h5>26.16-3 IsPlistMatrixRep</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPlistMatrixRep</code>( <var class="Arg">obj</var> )</td><td class="tdright">(&nbsp;representation&nbsp;)</td></tr></table></div>
+<p>An object <var class="Arg">obj</var> in <code class="func">IsPlistMatrixRep</code> describes a matrix object (see <code class="func">IsMatrixObj</code> (<a href="chap26_mj.html#X7E7617A0781D1E4B"><span class="RefLink">26.2-2</span></a>)) that behaves similar to a list of its rows, in the sense of <code class="func">IsRowListMatrix</code> (<a href="chap26_mj.html#X78CD88A283330E72"><span class="RefLink">26.2-4</span></a>).</p>
+
+<p><code class="func">IsPlistMatrixRep</code> implies <code class="func">IsCopyable</code> (<a href="chap12_mj.html#X811EFD727EBD1ADC"><span class="RefLink">12.6-1</span></a>), thus matrix objects in this representation can be mutable.</p>
+
+<p><a id="X84D0F3117DA86850" name="X84D0F3117DA86850"></a></p>
+
+<h5>26.16-4 IsZmodnZMatrixRep</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsZmodnZMatrixRep</code>( <var class="Arg">obj</var> )</td><td class="tdright">(&nbsp;representation&nbsp;)</td></tr></table></div>
+<p>An object <var class="Arg">obj</var> in <code class="func">IsZmodnZMatrixRep</code> describes a matrix object (see <code class="func">IsMatrixObj</code> (<a href="chap26_mj.html#X7E7617A0781D1E4B"><span class="RefLink">26.2-2</span></a>)) that behaves like the list of its rows (see <code class="func">IsRowListMatrix</code> (<a href="chap26_mj.html#X78CD88A283330E72"><span class="RefLink">26.2-4</span></a>)). The matrix entries lie in a residue class ring of the ring of integers (see <code class="func">ZmodnZ</code> (<a href="chap14_mj.html#X79CE76AD82B3E2B2"><span class="RefLink">14.5-2</span></a>)). This ring is the base domain (see <code class="func">BaseDomain</code> (<a href="chap26_mj.html#X8662026C7CCDB446"><span class="RefLink">26.3-1</span></a>)) of <var class="Arg">obj</var>.</p>
+
+<p><code class="func">IsZmodnZMatrixRep</code> implies <code class="func">IsCopyable</code> (<a href="chap12_mj.html#X811EFD727EBD1ADC"><span class="RefLink">12.6-1</span></a>), thus matrix objects in this representation can be mutable.</p>
+
+
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap25_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap27_mj.html">[Next Chapter]</a>&nbsp;  </div>
+
+
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chap7_mj.html">7</a>  <a href="chap8_mj.html">8</a>  <a href="chap9_mj.html">9</a>  <a href="chap10_mj.html">10</a>  <a href="chap11_mj.html">11</a>  <a href="chap12_mj.html">12</a>  <a href="chap13_mj.html">13</a>  <a href="chap14_mj.html">14</a>  <a href="chap15_mj.html">15</a>  <a href="chap16_mj.html">16</a>  <a href="chap17_mj.html">17</a>  <a href="chap18_mj.html">18</a>  <a href="chap19_mj.html">19</a>  <a href="chap20_mj.html">20</a>  <a href="chap21_mj.html">21</a>  <a href="chap22_mj.html">22</a>  <a href="chap23_mj.html">23</a>  <a href="chap24_mj.html">24</a>  <a href="chap25_mj.html">25</a>  <a href="chap26_mj.html">26</a>  <a href="chap27_mj.html">27</a>  <a href="chap28_mj.html">28</a>  <a href="chap29_mj.html">29</a>  <a href="chap30_mj.html">30</a>  <a href="chap31_mj.html">31</a>  <a href="chap32_mj.html">32</a>  <a href="chap33_mj.html">33</a>  <a href="chap34_mj.html">34</a>  <a href="chap35_mj.html">35</a>  <a href="chap36_mj.html">36</a>  <a href="chap37_mj.html">37</a>  <a href="chap38_mj.html">38</a>  <a href="chap39_mj.html">39</a>  <a href="chap40_mj.html">40</a>  <a href="chap41_mj.html">41</a>  <a href="chap42_mj.html">42</a>  <a href="chap43_mj.html">43</a>  <a href="chap44_mj.html">44</a>  <a href="chap45_mj.html">45</a>  <a href="chap46_mj.html">46</a>  <a href="chap47_mj.html">47</a>  <a href="chap48_mj.html">48</a>  <a href="chap49_mj.html">49</a>  <a href="chap50_mj.html">50</a>  <a href="chap51_mj.html">51</a>  <a href="chap52_mj.html">52</a>  <a href="chap53_mj.html">53</a>  <a href="chap54_mj.html">54</a>  <a href="chap55_mj.html">55</a>  <a href="chap56_mj.html">56</a>  <a href="chap57_mj.html">57</a>  <a href="chap58_mj.html">58</a>  <a href="chap59_mj.html">59</a>  <a href="chap60_mj.html">60</a>  <a href="chap61_mj.html">61</a>  <a href="chap62_mj.html">62</a>  <a href="chap63_mj.html">63</a>  <a href="chap64_mj.html">64</a>  <a href="chap65_mj.html">65</a>  <a href="chap66_mj.html">66</a>  <a href="chap67_mj.html">67</a>  <a href="chap68_mj.html">68</a>  <a href="chap69_mj.html">69</a>  <a href="chap70_mj.html">70</a>  <a href="chap71_mj.html">71</a>  <a href="chap72_mj.html">72</a>  <a href="chap73_mj.html">73</a>  <a href="chap74_mj.html">74</a>  <a href="chap75_mj.html">75</a>  <a href="chap76_mj.html">76</a>  <a href="chap77_mj.html">77</a>  <a href="chap78_mj.html">78</a>  <a href="chap79_mj.html">79</a>  <a href="chap80_mj.html">80</a>  <a href="chap81_mj.html">81</a>  <a href="chap82_mj.html">82</a>  <a href="chap83_mj.html">83</a>  <a href="chap84_mj.html">84</a>  <a href="chap85_mj.html">85</a>  <a href="chap86_mj.html">86</a>  <a href="chap87_mj.html">87</a>  <a href="chapBib_mj.html">Bib</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+
+<hr />
+<p class="foot">generated by <a href="https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
+</body>
+</html>

@@ -1,0 +1,159 @@
+  
+  [1X67 [33X[0;0YAlgebraic extensions of fields[133X[101X
+  
+  [33X[0;0YIf  we  adjoin a root [22Xα[122X of an irreducible polynomial [22Xf ∈ K[x][122X to the field [22XK[122X
+  we  get  an  [13Xalgebraic extension[113X [22XK(α)[122X, which is again a field. We call [22XK[122X the
+  [13Xbase field[113X of [22XK(α)[122X.[133X
+  
+  [33X[0;0YBy  Kronecker's  construction,  we  may  identify  [22XK(α)[122X with the factor ring
+  [22XK[x]/(f)[122X,  an  identification  that  also provides a method for computing in
+  these extension fields.[133X
+  
+  [33X[0;0YIt  is  important  to  note  that different extensions of the same field are
+  entirely  different  (and  its  elements lie in different families), even if
+  mathematically one could be embedded in the other one.[133X
+  
+  [33X[0;0YCurrently [5XGAP[105X only allows extension fields of fields [22XK[122X, when [22XK[122X itself is not
+  an extension field.[133X
+  
+  
+  [1X67.1 [33X[0;0YCreation of Algebraic Extensions[133X[101X
+  
+  [1X67.1-1 AlgebraicExtension[101X
+  
+  [33X[1;0Y[29X[2XAlgebraicExtension[102X( [3XK[103X, [3Xf[103X[, [3Xnam[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XAlgebraicExtensionNC[102X( [3XK[103X, [3Xf[103X[, [3Xnam[103X] ) [32X operation[133X
+  
+  [33X[0;0Yconstructs  an  extension  [3XL[103X  of  the field [3XK[103X by one root of the irreducible
+  polynomial   [3Xf[103X,   using   Kronecker's  construction.  [3XL[103X  is  a  field  whose
+  [2XLeftActingDomain[102X   ([14X57.1-11[114X)   value   is   [3XK[103X.   The  polynomial  [3Xf[103X  is  the
+  [2XDefiningPolynomial[102X    ([14X58.2-7[114X)    value    of    [3XL[103X    and    the   attribute
+  [2XRootOfDefiningPolynomial[102X  ([14X58.2-8[114X)  of  [3XL[103X holds a root of [3Xf[103X in [3XL[103X. By default
+  this  root is printed as [10Xa[110X, this string can be overwritten with the optional
+  argument [3Xnam[103X.[133X
+  
+  [33X[0;0YThe  first  version  of  the  command  checks  that  the  polynomial [3Xf[103X is an
+  irreducible polynomial over [3XK[103X. This check is skipped with the [10XNC[110X variant.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xx:=Indeterminate(Rationals,"x");;[127X[104X
+    [4X[25Xgap>[125X [27Xp:=x^4+3*x^2+1;;[127X[104X
+    [4X[25Xgap>[125X [27Xe:=AlgebraicExtension(Rationals,p);[127X[104X
+    [4X[28X<algebraic extension over the Rationals of degree 4>[128X[104X
+    [4X[25Xgap>[125X [27XIsField(e);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xa:=RootOfDefiningPolynomial(e);[127X[104X
+    [4X[28Xa[128X[104X
+    [4X[25Xgap>[125X [27Xl := AlgebraicExtensionNC(Rationals, x^24+3*x^2+1, "alpha");;[127X[104X
+    [4X[25Xgap>[125X [27XRootOfDefiningPolynomial(l)^50;[127X[104X
+    [4X[28X9*alpha^6+6*alpha^4+alpha^2[128X[104X
+  [4X[32X[104X
+  
+  [1X67.1-2 IsAlgebraicExtension[101X
+  
+  [33X[1;0Y[29X[2XIsAlgebraicExtension[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0Yis the category of algebraic extensions of fields.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsAlgebraicExtension(e);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsAlgebraicExtension(Rationals);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X67.2 [33X[0;0YElements in Algebraic Extensions[133X[101X
+  
+  [33X[0;0YAccording   to  Kronecker's  construction,  the  elements  of  an  algebraic
+  extension  are  considered  to  be polynomials in the primitive element. The
+  elements  of  the  base field are represented as polynomials of degree zero.
+  [5XGAP[105X  therefore displays elements of an algebraic extension as polynomials in
+  an  indeterminate  [21Xa[121X,  which  is  a  root  of the defining polynomial of the
+  extension.   Polynomials  of  degree  zero  are  displayed  with  a  leading
+  exclamation  mark  to  indicate that they are different from elements of the
+  base field.[133X
+  
+  [33X[0;0YThe usual field operations are applicable to algebraic elements.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xa^3/(a^2+a+1);[127X[104X
+    [4X[28X-1/2*a^3+1/2*a^2-1/2*a[128X[104X
+    [4X[25Xgap>[125X [27Xa*(1/a);[127X[104X
+    [4X[28X!1[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe   external  representation  of  algebraic  extension  elements  are  the
+  polynomial   coefficients   in  the  primitive  element  [10Xa[110X,  the  operations
+  [2XExtRepOfObj[102X ([14X79.8-1[114X) and [2XObjByExtRep[102X ([14X79.8-1[114X) can be used for conversion.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XExtRepOfObj(One(a));[127X[104X
+    [4X[28X[ 1, 0, 0, 0 ][128X[104X
+    [4X[25Xgap>[125X [27XExtRepOfObj(a^3+2*a-9);[127X[104X
+    [4X[28X[ -9, 2, 0, 1 ][128X[104X
+    [4X[25Xgap>[125X [27XObjByExtRep(FamilyObj(a),[3,19,-27,433]);[127X[104X
+    [4X[28X433*a^3-27*a^2+19*a+3[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[5XGAP[105X  does [13Xnot[113X embed the base field in its algebraic extensions and therefore
+  lists  which contain elements of the base field and of the extension are not
+  homogeneous  and  thus  cannot be used as polynomial coefficients or to form
+  matrices.  The  remedy  is  to  multiply  the  list(s) with the value of the
+  attribute [2XOne[102X ([14X31.10-2[114X) of the extension which will embed all entries in the
+  extension.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm:=[[1,a],[0,1]];[127X[104X
+    [4X[28X[ [ 1, a ], [ 0, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27XIsMatrix(m);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xm:=m*One(e);[127X[104X
+    [4X[28X[ [ !1, a ], [ !0, !1 ] ][128X[104X
+    [4X[25Xgap>[125X [27XIsMatrix(m);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xm^2;[127X[104X
+    [4X[28X[ [ !1, 2*a ], [ !0, !1 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X67.2-1 IsAlgebraicElement[101X
+  
+  [33X[1;0Y[29X[2XIsAlgebraicElement[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0Yis the category for elements of an algebraic extension.[133X
+  
+  
+  [1X67.3 [33X[0;0YFinding Subfields[133X[101X
+  
+  [1X67.3-1 IdealDecompositionsOfPolynomial[101X
+  
+  [33X[1;0Y[29X[2XIdealDecompositionsOfPolynomial[102X( [3Xpol[103X ) [32X function[133X
+  
+  [33X[0;0YLet  [22Xf[122X  be  a  univariate,  rational, irreducible, polynomial. A pair [22Xg[122X,[22Xh[122X of
+  polynomials   of   degree  strictly  smaller  than  that  of  [22Xf[122X,  such  that
+  [22Xf(x)|g(h(x))[122X  is  called  an  ideal  decomposition.  In the context of field
+  extensions,  if  [22Xα[122X is a root of [22Xf[122X in a suitable extension and [22XQ[122X the field of
+  rational  numbers.  Such decompositions correspond to (proper) subfields [22XQ <
+  Q(β)  <  Q(α)[122X,  where  [22Xg[122X  is  the  minimal  polynomial  of  [22Xβ[122X. This function
+  determines  such  decompositions  up to equality of the subfields [22XQ(β)[122X, thus
+  determining  subfields  of a given algebraic extension. It returns a list of
+  pairs  [22X[g,h][122X  (and  an  empty  list if no such decomposition exists). If the
+  option  [3Xonlyone[103X  is  given  it  returns  at most one such decomposition (and
+  performs faster).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xx:=X(Rationals,"x");;pol:=x^8-24*x^6+144*x^4-288*x^2+144;;[127X[104X
+    [4X[25Xgap>[125X [27Xl:=IdealDecompositionsOfPolynomial(pol);[127X[104X
+    [4X[28X[ [ x^2+72*x+144, x^6-20*x^4+60*x^2-36 ],[128X[104X
+    [4X[28X  [ x^2-48*x+144, x^6-21*x^4+84*x^2-48 ],[128X[104X
+    [4X[28X  [ x^2+288*x+17280, x^6-24*x^4+132*x^2-288 ],[128X[104X
+    [4X[28X  [ x^4-24*x^3+144*x^2-288*x+144, x^2 ] ][128X[104X
+    [4X[25Xgap>[125X [27XList(l,x->Value(x[1],x[2])/pol);[127X[104X
+    [4X[28X[ x^4-16*x^2-8, x^4-18*x^2+33, x^4-24*x^2+120, 1 ][128X[104X
+    [4X[25Xgap>[125X [27XIdealDecompositionsOfPolynomial(pol:onlyone);[127X[104X
+    [4X[28X[ [ x^2+72*x+144, x^6-20*x^4+60*x^2-36 ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIn  this  example  the given polynomial is regular with Galois group [22XQ_8[122X, as
+  expected we get four proper subfields.[133X
+  

@@ -1,0 +1,1479 @@
+  
+  [1X26 [33X[0;0YVector and Matrix Objects[133X[101X
+  
+  [33X[0;0YThis  chapter  describes an interface to vector and matrix objects which are
+  not represented by plain lists (of plain lists), cf. Chapters [14X23[114X and [14X24[114X.[133X
+  
+  
+  [1X26.1 [33X[0;0YConcepts and Rules for Vector and Matrix Objects[133X[101X
+  
+  [33X[0;0YTraditionally,  vectors  and matrices in [5XGAP[105X have been represented by (lists
+  of)  lists,  see  the  chapters  [14X23[114X  and [14X24[114X. More precisely, the term [21Xvector[121X
+  (corresponding  to  the  filter [2XIsVector[102X ([14X31.14-14[114X)) is used in the abstract
+  sense of an [21Xelement of a vector space[121X, the term [21Xrow vector[121X (corresponding to
+  [2XIsRowVector[102X  ([14X23.1-1[114X))  is  used  to  denote  a  [21Xcoordinate  vector[121X which is
+  represented by a [5XGAP[105X list (see [2XIsList[102X ([14X21.1-1[114X)), and the term [21Xmatrix[121X is used
+  to  denote  a  list  of  lists,  with  additional  properties  (see [2XIsMatrix[102X
+  ([14X24.2-1[114X)).[133X
+  
+  [33X[0;0YUnfortunately,  such  lists  (objects  in [2XIsPlistRep[102X ([14X21.24-2[114X)) cannot store
+  their  type,  and  so it is impossible to use the advantages of [5XGAP[105X's method
+  selection  on  them.  This  situation is unsustainable in the long run since
+  more  special  representations  (compressed, sparse, etc.) have already been
+  and  even more will be implemented. Here we describe a programming interface
+  to vectors and matrices, which solves this problem,[133X
+  
+  [33X[0;0YThe  idea  of this interface is that [5XGAP[105X should be able to represent vectors
+  and  matrices  by  objects  that  store their type, in order to benefit from
+  method  selection.  These  objects  are  created  by  [2XObjectify[102X ([14X79.1-1[114X), we
+  therefore   refer   to  the  them  as  [21Xvector  objects[121X  and  [21Xmatrix  objects[121X
+  respectively.[133X
+  
+  [33X[0;0Y(Of  course the terminology is somewhat confusing: An [21Xabstract matrix[121X in [5XGAP[105X
+  can  be  represented either by a list of lists or by a matrix object. It can
+  be  detected from the filter [2XIsMatrixOrMatrixObj[102X ([14X26.2-3[114X); this is the union
+  of  the  filters  [2XIsMatrix[102X  ([14X24.2-1[114X)  –which denotes those matrices that are
+  represented  by  lists  of lists– and the filter [2XIsMatrixObj[102X ([14X26.2-2[114X) –which
+  defines  [21Xproper[121X  matrix objects in the above sense. In particular, we do [13Xnot[113X
+  regard  the  objects  in  [2XIsMatrix[102X  ([14X24.2-1[114X)  as special cases of objects in
+  [2XIsMatrixObj[102X  ([14X26.2-2[114X),  or vice versa. Thus one can install specific methods
+  for  all three situations: just for [21Xproper[121X matrix objects, just for matrices
+  represented by lists of lists, or for both kinds of matrices. For example, a
+  [5XGAP[105X  package may decide to accept only [21Xproper[121X matrix objects as arguments of
+  its functions, or it may try to support also objects in [2XIsMatrix[102X ([14X24.2-1[114X) as
+  far as this is possible.)[133X
+  
+  [33X[0;0YWe  want  to  be  able  to write (efficient) code that is independent of the
+  actual  representation  (in  the  sense of [5XGAP[105X's representation filters, see
+  Section [14X13.4[114X) and preserves it.[133X
+  
+  [33X[0;0YThis  latter requirement makes it necessary to distinguish between different
+  representations of matrices: [21XRow list[121X matrices (see [2XIsRowListMatrix[102X ([14X26.2-4[114X)
+  behave  basically  like lists of rows, in particular the rows are individual
+  [5XGAP[105X  objects  that  can  be shared between different matrix objects. One can
+  think   of  other  representations  of  matrices,  such  as  matrices  whose
+  subobjects  represent columns, or [21Xflat[121X matrices which do not have subobjects
+  like  rows  or  columns  at  all. The different kinds of matrices have to be
+  distinguished  already  with respect to the definition of the operations for
+  them.[133X
+  
+  [33X[0;0YIn  particular  vector  and  matrix  objects  know  their  base  domain (see
+  [2XBaseDomain[102X  ([14X26.3-1[114X))  and their dimensions. The basic condition is that the
+  entries  of  vector and matrix objects must either lie in the base domain or
+  naturally  embed in the sense that addition and multiplication automatically
+  work  with  elements of the base domain; for example, a matrix object over a
+  polynomial ring may also contain entries from the coefficient ring.[133X
+  
+  [33X[0;0YVector  and  matrix  objects  may  be  mutable  or  immutable. Of course all
+  operations  changing  an  object  are  only  allowed/implemented for mutable
+  variants.[133X
+  
+  [33X[0;0YVector  objects are equal with respect to [2X\=[102X ([14X31.11-1[114X) if they have the same
+  length  and  the  same  entries. It is not necessary that they have the same
+  base  domain.  Matrices  are equal with respect to [2X\=[102X ([14X31.11-1[114X) if they have
+  the same dimensions and the same entries.[133X
+  
+  [33X[0;0YFor  a  row  list matrix object, it is not guaranteed that all its rows have
+  the  same  vector  type.  It  is  for example thinkable that a matrix object
+  stores  some of its rows in a sparse representation and some in a dense one.
+  However,  it  is  guaranteed  that  the  rows  of  two  matrices in the same
+  representation  are  compatible  in  the  sense  that  all vector operations
+  defined  in  this  interface can be applied to them and that new matrices in
+  the same representation as the original matrix can be formed out of them.[133X
+  
+  [33X[0;0YNote  that  there is neither a default mapping from the set of matrix object
+  representations  to the set of vector representations nor one in the reverse
+  direction. There is in general no [21Xassociated[121X vector object representation to
+  a    matrix    object    representation    or    vice    versa.    (However,
+  [2XCompatibleVectorFilter[102X  ([14X26.3-3[114X) may describe a vector object representation
+  that is compatible with a given matrix object.)[133X
+  
+  [33X[0;0YThe  recommended  way  to  write  code  that  preserves  the  representation
+  basically  works by using constructing operations that take template objects
+  to decide about the intended representation for the new object.[133X
+  
+  [33X[0;0YVector and matrix objects do not have to be [5XGAP[105X lists in the sense of [2XIsList[102X
+  ([14X21.1-1[114X).  Note  that  objects  not  in  the filter [2XIsList[102X ([14X21.1-1[114X) need not
+  support  all  list  operations, and their behaviour is not prescribed by the
+  rules  for lists, e.g., behaviour w.r.t. arithmetic operations. However, row
+  list  matrices  behave nearly like lists of row vectors that insist on being
+  dense  and containing only vectors of the same length and with the same base
+  domain.[133X
+  
+  [33X[0;0YVector  and  matrix  objects  are not likely to benefit from [5XGAP[105X's immediate
+  methods  (see  section  [14X78.7[114X).  Therefore it may be useful to set the filter
+  [2XIsNoImmediateMethodsObject[102X ([14X78.7-2[114X) in the definition of new kinds of vector
+  and matrix objects.[133X
+  
+  [33X[0;0YFor information on how to implement new [2XIsMatrixObj[102X ([14X26.2-2[114X) and [2XIsVectorObj[102X
+  ([14X26.2-1[114X) representations see Section [14X26.14[114X.[133X
+  
+  
+  [1X26.2 [33X[0;0YCategories of Vector and Matrix Objects[133X[101X
+  
+  [33X[0;0YCurrently  the  following  categories  of  vector  and  matrix  objects  are
+  supported in [5XGAP[105X. More can be added as soon as there is need for them.[133X
+  
+  [1X26.2-1 IsVectorObj[101X
+  
+  [33X[1;0Y[29X[2XIsVectorObj[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YThe  idea  behind [13Xvector objects[113X is that one wants to deal with objects like
+  coefficient  lists  of fixed length over a given domain [22XR[122X, say, which can be
+  added  and  can  be  multiplied from the left with elements from [22XR[122X. A vector
+  object  [22Xv[122X,  say,  is  always  a copyable object (see [2XIsCopyable[102X ([14X12.6-1[114X)) in
+  [2XIsVector[102X  ([14X31.14-14[114X),  which  knows  the values of [2XBaseDomain[102X ([14X26.3-1[114X) (with
+  value  [22XR[122X)  and [2XLength[102X ([14X21.17-5[114X), where [22XR[122X is a domain (see Chapter [14X12.4[114X) that
+  has  methods for [2XZero[102X ([14X31.10-3[114X), [2XOne[102X ([14X31.10-2[114X), [2X\in[102X ([14X30.6-1[114X), [2XCharacteristic[102X
+  ([14X31.10-1[114X),  [2XIsFinite[102X ([14X30.4-2[114X). We say that [22Xv[122X is defined over [22XR[122X. Typically, [22XR[122X
+  will be at least a semiring.[133X
+  
+  [33X[0;0YFor  creating  new  vector  objects  compatible  with  [22Xv[122X, [2XNewVector[102X ([14X26.4-1[114X)
+  requires that also the value of [2XConstructingFilter[102X ([14X26.3-2[114X) is known for [22Xv[122X.[133X
+  
+  [33X[0;0YFurther,  entry  access [22Xv[i][122X is expected to return a [5XGAP[105X object, for [22X1 ≤ i ≤[122X[10X
+  Length[110X[22X( v )[122X, and that these entries of [22Xv[122X belong to the base domain [22XR[122X.[133X
+  
+  [33X[0;0YNote  that  we  do  [13Xnot[113X  require  that  [22Xv[122X  is  a list in the sense of [2XIsList[102X
+  ([14X21.1-1[114X), in particular the rules of list arithmetic (see the sections [14X21.13[114X
+  and  [14X21.14[114X)  need  [13Xnot[113X  hold.  For example, the sum of two vector objects of
+  different lengths or defined over different base domains is not defined, and
+  a  plain  list  of vector objects is not a matrix. Also unbinding entries of
+  vector objects is not defined.[133X
+  
+  [33X[0;0YScalar multiplication from the left is defined only with elements from [22XR[122X.[133X
+  
+  [33X[0;0YThe  family  of  [22Xv[122X (see [2XFamilyObj[102X ([14X13.1-1[114X)) is the same as the family of its
+  base  domain [22XR[122X. However, it is [13Xnot[113X required that the entries lie in [22XR[122X in the
+  sense  of [2X\in[102X ([14X30.6-1[114X), also values may occur that can be naturally embedded
+  into [22XR[122X. For example, if [22XR[122X is a polynomial ring then some entries in [22Xv[122X may be
+  elements of the coefficient ring of [22XR[122X.[133X
+  
+  [1X26.2-2 IsMatrixObj[101X
+  
+  [33X[1;0Y[29X[2XIsMatrixObj[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YThe idea behind [13Xmatrix objects[113X is that one wants to deal with objects like [22Xm[122X
+  by  [22Xn[122X  arrays  over a given domain [22XR[122X, say, which can be added and multiplied
+  and can be multiplied from the left with elements from [22XR[122X. A matrix object [22XM[122X,
+  say,  is  always  a  copyable  object  (see [2XIsCopyable[102X ([14X12.6-1[114X)) in [2XIsVector[102X
+  ([14X31.14-14[114X)  and  [2XIsScalar[102X  ([14X31.14-20[114X),  which knows the values of [2XBaseDomain[102X
+  ([14X26.3-1[114X)  (with  value [22XR[122X), [2XNumberRows[102X ([14X26.3-5[114X) (with value [22Xm[122X), [2XNumberColumns[102X
+  ([14X26.3-5[114X)  (with  value  [22Xn[122X),  where [22XR[122X is a domain (see Chapter [14X12.4[114X) that has
+  methods  for  [2XZero[102X  ([14X31.10-3[114X),  [2XOne[102X  ([14X31.10-2[114X), [2X\in[102X ([14X30.6-1[114X), [2XCharacteristic[102X
+  ([14X31.10-1[114X),  [2XIsFinite[102X ([14X30.4-2[114X). We say that [22Xv[122X is defined over [22XR[122X. Typically, [22XR[122X
+  will be at least a semiring.[133X
+  
+  [33X[0;0YFor  creating  new  matrix  objects  compatible  with  [22XM[122X, [2XNewMatrix[102X ([14X26.4-4[114X)
+  requires that also the value of [2XConstructingFilter[102X ([14X26.3-2[114X) is known for [22XM[122X.[133X
+  
+  [33X[0;0YFurther, entry access [22XM[i,j][122X is expected to return a [5XGAP[105X object, for [22X1 ≤ i ≤
+  m[122X and [22X1 ≤ j ≤ n[122X, and that these entries of [22XM[122X belong to the base domain [22XR[122X.[133X
+  
+  [33X[0;0YNote  that  we  do  [13Xnot[113X  require  that  [22XM[122X  is  a list in the sense of [2XIsList[102X
+  ([14X21.1-1[114X), in particular the rules of list arithmetic (see the sections [14X21.13[114X
+  and [14X21.14[114X) need [13Xnot[113X hold. For example, accessing [21Xrows[121X of [22XM[122X via [2X\[\][102X ([14X21.2-1[114X)
+  is in general not possible, and the sum of two matrix objects with different
+  numbers  of rows or columns is not defined. Also unbinding entries of matrix
+  objects is not defined.[133X
+  
+  [33X[0;0YScalar multiplication from the left is defined only with elements from [22XR[122X.[133X
+  
+  [33X[0;0YIt is not assumed that the multiplication in [22XR[122X is associative, and we do not
+  define  what the [22Xk[122X-th power of a matrix object is in this case, for positive
+  integers [22Xk[122X. (However, a default powering method is available.)[133X
+  
+  [33X[0;0YThe  filter  [2XIsMatrixObj[102X alone does [13Xnot[113X imply that the multiplication is the
+  usual  matrix  multiplication.  This  multiplication  can be defined via the
+  filter   [2XIsOrdinaryMatrix[102X   ([14X24.2-2[114X);   this   filter   together   with  the
+  associativity  of  the  base domain also implies the associativity of matrix
+  multiplication.  For example, elements of matrix Lie algebras (see [2XLieObject[102X
+  ([14X64.1-1[114X)) lie in [2XIsMatrixObj[102X but not in [2XIsOrdinaryMatrix[102X ([14X24.2-2[114X).[133X
+  
+  [33X[0;0YThe  family  of  [22XM[122X  (see  [2XFamilyObj[102X ([14X13.1-1[114X)) is the collections family (see
+  [2XCollectionsFamily[102X  ([14X30.2-1[114X))  of  its  base  domain  [22XR[122X.  However,  it is [13Xnot[113X
+  required that the entries lie in [22XR[122X in the sense of [2X\in[102X ([14X30.6-1[114X), also values
+  may  occur  that  can  be  naturally embedded into [22XR[122X. For example, if [22XR[122X is a
+  polynomial  ring  then  some entries in [22XM[122X may be elements of the coefficient
+  ring of [22XR[122X.[133X
+  
+  [1X26.2-3 IsMatrixOrMatrixObj[101X
+  
+  [33X[1;0Y[29X[2XIsMatrixOrMatrixObj[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YSeveral  functions  are defined for objects in [2XIsMatrix[102X ([14X24.2-1[114X) and objects
+  in   [2XIsMatrixObj[102X   ([14X26.2-2[114X).   All   these   objects   lie   in  the  filter
+  [2XIsMatrixOrMatrixObj[102X.  It should be used in situations where an object can be
+  either  a  list  of  lists in [2XIsMatrix[102X ([14X24.2-1[114X) or a [21Xproper[121X matrix object in
+  [2XIsMatrixObj[102X  ([14X26.2-2[114X), for example as a requirement in the installation of a
+  method for such an argument.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm:= IdentityMat( 2, GF(2) );;[127X[104X
+    [4X[25Xgap>[125X [27XIsMatrix( m );  IsMatrixObj( m ); IsMatrixOrMatrixObj( m );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xm:= NewIdentityMatrix( IsPlistMatrixRep, GF(2), 2 );;[127X[104X
+    [4X[25Xgap>[125X [27XIsMatrix( m );  IsMatrixObj( m ); IsMatrixOrMatrixObj( m );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X26.2-4 IsRowListMatrix[101X
+  
+  [33X[1;0Y[29X[2XIsRowListMatrix[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YA  [13Xrow  list  matrix  object[113X is a matrix object (see [2XIsMatrixObj[102X ([14X26.2-2[114X)) [22XM[122X
+  which  admits  access  to  its  rows,  that  is,  list access [22XM[i][122X (see [2X\[\][102X
+  ([14X21.2-1[114X)) yields the [22Xi[122X-th row of [22XM[122X, for [22X1 ≤ i ≤[122X [10XNumberRows( [110X[22XM[122X[10X )[110X.[133X
+  
+  [33X[0;0YAll  rows  are  [2XIsVectorObj[102X  ([14X26.2-1[114X)  objects  in  the same representation.
+  Several  rows  of  a  row  list  matrix object can be identical objects, and
+  different  row  list  matrices  may  share  rows.  Row  access  just gives a
+  reference to the row object, without copying the row.[133X
+  
+  [33X[0;0YMatrix  objects  in  [2XIsRowListMatrix[102X are [13Xnot[113X necessarily in [2XIsList[102X ([14X21.1-1[114X),
+  and then they need not obey the general rules for lists.[133X
+  
+  
+  [1X26.3 [33X[0;0YDefining Attributes of Vector and Matrix Objects[133X[101X
+  
+  
+  [1X26.3-1 [33X[0;0YBaseDomain[133X[101X
+  
+  [33X[1;0Y[29X[2XBaseDomain[102X( [3Xvector[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XBaseDomain[102X( [3Xmatrix[103X ) [32X attribute[133X
+  
+  [33X[0;0YThe  vector  object [3Xvector[103X or matrix object [3Xmatrix[103X, respectively, is defined
+  over the domain given by its [2XBaseDomain[102X value.[133X
+  
+  [33X[0;0YNote  that  not all entries of the object necessarily lie in its base domain
+  with respect to [2X\in[102X ([14X30.6-1[114X), see Section [14X26.1[114X.[133X
+  
+  
+  [1X26.3-2 [33X[0;0YConstructingFilter[133X[101X
+  
+  [33X[1;0Y[29X[2XConstructingFilter[102X( [3Xv[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XConstructingFilter[102X( [3XM[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya filter[133X
+  
+  [33X[0;0YCalled  with  a  vector  object  [3Xv[103X  or  a  matrix  object  [3XM[103X,  respectively,
+  [2XConstructingFilter[102X  returns  a filter [10Xf[110X such that when [2XNewVector[102X ([14X26.4-1[114X) or
+  [2XNewMatrix[102X ([14X26.4-4[114X), respectively, is called with [10Xf[110X then a vector object or a
+  matrix  object,  respectively, in the same representation as the argument is
+  produced.[133X
+  
+  [33X[0;0YIf  the  [2XConstructingFilter[102X value of [3Xv[103X or [3XM[103X implies [2XIsCopyable[102X ([14X12.6-1[114X) then
+  mutable  versions  of  [3Xv[103X or [3XM[103X can be created, otherwise all vector or matrix
+  objects with this filter are immutable.[133X
+  
+  
+  [1X26.3-3 [33X[0;0YCompatibleVectorFilter[133X[101X
+  
+  [33X[1;0Y[29X[2XCompatibleVectorFilter[102X( [3XM[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya filter[133X
+  
+  [33X[0;0YCalled  with  a  matrix  object  [3XM[103X,  [2XCompatibleVectorFilter[102X returns either a
+  filter  [10Xf[110X  such that vector objects with [2XConstructingFilter[102X ([14X26.3-2[114X) value [10Xf[110X
+  are  compatible  in  the  sense  that  [3XM[103X can be multiplied with these vector
+  objects, of [9Xfail[109X if no such filter is known.[133X
+  
+  [1X26.3-4 Length[101X
+  
+  [33X[1;0Y[29X[2XLength[102X( [3Xv[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturns the length of the vector object [3Xv[103X, which is defined to be the number
+  of entries of [3Xv[103X.[133X
+  
+  
+  [1X26.3-5 [33X[0;0YNumberRows and NumberColumns[133X[101X
+  
+  [33X[1;0Y[29X[2XNumberRows[102X( [3XM[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XNrRows[102X( [3XM[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XNumberColumns[102X( [3XM[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XNrCols[102X( [3XM[103X ) [32X attribute[133X
+  
+  [33X[0;0YFor a matrix object [3XM[103X, [2XNumberRows[102X and [2XNumberColumns[102X store the number of rows
+  and columns of [3XM[103X, respectively.[133X
+  
+  [33X[0;0Y[2XNrRows[102X   and   [2XNrCols[102X   are   synonyms   of  [2XNumberRows[102X  and  [2XNumberColumns[102X,
+  respectively.[133X
+  
+  
+  [1X26.4 [33X[0;0YConstructing Vector and Matrix Objects[133X[101X
+  
+  
+  [1X26.4-1 [33X[0;0YNewVector and NewZeroVector[133X[101X
+  
+  [33X[1;0Y[29X[2XNewVector[102X( [3Xfilt[103X, [3XR[103X, [3Xlist[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XNewZeroVector[102X( [3Xfilt[103X, [3XR[103X, [3Xn[103X ) [32X operation[133X
+  
+  [33X[0;0YFor  a filter [3Xfilt[103X, a semiring [3XR[103X, and a list [3Xlist[103X of elements that belong to
+  [3XR[103X,  [2XNewVector[102X  returns  a  vector  object  which  has the [2XConstructingFilter[102X
+  ([14X26.3-2[114X)  [3Xfilt[103X, the [2XBaseDomain[102X ([14X26.3-1[114X) [3XR[103X, and the entries in [3Xlist[103X. The list
+  [3Xlist[103X is guaranteed not to be changed by this operation.[133X
+  
+  [33X[0;0YIf  the  global option [10Xcheck[110X is set to [9Xfalse[109X then [2XNewVector[102X need not perform
+  consistency checks.[133X
+  
+  [33X[0;0YSimilarly,  [2XNewZeroVector[102X returns a vector object of length [3Xn[103X which has [3Xfilt[103X
+  and  [3XR[103X  as  [2XConstructingFilter[102X  ([14X26.3-2[114X) and [2XBaseDomain[102X ([14X26.3-1[114X) values, and
+  contains the zero of [3XR[103X in each position.[133X
+  
+  [33X[0;0YThe  returned  object  is  mutable  if  and  only if [3Xfilt[103X implies [2XIsCopyable[102X
+  ([14X12.6-1[114X).[133X
+  
+  
+  [1X26.4-2 [33X[0;0YVector[133X[101X
+  
+  [33X[1;0Y[29X[2XVector[102X( [3Xfilt[103X, [3XR[103X, [3Xlist[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XVector[102X( [3Xfilt[103X, [3XR[103X, [3Xv[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XVector[102X( [3XR[103X, [3Xlist[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XVector[102X( [3XR[103X, [3Xv[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XVector[102X( [3Xlist[103X, [3Xv[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XVector[102X( [3Xv1[103X, [3Xv2[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XVector[102X( [3Xlist[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ya vector object[133X
+  
+  [33X[0;0YIf  a  filter  [3Xfilt[103X  is  given as the first argument then a vector object is
+  returned  that  has  [2XConstructingFilter[102X ([14X26.3-2[114X) value [3Xfilt[103X, is defined over
+  the  base domain [3XR[103X, and has the entries given by the list [3Xlist[103X or the vector
+  object [3Xv[103X, respectively.[133X
+  
+  [33X[0;0YIf  a  semiring  [3XR[103X  is  given  as the first argument then a vector object is
+  returned  whose  [2XConstructingFilter[102X  ([14X26.3-2[114X) value is guessed from [3XR[103X, again
+  with base domain [3XR[103X and entries given by the last argument.[133X
+  
+  [33X[0;0YIn the remaining cases with two arguments, the first argument is a list or a
+  vector  object  that  defines  the  entries  of  the  result, and the second
+  argument is a vector object whose [2XConstructingFilter[102X ([14X26.3-2[114X) and [2XBaseDomain[102X
+  ([14X26.3-1[114X) are taken for the result.[133X
+  
+  [33X[0;0YIf  only  a list [3Xlist[103X is given then both the [2XConstructingFilter[102X ([14X26.3-2[114X) and
+  the [2XBaseDomain[102X ([14X26.3-1[114X) are guessed from this list.[133X
+  
+  [33X[0;0YThe variant [10XVector( [110X[3Xv1[103X[10X, [110X[3Xv2[103X[10X )[110X is supported also for the case that [3Xv2[103X is a row
+  vector  but  not  a  vector  object.  In this situation, the result is a row
+  vector that is equal to [3Xv1[103X and whose internal representation fits to that of
+  [3Xv2[103X.[133X
+  
+  [33X[0;0YIf  the  global  option  [10Xcheck[110X  is set to [9Xfalse[109X then [2XVector[102X need not perform
+  consistency checks.[133X
+  
+  [33X[0;0YIf  the  [2XConstructingFilter[102X  ([14X26.3-2[114X) value of the result implies [2XIsCopyable[102X
+  ([14X12.6-1[114X)  then  the  result  is  mutable  if  and  only if the argument that
+  determines the entries of the result ([3Xlist[103X, [3Xv[103X, [3Xv1[103X) is mutable.[133X
+  
+  [33X[0;0YIn the case of a mutable result, it is [13Xnot[113X guaranteed that the given list of
+  entries is copied.[133X
+  
+  [33X[0;0YDefault methods for [2XVector[102X delegate to [2XNewVector[102X ([14X26.4-1[114X).[133X
+  
+  
+  [1X26.4-3 [33X[0;0YZeroVector[133X[101X
+  
+  [33X[1;0Y[29X[2XZeroVector[102X( [3Xfilt[103X, [3XR[103X, [3Xlen[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XZeroVector[102X( [3XR[103X, [3Xlen[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XZeroVector[102X( [3Xlen[103X, [3Xv[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XZeroVector[102X( [3Xlen[103X, [3XM[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ya vector object[133X
+  
+  [33X[0;0YFor  a  filter  [3Xfilt[103X,  a  semiring  [3XR[103X  and  a  nonnegative integer [3Xlen[103X, this
+  operation  returns  a  new  vector  object  of  length  [3Xlen[103X  over  [3XR[103X  in the
+  representation [3Xfilt[103X containing only zeros.[133X
+  
+  [33X[0;0YIf only [3XR[103X and [3Xlen[103X are given, then [5XGAP[105X guesses a suitable representation.[133X
+  
+  [33X[0;0YFor  a vector object [3Xv[103X and a nonnegative integer [3Xlen[103X, this operation returns
+  a new vector object of length [3Xlen[103X in the same representation as [3Xv[103X containing
+  only zeros.[133X
+  
+  [33X[0;0YFor  a matrix object [3XM[103X and a nonnegative integer [3Xlen[103X, this operation returns
+  a  new  zero  vector object of length [3Xlen[103X in the representation given by the
+  [2XCompatibleVectorFilter[102X   ([14X26.3-3[114X)   value   of   [3XM[103X,  provided  that  such  a
+  representation exists.[133X
+  
+  [33X[0;0YIf  the  [2XConstructingFilter[102X  ([14X26.3-2[114X) value of the result implies [2XIsCopyable[102X
+  ([14X12.6-1[114X) then the result is mutable.[133X
+  
+  [33X[0;0YDefault methods for [2XZeroVector[102X delegate to [2XNewZeroVector[102X ([14X26.4-1[114X).[133X
+  
+  
+  [1X26.4-4 [33X[0;0YNewMatrix, NewZeroMatrix, NewIdentityMatrix[133X[101X
+  
+  [33X[1;0Y[29X[2XNewMatrix[102X( [3Xfilt[103X, [3XR[103X, [3Xncols[103X, [3Xlist[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XNewZeroMatrix[102X( [3Xfilt[103X, [3XR[103X, [3Xm[103X, [3Xn[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XNewIdentityMatrix[102X( [3Xfilt[103X, [3XR[103X, [3Xn[103X ) [32X operation[133X
+  
+  [33X[0;0YFor  a filter [3Xfilt[103X, a semiring [3XR[103X, a positive integer [3Xncols[103X, and a list [3Xlist[103X,
+  [2XNewMatrix[102X  returns a matrix object which has the [2XConstructingFilter[102X ([14X26.3-2[114X)
+  [3Xfilt[103X, the [2XBaseDomain[102X ([14X26.3-1[114X) [3XR[103X, [3Xn[103X columns (see [2XNumberColumns[102X ([14X26.3-5[114X)), and
+  the  entries  described  by [3Xlist[103X, which can be either a plain list of vector
+  objects  of length [3Xncols[103X or a plain list of plain lists of length [3Xncols[103X or a
+  plain list of length a multiple of [3Xncols[103X containing the entries in row major
+  order. The list [3Xlist[103X is guaranteed not to be changed by this operation.[133X
+  
+  [33X[0;0YThe  corresponding  entries must be in or compatible with [3XR[103X. If [3Xlist[103X already
+  contains vector objects, they are copied.[133X
+  
+  [33X[0;0YIf  the  global option [10Xcheck[110X is set to [9Xfalse[109X then [2XNewMatrix[102X need not perform
+  consistency checks.[133X
+  
+  [33X[0;0YSimilarly,  [2XNewZeroMatrix[102X  returns  a  zero  matrix object with [3Xm[103X rows and [3Xn[103X
+  columns  which  has [3Xfilt[103X and [3XR[103X as [2XConstructingFilter[102X ([14X26.3-2[114X) and [2XBaseDomain[102X
+  ([14X26.3-1[114X) values.[133X
+  
+  [33X[0;0YSimilarly,  [2XNewIdentityMatrix[102X  returns an identity matrix object with [3Xn[103X rows
+  and  columns  which  has  [3Xfilt[103X  and  [3XR[103X  as  [2XConstructingFilter[102X  ([14X26.3-2[114X) and
+  [2XBaseDomain[102X  ([14X26.3-1[114X)  values,  and contains the identity element of [3XR[103X in the
+  diagonal and the zero of [3XR[103X in each off-diagonal position.[133X
+  
+  [33X[0;0YThe  returned  object  is  mutable  if  and  only if [3Xfilt[103X implies [2XIsCopyable[102X
+  ([14X12.6-1[114X).[133X
+  
+  
+  [1X26.4-5 [33X[0;0YMatrix[133X[101X
+  
+  [33X[1;0Y[29X[2XMatrix[102X( [3Xfilt[103X, [3XR[103X, [3Xlist[103X, [3Xncols[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XMatrix[102X( [3Xfilt[103X, [3XR[103X, [3Xlist[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XMatrix[102X( [3Xfilt[103X, [3XR[103X, [3XM[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XMatrix[102X( [3XR[103X, [3Xlist[103X, [3Xncols[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XMatrix[102X( [3XR[103X, [3Xlist[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XMatrix[102X( [3XR[103X, [3XM[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XMatrix[102X( [3Xlist[103X, [3Xncols[103X, [3XM[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XMatrix[102X( [3Xlist[103X, [3XM[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XMatrix[102X( [3XM1[103X, [3XM2[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XMatrix[102X( [3Xlist[103X, [3Xncols[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XMatrix[102X( [3Xlist[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ya matrix object[133X
+  
+  [33X[0;0YIf  a  filter  [3Xfilt[103X  is  given as the first argument then a matrix object is
+  returned  that  has  [2XConstructingFilter[102X ([14X26.3-2[114X) value [3Xfilt[103X, is defined over
+  the  base domain [3XR[103X, and has the entries given by the list [3Xlist[103X or the matrix
+  object  [3XM[103X,  respectively. Here [3Xlist[103X can be either a list of plain lists that
+  describe the entries of the rows, or a flat list of the entries in row major
+  order, where [3Xncols[103X defines the number of columns.[133X
+  
+  [33X[0;0YIf  a  semiring  [3XR[103X  is  given  as the first argument then a matrix object is
+  returned  whose  [2XConstructingFilter[102X  ([14X26.3-2[114X) value is guessed from [3XR[103X, again
+  with base domain [3XR[103X and entries given by the last argument.[133X
+  
+  [33X[0;0YIn  those  remaining  cases  where the last argument is a matrix object, the
+  first  argument  is  a  list  or a matrix object that defines (together with
+  [3Xncols[103X  if  applicable) the entries of the result, and the [2XConstructingFilter[102X
+  ([14X26.3-2[114X)  and  [2XBaseDomain[102X  ([14X26.3-1[114X)  of  the last argument are taken for the
+  result.[133X
+  
+  [33X[0;0YFinally,  if  only  a  list  [3Xlist[103X  and  perhaps [3Xncols[103X is given then both the
+  [2XConstructingFilter[102X ([14X26.3-2[114X) and the [2XBaseDomain[102X ([14X26.3-1[114X) are guessed from the
+  list.[133X
+  
+  [33X[0;0YIf  the  global  option  [10Xcheck[110X  is set to [9Xfalse[109X then [2XMatrix[102X need not perform
+  consistency checks.[133X
+  
+  [33X[0;0YIf  the  [2XConstructingFilter[102X  ([14X26.3-2[114X) value of the result implies [2XIsCopyable[102X
+  ([14X12.6-1[114X)  then  the  result  is  mutable  if  and  only if the argument that
+  determines the entries of the result ([3Xlist[103X, [3XM[103X, [3XM1[103X) is mutable.[133X
+  
+  [33X[0;0YIn  the  case of a mutable result, it is guaranteed that the given list [3Xlist[103X
+  is copied in the sense of [2XShallowCopy[102X ([14X12.7-1[114X), and if [3Xlist[103X is a nested list
+  then it is [13Xnot[113X guaranteed that also the entries of [3Xlist[103X are copied.[133X
+  
+  [33X[0;0YDefault methods for [2XMatrix[102X delegate to [2XNewMatrix[102X ([14X26.4-4[114X).[133X
+  
+  
+  [1X26.4-6 [33X[0;0YZeroMatrix[133X[101X
+  
+  [33X[1;0Y[29X[2XZeroMatrix[102X( [3Xm[103X, [3Xn[103X, [3XM[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XZeroMatrix[102X( [3XR[103X, [3Xm[103X, [3Xn[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XZeroMatrix[102X( [3Xfilt[103X, [3XR[103X, [3Xm[103X, [3Xn[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ya matrix object[133X
+  
+  [33X[0;0YFor  a  matrix object [3XM[103X and two nonnegative integers [3Xm[103X and [3Xn[103X, this operation
+  returns  a  new  matrix  object  with  [3Xm[103X  rows  and  [3Xn[103X  columns  in the same
+  representation and over the same base domain as [3XM[103X containing only zeros.[133X
+  
+  [33X[0;0YIf  a  semiring  [3XR[103X  and  two  nonnegative  integers  [3Xm[103X  and [3Xn[103X are given, the
+  representation of the result is guessed from [3XR[103X.[133X
+  
+  [33X[0;0YIf  a  filter  [3Xfilt[103X  and  a  semiring  [3XR[103X  are  given as the first and second
+  argument,  they  are  taken as the values of [2XConstructingFilter[102X ([14X26.3-2[114X) and
+  [2XBaseDomain[102X ([14X26.3-1[114X) of the result.[133X
+  
+  [33X[0;0YIf  the  [2XConstructingFilter[102X  ([14X26.3-2[114X) value of the result implies [2XIsCopyable[102X
+  ([14X12.6-1[114X) then the result is fully mutable.[133X
+  
+  [33X[0;0YDefault methods for [2XZeroMatrix[102X delegate to [2XNewZeroMatrix[102X ([14X26.4-4[114X).[133X
+  
+  
+  [1X26.4-7 [33X[0;0YIdentityMatrix[133X[101X
+  
+  [33X[1;0Y[29X[2XIdentityMatrix[102X( [3Xn[103X, [3XM[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XIdentityMatrix[102X( [3XR[103X, [3Xn[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XIdentityMatrix[102X( [3Xfilt[103X, [3XR[103X, [3Xn[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ya matrix object[133X
+  
+  [33X[0;0YFor  a matrix object [3XM[103X and a nonnegative integer [3Xn[103X, this operation returns a
+  new   identity   matrix   object  with  [3Xn[103X  rows  and  columns  in  the  same
+  representation and over the same base domain as [3XM[103X.[133X
+  
+  [33X[0;0YIf  a semiring [3XR[103X and a nonnegative integer [3Xn[103X is given, the representation of
+  the result is guessed from [3XR[103X.[133X
+  
+  [33X[0;0YIf  a  filter  [3Xfilt[103X  and  a  semiring  [3XR[103X  are  given as the first and second
+  argument,  they  are  taken as the values of [2XConstructingFilter[102X ([14X26.3-2[114X) and
+  [2XBaseDomain[102X ([14X26.3-1[114X) of the result.[133X
+  
+  [33X[0;0YIf  the  [2XConstructingFilter[102X  ([14X26.3-2[114X) value of the result implies [2XIsCopyable[102X
+  ([14X12.6-1[114X) then the result is fully mutable.[133X
+  
+  [33X[0;0YDefault methods for [2XIdentityMatrix[102X delegate to [2XNewIdentityMatrix[102X ([14X26.4-4[114X).[133X
+  
+  
+  [1X26.5 [33X[0;0YOperations for Base Domains of Vector and Matrix Objects[133X[101X
+  
+  
+  [1X26.5-1 [33X[0;0YOneOfBaseDomain and ZeroOfBaseDomain[133X[101X
+  
+  [33X[1;0Y[29X[2XOneOfBaseDomain[102X( [3Xv[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XOneOfBaseDomain[102X( [3XM[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XZeroOfBaseDomain[102X( [3Xv[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XZeroOfBaseDomain[102X( [3XM[103X ) [32X attribute[133X
+  
+  [33X[0;0YThese  attributes  return  the  identity element and the zero element of the
+  [2XBaseDomain[102X  ([14X26.3-1[114X)  value  of  the vector object [3Xv[103X or the matrix object [3XM[103X,
+  respectively.[133X
+  
+  [33X[0;0YIf  [3Xv[103X  or  [3XM[103X,  respectively, is a plain list (see [2XIsPlistRep[102X ([14X21.24-2[114X)) then
+  computing  its  [2XBaseDomain[102X  ([14X26.3-1[114X)  value  can  be  regarded as expensive,
+  whereas  calling  [2XOneOfBaseDomain[102X  or  [2XZeroOfBaseDomain[102X  can  be regarded as
+  cheap.  If  [3Xv[103X or [3XM[103X, respectively, is not a plain list then one can also call
+  [2XBaseDomain[102X ([14X26.3-1[114X) first, without loss of performance.[133X
+  
+  
+  [1X26.6 [33X[0;0YOperations for Vector and Matrix Objects[133X[101X
+  
+  
+  [1X26.6-1 [33X[0;0YComparison of Vector and Matrix Objects[133X[101X
+  
+  [33X[1;0Y[29X[2X\=[102X( [3Xv1[103X, [3Xv2[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2X\=[102X( [3XM1[103X, [3XM2[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2X\<[102X( [3Xv1[103X, [3Xv2[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2X\<[102X( [3XM1[103X, [3XM2[103X ) [32X operation[133X
+  
+  [33X[0;0YTwo  vector objects in [2XIsList[102X ([14X21.1-1[114X) are equal if they are equal as lists.
+  Two matrix objects in [2XIsList[102X ([14X21.1-1[114X) are equal if they are equal as lists.[133X
+  
+  [33X[0;0YTwo vector objects of which at least one is not in [2XIsList[102X ([14X21.1-1[114X) are equal
+  with  respect  to  [2X\=[102X  ([14X31.11-1[114X)  if  they  have the same [2XConstructingFilter[102X
+  ([14X26.3-2[114X) value, the same [2XBaseDomain[102X ([14X26.3-1[114X) value, the same length, and the
+  same entries.[133X
+  
+  [33X[0;0YTwo matrix objects of which at least one is not in [2XIsList[102X ([14X21.1-1[114X) are equal
+  with  respect  to  [2X\=[102X  ([14X31.11-1[114X)  if  they  have the same [2XConstructingFilter[102X
+  ([14X26.3-2[114X) value, the same [2XBaseDomain[102X ([14X26.3-1[114X) value, the same dimensions, and
+  the same entries.[133X
+  
+  [33X[0;0YWe  do  [13Xnot[113X  state a general rule how vector and matrix objects shall behave
+  w.r.t.  the  comparison by [2X\<[102X ([14X31.11-1[114X). Note that a [21Xrow lexicographic order[121X
+  would  be quite unnatural for matrices that are internally represented via a
+  list of columns.[133X
+  
+  [33X[0;0YNote  that  the  operations  [2X\=[102X  ([14X31.11-1[114X) and [2X\<[102X ([14X31.11-1[114X) are used to form
+  sorted  lists  and  sets  of objects, see for example [2XSort[102X ([14X21.18-1[114X) and [2XSet[102X
+  ([14X30.3-7[114X).[133X
+  
+  
+  [1X26.6-2 [33X[0;0YUnpack[133X[101X
+  
+  [33X[1;0Y[29X[2XUnpack[102X( [3Xv[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XUnpack[102X( [3XM[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA plain list[133X
+  
+  [33X[0;0YReturns  a  new mutable plain list (see [2XIsPlistRep[102X ([14X21.24-2[114X)) containing the
+  entries  of the vector object [3Xv[103X or the matrix object [3XM[103X, respectively. In the
+  case of a matrix object, the result is a plain list of plain lists.[133X
+  
+  [33X[0;0YChanging  the  result  does  not  change  [3Xv[103X  or [3XM[103X, respectively. The entries
+  themselves are not copied.[133X
+  
+  
+  [1X26.6-3 [33X[0;0YChangedBaseDomain[133X[101X
+  
+  [33X[1;0Y[29X[2XChangedBaseDomain[102X( [3Xv[103X, [3XR[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XChangedBaseDomain[102X( [3XM[103X, [3XR[103X ) [32X operation[133X
+  
+  [33X[0;0YFor   a   vector   object   [3Xv[103X   (a  matrix  object  [3XM[103X)  and  a  semiring  [3XR[103X,
+  [2XChangedBaseDomain[102X   returns   a  new  vector  object  (matrix  object)  with
+  [2XBaseDomain[102X ([14X26.3-1[114X) value [3XR[103X, [2XConstructingFilter[102X ([14X26.3-2[114X) value equal to that
+  of [3Xv[103X ([3XM[103X), and the same entries as [3Xv[103X ([3XM[103X).[133X
+  
+  [33X[0;0YThe result is mutable if and only if [3Xv[103X ([3XM[103X) is mutable.[133X
+  
+  [33X[0;0YFor  example,  one  can  create  a  vector  defined over [10XGF(4)[110X from a vector
+  defined over [10XGF(2)[110X with this operation.[133X
+  
+  
+  [1X26.6-4 [33X[0;0YRandomize[133X[101X
+  
+  [33X[1;0Y[29X[2XRandomize[102X( [[3XRs[103X, ][3Xv[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XRandomize[102X( [[3XRs[103X, ][3XM[103X ) [32X operation[133X
+  
+  [33X[0;0YReplaces  every  entry  in  the  mutable vector object [3Xv[103X or matrix object [3XM[103X,
+  respectively,   with  a  random  one  from  the  base  domain  of  [3Xv[103X  or  [3XM[103X,
+  respectively, and returns the argument.[133X
+  
+  [33X[0;0YIf  given, the random source [3XRs[103X is used to compute the random elements. Note
+  that  in  this case, a [2XRandom[102X ([14X14.7-2[114X) method must be available that takes a
+  random  source  as  its  first  argument  and  the base domain as its second
+  argument.[133X
+  
+  
+  [1X26.7 [33X[0;0YList Like Operations for Vector Objects[133X[101X
+  
+  [33X[0;0YThe  following  operations  that  are  defined for lists are useful also for
+  vector objects. (More such operations can be added if this is appropriate.)[133X
+  
+  
+  [1X26.7-1 [33X[0;0YElement Access and Assignment for Vector Objects[133X[101X
+  
+  [33X[1;0Y[29X[2X\[\][102X( [3Xv[103X, [3Xi[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2X\[\]\:\=[102X( [3Xv[103X, [3Xi[103X, [3Xobj[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2X\{\}[102X( [3Xv[103X, [3Xlist[103X ) [32X operation[133X
+  
+  [33X[0;0YFor  a  vector object [3Xv[103X and a positive integer [3Xi[103X that is not larger than the
+  length of [3Xv[103X (see [2XLength[102X ([14X26.3-4[114X)), [3Xv[103X[10X[[110X[3Xi[103X[10X][110X is the entry at position [3Xi[103X.[133X
+  
+  [33X[0;0YIf [3Xv[103X is mutable, [3Xi[103X is as above, and [3Xobj[103X is an object from the base domain of
+  [3Xv[103X then [3Xv[103X[10X[[110X[3Xi[103X[10X]:= [110X[3Xobj[103X assigns [3Xobj[103X to the [3Xi[103X-th position of [3Xv[103X.[133X
+  
+  [33X[0;0YIf  [3Xlist[103X  is a list of positive integers that are not larger than the length
+  of  [3Xv[103X  then  [3Xv[103X[10X{[110X[3Xlist[103X[10X}[110X  returns  a  new  mutable  vector  object  in  the same
+  representation  as  [3Xv[103X  (see  [2XConstructingFilter[102X  ([14X26.3-2[114X)) that contains the
+  [3Xlist[103X[22X[ k ][122X-th entry of [3Xv[103X at position [22Xk[122X.[133X
+  
+  [33X[0;0YIf  the  global  option [10Xcheck[110X is set to [9Xfalse[109X then [2X\[\]\:\=[102X need not perform
+  consistency checks.[133X
+  
+  [33X[0;0YNote  that  the  sublist  assignment operation [2X\{\}\:\=[102X ([14X21.4-1[114X) is left out
+  here  since it tempts the programmer to use constructions like [10Xv{ [ 1 .. 3 ]
+  }:=  w{  [ 4 .. 6 ] }[110X which produces an unnecessary intermediate object; one
+  should use [2XCopySubVector[102X ([14X26.9-3[114X) instead.[133X
+  
+  [1X26.7-2 PositionNonZero[101X
+  
+  [33X[1;0Y[29X[2XPositionNonZero[102X( [3Xv[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YAn integer[133X
+  
+  [33X[0;0YReturns  the  index  of  the  first entry in the vector object [3Xv[103X that is not
+  zero. If all entries are zero, the function returns [10XLength([3Xv[103X[10X) + 1[110X.[133X
+  
+  [1X26.7-3 PositionLastNonZero[101X
+  
+  [33X[1;0Y[29X[2XPositionLastNonZero[102X( [3Xv[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YAn integer[133X
+  
+  [33X[0;0YReturns the index of the last entry in the vector object [3Xv[103X that is not zero.
+  If all entries are zero, the function returns [22X0[122X.[133X
+  
+  [1X26.7-4 ListOp[101X
+  
+  [33X[1;0Y[29X[2XListOp[102X( [3Xv[103X[, [3Xfunc[103X] ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA plain list[133X
+  
+  [33X[0;0YApplies  the  function [3Xfunc[103X to each entry of the vector object [3Xv[103X and returns
+  the  results  as a mutable plain list. This allows for calling [2XList[102X ([14X30.3-5[114X)
+  on vector objects.[133X
+  
+  [33X[0;0YIf the argument [3Xfunc[103X is not given, applies [2XIdFunc[102X ([14X5.4-6[114X) to all entries.[133X
+  
+  
+  [1X26.8 [33X[0;0YArithmetical Operations for Vector Objects[133X[101X
+  
+  
+  [1X26.8-1 [33X[0;0YUnary Arithmetical Operations for Vector Objects[133X[101X
+  
+  [33X[1;0Y[29X[2XAdditiveInverseMutable[102X( [3Xv[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XAdditiveInverseSameMutability[102X( [3Xv[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XZeroMutable[102X( [3Xv[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XZeroSameMutability[102X( [3Xv[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XIsZero[102X( [3Xv[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XCharacteristic[102X( [3Xv[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya vector object[133X
+  
+  [33X[0;0YFor  a  vector  object  [3Xv[103X, the operations for computing the additive inverse
+  with   prescribed   mutability   return   a  vector  object  with  the  same
+  [2XConstructingFilter[102X  ([14X26.3-2[114X)  and  [2XBaseDomain[102X ([14X26.3-1[114X) values, such that the
+  sum  with  [3Xv[103X  is a zero vector. It is not specified what happens if the base
+  domain does not admit the additive inverses of the entries.[133X
+  
+  [33X[0;0YAnalogously,  the  operations  for  computing  a zero vector with prescribed
+  mutability return a vector object compatible with [3Xv[103X.[133X
+  
+  [33X[0;0Y[2XIsZero[102X returns [9Xtrue[109X if all entries in [3Xv[103X are zero, and [9Xfalse[109X otherwise.[133X
+  
+  [33X[0;0Y[2XCharacteristic[102X  returns  the  corresponding value of the [2XBaseDomain[102X ([14X26.3-1[114X)
+  value of [3Xv[103X.[133X
+  
+  
+  [1X26.8-2 [33X[0;0YBinary Arithmetical Operations for Vector Objects[133X[101X
+  
+  [33X[1;0Y[29X[2X\+[102X( [3Xv1[103X, [3Xv2[103X ) [32X method[133X
+  [33X[1;0Y[29X[2X\-[102X( [3Xv1[103X, [3Xv2[103X ) [32X method[133X
+  [33X[1;0Y[29X[2X\*[102X( [3Xs[103X, [3Xv[103X ) [32X method[133X
+  [33X[1;0Y[29X[2X\*[102X( [3Xv[103X, [3Xs[103X ) [32X method[133X
+  [33X[1;0Y[29X[2X\*[102X( [3Xv1[103X, [3Xv2[103X ) [32X method[133X
+  [33X[1;0Y[29X[2XScalarProduct[102X( [3Xv1[103X, [3Xv2[103X ) [32X method[133X
+  [33X[1;0Y[29X[2X\/[102X( [3Xv[103X, [3Xs[103X ) [32X method[133X
+  
+  [33X[0;0YThe sum and the difference, respectively, of two vector objects [3Xv1[103X and [3Xv2[103X is
+  a  new  mutable vector object whose entries are the sums and the differences
+  of the entries of the arguments.[133X
+  
+  [33X[0;0YThe  product  of a scalar [3Xs[103X and a vector object [3Xv[103X (from the left or from the
+  right)  is  a  new mutable vector object whose entries are the corresponding
+  products.[133X
+  
+  [33X[0;0YThe  quotient  of  a  vector object [3Xv[103X and a scalar [3Xs[103X is a new mutable vector
+  object whose entries are the corresponding quotients.[133X
+  
+  [33X[0;0YThe  product  of  two  vector  objects  [3Xv1[103X  and  [3Xv2[103X as well as the result of
+  [2XScalarProduct[102X  is  the  standard  scalar  product  of  the two arguments (an
+  element of the base domain of the vector objects).[133X
+  
+  [33X[0;0YAll  this is defined only if the vector objects have the same length and are
+  defined  over  the same base domain and have the same representation, and if
+  the  products  with the given scalar belong to the base domain; otherwise it
+  is  not specified what happens. If the result is a vector object then it has
+  the  same  representation  and  the  same  base  domain  as the given vector
+  object(s).[133X
+  
+  [1X26.8-3 AddVector[101X
+  
+  [33X[1;0Y[29X[2XAddVector[102X( [3Xdst[103X, [3Xsrc[103X[, [3Xmul[103X[, [3Xfrom[103X, [3Xto[103X]] ) [32X operation[133X
+  [33X[1;0Y[29X[2XAddVector[102X( [3Xdst[103X, [3Xmul[103X, [3Xsrc[103X[, [3Xfrom[103X, [3Xto[103X] ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ynothing[133X
+  
+  [33X[0;0YCalled  with  two  vector  objects  [3Xdst[103X  and [3Xsrc[103X, this function replaces the
+  entries of [3Xdst[103X in-place by the entries of the sum [3Xdst[103X[10X + [110X[3Xsrc[103X.[133X
+  
+  [33X[0;0YIf a scalar [3Xmul[103X is given as the third or second argument, respectively, then
+  the  entries  of [3Xdst[103X get replaced by those of [3Xdst[103X[10X + [110X[3Xsrc[103X[10X * [110X[3Xmul[103X or [3Xdst[103X[10X + [110X[3Xmul[103X[10X *
+  [110X[3Xsrc[103X, respectively.[133X
+  
+  [33X[0;0YIf  the  optional parameters [3Xfrom[103X and [3Xto[103X are given then only the index range
+  [10X[[3Xfrom[103X[10X..[3Xto[103X[10X][110X  is  guaranteed to be affected. Other indices [13Xmay[113X be affected, if
+  it  is  more  convenient to do so. This can be helpful if entries of [3Xsrc[103X are
+  known to be zero.[133X
+  
+  [33X[0;0YIf [3Xfrom[103X is bigger than [3Xto[103X, the operation does nothing.[133X
+  
+  [1X26.8-4 MultVector[101X
+  
+  [33X[1;0Y[29X[2XMultVector[102X( [3Xv[103X, [3Xmul[103X[, [3Xfrom[103X, [3Xto[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XMultVectorLeft[102X( [3Xv[103X, [3Xmul[103X[, [3Xfrom[103X, [3Xto[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XMultVectorRight[102X( [3Xv[103X, [3Xmul[103X[, [3Xfrom[103X, [3Xto[103X] ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ynothing[133X
+  
+  [33X[0;0YThese  operations multiply [3Xv[103X by [3Xmul[103X in-place where [2XMultVectorLeft[102X multiplies
+  with [3Xmul[103X from the left and [2XMultVectorRight[102X does so from the right.[133X
+  
+  [33X[0;0YNote  that  [2XMultVector[102X is just a synonym for [2XMultVectorLeft[102X. This was chosen
+  because  vectors in [5XGAP[105X are by default row vectors and scalar multiplication
+  is  usually written as [22Xa ⋅ v = a ⋅ [v_1, ..., v_n] = [a ⋅ v_1, ..., a ⋅ v_n][122X
+  with scalars being applied from the left.[133X
+  
+  [33X[0;0YIf  the  optional parameters [3Xfrom[103X and [3Xto[103X are given then only the index range
+  [10X[[3Xfrom[103X[10X..[3Xto[103X[10X][110X  is  guaranteed to be affected. Other indices [13Xmay[113X be affected, if
+  it  is  more  convenient  to  do so. This can be helpful if entries of [3Xv[103X are
+  known to be zero. If [3Xfrom[103X is bigger than [3Xto[103X, the operation does nothing.[133X
+  
+  
+  [1X26.9 [33X[0;0YOperations for Vector Objects[133X[101X
+  
+  
+  [1X26.9-1 [33X[0;0YConcatenationOfVectors[133X[101X
+  
+  [33X[1;0Y[29X[2XConcatenationOfVectors[102X( [3Xv1[103X, [3Xv2[103X, [3X...[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XConcatenationOfVectors[102X( [3Xvlist[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10Ya vector object[133X
+  
+  [33X[0;0YReturns a new mutable vector object in the representation of [3Xv1[103X or the first
+  entry  of the nonempty list [3Xvlist[103X of vector objects, respectively, such that
+  the entries are the concatenation of the given vector objects.[133X
+  
+  [33X[0;0Y(Note that [2XConcatenation[102X ([14X21.20-1[114X) is a function for which no methods can be
+  installed.)[133X
+  
+  [1X26.9-2 ExtractSubVector[101X
+  
+  [33X[1;0Y[29X[2XExtractSubVector[102X( [3Xv[103X, [3Xl[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ya vector object[133X
+  
+  [33X[0;0YReturns  a new mutable vector object of the same vector representation as [3Xv[103X,
+  containing the entries of [3Xv[103X at the positions in the list [3Xl[103X.[133X
+  
+  [33X[0;0YThis  is  the  same  as  [3Xv[103X[10X{[110X[3Xl[103X[10X}[110X,  the  name [2XExtractSubVector[102X was introduced in
+  analogy  to [2XExtractSubMatrix[102X ([14X26.11-3[114X), for which no equivalent syntax using
+  curly brackets is available.[133X
+  
+  [1X26.9-3 CopySubVector[101X
+  
+  [33X[1;0Y[29X[2XCopySubVector[102X( [3Xsrc[103X, [3Xdst[103X, [3Xscols[103X, [3Xdcols[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ynothing[133X
+  
+  [33X[0;0YFor  two vector objects [3Xsrc[103X and [3Xdst[103X, such that [3Xdst[103X is mutable, and two lists
+  [3Xscols[103X and [3Xdcols[103X of positions, [2XCopySubVector[102X assigns the entries [3Xsrc[103X[10X{ [110X[3Xscols[103X[10X }[110X
+  (see  [2XExtractSubVector[102X  ([14X26.9-2[114X)) to the positions [3Xdcols[103X in [3Xdst[103X, but without
+  creating  an  intermediate  object and thus –at least in special cases– much
+  more efficiently.[133X
+  
+  [33X[0;0YFor certain objects like compressed vectors this might be significantly more
+  efficient if [3Xscols[103X and [3Xdcols[103X are ranges with increment 1.[133X
+  
+  [33X[0;0YIf  the  global  option  [10Xcheck[110X  is  set to [9Xfalse[109X then [2XCopySubVector[102X need not
+  perform consistency checks.[133X
+  
+  [1X26.9-4 WeightOfVector[101X
+  
+  [33X[1;0Y[29X[2XWeightOfVector[102X( [3Xv[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Yan integer[133X
+  
+  [33X[0;0Yreturns  the  Hamming  weight  of  the  vector object [3Xv[103X, i.e., the number of
+  nonzero entries in [3Xv[103X.[133X
+  
+  [1X26.9-5 DistanceOfVectors[101X
+  
+  [33X[1;0Y[29X[2XDistanceOfVectors[102X( [3Xv1[103X, [3Xv2[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Yan integer[133X
+  
+  [33X[0;0Yreturns  the  Hamming  distance  of  the vector objects [3Xv1[103X and [3Xv2[103X, i.e., the
+  number  of  entries in which the vectors differ. The vectors must have equal
+  length.[133X
+  
+  
+  [1X26.10 [33X[0;0YArithmetical Operations for Matrix Objects[133X[101X
+  
+  
+  [1X26.10-1 [33X[0;0YUnary Arithmetical Operations for Matrix Objects[133X[101X
+  
+  [33X[1;0Y[29X[2XAdditiveInverseMutable[102X( [3XM[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XAdditiveInverseSameMutability[102X( [3XM[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XZeroMutable[102X( [3XM[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XZeroSameMutability[102X( [3XM[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XOneMutable[102X( [3XM[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XOneSameMutability[102X( [3XM[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XInverseMutable[102X( [3XM[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XInverseSameMutability[102X( [3XM[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XIsZero[102X( [3XM[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsOne[102X( [3XM[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XCharacteristic[102X( [3XM[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya matrix object[133X
+  
+  [33X[0;0YFor  a  vector  object  [3XM[103X, the operations for computing the additive inverse
+  with   prescribed   mutability   return   a  matrix  object  with  the  same
+  [2XConstructingFilter[102X  ([14X26.3-2[114X)  and  [2XBaseDomain[102X ([14X26.3-1[114X) values, such that the
+  sum  with  [3XM[103X  is a zero matrix. It is not specified what happens if the base
+  domain does not admit the additive inverses of the entries.[133X
+  
+  [33X[0;0YAnalogously,  the  operations  for  computing  a zero matrix with prescribed
+  mutability return a matrix object compatible with [3XM[103X.[133X
+  
+  [33X[0;0YThe  operations  for computing an identity matrix with prescribed mutability
+  return  a  matrix  object  compatible  with [3XM[103X, provided that the base domain
+  admits this and [3XM[103X is square and nonempty.[133X
+  
+  [33X[0;0YAnalogously,  the operations for computing an inverse matrix with prescribed
+  mutability  return  a  matrix  object  compatible with [3XM[103X, provided that [3XM[103X is
+  invertible. (If [3XM[103X is not invertible then the operations return [9Xfail[109X.)[133X
+  
+  [33X[0;0Y[2XIsZero[102X returns [9Xtrue[109X if all entries in [3XM[103X are zero, and [9Xfalse[109X otherwise. [2XIsOne[102X
+  returns  [9Xtrue[109X  if  [3XM[103X is nonempty and square and contains the identity of the
+  base domain in the diagonal, and zero in all other places.[133X
+  
+  [33X[0;0Y[2XCharacteristic[102X  returns  the  corresponding value of the [2XBaseDomain[102X ([14X26.3-1[114X)
+  value of [3XM[103X.[133X
+  
+  
+  [1X26.10-2 [33X[0;0YBinary Arithmetical Operations for Matrix Objects[133X[101X
+  
+  [33X[1;0Y[29X[2X\+[102X( [3XM1[103X, [3XM2[103X ) [32X method[133X
+  [33X[1;0Y[29X[2X\-[102X( [3XM1[103X, [3XM2[103X ) [32X method[133X
+  [33X[1;0Y[29X[2X\*[102X( [3Xs[103X, [3XM[103X ) [32X method[133X
+  [33X[1;0Y[29X[2X\*[102X( [3XM[103X, [3Xs[103X ) [32X method[133X
+  [33X[1;0Y[29X[2X\*[102X( [3XM1[103X, [3XM2[103X ) [32X method[133X
+  [33X[1;0Y[29X[2X\/[102X( [3XM[103X, [3Xs[103X ) [32X method[133X
+  [33X[1;0Y[29X[2X\^[102X( [3XM[103X, [3Xn[103X ) [32X method[133X
+  
+  [33X[0;0YThe sum and the difference, respectively, of two matrix objects [3XM1[103X and [3XM2[103X is
+  a  new  fully  mutable  matrix  object  whose  entries  are the sums and the
+  differences of the entries of the arguments.[133X
+  
+  [33X[0;0YThe  product  of a scalar [3Xs[103X and a matrix object [3XM[103X (from the left or from the
+  right)  is  a  new  fully  mutable  matrix  object  whose  entries  are  the
+  corresponding products.[133X
+  
+  [33X[0;0YThe  product  of  two matrix objects [3XM1[103X and [3XM2[103X is a new fully mutable matrix
+  object;  if  both [3XM1[103X and [3XM2[103X are in the filter [2XIsOrdinaryMatrix[102X ([14X24.2-2[114X) then
+  the entries of the result are those of the ordinary matrix product.[133X
+  
+  [33X[0;0YThe  quotient  of  a  matrix  object [3XM[103X and a scalar [3Xs[103X is a new fully mutable
+  matrix object whose entries are the corresponding quotients.[133X
+  
+  [33X[0;0YFor a nonempty square matrix object [3XM[103X over an associative base domain, and a
+  positive  integer  [3Xn[103X, [3XM[103X[10X^[110X[3Xn[103X is a fully mutable matrix object whose entries are
+  those  of  the [3Xn[103X-th power of [3XM[103X. If [3Xn[103X is zero then [3XM[103X[10X^[110X[3Xn[103X is an identity matrix,
+  and  if  [3Xn[103X is a negative integer and [3XM[103X is invertible then [3XM[103X[10X^[110X[3Xn[103X is the ([10X-[110X[3Xn[103X)-th
+  power of the inverse of [3XM[103X.[133X
+  
+  [33X[0;0YAll  this is defined only if the matrix objects have the same dimensions and
+  are  defined over the same base domain and have the same representation, and
+  if  the  products with the given scalar belong to the base domain; otherwise
+  it  is  not specified what happens. If the result is a matrix object then it
+  has  the  same  representation  and the same base domain as the given matrix
+  object(s).[133X
+  
+  
+  [1X26.11 [33X[0;0YOperations for Matrix Objects[133X[101X
+  
+  [1X26.11-1 MatElm[101X
+  
+  [33X[1;0Y[29X[2XMatElm[102X( [3XM[103X, [3Xrow[103X, [3Xcol[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Yan entry of the matrix object[133X
+  
+  [33X[0;0YFor  a  matrix  object  [3XM[103X,  this  operation returns the entry in row [3Xrow[103X and
+  column [3Xcol[103X.[133X
+  
+  [33X[0;0YAlso the syntax [3XM[103X[10X[ [110X[3Xrow[103X[10X, [110X[3Xcol[103X[10X ][110X is supported.[133X
+  
+  [33X[0;0YNote  that  this is [13Xnot[113X equivalent to [3XM[103X[10X[ [110X[3Xrow[103X[10X ][ [110X[3Xcol[103X[10X ][110X, which would first try
+  to access [3XM[103X[10X[ [110X[3Xrow[103X[10X ][110X, and this is in general not possible.[133X
+  
+  [1X26.11-2 SetMatElm[101X
+  
+  [33X[1;0Y[29X[2XSetMatElm[102X( [3XM[103X, [3Xrow[103X, [3Xcol[103X, [3Xobj[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ynothing[133X
+  
+  [33X[0;0YFor  a mutable matrix object [3XM[103X, this operation assigns the object [3Xobj[103X to the
+  position in row [3Xrow[103X and column [3Xcol[103X, provided that [3Xobj[103X is compatible with the
+  [2XBaseDomain[102X ([14X26.3-1[114X) value of [3XM[103X.[133X
+  
+  [33X[0;0YAlso the syntax [3XM[103X[10X[ [110X[3Xrow[103X[10X, [110X[3Xcol[103X[10X ]:= [110X[3Xobj[103X is supported.[133X
+  
+  [33X[0;0YNote that this is [13Xnot[113X equivalent to [3XM[103X[10X[ [110X[3Xrow[103X[10X ][ [110X[3Xcol[103X[10X ]:= [110X[3Xobj[103X, which would first
+  try to access [3XM[103X[10X[ [110X[3Xrow[103X[10X ][110X, and this is in general not possible.[133X
+  
+  [33X[0;0YIf  the  global option [10Xcheck[110X is set to [9Xfalse[109X then [2XSetMatElm[102X need not perform
+  consistency checks.[133X
+  
+  [1X26.11-3 ExtractSubMatrix[101X
+  
+  [33X[1;0Y[29X[2XExtractSubMatrix[102X( [3XM[103X, [3Xrows[103X, [3Xcols[103X ) [32X operation[133X
+  
+  [33X[0;0YCreates  a  copy  of  the  submatrix  described by the two lists, which mean
+  subsets  of  row and column positions, respectively. This does [3XM[103X{[3Xrows[103X}{[3Xcols[103X}
+  and returns the result. It preserves the representation of the matrix.[133X
+  
+  [33X[0;0YIf  the  [2XConstructingFilter[102X  ([14X26.3-2[114X) value of the result implies [2XIsCopyable[102X
+  ([14X12.6-1[114X) then the result is fully mutable.[133X
+  
+  [1X26.11-4 MutableCopyMatrix[101X
+  
+  [33X[1;0Y[29X[2XMutableCopyMatrix[102X( [3XM[103X ) [32X operation[133X
+  
+  [33X[0;0YFor  a  matrix  object  [3XM[103X, this operation returns a fully mutable copy of [3XM[103X,
+  with the same [2XConstructingFilter[102X ([14X26.3-2[114X) and [2XBaseDomain[102X ([14X26.3-1[114X) values,[133X
+  
+  [1X26.11-5 CopySubMatrix[101X
+  
+  [33X[1;0Y[29X[2XCopySubMatrix[102X( [3Xsrc[103X, [3Xdst[103X, [3Xsrows[103X, [3Xdrows[103X, [3Xscols[103X, [3Xdcols[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ynothing[133X
+  
+  [33X[0;0YDoes [10X[3Xdst[103X[10X{[3Xdrows[103X[10X}{[3Xdcols[103X[10X} := [3Xsrc[103X[10X{[3Xsrows[103X[10X}{[3Xscols[103X[10X}[110X without creating an intermediate
+  object  and  thus  –at  least  in  special cases– much more efficiently. For
+  certain  objects  like  compressed  vectors this might be significantly more
+  efficient if [3Xscols[103X and [3Xdcols[103X are ranges with increment 1.[133X
+  
+  [33X[0;0YIf  the  global  option  [10Xcheck[110X  is  set to [9Xfalse[109X then [2XCopySubMatrix[102X need not
+  perform consistency checks.[133X
+  
+  [1X26.11-6 CompatibleVector[101X
+  
+  [33X[1;0Y[29X[2XCompatibleVector[102X( [3XM[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ya vector object[133X
+  
+  [33X[0;0YCalled  with a matrix object [3XM[103X with [22Xm[122X rows, this operation returns a mutable
+  zero  vector  object  [22Xv[122X  of  length [22Xm[122X and in the representation given by the
+  [2XCompatibleVectorFilter[102X   ([14X26.3-3[114X)   value   of   [3XM[103X  (provided  that  such  a
+  representation exists).[133X
+  
+  [33X[0;0YThe idea is that there should be an efficient way to form the product [22Xv[122X[3XM[103X.[133X
+  
+  [1X26.11-7 RowsOfMatrix[101X
+  
+  [33X[1;0Y[29X[2XRowsOfMatrix[102X( [3XM[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya plain list[133X
+  
+  [33X[0;0YCalled  with  a  matrix  object  [3XM[103X,  this  operation returns a plain list of
+  objects  in  the representation given by the [2XCompatibleVectorFilter[102X ([14X26.3-3[114X)
+  value  of  [3XM[103X  (provided  that  such a representation exists), where the [22Xi[122X-th
+  entry describes the [22Xi[122X-th row of the input.[133X
+  
+  
+  [1X26.11-8 [33X[0;0YCompanionMatrix[133X[101X
+  
+  [33X[1;0Y[29X[2XCompanionMatrix[102X( [3Xpol[103X, [3XM[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XCompanionMatrix[102X( [3Xfilt[103X, [3Xpol[103X, [3XR[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XCompanionMatrix[102X( [3Xpol[103X, [3XR[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ya matrix object[133X
+  
+  [33X[0;0YFor  a  monic,  univariate polynomial [3Xpol[103X whose coefficients lie in the base
+  domain  of the matrix object [3XM[103X, [2XCompanionMatrix[102X returns the companion matrix
+  of  [3Xpol[103X,  as  a  matrix object with the same [2XConstructingFilter[102X ([14X26.3-2[114X) and
+  [2XBaseDomain[102X ([14X26.3-1[114X) values as [3XM[103X.[133X
+  
+  [33X[0;0YWe  use column convention, that is, the negatives of the coefficients of [3Xpol[103X
+  appear in the last column of the result.[133X
+  
+  [33X[0;0YIf  a  filter  [3Xfilt[103X  and a semiring [3XR[103X are given then the companion matrix is
+  returned  as a matrix object with [2XConstructingFilter[102X ([14X26.3-2[114X) value [3Xfilt[103X and
+  [2XBaseDomain[102X ([14X26.3-1[114X) value [3XR[103X.[133X
+  
+  [33X[0;0YIf  only [3Xpol[103X and a semiring [3XR[103X are given, the representation of the result is
+  guessed from [3XR[103X.[133X
+  
+  [33X[0;0YIf  the  [2XConstructingFilter[102X  ([14X26.3-2[114X) value of the result implies [2XIsCopyable[102X
+  ([14X12.6-1[114X) then the result is fully mutable.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xx:= X( GF(5) );;  pol:= x^3 + x^2 + 2*x + 3;;[127X[104X
+    [4X[25Xgap>[125X [27XM:= CompanionMatrix( IsPlistMatrixRep, pol, GF(25) );;[127X[104X
+    [4X[25Xgap>[125X [27XDisplay( M );[127X[104X
+    [4X[28X<3x3-matrix over GF(5^2):[128X[104X
+    [4X[28X[[ 0*Z(5), 0*Z(5), Z(5) ][128X[104X
+    [4X[28X [ Z(5)^0, 0*Z(5), Z(5)^3 ][128X[104X
+    [4X[28X [ 0*Z(5), Z(5)^0, Z(5)^2 ][128X[104X
+    [4X[28X]>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X26.12 [33X[0;0YOperations for Row List Matrix Objects[133X[101X
+  
+  [33X[0;0YIn  general,  matrix  objects are not lists in the sense of [2XIsList[102X ([14X21.1-1[114X),
+  and  they  need  not  behave like lists, that is, they need not obey all the
+  rules  for  lists  that are stated in Chapter [14X21[114X. There are situations where
+  one wants to have matrix objects that can on the one hand benefit from [5XGAP[105X's
+  method selection, as is explained in Section [14X26.1[114X, and do on the other hands
+  support  access to [5XGAP[105X objects that represent their rows (which are suitable
+  vector  objects).  Matrix  objects  whose  [2XConstructingFilter[102X ([14X26.3-2[114X) value
+  implies  [2XIsRowListMatrix[102X  ([14X26.2-4[114X)  support the operations described in this
+  section.[133X
+  
+  [33X[0;0YOne  implementation  of  such  matrices  is  given by the [2XConstructingFilter[102X
+  ([14X26.3-2[114X)  value [2XIsPlistMatrixRep[102X ([14X26.16-3[114X), and any row of these matrices is
+  a  vector  object  in [2XIsPlistVectorRep[102X ([14X26.15-3[114X). Note that these objects do
+  [13Xnot[113X  lie in [2XIsList[102X ([14X21.1-1[114X) (and in particular not in [2XIsPlistRep[102X ([14X21.24-2[114X)),
+  thus  we  are  allowed to define the above operations only restrictively, as
+  follows.[133X
+  
+  [33X[0;0YUnbinding  an  entry in a row or unbinding a row in a matrix is allowed only
+  in the last position, that is, the vector and matrix objects insist on being
+  dense.  All  rows  of  a  matrix must have the same length and the same base
+  domain.[133X
+  
+  
+  [1X26.12-1 [33X[0;0YList Access for a Row List Matrix[133X[101X
+  
+  [33X[1;0Y[29X[2X\[\][102X( [3XM[103X, [3Xpos[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ya vector object[133X
+  
+  [33X[0;0YIf  [3XM[103X  is a row list matrix and if [3Xpos[103X is a positive integer not larger than
+  the number of rows of [3XM[103X, this operation returns the [3Xpos[103X-th row of [3XM[103X.[133X
+  
+  [33X[0;0YIt is not specified what happens if [3Xpos[103X is larger.[133X
+  
+  
+  [1X26.12-2 [33X[0;0YList Assignment for a Row List Matrix[133X[101X
+  
+  [33X[1;0Y[29X[2X\[\]\:\=[102X( [3XM[103X, [3Xpos[103X, [3Xv[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ynothing[133X
+  
+  [33X[0;0YIf [3XM[103X is a row list matrix, [3Xv[103X is a vector object that can occur as a row in [3XM[103X
+  (that is, [3Xv[103X has the same base domain, the right length, and the right vector
+  representation), and if [3Xpos[103X is a positive integer not larger than the number
+  of rows of [3XM[103X plus 1, this operation sets [3Xv[103X as the [3Xpos[103X-th row of [3XM[103X.[133X
+  
+  [33X[0;0YIn all other situations, it is not specified what happens.[133X
+  
+  
+  [1X26.12-3 [33X[0;0YSublist Access for a Row List Matrix[133X[101X
+  
+  [33X[1;0Y[29X[2X\{\}[102X( [3XM[103X, [3Xposs[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ya row list matrix[133X
+  
+  [33X[0;0YFor  a  row  list matrix [3XM[103X and a list [3Xposs[103X of positions, [3XM[103X[10X{ [110X[3Xposs[103X[10X }[110X returns a
+  new  mutable  row  list matrix with the same representation as [3XM[103X, whose rows
+  are identical to the rows at the positions in the list [3Xposs[103X in [3XM[103X.[133X
+  
+  
+  [1X26.12-4 [33X[0;0YSublist Assignment for a Row List Matrix[133X[101X
+  
+  [33X[1;0Y[29X[2X\{\}\:\=[102X( [3XM[103X, [3Xposs[103X, [3XM2[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ynothing[133X
+  
+  [33X[0;0YFor  a  mutable  row list matrix [3XM[103X, a list [3Xposs[103X of positions, and a row list
+  matrix [3XM2[103X of the same vector type and with the same base domain, [3XM[103X[10X{ [110X[3Xposs[103X[10X }:=
+  [110X[3XM2[103X assigns the rows of [3XM2[103X to the positions [3Xposs[103X in the list of rows of [3XM[103X.[133X
+  
+  [33X[0;0YIt  is not specified what happens if the resulting range of row positions is
+  not dense.[133X
+  
+  [1X26.12-5 IsBound\[\][101X
+  
+  [33X[1;0Y[29X[2XIsBound\[\][102X( [3XM[103X, [3Xpos[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
+  
+  [33X[0;0YFor  a  row  list  matrix  [3XM[103X and a positive integer [3Xpos[103X, [10XIsBound( [110X[3XM[103X[10X[ [110X[3Xpos[103X[10X ] )[110X
+  returns [9Xtrue[109X if [3Xpos[103X is at most the number of rows of [3XM[103X, and [9Xfalse[109X otherwise.[133X
+  
+  [1X26.12-6 Unbind\[\][101X
+  
+  [33X[1;0Y[29X[2XUnbind\[\][102X( [3XM[103X, [3Xpos[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ynothing[133X
+  
+  [33X[0;0YFor  a  mutable  row list matrix [3XM[103X with [3Xpos[103X rows, [10XUnbind( [110X[3XM[103X[10X[ [110X[3Xpos[103X[10X ] )[110X removes
+  the last row. It is not specified what happens if [3Xpos[103X has another value.[133X
+  
+  [1X26.12-7 Add[101X
+  
+  [33X[1;0Y[29X[2XAdd[102X( [3XM[103X, [3Xv[103X[, [3Xpos[103X] ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ynothing[133X
+  
+  [33X[0;0YFor  a  mutable  row  list matrix [3XM[103X and a vector object [3Xv[103X that is compatible
+  with  the  rows of [3XM[103X, the two argument version adds [3Xv[103X at the end of the list
+  of rows of [3XM[103X.[133X
+  
+  [33X[0;0YIf  a positive integer [3Xpos[103X is given then [3Xv[103X is added in position [3Xpos[103X, and all
+  later rows are shifted up by one position.[133X
+  
+  [1X26.12-8 Remove[101X
+  
+  [33X[1;0Y[29X[2XRemove[102X( [3XM[103X[, [3Xpos[103X] ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ya vector object if the removed row exists, otherwise nothing[133X
+  
+  [33X[0;0YFor  a  mutable row list matrix [3XM[103X, this operation removes the [3Xpos[103X-th row and
+  shifts  the  later  rows  down  by  one position. The default for [3Xpos[103X is the
+  number of rows of [3XM[103X.[133X
+  
+  [33X[0;0YIf  the  [3Xpos[103X-th  row  existed in [3XM[103X then it is returned, otherwise nothing is
+  returned.[133X
+  
+  [1X26.12-9 Append[101X
+  
+  [33X[1;0Y[29X[2XAppend[102X( [3XM1[103X, [3XM2[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ynothing[133X
+  
+  [33X[0;0YFor  two  row list matrices [3XM1[103X, [3XM2[103X such that [3XM1[103X is mutable and such that the
+  [2XConstructingFilter[102X  ([14X26.3-2[114X)  and [2XBaseDomain[102X ([14X26.3-1[114X) values are equal, this
+  operation appends the rows of [3XM2[103X to the rows of [3XM1[103X.[133X
+  
+  [1X26.12-10 ShallowCopy[101X
+  
+  [33X[1;0Y[29X[2XShallowCopy[102X( [3XM[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ya matrix object[133X
+  
+  [33X[0;0YFor  a  row  list matrix [3XM[103X, this operation returns a new mutable matrix with
+  the  same  [2XConstructingFilter[102X  ([14X26.3-2[114X) and [2XBaseDomain[102X ([14X26.3-1[114X) values as [3XM[103X,
+  which shares its rows with [3XM[103X.[133X
+  
+  [1X26.12-11 ListOp[101X
+  
+  [33X[1;0Y[29X[2XListOp[102X( [3XM[103X[, [3Xfunc[103X] ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ya plain list[133X
+  
+  [33X[0;0YFor  a  row  list  matrix [3XM[103X, the variant with one argument returns the plain
+  list  (see  [2XIsPlistRep[102X  ([14X21.24-2[114X))  of  its  rows,  and the variant with two
+  arguments  returns the plain list of values of these rows under the function
+  [3Xfunc[103X.[133X
+  
+  
+  [1X26.13 [33X[0;0YBasic operations for row/column reductions[133X[101X
+  
+  [1X26.13-1 MultMatrixRowLeft[101X
+  
+  [33X[1;0Y[29X[2XMultMatrixRowLeft[102X( [3Xmat[103X, [3Xi[103X, [3Xelm[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XMultMatrixRow[102X( [3Xmat[103X, [3Xi[103X, [3Xelm[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ynothing[133X
+  
+  [33X[0;0YMultiplies  the  [3Xi[103X-th row of the mutable matrix [3Xmat[103X with the scalar [3Xelm[103X from
+  the left in-place.[133X
+  
+  [33X[0;0Y[2XMultMatrixRow[102X  is  a  synonym  of [2XMultMatrixRowLeft[102X. This was chosen because
+  linear combinations of rows of matrices are usually written as [22Xv ⋅ A = [v_1,
+  ... ,v_n] ⋅ A[122X which multiplies scalars from the left.[133X
+  
+  [1X26.13-2 MultMatrixRowRight[101X
+  
+  [33X[1;0Y[29X[2XMultMatrixRowRight[102X( [3XM[103X, [3Xi[103X, [3Xelm[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ynothing[133X
+  
+  [33X[0;0YMultiplies the [3Xi[103X-th row of the mutable matrix [3XM[103X with the scalar [3Xelm[103X from the
+  right in-place.[133X
+  
+  [1X26.13-3 MultMatrixColumnRight[101X
+  
+  [33X[1;0Y[29X[2XMultMatrixColumnRight[102X( [3XM[103X, [3Xi[103X, [3Xelm[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XMultMatrixColumn[102X( [3XM[103X, [3Xi[103X, [3Xelm[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ynothing[133X
+  
+  [33X[0;0YMultiplies  the [3Xi[103X-th column of the mutable matrix [3XM[103X with the scalar [3Xelm[103X from
+  the right in-place.[133X
+  
+  [33X[0;0Y[2XMultMatrixColumn[102X  is  a  synonym  of  [2XMultMatrixColumnRight[102X. This was chosen
+  because  linear combinations of columns of matrices are usually written as [22XA
+  ⋅ v^T = A ⋅ [v_1, ... ,v_n]^T[122X which multiplies scalars from the right.[133X
+  
+  [1X26.13-4 MultMatrixColumnLeft[101X
+  
+  [33X[1;0Y[29X[2XMultMatrixColumnLeft[102X( [3XM[103X, [3Xi[103X, [3Xelm[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ynothing[133X
+  
+  [33X[0;0YMultiplies  the [3Xi[103X-th column of the mutable matrix [3XM[103X with the scalar [3Xelm[103X from
+  the left in-place.[133X
+  
+  [1X26.13-5 AddMatrixRowsLeft[101X
+  
+  [33X[1;0Y[29X[2XAddMatrixRowsLeft[102X( [3XM[103X, [3Xi[103X, [3Xj[103X, [3Xelm[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XAddMatrixRows[102X( [3XM[103X, [3Xi[103X, [3Xj[103X, [3Xelm[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ynothing[133X
+  
+  [33X[0;0YAdds  the  product  of  [3Xelm[103X with the [3Xj[103X-th row of the mutable matrix [3XM[103X to its
+  [3Xi[103X-th row in-place. The [3Xj[103X-th row is multiplied with [3Xelm[103X from the left.[133X
+  
+  [33X[0;0Y[2XAddMatrixRows[102X  is  a  synonym  of [2XAddMatrixRowsLeft[102X. This was chosen because
+  linear combinations of rows of matrices are usually written as [22Xv ⋅ A = [v_1,
+  ... ,v_n] ⋅ A[122X which multiplies scalars from the left.[133X
+  
+  [1X26.13-6 AddMatrixRowsRight[101X
+  
+  [33X[1;0Y[29X[2XAddMatrixRowsRight[102X( [3XM[103X, [3Xi[103X, [3Xj[103X, [3Xelm[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ynothing[133X
+  
+  [33X[0;0YAdds  the  product  of  [3Xelm[103X with the [3Xj[103X-th row of the mutable matrix [3XM[103X to its
+  [3Xi[103X-th row in-place. The [3Xj[103X-th row is multiplied with [3Xelm[103X from the right.[133X
+  
+  [1X26.13-7 AddMatrixColumnsRight[101X
+  
+  [33X[1;0Y[29X[2XAddMatrixColumnsRight[102X( [3XM[103X, [3Xi[103X, [3Xj[103X, [3Xelm[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XAddMatrixColumns[102X( [3XM[103X, [3Xi[103X, [3Xj[103X, [3Xelm[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ynothing[133X
+  
+  [33X[0;0YAdds  the product of [3Xelm[103X with the [3Xj[103X-th column of the mutable matrix [3XM[103X to its
+  [3Xi[103X-th column in-place. The [3Xj[103X-th column is multiplied with [3Xelm[103X from the right.[133X
+  
+  [33X[0;0Y[2XAddMatrixColumns[102X  is  a  synonym  of  [2XAddMatrixColumnsRight[102X. This was chosen
+  because  linear combinations of columns of matrices are usually written as [22XA
+  ⋅ v^T = A ⋅ [v_1, ... ,v_n]^T[122X which multiplies scalars from the right.[133X
+  
+  [1X26.13-8 AddMatrixColumnsLeft[101X
+  
+  [33X[1;0Y[29X[2XAddMatrixColumnsLeft[102X( [3XM[103X, [3Xi[103X, [3Xj[103X, [3Xelm[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ynothing[133X
+  
+  [33X[0;0YAdds  the product of [3Xelm[103X with the [3Xj[103X-th column of the mutable matrix [3XM[103X to its
+  [3Xi[103X-th column in-place. The [3Xj[103X-th column is multiplied with [3Xelm[103X from the left.[133X
+  
+  [1X26.13-9 SwapMatrixRows[101X
+  
+  [33X[1;0Y[29X[2XSwapMatrixRows[102X( [3XM[103X, [3Xi[103X, [3Xj[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ynothing[133X
+  
+  [33X[0;0YSwaps the [3Xi[103X-th row and [3Xj[103X-th row of a mutable matrix [3XM[103X.[133X
+  
+  [1X26.13-10 SwapMatrixColumns[101X
+  
+  [33X[1;0Y[29X[2XSwapMatrixColumns[102X( [3XM[103X, [3Xi[103X, [3Xj[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ynothing[133X
+  
+  [33X[0;0YSwaps the [3Xi[103X-th column and [3Xj[103X-th column of a mutable matrix [3XM[103X.[133X
+  
+  
+  [1X26.14 [33X[0;0YImplementing New Vector and Matrix Objects Types[133X[101X
+  
+  [33X[0;0YThe first step in the design of a new type of vector or matrix objects is to
+  create  a  new  filter that serves as the [2XConstructingFilter[102X ([14X26.3-2[114X) of the
+  new  objects,  see  the  sections  [14X26.15[114X  and  [14X26.16[114X for an overview of such
+  filters that are already available.[133X
+  
+  [33X[0;0YHere  we  list  those  operations for vector and matrix objects for which no
+  default  methods  can be installed. When one implements a new type of vector
+  or  matrix  objects  then  one  has to install specific methods at least for
+  these  operations,  in order to make the objects behave as described in this
+  chapter.  It  is  advisable  to  install  specific  methods  also  for other
+  operations,  for  performance  reasons. The installations of default methods
+  can  be  found  in the file [11Xlib/matobj.gi[111X of the [5XGAP[105X distribution. There one
+  can  check  for which operations it makes sense to overload them for the new
+  type  of  vector  or  matrix objects. Note that the specific methods must be
+  installed with [2XInstallTagBasedMethod[102X ([14X78.1-6[114X) whenever the default method is
+  installed with this function.[133X
+  
+  [33X[0;0Y[13XVector objects[113X[133X
+  
+  [30X    [33X[0;6Y[2XBaseDomain[102X ([14X26.3-1[114X),[133X
+  
+  [30X    [33X[0;6Y[2XLength[102X ([14X26.3-4[114X),[133X
+  
+  [30X    [33X[0;6Y[2X\[\][102X ([14X26.7-1[114X),[133X
+  
+  [30X    [33X[0;6Y[2X\[\]\:\=[102X  ([14X26.7-1[114X) (with consistency checks if the global option [10Xcheck[110X
+        is not set to [9Xfalse[109X),[133X
+  
+  [30X    [33X[0;6Y[2X\<[102X ([14X31.11-1[114X) (see [2X\<[102X ([14X26.6-1[114X)),[133X
+  
+  [30X    [33X[0;6Y[2XConstructingFilter[102X ([14X26.3-2[114X),[133X
+  
+  [30X    [33X[0;6Y[2XNewVector[102X ([14X26.4-1[114X) (with consistency checks if the global option [10Xcheck[110X
+        is  not  set  to  [9Xfalse[109X, install the method with [2XInstallTagBasedMethod[102X
+        ([14X78.1-6[114X)).[133X
+  
+  [33X[0;0Y[13XMatrix objects[113X[133X
+  
+  [30X    [33X[0;6Y[2XBaseDomain[102X ([14X26.3-1[114X),[133X
+  
+  [30X    [33X[0;6Y[2XNumberRows[102X ([14X26.3-5[114X),[133X
+  
+  [30X    [33X[0;6Y[2XNumberColumns[102X ([14X26.3-5[114X),[133X
+  
+  [30X    [33X[0;6Y[2XMatElm[102X ([14X26.11-1[114X),[133X
+  
+  [30X    [33X[0;6Y[2XSetMatElm[102X  ([14X26.11-2[114X)  (with  consistency  checks  if the global option
+        [10Xcheck[110X is not set to [9Xfalse[109X),[133X
+  
+  [30X    [33X[0;6Y[2X\<[102X ([14X31.11-1[114X) (see [2X\<[102X ([14X26.6-1[114X)),[133X
+  
+  [30X    [33X[0;6Y[2XConstructingFilter[102X ([14X26.3-2[114X),[133X
+  
+  [30X    [33X[0;6Y[2XCompatibleVectorFilter[102X ([14X26.3-3[114X),[133X
+  
+  [30X    [33X[0;6Y[2XNewMatrix[102X ([14X26.4-4[114X) (with consistency checks if the global option [10Xcheck[110X
+        is  not  set  to  [9Xfalse[109X, install the method with [2XInstallTagBasedMethod[102X
+        ([14X78.1-6[114X)).[133X
+  
+  [33X[0;0YMethods  for  [2XNewVector[102X  ([14X26.4-1[114X)  and  [2XNewMatrix[102X  ([14X26.4-4[114X) must check their
+  arguments for consistency (do the given filter and base domain fit together,
+  are  the  entries  compatible  with  the given base domain, is the number of
+  matrix  entries  a  multiple  of  the given number of columns) except if the
+  global  option  [10Xcheck[110X  is set to [9Xfalse[109X. (See Chapter [14X8[114X for information about
+  global  options.)  The  same  holds  for  methods for operations that modify
+  mutable  vector  or  matrix  objects,  such  as [2X\[\]\:\=[102X ([14X26.7-1[114X), [2XSetMatElm[102X
+  ([14X26.11-2[114X),  [2XCopySubVector[102X  ([14X26.9-3[114X),  [2XCopySubMatrix[102X ([14X26.11-5[114X), and for those
+  methods  of  [2XVector[102X  ([14X26.4-2[114X)  and  [2XMatrix[102X  ([14X26.4-5[114X) that do not delegate to
+  [2XNewVector[102X ([14X26.4-1[114X) and [2XNewMatrix[102X ([14X26.4-4[114X), respectively.[133X
+  
+  
+  [1X26.15 [33X[0;0YAvailable Representations of Vector Objects[133X[101X
+  
+  [33X[0;0YThe  following filters define vector objects for which the the functionality
+  described in this chapter is supported.[133X
+  
+  [1X26.15-1 IsGF2VectorRep[101X
+  
+  [33X[1;0Y[29X[2XIsGF2VectorRep[102X( [3Xobj[103X ) [32X Representation[133X
+  
+  [33X[0;0YAn  object  [3Xobj[103X in [2XIsGF2VectorRep[102X describes a vector object (see [2XIsVectorObj[102X
+  ([14X26.2-1[114X)) with entries in the finite field with [22X2[122X elements.[133X
+  
+  [33X[0;0Y[2XIsGF2VectorRep[102X  implies  [2XIsCopyable[102X  ([14X12.6-1[114X),  thus  vector objects in this
+  representation can be mutable.[133X
+  
+  [1X26.15-2 Is8BitVectorRep[101X
+  
+  [33X[1;0Y[29X[2XIs8BitVectorRep[102X( [3Xobj[103X ) [32X Representation[133X
+  
+  [33X[0;0YAn  object [3Xobj[103X in [2XIs8BitVectorRep[102X describes a vector object (see [2XIsVectorObj[102X
+  ([14X26.2-1[114X))  with  entries in a finite field with [22Xq[122X elements, for [22X3 ≤ q ≤ 256[122X.
+  The  base  domain of [3Xobj[103X is not necessarily the smallest field that contains
+  all matrix entries.[133X
+  
+  [33X[0;0Y[2XIs8BitVectorRep[102X  implies  [2XIsCopyable[102X  ([14X12.6-1[114X),  thus vector objects in this
+  representation can be mutable.[133X
+  
+  [1X26.15-3 IsPlistVectorRep[101X
+  
+  [33X[1;0Y[29X[2XIsPlistVectorRep[102X( [3Xobj[103X ) [32X Representation[133X
+  
+  [33X[0;0YAn object [3Xobj[103X in [2XIsPlistVectorRep[102X describes a vector object (see [2XIsVectorObj[102X
+  ([14X26.2-1[114X)) that can occur as a row in a row list matrix (see Section [14X26.12[114X).[133X
+  
+  [33X[0;0Y[2XIsPlistVectorRep[102X  implies  [2XIsCopyable[102X  ([14X12.6-1[114X), thus vector objects in this
+  representation can be mutable.[133X
+  
+  [1X26.15-4 IsZmodnZVectorRep[101X
+  
+  [33X[1;0Y[29X[2XIsZmodnZVectorRep[102X( [3Xobj[103X ) [32X Representation[133X
+  
+  [33X[0;0YAn   object   [3Xobj[103X  in  [2XIsZmodnZVectorRep[102X  describes  a  vector  object  (see
+  [2XIsVectorObj[102X  ([14X26.2-1[114X))  with  entries in a residue class ring of the ring of
+  integers (see [2XZmodnZ[102X ([14X14.5-2[114X)). This ring is the base domain (see [2XBaseDomain[102X
+  ([14X26.3-1[114X)) of [3Xobj[103X.[133X
+  
+  [33X[0;0Y[2XIsZmodnZVectorRep[102X  implies  [2XIsCopyable[102X ([14X12.6-1[114X), thus matrix objects in this
+  representation can be mutable.[133X
+  
+  
+  [1X26.16 [33X[0;0YAvailable Representations of Matrix Objects[133X[101X
+  
+  [33X[0;0YThe  following filters define matrix objects for which the the functionality
+  described in this chapter is supported.[133X
+  
+  [1X26.16-1 IsGF2MatrixRep[101X
+  
+  [33X[1;0Y[29X[2XIsGF2MatrixRep[102X( [3Xobj[103X ) [32X Representation[133X
+  
+  [33X[0;0YAn  object  [3Xobj[103X in [2XIsGF2MatrixRep[102X describes a matrix object (see [2XIsMatrixObj[102X
+  ([14X26.2-2[114X))  with  entries  in the finite field with [22X2[122X elements, which behaves
+  like the list of its rows (see [2XIsRowListMatrix[102X ([14X26.2-4[114X)). The base domain of
+  [3Xobj[103X is the field with [22X2[122X elements.[133X
+  
+  [33X[0;0Y[2XIsGF2MatrixRep[102X  implies  [2XIsCopyable[102X  ([14X12.6-1[114X),  thus  vector objects in this
+  representation can be mutable.[133X
+  
+  [1X26.16-2 Is8BitMatrixRep[101X
+  
+  [33X[1;0Y[29X[2XIs8BitMatrixRep[102X( [3Xobj[103X ) [32X Representation[133X
+  
+  [33X[0;0YAn  object [3Xobj[103X in [2XIs8BitMatrixRep[102X describes a matrix object (see [2XIsMatrixObj[102X
+  ([14X26.2-2[114X))  that  behaves  like  the  list  of  its rows (see [2XIsRowListMatrix[102X
+  ([14X26.2-4[114X)).  The  base  domain  of  [3Xobj[103X  is  a field that contains all matrix
+  entries  (but  not necessarily the smallest such field), it must be a finite
+  field with [22Xq[122X elements, for [22X3 ≤ q ≤ 256[122X.[133X
+  
+  [33X[0;0Y[2XIs8BitMatrixRep[102X  implies  [2XIsCopyable[102X  ([14X12.6-1[114X),  thus matrix objects in this
+  representation can be mutable.[133X
+  
+  [1X26.16-3 IsPlistMatrixRep[101X
+  
+  [33X[1;0Y[29X[2XIsPlistMatrixRep[102X( [3Xobj[103X ) [32X Representation[133X
+  
+  [33X[0;0YAn object [3Xobj[103X in [2XIsPlistMatrixRep[102X describes a matrix object (see [2XIsMatrixObj[102X
+  ([14X26.2-2[114X))  that  behaves  similar  to  a  list  of its rows, in the sense of
+  [2XIsRowListMatrix[102X ([14X26.2-4[114X).[133X
+  
+  [33X[0;0Y[2XIsPlistMatrixRep[102X  implies  [2XIsCopyable[102X  ([14X12.6-1[114X), thus matrix objects in this
+  representation can be mutable.[133X
+  
+  [1X26.16-4 IsZmodnZMatrixRep[101X
+  
+  [33X[1;0Y[29X[2XIsZmodnZMatrixRep[102X( [3Xobj[103X ) [32X Representation[133X
+  
+  [33X[0;0YAn   object   [3Xobj[103X  in  [2XIsZmodnZMatrixRep[102X  describes  a  matrix  object  (see
+  [2XIsMatrixObj[102X   ([14X26.2-2[114X))  that  behaves  like  the  list  of  its  rows  (see
+  [2XIsRowListMatrix[102X ([14X26.2-4[114X)). The matrix entries lie in a residue class ring of
+  the  ring  of  integers  (see [2XZmodnZ[102X ([14X14.5-2[114X)). This ring is the base domain
+  (see [2XBaseDomain[102X ([14X26.3-1[114X)) of [3Xobj[103X.[133X
+  
+  [33X[0;0Y[2XIsZmodnZMatrixRep[102X  implies  [2XIsCopyable[102X ([14X12.6-1[114X), thus matrix objects in this
+  representation can be mutable.[133X
+  

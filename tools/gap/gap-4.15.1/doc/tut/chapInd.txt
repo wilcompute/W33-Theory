@@ -1,0 +1,76 @@
+  
+  
+  [1XIndex[101X
+  
+  [10XApplicableMethod[110X 8.4 
+  arrays, see lists 3.0 
+  assignment 2.5 
+  [10XAsSomething[110X 7.6 
+  break loops 2.3 
+  canonical position 5.2 
+  [10XClosureSomething[110X 7.5 
+  cokernel 5.4 
+  comments 2.1 
+  constants 2.4 
+  elements 2.6 
+  enumerator 5.2 
+  family 3.4 
+  filters 8.2 
+  [10XGeneratorsOfSomething[110X 7.3 
+  getter, of an attribute 8.1 
+  group general mapping 5.4 
+      single-valued 5.4 
+      total 5.4 
+  [10XGroupHomomorphismByImages[110X vs. [10XGroupGeneralMappingByImages[110X 5.4 
+  homomorphism, action 5.2 
+      natural 5.1 
+      operation 5.2 
+  identifier 2.5 
+  [10XIsIdenticalObj[110X 2.6 
+  kernel 5.4 
+  [10XKnownAttributesOfObject[110X 8.4 
+  [10XKnownPropertiesOfObject[110X 8.4 
+  [10XKnownTruePropertiesOfObject[110X 8.4 
+  [10Xlast[110X 2.5 
+  [10Xlast2[110X 2.5 
+  [10Xlast3[110X 2.5 
+  leaving [5XGAP[105X 2.1 
+  line editing 2.3  2.3 
+  lists, dense 3.1 
+      identical 3.2 
+      plain 3.1 
+      strictly sorted 3.4 
+  loading source code from a file 2.2 
+  loop, for 3.6 
+      while 3.6 
+  maps-to operator 2.7 
+  matrices 3.8 
+  methods 8.1 
+      immediate 8.3 
+      selection 8.2 
+      true 8.3 
+  objects 2.5 
+      vs. elements 2.6 
+      vs. variables 2.5 
+  operations 8.4 
+  operators 2.4 
+  [9Xquit[109X 2.1 
+  [10XRead[110X 2.2 
+  read evaluate print loop 2.3 
+  reading source code from a file 2.2 
+  setter, of an attribute 8.1 
+  [10XSomething[110X 7.4 
+  starting [5XGAP[105X 2.1 
+  strings 3.1 
+  [10XSubsomething[110X 7.7 
+  [10XSubsomethingNC[110X 7.7 
+  tester, of an attribute 8.1 
+  [10XTraceMethods[110X 8.4 
+  transversal 5.2 
+  [10XTryNextMethod[110X 8.2 
+  variables 2.5 
+  vectors, row 3.8 
+  whitespace 2.1 
+  
+  
+  -------------------------------------------------------

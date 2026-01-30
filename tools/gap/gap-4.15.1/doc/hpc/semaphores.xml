@@ -1,0 +1,70 @@
+<Chapter Label="Semaphores">
+  <Heading>Semaphores</Heading>
+
+<Section Label="section:Semaphores">
+  <Heading>Semaphores</Heading>
+  Semaphores are synchronized counters; they can also be used to simulate locks.
+
+<ManSection>
+    <Func Name="CreateSemaphore"
+      Arg='[value]'/>
+
+<Description>
+The function <Ref Func="CreateSemaphore"/> takes an optional argument, which defaults to zero. It is the counter with which the
+semaphore is initialized.
+
+<Example><![CDATA[
+gap> sem := CreateSemaphore(1);
+<semaphore 0x1108e81c0: count = 1>
+]]></Example>
+</Description>
+</ManSection>
+
+<ManSection>
+    <Func Name="WaitSemaphore"
+      Arg='sem'/>
+
+<Description>
+<Ref Func="WaitSemaphore"/> receives a previously created semaphore as its argument. If the semaphore&#39;s counter is greater
+than zero, it decrements the counter and returns; if the counter is zero, it waits until another thread increases it via
+<Ref Func="SignalSemaphore"/>, then decrements the counter and returns.
+
+<Example><![CDATA[
+gap> sem := CreateSemaphore(1);
+<semaphore 0x1108e81c0: count = 1>
+gap> WaitSemaphore(sem);
+gap> sem;
+<semaphore 0x1108e81c0: count = 0>
+]]></Example>
+</Description>
+</ManSection>
+
+<ManSection>
+    <Func Name="SignalSemaphore"
+      Arg='sem'/>
+
+<Description>
+<Ref Func="SignalSemaphore"/> receives a previously created semaphore as its argument. It increments the semaphore&#39;s
+counter and returns.
+
+<Example><![CDATA[
+gap> sem := CreateSemaphore(1);
+<semaphore 0x1108e81c0: count = 1>
+gap> WaitSemaphore(sem);
+gap> sem;
+<semaphore 0x1108e81c0: count = 0>
+gap> SignalSemaphore(sem);
+gap> sem;
+<semaphore 0x1108e81c0: count = 1>
+]]></Example>
+</Description>
+</ManSection>
+
+  <Subsection Label="Simulating locks">
+    <Heading>Simulating locks</Heading>
+
+In order to use semaphores to simulate locks, create a semaphore with an initial value of 1. <Ref Func="WaitSemaphore"/> is
+then equivalent to a lock operation, <Ref Func="SignalSemaphore"/> is equivalent to an unlock operation.
+  </Subsection>
+  </Section>
+</Chapter>

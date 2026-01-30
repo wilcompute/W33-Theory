@@ -1,0 +1,370 @@
+  
+  [1X42 [33X[0;0YPermutations[133X[101X
+  
+  [33X[0;0Y[5XGAP[105X  offers  a data type [13Xpermutation[113X to describe the elements of permutation
+  groups.[133X
+  
+  [33X[0;0YThe  points on which permutations in [5XGAP[105X act are the positive integers up to
+  a  certain  architecture dependent limit, and the image of a point [22Xi[122X under a
+  permutation [22Xp[122X is written [22Xi^p[122X, which is expressed as [22Xi[122X[10X^[110X[22Xp[122X in [5XGAP[105X. (This action
+  is  also implemented by the function [2XOnPoints[102X ([14X41.2-1[114X).) If [22Xi[122X[10X^[110X[22Xp[122X is different
+  from  [22Xi[122X, we say that [22Xi[122X is [13Xmoved[113X by [22Xp[122X, otherwise it is [13Xfixed[113X. Permutations in
+  [5XGAP[105X are entered and displayed in cycle notation, such as [10X(1,2,3)(4,5)[110X.[133X
+  
+  [33X[0;0YThe  preimage of the point [22Xi[122X under the permutation [22Xp[122X can be computed as [22Xi[122X[10X/[110X[22Xp[122X,
+  see [2XPERM_INVERSE_THRESHOLD[102X ([14X42.1-4[114X).[133X
+  
+  [33X[0;0YFor arithmetic operations for permutations and their precedence, see [14X31.12[114X.[133X
+  
+  [33X[0;0YIn  the  names  of  the  [5XGAP[105X functions that deal with permutations, the word
+  [21XPermutation[121X is usually abbreviated to [21XPerm[121X, to save typing. For example, the
+  category test function for permutations is [2XIsPerm[102X ([14X42.1-1[114X).[133X
+  
+  
+  [1X42.1 [33X[0;0YIsPerm (Filter)[133X[101X
+  
+  [33X[0;0YInternally,  [5XGAP[105X  stores  a  permutation  as  a  list of the [22Xd[122X images of the
+  integers [22X1, ..., d[122X, where the [21Xinternal degree[121X [22Xd[122X is the largest integer moved
+  by  the permutation or bigger. When a permutation is read in cycle notation,
+  [22Xd[122X is always set to the largest moved integer, but a bigger [22Xd[122X can result from
+  a  multiplication  of two permutations, because the product is not shortened
+  if it fixes [22Xd[122X. The images are stored all as [22X16[122X-bit integers or all as [22X32[122X-bit
+  integers,  depending  on whether [22Xd ≤ 65536[122X or not. For example, if [22Xm≥ 65536[122X,
+  the permutation [22X(1, 2, ..., m)[122X has internal degree [22Xd=m[122X and takes [22X4m[122X bytes of
+  memory  for  storage.  But  --- since the internal degree is not reduced ---
+  this  means  that the identity permutation [10X()[110X calculated as [22X(1, 2, ..., m) *
+  (1,  2,  ...,  m)^{-1}[122X also takes [22X4m[122X bytes of storage. It can take even more
+  because the internal list has sometimes room for more than [22Xd[122X images.[133X
+  
+  [33X[0;0YOn 32-bit systems, the limit on the degree of permutations is, for technical
+  reasons,  [22X2^28-1[122X.  On  64-bit  systems,  it  is [22X2^32-1[122X because only a 32-bit
+  integer is used to represent each image internally. Error messages should be
+  given  if  any  command  would require creating a permutation exceeding this
+  limit.[133X
+  
+  [33X[0;0YThe  operation  [2XRestrictedPerm[102X  ([14X42.5-4[114X)  reduces  the storage degree of its
+  result and therefore can be used to save memory if intermediate calculations
+  in large degree result in a small degree result.[133X
+  
+  [33X[0;0YPermutations do not belong to a specific group. That means that one can work
+  with permutations without defining a permutation group that contains them.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X(1,2,3);[127X[104X
+    [4X[28X(1,2,3)[128X[104X
+    [4X[25Xgap>[125X [27X(1,2,3) * (2,3,4);[127X[104X
+    [4X[28X(1,3)(2,4)[128X[104X
+    [4X[25Xgap>[125X [27X17^(2,5,17,9,8);[127X[104X
+    [4X[28X9[128X[104X
+    [4X[25Xgap>[125X [27XOnPoints(17,(2,5,17,9,8));[127X[104X
+    [4X[28X9[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  operation  [2XPermuted[102X  ([14X21.20-17[114X) can be used to permute the entries of a
+  list according to a permutation.[133X
+  
+  [1X42.1-1 IsPerm[101X
+  
+  [33X[1;0Y[29X[2XIsPerm[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YEach  [13Xpermutation[113X  in  [5XGAP[105X lies in the category [2XIsPerm[102X. Basic operations for
+  permutations   are   [2XLargestMovedPoint[102X   ([14X42.3-2[114X),   multiplication  of  two
+  permutations  via  [10X*[110X,  and  exponentiation  [10X^[110X with first argument a positive
+  integer  [22Xi[122X  and  second argument a permutation [22Xπ[122X, the result being the image
+  [22Xi^π[122X of the point [22Xi[122X under [22Xπ[122X.[133X
+  
+  [1X42.1-2 IsPermCollection[101X
+  
+  [33X[1;0Y[29X[2XIsPermCollection[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsPermCollColl[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0Yare  the  categories  for  collections  of  permutations  and collections of
+  collections of permutations, respectively.[133X
+  
+  [1X42.1-3 PermutationsFamily[101X
+  
+  [33X[1;0Y[29X[2XPermutationsFamily[102X [32X family[133X
+  
+  [33X[0;0Yis the family of all permutations.[133X
+  
+  [1X42.1-4 PERM_INVERSE_THRESHOLD[101X
+  
+  [33X[1;0Y[29X[2XPERM_INVERSE_THRESHOLD[102X [32X global variable[133X
+  
+  [33X[0;0YFor permutations of degree up to [10XPERM_INVERSE_THRESHOLD[110X whenever the inverse
+  image  of  a  point  under  a  permutations is needed, the entire inverse is
+  computed  and  stored. Otherwise, if the inverse is not stored, the point is
+  traced  around the cycle it is part of to find the inverse image. This takes
+  time  when  it  happens,  and  uses  memory,  but saves time on a variety of
+  subsequent  computations. This threshold can be adjusted by simply assigning
+  to the variable. The default is 10000.[133X
+  
+  
+  [1X42.2 [33X[0;0YComparison of Permutations[133X[101X
+  
+  [1X42.2-1 \=[101X
+  
+  [33X[1;0Y[29X[2X\=[102X( [3Xp1[103X, [3Xp2[103X ) [32X method[133X
+  [33X[1;0Y[29X[2X\<[102X( [3Xp1[103X, [3Xp2[103X ) [32X method[133X
+  
+  [33X[0;0YTwo permutations are equal if they move the same points and all these points
+  have the same images under both permutations.[133X
+  
+  [33X[0;0YThe  permutation [3Xp1[103X is smaller than [3Xp2[103X if [3Xp1[103X [22X≠[122X [3Xp2[103X and [22Xi^{[3Xp1[103X} < i^{[3Xp2[103X}[122X, where
+  [22Xi[122X  is  the  smallest  point  with  [22Xi^{[3Xp1[103X}  ≠  i^{[3Xp2[103X}[122X. Therefore the identity
+  permutation is the smallest permutation, see also Section [14X31.11[114X.[133X
+  
+  [33X[0;0YPermutations  can  be  compared with certain other [5XGAP[105X objects, see [14X4.13[114X for
+  the details.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X(1,2,3) = (2,3,1);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27X(1,2,3) * (2,3,4) = (1,3)(2,4);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27X(1,2,3) < (1,3,2);      # 1^(1,2,3) = 2 < 3 = 1^(1,3,2)[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27X(1,3,2,4) < (1,3,4,2);  # 2^(1,3,2,4) = 4 > 1 = 2^(1,3,4,2)[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X42.2-2 DistancePerms[101X
+  
+  [33X[1;0Y[29X[2XDistancePerms[102X( [3Xperm1[103X, [3Xperm2[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  number  of  points  for  which  [3Xperm1[103X and [3Xperm2[103X have different
+  images.    This    should    always    produce    the    same    result   as
+  [10XNrMovedPoints([3Xperm1[103X[10X/[3Xperm2[103X[10X)[110X  but  some  methods  may be much faster than this
+  form, since no new permutation needs to be created.[133X
+  
+  [1X42.2-3 SmallestGeneratorPerm[101X
+  
+  [33X[1;0Y[29X[2XSmallestGeneratorPerm[102X( [3Xperm[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis  the  smallest  permutation  that  generates the same cyclic group as the
+  permutation [3Xperm[103X. This is very efficient, even when [3Xperm[103X has large order.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSmallestGeneratorPerm( (1,4,3,2) );[127X[104X
+    [4X[28X(1,2,3,4)[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X42.3 [33X[0;0YMoved Points of Permutations[133X[101X
+  
+  [1X42.3-1 SmallestMovedPoint[101X
+  
+  [33X[1;0Y[29X[2XSmallestMovedPoint[102X( [3Xperm[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XSmallestMovedPoint[102X( [3XC[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis  the  smallest  positive integer that is moved by [3Xperm[103X if such an integer
+  exists, and [2Xinfinity[102X ([14X18.2-1[114X) if [3Xperm[103X is the identity. For [3XC[103X a collection or
+  list  of  permutations,  the  smallest  value  of [2XSmallestMovedPoint[102X for the
+  elements of [3XC[103X is returned (and [2Xinfinity[102X ([14X18.2-1[114X) if [3XC[103X is empty).[133X
+  
+  [1X42.3-2 LargestMovedPoint[101X
+  
+  [33X[1;0Y[29X[2XLargestMovedPoint[102X( [3Xperm[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLargestMovedPoint[102X( [3XC[103X ) [32X attribute[133X
+  
+  [33X[0;0YFor a permutation [3Xperm[103X, this attribute contains the largest positive integer
+  which  is  moved  by  [3Xperm[103X  if  such an integer exists, and [10X0[110X if [3Xperm[103X is the
+  identity.  For  [3XC[103X a collection or list of permutations, the largest value of
+  [2XLargestMovedPoint[102X for the elements of [3XC[103X is returned (and [10X0[110X if [3XC[103X is empty).[133X
+  
+  [1X42.3-3 MovedPoints[101X
+  
+  [33X[1;0Y[29X[2XMovedPoints[102X( [3Xperm[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XMovedPoints[102X( [3XC[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis the proper set of the positive integers moved by at least one permutation
+  in the collection [3XC[103X, respectively by the permutation [3Xperm[103X.[133X
+  
+  [1X42.3-4 NrMovedPoints[101X
+  
+  [33X[1;0Y[29X[2XNrMovedPoints[102X( [3Xperm[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XNrMovedPoints[102X( [3XC[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis  the  number of positive integers that are moved by [3Xperm[103X, respectively by
+  at  least  one  element  in  the  collection [3XC[103X. (The actual moved points are
+  returned by [2XMovedPoints[102X ([14X42.3-3[114X).)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSmallestMovedPointPerm((4,5,6)(7,2,8));[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XLargestMovedPointPerm((4,5,6)(7,2,8));[127X[104X
+    [4X[28X8[128X[104X
+    [4X[25Xgap>[125X [27XNrMovedPointsPerm((4,5,6)(7,2,8));[127X[104X
+    [4X[28X6[128X[104X
+    [4X[25Xgap>[125X [27XMovedPoints([(2,3,4),(7,6,3),(5,47)]);[127X[104X
+    [4X[28X[ 2, 3, 4, 5, 6, 7, 47 ][128X[104X
+    [4X[25Xgap>[125X [27XNrMovedPoints([(2,3,4),(7,6,3),(5,47)]);[127X[104X
+    [4X[28X7[128X[104X
+    [4X[25Xgap>[125X [27XSmallestMovedPoint([(2,3,4),(7,6,3),(5,47)]);[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XLargestMovedPoint([(2,3,4),(7,6,3),(5,47)]);[127X[104X
+    [4X[28X47[128X[104X
+    [4X[25Xgap>[125X [27XLargestMovedPoint([()]);[127X[104X
+    [4X[28X0[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X42.4 [33X[0;0YSign and Cycle Structure[133X[101X
+  
+  [1X42.4-1 SignPerm[101X
+  
+  [33X[1;0Y[29X[2XSignPerm[102X( [3Xperm[103X ) [32X attribute[133X
+  
+  [33X[0;0YThe [13Xsign[113X of a permutation [3Xperm[103X is defined as [22X(-1)^k[122X where [22Xk[122X is the number of
+  cycles of [3Xperm[103X of even length.[133X
+  
+  [33X[0;0YThe  sign is a homomorphism from the symmetric group onto the multiplicative
+  group [22X{ +1, -1 }[122X, the kernel of which is the alternating group.[133X
+  
+  [1X42.4-2 CycleStructurePerm[101X
+  
+  [33X[1;0Y[29X[2XCycleStructurePerm[102X( [3Xperm[103X ) [32X attribute[133X
+  
+  [33X[0;0Yis  the cycle structure (i.e. the numbers of cycles of different lengths) of
+  the permutation [3Xperm[103X. This is encoded in a list [22Xl[122X in the following form: The
+  [22Xi[122X-th entry of [22Xl[122X contains the number of cycles of [3Xperm[103X of length [22Xi+1[122X. If [3Xperm[103X
+  contains  no  cycles  of  length [22Xi+1[122X it is not bound. Cycles of length 1 are
+  ignored.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSignPerm((1,2,3)(4,5));[127X[104X
+    [4X[28X-1[128X[104X
+    [4X[25Xgap>[125X [27XCycleStructurePerm((1,2,3)(4,5,9,7,8));[127X[104X
+    [4X[28X[ , 1,, 1 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X42.5 [33X[0;0YCreating Permutations[133X[101X
+  
+  [1X42.5-1 ListPerm[101X
+  
+  [33X[1;0Y[29X[2XListPerm[102X( [3Xperm[103X[, [3Xn[103X] ) [32X function[133X
+  
+  [33X[0;0Yis  a  list  [22Xl[122X that contains the images of the positive integers from 1 to [3Xn[103X
+  under  the  permutation  [3Xperm[103X.  That  means that [22Xl[122X[10X[[110X[22Xi[122X[10X][110X [22X= i[122X[10X^[110X[3Xperm[103X, where [22Xi[122X lies
+  between 1 and [3Xn[103X.[133X
+  
+  [33X[0;0YIf the optional second argument [3Xn[103X is omitted then the largest point moved by
+  [3Xperm[103X is used (see [2XLargestMovedPoint[102X ([14X42.3-2[114X)).[133X
+  
+  [1X42.5-2 PermList[101X
+  
+  [33X[1;0Y[29X[2XPermList[102X( [3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0Yis  the  permutation [22Xπ[122X that moves points as described by the list [3Xlist[103X. That
+  means that [22Xi^π =[122X [3Xlist[103X[10X[[110X[22Xi[122X[10X][110X if [22Xi[122X lies between [22X1[122X and the length of [3Xlist[103X, and [22Xi^π
+  =  i[122X  if  [22Xi[122X is larger than the length of the list [3Xlist[103X. [2XPermList[102X will return
+  [9Xfail[109X  if  [3Xlist[103X does not define a permutation, i.e., if [3Xlist[103X is not dense, or
+  if  [3Xlist[103X  contains  a positive integer twice, or if [3Xlist[103X contains an integer
+  not  in  the  range [10X[ 1 .. Length( [3Xlist[103X[10X ) ][110X, or if [3Xlist[103X contains non-integer
+  entries, etc.[133X
+  
+  [1X42.5-3 MappingPermListList[101X
+  
+  [33X[1;0Y[29X[2XMappingPermListList[102X( [3Xsrc[103X, [3Xdst[103X ) [32X function[133X
+  
+  [33X[0;0YLet  [3Xsrc[103X and [3Xdst[103X be lists of positive integers of the same length, such that
+  there   is   a   permutation   [22Xπ[122X   such   that   [10XOnTuples([3Xsrc[103X[10X,[110X   [22Xπ[122X[10X)  =  [3Xdst[103X[10X[110X.
+  [2XMappingPermListList[102X  returns  such  a  permutation (i. e., [3Xsrc[103X[10X[[110X[22Xi[122X[10X]^[110X[22Xπ =[122X [3Xdst[103X[10X[[110X[22Xi[122X[10X][110X
+  holds), with the property that [22Xπ[122X fixes any point which is not in [3Xsrc[103X or [3Xdst[103X.
+  If  there  are  several such permutations, it is not specified which of them
+  [2XMappingPermListList[102X   returns.   If  there  is  no  such  permutation,  then
+  [2XMappingPermListList[102X returns [9Xfail[109X.[133X
+  
+  [1X42.5-4 RestrictedPerm[101X
+  
+  [33X[1;0Y[29X[2XRestrictedPerm[102X( [3Xperm[103X, [3Xlist[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XRestrictedPermNC[102X( [3Xperm[103X, [3Xlist[103X ) [32X operation[133X
+  
+  [33X[0;0Y[2XRestrictedPerm[102X  returns  the  new permutation that acts on the points in the
+  list  [3Xlist[103X  in  the  same  way as the permutation [3Xperm[103X, and that fixes those
+  points  that are not in [3Xlist[103X. The resulting permutation is stored internally
+  of  degree  given  by  the  maximal  entry  of  [3Xlist[103X. [3Xlist[103X must be a list of
+  positive  integers  such that for each [22Xi[122X in [3Xlist[103X the image [22Xi[122X[10X^[110X[3Xperm[103X is also in
+  [3Xlist[103X, i.e., [3Xlist[103X must be the union of cycles of [3Xperm[103X.[133X
+  
+  [33X[0;0Y[2XRestrictedPermNC[102X does not check whether [3Xlist[103X is a union of cycles.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XListPerm((3,4,5));[127X[104X
+    [4X[28X[ 1, 2, 4, 5, 3 ][128X[104X
+    [4X[25Xgap>[125X [27XPermList([1,2,4,5,3]);[127X[104X
+    [4X[28X(3,4,5)[128X[104X
+    [4X[25Xgap>[125X [27XMappingPermListList([2,5,1,6],[7,12,8,2]);[127X[104X
+    [4X[28X(1,8,5,12,6,2,7)[128X[104X
+    [4X[25Xgap>[125X [27XRestrictedPerm((1,2)(3,4),[3..5]);[127X[104X
+    [4X[28X(3,4)[128X[104X
+  [4X[32X[104X
+  
+  [1X42.5-5 CycleFromList[101X
+  
+  [33X[1;0Y[29X[2XCycleFromList[102X( [3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0YFor  the  given  dense,  duplicate-free list of positive integers [22X[a_1, a_2,
+  ...,  a_n][122X  return  the  [22Xn[122X-cycle  [22X(a_1,a_2,...,a_n)[122X.  For the empty list the
+  trivial permutation [22X()[122X is returned.[133X
+  
+  [33X[0;0YIf the given [3Xlist[103X contains duplicates or holes, return [9Xfail[109X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XCycleFromList( [1,2,3,4] );[127X[104X
+    [4X[28X(1,2,3,4)[128X[104X
+    [4X[25Xgap>[125X [27XCycleFromList( [3,2,6,4,5] );[127X[104X
+    [4X[28X(2,6,4,5,3)[128X[104X
+    [4X[25Xgap>[125X [27XCycleFromList( [2,3,2] );[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27XCycleFromList( [1,,3] );[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [1X42.5-6 AsPermutation[101X
+  
+  [33X[1;0Y[29X[2XAsPermutation[102X( [3Xf[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA permutation or [9Xfail[109X.[133X
+  
+  [33X[0;0YPartial   permutations   and   transformations   which  define  permutations
+  (mathematically) can be converted into [5XGAP[105X permutations using [10XAsPermutation[110X;
+  see  Chapters  [14X53[114X  and [14X54[114X for more details about transformations and partial
+  permutations.[133X
+  
+  [8Xfor partial permutations[108X
+        [33X[0;6YIf  the  partial  permutation  [3Xf[103X  is  a permutation of its image, then
+        [10XAsPermutation[110X  returns  this  permutation.  If  [3Xf[103X does not permute its
+        image, then [9Xfail[109X is returned.[133X
+  
+  [8Xfor transformations[108X
+        [33X[0;6YA  transformation  is a permutation if and only if its rank equals its
+        degree.   If   a   transformation   in  [5XGAP[105X  is  a  permutation,  then
+        [10XAsPermutation[110X  returns  this  permutation.  If [3Xf[103X is not a permutation,
+        then [9Xfail[109X is returned.[133X
+  
+  [33X[0;0YThe  function  [2XPermutation[102X  ([14X41.9-1[114X)  can  also  be  used to convert partial
+  permutations and transformations into permutations where appropriate.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=PartialPerm( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ],[127X[104X
+    [4X[25X>[125X [27X[ 2, 7, 9, 4, 1, 10, 5, 6, 3, 8 ] );[127X[104X
+    [4X[28X(1,2,7,5)(3,9)(4)(6,10,8)[128X[104X
+    [4X[25Xgap>[125X [27XAsPermutation(f);[127X[104X
+    [4X[28X(1,2,7,5)(3,9)(6,10,8)[128X[104X
+    [4X[25Xgap>[125X [27Xf:= PartialPerm( [ 1, 2, 3, 4, 5, 7, 8 ], [ 5, 3, 8, 1, 9, 4, 10 ] );[127X[104X
+    [4X[28X[2,3,8,10][7,4,1,5,9][128X[104X
+    [4X[25Xgap>[125X [27XAsPermutation(f);[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27Xf:=Transformation( [ 5, 8, 3, 5, 8, 6, 2, 2, 7, 8 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XAsPermutation(f);[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27Xf:=Transformation( [ 1, 3, 6, 6, 2, 10, 2, 3, 10, 5 ] );;[127X[104X
+    [4X[25Xgap>[125X [27XAsPermutation(f);[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27Xf:=Transformation( [ 2, 7, 9, 4, 1, 10, 5, 6, 3, 8 ] );[127X[104X
+    [4X[28XTransformation( [ 2, 7, 9, 4, 1, 10, 5, 6, 3, 8 ] )[128X[104X
+    [4X[25Xgap>[125X [27XAsPermutation(f);[127X[104X
+    [4X[28X(1,2,7,5)(3,9)(6,10,8)[128X[104X
+  [4X[32X[104X
+  

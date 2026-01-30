@@ -1,0 +1,282 @@
+  
+  [1X38 [33X[0;0YRewriting Systems[133X[101X
+  
+  [33X[0;0YRewriting  systems  in [5XGAP[105X are a framework for dealing with the very general
+  task  of rewriting elements of a free (or [13Xterm[113X) algebra in some normal form.
+  Although  most  rewriting  systems  currently  in  use  are [13Xstring rewriting
+  systems[113X   (where  the  algebra  has  only  one  binary  operation  which  is
+  associative) the framework in [5XGAP[105X is general enough to encompass the task of
+  rewriting algebras of any signature from groups to semirings.[133X
+  
+  [33X[0;0YRewriting  systems  are  already  implemented  in [5XGAP[105X for finitely presented
+  semigroups  and for pc groups. The use of these particular rewriting systems
+  is  described  in  the  corresponding  chapters.  We  describe here only the
+  general  framework  of  rewriting  systems  with  a  particular  emphasis on
+  material  which  would  be  helpful for a developer implementing a rewriting
+  system.[133X
+  
+  [33X[0;0YWe  fix some definitions and terminology for the rest of this chapter. Let [22XT[122X
+  be  a term algebra in some signature. A [13Xterm rewriting system[113X for [22XT[122X is a set
+  of  ordered  pairs  of  elements of [22XT[122X of the form [22X(l, r)[122X. Viewed as a set of
+  relations,  the  rewriting  system  determines a presentation for a quotient
+  algebra [22XA[122X of [22XT[122X.[133X
+  
+  [33X[0;0YWhen  we  take  into  account  the  fact that the relations are expressed as
+  [13Xordered[113X  pairs,  we  have  a  way  of [13Xreducing[113X the elements of [22XT[122X. Suppose an
+  element [22Xu[122X of [22XT[122X has a subword [22Xl[122X and [22X(l, r)[122X is a rule of the rewriting system,
+  then  we  can replace the subterm [22Xl[122X of [22Xu[122X by the term [22Xr[122X and obtain a new word
+  [22Xv[122X.  We  say  that  we have [13Xrewritten[113X [22Xu[122X as [22Xv[122X. Note that [22Xu[122X and [22Xv[122X represent the
+  same  element of [22XA[122X. If [22Xu[122X cannot be rewritten using any rule of the rewriting
+  system we sat that [22Xu[122X is [13Xreduced[113X.[133X
+  
+  
+  [1X38.1 [33X[0;0YOperations on rewriting systems[133X[101X
+  
+  [1X38.1-1 IsRewritingSystem[101X
+  
+  [33X[1;0Y[29X[2XIsRewritingSystem[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YThis is the category in which all rewriting systems lie.[133X
+  
+  [1X38.1-2 Rules[101X
+  
+  [33X[1;0Y[29X[2XRules[102X( [3Xrws[103X ) [32X attribute[133X
+  
+  [33X[0;0YThe  rules  comprising  the  rewriting  system.  Note  that these may change
+  through  the life of the rewriting system, however they will always be a set
+  of defining relations of the algebra described by the rewriting system.[133X
+  
+  [1X38.1-3 OrderOfRewritingSystem[101X
+  
+  [33X[1;0Y[29X[2XOrderOfRewritingSystem[102X( [3Xrws[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XOrderingOfRewritingSystem[102X( [3Xrws[103X ) [32X attribute[133X
+  
+  [33X[0;0Yreturn the ordering of the rewriting system [3Xrws[103X.[133X
+  
+  [1X38.1-4 ReducedForm[101X
+  
+  [33X[1;0Y[29X[2XReducedForm[102X( [3Xrws[103X, [3Xu[103X ) [32X operation[133X
+  
+  [33X[0;0YGiven  an  element  [3Xu[103X  in  the  free  (or  term) algebra [22XT[122X over which [3Xrws[103X is
+  defined,  rewrite  [3Xu[103X by successive applications of the rules of [3Xrws[103X until no
+  further rewriting is possible, and return the resulting element of [22XT[122X.[133X
+  
+  
+  [1X38.1-5 [33X[0;0YIsConfluent[133X[101X
+  
+  [33X[1;0Y[29X[2XIsConfluent[102X( [3Xrws[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsConfluent[102X( [3XA[103X ) [32X property[133X
+  
+  [33X[0;0YFor  a  rewriting system [3Xrws[103X, [2XIsConfluent[102X returns [9Xtrue[109X if and only if [3Xrws[103X is
+  confluent.  A  rewriting system is [13Xconfluent[113X if, for every two words [22Xu[122X and [22Xv[122X
+  in  the  free  algebra  [22XT[122X  which represent the same element of the algebra [22XA[122X
+  defined by [3Xrws[103X, [10XReducedForm( [3Xrws[103X[10X, [110X[22Xu[122X [10X) = ReducedForm( [3Xrws[103X[10X, [110X[22Xv[122X[10X)[110X as words in the
+  free  algebra  [22XT[122X.  This  element  is  the  [13Xunique normal form[113X of the element
+  represented by [22Xu[122X.[133X
+  
+  [33X[0;0YFor  an  algebra  [3XA[103X  with  a  canonical rewriting system associated with it,
+  [2XIsConfluent[102X checks whether that rewriting system is confluent.[133X
+  
+  [33X[0;0YAlso see [2XIsConfluent[102X ([14X46.4-7[114X).[133X
+  
+  [1X38.1-6 ConfluentRws[101X
+  
+  [33X[1;0Y[29X[2XConfluentRws[102X( [3Xrws[103X ) [32X attribute[133X
+  
+  [33X[0;0YReturn  a  new  rewriting  system  defining the same algebra as [3Xrws[103X which is
+  confluent.[133X
+  
+  [1X38.1-7 IsReduced[101X
+  
+  [33X[1;0Y[29X[2XIsReduced[102X( [3Xrws[103X ) [32X property[133X
+  
+  [33X[0;0YA  rewriting  system  is  reduced  if for each rule [22X(l, r)[122X, [22Xl[122X and [22Xr[122X are both
+  reduced.[133X
+  
+  [1X38.1-8 ReduceRules[101X
+  
+  [33X[1;0Y[29X[2XReduceRules[102X( [3Xrws[103X ) [32X operation[133X
+  
+  [33X[0;0YReduce rules and remove redundant rules to make [3Xrws[103X reduced.[133X
+  
+  [1X38.1-9 AddRule[101X
+  
+  [33X[1;0Y[29X[2XAddRule[102X( [3Xrws[103X, [3Xrule[103X ) [32X operation[133X
+  
+  [33X[0;0YAdd [3Xrule[103X to a rewriting system [3Xrws[103X.[133X
+  
+  [1X38.1-10 AddRuleReduced[101X
+  
+  [33X[1;0Y[29X[2XAddRuleReduced[102X( [3Xrws[103X, [3Xrule[103X ) [32X operation[133X
+  
+  [33X[0;0YAdd  [3Xrule[103X  to  rewriting  system  [3Xrws[103X. Performs a reduction operation on the
+  resulting system, so that if [3Xrws[103X is reduced it will remain reduced.[133X
+  
+  [1X38.1-11 MakeConfluent[101X
+  
+  [33X[1;0Y[29X[2XMakeConfluent[102X( [3Xrws[103X ) [32X operation[133X
+  
+  [33X[0;0YAdd rules (and perhaps reduce) in order to make [3Xrws[103X confluent[133X
+  
+  [1X38.1-12 GeneratorsOfRws[101X
+  
+  [33X[1;0Y[29X[2XGeneratorsOfRws[102X( [3Xrws[103X ) [32X attribute[133X
+  
+  [33X[0;0YReturns the list of generators of the rewriting system [3Xrws[103X.[133X
+  
+  
+  [1X38.2 [33X[0;0YOperations on elements of the algebra[133X[101X
+  
+  [33X[0;0YIn  this  section let [22Xu[122X denote an element of the term algebra [22XT[122X representing
+  [22X[u][122X in the quotient algebra [22XA[122X.[133X
+  
+  [1X38.2-1 ReducedProduct[101X
+  
+  [33X[1;0Y[29X[2XReducedProduct[102X( [3Xrws[103X, [3Xu[103X, [3Xv[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XReducedSum[102X( [3Xrws[103X, [3Xleft[103X, [3Xright[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XReducedOne[102X( [3Xrws[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XReducedAdditiveInverse[102X( [3Xrws[103X, [3Xobj[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XReducedComm[102X( [3Xrws[103X, [3Xleft[103X, [3Xright[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XReducedConjugate[102X( [3Xrws[103X, [3Xleft[103X, [3Xright[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XReducedDifference[102X( [3Xrws[103X, [3Xleft[103X, [3Xright[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XReducedInverse[102X( [3Xrws[103X, [3Xobj[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XReducedLeftQuotient[102X( [3Xrws[103X, [3Xleft[103X, [3Xright[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XReducedPower[102X( [3Xrws[103X, [3Xobj[103X, [3Xpow[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XReducedQuotient[102X( [3Xrws[103X, [3Xleft[103X, [3Xright[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XReducedScalarProduct[102X( [3Xrws[103X, [3Xleft[103X, [3Xright[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XReducedZero[102X( [3Xrws[103X ) [32X operation[133X
+  
+  [33X[0;0YThe  result  of [2XReducedProduct[102X is [22Xw[122X where [22X[w][122X equals [[3Xu[103X][[3Xv[103X] in [22XA[122X and [22Xw[122X is in
+  reduced form.[133X
+  
+  [33X[0;0YThe  remaining  operations  are  defined similarly when they are defined (as
+  determined by the signature of the term algebra).[133X
+  
+  
+  [1X38.3 [33X[0;0YProperties of rewriting systems[133X[101X
+  
+  [1X38.3-1 IsBuiltFromAdditiveMagmaWithInverses[101X
+  
+  [33X[1;0Y[29X[2XIsBuiltFromAdditiveMagmaWithInverses[102X( [3Xobj[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsBuiltFromMagma[102X( [3Xobj[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsBuiltFromMagmaWithOne[102X( [3Xobj[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsBuiltFromMagmaWithInverses[102X( [3Xobj[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsBuiltFromSemigroup[102X( [3Xobj[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsBuiltFromGroup[102X( [3Xobj[103X ) [32X property[133X
+  
+  [33X[0;0YThese properties may be used to identify the type of term algebra over which
+  the rewriting system is defined.[133X
+  
+  
+  [1X38.4 [33X[0;0YRewriting in Groups and Monoids[133X[101X
+  
+  [33X[0;0YOne application of rewriting is to reduce words in finitely presented groups
+  and  monoids.  The  rewriting  system  still  has to be built for a finitely
+  presented  monoid (using [10XIsomorphismFpMonoid[110X for conversion). Rewriting then
+  can  take  place  for  words  in  the  underlying free monoid. (These can be
+  obtained from monoid elements with the command [10XUnderlyingElement[110X.)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=FreeGroup(3);;[127X[104X
+    [4X[25Xgap>[125X [27Xrels:=[f.1*f.2^2/f.3,f.2*f.3^2/f.1,f.3*f.1^2/f.2];;[127X[104X
+    [4X[25Xgap>[125X [27Xg:=f/rels;[127X[104X
+    [4X[28X<fp group on the generators [ f1, f2, f3 ]>[128X[104X
+    [4X[25Xgap>[125X [27Xmhom:=IsomorphismFpMonoid(g);[127X[104X
+    [4X[28XMappingByFunction( <fp group on the generators[128X[104X
+    [4X[28X[ f1, f2, f3 ]>, <fp monoid on the generators[128X[104X
+    [4X[28X[ f1, f1^-1, f2, f2^-1, f3, f3^-1[128X[104X
+    [4X[28X ]>, function( x ) ... end, function( x ) ... end )[128X[104X
+    [4X[25Xgap>[125X [27Xmon:=Image(mhom);[127X[104X
+    [4X[28X<fp monoid on the generators [ f1, f1^-1, f2, f2^-1, f3, f3^-1 ]>[128X[104X
+    [4X[25Xgap>[125X [27Xk:=KnuthBendixRewritingSystem(mon);[127X[104X
+    [4X[28XKnuth Bendix Rewriting System for Monoid([128X[104X
+    [4X[28X[ f1, f1^-1, f2, f2^-1, f3, f3^-1 ] ) with rules[128X[104X
+    [4X[28X[ [ f1*f1^-1, <identity ...> ], [ f1^-1*f1, <identity ...> ],[128X[104X
+    [4X[28X  [ f2*f2^-1, <identity ...> ], [ f2^-1*f2, <identity ...> ],[128X[104X
+    [4X[28X  [ f3*f3^-1, <identity ...> ], [ f3^-1*f3, <identity ...> ],[128X[104X
+    [4X[28X  [ f1*f2^2*f3^-1, <identity ...> ], [ f2*f3^2*f1^-1, <identity ...> ][128X[104X
+    [4X[28X    , [ f3*f1^2*f2^-1, <identity ...> ] ][128X[104X
+    [4X[25Xgap>[125X [27XMakeConfluent(k);[127X[104X
+    [4X[25Xgap>[125X [27Xa:=Product(GeneratorsOfMonoid(mon));[127X[104X
+    [4X[28Xf1*f1^-1*f2*f2^-1*f3*f3^-1[128X[104X
+    [4X[25Xgap>[125X [27XReducedForm(k,UnderlyingElement(a));[127X[104X
+    [4X[28X<identity ...>[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YTo  rewrite a word in the finitely presented group, one has to convert it to
+  a  word  in  the  monoid  first,  rewrite  in the underlying free monoid and
+  convert  back  (by  forming  first again an element of the fp monoid) to the
+  finitely presented group.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xr:=PseudoRandom(g);;[127X[104X
+    [4X[25Xgap>[125X [27XLength(r);[127X[104X
+    [4X[28X3704[128X[104X
+    [4X[25Xgap>[125X [27Xmelm:=Image(mhom,r);;[127X[104X
+    [4X[25Xgap>[125X [27Xred:=ReducedForm(k,UnderlyingElement(melm));[127X[104X
+    [4X[28Xf1^-1^3*f2^-1*f1^2[128X[104X
+    [4X[25Xgap>[125X [27Xmelm:=ElementOfFpMonoid(FamilyObj(One(mon)),red);[127X[104X
+    [4X[28Xf1^-1^3*f2^-1*f1^2[128X[104X
+    [4X[25Xgap>[125X [27Xgpelm:=PreImagesRepresentative(mhom,melm);[127X[104X
+    [4X[28Xf1^-3*f2^-1*f1^2[128X[104X
+    [4X[25Xgap>[125X [27Xr=gpelm;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XCategoriesOfObject(red);[127X[104X
+    [4X[28X[ "IsExtLElement", "IsExtRElement", "IsMultiplicativeElement",[128X[104X
+    [4X[28X  "IsMultiplicativeElementWithOne", "IsAssociativeElement", "IsWord" ][128X[104X
+    [4X[25Xgap>[125X [27XCategoriesOfObject(melm);[127X[104X
+    [4X[28X[ "IsExtLElement", "IsExtRElement", "IsMultiplicativeElement",[128X[104X
+    [4X[28X  "IsMultiplicativeElementWithOne", "IsAssociativeElement",[128X[104X
+    [4X[28X  "IsElementOfFpMonoid" ][128X[104X
+    [4X[25Xgap>[125X [27XCategoriesOfObject(gpelm);[127X[104X
+    [4X[28X[ "IsExtLElement", "IsExtRElement", "IsMultiplicativeElement",[128X[104X
+    [4X[28X  "IsMultiplicativeElementWithOne", "IsMultiplicativeElementWithInverse",[128X[104X
+    [4X[28X  "IsAssociativeElement", "IsElementOfFpGroup" ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote, that the elements [10Xred[110X (free monoid) [10Xmelm[110X (fp monoid) and [10Xgpelm[110X (group)
+  differ, though they are displayed identically.[133X
+  
+  [33X[0;0YUnder  Unix, it is possible to use the [5Xkbmag[105X package to replace the built-in
+  rewriting  by  this  packages  efficient  C  implementation. You can do this
+  (after  loading the [5Xkbmag[105X package) by assigning the variable [2XKB_REW[102X ([14X52.5-2[114X)
+  to   [10XKBMAG_REW[110X.   Assignment   to   [10XGAPKB_REW[110X   reverts   to   the  built-in
+  implementation.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLoadPackage("kbmag");[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XKB_REW:=KBMAG_REW;;[127X[104X
+  [4X[32X[104X
+  
+  
+  [1X38.5 [33X[0;0YDeveloping rewriting systems[133X[101X
+  
+  [33X[0;0YThe  key  point to note about rewriting systems is that they have properties
+  such  as [2XIsConfluent[102X ([14X38.1-5[114X) and attributes such as [2XRules[102X ([14X38.1-2[114X), however
+  they  are rarely stored, but rather computed afresh each time they are asked
+  for, from data stored in the private members of the rewriting system object.
+  This is because a rewriting system often evolves through a session, starting
+  with  some  rules  which  define the algebra [3XA[103X as relations, and then adding
+  more  rules  to  make  the  system  confluent.  For  example, in the case of
+  Knuth-Bendix    rewriting    systems    (see   Chapter [14X52[114X),   the   function
+  [10XCreateKnuthBendixRewritingSystem[110X  creating the rewriting system (in the file
+  [11Xlib/kbsemi.gi[111X) uses[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xkbrws := Objectify(NewType(rwsfam,[128X[104X
+    [4X[28X  IsMutable and IsKnuthBendixRewritingSystem and[128X[104X
+    [4X[28X  IsKnuthBendixRewritingSystemRep),[128X[104X
+    [4X[28X  rec(family:= fam,[128X[104X
+    [4X[28X  reduced:=false,[128X[104X
+    [4X[28X  tzrules:=List(relwco,i->[128X[104X
+    [4X[28X   [LetterRepAssocWord(i[1]),LetterRepAssocWord(i[2])]),[128X[104X
+    [4X[28X  pairs2check:=CantorList(Length(r)),[128X[104X
+    [4X[28X  ordering:=wordord,[128X[104X
+    [4X[28X  freefam:=freefam));[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIn  particular,  since  we don't use the filter [10XIsAttributeStoringRep[110X in the
+  [2XObjectify[102X ([14X79.1-1[114X), whenever [2XIsConfluent[102X ([14X38.1-5[114X) is called, the appropriate
+  method to determine confluence is called.[133X
+  

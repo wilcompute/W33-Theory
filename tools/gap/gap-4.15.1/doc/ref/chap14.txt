@@ -1,0 +1,1246 @@
+  
+  [1X14 [33X[0;0YIntegers[133X[101X
+  
+  [33X[0;0YOne  of  the most fundamental datatypes in every programming language is the
+  integer type. [5XGAP[105X is no exception.[133X
+  
+  [33X[0;0Y[5XGAP[105X integers are entered as a sequence of decimal digits optionally preceded
+  by  a  [21X[10X+[110X[121X  sign  for positive integers or a [21X[10X-[110X[121X sign for negative integers. The
+  size  of  integers in [5XGAP[105X is only limited by the amount of available memory,
+  so you can compute with integers having thousands of digits.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27X-1234;[127X[104X
+    [4X[28X-1234[128X[104X
+    [4X[25Xgap>[125X [27X123456789012345678901234567890123456789012345678901234567890;[127X[104X
+    [4X[28X123456789012345678901234567890123456789012345678901234567890[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that in a few places, only certain small integer values can be used. A
+  [13Xsmall  integer[113X  (also  referred  to  as  [13Ximmediate  integer[113X) is an integer [22Xn[122X
+  satisfying  [10XINTOBJ_MIN[110X  [22X≤  n  ≤[122X  [10XINTOBJ_MAX[110X, where [10XINTOBJ_MIN[110X and [10XINTOBJ_MAX[110X
+  equal  either  [22X-2^28[122X  and [22X2^28-1[122X (on 32-bit systems) or [22X-2^60[122X and [22X2^60-1[122X (on
+  64-bit  systems).  For  example,  the  elements of a range are restricted to
+  small integers (see [14X21.22[114X).[133X
+  
+  [33X[0;0YMany  more  functions  that are mainly related to the prime residue group of
+  integers  modulo  an  integer  are  described  in  chapter [14X15[114X, and functions
+  dealing with combinatorics can be found in chapter [14X16[114X.[133X
+  
+  
+  [1X14.1 [33X[0;0YIntegers: Global Variables[133X[101X
+  
+  [1X14.1-1 Integers[101X
+  
+  [33X[1;0Y[29X[2XIntegers[102X [32X global variable[133X
+  [33X[1;0Y[29X[2XPositiveIntegers[102X [32X global variable[133X
+  [33X[1;0Y[29X[2XNonnegativeIntegers[102X [32X global variable[133X
+  
+  [33X[0;0YThese  global  variables represent the ring of integers and the semirings of
+  positive and nonnegative integers, respectively.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSize( Integers ); 2 in Integers;[127X[104X
+    [4X[28Xinfinity[128X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[2XIntegers[102X is a subset of [2XRationals[102X ([14X17.1-1[114X), which is a subset of [2XCyclotomics[102X
+  ([14X18.1-2[114X).  See  Chapter [14X18[114X  for  arithmetic  operations  and  comparison  of
+  integers.[133X
+  
+  [1X14.1-2 IsIntegers[101X
+  
+  [33X[1;0Y[29X[2XIsIntegers[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsPositiveIntegers[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsNonnegativeIntegers[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0Yare   the   defining   categories   for   the   domains  [2XIntegers[102X  ([14X14.1-1[114X),
+  [2XPositiveIntegers[102X ([14X14.1-1[114X), and [2XNonnegativeIntegers[102X ([14X14.1-1[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsIntegers( Integers );  IsIntegers( Rationals );  IsIntegers( 7 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X14.2 [33X[0;0YElementary Operations for Integers[133X[101X
+  
+  [1X14.2-1 IsInt[101X
+  
+  [33X[1;0Y[29X[2XIsInt[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YEvery rational integer lies in the category [2XIsInt[102X, which is a subcategory of
+  [2XIsRat[102X ([14X17.2-1[114X).[133X
+  
+  [1X14.2-2 IsPosInt[101X
+  
+  [33X[1;0Y[29X[2XIsPosInt[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YEvery positive integer lies in the category [2XIsPosInt[102X.[133X
+  
+  [1X14.2-3 Int[101X
+  
+  [33X[1;0Y[29X[2XInt[102X( [3Xelm[103X ) [32X attribute[133X
+  
+  [33X[0;0Y[2XInt[102X  returns  an  integer  [10Xint[110X whose meaning depends on the type of [3Xelm[103X. For
+  example:[133X
+  
+  [33X[0;0YIf [3Xelm[103X is a rational number (see Chapter [14X17[114X) then [10Xint[110X is the integer part of
+  the quotient of numerator and denominator of [3Xelm[103X (see [2XQuoInt[102X ([14X14.3-1[114X)).[133X
+  
+  [33X[0;0YIf  [3Xelm[103X  is  an element of a finite prime field (see Chapter [14X59[114X) then [10Xint[110X is
+  the smallest nonnegative integer such that [10X[3Xelm[103X[10X = int * One( [3Xelm[103X[10X )[110X.[133X
+  
+  [33X[0;0YIf  [3Xelm[103X  is  a string (see Chapter [14X27[114X) consisting entirely of decimal digits
+  [10X'0'[110X,  [10X'1'[110X, [22X...[122X, [10X'9'[110X, and optionally a sign [10X'-'[110X (at the first position), then
+  [10Xint[110X  is the integer described by this string. For all other strings, [10Xfail[110X is
+  returned. See [2XInt[102X ([14X27.9-1[114X).[133X
+  
+  [33X[0;0YThe  operation  [2XString[102X ([14X27.7-6[114X) can be used to compute a string for rational
+  integers, in fact for all cyclotomics.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XInt( 4/3 );  Int( -2/3 );[127X[104X
+    [4X[28X1[128X[104X
+    [4X[28X0[128X[104X
+    [4X[25Xgap>[125X [27Xint:= Int( Z(5) );  int * One( Z(5) );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[28XZ(5)[128X[104X
+    [4X[25Xgap>[125X [27XInt( "12345" );  Int( "-27" );  Int( "-27/3" );[127X[104X
+    [4X[28X12345[128X[104X
+    [4X[28X-27[128X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [1X14.2-4 IsEvenInt[101X
+  
+  [33X[1;0Y[29X[2XIsEvenInt[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Ytests if the integer [3Xn[103X is divisible by 2.[133X
+  
+  [1X14.2-5 IsOddInt[101X
+  
+  [33X[1;0Y[29X[2XIsOddInt[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Ytests if the integer [3Xn[103X is not divisible by 2.[133X
+  
+  [1X14.2-6 AbsInt[101X
+  
+  [33X[1;0Y[29X[2XAbsInt[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XAbsInt[102X  returns  the  absolute  value  of  the  integer  [3Xn[103X,  i.e., [3Xn[103X if [3Xn[103X is
+  positive, -[3Xn[103X if [3Xn[103X is negative and 0 if [3Xn[103X is 0.[133X
+  
+  [33X[0;0Y[2XAbsInt[102X is a special case of the general operation [2XEuclideanDegree[102X ([14X56.6-2[114X).[133X
+  
+  [33X[0;0YSee also [2XAbsoluteValue[102X ([14X18.1-8[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XAbsInt( 33 );[127X[104X
+    [4X[28X33[128X[104X
+    [4X[25Xgap>[125X [27XAbsInt( -214378 );[127X[104X
+    [4X[28X214378[128X[104X
+    [4X[25Xgap>[125X [27XAbsInt( 0 );[127X[104X
+    [4X[28X0[128X[104X
+  [4X[32X[104X
+  
+  [1X14.2-7 SignInt[101X
+  
+  [33X[1;0Y[29X[2XSignInt[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XSignInt[102X returns the sign of the integer [3Xn[103X, i.e., 1 if [3Xn[103X is positive, -1 if [3Xn[103X
+  is negative and 0 if [3Xn[103X is 0.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSignInt( 33 );[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XSignInt( -214378 );[127X[104X
+    [4X[28X-1[128X[104X
+    [4X[25Xgap>[125X [27XSignInt( 0 );[127X[104X
+    [4X[28X0[128X[104X
+  [4X[32X[104X
+  
+  [1X14.2-8 LogInt[101X
+  
+  [33X[1;0Y[29X[2XLogInt[102X( [3Xn[103X, [3Xbase[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XLogInt[102X  returns  the integer part of the logarithm of the positive integer [3Xn[103X
+  with  respect  to  the  positive  integer  [3Xbase[103X,  i.e., the largest positive
+  integer  [22Xe[122X such that [22X[3Xbase[103X^e ≤ [3Xn[103X[122X. The function [2XLogInt[102X will signal an error if
+  either [3Xn[103X or [3Xbase[103X is not positive.[133X
+  
+  [33X[0;0YFor   [3Xbase[103X   [22X=  2[122X  this  is  very  efficient  because  the  internal  binary
+  representation of the integer is used.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLogInt( 1030, 2 );[127X[104X
+    [4X[28X10[128X[104X
+    [4X[25Xgap>[125X [27X2^10;[127X[104X
+    [4X[28X1024[128X[104X
+    [4X[25Xgap>[125X [27XLogInt( 1, 10 );[127X[104X
+    [4X[28X0[128X[104X
+  [4X[32X[104X
+  
+  [1X14.2-9 RootInt[101X
+  
+  [33X[1;0Y[29X[2XRootInt[102X( [3Xn[103X[, [3Xk[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XRootInt[102X  returns  the  integer part of the [3Xk[103Xth root of the integer [3Xn[103X. If the
+  optional  integer  argument  [3Xk[103X  is not given it defaults to 2, i.e., [2XRootInt[102X
+  returns the integer part of the square root in this case.[133X
+  
+  [33X[0;0YIf  [3Xn[103X  is positive, [2XRootInt[102X returns the largest positive integer [22Xr[122X such that
+  [22Xr^[3Xk[103X ≤ [3Xn[103X[122X. If [3Xn[103X is negative and [3Xk[103X is odd [2XRootInt[102X returns [10X-RootInt( -[3Xn[103X[10X, [3Xk[103X[10X )[110X. If
+  [3Xn[103X  is  negative and [3Xk[103X is even [2XRootInt[102X will cause an error. [2XRootInt[102X will also
+  cause an error if [3Xk[103X is 0 or negative.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRootInt( 361 );[127X[104X
+    [4X[28X19[128X[104X
+    [4X[25Xgap>[125X [27XRootInt( 2 * 10^12 );[127X[104X
+    [4X[28X1414213[128X[104X
+    [4X[25Xgap>[125X [27XRootInt( 17000, 5 );[127X[104X
+    [4X[28X7[128X[104X
+    [4X[25Xgap>[125X [27X7^5;[127X[104X
+    [4X[28X16807[128X[104X
+  [4X[32X[104X
+  
+  [1X14.2-10 SmallestRootInt[101X
+  
+  [33X[1;0Y[29X[2XSmallestRootInt[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XSmallestRootInt[102X returns the smallest root of the integer [3Xn[103X.[133X
+  
+  [33X[0;0YThe  smallest  root  of  an  integer [3Xn[103X is the integer [22Xr[122X of smallest absolute
+  value for which a positive integer [22Xk[122X exists such that [22X[3Xn[103X = r^k[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSmallestRootInt( 2^30 );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XSmallestRootInt( -(2^30) );[127X[104X
+    [4X[28X-4[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote that [22X(-2)^30 = +(2^30)[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSmallestRootInt( 279936 );[127X[104X
+    [4X[28X6[128X[104X
+    [4X[25Xgap>[125X [27XLogInt( 279936, 6 );[127X[104X
+    [4X[28X7[128X[104X
+    [4X[25Xgap>[125X [27XSmallestRootInt( 1001 );[127X[104X
+    [4X[28X1001[128X[104X
+  [4X[32X[104X
+  
+  [1X14.2-11 IsSquareInt[101X
+  
+  [33X[1;0Y[29X[2XIsSquareInt[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XIsSquareInt[102X  tests whether the integer [3Xn[103X is the square of an integer or not.
+  This  test  is  much faster than the simpler [10XRootInt[110X[22X(n)^2=n[122X because it first
+  tests whether [3Xn[103X is a square residue modulo some small integers.[133X
+  
+  [1X14.2-12 ListOfDigits[101X
+  
+  [33X[1;0Y[29X[2XListOfDigits[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0YFor  a  positive integer [3Xn[103X this function returns a list [3Xl[103X, consisting of the
+  digits of [3Xn[103X in decimal representation.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XListOfDigits(3142);[127X[104X
+    [4X[28X[ 3, 1, 4, 2 ][128X[104X
+  [4X[32X[104X
+  
+  [1X14.2-13 Random[101X
+  
+  [33X[1;0Y[29X[2XRandom[102X( [3XIntegers[103X ) [32X method[133X
+  
+  [33X[0;0Y[2XRandom[102X  for  integers  returns  pseudo  random  integers  between [22X-10[122X and [22X10[122X
+  distributed  according  to  a  binomial  distribution. To generate uniformly
+  distributed  integers  from  a  range, use the construction [10XRandom( [ [3Xlow[103X[10X ..
+  [3Xhigh[103X[10X ] )[110X  (see [2XRandom[102X ([14X30.7-1[114X)).[133X
+  
+  
+  [1X14.3 [33X[0;0YQuotients and Remainders[133X[101X
+  
+  [1X14.3-1 QuoInt[101X
+  
+  [33X[1;0Y[29X[2XQuoInt[102X( [3Xn[103X, [3Xm[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XQuoInt[102X returns the integer part of the quotient of its integer operands.[133X
+  
+  [33X[0;0YIf  [3Xn[103X and [3Xm[103X are positive, [2XQuoInt[102X returns the largest positive integer [22Xq[122X such
+  that  [22Xq  *  [3Xm[103X  ≤ [3Xn[103X[122X. If [3Xn[103X or [3Xm[103X or both are negative the absolute value of the
+  integer part of the quotient is the quotient of the absolute values of [3Xn[103X and
+  [3Xm[103X, and the sign of it is the product of the signs of [3Xn[103X and [3Xm[103X.[133X
+  
+  [33X[0;0Y[2XQuoInt[102X  is  used  in  a  method  for the general operation [2XEuclideanQuotient[102X
+  ([14X56.6-3[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XQuoInt(5,3);  QuoInt(-5,3);  QuoInt(5,-3);  QuoInt(-5,-3);[127X[104X
+    [4X[28X1[128X[104X
+    [4X[28X-1[128X[104X
+    [4X[28X-1[128X[104X
+    [4X[28X1[128X[104X
+  [4X[32X[104X
+  
+  [1X14.3-2 BestQuoInt[101X
+  
+  [33X[1;0Y[29X[2XBestQuoInt[102X( [3Xn[103X, [3Xm[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XBestQuoInt[102X  returns the best quotient [22Xq[122X of the integers [3Xn[103X and [3Xm[103X. This is the
+  quotient  such  that  [22X[3Xn[103X-q*[3Xm[103X[122X  has  minimal  absolute  value. If there are two
+  quotients  whose  remainders have the same absolute value, then the quotient
+  with the smaller absolute value is chosen.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XBestQuoInt( 5, 3 );  BestQuoInt( -5, 3 );[127X[104X
+    [4X[28X2[128X[104X
+    [4X[28X-2[128X[104X
+  [4X[32X[104X
+  
+  [1X14.3-3 RemInt[101X
+  
+  [33X[1;0Y[29X[2XRemInt[102X( [3Xn[103X, [3Xm[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XRemInt[102X returns the remainder of its two integer operands.[133X
+  
+  [33X[0;0YIf  [3Xm[103X is not equal to zero, [2XRemInt[102X returns [10X[3Xn[103X[10X - [3Xm[103X[10X * QuoInt( [3Xn[103X[10X, [3Xm[103X[10X )[110X. Note that
+  the  rules  given  for [2XQuoInt[102X ([14X14.3-1[114X) imply that the return value of [2XRemInt[102X
+  has  the  same  sign  as  [3Xn[103X and its absolute value is strictly less than the
+  absolute  value  of  [3Xm[103X.  Note also that the return value equals [10X[3Xn[103X[10X mod [3Xm[103X[10X[110X when
+  both [3Xn[103X and [3Xm[103X are nonnegative. Dividing by [10X0[110X signals an error.[133X
+  
+  [33X[0;0Y[2XRemInt[102X  is  used  in  a  method for the general operation [2XEuclideanRemainder[102X
+  ([14X56.6-4[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRemInt(5,3);  RemInt(-5,3);  RemInt(5,-3);  RemInt(-5,-3);[127X[104X
+    [4X[28X2[128X[104X
+    [4X[28X-2[128X[104X
+    [4X[28X2[128X[104X
+    [4X[28X-2[128X[104X
+  [4X[32X[104X
+  
+  [1X14.3-4 GcdInt[101X
+  
+  [33X[1;0Y[29X[2XGcdInt[102X( [3Xm[103X, [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XGcdInt[102X returns the greatest common divisor of its two integer operands [3Xm[103X and
+  [3Xn[103X, i.e., the greatest integer that divides both [3Xm[103X and [3Xn[103X. The greatest common
+  divisor is never negative, even if the arguments are. We define [10XGcdInt( [3Xm[103X[10X, 0
+  ) = GcdInt( 0, [3Xm[103X[10X ) = AbsInt( [3Xm[103X[10X )[110X and [10XGcdInt( 0, 0 ) = 0[110X.[133X
+  
+  [33X[0;0Y[2XGcdInt[102X is a method used by the general function [2XGcd[102X ([14X56.7-1[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XGcdInt( 123, 66 );[127X[104X
+    [4X[28X3[128X[104X
+  [4X[32X[104X
+  
+  [1X14.3-5 Gcdex[101X
+  
+  [33X[1;0Y[29X[2XGcdex[102X( [3Xm[103X, [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  a record [10Xg[110X describing the extended greatest common divisor of [3Xm[103X and
+  [3Xn[103X.  The  component  [10Xgcd[110X  is  this  gcd, the components [10Xcoeff1[110X and [10Xcoeff2[110X are
+  integer  cofactors  such  that  [10Xg.gcd = g.coeff1 * [3Xm[103X[10X + g.coeff2 * [3Xn[103X[10X[110X, and the
+  components  [10Xcoeff3[110X and [10Xcoeff4[110X are integer cofactors such that [10X0 = g.coeff3 *
+  [3Xm[103X[10X + g.coeff4 * [3Xn[103X[10X[110X.[133X
+  
+  [33X[0;0YIf  [3Xm[103X  and  [3Xn[103X  both are nonzero, [10XAbsInt( g.coeff1 )[110X is less than or equal to
+  [10XAbsInt([3Xn[103X[10X)  /  (2  *  g.gcd)[110X, and [10XAbsInt( g.coeff2 )[110X is less than or equal to
+  [10XAbsInt([3Xm[103X[10X) / (2 * g.gcd)[110X.[133X
+  
+  [33X[0;0YIf [3Xm[103X or [3Xn[103X or both are zero [10Xcoeff3[110X is [10X-[3Xn[103X[10X / g.gcd[110X and [10Xcoeff4[110X is [10X[3Xm[103X[10X / g.gcd[110X.[133X
+  
+  [33X[0;0YThe  coefficients  always  form  a  unimodular matrix, i.e., the determinant
+  [10Xg.coeff1 * g.coeff4 - g.coeff3 * g.coeff2[110X is [22X1[122X or [22X-1[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XGcdex( 123, 66 );[127X[104X
+    [4X[28Xrec( coeff1 := 7, coeff2 := -13, coeff3 := -22, coeff4 := 41,[128X[104X
+    [4X[28X  gcd := 3 )[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis means [22X3 = 7 * 123 - 13 * 66[122X, [22X0 = -22 * 123 + 41 * 66[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XGcdex( 0, -3 );[127X[104X
+    [4X[28Xrec( coeff1 := 0, coeff2 := -1, coeff3 := 1, coeff4 := 0, gcd := 3 )[128X[104X
+    [4X[25Xgap>[125X [27XGcdex( 0, 0 );[127X[104X
+    [4X[28Xrec( coeff1 := 1, coeff2 := 0, coeff3 := 0, coeff4 := 1, gcd := 0 )[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[2XGcdRepresentation[102X  ([14X56.7-3[114X)  provides  similar  functionality over arbitrary
+  Euclidean rings.[133X
+  
+  [1X14.3-6 LcmInt[101X
+  
+  [33X[1;0Y[29X[2XLcmInt[102X( [3Xm[103X, [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the least common multiple of the integers [3Xm[103X and [3Xn[103X.[133X
+  
+  [33X[0;0Y[2XLcmInt[102X is a method used by the general operation [2XLcm[102X ([14X56.7-6[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLcmInt( 123, 66 );[127X[104X
+    [4X[28X2706[128X[104X
+  [4X[32X[104X
+  
+  [1X14.3-7 CoefficientsQadic[101X
+  
+  [33X[1;0Y[29X[2XCoefficientsQadic[102X( [3Xi[103X, [3Xq[103X ) [32X operation[133X
+  
+  [33X[0;0Yreturns  the  [3Xq[103X-adic  representation  of  the  integer  [3Xi[103X  as  a  list  [22Xl[122X of
+  coefficients  satisfying  the  equality  [22X[3Xi[103X  =  ∑_{j = 0} [3Xq[103X^j ⋅ l[j+1][122X for an
+  integer [22X[3Xq[103X > 1[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl:=CoefficientsQadic(462,3);[127X[104X
+    [4X[28X[ 0, 1, 0, 2, 2, 1 ][128X[104X
+  [4X[32X[104X
+  
+  [1X14.3-8 CoefficientsMultiadic[101X
+  
+  [33X[1;0Y[29X[2XCoefficientsMultiadic[102X( [3Xints[103X, [3Xint[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns the multiadic expansion of the integer [3Xint[103X modulo the integers given
+  in  [3Xints[103X  (in  ascending  order).  It  returns a list of coefficients in the
+  [13Xreverse[113X order to that in [3Xints[103X.[133X
+  
+  [1X14.3-9 ChineseRem[101X
+  
+  [33X[1;0Y[29X[2XChineseRem[102X( [3Xmoduli[103X, [3Xresidues[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XChineseRem[102X  returns the combination of the [3Xresidues[103X modulo the [3Xmoduli[103X, i.e.,
+  the  unique  integer  [10Xc[110X  from  [10X[0..Lcm([3Xmoduli[103X[10X)-1][110X  such that [10Xc = [3Xresidues[103X[10X[i][110X
+  modulo  [10X[3Xmoduli[103X[10X[i][110X  for  all  [10Xi[110X,  if it exists. If no such combination exists
+  [2XChineseRem[102X signals an error.[133X
+  
+  [33X[0;0YSuch  a  combination does exist if and only if [10X[3Xresidues[103X[10X[i] = [3Xresidues[103X[10X[k] mod
+  Gcd( [3Xmoduli[103X[10X[i], [3Xmoduli[103X[10X[k] )[110X for every pair [10Xi[110X, [10Xk[110X. Note that this implies that
+  such  a combination exists if the moduli are pairwise relatively prime. This
+  is called the Chinese remainder theorem.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XChineseRem( [ 2, 3, 5, 7 ], [ 1, 2, 3, 4 ] );[127X[104X
+    [4X[28X53[128X[104X
+    [4X[25Xgap>[125X [27XChineseRem( [ 6, 10, 14 ], [ 1, 3, 5 ] );[127X[104X
+    [4X[28X103[128X[104X
+  [4X[32X[104X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XChineseRem( [ 6, 10, 14 ], [ 1, 2, 3 ] );[127X[104X
+    [4X[28XError, the residues must be equal modulo 2 called from[128X[104X
+    [4X[28X<function>( <arguments> ) called from read-eval-loop[128X[104X
+    [4X[28XEntering break read-eval-print loop ...[128X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou can 'return;' to continue[128X[104X
+    [4X[26Xbrk>[126X [27Xgap>[127X[104X
+  [4X[32X[104X
+  
+  [1X14.3-10 PowerModInt[101X
+  
+  [33X[1;0Y[29X[2XPowerModInt[102X( [3Xr[103X, [3Xe[103X, [3Xm[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns [22X[3Xr[103X^[3Xe[103X mod [3Xm[103X[122X for integers [3Xr[103X, [3Xe[103X and [3Xm[103X.[133X
+  
+  [33X[0;0YNote  that  [2XPowerModInt[102X  can  reduce  intermediate  results  and  thus  will
+  generally  be faster than using [3Xr[103X[10X^[110X[3Xe[103X[10X mod [110X[3Xm[103X, which would compute [22X[3Xr[103X^[3Xe[103X[122X first and
+  reduces the result afterwards.[133X
+  
+  [33X[0;0Y[2XPowerModInt[102X is a method for the general operation [2XPowerMod[102X ([14X56.7-9[114X).[133X
+  
+  
+  [1X14.4 [33X[0;0YPrime Integers and Factorization[133X[101X
+  
+  [1X14.4-1 Primes[101X
+  
+  [33X[1;0Y[29X[2XPrimes[102X [32X global variable[133X
+  
+  [33X[0;0Y[2XPrimes[102X is a strictly sorted list of the 168 primes less than 1000.[133X
+  
+  [33X[0;0YThis  is  used  in  [2XIsPrimeInt[102X  ([14X14.4-2[114X) and [2XFactorsInt[102X ([14X14.4-7[114X) to cast out
+  small primes quickly.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPrimes[1];[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XPrimes[100];[127X[104X
+    [4X[28X541[128X[104X
+  [4X[32X[104X
+  
+  [1X14.4-2 IsPrimeInt[101X
+  
+  [33X[1;0Y[29X[2XIsPrimeInt[102X( [3Xn[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XIsProbablyPrimeInt[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XIsPrimeInt[102X returns [9Xfalse[109X if it can prove that the integer [3Xn[103X is composite and
+  [9Xtrue[109X  otherwise.  By convention [10XIsPrimeInt(0) = IsPrimeInt(1) = false[110X and we
+  define [10XIsPrimeInt(-[110X[3Xn[103X[10X) = IsPrimeInt([110X[3Xn[103X[10X)[110X.[133X
+  
+  [33X[0;0Y[2XIsPrimeInt[102X  will return [9Xtrue[109X for every prime [3Xn[103X. [2XIsPrimeInt[102X will return [9Xfalse[109X
+  for  all  composite [3Xn[103X [22X< 10^18[122X and for all composite [3Xn[103X that have a factor [22Xp <
+  1000[122X.  So  for integers [3Xn[103X [22X< 10^18[122X, [2XIsPrimeInt[102X is a proper primality test. It
+  is conceivable that [2XIsPrimeInt[102X may return [9Xtrue[109X for some composite [3Xn[103X [22X> 10^18[122X,
+  but no such [3Xn[103X is currently known. So for integers [3Xn[103X [22X> 10^18[122X, [2XIsPrimeInt[102X is a
+  probable-primality  test.  [2XIsPrimeInt[102X will issue a warning when its argument
+  is  probably  prime but not a proven prime. (The function [2XIsProbablyPrimeInt[102X
+  will  do  a similar calculation but not issue a warning.) The warning can be
+  switched  off  by  [10XSetInfoLevel(  InfoPrimeInt, 0 );[110X, the default level is [22X1[122X
+  (also see [2XSetInfoLevel[102X ([14X7.4-3[114X) ).[133X
+  
+  [33X[0;0YIf  composites  that fool [2XIsPrimeInt[102X do exist, they would be extremely rare,
+  and  finding  one  by pure chance might be less likely than finding a bug in
+  [5XGAP[105X.  We  would  appreciate  being informed about any example of a composite
+  number [3Xn[103X for which [2XIsPrimeInt[102X returns [9Xtrue[109X.[133X
+  
+  [33X[0;0Y[2XIsPrimeInt[102X  is  a deterministic algorithm, i.e., the computations involve no
+  random  numbers,  and  repeated  calls  will  always return the same result.
+  [2XIsPrimeInt[102X  first does trial divisions by the primes less than 1000. Then it
+  tests  that  [3Xn[103X  is  a strong pseudoprime w.r.t. the base 2. Finally it tests
+  whether [3Xn[103X is a Lucas pseudoprime w.r.t. the smallest quadratic nonresidue of
+  [3Xn[103X.  A  better  description  can  be found in the comment in the library file
+  [11Xprimality.gi[111X.[133X
+  
+  [33X[0;0YThe  time  taken  by  [2XIsPrimeInt[102X  is approximately proportional to the third
+  power  of  the  number of digits of [3Xn[103X. Testing numbers with several hundreds
+  digits is quite feasible.[133X
+  
+  [33X[0;0Y[2XIsPrimeInt[102X is a method for the general operation [2XIsPrime[102X ([14X56.5-8[114X).[133X
+  
+  [33X[0;0YRemark:  In  future  versions  of  [5XGAP[105X  we  hope to change the definition of
+  [2XIsPrimeInt[102X  to  return  [9Xtrue[109X  only  for  proven primes (currently, we lack a
+  sufficiently   good   primality  proving  function).  In  applications,  use
+  explicitly [2XIsPrimeInt[102X or [2XIsProbablyPrimeInt[102X with this change in mind.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsPrimeInt( 2^31 - 1 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsPrimeInt( 10^42 + 1 );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X14.4-3 PrimalityProof[101X
+  
+  [33X[1;0Y[29X[2XPrimalityProof[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0YConstruct  a  machine  verifiable  proof  of  the primality of (the probable
+  prime)  [3Xn[103X,  following  the  ideas  of [BLS75]. The proof consists of various
+  Fermat  and  Lucas  pseudoprimality  tests, which taken as a whole prove the
+  primality. The proof is represented as a list of witnesses of two kinds. The
+  first   kind,  [10X[  "F",  divisor,  base  ][110X,  indicates  a  successful  Fermat
+  pseudoprimality test, where [3Xn[103X is a strong pseudoprime at [9Xbase[109X with order not
+  divisible by [22X([3Xn[103X-1)/divisor[122X. The second kind, [10X[ "L", divisor, discriminant, P
+  ][110X indicates a successful Lucas pseudoprimality test, for a quadratic form of
+  given [9Xdiscriminant[109X and middle term [9XP[109X with an extra check at [22X([3Xn[103X+1)/divisor[122X.[133X
+  
+  [1X14.4-4 IsPrimePowerInt[101X
+  
+  [33X[1;0Y[29X[2XIsPrimePowerInt[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XIsPrimePowerInt[102X  returns  [9Xtrue[109X  if  the integer [3Xn[103X is a prime power and [9Xfalse[109X
+  otherwise.[133X
+  
+  [33X[0;0YAn  integer  [22Xn[122X  is  a  [13Xprime  power[113X if there exists a prime [22Xp[122X and a positive
+  integer  [22Xi[122X  such  that [22Xp^i = n[122X. If [22Xn[122X is negative the condition is that there
+  must  exist a negative prime [22Xp[122X and an odd positive integer [22Xi[122X such that [22Xp^i =
+  n[122X. The integers 1 and -1 are not prime powers.[133X
+  
+  [33X[0;0YNote   that   [2XIsPrimePowerInt[102X   uses   [2XSmallestRootInt[102X   ([14X14.2-10[114X)   and   a
+  probable-primality test (see [2XIsPrimeInt[102X ([14X14.4-2[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsPrimePowerInt( 31^5 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsPrimePowerInt( 2^31-1 );  # 2^31-1 is actually a prime[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsPrimePowerInt( 2^63-1 );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XFiltered( [-10..10], IsPrimePowerInt );[127X[104X
+    [4X[28X[ -8, -7, -5, -3, -2, 2, 3, 4, 5, 7, 8, 9 ][128X[104X
+  [4X[32X[104X
+  
+  [1X14.4-5 NextPrimeInt[101X
+  
+  [33X[1;0Y[29X[2XNextPrimeInt[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XNextPrimeInt[102X  returns  the  smallest prime which is strictly larger than the
+  integer [3Xn[103X.[133X
+  
+  [33X[0;0YNote  that  [2XNextPrimeInt[102X  uses  a  probable-primality  test  (see [2XIsPrimeInt[102X
+  ([14X14.4-2[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XNextPrimeInt( 541 ); NextPrimeInt( -1 );[127X[104X
+    [4X[28X547[128X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+  
+  [1X14.4-6 PrevPrimeInt[101X
+  
+  [33X[1;0Y[29X[2XPrevPrimeInt[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XPrevPrimeInt[102X  returns  the  largest prime which is strictly smaller than the
+  integer [3Xn[103X.[133X
+  
+  [33X[0;0YNote  that  [2XPrevPrimeInt[102X  uses  a  probable-primality  test  (see [2XIsPrimeInt[102X
+  ([14X14.4-2[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPrevPrimeInt( 541 ); PrevPrimeInt( 1 );[127X[104X
+    [4X[28X523[128X[104X
+    [4X[28X-2[128X[104X
+  [4X[32X[104X
+  
+  [1X14.4-7 FactorsInt[101X
+  
+  [33X[1;0Y[29X[2XFactorsInt[102X( [3Xn[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XFactorsInt[102X( [3Xn:[103X [3XRhoTrials[103X [3X:=[103X [3Xtrials[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XFactorsInt[102X returns a list of factors of a given integer [3Xn[103X such that [10XProduct(
+  FactorsInt(  [3Xn[103X[10X  )  ) = [3Xn[103X[10X[110X. If [22X|n| ≤ 1[122X the list [10X[[3Xn[103X[10X][110X is returned. Otherwise the
+  result  contains probable primes, sorted by absolute value. The entries will
+  all be positive except for the first one in case of a negative [3Xn[103X.[133X
+  
+  [33X[0;0YSee  [2XPrimeDivisors[102X  ([14X14.4-8[114X) for a function that returns a set of (probable)
+  primes dividing [3Xn[103X.[133X
+  
+  [33X[0;0YNote   that   [2XFactorsInt[102X  uses  a  probable-primality  test  (see [2XIsPrimeInt[102X
+  ([14X14.4-2[114X)).  Thus  [2XFactorsInt[102X  might  return  a list which contains composite
+  integers.  In such a case you will get a warning about the use of a probable
+  prime. You can switch off these warnings by [10XSetInfoLevel( InfoPrimeInt, 0 );[110X
+  (also see [2XSetInfoLevel[102X ([14X7.4-3[114X)).[133X
+  
+  [33X[0;0YThe  time  taken  by  [2XFactorsInt[102X is approximately proportional to the square
+  root  of  the  second  largest prime factor of [3Xn[103X, which is the last one that
+  [2XFactorsInt[102X has to find, since the largest factor is simply what remains when
+  all others have been removed. Thus the time is roughly bounded by the fourth
+  root  of  [3Xn[103X. [2XFactorsInt[102X is guaranteed to find all factors less than [22X10^6[122X and
+  will  find  most  factors  less  than  [22X10^10[122X. If [3Xn[103X contains multiple factors
+  larger than that [2XFactorsInt[102X may not be able to factor [3Xn[103X and will then signal
+  an error.[133X
+  
+  [33X[0;0Y[2XFactorsInt[102X is used in a method for the general operation [2XFactors[102X ([14X56.5-9[114X).[133X
+  
+  [33X[0;0YIn  the  second  form, [2XFactorsInt[102X calls [10XFactorsRho[110X with a limit of [3Xtrials[103X on
+  the  number  of trials it performs. The default is 8192. Note that Pollard's
+  Rho  is  the  fastest  method  for  finding  prime factors with roughly 5-10
+  decimal  digits,  but  becomes more and more inferior to other factorization
+  techniques  like  e.g. the Elliptic Curves Method (ECM) the bigger the prime
+  factors are. Therefore instead of performing a huge number of Rho [3Xtrials[103X, it
+  is  usually more advisable to install the [5XFactInt[105X package and then simply to
+  use  the  operation  [2XFactors[102X  ([14X56.5-9[114X). The factorization of the 8-th Fermat
+  number by Pollard's Rho below takes already a while.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XFactorsInt( -Factorial(6) );[127X[104X
+    [4X[28X[ -2, 2, 2, 2, 3, 3, 5 ][128X[104X
+    [4X[25Xgap>[125X [27XSet( FactorsInt( Factorial(13)/11 ) );[127X[104X
+    [4X[28X[ 2, 3, 5, 7, 13 ][128X[104X
+    [4X[25Xgap>[125X [27XFactorsInt( 2^63 - 1 );[127X[104X
+    [4X[28X[ 7, 7, 73, 127, 337, 92737, 649657 ][128X[104X
+    [4X[25Xgap>[125X [27XFactorsInt( 10^42 + 1 );[127X[104X
+    [4X[28X[ 29, 101, 281, 9901, 226549, 121499449, 4458192223320340849 ][128X[104X
+    [4X[25Xgap>[125X [27XFactorsInt(2^256+1:RhoTrials:=100000000);[127X[104X
+    [4X[28X[ 1238926361552897,[128X[104X
+    [4X[28X  93461639715357977769163558199606896584051237541638188580280321 ][128X[104X
+  [4X[32X[104X
+  
+  [1X14.4-8 PrimeDivisors[101X
+  
+  [33X[1;0Y[29X[2XPrimeDivisors[102X( [3Xn[103X ) [32X attribute[133X
+  
+  [33X[0;0Y[2XPrimeDivisors[102X  returns  for  a  non-zero  integer  [3Xn[103X  a  set of its positive
+  (probable)  primes  divisors.  In  rare  cases  the  result  could contain a
+  composite    number    which    passed    certain   primality   tests,   see
+  [2XIsProbablyPrimeInt[102X ([14X14.4-2[114X) and [2XFactorsInt[102X ([14X14.4-7[114X) for more details.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPrimeDivisors(-12);[127X[104X
+    [4X[28X[ 2, 3 ][128X[104X
+    [4X[25Xgap>[125X [27XPrimeDivisors(1);[127X[104X
+    [4X[28X[  ][128X[104X
+  [4X[32X[104X
+  
+  [1X14.4-9 PartialFactorization[101X
+  
+  [33X[1;0Y[29X[2XPartialFactorization[102X( [3Xn[103X[, [3Xeffort[103X] ) [32X operation[133X
+  
+  [33X[0;0Y[2XPartialFactorization[102X  returns  a  partial factorization of the integer [3Xn[103X. No
+  assertions  are  made  about  the  primality of the factors, except of those
+  mentioned below.[133X
+  
+  [33X[0;0YThe argument [3Xeffort[103X, if given, specifies how intensively the function should
+  try to determine factors of [3Xn[103X. The default is [3Xeffort[103X = 5.[133X
+  
+  [30X    [33X[0;6YIf  [3Xeffort[103X = 0,  trial  division  by  the  primes  below  100 is done.
+        Returned factors below [22X10^4[122X are guaranteed to be prime.[133X
+  
+  [30X    [33X[0;6YIf  [3Xeffort[103X = 1,  trial  division  by  the  primes  below 1000 is done.
+        Returned factors below [22X10^6[122X are guaranteed to be prime.[133X
+  
+  [30X    [33X[0;6YIf [3Xeffort[103X = 2, additionally trial division by the numbers in the lists
+        [10XPrimes2[110X  and [10XProbablePrimes2[110X is done, and perfect powers are detected.
+        Returned factors below [22X10^6[122X are guaranteed to be prime.[133X
+  
+  [30X    [33X[0;6YIf  [3Xeffort[103X = 3, additionally [10XFactorsRho[110X (Pollard's Rho) with [10XRhoTrials[110X
+        = 256 is used.[133X
+  
+  [30X    [33X[0;6YIf [3Xeffort[103X = 4, as above, but [10XRhoTrials[110X = 2048.[133X
+  
+  [30X    [33X[0;6YIf  [3Xeffort[103X = 5, as above, but [10XRhoTrials[110X = 8192. Returned factors below
+        [22X10^12[122X are guaranteed to be prime, and all prime factors below [22X10^6[122X are
+        guaranteed to be found.[133X
+  
+  [30X    [33X[0;6YIf  [3Xeffort[103X = 6  and  the package [5XFactInt[105X is loaded, in addition to the
+        above quite a number of special cases are handled.[133X
+  
+  [30X    [33X[0;6YIf  [3Xeffort[103X = 7 and the package [5XFactInt[105X is loaded, the only thing which
+        is    not    attempted   to   obtain   a   full   factorization   into
+        Baillie-Pomerance-Selfridge-Wagstaff  pseudoprimes  is the application
+        of the MPQS to a remaining composite with more than 50 decimal digits.[133X
+  
+  [33X[0;0YIncreasing  the  value  of  the argument [3Xeffort[103X by one usually results in an
+  increase of the runtime requirements by a factor of (very roughly!) 3 to 10.
+  (Also see [2XCheapFactorsInt[102X ([14XEDIM: CheapFactorsInt[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XList([0..5],i->PartialFactorization(97^35-1,i));[127X[104X
+    [4X[28X[ [ 2, 2, 2, 2, 2, 3, 11, 31, 43,[128X[104X
+    [4X[28X      2446338959059521520901826365168917110105972824229555319002965029 ],[128X[104X
+    [4X[28X  [ 2, 2, 2, 2, 2, 3, 11, 31, 43, 967,[128X[104X
+    [4X[28X      2529823122088440042297648774735177983563570655873376751812787 ],[128X[104X
+    [4X[28X  [ 2, 2, 2, 2, 2, 3, 11, 31, 43, 967,[128X[104X
+    [4X[28X      2529823122088440042297648774735177983563570655873376751812787 ],[128X[104X
+    [4X[28X  [ 2, 2, 2, 2, 2, 3, 11, 31, 43, 967, 39761, 262321,[128X[104X
+    [4X[28X      242549173950325921859769421435653153445616962914227 ],[128X[104X
+    [4X[28X  [ 2, 2, 2, 2, 2, 3, 11, 31, 43, 967, 39761, 262321, 687121,[128X[104X
+    [4X[28X      352993394104278463123335513593170858474150787 ],[128X[104X
+    [4X[28X  [ 2, 2, 2, 2, 2, 3, 11, 31, 43, 967, 39761, 262321, 687121,[128X[104X
+    [4X[28X      20241187, 504769301, 34549173843451574629911361501 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X14.4-10 PrintFactorsInt[101X
+  
+  [33X[1;0Y[29X[2XPrintFactorsInt[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Yprints  the prime factorization of the integer [3Xn[103X in human-readable form. See
+  also [2XStringPP[102X ([14X27.7-9[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPrintFactorsInt( Factorial( 7 ) ); Print( "\n" );[127X[104X
+    [4X[28X2^4*3^2*5*7[128X[104X
+  [4X[32X[104X
+  
+  [1X14.4-11 PrimePowersInt[101X
+  
+  [33X[1;0Y[29X[2XPrimePowersInt[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  the prime factorization of the integer [3Xn[103X as a list [22X[ p_1, e_1, ...,
+  p_k, e_k ][122X with [3Xn[103X = [22Xp_1^{e_1} ⋅ p_2^{e_2} ⋅ ... ⋅ p_k^{e_k}[122X.[133X
+  
+  [33X[0;0YFor  negative  integers, the absolute value is taken. Zero is not allowed as
+  input.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPrimePowersInt( Factorial( 7 ) );[127X[104X
+    [4X[28X[ 2, 4, 3, 2, 5, 1, 7, 1 ][128X[104X
+    [4X[25Xgap>[125X [27XPrimePowersInt( 1 );[127X[104X
+    [4X[28X[  ][128X[104X
+  [4X[32X[104X
+  
+  [1X14.4-12 DivisorsInt[101X
+  
+  [33X[1;0Y[29X[2XDivisorsInt[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XDivisorsInt[102X  returns  a  list  of all divisors of the integer [3Xn[103X. The list is
+  sorted,  so  that  it  starts  with  1  and  ends  with  [3Xn[103X.  We  define that
+  [10XDivisorsInt( -[3Xn[103X[10X ) = DivisorsInt( [3Xn[103X[10X )[110X.[133X
+  
+  [33X[0;0YSince  the  set of divisors of 0 is infinite calling [10XDivisorsInt( 0 )[110X causes
+  an error.[133X
+  
+  [33X[0;0Y[2XDivisorsInt[102X  may call [2XFactorsInt[102X ([14X14.4-7[114X) to obtain the prime factors. [2XSigma[102X
+  ([14X15.5-1[114X)  and  [2XTau[102X  ([14X15.5-2[114X)  compute  the  sum  and  the number of positive
+  divisors, respectively.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDivisorsInt( 1 ); DivisorsInt( 20 ); DivisorsInt( 541 );[127X[104X
+    [4X[28X[ 1 ][128X[104X
+    [4X[28X[ 1, 2, 4, 5, 10, 20 ][128X[104X
+    [4X[28X[ 1, 541 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X14.5 [33X[0;0YResidue Class Rings[133X[101X
+  
+  [33X[0;0Y[2XZmodnZ[102X  ([14X14.5-2[114X)  returns  a  residue  class ring of [2XIntegers[102X ([14X14[114X) modulo an
+  ideal.  These  residue  class rings are rings, thus all operations for rings
+  (see Chapter [14X56[114X) apply. See also Chapters [14X59[114X and [14X15[114X.[133X
+  
+  [1X14.5-1 \mod[101X
+  
+  [33X[1;0Y[29X[2X\mod[102X( [3Xr/s[103X, [3Xn[103X ) [32X operation[133X
+  
+  [33X[0;0YIf  [3Xr[103X, [3Xs[103X and [3Xn[103X are integers, [10X[3Xr[103X[10X / [3Xs[103X[10X[110X as a reduced fraction is [10Xp/q[110X, where [10Xq[110X and
+  [3Xn[103X  are  coprime,  then [10X[3Xr[103X[10X / [3Xs[103X[10X mod [3Xn[103X[10X[110X is defined to be the product of [10Xp[110X and the
+  inverse of [10Xq[110X modulo [3Xn[103X. See Section [14X4.14[114X for more details and definitions.[133X
+  
+  [33X[0;0YWith the above definition, [10X4 / 6 mod 32[110X equals [10X2 / 3 mod 32[110X and hence exists
+  (and is equal to 22), despite the fact that 6 has no inverse modulo 32.[133X
+  
+  [1X14.5-2 ZmodnZ[101X
+  
+  [33X[1;0Y[29X[2XZmodnZ[102X( [3Xn[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XZmodpZ[102X( [3Xp[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XZmodpZNC[102X( [3Xp[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XZmodnZ[102X returns a ring [22XR[122X isomorphic to the residue class ring of the integers
+  modulo  the  ideal  generated by [3Xn[103X. The element corresponding to the residue
+  class  of  the integer [22Xi[122X in this ring can be obtained by [10Xi * One( R )[110X, and a
+  representative  of  the residue class corresponding to the element [22Xx ∈ R[122X can
+  be computed by [10XInt[110X[22X( x )[122X.[133X
+  
+  [33X[0;0Y[10XZmodnZ( [3Xn[103X[10X )[110X is equal to [10XIntegers mod [3Xn[103X[10X[110X.[133X
+  
+  [33X[0;0Y[2XZmodpZ[102X  does the same if the argument [3Xp[103X is a prime integer, additionally the
+  result is a field. [2XZmodpZNC[102X omits the check whether [3Xp[103X is a prime.[133X
+  
+  [33X[0;0YEach  ring  returned  by  these  functions  contains the whole family of its
+  elements  if  [3Xn[103X  is  not  a prime, and is embedded into the family of finite
+  field elements of characteristic [3Xn[103X if [3Xn[103X is a prime.[133X
+  
+  [1X14.5-3 ZmodnZObj[101X
+  
+  [33X[1;0Y[29X[2XZmodnZObj[102X( [3XFam[103X, [3Xr[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XZmodnZObj[102X( [3Xr[103X, [3Xn[103X ) [32X operation[133X
+  
+  [33X[0;0YIf  the  first argument is a residue class family [3XFam[103X then [2XZmodnZObj[102X returns
+  the element in [3XFam[103X whose coset is represented by the integer [3Xr[103X.[133X
+  
+  [33X[0;0YIf  the  two  arguments  are  an  integer  [3Xr[103X  and  a positive integer [3Xn[103X then
+  [2XZmodnZObj[102X  returns  the  element  in [10XZmodnZ( [3Xn[103X[10X )[110X (see [2XZmodnZ[102X ([14X14.5-2[114X)) whose
+  coset is represented by the integer [3Xr[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xr:= ZmodnZ(15);[127X[104X
+    [4X[28X(Integers mod 15)[128X[104X
+    [4X[25Xgap>[125X [27Xfam:=ElementsFamily(FamilyObj(r));;[127X[104X
+    [4X[25Xgap>[125X [27Xa:= ZmodnZObj(fam,9);[127X[104X
+    [4X[28XZmodnZObj( 9, 15 )[128X[104X
+    [4X[25Xgap>[125X [27Xa+a;[127X[104X
+    [4X[28XZmodnZObj( 3, 15 )[128X[104X
+    [4X[25Xgap>[125X [27XInt(a+a);[127X[104X
+    [4X[28X3[128X[104X
+  [4X[32X[104X
+  
+  [1X14.5-4 IsZmodnZObj[101X
+  
+  [33X[1;0Y[29X[2XIsZmodnZObj[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsZmodnZObjNonprime[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsZmodpZObj[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsZmodpZObjSmall[102X( [3Xobj[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsZmodpZObjLarge[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YThe elements in the rings [22XZ / n Z[122X are in the category [2XIsZmodnZObj[102X. If [22Xn[122X is a
+  prime  then  the elements are of course also in the category [2XIsFFE[102X ([14X59.1-1[114X),
+  otherwise they are in [2XIsZmodnZObjNonprime[102X. [2XIsZmodpZObj[102X is an abbreviation of
+  [10XIsZmodnZObj   and   IsFFE[110X.   This   category   is   the  disjoint  union  of
+  [2XIsZmodpZObjSmall[102X  and  [2XIsZmodpZObjLarge[102X,  the former containing all elements
+  with [22Xn[122X at most [10XMAXSIZE_GF_INTERNAL[110X.[133X
+  
+  [33X[0;0YThe reasons to distinguish the prime case from the nonprime case are[133X
+  
+  [30X    [33X[0;6Ythat  objects  in  [2XIsZmodnZObjNonprime[102X have an external representation
+        (namely the residue in the range [22X[ 0, 1, ..., n-1 ][122X),[133X
+  
+  [30X    [33X[0;6Ythat  the  comparison  of elements can be defined as comparison of the
+        residues, and[133X
+  
+  [30X    [33X[0;6Ythat  the  elements  lie in a family of type [10XIsZmodnZObjNonprimeFamily[110X
+        (note that for prime [22Xn[122X, the family must be an [10XIsFFEFamily[110X).[133X
+  
+  [33X[0;0YThe reasons to distinguish the small and the large case are that for small [22Xn[122X
+  the  elements  must be compatible with the internal representation of finite
+  field  elements,  whereas  we are free to define comparison as comparison of
+  residues for large [22Xn[122X.[133X
+  
+  [33X[0;0YNote  that we [13Xcannot[113X claim that every finite field element of degree 1 is in
+  [2XIsZmodnZObj[102X,  since finite field elements in internal representation may not
+  know that they lie in the prime field.[133X
+  
+  
+  [1X14.6 [33X[0;0YCheck Digits[133X[101X
+  
+  [1X14.6-1 CheckDigitISBN[101X
+  
+  [33X[1;0Y[29X[2XCheckDigitISBN[102X( [3Xn[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XCheckDigitISBN13[102X( [3Xn[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XCheckDigitPostalMoneyOrder[102X( [3Xn[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XCheckDigitUPC[102X( [3Xn[103X ) [32X function[133X
+  
+  [33X[0;0YThese  functions  can  be  used  to compute, or check, check digits for some
+  everyday items. In each case what is submitted as input is either the number
+  with  check digit (in which case the function returns [9Xtrue[109X or [9Xfalse[109X), or the
+  number  without  check digit (in which case the function returns the missing
+  check digit). The number can be specified as integer, as string (for example
+  in case of leading zeros) or as a sequence of arguments, each representing a
+  single  digit.  The check digits tested are the 10-digit ISBN (International
+  Standard Book Number) using [2XCheckDigitISBN[102X (since arithmetic is module 11, a
+  digit  11  is  represented  by  an  X);  the  newer  13-digit  ISBN-13 using
+  [2XCheckDigitISBN13[102X;  the  numbers  of  11-digit  US  postal money orders using
+  [2XCheckDigitPostalMoneyOrder[102X; and the 12-digit UPC bar code found on groceries
+  using [2XCheckDigitUPC[102X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XCheckDigitISBN("052166103");[127X[104X
+    [4X[28XCheck Digit is 'X'[128X[104X
+    [4X[28X'X'[128X[104X
+    [4X[25Xgap>[125X [27XCheckDigitISBN("052166103X");[127X[104X
+    [4X[28XChecksum test satisfied[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XCheckDigitISBN(0,5,2,1,6,6,1,0,3,1);[127X[104X
+    [4X[28XChecksum test failed[128X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XCheckDigitISBN(0,5,2,1,6,6,1,0,3,'X'); # note single quotes![127X[104X
+    [4X[28XChecksum test satisfied[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XCheckDigitISBN13("9781420094527");[127X[104X
+    [4X[28XChecksum test satisfied[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XCheckDigitUPC("07164183001");[127X[104X
+    [4X[28XCheck Digit is 1[128X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XCheckDigitPostalMoneyOrder(16786457155);[127X[104X
+    [4X[28XChecksum test satisfied[128X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X14.6-2 CheckDigitTestFunction[101X
+  
+  [33X[1;0Y[29X[2XCheckDigitTestFunction[102X( [3Xl[103X, [3Xm[103X, [3Xf[103X ) [32X function[133X
+  
+  [33X[0;0YThis  function  creates  check  digit  test functions such as [2XCheckDigitISBN[102X
+  ([14X14.6-1[114X)  for  check  digit schemes that use the inner products with a fixed
+  vector  modulo  a  number.  The  scheme creates will use strings of [3Xl[103X digits
+  (including  the  check  digits),  the  check consists of taking the standard
+  product of the vector of digits with the fixed vector [3Xf[103X modulo [3Xm[103X; the result
+  needs  to  be  0.  The function returns a function that then can be used for
+  testing or determining check digits.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xisbntest:=CheckDigitTestFunction(10,11,[1,2,3,4,5,6,7,8,9,-1]);[127X[104X
+    [4X[28Xfunction( arg... ) ... end[128X[104X
+    [4X[25Xgap>[125X [27Xisbntest("038794680");[127X[104X
+    [4X[28XCheck Digit is 2[128X[104X
+    [4X[28X2[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X14.7 [33X[0;0YRandom Sources[133X[101X
+  
+  [33X[0;0Y[5XGAP[105X  provides  [2XRandom[102X ([14X30.7-1[114X) methods for many collections of objects. On a
+  lower  level  these methods use [13Xrandom sources[113X which provide random integers
+  and random choices from lists.[133X
+  
+  [33X[0;0YSee  [2XIsRandomSource[102X  ([14X14.7-1[114X) for the user interface for random sources, and
+  Section [14X14.7-6[114X for information about developing new kinds of random sources.[133X
+  
+  [1X14.7-1 IsRandomSource[101X
+  
+  [33X[1;0Y[29X[2XIsRandomSource[102X( [3Xobj[103X ) [32X Category[133X
+  
+  [33X[0;0YThis  is the category of random source objects. The [13Xuser interface[113X for these
+  objects consists of the following functions.[133X
+  
+  [33X[0;0Y[2XRandomSource[102X ([14X14.7-5[114X) creates a new random source [3Xrs[103X, say.[133X
+  
+  [33X[0;0Y[10XRandom( [3Xrs[103X[10X, [3Xlist[103X[10X )[110X yields a random element of the list [3Xlist[103X, and [10XRandom( [3Xrs[103X[10X,
+  [3Xlow[103X[10X,  [3Xhigh[103X[10X  )[110X  yields a random integer between [3Xlow[103X and [3Xhigh[103X (inclusive), see
+  [2XRandom[102X ([14X14.7-2[114X).[133X
+  
+  [33X[0;0YIf [3Xrs[103X supports resetting (see [2XState[102X ([14X14.7-3[114X)) then [10XState( [3Xrs[103X[10X )[110X yields a copy
+  [3Xstate[103X,  say,  of the current state of [3Xrs[103X such that [10XReset( [3Xrs[103X[10X, [3Xstate[103X[10X )[110X resets
+  [3Xrs[103X to the given state.[133X
+  
+  [33X[0;0YOne  idea behind providing several independent (pseudo) random sources is to
+  make  algorithms  which  use some sort of random choices deterministic. They
+  can  use  their  own  new  random source created with a fixed seed and so do
+  exactly the same in different calls.[133X
+  
+  [33X[0;0YRandom source objects lie in the family [10XRandomSourcesFamily[110X.[133X
+  
+  [1X14.7-2 Random[101X
+  
+  [33X[1;0Y[29X[2XRandom[102X( [3Xrs[103X, [3Xlist[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XRandom[102X( [3Xrs[103X, [3Xcoll[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XRandom[102X( [3Xrs[103X, [3Xlow[103X, [3Xhigh[103X ) [32X operation[133X
+  
+  [33X[0;0YThis  operation  returns a random element from the dense, nonempty list [3Xlist[103X
+  or  the  nonempty collection [3Xcoll[103X, or an integer in the range from the given
+  (possibly large) integers [3Xlow[103X to [3Xhigh[103X, respectively.[133X
+  
+  [33X[0;0YThe  choice should only depend on the random source [3Xrs[103X and have no effect on
+  other random sources.[133X
+  
+  [33X[0;0YIt  is not defined what happens if [3Xlist[103X or [3Xcoll[103X is empty, [3Xlist[103X is not dense,
+  or [3Xlow[103X is larger than [3Xhigh[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmysource := RandomSource(IsMersenneTwister, 42);;[127X[104X
+    [4X[25Xgap>[125X [27XRandom(mysource, 1, 10^60);[127X[104X
+    [4X[28X999331861769949319194941485000557997842686717712198687315183[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X14.7-3 [33X[0;0YState and Reset for Random Sources[133X[101X
+  
+  [33X[1;0Y[29X[2XState[102X( [3Xrs[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XReset[102X( [3Xrs[103X[, [3Xseed[103X] ) [32X operation[133X
+  
+  [33X[0;0YThese  are  the  basic  operations  for  random  sources (see [2XIsRandomSource[102X
+  ([14X14.7-1[114X)).[133X
+  
+  [33X[0;0Y[2XState[102X  returns  a  data  structure  which admits recovering the state of the
+  random  source such that a sequence of random calls using this random source
+  can  be  reproduced.  If a random source cannot be reset (say, it uses truly
+  random physical data) then [2XState[102X returns [9Xfail[109X.[133X
+  
+  [33X[0;0Y[10XReset(  [3Xrs[103X[10X, [3Xseed[103X[10X )[110X resets the random source [3Xrs[103X to a state described by [3Xseed[103X,
+  if  the random source can be reset; otherwise it does nothing. Here [3Xseed[103X can
+  be  an  output of [2XState[102X and then [3Xrs[103X gets reset to that state. For historical
+  reasons, random sources accept integer values as [3Xseed[103X. We recommend that new
+  code should not rely on this; always use the output of a prior call to [2XState[102X
+  as [3Xseed[103X, or omit it. Without the [3Xseed[103X argument a fixed default seed is used.
+  [2XReset[102X returns the state of [3Xrs[103X before the call.[133X
+  
+  [33X[0;0YMost  methods  for  [2XRandom[102X  ([14X30.7-1[114X)  in  the [5XGAP[105X library that do not take a
+  random  source  as argument use the [2XGlobalMersenneTwister[102X ([14X14.7-4[114X) as random
+  source. It can be reset into a known state as in the following example.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xseed := Reset(GlobalMersenneTwister);;[127X[104X
+    [4X[25Xgap>[125X [27Xseed = State(GlobalMersenneTwister);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XList([1..10],i->Random(Integers));[127X[104X
+    [4X[28X[ -3, 2, -1, -2, -1, -1, 1, -4, 1, 0 ][128X[104X
+    [4X[25Xgap>[125X [27XList([1..10],i->Random(Integers));[127X[104X
+    [4X[28X[ -1, -1, -1, 1, -1, 1, -2, -1, -2, 0 ][128X[104X
+    [4X[25Xgap>[125X [27XReset(GlobalMersenneTwister, seed);;[127X[104X
+    [4X[25Xgap>[125X [27XList([1..10],i->Random(Integers));[127X[104X
+    [4X[28X[ -3, 2, -1, -2, -1, -1, 1, -4, 1, 0 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X14.7-4 [33X[0;0YKinds of Random Sources[133X[101X
+  
+  [33X[1;0Y[29X[2XIsMersenneTwister[102X( [3Xrs[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsGAPRandomSource[102X( [3Xrs[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XIsGlobalRandomSource[102X( [3Xrs[103X ) [32X Category[133X
+  [33X[1;0Y[29X[2XGlobalMersenneTwister[102X [32X global variable[133X
+  [33X[1;0Y[29X[2XGlobalRandomSource[102X [32X global variable[133X
+  
+  [33X[0;0YCurrently,   the  [5XGAP[105X  library  provides  three  types  of  random  sources,
+  distinguished by the three listed categories.[133X
+  
+  [33X[0;0Y[2XIsMersenneTwister[102X are random sources which use a fast random generator of 32
+  bit  numbers,  called the Mersenne twister. The pseudo random sequence has a
+  period of [22X2^19937-1[122X and the numbers have a [22X623[122X-dimensional equidistribution.
+  For  more  details  and  the origin of the code used in the [5XGAP[105X kernel, see:
+  [7Xhttp://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html[107X.[133X
+  
+  [33X[0;0YUse  the  Mersenne  twister  if  possible, in particular for generating many
+  large random integers.[133X
+  
+  [33X[0;0YThere  is also a predefined global random source [2XGlobalMersenneTwister[102X which
+  is  used  as  the  default random source by those library methods for [2XRandom[102X
+  ([14X30.7-1[114X) that do not take a random source as an argument.[133X
+  
+  [33X[0;0Y[2XIsGAPRandomSource[102X  uses  the  same number generator as [2XIsGlobalRandomSource[102X,
+  but  you  can  create  several  of these random sources which generate their
+  random numbers independently of all other random sources.[133X
+  
+  [33X[0;0Y[2XIsGlobalRandomSource[102X  gives  access to the [13Xclassical[113X global random generator
+  which  was  used by [5XGAP[105X in former releases. You do not need to construct new
+  random  sources  of  this  kind  which  would  all  use the same global data
+  structure. Just use the existing random source [2XGlobalRandomSource[102X. This uses
+  the  additive  random  number  generator  described  in [Knu98] (Algorithm A
+  in 3.2.2 with lag [22X30[122X).[133X
+  
+  [33X[0;0YOther kinds of random sources are implemented by [5XGAP[105X packages.[133X
+  
+  [1X14.7-5 RandomSource[101X
+  
+  [33X[1;0Y[29X[2XRandomSource[102X( [3Xcat[103X[, [3Xseed[103X] ) [32X operation[133X
+  
+  [33X[0;0YThis  operation is used to create new random sources. The first argument [3Xcat[103X
+  is the category describing the type of the random generator, for example one
+  of the categories listed in Section [14X14.7-4[114X.[133X
+  
+  [33X[0;0YAn optional [3Xseed[103X can be given to specify the initial state. For details, see
+  Section [14X14.7-3[114X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xrs1 := RandomSource(IsMersenneTwister);[127X[104X
+    [4X[28X<RandomSource in IsMersenneTwister>[128X[104X
+    [4X[25Xgap>[125X [27Xl1 := List([1..10000], i-> Random(rs1, [1..6]));;[127X[104X
+    [4X[25Xgap>[125X [27Xstate1 := State(rs1);;[127X[104X
+    [4X[25Xgap>[125X [27Xrs2 := RandomSource(IsMersenneTwister);;[127X[104X
+    [4X[25Xgap>[125X [27Xl2 := List([1..10000], i-> Random(rs2, [1..6]));;[127X[104X
+    [4X[25Xgap>[125X [27Xl1 = l2;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xl3 := List([1..10000], i-> Random(rs1, [1..6]));;[127X[104X
+    [4X[25Xgap>[125X [27Xl1 = l3;[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xrs3 := RandomSource(IsMersenneTwister, state1);;[127X[104X
+    [4X[25Xgap>[125X [27Xl4 := List([1..10000], i-> Random(rs3, [1..6]));;[127X[104X
+    [4X[25Xgap>[125X [27Xl3 = l4;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xn := Random(rs1, 1, 2^220);[127X[104X
+    [4X[28X1077726777923092117987668044202944212469136000816111066409337432400[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X14.7-6 [33X[0;0YImplementing new kinds of random sources[133X[101X
+  
+  [33X[0;0YIf  one  wants to implement a new kind of random sources then the first step
+  is  the  declaration  of  a new category [10XC[110X, say, that implies [2XIsRandomSource[102X
+  ([14X14.7-1[114X), analogous to the categories listed in Section [14X14.7-4[114X, as follows.[133X
+  
+  [33X[0;0Y[10XDeclareCategory( "C", IsRandomSource );[110X.[133X
+  
+  [33X[0;0YThen the following method installations are needed.[133X
+  
+  [33X[0;0Y[10XInstallMethod( Init, [ C, IsObject ], function( prers, seed ) ... end );[110X[133X
+  
+  [33X[0;0YHere  [10Xprers[110X  is  an empty component object (which has already the filter [10XC[110X),
+  and  [10Xseed[110X  is an integer or a state value as returned by [2XState[102X ([14X14.7-3[114X) that
+  describes  the  initial state of the random source. The function should fill
+  in  the  actual data and then return the (now initialized) object [10Xprers[110X. The
+  default  used  for  [10Xseed[110X  is  the integer [10X1[110X. A given state value need not be
+  copied by the function.[133X
+  
+  [33X[0;0Y[10XInstallMethod(  Random,  [  C, IsInt, IsInt ], function( rs, low, high ) ...
+  end );[110X[133X
+  
+  [33X[0;0YHere  [10Xrs[110X  is  an already initialized random source object in the category [10XC[110X,
+  and  the function returns an integer between [10Xlow[110X and [10Xhigh[110X (inclusive). It is
+  not defined what happens when [10Xlow[110X is larger than [10Xhigh[110X.[133X
+  
+  [33X[0;0Y[10XInstallMethod( State, [ C ], function( rs ) ... end );[110X[133X
+  
+  [33X[0;0YIf  [10Xrs[110X  supports  resetting  then  the  function  must return an object that
+  describes  the current state of [10Xrs[110X. This object must be an independent copy,
+  that  is, calling [2XRandom[102X ([14X14.7-2[114X) for [10Xrs[110X must not change the object that was
+  returned   by   [2XState[102X  ([14X14.7-3[114X);  otherwise  [2XReturnFail[102X  ([14X5.4-3[114X)  should  be
+  installed.[133X
+  
+  [33X[0;0Y[10XInstallMethod( Reset, [ C, IsObject ], function( rs, seed ) ... end );[110X[133X
+  
+  [33X[0;0YIf  [10Xrs[110X  supports  resetting  then  the  function must reinitialize [10Xrs[110X to the
+  integer  or  [2XState[102X  ([14X14.7-3[114X)  value  [10Xseed[110X and must return the [2XState[102X ([14X14.7-3[114X)
+  value  of  [10Xrs[110X  before  these  changes;  if  resetting  is not supported then
+  [2XReturnNothing[102X  ([14X5.4-4[114X)  should  be  installed.  Reset  need not copy a given
+  state.  Note  that  the generic unary [2XReset[102X ([14X14.7-3[114X) method uses the default
+  seed [10X1[110X.[133X
+  
+  [33X[0;0YExamples  of  implementations  as  described  here  are  given by the random
+  sources    with    defining    filter    [2XIsMersenneTwister[102X    ([14X14.7-4[114X)    or
+  [10XIsRealRandomSource[110X.  (For the latter, see [2XRandomSource[102X ([14XIO: RandomSource[114X) in
+  the [5XGAP[105X package [5XIO[105X.)[133X
+  
+  
+  [1X14.8 [33X[0;0YBitfields[133X[101X
+  
+  [33X[0;0YBitfields  are a low-level feature intended to support efficient subdivision
+  of  immediate  integers  into bitfields of various widths. This is typically
+  useful   in   implementing   space-efficient   and/or  cache-efficient  data
+  structures.  This  feature  should be used with care because ([13Xinter alia[113X) it
+  has different limitations on 32-bit and 64-bit architectures.[133X
+  
+  [1X14.8-1 MakeBitfields[101X
+  
+  [33X[1;0Y[29X[2XMakeBitfields[102X( [3Xwidth....[103X ) [32X function[133X
+  
+  [33X[0;0YThis  function  sets  up  the  machinery for a set of bitfields of the given
+  widths. All bitfield values are treated as unsigned. The total of the widths
+  must  not  exceed  60  bits  on  64-bit  architecture or 28 bits on a 32-bit
+  architecture.  For performance reasons some checks that one might wish to do
+  are omitted. In particular, the builder and setter functions do not check if
+  the  value[s]  passed  to  them  are  negative  or  too large (unless [5XGAP[105X is
+  specially  compiled for debugging). Behaviour when such arguments are passed
+  is  undefined. You can tell which type of architecture you are running on by
+  accessing  [10XGAPInfo.BytesPerVariable[110X  which  is 8 on 64-bits and 4 on 32. The
+  return value when [22Xn[122X widths are given is a record whose fields are[133X
+  
+  [8X[10Xwidths[110X[8X[108X
+        [33X[0;6Ya copy of the arguments, for convenience,[133X
+  
+  [8X[10Xgetters[110X[8X[108X
+        [33X[0;6Ya  list  of  [22Xn[122X functions of one argument each of which extracts one of
+        the fields from an immediate integer[133X
+  
+  [8X[10Xsetters[110X[8X[108X
+        [33X[0;6Ya  list of [22Xn[122X functions each taking two arguments: a packed value and a
+        new  value for one of its fields and returning a new packed value. The
+        [22Xi[122Xth  function returned the new packed value in which the [22Xi[122Xth field has
+        been  replaced  by  the  new value. Note that this does NOT modify the
+        original packed value.[133X
+  
+  [33X[0;0YTwo additional fields may be present if any of the field widths is one. Each
+  is  a  list and only has entried bound in the positions corresponding to the
+  width 1 fields.[133X
+  
+  [8X[10XbooleanGetters[110X[8X[108X
+        [33X[0;6Yif  the [22Xi[122Xth position of this list is set, it contains a function which
+        extracts the [22Xi[122Xth field (which will have width one) and returns [9Xtrue[109X if
+        it contains 1 and [9Xfalse[109X if it contains 0[133X
+  
+  [8X[10XbooleanSetters[110X[8X[108X
+        [33X[0;6Yif the [22Xi[122Xth position of this list is set, it contains a function of two
+        arguments. The first argument is a packed value, the second is [9Xtrue[109X or
+        [9Xfalse[109X.  It returns a new packed value in which the [22Xi[122Xth field is set to
+        1 if the second argument was [9Xtrue[109X and 0 if it was [9Xfalse[109X. Behaviour for
+        any other value is undefined.[133X
+  
+  [1X14.8-2 BuildBitfields[101X
+  
+  [33X[1;0Y[29X[2XBuildBitfields[102X( [3Xwidths[103X, [3Xvals...[103X ) [32X function[133X
+  
+  [33X[0;0YThis  function  takes  one or more argument. Its first argument is a list of
+  field  widths,  as  found  in  the  [10Xwidths[110X  entry  of  a  record returned by
+  [10XMakeBitfields[110X. The remaining arguments are unsigned integer values, equal in
+  number  to  the  entries  of  the  list  of field widths. It returns a small
+  integer  in  which  those  entries  are  packed  into bitfields of the given
+  widths.   The   first   entry   occupies   the   least   significant   bits.
+  DeclareGlobalFunction("BuildBitfields");[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xbf := MakeBitfields(1,2,3);[127X[104X
+    [4X[28Xrec( booleanGetters := [ function( data ) ... end ],[128X[104X
+    [4X[28X  booleanSetters := [ function( data, val ) ... end ],[128X[104X
+    [4X[28X  getters := [ function( data ) ... end, function( data ) ... end,[128X[104X
+    [4X[28X      function( data ) ... end ],[128X[104X
+    [4X[28X  setters := [ function( data, val ) ... end, function( data, val ) ... end,[128X[104X
+    [4X[28X      function( data, val ) ... end ], widths := [ 1, 2, 3 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xx := BuildBitfields(bf.widths,0,3,5);[127X[104X
+    [4X[28X46[128X[104X
+    [4X[25Xgap>[125X [27Xbf.getters[3](x);[127X[104X
+    [4X[28X5[128X[104X
+    [4X[25Xgap>[125X [27Xy := bf.setters[1](x,1);[127X[104X
+    [4X[28X47[128X[104X
+    [4X[25Xgap>[125X [27Xx;[127X[104X
+    [4X[28X46[128X[104X
+    [4X[25Xgap>[125X [27Xbf.booleanGetters[1](x);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xbf.booleanGetters[1](y);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  

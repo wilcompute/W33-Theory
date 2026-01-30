@@ -1,0 +1,612 @@
+  
+  [1X25 [33X[0;0YIntegral matrices and lattices[133X[101X
+  
+  
+  [1X25.1 [33X[0;0YLinear equations over the integers and Integral Matrices[133X[101X
+  
+  [1X25.1-1 NullspaceIntMat[101X
+  
+  [33X[1;0Y[29X[2XNullspaceIntMat[102X( [3Xmat[103X ) [32X attribute[133X
+  
+  [33X[0;0YIf  [3Xmat[103X  is  a matrix with integral entries, this function returns a list of
+  vectors  that forms a basis of the integral nullspace of [3Xmat[103X, i.e., of those
+  vectors in the nullspace of [3Xmat[103X that have integral entries.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmat:=[[1,2,7],[4,5,6],[7,8,9],[10,11,19],[5,7,12]];;[127X[104X
+    [4X[25Xgap>[125X [27XNullspaceMat(mat);[127X[104X
+    [4X[28X[ [ -7/4, 9/2, -15/4, 1, 0 ], [ -3/4, -3/2, 1/4, 0, 1 ] ][128X[104X
+    [4X[25Xgap>[125X [27XNullspaceIntMat(mat);[127X[104X
+    [4X[28X[ [ 1, 18, -9, 2, -6 ], [ 0, 24, -13, 3, -7 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X25.1-2 SolutionIntMat[101X
+  
+  [33X[1;0Y[29X[2XSolutionIntMat[102X( [3Xmat[103X, [3Xvec[103X ) [32X operation[133X
+  
+  [33X[0;0YIf  [3Xmat[103X  is  a  matrix  with integral entries and [3Xvec[103X a vector with integral
+  entries,  this  function  returns  a vector [22Xx[122X with integer entries that is a
+  solution  of  the  equation [22Xx[122X [10X* [3Xmat[103X[10X = [3Xvec[103X[10X[110X. It returns [9Xfail[109X if no such vector
+  exists.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmat:=[[1,2,7],[4,5,6],[7,8,9],[10,11,19],[5,7,12]];;[127X[104X
+    [4X[25Xgap>[125X [27XSolutionMat(mat,[95,115,182]);[127X[104X
+    [4X[28X[ 47/4, -17/2, 67/4, 0, 0 ][128X[104X
+    [4X[25Xgap>[125X [27XSolutionIntMat(mat,[95,115,182]);[127X[104X
+    [4X[28X[ 2285, -5854, 4888, -1299, 0 ][128X[104X
+  [4X[32X[104X
+  
+  [1X25.1-3 SolutionNullspaceIntMat[101X
+  
+  [33X[1;0Y[29X[2XSolutionNullspaceIntMat[102X( [3Xmat[103X, [3Xvec[103X ) [32X operation[133X
+  
+  [33X[0;0YThis function returns a list of length two, its first entry being the result
+  of  a  call  to  [2XSolutionIntMat[102X ([14X25.1-2[114X) with same arguments, the second the
+  result   of   [2XNullspaceIntMat[102X  ([14X25.1-1[114X)  applied  to  the  matrix  [3Xmat[103X.  The
+  calculation is performed faster than if two separate calls would be used.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmat:=[[1,2,7],[4,5,6],[7,8,9],[10,11,19],[5,7,12]];;[127X[104X
+    [4X[25Xgap>[125X [27XSolutionNullspaceIntMat(mat,[95,115,182]);[127X[104X
+    [4X[28X[ [ 2285, -5854, 4888, -1299, 0 ],[128X[104X
+    [4X[28X  [ [ 1, 18, -9, 2, -6 ], [ 0, 24, -13, 3, -7 ] ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X25.1-4 BaseIntMat[101X
+  
+  [33X[1;0Y[29X[2XBaseIntMat[102X( [3Xmat[103X ) [32X attribute[133X
+  
+  [33X[0;0YIf  [3Xmat[103X  is  a matrix with integral entries, this function returns a list of
+  vectors that forms a basis of the integral row space of [3Xmat[103X, i.e. of the set
+  of integral linear combinations of the rows of [3Xmat[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmat:=[[1,2,7],[4,5,6],[10,11,19]];;[127X[104X
+    [4X[25Xgap>[125X [27XBaseIntMat(mat);[127X[104X
+    [4X[28X[ [ 1, 2, 7 ], [ 0, 3, 7 ], [ 0, 0, 15 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X25.1-5 BaseIntersectionIntMats[101X
+  
+  [33X[1;0Y[29X[2XBaseIntersectionIntMats[102X( [3Xm[103X, [3Xn[103X ) [32X operation[133X
+  
+  [33X[0;0YIf  [3Xm[103X and [3Xn[103X are matrices with integral entries, this function returns a list
+  of vectors that forms a basis of the intersection of the integral row spaces
+  of [3Xm[103X and [3Xn[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xnat:=[[5,7,2],[4,2,5],[7,1,4]];;[127X[104X
+    [4X[25Xgap>[125X [27XBaseIntMat(nat);[127X[104X
+    [4X[28X[ [ 1, 1, 15 ], [ 0, 2, 55 ], [ 0, 0, 64 ] ][128X[104X
+    [4X[25Xgap>[125X [27XBaseIntersectionIntMats(mat,nat);[127X[104X
+    [4X[28X[ [ 1, 5, 509 ], [ 0, 6, 869 ], [ 0, 0, 960 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X25.1-6 ComplementIntMat[101X
+  
+  [33X[1;0Y[29X[2XComplementIntMat[102X( [3Xfull[103X, [3Xsub[103X ) [32X operation[133X
+  
+  [33X[0;0YLet  [3Xfull[103X  be  a list of integer vectors generating an integral row module [22XM[122X
+  and  [3Xsub[103X  a  list  of  vectors  defining  a  submodule [22XS[122X of [22XM[122X. This function
+  computes a free basis for [22XM[122X that extends [22XS[122X. I.e., if the dimension of [22XS[122X is [22Xn[122X
+  it determines a basis [22XB = { b_1, ..., b_m }[122X for [22XM[122X, as well as [22Xn[122X integers [22Xx_i[122X
+  such that the [22Xn[122X vectors [22Xs_i:= x_i ⋅ b_i[122X form a basis for [22XS[122X.[133X
+  
+  [33X[0;0YIt returns a record with the following components:[133X
+  
+  [8X[10Xcomplement[110X[8X[108X
+        [33X[0;6Ythe vectors [22Xb_{n+1}[122X up to [22Xb_m[122X (they generate a complement to [22XS[122X).[133X
+  
+  [8X[10Xsub[110X[8X[108X
+        [33X[0;6Ythe vectors [22Xs_i[122X (a basis for [22XS[122X).[133X
+  
+  [8X[10Xmoduli[110X[8X[108X
+        [33X[0;6Ythe factors [22Xx_i[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm:=IdentityMat(3);;[127X[104X
+    [4X[25Xgap>[125X [27Xn:=[[1,2,3],[4,5,6]];;[127X[104X
+    [4X[25Xgap>[125X [27XComplementIntMat(m,n);[127X[104X
+    [4X[28Xrec( complement := [ [ 0, 0, 1 ] ], moduli := [ 1, 3 ],[128X[104X
+    [4X[28X  sub := [ [ 1, 2, 3 ], [ 0, 3, 6 ] ] )[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X25.2 [33X[0;0YNormal Forms over the Integers[133X[101X
+  
+  [33X[0;0YThis  section describes the computation of the Hermite and Smith normal form
+  of integer matrices.[133X
+  
+  [33X[0;0YThe  Hermite  Normal Form (HNF) [22XH[122X of an integer matrix [22XA[122X is a row equivalent
+  upper  triangular form such that all off-diagonal entries are reduced modulo
+  the  diagonal  entry  of  the  column  they  are  in.  There exists a unique
+  unimodular matrix [22XQ[122X such that [22XQ A = H[122X.[133X
+  
+  [33X[0;0YThe  Smith  Normal  Form  [22XS[122X  of an integer matrix [22XA[122X is the unique equivalent
+  diagonal  form  with  [22XS_i[122X  dividing  [22XS_j[122X  for  [22Xi < j[122X. There exist unimodular
+  integer matrices [22XP, Q[122X such that [22XP A Q = S[122X.[133X
+  
+  [33X[0;0YAll  routines  described  in  this  section  build  on the [21Xworkhorse[121X routine
+  [2XNormalFormIntMat[102X ([14X25.2-9[114X).[133X
+  
+  [1X25.2-1 TriangulizedIntegerMat[101X
+  
+  [33X[1;0Y[29X[2XTriangulizedIntegerMat[102X( [3Xmat[103X ) [32X operation[133X
+  
+  [33X[0;0YComputes  an  upper  triangular  form  of  a matrix with integer entries. It
+  returns a mutable matrix in upper triangular form.[133X
+  
+  [1X25.2-2 TriangulizedIntegerMatTransform[101X
+  
+  [33X[1;0Y[29X[2XTriangulizedIntegerMatTransform[102X( [3Xmat[103X ) [32X operation[133X
+  
+  [33X[0;0YComputes  an  upper  triangular  form  of  a matrix with integer entries. It
+  returns  a  record  with  a  component  [10Xnormal[110X (an immutable matrix in upper
+  triangular  form)  and  a  component [10Xrowtrans[110X that gives the transformations
+  done to the original matrix to bring it into upper triangular form.[133X
+  
+  [1X25.2-3 TriangulizeIntegerMat[101X
+  
+  [33X[1;0Y[29X[2XTriangulizeIntegerMat[102X( [3Xmat[103X ) [32X operation[133X
+  
+  [33X[0;0YChanges  [3Xmat[103X to be in upper triangular form. (The result is the same as that
+  of  [2XTriangulizedIntegerMat[102X  ([14X25.2-1[114X),  but  [3Xmat[103X will be modified, thus using
+  less memory.) If [3Xmat[103X is immutable an error will be triggered.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm:=[[1,15,28],[4,5,6],[7,8,9]];;[127X[104X
+    [4X[25Xgap>[125X [27XTriangulizedIntegerMat(m);[127X[104X
+    [4X[28X[ [ 1, 15, 28 ], [ 0, 1, 1 ], [ 0, 0, 3 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xn:=TriangulizedIntegerMatTransform(m);[127X[104X
+    [4X[28Xrec( normal := [ [ 1, 15, 28 ], [ 0, 1, 1 ], [ 0, 0, 3 ] ],[128X[104X
+    [4X[28X  rank := 3, rowC := [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ],[128X[104X
+    [4X[28X  rowQ := [ [ 1, 0, 0 ], [ 1, -30, 17 ], [ -3, 97, -55 ] ],[128X[104X
+    [4X[28X  rowtrans := [ [ 1, 0, 0 ], [ 1, -30, 17 ], [ -3, 97, -55 ] ],[128X[104X
+    [4X[28X  signdet := 1 )[128X[104X
+    [4X[25Xgap>[125X [27Xn.rowtrans*m=n.normal;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XTriangulizeIntegerMat(m); m;[127X[104X
+    [4X[28X[ [ 1, 15, 28 ], [ 0, 1, 1 ], [ 0, 0, 3 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X25.2-4 HermiteNormalFormIntegerMat[101X
+  
+  [33X[1;0Y[29X[2XHermiteNormalFormIntegerMat[102X( [3Xmat[103X ) [32X operation[133X
+  
+  [33X[0;0YThis operation computes the Hermite normal form of a matrix [3Xmat[103X with integer
+  entries. It returns a immutable matrix in HNF.[133X
+  
+  [1X25.2-5 HermiteNormalFormIntegerMatTransform[101X
+  
+  [33X[1;0Y[29X[2XHermiteNormalFormIntegerMatTransform[102X( [3Xmat[103X ) [32X operation[133X
+  
+  [33X[0;0YThis operation computes the Hermite normal form of a matrix [3Xmat[103X with integer
+  entries.  It  returns  a  record  with  components  [10Xnormal[110X  (a matrix [22XH[122X) and
+  [10Xrowtrans[110X (a matrix [22XQ[122X) such that [22XQ A = H[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm:=[[1,15,28],[4,5,6],[7,8,9]];;[127X[104X
+    [4X[25Xgap>[125X [27XHermiteNormalFormIntegerMat(m);[127X[104X
+    [4X[28X[ [ 1, 0, 1 ], [ 0, 1, 1 ], [ 0, 0, 3 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xn:=HermiteNormalFormIntegerMatTransform(m);[127X[104X
+    [4X[28Xrec( normal := [ [ 1, 0, 1 ], [ 0, 1, 1 ], [ 0, 0, 3 ] ], rank := 3,[128X[104X
+    [4X[28X  rowC := [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ],[128X[104X
+    [4X[28X  rowQ := [ [ -2, 62, -35 ], [ 1, -30, 17 ], [ -3, 97, -55 ] ],[128X[104X
+    [4X[28X  rowtrans := [ [ -2, 62, -35 ], [ 1, -30, 17 ], [ -3, 97, -55 ] ],[128X[104X
+    [4X[28X  signdet := 1 )[128X[104X
+    [4X[25Xgap>[125X [27Xn.rowtrans*m=n.normal;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X25.2-6 SmithNormalFormIntegerMat[101X
+  
+  [33X[1;0Y[29X[2XSmithNormalFormIntegerMat[102X( [3Xmat[103X ) [32X operation[133X
+  
+  [33X[0;0YThis  operation  computes the Smith normal form of a matrix [3Xmat[103X with integer
+  entries. It returns a new immutable matrix in the Smith normal form.[133X
+  
+  [1X25.2-7 SmithNormalFormIntegerMatTransforms[101X
+  
+  [33X[1;0Y[29X[2XSmithNormalFormIntegerMatTransforms[102X( [3Xmat[103X ) [32X operation[133X
+  
+  [33X[0;0YThis  operation  computes the Smith normal form of a matrix [3Xmat[103X with integer
+  entries.  It  returns a record with components [10Xnormal[110X (a matrix [22XS[122X), [10Xrowtrans[110X
+  (a matrix [22XP[122X), and [10Xcoltrans[110X (a matrix [22XQ[122X) such that [22XP A Q = S[122X.[133X
+  
+  [1X25.2-8 DiagonalizeIntMat[101X
+  
+  [33X[1;0Y[29X[2XDiagonalizeIntMat[102X( [3Xmat[103X ) [32X function[133X
+  
+  [33X[0;0YThis  function  changes  [3Xmat[103X  to its SNF. (The result is the same as that of
+  [2XSmithNormalFormIntegerMat[102X  ([14X25.2-6[114X),  but  [3Xmat[103X  will be modified, thus using
+  less memory.) If [3Xmat[103X is immutable an error will be triggered.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm:=[[1,15,28],[4,5,6],[7,8,9]];;[127X[104X
+    [4X[25Xgap>[125X [27XSmithNormalFormIntegerMat(m);[127X[104X
+    [4X[28X[ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 3 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xn:=SmithNormalFormIntegerMatTransforms(m);[127X[104X
+    [4X[28Xrec( colC := [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ],[128X[104X
+    [4X[28X  colQ := [ [ 1, 0, -1 ], [ 0, 1, -1 ], [ 0, 0, 1 ] ],[128X[104X
+    [4X[28X  coltrans := [ [ 1, 0, -1 ], [ 0, 1, -1 ], [ 0, 0, 1 ] ],[128X[104X
+    [4X[28X  normal := [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 3 ] ], rank := 3,[128X[104X
+    [4X[28X  rowC := [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ],[128X[104X
+    [4X[28X  rowQ := [ [ -2, 62, -35 ], [ 1, -30, 17 ], [ -3, 97, -55 ] ],[128X[104X
+    [4X[28X  rowtrans := [ [ -2, 62, -35 ], [ 1, -30, 17 ], [ -3, 97, -55 ] ],[128X[104X
+    [4X[28X  signdet := 1 )[128X[104X
+    [4X[25Xgap>[125X [27Xn.rowtrans*m*n.coltrans=n.normal;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XDiagonalizeIntMat(m);m;[127X[104X
+    [4X[28X[ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 3 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X25.2-9 NormalFormIntMat[101X
+  
+  [33X[1;0Y[29X[2XNormalFormIntMat[102X( [3Xmat[103X, [3Xoptions[103X ) [32X function[133X
+  
+  [33X[0;0YThis  general  operation for computation of various Normal Forms is probably
+  the most efficient.[133X
+  
+  [33X[0;0YOptions bit values:[133X
+  
+  [8X0/1[108X
+        [33X[0;6YTriangular Form / Smith Normal Form.[133X
+  
+  [8X2[108X
+        [33X[0;6YReduce off diagonal entries.[133X
+  
+  [8X4[108X
+        [33X[0;6YRow Transformations.[133X
+  
+  [8X8[108X
+        [33X[0;6YCol Transformations.[133X
+  
+  [8X16[108X
+        [33X[0;6YDestructive (the original matrix may be destroyed)[133X
+  
+  [33X[0;0YCompute  a  Triangular,  Hermite  or  Smith  form of the [22Xn × m[122X integer input
+  matrix  [22XA[122X.  Optionally,  compute  [22Xn  ×  n[122X  and [22Xm × m[122X unimodular transforming
+  matrices [22XQ, P[122X which satisfy [22XQ A = H[122X or [22XQ A P = S[122X.[133X
+  
+  [33X[0;0YNote  option  is a value ranging from 0 to 15 but not all options make sense
+  (e.g.,  reducing  off diagonal entries with SNF option selected already). If
+  an option makes no sense it is ignored.[133X
+  
+  [33X[0;0YReturns  a  record with component [10Xnormal[110X containing the computed normal form
+  and  optional  components [10Xrowtrans[110X and/or [10Xcoltrans[110X which hold the respective
+  transformation matrix. Also in the record are components holding the sign of
+  the determinant, [10Xsigndet[110X, and the rank of the matrix, [10Xrank[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm:=[[1,15,28],[4,5,6],[7,8,9]];;[127X[104X
+    [4X[25Xgap>[125X [27XNormalFormIntMat(m,0);  # Triangular, no transforms[127X[104X
+    [4X[28Xrec( normal := [ [ 1, 15, 28 ], [ 0, 1, 1 ], [ 0, 0, 3 ] ],[128X[104X
+    [4X[28X  rank := 3, signdet := 1 )[128X[104X
+    [4X[25Xgap>[125X [27XNormalFormIntMat(m,6);  # Hermite Normal Form with row transforms[127X[104X
+    [4X[28Xrec( normal := [ [ 1, 0, 1 ], [ 0, 1, 1 ], [ 0, 0, 3 ] ], rank := 3,[128X[104X
+    [4X[28X  rowC := [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ],[128X[104X
+    [4X[28X  rowQ := [ [ -2, 62, -35 ], [ 1, -30, 17 ], [ -3, 97, -55 ] ],[128X[104X
+    [4X[28X  rowtrans := [ [ -2, 62, -35 ], [ 1, -30, 17 ], [ -3, 97, -55 ] ],[128X[104X
+    [4X[28X  signdet := 1 )[128X[104X
+    [4X[25Xgap>[125X [27XNormalFormIntMat(m,13); # Smith Normal Form with both transforms[127X[104X
+    [4X[28Xrec( colC := [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ],[128X[104X
+    [4X[28X  colQ := [ [ 1, 0, -1 ], [ 0, 1, -1 ], [ 0, 0, 1 ] ],[128X[104X
+    [4X[28X  coltrans := [ [ 1, 0, -1 ], [ 0, 1, -1 ], [ 0, 0, 1 ] ],[128X[104X
+    [4X[28X  normal := [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 3 ] ], rank := 3,[128X[104X
+    [4X[28X  rowC := [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ],[128X[104X
+    [4X[28X  rowQ := [ [ -2, 62, -35 ], [ 1, -30, 17 ], [ -3, 97, -55 ] ],[128X[104X
+    [4X[28X  rowtrans := [ [ -2, 62, -35 ], [ 1, -30, 17 ], [ -3, 97, -55 ] ],[128X[104X
+    [4X[28X  signdet := 1 )[128X[104X
+    [4X[25Xgap>[125X [27Xlast.rowtrans*m*last.coltrans;[127X[104X
+    [4X[28X[ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 3 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X25.2-10 AbelianInvariantsOfList[101X
+  
+  [33X[1;0Y[29X[2XAbelianInvariantsOfList[102X( [3Xlist[103X ) [32X attribute[133X
+  
+  [33X[0;0YGiven  a  list  of  nonnegative integers, this routine returns a sorted list
+  containing  the  prime power factors of the positive entries in the original
+  list, as well as all zeroes of the original list.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XAbelianInvariantsOfList([4,6,2,0,12]);[127X[104X
+    [4X[28X[ 0, 2, 2, 3, 3, 4, 4 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X25.3 [33X[0;0YDeterminant of an integer matrix[133X[101X
+  
+  [1X25.3-1 DeterminantIntMat[101X
+  
+  [33X[1;0Y[29X[2XDeterminantIntMat[102X( [3Xmat[103X ) [32X function[133X
+  
+  [33X[0;0YComputes  the  determinant  of  an integer matrix using the same strategy as
+  [2XNormalFormIntMat[102X  ([14X25.2-9[114X).  This  method  is faster in general for matrices
+  greater  than  [22X20  ×  20[122X  but  quite  a  lot slower for smaller matrices. It
+  therefore  passes  the  work to the more general [2XDeterminantMat[102X ([14X24.4-4[114X) for
+  these smaller matrices.[133X
+  
+  
+  [1X25.4 [33X[0;0YDecompositions[133X[101X
+  
+  [33X[0;0YFor  computing  the decomposition of a vector of integers into the rows of a
+  matrix   of  integers,  with  integral  coefficients,  one  can  use  [22Xp[122X-adic
+  approximations, as follows.[133X
+  
+  [33X[0;0YLet  [22XA[122X  be  a square integral matrix, and [22Xp[122X an odd prime. The reduction of [22XA[122X
+  modulo  [22Xp[122X  is  [22XoverlineA[122X, its entries are chosen in the interval [22X[ -(p-1)/2,
+  (p-1)/2  ][122X.  If  [22XoverlineA[122X is regular over the field with [22Xp[122X elements, we can
+  form  [22XA'  =  overlineA^{-1}[122X.  Now  we  consider the integral linear equation
+  system  [22Xx  A  = b[122X, i.e., we look for an integral solution [22Xx[122X. Define [22Xb_0 = b[122X,
+  and then iteratively compute[133X
+  
+  
+  [24X[33X[0;6Yx_i = (b_i A') mod p, b_{i+1} = (b_i - x_i A) / p, i = 0, 1, 2, ... .[133X[124X
+  
+  [33X[0;0YBy induction, we get[133X
+  
+  
+  [24X[33X[0;6Yp^{i+1} b_{i+1} + ( ∑_{j = 0}^i p^j x_j ) A = b.[133X[124X
+  
+  [33X[0;0YIf  there is an integral solution [22Xx[122X then it is unique, and there is an index
+  [22Xl[122X such that [22Xb_{l+1}[122X is zero and [22Xx = ∑_{j = 0}^l p^j x_j[122X.[133X
+  
+  [33X[0;0YThere  are  two  useful  generalizations  of this idea. First, [22XA[122X need not be
+  square; it is only necessary that there is a square regular matrix formed by
+  a  subset  of  columns  of  [22XA[122X.  Second,  [22XA[122X does not need to be integral; the
+  entries  may  be  cyclotomic  integers as well, in this case one can replace
+  each  column  of  [22XA[122X  by  the  columns  formed  by the coefficients w.r.t. an
+  integral  basis  (which  are integers). Note that this preprocessing must be
+  performed compatibly for [22XA[122X and [22Xb[122X.[133X
+  
+  [33X[0;0Y[5XGAP[105X    provides    the   following   functions   for   this   purpose   (see
+  also [2XInverseMatMod[102X ([14X24.15-1[114X)).[133X
+  
+  [1X25.4-1 Decomposition[101X
+  
+  [33X[1;0Y[29X[2XDecomposition[102X( [3XA[103X, [3XB[103X, [3Xdepth[103X ) [32X operation[133X
+  
+  [33X[0;0YFor  a  [22Xm  ×  n[122X matrix [3XA[103X of cyclotomics that has rank [22Xm ≤ n[122X, and a list [3XB[103X of
+  cyclotomic  vectors,  each of length [22Xn[122X, [2XDecomposition[102X tries to find integral
+  solutions  of  the  linear  equation  systems [10X[3Xx[103X[10X * [3XA[103X[10X = [3XB[103X[10X[i][110X, by computing the
+  [22Xp[122X-adic series of hypothetical solutions.[133X
+  
+  [33X[0;0Y[10XDecomposition( [3XA[103X[10X, [3XB[103X[10X, [3Xdepth[103X[10X )[110X, where [3Xdepth[103X is a nonnegative integer, computes
+  for  each vector [10X[3XB[103X[10X[i][110X the initial part [22X∑_{k = 0}^[3Xdepth[103X x_k p^k[122X, with all [22Xx_k[122X
+  vectors of integers with entries bounded by [22X± (p-1)/2[122X. The prime [22Xp[122X is set to
+  83  first;  if  the  reduction  of [3XA[103X modulo [22Xp[122X is singular, the next prime is
+  chosen automatically.[133X
+  
+  [33X[0;0YA  list  [3XX[103X  is  returned. If the computed initial part for [10X[3Xx[103X[10X * [3XA[103X[10X = [3XB[103X[10X[i][110X [13Xis[113X a
+  solution, we have [10X[3XX[103X[10X[i] = [3Xx[103X[10X[110X, otherwise [10X[3XX[103X[10X[i] = fail[110X.[133X
+  
+  [33X[0;0YIf  [3Xdepth[103X  is  not  an  integer  then  it  must be the string [10X"nonnegative"[110X.
+  [10XDecomposition(  [3XA[103X[10X,  [3XB[103X[10X,  "nonnegative" )[110X assumes that the solutions have only
+  nonnegative  entries,  and  that  the first column of [3XA[103X consists of positive
+  integers.  This  is  satisfied,  e.g.,  for  the  decomposition  of ordinary
+  characters  into  Brauer characters. In this case the necessary number [3Xdepth[103X
+  of  iterations  can be computed; the [10Xi[110X-th entry of the returned list is [9Xfail[109X
+  if there [13Xexists[113X no nonnegative integral solution of the system [10X[3Xx[103X[10X * [3XA[103X[10X = [3XB[103X[10X[i][110X,
+  and it is the solution otherwise.[133X
+  
+  [33X[0;0Y[13XNote[113X that the result is a list of [9Xfail[109X if [3XA[103X has not full rank, even if there
+  might be a unique integral solution for some equation system.[133X
+  
+  [1X25.4-2 LinearIndependentColumns[101X
+  
+  [33X[1;0Y[29X[2XLinearIndependentColumns[102X( [3Xmat[103X ) [32X function[133X
+  
+  [33X[0;0YCalled with a matrix [3Xmat[103X, [10XLinearIndependentColumns[110X returns a maximal list of
+  column  positions  such that the restriction of [3Xmat[103X to these columns has the
+  same rank as [3Xmat[103X.[133X
+  
+  [1X25.4-3 PadicCoefficients[101X
+  
+  [33X[1;0Y[29X[2XPadicCoefficients[102X( [3XA[103X, [3XAmodpinv[103X, [3Xb[103X, [3Xprime[103X, [3Xdepth[103X ) [32X function[133X
+  
+  [33X[0;0YLet [3XA[103X be an integral matrix, [3Xprime[103X a prime integer, [3XAmodpinv[103X an inverse of [3XA[103X
+  modulo  [3Xprime[103X,  [3Xb[103X  an  integral  vector,  and  [3Xdepth[103X  a nonnegative integer.
+  [2XPadicCoefficients[102X  returns  the  list  [22X[  x_0,  x_1,  ...,  x_l,  b_{l+1}  ][122X
+  describing the [3Xprime[103X-adic approximation of [3Xb[103X (see above), where [22Xl = [3Xdepth[103X[122X or
+  [22Xl[122X is minimal with the property that [22Xb_{l+1} = 0[122X.[133X
+  
+  [1X25.4-4 IntegralizedMat[101X
+  
+  [33X[1;0Y[29X[2XIntegralizedMat[102X( [3XA[103X[, [3Xinforec[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XIntegralizedMat[102X returns, for a matrix [3XA[103X of cyclotomics, a record [10Xintmat[110X with
+  components  [10Xmat[110X and [10Xinforec[110X. Each family of algebraic conjugate columns of [3XA[103X
+  is  encoded  in  a  set  of  columns  of  the  rational matrix [10Xintmat.mat[110X by
+  replacing  cyclotomics  in [3XA[103X by their coefficients w.r.t. an integral basis.
+  [10Xintmat.inforec[110X  is  a  record  containing  the information how to encode the
+  columns.[133X
+  
+  [33X[0;0YIf  the  only  argument is [3XA[103X, the value of the component [10Xinforec[110X is computed
+  that  can  be  entered  as  second  argument  [3Xinforec[103X  in  a  later  call of
+  [2XIntegralizedMat[102X with a matrix [3XB[103X that shall be encoded compatibly with [3XA[103X.[133X
+  
+  [1X25.4-5 DecompositionInt[101X
+  
+  [33X[1;0Y[29X[2XDecompositionInt[102X( [3XA[103X, [3XB[103X, [3Xdepth[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XDecompositionInt[102X  does the same as [2XDecomposition[102X ([14X25.4-1[114X), except that [3XA[103X and
+  [3XB[103X must be integral matrices, and [3Xdepth[103X must be a nonnegative integer.[133X
+  
+  
+  [1X25.5 [33X[0;0YLattice Reduction[133X[101X
+  
+  [1X25.5-1 LLLReducedBasis[101X
+  
+  [33X[1;0Y[29X[2XLLLReducedBasis[102X( [[3XL[103X, ][3Xvectors[103X[, [3Xy[103X][, [3X"linearcomb"[103X][, [3Xlllout[103X] ) [32X function[133X
+  
+  [33X[0;0Yprovides  an  implementation  of  the  [13XLLL algorithm[113X by Lenstra, Lenstra and
+  Lovász  (see [LLJL82],  [Poh87]). The implementation follows the description
+  in [Coh93, p. 94f.].[133X
+  
+  [33X[0;0Y[2XLLLReducedBasis[102X  returns  a  record  whose  component [10Xbasis[110X is a list of LLL
+  reduced  linearly  independent vectors spanning the same lattice as the list
+  [3Xvectors[103X.  [3XL[103X  must  be  a lattice, with scalar product of the vectors [3Xv[103X and [3Xw[103X
+  given  by  [10XScalarProduct(  [3XL[103X[10X,  [3Xv[103X[10X,  [3Xw[103X[10X  )[110X. If no lattice is specified then the
+  scalar product of vectors given by [10XScalarProduct( [3Xv[103X[10X, [3Xw[103X[10X )[110X is used.[133X
+  
+  [33X[0;0YIn  the case of the option [10X"linearcomb"[110X, the result record contains also the
+  components   [10Xrelations[110X  and  [10Xtransformation[110X,  with  the  following  meaning.
+  [10Xrelations[110X  is  a  basis of the relation space of [3Xvectors[103X, i.e., of vectors [3Xx[103X
+  such  that  [10X[3Xx[103X[10X  * [3Xvectors[103X[10X[110X is zero. [10Xtransformation[110X gives the expression of the
+  new lattice basis in terms of the old, i.e., [10Xtransformation * [3Xvectors[103X[10X[110X equals
+  the [10Xbasis[110X component of the result.[133X
+  
+  [33X[0;0YAnother optional argument is [3Xy[103X, the [21Xsensitivity[121X of the algorithm, a rational
+  number between [22X1/4[122X and [22X1[122X (the default value is [22X3/4[122X).[133X
+  
+  [33X[0;0YThe optional argument [3Xlllout[103X is a record with the components [10Xmue[110X and [10XB[110X, both
+  lists of length [22Xk[122X, with the meaning that if [3Xlllout[103X is present then the first
+  [22Xk[122X vectors in [3Xvectors[103X form an LLL reduced basis of the lattice they generate,
+  and  [10X[3Xlllout[103X[10X.mue[110X  and  [10X[3Xlllout[103X[10X.B[110X  contain their scalar products and norms used
+  internally  in  the  algorithm,  which  are  also  present  in the output of
+  [2XLLLReducedBasis[102X.   So   [3Xlllout[103X   can   be  used  for  [21Xincremental[121X  calls  of
+  [2XLLLReducedBasis[102X.[133X
+  
+  [33X[0;0YThe function [2XLLLReducedGramMat[102X ([14X25.5-2[114X) computes an LLL reduced Gram matrix.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xvectors:= [ [ 9, 1, 0, -1, -1 ], [ 15, -1, 0, 0, 0 ],[127X[104X
+    [4X[25X>[125X [27X               [ 16, 0, 1, 1, 1 ], [ 20, 0, -1, 0, 0 ],[127X[104X
+    [4X[25X>[125X [27X               [ 25, 1, 1, 0, 0 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27XLLLReducedBasis( vectors, "linearcomb" );[127X[104X
+    [4X[28Xrec( B := [ 5, 36/5, 12, 50/3 ],[128X[104X
+    [4X[28X  basis := [ [ 1, 1, 1, 1, 1 ], [ 1, 1, -2, 1, 1 ],[128X[104X
+    [4X[28X      [ -1, 3, -1, -1, -1 ], [ -3, 1, 0, 2, 2 ] ],[128X[104X
+    [4X[28X  mue := [ [  ], [ 2/5 ], [ -1/5, 1/3 ], [ 2/5, 1/6, 1/6 ] ],[128X[104X
+    [4X[28X  relations := [ [ -1, 0, -1, 0, 1 ] ],[128X[104X
+    [4X[28X  transformation := [ [ 0, -1, 1, 0, 0 ], [ -1, -2, 0, 2, 0 ],[128X[104X
+    [4X[28X      [ 1, -2, 0, 1, 0 ], [ -1, -2, 1, 1, 0 ] ] )[128X[104X
+  [4X[32X[104X
+  
+  [1X25.5-2 LLLReducedGramMat[101X
+  
+  [33X[1;0Y[29X[2XLLLReducedGramMat[102X( [3XG[103X[, [3Xy[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XLLLReducedGramMat[102X  provides  an  implementation  of  the  [13XLLL  algorithm[113X  by
+  Lenstra,  Lenstra  and  Lovász  (see [LLJL82], [Poh87]).  The implementation
+  follows the description in [Coh93, p. 94f.].[133X
+  
+  [33X[0;0YLet  [3XG[103X  the Gram matrix of the vectors [22X(b_1, b_2, ..., b_n)[122X; this means [3XG[103X is
+  either  a  square  symmetric  matrix  or  lower  triangular matrix (only the
+  entries in the lower triangular half are used by the program).[133X
+  
+  [33X[0;0Y[2XLLLReducedGramMat[102X  returns  a  record  whose component [10Xremainder[110X is the Gram
+  matrix  of the LLL reduced basis corresponding to [22X(b_1, b_2, ..., b_n)[122X. If [3XG[103X
+  is a lower triangular matrix then also the [10Xremainder[110X component of the result
+  record is a lower triangular matrix.[133X
+  
+  [33X[0;0YThe result record contains also the components [10Xrelations[110X and [10Xtransformation[110X,
+  which have the following meaning.[133X
+  
+  [33X[0;0Y[10Xrelations[110X  is a basis of the space of vectors [22X(x_1, x_2, ..., x_n)[122X such that
+  [22X∑_{i  = 1}^n x_i b_i[122X is zero, and [10Xtransformation[110X gives the expression of the
+  new  lattice basis in terms of the old, i.e., [10Xtransformation[110X is the matrix [22XT[122X
+  such that [22XT ⋅ [3XG[103X ⋅ T^tr[122X is the [10Xremainder[110X component of the result.[133X
+  
+  [33X[0;0YThe optional argument [3Xy[103X denotes the [21Xsensitivity[121X of the algorithm, it must be
+  a rational number between [22X1/4[122X and [22X1[122X; the default value is [22X[3Xy[103X = 3/4[122X.[133X
+  
+  [33X[0;0YThe function [2XLLLReducedBasis[102X ([14X25.5-1[114X) computes an LLL reduced basis.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:= [ [ 4, 6, 5, 2, 2 ], [ 6, 13, 7, 4, 4 ],[127X[104X
+    [4X[25X>[125X [27X   [ 5, 7, 11, 2, 0 ], [ 2, 4, 2, 8, 4 ], [ 2, 4, 0, 4, 8 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27XLLLReducedGramMat( g );[127X[104X
+    [4X[28Xrec( B := [ 4, 4, 75/16, 168/25, 32/7 ],[128X[104X
+    [4X[28X  mue := [ [  ], [ 1/2 ], [ 1/4, -1/8 ], [ 1/2, 1/4, -2/25 ],[128X[104X
+    [4X[28X      [ -1/4, 1/8, 37/75, 8/21 ] ], relations := [  ],[128X[104X
+    [4X[28X  remainder := [ [ 4, 2, 1, 2, -1 ], [ 2, 5, 0, 2, 0 ],[128X[104X
+    [4X[28X      [ 1, 0, 5, 0, 2 ], [ 2, 2, 0, 8, 2 ], [ -1, 0, 2, 2, 7 ] ],[128X[104X
+    [4X[28X  transformation := [ [ 1, 0, 0, 0, 0 ], [ -1, 1, 0, 0, 0 ],[128X[104X
+    [4X[28X      [ -1, 0, 1, 0, 0 ], [ 0, 0, 0, 1, 0 ], [ -2, 0, 1, 0, 1 ] ] )[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X25.6 [33X[0;0YOrthogonal Embeddings[133X[101X
+  
+  [1X25.6-1 OrthogonalEmbeddings[101X
+  
+  [33X[1;0Y[29X[2XOrthogonalEmbeddings[102X( [3Xgram[103X[, [3X"positive"[103X][, [3Xmaxdim[103X] ) [32X function[133X
+  
+  [33X[0;0Ycomputes  all  possible orthogonal embeddings of a lattice given by its Gram
+  matrix  [3Xgram[103X, which must be a regular symmetric matrix of integers. In other
+  words,  all  integral  solutions  [22XX[122X  of  the  equation  [22XX^tr  ⋅  X =[122X[3Xgram[103X are
+  calculated. The implementation follows the description in [Ple95].[133X
+  
+  [33X[0;0YUsually  there are many solutions [22XX[122X but all their rows belong to a small set
+  of  vectors,  so  [2XOrthogonalEmbeddings[102X  returns  the  solutions encoded by a
+  record with the following components.[133X
+  
+  [8X[10Xvectors[110X[8X[108X
+        [33X[0;6Ythe  list  [22XL = [ x_1, x_2, ..., x_n ][122X of vectors that may be rows of a
+        solution,  up to sign; these are exactly the vectors with the property
+        [22Xx_i ⋅[122X[3Xgram[103X[22X^{-1} ⋅ x_i^tr ≤ 1[122X, see [2XShortestVectors[102X ([14X25.6-2[114X),[133X
+  
+  [8X[10Xnorms[110X[8X[108X
+        [33X[0;6Ythe list of values [22Xx_i ⋅[122X[3Xgram[103X[22X^{-1} ⋅ x_i^tr[122X, and[133X
+  
+  [8X[10Xsolutions[110X[8X[108X
+        [33X[0;6Ya list [22XS[122X of index lists; the [22Xi[122X-th solution matrix is [22XL[122X[10X{ [110X[22XS[i][122X[10X }[110X, so the
+        dimension  of  the  [3Xi[103X-th  solution  is the length of [22XS[i][122X, and we have
+        [3Xgram[103X[22X= ∑_{j ∈ S[i]} x_j^tr ⋅ x_j[122X,[133X
+  
+  [33X[0;0YThe  optional argument [10X"positive"[110X will cause [2XOrthogonalEmbeddings[102X to compute
+  only vectors [22Xx_i[122X with nonnegative entries. In the context of characters this
+  is allowed (and useful) if [3Xgram[103X is the matrix of scalar products of ordinary
+  characters.[133X
+  
+  [33X[0;0YWhen  [2XOrthogonalEmbeddings[102X  is  called  with the optional argument [3Xmaxdim[103X (a
+  positive  integer), only solutions up to dimension [3Xmaxdim[103X are computed; this
+  may accelerate the algorithm.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xb:= [ [ 3, -1, -1 ], [ -1, 3, -1 ], [ -1, -1, 3 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27Xc:=OrthogonalEmbeddings( b );[127X[104X
+    [4X[28Xrec( norms := [ 1, 1, 1, 1/2, 1/2, 1/2, 1/2, 1/2, 1/2 ],[128X[104X
+    [4X[28X  solutions := [ [ 1, 2, 3 ], [ 1, 6, 6, 7, 7 ], [ 2, 5, 5, 8, 8 ],[128X[104X
+    [4X[28X      [ 3, 4, 4, 9, 9 ], [ 4, 5, 6, 7, 8, 9 ] ],[128X[104X
+    [4X[28X  vectors := [ [ -1, 1, 1 ], [ 1, -1, 1 ], [ -1, -1, 1 ],[128X[104X
+    [4X[28X      [ -1, 1, 0 ], [ -1, 0, 1 ], [ 1, 0, 0 ], [ 0, -1, 1 ],[128X[104X
+    [4X[28X      [ 0, 1, 0 ], [ 0, 0, 1 ] ] )[128X[104X
+    [4X[25Xgap>[125X [27Xc.vectors{ c.solutions[1] };[127X[104X
+    [4X[28X[ [ -1, 1, 1 ], [ 1, -1, 1 ], [ -1, -1, 1 ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[3Xgram[103X  may  be the matrix of scalar products of some virtual characters. From
+  the  characters and the embedding given by the matrix [22XX[122X, [2XDecreased[102X ([14X72.10-7[114X)
+  may be able to compute irreducibles.[133X
+  
+  [1X25.6-2 ShortestVectors[101X
+  
+  [33X[1;0Y[29X[2XShortestVectors[102X( [3XG[103X, [3Xm[103X[, [3X"positive"[103X] ) [32X function[133X
+  
+  [33X[0;0YLet  [3XG[103X be a regular matrix of a symmetric bilinear form, and [3Xm[103X a nonnegative
+  integer.  [2XShortestVectors[102X computes the vectors [22Xx[122X that satisfy [22Xx ⋅ [3XG[103X ⋅ x^tr ≤
+  [3Xm[103X[122X,  and returns a record describing these vectors. The result record has the
+  components[133X
+  
+  [8X[10Xvectors[110X[8X[108X
+        [33X[0;6Ylist of the nonzero vectors [22Xx[122X, but only one of each pair [22X(x,-x)[122X,[133X
+  
+  [8X[10Xnorms[110X[8X[108X
+        [33X[0;6Ylist of norms of the vectors according to the Gram matrix [3XG[103X.[133X
+  
+  [33X[0;0YIf  the  optional  argument [10X"positive"[110X is entered, only those vectors [22Xx[122X with
+  nonnegative entries are computed.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:= [ [ 2, 1, 1 ], [ 1, 2, 1 ], [ 1, 1, 2 ] ];;[127X[104X
+    [4X[25Xgap>[125X [27XShortestVectors(g,4);[127X[104X
+    [4X[28Xrec( norms := [ 4, 2, 2, 4, 2, 4, 2, 2, 2 ],[128X[104X
+    [4X[28X  vectors := [ [ -1, 1, 1 ], [ 0, 0, 1 ], [ -1, 0, 1 ], [ 1, -1, 1 ],[128X[104X
+    [4X[28X      [ 0, -1, 1 ], [ -1, -1, 1 ], [ 0, 1, 0 ], [ -1, 1, 0 ],[128X[104X
+    [4X[28X      [ 1, 0, 0 ] ] )[128X[104X
+  [4X[32X[104X
+  

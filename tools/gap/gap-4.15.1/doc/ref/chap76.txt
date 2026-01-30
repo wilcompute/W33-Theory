@@ -1,0 +1,2465 @@
+  
+  [1X76 [33X[0;0YUsing and Developing [5XGAP[105X[101X[1X Packages[133X[101X
+  
+  [33X[0;0YThe  functionality  of  [5XGAP[105X can be extended by loading [5XGAP[105X packages. The [5XGAP[105X
+  distribution  already  contains  all currently redistributed [5XGAP[105X packages in
+  the [11Xgap-4.15.1/pkg[111X directory.[133X
+  
+  [33X[0;0Y[5XGAP[105X packages are written by (groups of) [5XGAP[105X users who may not necessarily be
+  members of the [5XGAP[105X developer team. The responsibility and copyright of a [5XGAP[105X
+  package remains with the original author(s).[133X
+  
+  [33X[0;0Y[5XGAP[105X  packages have their own documentation which is smoothly integrated into
+  the  [5XGAP[105X  help  system.  (When  [5XGAP[105X  is started, [10XLoadPackageDocumentation[110X is
+  called for all packages.)[133X
+  
+  [33X[0;0YAll [5XGAP[105X users who develop new code are invited to share the results of their
+  efforts  with  other  [5XGAP[105X  users  by  making  the code and its documentation
+  available in form of a package. Guidance on how to do this is available from
+  the  [5XGAP[105X website ([7Xhttps://www.gap-system.org[107X) and in the [5XGAP[105X package [5XExample[105X
+  (see [7Xhttps://www.gap-system.org/Packages/example.html[107X).[133X
+  
+  [33X[0;0YThe  [5XGAP[105X development team will assist in making any new package suitable for
+  distribution  with  [5XGAP[105X. It is also possible to submit a package to a formal
+  refereeing process.[133X
+  
+  [33X[0;0YIn  this  chapter  we  first describe how to use existing packages, and then
+  provide guidelines for writing a [5XGAP[105X package.[133X
+  
+  
+  [1X76.1 [33X[0;0YInstalling a [5XGAP[105X[101X[1X Package[133X[101X
+  
+  [33X[0;0YBefore  a  package can be used it must be installed. A standard distribution
+  of  [5XGAP[105X  already contains all the packages currently redistributed with [5XGAP[105X.
+  This  set of packages has been checked for compatibility with the system and
+  with each other during release preparation. Most of the packages can be used
+  immediately,  but  some  of them may require further installation steps (see
+  below).[133X
+  
+  [33X[0;0YAlso,  since [5XGAP[105X packages are released independently of the main [5XGAP[105X system,
+  it  may  sometimes  be  useful  to  upgrade  or install new packages between
+  upgrades  of  your [5XGAP[105X installation, e.g. if a new version of a package adds
+  new capabilities or bug fixes that you need.[133X
+  
+  [33X[0;0YA  package  consists of a collection of files within a single directory that
+  must  be  a  subdirectory  of  the  [11Xpkg[111X  directory  in  one  of the [5XGAP[105X root
+  directories (see [14X9.2[114X). If you don't have access to the [11Xpkg[111X directory in your
+  main  [5XGAP[105X  installation you can add private root directories as explained in
+  section [14X9.2[114X.[133X
+  
+  [33X[0;0YWhenever  you download or clone an archive of a [5XGAP[105X package, it will contain
+  a  [11XREADME[111X file (or [11XREADME.md[111X etc.) that explains how it should be installed.
+  Some  packages  just  consist  of  [5XGAP[105X  code and the installation is done by
+  unpacking  the  archive in one of the places described above. There are also
+  packages  that  need  further  installation  steps,  such  as compilation or
+  installing  additional  software to satisfy their dependencies. If there are
+  some  external  programs  which  have  to be compiled, this is often done by
+  executing [10X./configure; make[110X inside the unpacked package directory (but check
+  the individual [11XREADME[111X files).[133X
+  
+  [33X[0;0YMost  of  the  packages that require compilation can be compiled in a single
+  step  by  changing to the [11Xpkg[111X directory of your [5XGAP[105X installation and calling
+  the [10X../bin/BuildPackages.sh[110X script.[133X
+  
+  [33X[0;0YNote that if you use Windows you may not be able to use some or all external
+  binaries.[133X
+  
+  
+  [1X76.2 [33X[0;0YLoading a [5XGAP[105X[101X[1X Package[133X[101X
+  
+  [33X[0;0YIf  a  package  is  not  already loaded, it may be loaded using the function
+  [2XLoadPackage[102X ([14X76.2-1[114X).[133X
+  
+  [33X[0;0YSome  [5XGAP[105X  packages are prepared for automatic loading, that is they will be
+  loaded automatically when [5XGAP[105X starts (see [14X76.2-2[114X).[133X
+  
+  [1X76.2-1 LoadPackage[101X
+  
+  [33X[1;0Y[29X[2XLoadPackage[102X( [3Xname[103X[, [3Xversion[103X][, [3Xbanner[103X] ) [32X function[133X
+  
+  [33X[0;0Yloads the [5XGAP[105X package with name [3Xname[103X.[133X
+  
+  [33X[0;0YAs an example, the following loads the [5XGAP[105X package [5XSONATA[105X (case insensitive)
+  which   provides  methods  for  the  construction  and  analysis  of  finite
+  nearrings:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLoadPackage("sonata");[127X[104X
+    [4X[28X... some more lines with package banner(s) ...[128X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  package  name is case insensitive and may be appropriately abbreviated.
+  At  the  time  of  writing,  for example, [10XLoadPackage("semi");[110X will load the
+  [5XSemigroups[105X  package,  and  [10XLoadPackage("js");[110X will load the [5Xjson[105X package. If
+  the   abbreviation  cannot  be  uniquely  completed,  a  list  of  available
+  completions will be offered, and [2XLoadPackage[102X returns [9Xfail[109X. Thus the names of
+  [13Xall[113X installed packages can be shown by calling [10XLoadPackage("");[110X.[133X
+  
+  [33X[0;0YWhen  the optional argument string [3Xversion[103X is present, the package will only
+  be   loaded   in   a  version  number  equal  to  or  greater  than  [3Xversion[103X
+  (see [2XCompareVersionNumbers[102X ([14X76.3-9[114X)). If the first character of [3Xversion[103X is [10X=[110X
+  then only that version will be loaded.[133X
+  
+  [33X[0;0Y[2XLoadPackage[102X  will  return  [9Xtrue[109X if the package has been successfully loaded,
+  and  will  return [9Xfail[109X if the package could not be loaded. The latter may be
+  the  case  if  the  package is not installed, if necessary binaries have not
+  been  compiled,  or  if  the  version number of the available version is too
+  small. If the package cannot be loaded, [2XTestPackageAvailability[102X ([14X76.3-2[114X) can
+  be  used to find the reasons. Also, [2XDisplayPackageLoadingLog[102X ([14X76.2-6[114X) can be
+  used  to  find out more about the failure. To see the problems directly, one
+  can  change the verbosity using the user preference [10XInfoPackageLoadingLevel[110X,
+  see [2XInfoPackageLoading[102X ([14X76.2-6[114X) for details.[133X
+  
+  [33X[0;0YIf  the package [3Xname[103X has already been loaded in a version number equal to or
+  greater than [3Xversion[103X, [2XLoadPackage[102X returns [9Xtrue[109X without doing anything else.[133X
+  
+  [33X[0;0YIf  the  optional  argument [3Xbanner[103X is present then it must be either [9Xtrue[109X or
+  [9Xfalse[109X; in the latter case, the effect is that no package banner is printed.[133X
+  
+  [33X[0;0YAfter  a package has been loaded, all its code becomes available to use with
+  the rest of the [5XGAP[105X library.[133X
+  
+  
+  [1X76.2-2 [33X[0;0YAutomatic loading of [5XGAP[105X[101X[1X packages[133X[101X
+  
+  [33X[0;0YWhen [5XGAP[105X is started some packages are loaded automatically, and these belong
+  to  two  categories.  The first are those packages which are needed to start
+  [5XGAP[105X  (at  the  present time, the only such package is [5XGAPDoc[105X). Their list is
+  contained   in   [10XGAPInfo.Dependencies.NeededOtherPackages[110X.  The  second  are
+  packages which are loaded during [5XGAP[105X startup by default. The latter list may
+  be  obtained by calling [10XUserPreference("PackagesToLoad")[110X and is customisable
+  as described in Section [14X'Reference: Configuring User preferences'[114X.[133X
+  
+  [33X[0;0YWhile  [5XGAP[105X  will  not  start if any of the packages from the former group is
+  missing,  loading of the packages from the latter group may be suppressed by
+  using the [10X-A[110X command line option (see [14X3.1[114X).[133X
+  
+  [33X[0;0YIf  for  some  reason  you  don't  want certain packages to be automatically
+  loaded, [5XGAP[105X provides three levels for disabling autoloading.[133X
+  
+  [33X[0;0YThe  autoloading  of  specific packages can be overwritten [13Xfor the whole [5XGAP[105X
+  installation[113X  by  putting  a  file [11XNOAUTO[111X into a [11Xpkg[111X directory that contains
+  lines with the names of packages which should not be automatically loaded.[133X
+  
+  [33X[0;0YFurthermore,  [13Xindividual  users[113X  can  disable  the  autoloading  of specific
+  packages  by  putting  the  names  of  these  packages into the list that is
+  assigned  to  the  user  preference  [21XExcludeFromAutoload[121X, for example in the
+  user's [11Xgap.ini[111X file (see [14X3.2-1[114X).[133X
+  
+  [33X[0;0YUsing  the  [10X-A[110X  command  line  option when starting [5XGAP[105X (see [14X3.1[114X), automatic
+  loading of packages is switched off [13Xfor this [5XGAP[105X session[113X.[133X
+  
+  [33X[0;0YIn    any   of   the   above   three   cases,   the   packages   listed   in
+  [10XGAPInfo.Dependencies.NeededOtherPackages[110X are still loaded automatically, and
+  an error is signalled if any of these packages is unavailable.[133X
+  
+  [33X[0;0YSee  [2XSetPackagePath[102X  ([14X76.2-3[114X) for a way to force the loading of a prescribed
+  package    version.    See    also    [2XExtendRootDirectories[102X   ([14X76.2-4[114X)   and
+  [2XExtendPackageDirectories[102X   ([14X76.2-5[114X)   for   methods  of  adding  directories
+  containing packages [13Xafter[113X [5XGAP[105X has been started.[133X
+  
+  [1X76.2-3 SetPackagePath[101X
+  
+  [33X[1;0Y[29X[2XSetPackagePath[102X( [3Xpkgname[103X, [3Xpkgpath[103X ) [32X function[133X
+  
+  [33X[0;0YThis  function  can  be  used to force [5XGAP[105X to load a particular version of a
+  package, even though newer versions of the package are available.[133X
+  
+  [33X[0;0YLet  [3Xpkgname[103X  and  [3Xpkgpath[103X be strings denoting the name of a [5XGAP[105X package and
+  the path to a directory where a version of this package can be found (i. e.,
+  calling  [2XDirectory[102X  ([14X9.4-2[114X) with the argument [3Xpkgpath[103X will yield a directory
+  that contains the file [11XPackageInfo.g[111X of the package).[133X
+  
+  [33X[0;0YIf the package [3Xpkgname[103X is already loaded with an installation path different
+  from [3Xpkgpath[103X then [2XSetPackagePath[102X signals an error. If the package [3Xpkgname[103X is
+  not  yet  loaded  then [2XSetPackagePath[102X erases the information about available
+  versions  of the package [3Xpkgname[103X, and stores the record that is contained in
+  the  [11XPackageInfo.g[111X  file  at  [3Xpkgpath[103X  instead,  such  that only the version
+  installed at [3Xpkgpath[103X can be loaded with [2XLoadPackage[102X ([14X76.2-1[114X).[133X
+  
+  [33X[0;0YOne  should  call  [2XSetPackagePath[102X  immediately before loading the package in
+  question.   Note   that   calling   [2XExtendPackageDirectories[102X   ([14X76.2-5[114X)   or
+  [2XExtendRootDirectories[102X  ([14X76.2-4[114X)  may  change  the  available versions of the
+  package [3Xpkgname[103X.[133X
+  
+  [1X76.2-4 ExtendRootDirectories[101X
+  
+  [33X[1;0Y[29X[2XExtendRootDirectories[102X( [3Xpaths[103X ) [32X function[133X
+  
+  [33X[0;0YLet  [3Xpaths[103X  be  a  list  of  strings  that denote paths to intended [5XGAP[105X root
+  directories  (see  [14X9.2[114X). The function [2XExtendRootDirectories[102X adds these paths
+  to  the  global  list  [10XGAPInfo.RootPaths[110X  and  calls  the  initialization of
+  available  [5XGAP[105X  packages, such that later calls to [2XLoadPackage[102X ([14X76.2-1[114X) will
+  find  the  [5XGAP[105X  packages  that  are  contained  in [11Xpkg[111X subdirectories of the
+  directories given by [3Xpaths[103X.[133X
+  
+  [33X[0;0YNote  that the purpose of this function is to make [5XGAP[105X packages in the given
+  directories  available.  It  cannot  be  used to influence the start of [5XGAP[105X,
+  because the [5XGAP[105X library is loaded before [2XExtendRootDirectories[102X can be called
+  (and because [10XGAPInfo.RootPaths[110X is not used for reading the [5XGAP[105X library).[133X
+  
+  [1X76.2-5 ExtendPackageDirectories[101X
+  
+  [33X[1;0Y[29X[2XExtendPackageDirectories[102X( [3Xpaths[103X ) [32X function[133X
+  
+  [33X[0;0YLet  [3Xpaths[103X  be  a  list of strings that denote paths to intended [5XGAP[105X package
+  directories  (see  [14X9.3[114X).  The  function  [2XExtendPackageDirectories[102X adds these
+  paths   to   the   global  list  [10XGAPInfo.PackageDirectories[110X  and  calls  the
+  initialization   of  available  [5XGAP[105X  packages,  such  that  later  calls  to
+  [2XLoadPackage[102X  ([14X76.2-1[114X)  will  find the [5XGAP[105X packages that are contained in the
+  directories given by [3Xpaths[103X.[133X
+  
+  [1X76.2-6 DisplayPackageLoadingLog[101X
+  
+  [33X[1;0Y[29X[2XDisplayPackageLoadingLog[102X( [[3Xseverity[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XInfoPackageLoading[102X [32X info class[133X
+  [33X[1;0Y[29X[2XPACKAGE_ERROR[102X [32X global variable[133X
+  [33X[1;0Y[29X[2XPACKAGE_WARNING[102X [32X global variable[133X
+  [33X[1;0Y[29X[2XPACKAGE_INFO[102X [32X global variable[133X
+  [33X[1;0Y[29X[2XPACKAGE_DEBUG[102X [32X global variable[133X
+  [33X[1;0Y[29X[2XLogPackageLoadingMessage[102X( [3Xseverity[103X, [3Xmessage[103X[, [3Xname[103X] ) [32X function[133X
+  
+  [33X[0;0YWhenever  [5XGAP[105X  considers  loading a package, log messages are collected in a
+  global  list. The messages for the current [5XGAP[105X session can be displayed with
+  [2XDisplayPackageLoadingLog[102X.  To each message, a [21Xseverity[121X is assigned, which is
+  one  of  [2XPACKAGE_ERROR[102X,  [2XPACKAGE_WARNING[102X,  [2XPACKAGE_INFO[102X,  [2XPACKAGE_DEBUG[102X,  in
+  increasing  order.  The  function  [2XDisplayPackageLoadingLog[102X  shows  only the
+  messages  whose  severity  is  at most [3Xseverity[103X, the default for [3Xseverity[103X is
+  [2XPACKAGE_WARNING[102X.[133X
+  
+  [33X[0;0YThe intended meaning of the severity levels is as follows.[133X
+  
+  [8XPACKAGE_ERROR[108X
+        [33X[0;6Yshould  be  used  whenever  [5XGAP[105X  will run into an error during package
+        loading,  where  the  reason  of  the error shall be documented in the
+        global list.[133X
+  
+  [8XPACKAGE_WARNING[108X
+        [33X[0;6Yshould be used whenever [5XGAP[105X has detected a reason why a package cannot
+        be  loaded, and where the message describes how to solve this problem,
+        for example if a package binary is missing.[133X
+  
+  [8XPACKAGE_INFO[108X
+        [33X[0;6Yshould be used whenever [5XGAP[105X has detected a reason why a package cannot
+        be  loaded,  and  where it is not clear how to solve this problem, for
+        example  if  the  package  is  not  compatible  with  other  installed
+        packages.[133X
+  
+  [8XPACKAGE_DEBUG[108X
+        [33X[0;6Yshould  be  used  for  other  messages reporting what [5XGAP[105X does when it
+        loads  packages  (checking  dependencies,  reading  files,  etc.). One
+        purpose  is to record in which order packages have been considered for
+        loading or have actually been loaded.[133X
+  
+  [33X[0;0YThe  log  messages  are  created  either  by  the functions of [5XGAP[105X's package
+  loading  mechanism  or  in  the  code  of  your  package, for example in the
+  [10XAvailabilityTest[110X function of the package's [11XPackageInfo.g[111X file (see [14X76.3-15[114X),
+  using  [2XLogPackageLoadingMessage[102X. The arguments of this function are [3Xseverity[103X
+  (which  must  be  one  of the above severity levels), [3Xmessage[103X (which must be
+  either  a  string  or a list of strings), and optionally [3Xname[103X (which must be
+  the  name of the package to which the message belongs). The argument [3Xname[103X is
+  not   needed  if  the  function  is  called  from  a  call  of  a  package's
+  [10XAvailabilityTest[110X  function  (see  [14X76.3-15[114X)  or is called from a package file
+  that  is read from [11Xinit.g[111X or [11Xread.g[111X; in these cases, the name of the current
+  package (stored in the record [10XGAPInfo.PackageCurrent[110X) is taken. According to
+  the above list, the [3Xseverity[103X argument of [2XLogPackageLoadingMessage[102X calls in a
+  package's   [10XAvailabilityTest[110X   function   is   either   [2XPACKAGE_WARNING[102X   or
+  [2XPACKAGE_INFO[102X.[133X
+  
+  [33X[0;0YIf  you  want  to  see  the  log messages already during the package loading
+  process,  you  can set the level of the info class [2XInfoPackageLoading[102X to one
+  of  the  severity  values listed above; afterwards the messages with at most
+  this  severity  are shown immediately when they arise. In order to make this
+  work     already     for     autoloaded     packages,     you    can    call
+  [10XSetUserPreference("InfoPackageLoadingLevel",   [3Xlev[103X[10X);[110X   to  set  the  desired
+  severity  level  [3Xlev[103X. This can for example be done in your [11Xgap.ini[111X file, see
+  Section [14X3.2-1[114X.[133X
+  
+  
+  [1X76.3 [33X[0;0YFunctions for [5XGAP[105X[101X[1X Packages[133X[101X
+  
+  [33X[0;0YThe  following functions are mainly used in files contained in a package and
+  not by users of a package. They are needed to organise reading package files
+  into  [5XGAP[105X  in  the  right  order, performing maintenance tasks like building
+  documentation and running package tests, checking package dependencies, etc.
+  You  will  find  further  information  about  their  use in Section [14X76.4[114X and
+  subsequent sections.[133X
+  
+  [1X76.3-1 ReadPackage[101X
+  
+  [33X[1;0Y[29X[2XReadPackage[102X( [[3Xname[103X, ][3Xfile[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XRereadPackage[102X( [[3Xname[103X, ][3Xfile[103X ) [32X function[133X
+  
+  [33X[0;0YCalled  with  two  strings [3Xname[103X and [3Xfile[103X, [2XReadPackage[102X reads the file [3Xfile[103X of
+  the  [5XGAP[105X  package  [3Xname[103X,  where [3Xfile[103X is given as a path relative to the home
+  directory  of  [3Xname[103X. Note that [3Xfile[103X is read in the namespace of the package,
+  see Section [14X4.10[114X for details.[133X
+  
+  [33X[0;0YIf  only  one  argument  [3Xfile[103X  is  given,  this should be the path of a file
+  relative  to  the [11Xpkg[111X subdirectory of [5XGAP[105X root paths (see [14X9.2[114X). Note that in
+  this  case,  the  package  name  is assumed to be equal to the first part of
+  [3Xfile[103X, [13Xso the one argument form is not recommended[113X.[133X
+  
+  [33X[0;0YThe  absolute  path is determined as follows. If the package in question has
+  already  been loaded then the file in the directory of the loaded version is
+  read.  If  the  package  is  available but not yet loaded then the directory
+  given  by  [2XTestPackageAvailability[102X  ([14X76.3-2[114X)  is  used,  without  prescribed
+  version  number.  (Note that the [2XReadPackage[102X call does [13Xnot[113X force the package
+  to be loaded.)[133X
+  
+  [33X[0;0YIf  the  file  is  readable  then  [9Xtrue[109X  is returned, otherwise a warning is
+  displayed (for [2XReadPackage[102X) or [9Xfalse[109X is returned (for [2XRereadPackage[102X).[133X
+  
+  [33X[0;0YEach  of  [3Xname[103X  and  [3Xfile[103X  should  be  a  string.  The [3Xname[103X argument is case
+  insensitive.[133X
+  
+  [33X[0;0Y[2XRereadPackage[102X  does  the  same  as  [2XReadPackage[102X,  except that also read-only
+  global variables are overwritten (cf. [2XReread[102X ([14X9.8-10[114X)).[133X
+  
+  [1X76.3-2 TestPackageAvailability[101X
+  
+  [33X[1;0Y[29X[2XTestPackageAvailability[102X( [3Xname[103X[, [3Xversion[103X][, [3Xcheckall[103X] ) [32X function[133X
+  
+  [33X[0;0YFor  strings  [3Xname[103X  and [3Xversion[103X, this function tests whether the [5XGAP[105X package
+  [3Xname[103X  is  available  for  loading  in a version that is at least [3Xversion[103X, or
+  equal   to   [3Xversion[103X   if   the   first  character  of  [3Xversion[103X  is  [10X=[110X  (see
+  [2XCompareVersionNumbers[102X ([14X76.3-9[114X) for further details about version numbers).[133X
+  
+  [33X[0;0YThe  result  is  [9Xtrue[109X  if  the  package is already loaded, [9Xfail[109X if it is not
+  available,  and  the  string  denoting  the  [5XGAP[105X root path where the package
+  resides  if  it  is  available,  but  not yet loaded. So the package [3Xname[103X is
+  available if the result of [2XTestPackageAvailability[102X is not equal to [9Xfail[109X.[133X
+  
+  [33X[0;0YIf the optional argument [3Xcheckall[103X is [9Xtrue[109X then all dependencies are checked,
+  even if some have turned out to be not satisfied. This is useful when one is
+  interested  in  the  reasons  why the package [3Xname[103X cannot be loaded. In this
+  situation,     calling     first     [2XTestPackageAvailability[102X     and    then
+  [2XDisplayPackageLoadingLog[102X  ([14X76.2-6[114X)  with argument [2XPACKAGE_INFO[102X ([14X76.2-6[114X) will
+  give an overview of these reasons.[133X
+  
+  [33X[0;0YYou  should  [13Xnot[113X  call  [2XTestPackageAvailability[102X  in  the  test function of a
+  package  (the  value  of the component [10XAvailabilityTest[110X in the [11XPackageInfo.g[111X
+  file  of  the  package,  see [14X76.3-15[114X), because [2XTestPackageAvailability[102X calls
+  this test function.[133X
+  
+  [33X[0;0YThe argument [3Xname[103X is case insensitive.[133X
+  
+  [1X76.3-3 IsPackageLoaded[101X
+  
+  [33X[1;0Y[29X[2XIsPackageLoaded[102X( [3Xname[103X[, [3Xversion[103X] ) [32X function[133X
+  
+  [33X[0;0YFor  strings  [3Xname[103X  and [3Xversion[103X, this function tests whether the [5XGAP[105X package
+  [3Xname[103X  is  already  loaded in a version that is at least [3Xversion[103X, or equal to
+  [3Xversion[103X  if  the  first character of [3Xversion[103X is [10X=[110X (see [2XCompareVersionNumbers[102X
+  ([14X76.3-9[114X) for further details about version numbers).[133X
+  
+  [33X[0;0YThe result is [9Xtrue[109X if the package is already loaded, [9Xfalse[109X otherwise.[133X
+  
+  [1X76.3-4 IsPackageMarkedForLoading[101X
+  
+  [33X[1;0Y[29X[2XIsPackageMarkedForLoading[102X( [3Xname[103X, [3Xversion[103X ) [32X function[133X
+  
+  [33X[0;0YThis function can be used in the code of a package [22XA[122X for testing whether the
+  package  [3Xname[103X  in  version  [3Xversion[103X  will  be  loaded  after the [2XLoadPackage[102X
+  ([14X76.2-1[114X)  call  for  the  package  [22XA[122X  has been executed. This means that the
+  package  [3Xname[103X  had  been loaded before, or has been (directly or indirectly)
+  requested  as a needed or suggested package of the package [22XA[122X or of a package
+  whose loading requested that [22XA[122X was loaded.[133X
+  
+  [1X76.3-5 TestPackage[101X
+  
+  [33X[1;0Y[29X[2XTestPackage[102X( [3Xpkgname[103X ) [32X function[133X
+  
+  [33X[0;0YIt  is  recommended  that  a  [5XGAP[105X  package  specifies a standard test in its
+  [11XPackageInfo.g[111X  file.  If [3Xpkgname[103X is a string with the name of a [5XGAP[105X package,
+  then [10XTestPackage(pkgname)[110X will check if this package is loadable and has the
+  standard test, and will run this test in the current [5XGAP[105X session.[133X
+  
+  [33X[0;0YThe  output  of  the test depends on the particular package, and it also may
+  depend  on  the  current  [5XGAP[105X  session (loaded packages, state of the random
+  sources, defined global variables etc.).[133X
+  
+  [1X76.3-6 InstalledPackageVersion[101X
+  
+  [33X[1;0Y[29X[2XInstalledPackageVersion[102X( [3Xname[103X ) [32X function[133X
+  
+  [33X[0;0YIf   the   [5XGAP[105X   package  with  name  [3Xname[103X  has  already  been  loaded  then
+  [2XInstalledPackageVersion[102X  returns  the  string denoting the version number of
+  this  version  of  the  package. If the package is available but has not yet
+  been  loaded  then the version number string for that version of the package
+  that  currently  would  be  loaded. (Note that loading [13Xanother[113X package might
+  force  loading  another  version  of  the  package  [3Xname[103X,  so  the result of
+  [2XInstalledPackageVersion[102X will be different afterwards.) If the package is not
+  available then [9Xfail[109X is returned.[133X
+  
+  [33X[0;0YThe argument [3Xname[103X is case insensitive.[133X
+  
+  [1X76.3-7 DirectoriesPackageLibrary[101X
+  
+  [33X[1;0Y[29X[2XDirectoriesPackageLibrary[102X( [3Xname[103X[, [3Xpath[103X] ) [32X function[133X
+  
+  [33X[0;0Ytakes  the  string [3Xname[103X, a name of a [5XGAP[105X package, and returns a list that is
+  either  empty  or contains one directory object [10Xdir[110X that describes the place
+  where the library functions of this [5XGAP[105X package should be located.[133X
+  
+  [33X[0;0YIn  the  latter  case, [10Xdir[110X is the [3Xpath[103X subdirectory of a directory where the
+  package  [3Xname[103X  is  installed, where the default for [3Xpath[103X is [10X"lib"[110X, and where
+  the  package directory belongs to the version of [3Xname[103X that is already loaded
+  or  is  currently going to be loaded or would be the first version [5XGAP[105X would
+  try  to  load  if no other version is explicitly prescribed. (If the package
+  [3Xname[103X  is  not yet loaded then we cannot guarantee that the directory belongs
+  to a version that really can be loaded.)[133X
+  
+  [33X[0;0YNote   that   [2XDirectoriesPackageLibrary[102X  is  likely  to  be  called  in  the
+  [10XAvailabilityTest[110X function in the package's [11XPackageInfo.g[111X file (see [14X76.3-15[114X).[133X
+  
+  [33X[0;0YAs  an  example,  the  following  returns a directory object for the library
+  functions of the [5XGAP[105X package [5XExample[105X:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDirectoriesPackageLibrary( "Example", "gap" );[127X[104X
+    [4X[28X[ dir("/home/werner/gap/4.0/pkg/example/gap/") ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YObserve  that  we  needed  the  second  argument [10X"gap"[110X here, since [5XExample[105X's
+  library functions are in the subdirectory [11Xgap[111X rather than [11Xlib[111X.[133X
+  
+  [33X[0;0YIn  order  to  find  a  subdirectory  deeper  than  one  level  in a package
+  directory, the second argument is again necessary whether or not the desired
+  subdirectory  relative  to  the  package's  directory  begins  with [11Xlib[111X. The
+  directories in [3Xpath[103X should be separated by [10X/[110X (even on systems, like Windows,
+  which  use  [10X\[110X  as  the directory separator). For example, suppose there is a
+  package  [10Xsomepackage[110X  with a subdirectory [11Xm11[111X in the directory [11Xdata[111X, then we
+  might expect the following:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDirectoriesPackageLibrary( "somepackage", "data/m11" );[127X[104X
+    [4X[28X[ dir("/home/werner/gap/4.0/pkg/somepackage/data/m11") ][128X[104X
+  [4X[32X[104X
+  
+  [1X76.3-8 DirectoriesPackagePrograms[101X
+  
+  [33X[1;0Y[29X[2XDirectoriesPackagePrograms[102X( [3Xname[103X ) [32X function[133X
+  
+  [33X[0;0Yreturns  a  list  that  is either empty or contains one directory object [10Xdir[110X
+  that  describes  the  place  where external binaries of the [5XGAP[105X package [3Xname[103X
+  should be located.[133X
+  
+  [33X[0;0YIn  the latter case, [10Xdir[110X is the [10Xbin/[110X[3Xarchitecture[103X subdirectory of a directory
+  where  the package [3Xname[103X is installed, where [3Xarchitecture[103X is the architecture
+  on    which   [5XGAP[105X   has   been   compiled   (this   can   be   accessed   as
+  [10XGAPInfo.Architecture[110X,  see [2XGAPInfo[102X ([14X3.5-1[114X)), and where the package directory
+  belongs  to the version of [3Xname[103X that is already loaded or is currently going
+  to be loaded or would be the first version [5XGAP[105X would try to load if no other
+  version  is  explicitly  prescribed.  (If the package [3Xname[103X is not yet loaded
+  then we cannot guarantee that the directory belongs to a version that really
+  can be loaded.)[133X
+  
+  [33X[0;0YNote   that  [2XDirectoriesPackagePrograms[102X  is  likely  to  be  called  in  the
+  [10XAvailabilityTest[110X function in the package's [11XPackageInfo.g[111X file (see [14X76.3-15[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDirectoriesPackagePrograms( "nq" );[127X[104X
+    [4X[28X[ dir("/home/gap/4.0/pkg/nq/bin/x86_64-pc-linux-gnu-default64-kv3/") ][128X[104X
+  [4X[32X[104X
+  
+  [1X76.3-9 CompareVersionNumbers[101X
+  
+  [33X[1;0Y[29X[2XCompareVersionNumbers[102X( [3Xsupplied[103X, [3Xrequired[103X[, [3X"equal"[103X] ) [32X function[133X
+  
+  [33X[0;0YA  version  number is a string which contains nonnegative integers separated
+  by  non-numeric  characters.  Examples  of  valid  version  numbers  are for
+  example:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X"1.0"   "3.141.59"  "2-7-8.3" "5 release 2 patchlevel 666"[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[2XCompareVersionNumbers[102X  compares  two version numbers, given as strings. They
+  are  split at non-digit characters, the resulting integer lists are compared
+  lexicographically.  The  routine tests whether [3Xsupplied[103X is at least as large
+  as  [3Xrequired[103X, and returns [9Xtrue[109X or [9Xfalse[109X accordingly. A version number ending
+  in [10Xdev[110X is considered to be infinite.[133X
+  
+  [1X76.3-10 DeclareAutoreadableVariables[101X
+  
+  [33X[1;0Y[29X[2XDeclareAutoreadableVariables[102X( [3Xpkgname[103X, [3Xfilename[103X, [3Xvarlist[103X ) [32X function[133X
+  
+  [33X[0;0YLet  [3Xpkgname[103X  be  the  name of a package, let [3Xfilename[103X be the name of a file
+  relative to the home directory of this package, and let [3Xvarlist[103X be a list of
+  strings that are the names of global variables which get bound when the file
+  is  read.  [2XDeclareAutoreadableVariables[102X  notifies  the names in [3Xvarlist[103X such
+  that  the first attempt to access one of the variables causes the file to be
+  read.[133X
+  
+  
+  [1X76.3-11 [33X[0;0YKernel modules in [5XGAP[105X[101X[1X packages[133X[101X
+  
+  [33X[0;0YIf  the  package  has a kernel module, then it can be compiled using the [5Xgac[105X
+  script.  A kernel module is implemented in C and follows certain conventions
+  to comply with the [5XGAP[105X kernel interface, which we plan to document later. In
+  the  meantime,  we advice to get in touch with [5XGAP[105X developers if you plan to
+  develop such a package.[133X
+  
+  [33X[0;0YTo  use the [5Xgac[105X script to produce dynamically loadable modules, call it with
+  the [10X-d[110X option, for example:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X$ gap4/gac -d test.c[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis  will  produce  a  file [11Xtest.so[111X, which then can be loaded into [5XGAP[105X with
+  [2XLoadKernelExtension[102X  ([14X76.3-13[114X).  If  the  kernel  module is required for the
+  package  to  work,  then  its [11XPackageInfo.g[111X should define a [10XAvailabilityTest[110X
+  which calls [2XIsKernelExtensionAvailable[102X ([14X76.3-12[114X), see [14X76.15-2[114X for details.[133X
+  
+  [33X[0;0YNote that before [5XGAP[105X 4.12, [2XLoadDynamicModule[102X ([14X76.3-14[114X) was used for this. It
+  is  still  available  and in fact [2XLoadKernelExtension[102X ([14X76.3-13[114X) call it; but
+  the  latter  provides  a  higher level abstraction and is more convenient to
+  use.[133X
+  
+  [1X76.3-12 IsKernelExtensionAvailable[101X
+  
+  [33X[1;0Y[29X[2XIsKernelExtensionAvailable[102X( [3Xpkgname[103X[, [3Xmodname[103X] ) [32X function[133X
+  
+  [33X[0;0YFor  use  by  packages:  Search  for a loadable kernel module inside package
+  [3Xpkgname[103X  with  name  [3Xmodname[103X  and  return [9Xtrue[109X if found, otherwise [9Xfalse[109X. If
+  [3Xmodname[103X  is  omitted,  then [3Xpkgname[103X is used instead. Note that package names
+  are case insensitive, but [3Xmodname[103X is not.[133X
+  
+  [33X[0;0YThis  function  first  appeared  in  GAP 4.12. It is typically called in the
+  [10XAvailabilityTest[110X function of a package (see [14X76.15-2[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsKernelExtensionAvailable("myPackageWithKernelExtension");[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X76.3-13 LoadKernelExtension[101X
+  
+  [33X[1;0Y[29X[2XLoadKernelExtension[102X( [3Xpkgname[103X[, [3Xmodname[103X] ) [32X function[133X
+  
+  [33X[0;0YFor  use  by  packages:  Search  for a loadable kernel module inside package
+  [3Xpkgname[103X with name [3Xmodname[103X, and load it if found. If [3Xmodname[103X is omitted, then
+  [3Xpkgname[103X  is  used instead. Note that package names are case insensitive, but
+  [3Xmodname[103X is not.[133X
+  
+  [33X[0;0YThis  function  first  appeared  in  GAP 4.12. It is typically called in the
+  [11Xinit.g[111X file of a package.[133X
+  
+  [33X[0;0YPreviously, packages with a kernel module typically used code like this:[133X
+  
+  [4X[32X[104X
+    [4Xpath := Filename(DirectoriesPackagePrograms("SomePackage"), "SomePackage.so");[104X
+    [4Xif path <> fail then[104X
+    [4X  LoadDynamicModule(path);[104X
+    [4Xfi;[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThat  can now be replaced by the following, which also produces more helpful
+  error messages for the user:[133X
+  
+  [4X[32X[104X
+    [4XLoadKernelExtension("SomePackage");[104X
+  [4X[32X[104X
+  
+  [33X[0;0YFor packages where the name of the kernel extension is not identical to that
+  of  the  package,  you  can  either  rename  the  kernel extension to have a
+  matching  name  (recommended  if  you only have a single kernel extension in
+  your  package,  which  is how we recommend to set up things anyway), or else
+  use the two argument version:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XLoadKernelExtension("SomePackage", "kext"); # this will look for kext.so[128X[104X
+  [4X[32X[104X
+  
+  [1X76.3-14 LoadDynamicModule[101X
+  
+  [33X[1;0Y[29X[2XLoadDynamicModule[102X( [3Xfilename[103X ) [32X function[133X
+  
+  [33X[0;0YTo load a compiled file, the command [2XLoadDynamicModule[102X is used. This command
+  loads [3Xfilename[103X as module.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLoadDynamicModule("./test.so");[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YOn  some  operating  systems,  once  you have loaded a dynamic module with a
+  certain  filename,  loading  another  with  the  same  filename will have no
+  effect, even if the file on disk has changed.[133X
+  
+  
+  [1X76.3-15 [33X[0;0YThe PackageInfo.g File[133X[101X
+  
+  [33X[0;0YEach  package  has  the  file  [11XPackageInfo.g[111X which contains meta-information
+  about  the  package  (package  name,  version, author(s), relations to other
+  packages,  homepage,  download  archives,  etc.).  This  file is used by the
+  package  loading mechanism, by the [5XGAP[105X webpages about packages, and also for
+  the redistribution of a package with [5XGAP[105X.[133X
+  
+  [33X[0;0YA  [11XPackageInfo.g[111X  file  contains a call to the function [10XSetPackageInfo[110X, with
+  argument a record. The following components of this record are [13Xmandatory[113X.[133X
+  
+  [8X[10XPackageName[110X[8X[108X
+        [33X[0;6Ya nonempty string denoting the name of the package,[133X
+  
+  [8X[10XSubtitle[110X[8X[108X
+        [33X[0;6Ya  string  that  describes  the  package's  contents, may be used by a
+        default banner or on a web page, should fit on one line,[133X
+  
+  [8X[10XVersion[110X[8X[108X
+        [33X[0;6Ya  nonempty  string  that  does not start with [10X=[110X, denoting the version
+        number of the package (see Section [14X76.18[114X),[133X
+  
+  [8X[10XDate[110X[8X[108X
+        [33X[0;6Ya  string  of  the  form  [10Xyyyy-mm-dd[110X  denoting the release date of the
+        current  version  of  the  package  (a  date  since  1999,  when [5XGAP[105X 4
+        appeared),[133X
+  
+  [8X[10XLicense[110X[8X[108X
+        [33X[0;6Ya nonempty string containing an SPDX ID (see Section [14X76.22[114X),[133X
+  
+  [8X[10XArchiveURL[110X[8X[108X
+        [33X[0;6Ya  string  started  with [10Xhttp://[110X, [10Xhttps://[110X, or [10Xftp://[110X, denoting an URL
+        from  where the current package archive can be downloaded, but without
+        the suffix describing the format (see the [10XArchiveFormats[110X component),[133X
+  
+  [8X[10XArchiveFormats[110X[8X[108X
+        [33X[0;6Ya  string  that  lists the supported formats (among [10X.tar.gz[110X, [10X.tar.bz2[110X,
+        [10X-win.zip[110X), separated by whitespace or commas,[133X
+  
+  [8X[10XREADME_URL[110X[8X[108X
+        [33X[0;6Ya  string  started  with [10Xhttp://[110X, [10Xhttps://[110X, or [10Xftp://[110X, denoting an URL
+        from  where the current [11XREADME.md[111X or [11XREADME[111X file of the package can be
+        downloaded,[133X
+  
+  [8X[10XPackageInfoURL[110X[8X[108X
+        [33X[0;6Ya  string  started  with [10Xhttp://[110X, [10Xhttps://[110X, or [10Xftp://[110X, denoting an URL
+        from  where  the  current  [11XPackageInfo.g[111X  file  of  the package can be
+        downloaded,[133X
+  
+  [8X[10XAbstractHTML[110X[8X[108X
+        [33X[0;6Ya string that describes the package's contents in a few lines, in HTML
+        format;  this  text will be displayed on the package overview web page
+        of [5XGAP[105X,[133X
+  
+  [8X[10XPackageWWWHome[110X[8X[108X
+        [33X[0;6Ya  string  started  with  [10Xhttp://[110X,  [10Xhttps://[110X,  or [10Xftp://[110X, denoting the
+        address of the package's home page,[133X
+  
+  [8X[10XPackageDoc[110X[8X[108X
+        [33X[0;6Ya  record  or  a  list of records; each record describes a book of the
+        package documentation, with the following components[133X
+  
+        [8X[10XBookName[110X[8X[108X
+              [33X[0;12Ya string, the name of the book,[133X
+  
+        [8X[10XLongTitle[110X[8X[108X
+              [33X[0;12Ya string shown by [10X?books[110X,[133X
+  
+        [8X[10XSixFile[110X[8X[108X
+              [33X[0;12Ya  string denoting a relative path to the [11Xmanual.six[111X file of the
+              book,[133X
+  
+        [8X[10XHTMLStart[110X[8X[108X
+              [33X[0;12Ya  string denoting a relative path to the start file of the HTML
+              version of the book,[133X
+  
+        [8X[10XPDFFile[110X[8X[108X
+              [33X[0;12Ya string denoting a relative path to the [11X.pdf[111X file of the book,[133X
+  
+        [8X[10XArchiveURLSubset[110X[8X[108X
+              [33X[0;12Ya  list  of  strings  denoting relative paths to those files and
+              directories  from  the  archive  that  are needed for the online
+              manual; typically, [10X[ "doc" ][110X suffices,[133X
+  
+  [33X[0;0YThe following components of the record are [13Xoptional[113X.[133X
+  
+  [8X[10XTextFiles[110X[8X or [10XBinaryFiles[110X[8X or [10XTextBinaryFilesPatterns[110X[8X[108X
+        [33X[0;6Ya  list  of  strings  that specify which files in the archive are text
+        files  or  binary  files  (at  most one of the three components can be
+        available,  each  string  in [10XTextBinaryFilesPatterns[110X must start with [10XT[110X
+        for text files and by [10XB[110X for binary files),[133X
+  
+  [8X[10XPersons[110X[8X[108X
+        [33X[0;6Ya list of records, each with the mandatory components[133X
+  
+        [8X[10XLastName[110X[8X[108X
+              [33X[0;12Ya string,[133X
+  
+        [8Xat least one of [10XIsAuthor[110X[8X or [10XIsMaintainer[110X[8X[108X
+              [33X[0;12Y[9Xtrue[109X or [9Xfalse[109X,[133X
+  
+        [33X[0;6Yand optional components[133X
+  
+        [8X[10XFirstNames[110X[8X[108X
+              [33X[0;12Ya string (was mandatory before [5XGAP[105X 4.14),[133X
+  
+        [8X[10XPlace[110X[8X[108X
+              [33X[0;12Ya string,[133X
+  
+        [8X[10XInstitution[110X[8X[108X
+              [33X[0;12Ya string,[133X
+  
+        [33X[0;6YIf  the  [10XIsMaintainer[110X  value  is  [9Xtrue[109X  then also one of the following
+        components is mandatory, otherwise these components are optional.[133X
+  
+        [8X[10XEmail[110X[8X[108X
+              [33X[0;12Ya string,[133X
+  
+        [8X[10XWWWHome[110X[8X[108X
+              [33X[0;12Ya string denoting an URL, or[133X
+  
+        [8X[10XPostalAddress[110X[8X[108X
+              [33X[0;12Ya string.[133X
+  
+  [8X[10XSourceRepository[110X[8X[108X
+        [33X[0;6Ya  record  with  the components [10XType[110X (the version control system, e.g.
+        [10X"git"[110X or [10X"hg"[110X) and [10XURL[110X (the URL of the repository), both strings,[133X
+  
+  [8X[10XIssueTrackerURL[110X[8X[108X
+        [33X[0;6Ya string started with [10Xhttp://[110X, [10Xhttps://[110X, or [10Xftp://[110X,[133X
+  
+  [8X[10XSupportEmail[110X[8X[108X
+        [33X[0;6Ya string denoting an e-mail address,[133X
+  
+  [8X[10XDependencies[110X[8X[108X
+        [33X[0;6Ya  record  describing  the  dependencies  of  the package (see Section
+        [14X76.11[114X), with the following optional components[133X
+  
+        [8X[10XGAP[110X[8X[108X
+              [33X[0;12Ya string denoting the needed version of [5XGAP[105X,[133X
+  
+        [8X[10XNeededOtherPackages[110X[8X[108X
+              [33X[0;12Ya list of pairs [10X[ pkgname, pkgversion ][110X of strings, denoting the
+              other  packages  which  must be available if the current package
+              shall be loadable,[133X
+  
+        [8X[10XSuggestedOtherPackages[110X[8X[108X
+              [33X[0;12Ya list of pairs [10X[ pkgname, pkgversion ][110X of strings, denoting the
+              other  packages  which shall be loaded together with the current
+              package if they are available,[133X
+  
+        [8X[10XExternalConditions[110X[8X[108X
+              [33X[0;12Ya list of strings or of pairs [10X[ text, URL ][110X of strings, denoting
+              conditions on external programs,[133X
+  
+  [8X[10XAvailabilityTest[110X[8X[108X
+        [33X[0;6Ya  function  with  no  arguments  that  returns [9Xtrue[109X if the package is
+        available,  and  [9Xfalse[109X  otherwise  (can  be  [2XReturnTrue[102X ([14X5.4-1[114X) if the
+        package consists only of [5XGAP[105X code; this is also the default value),[133X
+  
+  [8X[10XBannerString[110X[8X or [10XBannerFunction[110X[8X[108X
+        [33X[0;6Ya string or a function, respectively, that is used to create a package
+        banner different from the default banner (see Section [14X76.17[114X),[133X
+  
+  [8X[10XTestFile[110X[8X[108X
+        [33X[0;6Ya  string  denoting  a relative path to a readable file which contains
+        tests of the package's functionality (see Section [14X76.19[114X),[133X
+  
+  [8X[10XKeywords[110X[8X[108X
+        [33X[0;6Ya  list  of  strings  that  are  keywords  related to the topic of the
+        package,[133X
+  
+  [8X[10XExtensions[110X[8X[108X
+        [33X[0;6Ya  list of records that describe conditional extensions of the package
+        (see Section [14X76.12[114X).[133X
+  
+  [33X[0;0YOther  components  of  the  record can be supported; for example, [10XAutoDoc[110X is
+  used by the [5XAutoDoc[105X package if applicable.[133X
+  
+  [1X76.3-16 ValidatePackageInfo[101X
+  
+  [33X[1;0Y[29X[2XValidatePackageInfo[102X( [3Xinfo[103X ) [32X function[133X
+  
+  [33X[0;0YThis  function  is  intended to support package authors who create or modify
+  [11XPackageInfo.g[111X  files. (It is [13Xnot[113X called when these files are read during the
+  startup of [5XGAP[105X or when packages are actually loaded.)[133X
+  
+  [33X[0;0YThe argument [3Xinfo[103X must be either a record as is contained in a [11XPackageInfo.g[111X
+  file or a string which describes the path to such a file. The result is [9Xtrue[109X
+  if the record or the contents of the file, respectively, has correct format,
+  and  [9Xfalse[109X  otherwise;  in  the  latter case information about the incorrect
+  components  is  printed.  These  diagnostic  messages  can  be suppressed by
+  setting the global option [10Xquiet[110X to [9Xtrue[109X.[133X
+  
+  [33X[0;0YNote that the components used for package loading are checked as well as the
+  components  that  are  needed for composing the package overview web page or
+  for updating the package archives.[133X
+  
+  [33X[0;0YIf  [3Xinfo[103X  is  a  string then [2XValidatePackageInfo[102X checks additionally whether
+  those  package  files exist that are mentioned in the file [11Xinfo[111X, for example
+  the [11Xmanual.six[111X file of the package documentation.[133X
+  
+  [1X76.3-17 ShowPackageVariables[101X
+  
+  [33X[1;0Y[29X[2XShowPackageVariables[102X( [3Xpkgname[103X[, [3Xversion[103X][, [3Xarec[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XPackageVariablesInfo[102X( [3Xpkgname[103X, [3Xversion[103X ) [32X function[133X
+  
+  [33X[0;0YLet  [3Xpkgname[103X  be  the  name  of  a  [5XGAP[105X  package.  If the package [3Xpkgname[103X is
+  available  but  not  yet  loaded  then [2XShowPackageVariables[102X prints a list of
+  global variables that become bound and of methods that become installed when
+  the package is loaded. (For that, [5XGAP[105X actually loads the package.)[133X
+  
+  [33X[0;0YIf  a  version  number  [3Xversion[103X  is  given  (see Section [14X'Reference: Version
+  Numbers'[114X) then this version of the package is considered.[133X
+  
+  [33X[0;0YAn  error  message  is  printed if (the given version of) the package is not
+  available or already loaded.[133X
+  
+  [33X[0;0YInformation  is printed about new and redeclared global variables, and about
+  names  of  global  variables  introduced  in  the  package  that differ from
+  existing  globals  only  by  case;  note  that  the  [5XGAP[105X help system is case
+  insensitive,  so it is difficult to document identifiers that differ only by
+  case.[133X
+  
+  [33X[0;0YInfo lines for undocumented variables are marked with an asterisk [10X*[110X.[133X
+  
+  [33X[0;0YThe  following entries are omitted from the list: default setter methods for
+  attributes  and properties that are declared in the package, and [10XSet[3Xattr[103X[10X[110X and
+  [10XHas[3Xattr[103X[10X[110X type variables where [3Xattr[103X is an attribute or property.[133X
+  
+  [33X[0;0YThe  output  can be customized using the optional record [3Xarec[103X, the following
+  components of this record are supported.[133X
+  
+  [8X[10Xshow[110X[8X[108X
+        [33X[0;6Ya  list  of strings describing those kinds of variables which shall be
+        shown,  such as [10X"new global functions"[110X; the default are all kinds that
+        appear in the package,[133X
+  
+  [8X[10XshowDocumented[110X[8X[108X
+        [33X[0;6Y[9Xtrue[109X  (the  default) if documented variables shall be shown, and [9Xfalse[109X
+        otherwise,[133X
+  
+  [8X[10XshowUndocumented[110X[8X[108X
+        [33X[0;6Y[9Xtrue[109X (the default) if undocumented variables shall be shown, and [9Xfalse[109X
+        otherwise,[133X
+  
+  [8X[10XshowPrivate[110X[8X[108X
+        [33X[0;6Y[9Xtrue[109X  (the  default)  if  variables from the package's name space (see
+        Section [14X4.10[114X) shall be shown, and [9Xfalse[109X otherwise,[133X
+  
+  [8X[10XDisplay[110X[8X[108X
+        [33X[0;6Ya function that takes a string and shows it on the screen; the default
+        is [2XPrint[102X ([14X6.3-4[114X), another useful value is [2XPager[102X ([14X2.4-1[114X).[133X
+  
+  [33X[0;0YAn   interactive   variant   of   [2XShowPackageVariables[102X   is   the   function
+  [2XBrowsePackageVariables[102X  ([14XBrowse: BrowsePackageVariables[114X) that is provided by
+  the [5XGAP[105X package [5XBrowse[105X. For this function, it is not sensible to assume that
+  the  package [3Xpkgname[103X is not yet loaded before the function call, because one
+  might be interested in packages that must be loaded before [5XBrowse[105X itself can
+  be   loaded.   The   solution   is   that   [2XBrowsePackageVariables[102X  ([14XBrowse:
+  BrowsePackageVariables[114X)  takes  the  output  of  [2XPackageVariablesInfo[102X as its
+  second   argument.   The  function  [2XPackageVariablesInfo[102X  is  used  by  both
+  [2XShowPackageVariables[102X        and        [2XBrowsePackageVariables[102X       ([14XBrowse:
+  BrowsePackageVariables[114X)  for collecting the information about the package in
+  question, and can be called before the package [5XBrowse[105X is loaded.[133X
+  
+  [1X76.3-18 BibEntry[101X
+  
+  [33X[1;0Y[29X[2XBibEntry[102X( [3Xpkgname[103X[, [3Xkey[103X] ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10Ya  string in BibXMLext format (see [14X'GAPDoc: The BibXMLext Format'[114X)
+            that can be used for referencing the [5XGAP[105X system or a [5XGAP[105X package.[133X
+  
+  [33X[0;0YIf  the  argument [3Xpkgname[103X is the string [10X"GAP"[110X, the function returns an entry
+  for the current version of [5XGAP[105X.[133X
+  
+  [33X[0;0YOtherwise, if a string [3Xpkgname[103X is given, which is the name of a [5XGAP[105X package,
+  an  entry  for  this  package  is  returned; this entry is computed from the
+  [11XPackageInfo.g[111X   file   of   [13Xthe   current   version[113X   of  the  package,  see
+  [2XInstalledPackageVersion[102X  ([14X76.3-6[114X).  If  no  package  with  name  [3Xpkgname[103X  is
+  installed then the empty string is returned.[133X
+  
+  [33X[0;0YA  string  for  [13Xa  different  version[113X of [5XGAP[105X or a package can be computed by
+  entering, as the argument [3Xpkgname[103X, the desired record from the [11XPackageInfo.g[111X
+  file. (One can access these records using the function [10XPackageInfo[110X.)[133X
+  
+  [33X[0;0YIn  each of the above cases, an optional argument [3Xkey[103X can be given, a string
+  which is then used as the key of the BibTeX entry instead of the default key
+  that is generated from the system/package name and the version number.[133X
+  
+  [33X[0;0Y[2XBibEntry[102X  requires  the  functions [2XFormatParagraph[102X ([14XGAPDoc: FormatParagraph[114X)
+  and [2XNormalizedNameAndKey[102X ([14XGAPDoc: NormalizedNameAndKey[114X) from the [5XGAP[105X package
+  [5XGAPDoc[105X.[133X
+  
+  [33X[0;0YThe   functions   [2XParseBibXMLextString[102X  ([14XGAPDoc:  ParseBibXMLextString[114X)  and
+  [2XStringBibXMLEntry[102X  ([14XGAPDoc:  StringBibXMLEntry[114X)  can  be  used to create for
+  example a BibTeX entry from the return value, as follows.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xbib:= BibEntry( "GAP", "GAP4.5" );;[127X[104X
+    [4X[25Xgap>[125X [27XPrint( bib, "\n" );[127X[104X
+    [4X[28X<entry id="GAP4.5"><misc>[128X[104X
+    [4X[28X  <title><C>GAP</C> &ndash; <C>G</C>roups, <C>A</C>lgorithms,[128X[104X
+    [4X[28X         and <C>P</C>rogramming, <C>V</C>ersion 4.5.1</title>[128X[104X
+    [4X[28X  <howpublished><URL>https://www.gap-system.org</URL></howpublished>[128X[104X
+    [4X[28X  <key>GAP</key>[128X[104X
+    [4X[28X  <keywords>groups; *; gap; manual</keywords>[128X[104X
+    [4X[28X  <other type="organization">The GAP <C>G</C>roup</other>[128X[104X
+    [4X[28X</misc></entry>[128X[104X
+    [4X[25Xgap>[125X [27Xparse:= ParseBibXMLextString( bib );;[127X[104X
+    [4X[25Xgap>[125X [27XPrint( StringBibXMLEntry( parse.entries[1], "BibTeX" ) );[127X[104X
+    [4X[28X@misc{ GAP4.5,[128X[104X
+    [4X[28X  title =            {{GAP}   {\textendash}   {G}roups,   {A}lgorithms,  and[128X[104X
+    [4X[28X                      {P}rogramming, {V}ersion 4.5.1},[128X[104X
+    [4X[28X  organization =     {The GAP {G}roup},[128X[104X
+    [4X[28X  howpublished =     {\href                      {https://www.gap-system.org}[128X[104X
+    [4X[28X                      {\texttt{https://www.gap-system.org}}},[128X[104X
+    [4X[28X  key =              {GAP},[128X[104X
+    [4X[28X  keywords =         {groups; *; gap; manual}[128X[104X
+    [4X[28X}[128X[104X
+  [4X[32X[104X
+  
+  [1X76.3-19 Cite[101X
+  
+  [33X[1;0Y[29X[2XCite[102X( [[3Xpkgname[103X[, [3Xkey[103X]] ) [32X function[133X
+  
+  [33X[0;0YUsed  with  no  arguments  or  with  argument [10X"GAP"[110X (case-insensitive), [2XCite[102X
+  displays  instructions  on  citing  the  version  of [5XGAP[105X that is being used.
+  Suggestions  are  given  in plain text, HTML, BibXML and BibTeX formats. The
+  same  instructions  are  also contained in the [11XCITATION[111X file in the [5XGAP[105X root
+  directory.[133X
+  
+  [33X[0;0YIf [3Xpkgname[103X is the name of a [5XGAP[105X package, instructions on citing this package
+  will  be displayed. They will be produced from the [11XPackageInfo.g[111X file of the
+  working  version  of  this  package  that  must  be  available  in  the  [5XGAP[105X
+  installation  being  used. Otherwise, one will get a warning that no working
+  version of the package is available.[133X
+  
+  [33X[0;0YThe optional 2nd argument [3Xkey[103X has the same meaning as in [2XBibEntry[102X ([14X76.3-18[114X).[133X
+  
+  
+  [1X76.4 [33X[0;0YGuidelines for Writing a [5XGAP[105X[101X[1X Package[133X[101X
+  
+  [33X[0;0YThe remaining part of this chapter explains the basics of how to write a [5XGAP[105X
+  package so that it integrates properly into [5XGAP[105X.[133X
+  
+  [33X[0;0YThere are two basic aspects of creating a [5XGAP[105X package.[133X
+  
+  [33X[0;0YFirst,  it is a convenient possibility to load additional functionality into
+  [5XGAP[105X  including  a smooth integration of the package documentation. Second, a
+  package is a way to make your code available to other [5XGAP[105X users.[133X
+  
+  [33X[0;0YMoreover,  the  [5XGAP[105X  Group  may  provide  some help with redistributing your
+  package  via the [5XGAP[105X website after checking if the package provides some new
+  or  improved  functionality  which  looks interesting for other users, if it
+  contains reasonable documentation, and if it seems to work smoothly with the
+  [5XGAP[105X  library  and  other  distributed packages. In this case the package can
+  take  part  in the [5XGAP[105X distribution update mechanism and becomes a [13Xdeposited[113X
+  package.[133X
+  
+  [33X[0;0YFurthermore, package authors are encouraged to check if the package would be
+  appropriate  for the refereeing process and [13Xsubmit[113X it. If the refereeing has
+  been  successful,  the  package  becomes  an  [13Xaccepted[113X  package.  Check  out
+  [7Xhttps://www.gap-system.org/Packages/Authors/authors.html[107X  on the [5XGAP[105X website
+  for more details.[133X
+  
+  [33X[0;0YBelow  we  start  with  a  description  how the directory structure of a [5XGAP[105X
+  package  should  be  constructed  and then add remarks on certain aspects of
+  creating  a  package, some of these only apply to some packages. Finally, we
+  provide guidelines for the release preparation and its distribution.[133X
+  
+  
+  [1X76.5 [33X[0;0YStructure of a [5XGAP[105X[101X[1X Package[133X[101X
+  
+  [33X[0;0YA  [5XGAP[105X  package  should  have  an alphanumeric name; mixed case is fine, but
+  there  should  be  no  whitespace  characters.  All  files  of a [5XGAP[105X package
+  [3Xpackagename[103X  must  be  collected  in  a  single  directory [3Xpackagedir[103X, where
+  [3Xpackagedir[103X  should be just [3Xpackagename[103X optionally converted to lowercase and
+  optionally  followed  by  the  package  version  (with  or without hyphen to
+  separate  the version from [3Xpackagename[103X). Let us call this directory the [13Xhome
+  directory[113X of the package.[133X
+  
+  [33X[0;0YTo use the package with [5XGAP[105X, the directory [3Xpackagedir[103X must be a subdirectory
+  of  a  [11Xpkg[111X  directory  in  (one  of) the [5XGAP[105X root directories (see [14X9.2[114X). For
+  example,  if  [5XGAP[105X  is  installed  in  [11X/usr/local/gap4[111X  then the files of the
+  package  [10XMyPack[110X  may  be placed in the directory [11X/usr/local/gap4/pkg/mypack[111X.
+  The  directory  [3Xpackagedir[103X  preferably  should  have the following structure
+  (below, a trailing [10X/[110X distinguishes directories from ordinary files):[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xpackagedir/[128X[104X
+    [4X[28X  doc/[128X[104X
+    [4X[28X  lib/[128X[104X
+    [4X[28X  tst/[128X[104X
+    [4X[28X  CHANGES[128X[104X
+    [4X[28X  LICENSE[128X[104X
+    [4X[28X  README[128X[104X
+    [4X[28X  PackageInfo.g[128X[104X
+    [4X[28X  init.g[128X[104X
+    [4X[28X  read.g[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis   layout   of  directories  and  files  may  be  created  manually,  or
+  automatically   using   the   tool   called   [5XPackageMaker[105X,   available   at
+  [7Xhttps://github.com/gap-system/PackageMaker[107X.  The  [5XPackageMaker[105X  asks several
+  questions about the intended package and then creates a new directory for it
+  and populates it with all the files needed for a basic package.[133X
+  
+  [33X[0;0YPackages  that contain some code that requires compilation will usually have
+  it  in  the  [11Xsrc[111X  subdirectory.  They  may  also  have  extra  files such as
+  [11Xconfigure[111X,  [11XMakefile.in[111X  etc.  that  automate the build procedure. There are
+  three  file names with a special meaning in the home directory of a package:
+  [11XPackageInfo.g[111X  and  [11Xinit.g[111X  which  must  be  present,  and  [11Xread.g[111X  which is
+  optional.[133X
+  
+  [33X[0;0YOn  the  other  hand, the names of [11XCHANGES[111X, [11XLICENSE[111X and [11XREADME[111X files are not
+  strictly fixed. They may have extensions [11X.txt[111X or [11X.md[111X, and instead of [11XLICENSE[111X
+  one  could  use  e.g.  [11XCOPYING[111X or [11XGPL[111X for packages distributed under the GNU
+  General Public License, or use [11XHISTORY[111X instead of [11XCHANGES[111X.[133X
+  
+  [33X[0;0YWe now describe the above files and directories in more details:[133X
+  
+  [8X [11XREADME[111X[108X
+        [33X[0;6YThe filename may optionally have an extension, e.g. [11X.txt[111X or [11X.md[111X.[133X
+  
+        [33X[0;6YThis  should  contain  [21Xhow to get it[121X instructions (covering the way of
+        getting  it  with  the  [5XGAP[105X  distribution and from the [5XGAP[105X website, if
+        applicable),  as  well  as  installation instructions and names of the
+        package   authors   and  their  email  addresses.  These  installation
+        instructions  should  be  repeated  or  referenced  from the package's
+        documentation,  which  should  be  in  the  [11Xdoc[111X  directory (see [14X76.6[114X).
+        Authors'  names and addresses should be repeated both in the package's
+        documentation and in the [11XPackageInfo.g[111X (see below).[133X
+  
+  [8X [11XCHANGES[111X[108X
+        [33X[0;6YFor  further versions of the package, it will be also useful to have a
+        [11XCHANGES[111X  file  that  records  the main changes between versions of the
+        package.[133X
+  
+        [33X[0;6YThe filename may optionally have an extension, e.g. [11X.txt[111X or [11X.md[111X.[133X
+  
+  [8X [11XLICENSE[111X[108X
+        [33X[0;6YThe   file   which   explains  conditions  on  which  the  package  is
+        distributed.[133X
+  
+        [33X[0;6YWe  advise  all  package authors to make clear in the documentation of
+        their  package  the  basis  on which it is being distributed to users.
+        Technically, this is the terms of the license which you give the users
+        to   copy,  modify  and  redistribute  your  software  (of  which  you
+        presumably own the copyright) for their purposes.[133X
+  
+        [33X[0;6Y[5XGAP[105X itself is distributed under the GNU General Public License version
+        2,  a popular [21Xfree software[121X license which allows users to redistribute
+        it  freely  under the same terms, and requires that any software which
+        incorporates  [5XGAP[105X  (technically, any [21Xderived work[121X) also be distributed
+        under those terms. We would encourage you to consider the GPL for your
+        packages,  but  you  might  wish  to be more restrictive (for instance
+        forbidding  redistribution  for  profit) or less restrictive (allowing
+        your software to be incorporated into commercial software).[133X
+  
+        [33X[0;6YThe  filename may optionally have an extension, e.g. [11X.txt[111X or [11X.md[111X. Some
+        packages also use different filenames, like [11XCOPYING[111X.[133X
+  
+  [8X[11Xconfigure[111X, [11XMakefile.in[111X[108X
+        [33X[0;6YThese  files  are typically only used by packages which have a non-[5XGAP[105X
+        component,  e.g. some  C code (the files of which should be in the [11Xsrc[111X
+        directory). The [11Xconfigure[111X and [11XMakefile.in[111X files of the [5XExample[105X package
+        provide  prototypes  (or  they  may  be created using the [5XPackageMaker[105X
+        mentioned  above).  The  [11Xconfigure[111X file typically takes a path [3Xpath[103X to
+        the  [5XGAP[105X  root  directory  as  argument and uses the value assigned to
+        [10XGAParch[110X  in  the  file  [11Xsysinfo.gap[111X,  created when [5XGAP[105X was compiled to
+        determine  the  compilation architecture, inserts this in place of the
+        string [10X@GAPARCH@[110X in [11XMakefile.in[111X and creates a file [11XMakefile[111X. When [10Xmake[110X
+        is run (which, of course, reads the constructed [11XMakefile[111X), a directory
+        [11Xbin[111X  (if  necessary)  and subdirectories of [11Xbin[111X with the path equal to
+        the  string  assigned  to  [10XGAParch[110X  in  the file [11Xsysinfo.gap[111X should be
+        created;  any binaries constructed by compiling the code in [11Xsrc[111X should
+        end up in this subdirectory of [11Xbin[111X.[133X
+  
+  [8X[11XPackageInfo.g[111X[108X
+        [33X[0;6YEvery  [5XGAP[105X  package  [13Xmust[113X  have  a  [11XPackageInfo.g[111X  file which contains
+        meta-information  about the package (package name, version, author(s),
+        relations  to other packages, homepage, download archives, etc.). This
+        information  is used by the package loading mechanism and also for the
+        redistribution   of   a   package  with  [5XGAP[105X.  The  [5XExample[105X  package's
+        [11XPackageInfo.g[111X  file  is  well-commented and can be used as a prototype
+        (see  also  [14X76.3-15[114X for further details). It may also be created using
+        the [5XPackageMaker[105X mentioned above.[133X
+  
+  [8X[11Xinit.g[111X, [11Xread.g[111X[108X
+        [33X[0;6YA [5XGAP[105X package [13Xmust[113X have a file [11Xinit.g[111X. Typical [11Xinit.g[111X and [11Xread.g[111X files
+        should normally consist entirely of [2XReadPackage[102X ([14X76.3-1[114X) commands (and
+        possibly  also [2XRead[102X ([14X9.8-1[114X) commands) for reading further files of the
+        package.  If  the  [21Xdeclaration[121X and [21Ximplementation[121X parts of the package
+        are  separated  (and  this  is  recommended), there should be a [11Xread.g[111X
+        file.  The  [21Xdeclaration[121X  part  of  a  package consists of function and
+        variable  [13Xname[113X declarations and these go in files with [10X.gd[110X extensions;
+        these  files  are read in via [10XReadPackage[110X commands in the [11Xinit.g[111X file.
+        The   [21Ximplementation[121X   part  of  a  package  consists  of  the  actual
+        definitions  of  the functions and variables whose names were declared
+        in  the  [21Xdeclaration[121X  part, and these go in files with [10X.gi[110X extensions;
+        these  files  are read in via [10XReadPackage[110X commands in the [11Xread.g[111X file.
+        The  reason  for following the above dichotomy is that the [11Xread.g[111X file
+        is  read  [13Xafter[113X  the  [11Xinit.g[111X  file, thus enabling the possibility of a
+        function's  implementation  to refer to another function whose name is
+        known  but  is  not  actually  defined  yet  (see [14X76.13[114X below for more
+        details).[133X
+  
+        [33X[0;6YThe  [5XGAP[105X  code  (whether  or  not  it  is  split  into [21Xdeclaration[121X and
+        [21Ximplementation[121X  parts)  should  go in the package's [11Xlib[111X directory (see
+        below).[133X
+  
+  [8X[11Xdoc[111X[108X
+        [33X[0;6YThis  directory should contain the package's documentation, written in
+        an  XML-based documentation format supported by the [5XGAP[105X package [5XGAPDoc[105X
+        (see  [14X'GAPDoc:  Introduction  and  Example'[114X) which is used for the [5XGAP[105X
+        documentation itself.[133X
+  
+        [33X[0;6YThe  [5XExample[105X  package's  documentation  (see its [11Xdoc[111X directory) may be
+        used  as a prototype. It consists of the master file [11Xmain.xml[111X, further
+        [11X.xml[111X  files  for  manual  chapters (included in the manual via [10XInclude[110X
+        directives  in the master file) and the [5XGAP[105X input file [11X../makedocrel.g[111X
+        which  generates  the  manuals.  Generally,  one should also provide a
+        [11Xmanual.bib[111X BibTeX database file or an [11Xxml[111X file in the BibXMLext format
+        (see [14X'GAPDoc: The BibXMLext Format'[114X).[133X
+  
+        [33X[0;6YOne  could also use the [5XAutoDoc[105X which simplifies writing documentation
+        by generating most of the [5XGAPDoc[105X code automatically.[133X
+  
+  [8X[11Xlib[111X[108X
+        [33X[0;6YThis  is the preferred place for the [5XGAP[105X code of the package, i.e. the
+        [10X.g[110X,  [10X.gd[110X  and [10X.gi[110X files (other than [11XPackageInfo.g[111X, [11Xinit.g[111X and [11Xread.g[111X).
+        For some packages, the directory [11Xgap[111X has been used instead of [11Xlib[111X; [11Xlib[111X
+        has  the  advantage  that  it is the default subdirectory of a package
+        directory  searched  for  by  the  [2XDirectoriesPackageLibrary[102X  ([14X76.3-7[114X)
+        command.[133X
+  
+  [8X[11Xsrc[111X[108X
+        [33X[0;6YIf  the  package  contains non-[5XGAP[105X code, e.g. C code, then this source
+        code should go in the [11Xsrc[111X directory. If there are [10X.h[110X [21Xinclude[121X files you
+        may  prefer to put these all together in a separate [10Xinclude[110X directory.
+        There  is  one further rule for the location of kernel library modules
+        or external programs which is explained in [14X76.15-1[114X below.[133X
+  
+  [8X[11Xtst[111X[108X
+        [33X[0;6YIt  is highly recommended that a package should have test files, which
+        then  should  go in the [11Xtst[111X directory. For a deposited package, a test
+        file  with  a basic test of the package (for example, to check that it
+        works  as expected and/or that the manual examples are correct) may be
+        specified in the [11XPackageInfo.g[111X to be included in the [5XGAP[105X standard test
+        suite  and run as a part of the [5XGAP[105X release preparation. More specific
+        and  time  consuming  tests  are  not supposed to be a part of the [5XGAP[105X
+        standard  test  suite  but  may  be  placed  in the [11Xtst[111X directory with
+        further  instructions  on how to run them. See Section [14X76.19[114X about the
+        requirements to the test files formats and further recommendations.[133X
+  
+  [33X[0;0YAll other files can be organised as you like. But we suggest that you have a
+  look  at  existing  packages  and  use  a  similar  scheme, for example, put
+  examples   in   the   [11Xexamples[111X   subdirectory,   data   libraries  in  extra
+  subdirectories, and so on.[133X
+  
+  [33X[0;0YSometimes  there  may be a need to include an empty directory in the package
+  distribution  (for example, as a place to store some data that may appear at
+  runtime).  In this case package authors are advised to put in this directory
+  a  short  [11XREADME[111X  file  describing its purpose to ensure that such directory
+  will be included in the redistribution.[133X
+  
+  [33X[0;0YConcerning  the  [5XGAP[105X  code  in  packages,  it  is  recommended  to  use only
+  documented  [5XGAP[105X  functions, see [14X83.3[114X. In particular if you want to make your
+  package available to other [5XGAP[105X users it is advisable to avoid using [21Xobsolete[121X
+  variables (see [14X77[114X). To test that the package does not use obsolete variables
+  you  can  set  the [10XReadObsolete[110X component in your [11Xgap.ini[111X file to [9Xfalse[109X (see
+  [14X3.2[114X)  or  start [5XGAP[105X with [10X-A -O[110X command line options (note that this may also
+  cause problems with loading other packages that use [21Xobsolete[121X variables).[133X
+  
+  
+  [1X76.6 [33X[0;0YWriting Documentation and Tools Needed[133X[101X
+  
+  [33X[0;0YIf  you intend to make your package available to other users it is essential
+  to include documentation explaining how to install and use your programs.[133X
+  
+  [33X[0;0YConcerning  the  installation you should produce a [11XREADME[111X file which gives a
+  short  description  of  the  purpose  of  the  package  and  contains proper
+  instructions  how  to  install  your package. Again, check out some existing
+  packages to get an idea how this could look like.[133X
+  
+  [33X[0;0YDocumentation   for   [5XGAP[105X   package  should  be  prepared  in  an  XML-based
+  documentation  format  that  is  defined  in and can be used with the [5XGAPDoc[105X
+  package (see [14X'GAPDoc: Introduction and Example'[114X).[133X
+  
+  [33X[0;0YThere  should  be at least a text version of your documentation provided for
+  use  in  the  terminal running [5XGAP[105X and some nicely printable version in [10X.pdf[110X
+  format.  Many  [5XGAP[105X users like to browse the documentation in HTML format via
+  their  Web  browser.  As a package author, you are not obliged to provide an
+  HTML  version  of your package manual, but if you use the [5XGAPDoc[105X package you
+  should have no trouble in producing one.[133X
+  
+  [33X[0;0YMoreover,  using  the  [5XGAPDoc[105X  package,  it is also possible to produce HTML
+  version  of  the documentation supporting MathJax ([7Xhttps://www.mathjax.org/[107X)
+  for  the  high  quality  rendering  of mathematical symbols while viewing it
+  online.  For  example,  if  you  are viewing the HTML version of the manual,
+  compare how this formula will look with MathJax turned on/off:[133X
+  
+  
+  [24X[33X[0;6Y[ χ, ψ ] = ( ∑_{g ∈ G} χ(g) ψ(g^{-1}) ) / |G|.[133X[124X
+  
+  [33X[0;0YThe  manual  of  the  [5XExample[105X  package  is written in the [5XGAPDoc[105X format, and
+  commands  needed  to  build  it  are contained in the file [10Xmakedocrel.g[110X (you
+  don't  need  to  re-build  the  manual  since  it is already included in the
+  package). You will also need to have certain TeX tools installed: to produce
+  manuals in the [10X.pdf[110X format, you need [10Xpdflatex[110X.[133X
+  
+  [33X[0;0YIn  principle  it is also possible to use alternative documentation systems.
+  Historically, there is one such TeX-based system, which predates [5XGAPDoc[105X, and
+  which  is  still  in  use  by several packages. However, we do not recommend
+  using it for new packages.[133X
+  
+  
+  [1X76.7 [33X[0;0YAn Example of a [5XGAP[105X[101X[1X Package[133X[101X
+  
+  [33X[0;0YWe  illustrate  the  creation of a [5XGAP[105X package by an example of a very basic
+  package.[133X
+  
+  [33X[0;0YCreate  the following directories in your home directory: [11X.gap[111X, [11X.gap/pkg[111X and
+  [11X.gap/pkg/test[111X.  Then inside the directory [11X.gap/pkg/test[111X create an empty file
+  [11Xinit.g[111X, and a file [11XPackageInfo.g[111X with the following contents:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XSetPackageInfo( rec([128X[104X
+    [4X[28X  PackageName := "test",[128X[104X
+    [4X[28X  Version := "1.0",[128X[104X
+    [4X[28X  PackageDoc := rec([128X[104X
+    [4X[28X      BookName  := "test",[128X[104X
+    [4X[28X      SixFile   := "doc/manual.six",[128X[104X
+    [4X[28X  ),[128X[104X
+    [4X[28X  Dependencies := rec([128X[104X
+    [4X[28X      GAP       := "4.9",[128X[104X
+    [4X[28X      NeededOtherPackages := [ ["GAPDoc", "1.6"] ],[128X[104X
+    [4X[28X      SuggestedOtherPackages := [ ] ),[128X[104X
+    [4X[28X  AvailabilityTest := ReturnTrue ) );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis  file  declares  the  [5XGAP[105X  package  with  name [21Xtest[121X in version 1.0. The
+  package documentation consists of one autoloaded book; the [10XSixFile[110X component
+  is  needed  by  the  [5XGAP[105X  help  system. Package dependencies (picked for the
+  purposes  of  this  example)  require at least [5XGAP[105X 4.9 and [5XGAPDoc[105X package at
+  version  at least 1.6, and these conditions will be checked when the package
+  will  be loaded (see [14X76.18[114X). Since there are no requirements that have to be
+  tested, [10XAvailabilityTest[110X just uses [2XReturnTrue[102X ([14X5.4-1[114X).[133X
+  
+  [33X[0;0YNow  start  [5XGAP[105X (without using the [10X-r[110X option) and the [11X.gap[111X directory will be
+  added  to the [5XGAP[105X root directory to allow [5XGAP[105X to find the packages installed
+  there (see [14X9.2[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLoadPackage("test");[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis  [5XGAP[105X  package  is  too  simple  to  be useful, but we have succeeded in
+  loading it via [2XLoadPackage[102X ([14X76.2-1[114X), satisfying all specified dependencies.[133X
+  
+  
+  [1X76.8 [33X[0;0YFile Structure[133X[101X
+  
+  [33X[0;0YPackage  files  may follow the style used for the [5XGAP[105X library. Every file in
+  the  [5XGAP[105X  library starts with a header that lists the filename, copyright, a
+  short  description  of  the  file  contents and the original authors of this
+  file,  and ends with a comment line [10X#E[110X. Indentation in functions and the use
+  of  decorative spaces in the code are left to the decision of the authors of
+  each  file. Global (i.e. re-used elsewhere) comments usually are indented by
+  two hash marks and two blanks, in particular, every declaration or method or
+  function  installation  which  is  not only of local scope is separated by a
+  header.[133X
+  
+  [33X[0;0YFacilities  to  distribute  a  document  over  several  files  to  allow the
+  documentation  for  parts  of some code to be stored in the same file as the
+  code  itself are provided by the [5XGAPDoc[105X package (see [14X'GAPDoc: Distributing a
+  Document  into  Several  Files'[114X).  The  same approach is demonstrated by the
+  [5XExample[105X  package.  E.g.  [11Xexample/doc/example.xml[111X has the statement [10X<#Include
+  Label="ListDirectory">[110X and [11Xexample/lib/files.gd[111X contains[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X##  <#GAPDoc Label="ListDirectory">[128X[104X
+    [4X[28X##  <ManSection>[128X[104X
+    [4X[28X##  <Func Name="ListDirectory" Arg="[dir]"/>[128X[104X
+    [4X[28X##[128X[104X
+    [4X[28X##  <Description>[128X[104X
+    [4X[28X##  lists the files in directory <A>dir</A> (a string)[128X[104X
+    [4X[28X##  or the current directory if called with no arguments.[128X[104X
+    [4X[28X##  </Description>[128X[104X
+    [4X[28X##  </ManSection>[128X[104X
+    [4X[28X##  <#/GAPDoc>[128X[104X
+    [4X[28XDeclareGlobalFunction( "ListDirectory" );[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis  is  all put together in the file [11Xexample/makedocrel.g[111X which builds the
+  package  documentation,  calling  [2XMakeGAPDocDoc[102X ([14XGAPDoc: MakeGAPDocDoc[114X) with
+  locations of library files containing parts of the documentation.[133X
+  
+  [33X[0;0YAlternatively,   one   could  use  the  [5XAutoDoc[105X,  which  simplifies  writing
+  documentation  by  generating  most  of  the  [5XGAPDoc[105X code automatically. The
+  equivalent of the fragment of the code above for [5XAutoDoc[105X would look like[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X#! @Arguments [dir][128X[104X
+    [4X[28X#! @Description[128X[104X
+    [4X[28X#!  lists the files in directory <A>dir</A> (a string)[128X[104X
+    [4X[28X#!  or the current directory if called with no arguments.[128X[104X
+    [4X[28XDeclareGlobalFunction( "ListDirectory" );[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X76.9 [33X[0;0YCreating the PackageInfo.g File[133X[101X
+  
+  [33X[0;0YWhile the minimalistic [11XPackageInfo.g[111X file described in [14X76.7[114X is enough to let
+  [5XGAP[105X  load  the package, and check all specified dependencies, it is actually
+  missing  many  extra  fields which become relevant if you want to distribute
+  your  package:  they  contain  lists of authors and/or maintainers including
+  contact  information,  URLs of the package archives and README files, status
+  information,  text  for  a  package  overview  webpage, and so on. All these
+  details are required for a package to be redistributed with [5XGAP[105X.[133X
+  
+  [33X[0;0YThe  command  [2XValidatePackageInfo[102X  ([14X76.3-16[114X) can be used to get a quick idea
+  about which fields are missing:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XValidatePackageInfo("PackageInfo.g");[127X[104X
+    [4X[28X#E  component `Subtitle' must be bound to a string[128X[104X
+    [4X[28X#E  component `Date' must be bound to a string of the form `dd/mm/yyyy'[128X[104X
+    [4X[28X#E  component `ArchiveURL' must be bound to a string started with http://, https:// or ftp://[128X[104X
+    [4X[28X#E  component `ArchiveFormats' must be bound to a string[128X[104X
+    [4X[28X#E  component `README_URL' must be bound to a string started with http://, https:// or ftp://[128X[104X
+    [4X[28X#E  component `PackageInfoURL' must be bound to a string started with http://, https:// or ftp://[128X[104X
+    [4X[28X#E  component `AbstractHTML' must be bound to a string[128X[104X
+    [4X[28X#E  component `PackageWWWHome' must be bound to a string started with http://, https:// or ftp://[128X[104X
+    [4X[28X#E  component `ArchiveURLSubset' must be bound to a list of strings denoting relative paths to readable files or directories[128X[104X
+    [4X[28X#E  component `HTMLStart' must be bound to a string denoting a relative path to a readable file[128X[104X
+    [4X[28X#E  component `PDFFile' must be bound to a string denoting a relative path to a readable file[128X[104X
+    [4X[28X#E  component `SixFile' must be bound to a string denoting a relative path to a readable file[128X[104X
+    [4X[28X#E  component `LongTitle' must be bound to a string[128X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe  suggest  to  create a [11XPackageInfo.g[111X file for your package by copying the
+  one  in the [5XExample[105X package, distributed with [5XGAP[105X, or using the [5XPackageMaker[105X
+  ([7Xhttps://github.com/gap-system/PackageMaker[107X), and then adjusting it for your
+  package.  Within  [5XGAP[105X  you  can  look  at  this template file for a list and
+  explanation of all recognised entries by[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XPager(StringFile(Filename(DirectoriesLibrary(),[128X[104X
+    [4X[28X                          "../pkg/example/PackageInfo.g")));[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YInstead  of  populating the rest of the [11XPackageInfo.g[111X by hands, you can also
+  create  a  basic  [5XGAP[105X package with the help of the tool called [5XPackageMaker[105X,
+  available  at  [7Xhttps://github.com/gap-system/PackageMaker[107X.  The [5XPackageMaker[105X
+  asks  several  questions  about  the intended package and then creates a new
+  directory  for  it  and  populates  it with all the files needed for a basic
+  package.[133X
+  
+  
+  [1X76.10 [33X[0;0YFunctions and Variables and Choices of Their Names[133X[101X
+  
+  [33X[0;0YIn  writing the [5XGAP[105X code for your package you need to be a little careful on
+  just how you define your functions and variables.[133X
+  
+  [33X[0;0Y[13XFirstly[113X,  in  general  one should avoid defining functions and variables via
+  assignment statements in the way you would interactively, e.g.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSquared := x -> x^2;;[127X[104X
+    [4X[25Xgap>[125X [27XCubed := function(x) return x^3; end;;[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  reason  for  this  is  that  such  functions  and  variables are [13Xeasily
+  overwritten[113X and what's more you are not warned about it when it happens.[133X
+  
+  [33X[0;0YTo  protect a function or variable against overwriting there is the function
+  [2XBindGlobal[102X  ([14X4.9-8[114X),  or  alternatively  (and equivalently) you may define a
+  global     function    via    a    [2XDeclareGlobalFunction[102X    ([14X79.10-5[114X)    and
+  [2XInstallGlobalFunction[102X   ([14X79.10-5[114X)   pair   or   a   global  variable  via  a
+  [2XDeclareGlobalVariable[102X  ([14X79.10-2[114X)  and [2XInstallValue[102X ([14X79.10-3[114X) pair. There are
+  also  operations  and their methods, and related objects like attributes and
+  filters which also have [10XDeclare...[110X and [10XInstall...[110X pairs.[133X
+  
+  [33X[0;0Y[13XSecondly[113X,  it  is a good idea to reduce the chance of accidental overwriting
+  by  choosing names for your functions and variables that begin with a string
+  that identifies it with the package, e.g. some of the undocumented functions
+  in  the [5XExample[105X package begin with [10XEg[110X. This is especially important in cases
+  where  you  actually  want  the  user  to  be  able to change the value of a
+  function or variable defined by your package, for which you have used direct
+  assignments  (for which the user will receive no warning if she accidentally
+  overwrites  them).  It is also important for functions and variables defined
+  via      [10XBindGlobal[110X,     [10XDeclareGlobalFunction[110X/[10XInstallGlobalFunction[110X     and
+  [10XDeclareGlobalVariable[110X/[10XInstallValue[110X,  in order to avoid name clashes that may
+  occur with (extensions of) the [5XGAP[105X library and other packages.[133X
+  
+  [33X[0;0YAdditionally,  since  [5XGAP[105X 4.5  a  package  may place global variables into a
+  local  namespace  as  explained  in  [14X4.10[114X in order to avoid name clashes and
+  preserve  compatibility.  This  new  feature  allows  you  to define in your
+  package  global variables with the identifier ending with the [10X@[110X symbol, e.g.
+  [10XxYz@[110X. Such variables may be used in your package code safely, as they may be
+  accessed   from   outside   the  package  only  by  their  full  name,  i.e.
+  [10XxYz@YourPackageName[110X.   This  helps  to  prevent  clashes  between  different
+  packages  or  between  a  package  and  the  [5XGAP[105X library because of the same
+  variable names.[133X
+  
+  [33X[0;0YOn   the   other   hand,   operations   and   their   methods  (defined  via
+  [2XDeclareOperation[102X  ([14X78.1-5[114X),  [2XInstallMethod[102X  ([14X78.3-1[114X)  etc. pairs)  and their
+  relatives  do  not  need  this  consideration, as they avoid name clashes by
+  allowing for more than one [21Xmethod[121X for the same-named object.[133X
+  
+  [33X[0;0YTo     demonstrate     the     definition    of    a    function    via    a
+  [10XDeclareOperation[110X/[10XInstallMethod[110X pair, the method [2XRecipe[102X ([14XExample: Recipe[114X) was
+  included  in  the  [5XExample[105X  package; [10XRecipe( FruitCake );[110X gives a [21Xmethod[121X for
+  making a fruit cake (forgive the pun).[133X
+  
+  [33X[0;0Y[13XThirdly[113X,  functions  or  variables with [10XSet[3XXXX[103X[10X[110X or [10XHas[3XXXX[103X[10X[110X names (even if they
+  are defined as operations) should be avoided as these may clash with objects
+  associated  with  attributes  or  properties  (attributes and properties [3XXXX[103X
+  declared   via   the  [10XDeclareAttribute[110X  and  [10XDeclareProperty[110X  commands  have
+  associated with them testers of form [10XHas[3XXXX[103X[10X[110X and setters of form [10XSet[3XXXX[103X[10X[110X).[133X
+  
+  [33X[0;0Y[13XFourthly[113X,  it  is a good idea to have some convention for internal functions
+  and  variables  (i.e. the  functions  and variables you don't intend for the
+  user to use). For example, they might be entirely CAPITALISED.[133X
+  
+  [33X[0;0YAdditionally,  there  is  a  recommended naming convention that the [5XGAP[105X core
+  system  and  [5XGAP[105X  packages  should  not use global variables starting in the
+  lowercase. This allows to reserve variables with names starting in lowercase
+  to  the  [5XGAP[105X  user so they will never clash with the system. It is extremely
+  important  to  avoid  using  for  package  global variables very short names
+  started  in  lowercase. For example, such names like [10Xcs[110X, [10Xexp[110X, [10Xngens[110X, [10Xpc[110X, [10Xpow[110X
+  which  are  perfectly  fine  for  local  variables, should never be used for
+  globals.  Additionally,  the package must not have writable global variables
+  with  very  short names even if they are starting in uppercase, for example,
+  [10XC1[110X or [10XORB[110X, since they also could be easily overwritten by the user.[133X
+  
+  [33X[0;0YIt  is a good practice to follow naming conventions used in [5XGAP[105X as explained
+  in  [14X5.6[114X  and  [14X'Tutorial:  Changing the Structure'[114X, which might help users to
+  memorize or even guess names of functions provided by the package.[133X
+  
+  [33X[0;0Y[13XFinally[113X,         note         the         advantage         of         using
+  [10XDeclareGlobalFunction[110X/[10XInstallGlobalFunction[110X,
+  [10XDeclareGlobalVariable[110X/[10XInstallValue[110X,  etc. pairs  (rather than [10XBindGlobal[110X) to
+  define  functions  and variables, which allow the package author to organise
+  her  function- and variable- definitions in any order without worrying about
+  any  interdependence.  The [10XDeclare...[110X statements should go in files with [10X.gd[110X
+  extensions  and  be  loaded  by [10XReadPackage[110X statements in the package [11Xinit.g[111X
+  file,  and the [10XInstall...[110X definitions should go in files with [10X.gi[110X extensions
+  and  be  loaded  by  [10XReadPackage[110X statements in the package [11Xread.g[111X file; this
+  ensures  that  the [10X.gi[110X files are read [13Xafter[113X the [10X.gd[110X files. All other package
+  code  should  go  in  [10X.g[110X  files  (other  than  the  [11Xinit.g[111X  and [11Xread.g[111X files
+  themselves) and be loaded via [10XReadPackage[110X statements in the [11Xinit.g[111X file.[133X
+  
+  [33X[0;0YIn conclusion, here is some practical advice on how to check which variables
+  are used by the package.[133X
+  
+  [33X[0;0YFirstly,  there is a function [2XShowPackageVariables[102X ([14X76.3-17[114X). If the package
+  [3Xpkgname[103X is available but not yet loaded then [10XShowPackageVariables( pkgname )[110X
+  prints  a  list  of  global  variables that become bound and of methods that
+  become  installed  when the package is loaded (for that, the package will be
+  actually  loaded,  so  [10XShowPackageVariables[110X  can be called only once for the
+  same  package in the same [5XGAP[105X session.) The second optional argument [3Xversion[103X
+  may specify a particular package version to be loaded. An error message will
+  be printed if (the given version of) the package is not available or already
+  loaded.[133X
+  
+  [33X[0;0YInfo  lines  for  undocumented  variables will be marked with an asterisk [10X*[110X.
+  Note  that  the  [5XGAP[105X  help system is case insensitive, so it is difficult to
+  document identifiers that differ only by case.[133X
+  
+  [33X[0;0YThe  following entries are omitted from the list: default setter methods for
+  attributes  and properties that are declared in the package, and [10XSet[3Xattr[103X[10X[110X and
+  [10XHas[3Xattr[103X[10X[110X type variables where [3Xattr[103X is an attribute or property.[133X
+  
+  [33X[0;0YFor  example, for the [5XExample[105X package it may produce the output looking like
+  this:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XShowPackageVariables("example");[127X[104X
+    [4X[28X----------------------------------------------------------------[128X[104X
+    [4X[28XLoading Example 3.3 (Example/Template of a GAP Package)[128X[104X
+    [4X[28Xby Werner Nickel (http://www.mathematik.tu-darmstadt.de/~nickel),[128X[104X
+    [4X[28X   Greg Gamble (http://www.math.rwth-aachen.de/~Greg.Gamble), and[128X[104X
+    [4X[28X   Alexander Konovalov (http://www.cs.st-andrews.ac.uk/~alexk/).[128X[104X
+    [4X[28X----------------------------------------------------------------[128X[104X
+    [4X[28Xnew global functions:[128X[104X
+    [4X[28X  EgSeparatedString( str, c )*[128X[104X
+    [4X[28X  FindFile( dir, file )[128X[104X
+    [4X[28X  HelloWorld(  )[128X[104X
+    [4X[28X  ListDirectory( arg )[128X[104X
+    [4X[28X  LoadedPackages(  )[128X[104X
+    [4X[28X  WhereIsPkgProgram( prg )[128X[104X
+    [4X[28X  Which( prg )[128X[104X
+    [4X[28X[128X[104X
+    [4X[28Xnew global variables:[128X[104X
+    [4X[28X  FruitCake[128X[104X
+    [4X[28X[128X[104X
+    [4X[28Xnew operations:[128X[104X
+    [4X[28X  Recipe( arg )[128X[104X
+    [4X[28X[128X[104X
+    [4X[28Xnew methods:[128X[104X
+    [4X[28X  Recipe( cake )[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAnother  trick  is  to  start  [5XGAP[105X with [10X-r -A[110X options, immediately load your
+  package  and  then  call [2XNamesUserGVars[102X ([14X4.9-11[114X) which returns a list of the
+  global  variable  names created since the library was read, to which a value
+  is currently bound. For example, for the [5XExample[105X it produces[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XNamesUserGVars();[127X[104X
+    [4X[28X[ "EgSeparatedString", "FindFile", "FruitCake", "HelloWorld", "ListDirectory",[128X[104X
+    [4X[28X  "LoadedPackages", "Recipe", "WhereIsPkgProgram", "Which" ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Ybut for packages with dependencies it will also contain variables created by
+  other  packages.  Nevertheless,  it  may  be  a  useful  check to search for
+  unwanted  variables appearing after package loading. A potentially dangerous
+  situation which should be avoided is when the package uses some simply named
+  temporary  variables  at  the loading stage. Such [21Xphantom[121X variables may then
+  remain  unnoticed  and,  as  a result, there will be no warnings if the user
+  occasionally uses the same name as a local variable name in a function. Even
+  more dangerous is the case when the user variable with the same name already
+  exists before the package is loaded so it will be silently overwritten.[133X
+  
+  
+  [1X76.11 [33X[0;0YPackage Dependencies (Requesting one [5XGAP[105X[101X[1X Package from within Another)[133X[101X
+  
+  [33X[0;0YIt is possible for one [5XGAP[105X package [10XA[110X to require another package [10XB[110X. For that,
+  one  simply adds the name and the (least) version number of the package [10XB[110X to
+  the  [10XNeededOtherPackages[110X  component  of  the  [10XDependencies[110X  component of the
+  [11XPackageInfo.g[111X  file of the package [10XA[110X. In this situation, loading the package
+  [10XA[110X forces that also the package [10XB[110X is loaded, and that [10XA[110X cannot be loaded if [10XB[110X
+  is not available.[133X
+  
+  [33X[0;0YIf  [10XB[110X  is  not  essential for [10XA[110X but should be loaded if it is available (for
+  example  because  [10XB[110X  provides  some improvements of the main system that are
+  useful  for  [10XA[110X)  then the name and the (least) version number of [10XB[110X should be
+  added  to the [10XSuggestedOtherPackages[110X component of the [10XDependencies[110X component
+  of  the  [11XPackageInfo.g[111X  file  of  [10XA[110X.  In this situation, loading [10XA[110X forces an
+  attempt to load also [10XB[110X, but [10XA[110X is loaded even if [10XB[110X is not available.[133X
+  
+  [33X[0;0YAll  package dependencies must be documented explicitly in the [11XPackageInfo.g[111X
+  file. It is important to properly identify package dependencies and make the
+  right  decision whether the other package should be [21Xneeded[121X or [21Xsuggested[121X. For
+  example,  declaring package as [21Xneeded[121X when [21Xsuggested[121X might be sufficient may
+  prevent loading of packages under Windows for no good reason.[133X
+  
+  [33X[0;0YIt  is  not  appropriate  to  explicitly  call [2XLoadPackage[102X ([14X76.2-1[114X) [13Xwhen the
+  package  is  loaded[113X, since this may distort the order of package loading and
+  result in warning messages. It is recommended to turn such dependencies into
+  needed or suggested packages. For example, a package can be designed in such
+  a way that it can be loaded with restricted functionality if another package
+  (or standalone program) is missing, and in this case the missing package (or
+  binary)  is  [13Xsuggested[113X.  Alternatively,  if  the package author decides that
+  loading  the  package  in  this  situation  makes no sense, then the missing
+  component is [13Xneeded[113X.[133X
+  
+  [33X[0;0YOn the other hand, if [2XLoadPackage[102X ([14X76.2-1[114X) is called inside functions of the
+  package  then  there  is  no such problem, provided that these functions are
+  called  only  after  the  package has been loaded, so it is not necessary to
+  specify  the  other package as suggested. The same applies to test files and
+  manual  examples,  which  may  be  simply  extended  by calls to [2XLoadPackage[102X
+  ([14X76.2-1[114X).[133X
+  
+  [33X[0;0YIt  may  happen  that  a  package B that is listed as a suggested package of
+  package A is actually needed by A. If no explicit [2XLoadPackage[102X ([14X76.2-1[114X) calls
+  for  B  occur  in  A at loading time, this can now be detected using the new
+  possibility  to  load a package without loading its suggested packages using
+  the  global  option  [10XOnlyNeeded[110X  which can be used to (recursively) suppress
+  loading  the  suggested  packages  of  the  package  in question. Using this
+  option,  one  can  check  whether  errors  or  warnings appear when B is not
+  available  (note  that  this  option  should be used only for such checks to
+  simulate  the  situation when package B is not available; it is not supposed
+  to  be  used  in  an actual [5XGAP[105X session when package B will be loaded later,
+  since  this  may  cause  problems). In case of any errors or warnings, their
+  consequence  can  then  be  either turning B into a needed package or (since
+  apparently  B was not intended to become a needed package) changing the code
+  accordingly.  Only  if package A calls [2XLoadPackage[102X ([14X76.2-1[114X) for B at loading
+  time  (see  above)  then package B needs to be [13Xdeinstalled[113X (i.e. removed) to
+  test loading of A without B.[133X
+  
+  
+  [1X76.12 [33X[0;0YExtensions Provided by a Package[133X[101X
+  
+  [33X[0;0YSometimes  a  package [10XA[110X can provide additional functionality, such as better
+  methods  or  additional  data, if some other packages [10XB[110X, [10XC[110X, etc. are loaded.
+  However,  one  would  like  package  [10XA[110X  to  still  be  usable  without these
+  additional  packages,  and  therefore  [10XB[110X,  [10XC[110X,  etc. shall not be regarded as
+  needed packages (see Section [14X76.11[114X) of [10XA[110X.[133X
+  
+  [33X[0;0YOne  way to deal with this situation is to put those parts of code of [10XA[110X that
+  depend  on  [10XB[110X,  [10XC[110X, etc., into files that get read only in the situation that
+  the  packages  in  question  have  actually been loaded into the current [5XGAP[105X
+  session.[133X
+  
+  [33X[0;0YHowever,  this leaves the question when to load these files of a conditional
+  [13Xextension[113X  of  [10XA[110X.  In  the  past, the only option for [10XA[110X was to check for the
+  presence  of  [10XB[110X, [10XC[110X, etc., while it itself was being loaded. With this setup,
+  it depends on the order in which packages get loaded whether some feature is
+  available  or not: If [10XB[110X is loaded before [10XA[110X, the extension might be loaded as
+  well; if [10XB[110X is loaded only after [10XA[110X, then the extension is not loaded.[133X
+  
+  [33X[0;0YTo  deal with this issue of conditional extensions of packages, [5XGAP[105X offers a
+  dedicated mechanism: The [10XExtensions[110X component of the [11XPackageInfo.g[111X file of [10XA[110X
+  is a list of declarations of conditional extension of [10XA[110X, each being a record
+  with the following components.[133X
+  
+  [8X[10Xneeded[110X[8X[108X
+        [33X[0;6Ya  list  of the form [10X[ [ pkgname1, version1 ], [ pkgname2, version2 ],
+        [110X[22X...[122X[10X  ][110X,  meaning  that  the  extension  shall be loaded as soon as all
+        packages  [10Xpkgname1[110X,  [10Xpkgname2[110X, [22X...[122X, with versions (at least) [10Xversion1[110X,
+        [10Xversion2[110X, [22X...[122X, have been loaded, and[133X
+  
+  [8X[10Xfilename[110X[8X[108X
+        [33X[0;6Ythe  path, relative to the package directory of [10XA[110X, of a file such that
+        reading this file will load the code of the extension.[133X
+  
+  [33X[0;0YAs  an  example suppose the following is part of the [11XPackageInfo.g[111X. Then [5XGAP[105X
+  will load the file [11XfileForB.gd[111X as soon as package [10XB[110X is loaded in version 0.6
+  or  newer,  and  [11XfileForCD.gi[111X once package [10XC[110X and [10XD[110X are loaded in version 1.2
+  and 0.1 or newer respectively.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XExtensions := [[128X[104X
+    [4X[28X  rec([128X[104X
+    [4X[28X    needed := [ ["B", "0.6"] ],[128X[104X
+    [4X[28X    filename := "gap/fileForB.gd",[128X[104X
+    [4X[28X  ),[128X[104X
+    [4X[28X  rec([128X[104X
+    [4X[28X    needed := [ ["C", "1.2"] , ["D", "0.1"] ],[128X[104X
+    [4X[28X    filename := "gap/fileForCD.gi",[128X[104X
+    [4X[28X  )[128X[104X
+    [4X[28X],[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWhenever  [2XLoadPackage[102X  ([14X76.2-1[114X) is called, [5XGAP[105X checks for package extensions
+  whose conditions now are satisfied, and loads them.[133X
+  
+  [33X[0;0YFor  example, package [10XA[110X can be loaded early in a [5XGAP[105X session, and declare in
+  its  [11XPackageInfo.g[111X the availability of an extension that requires package [10XB[110X.
+  If [10XB[110X has not yet been loaded then this extension will not be loaded together
+  with  [10XA[110X.  However,  as  soon  as  [10XB[110X gets (installed and) loaded later in the
+  session, also the extension of [10XA[110X will automatically get loaded.[133X
+  
+  [33X[0;0YThe contents of [10XExtensions[110X in a [11XPackageInfo.g[111X file does not affect the lists
+  of  needed or suggested packages. If an extension of [10XA[110X is beneficial for the
+  functions  of  [10XA[110X  then  it  makes  sense to list the packages needed for the
+  extension among the suggested packages of [10XA[110X, but this may not be the case if
+  the extension is beneficial only for the functions of its needed packages.[133X
+  
+  
+  [1X76.13 [33X[0;0YDeclaration and Implementation Part of a Package[133X[101X
+  
+  [33X[0;0YWhen  [5XGAP[105X  packages  require  each  other in a circular way, a [21Xbootstrapping[121X
+  problem  arises  of  defining  functions  before  they  are called. The same
+  problem  occurs  in  the [5XGAP[105X library, and it is resolved there by separating
+  declarations  (which define global variables such as filters and operations)
+  and   implementations  (which  install  global  functions  and  methods)  in
+  different files. Any implementation file may use global variables defined in
+  any  declaration  file.  [5XGAP[105X  initially  reads all declaration files (in the
+  library  they  have  a  [10X.gd[110X  suffix) and afterwards reads all implementation
+  files (which have a [10X.gi[110X suffix).[133X
+  
+  [33X[0;0YSomething  similar  is possible for [5XGAP[105X packages: if a file [11Xread.g[111X exists in
+  the  home  directory  of  the  package, this file is read only [13Xafter[113X all the
+  [11Xinit.g[111X  files  of  all (implicitly) required [5XGAP[105X packages are read. Thus one
+  can  separate  declaration  and implementation for a [5XGAP[105X package in the same
+  way  as  is done for the [5XGAP[105X library, by creating a file [11Xread.g[111X, restricting
+  the  [2XReadPackage[102X  ([14X76.3-1[114X)  statements in [11Xinit.g[111X to only read those files of
+  the  package that provide declarations, and to read the implementation files
+  from [11Xread.g[111X.[133X
+  
+  [33X[0;0Y[13XExamples:[113X[133X
+  
+  [33X[0;0YSuppose  that  there  are  two  packages [10XA[110X and [10XB[110X, each with files [11Xinit.g[111X and
+  [11Xread.g[111X.[133X
+  
+  [30X    [33X[0;6YIf  package  [10XA[110X suggests or needs package [10XB[110X and package [10XB[110X does not need
+        or  suggest  any  other  package  then first [11Xinit.g[111X of [10XB[110X is read, then
+        [11Xread.g[111X of [10XB[110X, then [11Xinit.g[111X of [10XA[110X, then [11Xread.g[111X of [10XA[110X.[133X
+  
+  [30X    [33X[0;6YIf  package  [10XA[110X suggests or needs package [10XB[110X and package [10XB[110X (or a package
+        that  is  suggested  or  needed by [10XB[110X) suggests or needs package [10XA[110X then
+        first  the  files [11Xinit.g[111X of [10XA[110X and [10XB[110X are read (in an unspecified order)
+        and then the files [11Xread.g[111X of [10XA[110X and [10XB[110X (in the same order).[133X
+  
+  [33X[0;0YIn  general, when [5XGAP[105X is asked to load a package then first the dependencies
+  between  this  packages  and its needed and suggested packages are inspected
+  (recursively),  and  a  list of package sets is computed such that no cyclic
+  dependencies  occur  between different package sets and such that no package
+  in any of the package sets needs any package in later package sets. Then [5XGAP[105X
+  runs  through the package sets and reads for each set first all [11Xinit.g[111X files
+  and  then  all  [11Xread.g[111X  files  of  the  packages  in  the set. (There is one
+  exception  from  this  rule:  Whenever  packages  are  autoloaded before the
+  implementation part of the [5XGAP[105X library is read, only the [11Xinit.g[111X files of the
+  packages  are  read;  as  soon  as the [5XGAP[105X library has been read, the [11Xread.g[111X
+  files of these packages are also read, and afterwards the above rule holds.)[133X
+  
+  [33X[0;0YIt  can  happen  that  some code of a package depends on the availability of
+  suggested  packages, i.e., different initialisations are performed depending
+  on  whether  a  suggested  package will eventually be loaded or not. One can
+  test this condition with the function [2XIsPackageMarkedForLoading[102X ([14X76.3-4[114X). In
+  particular,  one  should  [13Xnot[113X call (and use the value returned by this call)
+  the  function  [2XLoadPackage[102X  ([14X76.2-1[114X) inside package code that is read during
+  package loading. Note that for debugging purposes loading suggested packages
+  may have been deliberately disabled via the global option [10XOnlyNeeded[110X.[133X
+  
+  [33X[0;0YNote  that  the separation of the [5XGAP[105X code of packages into declaration part
+  and  implementation  part  does  in  general  [13Xnot[113X allow one to actually [13Xcall[113X
+  functions  from a package when the implementation part is read. For example,
+  in  the  case of a [21Xcyclic dependency[121X as in the second example above, suppose
+  that [10XB[110X provides a new function [10Xf[110X or a new global record [10Xr[110X which are declared
+  in  the declaration part of [10XB[110X. Then the code in the implementation part of [10XA[110X
+  may  contain  calls  to  the functions defined in the declaration part of [10XB[110X.
+  However,  the implementation part of [10XA[110X may be read [13Xbefore[113X the implementation
+  part  of  [10XB[110X.  So one can in general not assume that during the loading of [10XA[110X,
+  the  function  [10Xf[110X  can  be  called,  or that one can access components of the
+  record [10Xr[110X.[133X
+  
+  [33X[0;0YIf  one wants to call the function [10Xf[110X or to access components of the record [10Xr[110X
+  in the code of the package [10XA[110X then the problem is that it may be not possible
+  to  determine  a cyclic dependency between [10XA[110X and [10XB[110X from the packages [10XA[110X and [10XB[110X
+  alone.  A safe solution is then to design [10XA[110X in such a way that the code that
+  calls  [10Xf[110X  or  accesses  [10Xr[110X belongs to [13Xpackage extensions[113X of [10XA[110X that get loaded
+  only after [10XB[110X has been loaded; see Section [14X76.12[114X for details.[133X
+  
+  [33X[0;0YIn the case of cyclic dependencies, one solution for the above problem might
+  be to delay those computations (typically initialisations) in package [10XA[110X that
+  require  package  [10XB[110X  to be loaded until all required packages are completely
+  loaded. This can be done by moving the declaration and implementation of the
+  variables that are created in the initialisation into a separate file and to
+  declare  these  variables  in  the [11Xinit.g[111X file of the package, via a call to
+  [2XDeclareAutoreadableVariables[102X ([14X76.3-10[114X) (see also [14X76.14[114X).[133X
+  
+  
+  [1X76.14 [33X[0;0YAutoreadable Variables[133X[101X
+  
+  [33X[0;0YPackage  files containing method installations must be read when the package
+  is  loaded.  For  package  files  [13Xnot[113X  containing method installations (this
+  applies,  for  example,  to many data files) another mechanism allows one to
+  delay  reading  such files until the data are actually accessed. See [14X76.3-10[114X
+  for further details.[133X
+  
+  
+  [1X76.15 [33X[0;0YStandalone Programs in a [5XGAP[105X[101X[1X Package[133X[101X
+  
+  [33X[0;0Y[5XGAP[105X  packages  that involve stand-alone programs are fundamentally different
+  from [5XGAP[105X packages that consist entirely of [5XGAP[105X code.[133X
+  
+  [33X[0;0YThis  difference is threefold: A user who installs the [5XGAP[105X package must also
+  compile  (or install) the package's binaries, the package must check whether
+  the  binaries  are indeed available, and finally the [5XGAP[105X code of the package
+  has  to  start the external binary and to communicate with it. We will cover
+  these three points in the following sections.[133X
+  
+  [33X[0;0YIf the package does not solely consist of an interface to an external binary
+  and  if  the external program called is not just special-purpose code, but a
+  generally available program, chances are high that sooner or later other [5XGAP[105X
+  packages  might  also  require this program. We therefore strongly recommend
+  the  provision  of  a  documented  [5XGAP[105X  function that will call the external
+  binary.  We  also  suggest  to  create  actually two [5XGAP[105X packages; the first
+  providing  only  the  binary and the interface and the second (requiring the
+  first, see [14X76.11[114X) being the actual [5XGAP[105X package.[133X
+  
+  
+  [1X76.15-1 [33X[0;0YInstallation of [5XGAP[105X[101X[1X Package Binaries[133X[101X
+  
+  [33X[0;0YThe  scheme  for  the  installation  of  package binaries which is described
+  further on is intended to permit the installation on different architectures
+  which  share  a  common  file system (and share the architecture independent
+  file).[133X
+  
+  [33X[0;0YA  [5XGAP[105X package which includes external binaries contains a [11Xbin[111X subdirectory.
+  This   subdirectory  in  turn  contains  subdirectories  for  the  different
+  architectures  on which the [5XGAP[105X package binaries are installed. The names of
+  these  directories  must  be  the  same  as  the  names  of the architecture
+  dependent  subdirectories  of  the main [11Xbin[111X directory. Unless you use a tool
+  like  [10Xautoconf[110X  yourself,  you  must  obtain  the correct name of the binary
+  directory  from  the  main  [5XGAP[105X  branch.  To  help  with  this, the main [5XGAP[105X
+  directory  contains  a  file  [11Xsysinfo.gap[111X  which  assigns the shell variable
+  [10XGAParch[110X  to  the  proper  name as determined by [5XGAP[105X's [10Xconfigure[110X process. For
+  example on a Linux system, the file [11Xsysinfo.gap[111X may look like this:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XGAParch=i586-unknown-linux2.0.31-gcc[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe  suggest  that your [5XGAP[105X package contains a file [11Xconfigure[111X which is called
+  with  the  path  of the [5XGAP[105X root directory as parameter. This file then will
+  read  [11Xsysinfo.gap[111X  and  set  up  everything  for  compiling  under the given
+  architecture  (for example creating a [11XMakefile[111X from [11XMakefile.in[111X). As initial
+  templates,  you may use installation scripts of the [5XExample[105X package or files
+  generated with the help of [5XPackageMaker[105X.[133X
+  
+  
+  [1X76.15-2 [33X[0;0YTest for the Existence of GAP Package Binaries[133X[101X
+  
+  [33X[0;0YIf  an  external  binary is essential for the workings of a [5XGAP[105X package, the
+  function  stored in the component [10XAvailabilityTest[110X of the [11XPackageInfo.g[111X file
+  of  the  package  should  test  whether the program has been compiled on the
+  architecture  (and inhibit package loading if this is not the case). This is
+  especially important if the package is loaded automatically.[133X
+  
+  [33X[0;0YThe  easiest  way to accomplish this is to use [2XFilename[102X ([14X9.5-1[114X) for checking
+  for  the  actual  binaries  in  the path given by [2XDirectoriesPackagePrograms[102X
+  ([14X76.3-8[114X)  for  the  respective  package. For example the [5Xexample[105X [5XGAP[105X package
+  could  use  the following function to test whether the binary [11Xhello[111X has been
+  compiled;  it will issue a warning if not, and will only load the package if
+  the binary is indeed available:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X...[128X[104X
+    [4X[28XAvailabilityTest := function()[128X[104X
+    [4X[28X  local path,file;[128X[104X
+    [4X[28X    # test for existence of the compiled binary[128X[104X
+    [4X[28X    path:= DirectoriesPackagePrograms( "example" );[128X[104X
+    [4X[28X    file:= Filename( path, "hello" );[128X[104X
+    [4X[28X    if file = fail then[128X[104X
+    [4X[28X      LogPackageLoadingMessage( PACKAGE_WARNING,[128X[104X
+    [4X[28X          [ "The program `hello' is not compiled,",[128X[104X
+    [4X[28X            "`HelloWorld()' is thus unavailable.",[128X[104X
+    [4X[28X            "See the installation instructions;",[128X[104X
+    [4X[28X            "type: ?Installing the Example package" ] );[128X[104X
+    [4X[28X    fi;[128X[104X
+    [4X[28X    return file <> fail;[128X[104X
+    [4X[28X  end,[128X[104X
+    [4X[28X...[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YHowever,  if  you  look  at  the  actual  [11XPackageInfo.g[111X  file of the [5Xexample[105X
+  package,  you  will  see  that  its [10XAvailabilityTest[110X function always returns
+  [9Xtrue[109X, and just logs the warning if the binary is not available (which may be
+  later  viewed  with  [2XDisplayPackageLoadingLog[102X ([14X76.2-6[114X)). This means that the
+  binary is not regarded as essential for this package.[133X
+  
+  [33X[0;0YYou  might  also have to cope with the situation that external binaries will
+  only  run  under  UNIX (and not e.g. under Windows), or may not compile with
+  some  compilers  or default compiler options. See [14X3.4[114X for information on how
+  to test for the architecture.[133X
+  
+  [33X[0;0YPackage using a kernel module (see [14X76.3-11[114X), one may use a test like this:[133X
+  
+  [4X[32X[104X
+    [4X...[104X
+    [4XAvailabilityTest := function()[104X
+    [4X    # see if example.so exists and is a loadable kernel extension[104X
+    [4X    if not IsKernelExtensionAvailable("example") then[104X
+    [4X      LogPackageLoadingMessage( PACKAGE_WARNING,[104X
+    [4X          [ "The kernel extension `example' is unavailable,",[104X
+    [4X            "perhaps it needs to be recompiled?",[104X
+    [4X            "See the installation instructions;",[104X
+    [4X            "type: ?Installing the Example package" ] );[104X
+    [4X      return false;[104X
+    [4X    fi;[104X
+    [4X    return true;[104X
+    [4X  end,[104X
+    [4X...[104X
+  [4X[32X[104X
+  
+  [33X[0;0YLast  but  not least: do not print anything in the [10XAvailabilityTest[110X function
+  of   the   package   via   [10XPrint[110X   or   [10XInfo[110X.   Instead   one   should  call
+  [2XLogPackageLoadingMessage[102X  ([14X76.2-6[114X)  to  store  a message which may be viewed
+  later  with [2XDisplayPackageLoadingLog[102X ([14X76.2-6[114X) (the latter two functions have
+  been introduced in [5XGAP[105X 4.5)[133X
+  
+  
+  [1X76.15-3 [33X[0;0YCalling of and Communication with External Binaries[133X[101X
+  
+  [33X[0;0YThere  are  two  reasons for this: the input data has to be passed on to the
+  stand-alone  program  and  the  stand-alone  program  has to be started from
+  within [5XGAP[105X.[133X
+  
+  [33X[0;0YThere are two principal ways of doing this.[133X
+  
+  [33X[0;0YThe first possibility is to write all the data for the stand-alone to one or
+  several  files,  then  start  the  stand-alone with [2XProcess[102X ([14X11.1-1[114X) or [2XExec[102X
+  ([14X11.1-2[114X)  which then writes the output data to file, and finally read in the
+  standalone's output file.[133X
+  
+  [33X[0;0YThe second way is interfacing via input-output streams, see Section [14X10.8[114X.[133X
+  
+  [33X[0;0YSome  [5XGAP[105X  packages  use  kernel  modules  (see [14X76.3-11[114X) instead of external
+  binaries.   A  kernel  module  is  implemented  in  C  and  follows  certain
+  conventions  to  comply  with  the  [5XGAP[105X  kernel  interface, which we plan to
+  document  later. In the meantime, we advise you to look at existing examples
+  of such packages and get in touch with [5XGAP[105X developers if you plan to develop
+  such a package.[133X
+  
+  
+  [1X76.16 [33X[0;0YHaving an InfoClass[133X[101X
+  
+  [33X[0;0YIt  is  a good idea to declare an [10XInfoClass[110X for your package. This gives the
+  package  user  the opportunity to control the verbosity of output and/or the
+  possibility  of  receiving debugging information (see [14X7.4[114X). Below, we give a
+  quick overview of its utility.[133X
+  
+  [33X[0;0YAn  [10XInfoClass[110X  is  defined with a [10XDeclareInfoClass( [3XInfoPkgname[103X[10X );[110X statement
+  and  may  be  set  to  have an initial [10XInfoLevel[110X other than the zero default
+  (which means no [10XInfo[110X statement is to output information) via a [10XSetInfoLevel(
+  [3XInfoPkgname[103X[10X, [3Xlevel[103X[10X );[110X statement. An initial [10XInfoLevel[110X of 1 is typical.[133X
+  
+  [33X[0;0Y[10XInfo[110X statements have the form: [10XInfo( [3XInfoPkgname[103X[10X, [3Xlevel[103X[10X, [3Xexpr1[103X[10X, [3Xexpr2[103X[10X, ...);[110X
+  where  the expression list [10X[3Xexpr1[103X[10X, [3Xexpr2[103X[10X, ...[110X appears just like it would in a
+  [10XPrint[110X  statement.  The  only  difference is that the expression list is only
+  printed  (or  even  executed)  if  the  [10XInfoLevel[110X of [3XInfoPkgname[103X is at least
+  [3Xlevel[103X.[133X
+  
+  
+  [1X76.17 [33X[0;0YThe Banner[133X[101X
+  
+  [33X[0;0YWhen  the  package  is  loaded,  [5XGAP[105X  will display a default package banner,
+  constructed from the package metadata provided in the [11XPackageInfo.g[111X file.[133X
+  
+  [33X[0;0YAlternatively,  the package may establish its own banner by assigning either
+  a  string to the [10XBannerString[110X field of the record argument of [10XSetPackageInfo[110X
+  in  the  [11XPackageInfo.g[111X file or a function to the [10XBannerFunction[110X field, which
+  takes  this  record  as  its  unique argument. The latter possibility can be
+  useful  if  the  banner  shall  show  information  that is available only at
+  runtime.[133X
+  
+  [33X[0;0YIf  you  will  be  designing a banner for your package, it is a good idea to
+  suggest  there  how to access package documentation. For example, the banner
+  of the [5XExample[105X package says:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XFor help, type: ?Example package[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIn  order  for  this  to display the introduction of the [5XExample[105X package the
+  index-entry  [10X<Index>Example  package</Index>[110X was added just before the first
+  paragraph  of  the  introductory  section in the file [11Xdoc/example.xml[111X of the
+  [5XExample[105X package.[133X
+  
+  
+  [1X76.18 [33X[0;0YVersion Numbers[133X[101X
+  
+  [33X[0;0YVersion  numbers  are  strings  containing nonnegative integers separated by
+  non-numeric  characters. They are compared by [2XCompareVersionNumbers[102X ([14X76.3-9[114X)
+  which  first  splits them at non-digit characters and then lexicographically
+  compares  the  resulting  integer  lists.  Thus version [10X"2-3"[110X is larger than
+  version [10X"2-2-5"[110X but smaller than [10X"4r2p3"[110X or [10X"11.0"[110X.[133X
+  
+  [33X[0;0YIt is possible for code to require [5XGAP[105X packages in certain versions. In this
+  case,  all  versions,  whose  number  is  equal or larger than the requested
+  number  are  acceptable.  It  is  the  task of the package author to provide
+  upwards compatibility.[133X
+  
+  [33X[0;0YLoading  a  specific  version  of  a package (that is, [13Xnot[113X one with a larger
+  version  number)  can  be  achieved  by  prepending [10X=[110X to the desired version
+  number.  For  example,  [10XLoadPackage(  "example",  "=1.0" )[110X will load version
+  [10X"1.0"[110X  of  the  package  [10X"example"[110X, even if version [10X"1.1"[110X is available. As a
+  consequence, version numbers must not start with [10X=[110X, so [10X"=1.0"[110X is not a valid
+  version number.[133X
+  
+  [33X[0;0YPackage  authors  should choose a version numbering scheme that admits a new
+  version  number  even  after  tiny  changes  to the package, and ensure that
+  version  numbers  of  successive  package  versions  increase. The automatic
+  update  of  package  archives  in  the  [5XGAP[105X distribution will only work if a
+  package has a new version number.[133X
+  
+  [33X[0;0YIt   is   a   well-established   custom   to   name  package  archives  like
+  [11Xname-version.tar.gz[111X, [11Xname-version.tar.bz2[111X etc., where [10Xname[110X is the lower case
+  name,  and  [10Xversion[110X  is the version (another custom is that the archive then
+  should extract to a directory that has exactly the name [11Xname-version[111X).[133X
+  
+  [33X[0;0YIt is very important that there should not ever be, for a given [5XGAP[105X package,
+  two  different  archives  with  the same package version number. If you make
+  changes  to  your  package  and  place a new archive of the package onto the
+  public  server,  please  ensure that a new archive has a new version number.
+  This should be done even for very minor changes.[133X
+  
+  [33X[0;0YFor  most of the packages it will be inappropriate to re-use the date of the
+  release as a version number. It is much more obvious how big are the changes
+  between  versions  "4.4.12",  "4.5.1"  and  "4.5.2"  than  between  versions
+  "2008.12.17",  "2011.04.15"  and  "2011.09.14". The concept of using version
+  numbers  to  convey the meaning of the status of the code and the way it has
+  been  modified  is known as [21XSemantic Versioning[121X, see [7Xhttps://semver.org/[107X for
+  further recommendations on its use.[133X
+  
+  [33X[0;0YSince  version  information  is  duplicated in several places throughout the
+  package  documentation,  for [5XGAPDoc[105X-based manuals you may define the version
+  and  the  release  manual in the comments in [11XPackageInfo.g[111X file close to the
+  place where you specified its [10XVersion[110X and [10XDate[110X components, for example[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X##  <#GAPDoc Label="PKGVERSIONDATA">[128X[104X
+    [4X[28X##  <!ENTITY VERSION "3.3">[128X[104X
+    [4X[28X##  <!ENTITY RELEASEDATE "12/09/2017">[128X[104X
+    [4X[28X##  <!ENTITY RELEASEYEAR "2017">[128X[104X
+    [4X[28X##  <#/GAPDoc>[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Ynotify  [2XMakeGAPDocDoc[102X ([14XGAPDoc: MakeGAPDocDoc[114X) that a part of the document is
+  stored  in [11XPackageInfo.g[111X (see [11Xexample/makedocrel.g[111X), read this data into the
+  header  of the main document via [10X<#Include Label="PKGVERSIONDATA">[110X directive
+  and then use them via &VERSION; and &RELEASEDATE; entities almost everywhere
+  where  you  need  to  refer  to  them  (most commonly, in the title page and
+  installation instructions).[133X
+  
+  
+  [1X76.19 [33X[0;0YTesting a [5XGAP[105X[101X[1X package[133X[101X
+  
+  [33X[0;0YThere are several aspects of testing a [5XGAP[105X package.[133X
+  
+  [33X[0;0YFirst,  one  should ensure that the package functionality works as expected.
+  Below  we give an advice on creating test files for automated tests that may
+  be  run  by  package  authors,  by  [5XGAP[105X  developers  as  part of the release
+  preparation,  and  by  package users interested in checking that the package
+  works.  Such  tests  should be included in the package distribution, and the
+  responsibility for ensuring that they pass stays with package authors.[133X
+  
+  [33X[0;0YSecond,  the  package should cleanly integrate into the [5XGAP[105X system and other
+  packages, and should not break their functionality. In particular, all tests
+  from  the  standard  [5XGAP[105X testing suite should pass if the package is loaded.
+  This  is  more  comprehensive  and time consuming test, which [5XGAP[105X developers
+  regularly  run  using  special  tools.  They will report to you any detected
+  issues.  Below  we  explain how to do several simple and less time consuming
+  checks which package authors are recommended to perform themselves.[133X
+  
+  
+  [1X76.19-1 [33X[0;0YTests files for a GAP package[133X[101X
+  
+  [33X[0;0YThe  (optional)  [11Xtst[111X  directory of your package may contain as many tests of
+  the  package  functionality  as  appears  appropriate. These tests should be
+  organised into test files similarly to those in the [11Xtst[111X directory of the [5XGAP[105X
+  distribution as documented in [14X7.10[114X.[133X
+  
+  [33X[0;0YFor  a  deposited package, a test file with a basic test of the package (for
+  example,  to check that it works as expected and/or that the manual examples
+  are correct) may be specified in the component [10XTestFile[110X in the [11XPackageInfo.g[111X
+  to  be included in the [5XGAP[105X standard test suite. This file can either consist
+  of  calls  of  [2XTestDirectory[102X  ([14X7.10-3[114X) or [2XTest[102X ([14X7.10-2[114X) (in this case, it is
+  common  to  call  it [11Xtestall.g[111X) or be itself a test file having an extension
+  [11X.tst[111X  and  supposed  to  be  read  via [2XTest[102X ([14X7.10-2[114X). It is assumed that the
+  latter case occurs if and only if the file contains the substring[133X
+  
+  [33X[0;0Y [10X"gap> START_TEST("[110X[133X
+  
+  [33X[0;0Y(with exactly one space after the [5XGAP[105X prompt).[133X
+  
+  [33X[0;0YFor deposited packages, these tests are run by the [5XGAP[105X Group regularly, as a
+  part  of  the  standard  [5XGAP[105X  test  suite.  For  the efficient testing it is
+  important that the test specified in the [11XPackageInfo.g[111X file does not display
+  any output (e.g. no test progress indicators) except reporting discrepancies
+  if such occur and the completion report as in the example below:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTest("tst/testall.tst");[127X[104X
+    [4X[28XExample package: testall.tst[128X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YTests  which  produce extended output and/or require substantial runtime are
+  not  supposed  to be a part of the [5XGAP[105X standard test suite but may be placed
+  in the [11Xtst[111X directory of the packages with further instructions on how to run
+  them elsewhere.[133X
+  
+  [33X[0;0YBecause  of  different approaches to testing, used by different packages, it
+  is  not  always easy to identify whether an automated test passed or failed.
+  Presently,  automated  detection  works fine if a package uses a single [11X.tst[111X
+  file  or  uses [2XTestDirectory[102X ([14X7.10-3[114X) with the [10XexitGAP[110X option set to [9Xtrue[109X to
+  run  a  collection  of  tests  and  then  exits  [5XGAP[105X in a way that allows an
+  automated test setup to determine whether the test passed or failed:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XTestDirectory(DirectoriesPackageLibrary("packagename", "tst"), rec(exitGAP := true));[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIf  one  needs  a  more  sophisticated test file, then it should end with an
+  invocation  of  [2XForceQuitGap[102X ([14X6.7-4[114X) with an argument that indicates whether
+  the  tests  overall passed ([9Xtrue[109X) or failed ([9Xfalse[109X or [9Xfail[109X). For example, if
+  the test result is stored in a variable [10Xtestresult[110X then you can do this:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XForceQuitGap(testresult);[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X76.19-2 [33X[0;0YTesting [5XGAP[105X[101X[1X package loading[133X[101X
+  
+  [33X[0;0YTo  test  that  your package may be loaded into [5XGAP[105X without any problems and
+  conflicts  with  other  packages,  test  that  it  may  be loaded in various
+  configurations:[133X
+  
+  [30X    [33X[0;6Ystarting  [5XGAP[105X  with  no  packages  (except needed for [5XGAP[105X) using [10X-r -A[110X
+        options and calling [10XLoadPackage("packagename");[110X[133X
+  
+  [30X    [33X[0;6Ystarting  [5XGAP[105X  with  no  packages  (except needed for [5XGAP[105X) using [10X-r -A[110X
+        options and calling [10XLoadPackage("packagename" : OnlyNeeded );[110X[133X
+  
+  [30X    [33X[0;6Ystarting  [5XGAP[105X  in  the  default  configuration  (with  no options) and
+        calling [10XLoadPackage("packagename");[110X[133X
+  
+  [30X    [33X[0;6Ystarting  [5XGAP[105X  in  the  default  configuration  (with  no options) and
+        calling [10XLoadPackage("packagename" : OnlyNeeded );[110X[133X
+  
+  [30X    [33X[0;6Yfinally,  together  with  all  other  packages  using  [2XLoadAllPackages[102X
+        ([14X76.19-3[114X)  (see  below)  in four possible combinations of starting [5XGAP[105X
+        with/without  [10X-r  -A[110X  options  and  calling  [2XLoadAllPackages[102X ([14X76.19-3[114X)
+        with/without [10Xreversed[110X option.[133X
+  
+  [33X[0;0YThe  test  of  loading  all  packages is the most subtle one. Quite often it
+  reveals  problems  which  do  not occur in the default configuration but may
+  cause difficulties to the users of specialised packages.[133X
+  
+  [33X[0;0YAdditionally,  we  recommend  using  [2XShowPackageVariables[102X  ([14X76.3-17[114X)  to see
+  information  about  variables  created  by your package to check if any have
+  either  short  names  (no  more  than  three characters) or names breaking a
+  recommended  naming  convention  that the [5XGAP[105X core system. [5XGAP[105X packages also
+  should  not  use  global  variables  starting  in the lowercase (see Section
+  [14X76.10[114X).[133X
+  
+  [1X76.19-3 LoadAllPackages[101X
+  
+  [33X[1;0Y[29X[2XLoadAllPackages[102X( [3X:[103X [3Xreversed[103X ) [32X function[133X
+  
+  [33X[0;0Yloads  all [5XGAP[105X packages from their list sorted in alphabetical order (needed
+  and  suggested  packages  will be loaded when required). This is a technical
+  function  to  check  packages compatibility, so it should NOT be used to run
+  anything  except  tests;  it  is known that [5XGAP[105X performance is slower if all
+  packages  are  loaded.  To  introduce  some variations of the order in which
+  packages will be loaded for testing purposes, [2XLoadAllPackages[102X accepts option
+  [10Xreversed[110X to load packages from their list sorted in the reverse alphabetical
+  order.[133X
+  
+  
+  [1X76.19-4 [33X[0;0YTesting a [5XGAP[105X[101X[1X package with the [5XGAP[105X[101X[1X standard test suite[133X[101X
+  
+  [33X[0;0YThe [11Xtst[111X directory of the [5XGAP[105X installation contains a selection of test files
+  and scripts such as [11Xtestinstall.g[111X and [11Xteststandard.g[111X which are a part of the
+  [5XGAP[105X standard test suite.[133X
+  
+  [33X[0;0YIt  is  important  to  check  that  your package does not break [5XGAP[105X standard
+  tests.  To  perform  a clean test and avoid interfering with other packages,
+  first you must start a new [5XGAP[105X session and then read either [11Xtestinstall.g[111X or
+  [11Xteststandard.g[111X as demonstrated below.[133X
+  
+  [33X[0;0YThe  quicker  test, [11Xtestinstall.g[111X, should run in about a minute depending on
+  your hardware speed. It may be started with the command[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRead( Filename( DirectoriesLibrary( "tst" ), "testinstall.g" ) );[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YYou  will  get a large number of lines with output about the progress of the
+  tests, for example:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XYou should start GAP4 using `gap -A -x 80 -r'.[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XArchitecture: SOMETHING-SOMETHING-gcc-default64[128X[104X
+    [4X[28X[128X[104X
+    [4X[28Xtesting: ..../gap-4.X.Y/tst/testinstall/alghom.tst[128X[104X
+    [4X[28X      84 ms (55 ms GC) and 2.90MB allocated for alghom.tst[128X[104X
+    [4X[28Xtesting: ..../gap-4.X.Y/tst/testinstall/algmat.tst[128X[104X
+    [4X[28X     839 ms (114 ms GC) and 219MB allocated for algmat.tst[128X[104X
+    [4X[28X[ further lines deleted ][128X[104X
+    [4X[28Xtesting: ..../gap-4.X.Y/tst/testinstall/zmodnze.tst[128X[104X
+    [4X[28X     127 ms (119 ms GC) and 1.29MB allocated for zmodnze.tst[128X[104X
+    [4X[28X-----------------------------------[128X[104X
+    [4X[28Xtotal     62829 ms (24136 ms GC) and 8.61GB allocated[128X[104X
+    [4X[28X              0 failures in 252 files[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X#I  No errors detected while testing[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y(optionally,  you may start [5XGAP[105X with the command line options which you will
+  see in the test output, to run it in a more conservative settings).[133X
+  
+  [33X[0;0YThe  more  thorough  test  is  [11Xteststandard.g[111X  which exercises more of [5XGAP[105X's
+  capabilities,  also  including  all  test files from [11Xteststandard.g[111X. It runs
+  quite  a  bit longer, maybe 10-20 minutes, and produces an output similar to
+  the  testinstall.g  test.  To  run it, also start a new [5XGAP[105X session and then
+  call[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRead( Filename( DirectoriesLibrary( "tst" ), "teststandard.g" ) );[127X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YYou  may  repeat the same check loading your package with [10XOnlyNeeded[110X option.
+  Remember to perform each subsequent test in a new [5XGAP[105X session.[133X
+  
+  [33X[0;0YAlso  you  may  perform  individual  tests from the [11Xtst[111X directory of the [5XGAP[105X
+  installation loading them with [2XTest[102X ([14X7.10-2[114X).[133X
+  
+  
+  [1X76.20 [33X[0;0YAccess to the [5XGAP[105X[101X[1X Development Version[133X[101X
+  
+  [33X[0;0YWe  are  aiming  at  providing a stable platform for package development and
+  testing with official [5XGAP[105X releases. We also invite everyone to contribute by
+  submitting  patches,  pull  requests, and bug reports. We would like to make
+  the contributing process as easy as possible.[133X
+  
+  [33X[0;0YThe   main   GAP   development   repository   is   hosted   on   GitHub   at
+  [7Xhttps://github.com/gap-system/gap[107X.   Many  [5XGAP[105X  packages  also  have  public
+  repositories  and issue trackers, and we are keeping a list of such packages
+  at [7Xhttps://gap-packages.github.io/[107X.[133X
+  
+  [33X[0;0YFor  further  information  about contributing to the GAP development, please
+  see [7Xhttps://github.com/gap-system/gap/blob/master/CONTRIBUTING.md[107X.[133X
+  
+  
+  [1X76.21 [33X[0;0YVersion control and continuous integration for [5XGAP[105X[101X[1X packages[133X[101X
+  
+  [33X[0;0YAs  we  have mentioned above, many [5XGAP[105X packages have public repositories and
+  issue  trackers  on  GitHub,  and  we are keeping a list of such packages at
+  [7Xhttps://gap-packages.github.io/[107X. We welcome establishing public repositories
+  for  new packages and migrating existing package repositories there as well.
+  Such  repositories  may be hosted under their authors' accounts or under the
+  gap-packages organisation ([7Xhttps://github.com/gap-packages/[107X). The latter has
+  the  benefit that while the authors will preserve their deciding role on all
+  aspects of the package development, the package will become more visible for
+  potential  collaborators  and  [5XGAP[105X  developers may help to set up [13Xcontinuous
+  integration[113X  for  your  package  so that every commit to the repository will
+  trigger  automated  running  of  package tests and reporting any failures to
+  package maintainers.[133X
+  
+  
+  [1X76.22 [33X[0;0YSelecting a license for a [5XGAP[105X[101X[1X Package[133X[101X
+  
+  [33X[0;0YAs  it was mentioned in the description of the [11XLICENSE[111X file in Section [14X76.5[114X,
+  it is advised to make clear in the documentation of the package the basis on
+  which  it is being distributed to users. [5XGAP[105X itself is distributed under the
+  GNU Public License version 2 (version 2 or later). We would encourage you to
+  consider  the  GPL  license for your packages, but you might wish to be more
+  restrictive  (for  instance  forbidding  redistribution  for profit) or less
+  restrictive  (allowing  your  software  to  be  incorporated into commercial
+  software).  See [21XChoosing a License for the Distribution of Your Package[121X from
+  [7Xhttps://www.gap-system.org/Packages/Authors/authors.html[107X       and      also
+  [7Xhttps://choosealicense.com/[107X for further details.[133X
+  
+  [33X[0;0YIn  the  past  many  [5XGAP[105X  packages  used  the  text  [21XWe  adopt the copyright
+  regulations  of [5XGAP[105X as detailed in the copyright notice in the [5XGAP[105X manual[121X or
+  a  similar  statement. We now advise to be more explicit by making the exact
+  reference to the GPL license, for example:[133X
+  
+  [33X[0;0Y[13X  [5Xpackagename[105X  is  free  software;  you can redistribute it and/or modify it
+  under     the     terms     of    the    GNU    General    Public    License
+  ([7Xhttps://www.fsf.org/licenses/gpl.html[107X)  as  published  by the Free Software
+  Foundation;  either  version 2 of the License, or (at your option) any later
+  version. [113X and also including a copy of the full text of the license.[133X
+  
+  
+  [1X76.23 [33X[0;0YReleasing a GAP Package[133X[101X
+  
+  [33X[0;0YThe [5XGAP[105X distribution provides archives in several different formats.[133X
+  
+  [8X[11X.tar.gz[111X[108X
+        [33X[0;6Ya standard UNIX [10Xtar[110X archive, compressed with [10Xgzip[110X[133X
+  
+  [8X[11X.tar.bz2[111X[108X
+        [33X[0;6Ya standard UNIX [10Xtar[110X archive, compressed with [10Xbzip2[110X[133X
+  
+  [8X[11X.zip[111X[108X
+        [33X[0;6Yan archive in [10Xzip[110X format, where text files should have UNIX style line
+        breaks[133X
+  
+  [33X[0;0YFor convenience of possible users it is sensible that you provide an archive
+  of your package in at least one of these formats.[133X
+  
+  [33X[0;0YFor example, if you wish to supply a [11X.tar.gz[111X archive, you may create it with
+  the command[133X
+  
+  [33X[0;0Y [10Xtar -cvzf packagename-version.tar.gz packagename[110X[133X
+  
+  [33X[0;0YBecause the release of the [5XGAP[105X package is independent of the version of [5XGAP[105X,
+  a  [5XGAP[105X  package  should be wrapped up in separate file that can be installed
+  onto  any  version  of  [5XGAP[105X. In this way, a package can be upgraded any time
+  without  the  need to wait for new [5XGAP[105X releases. To ensure this, the package
+  should  be  archived  from  the  [5XGAP[105X  [11Xpkg[111X  directory,  that is all files are
+  archived with the path starting at the package's name.[133X
+  
+  [33X[0;0YThe  archive  of  a  [5XGAP[105X  package should contain all files necessary for the
+  package  to  work.  In  particular there should be a compiled documentation,
+  which  includes  the  [11Xmanual.six[111X,  [11Xmanual.toc[111X  and  [11Xmanual.lab[111X  file  in the
+  documentation  subdirectory  which  are  created  by [5XGAPDoc[105X while TeXing the
+  documentation.  (The  first two files are needed by the [5XGAP[105X help system, and
+  the  [11Xmanual.lab[111X  file  is  needed  if the main manuals or another package is
+  referring  to  your package. Use the command [10XGAPDocManualLab( packagename );[110X
+  to create this file for your help books if you use [5XGAPDoc[105X.)[133X
+  
+  [33X[0;0YNote  that  wrapping the [5XGAP[105X distribution as a single archive containing the
+  core  system  and  all  currently  redistributed  packages, will change file
+  timestamps, so one should not rely on them anywhere in the package.[133X
+  
+  [33X[0;0YFor  packages  hosted  on GitHub publishing package release and establishing
+  its  website can be very efficiently automated using two tools: ReleaseTools
+  ([7Xhttps://github.com/gap-system/ReleaseTools[107X)      and      GitHubPagesForGAP
+  ([7Xhttps://github.com/gap-system/GitHubPagesForGAP[107X).[133X
+  
+  
+  [1X76.24 [33X[0;0YThe homepage of a Package[133X[101X
+  
+  [33X[0;0YIf  you  want  to  distribute  your  package  you should create its homepage
+  containing  some  basic  information, archives for download, the [11XREADME[111X file
+  with  installation  instructions,  and a copy of the package's [11XPackageInfo.g[111X
+  file.[133X
+  
+  [33X[0;0YThe   responsibility   to   maintain  this  homepage  is  with  the  package
+  authors/maintainers.[133X
+  
+  [33X[0;0YIf   you   tell   the  [5XGAP[105X  Group  about  your  package  (say,  by  mail  to
+  [7Xmailto:support@gap-system.org[107X) we may consider either[133X
+  
+  [30X    [33X[0;6Yadding a link to your package homepage from the [5XGAP[105X website (thus, the
+        package will be an [13Xundeposited contribution[113X);[133X
+  
+  [30X    [33X[0;6Yor redistributing the current version of your package as a part of the
+        [5XGAP[105X distribution (this, the package will be [13Xdeposited[113X), also ;[133X
+  
+  [33X[0;0YPlease  also  consider submitting your package to the [5XGAP[105X package refereeing
+  process  (see  [7Xhttps://www.gap-system.org/Contacts/submit.html[107X  for  further
+  information).[133X
+  
+  [33X[0;0YFor  packages  hosted  on GitHub publishing package release and establishing
+  its   website   can   be   very   efficiently  automated  using  two  tools:
+  GitHubPagesForGAP    ([7Xhttps://github.com/gap-system/GitHubPagesForGAP[107X)   and
+  ReleaseTools ([7Xhttps://github.com/gap-system/ReleaseTools[107X).[133X
+  
+  
+  [1X76.25 [33X[0;0YSome things to keep in mind[133X[101X
+  
+  [30X    [33X[0;6YSome  packages  still  use  for their manuals the old [21Xgapmacro[121X format,
+        support  for  which  may  be  discontinued in the future. We encourage
+        authors  of  those  packages to eventually convert their documentation
+        [5XGAPDoc[105X.  New  packages  are  recommended  to  use  [5XGAPDoc[105X,  which, for
+        example,  is  capable  of  creating  HTML  documentation  with MathJax
+        support,  allows  easy  extraction  of examples from documentation for
+        testing,  etc. One could also use the [5XAutoDoc[105X which simplifies writing
+        documentation by generating most of the [5XGAPDoc[105X code automatically.[133X
+  
+  [30X    [33X[0;6YThe  concept  of  an autoloaded package, which existed before [5XGAP[105X 4.5,
+        has  been  integrated  with  the  [13Xneeded[113X  and [13Xsuggested[113X mechanism that
+        exists  between  packages.  [5XGAP[105X itself now [21Xneeds[121X certain packages (for
+        instance [5XGAPDoc[105X) and [21Xsuggests[121X others (typically the packages that were
+        autoloaded).  The  decisions which packages [5XGAP[105X should need or suggest
+        are made by developers based on technical criteria. They can be easily
+        overridden by a user using the new [11Xgap.ini[111X (see [14X3.2[114X). The default file
+        ensures  that  all  formerly  autoloaded  packages are still loaded if
+        present.[133X
+  
+  [30X    [33X[0;6YOptional  [11X~/.gap[111X directory for user's customisations which may contain
+        e.g.  locally  installed  packages  (see [14X9.2[114X). If package installation
+        instructions  explain  how  to  install  the package in a non-standard
+        location, they should mention this.[133X
+  
+  [30X    [33X[0;6YPackages  loading  mechanism  allows  to  make  loading  packages more
+        informative,  while avoiding confusing the user with warning and error
+        messages for packages they didn't know they were loading. For example,
+        many  messages  are  stored  but  not  displayed  using  the  function
+        [2XLogPackageLoadingMessage[102X    ([14X76.2-6[114X)   and   there   is   a   function
+        [2XDisplayPackageLoadingLog[102X  ([14X76.2-6[114X)  to  show  log  messages that occur
+        during   package   loading.  Packages  are  encouraged  to  use  these
+        mechanisms to report problems in loading (e.g. binaries not compiled),
+        rather than printing messages directly.[133X
+  
+  
+  [1X76.26 [33X[0;0YPackage release checklists[133X[101X
+  
+  [33X[0;0YThe   following   checklists   should  be  useful  to  package  authors  and
+  maintainers,  as  well  as  to  everyone  involved  in  the  depositing  and
+  refereeing of [5XGAP[105X packages.[133X
+  
+  
+  [1X76.26-1 [33X[0;0YChecklist for releasing a new package[133X[101X
+  
+  [30X    [33X[0;6YTest that the package:[133X
+  
+        [30X    [33X[0;12Ydoes  not  break  [11Xtestinstall.g[111X and [11Xteststandard.g[111X, and does not
+              slow them down noticeably (see [14X76.19-4[114X);[133X
+  
+        [30X    [33X[0;12Ymay be loaded in various configurations (see [14X76.19-2[114X);[133X
+  
+        [30X    [33X[0;12Yfollows the guidelines of Section [14X76.10[114X about names of functions
+              and variables;[133X
+  
+  [30X    [33X[0;6Y[11XPackageInfo.g[111X file:[133X
+  
+        [30X    [33X[0;12Ycorrectly  specifies  package version, release date, and package
+              authors;[133X
+  
+        [30X    [33X[0;12Ypasses validation using [2XValidatePackageInfo[102X ([14X76.3-16[114X);[133X
+  
+        [30X    [33X[0;12Ybesides   mandatory  components,  which  are  required  to  pass
+              validation,  also has relevant optional components (such as, for
+              example,  URLs  of  public  source  code  repository  and  issue
+              tracker;  hints  to distinguish binary and text files in case of
+              non-standard file names and extensions, etc.);[133X
+  
+  [30X    [33X[0;6YPackage documentation:[133X
+  
+        [30X    [33X[0;12Yis  built  and included in the package archive together with its
+              source files;[133X
+  
+        [30X    [33X[0;12Ystates  the  same  version,  release date and package authors as
+              specified in the [11XPackageInfo.g[111X file;[133X
+  
+        [30X    [33X[0;12Yhas  the  same version, release date and package authors details
+              as stated in the [11XPackageInfo.g[111X file;[133X
+  
+        [30X    [33X[0;12Yis  searchable  using  the [5XGAP[105X help system in all formats (text,
+              HTML and PDF);[133X
+  
+        [30X    [33X[0;12Yis   clear   about  the  license  under  which  the  package  is
+              distributed,  and  refers  to  the  [11XLICENSE[111X file which should be
+              included in the package;[133X
+  
+  [30X    [33X[0;6YPackage archive(s):[133X
+  
+        [30X    [33X[0;12Yhave  correct  permissions  for  all files and directories after
+              their  unpacking  (755  for directories and executables, if any;
+              644 for other files);[133X
+  
+        [30X    [33X[0;12Ycontain files with correct line breaks for the given format (see
+              Section [14X76.23[114X);[133X
+  
+        [30X    [33X[0;12Ycontain  no  hidden  system  files  and directories that are not
+              supposed  to  be  included in the package, e.g. [11X.gitignore[111X, [11X.git[111X
+              etc.;[133X
+  
+  [30X    [33X[0;6YPackage availability:[133X
+  
+        [30X    [33X[0;12Ynot  only the package archive(s), but also the [11XPackageInfo.g[111X and
+              [11XREADME[111X files are available online;[133X
+  
+  
+  [1X76.26-2  [33X[0;0YChecklist  for  upgrading the package for the next major release of[101X
+  [1X[5XGAP[105X[101X[1X[133X[101X
+  
+  [33X[0;0Y[5XGAP[105X  ecosystem  is  not  static:  both  the  core  [5XGAP[105X  system  and packages
+  redistributed  with  [5XGAP[105X  are in constant development. [5XGAP[105X has a policy that
+  changes that may have a disruptive effect on packages redistributed with [5XGAP[105X
+  should  only  be  introduced  in major [5XGAP[105X releases. When the next [5XGAP[105X major
+  release  is  prepared,  a  beta  version  for  package  authors will be made
+  available  in  order  to  give  them  an opportunity to check and update, if
+  necessary,  their  packages for the public release of the next major version
+  of [5XGAP[105X.[133X
+  
+  [33X[0;0YThe  following  checklist  will  help  you to check how well your package is
+  ready to work with the next major release of [5XGAP[105X[133X
+  
+  [30X    [33X[0;6YCheck  that the package functionality works as expected, package tests
+        run  with  no  discrepancies,  and  manual  examples correspond to new
+        version  of  [5XGAP[105X.  This is a convenient opportunity to polish existing
+        and add new tests, and improve manual examples.[133X
+  
+  [30X    [33X[0;6YRevise  package  dependencies:  check  that the [11XPackageInfo.g[111X file has
+        correct list of needed and suggested packages (see Section [14X76.11[114X).[133X
+  
+  [30X    [33X[0;6YRevise  licensing  information:  check that the package states clearly
+        under which conditions it is distributed and includes a [11XLICENSING[111X file
+        with the text of a license (see Section [14X76.22[114X).[133X
+  
+  [30X    [33X[0;6YRebuild  the  package documentation to update cross-references to main
+        [5XGAP[105X  manuals  and,  if  relevant,  to  the  documentation of other [5XGAP[105X
+        packages.  This  will  ensure  that  cross-references from the package
+        manual  to  the  main  [5XGAP[105X  manuals  are correct and that the [5XGAP[105X help
+        system  will  be  able to navigate to the more precise location in the
+        package  manual.  This  will  also  improve  the layout of the package
+        documentation by picking up the changes in documenting tools.[133X
+  
+  [30X    [33X[0;6YCheck  if  the  package  still  relies on some obsolete variables (see
+        Chapter  [14X77[114X)  and  replace their usage by the new commands. To perform
+        such check, start [5XGAP[105X with `-O` command line option to disable loading
+        obsoletes, and then load your package.[133X
+  
+  [30X    [33X[0;6YCheck  for  any  specific advice in release notes for the beta release
+        for package authors.[133X
+  

@@ -1,0 +1,810 @@
+  
+  [1X3 [33X[0;0YHow HPC-GAP organizes shared memory: Regions[133X[101X
+  
+  [33X[0;0YHPC-GAP allows multiple threads to access data shared between them; to avoid
+  common  concurrency  errors,  such  as  race  conditions,  it partitions GAP
+  objects  into regions. Access to regions is regulated so that no two threads
+  can  modify  objects in the same region at the same time and so that objects
+  that  are  being  read  by  one  thread  cannot  concurrently be modified by
+  another.[133X
+  
+  
+  [1X3.1 [33X[0;0YThread-local regions[133X[101X
+  
+  [33X[0;0YEach  thread has an associated thread-local region. When a thread implicitly
+  or  explicitly  creates  a  new object, that object initially belongs to the
+  thread's thread-local region.[133X
+  
+  [33X[0;0YOnly  the  thread can read or modify objects in its thread-local region. For
+  other  threads  to  access  an object, that object has to be migrated into a
+  different region first.[133X
+  
+  
+  [1X3.2 [33X[0;0YShared regions[133X[101X
+  
+  [33X[0;0YShared  regions  are  explicitly  created  through  the [2XShareObj[102X ([14X3.9-9[114X) and
+  [2XShareSingleObj[102X  ([14X3.9-15[114X) primitives (see below). Multiple threads can access
+  them  concurrently, but accessing them requires that a thread uses an [10Xatomic[110X
+  statement to acquire a read or write lock beforehand.[133X
+  
+  [33X[0;0YSee the section on [10Xatomic[110X statements ([14X3.9-43[114X) for details.[133X
+  
+  
+  [1X3.3 [33X[0;0YOrdering of shared regions[133X[101X
+  
+  [33X[0;0YShared  regions are by default ordered; each shared region has an associated
+  numeric  precedence  level. Regions can generally only be locked in order of
+  descending  precedence. The purpose of this mechanism is to avoid accidental
+  deadlocks.[133X
+  
+  [33X[0;0YThe  ordering  requirement  can  be  overridden  in two ways: regions with a
+  negative precedence are excluded from it. This exception should be used with
+  care, as it can lead to deadlocks.[133X
+  
+  [33X[0;0YAlternatively,  two  or  more  regions  can be locked simultaneously via the
+  [10Xatomic[110X  statement.  In  this case, the ordering of these regions relative to
+  each other can be arbitrary.[133X
+  
+  
+  [1X3.4 [33X[0;0YThe public region[133X[101X
+  
+  [33X[0;0YA special public region contains objects that only permit atomic operations.
+  These  include, in particular, all immutable objects (immutable in the sense
+  that their in-memory representation cannot change).[133X
+  
+  [33X[0;0YAll  threads  can  access  objects in the public region at all times without
+  needing to acquire a read- or write-lock beforehand.[133X
+  
+  
+  [1X3.5 [33X[0;0YThe read-only region[133X[101X
+  
+  [33X[0;0YThe  read-only  region  is another special region that contains objects that
+  are  only  meant  to  be read; attempting to modify an object in that region
+  will  result  in  a  runtime  error.  To obtain a modifiable copy of such an
+  object, the [2XCopyRegion[102X ([14X3.9-29[114X) primitive can be used.[133X
+  
+  
+  [1X3.6 [33X[0;0YMigrating objects between regions[133X[101X
+  
+  [33X[0;0YObjects  can  be  migrated  between  regions using a number of functions. In
+  order to migrate an object, the current thread must have exclusive access to
+  that  object; the object must be in its thread-local region or it must be in
+  a shared region for which the current thread holds a write lock.[133X
+  
+  [33X[0;0YThe  [2XShareObj[102X  ([14X3.9-9[114X)  and  [2XShareSingleObj[102X  ([14X3.9-15[114X) functions create a new
+  shared region and migrate their respective argument to that region; [10XShareObj[110X
+  will  also  migrate  all  subobjects  that are within the same region, while
+  [10XShareSingleObj[110X will leave the subobjects unaffected.[133X
+  
+  [33X[0;0YThe  [2XMigrateObj[102X  ([14X3.9-21[114X)  and  [2XMigrateSingleObj[102X  ([14X3.9-22[114X) functions migrate
+  objects  to an existing region. The first argument of either function is the
+  object  to  be  migrated;  the second is either a region (as returned by the
+  [2XRegionOf[102X  ([14X3.9-7[114X)  function)  or an object whose containing region the first
+  argument is to be migrated to.[133X
+  
+  [33X[0;0YThe  current  thread needs exclusive access to the target region (denoted by
+  the  second argument) for the operation to succeed. If successful, the first
+  argument  will  be  in the same region as the second argument afterwards. In
+  the  case  of  [2XMigrateObj[102X ([14X3.9-21[114X), all subobjects within the same region as
+  the first argument will also be migrated to the target region.[133X
+  
+  [33X[0;0YFinally,  [2XAdoptObj[102X ([14X3.9-26[114X) and [2XAdoptSingleObj[102X ([14X3.9-27[114X) are special cases of
+  [2XMigrateObj[102X  ([14X3.9-21[114X)  and [2XMigrateSingleObj[102X ([14X3.9-22[114X), where the target region
+  is the thread-local region of the current thread.[133X
+  
+  [33X[0;0YTo  migrate  objects  to  the  read-only region, one can use [2XMakeReadOnlyObj[102X
+  ([14X3.9-35[114X) and [2XMakeReadOnlySingleObj[102X ([14X3.9-36[114X). The first migrates its argument
+  and  all  its  subjobjects  that are within the same region to the read-only
+  region;   the  second  migrates  only  the  argument  itself,  but  not  its
+  subobjects.[133X
+  
+  [33X[0;0YIt  is  generally  not  possible to migrate objects explicitly to the public
+  region;  only  objects  with purely atomic operations can be made public and
+  that is done automatically when they are created.[133X
+  
+  [33X[0;0YThe   exception   are  immutable  objects.  When  [2XMakeImmutable[102X  ([14XReference:
+  MakeImmutable[114X)  is  used,  its argument is automatically moved to the public
+  region.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRegionOf(MakeImmutable([1,2,3]));[127X[104X
+    [4X[28X<public region>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X3.7 [33X[0;0YRegion names[133X[101X
+  
+  [33X[0;0YRegions  can be given names, either explicitly via [2XSetRegionName[102X ([14X3.9-38[114X) or
+  when  they  are  created  via  [2XShareObj[102X ([14X3.9-9[114X) and [2XShareSingleObj[102X ([14X3.9-15[114X).
+  Thread-local regions, the public, and the readonly region are given names by
+  default.[133X
+  
+  [33X[0;0YMultiple regions can have the same name.[133X
+  
+  
+  [1X3.8 [33X[0;0YControlling access to regions[133X[101X
+  
+  [33X[0;0YIf  either  GAP code or a kernel primitive attempts to access an object that
+  it  is  not  allowed to access according to these semantics, either a "write
+  guard  error"  (for  a  failed  write access) or a "read guard error" (for a
+  failed  read  access)  will  be raised. The global variable [10XLastInaccessible[110X
+  will contain the object that caused such an error.[133X
+  
+  [33X[0;0YOne  exception  is that threads can modify objects in regions that they have
+  only  read access (but not write access) to using write-once functions - see
+  section [14X3.11[114X.[133X
+  
+  [33X[0;0YTo inspect objects whose contents lie in other regions (and therefore cannot
+  be  displayed  by  [2XPrintObj[102X  ([14XReference:  PrintObj[114X)  or  [2XViewObj[102X ([14XReference:
+  ViewObj[114X),  the functions [2XViewShared[102X ([14X3.9-41[114X) and [2XUNSAFE_VIEW[102X ([14X3.9-42[114X) can be
+  used.[133X
+  
+  
+  [1X3.9 [33X[0;0YFunctions relating to regions[133X[101X
+  
+  [1X3.9-1 NewRegion[101X
+  
+  [33X[1;0Y[29X[2XNewRegion[102X( [[3Xname[103X, ][3Xprec[103X ) [32X function[133X
+  
+  [33X[0;0YThe function [2XNewRegion[102X creates a new shared region. If the optional argument
+  [3Xname[103X is provided, then the name of the new region will be set to [3Xname[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XNewRegion("example region");[127X[104X
+    [4X[28X<region: example region>[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[2XNewRegion[102X  will create a region with a high precedence level. It is intended
+  to  be  called by user code. The exact precedence level can be adjusted with
+  [3Xprec[103X,  which  must  be  an  integer in the range [10X[-1000..1000][110X; [3Xprec[103X will be
+  added to the normal precedence level.[133X
+  
+  [1X3.9-2 NewLibraryRegion[101X
+  
+  [33X[1;0Y[29X[2XNewLibraryRegion[102X( [[3Xname[103X, ][3Xprec[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XNewLibraryRegion[102X   functions   like   [2XNewRegion[102X  ([14X3.9-1[114X),  except  that  the
+  precedence  of  the region it creates is below that of [2XNewRegion[102X ([14X3.9-1[114X). It
+  is intended to be used by user libraries and GAP packages.[133X
+  
+  [1X3.9-3 NewSystemRegion[101X
+  
+  [33X[1;0Y[29X[2XNewSystemRegion[102X( [[3Xname[103X, ][3Xprec[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XNewSystemRegion[102X functions like [2XNewRegion[102X ([14X3.9-1[114X), except that the precedence
+  of  the  region  it creates is below that of [2XNewLibraryRegion[102X ([14X3.9-2[114X). It is
+  intended to be used by the standard GAP library.[133X
+  
+  [1X3.9-4 NewKernelRegion[101X
+  
+  [33X[1;0Y[29X[2XNewKernelRegion[102X( [[3Xname[103X, ][3Xprec[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XNewKernelRegion[102X functions like [2XNewRegion[102X ([14X3.9-1[114X), except that the precedence
+  of  the  region  it  creates is below that of [2XNewSystemRegion[102X ([14X3.9-3[114X). It is
+  intended  to  be used by the GAP kernel, and GAP library code that interacts
+  closely with the kernel.[133X
+  
+  [1X3.9-5 NewInternalRegion[101X
+  
+  [33X[1;0Y[29X[2XNewInternalRegion[102X( [[3Xname[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XNewInternalRegion[102X   functions   like  [2XNewRegion[102X  ([14X3.9-1[114X),  except  that  the
+  precedence  of the region it creates is the lowest available. It is intended
+  to  be  used for regions that are self-contained; i.e. no function that uses
+  such  a  region  may  lock another region while accessing it. The precedence
+  level of an internal region cannot be adjusted.[133X
+  
+  [1X3.9-6 NewSpecialRegion[101X
+  
+  [33X[1;0Y[29X[2XNewSpecialRegion[102X( [[3Xname[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XNewLibraryRegion[102X  ([14X3.9-2[114X)  functions like [2XNewRegion[102X ([14X3.9-1[114X), except that the
+  precedence  of  the  region  it  creates is negative. It is thus exempt from
+  normal ordering and deadlock checks.[133X
+  
+  [1X3.9-7 RegionOf[101X
+  
+  [33X[1;0Y[29X[2XRegionOf[102X( [3Xobj[103X ) [32X function[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRegionOf(1/2);[127X[104X
+    [4X[28X<public region>[128X[104X
+    [4X[25Xgap>[125X [27XRegionOf([1,2,3]);[127X[104X
+    [4X[28X<region: thread region #0>[128X[104X
+    [4X[25Xgap>[125X [27XRegionOf(ShareObj([1,2,3]));[127X[104X
+    [4X[28X<region 0x45deaa0>[128X[104X
+    [4X[25Xgap>[125X [27XRegionOf(ShareObj([1,2,3]));[127X[104X
+    [4X[28X<region 0x45deaa0>[128X[104X
+    [4X[25Xgap>[125X [27XRegionOf(ShareObj([1,2,3], "test region"));[127X[104X
+    [4X[28X<region: test region>[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNote  that  the  unique  number  that  each  region  is  identified  with is
+  system-specific  and  can  change  each  time  the code is being run. Region
+  objects returned by [10XRegionOf[110X can be compared:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRegionOf([1,2,3]) = RegionOf([4,5,6]);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  result  in  this  example  is  true  because both lists are in the same
+  thread-local region.[133X
+  
+  [1X3.9-8 RegionPrecedence[101X
+  
+  [33X[1;0Y[29X[2XRegionPrecedence[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XRegionPrecedence[102X will return the precedence of the region of [3Xobj[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRegionPrecedence(NewRegion("Test"));[127X[104X
+    [4X[28X30000[128X[104X
+    [4X[25Xgap>[125X [27XRegionPrecedence(NewRegion("Test2", 1));[127X[104X
+    [4X[28X30001[128X[104X
+    [4X[25Xgap>[125X [27XRegionPrecedence(NewLibraryRegion("LibTest", -1));[127X[104X
+    [4X[28X19999[128X[104X
+  [4X[32X[104X
+  
+  [1X3.9-9 ShareObj[101X
+  
+  [33X[1;0Y[29X[2XShareObj[102X( [3Xobj[103X[[, [3Xname[103X], [3Xprec[103X] ) [32X function[133X
+  
+  [33X[0;0YThe  [2XShareObj[102X  function  creates a new shared region and migrates the object
+  and  all  its  subobjects  to  that region. If the optional argument [3Xname[103X is
+  provided, then the name of the new region is set to [3Xname[103X.[133X
+  
+  [33X[0;0Y[2XShareObj[102X  will  create a region with a high precedence level. It is intended
+  to  be  called  by user code. The actual precedence level can be adjusted by
+  the optional [3Xprec[103X argument in the same way as for [2XNewRegion[102X ([14X3.9-1[114X).[133X
+  
+  [1X3.9-10 ShareLibraryObj[101X
+  
+  [33X[1;0Y[29X[2XShareLibraryObj[102X( [3Xobj[103X[[, [3Xname[103X], [3Xprec[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XShareLibraryObj[102X  functions like [2XShareObj[102X ([14X3.9-9[114X), except that the precedence
+  of  the  region it creates is below that of [2XShareObj[102X ([14X3.9-9[114X). It is intended
+  to be used by user libraries and GAP packages.[133X
+  
+  [1X3.9-11 ShareSystemObj[101X
+  
+  [33X[1;0Y[29X[2XShareSystemObj[102X( [3Xobj[103X[[, [3Xname[103X], [3Xprec[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XShareSystemObj[102X  functions  like [2XShareObj[102X ([14X3.9-9[114X), except that the precedence
+  of  the  region  it creates is below that of [2XShareLibraryObj[102X ([14X3.9-10[114X). It is
+  intended to be used by the standard GAP library.[133X
+  
+  [1X3.9-12 ShareKernelObj[101X
+  
+  [33X[1;0Y[29X[2XShareKernelObj[102X( [3Xobj[103X[[, [3Xname[103X], [3Xprec[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XShareKernelObj[102X  functions  like [2XShareObj[102X ([14X3.9-9[114X), except that the precedence
+  of  the  region  it  creates is below that of [2XShareSystemObj[102X ([14X3.9-11[114X). It is
+  intended  to  be used by the GAP kernel, and GAP library code that interacts
+  closely with the kernel.[133X
+  
+  [1X3.9-13 ShareInternalObj[101X
+  
+  [33X[1;0Y[29X[2XShareInternalObj[102X( [3Xobj[103X[, [3Xname[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XShareInternalObj[102X functions like [2XShareObj[102X ([14X3.9-9[114X), except that the precedence
+  of  the region it creates is the lowest available. It is intended to be used
+  for  regions  that  are  self-contained;  i.e.  no function that uses such a
+  region may lock another region while accessing it.[133X
+  
+  [1X3.9-14 ShareSpecialObj[101X
+  
+  [33X[1;0Y[29X[2XShareSpecialObj[102X( [3Xobj[103X[, [3Xname[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XShareSpecialObj[102X  functions like [2XShareObj[102X ([14X3.9-9[114X), except that the precedence
+  of the region it creates is negative. It is thus exempt from normal ordering
+  and deadlock checks.[133X
+  
+  [1X3.9-15 ShareSingleObj[101X
+  
+  [33X[1;0Y[29X[2XShareSingleObj[102X( [3Xobj[103X[[, [3Xname[103X], [3Xprec[103X] ) [32X function[133X
+  
+  [33X[0;0YThe  [2XShareSingleObj[102X  function  creates  a new shared region and migrates the
+  object,  but  not  its  subobjects, to that region. If the optional argument
+  [3Xname[103X is provided, then the name of the new region is set to [3Xname[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xm := [ [1, 2], [3, 4] ];;[127X[104X
+    [4X[25Xgap>[125X [27XShareSingleObj(m);;[127X[104X
+    [4X[25Xgap>[125X [27Xatomic readonly m do[127X[104X
+    [4X[25X>[125X [27X     Display([ IsShared(m), IsShared(m[1]), IsShared(m[2]) ]);[127X[104X
+    [4X[25X>[125X [27X   od;[127X[104X
+    [4X[28X[ true, false, false ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[2XShareSingleObj[102X  will  create  a  region  with a high precedence level. It is
+  intended  to  be  called  by  user  code. The actual precedence level can be
+  adjusted  by  the  optional  [3Xprec[103X  argument in the same way as for [2XNewRegion[102X
+  ([14X3.9-1[114X).[133X
+  
+  [1X3.9-16 ShareSingleLibraryObj[101X
+  
+  [33X[1;0Y[29X[2XShareSingleLibraryObj[102X( [3Xobj[103X[[, [3Xname[103X], [3Xprec[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XShareSingleLibraryObj[102X  functions  like  [2XShareSingleObj[102X ([14X3.9-15[114X), except that
+  the  precedence  of  the  region  it creates is below that of [2XShareSingleObj[102X
+  ([14X3.9-15[114X). It is intended to be used by user libraries and GAP packages.[133X
+  
+  [1X3.9-17 ShareSingleSystemObj[101X
+  
+  [33X[1;0Y[29X[2XShareSingleSystemObj[102X( [3Xobj[103X[[, [3Xname[103X], [3Xprec[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XShareSingleSystemObj[102X functions like [2XShareSingleObj[102X ([14X3.9-15[114X), except that the
+  precedence  of  the region it creates is below that of [2XShareSingleLibraryObj[102X
+  ([14X3.9-16[114X). It is intended to be used by the standard GAP library.[133X
+  
+  [1X3.9-18 ShareSingleKernelObj[101X
+  
+  [33X[1;0Y[29X[2XShareSingleKernelObj[102X( [3Xobj[103X[[, [3Xname[103X], [3Xprec[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XShareSingleKernelObj[102X functions like [2XShareSingleObj[102X ([14X3.9-15[114X), except that the
+  precedence  of  the  region it creates is below that of [2XShareSingleSystemObj[102X
+  ([14X3.9-17[114X).  It is intended to be used by the GAP kernel, and GAP library code
+  that interacts closely with the kernel.[133X
+  
+  [1X3.9-19 ShareSingleInternalObj[101X
+  
+  [33X[1;0Y[29X[2XShareSingleInternalObj[102X( [3Xobj[103X[, [3Xname[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XShareSingleInternalObj[102X  functions  like [2XShareSingleObj[102X ([14X3.9-15[114X), except that
+  the  precedence  of  the  region  it  creates is the lowest available. It is
+  intended  to  be  used for regions that are self-contained; i.e. no function
+  that uses such a region may lock another region while accessing it.[133X
+  
+  [1X3.9-20 ShareSingleSpecialObj[101X
+  
+  [33X[1;0Y[29X[2XShareSingleSpecialObj[102X( [3Xobj[103X[, [3Xname[103X] ) [32X function[133X
+  
+  [33X[0;0Y[2XShareSingleLibraryObj[102X   ([14X3.9-16[114X)  functions  like  [2XShareSingleObj[102X  ([14X3.9-15[114X),
+  except  that the precedence of the region it creates is negative. It is thus
+  exempt from normal ordering and deadlock checks.[133X
+  
+  [1X3.9-21 MigrateObj[101X
+  
+  [33X[1;0Y[29X[2XMigrateObj[102X( [3Xobj[103X, [3Xtarget[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XMigrateObj[102X  function  migrates [3Xobj[103X (and all subobjects contained within
+  the  same region) to the region denoted by the [3Xtarget[103X argument. Here, [3Xtarget[103X
+  can  either  be a region object returned by [2XRegionOf[102X ([14X3.9-7[114X) or a normal gap
+  object. If [3Xtarget[103X is a normal gap object, [3Xobj[103X will be migrated to the region
+  containing [10Xtarget[110X.[133X
+  
+  [33X[0;0YFor  the operation to succeed, the current thread must have exclusive access
+  to the target region and the object being migrated.[133X
+  
+  [1X3.9-22 MigrateSingleObj[101X
+  
+  [33X[1;0Y[29X[2XMigrateSingleObj[102X( [3Xobj[103X, [3Xtarget[103X ) [32X function[133X
+  
+  [33X[0;0YThe [2XMigrateSingleObj[102X function works like [2XMigrateObj[102X ([14X3.9-21[114X), except that it
+  does not migrate the subobjects of [10Xobj[110X.[133X
+  
+  [1X3.9-23 LockAndMigrateObj[101X
+  
+  [33X[1;0Y[29X[2XLockAndMigrateObj[102X( [3Xobj[103X, [3Xtarget[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XLockAndMigrateObj[102X  function works like [2XMigrateObj[102X ([14X3.9-21[114X), except that
+  it will automatically try to acquire a lock for the region containing [3Xtarget[103X
+  if it does not have one already.[133X
+  
+  [1X3.9-24 IncorporateObj[101X
+  
+  [33X[1;0Y[29X[2XIncorporateObj[102X( [3Xtarget[103X, [3Xindex[103X, [3Xvalue[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XIncorporateObj[102X function allows convenient migration to a shared list or
+  record. If [3Xtarget[103X is a list, then [2XIncorporateObj[102X is equivalent to:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XIncorporateObj := function(target, index, value)[128X[104X
+    [4X[28X  atomic value do[128X[104X
+    [4X[28X    target[index] := MigrateObj(value, target)[128X[104X
+    [4X[28X  od;[128X[104X
+    [4X[28Xend;[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIf [3Xtarget[103X is a record, then it is equivalent to:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XIncorporateObj := function(target, index, value)[128X[104X
+    [4X[28X  atomic value do[128X[104X
+    [4X[28X    target.(index) := MigrateObj(value, target)[128X[104X
+    [4X[28X  od;[128X[104X
+    [4X[28Xend;[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  intended  purpose  is  the  population  of a shared list or record with
+  values after its creation. Example:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xlist := ShareObj([]);[127X[104X
+    [4X[25Xgap>[125X [27Xatomic list do[127X[104X
+    [4X[25X>[125X [27X     IncorporateObj(list, 1, [1,2,3]);[127X[104X
+    [4X[25X>[125X [27X     IncorporateObj(list, 2, [4,5,6]);[127X[104X
+    [4X[25X>[125X [27X     IncorporateObj(list, 3, [7,8,9]);[127X[104X
+    [4X[25X>[125X [27X   od;[127X[104X
+    [4X[25Xgap>[125X [27XViewShared(list);[127X[104X
+    [4X[28X[ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YUsing   plain  assignment  would  leave  the  newly  created  lists  in  the
+  thread-local region.[133X
+  
+  [1X3.9-25 AtomicIncorporateObj[101X
+  
+  [33X[1;0Y[29X[2XAtomicIncorporateObj[102X( [3Xtarget[103X, [3Xindex[103X, [3Xvalue[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XAtomicIncorporateObj[102X  extends  [2XIncorporateObj[102X  ([14X3.9-24[114X)  by also locking the
+  target. I.e., for a list, it is equivalent to:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XAtomicIncorporateObj := function(target, index, value)[128X[104X
+    [4X[28X  atomic target, value do[128X[104X
+    [4X[28X    target[index] := MigrateObj(value, target)[128X[104X
+    [4X[28X  od;[128X[104X
+    [4X[28Xend;[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIf [10Xtarget[110X is a record, then it is equivalent to:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XAtomicIncorporateObj := function(target, index, value)[128X[104X
+    [4X[28X  atomic value do[128X[104X
+    [4X[28X    target.(index) := MigrateObj(value, target)[128X[104X
+    [4X[28X  od;[128X[104X
+    [4X[28Xend;[128X[104X
+  [4X[32X[104X
+  
+  [1X3.9-26 AdoptObj[101X
+  
+  [33X[1;0Y[29X[2XAdoptObj[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XAdoptObj[102X function migrates [3Xobj[103X (and all its subobjects contained within
+  the  same  region)  to  the  thread's  current region. It requires exclusive
+  access to [3Xobj[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl := ShareObj([1,2,3]);;[127X[104X
+    [4X[25Xgap>[125X [27XIsThreadLocal(l);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xatomic l do AdoptObj(l); od;[127X[104X
+    [4X[25Xgap>[125X [27XIsThreadLocal(l);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X3.9-27 AdoptSingleObj[101X
+  
+  [33X[1;0Y[29X[2XAdoptSingleObj[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XAdoptSingleObj[102X  function  works  like [2XAdoptObj[102X ([14X3.9-26[114X), except that it
+  does not migrate the subobjects of [3Xobj[103X.[133X
+  
+  [1X3.9-28 LockAndAdoptObj[101X
+  
+  [33X[1;0Y[29X[2XLockAndAdoptObj[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XLockAndAdoptObj[102X  function  works like [2XAdoptObj[102X ([14X3.9-26[114X), except that it
+  will  attempt  acquire an exclusive lock for the region containing [3Xobj[103X if it
+  does not have one already.[133X
+  
+  [1X3.9-29 CopyRegion[101X
+  
+  [33X[1;0Y[29X[2XCopyRegion[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XCopyRegion[102X  function  performs  a structural copy of [3Xobj[103X. The resulting
+  objects  will  be  located  in the current thread's thread-local region. The
+  function returns the copy as its result.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl := MakeReadOnlyObj([1,2,3]);[127X[104X
+    [4X[28X[ 1, 2, 3 ][128X[104X
+    [4X[25Xgap>[125X [27Xl2 := CopyRegion(l);[127X[104X
+    [4X[28X[ 1, 2, 3 ][128X[104X
+    [4X[25Xgap>[125X [27XRegionOf(l) = RegionOf(l2);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsIdenticalObj(l, l2);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xl = l2;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X3.9-30 IsPublic[101X
+  
+  [33X[1;0Y[29X[2XIsPublic[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XIsPublic[102X  function  returns  true  if  its argument is an object in the
+  public region, false otherwise.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsPublic(1/2);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsPublic([1,2,3]);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsPublic(ShareObj([1,2,3]));[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsPublic(MakeImmutable([1,2,3]));[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X3.9-31 IsThreadLocal[101X
+  
+  [33X[1;0Y[29X[2XIsThreadLocal[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XIsThreadLocal[102X function returns true if its argument is an object in the
+  current thread's thread-local region, false otherwise.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsThreadLocal([1,2,3]);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsThreadLocal(ShareObj([1,2,3]));[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsThreadLocal(1/2);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XRegionOf(1/2);[127X[104X
+    [4X[28X<public region>[128X[104X
+  [4X[32X[104X
+  
+  [1X3.9-32 IsShared[101X
+  
+  [33X[1;0Y[29X[2XIsShared[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XIsShared[102X function returns true if its argument is an object in a shared
+  region.  Note that if the current thread does not hold a lock on that shared
+  region,  another  thread  can  migrate  [3Xobj[103X to a different region before the
+  result is being evaluated; this can lead to race conditions. The function is
+  intended primarily for debugging, not to build actual program logic around.[133X
+  
+  [1X3.9-33 HaveReadAccess[101X
+  
+  [33X[1;0Y[29X[2XHaveReadAccess[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XHaveReadAccess[102X  function  returns  true  if the current thread has read
+  access to [3Xobj[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XHaveReadAccess([1,2,3]);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xl := ShareObj([1,2,3]);;[127X[104X
+    [4X[25Xgap>[125X [27XHaveReadAccess(l);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xatomic readonly l do t := HaveReadAccess(l); od;; t;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X3.9-34 HaveWriteAccess[101X
+  
+  [33X[1;0Y[29X[2XHaveWriteAccess[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XHaveWriteAccess[102X  function  returns true if the current thread has write
+  access to [3Xobj[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XHaveWriteAccess([1,2,3]);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xl := ShareObj([1,2,3]);;[127X[104X
+    [4X[25Xgap>[125X [27XHaveWriteAccess(l);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xatomic readwrite l do t := HaveWriteAccess(l); od;; t;[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X3.9-35 MakeReadOnlyObj[101X
+  
+  [33X[1;0Y[29X[2XMakeReadOnlyObj[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XMakeReadOnlyObj[102X  function  migrates [3Xobj[103X and all its subobjects that are
+  within the same region as [3Xobj[103X to the read-only region. It returns [3Xobj[103X.[133X
+  
+  [1X3.9-36 MakeReadOnlySingleObj[101X
+  
+  [33X[1;0Y[29X[2XMakeReadOnlySingleObj[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XMakeReadOnlySingleObj[102X  function  migrates  [3Xobj[103X,  but  not  any  of  its
+  subobjects, to the read-only region. It returns [3Xobj[103X.[133X
+  
+  [1X3.9-37 IsReadOnlyObj[101X
+  
+  [33X[1;0Y[29X[2XIsReadOnlyObj[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XIsReadOnlyObj[102X  function returns [9Xtrue[109X if [3Xobj[103X is in the read-only region,
+  [9Xfalse[109X otherwise.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsReadOnlyObj([1,2,3]);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsReadOnlyObj(MakeImmutable([1,2,3]));[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsReadOnlyObj(MakeReadOnlyObj([1,2,3]));[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X3.9-38 SetRegionName[101X
+  
+  [33X[1;0Y[29X[2XSetRegionName[102X( [3Xobj[103X, [3Xname[103X ) [32X function[133X
+  
+  [33X[0;0YThe [2XSetRegionName[102X function sets the name of the region of [3Xobj[103X to [3Xname[103X.[133X
+  
+  [1X3.9-39 ClearRegionName[101X
+  
+  [33X[1;0Y[29X[2XClearRegionName[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0YThe [2XClearRegionName[102X function clears the name of the region of [3Xobj[103X to [3Xname[103X.[133X
+  
+  [1X3.9-40 RegionName[101X
+  
+  [33X[1;0Y[29X[2XRegionName[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XRegionName[102X  function  returns  the  name  of the region of [3Xobj[103X. If that
+  region does not have a name, [9Xfail[109X will be returned.[133X
+  
+  [1X3.9-41 ViewShared[101X
+  
+  [33X[1;0Y[29X[2XViewShared[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XViewShared[102X function allows the inspection of objects in shared regions.
+  It  will  try  to  lock  the region and then call [10XViewObj(obj)[110X. If it cannot
+  acquire a lock for the region, it will simply display the normal description
+  of the object.[133X
+  
+  [1X3.9-42 UNSAFE_VIEW[101X
+  
+  [33X[1;0Y[29X[2XUNSAFE_VIEW[102X( [3Xobj[103X ) [32X function[133X
+  
+  [33X[0;0YThe  [2XUNSAFE_VIEW[102X function allows the inspection of any object in the system,
+  regardless of whether the current thread has access to the region containing
+  it.  It  should be used with care: If the object inspected is being modified
+  by another thread concurrently, the resulting behavior is undefined.[133X
+  
+  [33X[0;0YMoreover,  the function works by temporarily disabling read and write guards
+  for  regions,  so  other  threads  may  corrupt memory rather than producing
+  errors.[133X
+  
+  [33X[0;0YIt is generally safe to use if all threads but the current one are paused.[133X
+  
+  
+  [1X3.9-43 [33X[0;0YThe [10Xatomic[110X[101X[1X statement.[133X[101X
+  
+  [33X[0;0YThe  [10Xatomic[110X  statement  ensures exclusive or read-only access to one or more
+  shared regions for statements within its scope. It has the following syntax:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28Xatomic ([readwrite|readonly] expr (, expr)* )* do[128X[104X
+    [4X[28X  statements[128X[104X
+    [4X[28Xod;[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YEach  expression is evaluated and the region containing the resulting object
+  is  locked  with  either  a  read-write  or read-only lock, depending on the
+  keyword  preceding the expression. If neither the [10Xreadwrite[110X nor the [10Xreadonly[110X
+  keyword was provided, read-write locks are used by default. Examples:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl := ShareObj([1,2,3]);;[127X[104X
+    [4X[25Xgap>[125X [27Xatomic readwrite l do l[3] := 9; od;[127X[104X
+    [4X[25Xgap>[125X [27Xatomic l do l[2] := 4; od;[127X[104X
+    [4X[25Xgap>[125X [27Xatomic readonly l do Display(l); od;[127X[104X
+    [4X[28X[ 1, 4, 9 ][128X[104X
+  [4X[32X[104X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xl := ShareObj([1,2,3,4,5]);;[127X[104X
+    [4X[25Xgap>[125X [27Xl2 := ShareObj([6,7,8]);;[127X[104X
+    [4X[25Xgap>[125X [27Xatomic readwrite l, readonly l2 do[127X[104X
+    [4X[25X>[125X [27X     for i in [1..3] do l[i] := l2[i]; od;[127X[104X
+    [4X[25X>[125X [27X     l3 := AdoptObj(l);[127X[104X
+    [4X[25X>[125X [27X   od;[127X[104X
+    [4X[25Xgap>[125X [27Xl3;[127X[104X
+    [4X[28X[ 6, 7, 8, 4, 5 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YAtomic  statements must observe region ordering. That means that the highest
+  precedence level of a region locked by an atomic statement must be less than
+  the  lowest precedene level of a region that is locked by the same thread at
+  the time the atomic statement is executed.[133X
+  
+  
+  [1X3.10 [33X[0;0YAtomic functions[133X[101X
+  
+  [33X[0;0YInstead  of  atomic  regions, entire functions can be declared to be atomic.
+  This  has  the same effect as though the function's body were enclosed in an
+  atomic  statement.  Function  arguments  can be declared either [10Xreadwrite[110X or
+  [10Xreadonly[110X;  they will be locked in the same way as for a lock statement. If a
+  function  argument  is  preceded  by  neither  [10Xreadwrite[110X  nor  [10Xreadonly[110X, the
+  corresponding object will not be locked. Example:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XAddAtomic := atomic function(readwrite list, readonly item)[127X[104X
+    [4X[25X>[125X [27X     Add(list, item);[127X[104X
+    [4X[25X>[125X [27X   end;[127X[104X
+  [4X[32X[104X
+  
+  
+  [1X3.11 [33X[0;0YWrite-once functionality[133X[101X
+  
+  [33X[0;0YThere  is  an  exception  to the rule that objects can only be modified if a
+  thread  has  write  access  to  a  region.  A limited sets of objects can be
+  modified  using  the  "bind  once"  family  of  functions.  These  allow the
+  modifications  of  objects  to  which  a thread has read access in a limited
+  fashion.[133X
+  
+  [33X[0;0YFor  reasons of implementation symmetry, these functions can also be used on
+  the atomic versions of these objects.[133X
+  
+  [33X[0;0YImplementation  note:  The  functionality  is  not  currently  available for
+  component objects.[133X
+  
+  [1X3.11-1 BindOnce[101X
+  
+  [33X[1;0Y[29X[2XBindOnce[102X( [3Xobj[103X, [3Xindex[103X, [3Xvalue[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XBindOnce[102X  modifies  [3Xobj[103X, which can be a positional object, atomic positional
+  object,   component   object,   or  atomic  component  object.  It  inspects
+  [10Xobj![index][110X  for  the  positional versions or [10Xobj!.(index)[110X for the component
+  versions.  If  the respective element is not yet bound, [3Xvalue[103X is assigned to
+  that  element. Otherwise, no modification happens. The test and modification
+  occur  as  one  atomic  step. The function returns the value of the element;
+  i.e. the old value if the element was bound and [3Xvalue[103X if it was unbound.[133X
+  
+  [33X[0;0YThe  intent  of  this  function  is  to  allow  concurrent initialization of
+  objects,  where  multiple  threads  may attempt to set a value concurrently.
+  Only one will succeed; all threads can then use the return value of [2XBindOnce[102X
+  as  the  definitive  value  of  the  element.  It  also  allows for the lazy
+  initialization of objects in the read-only region.[133X
+  
+  [33X[0;0YThe  current  thread needs to have at least read access to [3Xobj[103X, but does not
+  require write access.[133X
+  
+  [1X3.11-2 TestBindOnce[101X
+  
+  [33X[1;0Y[29X[2XTestBindOnce[102X( [3Xobj[103X, [3Xindex[103X, [3Xvalue[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XTestBindOnce[102X  works  like  [2XBindOnce[102X ([14X3.11-1[114X), except that it returns [9Xtrue[109X if
+  the value could be bound and [9Xfalse[109X otherwise.[133X
+  
+  [1X3.11-3 BindOnceExpr[101X
+  
+  [33X[1;0Y[29X[2XBindOnceExpr[102X( [3Xobj[103X, [3Xindex[103X, [3Xexpr[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XBindOnceExpr[102X  works  like  [2XBindOnce[102X  ([14X3.11-1[114X),  except that it evaluates the
+  parameterless  function  [3Xexpr[103X  to determine the value. It will only evaluate
+  [3Xexpr[103X if the element is not bound.[133X
+  
+  [33X[0;0YFor positional objects, the implementation works as follows:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XBindOnceExprPosObj := function(obj, index, expr)[128X[104X
+    [4X[28X  if not IsBound(obj![index]) then[128X[104X
+    [4X[28X    return BindOnce(obj, index, expr());[128X[104X
+    [4X[28X  else[128X[104X
+    [4X[28X    return obj![index]);[128X[104X
+    [4X[28X  fi;[128X[104X
+    [4X[28Xend;[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe implementation for component objects works analogously.[133X
+  
+  [33X[0;0YThe  intent  is  to  avoid  unnecessary computations if the value is already
+  bound.  Note  that  this  cannot be avoided entirely, because [10Xobj![index][110X or
+  [10Xobj!.(index)[110X  can be bound while [3Xexpr[103X is evaluated, but it can minimize such
+  occurrences.[133X
+  
+  [1X3.11-4 TestBindOnceExpr[101X
+  
+  [33X[1;0Y[29X[2XTestBindOnceExpr[102X( [3Xobj[103X, [3Xindex[103X, [3Xexpr[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XTestBindOnceExpr[102X  works  like  [2XBindOnceExpr[102X ([14X3.11-3[114X), except that it returns
+  [9Xtrue[109X if the value could be bound and [9Xfalse[109X otherwise.[133X
+  
+  [1X3.11-5 StrictBindOnce[101X
+  
+  [33X[1;0Y[29X[2XStrictBindOnce[102X( [3Xobj[103X, [3Xindex[103X, [3Xexpr[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XStrictBindOnce[102X  works like [2XBindOnce[102X ([14X3.11-1[114X), except that it raises an error
+  if  the  element  is  already  bound.  This  is  intended  for cases where a
+  read-only  object  is  initialized,  but  where  another  thread  trying  to
+  initialize it concurrently would be an error.[133X
+  

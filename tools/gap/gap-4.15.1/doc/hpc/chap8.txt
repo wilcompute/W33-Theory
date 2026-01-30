@@ -1,0 +1,63 @@
+  
+  [1X8 [33X[0;0YSemaphores[133X[101X
+  
+  
+  [1X8.1 [33X[0;0YSemaphores[133X[101X
+  
+  [33X[0;0YSemaphores  are  synchronized  counters;  they  can also be used to simulate
+  locks.[133X
+  
+  [1X8.1-1 CreateSemaphore[101X
+  
+  [33X[1;0Y[29X[2XCreateSemaphore[102X( [[3Xvalue[103X] ) [32X function[133X
+  
+  [33X[0;0YThe  function  [2XCreateSemaphore[102X takes an optional argument, which defaults to
+  zero. It is the counter with which the semaphore is initialized.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xsem := CreateSemaphore(1);[127X[104X
+    [4X[28X<semaphore 0x1108e81c0: count = 1>[128X[104X
+  [4X[32X[104X
+  
+  [1X8.1-2 WaitSemaphore[101X
+  
+  [33X[1;0Y[29X[2XWaitSemaphore[102X( [3Xsem[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XWaitSemaphore[102X  receives  a  previously created semaphore as its argument. If
+  the  semaphore's counter is greater than zero, it decrements the counter and
+  returns;  if the counter is zero, it waits until another thread increases it
+  via [2XSignalSemaphore[102X ([14X8.1-3[114X), then decrements the counter and returns.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xsem := CreateSemaphore(1);[127X[104X
+    [4X[28X<semaphore 0x1108e81c0: count = 1>[128X[104X
+    [4X[25Xgap>[125X [27XWaitSemaphore(sem);[127X[104X
+    [4X[25Xgap>[125X [27Xsem;[127X[104X
+    [4X[28X<semaphore 0x1108e81c0: count = 0>[128X[104X
+  [4X[32X[104X
+  
+  [1X8.1-3 SignalSemaphore[101X
+  
+  [33X[1;0Y[29X[2XSignalSemaphore[102X( [3Xsem[103X ) [32X function[133X
+  
+  [33X[0;0Y[2XSignalSemaphore[102X  receives a previously created semaphore as its argument. It
+  increments the semaphore's counter and returns.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xsem := CreateSemaphore(1);[127X[104X
+    [4X[28X<semaphore 0x1108e81c0: count = 1>[128X[104X
+    [4X[25Xgap>[125X [27XWaitSemaphore(sem);[127X[104X
+    [4X[25Xgap>[125X [27Xsem;[127X[104X
+    [4X[28X<semaphore 0x1108e81c0: count = 0>[128X[104X
+    [4X[25Xgap>[125X [27XSignalSemaphore(sem);[127X[104X
+    [4X[25Xgap>[125X [27Xsem;[127X[104X
+    [4X[28X<semaphore 0x1108e81c0: count = 1>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X8.1-4 [33X[0;0YSimulating locks[133X[101X
+  
+  [33X[0;0YIn  order  to  use  semaphores to simulate locks, create a semaphore with an
+  initial  value  of  1.  [2XWaitSemaphore[102X  ([14X8.1-2[114X)  is then equivalent to a lock
+  operation, [2XSignalSemaphore[102X ([14X8.1-3[114X) is equivalent to an unlock operation.[133X
+  
