@@ -1,0 +1,558 @@
+
+  [1X5 [33X[0;0YFunctions[133X[101X
+
+  [33X[0;0YThe  section [14X4.11[114X  describes  how  to  define a function. In this chapter we
+  describe  functions  that  give  information  about  functions,  and various
+  utility functions used either when defining functions or calling functions.[133X
+
+
+  [1X5.1 [33X[0;0YInformation about a function[133X[101X
+
+  [1X5.1-1 NameFunction[101X
+
+  [33X[1;0Y[29X[2XNameFunction[102X( [3Xfunc[103X ) [32X attribute[133X
+
+  [33X[0;0Yreturns  the  name  of  a function. For operations, this is the name used in
+  their  declaration. For functions, this is the variable name they were first
+  assigned  to.  (For  some internal functions, this might be a name [13Xdifferent[113X
+  from  the  name  that  is  documented.)  If  no such name exists, the string
+  [10X"unknown"[110X is returned.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XNameFunction(SylowSubgroup);[127X[104X
+    [4X[28X"SylowSubgroup"[128X[104X
+    [4X[25Xgap>[125X [27XBlubberflutsch:=x->x;;[127X[104X
+    [4X[25Xgap>[125X [27XHasNameFunction(Blubberflutsch);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XNameFunction(Blubberflutsch);[127X[104X
+    [4X[28X"Blubberflutsch"[128X[104X
+    [4X[25Xgap>[125X [27Xa:=Blubberflutsch;;[127X[104X
+    [4X[25Xgap>[125X [27XNameFunction(a);[127X[104X
+    [4X[28X"Blubberflutsch"[128X[104X
+    [4X[25Xgap>[125X [27XSetNameFunction(a, "f");[127X[104X
+    [4X[25Xgap>[125X [27XNameFunction(a);[127X[104X
+    [4X[28X"f"[128X[104X
+    [4X[25Xgap>[125X [27XHasNameFunction(x->x);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XNameFunction(x->x);[127X[104X
+    [4X[28X"unknown"[128X[104X
+  [4X[32X[104X
+
+  [1X5.1-2 NumberArgumentsFunction[101X
+
+  [33X[1;0Y[29X[2XNumberArgumentsFunction[102X( [3Xfunc[103X ) [32X operation[133X
+
+  [33X[0;0Yreturns  the  number  of arguments the function [3Xfunc[103X accepts. -1 is returned
+  for  all  operations.  For  functions that use [10X...[110X or [10Xarg[110X to take a variable
+  number  of  arguments,  the  number returned is -1 times the total number of
+  parameters. For attributes, 1 is returned.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XNumberArgumentsFunction(function(a,b,c,d,e,f,g,h,i,j,k)return 1;end);[127X[104X
+    [4X[28X11[128X[104X
+    [4X[25Xgap>[125X [27XNumberArgumentsFunction(Size);[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XNumberArgumentsFunction(IsCollsCollsElms);[127X[104X
+    [4X[28X3[128X[104X
+    [4X[25Xgap>[125X [27XNumberArgumentsFunction(Sum);[127X[104X
+    [4X[28X-1[128X[104X
+    [4X[25Xgap>[125X [27XNumberArgumentsFunction(function(a, x...) return 1; end);[127X[104X
+    [4X[28X-2[128X[104X
+  [4X[32X[104X
+
+  [1X5.1-3 NamesLocalVariablesFunction[101X
+
+  [33X[1;0Y[29X[2XNamesLocalVariablesFunction[102X( [3Xfunc[103X ) [32X operation[133X
+
+  [33X[0;0Yreturns  a  mutable  list of strings; the first entries are the names of the
+  arguments  of  the  function [3Xfunc[103X, in the same order as they were entered in
+  the  definition  of  [3Xfunc[103X, and the remaining ones are the local variables as
+  given  in  the  [9Xlocal[109X  statement  in  [3Xfunc[103X.  (The number of arguments can be
+  computed with [2XNumberArgumentsFunction[102X ([14X5.1-2[114X).)[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XNamesLocalVariablesFunction(function( a, b ) local c; return 1; end);[127X[104X
+    [4X[28X[ "a", "b", "c" ][128X[104X
+    [4X[25Xgap>[125X [27XNamesLocalVariablesFunction(function( arg ) local a; return 1; end);[127X[104X
+    [4X[28X[ "arg", "a" ][128X[104X
+    [4X[25Xgap>[125X [27XNamesLocalVariablesFunction( Size );[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+
+  [1X5.1-4 FilenameFunc[101X
+
+  [33X[1;0Y[29X[2XFilenameFunc[102X( [3Xfunc[103X ) [32X function[133X
+
+  [33X[0;0YFor  a  function [3Xfunc[103X, [2XFilenameFunc[102X returns either [9Xfail[109X or the absolute path
+  of  the  file from which [3Xfunc[103X has been read. The return value [9Xfail[109X occurs if
+  [3Xfunc[103X  is  a  compiled function or an operation. For functions that have been
+  entered interactively, the string [10X"*stdin*"[110X is returned, see Section [14X9.6[114X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XFilenameFunc( LEN_LIST );  # a kernel function[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27XFilenameFunc( Size );      # an operation[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27XFilenameFunc( x -> x^2 );  # an interactively entered function[127X[104X
+    [4X[28X"*stdin*"[128X[104X
+    [4X[25Xgap>[125X [27Xmeth:= ApplicableMethod( Size, [ Group( () ) ] );;[127X[104X
+    [4X[25Xgap>[125X [27XFilenameFunc( meth );[127X[104X
+    [4X[28X"... some path .../grpperm.gi"[128X[104X
+  [4X[32X[104X
+
+  [1X5.1-5 StartlineFunc[101X
+
+  [33X[1;0Y[29X[2XStartlineFunc[102X( [3Xfunc[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XEndlineFunc[102X( [3Xfunc[103X ) [32X function[133X
+
+  [33X[0;0YLet  [3Xfunc[103X  be a function. If [2XFilenameFunc[102X ([14X5.1-4[114X) returns [9Xfail[109X for [3Xfunc[103X then
+  also  [2XStartlineFunc[102X returns [9Xfail[109X. If [2XFilenameFunc[102X ([14X5.1-4[114X) returns a filename
+  for  [3Xfunc[103X  then [2XStartlineFunc[102X returns the line number in this file where the
+  definition of [3Xfunc[103X starts.[133X
+
+  [33X[0;0Y[2XEndlineFunc[102X behaves similarly and returns the line number in this file where
+  the definition of [3Xfunc[103X ends.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xmeth:= ApplicableMethod( Size, [ Group( () ) ] );;[127X[104X
+    [4X[25Xgap>[125X [27XFilenameFunc( meth );[127X[104X
+    [4X[28X"... some path ... /lib/grpperm.gi"[128X[104X
+    [4X[25Xgap>[125X [27XStartlineFunc( meth );[127X[104X
+    [4X[28X487[128X[104X
+    [4X[25Xgap>[125X [27XEndlineFunc( meth );[127X[104X
+    [4X[28X487[128X[104X
+  [4X[32X[104X
+
+  [1X5.1-6 LocationFunc[101X
+
+  [33X[1;0Y[29X[2XLocationFunc[102X( [3Xfunc[103X ) [32X function[133X
+
+  [33X[0;0YLet [3Xfunc[103X be a function. Returns a string describing the location of [3Xfunc[103X, or
+  [9Xfail[109X  if the information cannot be found. This uses the information provided
+  by [2XFilenameFunc[102X ([14X5.1-4[114X) and [2XStartlineFunc[102X ([14X5.1-5[114X)[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLocationFunc( Intersection );[127X[104X
+    [4X[28X"... some path ... gap/lib/coll.gi:2467"[128X[104X
+    [4X[28X# String is an attribute, so no information is stored[128X[104X
+    [4X[25Xgap>[125X [27XLocationFunc( String );[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+
+  [1X5.1-7 PageSource[101X
+
+  [33X[1;0Y[29X[2XPageSource[102X( [3Xfunc[103X[, [3Xnr[103X] ) [32X function[133X
+
+  [33X[0;0YThis  shows  the  file  containing the source code of the function or method
+  [3Xfunc[103X  in  a  pager (see [2XPager[102X ([14X2.4-1[114X)). The display starts at a line shortly
+  before the code of [3Xfunc[103X.[133X
+
+  [33X[0;0YFor operations [3Xfunc[103X the function shows the source code of the declaration of
+  [3Xfunc[103X.  Operations  can  have  several  declarations, use the optional second
+  argument to specify which one should be shown (in the order the declarations
+  were read); the default is to show the first.[133X
+
+  [33X[0;0YFor kernel functions the function tries to show the C source code.[133X
+
+  [33X[0;0YIf GAP cannot find a file containing the source code this will be indicated.[133X
+
+  [33X[0;0YUsage examples:[133X
+  [33X[0;0Y[10Xmet := ApplicableMethod(\^, [(1,2),2743527]); PageSource(met);[110X[133X
+  [33X[0;0Y[10XPageSource(Combinations);[110X[133X
+  [33X[0;0Y[10XPageSource(SORT_LIST); [110X[133X
+  [33X[0;0Y[10XPageSource(Size, 2);[110X[133X
+  [33X[0;0Y[10Xct := CharacterTable(Group((1,2,3))); [110X[133X
+  [33X[0;0Y[10Xmet := ApplicableMethod(Size,[ct]); PageSource(met); [110X[133X
+
+
+  [1X5.2  [33X[0;0YCalling  a function with a list argument that is interpreted as several[101X
+  [1Xarguments[133X[101X
+
+  [1X5.2-1 CallFuncList[101X
+
+  [33X[1;0Y[29X[2XCallFuncList[102X( [3Xfunc[103X, [3Xargs[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XCallFuncListWrap[102X( [3Xfunc[103X, [3Xargs[103X ) [32X operation[133X
+
+  [33X[0;0Yreturns  the  result, when calling function [3Xfunc[103X with the arguments given in
+  the  list  [3Xargs[103X,  i.e. [3Xargs[103X  is  [21Xunwrapped[121X  so  that [3Xargs[103X appears as several
+  arguments to [3Xfunc[103X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XCallFuncList(\+, [6, 7]);[127X[104X
+    [4X[28X13[128X[104X
+    [4X[25Xgap>[125X [27X#is equivalent to:[127X[104X
+    [4X[25Xgap>[125X [27X\+(6, 7);[127X[104X
+    [4X[28X13[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YA more useful application of [2XCallFuncList[102X is for a function [10Xg[110X that is called
+  in  the body of a function [10Xf[110X with (a sublist of) the arguments of [10Xf[110X, where [10Xf[110X
+  has  been  defined  with  a single formal argument [10Xarg[110X (see [14X4.11[114X), as in the
+  following code fragment.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[28Xf := function ( arg )[128X[104X
+    [4X[28X       CallFuncList(g, arg);[128X[104X
+    [4X[28X       ...[128X[104X
+    [4X[28X     end;[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YIn  the  body of [10Xf[110X the several arguments passed to [10Xf[110X become a list [10Xarg[110X. If [10Xg[110X
+  were called instead via [10Xg( arg )[110X then [10Xg[110X would see a single list argument, so
+  that [10Xg[110X would, in general, have to [21Xunwrap[121X the passed list. The following (not
+  particularly  useful)  example demonstrates both described possibilities for
+  the call to [10Xg[110X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XPrintNumberFromDigits := function ( arg )[127X[104X
+    [4X[25X>[125X [27X    CallFuncList( Print, arg );[127X[104X
+    [4X[25X>[125X [27X    Print( "\n" );[127X[104X
+    [4X[25X>[125X [27X   end;[127X[104X
+    [4X[28Xfunction( arg... ) ... end[128X[104X
+    [4X[25Xgap>[125X [27XPrintNumberFromDigits( 1, 9, 7, 3, 2 );[127X[104X
+    [4X[28X19732[128X[104X
+    [4X[25Xgap>[125X [27XPrintDigits := function ( arg )[127X[104X
+    [4X[25X>[125X [27X    Print( arg );[127X[104X
+    [4X[25X>[125X [27X    Print( "\n" );[127X[104X
+    [4X[25X>[125X [27X   end;[127X[104X
+    [4X[28Xfunction( arg... ) ... end[128X[104X
+    [4X[25Xgap>[125X [27XPrintDigits( 1, 9, 7, 3, 2 );[127X[104X
+    [4X[28X[ 1, 9, 7, 3, 2 ][128X[104X
+  [4X[32X[104X
+
+  [33X[0;0Y[2XCallFuncListWrap[102X  differs  only  in that the result is a list. This returned
+  list is empty if the called function returned no value, else it contains the
+  returned  value  as  its single member. This allows wrapping functions which
+  may, or may not return a value.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XCallFuncListWrap( x -> x, [1] );[127X[104X
+    [4X[28X[ 1 ][128X[104X
+    [4X[25Xgap>[125X [27XCallFuncListWrap( function(x) end, [1] );[127X[104X
+    [4X[28X[ ][128X[104X
+  [4X[32X[104X
+
+
+  [1X5.3 [33X[0;0YWrapping a function, so the values produced are cached[133X[101X
+
+  [1X5.3-1 MemoizePosIntFunction[101X
+
+  [33X[1;0Y[29X[2XMemoizePosIntFunction[102X( [3Xfunction[103X[, [3Xoptions[103X] ) [32X function[133X
+
+  [33X[0;0Y[2XMemoizePosIntFunction[102X returns a function which behaves the same as [3Xfunction[103X,
+  except it caches the results for any inputs that are positive integers. Thus
+  if  the  new function is called multiple times with the same input, then any
+  call  after  the  first will return the cached value, instead of recomputing
+  it. By default, the cache can be flushed by calling [2XFlushCaches[102X ([14X79.10-4[114X).[133X
+
+  [33X[0;0YThe returned function will by default only accept positive integers.[133X
+
+  [33X[0;0YThis function does not promise to never call [3Xfunction[103X more than once for any
+  input  --  values  may  be  removed  if  the  cache  gets  too  large, or if
+  [2XFlushCaches[102X ([14X79.10-4[114X) is called, or if multiple threads try to calculate the
+  same value simultaneously.[133X
+
+  [33X[0;0YThe  optional  second  argument  is  a  record  which  provides  a number of
+  configuration options. The following options are supported.[133X
+
+  [8X[10Xdefaults[110X[8X (default an empty list)[108X
+        [33X[0;6YUsed  to initialise the cache, both initially and after each flush. If
+        [10Xdefaults[i][110X is bound, then this is used as default value for the input
+        [10Xi[110X.[133X
+
+  [8X[10Xflush[110X[8X (default [9Xtrue[109X)[108X
+        [33X[0;6YIf  this  is [9Xtrue[109X, the cache is emptied whenever [2XFlushCaches[102X ([14X79.10-4[114X)
+        is called; if false, then the cache cannot be flushed.[133X
+
+  [8X[10XerrorHandler[110X[8X (defaults to [2XError[102X ([14X6.6-1[114X))[108X
+        [33X[0;6YA  function to be called when an input which is not a positive integer
+        is  passed  to  the  cache. The function can either raise an error, or
+        else  return  a  value  which is then returned by the cache. Note that
+        such a value does not get cached itself.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := MemoizePosIntFunction([127X[104X
+    [4X[25X>[125X [27X          function(i) Print("Check: ",i,"\n"); return i*i; end,[127X[104X
+    [4X[25X>[125X [27X          rec(defaults := [,,50], errorHandler := x -> "Bad") );;[127X[104X
+    [4X[25Xgap>[125X [27Xf(2);[127X[104X
+    [4X[28XCheck: 2[128X[104X
+    [4X[28X4[128X[104X
+    [4X[25Xgap>[125X [27Xf(2);[127X[104X
+    [4X[28X4[128X[104X
+    [4X[25Xgap>[125X [27Xf(3);[127X[104X
+    [4X[28X50[128X[104X
+    [4X[25Xgap>[125X [27Xf(-3);[127X[104X
+    [4X[28X"Bad"[128X[104X
+    [4X[25Xgap>[125X [27XFlushCaches();[127X[104X
+    [4X[25Xgap>[125X [27Xf(2);[127X[104X
+    [4X[28XCheck: 2[128X[104X
+    [4X[28X4[128X[104X
+    [4X[25Xgap>[125X [27Xf(3);[127X[104X
+    [4X[28X50[128X[104X
+  [4X[32X[104X
+
+
+  [1X5.4 [33X[0;0YFunctions that do nothing[133X[101X
+
+  [33X[0;0YThe  following  functions return fixed results (or just their own argument).
+  They  can  be  useful  in  places  when  the syntax requires a function, but
+  actually  no  functionality is required. So [2XReturnTrue[102X ([14X5.4-1[114X) is often used
+  as family predicate in [2XInstallMethod[102X ([14X78.3-1[114X).[133X
+
+  [1X5.4-1 ReturnTrue[101X
+
+  [33X[1;0Y[29X[2XReturnTrue[102X( [3X...[103X ) [32X function[133X
+
+  [33X[0;0YThis function takes any number of arguments, and always returns [9Xtrue[109X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=ReturnTrue;[127X[104X
+    [4X[28Xfunction( arg... ) ... end[128X[104X
+    [4X[25Xgap>[125X [27Xf();[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xf(42);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+
+  [1X5.4-2 ReturnFalse[101X
+
+  [33X[1;0Y[29X[2XReturnFalse[102X( [3X...[103X ) [32X function[133X
+
+  [33X[0;0YThis function takes any number of arguments, and always returns [9Xfalse[109X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=ReturnFalse;[127X[104X
+    [4X[28Xfunction( arg... ) ... end[128X[104X
+    [4X[25Xgap>[125X [27Xf();[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xf("any_string");[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+
+  [1X5.4-3 ReturnFail[101X
+
+  [33X[1;0Y[29X[2XReturnFail[102X( [3X...[103X ) [32X function[133X
+
+  [33X[0;0YThis function takes any number of arguments, and always returns [9Xfail[109X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xoops:=ReturnFail;[127X[104X
+    [4X[28Xfunction( arg... ) ... end[128X[104X
+    [4X[25Xgap>[125X [27Xoops();[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27Xoops(-42);[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+
+  [1X5.4-4 ReturnNothing[101X
+
+  [33X[1;0Y[29X[2XReturnNothing[102X( [3X...[103X ) [32X function[133X
+
+  [33X[0;0YThis function takes any number of arguments, and always returns nothing.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xn:=ReturnNothing;[127X[104X
+    [4X[28Xfunction( object... ) ... end[128X[104X
+    [4X[25Xgap>[125X [27Xn();[127X[104X
+    [4X[25Xgap>[125X [27Xn(-42);[127X[104X
+  [4X[32X[104X
+
+  [1X5.4-5 ReturnFirst[101X
+
+  [33X[1;0Y[29X[2XReturnFirst[102X( [3X...[103X ) [32X function[133X
+
+  [33X[0;0YThis  function  takes  one  or  more arguments, and always returns the first
+  argument.  [2XIdFunc[102X  ([14X5.4-6[114X)  behaves  similarly,  but  only  accepts a single
+  argument.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf:=ReturnFirst;[127X[104X
+    [4X[28Xfunction( first, rest... ) ... end[128X[104X
+    [4X[25Xgap>[125X [27Xf(1);[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27Xf(2,3,4);[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27Xf();[127X[104X
+    [4X[28XError, Function: number of arguments must be at least 1 (not 0)[128X[104X
+  [4X[32X[104X
+
+  [1X5.4-6 IdFunc[101X
+
+  [33X[1;0Y[29X[2XIdFunc[102X( [3Xobj[103X ) [32X function[133X
+
+  [33X[0;0Yreturns  [3Xobj[103X.  [2XReturnFirst[102X  ([14X5.4-5[114X)  is  similar,  but  accepts  one or more
+  arguments, returning only the first.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xid:=IdFunc;[127X[104X
+    [4X[28Xfunction( object ) ... end[128X[104X
+    [4X[25Xgap>[125X [27Xid(42);[127X[104X
+    [4X[28X42[128X[104X
+    [4X[25Xgap>[125X [27Xf:=id(SymmetricGroup(3));[127X[104X
+    [4X[28XSym( [ 1 .. 3 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xs:=One(AutomorphismGroup(SymmetricGroup(3)));[127X[104X
+    [4X[28XIdentityMapping( Sym( [ 1 .. 3 ] ) )[128X[104X
+    [4X[25Xgap>[125X [27Xf=s;[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+
+
+  [1X5.5 [33X[0;0YFunction Types[133X[101X
+
+  [33X[0;0YFunctions are [5XGAP[105X objects and thus have categories and a family.[133X
+
+  [1X5.5-1 IsFunction[101X
+
+  [33X[1;0Y[29X[2XIsFunction[102X( [3Xobj[103X ) [32X Category[133X
+
+  [33X[0;0Yis the category of functions.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsFunction(x->x^2);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsFunction(Factorial);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xf:=One(AutomorphismGroup(SymmetricGroup(3)));[127X[104X
+    [4X[28XIdentityMapping( Sym( [ 1 .. 3 ] ) )[128X[104X
+    [4X[25Xgap>[125X [27XIsFunction(f);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+
+  [1X5.5-2 FunctionsFamily[101X
+
+  [33X[1;0Y[29X[2XFunctionsFamily[102X [32X family[133X
+
+  [33X[0;0Yis the family of all functions.[133X
+
+
+  [1X5.6 [33X[0;0YNaming Conventions[133X[101X
+
+  [33X[0;0YThe  way  functions  are  named  in [5XGAP[105X might help to memorize or even guess
+  names of library functions.[133X
+
+  [33X[0;0YIf  a  variable name consists of several words then the first letter of each
+  word is capitalized.[133X
+
+  [33X[0;0YIf  the first part of the name of a function is a verb then the function may
+  modify  its  argument(s)  but  does  not return anything, for example [2XAppend[102X
+  ([14X21.4-5[114X)  appends  the  list  given  as second argument to the list given as
+  first  argument.  Otherwise  the function returns an object without changing
+  the arguments, for example [2XConcatenation[102X ([14X21.20-1[114X) returns the concatenation
+  of the lists given as arguments.[133X
+
+  [33X[0;0YIf  the  name  of  a  function contains the word [21X[10XOf[110X[121X then the return value is
+  thought of as information deduced from the arguments. Usually such functions
+  are  attributes  (see [14X13.5[114X).  Examples are [2XGeneratorsOfGroup[102X ([14X39.2-4[114X), which
+  returns  a  list  of  generators  for  the  group  entered  as  argument, or
+  [2XDiagonalOfMat[102X ([14X24.12-1[114X).[133X
+
+  [33X[0;0YFor  the  setter and tester functions of an attribute [10XAttr[110X the names [10XSetAttr[110X
+  resp. [10XHasAttr[110X are available (see [14X13.5[114X).[133X
+
+  [33X[0;0YIf  the  name  of  a  function contains the word [21X[10XBy[110X[121X then the return value is
+  thought  of as built in a certain way from the parts given as arguments. For
+  example,  creating  a  group  as a factor group of a given group by a normal
+  subgroup      can     be     done     by     taking     the     image     of
+  [2XNaturalHomomorphismByNormalSubgroup[102X   ([14X39.18-1[114X).   Other   examples   of  [21X[10XBy[110X[121X
+  functions       are       [2XGroupHomomorphismByImages[102X       ([14X40.1-1[114X)       and
+  [2XLaurentPolynomialByCoefficients[102X ([14X66.13-1[114X).[133X
+
+  [33X[0;0YOften   such  functions  construct  an  algebraic  structure  given  by  its
+  generators  (for  example, [2XRingByGenerators[102X ([14X56.1-4[114X)). In some cases, [21X[10XBy[110X[121X may
+  be  replaced  by  [21X[10XWith[110X[121X (like e.g. [2XGroupWithGenerators[102X ([14X39.2-3[114X)) or even both
+  versions  of the name may be used. The difference between [10XStructByGenerators[110X
+  and   [10XStructWithGenerators[110X   is   that   the   latter  guarantees  that  the
+  [10XGeneratorsOfStruct[110X  value  of  the  result  is  equal  to  the  given set of
+  generators (see [14X31.3[114X).[133X
+
+  [33X[0;0YIf  the name of a function has the form [21X[10XAsSomething[110X[121X then the return value is
+  an  object  (usually  a  collection  which has the same family of elements),
+  which may, for example:[133X
+
+  [30X    [33X[0;6Yknow  more  about  its  own structure (and so support more operations)
+        than  its  input (e.g. if the elements of the collection form a group,
+        then this group can be constructed using [2XAsGroup[102X ([14X39.2-5[114X));[133X
+
+  [30X    [33X[0;6Ydiscard  its  additional  structure (e.g. [2XAsList[102X ([14X30.3-8[114X) applied to a
+        group will return a list of its elements);[133X
+
+  [30X    [33X[0;6Ycontain  all  elements of the original object without duplicates (like
+        e.g.  [2XAsSet[102X  ([14X30.3-10[114X) does if its argument is a list of elements from
+        the same family);[133X
+
+  [30X    [33X[0;6Yremain  unchanged (like e.g. [2XAsSemigroup[102X ([14X51.1-6[114X) does if its argument
+        is a group).[133X
+
+  [33X[0;0YIf [10XSomething[110X and the argument of [10XAsSomething[110X are domains, some further rules
+  apply as explained in [14XTutorial: Changing the Structure[114X.[133X
+
+  [33X[0;0YIf  the  name of a function [10Xfun1[110X ends with [21X[10XNC[110X[121X then there is another function
+  [10Xfun2[110X  with  the  same  name  except that the [10XNC[110X is missing. [10XNC[110X stands for [21Xno
+  check[121X.  When  [10Xfun2[110X is called then it checks whether its arguments are valid,
+  and if so then it calls [10Xfun1[110X. The functions [2XSubgroupNC[102X ([14X39.3-1[114X) and [2XSubgroup[102X
+  ([14X39.3-1[114X) are a typical example.[133X
+
+  [33X[0;0YThe  idea  is that the possibly time consuming check of the arguments can be
+  omitted  if  one  is  sure  that  they  are  unnecessary. For example, if an
+  algorithm  produces generators of the derived subgroup of a group then it is
+  guaranteed  that  they  lie  in  the original group; [2XSubgroup[102X ([14X39.3-1[114X) would
+  check this, and [2XSubgroupNC[102X ([14X39.3-1[114X) omits the check.[133X
+
+  [33X[0;0YNeedless  to  say,  all  these rules are not followed slavishly, for example
+  there   is   one   operation   [2XZero[102X  ([14X31.10-3[114X)  instead  of  two  operations
+  [10XZeroOfElement[110X and [10XZeroOfAdditiveGroup[110X.[133X
+
+
+  [1X5.7 [33X[0;0YCode annotations (pragmas)[133X[101X
+
+  [33X[0;0YGAP  supports  the  use  of  code  annotations (pragmas) in functions, i.e.,
+  adding  comments to functions that are stored in the function object itself,
+  unlike regular comments. Pragmas are single-line comments, starting with [10X#%[110X:[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xfunction()[127X[104X
+    [4X[25X>[125X [27X      #% This is a pragma[127X[104X
+    [4X[25X>[125X [27X      #  This is not a pragma[127X[104X
+    [4X[25X>[125X [27X      return;[127X[104X
+    [4X[25X>[125X [27Xend;;[127X[104X
+    [4X[25Xgap>[125X [27XDisplay( last );[127X[104X
+    [4X[28Xfunction (  )[128X[104X
+    [4X[28X    #% This is a pragma[128X[104X
+    [4X[28X    return;[128X[104X
+    [4X[28Xend[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YPragmas  can  be  used  to  mark  parts  of  functions  that should later be
+  manipulated using [14X4.16[114X.[133X
+
+  [33X[0;0YPlease  note that heavy use of pragmas in functions slows down the execution
+  of your function in the same way as adding empty [10X;[110X statements to your code.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xa := function( )[127X[104X
+    [4X[25X>[125X [27X      local i;[127X[104X
+    [4X[25X>[125X [27X      for i in [ 1 .. 1000000 ] do[127X[104X
+    [4X[25X>[125X [27X              i := i + 1;[127X[104X
+    [4X[25X>[125X [27X      od;[127X[104X
+    [4X[25X>[125X [27Xend;[127X[104X
+    [4X[28Xfunction(  ) ... end[128X[104X
+    [4X[25Xgap>[125X [27Xa();[127X[104X
+    [4X[25Xgap>[125X [27Xtime;[127X[104X
+    [4X[28X14[128X[104X
+    [4X[25Xgap>[125X [27Xb := function( )[127X[104X
+    [4X[25X>[125X [27X      local i;[127X[104X
+    [4X[25X>[125X [27X      for i in [ 1 .. 1000000 ] do[127X[104X
+    [4X[25X>[125X [27X              i := i + 1;[127X[104X
+    [4X[25X>[125X [27X              #% pragma[127X[104X
+    [4X[25X>[125X [27X              #% pragma[127X[104X
+    [4X[25X>[125X [27X              #% pragma[127X[104X
+    [4X[25X>[125X [27X              #% pragma[127X[104X
+    [4X[25X>[125X [27X              #% pragma[127X[104X
+    [4X[25X>[125X [27X      od;[127X[104X
+    [4X[25X>[125X [27Xend;[127X[104X
+    [4X[28Xfunction(  ) ... end[128X[104X
+    [4X[25Xgap>[125X [27Xb();[127X[104X
+    [4X[25Xgap>[125X [27Xtime;[127X[104X
+    [4X[28X25[128X[104X
+  [4X[32X[104X
+

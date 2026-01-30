@@ -1,0 +1,1699 @@
+
+  [1X7 [33X[0;0YDebugging and Profiling Facilities[133X[101X
+
+  [33X[0;0YThis  chapter  describes some functions that are useful mainly for debugging
+  and profiling purposes.[133X
+
+  [33X[0;0YProbably  the  most  important  debugging tool in [5XGAP[105X is the break loop (see
+  Section [14X6.4[114X) which can be entered by putting an [2XError[102X ([14X6.6-1[114X) statement into
+  your  code  or  by  hitting  Control-C.  In  the  break loop one can inspect
+  variables,  stack  traces  and issue commands as usual in an interactive [5XGAP[105X
+  session.  See  also  the  [2XDownEnv[102X  ([14X6.5-1[114X), [2XUpEnv[102X ([14X6.5-1[114X), [2XWhere[102X ([14X6.4-5[114X) and
+  [2XWhereWithVars[102X ([14X6.4-5[114X) functions.[133X
+
+  [33X[0;0YSections [14X7.2[114X and [14X7.3[114X show how to get information about the methods chosen by
+  the method selection mechanism (see chapter [14X78[114X).[133X
+
+  [33X[0;0YThe  final  sections  describe  functions  for  collecting  statistics about
+  computations (see [2XRuntime[102X ([14X7.6-2[114X), [14X7.8[114X).[133X
+
+
+  [1X7.1 [33X[0;0YRecovery from NoMethodFound-Errors[133X[101X
+
+  [33X[0;0YWhen  the  method  selection fails because there is no applicable method, an
+  error as in the following example occurs and a break loop is entered:[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsNormal(2,2);[127X[104X
+    [4X[28XError, no method found! For debugging hints type ?Recovery from NoMethodFound[128X[104X
+    [4X[28XError, no 1st choice method found for `IsNormal' on 2 arguments at GAPROOT/lib/methsel2.g:250 called from[128X[104X
+    [4X[28X<function "HANDLE_METHOD_NOT_FOUND">( <arguments> )[128X[104X
+    [4X[28X called from read-eval loop at *stdin*:1[128X[104X
+    [4X[28Xtype 'quit;' to quit to outer loop[128X[104X
+    [4X[26Xbrk>[126X[104X
+  [4X[32X[104X
+
+  [33X[0;0YThis  only  says,  that  the  method  selection  tried  to find a method for
+  [10XIsNormal[110X  on  two  arguments  and failed. In this situation it is crucial to
+  find  out,  why this happened. Therefore there are a few functions which can
+  display  further  information. Note that you can leave the break loop by the
+  [9Xquit[109X  command  (see [14X6.4-1[114X) and that the information about the incident is no
+  longer accessible afterwards.[133X
+
+  [1X7.1-1 ShowArguments[101X
+
+  [33X[1;0Y[29X[2XShowArguments[102X(  ) [32X function[133X
+
+  [33X[0;0YThis  function  is  only available within a break loop caused by a [21XNo Method
+  Found[121X-error.  It  prints  as  a list the arguments of the operation call for
+  which no method was found.[133X
+
+  [1X7.1-2 ShowArgument[101X
+
+  [33X[1;0Y[29X[2XShowArgument[102X( [3Xnr[103X ) [32X function[133X
+
+  [33X[0;0YThis  function  is  only available within a break loop caused by a [21XNo Method
+  Found[121X-error.  It  prints the [3Xnr[103X-th arguments of the operation call for which
+  no  method  was  found.  [2XShowArgument[102X needs exactly one argument which is an
+  integer between 0 and the number of arguments the operation was called with.[133X
+
+  [1X7.1-3 ShowDetails[101X
+
+  [33X[1;0Y[29X[2XShowDetails[102X(  ) [32X function[133X
+
+  [33X[0;0YThis  function  is  only available within a break loop caused by a [21XNo Method
+  Found[121X-error.  It prints the details of this error: The operation, the number
+  of  arguments, a flag which indicates whether the operation is being traced,
+  a  flag  which  indicates whether the operation is a constructor method, and
+  the  number  of  methods  that  refused  to  apply  by calling [2XTryNextMethod[102X
+  ([14X78.5-1[114X).  The last number is called [10XChoice[110X and is printed as an ordinal. So
+  if  exactly [22Xk[122X methods were found but called [2XTryNextMethod[102X ([14X78.5-1[114X) and there
+  were no more methods it says [10XChoice: [110X[22Xk[122X[10Xth[110X.[133X
+
+  [1X7.1-4 ShowMethods[101X
+
+  [33X[1;0Y[29X[2XShowMethods[102X( [[3Xverbosity[103X] ) [32X function[133X
+
+  [33X[0;0YThis  function  is  only available within a break loop caused by a [21XNo Method
+  Found[121X-error.  It  prints  an  overview about the installed methods for those
+  arguments  the  operation  was  called with (using [14X7.2[114X. The verbosity can be
+  controlled  by  the  optional integer parameter [3Xverbosity[103X. The default is 2,
+  which  lists all applicable methods. With verbosity 1 [2XShowMethods[102X only shows
+  the  number of installed methods and the methods matching, which can only be
+  those  that were already called but refused to work by calling [2XTryNextMethod[102X
+  ([14X78.5-1[114X).  With  verbosity  3  not  only  all installed methods but also the
+  reasons why they do not match are displayed.[133X
+
+  [1X7.1-5 ShowOtherMethods[101X
+
+  [33X[1;0Y[29X[2XShowOtherMethods[102X( [[3Xverbosity[103X] ) [32X function[133X
+
+  [33X[0;0YThis  function  is  only available within a break loop caused by a [21XNo Method
+  Found[121X-error.  It  prints  an  overview  about  the  installed  methods for a
+  different number of arguments than the number of arguments the operation was
+  called  with  (using  [14X7.2[114X.  The  verbosity can be controlled by the optional
+  integer parameter [3Xverbosity[103X. The default is 1 which lists only the number of
+  applicable  methods.  With  verbosity 2 [2XShowOtherMethods[102X lists all installed
+  methods  and with verbosity 3 also the reasons, why they are not applicable.
+  Calling [2XShowOtherMethods[102X with verbosity 3 in this function will normally not
+  make  any sense, because the different numbers of arguments are simulated by
+  supplying the corresponding number of ones, for which normally no reasonable
+  methods will be installed.[133X
+
+
+  [1X7.2 [33X[0;0YInspecting Applicable Methods[133X[101X
+
+  [1X7.2-1 ApplicableMethod[101X
+
+  [33X[1;0Y[29X[2XApplicableMethod[102X( [3Xopr[103X, [3Xargs[103X[, [3Xprintlevel[103X[, [3Xnr[103X]] ) [32X function[133X
+  [33X[1;0Y[29X[2XApplicableMethodTypes[102X( [3Xopr[103X, [3Xargs[103X[, [3Xprintlevel[103X[, [3Xnr[103X]] ) [32X function[133X
+
+  [33X[0;0YCalled  with  two  arguments, [2XApplicableMethod[102X returns the method of highest
+  rank that is applicable for the operation [3Xopr[103X with the arguments in the list
+  [3Xargs[103X.  The  default [3Xprintlevel[103X is [10X0[110X. If no method is applicable then [9Xfail[109X is
+  returned.[133X
+
+  [33X[0;0YIf   a   positive   integer   is  given  as  the  fourth  argument  [3Xnr[103X  then
+  [2XApplicableMethod[102X  returns  the [3Xnr[103X-th applicable method for the operation [3Xopr[103X
+  with the arguments in the list [3Xargs[103X, where the methods are ordered according
+  to  descending  rank.  If  less  than [3Xnr[103X methods are applicable then [9Xfail[109X is
+  returned.[133X
+
+  [33X[0;0YIf  the fourth argument [3Xnr[103X is the string [10X"all"[110X then [2XApplicableMethod[102X returns
+  a  list  of  all  applicable  methods  for  [3Xopr[103X with arguments [3Xargs[103X, ordered
+  according to descending rank.[133X
+
+  [33X[0;0YDepending  on  the  integer  value  [3Xprintlevel[103X,  additional  information  is
+  printed. Admissible values and their meaning are as follows.[133X
+
+  [8X0[108X
+        [33X[0;6Yno information,[133X
+
+  [8X1[108X
+        [33X[0;6Yinformation about the applicable method,[133X
+
+  [8X2[108X
+        [33X[0;6Yalso information about the not applicable methods of higher rank,[133X
+
+  [8X3[108X
+        [33X[0;6Yalso  for  each  not  applicable method the first reason why it is not
+        applicable,[133X
+
+  [8X4[108X
+        [33X[0;6Yalso  for  each  not  applicable  method  all  reasons  why  it is not
+        applicable.[133X
+
+  [8X6[108X
+        [33X[0;6Yalso the function body of the selected method(s)[133X
+
+  [33X[0;0YWhen  a method returned by [2XApplicableMethod[102X is called then it returns either
+  the  desired  result or the string [10X"TRY_NEXT_METHOD"[110X, which corresponds to a
+  call  to  [2XTryNextMethod[102X  ([14X78.5-1[114X)  in  the  method and means that the method
+  selection would call the next applicable method.[133X
+
+  [33X[0;0Y[13XNote:[113X The [5XGAP[105X kernel provides special treatment for the infix operations [10X\+[110X,
+  [10X\-[110X,  [10X\*[110X,  [10X\/[110X,  [10X\^[110X, [10X\mod[110X and [10X\in[110X. For some kernel objects (notably cyclotomic
+  numbers,  finite  field  elements  and  row vectors thereof) it calls kernel
+  methods  circumventing  the  method selection mechanism. Therefore for these
+  operations  [2XApplicableMethod[102X  may  return  a  method which is not the kernel
+  method actually used.[133X
+
+  [33X[0;0YThe  function  [2XApplicableMethodTypes[102X  takes  the  [13Xtypes[113X  or  [13Xfilters[113X  of the
+  arguments as argument (if only filters are given of course family predicates
+  cannot be tested).[133X
+
+
+  [1X7.3 [33X[0;0YTracing Methods[133X[101X
+
+  [1X7.3-1 TraceMethods[101X
+
+  [33X[1;0Y[29X[2XTraceMethods[102X( [3Xopr1[103X, [3Xopr2[103X, [3X...[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XTraceMethods[102X( [3Xoprs[103X ) [32X function[133X
+
+  [33X[0;0YAfter  the  call of [10XTraceMethods[110X, whenever a method of one of the operations
+  [3Xopr1[103X,  [3Xopr2[103X,  ... is called, the information string used in the installation
+  of  the  method  is  printed.  The  second form has the same effect for each
+  operation from the list [3Xoprs[103X of operations.[133X
+
+  [1X7.3-2 TraceAllMethods[101X
+
+  [33X[1;0Y[29X[2XTraceAllMethods[102X(  ) [32X function[133X
+
+  [33X[0;0YInvokes [10XTraceMethods[110X for all operations.[133X
+
+  [1X7.3-3 UntraceMethods[101X
+
+  [33X[1;0Y[29X[2XUntraceMethods[102X( [3Xopr1[103X, [3Xopr2[103X, [3X...[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XUntraceMethods[102X( [3Xoprs[103X ) [32X function[133X
+
+  [33X[0;0Yturns  the  tracing  off for all operations [3Xopr1[103X, [3Xopr2[103X, ... or in the second
+  form, for all operations in the list [3Xoprs[103X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTraceMethods( [ Size ] );[127X[104X
+    [4X[25Xgap>[125X [27Xg:= Group( (1,2,3), (1,2) );;[127X[104X
+    [4X[25Xgap>[125X [27XSize( g );[127X[104X
+    [4X[28X#I  Size: for a permutation group at /gap5/lib/grpperm.gi:487[128X[104X
+    [4X[28X#I  Setter(Size): system setter[128X[104X
+    [4X[28X#I  Size: system getter[128X[104X
+    [4X[28X#I  Size: system getter[128X[104X
+    [4X[28X6[128X[104X
+    [4X[25Xgap>[125X [27XUntraceMethods( [ Size ] );[127X[104X
+  [4X[32X[104X
+
+  [1X7.3-4 UntraceAllMethods[101X
+
+  [33X[1;0Y[29X[2XUntraceAllMethods[102X(  ) [32X function[133X
+
+  [33X[0;0YEquivalent to calling [10XUntraceMethods[110X for all operations.[133X
+
+  [1X7.3-5 TraceImmediateMethods[101X
+
+  [33X[1;0Y[29X[2XTraceImmediateMethods[102X( [[3Xflag[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XUntraceImmediateMethods[102X(  ) [32X function[133X
+
+  [33X[0;0Y[2XTraceImmediateMethods[102X  enables  tracing for all immediate methods if [3Xflag[103X is
+  either     [9Xtrue[109X,     or    not    present.    [2XUntraceImmediateMethods[102X,    or
+  [2XTraceImmediateMethods[102X  with [3Xflag[103X equal [9Xfalse[109X turns tracing off. (There is no
+  facility to trace [13Xspecific[113X immediate methods.)[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTraceImmediateMethods( );[127X[104X
+    [4X[25Xgap>[125X [27Xg:= Group( (1,2,3), (1,2) );;[127X[104X
+    [4X[28X#I RunImmediateMethods[128X[104X
+    [4X[28X#I  immediate: Size[128X[104X
+    [4X[28X#I  immediate: IsCyclic[128X[104X
+    [4X[28X#I  immediate: IsCommutative[128X[104X
+    [4X[28X#I  immediate: IsTrivial[128X[104X
+    [4X[25Xgap>[125X [27XSize( g );[127X[104X
+    [4X[28X#I  immediate: IsPerfectGroup[128X[104X
+    [4X[28X#I  immediate: IsNonTrivial[128X[104X
+    [4X[28X#I  immediate: Size[128X[104X
+    [4X[28X#I  immediate: IsFreeAbelian[128X[104X
+    [4X[28X#I  immediate: IsTorsionFree[128X[104X
+    [4X[28X#I  immediate: IsNonTrivial[128X[104X
+    [4X[28X#I  immediate: IsPerfectGroup[128X[104X
+    [4X[28X#I  immediate: GeneralizedPcgs[128X[104X
+    [4X[28X#I  immediate: IsEmpty[128X[104X
+    [4X[28X6[128X[104X
+    [4X[25Xgap>[125X [27XUntraceImmediateMethods( );[127X[104X
+    [4X[25Xgap>[125X [27XUntraceMethods( [ Size ] );[127X[104X
+  [4X[32X[104X
+
+  [33X[0;0YThis example gives an explanation for the two calls of the [21Xsystem getter[121X for
+  [2XSize[102X  ([14X30.4-6[114X).  Namely,  there  are immediate methods that access the known
+  size  of the group. Note that the group [10Xg[110X was known to be finitely generated
+  already  before the size was computed, the calls of the immediate method for
+  [2XIsFinitelyGeneratedGroup[102X  ([14X39.15-18[114X)  after  the  call of [2XSize[102X ([14X30.4-6[114X) have
+  other arguments than [10Xg[110X.[133X
+
+  [1X7.3-6 TraceInternalMethods[101X
+
+  [33X[1;0Y[29X[2XTraceInternalMethods[102X(  ) [32X function[133X
+  [33X[1;0Y[29X[2XUntraceInternalMethods[102X(  ) [32X function[133X
+  [33X[1;0Y[29X[2XGetTraceInternalMethodsCounts[102X(  ) [32X function[133X
+  [33X[1;0Y[29X[2XClearTraceInternalMethodsCounts[102X(  ) [32X function[133X
+
+  [33X[0;0Y[2XTraceInternalMethods[102X  enables  tracing  for  all  internal methods. Internal
+  methods  are  methods which implement many fundamental operations in GAP. In
+  this version of GAP, the internal methods which can be traced are:[133X
+
+  [8XZero, ZeroMut[108X
+        [33X[0;6YMutable and Immutable [2XZero[102X ([14X31.10-3[114X)[133X
+
+  [8XAInv, AInvMut[108X
+        [33X[0;6YMutable and Immutable [2XAdditiveInverse[102X ([14X31.10-9[114X)[133X
+
+  [8XOne, OneMut[108X
+        [33X[0;6YMutable and Immutable [2XOne[102X ([14X31.10-2[114X)[133X
+
+  [8XInv, InvMut[108X
+        [33X[0;6YMutable and Immutable [2XInverse[102X ([14X31.10-8[114X)[133X
+
+  [8XSum[108X
+        [33X[0;6YThe operator [2X\+[102X ([14X31.12-1[114X)[133X
+
+  [8XDiff[108X
+        [33X[0;6YThe operator [10X-[110X operator[133X
+
+  [8XProd[108X
+        [33X[0;6YThe operator [2X\*[102X ([14X31.12-1[114X)[133X
+
+  [8XQuo[108X
+        [33X[0;6YThe operator [2X\/[102X ([14X31.12-1[114X)[133X
+
+  [8XLQuo[108X
+        [33X[0;6YThe left-quotient operator[133X
+
+  [8XPow[108X
+        [33X[0;6YThe operator [2X\^[102X ([14X31.12-1[114X)[133X
+
+  [8XComm[108X
+        [33X[0;6YThe operator [2XComm[102X ([14X31.12-3[114X)[133X
+
+  [8XMod[108X
+        [33X[0;6YThe operator [2X\mod[102X ([14X31.12-1[114X)[133X
+
+  [33X[0;0Y[2XUntraceInternalMethods[102X  turns  tracing  off.  As these methods can be called
+  hundreds  of  thousands of times in simple GAP code, there isn't a statement
+  printed    each    time    one    is    called.    Instead,    the    method
+  [2XGetTraceInternalMethodsCounts[102X returns how many times each operation has been
+  applied  to  each type of variable (the type of a variable can be found with
+  the  [10XTNAM_OBJ[110X  method).  The  return  value  for two argument operators is a
+  record  of  records  [10Xr[110X, where [10Xr.op[110X stores information about operator [10Xop[110X. For
+  one  argument  operators  [10Xr.op.i[110X stores how many times [10Xop[110X was called with an
+  argument  of  type  [10Xi[110X,  while for two argument operators [10Xr.op.i.j[110X stores how
+  many times [10Xop[110X was called with arguments of type [10Xi[110X and [10Xj[110X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTraceInternalMethods();[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27X2+3+4+5+6;;[127X[104X
+    [4X[25Xgap>[125X [27X2.0+2.0;;[127X[104X
+    [4X[25Xgap>[125X [27X3^(1,2,3);;[127X[104X
+    [4X[25Xgap>[125X [27XGetTraceInternalMethodsCounts();[127X[104X
+    [4X[28Xrec( Pow := rec( integer := rec( ("permutation (small)") := 1 ) ),[128X[104X
+    [4X[28XSum := rec( integer := rec( integer := 4 ),[128X[104X
+    [4X[28X    macfloat := rec( macfloat := 1 ) ) )[128X[104X
+    [4X[28X# 'macfloat' is a floating point number[128X[104X
+    [4X[25Xgap>[125X [27XUntraceInternalMethods();[127X[104X
+  [4X[32X[104X
+
+
+  [1X7.4 [33X[0;0YInfo Functions[133X[101X
+
+  [33X[0;0YThe  [2XInfo[102X  ([14X7.4-6[114X)  mechanism  permits  operations  to  display intermediate
+  results  or information about the progress of the algorithms. Information is
+  always given according to one or more [13Xinfo classes[113X. Each of the info classes
+  defined  in the [5XGAP[105X library usually covers a certain range of algorithms, so
+  for  example  [10XInfoLattice[110X covers all the cyclic extension algorithms for the
+  computation of a subgroup lattice.[133X
+
+  [33X[0;0YNote  that  not  all  info  classes defined in the [5XGAP[105X library are currently
+  documented.  Many  [5XGAP[105X  packages  define  additional info classes, which are
+  typically   documented  in  the  corresponding  package  documentation.  The
+  function  [2XShowUsedInfoClasses[102X  ([14X7.4-5[114X)  will show all info classes which [5XGAP[105X
+  considers while executing code.[133X
+
+  [33X[0;0YThe  amount  of  information  to  be  displayed  by  each  info class can be
+  separately  specified  by the user. This is done by selecting a non-negative
+  integer  [13Xlevel[113X for the info class: no information will be displayed at level
+  0, and the higher the level, the more information that will be displayed. At
+  creation,  an  info  class  has  level  0. By default, all built-in GAP info
+  classes  have  level  0,  except  for the following info classes, which have
+  level 1:[133X
+
+  [30X    [33X[0;6Y[2XInfoWarning[102X ([14X7.4-8[114X),[133X
+
+  [30X    [33X[0;6Y[2XInfoPackageLoading[102X ([14X76.2-6[114X),[133X
+
+  [30X    [33X[0;6Y[10XInfoDebug[110X,[133X
+
+  [30X    [33X[0;6Y[10XInfoPerformance[110X,[133X
+
+  [30X    [33X[0;6Y[10XInfoTempDirectories[110X,[133X
+
+  [30X    [33X[0;6Y[10XInfoPrimeInt[110X, and[133X
+
+  [30X    [33X[0;6Y[10XInfoSLP[110X.[133X
+
+  [1X7.4-1 NewInfoClass[101X
+
+  [33X[1;0Y[29X[2XNewInfoClass[102X( [3Xname[103X ) [32X operation[133X
+
+  [33X[0;0Ycreates a new info class with name [3Xname[103X.[133X
+
+  [1X7.4-2 DeclareInfoClass[101X
+
+  [33X[1;0Y[29X[2XDeclareInfoClass[102X( [3Xname[103X ) [32X function[133X
+
+  [33X[0;0Ycreates  a new info class with name [3Xname[103X and binds it to the global variable
+  [3Xname[103X.  The  variable  must  previously be writable, and is made read-only by
+  this function.[133X
+
+  [1X7.4-3 SetInfoLevel[101X
+
+  [33X[1;0Y[29X[2XSetInfoLevel[102X( [3Xinfoclass[103X, [3Xlevel[103X ) [32X operation[133X
+
+  [33X[0;0YSets the info level for [3Xinfoclass[103X to the non-negative integer [3Xlevel[103X.[133X
+
+  [1X7.4-4 InfoLevel[101X
+
+  [33X[1;0Y[29X[2XInfoLevel[102X( [3Xinfoclass[103X ) [32X operation[133X
+
+  [33X[0;0Yreturns the info level of [3Xinfoclass[103X.[133X
+
+  [1X7.4-5 ShowUsedInfoClasses[101X
+
+  [33X[1;0Y[29X[2XShowUsedInfoClasses[102X( [3Xinfoclass[103X ) [32X function[133X
+
+  [33X[0;0YCalled  with argument [9Xtrue[109X, this makes [5XGAP[105X print the info class and level of
+  any  executed  [2XInfo[102X ([14X7.4-6[114X) statement. Calling with the argument [9Xfalse[109X stops
+  this  printing.  Each  level  of  each  info class is only printed once. The
+  history of printed info classes and levels is reset whenever [9Xtrue[109X is passed.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XShowUsedInfoClasses(true);[127X[104X
+    [4X[25Xgap>[125X [27XIntersection(Group((1,3,2,4,5,6)), Group((1,2,3,4,5,6)));[127X[104X
+    [4X[28X#I Would print info with SetInfoLevel(InfoBckt,1)[128X[104X
+    [4X[28X#I Would print info with SetInfoLevel(InfoBckt,3)[128X[104X
+    [4X[28X#I Would print info with SetInfoLevel(InfoBckt,5)[128X[104X
+    [4X[28XGroup(())[128X[104X
+    [4X[25Xgap>[125X [27XIntersection(Group((1,3,2,4,5,6)), Group((1,2,3,4,5,6)));[127X[104X
+    [4X[28XGroup(())[128X[104X
+    [4X[25Xgap>[125X [27XShowUsedInfoClasses(false);[127X[104X
+  [4X[32X[104X
+
+  [1X7.4-6 Info[101X
+
+  [33X[1;0Y[29X[2XInfo[102X( [3Xinfoclass[103X, [3Xlevel[103X, [3Xinfo[103X[, [3Xmoreinfo[103X, [3X...[103X] ) [32X function[133X
+
+  [33X[0;0YIf  the  info  level  of  [3Xinfoclass[103X  is  at  least [3Xlevel[103X, then the remaining
+  arguments,   [3Xinfo[103X,   and   possibly  [3Xmoreinfo[103X  and  so  on,  are  evaluated.
+  (Technically, [2XInfo[102X is a keyword and not a function.)[133X
+
+  [33X[0;0YBy  default,  the  results  of these evaluations are viewed, preceded by the
+  string [10X"#I "[110X and followed by a newline.[133X
+
+  [33X[0;0YIf  the  info level of [3Xinfoclass[103X is strictly less than [3Xlevel[103X, then the third
+  and subsequent arguments are not evaluated. (The latter can save substantial
+  time when displaying difficult results.)[133X
+
+  [33X[0;0YThe behaviour can be customized with [2XSetInfoHandler[102X ([14X7.4-7[114X).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XInfoExample:=NewInfoClass("InfoExample");;[127X[104X
+    [4X[25Xgap>[125X [27XInfo(InfoExample,1,"one");Info(InfoExample,2,"two");[127X[104X
+    [4X[25Xgap>[125X [27XSetInfoLevel(InfoExample,1);[127X[104X
+    [4X[25Xgap>[125X [27XInfo(InfoExample,1,"one");Info(InfoExample,2,"two");[127X[104X
+    [4X[28X#I  one[128X[104X
+    [4X[25Xgap>[125X [27XSetInfoLevel(InfoExample,2);[127X[104X
+    [4X[25Xgap>[125X [27XInfo(InfoExample,1,"one");Info(InfoExample,2,"two");[127X[104X
+    [4X[28X#I  one[128X[104X
+    [4X[28X#I  two[128X[104X
+    [4X[25Xgap>[125X [27XInfoLevel(InfoExample);[127X[104X
+    [4X[28X2[128X[104X
+    [4X[25Xgap>[125X [27XInfo(InfoExample,3,Length(Combinations([1..9999])));[127X[104X
+  [4X[32X[104X
+
+  [33X[0;0YNote  that the last [2XInfo[102X call is executed without problems, since the actual
+  level  [10X2[110X  of  [10XInfoExample[110X  causes  [2XInfo[102X  to  ignore the last argument, which
+  prevents  [10XLength(Combinations([1..9999]))[110X from being evaluated; note that an
+  evaluation would be impossible due to memory restrictions.[133X
+
+  [33X[0;0YA  set  of  info classes (called an [13Xinfo selector[113X) may be passed to a single
+  [2XInfo[102X  statement.  As a shorthand, info classes and selectors may be combined
+  with [10X+[110X rather than [2XUnion[102X ([14X30.5-3[114X). In this case, the message is triggered if
+  the level of [13Xany[113X of the classes is high enough.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XInfoExample:=NewInfoClass("InfoExample");;[127X[104X
+    [4X[25Xgap>[125X [27XSetInfoLevel(InfoExample,0);[127X[104X
+    [4X[25Xgap>[125X [27XInfo(InfoExample + InfoWarning, 1, "hello");[127X[104X
+    [4X[28X#I  hello[128X[104X
+    [4X[25Xgap>[125X [27XInfo(InfoExample + InfoWarning, 2, "hello");[127X[104X
+    [4X[25Xgap>[125X [27XSetInfoLevel(InfoExample,2);[127X[104X
+    [4X[25Xgap>[125X [27XInfo(InfoExample + InfoWarning, 2, "hello");[127X[104X
+    [4X[28X#I  hello[128X[104X
+    [4X[25Xgap>[125X [27XInfoLevel(InfoWarning);[127X[104X
+    [4X[28X1[128X[104X
+  [4X[32X[104X
+
+
+  [1X7.4-7 [33X[0;0YCustomizing [2XInfo[102X[101X[1X ([14X7.4-6[114X) statements[133X[101X
+
+  [33X[1;0Y[29X[2XSetInfoHandler[102X( [3Xinfoclass[103X, [3Xhandler[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XSetInfoOutput[102X( [3Xinfoclass[103X, [3Xout[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XUnbindInfoOutput[102X( [3Xinfoclass[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XInfoOutput[102X( [3Xinfoclass[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XSetDefaultInfoOutput[102X( [3Xout[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10Ynothing[133X
+
+  [33X[0;0YThis  allows one to customize what happens in an [10XInfo([3Xinfoclass[103X[10X, [3Xlevel[103X[10X, ...)[110X
+  statement.[133X
+
+  [33X[0;0YIn  the  first  function,  [3Xhandler[103X  must  be a function with three arguments
+  [3Xinfoclass[103X,  [3Xlevel[103X, [3Xlist[103X. Here [3Xlist[103X is the list containing the third argument
+  and any subsequent optional arguments of the [2XInfo[102X ([14X7.4-6[114X) call.[133X
+
+  [33X[0;0YThe  default  handler  is  the function [10XDefaultInfoHandler[110X. It prints [10X"#I "[110X,
+  then  the  third  and further arguments of the info statement, and finally a
+  [10X"\n"[110X.[133X
+
+  [33X[0;0YIf the first argument of an [2XInfo[102X ([14X7.4-6[114X) statement is a sum of Info classes,
+  the handler of the first summand is used.[133X
+
+  [33X[0;0YThe  file  or  stream  to  which [2XInfo[102X ([14X7.4-6[114X) statements for individual [2XInfo[102X
+  ([14X7.4-6[114X)  classes  print can be overridden with [2XSetInfoOutput[102X, retrieved with
+  [2XInfoOutput[102X  and  reset  to  the  default  with [2XUnbindInfoOutput[102X. The initial
+  default for all [2XInfo[102X ([14X7.4-6[114X) classes is the string [10X"*Print*"[110X which means the
+  current  output  file. The default can be changed with [2XSetDefaultInfoOutput[102X.
+  The  argument  [3Xout[103X  can  be  a filename or an open stream, the special names
+  [10X"*Print*"[110X, [10X"*errout*[110X and [10X"*stdout*[110X are also recognized.[133X
+
+  [33X[0;0YFor  example,  [10XSetDefaultInfoOutput("*errout*");[110X  would  send  [2XInfo[102X  ([14X7.4-6[114X)
+  output  to  standard  error,  which  can  be  interesting  if [5XGAP[105Xs output is
+  redirected.[133X
+
+  [1X7.4-8 InfoWarning[101X
+
+  [33X[1;0Y[29X[2XInfoWarning[102X [32X info class[133X
+
+  [33X[0;0Yis an info class to which general warnings are sent at level 1, which is its
+  default level. More specialised warnings are shown via calls of [2XInfo[102X ([14X7.4-6[114X)
+  at  [2XInfoWarning[102X  level  2,  e.g. information  about  the  autoloading of [5XGAP[105X
+  packages and the initial line matched when displaying an on-line help topic.[133X
+
+
+  [1X7.5 [33X[0;0YAssertions[133X[101X
+
+  [33X[0;0YAssertions  are  used  to  find  errors  in  algorithms.  They  test whether
+  intermediate  results  conform  to required conditions and issue an error if
+  not.[133X
+
+  [1X7.5-1 SetAssertionLevel[101X
+
+  [33X[1;0Y[29X[2XSetAssertionLevel[102X( [3Xlev[103X ) [32X function[133X
+
+  [33X[0;0Yassigns the global assertion level to [3Xlev[103X. By default it is zero.[133X
+
+  [1X7.5-2 AssertionLevel[101X
+
+  [33X[1;0Y[29X[2XAssertionLevel[102X(  ) [32X function[133X
+
+  [33X[0;0Yreturns the current assertion level.[133X
+
+  [1X7.5-3 Assert[101X
+
+  [33X[1;0Y[29X[2XAssert[102X( [3Xlev[103X, [3Xcond[103X[, [3Xmessage[103X] ) [32X function[133X
+
+  [33X[0;0YWith two arguments, if the global assertion level is at least [3Xlev[103X, condition
+  [3Xcond[103X  is  tested  and  if  it  does not return [9Xtrue[109X an error is raised. Thus
+  [10XAssert(lev, [3Xcond[103X[10X)[110X is equivalent to the code[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[28Xif AssertionLevel() >= lev and not <cond> then[128X[104X
+    [4X[28X  Error("Assertion failure");[128X[104X
+    [4X[28Xfi;[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YIf  the [3Xmessage[103X argument form of the [2XAssert[102X statement is provided, and if an
+  error is raised, then this message is printed as part of the error.[133X
+
+  [33X[0;0YAssertions  are  used  at  various  places  in  the  library.  Thus  turning
+  assertions on can slow code execution significantly.[133X
+
+
+  [1X7.6 [33X[0;0YTiming[133X[101X
+
+  [1X7.6-1 Runtimes[101X
+
+  [33X[1;0Y[29X[2XRuntimes[102X(  ) [32X function[133X
+
+  [33X[0;0Y[2XRuntimes[102X  returns  a  record with components bound to integers or [9Xfail[109X. Each
+  integer  is  the cpu time (processor time) in milliseconds spent by [5XGAP[105X in a
+  certain status:[133X
+
+  [8X[10Xuser_time[110X[8X[108X
+        [33X[0;6Ycpu time spent with [5XGAP[105X functions (without child processes).[133X
+
+  [8X[10Xsystem_time[110X[8X[108X
+        [33X[0;6Ycpu  time  spent  in  system  calls,  e.g.,  file  access ([9Xfail[109X if not
+        available).[133X
+
+  [8X[10Xuser_time_children[110X[8X[108X
+        [33X[0;6Ycpu time spent in child processes ([9Xfail[109X if not available).[133X
+
+  [8X[10Xsystem_time_children[110X[8X[108X
+        [33X[0;6Ycpu  time  spent  in  system  calls  by  child  processes ([9Xfail[109X if not
+        available).[133X
+
+  [33X[0;0YNote  that  this  function  is  not fully supported on all systems. Only the
+  [10Xuser_time[110X component is (and may on some systems include the system time).[133X
+
+  [33X[0;0YThe  following  example demonstrates tasks which contribute to the different
+  time components:[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRuntimes(); # after startup[127X[104X
+    [4X[28Xrec( user_time := 3980, system_time := 60, user_time_children := 0,[128X[104X
+    [4X[28X  system_time_children := 0 )[128X[104X
+    [4X[25Xgap>[125X [27XExec("cat /usr/bin/*||wc"); # child process with a lot of file access[127X[104X
+    [4X[28X 893799 7551659 200928302[128X[104X
+    [4X[25Xgap>[125X [27XRuntimes();[127X[104X
+    [4X[28Xrec( user_time := 3990, system_time := 60, user_time_children := 1590,[128X[104X
+    [4X[28X  system_time_children := 600 )[128X[104X
+    [4X[25Xgap>[125X [27Xa:=0;;for i in [1..100000000] do a:=a+1; od; # GAP user time[127X[104X
+    [4X[25Xgap>[125X [27XRuntimes();[127X[104X
+    [4X[28Xrec( user_time := 12980, system_time := 70, user_time_children := 1590,[128X[104X
+    [4X[28X  system_time_children := 600 )[128X[104X
+    [4X[25Xgap>[125X [27X?blabla  # first call of help, a lot of file access[127X[104X
+    [4X[28XHelp: no matching entry found[128X[104X
+    [4X[25Xgap>[125X [27XRuntimes();[127X[104X
+    [4X[28Xrec( user_time := 13500, system_time := 440, user_time_children := 1590,[128X[104X
+    [4X[28X  system_time_children := 600 )[128X[104X
+  [4X[32X[104X
+
+  [1X7.6-2 Runtime[101X
+
+  [33X[1;0Y[29X[2XRuntime[102X(  ) [32X function[133X
+
+  [33X[0;0Y[2XRuntime[102X  returns  the time spent by [5XGAP[105X in milliseconds as an integer. It is
+  the  same as the value of the [10Xuser_time[110X component given by [2XRuntimes[102X ([14X7.6-1[114X),
+  as explained above.[133X
+
+  [33X[0;0YSee   [2XStringTime[102X   ([14X27.10-9[114X)   for  a  translation  from  milliseconds  into
+  hour/minute format.[133X
+
+  [1X7.6-3 NanosecondsSinceEpoch[101X
+
+  [33X[1;0Y[29X[2XNanosecondsSinceEpoch[102X(  ) [32X function[133X
+  [33X[1;0Y[29X[2XNanosecondsSinceEpochInfo[102X(  ) [32X function[133X
+
+  [33X[0;0Y[2XNanosecondsSinceEpoch[102X  returns the time in nanoseconds that has passed since
+  some  fixed,  but unspecified time in the past. This function is appropriate
+  for  doing wallclock time measurements. The actual resolution depends on the
+  system that [5XGAP[105X is run on. Information about the used timers can be obtained
+  by  calling  [2XNanosecondsSinceEpochInfo[102X,  which  returns  a record containing
+  members [10XMethod[110X, [10XMonotonic[110X, [10XReliable[110X and [10XResolution[110X.[133X
+
+  [33X[0;0Y[10XMethod[110X  is  a string describing the method used to obtain timer values. This
+  will usually contain the name of the syscall used.[133X
+
+  [33X[0;0Y[10XMonotonic[110X  is  a  boolean.  If  it  is  [9Xtrue[109X,  then  the  values returned by
+  [2XNanosecondsSinceEpoch[102X are guaranteed to be strictly monotonically increasing
+  between two calls, if it is [9Xfalse[109X then there is no such guarantee.[133X
+
+  [33X[0;0Y[10XResolution[110X  is  an  integer  reflecting  the resolution of the timer used in
+  nanoseconds.[133X
+
+  [33X[0;0Y[10XReliable[110X  is  a  boolean.  If it is [9Xtrue[109X then the value [10XResolution[110X is deemed
+  reliable in the sense that it was obtained by querying the operating system,
+  otherwise [10XResolution[110X should be treated as an estimate.[133X
+
+  [1X7.6-4 time[101X
+
+  [33X[1;0Y[29X[2Xtime[102X [32X global variable[133X
+
+  [33X[0;0YIn the read-eval-print loop, [2Xtime[102X stores the number of milliseconds the last
+  command  took  (see also [2Xmemory_allocated[102X ([14X7.7-2[114X) for the number of bytes of
+  memory it allocated).[133X
+
+  [1X7.6-5 Sleep[101X
+
+  [33X[1;0Y[29X[2XSleep[102X( [3Xtime[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XMicroSleep[102X( [3Xtime[103X ) [32X function[133X
+
+  [33X[0;0YThese functions make GAP stop execution for a given period of time. The time
+  to stop is given to [2XSleep[102X in seconds and [2XMicroSleep[102X in microseconds.[133X
+
+
+  [1X7.7 [33X[0;0YTracking Memory Usage[133X[101X
+
+  [1X7.7-1 TotalMemoryAllocated[101X
+
+  [33X[1;0Y[29X[2XTotalMemoryAllocated[102X(  ) [32X function[133X
+
+  [33X[0;0Y[2XTotalMemoryAllocated[102X  returns  the total amount of memory in bytes allocated
+  by the [5XGAP[105X memory manager since [5XGAP[105X started.[133X
+
+  [1X7.7-2 memory_allocated[101X
+
+  [33X[1;0Y[29X[2Xmemory_allocated[102X [32X global variable[133X
+
+  [33X[0;0YIn  the read-eval-print loop, [2Xmemory_allocated[102X stores the number of bytes of
+  memory  allocated by the last completed statement (see also [2Xtime[102X ([14X7.6-4[114X) for
+  the number of milliseconds it took).[133X
+
+
+  [1X7.8 [33X[0;0YProfiling[133X[101X
+
+  [33X[0;0YProfiling  of  code can be used to determine in which parts of a program how
+  much  time  has  been  spent  and  how much memory has been allocated during
+  runtime.  GAP has two different methods of profiling. GAP can either profile
+  by  function, or line-by-line. Line by line profiling is currently only used
+  for code coverage, while function profiling tracks memory and time usage.[133X
+
+
+  [1X7.8-1 [33X[0;0YFunction Profiling[133X[101X
+
+  [33X[0;0YThis  section  describes how to profiling at the function level. The idea is
+  that[133X
+
+  [30X    [33X[0;6Yfirst   one   switches  on  profiling  for  those  [5XGAP[105X  functions  the
+        performance of which one wants to check,[133X
+
+  [30X    [33X[0;6Ythen one runs some [5XGAP[105X computations,[133X
+
+  [30X    [33X[0;6Ythen  one  looks  at  the  profile  information collected during these
+        computations,[133X
+
+  [30X    [33X[0;6Ythen   one  runs  more  computations  (perhaps  clearing  all  profile
+        information before, see [2XClearProfile[102X ([14X7.8-10[114X)),[133X
+
+  [30X    [33X[0;6Yand finally one switches off profiling.[133X
+
+  [33X[0;0YFor  switching  on  and  off  profiling,  [5XGAP[105X  supports  entering  a list of
+  functions  (see  [2XProfileFunctions[102X  ([14X7.8-5[114X), [2XUnprofileFunctions[102X ([14X7.8-6[114X)) or a
+  list  of  operations  whose  methods  shall  be (un)profiled ([2XProfileMethods[102X
+  ([14X7.8-7[114X),  [2XUnprofileMethods[102X  ([14X7.8-8[114X)), and [2XDisplayProfile[102X ([14X7.8-9[114X) can be used
+  to show profile information about functions in a given list.[133X
+
+  [33X[0;0YBesides  these  functions, [2XProfileGlobalFunctions[102X ([14X7.8-2[114X), [2XProfileOperations[102X
+  ([14X7.8-3[114X),  and  [2XProfileOperationsAndMethods[102X ([14X7.8-4[114X) can be used for switching
+  on  or  off  profiling  for [13Xall[113X global functions, operations, and operations
+  together  with  all  their  methods,  respectively,  and for showing profile
+  information about these functions.[133X
+
+  [33X[0;0YNote that [5XGAP[105X will perform more slowly when profiling than when not.[133X
+
+  [1X7.8-2 ProfileGlobalFunctions[101X
+
+  [33X[1;0Y[29X[2XProfileGlobalFunctions[102X( [[3Xbool[103X] ) [32X function[133X
+
+  [33X[0;0YCalled  with  argument  [9Xtrue[109X, [2XProfileGlobalFunctions[102X starts profiling of all
+  functions  that  have been declared via [2XDeclareGlobalFunction[102X ([14X79.10-5[114X). Old
+  profile information for all these functions is cleared. A function call with
+  the  argument  [9Xfalse[109X  stops  profiling  of  all  these  functions.  Recorded
+  information  is  still  kept,  so  you can display it even after turning the
+  profiling off.[133X
+
+  [33X[0;0YWhen  [2XProfileGlobalFunctions[102X is called without argument, profile information
+  for all global functions is displayed, see [2XDisplayProfile[102X ([14X7.8-9[114X).[133X
+
+  [1X7.8-3 ProfileOperations[101X
+
+  [33X[1;0Y[29X[2XProfileOperations[102X( [[3Xbool[103X] ) [32X function[133X
+
+  [33X[0;0YCalled  with  argument  [9Xtrue[109X,  [2XProfileOperations[102X  starts  profiling  of  all
+  operations.  Old  profile  information  for  all  operations  is  cleared. A
+  function  call  with  the  argument [9Xfalse[109X stops profiling of all operations.
+  Recorded information is still kept, so you can display it even after turning
+  the profiling off.[133X
+
+  [33X[0;0YWhen  [2XProfileOperations[102X  is called without argument, profile information for
+  all operations is displayed (see [2XDisplayProfile[102X ([14X7.8-9[114X)).[133X
+
+  [1X7.8-4 ProfileOperationsAndMethods[101X
+
+  [33X[1;0Y[29X[2XProfileOperationsAndMethods[102X( [[3Xbool[103X] ) [32X function[133X
+
+  [33X[0;0YCalled  with  argument [9Xtrue[109X, [2XProfileOperationsAndMethods[102X starts profiling of
+  all  operations  and  their  methods.  Old  profile  information  for  these
+  functions  is  cleared.  A  function  call  with  the  argument  [9Xfalse[109X stops
+  profiling of all operations and their methods. Recorded information is still
+  kept, so you can display it even after turning the profiling off.[133X
+
+  [33X[0;0YWhen   [2XProfileOperationsAndMethods[102X   is  called  without  argument,  profile
+  information   for   all   operations   and   their   methods  is  displayed,
+  see [2XDisplayProfile[102X ([14X7.8-9[114X).[133X
+
+  [1X7.8-5 ProfileFunctions[101X
+
+  [33X[1;0Y[29X[2XProfileFunctions[102X( [3Xfuncs[103X ) [32X function[133X
+
+  [33X[0;0Ystarts   profiling  for  all  function  in  the  list  [3Xfuncs[103X.  You  can  use
+  [2XProfileGlobalFunctions[102X  ([14X7.8-2[114X)  to  turn  profiling  on  for  all  globally
+  declared functions simultaneously.[133X
+
+  [1X7.8-6 UnprofileFunctions[101X
+
+  [33X[1;0Y[29X[2XUnprofileFunctions[102X( [3Xfuncs[103X ) [32X function[133X
+
+  [33X[0;0Ystops  profiling for all function in the list [3Xfuncs[103X. Recorded information is
+  still kept, so you can display it even after turning the profiling off.[133X
+
+  [1X7.8-7 ProfileMethods[101X
+
+  [33X[1;0Y[29X[2XProfileMethods[102X( [3Xops[103X ) [32X function[133X
+
+  [33X[0;0Ystarts profiling of the methods for all operations in the list [3Xops[103X.[133X
+
+  [1X7.8-8 UnprofileMethods[101X
+
+  [33X[1;0Y[29X[2XUnprofileMethods[102X( [3Xops[103X ) [32X function[133X
+
+  [33X[0;0Ystops  profiling of the methods for all operations in the list [3Xops[103X. Recorded
+  information  is  still  kept,  so  you can display it even after turning the
+  profiling off.[133X
+
+  [1X7.8-9 DisplayProfile[101X
+
+  [33X[1;0Y[29X[2XDisplayProfile[102X( [[3Xfunctions[103X][,] [[3Xmincount[103X, [3Xmintime[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XGAPInfo.ProfileThreshold[102X [32X global variable[133X
+
+  [33X[0;0YCalled  without  arguments,  [2XDisplayProfile[102X displays the profile information
+  for  profiled operations, methods and functions. If an argument [3Xfunctions[103X is
+  given,  only  profile information for the functions in the list [3Xfunctions[103X is
+  shown.  If  two integer values [3Xmincount[103X, [3Xmintime[103X are given as arguments then
+  the  output  is  restricted  to  those  functions  that were called at least
+  [3Xmincount[103X  times  or  for which the total time spent (see below) was at least
+  [3Xmintime[103X  milliseconds. The defaults for [3Xmincount[103X and [3Xmintime[103X are the entries
+  of the list stored in the global variable [2XGAPInfo.ProfileThreshold[102X.[133X
+
+  [33X[0;0YThe default value of [2XGAPInfo.ProfileThreshold[102X is [10X[ 10000, 30 ][110X.[133X
+
+  [33X[0;0YProfile  information  is  displayed  in  a  list  of lines for all functions
+  (including  operations  and  methods) which are profiled. For each function,
+  [21Xcount[121X  gives the number of times the function has been called. [21Xself/ms[121X gives
+  the  time  (in  milliseconds) spent in the function itself, [21Xchld/ms[121X the time
+  (in  milliseconds)  spent  in  profiled  functions  called  from within this
+  function,  [21Xstor/kb[121X  the  amount  of  storage (in kilobytes) allocated by the
+  function  itself,  [21Xchld/kb[121X the amount of storage (in kilobytes) allocated by
+  profiled functions called from within this function, and [21Xpackage[121X the name of
+  the  [5XGAP[105X package to which the function belongs; the entry [21XGAP[121X in this column
+  means  that the function belongs to the [5XGAP[105X library, the entry [21X(oprt.)[121X means
+  that  the  function  is an operation (which may belong to several packages),
+  and an empty entry means that [2XFilenameFunc[102X ([14X5.1-4[114X) cannot determine in which
+  file the function is defined.[133X
+
+  [33X[0;0YThe  list is sorted according to the total time spent in the functions, that
+  is the sum of the values in the columns [21Xself/ms[121X and [21Xchld/ms[121X.[133X
+
+  [33X[0;0YAt  the end of the list, two lines are printed that show the total time used
+  and  the  total  memory allocated by the profiled functions not shown in the
+  list   (label   [10XOTHER[110X)   and   by  all  profiled  functions  (label  [10XTOTAL[110X),
+  respectively.[133X
+
+  [33X[0;0YAn  interactive  variant  of  [2XDisplayProfile[102X  is  the function [2XBrowseProfile[102X
+  ([14XBrowse: BrowseProfile[114X) that is provided by the [5XGAP[105X package [5XBrowse[105X.[133X
+
+  [1X7.8-10 ClearProfile[101X
+
+  [33X[1;0Y[29X[2XClearProfile[102X(  ) [32X function[133X
+
+  [33X[0;0Yclears all stored profile information.[133X
+
+
+  [1X7.8-11 [33X[0;0YAn Example of Function Profiling[133X[101X
+
+  [33X[0;0YLet  us  suppose  we  want  to  get information about the computation of the
+  conjugacy  classes of a certain permutation group. For that, first we create
+  the  group,  then  we  start  profiling for all global functions and for all
+  operations  and  their  methods,  then we compute the conjugacy classes, and
+  then we stop profiling.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xg:= PrimitiveGroup( 24, 1 );;[127X[104X
+    [4X[25Xgap>[125X [27XProfileGlobalFunctions( true );[127X[104X
+    [4X[25Xgap>[125X [27XProfileOperationsAndMethods( true );[127X[104X
+    [4X[25Xgap>[125X [27XConjugacyClasses( g );;[127X[104X
+    [4X[25Xgap>[125X [27XProfileGlobalFunctions( false );[127X[104X
+    [4X[25Xgap>[125X [27XProfileOperationsAndMethods( false );[127X[104X
+  [4X[32X[104X
+
+  [33X[0;0YNow  the  profile  information is available. We can list the information for
+  all profiled functions with [2XDisplayProfile[102X ([14X7.8-9[114X).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDisplayProfile();[127X[104X
+    [4X[28X  count  self/ms  chld/ms  stor/kb  chld/kb  package  function[128X[104X
+    [4X[28X  17647        0        0      275        0  GAP      BasePoint[128X[104X
+    [4X[28X  10230        0        0      226        0  (oprt.)  ShallowCopy[128X[104X
+    [4X[28X  10139        0        0        0        0           PositionSortedOp: for*[128X[104X
+    [4X[28X  10001        0        0      688        0           UniteSet: for two int*[128X[104X
+    [4X[28X  10001        8        0       28      688  (oprt.)  UniteSet[128X[104X
+    [4X[28X  14751       12        0        0        0           =: for two families: *[128X[104X
+    [4X[28X  10830        8        4      182      276  GAP      Concatenation[128X[104X
+    [4X[28X   2700       20       12      313       55  GAP      AddRefinement[128X[104X
+    [4X[28X   2444       28        4     3924      317  GAP      ConjugateStabChain[128X[104X
+    [4X[28X   4368        0       32        7      714  (oprt.)  Size[128X[104X
+    [4X[28X   2174       32        4     1030      116  GAP      List[128X[104X
+    [4X[28X    585        4       32       45      742  GAP      RRefine[128X[104X
+    [4X[28X   1532       32        8      194       56  GAP      AddGeneratorsExtendSc*[128X[104X
+    [4X[28X   1221        8       32      349      420  GAP      Partition[128X[104X
+    [4X[28X 185309       28       12        0        0  (oprt.)  Length[128X[104X
+    [4X[28X    336        4       40       95      817  GAP      ExtendSeriesPermGroup[128X[104X
+    [4X[28X      4       28       20      488      454  (oprt.)  Sortex[128X[104X
+    [4X[28X   2798        0       52       54      944  GAP      StabChainForcePoint[128X[104X
+    [4X[28X    560        4       48       83      628  GAP      StabChainSwap[128X[104X
+    [4X[28X    432       16       40      259      461  GAP      SubmagmaWithInversesNC[128X[104X
+    [4X[28X 185553       48        8      915       94  (oprt.)  Add[128X[104X
+    [4X[28X     26        0       64        0     2023  (oprt.)  CentralizerOp[128X[104X
+    [4X[28X     26        0       64        0     2023  GAP      CentralizerOp: perm g*[128X[104X
+    [4X[28X     26        0       64        0     2023  GAP      Centralizer: try to e*[128X[104X
+    [4X[28X    152        4       64        0     2024  (oprt.)  Centralizer[128X[104X
+    [4X[28X   1605        0       68        0     2032  (oprt.)  StabilizerOfExternalS*[128X[104X
+    [4X[28X     26        0       68        0     2024  GAP      Meth(StabilizerOfExte*[128X[104X
+    [4X[28X    382        0       96       69     1922  GAP      TryPcgsPermGroup[128X[104X
+    [4X[28X   5130        4       96      309     3165  GAP      ForAll[128X[104X
+    [4X[28X   7980       24      116      330     6434  GAP      ChangeStabChain[128X[104X
+    [4X[28X  12076       12      136      351     6478  GAP      ProcessFixpoint[128X[104X
+    [4X[28X    192        0      148        4     3029  GAP      StabChainMutable: cal*[128X[104X
+    [4X[28X   2208        4      148        3     3083  (oprt.)  StabChainMutable[128X[104X
+    [4X[28X    217        0      160        0     3177  (oprt.)  StabChainOp[128X[104X
+    [4X[28X    217       12      148       60     3117  GAP      StabChainOp: group an*[128X[104X
+    [4X[28X    216       36      464      334    12546  GAP      PartitionBacktrack[128X[104X
+    [4X[28X   1479       12      668      566    18474  GAP      RepOpElmTuplesPermGro*[128X[104X
+    [4X[28X   1453       12      684       56    18460  GAP      in: perm class rep[128X[104X
+    [4X[28X    126        0      728       13    19233  GAP      ConjugacyClassesTry[128X[104X
+    [4X[28X      1        0      736        0    19671  GAP      ConjugacyClassesByRan*[128X[104X
+    [4X[28X      2        0      736        2    19678  (oprt.)  ConjugacyClasses[128X[104X
+    [4X[28X      1        0      736        0    19675  GAP      ConjugacyClasses: per*[128X[104X
+    [4X[28X  13400     1164        0        0        0  (oprt.)  Position[128X[104X
+    [4X[28X             484             12052                    OTHER[128X[104X
+    [4X[28X            2048             23319                    TOTAL[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YWe  can  restrict  the  list to global functions with [2XProfileGlobalFunctions[102X
+  ([14X7.8-2[114X).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XProfileGlobalFunctions();[127X[104X
+    [4X[28X  count  self/ms  chld/ms  stor/kb  chld/kb  package  function[128X[104X
+    [4X[28X  17647        0        0      275        0  GAP      BasePoint[128X[104X
+    [4X[28X  10830        8        4      182      276  GAP      Concatenation[128X[104X
+    [4X[28X   2700       20       12      313       55  GAP      AddRefinement[128X[104X
+    [4X[28X   2444       28        4     3924      317  GAP      ConjugateStabChain[128X[104X
+    [4X[28X   2174       32        4     1030      116  GAP      List[128X[104X
+    [4X[28X    585        4       32       45      742  GAP      RRefine[128X[104X
+    [4X[28X   1532       32        8      194       56  GAP      AddGeneratorsExtendSc*[128X[104X
+    [4X[28X   1221        8       32      349      420  GAP      Partition[128X[104X
+    [4X[28X    336        4       40       95      817  GAP      ExtendSeriesPermGroup[128X[104X
+    [4X[28X   2798        0       52       54      944  GAP      StabChainForcePoint[128X[104X
+    [4X[28X    560        4       48       83      628  GAP      StabChainSwap[128X[104X
+    [4X[28X    432       16       40      259      461  GAP      SubmagmaWithInversesNC[128X[104X
+    [4X[28X    382        0       96       69     1922  GAP      TryPcgsPermGroup[128X[104X
+    [4X[28X   5130        4       96      309     3165  GAP      ForAll[128X[104X
+    [4X[28X   7980       24      116      330     6434  GAP      ChangeStabChain[128X[104X
+    [4X[28X  12076       12      136      351     6478  GAP      ProcessFixpoint[128X[104X
+    [4X[28X    216       36      464      334    12546  GAP      PartitionBacktrack[128X[104X
+    [4X[28X   1479       12      668      566    18474  GAP      RepOpElmTuplesPermGro*[128X[104X
+    [4X[28X    126        0      728       13    19233  GAP      ConjugacyClassesTry[128X[104X
+    [4X[28X      1        0      736        0    19671  GAP      ConjugacyClassesByRan*[128X[104X
+    [4X[28X            1804             14536                    OTHER[128X[104X
+    [4X[28X            2048             23319                    TOTAL[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YWe can restrict the list to operations with [2XProfileOperations[102X ([14X7.8-3[114X).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XProfileOperations();[127X[104X
+    [4X[28X  count  self/ms  chld/ms  stor/kb  chld/kb  package  function[128X[104X
+    [4X[28X  10230        0        0      226        0  (oprt.)  ShallowCopy[128X[104X
+    [4X[28X  10001        8        0       28      688  (oprt.)  UniteSet[128X[104X
+    [4X[28X   4368        0       32        7      714  (oprt.)  Size[128X[104X
+    [4X[28X 185309       28       12        0        0  (oprt.)  Length[128X[104X
+    [4X[28X      4       28       20      488      454  (oprt.)  Sortex[128X[104X
+    [4X[28X 185553       48        8      915       94  (oprt.)  Add[128X[104X
+    [4X[28X     26        0       64        0     2023  (oprt.)  CentralizerOp[128X[104X
+    [4X[28X    152        4       64        0     2024  (oprt.)  Centralizer[128X[104X
+    [4X[28X   1605        0       68        0     2032  (oprt.)  StabilizerOfExternalS*[128X[104X
+    [4X[28X   2208        4      148        3     3083  (oprt.)  StabChainMutable[128X[104X
+    [4X[28X    217        0      160        0     3177  (oprt.)  StabChainOp[128X[104X
+    [4X[28X      2        0      736        2    19678  (oprt.)  ConjugacyClasses[128X[104X
+    [4X[28X  13400     1164        0        0        0  (oprt.)  Position[128X[104X
+    [4X[28X             764             21646                    OTHER[128X[104X
+    [4X[28X            2048             23319                    TOTAL[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YWe   can   restrict   the   list   to  operations  and  their  methods  with
+  [2XProfileOperationsAndMethods[102X ([14X7.8-4[114X).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XProfileOperationsAndMethods();[127X[104X
+    [4X[28X  count  self/ms  chld/ms  stor/kb  chld/kb  package  function[128X[104X
+    [4X[28X  10230        0        0      226        0  (oprt.)  ShallowCopy[128X[104X
+    [4X[28X  10139        0        0        0        0           PositionSortedOp: for*[128X[104X
+    [4X[28X  10001        0        0      688        0           UniteSet: for two int*[128X[104X
+    [4X[28X  10001        8        0       28      688  (oprt.)  UniteSet[128X[104X
+    [4X[28X  14751       12        0        0        0           =: for two families: *[128X[104X
+    [4X[28X   4368        0       32        7      714  (oprt.)  Size[128X[104X
+    [4X[28X 185309       28       12        0        0  (oprt.)  Length[128X[104X
+    [4X[28X      4       28       20      488      454  (oprt.)  Sortex[128X[104X
+    [4X[28X 185553       48        8      915       94  (oprt.)  Add[128X[104X
+    [4X[28X     26        0       64        0     2023  (oprt.)  CentralizerOp[128X[104X
+    [4X[28X     26        0       64        0     2023  GAP      CentralizerOp: perm g*[128X[104X
+    [4X[28X     26        0       64        0     2023  GAP      Centralizer: try to e*[128X[104X
+    [4X[28X    152        4       64        0     2024  (oprt.)  Centralizer[128X[104X
+    [4X[28X   1605        0       68        0     2032  (oprt.)  StabilizerOfExternalS*[128X[104X
+    [4X[28X     26        0       68        0     2024  GAP      Meth(StabilizerOfExte*[128X[104X
+    [4X[28X    192        0      148        4     3029  GAP      StabChainMutable: cal*[128X[104X
+    [4X[28X   2208        4      148        3     3083  (oprt.)  StabChainMutable[128X[104X
+    [4X[28X    217        0      160        0     3177  (oprt.)  StabChainOp[128X[104X
+    [4X[28X    217       12      148       60     3117  GAP      StabChainOp: group an*[128X[104X
+    [4X[28X   1453       12      684       56    18460  GAP      in: perm class rep[128X[104X
+    [4X[28X      2        0      736        2    19678  (oprt.)  ConjugacyClasses[128X[104X
+    [4X[28X      1        0      736        0    19675  GAP      ConjugacyClasses: per*[128X[104X
+    [4X[28X  13400     1164        0        0        0  (oprt.)  Position[128X[104X
+    [4X[28X             728             20834                    OTHER[128X[104X
+    [4X[28X            2048             23319                    TOTAL[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YFinally,  we  can  restrict  the  list  to  explicitly  given functions with
+  [2XDisplayProfile[102X ([14X7.8-9[114X), by entering the list of functions as an argument.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XDisplayProfile( [ StabChainOp, Centralizer ] );[127X[104X
+    [4X[28X  count  self/ms  chld/ms  stor/kb  chld/kb  package  function[128X[104X
+    [4X[28X    152        4       64        0     2024  (oprt.)  Centralizer[128X[104X
+    [4X[28X    217        0      160        0     3177  (oprt.)  StabChainOp[128X[104X
+    [4X[28X            2044             23319                    OTHER[128X[104X
+    [4X[28X            2048             23319                    TOTAL[128X[104X
+  [4X[32X[104X
+
+
+  [1X7.8-12 [33X[0;0YLine By Line Profiling[133X[101X
+
+  [33X[0;0YLine  By  Line profiling tracks which lines have been executed in a piece of
+  GAP code. Built into GAP are the methods necessary to generate profiles, the
+  resulting profiles can be displayed with the 'profiling' package.[133X
+
+
+  [1X7.8-13 [33X[0;0YLine by Line profiling example[133X[101X
+
+  [33X[0;0YThere are two kinds of profiles GAP can build:[133X
+
+  [30X    [33X[0;6YCoverage : This records which lines of code are executed[133X
+
+  [30X    [33X[0;6YTiming  :  This  records how much time is spend executing each line of
+        code[133X
+
+  [33X[0;0YA timing profile provides more information, but will take longer to generate
+  and   parse.   A   timing   profile   is   generated   using  the  functions
+  [2XProfileLineByLine[102X ([14X7.8-14[114X) and [2XUnprofileLineByLine[102X ([14X7.8-16[114X), as follows:[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XProfileLineByLine("output.gz");[127X[104X
+    [4X[25Xgap>[125X [27XSize(AlternatingGroup(10)); ; # Execute some GAP code you want to profile[127X[104X
+    [4X[25Xgap>[125X [27XUnprofileLineByLine();[127X[104X
+  [4X[32X[104X
+
+  [33X[0;0YFor code coverage, use instead the functions [2XCoverageLineByLine[102X ([14X7.8-15[114X) and
+  [2XUncoverageLineByLine[102X ([14X7.8-17[114X). The profiler will only record lines which are
+  read and executed while the profiler is running. If you want to perform code
+  coverage  or  profile  GAP's  library, then you can use the GAP command line
+  option  '--cover  filename.gz',  which  executes [2XCoverageLineByLine[102X ([14X7.8-15[114X)
+  before  GAP  starts.  Similarly  the  option  '--prof  filename.gz' executes
+  [2XProfileLineByLine[102X  ([14X7.8-14[114X)  before GAP starts. The profiler is designed for
+  high  performance,  because  of this, there are some limitations which users
+  should be aware of:[133X
+
+  [30X    [33X[0;6YBy  default the profiler records the wall-clock time which has passed,
+        rather  than the CPU time taken (because it is lower overhead), so any
+        time  taken writing commands will be charged to the last GAP statement
+        which  was  executed. Therefore it is better to write a function which
+        starts profiling, executes your code, and then stops profiling.[133X
+
+  [30X    [33X[0;6YIf   you  end  the  filename  with  ".gz",  the  resulting  file  will
+        automatically be compressed. This is highly recommended![133X
+
+  [30X    [33X[0;6YThe  profiler  can  only  track GAP code which occurs in a function --
+        this  is  most  obvious  when looking at code coverage examples, which
+        will appear to miss lines of code in files not in a function.[133X
+
+  [30X    [33X[0;6YIf  the  current  GAP  is forked, using the [10XIO_fork[110X function in the [5XIO[105X
+        package,  a  new profile output file will be created for the new child
+        process,  with  the process ID of the child attached to the end of the
+        filename.[133X
+
+  [33X[0;0YProfiles  are  transformed  into  a  human-readable  form  with  'profiling'
+  package, for example with the 'OutputAnnotatedCodeCoverageFiles' function.[133X
+
+  [1X7.8-14 ProfileLineByLine[101X
+
+  [33X[1;0Y[29X[2XProfileLineByLine[102X( [3Xfilename[103X[, [3Xoptions[103X] ) [32X function[133X
+
+  [33X[0;0Y[2XProfileLineByLine[102X  begins GAP recording profiling data to the file [3Xfilename[103X.
+  This  file will get *very* large very quickly. This file is compressed using
+  gzip  to  reduce  its  size.  [3Xoptions[103X  is an optional dictionary, which sets
+  various configuration options. These are[133X
+
+  [8Xcoverage[108X
+        [33X[0;6YBoolean  (defaults  to  false).  If  this is enabled, only information
+        about  which  lines  are read and executed is stored. Enabling this is
+        the  same  as  calling [2XCoverageLineByLine[102X ([14X7.8-15[114X). Using this ignores
+        all other options.[133X
+
+  [8XwallTime[108X
+        [33X[0;6YBoolean  (defaults  to  true).  Sets  if time should be measured using
+        wall-clock  time (true) or CPU time (false). (measuring CPU-time has a
+        higher overhead).[133X
+
+  [8XrecordMem[108X
+        [33X[0;6YBoolean  (defaults  to false). Instead of recording the CPU time taken
+        by  statements,  record  the  total size of all new objects created by
+        each line.[133X
+
+  [8Xresolution[108X
+        [33X[0;6YInteger  (defaults  to 0). By default profiling will record a trace of
+        all executed code. When [3Xresolution[103X non-zero, GAP instead samples which
+        piece   of  code  is  being  executed  every  [3Xresolution[103X  nanoseconds.
+        Increasing  this  improves performance and produces smaller traces, at
+        the   cost  of  accuracy.  GAP  will  still  accurately  record  which
+        statements are executed at least once.[133X
+
+  [1X7.8-15 CoverageLineByLine[101X
+
+  [33X[1;0Y[29X[2XCoverageLineByLine[102X( [3Xfilename[103X ) [32X function[133X
+
+  [33X[0;0Y[2XCoverageLineByLine[102X  begins GAP recording code coverage to the file [3Xfilename[103X.
+  This is equivalent to calling [2XProfileLineByLine[102X ([14X7.8-14[114X) with coverage=true.[133X
+
+  [1X7.8-16 UnprofileLineByLine[101X
+
+  [33X[1;0Y[29X[2XUnprofileLineByLine[102X(  ) [32X function[133X
+
+  [33X[0;0YStops profiling which was previously started with [2XProfileLineByLine[102X ([14X7.8-14[114X)
+  or [2XCoverageLineByLine[102X ([14X7.8-15[114X).[133X
+
+  [1X7.8-17 UncoverageLineByLine[101X
+
+  [33X[1;0Y[29X[2XUncoverageLineByLine[102X(  ) [32X function[133X
+
+  [33X[0;0YStops profiling which was previously started with [2XProfileLineByLine[102X ([14X7.8-14[114X)
+  or [2XCoverageLineByLine[102X ([14X7.8-15[114X).[133X
+
+  [1X7.8-18 IsLineByLineProfileActive[101X
+
+  [33X[1;0Y[29X[2XIsLineByLineProfileActive[102X(  ) [32X function[133X
+
+  [33X[0;0Y[2XIsLineByLineProfileActive[102X  returns  if  line-by-line  profiling is currently
+  activated.[133X
+
+  [1X7.8-19 DisplayCacheStats[101X
+
+  [33X[1;0Y[29X[2XDisplayCacheStats[102X(  ) [32X function[133X
+
+  [33X[0;0Ydisplays statistics about the different caches used by the method selection.[133X
+
+  [1X7.8-20 ClearCacheStats[101X
+
+  [33X[1;0Y[29X[2XClearCacheStats[102X(  ) [32X function[133X
+
+  [33X[0;0Yclears  all  statistics  about  the  different  caches  used  by  the method
+  selection.[133X
+
+
+  [1X7.9 [33X[0;0YInformation about the version used[133X[101X
+
+  [33X[0;0YThe  global  variable  [10XGAPInfo.Version[110X  (see  [2XGAPInfo[102X  ([14X3.5-1[114X)) contains the
+  version number of the version of [5XGAP[105X. Its value can be checked other version
+  number using [2XCompareVersionNumbers[102X ([14X76.3-9[114X).[133X
+
+  [33X[0;0YTo  produce  sample  citations  for the used version of [5XGAP[105X or for a package
+  available in this [5XGAP[105X installation, use [2XCite[102X ([14X76.3-19[114X).[133X
+
+  [33X[0;0YIf  you  wish  to  report  a  problem to [5XGAP[105X Support or [5XGAP[105X Forum, it may be
+  useful  to  not  only  report  the version used, but also to include the [5XGAP[105X
+  banner  displays  the  information  about the architecture for which the [5XGAP[105X
+  binary is built, used libraries and loaded packages.[133X
+
+
+  [1X7.10 [33X[0;0YTest Files[133X[101X
+
+  [33X[0;0YTest  files  are  used to check that [5XGAP[105X produces correct results in certain
+  computations.  A selection of test files for the library can be found in the
+  [11Xtst[111X directory of the [5XGAP[105X distribution.[133X
+
+
+  [1X7.10-1 [33X[0;0YStarting and stopping test[133X[101X
+
+  [33X[1;0Y[29X[2XSTART_TEST[102X( [3Xname[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XSTOP_TEST[102X( [3Xname[103X ) [32X function[133X
+
+  [33X[0;0Y[2XSTART_TEST[102X  and  [2XSTOP_TEST[102X may be optionally used in files that are read via
+  [2XTest[102X  ([14X7.10-2[114X).  If  used, [2XSTART_TEST[102X reinitialize the caches and the global
+  random  number generator, in order to be independent of the reading order of
+  several test files. Furthermore, the assertion level (see [2XAssert[102X ([14X7.5-3[114X)) is
+  set to [22X2[122X (if it was lower before) by [2XSTART_TEST[102X and set back to the previous
+  value in the subsequent [2XSTOP_TEST[102X call.[133X
+
+  [33X[0;0YTo use these options, a test file should be started with a line[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSTART_TEST( "arbitrary identifier string" );[127X[104X
+  [4X[32X[104X
+
+  [33X[0;0Y(Note that the [10Xgap> [110X prompt is part of the line!)[133X
+
+  [33X[0;0Yand should be finished with a line[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XSTOP_TEST( "same identifier string as for START_TEST" );[127X[104X
+  [4X[32X[104X
+
+  [33X[0;0YIf you want to run a quick test of your [5XGAP[105X installation (though this is not
+  required),  you  can  read  in  a  test  script  that  exercises  some [5XGAP[105X's
+  capabilities.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRead( Filename( DirectoriesLibrary( "tst" ), "testinstall.g" ) );[127X[104X
+  [4X[32X[104X
+
+  [4X[32X  Example  [32X[104X
+    [4X[28Xtest file         time(msec)[128X[104X
+    [4X[28X-------------------------------------------[128X[104X
+    [4X[28Xtesting: ................/gap4r5/tst/zlattice.tst[128X[104X
+    [4X[28Xzlattice.tst               0[128X[104X
+    [4X[28Xtesting: ................/gap4r5/tst/gaussian.tst[128X[104X
+    [4X[28Xgaussian.tst              10[128X[104X
+    [4X[28X[ further lines deleted ][128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YIf you want to run a more advanced check (this is not required and make take
+  up to an hour), you can read [11Xteststandard.g[111X which is an extended test script
+  performing all tests from the [11Xtst[111X directory.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRead( Filename( DirectoriesLibrary( "tst" ), "teststandard.g" ) );[127X[104X
+  [4X[32X[104X
+
+  [1X7.10-2 Test[101X
+
+  [33X[1;0Y[29X[2XTest[102X( [3Xfname[103X[, [3Xoptrec[103X] ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X.[133X
+
+  [33X[0;0YThe  argument  [3Xfname[103X must be the name of a file or an open input stream. The
+  content  of  this  file  or  stream should contain [5XGAP[105X input and output. The
+  function  [2XTest[102X  runs  the  input  lines, compares the actual output with the
+  output  stored  in [3Xfname[103X and reports differences. With an optional record as
+  argument  [3Xoptrec[103X  details  of  this  process  can be adjusted. Note that the
+  [10XrewriteToFile[110X option is especially useful for generating test files.[133X
+
+  [33X[0;0YMore precisely, the content of [3Xfname[103X must have the following format.[133X
+  [33X[0;0YLines  starting  with  [10X"gap> "[110X  are  considered  as  [5XGAP[105X  input, they can be
+  followed  by lines starting with [10X"> "[110X if the input is continued over several
+  lines.[133X
+  [33X[0;0YTo  allow  for comments in [3Xfname[103X the following lines are ignored by default:
+  lines  at  the  beginning of [3Xfname[103X that start with [10X"#"[110X or are empty, and one
+  empty line together with one or more lines starting with [10X"#"[110X.[133X
+  [33X[0;0YAll other lines are considered as [5XGAP[105X output from the preceding [5XGAP[105X input.[133X
+
+  [33X[0;0YLines  which  begin "#@" define special configuration options for tests. The
+  [10X#@local[110X  and  [10X#@exec[110X  options can only be used before any [5XGAP[105X input, and the
+  other commands can only be used between individual tests (just before a line
+  starting [10Xgap>[110X, or at end of the file). Currently defined options are:[133X
+
+  [8X#@local identifierlist[108X
+        [33X[0;6YRun  all  the  tests in the input as if it is in a function with local
+        variable  list  [10Xidentifierlist[110X,  which  is  a  comma-separated list of
+        identifiers.  Multiple  #@local  lines may be used. These lines should
+        [13Xnot[113X  end  with  a  comma  or semicolon. If this option is used then an
+        error  will  occur  unless  [13Xall[113X the variables used are included in the
+        local list.[133X
+
+        [33X[0;6YAs  an  example,  the  [5XUtils[105X  package has a test file [10Xtst/iterator.tst[110X
+        which starts with the lines:[133X
+
+  [4X      [32X  Example  [32X[104X
+          [4X[28X#@local  c3c3, cart, G, h, it1, it2, iter, iter0, iter4, iterL[128X[104X
+          [4X[28X#@local  L, n, pairs0, pairs4, pairsL, s3, s4[128X[104X
+        [4X[32X[104X
+
+  [8X#@exec gapcode[108X
+        [33X[0;6YExecute  the  code  [10Xgapcode[110X  before any test in the input is run. This
+        allows defining global variables when using [10X#@local[110X.[133X
+
+  [8X#@if EXPR ... {#@elif EXPR ...} [#@else ...] #@fi[108X
+        [33X[0;6YA  [10X#@if[110X allows to conditionally skip parts of the test input depending
+        on  the  value  of a boolean expression. The exact behavior is done as
+        follows:[133X
+
+        [33X[0;6YIf  the  first  [5XGAP[105X  expression [10XEXPR[110X evaluates to [9Xtrue[109X, then the lines
+        after  the  [10X#@if[110X  are  used  until  either a [10X#@elif[110X, [10X#@else[110X or [10X#@fi[110X is
+        reached. If an [10X#@elif[110X is present, then the lines after [10X#@elif[110X are used
+        if  and  only  if its [10XEXPR[110X evaluates to [9Xtrue[109X and all previous [10X#@if[110X and
+        [10X#@elif[110X  clauses  had expressions evaluating to [9Xfalse[109X. In this case the
+        lines  after  [10X#@elif[110X are used until either a [10X#@elif[110X, [10X#@else[110X or [10X#@fi[110X is
+        reached.  If  an [10X#@else[110X is present then the lines after the [10X#@else[110X are
+        used  if  and  only  if [10XEXPR[110X evaluated to [9Xfalse[109X in all [10X#@if[110X and [10X#@elif[110X
+        clauses. Finally, once [10X#fi[110X is reached, evaluation continues normally.[133X
+
+        [33X[0;6YNote  that  each  [10XEXPR[110X  is  evaluated after all [10X#@exec[110X lines have been
+        executed  but before any tests are run. Thus, it cannot depend on test
+        results  or  packages  loaded  in tests, but it can depend on packages
+        loaded via [10X#@exec[110X.[133X
+
+        [33X[0;6YIn addition [10X#@if[110X clauses cannot be nested within each other.[133X
+
+        [33X[0;6YAs   an   example,   the   [5XGAP[105X  test  suite  contains  the  test  file
+        [10Xtst/testinstall/pperm.tst[110X which contains the lines:[133X
+
+  [4X      [32X  Example  [32X[104X
+          [4X[28X#@if GAPInfo.BytesPerVariable = 8[128X[104X
+          [4X[25Xgap>[125X [27XHASH_FUNC_FOR_PPERM(f, 10 ^ 6) in [260581, 402746];[127X[104X
+          [4X[28Xtrue[128X[104X
+          [4X[28X#@else[128X[104X
+          [4X[25Xgap>[125X [27XHASH_FUNC_FOR_PPERM(f, 10 ^ 6);[127X[104X
+          [4X[28X953600[128X[104X
+          [4X[28X#@fi[128X[104X
+        [4X[32X[104X
+
+  [33X[0;0YBy default the actual [5XGAP[105X output is compared exactly with the stored output,
+  and  if  these  are  different  some  information  about  the differences is
+  printed.[133X
+
+  [33X[0;0YIf any differences are found then [2XTest[102X returns [9Xfalse[109X, otherwise [9Xtrue[109X.[133X
+
+  [33X[0;0YIf  the optional argument [3Xoptrec[103X is given it must be a record. The following
+  components  of [3Xoptrec[103X are recognized and can change the default behaviour of
+  [2XTest[102X:[133X
+
+  [8X[10XignoreComments[110X[8X[108X
+        [33X[0;6YIf  set to [9Xfalse[109X then no lines in [3Xfname[103X are ignored as explained above
+        (default is [9Xtrue[109X).[133X
+
+  [8X[10Xwidth[110X[8X[108X
+        [33X[0;6YThe screen width used for the new output (default is [10X80[110X).[133X
+
+  [8X[10XcompareFunction[110X[8X[108X
+        [33X[0;6YThis  must  be  a  function  that gets two strings as input, the newly
+        generated  and  the stored output of some [5XGAP[105X input. The function must
+        return  [9Xtrue[109X  or [9Xfalse[109X, indicating if the strings should be considered
+        equivalent or not. By default [2X\=[102X ([14X31.11-1[114X) is used.[133X
+        [33X[0;6YTwo  strings  are  recognized  as  abbreviations  in  this  component:
+        [10X"uptowhitespace"[110X checks if the two strings become equal after removing
+        all  white  space.  And  [10X"uptonl"[110X  compares  the string up to trailing
+        newline characters.[133X
+
+  [8X[10XtransformFunction[110X[8X[108X
+        [33X[0;6YThis  must  be  a  function  that gets one string as input, either the
+        newly  generated  or the stored output of some [5XGAP[105X input. The function
+        must  return a new string which will be used to compare the actual and
+        the expected output. By default [2XIdFunc[102X ([14X5.4-6[114X) is used.[133X
+        [33X[0;6YTwo  strings  are  recognized  as  abbreviations  in  this  component:
+        [10X"removewhitespace"[110X removes all white space. And [10X"removenl"[110X removes all
+        trailing newline characters.[133X
+
+  [8X[10XreportDiff[110X[8X[108X
+        [33X[0;6YA  function  that  gets  six arguments and reports a difference in the
+        output:  the  [5XGAP[105X  input, the expected [5XGAP[105X output, the newly generated
+        output,  the  name  of  tested file, the line number of the input, the
+        time  to  run  the  input. (The default is demonstrated in the example
+        below.)[133X
+
+  [8X[10XrewriteToFile[110X[8X[108X
+        [33X[0;6YIf  this is bound to a string it is considered as a file name and that
+        file is written with the same input and comment lines as [3Xfname[103X but the
+        output  substituted  by the newly generated version; if it is bound to
+        [9Xtrue[109X,  then  this  is  treated as if it was bound to [3Xfname[103X (default is
+        [9Xfalse[109X). This is especially useful for generating test files because it
+        ensures that the test files are formatted exactly as [2XTest[102X expects them
+        to be.[133X
+
+  [8X[10XwriteTimings[110X[8X[108X
+        [33X[0;6YIf  this  is  bound  to a string it is considered as a file name, that
+        file  is  written  and  contains  timing information for each input in
+        [3Xfname[103X.[133X
+
+  [8X[10XcompareTimings[110X[8X[108X
+        [33X[0;6YIf  this  is  bound  to a string it is considered as name of a file to
+        which  timing  information  was  stored via [10XwriteTimings[110X in a previous
+        call. The new timings are compared to the stored ones. By default only
+        commands  which  take  more  than  a threshold of 100 milliseconds are
+        considered,  and  only  differences  of  more  than 20% are considered
+        significant.  These  defaults  can  be overwritten by assigning a list
+        [10X[timingfile, threshold, percentage][110X to this component. (The default of
+        [10XcompareTimings[110X is [9Xfalse[109X.)[133X
+
+  [8X[10XreportTimeDiff[110X[8X[108X
+        [33X[0;6YThis  component  can  be  used  to  overwrite  the default function to
+        display  timing  differences.  It must be a function with 5 arguments:
+        [5XGAP[105X input, name of test file, line number, stored time, new time.[133X
+
+  [8X[10XignoreSTOP_TEST[110X[8X[108X
+        [33X[0;6YBy  default set to [9Xtrue[109X, in that case the output of [5XGAP[105X input starting
+        with [10X"STOP_TEST"[110X is not checked.[133X
+
+  [8X[10XshowProgress[110X[8X[108X
+        [33X[0;6YIf  this  is  [9Xtrue[109X  then [5XGAP[105X prints position information and the input
+        line  before  it  is  processed;  if set to [10X"some"[110X, then GAP shows the
+        current  line  number of the test being processed; if set to [9Xfalse[109X, no
+        progress updates are displayed (default is [10X"some"[110X if GAP's output goes
+        to a terminal, otherwise [9Xfalse[109X).[133X
+
+  [8X[10XsubsWindowsLineBreaks[110X[8X[108X
+        [33X[0;6YIf  this  is  [9Xtrue[109X  then [5XGAP[105X substitutes DOS/Windows style line breaks
+        "\r\n"  by  UNIX  style  line breaks "\n" after reading the test file.
+        (default is [9Xtrue[109X).[133X
+
+  [8X[10XreturnNumFailures[110X[8X[108X
+        [33X[0;6YIf this is [9Xtrue[109X then [5XGAP[105X returns the number of input lines of the test
+        file  which had differences in their output, instead of returning [9Xtrue[109X
+        or [9Xfalse[109X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtnam := Filename(DirectoriesLibrary(), "../doc/ref/demo.tst");;[127X[104X
+    [4X[25Xgap>[125X [27Xmask := function(str) return Concatenation("| ",[127X[104X
+    [4X[25X>[125X [27X         JoinStringsWithSeparator(SplitString(str, "\n", ""), "\n| "),[127X[104X
+    [4X[25X>[125X [27X         "\n"); end;;[127X[104X
+    [4X[25Xgap>[125X [27XPrint(mask(StringFile(tnam)));[127X[104X
+    [4X[28X| # this is a demo file for the 'Test' function[128X[104X
+    [4X[28X| #[128X[104X
+    [4X[28X| gap> g := Group((1,2), (1,2,3));[128X[104X
+    [4X[28X| Group([ (1,2), (1,2,3) ])[128X[104X
+    [4X[28X|[128X[104X
+    [4X[28X| # another comment following an empty line[128X[104X
+    [4X[28X| # the following fails:[128X[104X
+    [4X[28X| gap> a := 13+29;[128X[104X
+    [4X[28X| 41[128X[104X
+    [4X[25Xgap>[125X [27Xss := InputTextString(StringFile(tnam));;[127X[104X
+    [4X[25Xgap>[125X [27XTest(ss);[127X[104X
+    [4X[28X########> Diff in test stream, line 8:[128X[104X
+    [4X[28X# Input is:[128X[104X
+    [4X[28Xa := 13+29;[128X[104X
+    [4X[28X# Expected output:[128X[104X
+    [4X[28X41[128X[104X
+    [4X[28X# But found:[128X[104X
+    [4X[28X42[128X[104X
+    [4X[28X########[128X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XRewindStream(ss);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xdtmp := DirectoryTemporary();;[127X[104X
+    [4X[25Xgap>[125X [27Xftmp := Filename(dtmp,"demo.tst");;[127X[104X
+    [4X[25Xgap>[125X [27XTest(ss, rec(reportDiff := Ignore, rewriteToFile := ftmp));[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XTest(ftmp);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XPrint(mask(StringFile(ftmp)));[127X[104X
+    [4X[28X| # this is a demo file for the 'Test' function[128X[104X
+    [4X[28X| #[128X[104X
+    [4X[28X| gap> g := Group((1,2), (1,2,3));[128X[104X
+    [4X[28X| Group([ (1,2), (1,2,3) ])[128X[104X
+    [4X[28X|[128X[104X
+    [4X[28X| # another comment following an empty line[128X[104X
+    [4X[28X| # the following fails:[128X[104X
+    [4X[28X| gap> a := 13+29;[128X[104X
+    [4X[28X| 42[128X[104X
+  [4X[32X[104X
+
+  [1X7.10-3 TestDirectory[101X
+
+  [33X[1;0Y[29X[2XTestDirectory[102X( [3Xinlist[103X[, [3Xoptrec[103X] ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X.[133X
+
+  [33X[0;0YThe argument [3Xinlist[103X must be either a single filename or directory name, or a
+  list  of filenames and directories. The function [2XTestDirectory[102X will create a
+  list  of  files  to be tested by taking any files in [3Xinlist[103X, and recursively
+  searching  any directories in [3Xinlist[103X for files ending in [10X.tst[110X. Each of these
+  files  is  then run through [2XTest[102X ([14X7.10-2[114X), and the results printed, and [9Xtrue[109X
+  returned if all tests passed.[133X
+
+  [33X[0;0YIf  the optional argument [3Xoptrec[103X is given it must be a record. Note that the
+  [10XrewriteToFile[110X  option  is  especially  useful for generating test files. The
+  following  components  of  [3Xoptrec[103X  are recognized and can change the default
+  behaviour of [2XTestDirectory[102X:[133X
+
+  [8X[10XtestOptions[110X[8X[108X
+        [33X[0;6YA  record  which  will  be  passed  on  as the second argument of [2XTest[102X
+        ([14X7.10-2[114X) if present.[133X
+
+  [8X[10XearlyStop[110X[8X[108X
+        [33X[0;6YIf [9Xtrue[109X, stop as soon as any [2XTest[102X ([14X7.10-2[114X) fails (defaults to [9Xfalse[109X).[133X
+
+  [8X[10XshowProgress[110X[8X[108X
+        [33X[0;6YPrint  information about how tests are progressing (defaults to [10X"some"[110X
+        if GAP's output goes to a terminal, otherwise [9Xfalse[109X).[133X
+
+  [8X[10XsuppressStatusMessage[110X[8X[108X
+        [33X[0;6Ysuppress  displaying  status messages [10X#I Errors detected while testing[110X
+        and  [10X#I  No  errors detected while testing[110X after the test (defaults to
+        [9Xfalse[109X).[133X
+
+  [8X[10XrewriteToFile[110X[8X[108X
+        [33X[0;6YIf  [9Xtrue[109X,  then  rewrite  each  test  file  to  disc,  with the output
+        substituted  by  the  results of running the test (defaults to [9Xfalse[109X).
+        This is especially useful for generating test files because it ensures
+        that  the  test  files  are formatted exactly as [2XTest[102X ([14X7.10-2[114X) expects
+        them to be.[133X
+
+  [8X[10Xexclude[110X[8X[108X
+        [33X[0;6YA list of file and directory names which will be excluded from testing
+        (defaults to [9X[][109X).[133X
+
+  [8X[10XexitGAP[110X[8X[108X
+        [33X[0;6YRather than returning [9Xtrue[109X or [9Xfalse[109X, exit GAP with the return value of
+        GAP set to success or fail, depending on if all tests passed (defaults
+        to [9Xfalse[109X).[133X
+
+  [33X[0;0YSee  also [2XTestPackage[102X ([14X76.3-5[114X) for the information on running standard tests
+  for [5XGAP[105X packages.[133X
+
+
+  [1X7.11 [33X[0;0YDebugging Recursion[133X[101X
+
+  [33X[0;0YThe  [5XGAP[105X  interpreter  monitors the level of nesting of [5XGAP[105X functions during
+  execution. By default, whenever this nesting reaches a multiple of [22X5000[122X, [5XGAP[105X
+  enters  a  break  loop  ([14X6.4[114X)  allowing you to terminate the calculation, or
+  enter [12XReturn[112X[10X;[110X to continue it.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xdive:= function(depth) if depth>1 then dive(depth-1); fi; return; end;[127X[104X
+    [4X[28Xfunction( depth ) ... end[128X[104X
+    [4X[25Xgap>[125X [27Xdive(100);[127X[104X
+    [4X[25Xgap>[125X [27XOnBreak:= function() Where(1); end; # shorter traceback[127X[104X
+    [4X[28Xfunction(  ) ... end[128X[104X
+    [4X[25Xgap>[125X [27Xdive(6000);[127X[104X
+    [4X[28Xrecursion depth trap (5000)[128X[104X
+    [4X[28X at[128X[104X
+    [4X[28Xdive( depth - 1 );[128X[104X
+    [4X[28X called from[128X[104X
+    [4X[28Xdive( depth - 1 ); called from[128X[104X
+    [4X[28X...[128X[104X
+    [4X[28XEntering break read-eval-print loop ...[128X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou may 'return;' to continue[128X[104X
+    [4X[26Xbrk>[126X [27Xreturn;[127X[104X
+    [4X[25Xgap>[125X [27Xdive(11000);[127X[104X
+    [4X[28Xrecursion depth trap (5000)[128X[104X
+    [4X[28X at[128X[104X
+    [4X[28Xdive( depth - 1 );[128X[104X
+    [4X[28X called from[128X[104X
+    [4X[28Xdive( depth - 1 ); called from[128X[104X
+    [4X[28X...[128X[104X
+    [4X[28XEntering break read-eval-print loop ...[128X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou may 'return;' to continue[128X[104X
+    [4X[26Xbrk>[126X [27Xreturn;[127X[104X
+    [4X[28Xrecursion depth trap (10000)[128X[104X
+    [4X[28X at[128X[104X
+    [4X[28Xdive( depth - 1 );[128X[104X
+    [4X[28X called from[128X[104X
+    [4X[28Xdive( depth - 1 ); called from[128X[104X
+    [4X[28X...[128X[104X
+    [4X[28XEntering break read-eval-print loop ...[128X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou may 'return;' to continue[128X[104X
+    [4X[26Xbrk>[126X [27Xreturn;[127X[104X
+    [4X[28Xgap>[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YThis behaviour can be controlled using the following procedures.[133X
+
+  [1X7.11-1 SetRecursionTrapInterval[101X
+
+  [33X[1;0Y[29X[2XSetRecursionTrapInterval[102X( [3Xinterval[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XGetRecursionDepth[102X(  ) [32X function[133X
+
+  [33X[0;0Y[2XGetRecursionDepth[102X  returns the nesting level of the GAP interpreter. This is
+  reset  to  0  every time the break loop is entered. [2XSetRecursionTrapInterval[102X
+  sets the depth of the stack at which GAP will enter the Break loop. [3Xinterval[103X
+  must  be a non-negative small integer (between 0 and [22X2^28[122X). An [3Xinterval[103X of 0
+  suppresses  the  monitoring  of recursion altogether. In this case excessive
+  recursion may cause [5XGAP[105X to crash.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XGetRecursionDepth();[127X[104X
+    [4X[28X0[128X[104X
+    [4X[25Xgap>[125X [27Xdive := function(depth)[127X[104X
+    [4X[25X>[125X [27X if depth>1 then[127X[104X
+    [4X[25X>[125X [27X   dive(depth-1);[127X[104X
+    [4X[25X>[125X [27X else[127X[104X
+    [4X[25X>[125X [27X   Print("Depth ", GetRecursionDepth());[127X[104X
+    [4X[25X>[125X [27X fi;[127X[104X
+    [4X[25X>[125X [27Xend;;[127X[104X
+    [4X[25Xgap>[125X [27XSetRecursionTrapInterval(1000);[127X[104X
+    [4X[25Xgap>[125X [27Xdive(100);[127X[104X
+    [4X[28XDepth 100[128X[104X
+    [4X[25Xgap>[125X [27Xdive(2500);[127X[104X
+    [4X[28Xrecursion depth trap (1000)[128X[104X
+    [4X[28X at[128X[104X
+    [4X[28Xdive( depth - 1 );[128X[104X
+    [4X[28X called from[128X[104X
+    [4X[28Xdive( depth - 1 ); called from[128X[104X
+    [4X[28X...[128X[104X
+    [4X[28XEntering break read-eval-print loop ...[128X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou may 'return;' to continue[128X[104X
+    [4X[26Xbrk>[126X [27Xreturn;[127X[104X
+    [4X[28Xrecursion depth trap (2000)[128X[104X
+    [4X[28X at[128X[104X
+    [4X[28Xdive( depth - 1 );[128X[104X
+    [4X[28X called from[128X[104X
+    [4X[28Xdive( depth - 1 ); called from[128X[104X
+    [4X[28X...[128X[104X
+    [4X[28XEntering break read-eval-print loop ...[128X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou may 'return;' to continue[128X[104X
+    [4X[26Xbrk>[126X [27XGetRecursionDepth();[127X[104X
+    [4X[28X0[128X[104X
+    [4X[26Xbrk>[126X [27Xreturn;[127X[104X
+    [4X[25Xgap>[125X [27XSetRecursionTrapInterval(-1);[127X[104X
+    [4X[28XError, SetRecursionTrapInterval: <interval> must be a small integer greater than 5 (n\[128X[104X
+    [4X[28Xot the integer -1)[128X[104X
+    [4X[28Xnot in any function[128X[104X
+    [4X[28XEntering break read-eval-print loop ...[128X[104X
+    [4X[28Xyou can 'quit;' to quit to outer loop, or[128X[104X
+    [4X[28Xyou can replace <interval> via 'return <interval>;' to continue[128X[104X
+    [4X[26Xbrk>[126X [27Xreturn 0;[127X[104X
+    [4X[25Xgap>[125X [27Xdive(20000);[127X[104X
+    [4X[28XDepth 20000[128X[104X
+    [4X[25Xgap>[125X [27Xdive(2000000);[127X[104X
+    [4X[28XSegmentation fault[128X[104X
+  [4X[32X[104X
+
+
+  [1X7.12 [33X[0;0YGlobal Memory Information[133X[101X
+
+
+  [1X7.12-1 [33X[0;0YGarbage Collection[133X[101X
+
+  [33X[0;0YThe  [5XGAP[105X  environment  provides  automatic  memory  management,  so that the
+  programmer  does  not  need  to concern themselves with allocating space for
+  objects,  or  recovering space when objects are no longer needed. The memory
+  manager  that  shall be used by [5XGAP[105X is specified at compile time. One of the
+  choices  is  called [10XGASMAN[110X ([5XGAP[105X Storage MANager). (The name of the currently
+  used garbage collector is stored in the variable [10XGAPInfo.KernelInfo.GC[110X.)[133X
+
+  [33X[0;0YIf  [5XGAP[105X uses [10XGASMAN[110X then messages reporting garbage collections performed by
+  [10XGASMAN[110X  can  be switched on by the [10X-g[110X command line option (see section [14X3.1[114X).
+  There  are  also  some facilities to access information from [10XGASMAN[110X from [5XGAP[105X
+  programs, see below.[133X
+
+  [1X7.12-2 CollectGarbage[101X
+
+  [33X[1;0Y[29X[2XCollectGarbage[102X( [3Xfull[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10Ynothing.[133X
+
+  [33X[0;0YThis  function forces a garbage collection. If [3Xfull[103X is [9Xtrue[109X then it triggers
+  a full garbage collection, otherwise a partial one.[133X
+
+  [33X[0;0Y[5XGAP[105X  invokes  its garbage collector automatically, thus there is normally no
+  need to call [2XCollectGarbage[102X.[133X
+
+  [33X[0;0YThe  function  [2XCollectGarbage[102X  was  introduced  in  [5XGAP[105X 4.12.  In  older [5XGAP[105X
+  versions,  one  can  use  [10XGASMAN(  "collect"  )[110X (if [3Xfull[103X is [9Xtrue[109X) or [10XGASMAN(
+  "partial" )[110X (if [3Xfull[103X is not [9Xtrue[109X) instead.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XCollectGarbage( false );[127X[104X
+    [4X[25Xgap>[125X [27XCollectGarbage( true );[127X[104X
+  [4X[32X[104X
+
+  [1X7.12-3 GasmanStatistics[101X
+
+  [33X[1;0Y[29X[2XGasmanStatistics[102X(  ) [32X function[133X
+
+  [33X[0;0YThis  function is meaningful only if [10XGASMAN[110X is the garbage collector used by
+  [5XGAP[105X, see Section [14X7.12-1[114X.[133X
+
+  [33X[0;0Y[2XGasmanStatistics[102X  returns  a  record  containing  some  information from the
+  garbage  collection mechanism. The record may contain up to four components:
+  [10Xfull[110X, [10Xpartial[110X, [10Xnpartial[110X, and [10Xnfull[110X.[133X
+
+  [33X[0;0YThe  [10Xfull[110X  component  will be present if a full garbage collection has taken
+  place  since [5XGAP[105X started. It contains information about the most recent full
+  garbage collection. It is a record, with eight components: [10Xlivebags[110X contains
+  the  number  of  bags which survived the garbage collection; [10Xlivekb[110X contains
+  the  total number of kilobytes occupied by those bags; [10Xdeadbags[110X contains the
+  total number of bags which were reclaimed by that garbage collection and all
+  the  partial  garbage  collections  preceding  it,  since  the previous full
+  garbage  collection;  [10Xdeadkb[110X contains the total number of kilobytes occupied
+  by those bags; [10Xfreekb[110X reports the total number of kilobytes available in the
+  [5XGAP[105X  workspace  for  new  objects;  [10Xtotalkb[110X  reports  the actual size of the
+  workspace;  [10Xtime[110X  reports  the  CPU  time  in milliseconds spent on the last
+  garbage  collection  and [10Xcumulative[110X the total CPU time in milliseconds spent
+  on that type of garbage collection since [5XGAP[105X started.[133X
+
+  [33X[0;0YThese figures should be viewed with some caution. They are stored internally
+  in  fixed  length  integer  formats,  and  [10Xdeadkb[110X and [10Xdeadbags[110X are liable to
+  overflow  if  there  are  many partial collections before a full collection.
+  Also,  note  that  [10Xlivekb[110X and [10Xfreekb[110X will not usually add up to [10Xtotalkb[110X. The
+  difference  is  essentially  the  space  overhead  of  the memory management
+  system.[133X
+
+  [33X[0;0YThe  [10Xpartial[110X  component  will be present if there has been a partial garbage
+  collection  since  the  last full one. It is also a record with the same six
+  components  as  [10Xfull[110X.  In  this  case  [10Xdeadbags[110X and [10Xdeadkb[110X refer only to the
+  number  and total size of the garbage bags reclaimed in this partial garbage
+  collection  and [10Xlivebags[110Xand [10Xlivekb[110X only to the numbers and total size of the
+  young bags that were considered for garbage collection, and survived.[133X
+
+  [33X[0;0YThe  [10Xnpartial[110X  and  [10Xnfull[110X  components  will  contain  the number of full and
+  partial garbage collections performed since [5XGAP[105X started.[133X
+
+  [1X7.12-4 GasmanMessageStatus[101X
+
+  [33X[1;0Y[29X[2XGasmanMessageStatus[102X(  ) [32X function[133X
+  [33X[1;0Y[29X[2XSetGasmanMessageStatus[102X( [3Xstat[103X ) [32X function[133X
+
+  [33X[0;0YThis  function is meaningful only if [10XGASMAN[110X is the garbage collector used by
+  [5XGAP[105X, see Section [14X7.12-1[114X.[133X
+
+  [33X[0;0Y[2XGasmanMessageStatus[102X  returns  one  of  the strings [10X"none"[110X, [10X"full"[110X, or [10X"all"[110X,
+  depending  on  whether  the  garbage  collector  is  currently  set to print
+  messages  on  no  collections,  full  collections  only, or all collections,
+  respectively.[133X
+
+  [33X[0;0YCalling  [2XSetGasmanMessageStatus[102X  with the argument [3Xstat[103X, which should be one
+  of  the  three strings mentioned above, sets the garbage collector messaging
+  level.[133X
+
+  [1X7.12-5 GasmanLimits[101X
+
+  [33X[1;0Y[29X[2XGasmanLimits[102X(  ) [32X function[133X
+
+  [33X[0;0YThis  function is meaningful only if [10XGASMAN[110X is the garbage collector used by
+  [5XGAP[105X, see Section [14X7.12-1[114X.[133X
+
+  [33X[0;0Y[2XGasmanLimits[102X  returns  a  record  with  three components: [10Xmin[110X is the minimum
+  workspace  size  as  set  by  the  [10X-m[110X  command line option in kilobytes. The
+  workspace  size  will  never be reduced below this by the garbage collector.
+  [10Xmax[110X  is  the  maximum  workspace size, as set by the [10X-o[110X command line option,
+  also  in kilobytes. If the workspace would need to grow past this point, [5XGAP[105X
+  will  enter  a break loop to warn the user. A value of 0 indicates no limit.
+  [10Xkill[110X  is  the  absolute  maximum,  set  by  the  [10X-K[110X command line option. The
+  workspace will never be allowed to grow past this limit.[133X
+

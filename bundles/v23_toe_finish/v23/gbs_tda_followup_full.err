@@ -1,0 +1,3 @@
+C:\Users\wiljd\OneDrive\Desktop\Theory of Everything\.venv\Lib\site-packages\strawberryfields\backends\gaussianbackend\backend.py:216: UserWarning: Cannot simulate non-Gaussian states. Conditional state after Fock measurement has not been updated.
+C:\Users\wiljd\OneDrive\Desktop\Theory of Everything\scripts\quantum_photonics\run_gbs.py:214: ComplexWarning: Casting complex values to real discards the imaginary part
+C:\Users\wiljd\OneDrive\Desktop\Theory of Everything\.venv\Lib\site-packages\strawberryfields\backends\gaussianbackend\backend.py:216: UserWarning: Cannot simulate non-Gaussian states. Conditional state after Fock measurement has not been updated.

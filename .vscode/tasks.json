@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Open Activated PowerShell",
+      "type": "shell",
+      "command": ".venv\\Scripts\\Activate.ps1; Write-Host 'Virtual environment activated. Close extra terminals and use this one.'",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}

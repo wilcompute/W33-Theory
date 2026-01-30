@@ -1,0 +1,270 @@
+
+
+                          [1XHPC-GAP --- Reference Manual[101X
+
+
+                           Release 4.15.1, 2025-10-18
+
+
+                                 The GAP Group
+
+                                Reimer Behrends
+
+                                Vladimir Janjic
+
+
+
+  The GAP Group
+      Email:    [7Xmailto:support@gap-system.org[107X
+      Homepage: [7Xhttps://www.gap-system.org[107X
+  Reimer Behrends
+      Email:    [7Xmailto:behrends@gmail.com[107X
+  Vladimir Janjic
+      Email:    [7Xmailto:vj32@st-andrews.ac.uk[107X
+
+  -------------------------------------------------------
+  [1XCopyright[101X
+  [33X[0;0YCopyright  ©  (1987-2025)  for  the  core  part of the [5XGAP[105X system by the [5XGAP[105X
+  Group.[133X
+
+  [33X[0;0YMost  parts  of this distribution, including the core part of the [5XGAP[105X system
+  are  distributed  under  the  terms  of  the GNU General Public License, see
+  [7Xhttps://www.gnu.org/licenses/gpl.html[107X  or  the file [11XGPL[111X in the [11Xetc[111X directory
+  of the [5XGAP[105X installation.[133X
+
+  [33X[0;0YMore  detailed  information  about  copyright  and licenses of parts of this
+  distribution can be found in [14X'Reference: Copyright and License'[114X.[133X
+
+  [33X[0;0Y[5XGAP[105X  is  developed  over  a long time and has many authors and contributors.
+  More   detailed   information  can  be  found  in  [14X'Reference:  Authors  and
+  Maintainers'[114X.[133X
+
+
+  -------------------------------------------------------
+
+
+  [1XContents (hpc)[101X
+
+  1 [33X[0;0YTasks[133X
+    1.1 [33X[0;0YOverview[133X
+    1.2 [33X[0;0YRunning tasks[133X
+      1.2-1 RunTask
+      1.2-2 ScheduleTask
+      1.2-3 DelayTask
+      1.2-4 RunAsyncTask
+      1.2-5 ScheduleAsyncTask
+      1.2-6 MakeTaskAsync
+      1.2-7 ImmediateTask
+      1.2-8 ExecuteTask
+      1.2-9 WaitTask
+      1.2-10 WaitAnyTask
+      1.2-11 TaskResult
+      1.2-12 CullIdleTasks
+    1.3 [33X[0;0YInformation about tasks[133X
+      1.3-1 TaskSuccess
+      1.3-2 TaskError
+      1.3-3 CurrentTask
+      1.3-4 RunningTasks
+      1.3-5 TaskStarted
+      1.3-6 TaskFinished
+      1.3-7 TaskIsAsync
+    1.4 [33X[0;0YCancelling tasks[133X
+      1.4-1 CancelTask
+      1.4-2 TaskCancellationRequested
+      1.4-3 OnTaskCancellation
+      1.4-4 OnTaskCancellationReturn
+    1.5 [33X[0;0YConditions[133X
+    1.6 [33X[0;0YMilestones[133X
+      1.6-1 NewMilestone
+      1.6-2 ContributeToMilestone
+      1.6-3 AchieveMilestone
+      1.6-4 IsMilestoneAchieved
+  2 [33X[0;0YVariables in HPC-GAP[133X
+    2.1 [33X[0;0YGlobal variables[133X
+    2.2 [33X[0;0YThread-local variables[133X
+      2.2-1 MakeThreadLocal
+      2.2-2 BindThreadLocal
+      2.2-3 BindThreadLocalConstructor
+      2.2-4 ThreadVar
+  3 [33X[0;0YHow HPC-GAP organizes shared memory: Regions[133X
+    3.1 [33X[0;0YThread-local regions[133X
+    3.2 [33X[0;0YShared regions[133X
+    3.3 [33X[0;0YOrdering of shared regions[133X
+    3.4 [33X[0;0YThe public region[133X
+    3.5 [33X[0;0YThe read-only region[133X
+    3.6 [33X[0;0YMigrating objects between regions[133X
+    3.7 [33X[0;0YRegion names[133X
+    3.8 [33X[0;0YControlling access to regions[133X
+    3.9 [33X[0;0YFunctions relating to regions[133X
+      3.9-1 NewRegion
+      3.9-2 NewLibraryRegion
+      3.9-3 NewSystemRegion
+      3.9-4 NewKernelRegion
+      3.9-5 NewInternalRegion
+      3.9-6 NewSpecialRegion
+      3.9-7 RegionOf
+      3.9-8 RegionPrecedence
+      3.9-9 ShareObj
+      3.9-10 ShareLibraryObj
+      3.9-11 ShareSystemObj
+      3.9-12 ShareKernelObj
+      3.9-13 ShareInternalObj
+      3.9-14 ShareSpecialObj
+      3.9-15 ShareSingleObj
+      3.9-16 ShareSingleLibraryObj
+      3.9-17 ShareSingleSystemObj
+      3.9-18 ShareSingleKernelObj
+      3.9-19 ShareSingleInternalObj
+      3.9-20 ShareSingleSpecialObj
+      3.9-21 MigrateObj
+      3.9-22 MigrateSingleObj
+      3.9-23 LockAndMigrateObj
+      3.9-24 IncorporateObj
+      3.9-25 AtomicIncorporateObj
+      3.9-26 AdoptObj
+      3.9-27 AdoptSingleObj
+      3.9-28 LockAndAdoptObj
+      3.9-29 CopyRegion
+      3.9-30 IsPublic
+      3.9-31 IsThreadLocal
+      3.9-32 IsShared
+      3.9-33 HaveReadAccess
+      3.9-34 HaveWriteAccess
+      3.9-35 MakeReadOnlyObj
+      3.9-36 MakeReadOnlySingleObj
+      3.9-37 IsReadOnlyObj
+      3.9-38 SetRegionName
+      3.9-39 ClearRegionName
+      3.9-40 RegionName
+      3.9-41 ViewShared
+      3.9-42 UNSAFE_VIEW
+      3.9-43 [33X[0;0YThe [10Xatomic[110X statement.[133X
+    3.10 [33X[0;0YAtomic functions[133X
+    3.11 [33X[0;0YWrite-once functionality[133X
+      3.11-1 BindOnce
+      3.11-2 TestBindOnce
+      3.11-3 BindOnceExpr
+      3.11-4 TestBindOnceExpr
+      3.11-5 StrictBindOnce
+  4 [33X[0;0YConsole User Interface[133X
+    4.1 [33X[0;0YConsole UI commands[133X
+      4.1-1 [33X[0;0Y!shell [name][133X
+      4.1-2 [33X[0;0Y!fork [name][133X
+      4.1-3 [33X[0;0Y!list[133X
+      4.1-4 [33X[0;0Y!kill id[133X
+      4.1-5 [33X[0;0Y!break id[133X
+      4.1-6 [33X[0;0Y!name [id] name[133X
+      4.1-7 [33X[0;0Y!info id[133X
+      4.1-8 [33X[0;0Y!hide [id|*][133X
+      4.1-9 [33X[0;0Y!watch [id|*][133X
+      4.1-10 [33X[0;0Y!keep num[133X
+      4.1-11 [33X[0;0Y!prompt (id|*) string[133X
+      4.1-12 [33X[0;0Y!prefix (id|*) string[133X
+      4.1-13 [33X[0;0Y!select id[133X
+      4.1-14 [33X[0;0Y!next[133X
+      4.1-15 [33X[0;0Y!previous[133X
+      4.1-16 [33X[0;0Y!replay num [id][133X
+      4.1-17 [33X[0;0Y!id[133X
+      4.1-18 [33X[0;0Y!source file[133X
+      4.1-19 [33X[0;0Y!alias shortcut expansion[133X
+      4.1-20 [33X[0;0Y!unalias shortcut[133X
+      4.1-21 [33X[0;0Y!eval expr[133X
+      4.1-22 [33X[0;0Y!run function string[133X
+    4.2 [33X[0;0YGAP functions to access the Shell UI[133X
+      4.2-1 TextUIRegisterCommand
+      4.2-2 TextUIForegroundThread
+      4.2-3 TextUIForegroundThreadName
+      4.2-4 TextUISelectThread
+      4.2-5 TextUIOutputHistory
+      4.2-6 TextUISetOutputHistoryLength
+      4.2-7 TextUINewSession
+      4.2-8 TextUIRunCommand
+      4.2-9 TextUIWritePrompt
+  5 [33X[0;0YAtomic objects[133X
+    5.1 [33X[0;0YAtomic lists[133X
+      5.1-1 AtomicList
+      5.1-2 FixedAtomicList
+      5.1-3 MakeFixedAtomicList
+      5.1-4 FromAtomicList
+      5.1-5 ATOMIC_ADDITION
+      5.1-6 COMPARE_AND_SWAP
+    5.2 [33X[0;0YAtomic records and component objects[133X
+      5.2-1 AtomicRecord
+      5.2-2 FromAtomicRecord
+    5.3 [33X[0;0YReplacement policy functions[133X
+      5.3-1 MakeWriteOnceAtomic
+      5.3-2 MakeStrictWriteOnceAtomic
+      5.3-3 MakeReadWriteAtomic
+    5.4 [33X[0;0YThread-local records[133X
+      5.4-1 ThreadLocalRecord
+      5.4-2 SetTLDefault
+      5.4-3 SetTLConstructor
+  6 [33X[0;0YThread functions[133X
+    6.1 [33X[0;0YThread functions[133X
+      6.1-1 CreateThread
+      6.1-2 WaitThread
+      6.1-3 CurrentThread
+      6.1-4 ThreadID
+      6.1-5 KillThread
+      6.1-6 PauseThread
+      6.1-7 ResumeThread
+      6.1-8 InterruptThread
+      6.1-9 SetInterruptHandler
+      6.1-10 NewInterruptID
+      6.1-11 MAX_INTERRUPT
+  7 [33X[0;0YChannels[133X
+    7.1 [33X[0;0YChannels[133X
+      7.1-1 CreateChannel
+      7.1-2 SendChannel
+      7.1-3 TransmitChannel
+      7.1-4 TrySendChannel
+      7.1-5 TryTransmitChannel
+      7.1-6 ReceiveChannel
+      7.1-7 TryReceiveChannel
+      7.1-8 MultiSendChannel
+      7.1-9 TryMultiSendChannel
+      7.1-10 MultiReceiveChannel
+      7.1-11 ReceiveAnyChannel
+      7.1-12 ReceiveAnyChannelWithIndex
+      7.1-13 TallyChannel
+      7.1-14 InspectChannel
+  8 [33X[0;0YSemaphores[133X
+    8.1 [33X[0;0YSemaphores[133X
+      8.1-1 CreateSemaphore
+      8.1-2 WaitSemaphore
+      8.1-3 SignalSemaphore
+      8.1-4 [33X[0;0YSimulating locks[133X
+  9 [33X[0;0YSynchronization variables[133X
+    9.1 [33X[0;0YSynchronization variables[133X
+      9.1-1 CreateSyncVar
+      9.1-2 SyncWrite
+      9.1-3 SyncRead
+  10 [33X[0;0YSerialization support[133X
+    10.1 [33X[0;0YSerialization support[133X
+      10.1-1 SerializeToNativeString
+      10.1-2 DeserializeNativeString
+      10.1-3 InstallTypeSerializationTag
+      10.1-4 InstallSerializer
+      10.1-5 InstallDeserializer
+  11 [33X[0;0YLow-level functionality[133X
+    11.1 [33X[0;0YExplicit lock and unlock primitives[133X
+      11.1-1 LOCK
+      11.1-2 TRYLOCK
+      11.1-3 UNLOCK
+    11.2 [33X[0;0YHash locks[133X
+      11.2-1 HASH_LOCK
+      11.2-2 HASH_UNLOCK
+      11.2-3 HASH_LOCK_SHARED
+      11.2-4 HASH_UNLOCK_SHARED
+    11.3 [33X[0;0YMigration to the public region[133X
+      11.3-1 MAKE_PUBLIC
+      11.3-2 MAKE_PUBLIC_NORECURSE
+    11.4 [33X[0;0YMemory barriers[133X
+      11.4-1 ORDERED_WRITE
+      11.4-2 ORDERED_READ
+    11.5 [33X[0;0YObject manipulation[133X
+      11.5-1 SWITCH_OBJ
+      11.5-2 FORCE_SWITCH_OBJ
+
+
+  [32X

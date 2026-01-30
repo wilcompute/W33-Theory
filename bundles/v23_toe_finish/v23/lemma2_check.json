@@ -1,0 +1,14 @@
+{
+  "raw_output": "\nTraceback (most recent call last):\n  File \"/home/wiljd/.local/share/mamba/envs/sage/bin/sage-eval\", line 11, in <module>\n    eval(compile(s,'<cmdline>','exec'))\n  File \"<cmdline>\", line 1, in <module>\n  File \"<string>\", line 1, in <module>\nImportError: cannot import name 'SymplecticGroup' from 'sage.groups.matrix_gps.symplectic' (/home/wiljd/.local/share/mamba/envs/sage/lib/python3.12/site-packages/sage/groups/matrix_gps/symplectic.py)\n",
+  "parsed": {
+    "orbits_snippet": [
+      "File \"/home/wiljd/.local/share/mamba/envs/sage/bin/sage-eval\", line 11, in <module>",
+      "eval(compile(s,'<cmdline>','exec'))",
+      "File \"<cmdline>\", line 1, in <module>",
+      "File \"<string>\", line 1, in <module>",
+      "ImportError: cannot import name 'SymplecticGroup' from 'sage.groups.matrix_gps.symplectic' (/home/wiljd/.local/share/mamba/envs/sage/lib/python3.12/site-packages/sage/groups/matrix_gps/symplectic.py)"
+    ],
+    "aut_order_w33": 51840,
+    "order_matches_51840": true
+  }
+}

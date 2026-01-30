@@ -1,0 +1,413 @@
+#!/bin/sh
+#############################################################################
+##
+##  This file is part of GAP, a system for computational discrete algebra.
+##
+##  Copyright of GAP belongs to its developers, whose names are too numerous
+##  to list here. Please refer to the COPYRIGHT file for details.
+##
+##  SPDX-License-Identifier: GPL-2.0-or-later
+##
+##
+#W  gac, the GAP compiler
+##
+##  gac [-d] [-c|-C] [-o <output>] <input>...
+##
+##  'gac'  compiles the input files.   Input files  must be  GAP  source code
+##  (suffix '.g' or '.gap'),  C source code (suffix '.c'),  or compiled  code
+##  files (suffix '.o').
+##
+##  If '-d' is given then the code is compiled for dynamic loading
+##
+##  If  neither '-c' nor '-C'  is given,  then 'gac'  compiles the code completely,
+##  producing a  new kernel for static compilation or a dynamically loadable '.so'
+##  file for dynamic compilation.
+##
+##  If '-c' is given,  then 'gac' only compiles the input files to
+##  '.o' object files, which must be further linked to make a static kernel or
+##  dynamically loadable module
+##
+##  If '-C is given, then 'gac' only compiles the input files to C code, which
+##  will require compilation and linking to be usable.
+##
+##  The option '-o <output>' tells 'gac' to name the output file <output>.
+##
+##  The option '-save-temps' tells 'gac' to not delete any intermediate files
+##
+##  The option '-p <option>' tells 'gac' to pass the option  <option> to  the
+##  C compiler.
+##
+##  The option '-P <option>' tells 'gac' to pass the option  <option> to  the
+##  C linker.
+##
+##  The option '-L <option>' tells 'gac' to pass the option  <option>
+##  to the C linker when linking dynamic modules. Contrary to -P the
+##  option is appended at the end of the link command after the .o
+##  files to link.
+##
+##  other options:
+##   -k|--gap-compiler
+##
+
+# read sysinfo.gap, which sets GAP_CFLAGS, GAP_CPPFLAGS, etc.
+. "@SYSINFO_GAPROOT@/sysinfo.gap"
+
+# Extract sysinfo settings...
+gap_compiler="${GAP}"
+c_compiler="${GAP_CC}"
+cxx_compiler="${GAP_CXX}"
+c_dyn_linker="${GAP_CC}"
+c_addlibs=""
+
+GAP_CFLAGS="${GAP_CFLAGS} ${GAC_CFLAGS}"
+GAP_CXXFLAGS="${GAP_CXXFLAGS} ${GAC_CFLAGS}"
+GAP_LDFLAGS="${GAP_LDFLAGS} ${GAC_LDFLAGS}"
+
+# Using the stored C/C++ compilers from sysinfo.gap is sometimes
+# undesirable. For example, if the compiler suite is upgraded or
+# downgraded, the particular executable used to build GAP itself may
+# no longer exist. The CC and CXX environment variables provide a
+# somewhat standard way for the user to indicate which compilers he
+# would like to use. So if those are set, we prefer them to the stored
+# values. This allows people who know what they are doing to override
+# the default behavior, while keeping the defaults safe for normal
+# people.
+if test -n "${CC}"; then
+    c_compiler="${CC}"
+    c_dyn_linker="${CC}"
+fi
+if test -n "${CXX}"; then
+    cxx_compiler="${CXX}"
+fi
+
+# is output going to a terminal?
+if test -t 1 && command -v tput >/dev/null 2>&1 ; then
+
+    # does the terminal support color?
+    ncolors=$(tput colors)
+
+    if test -n "$ncolors" && test $ncolors -ge 8; then
+        bold="$(tput bold)"
+        underline="$(tput smul)"
+        standout="$(tput smso)"
+        normal="$(tput sgr0)"
+        black="$(tput setaf 0)"
+        red="$(tput setaf 1)"
+        green="$(tput setaf 2)"
+        yellow="$(tput setaf 3)"
+        blue="$(tput setaf 4)"
+        magenta="$(tput setaf 5)"
+        cyan="$(tput setaf 6)"
+        white="$(tput setaf 7)"
+    fi
+fi
+
+notice() {
+    printf "${green}%s${normal}\n" "$*"
+}
+
+warning() {
+    printf "${yellow}WARNING: %s${normal}\n" "$*"
+}
+
+error() {
+    printf "${red}ERROR: %s${normal}\n" "$*" 1>&2
+    exit 1
+}
+
+
+#############################################################################
+##
+#F  echo_and_run
+##
+echo_and_run () {
+    cmd="$1" ; shift
+    echo "$cmd" "$@"
+    "$cmd" "$@"
+}
+
+#############################################################################
+##
+#F  gap_compile <output> <input> <module-name> <identifier>
+##
+gap_compile () {
+    mkdir -p $(dirname $1)
+    echo_and_run ${gap_compiler} -C "$1" "$2" "$3" "$4"
+}
+
+
+#############################################################################
+##
+#F  c_compile <output> <input>
+##
+c_compile () {
+    mkdir -p $(dirname $1)
+    echo_and_run ${c_compiler} ${GAP_CFLAGS} -o $1 ${GAP_CPPFLAGS} -c $2 || exit 1
+}
+
+
+#############################################################################
+##
+#F  cxx_compile <output> <input>
+##
+cxx_compile () {
+    mkdir -p $(dirname $1)
+    echo_and_run ${cxx_compiler} ${GAP_CXXFLAGS} -o $1 ${GAP_CPPFLAGS} -c $2 || exit 1
+}
+
+
+#############################################################################
+##
+#F  c_link_dyn <output> <input>
+##
+c_link_dyn () {
+    mkdir -p $(dirname $1)
+    echo_and_run ${c_dyn_linker} -o $1 $2 ${GAP_LDFLAGS} ${c_addlibs} || exit 1
+}
+
+
+#############################################################################
+##
+#F process_o_file <basename> <filename>
+##
+## Compile according to comp_mode and comp_howfar
+##
+
+process_o_file () {
+  name=$1
+  o_file=$2
+
+  # the GAP compiler replaces _ by __ in names, so adjust here, too
+  name="$(echo "$name" | sed 's/_/__/g')"
+
+  # just remember for the linking stage later
+  names="${names} ${name}"
+  objects="${objects} $o_file"
+}
+
+#############################################################################
+##
+#F process_c_file <basename> <filename>
+##
+## Compile according to comp_mode and comp_howfar
+##
+
+process_c_file () {
+    name=$1
+    c_file=$2
+
+    if [ $comp_howfar != "object" ]; then
+       o_file=${gactmp}/$$_${name}.o
+       temps_o="${temps_o} ${o_file}"
+    elif [ "X$output" != "X" ]; then
+       o_file=$output
+    else
+       o_file=${name}.o
+    fi
+    c_compile $o_file $c_file
+    if [ $comp_howfar = "link" ]; then
+      process_o_file $name $o_file
+    fi
+}
+
+#############################################################################
+##
+#F process_cxx_file <basename> <filename>
+##
+## Similar to process_c_file, just for C++ files.
+##
+
+process_cxx_file () {
+  name=$1
+  cxx_file=$2
+
+  if [ $comp_howfar != "object" ]; then
+    o_file=${gactmp}/$$_${name}.o
+    temps_o="${temps_o} ${o_file}"
+  elif [ "X$output" != "X" ]; then
+    o_file=$output
+  else
+    o_file=${name}.o
+  fi
+  cxx_compile $o_file $cxx_file
+  if [ $comp_howfar = "link" ]; then
+    process_o_file $name $o_file
+  fi
+}
+
+#############################################################################
+##
+#F process_gap_file <filename> <ext>
+##
+## Compile according to comp_mode and comp_howfar
+##
+
+process_gap_file () {
+  name=$(basename $1 $2)
+
+  if [ $comp_howfar != "c_code" ]; then
+    c_file=${gactmp}/$$_${name}.c
+    temps_c="${temps_c} $c_file"
+  elif [ "X$output" = "X" ]; then
+     c_file=${name}.c
+  else
+     c_file=$output
+  fi
+  gap_compile_in=$input
+  gap_compile_name=$input
+  if [ $comp_mode = "comp_static" ]; then
+    gap_compile_id=Init_${name}
+  else
+    gap_compile_id=Init_Dynamic
+  fi
+  gap_compile $c_file ${gap_compile_in} $gap_compile_id ${gap_compile_name}
+  if [ $comp_howfar != "c_code" ]; then
+    process_c_file $name $c_file
+    if [ "$savetemps" = "true" ]; then
+        notice "Leaving C file " $c_file
+    else
+        echo_and_run rm -f $c_file
+    fi
+  fi
+}
+
+#############################################################################
+##
+#F  clean_up
+##
+clean_up () {
+     if [ "$savetemps" = "true" ]; then
+        notice "Leaving files on cleanup: " ${temps_c} ${temps_o}
+    else
+        echo_and_run rm -f ${temps_c} ${temps_o}
+    fi
+}
+trap "clean_up" 2 3
+
+
+#############################################################################
+##
+##  parse the arguments
+##
+if [ $# = 0 ]; then
+    error "usage: $0 [-d] [-c|-C] [-o <output>] <input>..."
+fi
+
+comp_mode="comp_static"
+comp_howfar="link"
+output=""
+inputs=""
+savetemps="false"
+
+while [ $# -gt 0 ]; do
+    case $1 in
+
+    -c|--compile)         comp_howfar="object";;
+
+    -d|--dynamic)         comp_mode="comp_dyna";;
+
+    -C|--create-c)        comp_howfar="c_code";;
+
+    -o|--output)          shift; output="$1";;
+
+    -save-temps)          savetemps="true";;
+
+    -k|--gap-compiler)    shift; gap_compiler="$1";;
+
+    -p)                   shift;
+                          GAP_CFLAGS="${GAP_CFLAGS} $1"
+                          GAP_CXXFLAGS="${GAP_CXXFLAGS} $1"
+                          ;;
+
+    -P)                   shift; GAP_LDFLAGS="${GAP_LDFLAGS} $1";;
+
+    -L|--addlibs)         shift; c_addlibs="${c_addlibs} $1";;
+
+    *.g|*.gap|*.gd|*.gi|*.c|*.cc|*.cpp|*.cxx|*.s|*.o|*.lo)
+                          inputs="${inputs} $1";;
+
+    *)                    error "$0: cannot handle this argument '$1'";;
+
+    esac
+    shift
+done
+
+if [ "X${inputs}" = "X" ]; then
+    error "$0: no input files given"
+fi
+
+
+make_tmpdir () {
+    if command -v mktemp >/dev/null 2>&1 ; then
+        gactmp=$(mktemp -d -t "gacXXXXXXX")
+    else
+        basetmp=${TMPDIR:-/tmp}; #honor the TMPDIR environment variable.
+        gactmp="$basetmp/gac$$";
+        mkdir "$gactmp" || exit 1;
+    fi
+}
+
+#############################################################################
+##
+##  main loop
+##
+
+#Make temporary directory
+make_tmpdir;
+
+# loop over the input files
+for input in ${inputs}; do
+  case $input in
+
+        *.g) process_gap_file $input .g;;
+        *.gap) process_gap_file $input .gap;;
+        *.gd) process_gap_file $input .gd;;
+        *.gi) process_gap_file $input .gi;;
+
+        *.c) # compile '.c' source files
+            name=$(basename ${input} .c)
+            process_c_file $name $input;;
+
+        *.cc) # compile '.cc' source files (C++)
+            name=$(basename ${input} .cc)
+            process_cxx_file $name $input;;
+
+        *.cpp) # compile '.cpp' source files (also C++)
+            name=$(basename ${input} .cpp)
+            process_cxx_file $name $input;;
+
+        *.cxx) # compile '.cxx' source files (also C++)
+            name=$(basename ${input} .cxx)
+            process_cxx_file $name $input;;
+
+        *.s) # compile '.s' source files (assembler)
+            name=$(basename ${input} .s)
+            process_c_file $name $input;; # HACK: just use the C compiler
+
+        *.o) # add '.o' object files to the linker list
+            name=$(basename ${input} .o)
+            process_o_file $name $input;;
+        esac
+    done
+
+
+# link phase
+if [ $comp_howfar = "link" ]; then
+    if [ $comp_mode = "comp_static" ]; then
+        error "$0: static linking is not supported anymore, use -d / --dynamic"
+    fi
+
+    if [ "X${output}" = "X" ]; then output="${name}.so"; fi
+    c_link_dyn ${output} "${objects}"
+
+    if [ "$savetemps" = "true" ]; then
+        notice "Leaving object files " ${temps_o}
+    else
+        echo_and_run rm -f ${temps_o}
+    fi
+fi
+
+# Remove temporary directory.
+if [ "$savetemps" = "false" ]; then
+    rm -rf "${gactmp}"
+fi

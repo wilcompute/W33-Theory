@@ -1,0 +1,229 @@
+\GAPDocLabFile{hpc}
+\makelabel{hpc:Title page}{}{X7D2C85EC87DD46E5}
+\makelabel{hpc:Copyright}{}{X81488B807F2A1CF1}
+\makelabel{hpc:Table of Contents}{}{X8537FEB07AF2BEC8}
+\makelabel{hpc:Tasks}{1}{X7EA285468533E153}
+\makelabel{hpc:Overview}{1.1}{X8389AD927B74BA4A}
+\makelabel{hpc:Running tasks}{1.2}{X7C9F2EF384645B8F}
+\makelabel{hpc:Information about tasks}{1.3}{X86F8419B7968345B}
+\makelabel{hpc:Cancelling tasks}{1.4}{X7B286945821A3BBA}
+\makelabel{hpc:Conditions}{1.5}{X802FC4C284F68696}
+\makelabel{hpc:Milestones}{1.6}{X7EE6DC40842CD74B}
+\makelabel{hpc:Variables in HPC-GAP}{2}{X8000D4CD7F4F5594}
+\makelabel{hpc:Global variables}{2.1}{X7D9044767BEB1523}
+\makelabel{hpc:Thread-local variables}{2.2}{X7D93681D7B5E8DCD}
+\makelabel{hpc:How HPC-GAP organizes shared memory: Regions}{3}{X8076353A830B11B6}
+\makelabel{hpc:Thread-local regions}{3.1}{X7E2199568017C74F}
+\makelabel{hpc:Shared regions}{3.2}{X7B697BA17A813E7D}
+\makelabel{hpc:Ordering of shared regions}{3.3}{X83627591876D3FF3}
+\makelabel{hpc:The public region}{3.4}{X8239FDC583A4E39D}
+\makelabel{hpc:The read-only region}{3.5}{X7E0116957AFB982D}
+\makelabel{hpc:Migrating objects between regions}{3.6}{X87315FA584A37637}
+\makelabel{hpc:Region names}{3.7}{X79A959BF7C24234F}
+\makelabel{hpc:Controlling access to regions}{3.8}{X827637EE7A69AFCD}
+\makelabel{hpc:Functions relating to regions}{3.9}{X7BE832987B1DC975}
+\makelabel{hpc:The atomic statement.}{3.9.43}{X7FD1B1B785E24734}
+\makelabel{hpc:Atomic functions}{3.10}{X8789D7A57CFC13BC}
+\makelabel{hpc:Write-once functionality}{3.11}{X78883D5E83B4425F}
+\makelabel{hpc:Console User Interface}{4}{X7AFF436381C319CD}
+\makelabel{hpc:Console UI commands}{4.1}{X7B958D607F9E0EF3}
+\makelabel{hpc:!shell [name]}{4.1.1}{X8149CF507A188BFB}
+\makelabel{hpc:!fork [name]}{4.1.2}{X8589D19484DBBA7B}
+\makelabel{hpc:!list}{4.1.3}{X7E57FE757CBAD4BC}
+\makelabel{hpc:!kill id}{4.1.4}{X7C2721208570CF5D}
+\makelabel{hpc:!break id}{4.1.5}{X86052CA284DD8E8E}
+\makelabel{hpc:!name [id] name}{4.1.6}{X8022D93682DD8ABE}
+\makelabel{hpc:!info id}{4.1.7}{X810ED84D848681B6}
+\makelabel{hpc:!keep num}{4.1.10}{X8295E57782EEF3ED}
+\makelabel{hpc:!select id}{4.1.13}{X80CE7A5B874A8D6B}
+\makelabel{hpc:!next}{4.1.14}{X7A5980F782780572}
+\makelabel{hpc:!previous}{4.1.15}{X838676D07FBD27CE}
+\makelabel{hpc:!replay num [id]}{4.1.16}{X7B6441957CFB191E}
+\makelabel{hpc:!id}{4.1.17}{X850D86EE8203F94D}
+\makelabel{hpc:!source file}{4.1.18}{X84FE74AA7C34C493}
+\makelabel{hpc:!alias shortcut expansion}{4.1.19}{X84BA0EF7803E2920}
+\makelabel{hpc:!unalias shortcut}{4.1.20}{X80E7398679C4B87C}
+\makelabel{hpc:!eval expr}{4.1.21}{X79D5CE9A86D5FC6A}
+\makelabel{hpc:!run function string}{4.1.22}{X831807A67C6B4B2D}
+\makelabel{hpc:GAP functions to access the Shell UI}{4.2}{X876007F6862BA1BD}
+\makelabel{hpc:Atomic objects}{5}{X7A5E986A790A5A18}
+\makelabel{hpc:Atomic lists}{5.1}{X79DFD10A80868799}
+\makelabel{hpc:Atomic records and component objects}{5.2}{X823767367D6CF4FD}
+\makelabel{hpc:Replacement policy functions}{5.3}{X78EDB1DB79473F53}
+\makelabel{hpc:Thread-local records}{5.4}{X7DCE3B4D7D26407F}
+\makelabel{hpc:Thread functions}{6}{X841085357B854E1C}
+\makelabel{hpc:Thread functions}{6.1}{X841085357B854E1C}
+\makelabel{hpc:Channels}{7}{X82C4DEA2841FAC0B}
+\makelabel{hpc:Channels}{7.1}{X82C4DEA2841FAC0B}
+\makelabel{hpc:Semaphores}{8}{X83F63F0F7827767E}
+\makelabel{hpc:Semaphores}{8.1}{X83F63F0F7827767E}
+\makelabel{hpc:Simulating locks}{8.1.4}{X83D868417F0069F0}
+\makelabel{hpc:Synchronization variables}{9}{X84583568784B622A}
+\makelabel{hpc:Synchronization variables}{9.1}{X84583568784B622A}
+\makelabel{hpc:Serialization support}{10}{X806C386986781A27}
+\makelabel{hpc:Serialization support}{10.1}{X806C386986781A27}
+\makelabel{hpc:Low-level functionality}{11}{X7B27C7E98204353D}
+\makelabel{hpc:Explicit lock and unlock primitives}{11.1}{X864926CD80307F32}
+\makelabel{hpc:Hash locks}{11.2}{X83B01F7D7DC9FCD0}
+\makelabel{hpc:Migration to the public region}{11.3}{X834BA1408083326A}
+\makelabel{hpc:Memory barriers}{11.4}{X81C8B4FA86E9DFD9}
+\makelabel{hpc:Object manipulation}{11.5}{X8217AB0984FDE424}
+\makelabel{hpc:Index}{Ind}{X83A0356F839C696F}
+\makelabel{hpc:RunTask}{1.2.1}{X7DEC1649841E3813}
+\makelabel{hpc:ScheduleTask}{1.2.2}{X7A86AE967D2A9E94}
+\makelabel{hpc:DelayTask}{1.2.3}{X85BC2BBC7EF5B22E}
+\makelabel{hpc:RunAsyncTask}{1.2.4}{X856288C27C62B14A}
+\makelabel{hpc:ScheduleAsyncTask}{1.2.5}{X7EAC7A4B86F5F74C}
+\makelabel{hpc:MakeTaskAsync}{1.2.6}{X791CA0E07B16E7F9}
+\makelabel{hpc:ImmediateTask}{1.2.7}{X84AFD0FA7A4E3633}
+\makelabel{hpc:ExecuteTask}{1.2.8}{X83D2E32C8759FB37}
+\makelabel{hpc:WaitTask}{1.2.9}{X861BC1488345C424}
+\makelabel{hpc:WaitTask with a condition}{1.2.9}{X861BC1488345C424}
+\makelabel{hpc:WaitTasks}{1.2.9}{X861BC1488345C424}
+\makelabel{hpc:WaitAnyTask}{1.2.10}{X81489CD684EA11B6}
+\makelabel{hpc:TaskResult}{1.2.11}{X7A86C732823E04B6}
+\makelabel{hpc:CullIdleTasks}{1.2.12}{X830A82A7847993FF}
+\makelabel{hpc:TaskSuccess}{1.3.1}{X87BB5EF38415B923}
+\makelabel{hpc:TaskError}{1.3.2}{X85F42F5E7E04F3C2}
+\makelabel{hpc:CurrentTask}{1.3.3}{X7C0C66E37DB9ACC0}
+\makelabel{hpc:RunningTasks}{1.3.4}{X7DA4E06B792002C7}
+\makelabel{hpc:TaskStarted}{1.3.5}{X7A023A657BB4F17D}
+\makelabel{hpc:TaskFinished}{1.3.6}{X7E7500E17EC1067D}
+\makelabel{hpc:TaskIsAsync}{1.3.7}{X7B37CED386024A1F}
+\makelabel{hpc:CancelTask}{1.4.1}{X86C26E3081C3C9AA}
+\makelabel{hpc:TaskCancellationRequested}{1.4.2}{X8431B91487A8A3F1}
+\makelabel{hpc:OnTaskCancellation}{1.4.3}{X7D61F9C487232DE7}
+\makelabel{hpc:OnTaskCancellationReturn}{1.4.4}{X82D1773F8058CA54}
+\makelabel{hpc:NewMilestone}{1.6.1}{X80CB3247854A46E4}
+\makelabel{hpc:ContributeToMilestone}{1.6.2}{X800AE2737CB715C5}
+\makelabel{hpc:AchieveMilestone}{1.6.3}{X7ACB26D38096CD56}
+\makelabel{hpc:IsMilestoneAchieved}{1.6.4}{X83E7AF007E040FB9}
+\makelabel{hpc:MakeThreadLocal}{2.2.1}{X7FE1310180B55506}
+\makelabel{hpc:BindThreadLocal}{2.2.2}{X81F4832C7ED44627}
+\makelabel{hpc:BindThreadLocalConstructor}{2.2.3}{X8606D69B82B8AE84}
+\makelabel{hpc:ThreadVar}{2.2.4}{X7C508AFD8115AEB0}
+\makelabel{hpc:NewRegion}{3.9.1}{X851C5F3C82F6F5AE}
+\makelabel{hpc:NewLibraryRegion}{3.9.2}{X83864D427DE991F2}
+\makelabel{hpc:NewSystemRegion}{3.9.3}{X7FB0BE4C78CA85DA}
+\makelabel{hpc:NewKernelRegion}{3.9.4}{X825A881A7A39C5C3}
+\makelabel{hpc:NewInternalRegion}{3.9.5}{X86C54C9278FE00F4}
+\makelabel{hpc:NewSpecialRegion}{3.9.6}{X7A7FFA847E090257}
+\makelabel{hpc:RegionOf}{3.9.7}{X86BEBBAF855AA26A}
+\makelabel{hpc:RegionPrecedence}{3.9.8}{X87421870782B33C7}
+\makelabel{hpc:ShareObj}{3.9.9}{X7D5982617A3027BD}
+\makelabel{hpc:ShareLibraryObj}{3.9.10}{X79E455D27E12C5B4}
+\makelabel{hpc:ShareSystemObj}{3.9.11}{X867DE843791EEF65}
+\makelabel{hpc:ShareKernelObj}{3.9.12}{X7E7540D17EADF97A}
+\makelabel{hpc:ShareInternalObj}{3.9.13}{X792DAE2C83BD1554}
+\makelabel{hpc:ShareSpecialObj}{3.9.14}{X82F3B2597E0EC15E}
+\makelabel{hpc:ShareSingleObj}{3.9.15}{X8508A72B7C215FA5}
+\makelabel{hpc:ShareSingleLibraryObj}{3.9.16}{X87A1962578CDA61D}
+\makelabel{hpc:ShareSingleSystemObj}{3.9.17}{X8352EF8B83390656}
+\makelabel{hpc:ShareSingleKernelObj}{3.9.18}{X7B5A471982EFD292}
+\makelabel{hpc:ShareSingleInternalObj}{3.9.19}{X85C5F5A67DAFD919}
+\makelabel{hpc:ShareSingleSpecialObj}{3.9.20}{X7CB671AE7A411314}
+\makelabel{hpc:MigrateObj}{3.9.21}{X81A356DD84E76A8A}
+\makelabel{hpc:MigrateSingleObj}{3.9.22}{X7BAE5A7282793684}
+\makelabel{hpc:LockAndMigrateObj}{3.9.23}{X7E4B54BF837E81C0}
+\makelabel{hpc:IncorporateObj}{3.9.24}{X7D1943AF793296F7}
+\makelabel{hpc:AtomicIncorporateObj}{3.9.25}{X876843717F4437CB}
+\makelabel{hpc:AdoptObj}{3.9.26}{X784C978D801191E2}
+\makelabel{hpc:AdoptSingleObj}{3.9.27}{X834DDB388600E9FA}
+\makelabel{hpc:LockAndAdoptObj}{3.9.28}{X867CDC9285D30DE8}
+\makelabel{hpc:CopyRegion}{3.9.29}{X7C71A88487762733}
+\makelabel{hpc:IsPublic}{3.9.30}{X8222929685E9959A}
+\makelabel{hpc:IsThreadLocal}{3.9.31}{X86B2EEF67C3378F0}
+\makelabel{hpc:IsShared}{3.9.32}{X80A11F3C84DB512E}
+\makelabel{hpc:HaveReadAccess}{3.9.33}{X827A26A67C99316C}
+\makelabel{hpc:HaveWriteAccess}{3.9.34}{X794206E5845006EA}
+\makelabel{hpc:MakeReadOnlyObj}{3.9.35}{X7F53D70285AF37B4}
+\makelabel{hpc:MakeReadOnlySingleObj}{3.9.36}{X7EC9341A865BCC35}
+\makelabel{hpc:IsReadOnlyObj}{3.9.37}{X860008F57EFE21C4}
+\makelabel{hpc:SetRegionName}{3.9.38}{X7F1E2F707F72371E}
+\makelabel{hpc:ClearRegionName}{3.9.39}{X8427E1537ADC4575}
+\makelabel{hpc:RegionName}{3.9.40}{X7959FC997CC9177C}
+\makelabel{hpc:ViewShared}{3.9.41}{X80D0DFAB7F7241E8}
+\makelabel{hpc:UNSAFEVIEW}{3.9.42}{X7FD39BCC8526AC53}
+\makelabel{hpc:atomic no value}{3.9.43}{X7FD1B1B785E24734}
+\makelabel{hpc:BindOnce}{3.11.1}{X83AD36A68503CF70}
+\makelabel{hpc:TestBindOnce}{3.11.2}{X8673539F7DA79110}
+\makelabel{hpc:BindOnceExpr}{3.11.3}{X7BAEC41C87E1DC43}
+\makelabel{hpc:TestBindOnceExpr}{3.11.4}{X81B15A9C8795DF59}
+\makelabel{hpc:StrictBindOnce}{3.11.5}{X7897092C86AE17D7}
+\makelabel{hpc:TextUIRegisterCommand}{4.2.1}{X84154E44780A3402}
+\makelabel{hpc:TextUIForegroundThread}{4.2.2}{X85312D647966343E}
+\makelabel{hpc:TextUIForegroundThreadName}{4.2.3}{X7AD377F882A1EEC8}
+\makelabel{hpc:TextUISelectThread}{4.2.4}{X8117AC7980300EF5}
+\makelabel{hpc:TextUIOutputHistory}{4.2.5}{X7C9543F07F0FECF5}
+\makelabel{hpc:TextUISetOutputHistoryLength}{4.2.6}{X839D85B97B23BC3C}
+\makelabel{hpc:TextUINewSession}{4.2.7}{X81AB547681B0A2C8}
+\makelabel{hpc:TextUIRunCommand}{4.2.8}{X7B69D7177D7742D2}
+\makelabel{hpc:TextUIWritePrompt}{4.2.9}{X8532502D78CE5475}
+\makelabel{hpc:AtomicList}{5.1.1}{X7F1353B58414D4C3}
+\makelabel{hpc:AtomicList for a count and an object}{5.1.1}{X7F1353B58414D4C3}
+\makelabel{hpc:FixedAtomicList}{5.1.2}{X8279EC4483E0562C}
+\makelabel{hpc:FixedAtomicList for a count and an object}{5.1.2}{X8279EC4483E0562C}
+\makelabel{hpc:MakeFixedAtomicList}{5.1.3}{X807687A579422D3B}
+\makelabel{hpc:FromAtomicList}{5.1.4}{X81AF8061871DA27C}
+\makelabel{hpc:ATOMICADDITION}{5.1.5}{X795EE57983074ADF}
+\makelabel{hpc:COMPAREANDSWAP}{5.1.6}{X7847EAA284A02AEE}
+\makelabel{hpc:AtomicRecord}{5.2.1}{X87EA343179BE4BFE}
+\makelabel{hpc:AtomicRecord for a record}{5.2.1}{X87EA343179BE4BFE}
+\makelabel{hpc:FromAtomicRecord}{5.2.2}{X81E6B21C7A1AC7FE}
+\makelabel{hpc:MakeWriteOnceAtomic}{5.3.1}{X7B76F2AD818492BC}
+\makelabel{hpc:MakeStrictWriteOnceAtomic}{5.3.2}{X806C3F0681B847A0}
+\makelabel{hpc:MakeReadWriteAtomic}{5.3.3}{X7E7591EC780F3988}
+\makelabel{hpc:ThreadLocalRecord}{5.4.1}{X7BE7D67586FC91E6}
+\makelabel{hpc:SetTLDefault}{5.4.2}{X788AF1CC8111798C}
+\makelabel{hpc:SetTLConstructor}{5.4.3}{X853A898384888B85}
+\makelabel{hpc:CreateThread}{6.1.1}{X7A541B6C84980B7D}
+\makelabel{hpc:WaitThread}{6.1.2}{X81DFC84779CD1C1E}
+\makelabel{hpc:CurrentThread}{6.1.3}{X7982BA8D782C171B}
+\makelabel{hpc:ThreadID}{6.1.4}{X80FA498D866028CB}
+\makelabel{hpc:KillThread}{6.1.5}{X787679BC7D36FAA3}
+\makelabel{hpc:PauseThread}{6.1.6}{X7BC284107E56A01B}
+\makelabel{hpc:ResumeThread}{6.1.7}{X80D590EC78C93F94}
+\makelabel{hpc:InterruptThread}{6.1.8}{X8521A5777CCD0B37}
+\makelabel{hpc:SetInterruptHandler}{6.1.9}{X80C207B387CA888E}
+\makelabel{hpc:NewInterruptID}{6.1.10}{X78E5F5987BEFACE6}
+\makelabel{hpc:MAXINTERRUPT}{6.1.11}{X863799F07D55BAE0}
+\makelabel{hpc:CreateChannel}{7.1.1}{X7E666A8B7C37ADA4}
+\makelabel{hpc:SendChannel}{7.1.2}{X81233BCB7B1173FA}
+\makelabel{hpc:TransmitChannel}{7.1.3}{X8004E54A7D91929C}
+\makelabel{hpc:TrySendChannel}{7.1.4}{X7AEFF25D8143DA77}
+\makelabel{hpc:TryTransmitChannel}{7.1.5}{X7BB33C037A81BCF6}
+\makelabel{hpc:ReceiveChannel}{7.1.6}{X7FEABC588101CCE7}
+\makelabel{hpc:TryReceiveChannel}{7.1.7}{X788785E380C10A01}
+\makelabel{hpc:MultiSendChannel}{7.1.8}{X7A5E26F5799A17B4}
+\makelabel{hpc:TryMultiSendChannel}{7.1.9}{X85B8D09B802D2122}
+\makelabel{hpc:MultiReceiveChannel}{7.1.10}{X807D4263798D775E}
+\makelabel{hpc:ReceiveAnyChannel}{7.1.11}{X8355AFCC8530B2CA}
+\makelabel{hpc:ReceiveAnyChannel for a list of channels}{7.1.11}{X8355AFCC8530B2CA}
+\makelabel{hpc:ReceiveAnyChannelWithIndex}{7.1.12}{X846C7B3F7BF7CA0B}
+\makelabel{hpc:ReceiveAnyChannelWithIndex for a list of channels}{7.1.12}{X846C7B3F7BF7CA0B}
+\makelabel{hpc:TallyChannel}{7.1.13}{X81A731667C33E150}
+\makelabel{hpc:InspectChannel}{7.1.14}{X7AF2B2ED8552E33D}
+\makelabel{hpc:CreateSemaphore}{8.1.1}{X7AC5500483465AE3}
+\makelabel{hpc:WaitSemaphore}{8.1.2}{X834E47327A3FC5A2}
+\makelabel{hpc:SignalSemaphore}{8.1.3}{X7F0C1F1F8540CF8C}
+\makelabel{hpc:CreateSyncVar}{9.1.1}{X7B55EA0E8672087C}
+\makelabel{hpc:SyncWrite}{9.1.2}{X85E910BF7BBF3270}
+\makelabel{hpc:SyncRead}{9.1.3}{X7B42B29B8441B4F5}
+\makelabel{hpc:SerializeToNativeString}{10.1.1}{X787953287A989F91}
+\makelabel{hpc:DeserializeNativeString}{10.1.2}{X80FCBCCF785AA385}
+\makelabel{hpc:InstallTypeSerializationTag}{10.1.3}{X7E8286777A438AB5}
+\makelabel{hpc:InstallSerializer}{10.1.4}{X84E98E728481BE0F}
+\makelabel{hpc:InstallDeserializer}{10.1.5}{X7A9117BE7BE87CD6}
+\makelabel{hpc:LOCK}{11.1.1}{X828E21CD78EFE07A}
+\makelabel{hpc:TRYLOCK}{11.1.2}{X7A7256AA7D7E3C4B}
+\makelabel{hpc:UNLOCK}{11.1.3}{X7EBEFBC6875F149A}
+\makelabel{hpc:HASHLOCK}{11.2.1}{X8145561486573102}
+\makelabel{hpc:HASHUNLOCK}{11.2.2}{X7AD0136085D9CFE0}
+\makelabel{hpc:HASHLOCKSHARED}{11.2.3}{X7BE2F84778C68D04}
+\makelabel{hpc:HASHUNLOCKSHARED}{11.2.4}{X877AEBBC8249DA2C}
+\makelabel{hpc:MAKEPUBLIC}{11.3.1}{X8011BF108795B266}
+\makelabel{hpc:MAKEPUBLICNORECURSE}{11.3.2}{X81142B5B86D8FE29}
+\makelabel{hpc:ORDEREDWRITE}{11.4.1}{X7C15E19D85AD81E2}
+\makelabel{hpc:ORDEREDREAD}{11.4.2}{X7C4DDAEF7A900359}
+\makelabel{hpc:SWITCHOBJ}{11.5.1}{X84644A1284D0AB35}
+\makelabel{hpc:FORCESWITCHOBJ}{11.5.2}{X7AA8AD9E7B28961C}

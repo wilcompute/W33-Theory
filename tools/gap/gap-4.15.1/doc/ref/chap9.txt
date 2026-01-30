@@ -1,0 +1,580 @@
+
+  [1X9 [33X[0;0YFiles and Filenames[133X[101X
+
+  [33X[0;0YFiles  are identified by filenames, which are represented in [5XGAP[105X as strings.
+  Filenames  can  be  created directly by the user or a program, but of course
+  this is operating system dependent.[133X
+
+  [33X[0;0YFilenames  for  some  files  can  be constructed in a system independent way
+  using  the  following  functions.  This is done by first getting a directory
+  object for the directory the file shall reside in, and then constructing the
+  filename. However, it is sometimes necessary to construct filenames of files
+  in  subdirectories  relative  to  a given directory object. In this case the
+  directory separator is [13Xalways[113X [10X/[110X even under DOS or MacOS.[133X
+
+  [33X[0;0YSection  [14X9.4[114X describes how to construct directory objects for the common [5XGAP[105X
+  and system directories. Using the command [2XFilename[102X ([14X9.5-1[114X) it is possible to
+  construct a filename pointing to a file in these directories. There are also
+  functions to test for accessibility of files, see [14X9.7[114X.[133X
+
+
+  [1X9.1 [33X[0;0YPortability[133X[101X
+
+  [33X[0;0YFor  portability  filenames  and  directory names should be restricted to at
+  most  8 alphanumerical characters optionally followed by a dot [10X.[110X and between
+  1  and  3  alphanumerical  characters.  Upper case letters should be avoided
+  because  some operating systems do not make any distinction between case, so
+  that  [10XNaMe[110X,  [10XName[110X and [10Xname[110X all refer to the same file whereas some operating
+  systems  are  case  sensitive.  To avoid problems only lower case characters
+  should be used.[133X
+
+  [33X[0;0YAnother function which is system-dependent is [2XLastSystemError[102X ([14X9.1-1[114X).[133X
+
+  [1X9.1-1 LastSystemError[101X
+
+  [33X[1;0Y[29X[2XLastSystemError[102X(  ) [32X function[133X
+
+  [33X[0;0Y[2XLastSystemError[102X  returns  a record describing the last system error that has
+  occurred.  This  record  contains  at least the component [10Xmessage[110X which is a
+  string.  This  message  is,  however,  highly operating system dependent and
+  should only be used as an informational message for the user.[133X
+
+
+  [1X9.2 [33X[0;0YGAP Root Directories[133X[101X
+
+  [33X[0;0YWhen  [5XGAP[105X  is  started it determines a list of directories which we call the
+  [13X[5XGAP[105X  root  directories[113X.  In  a running [5XGAP[105X session this list can be found in
+  [10XGAPInfo.RootPaths[110X.[133X
+
+  [33X[0;0YThe  core  part  of  [5XGAP[105X  knows  which  files  to  read relative to its root
+  directories.   For   example  when  [5XGAP[105X  wants  to  read  its  library  file
+  [11Xlib/group.gd[111X,  it  appends this path to each path in [10XGAPInfo.RootPaths[110X until
+  it  finds  the  path  of  an existing file. The first file found this way is
+  read.[133X
+
+  [33X[0;0YAny subdirectories named [11Xpkg/[111X in one of the directories in [10XGAPInfo.RootPaths[110X
+  are  added to [10XGAPInfo.PackageDirectories[110X (see [14X9.3[114X), which controls where [5XGAP[105X
+  looks for available packages.[133X
+
+  [33X[0;0YThe  root  directories  are  specified  via  one  or several of the [10X-l paths[110X
+  command  line  options,  see  [14X3.1[114X. Furthermore, by default [5XGAP[105X automatically
+  prepends a user specific [5XGAP[105X root directory to the list; this can be avoided
+  by  calling [5XGAP[105X with the [10X-r[110X option. The name of this user specific directory
+  depends  on  your  operating system, it can be found in [10XGAPInfo.UserGapRoot[110X.
+  This directory can be used to tell [5XGAP[105X about personal preferences, to always
+  load  some  additional code, to install additional packages, or to overwrite
+  some  [5XGAP[105X  files. See [14X3.2[114X for more information how to do this. After [5XGAP[105X has
+  been  started,  one  can  add  additional  root directories via the function
+  [2XExtendRootDirectories[102X ([14X76.2-4[114X).[133X
+
+
+  [1X9.3 [33X[0;0YGAP Package Directories[133X[101X
+
+  [33X[0;0YWhen  [5XGAP[105X  is  started  it  determines  a  list  of  directories potentially
+  containing  packages. We refer to these as the [13X[5XGAP[105X package directories[113X. In a
+  running [5XGAP[105X session this list can be found in [10XGAPInfo.PackageDirectories[110X.[133X
+
+  [33X[0;0YEvery  subdirectory  [11Xpkg[111X  in  a [5XGAP[105X root directory is automatically added to
+  this  list.  Further package directories can be specified via one or several
+  [10X--packagedirs  paths[110X  command  line  options, see [14X3.1[114X, or after [5XGAP[105X has been
+  started via the function [2XExtendPackageDirectories[102X ([14X76.2-5[114X). The order of the
+  directories  in  [10XGAPInfo.PackageDirectories[110X is as follows: first the package
+  directories  specified  via  the command line option [10X--packagedirs[110X, then the
+  subdirectories [11Xpkg[111X of the [5XGAP[105X root directories that were known at startup in
+  the  same  order,  and  finally  the  directories  added  after [5XGAP[105X has been
+  started.[133X
+
+  [33X[0;0Y[5XGAP[105X  looks  for  available  packages by examining each of the directories in
+  [10XGAPInfo.PackageDirectories[110X.[133X
+
+
+  [1X9.4 [33X[0;0YDirectories[133X[101X
+
+  [1X9.4-1 IsDirectory[101X
+
+  [33X[1;0Y[29X[2XIsDirectory[102X( [3Xobj[103X ) [32X Category[133X
+
+  [33X[0;0Y[2XIsDirectory[102X is a category of directories.[133X
+
+  [1X9.4-2 Directory[101X
+
+  [33X[1;0Y[29X[2XDirectory[102X( [3Xstring[103X ) [32X operation[133X
+
+  [33X[0;0Yreturns  a directory object for the string [3Xstring[103X. [2XDirectory[102X understands [10X"."[110X
+  for  [21Xcurrent  directory[121X, that is, the directory in which [5XGAP[105X was started. It
+  also understands absolute paths.[133X
+
+  [33X[0;0YIf  the  variable  [10XGAPInfo.UserHome[110X  is  defined  (this  may  depend  on the
+  operating  system)  then  [2XDirectory[102X  understands  a  string with a leading [10X~[110X
+  (tilde)  character  for  a path relative to the user's home directory (but a
+  string beginning with [10X"~other_user"[110X is [13Xnot[113X interpreted as a path relative to
+  [10Xother_user[110X's home directory, as in a UNIX shell).[133X
+
+  [33X[0;0YPaths are otherwise taken relative to the current directory.[133X
+
+  [1X9.4-3 DirectoryTemporary[101X
+
+  [33X[1;0Y[29X[2XDirectoryTemporary[102X(  ) [32X function[133X
+
+  [33X[0;0Yreturns  a  directory  object  in the category [2XIsDirectory[102X ([14X9.4-1[114X) for a [13Xnew[113X
+  temporary  directory.  This  is  guaranteed  to  be  newly created and empty
+  immediately after the call to [2XDirectoryTemporary[102X. [5XGAP[105X will make a reasonable
+  effort to remove this directory upon termination of the [5XGAP[105X job that created
+  the directory.[133X
+
+  [33X[0;0YIf [2XDirectoryTemporary[102X is unable to create a new directory, [9Xfail[109X is returned.
+  In  this  case  [2XLastSystemError[102X ([14X9.1-1[114X) can be used to get information about
+  the error.[133X
+
+  [33X[0;0YA  warning  message  is  given  if  more than 1000 temporary directories are
+  created in any [5XGAP[105X session.[133X
+
+  [1X9.4-4 DirectoryCurrent[101X
+
+  [33X[1;0Y[29X[2XDirectoryCurrent[102X(  ) [32X function[133X
+
+  [33X[0;0Yreturns the directory object for the current directory.[133X
+
+  [1X9.4-5 ChangeDirectoryCurrent[101X
+
+  [33X[1;0Y[29X[2XChangeDirectoryCurrent[102X( [3Xpath[103X ) [32X function[133X
+
+  [33X[0;0YChanges the current directory. Returns [9Xtrue[109X on success and [9Xfail[109X on failure.[133X
+
+  [1X9.4-6 DirectoriesLibrary[101X
+
+  [33X[1;0Y[29X[2XDirectoriesLibrary[102X( [[3Xname[103X] ) [32X function[133X
+
+  [33X[0;0Y[2XDirectoriesLibrary[102X returns the directory objects for the [5XGAP[105X library [3Xname[103X as
+  a list. [3Xname[103X must be one of [10X"lib"[110X (the default), [10X"doc"[110X, [10X"tst"[110X, and so on.[133X
+
+  [33X[0;0YThe  string  [10X""[110X  is  also  legal  and  with this argument [2XDirectoriesLibrary[102X
+  returns  the  list  of  [5XGAP[105X  root directories. The return value of this call
+  differs  from  [10XGAPInfo.RootPaths[110X  in  that the former is a list of directory
+  objects and the latter a list of strings.[133X
+
+  [33X[0;0YThe  directory  [3Xname[103X  must  exist  in  at least one of the root directories,
+  otherwise [9Xfail[109X is returned.[133X
+
+  [33X[0;0YAs  the  files in the [5XGAP[105X root directories (see [14X9.2[114X) can be distributed into
+  different directories in the filespace a list of directories is returned. In
+  order  to find an existing file in a [5XGAP[105X root directory you should pass that
+  list  to  [2XFilename[102X  ([14X9.5-1[114X)  as  the  first  argument.  In order to create a
+  filename  for  a  new  file  inside a [5XGAP[105X root directory you should pass the
+  first  entry  of  that  list.  However,  creating  files inside the [5XGAP[105X root
+  directory  is  not  recommended,  you  should use [2XDirectoryTemporary[102X ([14X9.4-3[114X)
+  instead.[133X
+
+  [1X9.4-7 DirectoriesSystemPrograms[101X
+
+  [33X[1;0Y[29X[2XDirectoriesSystemPrograms[102X(  ) [32X function[133X
+
+  [33X[0;0Y[2XDirectoriesSystemPrograms[102X  returns  the  directory  objects  for the list of
+  directories  where  the  system  programs reside, as a list. Under UNIX this
+  would usually represent [10X$PATH[110X.[133X
+
+  [1X9.4-8 DirectoryContents[101X
+
+  [33X[1;0Y[29X[2XDirectoryContents[102X( [3Xdir[103X ) [32X function[133X
+
+  [33X[0;0YThis function returns a list of filenames/directory names that reside in the
+  directory  [3Xdir[103X.  The argument [3Xdir[103X can either be given as a string indicating
+  the  name  of  the  directory  or  as  a  directory  object (see [2XIsDirectory[102X
+  ([14X9.4-1[114X)).  If an error occurs (the specified directory does not exist or has
+  no read permissions), [9Xfail[109X is returned. In this case [2XLastSystemError[102X ([14X9.1-1[114X)
+  can be used to get information about the error.[133X
+
+  [33X[0;0YThe ordering of the list entries can depend on the operating system.[133X
+
+  [33X[0;0YAn  interactive  way  to show the contents of a directory is provided by the
+  function  [2XBrowseDirectory[102X  ([14XBrowse:  BrowseDirectory[114X)  from  the [5XGAP[105X package
+  [5XBrowse[105X.[133X
+
+  [1X9.4-9 DirectoryDesktop[101X
+
+  [33X[1;0Y[29X[2XDirectoryDesktop[102X(  ) [32X function[133X
+
+  [33X[0;0Yreturns  a  directory  object for the user's desktop directory as defined on
+  many  modern  operating  systems.  The  function  is  intended  to provide a
+  cross-platform  interface  to  a  directory that is easily accessible by the
+  user.[133X
+
+  [33X[0;0YUnder  Unix  systems (including macOS) this will be the [10XDesktop[110X directory in
+  the  user's  home  directory  if  it  exists,  and the user's home directory
+  otherwise.  Under  Windows  it  will  be  the  user's [10XDesktop[110X folder (or the
+  appropriate name under different languages).[133X
+
+  [1X9.4-10 DirectoryHome[101X
+
+  [33X[1;0Y[29X[2XDirectoryHome[102X(  ) [32X function[133X
+
+  [33X[0;0Yreturns  a  directory  object  for  the  user's home directory, defined as a
+  directory  in which the user will typically have full read and write access.
+  The  function  is  intended  to  provide  a  cross-platform  interface  to a
+  directory that is easily accessible by the user.[133X
+
+  [33X[0;0YUnder  Unix  systems  (including  macOS)  this  will  be the usual user home
+  directory.  Under  Windows it will be the user's [10XMy Documents[110X folder (or the
+  appropriate name under different languages).[133X
+
+
+  [1X9.5 [33X[0;0YFile Names[133X[101X
+
+
+  [1X9.5-1 [33X[0;0YFilename[133X[101X
+
+  [33X[1;0Y[29X[2XFilename[102X( [3Xdir[103X, [3Xname[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XFilename[102X( [3Xlist-of-dirs[103X, [3Xname[103X ) [32X operation[133X
+
+  [33X[0;0YIf  the  first  argument  is  a  directory  object [3Xdir[103X, [2XFilename[102X returns the
+  (system  dependent)  filename as a string for the file with name [3Xname[103X in the
+  directory  [3Xdir[103X.  [2XFilename[102X  returns  the  filename  regardless of whether the
+  directory contains a file with name [3Xname[103X or not.[133X
+
+  [33X[0;0YIf  the  first  argument  is  a  list [3Xlist-of-dirs[103X (possibly of length 1) of
+  directory  objects,  then  [2XFilename[102X  searches  the directories in order, and
+  returns the filename for the file [3Xname[103X in the first directory which contains
+  a file [3Xname[103X or [9Xfail[109X if no directory contains a file [3Xname[103X.[133X
+
+  [33X[0;0Y[13XFor   example[113X,   in   order   to   locate   the   system  program  [10Xdate[110X  use
+  [2XPathSystemProgram[102X ([14X9.5-2[114X).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xdate := PathSystemProgram( "date" );[127X[104X
+    [4X[28X"/bin/date"[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YIn  order to locate the library file [11Xfiles.gd[111X use [2XDirectoriesLibrary[102X ([14X9.4-6[114X)
+  together with the second form of [2XFilename[102X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xpath := DirectoriesLibrary();;[127X[104X
+    [4X[25Xgap>[125X [27XFilename( path, "files.gd" );[127X[104X
+    [4X[28X"./lib/files.gd"[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YIn  order  to construct filenames for new files in a temporary directory use
+  [2XDirectoryTemporary[102X ([14X9.4-3[114X) together with the first form of [2XFilename[102X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xtmpdir := DirectoryTemporary();;[127X[104X
+    [4X[25Xgap>[125X [27XFilename( [ tmpdir ], "file.new" );[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27XFilename( tmpdir, "file.new" );[127X[104X
+    [4X[28X"/var/tmp/tmp.0.021738.0001/file.new"[128X[104X
+  [4X[32X[104X
+
+  [1X9.5-2 PathSystemProgram[101X
+
+  [33X[1;0Y[29X[2XPathSystemProgram[102X( [3Xname[103X ) [32X function[133X
+
+  [33X[0;0Y[2XPathSystemProgram[102X  returns either the path of the first executable file [3Xname[103X
+  in  one of the directories returned by [2XDirectoriesSystemPrograms[102X ([14X9.4-7[114X), or
+  [9Xfail[109X if no such file exists.[133X
+
+
+  [1X9.6 [33X[0;0YSpecial Filenames[133X[101X
+
+  [33X[0;0YThe  special filename [10X"*stdin*"[110X denotes the standard input, i.e., the stream
+  through  which  the  user  enters  commands  to  [5XGAP[105X. The exact behaviour of
+  reading  from  [10X"*stdin*"[110X  is  operating  system  dependent,  but usually the
+  following  happens. If [5XGAP[105X was started with no input redirection, statements
+  are  read  from  the  terminal  stream until the user enters the end of file
+  character,  which is usually [12XCtrl-D[112X. Note that terminal streams are special,
+  in  that  they  may  yield  ordinary  input  [13Xafter[113X an end of file. Thus when
+  control  returns to the main read-eval-print loop the user can continue with
+  [5XGAP[105X.  If [5XGAP[105X was started with an input redirection, statements are read from
+  the  current  position  in  the  input  file up to the end of the file. When
+  control  returns to the main read eval view loop the input stream will still
+  return end of file, and [5XGAP[105X will terminate.[133X
+
+  [33X[0;0YThe  special  filename  [10X"*errin*"[110X  denotes  the stream connected to the UNIX
+  [10Xstderr[110X output. This stream is usually connected to the terminal, even if the
+  standard  input  was  redirected,  unless the standard error stream was also
+  redirected, in which case opening of [10X"*errin*"[110X fails.[133X
+
+  [33X[0;0YThe special filename [10X"*stdout*"[110X can be used to print to the standard output.[133X
+
+  [33X[0;0YThe  special  filename [10X"*errout*"[110X can be used to print to the standard error
+  output  file,  which  is  usually  connected  to  the  terminal, even if the
+  standard output was redirected.[133X
+
+
+  [1X9.7 [33X[0;0YFile Access[133X[101X
+
+  [33X[0;0YWhen  the  following  functions  return  [9Xfalse[109X  one  can use [2XLastSystemError[102X
+  ([14X9.1-1[114X)  to  find  out the reason (as provided by the operating system), see
+  the examples.[133X
+
+  [1X9.7-1 IsExistingFile[101X
+
+  [33X[1;0Y[29X[2XIsExistingFile[102X( [3Xfilename[103X ) [32X function[133X
+
+  [33X[0;0Y[2XIsExistingFile[102X  returns [9Xtrue[109X if a file with the filename [3Xfilename[103X exists and
+  can be seen by the [5XGAP[105X process. Otherwise [9Xfalse[109X is returned.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsExistingFile( "/bin/date" );     # file `/bin/date' exists[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsExistingFile( "/bin/date.new" ); # non existing `/bin/date.new'[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsExistingFile( "/bin/date/new" ); # `/bin/date' is not a directory[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XLastSystemError().message;[127X[104X
+    [4X[28X"Not a directory"[128X[104X
+  [4X[32X[104X
+
+  [1X9.7-2 IsReadableFile[101X
+
+  [33X[1;0Y[29X[2XIsReadableFile[102X( [3Xfilename[103X ) [32X function[133X
+
+  [33X[0;0Y[2XIsReadableFile[102X  returns [9Xtrue[109X if a file with the filename [3Xfilename[103X exists [13Xand[113X
+  the  [5XGAP[105X  process has read permissions for the file, or [9Xfalse[109X if this is not
+  the case.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsReadableFile( "/bin/date" );     # file `/bin/date' is readable[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsReadableFile( "/bin/date.new" ); # non-existing `/bin/date.new'[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XLastSystemError().message;[127X[104X
+    [4X[28X"No such file or directory"[128X[104X
+  [4X[32X[104X
+
+  [1X9.7-3 IsWritableFile[101X
+
+  [33X[1;0Y[29X[2XIsWritableFile[102X( [3Xfilename[103X ) [32X function[133X
+
+  [33X[0;0Y[2XIsWritableFile[102X  returns [9Xtrue[109X if a file with the filename [3Xfilename[103X exists [13Xand[113X
+  the  [5XGAP[105X process has write permissions for the file, or [9Xfalse[109X if this is not
+  the case.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsWritableFile( "/bin/date" );  # file `/bin/date' is not writable[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+
+  [1X9.7-4 IsExecutableFile[101X
+
+  [33X[1;0Y[29X[2XIsExecutableFile[102X( [3Xfilename[103X ) [32X function[133X
+
+  [33X[0;0Y[2XIsExecutableFile[102X  returns  [9Xtrue[109X  if a file with the filename [3Xfilename[103X exists
+  [13Xand[113X  the  [5XGAP[105X process has execute permissions for the file, or [9Xfalse[109X if this
+  is  not  the  case.  Note  that  execute permissions do not imply that it is
+  possible to execute the file, e.g., it may only be executable on a different
+  machine.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XIsExecutableFile( "/bin/date" );   # ... but executable[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+
+  [1X9.7-5 IsDirectoryPath[101X
+
+  [33X[1;0Y[29X[2XIsDirectoryPath[102X( [3Xfilename[103X ) [32X function[133X
+
+  [33X[0;0Y[2XIsDirectoryPath[102X  returns  [9Xtrue[109X if the file with the filename [3Xfilename[103X exists
+  [13Xand[113X  is  a  directory, and [9Xfalse[109X otherwise. Note that this function does not
+  check  if  the [5XGAP[105X process actually has write or execute permissions for the
+  directory.  You  can  use  [2XIsWritableFile[102X  ([14X9.7-3[114X),  resp.  [2XIsExecutableFile[102X
+  ([14X9.7-4[114X) to check such permissions.[133X
+
+
+  [1X9.8 [33X[0;0YFile Operations[133X[101X
+
+  [1X9.8-1 Read[101X
+
+  [33X[1;0Y[29X[2XRead[102X( [3Xfilename[103X ) [32X operation[133X
+
+  [33X[0;0Yreads  the  input  from  the  file with the filename [3Xfilename[103X, which must be
+  given as a string.[133X
+
+  [33X[0;0Y[2XRead[102X  first  opens  the file [3Xfilename[103X. If the file does not exist, or if [5XGAP[105X
+  cannot open it, e.g., because of access restrictions, an error is signalled.[133X
+
+  [33X[0;0YThen  the  contents  of the file are read and evaluated, but the results are
+  not  printed.  The  reading and evaluations happens exactly as described for
+  the main loop (see [14X6.1[114X).[133X
+
+  [33X[0;0YIf  a  statement  in  the  file  causes  an  error  a  break loop is entered
+  (see [14X6.4[114X).  The  input  for  this break loop is not taken from the file, but
+  from  the  input  connected  to  the  [10Xstderr[110X output of [5XGAP[105X. If [10Xstderr[110X is not
+  connected  to  a  terminal,  no break loop is entered. If this break loop is
+  left  with  [9Xquit[109X  (or [12XCtrl-D[112X), [5XGAP[105X exits from the [2XRead[102X command, and from all
+  enclosing  [2XRead[102X  commands,  so  that  control  is  normally  returned  to an
+  interactive  prompt.  The  [9XQUIT[109X  statement (see [14X6.7[114X) can also be used in the
+  break loop to exit [5XGAP[105X immediately.[133X
+
+  [33X[0;0YNote  that  a statement must not begin in one file and end in another. I.e.,
+  [13Xeof[113X ([13Xe[113Xnd-[13Xo[113Xf-[13Xf[113Xile) is not treated as whitespace, but as a special symbol that
+  must not appear inside any statement.[133X
+
+  [33X[0;0YNote  that  one  file may very well contain a read statement causing another
+  file  to  be read, before input is again taken from the first file. There is
+  an upper limit of 15 on the number of files that may be open simultaneously.[133X
+
+  [1X9.8-2 ReadAsFunction[101X
+
+  [33X[1;0Y[29X[2XReadAsFunction[102X( [3Xfilename[103X ) [32X operation[133X
+
+  [33X[0;0Yreads  the  file  with  filename  [3Xfilename[103X  as  a  function and returns this
+  function.[133X
+
+  [33X[0;0Y[13XExample[113X[133X
+
+  [33X[0;0YSuppose that the file [11X/tmp/example.g[111X contains the following[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[28Xlocal a;[128X[104X
+    [4X[28X[128X[104X
+    [4X[28Xa := 10;[128X[104X
+    [4X[28Xreturn a*10;[128X[104X
+  [4X[32X[104X
+
+  [33X[0;0YReading the file as a function will not affect a global variable [10Xa[110X.[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xa := 1;[127X[104X
+    [4X[28X1[128X[104X
+    [4X[25Xgap>[125X [27XReadAsFunction("/tmp/example.g")();[127X[104X
+    [4X[28X100[128X[104X
+    [4X[25Xgap>[125X [27Xa;[127X[104X
+    [4X[28X1[128X[104X
+  [4X[32X[104X
+
+
+  [1X9.8-3 [33X[0;0YPrintTo and AppendTo[133X[101X
+
+  [33X[1;0Y[29X[2XPrintTo[102X( [3Xfilename[103X[, [3Xobj1[103X, [3X...[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XAppendTo[102X( [3Xfilename[103X[, [3Xobj1[103X, [3X...[103X] ) [32X function[133X
+
+  [33X[0;0Y[2XPrintTo[102X  works  like  [2XPrint[102X ([14X6.3-4[114X), except that the arguments [3Xobj1[103X, [22X...[122X (if
+  present)  are  printed  to  the  file  with the name [3Xfilename[103X instead of the
+  standard  output.  This file must of course be writable by [5XGAP[105X. Otherwise an
+  error  is  signalled. Note that [2XPrintTo[102X will [13Xoverwrite[113X the previous contents
+  of  this  file  if  it already existed; in particular, [2XPrintTo[102X with just the
+  [3Xfilename[103X argument empties that file.[133X
+
+  [33X[0;0Y[2XAppendTo[102X  works  like [2XPrintTo[102X, except that the output does not overwrite the
+  previous contents of the file, but is appended to the file.[133X
+
+  [33X[0;0YThere is an upper limit of 15 on the number of output files that may be open
+  simultaneously.[133X
+
+  [33X[0;0Y[13XNote[113X  that  one  should  be  careful  not  to  write to a logfile (see [2XLogTo[102X
+  ([14X9.8-4[114X)) with [2XPrintTo[102X or [2XAppendTo[102X.[133X
+
+
+  [1X9.8-4 [33X[0;0YLogTo[133X[101X
+
+  [33X[1;0Y[29X[2XLogTo[102X( [3Xfilename[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XLogTo[102X(  ) [32X operation[133X
+
+  [33X[0;0YCalling [2XLogTo[102X with a string [3Xfilename[103X causes the subsequent interaction to be
+  logged  to the file with the name [3Xfilename[103X, i.e., everything you see on your
+  terminal  will also appear in this file. ([2XLogTo[102X ([14X10.4-5[114X) may also be used to
+  log  to a stream.) This file must of course be writable by [5XGAP[105X, otherwise an
+  error  is signalled. Note that [2XLogTo[102X will overwrite the previous contents of
+  this file if it already existed.[133X
+
+  [33X[0;0YCalled without arguments, [2XLogTo[102X stops logging to a file or stream.[133X
+
+
+  [1X9.8-5 [33X[0;0YInputLogTo[133X[101X
+
+  [33X[1;0Y[29X[2XInputLogTo[102X( [3Xfilename[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XInputLogTo[102X(  ) [32X operation[133X
+
+  [33X[0;0YCalling  [2XInputLogTo[102X with a string [3Xfilename[103X causes the subsequent input to be
+  logged to the file with the name [3Xfilename[103X, i.e., everything you type on your
+  terminal  will  also  appear  in  this  file. Note that [2XInputLogTo[102X and [2XLogTo[102X
+  ([14X9.8-4[114X)  cannot  be  used  at the same time while [2XInputLogTo[102X and [2XOutputLogTo[102X
+  ([14X9.8-6[114X)  can.  Note  that [2XInputLogTo[102X will overwrite the previous contents of
+  this file if it already existed.[133X
+
+  [33X[0;0YCalled without arguments, [2XInputLogTo[102X stops logging to a file or stream.[133X
+
+
+  [1X9.8-6 [33X[0;0YOutputLogTo[133X[101X
+
+  [33X[1;0Y[29X[2XOutputLogTo[102X( [3Xfilename[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XOutputLogTo[102X(  ) [32X operation[133X
+
+  [33X[0;0YCalling  [2XOutputLogTo[102X  with a string [3Xfilename[103X causes the subsequent output to
+  be logged to the file with the name [3Xfilename[103X, i.e., everything [5XGAP[105X prints on
+  your terminal will also appear in this file. Note that [2XOutputLogTo[102X and [2XLogTo[102X
+  ([14X9.8-4[114X)  cannot  be  used  at  the  same  time  while [2XInputLogTo[102X ([14X9.8-5[114X) and
+  [2XOutputLogTo[102X  can. Note that [2XOutputLogTo[102X will overwrite the previous contents
+  of this file if it already existed.[133X
+
+  [33X[0;0YCalled without arguments, [2XOutputLogTo[102X stops logging to a file or stream.[133X
+
+  [1X9.8-7 CrcFile[101X
+
+  [33X[1;0Y[29X[2XCrcFile[102X( [3Xfilename[103X ) [32X function[133X
+
+  [33X[0;0YThis  function  computes  a  CRC  (cyclic  redundancy  check) number for the
+  content of the file [3Xfilename[103X.[133X
+
+  [33X[0;0Y[2XCrcFile[102X computes a CRC (cyclic redundancy check) checksum value for the file
+  with  filename  [3Xfilename[103X  and returns this value as an integer. The function
+  returns  [9Xfail[109X if an error occurred, for example, if [3Xfilename[103X does not exist.
+  In  this  case  the  function  [2XLastSystemError[102X  ([14X9.1-1[114X)  can  be used to get
+  information about the error. See also [2XCrcFile[102X and [2XHexSHA256[102X ([14X27.9-7[114X).[133X
+
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XCrcFile( "lib/morpheus.gi" );[127X[104X
+    [4X[28X2705743645[128X[104X
+  [4X[32X[104X
+
+  [1X9.8-8 RemoveFile[101X
+
+  [33X[1;0Y[29X[2XRemoveFile[102X( [3Xfilename[103X ) [32X function[133X
+
+  [33X[0;0Ywill  remove  the  file  with  filename [3Xfilename[103X and returns [9Xtrue[109X in case of
+  success.  The function returns [9Xfail[109X if a system error occurred, for example,
+  if  your  permissions do not allow the removal of [3Xfilename[103X. In this case the
+  function  [2XLastSystemError[102X  ([14X9.1-1[114X)  can be used to get information about the
+  error.[133X
+
+  [1X9.8-9 UserHomeExpand[101X
+
+  [33X[1;0Y[29X[2XUserHomeExpand[102X( [3Xstr[103X ) [32X function[133X
+
+  [33X[0;0YIf  the  string  [3Xstr[103X starts with a [10X'~'[110X character this function returns a new
+  string  with  the  leading  [10X'~'[110X  substituted by the user's home directory as
+  stored in [10XGAPInfo.UserHome[110X. Otherwise [3Xstr[103X is returned unchanged.[133X
+
+  [1X9.8-10 Reread[101X
+
+  [33X[1;0Y[29X[2XReread[102X( [3Xfilename[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XREREADING[102X [32X global variable[133X
+
+  [33X[0;0YIn  general,  it is not possible to read the same [5XGAP[105X library file twice, or
+  to  read  a  compiled  version  after reading a [5XGAP[105X version, because crucial
+  global  variables  are  made read-only (see [14X4.9[114X) and filters and methods are
+  added to global tables.[133X
+
+  [33X[0;0YA  partial  solution to this problem is provided by the function [2XReread[102X (and
+  related  functions  [10XRereadLib[110X  etc.).  [10XReread(  [3Xfilename[103X[10X  )[110X  sets the global
+  variable [2XREREADING[102X to [9Xtrue[109X, reads the file named by [3Xfilename[103X and then resets
+  [2XREREADING[102X. Various system functions behave differently when [2XREREADING[102X is set
+  to  [9Xtrue[109X.  In  particular,  assignment  to  read-only  global  variables  is
+  permitted, calls to [2XNewRepresentation[102X ([14X13.4-4[114X) and [2XNewInfoClass[102X ([14X7.4-1[114X) with
+  parameters  identical  to  those of an existing representation or info class
+  will  return  the  existing object, and methods installed with [2XInstallMethod[102X
+  ([14X78.3-1[114X) may sometimes displace existing methods.[133X
+
+  [33X[0;0YThis  function  may not entirely produce the intended results, especially if
+  what  has  changed  is  the  super-representation of a representation or the
+  requirements  of a method. In these cases, it is necessary to restart [5XGAP[105X to
+  read the modified file.[133X
+
+  [33X[0;0YAn  additional  use  of [2XReread[102X is to load the compiled version of a file for
+  which  the  [5XGAP[105X  language  version  had previously been read (or perhaps was
+  included in a saved workspace). See [14X76.3-11[114X and [14X3.3[114X for more information.[133X
+
+  [33X[0;0YIt  is  not advisable to use [2XReread[102X programmatically. For example, if a file
+  that  contains  calls  to  [2XReread[102X  is read with [2XReread[102X then [2XREREADING[102X may be
+  reset too early.[133X
+

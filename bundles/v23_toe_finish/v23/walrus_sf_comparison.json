@@ -1,0 +1,23 @@
+[
+  {
+    "modes": 3,
+    "shots": 400,
+    "js": 0.11556686487446877,
+    "mean_clicks_walrus": 0.6475,
+    "mean_clicks_sf": 0.6375
+  },
+  {
+    "modes": 4,
+    "shots": 400,
+    "js": 0.1674492023148605,
+    "mean_clicks_walrus": 0.7225,
+    "mean_clicks_sf": 0.845
+  },
+  {
+    "modes": 5,
+    "shots": 400,
+    "js": 0.20712067351400676,
+    "mean_clicks_walrus": 0.75,
+    "mean_clicks_sf": 1.265
+  }
+]

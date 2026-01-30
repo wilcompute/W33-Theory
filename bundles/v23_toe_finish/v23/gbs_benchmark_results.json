@@ -1,0 +1,7 @@
+{
+  "modes": 4,
+  "squeezing": 0.6,
+  "shots": 200,
+  "kl_gauss": 13.250150232413377,
+  "kl_fock": 0.0
+}

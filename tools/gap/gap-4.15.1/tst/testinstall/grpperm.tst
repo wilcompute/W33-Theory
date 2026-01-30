@@ -1,0 +1,156 @@
+#@local F,G,N,cube,g,s,x,y,a,b,sym,h,iso
+gap> START_TEST("grpperm.tst");
+gap> G := Group((1,2),(1,2,3,4));;
+gap> HasAbelianFactorGroup(G,G);
+true
+gap> HasElementaryAbelianFactorGroup(G,G);
+true
+gap> HasSolvableFactorGroup(G,G);
+true
+gap> N := Group((1,2)(3,4),(1,3)(2,4));;
+gap> HasAbelianFactorGroup(G,N);
+false
+gap> HasElementaryAbelianFactorGroup(G,N);
+false
+gap> HasSolvableFactorGroup(G,N);
+true
+gap> IsAbelian(N);
+true
+gap> HasAbelianFactorGroup(N, Group((1,2)));
+true
+gap> IsElementaryAbelian(N);
+true
+gap> HasElementaryAbelianFactorGroup(N, Group((1,2)));
+true
+gap> N := Group((1,2)(3,4),(1,2,3));;
+gap> HasAbelianFactorGroup(G,N);
+true
+gap> HasElementaryAbelianFactorGroup(G,N);
+true
+gap> HasSolvableFactorGroup(G,N);
+true
+gap> IsSolvable(G);
+true
+gap> HasSolvableFactorGroup(G,N);
+true
+gap> F := FreeGroup("x","y");; x := F.1;; y:=F.2;;
+gap> G := F/[x^18,y];;
+gap> HasElementaryAbelianFactorGroup(G, Group(G.1^2));
+true
+gap> HasElementaryAbelianFactorGroup(G, Group(G.1^3));
+true
+gap> HasElementaryAbelianFactorGroup(G, Group(G.1^6));
+false
+gap> HasElementaryAbelianFactorGroup(G, Group(G.1^9));
+false
+gap> HasSolvableFactorGroup(SymmetricGroup(5), Group(()));
+false
+gap> HasSolvableFactorGroup(SymmetricGroup(5), SymmetricGroup(5));
+true
+gap> HasSolvableFactorGroup(SymmetricGroup(5), AlternatingGroup(5));
+true
+gap> HasSolvableFactorGroup(AlternatingGroup(5), AlternatingGroup(5));
+true
+gap> cube := Group(( 1, 3, 8, 6)( 2, 5, 7, 4)( 9,33,25,17)(10,34,26,18)(11,35,27,19),( 9,11,16,14)(10,13,15,12)( 1,17,41,40)( 4,20,44,37)( 6,22,46,35),(17,19,24,22)(18,21,23,20)( 6,25,43,16)( 7,28,42,13)( 8,30,41,11),(25,27,32,30)(26,29,31,28)( 3,38,43,19)( 5,36,45,21)( 8,33,48,24),(33,35,40,38)(34,37,39,36)( 3, 9,46,32)( 2,12,47,29)( 1,14,48,27),(41,43,48,46)(42,45,47,44)(14,22,30,38)(15,23,31,39)(16,24,32,40) );;
+gap> HasSolvableFactorGroup(cube, Center(cube));
+false
+gap> HasSolvableFactorGroup(cube, DerivedSeriesOfGroup(cube)[2]);
+true
+gap> G := SylowSubgroup(SymmetricGroup(2^7),2);;
+gap> N := Center(G);;
+gap> HasSolvableFactorGroup(G,N);
+true
+gap> s:=SymmetricGroup([ 1, 5, 6, 7, 8, 9, 10 ]);;
+gap> RepresentativeAction(s,(9,10),(1,5)) in s;
+true
+gap> if IsPackageMarkedForLoading("tomlib","") then
+> if Length(MaximalSubgroupClassReps(SimpleGroup("M24"))) <> 9 then
+> Print( "Error in calculation MaximalSubgroupClassReps of M24\n" );
+> fi; fi;
+gap> g:=SimpleGroup("L4(3)");;
+gap> Length(MaximalSubgroupClassReps(g));
+8
+gap> g:=PSL(8,2);;
+gap> Length(MaximalSubgroupClassReps(g));
+10
+gap> G := SymmetricGroup(6);;
+gap> IsSolvable(G);
+false
+gap> Length(MinimalGeneratingSet(G));
+2
+gap> IsomorphismPermGroup(G) = IdentityMapping(G);
+true
+
+#
+gap> g:=SymmetricGroup(6);;
+gap> h:=Action(g,Combinations([1..6],2),OnSets);;
+gap> IsSymmetricGroup(h);
+true
+gap> iso:=IsomorphismFpGroup(h);;
+gap> HasSize(ImagesSource(iso));
+true
+gap> iso:=IsomorphismFpGroup(DerivedSubgroup(h));;
+gap> HasSize(ImagesSource(iso));
+true
+
+#
+gap> G:=Group((2,5)(3,4), (1,3)(4,5));;
+gap> Size(G);
+10
+gap> iso:=IsomorphismFpGroup(G);;
+gap> HasSize(Range(iso));
+true
+
+#
+gap> sym:=SymmetricGroup(13);;
+gap> a:=Stabilizer(sym,[[1,2,3],[4,5,6,7]],OnTuplesSets);;Index(sym,a);
+60060
+gap> b:=Stabilizer(sym,[[5,6,7],[8,9,10],[11,12],[13]],OnTuplesSets);;
+gap> Index(sym,b);
+3603600
+gap> Length(ContainedConjugates(sym,a,b));
+5
+gap> TwoClosure(SymmetricGroup([3..6]));
+Sym( [ 3 .. 6 ] )
+gap> TwoClosure(AlternatingGroup(6));
+Sym( [ 1 .. 6 ] )
+gap> TwoClosure(AlternatingGroup([3..6]));
+Sym( [ 3 .. 6 ] )
+gap> TwoClosure(Group([(1,2,3,4,5)]));
+Group([ (1,2,3,4,5) ])
+gap> TwoClosure(Group([(2,3,4,5,6)]));
+Group([ (2,3,4,5,6) ])
+gap> TwoClosure(Group([],()));
+Group(())
+gap> TwoClosure(Group([(1,2,3)(4,5,6),(1,4)(2,5)(3,6)])) =
+> Group([ (1,2,3)(4,5,6), (1,4)(2,5)(3,6) ]);
+true
+gap> TwoClosure(Group([(9,2,3)(4,5,6),(9,4)(2,5)(3,6)])) =
+> Group([ (2,3,9)(4,5,6), (2,5)(3,6)(4,9) ]);
+true
+gap> TwoClosure(Group([ (1,8)(2,3)(4,5)(6,7), (1,3)(2,8)(4,6)(5,7),
+> (1,5)(2,6)(3,7)(4,8), (1,2,3)(4,6,5) ])) =
+> Group([ (2,8,3)(4,5,7), (1,5)(2,6)(3,7)(4,8),
+> (1,3)(2,8)(4,6)(5,7), (1,8)(2,3)(4,5)(6,7), (3,8)(4,7) ]);
+true
+gap> TwoClosure(Group((1,2),(3,4)));
+Error, 2-closure: <G> must be transitive
+
+#
+gap> AsSet(SymmetricGroup(3));
+[ (), (2,3), (1,2), (1,2,3), (1,3,2), (1,3) ]
+gap> AsList(SymmetricGroup(3));
+[ (), (2,3), (1,3), (1,3,2), (1,2,3), (1,2) ]
+gap> List(Iterator(SymmetricGroup(3)));
+[ (), (2,3), (1,3), (1,3,2), (1,2,3), (1,2) ]
+gap> AsList(SymmetricGroup(6)) = List(Iterator(SymmetricGroup(6)));
+true
+
+#
+gap> g:= SymmetricGroup( 4 );;
+gap> h:= Subgroup( g, [ () ] );;
+gap> IsSolvable( h );
+true
+
+#
+gap> STOP_TEST("grpperm.tst");
