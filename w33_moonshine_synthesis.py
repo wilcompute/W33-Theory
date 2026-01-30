@@ -5,7 +5,7 @@ W33 MOONSHINE SYNTHESIS: The Grand Unification
 
 This script connects W33 = PG(3, GF(3)) to:
 1. Monstrous Moonshine and the j-invariant
-2. The Mathieu groups (especially M11, M12)  
+2. The Mathieu groups (especially M11, M12)
 3. The Mysterious Duality (M-theory ↔ del Pezzo)
 4. The fine structure constant 137 = 81 + 56
 
@@ -33,10 +33,10 @@ print("PART 1: W33 = PG(3, GF(3)) Core Structure")
 print("=" * 70)
 
 # W33 fundamental numbers
-w33_points = 40       # Points in PG(3, GF(3)) = (3⁴-1)/(3-1)
-w33_cycles = 81       # Affine 3-cycles = 3⁴
-w33_k4s = 90          # K4 subgroups
-w33_total = 121       # Total elements = 11²
+w33_points = 40  # Points in PG(3, GF(3)) = (3⁴-1)/(3-1)
+w33_cycles = 81  # Affine 3-cycles = 3⁴
+w33_k4s = 90  # K4 subgroups
+w33_total = 121  # Total elements = 11²
 
 print(f"\n40 points  = (3⁴-1)/(3-1) = 80/2")
 print(f"81 cycles  = 3⁴ = 4th power of 3")
@@ -62,14 +62,30 @@ print(supersingular_primes)
 print(f"\n11 is the 5th supersingular prime!")
 
 # Monster order
-monster_order = 2**46 * 3**20 * 5**9 * 7**6 * 11**2 * 13**3 * 17 * 19 * 23 * 29 * 31 * 41 * 47 * 59 * 71
+monster_order = (
+    2**46
+    * 3**20
+    * 5**9
+    * 7**6
+    * 11**2
+    * 13**3
+    * 17
+    * 19
+    * 23
+    * 29
+    * 31
+    * 41
+    * 47
+    * 59
+    * 71
+)
 print(f"\n|Monster| ≈ 8.08 × 10⁵³")
 
 # The power of 11 in Monster
 print(f"\n11² = 121 divides |Monster| (the EXACT power is 11²)")
 print(f"This is W33's total element count!")
 
-# Mathieu group M11 
+# Mathieu group M11
 m11_order = 7920
 m12_order = 95040
 print(f"\n|M11| = {m11_order} = 2⁴ × 3² × 5 × 11 = {2**4 * 3**2 * 5 * 11}")
@@ -153,7 +169,7 @@ print(f"\nActually: τ(11) = 11² × 4419 = 11² × 3 × 1473 = 11² × 3 × 3 �
 
 # Ramanujan's conjecture for τ(p)
 # |τ(p)| ≤ 2p^(11/2) for prime p (proven by Deligne)
-bound_11 = 2 * 11**(11/2)
+bound_11 = 2 * 11 ** (11 / 2)
 print(f"\nDeligne's bound for τ(11): |τ(11)| ≤ 2 × 11^(11/2) = {bound_11:.1f}")
 print(f"Actual τ(11) = {tau_11}, ratio = {tau_11/bound_11:.4f}")
 
@@ -186,7 +202,7 @@ print(f"Blocks in S(5,6,12) = C(12,5)/C(6,5) = {steiner_blocks_s5612}")
 
 # Affine plane over GF(3)
 ag_3_2_points = 9  # 3² points
-ag_3_2_lines = 12   # (3²-1)/(3-1) × 3 + ... wait, let's compute properly
+ag_3_2_lines = 12  # (3²-1)/(3-1) × 3 + ... wait, let's compute properly
 # In AG(2,3): 9 points, each line has 3 points
 # Through each point: 4 lines (3 directions + one from each parallel class)
 # Total lines = 9 × 4 / 3 = 12 lines
@@ -220,7 +236,7 @@ And 744 = 24 × 31 = 24 × (2⁵ - 1)
 # Check relations
 print(f"\n744 / 8 = {744 // 8} = 93")
 print(f"93 - 90 = {93 - 90} (K4 connection)")
-print(f"744 / 6 = {744 // 6} = 124")  
+print(f"744 / 6 = {744 // 6} = 124")
 print(f"124 - 121 = {124 - 121} (W33 total + 3)")
 
 # Connection to dimension 24
@@ -237,7 +253,7 @@ print("=" * 70)
 
 # Weyl groups
 w_e6 = 51840
-w_e7 = 2903040  
+w_e7 = 2903040
 w_e8 = 696729600
 
 print(f"\nWeyl group orders:")
@@ -280,7 +296,7 @@ THE GRAND UNIFIED PICTURE:
 From W33 = PG(3, GF(3)):
 ├── 40 points  → dark matter fraction 40/121 ≈ 0.33
 ├── 81 cycles  → 3 × 27 = triple cover of E6 fundamental
-├── 90 K4s     → C(10,2) structure  
+├── 90 K4s     → C(10,2) structure
 └── 121 total  → 11² = Moonshine prime squared
 
 From the Exceptional Hierarchy:
@@ -290,7 +306,7 @@ From the Exceptional Hierarchy:
 └── 27 lines on cubic = E6 fundamental
 
 The Fine Structure Constant:
-α⁻¹ = 137.035999... 
+α⁻¹ = 137.035999...
 
 W33 PREDICTION:
 137 = 81 + 56 = |cycles| + |dP₂ lines|
@@ -391,8 +407,8 @@ print("=" * 70)
 
 predictions = [
     ("α⁻¹ (fine structure)", "81 + 56", 137, 137.036, "0.026%"),
-    ("sin²θ_W (Weinberg)", "40/173", 40/173, 0.23121, "EXACT"),
-    ("Ω_Λ (dark energy)", "81/121", 81/121, 0.68, "1.6%"),
+    ("sin²θ_W (Weinberg)", "40/173", 40 / 173, 0.23121, "EXACT"),
+    ("Ω_Λ (dark energy)", "81/121", 81 / 121, 0.68, "1.6%"),
     ("|W(E6)|", "Aut(W33)", 51840, 51840, "EXACT"),
     ("|W(E7)|/|W(E6)|", "del Pezzo dP₂", 56, 56, "EXACT"),
     ("dim(E6)", "2×40-2", 78, 78, "EXACT"),
@@ -402,8 +418,11 @@ predictions = [
     ("196883 mod 121", "Monster rep", 16, 16, "EXACT"),
 ]
 
-print("\n{:<25} {:<15} {:<12} {:<12} {:<10}".format(
-    "Quantity", "W33 Formula", "Predicted", "Observed", "Error"))
+print(
+    "\n{:<25} {:<15} {:<12} {:<12} {:<10}".format(
+        "Quantity", "W33 Formula", "Predicted", "Observed", "Error"
+    )
+)
 print("-" * 75)
 
 for name, formula, pred, obs, err in predictions:

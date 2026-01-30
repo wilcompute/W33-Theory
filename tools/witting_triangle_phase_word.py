@@ -8,10 +8,11 @@ Then for each triangle we:
 We test whether triangle phase is determined by the odd-count or by
 the multiset of pair phase classes.
 """
+
 from __future__ import annotations
 
-import json
 import itertools
+import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -30,9 +31,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -43,7 +44,7 @@ def wrap_angle(a):
 
 def phase_cluster(angle):
     a = wrap_angle(angle)
-    targets = [np.pi/6, -np.pi/6, np.pi/2, -np.pi/2]
+    targets = [np.pi / 6, -np.pi / 6, np.pi / 2, -np.pi / 2]
     nearest = min(targets, key=lambda t: abs(a - t))
     return round(float(nearest), 6)
 
@@ -79,7 +80,11 @@ def main():
         if p_ij is None or p_jk is None or p_ik is None:
             continue
         triples += 1
-        tri_prod = np.vdot(rays[i], rays[j]) * np.vdot(rays[j], rays[k]) * np.vdot(rays[k], rays[i]).conjugate()
+        tri_prod = (
+            np.vdot(rays[i], rays[j])
+            * np.vdot(rays[j], rays[k])
+            * np.vdot(rays[k], rays[i]).conjugate()
+        )
         tri_phase = wrap_angle(np.angle(tri_prod))
         tri_cluster = phase_cluster(tri_phase)
 
@@ -116,7 +121,9 @@ def main():
         f.write("odd count | clusters\n")
         f.write("--- | ---\n")
         for k in sorted(odd_count_table.keys()):
-            clusters = ", ".join(f"{c}:{n}" for c, n in sorted(odd_count_table[k].items()))
+            clusters = ", ".join(
+                f"{c}:{n}" for c, n in sorted(odd_count_table[k].items())
+            )
             f.write(f"{k} | {clusters}\n")
         f.write("\n## Pair‑phase multiset table size\n\n")
         f.write(f"{len(multiset_table)} unique multisets\n\n")

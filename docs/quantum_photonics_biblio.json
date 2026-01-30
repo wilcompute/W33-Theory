@@ -1,0 +1,66 @@
+[
+  {
+    "id": "arXiv:2508.09092",
+    "title": "Robust quantum computational advantage with programmable 3050-photon Gaussian boson sampling",
+    "authors": "Hua-Liang Liu et al.",
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2508.09092",
+    "notes": "Large-scale GBS demonstration; important for empirical loss and scaling benchmarks."
+  },
+  {
+    "id": "arXiv:2505.02445",
+    "title": "Efficient Classical Sampling from Gaussian Boson Sampling Distributions on Unweighted Graphs",
+    "authors": "Yexin Zhang et al.",
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2505.02445",
+    "notes": "Classical algorithmic baselines that can challenge some GBS instances."
+  },
+  {
+    "id": "arXiv:2512.19596",
+    "title": "Input phase noise in Gaussian Boson Sampling",
+    "authors": "Magdalena Par\u00fdzkov\u00e1 et al.",
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2512.19596",
+    "notes": "Noise robustness analysis for GBS; relevant for realistic simulations."
+  },
+  {
+    "id": "arXiv:2508.06175",
+    "title": "Fast simulations of continuous-variable circuits using the coherent state decomposition",
+    "authors": "Olga Solodovnikova et al.",
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2508.06175",
+    "notes": "Simulation method for CV circuits to scale larger models."
+  },
+  {
+    "id": "arXiv:2412.11824",
+    "title": "Continuous-Variable Multiplexed Quantum Repeater Networks",
+    "authors": "Pei-Zhe Li et al.",
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2412.11824",
+    "notes": "Architecture for CV repeaters and multiplexing strategies."
+  },
+  {
+    "id": "arXiv:2506.05732",
+    "title": "Noise-reduction of multimode GBS circuits via Unitary Averaging",
+    "authors": "S. Nibedita Swain et al.",
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2506.05732",
+    "notes": "Practical mitigation strategies for multimode GBS."
+  },
+  {
+    "id": "arXiv:2601.16484",
+    "title": "Integrated Photonic Quantum Computing: From Silicon to Lithium Niobate",
+    "authors": "Hui Zhang et al.",
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2601.16484",
+    "notes": "Recent hardware trends and integration platforms; useful for realistic modeling."
+  },
+  {
+    "id": "arXiv:2601.16244",
+    "title": "LiDMaS: Architecture-Level Modeling of Fault-Tolerant Magic-State Injection in GKP Photonic Qubits",
+    "authors": "Dennis Delali Kwesi Wayo",
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2601.16244",
+    "notes": "GKP magic-state preparation strategies for fault-tolerant photonic QC."
+  }
+]

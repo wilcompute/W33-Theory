@@ -6,10 +6,11 @@ For each monomial symmetry g (order 243), we transport the ray→F3 mapping by
 and test if the phase law holds for all non-orthogonal triangles.
 We count how many g give zero violations.
 """
+
 from __future__ import annotations
 
-import json
 import itertools
+import json
 from collections import Counter
 from pathlib import Path
 
@@ -28,9 +29,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -56,7 +57,9 @@ def build_monomial_group(rays):
     elements = []
     for perm in itertools.permutations(range(4)):
         for a0, a1, a2, a3 in itertools.product(phases, repeat=4):
-            phase_vec = np.array([omega**a0, omega**a1, omega**a2, omega**a3], dtype=complex)
+            phase_vec = np.array(
+                [omega**a0, omega**a1, omega**a2, omega**a3], dtype=complex
+            )
             mapping = []
             valid = True
             for r in rays:
@@ -90,12 +93,12 @@ def construct_f3_points():
 
 
 def omega_symp(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
 
 def phase_cluster(angle):
     a = np.arctan2(np.sin(angle), np.cos(angle))
-    targets = [np.pi/6, -np.pi/6, np.pi/2, -np.pi/2]
+    targets = [np.pi / 6, -np.pi / 6, np.pi / 2, -np.pi / 2]
     nearest = min(targets, key=lambda t: abs(a - t))
     return round(float(nearest), 6)
 
@@ -104,7 +107,10 @@ def main():
     rays = construct_witting_40_rays()
     f3_points = construct_f3_points()
     mapping_path = ROOT / "artifacts" / "witting_graph_isomorphism.json"
-    base_map = {int(k): int(v) for k, v in json.loads(mapping_path.read_text())["mapping"].items()}
+    base_map = {
+        int(k): int(v)
+        for k, v in json.loads(mapping_path.read_text())["mapping"].items()
+    }
 
     # precompute overlaps and triangle phases
     n = len(rays)
@@ -137,9 +143,10 @@ def main():
 
     for g in group:
         # compute inverse permutation
-        inv = [0]*n
+        inv = [0] * n
         for i, gi in enumerate(g):
             inv[gi] = i
+
         # transported mapping
         def m(i):
             return base_map[inv[i]]
@@ -152,7 +159,11 @@ def main():
             w12 = omega_symp(p_i, p_j)
             w23 = omega_symp(p_j, p_k)
             w31 = omega_symp(p_k, p_i)
-            sign = (1 if w12 == 1 else -1) * (1 if w23 == 1 else -1) * (1 if w31 == 1 else -1)
+            sign = (
+                (1 if w12 == 1 else -1)
+                * (1 if w23 == 1 else -1)
+                * (1 if w31 == 1 else -1)
+            )
             if tri_phase[idx] not in allowed[sign]:
                 bad += 1
         violations[bad] += 1

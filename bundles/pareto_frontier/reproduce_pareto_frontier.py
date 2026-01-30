@@ -9,4 +9,5 @@ Assumes the repository 'data' folder exists and contains:
 This script is intentionally minimal: it recomputes four-center triads,
 cover12 counts, and minimal cover12 loop costs (with witnesses).
 """
+
 # See bundle outputs for the computed results.

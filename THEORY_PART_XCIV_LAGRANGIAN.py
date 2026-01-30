@@ -8,9 +8,10 @@ What Lagrangian emerges from W33?
 This is the key step: derive the Standard Model Lagrangian from graph structure!
 """
 
-import numpy as np
-from fractions import Fraction
 import json
+from fractions import Fraction
+
+import numpy as np
 
 print("=" * 70)
 print("W33 THEORY PART XCIV: THE EMERGENT LAGRANGIAN")
@@ -62,12 +63,12 @@ The adjacency matrix A plays the role of the Laplacian!
 
 KINETIC TERM:
   T = Φᵀ A Φ = ∑_{i~j} Φᵢ Φⱼ
-  
+
 This counts "interactions" between connected vertices.
 
 POTENTIAL TERM:
   V = ∑_i [m²Φᵢ² + λ Φᵢ⁴ + ...]
-  
+
 Where m² and λ come from W33 eigenvalues!
 """)
 
@@ -89,14 +90,14 @@ These are SYMMETRIES of the action!
 
 For any g ∈ Aut(W33):
   S[gΦ] = S[Φ]
-  
+
 This is GAUGE INVARIANCE in the discrete setting!
 
 CONTINUOUS LIMIT:
 
 As we take the continuum limit, discrete automorphisms become:
   - SU(3) color symmetry
-  - SU(2) weak isospin  
+  - SU(2) weak isospin
   - U(1) hypercharge
 
 DERIVATION:
@@ -134,12 +135,12 @@ The eigenspaces of W33 correspond to particle types:
 E₁ (dim = 1, eigenvalue = 12):
   → The Higgs singlet?
   → Or the "vacuum" direction
-  
+
 E₂ (dim = 24, eigenvalue = 2):
   → Gauge bosons!
   → 24 = dimension of SU(5) adjoint
   → Contains: 8 gluons + 3 W's + 1 B + 12 heavy X,Y
-  
+
 E₃ (dim = 15, eigenvalue = -4):
   → Matter fermions!
   → 15 = dimension of SU(5) antisymmetric
@@ -182,7 +183,7 @@ Running to low energies:
   α_W(M_Z) ≈ 1/30
 """)
 
-alpha_gut = 1/v
+alpha_gut = 1 / v
 print(f"\nGAUGE COUPLING AT UNIFICATION:")
 print(f"  α_GUT = 1/v = 1/{v} = {alpha_gut:.4f}")
 print(f"  g_GUT = √(4πα_GUT) = {np.sqrt(4*np.pi*alpha_gut):.4f}")
@@ -215,7 +216,7 @@ Its potential parameters come from graph structure:
 
 The Higgs VEV:
   <H> = v_H where v_H² = μ²/(2λ)
-  
+
 This gives M_H² = 2λ v_H² = μ²
 """)
 
@@ -255,7 +256,7 @@ Comes from the STRUCTURE of the projections P₁, P₂, P₃!
 MASS HIERARCHY:
 
 The ratio of largest to smallest fermion mass:
-  m_t/m_ν ~ 10¹² 
+  m_t/m_ν ~ 10¹²
 
 This comes from:
   3^(v/2) = 3^20 = 3.5 × 10⁹
@@ -263,7 +264,7 @@ This comes from:
 Plus logarithmic factors gives the full hierarchy!
 """)
 
-mass_hierarchy = 3**(v//2)
+mass_hierarchy = 3 ** (v // 2)
 print(f"\nMASS HIERARCHY FROM W33:")
 print(f"  3^(v/2) = 3^{v//2} = {mass_hierarchy:.2e}")
 print(f"  This sets the scale of mass hierarchies!")
@@ -310,7 +311,7 @@ W33 INCLUDES MORE THAN SM!
 
 The 24-dimensional E₂ eigenspace contains:
   • 8 gluons (SU(3))
-  • 3 W bosons (SU(2))  
+  • 3 W bosons (SU(2))
   • 1 B boson (U(1))
   • 12 EXTRA gauge bosons!
 
@@ -327,7 +328,7 @@ ADDITIONAL CONTENT:
 The E₃ eigenspace with dim=15 gives:
   • 5̄ of SU(5): (d_R, e, ν)
   • 10 of SU(5): (Q, u_R, e_R)
-  
+
 This is EXACTLY the fermion content of one SM generation!
 Three generations from 15 = 3 × 5.
 """)
@@ -407,9 +408,9 @@ results = {
         "gauge_bosons": "E₂ eigenspace, dim 24",
         "fermions": "E₃ eigenspace, dim 15",
         "higgs": "E₁ eigenspace, dim 1",
-        "alpha_gut": 1/v,
-        "lagrangian": "L_SM emerges from graph action"
-    }
+        "alpha_gut": 1 / v,
+        "lagrangian": "L_SM emerges from graph action",
+    },
 }
 
 with open("PART_XCIV_lagrangian.json", "w") as f:

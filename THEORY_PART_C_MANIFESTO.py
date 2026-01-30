@@ -18,10 +18,11 @@ From one polynomial to everything.
 This is the manifesto of W33 Theory.
 """
 
-import numpy as np
-from decimal import Decimal, getcontext
 import json
 from datetime import datetime
+from decimal import Decimal, getcontext
+
+import numpy as np
 
 getcontext().prec = 60
 
@@ -83,8 +84,8 @@ Why F₃? Because:
   - F₂ is too simple (binary, no structure)
   - F₃ is the smallest field with non-trivial geometry
   - 3 appears throughout physics: 3 colors, 3 generations, 3 dimensions
-  
-The number 3 is special. 
+
+The number 3 is special.
 F₃ is the seed of reality.
 """)
 
@@ -98,23 +99,23 @@ FROM F₃ TO W33:
 
 Step 1: Create the vector space V = F₃⁴
         (4-dimensional space over F₃)
-        
+
 Step 2: Define the symplectic form ω
         ω(u,v) = u₁v₂ - u₂v₁ + u₃v₄ - u₄v₃ (mod 3)
-        
+
 Step 3: Identify isotropic lines
         (lines where ω vanishes)
-        
+
 Step 4: Connect lines that span isotropic planes
-        
+
 Result: W33 = Sp(4, F₃)
         A strongly regular graph with:
-        
+
         v = {v} vertices
-        k = {k} edges per vertex  
+        k = {k} edges per vertex
         λ = {lam} common neighbors (adjacent pairs)
         μ = {mu} common neighbors (non-adjacent pairs)
-        
+
 This is W33. This is the universe.
 """)
 
@@ -133,13 +134,13 @@ The adjacency matrix A of W33 has eigenvalues:
         e₃ = {e3}  (multiplicity {m3})
 
 These encode EVERYTHING:
-        
+
   • e₁ = {e1}: The degree, sets α⁻¹ integer part
-  • e₂ = {e2}:  The gauge sector eigenvalue  
+  • e₂ = {e2}:  The gauge sector eigenvalue
   • e₃ = {e3}: The matter sector eigenvalue
 
 The multiplicities:
-        
+
   • m₁ = {m1}:  The Higgs (unique vacuum)
   • m₂ = {m2}: The gauge bosons (8+3+1+12 = 24)
   • m₃ = {m3}: The fermions (5 × 3 generations)
@@ -190,11 +191,11 @@ print("CHAPTER V: THE CONSTANTS")
 print("═" * 75)
 
 # Calculate key constants
-alpha_inv = 137 + Decimal(40)/Decimal(1111)
+alpha_inv = 137 + Decimal(40) / Decimal(1111)
 sin2_w = v / (v + k**2 + m1)
 M_H = 3**4 + v + mu
 H0_cmb = v + m2 + m1 + lam
-H0_local = H0_cmb + 2*lam + mu
+H0_local = H0_cmb + 2 * lam + mu
 Lambda_exp = k**2 - m2 + lam
 
 print(f"""
@@ -264,7 +265,7 @@ This connects W33 to:
   • The mathematical elite
 
 And more:
-  
+
   |Edges| = 240 = |Roots of E₈|
 
 The number of edges equals the roots of E₈!
@@ -295,19 +296,19 @@ W33 makes RIGID predictions with ZERO free parameters.
    τ(p → e⁺π⁰) ~ 10³⁴ - 10³⁵ years
    Current limit: > 2.4 × 10³⁴ years ✓
    Test: Hyper-Kamiokande (2027+)
-   
+
 2. DARK MATTER MASS
    M_χ ~ 75 GeV
    Test: LZ, XENONnT direct detection
-   
+
 3. NEUTRINO CP PHASE
    δ_CP ~ 120° (from F₃ embedding)
    Test: DUNE, Hyper-Kamiokande
-   
+
 4. LORENTZ VIOLATION
    At Planck scale, spacetime is discrete
    Test: Gamma-ray timing, CTA
-   
+
 5. FOURTH GENERATION
    Does NOT exist (m₃ = 15 = 3 × 5)
    Confirmed: Z width, LHC searches ✓
@@ -437,13 +438,13 @@ The loop is complete.
 
 
                          ══════════════════════
-                         
+
                               W33 THEORY
-                              
+
                          "From nothing, everything"
-                         
+
                          ══════════════════════
-                         
+
 """)
 
 # Final timestamp
@@ -464,9 +465,16 @@ results = {
     "construction": "W33 = Sp(4, F₃)",
     "polynomial": "P(x) = (x-12)(x-2)^24(x+4)^15",
     "parameters": {
-        "v": v, "k": k, "λ": lam, "μ": mu,
-        "m1": m1, "m2": m2, "m3": m3,
-        "e1": e1, "e2": e2, "e3": e3
+        "v": v,
+        "k": k,
+        "λ": lam,
+        "μ": mu,
+        "m1": m1,
+        "m2": m2,
+        "m3": m3,
+        "e1": e1,
+        "e2": e2,
+        "e3": e3,
     },
     "key_predictions": {
         "alpha_inverse": 137.036004,
@@ -476,17 +484,17 @@ results = {
         "H0_CMB": 67,
         "H0_local": 73,
         "Lambda_exponent": -122,
-        "proton_lifetime": "10^34-10^35 years"
+        "proton_lifetime": "10^34-10^35 years",
     },
     "philosophy": {
         "universe_is_math": True,
         "multiverse": False,
         "observers_inevitable": True,
         "time_arrow": "from eigenvalue positivity",
-        "consciousness": "part of the loop"
+        "consciousness": "part of the loop",
     },
     "status": "THEORY OF EVERYTHING - COMPLETE",
-    "completion_date": datetime.now().isoformat()
+    "completion_date": datetime.now().isoformat(),
 }
 
 with open("PART_C_manifesto.json", "w") as f:

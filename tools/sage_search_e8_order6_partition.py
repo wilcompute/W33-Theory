@@ -3,6 +3,7 @@
 
 If found, build orbit graph and test isomorphic to W33.
 """
+
 from __future__ import annotations
 
 import json
@@ -10,7 +11,7 @@ import random
 from itertools import product
 from pathlib import Path
 
-from sage.all import RootSystem, Graph
+from sage.all import Graph, RootSystem
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -33,12 +34,12 @@ def build_w33_f3():
             proj_points.append(v)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     edges = []
     n = len(proj_points)
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 edges.append((i, j))
 
@@ -48,7 +49,7 @@ def build_w33_f3():
 
 
 def main():
-    R = RootSystem(['E', 8]).root_lattice()
+    R = RootSystem(["E", 8]).root_lattice()
     W = R.weyl_group()
     roots = list(R.roots())
     root_index = {tuple(r.to_vector()): i for i, r in enumerate(roots)}
@@ -92,11 +93,11 @@ def main():
         def ip(a, b):
             va = a.to_vector()
             vb = b.to_vector()
-            return (va * C * vb)
+            return va * C * vb
 
         edges = []
         for i in range(len(orbits)):
-            for j in range(i+1, len(orbits)):
+            for j in range(i + 1, len(orbits)):
                 ok = True
                 for ri in orbits[i]:
                     for rj in orbits[j]:

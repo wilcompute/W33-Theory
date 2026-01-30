@@ -64,7 +64,7 @@ W(7,3):  ...           ...          (99.8% vacuum)
 Vacuum Fraction = 81/121 = 66.94%
 ```
 
-**Observed (Planck 2018):** 68.3 ± 0.7%  
+**Observed (Planck 2018):** 68.3 ± 0.7%
 **Error:** 1.9%
 
 The 81 vacuum cycles of W33 ARE the dark energy that accelerates cosmic expansion!
@@ -99,7 +99,7 @@ From W(5,3):
 | 56 | E₇ fundamental | Fermion contribution |
 | 1/28 | SO(8) correction | Gravity contribution |
 
-**Observed:** 1/α = 137.035999...  
+**Observed:** 1/α = 137.035999...
 **Error:** 0.0002% (EXTRAORDINARY!)
 
 ## Weinberg Angle θ_W
@@ -113,7 +113,7 @@ Where:
 - 40 = |W(3,3)|
 - 133 = dim(E₇) = 40 + 81 + 12
 
-**Observed:** sin²θ_W = 0.23122 ± 0.00003  
+**Observed:** sin²θ_W = 0.23122 ± 0.00003
 **Error:** 0.00% (EXACT TO 4 DECIMALS!)
 
 ## Running of α
@@ -151,7 +151,7 @@ Mass hierarchy scales with **powers of 3** (GF(3) structure)!
 Q = (m_e + m_μ + m_τ)/(√m_e + √m_μ + √m_τ)² = 2/3
 ```
 
-**Observed:** Q = 0.666659 (0.001% error!)  
+**Observed:** Q = 0.666659 (0.001% error!)
 **W33:** The 2/3 comes from GF(3) symmetry!
 
 ## GUT Scale
@@ -193,7 +193,7 @@ Where λ ≈ 9/40 from W33!
 ```
 sin²θ₁₃ = 1/45 = 2/(90 K4s) = 0.0222
 ```
-**Observed:** 0.0220 ± 0.0007  
+**Observed:** 0.0220 ± 0.0007
 **THIS IS ESSENTIALLY EXACT!**
 
 ## CP Violation

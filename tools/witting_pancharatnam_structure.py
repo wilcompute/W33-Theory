@@ -6,10 +6,11 @@ We classify non-orthogonal ray triples by:
   - overlap pattern: sorted tuple of |<ri|rj>|^2 for the three pairs
 Then we tabulate phase cluster counts for targets ±pi/6 and ±pi/2.
 """
+
 from __future__ import annotations
 
-import json
 import itertools
+import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -28,9 +29,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -42,7 +43,7 @@ def basis_count(ray):
 
 def phase_cluster(angle):
     a = np.arctan2(np.sin(angle), np.cos(angle))
-    targets = [np.pi/6, -np.pi/6, np.pi/2, -np.pi/2]
+    targets = [np.pi / 6, -np.pi / 6, np.pi / 2, -np.pi / 2]
     nearest = min(targets, key=lambda t: abs(a - t))
     return round(float(nearest), 6)
 
@@ -100,7 +101,10 @@ def main():
     out = {
         "triples": triples,
         "clusters": {str(k): v for k, v in sorted(total_clusters.items())},
-        "by_basis": {str(k): {str(c): n for c, n in sorted(v.items())} for k, v in by_basis.items()},
+        "by_basis": {
+            str(k): {str(c): n for c, n in sorted(v.items())}
+            for k, v in by_basis.items()
+        },
         "by_pattern_top": [
             {
                 "pattern": list(pat),
@@ -127,7 +131,9 @@ def main():
         f.write("basis rays in triple | clusters\n")
         f.write("--- | ---\n")
         for bcount in sorted(by_basis.keys()):
-            clusters = ", ".join(f"{c}:{n}" for c, n in sorted(by_basis[bcount].items()))
+            clusters = ", ".join(
+                f"{c}:{n}" for c, n in sorted(by_basis[bcount].items())
+            )
             f.write(f"{bcount} | {clusters}\n")
         f.write("\n## Top overlap‑magnitude patterns\n\n")
         f.write("pattern (|<ri|rj>|²) | total | cluster counts\n")

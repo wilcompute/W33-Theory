@@ -96,4 +96,3 @@ It also includes the exact noncontextual bound.
 **B22**: [18, 24, 27, 29]
 
 **B23**: [25, 28, 35, 38]
-

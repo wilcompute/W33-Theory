@@ -198,7 +198,7 @@ The exceptional Lie algebras F4 ⊂ E6 ⊂ E7 ⊂ E8, the ternary Golay code, Ni
 
 **Output Files Generated**:
 - `w33_complete_analysis_results.json`
-- `w33_exceptional_synthesis_results.json`  
+- `w33_exceptional_synthesis_results.json`
 - `w33_173_mystery_results.json`
 - `w33_prime_structure_results.json`
 - `W33_EXCEPTIONAL_SYNTHESIS.md`

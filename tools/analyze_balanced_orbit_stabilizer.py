@@ -4,12 +4,13 @@
 We avoid heavy group-theory libs by enumerating PSp(4,3) as permutations on 40
 vertices, then measuring the orbit/stabilizer of the balanced 27-edge set.
 """
+
 from __future__ import annotations
 
-from collections import Counter, deque, defaultdict
+import json
+from collections import Counter, defaultdict, deque
 from itertools import product
 from pathlib import Path
-import json
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -34,12 +35,12 @@ def build_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     edges = []
-    adj = [[0]*n for _ in range(n)]
+    adj = [[0] * n for _ in range(n)]
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i][j] = adj[j][i] = 1
                 edges.append((i, j))
@@ -57,14 +58,11 @@ def normalize_proj(v):
 
 
 def check_symplectic(M):
-    Omega = [[0, 0, 1, 0],
-             [0, 0, 0, 1],
-             [2, 0, 0, 0],
-             [0, 2, 0, 0]]
+    Omega = [[0, 0, 1, 0], [0, 0, 0, 1], [2, 0, 0, 0], [0, 2, 0, 0]]
 
     def mat_mult(A, B):
         n, k, m = len(A), len(B), len(B[0])
-        result = [[0]*m for _ in range(n)]
+        result = [[0] * m for _ in range(n)]
         for i in range(n):
             for j in range(m):
                 s = 0
@@ -155,21 +153,23 @@ def main():
     edge_to_idx = edge_index_map(edges)
 
     # Load balanced orbit id
-    bias = json.loads((ROOT / 'artifacts' / 'su3_phase_orbit_bias.json').read_text())
+    bias = json.loads((ROOT / "artifacts" / "su3_phase_orbit_bias.json").read_text())
     balanced_orbit = None
-    for k, v in bias['orbit_sums'].items():
-        if v == {'0': 9, '1': 9, '2': 9} or v == {0: 9, 1: 9, 2: 9}:
-            balanced_orbit = int(k.split('_')[1])
+    for k, v in bias["orbit_sums"].items():
+        if v == {"0": 9, "1": 9, "2": 9} or v == {0: 9, 1: 9, 2: 9}:
+            balanced_orbit = int(k.split("_")[1])
     if balanced_orbit is None:
         print("No balanced orbit found")
         return
 
     # Load root labels and edge->root map
-    we6 = json.loads((ROOT / 'artifacts' / 'we6_orbit_labels.json').read_text())
-    root_to_orbit = {eval(k): v for k, v in we6['mapping'].items()}
-    edge_map = json.loads((ROOT / 'artifacts' / 'explicit_bijection_decomposition.json').read_text())
-    edge_to_root_idx = {int(k): v for k, v in edge_map['edge_to_root_index'].items()}
-    root_coords = [tuple(r) for r in edge_map['root_coords']]
+    we6 = json.loads((ROOT / "artifacts" / "we6_orbit_labels.json").read_text())
+    root_to_orbit = {eval(k): v for k, v in we6["mapping"].items()}
+    edge_map = json.loads(
+        (ROOT / "artifacts" / "explicit_bijection_decomposition.json").read_text()
+    )
+    edge_to_root_idx = {int(k): v for k, v in edge_map["edge_to_root_index"].items()}
+    root_coords = [tuple(r) for r in edge_map["root_coords"]]
 
     # Balanced edge pairs
     balanced_edge_pairs = []
@@ -178,7 +178,7 @@ def main():
         ridx = edge_to_root_idx[eidx]
         r = root_coords[ridx]
         info = root_to_orbit.get(r)
-        if info and info['orbit_size'] == 27 and info['orbit_id'] == balanced_orbit:
+        if info and info["orbit_size"] == 27 and info["orbit_id"] == balanced_orbit:
             balanced_edge_pairs.append(e)
 
     # Root type distribution inside balanced orbit (scaled coords)
@@ -188,11 +188,13 @@ def main():
         ridx = edge_to_root_idx[eidx]
         r = root_coords[ridx]
         has_odd = any(abs(x) % 2 == 1 for x in r)
-        root_type_counts['half'] += 1 if has_odd else 0
-        root_type_counts['integral'] += 0 if has_odd else 1
+        root_type_counts["half"] += 1 if has_odd else 0
+        root_type_counts["integral"] += 0 if has_odd else 1
 
     # Axis vertices (support size 1)
-    axis_vertices = [i for i, p in enumerate(points) if sum(1 for x in p if x != 0) == 1]
+    axis_vertices = [
+        i for i, p in enumerate(points) if sum(1 for x in p if x != 0) == 1
+    ]
     axis_incidence = Counter()
     for i, j in balanced_edge_pairs:
         if i in axis_vertices:
@@ -206,7 +208,9 @@ def main():
     group_order = len(group)
 
     # Orbit of balanced edge set (setwise action)
-    base_edge_set = frozenset(edge_to_idx[tuple(sorted(e))] for e in balanced_edge_pairs)
+    base_edge_set = frozenset(
+        edge_to_idx[tuple(sorted(e))] for e in balanced_edge_pairs
+    )
     orbit_sets = set()
     stabilizer_count = 0
     for perm in group:
@@ -268,14 +272,16 @@ def main():
         "root_type_counts": dict(root_type_counts),
         "axis_vertices": axis_vertices,
         "axis_incidence": {str(k): v for k, v in axis_incidence.items()},
-        "induced_orbit_sizes_on_27_edges": sorted([len(o) for o in induced_orbits], reverse=True),
+        "induced_orbit_sizes_on_27_edges": sorted(
+            [len(o) for o in induced_orbits], reverse=True
+        ),
     }
 
-    out_path = ROOT / 'artifacts' / 'balanced_orbit_stabilizer.json'
-    out_path.write_text(json.dumps(results, indent=2), encoding='utf-8')
+    out_path = ROOT / "artifacts" / "balanced_orbit_stabilizer.json"
+    out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(results)
     print(f"Wrote {out_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

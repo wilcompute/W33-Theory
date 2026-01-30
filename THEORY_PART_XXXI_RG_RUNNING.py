@@ -11,8 +11,9 @@ a GUT scale down to M_Z and see what we get.
 """
 
 import math
-import numpy as np
 from fractions import Fraction
+
+import numpy as np
 
 print("""
 ╔══════════════════════════════════════════════════════════════════════╗
@@ -41,7 +42,7 @@ The running of gauge couplings in the SM is governed by:
 where the 1-loop beta coefficients for SU(3)×SU(2)×U(1) are:
 
     b₃ = -7        (asymptotic freedom)
-    b₂ = -19/6     (weak asymptotic freedom)  
+    b₂ = -19/6     (weak asymptotic freedom)
     b₁ = +41/10    (U(1) runs UP at low energy)
 
 These include contributions from:
@@ -51,9 +52,9 @@ These include contributions from:
 """)
 
 # Beta coefficients (1-loop, Standard Model with 1 Higgs doublet)
-b1 = 41/10   # U(1)_Y
-b2 = -19/6   # SU(2)_L
-b3 = -7      # SU(3)_c
+b1 = 41 / 10  # U(1)_Y
+b2 = -19 / 6  # SU(2)_L
+b3 = -7  # SU(3)_c
 
 print(f"  b₁ = {b1:.4f} = 41/10")
 print(f"  b₂ = {b2:.4f} = -19/6")
@@ -80,13 +81,13 @@ This ensures that at the GUT scale:
 
 The Weinberg angle at ANY scale is defined by:
     sin²θ_W = α₁ / (α₁ + α₂)    [in GUT normalization]
-    
+
 Or equivalently:
     sin²θ_W = g'² / (g² + g'²)
 """)
 
 # GUT normalization factor
-k1 = 5/3  # SU(5) normalization for U(1)
+k1 = 5 / 3  # SU(5) normalization for U(1)
 
 print(f"  GUT normalization: k₁ = {k1:.4f} = 5/3")
 print()
@@ -113,15 +114,18 @@ Then at scale μ:
     1/α₂(μ) = 1/α_GUT - (b₂/2π) × ln(μ/M_GUT)
 """)
 
+
 def run_coupling(alpha_GUT, b, M_GUT, mu):
     """Run coupling from M_GUT to mu using 1-loop beta function."""
     ln_ratio = math.log(mu / M_GUT)
-    alpha_inv = 1/alpha_GUT - (b / (2 * math.pi)) * ln_ratio
+    alpha_inv = 1 / alpha_GUT - (b / (2 * math.pi)) * ln_ratio
     return 1 / alpha_inv
+
 
 def sin2_theta_W(alpha1, alpha2):
     """Calculate sin²θ_W from α₁ and α₂ in GUT normalization."""
     return alpha1 / (alpha1 + alpha2)
+
 
 # =============================================================================
 # EXPERIMENTAL VALUES AT M_Z
@@ -133,9 +137,9 @@ print("=" * 72)
 print()
 
 M_Z = 91.1876  # GeV
-alpha_em_MZ = 1/127.95  # α_EM at M_Z (NOT the low-energy 1/137!)
-sin2_exp = 0.23121      # sin²θ_W (MS-bar) at M_Z
-alpha_s_MZ = 0.1181     # α_s at M_Z
+alpha_em_MZ = 1 / 127.95  # α_EM at M_Z (NOT the low-energy 1/137!)
+sin2_exp = 0.23121  # sin²θ_W (MS-bar) at M_Z
+alpha_s_MZ = 0.1181  # α_s at M_Z
 
 print(f"  M_Z = {M_Z} GeV")
 print(f"  α_EM(M_Z) = 1/{1/alpha_em_MZ:.2f}")
@@ -173,23 +177,25 @@ First, let's check: Do the SM couplings actually unify?
 We run each coupling UP from M_Z and see where they meet.
 """)
 
+
 def find_unification_scale():
     """Find scale where α₁ = α₂."""
     # At unification: 1/α₁(M_GUT) = 1/α₂(M_GUT)
     # 1/α₁(M_Z) - (b₁/2π)ln(M_GUT/M_Z) = 1/α₂(M_Z) - (b₂/2π)ln(M_GUT/M_Z)
     # Solving for ln(M_GUT/M_Z):
-    
-    delta_alpha_inv = 1/alpha1_MZ - 1/alpha2_MZ
+
+    delta_alpha_inv = 1 / alpha1_MZ - 1 / alpha2_MZ
     delta_b = (b1 - b2) / (2 * math.pi)
-    
+
     ln_ratio = delta_alpha_inv / delta_b
     M_GUT = M_Z * math.exp(ln_ratio)
-    
+
     # Calculate unified coupling
-    alpha_GUT_inv = 1/alpha1_MZ - (b1 / (2*math.pi)) * ln_ratio
+    alpha_GUT_inv = 1 / alpha1_MZ - (b1 / (2 * math.pi)) * ln_ratio
     alpha_GUT = 1 / alpha_GUT_inv
-    
+
     return M_GUT, alpha_GUT
+
 
 M_GUT_12, alpha_GUT_12 = find_unification_scale()
 
@@ -201,7 +207,7 @@ print()
 alpha3_at_GUT = run_coupling(alpha3_MZ, b3, M_Z, M_GUT_12)
 # Wait, need to invert this...
 ln_ratio = math.log(M_GUT_12 / M_Z)
-alpha3_inv_at_GUT = 1/alpha3_MZ - (b3 / (2*math.pi)) * ln_ratio
+alpha3_inv_at_GUT = 1 / alpha3_MZ - (b3 / (2 * math.pi)) * ln_ratio
 alpha3_at_GUT = 1 / alpha3_inv_at_GUT
 
 print(f"  α₃ at M_GUT: α₃ = 1/{1/alpha3_at_GUT:.2f}")
@@ -231,7 +237,7 @@ At the GUT scale, in many GUT models:
 Let's work backwards from 40/173 to see what's needed.
 """)
 
-sin2_w33 = 40/173
+sin2_w33 = 40 / 173
 
 # What is the LOW-energy prediction?
 print(f"  W33 target: sin²θ_W(M_Z) = 40/173 = {sin2_w33:.6f}")
@@ -251,7 +257,7 @@ print()
 print("""
 In W33 theory:
     sin²θ_W = 40/173
-    
+
 where:
     40 = W33 points
     173 = ???
@@ -281,7 +287,7 @@ This gives a BEAUTIFUL interpretation:
     sin²θ_W = 40 / (40 + 133)
             = W33_points / (W33_points + dim(E7))
             = GEOMETRY / (GEOMETRY + LIE_ALGEBRA)
-            
+
 The electroweak mixing is the ratio of geometric to algebraic structure!
 """)
 
@@ -295,7 +301,7 @@ print("=" * 72)
 print()
 
 print("""
-In E6 unification, the GUT-scale Weinberg angle depends on the 
+In E6 unification, the GUT-scale Weinberg angle depends on the
 breaking chain. For E6 → SO(10) → SM:
 
     sin²θ_W(GUT) = 3/8 = 0.375
@@ -304,7 +310,7 @@ Let's compute what sin²θ_W(M_Z) would be starting from 3/8.
 """)
 
 # GUT-scale value for E6 → SO(10)
-sin2_GUT = 3/8
+sin2_GUT = 3 / 8
 
 # The running formula (approximate):
 # sin²θ_W(M_Z) ≈ sin²θ_W(GUT) + Δ
@@ -315,7 +321,7 @@ sin2_GUT = 3/8
 
 # At GUT scale with sin²θ = 3/8:
 # α₁ = α₂ = α_GUT (by definition)
-# So sin² = α_GUT / (2 α_GUT) = 1/2 ??? 
+# So sin² = α_GUT / (2 α_GUT) = 1/2 ???
 # No wait, that's wrong.
 
 # Actually: sin²θ_W = g'² / (g² + g'²) = (g'/g)² / (1 + (g'/g)²)
@@ -328,7 +334,7 @@ print("""
 The key is that β₁ > 0 and β₂ < 0, so:
   - α₁ INCREASES as we go to lower energy
   - α₂ DECREASES as we go to lower energy
-  
+
 This means sin²θ_W = α₁/(α₁+α₂) INCREASES going down in energy.
 
 Starting from sin²θ_W(GUT) ≈ 3/8 = 0.375, we expect a LOWER value at M_Z.
@@ -363,6 +369,7 @@ print()
 
 # Let me just run the couplings directly.
 
+
 def run_to_MZ_from_GUT(sin2_GUT, M_GUT_input, alpha_GUT):
     """
     Given sin²θ_W at GUT scale, compute sin²θ_W at M_Z.
@@ -371,38 +378,39 @@ def run_to_MZ_from_GUT(sin2_GUT, M_GUT_input, alpha_GUT):
     # sin²θ = α₁/(α₁+α₂)
     # If α₁ = α₂ = α_GUT, then sin² = 0.5
     # But in SU(5), we have sin²(GUT) = 3/8 because of group theory factors
-    
+
     # The relation is: α₁(GUT)/α₂(GUT) = sin²/(1-sin²)
     # So α₁(GUT) = α_GUT × sin²_GUT / 0.5 (approximately)
     # This is getting circular...
-    
+
     # Let me use the standard formulas.
     # At GUT scale with SU(5)/SO(10) relations:
     # α₁(GUT) = α₂(GUT) = α_GUT
     # But the physical sin²θ_W = 3/8 because of the normalization.
-    
+
     # Running:
     ln_ratio = math.log(M_Z / M_GUT_input)
-    
-    alpha1_inv_MZ = 1/alpha_GUT - (b1/(2*math.pi)) * ln_ratio
-    alpha2_inv_MZ = 1/alpha_GUT - (b2/(2*math.pi)) * ln_ratio
-    
-    alpha1_MZ_pred = 1/alpha1_inv_MZ
-    alpha2_MZ_pred = 1/alpha2_inv_MZ
-    
+
+    alpha1_inv_MZ = 1 / alpha_GUT - (b1 / (2 * math.pi)) * ln_ratio
+    alpha2_inv_MZ = 1 / alpha_GUT - (b2 / (2 * math.pi)) * ln_ratio
+
+    alpha1_MZ_pred = 1 / alpha1_inv_MZ
+    alpha2_MZ_pred = 1 / alpha2_inv_MZ
+
     # sin²θ_W in GUT normalization
     sin2_MZ = alpha1_MZ_pred / (alpha1_MZ_pred + alpha2_MZ_pred)
-    
+
     return sin2_MZ, alpha1_MZ_pred, alpha2_MZ_pred
+
 
 # Standard GUT prediction
 print("═══ Standard GUT Running (M_GUT = 2×10¹⁶ GeV, α_GUT = 1/25) ═══")
 print()
 
 M_GUT_std = 2e16  # Standard GUT scale
-alpha_GUT_std = 1/25  # Typical GUT coupling
+alpha_GUT_std = 1 / 25  # Typical GUT coupling
 
-sin2_pred, a1_pred, a2_pred = run_to_MZ_from_GUT(3/8, M_GUT_std, alpha_GUT_std)
+sin2_pred, a1_pred, a2_pred = run_to_MZ_from_GUT(3 / 8, M_GUT_std, alpha_GUT_std)
 
 print(f"  M_GUT = {M_GUT_std:.0e} GeV")
 print(f"  α_GUT = 1/{1/alpha_GUT_std:.0f}")
@@ -427,46 +435,51 @@ We want to find M_GUT and α_GUT such that:
 This is an inverse problem. Let's solve it.
 """)
 
-def find_GUT_params_for_target(sin2_target, M_GUT_guess, alpha_GUT_guess, tolerance=1e-10):
+
+def find_GUT_params_for_target(
+    sin2_target, M_GUT_guess, alpha_GUT_guess, tolerance=1e-10
+):
     """
     Find GUT parameters that give exactly the target sin²θ_W at M_Z.
     """
     from scipy.optimize import minimize
-    
+
     def objective(params):
-        M_GUT = 10**params[0]
-        alpha_GUT = 1/params[1]
-        sin2, _, _ = run_to_MZ_from_GUT(3/8, M_GUT, alpha_GUT)
-        return (sin2 - sin2_target)**2
-    
+        M_GUT = 10 ** params[0]
+        alpha_GUT = 1 / params[1]
+        sin2, _, _ = run_to_MZ_from_GUT(3 / 8, M_GUT, alpha_GUT)
+        return (sin2 - sin2_target) ** 2
+
     # Initial guess
-    x0 = [math.log10(M_GUT_guess), 1/alpha_GUT_guess]
-    
+    x0 = [math.log10(M_GUT_guess), 1 / alpha_GUT_guess]
+
     # Optimize
     from scipy.optimize import minimize
-    result = minimize(objective, x0, method='Nelder-Mead')
-    
-    M_GUT_opt = 10**result.x[0]
-    alpha_GUT_opt = 1/result.x[1]
-    
+
+    result = minimize(objective, x0, method="Nelder-Mead")
+
+    M_GUT_opt = 10 ** result.x[0]
+    alpha_GUT_opt = 1 / result.x[1]
+
     return M_GUT_opt, alpha_GUT_opt
+
 
 # Let's try a simpler approach: scan parameter space
 print("═══ Parameter Scan ═══")
 print()
 
 print("  Scanning M_GUT from 10¹⁴ to 10¹⁸ GeV...")
-print("  Looking for sin²θ_W(M_Z) = 40/173 = {:.6f}".format(40/173))
+print("  Looking for sin²θ_W(M_Z) = 40/173 = {:.6f}".format(40 / 173))
 print()
 
-best_diff = float('inf')
+best_diff = float("inf")
 best_params = None
 
 for log_M_GUT in np.linspace(14, 18, 100):
     M_GUT_test = 10**log_M_GUT
     for alpha_inv in np.linspace(20, 50, 100):
-        alpha_GUT_test = 1/alpha_inv
-        sin2, _, _ = run_to_MZ_from_GUT(3/8, M_GUT_test, alpha_GUT_test)
+        alpha_GUT_test = 1 / alpha_inv
+        sin2, _, _ = run_to_MZ_from_GUT(3 / 8, M_GUT_test, alpha_GUT_test)
         diff = abs(sin2 - sin2_w33)
         if diff < best_diff:
             best_diff = diff
@@ -509,28 +522,30 @@ w33_alpha_invs = {
     "90/2 = 45 (K4s/2)": 45,
     "40 (points)": 40,
     "27 (E6 fund)": 27,
-    "121/3 ≈ 40.3": 121/3,
+    "121/3 ≈ 40.3": 121 / 3,
     "81/2 = 40.5": 40.5,
 }
 
 for name, alpha_inv in w33_alpha_invs.items():
-    alpha_GUT = 1/alpha_inv
+    alpha_GUT = 1 / alpha_inv
     # Find best M_GUT for this α_GUT
     best_sin2 = None
     best_M_GUT = None
-    best_diff = float('inf')
-    
+    best_diff = float("inf")
+
     for log_M_GUT in np.linspace(14, 18, 500):
         M_GUT_test = 10**log_M_GUT
-        sin2, _, _ = run_to_MZ_from_GUT(3/8, M_GUT_test, alpha_GUT)
+        sin2, _, _ = run_to_MZ_from_GUT(3 / 8, M_GUT_test, alpha_GUT)
         diff = abs(sin2 - sin2_w33)
         if diff < best_diff:
             best_diff = diff
             best_sin2 = sin2
             best_M_GUT = M_GUT_test
-    
+
     match = "✓" if best_diff < 0.001 else " "
-    print(f"  α_GUT⁻¹ = {name:20s} → sin²θ_W = {best_sin2:.6f}, M_GUT = {best_M_GUT:.1e} GeV {match}")
+    print(
+        f"  α_GUT⁻¹ = {name:20s} → sin²θ_W = {best_sin2:.6f}, M_GUT = {best_M_GUT:.1e} GeV {match}"
+    )
 
 print()
 
@@ -546,7 +561,7 @@ print()
 print("""
 The fine structure constant at low energy:
     α⁻¹(0) = 137.035999...
-    
+
 W33 tree level: α⁻¹ = 137 = 81 + 56
 
 The correction Δ = 0.036 should come from:
@@ -558,9 +573,9 @@ The correction Δ = 0.036 should come from:
 # At M_Z, α_EM⁻¹ ≈ 127.95
 # At low energy (Thompson limit), α_EM⁻¹ ≈ 137.036
 
-alpha_0 = 1/137.035999
-alpha_MZ = 1/127.95
-delta_alpha_inv = 1/alpha_0 - 1/alpha_MZ
+alpha_0 = 1 / 137.035999
+alpha_MZ = 1 / 127.95
+delta_alpha_inv = 1 / alpha_0 - 1 / alpha_MZ
 
 print(f"  α⁻¹(0) = 137.036")
 print(f"  α⁻¹(M_Z) = 127.95")
@@ -570,7 +585,7 @@ print()
 print("""
 The running from M_Z to 0 is KNOWN (QED + hadronic):
     Δα⁻¹ ≈ 9.1 (from SM calculations)
-    
+
 This is dominated by:
     - Lepton loops: ~3.2
     - Light quark loops: ~5.9
@@ -584,13 +599,13 @@ print("  Possible W33 interpretation:")
 
 # Check various combinations
 combos = [
-    ("40/1111", 40/1111),
-    ("1/27.78", 1/27.78),
-    ("(56-40)/1111", (56-40)/1111),
-    ("40/(40×27.78)", 40/(40*27.78)),
-    ("121/3367", 121/3367),
-    ("1/(78-40-11)", 1/(78-40-11)),
-    ("40/(121×9.18)", 40/(121*9.18)),
+    ("40/1111", 40 / 1111),
+    ("1/27.78", 1 / 27.78),
+    ("(56-40)/1111", (56 - 40) / 1111),
+    ("40/(40×27.78)", 40 / (40 * 27.78)),
+    ("121/3367", 121 / 3367),
+    ("1/(78-40-11)", 1 / (78 - 40 - 11)),
+    ("40/(121×9.18)", 40 / (121 * 9.18)),
 ]
 
 print()
@@ -660,7 +675,7 @@ where:
 This suggests that:
     - Geometry (W33) gives rise to HYPERCHARGE (U(1)_Y)
     - Algebra (E7) gives rise to WEAK ISOSPIN (SU(2)_L)
-    
+
 The mixing angle is the "geometric fraction" of the total structure!
 """)
 
@@ -684,7 +699,7 @@ To make the W33 Weinberg angle prediction truly rigorous:
    → Include full 2-loop effects
    → Include threshold corrections at intermediate scales
    → Show that E7 breaking gives sin²θ_W(GUT) = 40/173 × (some factor)
-   
+
 3. EXPLAIN why the formula holds at M_Z specifically
    → Is 40/173 the asymptotic (UV) value?
    → Or the IR fixed point?
@@ -693,7 +708,7 @@ To make the W33 Weinberg angle prediction truly rigorous:
 4. PREDICT threshold corrections
    → New particles at specific masses
    → Falsifiable predictions for LHC/FCC
-   
+
 CURRENT STATUS:
    - The NUMEROLOGY is striking: 40/173 matches experiment to 0.1σ
    - The INTERPRETATION (W33 + E7) is beautiful

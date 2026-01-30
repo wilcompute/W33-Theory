@@ -5,6 +5,7 @@ Orbits correspond to W33 vertices (via orbit->F3 mapping). Each orbit has 6 root
 ordered by the Coxeter-6 cycle. We perform a deterministic perfect matching
 between edges and (vertex,phase) pairs, then map to roots.
 """
+
 from __future__ import annotations
 
 import json
@@ -35,7 +36,7 @@ def build_projective_points():
 
 
 def omega_sym(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
 
 def build_edges(points):
@@ -48,6 +49,7 @@ def build_edges(points):
 
 
 # Hopcroft-Karp for bipartite matching
+
 
 def hopcroft_karp(adj, n_left, n_right):
     INF = 10**9
@@ -94,12 +96,16 @@ def hopcroft_karp(adj, n_left, n_right):
 
 def main():
     # Load Coxeter-6 orbits
-    orbit_data = json.loads((ROOT / 'artifacts' / 'e8_coxeter6_orbits.json').read_text())
-    orbits = orbit_data['orbits']  # list of 40 orbits, each 6 roots (simple-root coords)
+    orbit_data = json.loads(
+        (ROOT / "artifacts" / "e8_coxeter6_orbits.json").read_text()
+    )
+    orbits = orbit_data[
+        "orbits"
+    ]  # list of 40 orbits, each 6 roots (simple-root coords)
 
     # Load orbit -> F3 point mapping
-    f3_map = json.loads((ROOT / 'artifacts' / 'e8_orbit_to_f3_point.json').read_text())
-    orbit_to_f3 = {int(k): tuple(v) for k, v in f3_map['mapping'].items()}
+    f3_map = json.loads((ROOT / "artifacts" / "e8_orbit_to_f3_point.json").read_text())
+    orbit_to_f3 = {int(k): tuple(v) for k, v in f3_map["mapping"].items()}
 
     # Build W33 points and edges
     points = build_projective_points()
@@ -137,24 +143,26 @@ def main():
         # find which orbit corresponds to this vertex
         orb = next(k for k, vv in orbit_to_vertex.items() if vv == v)
         root = orbits[orb][phase]  # use phase index as orbit order
-        edge_to_root.append({
-            'edge_index': e_idx,
-            'edge': edges[e_idx],
-            'vertex': v,
-            'orbit': orb,
-            'phase': phase,
-            'root': root,
-        })
+        edge_to_root.append(
+            {
+                "edge_index": e_idx,
+                "edge": edges[e_idx],
+                "vertex": v,
+                "orbit": orb,
+                "phase": phase,
+                "root": root,
+            }
+        )
 
     out = {
-        'edges': len(edges),
-        'orbits': len(orbits),
-        'edge_to_root': edge_to_root,
+        "edges": len(edges),
+        "orbits": len(orbits),
+        "edge_to_root": edge_to_root,
     }
-    out_path = ROOT / 'artifacts' / 'edge_root_canonical_orbit_bijection.json'
+    out_path = ROOT / "artifacts" / "edge_root_canonical_orbit_bijection.json"
     out_path.write_text(json.dumps(out, indent=2))
     print(f"Wrote {out_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

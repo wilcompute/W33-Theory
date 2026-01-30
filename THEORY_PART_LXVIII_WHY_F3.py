@@ -9,21 +9,22 @@ Author: Wil Dahn
 Date: January 2026
 """
 
-import numpy as np
-from itertools import product, combinations
 import json
+from itertools import combinations, product
 
-print("="*70)
+import numpy as np
+
+print("=" * 70)
 print("W33 THEORY PART LXVIII: WHY F_3?")
-print("="*70)
+print("=" * 70)
 
 # =============================================================================
 # SECTION 1: THE PRIMACY OF THREE
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 1: THE NUMBER THREE IN PHYSICS")
-print("="*70)
+print("=" * 70)
 
 print("""
 The number THREE appears throughout fundamental physics:
@@ -50,9 +51,9 @@ Could THREE be the fundamental reason for:
 # SECTION 2: COMPARING F_2, F_3, F_4, F_5
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 2: STRONGLY REGULAR GRAPHS FROM F_p")
-print("="*70)
+print("=" * 70)
 
 print("""
 Symplectic graphs exist over any finite field F_q.
@@ -66,11 +67,13 @@ The key is the number of isotropic 1-spaces in F_q^4:
   v(q) = (q+1)(q^2+1) for the projective geometry
 """)
 
+
 def count_isotropic_1spaces(q):
     """Count isotropic 1-spaces in symplectic F_q^4."""
     # Formula: q^3 + q^2 + q + 1 for total 1-spaces
-    # Isotropic 1-spaces: (q+1)(q^2+1) 
+    # Isotropic 1-spaces: (q+1)(q^2+1)
     return (q + 1) * (q**2 + 1)
+
 
 for q in [2, 3, 4, 5, 7, 8, 9]:
     v = count_isotropic_1spaces(q)
@@ -82,9 +85,9 @@ print(f"\nFor F_3: v = {count_isotropic_1spaces(3)} = 40 = W33!")
 # SECTION 3: THE SPECIAL PROPERTIES OF q=3
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 3: WHY q=3 IS SPECIAL")
-print("="*70)
+print("=" * 70)
 
 print("""
 The field F_3 = {0, 1, 2} has unique properties:
@@ -113,9 +116,9 @@ print(f"Verification: 3^4 + 56 = {3**4} + 56 = {3**4 + 56}")
 # SECTION 4: THE THREE GENERATIONS HYPOTHESIS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 4: THREE GENERATIONS FROM F_3")
-print("="*70)
+print("=" * 70)
 
 print("""
 HYPOTHESIS: The three generations of fermions arise from F_3.
@@ -146,9 +149,9 @@ print(f"  Actually: 45 = dim(antisymmetric 2-form of SO(10))")
 # SECTION 5: THE 15 EIGENSPACE AND FERMIONS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 5: THE 15-DIMENSIONAL EIGENSPACE")
-print("="*70)
+print("=" * 70)
 
 print("""
 The eigenspace with eigenvalue -4 has dimension 15.
@@ -172,9 +175,9 @@ And 78 = dim(E_6), 33 = 40 - 7 = v - 7
 # SECTION 6: THE CABIBBO ANGLE
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 6: CABIBBO ANGLE FROM W33?")
-print("="*70)
+print("=" * 70)
 
 print("""
 The Cabibbo angle theta_C describes quark mixing:
@@ -184,7 +187,7 @@ Can we derive this from W33?
 
 ATTEMPT 1: Simple ratios
   sin(theta_C) ≈ 9/40 = 0.225 [EXACT!]
-  
+
 Where 9 = 3^2 and 40 = v (vertices)!
 
 ATTEMPT 2: Eigenvalue ratios
@@ -194,12 +197,12 @@ ATTEMPT 2: Eigenvalue ratios
 ATTEMPT 3: Parameter ratios
   lambda/k = 2/12 = 1/6
   mu/k = 4/12 = 1/3
-  
+
 Let's check: sin(theta_C) = 9/40 = 0.225
 """)
 
 sin_cabibbo_exp = 0.22501  # PDG value
-sin_cabibbo_w33 = 9/40
+sin_cabibbo_w33 = 9 / 40
 
 print(f"W33 prediction: sin(theta_C) = 9/40 = {sin_cabibbo_w33:.5f}")
 print(f"Experimental: sin(theta_C) = {sin_cabibbo_exp:.5f}")
@@ -209,9 +212,9 @@ print(f"Error: {abs(sin_cabibbo_w33 - sin_cabibbo_exp)/sin_cabibbo_exp * 100:.2f
 # SECTION 7: THE FULL CKM MATRIX
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 7: CKM MATRIX FROM W33")
-print("="*70)
+print("=" * 70)
 
 print("""
 The CKM matrix describes quark mixing between generations.
@@ -227,7 +230,7 @@ W33 PREDICTIONS:
 
 1. sin(theta_12) = 9/40 = 0.225 → theta_12 = 13.0° [OK!]
 
-2. sin(theta_23) = 2/40 = 0.05? 
+2. sin(theta_23) = 2/40 = 0.05?
    Experimental: ~0.0412
    Try: sin(theta_23) = lambda/40 = 2/40 = 0.05
    Or: sin(theta_23) = (mu-lambda)/v = 2/40 = 0.05
@@ -241,7 +244,7 @@ W33 PREDICTIONS:
 # Check CKM predictions
 import math
 
-theta_12_w33 = math.asin(9/40) * 180/math.pi
+theta_12_w33 = math.asin(9 / 40) * 180 / math.pi
 theta_12_exp = 13.04
 
 print(f"\nCKM angle predictions:")
@@ -252,9 +255,9 @@ print(f"  Error: {abs(theta_12_w33 - theta_12_exp)/theta_12_exp * 100:.1f}%")
 # SECTION 8: THE NEUTRINO MIXING MATRIX
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 8: PMNS MATRIX (NEUTRINO MIXING)")
-print("="*70)
+print("=" * 70)
 
 print("""
 The PMNS matrix describes neutrino mixing.
@@ -270,10 +273,10 @@ W33 PREDICTIONS:
    Experimental: 0.307
    Error: 2.3%
 
-2. sin^2(theta_23) = 24/40 = 0.600 
+2. sin^2(theta_23) = 24/40 = 0.600
    Experimental: 0.545
    Error: 10%
-   
+
    Better: sin^2(theta_23) = 15/27 = 0.556
    Error: 2%
 
@@ -285,12 +288,12 @@ W33 PREDICTIONS:
 
 # PMNS predictions
 print("\nPMNS angle predictions:")
-sin2_12_w33 = 12/40
+sin2_12_w33 = 12 / 40
 sin2_12_exp = 0.307
 print(f"  sin^2(theta_12): W33 = {sin2_12_w33:.4f}, exp = {sin2_12_exp}")
 print(f"  Error: {abs(sin2_12_w33 - sin2_12_exp)/sin2_12_exp * 100:.1f}%")
 
-sin2_23_w33 = 15/27
+sin2_23_w33 = 15 / 27
 sin2_23_exp = 0.545
 print(f"  sin^2(theta_23): W33 = {sin2_23_w33:.4f}, exp = {sin2_23_exp}")
 print(f"  Error: {abs(sin2_23_w33 - sin2_23_exp)/sin2_23_exp * 100:.1f}%")
@@ -299,9 +302,9 @@ print(f"  Error: {abs(sin2_23_w33 - sin2_23_exp)/sin2_23_exp * 100:.1f}%")
 # SECTION 9: THE TRILOGY STRUCTURE
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 9: THE TRILOGY STRUCTURE")
-print("="*70)
+print("=" * 70)
 
 print("""
 =======================================================
@@ -336,35 +339,35 @@ The TRILOGY FORMULA:
 # SECTION 10: NEW PREDICTIONS
 # =============================================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SECTION 10: NEW PREDICTIONS FROM F_3 STRUCTURE")
-print("="*70)
+print("=" * 70)
 
 predictions = {
-    'Cabibbo_angle': {
-        'formula': 'sin(theta_C) = 9/40',
-        'prediction': 0.225,
-        'experimental': 0.22501,
-        'error_percent': 0.0
+    "Cabibbo_angle": {
+        "formula": "sin(theta_C) = 9/40",
+        "prediction": 0.225,
+        "experimental": 0.22501,
+        "error_percent": 0.0,
     },
-    'PMNS_theta_12': {
-        'formula': 'sin^2(theta_12) = 12/40',
-        'prediction': 0.300,
-        'experimental': 0.307,
-        'error_percent': 2.3
+    "PMNS_theta_12": {
+        "formula": "sin^2(theta_12) = 12/40",
+        "prediction": 0.300,
+        "experimental": 0.307,
+        "error_percent": 2.3,
     },
-    'PMNS_theta_23': {
-        'formula': 'sin^2(theta_23) = 15/27',
-        'prediction': 0.556,
-        'experimental': 0.545,
-        'error_percent': 2.0
+    "PMNS_theta_23": {
+        "formula": "sin^2(theta_23) = 15/27",
+        "prediction": 0.556,
+        "experimental": 0.545,
+        "error_percent": 2.0,
     },
-    'generation_count': {
-        'formula': 'dim(F_3) = 3',
-        'prediction': 3,
-        'experimental': 3,
-        'error_percent': 0.0
-    }
+    "generation_count": {
+        "formula": "dim(F_3) = 3",
+        "prediction": 3,
+        "experimental": 3,
+        "error_percent": 0.0,
+    },
 }
 
 print("\nNEW PREDICTIONS FROM F_3 STRUCTURE:")
@@ -381,12 +384,12 @@ for name, data in predictions.items():
 # SAVE RESULTS
 # =============================================================================
 
-with open('PART_LXVIII_why_F3.json', 'w') as f:
+with open("PART_LXVIII_why_F3.json", "w") as f:
     json.dump(predictions, f, indent=2, default=int)
 
-print("="*70)
+print("=" * 70)
 print("PART LXVIII CONCLUSIONS")
-print("="*70)
+print("=" * 70)
 
 print("""
 WHY F_3? BECAUSE THREE IS THE ARCHITECTURE OF REALITY!
@@ -410,4 +413,4 @@ F_3 is special because:
 
 Results saved to PART_LXVIII_why_F3.json
 """)
-print("="*70)
+print("=" * 70)

@@ -5,6 +5,7 @@ Outputs:
 - artifacts/w33_local_heisenberg_table.json
 - artifacts/w33_local_heisenberg_table.md
 """
+
 from __future__ import annotations
 
 import json
@@ -37,11 +38,11 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
     return adj
@@ -195,7 +196,9 @@ def main():
     # H12
     for t_idx, tri in enumerate(triangles):
         for label, v in enumerate(tri):
-            rows.append({"vertex": v, "class": "H12", "triangle": t_idx, "label": label})
+            rows.append(
+                {"vertex": v, "class": "H12", "triangle": t_idx, "label": label}
+            )
     # H27
     for v in nonneighbors:
         (u1, u2), z = hz_label[v]

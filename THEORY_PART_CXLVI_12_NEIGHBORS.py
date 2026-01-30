@@ -9,12 +9,13 @@ Now let's examine the 12 NEIGHBORS of any vertex in Sp₄(3).
 What graph do they form?
 """
 
-import numpy as np
 from itertools import combinations
 
-print("="*70)
+import numpy as np
+
+print("=" * 70)
 print("PART CXLVI: THE 12-NEIGHBOR SUBGRAPH")
-print("="*70)
+print("=" * 70)
 
 omega = np.exp(2j * np.pi / 3)
 
@@ -22,43 +23,47 @@ omega = np.exp(2j * np.pi / 3)
 # BUILD WITTING STATES
 # =====================================================
 
+
 def build_witting_states():
     states = []
     for i in range(4):
         v = np.zeros(4, dtype=complex)
         v[i] = 1
         states.append(v)
-    
+
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([0, 1, -omega**mu, omega**nu]) / np.sqrt(3))
+            states.append(np.array([0, 1, -(omega**mu), omega**nu]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([1, 0, -omega**mu, -omega**nu]) / np.sqrt(3))
+            states.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([1, -omega**mu, 0, omega**nu]) / np.sqrt(3))
+            states.append(np.array([1, -(omega**mu), 0, omega**nu]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
             states.append(np.array([1, omega**mu, omega**nu, 0]) / np.sqrt(3))
-    
+
     return states
+
 
 states = build_witting_states()
 
+
 def inner_product_sq(i, j):
-    return abs(np.vdot(states[i], states[j]))**2
+    return abs(np.vdot(states[i], states[j])) ** 2
+
 
 # Build adjacency matrix (orthogonality graph = Sp₄(3))
-adj = [[inner_product_sq(i,j) < 1e-10 for j in range(40)] for i in range(40)]
+adj = [[inner_product_sq(i, j) < 1e-10 for j in range(40)] for i in range(40)]
 
 # =====================================================
 # ANALYZE THE 12 NEIGHBORS
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("THE INDUCED SUBGRAPH ON 12 NEIGHBORS")
-print("="*70)
+print("=" * 70)
 
 vertex = 0
 neighbors = [j for j in range(40) if adj[vertex][j]]
@@ -69,7 +74,9 @@ print(f"Neighbors ({len(neighbors)}): {neighbors}")
 
 # Build induced subgraph on neighbors
 n_n = len(neighbors)
-induced_adj = [[adj[neighbors[i]][neighbors[j]] for j in range(n_n)] for i in range(n_n)]
+induced_adj = [
+    [adj[neighbors[i]][neighbors[j]] for j in range(n_n)] for i in range(n_n)
+]
 
 # Basic statistics
 edge_count = sum(sum(row) for row in induced_adj) // 2
@@ -89,9 +96,10 @@ if len(set(degrees)) == 1:
 # IDENTIFY THE GRAPH
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("GRAPH IDENTIFICATION")
-print("="*70)
+print("=" * 70)
+
 
 # Check for SRG parameters
 def compute_srg_params(adj_matrix, n):
@@ -100,22 +108,23 @@ def compute_srg_params(adj_matrix, n):
     if len(set(degrees)) != 1:
         return None
     k = degrees[0]
-    
+
     lambda_counts = []
     mu_counts = []
-    
+
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             common = sum(adj_matrix[i][l] and adj_matrix[j][l] for l in range(n))
             if adj_matrix[i][j]:
                 lambda_counts.append(common)
             else:
                 mu_counts.append(common)
-    
+
     lam = lambda_counts[0] if lambda_counts and len(set(lambda_counts)) == 1 else None
     mu = mu_counts[0] if mu_counts and len(set(mu_counts)) == 1 else None
-    
+
     return (n, k, lam, mu) if lam is not None and mu is not None else None
+
 
 params = compute_srg_params(induced_adj, n_n)
 if params:
@@ -124,17 +133,17 @@ else:
     # Get the actual values
     degrees = [sum(row) for row in induced_adj]
     k = degrees[0] if len(set(degrees)) == 1 else "varies"
-    
+
     lambda_counts = set()
     mu_counts = set()
     for i in range(n_n):
-        for j in range(i+1, n_n):
+        for j in range(i + 1, n_n):
             common = sum(induced_adj[i][l] and induced_adj[j][l] for l in range(n_n))
             if induced_adj[i][j]:
                 lambda_counts.add(common)
             else:
                 mu_counts.add(common)
-    
+
     print(f"Graph statistics:")
     print(f"  n = {n_n}")
     print(f"  k = {k}")
@@ -145,9 +154,9 @@ else:
 # SPECTRUM ANALYSIS
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("SPECTRUM ANALYSIS")
-print("="*70)
+print("=" * 70)
 
 adj_matrix = np.array(induced_adj, dtype=float)
 eigenvalues = np.linalg.eigvalsh(adj_matrix)
@@ -162,16 +171,16 @@ for e in sorted(set(eigenvalues), reverse=True):
 # WHICH STATES ARE THE NEIGHBORS?
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("STRUCTURE OF THE 12 NEIGHBORS")
-print("="*70)
+print("=" * 70)
 
 # Group classification
-group_0 = [0, 1, 2, 3]          # Basis states
-group_1 = list(range(4, 13))    # (0, 1, -ω^μ, ω^ν)/√3
-group_2 = list(range(13, 22))   # (1, 0, -ω^μ, -ω^ν)/√3
-group_3 = list(range(22, 31))   # (1, -ω^μ, 0, ω^ν)/√3
-group_4 = list(range(31, 40))   # (1, ω^μ, ω^ν, 0)/√3
+group_0 = [0, 1, 2, 3]  # Basis states
+group_1 = list(range(4, 13))  # (0, 1, -ω^μ, ω^ν)/√3
+group_2 = list(range(13, 22))  # (1, 0, -ω^μ, -ω^ν)/√3
+group_3 = list(range(22, 31))  # (1, -ω^μ, 0, ω^ν)/√3
+group_4 = list(range(31, 40))  # (1, ω^μ, ω^ν, 0)/√3
 
 n_in_g0 = len(set(neighbors) & set(group_0))
 n_in_g1 = len(set(neighbors) & set(group_1))
@@ -194,9 +203,9 @@ print(f"  From Group 1: {sorted(set(neighbors) & set(group_1))}")
 # GEOMETRIC INTERPRETATION
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("GEOMETRIC INTERPRETATION")
-print("="*70)
+print("=" * 70)
 
 print("""
 ANALYSIS:
@@ -225,9 +234,9 @@ for idx in neighbors:
 # THE INDUCED GRAPH STRUCTURE
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("INDUCED GRAPH STRUCTURE")
-print("="*70)
+print("=" * 70)
 
 # The 12 neighbors are: {1,2,3} ∪ {4,5,6,7,8,9,10,11,12}
 # Let's see the adjacency pattern
@@ -252,24 +261,28 @@ for i in basis_neighbors:
 
 # Check adjacencies within superpositions
 print("\nAdjacencies within superposition states (Group 1):")
-sup_edges = sum(1 for i in superposition_neighbors 
-                for j in superposition_neighbors if i < j and adj[i][j])
+sup_edges = sum(
+    1
+    for i in superposition_neighbors
+    for j in superposition_neighbors
+    if i < j and adj[i][j]
+)
 print(f"  Edges among 9 superposition states: {sup_edges}")
 
 # =====================================================
 # IDENTIFY KNOWN GRAPHS
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("GRAPH IDENTIFICATION")
-print("="*70)
+print("=" * 70)
 
 # Count triangles
 triangles = 0
 for i in range(n_n):
-    for j in range(i+1, n_n):
+    for j in range(i + 1, n_n):
         if induced_adj[i][j]:
-            for k in range(j+1, n_n):
+            for k in range(j + 1, n_n):
                 if induced_adj[i][k] and induced_adj[j][k]:
                     triangles += 1
 
@@ -278,7 +291,7 @@ print(f"Triangle count: {triangles}")
 # Count 4-cycles (if any)
 four_cycles = 0
 for i in range(n_n):
-    for j in range(i+1, n_n):
+    for j in range(i + 1, n_n):
         if not induced_adj[i][j]:  # i,j non-adjacent
             common = [k for k in range(n_n) if induced_adj[i][k] and induced_adj[j][k]]
             four_cycles += len(common) * (len(common) - 1) // 2
@@ -291,7 +304,11 @@ max_clique = 0
 for size in range(n_n, 0, -1):
     found = False
     for clique in combinations(range(n_n), size):
-        if all(induced_adj[clique[i]][clique[j]] for i in range(size) for j in range(i+1, size)):
+        if all(
+            induced_adj[clique[i]][clique[j]]
+            for i in range(size)
+            for j in range(i + 1, size)
+        ):
             max_clique = size
             found = True
             print(f"  Found {size}-clique: {[neighbors[c] for c in clique]}")
@@ -305,7 +322,11 @@ max_indep = 0
 for size in range(n_n, 0, -1):
     found = False
     for indep in combinations(range(n_n), size):
-        if all(not induced_adj[indep[i]][indep[j]] for i in range(size) for j in range(i+1, size)):
+        if all(
+            not induced_adj[indep[i]][indep[j]]
+            for i in range(size)
+            for j in range(i + 1, size)
+        ):
             max_indep = size
             found = True
             print(f"  Found {size}-independent set: {[neighbors[c] for c in indep]}")
@@ -317,9 +338,9 @@ for size in range(n_n, 0, -1):
 # COMPARISON TO KNOWN GRAPHS
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("COMPARISON TO KNOWN GRAPHS ON 12 VERTICES")
-print("="*70)
+print("=" * 70)
 
 print("""
 CANDIDATE GRAPHS:
@@ -358,9 +379,9 @@ else:
 # THE ACTUAL STRUCTURE
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("THE ACTUAL STRUCTURE")
-print("="*70)
+print("=" * 70)
 
 # Detailed adjacency matrix visualization
 print("Adjacency matrix (12×12):")
@@ -370,7 +391,7 @@ for i in range(n_n):
     print(f"{neighbors[i]:2d}   {row}")
 
 # Partition into blocks
-block_0 = [i for i, n in enumerate(neighbors) if n in [1,2,3]]
+block_0 = [i for i, n in enumerate(neighbors) if n in [1, 2, 3]]
 block_1 = [i for i, n in enumerate(neighbors) if n in range(4, 13)]
 
 print(f"\nBlock structure:")
@@ -387,9 +408,9 @@ print(f"  Edges within Block 1: {intra_1}")
 print(f"  Edges between blocks: {inter}")
 print(f"  Total: {intra_0 + intra_1 + inter}")
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PART CXLVI COMPLETE")
-print("="*70)
+print("=" * 70)
 
 print(f"""
 KEY FINDINGS:
@@ -409,6 +430,6 @@ KEY FINDINGS:
 
 4. Block structure:
    - {intra_0} edges within basis block
-   - {intra_1} edges within superposition block  
+   - {intra_1} edges within superposition block
    - {inter} edges between blocks
 """)

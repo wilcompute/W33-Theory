@@ -15,11 +15,12 @@ Outputs:
 - artifacts/d4_triality_action.json
 - artifacts/d4_triality_action.md
 """
+
 from __future__ import annotations
 
 import json
 from collections import Counter, defaultdict
-from itertools import combinations, product, permutations
+from itertools import combinations, permutations, product
 from pathlib import Path
 
 import numpy as np
@@ -51,11 +52,11 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
 
@@ -158,7 +159,9 @@ def main():
     lines.append("## Triangle Statistics")
     lines.append("")
     lines.append(f"- W33 vertices: {n}")
-    lines.append(f"- Unique triangles across all H12 decompositions: {len(unique_triangles)}")
+    lines.append(
+        f"- Unique triangles across all H12 decompositions: {len(unique_triangles)}"
+    )
     lines.append("")
 
     # How many base vertices share each triangle?
@@ -182,7 +185,7 @@ def main():
     for v0 in range(n):
         tris = all_triangles[v0]
         for i, t1 in enumerate(tris):
-            for t2 in tris[i+1:]:
+            for t2 in tris[i + 1 :]:
                 idx1, idx2 = tri_index[t1], tri_index[t2]
                 tri_adj[idx1, idx2] = 1
                 tri_adj[idx2, idx1] = 1
@@ -231,7 +234,7 @@ def main():
     # For adjacent vertices, how do their H12 decompositions relate?
     intersection_sizes = []
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if adj[i, j]:  # adjacent vertices
                 tris_i = set(all_triangles[i])
                 tris_j = set(all_triangles[j])
@@ -240,7 +243,9 @@ def main():
     intersection_dist = Counter(intersection_sizes)
     results["adjacent_h12_intersection_distribution"] = dict(intersection_dist)
 
-    lines.append("For W33-adjacent vertices (i, j), how many H12 triangles do they share?")
+    lines.append(
+        "For W33-adjacent vertices (i, j), how many H12 triangles do they share?"
+    )
     lines.append("")
     for size, count in sorted(intersection_dist.items()):
         lines.append(f"- {count} adjacent pairs share {size} triangles")
@@ -249,16 +254,20 @@ def main():
     # For non-adjacent vertices
     nonadj_intersection_sizes = []
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if not adj[i, j]:  # non-adjacent vertices
                 tris_i = set(all_triangles[i])
                 tris_j = set(all_triangles[j])
                 nonadj_intersection_sizes.append(len(tris_i & tris_j))
 
     nonadj_intersection_dist = Counter(nonadj_intersection_sizes)
-    results["nonadjacent_h12_intersection_distribution"] = dict(nonadj_intersection_dist)
+    results["nonadjacent_h12_intersection_distribution"] = dict(
+        nonadj_intersection_dist
+    )
 
-    lines.append("For W33-non-adjacent vertices (i, j), how many H12 triangles do they share?")
+    lines.append(
+        "For W33-non-adjacent vertices (i, j), how many H12 triangles do they share?"
+    )
     lines.append("")
     for size, count in sorted(nonadj_intersection_dist.items()):
         lines.append(f"- {count} non-adjacent pairs share {size} triangles")
@@ -281,7 +290,9 @@ def main():
         cn_abc = sum(1 for k in range(n) if adj[a, k] and adj[b, k] and adj[c, k])
 
         lines.append(f"Triangle {tri}:")
-        lines.append(f"  - Common neighbors: ab={cn_ab}, bc={cn_bc}, ac={cn_ac}, abc={cn_abc}")
+        lines.append(
+            f"  - Common neighbors: ab={cn_ab}, bc={cn_bc}, ac={cn_ac}, abc={cn_abc}"
+        )
 
     lines.append("")
 

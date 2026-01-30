@@ -29,7 +29,6 @@ from pathlib import Path
 
 import numpy as np
 
-
 ROOT = Path(__file__).resolve().parents[1]
 MOD3 = 3
 
@@ -45,7 +44,9 @@ def _read_csv_from_zip(zip_path: Path, inner_path: str) -> list[dict[str, str]]:
             return list(csv.DictReader(text))
 
 
-def _write_csv(path: Path, fieldnames: list[str], rows: list[dict[str, object]]) -> None:
+def _write_csv(
+    path: Path, fieldnames: list[str], rows: list[dict[str, object]]
+) -> None:
     with path.open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fieldnames)
         w.writeheader()
@@ -135,7 +136,9 @@ def _solve_linear_system_mod3(A: np.ndarray, b: np.ndarray) -> tuple[np.ndarray,
 
 
 def main() -> int:
-    quotient_bundle = ROOT / "W33_quotient_closure_complement_and_noniso_line_curvature_bundle.zip"
+    quotient_bundle = (
+        ROOT / "W33_quotient_closure_complement_and_noniso_line_curvature_bundle.zip"
+    )
     test_bundle = ROOT / "W33_holonomy_phase_test_bundle.zip"
     h3_basis_bundle = ROOT / "W33_H3_basis_89_Z3_on_clique_complex_bundle.zip"
 
@@ -147,12 +150,16 @@ def main() -> int:
     out_dir.mkdir(exist_ok=True)
 
     # --- Load triangles and F values (based at first vertex p<q<r)
-    tri_rows = _read_csv_from_zip(test_bundle, "triangle_holonomy_vs_symplectic_phase.csv")
+    tri_rows = _read_csv_from_zip(
+        test_bundle, "triangle_holonomy_vs_symplectic_phase.csv"
+    )
     triangles = [(int(r["p"]), int(r["q"]), int(r["r"])) for r in tri_rows]
     F = {tri: mod3(int(r["F"])) for tri, r in zip(triangles, tri_rows, strict=True)}
 
     # --- Load quotient edges and edge matchings -> transport permutations in S3
-    edge_rows = _read_csv_from_zip(quotient_bundle, "quotient_graph_edge_decorations_matchings.csv")
+    edge_rows = _read_csv_from_zip(
+        quotient_bundle, "quotient_graph_edge_decorations_matchings.csv"
+    )
     if len(edge_rows) != 540:
         raise ValueError(f"Expected 540 edges, got {len(edge_rows)}")
 
@@ -218,11 +225,13 @@ def main() -> int:
 
     # --- Check ds=0 on all triangles
     ds_counts = Counter()
-    for (p, q, r) in triangles:
+    for p, q, r in triangles:
         ds = (s_edge(q, r) - s_edge(p, r) + s_edge(p, q)) % 2
         ds_counts[ds] += 1
     if ds_counts.get(1, 0) != 0:
-        raise ValueError(f"parity cocycle failed: ds nonzero on {ds_counts.get(1,0)} triangles")
+        raise ValueError(
+            f"parity cocycle failed: ds nonzero on {ds_counts.get(1,0)} triangles"
+        )
 
     # --- Solve s = dt by BFS (fix t(0)=0)
     t = [-1] * 40
@@ -262,7 +271,9 @@ def main() -> int:
         # a<b<c<d
         naive = mod3(tri(b, c, d) - tri(a, c, d) + tri(a, b, d) - tri(a, b, c))
         sign = 1 if s_edge(a, b) == 0 else 2  # (-1)^s in Z3
-        transported = mod3(sign * tri(b, c, d) - tri(a, c, d) + tri(a, b, d) - tri(a, b, c))
+        transported = mod3(
+            sign * tri(b, c, d) - tri(a, c, d) + tri(a, b, d) - tri(a, b, c)
+        )
         dF_naive.append(naive)
         dF_transport.append(transported)
 
@@ -273,7 +284,7 @@ def main() -> int:
 
     # --- Gauge-adjust F^(t)(p,q,r) = (-1)^{t(p)} F(p,q,r)
     F_t: dict[tuple[int, int, int], int] = {}
-    for (p, q, r) in triangles:
+    for p, q, r in triangles:
         sign = 1 if t[p] == 0 else 2
         F_t[(p, q, r)] = mod3(sign * F[(p, q, r)])
 
@@ -281,12 +292,7 @@ def main() -> int:
     dF_t_hist = Counter()
     for row in tetra_rows:
         a, b, c, d = int(row["a"]), int(row["b"]), int(row["c"]), int(row["d"])
-        val = mod3(
-            F_t[(b, c, d)]
-            - F_t[(a, c, d)]
-            + F_t[(a, b, d)]
-            - F_t[(a, b, c)]
-        )
+        val = mod3(F_t[(b, c, d)] - F_t[(a, c, d)] + F_t[(a, b, d)] - F_t[(a, b, c)])
         dF_t_hist[val] += 1
     if dF_t_hist.get(1, 0) != 0 or dF_t_hist.get(2, 0) != 0:
         raise ValueError("expected dF^(t) == 0 on all tetrahedra")
@@ -299,6 +305,7 @@ def main() -> int:
 
     for i, (p, q, r) in enumerate(triangles):
         b_vec[i] = F_t[(p, q, r)]
+
         # dA(p,q,r) = A(q,r) - A(p,r) + A(p,q)
         # Variables are on undirected edges (u<v); oriented value flips sign.
         def add_edge(u: int, v: int, coef: int) -> None:
@@ -339,7 +346,10 @@ def main() -> int:
     _write_csv(
         out_dir / "triangle_holonomy_F_t_3240.csv",
         ["p", "q", "r", "F_t"],
-        [{"p": p, "q": q, "r": r, "F_t": int(F_t[(p, q, r)])} for (p, q, r) in triangles],
+        [
+            {"p": p, "q": q, "r": r, "F_t": int(F_t[(p, q, r)])}
+            for (p, q, r) in triangles
+        ],
     )
 
     report = {
@@ -347,19 +357,27 @@ def main() -> int:
         "edge_count": 540,
         "tetra_count": 9450,
         "parity": {
-            "s_hist_edges": {str(k): int(v) for k, v in sorted(Counter(parity_s.values()).items())},
+            "s_hist_edges": {
+                str(k): int(v) for k, v in sorted(Counter(parity_s.values()).items())
+            },
             "ds_hist_triangles": {str(k): int(v) for k, v in sorted(ds_counts.items())},
         },
         "naive_untwisted": {
-            "dF_hist_tetrahedra": {str(k): int(v) for k, v in sorted(dF_naive_hist.items())},
+            "dF_hist_tetrahedra": {
+                str(k): int(v) for k, v in sorted(dF_naive_hist.items())
+            },
             "dF_nonzero_tetrahedra": int(9450 - dF_naive_hist.get(0, 0)),
         },
         "transported": {
-            "d_sF_hist_tetrahedra": {str(k): int(v) for k, v in sorted(dF_transport_hist.items())},
+            "d_sF_hist_tetrahedra": {
+                str(k): int(v) for k, v in sorted(dF_transport_hist.items())
+            },
         },
         "gauge_fix": {
             "t_hist_vertices": {str(k): int(v) for k, v in sorted(Counter(t).items())},
-            "dF_t_hist_tetrahedra": {str(k): int(v) for k, v in sorted(dF_t_hist.items())},
+            "dF_t_hist_tetrahedra": {
+                str(k): int(v) for k, v in sorted(dF_t_hist.items())
+            },
             "edge_potential_rank": rank,
         },
     }
@@ -404,4 +422,3 @@ Files:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

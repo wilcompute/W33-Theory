@@ -10,16 +10,28 @@ import numpy as np
 import pandas as pd
 import scipy.sparse as sp
 
-
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUT_DIR = DATA / "_workbench" / "05_symmetry"
 
 MAP_PATH = OUT_DIR / "coin_c24_2t_alignment_mapping.csv"
-TABLE_PATH = DATA / "_toe" / "projector_recon_20260110" / "binary_tetrahedral_2T_multiplication_table.csv"
-ORDERS_PATH = DATA / "_toe" / "projector_recon_20260110" / "binary_tetrahedral_2T_element_orders.csv"
-H_TRANSPORT = DATA / "_toe" / "projector_recon_20260110" / (
-    "N12_58_orbit0_H_transport_59x24_sparse_20260109T205353Z.npz"
+TABLE_PATH = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / "binary_tetrahedral_2T_multiplication_table.csv"
+)
+ORDERS_PATH = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / "binary_tetrahedral_2T_element_orders.csv"
+)
+H_TRANSPORT = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / ("N12_58_orbit0_H_transport_59x24_sparse_20260109T205353Z.npz")
 )
 
 G1 = "(0 1)(2 3)"
@@ -62,7 +74,9 @@ def load_mapping():
 
 def load_csr_npz(path: Path) -> sp.csr_matrix:
     z = np.load(path, allow_pickle=True)
-    return sp.csr_matrix((z["data"], z["indices"], z["indptr"]), shape=tuple(z["shape"]))
+    return sp.csr_matrix(
+        (z["data"], z["indices"], z["indptr"]), shape=tuple(z["shape"])
+    )
 
 
 def generate_mapping(elems, table, g1, g2, a, b):

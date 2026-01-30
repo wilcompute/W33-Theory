@@ -1,0 +1,1034 @@
+Abstract Polytopes: Regular, Semiregular and Chiral
+Barry Monson (UNB)
+(from projects with Egon Schulte,
+Daniel Pellicer and Gordon Williams)
+SODO – Queenstown, February, 2012
+supported in part by the NSERC of Canada
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+What are abstract polytopes?
+Anabstract n-polytope Qis a poset having some of the key structural
+properties of the face lattice of a convex n-polytope, although Q
+•need not be a lattice
+•need not be ﬁnite
+•need not have a familiar geometric realization
+The abstract 3-polytopes include all convex polyhedra, face-to-f ace
+tessellations and many less familiar structures. But
+you can safely think of a ﬁnite 3-polytope as a map on a compact surface .
+Do we want details?
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+What are abstract polytopes?
+Anabstract n-polytope Qis a poset having some of the key structural
+properties of the face lattice of a convex n-polytope, although Q
+•need not be a lattice
+•need not be ﬁnite
+•need not have a familiar geometric realization
+The abstract 3-polytopes include all convex polyhedra, face-to-f ace
+tessellations and many less familiar structures. But
+you can safely think of a ﬁnite 3-polytope as a map on a compact surface .
+Do we want details?
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+What are abstract polytopes?
+Anabstract n-polytope Qis a poset having some of the key structural
+properties of the face lattice of a convex n-polytope, although Q
+•need not be a lattice
+•need not be ﬁnite
+•need not have a familiar geometric realization
+The abstract 3-polytopes include all convex polyhedra, face-to-f ace
+tessellations and many less familiar structures. But
+you can safely think of a ﬁnite 3-polytope as a map on a compact surface .
+Do we want details?
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+What are abstract polytopes?
+Anabstract n-polytope Qis a poset having some of the key structural
+properties of the face lattice of a convex n-polytope, although Q
+•need not be a lattice
+•need not be ﬁnite
+•need not have a familiar geometric realization
+The abstract 3-polytopes include all convex polyhedra, face-to-f ace
+tessellations and many less familiar structures. But
+you can safely think of a ﬁnite 3-polytope as a map on a compact surface .
+Do we want details?
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+What are abstract polytopes?
+Anabstract n-polytope Qis a poset having some of the key structural
+properties of the face lattice of a convex n-polytope, although Q
+•need not be a lattice
+•need not be ﬁnite
+•need not have a familiar geometric realization
+The abstract 3-polytopes include all convex polyhedra, face-to-f ace
+tessellations and many less familiar structures. But
+you can safely think of a ﬁnite 3-polytope as a map on a compact surface .
+Do we want details?
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+The symmetry of Q
+is encoded in the group Γ = Γ( Q) of all order-preserving bijections (=
+automorphisms ) ofQ.
+Each automorphism is det’d by its action on any one ﬂagΦ; for a
+polyhedron, a ﬂag
+Φ = incident [vertex, edge, facet] triple
+Def.Qisregularif Γ is transitive on ﬂags.
+Examples :
+•any polygon ( n= 2) is (abstractly, i.e. combinatorially) regular
+•the usual tiling of E3by unit cubes is an inﬁnite regular 4-polytope
+•the Platonic solids ( n= 3). Look, for example, at ⇒
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+The symmetry of Q
+is encoded in the group Γ = Γ( Q) of all order-preserving bijections (=
+automorphisms ) ofQ.
+Each automorphism is det’d by its action on any one ﬂagΦ; for a
+polyhedron, a ﬂag
+Φ = incident [vertex, edge, facet] triple
+Def.Qisregularif Γ is transitive on ﬂags.
+Examples :
+•any polygon ( n= 2) is (abstractly, i.e. combinatorially) regular
+•the usual tiling of E3by unit cubes is an inﬁnite regular 4-polytope
+•the Platonic solids ( n= 3). Look, for example, at ⇒
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+The symmetry of Q
+is encoded in the group Γ = Γ( Q) of all order-preserving bijections (=
+automorphisms ) ofQ.
+Each automorphism is det’d by its action on any one ﬂagΦ; for a
+polyhedron, a ﬂag
+Φ = incident [vertex, edge, facet] triple
+Def.Qisregularif Γ is transitive on ﬂags.
+Examples :
+•any polygon ( n= 2) is (abstractly, i.e. combinatorially) regular
+•the usual tiling of E3by unit cubes is an inﬁnite regular 4-polytope
+•the Platonic solids ( n= 3). Look, for example, at ⇒
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+The symmetry of Q
+is encoded in the group Γ = Γ( Q) of all order-preserving bijections (=
+automorphisms ) ofQ.
+Each automorphism is det’d by its action on any one ﬂagΦ; for a
+polyhedron, a ﬂag
+Φ = incident [vertex, edge, facet] triple
+Def.Qisregularif Γ is transitive on ﬂags.
+Examples :
+•any polygon ( n= 2) is (abstractly, i.e. combinatorially) regular
+•the usual tiling of E3by unit cubes is an inﬁnite regular 4-polytope
+•the Platonic solids ( n= 3). Look, for example, at ⇒
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Example 1. The regular dodecahedron D(facets removed)
+Here Γ(D) is the Coxeter group
+H3=•5•3•
+of order 120.
+The ﬂags correspond exactly to
+the triangles in a barycentric
+subdivision of the surface of D.
+Here is part of that ⇒
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+A base ﬂag for D, adjacent ﬂags and generators
+By transitivity, pick any
+base ﬂag = Φ [white]
+Then
+0-adjacent ﬂag =: Φ0[pink]
+1-adjacent ﬂag =: Φ1[cyan]
+2-adjacent ﬂag =: Φ2[orange]
+Fori= 0,1,2, there is a
+unique automorphism
+ρi: Φ/mapsto→Φi.
+Then Γ(D) =/an}bracketle{tρ0,ρ1,ρ2/an}bracketri}ht.
+Think reﬂections!
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+The convex regular polyhedra (=Platonic solids) and the
+Kepler-Poinsot star-polyhedra P
+Local data for both polyhedron Pand its group Γ( P) reside in the Schl¨ aﬂi
+symbolortype{p,q}.
+Platonic solids :{3,3}(tetrahedron), {3,4}(octahedron), {4,3}(cube),
+{3,5}(icosahedron), {5,3}(dodecahedron)
+Kepler(ca. 1619) {5
+2,5}(small stellated dodecahedron),
+{5
+2,3}(great stellated dodecahedron)
+Poinsot(ca. 1809) {5,5
+2}(great dodecahedron),
+{3,5
+2}(great isosahedron)
+Want to see some?
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+The classical convex regular polytopes, their Schl¨ aﬂi
+symbols and ﬁnite Coxeter groups with string diagrams
+name symbol # facets (Coxeter) group order
+n= 4:
+simplex {3,3,3} 5A4≃S5 5!
+cross-polytope {3,3,4} 16 B4 384
+cube {4,3,3} 8 B4 384
+24-cell {3,4,3} 24 F4 1152
+600-cell {3,3,5} 600 H4 14400
+120-cell {5,3,3} 120 H4 14400
+n>4:
+simplex {3,3,...,3}n+1An≃Sn+1(n+1)!
+cross-polytope {3,...,3,4} 2nBn 2n·n!
+cube {4,3,...,3} 2n Bn 2n·n!
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Regular polytopes and string C-groups
+Schulte (1982) showed that the abstract regular n-polytopes Pcorrespond
+exactly to the string C-groups of rank n (which we often study in their
+place).
+The Correspondence Theorem .
+Part 1. IfPis a regular n-polytope, then Γ( P) =/an}bracketle{tρ0,...,ρn−1/an}bracketri}htis a
+string C-group .
+Part 2. Conversely, if Γ = /an}bracketle{tρ0,...,ρn−1/an}bracketri}htis a string C-group, then we can
+reconstruct an n-polytope P(Γ) (in a natural way as a
+coset geometry on Γ).
+Furthermore, Γ( P(Γ))≃Γ andP(Γ(P))≃ P.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Recap: what is a string C-group?
+Means: having ﬁxed a base ﬂag Φ in P, for 0≤j≤n−1 there is a
+unique automorphism ρj∈Γ(P) mapping Φ to the j-adjacent ﬂag Φj.
+These involutions generate Γ( P) and satisfy the relations implicit in some
+string (Coxeter) diagram, like
+•p1•p2•...•pn−1•,
+and perhaps other relations, so long as this intersection condition
+continues to hold:
+/an}bracketle{tρk:k∈I/an}bracketri}ht∩/an}bracketle{tρk:k∈J/an}bracketri}ht=/an}bracketle{tρk:k∈I∩J/an}bracketri}ht
+(for allI,J⊆ {0,...,n−1}).
+Notice that Pthen has Schl¨ aﬂi type {p1,...,pn−1}.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Example 2. A modern look at a a classical object
+(from Wikipedia)Thesmall stellated dodecahedron {5
+2,5}is a
+Euclidean realization of the map
+M={5,5|3}. This quotient of the inﬁnite
+tessellation {5,5}ofH2is determined by
+specifying that ‘1st holes’ be triangular, i.e.
+Γ(M) =/an}bracketle{tρ0,ρ1,ρ2/an}bracketri}ht, where
+ρ2
+0=ρ2
+0=ρ2
+0= (ρ0ρ1)5= (ρ1ρ2)5
+= (ρ0ρ2)2=(ρ0ρ1ρ2ρ1)3= 1.
+(The ‘extra’ hole relation is red. You can see
+the ’hole’, which is really an anti-hole.)
+In contrast, the great icosahedron {3,5
+2}
+is isomorphic to the convex regular
+icosahedron {3,5}.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Abstract Semiregular Polytopes
+There are already too many regular polytopes, so let’s relax the constraints
+and get even more!
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Abstract Semiregular Polytopes
+There are already too many regular polytopes, so let’s relax the constraints
+and get even more!
+Deﬁnition . A polytope Qis said to be semiregular if its facets are regular
+and Γ(Q) is transitive on vertices.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Abstract Semiregular Polytopes
+There are already too many regular polytopes, so let’s relax the constraints
+and get even more!
+Deﬁnition . A polytope Qis said to be semiregular if its facets are regular
+and Γ(Q) is transitive on vertices.
+•the classical Archimedean solids, prisms, antiprisms
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Abstract Semiregular Polytopes
+There are already too many regular polytopes, so let’s relax the constraints
+and get even more!
+Deﬁnition . A polytope Qis said to be semiregular if its facets are regular
+and Γ(Q) is transitive on vertices.
+•the classical Archimedean solids, prisms, antiprisms
+•any regular polytope
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Abstract Semiregular Polytopes
+There are already too many regular polytopes, so let’s relax the constraints
+and get even more!
+Deﬁnition . A polytope Qis said to be semiregular if its facets are regular
+and Γ(Q) is transitive on vertices.
+•the classical Archimedean solids, prisms, antiprisms
+•any regular polytope
+So this is a broad generalization of ‘regular’. One can generalize e ven
+more:uniformpolytopes inductively have uniform facets, again with Γ( Q)
+vertex-transitive, taking polygons to be uniform to start.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Abstract Semiregular Polytopes
+There are already too many regular polytopes, so let’s relax the constraints
+and get even more!
+Deﬁnition . A polytope Qis said to be semiregular if its facets are regular
+and Γ(Q) is transitive on vertices.
+•the classical Archimedean solids, prisms, antiprisms
+•any regular polytope
+So this is a broad generalization of ‘regular’. One can generalize e ven
+more:uniformpolytopes inductively have uniform facets, again with Γ( Q)
+vertex-transitive, taking polygons to be uniform to start.
+Instead let’s be at least a little more restrictive ...
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Alternating Semiregular Polytopes
+Deﬁnition An abstract semiregular n-polytope Sisalternating if it has two
+(necessarily compatible) types of regular facets, say PandQ, appearing in
+alternating fashion around each ( n−3)-face.
+Example 4.Thecuboctahedron is an alternating
+semiregular 3-polytope. Here k= 2 each of
+triangles P={3}and squares Q={4}
+alternate around each 0-face = vertex.
+Each rectangular vertex-ﬁgure is a
+‘geometrically alternating’ polygon, but is
+abstractly regular of course.
+Atruncated tetrahedron , for example, is
+semiregular but not alternating.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Alternating Semiregular Polytopes
+Deﬁnition An abstract semiregular n-polytope Sisalternating if it has two
+(necessarily compatible) types of regular facets, say PandQ, appearing in
+alternating fashion around each ( n−3)-face.
+Example 4.Thecuboctahedron is an alternating
+semiregular 3-polytope. Here k= 2 each of
+triangles P={3}and squares Q={4}
+alternate around each 0-face = vertex.
+Each rectangular vertex-ﬁgure is a
+‘geometrically alternating’ polygon, but is
+abstractly regular of course.
+Atruncated tetrahedron , for example, is
+semiregular but not alternating.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Alternating Semiregular Polytopes
+Deﬁnition An abstract semiregular n-polytope Sisalternating if it has two
+(necessarily compatible) types of regular facets, say PandQ, appearing in
+alternating fashion around each ( n−3)-face.
+Example 4.Thecuboctahedron is an alternating
+semiregular 3-polytope. Here k= 2 each of
+triangles P={3}and squares Q={4}
+alternate around each 0-face = vertex.
+Each rectangular vertex-ﬁgure is a
+‘geometrically alternating’ polygon, but is
+abstractly regular of course.
+Atruncated tetrahedron , for example, is
+semiregular but not alternating.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Alternating Semiregular Polytopes
+Deﬁnition An abstract semiregular n-polytope Sisalternating if it has two
+(necessarily compatible) types of regular facets, say PandQ, appearing in
+alternating fashion around each ( n−3)-face.
+Example 4.Thecuboctahedron is an alternating
+semiregular 3-polytope. Here k= 2 each of
+triangles P={3}and squares Q={4}
+alternate around each 0-face = vertex.
+Each rectangular vertex-ﬁgure is a
+‘geometrically alternating’ polygon, but is
+abstractly regular of course.
+Atruncated tetrahedron , for example, is
+semiregular but not alternating.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Thing 1 and Thing 2 – build an alternating polytope
+You are given – unlimited copies of regular polyhedra PandQ
+having matching facets
+Your task – Start with a single P. Attach a copy of Qto each
+P-facet, then a copy of Pto each remaining
+‘exposed’ facet of a Q, and so on in alternating
+fashion with the
+Edge Rule k– close up around each edge after kP’s andkQ’s.
+•Can this be done?
+•Is the resulting ‘complex’ Sa 4–polytope?
+•If so, what is the symmetry group Aut(S)?
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Thing 1 and Thing 2 – build an alternating polytope
+You are given – unlimited copies of regular polyhedra PandQ
+having matching facets
+Your task – Start with a single P. Attach a copy of Qto each
+P-facet, then a copy of Pto each remaining
+‘exposed’ facet of a Q, and so on in alternating
+fashion with the
+Edge Rule k– close up around each edge after kP’s andkQ’s.
+•Can this be done?
+•Is the resulting ‘complex’ Sa 4–polytope?
+•If so, what is the symmetry group Aut(S)?
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Thing 1 and Thing 2 – build an alternating polytope
+You are given – unlimited copies of regular polyhedra PandQ
+having matching facets
+Your task – Start with a single P. Attach a copy of Qto each
+P-facet, then a copy of Pto each remaining
+‘exposed’ facet of a Q, and so on in alternating
+fashion with the
+Edge Rule k– close up around each edge after kP’s andkQ’s.
+•Can this be done?
+•Is the resulting ‘complex’ Sa 4–polytope?
+•If so, what is the symmetry group Aut(S)?
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Thing 1 and Thing 2 – build an alternating polytope
+You are given – unlimited copies of regular polyhedra PandQ
+having matching facets
+Your task – Start with a single P. Attach a copy of Qto each
+P-facet, then a copy of Pto each remaining
+‘exposed’ facet of a Q, and so on in alternating
+fashion with the
+Edge Rule k– close up around each edge after kP’s andkQ’s.
+•Can this be done?
+•Is the resulting ‘complex’ Sa 4–polytope?
+•If so, what is the symmetry group Aut(S)?
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Example 5 (rich). Take
+the regular octahedron P={3,4}and
+the regular tetrahedron Q={3,3}
+⇐Assemble k= 2 of each
+around each edge.
+We get a familiar tessellation
+SofE3.
+Thisabstract semiregular
+4-polytope therefore has a
+Euclidean realization.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Example 5 (rich). Take
+the regular octahedron P={3,4}and
+the regular tetrahedron Q={3,3}
+⇐Assemble k= 2 of each
+around each edge.
+We get a familiar tessellation
+SofE3.
+Thisabstract semiregular
+4-polytope therefore has a
+Euclidean realization.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Example 5 (rich). Take
+the regular octahedron P={3,4}and
+the regular tetrahedron Q={3,3}
+⇐Assemble k= 2 of each
+around each edge.
+We get a familiar tessellation
+SofE3.
+Thisabstract semiregular
+4-polytope therefore has a
+Euclidean realization.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+BuildingSfrom Wythoﬀ’s Construction
+The (inﬁnite) Coxeter group Γ = /an}bracketle{tρ0,ρ1,ρ2,ρ3/an}bracketri}htof type˜B3has diagram
+4
+0 1
+234
+ρ ρ
+ρρ
+and acts discretely on Euclidean space E3. We get Sfrom Wythoﬀ’s
+construction, as encoded in the modiﬁed diagram
+4
+Begin with vertex set = Γ-orbit of the unique point ﬁxed by ρ1,ρ2,ρ3; etc.
+see it
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Change an ingredient ...
+Keep the regular tetrahedron Q={3,3}but switch to the regular
+hemioctahedron P={3,4}3:
+1
+2 3
+12 3This projective map Phas 3 vertices,
+6 edges and 4 triangular facets.
+We still try to put k= 2 of each
+around each edge. But now our
+construction is best done using an
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Change an ingredient ...
+Keep the regular tetrahedron Q={3,3}but switch to the regular
+hemioctahedron P={3,4}3:
+1
+2 3
+12 3This projective map Phas 3 vertices,
+6 edges and 4 triangular facets.
+We still try to put k= 2 of each
+around each edge. But now our
+construction is best done using an
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Abstract Version of Wythoﬀ’s Construction (with E.
+Schulte) in which
+the vertices, edges, 2-faces (= polygons) and 3-faces (=facets) of t he new
+Sare (identiﬁed with) right cosets of certain standard subgroups of the
+newgroup Γ generated by ρ0,ρ1,ρ2,ρ3and having deﬁning relations ⇓
+Γ :403
+21ρ
+ρ ρρρ2
+0=ρ2
+1=ρ2
+2=ρ2
+3= 1
+(ρ0ρ1)3= (ρ1ρ2)3= (ρ1ρ3)4= 1
+(ρ0ρ2)2= (ρ0ρ3)2= (ρ2ρ3)2= 1
+andthe new projectifying relation
+(ρ0ρ1ρ3)3= 1.
+Remark.It’s not clear that S‘survives intact’, since the new relation
+could destroy polytopality.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Abstract Version of Wythoﬀ’s Construction (with E.
+Schulte) in which
+the vertices, edges, 2-faces (= polygons) and 3-faces (=facets) of t he new
+Sare (identiﬁed with) right cosets of certain standard subgroups of the
+newgroup Γ generated by ρ0,ρ1,ρ2,ρ3and having deﬁning relations ⇓
+Γ :403
+21ρ
+ρ ρρρ2
+0=ρ2
+1=ρ2
+2=ρ2
+3= 1
+(ρ0ρ1)3= (ρ1ρ2)3= (ρ1ρ3)4= 1
+(ρ0ρ2)2= (ρ0ρ3)2= (ρ2ρ3)2= 1
+andthe new projectifying relation
+(ρ0ρ1ρ3)3= 1.
+Remark. It’s not clear that S‘survives intact’, since the new relation
+could destroy polytopality.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+But all is well - and we get a ﬁnite 4-polytope S!
+(Example 6)
+It’s true, but not obvious, that Γ is now ﬁnite. In fact,
+•theρj’s survive as involutions
+•still/an}bracketle{tρ0,ρ1,ρ2/an}bracketri}ht ≃Γ(Q) (≃S4) [group for tetrahedra]
+•still/an}bracketle{tρ0,ρ1,ρ3/an}bracketri}ht ≃Γ(P) (also≃S4)[group for hemioctahedra]
+•|Γ|= 192, so there are 8 = 192 /24 facets of each type; two tetrahedra
+and twohemioctahedra occur alternately around each edge.
+•Scan’t be regular since P /ne}ationslash≃ Q. But it is alternating semiregular – all
+facets are regular and Γ( S) is vertex-transitive.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+But all is well - and we get a ﬁnite 4-polytope S!
+(Example 6)
+It’s true, but not obvious, that Γ is now ﬁnite. In fact,
+•theρj’s survive as involutions
+•still/an}bracketle{tρ0,ρ1,ρ2/an}bracketri}ht ≃Γ(Q) (≃S4) [group for tetrahedra]
+•still/an}bracketle{tρ0,ρ1,ρ3/an}bracketri}ht ≃Γ(P) (also≃S4)[group for hemioctahedra]
+•|Γ|= 192, so there are 8 = 192 /24 facets of each type; two tetrahedra
+and twohemioctahedra occur alternately around each edge.
+•Scan’t be regular since P /ne}ationslash≃ Q. But it is alternating semiregular – all
+facets are regular and Γ( S) is vertex-transitive.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+But all is well - and we get a ﬁnite 4-polytope S!
+(Example 6)
+It’s true, but not obvious, that Γ is now ﬁnite. In fact,
+•theρj’s survive as involutions
+•still/an}bracketle{tρ0,ρ1,ρ2/an}bracketri}ht ≃Γ(Q) (≃S4) [group for tetrahedra]
+•still/an}bracketle{tρ0,ρ1,ρ3/an}bracketri}ht ≃Γ(P) (also≃S4)[group for hemioctahedra]
+•|Γ|= 192, so there are 8 = 192 /24 facets of each type; two tetrahedra
+and twohemioctahedra occur alternately around each edge.
+•Scan’t be regular since P /ne}ationslash≃ Q. But it is alternating semiregular – all
+facets are regular and Γ( S) is vertex-transitive.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+But all is well - and we get a ﬁnite 4-polytope S!
+(Example 6)
+It’s true, but not obvious, that Γ is now ﬁnite. In fact,
+•theρj’s survive as involutions
+•still/an}bracketle{tρ0,ρ1,ρ2/an}bracketri}ht ≃Γ(Q) (≃S4) [group for tetrahedra]
+•still/an}bracketle{tρ0,ρ1,ρ3/an}bracketri}ht ≃Γ(P) (also≃S4)[group for hemioctahedra]
+•|Γ|= 192, so there are 8 = 192 /24 facets of each type; two tetrahedra
+and twohemioctahedra occur alternately around each edge.
+•Scan’t be regular since P /ne}ationslash≃ Q. But it is alternating semiregular – all
+facets are regular and Γ( S) is vertex-transitive.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+But all is well - and we get a ﬁnite 4-polytope S!
+(Example 6)
+It’s true, but not obvious, that Γ is now ﬁnite. In fact,
+•theρj’s survive as involutions
+•still/an}bracketle{tρ0,ρ1,ρ2/an}bracketri}ht ≃Γ(Q) (≃S4) [group for tetrahedra]
+•still/an}bracketle{tρ0,ρ1,ρ3/an}bracketri}ht ≃Γ(P) (also≃S4)[group for hemioctahedra]
+•|Γ|= 192, so there are 8 = 192 /24 facets of each type; two tetrahedra
+and twohemioctahedra occur alternately around each edge.
+•Scan’t be regular since P /ne}ationslash≃ Q. But it is alternating semiregular – all
+facets are regular and Γ( S) is vertex-transitive.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+More on this new S
+•The polytope Sisuniversal for assembling tetrahedra and
+hemioctahedra face-to-face, with two each alternately surr ounding
+any edge.
+•Shas a unique, minimal regular cover of Schl¨ aﬂi type {3,12,4}and
+group order 213·32= 73728.
+•But further collapse is possible. Each vertex-ﬁgure is a
+centrally-symmetric cuboctahedron. So let’s collapse these to
+semiregular hemicuboctahedra by adjoining the relation
+(ρ1ρ2ρ3)3= 1
+Polytopality survives this further collapse and we get the
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+More on this new S
+•The polytope Sisuniversal for assembling tetrahedra and
+hemioctahedra face-to-face, with two each alternately surr ounding
+any edge.
+•Shas a unique, minimal regular cover of Schl¨ aﬂi type {3,12,4}and
+group order 213·32= 73728.
+•But further collapse is possible. Each vertex-ﬁgure is a
+centrally-symmetric cuboctahedron. So let’s collapse these to
+semiregular hemicuboctahedra by adjoining the relation
+(ρ1ρ2ρ3)3= 1
+Polytopality survives this further collapse and we get the
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+More on this new S
+•The polytope Sisuniversal for assembling tetrahedra and
+hemioctahedra face-to-face, with two each alternately surr ounding
+any edge.
+•Shas a unique, minimal regular cover of Schl¨ aﬂi type {3,12,4}and
+group order 213·32= 73728.
+•But further collapse is possible. Each vertex-ﬁgure is a
+centrally-symmetric cuboctahedron. So let’s collapse these to
+semiregular hemicuboctahedra by adjoining the relation
+(ρ1ρ2ρ3)3= 1
+Polytopality survives this further collapse and we get the
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Example 7. The Tomotope T(w. D. Pellicer, G. Williams)
+To visualize Tslice out a 2 ×2×2 cube containing eight tetrahedra, a
+core octahedron and three other octahedra, each split into four identical
+but non-regular tetrahedra. The latter pieces ﬁt into the twel ve ‘dimples’
+on the surface of the stella octangula :
+111
+1
+11224
+431
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+More on visualizing T
+Next identify opposite square faces of the 2 ×2×2 cube in toroidal
+fashion, so that the eight original vertices of the cube become one.
+Finally reﬂect in the centre of the core octahedron and so ident ify
+antipodal faces of all ranks.see it again
+You see the 4 vertices, 4 = 8 /2 tetrahedra and 1 hemioctahedron (hidden
+in the core). The other three hemioctahedra are red, yellow an d green, and
+‘run around’ the belts of those colours.
+There are 12 edges, on which Γ( T) acts faithfully,
+and 16 triangular 2-faces.The permutations
+Aside: Γ( T)≃Z4
+2⋊S3has order 96 an can be obtained from the
+crystallographic group˜B3by reduction mod 2.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+More on visualizing T
+Next identify opposite square faces of the 2 ×2×2 cube in toroidal
+fashion, so that the eight original vertices of the cube become one.
+Finally reﬂect in the centre of the core octahedron and so ident ify
+antipodal faces of all ranks.see it again
+You see the 4 vertices, 4 = 8 /2 tetrahedra and 1 hemioctahedron (hidden
+in the core). The other three hemioctahedra are red, yellow an d green, and
+‘run around’ the belts of those colours.
+There are 12 edges, on which Γ( T) acts faithfully,
+and 16 triangular 2-faces.The permutations
+Aside: Γ( T)≃Z4
+2⋊S3has order 96 an can be obtained from the
+crystallographic group˜B3by reduction mod 2.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+More on visualizing T
+Next identify opposite square faces of the 2 ×2×2 cube in toroidal
+fashion, so that the eight original vertices of the cube become one.
+Finally reﬂect in the centre of the core octahedron and so ident ify
+antipodal faces of all ranks.see it again
+You see the 4 vertices, 4 = 8 /2 tetrahedra and 1 hemioctahedron (hidden
+in the core). The other three hemioctahedra are red, yellow an d green, and
+‘run around’ the belts of those colours.
+There are 12 edges, on which Γ( T) acts faithfully,
+and 16 triangular 2-faces.The permutations
+Aside: Γ( T)≃Z4
+2⋊S3has order 96 an can be obtained from the
+crystallographic group˜B3by reduction mod 2.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+More on visualizing T
+Next identify opposite square faces of the 2 ×2×2 cube in toroidal
+fashion, so that the eight original vertices of the cube become one.
+Finally reﬂect in the centre of the core octahedron and so ident ify
+antipodal faces of all ranks.see it again
+You see the 4 vertices, 4 = 8 /2 tetrahedra and 1 hemioctahedron (hidden
+in the core). The other three hemioctahedra are red, yellow an d green, and
+‘run around’ the belts of those colours.
+There are 12 edges, on which Γ( T) acts faithfully,
+and 16 triangular 2-faces.The permutations
+Aside: Γ( T)≃Z4
+2⋊S3has order 96 an can be obtained from the
+crystallographic group˜B3by reduction mod 2.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+The tomotope has Thas a strange property
+that cannot hold for maps (rank 3 polytopes). It has inﬁnitely man y
+mutually non–isomorphic minimal regular covers.
+There is such a ﬁnite, minimal regular cover Ppfor each prime p. Each of
+these 4-polytopes has type {3,12,4}.
+Intuitively: inﬁnitely many distinct sets of minimal assemb ly instructions
+forTusing standardized regular parts.
+SeeThe Tomotope , B. Monson, D. Dellicer, G. Williams, to appear in Ars
+Mathematica Contemporanea.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Enough with the examples - on with the Theorems
+Egon Schulte and I have proved
+Theorem 1 . A combinatorial Wythoﬀ’s construction works for any group
+generated by involutions satisfying at least the relations sugges ted by
+qn−1pn−1pn−2p1Γ : k
+1ρn−1ρ
+βn−1ρ0ρn−2
+and also satisfying an intersection condition (akin to that for string
+C-groups).
+Note:kor various pj’s could equal 2: no branch then.
+Deﬁnition Call Γ atail-triangle group .
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Enough with the examples - on with the Theorems
+Egon Schulte and I have proved
+Theorem 1 . A combinatorial Wythoﬀ’s construction works for any group
+generated by involutions satisfying at least the relations sugges ted by
+qn−1pn−1pn−2p1Γ : k
+1ρn−1ρ
+βn−1ρ0ρn−2
+and also satisfying an intersection condition (akin to that for string
+C-groups).
+Note:kor various pj’s could equal 2: no branch then.
+Deﬁnition Call Γ atail-triangle group .
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Enough with the examples - on with the Theorems
+Egon Schulte and I have proved
+Theorem 1 . A combinatorial Wythoﬀ’s construction works for any group
+generated by involutions satisfying at least the relations sugges ted by
+qn−1pn−1pn−2p1Γ : k
+1ρn−1ρ
+βn−1ρ0ρn−2
+and also satisfying an intersection condition (akin to that for string
+C-groups).
+Note:kor various pj’s could equal 2: no branch then.
+Deﬁnition Call Γ atail-triangle group .
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+And
+Theorem 2 . For any two regular n-polytopes PandQwith matching (i.e.
+isomorphic) facets, there exists a semiregular ( n+1)-polytope Swith
+inﬁnitely many facets of type PandQ, occurring alternately around each
+face of corank 2. (In this case, Γ( S) contains a certain free product with
+amalgamation.)
+(SeeSemiregular polytopes and Amalgamated C-groups ,
+Adv. in Math., to appear.)
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Some almost ﬁnal words on monodromy ...
+The structure of regular covers Rof a general polytope Qhas a lot to do
+with the monodromy group Mon(Q).
+Mon(Q) is a natural permutation group on the ﬂag set of Q; this action
+commutes with the action of automorphisms on ﬂags.
+Mon(Q) is a string group generated by involutions, nearly a string
+C-group. But for the tomotope these generators fail the intersecti on
+condition.
+The fall out : covering and likely other combinatorial questions are
+complicated.
+SeeMixing and Monodromy of Abstract Polytopes , B.M., D. Pellicer, G.
+Williams, in purgatory.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Some almost ﬁnal words on monodromy ...
+The structure of regular covers Rof a general polytope Qhas a lot to do
+with the monodromy group Mon(Q).
+Mon(Q) is a natural permutation group on the ﬂag set of Q; this action
+commutes with the action of automorphisms on ﬂags.
+Mon(Q) is a string group generated by involutions, nearly a string
+C-group. But for the tomotope these generators fail the intersecti on
+condition.
+The fall out : covering and likely other combinatorial questions are
+complicated.
+SeeMixing and Monodromy of Abstract Polytopes , B.M., D. Pellicer, G.
+Williams, in purgatory.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Some almost ﬁnal words on monodromy ...
+The structure of regular covers Rof a general polytope Qhas a lot to do
+with the monodromy group Mon(Q).
+Mon(Q) is a natural permutation group on the ﬂag set of Q; this action
+commutes with the action of automorphisms on ﬂags.
+Mon(Q) is a string group generated by involutions, nearly a string
+C-group. But for the tomotope these generators fail the intersecti on
+condition.
+The fall out : covering and likely other combinatorial questions are
+complicated.
+SeeMixing and Monodromy of Abstract Polytopes , B.M., D. Pellicer, G.
+Williams, in purgatory.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Some almost ﬁnal words on monodromy ...
+The structure of regular covers Rof a general polytope Qhas a lot to do
+with the monodromy group Mon(Q).
+Mon(Q) is a natural permutation group on the ﬂag set of Q; this action
+commutes with the action of automorphisms on ﬂags.
+Mon(Q) is a string group generated by involutions, nearly a string
+C-group. But for the tomotope these generators fail the intersecti on
+condition.
+The fall out : covering and likely other combinatorial questions are
+complicated.
+SeeMixing and Monodromy of Abstract Polytopes , B.M., D. Pellicer, G.
+Williams, in purgatory.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Some ﬁnal words on chirality ... Example 8
+In 2008, M. Conder, I. Hubard, T. Pisanski ended the long search for an y
+chiralpolytopes Pof higher rank (this meant >4 forPﬁnite).
+We recently noticed that Mon(P) fails the intersection condition for one
+of their examples. So take Γ = S6with these generators:
+σ1= (1,2,3),σ2= (1,3,2,4),σ3= (1,5,4,3),σ4= (1,2,3)(4,6,5).
+Then Γ is the automorphism group of a chiral 5-polytope P, evidently with
+type{3,4,4,3}
+ButMon(P), which has order 518400 and the same type, fails the
+intersection condition. We don’t understand where this leads .. .
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Some ﬁnal words on chirality ... Example 8
+In 2008, M. Conder, I. Hubard, T. Pisanski ended the long search for an y
+chiralpolytopes Pof higher rank (this meant >4 forPﬁnite).
+We recently noticed that Mon(P) fails the intersection condition for one
+of their examples. So take Γ = S6with these generators:
+σ1= (1,2,3),σ2= (1,3,2,4),σ3= (1,5,4,3),σ4= (1,2,3)(4,6,5).
+Then Γ is the automorphism group of a chiral 5-polytope P, evidently with
+type{3,4,4,3}
+ButMon(P), which has order 518400 and the same type, fails the
+intersection condition. We don’t understand where this leads .. .
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Some ﬁnal words on chirality ... Example 8
+In 2008, M. Conder, I. Hubard, T. Pisanski ended the long search for an y
+chiralpolytopes Pof higher rank (this meant >4 forPﬁnite).
+We recently noticed that Mon(P) fails the intersection condition for one
+of their examples. So take Γ = S6with these generators:
+σ1= (1,2,3),σ2= (1,3,2,4),σ3= (1,5,4,3),σ4= (1,2,3)(4,6,5).
+Then Γ is the automorphism group of a chiral 5-polytope P, evidently with
+type{3,4,4,3}
+ButMon(P), which has order 518400 and the same type, fails the
+intersection condition. We don’t understand where this leads .. .
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Some ﬁnal words on chirality ... Example 8
+In 2008, M. Conder, I. Hubard, T. Pisanski ended the long search for an y
+chiralpolytopes Pof higher rank (this meant >4 forPﬁnite).
+We recently noticed that Mon(P) fails the intersection condition for one
+of their examples. So take Γ = S6with these generators:
+σ1= (1,2,3),σ2= (1,3,2,4),σ3= (1,5,4,3),σ4= (1,2,3)(4,6,5).
+Then Γ is the automorphism group of a chiral 5-polytope P, evidently with
+type{3,4,4,3}
+ButMon(P), which has order 518400 and the same type, fails the
+intersection condition. We don’t understand where this leads .. .
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Some ﬁnal words on chirality ... Example 8
+In 2008, M. Conder, I. Hubard, T. Pisanski ended the long search for an y
+chiralpolytopes Pof higher rank (this meant >4 forPﬁnite).
+We recently noticed that Mon(P) fails the intersection condition for one
+of their examples. So take Γ = S6with these generators:
+σ1= (1,2,3),σ2= (1,3,2,4),σ3= (1,5,4,3),σ4= (1,2,3)(4,6,5).
+Then Γ is the automorphism group of a chiral 5-polytope P, evidently with
+type{3,4,4,3}
+ButMon(P), which has order 518400 and the same type, fails the
+intersection condition. We don’t understand where this leads .. .
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Some Conjectures and a Question
+•Conjecture . The monodromy group for any convex polytope is a
+string C-group.
+Is this known? (I have some doubts it is true ...)
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Some Conjectures and a Question
+•Conjecture . The monodromy group for any convex polytope is a
+string C-group.
+Is this known? (I have some doubts it is true ...)
+•Conjecture . The monodromy group for any convex polytope with
+combinatorially regular facets of any type is a string C-group. (This
+seems likely.)
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Some Conjectures and a Question
+•Conjecture . The monodromy group for any convex polytope is a
+string C-group.
+Is this known? (I have some doubts it is true ...)
+•Conjecture . The monodromy group for any convex polytope with
+combinatorially regular facets of any type is a string C-group. (This
+seems likely.)
+•Conjecture . There is a ﬁnite abstract (convex?, chiral?) polytope Q
+whose minimal regular covers are all inﬁnite. (Certainly Mon(Q)
+could not then be a string C-group.)
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Some Conjectures and a Question
+•Conjecture . The monodromy group for any convex polytope is a
+string C-group.
+Is this known? (I have some doubts it is true ...)
+•Conjecture . The monodromy group for any convex polytope with
+combinatorially regular facets of any type is a string C-group. (This
+seems likely.)
+•Conjecture . There is a ﬁnite abstract (convex?, chiral?) polytope Q
+whose minimal regular covers are all inﬁnite. (Certainly Mon(Q)
+could not then be a string C-group.)
+•Question Can one always assemble thing 1 and thing 2 for any ﬁnite
+integerk≥2?
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Many thanks to our organizers!
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+References
+[1] M. Conder, I. Hubard and T. Pisanski, Constructions for chiral
+polytopes, J. London Math. Soc., 77(2008), 115–129.
+[2] M. I. Hartley, All Polytopes are Quotients, and Isomorphic Polyt opes
+Are Quotients by Conjugate Subgroups, Discrete Comput. Geom., 21
+(1999), 289–298.
+[3] M. I. Hartley, More on quotient polytopes, Aequationes Math., 57
+(1999), 108–120.
+[4] I. Hubard, A. Orbani´ c, A. I. Weiss, Monodromy groups and
+self-invariance, Canadian Journal of Math, 61(2009), 1300–1324.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+References, continued
+[5] P. McMullen and E. Schulte, Abstract Regular Polytopes, Encycl opedia
+of Mathematics and its Applications, 92, Cambridge University Press,
+Cambridge, 2002.
+[6] B. Monson and E. Schulte, Semiregular polytopes and amalgamated
+C-groups, to appear in Advances in Mathematics.
+[7] B.Monson, D. Pellicer and G. Williams, The Tomotope, to appear in
+Ars Mathematica Contemporanea.
+[8] B.Monson, D. Pellicer and G. Williams, Mixing and Monodromy of
+Abstract Polytopes, in prepartion but nearly done.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Picture of the Tomotope T:
+111
+1
+11224
+431
+back to description
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Example 3.Two regular star-polyhedra (courtesy
+Wikipedia)
+Small stellated dodec.
+{5
+2,5}
+Great icos. {3,5
+2}
+≃convex reg. icos.
+Go Back
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+The semiregular tessellation SofR3
+go back
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+The group Γ( T)
+acts faithfully on edges of T, so we have this permutation representation:
+ρ0= (5,10)(6,9)(7,12)(8,11)
+ρ1= (1,6)(2,5)(3,8)(4,7)
+ρ2= (5,9)(6,10)(7,11)(8,12)
+ρ3= (5,8)(6,7)(9,12)(10,11)
+Back
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Then-polytope Q
+is a poset whose elements (= faces) satisfy:
+get back
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Then-polytope Q
+is a poset whose elements (= faces) satisfy:
+•Qhas a unique minimal face F−1and maximal face Fn
+get back
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Then-polytope Q
+is a poset whose elements (= faces) satisfy:
+•Qhas a unique minimal face F−1and maximal face Fn
+•Every maximal chain or ﬂaghasn+2 faces
+get back
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Then-polytope Q
+is a poset whose elements (= faces) satisfy:
+•Qhas a unique minimal face F−1and maximal face Fn
+•Every maximal chain or ﬂaghasn+2 faces
+soQhas a strictly monotone rank function onto {−1,0,...,n}
+get back
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Then-polytope Q
+is a poset whose elements (= faces) satisfy:
+•Qhas a unique minimal face F−1and maximal face Fn
+•Every maximal chain or ﬂaghasn+2 faces
+soQhas a strictly monotone rank function onto {−1,0,...,n}
+•Qis strongly ﬂag connected
+get back
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Then-polytope Q
+is a poset whose elements (= faces) satisfy:
+•Qhas a unique minimal face F−1and maximal face Fn
+•Every maximal chain or ﬂaghasn+2 faces
+soQhas a strictly monotone rank function onto {−1,0,...,n}
+•Qis strongly ﬂag connected
+•Qsatisﬁes the ‘diamond’ condition:
+get back
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Then-polytope Q
+is a poset whose elements (= faces) satisfy:
+•Qhas a unique minimal face F−1and maximal face Fn
+•Every maximal chain or ﬂaghasn+2 faces
+soQhas a strictly monotone rank function onto {−1,0,...,n}
+•Qis strongly ﬂag connected
+•Qsatisﬁes the ‘diamond’ condition:
+whenever F<Gwith rank( F) =j−1 and rank( G) =j+1 there
+exist exactly two j-facesHwithF<H<G
+H H’
+FG
+jj+1
+j−1
+get back
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+Then-polytope Q
+is a poset whose elements (= faces) satisfy:
+•Qhas a unique minimal face F−1and maximal face Fn
+•Every maximal chain or ﬂaghasn+2 faces
+soQhas a strictly monotone rank function onto {−1,0,...,n}
+•Qis strongly ﬂag connected
+via adjacency in the ﬂag graph; this rules out, for example, the
+disjoint union of two polyhedra
+•Qsatisﬁes the ‘diamond’ condition:
+whenever F<Gwith rank( F) =j−1 and rank( G) =j+1 there
+exist exactly two j-facesHwithF<H<G
+H H’
+FG
+jj+1
+j−1
+get back
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+So when is Mon(Q) a string C-group?
+Some results below may be well-known, others new:
+Mon(Q) is a string C-group if
+•Qis any polyhedron ( d= 3, regardless of symmetry); or
+•Qis regular of any rank (in which case Γ( Q)≃Mon(Q)); or
+•all facets of Qare regular quotients of one particular regular facet (or
+dually); or
+•Qhas any mixture of regular facets together with ﬂag-transitive
+vertex-ﬁgures (or dually).
+•Thus: ifQis any simplicial (or simple) convex polytope, then
+Mon(Q) is a string C-group.
+Example . The cyclic convex 4-polytope Qon 6 vertices thereby has
+a regular cover of Schl¨ aﬂi type {3,3,12};Mon(Q) is a string C-group
+of order 26·37.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+So when is Mon(Q) a string C-group?
+Some results below may be well-known, others new:
+Mon(Q) is a string C-group if
+•Qis any polyhedron ( d= 3, regardless of symmetry); or
+•Qis regular of any rank (in which case Γ( Q)≃Mon(Q)); or
+•all facets of Qare regular quotients of one particular regular facet (or
+dually); or
+•Qhas any mixture of regular facets together with ﬂag-transitive
+vertex-ﬁgures (or dually).
+•Thus: ifQis any simplicial (or simple) convex polytope, then
+Mon(Q) is a string C-group.
+Example . The cyclic convex 4-polytope Qon 6 vertices thereby has
+a regular cover of Schl¨ aﬂi type {3,3,12};Mon(Q) is a string C-group
+of order 26·37.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+So when is Mon(Q) a string C-group?
+Some results below may be well-known, others new:
+Mon(Q) is a string C-group if
+•Qis any polyhedron ( d= 3, regardless of symmetry); or
+•Qis regular of any rank (in which case Γ( Q)≃Mon(Q)); or
+•all facets of Qare regular quotients of one particular regular facet (or
+dually); or
+•Qhas any mixture of regular facets together with ﬂag-transitive
+vertex-ﬁgures (or dually).
+•Thus: ifQis any simplicial (or simple) convex polytope, then
+Mon(Q) is a string C-group.
+Example . The cyclic convex 4-polytope Qon 6 vertices thereby has
+a regular cover of Schl¨ aﬂi type {3,3,12};Mon(Q) is a string C-group
+of order 26·37.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+So when is Mon(Q) a string C-group?
+Some results below may be well-known, others new:
+Mon(Q) is a string C-group if
+•Qis any polyhedron ( d= 3, regardless of symmetry); or
+•Qis regular of any rank (in which case Γ( Q)≃Mon(Q)); or
+•all facets of Qare regular quotients of one particular regular facet (or
+dually); or
+•Qhas any mixture of regular facets together with ﬂag-transitive
+vertex-ﬁgures (or dually).
+•Thus: ifQis any simplicial (or simple) convex polytope, then
+Mon(Q) is a string C-group.
+Example . The cyclic convex 4-polytope Qon 6 vertices thereby has
+a regular cover of Schl¨ aﬂi type {3,3,12};Mon(Q) is a string C-group
+of order 26·37.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+So when is Mon(Q) a string C-group?
+Some results below may be well-known, others new:
+Mon(Q) is a string C-group if
+•Qis any polyhedron ( d= 3, regardless of symmetry); or
+•Qis regular of any rank (in which case Γ( Q)≃Mon(Q)); or
+•all facets of Qare regular quotients of one particular regular facet (or
+dually); or
+•Qhas any mixture of regular facets together with ﬂag-transitive
+vertex-ﬁgures (or dually).
+•Thus: ifQis any simplicial (or simple) convex polytope, then
+Mon(Q) is a string C-group.
+Example . The cyclic convex 4-polytope Qon 6 vertices thereby has
+a regular cover of Schl¨ aﬂi type {3,3,12};Mon(Q) is a string C-group
+of order 26·37.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral
+So when is Mon(Q) a string C-group?
+Some results below may be well-known, others new:
+Mon(Q) is a string C-group if
+•Qis any polyhedron ( d= 3, regardless of symmetry); or
+•Qis regular of any rank (in which case Γ( Q)≃Mon(Q)); or
+•all facets of Qare regular quotients of one particular regular facet (or
+dually); or
+•Qhas any mixture of regular facets together with ﬂag-transitive
+vertex-ﬁgures (or dually).
+•Thus: ifQis any simplicial (or simple) convex polytope, then
+Mon(Q) is a string C-group.
+Example . The cyclic convex 4-polytope Qon 6 vertices thereby has
+a regular cover of Schl¨ aﬂi type {3,3,12};Mon(Q) is a string C-group
+of order 26·37.
+Barry Monson (UNB), (from projects with Egon Schulte, , Daniel Pelli cer and Gordon Williams), , SODO – Queenstown, FebruaryAbstract Polytopes: Regular, Semiregular and Chiral

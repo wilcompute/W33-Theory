@@ -58,7 +58,7 @@ W(5,3) = 1120 points, Steinberg = 19683 = 3⁹
 133 = 40 + 81 + 12
     = W(3,3)_matter + W(3,3)_vacuum + SM_gauge
     = dim(E₇)
-    
+
 E₇ → SU(8) → SU(5) → SU(3)×SU(2)×U(1)
  133    63      24          12
 ```
@@ -260,7 +260,7 @@ $$\boxed{40 + 81 = 121 = 11^2}$$
 ### Dark Energy
 $$\frac{81}{40+81} = \frac{81}{121} = 0.669 \approx 0.68_{\text{observed}}$$
 
-### M-Theory Dimension  
+### M-Theory Dimension
 $$D = \sqrt{\text{matter} + \text{vacuum}} = \sqrt{40 + 81} = 11$$
 
 ### E₇ Unification
@@ -280,6 +280,6 @@ $$\frac{|W(5,3)|}{|W(3,3)|} = \frac{1120}{40} = 28 = \text{dim}(SO(8))$$
 
 ---
 
-**Document Version**: 2.0  
-**Generated**: Session exploration  
+**Document Version**: 2.0
+**Generated**: Session exploration
 **Status**: Ongoing investigation

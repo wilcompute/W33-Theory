@@ -6,24 +6,27 @@ simple Z3 formulas in indices:
   E_i: a*s(i)+b,  C_i: c*s(i)+d,  L_ij: e*s(i)+f*s(j)+g
 with s(i) in Z3 and coefficients in Z3.
 """
+
 from __future__ import annotations
 
+import json
 from itertools import product
 from pathlib import Path
-import json
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 def main():
-    iso = json.loads((ROOT / 'artifacts' / 'balanced_orbit_schlafli_isomorphism.json').read_text())
-    mapping_full = iso['mapping_full']
+    iso = json.loads(
+        (ROOT / "artifacts" / "balanced_orbit_schlafli_isomorphism.json").read_text()
+    )
+    mapping_full = iso["mapping_full"]
 
     # Build line -> phase dict
     line_phase = {}
     for _, info in mapping_full.items():
-        line = tuple(info['line'])
-        line_phase[line] = int(info['phase'])
+        line = tuple(info["line"])
+        line_phase[line] = int(info["phase"])
 
     indices = [1, 2, 3, 4, 5, 6]
 
@@ -33,9 +36,9 @@ def main():
     L_lines = [(i, j) for i in indices for j in indices if i < j]
 
     # Extract observed phases
-    E_obs = {i: line_phase[('E', i)] for i in indices}
-    C_obs = {i: line_phase[('C', i)] for i in indices}
-    L_obs = {(i, j): line_phase[('L', i, j)] for i in indices for j in indices if i < j}
+    E_obs = {i: line_phase[("E", i)] for i in indices}
+    C_obs = {i: line_phase[("C", i)] for i in indices}
+    L_obs = {(i, j): line_phase[("L", i, j)] for i in indices for j in indices if i < j}
 
     solutions = []
 
@@ -66,10 +69,12 @@ def main():
                     ok = False
                     break
             if ok:
-                solutions.append({
-                    "s": s,
-                    "coeffs": (a, b, c, d, e, f, g),
-                })
+                solutions.append(
+                    {
+                        "s": s,
+                        "coeffs": (a, b, c, d, e, f, g),
+                    }
+                )
         if solutions:
             break  # take first s with any solution
 
@@ -77,11 +82,11 @@ def main():
         "num_solutions": len(solutions),
         "solutions": solutions[:5],
     }
-    out_path = ROOT / 'artifacts' / 'schlafli_phase_formula.json'
-    out_path.write_text(json.dumps(results, indent=2), encoding='utf-8')
+    out_path = ROOT / "artifacts" / "schlafli_phase_formula.json"
+    out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(results)
     print(f"Wrote {out_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

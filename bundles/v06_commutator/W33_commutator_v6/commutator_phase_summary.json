@@ -1,7 +1,3 @@
-{
-  "directed_moves": 1080,
-  "comm_k4_distribution": {
-    "6": 1080
-  },
-  "note": "comm_k4_mod12 = 6 corresponds to phase -1; this is a gauge-invariant Bargmann 4-cycle around the elementary triad-swap."
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:37fb7b3bdcdbee44390e062eb37c8e9281de6aba31b18059f1284bb1816fd7ee
+size 209

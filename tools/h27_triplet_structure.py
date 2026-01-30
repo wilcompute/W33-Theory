@@ -14,6 +14,7 @@ Outputs:
 - artifacts/h27_triplet_structure.json
 - artifacts/h27_triplet_structure.md
 """
+
 from __future__ import annotations
 
 import json
@@ -47,11 +48,11 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
     return adj, proj_points
@@ -191,7 +192,7 @@ def main():
         # within
         edges = 0
         for i in range(len(verts)):
-            for j in range(i+1, len(verts)):
+            for j in range(i + 1, len(verts)):
                 if adj[verts[i], verts[j]]:
                     edges += 1
         within_counts.append(edges)

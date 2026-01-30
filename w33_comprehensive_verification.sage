@@ -58,8 +58,8 @@ print(f"  Isotropic 1-spaces: {len(iso_spaces)}")
 def symp_form(u, v):
     return vector(GF(3), u) * J * vector(GF(3), v)
 
-edges = [(i, j) for i in range(len(iso_spaces)) 
-         for j in range(i+1, len(iso_spaces)) 
+edges = [(i, j) for i in range(len(iso_spaces))
+         for j in range(i+1, len(iso_spaces))
          if symp_form(iso_spaces[i], iso_spaces[j]) != 0]
 
 W33 = Graph(edges)

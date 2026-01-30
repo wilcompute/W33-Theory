@@ -8,26 +8,35 @@ These must be the 90 K4 components!
 What makes them special?
 """
 
-import numpy as np
-from pathlib import Path
-import pandas as pd
 from collections import defaultdict
 from itertools import combinations
+from pathlib import Path
 
-ROOT = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data")
+import numpy as np
+import pandas as pd
+
+ROOT = Path(
+    r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data"
+)
+
 
 def load_rays():
-    df = pd.read_csv(ROOT / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv")
+    df = pd.read_csv(
+        ROOT
+        / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv"
+    )
     V = np.zeros((40, 4), dtype=np.complex128)
     for _, row in df.iterrows():
-        pid = int(row['point_id'])
+        pid = int(row["point_id"])
         for i in range(4):
-            V[pid, i] = complex(str(row[f'v{i}']).replace(' ', ''))
+            V[pid, i] = complex(str(row[f"v{i}"]).replace(" ", ""))
     return V
+
 
 def load_lines():
     df = pd.read_csv(ROOT / "_workbench/02_geometry/W33_line_phase_map.csv")
-    return [tuple(map(int, str(row['point_ids']).split())) for _, row in df.iterrows()]
+    return [tuple(map(int, str(row["point_ids"]).split())) for _, row in df.iterrows()]
+
 
 def inner(V, p, q):
     return np.vdot(V[p], V[q])
@@ -246,7 +255,9 @@ def analyze_dual_structure():
                     col_pairs += 1
                 else:
                     noncol_pairs += 1
-            print(f"  Among perp: {noncol_pairs} non-collinear pairs, {col_pairs} collinear pairs")
+            print(
+                f"  Among perp: {noncol_pairs} non-collinear pairs, {col_pairs} collinear pairs"
+            )
 
             if col_pairs == 0 and len(perp) == 4:
                 print(f"  *** OUTER QUAD FOUND: {perp_list}")
@@ -312,7 +323,9 @@ def prove_minus_one_algebraically():
     for i, p in enumerate(outer):
         zeros = [j for j in range(4) if abs(alpha[i, j]) < 0.01]
         nonzeros = [j for j in range(4) if abs(alpha[i, j]) > 0.01]
-        print(f"  Outer {p}: orthogonal to center indices {zeros}, nonzero at {nonzeros}")
+        print(
+            f"  Outer {p}: orthogonal to center indices {zeros}, nonzero at {nonzeros}"
+        )
 
 
 def main():
@@ -320,6 +333,7 @@ def main():
     analyze_what_makes_k4_special()
     analyze_dual_structure()
     prove_minus_one_algebraically()
+
 
 if __name__ == "__main__":
     main()

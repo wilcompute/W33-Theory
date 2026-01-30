@@ -15,9 +15,9 @@ The triangles come from:
 
 import numpy as np
 
-print("="*70)
+print("=" * 70)
 print("PART CXLVIII: COMPLETE LOCAL STRUCTURE OF Sp₄(3)")
-print("="*70)
+print("=" * 70)
 
 omega = np.exp(2j * np.pi / 3)
 
@@ -25,40 +25,44 @@ omega = np.exp(2j * np.pi / 3)
 # BUILD WITTING STATES AND GRAPH
 # =====================================================
 
+
 def build_witting_states():
     states = []
     for i in range(4):
         v = np.zeros(4, dtype=complex)
         v[i] = 1
         states.append(v)
-    
+
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([0, 1, -omega**mu, omega**nu]) / np.sqrt(3))
+            states.append(np.array([0, 1, -(omega**mu), omega**nu]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([1, 0, -omega**mu, -omega**nu]) / np.sqrt(3))
+            states.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
-            states.append(np.array([1, -omega**mu, 0, omega**nu]) / np.sqrt(3))
+            states.append(np.array([1, -(omega**mu), 0, omega**nu]) / np.sqrt(3))
     for mu in [0, 1, 2]:
         for nu in [0, 1, 2]:
             states.append(np.array([1, omega**mu, omega**nu, 0]) / np.sqrt(3))
-    
+
     return states
+
 
 states = build_witting_states()
 
+
 def is_orthogonal(i, j):
-    return abs(np.vdot(states[i], states[j]))**2 < 1e-10
+    return abs(np.vdot(states[i], states[j])) ** 2 < 1e-10
+
 
 # =====================================================
 # THE CORRECT ORTHOGONALITY RULE
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("THE ORTHOGONALITY RULE FOR SUPERPOSITIONS")
-print("="*70)
+print("=" * 70)
 
 print("""
 For states in Group 1: (0, 1, -ω^μ, ω^ν)/√3
@@ -89,10 +93,10 @@ Wait, let me compute (Δμ, Δν) where Δν = ν₂ - ν₁:
 print("\nActual orthogonality pattern:")
 for i in range(9):
     mu_i, nu_i = i // 3, i % 3
-    for j in range(i+1, 9):
+    for j in range(i + 1, 9):
         mu_j, nu_j = j // 3, j % 3
-        
-        if is_orthogonal(4+i, 4+j):
+
+        if is_orthogonal(4 + i, 4 + j):
             d_mu = (mu_j - mu_i) % 3
             d_nu = (nu_j - nu_i) % 3
             print(f"  ({mu_i},{nu_i}) ⊥ ({mu_j},{nu_j}): (Δμ, Δν) = ({d_mu}, {d_nu})")
@@ -101,9 +105,9 @@ for i in range(9):
 # THE LINES IN AG(2, F₃)
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("LINES IN THE AFFINE PLANE AG(2, F₃)")
-print("="*70)
+print("=" * 70)
 
 print("""
 AG(2, F₃) has 9 points and 12 lines.
@@ -127,9 +131,9 @@ Lines:
 
 # Verify these are the actual triangles
 triangles_predicted = [
-    {4, 8, 12},   # ν - μ = 0
-    {5, 9, 10},   # ν - μ = 1
-    {6, 7, 11},   # ν - μ = 2
+    {4, 8, 12},  # ν - μ = 0
+    {5, 9, 10},  # ν - μ = 1
+    {6, 7, 11},  # ν - μ = 2
 ]
 
 print("\nVerifying predicted triangles:")
@@ -145,23 +149,25 @@ print("\nFinding actual triangles in Group 1:")
 group1 = list(range(4, 13))
 actual_triangles = []
 for i in range(9):
-    for j in range(i+1, 9):
+    for j in range(i + 1, 9):
         if is_orthogonal(group1[i], group1[j]):
-            for k in range(j+1, 9):
-                if is_orthogonal(group1[i], group1[k]) and is_orthogonal(group1[j], group1[k]):
+            for k in range(j + 1, 9):
+                if is_orthogonal(group1[i], group1[k]) and is_orthogonal(
+                    group1[j], group1[k]
+                ):
                     actual_triangles.append({group1[i], group1[j], group1[k]})
 
 for tri in actual_triangles:
-    coords = [((idx-4)//3, (idx-4)%3) for idx in sorted(tri)]
+    coords = [((idx - 4) // 3, (idx - 4) % 3) for idx in sorted(tri)]
     print(f"  {sorted(tri)} -> coords {coords}")
 
 # =====================================================
 # THE AFFINE PLANE STRUCTURE
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("THE AFFINE PLANE AG(2, F₃)")
-print("="*70)
+print("=" * 70)
 
 print("""
 AG(2, F₃) = F₃ × F₃ as a set of 9 points.
@@ -193,16 +199,18 @@ Direction (1, 2) - other diagonal:
 # Check which parallel class matches our triangles
 print("Matching to actual triangles:")
 for tri in actual_triangles:
-    coords = [(idx-4)//3 for idx in sorted(tri)], [(idx-4)%3 for idx in sorted(tri)]
+    coords = [(idx - 4) // 3 for idx in sorted(tri)], [
+        (idx - 4) % 3 for idx in sorted(tri)
+    ]
     mus, nus = coords
-    
+
     # Check ν - μ = const?
     diffs = [(nus[i] - mus[i]) % 3 for i in range(3)]
     if len(set(diffs)) == 1:
         print(f"  {sorted(tri)}: ν - μ = {diffs[0]} (direction (1,1))")
-    
+
     # Check 2ν - μ = const?
-    diffs2 = [(2*nus[i] - mus[i]) % 3 for i in range(3)]
+    diffs2 = [(2 * nus[i] - mus[i]) % 3 for i in range(3)]
     if len(set(diffs2)) == 1:
         print(f"  {sorted(tri)}: 2ν - μ = {diffs2[0]} (direction (1,2))")
 
@@ -210,9 +218,9 @@ for tri in actual_triangles:
 # COMPLETE LOCAL PICTURE
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("COMPLETE LOCAL STRUCTURE")
-print("="*70)
+print("=" * 70)
 
 vertex = 0
 neighbors = [j for j in range(40) if is_orthogonal(vertex, j)]
@@ -280,9 +288,9 @@ print(f"""
 # CONNECTIONS BETWEEN NEIGHBOR AND NON-NEIGHBOR
 # =====================================================
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("NEIGHBOR ↔ NON-NEIGHBOR CONNECTIONS")
-print("="*70)
+print("=" * 70)
 
 # For each neighbor, count how many non-neighbors it's adjacent to
 print("Each neighbor is adjacent to how many non-neighbors?")
@@ -309,9 +317,9 @@ print(f"  Edges between neighbors and non-neighbors: {240 - 12 - n_edges - nn_ed
 cross_edges = sum(1 for n in neighbors for nn in non_neighbors if is_orthogonal(n, nn))
 print(f"  Actual count: {cross_edges}")
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PART CXLVIII COMPLETE")
-print("="*70)
+print("=" * 70)
 
 print("""
 COMPLETE LOCAL STRUCTURE OF Sp₄(3):

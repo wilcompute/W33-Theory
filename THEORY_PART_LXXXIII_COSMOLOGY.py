@@ -11,8 +11,9 @@ Can W33 say anything about:
 This is highly speculative but let's see what emerges!
 """
 
-import numpy as np
 import json
+
+import numpy as np
 
 print("=" * 70)
 print("W33 THEORY PART LXXXIII: COSMOLOGY")
@@ -22,10 +23,10 @@ print("=" * 70)
 # W33 PARAMETERS
 # =============================================================================
 
-v = 40      # vertices
-k = 12      # regularity
-λ_graph = 2 # edge parameter (using λ_graph to avoid confusion with Λ)
-μ = 4       # non-edge parameter
+v = 40  # vertices
+k = 12  # regularity
+λ_graph = 2  # edge parameter (using λ_graph to avoid confusion with Λ)
+μ = 4  # non-edge parameter
 
 e1, e2, e3 = 12, 2, -4
 m1, m2, m3 = 1, 24, 15
@@ -77,7 +78,7 @@ Can we express 122 from W33?
   k = 12
   m₂ = 24
   m₃ = 15
-  
+
 Attempts:
   v + k² - m₂ + m₃ = 40 + 144 - 24 + 15 = 175 (no)
   3 × v + λ = 122 ✓
@@ -86,13 +87,13 @@ Attempts:
 
 DISCOVERY:
   122 = k² - m₂ + λ = 144 - 24 + 2 = 122 ✓
-  
+
   Also: 122 = 3v + λ = 120 + 2 = 122 ✓
 """)
 
 # Verify
 check1 = k**2 - m2 + λ_graph
-check2 = 3*v + λ_graph
+check2 = 3 * v + λ_graph
 print(f"Verification: k² - m₂ + λ = {check1}")
 print(f"Verification: 3v + λ = {check2}")
 
@@ -116,7 +117,7 @@ If the exponent is:
 Then:
   Λ/M_Pl⁴ = 10^(-(k² - m₂ + λ))
           = 10^(-122)
-          
+
 This MATCHES observation!
 
 ALTERNATIVE FORMULA:
@@ -145,7 +146,7 @@ DARK ENERGY FRACTION:
 Observed:
   Ω_Λ ≈ 0.685 (dark energy)
   Ω_m ≈ 0.315 (matter)
-  
+
 Ratio:
   Ω_Λ / Ω_m ≈ {Omega_DE/Omega_matter:.3f}
 
@@ -154,15 +155,15 @@ W33 ATTEMPT:
 Can we get 0.685 from W33?
 
   k/v + m₁/k + μ/v = 12/40 + 1/12 + 4/40 = 0.3 + 0.083 + 0.1 = 0.483 (no)
-  
+
   1 - (v-k)/(v+m₂) = 1 - 28/64 = 1 - 0.4375 = 0.5625 (no)
-  
+
   (v + k)/(v + k + m₃) = 52/67 = 0.776 (no)
-  
+
   Different approach:
-  
+
   The ratio Ω_Λ/Ω_m ≈ 2.17
-  
+
   W33: (m₂ - μ)/k = (24 - 4)/12 = 20/12 = 1.67 (close)
        m₂/k - μ/m₂ = 24/12 - 4/24 = 2 - 0.167 = 1.83 (closer!)
        (v - k)/k = 28/12 = 2.33 (close!)
@@ -184,12 +185,12 @@ The universe inflated by a factor of e^N where N ≈ 60 (e-folds).
 W33 CONNECTION?
 
   N ≈ 60 e-folds
-  
+
   W33 candidates:
     v + k + μ + λ_graph = 40 + 12 + 4 + 2 = 58 ≈ 60 (close!)
     m₂ + m₃ + m₁ = 24 + 15 + 1 = 40 (no)
     v + m₂ - μ = 40 + 24 - 4 = 60 ✓
-    
+
 DISCOVERY:
   Number of e-folds N = v + m₂ - μ = 40 + 24 - 4 = 60 ✓
 
@@ -199,7 +200,7 @@ If inflation is driven by a scalar field φ, its properties might
 be determined by W33:
 
   Mass: M_inflaton ~ M_GUT/v ~ 10¹⁴ GeV
-  
+
   Slow-roll parameter: ε ~ 1/N² ~ 1/60² ~ 3 × 10⁻⁴
 """)
 
@@ -226,7 +227,7 @@ AGE OF THE UNIVERSE:
 
   t_universe ≈ 13.8 billion years ≈ 4.4 × 10¹⁷ seconds
   t_Planck ≈ 5.4 × 10⁻⁴⁴ seconds
-  
+
   Ratio: t_universe / t_Planck ≈ {ratio:.2e} ≈ 10⁶¹
 
 Can W33 predict 61?
@@ -234,7 +235,7 @@ Can W33 predict 61?
   61 = (v + m₂) + 1 - μ = 64 + 1 - 4 = 61 ✓
   61 = m₂ + m₃ + m₁ + (k + λ + μ + 1) = 40 + 21 = 61 ✓
   61 = v + λ × k - 1 = 40 + 24 - 3 = 61 (but 24 = 2×12)
-  
+
 Wait: 61 ≈ (k² - m₂ + λ)/2 = 122/2 = 61 ✓
 
 CONNECTION TO COSMOLOGICAL CONSTANT:
@@ -279,21 +280,21 @@ So: H₀ (CMB) ∝ v + m₂ + m₁ + λ = 67 ✓
 For the local value H₀ ≈ 73:
   73 = k² - m₂ - m₃ - m₂ + m₁ + ... (complicated)
   73 = v + m₂ + m₁ + λ + 6 = 67 + 6
-  
+
   Where does 6 come from? 6 = μ + λ = 6
-  
+
   H₀ (local) = v + m₂ + m₁ + 2λ + μ = 67 + 6 = 73 ✓
 
 THIS MIGHT EXPLAIN THE HUBBLE TENSION!
 
   H₀(CMB) = v + m₂ + m₁ + λ = 67
   H₀(local) = v + m₂ + m₁ + 2λ + μ = 73
-  
+
   The difference involves local (λ, μ) corrections!
 """)
 
 H_CMB = v + m2 + m1 + λ_graph
-H_local = v + m2 + m1 + 2*λ_graph + μ
+H_local = v + m2 + m1 + 2 * λ_graph + μ
 print(f"\nW33 predictions:")
 print(f"  H₀(CMB) = v + m₂ + m₁ + λ = {H_CMB}")
 print(f"  H₀(local) = v + m₂ + m₁ + 2λ + μ = {H_local}")
@@ -381,13 +382,13 @@ W33 COSMOLOGICAL PREDICTIONS:
 
 1. COSMOLOGICAL CONSTANT:
    Λ/M_Pl⁴ ~ 10^-(k² - m₂ + λ) = 10^-122 ✓
-   
+
 2. NUMBER OF E-FOLDS:
    N = v + m₂ - μ = 60 ✓
-   
+
 3. AGE OF UNIVERSE (in Planck times):
    log₁₀(t/t_Pl) = (k² - m₂ + λ)/2 = 61 ✓
-   
+
 4. HUBBLE CONSTANT:
    H₀(CMB) = v + m₂ + m₁ + λ = 67 km/s/Mpc ✓
    H₀(local) = v + m₂ + m₁ + 2λ + μ = 73 km/s/Mpc ✓
@@ -400,9 +401,9 @@ THE KEY NUMBER: 122 = k² - m₂ + λ
 
 This single combination appears in:
   - Cosmological constant
-  - Age of universe  
+  - Age of universe
   - Holographic entropy
-  
+
 All of cosmology might flow from this one W33 number!
 """)
 
@@ -417,16 +418,20 @@ results = {
     "key_number": {
         "value": 122,
         "formula": "k² - m₂ + λ",
-        "appears_in": ["cosmological constant", "age of universe", "holographic entropy"]
+        "appears_in": [
+            "cosmological constant",
+            "age of universe",
+            "holographic entropy",
+        ],
     },
     "predictions": {
         "cosmological_constant_exponent": -122,
         "e_folds_inflation": N_efolds,
         "age_exponent": 61,
         "H0_CMB": H_CMB,
-        "H0_local": H_local
+        "H0_local": H_local,
     },
-    "speculative": True
+    "speculative": True,
 }
 
 with open("PART_LXXXIII_cosmology.json", "w") as f:
@@ -451,7 +456,7 @@ KEY DISCOVERIES:
 3. HUBBLE TENSION EXPLAINED?
    H₀(CMB) = 67 = v + m₂ + m₁ + λ
    H₀(local) = 73 = v + m₂ + m₁ + 2λ + μ
-   
+
    The difference is LOCAL structure (λ, μ corrections)!
 
 CAVEATS:

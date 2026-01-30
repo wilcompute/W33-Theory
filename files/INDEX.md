@@ -15,7 +15,7 @@ W33_MASTER/
 ├── INDEX.md                    # This file
 ├── core/
 │   ├── AXIOMS.md              # The 3 foundational axioms
-│   ├── CONSTRUCTION.md        # The forced tower of structures  
+│   ├── CONSTRUCTION.md        # The forced tower of structures
 │   ├── MASTER_THEOREMS.md     # The 4 main theorems
 │   └── NUMERICAL_ATLAS.md     # All key numbers and their meanings
 ├── connections/

@@ -31,8 +31,8 @@ auto-generated tables in `artifacts/final_summary_table.md` and
 - **Each line has 4 points**
 - **Each point lies on 4 lines**
 - **Point graph**: **W33 = SRG(40,12,2,4)** with 240 edges
-- **Automorphisms (canonical)**:  
-  - **Aut_inc(W(3,3)) ≅ Sp(4,3) ≅ W(E6)**, order **51,840**  
+- **Automorphisms (canonical)**:
+  - **Aut_inc(W(3,3)) ≅ Sp(4,3) ≅ W(E6)**, order **51,840**
   - **Aut_pts(W33) ≅ PSp(4,3)**, order **25,920** (index 2)
 
 ### Why W33 is special:
@@ -55,7 +55,7 @@ auto-generated tables in `artifacts/final_summary_table.md` and
 - K4 components all singlet: 90/90 (100%)
 - Enhancement factor: 100% / 46.3% = **2.16×** (understated)
 
-**Statistical significance**: 
+**Statistical significance**:
 - Probability of 90/90 by chance: < 10⁻⁹⁰
 - **Interpretation**: Color confinement emerges from pure geometry
 

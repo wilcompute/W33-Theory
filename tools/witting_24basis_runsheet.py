@@ -3,11 +3,12 @@
 
 Includes basis order, ray indices, and noncontextual bound.
 """
+
 from __future__ import annotations
 
 import json
-from pathlib import Path
 from itertools import combinations
+from pathlib import Path
 
 import numpy as np
 
@@ -28,11 +29,11 @@ def construct_witting_40_rays():
         labels.append(f"e{i}")
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
             labels.append(f"(0,1,-w^{mu},w^{nu})/sqrt3")
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
             labels.append(f"(1,0,-w^{mu},-w^{nu})/sqrt3")
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             labels.append(f"(1,-w^{mu},0,w^{nu})/sqrt3")
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
             labels.append(f"(1,w^{mu},w^{nu},0)/sqrt3")
@@ -52,8 +53,14 @@ def find_tetrads(rays):
                 ortho[i, j] = ortho[j, i] = True
     tetrads = []
     for a, b, c, d in combinations(range(n), 4):
-        if (ortho[a, b] and ortho[a, c] and ortho[a, d] and
-                ortho[b, c] and ortho[b, d] and ortho[c, d]):
+        if (
+            ortho[a, b]
+            and ortho[a, c]
+            and ortho[a, d]
+            and ortho[b, c]
+            and ortho[b, d]
+            and ortho[c, d]
+        ):
             tetrads.append((a, b, c, d))
     return tetrads
 

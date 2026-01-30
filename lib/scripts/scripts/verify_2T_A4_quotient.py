@@ -46,7 +46,9 @@ def main():
     out_dir.mkdir(parents=True, exist_ok=True)
 
     a4_elements, a4_table = read_table(data_dir / "A4_multiplication_table.csv")
-    t2_elements, t2_table = read_table(data_dir / "binary_tetrahedral_2T_multiplication_table.csv")
+    t2_elements, t2_table = read_table(
+        data_dir / "binary_tetrahedral_2T_multiplication_table.csv"
+    )
 
     base_elements, quotient_table = build_quotient(t2_elements, t2_table)
 
@@ -71,7 +73,9 @@ def main():
     with summary_path.open("w", encoding="utf-8") as handle:
         handle.write("# 2T -> A4 quotient check\n\n")
         handle.write("Inputs:\n")
-        handle.write("- `data/_algebra/binary_tetrahedral2T_multiplication_table.csv`\n")
+        handle.write(
+            "- `data/_algebra/binary_tetrahedral2T_multiplication_table.csv`\n"
+        )
         handle.write("- `data/_algebra/a4multiplication_table.csv`\n\n")
         handle.write("Quotient rule:\n")
         handle.write("- Identify `g ~ g*` by stripping trailing `*`.\n\n")
@@ -86,4 +90,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

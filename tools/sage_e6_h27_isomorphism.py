@@ -6,6 +6,7 @@ Discovery-mode script:
 2) Build E6 minuscule weights (27 weights).
 3) Test multiple adjacency rules and check isomorphism to H27.
 """
+
 from __future__ import annotations
 
 import json
@@ -19,7 +20,11 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def build_w33():
     F3 = [0, 1, 2]
-    vectors = [v for v in __import__('itertools').product(F3, repeat=4) if any(x != 0 for x in v)]
+    vectors = [
+        v
+        for v in __import__("itertools").product(F3, repeat=4)
+        if any(x != 0 for x in v)
+    ]
 
     proj_points = []
     seen = set()
@@ -37,12 +42,12 @@ def build_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
-    adj = [[0]*n for _ in range(n)]
+    adj = [[0] * n for _ in range(n)]
     edges = []
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i][j] = adj[j][i] = 1
                 edges.append((i, j))
@@ -65,7 +70,7 @@ def build_h27(adj, base=0):
 
 
 def e6_minuscule_weights():
-    R = RootSystem(['E', 6])
+    R = RootSystem(["E", 6])
     W = R.weight_lattice()
     WG = W.weyl_group()
     omega1 = W.fundamental_weights()[1]
@@ -91,7 +96,7 @@ def e6_minuscule_weights():
 
 
 def e6_root_vectors():
-    R = RootSystem(['E', 6])
+    R = RootSystem(["E", 6])
     root_lattice = R.root_lattice()
     roots = [vector(r.to_vector()) for r in root_lattice.roots()]
     return roots
@@ -101,7 +106,7 @@ def build_weight_graph(ambient_weights, rule):
     edges = []
     n = len(ambient_weights)
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if rule(ambient_weights[i], ambient_weights[j]):
                 edges.append((i, j))
     G = Graph(edges)
@@ -116,11 +121,7 @@ def main():
     h27_deg = sorted(set(G_h27.degree()))
     h27_edges = G_h27.num_edges()
 
-    results = {
-        "h27_degree_set": h27_deg,
-        "h27_edges": h27_edges,
-        "tests": []
-    }
+    results = {"h27_degree_set": h27_deg, "h27_edges": h27_edges, "tests": []}
 
     weights, wvecs = e6_minuscule_weights()
     roots = e6_root_vectors()
@@ -129,7 +130,7 @@ def main():
     # Compute all inner products to inspect spectrum of values
     ip_vals = set()
     for i in range(len(wvecs)):
-        for j in range(i+1, len(wvecs)):
+        for j in range(i + 1, len(wvecs)):
             ip_vals.add(wvecs[i].dot_product(wvecs[j]))
 
     # Candidate rules
@@ -149,7 +150,7 @@ def main():
     pair_types = {}
     type_list = []
     for i in range(len(wvecs)):
-        for j in range(i+1, len(wvecs)):
+        for j in range(i + 1, len(wvecs)):
             ip = wvecs[i].dot_product(wvecs[j])
             d = wvecs[i] - wvecs[j]
             dn = d.dot_product(d)
@@ -166,12 +167,14 @@ def main():
         iso = False
         if edges == h27_edges and degs == h27_deg:
             iso = G.is_isomorphic(G_h27)
-        results["tests"].append({
-            "name": name,
-            "degree_set": degs,
-            "edges": edges,
-            "isomorphic_to_h27": bool(iso)
-        })
+        results["tests"].append(
+            {
+                "name": name,
+                "degree_set": degs,
+                "edges": edges,
+                "isomorphic_to_h27": bool(iso),
+            }
+        )
 
     # Brute force over small subsets of pair types to match degree 8
     results["pair_types"] = {str(k): len(v) for k, v in pair_types.items()}
@@ -180,6 +183,7 @@ def main():
     # If too many types, skip search
     if len(type_list) <= 10:
         from itertools import combinations
+
         for r in range(1, len(type_list) + 1):
             for combo in combinations(type_list, r):
                 edges = []
@@ -193,12 +197,14 @@ def main():
                 if G.num_edges() != h27_edges:
                     continue
                 iso = G.is_isomorphic(G_h27)
-                results["pair_type_search"].append({
-                    "combo": [str(k) for k in combo],
-                    "edges": G.num_edges(),
-                    "degree_set": degs,
-                    "isomorphic_to_h27": bool(iso)
-                })
+                results["pair_type_search"].append(
+                    {
+                        "combo": [str(k) for k in combo],
+                        "edges": G.num_edges(),
+                        "degree_set": degs,
+                        "isomorphic_to_h27": bool(iso),
+                    }
+                )
                 if iso:
                     print("FOUND ISOMORPHIC COMBO:", combo)
                     raise SystemExit

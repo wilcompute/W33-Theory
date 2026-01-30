@@ -1,13 +1,15 @@
 # Normalize line endings
 * text=auto
-
 # Scripts should stay LF
 *.sh text eol=lf
 *.py text eol=lf
 *.ps1 text eol=lf
 *.sage text eol=lf
 *.md text eol=lf
-
 # Windows scripts can be CRLF
 *.bat text eol=crlf
 *.cmd text eol=crlf
+maniplex_doc_bundle/*.pdf filter=lfs diff=lfs merge=lfs -text
+bundles/**/*.json filter=lfs diff=lfs merge=lfs -text
+data/repetend_scan/*.json filter=lfs diff=lfs merge=lfs -text
+data/repetend_scan/*.csv filter=lfs diff=lfs merge=lfs -text

@@ -11,6 +11,7 @@ Two scores are computed:
 
 Outputs artifacts/pattern_class_multiplet_inference.json
 """
+
 from __future__ import annotations
 
 import json
@@ -24,9 +25,9 @@ ROOT = Path(__file__).resolve().parents[1]
 E6_adj = {
     0: {2},
     1: {2},
-    2: {0,1,3},
-    3: {2,4},
-    4: {3,5},
+    2: {0, 1, 3},
+    3: {2, 4},
+    4: {3, 5},
     5: {4},
 }
 

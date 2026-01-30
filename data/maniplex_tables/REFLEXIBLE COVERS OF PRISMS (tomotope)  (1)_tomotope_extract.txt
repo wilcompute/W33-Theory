@@ -1,0 +1,3 @@
+Abstract. The Tomotope provided the first well understood example of an abstract 4-polytope
+lar cover. Since the discovery of the Tomotope, an active area of investigation has been determining
+14. Barry Monson, Daniel Pellicer, and Gordon I. Williams, The Tomotope , Ars Math. Contemp. 5(2012), 355–370.

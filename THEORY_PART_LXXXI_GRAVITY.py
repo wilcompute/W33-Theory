@@ -10,9 +10,10 @@ it should connect to gravitational physics somehow.
 Key question: Is there a W33 formula for M_Planck / M_electroweak?
 """
 
-import numpy as np
 import json
 from decimal import Decimal, getcontext
+
+import numpy as np
 
 getcontext().prec = 50
 
@@ -24,10 +25,10 @@ print("=" * 70)
 # W33 PARAMETERS
 # =============================================================================
 
-v = 40      # vertices
-k = 12      # regularity
-λ = 2       # edge parameter
-μ = 4       # non-edge parameter
+v = 40  # vertices
+k = 12  # regularity
+λ = 2  # edge parameter
+μ = 4  # non-edge parameter
 
 # Eigenvalues and multiplicities
 e1, e2, e3 = 12, 2, -4
@@ -69,13 +70,14 @@ print("=" * 70)
 
 # Various large numbers from W33
 import math
+
 candidates = {
     "3^33": 3**33,
-    "3^(v-7)": 3**(v-7),
+    "3^(v-7)": 3 ** (v - 7),
     "v^v": v**v,
     "v^k": v**k,
     "k^v": k**v,
-    "e^(v*k)": np.exp(v*k),
+    "e^(v*k)": np.exp(v * k),
     "|Aut(W33)|^k": 51840**k,
     "v! / k!": math.factorial(v) / math.factorial(k),
 }
@@ -116,11 +118,11 @@ print("=" * 70)
 
 test1 = 3**36
 test2 = 3**37
-test3 = 3**(v-4)  # 3^36
+test3 = 3 ** (v - 4)  # 3^36
 
 # Or involving v directly
 test4 = v**v / v  # 40^39 / 40 - way too big
-test5 = 3**(v-3) * k  # 3^37 × 12
+test5 = 3 ** (v - 3) * k  # 3^37 × 12
 
 print(f"""
 HYPOTHESIS: The Planck hierarchy involves powers of 3
@@ -135,9 +137,9 @@ REFINED FORMULA:
   M_Planck / M_EW = 3^(v-4) × √3 = 3^(v-4+1/2) = 3^36.5
 
   3^36.5 = {3**36.5:.4e}
-  
+
   Target = {hierarchy:.4e}
-  
+
   Ratio: {3**36.5 / hierarchy:.3f}
 
 Still off by ~50%... Let's try another approach.
@@ -159,7 +161,7 @@ print("=" * 70)
 # α_G(M_Z) = (M_Z / M_Planck)² ≈ (10² / 10¹⁹)² = 10⁻³⁴
 
 M_Z = 91.2  # GeV
-alpha_G_weak = (M_Z / M_Planck)**2
+alpha_G_weak = (M_Z / M_Planck) ** 2
 
 print(f"""
 GRAVITATIONAL COUPLING:
@@ -179,21 +181,21 @@ HYPOTHESIS: α_G⁻¹(M_Z) involves the graph in some power
 """)
 
 # Try to match this huge number
-huge = 1/alpha_G_weak
+huge = 1 / alpha_G_weak
 print(f"\nTarget: {huge:.3e}")
 
-# 3^72 would give (3^36)^2 
+# 3^72 would give (3^36)^2
 test_3_72 = 3**72
 test_3_70 = 3**70
 
 # Or v^v/something
-test_vv = (Decimal(v)**Decimal(v))
+test_vv = Decimal(v) ** Decimal(v)
 
 print(f"""
 3⁷² = (3³⁶)² = {test_3_72:.3e}
   Ratio: {test_3_72/huge:.1f}
 
-3⁷⁰ = {test_3_70:.3e}  
+3⁷⁰ = {test_3_70:.3e}
   Ratio: {test_3_70/huge:.1f}
 
 Hmm, 3^70 is close! And 70 = v + v - k + λ = 40 + 40 - 12 + 2
@@ -225,9 +227,9 @@ If M_Pl = M_W × 3^n for some n derived from W33, then:
 
   M_W ≈ 80 GeV
   M_Pl ≈ 1.22 × 10¹⁹ GeV
-  
+
   3^n = M_Pl/M_W ≈ 1.5 × 10¹⁷
-  
+
   n = log₃(1.5 × 10¹⁷) ≈ 36.1
 
 So: M_Planck ≈ M_W × 3^(v-4) × 3^0.1
@@ -251,7 +253,7 @@ The graviton is a massless spin-2 particle.
 In representation theory:
   - Spin-2 is the symmetric traceless tensor
   - For SO(3), this has dimension 2×2+1 = 5
-  
+
 W33 CONNECTION:
 
 The 15-dimensional eigenspace (m₃ = 15) decomposes as:
@@ -265,7 +267,7 @@ SPECULATION:
 The graviton might emerge from the m₃ = 15 sector,
 specifically from its 5-dimensional sub-representation.
 
-This would explain why gravity is separate from 
+This would explain why gravity is separate from
 the gauge forces (which live in the 24-dimensional sector).
 """)
 
@@ -301,7 +303,7 @@ POSSIBLE INTERPRETATIONS:
    40 = number of branes in some configuration
    |Aut(W33)| = 51840 could count brane permutations
 
-The 240 edges = E₈ root structure suggests 
+The 240 edges = E₈ root structure suggests
 W33 lives naturally in heterotic string theory!
 """)
 
@@ -328,11 +330,11 @@ SPECULATION:
 The "1111" might encode Planck-scale physics:
 
   1111 = 1 + 10 + 100 + 1000
-  
+
   Each term might represent a different "level" of physics:
     1    = tree level (classical)
     10   = 1-loop (quantum)
-    100  = 2-loop 
+    100  = 2-loop
     1000 = 3-loop (includes gravity?)
 
   Or: 1111 = (10⁴ - 1)/9 could relate to compactification!
@@ -340,7 +342,7 @@ The "1111" might encode Planck-scale physics:
 ALTERNATIVE:
 
   1111 × α ≈ 1111/137 ≈ 8.1
-  
+
   This is close to k - μ = 12 - 4 = 8!
 
   Could suggest: α⁻¹ = 137 + v/(α_int × (k-μ) + ...)
@@ -357,10 +359,10 @@ print("=" * 70)
 # Planck mass prediction
 n_planck = 36.1  # From log_3(M_Pl/M_W)
 M_W = 80.4  # GeV
-M_Pl_predicted = M_W * 3**(v-4)
+M_Pl_predicted = M_W * 3 ** (v - 4)
 
 # Gravitational coupling at weak scale
-alpha_G_predicted = (M_Z / M_Pl_predicted)**2
+alpha_G_predicted = (M_Z / M_Pl_predicted) ** 2
 
 print(f"""
 W33 PREDICTIONS FOR GRAVITATIONAL SECTOR:
@@ -370,13 +372,13 @@ W33 PREDICTIONS FOR GRAVITATIONAL SECTOR:
    M_Planck (W33) = {M_Pl_predicted:.3e} GeV
    M_Planck (exp) = 1.22 × 10¹⁹ GeV
    Ratio: {M_Pl_predicted / 1.22e19:.2f}
-   
+
    Off by factor ~3... needs refinement.
 
 2. HIERARCHY RATIO:
    M_Planck/M_EW = 3^(v-4) = 3³⁶ = {3**36:.3e}
    Experimental: ~5 × 10¹⁶
-   
+
 3. NUMBER OF DIMENSIONS:
    Total dimensions = v = 40
    Spacetime = 4
@@ -393,29 +395,25 @@ W33 PREDICTIONS FOR GRAVITATIONAL SECTOR:
 
 results = {
     "theory": "W33",
-    "part": "LXXXI", 
+    "part": "LXXXI",
     "title": "Gravitational Sector",
     "planck_mass": {
         "formula": "M_W × 3^(v-4)",
         "predicted": float(M_Pl_predicted),
         "experimental": 1.22e19,
-        "ratio": float(M_Pl_predicted / 1.22e19)
+        "ratio": float(M_Pl_predicted / 1.22e19),
     },
     "hierarchy": {
         "formula": "3^(v-4) = 3^36",
         "value": float(3**36),
-        "experimental": 5e16
+        "experimental": 5e16,
     },
-    "dimensions": {
-        "total": v,
-        "spacetime": 4,
-        "internal": v - 4
-    },
+    "dimensions": {"total": v, "spacetime": 4, "internal": v - 4},
     "speculations": [
         "Graviton in 5 ⊂ 15 eigenspace",
         "Extra dimensions: 36 internal",
-        "1111 may encode Planck physics"
-    ]
+        "1111 may encode Planck physics",
+    ],
 }
 
 with open("PART_LXXXI_gravity.json", "w") as f:
@@ -435,8 +433,8 @@ KEY INSIGHTS:
 
 2. This suggests 36 EXTRA DIMENSIONS:
    Total = 40 = 4 (spacetime) + 36 (internal)
-   
-3. The graviton may live in the 15-dimensional 
+
+3. The graviton may live in the 15-dimensional
    eigenspace, specifically its spin-2 piece (dim 5).
 
 4. The denominator 1111 in α⁻¹ might encode
@@ -448,8 +446,8 @@ CAVEATS:
 - Gravity remains the hardest sector to connect
 
 PREDICTION:
-  M_Planck/M_EW ∝ 3^36 
-  
+  M_Planck/M_EW ∝ 3^36
+
 This is testable: any deviation from power-of-3 structure
 would falsify this specific connection.
 

@@ -4,9 +4,10 @@ Compare V_22 and V_23 - the two 81-dimensional irreps.
 Explore the GF(3) connection.
 """
 
-from sage.all import *
 import json
 import os
+
+from sage.all import *
 
 # Get the directory where this script is located
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -25,7 +26,7 @@ for gen in generators_data:
 
 n = 80
 S = SymmetricGroup(n)
-perms = [S(Permutation([p+1 for p in perm])) for perm in perm_gens]
+perms = [S(Permutation([p + 1 for p in perm])) for perm in perm_gens]
 G = PermutationGroup(perms)
 
 gap_G = libgap(G)
@@ -67,7 +68,9 @@ if not match_v1:
         if int(irreps[j][0]) == 1:
             chi_j = list(irreps[j])
             product_j = [chi_23[i] * chi_j[i] for i in range(len(chi_23))]
-            match_j = all(str(product_j[i]) == str(chi_22[i]) for i in range(len(chi_22)))
+            match_j = all(
+                str(product_j[i]) == str(chi_22[i]) for i in range(len(chi_22))
+            )
             if match_j:
                 print(f"V_22 = V_23 ⊗ V_{j}? YES!")
 
@@ -83,7 +86,9 @@ print(f"G/G' (abelianization) order: {G.order() // int(derived.Size())}")
 print()
 print("The group O(5,3) structure:")
 print(f"  |O(5,3)| = 2 * |SO(5,3)| = 2 * |Omega(5,3)| * |Z|")
-print(f"  For dim 5 over GF(3): |Omega(5,3)| = 3^4 * (3^4-1) * (3^2-1) / 2 = {3**4 * (3**4-1) * (3**2-1) // 2}")
+print(
+    f"  For dim 5 over GF(3): |Omega(5,3)| = 3^4 * (3^4-1) * (3^2-1) / 2 = {3**4 * (3**4-1) * (3**2-1) // 2}"
+)
 print(f"  Note: 3^4 = 81 = dim(H1)!")
 
 # Check restriction to derived subgroup

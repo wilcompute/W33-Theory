@@ -12,12 +12,13 @@ Variables:
 Constraints (for each generator g and line L):
   f = pi_{L'} o rho_{g,L} o pi_L^{-1} must be in Iso(orbit(L), orbit(L'))
 """
+
 from __future__ import annotations
 
 import json
+from collections import deque
 from itertools import permutations, product
 from pathlib import Path
-from collections import deque
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -40,12 +41,12 @@ def build_w33():
             proj_points.append(v)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     edges = []
-    adj = [[0]*40 for _ in range(40)]
+    adj = [[0] * 40 for _ in range(40)]
     for i in range(40):
-        for j in range(i+1, 40):
+        for j in range(i + 1, 40):
             if omega(proj_points[i], proj_points[j]) == 0:
                 edges.append((i, j))
                 adj[i][j] = adj[j][i] = 1
@@ -63,7 +64,9 @@ def extract_lines(adj, edges):
         edge_to_line[(i, j)] = line
     lines = sorted(lines)
     line_index = {line: idx for idx, line in enumerate(lines)}
-    edge_to_line_idx = {tuple(sorted(e)): line_index[edge_to_line[e]] for e in edge_to_line}
+    edge_to_line_idx = {
+        tuple(sorted(e)): line_index[edge_to_line[e]] for e in edge_to_line
+    }
     return lines, line_index, edge_to_line_idx
 
 
@@ -71,7 +74,7 @@ def canonical_line_edge_order(line, points):
     ordered_pts = sorted(line, key=lambda idx: points[idx])
     edge_list = []
     for i in range(4):
-        for j in range(i+1, 4):
+        for j in range(i + 1, 4):
             a, b = ordered_pts[i], ordered_pts[j]
             edge_list.append(tuple(sorted((a, b))))
     return edge_list
@@ -96,15 +99,17 @@ def normalize_proj(v):
 
 
 def check_symplectic(M):
-    Omega = [[0,0,1,0],[0,0,0,1],[2,0,0,0],[0,2,0,0]]
+    Omega = [[0, 0, 1, 0], [0, 0, 0, 1], [2, 0, 0, 0], [0, 2, 0, 0]]
+
     def mat_mult(A, B):
         n, k, m = len(A), len(B), len(B[0])
-        result = [[0]*m for _ in range(n)]
+        result = [[0] * m for _ in range(n)]
         for i in range(n):
             for j in range(m):
                 for l in range(k):
                     result[i][j] = (result[i][j] + A[i][l] * B[l][j]) % 3
         return result
+
     MT = [[M[j][i] for j in range(4)] for i in range(4)]
     result = mat_mult(mat_mult(MT, Omega), M)
     return result == Omega
@@ -136,16 +141,16 @@ def vertex_perm_to_edge_perm(vperm, edges):
 
 def get_edge_generators(vertices, edges):
     gen_matrices = [
-        [[1,0,1,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,1],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[1,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,1,0,1]],
-        [[1,1,0,0],[0,1,0,0],[0,0,1,0],[0,0,2,1]],
-        [[1,0,0,0],[1,1,0,0],[0,0,1,2],[0,0,0,1]],
-        [[0,0,1,0],[0,1,0,0],[2,0,0,0],[0,0,0,1]],
-        [[1,0,0,0],[0,0,0,1],[0,0,1,0],[0,2,0,0]],
-        [[2,0,0,0],[0,1,0,0],[0,0,2,0],[0,0,0,1]],
-        [[1,0,0,0],[0,2,0,0],[0,0,1,0],[0,0,0,2]],
+        [[1, 0, 1, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 1], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [1, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 1, 0, 1]],
+        [[1, 1, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 2, 1]],
+        [[1, 0, 0, 0], [1, 1, 0, 0], [0, 0, 1, 2], [0, 0, 0, 1]],
+        [[0, 0, 1, 0], [0, 1, 0, 0], [2, 0, 0, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0], [0, 2, 0, 0]],
+        [[2, 0, 0, 0], [0, 1, 0, 0], [0, 0, 2, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 2, 0, 0], [0, 0, 1, 0], [0, 0, 0, 2]],
     ]
     edge_gens = []
     for M in gen_matrices:
@@ -159,32 +164,38 @@ def get_edge_generators(vertices, edges):
 
 def cartan_e8():
     return [
-        [ 2, -1,  0,  0,  0,  0,  0,  0],
-        [-1,  2, -1,  0,  0,  0,  0,  0],
-        [ 0, -1,  2, -1,  0,  0,  0, -1],
-        [ 0,  0, -1,  2, -1,  0,  0,  0],
-        [ 0,  0,  0, -1,  2, -1,  0,  0],
-        [ 0,  0,  0,  0, -1,  2, -1,  0],
-        [ 0,  0,  0,  0,  0, -1,  2,  0],
-        [ 0,  0, -1,  0,  0,  0,  0,  2],
+        [2, -1, 0, 0, 0, 0, 0, 0],
+        [-1, 2, -1, 0, 0, 0, 0, 0],
+        [0, -1, 2, -1, 0, 0, 0, -1],
+        [0, 0, -1, 2, -1, 0, 0, 0],
+        [0, 0, 0, -1, 2, -1, 0, 0],
+        [0, 0, 0, 0, -1, 2, -1, 0],
+        [0, 0, 0, 0, 0, -1, 2, 0],
+        [0, 0, -1, 0, 0, 0, 0, 2],
     ]
 
 
 def ip_e8(r, s, C):
-    return sum(r[i]*C[i][j]*s[j] for i in range(8) for j in range(8))
+    return sum(r[i] * C[i][j] * s[j] for i in range(8) for j in range(8))
 
 
 def main():
     points, edges, adj = build_w33()
     lines, line_index, edge_to_line_idx = extract_lines(adj, edges)
 
-    line_edge_order = {li: canonical_line_edge_order(lines[li], points) for li in range(len(lines))}
+    line_edge_order = {
+        li: canonical_line_edge_order(lines[li], points) for li in range(len(lines))
+    }
 
-    orbit_data = json.loads((ROOT / "artifacts" / "e8_coxeter6_orbits.json").read_text())
+    orbit_data = json.loads(
+        (ROOT / "artifacts" / "e8_coxeter6_orbits.json").read_text()
+    )
     orbits = orbit_data["orbits"]
     orbit_root_order = {o: canonical_orbit_order(orbits[o]) for o in range(len(orbits))}
 
-    summary = json.loads((ROOT / "artifacts" / "edge_root_bijection_summary.json").read_text())
+    summary = json.loads(
+        (ROOT / "artifacts" / "edge_root_bijection_summary.json").read_text()
+    )
     orbit_to_line = {int(k): v for k, v in summary["orbit_to_line"].items()}
     line_to_orbit = {v: k for k, v in orbit_to_line.items()}
 
@@ -193,7 +204,7 @@ def main():
     perms = list(permutations(range(6)))
 
     def gram(orbit):
-        G = [[0]*6 for _ in range(6)]
+        G = [[0] * 6 for _ in range(6)]
         for i in range(6):
             for j in range(6):
                 G[i][j] = ip_e8(orbit[i], orbit[j], C)
@@ -240,10 +251,10 @@ def main():
         o = line_to_orbit[li]
         o2 = line_to_orbit[lj]
         # f = q o pos_map o p^{-1}
-        p_inv = [0]*6
+        p_inv = [0] * 6
         for i in range(6):
             p_inv[p[i]] = i
-        f = [0]*6
+        f = [0] * 6
         for i in range(6):
             f[i] = q[pos_map[p_inv[i]]]
         return tuple(f) in Iso[o][o2]
@@ -276,19 +287,21 @@ def main():
             removed = True
         if removed:
             # add all constraints involving li
-            for (a, b, g2, pm) in constraints:
+            for a, b, g2, pm in constraints:
                 if b == li and a != lj:
                     queue.append((a, b, g2, pm))
 
     # If any domain empty, no solution
     if any(len(d) == 0 for d in domains):
         out = {"solution_found": False, "reason": "AC-3 pruned to empty"}
-        (ROOT / "artifacts" / "equivariant_csp_orbit_iso.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
+        (ROOT / "artifacts" / "equivariant_csp_orbit_iso.json").write_text(
+            json.dumps(out, indent=2), encoding="utf-8"
+        )
         print("No solution (AC-3) ")
         return
 
     # Backtracking
-    assignment = [None]*40
+    assignment = [None] * 40
     order = sorted(range(40), key=lambda i: len(domains[i]))
 
     def backtrack(k=0):
@@ -299,16 +312,20 @@ def main():
             assignment[li] = p
             ok = True
             # check constraints with already assigned neighbors
-            for (a, b, g_idx, pos_map) in constraints:
+            for a, b, g_idx, pos_map in constraints:
                 if a == li and assignment[b] is not None:
-                    if not consistent_pair(a, b, assignment[a], assignment[b], g_idx, pos_map):
+                    if not consistent_pair(
+                        a, b, assignment[a], assignment[b], g_idx, pos_map
+                    ):
                         ok = False
                         break
                 if b == li and assignment[a] is not None:
-                    if not consistent_pair(a, b, assignment[a], assignment[b], g_idx, pos_map):
+                    if not consistent_pair(
+                        a, b, assignment[a], assignment[b], g_idx, pos_map
+                    ):
                         ok = False
                         break
-            if ok and backtrack(k+1):
+            if ok and backtrack(k + 1):
                 return True
             assignment[li] = None
         return False
@@ -317,7 +334,9 @@ def main():
     out = {
         "solution_found": ok,
     }
-    (ROOT / "artifacts" / "equivariant_csp_orbit_iso.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
+    (ROOT / "artifacts" / "equivariant_csp_orbit_iso.json").write_text(
+        json.dumps(out, indent=2), encoding="utf-8"
+    )
     print("Solution", ok)
 
 

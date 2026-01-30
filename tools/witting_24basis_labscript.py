@@ -3,11 +3,13 @@
 
 Includes basis order, MZI schedule link, waveplate degrees, and expected KS bound.
 """
+
 from __future__ import annotations
 
 import json
-from pathlib import Path
 from itertools import combinations
+from pathlib import Path
+
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,11 +29,11 @@ def construct_witting_40_rays():
         labels.append(f"e{i}")
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
             labels.append(f"(0,1,-w^{mu},w^{nu})/sqrt3")
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
             labels.append(f"(1,0,-w^{mu},-w^{nu})/sqrt3")
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             labels.append(f"(1,-w^{mu},0,w^{nu})/sqrt3")
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
             labels.append(f"(1,w^{mu},w^{nu},0)/sqrt3")
@@ -51,8 +53,14 @@ def find_tetrads(rays):
                 ortho[i, j] = ortho[j, i] = True
     tetrads = []
     for a, b, c, d in combinations(range(n), 4):
-        if (ortho[a, b] and ortho[a, c] and ortho[a, d] and
-                ortho[b, c] and ortho[b, d] and ortho[c, d]):
+        if (
+            ortho[a, b]
+            and ortho[a, c]
+            and ortho[a, d]
+            and ortho[b, c]
+            and ortho[b, d]
+            and ortho[c, d]
+        ):
             tetrads.append((a, b, c, d))
     return tetrads
 
@@ -79,7 +87,9 @@ def main():
         f.write("# 24‑Basis KS Lab Script\n\n")
         f.write("## Required inputs\n")
         f.write("- MZI schedule: docs/witting_24basis_mzi_schedule.md\n")
-        f.write("- Waveplate schedule (deg): docs/witting_24basis_waveplates_deg.md\n\n")
+        f.write(
+            "- Waveplate schedule (deg): docs/witting_24basis_waveplates_deg.md\n\n"
+        )
         f.write("## Target inequality\n")
         f.write(f"Noncontextual bound: **{bound} / 24**\n")
         f.write("Quantum prediction: **24 / 24**\n\n")
@@ -93,7 +103,9 @@ def main():
                 f.write(f"- r{r}: {labels[r]}\n")
             f.write("\n")
         f.write("## Scoring\n")
-        f.write("For each basis, mark satisfied if exactly one designated outcome occurs.\n")
+        f.write(
+            "For each basis, mark satisfied if exactly one designated outcome occurs.\n"
+        )
         f.write("Sum S across 24 bases and compare to bound.\n")
 
     print(f"Wrote {md_path}")

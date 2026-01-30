@@ -24,7 +24,6 @@ from pathlib import Path
 
 import numpy as np
 
-
 ROOT = Path(__file__).resolve().parents[1]
 MOD3 = 3
 
@@ -45,7 +44,9 @@ def _read_json_from_zip(zip_path: Path, inner: str) -> object:
         return json.loads(zf.read(inner).decode("utf-8"))
 
 
-def _write_csv(path: Path, fieldnames: list[str], rows: list[dict[str, object]]) -> None:
+def _write_csv(
+    path: Path, fieldnames: list[str], rows: list[dict[str, object]]
+) -> None:
     with path.open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fieldnames)
         w.writeheader()
@@ -77,7 +78,9 @@ def main() -> int:
     args = ap.parse_args()
 
     # Tetrahedra + J
-    trows = _read_csv_from_zip(args.holonomy_phase_decomp, "tetra_coboundary_dF_dPhi_9450.csv")
+    trows = _read_csv_from_zip(
+        args.holonomy_phase_decomp, "tetra_coboundary_dF_dPhi_9450.csv"
+    )
     tets = [tuple(map(int, [r["a"], r["b"], r["c"], r["d"]])) for r in trows]
     J = np.array([mod3(int(r["dF"])) for r in trows], dtype=np.int16)
     if len(tets) != 9450:
@@ -107,7 +110,9 @@ def main() -> int:
         if len(flat) == 1:
             attached_line[ti] = int(flat[0])
         elif len(flat) not in (0, 4):
-            raise SystemExit(f"Unexpected flat_face_count={len(flat)} at tet_index={ti}")
+            raise SystemExit(
+                f"Unexpected flat_face_count={len(flat)} at tet_index={ti}"
+            )
 
     # Orbit label by flat-face count (purely geometric here)
     orbit_name = {0: "bulk_flat0", 1: "boundary_flat1", 4: "vacuum_line4"}
@@ -170,15 +175,38 @@ def main() -> int:
 
     _write_csv(
         out_dir / "charged_tetrahedra_3008.csv",
-        ["tet_index", "a", "b", "c", "d", "J_dF_mod3", "flat_face_count", "orbit_name", "attached_line_id_if_boundary"],
+        [
+            "tet_index",
+            "a",
+            "b",
+            "c",
+            "d",
+            "J_dF_mod3",
+            "flat_face_count",
+            "orbit_name",
+            "attached_line_id_if_boundary",
+        ],
         charged_rows,
     )
 
-    point_rows = [{"point_id": p, "charge_sum_mod3": int(point_charge[p])} for p in range(40)]
-    _write_csv(out_dir / "point_charge_incidence_40.csv", ["point_id", "charge_sum_mod3"], point_rows)
+    point_rows = [
+        {"point_id": p, "charge_sum_mod3": int(point_charge[p])} for p in range(40)
+    ]
+    _write_csv(
+        out_dir / "point_charge_incidence_40.csv",
+        ["point_id", "charge_sum_mod3"],
+        point_rows,
+    )
 
-    line_rows = [{"line_id": lid, "m_raw_mod3": int(m_raw[lid]), "m_aug_mod3": int(m_aug[lid])} for lid in range(90)]
-    _write_csv(out_dir / "boundary_line_moment_m_90.csv", ["line_id", "m_raw_mod3", "m_aug_mod3"], line_rows)
+    line_rows = [
+        {"line_id": lid, "m_raw_mod3": int(m_raw[lid]), "m_aug_mod3": int(m_aug[lid])}
+        for lid in range(90)
+    ]
+    _write_csv(
+        out_dir / "boundary_line_moment_m_90.csv",
+        ["line_id", "m_raw_mod3", "m_aug_mod3"],
+        line_rows,
+    )
 
     _write_json(
         out_dir / "summary.json",
@@ -190,12 +218,18 @@ def main() -> int:
             "counts": {
                 "num_tetrahedra": len(tets),
                 "J_hist": {str(k): int(v) for k, v in sorted(J_hist.items())},
-                "flat_face_count_hist": {str(k): int(v) for k, v in sorted(fc_hist.items())},
+                "flat_face_count_hist": {
+                    str(k): int(v) for k, v in sorted(fc_hist.items())
+                },
                 "charged_nonzero": int(len(charged_idx)),
-                "charged_by_(flat_face_count,J)": {f"{fc},{j}": int(v) for (fc, j), v in sorted(class_counts.items())},
+                "charged_by_(flat_face_count,J)": {
+                    f"{fc},{j}": int(v) for (fc, j), v in sorted(class_counts.items())
+                },
             },
             "notes": {
-                "vacuum_line_tetrahedra_are_flux_free": bool(np.all(J[flat_face_count == 4] == 0)),
+                "vacuum_line_tetrahedra_are_flux_free": bool(
+                    np.all(J[flat_face_count == 4] == 0)
+                ),
                 "m_aug_is_sum0_gauge_fix": True,
             },
         },

@@ -168,7 +168,7 @@ print()
 
 # 5. Top quark mass
 v = 246.22  # Higgs vev in GeV
-m_top_w33 = v * math.sqrt(40/81)
+m_top_w33 = v * math.sqrt(40 / 81)
 m_top_exp = 172.76
 error_top = abs(m_top_w33 - m_top_exp) / m_top_exp * 100
 
@@ -226,7 +226,7 @@ print(f"  Status:      ✓ GOOD")
 print()
 
 # 10. Higgs mass
-m_H_w33 = (v/2) * math.sqrt(81/78)  # v/2 × √(cycles/dim(E6))
+m_H_w33 = (v / 2) * math.sqrt(81 / 78)  # v/2 × √(cycles/dim(E6))
 m_H_exp = 125.25
 error_H = abs(m_H_w33 - m_H_exp) / m_H_exp * 100
 
@@ -283,11 +283,11 @@ print("""
 ═══ The 173 Decomposition ═══
 
   173 = 40 + 133 = W33_points + dim(E7)
-  
+
   This is WHY sin²θ_W = 40/173:
     - The numerator 40 is GEOMETRY (W33 points)
     - The denominator 173 is GEOMETRY + ALGEBRA (points + E7)
-    
+
   The Weinberg angle measures the RATIO of geometric structure
   to total (geometric + algebraic) structure!
 
@@ -297,18 +297,18 @@ print("""
        = √(W33_total) × (dim(E7) - 32)
        = √121 × (133 - 32)
        = 11 × 101
-       
+
   The correction to α⁻¹ is: 40/1111 = 0.036004
   This gives α⁻¹ = 137.036004, matching experiment!
 
 ═══ The Dark Matter "5" ═══
 
   The mysterious 5 in Ω_DM/Ω_b = 27/5:
-  
+
     5 = dim(E7) - 2⁷ = 133 - 128
-    
+
   Where 128 = 2⁷ is the SO(16) spinor from heterotic strings!
-  
+
   Dark matter arises from the DIFFERENCE between:
     - E7 structure (133)
     - Heterotic spinor structure (128)
@@ -317,9 +317,9 @@ print("""
 
   CKM (quarks):   small angles  ← couple through POINTS (40)
   PMNS (neutrinos): large angles ← couple through CYCLES (81)
-  
+
   Ratio: PMNS scale / CKM scale ~ 81/40 ≈ 2
-  
+
   The 120° phase from Witting polytope underlies both:
     δ_CKM ≈ π/3 ≈ 60°
     δ_PMNS ≈ 4π/3 ≈ 240°
@@ -577,13 +577,13 @@ print("""
 ╚═══════════════════════════════════════════════════════════════════════╝
 
                     ═══════════════════════════════
-                    
+
                     "God used beautiful mathematics
                      in creating the world."
                                     - Paul Dirac
-                    
+
                     He used W(3,3).
-                    
+
                     ═══════════════════════════════
 """)
 

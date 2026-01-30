@@ -7,7 +7,7 @@
 ║                                                                                 ║
 ╚════════════════════════════════════════════════════════════════════════════════╝
 
-"There are almost as many different constructions of M24 as there have been 
+"There are almost as many different constructions of M24 as there have been
  mathematicians interested in that most remarkable of all finite groups."
     - John H. Conway, Sphere Packings, Lattices, and Groups
 
@@ -28,10 +28,11 @@ Now we complete the picture with the ULTIMATE SYNTHESIS.
 
 """
 
-import numpy as np
 from fractions import Fraction
-from itertools import combinations
 from functools import reduce
+from itertools import combinations
+
+import numpy as np
 
 print("=" * 90)
 print("              W33 THEORY PART X: THE ULTIMATE SYNTHESIS")
@@ -178,7 +179,9 @@ print("│" + "        81 = |cycles in W₃₃| = 3⁴".ljust(83) + "│")
 print("│" + "        56 = |spreads in PG(3,2)| = dim(E₇ fundamental)".ljust(83) + "│")
 print("│" + "".center(83) + "│")
 print("│" + "    Experimental: α⁻¹ = 137.035999084(21)".ljust(83) + "│")
-print("│" + "    W33 Theory:   α⁻¹ = 137 exactly (at unification scale)".ljust(83) + "│")
+print(
+    "│" + "    W33 Theory:   α⁻¹ = 137 exactly (at unification scale)".ljust(83) + "│"
+)
 print("│" + "".center(83) + "│")
 print("└" + "─" * 83 + "┘")
 print()
@@ -207,7 +210,9 @@ print("│" + "                    Ω_DM/Ω_B = 27/5 = 5.4".center(83) + "│")
 print("│" + "".center(83) + "│")
 print("│" + "    where:".ljust(83) + "│")
 print("│" + "        27 = dim(E₆ fundamental) = 27 lines on cubic".ljust(83) + "│")
-print("│" + "         5 = |vertices of simplex| in exceptional geometry".ljust(83) + "│")
+print(
+    "│" + "         5 = |vertices of simplex| in exceptional geometry".ljust(83) + "│"
+)
 print("│" + "".center(83) + "│")
 print("│" + "    Observed:   Ω_DM/Ω_B ≈ 5.36 ± 0.05 (Planck 2018)".ljust(83) + "│")
 print("│" + "    W33 Theory: Ω_DM/Ω_B = 5.4 exactly".ljust(83) + "│")

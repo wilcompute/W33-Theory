@@ -8,16 +8,16 @@ CLASSIFICATION BY CENTERS:
   Acentric (0 centers):  2880 = parity 0 (ALL)
   Unicentric (1 center): 2160 = parity 1 (ALL)
   Tricentric (3 centers):  240 = parity 0 (ALL)
-  
+
 CLASSIFICATION BY PARITY:
   Even (parity 0): 3120 = 2880 + 240 (acentric + tricentric)
   Odd (parity 1):  2160 = all unicentric
-  
+
 FERMION-BOSON RATIO:
   Fermions (odd):   2160
   Bosons (even):    3120
   Ratio: 2/3 (not accidental)
-  
+
 S3 HOLONOMY (in unicentric only):
   Identity:    1068 (49.4%)
   3-cycles:    2072 (50.6% of unicentric = 39.2% total)
@@ -29,5 +29,5 @@ INTERPRETATION:
   • Odd parity ↔ Fermions ↔ Unicentric
   • Even parity ↔ Bosons ↔ Acentric or Tricentric
   • 2/3 fermion-boson ratio is exact geometric property
-  
+
 This is the DISCRETE GEOMETRY ENCODING OF PARTICLE STATISTICS!

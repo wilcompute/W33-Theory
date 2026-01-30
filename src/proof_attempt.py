@@ -11,25 +11,34 @@ Let me see if I can derive the -1 algebraically by working
 in the basis where point 0 = e_0.
 """
 
-import numpy as np
-from pathlib import Path
-import pandas as pd
 from collections import defaultdict
+from pathlib import Path
 
-ROOT = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data")
+import numpy as np
+import pandas as pd
+
+ROOT = Path(
+    r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data"
+)
+
 
 def load_rays():
-    df = pd.read_csv(ROOT / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv")
+    df = pd.read_csv(
+        ROOT
+        / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv"
+    )
     V = np.zeros((40, 4), dtype=np.complex128)
     for _, row in df.iterrows():
-        pid = int(row['point_id'])
+        pid = int(row["point_id"])
         for i in range(4):
-            V[pid, i] = complex(str(row[f'v{i}']).replace(' ', ''))
+            V[pid, i] = complex(str(row[f"v{i}"]).replace(" ", ""))
     return V
+
 
 def load_lines():
     df = pd.read_csv(ROOT / "_workbench/02_geometry/W33_line_phase_map.csv")
-    return [tuple(map(int, str(row['point_ids']).split())) for _, row in df.iterrows()]
+    return [tuple(map(int, str(row["point_ids"]).split())) for _, row in df.iterrows()]
+
 
 def inner(V, p, q):
     return np.vdot(V[p], V[q])
@@ -94,7 +103,7 @@ def analyze_quad_algebra():
     print("QUAD {0,1,2,3} ALGEBRA")
     print("=" * 70)
 
-    a = 1/np.sqrt(3)
+    a = 1 / np.sqrt(3)
     print(f"\na = 1/sqrt(3) = {a:.6f}")
 
     for p in [0, 1, 2, 3]:
@@ -114,7 +123,7 @@ def analyze_quad_algebra():
 
     # Extract the 3-vectors (components 2 and 3, since component 1 is 0)
     # For points 1, 2, 3
-    w = 1/np.sqrt(3)
+    w = 1 / np.sqrt(3)
 
     print("\nLet w = exp(2*pi*i/12) = exp(i*pi/6)")
     print("Let z3 = exp(2*pi*i/3) = -1/2 + i*sqrt(3)/2")
@@ -201,8 +210,10 @@ def compute_bargmann_symbolically():
 
     for cyc in cycles:
         a, b, c, d = cyc
-        total = (phases[(a,b)] + phases[(b,c)] + phases[(c,d)] + phases[(d,a)]) % 12
-        print(f"  {a}->{b}->{c}->{d}->{a}: {phases[(a,b)]}+{phases[(b,c)]}+{phases[(c,d)]}+{phases[(d,a)]} = {total} mod 12")
+        total = (phases[(a, b)] + phases[(b, c)] + phases[(c, d)] + phases[(d, a)]) % 12
+        print(
+            f"  {a}->{b}->{c}->{d}->{a}: {phases[(a,b)]}+{phases[(b,c)]}+{phases[(c,d)]}+{phases[(d,a)]} = {total} mod 12"
+        )
 
 
 def verify_universal():
@@ -268,7 +279,14 @@ def verify_universal():
     all_phases = defaultdict(int)
 
     for a, b, c, d in cliques[:100]:  # First 100
-        for perm in [(a,b,c,d), (a,b,d,c), (a,c,b,d), (a,c,d,b), (a,d,b,c), (a,d,c,b)]:
+        for perm in [
+            (a, b, c, d),
+            (a, b, d, c),
+            (a, c, b, d),
+            (a, c, d, b),
+            (a, d, b, c),
+            (a, d, c, b),
+        ]:
             p, q, r, s = perm
             B = inner(V, p, q) * inner(V, q, r) * inner(V, r, s) * inner(V, s, p)
             phase = np.angle(B)
@@ -285,6 +303,7 @@ def main():
     analyze_quad_algebra()
     compute_bargmann_symbolically()
     verify_universal()
+
 
 if __name__ == "__main__":
     main()

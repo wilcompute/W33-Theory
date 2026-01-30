@@ -1,0 +1,1228 @@
+ALGEBRAIC
+ COMBINATORICSGabe Cunningham, Daniel Pellicer & Gordon Williams
+Stratiﬁed operations on maniplexes
+Volume 5, issue 2 (2022), p. 267-287.
+https://doi.org/10.5802/alco.208
+© The journal and the authors, 2022.
+This article is licensed under the
+CREATIVE COMMONS ATTRIBUTION 4.0 I NTERNATIONAL LICENSE .
+http://creativecommons.org/licenses/by/4.0/
+Access to articles published by the journal Algebraic Combinatorics on
+the website http://alco.centre-mersenne.org/ implies agreement with the
+Terms of Use ( http://alco.centre-mersenne.org/legal/ ).
+Algebraic Combinatorics is published by The Combinatorics Consortium
+and is a member of the Centre Mersenne for Open Scientiﬁc Publishing
+www.tccpublishing.org www.centre-mersenne.org
+
+Algebraic Combinatorics
+Volume 5, issue 2 (2022), p.267–287
+https://doi.org/10.5802/alco.208
+Stratiﬁed operations on maniplexes
+Gabe Cunningham, Daniel Pellicer & Gordon Williams
+Abstract There is an increasingly extensive literature on the problem of describing the con-
+nection (monodromy) groups and automorphism groups of families of polytopes and maniplexes
+that are not regular or reﬂexible. Many such polytopes and maniplexes arise as the result of
+constructions such as truncations and products. Here we show that for a wide variety of these
+constructions, the connection group of the output can be described in a nice way in terms of
+the connection group of the input. We call such operations stratiﬁed . Moreover, we show that,
+ifFis a maniplex operation in one of two broad subclasses of stratiﬁed operations, and if Ris
+the smallest reﬂexible cover of some maniplex M, then the connection group of F(R)is equal
+to the connection group of F(M). In particular, we show that this is true for truncations and
+medials of maps, for products of polytopes (including pyramids and prisms over polytopes),
+and for the mix of maniplexes. As an application, we determine the smallest reﬂexible covers
+of the pyramids over the equivelar toroidal maps.
+1.Introduction
+Maniplexes are combinatorial structures that simultaneously generalize maps on sur-
+faces to structures of ranks higher than 3, and abstract polytopes to structures where
+faces may self-intersect (see [39]). A maniplex is assembled from a set Ωofﬂags, and
+can either be viewed as an action of a permutation group on Ω, or as a graph with
+vertex set Ω, subject to some structural restrictions. Symmetry of maniplexes is mea-
+sured by the number of orbits of ﬂags under the action of the automorphism group.
+In that sense, the most symmetric maniplexes are the reﬂexible ones, which are those
+having only one ﬂag orbit. In the context of maps and polytopes, reﬂexibility of these
+objects as maniplexes is equivalent to their being regular.
+There are many works discussing regular maps (see for example [25, 30, 35]) and
+regular polytopes (see for example [4, 5, 12, 17, 36]). On the other hand, only a
+few classes of non-regular maps and polytopes have been systematically analyzed,
+highlighting the need for more techniques to study such objects.
+Every maniplex is a quotient of some reﬂexible maniplexes. This connection sug-
+gests that part of the theory of reﬂexible maniplexes can be used to describe non-
+reﬂexible maniplexes as well. Among all reﬂexible maniplexes that cover a given ma-
+niplexM, there is one minimal cover src(M)with respect to the partial order given
+Manuscript received 12th July 2020, revised and accepted 18th November 2021.
+Keywords. Polytope, maniplex, connection group, monodromy group, truncation, medial, pyramid,
+prism.
+Acknowledgements. The authors thank the anonymous referee for many helpful corrections. The
+second author was supported by PAPIIT-UNAM under project grant IN100518 and CONACYT
+“Fondo Sectorial de Investigación para la Educación” under grant A1-S-10839.
+ISSN: 2589-5486 http://algebraic-combinatorics.org/
+Gabe Cunningham, Daniel Pellicer & Gordon Williams
+by the quotient relationship (for more details, see Section 2). (Here “src” stands for
+“smallest reﬂexible cover”.) It is to be expected that much of the information that can
+be obtained by viewing Mas a quotient of a reﬂexible maniplex, can be obtained by
+viewingMas a quotient of src(M).
+The maniplex src(M)is often described in terms of speciﬁc generators of some per-
+mutation group on the ﬂags of M(called the connection group ofM). This provides
+a recipe to construct src(M)for individual ﬁnite maniplexes Mwhose set of ﬂags is
+relatively small. Describing src(M)for an inﬁnite maniplex Mor for every maniplex
+Min an inﬁnite family of maniplexes turns out to be complicated in general.
+In the last decade, many publications have studied src(M)for various families of
+non-reﬂexible maniplexes M, providing some ideas on how to work with the smallest
+reﬂexible cover src(M)(see [1, 2, 18, 28, 33, 34]).
+Thepresentarticleismotivatedbyoperationsthatcanbeperformedonmaniplexes
+in order to obtain other maniplexes. Given such an operation Fand a maniplexM,
+it would be desirable to be able to construct src(F(M))fromF,Mandsrc(M). We
+introduce the concept of a stratiﬁed operation that groups together many of the usual
+operationsonmaniplexes.Wethenshowthatif Fisastratiﬁedoperationandsatisﬁes
+an additional mild hypothesis, then src(F(M))∼=src(F(src(M)))(see Theorems 3.9
+and 3.21). These results imply that if Fis a suitable stratiﬁed operation and we
+already know how to compute src(F(R))for all reﬂexible maniplexes R, then we have
+already solved the problem of computing src(F(M))as long as we know src(M).
+The paper is organized as follows. In Section 2 we review deﬁnitions and basic
+results on maniplexes. We motivate, state and prove our main result in Section 3,
+where we also provide a list of stratiﬁed operations that have already appeared in
+published works. In Section 4 we show an application of our main theorem; we choose
+Fto be the operation of taking the pyramid over a maniplex, and show for which
+equivelar maps on the torus Mthe maniplex src(F(M))is an abstract polytope. This
+extends one of the main results in [34], which was stated only for the case where M
+is a regular polytope. Another application of our main result is shown in Section 5,
+where the theorem is used to determine properties of src(F(R))for some reﬂexible
+maniplexRin terms of src(F(M))for some non-reﬂexible maniplex Msuch that
+R= src(M). Finally, Section 6 contains proofs that some of the maniplex operations
+from the literature are indeed stratiﬁed operations.
+2.Maniplexes and polytopes
+In this section we recall the deﬁnitions of maniplex and polytope, together with some
+previously known results about them. For further details we refer to [27] and [29].
+2.1.Maniplexes. The concept of maniplex was ﬁrst deﬁned in [39] as a combinato-
+rial object generalizing the combinatorial aspects of maps on surfaces. They can be
+described in several equivalent ways; here we ﬁnd the following deﬁnition convenient.
+Amaniplex ofrankn(orn-maniplex ) is a pairM= (Ω,[r0,...,rn−1])where Ωis a
+set whose elements are called ﬂags, and for every iwe have that riis a ﬁxed-point-free
+involution on Ωsatisfying the following properties:
+• /angbracketleftr0,...,rn−1/angbracketrightacts transitively on Ω,
+•if|i−j|>2thenrirj=rjri,
+•ifi/negationslash=jthenriandrjhave no transpositions in common.
+The group/angbracketleftr0,...,rn−1/angbracketrightis called the connection group ofM, it is denoted Conn(M),
+and its elements are called connections . Elsewhere Conn(M)is also called the mon-
+odromy group of M. By convention, Conn(M)acts on Ωon the left.
+Algebraic Combinatorics , Vol. 5 #2 (2022) 268
+Stratiﬁed operations on maniplexes
+We can also represent an n-maniplex by its ﬂag graph , which is an edge-labeled
+graph whose vertex-set is the set of ﬂags Ω, and where two vertices are connected
+with an edge of label iif and only if riinterchanges those ﬂags. Then the restrictions
+above imply that the ﬂag graph has no loops or multiple edges, that it is connected,
+and that whenever |i−j|>2, then the full subgraph consisting of edges of label i
+andjis a union of disjoint 4-cycles. Given an n-regular graph that satisﬁes these
+conditions, we may recover the permutations rifrom the perfect matching consisting
+of edges of label i, and so we may identify an n-maniplex with its ﬂag graph.
+WhenMis a map on a surface, the set Ωconsists of the triangles in the barycentric
+subdivision ofM, and each triangle represents a ﬂag. The involution r0swaps each
+ﬂag with the neighbouring triangle across the segment between the center of the face
+and the midpoint of the edge, r1is the involution that swaps each ﬂag with the
+neighbouring triangle across the segment between the vertex and the center of the
+face, andr2is the involution that swaps each ﬂag with the neighbouring triangle
+across the edge. The ﬂags labeled 0,1and2in Figure 1 correspond to the images of
+the gray ﬂag under r0,r1andr2, respectively.
+STRATIFIED OPERATIONS ON MANIPLEXES
+•ifi̸=jthen riandrjhave no transpositions in common.
+The group ⟨r0, . . . , r n−1⟩is called the connection group ofM, it is denoted Conn( M),
+and its elements are called connections . Elsewhere Conn( M) is also called the mon-
+odromy group of M. By convention, Conn( M) acts on Ω on the left.
+We can also represent an n-maniplex by its flag graph , which is an edge-labeled
+graph whose vertex-set is the set of flags Ω, and where two vertices are connected
+with an edge of label iif and only if riinterchanges those flags. Then the restrictions
+above imply that the flag graph has no loops or multiple edges, that it is connected,
+and that whenever |i−j|⩾2, then the full subgraph consisting of edges of label i
+andjis a union of disjoint 4-cycles. Given an n-regular graph that satisfies these
+conditions, we may recover the permutations rifrom the perfect matching consisting
+of edges of label i, and so we may identify an n-maniplex with its flag graph.
+When Mis a map on a surface, the set Ω consists of the triangles in the barycentric
+subdivision of M, and each triangle represents a flag. The involution r0swaps each
+flag with the neighbouring triangle across the segment between the center of the face
+and the midpoint of the edge, r1is the involution that swaps each flag with the
+neighbouring triangle across the segment between the vertex and the center of the
+face, and r2is the involution that swaps each flag with the neighbouring triangle
+across the edge. The flags labeled 0, 1 and 2 in Figure 1 correspond to the images of
+the gray flag under r0,r1andr2, respectively.
+01
+2
+Figure 1. The action of the connections r0,r1andr2.
+The connection group is defined as a permutation group on the set of flags. Its
+structure as an abstract group may be hard to understand from the maniplex itself.
+This has motivated the study of the connection groups of certain families of maniplexes
+in the previous decade (see for example [1], [2], [18], [17], [33]).
+Given any flag Φ and i∈ {0, . . . , n −1}we may also denote riΦ by Φi, and say
+that Φ and Φiareadjacent (ori-adjacent if we want to emphasize i).
+The faces of a maniplex are defined by extending the notion of the faces of a map.
+Thei-faces are the orbits of ⟨rj:j̸=i⟩. Furthermore, if FiandFjare an i-face and a
+j-face, respectively, then Fi⩽Fjif and only if i⩽jandFi∩Fj̸=∅. In this way the
+faces of a maniplex form a partially ordered set with a rank function. Note, however,
+that the partially ordered set of faces may not capture all of the information about
+the maniplex – see Section 3 in [14].
+For some purposes we may fix a base flag Φ of a maniplex M. In that case we say
+thatMisrooted at Φ. In other words, a rooted maniplex is a pair consisting of a
+maniplex and one of its flags.
+For convenience we denote by Mnthe class of all n-maniplexes.
+2.2.Polytopes. Anabstract polytope of rank n(orn-polytope ) is a partially ordered
+set (poset , for short) with a strictly increasing rank function in the range {−1, . . . , n }
+that satisfies some of the main properties of the face-lattices of convex polytopes.
+Algebraic Combinatorics , draft (23rd November 2021) 3
+Figure 1. The action of the connections r0,r1andr2.
+The connection group is deﬁned as a permutation group on the set of ﬂags. Its
+structure as an abstract group may be hard to understand from the maniplex itself.
+Thishasmotivatedthestudyoftheconnectiongroupsofcertainfamiliesofmaniplexes
+in the previous decade (see for example [1, 2, 18, 17, 33]).
+Given any ﬂag Φandi∈{0,...,n−1}we may also denote riΦbyΦi, and say
+that ΦandΦiareadjacent (ori-adjacent if we want to emphasize i).
+The faces of a maniplex are deﬁned by extending the notion of the faces of a map.
+Thei-faces are the orbits of /angbracketleftrj:j/negationslash=i/angbracketright. Furthermore, if FiandFjare ani-face and a
+j-face, respectively, then Fi6Fjif and only if i6jandFi∩Fj/negationslash=?. In this way the
+faces of a maniplex form a partially ordered set with a rank function. Note, however,
+that the partially ordered set of faces may not capture all of the information about
+the maniplex – see Section 3 in [14].
+For some purposes we may ﬁx a base ﬂag Φof a maniplexM. In that case we say
+thatMisrootedatΦ. In other words, a rooted maniplex is a pair consisting of a
+maniplex and one of its ﬂags.
+For convenience we denote by Mnthe class of all n-maniplexes.
+2.2.Polytopes. Anabstract polytope ofrankn(orn-polytope ) is a partially ordered
+set (poset, for short) with a strictly increasing rank function in the range {−1,...,n}
+that satisﬁes some of the main properties of the face-lattices of convex polytopes.
+Namely, it has a unique maximum Fnof ranknand a unique minimum F−1of
+rank−1, and it satisﬁes the diamond condition and strong ﬂag-connectivity deﬁned
+below. The elements of rank iare calledi-faces.
+Algebraic Combinatorics , Vol. 5 #2 (2022) 269
+Gabe Cunningham, Daniel Pellicer & Gordon Williams
+A poset having a rank function with range {−1,...,n}satisﬁes the diamond condi-
+tionif for every i∈{0,...,n−1}, for every (i−1)-faceFi−1and for every (i+1)-face
+Fi+1such thatFi−16Fi+1, there exist precisely two i-facesFandF/primesuch that
+Fi−16F,F/prime6Fi+1.
+The maximal totally ordered subsets of a poset (P,6)are called ﬂags. If(P,6)has
+a strictly increasing rank function then all ﬂags have the same size. Furthermore, if
+(P,6)satisﬁesthediamondconditionthenforeveryﬂag Φandeveryi∈{0,...,n−1}
+there exists a unique ﬂag Φithat diﬀers from Φonly in itsi-face. We say that Φiand
+Φareadjacent, ori-adjacent if we want to stress the rank i.
+A poset satisfying the diamond condition is said to be strongly ﬂag-connected if
+for every two ﬂags ΦandΨ, there exists a sequence Φ = Φ 0,..., Φk= Ψof ﬂags
+such that any two consecutive ﬂags are adjacent and such that Φ∩Ψ⊆Φjfor every
+j∈{1,...,k−1}.
+The face-lattices of convex polytopes are abstract polytopes, but there are abstract
+polytopesthatarenottheface-latticesofconvexpolytopes.Examplesofthisaremaps
+on surfaces of genera at least 1such that the closure of every face is homeomorphic
+to a disk.
+Since this paper is devoted to maniplexes and abstract polytopes, unless explicitly
+clariﬁed, in what follows we refer to abstract polytopes simply by “polytopes”.
+Every polytopePmay be interpreted as a maniplex via its ﬂag graphFG(P), that
+is, an edge-labelled graph whose vertices are the ﬂags of P, two of which are adjacent
+by an edge with label iif and only if the corresponding ﬂags are i-adjacent. The
+diamond condition ensures that the edges of each color form a perfect matching, and
+hence we may deﬁne the involution rias the permutation that swaps every ﬂag with
+itsi-adjacent ﬂag. The partially ordered set of faces of Pcan be recovered naturally
+from its ﬂag graph, and hence we may abuse notation and use Pto denote both the
+partially ordered set and the corresponding maniplex.
+Not every maniplex is a polytope. For example, a 3-maniplex may have a face
+incident to only one edge and one vertex, which violates the diamond condition. We
+say that a maniplex is polytopal if the corresponding poset is a polytope.
+2.3.Symmetry. Most of the study on maniplexes and abstract polytopes has been
+devoted to those that possess a high degree of symmetry.
+Anautomorphism of a maniplexM= (Ω,[r0,...,rn−1])is a permutation of Ω
+whose action commutes with that of /angbracketleftr0,...,rn−1/angbracketright. If we represent Mas its ﬂag
+graph then the automorphisms of Mare the automorphisms of the graph that ﬁx the
+sets of edges corresponding to each label. If Mis a polytope then the automorphisms
+are precisely the order-preserving permutations of the faces.
+We denote the automorphism group of MbyΓ(M), and follow the convention
+that it acts on the right. This has the convenient advantage that (wΦ)γ=w(Φγ)for
+every ﬂag Φ, everyw∈Conn(M)and everyγ∈Γ(M).
+The transitivity of the action of Conn(M)implies that every automorphism is
+completely determined by the image of any ﬂag. As a consequence, Γ(M)acts semi-
+regularly on the ﬂags of M.
+A maniplexMis said to be reﬂexible ifΓ(M)acts transitively (and hence, reg-
+ularly) on the set of ﬂags. If Γ(M)induceskorbits on the set of ﬂags we say that
+Mis ak-orbit maniplex. Polytopes for which Γ(M)acts transitively on its ﬂags are
+regular.
+Astring group generated by involutions (sggi for short) is a group generated by a
+list of involutions where every two involutions that are not consecutive in the list com-
+mute. A string C-group is an sggi/angbracketleftr0,...,rn−1/angbracketrightwhere for every I,J⊆{0,...,n−1}
+Algebraic Combinatorics , Vol. 5 #2 (2022) 270
+Stratiﬁed operations on maniplexes
+we have that
+/angbracketleftrk:k∈I/angbracketright∩/angbracketleftrk:k∈J/angbracketright=/angbracketleftrk:k∈I∩J/angbracketright.
+The automorphism group of every reﬂexible n-maniplexMis an sggi Γ(M) =
+/angbracketleftρ0,...,ρn−1/angbracketright, whereρiis the automorphism mapping a ﬁxed base ﬂag ΦtoΦi. If
+Mis a regular polytope then Γ(M)is a string C-group. Conversely, given a string
+C-group Γ =/angbracketleftρ0,...,ρn−1/angbracketrightthere exists a unique regular abstract n-polytopePsuch
+that Γ(P) = Γand with the property that there exists a ﬂag Φsuch that Φρi= Φi
+for everyi. The basei-faceFiis taken to be the parabolic subgroup /angbracketleftρj:j/negationslash=i/angbracketrightand
+the remaining i-faces are the cosets Fiγwithγ∈Γ. Face incidence is then deﬁned as
+non-trivial intersection of the cosets.
+The proof of the following theorem is essentially the same as that of [29, Theo-
+rem 3.9].
+Theorem 2.1.LetMbe a reﬂexible n-maniplex with Γ(M) =/angbracketleftρ0,...,ρn−1/angbracketrightand
+connection group Conn(M) =/angbracketleftr0,...,rn−1/angbracketright. Then there is an isomorphism between
+Γ(M)andConn(M)mapping each ρitori.
+We shall denote by Wnthe universal string Coxeter group of rank n, that is, the
+group with presentation
+(1) /angbracketlefts0,...,sn−1: (sisj)pi,j=id/angbracketright,
+wherepi,i= 1,pi,j= 2if|i−j|>2, andpi,j=∞if|i−j|= 1. It is well-known
+thatWnis a string C-group and hence it is the automorphism group of the universal
+polytopeP(Wn)of rankn. Note thatP(Wn)is regular.
+2.4.Smallest reflexible covers. Acovering from a maniplex M1=
+(Ω1,[r0,...,rn−1])to a maniplexM2= (Ω 2,[r/prime
+0,...,r/prime
+n−1])is a function η: Ω1→Ω2
+such that (riΦ)η=r/prime
+i(Φη)for every Φ∈Ω1and everyi. Such a function is necessarily
+surjective. Coverings are also called rap-maps (rank and adjacency preserving maps).
+Ifηis a covering from M1toM2we say thatM1is acoverofM2, thatM1covers
+M2, or thatM2is aquotient ofM1.
+Every maniplex is covered by at least one reﬂexible maniplex. For instance, every
+n-maniplexMis covered by the universal n-polytopeP(Wn). This is a consequence
+of Theorem 2.1, since the connection group of every n-maniplex satisﬁes the relations
+in the presentation (1).
+Coverings by reﬂexible maniplexes provide us with useful tools to better under-
+stand connection groups of non-reﬂexible maniplexes. The following proposition is
+the version for maniplexes of [29, Proposition 3.11], and it can be proven in the same
+way as the proposition in that article.
+Proposition 2.2.LetL= (ΩL,[r/prime
+0,...,r/prime
+n−1])andM= (ΩM,[r0,...,rn−1])be ma-
+niplexes such that McoversL. Then there is a group epimorphism µfrom Conn(M)
+toConn(L)that mapsritor/prime
+ifor alli.
+This proposition essentially says that we may think of Conn(M)as acting on the
+ﬂags ofL. In particular, Wn=/angbracketlefts0,...,sn−1/angbracketrightacts on the ﬂags of any n-maniplexL,
+and we can identify the action of each siwith a generator of Conn(L).
+Among all reﬂexible covers of M= (Ω,[r0,...,rn−1])the following cover has
+special relevance. Let src(M) := ( Ω,[¯r0,..., ¯rn−1]), where Ω = Conn(M)and for
+w∈Ωandi∈{0,...,n−1},¯riw:=riw. (We will describe the reason for the name
+“src” in a moment.) Then a covering η:Ω→Ωis deﬁned by specifying some Φ∈Ω
+as the image of the identity element id, and then mapping each w∈ΩtowΦ.
+The following remark is immediate from the deﬁnition of src(M).
+Algebraic Combinatorics , Vol. 5 #2 (2022) 271
+Gabe Cunningham, Daniel Pellicer & Gordon Williams
+Remark 2.3.For every maniplex Mthere is an isomorphism from Conn(M)to
+Conn(src(M))mappingrito¯ri.
+Furthermore, the cover src(M)is thesmallest reﬂexible cover ofMin the sense
+that any other reﬂexible cover of Mis also a cover of src(M). (A straightforward
+adaptation of Proposition 3.16 from [29] can be used to prove this fact.)
+Note that the deﬁnition of src(M)is actually a deﬁnition of a covering of rooted
+maniplexes and in principle it depends on the image Φofid∈Ω. However, since
+src(M)is reﬂexible, diﬀerent choices of such a ﬂag Φyield isomorphic covers, and so
+src(M)is a well-deﬁned construction on the category of unrooted maniplexes.
+Ifsrc(M)is polytopal then it has been denoted elsewhere as the minimal reg-
+ular cover , which is indeed minimal even when restricting only to polytopal covers.
+However, the smallest reﬂexible cover of Mmay not be polytopal, even if Mis a poly-
+tope. If a polytope Phas a non-polytopal smallest reﬂexible cover then Phas rank
+at least 4([29, Proposition 6.1]). To date, relatively few examples of non-polytopal
+smallest reﬂexible covers of polytopes are known, which motivates the search for more
+such examples.
+To conclude this section we state a simple result about the action of the connection
+group of src(M)on the ﬂags ofM.
+Proposition 2.4.IfR= src(M), then the identity element is the only element in
+Conn(R)that ﬁxes every ﬂag of M.
+Proof.First, recall that Conn(M)is a concrete permutation group on Ω, the set of
+ﬂags ofM. Remark 2.3 says that Conn(R)is isomorphic to Conn(M). It follows that
+if an element of Conn(R)ﬁxes every ﬂag of M, then it corresponds to the identity
+permutation and thus the identity element of Conn(R). 
+3.Stratified operations
+If we want to ﬁnd 4-polytopes whose smallest reﬂexible cover is not polytopal, where
+do we start? One appealing way is to apply well-known operations to small poly-
+topes and analyze the result. Most of the literature so far on the connection group
+of polytopes has used this approach, considering truncations of polytopes as well as
+pyramids and prisms over polytopes; see [1], [2], [18], [19], [28] and [33]. In [34], two
+of the authors analyzed the connection groups of pyramids over the regular toroidal
+maps, determining which pyramids have a polytopal smallest reﬂexible cover. What
+can we say about pyramids over non-regular equivelar toroidal maps?
+We will show that if Mis a maniplex with smallest reﬂexible cover R, then the
+smallest reﬂexible cover of the pyramid over Mis the same as the smallest reﬂexible
+cover of the pyramid over R. Moreover, it turns out that the properties of the pyra-
+mid operation that lead to this result are in fact shared by most common maniplex
+operations. Let us start by considering pyramids over polytopes, and then generalize
+to other operations.
+3.1.Smallest reflexible covers of pyramids. The notion of a pyramid over
+ann-polytopePcomes from convex geometry, where it is deﬁned as the ( (n+ 1)-
+dimensional)convexhullof P∪{a0},forsomepoint a0outsidetheaﬃnespanof P(see
+for example [16]). The point a0is denoted the apex, andPthebaseof the pyramid.
+Thisconcepthasbeenextendedtoabstractpolytopes.In[15]itisaparticularinstance
+of a product of polytopes.
+Here we ﬁnd it convenient to deﬁne the pyramid over an arbitrary maniplex as
+follows.
+Algebraic Combinatorics , Vol. 5 #2 (2022) 272
+Stratiﬁed operations on maniplexes
+Definition 3.1.Given ann-maniplexM= (Ω,[r0,...,rn−1]), thepyramid overM
+is the (n+ 1)-maniplexPyr(M) = ({0,...,n + 1}×Ω,[s0,...,sn]), where
+si(k,Φ) =
+
+(k,riΦ)ifk<n−i,
+(k+ 1,Φ)ifk=n−i,
+(k−1,Φ)ifk=n−i+ 1,
+(k,ri−1Φ)ifk>n−i+ 1.
+The elements of the set {0,...,n + 1}are called the layersofPyr(M).
+In Deﬁnition 3.1, the base of the pyramid corresponds to the n-face consisting of
+the ﬂags (0,Φ)and the apex corresponds to the vertex consisting of the ﬂags (n+1,Φ)
+(see Figure 2).
+STRATIFIED OPERATIONS ON MANIPLEXES
+This concept has been extended to abstract polytopes. In [15] it is a particular instance
+of a product of polytopes.
+Here we find it convenient to define pyramid over an arbitrary maniplex as follows.
+Definition 3.1. Given an n-maniplex M= (Ω,[r0, . . . , r n−1]), the pyramid over M
+is the ( n+ 1)-maniplex Pyr(M) = ({0, . . . , n + 1} ×Ω,[s0, . . . , s n]), where
+si(k,Φ) =
+
+(k, riΦ) if k < n −i,
+(k+ 1,Φ) if k=n−i,
+(k−1,Φ) if k=n−i+ 1,
+(k, ri−1Φ) if k > n −i+ 1.
+The elements of the set {0, . . . , n + 1}are called the layers of Pyr( M).
+In Definition 3.1, the base of the pyramid corresponds to the n-face consisting of
+the flags (0 ,Φ) and the apex corresponds to the vertex consisting of the flags ( n+1,Φ)
+(see Figure 2).
+a b
+c
+d
+efgh(0,a) (0,b)
+(0,c)
+(0,d)
+(0,e) (0,f)(0,g)(0,h)(1,a)(1,b)
+(1,c)
+(1,d)
+(1,e)(1,f)(1,g)(1,h)(2,a) (2,b)
+(2,c)
+(2,d)
+(2,e) (2,f)(2,g)(2,h)(3,a)(3,b)
+(3,e)(3,f)(3,c)
+(3,d) (3,g)(3,h)
+Figure 2. The flags of the pyramid over a square (left) and its base
+square (right).
+The motivation of Definition 3.1 is the following. The pyramid Pyr( M) has one
+facet isomorphic to M, namely that consisting of the flags whose first coordinate
+equals 0. Then, for every facet LofMthere is a facet of Pyr(M) consisting of the
+flags ( k,Ψ) with Ψ a flag containing Landk >1. A careful inspection shows that this
+facet of Msatisfies the definition to be the pyramid over L(with first coordinates
+shifted by 1). The equivalence between Definition 3.1 and the ones in [16] and [15]
+(applied to the appropriate class of objects) can be easily shown by induction, with
+base given by the triangle (pyramid over a 1-maniplex).
+Pyramids are well-behaved maniplexes in several respects. One of them is with
+their interaction with quotients, as shown by the following result.
+Lemma 3.2.IfMcovers Lthen Pyr(M)covers Pyr(L).
+Proof. Letπbe the covering from M= (Ω M,[r0, . . . , r n−1]) toL= (Ω L,[r′
+0, . . . , r′
+n−1]).
+Then it follows from Definition 3.1 that the mapping ˜ π:{0, . . . , n + 1} ×ΩM→
+{0, . . . , n + 1} ×ΩLgiven by ( k,Φ)˜π= (k,Φπ) is the desired covering. □
+There is also a nice interaction between the layers of the pyramid and the action
+of the connection group. Observe that the generator siacts as the transposition
+Algebraic Combinatorics , draft (23rd November 2021) 7
+Figure 2. The ﬂags of the pyramid over a square (left) and its base
+square (right).
+The motivation of Deﬁnition 3.1 is the following. The pyramid Pyr(M)has one
+facet isomorphic to M, namely that consisting of the ﬂags whose ﬁrst coordinate
+equals 0. Then, for every facet LofMthere is a facet of Pyr(M)consisting of the
+ﬂags (k,Ψ)with Ψa ﬂag containingLandk>1. A careful inspection shows that this
+facet ofMsatisﬁes the deﬁnition to be the pyramid over L(with ﬁrst coordinates
+shifted by 1). The equivalence between Deﬁnition 3.1 and the ones in [16] and [15]
+(applied to the appropriate class of objects) can be easily shown by induction, with
+base given by the triangle (pyramid over a 1-maniplex).
+Pyramids are well-behaved maniplexes in several respects. One of them is with
+their interaction with quotients, as shown by the following result.
+Lemma3.2.IfMcoversLthen Pyr(M)covers Pyr(L).
+Proof.Letπbethecoveringfrom M= (ΩM,[r0,...,rn−1])toL= (ΩL,[r/prime
+0,...,r/prime
+n−1]).
+Then it follows from Deﬁnition 3.1 that the mapping ˜π:{0,...,n + 1}×ΩM→
+{0,...,n + 1}×ΩLgiven by (k,Φ)˜π= (k,Φπ)is the desired covering. 
+There is also a nice interaction between the layers of the pyramid and the action
+of the connection group. Observe that the generator siacts as the transposition
+σi:= (n−i,n−i+ 1)on the ﬁrst coordinates of all ﬂags. More generally, if x∈Wn+1
+withx=si1···sit, then we will use σxto denoteσi1···σit, so thatxacts on the ﬁrst
+coordinates of all ﬂags as σx.
+Algebraic Combinatorics , Vol. 5 #2 (2022) 273
+Gabe Cunningham, Daniel Pellicer & Gordon Williams
+The action on the second coordinate is also independent of the choice of ﬂag Φand
+the choice of maniplex. In other words, for each kandi, there is an element wk,i∈Wn
+such thatsi(k,Φ) = (σik,wk,iΦ). Indeed, we have:
+wk,i=
+
+riifk<n−i,
+idifn−i6k6n−i+ 1,
+ri−1ifk>n−i+ 1.
+We extend this notation recursively as follows. First, we understand wk,sito mean
+the same thing as wk,i. Now, ifxis the product of some tgenerators of Wn+1with
+t>1, then we may write x=yσi, whereyis the product of t−1generators. Then
+we deﬁne
+wk,x=wσik,ywk,i,
+which makes it so that x(k,Φ) = (σxk,wk,xΦ).
+Summarizing, we have shown:
+Proposition 3.3.
+(1)Wn+1acts on{0,...,n +1}via the homomorphism that sends each sitoσi=
+(n−i,n−i+ 1), and where we denote the image of xbyσx. This action does
+not depend on the choice of base maniplex.
+(2)For everyk∈{0,...,n +1}and everyx∈Wn+1, there is an element wk,x∈
+Wnsuch that, for all Φ,
+x(k,Φ) = (σxk,wk,xΦ).
+Furthermore, wk,xdoes not depend on the choice of base maniplex.
+We are now ready for the main theorem of this section.
+Theorem 3.4.LetMbe a maniplex and Rbe its smallest reﬂexible cover. Then
+Conn(Pyr(M)) = Conn(Pyr(R)).
+Proof.We know from Lemma 3.2 that Pyr(R)covers Pyr(M). Then Proposition 2.2
+tells us that there is a surjective group homomorphism µ: Conn(Pyr(R))→
+Conn(Pyr(M)). It only remains to show that it is in fact an isomorphism.
+Letnbe the rank ofR. Consider an element x∈Wn+1such that the image of x
+inConn(Pyr(R))is in the kernel of µ. In other words, xﬁxes every ﬂag of Pyr(M),
+sox(k,Φ) = (k,Φ)for every ﬂag ΦofMand every layer k. By Proposition 3.3,
+xacts on the layers as some permutation σxthat is independent of the choice of
+base maniplex. Thus, since xﬁxes every layer of Pyr(M), it also ﬁxes every layer of
+Pyr(R). Now, Proposition 3.3 also says that for each k, there is an element wk,xof
+Wnsuch thatx(k,Φ) = (k,wk,xΦ)for every Φ. So for each k, the element wk,xﬁxes
+every ﬂag ΦofM. By Proposition 2.4, wk,xis trivial and hence Conn(Pyr(M)) =
+Conn(Pyr(R)). 
+Having shown that the pyramid operation interacts nicely with connection groups,
+our attention naturally turns to other constructions. Do prisms over polytopes work
+the same way? What about truncations of polyhedra? The essential properties of the
+pyramid construction that led to Theorem 3.4 are that:
+(1) IfMcoversL, then Pyr(M)covers Pyr(L).
+(2) In the deﬁnition of pyramids in Deﬁnition 3.1, each siacts on the layers
+independently of the base maniplex, and each siacts on the ﬂags Φin a way
+that only depends on iand the layer k.
+Algebraic Combinatorics , Vol. 5 #2 (2022) 274
+Stratiﬁed operations on maniplexes
+Roughly speaking, the second condition will be satisﬁed by any maniplex operation
+whose deﬁnition looks like:
+si(k,Φ) =
+
+(k/prime,uΦ)if (some condition on iandk),
+···
+(k/prime/prime,vΦ)if (some condition on iandk).
+Example 3.5.Consider a map ( 3-maniplex)M. Itsmedialis a new map Me (M)with
+ﬂags (0,Φ)and(2,Φ)for each ﬂag ΦofM. Then we have:
+si(k,Φ) =
+
+(k,r1Φ)ifi= 0,
+(k,r2−kΦ)ifi= 1,
+(2−k,Φ)ifi= 2.
+(See [22].) So the medial operation satisﬁes condition (2) above.
+Let us describe condition (2) a little more formally, and then we can see which
+other maniplex operations satisfy that condition.
+3.2.Stratified operations and connection groups.
+Definition 3.6.Consider a maniplex operation F:Mn→Mm. We say that Fis a
+stratiﬁed maniplex operation if there is a set A(called the set of strataorlayers)
+such that:
+(1)IfΩis the set of ﬂags of a maniplex M, then the set of ﬂags of F(M)is
+a subset of A×Ωsuch that the canonical projections into AandΩare both
+surjective.
+(2)LetS={s0,...,sm−1}be the set of generators of Wm; thenWmhas a well-
+deﬁned action on A, where we denote by σithe permutation of Ainduced by
+si∈S.
+(3)There is a function ϕ:A×S→Wnsuch that, for every maniplex Mand
+ﬂagΦ, the action of sionA×Ωis described by
+si(a,Φ) = (σia,ϕ(a,si)Φ).
+Additionally, if the set of ﬂags of F(M)is all ofA×Ω, then we say that Fisfully
+stratiﬁed . For brevity, we will typically denote ϕ(a,si)bywa,i, so that
+si(a,Φ) = (σia,wa,iΦ).
+Proposition 3.7.Suppose that Fis a stratiﬁed maniplex operation, with function
+ϕ:A×S→Wnas in Deﬁnition 3.6. Thenϕcan be extended to a function ˜ϕ:
+A×Wm→Wnsuch that, for every x∈Wmwe havex(a,Φ) = (σxa,˜ϕ(a,x)Φ). We
+will typically denote ˜ϕ(a,x)bywa,x.
+Proof.Letx=si1···sit∈Wm. Then
+x(a,Φ) = (si1···sit−1)sit(a,Φ)
+=si1···sit−1(σita,wa,itΦ).
+Continuing in this way, we ﬁnd that x(a,Φ) = (σxa,wa,xΦ)for some permutation σx
+ofAand some element wa,x∈Wnthat depends only on aandx. 
+Let us oﬀer one cautionary note – if we want to deﬁne a new maniplex operation
+by just picking a set Aand a function ϕ, there are several restrictions. For example,
+we need
+uv(a,Φ) = (σuva,˜ϕ(a,uv)Φ)
+Algebraic Combinatorics , Vol. 5 #2 (2022) 275
+Gabe Cunningham, Daniel Pellicer & Gordon Williams
+and also
+uv(a,Φ) =u(σva,˜ϕ(a,v)Φ) = (σuva,˜ϕ(va,u) ˜ϕ(a,v)Φ),
+implying that ˜ϕ(a,uv) = ˜ϕ(va,u) ˜ϕ(a,v)for alla,u, andv. It is not so easy to pick ϕ
+so that it satisﬁes this unless it does not really depend on a(see Section 3.4). For now,
+werestrictourattentiontomerelydescribingwhat ϕisforwell-knownoperationsthat
+already exist.
+A maniplex operation is cover-preserving if, wheneverMcoversL, thenF(M)
+coversF(L). (In fact, in this case usually Fwill deﬁne a functor on the category of
+rootedn-maniplexes.) Recall that one of the features of the operation Pyrthat led
+to Theorem 3.4 is that Pyris cover-preserving. It turns out that we get that for free
+when working with fully stratiﬁed operations.
+Proposition 3.8.IfFis a fully stratiﬁed maniplex operation, then Fis cover-
+preserving.
+Proof.Suppose thatMandLaren-maniplexes such that π:M→L is a covering.
+We want to deﬁne a covering ˜π:F(M)→F(L), and the obvious possibility is
+(a,Φ)˜π= (a,Φπ). (SinceFis fully stratiﬁed, we can be sure that (a,Φπ)is a ﬂag of
+F(L).) To show that this is a covering, it suﬃces to show that ˜πcommutes with the
+action ofWm. That is, we want to show that for each j,(sj(a,Φ))˜π=sj((a,Φ)˜π).
+We ﬁnd:
+(sj(a,Φ))˜π= (σja,ϕ(a,sj)Φ)˜π= (σja,(ϕ(a,sj)Φ)π),
+whereas
+sj((a,Φ)˜π) =sj(a,Φπ) = (σja,ϕ(a,sj)(Φπ)),
+and the two expressions on the right are equal since the action of πcommutes with
+the action of connections. 
+Now we can prove a generalization of Theorem 3.4.
+Theorem 3.9.Suppose that Fis a fully stratiﬁed maniplex operation. Let Mbe a
+maniplex with smallest reﬂexible cover R. Then Conn(F(R)) = Conn(F(M)).
+Proof.ByProposition3.8, Fiscover-preserving.So F(R)coversF(M),whichimplies
+that there is a surjective group homomorphism πfrom Conn(F(R))toConn(F(M))
+that sends each generator of the former to the corresponding generator of the latter.
+It remains to show that this is an isomorphism.
+Suppose that x∈Wmis such that the image of xinConn(F(R))is in the kernel
+ofπ. In other words, xﬁxes every ﬂag of F(M). SinceFis fully stratiﬁed, the ﬂags
+ofF(M)include all pairs (a,Φ)witha∈AandΦa ﬂag ofM. Then it follows that
+σxﬁxes every a∈A. Furthermore, for each a, the element ϕ(a,x)ﬁxes every ﬂag of
+M. Then Proposition 2.4 says that ϕ(a,x)ﬁxes every ﬂag of Ras well. Thus we have
+shown that for every ﬂag (a,Φ)ofF(R), we havex(a,Φ) = (a,Φ), which implies that
+xcorresponds to the identity of Conn(F(R)). Therefore, the map from Conn(F(R))
+toConn(F(M))is an isomorphism. 
+3.3.Examples of fully stratified operations. In light of Theorem 3.9, it is
+worthwhile to know which maniplex operations are fully stratiﬁed. To demonstrate
+that an operation Fis fully stratiﬁed, it is enough to do the following.
+(1) Show that there is a set Asuch that the ﬂags of F(M)can be identiﬁed with
+all pairs (a,Φ)witha∈AandΦa ﬂag ofM.
+Algebraic Combinatorics , Vol. 5 #2 (2022) 276
+Stratiﬁed operations on maniplexes
+(2) Deﬁne the action of each si∈Wmon(a,Φ)in a way that looks like
+si(a,Φ) =
+
+(a/prime,uΦ)if (some condition on ianda),
+···
+(a/prime/prime,vΦ)if (some condition on ianda).
+(We can extract the necessary function ϕ:A×S→Wnfrom this deﬁnition.)
+Example 3.10.We already remarked (in Example 3.5) that the ﬂags of Me (M)con-
+sist of all pairs (0,Φ)and(2,Φ), where Φranges over all ﬂags of M. The deﬁnition of
+the action of simeets the requirements above, and so the operation F(M) =Me(M)
+is fully stratiﬁed.
+Example 3.11.Truncation of a map (as deﬁned in [31, Section 4.2]) is also a fully
+stratiﬁed operation.
+Example 3.12.SupposeLis ann-polytope, and let F(M) =M/circledottextL, where/circledottextis
+one of the products in [15]. Then Fis fully stratiﬁed; see Section 6.1.
+Example 3.13.The operations Clkand/tildewiderClkfrom [32] are fully stratiﬁed; see Sec-
+tion 6.2.
+Example 3.14.Thek-bubble ofP, deﬁned in [20], is a fully stratiﬁed operation; see
+Section 6.3.
+3.4.Operations defined using parallel products. We would like to identify
+other operations Fthat satisfy the conclusion of Theorem 3.9. First, let us note that
+ifFis fully stratiﬁed and if MandLare maniplexes such that Conn(M)∼=Conn(L),
+then Theorem 3.9 implies that Conn(F(M))∼=Conn(F(L)). In fact, this condition is
+equivalent to the conclusion of Theorem 3.9. Thus we make the following deﬁnition.
+Definition 3.15.A maniplex operation Fisconnection-preserving if, whenever
+Conn(M)∼=Conn(L), then Conn(F(M))∼=Conn(F(L)).
+Now, let us suppose that Fis a stratiﬁed operation with set of strata Aand
+with function ϕ:A×Wm→Wn. Let us further suppose that there is a group
+homomorphism ψ:Wm→Wnsuch that, for every a∈A, we haveϕ(a,x) =ψ(x).
+That means that the action of Wmon a ﬂag (a,Φ)ofF(M)may be written as
+x(a,Φ) = (σxa,ψ(x)Φ),
+so the action of Wmon the second component does not really depend on a. Thus
+xjust acts component-wise; we have an action of Wmon the set Aand an action
+(mediated by ψ) ofWmon the ﬂags ofM. This is known as the parallel product of
+the two actions [38].
+Maniplex operations involving parallel products often depend on the choice of a
+baseﬂagfortheinputmaniplex M.Inotherwords,theseoperationsaremoreproperly
+thought of as operations that take rooted maniplexes as input. The deﬁnition of a
+stratiﬁed operation works without modiﬁcation for rooted maniplexes.
+Proposition 3.16.Suppose that ψ:Wm→Wnis a surjective group homomorphism,
+and thatWmacts transitively on A/negationslash=?via a homomorphism that sends each sito
+a permutation σiofA. Leta0be a ﬁxed base point of A. For rooted n-maniplexes
+(M,Φ0), deﬁneF(M,Φ0)to be the rooted m-maniplex whose ﬂags are the orbit of
+(a0,Φ0)under the action of Wm, where
+x(a,Φ) = (σxa,ψ(x)Φ).
+ThenFis a cover-preserving, stratiﬁed operation.
+Algebraic Combinatorics , Vol. 5 #2 (2022) 277
+Gabe Cunningham, Daniel Pellicer & Gordon Williams
+Proof.To show that Fis stratiﬁed, the only part that is not immediate is that the
+set of ﬂags of F(M)needs to project surjectively onto AandΩ. This is true because
+Wmacts transitively on A, and because ψis surjective and Wnacts transitively on Ω.
+Now, we want to show that Fis cover-preserving. Suppose that (M,Φ0)and
+(L,Ψ0)are rooted n-maniplexes such that π:M→L is a covering that sends Φ0
+toΨ0. As in Proposition 3.8, we deﬁne ˜π:F(M)→F(L)by(a,Φ)˜π= (a,Φπ).
+In order for this to be well-deﬁned, we need to show that (a,Φπ)is a ﬂag of F(L)
+whenever (a,Φ)is a ﬂag of F(M). By deﬁnition, the ﬂags of F(M)consist of the
+orbit of (a0,Φ0)under the action of Wm. So for each (a,Φ), there is some x∈Wm
+such that (a,Φ) =x(a0,Φ0) = (σxa0,ψ(x)Φ0). Then:
+x(a0,Ψ0) = (σxa0,ψ(x)Ψ0)
+= (a,ψ(x)(Φ0π))
+= (a,(ψ(x)Φ0)π)
+= (a,Φπ),
+and so (a,Φπ)is in the orbit of (a0,Ψ0)and thus a ﬂag of F(L). The rest of the
+proof (showing that ˜πcommutes with connections) is the same as the proof of
+Proposition 3.8. 
+Definition 3.17.A maniplex operation Fisa parallel product if it satisﬁes the
+conditions of Proposition 3.16.
+Let us look at several examples of parallel products.
+Example 3.18.TheI-doubles of a map (deﬁned in [26]) can be seen as a parallel
+product, where Ais a two element set with some prescribed action of Wm, and where
+Wmacts in the natural way on Ω.
+Example 3.19.LetLbe ann-maniplex with base ﬂag Ψ0. Consider the operation
+on rootedn-maniplexes deﬁned by F(M,Φ0) = (M,Φ0)/diamondmath(L,Ψ0). This is the mix
+of rooted maniplexes, as deﬁned in [8, Section 3.2] and seen in other forms in many
+previous papers. The ﬂags of F(M,Φ0)consist of (some) pairs (Φ,Ψ), with Φa ﬂag
+ofMandΨa ﬂag ofL, and for each i,si(Φ,Ψ) = (riΦ,riΨ). (In fact, in this case
+we havem=n, so maybe we ought to write ri(Φ,Ψ) = (riΦ,riΨ).)
+Example 3.20.LetQbe a vertex-bipartite polytope, and consider the operation on
+facet-bipartite polytopes Pgiven byF(P) =P|Q, theﬂat amalgamation of Pand
+Q. (See [6, Deﬁnition 4.2].) This is also a parallel product.
+Now let us show that parallel products are connection-preserving.
+Theorem 3.21.Suppose that Fis a parallel product. Let Mbe a maniplex with small-
+est reﬂexible cover R. Then Conn(F(R)) = Conn(F(M)).
+Proof.By Proposition 3.16, Fis cover-preserving. So F(R)coversF(M), which
+implies that there is a surjective group homomorphism πfrom Conn(F(R))to
+Conn(F(M))that sends each generator of the former to the corresponding generator
+of the latter. It remains to show that this is an isomorphism.
+Suppose that x∈Wmsuch that the image of xinConn(F(R))is in the kernel of π.
+Inotherwords, xﬁxeseveryﬂagof F(M).SinceFisstratiﬁed,every a∈Aappearsas
+part of a ﬂag (a,Φ)ofF(M). Thenxmust ﬁx every a∈A. Now, every ﬂag Φappears
+as part of a ﬂag (a,Φ), and so for every Φthere is some asuch thatϕ(a,x)ﬁxes Φ.
+SinceFis a parallel product, there is a function ψsuch thatϕ(a,x) =ψ(x). So, for
+every Φwe have that ψ(x)ﬁxes Φ. By Proposition 2.4, it follows that ψ(x)ﬁxes every
+ﬂag ofRas well. Thus we have shown that for every ﬂag (Φ,a)ofF(R), we have
+Algebraic Combinatorics , Vol. 5 #2 (2022) 278
+Stratiﬁed operations on maniplexes
+x(a,Φ) = (a,Φ), which implies that xcorresponds to the identity of Conn(F(R)).
+Therefore, the map from Conn(F(R))toConn(F(M))is an isomorphism. 
+3.5.Open problems on stratified and non-stratified operations. Let us
+look at an example of a stratiﬁed operation that is neither fully stratiﬁed nor a
+parallel product.
+Example 3.22.Consider the operation F(M) =Tw(M), the general twist of [10]. We
+can takeA={0,1}(or to be the colors “red” and “white”), and the ﬂags of F(M)
+consist of pairs (c,Φ)wherecis the color of Φ. Then the deﬁnition of the action of
+eachsiis given in Section 4.3 of [10], and each siswaps colors. Also, Fis stratiﬁed,
+but neither fully stratiﬁed nor a parallel product.
+Wenaturallywonderwhether Twisconnection-preserving.Asimpleexampleshows
+that it need not be.
+Proposition 3.23.There is a twist operator Twthat is not connection-preserving.
+Proof.LetMbeKrughoﬀ’s cube (see [10, Section 4.1]). There is a twist opera-
+torTwsuch thatTw(M)is reﬂexible (the trivial extension of a cube). Both M
+andTw(M)have 96ﬂags. Since Tw(M)is reﬂexible,|Conn(Tw(M))|= 96. On the
+other hand,Mis not reﬂexible, so src(M)has more ﬂags than M. It follows that
+|Conn(Tw(src(M)))|>|Conn(Tw(M))|. 
+Problem 3.24.Describe the necessary conditions for a stratiﬁed operation to be
+connection-preserving.
+With such a wide-ranging list of stratiﬁed operations, we start to wonder which
+operations are notstratiﬁed. The following result helps us demonstrate that some
+operations are not stratiﬁed. Let |M|denote the number of ﬂags of a maniplex M.
+Proposition 3.25.Suppose that Fis a maniplex operation such that, if Mis ﬁnite,
+thenF(M)is ﬁnite. Furthermore, suppose that |F(M)|/|M|is an unbounded function
+ofMfor ﬁnite maniplexes. Then Fis not stratiﬁed.
+Proof.SupposeFis stratiﬁed and that Mis ﬁnite. Then since the projection from the
+ﬂag set ofF(M)toAis surjective, and F(M)is ﬁnite whenMis ﬁnite, this implies
+thatAis ﬁnite. On the other hand, |F(M)|6|M|·|A|, and so|F(M)|/|M|6|A|,
+and so|F(M)|/|M|is bounded. 
+Example 3.26.Consider the operation F(M) = 2M, ﬁrst introduced in [9] for inci-
+dence complexes, and adapted in its dual form for maniplexes in [10]. Then Fis not
+stratiﬁed – it yields |F(M)|/|M|= 2v, wherevis the number of vertices of M, and
+this is unbounded.
+Problem 3.27.Other than Proposition 3.25, what other conditions guarantee that an
+operationFis not stratiﬁed?
+Problem 3.28.Even though 2Mis not stratiﬁed, is it connection-preserving?
+4.Pyramids over equivelar toroidal maps
+In this section we use the results of Section 3 to classify the smallest reﬂexible covers
+of the pyramids over the equivelar toroidal maps. To do this we will make use of the
+classiﬁcations of the symmetry types of equivelar toroidal maps in Theorems 7 and
+8 of [23] (see also [3]), the classiﬁcation of the minimal regular covers of equivelar
+toroidal maps obtained by Drach and Mixer in [11], and the classiﬁcation of the
+minimal regular covers of the pyramids over the regular toroidal maps in [34] obtained
+by Pellicer and Williams.
+Algebraic Combinatorics , Vol. 5 #2 (2022) 279
+Gabe Cunningham, Daniel Pellicer & Gordon Williams
+4.1.Connection Groups of Pyramids Over Regular Toroidal Maps. First,
+we brieﬂy summarize the main results from Pellicer and Williams’ [34].
+The main technique of that paper was to represent the connection group of a
+polytope as (isomorphic to) a subgroup of the wreath product of Aut(P)withSk,
+wherekis the number of ﬂag orbits of P, i.e. as a subgroup of ∆ :=Sk≀[k]Aut(P) =
+SknAut(P)k. To do this, we deﬁne an injective map ι: Conn(P)/arrowhookleft→∆as follows.
+LetGbe the symmetry type graph of P(see [7]) with ﬂag graph FG(P), andTa
+spanning tree of G. The lifts of TtoFG(P)arechunks; each ﬂag lies in precisely
+one chunk, and each chunk contains exactly one ﬂag from each orbit OiofΩunder
+the action of Aut(P), and consequently the chunks form a partition on the ﬂags of
+P. Let Φ1be a representative of orbit O1, and let Φi∈Oibe the representatives of
+the remaining orbits in the chunk containing Φ1. Letω∈Conn(P). Then for each i
+there is a unique element αi∈Aut(P)taking Φ1to the representative of O1in the
+chunk containing Φω
+i, and an element σ∈Skcorresponding to the permutation on
+the indices of the orbits induced by ω. We thus deﬁne ι: Conn(P)→∆by
+ι(ω) := (σ,[α1,α2,...,αk]).
+This map is an injective homomorphism ([34, Prop. 4.3]) and thus |Conn(P)|6
+|Aut(P)|k·k!([34,Lemma4.4]).Wesummarizetheseresultswiththefollowinglemma.
+Lemma 4.1.LetPbe a polytope with automorphism group Aut(P), and letkbe the
+number of orbits in F(P)under the action of Aut(P). Then Conn(P)is isomorphic
+to a subgroup of Sk≀[k]Aut(P).
+The pyramid operation is a fully stratiﬁed operation on a regular polytope Pof
+rankn(here viewed as a rooted maniplex), wherein the indexing set for the orbits
+in the automorphism group of the pyramid over Pcorrespond to the strata (but
+are shifted by 1 from Section 3.1 due to the diﬀerences between the indexing sets;
+those used in [34] reﬂected the standard notation for Sk). This is actually quite nice,
+because in general the set of strata need not correspond to orbits. For example, the
+prism operation over regular n-polytopes is stratiﬁed, and there are 2n+ 2strata
+formed by the construction, but at most n+ 1orbits. In the context of the pyramids
+over the equivelar toroidal maps, the pyramiding operation is a stratiﬁed operation
+on 3-maniplexes that produces a 4-maniplex. Following Deﬁnition 3.6, we thus have
+k= 5strata. IfSisthesetofgeneratorsof W4,thentheaction σiofsionAistheﬁrst
+component of ι(si). IfΦis in orbita, thenφ(a,si)is the (induced) left action of αa
+on a ﬂag (1,Φ)∼Φ1described above. In other words, it is the a-th component of the
+second component of ι(si). Here we are taking strong advantage of the identiﬁcation
+of the automorphism group of the regular toroidal base with its connection group.
+4.2.The Regular Covers of the Equivelar Toroidal Maps. In [23] a clas-
+siﬁcation of the equivelar toroidal maps is described. All such maps are quotients of
+the regular Euclidean tessellations {4,4},{3,6}and{6,3}. Since the last two families
+are dual to each other, it suﬃces to conﬁne our discussion to the classiﬁcation of the
+equivelar toroidal maps of Schläﬂi type {4,4}and{3,6}. Classes of toroidal maps
+are organized according to the number of orbits k, and by two translation vectors
+that generate the translation subgroup of the corresponding universal regular poly-
+tope needed to form the equivelar toroidal map as its quotient. (But note that there
+are many equivalent choices for generating a particular translation subgroup.) The
+two-orbit equivelar toroidal maps are further classiﬁed according to which adjacent
+ﬂags belong to the same orbit, i.e. none of the adjacent ﬂags belong to the same orbit
+for a two-orbit map labeled 2, while a two-orbit map in which the 0-adjacent and
+2-adjacent ﬂags belong to the same orbit is denoted 20,2(see also [24, 21, 31]). The
+Algebraic Combinatorics , Vol. 5 #2 (2022) 280
+Stratiﬁed operations on maniplexes
+classiﬁcation of equivelar toroidal maps of type {3,6}requires only the number of
+orbits and the two translation vectors.
+For the{4,4}equivelar toroidal maps, it is convenient to start with a regular
+tessellation of type {4,4}whose vertices correspond to the Gaussian integer lattice
+in the complex plane given by Z[i] ={a+bi:a,b∈Z}. Thus vectors corresponding
+to translational symmetries of the tiling may be written as elements of Z[i], and any
+subgroup of translational symmetries will be determined by two linearly independent
+vectors (a,b)and(c,d), which in turn can be represented by the Gaussian integers
+α=a+biandβ=c+di, respectively. Every equivelar toroidal map of type {4,4}is
+a quotient of{4,4}by such a translational subgroup.
+The{3,6}equivelar toroidal maps may be described similarly, this time by as-
+sociating the vertices of the tiling {3,6}with the Eisenstein integers Z[ω]whereω
+is the sixth root(1)of unity1+i√
+3
+2. We may associate to each proper translational
+subgroup of the symmetries of {3,6}a pair of linearly independent vectors with (a,b)
+and(c,d)relative to the basis (1,0),(1
+2,√
+3
+2). We may then encode these vectors as
+Eisenstein integers α=a+bωandβ=c+dωfor ease in computing minimal regular
+covers, noting that ω2=ω−1. Every equivelar tiling of Schläﬂi type {3,6}arises as
+a quotient by such a translational subgroup of the regular polytope {3,6}.
+Throughout what follows, σis eitheriorωas appropriate. Following [11], we deﬁne
+N(α) =αα, wherea+bσis deﬁned to be a+bσwithσthe usual complex conjugate
+ofσ. In particular, N(1 +i) = 2andN(1 +ω) = 3.
+Traditionally (cf. [27, 37]) the regular toroidal maps are written as {p,q}(n,0)or
+{p,q}(n,n), wheren∈Z, with the subscript (n,0)indicating that the translational
+subgroup is generated by (n,0)and(0,n), and the subscript (n,n)indicated that the
+translational subgroup is generated by (n,n)and(−n,n)in the{4,4}case and (n,n)
+and(−n,2n)in the{3,6}case (written with respect to the basis of the lattice). If
+we letTbe our regular tiling of the plane of type {3,6}or{4,4}, then mimicking
+the classical notation for these toroidal maps we may write Tηto denote a regular
+toroidal map where η=norη=n+nσas appropriate.
+In [11], using factorization properties of the Gaussian and Eisenstein integers, it
+was shown that the minimal regular cover of an equivelar tiling is easily determined
+from the following result.
+Theorem 4.2 ([11, Theorem 3.6]) .LetTα,βbe an equivelar toroidal map represented
+as a quotient of a regular planar tessellation Tby a translation subgroup /angbracketleftα,β/angbracketrightof
+the translational symmetry subgroup of Tgenerated by two non-collinear vectors,
+corresponding to the complex numbers α,β∈Z[σ]withα=a+bσ,β =c+dσ.
+Letg= GCD(a,b,c,d ). Then forTα,βthere exists a unique minimal regular covering
+mapTηwith
+η=
+
+|ad−bc|
+N(1+σ)g(1 +σ),ifa
+g≡b
+gandc
+g≡d
+gmodN(1 +σ);
+|ad−bc|
+g, otherwise.
+Moreover, the number Kof fundamental regions of Tα,βglued together in order to
+obtainTηis equal to
+K=
+
+|ad−bc|
+N(1+σ)g2,ifa
+g≡b
+gandc
+g≡d
+gmodN(1 +σ);
+|ad−bc|
+g2,otherwise.
+(1)Classically, the Eisenstein integers are deﬁned using the third root of unity, but the rings are
+the same and here we are following the treatment in [11] and [23].
+Algebraic Combinatorics , Vol. 5 #2 (2022) 281
+Gabe Cunningham, Daniel Pellicer & Gordon Williams
+We have collected the classiﬁcation of regular covers of the equivelar toroidal maps
+according to their symmetry classes from [23] in Table 1.
+Table 1. Minimal regular covers of the equivelar toroidal maps.
+In the ﬁnal column, Pis the pyramid over the equivelar map. In
+this classiﬁcation we assume that a > b > 0,c,d > 0. Note that
+the generators of the toroidal maps of type {4,4}in Class 4 must
+additionally satisfy c>a−b,c/negationslash= 2a,a/negationslash= 2cand ifb|a,c, then
+c
+b-1±a2
+b2. Generators of the toroidal maps of type {3,6}in Class
+6 must additionally satisfy c>a−b,c-2a+band ifb|a,c, then
+c
+b-1−a2
+b2andc
+b-1 +a
+b+a2
+b2.
+Schäﬂi ClassGenerators Additional Regular src(P)is a
+Type Conditions Cover Type polytope
+{4,4}1 (a,0),(0,a) none (a,0) aeven
+(a,a),(−a,a)none (a,a) a>2
+2 (a,b),(−b,a)a
+g,b
+g≡1 (mod 2)/parenleftBig
+a2+b2
+2g,a2+b2
+2g/parenrightBig
+always
+else/parenleftBig
+a2+b2
+g,0/parenrightBig
+aandbeven
+20,2 (a,0),(0,b) none/parenleftBig
+ab
+g,0/parenrightBig
+aorbeven
+(a,b),(a,−b)a
+g,b
+g≡1 (mod 2)/parenleftBig
+ab
+g,ab
+g/parenrightBig
+always
+else/parenleftBig
+2ab
+g,0/parenrightBig
+always
+21 (a,a)(−b,b) none/parenleftBig
+ab
+g,ab
+g/parenrightBig
+always
+(a,b)(b,a)a
+g,b
+g≡1 (mod 2)/parenleftBig
+a2−b2
+2g,a2−b2
+2g/parenrightBig
+always
+else/parenleftBig
+a2−b2
+g,0/parenrightBig
+aandbeven
+4 (a,b),(c,0)a
+g≡b
+g,c
+g≡0 (mod 2)/parenleftBig
+bc
+2g,bc
+2g/parenrightBig
+always
+else/parenleftBig
+bc
+g,0/parenrightBig
+borceven
+{3,6}1 (a,0),(0,a) none (a,0) a>1
+(a,a),(2a,−a)none (a,a) always
+2 (a,b),(−b,a+b)a
+g≡b
+g(mod 3)/parenleftBig
+a2+ab+b2
+3g,a2+ab+b2
+3g/parenrightBig
+always
+else/parenleftBig
+a2+ab+b2
+g,0/parenrightBig
+always
+3 (a,0),(−c,2c)a
+g≡0 (mod 3)/parenleftBig
+2ac
+3g,2ac
+3g/parenrightBig
+always
+else/parenleftBig
+2ac
+g,0/parenrightBig
+always
+(a,d),(a+d,−d)a
+g≡d
+g(mod 3)/parenleftBig
+2ad+d2
+3g,2ad+d2
+3g/parenrightBig
+always
+else/parenleftBig
+2ad+d2
+g,0/parenrightBig
+always
+6 (a,b),(c,0)a
+g≡b
+g,c
+g≡0 (mod 3)/parenleftBig
+bc
+3g,bc
+3g/parenrightBig
+always
+else/parenleftBig
+bc
+g,0/parenrightBig
+always
+4.3.Connection groups of pyramids over equivelar toroidal maps. In[34]
+the connection groups of pyramids over the regular toroidal maps were classiﬁed, and
+in particular, it was shown that the connection groups of all pyramids over regular
+toroidal maps of type {3,6}and{6,3}are string C-groups [34, Prop. 6.10], as are
+the connection groups of pyramids over toroidal maps of type {4,4}, except for the
+pyramids over toroidal maps of type {4,4}(n,0)withnodd [34, Prop. 6.2-6.4]. In
+summary,
+Theorem 4.3.The smallest reﬂexible cover of the pyramid over a regular toroidal
+map is a regular polytope except when the map is of type {4,4}(n,0)withnodd.
+Algebraic Combinatorics , Vol. 5 #2 (2022) 282
+Stratiﬁed operations on maniplexes
+Consequently, by Theorem 3.4, it is easy to see that the pyramid over an equivelar
+toroidal map has a polytopal minimal regular cover except when the underlying map
+is of type{4,4}(n,0)withnodd.
+Example 4.4.Consider the 2-orbit equivelar toroidal maps {4,4}(6,10),(10,6)and
+{4,4}(4,5),(5,4)of type 21. In the former case the GCD of the coeﬃcients is g= 2, and
+a= 6,b= 10. Hencea
+g= 3≡1 (mod 2) andb
+g= 5≡1 (mod 2) , and so the smallest
+reﬂexible cover is the polytopal minimal regular cover of Pyr({4,4}(16,16)), which has
+256·3·5ﬂags. In the latter case, the GCD of the coeﬃcients is 1, so the smallest
+reﬂexible cover of Pyr({4,4}(4,5),(5,4))is the maniplex corresponding to the smallest
+reﬂexible cover of Pyr({4,4}(9,0)), which has 212·321·5ﬂags, and is not a polytope.
+5.Concluding remarks
+Section 4 shows one way to use Theorem 3.9; namely, if we want to know something
+about Conn(F(M)), then we can work with Conn(F(R))instead, whereR= src(M).
+Since the theory of reﬂexible maniplexes is much more well-developed than the theory
+of non-reﬂexible maniplexes, it is often easier to deal with Conn(F(R)), and working
+this way is especially appealing for classes of maniplexes where the smallest reﬂexible
+covers are well-understood.
+There are also good reasons to use Theorem 3.9 in reverse. That is, suppose we
+would like to know something about Conn(F(R))whereRis reﬂexible, and suppose
+we know thatMis a maniplex with smallest reﬂexible cover R. For computational
+experimentation, working with the smaller maniplex Mwill usually be faster.
+For example, let us consider the prisms over the regular toroidal maps {4,4}(n,0).
+Using some GAP [13] code written by the ﬁrst author, we calculated the connection
+group of the prism over {4,4}(n,0)forn630and determined that all such groups
+were string C-groups. This calculation took about 160 seconds on the ﬁrst author’s
+computer. Now, since {4,4}(n,0)is the smallest reﬂexible cover of {4,4}(n,0),(0,1)(that
+is, the quotient of the regular tessellation of type {4,4}by the group generated by the
+translations by vectors (n,0)and(0,1)), we can also determine the connection group
+of the prisms over the latter. For n630, we again determined that all such groups
+were string C-groups; this time the calculation took about 3 seconds. In fact, in about
+32 seconds we were able to cover n6100using the second method. The source code
+for computing the connection groups of toroidal maps as well as pyramids and prisms
+over them can be found at http://www.gabrielcunningham.com/connection.gap .
+6.Appendix
+6.1.Products of polytopes. Four diﬀerent products of polytopes were deﬁned
+in [15]. Here we will consider the join product and show that we can use it to deﬁne
+a stratiﬁed operation. The other products also deﬁne stratiﬁed operations, and the
+proofs are analogous.
+The join product of an n-polytopePwith anm-polytopeQis an (m+n+ 1)-
+polytope, denoted P1Q. Section 6 of [15] describes the ﬂags as triples (Φ,Ψ,a), where
+Φis a ﬂag ofP,Ψis a ﬂag ofQ, anda= (a0,a1,...,am+n+1)is a tuple of elements
+from{1,2}such that 2appearsm+ 1times. This determines the faces of a ﬂag as
+follows.Foranyﬂag ∆,let∆(i)denotethei-faceof ∆.Considertheﬂag Λ = (Φ,Ψ,a).
+Algebraic Combinatorics , Vol. 5 #2 (2022) 283
+Gabe Cunningham, Daniel Pellicer & Gordon Williams
+Then:
+Λ(−1) = (Φ(−1),Ψ(−1)).
+Λ(0) =/braceleftBigg
+(Φ(0),Ψ(−1))ifa0= 1,
+(Φ(−1),Ψ(0))ifa0= 2.
+In general, in order to determine Λ(i+ 1), we take Λ(i)(which will look like
+(Φ(j),Ψ(k))for somejandk), and ifai+1= 1, we increment j; otherwise we
+incrementk.
+For the join product of two polytopes, rather than using tuples a, we may as well
+just record the position of every 2inainto a subset Iof{0,...,m +n+ 1}. So every
+ﬂag ofP1Qcan be represented as a triple Λ = (Φ,Ψ,I), whereI⊂{0,...,n +m+1}
+with|I|=m+ 1, and then
+Λ(j) = (Φ(j−|I∩{0,...,j}|),Ψ(−1 +|I∩{0,...,j}|)).
+Conversely, every triple of this type determines a ﬂag.
+Now let us determine the ﬂag that is j-adjacent to a given Λ = (Φ,Ψ,I). First,
+suppose that j∈Iandj+ 1/negationslash∈I. Then if we compare Λ(j−1)toΛ(j+ 1), we
+see that Λ(j+ 1)has both components diﬀerent from Λ(j−1). Then the section
+Λ(j+ 1)/Λ(j−1)of thej-adjacent ﬂag to Λmust just increase the two components
+in the opposite order compared to Λ, and so it has j+ 1∈Iinstead ofj∈I. Thus,
+if exactly one of jandj+ 1is inI, we have that Λj= (Φ,Ψ,I/triangle{j,j+ 1})(where
+I/triangle{j,j+ 1}denotes the symmetric diﬀerence of those two sets).
+If bothjandj+ 1are inI, then in moving from Λ(j−1)toΛ(j+ 1), we increase
+the second component twice, and so the ﬁrst component remains the same. This
+implies that Λjhas the same subset Iand the same ﬂag Φ. For some k, the second
+component of Λ(j−1)isΨ(k−1), the second component of Λ(j)isΨ(k), and the
+second component of Λ(j+ 1)isΨ(k+ 1). Then the only other ﬂag that diﬀers
+from Λonly in its j-face must use Ψkin place of Ψ. In fact, as described above,
+k=−1 +|I∩{0,...,j}|, and so
+Λj= (Φ,Ψ−1+|I∩{0,...,j}|,I).
+A similar argument shows that if neither jnorj+ 1is inI, then
+Λj= (Φj−|I∩{0,...,j}|,Ψ,I).
+Putting it all together, we get:
+sj(Φ,Ψ,I) =
+
+(rj−|I∩{0,...,j}|Φ,Ψ,I),ifj,j+ 1/negationslash∈I,
+(Φ,Ψ,I/triangle{j,j+ 1}),if|I∩{j,j+ 1}|= 1,
+(Φ,r−1+|I∩{0,...,j}|Ψ,I),ifj,j+ 1∈I.
+Now, supposeQis anm-polytope and deﬁne an operation Fonn-polytopesFby
+F(P) =P1Q. We can see Fas a fully stratiﬁed operation by taking Ato be all pairs
+(Ψ,I).
+We have shown:
+Theorem 6.1.IfQis anm-polytope and/circledottextis one of the four products deﬁned in [15],
+then the operation Fdeﬁned byF(P) =P/circledottextQis fully stratiﬁed.
+6.2.Cleaved polytopes. Given ann-polytopeP, itsk-th cleaved polytope and its
+partiallyk-th cleaved polytope were deﬁned in [32]. They consist of
+Clk(P) :={F−1}∪{ (F,G) :F6G; rank(F)6k−1; rank(G)>k}
+Algebraic Combinatorics , Vol. 5 #2 (2022) 284
+Stratiﬁed operations on maniplexes
+and
+/tildewiderClk(P) :={F−1,Fn−1}∪{(F,G) :F6G; 06rank(F)6k−1;k6rank(G)6n−1},
+respectively, where F−1is less than all other faces, Fn−1is greater than all other faces
+of/tildewiderClk(P), and in both polytopes (F,G)6(F/prime,G/prime)if and only if F/prime6F6G6G/prime
+inP.
+Theorem 6.2.Clkis fully stratiﬁed.
+Proof.According to [32, Remark 5], the set Arequired is the set of vectors with k
+entries “−” andn−kentries “ +”.
+Given a vector ¯a:= (a1,...,an)withai∈{+,−}, let ¯ai,j:= (a/prime
+1,...,a/prime
+n)be the
+vector in{+,−}nwithak=a/prime
+kif and only if k /∈{i,j}. Furthermore, for j>2let
+[−](¯a,j)and[+](¯a,j)denote the number of entries “ −” and the number of entries
+“+” in{a1,...,aj−1}, respectively. Clearly, [−](¯a,j) + [+](¯a,j) =j−1. Then
+s0(¯a,Φ) =/braceleftBigg
+(¯a,rk−1Φ)ifa1=−,
+(¯a,rkΦ)ifa1= +,
+and ifj>2then
+sj(¯a,Φ) =
+
+(¯aj,j+1,Φ) ifaj/negationslash=aj+1,
+(¯a,rk−2−[−](¯a,j)Φ)ifaj=aj+1=−,
+(¯a,rk+1+[+](¯a,j)Φ)ifaj=aj+1= +.
+Theorem 6.3./tildewiderClkis fully stratiﬁed.
+Proof.Same as in the previous theorem, except that:
+•¯ais a vector with only n−2entries,k−1of which are “−” and the remaining
+n−k−1are “ +”,
+•sn−2is deﬁned as
+sn−2(¯a,Φ) =/braceleftBigg
+(¯a,r0Φ)ifan−2=−,
+(¯a,rn−1Φ)ifan−2= +.
+Note that/tildewiderClkis our ﬁrst example of a fully stratiﬁed operation that reduces the
+rank of the input.
+Problem 6.4.Describe other fully stratiﬁed operations F:Mn→Mmwithm<n.
+6.3.k-bubble of a polytope. Thek-bubble ofP, denoted [P]k, can be viewed as
+a generalization of vertex truncation (in a diﬀerent way from cleaved polytopes). As
+a poset, [P]kis deﬁned as follows. (See Def. 2.1 and Lemma 2.6 from [20].)
+Definition 6.5.We deﬁne a ranked poset [P]kof the same rank as Player by layer.
+(1)For06i6k−1, the set of i-faces of [P]kis the same as the set of i-faces
+ofP.
+(2)Eachk-face is a pair (F,G), whereFis ak-face ofPandGis an incident
+(k+ 1)-face ofP.
+(3)Fork+16i6n−1, there are two types of i-faces;i-facesHofP, and pairs
+(F,G)of ak-face and an incident (i+ 1)-face.
+We then adjoin a minimal and maximal element.
+The partial order can be deﬁned as follows:
+(1)For faces of [P]kthat correspond to faces of P, the partial order is the same.
+(2)(F,G)6(F/prime,G/prime)if and only if F=F/primeandG6G/prime.
+Algebraic Combinatorics , Vol. 5 #2 (2022) 285
+Gabe Cunningham, Daniel Pellicer & Gordon Williams
+(3)H6(F,G)if and only if H6F.
+(4)(F,G)6Hif and only if G6H.
+Theorem 6.6.The operation that takes Pto[P]kis fully stratiﬁed.
+Proof.Lemma 2.8 of [20] gives a description of the ﬂags of [P]k. Every ﬂag has the
+form
+(F−1,F0,...,Fk−1,(Fk,Fk+1),..., (Fk,Fi),Fi,...,Fn),
+where (F−1,...,Fn)is a ﬂag ofPandk+ 16i6n. Thus, we may specify a ﬂag of
+[P]kas(i,Φ), and all such pairs deﬁne a ﬂag of [P]k.
+From this, it is straightforward to prove that:
+sj(i,Φ) =
+
+(i,rjΦ)if06j6k−1orj>i+ 1,
+(i,rj+1Φ)ifk6j6i−2,
+(i−1,Φ)ifj=i−1,
+(i+ 1,Φ)ifj=i,
+showing that the operation is fully stratiﬁed. 
+References
+[1] Leah Wrenn Berman, Mark Mixer, Barry Monson, Deborah Oliveros, and Gordon Williams,
+The monodromy group of the n-pyramid , Discrete Math. 320(2014), 55–63.
+[2] Leah Wrenn Berman, Barry Monson, Deborah Oliveros, and Gordon Williams, The monodromy
+group of a truncated simplex , J. Algebraic Combin. 42(2015), no. 3, 745–761.
+[3] Ulrich Brehm and Wolfgang Kühnel, Equivelar maps on the torus , European J. Combin. 29
+(2008), no. 8, 1843–1861.
+[4] Marston Conder, The smallest regular polytopes of given rank , Adv. Math. 236(2013), 92–110.
+[5] Gabe Cunningham, Self-dual, self-Petrie covers of regular polyhedra , Symmetry 4(2012), no. 1,
+208–218.
+[6] ,Flat extensions of abstract polytopes , Art Discrete Appl. Math. 4(2021), no. 3, Paper
+no. 3.06 (14 pages).
+[7] Gabe Cunningham, María Del Río-Francos, Isabel Hubard, and Micael Toledo, Symmetry type
+graphs of polytopes and maniplexes , Ann. Comb. 19(2015), no. 2, 243–268.
+[8] Gabe Cunningham and Daniel Pellicer, Open problems on k-orbit polytopes , Discrete Math. 341
+(2018), no. 6, 1645–1661.
+[9] Ludwig Danzer, Regular incidence-complexes and dimensionally unbounded sequences of such.
+I, in Convexity and graph theory (Jerusalem, 1981), North-Holland Math. Stud., vol. 87, North-
+Holland, Amsterdam, 1984, pp. 115–127.
+[10] Ian Douglas, Isabel Hubard, Daniel Pellicer, and Steve Wilson, The twist operator on mani-
+plexes, in Discrete geometry and symmetry, Springer Proc. Math. Stat., vol. 234, Springer,
+Cham, 2018, pp. 127–145.
+[11] Kostiantyn Drach and Mark Mixer, Minimal covers of equivelar toroidal maps , Ars Math. Con-
+temp. 9(2015), no. 1, 77–91.
+[12] Maria Elisa Fernandes, Dimitri Leemans, and Mark Mixer, Polytopes of high rank for the alter-
+nating groups , J. Combin. Theory Ser. A 119(2012), no. 1, 42–56.
+[13] The GAP Group, GAP – Groups, Algorithms, and Programming, Version 4.4.12 , 2008, http:
+//www.gap-system.org .
+[14] Jorge Garza-Vargas and Isabel Hubard, Polytopality of maniplexes , Discrete Math. 341(2018),
+no. 7, 2068–2079.
+[15] Ian Gleason and Isabel Hubard, Products of abstract polytopes , J. Combin. Theory Ser. A 157
+(2018), 287–320.
+[16] Branko Grünbaum, Convex polytopes , second ed., Graduate Texts in Mathematics, vol. 221,
+Springer-Verlag, New York, 2003, Prepared and with a preface by Volker Kaibel, Victor Klee
+and Günter M. Ziegler.
+[17] Michael I. Hartley and Alexander Hulpke, Polytopes derived from sporadic simple groups , Con-
+trib. Discrete Math. 5(2010), no. 2, 106–118.
+[18] Michael I. Hartley, Daniel Pellicer, and Gordon Williams, Minimal covers of the prisms and
+antiprisms , Discrete Math. 312(2012), no. 20, 3046–3058.
+Algebraic Combinatorics , Vol. 5 #2 (2022) 286
+Stratiﬁed operations on maniplexes
+[19] Michael I. Hartley and Gordon Williams, Representing the sporadic Archimedean polyhedra as
+abstract polytopes , Discrete Math. 310(2010), no. 12, 1835–1844.
+[20] Ilanit Helfand, Constructions of k-orbit Abstract Polytopes , ProQuest LLC, Ann Arbor, MI,
+2013, Thesis (Ph.D.)–Northeastern University.
+[21] Isabel Hubard, Two-orbit polyhedra from groups , European J. Combin. 31(2010), no. 3, 943–
+960.
+[22] Isabel Hubard, María del Río Francos, Alen Orbanić, and Tomaž Pisanski, Medial symmetry
+type graphs , Electron. J. Combin. 20(2013), no. 3, Paper no. 29 (28 pages).
+[23] Isabel Hubard, Alen Orbanić, Daniel Pellicer, and Asia Ivić Weiss, Symmetries of equivelar
+4-toroids , Discrete Comput. Geom. 48(2012), no. 4, 1110–1136.
+[24] Isabel A. Hubard, From geometry to groups and back: The study of highly symmetric polytopes ,
+ProQuest LLC, Ann Arbor, MI, 2007, Thesis (Ph.D.)–York University (Canada).
+[25] Gareth A. Jones and Andrew Poulton, Maps admitting trialities but not dualities , European J.
+Combin. 31(2010), no. 7, 1805–1818.
+[26] Hiroki Koike, Daniel Pellicer, Miguel Raggi, and Steve Wilson, Flag bicolorings, pseudo-
+orientations, and double covers of maps , Electron. J. Combin. 24(2017), no. 1, Paper no. 1.3
+(23 pages).
+[27] Peter McMullen and Egon Schulte, Abstract regular polytopes , Encyclopedia of Mathematics
+and its Applications, vol. 92, Cambridge University Press, Cambridge, 2002.
+[28] Mark Mixer, Daniel Pellicer, and Gordon Williams, Minimal covers of the Archimedean tilings,
+part II, Electron. J. Combin. 20(2013), no. 2, Paper no. 20 (19 pages).
+[29] Barry Monson, Daniel Pellicer, and Gordon Williams, Mixing and monodromy of abstract poly-
+topes, Trans. Amer. Math. Soc. 366(2014), no. 5, 2651–2681.
+[30] Alen Orbanić, F-actions and parallel-product decomposition of reﬂexible maps , J. Algebraic
+Combin. 26(2007), no. 4, 507–527.
+[31] AlenOrbanić,DanielPellicer,andAsiaIvićWeiss, Map operations and k-orbit maps ,J.Combin.
+Theory Ser. A 117(2010), no. 4, 411–429.
+[32] Daniel Pellicer, Cleaved abstract polytopes , Combinatorica 38(2018), no. 3, 709–737.
+[33] Daniel Pellicer and Gordon Williams, Minimal covers of the Archimedean tilings, Part 1 , Elec-
+tron. J. Combin. 19(2012), no. 3, Paper no. 6 (37 pages).
+[34] ,Pyramids over regular 3-tori , SIAM J. Discrete Math. 32(2018), no. 1, 249–265.
+[35] R. Bruce Richter, Jozef Širáň, and Yan Wang, Self-dual and self-Petrie-dual regular maps , J.
+Graph Theory 69(2012), no. 2, 152–159.
+[36] Egon Schulte, Amalgamation of regular incidence-polytopes , Proc. London Math. Soc. (3) 56
+(1988), no. 2, 303–328.
+[37] AndrewVince, Regular combinatorial maps ,J.Combin.TheorySer.B 35(1983),no.3,256–277.
+[38] StephenE.Wilson, Parallel products in groups and maps ,J.Algebra 167(1994),no.3,539–546.
+[39] Steve Wilson, Maniplexes: Part 1: maps, polytopes, symmetry and operators , Symmetry 4
+(2012), no. 2, 265–275.
+Gabe Cunningham , University of Massachusetts Boston, Department of Mathematics, Boston,
+Massachusetts, USA
+E-mail : gabriel.cunningham@umb.edu
+Daniel Pellicer , Centro de Ciencias Matemáticas, UNAM, Morelia, Mexico
+E-mail : pellicer@matmor.unam.mx
+Gordon Williams , University of Alaska Fairbanks, Department of Mathematics, Fairbanks, Alaska,
+USA
+E-mail : giwilliams@alaska.edu
+Algebraic Combinatorics , Vol. 5 #2 (2022) 287

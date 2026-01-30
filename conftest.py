@@ -3,20 +3,18 @@ from pathlib import Path
 
 # Detect availability of optional heavy dependencies
 _optional_modules = {
-    'pandas': False,
-    'sage': False,
+    "pandas": False,
+    "sage": False,
 }
-for m in list(_optional_modules.keys()):
-    try:
-        importlib.import_module(m)
-        _optional_modules[m] = True
-    except Exception:
-        _optional_modules[m] = False
 
 import re
+
 _skip_triggers = {
-    'pandas': [re.compile(r"^\s*(import|from)\s+pandas\b", re.M)],
-    'sage': [re.compile(r"^\s*(import|from)\s+sage\b", re.M), re.compile(r"from\s+sage\.all", re.M)]
+    "pandas": [re.compile(r"^\s*(import|from)\s+pandas\b", re.M)],
+    "sage": [
+        re.compile(r"^\s*(import|from)\s+sage\b", re.M),
+        re.compile(r"from\s+sage\.all", re.M),
+    ],
 }
 
 
@@ -40,3 +38,16 @@ def pytest_ignore_collect(path, config):
                     print(f"Skipping {path} (requires {mod})")
                     return True
     return False
+
+
+def main():
+    for m in list(_optional_modules.keys()):
+        try:
+            importlib.import_module(m)
+            _optional_modules[m] = True
+        except Exception:
+            _optional_modules[m] = False
+
+
+if __name__ == "__main__":
+    main()

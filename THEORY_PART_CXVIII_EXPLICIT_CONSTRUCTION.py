@@ -11,10 +11,10 @@ Using SageMath to explicitly investigate:
 This is the computational verification of our theoretical claims.
 """
 
-import subprocess
-import shutil
-import os
 import json
+import os
+import shutil
+import subprocess
 from datetime import datetime
 
 SAGE_SCRIPT = '''
@@ -404,43 +404,43 @@ print(f"""
   ═══════════════════════════════════════════════════════════════════
   KEY DISCOVERIES:
   ═══════════════════════════════════════════════════════════════════
-  
+
   1. W33 VERTEX DECOMPOSITION:
      40 = 1 + 12 + 27
         = any vertex + its neighbors + its non-neighbors
         = singlet + neighbors + non-neighbors
-     
+
      This matches: singlet + Reye(12) + Albert(27)!
-  
+
   2. EIGENVALUE STRUCTURE:
      Eigenvalue 2 with multiplicity 24 = D4 roots
      This 24-dimensional eigenspace encodes D4 structure!
-  
+
   3. AUTOMORPHISM FACTORIZATION:
      |Aut(W33)| = 51,840 = 192 x 270
-     
+
      192 = |W(D4)| (index of D4-like substructure)
      270 = quotient = 27 x 10 (Albert x SO(10) vector)
-  
+
   4. SYMPLECTIC ORIGIN:
      W33 = isotropic lines in Sp(4, F_3)
      The 40 vertices are totally isotropic subspaces
-  
+
   5. THE 12 NEIGHBORS FORM SRG(12, 2, 1, 0)
      This is a very specific structure!
-  
+
   ═══════════════════════════════════════════════════════════════════
-  
+
   THE GEOMETRIC PICTURE:
-  
+
   Pick any vertex v in W33:
     * v itself (1 point) = the "origin" / singlet
     * 12 neighbors = Reye-like configuration (D4/triality)
     * 27 non-neighbors = Albert algebra structure (E6 fundamental)
-  
+
   The automorphism group permutes these structures:
     |Aut| = 51,840 = ways to choose (origin, Reye, Albert)
-  
+
   ═══════════════════════════════════════════════════════════════════
 """)
 
@@ -449,24 +449,25 @@ print(" END OF PART CXVIII")
 print("=" * 70)
 '''
 
+
 def main():
     results = {
         "part": "CXVIII",
         "title": "Explicit Construction - Finding Reye/24-cell/Tomotope in W33",
         "timestamp": datetime.now().isoformat(),
-        "findings": {}
+        "findings": {},
     }
-    
+
     print("=" * 70)
     print(" W33 THEORY - PART CXVIII: EXPLICIT CONSTRUCTION")
     print(" Running SageMath Analysis...")
     print("=" * 70)
-    
+
     # Write the SageMath script
     script_file = "part_cxviii_sage.py"
-    with open(script_file, 'w', encoding='utf-8') as f:
+    with open(script_file, "w", encoding="utf-8") as f:
         f.write(SAGE_SCRIPT)
-    
+
     # Run with SageMath (preferred), fallback to WSL if present
     try:
         sage_cmd = shutil.which("sage")
@@ -478,17 +479,20 @@ def main():
                 capture_output=True,
                 text=True,
                 timeout=300,
-                env=env
+                env=env,
             )
         elif shutil.which("wsl"):
             # Fallback for legacy WSL-only setups
-            wsl_script_path = "/mnt/c/Users/wiljd/OneDrive/Desktop/Theory of Everything/" + script_file
+            wsl_script_path = (
+                "/mnt/c/Users/wiljd/OneDrive/Desktop/Theory of Everything/"
+                + script_file
+            )
             wsl_cmd = f'''python3 "{wsl_script_path}"'''
             result = subprocess.run(
                 ["wsl", "bash", "-c", wsl_cmd],
                 capture_output=True,
                 text=True,
-                timeout=300
+                timeout=300,
             )
         else:
             raise FileNotFoundError("SageMath not found and WSL unavailable")
@@ -510,14 +514,15 @@ def main():
         print(f"Error running SageMath: {e}")
         results["success"] = False
         results["error"] = str(e)
-    
+
     # Save results
     output_file = "PART_CXVIII_explicit_construction.json"
-    with open(output_file, 'w') as f:
+    with open(output_file, "w") as f:
         json.dump(results, f, indent=2, default=int)
     print(f"\nResults saved to: {output_file}")
-    
+
     return results
+
 
 if __name__ == "__main__":
     main()

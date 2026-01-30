@@ -4,6 +4,7 @@
 Outputs:
 - artifacts/pattern_class_vertex_k4_incidence.json
 """
+
 from __future__ import annotations
 
 import csv
@@ -36,17 +37,21 @@ def build_points():
 def load_lines():
     path = ROOT / "data/_workbench/02_geometry/W33_line_phase_map.csv"
     lines = []
-    with open(path, newline='', encoding='utf-8') as f:
+    with open(path, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            pts = tuple(map(int, str(row['point_ids']).split()))
+            pts = tuple(map(int, str(row["point_ids"]).split()))
             lines.append(pts)
     return lines
 
 
 def pattern_class_by_vertex():
-    inter = json.loads((ROOT / "artifacts" / "we6_coxeter6_intersection.json").read_text())
-    orbit_map = json.loads((ROOT / "artifacts" / "e8_orbit_to_f3_point.json").read_text())
+    inter = json.loads(
+        (ROOT / "artifacts" / "we6_coxeter6_intersection.json").read_text()
+    )
+    orbit_map = json.loads(
+        (ROOT / "artifacts" / "e8_orbit_to_f3_point.json").read_text()
+    )
     mapping = orbit_map["mapping"]
 
     patterns = [tuple(row) for row in inter["matrix"]]
@@ -92,7 +97,7 @@ def compute_k4_components(lines):
                         continue
                     common = col[a] & col[b] & col[c] & col[d]
                     if len(common) == 4:
-                        k4_list.append(((a,b,c,d), tuple(sorted(common))))
+                        k4_list.append(((a, b, c, d), tuple(sorted(common))))
     return k4_list
 
 
@@ -102,8 +107,8 @@ def main():
     k4_list = compute_k4_components(lines)
 
     # per-vertex counts
-    outer_inc = [0]*40
-    center_inc = [0]*40
+    outer_inc = [0] * 40
+    center_inc = [0] * 40
     for outer, center in k4_list:
         for v in outer:
             outer_inc[v] += 1
@@ -126,8 +131,8 @@ def main():
             "size": len(o),
             "outer_counts": o,
             "center_counts": z,
-            "outer_avg": sum(o)/len(o),
-            "center_avg": sum(z)/len(z),
+            "outer_avg": sum(o) / len(o),
+            "center_avg": sum(z) / len(z),
             "outer_minmax": [min(o), max(o)],
             "center_minmax": [min(z), max(z)],
         }

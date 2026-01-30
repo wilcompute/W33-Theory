@@ -1,0 +1,858 @@
+Discrete Mathematics 347 (2024) 114055
+Contents lists available at ScienceDirect
+Discrete  Mathematics
+journal  homepage:  www.elsevier.com/locate/disc
+Polytopality  of 2-orbit  maniplexes
+Elías Mochán
+Department  of Mathematics,  Northeastern  University,  02115 Boston, USA
+a r t i c l e i n f o a b s t r a c t
+Article history:
+Received  18 September  2023
+Received  in revised  form 16 February  2024
+Accepted  18 April 2024
+Available  online 8 May 2024
+Keywords:
+Abstract  polytope
+Maniplex
+Voltage  graph
+Polytopality
+2-orbit polytope
+Symmetry  typeAbstract  polytopes are a combinatorial  generalization  of convex  and skeletal  polytopes.
+Counting  how many ﬂag orbits a polytope  has under its automorphism  group is a way
+of measuring  how symmetric  it is. Polytopes  with one ﬂag orbit are called regularand are
+very well known.  Polytopes  with two ﬂag orbits (called  2-orbit  polytopes ) are, however,  way
+more elusive.  There are 2n−1 possible  classes  of 2-orbit  polytopes  in rank (dimension)  n,
+but for most of those classes,  determining  whether  or not they are empty  is still an open
+problem.  In 2019, in their article  An existence  result on two-orbit  maniplexes , Pellicer,  Potoˇcnik
+and Toledo  constructed  2-orbit  maniplexes (objects  that generalize  abstract  polytopes  and
+maps) in all these classes,  but the question  of whether  or not they are also polytopes
+remained  open. In this paper we use the results  of a previous  paper by the author  and
+Hubard  to show that some of these 2-orbit  maniplexes  are, in fact, polytopes.  In particular
+we prove that there are 2-orbit  polytopes  in all the classes  where  exactly  two kinds of
+reﬂections  are forbidden.  We use this to show that there are at least n2−n +1 classes
+of 2-orbit  polytopes  of rank nthat are not empty.  We also show that the maniplexes
+constructed  with this method  in the remaining  classes  satisfy  all but (possibly)  one of
+the properties  necessary  to be polytopes,  therefore  we get closer to proving  that there are
+2-orbit  polytopes  in all the classes.
+©2024 The Author(s).  Published  by Elsevier  B.V. This is an open access  article  under the
+CC BY license  (http://creativecommons  .org /licenses  /by /4 .0/).
+1. Introduction
+Abstract  polytopes  are posets  with some properties  that generalize  those of the face poset of convex  and skeletal
+polytopes.  Since their introduction  by Schulte  in [4], the main approach  to study abstract  polytopes  has been by their
+symmetries.  It is known  that the group  of symmetries  (or automorphism  group)  of an abstract  polytope  acts freely  on its
+ﬂags: chains  consisting  of one element  of each rank (dimension).  Therefore,  we may measure  how symmetric  a polytope
+is by counting  how many ﬂag orbits  it has under  the action  of its automorphism  group.  A k-orbit  polytope is one that has
+kﬂag orbits  under  this action.  The smaller  the number  of ﬂag orbits,  the more symmetric  the polytope.  We call 1-orbit
+polytopes  regular, and they have been by far the most studied.  The book [10]i s the standard  reference  and it is dedicated
+solely  to abstract  regular  polytopes.
+It is quite clear that 2-orbit  polytopes  are the second  most symmetric  kind of polytopes  after the regular  ones, so,
+naturally,  they have been the second  most studied  family.  Nevertheless,  the general  theory  of 2-orbit  polytopes  has been
+much more challenging  than that of regular  ones.
+One can classify  2-orbit  polytopes  of rank nin 2n−1d i f f e r e n t  symmetry  types. These  symmetry  types are determined
+by a proper  subset  I⊂{0, 1, ..., n −1}, that in some way consists  of the “permitted  kinds of reﬂections”;  the symmetry
+E-mail address: j.mochanquesnel@northeastern.edu .
+https://doi.org/10.1016/j.disc.2024.114055
+0012-365X/ ©2024 The Author(s).  Published  by Elsevier  B.V. This is an open access article under the CC BY license (http://
+creativecommons  .org /licenses  /by /4 .0/).
+E. Mochán Discrete Mathematics 347 (2024) 114055
+type associated  with Iis denoted  by 2n
+I. One of those symmetry  types consists  of the so called  chiralpolytopes:  those
+with all possible  “rotational”  symmetry  but no “reﬂection”  symmetry  at all (2n
+∅). Historically,  chiral polytopes  have been the
+most studied  type of 2-orbit  polytopes.  The main theory  of (abstract)  chiral polytopes  was developed  in 1991 by Schulte
+and Weiss [18]b u t the existence  of chiral polytopes  in any rank was one of the main questions  to consider.  Rank 3 chiral
+polytopes  had been studied  in the context  of maps on surfaces,  and in the 1970’s  Coxeter  gave examples  of rank 4 chiral
+polytopes  arising  as quotients  of hyperbolic  tessellations [ 2]. However,  it is not until 2008 that algebraic  methods  were
+developed  to ﬁnd (ﬁnite)  chiral polytopes  of rank 5[1]. In 2010, almost  20 years after the publication  of [18], Pellicer
+proved  that there exist abstract  chiral polytopes  in any rank greater  than 2[14].
+Also in 2010, Hubard [ 7]d e s c r i b e d  a way to construct  2-orbit  polyhedra  of any symmetry  type from groups;  examples
+of 2-orbit  polyhedra  for each of the 7 possible  symmetry  types are well-known.  In 2016, Pellicer [ 15]f o u n d  geometric
+examples  of 2-orbit  polytopes  of any rank with a ﬁxed symmetry  type. However,  the challenge  of ﬁnding  2-orbit  polytopes
+of any possible  type has not had that much of an advancement.
+Maniplexes are a generalization  of polytopes  where  some conditions  on connectivity  are relaxed.  In 2019, Pellicer,
+Potoˇcnik and Toledo [ 16]f o u n d  a way to construct  2-orbit  maniplexes  of any type. To do this, they used a voltage  as-
+signment on the symmetry-type  graph.  However,  the question  of whether  or not their examples  are ﬂag graphs  of polytopes
+remained  open. This is due to the fact that there was no method  to ﬁnd the intersection  properties  that the so called
+voltage  group  should  satisfy  for the derived  maniplex  to be polytopal.  However,  in [8], Hubard  and the author  of this paper
+described  a method  to ﬁnd the intersection  properties  for every symmetry  type for any number  of orbits  (see Theorem 3.2).
+Using  this method  for 2-orbit  maniplexes,  we have a way to test and determine  their polytopality.
+The 2-orbit  n-maniplexes  constructed  in [16] depend  on some choices:  a regular  (n −1)-maniplex  and a monodromy
+(to be deﬁned  in Section 2) of that maniplex,  both satisfying  some conditions.  In their paper,  Pellicer,  Potoˇcnik and Toledo
+proved  that given a 2-vertex  symmetry  type, there exists  a maniplex  Mand a monodromy  ηof Msatisfying  such condi-
+tions and thus, the n-maniplex  obtained  has the desired  symmetry-type  graph.  In this paper  we shall show that some of
+the maniplexes  constructed  in [16]a r e in fact polytopal.  More speciﬁcally,  we shall see that if {0, 1, ..., n −1} \Ihas exactly
+two elements,  there are choices  for the maniplex  Mand the monodromy  ηthat ensure  that the maniplex  constructed
+in [16]w i t h  symmetry  type 2n
+Iis polytopal.
+The ﬁrst sections  of this paper  will introduce  all the concepts  that we will use. In Section2we deﬁne  the basic concepts
+such as abstract  polytopes,  ﬂags, maniplexes,  premaniplexes,  automorphisms,  symmetry-type  graphs,  monodromies and coverings .
+In Section3we deﬁne  the concepts  of fundamental  groupoid and fundamental  groupof a graph,  voltage  graphs,  derived  graphs,
+and we enunciate  Theorem 3.2, which  will be our main tool. In Section 4we describe  the construction  ˆ2M, which  gives
+rise to a family  of regular  polytopes  of all ranks that we will be using for all our examples.  In Section 5we describe  the
+construction  given in [16]t o get 2-orbit  maniplexes,  and we also add some observations  that will be helpful  when proving
+the main result.  Finally,  in Section6we use this construction  and Theorem 3.2to prove that if Ihas exactly  n −2 elements,
+then there exists  a polytope  Pwith symmetry  type 2n
+I.
+2. Basic concepts
+An abstract  polytope is deﬁned  as a poset (P, ≤)that is ﬂagged,  strongly  ﬂag-connected  and satisﬁes  the diamond  prop-
+erty. We clarify  each of these properties  now:
+A poset is ﬂaggedif it has a least element  F−1, a greatest  element  Fn, and all maximal  chains,  called  ﬂags, have the
+same ﬁnite size. If the size of the ﬂags is n +2, we say that the ﬂagged  poset has rank n. Moreover,  given an element  F
+of a ﬂagged  poset,  if the maximal  chains  having  Fas their biggest  element  have r+2 elements,  we say that Fhas rank
+rand write rank(F) =r. For the purposes  of this paper,  an element  of rank iwill be called  an i-face, and in general,  the
+elements  of a ﬂagged  poset will be called  faces. The (n −1)-faces  in a ﬂagged  poset of rank nare called  facets. If /Phi1is a ﬂag,
+we denote  its face of rank iby (/Phi1)i.
+We say that a ﬂagged  poset satisﬁes  the diamond  condition if given two faces F, Gsuch that F<Gand rank(G) −
+rank(F) =2, there exist exactly  two faces H1, H2such that F<Hi<Gfor i ∈{1, 2}. We say that two ﬂags /Phi1and /Psi1in
+a ﬂagged  poset are i-adjacent if they have the same faces with ranks different  than ibut they have different  i-faces.  If
+a ﬂagged  poset satisﬁes  the diamond  condition,  every ﬂag /Phi1has exactly  one i-adjacent  ﬂag for i ∈{0, 1, ..., n −1}. The
+unique  ﬂag i-adjacent  to /Phi1is denoted  /Phi1i.
+We say that a ﬂagged  poset is strongly  ﬂag-connected if given two ﬂags /Phi1, /Psi1, there is a sequence  /Phi10=/Phi1, /Phi11, /Phi12, ...,
+/Phi1k=/Psi1, such that /Phi1j−1and /Phi1jare ij-adjacent  for some ijsatisfying  that /Phi1and /Psi1have different  ij-faces.
+From now on, we will refer to abstract  polytopes  just as polytopes . We will also abuse  notation  and call Pan abstract
+polytope  assuming  that the symbol  ≤will be used for the order relation  (and <for the strict order relation).  A polytope  of
+rank nis called  an n-polytope .
+Given  a polytope  P, the ﬂag graph of P, denoted  G(P), is the edge-colored  graph  whose  vertices  are the ﬂags of P
+and i-adjacent  ﬂags are joined  by an edge of color i. The ﬂag graph  of an n-polytope  is an example  of what is called  an
+n-maniplex or a maniplex  of rank n. That is, a connected  simple  graph  with edges  colored  with the numbers  {0, 1, ..., n −1},
+in such a way that:
+•every vertex  is incident  to an edge of each color, and
+2
+E. Mochán Discrete Mathematics 347 (2024) 114055
+•given two colors  iand jsuch that |i −j| >1, the alternating  paths of length  4 using edges  of these two colors  are
+closed.
+The vertices  of a maniplex  are usually  referred  to as ﬂags.
+At this point,  we point out that although  inﬁnite  maniplexes  and polytopes  can be very interesting,  for the purposes  of
+this paper,  all maniplexes  and polytopes  are assumed  to be ﬁnite.  Some of the results  and deﬁnitions  may also apply for
+the inﬁnite  case, but not all of them (particularly,  the main deﬁnition  of Section 4needs  some ﬁne-tuning  for the inﬁnite
+case).
+Given  a set of colors  I⊂{0, 1, ..., n −1}, and an n-maniplex  M, we use the notation  MIfor the subgraph  of Minduced
+by the edges  with colors  in I. We will denote  the complement  of Iin {0, 1, ..., n −1}by I, and if I={i}, we denote  its
+complement  just by i. The connected  components  of Miare the i-faces  of M.
+We say that an i-face Fand a j-face Gof a maniplex  are incident if they have non-empty  intersection.  If in addition
+i ≤j, we write F≤G.
+In this way we have deﬁned  a poset P(M). If Pis a polytope,  then P(G(P))is isomorphic  to P. On the other hand,
+in [6]i t is proven  that if Msatisﬁes  certain  conditions  called  path intersection  properties , then P(M)is a polytope  and
+G(P(M))is isomorphic  to M, showing  that such maniplexes,  called  polytopal , are exactly  the ﬂag graphs  of polytopes.
+An isomorphism of n-maniplexes  is just a graph  isomorphism  that preserves  the colors  of the edges.  Naturally,  an au-
+tomorphism  of a maniplex  is just an isomorphism  onto itself. The automorphism  group  of a maniplex  Mis denoted  by
+/Gamma1(M). It is known  that the automorphism  group  of a maniplex  acts freely  on its ﬂags (the proof is identical  to that of [10,
+Proposition 2A4],  which  is the particular  case of abstract  polytopes).  Moreover,  the automorphisms  of the ﬂag graph  of a
+polytope  correspond  to the automorphisms  of the polytope  itself (as a poset)  (see [10, Lemma 2A3] for  one inclusion.  The
+other inclusion  can be proved  using the construction  in [6, Section 3]).
+The symmetry-type  graph (STG)of a maniplex  M, denoted  by T(M), is simply  the quotient  of Mby its automorphism
+group.  That is, the vertices  of T(M)are the ﬂag orbits  of Munder  its automorphism  group,  and two orbits  are connected
+by an edge of color iif there is a pair of i-adjacent  ﬂags, one in each of those orbits.  If two i-adjacent  ﬂags are on the same
+orbit, we draw a semiedge  of color ion the vertex  corresponding  to that orbit. Notice  that T(M)is not necessarily  simple,
+but it satisﬁes  the other conditions  that deﬁne  an n-maniplex:  it is connected,  each vertex  is incident  to exactly  one edge
+of each color in {0, 1, ..., n −1}, and the alternating  paths of length  4 using two non-consecutive  colors  are closed.  We call
+such a graph  an n-premaniplex , or just a premaniplex if the rank nis implicit.
+The symmetry-type  graphof a polytope  Pis just the symmetry-type  graph  of its ﬂag graph,  and it is denoted  by T(P).
+A k-orbit  polytope  (or maniplex) is one with exactly  kﬂag orbits  under  the action  of its automorphism  group.  In other
+words,  one whose  symmetry-type  graph  has exactly  kvertices.  A 1-orbit  polytope  (or maniplex)  is called  regular.
+Given  a maniplex  M, we deﬁne  rias the ﬂag permutation  that maps each ﬂag to its i-adjacent  ﬂag. It is easy to see
+that riis an involution  and that, if |i −j| >1, then rirjis also an involution.  In particular  riand rjcommute  whenever  i
+and jare not consecutive.
+The group  Mon(M) =/angbracketleftri:0 ≤i ≤n −1/angbracketrightis called  the monodromy  group of M, and we will call each of its elements
+a monodromy . It is worth  mentioning  that some authors  prefer  the term connection  groupand the notation  Con(M). An
+alternative  way of deﬁning  the automorphism  group  of a maniplex  Mis as the set of ﬂag permutations  that commute  with
+the elements  of the monodromy  group.
+For this paper,  both the automorphism  and the monodromy  group  will act on the right.
+If Mis a regular  maniplex  (sometimes  called  reﬂexible ), for a ﬁxed ﬂag /Phi1we can deﬁne  ρias the (unique)  automor-
+phism  that maps /Phi1to /Phi1i. It is known  that {ρi:0 ≤i ≤n −1}is a generating  set for the automorphism  group  of M(see [10,
+Theorem  2B8] for  the polytopal  case). Moreover,  the function  mapping  ρito rican be extended  to a group  anti-isomorphism
+between  /Gamma1(M)and Mon(M)(see, for example, [ 12, Theorem 3.9] or [ 20, Section 7]).  In particular,  the monodromy  group
+of a regular  maniplex  acts regularly  on its ﬂags.
+Given  two n-premaniplexes  Mand X, a covering  projection (covering for short)  from Mto X, is a function  pfrom the
+vertices  of Mto the vertices  of Xthat preserves  i-adjacencies.  It can be proved  that all coverings  are surjective.  If eis an
+edge Mconnecting  vertices  xand y, we deﬁne  p(e)as the edge connecting  p(x)and p(y)that has the same color as e.
+If there is a covering  from Mto X, we say that Mcovers  X. Note that if Mis a maniplex  and Xis its symmetry-type
+graph,  the natural  projection  from Mto Xis always  a covering.
+3. Voltage  graphs  and intersection  properties
+A dartin a graph  is just a directed  edge. The inverseof a dart d, denoted  by d−1is the dart that corresponds  to the
+same edge with the opposite  orientation.  We think of semiedges as having  only one orientation,  having  thus only one dart
+which  is inverse  to itself. An edge with two different  endpoints  (and therefore,  with two different  darts)  will be called  a
+link. Every dart dhas an initial vertex, or startpoint I (d), and a terminal  vertexor endpoint T (d), having  the property  that
+its underlying  edge is incident  to both I(d)and T(d), and that I(d−1) =T(d)and T(d−1) =I(d). For more on graphs  with
+semiedges  see [9], for example.
+3
+E. Mochán Discrete Mathematics 347 (2024) 114055
+A pathis a sequence  of darts W=d1d2···dk, such that T(di) =I(di+1)for every i <k. We say that W goes  from u( i t s
+startpoint)  to v( i t s endpoint) if u =I(d1)and v =T(dk). We say that a path is closedif its startpoint  and endpoint  are equal.
+Otherwise,  it is open.
+We also consider  a formal  empty  path for each vertex  that goes from that vertex  to itself. If Wis the empty  path from
+vto v, we abuse  notation  and denote  it by vas well.
+Two paths Wand W/primewith the same startpoint  and endpoint  are said to be homotopic if one can transform  Winto W/prime
+by a ﬁnite sequence  of the following  operations:
+•Inserting  two consecutive  inverse  darts at any point,  that is
+d1d2···didi+1···dk/mapsto→d1···didd−1di+1···dk,
+where  I(d) =T(di);
+•Deleting  two consecutive  inverse  darts at any point,  that is
+d1···didd−1di+1···dk/mapsto→d1d2···didi+1···dk;
+In this case we write W∼W/prime.
+It is known  that homotopy  is an equivalence  relation  and that it is preserved  by the usual concatenation  of paths.  We
+often abuse  notation  and use Was the name for a path or for its homotopy  class. Furthermore,  even if we refer to Was a
+path, we will always  be thinking  of it up to homotopy.
+The set of all homotopy  classes  of paths in a graph  X, together  with the concatenation  operation  forms  a groupoid
+called  the fundamental  groupoid  of X, which  we will denote  by /Pi1(X). The subset  of closed  paths based  at a vertex  xforms
+a group  denoted  by /Pi1x(X)and called  the fundamental  group of Xb a s e d  at x. It is easy to show that if Xis connected,  all its
+fundamental  groups  are isomorphic  (moreover,  they are conjugates  by elements  of the fundamental  groupoid).
+Given  a spanning  tree Tand a vertex  of a graph  Xwe can ﬁnd a distinguished  set of generators  for the fundamental
+group  /Pi1x(X). For each dart din Xbut not in T, take the path Cdthat goes from xto the starting  point of dthrough  T,
+then takes d, and then goes back to xfrom the endpoint  of dtrough  T. It is easy to see that /Pi1x(X)is generated  by {Cd},
+where  druns among  the darts in Xnot in T.
+Given  a graph  Xand a group  /Gamma1, a voltage  assignment  (with voltage  group /Gamma1)is a groupoid  antimorphism  ξ:/Pi1(X) →/Gamma1.
+The pair (X, ξ)is called  a voltage  graph.
+To construct  a voltage  assignment,  it is enough  to deﬁne  it for the darts of X(in such a way that inverse  darts have
+inverse  voltages).  Then, the voltage  of the path W=d1d2, ···dkis simply  ξ(dk) ···ξ(d2)ξ(d1).
+Note that ξ(/Pi1x(X)) =/angbracketleft {ξ(Cd)}d/angbracketright, where  druns among  the darts of the graph  Xnot in a given spanning  tree T. This will
+be important  later, since very often we want to know the voltages  of some sets of closed  paths.  Knowing  the voltages  of
+a fundamental  group  will also help us calculate  the set of voltages  of open paths with ﬁxed startpoint  and endpoint  as a
+coset of the voltages  of a fundamental  group.
+Given  a voltage  graph  (X, ξ)with voltage  group  /Gamma1, we can construct  the derived  graph Xξas follows:
+•The vertex  set is V×/Gamma1where  Vis the vertex  set of X.
+•The dart set is D ×/Gamma1where  Dis the dart set of X.
+•If the dart dgoes from xto y, the dart (d, γ)goes from the vertex  (x, γ)to (y, ξ(d)γ).
+•(Optional)  If a dart (or vertex)  dhas a color c, then the dart (or vertex)  (d, γ)also has color c.
+Note that the inverse  of the dart (d, γ)is the dart (d−1, ξ(d)γ).
+The voltage  group  /Gamma1always  acts by automorphisms  on the derived  graph  Xξ, with the action  given by (x, γ)σ=(x, γσ),
+where  xis a dart or vertex  of Xand γ, σ∈/Gamma1. It should  also be clear that if Xhas some coloring  of its vertices  or darts,
+then /Gamma1preserves  the induced  coloring  when acting  on Xξ.
+In [8], Hubard  and the author  of this paper  prove the following  results:
+Lemma  3.1. [8, Lemma 3.1] Let Xbe a premaniplex  and ξ:/Pi1(X) →/Gamma1a voltage  assignment  such that Xhas a spanning  tree with
+trivial  voltage  on all its darts. Then Xξis a maniplex  if and only if the following  conditions  hold:
+•The set ξ(D)generates  /Gamma1where  Di s the set of darts of X.
+•If di s the dart of a semiedge,  then ξ(d)has order exactly  two.
+•If da n d d/primeshare both their startpoint  and their endpoint,  then ξ(d) /negationslash=ξ(d/prime).
+•If |i −j| >1every (closed)  path Wo f length  4 whose  darts alternate  between  these two colors has trivial  voltage.
+Before  giving  the next result  we need to introduce  some notation.  Given  two integers  kand mwe deﬁne  [k, m] :=
+{k, k +1, ..., m}. If k >m, then we deﬁne  [k, m]as the empty  set. If Xis an n-premaniplex,  aand bare two vertices  in X,
+and I⊂[0, n −1], then we deﬁne  /Pi1a,b
+I(X)as the subset  of /Pi1(X)consisting  of all the paths from ato bthat only use darts
+with colors  in I. In particular,  /Pi1a,b
+[k,m](X)is the set of paths from ato bthat only use colors  between  kand m.
+4
+E. Mochán Discrete Mathematics 347 (2024) 114055
+Theorem  3.2. [8, Theorem 4.2] Let Xbe a premaniplex  of rank na n d ξ:/Pi1(X) →/Gamma1a voltage  assignment.  Then Xξis polytopal  if
+and only if it is a maniplex  and the following  equation  holds for all k, m ∈{0, 1, ..., n −1}and all pairs of vertices  a, b ∈X:
+ξ(/Pi1a,b
+[0,m](X))∩ξ(/Pi1a,b
+[k,n−1](X))=ξ(/Pi1a,b
+[k,m](X)). (1)
+In this paper  we will use Theorem 3.2to show that we can construct  2-orbit  polytopes  with some prescribed  symmetry-
+type graphs.
+4. The construction  ˆ2M
+The main theorem  in [16]( T h e o r e m3 )  states  that every premaniplex  with exactly  two vertices  is the symmetry-type
+graph  of a maniplex  /tildewiderM. To prove this, given a regular  maniplex  Mof rank nwith some conditions,  and a premaniplex
+Xof rank n +1w i t h  2 vertices,  the authors  deﬁne  a voltage  assignment  ξon Xthat gives a 2-orbit  maniplex  /tildewiderMwith
+symmetry-type  graph  X. The voltage  group  is a group  acting  on the set MW×Z2/lscript, where  MWconsists  of a speciﬁc  half
+of the ﬂags of Mand /lscript(called  kin the original  paper)  is a natural  number  (usually  very large).
+To be more precise,  the conditions  on Mare (equivalent  to) the following:
+1.Mhas to cover Xn(the premaniplex  of rank nobtained  by deleting  the edges  of color nfrom X).1
+2. There  is an involutory  monodromy  ηin Mthat maps all the ﬂags of any given facet to different  facets.
+A concrete  family  of maniplexes  satisfying  these conditions  is given and its elements  are called  Mnwhere  ndenotes
+the rank. This family  is constructed  recursively  and it does not depend  on the choice  of X. More concretely,  M2is the ﬂag
+graph  of the square,  and Mn+1is constructed  from Mnas ˆ2M n(which  we will deﬁne  shortly).  In [13]i t is proved  that if
+Pis a regular  polytope  then ˆ2G(P)is the ﬂag graph  of a regular  polytope,  and we will see shortly  a proof of the fact that
+if Mis regular  ˆ2Mis regular  too. This implies  that the family  {Mn}n≥2consists  of ﬂag graphs  of regular  polytopes.  Since
+there are known  examples  of 2-orbit  polyhedra  (rank 3) with any given symmetry-type,  we are only concerned  about  the
+family  {Mn}n≥3, which  are the maniplexes  used to construct  2-orbit  maniplexes  of ranks 4 and higher.
+The construction  ˆ2Mworks  as follows:  Given  a maniplex  M, the ﬂags of ˆ2Mare F(M) ×ZFac(M)
+2, where  F(M)is
+the set of ﬂags of Mand Fac(M)is the set of facets.  We will think of ZFac(M)
+2as the set of functions  from Fac(M)to the
+cyclic group  Z2, or equivalently,  vectors  with one entry in Z2associated  to each element  of Fac(M). Then the adjacencies
+in ˆ2Mare deﬁned  by:
+(/Phi1,x)i:=(/Phi1i,x)ifi<n,
+(/Phi1,x)n:=(/Phi1,x+χFac(/Phi1)),
+where  Fac(/Phi1)denotes  the facet of /Phi1and given a facet F∈Fac(M)the vector  χFis the one associated  with the character-
+istic function  of F, that is, the vector  with 1 in the coordinate  corresponding  to Fand 0 in every other one.
+If we remove  the edges  of color nfrom ˆ2Mwe get one connected  component  for each vector  x ∈ZFac(M)
+2. Each compo-
+nent consists  of all ﬂags of type (/Phi1, x)where  /Phi1is a ﬂag of M. In particular,  every facet of ˆ2Mis isomorphic  to M.
+Given  a polytope  Pwe can construct  a polytope  ˆ2Psuch that the ﬂag graph  of ˆ2Pis the maniplex  ˆ2G(P). This con-
+struction  is the following:
+For −1 ≤i ≤n, denote  by Fithe set of i-faces  of P. If f∈ZFac(M)
+2the support  of f, denoted  by supp(f), is deﬁned
+as the set of facets  F∈Fac(M)such that f(F) =1. If we denote  by ˆFithe set of i-faces  of ˆ2P, then for −1 ≤i ≤nlet
+ˆFi:=Fi×ZFac(M)
+2/ ∼where  (F, x) ∼(F/prime, x/prime)if and only if F=F/primeand for every facet G ∈supp(x +x/prime)we have that F≤G.
+We then add a formal  greatest  face Fn+1. Finally,  the incidence  relation  on ˆ2Pis given by (A, x) <(B, y)if and only if
+A <Band (A, x) ∼(A, y).
+We should  remark  that the construction  ˆ2Pis actually  (2P∗)∗, where  the superscript  ∗denotes  duality  and 2Pis a
+better-known  construction  (see [3]).
+In [5]i t is mentioned  that the operation  ˆ2Mwhere  Mis a maniplex  generalizes  ˆ2Pwhere  Pis a polytope.  What the
+authors  mean by this is that if Pis a polytope,  then G(ˆ2P)is isomorphic  to ˆ2G(P)(see [11, Section 5.1] for  an elementary
+proof).
+The automorphisms  of Mhave a natural  action  on ˆ2M. First we deﬁne  a left action  of /Gamma1(M)on ZFac(M)
+2as follows:
+given an automorphism  σof M, a vector  xin ZFac(M)
+2and a facet Fof Mwe deﬁne  that σx :f/mapsto→x(fσ). Now, if σ
+is an automorphism  of M, we can extend  it to an automorphism  of ˆ2Mby deﬁning  (/Phi1, x)σ:=(/Phi1σ, σ−1x). Note that
+supp(σ−1x) =supp(x)σ, so we are actually  using the natural  action  of an automorphism  on a set of facets.
+1In [16]t h i s is called having a coloring  consistent  with Iwhere X=2n+1
+I.
+5
+E. Mochán Discrete Mathematics 347 (2024) 114055
+Fig. 1.The set S3consisting  of the shaded  2-faces  is not invariant  under any non-trivial  symmetry  of M3and it is not contained  in the closure  of two
+0-faces.
+In [5, Section  6] it is proved  that the action  described  in the previous  paragraph  on ˆ2Mis by automorphisms.  Moreover,
+the automorphism  group  of ˆ2Mis a product  of /Gamma1(M)and the group  T={Ty:(/Phi1, x) /mapsto→(/Phi1, x +y) :y ∈ZFac(M)
+2}. This
+implies  that if an n-maniplex  Mhas symmetry-type  graph  Xthen the symmetry-type  graph  of ˆ2Mis obtained  by adding
+semiedges  of color nto each vertex  of X. In particular,  if Mis regular,  then ˆ2Mis regular  as well.
+When  we let M2be the ﬂag graph  of a square  and deﬁne  Mi+1:=ˆ2M ifor i ≥2, M3happens  to be the ﬂag graph  of
+the map on the torus called  {4, 4}(4,0)which  can be thought  of as a 4 ×4c h e s s  board  in which  we identify  opposite  sides
+(without  twisting).  The 3-faces  of every subsequent  Mnwill be of this type and we will make use of this in our proofs.
+A latticeis a poset in which  every pair of elements  {A, B}has a lowest  upper  bound  A ∨B(called  the joinof Aand B)
+and a greatest  lower  bound  A ∧B(called  the meetof Aand B). It is known  that if Pis a lattice  then ˆ2Pis also a lattice.
+One can verify  that if Aand Bare faces of P, x, y ∈ZFac(P)
+2and there is at least one facet of ˆ2Pcontaining  both (A, x)and
+(B, y)then,
+(A,x)∨(B,y)=(A∨B,x)∼(A∨B,y),
+and
+(A,x)∧(B,y)=(C,x)∼(C,y)
+where  Cis the greatest  lower  bound  of the set supp(x +y) ∪{A, B}. For a full proof of a more general  result  see [17,
+Theorem 5].
+Corollary  4.1. For n ≥2, the poset associated  with Mnis a lattice.
+In [16, Proposition 15, Lemma 17] it  is proved  that the family  {Mn}n≥3satisﬁes  both conditions  mentioned  at the
+beginning  of this section.  To prove that it satisﬁes  the second  condition,  the authors  prove and use the following  lemma:
+Lemma  4.2. [16, Lemma 16] If Mhas a set of facets Sw h i c h  is not invariant  under any non-trivial  automorphism,  then there is an
+involutory  monodromy  ηof ˆ2Mthat maps all the ﬂags of any given facet to different  facets.
+Such a set Sis constructed  for M3, and recursively  constructed  for Mn+1in terms  of one constructed  for Mn. The
+construction  is as follows:
+If S⊂Fac(M)is a set of facets  that is not invariant  under  any non-trivial  automorphism,  then ˆS:= {(Fn, χF)|F∈S} ∪
+{(Fn, 0)}(here 0 denotes  the all-zero  vector  in ZFacM
+2) is a set of facets  of ˆ2Mand it satisﬁes  the same condition.
+In [16]t h e authors  only care that Sis not invariant  under  any non-trivial  automorphism,  however  we shall choose  an S
+that satisﬁes  some extra conditions,  which  will prove useful  when dealing  with the polytopality  of the constructed  2-orbit
+maniplexes.
+From now on, we call the shaded  set in Fig.1S3, and we call Sn⊂Fac(Mn)the set constructed  recursively  as Sn:=ˆSn−1
+for n ≥4. Note that S3is not invariant  under  non-trivial  automorphisms  of M3, and therefore  Snis not invariant  under
+non-trivial  automorphisms  of Mn. In [16], the authors  actually  use the complement  of the set we have chosen  as S3. The
+reason  why we have chosen  the complement  will be apparent  when we prove Lemma 4.4.
+Deﬁnition  4.3. Given  a polytope  Pand a face f∈Plet us deﬁne  the closure  of f, denoted  by f, as the set of all the facets
+of Pwhich  are incident  to f.
+6
+E. Mochán Discrete Mathematics 347 (2024) 114055
+Given  a preordered2set (P, ≤), one can give it a topology  by deﬁning  that a subset  Cis closed  if and only if whenever
+x ∈Cand x ≤ywe get that y ∈C. In fact every topology  on a ﬁnite set can be obtained  from a preorder  in this way (see,
+for example, [ 19]). In such context,  the closure  of a set Sis just S={y ∈P:∃x ∈S, x ≤y}. If we remove  the least and
+greatest  faces of a polytope  Pand equip it with this topology,  then what we are calling  the closure  of fis actually  just the
+set of facets  contained  in the topological  closure  of {f}.
+Lemma  4.4. Given any two proper  faces u, vo f Mnwith n ≥3, the set Snis not contained  in u∪v.
+Proof.We proceed  by induction  on n. For n =3t h i s  is a simple  observation  obtained  from Fig.1. Note that the closure  of
+a face is contained  in the closure  of any incident  face of smaller  rank, so we only need to prove the lemma  for 0-faces.
+Suppose  the lemma  is true for Mn. Let u, vbe 0-faces  of Mn+1, so that u =(u/prime, x)and v =(v/prime, y)for some 0-faces  u/prime, v/prime
+of Mnand x, y ∈ZFac(M n)
+2. We will prove that u∪vdoes not contain  even Sn+1\{(Fn, 0)}, so we may assume  that both u
+and vare each incident  to at least one element  of Sn+1other than (Fn, 0), say for example  that u =(u/prime, x) <(Fn, χG)for
+some facet Gof Mn. By our deﬁnition  of the order <, this implies  that u/prime<Fn(which  is tautological)  and (u/prime, x) ∼(u/prime, χG),
+so we may assume  without  loss of generality  that x =χG. Analogously  we may assume  that there exists  a facet Fin Mn
+such that y =χF.
+A facet (Fn, z)is in u∪vif and only if supp(z+χG) ⊂u/primeor supp(z+χF) ⊂v/prime. By induction  hypothesis,  Snis not
+contained  in u/prime∪v/prime, so there exists  a facet D ∈Sn\(u/prime∪v/prime). Then (Fn, χD)is a facet in Sn+1not in u∪v./Box
+In topological  terms,  Lemma 4.4tells us that no set of two elements  is densein Sn.
+Now we turn our attention  to the monodromy  η. In the proof of Lemma 4.2found  in [16], ηis constructed  as follows:
+Let Mbe a regular  maniplex  and let Sbe a set of facets  not invariant  under  non-trivial  automorphisms.  For every facet
+F∈Slet /Phi1Fbe a ﬁxed base ﬂag in that facet. Let F0be a base facet in Sand let /Phi1 =/Phi1F0. For every F∈S, let ωFbe a
+monodromy  of Mthat maps /Phi1to /Phi1F. Note that since Mis regular,  its monodromy  group  acts regularly  on its ﬂags, so
+ωFis actually  unique.  Then for every ﬂag (/Psi1, x)in ˆ2Mdeﬁne  (/Psi1, x)η:=(/Psi1, x +/summationtext
+F∈SχFac(/Psi1ωF)). The action  of ηwill be
+more clear with the following  lemma.
+Lemma  4.5. Let (/Psi1, x) ∈ˆ2M. Let γbe the automorphism  of Mmapping  the base ﬂag /Phi1of F0to /Psi1. Then, the vector  corresponding
+to the facet of (/Psi1, x)ηdiffers  from xo n l y  in the coordinates  corresponding  to Sγ, that is, if (/Psi1, x)η=(/Psi1, y)then supp(x +y) =Sγ.
+Proof.For every F∈Swe have that
+/Psi1ωF=(/Phi1γ)ωF=(/Phi1ωF)γ,
+so
+Fac(/Psi1ωF)=Fac((/Phi1ωF)γ)=(Fac(/Phi1ωF))γ=(Fac(/Phi1F))γ=Fγ.
+This implies  that (/Psi1, x)η=(/Psi1, x +/summationtext
+F∈SχFac(/Psi1ωF)) =(/Psi1, x +/summationtext
+F∈SχFγ)so y =x +/summationtext
+F∈SχFγ. By doing  the change  of
+variable  G =Fγwe get y =x +/summationtext
+G∈SγχGand supp(x +y) =Sγ./Box
+Given  two sets Sand S/primeof facets  of a polytope  P, we say that S/primeis a copy of Sif there is an automorphism  γof Psuch
+that S/prime=Sγ. Lemma 4.5tells us that if (/Psi1, x)η=(/Psi1, y)then supp(x +y)is a copy of S.
+In [16, Lemma 16] it  is proved  that ηis in fact a monodromy  of ˆ2Mand that if Sis not invariant  under  non-trivial
+automorphisms  of Mthen ηmaps all the ﬂags of a facet of ˆ2Mto different  facets.
+Note that using a set of facets  of Mnnot invariant  under  non-trivial  automorphisms  we constructed  the monodromy  η
+for Mn+1. We have found  such sets of facets  for Mnwith n ≥3, which  means  that we have found  the monodromy  ηfor
+n ≥4. We have not found  the monodromy  ηfor M3, since every set of facets  (edges)  of M2(the square)  is invariant  under
+some non-trivial  automorphism.  Actually  M3does not have such a monodromy.
+However,  the map on the torus {4, 4}(8,0)(a chess board  of regular  size where  each border  is identiﬁed  with its opposite)
+does admit  such a monodromy:  simply  take η=r2r1r0r1r2r1r2r1. This monodromy  is indeed  involutory  (use the fact that
+r1r2has order 4) and it maps the 8 ﬂags of a facet to the 8 squares  where  a knight  could legally  move in a game of chess.
+This example  also covers  all 2-vertex  premaniplexes  in rank 3, so, to construct  2-orbit  polytopes  of rank 4, one may use this
+example  instead  of M3.
+2A preorder  ≤on a set Pis a relation  that is transitive  and reﬂexive,  but it may not be antisymmetric.
+7
+E. Mochán Discrete Mathematics 347 (2024) 114055
+Fig. 2.The voltage ξwe use on X=2n+1
+I.
+5. 2-orbit  maniplexes
+The symmetry  type of a 2-orbit  maniplex  is denoted  by 2n
+Iwhere  ndenotes  the rank and Iis a proper  subset  of
+{0, 1, ..., n −1}. Some authors  assume  the rank is implicit  and just write 2I, but we shall not do that in this paper  as we
+will be working  with several  different  ranks at once. In this notation,  Iis the set of colors  isuch that any ﬂag is in the
+same orbit as its i-adjacent  ﬂag. In terms  of the symmetry-type  graph,  Iis the set of colors  of the semiedges.  Informally,
+we may think of Ias the set of “allowed  kinds of reﬂections”.  In particular,  chiral n-polytopes  are those of type 2n
+∅, that is,
+those in which  no reﬂections  are allowed.
+In order to ﬁnd 2-orbit  polytopes  (resp. maniplexes)  with every possible  2-vertex  premaniplex  as its symmetry-type
+graph,  we only need to ﬁnd examples  with all the symmetry  types 2n
+Iwhere  0, n −1 ∈I, and then use the operations  ˆ2M
+and duality  (see [16, Corollary 12] for  details).  So without  loss of generality,  we will assume  that 0, n −1 ∈I.
+Given  a 2-vertex  premaniplex  X=2n+1
+Iwith 0, n ∈I, the authors  of [16]g i v e a voltage  assignment  to its darts such that
+the derived  graph  is a 2-orbit  maniplex  with symmetry-type  graph  isomorphic  to X. We discuss  this voltage  assignment
+next.
+Let us color the vertices  of Xone white  and one black.  Let {r0, r1, ..., rn−1}be the distinguished  generators  of the
+monodromy  group  of Mn. If dis a semiedge  incident  on the white  vertex  we assign  to it the voltage  riwhere  iis its color.
+If dis a semiedge  of color iincident  to the black vertex,  we assign  to it the voltage  r0rir0, or in other words,  riif i >1a n d
+r0r1r0if i =1. Finally,  if dis a dart of color i <nfrom the white  vertex  to the black vertex  we assign  to it the voltage  r0ri,
+in particular,  the voltage  of the edge of color 0 is trivial.  We shall give the voltage  of the edge of color nshortly  (which  will
+be an involution,  so orientation  is irrelevant).  From now on, we call this voltage  assignment  ξ.
+Let p :Mn→Xnbe a covering  (remember  that Xnis the result  of removing  the edge of color nfrom X). We color the
+ﬂags of Mnwhite  or black according  to the color of their image  under  p. Since Xnhas exactly  2 vertices  and Mncovers
+X, then every monodromy  of Mneither  preserves  the color of every ﬂag or it changes  the color of every ﬂag. Note that
+the voltages  of every dart preserve  the color of the ﬂags when thought  of as monodromies.
+5.1. The voltage  of the darts of color n
+Now we turn our attention  to the voltage  of the darts of color n. In [16]t h e authors  make the voltage  group  act on
+(Mn)w×Z2/lscriptfor some large /lscript, where  (Mn)wis the set of white  ﬂags of Mn(recall  that all voltages  preserve  the color
+of the ﬂags).  This action  is simply  deﬁned  by (/Psi1, x)ω=(/Psi1ω, x)for all (/Psi1, x) ∈(Mn)w×Z2/lscriptand every monodromy  ω.
+In other words,  each monodromy  acts as usual in the (Mn)w-coordinate  and as the identity  on the Z2/lscript-coordinate.  The
+voltage  /tildewideynof the darts of color nis deﬁned  as the composition  of three commuting  involutions  /tildewideρ0, r0and s. Both r0and
+/tildewideρ0act only on the (Mn)wcoordinate  and are independent  of the Z2/lscriptone, while sacts only on the Z2/lscriptcoordinate.  To
+avoid future  confusion,  the reader  must recall that F(Mn) =F(Mn−1) ×ZFac(M n−1)
+2, so F(Mn) ×Z2/lscriptmay be regarded
+as F(Mn−1) ×ZFac(M n−1)
+2×Z2/lscript. The importance  of the Z2/lscriptcoordinate  lies in that it is used to prove that the derived
+maniplex  is in fact a 2-orbit  maniplex  (and not a regular  one), but it has no relevance  when proving  that the derived
+graph  is a maniplex.  For our purposes,  we will ignore  sfor now. Therefore,  we may think of all actions  as being on
+F(Mn) =F(Mn−1) ×ZFac(M n−1)
+2, and assign  the voltage  yn:=/tildewideρ0r0to the edge of color n.
+In order to deﬁne  /tildewideρ0we ﬁrst need to choose  a base ﬂag/Phi1Ffor each facet Fof Mn. For the proof in [16]t o work, we
+ﬁrst choose  a base facet F 0=(fn−1, 0)of Mn(where  fn−1is the greatest  face of Mn−1) and then for every whiteﬂag /Psi1
+in F0we set /Psi1r0ηr0to be the base ﬂag of its facet. Recall  that ηmaps all the ﬂags of F0to different  facets,  so there is
+no ambiguity.  In [16]a l l the other base ﬂags are chosen  arbitrarily,  however  we will later have a preferred  choice  for them
+too. Then we deﬁne  /tildewideρ0as the ﬂag permutation  that acts on each facet Fas the reﬂection  (facet automorphism)  that ﬁxes
+all the faces of the base ﬂag /Phi1Fbut its 0-face.
+Note that if we replace  a base ﬂag with any ﬂag sharing  the same edge (1-face)  and the same facet, we get the same
+permutation  /tildewideρ0. So we may deﬁne  a base edgeof a facet Fas the 1-face  of the corresponding  base ﬂag and forget  about  the
+base ﬂag.
+Now the previous  choice  of base edges  would  be equivalent  to the following:  For every blackﬂag /Psi1in F0we set (/Psi1η)1
+(the edge of /Psi1η) to be the base edge of its facet.
+Let /Psi1be a black ﬂag in F0. Since Mn=ˆ2M n−1, and by the choice  of F0, the ﬂag /Psi1can be written  as (ψ, 0)for some
+ﬂag ψin Mn−1. Lemma 4.5tells us that /Psi1η=(ψ, x)for some x ∈ZFac(M n−1)
+2satisfying  that supp(x)is a copy of Sn−1.
+So for facets  corresponding  to vectors  whose  support  is a copy of Sn−1we are forced  to choose  a speciﬁc  base edge, but
+for any other facet we may choose  the base edge as we want. Let (e, 0)be the base edge of the base facet F0=(fn−1, 0).
+8
+E. Mochán Discrete Mathematics 347 (2024) 114055
+Then for every xwhose  support  is not a copy of Sn−1we choose  (e, x)as the base edge of the facet (fn−1, x). We summarize
+this in the following  deﬁnition:
+Deﬁnition  5.1. Base edges:Let (e, 0)be the base edge of the base facet of Mn, let x ∈ZFac(M n)
+2and let fn−1be the greatest
+face of Mn−1. If supp(x)is not a copy of Sn−1, then we deﬁne  the base edge of the facet (fn−1, x)of Mnto be (e, x). If
+supp(x) =Sn−1γfor some γ∈/Gamma1(Mn−1), then we deﬁne  the base edge of (fn−1, x)to be (eγ, x).
+Corollary  5.2. If x ∈ZFac(M n)
+2is such that supp(x) ⊂u∪vf o r some faces u, vi n Mn−1, then the base edge of the facet (fn−1, x)is
+(e, x).
+Corollary  5.3. If (e, 0)is the base edge of the base facet (fn−1, 0)of Mn, then it is also the base edge of any other facet containing  it.
+Proof.If (fn−1, x)is a facet containing  (e, 0)then supp(x) ⊂e. Then, Corollary 5.2tells us that base edge of (fn−1, x)is
+(e, x) ∼(e, 0)./Box
+Finally  we let yn:=/tildewideρ0r0and extend  the voltage  assignment  ξby assigning  ynas the voltage  of the edge of color nof
+X. Note that since /tildewideρ0acts as an automorphism  in each facet, it commutes  with all the monodromies  that do not use the
+generator  rn. In particular  /tildewideρ0commutes  with r0, implying  that ynis an involution.
+As previously  discussed,  in [16]t h e authors  consider  the voltage  group  as acting  on (Mn)w×Z2/lscriptwhere  (Mn)wis the
+set of white  ﬂags of Mnand /lscriptis some large integer.  If (/Psi1, a) ∈(Mn)w×Z2/lscriptand ωis a color preserving  monodromy  of
+Mnthen (/Psi1, a)ωis simply  deﬁned  as (/Psi1ω, a). Then they use /tildewideyn:=/tildewideρ0r0sas the voltage  of the edge of color n, where  sis
+an involution  acting  only on the Z2/lscriptcoordinate.  We will call the voltage  assignment  used in [16]ξ/prime. In [16]t h e authors
+prove that Xξ/primeis a maniplex  with symmetry-type  graph  isomorphic  to X. The proof of the fact that Xξ/primeis a maniplex  also
+applies  to Xξ, but the proof of the fact Xξ/primeis not regular  relies heavily  on /lscriptbeing large. On the other hand Xξis either
+regular  or has symmetry-type  graph  isomorphic  to X. However  our proofs  to show polytopality  of some derived  maniplexes
+will be much clearer  if we work with the voltage  assignment  ξand consider  that ξ=πM nξ/primewhere  πM nis the projection
+to the Mn-coordinate.  That is, the ξ-voltage  of a path is just the ﬁrst coordinate  of the ξ/prime-voltage  of the same path. More
+formally,  we deﬁne:
+ξ(d)=⎧
+⎪⎪⎪⎪⎪⎪⎪⎪⎨
+⎪⎪⎪⎪⎪⎪⎪⎪⎩1I f dhas color 0
+ri Ifdis asemiedge basedon awith color i∈[1,n−1]
+r0rir0Ifdis asemiedge basedon bwithcolor i∈[1,n−1]
+r0ri Ifdgoes from atoband has color i∈[1,n−1]
+rir0 Ifdgoes from btoaand has color i∈[1,n−1]
+yn=/tildewideρ0r0Ifdhas color n(2)
+and
+ξ/prime(d)=⎧
+⎪⎪⎪⎪⎪⎪⎪⎪⎨
+⎪⎪⎪⎪⎪⎪⎪⎪⎩1I f dhas color 0
+ri Ifdisa semiedge basedon awith color i∈[1,n−1]
+r0rir0 Ifdisa semiedge basedon bwith color i∈[1,n−1]
+r0ri Ifdgoes from atoband has color i∈[1,n−1]
+rir0 Ifdgoes from btoaand has color i∈[1,n−1]
+/tildewideyn=/tildewideρ0r0sIfdhas color n(3)
+Note that two paths may have the same ξ-voltage  while having  different  ξ/prime-voltages,  but not the other way around.
+6. Polytopality
+In this section  we prove that if I=[1, n −1] ={1, 2, ..., n −1}, then the derived  graph  from the voltage  graph  X=2n+1
+I
+in Fig.2is polytopal.  We will ﬁrst prove that most of the intersection  properties  are satisﬁed  for arbitrary  I, implying  that
+there are only a few intersection  properties  that would  be needed  to check  to prove that there are 2-orbit  polytopes  of
+all symmetry-types  in rank n ≥3. Once we have done this, we will prove that the remaining  intersection  properties  are
+satisﬁed  for I=[1, n −1](see Fig.3).
+In order to deal with the intersection  properties  in Theorem 3.2for this particular  voltage  assignment,  we should  ﬁrst
+understand  better  what are the voltages  of paths in the voltage  graph  in Fig.2with respect  to the colors  they use. To do
+this we prove Lemmas 6.2and6.3, which  describe  the voltages  of some of the paths relevant  to our results.
+Let us ﬁrst prove the following:
+9
+E. Mochán Discrete Mathematics 347 (2024) 114055
+Claim  6.1. Let n ≥3. Let W=d1d2···dmbe a path in the voltage  graph  of Fig.2. Let cibe the color of the dart di. If
+ci/∈{1, n}for all i ∈{1, 2, ..., m}then ξ(W) =rε
+0rcmrcm−1···rc1where  εis 0 or 1 depending  on whether  the path Wis
+closed  or open, respectively.
+Proof.Note that Wis closed  if it uses an even number  of links, and it is open if it uses an odd number  of links.
+If dmis a semiedge  based  on the white  vertex,  then
+ξ(d1d2···dm)=rcmξ(d1d1···dm−1).
+If dmis a dart from the white  vertex  to the black one, then
+ξ(d1d2···dm)=r0rcmξ(d1d1···dm−1).
+If dmis a dart from the black vertex  to the white  one, then, since cm/negationslash=n,
+ξ(d1d2···dm)=rcmr0ξ(d1d1···dm−1)
+but since cm/negationslash=1w e know that rcmr0=r0rcmand we get
+ξ(d1d2···dm)=r0rcmξ(d1d1···dm−1).
+And if dmis a semiedge  on the black vertex  then
+ξ(d1d2···dm)=r0rcmr0ξ(d1d1···dm−1)
+but since cm/negationslash=1t h i s  means  ξ(d1d2···dm) =rcmξ(d1d1···dm−1). If we repeat  this argument  for dm−1, then dm−2and so on,
+and note that since ci/negationslash=1t h e n  rcicommutes  with r0for all i, we get the desired  result. /Box
+If /Phi1is a ﬂag and K⊂{0, 1, ..., n −1}, we will denote  by (/Phi1)Kthe set of faces in /Phi1whose  rank is in K. The following
+lemma  characterizes  the voltages  of closedpaths that do not use edges  of color 1o r the edge of color nand voltage  yn.
+Lemma  6.2. Let ωbe a monodromy  of Mnthat preserves  the color of its ﬂags and K⊂{0, 1, ..., n −1}. Suppose  1 ∈K. Then for
+every white ﬂag /Phi1of Mnwe have that (/Phi1)K=(/Phi1ω)Kif and only if ωis the voltage  of aclosed  path based on the white vertex  of X
+that does not use colors in K∪{n}.
+Proof. (/Phi1)K=(/Phi1ω)K, by strong  connectedness  of Mnthere is a path /tildewiderWfrom /Phi1to /Phi1ωnot using colors  in K. Let c1c2···ck
+be the sequence  of colors  of /tildewiderW. Then /Phi1ω=/Phi1rc1rc2···rck, but since Mnis regular,  the action  of the monodromy  group  on
+the ﬂags is regular,  so we conclude  that ω=rc1rc2···rck.
+Let Wbe the path on Xthat starts on the white  vertex  and follows  the sequence  of colors  c1c2···ck, that is W=p(/tildewiderW).
+We know that /Phi1ωand /Phi1are both white,  so Wmust be a closed  path. Recall  that the voltage  of Wis the product  of the
+voltages  of its darts but in reverse  order.  Let a1a2···akbe the dart sequence  of W. Let us consider  W−1=akak−1···a1.
+Since Wdoes not use colors  in Kand 1 ∈K, Claim6.1tells us that ξ(W−1) =rε
+0ωand since Wis closed,  W−1is closed
+too, so ε=0 and  ξ(W−1) =ω. Thus we have found  a closed  path that does not use colors  in K∪{n}and has voltage  ω.
+For the converse,  let W=a1a2···akbe a closed  path based  on the white  vertex  of Xand suppose  that Wdoes not
+use colors  in K∪{n}. Since Wdoes not use the color 1 (because  1 ∈K), Claim6.1tells us that ω:=ξ(W) =rckrck−1···rc1
+where  ciis the color of ai. Since ci/∈K∪{n}we know that (/Phi1ω)K=(/Phi1)K./Box
+Using  the same logic one can prove the following  lemma,  which  characterizes  the voltages  of openpaths that do not use
+edges  of color 1o r the edge of color nand voltage  yn.
+Lemma  6.3. Let ωbe a monodromy  of Mnthat preserves  the color of the ﬂags and K⊂{0, 1, ..., n −1}. Then (/Phi1)K=(/Phi10ω)Kif
+and only if ωis the voltage  of anopen path in Xthat does not use colors in K∪{n}.
+We want to show that if Xis the 2-vertex  premaniplex  with links of colors  0 and nand semiedges  of the colors  in-
+between  (see Fig.3), and ξis the voltage  assignment  deﬁned  in (2), then the condition  of Theorem 3.2is satisﬁed,  that is,
+we want to prove that if X=ˆ2n+1
+[1,n−1], we have that
+ξ(/Pi1a,b
+[0,m](X))∩ξ(/Pi1a,b
+[k,n](X))=ξ(/Pi1a,b
+[k,m](X)),
+for all k, m ∈[0, n]and all pairs of vertices  (a, b).
+In [16]t h e authors  only use the sets Snto ﬁnd the monodromy  ηof Mnmapping  all the ﬂags of a given facet to
+different  facets.  To ensure  that ηacts this way they only need to use the fact that Snis not invariant  under  non-trivial
+10
+E. Mochán Discrete Mathematics 347 (2024) 114055
+Fig. 3.The premaniplex 2n+1
+[1,n]with its voltage assignment.
+automorphisms,  and they do not consider  any other properties.  However,  for our purposes  this condition  is not enough.  We
+also need ηto map the ﬂags of the base facet “very far away”.  This is to ensure  that “close  facets”  have the same base edge
+as the base facet. This is why we have proved  Corollary 5.2.
+First we will prove that the intersection  condition  is satisﬁed  for k >1f o r every 2-vertex  premaniplex  2n+1
+Iwhere
+0, n ∈I.
+Theorem  6.4. Let Xbe an (n +1)-premaniplex  with two vertices  and with links of color 0 and n, that is X=2n+1
+Iwith 0, n ∈I. Let
+ξbe the voltage  assignment  deﬁned  in (2). Then, for k >1and for all m ∈[0, n]we have that
+ξ(/Pi1a,b
+[0,m](X))∩ξ(/Pi1a,b
+[k,n](X))=ξ(/Pi1a,b
+[k,m](X)),
+for all pairs of vertices  (a, b)in X.
+Before  proceeding  with the proof,  let us introduce  a few new concepts.  Let Mbe a maniplex  of rank nand let μbe a
+ﬂag permutation  of M. Let i ∈{0, 1, ..., n −1}and let Fand Gbe i-faces  of M. If μmaps every ﬂag with i-face Fto a
+ﬂag with i-face Gwe will say that μmaps Ft o G. In the case where  F=Gwe will say that μﬁxes F. If μﬁxes Ffor every
+i-face Fwe will say that μﬁxes i-faces.
+To simplify  notation,  in what follows  we will write /Pi1a,b
+Iinstead  of /Pi1a,b
+I(X), taking  for granted  that we are speaking
+about  paths on X. Recall  that the interval  [k, m]is considered  to be the empty  set when k >mand that ξ(/Pi1a,b
+∅)is the
+trivial  group  if a =band it is the empty  set if a /negationslash=b.
+Proof.If m =nthere is nothing  to prove.  If m <nthen ξ(/Pi1a,b
+[0,m])is generated  by monodromies  of Mnmapping  any white
+ﬂag /Phi1in Mnto a white  ﬂag with the same i-faces  for i >m.
+Now let W∈/Pi1a,b
+[k,n]be such that ξ(W) ∈ξ(/Pi1a,b
+[0,m]). Observe  that ξ(W)must be a monodromy  of Mnthat preserves  i-
+faces for i >m. Let /Phi1be the base ﬂag of the base facet of Mn. Note that, since k >1, the elements  of ξ(/Pi1a,b
+[k,n])are products
+of ﬂag permutations  that do not change  the 1-face  of /Phi1, that is, for every ω∈ξ(/Pi1a,b
+[k,n])we have that (/Phi1ω)1=(/Phi1)1. This
+implies  that /Phi1ωyn=/Phi1ω, as all facets  containing  (/Phi1)1must have it as their base edge because  of Corollary 5.3. Note also
+that if 1 <i <n, then the voltage  of all darts of color iis the same.  This means  that, if we write ξ(W) ∈ξ(/Pi1a,b
+[k,n])as the
+product  of the voltages  of the darts of W, it acts on /Phi1the same way as the voltage  of the path W/primethat follows  the same
+colors  as Wbut ignoring  each occurrence  of a dart of color n.
+If Wuses an even number  of darts of color n, then W/primehas the same endpoints  as Wand its voltage  ξ(W/prime)acts in the
+same way as κ=ξ(W)on /Phi1. Since Mnis regular,  if κis a monodromy  of Mnit must coincide  with ξ(W/prime), since it is also
+a monodromy  acting  the same way on some ﬂag. But W/prime∈/Pi1a,b
+[k,n−1], so then we have that κ∈ξ(/Pi1a,b
+[0,m]) ∩ξ(/Pi1a,b
+[k,n−1]). Since
+κ∈ξ(/Pi1a,b
+[k,n−1]), it must be a monodromy  that preserves  i-faces  for i <k, and since κ∈ξ(/Pi1a,b
+[0,m]), it also preserves  i-faces
+for i >m. Then, by Lemmas 6.2and6.3, κ∈ξ(/Pi1a,b
+[k,m]).
+Now we want to prove that if ξ(W) ∈ξ(/Pi1a,b
+[0,m])then Wcannot  use an odd number  of darts of color n, thus proving  that
+ξ(/Pi1a,b
+[0,m]) ∩ξ(/Pi1a,b
+[k,n]) =ξ(/Pi1a,b
+[k,m]).
+Let (e, 0)be the 1-face  of /Phi1, (e0, 0)be the 1-face  of /Phi11and (e1, 0)be the 1-face  of /Phi1010. Here we are thinking  of e, e0
+and e1as 1-faces  of the polytope  Mn−1, which  is naturally  isomorphic  to any facet of Mn(see Fig.4).
+If F=(fn−1, x)is a facet of Mnwhich  has (e, x)as its base edge, then yninterchanges  ﬂags with 1-face  (e0, x)with
+ﬂags with 1-face  (e1, x), while it ﬁxes ﬂags with 1-face  (e, x)(see Fig.5).
+Let ω∈ξ(/Pi1a,b
+[k,n−1]), let Fbe a facet with base edge (e, x), and let /Psi1be a ﬂag with facet Fand 1-face  (ej, x)for j ∈{0, 1}.
+Let (ψ, y) =/Psi1ω. If we write ωas a product  of the voltages  of darts, every time we change  the facet of Mn(that is, every
+occurrence  of rn−1or r0rn−1), we must change  to a new facet with the same edge. This means  that the edge of /Psi1ωmust
+be the same as the edge of /Psi1, or in other words,  that (ej, y) ∼(ej, x)where  ∼is the equivalence  relation  we used when
+deﬁning  ˆ2Pfor a polytope  P. Then supp(x +y)is contained  in ej.
+Now let κ∈ξ(/Pi1a,b
+[k,n])and consider  /Phi11κand /Phi110κ. Since 0 /∈I, then {/Phi11κ, /Phi110κ}has exactly  one white  ﬂag and one
+black ﬂag. Set (ψ, x)to be the white  ﬂag in {/Phi11κ, /Phi110κ}. Using  again the fact that the voltage  of a dart with color greater
+than 1 does not depend  on its startpoint,  we may write κas ω1ynω2yn···ωs−1ynωswhere  ωi∈ξ(/Pi1a,b
+[k,n−1]). Each ωi
+11
+E. Mochán Discrete Mathematics 347 (2024) 114055
+Fig. 4.The edges e,e0and e1illustrated on a 3-face of Mn−1.
+Fig. 5.If(e,x)is the base edge of a facet, then yninterchanges the edges (e0,x)and(e1,x)while it ﬁxes the edge (e,x).
+may change  the facet to one where  the support  of the corresponding  vector  differs  in coordinates  corresponding  to a set
+contained  in e0∪e1. Let
+(ψi,xi)=/braceleftBigg
+/Phi11ω1ynω2yn···ωiIf(ψ,x)=/Phi11κ,
+/Phi110ω1ynω2yn···ωiIf(ψ,x)=/Phi110κ.
+We claim that supp(xi) ⊂e0∪e1. This is proved  by a simple  induction  on i. For i =1w e have that x1=0, which  has
+support  supp(0) =∅ ⊂e0∪e1. If the claim is true for i, since supp(xi) ⊂e0∪e1, Corollary 5.2tells us that the facet of Mn
+corresponding  to xihas (e, xi)as its base edge. Hence,  if (ψi, xi)has (ej, xi)as its 1-face,  then (ψi+1, xi+1) =(ψi, xi)ynωi+1
+has e1−jas its 1-face.  This implies  that supp(xi+xi+1) ⊂e0∪e1. Then
+supp(xi+1)=supp((xi+xi+1)+xi)⊂supp(xi+xi+1)∪supp(xi)⊂e0∪e1.
+Thus we have proved  our claim.  Note that x =xs, so our claim and Corollary 5.2tell us that the facet (fn−1, x)of Mn
+(where  fn−1is the greatest  face of Mn−1) has base edge (e, x).
+Since we assumed  that Wuses an odd number  of darts of color n, we know by our claim that its voltage  κ=ξ(W)
+maps /Phi11or /Phi110, with edge (e0, 0), to a ﬂag with edge (e1, x)(for some x). But we know also that it maps /Phi1to a ﬂag with
+the same edge (e, 0). Since Mnis regular,  κcannot  be a monodromy  of Mn(if a monodromy  of a regular  polytope  ﬁxes
+one edge, it must ﬁx all edges),  so it cannot  be in ξ(/Pi1a,b
+[0,m])./Box
+Corollary  6.5. Let Xbe an (n +1)-premaniplex  with two vertices  and with links of color 0 and n, that is X=2n+1
+Iwith 0, n ∈I. Let
+ξ/primebe the voltage  assignment  deﬁned  in (3). Then, for k >1and for all m ∈[0, n]we have that
+ξ/prime(/Pi1a,b
+[0,m])∩ξ/prime(/Pi1a,b
+[k,n])=ξ/prime(/Pi1a,b
+[k,m]),
+for all pairs of vertices  (a, b)in X.
+Proof.Since for m =nthere is nothing  to prove,  let us assume  that m <n. Let /tildewideω∈ξ/prime(/Pi1a,b
+[0,m]) ∩ξ/prime(/Pi1a,b
+[k,n]). Let πM nω=/tildewideω,
+that is, ωis the same function  as /tildewideωbut considering  only its action  on the (Mn)w-coordinate.  By Theorem 6.4ω∈ξ(/Pi1a,b
+[k,m]).
+We also know that since m <nand /tildewideω∈ξ/prime(/Pi1a,b
+[0,m])then /tildewideωis a monodromy  of Mnand does not change  the Z2/lscript-coordinate
+of the elements  of (Mn)w×Z2/lscript. Let W∈/Pi1a,b
+[k,m]be a path such that ξ(W) =ω. Then πM n(ξ/prime(W)) =ξ(W) =ω=πM n/tildewideω,
+but also πZ2/lscript(ξ/prime(W)) =IdZ2/lscript=πZ2/lscript/tildewideω. Therefore  ξ/prime(W) =/tildewideω∈ξ/prime(/Pi1a,b
+[k,m])./Box
+12
+E. Mochán Discrete Mathematics 347 (2024) 114055
+Fig. 6.The premaniplex (2n+1
+[1,n−1])0with its voltage assignment.
+Now we want to prove that we can remove  the restriction  k >1f r o m  Theorem 6.4when I=[1, n −1]. First we need
+the following  lemmas:
+Lemma  6.6. Let ab e the white vertex  on the premaniplex  2n
+[1,n−1](Fig. 3). Then, the group ξ(/Pi1a
+[1,n])is generated  by {ri}n−1
+i=1∪
+{/tildewideρ0rn−1/tildewideρ0}.
+Proof.When  we remove  the link of color 0, we are left with a unique  spanning  tree: the one consisting  only of the link
+of color nand voltage  yn=r0/tildewideρ0(see Fig.6). Then, the generator  corresponding  to a semiedge  of color i ∈[1, n −1]on the
+white  vertex  is its voltage  ri. The generator  corresponding  to a semiedge  eon the black vertex  is the voltage  of the path
+anea−1
+n, where  anis the dart from the white  vertex  to the black one with color n. This voltage  is
+ξ(anea−1
+n)=ξ(an)−1ξ(e)ξ(an)=(yn)(r0rir0)(yn)=/tildewideρ0ri/tildewideρ0.
+So ξ(/Pi1a
+[1,n]) =/angbracketleft {ri}n−1
+i=1∪{/tildewideρ0ri/tildewideρ0}n−1
+i=1/angbracketright. But since /tildewideρ0acts as an automorphism  in each facet, for i <n −1w e get /tildewideρ0ri/tildewideρ0=ri,
+and we get ξ(/Pi1a
+[1,n]) =/angbracketleft {ri}n−1
+i=1∪{/tildewideρ0rn−1/tildewideρ0}/angbracketright./Box
+Lemma  6.7. Let (e, 0)be the base edge of the base facet of Mn, and let ua n d vb e the vertices  of Mn−1incident  to e. If x ∈ZFac(M n−1)
+2
+is such that supp(x) ⊂u∪va n d ψis a ﬂag in Mn−1with vertex  u, then (ψ, x)/tildewideρ0rn−1/tildewideρ0=(ψ, y)for a vector  y satisfying  supp(y) ⊂
+u∪v.
+Moreover,  if ω∈ξ(/Pi1a
+[1,n])and (ψ, x)ω=(ψ/prime, y)then ψ/prime
+0=ua n d supp(y) ⊂u∪v.
+Proof.We know by Corollary 5.2that the facet (fn−1, x)of Mnhas base edge (e, x). Let /Psi1 =(ψ, x). The vertex  of /Psi1is (u, x).
+Let (ψ/prime, x) :=/Psi1/tildewideρ0. We must have that (ψ/prime)0=v. Then /Psi1/tildewideρ0rn−1=(ψ/prime, x +χF)for some F∈v. Since supp(x +χF) ⊂u∪v
+we know that the facet (fn−1, x +χF)has base edge (e, x +χF). This implies  that /Psi1/tildewideρ0rn−1/tildewideρ0=(ψ/prime, x +χF)/tildewideρ0=(ψ, x +χF).
+To complete  the proof use Lemma 6.6and note that each riﬁxes the vertex  of any ﬂag./Box
+Theorem  6.8. If X=2n+1
+[1,n−1], then Xis the symmetry-type  graph of a polytope.
+Proof.We will prove that the voltage  assignment  ξdeﬁned  in (2)s a t i s ﬁ e s  that
+ξ(/Pi1a,b
+[0,m])∩ξ(/Pi1a,b
+[k,n])=ξ(/Pi1a,b
+[k,m]) (4)
+for all k, m ∈[0, n]and all pairs of vertices  (a, b). This will imply  that ξ/prime(deﬁned  in (3)) also satisﬁes  this intersection
+property  (exactly  as in the proof of Corollary 6.5). Then, Theorem 3.2will imply  that both Xξand Xξ/primeare polytopal,  and
+since we already  know that Xξ/primehas symmetry-type  graph  Xthe theorem  follows.  Since Theorem 6.4tells us that (4)h o l d s
+for k >1 and  it trivially  holds for k =0, we only need to prove the case when k =1.
+Let us ﬁrst prove the case for closed  paths,  that is, we will prove that
+ξ(/Pi1a
+[1,n])∩ξ(/Pi1a
+[0,m])=ξ(/Pi1a
+[1,m]).
+Once again,  for m =nthere is nothing  to prove,  so let m <n.
+We prove ﬁrst the case when m <n −1. Let ω∈ξ(/Pi1a
+[1,n]) ∩ξ(/Pi1a
+[0,m]). Since ω∈ξ(/Pi1a
+[0,m]) =/angbracketleftri|i ≤m/angbracketright, it must be a
+monodromy  of Mnand since m <n −1, it must ﬁx facets.  Let /Phi1 =(φ, 0)be the base ﬂag of the base facet of Mnand
+let e =(φ)1, u =(φ)0and v =(φ0)0(see Fig.7). Lemma 6.7implies  that /Phi1ω=(ψ, x)for some ﬂag ψin Mn−1and some
+vector  x ∈ZFac(M n−1)
+2satisfying  (ψ)0=uand supp(x) ⊂u∪v. But since ωmust ﬁx facets,  xis actually  0. This means
+that (/Phi1ω)0=(/Phi1)0, and since Mnis regular,  this means  that ωﬁxes all 0-faces.  Also because  of the regularity  of Mn, the
+monodromies  in ξ(/Pi1a
+[0,m]) =/angbracketleftri|i ≤m/angbracketrightthat ﬁx 0-faces  are /angbracketleftri|1 ≤i ≤m/angbracketright, but this is precisely  ξ(/Pi1a
+[1,m]).
+Now, if m =n −1w e have a little more work to do. We proceed  as in the previous  case, but we cannot  ensure  that
+x =0. However,  we have that /Phi1ω=(ψ, x)and the inclusion  supp(x) ⊂u∪vstill holds.  By writing  the 2-face  of /Phi1as
+(/Phi1)2=(Q, 0), we know that Qis a square.  Let wbe the opposite  vertex  of uin Qand qbe the opposite  vertex  to v, so
+that the vertices  of Qare uvwqin cyclical  order (see Fig.7).
+13
+E. Mochán Discrete Mathematics 347 (2024) 114055
+Fig. 7.The 2-face Qand its vertices u,v,wand q.
+Since ωis a monodromy  of Mn, it must commute  with the automorphism  ρ1of Mn, which  maps /Phi1to /Phi11. This implies
+that
+/Phi11ω=(/Phi1ω)ρ1=(ψ,x)ρ1=(ψρ1,ρ1x).
+Here we have used the way /Gamma1(Mn−1)acts on Mndiscussed  on Section 4. Note that we have used the same symbol  ρ1to
+denote  an automorphism  of Mnand also an automorphism  of Mn−1, but because  of the way /Gamma1(Mn−1)acts on Mnthis is
+actually  not ambiguous.
+Notice  that supp(ρ1x) =(supp(x))ρ1must be contained  in (u∪v)ρ1=u∪q. On the other hand, the vector  corresponding
+to /Phi11is 0, so Lemma 6.7tells us that supp(ρ1x) ⊂u∪v. Every facet incident  to both vand qmust be incident  to
+Q=v ∨q(see Corollary 4.1), and hence  also to u. Then, the intersection  (u∪q) ∩(u∪v)is just uwhich  means  that ω
+ﬁxes the vertex  of /Phi11, and therefore  it must ﬁx the vertex  of every ﬂag (again,  Mnis regular).  Hence,  we conclude  that
+ξ(/Pi1a
+[1,n]) ∩ξ(/Pi1a
+[0,m]) =ξ(/Pi1a
+[1,m]).
+Now let us solve the case for open paths,  that is, let us prove that ξ(/Pi1a,b
+[0,m]) ∩ξ(/Pi1a,b
+[1,n]) =ξ(/Pi1a,b
+[1,m])when ais the white
+vertex  and bthe black vertex.
+First notice  that since we only have links of colors  0 and n, we know that ξ(/Pi1a,b
+[1,m])is in fact empty.  So what we really
+want to prove is that there are no monodromies  in ξ(/Pi1a,b
+[1,n]).
+Notice  that /Pi1a,b
+[1,n]=/Pi1a
+[1,n]an, where  once again,  anis the dart of color nfrom ato b. Then
+ξ(/Pi1a,b
+[1,n])=ξ(/Pi1a
+[1,n]an)=ynξ(/Pi1a
+[1,n]).
+Let ω∈ξ(/Pi1a
+[1,n]). We want to prove that ynωis not a monodromy  of Mn. If it was, it would  also act as a monodromy
+on Mn−1(just ignore  the ZFac(M n−1)
+2-coordinate).  Take the base ﬂag φof Mn−1. Then φynω=φω, and Lemma 6.7tells
+us that this must be a ﬂag with vertex  u(the same vertex  as φ). Now, if we consider  φ1(with vertex  u) we get that
+φ1ynω=φ1/tildewideρ0r0ω=φ010ωis a ﬂag with vertex  w. Then ynωcannot  act as a monodromy  on Mn−1, since it ﬁxes the
+vertex  of some ﬂags but it changes  the vertex  of others  and Mn−1is regular.  Therefore,  ynωis not a monodromy  of Mn.
+We have proved  that ξ(/Pi1a,b
+[0,m]) ∩ξ(/Pi1a,b
+[1,n]) =∅.
+Thus we have proved  that (4) holds.  By doing  a proof analogous  to that of Corollary 6.5we get that ξ/prime(/Pi1a,b
+[0,m]) ∩
+ξ/prime(/Pi1a,b
+[k,n]) =ξ/prime(/Pi1a,b
+[k,m])for all k, m ∈[0, n]. Theorem 3.2then implies  that Xξ/primeis polytopal.  Since we already  knew that
+T(Xξ/prime) ∼=X, we have found  a polytope  whose  symmetry-type  graph  is isomorphic  to X./Box
+Recall  once again that examples  of polyhedra  (rank 3) of all possible  2-orbit  symmetry  types exist, in particular  those
+with 1 or 2 links. Applying  the constructions  2Por ˆ2Prepeatedly  to the examples  of 2 links of Theorem 6.8or the
+examples  of rank 3 one gets that all symmetry  types with 1 or 2 links exist in any rank higher  than two. In addition  to
+this, as previously  discussed,  in [14] Pellicer  proves  that chiral polytopes  (those  with symmetry  type 2n
+∅) exist in rank 3 and
+higher,  and if we apply the constructions  2Por ˆ2Pto those,  we get all symmetry  types where  all the links have consecutive
+colors.  In conclusion,  we have the following  theorem:
+Theorem  6.9. Let n ≥3and let X=2n
+Ibe a 2-vertex  premaniplex  of rank n. Let I:= {0, 1, ..., n −1} \Ib e the set of the colors of the
+links of X. Then, in any of the following  cases, Xis the symmetry-type  graph of a polytope.
+•Ih a s exactly  1 or 2 elements.
+•Ii s an interval  [k, m] ={k, k +1, ..., m}.
+Theorem 6.9ensures  that of the total of 2n−1 premaniplexes  of rank nwith 2 vertices,  at least n2−n +1a r e the
+symmetry  type of a polytope  (nwith 1 link, n(n−1)
+2with 2 links and n(n−1)
+2−n +1w i t h  an interval  of links of size at
+14
+E. Mochán Discrete Mathematics 347 (2024) 114055
+least 3).  It appears  that there is still a long way to go. Nevertheless,  Theorem 6.4and Corollary 6.5ensure  that to prove that
+there are polytopes  with symmetry  type 2n
+I, one should  only check  that (4)i s satisﬁed  for k =1f o r the voltage  ξ(and this
+would  imply  that it is also satisﬁed  for ξ/prime). Sadly,  the proof of Theorem 6.8cannot  be easily  generalized  to arbitrary  I. This
+is because  the voltage  of a link of color 1 ≤i <nwould  be r0riand this affects  most arguments  used, mainly  because  there
+would  be paths whose  voltage  change  0-faces  but they do not use the color 0. The author  of this paper  conjectures  that if
+this challenge  is solved  for one example  2n
+Iwith 3 or more links of non-consecutive  colors,  the same solution  must work
+for all others,  and that would  prove that there exist 2-orbit  polytopes  of any possible  symmetry  type (and rank n ≥3).
+Declaration  of competing  interest
+The authors  declare  that they have no known  competing  ﬁnancial  interests  or personal  relationships  that could have
+appeared  to inﬂuence  the work reported  in this paper.
+Data availability
+No data was used for the research  described  in the article.
+Acknowledgements
+The author  would  like to thank  Gabe Cunningham,  Antonio  Montero,  Daniel  Pellicer,  for their helpful  comments  on early
+versions  of this paper.  The author  also gives special  thanks  to Isabel  Hubard,  for her guidance  during  the writing  of the
+thesis  that gave birth to this paper  (and beyond).
+The research  for this paper  was done with the ﬁnancial  support  of CONACYT grant  A1-S-21678,  and PAPIIT-DGAPA  grant
+IN109023.  This paper  was completed  while the author  had a postdoctoral  position  at the Department  of Mathematics  of
+Northeastern  University.
+References
+[1]Marston  Conder,  Isabel Hubard,  Tomaž Pisanski,  Constructions  for chiral polytopes,  J. Lond. Math. Soc. 77 (1) (2008) 115–129.
+[2]H.S.M. Coxeter,  Conference  Board of the Mathematical  Sciences,  Twisted  honeycombs,  in: Conference  Board of the Mathematical  Sciences,  in: Regional
+Conference  Series in Mathematics,  Conference  Board of the Mathematical  Sciences,  1970.
+[3]Ludwig  Danzer,  Regular  incidence-complexes  and dimensionally  unbounded  sequences  of such, I, in: M. Rosenfeld,  J. Zaks (Eds.), Annals of Discrete
+Mathematics  (20): Convexity  and Graph Theory,  in: North-Holland  Mathematics  Studies,  vol. 87,  North-Holland,  1984, pp. 115–127.
+[4]Ludwig  Danzer,  Egon Schulte,  Reguläre  Inzidenzkomplexe  I, Geom. Dedic. 13 (1982) 295–308.
+[5]Ian Douglas,  Isabel Hubard,  Daniel Pellicer,  Steve Wilson,  The twist operator  on maniplexes,  in: Springer  Contributed  Volume  on Discrete  Geometry
+and Symmetry,  2018, pp. 127–145.
+[6]Jorge Garza-Vargas,  Isabel Hubard,  Polytopality  of maniplexes,  Discrete  Math. 341 (7)  (2018) 2068–2079.
+[7]Isabel Hubard,  Two-orbit  polyhedra  from groups,  Eur. J. Comb. 31 (3) (2010) 943–960.
+[8]Isabel Hubard,  Elías Mochán,  All polytopes  are coset geometries:  characterizing  automorphism  groups of k-orbit abstract  polytopes,  Eur. J. Comb. 113
+(2023) 103746.
+[9]Aleksander  Malniˇc, Roman Nedela,  Martin Škoviera,  Lifting graph automorphisms  by voltage  assignments,  Eur. J. Comb. 21 (7) (2000) 927–947.
+[10]Peter McMullen,  Egon Schulte,  Abstract  Regular  Polytopes,  Abstract  Regular  Polytopes,  vol. 92,  Cambridge  University  Press, 2002.
+[11]Elías Mochán,  Abstract  polytopes  from their symmetry  type graphs,  PhD thesis, National  Autonomous  University  of Mexico,  2021.
+[12]Barry Monson,  Daniel Pellicer,  Gordon  Williams,  Mixing and monodromy  of abstract  polytopes,  Trans. Am. Math. Soc. 366 (5)  (2014) 2651–2681.
+[13]Daniel Pellicer,  Extensions  of regular  polytopes  with preassigned  Schläﬂi  symbol,  J. Comb. Theory,  Ser. A 116 (2)  (2009) 303–313.
+[14]Daniel Pellicer,  A construction  of higher rank chiral polytopes,  Discrete  Math. 310 (2010) 1222.
+[15]Daniel Pellicer,  The higher dimensional  hemicuboctahedron,  in: Jozef Širáˇn, Robert Jajcay (Eds.), Symmetries  in Graphs,  Maps, and Polytopes.  SIGMAP
+2014, in: Springer  Proceedings  in Mathematics  & Statistics,  vol. 159,  Springer,  Cham, 2016, pp. 263–272.
+[16]Daniel Pellicer,  Primož Potoˇcnik, Micael Toledo,  An existence  result on two-orbit  maniplexes,  J. Comb. Theory,  Ser. A 166 (2019) 226–253.
+[17]Egon Schulte,  Extensions  of Regular  Complexes,  Lecture  Notes in Pure and Applied  Mathematics,  vol. 103,  Marcel Dekker,  New York, 1985, pp. 289–305,
+chapter  27.
+[18]Egon Schulte,  Asia Ivi´c Weiss, Chiral polytopes,  in: Applied  Geometry  and Discrete  Mathematics,  in: DIMACS  Ser. Discrete  Math. Theoret.  Comput.  Sci.,
+vol. 4, Amer. Math. Soc., Providence,  RI, 1991, pp. 493–516.
+[19]R.E. Strong, Finite topological  spaces, Trans. Am. Math. Soc. 123 (2)  (June 1966) 325–340.
+[20]Steve Wilson,  Maniplexes:  part 1: maps, polytopes,  symmetry  and operators,  Symmetry  4 (2012) 12.
+15

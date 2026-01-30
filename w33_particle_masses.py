@@ -9,7 +9,7 @@ The mass hierarchy is the biggest puzzle:
 
 Can W33 explain these mass ratios?
 
-Key idea: Masses come from eigenvalues of a 
+Key idea: Masses come from eigenvalues of a
 W33-derived matrix.
 """
 
@@ -31,23 +31,23 @@ print("=" * 80)
 # Particle masses in MeV
 masses = {
     # Leptons
-    'e': 0.511,
-    'μ': 105.66,
-    'τ': 1776.86,
-    'ν_e': 0.00001,  # upper bound ~eV
-    'ν_μ': 0.00017,
-    'ν_τ': 0.0182,
+    "e": 0.511,
+    "μ": 105.66,
+    "τ": 1776.86,
+    "ν_e": 0.00001,  # upper bound ~eV
+    "ν_μ": 0.00017,
+    "ν_τ": 0.0182,
     # Quarks (pole masses)
-    'u': 2.16,
-    'd': 4.67,
-    's': 93.4,
-    'c': 1270,
-    'b': 4180,
-    't': 172760,
+    "u": 2.16,
+    "d": 4.67,
+    "s": 93.4,
+    "c": 1270,
+    "b": 4180,
+    "t": 172760,
     # Bosons
-    'W': 80379,
-    'Z': 91188,
-    'H': 125100,
+    "W": 80379,
+    "Z": 91188,
+    "H": 125100,
 }
 
 print("\nObserved particle masses (MeV):")
@@ -128,8 +128,8 @@ Koide (1981) found:
 This is satisfied to 0.01% accuracy!
 """)
 
-m_e, m_mu, m_tau = masses['e'], masses['μ'], masses['τ']
-Q_koide = (m_e + m_mu + m_tau) / (np.sqrt(m_e) + np.sqrt(m_mu) + np.sqrt(m_tau))**2
+m_e, m_mu, m_tau = masses["e"], masses["μ"], masses["τ"]
+Q_koide = (m_e + m_mu + m_tau) / (np.sqrt(m_e) + np.sqrt(m_mu) + np.sqrt(m_tau)) ** 2
 
 print(f"\nKoide formula check:")
 print(f"  Q = (m_e + m_μ + m_τ) / (√m_e + √m_μ + √m_τ)²")
@@ -162,7 +162,7 @@ The Yukawa matrix Y has unknown entries.
 
 W33 proposal:
   The Yukawa matrix comes from W33 structure!
-  
+
 Consider a 3×3 matrix from K4 phases...
 """)
 
@@ -171,12 +171,8 @@ Consider a 3×3 matrix from K4 phases...
 phase = np.exp(2j * np.pi / 3)  # Z₃ phase
 
 # Democratic matrix + K4 perturbation
-M_demo = np.ones((3,3)) / 3  # Democratic
-M_k4 = np.array([
-    [1, phase, phase**2],
-    [phase, 1, phase],
-    [phase**2, phase, 1]
-])
+M_demo = np.ones((3, 3)) / 3  # Democratic
+M_k4 = np.array([[1, phase, phase**2], [phase, 1, phase], [phase**2, phase, 1]])
 
 # Combined matrix
 M_mass = M_demo + 0.1 * M_k4
@@ -217,8 +213,8 @@ Do masses scale with powers of 3?
 
 # Check if masses ~ 3^n
 print(f"\nMass in units of electron mass:")
-for p in ['e', 'μ', 'τ']:
-    m_ratio = masses[p] / masses['e']
+for p in ["e", "μ", "τ"]:
+    m_ratio = masses[p] / masses["e"]
     if m_ratio > 1:
         log3 = np.log(m_ratio) / np.log(3)
     else:
@@ -226,8 +222,8 @@ for p in ['e', 'μ', 'τ']:
     print(f"  {p}: m/m_e = {m_ratio:.1f} ≈ 3^{log3:.2f}")
 
 print(f"\nQuark masses (in units of u quark):")
-for p in ['u', 'c', 't']:
-    m_ratio = masses[p] / masses['u']
+for p in ["u", "c", "t"]:
+    m_ratio = masses[p] / masses["u"]
     if m_ratio > 1:
         log3 = np.log(m_ratio) / np.log(3)
     else:
@@ -250,12 +246,12 @@ Neutrino masses are tiny: m_ν ~ eV << m_e ~ MeV
 
 The see-saw mechanism:
   m_ν ~ m_D² / M_R
-  
+
 where m_D ~ electroweak, M_R ~ GUT scale.
 
 W33 interpretation:
   m_ν / m_e ~ (m_e / M_R) ~ ?
-  
+
 If M_R ~ 10¹⁴ GeV and m_e ~ 0.5 MeV:
   m_ν ~ (0.5 MeV)² / 10¹⁴ GeV ~ 10⁻¹² MeV ~ eV ✓
 
@@ -292,7 +288,7 @@ W33 answer:
   - W33 is over GF(3) - the field with 3 elements
   - K4 acts on 3 non-identity elements
   - There are 3 colors in SU(3)
-  
+
 The 3 generations may correspond to:
   - The 3 non-trivial elements of K4
   - Or the 3 elements of GF(3)
@@ -330,7 +326,7 @@ W33 predictions?
 """)
 
 # Check W/Z ratio
-cos_theta_W = masses['W'] / masses['Z']
+cos_theta_W = masses["W"] / masses["Z"]
 sin2_theta = 1 - cos_theta_W**2
 
 print(f"\nElectroweak bosons:")
@@ -370,11 +366,11 @@ where n_i is an integer or half-integer.
 """)
 
 # Reference mass
-m_0 = masses['e']  # electron mass
+m_0 = masses["e"]  # electron mass
 
 print(f"\nMasses as powers of 3 (base = m_e):")
 print("-" * 50)
-for p in ['e', 'μ', 'τ', 'u', 'd', 's', 'c', 'b', 't']:
+for p in ["e", "μ", "τ", "u", "d", "s", "c", "b", "t"]:
     m = masses[p]
     n = np.log(m / m_0) / np.log(3)
     n_rounded = round(n * 2) / 2  # Round to nearest 0.5

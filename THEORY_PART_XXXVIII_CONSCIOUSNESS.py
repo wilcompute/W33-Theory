@@ -118,7 +118,7 @@ Quantum mechanics has a strange feature: the OBSERVER.
 
   • Schrödinger equation: deterministic evolution
   • Measurement: probabilistic collapse
-  
+
 Who/what counts as an "observer"?
 Does consciousness play a role in collapse?
 
@@ -223,7 +223,7 @@ Binding happens because:
   • Points (40) = sensory inputs
   • Cycles (81) = temporal integration
   • K4s (90) = cross-modal binding
-  
+
 Total conscious moment = W33 structure
 """)
 
@@ -303,7 +303,7 @@ Research suggests:
   • ~7-10 basic tastes
   • ~6-8 basic emotions
   • ~10 basic sound dimensions
-  
+
 Total: ~30-40 basic experiential dimensions!
 
 ═══ W33 Prediction ═══
@@ -402,7 +402,7 @@ This has exactly 3 non-trivial elements = 3 choices!
 With 90 K4s:
   • 90 × 3 = 270 total "choice points"
   • But they're constrained by W33 structure
-  
+
 Free will is CONSTRAINED choice:
   • Not everything is possible (physics)
   • But multiple futures remain open (quantum)
@@ -445,7 +445,7 @@ W33 provides:
   ✓ Self-reference (51,840 automorphisms)
   ✓ Integration (highly connected)
   ✓ Numbers matching conscious parameters
-  
+
 W33 does NOT explain:
   ✗ WHY integrated information feels like something
   ✗ WHY self-reference produces qualia

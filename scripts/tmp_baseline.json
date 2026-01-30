@@ -1,0 +1,7 @@
+{
+  "version": "1.4.0",
+  "plugins_used": [],
+  "filters_used": [],
+  "exclude_files": "data/repetend_scan/|maniplex_doc_bundle/|bundles/",
+  "results": {}
+}

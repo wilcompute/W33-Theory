@@ -11,26 +11,35 @@ The 4D complex space suggests Cl(4) or Cl(3,1).
 Let me see if I can identify the Clifford structure explicitly.
 """
 
-import numpy as np
-from pathlib import Path
-import pandas as pd
 from collections import defaultdict
 from itertools import combinations
+from pathlib import Path
 
-ROOT = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data")
+import numpy as np
+import pandas as pd
+
+ROOT = Path(
+    r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data"
+)
+
 
 def load_rays():
-    df = pd.read_csv(ROOT / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv")
+    df = pd.read_csv(
+        ROOT
+        / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv"
+    )
     V = np.zeros((40, 4), dtype=np.complex128)
     for _, row in df.iterrows():
-        pid = int(row['point_id'])
+        pid = int(row["point_id"])
         for i in range(4):
-            V[pid, i] = complex(str(row[f'v{i}']).replace(' ', ''))
+            V[pid, i] = complex(str(row[f"v{i}"]).replace(" ", ""))
     return V
+
 
 def load_lines():
     df = pd.read_csv(ROOT / "_workbench/02_geometry/W33_line_phase_map.csv")
-    return [tuple(map(int, str(row['point_ids']).split())) for _, row in df.iterrows()]
+    return [tuple(map(int, str(row["point_ids"]).split())) for _, row in df.iterrows()]
+
 
 def inner(V, p, q):
     return np.vdot(V[p], V[q])
@@ -99,7 +108,9 @@ def analyze_clifford_structure():
         patterns[(nz, mags)].append(p)
 
     print(f"Found {len(patterns)} distinct patterns:")
-    for (nz, mags), pts in sorted(patterns.items(), key=lambda x: len(x[1]), reverse=True):
+    for (nz, mags), pts in sorted(
+        patterns.items(), key=lambda x: len(x[1]), reverse=True
+    ):
         print(f"  Nonzero: {nz}, Mags: {mags} -> {len(pts)} points")
         if len(pts) <= 5:
             print(f"    Points: {pts}")
@@ -140,10 +151,9 @@ def analyze_symmetry_group():
     # Does this preserve the phase structure? Yes, trivially.
 
     # Try: permute coordinates. Does e_0 <-> e_1 preserve structure?
-    P01 = np.array([[0, 1, 0, 0],
-                    [1, 0, 0, 0],
-                    [0, 0, 1, 0],
-                    [0, 0, 0, 1]], dtype=np.complex128)
+    P01 = np.array(
+        [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]], dtype=np.complex128
+    )
 
     print("\nApplying coordinate swap P_{01} (e_0 <-> e_1):")
     # Check if this maps the 40 points to themselves
@@ -178,7 +188,7 @@ def analyze_symmetry_group():
                 matches_conj.append((p, q))
                 break
             if np.allclose(v_new, -V[q], rtol=1e-5):
-                matches_conj.append((p, q, 'neg'))
+                matches_conj.append((p, q, "neg"))
                 break
         else:
             matches_conj.append((p, None))
@@ -283,7 +293,9 @@ def analyze_triality():
             k = round(6 * np.angle(z) / np.pi) % 12
             k3 = k % 3
             k3_count[k3] += 1
-        print(f"  From {ref}: k3=0:{k3_count[0]}, k3=1:{k3_count[1]}, k3=2:{k3_count[2]}")
+        print(
+            f"  From {ref}: k3=0:{k3_count[0]}, k3=1:{k3_count[1]}, k3=2:{k3_count[2]}"
+        )
 
 
 def analyze_why_minus_one():
@@ -320,7 +332,7 @@ def analyze_why_minus_one():
     # Build the 6 inner products (4 choose 2)
     print("\nInner products <p|q>:")
     for i, p in enumerate(quad):
-        for q in quad[i+1:]:
+        for q in quad[i + 1 :]:
             z = inner(V, p, q)
             k = round(6 * np.angle(z) / np.pi) % 12
             print(f"  <{p}|{q}> = {z:.6f}, k = {k}")
@@ -334,7 +346,7 @@ def analyze_why_minus_one():
         ((0, 3), (1, 2)),
     ]
 
-    for (p1, p2) in pairings:
+    for p1, p2 in pairings:
         a, b = p1
         c, d = p2
         # Bargmann cycle: a -> c -> b -> d -> a
@@ -369,6 +381,7 @@ def main():
     analyze_projective_structure()
     analyze_triality()
     analyze_why_minus_one()
+
 
 if __name__ == "__main__":
     main()

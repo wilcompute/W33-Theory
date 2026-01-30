@@ -7,7 +7,7 @@ The 2025 Physics Revolution: Anomalies Resolved, Predictions Confirmed
 
 This part documents:
 1. Muon g-2 anomaly RESOLVED (May 2025) - W33 compatible
-2. W boson mass anomaly RESOLVED (2024) - W33 compatible  
+2. W boson mass anomaly RESOLVED (2024) - W33 compatible
 3. Dark matter: Concrete W33 WIMP at 77 GeV
 4. CKM matrix solidified from geometry
 5. Running coupling constants
@@ -17,10 +17,11 @@ Date: January 2026
 Part: CI (101)
 """
 
-import numpy as np
 import json
 from datetime import datetime
 from fractions import Fraction
+
+import numpy as np
 
 print("=" * 78)
 print("W33 THEORY OF EVERYTHING: PART CI")
@@ -33,32 +34,32 @@ print()
 # =============================================================================
 
 # W33 parameters
-v = 40       # vertices
-k = 12       # valency  
-lam = 2      # lambda (common neighbors)
-mu = 4       # mu (non-neighbors)
+v = 40  # vertices
+k = 12  # valency
+lam = 2  # lambda (common neighbors)
+mu = 4  # mu (non-neighbors)
 
 # Eigenvalues
-e1 = 12      # principal
-e2 = 2       # positive
-e3 = -4      # negative
+e1 = 12  # principal
+e2 = 2  # positive
+e3 = -4  # negative
 
 # Multiplicities
-m1 = 1       # identity
-m2 = 24      # positive eigenspace
-m3 = 15      # negative eigenspace
+m1 = 1  # identity
+m2 = 24  # positive eigenspace
+m3 = 15  # negative eigenspace
 
 # Derived quantities
 AUT = 51840  # |Aut(W33)| = |W(E6)|
-R4 = 1111    # (k-1)[(k-lambda)² + 1]
+R4 = 1111  # (k-1)[(k-lambda)² + 1]
 triangles = 240  # edges = roots of E8
-tricentric = 1   # minimal special structure
+tricentric = 1  # minimal special structure
 
 # Physical constants (experimental)
-ALPHA_EM = 1/137.035999084  # fine structure constant
+ALPHA_EM = 1 / 137.035999084  # fine structure constant
 M_W_EXP = 80.3692  # W boson mass (GeV), PDG 2024 average
 M_Z_EXP = 91.1876  # Z boson mass (GeV)
-M_H_EXP = 125.25   # Higgs mass (GeV)
+M_H_EXP = 125.25  # Higgs mass (GeV)
 
 print("W33 FUNDAMENTAL PARAMETERS:")
 print(f"  v = {v}, k = {k}, λ = {lam}, μ = {mu}")
@@ -151,7 +152,7 @@ print()
 print("""
 The CKM matrix describes quark mixing. It has 4 parameters:
   - θ₁₂ (Cabibbo angle)
-  - θ₂₃ 
+  - θ₂₃
   - θ₁₃
   - δ (CP-violating phase)
 
@@ -160,15 +161,15 @@ W33 derives ALL FOUR from pure geometry:
 
 # CKM experimental values
 ckm_exp = {
-    'V_ud': (0.97401, 0.00011),
-    'V_us': (0.22476, 0.00030),   # sin(θ_C)
-    'V_ub': (0.00365, 0.00012),
-    'V_cd': (0.22484, 0.00030),
-    'V_cs': (0.97349, 0.00011),
-    'V_cb': (0.04182, 0.00085),
-    'V_td': (0.00854, 0.00035),
-    'V_ts': (0.04110, 0.00085),
-    'V_tb': (0.999141, 0.000045),
+    "V_ud": (0.97401, 0.00011),
+    "V_us": (0.22476, 0.00030),  # sin(θ_C)
+    "V_ub": (0.00365, 0.00012),
+    "V_cd": (0.22484, 0.00030),
+    "V_cs": (0.97349, 0.00011),
+    "V_cb": (0.04182, 0.00085),
+    "V_td": (0.00854, 0.00035),
+    "V_ts": (0.04110, 0.00085),
+    "V_tb": (0.999141, 0.000045),
 }
 
 # W33 CKM predictions with SOLID derivations
@@ -176,9 +177,9 @@ print("═══ CABIBBO ANGLE θ₁₂ ═══")
 print()
 
 # Multiple W33 derivations all converging
-sin_c_1 = 9/40           # generations²/vertices
-sin_c_2 = np.sqrt(1/22)  # sqrt(tricentric/triangles_22)
-sin_c_3 = lam/k + 1/v    # λ/k + 1/v = 2/12 + 1/40
+sin_c_1 = 9 / 40  # generations²/vertices
+sin_c_2 = np.sqrt(1 / 22)  # sqrt(tricentric/triangles_22)
+sin_c_3 = lam / k + 1 / v  # λ/k + 1/v = 2/12 + 1/40
 
 print(f"  W33 Formula 1: sin θ_C = 9/40 = {9/40:.5f}")
 print(f"  W33 Formula 2: sin θ_C = √(1/22) = {sin_c_2:.5f}")
@@ -188,8 +189,8 @@ print(f"  Experimental:  sin θ_C = {ckm_exp['V_us'][0]:.5f} ± {ckm_exp['V_us']
 print()
 
 # Best prediction
-best_cabibbo = 9/40
-error_1 = abs(best_cabibbo - ckm_exp['V_us'][0]) / ckm_exp['V_us'][0] * 100
+best_cabibbo = 9 / 40
+error_1 = abs(best_cabibbo - ckm_exp["V_us"][0]) / ckm_exp["V_us"][0] * 100
 print(f"  BEST PREDICTION: 9/40 = 0.225")
 print(f"  Error: {error_1:.2f}%")
 print()
@@ -198,16 +199,16 @@ print("═══ θ₂₃ (V_cb) ═══")
 print()
 
 # V_cb from W33
-sin_23_w33 = mu/k * np.sqrt(1/lam)  # μ/k × sqrt(1/λ)
-sin_23_alt = 4/96  # From edges counting
-v_cb_exp = ckm_exp['V_cb'][0]
+sin_23_w33 = mu / k * np.sqrt(1 / lam)  # μ/k × sqrt(1/λ)
+sin_23_alt = 4 / 96  # From edges counting
+v_cb_exp = ckm_exp["V_cb"][0]
 
 print(f"  W33 Formula: sin θ₂₃ = 4/96 = {4/96:.5f}")
 print(f"  Alternative:  sin θ₂₃ = μ/k × √(1/λ) = {sin_23_w33:.5f}")
 print(f"  Experimental: sin θ₂₃ = {v_cb_exp:.5f} ± {ckm_exp['V_cb'][1]:.5f}")
 print()
 
-error_23 = abs(4/96 - v_cb_exp) / v_cb_exp * 100
+error_23 = abs(4 / 96 - v_cb_exp) / v_cb_exp * 100
 print(f"  BEST PREDICTION: 4/96 = {4/96:.6f}")
 print(f"  Error: {error_23:.1f}%")
 print()
@@ -216,14 +217,14 @@ print("═══ θ₁₃ (V_ub) ═══")
 print()
 
 # V_ub - smallest angle
-sin_13_w33 = 1/271  # 1/(10k+v+11) = 1/271
-v_ub_exp = ckm_exp['V_ub'][0]
+sin_13_w33 = 1 / 271  # 1/(10k+v+11) = 1/271
+v_ub_exp = ckm_exp["V_ub"][0]
 
 print(f"  W33 Formula: sin θ₁₃ = 1/271 = {1/271:.6f}")
 print(f"  Experimental: sin θ₁₃ = {v_ub_exp:.6f} ± {ckm_exp['V_ub'][1]:.6f}")
 print()
 
-error_13 = abs(1/271 - v_ub_exp) / v_ub_exp * 100
+error_13 = abs(1 / 271 - v_ub_exp) / v_ub_exp * 100
 print(f"  BEST PREDICTION: 1/271 = {1/271:.6f}")
 print(f"  Error: {error_13:.1f}%")
 print()
@@ -232,7 +233,7 @@ print("═══ δ (CP-VIOLATING PHASE) ═══")
 print()
 
 # CP phase from geometry
-delta_w33_1 = np.degrees(np.arctan(v/m3))  # arctan(40/15)
+delta_w33_1 = np.degrees(np.arctan(v / m3))  # arctan(40/15)
 delta_w33_2 = 108 - v  # Pentagon angle - vertices
 
 delta_exp = 68.75  # degrees (PDG)
@@ -251,9 +252,9 @@ print()
 print("═══ COMPLETE CKM MATRIX ═══")
 print()
 
-s12 = 9/40
-s23 = 4/96
-s13 = 1/271
+s12 = 9 / 40
+s23 = 4 / 96
+s13 = 1 / 271
 delta = np.radians(68)
 
 c12 = np.sqrt(1 - s12**2)
@@ -261,16 +262,26 @@ c23 = np.sqrt(1 - s23**2)
 c13 = np.sqrt(1 - s13**2)
 
 # Standard parameterization
-V_CKM_w33 = np.array([
-    [c12*c13, s12*c13, s13*np.exp(-1j*delta)],
-    [-s12*c23 - c12*s23*s13*np.exp(1j*delta), c12*c23 - s12*s23*s13*np.exp(1j*delta), s23*c13],
-    [s12*s23 - c12*c23*s13*np.exp(1j*delta), -c12*s23 - s12*c23*s13*np.exp(1j*delta), c23*c13]
-])
+V_CKM_w33 = np.array(
+    [
+        [c12 * c13, s12 * c13, s13 * np.exp(-1j * delta)],
+        [
+            -s12 * c23 - c12 * s23 * s13 * np.exp(1j * delta),
+            c12 * c23 - s12 * s23 * s13 * np.exp(1j * delta),
+            s23 * c13,
+        ],
+        [
+            s12 * s23 - c12 * c23 * s13 * np.exp(1j * delta),
+            -c12 * s23 - s12 * c23 * s13 * np.exp(1j * delta),
+            c23 * c13,
+        ],
+    ]
+)
 
 print("W33 CKM Matrix (magnitudes):")
 print()
-labels = ['d', 's', 'b']
-for i, row_label in enumerate(['u', 'c', 't']):
+labels = ["d", "s", "b"]
+for i, row_label in enumerate(["u", "c", "t"]):
     row = f"  {row_label}→ "
     for j, col_label in enumerate(labels):
         magnitude = abs(V_CKM_w33[i, j])
@@ -283,9 +294,9 @@ print()
 exp_matrix = [
     [0.97401, 0.22476, 0.00365],
     [0.22484, 0.97349, 0.04182],
-    [0.00854, 0.04110, 0.999141]
+    [0.00854, 0.04110, 0.999141],
 ]
-for i, row_label in enumerate(['u', 'c', 't']):
+for i, row_label in enumerate(["u", "c", "t"]):
     row = f"  {row_label}→ "
     for j, col_label in enumerate(labels):
         row += f"|V_{row_label}{col_label}|={exp_matrix[i][j]:.5f}  "
@@ -364,7 +375,9 @@ DM_baryon_ratio_exp = 5.41
 print(f"Dark Matter Abundance:")
 print(f"  W33 prediction: Ω_DM/Ω_b = v/8 = {DM_baryon_ratio_w33}")
 print(f"  Experimental:   Ω_DM/Ω_b = {DM_baryon_ratio_exp} ± 0.03")
-print(f"  Error: {abs(DM_baryon_ratio_w33 - DM_baryon_ratio_exp)/DM_baryon_ratio_exp * 100:.1f}%")
+print(
+    f"  Error: {abs(DM_baryon_ratio_w33 - DM_baryon_ratio_exp)/DM_baryon_ratio_exp * 100:.1f}%"
+)
 print()
 
 # Stability mechanism
@@ -402,16 +415,16 @@ W33 predicts the values at ALL scales through a single framework:
 """)
 
 # Coupling at M_Z
-alpha_em_MZ = 1/127.952  # at M_Z
-alpha_s_MZ = 0.1181      # strong coupling at M_Z
-sin2_W_MZ = 0.23121      # weak mixing at M_Z
+alpha_em_MZ = 1 / 127.952  # at M_Z
+alpha_s_MZ = 0.1181  # strong coupling at M_Z
+sin2_W_MZ = 0.23121  # weak mixing at M_Z
 
 print("═══ COUPLINGS AT M_Z (91.2 GeV) ═══")
 print()
 
 # W33 predictions at M_Z
 alpha_inv_w33_MZ = 128  # 2^7 (from 128 = SO(16) spinor dimension)
-alpha_em_w33_MZ = 1/alpha_inv_w33_MZ
+alpha_em_w33_MZ = 1 / alpha_inv_w33_MZ
 sin2_W_w33_MZ = v / (v + k**2 + m1)  # 40/173
 
 print(f"  α⁻¹(M_Z) W33:  128 (= 2⁷)")
@@ -422,7 +435,7 @@ print(f"  sin²θ_W(M_Z) exp: {sin2_W_MZ}")
 print()
 
 # Strong coupling
-alpha_s_w33 = 27/229  # E6_fund / (173 + E7_fund)
+alpha_s_w33 = 27 / 229  # E6_fund / (173 + E7_fund)
 print(f"  α_s(M_Z) W33: 27/229 = {27/229:.4f}")
 print(f"  α_s(M_Z) exp: {alpha_s_MZ}")
 print()
@@ -440,7 +453,7 @@ print(f"        ≈ 10^{log10_M_GUT:.1f} GeV")
 print()
 
 # At GUT scale all couplings unify
-alpha_GUT = 1/40  # 1/v
+alpha_GUT = 1 / 40  # 1/v
 print(f"  α_GUT = 1/v = 1/40 = 0.025")
 print()
 print(f"  At M_GUT, all three forces have the same coupling!")
@@ -457,7 +470,7 @@ The β-functions for coupling running are:
 
 Where b is the one-loop coefficient:
   • b₁ = 41/10 (U(1)_Y)
-  • b₂ = -19/6 (SU(2)_L)  
+  • b₂ = -19/6 (SU(2)_L)
   • b₃ = -7    (SU(3)_c)
 
 W33 encodes these through:
@@ -487,11 +500,11 @@ print("""
 
 # Prediction 1: Dark matter direct detection
 pred1 = {
-    'name': 'Dark Matter Detection',
-    'prediction': 'χ particle at 77 GeV with σ_SI ~ 10⁻⁴⁷ cm²',
-    'experiment': 'LZ, XENONnT, DARWIN',
-    'timeline': '2026-2030',
-    'falsifiable': 'If no signal by 10⁻⁴⁸ cm², W33 WIMP excluded'
+    "name": "Dark Matter Detection",
+    "prediction": "χ particle at 77 GeV with σ_SI ~ 10⁻⁴⁷ cm²",
+    "experiment": "LZ, XENONnT, DARWIN",
+    "timeline": "2026-2030",
+    "falsifiable": "If no signal by 10⁻⁴⁸ cm², W33 WIMP excluded",
 }
 predictions.append(pred1)
 
@@ -500,15 +513,17 @@ print("║    ══════════════════════
 print(f"║    Prediction: {pred1['prediction']:55s} ║")
 print(f"║    Experiment: {pred1['experiment']:55s} ║")
 print(f"║    Timeline:   {pred1['timeline']:55s} ║")
-print("║                                                                              ║")
+print(
+    "║                                                                              ║"
+)
 
 # Prediction 2: Neutrino CP phase
 pred2 = {
-    'name': 'Neutrino CP Phase',
-    'prediction': 'δ_PMNS = 120° ± 15° (from 2π/3)',
-    'experiment': 'DUNE, Hyper-Kamiokande',
-    'timeline': '2026-2032',
-    'falsifiable': 'If δ_PMNS < 90° or > 150°, W33 CP phase wrong'
+    "name": "Neutrino CP Phase",
+    "prediction": "δ_PMNS = 120° ± 15° (from 2π/3)",
+    "experiment": "DUNE, Hyper-Kamiokande",
+    "timeline": "2026-2032",
+    "falsifiable": "If δ_PMNS < 90° or > 150°, W33 CP phase wrong",
 }
 predictions.append(pred2)
 
@@ -516,15 +531,17 @@ print("║ 2. NEUTRINO CP VIOLATION PHASE                                       
 print("║    ══════════════════════════════                                         ║")
 print(f"║    Prediction: {pred2['prediction']:55s} ║")
 print(f"║    Experiment: {pred2['experiment']:55s} ║")
-print("║                                                                              ║")
+print(
+    "║                                                                              ║"
+)
 
 # Prediction 3: Proton decay
 pred3 = {
-    'name': 'Proton Decay',
-    'prediction': 'τ_p → e⁺π⁰ ~ 10³⁴⁻³⁵ years',
-    'experiment': 'Hyper-Kamiokande',
-    'timeline': '2027-2040',
-    'falsifiable': 'τ_p > 10³⁶ years excludes W33 GUT'
+    "name": "Proton Decay",
+    "prediction": "τ_p → e⁺π⁰ ~ 10³⁴⁻³⁵ years",
+    "experiment": "Hyper-Kamiokande",
+    "timeline": "2027-2040",
+    "falsifiable": "τ_p > 10³⁶ years excludes W33 GUT",
 }
 predictions.append(pred3)
 
@@ -532,15 +549,17 @@ print("║ 3. PROTON DECAY                                                      
 print("║    ═══════════════                                                        ║")
 print(f"║    Prediction: {pred3['prediction']:55s} ║")
 print(f"║    Experiment: {pred3['experiment']:55s} ║")
-print("║                                                                              ║")
+print(
+    "║                                                                              ║"
+)
 
 # Prediction 4: No new particles at LHC
 pred4 = {
-    'name': 'LHC Null Results',
-    'prediction': 'No SUSY, no extra Higgs below 500 GeV',
-    'experiment': 'LHC Run 3, HL-LHC',
-    'timeline': '2025-2035',
-    'falsifiable': 'Discovery of light SUSY/extra Higgs falsifies W33'
+    "name": "LHC Null Results",
+    "prediction": "No SUSY, no extra Higgs below 500 GeV",
+    "experiment": "LHC Run 3, HL-LHC",
+    "timeline": "2025-2035",
+    "falsifiable": "Discovery of light SUSY/extra Higgs falsifies W33",
 }
 predictions.append(pred4)
 
@@ -548,15 +567,17 @@ print("║ 4. LHC PARTICLE DESERT                                               
 print("║    ═══════════════════                                                    ║")
 print(f"║    Prediction: {pred4['prediction']:55s} ║")
 print(f"║    Experiment: {pred4['experiment']:55s} ║")
-print("║                                                                              ║")
+print(
+    "║                                                                              ║"
+)
 
 # Prediction 5: Neutrinoless double beta decay
 pred5 = {
-    'name': '0νββ Decay',
-    'prediction': 'm_ββ < 10 meV (Dirac-like neutrinos)',
-    'experiment': 'nEXO, LEGEND',
-    'timeline': '2028-2035',
-    'falsifiable': 'm_ββ > 50 meV indicates Majorana mass'
+    "name": "0νββ Decay",
+    "prediction": "m_ββ < 10 meV (Dirac-like neutrinos)",
+    "experiment": "nEXO, LEGEND",
+    "timeline": "2028-2035",
+    "falsifiable": "m_ββ > 50 meV indicates Majorana mass",
 }
 predictions.append(pred5)
 
@@ -564,9 +585,13 @@ print("║ 5. NEUTRINOLESS DOUBLE BETA DECAY                                    
 print("║    ══════════════════════════════                                         ║")
 print(f"║    Prediction: {pred5['prediction']:55s} ║")
 print(f"║    Experiment: {pred5['experiment']:55s} ║")
-print("║                                                                              ║")
+print(
+    "║                                                                              ║"
+)
 
-print("╚══════════════════════════════════════════════════════════════════════════════╝")
+print(
+    "╚══════════════════════════════════════════════════════════════════════════════╝"
+)
 print()
 
 # =============================================================================
@@ -617,27 +642,27 @@ print("""
 # =============================================================================
 
 results = {
-    'part': 'CI',
-    'date': datetime.now().isoformat(),
-    'title': 'New Frontiers and Resolved Anomalies',
-    'key_findings': {
-        'muon_g2_resolved': True,
-        'W_mass_resolved': True,
-        'CKM_solidified': True,
-        'dark_matter_mass': 77,
-        'dark_matter_abundance': 5.0
+    "part": "CI",
+    "date": datetime.now().isoformat(),
+    "title": "New Frontiers and Resolved Anomalies",
+    "key_findings": {
+        "muon_g2_resolved": True,
+        "W_mass_resolved": True,
+        "CKM_solidified": True,
+        "dark_matter_mass": 77,
+        "dark_matter_abundance": 5.0,
     },
-    'CKM_matrix': {
-        'sin_theta_12': 9/40,
-        'sin_theta_23': 4/96,
-        'sin_theta_13': 1/271,
-        'delta_CP': 68
+    "CKM_matrix": {
+        "sin_theta_12": 9 / 40,
+        "sin_theta_23": 4 / 96,
+        "sin_theta_13": 1 / 271,
+        "delta_CP": 68,
     },
-    'predictions': predictions
+    "predictions": predictions,
 }
 
-output_file = 'PART_CI_new_frontiers.json'
-with open(output_file, 'w') as f:
+output_file = "PART_CI_new_frontiers.json"
+with open(output_file, "w") as f:
     json.dump(results, f, indent=2, default=str)
 
 print(f"Results saved to {output_file}")
@@ -666,7 +691,7 @@ The W33 Theory of Everything emerges STRONGER from the 2025 physics revolution:
 3. CKM MATRIX: All four parameters derive from W33 geometry:
    - sin θ_C = 9/40 = 0.225 (0.3% error)
    - δ_CP = 108° - 40 = 68° (1% error)
-   
+
 4. DARK MATTER: The W33 WIMP χ at 77 GeV is in the sweet spot for
    direct detection experiments. LZ and XENONnT are now sensitive to
    this mass range. Detection expected by 2028 if W33 is correct.

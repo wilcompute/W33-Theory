@@ -10,15 +10,22 @@ import numpy as np
 import pandas as pd
 import scipy.sparse as sp
 
-
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUT_DIR = DATA / "_workbench" / "05_symmetry"
 
 MAP_PATH = OUT_DIR / "coin_c24_2t_alignment_mapping.csv"
-TABLE_PATH = DATA / "_toe" / "projector_recon_20260110" / "binary_tetrahedral_2T_multiplication_table.csv"
-H_TRANSPORT = DATA / "_toe" / "projector_recon_20260110" / (
-    "N12_58_orbit0_H_transport_59x24_sparse_20260109T205353Z.npz"
+TABLE_PATH = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / "binary_tetrahedral_2T_multiplication_table.csv"
+)
+H_TRANSPORT = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / ("N12_58_orbit0_H_transport_59x24_sparse_20260109T205353Z.npz")
 )
 
 
@@ -47,7 +54,9 @@ def load_mapping():
 
 def load_csr_npz(path: Path) -> sp.csr_matrix:
     z = np.load(path, allow_pickle=True)
-    return sp.csr_matrix((z["data"], z["indices"], z["indptr"]), shape=tuple(z["shape"]))
+    return sp.csr_matrix(
+        (z["data"], z["indices"], z["indptr"]), shape=tuple(z["shape"])
+    )
 
 
 def perm_coin_for_left_action(elems, table, coin_to_elem, g):
@@ -86,9 +95,7 @@ def main() -> None:
     rows = []
     for h in elems:
         # Right-multiply mapping by h.
-        coin_to_elem = {
-            i: table[(base_coin_to_elem[i], h)] for i in range(24)
-        }
+        coin_to_elem = {i: table[(base_coin_to_elem[i], h)] for i in range(24)}
         comms = {}
         for g in elems:
             perm_coin = perm_coin_for_left_action(elems, table, coin_to_elem, g)

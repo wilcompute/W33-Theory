@@ -41,7 +41,7 @@ print(f"Formula: (3^6-1)/(3-1) = {(3**6-1)//(3-1)}")
 
 # For W(5, 3), we need totally isotropic points
 # With symplectic form, the formula is different
-# W(2n-1, q) points = (q^n+1)(q^{n-1}+1)...(q+1) / (q-1)^? 
+# W(2n-1, q) points = (q^n+1)(q^{n-1}+1)...(q+1) / (q-1)^?
 # Actually simpler: (q^{2n}-1)/(q^2-1) for certain cases
 # For W(5, 3): should be 364
 
@@ -71,7 +71,7 @@ In dimension d = 3 (prime):
   - Maximum MUBs = d + 1 = 4
   - Each MUB has 3 orthonormal vectors
   - Total: 4 × 3 = 12 rays
-  
+
 The MUB structure relates to:
   - GF(3)^2 phase space (9 points)
   - Wigner function discretization
@@ -80,7 +80,7 @@ The MUB structure relates to:
 Connection: W(3, 3) has 40 points = 4 × 10
   - 4 "directions" from MUBs
   - 10 = (q^2+1) from each direction
-  
+
 The Steinberg representation dimension 81 = 3^4 relates to:
   - 4 MUBs raised to dimension 4 in some sense
   - Or: 3^4 = (3)^{2×2} = (dim)^{rank}
@@ -93,7 +93,7 @@ print("="*60)
 print("""
 VERIFIED:
 1. |Sp(6, 3)| computed (9 billion+)
-2. Q(4, 3) has 40 points = W(3, 3) ✓  
+2. Q(4, 3) has 40 points = W(3, 3) ✓
 3. W(5, 3) has 364 points
 4. Steinberg for W(5, 3) has dim 3^9 = 19,683
 

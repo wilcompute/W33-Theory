@@ -5,9 +5,10 @@ A deep dive into why Vogel's universal Lie algebra theory
 is secretly W33 structure theory.
 """
 
-import numpy as np
 from fractions import Fraction
-from itertools import permutations, combinations
+from itertools import combinations, permutations
+
+import numpy as np
 
 print("=" * 80)
 print("THE Λ-ALGEBRA = W33 INCIDENCE ALGEBRA")
@@ -35,7 +36,7 @@ These are the elementary symmetric functions of (α, β, γ)!
 W33 INSIGHT:
 ============
   GF(3) = {0, 1, 2}  ←→  (α, β, γ) Vogel parameters
-  
+
 The THREE elements of GF(3) correspond to the THREE Vogel parameters!
 
 This is NOT a coincidence. The Λ-algebra has 3 generators because:
@@ -56,7 +57,7 @@ print("""
 The incidence algebra of W33 has:
 
   Basis elements: e_{p,L} where p ∈ Points, L ∈ Lines, p ∈ L
-  
+
 For W33:
   - 40 points
   - 40 lines (by self-duality)
@@ -99,18 +100,19 @@ Total dimensions up to degree n:
 
 W33 MATCHING:
   - dim(Λ₃) = 4 = |K4|
-  - 15 appears in P₁₅ 
+  - 15 appears in P₁₅
   - 27 = 3³ = |GF(3)³|
-  
+
 The sequence 1, 2, 4, 8, 15, 27, ... is related to binary trees!
 """)
+
 
 # Build the W33 structure
 def build_w33():
     """Construct the W33 point-line incidence structure"""
     # Points: vectors in GF(3)^4 up to scalar
     # We use representatives where first nonzero entry is 1
-    
+
     points = []
     for a in range(3):
         for b in range(3):
@@ -127,8 +129,9 @@ def build_w33():
                             break
                     if vec not in points:
                         points.append(vec)
-    
+
     return points
+
 
 points = build_w33()
 print(f"W33 points: {len(points)} (should be 40)")
@@ -161,10 +164,12 @@ Actually: S₃ acts on the 3 coordinate directions in GF(3)³
 This is exactly the Vogel parameter permutation!
 """)
 
+
 # S3 acting on triples
 def s3_orbit(triple):
     """Generate S3 orbit of a triple"""
     return list(set(permutations(triple)))
+
 
 test = (1, 2, 3)
 orbit = s3_orbit(test)
@@ -193,19 +198,27 @@ W33 CHECK:
 ==========
 """)
 
+
 def vogel_dim(alpha, beta, gamma):
     """Compute dimension using Vogel formula"""
     t = alpha + beta + gamma
     if alpha * beta * gamma == 0:
-        return float('inf')
-    return t * (t - 2*alpha) * (t - 2*beta) * (t - 2*gamma) / (4 * alpha * beta * gamma)
+        return float("inf")
+    return (
+        t
+        * (t - 2 * alpha)
+        * (t - 2 * beta)
+        * (t - 2 * gamma)
+        / (4 * alpha * beta * gamma)
+    )
+
 
 exceptional = [
     ("G2", -2, Fraction(10, 3), Fraction(8, 3)),
     ("F4", -2, 5, 6),
     ("E6", -2, 6, 8),
     ("E7", -2, 8, 12),
-    ("E8", -2, 12, 20)
+    ("E8", -2, 12, 20),
 ]
 
 print("Dimension computation:")
@@ -240,7 +253,7 @@ This is because 81 = |GF(3)⁴| = |underlying affine space of W33|!
 
 The Λ-algebra graded piece Λ₄ should have:
   Relations coming from 81 = 3⁴ structure
-  
+
 P₁₅ ↔ Λ degree 15 structure (≈ binary trees)
 P₂₂ ↔ Λ degree 22 structure (includes exceptional)
 
@@ -351,10 +364,10 @@ OR:
 The coefficient 137 in P_E8 appears because:
   E8 is the LARGEST exceptional algebra
   It encodes the FULL W33 structure (121) plus gauge extension (16)
-  
+
 This is why E8 is related to the fine structure constant:
   α = e²/(ℏc) ≈ 1/137.036
-  
+
 The universe's fundamental coupling constant is determined by W33!
 """)
 

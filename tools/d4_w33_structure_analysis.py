@@ -13,6 +13,7 @@ Outputs:
 - artifacts/d4_w33_structure_analysis.json
 - artifacts/d4_w33_structure_analysis.md
 """
+
 from __future__ import annotations
 
 import json
@@ -52,13 +53,13 @@ def construct_w33():
 
     # Symplectic form
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     # Adjacency: collinear points have omega = 0
     # But we must exclude the same point (which always has omega = 0 with itself)
     adj = np.zeros((n, n), dtype=int)
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             # Check if points are collinear (omega = 0 means they span isotropic subspace)
             # But also verify they're distinct projective points
             if omega(proj_points[i], proj_points[j]) == 0:
@@ -72,9 +73,9 @@ def find_triangles(adj, vertices):
     triangles = []
     vlist = list(vertices)
     for i, a in enumerate(vlist):
-        for j, b in enumerate(vlist[i+1:], i+1):
+        for j, b in enumerate(vlist[i + 1 :], i + 1):
             if adj[a, b]:
-                for c in vlist[j+1:]:
+                for c in vlist[j + 1 :]:
                     if adj[a, c] and adj[b, c]:
                         triangles.append((a, b, c))
     return triangles
@@ -109,7 +110,7 @@ def build_d4_roots():
     """Build D4 root system (24 roots in R^4)."""
     roots = []
     for i in range(4):
-        for j in range(i+1, 4):
+        for j in range(i + 1, 4):
             for si in [1, -1]:
                 for sj in [1, -1]:
                     r = [0, 0, 0, 0]
@@ -147,7 +148,9 @@ def main():
     eigenvalues = np.linalg.eigvalsh(adj)
     eigenvalues = np.round(eigenvalues, 6)
     eig_mults = Counter(eigenvalues)
-    results["eigenvalues"] = {str(e): int(m) for e, m in sorted(eig_mults.items(), reverse=True)}
+    results["eigenvalues"] = {
+        str(e): int(m) for e, m in sorted(eig_mults.items(), reverse=True)
+    }
 
     lines.append("# D4 Structure Analysis in W33")
     lines.append("")
@@ -168,14 +171,16 @@ def main():
         components = find_connected_components(adj, neighbors)
         triangles = find_triangles(adj, neighbors)
 
-        h12_analyses.append({
-            "vertex": v0,
-            "neighbor_count": len(neighbors),
-            "degree_set_in_h12": sorted(set(deg_in_h12)),
-            "component_count": len(components),
-            "component_sizes": [len(c) for c in components],
-            "triangle_count": len(triangles),
-        })
+        h12_analyses.append(
+            {
+                "vertex": v0,
+                "neighbor_count": len(neighbors),
+                "degree_set_in_h12": sorted(set(deg_in_h12)),
+                "component_count": len(components),
+                "component_sizes": [len(c) for c in components],
+                "triangle_count": len(triangles),
+            }
+        )
 
     results["h12_analyses"] = h12_analyses
 
@@ -188,7 +193,9 @@ def main():
 
     lines.append(f"Checked {len(h12_analyses)} vertices:")
     for a in h12_analyses:
-        lines.append(f"- v{a['vertex']}: {a['component_count']} components of sizes {a['component_sizes']}, {a['triangle_count']} triangles")
+        lines.append(
+            f"- v{a['vertex']}: {a['component_count']} components of sizes {a['component_sizes']}, {a['triangle_count']} triangles"
+        )
     lines.append("")
     lines.append(f"**H12 is always 4 disjoint triangles: {all_4_triangles}**")
     lines.append("")
@@ -206,7 +213,7 @@ def main():
     for i, r1 in enumerate(d4_roots):
         for j, r2 in enumerate(d4_roots):
             if i != j:
-                ip = sum(a*b for a, b in zip(r1, r2))
+                ip = sum(a * b for a, b in zip(r1, r2))
                 # Adjacent if inner product = ±1 (angle 60° or 120°)
                 if abs(ip) == 1:
                     d4_adjacency[i, j] = 1
@@ -246,7 +253,9 @@ def main():
         for v0 in [0, 1, 2]:
             neighbors = [i for i in range(n) if adj[v0, i]]
             tetra_in_neighbors = [r for r in tetra_rays if r in neighbors]
-            lines.append(f"- v{v0} neighbors contain {len(tetra_in_neighbors)} tetrahedral rays: {tetra_in_neighbors}")
+            lines.append(
+                f"- v{v0} neighbors contain {len(tetra_in_neighbors)} tetrahedral rays: {tetra_in_neighbors}"
+            )
 
         results["tetra_rays"] = tetra_rays
         results["tetra_partition"] = partition
@@ -254,7 +263,9 @@ def main():
     lines.append("")
     lines.append("## Key Observations")
     lines.append("")
-    lines.append("1. **H12 = 4 disjoint triangles** (verified for all checked vertices)")
+    lines.append(
+        "1. **H12 = 4 disjoint triangles** (verified for all checked vertices)"
+    )
     lines.append("   - 12 = 4 × 3 matches D4 structure")
     lines.append("   - Each triangle might correspond to one of four D4 'octahedra'")
     lines.append("")

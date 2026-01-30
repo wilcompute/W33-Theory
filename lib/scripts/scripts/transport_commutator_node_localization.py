@@ -10,15 +10,22 @@ import numpy as np
 import pandas as pd
 import scipy.sparse as sp
 
-
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUT_DIR = DATA / "_workbench" / "05_symmetry"
 
 MAP_PATH = OUT_DIR / "coin_c24_2t_alignment_mapping.csv"
-TABLE_PATH = DATA / "_toe" / "projector_recon_20260110" / "binary_tetrahedral_2T_multiplication_table.csv"
-H_TRANSPORT = DATA / "_toe" / "projector_recon_20260110" / (
-    "N12_58_orbit0_H_transport_59x24_sparse_20260109T205353Z.npz"
+TABLE_PATH = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / "binary_tetrahedral_2T_multiplication_table.csv"
+)
+H_TRANSPORT = (
+    DATA
+    / "_toe"
+    / "projector_recon_20260110"
+    / ("N12_58_orbit0_H_transport_59x24_sparse_20260109T205353Z.npz")
 )
 
 SELECTED = ["e*", "(0 1 2)", "(0 2 1)", "(0 1)(2 3)"]
@@ -50,7 +57,9 @@ def load_mapping():
 
 def load_csr_npz(path: Path) -> sp.csr_matrix:
     z = np.load(path, allow_pickle=True)
-    return sp.csr_matrix((z["data"], z["indices"], z["indptr"]), shape=tuple(z["shape"]))
+    return sp.csr_matrix(
+        (z["data"], z["indices"], z["indptr"]), shape=tuple(z["shape"])
+    )
 
 
 def perm_coin_for_left_action(elems, table, coin_to_elem, elem_to_coin, g):
@@ -76,7 +85,7 @@ def comm_row_norms(H, perm):
     diff = H_perm - H
     row_sumsq = np.zeros(diff.shape[0], dtype=float)
     for i, v in zip(diff.nonzero()[0], diff.data):
-        row_sumsq[i] += (v * v)
+        row_sumsq[i] += v * v
     return np.sqrt(row_sumsq)
 
 
@@ -90,7 +99,9 @@ def main() -> None:
     for g in SELECTED:
         if g not in elems:
             continue
-        perm_coin = perm_coin_for_left_action(elems, table, coin_to_elem, elem_to_coin, g)
+        perm_coin = perm_coin_for_left_action(
+            elems, table, coin_to_elem, elem_to_coin, g
+        )
         perm = perm_full(perm_coin)
         row_norms = comm_row_norms(H, perm)
         for node in range(59):
@@ -112,7 +123,9 @@ def main() -> None:
         .reset_index()
         .sort_values("mean", ascending=False)
     )
-    agg.to_csv(OUT_DIR / "transport_commutator_node_localization_summary.csv", index=False)
+    agg.to_csv(
+        OUT_DIR / "transport_commutator_node_localization_summary.csv", index=False
+    )
 
     md_path = OUT_DIR / "transport_commutator_node_localization_summary.md"
     with md_path.open("w", encoding="utf-8") as f:

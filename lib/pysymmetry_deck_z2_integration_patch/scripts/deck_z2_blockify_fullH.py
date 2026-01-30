@@ -22,14 +22,18 @@ import numpy as np
 import pandas as pd
 import scipy.sparse as sp
 
-
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 
 PROJ_RECON = DATA / "_toe" / "projector_recon_20260110"
-H_TRANSPORT_NPZ = PROJ_RECON / "N12_58_orbit0_H_transport_59x24_sparse_20260109T205353Z.npz"
+H_TRANSPORT_NPZ = (
+    PROJ_RECON / "N12_58_orbit0_H_transport_59x24_sparse_20260109T205353Z.npz"
+)
 COIN_NPZ = PROJ_RECON / "N12_58_sector_coin_C24_K4_by_k_sparse_20260109T205353Z.npz"
-H_TOTAL_NPZ = PROJ_RECON / "TOE_H_total_transport_plus_lambda_coin_59x24_lam0.5_20260109T205353Z.npz"
+H_TOTAL_NPZ = (
+    PROJ_RECON
+    / "TOE_H_total_transport_plus_lambda_coin_59x24_lam0.5_20260109T205353Z.npz"
+)
 EDGES_CSV = PROJ_RECON / "N12_58_orbit0_edges_with_2T_connection_20260109T043900Z.csv"
 
 OUT = DATA / "_workbench" / "05_symmetry"
@@ -37,7 +41,9 @@ OUT = DATA / "_workbench" / "05_symmetry"
 
 def load_csr_npz(path: Path) -> sp.csr_matrix:
     z = np.load(path, allow_pickle=True)
-    return sp.csr_matrix((z["data"], z["indices"], z["indptr"]), shape=tuple(z["shape"]))
+    return sp.csr_matrix(
+        (z["data"], z["indices"], z["indptr"]), shape=tuple(z["shape"])
+    )
 
 
 def deck_pairs():
@@ -70,7 +76,9 @@ def build_T_even_odd_from_pairs(pairs):
     return Te, To
 
 
-def set_block_lil(M_lil: sp.lil_matrix, u: int, v: int, block_mat: np.ndarray, d: int = 24):
+def set_block_lil(
+    M_lil: sp.lil_matrix, u: int, v: int, block_mat: np.ndarray, d: int = 24
+):
     r0 = u * d
     c0 = v * d
     for i in range(d):

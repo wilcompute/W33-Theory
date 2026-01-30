@@ -25,7 +25,7 @@
 ```
          GQ(3,3)           W(3,3)            Q(4,3)
      (Combinatorial)  ≅  (Algebraic)   ≅  (Geometric)
-     
+
      Generalized        Symplectic        Klein
      Quadrangle         Polar Space       Quadric
 ```

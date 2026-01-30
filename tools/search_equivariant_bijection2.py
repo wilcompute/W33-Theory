@@ -3,17 +3,20 @@
 
 We focus on order-3 generators to match the edge generators subset.
 """
+
 from __future__ import annotations
 
 import random
 from collections import deque
-from itertools import product, combinations
+from itertools import combinations, product
 from pathlib import Path
+
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 
 # E8 roots and reflections
+
 
 def build_e8_roots_scaled():
     roots = []

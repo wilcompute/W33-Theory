@@ -32,5 +32,3 @@ W33 phase inventory:
 - `data/_workbench/02_geometry/line_feature_table.csv`
 - `data/_workbench/02_geometry/line_feature_regression.md`
 - `data/_workbench/02_geometry/line_feature_regression.csv`
-
-

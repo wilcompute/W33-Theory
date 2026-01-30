@@ -36,7 +36,7 @@ problem in theoretical physics.
 
 QUANTUM FIELD THEORY PREDICTION:
   ρ_vacuum = M_Planck⁴ / (ℏ³c³)
-  
+
 OBSERVED VALUE:
   ρ_observed ≈ 10⁻¹²² × ρ_vacuum  (some say 10⁻¹²⁰)
 

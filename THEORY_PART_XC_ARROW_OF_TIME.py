@@ -9,9 +9,10 @@ W33 might explain this through its eigenvalue structure:
 The SIGN of the eigenvalues encodes temporal asymmetry!
 """
 
-import numpy as np
-from fractions import Fraction
 import json
+from fractions import Fraction
+
+import numpy as np
 
 print("=" * 70)
 print("W33 THEORY PART XC: THE ARROW OF TIME")
@@ -75,7 +76,9 @@ negative_content = m3 * e3
 print(f"\nSIGNED CONTENT:")
 print(f"  Positive: {m1}×{e1} + {m2}×{e2} = {positive_content}")
 print(f"  Negative: {m3}×{e3} = {negative_content}")
-print(f"  Ratio: {positive_content}/{abs(negative_content)} = {positive_content/abs(negative_content):.2f}")
+print(
+    f"  Ratio: {positive_content}/{abs(negative_content)} = {positive_content/abs(negative_content):.2f}"
+)
 
 print(f"""
 The positive content is {positive_content/abs(negative_content):.2f}x the negative content!
@@ -92,7 +95,7 @@ HYPOTHESIS: Time direction is set by eigenvalue sign asymmetry.
 Interpretation:
   - Positive eigenvalues → "future-directed" modes
   - Negative eigenvalue → "past-directed" mode
-  
+
 Since positive content > negative content:
   The universe has a PREFERENCE for future direction!
 
@@ -246,7 +249,7 @@ print("=" * 70)
 print("""
 THE DEEP QUESTION: Why does time move at all?
 
-STATIC VIEW: The universe is a 4D "block" 
+STATIC VIEW: The universe is a 4D "block"
   - All of time exists simultaneously
   - The "flow" of time is an illusion
   - But then why do we EXPERIENCE time as flowing?
@@ -409,24 +412,20 @@ results = {
     "eigenvalue_asymmetry": {
         "positive_content": int(positive_content),
         "negative_content": int(negative_content),
-        "ratio": float(positive_content / abs(negative_content))
+        "ratio": float(positive_content / abs(negative_content)),
     },
-    "dominant_eigenvalue": {
-        "value": e1,
-        "sign": "positive",
-        "multiplicity": m1
-    },
+    "dominant_eigenvalue": {"value": e1, "sign": "positive", "multiplicity": m1},
     "time_cycle": {
         "automorphisms": aut_order,
         "planck_times_per_cycle": aut_order,
-        "cycle_duration_seconds": float(cycle_time)
+        "cycle_duration_seconds": float(cycle_time),
     },
     "predictions": [
         "Time is discrete at Planck scale",
         "CPT symmetry is exact",
         "Initial entropy was minimal",
-        "Arrow is universal"
-    ]
+        "Arrow is universal",
+    ],
 }
 
 with open("PART_XC_arrow_of_time.json", "w") as f:

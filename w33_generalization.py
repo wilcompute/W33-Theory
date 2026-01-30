@@ -12,8 +12,9 @@ W(2n-1, q) = symplectic polar space from Sp(2n, q)
 Let's compute the patterns!
 """
 
+from itertools import combinations, product
+
 from sage.all import *
-from itertools import product, combinations
 
 print("=" * 70)
 print("GENERALIZATION: W(2n-1, q) POLAR SPACES")
@@ -31,16 +32,16 @@ For the symplectic polar space W(2n-1, q):
 
   # points = (q^{2n} - 1) / (q - 1) = q^{2n-1} + q^{2n-2} + ... + q + 1
            = Gaussian binomial [2n, 1]_q
-           
+
   # lines = depends on n...
-  
+
 For W(3, q) specifically (n=2):
   # points = (q^4 - 1)/(q - 1) = q³ + q² + q + 1
   # lines = q² + 1) × (q² + q + 1) ... actually let me compute
 
 For q = 3:
   # points = (81 - 1)/2 = 40 ✓
-  
+
 The dimension of the Steinberg representation is q^N where
 N = # positive roots for type C_n:
 
@@ -54,7 +55,7 @@ So dim(Steinberg) = q^{n²}
 
 For W(3, q) (type C₂):
   dim(St) = q⁴
-  
+
   q=2: dim = 16
   q=3: dim = 81 ✓
   q=4: dim = 256
@@ -68,21 +69,22 @@ print("\n" + "=" * 70)
 print("W(3, q) FOR DIFFERENT PRIMES q")
 print("=" * 70)
 
+
 def build_W3q(q):
     """Build the symplectic polar space W(3) over GF(q)."""
     F = GF(q)
-    
+
     # Symplectic form: <x,y> = x0*y2 - x2*y0 + x1*y3 - x3*y1
     def symp(x, y):
-        return x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]
-    
+        return x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]
+
     # Normalize projective point
     def normalize(v):
         for i in range(4):
             if v[i] != 0:
                 return tuple(x / v[i] for x in v)
         return None
-    
+
     # Get projective points
     points_set = set()
     for coords in product(F, repeat=4):
@@ -90,11 +92,11 @@ def build_W3q(q):
             nv = normalize(coords)
             if nv:
                 points_set.add(nv)
-    
+
     points = sorted(points_set)
     point_to_idx = {p: i for i, p in enumerate(points)}
     n = len(points)
-    
+
     # Adjacency (collinear = orthogonal under symplectic form)
     adj = [[False] * n for _ in range(n)]
     for i, p1 in enumerate(points):
@@ -102,28 +104,31 @@ def build_W3q(q):
             if i < j:
                 if symp(list(p1), list(p2)) == F(0):
                     adj[i][j] = adj[j][i] = True
-    
+
     # Find lines (4-cliques)
     lines = set()
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if adj[i][j]:
-                common = [k for k in range(n) if k != i and k != j and adj[i][k] and adj[j][k]]
+                common = [
+                    k for k in range(n) if k != i and k != j and adj[i][k] and adj[j][k]
+                ]
                 for k, l in combinations(common, 2):
                     if adj[k][l]:
                         line = tuple(sorted([i, j, k, l]))
                         # Verify it's actually a q+1 clique
                         # For W(3,q), lines have q+1 points
                         lines.add(line)
-    
+
     return {
-        'points': points,
-        'n_points': n,
-        'lines': list(lines),
-        'n_lines': len(lines),
-        'adj': adj,
-        'q': q
+        "points": points,
+        "n_points": n,
+        "lines": list(lines),
+        "n_lines": len(lines),
+        "adj": adj,
+        "q": q,
     }
+
 
 # Build for q = 2, 3, 4, 5
 for q in [2, 3, 5]:
@@ -134,15 +139,15 @@ for q in [2, 3, 5]:
         print(f"  Expected: (q^4-1)/(q-1) = {(q**4 - 1)//(q - 1)}")
         print(f"  Lines: {W['n_lines']}")
         print(f"  Steinberg dim: q^4 = {q**4}")
-        
+
         # Quick check of degrees
-        degrees = [sum(W['adj'][i]) for i in range(W['n_points'])]
+        degrees = [sum(W["adj"][i]) for i in range(W["n_points"])]
         print(f"  Degree: {degrees[0]} (regular)")
-        
+
         # Check line size (should be q+1, but we built 4-cliques...)
-        if W['lines']:
+        if W["lines"]:
             print(f"  Points per line: {len(W['lines'][0])}")
-            
+
     except Exception as e:
         print(f"  Error: {e}")
 
@@ -157,9 +162,9 @@ print("""
 For W(3, q) (symplectic polar space of rank 2 over GF(q)):
 
   H₁ = Z^{q⁴} (Steinberg representation)
-  
+
   dim(H₁) = q⁴ = |Sylow_p|
-  
+
   π₁ = F_{q⁴} (free group on q⁴ generators!)
 
 Predicted values:
@@ -184,12 +189,12 @@ For W(5, q) (symplectic polar space of rank 3 over GF(q)):
 
   Type: C₃
   Positive roots: 9
-  
+
   dim(Steinberg) = q⁹
-  
+
   For q = 2: dim = 512
   For q = 3: dim = 19683
-  
+
 The building for Sp(6, q) is 2-dimensional (apartments are hexagons).
 
 Prediction:
@@ -208,15 +213,15 @@ print("""
 For symplectic polar space W(2n-1, q) of rank n:
 
   1. Building dimension: n - 1
-  
+
   2. Steinberg representation:
      - Dimension = q^{n²}
      - Appears in H_{n-1}
-     
+
   3. Fundamental group:
      - π₁ = F_{q^{n²}} (CONJECTURE: free group!)
      - This would mean all these spaces are aspherical
-     
+
   4. Homotopy type:
      - W(2n-1, q) ≃ ⋁_{q^{n²}} S^{n-1}
        (wedge of (n-1)-spheres)

@@ -6,10 +6,12 @@ Outputs artifacts/we6_orbit_labels.json with:
 - orbit_id, orbit_size
 - summary sizes
 """
+
 from __future__ import annotations
 
 import json
 from collections import Counter, deque
+
 from sage.all import RootSystem, WeylGroup
 
 
@@ -38,14 +40,14 @@ def orbit(generators, start):
 
 def root_key(v):
     vec = list(v.to_vector())
-    return tuple(int(2*x) for x in vec)
+    return tuple(int(2 * x) for x in vec)
 
 
 def main():
-    R8 = RootSystem(['E', 8]).ambient_space()
+    R8 = RootSystem(["E", 8]).ambient_space()
     roots = list(R8.roots())
 
-    W8 = WeylGroup(['E', 8])
+    W8 = WeylGroup(["E", 8])
     s = W8.simple_reflections()
     subset = [1, 2, 3, 4, 5, 6]
     gens = [s[i] for i in subset]
@@ -80,7 +82,7 @@ def main():
     }
 
     with open("artifacts/we6_orbit_labels.json", "w", encoding="utf-8") as f:
-        json.dump(out, f, indent=2)
+        json.dump(out, f, indent=2, default=str)
 
     print("Wrote artifacts/we6_orbit_labels.json")
 
