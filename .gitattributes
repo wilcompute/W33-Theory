@@ -16,7 +16,8 @@
 # Large binaries and generated bundles (please review before migrating)
 # Zips and tool archives
 tools/gap-4.15.1-core.zip filter=lfs diff=lfs merge=lfs -text
-tools/gap/** filter=lfs diff=lfs merge=lfs -text
+# NOTE: avoid broad pattern 'tools/gap/**' which can erroneously mark many files as LFS pointers
+# tools/gap/** filter=lfs diff=lfs merge=lfs -text
 W33_TEX_AND_PDF_COMPLETE_BUNDLE_v*.zip filter=lfs diff=lfs merge=lfs -text
 
 # Large data outputs
