@@ -8,20 +8,18 @@ This script is written to be robust: it prefers igraph, can use pynauty
 if available, and caps group closure size to avoid blowup.
 """
 
-from pathlib import Path
 import json
-import random
 import math
+import random
 from collections import Counter
+from pathlib import Path
 
 import numpy as np
 
-from src.finite_geometry.veldmap import (
-    load_triangles,
-    neighborhoods_from_triangles,
-    point_hyperplanes,
-    gf2_rank_from_generators,
-)
+from src.finite_geometry.veldmap import (gf2_rank_from_generators,
+                                         load_triangles,
+                                         neighborhoods_from_triangles,
+                                         point_hyperplanes)
 
 OUT_DIR = Path("bundles/v23_toe_finish/v23")
 OUT_JSON = OUT_DIR / "veld_summary_extended.json"
@@ -69,8 +67,8 @@ def compute_automorphism_data(M, cap=MAX_GROUP_CAP):
 
             # Try to get exact group structure using SymPy (if available)
             try:
-                from sympy.combinatorics.permutations import Permutation
                 from sympy.combinatorics.perm_groups import PermutationGroup
+                from sympy.combinatorics.permutations import Permutation
 
                 perms_sym = [Permutation(p) for p in gens]
                 PG = PermutationGroup(*perms_sym)
@@ -99,7 +97,7 @@ def compute_automorphism_data(M, cap=MAX_GROUP_CAP):
 
                 v_orbit0 = PG.orbit(0)
                 aut_info["vertex_orbit_size"] = len(v_orbit0)
-                aut_info["vertex_transitive"] = (len(v_orbit0) == v + b)
+                aut_info["vertex_transitive"] = len(v_orbit0) == v + b
                 aut_info["point_block_mixing"] = any(x >= v for x in v_orbit0)
 
                 # orbits (points/blocks split)
@@ -119,8 +117,10 @@ def compute_automorphism_data(M, cap=MAX_GROUP_CAP):
             identity = tuple(range(v + b))
             group = set([identity])
             frontier = [identity]
+
             def compose(p, q):
                 return tuple(p[i] for i in q)
+
             while frontier:
                 new_frontier = []
                 for perm in frontier:
@@ -170,6 +170,7 @@ def compute_automorphism_data(M, cap=MAX_GROUP_CAP):
     # try pynauty
     try:
         import pynauty
+
         colors = [0] * v + [1] * b
         G = pynauty.Graph(v + b, edges, vertex_coloring=colors)
         pag = pynauty.aut_group(G)
@@ -234,7 +235,11 @@ def ternary_code_sampling(M, dim3=None, samples=RANDOM_SAMPLES, seed=RANDOM_SEED
         sample_hist[weight] += 1
         if weight < minw:
             minw = weight
-    return {"dim3": dim, "sample_min_weight": int(minw), "sample_hist": dict(sample_hist)}
+    return {
+        "dim3": dim,
+        "sample_min_weight": int(minw),
+        "sample_hist": dict(sample_hist),
+    }
 
 
 def write_markdown_report(out, path=OUT_MD):
@@ -242,9 +247,15 @@ def write_markdown_report(out, path=OUT_MD):
     lines.append(f"# Veldkamp extended summary — 2-(45,12,3) candidate")
     lines.append("")
     lines.append(f"- Automorphism method: {out.get('automorphism',{}).get('method')}  ")
-    lines.append(f"- Estimated automorphism group size: {out.get('automorphism',{}).get('estimated_group_size') or out.get('automorphism',{}).get('aut_order')}")
-    lines.append(f"- Point orbit sizes: {out.get('automorphism',{}).get('point_orbit_sizes')}")
-    lines.append(f"- Block orbit sizes: {out.get('automorphism',{}).get('block_orbit_sizes')}")
+    lines.append(
+        f"- Estimated automorphism group size: {out.get('automorphism',{}).get('estimated_group_size') or out.get('automorphism',{}).get('aut_order')}"
+    )
+    lines.append(
+        f"- Point orbit sizes: {out.get('automorphism',{}).get('point_orbit_sizes')}"
+    )
+    lines.append(
+        f"- Block orbit sizes: {out.get('automorphism',{}).get('block_orbit_sizes')}"
+    )
     lines.append("")
     lines.append("## Linear algebra invariants")
     lines.append(f"- GF(2) rank (generators): {out.get('gf2_rank_generators')}")
@@ -253,10 +264,14 @@ def write_markdown_report(out, path=OUT_MD):
     lines.append("")
     lines.append("## Code sampling (ternary)")
     lines.append(f"- dimension (sample): {out.get('ternary',{}).get('dim3')}  ")
-    lines.append(f"- sample_min_weight found: {out.get('ternary',{}).get('sample_min_weight')}  ")
+    lines.append(
+        f"- sample_min_weight found: {out.get('ternary',{}).get('sample_min_weight')}  "
+    )
     lines.append("")
     lines.append("## References & notes")
-    lines.append("- Candidate matches: Mathon (1996), Coolsaet & Degraer (2006), Crnković et al. (2016).")
+    lines.append(
+        "- Candidate matches: Mathon (1996), Coolsaet & Degraer (2006), Crnković et al. (2016)."
+    )
     lines.append("")
     path.write_text("\n".join(lines), encoding="utf-8")
 
@@ -274,11 +289,11 @@ def main():
     M = build_incidence(points, complements)
 
     out = {}
-    out['n_points'] = len(points)
-    out['n_generators'] = len(gens)
+    out["n_points"] = len(points)
+    out["n_generators"] = len(gens)
 
     # GF(2) ranks
-    out['gf2_rank_generators'] = int(gf2_rank_from_generators(gens))
+    out["gf2_rank_generators"] = int(gf2_rank_from_generators(gens))
     # compute GF2 rank of incidence matrix M
     A2 = M.copy() % 2
     # simple row-reduction
@@ -298,7 +313,7 @@ def main():
             if i != r and A2r[i, c] == 1:
                 A2r[i, :] ^= A2r[r, :]
         r += 1
-    out['gf2_rank_incidence'] = int(r)
+    out["gf2_rank_incidence"] = int(r)
 
     # GF3 rank
     A3 = (M.copy() % 3).astype(int)
@@ -320,34 +335,42 @@ def main():
             if i != r3 and A3[i, c] != 0:
                 A3[i, :] = (A3[i, :] - A3[i, c] * A3[r3, :]) % 3
         r3 += 1
-    out['gf3_rank_incidence'] = int(r3)
+    out["gf3_rank_incidence"] = int(r3)
 
     # concurrence eigs
     from numpy.linalg import eigvalsh
+
     C = M.T @ M
     eigs = eigvalsh(C)
-    out['concurrence_diag'] = int(np.diag(C)[0])
-    out['concurrence_offdiag_mode'] = int(C[np.triu_indices_from(C, 1)][0]) if C.size>1 else None
-    out['concurrence_eig_sample'] = [float(e) for e in eigs[-3:]]
+    out["concurrence_diag"] = int(np.diag(C)[0])
+    out["concurrence_offdiag_mode"] = (
+        int(C[np.triu_indices_from(C, 1)][0]) if C.size > 1 else None
+    )
+    out["concurrence_eig_sample"] = [float(e) for e in eigs[-3:]]
 
     # automorphisms
     aut = compute_automorphism_data(M)
-    out['automorphism'] = aut
+    out["automorphism"] = aut
     # ensure estimated_group_size present for compatibility
-    if 'estimated_group_size' not in out['automorphism'] and 'exact_order' in out['automorphism']:
-        out['automorphism']['estimated_group_size'] = out['automorphism']['exact_order']
+    if (
+        "estimated_group_size" not in out["automorphism"]
+        and "exact_order" in out["automorphism"]
+    ):
+        out["automorphism"]["estimated_group_size"] = out["automorphism"]["exact_order"]
 
     # ternary code sampling
-    tern = ternary_code_sampling(M, dim3=out['gf3_rank_incidence'], samples=RANDOM_SAMPLES)
-    out['ternary'] = tern
+    tern = ternary_code_sampling(
+        M, dim3=out["gf3_rank_incidence"], samples=RANDOM_SAMPLES
+    )
+    out["ternary"] = tern
 
     # write JSON and markdown
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    with OUT_JSON.open('w', encoding='utf-8') as f:
+    with OUT_JSON.open("w", encoding="utf-8") as f:
         json.dump(out, f, indent=2, default=str)
     write_markdown_report(out)
-    print('Wrote', OUT_JSON, OUT_MD)
+    print("Wrote", OUT_JSON, OUT_MD)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -7,29 +7,36 @@ Outputs:
  - bundles/v23_toe_finish/v23/ternary_weight_enumerator.json
  - bundles/v23_toe_finish/v23/ternary_low_weight_orbits.json
 """
-from pathlib import Path
-import json
-import numpy as np
-from collections import Counter
-import sys, os
-# Ensure repo root is importable when running the script directly
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from src.finite_geometry.veldmap import load_triangles, neighborhoods_from_triangles, point_hyperplanes
-import igraph as ig
-from sympy.combinatorics.permutations import Permutation
-from sympy.combinatorics.perm_groups import PermutationGroup
 
-OUT_DIR = Path('bundles/v23_toe_finish/v23')
+import json
+import os
+import sys
+from collections import Counter
+from pathlib import Path
+
+import numpy as np
+
+# Ensure repo root is importable when running the script directly
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+import igraph as ig
+from sympy.combinatorics.perm_groups import PermutationGroup
+from sympy.combinatorics.permutations import Permutation
+
+from src.finite_geometry.veldmap import (load_triangles,
+                                         neighborhoods_from_triangles,
+                                         point_hyperplanes)
+
+OUT_DIR = Path("bundles/v23_toe_finish/v23")
 OUT_DIR.mkdir(parents=True, exist_ok=True)
-OUT_JSON = OUT_DIR / 'ternary_weight_enumerator.json'
-OUT_ORBITS = OUT_DIR / 'ternary_low_weight_orbits.json'
+OUT_JSON = OUT_DIR / "ternary_weight_enumerator.json"
+OUT_ORBITS = OUT_DIR / "ternary_low_weight_orbits.json"
 
 CHUNK = 200000  # chunk size for vectorized enumeration
 LOW_WEIGHT_THRESH = 16
 
 
 def build_incidence_matrix():
-    tri_path = OUT_DIR / 'Q_triangles_with_centers_Z2_S3_fiber6.csv'
+    tri_path = OUT_DIR / "Q_triangles_with_centers_Z2_S3_fiber6.csv"
     triangles = list(load_triangles(tri_path))
     neighborhoods = neighborhoods_from_triangles(triangles)
     hyperplanes = point_hyperplanes(neighborhoods)
@@ -73,11 +80,11 @@ def compute_basis_rows_mod3(M):
 
 def enumerate_codewords(basis, chunk=CHUNK, low_thresh=LOW_WEIGHT_THRESH):
     bs, b = basis.shape
-    total = 3 ** bs
+    total = 3**bs
     hist = Counter()
     low_set = set()
     # precompute powers of 3 for base conversion
-    powers = np.array([3 ** i for i in range(bs)], dtype=np.int64)
+    powers = np.array([3**i for i in range(bs)], dtype=np.int64)
     rng = range(total)
     # iterate in chunks of indices
     for start in range(0, total, chunk):
@@ -106,7 +113,7 @@ def enumerate_codewords(basis, chunk=CHUNK, low_thresh=LOW_WEIGHT_THRESH):
 
 def closure_of_point_permutations():
     # get point-action permutations from igraph automorphism_group bipartition-preserving gens
-    tri_path = OUT_DIR / 'Q_triangles_with_centers_Z2_S3_fiber6.csv'
+    tri_path = OUT_DIR / "Q_triangles_with_centers_Z2_S3_fiber6.csv"
     triangles = list(load_triangles(tri_path))
     neighborhoods = neighborhoods_from_triangles(triangles)
     hyperplanes = point_hyperplanes(neighborhoods)
@@ -118,7 +125,9 @@ def closure_of_point_permutations():
     M = np.zeros((v, len(complements)), dtype=int)
     for j, B in enumerate(complements):
         M[B, j] = 1
-    edges = [(i, v + j) for i in range(v) for j in range(len(complements)) if M[i, j] == 1]
+    edges = [
+        (i, v + j) for i in range(v) for j in range(len(complements)) if M[i, j] == 1
+    ]
     G = ig.Graph()
     G.add_vertices(2 * v)
     G.add_edges(edges)
@@ -130,8 +139,10 @@ def closure_of_point_permutations():
     identity = tuple(range(v))
     group = set([identity])
     frontier = [identity]
+
     def compose(p, q):
         return tuple(p[i] for i in q)
+
     while frontier:
         new_frontier = []
         for perm in frontier:
@@ -163,12 +174,14 @@ def main():
     M = build_incidence_matrix()
     basis = compute_basis_rows_mod3(M)
     bs, b = basis.shape
-    print('ternary basis dim', bs, 'length', b)
-    hist, low_set = enumerate_codewords(basis, chunk=CHUNK, low_thresh=LOW_WEIGHT_THRESH)
-    print('weight histogram keys sample:', sorted(hist.keys())[:10])
+    print("ternary basis dim", bs, "length", b)
+    hist, low_set = enumerate_codewords(
+        basis, chunk=CHUNK, low_thresh=LOW_WEIGHT_THRESH
+    )
+    print("weight histogram keys sample:", sorted(hist.keys())[:10])
     # compute group closure on points
     group_list = closure_of_point_permutations()
-    print('group_list size (point action):', len(group_list))
+    print("group_list size (point action):", len(group_list))
     # compute orbits of low-weight codewords
     rep_map = {}
     for tup in low_set:
@@ -177,19 +190,25 @@ def main():
         rep_map[rep] += 1
     # summarize
     out = {
-        'basis_dim': int(bs),
-        'code_size': 3 ** int(bs),
-        'weight_hist': dict(sorted(hist.items())),
-        'n_low_weight_codewords': len(low_set),
-        'low_weight_orbit_reps_count': len(rep_map),
+        "basis_dim": int(bs),
+        "code_size": 3 ** int(bs),
+        "weight_hist": dict(sorted(hist.items())),
+        "n_low_weight_codewords": len(low_set),
+        "low_weight_orbit_reps_count": len(rep_map),
     }
-    with OUT_JSON.open('w', encoding='utf-8') as f:
+    with OUT_JSON.open("w", encoding="utf-8") as f:
         json.dump(out, f, indent=2, default=str)
     # write orbits map (sample limited)
     sample_orbits = {str(k): v for k, v in list(rep_map.items())[:1000]}
-    with OUT_ORBITS.open('w', encoding='utf-8') as f:
-        json.dump({'n_orbits': len(rep_map), 'sample_orbits': sample_orbits}, f, indent=2, default=str)
-    print('Wrote', OUT_JSON, OUT_ORBITS)
+    with OUT_ORBITS.open("w", encoding="utf-8") as f:
+        json.dump(
+            {"n_orbits": len(rep_map), "sample_orbits": sample_orbits},
+            f,
+            indent=2,
+            default=str,
+        )
+    print("Wrote", OUT_JSON, OUT_ORBITS)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

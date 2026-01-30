@@ -1,13 +1,3 @@
-{
-  "paths_identical": true,
-  "total_cost_v3": 29,
-  "total_cost_portlaw": 29,
-  "per_cycle_costs": [
-    2,
-    4,
-    5,
-    9,
-    9
-  ],
-  "portlaw_key_mode": "reduced (delta, rem_idx, add_idx)"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ba1f47e766390a155518ba5a921aa1381555ad6b66e6244b4a6ba312d3bb9862
+size 202

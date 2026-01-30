@@ -1,6 +1,14 @@
 param([string]$runId)
 $token = $env:GH_TOKEN
-if (-not $token) { Write-Error 'GH_TOKEN not set in environment'; exit 2 }
+if (-not $token) {
+    # Fall back to gh CLI token if available for interactive auth
+    try {
+        $token = gh auth token 2>$null
+    } catch {
+        $token = $null
+    }
+}
+if (-not $token) { Write-Error 'GH_TOKEN not set in environment and gh not authenticated; run `gh auth login` or set GH_TOKEN'; exit 2 }
 $headers = @{ Authorization = "token $token" }
 $uri = "https://api.github.com/repos/wilcompute/W33-Theory/actions/runs/$runId/logs"
 $out = "artifacts/run_${runId}_logs.zip"

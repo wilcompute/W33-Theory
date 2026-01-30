@@ -3,36 +3,42 @@ Usage: python scripts/quantum_photonics/run_gbs.py --modes 6 --squeezing 0.8 --l
 
 This script uses Strawberry Fields for Gaussian sampling and The Walrus for hafnian-based probabilities on small instances.
 """
+
 import argparse
 import json
 import math
-import numpy as np
+
 import matplotlib.pyplot as plt
+import numpy as np
 
 try:
     import strawberryfields as sf
-    from strawberryfields.ops import Sgate, Interferometer, MeasureFock
+    from strawberryfields.ops import Interferometer, MeasureFock, Sgate
     from thewalrus import hafnian
 except Exception as e:
-    print('Missing quantum photonics dependencies:', e)
+    print("Missing quantum photonics dependencies:", e)
     raise
 
 
 def build_interferometer(modes, seed=0):
     np.random.seed(seed)
     # random unitary via QR
-    X = np.random.normal(size=(modes, modes)) + 1j * np.random.normal(size=(modes, modes))
+    X = np.random.normal(size=(modes, modes)) + 1j * np.random.normal(
+        size=(modes, modes)
+    )
     Q, R = np.linalg.qr(X)
     return Q
 
 
 from collections import Counter
 from math import log
+
 from scipy.stats import entropy
+
 
 def compute_exact_probs_fock(modes, squeezing, U, cutoff=6):
     """Use the Fock backend to compute exact probabilities (small instances)."""
-    eng = sf.Engine('fock', backend_options={'cutoff_dim': cutoff})
+    eng = sf.Engine("fock", backend_options={"cutoff_dim": cutoff})
     prog = sf.Program(modes)
     with prog.context as q:
         for i in range(modes):
@@ -45,6 +51,7 @@ def compute_exact_probs_fock(modes, squeezing, U, cutoff=6):
     # all_fock_probs returns an N-dimensional array with shape (cutoff,)*modes
     probs = state.all_fock_probs()
     import numpy as _np
+
     probs = _np.asarray(probs)
     d = {}
     for idx, p in _np.ndenumerate(probs):
@@ -52,14 +59,15 @@ def compute_exact_probs_fock(modes, squeezing, U, cutoff=6):
     return d
 
 
-def sample_gbs(modes=6, squeezing=0.8, U=None, backend='gaussian', shots=200, cutoff=6):
+def sample_gbs(modes=6, squeezing=0.8, U=None, backend="gaussian", shots=200, cutoff=6):
     if U is None:
         U = build_interferometer(modes)
-    if backend == 'fock':
+    if backend == "fock":
         # many Fock backends do not implement multi-shot MeasureFock; instead compute exact distribution
         exact = compute_exact_probs_fock(modes, squeezing, U, cutoff=cutoff)
         # build categorical distribution and draw samples
         import random
+
         keys = list(exact.keys())
         probs = [exact[k] for k in keys]
         # normalize (numerical stability)
@@ -73,7 +81,7 @@ def sample_gbs(modes=6, squeezing=0.8, U=None, backend='gaussian', shots=200, cu
         return samples
     else:
         # gaussian sampling (note: gaussian backend cannot update conditional state after Fock measurements)
-        eng = sf.Engine('gaussian')
+        eng = sf.Engine("gaussian")
         prog = sf.Program(modes)
         with prog.context as q:
             for i in range(modes):
@@ -107,9 +115,11 @@ def kl_between_empirical_and_exact(emp_samples, exact_probs, cutoff=6):
 # -- Hafnian-based analytic probabilities (unnormalized weight -> normalized prob) --
 from math import factorial
 
+
 def _pattern_iterator(modes, max_total):
     """Yield all photon-number patterns (tuples) with total photons <= max_total."""
     from itertools import product
+
     for tup in product(range(max_total + 1), repeat=modes):
         if sum(tup) <= max_total:
             yield tup
@@ -149,21 +159,30 @@ def compute_hafnian_probs(modes, squeezings, U, max_total_photons=4):
                 # loop_hafnian returns complex; weight from magnitude squared
                 lh = _tw.loop_hafnian(sub)
                 # normalization by product of factorials to account for repeated photons
-                norm = _np.prod([factorial(k) for k in patt if k > 0]) if any(k > 0 for k in patt) else 1
+                norm = (
+                    _np.prod([factorial(k) for k in patt if k > 0])
+                    if any(k > 0 for k in patt)
+                    else 1
+                )
                 # include product of tanh(r_i)^{n_i} as heuristic prefactor
-                tanh_pref = float(_np.prod([t[i]**patt[i] for i in range(modes)])) if any(k>0 for k in patt) else 1.0
+                tanh_pref = (
+                    float(_np.prod([t[i] ** patt[i] for i in range(modes)]))
+                    if any(k > 0 for k in patt)
+                    else 1.0
+                )
                 w = (_np.abs(lh) ** 2) * tanh_pref / float(norm)
         weights[patt] = float(w)
         total_weight += float(w)
     if total_weight <= 0:
         # fallback: make vacuum probability 1
-        return {tuple([0]*modes): 1.0}
+        return {tuple([0] * modes): 1.0}
     for patt, w in weights.items():
         probs[patt] = w / total_weight
     return probs
 
 
 # -- Threshold detection probabilities using TheWalrus --
+
 
 def apply_loss_to_cov_mu(mu, cov, eta, hbar=2.0):
     """Apply independent loss eta to each mode's (mu, cov) in xp ordering.
@@ -173,13 +192,14 @@ def apply_loss_to_cov_mu(mu, cov, eta, hbar=2.0):
     and mu' = sqrt(eta) * mu
     """
     import numpy as _np
+
     mu = _np.asarray(mu)
     cov = _np.asarray(cov)
     modes = mu.size // 2
     # scale mean
     mu2 = _np.copy(mu)
     for m in range(modes):
-        mu2[2*m:2*m+2] = _np.sqrt(eta) * mu2[2*m:2*m+2]
+        mu2[2 * m : 2 * m + 2] = _np.sqrt(eta) * mu2[2 * m : 2 * m + 2]
     # scale cov
     cov2 = eta * cov + (1.0 - eta) * (hbar / 2.0) * _np.eye(2 * modes)
     return mu2, cov2
@@ -193,22 +213,24 @@ def compute_threshold_probs(modes, squeezings, U, eta=1.0):
     """
     import numpy as _np
     import thewalrus as _tw
+
     # build SF Gaussian state and extract mu/cov in xp ordering
     prog = sf.Program(modes)
     with prog.context as q:
         for i in range(modes):
             Sgate(squeezings[i]) | q[i]
         Interferometer(U) | q
-    eng = sf.Engine('gaussian')
+    eng = sf.Engine("gaussian")
     res = eng.run(prog)
     state = res.state
     mu = _np.asarray(state.means())  # shape (2*modes,)
-    cov = _np.asarray(state.cov())   # shape (2*modes,2*modes)
+    cov = _np.asarray(state.cov())  # shape (2*modes,2*modes)
     # apply loss
     mu2, cov2 = apply_loss_to_cov_mu(mu, cov, eta)
     # enumerate patterns
     probs = {}
     from itertools import product
+
     for patt in product([0, 1], repeat=modes):
         patt_arr = _np.array(patt, dtype=int)
         p = float(_tw.threshold_detection_prob(mu2, cov2, patt_arr, hbar=2.0))
@@ -217,19 +239,26 @@ def compute_threshold_probs(modes, squeezings, U, eta=1.0):
     s = sum(probs.values())
     if s <= 0:
         # degenerate fallback
-        return {tuple([0]*modes): 1.0}
+        return {tuple([0] * modes): 1.0}
     for k in list(probs.keys()):
         probs[k] = probs[k] / s
     return probs
 
 
-def run_gbs(modes=6, squeezing=0.8, loss=1.0, shots=200, backend='gaussian', cutoff=6):
+def run_gbs(modes=6, squeezing=0.8, loss=1.0, shots=200, backend="gaussian", cutoff=6):
     """Run GBS sampling and return samples and optional exact probabilities (if backend='fock' or requested)."""
     U = build_interferometer(modes)
-    samples = sample_gbs(modes=modes, squeezing=squeezing, U=U, backend=backend, shots=shots, cutoff=cutoff)
+    samples = sample_gbs(
+        modes=modes,
+        squeezing=squeezing,
+        U=U,
+        backend=backend,
+        shots=shots,
+        cutoff=cutoff,
+    )
     exact = None
     kl = None
-    if backend == 'fock':
+    if backend == "fock":
         exact = compute_exact_probs_fock(modes, squeezing, U, cutoff=cutoff)
         kl = kl_between_empirical_and_exact(samples, exact, cutoff=cutoff)
     return samples, exact, kl
@@ -237,21 +266,25 @@ def run_gbs(modes=6, squeezing=0.8, loss=1.0, shots=200, backend='gaussian', cut
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument('--modes', type=int, default=6)
-    p.add_argument('--squeezing', type=float, default=0.8)
-    p.add_argument('--loss', type=float, default=1.0)
-    p.add_argument('--shots', type=int, default=200)
+    p.add_argument("--modes", type=int, default=6)
+    p.add_argument("--squeezing", type=float, default=0.8)
+    p.add_argument("--loss", type=float, default=1.0)
+    p.add_argument("--shots", type=int, default=200)
     args = p.parse_args()
 
-    samples = run_gbs(modes=args.modes, squeezing=args.squeezing, loss=args.loss, shots=args.shots)
-    print('Sample shape', samples.shape)
+    samples = run_gbs(
+        modes=args.modes, squeezing=args.squeezing, loss=args.loss, shots=args.shots
+    )
+    print("Sample shape", samples.shape)
     # simple histogram of total photons
     totals = np.sum(samples, axis=1)
     import matplotlib.pyplot as plt
-    plt.hist(totals, bins=range(int(totals.max())+2))
-    plt.title(f'GBS photon counts modes={args.modes} r={args.squeezing}')
-    plt.savefig('gbs_photon_hist.png')
-    print('Saved gbs_photon_hist.png')
 
-if __name__ == '__main__':
+    plt.hist(totals, bins=range(int(totals.max()) + 2))
+    plt.title(f"GBS photon counts modes={args.modes} r={args.squeezing}")
+    plt.savefig("gbs_photon_hist.png")
+    print("Saved gbs_photon_hist.png")
+
+
+if __name__ == "__main__":
     main()

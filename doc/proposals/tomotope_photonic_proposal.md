@@ -41,7 +41,7 @@ Certain finite incidence geometries impose constraints on mode connectivity and 
 
 ## Statistical tests and success criteria
 
-- Bootstrap JS CIs and permutation tests for Wasserstein distances to show separation between geometry-derived designs and nulls (p < 0.05).  
+- Bootstrap JS CIs and permutation tests for Wasserstein distances to show separation between geometry-derived designs and nulls (p < 0.05).
 - Minimum practical success: consistent detection of a signature (e.g., H1 count or JS > baseline) for at least one geometry across plausible noise levels.
 
 ---
@@ -57,26 +57,26 @@ Certain finite incidence geometries impose constraints on mode connectivity and 
 
 ## Resources & compute
 
-- Use existing venv dependencies (Strawberry Fields, TheWalrus, ripser/persim).  
-- Adaptive-shot strategies for heavy hafnian sampling; keep initial search to modes ≤ 8 to remain tractable.  
+- Use existing venv dependencies (Strawberry Fields, TheWalrus, ripser/persim).
+- Adaptive-shot strategies for heavy hafnian sampling; keep initial search to modes ≤ 8 to remain tractable.
 - Recommend at least one workstation with 16+ CPU cores and 32+ GB RAM for heavy sampling runs; cloud GPUs are not essential for current simulations (classical hafnian cost remains CPU-bound).
 
 ---
 
 ## Risks & mitigations
 
-- Risk: Non-unique signatures across geometries.  
+- Risk: Non-unique signatures across geometries.
   - Mitigation: Cross-validate using multiple metrics (JS, Wasserstein, Betti counts) and permutation tests.
-- Risk: Sampling cost for high shots.  
+- Risk: Sampling cost for high shots.
   - Mitigation: Use adaptive shots, importance sampling, and restrict initial experiments to low-mode prototypes.
 
 ---
 
 ## Next steps
 
-1. Add the proposal to `doc/proposals/` and push to `photonic/threshold-sweeps` (this file).  
-2. Implement `notebooks/quantum_photonics/tomotope_mapping.ipynb` with mapping examples and a small simulation for one geometry.  
-3. Run grid and follow-up high‑precision runs against top candidate geometries.  
+1. Add the proposal to `doc/proposals/` and push to `photonic/threshold-sweeps` (this file).
+2. Implement `notebooks/quantum_photonics/tomotope_mapping.ipynb` with mapping examples and a small simulation for one geometry.
+3. Run grid and follow-up high‑precision runs against top candidate geometries.
 
 ---
 

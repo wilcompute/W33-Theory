@@ -1,0 +1,23 @@
+The Tomotope
+tomotope Tis a small, highly involved, abstract uniform 4-polytope. It
+we come to the tomotope , a most peculiar uniform 4-polytope T, constructed
+4 The Tomotope T
+The resulting group Γ(Ut;ho)has order 192but still satisﬁes the intersection con-
+Example 4.3. The tomotope .
+Denition 4.4. We shall call the resulting uniform 4-polytope Tthe tomotope.
+The tomotope has 4 vertices, 12 edges, 16 triangles, 4 tetrahedra and 4
+Moreover, R2is a minimal regular cover for the tomotope T.
+4.1 Aside: visualizing the tomotope
+To visualize the tomotope Timagine a core octahedron with 8 tetrahedra glued
+31Figure 4: The tomotope T.
+Since the tomotope Twas constructed as a quotient of the uniform Euclidean
+In order to connect the regular polytopes Pkto the tomotope T, we shall
+Theorem 5.9. Letp; q > 1be coprime odd integers. Then the tomotope T
+It is clear now that the tomotope must have inﬁnitely many distinct minimal
+Surely this sort of multiplicity of minimal regular covers for the tomotope is
+the tomotope in another natural way.
+The incidence information for the faces of the tomotope is summarized in Fig-
+Figure 5: Incidence diagram for the tomotope T.
+To see that the edges and triangles of the tomotope are arranged in exactly
+is a split extension of the tomotope group Γ(T)by a dihedral group of order 6.
+of course be nice to have a more insightful explanation for why the tomotope
