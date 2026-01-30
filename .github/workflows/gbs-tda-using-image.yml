@@ -1,0 +1,28 @@
+name: GBS-TDA using prebuilt image
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  run-in-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pull GHCR image
+        run: |
+          docker pull ghcr.io/${{ github.repository_owner }}/w33-gbs-tda:latest || docker pull ghcr.io/${{ github.repository_owner }}/w33-gbs-tda:${{ github.sha }} || true
+
+      - name: Run containerized GBS-TDA (precise)
+        env:
+          TDA_FOLLOWUP_SHOTS: '10000'
+          TDA_FOLLOWUP_BOOTSTRAP: '1000'
+        run: |
+          docker run --rm -v "${{ github.workspace }}:/work" -w /work ghcr.io/${{ github.repository_owner }}/w33-gbs-tda:latest /bin/bash -lc "./docker/run_in_container.sh 10000 1000" || true
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: gbs-tda-precise-image-artifacts
+          path: bundles/v23_toe_finish/v23/
+          if-no-files-found: warn

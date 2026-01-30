@@ -1,0 +1,31 @@
+name: Build and publish GBS-TDA Docker image
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - feat/resume-gbs-lemma_checks-20260130
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: docker/Dockerfile.gbs_tda
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository_owner }}/w33-gbs-tda:latest
+            ghcr.io/${{ github.repository_owner }}/w33-gbs-tda:${{ github.sha }}
