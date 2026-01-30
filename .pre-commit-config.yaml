@@ -1,0 +1,52 @@
+repos:
+  - repo: https://github.com/psf/black
+    rev: 26.1.0
+    hooks:
+      - id: black
+        language_version: python3.11
+
+  - repo: https://github.com/PyCQA/isort
+    rev: 7.0.0
+    hooks:
+      - id: isort
+
+  - repo: https://github.com/PyCQA/flake8
+    rev: 7.3.0
+    hooks:
+      - id: flake8
+        files: '^src/.*\\.py$'
+        args: ["--max-line-length=88"]
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-yaml
+      - id: check-added-large-files
+      - id: detect-private-key
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.19.1
+    hooks:
+      - id: mypy
+        files: '^src/.*\\.py$'
+        args:
+          - '--exclude'
+          - 'bundles[\\/]phase_aware_v1.*scripts_recompute_w33_ray_holonomy.py'
+          - '--exclude'
+          - 'extracted'
+          - '--exclude'
+          - '.*sage.*'
+          - '--exclude'
+          - 'src[\\/]test_sage_pysymmetry.py'
+          - '--exclude'
+          - 'src[\\/]algebraic_w33_solution.py'
+          - '--exclude'
+          - 'src[\\/]sympy_w33_deep_analysis.py'
+        additional_dependencies: ["types-python-dateutil"]
+
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.4.0
+    hooks:
+      - id: detect-secrets
+        args: ['--baseline', 'scripts/generated_baseline.json']

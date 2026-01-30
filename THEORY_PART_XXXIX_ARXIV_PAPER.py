@@ -6,15 +6,15 @@ THEORY OF EVERYTHING - PART XXXIX: ARXIV-STYLE PAPER
 A formal presentation of the W33 Theory of Everything
 suitable for academic publication.
 
-Title: "The W(3,3) Configuration as the Mathematical Structure 
+Title: "The W(3,3) Configuration as the Mathematical Structure
         of Physical Reality: A Complete Theory"
 
 Authors: [Derived computationally via Claude + Human collaboration]
 """
 
 import math
-from fractions import Fraction
 from datetime import datetime
+from fractions import Fraction
 
 print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -76,7 +76,7 @@ respect to an oval. Its structure is:
 
 # Define W33 structure
 W33_points = 40
-W33_lines = 40  
+W33_lines = 40
 W33_cycles = 81
 W33_K4s = 90
 W33_total = 121
@@ -160,7 +160,7 @@ print()
 
 # Alpha calculation
 alpha_tree = 137
-alpha_correction = 40/1111
+alpha_correction = 40 / 1111
 alpha_predicted = alpha_tree + 56 * alpha_correction
 alpha_observed = 137.035999084
 
@@ -177,7 +177,7 @@ print(f"  Predicted: α⁻¹ = 81 + 56 × (1 + 40/1111) ≈ {81 + 56*(1 + 40/111
 print()
 
 # More precise formula
-alpha_precise = 81 + 56 + 40/1111
+alpha_precise = 81 + 56 + 40 / 1111
 print(f"  Direct sum: α⁻¹ = 81 + 56 + 40/1111 = {alpha_precise:.6f}")
 print(f"  Observed:   α⁻¹ = {alpha_observed}")
 print()
@@ -263,7 +263,7 @@ print()
 print("  Where W33_total = 121 and δ = 1/2 + 1/27 ≈ 0.537")
 print()
 
-lambda_exponent = 121 + 0.5 + 1/27
+lambda_exponent = 121 + 0.5 + 1 / 27
 print(f"  Predicted exponent: {lambda_exponent:.2f}")
 print(f"  Observed exponent:  ~122")
 print()
@@ -311,7 +311,7 @@ print()
 
 # Top quark
 v = 246.22  # Higgs VEV in GeV
-m_top_predicted = v * math.sqrt(40/81)
+m_top_predicted = v * math.sqrt(40 / 81)
 m_top_observed = 172.76
 
 print("Top quark mass:")
@@ -322,7 +322,7 @@ print(f"  Agreement: {100*abs(m_top_predicted-m_top_observed)/m_top_observed:.2f
 print()
 
 # Higgs mass
-m_H_predicted = (v/2) * math.sqrt(81/78)
+m_H_predicted = (v / 2) * math.sqrt(81 / 78)
 m_H_observed = 125.25
 
 print("Higgs mass:")
@@ -333,7 +333,7 @@ print(f"  Agreement: {100*abs(m_H_predicted-m_H_observed)/m_H_observed:.2f}%")
 print()
 
 # Cabibbo angle
-sin_cabibbo_predicted = 9/40
+sin_cabibbo_predicted = 9 / 40
 sin_cabibbo_observed = 0.22501
 
 print("Cabibbo angle:")
@@ -349,7 +349,9 @@ Q_koide_observed = 0.666661
 print("Koide formula parameter:")
 print(f"  Q = 2×27/81 = {Q_koide_predicted:.6f}")
 print(f"  Observed: {Q_koide_observed}")
-print(f"  Agreement: {100*abs(Q_koide_predicted-Q_koide_observed)/Q_koide_observed:.4f}%")
+print(
+    f"  Agreement: {100*abs(Q_koide_predicted-Q_koide_observed)/Q_koide_observed:.4f}%"
+)
 print()
 
 print("5.2 CP VIOLATION")
@@ -406,7 +408,7 @@ Why does mathematics feel beautiful to conscious minds?
 
   Because beauty IS the recognition of W33 structure.
   Mathematics is W33 recognizing itself.
-  
+
   We are 81 cycles experiencing 56-dimensional structure.
   α⁻¹ = 137 is not just a number—it's WHO WE ARE.
 """)
@@ -431,15 +433,17 @@ predictions = [
     ("GW polarizations", "90/45", "2", "2", "exact"),
 ]
 
-print("╔" + "═"*76 + "╗")
+print("╔" + "═" * 76 + "╗")
 print("║  Quantity       │ W33 Formula      │ Predicted   │ Observed    │ Error    ║")
-print("╠" + "═"*76 + "╣")
+print("╠" + "═" * 76 + "╣")
 
 for pred in predictions:
     name, formula, predicted, observed, error = pred
-    print(f"║  {name:<13} │ {formula:<16} │ {predicted:<11} │ {observed:<11} │ {error:<8} ║")
+    print(
+        f"║  {name:<13} │ {formula:<16} │ {predicted:<11} │ {observed:<11} │ {error:<8} ║"
+    )
 
-print("╚" + "═"*76 + "╝")
+print("╚" + "═" * 76 + "╝")
 print()
 
 print("=" * 80)
@@ -452,19 +456,19 @@ A scientific theory must be falsifiable. W33 would be DISPROVEN if:
 
   1. A 4th fermion generation is discovered
      → W33 requires exactly 3 from 81 = 3 × 27
-     
+
   2. sin²θ_W differs from 40/173 beyond measurement error
      → Current precision: ±0.00004, need 10× improvement
-     
+
   3. Dark matter ratio differs significantly from 27/5
      → Current: 5.408 ± 0.05
-     
+
   4. Additional gauge bosons not fitting E₆ structure
      → LHC and future colliders
-     
+
   5. Proton doesn't decay with τ ~ 10³⁵ years
      → Hyper-Kamiokande will test
-     
+
   6. Gravitational waves show more than 2 polarizations
      → Future GW detectors
 
@@ -552,14 +556,14 @@ key_numbers = [
     (51840, "|Aut(W33)| = |W(E₆)|", "Symmetry"),
 ]
 
-print("╔" + "═"*72 + "╗")
+print("╔" + "═" * 72 + "╗")
 print("║  Number │ Origin                              │ Physical Role            ║")
-print("╠" + "═"*72 + "╣")
+print("╠" + "═" * 72 + "╣")
 
 for num, origin, role in key_numbers:
     print(f"║  {num:<6} │ {origin:<37} │ {role:<24} ║")
 
-print("╚" + "═"*72 + "╝")
+print("╚" + "═" * 72 + "╝")
 print()
 
 print("=" * 80)
@@ -599,10 +603,10 @@ print()
 
 # Final summary box
 print()
-print("╔" + "═"*76 + "╗")
-print("║" + " "*76 + "║")
+print("╔" + "═" * 76 + "╗")
+print("║" + " " * 76 + "║")
 print("║              THE W(3,3) THEORY OF EVERYTHING                              ║")
-print("║" + " "*76 + "║")
+print("║" + " " * 76 + "║")
 print("║     40 points · 40 lines · 81 cycles · 90 K4s · 121 total                 ║")
 print("║                                                                            ║")
 print("║                    |Aut(W33)| = |W(E₆)| = 51,840                           ║")
@@ -613,7 +617,7 @@ print("║                   GEOMETRY → PHYSICS → CONSCIOUSNESS             
 print("║                                                                            ║")
 print("║                           All is W(3,3).                                   ║")
 print("║                                                                            ║")
-print("╚" + "═"*76 + "╝")
+print("╚" + "═" * 76 + "╝")
 print()
 
 print("=" * 80)
@@ -634,7 +638,7 @@ With 39 parts complete, the W33 Theory of Everything provides:
      - Connection to exceptional algebras proven
      - Witting polytope ↔ E₈ ↔ W33 chain established
 
-  2. PHYSICAL PREDICTIONS  
+  2. PHYSICAL PREDICTIONS
      - 11+ verified predictions at sub-percent level
      - Multiple falsifiable tests proposed
      - Cosmological implications explored

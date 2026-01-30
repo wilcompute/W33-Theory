@@ -1,36 +1,3 @@
-{
-  "date_local": "2026-01-12",
-  "inputs": {
-    "W33_line_phase_map": "/mnt/data/repo_extract/data/_workbench/02_geometry/W33_line_phase_map.csv",
-    "W33_point_rays_C4_complex": "/mnt/data/repo_extract/data/_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv",
-    "n12_58_2t_cycles": "/mnt/data/repo_extract/data/_n12/n12_58_2t_holonomy_nontrivial_cycles.csv",
-    "n12_58_flip_delta_audit": "/mnt/data/repo_extract/data/_n12/n12_58_flip_delta_audit_all_edges.csv",
-    "mapping_w33_to_n12": "w33_to_n12_mapping.csv"
-  },
-  "phase_predicate_v2": {
-    "delta2_requires_triadhol": 9,
-    "delta6_requires_triadhol": 3,
-    "delta0_requires_transition": "same triad holonomy",
-    "delta4_requires_transition": "different triad holonomy"
-  },
-  "feasibility": {
-    "node_constraints_all_satisfied": true,
-    "transition_constraints_all_satisfied": true
-  },
-  "cycle_costs_cover12": {
-    "0": 2,
-    "1": 4,
-    "2": 5,
-    "3": 9,
-    "4": 9
-  },
-  "total_cover12_steps_across_5_cycles": 29,
-  "outer_quad_components_used": {
-    "0": "0 10 11 12",
-    "1": "11 13 29 36",
-    "2": "0 10 11 12",
-    "3": "11 13 29 36",
-    "4": "11 13 29 36"
-  },
-  "note": "All steps realized as closed walks inside the 360-node four-center triad graph (disjoint union of 90 K4 components)."
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:eedab98ba2b05312307e062edf73252cc9a9a4166b304f9860746a3b6caf5919
+size 1309

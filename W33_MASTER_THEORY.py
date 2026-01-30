@@ -12,17 +12,17 @@ This document compiles ALL discovered connections between W(3,3) and physics.
 """
 
 import numpy as np
-from numpy import pi, sqrt, log, log10, sin, arcsin
+from numpy import arcsin, log, log10, pi, sin, sqrt
 
 print("""
 ╔═══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                               ║
 ║        ██╗    ██╗██████╗ ██████╗     ████████╗██╗  ██╗███████╗ ██████╗ ██████╗ ██╗   ██╗
 ║        ██║    ██║╚════██╗╚════██╗    ╚══██╔══╝██║  ██║██╔════╝██╔═══██╗██╔══██╗╚██╗ ██╔╝
-║        ██║ █╗ ██║ █████╔╝ █████╔╝       ██║   ███████║█████╗  ██║   ██║██████╔╝ ╚████╔╝ 
-║        ██║███╗██║ ╚═══██╗ ╚═══██╗       ██║   ██╔══██║██╔══╝  ██║   ██║██╔══██╗  ╚██╔╝  
-║        ╚███╔███╔╝██████╔╝██████╔╝       ██║   ██║  ██║███████╗╚██████╔╝██║  ██║   ██║   
-║         ╚══╝╚══╝ ╚═════╝ ╚═════╝        ╚═╝   ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   
+║        ██║ █╗ ██║ █████╔╝ █████╔╝       ██║   ███████║█████╗  ██║   ██║██████╔╝ ╚████╔╝
+║        ██║███╗██║ ╚═══██╗ ╚═══██╗       ██║   ██╔══██║██╔══╝  ██║   ██║██╔══██╗  ╚██╔╝
+║        ╚███╔███╔╝██████╔╝██████╔╝       ██║   ██║  ██║███████╗╚██████╔╝██║  ██║   ██║
+║         ╚══╝╚══╝ ╚═════╝ ╚═════╝        ╚═╝   ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝
 ║                                                                               ║
 ║                        THE COMPLETE THEORY OF EVERYTHING                      ║
 ║                                                                               ║
@@ -47,7 +47,7 @@ Structure:
   • Points: 40 = |GF(3)³| + 4 = 27 + 13 (projective structure)
   • Cycles: 81 = 3⁴ = Steinberg number (vacuum)
   • K4 subgroups: 90 (gauge structure)
-  
+
 Fundamental ratios:
   • Total: 40 + 81 = 121 = 11² ← M-THEORY DIMENSION!
   • Vacuum fraction: 81/121 = 66.9% ← DARK ENERGY!
@@ -132,7 +132,7 @@ KOIDE FORMULA (LEPTON MASSES)
 """)
 
 # Fine structure constant
-alpha_inv_w33 = 81 + 56 + 1/28
+alpha_inv_w33 = 81 + 56 + 1 / 28
 alpha_inv_obs = 137.035999
 error_alpha = abs(alpha_inv_w33 - alpha_inv_obs) / alpha_inv_obs * 100
 print(f"\nFine structure constant:")
@@ -173,7 +173,7 @@ MASS HIERARCHY
 
 # Mass ratios
 m_t = 172.76e9  # eV
-m_b = 4.18e9    # eV
+m_b = 4.18e9  # eV
 ratio_tb = m_t / m_b
 print(f"\nTop/bottom ratio:")
 print(f"  m_t/m_b = {ratio_tb:.1f} ≈ {points} = |W(3,3)|")
@@ -206,7 +206,7 @@ CP VIOLATION (JARLSKOG)
 """)
 
 # Reactor angle
-theta_13_w33 = arcsin(sqrt(1/45)) * 180/pi
+theta_13_w33 = arcsin(sqrt(1 / 45)) * 180 / pi
 theta_13_obs = 8.57
 print(f"\nReactor angle:")
 print(f"  W33: θ₁₃ = arcsin(√(1/45)) = {theta_13_w33:.2f}°")
@@ -255,9 +255,9 @@ print("""
 BEKENSTEIN-HAWKING ENTROPY
 ══════════════════════════
   S = A/(4l_P²)
-  
+
   The factor 4 = |K4|!
-  
+
   W33 interpretation:
   - Each Planck area carries 1 K4 worth of information
   - Black hole entropy counts K4 degrees of freedom
@@ -356,15 +356,21 @@ results = [
     ("M-theory dim", "√(40+81)", 11, 11, ""),
 ]
 
-print(f"\n{'Parameter':<25} {'W33 Formula':<20} {'Predicted':<12} {'Observed':<12} {'Error'}")
+print(
+    f"\n{'Parameter':<25} {'W33 Formula':<20} {'Predicted':<12} {'Observed':<12} {'Error'}"
+)
 print("-" * 80)
 for name, formula, pred, obs, unit in results:
     if unit == "%":
         error = abs(pred - obs) / obs * 100
-        print(f"{name:<25} {formula:<20} {pred*100:.2f}%{'':<5} {obs*100:.1f}%{'':<5} {error:.1f}%")
+        print(
+            f"{name:<25} {formula:<20} {pred*100:.2f}%{'':<5} {obs*100:.1f}%{'':<5} {error:.1f}%"
+        )
     elif unit == "°":
         error = abs(pred - obs) / obs * 100
-        print(f"{name:<25} {formula:<20} {pred:.2f}°{'':<6} {obs:.2f}°{'':<6} {error:.2f}%")
+        print(
+            f"{name:<25} {formula:<20} {pred:.2f}°{'':<6} {obs:.2f}°{'':<6} {error:.2f}%"
+        )
     elif obs > 1e-4:
         error = abs(pred - obs) / obs * 100
         print(f"{name:<25} {formula:<20} {pred:<12.4f} {obs:<12.4f} {error:.2f}%")

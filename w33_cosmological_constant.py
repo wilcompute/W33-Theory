@@ -16,9 +16,10 @@ that naturally gives the tiny observed value!
 Let's explore this...
 """
 
-import numpy as np
-from fractions import Fraction
 from collections import defaultdict
+from fractions import Fraction
+
+import numpy as np
 
 print("=" * 80)
 print("W33 AND THE COSMOLOGICAL CONSTANT PROBLEM")
@@ -45,20 +46,20 @@ THE COSMOLOGICAL CONSTANT PROBLEM
 Quantum Field Theory prediction:
   Every quantum field contributes zero-point energy:
   E_0 = (1/2)ℏω for each mode
-  
+
   Summing over all modes up to M_Planck:
   ρ_vacuum ~ M_Planck⁴ ~ 10^76 GeV⁴
-  
+
   This gives:
   Λ_QFT ~ 1 (in Planck units)
 
 Observation:
   Λ_observed ~ 10^-122 (in Planck units)
-  
+
 The discrepancy:
   Λ_QFT / Λ_observed ~ 10^120
-  
-This is the LARGEST discrepancy between theory and 
+
+This is the LARGEST discrepancy between theory and
 experiment in all of physics!
 """)
 
@@ -77,13 +78,13 @@ SUPERSYMMETRY ATTEMPT
 In SUSY, for every boson there's a fermion:
   - Bosons contribute: +E_0
   - Fermions contribute: -E_0
-  
+
 If SUSY is exact:
   Λ_SUSY = Σ_bosons E_0 - Σ_fermions E_0 = 0  (exact cancellation!)
 
 BUT: SUSY is broken at M_SUSY ~ 1 TeV
   Λ_broken ~ (M_SUSY)⁴ ~ 10^-64 (in Planck units)
-  
+
 This is STILL 58 orders of magnitude too big!
 
 SUSY helps but doesn't solve the problem.
@@ -123,12 +124,12 @@ The fundamental numbers:
 The vacuum structure:
   π₁(Δ(W33)) = F_{n_cycles} (free group on 81 generators)
   H₁(Δ(W33)) = Z^{n_cycles}
-  
+
 Each of the 81 cycles can carry vacuum energy!
 
 The phase structure:
   Z₁₂ = Z₄ × Z₃ (12 discrete phases)
-  
+
 Total vacuum configurations:
   12^81 ≈ 10^87 states!
 
@@ -161,7 +162,7 @@ THE CANCELLATION MECHANISM
 Naive estimate (uncorrelated modes):
   Each of 81 modes contributes E_0 ~ M_Planck
   Total: Λ ~ 81 × M_Planck⁴ ~ O(1) in Planck units
-  
+
   This is the standard QFT disaster.
 
 BUT W33 has CONSTRAINTS!
@@ -190,7 +191,7 @@ print(f"Effective modes after K4 constraint: ~{81/90:.2f}")
 # The 81 cycles are generators of H₁
 # The K4 constraint correlates them
 
-# The key insight: 
+# The key insight:
 # 81 = 3^4 and there are 4 positive roots in C₂
 # Each root contributes independently but they're PAIRED
 
@@ -213,7 +214,7 @@ The WEYL GROUP W(C₂) acts on roots:
 Under Weyl reflection:
   Each root α maps to -α
   The contribution E_α maps to -E_α
-  
+
 This gives EXACT CANCELLATION at tree level!
 """)
 
@@ -252,12 +253,12 @@ print(f"Full group suppression: 1/{Sp_size} = {Lambda_full_group:.2e}")
 print(f"""
 FIRST ESTIMATE (geometric suppression only):
   Λ ~ 1/(8 × 81) = 1/648 ≈ 1.5 × 10^-3
-  
+
   This is 10^119 times too big.
 
 SECOND ESTIMATE (full group):
   Λ ~ 1/|Sp(4,3)| = 1/51840 ≈ 2 × 10^-5
-  
+
   This is 10^117 times too big.
 
 We need MORE suppression...
@@ -279,14 +280,14 @@ The 81 cycles are like INSTANTONS in gauge theory!
 
 In QCD, instanton effects are suppressed by:
   e^(-8π²/g²) ~ e^(-S_instanton)
-  
+
 where S_instanton is the instanton action.
 
 For W33, each cycle carries "topological charge" k ∈ Z₁₂
 
 The instanton action for k-charged configuration:
   S_k = |k| × S_0
-  
+
 where S_0 is the minimal action.
 
 The contribution to Λ from sector k:
@@ -314,7 +315,7 @@ INSTANTON SUPPRESSION:
   Each cycle contributes e^(-S_0) ~ e^(-1)
   With 81 independent cycles:
   Λ ~ e^(-81) ≈ 10^-35
-  
+
   This is 10^87 times too big.
 
 But wait! The K4 constraint means NOT all cycles are independent!
@@ -335,20 +336,20 @@ THE K4 MIRACLE
 The K4 constraint (Z₄,Z₃) = (2,0) for ALL 90 K4s means:
   - Cycles are CORRELATED, not independent
   - The 81 generators satisfy 90 constraints!
-  
+
 Effective number of free parameters:
   81 generators - 90 constraints = -9 ???
-  
+
 This means the system is OVERCONSTRAINED!
 
 Resolution:
   The constraints are not all independent.
   dim(constraint space) = 81 - rank(constraint matrix)
-  
+
 From the K4 structure:
   Each K4 gives 1 constraint on Z₁₂ phases
   But K4s overlap (share cycles)
-  
+
 Actual independent constraints: ~12 (one for each Z₁₂ element)
 Effective DOF: 81 - 12 = 69
 """)
@@ -386,10 +387,10 @@ The cosmological constant in W33:
 
 Geometric factor:
   1/|Sp(4,3)| = 1/51840
-  
+
 Instanton suppression:
   e^(-N_eff × S_0) where N_eff = 41 and S_0 ~ 2π (natural)
-  
+
 Loop corrections:
   α^n where α ~ 1/137 (fine structure) and n ~ number of loops
 """)
@@ -437,10 +438,10 @@ print(f"Required exponent: n = {n_required:.1f}")
 print(f"""
 REMARKABLE:
   256 = 2^8 = 4^4 = (dimension of C^4)^4
-  
+
 Could the cosmological constant be:
   Λ = 3^(-256) = 3^(-4^4)?
-  
+
 Let's check: 3^(-256) = {3**(-256):.2e}
 
 This would require 256 "modes" to cancel.
@@ -488,7 +489,7 @@ ALTERNATIVE: Consider PRODUCTS
 
 W(3,3) × W(3,3):
   81 × 81 = 6561 = 3^8 modes
-  
+
 This could represent two copies of Standard Model
 (matter + antimatter?)
 

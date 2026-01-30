@@ -8,6 +8,7 @@ Outputs:
 - artifacts/e8_rootline_partition.json
 - artifacts/e8_rootline_partition.md
 """
+
 from __future__ import annotations
 
 import json
@@ -57,7 +58,9 @@ def canonical_line(root: np.ndarray) -> Tuple[float, ...]:
     return tuple(root.tolist())
 
 
-def build_root_lines(roots: np.ndarray) -> Tuple[List[np.ndarray], List[Tuple[int, int]]]:
+def build_root_lines(
+    roots: np.ndarray,
+) -> Tuple[List[np.ndarray], List[Tuple[int, int]]]:
     line_map: Dict[Tuple[float, ...], int] = {}
     reps: List[np.ndarray] = []
     pairs: List[Tuple[int, int]] = []
@@ -201,7 +204,9 @@ def main():
     summary = {
         "root_count": int(roots.shape[0]),
         "line_count": int(len(reps)),
-        "orthogonality_degree_set": sorted(set(int(np.sum(adj[i])) for i in range(len(reps)))),
+        "orthogonality_degree_set": sorted(
+            set(int(np.sum(adj[i])) for i in range(len(reps)))
+        ),
         "triangle_count": int(len(triangles)),
         "exact_cover_found": bool(ok),
         "search_nodes": int(nodes),
@@ -227,7 +232,9 @@ def main():
     lines.append(f"- Orthogonality degree set: {summary['orthogonality_degree_set']}")
     lines.append(f"- Orthogonal triples (triangles): {summary['triangle_count']}")
     lines.append(f"- Exact cover found: {summary['exact_cover_found']}")
-    lines.append(f"- Search nodes: {summary['search_nodes']} (limit {summary['max_nodes']})")
+    lines.append(
+        f"- Search nodes: {summary['search_nodes']} (limit {summary['max_nodes']})"
+    )
     if ok:
         lines.append("")
         lines.append("## One Partition (40 triples)")

@@ -14,6 +14,7 @@ The Ultimate Synthesis:
 """
 
 import math
+
 import numpy as np
 
 print("""
@@ -33,7 +34,7 @@ print("""
 # =============================================================================
 
 W33_POINTS = 40
-W33_LINES = 40  
+W33_LINES = 40
 W33_CYCLES = 81
 W33_K4 = 90
 W33_TOTAL = 121
@@ -133,7 +134,7 @@ print()
 # Or: 14 ≈ 56/4 = E7_fund/4
 
 # Better: M_GUT = v × 10^(56/4) = v × 10^14
-M_GUT_w33 = v_ew * 10**(E7_FUND/4)
+M_GUT_w33 = v_ew * 10 ** (E7_FUND / 4)
 print(f"  M_GUT = v × 10^(56/4) = {v_ew} × 10¹⁴")
 print(f"        = {M_GUT_w33:.2e} GeV")
 print()
@@ -190,11 +191,11 @@ print()
 # Combined with other factors
 
 m_proton = 0.938  # GeV
-alpha_GUT = 1/24
+alpha_GUT = 1 / 24
 M_GUT = 1.1e16  # GeV
 
 # Rough estimate
-tau_factor = (M_GUT/m_proton)**4 / alpha_GUT**2
+tau_factor = (M_GUT / m_proton) ** 4 / alpha_GUT**2
 # Convert to years: 1 GeV⁻¹ ≈ 6.58 × 10⁻²⁵ s
 tau_seconds = tau_factor * 6.58e-25 / m_proton
 tau_years = tau_seconds / (3.15e7)
@@ -345,7 +346,7 @@ print("""
 The cosmological constant problem:
   Λ_QFT ~ M_Planck⁴ ~ 10¹²² eV⁴  (naive QFT estimate)
   Λ_obs ~ (10⁻³ eV)⁴ ~ 10⁻¹² eV⁴ (observed)
-  
+
   Discrepancy: 10¹²² / 10⁻¹² = 10¹³⁴ (!)
 """)
 
@@ -361,7 +362,7 @@ print()
 # Universe entropy ~ 10^122 (Bekenstein bound)
 # S ~ (R_H/l_P)² where R_H ~ Hubble radius
 S_universe = 1e122  # bits
-Lambda_natural = 1/S_universe
+Lambda_natural = 1 / S_universe
 print(f"  S_universe ~ 10¹²² bits (Bekenstein bound)")
 print(f"  Λ ~ 1/S ~ 10⁻¹²² (in Planck units)")
 print()
@@ -409,7 +410,7 @@ The Standard Model has:
   • 12 fermions (quarks + leptons) × 2 chiralities × 3 generations = 72 states
   • 12 gauge bosons (8 gluons + W⁺ + W⁻ + Z + γ)
   • 1 Higgs boson (after symmetry breaking)
-  
+
   Total: 72 + 12 + 1 = 85 particle states
 """)
 
@@ -548,25 +549,25 @@ print("""
   ═════════════════════
     α⁻¹ = 81[cyc] + 56[E7f] + 40[pts]/1111[R4] = 137.036
     sin²θ_W = 40[pts]/(40 + 133[E7a]) = 0.2312
-    
+
   MASSES (one input: v = 246.22 GeV):
   ═══════════════════════════════════
     m_t = v√(40/81) = 173.0 GeV
     m_H = (v/2)√(81/78) = 125.5 GeV
     m_W = (v/2)√(40/173) = 59.3 GeV (low by factor ~1.4)
-    
+
   GUT STRUCTURE:
   ══════════════
     α_GUT⁻¹ = 27 - 3 = 24
     M_GUT = M_Planck/1111 ~ 10¹⁶ GeV
     τ_proton ~ 10³³⁻³⁴ years
-    
+
   COSMOLOGY:
   ══════════
     Ω_DM/Ω_b = 27/(133-128) = 5.4
     Λ suppression: 10⁻¹²² where 122 = 121 + 1
     N_efolds = 56, n_s = 27/28 = 0.964
-    
+
   DEEP MATHEMATICS:
   ═════════════════
     N_generations = 27/9 = 3
@@ -575,18 +576,18 @@ print("""
 
 ═══════════════════════════════════════════════════════════════════════════════
                     END OF PART XLIV: THE GRAND UNIFICATION
-                    
+
   The W33 configuration, through its connection to E6-E7-E8,
   provides a complete unified description of:
-  
+
     • All Standard Model parameters
     • Grand unification structure
     • Dark matter and dark energy
     • Three generations of fermions
     • The hierarchy problem
     • Inflationary cosmology
-    
+
   From ONE geometric structure: W(3,3) = the Witting configuration
-  
+
 ═══════════════════════════════════════════════════════════════════════════════
 """)

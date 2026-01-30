@@ -1,0 +1,1 @@
+tomotope does not satisfy theintersection property. Howeverthe minimal regular cover of amaniplex is always a regularmaniplex.The Petrial of an abstract regularpolytope is not necessarily anabstract regular polytope. Forexample the Petrial of the 5-celldoes not satisfy the intersectionproperty. However the Petrial of aregular maniplex is always a5/20/25, 2:38 AMPage 8 of 11

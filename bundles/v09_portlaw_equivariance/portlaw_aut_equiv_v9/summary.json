@@ -1,9 +1,3 @@
-{
-  "num_base_mappings": 10,
-  "aut_conjugates_per_mapping": 5,
-  "total_variants_tested": 60,
-  "all_matched": true,
-  "w33_aut_group_order_from_bundle": 51840,
-  "aut_word_len": 30,
-  "ref_keys": 14
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:825c222671b38eb553b3255d154d53abc282e6d84984b70a1b73619d86221dcc
+size 203

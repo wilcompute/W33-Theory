@@ -6,9 +6,9 @@ THEORY OF EVERYTHING - PART XL: RIGOROUS MATHEMATICAL PROOFS
 Formal proofs of the key W33 claims with mathematical rigor.
 """
 
+import itertools
 import math
 from fractions import Fraction
-import itertools
 
 print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -43,7 +43,7 @@ PG(2,3) has:
 An oval in PG(2,3) is a set of q+1 = 4 points, no three collinear.
 The EXTERNAL points are those not on the oval.
 
-Number of external points: 13 - 4 = 9? 
+Number of external points: 13 - 4 = 9?
 
 Wait - let's be more careful. In PG(2,3):
   - Oval has 4 points
@@ -87,7 +87,7 @@ The automorphism group preserves the incidence structure.
 From the theory of finite geometries:
 
   |Aut(W33)| = |PGU(4,2)| / |stabilizer of oval|
-  
+
 Actually, more directly:
 
 The Weyl group W(E₆) acts on the 27 lines of the cubic surface.
@@ -152,7 +152,7 @@ print("─" * 40)
 print()
 
 print("""
-A CYCLE in W(3,3) is a special configuration. 
+A CYCLE in W(3,3) is a special configuration.
 
 From the E₆ connection:
   - E₆ has roots forming specific patterns
@@ -160,7 +160,7 @@ From the E₆ connection:
 
 Specifically:
   81 = 3 × 27
-  
+
 Where 27 is the dimension of the fundamental E₆ representation.
 Each of the 3 "generations" contributes 27 cycles.
 
@@ -208,7 +208,7 @@ print("=" * 80)
 print()
 
 print("""
-CLAIM: The 40 points of W(3,3) correspond to the 40 diameters of the 
+CLAIM: The 40 points of W(3,3) correspond to the 40 diameters of the
        Witting polytope, which has 240 vertices = E₈ roots.
 
 PROOF:
@@ -230,7 +230,7 @@ print()
 print("""
 A DIAMETER is a pair of antipodal vertices {v, -v}.
 
-Number of diameters = 240/2 = 120? 
+Number of diameters = 240/2 = 120?
 
 No - the Witting polytope has a more complex structure.
 
@@ -253,7 +253,7 @@ print("─" * 40)
 print()
 
 print("""
-THEOREM (Coxeter): 
+THEOREM (Coxeter):
   The 40 diameters of the Witting polytope correspond bijectively
   to the 40 points of the W(3,3) configuration.
 
@@ -287,7 +287,7 @@ The Weinberg angle θ_W relates the electromagnetic and weak couplings:
 where g is SU(2) coupling and g' is U(1) coupling.
 
 At tree level in GUT theories:
-  sin²θ_W = (3/5) × g'²/(3g'²/5 + g²) 
+  sin²θ_W = (3/5) × g'²/(3g'²/5 + g²)
 
 The numerical value depends on the embedding.
 """)
@@ -327,7 +327,7 @@ The Weinberg angle measures the mixing between these sectors:
   sin²θ_W = (light) / (light + heavy) = 40 / (40 + 133) = 40/173
 """)
 
-sin2_w33 = 40/173
+sin2_w33 = 40 / 173
 sin2_exp = 0.23121
 
 print()
@@ -383,7 +383,7 @@ print("Step 3: Computation")
 print("─" * 40)
 print()
 
-alpha_inv = 81 + 56 + 40/1111
+alpha_inv = 81 + 56 + 40 / 1111
 alpha_exp = 137.035999084
 
 print(f"  α⁻¹ = 81 + 56 + 40/1111")
@@ -498,7 +498,7 @@ The dark matter density scales as:
 This matches Planck 2018: Ω_DM/Ω_b = 5.408 ± 0.05
 """)
 
-dm_w33 = 27/5
+dm_w33 = 27 / 5
 dm_obs = 5.408
 
 print()

@@ -171,4 +171,3 @@ Noncontextual bound: **23 / 24**
 - r28: (0,1,-w^2,w^0)/sqrt3
 - r35: (1,w^2,w^1,0)/sqrt3
 - r38: (1,-w^2,0,w^2)/sqrt3
-

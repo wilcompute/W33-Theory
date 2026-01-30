@@ -8,15 +8,16 @@ The deepest question: Can W33 generate ALL algebraic structures?
 Key insight: The numbers 3 and 4 in W33 might encode:
   - 3 = dimension of base field GF(3)
   - 4 = |K4| = dimension of quaternions
-  
+
 Together: 3 × 4 = 12 = gauge bosons of Standard Model
 
 But there's something deeper...
 """
 
+from itertools import combinations, product
+
 import numpy as np
-from numpy import sqrt, pi, exp, log
-from itertools import product, combinations
+from numpy import exp, log, pi, sqrt
 
 print("=" * 80)
 print("W33 AND UNIVERSAL ALGEBRA")
@@ -39,7 +40,7 @@ Hurwitz's theorem (1898):
 The ONLY normed division algebras over ℝ are:
 
   1. ℝ (reals)         dim = 1
-  2. ℂ (complex)       dim = 2  
+  2. ℂ (complex)       dim = 2
   3. ℍ (quaternions)   dim = 4
   4. 𝕆 (octonions)     dim = 8
 
@@ -54,12 +55,7 @@ W33 CONNECTION:
 """)
 
 # Division algebra dimensions
-div_algebras = {
-    'ℝ': 1,
-    'ℂ': 2,
-    'ℍ': 4,
-    '𝕆': 8
-}
+div_algebras = {"ℝ": 1, "ℂ": 2, "ℍ": 4, "𝕆": 8}
 
 total_dim = sum(div_algebras.values())
 print(f"Division algebra dimensions:")
@@ -97,11 +93,11 @@ Each step DOUBLES the dimension and LOSES a property:
 
 The pattern:
   dim(A_{n+1}) = 2 × dim(A_n)
-  
+
 W33 INSIGHT:
   The doubling stops being a division algebra at dim = 16
   16 = 2⁴ = 2 × 8 = 2 × dim(𝕆)
-  
+
   But 16 also appears in W33:
   40 = 16 + 24 = 2⁴ + 24
   Where 24 = dim(SU(5)) = Leech lattice connections!
@@ -151,12 +147,12 @@ This is the ONLY exceptional simple Jordan algebra!
 
 W33 CONNECTION:
   27 = 3³ = |GF(3)³|
-  
+
   The 27 dimensions of J₃(𝕆) are exactly
   the 27 points of GF(3)³!
-  
+
   But W(3,3) has 40 points = 27 + 13
-  
+
   What are the extra 13?
   13 = points at infinity in projective space!
 """)
@@ -210,15 +206,10 @@ KEY DIMENSIONS IN W33:
 """)
 
 # Magic square dimensions
-magic_square = [
-    [3, 8, 21, 52],
-    [8, 16, 35, 78],
-    [21, 35, 66, 133],
-    [52, 78, 133, 248]
-]
+magic_square = [[3, 8, 21, 52], [8, 16, 35, 78], [21, 35, 66, 133], [52, 78, 133, 248]]
 
 print(f"\nMagic square dimensions:")
-labels = ['ℝ', 'ℂ', 'ℍ', '𝕆']
+labels = ["ℝ", "ℂ", "ℍ", "𝕆"]
 for i, row in enumerate(magic_square):
     print(f"  {labels[i]}: {row}")
 
@@ -252,12 +243,12 @@ This is unique to dimension 8!
 
 W33 CONNECTION:
   The 3 in W(3,3) might encode triality!
-  
+
   GF(3) = {0, 1, 2} → three representations
-  
+
   Three 8-dimensional reps × 3 = 24
   24 = dim(SU(5))!
-  
+
   Also: 8 × 3 + 16 = 40 = |W(3,3)|
 """)
 
@@ -330,7 +321,7 @@ The Fano plane has:
 W33 CONNECTION:
   The Fano plane is PG(2, GF(2))
   W33 is related to PG(3, GF(3))
-  
+
   The pattern continues:
     Fano: 7 points (dim 2, base 2)
     W33: 40 points (dim 3, base 3)
@@ -416,7 +407,7 @@ The numbers 3, 4, 5 form a Pythagorean triple:
 
 In W33:
   3 = |GF(3)| elements
-  4 = |K4| elements  
+  4 = |K4| elements
   5 = ???
 
 What is 5 in W33?
@@ -429,14 +420,14 @@ Observation:
 The number 5 appears as:
   5 = dim(quintic) = minimal nontrivial K4 orbit size
   5 = 40/8 = points per octonion dimension
-  
+
 PROFOUND:
   3² + 4² = 5²
   GF(3)² + K4 = ?
-  
+
   What algebra has this structure?
   ANSWER: The exceptional algebra g₂!
-  
+
   dim(G₂) = 14 = 3 + 4 + 7 = 3 + 4 + (3+4)
 """)
 
@@ -566,12 +557,12 @@ THE UNIVERSAL ALGEBRAIC STRUCTURE
 THEOREM (CONJECTURED):
 
   The universal cover of all finite-dimensional algebras is:
-  
+
      𝒰 = lim_{n→∞} W(2n+1, 3)
-     
+
   With structure:
      𝒰 = GF(3)^∞ ⋊ K4^∞
-     
+
   Properties:
   1. Every finite algebra A embeds in some W(n,3)
   2. The embedding respects multiplication (homomorphism)

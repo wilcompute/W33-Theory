@@ -9,9 +9,10 @@ Why does the universe contain observers?
 This is philosophy meets physics meets mathematics.
 """
 
-import numpy as np
-from fractions import Fraction
 import json
+from fractions import Fraction
+
+import numpy as np
 
 print("=" * 70)
 print("W33 THEORY PART XCII: CONSCIOUSNESS AND OBSERVERS")
@@ -153,7 +154,7 @@ superpositions "collapse" to classical outcomes.
 An "observer" is any system that:
   - Interacts strongly enough to introduce errors
   - Has enough complexity to record outcomes
-  
+
 Consciousness is NOT required for collapse.
 But consciousness IS required to EXPERIENCE the outcome.
 """)
@@ -167,7 +168,7 @@ WEAK ANTHROPIC PRINCIPLE:
   We observe a universe compatible with our existence.
   (Tautology - of course we do!)
 
-STRONG ANTHROPIC PRINCIPLE:  
+STRONG ANTHROPIC PRINCIPLE:
   The universe MUST have properties allowing observers.
   (Controversial - why must it?)
 
@@ -264,7 +265,7 @@ POSSIBLE ANSWERS:
 1. FUNCTIONALISM
    Experience just IS complex information processing.
    If W33 allows complex processing, experience comes free.
-   
+
 2. PANPSYCHISM
    Even simple W33 structures have proto-experience.
    Complex experience is the combination of simple ones.
@@ -430,11 +431,11 @@ results = {
         "consciousness_from_integration": "IIT-compatible",
         "strange_loop": "W33 → Physics → Brains → Math → W33",
         "mind_matter_relation": "neutral monism",
-        "free_will": "compatibilist (quantum + processing)"
+        "free_will": "compatibilist (quantum + processing)",
     },
     "hard_problem": "remains open",
     "meaning": "Universe understands itself through observers",
-    "speculation_level": "high but grounded in W33 structure"
+    "speculation_level": "high but grounded in W33 structure",
 }
 
 with open("PART_XCII_consciousness.json", "w") as f:

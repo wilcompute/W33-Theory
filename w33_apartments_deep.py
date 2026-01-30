@@ -8,17 +8,20 @@ We found 33 apartments. Let's understand:
 3. What is the structure of the apartment system?
 """
 
-from sage.all import *
+from itertools import combinations, permutations, product
+
 import numpy as np
-from itertools import product, combinations, permutations
+from sage.all import *
 
 print("=" * 70)
 print("W33 APARTMENTS DEEP DIVE")
 print("=" * 70)
 
+
 # Build the symplectic polar space W(3,3)
 def symplectic_form(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
+
 
 def normalize(v):
     for i in range(4):
@@ -26,6 +29,7 @@ def normalize(v):
             inv = pow(v[i], -1, 3)
             return tuple((inv * x) % 3 for x in v)
     return None
+
 
 proj_points = set()
 for v in product(range(3), repeat=4):
@@ -48,9 +52,11 @@ for i, p1 in enumerate(proj_points):
 # Find lines
 lines_set = set()
 for i in range(n):
-    for j in range(i+1, n):
+    for j in range(i + 1, n):
         if adj[i][j]:
-            common = [k for k in range(n) if k != i and k != j and adj[i][k] and adj[j][k]]
+            common = [
+                k for k in range(n) if k != i and k != j and adj[i][k] and adj[j][k]
+            ]
             for k, l in combinations(common, 2):
                 if adj[k][l]:
                     lines_set.add(tuple(sorted([i, j, k, l])))
@@ -89,43 +95,52 @@ print("=" * 70)
 
 # Let me just enumerate them directly
 
+
 def find_all_apartments():
     """Find all apartments by looking for 8-cycles in incidence graph."""
     apartments = set()
-    
+
     for p0 in range(n):
         # Lines through p0
         lines_p0 = [j for j, line in enumerate(lines) if p0 in line]
-        
+
         for L0 in lines_p0:
             pts_L0 = list(lines[L0])
             for p1 in pts_L0:
                 if p1 == p0:
                     continue
-                    
+
                 lines_p1 = [j for j, line in enumerate(lines) if p1 in line and j != L0]
                 for L1 in lines_p1:
                     pts_L1 = list(lines[L1])
                     for p2 in pts_L1:
                         if p2 == p1 or adj[p0][p2]:  # p0 and p2 must be opposite
                             continue
-                            
-                        lines_p2 = [j for j, line in enumerate(lines) if p2 in line and j != L1]
+
+                        lines_p2 = [
+                            j for j, line in enumerate(lines) if p2 in line and j != L1
+                        ]
                         for L2 in lines_p2:
                             pts_L2 = list(lines[L2])
                             for p3 in pts_L2:
-                                if p3 == p2 or adj[p1][p3]:  # p1 and p3 must be opposite
+                                if (
+                                    p3 == p2 or adj[p1][p3]
+                                ):  # p1 and p3 must be opposite
                                     continue
-                                    
+
                                 # Check if L3 exists connecting p3 back to p0
-                                for L3 in [j for j, line in enumerate(lines) 
-                                          if p3 in line and p0 in line and j != L2 and j != L0]:
+                                for L3 in [
+                                    j
+                                    for j, line in enumerate(lines)
+                                    if p3 in line and p0 in line and j != L2 and j != L0
+                                ]:
                                     # Found apartment!
                                     pts = tuple(sorted([p0, p1, p2, p3]))
                                     lns = tuple(sorted([L0, L1, L2, L3]))
                                     apartments.add((pts, lns))
-    
+
     return apartments
+
 
 apartments = find_all_apartments()
 print(f"Total apartments: {len(apartments)}")
@@ -165,7 +180,7 @@ for pts, lns in apartments:
     # The 4-cycle connects adjacent pairs
     # In an apartment: p0~p1, p1~p2, p2~p3, p3~p0, with p0≁p2, p1≁p3
     # But we need to figure out the actual adjacencies
-    
+
     # Actually, in the octagon, the adjacencies are:
     # p0 ~ p1 via L0, p1 ~ p2 via L1, p2 ~ p3 via L2, p3 ~ p0 via L3
     pass
@@ -199,7 +214,7 @@ The 8 chambers in an apartment are permuted by W(C₂).
 
 Key formula:
   # apartments = |G| / (|B| × |W|)
-  
+
 where B is a Borel subgroup and W is the Weyl group.
 """)
 
@@ -216,7 +231,9 @@ where B is a Borel subgroup and W is the Weyl group.
 
 print(f"\nExpected apartments calculation:")
 print(f"  |O(5,3):C₂| = 51840")
-print(f"  Each apartment has stabilizer of size 51840/{len(apartments)} = {51840//len(apartments) if len(apartments) > 0 else 'N/A'}")
+print(
+    f"  Each apartment has stabilizer of size 51840/{len(apartments)} = {51840//len(apartments) if len(apartments) > 0 else 'N/A'}"
+)
 
 # =============================================================================
 # SYMPLECTIC FRAMES
@@ -228,16 +245,20 @@ print("=" * 70)
 # A symplectic frame is an ordered basis (e₁, e₂, f₁, f₂) with
 # ⟨eᵢ, fⱼ⟩ = δᵢⱼ
 
+
 # Let's count them
 def is_symplectic_frame(e1, e2, f1, f2):
     """Check if (e1, e2, f1, f2) is a symplectic frame."""
     # Check: ⟨e1, f1⟩ = 1, ⟨e2, f2⟩ = 1, all others = 0
-    return (symplectic_form(e1, f1) == 1 and
-            symplectic_form(e2, f2) == 1 and
-            symplectic_form(e1, e2) == 0 and
-            symplectic_form(f1, f2) == 0 and
-            symplectic_form(e1, f2) == 0 and
-            symplectic_form(e2, f1) == 0)
+    return (
+        symplectic_form(e1, f1) == 1
+        and symplectic_form(e2, f2) == 1
+        and symplectic_form(e1, e2) == 0
+        and symplectic_form(f1, f2) == 0
+        and symplectic_form(e1, f2) == 0
+        and symplectic_form(e2, f1) == 0
+    )
+
 
 # The standard symplectic frame
 e1 = (1, 0, 0, 0)
@@ -257,7 +278,7 @@ frame_pts = [
     point_to_idx.get(normalize(e1)),
     point_to_idx.get(normalize(e2)),
     point_to_idx.get(normalize(f1)),
-    point_to_idx.get(normalize(f2))
+    point_to_idx.get(normalize(f2)),
 ]
 print(f"Standard frame points: {frame_pts}")
 print(f"  Coords: {[proj_points[p] for p in frame_pts if p is not None]}")
@@ -275,7 +296,7 @@ The number 81 = 3⁴ arises from the ROOT SYSTEM of type C₂:
 For the root system C₂:
   - 4 positive roots: α₁, α₂, α₁+α₂, 2α₁+α₂
   - Total roots: 8
-  
+
 The Steinberg representation has dimension q^N where:
   N = # positive roots = 4
   So dim = 3⁴ = 81 ✓
@@ -285,7 +306,7 @@ The 81 independent cycles in H₁ correspond to:
   - The 81 cosets in some quotient
   - The 81-dimensional irreducible representation
 
-Each generator of π₁ = F₈₁ can be thought of as a 
+Each generator of π₁ = F₈₁ can be thought of as a
 "twisted apartment path" - a non-contractible loop that
 goes through the building in a specific pattern.
 """)
@@ -308,7 +329,9 @@ for pts, lns in apartments:
     for p in pts:
         point_apt_count[p] += 1
 
-print(f"Apartments per point: min={min(point_apt_count)}, max={max(point_apt_count)}, avg={sum(point_apt_count)/n:.2f}")
+print(
+    f"Apartments per point: min={min(point_apt_count)}, max={max(point_apt_count)}, avg={sum(point_apt_count)/n:.2f}"
+)
 
 # How many apartments share a given line?
 line_apt_count = [0] * len(lines)
@@ -316,7 +339,9 @@ for pts, lns in apartments:
     for l in lns:
         line_apt_count[l] += 1
 
-print(f"Apartments per line: min={min(line_apt_count)}, max={max(line_apt_count)}, avg={sum(line_apt_count)/len(lines):.2f}")
+print(
+    f"Apartments per line: min={min(line_apt_count)}, max={max(line_apt_count)}, avg={sum(line_apt_count)/len(lines):.2f}"
+)
 
 # How many apartments share a given (point, line) flag?
 flag_apt_count = {}

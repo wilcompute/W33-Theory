@@ -50,4 +50,3 @@ Checked 5 vertices:
    - |Aut(W33)| = 51840 = 192 × 270
    - 192 = |W(D4)| = Weyl group of D4
    - 270 = 27 × 10 (Albert × SO(10) vector)
-

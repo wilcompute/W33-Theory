@@ -31,14 +31,14 @@ print()
 print("═══ FINE STRUCTURE CONSTANT ═══")
 print()
 alpha_inv_exp = 137.035999084  # CODATA 2018
-alpha_exp = 1/alpha_inv_exp
+alpha_exp = 1 / alpha_inv_exp
 
 # COMPLETE W33 FORMULA (discovered in Parts I-XLII)
 # α⁻¹ = cycles + E7_fund + correction
 #     = 81 + 56 + 40/1111
 
-alpha_inv_w33 = 81 + 56 + 40/1111
-alpha_w33 = 1/alpha_inv_w33
+alpha_inv_w33 = 81 + 56 + 40 / 1111
+alpha_w33 = 1 / alpha_inv_w33
 
 print("W33 COMPLETE FORMULA:")
 print(f"  α⁻¹ = 81 + 56 + 40/1111")
@@ -55,7 +55,9 @@ print()
 print("REMARKABLE AGREEMENT:")
 diff = abs(alpha_inv_w33 - alpha_inv_exp)
 print(f"  |Δα⁻¹| = {diff:.9f}")
-print(f"  Relative error = {diff/alpha_inv_exp:.2e} = {diff/alpha_inv_exp * 1e8:.1f} parts in 10⁸")
+print(
+    f"  Relative error = {diff/alpha_inv_exp:.2e} = {diff/alpha_inv_exp * 1e8:.1f} parts in 10⁸"
+)
 print()
 
 # Understanding 1111
@@ -180,7 +182,7 @@ In W33:
 
 This is not a choice - it's FORCED by the arithmetic:
   3⁴ = 81 = 3 × 27
-  
+
 The only factorization is 3 × 27. Not 9 × 9, not 27 × 3.
 (Actually 81 = 9 × 9 = 27 × 3 are also factorizations,
 but only 3 × 27 matches E6 representation theory.)
@@ -204,10 +206,10 @@ print("""
 From Part II, we derived:
 
   E7 decomposition: 56 → 27 + 27* + 1 + 1
-  
+
   Visible: 27 (Standard Model)
   Hidden: 29 (Dark sector - the 27* + 2 singlets)
-  
+
 But this is the FIELD CONTENT, not the MASS DENSITY.
 
 For mass density, we need to account for:
@@ -245,7 +247,7 @@ print()
 
 # Another possibility: the ratio involves 27 and 5
 # 27/5 = 5.4 exactly!
-print("  REMARKABLE: 27/5 = {:.1f} ← Exactly the observed ratio!".format(27/5))
+print("  REMARKABLE: 27/5 = {:.1f} ← Exactly the observed ratio!".format(27 / 5))
 print()
 print("  Interpretation:")
 print("    27 = E6 fundamental representation = dim(J₃(𝕆))")
@@ -279,7 +281,7 @@ The cosmological constant problem: Why is Λ so small?
 
   Observed: Λ ≈ 10⁻¹²² (in Planck units)
   Naïve QFT: Λ ~ 1 (in Planck units)
-  
+
   This is off by 122 orders of magnitude!
 
 W33 APPROACH:
@@ -333,7 +335,7 @@ In GUT theories, proton decay is mediated by heavy gauge bosons.
 
 Standard GUT prediction:
   τ_p ~ 10³⁴ - 10³⁶ years (model-dependent)
-  
+
 Current limit:
   τ_p > 2.4 × 10³⁴ years (Super-Kamiokande)
 
@@ -421,7 +423,7 @@ print()
 
 # W33 Higgs mass formula
 v = 246.22  # Electroweak VEV in GeV
-m_H_w33 = (v/2) * math.sqrt(81/78)
+m_H_w33 = (v / 2) * math.sqrt(81 / 78)
 
 print("  FORMULA: m_H = (v/2) × √(cycles/dim(E6))")
 print(f"                = (v/2) × √(81/78)")
@@ -436,7 +438,7 @@ print()
 print("═══ TOP QUARK MASS ═══")
 print()
 m_t_exp = 172.76  # GeV
-m_t_w33 = v * math.sqrt(40/81)
+m_t_w33 = v * math.sqrt(40 / 81)
 
 print("  FORMULA: m_t = v × √(points/cycles)")
 print(f"               = v × √(40/81)")
@@ -491,23 +493,23 @@ W33 THEORY WOULD BE FALSIFIED IF:
 
   1. A 4th generation is discovered
      → W33 requires exactly 3 generations (81/27 = 3)
-     
+
   2. sin²θ_W ≠ 40/173 beyond 5σ
      → MOLLER at JLab (2025-2028): precision ±0.00003
      → Must equal 0.231214...
-     
+
   3. Ω_DM/Ω_b ≠ 27/5 beyond 5σ
      → CMB-S4 (2027-2035): precision ±0.02
      → Must equal 5.4
-     
+
   4. m_t/v ≠ √(40/81) beyond 5σ
      → HL-LHC (2029-2041): m_t to ±0.2 GeV
      → Must equal 0.7027...
-     
+
   5. More than 2 gravitational wave polarizations detected
      → LISA (2030s): GW polarization tests
      → Must be exactly 2 (from 90/45)
-     
+
   6. Proton decay not observed by 10³⁶ years
      → Hyper-Kamiokande (2027-2040)
      → Should see events if τ ~ 10³⁵ years

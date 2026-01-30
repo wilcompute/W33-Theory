@@ -6,11 +6,12 @@ matching the E6 fundamental representation!
 
 This script explores this connection deeply.
 """
+
 from __future__ import annotations
 
 import json
 from collections import Counter, defaultdict
-from itertools import product, combinations, permutations
+from itertools import combinations, permutations, product
 from pathlib import Path
 
 import numpy as np
@@ -39,12 +40,12 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     edges = []
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
                 edges.append((i, j))
@@ -359,7 +360,7 @@ But this overcounts! Let's count properly...
         in_h27_j = j in h27_set
         in_h12_i = i in h12_set
         in_h12_j = j in h12_set
-        is_v0 = (i == 0 or j == 0)
+        is_v0 = i == 0 or j == 0
 
         if in_h27_i and in_h27_j:
             e_h27_h27 += 1
@@ -379,8 +380,10 @@ But this overcounts! Let's count properly...
 
     # Check: 12 + 12 + 108 + 108 = 240
     print(f"\n  Expected: 12 + 12 + 108 + 108 = 240")
-    print(f"  Got: {e_v0_h12} + {e_h12_h12} + {e_h12_h27} + {e_h27_h27} = "
-          f"{e_v0_h12 + e_h12_h12 + e_h12_h27 + e_h27_h27}")
+    print(
+        f"  Got: {e_v0_h12} + {e_h12_h12} + {e_h12_h27} + {e_h27_h27} = "
+        f"{e_v0_h12 + e_h12_h12 + e_h12_h27 + e_h27_h27}"
+    )
 
     return edge_types
 
@@ -432,22 +435,22 @@ def main():
         "h27_size": 27,
         "h12_size": 12,
         "edge_partition": {
-            "v0_h12": e_v0_h12 if 'e_v0_h12' in dir() else 12,
-            "h12_h12": e_h12_h12 if 'e_h12_h12' in dir() else 12,
-            "h12_h27": e_h12_h27 if 'e_h12_h27' in dir() else 108,
-            "h27_h27": e_h27_h27 if 'e_h27_h27' in dir() else 108,
+            "v0_h12": e_v0_h12 if "e_v0_h12" in dir() else 12,
+            "h12_h12": e_h12_h12 if "e_h12_h12" in dir() else 12,
+            "h12_h27": e_h12_h27 if "e_h12_h27" in dir() else 108,
+            "h27_h27": e_h27_h27 if "e_h27_h27" in dir() else 108,
         },
         "e8_decomposition": {
             "e6_roots": 72,
             "su3_roots": 6,
             "27_x_3": 81,
             "27bar_x_3bar": 81,
-        }
+        },
     }
 
     out_path = ROOT / "artifacts" / "derive_27_connection.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(results, indent=2), encoding='utf-8')
+    out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(f"\n\nWrote {out_path}")
 
 

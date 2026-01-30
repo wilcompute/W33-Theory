@@ -126,7 +126,7 @@ The number 11 is FORCED by W33 combinatorics!
 
 Dimensional decomposition:
   11 = 4 + 7
-  
+
   4 = spacetime dimensions (visible)
   7 = internal dimensions (compact)
 
@@ -171,7 +171,7 @@ W33 has 40 points.
 
 Could 10 be significant? Yes!
   10 = dim(spacetime metric) = components of g_μν
-  
+
 So: 40 points = 4 dimensions × 10 metric components
 
 This suggests W33 points encode BOTH space AND the metric!
@@ -195,10 +195,10 @@ print()
 print("""
 ═══ The Hierarchy Problem ═══
 
-Why is gravity so weak? 
+Why is gravity so weak?
 
   G_N ~ 6.67 × 10⁻¹¹ m³/(kg·s²)
-  
+
 In Planck units:
   G_N = 1/M_Pl²
 
@@ -221,7 +221,7 @@ print("Possible W33 suppressions:")
 print()
 
 # Factor 1: exp(-W33_total/2)
-factor1 = math.exp(-W33_TOTAL/2)
+factor1 = math.exp(-W33_TOTAL / 2)
 print(f"  exp(-121/2) = exp(-60.5) = {factor1:.2e}")
 print()
 
@@ -242,7 +242,7 @@ print(f"  exp(40) = {math.exp(40):.2e} = 10^{40/math.log(10):.1f}")
 print()
 
 # Best match
-best = 81/5
+best = 81 / 5
 print(f"  BEST: 10^(81/5) = 10^{best:.1f} ≈ 10¹⁷")
 print(f"  This gives: M_Pl/M_EW = 10^(cycles/5)")
 print(f"  The 5 = dim(E7) - 2⁷ = 133 - 128 (dark matter number!)")
@@ -361,7 +361,7 @@ This might explain 2 polarizations:
   • 45 = α_GUT⁻¹ (unification coupling)
   • 2 = polarization states
 
-Alternative: 
+Alternative:
   • 90/40 = 2.25 ≈ 2 (K4s per point → polarizations)
 """)
 
@@ -396,7 +396,7 @@ for each of 4 dimensions!
 The signature (-,+,+,+) could come from:
   • 1 time dimension (points 1-10)
   • 3 space dimensions (points 11-40)
-  
+
 Ratio: 10/30 = 1/3 (1 time : 3 space)
 """)
 
@@ -463,7 +463,7 @@ print("""
 By analogy with α_EM = e²/(4πε₀ℏc) ≈ 1/137,
 we can define:
 
-  α_G = G_N m²/(ℏc) 
+  α_G = G_N m²/(ℏc)
 
 For protons:
   α_G(proton) = G_N m_p²/(ℏc) ≈ 5.9 × 10⁻³⁹
@@ -477,7 +477,7 @@ Ratio:
 """)
 
 # Calculate ratio
-alpha_EM = 1/137
+alpha_EM = 1 / 137
 alpha_G_proton = 5.9e-39
 ratio = alpha_EM / alpha_G_proton
 

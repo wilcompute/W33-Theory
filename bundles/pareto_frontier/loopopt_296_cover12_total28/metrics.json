@@ -1,11 +1,3 @@
-{
-  "cover12_four_center_triads": 296,
-  "cycle_costs": [
-    1,
-    3,
-    5,
-    9,
-    10
-  ],
-  "loop_total_min_cover12": 28
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8a90e797aebc4d4eb2dc4a1016f25e3c3913fff1638971b5b5e7a5b8814c87f7
+size 131

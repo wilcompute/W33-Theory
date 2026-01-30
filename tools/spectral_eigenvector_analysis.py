@@ -11,6 +11,7 @@ This investigates:
 2. Relationship between W33 and triangle graph eigenvectors
 3. E8 nullspace interpretation
 """
+
 from __future__ import annotations
 
 import json
@@ -47,11 +48,11 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
 
@@ -148,14 +149,18 @@ def main():
                 # Check if eigenvectors respect this grouping
                 for j in range(mult):
                     vec = evecs[:, j]
-                    means = [np.mean(vec[groups[k]]) if groups[k] else 0 for k in range(3)]
+                    means = [
+                        np.mean(vec[groups[k]]) if groups[k] else 0 for k in range(3)
+                    ]
                     coord_projs.append((coord, j, means))
 
             lines.append(f"- Eigenspace dimension: {mult}")
 
             # Check symmetry of eigenvector support
             vec_norms = np.sum(evecs**2, axis=1)
-            lines.append(f"- Total weight distribution: min={vec_norms.min():.4f}, max={vec_norms.max():.4f}")
+            lines.append(
+                f"- Total weight distribution: min={vec_norms.min():.4f}, max={vec_norms.max():.4f}"
+            )
         lines.append("")
 
     # Build triangle graph
@@ -175,7 +180,7 @@ def main():
     for v0 in range(n):
         tris = all_triangles[v0]
         for i, t1 in enumerate(tris):
-            for t2 in tris[i+1:]:
+            for t2 in tris[i + 1 :]:
                 idx1, idx2 = tri_index[t1], tri_index[t2]
                 tri_adj[idx1, idx2] = 1
                 tri_adj[idx2, idx1] = 1
@@ -203,7 +208,9 @@ def main():
 
     # Project λ=3 eigenspace onto incidence structure
     proj = evecs_3.T @ incidence  # 40 × 40 matrix
-    lines.append(f"- Projection onto W33 vertices: rank = {np.linalg.matrix_rank(proj, tol=1e-6)}")
+    lines.append(
+        f"- Projection onto W33 vertices: rank = {np.linalg.matrix_rank(proj, tol=1e-6)}"
+    )
     lines.append("")
 
     # λ = -1 eigenspace (multiplicity 120)
@@ -215,7 +222,9 @@ def main():
 
     # Check if this relates to E8 roots
     proj_m1 = evecs_m1.T @ incidence  # 120 × 40
-    lines.append(f"- Projection onto W33 vertices: rank = {np.linalg.matrix_rank(proj_m1, tol=1e-6)}")
+    lines.append(
+        f"- Projection onto W33 vertices: rank = {np.linalg.matrix_rank(proj_m1, tol=1e-6)}"
+    )
     lines.append("")
 
     # Relationship between eigenspaces
@@ -266,9 +275,9 @@ def main():
     tri_tris = 0
     num_tri = len(unique_triangles)
     for i in range(num_tri):
-        for j in range(i+1, num_tri):
+        for j in range(i + 1, num_tri):
             if tri_adj[i, j]:
-                for k in range(j+1, num_tri):
+                for k in range(j + 1, num_tri):
                     if tri_adj[i, k] and tri_adj[j, k]:
                         tri_tris += 1
 
@@ -317,7 +326,9 @@ def main():
     lines.append("### Triangle Graph Edge Interpretation")
     lines.append("")
     tri_degrees = np.sum(tri_adj, axis=1)
-    lines.append(f"- Degree distribution: min={tri_degrees.min()}, max={tri_degrees.max()}")
+    lines.append(
+        f"- Degree distribution: min={tri_degrees.min()}, max={tri_degrees.max()}"
+    )
     lines.append(f"- Unique degrees: {sorted(set(tri_degrees))}")
     lines.append(f"- 160 × avg_degree / 2 = {tri_edges}")
     lines.append("")
@@ -349,8 +360,12 @@ def main():
     lines.append("- 120: nullspace - antisymmetric forms?")
     lines.append("")
 
-    results["w33_spectrum"] = [(float(e), int(m)) for e, m in Counter(w33_eigs_rounded).items()]
-    results["triangle_spectrum"] = [(float(e), int(m)) for e, m in Counter(tri_eigs_rounded).items()]
+    results["w33_spectrum"] = [
+        (float(e), int(m)) for e, m in Counter(w33_eigs_rounded).items()
+    ]
+    results["triangle_spectrum"] = [
+        (float(e), int(m)) for e, m in Counter(tri_eigs_rounded).items()
+    ]
     results["w33_edges"] = int(w33_edges)
     results["triangle_edges"] = int(tri_edges)
     results["triangle_graph_triangles"] = int(tri_tris)

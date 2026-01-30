@@ -9,8 +9,8 @@ Exploring why:
 This can't be coincidence. Let's explore the prime structure deeply.
 """
 
-import math
 import json
+import math
 import os
 from datetime import datetime
 
@@ -20,15 +20,17 @@ print("=" * 80)
 print("W33 AND THE PRIME NUMBER DEEP DIVE")
 print("=" * 80)
 
+
 # Generate primes
 def sieve(n):
     is_prime = [True] * (n + 1)
     is_prime[0] = is_prime[1] = False
     for i in range(2, int(n**0.5) + 1):
         if is_prime[i]:
-            for j in range(i*i, n + 1, i):
+            for j in range(i * i, n + 1, i):
                 is_prime[j] = False
     return [i for i in range(n + 1) if is_prime[i]]
+
 
 primes = sieve(1000)
 prime_set = set(primes)
@@ -157,15 +159,21 @@ print(f"  Ratio: {actual_p_40/est_p_40:.4f}")
 # Better estimate: p_n ≈ n(ln(n) + ln(ln(n)))
 better_est = 40 * (math.log(40) + math.log(math.log(40)))
 print(f"\nBetter estimate p_n ≈ n(ln(n) + ln(ln(n))):")
-print(f"  p_40 ≈ 40 × ({math.log(40):.3f} + {math.log(math.log(40)):.3f}) = {better_est:.1f}")
+print(
+    f"  p_40 ≈ 40 × ({math.log(40):.3f} + {math.log(math.log(40)):.3f}) = {better_est:.1f}"
+)
 
 # Twin primes near W33 numbers
 print("\n" + "=" * 40)
 print("TWIN PRIMES NEAR W33 NUMBERS")
 print("=" * 40)
 
+
 def is_twin_prime(p):
-    return (p in prime_set and p + 2 in prime_set) or (p in prime_set and p - 2 in prime_set)
+    return (p in prime_set and p + 2 in prime_set) or (
+        p in prime_set and p - 2 in prime_set
+    )
+
 
 for p in [11, 41, 71, 101, 107, 131, 137, 139, 179]:
     if p in prime_set:
@@ -181,9 +189,11 @@ print("\n" + "=" * 40)
 print("SOPHIE GERMAIN PRIMES")
 print("=" * 40)
 
+
 # A Sophie Germain prime p is a prime where 2p + 1 is also prime
 def is_sophie_germain(p):
-    return p in prime_set and (2*p + 1) in prime_set
+    return p in prime_set and (2 * p + 1) in prime_set
+
 
 print("\nSophie Germain primes p where 2p+1 is also prime:")
 sg_primes = [p for p in primes[:50] if is_sophie_germain(p)]
@@ -288,21 +298,21 @@ results = {
         "p_33": 137,
         "p_40": 173,
         "p_81": primes[80],
-        "p_121": primes[120] if len(primes) > 120 else None
+        "p_121": primes[120] if len(primes) > 120 else None,
     },
     "formulas": {
         "sin2_theta_W": "40/p_40 = 40/173",
         "alpha_inverse": "p_33 = 137",
-        "33_origin": "|points| - rank(E7) = 40 - 7 = 33"
+        "33_origin": "|points| - rank(E7) = 40 - 7 = 33",
     },
     "special_primes": {
         "11": {"index": 5, "note": "11² = |W33|"},
         "137": {"index": 33, "note": "α⁻¹"},
-        "173": {"index": 40, "note": "sin²θ_W denominator"}
-    }
+        "173": {"index": 40, "note": "sin²θ_W denominator"},
+    },
 }
 
 output_file = os.path.join(OUTPUT_DIR, "w33_prime_structure_results.json")
-with open(output_file, 'w') as f:
+with open(output_file, "w") as f:
     json.dump(results, f, indent=2, default=int)
 print(f"\nResults saved to: {output_file}")

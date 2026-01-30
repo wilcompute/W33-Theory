@@ -9,9 +9,10 @@ Why does the universe not fall apart into quantum chaos?
 Answer: W33 provides error correction at the Planck scale.
 """
 
-import numpy as np
-from fractions import Fraction
 import json
+from fractions import Fraction
+
+import numpy as np
 
 print("=" * 70)
 print("W33 THEORY PART LXXXIX: QUANTUM ERROR CORRECTING CODE")
@@ -144,7 +145,7 @@ W33 AS HOLOGRAPHIC CODE:
 
 The eigenspace decomposition 40 = 1 + 24 + 15 might represent:
   - 1 = "center" (most protected, bulk)
-  - 24 = "intermediate" (gauge fields)  
+  - 24 = "intermediate" (gauge fields)
   - 15 = "boundary" (matter, accessible)
 
 Information flows from bulk to boundary via the W33 structure!
@@ -222,7 +223,7 @@ Seth Lloyd calculated the maximum computational capacity of the universe:
 
 THIS NUMBER AGAIN:
   10^120 ≈ 10^(122-2) ≈ 10^(k² - m₂ + λ - λ)
-  
+
 The cosmological constant (Λ ~ 10^-122) and computation are linked!
 """)
 
@@ -311,7 +312,7 @@ Environmental decoherence happens when:
 W33 explains why:
   - Small systems stay quantum (few errors, correctable)
   - Large systems become classical (many errors, exceed code distance)
-  
+
 The boundary between quantum and classical is set by W33's code distance!
 """)
 
@@ -395,7 +396,7 @@ KEY INSIGHTS:
 1. W33 defines a [[40, 24, d]] quantum code
    40 physical qubits, 24 logical qubits protected
 
-2. |Aut(W33)| = 51840 = |W(E₆)| 
+2. |Aut(W33)| = 51840 = |W(E₆)|
    Automorphisms ARE the Weyl group of E₆!
 
 3. Error correction explains:
@@ -420,19 +421,19 @@ results = {
     "code_parameters": {
         "physical_qubits": v,
         "logical_qubits": m2,
-        "code_rate": float(code_rate)
+        "code_rate": float(code_rate),
     },
     "automorphism_weyl": {
         "aut_w33": aut_order,
         "weyl_E6": 51840,
-        "match": aut_order == 51840
+        "match": aut_order == 51840,
     },
     "implications": [
         "Spacetime stability from error correction",
         "Decoherence from exceeding code distance",
         "Quantum gravity as error correction",
-        "Black hole information preserved"
-    ]
+        "Black hole information preserved",
+    ],
 }
 
 with open("PART_LXXXIX_quantum_code.json", "w") as f:

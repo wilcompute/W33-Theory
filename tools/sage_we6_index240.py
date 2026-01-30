@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Sage/GAP: find an index-240 subgroup of W(E6) and compare to edge action."""
+
 from __future__ import annotations
 
+import json
 from itertools import product
 from pathlib import Path
-import json
 
-from sage.all import WeylGroup, PermutationGroup, Permutation, libgap
+from sage.all import Permutation, PermutationGroup, WeylGroup, libgap
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -29,11 +30,11 @@ def build_w33_edges():
             proj_points.append(v)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     edges = []
     for i in range(40):
-        for j in range(i+1, 40):
+        for j in range(i + 1, 40):
             if omega(proj_points[i], proj_points[j]) == 0:
                 edges.append((i, j))
 
@@ -50,15 +51,17 @@ def normalize_proj(v):
 
 
 def check_symplectic(M):
-    Omega = [[0,0,1,0],[0,0,0,1],[2,0,0,0],[0,2,0,0]]
+    Omega = [[0, 0, 1, 0], [0, 0, 0, 1], [2, 0, 0, 0], [0, 2, 0, 0]]
+
     def mat_mult(A, B):
         n, k, m = len(A), len(B), len(B[0])
-        result = [[0]*m for _ in range(n)]
+        result = [[0] * m for _ in range(n)]
         for i in range(n):
             for j in range(m):
                 for l in range(k):
                     result[i][j] = (result[i][j] + A[i][l] * B[l][j]) % 3
         return result
+
     MT = [[M[j][i] for j in range(4)] for i in range(4)]
     result = mat_mult(mat_mult(MT, Omega), M)
     return result == Omega
@@ -90,16 +93,16 @@ def vertex_perm_to_edge_perm(vperm, edges):
 
 def edge_group_generators(vertices, edges):
     gen_matrices = [
-        [[1,0,1,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,1],[0,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[1,0,1,0],[0,0,0,1]],
-        [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,1,0,1]],
-        [[1,1,0,0],[0,1,0,0],[0,0,1,0],[0,0,2,1]],
-        [[1,0,0,0],[1,1,0,0],[0,0,1,2],[0,0,0,1]],
-        [[0,0,1,0],[0,1,0,0],[2,0,0,0],[0,0,0,1]],
-        [[1,0,0,0],[0,0,0,1],[0,0,1,0],[0,2,0,0]],
-        [[2,0,0,0],[0,1,0,0],[0,0,2,0],[0,0,0,1]],
-        [[1,0,0,0],[0,2,0,0],[0,0,1,0],[0,0,0,2]],
+        [[1, 0, 1, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 1], [0, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [1, 0, 1, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 1, 0, 1]],
+        [[1, 1, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 2, 1]],
+        [[1, 0, 0, 0], [1, 1, 0, 0], [0, 0, 1, 2], [0, 0, 0, 1]],
+        [[0, 0, 1, 0], [0, 1, 0, 0], [2, 0, 0, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0], [0, 2, 0, 0]],
+        [[2, 0, 0, 0], [0, 1, 0, 0], [0, 0, 2, 0], [0, 0, 0, 1]],
+        [[1, 0, 0, 0], [0, 2, 0, 0], [0, 0, 1, 0], [0, 0, 0, 2]],
     ]
     gens = []
     for M in gen_matrices:
@@ -107,7 +110,7 @@ def edge_group_generators(vertices, edges):
             continue
         vperm = matrix_to_vertex_perm(M, vertices)
         eperm = vertex_perm_to_edge_perm(vperm, edges)
-        gens.append(Permutation([x+1 for x in eperm]))
+        gens.append(Permutation([x + 1 for x in eperm]))
     return gens
 
 
@@ -118,7 +121,7 @@ def main():
     G_edges = PermutationGroup(edge_gens)
 
     # Weyl group of E6
-    G_we6 = WeylGroup(['E', 6], prefix="s")
+    G_we6 = WeylGroup(["E", 6], prefix="s")
 
     # Find subgroups of index 240 (size 216) via GAP low-index search on fp-group
     if not hasattr(G_we6, "as_finitely_presented_group"):

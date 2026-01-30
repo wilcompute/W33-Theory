@@ -4,10 +4,11 @@ W33 WILD IDEAS EXPLORATION
 Testing unconventional hypotheses about W33 as the universal structure.
 """
 
-import numpy as np
 from fractions import Fraction
-from math import gcd, sqrt, pi, e, log
 from functools import reduce
+from math import e, gcd, log, pi, sqrt
+
+import numpy as np
 
 print("=" * 80)
 print("W33 WILD IDEAS - EXPLORING THE UNCONVENTIONAL")
@@ -29,7 +30,7 @@ Key observation: 11^2 = 121 = |W33|!
 
 The j-function coefficients in Monstrous Moonshine:
   j(q) = q^{-1} + 744 + 196884q + 21493760q^2 + ...
-  
+
 Let's check W33 numbers in these coefficients:
 """)
 
@@ -73,7 +74,7 @@ W33 CONNECTION:
   24 = 121 - 97 = |W33| - 97
   But more interestingly:
   24 = 40 - 16 = |points| - |K4|^2
-  
+
   240 = 2 * 121 - 2 = 2|W33| - 2
   OR:  240 = 81 + 81 + 78 = 2|cycles| + dim(E6)!
 """)
@@ -106,12 +107,14 @@ W33 HYPOTHESIS: The natural root of unity for W33 is q = e^{2*pi*i/3}
 (a primitive cube root of unity, matching GF(3))
 """)
 
+
 def quantum_dim(k, n):
     """Quantum dimension at q = exp(2*pi*i/n)"""
     q = np.exp(2j * np.pi / n)
-    if abs(q - q**(-1)) < 1e-10:
+    if abs(q - q ** (-1)) < 1e-10:
         return k + 1  # Classical limit
-    return (q**(k+1) - q**(-(k+1))) / (q - q**(-1))
+    return (q ** (k + 1) - q ** (-(k + 1))) / (q - q ** (-1))
+
 
 print("Quantum dimensions at q = e^{2*pi*i/3}:")
 for k in range(10):
@@ -150,7 +153,7 @@ print(f"Trefoil at omega = e^(2*pi*i/3): {trefoil:.4f}")
 print(f"  |V(omega)|^2 = {abs(trefoil)**2:.4f}")
 
 # Figure-8
-fig8 = omega**(-2) - omega**(-1) + 1 - omega + omega**2
+fig8 = omega ** (-2) - omega ** (-1) + 1 - omega + omega**2
 print(f"Figure-8 at omega: {fig8:.4f}")
 print(f"  |V(omega)|^2 = {abs(fig8)**2:.4f}")
 
@@ -167,6 +170,7 @@ print("\n" + "=" * 80)
 print("IDEA 5: CONTINUED FRACTIONS")
 print("=" * 80)
 
+
 def continued_fraction(x, terms=10):
     """Compute continued fraction expansion"""
     cf = []
@@ -179,6 +183,7 @@ def continued_fraction(x, terms=10):
         x = 1 / frac
     return cf
 
+
 # Fine structure constant
 alpha_inv = 137.035999084
 cf_alpha = continued_fraction(alpha_inv, 10)
@@ -187,12 +192,15 @@ print(f"Continued fraction: {cf_alpha}")
 
 # Check if W33 numbers appear
 print("\nConvergents of 1/alpha:")
+
+
 def convergent(cf):
     """Compute convergent from continued fraction"""
     p, q = 1, 0
     for a in reversed(cf):
         p, q = a * p + q, p
     return p, q
+
 
 for i in range(1, len(cf_alpha)):
     p, q = convergent(cf_alpha[:i])
@@ -213,6 +221,7 @@ print("\n" + "=" * 80)
 print("IDEA 6: PRIME PATTERNS IN W33 NUMBERS")
 print("=" * 80)
 
+
 def factor(n):
     """Simple factorization"""
     factors = []
@@ -225,6 +234,7 @@ def factor(n):
     if n > 1:
         factors.append(n)
     return factors
+
 
 w33_extended = [40, 81, 90, 121, 133, 137, 173, 248, 51840]
 
@@ -269,7 +279,7 @@ Vertex + Face counts:
   Tetrahedron: 4 + 4 = 8
   Cube/Oct: 8 + 6 = 14 = dim(G2)!
   Dodeca/Icosa: 20 + 12 = 32
-  
+
 Total vertices: 4 + 8 + 6 + 20 + 12 = 50
 Total faces: 4 + 6 + 8 + 12 + 20 = 50
 
@@ -286,7 +296,7 @@ polytopes_4d = {
     "16-cell": 8,
     "24-cell": 24,
     "120-cell": 600,
-    "600-cell": 120
+    "600-cell": 120,
 }
 
 for name, v in polytopes_4d.items():
@@ -317,7 +327,7 @@ In GF(3): log_2(3) = 1.58 bits per element
 Holographic bound:
   If W33 encodes the universe, then
   S = A/(4*l_P^2) = (area in Planck units)
-  
+
   For a "W33 Planck cell":
   S_W33 = 121 * log(3) = 133 = dim(E7)!
 """)
@@ -409,17 +419,18 @@ W33 lives over GF(3), suggesting 3-adic relevance.
 
 In the 3-adic integers Z_3:
   Units: Z_3* = {x : |x|_3 = 1}
-  
+
 The multiplicative group (Z/3^n)* has order:
   phi(3^n) = 3^{n-1} * 2 = 2 * 3^{n-1}
 
 For n=4: phi(81) = 54 = 2 * 27 = 2 * 3^3
-  
+
 The additive group Z/81 has 81 elements.
   81 = |W33 cycles|!
 
 3-adic expansion of W33 numbers:
 """)
+
 
 def to_base_3(n):
     """Convert to base 3"""
@@ -429,7 +440,8 @@ def to_base_3(n):
     while n:
         digits.append(str(n % 3))
         n //= 3
-    return ''.join(reversed(digits))
+    return "".join(reversed(digits))
+
 
 for n in [40, 81, 90, 121, 137]:
     print(f"  {n} = {to_base_3(n)} (base 3)")
@@ -462,12 +474,12 @@ The configuration of 27 lines forms the E6 root system pattern!
 W33 CONNECTION:
   27 = 3^3
   81 = 3^4 = 3 * 27
-  
+
   So: |W33 cycles| = 3 * (lines on cubic)!
-  
+
 The symmetry group of the 27 lines is W(E6), the Weyl group of E6.
   |W(E6)| = 51840 = |Aut(W33)| (!)
-  
+
 THIS IS THE SAME GROUP!
 """)
 
@@ -498,7 +510,7 @@ Key numbers: 9801 = 99^2
 W33 CHECK:
   9801 = 99^2 = 81 * 121 + 0
   Actually: 81 * 121 = 9801 exactly!
-  
+
   9801 = |cycles| * |total| !!!
 """)
 
@@ -531,7 +543,7 @@ The 24 in q^{1/24} is crucial!
 
 Eta products give modular forms. The discriminant:
   Delta(tau) = eta(tau)^{24} = q * Product (1-q^n)^{24}
-  
+
 This is the modular form of weight 12 (= |bosons|!)
 
 Coefficients of Delta: tau(n) (Ramanujan tau function)
@@ -578,15 +590,17 @@ By Jacobi's formula:
   r_4(n) = 8 * sum_{d|n, 4 not dividing d} d
 """)
 
+
 def r4(n):
     """Number of ways to write n as sum of 4 squares"""
     if n == 0:
         return 1
     total = 0
-    for d in range(1, n+1):
+    for d in range(1, n + 1):
         if n % d == 0 and d % 4 != 0:
             total += d
     return 8 * total
+
 
 print("r_4(n) for W33 numbers:")
 for n in [40, 81, 90, 121, 137]:
@@ -603,6 +617,7 @@ print("\n" + "=" * 80)
 print("IDEA 16: INTEGER PARTITIONS")
 print("=" * 80)
 
+
 def partition_count(n, memo={}):
     """Count partitions of n"""
     if n in memo:
@@ -611,23 +626,24 @@ def partition_count(n, memo={}):
         return 1
     if n < 0:
         return 0
-    
+
     # Use recurrence with pentagonal numbers
     total = 0
     k = 1
     while True:
-        pent1 = k * (3*k - 1) // 2
-        pent2 = k * (3*k + 1) // 2
+        pent1 = k * (3 * k - 1) // 2
+        pent2 = k * (3 * k + 1) // 2
         if pent1 > n:
             break
-        sign = (-1)**(k+1)
+        sign = (-1) ** (k + 1)
         total += sign * partition_count(n - pent1, memo)
         if pent2 <= n:
             total += sign * partition_count(n - pent2, memo)
         k += 1
-    
+
     memo[n] = total
     return total
+
 
 print("p(n) = number of partitions:")
 for n in [40, 81, 90, 121]:
@@ -647,6 +663,7 @@ print("\n" + "=" * 80)
 print("IDEA 17: CATALAN NUMBERS")
 print("=" * 80)
 
+
 def catalan(n):
     """nth Catalan number"""
     if n <= 1:
@@ -655,8 +672,9 @@ def catalan(n):
     c[0] = c[1] = 1
     for i in range(2, n + 1):
         for j in range(i):
-            c[i] += c[j] * c[i-1-j]
+            c[i] += c[j] * c[i - 1 - j]
     return c[n]
+
 
 catalans = [catalan(i) for i in range(15)]
 print(f"Catalan numbers: {catalans}")

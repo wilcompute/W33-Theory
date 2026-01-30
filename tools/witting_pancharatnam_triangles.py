@@ -4,10 +4,11 @@
 Observed quantization clusters at ±π/6 and ±π/2.
 We compute phase of <a|b><b|c><c|a> for all triples where all overlaps are nonzero.
 """
+
 from __future__ import annotations
 
-import json
 import itertools
+import json
 from collections import Counter
 from pathlib import Path
 
@@ -26,9 +27,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -62,11 +63,13 @@ def main():
     for ang in phases:
         # wrap to (-pi, pi]
         a = np.arctan2(np.sin(ang), np.cos(ang))
-        targets = [np.pi/6, -np.pi/6, np.pi/2, -np.pi/2]
+        targets = [np.pi / 6, -np.pi / 6, np.pi / 2, -np.pi / 2]
         nearest = min(targets, key=lambda t: abs(a - t))
         clusters[round(float(nearest), 6)] += 1
 
-    raw_counts = Counter(round(float(np.arctan2(np.sin(a), np.cos(a))), 6) for a in phases)
+    raw_counts = Counter(
+        round(float(np.arctan2(np.sin(a), np.cos(a))), 6) for a in phases
+    )
 
     print("Witting Pancharatnam triangle phases")
     print("=" * 45)

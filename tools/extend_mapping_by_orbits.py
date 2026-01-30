@@ -7,12 +7,14 @@ For each 27-orbit of E8 roots under W(E6), we:
   - find a graph isomorphism to the Schlaefli skew graph
   - report phase/line-type/root-type distributions
 """
+
 from __future__ import annotations
 
+import json
 from collections import Counter, defaultdict
 from itertools import combinations, product
 from pathlib import Path
-import json
+
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -36,11 +38,11 @@ def build_w33():
             proj_points.append(v)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     edges = []
     for i in range(40):
-        for j in range(i+1, 40):
+        for j in range(i + 1, 40):
             if omega(proj_points[i], proj_points[j]) == 0:
                 edges.append((i, j))
 
@@ -50,45 +52,45 @@ def build_w33():
 def build_schlafli_skew():
     lines = []
     for i in range(1, 7):
-        lines.append(('E', i))
+        lines.append(("E", i))
     for i in range(1, 7):
-        lines.append(('C', i))
+        lines.append(("C", i))
     for i in range(1, 7):
-        for j in range(i+1, 7):
-            lines.append(('L', i, j))
+        for j in range(i + 1, 7):
+            lines.append(("L", i, j))
 
     def intersect(L1, L2):
         if L1 == L2:
             return False
         t1, t2 = L1[0], L2[0]
-        if t1 == 'E' and t2 == 'E':
+        if t1 == "E" and t2 == "E":
             return False
-        if t1 == 'C' and t2 == 'C':
+        if t1 == "C" and t2 == "C":
             return False
-        if t1 == 'E' and t2 == 'C':
+        if t1 == "E" and t2 == "C":
             return L1[1] != L2[1]
-        if t1 == 'C' and t2 == 'E':
+        if t1 == "C" and t2 == "E":
             return L1[1] != L2[1]
-        if t1 == 'E' and t2 == 'L':
+        if t1 == "E" and t2 == "L":
             return L1[1] in L2[1:]
-        if t1 == 'L' and t2 == 'E':
+        if t1 == "L" and t2 == "E":
             return L2[1] in L1[1:]
-        if t1 == 'C' and t2 == 'L':
+        if t1 == "C" and t2 == "L":
             return L1[1] in L2[1:]
-        if t1 == 'L' and t2 == 'C':
+        if t1 == "L" and t2 == "C":
             return L2[1] in L1[1:]
-        if t1 == 'L' and t2 == 'L':
+        if t1 == "L" and t2 == "L":
             return len(set(L1[1:]) & set(L2[1:])) == 0
         return False
 
     n = len(lines)
-    adj_inter = [[0]*n for _ in range(n)]
+    adj_inter = [[0] * n for _ in range(n)]
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if intersect(lines[i], lines[j]):
                 adj_inter[i][j] = adj_inter[j][i] = 1
     # Skew graph = complement
-    adj_skew = [[0]*n for _ in range(n)]
+    adj_skew = [[0] * n for _ in range(n)]
     for i in range(n):
         for j in range(n):
             if i == j:
@@ -155,11 +157,13 @@ def main():
     points, edges = build_w33()
     edge_to_idx = {tuple(sorted(e)): i for i, e in enumerate(edges)}
 
-    we6 = json.loads((ROOT / 'artifacts' / 'we6_orbit_labels.json').read_text())
-    root_to_orbit = {eval(k): v for k, v in we6['mapping'].items()}
-    edge_map = json.loads((ROOT / 'artifacts' / 'explicit_bijection_decomposition.json').read_text())
-    edge_to_root_idx = {int(k): v for k, v in edge_map['edge_to_root_index'].items()}
-    root_coords = [tuple(r) for r in edge_map['root_coords']]
+    we6 = json.loads((ROOT / "artifacts" / "we6_orbit_labels.json").read_text())
+    root_to_orbit = {eval(k): v for k, v in we6["mapping"].items()}
+    edge_map = json.loads(
+        (ROOT / "artifacts" / "explicit_bijection_decomposition.json").read_text()
+    )
+    edge_to_root_idx = {int(k): v for k, v in edge_map["edge_to_root_index"].items()}
+    root_coords = [tuple(r) for r in edge_map["root_coords"]]
 
     # Phase function on edges
     def phase(v):
@@ -177,17 +181,17 @@ def main():
     orbits = defaultdict(list)
     for ridx, r in enumerate(root_coords):
         info = root_to_orbit.get(tuple(r))
-        if info and info['orbit_size'] == 27:
-            orbits[info['orbit_id']].append(ridx)
+        if info and info["orbit_size"] == 27:
+            orbits[info["orbit_id"]].append(ridx)
 
     orbit_results = {}
     for oid, rlist in sorted(orbits.items()):
         # Build root graph adjacency (ip=1)
         n = len(rlist)
-        adj = [[0]*n for _ in range(n)]
+        adj = [[0] * n for _ in range(n)]
         for i in range(n):
             ri = np.array(root_coords[rlist[i]], dtype=float) / 2.0
-            for j in range(i+1, n):
+            for j in range(i + 1, n):
                 rj = np.array(root_coords[rlist[j]], dtype=float) / 2.0
                 if abs(float(np.dot(ri, rj)) - 1.0) < 1e-6:
                     adj[i][j] = adj[j][i] = 1
@@ -200,7 +204,7 @@ def main():
         lam_set = set()
         mu_set = set()
         for i in range(n):
-            for j in range(i+1, n):
+            for j in range(i + 1, n):
                 common = sum(1 for t in range(n) if adj[i][t] and adj[j][t])
                 if adj[i][j] == 1:
                     lam_set.add(common)
@@ -229,7 +233,7 @@ def main():
             ridx = rlist[u]
             # root type
             has_odd = any(abs(x) % 2 == 1 for x in root_coords[ridx])
-            rtype = 'half' if has_odd else 'integral'
+            rtype = "half" if has_odd else "integral"
             root_type_counts[rtype] += 1
             root_line_counts[rtype][line[0]] += 1
 
@@ -252,16 +256,18 @@ def main():
             "isomorphic": True,
             "line_type_counts": dict(line_type_counts),
             "phase_counts": dict(phase_counts),
-            "phase_line_counts": {str(k): dict(v) for k, v in phase_line_counts.items()},
+            "phase_line_counts": {
+                str(k): dict(v) for k, v in phase_line_counts.items()
+            },
             "root_type_counts": dict(root_type_counts),
             "root_line_counts": {k: dict(v) for k, v in root_line_counts.items()},
         }
 
-    out_path = ROOT / 'artifacts' / 'schlafli_by_orbit.json'
-    out_path.write_text(json.dumps(orbit_results, indent=2), encoding='utf-8')
+    out_path = ROOT / "artifacts" / "schlafli_by_orbit.json"
+    out_path.write_text(json.dumps(orbit_results, indent=2), encoding="utf-8")
     print(orbit_results)
     print(f"Wrote {out_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -4,6 +4,7 @@
 Verifies whether adding r->-r doubles the order (expected 51840) and
 whether the sign flip commutes with generator permutations.
 """
+
 from __future__ import annotations
 
 import json
@@ -60,8 +61,8 @@ def bfs_group(gens, max_size=200000):
 
 
 def main():
-    data = json.loads((ROOT / 'artifacts' / 'sp43_we6_generator_map.json').read_text())
-    gens = [g['root_perm'] for g in data['generator_maps']]
+    data = json.loads((ROOT / "artifacts" / "sp43_we6_generator_map.json").read_text())
+    gens = [g["root_perm"] for g in data["generator_maps"]]
 
     roots = build_e8_roots()
     root_to_idx = {r: i for i, r in enumerate(roots)}
@@ -92,10 +93,10 @@ def main():
         "order_base": order_base,
         "order_with_sign": order_plus,
     }
-    out_path = ROOT / 'artifacts' / 'signflip_group_order.json'
+    out_path = ROOT / "artifacts" / "signflip_group_order.json"
     out_path.write_text(json.dumps(out, indent=2))
     print(f"Wrote {out_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

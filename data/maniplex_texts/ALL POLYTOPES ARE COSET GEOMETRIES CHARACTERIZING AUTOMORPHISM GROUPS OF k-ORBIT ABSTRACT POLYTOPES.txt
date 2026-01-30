@@ -1,0 +1,2287 @@
+ALL POLYTOPES ARE COSET GEOMETRIES: CHARACTERIZING
+AUTOMORPHISM GROUPS OF k-ORBIT ABSTRACT POLYTOPES
+ISABEL HUBARD
+Institute of Mathematics, National Autonomous University of Mexico (IM UNAM), 04510 Mexico
+City, Mexico
+ELÍAS MOCHÁN
+Department of Mathematics, Northeastern University, 02115 Boston, USA
+Abstract. Abstract polytopes generalize the classical notion of convex polytopes to more gen-
+eral combinatorial structures. The most studied ones are regular and chiral polytopes, as it is
+well-known, they can be constructed as coset geometries from their automorphism groups. This is
+also known to be true for 2- and 3- orbit 3-polytopes. In this paper we show that every abstract
+n-polytope can be constructed as a coset geometry. This construction is done by giving a char-
+acterization, in terms of generators, relations and intersection conditions, of the automorphism
+group of a k-orbit polytope with given symmetry type graph. Furthermore, we use these results
+to show that for all k/negationslash= 2, there exist k-orbitn-polytopes with Boolean automorphism groups ,
+for alln≥3.
+1.Introduction
+In the 1970s several ideas extended the geometric study of convex polytopes to generalize them
+from diﬀerent points of view: while Tits studied incidence systems, Coxeter focused on tessellations
+of manifolds and Grünbaum proposed to move away from spherical tiles. In the early 1980s Danzer
+and Schulte put several of these ideas together to start the study of incidence polytopes , now called
+abstract polytopes . An abstract polytope is a ranked, partially ordered set which generalizes the
+face lattice of convex polytopes and tessellations. Thus, abstract polytopes generalize the classical
+notion of convex polytopes and tessellations to more general combinatorial structures.
+The degree of symmetry of an abstract polytope is measured by counting the number of ﬂag
+orbits under the action of its automorphism group, where a ﬂag is a maximal chain of the partial
+order. Abstractpolytopescanthenbeclassiﬁedintermsoftheirso-calledsymmetrytypegraph([2]),
+whichencodesalltheinformationofthelocalconﬁgurationofﬂagswithrespecttotheautomorphism
+group.
+Polytopes with only one ﬂag-orbit are called regularand are the most studied ones. Regular poly-
+topes have maximal degree of symmetry and in particular their automorphism groups are generated
+by involutions, often called “(abstract) reﬂections”. The book Abstract Regular Polytopes [11] by
+E-mail addresses :isahubard@im.unam.mx, j.mochanquesnel@northeastern.edu .
+1arXiv:2208.00547v2  [math.CO]  5 Apr 2023
+2 ALL POLYTOPES ARE COSET GEOMETRIES
+McMullen and Schulte is the standard reference and it is devoted exclusively to the study of abstract
+regular polytopes. There are 2n−1classes of n-polytopes with 2 ﬂag orbits, each of them corre-
+sponding to one symmetry type graph. Among them is the class of chiralpolytopes ([14]), which
+have no “reﬂectional” symmetry, but have maximal “rotational” one.
+The study of coset geometries goes back to Tits ([15]). The ideas behind this concept are to
+construct incidence structures using groups, and in particular were developed by Tits in connection
+to Coxeter groups. It is well-known that regular and chiral polytopes, as well as two-orbit polyhedra
+can be seen as coset geometries (see [3],[7] and [14]); this characterization of their automorphism
+groups constitute the most important tool to study them. In a recent paper ([8]), the authors showed
+that 3-orbit polyhedra, as well, can be seen as coset geometries, and this fact is used to construct
+3-orbit polyhedra from symmetric groups.
+The purpose of this paper is to prove the following theorem.
+Main Theorem. Every abstract polytope can be constructed as a coset geometry.
+To show this, we characterize the automorphism group of an abstract polytope with a given
+symmetry type graph, in terms of generators and relations, as well as some intersection conditions
+on some subgroups and cosets.
+Throughout the paper, we work with the ﬂag graph of a polytope, as opposed to the partial order.
+In fact, we shall often work with maniplexes , that is, colored graphs that generalize ﬂag graphs of
+polytopes ([16]).
+As pointed out before, symmetry type graphs are a great tool to classify polytopes (and mani-
+plexes) in terms of their automorphism groups. We will rely on them heavily in our study. There
+are some (necessary) conditions a graph must satisfy to be the symmetry type graph of a maniplex
+or polytope. Graphs satisfying such conditions are called premaniplexes (or admissible graphs) and
+will be properly deﬁned in Section 2.1. We believe our main theorem will shed light to the study
+ofk-orbit polytopes; in particular, it opens the gate to study one of the main problems in the area
+(listed as Problem 12 in [1]):
+Question 1. Given a premaniplex, does it exist a polytope (or maniplex) having such premaniplex
+as its symmetry type graph?
+The problem of ﬁnding polytopes or maniplexes with a given symmetry type graph is in general
+very diﬃcult, as one can note, for example, by looking at the history of chiral polytopes: although
+it was back in 1991 [14], when Schulte and Weiss studied chiral polytopes and classiﬁed their auto-
+morphism groups in terms of generators and relations, it took almost 20years to have a construction
+showing that such polytopes existed for all ranks n>3(see [12]).
+Very little is know about other particular instances of Question 1. It is known [2] that every
+premaniplex with 3 vertices with rank n≥3is the symmetry type graph of a polytope, and in [13]
+Pellicer, Potočnik and Toledo proved that every premaniplex of rank n≥3with 2 vertices is the
+symmetry type graph of a maniplex, but it is not known if the constructed maniplexes are polytopal
+(i.e. the ﬂag graph of a polytope).
+This paper is organized as follows. In Section 2 we give the basic concepts from the theory of
+abstract polytopes as well as maniplexes, and formally introduce the concepts of symmetry type
+graphs and premaniplexes. We also state a relaxed version of Question 1, that we answer later, in
+Section 4.1. We start Section 3 by going over the main tool used in this paper: voltage graphs.
+Then, by using them, in Section 3.1 we construct a maniplex Mfrom a premaniplex Xand a group
+G(satisfying some conditions). Then Gwill act onMas a group of automorphisms and the quotient
+ALL POLYTOPES ARE COSET GEOMETRIES 3
+ofMby the action of Gwill beX. This means that Mwill have symmetry type graph Xif and
+only if every automorphism of Mis represented by the action of an element of G.
+In Section 4.1, we use the construction of Section 3, as well as the results from [4], to characterize
+in terms of generators and relations the groups that are automorphism groups of a polytope with
+a given symmetry type graph. We do so by showing that automorphism groups of polytopes must
+satisfy certain “intersection conditions” for some subgroups and cosets, that depend on the symmetry
+type graph. In other words, we give an algebraic test for the group Gof Section 3.1 that tells us if
+the constructed maniplex Mis polytopal or not, thus translating the problem of ﬁnding polytopes
+with a given symmetry type graph to a group-theoretic one. This gives an answer to Problem 1 of
+[1]. In Section 4.2 we give the proof to the Main Theorem by constructing a polytope as a coset
+geometry from a voltage group. This gives an answer to Problem 2 of [1].
+We ﬁnish the paper in Section 5 by using the above result to construct k-orbitn-polytopes with
+Boolean automorphism groups, (that is, elementary Abelian 2-groups), for all k,n≥3. For this, we
+deﬁnecaterpillars as premaniplexes having exactly one generating tree, and study their coverings in
+order to avoid the possible extra symmetry that might happen when one uses our construction to
+obtain polytopes from groups.
+2.Abstract polytopes and maniplexes
+In this section we shall give the basic deﬁnitions and properties of abstract polytopes and ma-
+niplexes, and some relations between them. For more details, we refer the reader to [4], [11] and
+[16].
+A partially ordered set is said to be ﬂaggedif it has a (unique) least and a (unique) greatest
+element and each maximal chain, called a ﬂag, has the same ﬁnite cardinality. As all ﬂags have
+the same cardinality, say n+ 2, ﬂagged posets naturally admit an order-preserving function, the
+rank function , from the poset to the set {−1,0,1,...,n}. The rank function allows us to talk about
+ﬂag-adjacencies: given two ﬂags ΦandΨof a ﬂagged poset, they are said to be i-adjacent if they
+to diﬀer only in the element of rank i.
+An(abstract)n-polytope (also called an (abstract) polytope of rank n) is a ﬂagged poset Pin
+which the following conditions hold:
+•Diamond condition: for each ﬂag ΦofPand eachi∈{0,1,...,n−1}, there exists a unique
+i-adjacent ﬂag to Φ.
+•Strong ﬂag connectedness: for any two ﬂags ΦandΨofP, there exists a sequence of adjacent
+ﬂags connecting ΦtoΨ, such that all the ﬂags in the sequence contain Φ∩Ψas a subset.
+The elements of a polytope are called faces, and faces of rank iare calledi-faces. Given a ﬂag Φ,
+we often denote its i-face as Φi, and by Φiits (unique!) i-adjacent ﬂag. Recursively, if wis a word
+on{0,...,n−1}we denote by Φwithe ﬂag (Φw)i. It is straightforward to see that (Φi)i= Φ, and
+that (Φi)j= Φjif and only if i/negationslash=j.
+Given a ﬂagged poset Pone can deﬁne its ﬂag graph as the graphG(P)whose vertices are the
+ﬂags ofPand two ﬂags ΦandΨare connected by an edge of color i∈{0,1,...,n−1}if and
+only if they are i-adjacent. The ﬂag graph of an n-polytope is an n-maniplex , that is, an n-regular
+connected simple graph with a proper edge coloring with colors {0,...,n−1}such that if iandj
+are two colors satisfying that |i−j|>1, then the graph induced by edges of colors iandjis a
+disjoint union of 4-cycles. However, not every maniplex is the ﬂag graph of a polytope.
+While abstract polytopes generalize classical polytopes to combinatorial structures, maniplexes
+(introduced by Steve Wilson in 2012 [16]) generalize ﬂag graphs of a polytope as well as of the ﬂag
+4 ALL POLYTOPES ARE COSET GEOMETRIES
+graphs of maps on surfaces (that is, 2-cellular embeddings of connected graphs on surfaces). In order
+to unify our notation of abstract polytopes and maniplexes, when dealing with maniplexes we shall
+call its vertices ﬂags, and say that two of ﬂags are i-adjacent if they are the vertices of an edge of
+colori.
+It follows from the deﬁnition of a maniplex that each ﬂag is incident to exactly one edge of each
+color. Then, for each i∈{0,1,...,n−1}one can deﬁne rias the permutation of the set of ﬂags that
+maps each ﬂag to its i-adjacent one. In other words Φri= Ψif and only if ΦandΨarei-adjacent.
+The permutations ri, withi∈{0,1,...,n−1}, are all involutions with no ﬁxed points and, by
+connectivity, they generate a group of permutations on the ﬂags which acts transitively on them.
+Furthermore, if|i−j|>1thenrirjis also an involution with no ﬁxed points; thus, riandrj
+commute.
+Since Φriis the ﬂagi-adjacent to Φ, it is convenient to denote it by Φiand to follow the same
+recursive notation as before: Φwi= (Φw)iwherewis a word on{0,1,...,n−1}.
+The group/angbracketleftr0,r1...,rn−1/angbracketrightis called the monodromy orconnection group of the maniplex M, it
+shall be denoted by Mon (M)and we shall call each of its elements a monodromy . Ifwis a word
+on the alphabet {0,1,...,n−1}we identify wwith the monodromy x/mapsto→xw, that is, the word
+a1a2...akis identiﬁed with the monodromy ra1ra2...rak.
+Amaniplex homomorphism is a graph homomorphism that preserves the color of the edges. Using
+the connectedness of maniplexes one can see that every maniplex homomorphism is determined by
+the image of one ﬂag and that they are all surjective. The notions of isomorphism andautomorphism
+follow naturally.
+As with polytopes, we denote the automorphism group of a maniplex MbyΓ(M). By deﬁnition,
+ifγ∈Γ(M), then (Φri)γ= (Φi)γ= (Φγ)i= (Φγ)ri, for alli∈{0,1,...,n−1}, implying that
+ωγ=γωfor allω∈Mon (M).
+Note further that, since the action of Mon (M)is transitive, the action of Γ(M)is free (or
+semi-regular). Of course, this is true for both polytopes and maniplexes.
+LetMbe ann-maniplex. If I⊂{0,1,...,n−1}, we deﬁneMIas the subgraph of Minduced by
+the edges of colors in I. Ifi∈{0,1,...,n−1}, we use the symbol ito denote the set {0,1,...,n−
+1}\{i}, and more generally, if K⊂{0,1,...,n−1}, we denote its complement by K. In particular
+Miis the subgraph of Mobtained by removing the edges of color i. We will use this notation also
+for any graph with a coloring of its edges even if it is not a maniplex.
+In [4] Garza-Vargas and Hubard describe how to recover a polytope Pfrom its ﬂag graph: the
+elements of rank iofPare the connected components of Mi; the order is given as follows: given
+connected components FandGofMiandMj, respectively, we set F <Gif and only if i<jand
+F∩G/negationslash=∅.
+Moreover, starting with Mone can construct the set of i-faces as the connected components of
+Miand deﬁne the relation F <GforF∈MiandG∈Mjif and only if i<jandF∩G/negationslash=∅. The
+set of alli-faces, with i∈{0,...,n−1}together with/prime/prime</prime/primeis denoted byP(M). In [4] it is proved
+that ifMis any maniplex, then P(M)is a ﬂagged poset.
+It is not diﬃcult to see ([4]) that PandP/primeare isomorphic polytopes if and only if their ﬂag graphs
+G(P)andG(P/prime)are isomorphic. This fact implies the following theorem, which can be interpreted
+as saying that all the information of the polytope Pis encoded in its ﬂag graph.
+Theorem 2.1. [4]LetPbe a polytope and let M=G(P)be its ﬂag graph. Then Pis isomorphic
+(as a poset) toP(M)andΓ(P)∼=Γ(M).
+ALL POLYTOPES ARE COSET GEOMETRIES 5
+Theorem 5.3 of [4] gives a characterization of polytopal maniplexes, that is, those maniplexes that
+are isomorphic to the ﬂag graph of some polytope. Such characterization is given in terms of some
+path intersection properties of the maniplexes.
+Deﬁnition 2.2. LetMbe ann-maniplex. We say that Msatisﬁes the strong path intersection
+property (or SPIP) if for every two subsets I,J⊂{0,1,...,n−1}and for any two ﬂags ΦandΨ,
+whenever there is a path Wfrom ΦtoΨusing only edges of colors in Iand also a path W/primefrom Φ
+toΨusing only edges of colors in J, there also exists a path W/prime/primefrom ΦtoΨthat uses only edges
+of colors in I∩J.
+We say thatMsatisﬁes the weak path intersection property (or WPIP) if for any two ﬂags Φ
+andΨand for all k,m∈{0,1,...,n−1}, whenever there is a path Wfrom ΦtoΨwith only
+edges of colors in [0,m] :={0,1,...,m}and a path W/primefrom ΦtoΨwith only edges of colors in
+[k,n−1] :={k,k+ 1,...,n−1}, then there is also a path W/prime/primefrom ΦtoΨwith only edges of colors
+in[k,m] :={k,k+ 1,...,m}.
+Theorem 2.3. [4, Theorem 5.3] LetMbe a maniplex. Then the following conditions are all
+equivalent:
+• Mis polytopal.
+• Msatisﬁes the SPIP.
+• Msatisﬁes the WPIP.
+In any of these cases P(M)is a polytope whose ﬂag graph is isomorphic to M.
+2.1.Premaniplexes and symmetry type graphs. Ak-orbit maniplex is one with exactly kﬂag
+orbits under its automorphism group. When studying k-orbit maniplexes with k>1one ﬁnds that
+it is convenient to classify them in terms of the local structure of the ﬂags. For this reason, in [2],
+Cunningham et al. introduce the concept of symmetry type graph .
+Given a maniplex Mand a subgroup Gof the automorphism group of M, thesymmetry type
+graph ofMwith respect to G, denoted either by T(M,G)or byM/G, is constructed as follows: The
+vertex set ofT(M,G)is the set of ﬂag orbits of Munder the group G, and if ΦandΨarei-adjacent
+inMwe draw an edge of color ibetween their orbits. If ΦandΦiare in the same orbit under G,
+we draw a semi-edge of color iat the vertex corresponding to that orbit. Note that a semi-edge is
+diﬀerent from a loop in that it consists of an edge with only one endpoint, rather than an with two
+equal endpoints; that is, a semi-edge is incident to its vertex once, while a loop is incident to its
+vertex two times.
+When we speak about the symmetry type graph of M, we mean it with respect to Γ(M)and we
+simply writeT(M)instead ofT(M,Γ(M)).
+IfPis a polytope, the symmetry type graph of P(with respect to G)is deﬁned as the symmetry
+type graph (with respect to G) of its ﬂag graph.
+IfXis the symmetry type graph of an n-maniplex, then it is a connected graph in which every
+vertex is incident to exactly one edge of each color in {0,1,...,n−1}and it satisﬁes that if |i−j|>1,
+the paths of length 4 that alternate between the colors iandjare closed. However, it might not be
+a maniplex as it is not necessarily simple. We will call such a graph a n-premaniplex .
+IfXis a premaniplex and i,j∈{0,1,...,n−1}are non-consecutive, the connected components
+of the subgraph of Xinduced by the edges of colors iandjare not necessarily 4-cycles. In fact they
+can be any quotient of a 4-cycle, as illustrated in Figure 1.
+The notions of homomorphism, isomorphism, automorphism andmonodromy group from mani-
+plexes can all be easily extended to premaniplexes as well.
+The natural projection p:M→T (M,G)is, of course, a homomorphism (of premaniplexes).
+6 ALL POLYTOPES ARE COSET GEOMETRIES
+i j j
+i i j
+i
+jj ji
+j
+i
+i
+Figure 1. Components of two non-consecutive colors in a premaniplex.
+When studying polytopes (or maniplexes) and their symmetry type graphs two natural questions
+occur:
+•Given a premaniplex X, is there a polytope (or maniplex) whose symmetry type graph is
+X? (see Question 1)
+•Given a premaniplex X, what conditions must a group Gsatisfy so that there is a polytope
+(or maniplex)Psuch thatT(P,G)∼=X?
+In Section 4.1 we give a complete answer to the latter. Question 1 remains as a hard question, as
+even if we ﬁnd a polytope Pand a group Gsuch thatT(P,G)∼=X, it may still happen that Gis
+a proper subgroup of Γ(P). However, in Section 5 we give an inﬁnite family of premaniplexes that
+are in fact symmetry type graphs of polytopes.
+3.Voltage graphs
+The projection p:M→T (M,G)is an example of what is called a regular covering projection
+in graph theory (see [5] or [10] for more details). Given a regular covering projection p:/tildewideX→X,
+one may recover the graph /tildewideXfrom the graph Xusing what is known as a voltage assignment .
+We shall refer to a directed edge as a dart. Theinverseof a dartdis the dartd−1with the same
+edge, but diﬀerent orientation. Hence, loops and links (edges between two diﬀerent vertices) have
+two darts inverse to each other. In contrast, semi-edges have only one dart, inverse to itself. Given
+an edgeewith vertices vandu, if a dartdofehas direction from vtou, we shall say that vis the
+initial vertex of d(and denote it by I(d)) anduis the terminal vertex of d(and denote it by T(d)).
+Apathin a graph is a ﬁnite sequence of darts W=d1d2...,dksuch that the dart di+1starts
+at the endpoint of the dart di. Thestart-point of WisI(d1), and the endpoint of WisT(dk). If
+xandyare the start-point and endpoint of W, respectively, we say that Wgoes fromxtoyand
+we write this as W:x→y. If the endpoint and start-point of a path Ware the same vertex xwe
+say thatWis aclosed path based at x. We also consider that for every vertex xthere is an empty
+closed path based at x.
+If a pathWends at the start-point of a path V, we may deﬁne the product WVas their
+concatenation.
+Two paths WandW/primewith the same start-point and endpoint are said to be homotopic if one
+can transform WintoW/primeby a ﬁnite sequence of the following operations:
+ALL POLYTOPES ARE COSET GEOMETRIES 7
+•Inserting two consecutive inverse darts at any point, that is
+d1d2...didi+1...dk/mapsto→d1...didd−1di+1...dk,
+whereI(d) =T(di);
+•Deleting two consecutive inverse darts at any point, that is
+d1...didd−1di+1...dk/mapsto→d1d2...didi+1...dk;
+In this case we write W∼W/prime.
+It is easy to see that homotopy is an equivalence relation and that if W∼W/prime,V∼V/prime, and
+Wends at the start-point of V, thenWV∼W/primeV/prime. Therefore, we can think of the product of two
+homotopy classes of paths. The set of all homotopy classes of paths in a graph Xwith this operation
+is called the fundamental groupoid of Xand it is denoted by Π(X). We will often speak of a "path
+WinΠ(X)", but the reader should keep in mind that we are actually referring to its homotopy
+class.
+The subset of Π(X)consisting of all the (homotopy classes of) closed paths based at a vertex x
+forms a group known as the fundamental group of Xbased atxand it is denoted by Πx(X).
+Avoltage graph is a pair (X,ξ)whereXis a graph and ξis a groupoid antimorphism from Π(X)
+to a group G. In this case we say that ξis avoltage assignment (on X)and we call Gthevoltage
+group (ofξ). The element ξ(W)is called the voltage of W.
+Note that a voltage assignment is completely determined by the voltages of the darts of the graph,
+as the voltage ξ(W)of a pathW=d1d2...dk−1dkis simplyξ(dk)ξ(dk−1)...ξ(d1). In fact, if Dis
+the set of darts of a graph X, any function ξ:D→Gcan be extended to a voltage assignment as
+long asξ(d−1) =ξ(d)−1for every dart d∈D.
+Given a voltage graph (X,ξ)with voltage group G, we can construct the derived graph Xξas
+follows:
+•The vertex set is V×GwhereVis the vertex set of X.
+•The dart set is is D×GwhereDis the dart set of X.
+•If the dart dgoes fromxtoy, the dart (d,g)goes from the vertex (x,g)to(y,ξ(d)g).
+This is an undirected graph, as the inverse of the dart (d,g)is the dart (d−1,ξ(d)g). Note that for
+everyh∈G, the mapping (x,g)/mapsto→(x,gh )is an automorphism of Xξ. That is,Gcan be regarded
+as a group of automorphisms of Xξ.
+Given a path Wof a graphXstarting at a vertex xand given an element gin the voltage group,
+there is a unique path /tildewiderWinXξthat starts at (x,g)that projects to W. The path /tildewiderWis called a
+lift ofWand it is easy to see that it ends at (y,ξ(W)g)whereyis the endpoint of W(for details
+see [10]).
+In our case, we will work with graphs that have a coloring of its edges (and therefore, darts), so
+we will deﬁne that the color of the dart (d,g)is the same as the color of d.
+It is known (see [5] or [10]) that if p:/tildewideX→Xis a regular covering, there is a voltage assignment
+ξsuch that /tildewideXis isomorphic to Xξ. Moreover, given a spanning tree TofX, there is a voltage
+assignment ξsuch that /tildewideX∼=Xξandξ(d) = 1for every dart dinT.
+3.1.Voltage graphs that give maniplexes as derived graphs. Of course, we want to use
+voltage graphs to obtain maniplexes (and polytopes). In this section we shall give necessary and
+suﬃcient conditions on a voltage assignment ξon a premaniplex Xso thatXξis a maniplex.
+LetMbe a maniplex, Γa group of automorphisms of MandX=T(M,Γ). LetTbe a
+spanning tree of X. As mentioned before, there is a voltage assignment ξ: Π(X)→Γsuch thatXξ
+8 ALL POLYTOPES ARE COSET GEOMETRIES
+is isomorphic toMandξ(d) = 1for every dart dinT. The set of non-trivial voltages of darts in X
+then gives a generating set for the group Γ. In fact, if we keep only one element from each pair of
+inverse generators, what we get is the set of distinguished generators of Γ, as deﬁned in [2, Section
+5].
+Conversely, given a premaniplex Xwith fundamental groupoid Π(X), letTbe a spanning tree
+ofXand letξ: Π(X)→Γbe a voltage assignment, for some group Γsuch thatξ(d) = 1for every
+dartdinT. In what follows, we ﬁnd the conditions on Γandξthat ensure that Xξis actually a
+maniplex.
+First we want Xξto be connected. It is known (see [10]) that in order for Xξto be connected,
+ξ(D)must generate Γ, whereDdenotes the set of darts of X.
+Next,Xξmust be a simple graph. Thus, it must not have semi-edges or multiple edges. Note that
+a semi-edge of Xξthat starts at a vertex (x,γ)ends in (x,ξ(e)γ) = (x,γ), whereeis a semi-edge
+ofX. This implies that if the voltage of every semi-edge of Xis not trivial, we avoid semi-edges
+inXξ. Sinceξis an antimorphism we should have that ξ(e) =ξ(e−1) =ξ(e)−1, implying that the
+voltage of a semi-edge must have order two.
+To avoid multiple edges, we need to avoid diﬀerent darts with the same initial and terminal
+vertices; suppose Xξhas two parallel darts (d,σ)and(d/prime,τ). Since both darts start at the same
+vertex, we have that (I(d),σ) = (I(d/prime),τ), soI(d) =I(d/prime)andσ=τ. The common end-point of
+(d,σ)and(d/prime,τ)could be written as (y,ξ(d)σ)or(z,ξ(d/prime)σ), whereyis the end-point of dandz
+the end-point of d/prime. The fact that these two are the same means that y=zandξ(d) =ξ(d/prime). So
+(d,σ)and(d/prime,σ)are parallel darts in Xξif and only if dandd/primeare parallel darts in Xwith the
+same voltage. Thus, Xξhas no parallel darts if and only if no pair of parallel darts in Xhas equal
+voltages.
+Finally, we want to ensure that if |i−j|>1, the paths of length 4 in Xξthat alternate colors
+betweeniandjare closed. Let /tildewiderWbe one of these paths. Projecting /tildewiderWtoXwe get a path Win
+Xof length 4 that alternates colors between iandj, and since Xis a premaniplex we know that
+Wis closed. Suppose Wstarts at a vertex x. Then /tildewiderWgoes from a vertex of the form (x,γ)to
+(x,ξ(W)γ). So/tildewiderWis closed if and only if ξ(W)γ=γ, or in other words, if Whas trivial voltage.
+Summarizing this discussion, we arrive to the following lemma:
+Lemma 3.1. LetXbe a premaniplex and let ξ: Π(X)→Γbe a voltage assignment with a spanning
+treeTof trivial voltage on all its darts. Then Xξis a maniplex if and only if
+(1)The setξ(D)generates Γ, whereDis the set of darts of X,
+(2)ξ(d)has order exactly 2 when dis a semi-edge,
+(3)ξ(d)/negationslash=ξ(d/prime)whendandd/primeare parallel darts, and
+(4)if|i−j|>1every (closed) path Wof length 4 that alternates between the colors iandjhas
+trivial voltage.
+In Section 4 we shall translate the conditions in Lemma 3.1 to relations and inequalities that
+the generators of a group Γneed to satisfy to act on a maniplex with given symmetry type graph
+X. Before doing so, let us now take a closer look at the consequences of condition 4 of the above
+Lemma.
+Condition 4 of Lemma 3.1 invites us to introduce a new concept of homotopy: we say that two
+pathsWandW/primearemaniplex-homotopic if we can transform one into the other by a ﬁnite sequence
+of inserting or deleting pairs of inverse darts, as well as switching the colors of two consecutive darts
+with non-consecutive colors, that is
+d1d2...didi+1...dk/mapsto→d1d2...d/prime
+id/prime
+i+1...dk,
+ALL POLYTOPES ARE COSET GEOMETRIES 9
+where, ifc(d)denotes the color of d, we have that|c(di)−c(di+1)|>1, c(d/prime
+i) =c(di+1),c(d/prime
+i+1) =
+c(di),I(d/prime
+i) =I(di)andI(d/prime
+i+1) =T(d/prime
+i). Hence, a voltage assignment ξis well deﬁned when applied
+to the maniplex-homotopy class of paths if and only if it satisﬁes Condition 4 of Lemma 3.1. From
+this point on, whenever we speak about homotopy, homotopy class, fundamental groupoid, etc. we
+will be thinking in terms of maniplex-homotopy.
+One could use the group Γ :=/angbracketleftS|R/angbracketrightas the voltage group where Shas a generator αefor each
+edgeenot in the spanning tree of XandRhas one element α2
+eper each semi-edge eand one element
+αe4αe3αe2αe1for each path of length four alternating between two non-consecutive colors. In fact
+every voltage group that gives a maniplex should be a quotient of this group, or in other words Γis
+the “most general” group we can use as a voltage group to get a maniplex as the derived graph. The
+ideas of the proof of Theorem 5.2 of [6] show that X=T(U,G)whereUis the universal polytope of
+ranknandGis some group. This means that there is some voltage assignment ξonXwith voltage
+groupGsuch thatXξis isomorphic to the ﬂag graph of U. Because of the universality of Uwe get
+thatGandΓin fact are the same. In other words, if we use the most general group as our voltage
+group we will always get the ﬂag graph of the universal polytope as the derived graph.
+4.Intersection properties and coset geometries
+In order to prove the Main Theorem, we need to characterize, in terms of generators and relations,
+the groups Γthat act by automorphisms on a polytope Pin such a way that the symmetry type
+graphT(G(P),Γ)is isomorphic to a given premaniplex X. We shall do this in order to be able to
+recover the polytope Pas a coset geometry using the group Γ.
+We start with the premaniplex Xand provide it with a voltage assignment ξ. Recall that if
+(X,ξ)is a voltage graph with voltage group Γ, thenXξ/Γis isomorphic to X; conversely, ifM/Γ
+is isomorphic to Xthen there is a voltage assignment ξonXsuch thatXξis isomorphic toM.
+Hence, by characterizing the voltage assignments ξthat satisfy that the derived graph Xξis the ﬂag
+graph of a polytope, we determine the conditions that Γmust satisfy to be the automorphism group
+of a polytope with symmetry type X.
+4.1.Voltagegraphsandthepathintersectionproperty. Wehaveﬁguredouthowtoconstruct
+a maniplex from a premaniplex via voltage assignments. It is then natural to ask: when is the
+obtained maniplex the ﬂag graph of a polytope? The answer, as we shall see in this section, is closely
+related to Theorem 2.3. In fact, translating Theorem 2.3 to the setting of voltage assignments will
+give us conditions that take the form of intersection properties that certain distinguished subgroups
+and some left cosets must satisfy. Given two vertices x,yinXand a set of colors I∈{0,1,...,n−1},
+let us denote by Πx,y
+I(X)the set of (homotopy classes of) paths from xtoyinXthat only use darts
+with colors in the set I. Soξ(Πx,y
+I(X))denotes the set of voltages of all the paths of Xfromxtoy
+whose edges have colors in I.
+Theorem 4.1. LetXbe a premaniplex and let ξ: Π(X)→Γbe a voltage assignment such that Xξ
+is a maniplex. Then Xξis the ﬂag graph of a polytope if and only if
+(1) ξ(Πx,y
+I(X))∩ξ(Πx,y
+J(X)) =ξ(Πx,y
+I∩J(X)),
+for allI,J⊂{0,...,n−1}and all vertices x,yinX.
+ProofStart by assuming that Xξis the ﬂag graph of a polytope. Let xandybe vertices of Xand
+letI,J⊂{0,1,...,n−1}. Consider two paths, W∈Πx,y
+I(X)andW/prime∈Πx,y
+J(X), with the same
+voltage, say α∈Γ. When lifting WandW/primeinXξ, they lift to paths /tildewiderWand/tildewiderW/prime, respectively, that go
+from (x,1)to(y,α)(here 1 is the identity element of Γ) and satisfying that /tildewiderWuses edges with colors
+10 ALL POLYTOPES ARE COSET GEOMETRIES
+inIwhile/tildewiderW/primeuses edges with colors in J. In fact, one would deﬁne /tildewiderWand/tildewiderW/primeas the paths that
+start at (x,1)and follow the same sequence of colors as WandW/primerespectively. By Theorem 2.3
+Xξsatisﬁes the SPIP, which implies that there is a path /tildewiderW/prime/primefrom (x,1)to(y,α)that uses only
+colors inI∩J. Then, its projection W/prime/prime:=p(/tildewiderW/prime/prime)is a path in Xthat goes from xtoythat uses
+only colors in I∩Jand has voltage α. This proves that ξ(Πx,y
+I(X))∩ξ(Πx,y
+J(X))⊂ξ(Πx,y
+I∩J(X)).
+Since the other contention is given, equality (1) must hold.
+Now let us assume that equality (1) holds for all I,J⊂{0,1,...,n−1}and all vertices xandy.
+Let/tildewiderWand/tildewiderW/primebe paths in Xξfrom a vertex (x,γ)to a vertex (y,τ). LetIandJbe the sets of
+colors of darts of /tildewiderWand/tildewiderW/prime, respectively, and let W:=p(/tildewiderW)andW/prime:=p(/tildewiderW/prime)be the projections
+of the paths to X. Then, both WandW/primego fromxtoy, andWis a path with colors in I, while
+W/primeis a path with colors in J, that is,W∈Πx,y
+I(X)andW/prime∈Πx,y
+J(X). Furthermore, since /tildewiderWand
+/tildewiderW/primestart at (x,γ)and ﬁnish at (y,τ), they both have voltage α:=τγ−1. By hypothesis, there exists
+a pathW/prime/prime∈Πx,y
+I∩J(X)that also has voltage α. ThenW/prime/primehas a unique lift /tildewiderW/prime/primeinXξstarting at
+(x,γ). The path /tildewiderW/prime/primeends in (y,τ)and it uses darts of colors in I∩J. This proves that Xξsatisﬁes
+the SPIP and therefore, by Theorem 2.3, it is the ﬂag graph of a polytope. /square
+Note that when x=ythe setξ(Πx,y
+I(X)) =ξ(Πx
+I(X))is a group, since it is the image of a group
+under a groupoid antimorphism. Actually, we shall ﬁnd a set of distinguished generators for the
+groupξ(Πx
+I(X))in a similar way as the distinguished generators of the automorphism group of a
+polytope are found in [2]. Recall that XIis the subgraph of Xinduced by the edges with colors in
+I. LetXI(x)be the connected component of XIcontaining the vertex x. To ﬁnd a set of generators
+ofξ(Πx
+I(X)), ﬁx a spanning tree Tx
+IforXI(x). For each dart dinXI(x)but not in Tx
+Iwe get a
+cycleCdof the form WdVwhereWis the unique path contained in Tx
+Ifromxto the initial vertex
+ofd, andVis the unique path contained in Tx
+Ifrom the terminal vertex of dtox. Then, the set
+{Cd}, wheredruns among the darts in XI(x)not inTx
+I, is a generating set for Πx
+I(X). This imples
+that{ξ(Cd)}, wheredruns among the darts of XI(x)not inTx
+I, is a set of generators for ξ(Πx
+I(X)).
+Sinceξis a voltage assignment, we might consider only one dart dfor each edge. By denoting by
+Wythe unique path contained in Tx
+Ifromxtoy, we can see that Πx,y
+I(X) = Πx
+I(X)Wy(that is, a
+path fromxtoycan be written as a closed path starting and ﬁnishing at x, concatenated with Wy),
+which implies that ξ(Πx,y
+I(X)) =ξ(Wy)ξ(Πx
+I(X)). Therefore, all the intersection properties can be
+given in terms of left cosets of the groups ξ(Πx
+I), whose generators we already know.
+Theorem 4.1 gives an intersection property for each pair of vertices (x,y)and each two sets of
+colorsI,J⊂{0,1,...,n−1}. If we prove an intersection property for the pair (x,y), by taking the
+inverse on both sides we get the corresponding property for the pair (y,x), so we can consider only
+unordered pairs{x,y}, and this reduces the number of intersection properties to verify by a factor
+of 2. Still, the total number of intersection properties is quadratic on the number of vertices and
+exponential on the number of colors. This number gets too big too quickly; however, many of these
+properties are redundant, either because they are true for any group (for example, the intersection
+of a group and one of its subgroups is the smaller subgroup) or because they are a consequence of
+other intersection properties.
+Fortunately we may reduce the number of intersection properties to check by following the same
+proof but using the weakpath intersection property instead of the strong one. Doing this we get the
+following reﬁnement of the previous theorem.
+ALL POLYTOPES ARE COSET GEOMETRIES 11
+Theorem 4.2. Given a premaniplex Xand a voltage assignment ξsuch thatXξis a maniplex, Xξ
+is the ﬂag graph of a polytope if and only if
+(2) ξ(Πx,y
+[0,m](X))∩ξ(Πx,y
+[k,n−1](X)) =ξ(Πx,y
+[k,m](X)),
+for allk,m∈{0,...,n−1}and allx,y∈F.
+With Theorem 4.2 the number of intersection properties to check is now quadratic on the number
+of vertices and also quadratic on the rank. We can still reﬁne this theorem a little more with the
+following observations:
+•The casesk= 0andm=n−1say that the intersection of the whole voltage group with
+some subset is the subset itself, so they are trivially true for every voltage assignment.
+•In Theorem 4.2 one has to consider the cases when k > m. In such case, ξ(Πx,y
+[k,m](X))is
+the trivial group when x=yand the empty set when x/negationslash=y. However, if the intersection
+property holds for k=m+1, that is, ifξ(Πx,y
+[0,m](X))∩ξ(Πx,y
+[m+1,n−1](X)) =ξ(Πx,y
+∅(X)), then
+it also holds for k>m + 1. So one may only verify the intersection property for k≤m+ 1.
+•Ifyandy/primeare in the same connected component of X[k,m]and (2) is satisﬁed for the pair
+(x,y), then it is also satisﬁed for the pair (x,y/prime). To see this, let Wbe a path from ytoy/prime
+with colors in [k,m]and notice that Πx,y/prime
+I(X) = Πx,y
+I(X)WwheneverIcontains [k,m]. By
+taking voltages we get that ξ(Πx,y/prime
+I(X)) =ξ(W)ξ(Πx,y
+I(X)). This means that we can get the
+intersection property for the pair (x,y/prime)by multiplying the one for pair (x,y)byξ(W)on
+the left. So for each pair of numbers (k,m)we only need to verify one intersection property
+for each pair of connected components of X[k,m].
+Taking the previous observations into consideration, the maximum amount of necessary intersec-
+tion properties to check is v(v+ 1)/2/summationtextn−2
+m=0(m+ 1) =v(v+ 1)n(n−1)/4. But to reach this bound
+we need for every vertex to be in a diﬀerent connected component of X[k,m]for every pair (k,m)
+with 0<k≤m+ 1, which is only possible when every link has color 0 or n−1. This implies that
+every example where this bound is tight has at most 4 vertices (as for n≥3the colors 0andn−1
+are not consecutive).
+4.2.Constructingapolytopefromthevoltagegroup. Wehaveseenhowtorecoverapolytope
+from its ﬂag graph (see Theorem 2.1) and when Xξis the ﬂag graph of a polytope for a given
+premaniplex Xand a voltage assignment ξ(see Theorem 4.2). By concatenating the construction of
+XξfromXandξ, and the construction of a polytope PfromXξwe get a construction of a polytope
+fromXandξ. In this section, we translate this to give a construction only in terms of subgroups of
+Γand their cosets. This will give the proof of the Main Theorem.
+Letfbe a choice function on the connected subgraphs of X, that is, a function that assigns a base
+vertex to each such subgraph. Let Cbe a connected component of XIfor someI⊂{0,1,...,n−1}
+and letx=f(C). LetC:= (Xξ)I(x,1), that is, the connected component of (Xξ)Icontaining
+(x,1). Thus, if (x,γ)∈C, then there is a path /tildewiderWfrom (x,1)to(x,γ)which uses only colors in
+I, which implies that its projection is a closed path WinΠx
+I(X)with voltage γ. This means that
+when considering the action of ΓonXξ, the stabilizer of Ccoincides with ξ(Πx
+I(X)). If we now
+consider a coset ξ(Πx
+I(X))σ, this would be the set of elements of Γthat mapCto(Xξ)I(x,σ).
+We know that the i-faces of the polytope that has Xξas its ﬂag graph correspond to the connected
+components of (Xξ)i. This makes natural the following construction:
+GivenXandξsatisfying Theorem 4.2 and a choice function fon the connected subgraphs of X,
+we will construct a partially ordered set P(X,ξ). We will start by deﬁning the underlying set and
+12 ALL POLYTOPES ARE COSET GEOMETRIES
+a rank function and deﬁne the order relation later. Let us deﬁne the elements of rank iofP(X,ξ)
+as the right cosets of groups of the type ξ(Πx
+i(X))where
+x∈{f(C)|Cis a connected component of Xi}.
+We have to consider these groups as formal copies, that is, if xandx/primeare on diﬀerent connected
+components we consider ξ(Πx
+i(X))to be diﬀerent than ξ(Πx/prime
+i(X)), even if, as groups, they might be
+equal. Likewise, if j/negationslash=ibutξ(Πx
+i(X))coincides with ξ(Πx/prime
+j(X))we consider them to be diﬀerent
+inP(X,ξ). We could formalize this by saying that the elements of rank iinP(X,ξ)are pairs
+(C,ξ(Πx
+i)γ)withCa connected component of Xi,x=f(C)andγ∈Γ, but since xandialready
+appear in the notation, we may assume that ξ(Πx
+i(X))γstands for the pair (Xi(x),ξ(Πx
+i(X))γ).
+Now we shall deﬁne the order on P(X,ξ)as follows. First, for all i∈{0,1,...,n−1}and every
+vertexyinXwe look at the connected component Xi(y)and ﬁx a path going from its base vertex
+x=f(Xi(y))toy. We call this path Wy
+iand we denote its voltage by αy
+i:=ξ(Wy
+i).
+Deﬁnition 4.3 (Order inP(X,ξ)).Given 0≤i<j≤n−1, letCbe a connected component of
+XiandC/primebe a connected component of Xj, and letxandx/primebe their respective base ﬂags. Given
+γ,γ/prime∈Γ, we say that
+ξ(Πx
+i(X))γ <ξ (Πx/prime
+j(X))γ/primeif and only if αy
+iξ(Πx
+i(X))γ∩αy
+jξ(Πx/prime
+j(X))γ/prime/negationslash=∅,
+for somey∈C∩C/prime.
+Theorem 4.4. LetXbe a premaniplex and ξ: Π(X)→Γa voltage assignment satisfying Theo-
+rem 4.2. Let
+P(X,ξ) :={ξ(Πx(C))τ:Cis a connected component of Xi
+for somei∈[0,n−1],x=f(C),τ∈Γ},
+together with the order given in Deﬁnition 4.3. Then P(X,ξ)is a polytope in which Γacts by right
+multiplication with symmetry type graph X.
+Note that Γmight not be the full automorphism group of P(X,ξ), and thusXmight not be the
+symmetry type graph of P(X,ξ)with respect to its full automorphism group.
+ProofLet us denoteP(Xξ)asPandP(X,ξ)asQ. Note that Theorem 4.2 implies that Pis a
+polytope, and we want to show that Qis also a polytope (such that Q/Γ∼=X).
+By the discussion in Section 3.1, T(P,Γ)∼=X, since, by construction of Xξ, we have that
+Xξ/Γ∼=X. So in order to settle the theorem it is enough to ﬁnd a poset isomorphism ϕ:P→Q
+such that it commutes with the action of Γ, that is, such that /tildewideCσϕ =/tildewideCϕσfor all faces /tildewideCinQand
+allσ∈Γ.
+Let/tildewideCbe a face ofP. Hence, /tildewideCis a connected component of Xξ
+ifor some color i. LetC:=p(/tildewideC)
+and letx:=f(C). This implies that /tildewideChas a ﬂag (x,γ)for someγ∈Γ. Let/tildewideKbe the connected
+component of Xξ
+ithat contains (x,1). Then, the set of elements of Γthat map /tildewideKto/tildewideCisξ(Πx
+i(X))γ.
+We want to identify /tildewideCwith this coset, so we deﬁne /tildewideCϕ:=ξ(Πx
+i(X))γ. Note that ϕ:P→Qis well
+deﬁned, since if (x,γ/prime)is in/tildewideCthenγ/primeγ−1stabilizes /tildewideK, implying that γ/primeγ−1∈ξ(Πx
+i(X)). We want
+to prove that ϕis a poset isomorphism and that it commutes with Γ.
+Let us show ﬁrst that ϕcommutes with the action of Γ. Let/tildewideCbe a face inPand letσ∈Γ.
+By the deﬁnition of ϕwe know that /tildewideCϕ=ξ(Πx
+i(X))γwhereiis the rank of /tildewideC,x=f(p(/tildewideC))
+andγ∈Γis any element such that (x,γ)∈/tildewideC. On the other hand (/tildewideCσ)ϕ=ξ(Πx/prime
+i(X))γ/primewhere
+ALL POLYTOPES ARE COSET GEOMETRIES 13
+x/prime=f(p(/tildewideCσ))and(x/prime,γ/prime)∈/tildewideCσ. Also note that since /tildewideCand/tildewideCσare in the same orbit, then
+p(/tildewideC) =p(/tildewideCσ), and thusx=x/prime. Furthermore, the ﬂag (x,γσ ) = (x,γ)σis in/tildewideCσ. This proves that
+(/tildewideCσ)ϕ=ξ(Πx
+i(X))γσ= (/tildewideCϕ)σ.
+Now let us prove that ϕis an isomorphism of posets. Let /tildewideCand/tildewideC/primebe incident faces of Pof
+ranksiandj, respectively, with i < j(therefore, /tildewideC </tildewideC/prime). Hence, there is a ﬂag (y,τ)in/tildewideC∩/tildewideC/prime,
+which in turn implies that its ﬁrst entry, y, must be in C∩C/primewhereC=p(/tildewideC)andC/prime=p(/tildewideC/prime).
+Letx=f(C)andx/prime=f(C/prime). Note that the path Wy
+ifromxtoyis contained in C, whileWy
+j
+fromx/primetoyis contained in C/prime. Then, these paths have lifts /tildewiderWy
+iand/tildewiderWy
+jrespectively, that go from
+(x,(αy
+i)−1τ)and(x/prime,(αy
+j)−1τ), respectively, to (y,τ). Observe that /tildewiderWy
+iis contained in /tildewideCand/tildewiderWy
+j
+is contained in /tildewideC/prime. Thus, (αy
+i)−1τ∈ξ(Πx
+i(X))γand(αy
+j)−1τ∈ξ(Πx/prime
+j(X))γ/prime. Therefore
+τ∈αy
+iξ(Πx
+i(X))γ∩αy
+jξ(Πx/prime
+j(X))γ/prime=αy
+i(/tildewideCϕ)∩αy
+j(/tildewideC/primeϕ);
+but this means that /tildewideCϕ</tildewideC/primeϕinQ.
+Conversely, suppose that /tildewideCϕ </tildewideC/primeϕinQ. We want to show that /tildewideC </tildewideC/primeinXξ. Let us write
+/tildewideCϕ=ξ(Πx
+i(X))γ, whereiis the rank of /tildewideC,x:=f(p(/tildewideC))andγis an element of the voltage group
+suchthat (x,γ)∈/tildewideC. Similarly, wewrite /tildewideC/primeϕ=ξ(Πx/prime
+j(X))γ/prime, wherejistherankof /tildewideC/prime,x:=f(p(/tildewideC/prime))
+andγ/primeis an element of the voltage group such that (x/prime,γ/prime)∈/tildewideC/prime.
+By hypothesis αy
+iξ(Πx
+i(X))γandαy
+jξ(Πx/prime
+j(X))γ/primehave non-empty intersection for some y∈C∩C/prime.
+Letτbe an element in such intersection. Then (αy
+i)−1τ∈ξ(Πx
+i(X))γ. This implies that (x,(αy
+i)−1τ)
+is in the same connected component of (Xξ)ias(x,γ), that is (x,(αy
+i)−1τ)∈/tildewideC. But at the same
+time,thereisaliftof Wy
+ithatconnects (x,(αy
+j)−1τ)with (y,τ),andsinceWy
+idoesnotusethecolor i,
+itsliftiscontainedin /tildewideC, whichprovesthat (y,τ)∈/tildewideC. Similarly, thefactthat (αy
+j)−1τ∈ξ(Πx/prime
+j(X))γ/prime
+implies that (y,τ)∈/tildewideC/prime. Thus, we have proved that /tildewideC∩/tildewideC/primeis not empty, or in other words /tildewideC </tildewideC/prime
+inP.
+Therefore,ϕis an isomorphism and the theorem follows. /square
+5.Example: Caterpillars
+If one wants to build polytopes from premaniplexes in the way we have described in this paper,
+it is natural to start with inﬁnite families of premaniplexes. One could, of course, then start with
+premaniplexes with a ﬁxed number kof vertices. For example, one may want to construct 2-orbit
+polytopes (see [9]). If, on the other hand, we do not want to limit the number of vertices of the
+premaniplexes in the family a ﬁrst step could be to consider trees. However, since semi-edges are
+considered as cycles, there are no premaniplexes of rank n≥3whose underlying graph (without
+colors) is a tree. Thus, we study the closest thing to them: premaniplexes that are trees with an
+unlimited number of semi-edges. Hence, we deﬁne a caterpillar as a premaniplex in which every
+cycle is a semi-edge. In other words, a caterpillar is a premaniplex Xwith a unique spanning tree.
+In particular, a caterpillar does not have pairs of parallel links (edges joining diﬀerent vertices).
+If there are three links incident to one vertex, at least two of them must have colors diﬀering by
+more than 1, which would imply that there is a 4-cycle. This implies that caterpillars consist in fact
+of a single path W(which we will call the underlying path of X) and lots of semi-edges. Of course,
+the colors of two consecutive edges on the path must diﬀer by exactly one, otherwise there would be
+14 ALL POLYTOPES ARE COSET GEOMETRIES
+x0x1x2x3xkc1c2c3
+Figure 2. A ﬁnite caterpillar.
+a 4-cycle. We note here that the term caterpillar has been used in the graph theory literature for a
+very similar but slightly diﬀerent concept.
+Throughout this section, unless otherwise stated, Xwill denote a ﬁnite caterpillar (that is, one
+with a ﬁnite number of vertices) with underlying path W, and its vertices will be labeled by
+x0,x1,...,xk, ordered as they are visited by W. Furthermore, we denote by (xi,j)the dart of
+colorjatxiand bycithe color of the link connecting xi−1andxi.
+5.1.Caterpillar coverings. We want to construct polytopes from caterpillars. As often when
+constructing maniplexes and polytopes via voltage assignments from a premaniplex X, the derived
+maniplex might not have Xas the symmetry type graph with respect to the full automorphism
+group. However, the actual symmetry type graph is a quotient of X. For this reason, in this section
+we study quotients of caterpillars.
+Given a caterpillar, let us call an endpoint a vertex incident to just one link (that is, an endpoint
+of the underlying path). Note that a caterpillar is ﬁnite if and only if it has exactly two endpoints.
+Every symmetry of the caterpillar must map endpoints to endpoints. If a caterpillar is ﬁnite there is
+at most one non-trivial symmetry and its action on the vertices x0,x1,...,xkis given byxj/mapsto→xk−j.
+We call a ﬁnite caterpillar symmetric if it has a non-trivial symmetry.
+Awordwin{0,1,...,n−1}is simply a ﬁnite sequence w=a1a2...at, withai∈{0,1,...,n−1}
+for eachi= 1,2,...,t. Theinverseof a wordwis the word w−1that has the same colors as wbut
+written in reverse order. That is, if w=a1a2...atthenw−1=atat−1...a 1. A word is said to be
+reducedif it has no occurrence of the same color twice in a row; in other words, w=a1a2...atis
+reduced if and only if ai+1/negationslash=aifor alli= 1,2,...,t−1. We shall work with reduced words from
+now on. A word w=a1a2...atis apalindrome ifai=at+1−ifor alli∈{1,2,...,t}. A palindrome
+of even length can be written as vv−1for some word vand cannot be reduced. A palindrome of odd
+length can always be written as w=vav−1for some color aand some word v.
+Given a segment [x,y]in a caterpillar, its underlying word is the word wconsisting of the colors
+of the links in the path that goes from xtoy. When we speak of the underlying word of a caterpillar
+Xwe are referring to the underlying word of its underlying path in a ﬁxed orientation. Hence, we
+say that a segment [x,y]is apalindrome if its underlying word vis a palindrome.
+Proposition 5.1. LetXbe a ﬁnite caterpillar and let Ybe a premaniplex not isomorphic to X
+such that there is a premaniplex homomorphism h:X→Y. ThenYis a caterpillar. Moreover, if
+Yhas at least 2 vertices and S=c1c2...ckis the underlying word of X, then there is some r <k
+such thatw=c1c2...cris the underlying word of Yand one of the following statements is true:
+(1)There exist colors a1,a2,...,at∈{cr+ 1,cr−1}andb1,b2...,bt−1∈{c1+ 1,c1−1}such
+thatS=wa1w−1b1wa2w−1b2...bt−1watw−1.
+(2)There exist colors a1,a2,...,at∈{cr+ 1,cr−1}andb1,b2...,bt∈{c1+ 1,c1−1}such
+thatS=wa1w−1b1wa2w−1b2...bt−1watw−1btw.
+In any case, if i≡jmod 2r+ 2thenh(xi) =h(xj). Also ifi≡−j−1 mod 2r+ 2then
+h(xi) =h(xj).
+ALL POLYTOPES ARE COSET GEOMETRIES 15
+X:
+Y:c2c1cr
+c2c1crc2c1crc2c1cr
+c2c1cr
+c2c1cr
+c2c1cr1bb2
+a2at
+a1
+(a)Case 1
+X:
+Y:c2c1cr
+c2c1crc2c1crc2c1cr
+c2c1cr
+c2c1cr
+c2c1cra2
+a11bb2bt (b)Case 2
+Figure 3. The caterpillar Xcovers the caterpillar Yif and only if it “folds” into it.
+Before proving Proposition 5.1 let us remark that it simply means that the quotients of a cater-
+pillarXare those caterpillars Ysuch thatXcan be “folded” into Y. We illustrate this concept in
+Figure 3: the semi-edges are not drawn and the names of the vertices have been omitted, but the
+idea is that Xmust be “folded” into “layers” of r+ 1vertices and then each vertex will be projected
+to the vertex on Yin the same horizontal coordinate. The layer /lscriptconsists of the vertices xiwhere/floorleftBig
+i
+r+1/floorrightBig
+=/lscript(⌊x⌋denotes the integer part of x). Even layers go from left to right, while odd layers go
+from right to left, hence the underlying word of even layers is w=c1c2...crwhile the underlying
+word of odd layers is w−1=crcr−1...c 1.
+Now let us proceed with the proof.
+Proof of Proposition 5.1 Let us consider the equivalence relation ∼honXgiven byx∼hyif and
+only ifh(x) =h(y). Recall that by the deﬁnition of a premaniplex homomorphism x∼hyimplies
+thatxm∼hymfor every monodromy m. Therefore Yis isomorphic to X/∼h.
+We already know that all premaniplex homomorphisms are surjective (see Section 2). By hy-
+pothesishis not an isomorphism, which implies it cannot be injective. Let xandybe two diﬀerent
+vertices on Xsuch thatx∼hy. Letx0,x1,...,xkbe the sequence of vertices in the underlying
+path ofX. There is a monodromy msuch thatxm=x0, and sox0∼hymandymis diﬀerent than
+x0. Now letqbe the minimum positive number such that xq∼hx0. We know that qexists because
+x0∼hym. Note that if q= 1we would have that xi
+0∼hx0for alli, which would imply that the
+same is true for x1and in turn also for x2=xc2
+1and so on. This would mean that all the vertices
+ofXare equivalent, meaning that Yhas only one vertex and the proposition follows. So we may
+assume that q>1.
+We know that xq−1=xcqqis equivalent xcq
+0. Ifcq/negationslash=c1, we would have that xcq
+0=x0. This
+would imply that xq−1is equivalent to x0, contradicting the minimality of q. So we have proven
+thatcq=c1.
+16 ALL POLYTOPES ARE COSET GEOMETRIES
+Now note that if for some /lscriptwe have that x/lscript∼hx1, thenxc1
+/lscript∼hxc1
+1=x0. In particular this tells
+us that for /lscript < q−1,x/lscriptcannot be equivalent to x1. Now we can use the same argument we used
+to prove that cq=c1to prove that cq−1=c2. Analogously we can prove that c3=cq−2,c4=cq−3
+and so on. In other words, [x0,xq]is a palindrome. Since for all i,ciandci+1are diﬀerent, then
+qis odd, say q= 2r+ 1. Letvbe the underlying word of the segment [x0,xq]. Thenvmay be
+written as v=wcr+1w−1for some word w=c1c2...cr. Let us call a1:=cr+1and note that
+a1∈{cr+ 1,cr−1}.
+For alli= 0,1,...,k, let us denote by /hatwideithe residue of dividing iby2r+ 2. We will prove by
+induction on ithatxi∼hx/hatwideifor alli= 0,1,...,kand thatci=c/hatwideiwheniis not divisible by r+ 1,
+ci∈{c1+1,c1−1}ifiis an even multiple of r+1andci={cr+1,cr−1}wheniis an odd multiple
+ofr+ 1.
+Let our induction hypothesis be that x/lscript∼hx/hatwide/lscriptfor all/lscript<i, and thatc/lscript=c/hatwide/lscriptif/lscriptis not divisible
+byr+ 1.
+Let us start with the case when i≡0 mod 2r+ 2. In this case we want to prove that xi∼hx/hatwidei
+and thatci∈{c1+ 1,c1−1}. By our induction hypothesis we know that xi−1∼hx2r+1∼hx0and
+ci−1=c2r+1=c1. In particular ci∈{c1+ 1,c1−1}. This implies that xi=xci
+i−1∼hxci
+0=x0=x/hatwidei
+(sinceci/negationslash=c1). Thusisatisﬁes our claim.
+Now let us proceed with the case when iis an odd multiple of r+ 1, that is /hatwidei=r+ 1. In this
+case we want to prove that xi∼hx/hatwideiand thatci∈{cr+ 1,cr−1}. Our induction hypothesis tells
+us thatxi−1∼hxrand thatci−1=cr. Henceci∈{cr+ 1,cr−1}. Note that one of the colors
+in{cr+ 1,cr−1}is actuallycr+1, while the other is the color of a semi-edge incident to xr. Since
+xr+1∼hxrwe have that xi=xci
+i−1∼hxcir∼hxr∼hxr+1=x/hatwidei. Thusisatisﬁes our claim.
+Finally let us prove our claim for the case when iis not divisible by r+ 1. Our induction
+hypothesis tells us that xi−1∼hx/hatwidei−1. Note that /hatwidei=/hatwidei−1 + 1. Sinceiis not a multiple of r+ 1
+we know that x/hatwidei=xc/hatwidei
+/hatwidei−1is not equivalent to x/hatwidei−1. This implies that xc/hatwidei
+i−1is not equivalent to
+xi−1, and since it is adjacent to xi−1it must be equal to either xiorxi−2. Ifi≡1 mod 2r+ 2
+then, by induction hypothesis, xi−1∼hx0, but recall that x0∼hx2r+1=xqby deﬁnition, and
+by induction hypothesis xi−2∼hx/hatwidei−2=x2r+1. This means that xi−2∼hxi−1, soxc/hatwidei
+i−1must
+bexi, implying that ci=c/hatwidei. Similarly, if i≡r+ 2 mod 2r+ 2, using our induction hypothesis
+we get that xi−1∼hxr+1∼hxr∼hxi−2, which implies that xc/hatwidei
+i−1=xiand again we get that
+ci=c/hatwidei. Ifi/negationslash≡1 modr+ 1then our induction hypothesis tells us that ci−1=c/hatwidei−1/negationslash=c/hatwidei, and since
+xi−2=xci−1
+i−1=xc/hatwidei−1
+i−1, the only possibility is that xc/hatwidei
+i−1=xi, implying that ci=c/hatwideiand thatxi∼hx/hatwidei.
+Thus,isatisﬁes our claim. Note that we have also proven that if iis not divisible by r+ 1thenxi−1
+cannot be an endpoint of X.
+We have proved that xi∼hx/hatwideifor alli= 0,1,...,k. This implies automatically that if i≡
+jmod 2r+ 2thenxi∼hxj. Moreover, if i≡−j−1 mod 2r+ 2, then/hatwidei= 2r+ 1−/hatwidej. Now
+sincevis a palindrome, we know that x/lscript∼hx2r+1−/lscriptfor all/lscript= 0,1,..., 2r+ 1, in particular
+x/hatwidei=x2r+1−/hatwidej∼hx/hatwidej. This, together with the fact that xi∼hx/hatwideiandxj∼hx/hatwidej, implies that
+xi∼hxj.
+We have already proved that S=wa1w−1b1wa2w−1...and it ends after an occurrence of wor
+w−1. To end the proof note that since his surjective we already know exactly what premaniplex Y
+is: It is a caterpillar with vertex sequence h(x0),h(x1),...,h (xr). In fact, for i= 1,...,r−1and
+j= 0,1,...n−1we know that h(xi)is diﬀerent from h(xi)j=h(xj
+i)if and only if j∈{ci−1,ci};
+and ifi= 0(resp.r) thenh(xi)is diﬀerent from h(xi)jif and only if j=c1(resp.cr). /square
+ALL POLYTOPES ARE COSET GEOMETRIES 17
+If we look closely at the proof of Proposition 5.1 we notice that we have not actually used the
+fact thatXis ﬁnite, but only the fact that it has at least one endpoint. So the proposition may be
+generalized as follows:
+Proposition 5.2. LetXbe a caterpillar with at least one endpoint and let Ybe a premaniplex
+such that there is a premaniplex homomorphism (or covering) h:X→Y. ThenYis a caterpillar.
+Moreover, if Yhas at least two vertices and S=c1c2...is the color sequence of Xstarting at its
+endpoint, then there is some rsuch thatw=c1c2...cris the underlying word of Yand there exist
+colorsa1,a2,...∈{cr+1,cr−1}andb1,b2...∈{c1+1,c1−1}such thatS=wa1w−1b1wa2w−1b2....
+IfXis ﬁnite it ends after an occurrence of either worw−1. Ifi≡jmod 2r+2thenh(xi) =h(xj).
+Ifi≡jor−j−1 mod 2r+ 2, thenh(xi) =h(xj).
+Let us look now at the degenerate cases. If Yis only one vertex we can think that the previous
+theorems still hold but with wbeing the empty word, and since c1andcrdo not exist, we get rid
+of the restrictions ai∈{cr+ 1,cr−1}andbi∈{c1+ 1,c1−1}. In Figure 3 each layer of Xwould
+have only one vertex and no links; essentially Xwould be “standing up” instead of being folded. If
+Yis isomorphic to XthenS=wand we do not have any aiorbi. In Figure 3 Xwould have only
+one layer.
+If one would try to prove an analogous result as Proposition 5.2 for caterpillars with no ends,
+there would be two additional cases to consider: One would be when Yis a caterpillar with one
+endpoint with an underlying sequence of colors S=c1c2c3,.... In this case, the underlying inﬁnite
+word ofXwould beS−1aSfor some color a, whereS−1=...c 3c2c1. The other case would be that
+whenYis not a caterpillar but a premaniplex consisting of a cycle with underlying word wand all
+the edges not in the cycle are semiedges. In this case Xwould have the underlying inﬁnite word
+···www···.
+5.2.Caterpillars as STG of polytopes. Given a caterpillar X, we want to assign voltages to the
+semi-edges of Xin order to get the ﬂag graph of a polytope as the derived maniplex. To this end,
+we note that in caterpillars the conditions of Theorems 4.1 and 4.2 can be simpliﬁed, as stated in
+the following lemma:
+Lemma 5.3. LetXbe a caterpillar and let ξ: Π(X)→Γbe a voltage assignment such that all the
+darts in the underlying path of Xhave trivial voltage. Then the following statements are equivalent.
+(1)Xξis polytopal.
+(2)For every vertex xinXand all sets I,J⊂{0,1,...,n−1}the equation
+ξ(Πx
+I(X))∩ξ(Πx
+J(X)) =ξ(Πx
+I∩J(X))
+holds.
+(3)For every vertex xinXand allk,m∈{0,1,...,n−1}the equation
+ξ(Πx
+[0,m](X))∩ξ(Πx
+[k,n−1](X)) =ξ(Πx
+[k,m](X))
+holds.
+ProofToprovethiswehavetoseethatforeverysetofcolors I⊂{0,1,...,n−1}thesetξ(Πx,y
+I(X))
+is eitherξ(Πx
+I(X))or empty, depending on whether or not the segment of Wthat goes from xtoy
+(which we will denote [x,y]) uses only colors in I. In fact if [x,y]uses only colors in Ithen
+ξ(Πx,y
+I(X)) =ξ(Πx
+I(X)[x,y]) =ξ([x,y])ξ(Πx
+I(X)) = 1·ξ(Πx
+I(X)) =ξ(Πx
+I(X)).
+18 ALL POLYTOPES ARE COSET GEOMETRIES
+Note also that ξ(Πx,y
+I(X))∩ξ(Πx,y
+J(X))is empty if and only if one of the factors is empty. These
+observations together with Theorems 4.1 prove the equivalence between conditions 1 and 2, and with
+Theorem 4.2 we prove the equivalence between conditions 1 and 3, thus proving the lemma. /square
+Recall that a Boolean group (or anelementary Abelian 2-group) is a group in which every non-
+trivial element has order exactly 2. Thus, all Boolean groups are Abelian, and ﬁnitely generated
+Boolean groups are isomorphic to a direct product of cyclic groups of order 2.
+Proposition 5.4. Every caterpillar is the quotient of the ﬂag graph of a polytope by a Boolean
+group.
+ProofLetXbe a caterpillar. We shall ﬁnd a Boolean group Band a voltage assignment ξ:
+Π(X)→Bsuch thatXξis polytopal in the following way.
+First assign trivial voltage to all links of Wand a diﬀerent independent voltage to each semi-
+edge incident to x0. We shall give voltage assignments to the semi-edges (xi,j), recursively on i.
+If|j−ci|>1we assign the same voltage to (xi,j)as we did to (xi−1,j). On the ohter hand, if
+|j−ci|= 1, we assign a new element as the voltage (xi,j)independent from all the voltages of
+previous darts.
+Let us call the resulting voltage group Band denote this voltage assignment by ξ. By Lemma 3.1,
+Xξis a maniplex.
+Note further that ξsatisﬁes that if i∈{1,2,...,k};r,s∈{0,1,...,n−1}and(xi−1,r)and
+(xi,s)are semi-edges, then ξ(xi,s) =ξ(xi−1,r)if and only if r=sand|r−ci|/negationslash= 1. It also satisﬁes
+that ifi</lscript<j and(xi,r)and(xj,r)are semi-edges such that ξ(xi,r) =ξ(xj,r) =γ, then (x/lscript,r)
+is also a semi-edge and ξ(x/lscript,r) =γ.
+We claim that the second statement of Lemma 5.3 is satisﬁed, and hence, Xξis the ﬂag graph
+of a polytope. To show that this is the case, start by noticing that ξ(Πx
+I)is the group generated by
+the voltages of the semi-edges on the component XI(x).
+GivenI,J⊆{0,1,...,n−1}, suppose that for some vertex xthere is a semi-edge einXI(x)
+and a semi-edge e/primeinXJ(x)withξ(e) =ξ(e/prime) =γfor someγ∈Γ. Ife=e/primethene∈XI∩J(x).
+Ife/negationslash=e/prime, thene= (xi,r)ande/prime= (xj,r)for somei,j∈{0,...,k−1}andr∈{0,...,n−1};
+in particular r∈I∩J. Ifx∈[xi,xj]then, as previously observed, ξ(x,r) =γ(see Figure 4) and
+since (x,r)∈XI∩J(x)this means γis a generator of ξ(Πx
+I∩J). Ifx /∈[xi,xj]consider without loss
+of generality that xiis further away from xthanxj, in other words, that xj∈[xi,x](see Figure 5).
+Then [xi,x]uses only colors in Iand[xj,x]⊂[xi,x]uses only colors in J. Then since [xj,x]⊂[xi,x]
+we know that [xj,x]uses only colors in I∩J, meaning that e/prime∈XI∩J(x)and since its voltage is γ,
+this shows that γis always a generator of ξ(Πx
+I∩J). Therefore, we have shown that if γis a generator
+of bothξ(Πx
+I(X))andξ(Πx
+J(X)), then it is also a generator of ξ(Πx
+I∩J(X)).
+Now letσ∈ξ(Πx
+I(X))∩ξ(Πx
+J(X))be arbitrary. Since the group Bis Boolean, σmay be writtenas
+σ=γ1γ2...γswheretheelements γ1,γ2,...,γsarediﬀerentgeneratorsof B, andthisdecomposition
+is unique up to reordering of the factors. Since σ∈ξ(Πx
+I(X)), and because the voltage of a semi-
+edge is always a generator, each γiis also inξ(Πx
+I(X)), and since σ∈ξ(Πx
+J(X))eachγiis also
+inξ(Πx
+J(X)). But, this implies that each γiis inξ(Πx
+I∩J(X)), implying that σ∈ξ(Πx
+I∩J(X)).
+Therefore,ξ(Πx
+I)∩ξ(Πx
+J) =ξ(Πx
+I∩J). /square
+The ﬂag graphs of the polytopes constructed in the proof of Proposition 5.4 have some 4-cycles
+consisting of edges of consecutive colors. For this reason we say that they are degenerated .
+Proposition 5.4 is still true for inﬁnite caterpillars. Even if our algorithmic way of assigning
+voltages may not be doable, the voltage assignment is still well deﬁned as a quotient of the Boolean
+group with one generator assigned to each semi-edge.
+ALL POLYTOPES ARE COSET GEOMETRIES 19
+x xixjγr
+I Jγr
+γr
+Figure 4. Ifx∈[xi,xj]then (x,r)has voltage γ∈ξ(Πx
+I∩J(X)).
+xixj x
+J
+Iγr
+γr
+Figure 5. Ifxj∈[xi,x]thene/prime= (xj,r)is inXI∩J(x)and has voltage γ.
+Note that Proposition 5.4 says that every caterpillar Xis a symmetry type graph of a polytope
+Pwith respect to some group B≤Γ(P). However, Xis not necessarily the symmetry type graph
+ofPwith respect to the full automorphism group. That is, Xξmight have “extra” symmetry.
+Thus, we would want to investigate what could be the symmetry type of Xξwith respect to its full
+automorphism group.
+LetXbe a ﬁnite caterpillar and let ξ: Π(X)→Bbe the voltage assignment constructed in
+the proof of Proposition 5.4. If Xis symmetric, its non-trivial symmetry induces an automorphism
+ofBwhich is just a reordering of the generators, moreover, if the generators are given the natural
+order, it induces the reverse order on the generators. Using [10, Theorem 7.1], we get that this
+symmetry induces a symmetry of the derived maniplex, so in this case the original caterpillar is
+not the symmetry type of the derived polytope. But we will see in Theorem 5.5 that if Xis not
+symmetric, we can almost be certain that the caterpillar is in fact the symmetry type graph of the
+derived polytope by its full automorphism group. In this case, by “almost” we mean that if this is
+not the case, the caterpillar must have a very speciﬁc structure.
+Theorem 5.5. LetXbe a ﬁnite caterpillar of length kand rankn. LetS=c1c2...ckbe the
+underlying word of X. Then at least one of the following statements is true:
+(1)Xis symmetric.
+(2)Xis the STG of a polytope with a Boolean automorphism group.
+(3)c1is in{1,n−2}and there exist r∈{1,2,...,k−1}, anda1,a2,...,at∈{0,1,...,n−1}
+wheret= (k+1)/(2r+2), such thatS=wa1w−1bwa2w−1b...bwatw−1wherew=c1c2...cr
+andb= 0ifc1= 1andb=n−1ifc1=n−2.
+(4)There exist r∈{1,2,...,k−1}anda,b∈{0,n−1}such that
+S=waw−1bwaw−1b...bwaw−1bw,
+wherew=c1c2...cr. Also (c1,b),(cr,a)∈{(1,0),(n−2,n−1)}.
+20 ALL POLYTOPES ARE COSET GEOMETRIES
+c1c1biqqbi
+x0x1xj−1xjxj+1q
+κ λαβ
+Figure 6. The voltage of the path that alternates colors between qandbistarting at xjis
+λκ/negationslash= 1.
+ProofSuppose that Xis not symmetric and that it is not the STG of a polytope with a Boolean
+automorphism group.
+Consider the voltage assignment ξ: Π(X)→Bpreviously discussed. We say that two vertices x
+andyofXare equivalent ( x∼y) if there exist (or equivalently, for all) σ,τ∈Bsuch that the ﬂags
+(x,σ)and(y,τ)ofXξare in the same orbit under the action of the automorphism group of Xξ.
+Then∼is an equivalence relation preserved by i-adjacency, that is x∼y⇒xi∼yi. Moreover, the
+natural function h:X→X/∼is a premaniplex homomorphism, so by Proposition 5.1 there exists
+somersuch thatScan be written as wa1w−1b1wa2w−1b2...ending after an occurrence of either
+worw−1, wherew=c1c2...cr,ai∈{cr+ 1,cr−1}andbi∈{c1+ 1,c1−1}(see Figure 3). In
+fact,X/∼is isomorphic to the actual symmetry type graph of Xξ(mapping the orbit of (x,γ)to
+the equivalence class of xis an isomorphism).
+Note that since Xis not symmetric nor the STG of Xξwith respect to B, at leastb1exists.
+Letj∈{0,1...,k−1}be a number such that the segment [x0,xj+1]has the underlying word
+wa1w−1b1wa2w−1b2...w−1bifor somei. We know in particular that bidiﬀers from c1in exactly
+1. We want to prove that (c1,bi)∈{(1,0),(n−2,n−1)}. We will assume this is not the case and
+arrive to a contradiction.
+Letqbe theothercolor that diﬀers from biin exactly 1 (that is q= 2bi−c1). Since (c1,bi)/negationslash=
+(1,0),(n−2,n−1)we know that q∈{0,1,...,n−1}, and thus is the color of some edges of X. So
+there are semi-edges e,e/primeincident to x0of colorsqandbirespectively. Let α:=ξ(e)andβ:=ξ(e/prime).
+The voltage of the closed path ee/primeee/primeis(βα)2= 1becauseBis Boolean. This means that its lift,
+(the path of length 4 that starts at (x,1)inXξand alternates colors between qandbi) must be
+closed.
+By Theorem 5.1, we know that cj+1=c1/negationslash=q, so we know that the darts (xj+1,q)and(xj,q)
+are semi-edges. Let κ:=ξ(xj,q)andλ=ξ(xj+1,q). The path of length 4 that alternates colors
+betweenrandbiand starts at xjis closed, and its voltage is λκ. Note that since |q−bi|= 1the
+deﬁnition of ξtells us that ξ(xj,q)/negationslash=ξ(xj+1,q), that isλ/negationslash=κ, which implies λκ/negationslash= 1. This means
+that the path of length 4 in Xξstarting at (xj,1)and alternating colors between randbiis not
+closed (it ends at (xj,λκ)).
+We see that the path of length 4 in Xξstarting at (xj,1)and alternating colors between rand
+cj+1is not closed, but the one starting at (x0,1)is. This contradicts the fact that (xj,1)and
+(x0,1)are on the same orbit. The contradiction comes from the fact that there are edges of color
+q= 2bi−c1∈{0,1,...,n−1}, so to avoid this we must have that (c1,bi)∈{(1,0),(n−2,n−1)}.
+Sincec1is ﬁxed, every bimust be the same.
+ALL POLYTOPES ARE COSET GEOMETRIES 21
+If the underlying word of Xends after an occurrence of wwe may look at Xin the other
+direction. Then the previous result tells us that every aiis equal to some aand that (cr,a)∈
+{(1,0),(n−2,n−1)}. /square
+Remark 5.6.If the third or fourth condition is the one holding in Theorem 5.5, the actual STG of
+Xξmight be the ﬁnite caterpillar with underlying word w.
+By doing exactly the same proof, we obtain the following analogous result for inﬁnite caterpillars
+with one end-point (this would look like a ray or half-straight line):
+Theorem 5.7. LetXbe an inﬁnite caterpillar with one end-point. Let Sbe the sequence of colors
+of the underlying path of Xstarting at its end-point. Then one of the following statements is true:
+(1)Xis the STG of a polytope with a Boolean automorphism group.
+(2)Thereexist somenumber randcolorsb,a1,a2,...∈{0,1,...,n−1}such thatS=wa1w−1bwa2w−1bwa3w−1...
+wherew=c1c2...crand(c1,b)∈{(1,0),(n−2,n−1)}.
+Remark 5.8.If the second condition is the one holding, the actual STG of Xξmight be the ﬁnite
+caterpillar with underlying word w.
+Ifk≥3, it is easy to construct a caterpillar of length k−1(that is, with kvertices and k−1
+links) that does not satisfy properties (1),(3)and(4)(simply let c1= 0and then avoid the color 0
+for every other ci). Hence, we get the following corollary:
+Corollary 5.9. For everyn,k≥3, there is an abstract n-polytope with Boolean automorphism
+group that has kﬂag orbits.
+Acknowledgements
+The authors would like to thank Gabe Cunningham, Antonio Montero and Daniel Pellicer for
+helpful comments on early versions of this paper, as well as the referees for their useful comments.
+We also thank the ﬁnancial support of CONACyT grant A1-S-21678, and PAPIIT- DGAPA grant
+IN109023.
+References
+[1] Gabe Cunningham and Daniel Pellicer. Open problems on k-orbit polytopes. Discrete Mathematics , 341:1645–
+1661, 2018.
+[2] Gabe Cunningham, María Del Río-Francos, Isabel Hubard, and Micael Toledo. Symmetry type graphs of poly-
+topes and maniplexes. Annals of Combinatorics , 19:243–268, 2015.
+[3] Ludwig Danzer and Egon Schulte. Reguläre inzidenzkomplexe i. Geometriae Dedicata , 13:295–308, 1982.
+[4] Jorge Garza-Vargas and Isabel Hubard. Polytopality of maniplexes. Discrete Mathematics , 341(7):2068 – 2079,
+2018.
+[5] Jonathan L. Gross. Voltage graphs. Discrete Mathematics , 9(3):239 – 246, 1974.
+[6] Michael I. Hartley. All polytopes are quotients, and isomorphic polytopes are quotients by conjugate subgroups.
+Discrete & Computational Geometry , 21:289–298, 1999.
+[7] Isabel Hubard. Two-orbit polyhedra from groups. European Journal of Combinatorics , 31(3):943 – 960, 2010.
+[8] Isabel Hubard and Elías Mochán. Automorphism groups of 3-orbit polyhedra. Journal of Algebraic Combina-
+torics, 2022.
+[9] Isabel Hubard and Egon Schulte. Two-orbit polytopes. Preprint.
+[10] AleksanderMalnič.Groupactions, coveringsandliftsofautomorphisms. Discrete Mathematics , 182(1-3):203–218,
+1998.
+[11] Peter McMullen and Egon Schulte. Abstract Regular Polytopes . Number v. 92 in Abstract Regular Polytopes.
+Cambridge University Press, 2002.
+[12] Daniel Pellicer. A construction of higher rank chiral polytopes. Discrete Mathematics , 310:1222–1237, 04 2010.
+22 ALL POLYTOPES ARE COSET GEOMETRIES
+[13] Daniel Pellicer, Primož Potočnik, and Micael Toledo. An existence result on two-orbit maniplexes. Journal of
+Combinatorial Theory, Series A , 166:226 – 253, 2019.
+[14] Egon Schulte and Asia Ivić Weiss. Chiral polytopes. Applied geometry and discrete mathematics , 4:493–516,
+1991.
+[15] Jacques Tits. Géométries polyédriques et groupes simples. Atti Riunione Groupem. Math. Express. Lat. Firenze ,
+pages 66–88, 1961.
+[16] Steve Wilson. Maniplexes: Part 1: Maps, polytopes, symmetry and operators. Symmetry , 4, 12 2012.
+All polytopes are coset geometries: characterizing
+automorphism groups of k-orbit abstract polytopes
+Isabel Hubard
+Institute of Mathematics, Universidad Nacional Autónoma de México
+(IM UNAM), 04510 Mexico City, Mexico∗
+Elías Mochán
+Department of Mathematics, Northeastern University, 02115 Boston,
+USA†
+April 6, 2023
+Abstract
+Abstract polytopes generalize the classical notion of convex polytopes to
+more general combinatorial structures. The most studied ones are regular and
+chiral polytopes, as it is well-know they can be constructed as coset geometries
+∗email:isahubard@im.unam.mx
+†email:j.mochanquesnel@northeastern.edu
+1arXiv:2208.00547v2  [math.CO]  5 Apr 2023
+from their automorphism groups. This is also known to be true for 2- and
+3- orbit 3-polytopes. In this paper we show that every abstract n-polytope
+can be constructed as a coset geometry. This construction is done by giving a
+characterization, in terms of generators, relations and intersection conditions,
+of the automorphism group of a k-orbit polytope with given symmetry type
+graph. Furthermore, we use these results to show that for all k/negationslash= 2, there
+existk-orbitn-polytopes with Boolean groups (elementary abelian 2-groups) as
+automorphism group, for all n≥3.
+1 Introduction
+In the 1970s several ideas extend the geometric study of convex polytopes to
+generalize them from diﬀerent points of view: while Tits studied incidence sys-
+tems, Coxeter focused on tessellations of manifolds and Grünbaum proposed to
+move away from spherical tiles. In the early 1980s Danzer and Schulte put sev-
+eral of these ideas together to start the study of incidence polytopes , now called
+abstract polytopes . An abstract polytope is a ranked, partially ordered set which
+generalizes the face lattice of convex polytopes and tessellations. Thus, abstract
+polytopes generalize the classical notion of convex polytopes and tessellations
+to more general combinatorial structures.
+The degree of symmetry of an abstract polytope is measured by counting the
+numberofﬂagorbitsundertheactionofitsautomorphismgroup, whereaﬂagis
+a maximal chain of the partial order. Abstract polytopes can then be classiﬁed
+in terms of their so-called symmetry type graph ([2]), which encodes all the
+information of the local conﬁguration of ﬂags with respect to the automorphism
+group.
+Polytopeswithonlyoneﬂag-orbitarecalled regularandarethemoststudied
+2
+ones. Regular polytopes have maximal degree of symmetry and in particular
+their groups are generated by involutions, often called “(abstract) reﬂections”.
+The book [11] is the standard reference and it is devoted exclusively to the study
+of abstract regular polytopes. There are 2n−1classes of n-polytopes with 2 ﬂag
+orbits, each of them corresponding to one symmetry type graph. Among them
+is the class of chiralpolytopes ([14]), which have no “reﬂectional” symmetry,
+but have maximal “rotational” one.
+The study of coset geometries goes back to Tits ([15]). The ideas behind
+thisconceptaretoconstructincidencestructuresusinggroups, andinparticular
+were developed by Tits in connection to Coxeter groups. It is well-known that
+regular and chiral polytopes, as well as two-orbit polyhedra can be seen as coset
+geometries (see [3], [14] and [7]); this characterization of their automorphism
+groups constitute the most important tool to study them. In a recent paper
+([8]), we showed that also 3-orbit polyhedra can be seen as cosets and used this
+to construct 3-orbit polyhedra from symmetric groups.
+The purpose of this paper is to show the following theorem.
+Main Theorem. Every abstract polytope can be constructed as a coset geome-
+try.
+To show this, we characterize the automorphism group of an abstract poly-
+tope with a given symmetry type graph, in terms of generators and relations,
+as well as some intersection conditions on some subgroups and cosets.
+Throughoutthepaper, weworkwiththeﬂaggraphofapolytope, asopposed
+tothepartialorder. Infact, weshalloftenworkwith maniplexes , thatis, colored
+graphs that generalize ﬂag graphs of polytopes ([16]).
+As pointed out before, symmetry type graphs are a great tool to classify
+polytopes(andmaniplexes)intermsoftheirautomorphismgroups. Wewillrely
+on them heavily in our study. There are some (necessary) conditions a graph
+3
+must satisfy to be the symmetry type graph of a maniplex or polytope. Graphs
+satisfying such conditions are called premaniplexes (or admissible graphs) and
+will be properly deﬁned in Section 2.1. We believe our main theorem will shed
+light to the study of k-orbit polytopes, at the time that opens the gate to study
+one of the main problems in the area (listed as Problem 12 in [1]):
+Question1. Givenapremaniplex,doesitexistapolytope(ormaniplex)having
+such premaniplex as its symmetry type graph.
+The problem of ﬁnding polytopes or maniplexes with a given symmetry type
+graph is in general very diﬃcult, as one can note, for example, by looking at
+the history of chiral polytopes: although it was back in 1991 [14], when Schulte
+and Weiss studied chiral polytopes and classiﬁed their automorphism groups in
+terms of generators and relations, it took almost 20years to have a construction
+showing that such polytopes existed for all ranks n>3(see [12]).
+Very little is know about other particular instances of Question 1. It is
+known [2] that every premaniplex with 3 vertices with rank n≥3is the symme-
+try type graph of a polytope, and in [13] Pellicer, Potočnik and Toledo construct
+2-orbit maniplexes, but it is not known if they are polytopal (i.e. the ﬂag graph
+of a polytope).
+This paper is organized as follows. In Section 2 we give the basic concepts
+from the theory of abstract polytopes as well as maniplexes, and formally intro-
+duce the concepts of symmetry type graphs and premaniplexes. We also state
+a relaxed version of Question 1, that we answer later, in Section 4.1. We start
+Section 3 by going over the main tool used in this paper: voltage graphs. Then,
+by using them, in Section 3.1 we construct a maniplex Mfrom a premaniplex
+Xand a group G(satisfying some conditions). Then Gwill act onMby au-
+tomorphisms and the quotient of Mby the action of Gwill beX. This means
+thatMwill have symmetry type graph Xif and only if every automorphism
+4
+ofMis represented by the action of an element of G.
+In Section 4.1 we use the construction of Section 3 as well as the results
+from [4] to characterize in terms of generators and relations the groups that are
+automorphisms groups of a polytope with a given symmetry type graph. We
+do so by showing that automorphism groups of polytopes must satisfy certain
+“intersection conditions” for some subgroups and cosets, that depend on the
+symmetry type graph. In other words, we give an algebraic test for the group G
+of Section 3.1 that tells us if the constructed maniplex Mis polytopal or not,
+thus translating the problem of ﬁnding polytopes with a given symmetry type
+graph to a group-theoretic one. This gives an answer to Problem 1 of [1]. In
+Section 4.2 we give the proof to the Main Theorem by constructing a polytope
+as a coset geometry from a voltage group. This gives an answer to Problem 2
+of [1].
+We ﬁnish the paper in Section 5 by using the above result to construct (de-
+generated) k-orbitn-polytopes with with Boolean groups (elementary abelian
+2-groups) as automorphism group, for all k,n≥3. For this, we deﬁne caterpil-
+larsas premaniplexes having exactly one generating three and studying their
+coveringsinordertoavoidthepossibleextrasymmetrythatmighthappenwhen
+one uses our construction to obtain polytopes from groups.
+2 Abstract polytopes and maniplexes
+In this section we shall give the basic deﬁnitions and properties of abstract
+polytopes and maniplexes, and some relations between them. For more details,
+we refer the reader to [4], [11] and [16].
+A partially ordered set is said to be ﬂaggedif it has a (unique) least and a
+(unique) greatest element and each maximal chain, called a ﬂag, has the same
+5
+ﬁnite cardinality. As all ﬂags have the same cadrinality, say n+2, ﬂagged posets
+naturally admit an order-preserving function, the rank, from the poset to the
+set{−1,0,1,...,n}. The rank function allows us to talk about ﬂag-adjacencies:
+given two ﬂags ΦandΨof a ﬂagged poset, they are said to be i-adjacent if they
+satisfy to diﬀer only in the element of rank i.
+An(abstract)n-polytope (also called an (abstract) polytope of rank n) is a
+ﬂagged posetPin which the following conditions hold:
+•Diamond condition: for each ﬂag ΦofPand eachi∈{0,1,...,n−1},
+there exists a unique i-adjacent ﬂag to Φ.
+•Strong ﬂag connectedness: for any two ﬂags ΦandΨofP, there exists a
+sequence of adjacent ﬂags connecting ΦtoΨ, such that all the ﬂags in the
+sequence contain the faces of the intersection Φ∩Ψ.
+The elements of rank iin a polytope are called i-faces. Given a ﬂag Φ, we
+often denote its i-face as Φi, and by Φiits (unique!) i-adjacent ﬂag. Recur-
+sively, ifwis a word on{0,...,n−1}we denote by Φwithe ﬂag (Φw)i. It is
+straightforward to see that (Φi)i= Φ, and that Φi
+j= Φjif and only if i/negationslash=j.
+Given a ﬂagged poset Pone can deﬁne its ﬂag graph as the graphG(P)
+whose vertices are the ﬂags of Pand two ﬂags ΦandΨare connected by an
+edge of color i∈{0,1,...,n−1}if and only if they are i-adjacent. The ﬂag
+graph of an n-polytope is an n-maniplex , that is, an n-regular connected simple
+graph with a proper edge coloring with colors {0,...,n−1}such that if iand
+jare two colors satisfying that |i−j|>1, then the graph induced by edges of
+colorsiandjis a disjoint union of 4-cycles. However, not every maniplex is
+the ﬂag graph of a polytope.
+While abstract polytopes generalize classical polytopes to combinatorial
+structures, maniplexes (introduced by Steve Wilson in 2012 [16]) generalize
+ﬂag graphs of a polytope as well as of the ﬂag graphs of maps on surfaces (that
+6
+is, 2-cellular embeddings of connected graph on a surface). In order to unify our
+notation of abstract polytopes and maniplexes, when dealing with maniplexes
+we shall call ﬂagsto its vertices and say that two of them are i-adjacent if they
+are the vertices of an edge of colour i.
+It follows from the deﬁnition of a maniplex that each ﬂag is incident to
+exactly one edge of each color. Then, for each i∈{0,1,...,n−1}one can
+deﬁnerias the permutation of the set of ﬂags that maps each ﬂag its i-adjecent
+one. In other words Φri= Ψif and only if ΦandΨarei-adjacent.
+The permutations ri, withi∈{0,1,...,n−1}, are all involutions with no
+ﬁxed points and, by connectivity, they generate a group of permutations on the
+ﬂags which acts transitively on them. Furthermore, if |i−j|>1thenrirjis
+also an involution with no ﬁxed points; thus, riandrjcommute.
+Since Φriis the ﬂagi-adjacent to Φ, it is convenient to denote it by Φiand
+to follow the same recursive notation as before: Φwi= (Φw)iwherewis a word
+on{0,1,...,n−1}.
+The group/angbracketleftr0,r1...,rn−1/angbracketrightis called the monodromy orconnection group of
+the maniplexM, it shall be denoted by Mon (M)and we shall call each of
+its elements a monodromy . Ifwis a word on the alphabet {0,1,...,n−1}
+we identify wwith the monodromy x/mapsto→xw, that is ,the word a1a2...akis
+identiﬁed with the monodromy ra1ra2...rak.
+Amaniplex homomorphism is a graph homomorphism that preserves the
+color of the edges. Using the connectedness of maniplexes one can see that
+every maniplex homomorphism is determined by the image of one ﬂag and that
+they are all surjective. The notions of isomorphism andautomorphism follow
+naturally.
+As with polytopes, we denote the automorphism group of a maniplex Mby
+Γ(M). By deﬁnition, if γ∈Γ(M), then (Φri)γ= (Φi)γ= (Φγ)i= (Φγ)ri, for
+7
+alli∈{0,1,...,n−1}, implying that ωγ=γωfor allω∈Mon (M).
+Note further that, since the action of Mon (M)is transitive, the action of
+Γ(M)is free (or semi-regular). Of course, this is true for both polytopes and
+maniplexes.
+LetMbe ann-maniplex. If I⊂{0,1,...,n−1}, we deﬁneMIas the
+subgraph ofMinduced by the edges of colors in I. Ifi∈{0,1,...,n−1}, we
+use the symbol ito denote the set {0,1,...,n−1}\{i}, and more generally,
+ifK⊂{0,1,...,n−1}, we denote its complement by K. In particularMi
+is the subgraph of Mobtained by removing the edges of color i. We will use
+this notation also for any graph with a coloring of its edges even if its not a
+maniplex.
+In [4] Garza-Vargas and Hubard describe how to recover a polytope Pfrom
+its ﬂag graph: the elements of rank iofPare the connected components of Mi;
+the order is given as follows: given connected components FandGofMiand
+Mj, respectively, we set F <Gif and only if i<jandF∩G/negationslash=∅
+In [4] it is proved that if Mis any maniplex then P(M)is in fact a poset
+(actually, it is a ﬂagged poset).
+It is not diﬃcult to see ([4]) that PandP/primeare isomorphic polytopes if and
+only if their ﬂag graphs G(P)andG(P/prime)are isomorphic. This fact implies the
+following theorem, which can be interpreted as saying that all the information
+of the polytopePis encoded in its ﬂag graph.
+Theorem 2.1. [4] LetPbe a polytope and let M=G(P)be its ﬂag graph.
+ThenPis isomorphic (as a poset) to P(M)andΓ(P) = Γ(M).
+Theorem 5.3 of [4] gives a characterization of polytopal maniplexes, that is,
+those maniplexes that are isomorphic to the ﬂag graph of some polytope. Such
+characterization is given in terms of some path intersection properties of the
+maniplexes.
+8
+Deﬁnition 2.2. LetMbe ann-maniplex. We say that Msatisﬁes the strong
+path intersection property (or SPIP) if for every two subsets I,J⊂{0,1,...,n−
+1}and for any two ﬂags ΦandΨ, if there is a path Wfrom ΦtoΨusing only
+darts of colors in Iand also a path W/primefrom ΦtoΨusing only darts of colors in
+J, then there also exists a path W/prime/primefrom ΦtoΨthat uses only darts of colors
+inI∩J.
+We say thatMsatisﬁes the weak path intersection property (or WPIP) if
+for any two ﬂags ΦandΨand for allk,m∈{0,1,...,n−1}, whenever there is
+a pathWfrom ΦtoΨwith only darts of color in [0,m] :={0,1,...,m}and a
+pathW/primefrom ΦtoΨwithonlydartsofcolorsin [k,n−1] :={k,k+1,...,n−1},
+then there is also a path W/prime/primefrom ΦtoΨwith only darts of colors in [k,m] :=
+{k,k+ 1,...,m}.
+Theorem 2.3. [4] LetMbe a maniplex. Then the following conditions are all
+equivalent:
+•Mis polytopal.
+•Msatisﬁes the SPIP.
+•Msatisﬁes the WPIP.
+In any of these cases P(M)is a polytope whose ﬂag graph is isomorphic to
+M.
+2.1 Premaniplexes and symmetry type graphs
+Ak-orbit maniplex is one with exactly kﬂag orbits under its automorphism
+group. When studying k-orbit maniplexes with k > 1one ﬁnds that it is
+convenient to classify them in terms of the local structure of the ﬂags. For this
+reason, in [2], Cunningham et al. introduce the concept of symmetry type graph .
+9
+Given a maniplex Mand a subgroup Gof the automorphism group of M,
+thesymmetry type graph of Mwith respect to G, denoted either by T(M,G)
+or byM/G, is constructed as follows: The vertex set of T(M,G)is the set of
+ﬂag orbits ofMunder the group G, and if ΦandΨarei-adjacent inMwe
+draw an edge of color ibetween their orbits. If ΦandΦiare in the same orbit
+underG, we draw a semi-edge of color iat the vertex corresponding to that
+orbit. Recall that a semi-edge is diﬀerent from a loop in that it consists of only
+one dart which is inverse to itself, rather than two darts starting at the same
+vertex; less formally, a semi-edge is incident to the vertex once, while a loop is
+incident to the vertex two times.
+When we speak about the symmetry type graph of M, we mean it with
+respect to Γ(M)and we simply write T(M)instead ofT(M,Γ(M)).
+IfPis a polytope, the symmetry type graph of P(with respect to G)is
+deﬁned as the symmetry type graph (with respect to G) of its ﬂag graph.
+IfXis the symmetry type graph of an n-maniplex, then it is a connected
+graph in which every vertex is incident to exactly one edge of each color in
+{0,1,...,n−1}and it satisﬁes that if |i−j|>1, the paths of length 4 that
+alternate between the colors iandjare closed. However, it might not be
+a maniplex as it is not necessarily simple. We will call such a graph a n-
+premaniplex .
+IfXis a premaniplex and i,j∈{0,1,...,n−1}are non-consecutive, the
+connected components of the subgraph of Xinduced by the edges of colors i
+andjare not necessarily 4-cycles. In fact they can be any quotient of a 4-cycle,
+as ilustrated in Figure 1.
+Thenotionsof homomorphism, isomorphism, automorphism andmonodromy
+groupfrom maniplexes can all be easily extended to premaniplexes as well.
+The natural projection p:M→T (M,G)is, of course, a homomorphism
+10
+i j j
+i i j
+i
+jj ji
+j
+i
+iFigure 1: Components of two non-consecutive colors in a premaniplex.
+(of premaniplexes).
+When studying polytopes (or maniplexes) and their symmetry type graphs
+two natural questions occur:
+Question 2. Given a premaniplex X, is there a polytope (or maniplex) whose
+symmetry type graph is X?
+Question 3. Given a premaniplex X, what conditions must a group Gsatisfy
+so that there is a polytope (or maniplex) Psuch thatT(P,G)∼=X?
+In Section 4.1 we give a complete answer to Question 3. Question 2 remains
+as a hard question, as even if we ﬁnd a polytope Pand a group Gsuch that
+T(P,G)∼=X, it may still happen that Gis a proper subgroup of Γ(P). How-
+ever, in Section 5 we give an inﬁnite family of premaniplexes that are in fact
+symmetry type graphs of polytopes.
+3 Voltage graphs
+The projection p:M→T (M,G)is an example of what is called a regular
+covering projection in graph theory (see [5] or [10] for more details). Given a
+11
+regular covering projection p:/tildewideX→X, one may recover the graph /tildewideXfrom the
+graphXusing what is known as a voltage assignment .
+Apathin a graph is a ﬁnite sequence of darts W=d1d2...,dksuch that
+the dartdi+1starts at the endpoint of the dart di. Thestartpoint of Wis the
+starting point of d1(denotedI(d1)), and the endpoint of Wis the endpoint of dk
+(denotedT(dk)). Ifxandyare the startpoint and endpoint of W, respectively,
+we say that Wgoes fromxtoyand we write this as W:x→y. If the endpoint
+and startpoint of a path Ware the same vertex xwe say that Wis aclosed path
+based atx. We also consider that for every vertex xthere is an empty closed
+path based at x.
+If a pathWends at the startpoint of a path V, we may deﬁne the product
+WVas their concatenation.
+Two pathsWandW/primewith the same startpoint and endpoint are said to be
+homotopic if one can transform WintoW/primeby a ﬁnite sequence of the following
+operations:
+•Inserting two consecutive inverse darts at any point, that is
+d1d2...didi+1...dk/mapsto→d1...didd−1di+1...dk,
+whereI(d) =T(di);
+•Deleting two consecutive inverse darts at any point, that is
+d1...didd−1di+1...dk/mapsto→d1d2...didi+1...dk;
+In this case we write W∼W/prime.
+Itiseasytoseethathomotopyisanequivalencerelationandthatif W∼W/prime
+andV∼V/prime, thenWV∼W/primeV/prime. Therefore, we can think of the product of two
+homotopy classes of paths. The set of all homotopy classes of paths in a graph
+Xwith this operation is called the fundamental groupoid of Xand it is denoted
+12
+byΠ(X). We will often speak of a "path WinΠ(X)", but the reader should
+keep in mind that we are actually referring to its homotopy class.
+The subset of Π(X)consisting of all the (homotopy classes of) closed paths
+based at a vertex xforms a group known as the fundamental group of X(based
+atx)and it is denoted by Πx(X).
+Avoltage graph is a pair (X,ξ)whereXis a graph and ξis a groupoid
+antimorphism from Π(X)to a group G. In this case we say that ξis avoltage
+assignment (on X)and we call Gthevoltage group (of ξ). The element ξ(W)
+is called the voltage of W.
+Note that a voltage assignment is completely determined by the voltages of
+the darts of the graph, as the voltage ξ(W)of a pathW=d1d2...dk−1dkis
+simplyξ(dk)ξ(dk−1)...ξ(d1).
+Given a voltage graph (X,ξ)with voltage group G, we can construct the
+derived graph Xξas follows:
+•The vertex set is V×GwhereVis the vertex set of X.
+•The dart set is is D×GwhereDis the dart set of X.
+•The dart (d,g)starts at the vertex (x,g)and ends at the vertex (x,ξ(d)g).
+Thisisanundirectedgraph,astheinverseofthedart (d,g)isthedart (d−1,ξ(d)g).
+Given a path Wstarting at a vertex xand given an element gin the voltage
+group, there is a unique path /tildewiderWinXξthat starts at (x,g)that projects to W.
+The path /tildewiderWis called a lift ofWand it is easy to see that it ends at (x,ξ(W)g)
+(for details see [10]).
+In our case, we will work with graphs that have a coloring of its edges (and
+therefore, darts), so we will deﬁne that the color of the dart (d,g)is the same
+as the color of d.
+It is known (see [5] or [10]) that if p:/tildewideX→Xis a regular covering, there is
+a voltage assignment ξsuch that /tildewideXis isomorphic to Xξ.
+13
+3.1 Voltage graphs that give maniplexes as derived
+graphs
+Of course, we want to use voltage graphs to obtain maniplexes (and polytopes).
+In this section we shall give necessary and suﬃcient conditions on a voltage
+assignment ξon a premaniplex Xso thatXξis a maniplex.
+In [2, Section 5] the authors ﬁnd a set of distinguished generators for the
+automorphism group of a maniplex Mwith a given symmetry type graph X. It
+is easy to see that such distinguished generators can be thought of as voltages
+assigned to X(or more precisely to Π(X)) so that the derived graph is M. To
+do this, one must choose a spanning tree TonXand assign trivial voltage to
+all its darts. If we want to start with a premaniplex X, we need to be careful
+with the way we assign voltages so that the derived graph is indeed a maniplex.
+LetXbe a premaniplex with fundamental groupoid Π(X), and letξ:
+Π(X)→Γbe a voltage assignment, for some group Γ. We want to ﬁnd the
+conditions on Γandξthat ensure that Xξis actually a maniplex, but before
+doing so, let us assume that there is a spanning tree TofXwith trivial voltage
+in all its darts.
+First we want Xξto be connected. It is known (see [10]) that in order for
+Xξto be connected, ξ(D)must generate Γ, whereDdenotes the set of darts of
+D.
+Next,Xξmust be a simple graph. Thus, it must not have semi-edges nor
+multiple edges. Note that a semi-edge of Xξthat starts at a vertex (x,γ)ends
+in(x,ξ(e)γ) = (x,γ), whereeis a semi-edge of X. This implies that if the
+voltage of every semi-edge of Xis not trivial, we avoid semi-edges in Xξ. Since
+ξis an antimorphism we should have that ξ(e) =ξ(e−1) =ξ(e)−1, implying
+that the voltage of a semi-edge must have order two.
+To avoid multiple edges, we need to avoid diﬀerent darts with the same
+14
+initialandterminalvertices; suppose Xξhastwoparalleldarts (d,σ)and(d/prime,τ).
+Since both darts start at the same vertex, we have that (I(d),σ) = (I(d/prime),τ),
+soI(d) =I(d/prime)andσ=τ. The common end-point of (d,σ)and(d/prime,τ)could
+be written as (y,ξ(d)σ)or(z,ξ(d/prime)σ), whereyis the end-point of dandzthe
+end-point of d/prime. The fact that these two are the same means that y=zand
+ξ(d) =ξ(d/prime). So(d,σ)and(d/prime,σ)are parallel darts in Xξif and only if dandd/prime
+are parallel darts in Xwith the same voltage. Thus, Xξhas no parallel darts
+if and only if no pair of parallel darts in Xhas equal voltages.
+Finally, we want to ensure that if |i−j|>1, the paths of length 4 in Xξ
+that alternate colors between iandjare closed. Let /tildewiderWbe one of these paths.
+Projecting /tildewiderWtoXwe get a path WinXof length 4 that alternates colors
+betweeniandj, and since Xis a premaniplex we know that Wis closed.
+SupposeWstarts at a vertex x. Then/tildewiderWgoes from a vertex of the form (x,γ)
+to(x,ξ(W)γ). So/tildewiderWis closed if and only if ξ(W)γ=γ, or in other words,
+Whas trivial voltage. Summarizing this discussion, we arrive to the following
+lemma:
+Lemma 3.1. LetXbe a premaniplex and let ξ: Π(X)→Γbe a voltage
+assignment with a spanning tree Tof trivial voltage on all its darts. Then Xξ
+is a maniplex if and only if
+1. The set ξ(D)generates Γ, whereDis the set of darts of X,
+2.ξ(d)has order exactly 2 when dis a semi-edge,
+3.ξ(d)/negationslash=ξ(d/prime)whendandd/primeare parallel darts, and
+4. if|i−j|>1every (closed) path Wof length 4 that alternates between the
+colorsiandjhas trivial voltage.
+In Section 4 we shall translate the conditions in Lemma 3.1 to relations
+and inequalities that the generators of a group Γneed to satisfy to act on a
+15
+maniplex with given symmetry type graph X. Before doing so (in the next
+section), Let us now take a closer look at the consequences of condition 4 of the
+above Lemma.
+Condition 4 of Lemma 3.1 invites us to introduce a new concept of ho-
+motopy: we say that two paths WandW/primearemaniplex-homotopic if we can
+transform one into the other by a ﬁnite sequence of inserting or deleting pairs
+of inverse darts, as well as switching the colors of two consecutive darts with
+non-consecutive colors, that is
+d1d2...didi+1...dk/mapsto→d1d2...d/prime
+id/prime
+i+1...dk,
+where|c(di)−c(di+1)|>1, c(d/prime
+i) =c(di+1),c(d/prime
+i+1) =d(di),I(d/prime
+i) =I(di)and
+I(d/prime
+i+1) =T(d/prime
+i). Hence, a voltage assignment ξis well deﬁned when applied
+to the maniplex-homotopy class of paths if and only if it satisﬁes Condition
+4 of Lemma 3.1. From this point on, whenever we speak about homotopy,
+homotopy class, fundamental groupoid, etc. we will be thinking in terms of
+maniplex-homotopy.
+One could use the group Γ :=/angbracketleftS|R/angbracketrightas the voltage group where Shas
+a generator αefor each edge enot in the spanning tree of XandRhas one
+elementα2
+eper each semi-edge and one element αe4αe3αe2αe1for each path
+of length four alternating between two non-consecutive colors. In fact every
+voltage group that gives a maniplex should be a quotient of this group, or in
+other words Γis the “most general” group we can use as a voltage group to get
+a maniplex as the derived graph. We know (see [6]) that X=T(U,G)where
+Uis the universal polytope of rank nandGis some group. This means that
+there is some voltage assignment ξonXwith voltage group Gsuch thatXξis
+isomorphic to the ﬂag graph of U. Because of the universality of Uwe get that
+GandΓin fact are the same. In other words, if we use the most general group
+as our voltage group we will always get the ﬂag graph of the universal polytope
+16
+as the derived graph.
+4 Intersection properties and coset geome-
+tries
+In order to prove the Main Theorem, we need to characterize, in terms of
+generators and relations, the groups Γthat act by automorphisms on a polytope
+Pin such a way that the symmetry type graph T(G(P),Γ)is isomorphic to a
+given premaniplex X. We shall do this in order to be able to recover the
+polytopePas a coset geometry using the group Γ.
+We start with the premaniplex Xand provide it with a voltage assignment
+ξ. Recall that if (X,ξ)is a voltage graph with voltage group Γ, thenXξ/Γis
+isomorphic to X; conversely, ifM/Γis isomorphic to Xthen there is a voltage
+assignment ξonXsuch thatXξis isomorphic toM. Hence, by characterizing
+the voltage assignments ξthat satisfy that the derived graph Xξis the ﬂag
+graph of a polytope, we determine the conditions that Γmust satisfy to be the
+automorphism group of a polytope with symmetry type X.
+4.1 Voltage graphs and the path intersection prop-
+erty
+Wehaveﬁguredouthowtoconstructamaniplexfromapremaniplexviavoltage
+assignments. It is then natural to ask: when is the obtained maniplex the ﬂag
+graph of a polytope? The answer, as we shall see in this section, is closely
+relatedtoTheorem2.3. Infact, translatingTheorem2.3tothesettingofvoltage
+assignments will give us conditions that take the form of intersection properties
+that certain distinguished subgroups and some left cosets must satisfy. Given
+17
+two vertices x,yinXand a set of colors I∈{0,1,...,n−1}, let us denote by
+Πx,y
+I(X)the set of (homotopy classes of) paths from xtoyinXthat only use
+darts with colors in the set I. Soξ(Πx,y
+I(X))denotes the set of voltages of all
+the paths of Xfromxtoywhose edges have colors in I.
+Theorem 4.1. LetXbe a premaniplex and let ξ: Π(X)→Γbe a voltage
+assignment such that Xξis a maniplex. Then Xξis the ﬂag graph of a polytope
+if and only if
+ξ(Πx,y
+I(X))∩ξ(Πx,y
+J(X)) =ξ(Πx,y
+I∩J(X)), (1)
+for allI,J⊂{0,...,n−1}and all vertices x,yinX.
+ProofStartbyassumingthat Xξistheﬂaggraphofapolytope. Let xandybe
+vertices ofXand letI,J⊂{0,1,...,n−1}. Consider two paths, W∈Πx,y
+I(X)
+andW/prime∈Πx,y
+J(X), withthesamevoltage, say α∈Γ. Whenlifting WandW/primein
+Xξ, they lift to paths /tildewiderWand/tildewiderW/prime, respectively, that go from (x,1)to(y,α)(here
+1 is the identity element of Γ) and satisfying that /tildewiderWuses edges with colors in I
+while/tildewiderW/primeuses edges with colors in J. In fact, one would deﬁne /tildewiderWand/tildewiderW/primeas the
+paths that start at (x,1)and follow the same sequence of colors as WandW/prime
+respectively. ByTheorem2.3 XξsatisﬁestheSPIP,whichimpliesthatthereisa
+path/tildewiderW/prime/primefrom (x,1)to(y,α)that uses only colors in I∩J. Then, its projection
+W/prime/prime:=p(/tildewiderW/prime/prime)is a path in Xthat goes from xtoythat uses only colors in I∩J
+and has voltage α. This proves that ξ(Πx,y
+I(X))∩ξ(Πx,y
+J(X))⊂ξ(Πx,y
+I∩J(X)).
+Since the other contention is given, equality (1) must hold.
+Now let us assume that equality (1) holds for all I,J⊂{0,1,...,n−1}
+and all vertices xandy. Let/tildewiderWand/tildewiderW/primebe paths in Xξfrom a vertex (x,γ)
+to a vertex (y,τ). LetIandJbe the sets of colors of darts of /tildewiderWand/tildewiderW/prime,
+respectively, and let W:=p(/tildewiderW)andW/prime:=p(/tildewiderW/prime)be the projections of the
+paths toX. Then, both WandW/primego fromxtoy, andWis a path with
+18
+colors inI, whileW/primeis a path with colors in J, that is,W∈Πx,y
+I(X)and
+W/prime∈Πx,y
+J(X). Furthermore, since /tildewiderWand/tildewiderW/primestart at (x,γ)and ﬁnish at
+(y,τ), they both have voltage α:=τγ−1. By hypothesis, there exists a path
+W/prime/prime∈Πx,y
+I∩J(X)that also has voltage α. ThenW/prime/primehas a unique lift /tildewiderW/prime/primewhich
+is a path in Xξfrom (x,γ)to(y,τ)and it uses darts of colors in I∩J. This
+proves that Xξsatisﬁes the SPIP and therefore, by Theorem 2.3, it is the ﬂag
+graph of a polytope.
+Note that when x=ythe setξ(Πx,y
+I(X)) :=ξ(Πx
+I(X))is a group, since it is
+the image of a group under a groupoid antimorphism. Actually, we shall ﬁnd a
+set of distinguished generators for the group ξ(Πx
+I(X))in a similar way as the
+distinguished generators of the automorphism group of a polytope are found in
+[2]. Recall that XIis the subgraph of Xinduced by the edges with colors in
+Iand thatXI(x)is the connected component of XIcontaining the vertex x.
+To ﬁnd the distinguished generators of ξ(Πx
+I(X)), ﬁx a spanning tree Tx
+Ifor
+XI(x). For each dart dinXI(x)but not inTx
+Iwe get a cycle Cdof the form
+WdVwhereWis the unique path contained in Tx
+Ifromxto the initial vertex
+ofd, andVis the unique path contained in Tx
+Ifrom the terminal vertex of dto
+x. Then, the set{Cd}, wheredruns among the darts in XI(x)not inTx
+I, is a
+generating set for Πx
+I(X). This imples that {ξ(Cd)}, wheredruns among the
+darts ofXI(x)not inTx
+I, is a set of generators for ξ(Πx
+I(X)).
+Sinceξis a voltage assignment, we might consider only one dart dfor each
+edge. By denoting by Wythe unique path contained in Tx
+Ifromxtoy, we can
+see that Πx,y
+I(X) = Πx
+I(X)Wy(that is, a path from xtoycan be written as a
+closed path starting and ﬁnishing at x, concatenated with Wy), which implies
+thatξ(Πx,y
+I(X)) =ξ(Wy)ξ(Πx
+I(X)). Therefore, all the intersection properties
+can be given in terms of left cosets of the groups ξ(Πx
+I), whose generators we
+already know.
+19
+Theorem 4.1 gives an intersection property for each pair of vertices (x,y)
+and each two sets of colors I,J⊂{0,1,...,n−1}. If we prove an intersection
+property for the pair (x,y), by taking the inverse on both sides we get the
+corresponding property for the pair (y,x), so we can consider only unordered
+pairs{x,y}, and this reduces the number of intersection properties to verify by
+a factor of 2. Still, the total number of intersection properties is quadratic on
+the number of vertices and exponential on the number of colors. This number
+getstoobigtooquickly; however, manyofthesepropertiesareredundant, either
+becausetheyaretrueforanygroup(forexample, theintersectionofagroupand
+one of its subgroups is the smaller subgroup) or because they are a consequence
+of other intersection properties.
+Fortunately we may reduce the number of intersection properties to check by
+following the same proof but using the weakpath intersection property instead
+of the strong one. Doing this we get the following reﬁnement of the previous
+theorem.
+Theorem 4.2. Given a premaniplex Xand a voltage assignment ξsuch that
+Xξis a maniplex, Xξis the ﬂag graph of a polytope if and only if
+ξ(Πx,y
+[0,m](X))∩ξ(Πx,y
+[k,n−1](X)) =ξ(Πx,y
+[k,m](X)), (2)
+for allk,m∈{0,...,n−1}and allx,y∈F.
+With Theorem 4.2 the number of intersection properties to check is now
+quadratic on the number of vertices and also quadratic on the rank. We can
+still reﬁne this theorem a little more with the following observations:
+•The casesk= 0andm=n−1say that the intersection of the whole
+voltage group with some subset is the subset itself, so they are trivially
+true for every voltage assignment.
+20
+•In Theorem 4.2 one has to consider the case when k > m. In such case,
+ξ(Πx,y
+[k,m](X))is the trivial group when x=yand the empty set when
+x/negationslash=y. However, if the intersection property holds for k=m+ 1, that
+is, ifξ(Πx,y
+[0,m](X))∩ξ(Πx,y
+[m+1,n−1](X)) =ξ(Πx,y
+∅(X)), then it also holds for
+k>m +1. So one may only verify the intersection property for k≤m+1.
+•Ifyandy/primeare in the same connected component of X[k,m]and (2) is
+satisﬁed for the pair (x,y), then it is also satisﬁed for the pair (x,y/prime). To
+see this, let Wbe a path from ytoy/primewith colors in [k,m]and notice that
+Πx,y/prime
+I(X) = Πx,y
+I(X)WwheneverIcontains [k,m]. By taking voltages we
+get thatξ(Πx,y/prime
+I(X)) =ξ(W)ξ(Πx,y
+I(X)). This means thatwe can get the
+intersection property for the pair (x,y/prime)by multiplying the one for pair
+(x,y)byξ(W)on the left. So for each pair of numbers (k,m)we only need
+to verify one intersection property for each pair of connected components
+ofX[k,m].
+Taking the previous observations into consideration, the maximum amount
+of necessary intersection properties to check is v(v+ 1)/2/summationtextn−2
+m=0(m+ 1) =
+v(v+ 1)n(n−1)/4. But to reach this bound we need for every vertex to be in a
+diﬀerentconnectedcomponentof X[k,m]foreverypair (k,m)with 0<k≤m+1,
+which is only possible when v= 1. In other words, this bound is not tight for
+symmetry type graphs with more than one vertex.
+4.2 Constructing a polytope from the voltage group
+We have seen how to recover a polytope from its ﬂag graph (see Theorem 2.3)
+and whenXξis the ﬂag graph of a polytope for a given premaniplex Xand
+a voltage assignment ξ(see Theorem 4.2). By concatenating the construction
+ofXξfromXandξ, and the construction of a polytope PfromXξwe get a
+21
+construction of a polytope from Xandξ. In this section, we translate this to
+give a construction only in terms of subgroups of Γand their cosets. This will
+give the proof of the Main Theorem.
+Letfbe a choice function on the connected subgraphs of X, that is, a
+function that assigns a base vertex to each such subgraph. Let Cbe a connected
+component of XIfor someI⊂{0,1,...,n−1}and letx=f(C). LetC:=
+(Xξ)I(x,1), that is, the connected component of (Xξ)Icontaining (x,1). Thus,
+if(x,γ)∈C, then there is a path /tildewiderWfrom (x,1)to(x,γ)which uses only colors
+inI, which implies that its projection is a closed path WinΠx
+I(X)with voltage
+γ. This means that when considering the action of ΓonXξ, the stabilizer of C
+coincides with ξ(Πx
+I(X)). If we now consider a coset ξ(Πx
+I(X))σ, this would be
+the set of elements of Γthat mapCto(Xξ)I(x,σ).
+We know that the i-faces of the polytope that has Xξas its ﬂag graph
+correspond to the connected components of (Xξ)i. This makes natural the
+following construction:
+GivenXandξsatisfying Theorem 4.2 and a choice function fon the con-
+nected subgraphs of X, we construct a partially ordered set P(X,ξ)with a
+rank function whose elements of rank iare the right cosets of groups of the type
+ξ(Πx
+i(X))where
+x∈{f(C)|Cis a connected component of Xi}.
+We have to consider these groups as formal copies, that is, if xandx/primeare
+on diﬀerent connected components we consider ξ(Πx
+i(X))to be diﬀerent than
+ξ(Πx/prime
+i(X)), even if, as groups, they might be equal. Likewise, if j/negationslash=ibut
+ξ(Πx
+i(X))coincides with ξ(Πx/prime
+j(X))we consider them to be diﬀerent in P(X,ξ).
+Wecouldformalizethisbysayingthattheelementsofrank iinP(X,ξ)arepairs
+(C,ξ(Πx
+iγ))withCa connected component of Xi,x=f(C)andγ∈Γ, but
+sincexandialready appear in the notation, we may assume that ξ(Πx
+i(X))γ
+22
+stands for the pair (Xi(x),ξ(Πx
+i(X))γ).
+Now we shall deﬁne the order on P(X,ξ)as follows. First, for all i∈
+{0,1,...,n−1}and every vertex yinXwe look at the connected component
+Xi(y)and ﬁx a path going from its base vertex x=f(Xi(y))toy. We call this
+pathWy
+iand we denote its voltage by αy
+i:=ξ(Wy
+i).
+Deﬁnition 4.3 (Order inP(X,ξ)).Given 0≤i < j≤n−1, letCbe a
+connected component of XiandC/primebe a connected component of Xj, and letx
+andx/primebe their respective base ﬂags. Given γ,γ/prime∈Γ, we say that
+ξ(Πx
+i(X))γ <ξ (Πx/prime
+j(X))γ/primeif and only if αy
+iξ(Πx
+i(X))γ∩αy
+jξ(Πx/prime
+j(X))γ/prime/negationslash=∅,
+for somey∈C∩C/prime.
+Theorem 4.4. LetXbe a premaniplex and ξ: Π(X)→Γa voltage assignment
+satisfying Theorem 4.2. Let
+P(X,ξ) :={ξ(Πx(C))τ:Cis a connected component of Xi,x=f(C),τ∈Γ},
+together with the order given in Deﬁnition 4.3. Then P(X,ξ)is a polytope in
+which Γacts with symmetry type graph X.
+ProofLet us denoteP(Xξ)asPandP(X,ξ)asQ. Note that Theorem 4.2
+implies thatQis a polytope, and we want to show that Pis also a polytope
+(such thatP/Γ∼=X).
+By the discussion in Section 3.1, T(P,Γ)∼=X, since, by construction of Xξ,
+we have that Xξ/Γ∼=X. So in order to settle the theorem it is enough to ﬁnd
+a poset isomorphism ϕ:Q→Psuch that it commutes with the action of Γ,
+that is, such that /tildewideCσϕ =/tildewideCϕσfor all faces /tildewideCinQand allσ∈Γ.
+Let/tildewideCbe a face ofP. Hence, /tildewideCis a connected component of Xξ
+ifor some
+colori. LetC:=p(/tildewideC)and letx:=f(C). This implies that /tildewideChas a ﬂag of
+23
+the type (x,γ)for someγ∈Γ. Let/tildewideKbe the connected component of Xξ
+ithat
+contains (x,1). Then, the set of elements of Γthat map /tildewideKto/tildewideCisξ(Πx
+i(X))γ.
+We want to identify /tildewideCwith this coset, so we deﬁne /tildewideCϕ:=ξ(Πx
+i(X))γ. Note
+thatϕ:Q→P is well deﬁned, since if (x,γ/prime)is in/tildewideCthenγ/primeγ−1stabilizes
+/tildewideK, implying that γ/primeγ−1∈ξ(Πx
+i(X)). We want to prove that ϕis a poset
+isomorphism and that it commutes with Γ.
+Let us show ﬁrst that ϕcommutes with the action of Γ. Let/tildewideCbe a face
+inXξand letσ∈Γ. By the deﬁnition of ϕwe know that /tildewideCϕ=ξ(Πx
+i(X))γ
+whereiis the rank of /tildewideC,x=f(p(/tildewideC))andγ∈Γis any element such that
+(x,γ)∈/tildewideC. On the other hand (/tildewideCσ)ϕ=ξ(Πx/prime
+i(X))γ/primewherex/prime=f(p(/tildewideCσ))
+and(x/prime,γ/prime)∈/tildewideCσ. Also note that since /tildewideCand/tildewideCσare in the same orbit, then
+p(/tildewideC) =p(/tildewideCσ), and thusx=x/prime. Furthermore, the ﬂag (x,γσ ) = (x,γ)σis in
+/tildewideCσ. This proves that (/tildewideCσ)ϕ=ξ(Πx
+i(X))γσ= (/tildewideCϕ)σ.
+Now let us prove that ϕis an isomorphism of posets. Let /tildewideCand/tildewideC/primebe
+incident faces ofPof ranksiandj, respectively, with i<j(therefore, /tildewideC </tildewideC/prime).
+Hence, there is a ﬂag (y,τ)in/tildewideC∩/tildewideC/prime, which in turn implies that its ﬁrst entry,
+y, must be in C∩C/primewhereC=p(/tildewideC)andC/prime=p(/tildewideC/prime).
+Note that the path Wy
+iis contained in CwhileWy
+jis contained in C/prime. Then,
+these paths have lifts /tildewiderWy
+iand/tildewiderWy
+jrespectively, that go from (x,(αy
+i)−1τ)and
+(x/prime,(αy
+j)−1τ), respectively, to (y,τ). Observe that /tildewiderWy
+iis contained in /tildewideCand
+/tildewiderWy
+jis contained in /tildewideC/prime. Thus, (αy
+i)−1τ∈Πx
+i(X)γand(αy
+j)−1τ∈Πx/prime
+j(X)γ/prime.
+Therefore
+τ∈αy
+iξ(Πx
+i(X))γ∩αy
+jξ(Πx/prime
+j(X))γ/prime=αy
+i(/tildewideCϕ)∩αy
+j(/tildewideC/primeϕ);
+but this means that /tildewideCϕ</tildewideC/primeϕinQ.
+Conversely, suppose that /tildewideCϕ </tildewideC/primeϕinQ. We want to show that /tildewideC </tildewideC/prime
+inXξ. Let us write /tildewideCϕ=ξ(Πx
+i(X))γ, whereiis the rank of /tildewideC,x:=f(p(/tildewideC))
+andγis an element of the voltage group such that (x,γ)∈/tildewideC. Similarly, we
+24
+write/tildewideC/primeϕ=ξ(Πx/prime
+j(X))γ/prime, wherejis the rank of /tildewideC/prime,x:=f(p(/tildewideC/prime))andγ/primeis an
+element of the voltage group such that (x/prime,γ/prime)∈/tildewideC/prime.
+By hypothesis αy
+iξ(Πx
+i(X))γandαy
+jξ(Πx/prime
+j(X))γ/primehave non-empty intersec-
+tion for some y∈C∩C/prime. Letτbe an element in such intersection. Then
+(αy
+i)−1τ∈ξ(Πx
+i(X))γ. This implies that (x,(αy
+i)−1τ)is in the same connected
+component of (Xξ)ias(x,γ), that is (x,(αy
+i)−1τ)∈/tildewideC. But at the same time,
+there is a lift of Wy
+ithat connects (x,(αy
+j)−1τ)with (y,τ), and since Wy
+idoes
+not use the color i, its lift is contained in /tildewideC, which proves that (y,τ)∈/tildewideC.
+Similarly, the fact that (αy
+j)−1τ∈ξ(Πx/prime
+j(X))γimplies that (y,τ)∈/tildewideC/prime. Thus,
+we have proved that /tildewideC∩/tildewideC/primeis not empty, or in other words /tildewideC </tildewideC/primeinP.
+Therefore,ϕis an isomorphism and the theorem follows.
+5 Example: Caterpillars
+Ifonewantstobuildpolytopesfrompremaniplexesinthewaywehavedescribed
+in this paper, it is natural to start with inﬁnite families of premaniplexes. One
+could, ofcourse, thenstartwithpremaniplexeswithaﬁxednumber kofvertices.
+For example, one may want to construct 2-orbit polytopes (see [9]). If, on the
+other hand, we do not want to limit the number of vertices of the premaniplexes
+in the family a ﬁrst step could be to consider trees. However, since semi-
+edges are considered as cycles, there are no premaniplexes whose underlying
+graph (without colours) is a tree. Thus, we study the closest thing to them:
+premaniplexes that are trees with an unlimited number of semi-edges. Hence,
+we deﬁne a caterpillar as a premaniplex in which every cycle is a semi-edge. In
+other words, a caterpillar is a premaniplex Xwith a unique spanning tree.
+In particular, a caterpillar does not have pairs of parallel links (edges joining
+diﬀerent vertices). If there are three links incident to one vertex, at least two of
+25
+x0x1x2x3xkc1c2c3Figure 2: A ﬁnite caterpillar.
+them must have colors diﬀering by more than 1, which would imply that there is
+a 4-cycle. This implies that caterpillars consist in fact of a single path P(which
+we will call the underlying path of X) and lots of semi-edges. Of course, the
+colors of two consecutive edges on the path must diﬀer by exactly one, otherwise
+there would be a 4-cycle. We note here that the term caterpillar has been used
+in the graph theory literature for a very similar but slightly diﬀerent concept.
+Throughout this section, unless otherwise stated, Xwill denote a ﬁnite
+caterpillar (that is, one with a ﬁnite number of vertices) with underlying path
+P, and its vertices will be labeled by x0,x1,...,xk, ordered as they are visited
+byP. Furthermore, we denote by (xi,j)the dart of color jatxiand bycithe
+color of the link connecting xi−1andxi.
+5.1 Caterpillar coverings
+We want to construct polytopes from caterpillars. As often when constructing
+maniplexes and polytopes via voltage assignments from a premaniplex X, the
+derived maniplex might not have Xas the symmetry type graph with respect
+to the full automorphism group. However, the actual symmetry type graph is a
+quotient of X. For this reason, in this section we study quotients of caterpillars.
+Given a caterpillar, let us call an endpoint a vertex incident to just one link
+(that is, an endpoint of the underlying path). Note that a caterpillar is ﬁnite
+if and only if it has exactly two endpoints. Every symmetry of the caterpillar
+must map endpoints to endpoints. If a caterpillar is ﬁnite there is at most
+26
+one non-trivial symmetry and its action on the vertices x0,x1,...,xkis given
+byxj/mapsto→xk−j. We call a ﬁnite caterpillar symmetric if it has a non-trivial
+symmetry.
+Awordwin{0,1,...,n−1}is simply a ﬁnite sequence w=a1a2...at, with
+ai∈{0,1,...,n−1}for eachi= 1,2,...,t. Theinverseof a wordwis the
+wordw−1that has the same colors as wbut written in reverse order. That is, if
+w=a1a2...atthenw−1=atat−1...a 1. A word is said to be reducedif it has
+no occurrence of the same color twice in a row; in other words, w=a1a2...at
+is reduced if and only if ai+1/negationslash=aifor alli= 1,2,...,t−1. We shall work
+with reduced words from now on. A word w=a1a2...atis apalindrome if
+ai=at+1−ifor alli∈{1,2,...,t}. A palindrome word of even length can be
+written asvv−1for some word vand cannot be a reduced word. A palindrome
+word of odd length can always be written as w=vav−1for some color aand
+some word v.
+Given a segment [x,y]in a caterpillar, its underlying word is the word w
+consisting of the colors of the links in the path that goes from xtoy. When we
+speakofthe underlying word ofacaterpillar Xwearereferringtotheunderlying
+word of its underlying path in a ﬁxed orientation. Hence, we say that a segment
+[x,y]is apalindrome if its underlying word vis a palindrome.
+Proposition 5.1. LetXbe a ﬁnite caterpillar and let Ybe a premaniplex not
+isomorphic to Xsuch that there is a premaniplex homomorphism h:X→Y.
+ThenYis a caterpillar. Moreover, if Yhas at least 2 vertices and S=c1c2...ck
+is the underlying word of X, then there is some r<ksuch thatw=c1c2...cr
+is the underlying word of Yand one of the following statements is true:
+1. There exist colors a1,a2,...,at∈{cr+ 1,cr−1}andb1,b2...,bt−1∈
+{c1+ 1,c1−1}such thatS=wa1w−1b1wa2w−1b2...bt−1watw−1.
+2. There exist colors a1,a2,...,at∈{cr+ 1,cr−1}andb1,b2...,bt∈{c1+
+27
+X:
+Y:c2c1cr
+c2c1crc2c1crc2c1cr
+c2c1cr
+c2c1cr
+c2c1cr1bb2
+a2at
+a1(a) Case 1
+X:
+Y:c2c1cr
+c2c1crc2c1crc2c1cr
+c2c1cr
+c2c1cr
+c2c1cra2
+a11bb2bt (b) Case 2
+Figure 3: The caterpillar Xcovers the caterpillar Yif and only if it “folds” into it.
+1,c1−1}such thatS=wa1w−1b1wa2w−1b2...bt−1watw−1btw.
+In any case, if i≡jmod 2r+ 2thenh(xi) =h(xj). Also ifi≡−j−
+1 mod 2r+ 2thenh(xi) =h(xj).
+Before proving Proposition 5.1 let us remark that it simply means that the
+quotients of a caterpillar Xare those caterpillars Ysuch thatXcan be “folded”
+intoY. We illustrate this concept in Figure 3: the semi-edges are not drawn
+and the names of the vertices have been omitted, but the idea is that Xmust
+be “folded” into “layers” of r+ 1vertices and then each vertex will be projected
+to the vertex on Yin the same horizontal coordinate. The layer /lscriptconsists of the
+verticesxiwhere/floorleftBig
+i
+r+1/floorrightBig
+=/lscript(⌊x⌋denotes the integer part of x). Even layers go
+from left to right, while odd layers go from right to left, hence the underlying
+word of even layers is w=c1c2...crwhile the underlying word of odd layers is
+w−1=crcr−1...c 1.
+28
+Now let us proceed with the proof.
+Proof of Proposition 5.1 Let us consider the equivalence relation ∼honX
+given byx∼hyif and only if h(x) =h(y). Recall that by the deﬁnition
+of a premaniplex homomorphism x∼hyimplies that xm∼hymfor every
+monodromy m. Therefore Yis isomorphic to X/∼h.
+We already know that all premaniplex homomorphisms are surjective (see
+Section 2). By hypothesis his not an isomorphism, which implies it cannot be
+injective. Let xandybe two diﬀerent vertices on Xsuch thatx∼hy. Let
+x0,x1,...,xkbe the sequence of vertices in the underlying path of X. There
+is a monodromy msuch thatxm=x0, and sox0∼hymandymis diﬀerent
+thanx0. Now letqbe the minimum positive number such that xq∼hx0. We
+know thatqexists because x0∼hym. Note that if q= 1we would have that
+xi
+0∼hx0for alli, which would imply that the same is true for x1and in turn
+also forx2=xc2
+1and so on. This would mean that all the vertices of Xare
+equivalent, meaning that Yhas only one vertex and the proposition follows. So
+we may assume that q>1.
+We know that xq−1=xcqqis equivalent xcq
+0. Ifcq/negationslash=c1, we would have that
+xcq
+0=x0. This would imply that xq−1is equivalent to x0, contradicting the
+minimality of q. So we have proven that cq=c1.
+Now note that if for some /lscriptwe have that x/lscript∼x1, thenxc1
+/lscript∼xc1
+1=x0. In
+particular this tells us that for /lscript < q−1,x/lscriptcannot be equivalent to x1. Now
+we can use the same argument we used to prove that cq=c1to prove that
+cq−1=c2. Analogously we can prove that c3=cq−2,c4=cq−3and so on. In
+other words, [x0,xq]is a palindrome. Since for all i,ciandci+1are diﬀerent,
+thenqis odd, say q= 2r+ 1. Letvbe the underlying word of the segment
+[x0,xq]. Thenvmay be written as v=wcr+1w−1for some word w=c1c2...cr.
+Let us calla1:=cr+1and note that a1∈{cr+ 1,cr−1}.
+29
+For alli= 0,1,...,k, let us denote by /hatwideithe residue of dividing iby2r+ 2.
+We will prove by induction on ithatxi∼hx/hatwideifor alli= 0,1,...,kand that
+ci=c/hatwideiwheniis not divisible by r+1,ci∈{c1+1,c1−1}ifiis an odd multiple
+ofr+ 1andci={cr+ 1,cr−1}wheniis an even multiple of r+ 1.
+Let our induction hypothesis be that x/lscript∼hx/hatwide/lscriptfor all/lscript<i, and thatc/lscript=c/hatwide/lscript
+if/lscriptis not divisible by r+ 1.
+Let us start with the case when i≡0 mod 2r+ 2. In this case we want to
+prove thatxi∼hx/hatwideiand thatci∈{c1+ 1,c1−1}. By our induction hypothesis
+we know that xi−1∼hx2r+1∼hx0andci−1=c2r+1=c1. In particular
+ci∈{c1+ 1,c1−1}. This implies that xi=xci
+i−1∼hxci
+0=x0=x/hatwidei(since
+ci/negationslash=c1). Thusisatisﬁes our claim.
+Now let us proceed with the case when iis an odd multiple of r+ 1, that is
+/hatwidei=r+1. Inthiscasewewanttoprovethat xi∼hx/hatwideiandthatci∈{cr+1,cr−1}.
+Our induction hypothesis tells us that xi−1∼hxrand thatci−1=cr. Hence
+ci∈{cr+ 1,cr−1}. Note that one of the colors in {cr+ 1,cr−1}is actually
+cr+1, while the other is the color of a semi-edge incident to xr. Sincexr+1∼hxr
+we have that xi=xci
+i−1∼hxcir∼hxr∼hxr+1=x/hatwidei. Thusisatisﬁes our claim.
+Finally let us prove our claim for the case when iis not divisible by r+ 1.
+Our induction hypothesis tells us that xi−1∼hx/hatwidei−1. Note that /hatwidei=/hatwidei−1 + 1.
+Sinceiis not a multiple of r+ 1we know that x/hatwidei=xc/hatwidei
+/hatwidei−1is not equivalent to
+x/hatwidei−1. This implies that xc/hatwidei
+i−1is not equivalent to xi−1, and since it is adjacent to
+xi−1it must be equal to either xiorxi−2. Ifi≡1 modr+ 1then by induction
+hypothesis xi−1∼hx0, but recall that x0∼hx2r+1=xqby deﬁnition, and by
+induction hypothesis xi−2∼hx/hatwidei−2=x2r+1. This means that xi−2∼hxi−1, so
+xc/hatwidei
+i−1must bexi, implying that ci=c/hatwidei. Ifi/negationslash≡1 modr+ 1then our induction
+hypothesis tells us that ci−1=c/hatwidei−1/negationslash=c/hatwidei, and since xi−2=xci−1
+i−1=xc/hatwidei−1
+i−1, so
+the only possibility is that xc/hatwidei
+i−1=xi, implying that ci=c/hatwideiand thatxi∼hx/hatwidei.
+30
+Thus,isatisﬁesourclaim. Notethatwehavealsoproventhatif iisnotdivisible
+byr+ 1thenxi−1cannot be an endpoint of X.
+We have proved that xi∼hx/hatwideifor alli= 0,1,...,k. This implies automati-
+cally that if i≡jmod 2r+2thenxi∼hxj. Moreover, if i≡−j−1 mod 2r+2,
+then/hatwidei= 2r+ 1−/hatwidej. Now since vis a palindrome, we know that x/lscript∼hx2r+1−/lscript
+for all/lscript= 0,1,..., 2r+ 1, in particular x/hatwidei=x2r+1−/hatwidej∼hx/hatwidej. This, together
+with the fact that xi∼hx/hatwideiandxj∼hx/hatwidej, implies that xi∼hxj.
+We have already proved that S=wa1w−1b1wa2w−1...and it ends after
+an occurrence of worw−1. To end the prove note that since his surjective
+we already know exactly what premaniplex Yis: It is a caterpillar with vertex
+sequenceh(x0),h(x1),...,h (xr). Infact,for i= 1,...,r−1andj= 0,1,...n−1
+we know that h(xi)is diﬀerent from h(xi)j=h(xj
+i)if and only if j∈{ci−1,ci};
+and ifi= 0(resp.r) thenh(xi)is diﬀerent from h(xi)jif and only if j=c1
+(resp.cr).
+If we look closely at the proof of Proposition 5.1 we notice that we have not
+actually used the fact that Xis ﬁnite, but only the fact that it has at least one
+endpoint. So the proposition may be generalized as follows:
+Proposition 5.2. LetXbe a caterpillar with at least one endpoint and let Y
+be a premaniplex such that there is a premaniplex homomorphism (or covering)
+h:X→Y. ThenYis a caterpillar. Moreover, if S=c1c2...is the color
+sequence of Xstarting at its endpoint, there is some rsuch thatw=c1c2...cr
+is the underlying word of Yand there exist colors a1,a2,...∈{cr+ 1,cr−1}
+andb1,b2...∈{c1+ 1,c1−1}such thatS=wa1w−1b1wa2w−1b2.... IfXis
+ﬁnite it ends after an occurrence of either worw−1. Ifi≡jmod 2r+ 2then
+h(xi) =h(xj). Also ifi≡−jmod 2r+ 1and/floorleftBig
+i
+r+1/floorrightBig
+/negationslash≡/floorleftBig
+j
+r+1/floorrightBig
+mod 2then
+h(xi) =h(xj).
+31
+Let us look now at the degenerate cases. If Yis only one vertex we can think
+that the previous theorems still hold but with wbeing the empty word, and
+sincec1andcrdo not exist, we get rid of the restrictions ai∈{cr+ 1,cr−1}
+andbi∈{c1+ 1,c1−1}. In Figure 3 Xwould have only one vertex and no
+links per layer; essentially Xwould be “standing up” instead of being folded. If
+Yis isomorphic to XthenS=wand we do not have any aiorbi. In Figure 3
+Xwould have only one layer.
+If one would try to prove an analogous result as Proposition 5.2 for cater-
+pillars with no ends, the only additional case to consider would be that when
+Yis not a caterpillar but a premaniplex consisting of a cycle with underlying
+wordwand all the edges not in the cycle are semiedges. In this case Xwould
+have the underlying inﬁnite word ···www···.
+5.2 Caterpillars as STG of polytopes
+Given a caterpillar X, we want to assign voltages to the semi-edges of Xin
+order to get the ﬂag graph of a polytope as the derived maniplex. To this
+end, we note that in caterpillars the conditions of Theorems 4.1 and 4.2 can be
+simpliﬁed, as stated in the following lemma:
+Lemma 5.3. LetXbe a caterpillar and let ξ: Π(X)→Γbe a voltage assign-
+ment such that all the darts in the underlying path of Xhave trivial voltage.
+Then the following statements are equivalent.
+1.Xξis polytopal.
+2. For every vertex xinxand all sets I,J⊂{0,1,...,n−1}the equation
+ξ(Πx
+I(X))∩ξ(Πx
+J(X)) =ξ(Πx
+I∩J(X))
+holds.
+32
+3. For every vertex xinXand allk,m∈{0,1,...,n−1}the equation
+ξ(Πx
+[0,m](X))∩ξ(Πx
+[k,n−1](X)) =ξ(Πx
+[k,m](X))
+holds.
+ProofTo prove this we have to see that for every set of colors I⊂{0,1,...,n−
+1}the setξ(Πx,y
+I(X))is eitherξ(Πx
+I(X))or empty, depending on whether or
+not the segment of Pthat goes from xtoy(which we will denote [x,y]) uses
+or not only colors in I. In fact if [x,y]uses only colors in Ithen
+ξ(Πx,y
+I(X)) =ξ(Πx
+I(X)[x,y]) =ξ([x,y])ξ(Πx
+I(X)) = 1·ξ(Πx
+I(X)) =ξ(Πx
+I(X)).
+Note also that ξ(Πx,y
+I(X))∩ξ(Πx,y
+J(X))is empty if and only if one of the
+factors is empty. These observations together with Theorems 4.1 prove the
+equivalence between conditions 1 and 2, and with Theorem 4.2 we prove the
+equivalence between conditions 1 and 3, thus proving the lemma.
+Recall that a Boolean group (or anelementary abelian 2-group) is a group in
+which every non-trivial element has order exactly 2. Thus, all Boolean groups
+are abelian, and ﬁnitely generated Boolean groups are isomorphic to a direct
+product of cyclic groups of order 2.
+Proposition5.4. Every caterpillar is the quotient of the ﬂag graph of a polytope
+by a Boolean group.
+ProofLetXbe a caterpillar. We shall ﬁnd a Boolean group Band a voltage
+assignment ξ: Π(X)→Bsuch thatXξis polytopal in the following way.
+First assign trivial voltage to all links of Pand a diﬀerent independent
+voltage to each semi-edge incident to x0. We shall give voltage assignments to
+the semi-edges (xi,j), recursively on i. If|j−ci|>1we assign the same voltage
+33
+to(xi,j)as we did to (xi−1,j). On the ohter hand, if |j−ci|= 1, we assign a
+new element as the voltage (xi,j)independent from all the voltages of previous
+darts.
+Let us call the resulting voltage group Band denote this voltage assignment
+byξ. By Lemma 3.1, Xξis a maniplex.
+Note further that ξsatisﬁes that if i∈{1,2,...,k};r,s∈{0,1,...,n−1}
+and(xi−1,r)and(xi,s)are semi-edges, then ξ(xi,s) =ξ(xi−1,r)if and only if
+r=sand|r−ci|/negationslash= 1. It also satisﬁes that if i</lscript<j and(xi,r)and(xj,r)
+are semi-edges such that ξ(xi,r) =ξ(xj,r) =γ, then (x/lscript,r)is also a semi-edge
+andξ(x/lscript,r) =γ.
+We claim that the second statement of Lemma 5.3 is satisﬁed, and hence,
+Xξis the ﬂag graph of a polytope. To show that this is the case, start by
+noticing that ξ(Πx
+I)is the group generated by the voltages of the semi-edges on
+the component XI(x).
+GivenI,J⊆{0,1,...,n−1}, suppose that for some vertex xthere is a
+semi-edgeeinXI(x)and a semi-edge e/primeinXJ(x)withξ(e) =ξ(e/prime) =γfor
+someγ∈Γ. Ife=e/primethene∈XI∩J(x). Ife/negationslash=e/primethen we have that for some
+i,j∈{0,...,k−1}and somer∈{0,...,n−1}occurs that e= (xi,r)and
+e/prime= (xj,r); in particular r∈I∩J. Ifx∈[xi,xj]then, as previously observed,
+ξ(x,r) =γ(see Figure 4) and since (x,r)∈XI∩J(x)this meansγis a generator
+ofξ(Πx
+I∩J). Ifx /∈[xi,xj]consider without loss of generality that xiis further
+away from xthanxj, in other words, that xj∈[xi,x](see Figure 5). Then
+[xi,x]uses only colors in Iand[xj,x]⊂[xi,x]uses only colors in J. Then since
+[xj,x]⊂[xi,x]we know that [xj,x]uses only colors in I∩J, meaning that
+e/prime∈XI∩J(x)and since its voltage is γ, this shows that γis always a generator
+ofξ(Πx
+I∩J). Therefore, we have shown that if γis a generator of both ξ(Πx
+I(X))
+andξ(Πx
+J(X)), then it is also a generator of ξ(Πx
+I∩J(X)).
+34
+x xixjγr
+I Jγr
+γrFigure 4: If x∈[xi,xj]then (x,r)has voltage γ∈ξ(Πx
+I∩J(X)).
+xixj x
+J
+Iγr
+γr
+Figure 5: If xj∈[xi,x]thene/prime= (xj,r)is inXI∩J(x)and has voltage γ.
+Now letσ∈ξ(Πx
+I(X))∩ξ(Πx
+J(X))be arbitrary. Since the group Bis
+Boolean,σmay be written as σ=γ1γ2...γswhere the elements γ1,γ2,...,γs
+are diﬀerent generators of B, and this decomposition is unique up to reordering
+of the factors. Since σ∈ξ(Πx
+I(X)), and because the voltage of a semi-edge is
+always a generator, each γiis also inξ(Πx
+I(X)), and sinceσ∈ξ(Πx
+J(X))eachγi
+is also inξ(Πx
+J(X)). But, this implies that each γiis inξ(Πx
+I∩J(X)), implying
+thatσ∈ξ(Πx
+I∩J(X)). Therefore, ξ(Πx
+I)∩ξ(Πx
+J) =ξ(Πx
+I∩J).
+Proposition 5.4 is still true for inﬁnite caterpillars. Even if our algorithmic
+way of assigning voltages may not be doable, the voltage assignment is still well
+deﬁned as a quotient of the Boolean group with one generator assigned to each
+semi-edge.
+Note that Proposition 5.4 says that every caterpillar Xis a symmetry type
+graph of a polytope Pwith respect to some group B≤Γ(P). However need
+not happen that Xis the symmetry type graph of Pwith respect to the full
+35
+automorphism group. That is, Xξmight have “extra” symmetry. Thus, we
+would want to investigate what could be the symmetry type of Xξwith respect
+to its full automorphism group.
+LetXbe a ﬁnite caterpillar and let ξ: Π(X)→Bbe the voltage assignment
+constructed in the proof of Proposition 5.4. If Xis symmetric, its non-trivial
+symmetry induces an automorphism of Bwhich is just a reordering of the
+generators, moreover, if the generators are given the natural order, it induces
+the reverse order on the generators. Using [10, Theorem 7.1], we get that this
+symmetry induces a symmetry of the derived maniplex, so in this case the
+original caterpillar is not the symmetry type of the derived polytope. But we
+will see in Theorem 5.5 that if this is not the case we can almost be certain that
+the caterpillar is in fact the symmetry type graph of the derived polytope by
+its full automorphism group. In this case, by “almost” we mean that if this is
+not the case, the caterpillar must have a very speciﬁc structure.
+Theorem 5.5. LetXbe a ﬁnite caterpillar of length kand rankn. LetS=
+c1c2...ckbe the underlying word of X. Then at least one of the following
+statements is true:
+1.Xis symmetric.
+2.Xis the STG of a polytope with a Boolean automorphism group.
+3.c1is in{1,n−2}and there exist r∈{1,2,...,k−1}, anda1,a2,...,at∈
+{0,1,...,n−1}wheret= (k+1)/(2r+2), such thatS=wa1w−1bwa2w−1b...bwatw−1
+wherew=c1c2...crandb= 0ifc1= 1andb=n−1ifc1=n−2.
+4. There exist r∈{1,2,...,k−1}anda,b∈{0,n−1}such that
+S=waw−1bwaw−1b...bwaw−1bw,
+wherew=c1c2...cr. Also (c1,b),(cr,a)∈{(1,0),(n−2,n−1)}.
+36
+ProofSuppose that Xis not symmetric and that it is not the STG of a poly-
+tope with a Boolean automorphism group.
+Consider the voltage assignment ξ: Π(X)→Bpreviously discussed. We
+say that two vertices xandyofXare equivalent ( x∼y) if there exist (or
+equivalently, for all) σ,τ∈Bsuch that the ﬂags (x,σ)and(y,τ)ofXξare in
+the same orbit under the action of the automorphism group of Xξ. Then∼
+is an equivalence relation preserved by i-adjacency, that is x∼y⇒xi∼yi.
+Moreover, the natural function h:X→X/∼is a premaniplex homomorphism,
+so by Proposition 5.1 there exists some rsuch that the Scan be written as
+wa1w−1b1wa2w−1b2...ending after an occurrence of either worw−1, where
+w=c1c2...cr,ai∈{cr+ 1,cr−1}andbi∈{c1+ 1,c1−1}(see Figure 3).
+Note that since Xis not symmetric nor the STG of Xξwith respect to B,
+at leastb1exists. Let j∈{0,1...,k−1}be a number such that the segment
+[x0,xj+1]has the underlying word wa1w−1b1wa2w−1b2...w−1bifor somei. We
+know in particular that bidiﬀers from c1in exactly 1. We want to prove that
+(c1,bi)∈{(1,0),(n−2,n−1)}. We will assume this is not the case and arrive
+to a contradiction.
+Letqbe theothercolor that diﬀers from biin exactly 1 (that is q= 2bi−c1).
+Since (c1,bi)/negationslash= (1,0),(n−2,n−1)we know that q∈{0,1,...,n−1}, and thus
+is the color of some edges of X. So there are semi-edges e,e/primeincident to x0of
+colorsqandbirespectively. Let α:=ξ(e)andβ:=ξ(e/prime). The voltage of the
+closed path ee/primeee/primeis(βα)2= 1becauseBis Boolean. This means that its lift,
+(the path of length 4 that starts at (x,1)inXξand alternates colors between
+qandbi) must be closed.
+By Theorem 5.1, we know that cj+1=c1/negationslash=q, so we know that the darts
+(xj+1,q)and(xj,q)are semi-edges. Let κ:=ξ(xj,q)andλ=ξ(xj+1,q). The
+path of length 4 that alternates colors between randbiand starts at xjis
+37
+c1c1biqqbi
+x0x1xj−1xjxj+1q
+κ λαβFigure 6: The voltage of the path that alternates colors between randbistarting at xjisλκ/negationslash= 1.
+closed, and its voltage is λκ. Note that since |q−bi|= 1the construction of
+ξtells us that ξ(xj,q)/negationslash=ξ(xj+1,q), that isλ/negationslash=κ, which implies λκ/negationslash= 1. This
+means that the path of length 4 in Xξstarting at (xj,1)and alternating colors
+betweenrandbiis not closed (it ends at (xj,λκ)).
+We see that the path of length 4 in Xξstarting at (xj,1)and alternating col-
+ors between randcj+1is not closed, but the one starting at (x0,1)is. This con-
+tradictsthefactthat (xj,1)and(x0,1)areonthesameorbit. Thecontradiction
+comes from the fact that there are edges of color q= 2bi−c1∈{0,1,...,n−1},
+so to avoid this we must have that (c1,bi)∈{(1,0),(n−2,n−1)}. Sincec1is
+ﬁxed, every bimust be the same.
+If the underlying word of Xends after an occurrence of wwe may look at
+Xin the other direction. Then the previous result tells us that every aiis equal
+to someaand that (cr,a)∈{(1,0),(n−2,n−1)}.
+Remark 5.6.If the third or fourth condition is the one holding in Theorem 5.5,
+the actual STG of Xξmight be the ﬁnite caterpillar with underlying word w.
+By doing exactly the same proof, we obtain the following analogous result
+for inﬁnite caterpillars with one end-point (this would look like a ray or half-
+straight line):
+Theorem 5.7. LetXbe an inﬁnite caterpillar with one end-point. Let Sbe the
+sequence of colors of the underlying path of Xstarting at its end-point. Then
+38
+one of the following statements is true:
+1.Xis the STG of a polytope with a Boolean automorphism group.
+2. There exist some number rand colorsb,a1,a2,...,at∈{0,1,...,n−1}
+such thatS=wa1w−1bwa2w−1bwa3w−1...wherew=c1c2...crand
+(c1,b)∈{(1,0),(n−2,n−1)}.
+Remark 5.8.If the second condition is the one holding, the actual STG of Xξ
+might be the ﬁnite caterpillar with underlying word w.
+Ifk≥3, it is easy to construct a caterpillar of length k−1(that is, with k
+vertices and k−1links) that does not satisfy properties (1),(3)and(4)(simply
+letc1= 0and then avoid the color 0for every other ci). Hence, we get the
+following corollary:
+Corollary 5.9. For everyn,k≥3, there is an abstract n-polytope with Boolean
+automorphism group that has kﬂag orbits.
+Acknowledgements
+The authors would like to thank Gabe Cunningham, Antonio Montero and
+Daniel Pellicer for helpful comments on early versions of this paper. We also
+thank the ﬁnancial support of CONACyT grant A1-S-21678.
+References
+[1] Gabe Cunningham and Daniel Pellicer. Open problems on k-orbit poly-
+topes.Discrete Mathematics , 341:1645–1661, 2018.
+39
+[2] Gabe Cunningham, María Del Río-Francos, Isabel Hubard, and Micael
+Toledo. Symmetry type graphs of polytopes and maniplexes. Annals of
+Combinatorics , 19:243–268, 2015.
+[3] Ludwig Danzer and Egon Schulte. Reguläre inzidenzkomplexe i. Geome-
+triae Dedicata , 13:295–308, 1982.
+[4] Jorge Garza-Vargas and Isabel Hubard. Polytopality of maniplexes. Dis-
+crete Mathematics , 341(7):2068 – 2079, 2018.
+[5] Jonathan L. Gross. Voltage graphs. Discrete Mathematics , 9(3):239 – 246,
+1974.
+[6] Michael I. Hartley. All polytopes are quotients, and isomorphic polytopes
+are quotients by conjugate subgroups. Discrete & Computational Geome-
+try, 21:289–298, 1999.
+[7] Isabel Hubard. Two-orbit polyhedra from groups. European Journal of
+Combinatorics , 31(3):943 – 960, 2010.
+[8] Isabel Hubard and Elías Mochán. Automorphism groups of 3-orbit poly-
+hedra.Algebraic Journal of Combinatorics , 2022.
+[9] Isabel Hubard and Egon Schulte. Two-orbit polytopes. Preprint.
+[10] Aleksander Malnič. Group actions, coverings and lifts of automorphisms.
+Discrete Mathematics , 182(1-3):203–218, 1998.
+[11] Peter McMullen and Egon Schulte. Abstract Regular Polytopes . Number
+v. 92 in Abstract Regular Polytopes. Cambridge University Press, 2002.
+[12] Daniel Pellicer. A construction of higher rank chiral polytopes. Discrete
+Mathematics , 310:1222–1237, 04 2010.
+[13] DanielPellicer,PrimožPotočnik,andMicaelToledo. Anexistenceresulton
+two-orbit maniplexes. Journal of Combinatorial Theory, Series A , 166:226
+– 253, 2019.
+40
+[14] Egon Schulte and Asia Ivić Weiss. Chiral polytopes. Applied geometry and
+discrete mathematics , 4:493–516, 1991.
+[15] Jacques Tits. Géométries polyédriques et groupes simples. Atti Riunione
+Groupem. Math. Express. Lat. Firenze , pages 66–88, 1961.
+[16] Steve Wilson. Maniplexes: Part 1: Maps, polytopes, symmetry and oper-
+ators.Symmetry , 4, 12 2012.
+41

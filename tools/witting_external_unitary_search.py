@@ -8,6 +8,7 @@ Strategy:
 4. For each basis pair (B_source, B_target), compute U = B_target * B_source^†.
 5. Score U by how many source rays map to *some* target ray (up to phase).
 """
+
 from __future__ import annotations
 
 import json
@@ -29,9 +30,9 @@ def construct_witting_40_rays():
         rays.append(v)
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
     return rays
 
@@ -47,7 +48,9 @@ def construct_f3_grid_rays():
                 for d in F3:
                     if a == b == c == d == 0:
                         continue
-                    v = np.array([omega**a, omega**b, omega**c, omega**d], dtype=complex)
+                    v = np.array(
+                        [omega**a, omega**b, omega**c, omega**d], dtype=complex
+                    )
                     # projective normalization by first nonzero
                     idx = next(i for i, z in enumerate(v) if abs(z) > 1e-12)
                     v = v / v[idx]
@@ -62,7 +65,7 @@ def construct_f3_grid_rays():
 
 def orthonormal_bases(rays, tol=1e-8):
     n = len(rays)
-    orth = [[0]*n for _ in range(n)]
+    orth = [[0] * n for _ in range(n)]
     for i in range(n):
         for j in range(i + 1, n):
             if abs(np.vdot(rays[i], rays[j])) < tol:
@@ -74,7 +77,13 @@ def orthonormal_bases(rays, tol=1e-8):
                 continue
             candidates = [k for k in range(n) if orth[i][k] and orth[j][k]]
             for k, l in combinations(candidates, 2):
-                if orth[k][l] and orth[i][k] and orth[i][l] and orth[j][k] and orth[j][l]:
+                if (
+                    orth[k][l]
+                    and orth[i][k]
+                    and orth[i][l]
+                    and orth[j][k]
+                    and orth[j][l]
+                ):
                     bases.add(tuple(sorted((i, j, k, l))))
     return sorted(bases)
 

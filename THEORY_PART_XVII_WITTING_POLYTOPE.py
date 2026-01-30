@@ -10,15 +10,16 @@ by Alexander Yu. Vlasov (arXiv:2503.18431, Moscow Univ. Phys. 80, 560 (2025))
 
 THIS IS THE MISSING LINK BETWEEN:
     • W33's 40 points
-    • E8's 240 roots  
+    • E8's 240 roots
     • Quantum foundations (Kochen-Specker, Bell theorems)
     • The "quantum cards" formalism
     • Spin-3/2 particles (ququarts)
 """
 
-import numpy as np
-from fractions import Fraction
 import math
+from fractions import Fraction
+
+import numpy as np
 
 print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -66,7 +67,7 @@ WITTING_EDGES = 2160
 WITTING_FACES = 2160
 WITTING_CELLS = 240
 WITTING_DIAMETERS = 40  # ← THIS IS W33!
-EDGES_PER_VERTEX = 27   # ← THIS IS E6!
+EDGES_PER_VERTEX = 27  # ← THIS IS E6!
 WITTING_SYMMETRY = 155520  # = 3 × 51840
 W_E6 = 51840
 
@@ -93,21 +94,21 @@ Each diameter contains 6 vertices arranged in a hexagon.
     240 vertices ÷ 6 per diameter = 40 diameters ← W33 POINTS!
 
 The paper describes a "quantum key distribution protocol" using:
-    • 40 "quantum cards" 
+    • 40 "quantum cards"
     • Each card is a quantum state (ray in CP³)
     • The 40 cards form the WITTING CONFIGURATION
 
 The Witting Configuration in CP³ is denoted:
-    
+
     40₁₂ ₁₂ ₂₂ 40
-    ₂₁  ₂₁  
-    
+    ₂₁  ₂₁
+
 Which means:
     • 40 points
-    • 40 planes  
+    • 40 planes
     • Each point lies on 12 planes
     • Each plane contains 12 points
-    
+
 THIS IS THE SAME INCIDENCE STRUCTURE AS W33's POINTS AND LINES!
 ═════════════════════════════════════════════════════════════════════════════
 """)
@@ -130,14 +131,14 @@ to prove the Kochen-Specker and Bell theorems.
 
 KEY DISCOVERY:
     The Penrose dodecahedron states = Witting polytope vertices in CP³
-    
+
     They are UNITARILY EQUIVALENT!
 
 The 40 states come from:
     • A dodecahedron has 20 vertices
     • For each vertex v, consider v and -v (antipodal)
     • This gives 20 "directions"
-    • But in quantum mechanics (spin-3/2), each direction 
+    • But in quantum mechanics (spin-3/2), each direction
       gives 2 orthogonal states
     • 20 × 2 = 40 quantum states
 
@@ -160,7 +161,7 @@ THE WITTING POLYTOPE LIVES IN E8:
 
 From Wikipedia and Waegell-Aravind:
 
-    "The Witting polytope's 240 vertices are shared with the real 
+    "The Witting polytope's 240 vertices are shared with the real
      8-dimensional polytope 4₂₁, which is the E8 root system."
 
 The 4₂₁ polytope:
@@ -169,7 +170,7 @@ The 4₂₁ polytope:
     • Symmetry group: W(E8), order 696,729,600
 
 The Witting polytope is a COMPLEX PROJECTION of the E8 structure!
-    
+
     E8 (R⁸) → Witting (C⁴) → Witting config (CP³)
          ↓              ↓              ↓
       240 roots    240 vertices    40 points
@@ -216,7 +217,7 @@ EACH WITTING VERTEX HAS 27 NEIGHBORS:
 
 From the configuration matrix:
     • Each vertex connects to 27 edges
-    • Each vertex connects to 72 faces  
+    • Each vertex connects to 72 faces
     • Each vertex connects to 27 cells
 
 The number 27 is the dimension of the E6 fundamental representation!
@@ -228,7 +229,7 @@ W33 CONNECTION:
 
 The E6 → SM decomposition:
     27 → (3,2)₁ + (3*,1)₋₄ + (1,2)₋₃ + (1,1)₆ + ...
-    
+
 This gives exactly the Standard Model fermion content!
 ═════════════════════════════════════════════════════════════════════════════
 """)
@@ -269,7 +270,7 @@ CARD STRUCTURE (from the paper):
     • This creates a non-trivial incidence geometry
 
 This is EXACTLY the structure of W33!
-    • 40 points (cards)  
+    • 40 points (cards)
     • Some arrangement into orthogonal sets
     • Complex incidence relations
 ═════════════════════════════════════════════════════════════════════════════
@@ -352,9 +353,9 @@ DERIVATION OF α⁻¹ = 137:
 From the Witting polytope structure:
 
   α⁻¹ = (Witting vertices / 6) + (E7 fundamental)
-      = (240 / 6) + 56  
+      = (240 / 6) + 56
       = 40 + 56
-      
+
 But wait - that gives 96, not 137!
 
 Let's try another approach:
@@ -396,14 +397,14 @@ DERIVATION OF sin²θ_W = 40/173:
   sin²θ_W = (Witting diameters) / (Witting diameters + total W33)
           = 40 / (40 + 133)
           = 40 / 173
-          
+
 Where 133 comes from:
-    • 40 (points) + 40 (lines) + 81 (cycles) - 2×14 (overlaps?) 
-    
+    • 40 (points) + 40 (lines) + 81 (cycles) - 2×14 (overlaps?)
+
 Actually, more elegant:
     133 = W(E6) normalization factor
     173 = total "gauge structure" = 40 + 133
-    
+
 sin²θ_W = 40/173 = 0.231214...
 
 Experimental: 0.23121(4)

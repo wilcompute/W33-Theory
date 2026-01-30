@@ -4,6 +4,7 @@
 We search for four mutually orthogonal A2 subsystems (each 6 roots),
 then summarize how these roots intersect the six 27-orbits.
 """
+
 from __future__ import annotations
 
 import json
@@ -71,7 +72,16 @@ def build_a2_subsystems(roots):
             continue
         k = idx[rsum]
         # Build full A2 root system: ±alpha, ±beta, ±(alpha+beta)
-        indices = sorted({i, j, k, idx[negate(roots[i])], idx[negate(roots[j])], idx[negate(roots[k])]})
+        indices = sorted(
+            {
+                i,
+                j,
+                k,
+                idx[negate(roots[i])],
+                idx[negate(roots[j])],
+                idx[negate(roots[k])],
+            }
+        )
         if len(indices) != 6:
             continue
         key = tuple(indices)

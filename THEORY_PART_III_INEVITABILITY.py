@@ -38,7 +38,7 @@ The answer lies in a SELECTION PRINCIPLE:
 
   The universe must be the SIMPLEST structure capable of
   supporting complexity (i.e., observers like us).
-  
+
 This is a form of the Anthropic Principle, but stronger:
 not just "compatible with observers" but "MINIMAL for observers."
 """)
@@ -215,7 +215,7 @@ PROOF SKETCH:
   • Dimension 1,2: insufficient structure
   • Dimension 3: works perfectly (W33)
   • Dimension ≥4: wrong symmetry, over-determined
-  
+
   Therefore W33 is UNIQUE.  ∎
 """)
 
@@ -239,7 +239,7 @@ Answer: Because only exceptional algebras have:
   • Connection to finite geometries (W33)
   • Triality and octonion structure
   • Self-duality properties
-  
+
 The classical algebras (A_n, B_n, C_n, D_n) are "too continuous" -
 they exist for all n, giving infinite families.
 
@@ -288,10 +288,10 @@ W33 CONNECTION:
 
   W33 has 81 = 3⁴ cycles
   Octonions have 8 = 2³ dimensions
-  
+
   81 = 3 × 27 = 3 × dim(J₃(O))
      = 3 copies of the octonionic Jordan algebra
-     
+
   The number 3 appears because:
     • GF(3) is the base field
     • 3×3 matrices in J₃(O)
@@ -302,7 +302,7 @@ DEEP REASON:
 
   3 = smallest odd prime
   8 = largest power of 2 giving division algebra
-  
+
   3 × 8 = 24 = off-diagonal part of J₃(O)
   3 + 24 = 27 = dim(J₃(O))
   3 × 27 = 81 = W33 cycles
@@ -340,7 +340,7 @@ In a multiverse of mathematical structures:
   • Complex structures are "rare" (require more specification)
   • Simple structures are "common" (require less specification)
   • Observers are most likely in simplest viable structure
-  
+
 W33 is that structure.
 
 THE FINAL ANSWER:
@@ -424,7 +424,7 @@ We don't need:
   • External parameters (everything derived)
   • A creator (W33 exists mathematically)
   • Fine-tuning (W33 is unique)
-  
+
 This is the complete theory.
 """)
 

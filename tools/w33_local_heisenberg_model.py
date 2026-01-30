@@ -14,6 +14,7 @@ Outputs:
 - artifacts/w33_local_heisenberg_model.json
 - artifacts/w33_local_heisenberg_model.md
 """
+
 from __future__ import annotations
 
 import json
@@ -46,11 +47,11 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
     return adj
@@ -204,10 +205,18 @@ def main():
             hz_label[v] = (coords[key], z)
 
     # linear forms for H12 triangles
-    def L0(u): return u[1] % 3
-    def L1(u): return u[0] % 3
-    def L2(u): return (u[0] + u[1]) % 3
-    def L3(u): return (u[0] + 2 * u[1]) % 3
+    def L0(u):
+        return u[1] % 3
+
+    def L1(u):
+        return u[0] % 3
+
+    def L2(u):
+        return (u[0] + u[1]) % 3
+
+    def L3(u):
+        return (u[0] + 2 * u[1]) % 3
+
     forms = [L0, L1, L2, L3]
 
     # model adjacency

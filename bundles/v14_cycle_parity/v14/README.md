@@ -34,4 +34,3 @@ Inputs are read from:
 - /mnt/data/center_quad_graph_v11/center_quad_nodes.csv
 - /mnt/data/portlaw_v7/cycle_witness_portlaw_solver.csv
 - /mnt/data/proj_data/data/_n12/n12_58_2t_holonomy_nontrivial_cycles.csv
-

@@ -38,4 +38,3 @@ The next TOE-grade step is to couple this symmetry machine to the **orbit-0 flip
 - interpret the D6 orbits of rainbow lines as **distinct transport channels**,
 - interpret the D8 lifts as **clock-gauge frame changes** that are invisible in the tomotope selection but visible in the 27-universe,
 - and measure which subgroup actions preserve the Z2 curvature cocycle (defect parity) versus those that do not.
-

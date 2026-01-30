@@ -11,4 +11,3 @@ Backups:
 
 Variants:
 - `data/_variants` (non-identical suffix duplicates preserved for audit)
-

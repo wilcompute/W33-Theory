@@ -82,7 +82,7 @@ print("PHYSICAL INTERPRETATION:")
 print()
 print("  The 56-dimensional representation encodes:")
 print("    • 27 visible matter degrees of freedom")
-print("    • 27 antimatter degrees of freedom")  
+print("    • 27 antimatter degrees of freedom")
 print("    • 2 additional singlets (Higgs?)")
 print()
 print("  When we write α⁻¹ = 81 + 56:")
@@ -167,15 +167,15 @@ print("WHY THIS RATIO?")
 print()
 print("""
   The Weinberg angle θ_W determines electroweak mixing.
-  
+
   sin²θ_W = g'² / (g² + g'²)
-  
+
   where g = SU(2) coupling, g' = U(1) coupling.
-  
+
   In W33 theory:
     • g² ∝ (internal structure) = 133 = dim(E7)
     • g'² ∝ (boundary) = 40 = W33 points
-    
+
   So sin²θ_W = 40 / (40 + 133) = 40/173 ✓
 """)
 
@@ -222,7 +222,7 @@ print()
 
 # Compare to observation
 dark_matter_observed = 0.27  # Ω_DM
-visible_observed = 0.05      # Ω_baryon
+visible_observed = 0.05  # Ω_baryon
 ratio_observed = dark_matter_observed / visible_observed
 
 print(f"  Observed ratio (Ω_DM/Ω_baryon): {ratio_observed:.2f}")
@@ -313,6 +313,7 @@ print()
 
 # Black hole entropy
 import math
+
 bh_entropy_per_area = math.log(51840)
 print(f"  log(51840) = {bh_entropy_per_area:.4f}")
 print(f"  Compare: Bekenstein-Hawking S = A/(4l_P²)")
@@ -468,9 +469,9 @@ print()
 # The three couplings
 print("THE THREE GAUGE COUPLINGS:")
 print()
-alpha_1 = 1/59.0   # U(1) at M_Z
-alpha_2 = 1/29.6   # SU(2) at M_Z  
-alpha_3 = 1/8.5    # SU(3) at M_Z
+alpha_1 = 1 / 59.0  # U(1) at M_Z
+alpha_2 = 1 / 29.6  # SU(2) at M_Z
+alpha_3 = 1 / 8.5  # SU(3) at M_Z
 
 print(f"  α₁(M_Z) ≈ 1/59  [U(1)]")
 print(f"  α₂(M_Z) ≈ 1/30  [SU(2)]")

@@ -17,26 +17,35 @@ live in... wait, if they're orthogonal to a complete basis, they'd be zero!
 That's wrong. Let me re-examine what "collinear with all of C" means.
 """
 
-import numpy as np
-from pathlib import Path
-import pandas as pd
 from collections import defaultdict
 from itertools import combinations, permutations
+from pathlib import Path
 
-ROOT = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data")
+import numpy as np
+import pandas as pd
+
+ROOT = Path(
+    r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data"
+)
+
 
 def load_rays():
-    df = pd.read_csv(ROOT / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv")
+    df = pd.read_csv(
+        ROOT
+        / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv"
+    )
     V = np.zeros((40, 4), dtype=np.complex128)
     for _, row in df.iterrows():
-        pid = int(row['point_id'])
+        pid = int(row["point_id"])
         for i in range(4):
-            V[pid, i] = complex(str(row[f'v{i}']).replace(' ', ''))
+            V[pid, i] = complex(str(row[f"v{i}"]).replace(" ", ""))
     return V
+
 
 def load_lines():
     df = pd.read_csv(ROOT / "_workbench/02_geometry/W33_line_phase_map.csv")
-    return [tuple(map(int, str(row['point_ids']).split())) for _, row in df.iterrows()]
+    return [tuple(map(int, str(row["point_ids"]).split())) for _, row in df.iterrows()]
+
 
 def inner(V, p, q):
     return np.vdot(V[p], V[q])
@@ -107,7 +116,7 @@ def verify_orthogonality_structure():
 
     print("\nCenter is an orthonormal basis (points on same line):")
     for i, c1 in enumerate(center):
-        for c2 in center[i+1:]:
+        for c2 in center[i + 1 :]:
             ip = inner(V, c1, c2)
             print(f"  <{c1}|{c2}> = {ip:.6f}")
 
@@ -195,16 +204,16 @@ def analyze_gram_matrix():
     # Key phases
     print("\nPhases k (in Z_12) for off-diagonal:")
     for i in range(4):
-        for j in range(i+1, 4):
+        for j in range(i + 1, 4):
             z = G[i, j]
             k = round(6 * np.angle(z) / np.pi) % 12
             print(f"  ({i},{j}): k = {k}")
 
     # Compute all Bargmann 4-cycles on this Gram matrix
     print("\nBargmann 4-cycles (using Gram matrix entries):")
-    for perm in [(0,1,2,3), (0,1,3,2), (0,2,1,3)]:
+    for perm in [(0, 1, 2, 3), (0, 1, 3, 2), (0, 2, 1, 3)]:
         a, b, c, d = perm
-        B = G[a,b] * G[b,c] * G[c,d] * G[d,a]
+        B = G[a, b] * G[b, c] * G[c, d] * G[d, a]
         k = round(6 * np.angle(B) / np.pi) % 12
         print(f"  {a}->{b}->{c}->{d}->{a}: B = {B:.6f}, k = {k}")
 
@@ -367,13 +376,15 @@ def compute_bargmann_algebraically():
         for j, q in enumerate(outer):
             if i < j:
                 z = inner(V, p, q)
-                ips[(p,q)] = z
+                ips[(p, q)] = z
                 print(f"  <{p}|{q}> = {z:.6f}")
 
     # Compute Bargmann
-    B = ips[(0,1)] * ips[(1,2)] * ips[(2,3)] * inner(V, 3, 0)
+    B = ips[(0, 1)] * ips[(1, 2)] * ips[(2, 3)] * inner(V, 3, 0)
     print(f"\nBargmann B = <0|1><1|2><2|3><3|0>")
-    print(f"  = {ips[(0,1)]:.4f} * {ips[(1,2)]:.4f} * {ips[(2,3)]:.4f} * {inner(V,3,0):.4f}")
+    print(
+        f"  = {ips[(0,1)]:.4f} * {ips[(1,2)]:.4f} * {ips[(2,3)]:.4f} * {inner(V,3,0):.4f}"
+    )
     print(f"  = {B:.6f}")
     print(f"  Phase: {np.angle(B):.6f} rad = {np.angle(B)/np.pi:.6f} pi")
 
@@ -439,13 +450,13 @@ def check_general_constraint():
                         continue
                     common = col[a] & col[b] & col[c] & col[d]
                     if len(common) == 4:
-                        k4_list.append(((a,b,c,d), tuple(sorted(common))))
+                        k4_list.append(((a, b, c, d), tuple(sorted(common))))
 
     print(f"Found {len(k4_list)} K4 components")
 
     # For each, analyze the phase structure
     print("\nPhase structure of first 10 K4 components:")
-    for (outer, center) in k4_list[:10]:
+    for outer, center in k4_list[:10]:
         a, b, c, d = outer
 
         # Compute all 6 pairwise phases
@@ -453,11 +464,11 @@ def check_general_constraint():
         for p, q in combinations(outer, 2):
             z = inner(V, p, q)
             k = round(6 * np.angle(z) / np.pi) % 12
-            phases[(p,q)] = k
-            phases[(q,p)] = (-k) % 12  # Hermitian: <q|p> = <p|q>*
+            phases[(p, q)] = k
+            phases[(q, p)] = (-k) % 12  # Hermitian: <q|p> = <p|q>*
 
         # The Bargmann cycle a->b->c->d->a
-        cycle_k = phases[(a,b)] + phases[(b,c)] + phases[(c,d)] + phases[(d,a)]
+        cycle_k = phases[(a, b)] + phases[(b, c)] + phases[(c, d)] + phases[(d, a)]
         cycle_k = cycle_k % 12
 
         print(f"\n  Outer {outer}:")
@@ -474,6 +485,7 @@ def main():
     find_the_pattern()
     compute_bargmann_algebraically()
     check_general_constraint()
+
 
 if __name__ == "__main__":
     main()

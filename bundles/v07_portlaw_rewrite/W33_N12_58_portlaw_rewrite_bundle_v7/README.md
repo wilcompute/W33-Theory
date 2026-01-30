@@ -43,4 +43,3 @@ Files:
 - `cycle_witness_v3_holonomy_solver.csv`
 - `cycle_witness_portlaw_solver.csv`
 - `witness_equivalence_check.json`
-

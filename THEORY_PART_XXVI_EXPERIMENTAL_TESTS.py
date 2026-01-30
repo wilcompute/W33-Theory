@@ -44,10 +44,10 @@ FUTURE PRECISION:
 # Current and future precision
 current_error = 0.00004
 fcc_ee_error = 0.000006  # Expected from FCC-ee
-ilc_error = 0.000013     # Expected from ILC
-cepc_error = 0.000008    # Expected from CEPC
+ilc_error = 0.000013  # Expected from ILC
+cepc_error = 0.000008  # Expected from CEPC
 
-sin2_w33 = 40/173
+sin2_w33 = 40 / 173
 sin2_exp = 0.23121
 
 print(f"  Current (LEP/SLD):     ± {current_error}")
@@ -60,7 +60,9 @@ print()
 print("═══ Critical Test ═══")
 print()
 print(f"  If FCC-ee measures sin²θ_W = {sin2_w33:.7f} ± {fcc_ee_error}")
-print(f"  This would be {abs(sin2_w33 - sin2_exp)/fcc_ee_error:.1f}σ from current central value")
+print(
+    f"  This would be {abs(sin2_w33 - sin2_exp)/fcc_ee_error:.1f}σ from current central value"
+)
 print()
 print("  PREDICTION: FCC-ee will measure sin²θ_W CLOSER to 40/173")
 print("              as systematic errors are reduced.")

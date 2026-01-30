@@ -8,6 +8,7 @@ Outputs:
 - artifacts/root_line_sign_assignment.json
 - artifacts/sp43_we6_generator_map_aligned.json
 """
+
 from __future__ import annotations
 
 import json
@@ -53,8 +54,8 @@ def main():
         line_reps.append(rep)
 
     # Load generator perms
-    data = json.loads((ROOT / 'artifacts' / 'sp43_we6_generator_map.json').read_text())
-    gens = [g['root_perm'] for g in data['generator_maps']]
+    data = json.loads((ROOT / "artifacts" / "sp43_we6_generator_map.json").read_text())
+    gens = [g["root_perm"] for g in data["generator_maps"]]
 
     # Build constraints: sigma(line') = eps * sigma(line)
     # where eps = +1 if g maps rep(line) to rep(line'), else -1
@@ -76,7 +77,7 @@ def main():
         q = deque([start])
         while q:
             u = q.popleft()
-            for (a, b, eps) in constraints:
+            for a, b, eps in constraints:
                 if a != u:
                     continue
                 if sigma[b] is None:
@@ -84,11 +85,13 @@ def main():
                     q.append(b)
                 else:
                     if sigma[b] != eps * sigma[a]:
-                        print('Inconsistency detected')
+                        print("Inconsistency detected")
                         out = {
-                            'status': 'inconsistent',
+                            "status": "inconsistent",
                         }
-                        (ROOT / 'artifacts' / 'root_line_sign_assignment.json').write_text(json.dumps(out, indent=2))
+                        (
+                            ROOT / "artifacts" / "root_line_sign_assignment.json"
+                        ).write_text(json.dumps(out, indent=2))
                         return
 
     # Build relabeling permutation P on 240 roots: swap reps on lines with sigma=-1
@@ -115,16 +118,20 @@ def main():
         aligned.append(g_aligned)
 
     out = {
-        'status': 'ok',
-        'line_signs': sigma,
-        'relabel_perm': P,
-        'aligned_generators': aligned,
+        "status": "ok",
+        "line_signs": sigma,
+        "relabel_perm": P,
+        "aligned_generators": aligned,
     }
-    (ROOT / 'artifacts' / 'root_line_sign_assignment.json').write_text(json.dumps(out, indent=2))
-    (ROOT / 'artifacts' / 'sp43_we6_generator_map_aligned.json').write_text(json.dumps(out, indent=2))
-    print('Wrote artifacts/root_line_sign_assignment.json')
-    print('Wrote artifacts/sp43_we6_generator_map_aligned.json')
+    (ROOT / "artifacts" / "root_line_sign_assignment.json").write_text(
+        json.dumps(out, indent=2)
+    )
+    (ROOT / "artifacts" / "sp43_we6_generator_map_aligned.json").write_text(
+        json.dumps(out, indent=2)
+    )
+    print("Wrote artifacts/root_line_sign_assignment.json")
+    print("Wrote artifacts/sp43_we6_generator_map_aligned.json")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

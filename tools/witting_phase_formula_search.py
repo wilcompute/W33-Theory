@@ -5,6 +5,7 @@ For each family pair (Fα, Fβ), we try to fit:
     k ≡ a*mu1 + b*nu1 + c*mu2 + d*nu2 + e (mod 12)
 where k is the phase index (angle / (pi/6)) mod 12.
 """
+
 from __future__ import annotations
 
 import json
@@ -30,11 +31,11 @@ def construct_witting_40_rays_with_labels():
 
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
             labels.append(("F0", mu, nu))
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
             labels.append(("F1", mu, nu))
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             labels.append(("F2", mu, nu))
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
             labels.append(("F3", mu, nu))
@@ -63,7 +64,7 @@ def fit_linear_formula(samples):
                     for e in range(12):
                         ok = True
                         for mu1, nu1, mu2, nu2, k in samples:
-                            pred = (a*mu1 + b*nu1 + c*mu2 + d*nu2 + e) % 12
+                            pred = (a * mu1 + b * nu1 + c * mu2 + d * nu2 + e) % 12
                             if pred != k:
                                 ok = False
                                 break

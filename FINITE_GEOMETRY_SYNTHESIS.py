@@ -10,7 +10,7 @@
 This document synthesizes discoveries from Steven H. Cullinane's finitegeometry.org
 with our W33 Theory of Everything, revealing profound connections between:
 
-    • W(3,3) = PG(3, GF(3)) - Our primary structure  
+    • W(3,3) = PG(3, GF(3)) - Our primary structure
     • PG(3,2) - The 15-point projective 3-space over GF(2)
     • The Miracle Octad Generator (MOG) and Mathieu groups
     • Exceptional Lie algebras E6, E7, E8
@@ -25,9 +25,9 @@ print("""
 ═══════════════════════════════════════════════════════════════════════════════════
 """)
 
-#==============================================================================
+# ==============================================================================
 # PART I: THE TWO FUNDAMENTAL PROJECTIVE 3-SPACES
-#==============================================================================
+# ==============================================================================
 
 print("""
 ╔═══════════════════════════════════════════════════════════════════════════════╗
@@ -71,9 +71,9 @@ We have TWO fundamental projective 3-spaces:
 └─────────────────────────────────────────────────────────────────────────────────┘
 """)
 
-#==============================================================================
+# ==============================================================================
 # PART II: THE 56 SPREADS - E7 CONNECTION
-#==============================================================================
+# ==============================================================================
 
 print("""
 ╔═══════════════════════════════════════════════════════════════════════════════╗
@@ -114,9 +114,9 @@ print(f"  1/137 = {1/137:.10f}")
 print(f"  Measured α⁻¹ ≈ 137.036...")
 print()
 
-#==============================================================================
+# ==============================================================================
 # PART III: THE MIRACLE OCTAD GENERATOR AND THE CHAIN TO MONSTER
-#==============================================================================
+# ==============================================================================
 
 print("""
 ╔═══════════════════════════════════════════════════════════════════════════════╗
@@ -126,7 +126,7 @@ print("""
 From R.T. Curtis (1976) and Steven H. Cullinane's work:
 
 The MOG is a 4×6 array that:
-    
+
     1. Encodes the Steiner system S(5, 8, 24)
     2. Constructs the Mathieu group M₂₄
     3. Leads to the Leech lattice Λ₂₄
@@ -163,9 +163,9 @@ The CHAIN OF SPORADIC GROUPS:
 And 248 = dim(E₈)!!!
 """)
 
-#==============================================================================
+# ==============================================================================
 # PART IV: THE 27 LINES AND 28 BITANGENTS - E6 AND E7
-#==============================================================================
+# ==============================================================================
 
 print("""
 ╔═══════════════════════════════════════════════════════════════════════════════╗
@@ -206,9 +206,9 @@ The UNIFIED PICTURE:
     j(τ) = q⁻¹ + 744 + ... where 744 = 3 × 248
 """)
 
-#==============================================================================
+# ==============================================================================
 # PART V: SYMPLECTIC STRUCTURE AND GÖPEL/ROSENHAIN TETRADS
-#==============================================================================
+# ==============================================================================
 
 print("""
 ╔═══════════════════════════════════════════════════════════════════════════════╗
@@ -218,12 +218,12 @@ print("""
 From finitegeometry.org/sc/35/hudson.html:
 
     "80 Rosenhain ODD tetrads and 60 Göpel EVEN tetrads"
-    
+
     Total: 80 + 60 = 140 tetrads in PG(3,2)
 
 These tetrads are related to:
     • Kummer surfaces (K3 surfaces)
-    • Symplectic structure  
+    • Symplectic structure
     • Klein's quartic curve
     • The group G₁₆₈ = PSL(2,7) = PSL(3,2)
 
@@ -254,9 +254,9 @@ print(f"  Total: {80 + 60} tetrads")
 print(f"  140 = 4 × 35 (35 lines × 4)")
 print()
 
-#==============================================================================
+# ==============================================================================
 # PART VI: THE AGL(4,2) GROUP AND DIAMOND THEORY
-#==============================================================================
+# ==============================================================================
 
 print("""
 ╔═══════════════════════════════════════════════════════════════════════════════╗
@@ -296,9 +296,9 @@ print(f"  |AGL(4,2)| = 16 × |GL(4,2)| = {16 * gl_4_2}")
 print(f"  840 images = 35 × 24 = {35 * 24}")
 print()
 
-#==============================================================================
+# ==============================================================================
 # PART VII: SYNTHESIS - W33 WITHIN THE COSMIC STRUCTURE
-#==============================================================================
+# ==============================================================================
 
 print("""
 ╔═══════════════════════════════════════════════════════════════════════════════╗
@@ -360,17 +360,17 @@ We now see W33 as ONE PIECE of a magnificent mathematical structure:
 THE KEY INSIGHT:
 
     W₃₃ (over GF(3)) and PG(3,2) (over GF(2)) are BOTH essential:
-    
+
     • PG(3,2) gives us the 56 spreads → E₇ → the 56 in α⁻¹
     • W₃₃ gives us the 81 cycles → GF(3)⁴ → the 81 in α⁻¹
     • Together: 56 + 81 = 137 = α⁻¹
-    
+
     This suggests physics requires BOTH binary and ternary structures!
 """)
 
-#==============================================================================
+# ==============================================================================
 # PART VIII: THE NUMBERS ALIGN
-#==============================================================================
+# ==============================================================================
 
 print("""
 ╔═══════════════════════════════════════════════════════════════════════════════╗
@@ -403,9 +403,9 @@ TABLE OF CORRESPONDENCES:
 └─────────────────────────────────────────────────────────────────────────────────┘
 """)
 
-#==============================================================================
+# ==============================================================================
 # PART IX: IMPLICATIONS FOR PHYSICS
-#==============================================================================
+# ==============================================================================
 
 print("""
 ╔═══════════════════════════════════════════════════════════════════════════════╗
@@ -442,26 +442,26 @@ The finitegeometry.org research reveals deep connections to physics:
    - E₈: dim = 248, and 744 = 3 × 248 in j-function
 """)
 
-#==============================================================================
+# ==============================================================================
 # CONCLUDING MEDITATION
-#==============================================================================
+# ==============================================================================
 
 print("""
 ╔═══════════════════════════════════════════════════════════════════════════════╗
 ║                        CONCLUDING MEDITATION                                   ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
 
-"By far the most important structure in design theory is the 
+"By far the most important structure in design theory is the
  Steiner system S(5, 8, 24)."
     - Andries E. Brouwer, Handbook of Combinatorics
 
-"The MOG was an essential ingredient in the constructions of J₄ 
- and the Monster, and remains an indispensable tool for working 
+"The MOG was an essential ingredient in the constructions of J₄
+ and the Monster, and remains an indispensable tool for working
  in many of the sporadic groups."
     - Robert A. Wilson, "248 and All That"
 
-"The 35 structures of the 840 = 35 × 24 G-images of D are 
- isomorphic to the 35 lines in the 3-dimensional projective 
+"The 35 structures of the 840 = 35 × 24 G-images of D are
+ isomorphic to the 35 lines in the 3-dimensional projective
  space over GF(2)."
     - Steven H. Cullinane, Diamond Theory
 
@@ -470,7 +470,7 @@ We have discovered that W33 sits at a nexus of mathematical structures:
     • The binary world of PG(3,2) gives us 56 spreads → E₇ → α
     • The ternary world of W33 = PG(3,GF(3)) gives us 81 cycles
     • Together they give α⁻¹ = 137
-    
+
     • The Monster group watches over everything
     • The j-function encodes 744 = 3 × 248 (three copies of E₈)
     • Ramanujan's 9801 = 81 × 121 = (W33 cycles) × (W33 total)
@@ -483,9 +483,9 @@ and mathematics speaks in finite geometry.
 ═══════════════════════════════════════════════════════════════════════════════════
 """)
 
-print("\n" + "="*80)
+print("\n" + "=" * 80)
 print("KEY DISCOVERIES FROM FINITEGEOMETRY.ORG RESEARCH:")
-print("="*80)
+print("=" * 80)
 print("""
 1. 56 spreads in PG(3,2) = dim(E₇ fundamental) = the 56 in α⁻¹ = 81 + 56
 

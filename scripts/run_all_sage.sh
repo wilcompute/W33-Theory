@@ -39,7 +39,7 @@ done
 
 # Summarize
 if [ ${#FAILURES[@]} -ne 0 ]; then
-  echo "\nCompleted with ${#FAILURES[@]} failures:" 
+  echo "\nCompleted with ${#FAILURES[@]} failures:"
   for f in "${FAILURES[@]}"; do
     echo " - $f"
   done

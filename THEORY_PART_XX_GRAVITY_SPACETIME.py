@@ -9,9 +9,10 @@ How does SPACETIME emerge from W33?
 The deepest questions of physics!
 """
 
-import numpy as np
-from fractions import Fraction
 import math
+from fractions import Fraction
+
+import numpy as np
 
 print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -122,11 +123,11 @@ W33 lives in 4-dimensional symplectic space:
     • W(3,3) = symplectic polar space
     • The "3,3" means: W(d,q) with d=3, q=3
     • Dimension of underlying space: 2(d+1) = 2×4 = 8
-    
+
 But wait - the Witting polytope lives in C⁴!
     • C⁴ has complex dimension 4
     • Real dimension 8
-    
+
 HYPOTHESIS: The 4 dimensions of spacetime = C⁴ of Witting
 ═════════════════════════════════════════════════════════════════════════════
 
@@ -284,6 +285,7 @@ print()
 
 # Check if any exponential works
 import math
+
 print("Exponential explorations:")
 print(f"  exp(40) = {math.exp(40):.2e}")
 print(f"  exp(81) = {math.exp(81):.2e}")

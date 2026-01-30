@@ -271,7 +271,7 @@ If W33 is the "control structure" of E8 string theory:
    The string moduli space should have W33 symmetry
    Calabi-Yau moduli ∼ 40 complex dimensions?
 
-2. SWAMPLAND CONSTRAINTS  
+2. SWAMPLAND CONSTRAINTS
    "Swampland" bounds on effective theories should
    be related to W33 incidence relations
 

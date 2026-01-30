@@ -16,6 +16,7 @@ Outputs:
 - artifacts/exact_fractional_analysis.json
 - artifacts/exact_fractional_analysis.md
 """
+
 from __future__ import annotations
 
 import json
@@ -53,11 +54,11 @@ def construct_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     adj = np.zeros((n, n), dtype=int)
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i, j] = adj[j, i] = 1
 
@@ -122,7 +123,7 @@ def main():
     off_diag_nonadj = []
 
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if adj[i, j]:
                 off_diag_adj.append(P[i, j])
             else:
@@ -171,7 +172,10 @@ def main():
 
     # Find LCM of denominators
     from math import lcm
-    common_denom = lcm(diag_frac.denominator, adj_frac.denominator, nonadj_frac.denominator)
+
+    common_denom = lcm(
+        diag_frac.denominator, adj_frac.denominator, nonadj_frac.denominator
+    )
 
     diag_num = int(diag_frac * common_denom)
     adj_num = int(adj_frac * common_denom)
@@ -187,7 +191,11 @@ def main():
     lines.append("")
 
     results["common_denominator"] = common_denom
-    results["numerators"] = {"diagonal": diag_num, "adjacent": adj_num, "nonadjacent": nonadj_num}
+    results["numerators"] = {
+        "diagonal": diag_num,
+        "adjacent": adj_num,
+        "nonadjacent": nonadj_num,
+    }
 
     # Verify projection property: P² = P
     lines.append("### Projection Property Verification")
@@ -246,11 +254,15 @@ def main():
 
     if nonadj_num != 0:
         adj_nonadj_ratio = Fraction(adj_num, nonadj_num)
-        lines.append(f"Adjacent/Non-adjacent ratio: {adj_num}/{nonadj_num} = {adj_nonadj_ratio}")
+        lines.append(
+            f"Adjacent/Non-adjacent ratio: {adj_num}/{nonadj_num} = {adj_nonadj_ratio}"
+        )
 
     if adj_num != 0:
         diag_adj_ratio = Fraction(diag_num, adj_num)
-        lines.append(f"Diagonal/Adjacent ratio: {diag_num}/{adj_num} = {diag_adj_ratio}")
+        lines.append(
+            f"Diagonal/Adjacent ratio: {diag_num}/{adj_num} = {diag_adj_ratio}"
+        )
     lines.append("")
 
     # Factor analysis
@@ -286,13 +298,13 @@ def main():
     # Get edges
     edges = []
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if adj[i, j]:
                 edges.append((i, j))
 
     # Compute edge projections
     edge_projections = []
-    for (a, b) in edges:
+    for a, b in edges:
         indicator = np.zeros(n)
         indicator[a] = 1
         indicator[b] = 1
@@ -302,7 +314,7 @@ def main():
     edge_projections = np.array(edge_projections)  # 240 × 24
 
     # Edge norm squared
-    edge_norm_sq = np.sum(edge_projections[0]**2)
+    edge_norm_sq = np.sum(edge_projections[0] ** 2)
     edge_norm_sq_frac = float_to_fraction(edge_norm_sq)
 
     lines.append(f"Edge projection norm²: {edge_norm_sq:.10f} = {edge_norm_sq_frac}")
@@ -322,13 +334,15 @@ def main():
     edge_gram = edge_projections @ edge_projections.T
     edge_ips = set()
     for i in range(240):
-        for j in range(i+1, 240):
+        for j in range(i + 1, 240):
             edge_ips.add(round(edge_gram[i, j], 10))
 
     edge_ip_fracs = {}
     for ip in sorted(edge_ips):
         frac = float_to_fraction(ip)
-        count = np.sum(np.abs(edge_gram - ip) < 1e-8) - (240 if abs(ip - edge_norm_sq) < 1e-8 else 0)
+        count = np.sum(np.abs(edge_gram - ip) < 1e-8) - (
+            240 if abs(ip - edge_norm_sq) < 1e-8 else 0
+        )
         edge_ip_fracs[ip] = (frac, int(count) // 2)  # div 2 for symmetry
 
     lines.append("| Inner Product | Fraction | Count |")
@@ -338,7 +352,9 @@ def main():
             lines.append(f"| {ip:.6f} | {frac} | {count} |")
     lines.append("")
 
-    results["edge_inner_products"] = {str(k): str(v[0]) for k, v in edge_ip_fracs.items() if v[1] > 0}
+    results["edge_inner_products"] = {
+        str(k): str(v[0]) for k, v in edge_ip_fracs.items() if v[1] > 0
+    }
 
     # Summary
     lines.append("## Summary")

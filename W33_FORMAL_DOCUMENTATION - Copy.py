@@ -3,12 +3,13 @@
 W33 FORMAL THEORY - COMPLETE DOCUMENTATION
 ==========================================
 
-This script generates a comprehensive formatted summary of the 
+This script generates a comprehensive formatted summary of the
 W(3,3) Theory of Everything, including all predictions and formulas.
 """
 
 import math
 from datetime import datetime
+
 
 def header(title, char="═"):
     width = 78
@@ -16,10 +17,12 @@ def header(title, char="═"):
     print(f"{title:^{width}}")
     print(char * width)
 
+
 def subheader(title):
     print(f"\n{'─' * 78}")
     print(f"  {title}")
     print(f"{'─' * 78}\n")
+
 
 print("""
 ╔════════════════════════════════════════════════════════════════════════════╗
@@ -127,7 +130,7 @@ print("""
 
 header("PART III: FINE STRUCTURE CONSTANT")
 
-alpha_inv_w33 = 81 + 56 + 40/1111
+alpha_inv_w33 = 81 + 56 + 40 / 1111
 alpha_inv_exp = 137.035999084
 
 print(f"""
@@ -175,7 +178,7 @@ print(f"""
 
 header("PART IV: WEINBERG ANGLE")
 
-sin2_w33 = 40/173
+sin2_w33 = 40 / 173
 sin2_exp = 0.23121
 
 print(f"""
@@ -218,8 +221,8 @@ print(f"""
 header("PART V: PARTICLE MASS PREDICTIONS")
 
 v = 246.22
-m_t_w33 = v * math.sqrt(40/81)
-m_H_w33 = (v/2) * math.sqrt(81/78)
+m_t_w33 = v * math.sqrt(40 / 81)
+m_H_w33 = (v / 2) * math.sqrt(81 / 78)
 m_t_exp = 172.76
 m_H_exp = 125.25
 

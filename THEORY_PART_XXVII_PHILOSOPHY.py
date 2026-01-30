@@ -190,7 +190,7 @@ print("""
 W33 is fundamentally about CONTEXTUALITY.
 
 The Kochen-Specker theorem (1967) proves:
-  
+
   "Quantum mechanics cannot be embedded in a classical
    hidden variable theory with non-contextual value assignments."
 
@@ -256,7 +256,7 @@ W33 extends this:
 
 In this view:
   • 40 points = 40 ways of asking about reality
-  • 40 lines = 40 contexts for compatible questions  
+  • 40 lines = 40 contexts for compatible questions
   • 81 cycles = 81 ways these contexts weave together
   • 90 K4s = 90 irreducible contextual constraints
 
@@ -313,7 +313,7 @@ print()
 
 print("""
 The anthropic principle says:
-  "The universe has the properties it does because 
+  "The universe has the properties it does because
    otherwise we wouldn't be here to observe it."
 
 This is often seen as a weak explanation. But W33 transforms it:
@@ -370,7 +370,7 @@ But this indeterminacy is not randomness!
 
   The 40 points constrain WHICH outcomes are possible.
   The 90 K4s constrain HOW outcomes relate.
-  
+
   Freedom exists WITHIN the structure.
 
 ═══ Structured Freedom ═══
@@ -410,7 +410,7 @@ W33 suggests a new view of time:
 ═══ W33 View ═══
 
   The 81 CYCLES suggest time is fundamentally cyclic.
-  
+
   Not circular time (that would violate causality).
   But STRUCTURED time - time with internal geometry.
 
@@ -536,7 +536,7 @@ print("""
 Physicists often speak of beautiful theories.
 
   Dirac: "A theory with mathematical beauty is more likely to be correct."
-  
+
   Weinberg: "The universe is not only queerer than we suppose,
              but queerer than we CAN suppose."
 

@@ -1,7 +1,3 @@
-{
-  "n_triangles_in_Q": 5280,
-  "parity_counts": {
-    "0": 3120,
-    "1": 2160
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:11cc6baa51cd0b09608e5a523a4ea73543dcda253f600bbc2357131cc4f4da3b
+size 86

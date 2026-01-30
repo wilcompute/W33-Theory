@@ -80,7 +80,7 @@ THE MYSTERY:
 - Yet the elliptic genus "knows about" M24
 
 W33 AND M12:
-- M12 ⊂ M24 (as maximal subgroup)  
+- M12 ⊂ M24 (as maximal subgroup)
 - M12 acts on ternary Golay code
 - Ternary Golay ↔ W33 via GF(3)
 - M12 also acts on A₂¹² Niemeier lattice
@@ -118,11 +118,11 @@ THE NUMBER 22:
 
 DIMENSION CHAINS:
   M-theory: 11 dimensions
-  F-theory: 12 dimensions  
+  F-theory: 12 dimensions
   Critical string: 26 = 24 + 2 dimensions
   K3 real dimension: 4
   K3 compactification: 6 (extra dimensions)
-  
+
   11 + 11 = 22 (K3 Betti number!)
   11² = 121 = |W33|!
 
@@ -156,7 +156,7 @@ THE j-INVARIANT:
 
 THE MOONSHINE MODULE:
   Character = j(τ) - 744 = q⁻¹ + 0 + 196884q + ...
-  
+
 WHY 744?
   744 = 24 × 31
       = 729 + 15
@@ -177,7 +177,7 @@ WHERE DOES 15 COME FROM?
 THE EQUATION:
   744 = |Ternary Golay| + 15
       = 9 × |W33 cycles| + dim(so(6))
-      
+
 This suggests W33 is deeply connected to the j-function!
 """)
 
@@ -210,12 +210,12 @@ INTERPRETATION:
 If physics constants come from moonshine:
   α⁻¹ = 137 = 81 + 56 (from W33)
   sin²θ_W = 40/173 (from W33 exact!)
-  
+
 Then: α⁻¹ × sin²θ_W = 137 × 40/173 = 5480/173 ≈ 31.676
 
 Compare to j-constant relationship:
   744 / 24 = 31 (exactly)
-  
+
 Difference: 31.676 - 31 = 0.676 ≈ 2/3
 
 PREDICTION:
@@ -243,7 +243,7 @@ print(f"  31 + 2/3 = {31 + 2/3:.4f}")
 
 # Using our W33 values
 alpha_w33 = 137
-sin2_w33 = 40/173
+sin2_w33 = 40 / 173
 product_w33 = alpha_w33 * sin2_w33
 
 print(f"\nUsing W33 predictions:")
@@ -413,7 +413,7 @@ Q5: Does W33 explain Mathieu moonshine?
 THE DREAM:
 A complete Theory of Everything where W33 explains:
 - The fine structure constant
-- The Weinberg angle  
+- The Weinberg angle
 - Dark energy fraction
 - The Monster group
 - String theory
@@ -426,7 +426,7 @@ print("=" * 70)
 
 print("""
 
-"The universe is built on a plan the profound symmetry of which 
+"The universe is built on a plan the profound symmetry of which
 is somehow present in the inner structure of our intellect."
                                         - Paul Valery
 

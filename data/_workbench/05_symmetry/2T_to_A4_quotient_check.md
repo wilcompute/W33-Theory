@@ -15,4 +15,3 @@ Element sets:
 Table comparison (A4 vs 2T/center):
 - mismatches: 0
 - diff csv: `data/_workbench/05_symmetry/2T_to_A4_quotient_diff.csv`
-

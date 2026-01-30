@@ -40,7 +40,7 @@ q = 3  # The prime field
 n = 3  # Projective dimension
 
 # Number of points in PG(n, q) = (q^(n+1) - 1) / (q - 1)
-num_points = (q**(n+1) - 1) // (q - 1)
+num_points = (q ** (n + 1) - 1) // (q - 1)
 num_lines = num_points  # Self-dual in PG(3,q)
 
 print(f"W33 = PG({n}, GF({q}))")
@@ -50,7 +50,7 @@ print()
 
 # The incidence structure gives us cycles
 num_cycles = 81  # From computational analysis
-num_k4s = 90     # K4 subgroups
+num_k4s = 90  # K4 subgroups
 
 print(f"Incidence structure:")
 print(f"  Cycles: {num_cycles} = 3^4")
@@ -136,7 +136,7 @@ print("""
 This four-fold isomorphism is NOT a coincidence.
 It reflects the FOUR fundamental structures:
   • Symplectic (quantum mechanics)
-  • Unitary (wave functions)  
+  • Unitary (wave functions)
   • Orthogonal minus (fermions)
   • Orthogonal (spacetime)
 """)
@@ -151,11 +151,11 @@ print("=" * 72)
 print()
 
 exceptional = {
-    'G2': {'dim': 14, 'rank': 2},
-    'F4': {'dim': 52, 'rank': 4},
-    'E6': {'dim': 78, 'rank': 6},
-    'E7': {'dim': 133, 'rank': 7},
-    'E8': {'dim': 248, 'rank': 8}
+    "G2": {"dim": 14, "rank": 2},
+    "F4": {"dim": 52, "rank": 4},
+    "E6": {"dim": 78, "rank": 6},
+    "E7": {"dim": 133, "rank": 7},
+    "E8": {"dim": 248, "rank": 8},
 }
 
 print("The Exceptional Lie Algebras:")
@@ -223,7 +223,7 @@ print("""
     • Spin(9)
     • SU(3) × SU(3)
     • SU(2) × Sp(3)
-  
+
   Their intersection gives:
     SU(3)_C × SU(2)_L × U(1)_Y = Standard Model gauge group!
 """)
@@ -244,7 +244,9 @@ e7_fundamental = 56
 alpha_inv_predicted = cycles_81 + e7_fundamental
 alpha_inv_experimental = 137.035999084
 
-error_alpha = abs(alpha_inv_predicted - alpha_inv_experimental) / alpha_inv_experimental * 100
+error_alpha = (
+    abs(alpha_inv_predicted - alpha_inv_experimental) / alpha_inv_experimental * 100
+)
 
 print("THE MASTER EQUATION:")
 print()
@@ -261,13 +263,13 @@ print("WHY THIS WORKS:")
 print("""
   • 81 = 3^4 = geometric contribution from W33 cycles
   • 56 = E7 fundamental = gravitational/string contribution
-  
-  The fine structure constant measures the strength of 
+
+  The fine structure constant measures the strength of
   electromagnetic interaction. It emerges from:
-  
+
   1. The discrete structure of spacetime (81 cycles)
   2. The embedding into M-theory (E7 with its 56)
-  
+
   α⁻¹ = (discrete geometry) + (continuous unification)
        = 81 + 56 = 137
 """)
@@ -350,10 +352,10 @@ print("MONSTROUS MOONSHINE:")
 print("""
   196884 = 1 + 196883
          = (trivial rep) + (smallest non-trivial rep of Monster)
-  
+
   The Monster group M has order:
     |M| ≈ 8 × 10^53
-    
+
   The coefficients of j(τ) decompose into Monster representations!
 """)
 
@@ -380,16 +382,16 @@ print()
 print("WHY 11?")
 print("""
   11 is the dimension of M-theory!
-  
+
   • M-theory lives in 10+1 = 11 dimensions
   • 11 = smallest prime > 10
   • 11 appears in exceptional structures:
     - E_11 (infinite-dimensional Kac-Moody)
     - 11D supergravity
-    
+
   W33 encodes 11² because:
     (spacetime structure) = (M-theory dimension)²
-    
+
   The square represents the metric: g_μν requires two indices!
 """)
 
@@ -424,10 +426,10 @@ print("""
     • Contains SU(5) ⊃ SU(3) × SU(2) × U(1)
     • 16-dimensional spinor = one generation of fermions
     • Predicts proton decay (not yet observed)
-    
+
   W33 encodes GUT structure:
     90 K4s = 2 × dim(SO(10))
-    
+
   The factor of 2 represents:
     • Matter + antimatter
     • Left + right chirality
@@ -463,7 +465,7 @@ THE EMERGENCE MECHANISM:
    • Abstract projective elements
    • Quantum superpositions of "locations"
 
-2. CYCLES (81)  
+2. CYCLES (81)
    • Relations between points
    • Encode causality structure
    • 81 = 3^4 suggests 4D from 3-structure
@@ -472,10 +474,10 @@ THE EMERGENCE MECHANISM:
    • 3 colors → SU(3) gauge
    • 2 weak isospin → SU(2) gauge
    • 1 hypercharge → U(1) gauge
-   
+
    Total gauge dimensions: 8 + 3 + 1 = 12
    But spacetime has 4 dimensions...
-   
+
    The "missing" 8 dimensions are compactified!
    12 - 4 = 8 → octonion structure!
 
@@ -483,7 +485,7 @@ THE EMERGENCE MECHANISM:
    • 40 boundary points
    • 81 bulk cycles
    • 40 + 81 = 121 = 11²
-   
+
    The boundary (40) encodes information about
    the bulk (11-dimensional M-theory)!
 """)
@@ -545,7 +547,7 @@ THE THEORY MAKES THE FOLLOWING PREDICTIONS:
    • Exactly 3 generations (confirmed ✓)
    • No fourth generation
    • sin²θ_W = 0.23121... (matches to 0.004%)
-   
+
 2. COSMOLOGY
    • Dark matter from 56-dimensional E7 sector
    • 56 - 27 = 29 "hidden" degrees of freedom
@@ -633,7 +635,7 @@ print("""
 Why should a simple projective geometry over 3 elements
 encode all of physics?
 
-Eugene Wigner called this "the unreasonable effectiveness 
+Eugene Wigner called this "the unreasonable effectiveness
 of mathematics in the natural sciences."
 
 But perhaps it's not unreasonable at all.
@@ -641,7 +643,7 @@ But perhaps it's not unreasonable at all.
 Perhaps the universe IS mathematics.
 Perhaps GF(3) is the simplest field that supports:
   - Non-trivial geometry
-  - Exceptional structures  
+  - Exceptional structures
   - Triality and the number 3
 
 And perhaps W33 = PG(3, GF(3)) is simply...

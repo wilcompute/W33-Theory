@@ -45,16 +45,16 @@ M-theory lives in 11 dimensions because:
 The decomposition:
   11 = 4 + 7  (spacetime + internal)
   11 = 1 + 10 (time + space)
-  
+
 Compactification:
   11D → 10D: on S¹ → Type IIA string
   11D → 4D: on G₂ manifold → N=1 SUSY
 
 W33 connection:
   40 + 81 = 121 = 11²
-  
+
   11 = √(40 + 81) = √(matter + vacuum)
-  
+
 THE DIMENSION IS THE GEOMETRIC MEAN!
 """)
 
@@ -93,16 +93,16 @@ The 32 comes from:
 
 W33 connection:
   32 = 2⁵
-  
+
   Looking at W33:
   - 90 K4 subgroups
   - Each K4 has 3 non-identity elements
   - 90 × 3 = 270 ≈ ?
-  
+
 Actually:
   - 40 points / 4 (K4) = 10 = Q45
   - 32 = 2 × 16 = 2 × 4² = 2 × (K4)²
-  
+
 The supercharges relate to K4 structure!
 """)
 
@@ -119,7 +119,7 @@ print(f"  32 = 2 × 16 = 2 × (K4)²")
 print(f"\nSpinor dimensions:")
 for d in range(3, 12):
     if d % 2 == 1:
-        spinor_dim = 2**((d-1)//2)
+        spinor_dim = 2 ** ((d - 1) // 2)
         print(f"  D={d}: Dirac spinor = 2^{(d-1)//2} = {spinor_dim}")
 
 # =============================================================================
@@ -140,7 +140,7 @@ M-theory has two fundamental extended objects:
 
 They are electromagnetic duals:
   2 + 5 + 4 = 11  (2-brane + 5-brane + spacetime interval)
-  
+
 The numbers:
   - M2 couples to 3-form potential A₃
   - M5 couples to 6-form potential A₆
@@ -150,7 +150,7 @@ The numbers:
 W33 connection:
   - K4 = ℤ₂ × ℤ₂ has 4 elements
   - 4-form! A₃ lives on K4-like structure
-  
+
   Dimensions:
   - 2 = dimension of ℂ
   - 5 = dimension of sphere S⁴ boundary (M5 horizon)
@@ -192,20 +192,20 @@ dim(E₈ × E₈) = 496
 
 The anomaly cancellation requires:
   496 = 248 + 248
-  
+
 This is special because:
   496 = 2⁴ × 31 = 16 × 31
-  
+
 W33 connection:
   Looking for 248 and 496...
-  
+
   133 (E₇) × 2 = 266 ≠ 248
   But: 248 = 133 + 115 = E₇ + ?
-  
+
   Actually:
   248 = 120 + 128 = SO(16) adjoint + spinor
   248 = 56 × 4 + 24 = 4 × (E₇ fund) + SU(5)
-  
+
   Key: 248 - 133 = 115 = ?
 """)
 
@@ -253,7 +253,7 @@ The critical dimension is 24:
   - Bosonic string critical dimension = 26
   - But with 2 lightcone directions: 24 transverse
   - 24 = dimension of Leech lattice
-  
+
 W33 connection:
   24 = dim(SU(5)) ✓
   24 = 2 × 12 = 2 × dim(SM gauge)
@@ -294,16 +294,16 @@ M-theory compactifications:
 W33 as internal space:
   - 40 points → discrete compact manifold?
   - K4 structure → orbifold singularities?
-  
+
 The key: |W33| = 40 = 8 × 5 = dim(octonions) × ?
 
 Possible interpretation:
   W33 ≅ (S⁷ / Γ) where Γ = finite group
-  
+
   Order considerations:
   |Sp(6,3)| = 9,170,703,360
   This is the "size" of the W33 geometry
-  
+
   9,170,703,360 = 2¹⁰ × 3⁹ × 5 × 7 × 13
 """)
 
@@ -358,7 +358,7 @@ All are limits of ONE theory!
 W33 interpretation:
   - 6 theories = 6 = |K4| + 2 ?
   - Actually: 6 = C(4,2) = pairs in K4!
-  
+
 The 6 duality frames correspond to
 the 6 ways to choose 2 elements from K4!
 """)
@@ -398,12 +398,12 @@ But W33 gives:
 Deeper decomposition:
   121 = 1 + 10 + 10 + 100
       = 1 + 2×10 + 10²
-      
+
 Or:
   121 = 1 + 40 + 80
       = identity + W33 + (St - 1)
-      
-The 11 = √121 is the GEOMETRIC MEAN of 
+
+The 11 = √121 is the GEOMETRIC MEAN of
 the matter-vacuum duality!
 """)
 
@@ -439,18 +439,18 @@ F-theory is a 12-dimensional formulation:
 
 W33 connection:
   12 = dim(SM gauge) = SU(3)×SU(2)×U(1)
-  
+
 We found: 133 = 40 + 81 + 12 = E₇
 
 So:
   M-theory (11D) + gauge (12D structure) → E₇!
-  
+
 The F-theory lift of W33 gives E₇ unification!
 """)
 
 print(f"\nF-theory dimensions:")
 print(f"  F-theory: 12D")
-print(f"  M-theory: 11D") 
+print(f"  M-theory: 11D")
 print(f"  Type IIB: 10D")
 print(f"  Difference: 12 - 10 = 2 (torus)")
 

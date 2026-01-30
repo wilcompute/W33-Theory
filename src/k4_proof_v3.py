@@ -14,26 +14,35 @@ This means:
 Let me prove WHY this rank-3 structure forces the Bargmann phase = -1.
 """
 
-import numpy as np
-from pathlib import Path
-import pandas as pd
 from collections import defaultdict
 from itertools import combinations, permutations
+from pathlib import Path
 
-ROOT = Path(r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data")
+import numpy as np
+import pandas as pd
+
+ROOT = Path(
+    r"C:\Users\wiljd\OneDrive\Documents\GitHub\WilsManifold\claude_workspace\data"
+)
+
 
 def load_rays():
-    df = pd.read_csv(ROOT / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv")
+    df = pd.read_csv(
+        ROOT
+        / "_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv"
+    )
     V = np.zeros((40, 4), dtype=np.complex128)
     for _, row in df.iterrows():
-        pid = int(row['point_id'])
+        pid = int(row["point_id"])
         for i in range(4):
-            V[pid, i] = complex(str(row[f'v{i}']).replace(' ', ''))
+            V[pid, i] = complex(str(row[f"v{i}"]).replace(" ", ""))
     return V
+
 
 def load_lines():
     df = pd.read_csv(ROOT / "_workbench/02_geometry/W33_line_phase_map.csv")
-    return [tuple(map(int, str(row['point_ids']).split())) for _, row in df.iterrows()]
+    return [tuple(map(int, str(row["point_ids"]).split())) for _, row in df.iterrows()]
+
 
 def inner(V, p, q):
     return np.vdot(V[p], V[q])
@@ -217,11 +226,11 @@ def compute_determinant_formula():
 
     # The Bargmann invariant is a PRODUCT of off-diagonal elements
     # B = G[0,1] * G[1,2] * G[2,3] * G[3,0]
-    B_01_12_23_30 = G[0,1] * G[1,2] * G[2,3] * G[3,0]
+    B_01_12_23_30 = G[0, 1] * G[1, 2] * G[2, 3] * G[3, 0]
     print(f"\nB(0->1->2->3->0) = G[0,1]*G[1,2]*G[2,3]*G[3,0] = {B_01_12_23_30:.6f}")
 
     # What about the other cycle?
-    B_01_13_32_20 = G[0,1] * G[1,3] * G[3,2] * G[2,0]
+    B_01_13_32_20 = G[0, 1] * G[1, 3] * G[3, 2] * G[2, 0]
     print(f"B(0->1->3->2->0) = {B_01_13_32_20:.6f}")
 
     # There's a beautiful identity:
@@ -232,19 +241,19 @@ def compute_determinant_formula():
     print("-" * 50)
 
     # The diagonal is all 1 (unit vectors)
-    print("\nDiagonal of G:", [G[i,i] for i in range(4)])
+    print("\nDiagonal of G:", [G[i, i] for i in range(4)])
 
     # Off-diagonal magnitudes
     print("\nOff-diagonal magnitudes:")
     for i in range(4):
-        for j in range(i+1, 4):
+        for j in range(i + 1, 4):
             print(f"  |G[{i},{j}]| = {abs(G[i,j]):.6f}")
 
     # Phases (in Z_12)
     print("\nOff-diagonal phases (k in Z_12):")
     for i in range(4):
-        for j in range(i+1, 4):
-            k = round(6 * np.angle(G[i,j]) / np.pi) % 12
+        for j in range(i + 1, 4):
+            k = round(6 * np.angle(G[i, j]) / np.pi) % 12
             print(f"  k[{i},{j}] = {k}")
 
 
@@ -371,7 +380,7 @@ def analyze_phase_constraints():
             else:
                 z = inner(V, p, q)
                 k = round(6 * np.angle(z) / np.pi) % 12
-                phases[(p,q)] = k
+                phases[(p, q)] = k
                 print(f"  {k:2d} ", end="")
         print()
 
@@ -380,8 +389,10 @@ def analyze_phase_constraints():
     for p in outer:
         for q in outer:
             if p < q:
-                s = (phases[(p,q)] + phases[(q,p)]) % 12
-                print(f"  k({p},{q}) + k({q},{p}) = {phases[(p,q)]} + {phases[(q,p)]} = {s} mod 12")
+                s = (phases[(p, q)] + phases[(q, p)]) % 12
+                print(
+                    f"  k({p},{q}) + k({q},{p}) = {phases[(p,q)]} + {phases[(q,p)]} = {s} mod 12"
+                )
 
     # For a cycle a->b->c->d->a:
     # Bargmann = k(a,b) + k(b,c) + k(c,d) + k(d,a)
@@ -399,8 +410,10 @@ def analyze_phase_constraints():
 
     for cyc in cycles:
         a, b, c, d = cyc
-        s = (phases[(a,b)] + phases[(b,c)] + phases[(c,d)] + phases[(d,a)]) % 12
-        print(f"Cycle {a}->{b}->{c}->{d}->{a}: {phases[(a,b)]}+{phases[(b,c)]}+{phases[(c,d)]}+{phases[(d,a)]} = {s}")
+        s = (phases[(a, b)] + phases[(b, c)] + phases[(c, d)] + phases[(d, a)]) % 12
+        print(
+            f"Cycle {a}->{b}->{c}->{d}->{a}: {phases[(a,b)]}+{phases[(b,c)]}+{phases[(c,d)]}+{phases[(d,a)]} = {s}"
+        )
 
     # KEY: All cycles give 6!
     # WHY?
@@ -419,13 +432,9 @@ def analyze_phase_constraints():
     # These are the 3 perfect matchings of K4!
 
     print("\nPerfect matching structure:")
-    matchings = [
-        ((0,1), (2,3)),
-        ((0,2), (1,3)),
-        ((0,3), (1,2))
-    ]
+    matchings = [((0, 1), (2, 3)), ((0, 2), (1, 3)), ((0, 3), (1, 2))]
 
-    for (e1, e2) in matchings:
+    for e1, e2 in matchings:
         k1 = phases[e1]
         k2 = phases[e2]
         s = (k1 + k2) % 12
@@ -442,8 +451,12 @@ def analyze_phase_constraints():
 
     print("\nEdge pairs in cycle 0-1-2-3-0:")
     print(f"  Opposite edges: (01,23) and (12,30)")
-    print(f"  k(0,1) + k(2,3) = {phases[(0,1)]} + {phases[(2,3)]} = {(phases[(0,1)] + phases[(2,3)]) % 12}")
-    print(f"  k(1,2) + k(3,0) = {phases[(1,2)]} + {phases[(3,0)]} = {(phases[(1,2)] + phases[(3,0)]) % 12}")
+    print(
+        f"  k(0,1) + k(2,3) = {phases[(0,1)]} + {phases[(2,3)]} = {(phases[(0,1)] + phases[(2,3)]) % 12}"
+    )
+    print(
+        f"  k(1,2) + k(3,0) = {phases[(1,2)]} + {phases[(3,0)]} = {(phases[(1,2)] + phases[(3,0)]) % 12}"
+    )
 
 
 def verify_on_all_k4s():
@@ -483,7 +496,7 @@ def verify_on_all_k4s():
                         continue
                     common = col[a] & col[b] & col[c] & col[d]
                     if len(common) == 4:
-                        k4_list.append(((a,b,c,d), tuple(sorted(common))))
+                        k4_list.append(((a, b, c, d), tuple(sorted(common))))
 
     print(f"Found {len(k4_list)} K4 components")
 
@@ -493,14 +506,21 @@ def verify_on_all_k4s():
         a, b, c, d = outer
         for perm in permutations(outer):
             p0, p1, p2, p3 = perm
-            z = inner(V, p0, p1) * inner(V, p1, p2) * inner(V, p2, p3) * inner(V, p3, p0)
+            z = (
+                inner(V, p0, p1)
+                * inner(V, p1, p2)
+                * inner(V, p2, p3)
+                * inner(V, p3, p0)
+            )
             k = round(6 * np.angle(z) / np.pi) % 12
             if k != 6:
                 print(f"FAIL: K4 {outer}, perm {perm}, k={k}")
                 all_correct = False
 
     if all_correct:
-        print("SUCCESS: ALL K4 components, ALL orderings give Bargmann phase = 6 (= -1)")
+        print(
+            "SUCCESS: ALL K4 components, ALL orderings give Bargmann phase = 6 (= -1)"
+        )
 
     return all_correct
 
@@ -512,6 +532,7 @@ def main():
     prove_minus_one()
     analyze_phase_constraints()
     verify_on_all_k4s()
+
 
 if __name__ == "__main__":
     main()

@@ -18,4 +18,3 @@
 
 ## Automorphism Group under S3^4 ⋊ S4
 - size: 432
-

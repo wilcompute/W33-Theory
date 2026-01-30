@@ -12,15 +12,16 @@ W33 gives us:
 Where is U(1)?
 
 This script explores:
-1. Center of Sp(4,3) 
+1. Center of Sp(4,3)
 2. Characters of the Steinberg representation
 3. W(5,3) embedding
 4. Exceptional isomorphisms at q=3
 """
 
-import numpy as np
 from collections import defaultdict
 from itertools import combinations
+
+import numpy as np
 
 print("=" * 80)
 print("SEARCHING FOR U(1) HYPERCHARGE IN W33 STRUCTURE")
@@ -73,7 +74,7 @@ This includes:
 
 The key insight:
   W33 is SELF-DUAL (40 points ↔ 40 lines)
-  
+
 The duality gives an extra Z₂:
   - Inner: Z₂ (center)
   - Outer: Z₂ (duality)
@@ -106,7 +107,7 @@ PSU(4,2):
 The center of SU(4,2):
   - Z(SU(4,2)) = μ₃ (cube roots of unity in GF(4))
   - |Z| = gcd(4, 2+1) = gcd(4, 3) = 1
-  
+
 Wait, that's trivial! Let me reconsider...
 
 Actually:
@@ -149,13 +150,13 @@ But we still need U(1)...
 THE KEY INSIGHT:
 ================
 U(1) is NOT discrete! It's a continuous group.
-Z₁₂ = Z₄ × Z₃ gives QUANTIZED charges, but U(1) 
+Z₁₂ = Z₄ × Z₃ gives QUANTIZED charges, but U(1)
 hypercharge has continuous spectrum.
 
 In W33:
   - Discrete gauge group: Z₁₂
   - Continuous limit: U(1)
-  
+
 The quantization:
   Y ∈ {-2, -1, 0, 1, 2, ...} / 6
 
@@ -212,7 +213,7 @@ print("=" * 80)
 
 # W(5,3) parameters
 w53_points = (3**6 - 1) // (3 - 1)  # = 364
-w53_steinberg_dim = 3**(3**2)  # = 3^9 = 19683
+w53_steinberg_dim = 3 ** (3**2)  # = 3^9 = 19683
 
 print(f"""
 W(5,3) - THE HIGHER STRUCTURE
@@ -223,7 +224,7 @@ W(5,3) = Symplectic polar space in dimension 6 over GF(3)
 Parameters:
   - Points: (3⁶-1)/(3-1) = {w53_points}
   - Steinberg dimension: 3^9 = {w53_steinberg_dim}
-  
+
 Automorphism group: Sp(6,3)
   |Sp(6,3)| = 9,170,703,360
 
@@ -232,12 +233,12 @@ W(5,3) CONTAINS W(3,3):
 
 The embedding:
   V(4,3) ⊂ V(6,3)
-  
+
 Extra 2 dimensions → extra gauge generators!
 
 The quotient:
   W(5,3) / W(3,3) ≅ ???
-  
+
 This should give the missing U(1)!
 """)
 
@@ -275,7 +276,7 @@ HYPERCHARGE QUANTIZATION:
 The factor of 6 = 2 × 3:
   - 2 from Z₂ (weak)
   - 3 from Z₃ (color)
-  
+
 This is EXACTLY what we see!
 
 Standard Model hypercharges (Y):
@@ -365,7 +366,7 @@ Hmm, these don't DIRECTLY match...
 
 THE RESOLUTION:
   Z₁₂ encodes (2Y + T₃) mod 1, not just Y!
-  
+
 Where T₃ is the weak isospin.
 
 This DOES match! The K4 (Z₄=2, Z₃=0) selection
@@ -417,7 +418,7 @@ It's the continuous completion of the Z₁₂ phase structure.
 
 The discrete structure Z₁₂ naturally embeds into:
   U(1) × Z₂ (center of SU(2)) × Z₃ (center of SU(3))
-  
+
 This IS the center of SU(3) × SU(2) × U(1)!
 
 The W33 structure encodes:

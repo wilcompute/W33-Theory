@@ -1,14 +1,16 @@
-
 # W33 THEORY - PART CXVIII: EXPLICIT CONSTRUCTION
 # Using SageMath to find the Reye/24-cell structure in W33
 
-import os, sys
+import os
+import sys
+
 SAGE_DIR = os.environ.get("SAGE_DIR", "")
 if SAGE_DIR and os.path.isdir(SAGE_DIR):
     os.environ["PATH"] = f"{SAGE_DIR}/bin:" + os.environ.get("PATH", "")
     sys.path.insert(0, f"{SAGE_DIR}/lib/python3.12/site-packages")
 
 from sage.all import *
+
 VERBOSE = os.environ.get("W33_VERBOSE", "0").strip() == "1"
 print("SageMath loaded!")
 
@@ -47,7 +49,7 @@ print(f"\n  24-cell vertices: {len(cell_24_vertices)}")
 print(f"  First few: {cell_24_vertices[:6]}")
 
 # Verify these are D4 roots (length sqrt(2))
-lengths = [sqrt(sum(x^2 for x in v)) for v in cell_24_vertices]
+lengths = [sqrt(sum(x ^ 2 for x in v)) for v in cell_24_vertices]
 print(f"  All lengths = sqrt(2): {all(l == sqrt(2) for l in lengths)}")
 
 # ============================================================================
@@ -81,14 +83,17 @@ print(f"  Points: {reye_points}")
 # Let's find lines by looking for collinear triples in projective space
 # In RP³, three points are collinear if they're linearly dependent
 
+
 def are_projectively_collinear(p1, p2, p3):
     """Check if three points are collinear in projective space"""
     M = matrix([p1, p2, p3])
     return M.rank() <= 2
 
+
 # Find all triples that are collinear
 reye_lines = []
 from itertools import combinations
+
 for triple in combinations(range(12), 3):
     p1, p2, p3 = [reye_points[i] for i in triple]
     if are_projectively_collinear(p1, p2, p3):
@@ -183,7 +188,11 @@ max_cliques = G.cliques_maximum()
 print(f"  Number of maximum cliques: {len(max_cliques)}")
 
 # Cocliques (independent sets)
-coclique_number = G.independent_set().cardinality() if hasattr(G.independent_set(), 'cardinality') else len(G.independent_set())
+coclique_number = (
+    G.independent_set().cardinality()
+    if hasattr(G.independent_set(), "cardinality")
+    else len(G.independent_set())
+)
 indep = G.independent_set()
 print(f"  Maximum independent set size: {len(indep)}")
 
@@ -266,7 +275,7 @@ print(f"\n  Isotropic line count: (3^4 - 1) × (3^2 + 1) / (3^2 - 1) / 2")
 # Actually compute
 q = 3
 n = 2  # Sp(2n, q) = Sp(4, 3)
-isotropic_points = (q^(2*n) - 1) // (q - 1)  # Points in PG(3, 3)
+isotropic_points = (q ^ (2 * n) - 1) // (q - 1)  # Points in PG(3, 3)
 # For Sp(4,3), vertices are totally isotropic lines
 print(f"  Points in PG(3, F_3): {isotropic_points}")
 
@@ -385,43 +394,43 @@ print(f"""
   ═══════════════════════════════════════════════════════════════════
   KEY DISCOVERIES:
   ═══════════════════════════════════════════════════════════════════
-  
+
   1. W33 VERTEX DECOMPOSITION:
      40 = 1 + 12 + 27
         = any vertex + its neighbors + its non-neighbors
         = singlet + neighbors + non-neighbors
-     
+
      This matches: singlet + Reye(12) + Albert(27)!
-  
+
   2. EIGENVALUE STRUCTURE:
      Eigenvalue 2 with multiplicity 24 = D4 roots
      This 24-dimensional eigenspace encodes D4 structure!
-  
+
   3. AUTOMORPHISM FACTORIZATION:
      |Aut(W33)| = 51,840 = 192 x 270
-     
+
      192 = |W(D4)| (index of D4-like substructure)
      270 = quotient = 27 x 10 (Albert x SO(10) vector)
-  
+
   4. SYMPLECTIC ORIGIN:
      W33 = isotropic lines in Sp(4, F_3)
      The 40 vertices are totally isotropic subspaces
-  
+
   5. THE 12 NEIGHBORS FORM SRG(12, 2, 1, 0)
      This is a very specific structure!
-  
+
   ═══════════════════════════════════════════════════════════════════
-  
+
   THE GEOMETRIC PICTURE:
-  
+
   Pick any vertex v in W33:
     * v itself (1 point) = the "origin" / singlet
     * 12 neighbors = Reye-like configuration (D4/triality)
     * 27 non-neighbors = Albert algebra structure (E6 fundamental)
-  
+
   The automorphism group permutes these structures:
     |Aut| = 51,840 = ways to choose (origin, Reye, Albert)
-  
+
   ═══════════════════════════════════════════════════════════════════
 """)
 

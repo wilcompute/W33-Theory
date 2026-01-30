@@ -39,7 +39,7 @@ THE BEKENSTEIN-HAWKING FORMULA
 
 Black holes have entropy:
   S_BH = A / (4 l_P²)
-  
+
 For a Schwarzschild black hole of mass M:
   R_s = 2GM/c² (Schwarzschild radius)
   A = 4π R_s² = 16π G² M² / c⁴
@@ -50,7 +50,7 @@ THE PUZZLE:
   - A thermal system has S ~ N (# of particles)
   - A volume of particles has S ~ R³
   - But S_BH ~ R² (area, not volume!)
-  
+
 This suggests degrees of freedom live on BOUNDARY.
 """)
 
@@ -59,9 +59,11 @@ print("\nBlack hole entropy examples:")
 M_sun_kg = 2e30  # kg
 M_planck_kg = 2.2e-8  # kg
 
-for name, M_ratio in [("Stellar (10 M☉)", 10 * M_sun_kg / M_planck_kg),
-                       ("Galactic (10⁶ M☉)", 1e6 * M_sun_kg / M_planck_kg),
-                       ("Primordial (10¹⁵ g)", 1e12 / M_planck_kg)]:
+for name, M_ratio in [
+    ("Stellar (10 M☉)", 10 * M_sun_kg / M_planck_kg),
+    ("Galactic (10⁶ M☉)", 1e6 * M_sun_kg / M_planck_kg),
+    ("Primordial (10¹⁵ g)", 1e12 / M_planck_kg),
+]:
     S = 4 * np.pi * M_ratio**2
     print(f"  {name}: S ~ 10^{np.log10(S):.0f}")
 
@@ -124,16 +126,16 @@ Physical states = W33 / K4 = Q45 projection
 
 Information per cell:
   Unconstrained: log₂(40 + 81) = log₂(121) = 6.92 bits
-  K4-constrained: log₂(|Q45| + ?) 
+  K4-constrained: log₂(|Q45| + ?)
 
 What survives K4 projection?
   Points: 40 → 10 (Q45)
   Cycles: 81 → 81/K4 = ?
-  
+
 The K4 action on cycles:
   - K4 permutes some cycles
   - Independent cycle classes = 81/4 ≈ 20
-  
+
 Physical configurations: 10 + 20 = 30
 Information: log₂(30) = 4.91 bits
 
@@ -172,17 +174,17 @@ where j = spin labels (half-integers).
 
 In W33 theory:
   A = l_P² × n × f(W33)
-  
+
 where n = integer, f = function of W33 structure.
 
 What is f(W33)?
   - Minimum area from W33 geometry
   - Related to the 40-point structure
   - Or the K4 action
-  
+
 If f = 4 (from K4 size):
   S = (A / l_P²) / 4 = A / (4 l_P²) ✓✓✓
-  
+
 THE K4 GIVES THE FACTOR OF 4!
 """)
 
@@ -206,11 +208,11 @@ COUNTING MICROSTATES
 
 For a black hole with area A:
   N_cells = A / (4 l_P²)  (Planck cells)
-  
+
 Each cell has:
   - 1 bit of information (boundary DOF)
   - Encodes matter vs vacuum (40 vs 81)
-  
+
 Total states:
   Ω = 2^(N_cells)
   S = ln(Ω) = N_cells × ln(2)
@@ -249,19 +251,19 @@ From W33:
   - Each Planck cell on horizon = one W33 mode
   - The mode is constrained by K4 (factor of 4)
   - Each mode has 2 states (matter/vacuum)
-  
+
 But wait - what about the 81/40 asymmetry?
 
 The VACUUM dominates:
   Probability of vacuum state = 81/121 = 0.669
-  
+
 Entropy per cell (Shannon):
   H = -p log(p) - (1-p) log(1-p)
     = -0.669 × log(0.669) - 0.331 × log(0.331)
     = 0.269 + 0.366
     = 0.635 nats
     = 0.916 bits
-    
+
 Close to 1 bit!
 """)
 
@@ -303,7 +305,7 @@ Microstate count per 4 l_P²:
 
 But we have 121 configurations...
   ln(121) = 4.796 nats
-  
+
 Per fundamental cell:
   121 configs → 4.796 nats
   Spread over 4 l_P²:
@@ -318,7 +320,7 @@ We're off by factor of 4.796.
 BUT: The observable configurations are Q45!
   |Q45| = 10
   ln(10) = 2.303 nats
-  
+
 Per 4 l_P²: 2.303 / 4 = 0.576 nats per l_P²
 Still factor of ~2 off.
 """)
@@ -345,14 +347,14 @@ The key insight: PHASE SPACE counting.
 For W33 on a horizon:
   - Points (40) = matter excitations
   - Cycles (81) = vacuum fluctuations
-  
+
 At the horizon, we don't count STATES,
 we count EDGES of a quantum code!
 
 The W33 code structure:
   - [81, 40] code
   - 81 physical qubits
-  - 40 logical qubits  
+  - 40 logical qubits
   - Code distance = K4 structure
 
 For quantum error correction:
@@ -404,7 +406,7 @@ The factor of 8π comes from:
 
 W33 interpretation:
   T_H = 1/(8π M) = 1/(2π × 4 × M)
-  
+
 The K4 appears as the factor of 4!
 """)
 

@@ -28,4 +28,3 @@
 - coef_flux_def_mass: mean=-0.004115, min=-0.938290, max=1.184668
 - coef_mu: mean=-0.000034, min=-0.055761, max=0.055295
 - coef_lambda: mean=-0.030308, min=-0.188083, max=0.085943
-

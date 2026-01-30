@@ -8,6 +8,7 @@ Parity proof criteria (KS-style):
 We compute all 4-cliques (tetrads) from the 40 Witting rays, then solve
 A x = 0 (mod 2) with sum(x) = 1 (mod 2).
 """
+
 from __future__ import annotations
 
 import json
@@ -38,9 +39,9 @@ def construct_witting_40_rays():
     # 36 states in 4 groups of 9
     for mu in range(3):
         for nu in range(3):
-            rays.append(np.array([0, 1, -omega**mu, omega**nu]) / sqrt3)
-            rays.append(np.array([1, 0, -omega**mu, -omega**nu]) / sqrt3)
-            rays.append(np.array([1, -omega**mu, 0, omega**nu]) / sqrt3)
+            rays.append(np.array([0, 1, -(omega**mu), omega**nu]) / sqrt3)
+            rays.append(np.array([1, 0, -(omega**mu), -(omega**nu)]) / sqrt3)
+            rays.append(np.array([1, -(omega**mu), 0, omega**nu]) / sqrt3)
             rays.append(np.array([1, omega**mu, omega**nu, 0]) / sqrt3)
 
     return rays
@@ -64,8 +65,14 @@ def find_tetrads(rays):
 
     # Find 4-cliques
     for a, b, c, d in combinations(range(n), 4):
-        if (ortho[a, b] and ortho[a, c] and ortho[a, d] and
-                ortho[b, c] and ortho[b, d] and ortho[c, d]):
+        if (
+            ortho[a, b]
+            and ortho[a, c]
+            and ortho[a, d]
+            and ortho[b, c]
+            and ortho[b, d]
+            and ortho[c, d]
+        ):
             tetrads.append((a, b, c, d))
 
     return tetrads

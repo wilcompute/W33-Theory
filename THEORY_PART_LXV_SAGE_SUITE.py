@@ -9,9 +9,9 @@ Author: Wil Dahn
 Date: January 2026
 """
 
-print("="*70)
+print("=" * 70)
 print("W33 THEORY PART LXV: SAGEMATH VERIFICATION SUITE")
-print("="*70)
+print("=" * 70)
 
 # =============================================================================
 # GENERATE SAGE VERIFICATION SCRIPTS
@@ -251,14 +251,14 @@ try:
     chi = G.character_table()
     print("\\nCharacter table computed successfully!")
     print(f"Number of irreducible representations: {chi.nrows()}")
-    
+
     # Find dimensions of irreps
     dims = [chi[i,0] for i in range(chi.nrows())]
     dims_sorted = sorted(dims)
     print(f"\\nIrreducible representation dimensions:")
     for d in dims_sorted:
         print(f"  dim = {d}")
-        
+
     # Check for representations matching W33 eigenspace dimensions
     print("\\nLooking for representations of dimensions 1, 15, 24...")
     for d in [1, 15, 24]:
@@ -266,7 +266,7 @@ try:
             print(f"  [OK] Found irrep of dimension {d}")
         else:
             print(f"  [??] No irrep of dimension {d}")
-            
+
 except Exception as e:
     print(f"Could not compute character table: {e}")
     print("(This may take too long for |G| = 51840)")
@@ -373,7 +373,7 @@ r = e2  # = 2
 s = e3  # = -4
 
 # Actually use the standard formulas
-# f = -k(s+1)(k-s) / ((k-r)(k-s-r*s))  
+# f = -k(s+1)(k-s) / ((k-r)(k-s-r*s))
 # g = -k(r+1)(k-r) / ((k-s)(k-r-r*s))
 
 # Simpler: trace(A) = 0 = n*e0 + f*e1 + g*e2
@@ -456,15 +456,15 @@ print("="*60)
 '''
 
 # Write all scripts
-with open('w33_complete_verification.sage', 'w', encoding='utf-8') as f:
+with open("w33_complete_verification.sage", "w", encoding="utf-8") as f:
     f.write(sage_complete)
 print("Generated: w33_complete_verification.sage")
 
-with open('w33_sp4_group.sage', 'w', encoding='utf-8') as f:
+with open("w33_sp4_group.sage", "w", encoding="utf-8") as f:
     f.write(sage_group)
 print("Generated: w33_sp4_group.sage")
 
-with open('w33_alpha.sage', 'w', encoding='utf-8') as f:
+with open("w33_alpha.sage", "w", encoding="utf-8") as f:
     f.write(sage_alpha)
 print("Generated: w33_alpha.sage")
 
@@ -538,17 +538,17 @@ W33 IS THE MATHEMATICAL HEART OF THE UNIVERSE!
 ================================================================================
 """
 
-with open('W33_VERIFICATION_SUMMARY.txt', 'w', encoding='utf-8') as f:
+with open("W33_VERIFICATION_SUMMARY.txt", "w", encoding="utf-8") as f:
     f.write(summary)
 print("\nGenerated: W33_VERIFICATION_SUMMARY.txt")
 
-print("\n" + "="*70)
+print("\n" + "=" * 70)
 print("PART LXV COMPLETE: SAGEMATH VERIFICATION SUITE GENERATED")
-print("="*70)
+print("=" * 70)
 print("""
 Generated files:
   1. w33_complete_verification.sage - Full W33 verification
-  2. w33_sp4_group.sage - Symplectic group analysis  
+  2. w33_sp4_group.sage - Symplectic group analysis
   3. w33_alpha.sage - Fine structure constant derivation
   4. W33_VERIFICATION_SUMMARY.txt - Summary document
 
@@ -557,4 +557,4 @@ To run in SageMath:
   sage w33_sp4_group.sage
   sage w33_alpha.sage
 """)
-print("="*70)
+print("=" * 70)

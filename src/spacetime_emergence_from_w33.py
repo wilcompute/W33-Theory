@@ -18,24 +18,26 @@ The geometry W33 is inherently 4-dimensional in a precise sense:
 This isn't coincidence. It's the DEFINITION of W33.
 """
 
-import numpy as np
 from itertools import combinations
+
 import matplotlib.pyplot as plt
+import numpy as np
 
 # ============================================================================
 # PART 1: W33 AS A 4-DIMENSIONAL INCIDENCE STRUCTURE
 # ============================================================================
 
+
 def analyze_w33_dimensions():
     """
     W33 is a Generalized Quadrangle GQ(3,3)
-    
+
     Parameters (s,t) = (3,3) mean:
     - Each line contains s+1 = 4 points
     - Each point is on t+1 = 4 lines
-    
+
     This is INTRINSICALLY 4-dimensional!
-    
+
     Mathematical definition:
     W33 is the point-line geometry of the projective space PG(3,3)
     - PG(3,3): Projective 3-space over F_3 (3 elements)
@@ -43,162 +45,162 @@ def analyze_w33_dimensions():
     - Lines are 2-dimensional subspaces
     - Incidence is geometric containment
     """
-    
+
     print("=" * 70)
     print("PART 1: W33 INCIDENCE GEOMETRY DIMENSIONS")
     print("=" * 70)
-    
+
     # Parameters
     s, t = 3, 3
     points_per_line = s + 1  # 4
     lines_per_point = t + 1  # 4
-    
+
     n_points = (s * t + 1) * (s * t + s + 1)  # 40
     n_lines = (s * t + 1) * (t + 1)  # 40
-    
+
     print(f"\nGQ(3,3) Parameters:")
     print(f"  s = {s}, t = {t}")
     print(f"  Points per line: {points_per_line}")
     print(f"  Lines per point: {lines_per_point}")
     print(f"  Total points: {n_points}")
     print(f"  Total lines: {n_lines}")
-    
+
     # Incidence structure dimension
     # Each point has 4 coordinates (over F_3 with projective identification)
     # So naturally: 4 dimensions
-    
+
     print(f"\nDimensional Analysis:")
     print(f"  W33 embedded in: Projective 3-space PG(3,3)")
     print(f"  Ambient dimension: 3 (projective)")
     print(f"  Affine dimension: 4 (4 projective coordinates → 4 affine)")
     print(f"  Point coordinates: 4-tuples mod identification")
     print(f"  Line parametrization: 4-dimensional space")
-    
+
     # Incidence metric
     # Distance between points: number of lines needed to connect
     # This creates a 4-dimensional metric space
-    
+
     print(f"\nMetric Structure:")
     print(f"  Incidence distance (lines between points): defines metric")
     print(f"  Maximum distance: 4 (diameter of GQ)")
     print(f"  Metric dimension: 4")
     print(f"  Metric signature: Euclidean (all positive)")
-    
+
     # This is the KEY: The metric of W33 is 4-dimensional Euclidean!
-    
+
     return {
-        'parameters': (s, t),
-        'n_points': n_points,
-        'n_lines': n_lines,
-        'embedding': 'PG(3,3)',
-        'dimension': 4
+        "parameters": (s, t),
+        "n_points": n_points,
+        "n_lines": n_lines,
+        "embedding": "PG(3,3)",
+        "dimension": 4,
     }
 
 
 def construct_w33_metric():
     """
     Can we explicitly compute the metric on W33?
-    
+
     Yes! Using the incidence structure to define distances.
-    
+
     Method:
     1. Points: vertices of the incidence graph
     2. Distance: graph distance (shortest path in incidence graph)
     3. Metric: Euclidean metric on 40 points
     """
-    
+
     print("\n" + "=" * 70)
     print("PART 2: EXPLICIT METRIC CONSTRUCTION")
     print("=" * 70)
-    
+
     # W33 incidence structure (simplified representation)
     # Label points 0-39
     # Label lines 0-39
-    
+
     n_points = 40
     n_lines = 40
-    
+
     # Build incidence matrix (40×40)
     # Entry (i,j) = 1 if point i is on line j
-    
+
     # For GQ(3,3):
     # Each point is on exactly 4 lines
     # Each line contains exactly 4 points
     # Incidence matrix: 40×40, each row has 4 ones, each column has 4 ones
-    
+
     print(f"\nIncidence Matrix Properties:")
     print(f"  Size: {n_points} × {n_lines}")
     print(f"  Each row (point): exactly 4 ones")
     print(f"  Each column (line): exactly 4 ones")
     print(f"  Total incidences: 4 × 40 = 160")
     print(f"  Regular bipartite graph")
-    
+
     # Adjacency matrix: points are adjacent if they share a line
     # A[i,j] = 1 if points i and j are on a common line
     # = number of common lines
-    
+
     # For GQ(3,3), any two distinct points share at most 1 line
     # So adjacency is 0 or 1
-    
+
     print(f"\nAdjacency from Incidence:")
     print(f"  Two points adjacent ⟺ share a line")
     print(f"  In GQ(3,3): each pair shares 0 or 1 line")
     print(f"  Expected edges: ~ C(40,2) × (prob of sharing)")
-    
+
     # For GQ(3,3): number of lines through two distinct points
     # = 0 if not collinear (most pairs)
     # = 1 if collinear (fewer pairs)
-    
+
     # Metric: use shortest path in incidence graph
     # diameter(GQ(3,3)) = 4
-    
+
     print(f"\nIncidence Graph Properties:")
     print(f"  Regular bipartite graph K_{4,4} structure locally")
     print(f"  Diameter: 4 (maximum distance between any two points)")
     print(f"  Girth: 8 (length of shortest cycle)")
     print(f"  Highly symmetric (155,520 automorphisms)")
-    
+
     # Embedding in Euclidean 4-space
     # Claim: W33 can be isometrically embedded in E^4
-    
+
     print(f"\nEuclidean Embedding:")
     print(f"  W33 embeds isometrically in ℝ^4")
     print(f"  Each point → vector in ℝ^4")
     print(f"  Incidence distance → Euclidean distance")
     print(f"  Metric is 4-dimensional")
-    
+
     return {
-        'incidence_matrix_size': (n_points, n_lines),
-        'regularity': 4,
-        'diameter': 4,
-        'embedding_dimension': 4
+        "incidence_matrix_size": (n_points, n_lines),
+        "regularity": 4,
+        "diameter": 4,
+        "embedding_dimension": 4,
     }
 
 
 def derive_spacetime_from_w33():
     """
     How does W33 geometry lead to spacetime?
-    
+
     Key Insight: The 40 points + 40 lines are DUAL
     This duality is similar to position-momentum duality in QM
-    
-    Hypothesis: 
+
+    Hypothesis:
     - Points ↔ Spatial locations (3 coordinates)
     - Lines ↔ Time evolution (1 coordinate)
     - Incidence ↔ Causality
     - Metric ↔ Spacetime metric
     """
-    
+
     print("\n" + "=" * 70)
     print("PART 3: SPACETIME EMERGENCE MECHANISM")
     print("=" * 70)
-    
+
     print(f"""
 SPACETIME EMERGENCE FROM W33:
 
 The duality of W33:
     40 points ↔ 40 lines (symmetric under duality)
-    
+
 This suggests TWO aspects:
     1. Spatial: The incidence lattice (3D position space)
     2. Temporal: The dual lattice (time evolution)
@@ -212,7 +214,7 @@ SPATIAL SECTOR:
     - K4 components → connected regions (0-manifolds)
     - Q45 quotient → 45 spatial cells (3D complex)
     - V23 triangles → volume elements
-    
+
     Dimension: 3 (spatial)
 
 TEMPORAL SECTOR:
@@ -220,7 +222,7 @@ TEMPORAL SECTOR:
     - Incidence relation → causality ordering
     - Holonomy along lines → time evolution operator
     - Fiber structure → quantum time states
-    
+
     Dimension: 1 (temporal)
 
 COMBINED SPACETIME:
@@ -228,7 +230,7 @@ COMBINED SPACETIME:
     - Incidence relation → Causal structure
     - Metric on points + metric on lines → spacetime metric
     - Result: 4-dimensional Lorentzian manifold
-    
+
     Dimension: 4 (3+1 spacetime)
 
 SIGNATURE:
@@ -236,38 +238,38 @@ SIGNATURE:
     - Temporal part: Lorentzian signature (-)
     - Combined: (−,+,+,+) or (+,+,+,−) Lorentzian
 """)
-    
+
     return True
 
 
 def compute_minkowski_metric():
     """
     Explicit construction: How to get Minkowski metric from W33
-    
+
     Coordinates: (t, x, y, z) where:
     - t ∈ {0,1,2,...,39} maps to lines (time parameter)
     - (x,y,z) ∈ F_3^3 maps to points (spatial position)
-    
+
     Metric: ds^2 = -c^2 dt^2 + dx^2 + dy^2 + dz^2
-    
+
     This is locally flat Minkowski near each point.
     Globally: curved due to W33 holonomy.
     """
-    
+
     print("\n" + "=" * 70)
     print("PART 4: MINKOWSKI METRIC CONSTRUCTION")
     print("=" * 70)
-    
+
     # Coordinates
     print(f"\nCoordinate System:")
     print(f"  t ∈ {{0,1,2,...,39}}: time (parameterizes 40 lines)")
     print(f"  (x,y,z) ∈ {{0,1,2}}³: space (parameterizes 40 points mod duality)")
     print(f"  Point: (t, x, y, z) ∈ ℝ^4")
     print(f"  Total configurations: 40 × 27 = 1080 (overcounts by factor 27)")
-    
+
     # Metric form
     c = 1  # Natural units
-    
+
     print(f"\nMetric Tensor:")
     print(f"  ds² = -c² dt² + dx² + dy² + dz²")
     print(f"  = -dt² + dx² + dy² + dz²  (c=1)")
@@ -279,49 +281,49 @@ def compute_minkowski_metric():
     print(f"       [ 0  0  0  1]")
     print(f"  ")
     print(f"  Signature: (-,+,+,+)")
-    
+
     # Curvature
     print(f"\nCurvature from W33 Geometry:")
     print(f"  Locally: flat (R_μνρσ = 0 locally)")
     print(f"  Globally: curved by holonomy along W33 paths")
     print(f"  Holonomy group: acts on tangent space")
     print(f"  Result: Pseudo-Riemannian 4-manifold")
-    
+
     # Test: metric properties
     # For any two nearby points in W33:
     # Distance = |difference in coordinates|
-    
+
     print(f"\nMetric Properties:")
     print(f"  Minkowski structure ✓ (from tensor form)")
     print(f"  Dimensionality = 4 ✓ (three space + one time)")
     print(f"  Signature (−,+,+,+) ✓ (standard Lorentzian)")
     print(f"  Light cones: |dt| = √(dx² + dy² + dz²)")
-    
+
     return {
-        'signature': (-1, 1, 1, 1),
-        'dimension': 4,
-        'form': 'Minkowski with W33 holonomy'
+        "signature": (-1, 1, 1, 1),
+        "dimension": 4,
+        "form": "Minkowski with W33 holonomy",
     }
 
 
 def prove_4d_uniqueness():
     """
     Why exactly 4 dimensions? Why not 3, 5, or 10?
-    
+
     Answer: It's determined by W33 symmetry!
-    
+
     The GQ(3,3) geometry has:
     - 3 spatial dimensions (from the 3 in GQ(3,3) parameters)
     - 1 time dimension (from duality between points and lines)
     - Total: 4 dimensions
-    
+
     Any other geometry would give different dimensionality.
     """
-    
+
     print("\n" + "=" * 70)
     print("PART 5: WHY EXACTLY 4 DIMENSIONS?")
     print("=" * 70)
-    
+
     print(f"""
 Dimensional Counting from W33:
 
@@ -368,30 +370,30 @@ Why Not Other Dimensions?
 
 The Uniqueness Result:
     W33 ↔ 4-dimensional spacetime (one-to-one correspondence)
-    
+
     Alternative geometries → alternative dimensions
     But W33 is THE geometry that matches all observations
     Therefore: spacetime is 4-dimensional (not coincidence)
 """)
-    
+
     return True
 
 
 def predict_spacetime_properties():
     """
     If spacetime emerges from W33, what spacetime properties are predicted?
-    
+
     1. Dimensionality: 4 (proven above)
     2. Signature: Lorentzian (−,+,+,+)
     3. Topology: Connected (from 40-point connectedness)
     4. Curvature: Determined by holonomy
     5. Symmetries: Derived from PGU(3,3)
     """
-    
+
     print("\n" + "=" * 70)
     print("PART 6: PREDICTED SPACETIME PROPERTIES")
     print("=" * 70)
-    
+
     print(f"""
 Spacetime Properties from W33:
 
@@ -435,25 +437,25 @@ Spacetime Properties from W33:
    ✓ Observed: Quantum mechanics operates on spacetime
    ✓ Match: NATURAL (discrete geometry → quantization)
 """)
-    
+
     return True
 
 
 def connect_to_general_relativity():
     """
     How does W33 spacetime relate to Einstein's General Relativity?
-    
+
     Hypothesis: Einstein equations emerge from W33 holonomy
-    
+
     The metric tensor g_μν is determined by the incidence structure.
     Curvature (holonomy) measures local twisting.
     This could produce Einstein equations.
     """
-    
+
     print("\n" + "=" * 70)
     print("PART 7: CONNECTION TO GENERAL RELATIVITY")
     print("=" * 70)
-    
+
     print(f"""
 W33 Geometry → General Relativity
 
@@ -476,10 +478,10 @@ The Mechanism:
 
 4. EINSTEIN EQUATIONS
    R_μν − (1/2)g_μν R + Λ g_μν = (8πG) T_μν
-   
+
    Left side: Pure geometry (from W33)
    Right side: Matter energy-momentum tensor
-   
+
    Prediction: Einstein equations emerge naturally!
 
 5. SOLUTION STRUCTURE
@@ -487,7 +489,7 @@ The Mechanism:
    - Schwarzschild: spherically symmetric point mass
    - Friedmann: homogeneous expansion
    - Kerr: rotating mass
-   
+
    All these could correspond to specific W33 configurations
 
 Why This is Revolutionary:
@@ -507,19 +509,19 @@ Testable Predictions:
 4. Black hole entropy: encoded in W33 structure
 5. Cosmological constant: from topological sector (240 triangles)
 """)
-    
+
     return True
 
 
 def main():
     """Run spacetime emergence analysis"""
-    
+
     print("\n" * 2)
     print("=" * 70)
     print(" SPACETIME EMERGENCE FROM W33 ".center(70))
     print(" Why the Universe is 4-Dimensional ".center(70))
     print("=" * 70)
-    
+
     # Run analyses
     dims = analyze_w33_dimensions()
     metric = construct_w33_metric()
@@ -528,12 +530,12 @@ def main():
     uniqueness = prove_4d_uniqueness()
     properties = predict_spacetime_properties()
     gr = connect_to_general_relativity()
-    
+
     # Summary
     print("\n" + "=" * 70)
     print("SUMMARY: SPACETIME EMERGENCE FROM W33")
     print("=" * 70)
-    
+
     print(f"""
 Key Findings:
 
@@ -582,17 +584,13 @@ Key Findings:
    ✓ No tuning or fine-tuning required
 
 CONCLUSION:
-The universe is 4-dimensional BECAUSE W33 geometry 
-determines it to be so. This is not accident or 
+The universe is 4-dimensional BECAUSE W33 geometry
+determines it to be so. This is not accident or
 convenience—it's a mathematical necessity.
 """)
-    
-    return {
-        'dimensions': dims,
-        'metric': metric,
-        'minkowski': minkowski
-    }
+
+    return {"dimensions": dims, "metric": metric, "minkowski": minkowski}
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     results = main()

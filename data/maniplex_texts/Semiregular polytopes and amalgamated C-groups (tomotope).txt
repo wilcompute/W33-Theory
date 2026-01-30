@@ -1,0 +1,1071 @@
+Available online at www.sciencedirect.com
+Advances in Mathematics 229 (2012) 2767–2791
+www.elsevier.com/locate/aim
+Semiregular polytopes and amalgamated C-groups
+B. Monsona,1, Egon Schulteb,∗,2
+aUniversity of New Brunswick, Fredericton, New Brunswick, E3B 5A3, Canada
+bNortheastern University, Boston, MA 02115, USA
+Received 30 August 2011; accepted 27 December 2011
+Available online 9 February 2012
+Communicated by Erwin Lutwak
+Dedicated to the memory of our teacher and colleague Ludwig Danzer
+Abstract
+In the classical setting, a convex polytope is said to be semiregular if its facets are regular and its sym-
+metry group is transitive on vertices. This paper studies semiregular abstract polytopes, which have abstractregular facets, still with combinatorial automorphism group transitive on vertices. We analyze the structureof the automorphism group, focusing in particular on polytopes with two kinds of regular facets occurring
+in an “alternating” fashion. In particular we use group amalgamations to prove that given two compatible
+n-polytopes PandQ, there exists a universal abstract semiregular (n+1)-polytope which is obtained by
+“freely” assembling alternate copies of PandQ. We also employ modular reduction techniques to construct
+ﬁnite semiregular polytopes from reﬂection groups over ﬁnite ﬁelds.
+©2012 Elsevier Inc. All rights reserved.
+MSC: primary 51M20; secondary 52B15
+Keywords: Semiregular polytope; Abstract polytope; Group amalgamation; Reﬂection groups; Modular reduction
+1. Introduction
+In the classical setting, a convex n-polytope Pis said to be uniform if its facets are uniform
+and its symmetry group is transitive on vertices (see Coxeter [4,6], Johnson [16]). To start thisinductive deﬁnition in a pleasant way, we agree that uniform polygons should be regular. The
+*Corresponding author.
+E-mail address: schulte@neu.edu (E. Schulte).
+1Supported by NSERC of Canada Discovery Grant #4818.
+2Supported by NSF grant DMS-0856675.
+0001-8708/$ – see front matter ©2012 Elsevier Inc. All rights reserved.
+doi:10.1016/j.aim.2011.12.027
+2768 B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791
+same deﬁnition can be transferred to the abstract (combinatorial) setting. But allpolygons are
+combinatorially regular, so one soon suspects that the abstract uniform polytopes form a huge,perhaps untamable class of strange objects. Indeed, the abstract uniform polytopes generalize theabstract regular polytopes, which in a sense are ‘maximally’ symmetric and which are alreadyquite abundant.
+In this paper, we will generalize regularity more modestly and focus on semiregular poly-
+topes P, which have regular facets, still with automorphism group Γ(P)transitive on vertices
+(see Coxeter [6–8]). All of the classical Archimedean solids, for example, are convex semireg-ular 3-polytopes. Perhaps the best-known non-regular example is the cuboctahedron , which can
+be obtained either by truncating a cube to its edge midpoints, or by assembling squares andequilateral triangles, two of each placed alternately around each vertex.
+This sort of behavior also appears in the familiar tiling Tof Euclidean 3-space by regular
+octahedra and tetrahedra, the beginning of which is displayed in Fig. 1. In fact, Tis an inﬁnite
+semiregular 4-polytope. Our main concern in this paper will be abstract semiregular polytopes
+like this, with two kinds of regular facets occurring in an ‘alternating’ fashion. The essentialfeatures of our construction are contained in Theorem 4.7.
+Later, in Theorem 5.5, we prove the existence of a universal abstract semiregular (n+1)-
+polytope U
+P,Q, which is obtained by “freely” assembling alternate copies of two compatible
+n-polytopes PandQ. Finally, in Section 6, we employ modular reduction techniques to construct
+ﬁnite semiregular polytopes from reﬂection groups over ﬁnite ﬁelds.
+2. Abstract polytopes and their automorphism groups
+An abstract n-polytope Phas some of the key combinatorial properties of the face lattice of a
+convex n-polytope; in general, however, Pneed not be a lattice, need not be ﬁnite, need not have
+any familiar geometric realization. Let us summarize some general deﬁnitions and results, refer-ring to McMullen and Schulte [19] for details. An abstract n-polytope Pis a partially ordered
+set with properties A,BandCbelow.
+A:Phas a strictly monotone rank function with range {−1,0,...,n }.
+An element F∈Pwith rank (F)=jis called a j-face;o f t e n F
+jwill indicate a j-face.
+Moreover, Phas a unique least face F−1and unique greatest face Fn. Each maximal chain or
+ﬂaginPtherefore contains n+2 faces, so that nis the number of proper faces in each ﬂag. We
+letF(P)be the set of all ﬂags in P. Naturally, faces of ranks 0, 1 and n−1 are called vertices,
+edges and facets, respectively.
+B:Whenever F<G with rank (F)=j−1 and rank (G)=j+1, there are exactly two j-faces
+HwithF<H<G .
+For 0/lessorequalslantj/lessorequalslantn−1 and any ﬂag Φ, there thus exists a unique adjacent ﬂagΦj, differing from
+Φin just the face of rank j. With this notion of adjacency, F(P)becomes the ﬂag graph forP.
+IfF/lessorequalslantGare incident faces in P, we call
+G/F:= {H∈P|F/lessorequalslantH/lessorequalslantG}
+asection ofP.
+C:Pisstrongly ﬂag-connected , that is, the ﬂag graph for each section is connected.
+B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791 2769
+It follows that G/F is a (k−j−1)-polytope in its own right, if F/lessorequalslantGwith rank (F)=j/lessorequalslant
+k=rank(G). In particular, Fn/Fis the co-face of a face FinP, and its rank n−1−rank(F)is
+theco-rank ofF. For example, if Fis a vertex, then the section Fn/Fis called the vertex-ﬁgure
+overF. Likewise, it is useful to think of the k-faceGas having the structure of the k-polytope
+G/F−1.
+The automorphism group Γ(P)consists of all order-preserving bijections on P.W es a y P
+isregular ifΓ(P)is transitive on the ﬂag set F(P). In this case we may choose any one ﬂag
+Φ∈F(P)asbase ﬂag , then deﬁne ρjto be the (unique) automorphism mapping ΦtoΦj,f o r
+0/lessorequalslantj/lessorequalslantn−1. Each ρjhas period 2. From [19, 2B] we recall that Γ(P)is then a string C-group ,
+meaning that it has the following properties SC1 andSC2:
+SC1:Γ(P)is generated by {ρ0,...,ρ n−1}. These involutory generators satisfy the commutativ-
+ity relations typical of a Coxeter group with string diagram, namely
+(ρjρk)pjk=1,for 0/lessorequalslantj/lessorequalslantk/lessorequalslantn−1, (1)
+where pjj=1 andpjk=2 whenever |j−k|>1.
+SC2:Γ(P)satisﬁes the intersection condition
+/angbracketleftI/angbracketright∩/angbracketleftJ/angbracketright=/angbracketleftI∩J/angbracketright,for any I,J⊆{ρ0,...,ρ n−1}. (2)
+The fact that one can reconstruct a regular polytope in a canonical way from any string C-group
+Γis at the heart of the theory [19, 2E].
+The periods pj:=pj−1,jin (1) satisfy 2 /lessorequalslantpj/lessorequalslant∞and are assembled into the Schläﬂi sym-
+bol{p1,...,p n−1}for the regular polytope P. We note again that every 2-polytope or polygon
+{p1}is automatically abstractly regular; its automorphism group is the dihedral group D2p1of
+order 2 p1.
+There are various ways to relax symmetry and thereby broaden the class of groups Γ(P).A s
+we suggested in Section 1, the class of uniform polytopes is far too broad for our purposes here.Thus we restrict our reach somewhat with
+Deﬁnition 2.1. An abstract polytope Pissemiregular if it has regular facets and its automor-
+phism group Γ(P)is transitive on vertices [18, p. 77].
+Every regular polytope is clearly semiregular. In this paper we focus our investigation of
+semiregular polytopes on a particularly interesting subclass derived from Wythoff’s construction
+described in the next section. We might call these alternating semiregular polytopes , since they
+have facets of possibly two distinct types appearing in alternating fashion around faces of co-rank 2.
+3. A concrete (geometrical) version of Wythoff’s construction
+Let us take a closer look at the uniform tessellation Tmentioned earlier. As a combinatorial
+object, this tessellation of R
+3is an abstract semiregular 4-polytope whose combinatorial auto-
+morphism group can be identiﬁed with its geometric symmetry group (see Fig. 1).
+2770 B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791
+Fig. 1. The birth of the 4-polytope T, a semiregular tessellation of R3.
+A simple way to describe Tis to ﬁrst imagine Euclidean space R3tiled as usual by unit
+cubes. (Although this tiling is itself a regular 4-polytope, for now it will serve mainly as scaf-
+folding for T.) Each cube has two inscribed regular tetrahedra. Pick one in each cube, starting
+with the tetrahedron with vertices O=(0,0,0),A=(1,1,0),B=(1,0,1),C=(0,1,1)in the
+standard unit cube, then alternating thereafter as one passes between adjacent cubes. We thusget the tetrahedral facets of T; the octahedral facets tile what is left of R
+3. Every vertex of Tis
+surrounded by six octahedra and eight tetrahedra; indeed, each vertex-ﬁgure is a cuboctahedron.(Compare [5, §4.7], where Coxeter describes Tas a quasiregular tessellation, with modiﬁed
+Schläﬂi symbol {3,
+3
+4}. The usage of the term “quasiregular” in [5] implies the local alternating
+behavior we focus on in this paper.)
+Notice that the Euclidean symmetry group Γ(T)contains the face-centered cubic lattice gen-
+erated by translations τ1,τ2,τ3along the edges OA,OB,OCof the base tetrahedron. The point
+group stabilizing vertex Ois the octahedral group of order 48 generated by reﬂections ρ1,ρ2,
+ρ3, whose mirrors are indicated in Fig. 1, along with the mirror for a fourth reﬂection ρ0. These
+four reﬂections generate Γ(T), and their mirrors enclose a tetrahedral fundamental region for
+the action of Γ(T)onR3. In fact, Γ(T)is the (inﬁnite) Coxeter group of type /tildewideB3.
+It is convenient to blur the distinction between the afﬁne reﬂections ρjand their abstract
+counterparts in a presentation of Γ(T)as the afﬁne Coxeter group /tildewideB3with Coxeter diagram
+tt
+tt
+h 
+QQQQ4
+ρ0 ρ1
+ρ2ρ3
+(3)
+Recall from [15, §6.5] that Γ(T)has these deﬁning relations on its standard generators:
+ρ2
+j=(ρ0ρ2)2=(ρ0ρ3)2=(ρ2ρ3)2=(ρ0ρ1)3=(ρ1ρ2)3=(ρ1ρ3)4=1. (4)
+B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791 2771
+Evidently Γ(T)is not a string C-group. Indeed, Tis not regular, for it has two kinds of facets
+and two ﬂag orbits. Nevertheless, Γ(T)does satisfy the intersection condition (2), as does any
+Coxeter group [15, Theorem 5.5]. This fact reappears in Deﬁnition 4.2 below.
+The ringed node of the diagram in (3) is an ingenious decoration invented by Coxeter [4]
+and is meant to encode Wythoff’s construction forT. The essential idea is that each j-face
+ofTlies in the same Γ(T)-orbit as a special j-faceFj, whose stabilizer Σ(Fj)is a certain
+parabolic subgroup of Γ(T).T h i s Σ(Fj)is generated by the ρk’s corresponding to nodes in a
+subdiagram, which in turn consists of a connected ‘active’ part, which has jnodes including
+the ringed node, and a ‘passive’ part induced on all nodes not connected to the active part. For
+example, there is one base vertex F0=Oin Fig. 1; it has empty active part and is ﬁxed (pas-
+sively) by Σ(F 0)=/angbracketleftρ1,ρ2,ρ3/angbracketright. The base edge F1has vertices OandA=(O)ρ 0, the image
+ofOunder ρ0; the active part of Σ(F 1)=/angbracketleftρ0,ρ2,ρ3/angbracketrightis/angbracketleftρ0/angbracketright. The base equilateral triangle
+F2has vertices OAB andΣ(F 2)=/angbracketleftρ0,ρ1/angbracketrightis totally active. Finally, there are two special 3-
+faces, F3=F(1)
+3,F(2)
+3(say), namely an octahedral facet F(1)
+3withΣ(F(1)
+3)=/angbracketleftρ0,ρ1,ρ3/angbracketright, and a
+tetrahedral facet F(2)
+3withΣ(F(2)
+3)=/angbracketleftρ0,ρ1,ρ2/angbracketright. In this ‘geometrical’ version of Wythoff’s
+construction, each basic face Fjis the convex hull of the Σ(Fj)-orbit of O. Observe that
+general j-faces in the Γ(T)-orbit of Fjcorrespond exactly to the right cosets of Σ(Fj)
+inΓ(T).
+We note that the description above can be adjusted somewhat to accommodate other sorts
+of Coxeter diagrams, with arbitrary sets of ringed nodes [4]. (Active parts may then become
+disconnected.) However, the regular case works as expected: just ring one terminal node in a
+string diagram [19, 1B]. Consider, for example, this subdiagram extracted from the diagram
+in (3):
+tt
+thQQQQρ0 ρ1
+ρ2
+The subgroup /angbracketleftρ0,ρ1,ρ2/angbracketrightof/tildewideB3is, in fact, the A3Coxeter group (isomorphic to the symmetric
+groupS4); and Wythoff’s construction now produces a regular tetrahedron, such as OABC in
+Fig. 1.
+Let us summarize the discussion above in
+Example 3.1. The 4-polytope Tdeﬁned by the diagram in (3) is a semiregular tessellation of R3
+by regular octahedra and tetrahedra. Its symmetry group Γ(T)is the Coxeter group /tildewideB3.
+We refer to [3,27] for a much broader look at the concrete geometrical aspects of Wythoff’s
+construction. Below we shall pursue instead an abstract, that is to say, combinatorial generaliza-
+tion of the construction, motivated by the above example, though still tailored to our immediate
+needs.
+4. An abstract (combinatorial) version of Wythoff’s construction
+Suppose that Γ=/angbracketleftα0,...,α n−2,αn−1,βn−1/angbracketrightis a group generated by involutions which sat-
+isfy the commutativity relations implicit in the tail-triangle diagram
+2772 B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791
+tt
+tt
+tth 
+QQQQαn−3 αn−2 α0 α1......
+βn−1αn−1
+k (5)
+The label ‘ k’ indicates that αn−1βn−1has period k,f o rs o m e k=2,...,∞. However, all other
+periods of products of two ‘adjacent’ generators are unspeciﬁed for the moment. Then the groupΓis called a tail-triangle group . We have already encountered such a diagram in (3), in which
+k=2 for the non-adjacent nodes labeled ρ
+2andρ3. When n=2 there is no “tail” and Γis a
+triangle group with a triangle diagram ; this is consistent with standard terminology (see [17]).
+We allow the degenerate (base) case n=1 when Γ=/angbracketleftα0,β0/angbracketrightis just the dihedral group D2k.
+Suppose also that Γsatisﬁes the intersection condition on its distinguished subgroups. In
+other words, for all subsets I,J⊆{α0,...,α n−2,αn−1,βn−1}, we assume that
+/angbracketleftI/angbracketright∩/angbracketleftJ/angbracketright=/angbracketleftI∩J/angbracketright. (6)
+ThusΓis a C-group (see [19, 2E]).
+It follows that the subgroups
+ΓP
+n:= /angbracketleftα0,...,α n−2,αn−1/angbracketright
+and
+ΓQ
+n:= /angbracketleftα0,...,α n−2,βn−1/angbracketright
+are string C-groups, indeed automorphism groups for regular n-polytopes PandQ, respectively.
+Deﬁnition 4.1. We call a group Γ=/angbracketleftα0,...,α n−2,αn−1,βn−1/angbracketrightrepresented by a tail-triangle
+diagram as in (5) and satisfying the intersection property (6) a tail-triangle C-group .
+We can now describe a combinatorial version of the Wythoff construction implied by ringing
+the node labeled α0in (5). The actual details follow fairly closely those for the regular case
+described in [19, 2E]. Anticipating Theorem 4.7, let us denote the resulting (n+1)-polytope S,
+orS(Γ ), if we wish to emphasize the underlying group. Keep in mind that any such group comes
+with a speciﬁed list of generators, arranged as in (5).
+Deﬁnition 4.2 (The semiregular (n+1)-polytope S=S(Γ )).Suppose that the group Γ=
+/angbracketleftα0,...,α n−2,αn−1,βn−1/angbracketrightis a tail-triangle C-group. Take the improper faces of Sto be two
+distinct copies Γ−1andΓn+1ofΓ.N e x t ,f o r0 /lessorequalslantj/lessorequalslantn−2, deﬁne the j-faces ofSto be all
+right cosets in Γof
+Γj:= /angbracketleftα0,...,α j−1,αj+1,...,α n−1,βn−1/angbracketright.
+The(n−1)-faces, or ridges ,o fSare all right cosets of
+Γn−1:= /angbracketleftα0,...,α n−2/angbracketright.
+B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791 2773
+Finally, the n-faces, or facets ,o fSare all right cosets of either ΓP
+norΓQ
+n. When there is no risk
+of confusion we use Γnto denote either of these subgroups.
+Finally we deﬁne what turns out to be a partial order on the set of all such faces by taking
+Γjν<Γ kμ
+whenever −1/lessorequalslantj<k/lessorequalslantn+1 andΓjν∩Γkμ/negationslash= ∅,f o rμ,ν∈Γ.
+Remarks. There is a reason for indicating strict inequality ‘ <’ here. For j=k=n,w em u s t
+explicitly forbid cosets ΓP
+nμandΓQ
+nνfrom being incident. (Occasionally these are non-disjoint;
+but distinct facets must never be incident. But for that glitch, we could say that Sis a thin coset
+geometry.) Anyway, considering this we naturally agree that Γjν/lessorequalslantΓkμif and only if Γjν<Γ kμ
+or (when j=k)Γjν=Γkμ(cf. Lemma 4.3(b) below).
+Before we move on, note that (in contrast to standard notation for string C-groups) Γjis here
+not always equal to the subgroup of Γgenerated by all generators but the jth (if applicable).
+We will now prove that Sis an abstract polytope. We begin with a few lemmas concerning a
+tail-triangle group Γ.
+Lemma 4.3.
+(a)The distinguished subgroups /angbracketleftJ/angbracketrightare pairwise distinct. In particular, the subgroups
+Γ0,...,Γ n−1,ΓP
+n,ΓQ
+nare mutually distinct and never equal Γitself.
+(b)Suppose Γjμ=Γkν,f o rμ,ν∈Γand0/lessorequalslantj/lessorequalslantk/lessorequalslantn. Then j=kandΓj=Γk. Further-
+more, cosets ΓP
+nμandΓQ
+nνcan never be equal.
+(c)Let0/lessorequalslantj1<j2<···<jm/lessorequalslantn. Suppose that μj1,...,μ jm∈Γwith
+Γjiμji∩Γji+1μji+1/negationslash= ∅,
+for1/lessorequalslanti<m . (Recall that Γndenotes exactly one of ΓP
+norΓQ
+n.) Then there exists some
+common μ∈Γsuch that Γjiμji=Γjiμfor1/lessorequalslanti/lessorequalslantm.
+Proof. Part (a) follows from (6) just as in [19, 2E]. For part (b) simply note that Γjμ=Γkν
+forces Γj=Γk(as with any two subgroups of a group).
+Part (c) is proved just as in [11, Lemma 2.2]. The cases m=1,2 are trivial (even when
+j1<j2=n), so assume m/greaterorequalslant3. By induction we have γsuch that Γjiμji=Γjiγfor 2/lessorequalslanti/lessorequalslantm,
+as well as some λsuch that Γjiμji=Γjiλfori=1,2. From the overlap at j2we have λ=τγ
+for some τ∈Γj2.B u tj2<j 3/lessorequalslantn, so that removal of the node labeled αj2must disconnect the
+graph in (5). Thus τ=τ/primeτ/prime/prime=τ/prime/primeτ/prime, where τ/prime∈Γjifor all i=2,...,m , andτ/prime/prime∈Γj1∩Γj2. Then
+μ=(τ/prime/prime)−1λ=τ/primeγis the desired common coset representative. 2
+Lemma 4.4. [S,/lessorequalslant]is a partially ordered set with rank function
+rank :S→{ − 1,...,n +1}
+Γjμ/mapsto→j.
+2774 B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791
+Proof. Keeping Lemma 4.3 in mind, it is clear that we need only show that ‘ /lessorequalslant’i st r a n s i t i v e .
+But that follows at once from the common coset representative μconstructed for part (c) of
+Lemma 4.3. 2
+By Lemma 4.3(c), every ﬂag of Scan be written as
+[Γ0μ,Γ 1μ,...,Γ n−1μ,Γnμ],
+for some μ∈Γ(suppressing the two improper faces). Again we emphasize that Γnrefers to
+exactly one of ΓP
+norΓQ
+n, so that there are two competing base ﬂags
+ΦP:=/bracketleftbig
+Γ0,...,Γ n−1,ΓP
+n/bracketrightbig
+andΦQ:=/bracketleftbig
+Γ0,...,Γ n−1,ΓQ
+n/bracketrightbig
+.
+Clearly there is a right action of Γon the ﬂag set F(S), and each ﬂag Ψis equivalent to one
+ofΦPorΦQunder this action; on the other hand, ΦPcannot be Γ-equivalent to ΦQ,b y
+Lemma 4.3(b). (We later investigate when we can merge these two ﬂag orbits into one by ex-
+tending Γ.)
+Now suppose K={j1,...,j m}is some set of ranks satisfying 0 /lessorequalslantj1<···<jm/lessorequalslantn. Each
+ﬂagΨ=ΦPμcontains a chain ΨK:= [Γj1μ,...,Γ jmμ]of type K(withΓjm=ΓP
+nifjm=n).
+Likewise, each ﬂag Ψ=ΦQμcontains a suitable chain ΨK.
+Notice that the Γ-stabilizer of a basic chain [Γj1,...,Γ jm]is simply
+ΓK:=Γj1∩···∩ Γjm.
+By the intersection condition, this is a standard subgroup of Γ. However, a detailed description
+of its generators is a bit more involved than for regular polytopes [19, Lemma 2E9]. In particular,as hinted earlier, here Γ
+Kis not simply the subgroup of Γgenerated by all generators but those
+withj/∈K. With this notation in place we have
+Lemma 4.5.
+(a)The group Γacts on F(S)and the Γ-stabilizer of the chain ΨKisμ−1ΓKμ.
+(b)Γis transitive on all chains of type Kifn/∈K, and is transitive on all chains of type K
+contained in ﬂags in either of the two ﬂag orbits.
+(c)IfK⊇{0,...,n −1}, thenΓKis trivial.
+(d)The action of ΓonF(S)is faithful, and we may consider Γto be a subgroup of Γ(S).
+Proof. Part (a) follows easily from our earlier observations. Part (b) follows at once from
+Lemma 4.3(c). For part (c) we check that Γ0∩···∩ Γn−1is trivial. In part (d) we need only
+observe that each γ∈Γdoes indeed induce an order-preserving bijection on S.2
+Lemma 4.6.
+(a)LetFbe any facet of S. Then the section F/Γ−1is isomorphic to Por toQ.
+B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791 2775
+(b)Letn/greaterorequalslant2, and let Fbe any vertex of S. Then the vertex-ﬁgure Γn+1/Fis isomorphic to the
+ranked poset /hatwideSconstructed in like manner by deleting the left node in (5)and transferring
+the ring to the node labeled α1:
+tt
+tt
+tth 
+QQQQαn−3 αn−2 α1 α2......
+βn−1αn−1
+k (7)
+(c)(The base case) When n=1the diagram for Γbecomes
+tt
+hh
+β0α0
+k (8)
+which describes the polygon S={2k}.
+Proof. In part (a) we may assume without loss of generality that F=ΓP
+n. Since Γn−1⊂ΓP
+n,a n
+(n−1)-faceΓn−1μ/lessorequalslantΓP
+nif and only if μ∈ΓP
+n. By Lemma 4.3(c), this means that all j-faces
+Γjμincident with ΓP
+nare likewise represented by certain μ∈ΓP
+n. On the other hand, a basic
+j-face of Pcan be identiﬁed with
+Gj:= /angbracketleftα0,...,α j−1,αj+1,...,α n−1/angbracketright=Γj∩ΓP
+n.
+We therefore have a well-deﬁned bijection
+η:P→ΓP
+n/Γ−1
+Gjμ/mapsto→Γjμ,
+forμ∈ΓP
+n,0/lessorequalslantj/lessorequalslantn−1. It is easy to check that ηis order-preserving. Now suppose that
+Γjμ∩Γkν/negationslash= ∅,f o rj<k andμ,ν∈ΓP
+n. By Lemma 4.3(c) we may assume μ=ν; clearly
+Gjμ∩Gkμ/negationslash= ∅. Thus η−1is also order-preserving.
+Now we turn to part (b). We may assume that F=Γ0. Notice that Γ0is nothing more than the
+group described by the diagram (7) and that this group still satisﬁes the intersection condition onits own standard subgroups. Thus the proper k-faces of the ranked poset /hatwideSare cosets of suitable
+basic subgroups. In fact, by the intersection condition for Γwe ﬁnd that these basic subgroups
+are
+Γ
+0,k:=Γ0∩Γk+1,
+for 0/lessorequalslantk/lessorequalslantn−1. (Thus Γ0,n−1comes in two varieties, as determined by the vertex-ﬁgures of
+PandQ.)
+Once more using Lemma 4.3(c) we ﬁnd for j/greaterorequalslant1 that any j-faceΓjμincident with Γ0is
+represented by some μ∈Γ0. We may therefore deﬁne
+2776 B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791
+λ:Γn+1/Γ0→/hatwideS
+Γjμ/mapsto→Γ0,j−1μ=(Γ0∩Γj)μ,
+forμ∈Γ0,1/lessorequalslantj/lessorequalslantn(again ignoring improper faces). As before, it is easy to check that λis a
+poset isomorphism.
+In part (c), the group Γ=/angbracketleftα0,β0/angbracketrightis the dihedral group D2k. There are two basic facets (here
+edges), namely ΓP
+1=/angbracketleftα0/angbracketrightandΓQ
+1=/angbracketleftβ0/angbracketright, each incident with the basic vertex Γ0={1}.O n e
+checks that these faces are arranged as indicated in (9) below (taking n=1).2
+Theorem 4.7. The abstract Wythoff’s construction described in Deﬁnition 4.2and summarized
+in diagram (5)deﬁnes a semiregular (n+1)-polytope S. Its facets are isomorphic to PorQ,
+withkof each of these occurring alternately around each face Rof co-rank 2. (Thus each 2-
+section S/Ris a2k-gon.) The face-wise Γ-stabilizer of any ridge of Sis trivial. Finally, each
+vertex-ﬁgure of Sis isomorphic to the semiregular n-polytope /hatwideSdeﬁned by the diagram in (7).
+Proof. We adapt the methods of [19, 2E]. Polytope property Ais already in place, so we move
+to the ‘diamond condition’ B.F o r0/lessorequalslantj/lessorequalslantn, we must consider incident faces of ranks j−1 and
+j+1. By Lemma 4.5(b) we can take these to be Γj−1andΓj+1in the basic chain
+ΦK=[Γ−1,...,Γ j−1,Γj+1,...,Γ n,Γn+1],
+withK:= {0,1,...,n +1}\{j}.
+Ifj/lessorequalslantn−2, the stabilizer of this chain is given by ΓK=/angbracketleftαj/angbracketright={ 1,αj}. This implies that the
+distinct faces ΓjandΓjαjare the only j-faces incident with Γj−1andΓj+1.
+Ifj=n−1, then ΓK=/angbracketleftαn−1/angbracketright(resp. /angbracketleftβn−1/angbracketright)i fΓn=ΓP
+n(resp. Γn=ΓQ
+n), and we proceed
+similarly.
+Ifj=n, then ΓK={1}. However, Γn−1=ΓP
+n∩ΓQ
+n,s oΓn−1∩ΓP
+nμ/negationslash= ∅ forces
+ΓP
+nμ=ΓP
+n. Thus ΓP
+nandΓQ
+nare the two distinct facets incident with the ridge Γn−1.
+Next let us examine the structure of the 2-section S/R. Without loss of generality we can
+assume that R=Γn−2. It is easy to check that the (n−1)-faces in this section are all Γn−1μ,
+withμin the dihedral group D2k:= /angbracketleftαn−1,βn−1/angbracketright. SinceD2k∩Γn−1={1}(by the intersection
+condition), there are exactly 2 ksuch cosets. Similarly, the n-faces come in two types: keach of
+typesΓP
+nμandΓQ
+nμ, again taking μ∈D2k. Thus each Γn−1μmeets exactly one n-face of each
+type, namely ΓP
+nμandΓQ
+nμ. Likewise, ΓP
+nμ(resp. ΓQ
+nμ) meets just Γn−1μandΓn−1αn−1μ
+(resp.Γn−1μandΓn−1βn−1μ). We see that this section has the structure of a 2 k-gon, as indicated
+in
+... ... sssss
+Γn−1βn−1αn−1 Γn−1αn−1 Γn−1 Γn−1βn−1Γn−1αn−1βn−1ΓPnβn−1αn−1 ΓQnαn−1 ΓPn ΓQn ΓPnβn−1 ΓQnαn−1βn−1(9)
+Now we can verify the strong connectedness property C. We must show that any section F/G
+ofSis connected. If rank (G)/greaterorequalslant0 or rank (F)/lessorequalslantn, this follows from a standard inductive argu-
+ment based on Lemma 4.6 and the fact that PandQ, being polytopes, are themselves strongly
+connected. To complete the induction we need only show that Sis itself connected. For this it
+will sufﬁce to show that any facet ΓP
+nμcan be connected to ΓP
+n, say, by a sequence of con-
+secutively incident facets and ridges. If μ=βn−1, we observe such a sequence in (9) above.
+B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791 2777
+(Of course, facets of type ΓQ
+nwill appear in the sequence.) Translating by any γ∈Γwe get a
+sequence connecting ΓP
+nγtoΓP
+nβn−1γ.
+Now consider a general facet ΓP
+nμ, and write μas a word of minimal length in the generators,
+say
+μ=ρ1···ρm,withρj∈{α0,...,α n−1,βn−1}.
+Suppose m=1. Ifμ=ρ1=αjfor some j, then ΓP
+nμ=ΓP
+nαj=ΓP
+nand there is nothing to
+prove. If μ=ρ1=βn−1, then we have already observed the required sequence in (9) above.
+We proceed inductively, assuming the existence of a suitable sequence connecting ΓP
+nto
+ΓP
+nγwhenever γhas length m−1 in the generators. Let μ=ρ1···ρm, so that μ=ρ1γfor
+γ=ρ2···ρm.Ifρ1=αj, then as before ΓP
+nμ=ΓP
+nγ, which by induction can in fact be joined
+toΓP
+n. On the other hand, if ρ1=βn−1, then ΓP
+nμ=ΓP
+nβn−1γis linked as in (9) to ΓP
+nγ,
+which in turn is linked to ΓP
+nby the induction hypothesis.
+This completes the proof. 2
+Remarks. In the particularly interesting special issue when the diagram in (5) is a star with three
+branches (that is n=3 and k=2), there generally are three non-equivalent ways in which the
+diagram yields semiregular polytopes of rank 4. For example, the afﬁne Coxeter group /tildewideB3rep-
+resented by the diagram in (3) actually gives rise to two semiregular 3-polytopes, namely thesemiregular tessellation of R
+3with tetrahedral and octahedral tiles shown in Fig. 1, as well as the
+standard cubical tessellation of R3; the latter is geometrically regular, by our next proposition,
+and/tildewideB3is a subgroup of index 2 in its full symmetry group /tildewideC3. Here, the cubical tessellation can
+be derived in two ways from the diagram; in other words, two of the three semiregular polytopesassociated with the diagram actually are isomorphic. In Section 6 we describe examples wherethe three semiregular polytopes are mutually non-isomorphic. At the other extreme, for the ﬁ-
+nite Coxeter group D
+4, all three semiregular polytopes are mutually isomorphic; in fact, each is
+regular and isomorphic to the 4-cube.
+Recall that an abstract polytope is called a 2 -orbit polytope if its automorphism group has
+precisely two ﬂag orbits. (See [13]; for general structure results about the groups of 2-orbit
+polytopes see also [14].)
+Proposition 4.8. Suppose Sis the semiregular (n+1)-polytope constructed from the tail-triangle
+diagram in (5).
+(a)Then Sis a regular polytope if and only if Γadmits a group automorphism induced
+by the diagram symmetry which swaps αn−1andβn−1in(5), while ﬁxing the remaining
+αj’s. In this case P/similarequalQ, say with Schläﬂi type {p1,...,p n−1}, and Sis regular of type
+{p1,...,p n−1,2k}; moreover, Γ(S)/similarequalΓ/multicloserightC2.
+(b)IfSis not regular, then Sis a2-orbit polytope and Γ(S)/similarequalΓ. In particular, this is so if the
+facets PandQare non-isomorphic (as is the case, for example, if αn−2αn−1andαn−2βn−1
+have different periods).
+Proof. Each ﬂag of Sis equivalent under Γto exactly one of the base ﬂags
+ΦP:=/bracketleftbig
+Γ0,...,Γ n−1,ΓP
+n/bracketrightbig
+,orΦQ:=/bracketleftbig
+Γ0,...,Γ n−1,ΓQ
+n/bracketrightbig
+2778 B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791
+(relative to Γ). Thus Shas two ﬂag orbits under Γ, and one or two ﬂag orbits under its full
+automorphism group Γ(S). In particular, Sis regular if and only if Γ(S)has just one ﬂag orbit,
+and then Γhas index 2 in Γ(S).
+Now suppose Sis regular and Φ:=ΦPdenotes the base ﬂag of Srelative to the full group
+Γ(S). Then Γ(S):= /angbracketleftγ0,...,γ n/angbracketright, where γ0,...,γ nare the distinguished generators. Identifying
+Γwith a subgroup of Γ(S)and inspecting the action of its generators on Φ, we ﬁnd that γj=αj
+forj/lessorequalslantn−1. Hence, if j/lessorequalslantn−2 then
+γnαjγn=γnγjγn=γj=αj.
+Moreover, conjugation in Γ(S)byγntakes the distinguished generators γ0,...,γ nrelative to
+Φ=ΦPto the distinguished generators relative to the adjacent ﬂag Φn=ΦQofS. Arguing as
+before we see from the action on ΦQthatγnγn−1γn−1=βn−1and therefore
+γnαn−1γn=γnγn−1γn=βn−1.
+Hence conjugation in Γ(S)byγninduces an involutory group automorphism on Γcorrespond-
+ing to the horizontal diagram symmetry. Clearly, Γ(S)/similarequalΓ/multicloserightC2, withC2=/angbracketleftγn/angbracketright. The remaining
+claims of part (a) are obvious.
+Conversely, suppose that an automorphism τofΓis induced by the diagram symmetry which
+swaps αn−1andβn−1, while ﬁxing the remaining αj’s. Then, in the terminology of [19, 8A],
+a twisting operation applied with Γandτrecovers the polytope Sand proves that it is regular.
+The details are routine.
+Now suppose Sis not regular (for example, this occurs if the two facet types PandQare not
+isomorphic). Then both Γ(S)and its subgroup Γhave two ﬂag orbits, so Γ(S)/similarequalΓandSis a
+2-orbit (n+1)-polytope (of type 2 {0,...,n−1}, in the terminology of [13]). 2
+Remarks. We note for part (b) that Γ=Γ(S)can certainly hold even when P/similarequalQ. There are
+already instances of this behavior when n=2, for we need only truncate a regular polyhedron
+of type {p,p}which is notself-dual. A quick check of Hartley’s Census [12] reveals several
+instances. The smallest such polyhedron is ﬂat with 72 ﬂags and Schläﬂi type {6,6}. However,
+for ease of description we choose instead the following
+Example 4.9. LetMbe the regular polyhedron {6,6}∗240ain the Census [12]. The corre-
+sponding string C-group Γhas order 240 and can be generated by permutations
+α1=(2,3)(4,5), α 0=(1,2), β 1=(2,4)(3,5)(6,7)
+associated to the diagram
+tt
+th
+QQQQ6
+6α0
+β1α1
+(10)
+We construct Mby ringing the top node and its dual M∗by ringing the bottom node. If, however,
+we ring the middle node, then we obtain a semiregular polyhedron Swith 480 ﬂags. This S
+B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791 2779
+has Schläﬂi type {6,6}, but it cannot be regular and Γ(S)/similarequalΓhas order 240. Intuitively, we
+construct Sby truncating Mto its edge midpoints.
+Example 4.10. The Coxeter group B3of order 48 has diagram
+tt
+sh4
+α0
+β1α1
+3 (11)
+The geometrical version of Wythoff’s construction gives the cube {4,3}, which is a convex reg-
+ular solid, of course. The abstract construction is subtly different. Since α0β1has period 2, each
+edge of the cube must be replaced by a digon, so that we do indeed get a semiregular poly-
+tope with square and digonal faces and with hexagonal vertex-ﬁgures. In the convex setting,these digons collapse to line segments and the vertex-ﬁgures to equilateral triangles, as expected.(A nice spherical model is obtained by inscribing the cube in its circumsphere; the six face planes
+cut the sphere in the 24 arcs needed for edges.)
+In the same way we can disturb any of the classical convex regular polytopes, indeed, any
+regular polytope whatsoever.
+The tessellation Tdescribed in Example 3.1 and Fig. 1 has octahedra among its facets, and
+cuboctahedral vertex-ﬁgures. Both have spherical type and can be projectiﬁed by antipodal iden-
+tiﬁcations. This is accomplished by adjoining to (4) the ﬁrst or second relation in (12) below. Wechoose both for the next example (see [26] for the other possibilities):
+Example 4.11 (The tomotope). Deﬁne a group Γby adjoining to (4) the two relations which
+create hemioctahedra and hemicuboctahedra:
+(ρ
+0ρ1ρ3)3=(ρ2ρ1ρ3)3=1. (12)
+Using GAP [10], it is easy to check that Γnow has ﬁnite order 96, yet still satisﬁes the
+intersection condition (6). Thus, by Theorem 4.7, we obtain a ﬁnite semiregular 4-polytope Thh,
+which in [26] was called the tomotope (as a small gift for Tomaž Pisanski).
+The tomotope has 4 vertices, 12 edges, 16 triangles, and 4 tetrahedra and 4 hemioctahedra.
+Two of each kind of facet alternate around each edge. Since Γacts faithfully on edges 1 ,..., 12
+(say), we have this permutation representation:
+ρ0=(5,10)(6,9)(7,12)(8,11),
+ρ1=(1,6)(2,5)(3,8)(4,7),
+ρ2=(5,9)(6,10)(7,11)(8,12),
+ρ3=(5,8)(6,7)(9,12)(10,11).
+It is also possible to obtain Γby reducing the crystallographic group /tildewideB3modulo 2. (This fact
+resurfaces in Section 6 below.)
+2780 B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791
+Fig. 2. The tomotope Thh. (For interpretation of colors in this ﬁgure, the reader is referred to the web version of this
+article.)
+Our main purpose in [26] was to investigate the regular covers of Thh. Since the epimorphism
+/tildewideB3→Γinduces a 2-covering T→Thhof semiregular polytopes [19, 2D], we may construct
+Thhby making suitable identiﬁcations in T(see below). But putting that aside, we ﬁnd that the
+tomotope has the peculiar property, impossible in lower ranks, of having inﬁnitely many distinct,ﬁnite, minimal regular covers.
+To visualize the tomotope T
+hhimagine a core octahedron with 8 tetrahedra glued to its faces,
+suggesting the stella octangula . Next imagine this complex inscribed in a 2 ×2×2 cube and
+from that make toroidal-type identiﬁcations for the vertices and edges lying in the boundaryof the cube. Finally, we further identify antipodal faces of all ranks to get T
+hh. In Fig. 2 you
+can see the 4 vertices, 4 =8/2 tetrahedra and 1 hemioctahedron in the core. The other three
+hemioctahedra are red, yellow and green, and ‘run around’ the belts of those colors. For example,
+before making identiﬁcations, we may split a red octahedron into four sectors around a vertical
+axis of symmetry, then ﬁt these into four red slots, two of which are visible in Fig. 2. In this waywe ﬁll out the 2 ×2×2 cube before the ﬁnal antipodal identiﬁcations.
+The proof of the intersection property for tail-triangle C-groups can often be reduced to
+the consideration of only a small number of cases. For i=−1,0,...,n −2, deﬁne Γ
++
+i:=
+/angbracketleftαi+1,...,α n−2,αn−1,βn−1/angbracketright.
+Lemma 4.12. Suppose that Γ=/angbracketleftα0,...,α n−2,αn−1,βn−1/angbracketrightis a tail-triangle group with n/greaterorequalslant2,
+and suppose that its subgroups Γ1
+n:= /angbracketleftα0,...,α n−2,αn−1/angbracketright,Γ2
+n:= /angbracketleftα0,...,α n−2,βn−1/angbracketrightand
+Γ0:= /angbracketleftα1,...,α n−2,αn−1,βn−1/angbracketrightare C-groups. Then Γis a tail-triangle C-group if and
+only if Γ1
+n∩Γ2
+n=/angbracketleftα0,...,α n−2/angbracketrightand both Γ+
+i∩Γ1
+n=/angbracketleftαi+1,...,α n−1/angbracketrightandΓ+
+i∩Γ2
+n=
+/angbracketleftαi+1,...,α n−2,βn−1/angbracketrightfori=0,...,n −2.
+Proof. The case n=2 is trivial, since the stated conditions on Γ1
+n,Γ2
+nandΓ+
+0are just saying
+that any two of the three distinguished dihedral subgroups intersect as required. Now supposen/greaterorequalslant3 and I,J⊆{α
+0,...,α n−1,βn−1}. We must show that /angbracketleftI/angbracketright∩/angbracketleftJ/angbracketright=/angbracketleftI∩J/angbracketright. Clearly, one
+inclusion is obvious, and the other holds trivially if IorJis the full generating set. Hence we
+may exclude the latter possibility from now on.
+B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791 2781
+First consider the case when {α0,...,α n−2}/negationslash ⊆I,J.L e ti(resp.j) denote the largest integer k
+withk/lessorequalslantn−2 andαk/∈I(resp. αk/∈J). Assume that i/lessorequalslantj. Then I=I0∪I1andJ=J0∪J1,
+where
+I0⊆{α0,...,α i−1},{αi+1,...,α n−2}⊆I1⊆{αi+1,...,α n−1,βn−1}
+and similarly
+J0⊆{α0,...,α j−1},{αj+1,...,α n−2}⊆J1⊆{αj+1,...,α n−1,βn−1}.
+By the commutativity relations implicit in the underlying diagram, /angbracketleftI/angbracketright/similarequal/angbracketleftI0/angbracketright×/angbracketleftI1/angbracketrightand/angbracketleftJ/angbracketright/similarequal
+/angbracketleftJ0/angbracketright×/angbracketleftJ1/angbracketright. (It will emerge below that these and similar products are direct.)
+Now suppose μ∈/angbracketleftI/angbracketright∩/angbracketleftJ/angbracketright. Then μ=λ0λ1withλ0∈/angbracketleftI0/angbracketrightandλ1∈/angbracketleftI1/angbracketright, and simi-
+larlyμ=ν0ν1withν0∈/angbracketleftJ0/angbracketrightandν1∈/angbracketleftJ1/angbracketright.B u t i/lessorequalslantj, so both λ1andν1are elements in
+/angbracketleftαi+1,...,α n−1,βn−1/angbracketrightrelated by ν1=ξλ1withξ:=ν−1
+0λ0∈/angbracketleftα0,...,α j−1/angbracketright(andξ=ν1λ−1
+1∈
+/angbracketleftαi+1,...,α n−1,βn−1/angbracketright). Then by our assumptions ξ∈Γ+
+i∩Γ1
+n=/angbracketleftαi+1,...,α n−1/angbracketright, and hence
+alsoξ∈/angbracketleftα0,...,α j−1/angbracketright∩/angbracketleftαi+1,...,α n−1/angbracketright=/angbracketleftαi+1,...,α j−1/angbracketrightsinceΓ1
+nis a C-group. (Replac-
+ingI,JbyI0,I1we now see why /angbracketleftI0/angbracketright∩/angbracketleftI1/angbracketright=/angbracketleft 1/angbracketright.) Returning to our proof, we note that it
+sufﬁces to show that λ0,λ1∈/angbracketleftI∩J/angbracketright.
+First consider ν0=λ0ξ−1as an element of the direct product
+/angbracketleftα0,...,α i−1,αi+1,...,α j−1/angbracketright/similarequal/angbracketleftα0,...,α i−1/angbracketright×/angbracketleftαi+1,...,α j−1/angbracketright,
+bearing in mind here that λ0∈/angbracketleftα0,...,α i−1/angbracketrightandξ∈/angbracketleftαi+1,...,α j−1/angbracketright.B u t
+ν0∈/angbracketleftJ0/angbracketright∩/angbracketleftα0,...,α i−1,αi+1,...,α j−1/angbracketright=/angbracketleftbig
+J0\{αi}/angbracketrightbig
+,
+once again by the intersection property in Γ1
+n. Since the factorization of the element ν0of/angbracketleftJ0\
+{αi}/angbracketrightas an element of the direct product is unique, we must also have λ0,ξ∈/angbracketleftJ0/angbracketright; in fact, we
+even have ξ∈/angbracketleftJ0\{α0}/angbracketright. But then λ0∈/angbracketleftI0/angbracketright∩/angbracketleftJ0/angbracketright=/angbracketleftI0∩J0/angbracketright/lessorequalslant/angbracketleftI∩J/angbracketright, by the intersection
+property in Γ1
+n.
+Similarly we look at the factorization λ1=ξ−1ν1in the direct product
+/angbracketleftαi+1,...,α j−1,αj+1,...,α n−1,βn−1/angbracketright/similarequal/angbracketleftαi+1,...,α j−1/angbracketright×/angbracketleftαj+1,...,α n−1,βn−1/angbracketright,
+remembering here that ξ∈/angbracketleftαi+1,...,α j−1/angbracketrightandν1∈Γ+
+j+1.N o w
+λ1∈/angbracketleftI1/angbracketright∩/angbracketleftαi+1,...,α j−1,αj+1,...,α n−1,βn−1/angbracketright=/angbracketleftbig
+I1\{αj}/angbracketrightbig
+,
+by the intersection property of Γ0. But the factorization of the element λ1of/angbracketleftI1\{αj}/angbracketrightas an
+element of the direct product is unique, so in fact ξ,ν 1∈/angbracketleftI1/angbracketright. Hence,
+ν1∈/angbracketleftI1/angbracketright∩/angbracketleftJ1/angbracketright=/angbracketleftI1∩J1/angbracketright/lessorequalslant/angbracketleftI∩J/angbracketright,
+by the intersection property of Γ0. Moreover,
+ξ∈/angbracketleftI1/angbracketright∩/angbracketleftbig
+J0\{α0}/angbracketrightbig
+=/angbracketleftbig
+I1∩/parenleftbig
+J0\{α0}/parenrightbig/angbracketrightbig
+/lessorequalslant/angbracketleftI∩J/angbracketright,
+2782 B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791
+once again by the intersection property of Γ0. Thus λ1∈/angbracketleftI∩J/angbracketright, as required. This completes the
+proof for the case when {α0,...,α n−2}/negationslash ⊆I,J.
+Now suppose that one of the sets, say J, contains {α0,...,α n−2}. Then either J⊆
+{α0,...,α n−1}and/angbracketleftJ/angbracketright/lessorequalslantΓ1
+n,o rJ={α0,...,α n−2,βn−1}and/angbracketleftJ/angbracketright=Γ2
+n.
+If also Icontains {α0,...,α n−2}, then either I⊆JorJ⊆I, or one of I,Jis{α0,...,α n−1}
+and the other is {α0,...,α n−2,βn−1}. In the former case the intersection condition holds trivially,
+and in the latter case by our assumptions on Γ1
+n∩Γ2
+n.
+Now suppose that {α0,...,α n−2}/negationslash ⊆Iand that μ∈/angbracketleftI/angbracketright∩/angbracketleftJ/angbracketright. As above let idenote the largest
+integer kwithk/lessorequalslantn−2 andαk/∈I,l e tI=I0∪I1, and let μ=λ0λ1withλ0∈/angbracketleftI0/angbracketrightandλ1∈/angbracketleftI1/angbracketright.
+ButI0⊆J, so clearly λ0∈/angbracketleftI∩J/angbracketrightandλ1=λ−1
+0μ∈/angbracketleftJ/angbracketright.
+First suppose that J⊆{α0,...,α n−1}. Then
+λ1∈/angbracketleftI1/angbracketright∩/angbracketleftJ/angbracketright/lessorequalslantΓ+
+i∩Γ1
+n=/angbracketleftαi+1,...,α n−1/angbracketright,
+by our assumption on the rightmost intersection. Hence, if αn−1∈I1,Jthen necessarily
+{αi+1,...,α n−1}=I1∩Jand hence λ1∈/angbracketleftI∩J/angbracketright; bear in mind that {αi+1,...,α n−2}⊆I1
+by the deﬁnition of i.N o w ,i f αn−1/∈Jthen
+λ1∈/angbracketleftJ/angbracketright∩/angbracketleftαi+1,...,α n−1/angbracketright=/angbracketleftαi+1,...,α n−2/angbracketright=/angbracketleftI1∩J/angbracketright/lessorequalslant/angbracketleftI∩J/angbracketright
+by the intersection property of Γ1
+n. On the other hand, if αn−1/∈I1then
+λ1∈/angbracketleftI1/angbracketright∩/angbracketleftαi+1,...,α n−1/angbracketright/lessorequalslantΓ2
+n∩Γ1
+n=/angbracketleftα0,...,α n−2/angbracketright,
+and therefore also
+λ1∈/angbracketleftα0,...,α n−2/angbracketright∩/angbracketleftαi+1,...,α n−1/angbracketright=/angbracketleftαi+1,...,α n−2/angbracketright=/angbracketleftI1∩J/angbracketright/lessorequalslant/angbracketleftI∩J/angbracketright,
+once again by the intersection property of Γ1
+n.
+Finally, if J={α0,...,α n−2,βn−1}then
+λ1∈/angbracketleftI1/angbracketright∩/angbracketleftJ/angbracketright/lessorequalslantΓ+
+i∩Γ2
+n=/angbracketleftαi+1,...,α n−2,βn−1/angbracketright.
+Two possibilities can occur for I1.I fβn−1∈I1, then{αi+1,...,α n−2,βn−1}=I1∩Jand hence
+λ1∈/angbracketleftI∩J/angbracketright. However, if βn−1/∈I1then
+λ1∈/angbracketleftI1/angbracketright∩/angbracketleftαi+1,...,α n−2,βn−1/angbracketright/lessorequalslantΓ1
+n∩Γ2
+n=/angbracketleftα0,...,α n−2/angbracketright,
+and therefore also
+λ1∈/angbracketleftαi+1,...,α n−2,βn−1/angbracketright∩/angbracketleftα0,...,α n−2/angbracketright=/angbracketleftαi+1,...,α n−2/angbracketright=/angbracketleftI1∩J/angbracketright,
+now by the intersection property in Γ2
+n.
+Thus in either case λ1∈/angbracketleftI∩J/angbracketright, and since λ0∈/angbracketleftI∩J/angbracketright,w ea l s oh a v e μ∈/angbracketleftI∩J/angbracketright.T h i s
+completes the proof. 2
+Remarks. The intersection conditions explicitly mentioned in Lemma 4.12 can often be fur-
+ther reduced. For example, when n=3, the three conditions for the mutual intersections of
+3-generator subgroups imply the remaining conditions, provided these subgroups are C-groups.
+B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791 2783
+5. A universal construction
+Suppose that PandQare regular n-polytopes with isomorphic facets Kand imagine that we
+have unlimited copies of each. Pick a base copy of P, say, and along each of its facets attach a
+distinct copy of Q. Now only certain facets of the new Q’s are exposed, so to them we attach
+distinct P’s. Continue this in ‘alternating’ fashion. Presumably we may then adjoin an inﬁnite
+number of copies of P’s and Q’s about each ridge of each copy. But does this process really
+make sense and do we get an (n+1)-polytope Sfrom it? If so, what is Γ(S)? Does it matter if
+instead we begin with a base copy of Q?
+We will address these questions by amalgamating the automorphism groups of PandQ.
+However, we cannot yet answer a harder question: does the construction work when around eachridge we attempt to alternate just kcopies each of PandQbefore deﬁnitely closing up, with
+k<∞?
+We begin by extracting from [1, Chapter I, §7.3] some properties of groups amalgamated
+along subgroups, as they apply to our construction. Suppose therefore that we have speciﬁed
+base ﬂags for PandQand hence also corresponding lists of nstandard involutory generators
+forΓ(P)andΓ(Q). Then PandQwill have isomorphic facets precisely when there is an
+isomorphism from the facet subgroup of Γ(P)to that of Γ(Q)which pairs in order the ﬁrst
+n−1 generators of Γ(P)with those of Γ(Q). With these data understood we can unambiguously
+amalgamate Γ(P
+)withΓ(Q)alongΓ(K), giving the group
+Π:=Π(P,Q):=Γ(P)∗Γ(K)Γ(Q).
+But an important feature of the construction is that Γ(P)andΓ(Q)embed into Π[1, Chapter I,
+§7.3, Proposition 4]. Therefore we are justiﬁed at the outset in simply assuming that
+Γ(P)=/angbracketleftα0,...,α n−2,αn−1/angbracketright,
+Γ(Q)=/angbracketleftα0,...,α n−2,βn−1/angbracketright,
+Γ(K)=/angbracketleftα0,...,α n−2/angbracketright
+are all subgroups of Π=/angbracketleftα0,...,α n−2,αn−1,βn−1/angbracketright.
+One can prove that a presentation of Πis obtained by amalgamating deﬁning rela-
+tions for Γ(P)(on its generators α0,...,α n−2,αn−1) with deﬁning relations for Γ(Q)(on
+α0,...,α n−2,βn−1). We can therefore represent this arrangement of groups schematically in the
+diagram
+tt
+tt
+tt 
+QQQQαn−3 αn−2
+pn−2α0 α1
+p1......pn−1
+qn−1βn−1αn−1
+∞ (13)
+which evidently has the structure displayed earlier in (5).
+2784 B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791
+The group Πis usually not a Coxeter group; but it will be a quotient of some Cox-
+eter group with a diagram like this. We make no assumptions about the branch labels
+p1,...,p n−2,pn−1,qn−1. Such a label could even be ‘2’, indicating no branch at all. However,
+it is a property of free products with amalgamation that αn−1βn−1has inﬁnite period, which
+explains the label of the right-hand branch. In other words, /angbracketleftαn−1,βn−1/angbracketrightis an inﬁnite dihedral
+group.
+For more signiﬁcant calculations we must employ a standard factorization in amalgamated
+products. Let TPandTQbe transversals to Γ(K)inΓ(P)andΓ(Q), respectively, with 1 ∈
+TP∩TQ. Then every μ∈Πhas a unique reduced decomposition of length m/greaterorequalslant0, say
+μ=κτ1···τm. (14)
+Hereκ∈Γ(K); and if m/greaterorequalslant1, then all τi/negationslash=1 and τi,τi+1belong to different transversals TP,
+TQfor 1/lessorequalslanti<n [1, Chapter I, §7.3, Proposition 5]. We call κandτ1,...,τ m, respectively, the
+leading element and the transversal elements for the reduced decomposition of μ.
+In fact, we shall select our transversals in a special way.
+Lemma 5.1. There are transversals TPandTQsuch that for 0/lessorequalslantj/lessorequalslantn−1,TPcontains a
+transversal TP,jfor/angbracketleftαj,...,α n−2/angbracketrightin/angbracketleftαj,...,α n−2,αn−1/angbracketright; andTQcontains a transversal TQ,j
+for/angbracketleftαj,...,α n−2/angbracketrightin/angbracketleftαj,...,α n−2,βn−1/angbracketright. Moreover,
+{1,αn−1}=TP,n−1⊆TP,n−2⊆···⊆ TP,1⊆TP,0=TP
+and
+{1,βn−1}=TQ,n−1⊆TQ,n−2⊆···⊆ TQ,1⊆TQ,0=TQ.
+Proof. We proceed by induction on j,a sjruns from n−1 down to 0. When j=n−1w e
+simply pick TP,n−1={1,αn−1}as transversal for /angbracketleft1/angbracketrightin/angbracketleftαn−1/angbracketright. For the inductive step, suppose
+thatτ1,τ2∈TP,j+1(in/angbracketleftαj+1,...,α n−2,αn−1/angbracketright) satisfy
+τ1≡τ2mod/angbracketleftαj,...,α n−2/angbracketright.
+Then
+τ−1
+1τ2∈/angbracketleftαj,...,α n−2/angbracketright∩/angbracketleftαj+1,...,α n−2,αn−1/angbracketright=/angbracketleftαj+1,...,α n−2/angbracketright,
+by the intersection condition (2) for string C-groups. Thus τ1=τ2, and we may extend TP,j+1
+toTP,jforj=n−2,..., 0.2
+Lemma 5.2. For0/lessorequalslantj/lessorequalslantn−1,
+/angbracketleftαj,...,α n−2,αn−1,βn−1/angbracketright/similarequal/angbracketleftαj,...,α n−2,αn−1/angbracketright∗/angbracketleftαj,...,α n−2/angbracketright/angbracketleftαj,...,α n−2,βn−1/angbracketright.(15)
+In particular, /angbracketleftαn−1,βn−1/angbracketrightis the inﬁnite dihedral group; and /angbracketleftαn−2,αn−1,βn−1/angbracketrightis the Coxeter
+group with diagram
+B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791 2785
+tt
+t
+QQQQαn−2pn−1
+qn−1βn−1αn−1
+∞ (16)
+Proof. For convenience, let A=/angbracketleftαj,...,α n−2,αn−1/angbracketright,B=/angbracketleftαj,...,α n−2,βn−1/angbracketright,C=/angbracketleftαj,...,
+αn−2/angbracketright, all subgroups of Π. We must show that the left side of (15) is isomorphic to A∗CB. Since
+the inclusions A/arrowhookleft→Π,B/arrowhookleft→Πagree on C, there is a natural map ϕ:A∗CB→Πwhose image
+is/angbracketleftαj,...,α n−2,αn−1,βn−1/angbracketright. (We abuse notation a little here.)
+Suppose that μ∈ker(ϕ)has the reduced decomposition μ=κτ1···τm, where now κ∈C
+and the τj’s belong alternately to transversals for CinAorB. By Lemma 5.1, these transversals
+transfer under ϕto subsets of the transversals TP,TQinΠ. Applying ϕwe therefore get 1 =
+κτ1···τminΠ, where uniqueness of the reduced decomposition gives κ=1 andm=0. Thus ϕ
+is injective. (Compare [1, Chapter I, Exercise §7-28].) The special cases when j=n−2,n−1
+follow at once from the standard presentation of an amalgamated product. 2
+The two previous lemmas have immediate consequences for the structure of transversals. For
+−1/lessorequalslantj/lessorequalslantn−2, letPj,Qj, andKjrespectively, denote the co-faces of P,Q, andK, at their
+basicj-face. Then by Lemma 5.2 the subgroup
+Π+
+j:= /angbracketleftαj+1,...,α n−2,αn−1,βn−1/angbracketright
+ofΠis isomorphic to the amalgamated product
+Π(Pj,Qj)=Γ(Pj)∗Γ(Kj)Γ(Qj)
+=/angbracketleftαj+1,...,α n−2,αn−1/angbracketright∗/angbracketleftαj+1,...,α n−2/angbracketright/angbracketleftαj+1,...,α n−2,βn−1/angbracketright.
+It follows from the inductive setup of our transversals that, apart from a shift in subscripts,
+the transversals TPjandTQjassociated with PjandQjrelative to the amalgamated product
+Π(Pj,Qj)as in Lemma 5.1 are just the subsets TP,j+1ofTPandTQ,j+1ofTQ.W en o wh a v e
+an inductive argument in place to establish the following lemma.
+Lemma 5.3. LetTPandTQbe transversals inductively built as in Lemma 5.1,l e t−1/lessorequalslantj/lessorequalslant
+n−2, and let μ=κτ1···τmbe the reduced decomposition of an element μinΠ+
+j. Then κ∈
+/angbracketleftαj+1,...,α n−2/angbracketrightandτi∈TP,j+1∪TQ,j+1fori=1,...,m .
+Proof. The subgroup Π+
+jofΠis an amalgamated product isomorphic to Π(Pj,Qj), with
+unique reduced decompositions of its elements μrelative to the respective transversals TP,j+1=
+TPjandTQ,j+1=TQj. Since the latter are subsets of TPandTQ, respectively, the lemma
+follows from the uniqueness of the representations of the reduced decompositions in Π(Pj,Qj)
+and in Π.2
+The previous lemmas enable us to establish the crucial intersection property for Π, required
+for the construction of the desired semiregular polytope.
+Lemma 5.4. Πsatisﬁes the intersection condition (6).
+2786 B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791
+Proof. We proceed inductively. By construction, Γ(P)andΓ(Q)already are C-groups embed-
+ded in Π. In view of Lemma 5.2 we also may assume that Π0is a C-group.
+According to Lemma 4.12 we must verify three intersection conditions, namely Γ(P)∩
+Γ(Q)=Γ(K)and both Π+
+i∩Γ(P)=/angbracketleftαi+1,...,α n−1/angbracketrightandΠ+
+i∩Γ(Q)=/angbracketleftαi+1,...,
+αn−2,βn−1/angbracketrightfori=0,...,n −2. To this end, suppose TPandTQare transversals chosen as
+in Lemma 5.1.
+First consider the subgroup Γ(P)∩Γ(Q)(=Π1
+n∩Π2
+n)ofΠ. Each element in Γ(P)
+(resp. Γ(Q)) has a reduced decomposition with at most one (non-trivial) transversal element
+fromTPandTQ, respectively. By the uniqueness of reduced decompositions in Π, an element
+inΓ(P)∩Γ(Q)cannot involve any transversal elements at all and must lie in Γ(K). Thus
+Γ(P)∩Γ(Q)=Γ(K).
+Now suppose μ∈Π+
+i∩Γ(P)for some i=0,...,n −2. By Lemma 5.3, if μ=κτ1···τm
+is the reduced decomposition in Π+
+i(and hence in Π), then κ∈/angbracketleftαi+1,...,α n−2/angbracketrightandτj∈
+TP,i+1∪TQ,i+1forj=1,...,m . On the other hand, μ∈Γ(P), so necessarily m/lessorequalslant1, and also
+τ1∈TP,i+1ifm=1. In either case μ∈/angbracketleftαi+1,...,α n−2,αn−1/angbracketright.
+Ifμ∈Π+
+i∩Γ(Q)for some i=0,...,n −2, we can similarly conclude that μ∈
+/angbracketleftαi+1,...,α n−2,βn−1/angbracketright, as before with m/lessorequalslant1 but now with τ1∈TQ,i+1ifm=1.2
+Now we can apply Theorem 4.7 and Proposition 4.8 to the group Π.
+Theorem 5.5. Suppose PandQare regular n-polytopes with isomorphic facets K. Then the
+group Π=Γ(P)∗Γ(K)Γ(Q)is a group of automorphisms for a semiregular (n+1)-polytope
+UP,Qwhose facets are copies of PandQappearing alternately around each ridge, each a
+copy of K. Each section UP,Q/Rdetermined by an (n−2)-faceRis an apeirogon {∞}. The
+polytope UP,Qis regular if and only if PandQare isomorphic. In this case Γ(UP,Q)=Π/multicloserightC2;
+otherwise Γ(UP,Q)=Π.
+Proof. It remains to determine the structure of the full automorphism group of UP,Q.I fPand
+Qare isomorphic polytopes, then Πadmits an involutory group automorphism that pairs up re-
+spective generators of Γ(P)andΓ(Q)and hence corresponds to the symmetry of the underlying
+diagram for Πin its horizontal axis. Note here that Πadmits a presentation that is symmetric
+with respect to PandQ.I fPandQare not isomorphic, then clearly such an automorphism
+cannot exist. Now Proposition 4.8 applies and completes the proof. 2
+In the semiregular polytope UP,Q, an inﬁnite number of copies of the given n-polytopes Pand
+Qappear alternately as facets around each (n−2)-faceR, determining a section UP,Q/Rof rank
+2 isomorphic to an apeirogon {∞}. Ideally, for each integer k/greaterorequalslant2, we would also like to construct
+a similar such semiregular polytope, now with kcopies each of PandQappearing alternately
+around each (n−2)-face. At the group level, this would involve analysis of the quotient Πk=
+Πk(P,Q)of the universal group Π=Π(P,Q)obtained by adding the extra relation
+(αn−1βn−1)k=1 (17)
+to the deﬁning relations of Π, that is, by factoring out the normal subgroup Nkgenerated by
+the conjugates of (αn−1βn−1)kinΠ. Then three tasks would have to be accomplished, with the
+ﬁrst being the most challenging: veriﬁcation of the intersection condition for Πk; proof that the
+groups Γ(P)andΓ(Q)really are embedded in Πk; and proof that αn−1βn−1really has order
+B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791 2787
+kin the quotient Πk. Solutions for these tasks seem to require rather complicated arguments
+concerning reduced decompositions of certain elements of the amalgamated product Π.
+6. Polytopes from reﬂection groups over ﬁnite ﬁelds
+In this section we brieﬂy sketch a construction of semiregular polytopes based on modular
+reduction techniques applied to certain reﬂection groups. More details are described in a forth-coming paper [24]. Reﬂection groups over ﬁnite ﬁelds and their related regular polytopes havebeen studied in [21–23].
+Suppose that Γ=/angbracketleftα
+0,...,α n−2,αn−1,βn−1/angbracketrightis an abstract Coxeter group represented, up to
+branch labels, by a tail-triangle Coxeter diagram as in (5). Let pi,jandqi,n−1denote the orders
+ofαiαjandαiβn−1inΓ, so in particular pi,i=1,pj,i=pi,j=:pi+1ifj=i+1, and pi,j=2
+otherwise, and similarly qn−1,n−1=k,qn−1,n−2=qn−2,n−1=:qn−1, andqi,n−1=2 otherwise.
+(We will not require notation for the order of β2
+n−1.) Let Vbe real (n+1)-space, with basis
+{a0,...,a n−1,bn−1}and symmetric bilinear form x·ydeﬁned by
+ai·aj:= − 2 cosπ
+pi,j,a i·bn−1:= − 2 cosπ
+qi,n−1,b n−1·bn−1:=2. (18)
+LetR:Γ→Gbe the standard (faithful) representation of ΓinV, where
+G=/angbracketleftr0,...,r n−1,sn−1/angbracketright
+is the isometric reﬂection group generated by the reﬂections with rootsa0,...,a n−1,bn−1(see
+[15, §§5.3–5.4]); thus,
+ri(x)=x−(x·ai)ai(i=0,...,n −1),
+sn−1(x)=x−(x·bn−1)bn−1.
+Then, with respect to the basis {a0,...,a n−1,bn−1}ofV, the reﬂections r0,...,r n−1,sn−1are
+represented by matrices in the general linear group GLn(D)over the ring of integers Din an
+algebraic number ﬁeld determined by Γ. More explicitly, if ξis a primitive 2 mth root of unity,
+where mdenotes the lowest common multiple of all ﬁnite pi,jandqi,n−1, thenD=Z[ξ],t h e
+ring of integers in Q(ξ). Hence we may view Gas a subgroup of GLn(D)andreduce Gmodp,
+for any prime p(see [21] and [9, Chapter XII]).
+The modular reduction technique is most easily described for Coxeter groups G(orΓ) which
+arecrystallographic , meaning that Gleaves some lattice in Vinvariant. There is a simple com-
+binatorial characterization of crystallographic Coxeter groups, which in the present context takesthe following form (see [20]): Gis crystallographic if and only if p
+i,j,qi,n−1=2,3,4,6o r∞
+for all i,jand the triangular circuit of (5) (assuming k/greaterorequalslant3) contains no, or two, branches la-
+beled 4 and no, or two, branches labeled 6. If Gis crystallographic, then there is a basic system
+{c0,...,c n−1,dn−1}, with ci:=tiaianddn−1=t/prime
+n−1bn−1for certain ti>0 and t/prime
+n−1>0, such
+that
+li,j:= −t−1
+i(ai·aj)tj∈Z(0/lessorequalslanti,j/lessorequalslantn−1),
+mi,n−1:= −t−1
+i(ai·bn−1)t/prime
+n−1∈Z(0/lessorequalslanti/lessorequalslantn−1),
+2788 B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791
+and
+mn−1,j:= −tj(aj·bn−1)t/prime−1
+n−1∈Z(0/lessorequalslantj/lessorequalslantn−1).
+Here, li,i=−2 for all i, andli,j=0i fpi,j=2; similarly, mn−1,n−1=−2, and mi,n−1=0
+ifqi,n−1=2. Then, for the rescaled roots, the generating reﬂections of Gare represented by
+integral matrices and are given by
+ri(cj)=cj+li,jci,
+ri(dn−1)=dn−1+mi,n−1ci,
+sn−1(cj)=cj+mn−1,jdn−1,
+sn−1(dn−1)=−dn−1. (19)
+The corresponding root lattice (/circleplustext
+jZcj)⊕Zdn−1isG-invariant. Thus we may take D=Zand
+reduce Gmodulo any positive integer. The most interesting case occurs when the reduction is
+modulo a prime p, allowing p=2. A crystallographic Coxeter group Ggenerally has many
+basic systems, and the modular reduction may depend on the particular system chosen.
+We illustrate our method for the crystallographic Coxeter group Gwith diagram
+tt
+tt
+
+QQQQ4
+∞r0 r1
+s2r2
+(20)
+Nown=3 and {c0,c1,c2,d2}is a basic system for real 4-space V. As the diagram in (20) has
+no branches labeled 6, a change in the underlying basic system has little effect on the reductionmodulo an odd prime p; in fact, passing to a different basic system merely results in conjugation
+inside GL
+4(Zp). Here we may assume that the base vectors c0,c1,c2,d2have squared length 1,
+1, 2, 4, respectively (see [21, §4]).
+When pis odd, the reduced group Gpis generated by four isometric reﬂections in the ﬁnite
+orthogonal geometry determined on Vp:=Z4
+pby the reduction of the corresponding (integral)
+bilinear form modulo p. However, Vpis non-singular only when p>3, since its discriminant is
+−6m o d p. Thus the cases p=2 andp=3 require special treatment.
+Now, by Lemma 4.12 and the subsequent remarks, Gpis a tail-triangle C-group if and only if
+the 3-generator subgroups /angbracketleftr0,r1,r2/angbracketrightp,/angbracketleftr0,r1,s2/angbracketrightpand/angbracketleftr1,r2,s2/angbracketrightpare C-groups satisfying
+/angbracketleftr0,r1,r2/angbracketrightp∩/angbracketleftr0,r1,s2/angbracketrightp=/angbracketleftr0,r1/angbracketrightp,
+/angbracketleftr1,r2,s2/angbracketrightp∩/angbracketleftr0,r1,r2/angbracketrightp=/angbracketleftr1,r2/angbracketrightp,
+/angbracketleftr1,r2,s2/angbracketrightp∩/angbracketleftr0,r1,s2/angbracketrightp=/angbracketleftr1,s2/angbracketrightp. (21)
+When pis odd, each of the three 3-dimensional subspaces of Vpspanned by {c0,c1,c2},
+{c0,c1,d2}or{c1,c2,d2}, respectively, is left invariant by its respective 3-generator subgroup,
+and is non-singular, with discriminant1
+2,−1o r−4m o d p. Moreover, each of the three 2-
+dimensional subspaces of Vpspanned by {c0,c1},{c1,c2}or{c1,d2}, respectively, is invariant
+B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791 2789
+under the respective dihedral subgroup /angbracketleftr0,r1/angbracketrightp,/angbracketleftr1,r2/angbracketrightpor/angbracketleftr1,s2/angbracketrightp, and has discriminant3
+4,1
+or 0 mod p; here the third subspace is singular (for all p), but the ﬁrst and second subspaces are
+non-singular, except for the ﬁrst when p=3. Now, without elaborating in detail, it turns out that
+the above 3-generator subgroups of Gpreally are C-groups, and that the three intersection con-
+ditions in (21) can be veriﬁed using methods similar to those described in [21,22] (when p/greaterorequalslant5);
+more precisely, the ﬁrst two intersection conditions require an analog of [21, Theorem 4.2], and
+the third an analog of [22, Corollary 3.2]. The case p=3 can be veriﬁed by hand, or using
+GAP [10].
+Now Theorem 4.7 and Proposition 4.8 tell us that Gpis the automorphism group of a semireg-
+ular 4-polytope Swhose two kinds of facets PandQare regular polyhedra determined by the
+subgroups /angbracketleftr0,r1,r2/angbracketrightpand/angbracketleftr0,r1,s2/angbracketrightp. In particular, Pis the octahedron {3,4}; andQis the
+regular map of type {3,p}of [21, §5.7], with automorphism group Gp=O1(3,p,0)ifp/greaterorequalslant5,
+andGp/similarequalS4ifp=3. (Recall that O1(3,p,0)denotes the subgroup generated by the reﬂections
+of spinor norm 1 in the full orthogonal group O(3,p,0)of a non-singular orthogonal space Z3
+p.
+Note that O1(3,p,0)/similarequalPSL 2(Zp)/multicloserightC2andO(3,p,0)/similarequalPGL2(Zp)/multicloserightC2.) When p=3, 5 or 7,
+respectively, Qis the tetrahedron {3,3}, icosahedron {3,5}or Klein map {3,7}8. Each edge of
+Slies in four facets, namely two copies of Pand two copies of Q, occurring alternately. The
+automorphism group GpofSis given by
+Γ(S)=⎧
+⎪⎨
+⎪⎩O1(4,p,1), ifp≡1,7 mod 24 ,
+O(4,p,1), ifp≡5,11 mod 24 ,
+O1(4,p,−1),ifp≡17,23 mod 24 ,
+O(4,p,−1), ifp≡13,19 mod 24 .(22)
+(Recall that O1(4,p,ε) , withε=±1, denotes the subgroup generated by the reﬂections of spinor
+norm 1, in the full orthogonal group O(4,p,ε) of a non-singular orthogonal space Z4
+p.H e r e
+ε=1 if the Witt index is 2, and ε=−1 if the Witt index is 1.)
+Forp=3 the space V3is singular with 1-dimensional radical. The group G3has order 1296
+and consists of all isometries which ﬁx the radical pointwise, so that G3/similarequalZ3
+3/multicloseright/angbracketleftr0,r1,r2/angbracketright3. Thus
+we can think of G3as a crystallographic group with ﬁnite invariant lattice Z3
+3and octahedral
+point group /angbracketleftr0,r1,r2/angbracketright3/similarequalO(3,3,0)/similarequalB3. Referring to [2], it is now easy to see why G3is
+isomorphic to the full automorphism group of the Gray graph (see also [25]).
+We now consider the special prime p=2. Of the several essentially distinct basic systems
+admitted by G, only that in which the rescaled base vectors have squared lengths 1, 1, 2, 4
+actually yields a tail-triangle C-group. We ﬁnd that G2has order 96 and, a little unexpectedly,
+thatr1s2has period 4. The semiregular polytope S=S(G2)has two sets of 4 hemioctahedral
+facets distributed among a meager 3 vertices. Each vertex-ﬁgure is a toroid {4,4}(2,0). Since G2
+does admit the automorphism mentioned in Proposition 4.8(a), Sis in fact regular; and since
+the facets are combinatorially ﬂat, Smust coincide with the (ﬂat) universal regular polytope
+{{3,4}3,{4,4}(2,0)}(see [19, 4E5]) denoted {3,4,4}∗192ain the Census [12]. It is clear from
+our comment in Example 4.11 that G2is isomorphic to the automorphism group Γ(Thh)=
+/angbracketleftρ0,ρ1,ρ2,ρ3/angbracketrightfor the tomotope. This isomorphism is induced by mapping (r0,r1,r2,s2)to
+(ρ0,ρ1,ρ3,ρ0ρ2), so the geometrical connection between SandThhis a little obscure.
+The diagram in (20) can be viewed in three ways as a tail-triangle diagram for the same
+underlying group G(orGp). The corresponding intersection conditions (21) involve the same 3-
+generator subgroups in each case. Thus Gpis a tail-triangle C-group in three different ways, and
+2790 B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791
+hence can give rise to three mutually non-isomorphic semiregular 4-polytopes. We have already
+discussed the semiregular 4-polytope Sassociated with the original diagram.
+Now when the diagram is taken in the form
+tt
+tt
+
+QQQQ4
+∞(23)
+the corresponding semiregular 4-polytope S/primeagain has two kinds of facets PandQ, occurring
+alternately around every edge of S/prime.N o w Pis the 3-cube {4,3}; andQis the regular map of
+type{4,p}of [21, §5.9], with group Gp=O1(3,p,0)ifp≡±1 mod 8, and Gp=O(3,p,0)
+otherwise. When p/greaterorequalslant5 the automorphism group of S/primeis again the group in (22). However, when
+p=3 the 4-polytope S/primeis regular and is isomorphic to the regular 3-toroid {4,3,4}(3,3,0)(see
+[19, 6D]).
+Finally, from
+tt
+tt
+
+QQQQ∞4
+(24)
+we obtain a semiregular 4-polytope S/prime/primewhose facets Pof type {p,4}are the duals of those of
+type{4,p}ofS/prime, and whose facets Qof type {p,3}are the duals of those of type {3,p}ofS.
+When p=3, we can view S/prime/primeas a semiregular tessellation of the 3-torus by 54 tetrahedra and
+27 octahedra. This 3-torus can be obtained by identifying opposite faces of the parallelepiped
+spanned by vectors (3,3,0),(3,0,3)and(0,3,3)(see Fig. 1). When p/greaterorequalslant5, the automorphism
+group of S/prime/primeis again the group in (22).
+The ﬁnite semiregular polytopes S,S/primeandS/prime/primederived from the diagrams for Gpin (20),
+(23) and (24) are quotients of the inﬁnite semiregular polytopes associated with the inﬁnite Cox-eter groups with these diagrams as Coxeter diagrams. In fact, the obvious group epimorphisms
+mapping generators to generators determine coverings between the inﬁnite polytopes and the
+corresponding ﬁnite polytopes (see [19, 2D]).
+Acknowledgments
+We are grateful to Gordon Williams for help with the ﬁgures. We also want to thank the referee
+for various useful comments.
+References
+[1] N. Bourbaki, Elements of Mathematics, Algebra I, Hermann/Addison–Wesley, Paris/Reading, MA, 1974.
+[2] I.Z. Bouwer, On edge but not vertex transitive regular graphs, J. Combin. Theory Ser. B 12 (1972) 32–40.
+[3] L. Chen, R. Moody, J. Patera, Non-crystallographic root systems, in: Quasicrystals and Discrete Geometry, in:
+Fields Inst. Monogr., vol. 10, AMS, Providence, 1998, pp. 135–178.
+[4] H.S.M. Coxeter, Wythoff’s construction for uniform polytopes, Proc. Lond. Math. Soc. (2) 38 (1935) 327–339.
+[5] H.S.M. Coxeter, Regular Polytopes, third ed., Dover, New York, 1973.
+B. Monson, E. Schulte / Advances in Mathematics 229 (2012) 2767–2791 2791
+[6] H.S.M. Coxeter, Regular and semi-regular polytopes, I, Math. Z. 46 (1940) 380–407;
+H.S.M. Coxeter, Regular and semi-regular polytopes, I, in: F.A. Sherk, P. McMullen, A.C. Thompson, A.I. Weiss
+(Eds.), Kaleidoscopes: Selected Writings of H.S.M. Coxeter, Wiley–Interscience, New York, 1995, pp. 251–278.
+[7] H.S.M. Coxeter, Regular and semi-regular polytopes, II, Math. Z. 188 (1985) 559–591;
+H.S.M. Coxeter, Regular and semi-regular polytopes, II, in: F.A. Sherk, P. McMullen, A.C. Thompson, A.I. Weiss
+(Eds.), Kaleidoscopes: Selected Writings of H.S.M. Coxeter, Wiley–Interscience, New York, 1995, pp. 279–311.
+[8] H.S.M. Coxeter, Regular and semi-regular polytopes, III, Math. Z. 200 (1988) 3–45;
+H.S.M. Coxeter, Regular and semi-regular polytopes, III, in: F.A. Sherk, P. McMullen, A.C. Thompson, A.I. Weiss
+(Eds.), Kaleidoscopes: Selected Writings of H.S.M. Coxeter, Wiley–Interscience, New York, 1995, pp. 313–355.
+[9] C.W. Curtis, I. Reiner, Representation Theory of Finite Groups and Associative Algebras, Wiley–Interscience,
+New York, 1962.
+[10] The GAP Group, GAP – Groups, algorithms, and programming, Version 4.3, http://www.gap-system.org+, 2002.
+[11] M.I. Hartley, All polytopes are quotients, and isomorphic polytopes are quotients by conjugate subgroups, Discrete
+Comput. Geom. 21 (1999) 289–298.
+[12] M.I. Hartley, The atlas of small regular polytopes, http://www.abstract-polytopes.com/atlas/+.
+[13] I. Hubard, Two-orbit polyhedra from groups, European J. Combin. 31 (2010) 943–960.
+[14] I. Hubard, E. Schulte, Two-orbit polytopes, in preparation.
+[15] J.E. Humphreys, Reﬂection Groups and Coxeter Groups, Cambridge Univ. Press, Cambridge, 1990.
+[16] N. Johnson, Uniform Polytopes, book manuscript.
+[17] G. Jones, D. Singerman, Maps, hypermaps and triangle groups, in: The Grothendieck Theory of Dessins d’En-
+fants, Luminy, 1993, in: London Math. Soc. Lecture Note Ser., vol. 200, Cambridge Univ. Press, Cambridge, 1994,
+pp. 115–145.
+[18] H. Martini, A hierarchical classiﬁcation of Euclidean polytopes with regularity properties, in: Polytopes: Abstract,
+Convex and Computational, in: NATO ASI Ser., vol. 440, Kluwer, Dordrecht, 1994, pp. 71–96.
+[19] P. McMullen, E. Schulte, Abstract Regular Polytopes, Encyclopedia Math. Appl., vol. 92, Cambridge Univ. Press,
+Cambridge, 2002.
+[20] B. Monson, Simplicial quadratic forms, Canad. J. Math. 35 (1983) 101–116.
+[21] B. Monson, E. Schulte, Reﬂection groups and polytopes over ﬁnite ﬁelds, I, Adv. in Appl. Math. 33 (2004) 290–317.
+[22] B. Monson, E. Schulte, Reﬂection groups and polytopes over ﬁnite ﬁelds, II, Adv. in Appl. Math. 38 (2007) 327–
+356.
+[23] B. Monson, E. Schulte, Reﬂection groups and polytopes over ﬁnite ﬁelds, III, Adv. in Appl. Math. 41 (2008) 76–94.
+[24] B. Monson, E. Schulte, Semiregular polytopes from reﬂection groups over ﬁnite ﬁelds, in preparation.
+[25] B. Monson, T. Pisanski, E. Schulte, A.I. Weiss, Semisymmetric graphs from polytopes, J. Combin. Theory
+Ser. A 114 (2007) 421–435.
+[26] B. Monson, D. Pellicer, G. Williams, The tomotope, submitted for publication.
+[27] R. Moody, J. Patera, V oronoi domains and dual cells in the generalized kaleidoscope with applications to root and
+weight lattices, Canad. J. Math. 47 (1995) 573–605.

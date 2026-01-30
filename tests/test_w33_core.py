@@ -1,7 +1,8 @@
 import numpy as np
 import pytest
 
-from THEORY_PART_CLXVII_FINAL_SYNTHESIS import build_witting_states, is_orthogonal
+from THEORY_PART_CLXVII_FINAL_SYNTHESIS import (build_witting_states,
+                                                is_orthogonal)
 
 
 def test_build_witting_states_shape():

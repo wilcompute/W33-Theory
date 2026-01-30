@@ -3,8 +3,9 @@
 Get detailed info about the 81-dimensional irrep V_23.
 """
 
-from sage.all import *
 import json
+
+from sage.all import *
 
 # Load W33 incidence graph
 with open("claude_workspace/data/w33_sage_incidence_h1.json") as f:
@@ -20,7 +21,7 @@ for gen in generators_data:
 
 n = 80
 S = SymmetricGroup(n)
-perms = [S(Permutation([p+1 for p in perm])) for perm in perm_gens]
+perms = [S(Permutation([p + 1 for p in perm])) for perm in perm_gens]
 G = PermutationGroup(perms)
 
 gap_G = libgap(G)
@@ -89,5 +90,7 @@ for i in range(len(irreps)):
             print(f"V_{i}({dim_i})", end="")
         first = False
 print()
-print(f"Total: {sum(int(char_table.ScalarProduct(chi_squared, irreps[i])) * int(irreps[i][0]) for i in range(len(irreps)))}")
+print(
+    f"Total: {sum(int(char_table.ScalarProduct(chi_squared, irreps[i])) * int(irreps[i][0]) for i in range(len(irreps)))}"
+)
 print(f"Expected: 81² = {81*81}")

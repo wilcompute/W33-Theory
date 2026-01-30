@@ -15,4 +15,3 @@
 ## Triangle (19, 20, 21)
 - degree 1: solvable=True formula=2*u2 + u1
 - degree 2: solvable=True formula=2*u2 + u1
-

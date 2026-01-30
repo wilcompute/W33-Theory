@@ -9,10 +9,11 @@ The alpha formula: α⁻¹ = k² - 2μ + 1 + v/1111
 WHY 1111? What's the next term? Can we derive 1111 from first principles?
 """
 
-import numpy as np
 import json
 from decimal import Decimal, getcontext
 from fractions import Fraction
+
+import numpy as np
 
 getcontext().prec = 100
 
@@ -24,10 +25,10 @@ print("=" * 70)
 # W33 PARAMETERS
 # =============================================================================
 
-v = 40      # vertices
-k = 12      # regularity
-λ = 2       # edge parameter
-μ = 4       # non-edge parameter
+v = 40  # vertices
+k = 12  # regularity
+λ = 2  # edge parameter
+μ = 4  # non-edge parameter
 
 e1, e2, e3 = 12, 2, -4
 m1, m2, m3 = 1, 24, 15
@@ -40,18 +41,18 @@ print("SECTION 1: THE MYSTERY OF 1111")
 print("=" * 70)
 
 alpha_exp = Decimal("137.035999084")
-base = k**2 - 2*μ + 1  # = 137
+base = k**2 - 2 * μ + 1  # = 137
 correction_needed = alpha_exp - base
 
 print(f"""
 THE ALPHA FORMULA:
 
   α⁻¹ = k² - 2μ + 1 + v/1111
-  
+
   Base term: k² - 2μ + 1 = 144 - 8 + 1 = 137
-  
+
   Correction needed: {correction_needed}
-  
+
   If correction = v/D, then D = v/correction = 40/{correction_needed}
 """)
 
@@ -81,7 +82,7 @@ FACTORIZATION:
 REPRESENTATIONS:
   1111 = 1 + 10 + 100 + 1000 = (10⁴ - 1)/9
   1111 = repunit in base 10 (four 1's)
-  
+
 BINARY: 1111 = 10001010111₂
   Not especially nice in binary...
 
@@ -100,7 +101,7 @@ combos = [
     ("k⁴ / something", k**4),  # = 20736
     ("27 × 41 + 4", 27 * 41 + 4),  # = 1111
     ("v × 27 + 31", v * 27 + 31),  # = 1111!
-    ("v × (v-13) + 31", v * (v-13) + 31),  # = 40 × 27 + 31 = 1111
+    ("v × (v-13) + 31", v * (v - 13) + 31),  # = 40 × 27 + 31 = 1111
 ]
 
 for name, value in combos:
@@ -111,10 +112,10 @@ DISCOVERY!
 
   1111 = v × 27 + 31 = v × 3³ + 31
   1111 = v × (v - 13) + 31
-  
+
   Also: 31 = 2⁵ - 1 (Mersenne prime!)
         27 = 3³
-        
+
   So: 1111 = 40 × 27 + 31 = 40 × 3³ + (2⁵ - 1)
 """)
 
@@ -142,13 +143,13 @@ Can we go deeper?
 ALTERNATIVE DECOMPOSITION:
 
   1111 = 11 × 101
-  
+
   11 = e1 - 1 = k - 1 (one less than regularity)
   101 = 100 + 1 = 10² + 1
-  
+
   Or: 101 = v + k + m1 + m2 + m3 - (something)
        Let's check: 40 + 12 + 1 + 24 + 15 = 92 (not 101)
-       
+
   101 = 3⁴ + 3² + 3¹ + 1 = 81 + 9 + 3 + 1 = 94 (not quite)
   101 = 2⁶ + 2⁵ + 2² + 1 = 64 + 32 + 4 + 1 = 101 ✓
 
@@ -173,19 +174,19 @@ Factorization: 51840 = 2⁷ × 3⁴ × 5
 Let's look for connections to 1111:
 
   51840 / 1111 = {51840/1111:.6f}
-  
+
   That's not clean...
 
   51840 / v = {51840/v} = 1296 = 6⁴ = 2⁴ × 3⁴
-  
+
   1296 / 1111 = {1296/1111:.6f}
-  
+
   Not obviously related...
-  
+
   But wait:
-  
+
   51840 = 1111 × 46 + 694
-  
+
   And: 46 = v + 6 = v + 2λ + μ/2
        694 = ?
 """)
@@ -232,7 +233,7 @@ print("=" * 70)
 
 # Current precision
 alpha_exp_precise = Decimal("137.035999084")
-alpha_W33_order1 = Decimal(137) + Decimal(40)/Decimal(1111)
+alpha_W33_order1 = Decimal(137) + Decimal(40) / Decimal(1111)
 
 diff = alpha_exp_precise - alpha_W33_order1
 
@@ -241,9 +242,9 @@ CURRENT PRECISION:
 
   α⁻¹ (experimental) = {alpha_exp_precise}
   α⁻¹ (W33, order 1) = {alpha_W33_order1}
-  
+
   Difference = {diff}
-  
+
   Relative error = {float(abs(diff)/alpha_exp_precise) * 1e9:.1f} ppb
 
 To match experiment, we need a second-order correction!
@@ -254,9 +255,9 @@ print(f"""
 SECOND ORDER CORRECTION:
 
   α⁻¹ = 137 + 40/1111 + δ₂
-  
+
   δ₂ = {diff}
-  
+
 This is negative! The 40/1111 term slightly overshoots.
 """)
 
@@ -280,24 +281,24 @@ print(f"""
 BEST MATCH:
 
   δ₂ = -v/1111² = -{v/1111**2:.10f}
-  
+
   Target: {delta2:.10f}
-  
+
   Ratio: {delta2 / (-v/1111**2):.3f}
 
 This suggests the FULL FORMULA might be:
 
   α⁻¹ = 137 + 40/1111 - 40/1111² + 40/1111³ - ...
-  
+
       = 137 + 40 × Σₙ (-1)ⁿ⁺¹ / 1111ⁿ
-      
+
       = 137 + 40 × (1/1111) / (1 + 1/1111)
-      
+
       = 137 + 40/1112
 """)
 
 # Check this
-test_formula = Decimal(137) + Decimal(40)/Decimal(1112)
+test_formula = Decimal(137) + Decimal(40) / Decimal(1112)
 print(f"""
 Testing: α⁻¹ = 137 + 40/1112 = {test_formula}
 
@@ -343,18 +344,18 @@ Interpretation:
 ALTERNATIVE: From the graph structure
 
   1111 = 11 × 101
-  
+
   11 = (k - 1) = regularity minus 1
-  101 = ? 
+  101 = ?
 
 Let's check: Is there a natural way to get 101?
 
   k² - m2 - 1 = 144 - 24 - 1 = 119 (no)
   v + k + m1 + m2 + m3 = 92 (no)
   v + m2 + m3 = 40 + 24 + 15 = 79 (no)
-  
+
   101 = 10² + 1 = (e1 - 2)² + 1 = 10² + 1 ✓
-  
+
   So: 101 = (k - 2)² + 1 = (e1 - λ)² + 1
 
 THEREFORE:
@@ -369,7 +370,7 @@ This is PURELY from W33 parameters!
 """)
 
 # Verify
-derived_1111 = (k - 1) * ((k - λ)**2 + 1)
+derived_1111 = (k - 1) * ((k - λ) ** 2 + 1)
 print(f"Verification: (k-1) × ((k-λ)² + 1) = {derived_1111}")
 
 # =============================================================================
@@ -390,7 +391,7 @@ Let's verify:
   (k-1) = 11
   (k-λ)² + 1 = 10² + 1 = 101
   Denominator = 11 × 101 = 1111
-  
+
   α⁻¹ = 137 + 40/1111 = {137 + 40/1111:.10f}
 
 EVERYTHING comes from the graph parameters:
@@ -404,7 +405,7 @@ No mysterious constants - just W33!
 # =============================================================================
 
 print("\n" + "=" * 70)
-print("SECTION 8: RADIATIVE CORRECTIONS")  
+print("SECTION 8: RADIATIVE CORRECTIONS")
 print("=" * 70)
 
 print(f"""
@@ -422,11 +423,11 @@ The W33 formula might be encoding these corrections!
 The ratio 40/1111 ≈ 0.036 is suspiciously close to:
 
   α/π ≈ 137⁻¹/π ≈ 0.00232
-  
+
   But 40/1111 = 0.0360... which is larger.
 
   Could represent: α/π × 15 ≈ 0.035 (close!)
-  
+
   Where 15 = m₃, the third multiplicity!
 """)
 
@@ -444,20 +445,20 @@ Do other W33 predictions need similar corrections?
 WEAK MIXING ANGLE:
 
   sin²θ_W = v/(v + k² + m₁) = 40/173 = 0.23121...
-  
+
   Experimental: 0.23122 ± 0.00004
-  
+
   Difference: ~10⁻⁵
-  
+
   This might need correction: v/(v + k² + m₁ - ε)
   where ε is small.
 
 MASS RATIOS:
 
   m_t/m_b = v + λ = 42
-  
+
   Experimental: 41.5
-  
+
   Correction needed: (v + λ) × (1 - δ) where δ ≈ 0.012
 
 PATTERN:
@@ -482,23 +483,20 @@ results = {
         "k": k,
         "lambda": λ,
         "result": derived_1111,
-        "components": {
-            "factor1": k - 1,
-            "factor2": (k - λ)**2 + 1
-        }
+        "components": {"factor1": k - 1, "factor2": (k - λ) ** 2 + 1},
     },
     "alpha_formula": {
         "complete": "k² - 2μ + 1 + v/[(k-1)×((k-λ)²+1)]",
-        "base": k**2 - 2*μ + 1,
+        "base": k**2 - 2 * μ + 1,
         "denominator": derived_1111,
-        "result": float(137 + v/1111)
+        "result": float(137 + v / 1111),
     },
     "alternative_derivations": [
         "1111 = v × 3³ + 31 = 40 × 27 + 31",
         "1111 = 11 × 101 (prime factorization)",
-        "1111 = (10⁴ - 1)/9 (repunit)"
+        "1111 = (10⁴ - 1)/9 (repunit)",
     ],
-    "second_order": float(diff)
+    "second_order": float(diff),
 }
 
 with open("PART_LXXXII_corrections.json", "w") as f:
@@ -526,7 +524,7 @@ THE COMPLETE ALPHA FORMULA:
   α⁻¹ = (k² - 2μ + 1) + v / [(k-1) × ((k-λ)² + 1)]
 
       = 137 + 40/1111
-      
+
       = 137.036003600360...
 
 Every term comes from the W33 graph structure!

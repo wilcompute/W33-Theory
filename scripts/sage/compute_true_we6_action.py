@@ -3,10 +3,12 @@
 
 Also attempts to build the even subgroup (order 25920) and export its generators.
 """
+
 from __future__ import annotations
 
 import json
-from sage.all import RootSystem, WeylGroup, Permutation, PermutationGroup
+
+from sage.all import Permutation, PermutationGroup, RootSystem, WeylGroup
 
 
 def vec_key_exact(v):
@@ -25,14 +27,14 @@ def vec_key_int2(v):
 
 
 def main():
-    R8 = RootSystem(['E', 8]).ambient_space()
+    R8 = RootSystem(["E", 8]).ambient_space()
     roots = list(R8.roots())
     root_keys = [vec_key_exact(r) for r in roots]
     if len(root_keys) != len(set(root_keys)):
         raise RuntimeError("Duplicate root keys detected")
     root_to_idx = {k: i for i, k in enumerate(root_keys)}
 
-    W8 = WeylGroup(['E', 8])
+    W8 = WeylGroup(["E", 8])
     s = W8.simple_reflections()
 
     subset = [1, 2, 3, 4, 5, 6]
@@ -82,11 +84,11 @@ def main():
         "subset": subset,
     }
 
-    with open('artifacts/we6_true_action.json', 'w', encoding='utf-8') as f:
-        json.dump(out, f, indent=2)
+    with open("artifacts/we6_true_action.json", "w", encoding="utf-8") as f:
+        json.dump(out, f, indent=2, default=str)
 
     print("Wrote artifacts/we6_true_action.json")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

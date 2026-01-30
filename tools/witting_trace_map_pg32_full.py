@@ -9,6 +9,7 @@ Outputs:
 - artifacts/witting_trace_map_pg32_full.json
 - artifacts/witting_trace_map_pg32_full.md
 """
+
 from __future__ import annotations
 
 import json
@@ -22,8 +23,10 @@ OUT_MD = ROOT / "artifacts" / "witting_trace_map_pg32_full.md"
 # GF(4) representation: 0,1,2,3 correspond to 0,1,ω,ω^2
 # with ω^2 = ω + 1, and Tr(x)=x+x^2
 
+
 def gf4_add(a: int, b: int) -> int:
     return a ^ b
+
 
 def gf4_mul(a: int, b: int) -> int:
     if a == 0 or b == 0:
@@ -37,18 +40,23 @@ def gf4_mul(a: int, b: int) -> int:
     c1 = (c1 + c2) % 2
     return (c1 << 1) | c0
 
+
 def gf4_square(a: int) -> int:
     return gf4_mul(a, a)
 
+
 def gf4_trace(a: int) -> int:
     return gf4_add(a, gf4_square(a)) & 1
+
 
 omega = 2
 omega2 = 3
 omega_powers = [1, omega, omega2]
 
+
 def trace_map(state):
     return tuple(gf4_trace(x) for x in state)
+
 
 def build_vertices():
     vertices = []
@@ -65,7 +73,9 @@ def build_vertices():
         ]
         for v in base:
             for s in [1, -1]:
-                vertices.append(v)  # sign doesn't affect GF(4) value, but counts multiplicity
+                vertices.append(
+                    v
+                )  # sign doesn't affect GF(4) value, but counts multiplicity
     # Type B: (±i√3 ω^λ, 0, 0, 0) etc -> treated as single nonzero coordinate ω^λ
     for lam in range(3):
         w_l = omega_powers[lam]
@@ -75,6 +85,7 @@ def build_vertices():
             for s in [1, -1]:
                 vertices.append(tuple(v))
     return vertices
+
 
 def main():
     vertices = build_vertices()
@@ -108,6 +119,7 @@ def main():
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"Wrote {OUT_JSON}")
     print(f"Wrote {OUT_MD}")
+
 
 if __name__ == "__main__":
     main()

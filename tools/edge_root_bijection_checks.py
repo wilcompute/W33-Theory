@@ -9,6 +9,7 @@ Uses:
 Outputs:
 - artifacts/edge_root_bijection_stats.json
 """
+
 from __future__ import annotations
 
 import json
@@ -37,11 +38,11 @@ def build_w33_edges():
             proj_points.append(v)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     edges = []
     for i in range(40):
-        for j in range(i+1, 40):
+        for j in range(i + 1, 40):
             if omega(proj_points[i], proj_points[j]) == 0:
                 edges.append((i, j))
     return edges
@@ -50,14 +51,14 @@ def build_w33_edges():
 def cartan_e8():
     # E8 Cartan matrix in simple-root basis
     return [
-        [ 2, -1,  0,  0,  0,  0,  0,  0],
-        [-1,  2, -1,  0,  0,  0,  0,  0],
-        [ 0, -1,  2, -1,  0,  0,  0, -1],
-        [ 0,  0, -1,  2, -1,  0,  0,  0],
-        [ 0,  0,  0, -1,  2, -1,  0,  0],
-        [ 0,  0,  0,  0, -1,  2, -1,  0],
-        [ 0,  0,  0,  0,  0, -1,  2,  0],
-        [ 0,  0, -1,  0,  0,  0,  0,  2],
+        [2, -1, 0, 0, 0, 0, 0, 0],
+        [-1, 2, -1, 0, 0, 0, 0, 0],
+        [0, -1, 2, -1, 0, 0, 0, -1],
+        [0, 0, -1, 2, -1, 0, 0, 0],
+        [0, 0, 0, -1, 2, -1, 0, 0],
+        [0, 0, 0, 0, -1, 2, -1, 0],
+        [0, 0, 0, 0, 0, -1, 2, 0],
+        [0, 0, -1, 0, 0, 0, 0, 2],
     ]
 
 

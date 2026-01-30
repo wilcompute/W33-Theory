@@ -8,8 +8,9 @@ This is the deepest question: the structure we perceive (3+1 dimensions)
 must somehow emerge from the fundamental graph structure.
 """
 
-import numpy as np
 import json
+
+import numpy as np
 from scipy.linalg import eigvalsh
 
 print("=" * 70)
@@ -20,10 +21,10 @@ print("=" * 70)
 # W33 PARAMETERS
 # =============================================================================
 
-v = 40      # vertices
-k = 12      # regularity
-λ = 2       # edge parameter
-μ = 4       # non-edge parameter
+v = 40  # vertices
+k = 12  # regularity
+λ = 2  # edge parameter
+μ = 4  # non-edge parameter
 
 e1, e2, e3 = 12, 2, -4
 m1, m2, m3 = 1, 24, 15
@@ -42,7 +43,7 @@ How does 4 emerge from 40?
 
 HINT: 40 = 4 × 10 = 4 × (something)
       40 = 4 + 36 = spacetime + internal
-      
+
 String theory: 10 = 4 + 6 (spacetime + Calabi-Yau)
 W33 theory:    40 = 4 + 36 (spacetime + ???)
 
@@ -94,7 +95,7 @@ The W33 eigenvalues are: 12, 2, -4
 
 Notice:
   - ONE positive eigenvalue with multiplicity 1 (e₁ = 12)
-  - One positive with multiplicity 24 (e₂ = 2)  
+  - One positive with multiplicity 24 (e₂ = 2)
   - ONE NEGATIVE eigenvalue with multiplicity 15 (e₃ = -4)
 
 The negative eigenvalue might encode TIMELIKE directions!
@@ -110,7 +111,7 @@ That's not (1,3)... but wait!
 In PROJECTIVE terms:
   The m₃ = 15 eigenspace decomposes further
   15 = 1 + 14 under some subgroup
-  
+
   Could give: 1 time + 3 space + more
 """)
 
@@ -145,7 +146,7 @@ Mass² ∝ 1/R² where R is compactification radius.
 
 If R ~ L_Planck/3¹⁸ (from GUT scale):
   KK masses ~ 10¹⁵ GeV (too heavy to observe)
-  
+
 Only zero modes (n=0) are light - these are SM particles!
 """)
 
@@ -198,7 +199,7 @@ METRIC STRUCTURE:
 In W33:
   - k = 12 neighbors at distance 1
   - v - k - 1 = 27 vertices at distance 2
-  
+
 The "volume" at distance d:
   d=0: 1 vertex
   d=1: 12 vertices
@@ -234,10 +235,10 @@ NUMBER OF TIME STEPS:
 
 If the universe "ticks" through automorphisms:
   Total states = 51840 before repeating
-  
+
   If Planck time t_P = 5.4 × 10⁻⁴⁴ s per tick:
     Cycle time = 51840 × t_P ≈ 2.8 × 10⁻³⁹ s
-    
+
 This is incredibly fast! The "cosmic clock" ticks
 at frequencies ~ 10³⁹ Hz.
 """)
@@ -359,7 +360,7 @@ CONJECTURE:
 
 Time dimension:
   Always 1 (comes from the unique trivial eigenspace m₁=1)
-  
+
 RESULT: Spacetime = (1 time) + (3 space) = 4 dimensions
         Internal = 40 - 4 = 36 dimensions (compactified)
 """)
@@ -423,7 +424,7 @@ results = {
         "total": 40,
         "spacetime": 4,
         "internal": 36,
-        "formula": "40 = 4 + 36 = 1 + 3 + 36"
+        "formula": "40 = 4 + 36 = 1 + 3 + 36",
     },
     "why_3_plus_1": {
         "time": "m₁ = 1 (unique trivial eigenspace)",
@@ -434,9 +435,9 @@ results = {
         "Eigenvalue decomposition",
         "Compactification of 36 dimensions",
         "Continuum limit",
-        "Lorentz symmetry emerges"
+        "Lorentz symmetry emerges",
     ],
-    "prediction": "Tiny Lorentz violations at Planck energies"
+    "prediction": "Tiny Lorentz violations at Planck energies",
 }
 
 with open("PART_LXXXVII_spacetime.json", "w") as f:

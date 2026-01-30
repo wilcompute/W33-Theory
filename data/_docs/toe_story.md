@@ -136,5 +136,3 @@ The dataset already encodes a chain:
   tomotope -> Z3 hyperplane -> PG(3,2) shadow -> symmetry closure -> 2T transport -> Z2 flux -> W33 response.
 Next steps could include a single reproducible pipeline, or a narrative paper draft that formalizes
 the coupling and the measurement models.
-
-

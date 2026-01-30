@@ -3,7 +3,7 @@
 THEORY OF EVERYTHING - PART XVIII: THE QUANTUM CARDS AND W33
 ==============================================================
 
-Deep dive into the Vlasov paper "Scheme of quantum communications 
+Deep dive into the Vlasov paper "Scheme of quantum communications
 based on Witting polytope" - the 40 QUANTUM CARDS = W33's 40 POINTS!
 
 This connects:
@@ -14,9 +14,10 @@ This connects:
     • Quantum key distribution protocols
 """
 
-import numpy as np
-from fractions import Fraction
 import math
+from fractions import Fraction
+
+import numpy as np
 
 print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -104,12 +105,12 @@ MATHEMATICAL STRUCTURE:
     Number of states:         40
     States per "basis":       4
     Number of "bases":        10 (since 40/4 = 10)
-    
+
 Compare to standard MUBs in dimension 4:
     • Maximum 5 MUBs (mutually unbiased bases)
     • Each MUB has 4 states
     • Total: 5 × 4 = 20 states
-    
+
 The Witting configuration DOUBLES this:
     • 10 "contexts" of 4 orthogonal states
     • Total: 10 × 4 = 40 states
@@ -190,7 +191,7 @@ THE QUANTUM CHAMELEON:
 ═════════════════════════════════════════════════════════════════════════════
 
 The Witting polytope appears differently in different spaces:
-    
+
     Space       Appearance              Proof
     ─────────────────────────────────────────────────────────
     CP³         40 points (Penrose)     Kochen-Specker, Bell
@@ -239,7 +240,7 @@ The Standard Model emerges from W33 because:
    • Contextuality requires local gauge symmetry
    • The automorphism group W(E6) IS the gauge group!
 
-2. NON-LOCALITY FORCES CONNECTIONS  
+2. NON-LOCALITY FORCES CONNECTIONS
    • The 40 points prove Bell (non-local correlations)
    • Non-locality requires fiber bundle structure
    • The fibers ARE the gauge bosons!

@@ -14,17 +14,20 @@ This means W33 is ASPHERICAL (homotopy equivalent to a wedge of 81 circles)!
 Let's verify this and explore the implications.
 """
 
-from sage.all import *
+from itertools import combinations, product
+
 import numpy as np
-from itertools import product, combinations
+from sage.all import *
 
 print("=" * 70)
 print("★★★ W33 IS ASPHERICAL: π₁ = F₈₁ ★★★")
 print("=" * 70)
 
+
 # Build the symplectic polar space W(3,3)
 def symplectic_form(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
+
 
 def normalize(v):
     for i in range(4):
@@ -32,6 +35,7 @@ def normalize(v):
             inv = pow(v[i], -1, 3)
             return tuple((inv * x) % 3 for x in v)
     return None
+
 
 proj_points = set()
 for v in product(range(3), repeat=4):
@@ -53,9 +57,11 @@ for i, p1 in enumerate(proj_points):
 # Find lines
 lines_set = set()
 for i in range(n):
-    for j in range(i+1, n):
+    for j in range(i + 1, n):
         if adj[i][j]:
-            common = [k for k in range(n) if k != i and k != j and adj[i][k] and adj[j][k]]
+            common = [
+                k for k in range(n) if k != i and k != j and adj[i][k] and adj[j][k]
+            ]
             for k, l in combinations(common, 2):
                 if adj[k][l]:
                     lines_set.add(tuple(sorted([i, j, k, l])))
@@ -89,7 +95,7 @@ print("=" * 70)
 
 print("""
 1. ASPHERICITY
-   
+
    Since π₁(W33) = F₈₁ (free), W33 is aspherical.
    This means:
      • π_n(W33) = 0 for all n ≥ 2
@@ -97,26 +103,26 @@ print("""
      • The universal cover is contractible (a tree)
 
 2. HOMOLOGICAL DIMENSION
-   
+
    H_n(W33; Z) = 0 for n ≥ 2  ✓ (we verified this)
    H_1(W33; Z) = Z^81 = F₈₁^ab  ✓
-   
+
    So the homology matches what we expect from a free group.
 
 3. THE STEINBERG REPRESENTATION REVISITED
-   
+
    The action of Aut(W33) = O(5,3):C₂ on:
      • H₁(W33) = Z^81 = Steinberg representation
      • π₁(W33) = F₈₁
-   
+
    The group action on the free group F₈₁ abelianizes to
    the Steinberg representation on Z^81!
 
 4. THE UNIVERSAL COVER
-   
+
    The universal cover of W33 is a TREE!
    It's the Bass-Serre tree of the free group.
-   
+
    Since |π₁| = ∞, the universal cover is infinite.
    Each vertex has degree... let's compute.
 """)
@@ -162,15 +168,15 @@ vertices = list(range(n))
 for v1 in vertices:
     neighbors_v1 = set(j for j in vertices if adj[v1][j])
     non_neighbors_v1 = set(j for j in vertices if j != v1 and not adj[v1][j])
-    
+
     for v3 in non_neighbors_v1:
         if v3 <= v1:  # avoid double counting
             continue
         neighbors_v3 = set(j for j in vertices if adj[v3][j])
-        
+
         # Common neighbors of v1 and v3
         common = neighbors_v1 & neighbors_v3
-        
+
         # For an induced 4-cycle: need v2, v4 in common with v2≁v4
         for v2 in common:
             for v4 in common:
@@ -194,18 +200,18 @@ Sp(4,3) is "chordal" - every cycle has a chord!
 else:
     print(f"\nHmm, there ARE induced 4-cycles. Let me think about this...")
     print("The asphericity must come from another mechanism.")
-    
+
     # Actually, the key theorem is different:
-    # A FLAG COMPLEX (= clique complex) is aspherical iff 
+    # A FLAG COMPLEX (= clique complex) is aspherical iff
     # the underlying graph is chordal (no induced cycles ≥ 4)
-    
+
     # But Sp(4,3) has induced 4-cycles... so why is π₁ free?
-    
+
     # Wait - maybe Sage's fundamental_group gave a free presentation
     # but the group might still have more relations?
-    
+
     # Let me check more carefully
-    
+
 print("\n" + "=" * 70)
 print("CHECKING SAGE'S π₁ COMPUTATION")
 print("=" * 70)
@@ -249,7 +255,7 @@ print("\n" + "=" * 70)
 print("CLIQUE COMPLEX PROPERTIES")
 print("=" * 70)
 
-edges = [(i, j) for i in range(n) for j in range(i+1, n) if adj[i][j]]
+edges = [(i, j) for i in range(n) for j in range(i + 1, n) if adj[i][j]]
 triangles = []
 for line in lines:
     for triple in combinations(line, 3):
@@ -279,7 +285,9 @@ H1_K2 = K2.homology(1)
 print(f"H₁(2-skeleton) = {H1_K2}")
 
 pi1_K2 = K2.fundamental_group()
-print(f"π₁(2-skeleton): {pi1_K2.ngens()} generators, {len(pi1_K2.relations())} relations")
+print(
+    f"π₁(2-skeleton): {pi1_K2.ngens()} generators, {len(pi1_K2.relations())} relations"
+)
 
 print("\n" + "=" * 70)
 print("FINAL UNDERSTANDING")

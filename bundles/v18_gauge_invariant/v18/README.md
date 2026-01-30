@@ -15,7 +15,7 @@ and selecting the connection that maximizes the dependence between:
 
 Counts (rows=parity 0/1, cols=class):
 s3_class            3-cycle    id  transposition
-z2_triangle_parity                              
+z2_triangle_parity
 0                       697  1187           1236
 1                       573   477           1110
 

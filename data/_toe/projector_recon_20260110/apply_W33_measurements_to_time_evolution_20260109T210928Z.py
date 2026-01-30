@@ -14,46 +14,51 @@ Notes:
   rather than a single projective measurement.
 """
 
+from datetime import datetime
+
 import numpy as np
 import pandas as pd
 import scipy.sparse as sp
 import scipy.sparse.linalg as spla
-from datetime import datetime
 
-BASE="/mnt/data"
+BASE = "/mnt/data"
+
 
 def load_csr_npz(path: str) -> sp.csr_matrix:
     z = np.load(path, allow_pickle=True)
     shape = tuple(z["shape"])
     return sp.csr_matrix((z["data"], z["indices"], z["indptr"]), shape=shape)
 
+
 def evolve_and_measure(
     H_path: str = f"{BASE}/TOE_H_total_transport_plus_lambda_coin_59x24_lam0.5_20260109T205353Z.npz",
     masks_path: str = f"{BASE}/TOE_W33_clock_projector_masks_20260109T210928Z.npz",
-    times = (0.0, 0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 2.5, 3.0),
+    times=(0.0, 0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 2.5, 3.0),
     node0: int = 0,
     clock0: int = 0,
 ):
     H = load_csr_npz(H_path)
     data = np.load(masks_path, allow_pickle=True)
-    w33_masks = data["w33_masks"].astype(np.float64)          # (40,24)
+    w33_masks = data["w33_masks"].astype(np.float64)  # (40,24)
     proj_masks = data["projective_masks"].astype(np.float64)  # (12,24)
     proj_classes = [str(x) for x in data["projective_classes"]]
 
     n = H.shape[0]
-    assert n == 59*24, n
+    assert n == 59 * 24, n
 
     psi0 = np.zeros((n,), dtype=np.complex128)
-    psi0[node0*24 + clock0] = 1.0
+    psi0[node0 * 24 + clock0] = 1.0
 
     A = (-1j) * H
     times = np.array(list(times), dtype=float)
-    psis = spla.expm_multiply(A, psi0, start=times[0], stop=times[-1], num=len(times), endpoint=True)
+    psis = spla.expm_multiply(
+        A, psi0, start=times[0], stop=times[-1], num=len(times), endpoint=True
+    )
 
     rows = []
     for t, psi in zip(times, psis):
-        mat = psi.reshape((59,24))
-        clock_mass = np.sum(np.abs(mat)**2, axis=0)
+        mat = psi.reshape((59, 24))
+        clock_mass = np.sum(np.abs(mat) ** 2, axis=0)
         proj_probs = proj_masks @ clock_mass
         line_probs = w33_masks @ clock_mass
 
@@ -70,6 +75,7 @@ def evolve_and_measure(
     out.to_csv(out_path, index=False)
     print("Wrote", out_path)
     return out_path
+
 
 if __name__ == "__main__":
     evolve_and_measure()

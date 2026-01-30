@@ -27,7 +27,7 @@ This session explored the deep mathematical structure of W33 is the point graph 
 α⁻¹ = |cycles| + dim(E7_fund)
     = 81 + 56
     = 137
-    
+
 Measured: 137.036
 Error: 0.026%
 ```
@@ -37,7 +37,7 @@ Error: 0.026%
 sin²θ_W = |points| / p_{|points|}
         = 40 / 173    (173 is the 40th prime)
         = 0.231214...
-        
+
 Measured: 0.23121
 Error: 0.004%
 ```

@@ -10,7 +10,7 @@ This repo already has a lot of numerology/physics-facing exploration. The goal h
 
 - `claude_workspace/lib/simplicial_homology.py`
   - Builds boundary matrices and computes ranks over several large primes.
-  - Reports Betti numbers via:  
+  - Reports Betti numbers via:
     \(\beta_k = n_k - \mathrm{rank}(\partial_k) - \mathrm{rank}(\partial_{k+1})\) (over a field).
 
 - `claude_workspace/lib/permutation_group.py`

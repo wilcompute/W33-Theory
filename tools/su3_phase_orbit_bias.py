@@ -4,12 +4,13 @@
 For each 27-orbit (size=27) in W(E6) acting on E8 roots, compute
 phase-pair distributions of W33 edges that map into that orbit.
 """
+
 from __future__ import annotations
 
+import json
 from collections import Counter, defaultdict
 from itertools import product
 from pathlib import Path
-import json
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -34,11 +35,11 @@ def build_w33():
     n = len(proj_points)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     edges = []
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 edges.append((i, j))
 
@@ -47,12 +48,14 @@ def build_w33():
 
 def main():
     # Load edge->root map and root->orbit labels
-    edge_map = json.loads((ROOT / 'artifacts' / 'explicit_bijection_decomposition.json').read_text())
-    edge_to_root_idx = {int(k): v for k, v in edge_map['edge_to_root_index'].items()}
-    root_coords = [tuple(r) for r in edge_map['root_coords']]
+    edge_map = json.loads(
+        (ROOT / "artifacts" / "explicit_bijection_decomposition.json").read_text()
+    )
+    edge_to_root_idx = {int(k): v for k, v in edge_map["edge_to_root_index"].items()}
+    root_coords = [tuple(r) for r in edge_map["root_coords"]]
 
-    we6 = json.loads((ROOT / 'artifacts' / 'we6_orbit_labels.json').read_text())
-    root_to_orbit = {eval(k): v for k, v in we6['mapping'].items()}
+    we6 = json.loads((ROOT / "artifacts" / "we6_orbit_labels.json").read_text())
+    root_to_orbit = {eval(k): v for k, v in we6["mapping"].items()}
 
     # W33 points and edges
     points, edges = build_w33()
@@ -71,8 +74,8 @@ def main():
         info = root_to_orbit.get(r)
         if info is None:
             continue
-        orbit_id = info['orbit_id']
-        orbit_size = info['orbit_size']
+        orbit_id = info["orbit_id"]
+        orbit_size = info["orbit_size"]
         if orbit_size != 27:
             continue
         key = f"27_{orbit_id}"
@@ -83,15 +86,19 @@ def main():
         orbit_sums[key][(a + b) % 3] += 1
 
     results = {
-        'orbit_pairs': {k: {str(p): v for p, v in cnt.items()} for k, cnt in orbit_pairs.items()},
-        'orbit_sums': {k: {str(s): v for s, v in cnt.items()} for k, cnt in orbit_sums.items()},
+        "orbit_pairs": {
+            k: {str(p): v for p, v in cnt.items()} for k, cnt in orbit_pairs.items()
+        },
+        "orbit_sums": {
+            k: {str(s): v for s, v in cnt.items()} for k, cnt in orbit_sums.items()
+        },
     }
 
-    out_path = ROOT / 'artifacts' / 'su3_phase_orbit_bias.json'
-    out_path.write_text(json.dumps(results, indent=2), encoding='utf-8')
+    out_path = ROOT / "artifacts" / "su3_phase_orbit_bias.json"
+    out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print({k: dict(v) for k, v in orbit_sums.items()})
-    print(f'Wrote {out_path}')
+    print(f"Wrote {out_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

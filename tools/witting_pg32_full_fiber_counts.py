@@ -10,6 +10,7 @@ Outputs:
 - artifacts/witting_pg32_full_fiber_counts.json
 - artifacts/witting_pg32_full_fiber_counts.md
 """
+
 from __future__ import annotations
 
 import json
@@ -20,8 +21,10 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT_JSON = ROOT / "artifacts" / "witting_pg32_full_fiber_counts.json"
 OUT_MD = ROOT / "artifacts" / "witting_pg32_full_fiber_counts.md"
 
+
 def gf4_add(a: int, b: int) -> int:
     return a ^ b
+
 
 def gf4_mul(a: int, b: int) -> int:
     if a == 0 or b == 0:
@@ -35,18 +38,23 @@ def gf4_mul(a: int, b: int) -> int:
     c1 = (c1 + c2) % 2
     return (c1 << 1) | c0
 
+
 def gf4_square(a: int) -> int:
     return gf4_mul(a, a)
 
+
 def gf4_trace(a: int) -> int:
     return gf4_add(a, gf4_square(a)) & 1
+
 
 omega = 2
 omega2 = 3
 omega_powers = [1, omega, omega2]
 
+
 def trace_map(v):
     return tuple(gf4_trace(x) for x in v)
+
 
 def build_vertices():
     vertices = []
@@ -73,6 +81,7 @@ def build_vertices():
             for s in [1, -1]:
                 vertices.append(tuple(v))
     return vertices
+
 
 def main():
     vertices = build_vertices()
@@ -110,6 +119,7 @@ def main():
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"Wrote {OUT_JSON}")
     print(f"Wrote {OUT_MD}")
+
 
 if __name__ == "__main__":
     main()

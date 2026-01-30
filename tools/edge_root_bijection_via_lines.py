@@ -16,11 +16,12 @@ Outputs:
 - artifacts/e8_root_to_edge.json
 - artifacts/edge_root_bijection_summary.json
 """
+
 from __future__ import annotations
 
 import json
-from pathlib import Path
 from itertools import combinations, product
+from pathlib import Path
 
 from sage.all import Graph
 
@@ -45,13 +46,13 @@ def build_w33_f3():
             proj_points.append(v)
 
     def omega(x, y):
-        return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+        return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
 
     n = len(proj_points)
-    adj = [[0]*n for _ in range(n)]
+    adj = [[0] * n for _ in range(n)]
     edges = []
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if omega(proj_points[i], proj_points[j]) == 0:
                 adj[i][j] = adj[j][i] = 1
                 edges.append((i, j))
@@ -84,7 +85,7 @@ def build_line_graph(lines):
     edges = []
     for i, li in enumerate(lines):
         set_i = set(li)
-        for j in range(i+1, len(lines)):
+        for j in range(i + 1, len(lines)):
             if set_i.intersection(lines[j]):
                 edges.append((i, j))
     G = Graph(edges)
@@ -144,7 +145,7 @@ def canonical_line_edge_order(line, points):
     # edges in lex order of ordered point indices
     edge_list = []
     for i in range(4):
-        for j in range(i+1, 4):
+        for j in range(i + 1, 4):
             a, b = ordered_pts[i], ordered_pts[j]
             edge_list.append(tuple(sorted((a, b))))
     return edge_list
@@ -164,7 +165,9 @@ def main():
     orbit_root_order = {o: canonical_orbit_order(orbits[o]) for o in range(len(orbits))}
 
     # Build canonical edge order for each line
-    line_edge_order = {li: canonical_line_edge_order(lines[li], points) for li in range(len(lines))}
+    line_edge_order = {
+        li: canonical_line_edge_order(lines[li], points) for li in range(len(lines))
+    }
 
     # Build edge->root mapping
     edge_to_root = {}
@@ -191,7 +194,7 @@ def main():
         root_to_edge[str(root)] = list(e)
 
     # Sanity checks
-    ok_bij = (len(edge_to_root) == 240 and len(root_to_edge) == 240)
+    ok_bij = len(edge_to_root) == 240 and len(root_to_edge) == 240
 
     summary = {
         "edges": len(edge_to_root),
@@ -200,9 +203,15 @@ def main():
         "orbit_to_line": {str(k): int(v) for k, v in orbit_to_line.items()},
     }
 
-    (ROOT / "artifacts" / "edge_to_e8_root.json").write_text(json.dumps(edge_to_root, indent=2), encoding="utf-8")
-    (ROOT / "artifacts" / "e8_root_to_edge.json").write_text(json.dumps(root_to_edge, indent=2), encoding="utf-8")
-    (ROOT / "artifacts" / "edge_root_bijection_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
+    (ROOT / "artifacts" / "edge_to_e8_root.json").write_text(
+        json.dumps(edge_to_root, indent=2), encoding="utf-8"
+    )
+    (ROOT / "artifacts" / "e8_root_to_edge.json").write_text(
+        json.dumps(root_to_edge, indent=2), encoding="utf-8"
+    )
+    (ROOT / "artifacts" / "edge_root_bijection_summary.json").write_text(
+        json.dumps(summary, indent=2), encoding="utf-8"
+    )
 
     print("Wrote artifacts/edge_to_e8_root.json")
     print("Wrote artifacts/e8_root_to_edge.json")

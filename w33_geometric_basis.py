@@ -8,17 +8,20 @@ Can we find an explicit geometric basis for these 81 generators?
 The key: Find 81 independent "cycles" in W33 with geometric meaning.
 """
 
-from sage.all import *
+from itertools import combinations, product
+
 import numpy as np
-from itertools import product, combinations
+from sage.all import *
 
 print("=" * 70)
 print("GEOMETRIC BASIS FOR H₁(W33)")
 print("=" * 70)
 
+
 # Build the symplectic polar space W(3,3)
 def symplectic_form(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
+
 
 def normalize(v):
     for i in range(4):
@@ -26,6 +29,7 @@ def normalize(v):
             inv = pow(v[i], -1, 3)
             return tuple((inv * x) % 3 for x in v)
     return None
+
 
 proj_points = set()
 for v in product(range(3), repeat=4):
@@ -47,9 +51,11 @@ for i, p1 in enumerate(proj_points):
 # Find lines
 lines_set = set()
 for i in range(n):
-    for j in range(i+1, n):
+    for j in range(i + 1, n):
         if adj[i][j]:
-            common = [k for k in range(n) if k != i and k != j and adj[i][k] and adj[j][k]]
+            common = [
+                k for k in range(n) if k != i and k != j and adj[i][k] and adj[j][k]
+            ]
             for k, l in combinations(common, 2):
                 if adj[k][l]:
                     lines_set.add(tuple(sorted([i, j, k, l])))
@@ -71,11 +77,11 @@ print("=" * 70)
 
 # Get a spanning tree
 T = G.min_spanning_tree()
-T_edges = set((min(e[0],e[1]), max(e[0],e[1])) for e in T)
+T_edges = set((min(e[0], e[1]), max(e[0], e[1])) for e in T)
 print(f"Spanning tree has {len(T)} edges (expected: {n-1})")
 
 # Non-tree edges give fundamental cycles
-all_edges = set((min(e[0],e[1]), max(e[0],e[1])) for e in G.edges(labels=False))
+all_edges = set((min(e[0], e[1]), max(e[0], e[1])) for e in G.edges(labels=False))
 non_tree_edges = all_edges - T_edges
 print(f"Non-tree edges: {len(non_tree_edges)}")
 print(f"These give {len(non_tree_edges)} fundamental cycles")
@@ -116,9 +122,9 @@ print(f"Triangles: {len(triangles)}")
 # Build ∂₂: triangles → edges
 d2 = matrix(ZZ, len(edges), len(triangles), sparse=True)
 for j, (v0, v1, v2) in enumerate(triangles):
-    e01 = (min(v0,v1), max(v0,v1))
-    e02 = (min(v0,v2), max(v0,v2))
-    e12 = (min(v1,v2), max(v1,v2))
+    e01 = (min(v0, v1), max(v0, v1))
+    e02 = (min(v0, v2), max(v0, v2))
+    e12 = (min(v1, v2), max(v1, v2))
     d2[edge_idx[e12], j] = 1
     d2[edge_idx[e02], j] = -1
     d2[edge_idx[e01], j] = 1
@@ -158,13 +164,13 @@ induced_4cycles = []
 for v1 in range(n):
     neighbors_v1 = set(j for j in range(n) if adj[v1][j])
     non_neighbors_v1 = set(j for j in range(n) if j != v1 and not adj[v1][j])
-    
+
     for v3 in non_neighbors_v1:
         if v3 <= v1:
             continue
         neighbors_v3 = set(j for j in range(n) if adj[v3][j])
         common = neighbors_v1 & neighbors_v3
-        
+
         for v2 in common:
             for v4 in common:
                 if v4 <= v2:
@@ -174,21 +180,23 @@ for v1 in range(n):
 
 print(f"Induced 4-cycles: {len(induced_4cycles)}")
 
+
 # Convert to cycle vectors (in edge space)
 def cycle_to_vector(cycle):
     """Convert a cycle (v1, v2, v3, v4) to a vector in edge space."""
     v1, v2, v3, v4 = cycle
     vec = [0] * len(edges)
     # Edges: v1-v2, v2-v3, v3-v4, v4-v1
-    e1 = (min(v1,v2), max(v1,v2))
-    e2 = (min(v2,v3), max(v2,v3))
-    e3 = (min(v3,v4), max(v3,v4))
-    e4 = (min(v4,v1), max(v4,v1))
+    e1 = (min(v1, v2), max(v1, v2))
+    e2 = (min(v2, v3), max(v2, v3))
+    e3 = (min(v3, v4), max(v3, v4))
+    e4 = (min(v4, v1), max(v4, v1))
     vec[edge_idx[e1]] = 1
     vec[edge_idx[e2]] = 1
     vec[edge_idx[e3]] = 1
     vec[edge_idx[e4]] = 1
     return vector(ZZ, vec)
+
 
 # Check if 4-cycles span H₁
 print("\nChecking if induced 4-cycles generate H₁...")
@@ -244,18 +252,21 @@ print("\nFinding an apartment (8-cycle in incidence graph)...")
 # Build incidence graph
 inc_graph = Graph()
 for i in range(n):
-    inc_graph.add_vertex(('P', i))
+    inc_graph.add_vertex(("P", i))
 for j in range(len(lines)):
-    inc_graph.add_vertex(('L', j))
+    inc_graph.add_vertex(("L", j))
 for j, line in enumerate(lines):
     for p in line:
-        inc_graph.add_edge(('P', p), ('L', j))
+        inc_graph.add_edge(("P", p), ("L", j))
 
-print(f"Incidence graph: {inc_graph.num_verts()} vertices, {inc_graph.num_edges()} edges")
+print(
+    f"Incidence graph: {inc_graph.num_verts()} vertices, {inc_graph.num_edges()} edges"
+)
 
 # Find 8-cycles
 # An 8-cycle alternates: P-L-P-L-P-L-P-L
 # Starting from a point p0, go to a line L0, then to a different point p1 on L0, etc.
+
 
 def find_apartment(start_point):
     """Find an apartment starting from a given point."""
@@ -270,17 +281,24 @@ def find_apartment(start_point):
                 for p2 in points_on_L1:
                     if p2 == p1:
                         continue
-                    for L2 in [j for j, line in enumerate(lines) if p2 in line and j != L1]:
+                    for L2 in [
+                        j for j, line in enumerate(lines) if p2 in line and j != L1
+                    ]:
                         points_on_L2 = list(lines[L2])
                         for p3 in points_on_L2:
                             if p3 == p2:
                                 continue
                             # Check if p3 and p0 share a line L3 != L2, L0
-                            for L3 in [j for j, line in enumerate(lines) if p3 in line and p0 in line]:
+                            for L3 in [
+                                j
+                                for j, line in enumerate(lines)
+                                if p3 in line and p0 in line
+                            ]:
                                 if L3 != L2 and L3 != L0:
                                     # Found an apartment!
                                     return [(p0, L0, p1, L1, p2, L2, p3, L3)]
     return None
+
 
 apt = find_apartment(0)
 if apt:
@@ -312,7 +330,7 @@ print(f"\nTotal apartments found: {apartment_count}")
 # Let me count more systematically...
 
 print("\n" + "=" * 70)
-print("APARTMENT STRUCTURE")  
+print("APARTMENT STRUCTURE")
 print("=" * 70)
 
 # Each apartment is an octagon with 4 points and 4 lines
@@ -326,11 +344,11 @@ if apartments:
     print(f"  Point {p1}: {proj_points[p1]}")
     print(f"  Point {p2}: {proj_points[p2]}")
     print(f"  Point {p3}: {proj_points[p3]}")
-    
+
     # Check: are opposite points (p0, p2) and (p1, p3) non-collinear?
     print(f"\n  p0 ~ p2? {adj[p0][p2]} (should be False - opposite)")
     print(f"  p1 ~ p3? {adj[p1][p3]} (should be False - opposite)")
-    
+
     # The 4 lines form a "frame"
     print(f"\n  Line L0 = {lines[L0]}")
     print(f"  Line L1 = {lines[L1]}")

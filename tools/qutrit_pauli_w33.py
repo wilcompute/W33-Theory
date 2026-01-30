@@ -5,6 +5,7 @@ Outputs:
 - artifacts/qutrit_pauli_w33.json
 - artifacts/qutrit_pauli_w33.md
 """
+
 from __future__ import annotations
 
 import json
@@ -125,7 +126,9 @@ OUT_JSON.write_text(json.dumps(summary, indent=2), encoding="utf-8")
 lines_md = []
 lines_md.append("# 2-Qutrit Pauli Geometry vs W33")
 lines_md.append("")
-lines_md.append("Constructed projective points in F3^4 and used the symplectic form to model commutation.")
+lines_md.append(
+    "Constructed projective points in F3^4 and used the symplectic form to model commutation."
+)
 lines_md.append("")
 lines_md.append(f"- points: {summary['points']}")
 lines_md.append(f"- edges: {summary['edges']}")

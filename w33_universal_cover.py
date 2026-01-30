@@ -3,7 +3,7 @@
 W33 - THE UNIVERSAL COVER: AN INFINITE TREE
 
 Since π₁(W33) = F₈₁, the universal cover of W33 is an infinite
-contractible simplicial complex. 
+contractible simplicial complex.
 
 For a bouquet of circles, the universal cover is the Cayley graph
 of the free group - an infinite tree.
@@ -11,17 +11,20 @@ of the free group - an infinite tree.
 Let's explore what the universal cover of W33 looks like!
 """
 
-from sage.all import *
+from itertools import combinations, product
+
 import numpy as np
-from itertools import product, combinations
+from sage.all import *
 
 print("=" * 70)
 print("THE UNIVERSAL COVER OF W33")
 print("=" * 70)
 
+
 # Build W33
 def symplectic_form(x, y):
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
+    return (x[0] * y[2] - x[2] * y[0] + x[1] * y[3] - x[3] * y[1]) % 3
+
 
 def normalize(v):
     for i in range(4):
@@ -29,6 +32,7 @@ def normalize(v):
             inv = pow(v[i], -1, 3)
             return tuple((inv * x) % 3 for x in v)
     return None
+
 
 proj_points = set()
 for v in product(range(3), repeat=4):
@@ -48,9 +52,11 @@ for i, p1 in enumerate(proj_points):
 
 lines_set = set()
 for i in range(n):
-    for j in range(i+1, n):
+    for j in range(i + 1, n):
         if adj[i][j]:
-            common = [k for k in range(n) if k != i and k != j and adj[i][k] and adj[j][k]]
+            common = [
+                k for k in range(n) if k != i and k != j and adj[i][k] and adj[j][k]
+            ]
             for k, l in combinations(common, 2):
                 if adj[k][l]:
                     lines_set.add(tuple(sorted([i, j, k, l])))
@@ -71,7 +77,7 @@ print("THE CAYLEY GRAPH OF F₈₁")
 print("=" * 70)
 
 print("""
-Since π₁(W33) = F₈₁ (free group on 81 generators), 
+Since π₁(W33) = F₈₁ (free group on 81 generators),
 the universal cover is homotopy equivalent to the Cayley graph of F₈₁.
 
 The Cayley graph of F_n is an infinite (2n)-regular tree:
@@ -99,11 +105,13 @@ print("=" * 70)
 # V(1) = 2n (neighbors of root)
 # V(d) = 2n × (2n-1)^{d-1} for d ≥ 1
 
+
 def vertices_at_distance(n_gen, d):
     """Count vertices at distance d in Cayley graph of F_n."""
     if d == 0:
         return 1
-    return 2 * n_gen * (2 * n_gen - 1)**(d - 1)
+    return 2 * n_gen * (2 * n_gen - 1) ** (d - 1)
+
 
 n_gen = 81
 print(f"Vertices at distance d from root (for F_{n_gen}):")
@@ -218,14 +226,14 @@ The 81 generators of π₁(W33) = F₈₁ can be interpreted as:
 Each corresponds to a positive root direction in the root system C₂,
 tensored with GF(3):
   - 4 positive roots × 3 non-identity elements = 4 × 3 = 12? No...
-  
+
 Actually: |U| = 3^4 = 81 because U has dimension 4 over GF(3),
 with one parameter for each positive root:
   - α₁: 3 choices
-  - α₂: 3 choices  
+  - α₂: 3 choices
   - α₁+α₂: 3 choices
   - 2α₁+α₂: 3 choices
-  
+
 Total: 3 × 3 × 3 × 3 = 81 ✓
 """)
 
@@ -277,16 +285,16 @@ print("""
 The UNIVERSAL COVER of W33:
 
   1. Is an infinite, contractible, 3-dimensional simplicial complex
-  
+
   2. Has 1-skeleton homotopy equivalent to Cayley graph of F₈₁
      (an infinite 162-regular tree)
-     
+
   3. Is acted upon freely by π₁(W33) = F₈₁ (deck transformations)
-  
+
   4. Has exponential growth rate 161
-  
+
   5. Is closely related to the Bruhat-Tits building of PSp(4, Q₃)
-  
+
   6. Connects finite geometry, topology, and p-adic number theory!
 
 The covering map W33̃ → W33 is the "infinite unfolding" that
