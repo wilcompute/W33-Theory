@@ -21,4 +21,3 @@
 
 - Integrate these figures into the main notebook and PR notes.
 - Run robustness checks for loss and alternative encodings (threshold vs photon-number).
-

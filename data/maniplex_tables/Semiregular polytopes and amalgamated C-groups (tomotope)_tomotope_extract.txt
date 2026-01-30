@@ -1,0 +1,9 @@
+Example 4.11 (The tomotope). Deﬁne a group Γby adjoining to (4) the two relations which
+which in [26] was called the tomotope (as a small gift for Tomaž Pisanski).
+The tomotope has 4 vertices, 12 edges, 16 triangles, and 4 tetrahedra and 4 hemioctahedra.
+Fig. 2. The tomotope Thh. (For interpretation of colors in this ﬁgure, the reader is referred to the web version of this
+tomotope has the peculiar property, impossible in lower ranks, of having inﬁnitely many distinct,ﬁnite, minimal regular covers.
+To visualize the tomotope T
+{{3,4}3,{4,4}(2,0)}(see [19, 4E5]) denoted {3,4,4}∗192ain the Census [12]. It is clear from
+/angbracketleftρ0,ρ1,ρ2,ρ3/angbracketrightfor the tomotope. This isomorphism is induced by mapping (r0,r1,r2,s2)to
+[26] B. Monson, D. Pellicer, G. Williams, The tomotope, submitted for publication.

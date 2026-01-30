@@ -1,0 +1,909 @@
+EuropeanJournalofCombinatorics126(2025)104132
+Contents lists available atScienceDirect
+European Journal of Combinatorics
+journal homepage: https://www.sciencedirect.com/journal/
+european-journal-of-combinatorics
+Symmetries of voltage operations on polytopes,
+maps and maniplexes
+Isabel Hubarda,Elías Mochánb,Antonio Monteroc
+aInstitute of Mathematics, National Autonomous University of Mexico (IM UNAM), 04510 Mexico
+City, Mexico
+bDepartment of Mathematics, Northeastern University, 02115 Boston, USA
+cFaculty of Mathematics and Physics, University of Ljubljana, 1000 Ljubljana, Slovenia
+a r t i c l e i n f o
+Article history:
+Received 27 February 2024
+Accepted 20 January 2025
+Available online 7 February 2025a b s t r a c t
+Voltage operations extend traditional geometric and combinato-
+rial operations (such as medial, truncation, prism, and pyramid
+over a polytope) to operations on maniplexes, maps, polytopes,
+and hypertopes. In classical operations, the symmetries of the
+original object remain in the resulting one, but sometimes ad-
+ditional symmetries are created; the same situation arises with
+voltage operations. We characterise the automorphisms of the
+new object that are derived from the original one and use this
+to bound the number of flag orbits (under the action of its
+automorphism group) of the new object in terms of the original
+one. The conditions under which the automorphism group of the
+original object is the same as the automorphism group of the
+resulting object are given. We also look at the cases where there
+is additional symmetry which can be accurately described due
+to the symmetries of the operation itself.
+©2025 The Authors. Published by Elsevier Ltd. This is an open
+access article under the CC BY-NC license
+(http://creativecommons.org/licenses/by-nc/4.0/ ).
+1. Introduction
+Two of the more well-known operations on maps and polyhedra are the medial and the
+truncation. These are two of the Wythoffian operations ([3, Section 5.7]), which are defined on
+convex regular polyhedra as the convex hull of the orbit of a point in the intersection of certain
+mirror reflections from the original polyhedron. These operations can be generalised to maps and
+E-mail addresses:isahubard@im.unam.mx (I. Hubard),j.mochanquesnel@northeastern.edu (E. Mochán),
+antonio.montero@fmf.uni-lj.si (A. Montero).
+https://doi.org/10.1016/j.ejc.2025.104132
+0195-6698/ ©2025 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY-NC license
+(http://creativecommons.org/licenses/by-nc/4.0/ ).
+I. Hubard, E. Mochán and A. Montero European Journal of Combinatorics 126 (2025) 104132
+abstract polyhedra, even if they are not regular (see [11,18]). They induce local transformations
+on the original polyhedron: the new faces always correspond to either the faces or the vertex-
+figures of the original. In the medial, the new vertices correspond to the old edges, and the new
+edges correspond to the oldcorners(vertex-face incident pairs). In the truncation, the new vertices
+correspond to the old arcs and the new edges correspond to the old edges combined with the old
+corners.
+These operations have been well-understood in different contexts, such as convex or skeletal
+polyhedra and maps on surfaces, both combinatorially and geometrically (see, for example, [3,18]).
+In particular, the symmetries of the medial or truncation of a map or polytope have been studied.
+The automorphisms of a polyhedron Pinduce automorphisms of its medial and truncated poly-
+hedra. These two polyhedra may have additional automorphisms that are not derived from the
+automorphisms ofP(see [18]). The extra symmetry of the medial of a polyhedron Pis simple
+to explain: it is present if and only ifPis self-dual. On the other hand, the extra symmetry
+of the truncation is more difficult to identify. Nevertheless, it is possible to find a family of
+polyhedra whose symmetries are the same as those of the original polyhedron. This family consists
+of polyhedra whose flags cannot be coloured with two colours in such a way that 2-adjacent flags
+have different colours while 0- and 1- adjacent flags have the same colour. However, even if the
+flags of a polyhedron can be coloured in this way, it does not necessarily mean that the truncation
+has extra symmetry.
+Although dissimilar, these two conditions have something in common: they enable us to identify
+polyhedra whose medial and/or truncation do not possess any additional symmetries. We can
+deduce the number of orbits and their local arrangement in the medial and truncation of a
+polyhedron Pif we are aware of the number of orbits and their local configuration under the group
+of automorphisms ofP. More precisely, we can find a polyhedron Psuch that ifTis thesymmetry
+type graphofP(the quotient of the flag graph ofPby its automorphism group), then Med(T) and
+Tr(T) are the symmetry type graphs of Med(P) and Tr(P), respectively.
+Voltage operations, first introduced in [10], are a generalisation of classic geometric and topo-
+logical operations on maps and polytopes (e.g. Wythoffian constructions, snub, dual, Petrie-dual,
+products of polytopes as described in [6], and many more). These operations may be useful in
+addressing one of the fundamental questions of the theory of symmetric polytopes, namely, is every
+premaniplex the symmetry type graph of a polytope?, as will be discussed later.
+Similar to the medial and the truncation, when we apply a voltage operation to a map or
+polytope, we usually obtain a new map or polytope with the same automorphism group, but with
+an increased number of flags. Furthermore, [10, Theorem 5.1] states that the symmetry type graph
+of a map or polytope that has undergone a voltage operation can be expressed in terms of the
+symmetry type graph of the original object.
+However, there is a caveat: just as with the medial and truncation, the resulting object may
+have more symmetries than the original one. The symmetry type graph of the resulting object with
+respect to the original group of automorphisms is revealed by [10, Theorem 5.1]; however, it does
+not provide information about the symmetry type graph with respect to the full group (if it is larger).
+Generally, the actual symmetry type graph is a quotient of the one we get from the theorem, and
+the answer is exact only when there are no additional symmetries.
+The paper is organised as follows. Section2gives a brief introduction to the concepts used
+throughout the paper. Section3recalls the definitions and base properties of voltage operations
+given in [10]. Section4, we characterise the automorphisms of a resulting object that come from
+automorphisms from the original object, while in Section5we explore when we can ensure
+that the automorphism group of the original object coincides with that of the resulting one. This
+exploration is done with F-actions, which are also introduced in Section5. Section6investigates
+which symmetries of the operation always lift and which ones lift for specific cases. Finally, in
+Section7we make some concluding remarks.
+2. Basic notions
+We start by providing some of the definitions, basic notions, and results that we use throughout
+the paper. Many of these notions are treated in our previous paper [10]; we refer the reader to this
+2
+I. Hubard, E. Mochán and A. Montero European Journal of Combinatorics 126 (2025) 104132
+manuscript for deeper detail.
+This paper deals with voltage operations, which implies we shall deal with voltage graphs. Thus,
+we use a very general definition of graph: agraphis a 4-tuple X=(V(X),D(X),I,(·)−1) where
+V=V(X) is a non-empty set whose elements are called vertices,D=D(X) is a set whose elements
+are called darts,I:D→Vis a function, and (·)−1:D→Dis an involution. The vertex I(d) is called
+thestarting point of d, while T(d):=I(d−1) is theterminal pointofd. The dart d−1is theinverse of
+d. AnedgeofXis a set{d,d−1}and we denote the set of edges ofXbyE(X). Asemi-edgeis a dart
+dthat is its own inverse (thus, a semi-edge is a fixed point of (·)−1)). If the dart dis a semi-edge,
+we abuse notation and refer to the edge{d}as a semi-edge as well.
+Apathin a graph Xis a finite sequence of darts W=d1d2. . .dkwhere the terminal point of
+diis the starting point ofdi+1fori∈ {1, . . . ,k−1}. The starting point of Wisu=I(d1), while
+theterminal point of Wisv=T(dk). In this case we say that W goes from u tov(symbolically
+W:u→v). IfW:u→ufor some vertex uwe say that it isclosedand based at u. If a path is not
+closed, we say that it isopen.
+Apremaniplex of rank nor simply n-premaniplexis a graph Xwhose edges (and therefore, darts)
+are coloured with elements of the set{0,1, . . . ,n−1}in such a way that every vertex is the starting
+point of exactly one dart of each colour, and ifi,j∈{0, . . . ,n−1}are such that|i−j|⩾2, then
+the alternating paths of length 4 with colours i,jare closed. We shall refer to the vertices of a
+premaniplex asflags. We often abuse notation and useXboth for a premaniplex and for its set of
+flags and usex∈Xto say that xis a flag ofX. A connected premaniplex with no parallel edges
+and no semi-edges is called amaniplex.
+Maniplexes generalise the flag-graph of maps (as 2-cellular embeddings of graphs) and geometric
+and abstract polytopes (in the sense of [16]). Given a map or a polytope P, one may define its flag-
+graph X=X(P) as the edge-coloured graph whose vertices are the flags ofP, and thei-edges
+are between i-adjacent flags. It is straightforward to see that these flag-graphs are maniplexes.
+Moreover, thei-faces ofPare in correspondence with the connected components Xi, resulting by
+removing all thei-edges ofX. The incidence between thei-faces ofPis given by the non-empty
+intersection of the corresponding connected components. Even though a maniplex is not always the
+flag-graph of a polytope (see [5]), whenever we start with a polytope we shall abuse notation and
+refer to the polytope and the maniplex (its flag-graph) as the same object.
+Given a flag x∈Xand a colour i∈ {0,1, . . . ,n−1},ixdenotes the unique dart of colour ithat
+starts atx. The terminal point ofixis denoted byxi, and it is called thei-adjacent flag of x.
+The universal rank-n Coxeter groupwith string diagram is the group Cn=⟨r0, . . .rn−1⟩defined
+by the following relations:
+r2
+i=εfor alli∈ {0, . . . ,n−1},
+(rirj)2=εif|i−j|⩾2.(2.1)
+When the rank is clear from the context, or irrelevant for our arguments, we omit thenofCn, and
+denote it only byC. Since most of our work in this paper is based on that of [10], it is worth noticing
+that the group Cnis denoted by Mon(U) in [10], where Udenotes theuniversal maniplex of rank n.
+Eq. (2.1)implies that, for any n-premaniplex X, the family of mappings ri:x↦ →xi(i∈
+{0, . . . ,n−1}) defines an action of the group Cnon the flags ofX. This action is transitive if and
+only ifXis connected. The monodromy group(often also called theconnection group) ofXis the
+permutation group induced by this action. Naturally, we denote this group by Mon(X) (see [8,11]).
+IfW:x→x′is a path inXwhose darts have colours i1,i2, . . . ,ik(in that order), we write Was
+wx, where w=ik. . .i2i1. We may naturally associate the element ω=rik. . .ri2ri1∈Cto the word
+w. Letw1andw2be two words on{0,1, . . . ,n−1}and letω1andω2be the respective elements
+ofCassociated to those words in this way. Note that the relations inCnimply that two different
+words w1=ik. . .i2i1andw2=jℓ. . .j2j1might induce the same monodromy (ω1=ω2). We say
+that the pathsw1x1andw2x2arehomotopicifx1=x2andω1=ω2. It is easy to see that homotopy
+is an equivalence relation. We denote byωxthe homotopy class of the pathwx. Note that any path
+in the homotopy classωxgoes from xtoωx.
+If a path W1ends at the starting point of another path W2, these paths can be concatenated
+to get a new path W1W2. This operation is well defined when we do it with homotopy classes:
+3
+I. Hubard, E. Mochán and A. Montero European Journal of Combinatorics 126 (2025) 104132
+in fact (ω1x)(ω2(ω1x))=ω1ω2x. The set of homotopy classes of paths in a premaniplex Xwith the
+concatenation as (partial) operation forms a groupoid Π(X), called the fundamental groupoid ofX.
+The subset of closed paths based at a flag x, denoted byΠx(X), forms a group and it is called the
+fundamental group ofXbased at x.
+Given two n-premaniplexes X1andX2, a(premaniplex) homomorphismfromX1toX2is a function
+that preserves i-adjacencies, fori∈ {0, . . . ,n−1}. A surjective homomorphism is called acovering.
+If there is a covering fromX1toX2we say thatX1covers X2, and thatX2is aquotientofX1. It is
+easy to see that ifX2is connected, any homomorphism fromX1toX2is a covering.
+A bijective homomorphism is called anisomorphism, and an isomorphism fromXto itself is
+called anautomorphism. The set of all the automorphisms ofXforms theautomorphism groupof
+Xand it is denoted byΓ(X). It is straightforward to see that automorphisms and monodromies
+commute. Moreover, every permutation of the flags ofXthat commutes with every monodromy is
+an automorphism.
+IfΓ(X) has exactly korbits on the set of flags ofX, we say thatXis ak-orbitpremaniplex.
+Given a premaniplex Xand a group Γ⩽Γ(X), we define X/Γin the following way: the flags
+are the orbits {xΓ:x∈V(X)}and fori∈ {0, . . . ,n−1}(xΓ)i=(xi)Γ. Since (xi)γ=(xγ)ifor every
+γ∈Γ(X), these adjacencies are well-defined. It is straightforward thatX/Γis ann-premaniplex
+and that the mapping x↦ →xΓis a covering fromXtoX/Γ. The quotient X/Γis thesymmetry
+type graph ofXwith respect toΓ(see [4]). Further, we refer toX/Γ(X) simply as thesymmetry
+type graph ofX.
+3. Voltage operations
+In [10], we define a voltage operation for maniplexes (maps and polytopes) and a voltage
+operator. This section revisits such definitions as well as some useful results of these concepts.
+For the rest of this paper, if a path Wstarts at a vertex xand follows the colour sequence w, which
+itself defines a monodromy ω, we will abuse notation and useW,wxandωxinterchangeably. In
+other words, we will always think of paths up to homotopy.
+Avoltage assignmenton a premaniplex Yis a function ξ:Π(Y)→Gwith the property that
+ξ(W1W2)=ξ(W2)ξ(W1) for any two paths W1,W2such that the product W1W2exists. We are
+implicitly asking that ifWand W′are homotopic paths, thenξ(W)=ξ(W′), so that our notation
+abuse is still valid. This is equivalent to asking thatξ(d)=ξ(d−1) for every dart dand thatξ(W)=1
+whenever Wis a path of length 4 with alternating non-consecutive colours. The element ξ(W)∈G
+is called the voltage of W. Note that ifW=d1d1. . .dkthenξ(W)=ξ(dk)· · ·ξ(d2)ξ(d1), so the
+voltage of a path is determined by the voltages of its darts. Therefore, we often just define voltages
+by assigning an element ξ(d)∈Gto each dart din such a way thatξ(d−1)=(ξ(d))−1andξ(W)=1
+whenever Wis a path of length 4 with alternating non-consecutive colours. Graphically, this is
+illustrated by writing the voltage next to an edge with an orientation that indicates which dart has
+the written voltage. If the voltage is an involution, no orientation is needed. Voltage assignments
+can be defined for graphs in general (see [7]).
+LetXbe ann-premaniplex and letYbe anm-premaniplex. Consider a voltage assignment
+η:Π(Y)→Cn. We define them-premaniplex X⋊ηYin the following way: the flags ofX⋊ηY
+are those in the setX×Yand, for each i∈ {0,1, . . . ,m}, there is an edge of colour ifrom (x,y) to (
+η(iy)x,riy)
+; that is
+(x,y)i=(
+η(iy)x,riy)
+.
+We call the pair (Y, η) avoltage operator(or an(n,m)-voltage operatorif we want to emphasise
+the ranks), and the mapping X↦ →X⋊ηY, that turns n-premaniplexes into m-premaniplexes is the
+corresponding voltage operation(or (n,m)-voltage operation).
+There are plenty of known operations that can be described as voltage operations. These include
+Wythoffian constructions, the prism and pyramid over a polytope or maniplex, the snub operation
+on a map, the orientable double cover (of a non-orientable polytope or maniplex), and many more
+(see [10, Section 4]).
+4
+I. Hubard, E. Mochán and A. Montero European Journal of Combinatorics 126 (2025) 104132
+An important property of voltage operations is that they preserve the symmetries of the
+premaniplex we apply them to. Furthermore, ifXis a premaniplex, Γ⩽Γ(X) and (Y, η) a voltage
+operator, then (X⋊ηY)/Γ∼=(X/Γ)⋊ηY(see [10, Theorem 5.1]). In fact this property characterises
+voltage operations ([10, Theorem 7.3]).
+However one must be careful: some operations, like the snub, seem to only preserve some
+of the symmetries of the original object (e.g. the rotations). The reason is that when seen as
+voltage operations, some operations might give, as a result, a premaniplex with many connected
+components, and the ‘‘missing’’ symmetries appear as isomorphisms between those components.
+For example, when seeing the snub as a voltage operator (Y, η) (as in [10, Section 4]) for every
+orientable mapM, the mapM⋊ηYconsists of a left snub ofMand a disjoint right snub ofM;
+and ifMadmits an automorphism sending a flag to an adjacent one (e.g. ifMis regular), it appears
+as an isomorphism between these two copies.
+While some results work for all voltage operations, others work only for those operations that
+preserve connectivity, that is, those where X⋊ηYis connected whenever Xis connected. The
+following result characterises such operations.
+Proposition 3.1([10, Corollary 3.9]).An(n,m)-voltage operator(Y, η)preserves connectivity if and
+only ifYis connected andη(Πy0(Y))=Cnfor some (or equivalently, for all) y0∈Y.
+It is possible that different voltage assignments onYgive rise to the same voltage operation. In
+this case, we say that the corresponding voltage operators areequivalent(the formal definition has
+some additional nuances, see [10, Proposition 7.2] for details). Using known results from voltage
+assignments on graphs, one can show that any voltage operator is equivalent to one where Yhas
+a spanning tree Twhere all its darts have trivial voltage (i.e.ξ(d)=1 for every dart dinT).
+Remark 3.2.Unless otherwise stated, we shall assume that (Y, η) has a spanning tree with trivial
+voltage.
+4. Characterising automorphisms induced byX
+In [10], we showed that each automorphism ofXcan be regarded as an automorphism of
+X⋊ηY. More precisely, we showed that every automorphism γ∈Γ(X), induces an automorphism
+γ∈Γ(X⋊ηY) by (x,y)γ=(xγ ,y). That is, the automorphisms ofXact on theX-coordinate
+ofX⋊ηY, and fix theY-coordinate. On the other hand, in [10, Theorem 5.1] we showed that the
+quotient (X⋊ηY)/Γ(X) is isomorphic to (X/Γ(X))⋊ηY; that is, that the symmetry type graph of
+X⋊ηYwith respect toΓ(X) isT⋊ηY, where Tis the symmetry type graph ofX. If it happens that
+Γ(X⋊ηY)=Γ(X), this implies that the symmetry type graph ofX⋊ηYis precisely T⋊ηY. Thus,
+under this hypothesis, ifXis ak-orbit premaniplex, thenX⋊ηYis ak|Y|-orbit one. Unfortunately
+requiring thatΓ(X⋊ηY)=Γ(X) seems to be a rather strong hypothesis.
+In this section we revisit the automorphisms ofX⋊ηYthat come from symmetries ofX, we also
+give a characterisation of them and use these results to bound the number of flag-orbits ofX⋊ηY
+whenever (Y, η) is a connectivity-preserving voltage operator. Of course, not all automorphisms of
+X⋊ηYneed to be of this type. In Section5.2and Section6we shall study automorphisms ofX⋊ηY
+that are not induced by automorphisms ofX(in the sense discussed above).
+Lemma 4.1. LetXbe a connected premaniplex and let(Y, η)be a voltage operator that preserves
+connectivity. Ifγ∈Γ(X⋊ηY)fixes theY-coordinate of every(x,y)∈X⋊ηY, thenγcan be regarded
+as an automorphism ofX.
+Proof.Since γfixes theY-coordinate, while (maybe) moving theX-coordinate, andXis connected,
+we can write theX-coordinate of the image of (x,y) under γas a monodromy that depends on both
+xand yacting onx. Thus, we may define θ:X⋊ηY→Csuch that (x,y)γ=(θ(x,y)x,y). To show
+thatγ∈Γ(X) we first show that fory,y′∈Y,θ(x,y)x=θ(x,y′)x. Given y,y′∈Y, letω∈Cbe such
+that y′=ωyandη(ωy)=1 (it exists since, byProposition  3.1,Yis connected, and byRemark  3.2
+there is a spanning tree of trivial voltage). Then,
+5
+I. Hubard, E. Mochán and A. Montero European Journal of Combinatorics 126 (2025) 104132
+(θ(x,y′)x,y′)=(x,y′)γ=(x, ωy)γ=(η(ωy)x, ωy)γ=(ω(x,y))γ
+=ω((x,y)γ)=ω(θ(x,y)x,y)=(η(ωy)θ(x,y)x, ωy)
+=(θ(x,y)x,y′).
+Hence the action ofθonxdoes not depend on theY-coordinate ofX⋊ηY, and we may denote it
+asθ(x).
+Letωbe a monodromy. Using the fact thatγis an automorphism ofX⋊ηYwe get that, on one
+hand:
+(ω(x,y))γ=(η(ωy)x, ωy)γ=(θ(η(ωy)x)η(ωy)x, ωy),
+and on the other:
+(ω(x,y))γ=ω((x,y)γ)=ω(θ(x)x,y)=(η(ωy)θ(x)x, ωy).
+Therefore:
+θ(η(ωy)x)η(ωy)x=η(ωy)θ(x)x. (4.1)
+Now, abusing notation, we define the action ofγonXasxγ:=θ(x)x; we need to show thatγ
+acts as an automorphism ofX.
+Since (Y, η) preserves connectivity, for each i∈ {0, . . . ,n−1}there is some closed path
+ωiy∈Πy(Y) such thatη(ωiy)=ri(Proposition  3.1). Therefore,
+(rix)γ=(η(ωiy)x)γ
+=θ(η(ωiy)x)η(ωiy)x
+=η(ωiy)θ(x)x (because of(4.1))
+=riθ(x)x
+=ri(xγ).
+This shows thatγacts onXas an automorphism. □
+Lemma  4.1says that those automorphisms ofX⋊ηYthat always preserve theY-coordinate are
+automorphisms ofX. The following result shows that it is enough to see that the automorphism
+preserves theY-coordinate of a single flag.
+Proposition 4.2. LetXbe a connected premaniplex and(Y, η)be a voltage operator that preserves
+connectivity. Letγ∈Γ(X⋊ηY). If there exists(x0,y0)∈X⋊ηYsuch that(x0,y0)γ=(x1,y0)for
+some x1∈X, thenγmay be regarded as an automorphism ofX.
+Proof.Let (x0,y0)γ=(x1,y0) and let (x,y) be any flag ofX⋊ηY. We want to show thatγfixes
+theY-coordinate of (x,y) and useLemma  4.1to conclude the proof.
+Since X⋊ηYis connected by hypothesis, there is some ω∈Cmsuch that (x,y)=ω(x0,y0) and
+in particular y=ωy0. Then,
+(x,y)γ=(ω(x0,y0))γ
+=ω((x0,y0)γ)
+=ω(x1,y0)
+=(η(ωy0)x1, ωy0)
+=(η(ωy0)x1,y).
+This proves thatγpreserves theY-coordinate of every flag ofX⋊ηY. Therefore,Lemma  4.1tells
+us thatγmay be regarded as an automorphism ofX.□
+6
+I. Hubard, E. Mochán and A. Montero European Journal of Combinatorics 126 (2025) 104132
+Whenever the graph Yis finite, the above result helps us to bound the number of flag orbits
+(under the action of the full automorphism group) ofX⋊ηY. The bound is in terms of the number
+of flag orbits ofX, the cardinality ofYand the index [Γ(X⋊ηY):Γ(X)]. More precisely:
+Proposition 4.3. LetXbe a k-orbit premaniplex and let(Y, η)be a voltage operator where Yis a
+finite premaniplex. LetΓ(X)⩽Γ⩽Γ(X⋊ηY). The following hold:
+(i) the number of flag-orbits ofΓonX⋊ηYis
+k|Y|
+[Γ:Γ(X)];
+(ii) if(Y, η)preserves connectivity, then1⩽[Γ:Γ(X)]⩽|Y|;
+(iii) in particular, if(Y, η)preserves connectivity, and[Γ:Γ(X)] =ℓthenX⋊ηYis ak|Y|
+tℓ-orbit
+premaniplex, where t is an integer satisfying1⩽t⩽|Y|
+ℓ.
+Proof.For simplicity let∆denote the group Γ(X). Consider the setO= {(x,y)∆:(x,y)∈X⋊ηY}
+of∆-orbits ofX⋊ηY. Notice that
+{(x,y)∆:(x,y)∈X⋊ηY} = {(x∆,y):(x,y)∈X⋊ηY},
+which implies that|O| =k|Y|.
+Now observe that every ∆-orbit ofX⋊ηYis contained in exactly oneΓ-orbit ofX⋊ηY. Moreover,
+ifTis a set of left coset representatives of∆inΓthen eachΓ-orbit (x,y)Γcan be partitioned as
+(x,y)Γ=⋃
+α∈T(x,y)α∆.
+That is, eachΓ-orbit ofX⋊ηYcontains exactly t= [Γ:∆]∆-orbits. Therefore the number of
+Γ-orbits ofX⋊ηYis|O|
+t=k|Y|
+t. This proves Item(i). To prove Item(ii)just recall that if (x1,y1)
+and (x2,y2) are both in the same Γ-orbit and satisfy that y1=y2, then they are actually in the
+same ∆-orbit (seeProposition  4.2).It follows that if two∆-orbits (x1,y2)∆, (x2,y2)∆are contained
+in the same Γ-orbit and satisfy that y1=y2, then (x1,y1)∆=(x2,y2)∆. Therefore, the number
+of∆-orbits contained in the same Γ-orbit is bounded by|Y|but we just saw that this number is
+[Γ:∆]. Thus 1⩽[Γ:∆]⩽|Y|.
+Of course Item(i)holds for the group Γ(X⋊ηY), which implies that the number of orbits of
+X⋊ηYis
+k|Y|
+[Γ(X⋊ηY):∆]=k|Y|
+[Γ(X⋊ηY):Γ][Γ:∆]=k|Y|
+[Γ(X⋊ηY):Γ]ℓ.
+Now, because of Item(ii), the number t= [Γ(X⋊ηY):Γ]satisfies that
+tℓ= [Γ(X⋊ηY):Γ][Γ:∆] = [Γ(X⋊ηY):∆]⩽|Y|,
+which completes the proof of Item(iii).□
+Proposition  4.3generalises [18, Proposition 4.3], that says that the number of orbits of the
+truncation of ak-orbit mapMis either k, 3k/2 or 3k. Here we present a few other examples (see [10,
+Section 4] for details on how to see these operations as voltage operations).
+Example 4.4.IfPis ak-orbit n-polytope, the number of orbits of the pyramid overPis (n+2)k/t
+where 1⩽t⩽n+2.
+Example 4.5.IfPis ak-orbit n-polytope, the group Γ(X)×C2acts by automorphisms on the prism
+overX(more details inTheorem  6.1). Item(iii)ofProposition  4.3says that the number of orbits
+of this prism is2(n+1)k
+2t=(n+1)k
+tfor some 1⩽t⩽2(n+1)
+2=n+1.
+7
+I. Hubard, E. Mochán and A. Montero European Journal of Combinatorics 126 (2025) 104132
+Table 1
+Number of orbits of the Wythoffian operations over ak-orbit map. The setAis described in
+[10, Section 4] and corresponds to the ringed nodes in the Coxeter diagram of the corresponding
+operation (in the sense of [3, Section 5.7]).
+O A Diagram No. of orbits t⩽
+Medial {ρ1}2k
+t2
+Truncation {ρ0, ρ1}3k
+t3
+Truncation of the dual {ρ1, ρ2}3k
+t3
+Rhombitruncation {ρ0, ρ2}4k
+t4
+Omnitruncation {ρ0, ρ1, ρ2}6k
+t6
+Example 4.6.LetXbe a 3-maniplex (map), Oa Wythoffian operation and Athe set of reflections
+that fix a base vertex for the operation O. Then the number of orbits ofO(X) is given inTable  1.
+We need to emphasise the importance of the hypothesis of (Y, η) preserving connectivity.
+Without this hypothesis Item(ii)ofProposition  4.3might not hold and unusual examples arise. If
+Yis any premaniplex andη(W)=1 for every W∈Π(Y), thenX⋊ηYconsists of|X|disconnected
+copies ofY. Its automorphism group isΓ(Y)≀S|X|. The group Γ(X) (as a subgroup ofS|X|) acts on
+X⋊ηYby permuting the copies ofY. In general, the index ofΓ(X) inΓ(X⋊ηY) is larger than|Y|.
+Moreover, even if (Y, η) satisfies thatX⋊ηYis connected for a certain premaniplex X, if the
+operator (Y, η) does not preserve connectivity, then Item(ii)ofProposition  4.3might not hold:
+Example 4.7(Unstable Maps, See [15]).A non-orientable mapMisstableif every automorphism
+of its orientable double cover is a lift of an automorphism ofM; it is unstable otherwise. In [10,
+Example 3.5] we showed that we can see the orientable double cover as a voltage operator (2∅, µ)
+with 2∅the two-flag premaniplex with no semiedges andµthe voltage assignment that satisfies
+µ(iy)=rifor every 0⩽i⩽2 and y∈2∅. In our language, a stable mapMis a map that satisfies
+[Γ(M⋊µ2∅):Γ(M)]⩽2. In [15, Example 2], Jones shows a mapMon the Klein bottle with
+|Γ(M)| =8 such that the orientable double cover ofMis the regular toroidal map{4,4}(2,2);
+the automorphism group of this map has 64 elements. In this case bothMandM⋊µ2∅are
+connected butProposition  4.3does not hold because (2∅, µ) does not preserve connectivity: ifKis
+an orientable mapK⋊µ2∅consists of two isomorphic copies ofK.
+Unfortunately, many natural operations on maps, polyhedra and polytopes do not preserve
+connectivity when seen as voltage operations. As seen above, the orientable double cover is one of
+them, but similar examples arise naturally when we consider operations that are only interesting
+for a certain family Fof maniplexes (non-orientable, non-vertex-bipartite, etc.) and give as a result
+an element of the complementary family F. Often when we apply the operation to a maniplex X
+inFwe obtain several isomorphic copies ofX.
+Another family of examples of voltage operations that do not preserve connectivity arise when
+we need to make a choice when applying the operation (e.g. the snub operation or ‘‘truncate
+every second vertex’’). Often when seen as voltage operations the result is a family of disconnected
+maniplexes corresponding to each of the possible choices.
+5. F-actions and voltage operations
+In the previous section, we have characterised the automorphisms ofX⋊ηYthat are induced
+by the automorphisms ofXas those fixing theY-coordinate ofX⋊ηY. In this section we find a
+necessary condition so that all automorphisms ofX⋊ηYare induced by those ofX. Such a condition
+is given inTheorem  5.7in the language ofF-actions.
+F-actions were introduced by Orbanić, in [17], as a tool to understand quotients of maps and
+hypermaps. They can also be easily used to study maniplexes and polytopes and, as we shall see,
+8
+I. Hubard, E. Mochán and A. Montero European Journal of Combinatorics 126 (2025) 104132
+premaniplexes and, thus, voltage operations. The ideas are similar to some of those used by Hartley
+in [8,9] for abstract polytopes. In this section, we introduce F-actions and refer the reader to [17]
+for details.
+LetFbe a finitely generated and finitely presented group acting (on the left) transitively on a set
+Z, and letz0∈Zbe a fixed point that we shall callthe root. AnF-actionis a 4-tuple M=(ϑ ,G,Z,z0),
+where Gis a group that acts (on the left) faithfully and transitively onZ,ϑ:F→Gis a group
+epimorphism such that forz∈Zand f∈F,f·Fz=ϑ(f)·Gz, and·F,·Gdenote the (left) action of
+Fand G, respectively, onZ.
+A connected premaniplex Xcan be seen as aC-action (ϑ ,Mon(X),V(X),x0), where V(X) here
+denotes the set of flags ofX,x0is abaseflag, andϑ:C→Mon(X) the natural group epimorphism
+between Cand the monodromy group ofX.
+Given two F-actions M=(ϑM,GM,ZM,zM), and N=(ϑN,GN,ZN,zN), anF-action morphism
+between them consists of a pair (ϕ , ψ) such thatϕ:ZM→ZNis an onto mapping satisfying that
+ϕ(zM)=zN, andψ:GM→GNis a group epimorphism satisfying thatψ◦ϑM=ϑNand also that
+for allg∈GMand z∈ZM, we haveϕ(g·Mz)=ψ(g)·Nϕ(z), where ·M,·Nrepresent the action
+ofGMand GNonZMand ZN, respectively. If (ϕ , ψ) are both bijections, then we have anF-action
+isomorphism.
+LetXbe a connected premaniplex with base flag x0, and N:=StabC(x0). Then K=CoreC(N)
+is in fact the kernel {ω∈C|ωy=yfor ally∈X}of the action ofConX, and thus the action
+ofC/KonXis faithful, which says that Mon(X)=C/K. By [17, Proposition 3.1], theC-action
+(ϑ ,Mon(X),V(X),x) is isomorphic to theC-action (ϑ ,Mon(X),C/N,N). In other words, one may
+regard the premaniplex Xto have the flag setC/N, where the base flag x0corresponds toN. In fact,
+this is equivalent to regard Xas the coset graph (or Schreier graph) ∆(C,N,{r0,r1, . . . ,rn−1}) (see
+for example [12] for details in the case of maniplexes).
+Similarly, as in the case with maps and polytopes, [17, Theorem 3.6] implies the following result.
+Proposition 5.1. LetXbe a connected premaniplex with base flag x0, and let N=StabC(x0). Then
+there is an automorphism αωofXsatisfying that x0αω=ωx0if and only ifω∈Norm C(N), and further,
+Γ(X)∼=Norm C(N)/N.
+5.1.C-actions and voltage operations
+Throughout this section, letXbe a connected n-premaniplex with base flag x0and N:=
+StabCn(x0), and let (Y, η) be an (n,m)-voltage operator, lety0∈Ybe a root of the connected m-
+premaniplex Yand L:=StabCm(y0). Thus, as discussed above, we regard XandYas theC-actions
+(ϑX,Mon(X),Cn/N,N) and (ϑY,Mon(Y),Cm/L,L), respectively.
+Of course, whenever X⋊ηYis connected, it can be regarded as aC-action. In this case, we shall
+see that the stabiliser of (x0,y0) can be written in terms of the stabiliser ofx0and the morphism
+ζ:L→Cngiven byζ(ω)=η(ωy0).
+Lemma 5.2. Let x0and y0be the base flags ofXandY, respectively, so that(x0,y0)is the base flag
+ofX⋊ηY. ThenStabCm(x0,y0)=ζ−1(N). In particular, ifX⋊ηYis connected it may be regarded as
+theCm-action(ϑη,Mon(X⋊ηY),Cm/ζ−1(N), ζ−1(N)).
+Proof.Start by noticing that for anyω∈Lwe have that
+ω(x0,y0)=(η(ωy0)x0, ωy0)=(ζ(ω)x0, ωy0)=(ζ(ω)x0,y0). (5.1)
+Now, ω∈StabCm(x0,y0) implies that (x0,y0)=ω(x0,y0)=(η(ωy0)x0, ωy0), soω∈L. Hence, by
+(5.1), (x0,y0)=(ζ(ω)x0,y0), implying thatζ(ω)∈Nand thusω∈ζ−1(N).
+On the other hand, ifω∈ζ−1(N), thenω∈L(since ζ:L→Cn), andζ(ω)∈ζ(ζ−1(N))⊆N.
+Hence, (x0,y0)=(ζ(ω)x0, ωy0), which by(5.1)equals ω(x0,y0), implying thatω∈StabCm(x0,y0).
+We have proved that StabCm(x0,y0)=ζ−1(N). Again, by [17, Proposition 3.1], the connected
+component ofX⋊ηYcontaining the flag (x0,y0) may be regarded as theCm-action (ϑη,Mon(X⋊η
+Y),Cm/ζ−1(N), ζ−1(N)). This concludes the proof. □
+9
+I. Hubard, E. Mochán and A. Montero European Journal of Combinatorics 126 (2025) 104132
+By combiningProposition  5.1withLemma  5.2, we have the following result.
+Corollary 5.3. IfX⋊ηYis connected, thenαωis an automorphism ofX⋊ηYsatisfying that
+(x0,y0)αω=ω(x0,y0)if and only ifω∈Norm Cζ−1(N), and further,
+Γ(X⋊ηY)∼=Norm Cm(ζ−1(N))/ζ−1(N).
+Corollary  5.3implies that all symmetries ofX⋊ηYcome from elements of Norm Cm(ζ−1(N)). We
+may use this to characterise, in terms ofC-actions, when all the automorphisms ofX⋊ηYcome
+from automorphisms ofX.
+Proposition 5.4. IfX⋊ηYis connected and every automorphism ofΓ(X⋊ηY)is induced by an
+automorphism ofΓ(X), thenNorm C(ζ−1(N))⊆L. Moreover, if(Y, η)preserves connectivity, and
+Norm C(ζ−1(N))⊆L, then every automorphism ofΓ(X⋊ηY)is induced by an automorphism ofΓ(X).
+Proof.For the first part, byCorollary  5.3, ifω∈Norm C(ζ−1(N)), there exists αω∈Γ(X⋊ηY) such
+thatω(x0,y0)=(x0,y0)αω. Since αωis an automorphism ofX⋊ηYinduced by an automorphism
+ofX, we have that (x0,y0)αω=(x0α ,y0), for some α∈Γ(X). Hence, (η(ωy0)x0, ωy0)=ω(x0,y0)=
+(x0,y0)αω=(x0α ,y0), implying thatωy0=y0, soω∈L.
+For the second part, letα∈Γ(X⋊ηY). Since X⋊ηYis connected, there exists ω∈Cmsuch
+that (x0,y0)α=ω(x0,y0). ByCorollary  5.3ω∈Norm Cm(ζ−1(N))⊆L, and thusωy0=y0. Now
+(x0,y0)α=ω(x0,y0)=(η(ωy0)x0, ωy0)=(η(ωy0)x0,y0), and since (Y, η) preserves connectivity, by
+Proposition  4.2every automorphism ofΓ(X⋊ηY) is induced by an automorphism ofΓ(X).□
+5.2. Avoiding extra automorphisms in connectivity preserving operations
+We know thatΓ(X) acts by automorphisms ofΓ(X⋊ηY). Moreso, in Section4we showed
+that every automorphism ofΓ(X⋊ηY) that fixes theY-coordinate of one flag could be regarded
+as an automorphism ofXand, further, in the last section, we gave a characterisation, in terms of
+C-actions, of when every automorphism ofΓ(X⋊ηY) can be regarded as one fromX.
+In fact, we just showed that if we assume that (Y, η) preserves connectivity, thenΓ(X)=
+Γ(X⋊ηY) if and only if Norm C(ζ−1(N))⊆L. This implies that any symmetry ofX⋊ηYthat does
+not come fromΓ(X) (if any) is induced by an element of Norm C(ζ−1(N))\L.
+Since we have characterised this extra symmetry for operations that preserve connectivity, it
+shall prove useful to translateProposition  3.1to the language ofC-actions. Since ζ(ω)=η(ωy0), for
+ω∈L, then the natural translation is as follows.
+Corollary 5.5. The voltage operator(Y, η)preserves connectivity if and only ifYis connected andζ
+is onto. In particular, ζ(ζ−1(N))=N whenever(Y, η)preserves connectivity.
+Recall that if a premaniplex Zis regarded as theC-action (ϑ ,Mon(Z),C/K,K), for some K⩽C,
+then we abuse notation and refer toZasC/K.
+Lemma 5.6. LetXbe a connected n-premaniplex and let(Y, η)be an(n,m)-voltage operator that
+preserves connectivity. Ifυ∈Norm C(ζ−1(N))\L, thenXcovers Zυ, where Zυ=Cn/ζ(L∩Lυ).
+Proof.LetKυ:=L∩Lυ. By [17, Proposition 3.2] we have thatXcovers Zυif and only ifN⩽ζ(Kυ).
+Letω∈Nand observe that, byCorollary  5.5,ζ−1(ω)̸ = ∅. Take ˜ω∈ζ−1(ω) and note that
+ζ−1(ω)⊆ζ−1(N)⊆L, which implies that˜ω∈L.
+Nowυ∈Norm Cm(ζ−1(N)) implies that if we conjugate ˜ωbyυ−1, the result is again inζ−1(N),
+which is a subset ofL. That is,˜ωυ−1∈L. Moreover, ˜ω∈Limplies that˜ωυ−1∈Lυ−1, and therefore
+˜ωυ−1∈L∩Lυ−1. This in turn implies that˜ω∈L∩Lυ=Kυ, and thusζ(˜ω)∈ζ(Kυ). But˜ω∈ζ−1(ω)
+implies thatζ(˜ω)=ω, and therefore ω∈ζ(Kυ).□
+10
+I. Hubard, E. Mochán and A. Montero European Journal of Combinatorics 126 (2025) 104132
+Fig. 1.The truncation operator.
+The following result is an immediate consequence of the lemma.
+Theorem 5.7. If for eachυ∈Cm\L we have thatXdoes not coverZυdefined byZυ=Cn/ζ(L∩Lυ),
+then all the symmetries ofX⋊ηYare induced by symmetries ofΓ(X).
+FollowingLemma  5.6, for eachυ∈Cmwe setKυ:=L∩Lυ, andZυ:=C/ζ(Kυ). By definition,
+there is a bijection between the sets{Kυ|υ∈C}and{Zυ|υ∈C}. Moreover, there is a surjective
+function from{Lυ|υ∈Cm}to{Kυ|υ∈Cm}that, in general, is not a bijection. This implies that
+|{Zυ|υ∈C}|⩽|{Lυ|υ∈C}| = [C:Norm C(L)].
+Now observe that the cosets of Norm C(L) are in correspondence with the orbits ofΓ(Y). In fact, by
+Proposition  5.1:
+(υNorm C(L))y0=υ(Norm C(L)y0)=υ(y0Γ(Y))=(υy0)Γ(Y).
+It follows that[C:Norm C(L)]coincides with the number of orbits ofYunder the action ofΓ(Y).
+Therefore, we have the following result.
+Lemma 5.8. The number of premaniplexes Zυis bounded by the number of flag orbits ofYunder
+Γ(Y).
+Example 5.9.As we pointed out in the introduction, the truncation is one of the classical operations
+and was studied in [18]. In particular, we observe that [18, Proposition 4.4] can be interpreted
+as follows: If the truncation of a mapMhas more symmetries thanM, thenMmust cover
+the premaniplex 2{0,1}(the premaniplex inFig. 3). To see this proposition as a particular case of
+Theorem  5.7, consider the truncation operator (Y, η) described inFig. 1, together with a base flag
+y0. LetMbe a map (i.e. a 3-maniplex). If the truncation ofMhas more symmetries thanM,
+Theorem  5.7andLemma  5.8tell us that it must cover either Zr1orZr2r1. As one can see in [18],
+L∩Lr1=L∩Lr2r1=⟨
+r0,rr1
+0,rr1r2
+0⟩
+. By calculating the voltages of the paths based ony0induced by
+these generators we see thatζ(L∩Lr1)=ζ(L∩Lr2r1)=⟨
+r0,r1,rr2
+1⟩
+, which is exactly the stabiliser of
+any vertex of2{0,1}. Therefore, Zr1=Zr2r1=2{0,1}.
+Note that to useTheorem  5.7, one has to check that for eachυ∈Cm,Xdoes not cover Zυ.
+This might seem like a lot of work, butLemma  5.8bounds the number of tests needed by the flag
+orbits ofYunder Γ(Y), which is itself bounded by the number of flags ofY. This means that if our
+operators have few flags, the number of tests is small.
+Moreover, if there is some ω∈L\Lυ, then (L∩Lυ)ω=L∩Lω υ, which in turn implies thatζ(L∩Lυ)
+andζ(L∩Lω υ) are conjugates. Then, the main results of [8] say thatZυandZω υare isomorphic. In
+terms of premaniplexes, this means that if identifying y0with y=υy0would force us to identify
+y0with y1=ω υy0, then the premaniplexes ZυandZω υare isomorphic. Using this, we get an even
+smaller number ofZυto check, for example, if the only quotient ofYis1m, we only have to find
+oneZυ(υ /∈L) and all others will be isomorphic.
+However, there is an inconvenience withTheorem  5.7: it may happen that one of theZυis
+1n: then-premaniplex with only one point. This premaniplex is covered by any other premaniplex
+11
+I. Hubard, E. Mochán and A. Montero European Journal of Combinatorics 126 (2025) 104132
+Fig. 2.Voltage operator for the prism over ann-polytope.
+(of the same rank), so in this caseTheorem  5.7does not give any useful information. This might
+look particularly discouraging when one notices that ifυ∈Norm Cm(L) (that is, when there is an
+automorphism ofYmapping y0toυy0), thenZυ=1n. Automorphisms ofX⋊ηYinduced by those
+ofYare studied in the next section.
+6. Automorphisms induced byY
+We have discussed in Section5thatTheorem  5.7does not help us avoid automorphisms of
+X⋊ηYcoming fromY. These automorphisms must be studied on their own, so we dedicate this
+section to them. Later on, we reformulateTheorem  5.7considering the analysis of this section (see
+Theorem  6.10).
+Symmetries coming fromYcan be divided into two classes: those that always occur and those
+that may or may not occur depending onX. We will start by studying the first class.
+The prism over any polygon has a symmetry swapping the two lids. More generally, the prism
+over any premaniplex Xadmits an automorphism that swaps two facets isomorphic toX. This
+symmetry can be seen as a symmetry of the prism operator itself; inFig. 2, this symmetry is
+a horizontal reflection. Symmetries of the premaniplex Ysuch as the one described above often
+induce additional symmetry onX⋊ηYregardless of the choice ofX, they do exactly when their
+symmetry preserves the voltage assignment η. We shall now formally explain what this means.
+We say that an automorphism τofYlifts toX⋊ηYif there is an automorphism ˜τofX⋊ηY
+such that for every (x,y)∈X⋊ηY,
+(x,y)˜τ=(x′,yτ);
+or equivalently, that the following diagram commutes:
+X⋊ηY X ⋊ηY
+Y Y˜τ
+τ
+(6.1)
+where the vertical arrows are the natural projections. The automorphism ˜τis called aliftofτ; we
+also say that˜τprojectstoτ.
+Note that the automorphisms ofXacting onX⋊ηYare lifts of the identity inY, and ifXis
+connected and (Y, η) preserves connectivity, byProposition  4.2, then every lift of the identity is an
+12
+I. Hubard, E. Mochán and A. Montero European Journal of Combinatorics 126 (2025) 104132
+automorphism ofX.
+Of course, eachτ∈Ymay have more than one lift. In particular, ifXhas non-trivial symmetries,
+then the identity inYhas more than one lift (actually, at least as many as symmetries ofX).
+Symmetries ofYpreserving ηalways lift; more precisely:
+Theorem 6.1. Let(Y, η)be a voltage operator. Suppose Yhas an automorphism τsuch that
+η(Wτ)=η(W) (6.2)
+for all paths W∈Π(Y). Then, for every n-premaniplex X,τhas a lift˜τ∈Γ(X⋊ηY)satisfying
+(x,y)˜τ=(x,yτ)
+for every(x,y)∈X×Y.
+Proof.Let˜τbe defined as above. Then, for alli∈ {0,1, . . . ,n−1},
+((x,y)i)˜τ=(η(iy)x,yi)˜τ
+=(η(iy)x,(yi)τ)
+=(η(iy)x,(yτ)i)
+=(η(iyτ)x,(yτ)i)
+=(x,yτ)i
+=((x,y)˜τ)i.
+This proves that˜τis an automorphism ofX⋊ηY.□
+The proof of the above theorem implies the following result.
+Corollary 6.2. Let(Y, η)be a voltage operator and letΓ(Y, η)denote the subgroup ofΓ(Y)consisting
+of all automorphisms τofYsatisfying(6.2). Then⟨Γ(X),Γ(Y, η)⟩ =Γ(X)×Γ(Y, η).
+Ifσ∈Γ(X) andτ∈Γ(Y, η), if we consider the action ofΓ(Y, η) given inTheorem  6.1, then
+byCorollary  6.2, (x,y)(σ , τ)=(xσ ,yτ), for (x,y)∈X⋊ηY. Thus, (σ , τ) can be thought of as a lift
+ofτ. That is, every automorphism ofXgives a lift ofτ(whenever τ∈Γ(Y) lifts).
+Note that there might be automorphisms ofX⋊ηYthat are not inΓ(X)×Γ(Y, η). For example,
+if (Y, η) is the medial operator (seeFig. 3),Ydoes not have an automorphism satisfying the
+conditions of the above theorem. However, it is well-known that whenever Xis self-dual, X⋊ηY
+has symmetries not coming from the automorphisms ofX(see [18, Theorem 4.1]). Such extra
+symmetry can be thought of as an automorphism τofYthat does not preserve the voltages. Such
+symmetries do not necessarily lift for every premaniplex. Now, we want to explore these cases when
+the automorphisms τof the operators lift only for some premaniplexes X, just as in the example
+of the medial operator.
+Let (Y, η) be an (n,m)-voltage operator. Suppose that there exists τ∈Γ(Y) such that there
+exists a group homomorphism τ#:Cn→Cnsatisfying that
+τ#(η(W))=η(Wτ), (6.3)
+for every W∈Π(Y). We shall see inProposition  6.4that, under certain conditions, suchτlifts to
+an automorphism ofX⋊ηY. We need to define some things in order to be able to understand the
+conditions ofProposition  6.4. We can useτ#to define a new voltage operator (1n, τ#), where the
+semi-edge of colour iof1nhas voltage τ#(ri) for alli∈ {0,1, . . . ,n−1}. Note that by doing this we
+are abusing notation: τ#is a homomorphism, and we are also using τ#for the voltage assignment.
+Observe that whenever τ#is an automorphism ofCnthis new voltage operation can be though as
+ad-automorphism (see [10, Example 3.1] and [13]).
+Now, given a premaniplex Xwe define the premaniplex Xτ#as the premaniplex X⋊τ#1n.
+13
+I. Hubard, E. Mochán and A. Montero European Journal of Combinatorics 126 (2025) 104132
+Fig. 3.The medial operator.
+Theorem 6.3. Let(Y, η)be an(n,m)-voltage operator and letτ∈Γ(Y)be such thatτ#:Cn→Cn
+satisfying(6.3)exists. Then, for every n-premaniplex X, the premaniplex Xτ#⋊ηYis isomorphic to
+X⋊ηY.
+Proof.Using [10, Theorem 6.1] we get that:
+Xτ#⋊ηY=(X⋊τ#1n)⋊ηY=X⋊θ(1n⋊ηY),
+where, ifz0is the only vertex of1n,θ(ω(z0,y))=τ#(η(wy)z0). Note that by definition, 1n⋊ηY∼=Y.
+This means that one can think thatθis actually a voltage assignment onYsuch thatθ(ωy):=
+τ#(η(ωy))=η(ωyτ). Therefore, Xτ#⋊ηY=X⋊θY, so we actually need to prove thatX⋊θYis
+isomorphic toX⋊ηY.
+We claim that the function (x,y)↦ →(x,yτ) is an isomorphism fromX⋊θYtoX⋊ηY. Since τis
+an automorphism ofY, it is clearly a bijection, so to prove that it is an isomorphism, we only need
+to prove that the mapping preserves i-adjacencies for alli∈ {0,1, . . . ,n−1}. When we calculate
+thei-adjacent vertex of (x,y) inX⋊θYwe get
+(x,y)i=(θ(iy)x,yi)=(τ#(η(iy))x,yi)=(η(iyτ)x,yi),
+and this maps to
+(η(iyτ)x,(yi)τ)=(η(iyτ)x,(yτ)i)
+which is thei-adjacent vertex to (x,yτ) inX⋊ηY.□
+As expected, a clear example ofTheorem  6.3is the fact that a polyhedron and its dual have the
+same medial. We can see that the medial operator has a unique non-trivial symmetry τ(Fig. 3).
+This symmetry interchanges the semi-edge with voltage r0with the one with voltage r2, and
+also interchanges the semi-edges with voltage r1. This means that (13, τ#) is the duality operator
+(13,[r2,r1,r0]).Theorem  6.3tells us that every 3-premaniplex Xhas the same medial as its dual
+Xτ#=X∗. Similarly, considering [10, Figure 4 and Figure 7, respectively], one can see that the snub
+of a polyhedron and its dual are isomorphic, and the trapezotope over a polytope and its dual are
+isomorphic (the latter can be seen in the figure when considering the central inversion on the cube
+Zn
+2, which maps every vector to its logic conjugate).
+In the case when Xτ#is isomorphic toX,Theorem  6.3does not give any new information.
+However, in this case, we see that the isomorphism between Xτ#andXtogether withτinduces a
+new automorphism of the product X⋊ηY, as we see in the following theorem.
+Proposition 6.4. LetXbe a premaniplex and let(Y, η)be a voltage operator. Letτ∈Γ(Y)be such
+thatτ#:Cn→Cnsatisfies(6.3)exists, and suppose thatXτ#is isomorphic toX. Thenτlifts toX⋊ηY.
+14
+I. Hubard, E. Mochán and A. Montero European Journal of Combinatorics 126 (2025) 104132
+Proof.Letϕ:X→Xτ#be an isomorphism. Note that, due to how the monodromy ofXτ#is
+defined, this means that (η(W)x)ϕ=η(Wτ)(xϕ) for every path W∈Π(Y) and every vertex xinX.
+We claim that the mapping (x,y)↦ →(xϕ ,yτ) is an automorphism ofX⋊ηY. In fact, for all
+i∈ {0,1, . . . ,n−1}, the vertex (x,y)i=(η(iy)x,yi) is mapped to
+((η(iy)x)ϕ ,(yi)τ)=((η(iy)x)ϕ ,(yτ)i)
+=(η(i(yτ))(xϕ),(yτ)i).
+Finally we observe that (η(i(yτ))(xϕ),(yτ)i) is exactly thei-adjacent vertex to (xϕ ,yτ).□
+Note that for any W∈Π(Y),η(W) is an element ofCn, and thus one can define η(W) as the
+corresponding element of Mon(X). That is, for every x∈X,η(W)x=η(W)x. Observe further that
+whenever X∼=Xτ#, the morphism τ#:Cn→Cninduces a morphism τ#:Mon(X)→Mon(X) that
+satisfies
+τ#(η(W))=η(Wτ), (6.4)
+for every W∈Π(Y). However, given τ∈Γ(Y), there may be a morphism τ#satisfying(6.4)for
+some X, even ifτ#:Cn→Cndoes not exist. In such a case, we may define Xτ#as the premaniplex
+with the same flags asX, and the i-adjacencies given byxi=τ#(ri)x, for every x∈Xand
+i∈ {0,1, . . . ,n−1}. The proof of the following result is exactly the same as that ofProposition  6.4.
+Theorem 6.5. LetXbe an n-premaniplex and let(Y, η)be an(n,m)-voltage operator. Letτ∈Γ(Y)
+be such thatτ#:Mon(X)→Mon(X)satisfying(6.4)exists. Suppose thatXis isomorphic toXτ#. Then
+τlifts toX⋊ηY.
+In fact, whenever we restrict ourselves to connected premaniplexes, all the automorphisms ofY
+that lift to automorphisms ofX⋊ηYare precisely the ones covered in the above theorem, as we
+shall see in the following result.
+Theorem 6.6. LetXbe a connected n-premaniplex and let(Y, η)be an(n,m)-voltage operator that
+preserves connectivity. Letτ∈Γ(Y)be an automorphism that lifts. Then there exists a morphism
+τ#:Mon(X)→Mon(X)that satisfies(6.4), andX∼=Xτ#.
+Proof.Let˜τbe a lift ofτ. There exists a function θ:X⋊ηY→Csuch that (x,y)˜τ=(θ(x,y)x,yτ),
+for all (x,y)∈X⋊ηY.
+By using the same argument as the one used at the beginning of the proof ofLemma  4.1, one
+can see that ify,y′∈Y, thenθ(x,y)x=θ(x,y′)x, implying that the action ofθonxdoes not depend
+on theY-coordinate, and thus we may denote θ(x,y) simply asθ(x). We shall abuse the notation
+and refer toθ(x) as an element ofCor its corresponding element in Mon(X), depending on the
+situation, as we shall only useθ(x) to act on elements ofX.
+Letω∈Cn. Then, similar to the proof ofLemma  4.1, on the one hand, we have that
+(ω(x,y))˜τ=(η(ωy)x, ωy)˜τ=(θ(η(ωy)x)η(ωy)x, ωyτ).
+On the other hand,
+ω((x,y)˜τ)=ω(θ(x)x,yτ)=(η(ωyτ)θ(x)x, ωyτ).
+Since ˜τ∈Γ(X⋊ηY), then (ω(x,y))˜τ=ω((x,y)˜τ), implying that
+θ(η(ωy)x)η(ωy)x=η(ωyτ)θ(x)x,
+which in turn implies that
+θ(η(ωy)x)η(ωy)x=η(ωyτ)θ(x)x, (6.5)
+15
+I. Hubard, E. Mochán and A. Montero European Journal of Combinatorics 126 (2025) 104132
+Letϕ:X→Xdefined byxϕ=θ(x)x. We claim thatϕis a bijection. First note that
+˜τ∈Γ(X⋊ηY), implies that (˜τ)−1is well defined. Hence, given x∈X, and y∈Ywe have that
+(x,y)(˜τ)−1=(x′,y′), for some x′∈Xand y′∈Y. This implies that (x,y)=(x′,y′)˜τ=(θ(x′)x′,y′τ),
+and sox=θ(x′)x′tells us thatϕis onto. On the other hand, ifθ(x)x=θ(x′)x′, then fory∈Y,
+(x,y)˜τ=(θ(x)x,yτ)=(θ(x′)x′,yτ)=(x′,y)˜τ. Since ˜τis a bijection, then x=x′.
+Let us now define τ#:Mon(X)→Mon(X) such that forω∈Cnand x∈X,
+τ#(ω)x=(ω(xϕ−1))ϕ;
+it is straightforward to see thatτ#(ω1ω2)=τ#(ω1)τ#(ω2), soτ#is a morphism.
+Moreover, by definition we have that
+τ#(ω)(xϕ)=(ω(x))ϕ=θ(ω(x))ωx.
+Then, for anyωy∈Πy(Y) we have that, by(6.5),
+τ#(η(ωy))(xϕ)=θ(η(ωy)x)η(ωy)x=η(ωyτ)θ(x)x=η(ωyτ)(xϕ).
+Since ϕis a bijection, thenτ#(η(ωy)) andη(ωyτ) are elements of Mon(X) that act in the same way
+in every element ofX, implying that
+τ#(η(ωy))=η(ωyτ),
+which in turn implies thatτ#is a morphism that satisfies(6.4). The isomorphism between Xand
+Xτ#is given byϕ.□
+A natural question to ask after the last two results is:
+Question 6.7. Ifτ∈Yinduces an automorphism τ#ofMon(X)satisfying(6.4), for some premaniplex
+X, isXisomorphic toXτ#?
+Theorems  6.5and6.6offer a characterisation of when an automorphism ofYlifts to an
+automorphism ofX⋊ηY. A direct consequence is that the setΓof automorphisms ofYthat lift to
+X⋊ηYis a subgroup ofΓ(Y). Furthermore, if˜Γdenotes the set of automorphisms ofX⋊ηYthat
+project toΓ, then ˜Γis a group and there is a surjective group homomorphism π:˜Γ→Γ.
+On the other hand, ifXis connected and (Y, η) preserves connectivity,Proposition  4.2charac-
+terises the automorphisms ofXas the automorphisms ofX⋊ηYthat project toidY. In particular,
+we can think ofΓ(X) as a subgroup of˜Γ. In other words, we have proved the following result.
+Proposition 6.8. LetXbe a connected premaniplex, and(Y, η)be a voltage operator that preserves
+connectivity. LetΓ⩽Γ(Y)the group of automorphisms that lift and let˜Γ⩽Γ(X⋊ηY)the subgroup
+of automorphisms ofX⋊ηYthat project toΓ. Then˜Γis a group extension ofΓ(X)byΓ. That is, there
+exists a sequence of homomorphisms Γ(X) ˜Γ Γι π
+Such thatι(Γ(X))=ker(π).
+In particular, it follows thatι(Γ(X))◁˜Γ,˜Γ/ι(Γ(X))∼=Γand ifXandYare finite, then
+|˜Γ| = |Γ(X)∥Γ|.
+As expected, the medial operator is an example ofProposition  6.4: ifτis the non-trivial
+symmetry ofY, as discussed above, the voltage operator (13, τ#) is the dual operator in rank 3.
+That is,Xτ#is the dual ofX. Hence, the theorem says that when Xis self-dual, then the symmetry
+τofYlifts to˜τ∈Γ(X⋊ηY). Note that such a lift sends a flag (x,y) ofX⋊ηYto a flag (xδ ,yτ),
+where δis a duality. In fact, in this case,Γ(X⋊ηY) has no other elements than those coming from
+Γ(X) and the lifts ofτ. Since Γ(X) always has index 2 inΓ(X⋊ηY), it is normal.
+Whenever Xis a self-dual premaniplex such that there exists a duality δof order 2, then
+Γ(X⋊ηY)∼=Γ(X)⋊⟨δ⟩∼=Γ(X)⋊C2. On the other hand, ifXdoes not have a duality of order 2
+(see [14]), then the automorphims that do not come fromΓ(X) are lifts ofτ, and thus send (x,y)
+to (xδ ,yτ), where δis a duality. Since no duality has order two, no lift ofτhas order two, implying
+thatΓ(X⋊ηY) cannot be seen as a semi-direct product ofΓ(X) byC2. In particular, this implies
+that the extension ofProposition  6.8does not necessarily split.
+16
+I. Hubard, E. Mochán and A. Montero European Journal of Combinatorics 126 (2025) 104132
+As pointed out before,Theorems  6.5and6.6characterise the automorphisms ofYthat lift to an
+automorphism ofX⋊ηY. In fact, when we ask for connectivity the result is stronger, as we shall
+see, in the sense that if an automorphism ofX⋊ηYacts like a lift ofτ∈Γ(Y) in one flag, it must
+actually be a lift ofτ.
+Lemma 6.9. LetX⋊ηYbe connected. Letγ∈Γ(X⋊ηY)andτ∈Γ(Y). If for some(x0,y0)∈X⋊ηY
+and x1∈Xit happens that(x0,y0)γ=(x1,y0τ), thenγis a lift ofτ.
+Proof.Let (x,y)∈X⋊ηY. SinceX⋊ηYis connected, there exists ω∈Csuch that (x,y)=ω(x0,y0).
+Note that in particular ωy0=y. Then,
+(x,y)γ=(ω(x0,y0))γ
+=ω((x0,y0)γ)
+=ω(x1,y0τ)
+=(η(ω(y0τ))x1, ωy0τ)
+=(η(ω(y0τ))x1,yτ).□
+Note thatProposition  4.2is actually a corollary of the above lemma, in the particular case where
+τis the identity automorphism ofY. With this in mind, we state the following theorem, which is
+similar toTheorem  5.7. Recall that L=StabCm(y0) andZυ=Cn/ζ(L∩Lυ).
+Theorem 6.10. LetXbe a connected premaniplex and(Y, η)a voltage operator that preserves
+connectivity. If for eachυ∈Cm\Norm Cm(L)we find thatXdoes not coverZυ, then every automorphism
+ofX⋊ηYis a lift of an automorphism ofY.
+Proof.Letx0and y0be the base flags ofXandY, respectively. Letγ∈Γ(X⋊ηY), and letυ∈Cm
+be such that (x0,y0)γ=υ(x0,y0). Then, byCorollary  5.3,υ∈Norm Cm(ζ−1(N)).
+By hypothesis, ifυ /∈Norm Cm(L), thenXdoes not cover Zυ. On the other hand, byLemma  5.6,
+ifυ∈Norm Cm(ζ−1(N))\L, thenXcovers Zυ. This implies thatυ∈Norm Cm(L) (note that
+L⊆Norm Cm(L)).
+Proposition  5.1implies now that there exists τ∈Y, such thatυy0=y0τ. ByLemma  6.9we
+have thatγis a lift ofτ. (Note that in particular ifυ∈L, thenγ∈Γ(X) (seeProposition  5.4), and
+thusγis a lift of the identity automorphism ofY.)□
+Because ofLemma  5.8, the number of premaniplexes Zυto check is at most the number of orbits
+ofYminus one.
+7. Concluding remarks
+Theorem  6.10tells us that if a connected premaniplex Xdoes not cover the premaniplexes of a
+(usually small) family depending onY, all the automorphisms ofX⋊ηYcan be described in terms
+of the automorphisms ofXandY. UsingTheorem  6.5,Corollary  6.2and the wayΓ(X) is embedded
+inΓ(X⋊ηY) (as described in Section3), we can summarise the description ofσ∈Γ(X⋊ηY) as
+a lift of an automorphism ofYas follows:
+The general lifts.The automorphism σis the lift of an automorphism τ∈Γ(Y) such that there
+exists τ#:Mon(X)→Mon(X) satisfying(6.4),ϕ:X→Xτ#is an isomorphism and
+(x,y)σ=(xϕ ,yτ)
+for every (x,y)∈X⋊ηY(seeTheorem  6.5);
+The lifts when τ#is the identity inMon(X).A particular case of the above is when τ#is the identity
+in Mon(X), thenXτ#=Xandϕis actually an automorphism ofX. In this case,σ∈Γ(X)×Γ(Y, η)
+(seeCorollary  6.2);
+17
+I. Hubard, E. Mochán and A. Montero European Journal of Combinatorics 126 (2025) 104132
+Fig. 4.The cube{4,3}as the truncated {2,4}, which is itself the medial of{2,2}.
+The lifts induced by the identity automorphism ofY.We now see a particular case of the above
+situation. That is, ifτ=idY(which in particular implies thatτ#is the identity in Mon(X)), then
+σ∈Γ(X) (seeLemma  4.1).
+It is now evident that the additional symmetries of the medial of a self-dual polyhedron or that of
+the prism over a polytope that is not a prism are included in the preceding overview. Nevertheless,
+for certain premaniplexes Xand operators (Y, η), there may be automorphisms ofX⋊ηYthat do
+not fit the above description. Examples of this include the prism over hypercubes or the truncation
+of some maps.
+Let us go back to consider the truncation operator (Y, η) (seeFig. 1). ThenYhas no non-trivial
+automorphisms. Therefore, the above discussion seems to imply that the only automorphisms of
+X⋊ηYthat we consider are those fromX. However, for example, the truncation of the regular
+tessellation of the plane by equilateral triangles is again a regular tessellation, so it actually has
+symmetries not coming from those of the triangular tessellation. Another example of a truncation
+with more symmetry than the one originating fromXis that of the map on the sphere of type{2,4}:
+it is straightforward to see that if (Y, η) is the truncation operator, thenX⋊ηYis the cubeP= {4,3}
+and the symmetries of the cube induced byXare those that do not move a pair of opposite faces
+(seeExample  5.9and [18, Propositions 4.3 and 4.4], for more details about the truncation having
+additional symmetry than that coming from the original map).
+Observe that the key to understanding the possible additional symmetry in the truncation is to
+recognise Xitself as the result of another operation: the medial operation. Let us explain this idea
+18
+I. Hubard, E. Mochán and A. Montero European Journal of Combinatorics 126 (2025) 104132
+Fig. 5.If (Z, ϑ) and (Y, η) are the medial and truncation operators, respectively, then (Z⋊ηY, θ) is the omnitruncation,
+where θ=θ(ϑ , η).
+a bit more in more detail.
+Again, denote the truncation operator by (Y, η), and let (Z, ϑ) be the medial operator. Consider
+W={2,2}(seeFig. 4), and observe thatW⋊ϑZis precisely X, the map{2,4}. By [10, Theorem
+6.1],P=X⋊ηY∼=W⋊θ(Z⋊ηY), where θ=θ(ϑ , η).
+Now, as seen inFig. 5, (Z⋊ηY, θ) is the omnitruncation operator (see [10, Fig. 3E]). The
+premaniplex (Z⋊ηY) has S3as automorphism group, and every automorphism τinduces an
+isomorphism τ#:Mon(W)→Mon(W) (notice thatΓ(W)∼=Mon(W)∼=⟨r0⟩×⟨r1⟩×⟨r2⟩) satisfying
+(6.4).Theorem  6.5implies thatτlifts toP=W⋊θ(Z⋊ηY). It follows fromProposition  6.8that
+the group ˜Γ⩽(P) induced by lifts ofΓ(Z⋊ηY) is a group extension ofΓ(W) byS3. In particular,
+|˜Γ| =48=Γ(P), that is, every automorphism of the group Pis a lift of an automorphism of
+Z⋊ηY.
+One may wonder about the regular triangle tessellation and its truncation: can we understand
+the additional symmetry in a similar matter? The answer is yes!, if done with caution. In this case,
+as shown inFig. 6, the suitable Wis (the flag-graph of) the regular (universal) hypermap of type
+(3,3,3) (see [2] for details about regular hypermaps).
+In other words, if we extend our universe and drop the condition in our definition of premaniplex
+that ifi,j∈{0, . . . ,n−1}are such that|i−j|⩾2, then the alternating paths of length 4 with
+colours i,jare closed, then we have precomplexes(see [19] for the definition of a complex). In this
+way, we can always understand the additional symmetry of the truncation as a result of the original
+premaniplex being the medial of a precomplex. This can be seen as follows: by [18, Proposition 4.4]
+if the truncation ofXhas extra symmetry, thenXcovers the premaniplex 2{0,1}(seeExample  5.9).
+This implies that the faces ofXcan be coloured with two colours in such a way that faces that share
+an edge have different colours. Hence, we can think of the hypermap Wwhose faces correspond
+to the faces of one colour, its vertices to the faces of the other colour, and its hyperedges to the
+vertices ofX. It is not difficult then to convince oneself thatXis the medial ofW. Hence, the
+possible additional symmetry of Tr(X) appears if and only ifWis self-dual. Note further that the
+19
+I. Hubard, E. Mochán and A. Montero European Journal of Combinatorics 126 (2025) 104132
+Fig. 6.The tiling {3,6}can be seen as the medial of the hypermap (3,3,3).
+premaniplex Zactually coincides with the premaniplex 2{0,1}. This is not coincidence, the maniplex
+2{0,1}is precisely aZυ, where Zυis as inLemma  5.6(seeExample  5.9).
+That is, in the particular case of the truncation, we have been able to understand the additional
+symmetry. Can we do the same for any other voltage operations? Note that, for the prism or pyramid
+operators, this has been answered in [6], where they are considered as specific products: the prism
+(resp. pyramid) overPhas additional symmetry if and only ifPis itself a prism (resp. pyramid)(this
+is a particular case of [6, Theorem A]). That is, the additional symmetry of the prism or pyramid of
+an-maniplex Xarises when Xcan be written as the prism or pyramid of an (n−1)-maniplex.
+20
+I. Hubard, E. Mochán and A. Montero European Journal of Combinatorics 126 (2025) 104132
+As voltage operations, if (Yn, ηn) denotes the prism or pyramid operator over ann-polytope, [6,
+Theorem A] says thatP⋊ηnYnhas additional symmetry if and only ifP∼=W⋊ηn−1Yn−1, for some
+(n−1)-polytope W. In particular, Pcovers Yn−1. On the other hand,Theorem  6.10tells us that if
+P⋊ηnYnhas additional symmetry, thenPcovers some premaniplex Zυ(defined as inLemma  5.6).
+For small values ofn, with the help of GAP [1] one can see that, in fact,Yn−1coincides with all the
+Zυcoming fromTheorem  6.10.
+This leads us to finish this paper with the following conjecture.
+Conjecture.LetXbe a connected premaniplex and let (Y, η) be a voltage operator that preserves
+connectivity. IfXcannot be regarded asX∼=W⋊ϑZυ, for a precomplex Wand a connectivity-
+preserving operator (Zυ, ϑ), where Zυis defined as inLemma  5.6, then all the elements of
+Γ(X⋊ηY) are lifts of automorphisms ofY.
+Acknowledgements
+The authors thank the financial support of CONAHCyT grant A1-S-21678. This paper was com-
+pleted while the second author held a Post Doctoral Research Associate position in the Department
+of Mathematics at Northeastern University. The third author was supported by the ARIS research
+projects J1-1691, N1-0216, J1-4351, as well as the ARIS research and infrastructure program
+P1-0294.
+References
+[1]GAP – Groups, Algorithms, and Programming, Version 4.12.0, 2022, The GAP Group, GAP.
+[2]D. Corn, D. Singerman, Regular hypermaps, European J. Combin. 9 (4) (1988) 337–351,http://dx.doi.org/10.1016/
+S0195-6698(88)80064-7 .
+[3]H.S.M. Coxeter, Regular Polytopes, third ed., Dover Publications, Inc., New York, 1973, p. xiv+321,http://dx.doi.org/
+10.2307/1573335 .
+[4]G. Cunningham, M. Del Río-Francos, I. Hubard, M. Toledo, Symmetry type graphs of polytopes and maniplexes, Ann.
+Comb. 19 (2) (2015) 243–268,http://dx.doi.org/10.1007/s00026-015-0263-z .
+[5]J. Garza-Vargas, I. Hubard, Polytopality of maniplexes, Discrete Math. 341 (7) (2018) 2068–2079,http://dx.doi.org/
+10.1016/j.disc.2018.02.017 .
+[6]I. Gleason, I. Hubard, Products of abstract polytopes, J. Combin. Theory Ser. A 157 (2018) 287–320,http://dx.doi.org/
+10.1016/j.jcta.2018.02.002 .
+[7]J.L. Gross, Voltage graphs, Discrete Math. 9 (1974) 239–246,http://dx.doi.org/10.1016/0012-365X(74)90006-5 .
+[8]M.I. Hartley, All polytopes are quotients, and isomorphic polytopes are quotients by conjugate subgroups, Discrete
+Comput. Geom. 21 (2) (1999) 289–298,http://dx.doi.org/10.1007/PL00009422 .
+[9]M.I. Hartley, More on quotient polytopes, Aequationes Math. 57 (1) (1999) 108–120.
+[10]I. Hubard, E. Mochán, A. Montero, Voltage operations on maniplexes, polytopes and maps, Combinatorica (2023)
+http://dx.doi.org/10.1007/s00493-023-00018-7 .
+[11]I. Hubard, A. Orbanić, A. Ivić Weiss, Monodromy groups and self-invariance, Can. J. Math. J. Can. de MathéMatiques
+61 (6) (2009) 1300–1324,http://dx.doi.org/10.4153/CJM-2009-061-5 .
+[12]I. Hubard, M. Toledo, Sparse groups need not be semisparse, Preprint.
+[13]L.D. James, Complexes and Coxeter groups—Operations and outer automorphisms, J. Algebra 113 (2) (1988) 339–345,
+http://dx.doi.org/10.1016/0021-8693(88)90163-9 .
+[14]S. Jendrol’, A noninvolutory self-duality, Discrete Math. 74 (3) (1989) 325–326,http://dx.doi.org/10.1016/0012-
+365X(89)90144-1 .
+[15]G.A. Jones, Unstable maps, Acta Math. Univ. Comen. 88 (2) (2019) 341–350.
+[16]P. McMullen, E. Schulte, Abstract regular polytopes, in: Encyclopedia of Mathematics and its Applications, vol. 92,
+Cambridge University Press, Cambridge, 2002, p. xiv+551,http://dx.doi.org/10.1017/CBO9780511546686 .
+[17]A. Orbanić, F-actions and parallel-product decomposition of reflexible maps, J. Algebraic Combin. 26 (4) (2007)
+507–527,http://dx.doi.org/10.1007/s10801-007-0069-0 .
+[18]A. Orbanić, D. Pellicer, A.I. Weiss, Map operations and k-orbit maps, J. Combin. Theory Ser. A 117 (4) (2010) 411–429,
+http://dx.doi.org/10.1016/j.jcta.2009.09.001 .
+[19]S. Wilson, Maniplexes: Part 1: maps, polytopes, symmetry and operators, Symmetry 4 (2) (2012) 265–275,http:
+//dx.doi.org/10.3390/sym4020265 .
+21

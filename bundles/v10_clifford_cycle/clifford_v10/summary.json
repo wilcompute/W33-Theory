@@ -1,5 +1,3 @@
-{
-  "finding": "For all 5 nontrivial 2T cycles (under the v3 witness), the Clifford word in port generators reduces to the pseudoscalar e0*e1*e2 (mask=7), up to sign.",
-  "interpretation": "In Cl(3), the pseudoscalar behaves like the imaginary unit i (central, squares to -1). Thus the transport loops naturally generate a complex structure from purely discrete port moves.",
-  "note_on_commutator": "The previously-computed Bargmann commutator phase for each elementary triad move is -1, consistent with anticommutation of distinct Clifford generators."
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2001ee2b5d39119b5c1477ee26dc603f3fad36d0346d9705054acde978e9c30d
+size 557

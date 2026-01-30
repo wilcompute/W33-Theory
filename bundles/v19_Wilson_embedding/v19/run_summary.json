@@ -1,18 +1,3 @@
-{
-  "date": "2026-01-13",
-  "objective": "maximize |sum_i exp(-\u03bb cost_i) * comm_sign * holonomy_product * pseudoscalar_sign * orient_sign(q_i->base)| with \u03bb=0.5, sheet=0",
-  "best_embedding_metrics": {
-    "idx": 75,
-    "coherence": 0.43904645090399264,
-    "total_cost": 29,
-    "global_cover12": 307,
-    "base_q": 16
-  },
-  "sum_amp": "(0.36787944117144233-0.23963827493699608j)",
-  "base_q": 16,
-  "notes": [
-    "Cycles are realized within a single K4 component each (four-center triad component).",
-    "Transport between quotient nodes uses v18 S3 connection; only parity of permutation is used as orientation sign on pseudoscalar I.",
-    "This run sampled embeddings by precomposing the v15 base mapping with random Aut(W33) elements."
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e6c40440edef17fd835c97cd45dd296b245929ce8d57fd9f42643bf6aa36d47b
+size 762

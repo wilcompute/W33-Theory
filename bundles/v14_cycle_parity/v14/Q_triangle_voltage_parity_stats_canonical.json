@@ -1,6 +1,3 @@
-{
-  "num_triangles": 5280,
-  "parity0": 3120,
-  "parity1": 2160,
-  "parity1_fraction": 0.4090909090909091
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5c4eaaf8594d3ebb3c7b624fc66abbef61749488a3bfa81bbe1e3d84af7d12dd
+size 108

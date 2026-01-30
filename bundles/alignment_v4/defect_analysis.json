@@ -1,11 +1,3 @@
-{
-  "defect_missing_symbol_sets": {
-    "9ab": 16,
-    "678": 12,
-    "012": 11,
-    "345": 10,
-    "012345": 2,
-    "3459ab": 1,
-    "6789ab": 1
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0783e17429ba5278bc9bec78db31ad7578cc3e7eb52105515aec19a0bc343194
+size 152
