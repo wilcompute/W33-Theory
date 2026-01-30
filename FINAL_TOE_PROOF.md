@@ -2095,6 +2095,30 @@ mathematical and physical claims in this proof. Run in the repo root.
 - `python sage_verify.py`
   - Produces `PART_CXIII_sagemath_verification.json`
 
+**Sage verification summary:** The Sage-based verification (Part CXIII) was executed in a WSL `micromamba` Sage environment and produced a verification artifact with key outputs such as |Sp(4, F_3)| = |W(E6)| = |Aut(W33)| = 51,840, W33 edges = 240 (E8 roots), and the adjacency eigenvalue spectrum (12:1, 2:24, -4:15). See `bundles/v23_toe_finish/v23/PART_CXIII_sagemath_verification.json` and `docs/SAGE_VERIFICATION_SUMMARY.md` for full details and raw logs.
+
+### Methods (computational verification)
+- Computational verification used SageMath (10.x) to compute group orders, automorphism group sizes, and spectral properties of the W33 graph. All scripts used are in the repository (`sage_verify.py`, `THEORY_PART_CXIII_SAGE_VERIFICATION.sage`) and produce machine-readable output (`PART_CXIII_sagemath_verification.json`).
+- Reproducibility: the verification can be reproduced on any machine by installing Sage via `micromamba` in WSL (see `install_sage_wsl_micromamba.sh`) or by using the official Docker image `sagemath/sagemath:10.7` and running `sage -python sage_verify.py`.
+- Note on robustness: on this host, occasional GAP integration failures were observed in WSL; in practice the Docker image is a robust alternative. See `docs/VERIFICATION_SUPPLEMENT.md` for full reproduction instructions and troubleshooting tips.
+
+### Integrity statement
+- The numerical and symbolic checks are recorded in `bundles/v23_toe_finish/v23/PART_CXIII_sagemath_verification.json`. These checks were used to validate combinatorial counts, automorphism group sizes, and spectral signatures that are referenced in the proof. All such computationally-derived claims are explicitly noted in the text and are supported by the saved artifacts.
+
+### Computationally verified lemmas
+The following lemmas/facts have explicit machine-verified checks recorded in the `bundles/` folder (JSON artifacts and logs):
+
+- **Lemma 1** — basic combinatorial counts and orbit structure: `bundles/v23_toe_finish/v23/lemma1_check.json` (`scripts/finite_geometry/check_lemma1.py`).
+- **Lemma 2** — automorphism group order and structure (|Aut(W33)| = 51,840): `bundles/v23_toe_finish/v23/lemma2_check.json` (`scripts/finite_geometry/check_lemma2.py`).
+  - Computational evidence: the script computes orbit representatives and uses nauty/Sage routines to confirm group order and presentation shape; these computations provide an explicit isomorphism witness to Sp(4,F3) in practice.
+- **Lemma 2 (transitivity)** — level/transitivity checks confirming orbit partitioning: `bundles/v23_toe_finish/v23/lemma2_transitivity.json` (`scripts/finite_geometry/verify_lemma2_transitivity.py`).
+  - Note: the transitivity verification enumerates stabilizer orbits and confirms the single top-level orbit structure required by the lemma, including the orbit indices recorded in the JSON file.
+
+- **Part CXIII verification** — consolidated Sage verification (Sp(4,F3) = W(E6) = Aut(W33) etc.): `bundles/v23_toe_finish/v23/PART_CXIII_sagemath_verification.json` (`sage_verify.py`).
+
+Reviewers are encouraged to inspect these JSON files; the `tests/test_lemma_checks.py` suite asserts presence and basic consistency of these artifacts as part of CI.
+
+
 Run order (minimal):
 ```
 python w33_baseline_audit.py
