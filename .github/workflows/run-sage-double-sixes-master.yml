@@ -1,0 +1,39 @@
+name: Run Sage double-six extraction (master)
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  sage-double-sixes:
+    name: Run Sage (Docker) to compute double-sixes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Sage script in Docker
+        run: |
+          docker run --rm \
+            -v "$GITHUB_WORKSPACE":/workdir \
+            -w /workdir \
+            sagemath/sagemath:9.8 \
+            sage -python3 tools/sage_double_sixes.py
+
+      - name: List artifacts
+        run: ls -la artifacts || true
+
+      - name: Upload sage_double_sixes.json
+        uses: actions/upload-artifact@v4
+        with:
+          name: sage_double_sixes
+          path: artifacts/sage_double_sixes.json
+
+      - name: Summarize Sage output with parser
+        run: |
+          python3 tools/parse_sage_double_sixes.py || true
+
+      - name: Upload summary artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sage_double_sixes_summary
+          path: artifacts/sage_double_sixes_summary.json
