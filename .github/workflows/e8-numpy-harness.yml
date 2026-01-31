@@ -1,0 +1,51 @@
+name: E8 NumPy Harness
+
+on:
+  pull_request:
+    branches: [ master ]
+  push:
+    branches: [ master ]
+  workflow_dispatch: {}
+
+jobs:
+  harness:
+    name: Fast NumPy Harness
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install minimal deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest numpy
+
+      - name: Run harness tests
+        run: |
+          python -m pytest -q tests/test_explicit_bijection_numpy.py tests/test_explicit_bijection.py
+
+      - name: Export IP distributions
+        run: |
+          python - << 'PY'
+            from pathlib import Path
+            from tools.e8_w33_bijection import load_explicit_bijection
+            from tools.e8_w33_harness import save_ip_distributions
+            p = Path('artifacts')
+            if not p.exists():
+                p.mkdir()
+            save_ip_distributions(load_explicit_bijection(), out_path=p / 'ip_distributions.json')
+          PY
+
+      - name: Upload IP distributions artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ip_distributions
+          path: artifacts/ip_distributions.json
