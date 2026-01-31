@@ -1,0 +1,90 @@
+name: pytest (with Sage) — labeled run
+
+on:
+  pull_request:
+    types: [labeled]
+
+jobs:
+  pytest-sage-on-label:
+    if: ${{ github.event.label.name == 'run-sage' }}
+    runs-on: ubuntu-latest
+    container:
+      image: sagemath/sagemath:10.7
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show Sage version
+        run: |
+          sage --version
+
+      - name: Install test deps in Sage Python
+        run: |
+          sage -python -m pip install --upgrade pip
+          sage -python -m pip install -r requirements-dev.txt
+
+      - name: Run pytest under Sage (label-triggered)
+        run: |
+          sage -python -m pytest -q
+
+      - name: Upload skipped-optional-tests artifact (if present)
+        uses: actions/upload-artifact@v4
+        with:
+          name: skipped-optional-tests
+          path: artifacts/skipped_optional_tests.json
+          if-no-files-found: warn
+
+      - name: Generate predictions report
+        run: python tools/generate_predictions_report.py
+
+      - name: Upload predictions report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: predictions-report
+          path: |
+            artifacts/predictions_report.json
+            artifacts/predictions_report.md
+
+      - name: Post PR summary comment
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            let body = '### Sage verification run summary\n\n';
+            try {
+              if (fs.existsSync('artifacts/predictions_report.json')) {
+                const r = JSON.parse(fs.readFileSync('artifacts/predictions_report.json','utf8'));
+                body += `**Predictions:** ${r.summary.passed}/${r.summary.total} passed\n\n`;
+                body += '| Key | Pred | Ref | Diff | Allowed | Result |\n|---|---:|---:|---:|---:|---:|\n';
+                for (const k of Object.keys(r.items)) {
+                  const it = r.items[k];
+                  body += `| ${k} | ${it.pred} | ${it.ref} | ${it.diff} | ${it.allowed} | ${it.pass ? '✅' : '❌'} |\n`;
+                }
+              } else {
+                body += 'No predictions report found.\n';
+              }
+            } catch (e) {
+              body += `Error reading predictions report: ${e.message}\n`;
+            }
+            // Include skipped-optional-tests summary if present
+            try {
+              if (fs.existsSync('artifacts/skipped_optional_tests.json')) {
+                const s = JSON.parse(fs.readFileSync('artifacts/skipped_optional_tests.json','utf8'));
+                body += `\n**Skipped optional tests:** ${s.skipped.length} files\n`;
+                body += '| Path | Requires |\n|---|---|\n';
+                for (const it of s.skipped) {
+                  body += `| ${it.path} | ${it.requires} |\n`;
+                }
+              }
+            } catch (e) {
+              body += `Error reading skipped tests report: ${e.message}\n`;
+            }
+
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: body,
+            });
