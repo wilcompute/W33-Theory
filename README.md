@@ -188,13 +188,17 @@ m_g ~ ε^(2(3-g))  gives 12 orders of magnitude from GEOMETRY!
 
 ---
 
-## Testable Predictions (Legacy)
+## Testable Predictions (Legacy / Superseded)
 
-1. **PMNS CP phase:** δ ≈ 206° ± 10° (DUNE/Hyper-K, 2025-2030)
-2. **Dark matter mass:** 28-40 GeV (direct detection)
+> **Note:** These predictions are from earlier parts of the project and may
+> conflict with the refined values above. The canonical predictions are in
+> the tables in sections "Additional Predictions" and "Testable Predictions".
+
+1. ~~**PMNS CP phase:** δ ≈ 206° ± 10°~~ (superseded by δ = 2π/3 = 120°)
+2. ~~**Dark matter mass:** 28-40 GeV~~ (superseded by ~75 GeV)
 3. **Heavy Higgs bosons:** H₂ at 250-280 GeV, H₃ at 375-420 GeV
 4. **No 4th generation:** Exactly 3 generations (from F₃)
-5. **Ω_Λ precision:** Will converge to 56/81 = 0.6914
+5. **Omega_Lambda precision:** Will converge to 56/81 = 0.6914
 
 ---
 
