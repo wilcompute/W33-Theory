@@ -1,0 +1,38 @@
+{
+  "we6_group_order": 51840,
+  "orbit_size": 27,
+  "schlafli_ip_counts": {
+    "0.0": 135,
+    "1.0": 216
+  },
+  "n_k6_cliques": 72,
+  "n_double_sixes": 36,
+  "double_six_stabilizer_size_allow_swap": 1440,
+  "double_six_orbit_size": 36,
+  "example_double_six": {
+    "A": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      26
+    ],
+    "B": [
+      19,
+      20,
+      21,
+      22,
+      24,
+      25
+    ],
+    "pairing_A_to_B_skew_edges": {
+      "0": 19,
+      "1": 20,
+      "2": 21,
+      "3": 22,
+      "4": 24,
+      "26": 25
+    }
+  }
+}

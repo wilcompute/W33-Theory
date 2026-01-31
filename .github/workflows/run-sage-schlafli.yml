@@ -1,0 +1,29 @@
+name: Run Sage Schlaefli embedding search
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  sage-schlafli:
+    name: Run Sage (Docker) to search for Schlaefli embedding
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Sage script in Docker
+        run: |
+          docker run --rm \
+            -v "$GITHUB_WORKSPACE":/workdir \
+            -w /workdir \
+            sagemath/sagemath:9.8 \
+            sage -python3 tools/sage_find_schlafli_embedding.py
+
+      - name: List artifacts
+        run: ls -la artifacts || true
+
+      - name: Upload schlafli embedding artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sage_schlafli_embedding
+          path: artifacts/sage_schlafli_embedding.json
