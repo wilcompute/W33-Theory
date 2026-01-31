@@ -1,0 +1,28 @@
+name: Ensure labels
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  ensure-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create standard labels
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const labels = [
+              { name: 'run-sage', color: 'FF8C00', description: 'Trigger a full Sage verification run on this PR (label-triggered workflow)' },
+            ];
+            for (const l of labels) {
+              try {
+                await github.rest.issues.createLabel({ owner: context.repo.owner, repo: context.repo.repo, name: l.name, color: l.color, description: l.description });
+              } catch (e) {
+                // ignore if it already exists
+              }
+            }

@@ -1,4 +1,4 @@
-﻿# Ignore problematic Windows reserved names
+# Ignore problematic Windows reserved names
 nul
 NUL
 
@@ -64,11 +64,16 @@ bundles/v23_toe_finish/v23/
 !bundles/v23_toe_finish/v23/walrus_sf_comparison.json
 !bundles/v23_toe_finish/v23/tex_claims_summary.json
 
-# Tools and external runtimes (often large, installed by user)
-tools/
+# Tools: track Python/Sage analysis scripts, ignore large runtimes
+tools/__pycache__/
+tools/gap/*.exe
+tools/gap/*.tar.gz
+tools/gap/*.zip
 
 # Jupyter and transient process artifacts
 .ipynb_checkpoints/
 *.pid
 *.err
-\n# local backups\nbackups/
+
+# local backups
+backups/

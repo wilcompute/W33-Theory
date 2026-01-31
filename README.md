@@ -1,6 +1,10 @@
 # W33 Theory of Everything
 ## A Complete Mathematical Framework Unifying All of Physics
 
+[![pytest](https://github.com/wilcompute/W33-Theory/actions/workflows/pytest.yml/badge.svg)](https://github.com/wilcompute/W33-Theory/actions/workflows/pytest.yml)
+[![Sage verification](https://github.com/wilcompute/W33-Theory/actions/workflows/sage-verification.yml/badge.svg)](https://github.com/wilcompute/W33-Theory/actions/workflows/sage-verification.yml)
+[![Predictions report](https://github.com/wilcompute/W33-Theory/actions/workflows/predictions_report.yml/badge.svg)](https://github.com/wilcompute/W33-Theory/actions/workflows/predictions_report.yml)
+
 **Author:** Wil Dahn
 **Date:** January 2026
 **Status:** ✅ **100 PARTS COMPLETE**
@@ -40,6 +44,9 @@ V = F₃⁴                  (4D vector space)
         ↓
 Sp(4, F₃)                (Symplectic group)
         ↓
+```
+
+Latest predictions report: https://github.com/wilcompute/W33-Theory/blob/predictions/latest/artifacts/predictions_report.md (auto-updated by CI; if the branch doesn't yet exist, run the predictions-report workflow or add the `run-sage` label on a PR to generate one).
 W33 = SRG(40, 12, 2, 4)  (THE GRAPH)
         ↓
 ALL OF PHYSICS           (Everything)
@@ -188,13 +195,17 @@ m_g ~ ε^(2(3-g))  gives 12 orders of magnitude from GEOMETRY!
 
 ---
 
-## Testable Predictions (Legacy)
+## Testable Predictions (Experimental) ⚠️
 
-1. **PMNS CP phase:** δ ≈ 206° ± 10° (DUNE/Hyper-K, 2025-2030)
-2. **Dark matter mass:** 28-40 GeV (direct detection)
-3. **Heavy Higgs bosons:** H₂ at 250-280 GeV, H₃ at 375-420 GeV
-4. **No 4th generation:** Exactly 3 generations (from F₃)
-5. **Ω_Λ precision:** Will converge to 56/81 = 0.6914
+> **Note:** The predictions listed below are **experimental / testable** outputs of our computational analyses. Values and tolerances are stored in `data/predictions.json` and are validated by `tests/test_predictions.py` against authoritative reference values (`tests/reference_values.json`). Please treat these as hypotheses to be tested, not as mathematical theorems.
+
+1. **PMNS CP phase:** δ ≈ 2π/3 = 120° (testable)
+2. **Dark matter mass:** ~75 GeV (testable)
+3. **Heavy Higgs bosons:** H₂ at 250–280 GeV, H₃ at 375–420 GeV (testable)
+4. **No 4th generation:** Exactly 3 generations (structural / mathematical)
+5. **Omega_Lambda precision:** Will converge to 56/81 = 0.6914 (testable)
+
+> To validate or update predictions, edit `data/predictions.json` and add/update reference values in `tests/reference_values.json`. The automated pytest check will flag deviations that exceed declared tolerances or fall outside 3σ of the reference value.
 
 ---
 

@@ -1,0 +1,7 @@
+{
+  "H0_CMB": {"value": 67.0, "units": "km/s/Mpc", "source": "README.md", "tolerance": 1.0},
+  "H0_local": {"value": 73.0, "units": "km/s/Mpc", "source": "README.md", "tolerance": 1.5},
+  "alpha_inv": {"value": 137.036004, "units": "dimensionless", "source": "README.md", "tolerance": 1e-5},
+  "sin2_theta_w": {"value": 0.216, "units": "dimensionless", "source": "README.md", "tolerance": 0.02},
+  "M_Higgs_GeV": {"value": 125.0, "units": "GeV", "source": "README.md", "tolerance": 1.0}
+}

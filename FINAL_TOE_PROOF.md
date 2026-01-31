@@ -22,6 +22,14 @@ All definitions and counts follow `STANDARDIZATION.md`. In particular:
 5. **Holonomy specialization encodes masses**: Entropy distribution → particle spectrum
 6. **Energy scales emerge from geometry**: 12× factors → GUT unification at 10¹⁶ GeV
 
+### Rigorous vs Experimental Claims 🔬
+
+- **Mathematically proven / rigorously verified** (these are structural, combinatorial, or group-theoretic results): the definition and counts for W33 (40 points, 40 lines), the SRG(40,12,2,4) properties, automorphism groups (Sp(4,3), PSp(4,3), W(E6) relations), the Coxeter-6 partition verifications, and the computed orbit decompositions inside E8 (72 + 6×27 + 6×1). These are documented in the `tools/` scripts and `artifacts/` verification JSONs.
+
+- **Computationally derived & testable (Experimental)**: numerical physical predictions derived from the geometry (particle masses, coupling-related parameters, H₀ values, dark matter mass estimates, etc.). These are *not* proven theorems; they are derived hypotheses that should be validated against experimental/observational data. The canonical prediction values and tolerances are stored in `data/predictions.json` and are verified by `tests/test_predictions.py`.
+
+- **Status & guidance:** Core structural claims are stable and reproducible; physical predictions should be treated as empirically testable outputs. When new experimental reference values become available, update `tests/reference_values.json` and run the test suite to see which hypotheses remain within declared tolerances.
+
 ---
 
 ## PART 1: THE MATHEMATICAL STRUCTURE

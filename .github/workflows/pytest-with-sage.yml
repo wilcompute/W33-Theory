@@ -1,0 +1,38 @@
+name: pytest (with Sage)
+
+on:
+  workflow_dispatch: {}
+  pull_request:
+    branches: [ main, master ]
+    types: [opened, synchronize, reopened]
+    # Only run this heavy Sage job when PRs touch Sage-related scripts or core analysis files
+    paths:
+      - 'scripts/**'
+      - 'tools/**'
+      - 'src/**'
+      - '**/*.sage'
+      - 'FINAL_TOE_PROOF.md'
+      - 'README.md'
+
+jobs:
+  pytest-sage:
+    runs-on: ubuntu-latest
+    container:
+      image: sagemath/sagemath:10.7
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show Sage version
+        run: |
+          sage --version
+
+      - name: Install test deps in Sage Python
+        run: |
+          sage -python -m pip install --upgrade pip
+          sage -python -m pip install -r requirements-dev.txt
+
+      - name: Run pytest under Sage
+        run: |
+          sage -python -m pytest -q

@@ -215,6 +215,37 @@ def main() -> int:
         "generated_at": "2026-01-26",
     }
 
+    # Include predictions report if available
+    try:
+        pr = load_json(ROOT / "artifacts" / "predictions_report.json")
+        if pr:
+            summary["predictions"] = pr.get("summary")
+    except Exception:
+        pass
+
+    # Include skipped optional tests summary (from pytest collection)
+    try:
+        skipped = load_json(ROOT / "artifacts" / "skipped_optional_tests.json")
+        if skipped and isinstance(skipped.get("skipped"), list):
+            summary["skipped_optional_tests"] = {"count": len(skipped["skipped"])}
+    except Exception:
+        pass
+
+    # Include presence of some important Sage artifacts (if present)
+    sage_keys = [
+        "artifacts/we6_true_action.json",
+        "artifacts/sp43_we6_generator_map_sage_verify.json",
+        "artifacts/sp43_we6_generator_map_full_verify.json",
+    ]
+    sage_present = {}
+    for p in sage_keys:
+        try:
+            candidate = ROOT / p
+            sage_present[p] = candidate.exists()
+        except Exception:
+            sage_present[p] = False
+    summary["sage_artifacts_present"] = sage_present
+
     OUT_MD.parent.mkdir(parents=True, exist_ok=True)
     OUT_MD.write_text(build_markdown(summary), encoding="utf-8")
     OUT_JSON.write_text(json.dumps(summary, indent=2), encoding="utf-8")

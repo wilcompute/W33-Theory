@@ -1,0 +1,7 @@
+{
+  "H0_CMB": {"value": 67.4, "units": "km/s/Mpc", "uncertainty": 0.5},
+  "H0_local": {"value": 73.0, "units": "km/s/Mpc", "uncertainty": 1.0},
+  "alpha_inv": {"value": 137.035999084, "units": "dimensionless", "uncertainty": 2.1e-8},
+  "sin2_theta_w": {"value": 0.231, "units": "dimensionless", "uncertainty": 0.005},
+  "M_Higgs_GeV": {"value": 125.1, "units": "GeV", "uncertainty": 0.3}
+}

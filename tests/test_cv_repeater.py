@@ -1,4 +1,10 @@
-from scripts.quantum_photonics.run_cv_repeater import sweep_repeater
+import pytest
+
+# strawberryfields is an optional heavy dependency (quantum photonics simulation)
+pytest.importorskip("strawberryfields", reason="strawberryfields not installed")
+
+from scripts.quantum_photonics.run_cv_repeater import \
+    sweep_repeater  # noqa: E402
 
 
 def test_sweep_creates_output():

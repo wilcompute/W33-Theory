@@ -1,0 +1,57 @@
+name: nightly predictions report
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # every day at 00:00 UTC
+  workflow_dispatch: {}
+
+jobs:
+  nightly:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install test deps
+        run: python -m pip install --upgrade pip && pip install -r requirements-dev.txt
+
+      - name: Generate predictions report and digest
+        run: |
+          python tools/generate_predictions_report.py
+          python tools/build_verification_digest.py || true
+
+      - name: Commit predictions report to `predictions/latest` branch
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --heads origin predictions/latest; then
+            git fetch origin predictions/latest:predictions/latest
+            git checkout predictions/latest
+          else
+            git checkout -b predictions/latest
+          fi
+          mkdir -p artifacts
+          cp artifacts/predictions_report.md artifacts/predictions_report.md
+          cp artifacts/verification_digest.md artifacts/verification_digest.md || true
+          git add artifacts/predictions_report.md artifacts/verification_digest.md || true
+          git commit -m "chore: nightly update predictions report and verification digest" || true
+          git push origin predictions/latest --force
+
+      - name: Upload predictions report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: nightly-predictions-report
+          path: |
+            artifacts/predictions_report.json
+            artifacts/predictions_report.md
+            artifacts/verification_digest.json
+            artifacts/verification_digest.md
