@@ -1,0 +1,26 @@
+name: PR from predictions/latest
+
+on:
+  push:
+    branches:
+      - predictions/latest
+
+jobs:
+  open-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create PR to master
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: master
+          branch: predictions/latest
+          title: "chore: publish predictions & dashboard to master"
+          body: |
+            CI-updated verification dashboard and predictions report. This PR is auto-created from branch `predictions/latest`.
+          commit-message: "chore: update predictions report and dashboard"
+          maintainer-can-modify: true
+          draft: false
