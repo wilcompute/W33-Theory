@@ -1,10 +1,16 @@
 import json
 from pathlib import Path
 
+import pytest
+
 
 def test_identify_script_writes_summary(tmp_path):
     # Run the script and assert the extended summary exists and contains expected keys
     import runpy
+
+    csv = Path("bundles/v23_toe_finish/v23/Q_triangles_with_centers_Z2_S3_fiber6.csv")
+    if not csv.exists():
+        pytest.skip("v23 input CSV not generated yet")
 
     repo_root = Path.cwd()
     runpy.run_module("scripts.identify_45_12_3", run_name="__main__")

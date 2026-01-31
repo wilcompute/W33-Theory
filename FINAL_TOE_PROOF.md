@@ -24,6 +24,16 @@ All definitions and counts follow `STANDARDIZATION.md`. In particular:
 
 ---
 
+> **Reader's guide — epistemic status of each section.**
+>
+> | Section | Status | What it contains |
+> |---------|--------|------------------|
+> | Part 1 (§1.1–1.5) | **Rigorous / Verified** | W33 definition, E6/E8 orbit decomposition, Coxeter 6-cycle partition, Schläfli structure, explicit bijections, Z₂ cocycle — all computationally verified in Sage and pure NumPy |
+> | Parts 2–5 | **Computed facts + interpretive labels** | K4 clique statistics, Q45 quotient, V23 triangle census, holonomy counts are machine-verified; the physical *names* (color singlet, fermion, SU(5)) are interpretive assignments that have not been derived from first principles |
+> | Parts 6–11 | **Speculative / Conjectural** | Numerical predictions for masses, couplings, decay rates. These use arithmetic combinations of small W33 parameters and have not been shown to follow from the geometry by any derivation — treat as exploratory hypotheses |
+
+---
+
 ## PART 1: THE MATHEMATICAL STRUCTURE
 
 ### 1.1 W33 Definition
@@ -1560,6 +1570,17 @@ Script: `tools/witting_24basis_waveplate_degrees.py`
 in its full 40‑basis form. Photonic tests should therefore target a **KS
 inequality** (state‑independent contextuality) rather than a parity proof.
 
+---
+
+> **--- End of rigorous / verified mathematics (Part 1) ---**
+>
+> Parts 2–5 below report **computationally verified combinatorial facts**
+> about W33 (K4 clique counts, quotient structure, triangle census). The
+> physical labels attached to these facts (color, isospin, fermion/boson)
+> are interpretive and have not been derived from the geometry.
+
+---
+
 ## PART 2: K4 COMPONENTS AND UNIVERSAL QUANTIZATION
 
 ### 2.1 Finding: Universal (Z₄, Z₃) Selection
@@ -1686,6 +1707,19 @@ The Z₃ fiber coordinate naturally encodes three families:
 - **Z₃ = 2**: Third family (t, b, τ, ντ)
 
 This explains why there are exactly 3 families—it's a topological property of the Z₃ fiber.
+
+---
+
+---
+
+> **--- End of computed facts with interpretive labels (Parts 2–5) ---**
+>
+> Parts 6–11 below are **speculative**. The numerical predictions for
+> particle masses, coupling constants, and decay rates are obtained by
+> arithmetic on small W33 parameters (12, 40, 45, 90, 240, ...) and
+> have not been derived from any dynamical principle connecting the
+> discrete geometry to continuum quantum field theory. They should be
+> read as exploratory hypotheses, not established results.
 
 ---
 
