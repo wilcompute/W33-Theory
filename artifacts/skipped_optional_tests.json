@@ -1,0 +1,112 @@
+{
+  "skipped": [
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\W33_pattern_search.py",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\part_cxviii_verify.py",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\sage_verify.py",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\tmp_w33_lemma2.sage",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\w33_81_cycles.sage.py",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\w33_81_exploration.py",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\w33_clique_complex.py",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\w33_comprehensive_verification.sage",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\w33_debug_classes.py",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\w33_generalized_quadrangle.py",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\w33_group_analysis.py",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\w33_h1_decomp_direct.py",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\w33_h1_decomp_gap.py",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\w33_h1_decomp_v2.py",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\w33_h1_decomposition.py",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\w33_h1_irreducibility.py",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\w33_incidence_deep.py",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\w33_pysymmetry_analysis.sage",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\w33_sage_incidence_and_h1.py",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\w33_sage_sp4_3_verification.sage",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\w33_sage_verification.sage",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\w33_steinberg_check.py",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\w33_sylow3_analysis.py",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\w33_symplectic_graph.py",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\w33_symplectic_verify.py",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\w33_v23_analysis.py",
+      "requires": "sage"
+    },
+    {
+      "path": "C:\\Users\\wiljd\\OneDrive\\Desktop\\Theory of Everything\\w33_verify_alignment.py",
+      "requires": "sage"
+    }
+  ]
+}

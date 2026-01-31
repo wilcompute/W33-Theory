@@ -21,4 +21,11 @@ Guidelines
 - Put runtime logic in `main()` and protect with `if __name__ == '__main__':`.
 - Use `json.dump(..., indent=2, default=str)` for robust serialization of non-native JSON types.
 
+Sage & heavy-test policy
+------------------------
+- Sage-dependent verification runs are **optional** in CI; they are executed under the official Sage container to provide reproducible results.
+- By default, the Sage pytest job runs on PRs *only when the PR touches Sage-relevant files* (scripts/**, tools/**, src/**, `**/*.sage`, `README.md`, `FINAL_TOE_PROOF.md`). Use the manual workflow dispatch if you want a full Sage run regardless of touched files.
+- To request a Sage run explicitly for a PR, add the `run-sage` label to the PR; the label triggers a dedicated Sage test job that runs even if the PR doesn't touch Sage files. This job uploads a `skipped-optional-tests` artifact showing which tests were skipped due to missing optional dependencies.
+- Locally, you can force optional tests to run by setting `RUN_OPTIONAL_TESTS=ALL` in your environment before running `pytest` (or set it to a comma-separated list like `sage,strawberryfields`).
+
 If you'd like, I can open a branch and a draft PR with these changes, add CI badges to the README, and run the top-level scanner and fix remaining modules automatically. Let me know which you'd like next.

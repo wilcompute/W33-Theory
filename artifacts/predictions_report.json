@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0
+  },
+  "items": {
+    "H0_CMB": {
+      "pred": 67.0,
+      "pred_tol": 1.0,
+      "ref": 67.4,
+      "ref_unc": 0.5,
+      "allowed": 1.5,
+      "diff": 0.4000000000000057,
+      "pass": true
+    },
+    "H0_local": {
+      "pred": 73.0,
+      "pred_tol": 1.5,
+      "ref": 73.0,
+      "ref_unc": 1.0,
+      "allowed": 3.0,
+      "diff": 0.0,
+      "pass": true
+    },
+    "alpha_inv": {
+      "pred": 137.036004,
+      "pred_tol": 1e-05,
+      "ref": 137.035999084,
+      "ref_unc": 2.1e-08,
+      "allowed": 1e-05,
+      "diff": 4.915999994636877e-06,
+      "pass": true
+    },
+    "sin2_theta_w": {
+      "pred": 0.216,
+      "pred_tol": 0.02,
+      "ref": 0.231,
+      "ref_unc": 0.005,
+      "allowed": 0.02,
+      "diff": 0.015000000000000013,
+      "pass": true
+    },
+    "M_Higgs_GeV": {
+      "pred": 125.0,
+      "pred_tol": 1.0,
+      "ref": 125.1,
+      "ref_unc": 0.3,
+      "allowed": 1.0,
+      "diff": 0.09999999999999432,
+      "pass": true
+    }
+  }
+}
