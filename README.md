@@ -679,6 +679,10 @@ python -m pytest tests/test_master_derivation.py -k "pmns" -q
 
 ## Phase History (Recent)
 
+Latest promoted phase:
+
+- **CCCXXXV:** Product Gauge Survival & Kernel Factorization (30 tests) — on the product operator `L_ext ⊗ I_81 + I_ext ⊗ H_stab`, the exact zero-mode gauge packet survives as `ker(L_prod) = harm(L_ext) ⊗ ker(H_stab)`. So the internal `24 = 16 ⊕ 8` gauge block lifts to exact product kernels `72 = 48 + 24` on `CP2_9` and `576 = 384 + 192` on `K3_16`.
+
 | Phase | Theorems | Tests | Topic |
 |-------|----------|-------|-------|
 | CXLIII | — | 98 | Continuum Bridge — Almost-Commutative M^4 x F, Spectral Action, SM+Gravity |
