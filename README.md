@@ -681,7 +681,7 @@ python -m pytest tests/test_master_derivation.py -k "pmns" -q
 
 Latest promoted phase:
 
-- **CCCXXXV:** Product Gauge Survival & Kernel Factorization (30 tests) — on the product operator `L_ext ⊗ I_81 + I_ext ⊗ H_stab`, the exact zero-mode gauge packet survives as `ker(L_prod) = harm(L_ext) ⊗ ker(H_stab)`. So the internal `24 = 16 ⊕ 8` gauge block lifts to exact product kernels `72 = 48 + 24` on `CP2_9` and `576 = 384 + 192` on `K3_16`.
+- **CCCXXXVI:** Massive Complement & Family-Singlet Gauge Lift (30 tests) — the stabilized internal package now splits exactly as `81 = 24_zero ⊕ 12_gauge-singlet ⊕ 45_dynamic = 2k ⊕ k ⊕ 3g`. So the zero sector is the family-doublet gauge packet, the missing `12` modes are the family-singlet copy of the same gauge block, and the remaining `45` modes are the tripled nonzero internal dynamics.
 
 | Phase | Theorems | Tests | Topic |
 |-------|----------|-------|-------|
