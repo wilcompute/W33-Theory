@@ -679,6 +679,10 @@ python -m pytest tests/test_master_derivation.py -k "pmns" -q
 
 ## Phase History (Recent)
 
+Latest promoted phase:
+
+- **CCCLXX:** Ternary Qutrit CSS Dual-Distance Closure (30 tests) — the promoted qutrit homological code is no longer partial. The dual/X distance closes exactly at `d_X=3` via an explicit tetrahedron-star cocycle on edges `(0,4),(0,5),(0,6)`, while the primal/Z distance stays `d_Z=4`, so the honest code is `[[240,81,3,4]]_3`.
+
 | Phase | Theorems | Tests | Topic |
 |-------|----------|-------|-------|
 | CXLIII | — | 98 | Continuum Bridge — Almost-Commutative M^4 x F, Spectral Action, SM+Gravity |
