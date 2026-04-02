@@ -28,11 +28,18 @@ from fractions import Fraction
 from functools import lru_cache
 import json
 from pathlib import Path
+import sys
 from typing import Any
 
-import networkx as nx
 import numpy as np
 
+
+ROOT = Path(__file__).resolve().parents[1]
+for candidate in (ROOT, ROOT / "exploration"):
+    if str(candidate) not in sys.path:
+        sys.path.insert(0, str(candidate))
+
+from exploration._optional_deps import require_networkx
 from w33_center_quad_transport_a2_bridge import build_center_quad_transport_a2_summary
 from w33_center_quad_transport_bridge import reconstructed_quotient_graph
 from w33_ternary_homological_code_bridge import (
@@ -45,9 +52,9 @@ from w33_transport_matter_curved_harmonic_bridge import (
 from w33_transport_twisted_precomplex_bridge import adapted_transport_precomplex_data
 
 
-ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUTPUT_PATH = ROOT / "data" / "w33_transport_spectral_selector_bridge_summary.json"
 MODULUS = 3
+nx = require_networkx("exploration/w33_transport_spectral_selector_bridge.py")
 
 
 def _rank_mod_p(matrix: np.ndarray, modulus: int = MODULUS) -> int:

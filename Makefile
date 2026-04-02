@@ -1,8 +1,21 @@
-.PHONY: generate-summary test check-json verify-root-edge build-pdf
+.PHONY: bootstrap doctor audit generate-summary test check-json verify-root-edge build-pdf prepare-w33-bundle
+
+bootstrap:
+	./scripts/bootstrap_repo_env.sh
+
+doctor:
+	python3 tools/repo_doctor.py
+
+audit:
+	python3 tools/repo_cleanup_audit.py
 
 generate-summary:
 	python scripts/collect_results.py
+ifdef ALLOW_PARTIAL
 	python scripts/make_numeric_comparisons_from_summary.py || true
+else
+	python scripts/make_numeric_comparisons_from_summary.py
+endif
 
 # Run tests after generating summary artifacts
 test: generate-summary

@@ -24,7 +24,6 @@ from pathlib import Path
 import sys
 from typing import Any
 
-import networkx as nx
 import numpy as np
 
 
@@ -37,11 +36,13 @@ for candidate in (ROOT, ROOT / "exploration", ROOT / "pillars"):
     if str(candidate) not in sys.path:
         sys.path.insert(0, str(candidate))
 
+from exploration._optional_deps import require_networkx
 from exploration.w33_three_channel_operator_bridge import build_w33_adjacency
 from exploration.w33_center_quad_transport_bridge import reconstructed_quotient_graph
 
 
 DEFAULT_OUTPUT_PATH = ROOT / "data" / "w33_dual_bose_mesner_bridge_summary.json"
+nx = require_networkx("exploration/w33_dual_bose_mesner_bridge.py")
 
 
 def _fraction_text(value: Fraction) -> str:

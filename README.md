@@ -83,14 +83,40 @@ The live entrypoints are deliberately narrower than the full repo mass.
 - Treat `exploration/`, `tests/`, and `tools/qiskit/` as the active research stack.
 - Treat `archive/`, `bundles/`, and `V*_output*/` as preserved historical or generated context unless a result is explicitly promoted.
 
+## Environment Quick Start
+
+The promoted theorem stack expects the repo Python dependencies to be present.
+If imports fail with messages about optional packages such as `networkx`, use
+the repo bootstrap path instead of debugging package issues by hand.
+
+```bash
+./scripts/bootstrap_repo_env.sh
+source .venv/bin/activate
+make doctor
+```
+
+If your repo lives on a slow Windows-mounted path under WSL, you can keep the
+virtualenv on the Linux filesystem instead:
+
+```bash
+VENV_DIR="$HOME/.venvs/w33-theory" ./scripts/bootstrap_repo_env.sh
+VENV_DIR="$HOME/.venvs/w33-theory" python3 tools/repo_doctor.py
+```
+
+Useful maintenance entrypoints:
+
+- `make doctor`: dependency + worktree health check
+- `make audit`: clutter-focused inventory of the current worktree
+- `python3 tools/repo_doctor.py --json`: machine-readable environment report
+
 ## Current Scale
 
 | Metric | Count |
 |--------|-------|
 | Theorems proved | 4,700+ |
 | Test definitions / live checks | 27k+ / 2500+ advertised live checks |
-| Test files under `tests/` | 1,156+ |
-| Phases completed | 299 |
+| Test files under `tests/` | 1,219+ |
+| Phases completed | 372 |
 | Mathematical domains covered | 340+ |
 | Public prediction inventory | evolving |
 
@@ -778,7 +804,7 @@ Latest promoted phase:
 | XLIX | T696–T710 | 79 | GQ(3,3) & Finite Geometry |
 | XLVIII | T681–T695 | 64 | Weyl Group W(E₆) & Exceptional Arithmetic |
 
-## Repository Layout
+## Workspace Snapshot
 
 ```
 W33-Theory/
@@ -795,11 +821,11 @@ W33-Theory/
 ## Local Qiskit Search
 
 The repo now also carries a local Qiskit workflow under
-[tools/qiskit](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit) for small
+[tools/qiskit](tools/qiskit) for small
 exact search experiments.
 
 The first TOE-specific oracle is
-[toe_support_hierarchy_search.py](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/toe_support_hierarchy_search.py).
+[toe_support_hierarchy_search.py](tools/qiskit/toe_support_hierarchy_search.py).
 It encodes the exact bridge support hierarchy already proved in the live stack:
 
 - `2E13` image channel on the head-compatible line
@@ -818,7 +844,7 @@ analytic Grover count `6`, with mean target-hit probabilities:
 - `7` iterations: `0.8984375`
 
 The next exact refinement of that same `120`-state support shell is
-[toe_support_diagnostic_search.py](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/toe_support_diagnostic_search.py).
+[toe_support_diagnostic_search.py](tools/qiskit/toe_support_diagnostic_search.py).
 It does not change the support-state count. It factorizes the shell exactly as
 
 - `10` support interleavings choosing which `3` of `5` slots carry the bridge core
@@ -832,7 +858,7 @@ shows the cleanest operating point is `6` iterations, with mean target-hit
 probability `0.99609375`.
 
 The next exact support-side refinement is
-[toe_support_diagnostic_relaxation_search.py](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/toe_support_diagnostic_relaxation_search.py).
+[toe_support_diagnostic_relaxation_search.py](tools/qiskit/toe_support_diagnostic_relaxation_search.py).
 It keeps that same factorized `120`-state shell fixed and relaxes the two exact
 support theorems one sector at a time:
 
@@ -854,7 +880,7 @@ helping and the best operating point can collapse all the way to the uniform
 state on the padded shell.
 
 The next exact support-side refinement is
-[toe_support_enhancement_relaxation_search.py](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/toe_support_enhancement_relaxation_search.py).
+[toe_support_enhancement_relaxation_search.py](tools/qiskit/toe_support_enhancement_relaxation_search.py).
 It tensors that same factorized support-relaxation shell with the exact
 three-state external enhancement hierarchy
 
@@ -890,7 +916,7 @@ the fully relaxed sector moves from a `0`-step optimum on the bare
 
 A bounded exact side result now sits between that support stack and the larger
 bridge shell. In
-[toe_double_interleaving_shadow_search.py](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/toe_double_interleaving_shadow_search.py),
+[toe_double_interleaving_shadow_search.py](tools/qiskit/toe_double_interleaving_shadow_search.py),
 the support-core interleavings and the hyperbolic-factor interleavings are
 isolated as a joint `100 = 10 * 10` shell of two canonical `J(5,3)` copies.
 The current bridge is asymmetric there: the support theorem freezes one
@@ -900,7 +926,7 @@ target-hit probability `0.97265625`. If the support interleaving theorem is
 relaxed too, the padded-shell optimum collapses to `0` iterations.
 
 The next exact search layer is
-[toe_bridge_product_search.py](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/toe_bridge_product_search.py).
+[toe_bridge_product_search.py](tools/qiskit/toe_bridge_product_search.py).
 It searches the product of:
 
 - strict support permutations
@@ -916,7 +942,7 @@ both modes hit only marked states with target-hit probability `1.0`:
 - `formal-completion`: exact unique-nonzero-orbit completion sector
 
 The repo now also has a reusable study runner in
-[toe_bridge_oracle_iteration_study.py](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/toe_bridge_oracle_iteration_study.py).
+[toe_bridge_oracle_iteration_study.py](tools/qiskit/toe_bridge_oracle_iteration_study.py).
 The first two-seed product study over seeds `7,8` shows that the `15`-qubit
 product oracle is actually cleanest at `31` iterations, not the rounded `32`:
 
@@ -925,7 +951,7 @@ product oracle is actually cleanest at `31` iterations, not the rounded `32`:
 - `33` iterations: mean target-hit probability `0.9921875`
 
 The next refinement is
-[toe_bridge_line_factor_search.py](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/toe_bridge_line_factor_search.py).
+[toe_bridge_line_factor_search.py](tools/qiskit/toe_bridge_line_factor_search.py).
 It adds the exact binary line-choice factor inside `U1`:
 
 - `head_compatible_u1_line`
@@ -944,7 +970,7 @@ line-factor oracle is actually cleanest at `44` iterations:
 - `46` iterations: mean target-hit probability `0.998046875`
 
 The next exact filter is
-[toe_bridge_weight_filter_search.py](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/toe_bridge_weight_filter_search.py).
+[toe_bridge_weight_filter_search.py](tools/qiskit/toe_bridge_weight_filter_search.py).
 It adds one theorem-backed concentration bit:
 
 - `dominant_weight_filter_pass`
@@ -967,7 +993,7 @@ showed the `17`-qubit oracle is actually cleanest at `63` iterations:
 - `65` iterations: mean target-hit probability `0.998046875`
 
 The next exact filter is
-[toe_bridge_split_weight_filter_search.py](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/toe_bridge_split_weight_filter_search.py).
+[toe_bridge_split_weight_filter_search.py](tools/qiskit/toe_bridge_split_weight_filter_search.py).
 It separates that concentration theorem into two exact binary factors:
 
 - `hyperbolic_dominance_pass` / `hyperbolic_dominance_fail`
@@ -985,7 +1011,7 @@ formal-completion probe at `89`, `90`, and `91` iterations stayed on the same
 analytic Grover count.
 
 The next diagnostic refinement is
-[toe_bridge_diagnostic_order_search.py](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/toe_bridge_diagnostic_order_search.py).
+[toe_bridge_diagnostic_order_search.py](tools/qiskit/toe_bridge_diagnostic_order_search.py).
 It factorizes the five-factor ordering exactly as
 `5! = C(5,3) * 3! * 2! = 10 * 6 * 2`, so Qiskit now sees:
 
@@ -1001,7 +1027,7 @@ marked count `20`. On seeded verification runs (`seed = 7`, `256` shots), both
 target-hit probability `1.0`.
 
 The next exact diagnostic is
-[toe_bridge_diagnostic_relaxation_search.py](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/toe_bridge_diagnostic_relaxation_search.py).
+[toe_bridge_diagnostic_relaxation_search.py](tools/qiskit/toe_bridge_diagnostic_relaxation_search.py).
 It keeps the accepted pass/pass concentration channel fixed and relaxes the two
 order theorems one sector at a time, while the interleaving sector stays free
 just as it already does in the diagnostic-order oracle. The corrected exact
@@ -1025,7 +1051,7 @@ contributes the exact binary factor, the hyperbolic order contributes the exact
 - `13` iterations for `both-orders-relaxed` with mean target-hit probability `0.99609375`
 
 The next exact refinement is
-[toe_bridge_diagnostic_enhancement_relaxation_search.py](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/toe_bridge_diagnostic_enhancement_relaxation_search.py).
+[toe_bridge_diagnostic_enhancement_relaxation_search.py](tools/qiskit/toe_bridge_diagnostic_enhancement_relaxation_search.py).
 It tensors that corrected diagnostic-relaxation shell with the exact
 three-state enhancement hierarchy
 
@@ -1054,7 +1080,7 @@ support-selectivity profile, while shifting the padded-shell Grover windows
 from `57600 -> 65536` to `86400 -> 131072`.
 
 The next exact bridge wall is now in
-[toe_bridge_enhancement_factor_search.py](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/toe_bridge_enhancement_factor_search.py).
+[toe_bridge_enhancement_factor_search.py](tools/qiskit/toe_bridge_enhancement_factor_search.py).
 This refines the old glue dichotomy into the exact three-state external
 enhancement hierarchy:
 
@@ -1070,9 +1096,9 @@ qubits with marked count `20` in each mode. On seeded verification runs
 probability `1.0` at the analytic Grover count `127`.
 
 That hierarchy is now projected sharply onto the older binary slot wall in
-[w33_enhancement_slot_hierarchy_bridge.py](/mnt/c/Repos/Theory%20of%20Everything/exploration/w33_enhancement_slot_hierarchy_bridge.py)
+[w33_enhancement_slot_hierarchy_bridge.py](exploration/w33_enhancement_slot_hierarchy_bridge.py)
 and
-[toe_bridge_diagnostic_enhancement_slot_search.py](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/toe_bridge_diagnostic_enhancement_slot_search.py).
+[toe_bridge_diagnostic_enhancement_slot_search.py](tools/qiskit/toe_bridge_diagnostic_enhancement_slot_search.py).
 The exact law is:
 
 - `current_k3_zero_orbit -> zero_by_splitness`
@@ -1093,7 +1119,7 @@ in all three exact modes:
 - `formal-completion-avatar -> (formal_completion_avatar, unique_nonzero_orbit_in_existing_slot)`
 
 The stronger replacement for that free three-state axis is now in
-[toe_bridge_cocycle_compatibility_search.py](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/toe_bridge_cocycle_compatibility_search.py).
+[toe_bridge_cocycle_compatibility_search.py](tools/qiskit/toe_bridge_cocycle_compatibility_search.py).
 Instead of a bare enhancement label, it uses the exact `6`-state wall factor
 
 `wall_layer x orbit_state`
@@ -1124,7 +1150,7 @@ seeded exact wall checks at `256` shots now give:
 - `nonzero-compatible`: `40` marked states, `90` iterations, target-hit `1.0`
 
 The sharper support-side projection of that same wall is now in
-[toe_support_cocycle_compatibility_relaxation_search.py](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/toe_support_cocycle_compatibility_relaxation_search.py).
+[toe_support_cocycle_compatibility_relaxation_search.py](tools/qiskit/toe_support_cocycle_compatibility_relaxation_search.py).
 It tensors the factorized `120`-state support-relaxation shell directly with
 the exact `6`-state cocycle-compatibility wall, so the exact shell is
 `720 = 120·6`, padded to `10` qubits. The factorization is still exact:
@@ -1148,7 +1174,7 @@ precise factor `2`. Seeded nonzero-wall checks at `256` shots give:
 
 That same wall now lifts cleanly across the corrected diagnostic-relaxation
 family in
-[toe_bridge_cocycle_compatibility_relaxation_search.py](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/toe_bridge_cocycle_compatibility_relaxation_search.py).
+[toe_bridge_cocycle_compatibility_relaxation_search.py](tools/qiskit/toe_bridge_cocycle_compatibility_relaxation_search.py).
 The exact shell is again `345600 = 57600·6` states on `19` qubits, but now the
 cocycle wall is resolved against the hyperbolic-order and exceptional-order
 relaxation sectors rather than only the exact diagnostic shell. On the live
@@ -1171,9 +1197,9 @@ Seeded nonzero-wall checks at `256` shots give:
 - `both-orders-relaxed`: `26` iterations, target-hit `1.0`
 
 The next exact refinement is the enhancement-slot hierarchy in
-[w33_enhancement_slot_hierarchy_bridge.py](/mnt/c/Repos/Theory%20of%20Everything/exploration/w33_enhancement_slot_hierarchy_bridge.py)
+[w33_enhancement_slot_hierarchy_bridge.py](exploration/w33_enhancement_slot_hierarchy_bridge.py)
 and the matching oracle
-[toe_bridge_diagnostic_enhancement_slot_search.py](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/toe_bridge_diagnostic_enhancement_slot_search.py).
+[toe_bridge_diagnostic_enhancement_slot_search.py](tools/qiskit/toe_bridge_diagnostic_enhancement_slot_search.py).
 The exact compatibility law is:
 
 - `current_k3_zero_orbit -> zero_by_splitness`
@@ -1195,7 +1221,7 @@ checks at `256` shots came back exact at `26` iterations:
 - `formal-completion-avatar`: `1.0`, marked pair `['formal_completion_avatar', 'unique_nonzero_orbit_in_existing_slot']`
 
 The next exact refinement is now in
-[w33_carrier_preserving_k3_enhancement_bridge.py](/mnt/c/Repos/Theory%20of%20Everything/exploration/w33_carrier_preserving_k3_enhancement_bridge.py).
+[w33_carrier_preserving_k3_enhancement_bridge.py](exploration/w33_carrier_preserving_k3_enhancement_bridge.py).
 This sharpens the live external wall itself. The head-compatible image line,
 the canonical carrier plane `U1`, the ordered shell `81 -> 162 -> 81`, and the
 existing tail-to-head `81x81` slot are already fixed before any genuine new
@@ -1206,9 +1232,9 @@ longer “find a new carrier geometry”; it is realization of that already-fixe
 carrier package on the K3 side.
 
 The next exact refinement after that is now in
-[w33_completion_datum_avatar_lift_bridge.py](/mnt/c/Repos/Theory%20of%20Everything/exploration/w33_completion_datum_avatar_lift_bridge.py)
+[w33_completion_datum_avatar_lift_bridge.py](exploration/w33_completion_datum_avatar_lift_bridge.py)
 with the matching oracle
-[toe_bridge_completion_datum_avatar_lift_search.py](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/toe_bridge_completion_datum_avatar_lift_search.py).
+[toe_bridge_completion_datum_avatar_lift_search.py](tools/qiskit/toe_bridge_completion_datum_avatar_lift_search.py).
 This isolates the actual live distinction inside the shared nonzero slot. The
 minimal and formal completion states already share the same nonzero orbit and
 the same completion normal form, so the difference is role:
@@ -1230,7 +1256,7 @@ iterations with mean target-hit probability `1.0`:
 - `formal-completion-object`: mean target-hit `1.0` at `63` on seeds `7,8`
 
 The next exact geometric localization is now in
-[w33_carrier_preserving_transport_twisted_k3_enhancement_bridge.py](/mnt/c/Repos/Theory%20of%20Everything/exploration/w33_carrier_preserving_transport_twisted_k3_enhancement_bridge.py).
+[w33_carrier_preserving_transport_twisted_k3_lift_bridge.py](exploration/w33_carrier_preserving_transport_twisted_k3_lift_bridge.py).
 This is the strongest honest step I can promote past the discrete wall. The
 external carrier package is already fixed, the current external K3 shadow is
 still only the split harmonic `81 + 81` package, and the missing internal
@@ -1247,9 +1273,9 @@ The open wall is now existence of that lift on the K3 side, not the slot, the
 line, the shell, or the internal operator shape.
 
 The committed oracle stack is summarized in
-[bridge_oracle_ledger.json](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/bridge_oracle_ledger.json).
+[bridge_oracle_ledger.json](tools/qiskit/bridge_oracle_ledger.json).
 For a GitHub-readable version, use
-[ORACLE_LEDGER.md](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/ORACLE_LEDGER.md).
+[ORACLE_LEDGER.md](tools/qiskit/ORACLE_LEDGER.md).
 
 ## Authors
 

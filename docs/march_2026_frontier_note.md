@@ -1579,7 +1579,7 @@ iterations with mean target-hit probability `1.0`:
 ### Carrier-preserving transport-twisted K3 lift
 
 The next exact geometric localization is now in
-`exploration/w33_carrier_preserving_transport_twisted_k3_enhancement_bridge.py`.
+`exploration/w33_carrier_preserving_transport_twisted_k3_lift_bridge.py`.
 
 This is the strongest honest step past the discrete wall. The external carrier
 package is already fixed, the current external K3 shadow is still only the

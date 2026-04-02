@@ -1,15 +1,25 @@
 from __future__ import annotations
 
 from fractions import Fraction
+from pathlib import Path
+import sys
 
-import networkx as nx
 import numpy as np
 
+
+ROOT = Path(__file__).resolve().parents[1]
+for candidate in (ROOT, ROOT / "exploration"):
+    if str(candidate) not in sys.path:
+        sys.path.insert(0, str(candidate))
+
+from exploration._optional_deps import require_networkx
 from exploration.w33_center_quad_transport_bridge import reconstructed_quotient_graph
 from exploration.w33_dual_bose_mesner_bridge import (
     build_dual_bose_mesner_bridge_summary,
 )
 from exploration.w33_three_channel_operator_bridge import build_w33_adjacency
+
+nx = require_networkx("tests/test_w33_dual_bose_mesner_bridge.py")
 
 
 def test_w33_and_transport_have_same_nontrivial_eigenvalues() -> None:

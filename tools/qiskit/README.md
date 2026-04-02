@@ -468,7 +468,7 @@ The first product study shows the `15`-qubit formal-completion oracle is
 cleanest at `31` iterations on seeds `7,8`.
 
 The next exact diagnostic layer is
-[toe_bridge_diagnostic_relaxation_search.py](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/toe_bridge_diagnostic_relaxation_search.py).
+[toe_bridge_diagnostic_relaxation_search.py](tools/qiskit/toe_bridge_diagnostic_relaxation_search.py).
 It keeps the accepted pass/pass concentration channel fixed and relaxes the two
 order theorems one sector at a time, while the interleaving sector stays free
 just as it already does in the diagnostic-order oracle. The corrected exact
@@ -758,9 +758,9 @@ iterations with mean target-hit probability `1.0`:
 - `formal-completion-object`: mean `1.0` at `63` on seeds `7,8`
 
 The current promoted bridge-oracle stack is summarized in
-[bridge_oracle_ledger.json](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/bridge_oracle_ledger.json).
+[bridge_oracle_ledger.json](tools/qiskit/bridge_oracle_ledger.json).
 For a GitHub-readable surface, use
-[ORACLE_LEDGER.md](/mnt/c/Repos/Theory%20of%20Everything/tools/qiskit/ORACLE_LEDGER.md).
+[ORACLE_LEDGER.md](tools/qiskit/ORACLE_LEDGER.md).
 
 ## Stronger TOE Search Target
 

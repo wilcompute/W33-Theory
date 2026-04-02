@@ -46,8 +46,12 @@ scripts/sp_phase_monomial_correlation.py
 
 # Testing
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyright/
 .coverage
 htmlcov/
+__pypackages__/
 
 # Temporary files
 *.tmp
@@ -97,6 +101,7 @@ tmp*
 .ci-logs/
 .claude/
 .logs/
+_tmp_open_files_test/
 
 # Archived exploration, temp, and bundle directories
 archive/dirs/

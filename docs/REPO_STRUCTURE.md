@@ -6,9 +6,9 @@ preserved alongside them.
 
 ## Start Here
 
-- [README.md](/mnt/c/Repos/Theory of Everything/README.md): top-level project summary and reading route
-- [docs/index.html](/mnt/c/Repos/Theory of Everything/docs/index.html): live public paper / promoted theorem surface
-- [docs/march_2026_frontier_note.md](/mnt/c/Repos/Theory of Everything/docs/march_2026_frontier_note.md): current frontier and open wall
+- [README.md](../README.md): top-level project summary and reading route
+- [docs/index.html](index.html): live public paper / promoted theorem surface
+- [docs/march_2026_frontier_note.md](march_2026_frontier_note.md): current frontier and open wall
 
 ## Active Research Surfaces
 
@@ -31,6 +31,27 @@ preserved alongside them.
 - `bundles/`: large generated or staged computation output
 - `V*_output*/`: phase or pilot output drops
 - `extracted_v*/`: preserved extracted snapshots
+
+## Bootstrap and Doctor
+
+Use the repo-maintained environment path rather than manually chasing missing
+imports:
+
+```bash
+./scripts/bootstrap_repo_env.sh
+source .venv/bin/activate
+make doctor
+```
+
+If the repo is on a slow mounted filesystem, the same bootstrap path supports a
+Linux-side virtualenv via `VENV_DIR=/path/to/venv`.
+
+If you only need a non-destructive health check:
+
+```bash
+python3 tools/repo_doctor.py
+python3 tools/repo_cleanup_audit.py
+```
 
 ## Local Hygiene Policy
 
