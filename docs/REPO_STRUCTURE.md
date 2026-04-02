@@ -46,6 +46,10 @@ make doctor
 If the repo is on a slow mounted filesystem, the same bootstrap path supports a
 Linux-side virtualenv via `VENV_DIR=/path/to/venv`.
 
+If the clean theorem worktree does not contain the heavyweight generated
+artifacts, point the repo at a sibling full-data checkout with
+`W33_DATA_ROOT=/path/to/repo-with-artifacts`.
+
 If you only need a non-destructive health check:
 
 ```bash

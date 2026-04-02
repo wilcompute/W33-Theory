@@ -24,21 +24,33 @@ from fractions import Fraction
 from functools import lru_cache
 import json
 from pathlib import Path
+import sys
 from typing import Sequence
 
 import numpy as np
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-META_PATH = (
-    REPO_ROOT
-    / "extracted_v13"
+if __package__ in {None, ""}:
+    if str(REPO_ROOT) not in sys.path:
+        sys.path.insert(0, str(REPO_ROOT))
+    from exploration._artifact_paths import resolve_repo_data_path
+else:
+    from ._artifact_paths import resolve_repo_data_path
+
+META_PATH = resolve_repo_data_path(
+    REPO_ROOT,
+    Path("extracted_v13")
     / "W33-Theory-master"
     / "artifacts"
-    / "e8_root_metadata_table.json"
+    / "e8_root_metadata_table.json",
 )
-SC_PATH = REPO_ROOT / "artifacts" / "e8_structure_constants_w33_discrete.json"
-L3_PATH = REPO_ROOT / "V24_output_v13_full" / "l3_patch_triples_full.jsonl"
+SC_PATH = resolve_repo_data_path(
+    REPO_ROOT, Path("artifacts") / "e8_structure_constants_w33_discrete.json"
+)
+L3_PATH = resolve_repo_data_path(
+    REPO_ROOT, Path("V24_output_v13_full") / "l3_patch_triples_full.jsonl"
+)
 
 PER_GENERATION_DIM = 27
 GENERATION_COUNT = 3

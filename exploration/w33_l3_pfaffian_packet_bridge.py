@@ -24,6 +24,7 @@ from __future__ import annotations
 import json
 from functools import lru_cache
 from pathlib import Path
+import sys
 from typing import Any
 
 import numpy as np
@@ -31,11 +32,28 @@ import sympy as sp
 
 
 ROOT = Path(__file__).resolve().parents[1]
+if __package__ in {None, ""}:
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0, str(ROOT))
+    from exploration._artifact_paths import resolve_repo_data_path
+else:
+    from ._artifact_paths import resolve_repo_data_path
+
 DEFAULT_OUTPUT_PATH = ROOT / "data" / "w33_l3_pfaffian_packet_bridge_summary.json"
 
-L3_PATH = ROOT / "V24_output_v13_full" / "l3_patch_triples_full.jsonl"
-META_PATH = ROOT / "extracted_v13" / "W33-Theory-master" / "artifacts" / "e8_root_metadata_table.json"
-SC_PATH = ROOT / "artifacts" / "e8_structure_constants_w33_discrete.json"
+L3_PATH = resolve_repo_data_path(
+    ROOT, Path("V24_output_v13_full") / "l3_patch_triples_full.jsonl"
+)
+META_PATH = resolve_repo_data_path(
+    ROOT,
+    Path("extracted_v13")
+    / "W33-Theory-master"
+    / "artifacts"
+    / "e8_root_metadata_table.json",
+)
+SC_PATH = resolve_repo_data_path(
+    ROOT, Path("artifacts") / "e8_structure_constants_w33_discrete.json"
+)
 
 SPIN = list(range(1, 17))
 VEC = list(range(17, 27))

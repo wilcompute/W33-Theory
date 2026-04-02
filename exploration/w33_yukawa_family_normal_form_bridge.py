@@ -23,8 +23,8 @@ packet with a canonical 3x3 flag/unipotent normal form.
 from __future__ import annotations
 
 from functools import lru_cache
-import json
 from pathlib import Path
+import sys
 from typing import Any
 
 import numpy as np
@@ -32,6 +32,13 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
+if __package__ in {None, ""}:
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0, str(ROOT))
+    from exploration._artifact_paths import load_json_from_repo_data
+else:
+    from ._artifact_paths import load_json_from_repo_data
+
 DEFAULT_OUTPUT_PATH = DATA_DIR / "w33_yukawa_family_normal_form_bridge_summary.json"
 
 SYMMETRIC_DOUBLET_VECTOR = np.array([1, 1, 0], dtype=int)
@@ -52,7 +59,7 @@ TWICE_FLAG_BASIS_INVERSE = np.array(
 
 
 def _read_json(filename: str) -> dict[str, Any]:
-    return json.loads((DATA_DIR / filename).read_text(encoding="utf-8"))
+    return load_json_from_repo_data(ROOT, Path("data") / filename)
 
 
 def _sorted_pairs(pairs: set[tuple[int, int]]) -> list[list[int]]:

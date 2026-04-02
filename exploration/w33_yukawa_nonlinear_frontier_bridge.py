@@ -21,18 +21,25 @@ content is a tiny nonlinear internal spectral packet.
 from __future__ import annotations
 
 from functools import lru_cache
-import json
 from pathlib import Path
+import sys
 from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
+if __package__ in {None, ""}:
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0, str(ROOT))
+    from exploration._artifact_paths import load_json_from_repo_data
+else:
+    from ._artifact_paths import load_json_from_repo_data
+
 DEFAULT_OUTPUT_PATH = DATA_DIR / "w33_yukawa_nonlinear_frontier_bridge_summary.json"
 
 
 def _read_json(filename: str) -> dict[str, Any]:
-    return json.loads((DATA_DIR / filename).read_text(encoding="utf-8"))
+    return load_json_from_repo_data(ROOT, Path("data") / filename)
 
 
 def _block_packet(

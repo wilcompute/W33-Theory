@@ -22,6 +22,11 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from exploration._artifact_paths import candidate_repo_roots, find_repo_data_path
+
 REQUIREMENT_IMPORT_NAMES = {
     "jsonschema": "jsonschema",
     "matplotlib": "matplotlib",
@@ -35,6 +40,16 @@ REQUIREMENT_IMPORT_NAMES = {
     "scipy": "scipy",
     "sympy": "sympy",
 }
+
+HEAVY_DATA_RELATIVE_PATHS = (
+    Path("extracted_v13")
+    / "W33-Theory-master"
+    / "artifacts"
+    / "e8_root_metadata_table.json",
+    Path("artifacts") / "e8_structure_constants_w33_discrete.json",
+    Path("V24_output_v13_full") / "l3_patch_triples_full.jsonl",
+    Path("V24_output_v13_full") / "l4_patch_quads_full.jsonl",
+)
 
 
 def _venv_report() -> dict[str, object]:
@@ -151,23 +166,51 @@ def _root_clutter_report() -> dict[str, object]:
     }
 
 
+def _data_artifact_report() -> dict[str, object]:
+    rows = []
+    missing = []
+    for rel in HEAVY_DATA_RELATIVE_PATHS:
+        resolved = find_repo_data_path(ROOT, rel)
+        row = {
+            "relative_path": str(rel),
+            "present": resolved is not None,
+            "resolved_path": str(resolved) if resolved else None,
+        }
+        rows.append(row)
+        if resolved is None:
+            missing.append(str(rel))
+    return {
+        "candidate_roots": [str(root) for root in candidate_repo_roots(ROOT)],
+        "rows": rows,
+        "missing": missing,
+        "ok": not missing,
+    }
+
+
 def build_report() -> dict[str, object]:
     deps = _dependency_report()
     git_lines = _git_status_lines()
+    data_artifacts = _data_artifact_report()
     return {
         "repo_root": str(ROOT),
         "python": sys.version.split()[0],
         "venv": _venv_report(),
         "dependencies": deps,
+        "data_artifacts": data_artifacts,
         "git_dirty_entries": len(git_lines),
         "root_clutter": _root_clutter_report(),
         "next_steps": [
             "Run ./scripts/bootstrap_repo_env.sh to create a local .venv and install requirements-dev.txt.",
+            "If heavyweight theorem artifacts live outside this worktree, set W33_DATA_ROOT=/path/to/repo-with-artifacts.",
             "Run python3 tools/repo_cleanup_audit.py for a category view of dirty worktree entries.",
             "Prefer keeping promoted theorem work under exploration/, tests/, docs/, and tools/qiskit/ rather than adding new root-level drops.",
         ],
         "verdict": (
-            "healthy" if deps["ok"] else "missing_python_dependencies"
+            "healthy"
+            if deps["ok"] and data_artifacts["ok"]
+            else "missing_python_dependencies"
+            if not deps["ok"]
+            else "missing_repo_data_artifacts"
         ),
     }
 
@@ -193,6 +236,13 @@ def main() -> None:
     for row in deps["rows"]:
         status = "ok" if row["present"] else "missing"
         print(f"  [{status}] {row['package']}")
+
+    artifacts = report["data_artifacts"]
+    print("\nHeavy data artifacts:")
+    for row in artifacts["rows"]:
+        status = "ok" if row["present"] else "missing"
+        target = row["resolved_path"] or row["relative_path"]
+        print(f"  [{status}] {target}")
 
     clutter = report["root_clutter"]
     print(

@@ -95,22 +95,40 @@ import json
 import struct
 from collections import Counter
 from pathlib import Path
+import sys
 
 import numpy as np
 import pytest
 
 ROOT = Path(__file__).resolve().parent.parent
-L3_PATH = ROOT / "V24_output_v13_full" / "l3_patch_triples_full.jsonl"
-L4_PATH = ROOT / "V24_output_v13_full" / "l4_patch_quads_full.jsonl"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from exploration._artifact_paths import find_repo_data_path
+
+L3_PATH = find_repo_data_path(
+    ROOT, Path("V24_output_v13_full") / "l3_patch_triples_full.jsonl"
+)
+L4_PATH = find_repo_data_path(
+    ROOT, Path("V24_output_v13_full") / "l4_patch_quads_full.jsonl"
+)
 L5_PATH = ROOT / "extracted_v20" / "v19" / "V19" / "l5_patch_quintuples_full.jsonl"
 L6_PATH = ROOT / "extracted_v20" / "V20" / "l6_patch_sextuples_full.jsonl"
 L9_BUCKET_DIR = ROOT / "V30_output_v13_full" / "l9_buckets"
-META_PATH = ROOT / "extracted_v13" / "W33-Theory-master" / "artifacts" / "e8_root_metadata_table.json"
-SC_PATH = ROOT / "artifacts" / "e8_structure_constants_w33_discrete.json"
+META_PATH = find_repo_data_path(
+    ROOT,
+    Path("extracted_v13")
+    / "W33-Theory-master"
+    / "artifacts"
+    / "e8_root_metadata_table.json",
+)
+SC_PATH = find_repo_data_path(
+    ROOT, Path("artifacts") / "e8_structure_constants_w33_discrete.json"
+)
 
 # Skip all tests if data files are not present
 pytestmark = pytest.mark.skipif(
-    not L3_PATH.exists() or not META_PATH.exists() or not SC_PATH.exists(),
+    not L3_PATH or not META_PATH or not SC_PATH,
     reason="V24 output or metadata files not found",
 )
 

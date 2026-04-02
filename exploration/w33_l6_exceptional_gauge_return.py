@@ -32,22 +32,29 @@ import numpy as np
 
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 EXPLORATION_DIR = Path(__file__).resolve().parent
 if str(EXPLORATION_DIR) not in sys.path:
     sys.path.insert(0, str(EXPLORATION_DIR))
 
+from exploration._artifact_paths import resolve_repo_data_path
 from w33_fermionic_connes_sector import canonical_spinor_basis
 
 
-L6_PATH = ROOT / "V24_output_v13_full" / "l6_patch_sextuples_full.jsonl"
-META_PATH = (
-    ROOT
-    / "extracted_v13"
+L6_PATH = resolve_repo_data_path(
+    ROOT, Path("V24_output_v13_full") / "l6_patch_sextuples_full.jsonl"
+)
+META_PATH = resolve_repo_data_path(
+    ROOT,
+    Path("extracted_v13")
     / "W33-Theory-master"
     / "artifacts"
-    / "e8_root_metadata_table.json"
+    / "e8_root_metadata_table.json",
 )
-SC_PATH = ROOT / "artifacts" / "e8_structure_constants_w33_discrete.json"
+SC_PATH = resolve_repo_data_path(
+    ROOT, Path("artifacts") / "e8_structure_constants_w33_discrete.json"
+)
 
 
 @dataclass(frozen=True)

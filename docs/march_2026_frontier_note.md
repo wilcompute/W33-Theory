@@ -218,6 +218,28 @@ The local bridge packet is now normalized sharply enough to state a stronger con
   - `1 / (96 pi^2)` per curved copy
 - The exact repo-native A4-entry theorem already fixes the finite multiplier:
   - `Delta A4 = 81 epsilon^2 a0 = 1209 a0 / 9194`
+
+### Holographic transport-twisted lift localization
+
+The clean holographic continuation now compresses the post-`CCCLXXII` wall one
+step further.
+
+- The central image-side family channel localizes to the head-compatible line.
+- The first family-sensitive `A4` packet has minimal canonical external carrier
+  plane `U1`.
+- Exact transport completion uses the avatar shell `81 -> 162 -> 81`.
+- The external realization wall is already localized to a
+  carrier-preserving transport-twisted K3 lift of that fixed package.
+
+So the honest remaining theorem is no longer a generic continuum or K3
+enhancement problem. It is the refined external `A4` density on the nested
+support ladder
+
+- `head line ⊂ U1 ⊂ 81 -> 162 -> 81 ⊂ transport-twisted K3 lift`
+
+with the finite entry coefficient already locked at
+
+- `Delta A4 = 81 epsilon^2 a0 = 1209 a0 / 9194`.
 - Rank-1 external branches kill the packet automatically, while rank-2 activation is quartic:
   - `C -> t C` gives scaling `t^4`
 - So before the already-isolated universal rank-2 factor `2`, the reduced local prefactor is

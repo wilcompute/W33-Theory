@@ -40,6 +40,7 @@ for candidate in (ROOT, ROOT / "exploration"):
     if str(candidate) not in sys.path:
         sys.path.insert(0, str(candidate))
 
+from exploration._artifact_paths import resolve_repo_data_path
 from w33_l4_dirac_bridge_obstruction import build_l4_dirac_bridge_obstruction_certificate
 from w33_l4_quark_dirac_bridge import build_l4_quark_dirac_bridge_candidate
 from w33_l4_quark_self_energy import build_l4_quark_self_energy_candidate
@@ -51,9 +52,17 @@ from w33_l6_exceptional_gauge_return import (
 
 
 DEFAULT_OUTPUT_PATH = ROOT / "data" / "w33_lie_tower_cycle_bridge_summary.json"
-TOWER_DIR = ROOT / "V24_output_v13_full"
-META_PATH = ROOT / "extracted_v13" / "W33-Theory-master" / "artifacts" / "e8_root_metadata_table.json"
-SC_PATH = ROOT / "artifacts" / "e8_structure_constants_w33_discrete.json"
+TOWER_DIR = resolve_repo_data_path(ROOT, "V24_output_v13_full")
+META_PATH = resolve_repo_data_path(
+    ROOT,
+    Path("extracted_v13")
+    / "W33-Theory-master"
+    / "artifacts"
+    / "e8_root_metadata_table.json",
+)
+SC_PATH = resolve_repo_data_path(
+    ROOT, Path("artifacts") / "e8_structure_constants_w33_discrete.json"
+)
 LEVEL_TO_FILENAME = {
     3: "l3_patch_triples_full.jsonl",
     4: "l4_patch_quads_full.jsonl",

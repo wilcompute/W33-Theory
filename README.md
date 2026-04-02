@@ -103,6 +103,14 @@ VENV_DIR="$HOME/.venvs/w33-theory" ./scripts/bootstrap_repo_env.sh
 VENV_DIR="$HOME/.venvs/w33-theory" python3 tools/repo_doctor.py
 ```
 
+If you are working from the clean theorem branch but the heavyweight generated
+artifacts live in a sibling full-data checkout, point the repo at that data
+root explicitly:
+
+```bash
+W33_DATA_ROOT="/path/to/repo-with-artifacts" python3 tools/repo_doctor.py
+```
+
 Useful maintenance entrypoints:
 
 - `make doctor`: dependency + worktree health check
@@ -116,7 +124,7 @@ Useful maintenance entrypoints:
 | Theorems proved | 4,700+ |
 | Test definitions / live checks | 27k+ / 2500+ advertised live checks |
 | Test files under `tests/` | 1,219+ |
-| Phases completed | 372 |
+| Phases completed | 373 |
 | Mathematical domains covered | 340+ |
 | Public prediction inventory | evolving |
 
@@ -708,6 +716,7 @@ python -m pytest tests/test_master_derivation.py -k "pmns" -q
 Latest promoted phase:
 
 - **CCCLXXII:** Holographic Yukawa Entry Lock (36 tests) — the first continuum family coefficient is no longer free. The exact `A4` entry `ΔA4 = 81 ε² a0 = 1209 a0 / 9194` is weighted by the same finite `81` in four exact guises: `k_log=q^μ=81`, the rank/image/kernel of the square-zero transport nilpotent on the `162`-sector, the curvature-sensitive half of the exact `81+81` split, and the finite multiplier in the first family-sensitive `A4` term. So the remaining wall is the refined external `A4` density/global realization, not the finite multiplicity.
+- **CCCLXXIII:** Holographic Transport-Twisted Lift Localization (36 tests) — the post-`CCCLXXII` wall is no longer a generic continuum or K3-enhancement problem. The exact bridge is already support-stratified as `head line ⊂ U1 ⊂ 81→162→81`, the first family-sensitive packet has minimal canonical external carrier `ΔA4` on `U1`, and the remaining realization wall is the existence of a carrier-preserving transport-twisted K3 lift of that already-fixed package. So the honest open step is refined external `A4` density on that transport-twisted lift, not another search for a new line, plane, shell, or finite multiplicity.
 
 | Phase | Theorems | Tests | Topic |
 |-------|----------|-------|-------|
