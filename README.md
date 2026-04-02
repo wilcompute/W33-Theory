@@ -681,7 +681,7 @@ python -m pytest tests/test_master_derivation.py -k "pmns" -q
 
 Latest promoted phase:
 
-- **CCCLXX:** Ternary Qutrit CSS Dual-Distance Closure (30 tests) — the promoted qutrit homological code is no longer partial. The dual/X distance closes exactly at `d_X=3` via an explicit tetrahedron-star cocycle on edges `(0,4),(0,5),(0,6)`, while the primal/Z distance stays `d_Z=4`, so the honest code is `[[240,81,3,4]]_3`.
+- **CCCLXXI:** Finite Holographic Code Closure (30 tests) — the recent TQFT, categorical, gravity, and qutrit-code phases now lock into one exact finite boundary/bulk dictionary: `q=d_X=3`, `mu=d_Z=4`, `D^2=v=40`, `k_log=q^mu=81`, `E=240=2qD^2`, and `N_2=N_3=1/G=960=mu E`. The arithmetic closure compresses further to `40+81=121=(k-1)^2` and `40+81+16=137`.
 
 | Phase | Theorems | Tests | Topic |
 |-------|----------|-------|-------|
