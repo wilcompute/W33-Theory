@@ -681,7 +681,7 @@ python -m pytest tests/test_master_derivation.py -k "pmns" -q
 
 Latest promoted phase:
 
-- **CCCLXXI:** Finite Holographic Code Closure (30 tests) — the recent TQFT, categorical, gravity, and qutrit-code phases now lock into one exact finite boundary/bulk dictionary: `q=d_X=3`, `mu=d_Z=4`, `D^2=v=40`, `k_log=q^mu=81`, `E=240=2qD^2`, and `N_2=N_3=1/G=960=mu E`. The arithmetic closure compresses further to `40+81=121=(k-1)^2` and `40+81+16=137`.
+- **CCCLXXII:** Holographic Yukawa Entry Lock (36 tests) — the first continuum family coefficient is no longer free. The exact `A4` entry `ΔA4 = 81 ε² a0 = 1209 a0 / 9194` is weighted by the same finite `81` in four exact guises: `k_log=q^μ=81`, the rank/image/kernel of the square-zero transport nilpotent on the `162`-sector, the curvature-sensitive half of the exact `81+81` split, and the finite multiplier in the first family-sensitive `A4` term. So the remaining wall is the refined external `A4` density/global realization, not the finite multiplicity.
 
 | Phase | Theorems | Tests | Topic |
 |-------|----------|-------|-------|
