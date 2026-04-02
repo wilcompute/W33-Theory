@@ -1634,6 +1634,24 @@ gauge. The live wall is therefore no longer classification of multiple
 transport-twisted avatars. It is realization of **one** unique transport-
 twisted avatar from actual K3-side data.
 
+### Transport-twisted realization channel
+
+The next exact sharpening is now in
+`exploration/w33_transport_twisted_k3_realization_channel_bridge.py`.
+
+This tightens the post-`CCCLXXIV` wall from a one-avatar existence problem to a
+one-channel existence problem. The transport Bose-Mesner / heat selector
+already canonically fixes one protected flat `81`-dimensional matter copy, the
+exact transport-twisted curvature kills the protected invariant columns and
+factors through only the complementary `81` copy, and the unique target avatar
+already fixes the tail-to-head activation slot on `81 -> 162 -> 81`.
+
+So any genuine K3-side transport-twisted realization must preserve the
+protected head `81` and realize its nontrivial action only through the
+complementary curvature-sensitive tail `81`. The honest remaining wall is now existence of **one**
+tail-to-head realization channel on the unique avatar, not further carrier or
+target classification.
+
 ## Reproduce
 
 ### PMNS
