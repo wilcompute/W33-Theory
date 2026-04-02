@@ -124,7 +124,7 @@ Useful maintenance entrypoints:
 | Theorems proved | 4,700+ |
 | Test definitions / live checks | 27k+ / 2500+ advertised live checks |
 | Test files under `tests/` | 1,219+ |
-| Phases completed | 373 |
+| Phases completed | 374 |
 | Mathematical domains covered | 340+ |
 | Public prediction inventory | evolving |
 
@@ -717,6 +717,7 @@ Latest promoted phase:
 
 - **CCCLXXII:** Holographic Yukawa Entry Lock (36 tests) — the first continuum family coefficient is no longer free. The exact `A4` entry `ΔA4 = 81 ε² a0 = 1209 a0 / 9194` is weighted by the same finite `81` in four exact guises: `k_log=q^μ=81`, the rank/image/kernel of the square-zero transport nilpotent on the `162`-sector, the curvature-sensitive half of the exact `81+81` split, and the finite multiplier in the first family-sensitive `A4` term. So the remaining wall is the refined external `A4` density/global realization, not the finite multiplicity.
 - **CCCLXXIII:** Holographic Transport-Twisted Lift Localization (36 tests) — the post-`CCCLXXII` wall is no longer a generic continuum or K3-enhancement problem. The exact bridge is already support-stratified as `head line ⊂ U1 ⊂ 81→162→81`, the first family-sensitive packet has minimal canonical external carrier `ΔA4` on `U1`, and the remaining realization wall is the existence of a carrier-preserving transport-twisted K3 lift of that already-fixed package. So the honest open step is refined external `A4` density on that transport-twisted lift, not another search for a new line, plane, shell, or finite multiplicity.
+- **CCCLXXIV:** Holographic Transport-Twisted Target Uniqueness (36 tests) — the post-`CCCLXXIII` wall is now sharper than a generic enhancement-category question. Once the forced head line in `U1`, the ordered shell `81→162→81`, the unique nonzero orbit in the existing tail-to-head slot, and the completion normal form `J2^81` are imposed, any exact K3-side transport-twisted lift must target one unique formal external avatar up to the natural head/tail basis gauge. So the honest remaining wall is realization of one fixed transport-twisted avatar from genuine K3-side data, not classification of many candidate avatars.
 
 | Phase | Theorems | Tests | Topic |
 |-------|----------|-------|-------|

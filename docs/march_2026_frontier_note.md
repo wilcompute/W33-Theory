@@ -1617,6 +1617,23 @@ carrier-preserving **transport-twisted lift** of that fixed external package.
 The open wall is now existence of that lift on the K3 side, not the slot, the
 line, the shell, or the internal operator shape.
 
+### Transport-twisted target uniqueness
+
+The next exact sharpening is now in
+`exploration/w33_transport_twisted_k3_target_uniqueness_bridge.py`.
+
+This tightens the post-`CCCLXXIII` wall from “some carrier-preserving
+transport-twisted lift” to a unique target avatar statement. The forced head
+line in `U1`, the ordered shell `81 -> 162 -> 81`, the unique nonzero orbit in
+the existing tail-to-head slot, and the completion normal form `J2^81` are
+already fixed.
+
+So if a genuine K3-side transport-twisted realization exists at all, its
+external completion target is already unique up to the natural head/tail basis
+gauge. The live wall is therefore no longer classification of multiple
+transport-twisted avatars. It is realization of **one** unique transport-
+twisted avatar from actual K3-side data.
+
 ## Reproduce
 
 ### PMNS
