@@ -15070,6 +15070,68 @@ check("3-4-5 triangle area = q*mu/2 = q! = 6",
 # ═══════════════════════════════════════════════════════════════════════
 check("W(3,3) diameter = lam = 2", lam_val == 2)
 check("W(3,3) girth = q = 3", q == 3)
+
+# ═══════════════════════════════════════════════════════════════════════
+# PARTITION CHAIN: p(graph param) = next graph param
+# ═══════════════════════════════════════════════════════════════════════
+# The integer partition function maps successive graph params to each other:
+# p(q)=q, p(μ)=μ+1, p(μ+1)=Φ₆, p(Φ₆)=g, p(Θ)=v+λ, p(k−1)=56=dim(E₇)
+check("p(q) = q = 3", _partitions(q) == q)
+check("p(mu) = mu+1 = 5", _partitions(mu_val) == mu_val + 1)
+check("p(mu+1) = Phi6 = 7", _partitions(mu_val + 1) == Phi6)
+check("p(Phi6) = g = 15", _partitions(Phi6) == g_val)  # already checked above too
+check("p(Theta) = v+lam = 42", _partitions(Theta) == v_val + lam_val)  # already above
+check("p(k-1) = 56 = dim(fund E7)",
+      _partitions(k_val - 1) == 56 and (q**2 - 1) * Phi6 == 56)
+check("p(k) = Phi6*(k-1) = 77", _partitions(k_val) == Phi6 * (k_val - 1))
+
+# ═══════════════════════════════════════════════════════════════════════
+# GRAPH ENERGY = E/2 = 120 = |ζ(−3)|⁻¹
+# ═══════════════════════════════════════════════════════════════════════
+# Graph energy = sum of |eigenvalues| with multiplicities
+_graph_energy = k_val + f_val * abs(r_val) + g_val * abs(s_val)
+check("Graph energy = E/2 = 120", _graph_energy == E_count // 2)
+
+# ═══════════════════════════════════════════════════════════════════════
+# EIGENVALUE RATIOS: r/k = 1/q!, |s|/k = 1/q
+# ═══════════════════════════════════════════════════════════════════════
+check("r/k = 1/q! = 1/6", _Frac(r_val, k_val) == _Frac(1, _math_zeta.factorial(q)))
+check("|s|/k = 1/q = 1/3", _Frac(abs(s_val), k_val) == _Frac(1, q))
+
+# ═══════════════════════════════════════════════════════════════════════
+# tr(A³)/tr(A²) = λ = 2
+# ═══════════════════════════════════════════════════════════════════════
+_tr3 = k_val**3 + r_val**3 * f_val + s_val**3 * g_val
+check("tr(A^3)/tr(A^2) = lam = 2",
+      _Frac(_tr3, _tr2) == _Frac(lam_val, 1))
+
+# ═══════════════════════════════════════════════════════════════════════
+# 6T = v·k·λ (triangle identity: f = k·λ)
+# ═══════════════════════════════════════════════════════════════════════
+check("6T = v*k*lam = 960", 6 * T_count == v_val * k_val * lam_val)
+check("f = k*lam = 24", f_val == k_val * lam_val)
+
+# ═══════════════════════════════════════════════════════════════════════
+# KIRCHHOFF SPANNING TREES: τ = Θ^(f−1)·μ^(2g−1)
+# ═══════════════════════════════════════════════════════════════════════
+_tau_tree = Theta**(f_val - 1) * mu_val**(2 * g_val - 1)
+_tau_direct = (k_val - r_val)**f_val * (k_val - s_val)**g_val // v_val
+check("Spanning trees = Theta^(f-1) * mu^(2g-1)",
+      _tau_tree == _tau_direct)
+
+# ═══════════════════════════════════════════════════════════════════════
+# |M₂₂| = λ⁷·q²·(μ+1)·Φ₆·(k−1) = 443520
+# ═══════════════════════════════════════════════════════════════════════
+check("|M_22| = lam^7*q^2*(mu+1)*Phi6*(k-1) = 443520",
+      lam_val**7 * q**2 * (mu_val + 1) * Phi6 * (k_val - 1) == 443520)
+
+# ═══════════════════════════════════════════════════════════════════════
+# |Co₂| = λ¹⁸·q⁶·(μ+1)³·Φ₆·(k−1)·(f−1) = 42305421312000
+# ═══════════════════════════════════════════════════════════════════════
+check("|Co_2| = lam^18*q^6*(mu+1)^3*Phi6*(k-1)*(f-1)",
+      lam_val**18 * q**6 * (mu_val + 1)**3 * Phi6 * (k_val - 1) * (f_val - 1)
+      == 42305421312000)
+
 print(f"\n  ┌──────────────────────────────────────────────────────────┐")
 print(f"  │                 THE MASTER EQUATION                      │")
 print(f"  │                                                          │")
