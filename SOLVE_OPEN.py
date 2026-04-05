@@ -14903,7 +14903,7 @@ check("dim(fund E7) = (q^2-1)*Phi6 = 56",
 check("det(-A) = -q * 2^56",
       (-k_val) * (-r_val)**f_val * (-s_val)**g_val == -q * 2**56)
 
-print(f"\n  37 predictions — ALL from q = 3, ZERO free parameters.")
+print(f"\n  50+ aspects — ALL from q = 3, ZERO free parameters.")
 print(f"  χ²/dof = 0.64 across nonzero-deviation observables.")
 print(f"\n  ┌──────────────────────────────────────────────────────────┐")
 print(f"  │                 THE MASTER EQUATION                      │")
