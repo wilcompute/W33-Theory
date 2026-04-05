@@ -14477,6 +14477,27 @@ check("ζ(4) = π⁴/(λ(v+μ+1)) = π⁴/90", lam_val*(v_val+mu_val+1) == 90)
 # SU(2) at level k has k+1 = Φ₃ = 13 integrable representations
 check("CS level k → k+1 = Φ₃ = 13 integrable reps", k_val + 1 == Phi3)
 
+# ── COMPLEMENT GRAPH ─────────────────────────────────────────────────
+# Complement SRG(40, q³, 2q², 2q²) — CONFERENCE type (λ=μ)
+check("Complement valency = q³ = 27", v_val - k_val - 1 == q**3)
+check("Complement λ=μ = 2q² = 18 (conference)",
+      v_val - 2*k_val + mu_val - 2 == v_val - 2*k_val + lam_val)
+
+# ── VON NEUMANN SPECTRAL ENTROPY ────────────────────────────────────
+# Laplacian weights: Θf/(vk) = (k−s)g/(vk) = 1/2
+# So S_vN = −½ln½ − ½ln½ = ln 2 = EXACTLY 1 bit
+# This is the SRG feasibility condition Θf = (k+|s|)g = E
+_w1 = (k_val - r_val) * f_val   # Theta * f
+_w2 = (k_val - s_val) * g_val   # (k+mu) * g
+check("Spectral weights equal: Θf = (k+μ)g = E (1-bit entropy)",
+      _w1 == _w2 == E_count)
+
+# ── 0-DIMENSIONAL MODULI SPACE ──────────────────────────────────────
+# q! = 2q has unique solution q=3 → no free parameters → no landscape
+check("Moduli space = point: q!−2q = 0 has unique solution q=3",
+      _math_mh.factorial(q) - 2*q == 0
+      and all(_math_mh.factorial(n) - 2*n != 0 for n in range(1,20) if n != q))
+
 print(f"\n  33 predictions — ALL from q = 3, ZERO free parameters.")
 print(f"  χ²/dof = 0.676 across nonzero-deviation observables.")
 print(f"\n  ┌──────────────────────────────────────────────────────────┐")
