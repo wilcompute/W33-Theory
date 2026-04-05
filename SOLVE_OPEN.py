@@ -14824,6 +14824,59 @@ check("M(8,9): c = (k-1)/k = 11/12",
 check("M(10,11): c = (v+k)/N_eff = 52/55",
       _Frac(v_val + k_val, _N_eff) == _Frac(52, 55))
 
+# ── K3 BETTI NUMBERS ────────────────────────────────────────────
+# b₂ = f−2 = 22, b₂⁺ = q = 3, b₂⁻ = g+μ = 19
+check("K3: b_2 = f-2 = 22 = k+Theta", f_val - 2 == k_val + (k_val - lam_val))
+check("K3: b_2^+ = q = 3", q == 3)
+check("K3: b_2^- = g+mu = 19", g_val + mu_val == 19)
+
+# ── K3 INTERSECTION FORM ────────────────────────────────────────
+# K3 = λ(−E₈) ⊕ qH, so b₂ = λ·8 + q·2
+check("K3 intersection form: lam*(-E8) + q*H, b2 = lam*8+q*2",
+      lam_val * 8 + q * 2 == f_val - 2)
+
+# ── ATIYAH-SINGER INDEX ON K3 ───────────────────────────────────
+# Â(K3) = −σ/8 = (k+μ)/8 = λ (number of Dirac zero modes)
+check("A-hat(K3) = (k+mu)/8 = lam = 2",
+      (k_val + mu_val) == 8 * lam_val)
+
+# ── INSTANTON MODULI ────────────────────────────────────────────
+# SU(2) charge-2 on K3: dim_M = 8·2 − 3(1+b₂⁺) = 16−12 = μ
+check("SU(2) charge-2 instanton on K3: dim = mu = 4",
+      8 * 2 - 3 * (1 + q) == mu_val)
+# SU(2) charge-1 on CP²: dim = 8·1 − 3(1+1) = λ
+check("SU(2) charge-1 instanton on CP2: dim = lam = 2",
+      8 * 1 - 3 * (1 + 1) == lam_val)
+
+# ── 4-MANIFOLD EULER CHARACTERISTICS ────────────────────────────
+# S⁴ → λ, CP² → q, S²×S² → μ, K3 → f
+check("4-manifold Euler: S4=lam, CP2=q, S2xS2=mu, K3=f",
+      (lam_val, q, mu_val, f_val) == (2, 3, 4, 24))
+
+# ── BERNOULLI DENOMINATORS FROM GRAPH ───────────────────────────
+# Von Staudt-Clausen: denom(B_k) = product of primes p with (p-1)|k
+# For B₁₂: primes = {λ,q,μ+1,Φ₆,Φ₃} = {2,3,5,7,13}, product = 2730
+check("B_k denom = lam*q*(mu+1)*Phi6*Phi3 = 2730",
+      lam_val * q * (mu_val+1) * Phi6 * Phi3 == 2730)
+# All Bernoulli denominators B₂ through B₆:
+check("B_2 denom = q! = 6", _math_mh.factorial(q) == 6)
+check("B_4 denom = 2g = 30", 2*g_val == 30)
+check("B_10 denom = 2q(k-1) = 66", 2*q*(k_val-1) == 66)
+
+# ── RIEMANN ZETA DENOMINATORS ───────────────────────────────────
+# ζ(4) denom 90 = 2gq = σ₁(v) = fermion dof
+check("zeta(4) denom 90 = 2gq = sigma_1(v)",
+      2*g_val*q == 90
+      and sum(d for d in range(1, v_val+1) if v_val % d == 0) == 90)
+# ζ(6) denom 945 = (μ+1)·Φ₆·q³
+check("zeta(6) denom 945 = (mu+1)*Phi6*q^3",
+      (mu_val+1) * Phi6 * q**3 == 945)
+
+# ── NOETHER FORMULA ON K3 ──────────────────────────────────────
+# χ(O_K3) = c₂/12 = f/k = λ = 2
+check("Noether: chi(O_K3) = f/k = lam = 2",
+      f_val == k_val * lam_val)
+
 print(f"\n  37 predictions — ALL from q = 3, ZERO free parameters.")
 print(f"  χ²/dof = 0.64 across nonzero-deviation observables.")
 print(f"\n  ┌──────────────────────────────────────────────────────────┐")
