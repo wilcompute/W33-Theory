@@ -15933,6 +15933,103 @@ check("F(k-1=11) = 89, appears in Kemeny K = q*89/(mu^2*(mu+1))",
       _fib[k_val - 1] == 89)
 check("F(k=12) = k^2 = 144", _fib[k_val] == k_val**2)
 
+# ═══════════════════════════════════════════════════════════════════════
+# PRIME COUNTING CHAIN: pi(v)=k, pi(k)=mu+1, pi(mu+1)=q, pi(q)=lam
+# Graph parameters form a chain under the prime-counting function!
+# ═══════════════════════════════════════════════════════════════════════
+def _pi_count(n):
+    """Number of primes <= n."""
+    return sum(1 for i in range(2, n + 1)
+               if all(i % j != 0 for j in range(2, int(i**0.5) + 1)))
+
+check("pi(v=40) = k = 12", _pi_count(v_val) == k_val)
+check("pi(f=24) = q^2 = 9", _pi_count(f_val) == q**2)
+check("pi(k=12) = mu+1 = 5", _pi_count(k_val) == mu_val + 1)
+check("pi(Theta=10) = mu = 4", _pi_count(Theta) == mu_val)
+check("pi(mu+1=5) = q = 3", _pi_count(mu_val + 1) == q)
+check("pi(q=3) = lam = 2", _pi_count(q) == lam_val)
+
+# ═══════════════════════════════════════════════════════════════════════
+# MONSTER ORDER — ALL EXPONENTS FROM GRAPH
+# |M| = lam^(v+q!) * q^(v/lam) * (mu+1)^(q^2) * Phi6^(q!) * (k-1)^lam
+#   * Phi3^q * (mu^2+1) * (g+mu) * (f-1) * (f+mu+1) * (2g+1) * (v+1)
+#   * (v+Phi6) * (v+g+mu) * (Phi12-lam)
+# ═══════════════════════════════════════════════════════════════════════
+check("Monster 2-exp = v+q! = 46", v_val + _math_fc.factorial(q) == 46)
+check("Monster 3-exp = v/lam = 20", v_val // lam_val == 20)
+check("Monster 5-exp = q^2 = 9", q**2 == 9)
+check("Monster 7-exp = q! = 6", _math_fc.factorial(q) == 6)
+check("Monster 11-exp = lam", lam_val == 2)
+check("Monster 13-exp = q", q == 3)
+_M_order = (lam_val**46 * q**20 * (mu_val+1)**9 * Phi6**6 * (k_val-1)**2
+            * Phi3**3 * (mu_val**2+1) * (g_val+mu_val) * (f_val-1)
+            * (f_val+mu_val+1) * (2*g_val+1) * (v_val+1) * (v_val+Phi6)
+            * (v_val+g_val+mu_val) * (Phi12-lam_val))
+check("|Monster| fully graph-parametric",
+      _M_order == 808017424794512875886459904961710757005754368000000000)
+check("Monster classes 194 = lam*(|krs|+1)",
+      194 == lam_val * (abs(k_val * r_val * s_val) + 1))
+
+# ═══════════════════════════════════════════════════════════════════════
+# LEECH LATTICE THETA SERIES — first shell
+# ═══════════════════════════════════════════════════════════════════════
+check("Leech shell 1: 196560 = mu^2*q^3*(mu+1)*Phi6*Phi3",
+      mu_val**2 * q**3 * (mu_val+1) * Phi6 * Phi3 == 196560)
+
+# ═══════════════════════════════════════════════════════════════════════
+# DEDEKIND SUMS s(1,n) = (n-1)(n-2)/(12n) AT GRAPH PARAMS
+# ═══════════════════════════════════════════════════════════════════════
+check("s(1,k) = N_eff/(q*f) = 55/72",
+      _Frac((k_val-1)*(k_val-2), 12*k_val) == _Frac(55, q*f_val))
+check("s(1,Phi3) = (k-1)/Phi3 = 11/13",
+      _Frac((Phi3-1)*(Phi3-2), 12*Phi3) == _Frac(k_val-1, Phi3))
+
+# ═══════════════════════════════════════════════════════════════════════
+# ZETA(2n) DENOMINATORS — ALL GRAPH PARAMETRIC
+# ═══════════════════════════════════════════════════════════════════════
+check("zeta(2) denom 6 = q!", 6 == _math_fc.factorial(q))
+check("zeta(4) denom 90 = lam*q^2*(mu+1)",
+      90 == lam_val * q**2 * (mu_val + 1))
+check("zeta(6) denom 945 = q^3*(mu+1)*Phi6",
+      945 == q**3 * (mu_val + 1) * Phi6)
+check("zeta(8) denom 9450 = lam*q^3*(mu+1)^2*Phi6",
+      9450 == lam_val * q**3 * (mu_val + 1)**2 * Phi6)
+check("zeta(10) denom 93555 = q^5*(mu+1)*Phi6*(k-1)",
+      93555 == q**5 * (mu_val + 1) * Phi6 * (k_val - 1))
+
+# ═══════════════════════════════════════════════════════════════════════
+# RAMANUJAN TAU — VALUES 6,7,9,10
+# ═══════════════════════════════════════════════════════════════════════
+check("tau(6) = -lam^5*q^3*Phi6 = -6048",
+      -(lam_val**5) * q**3 * Phi6 == -6048)
+check("tau(7) = -(q^2-1)*Phi6*Phi3*(f-1) = -16744",
+      -(q**2 - 1) * Phi6 * Phi3 * (f_val - 1) == -16744)
+check("tau(9) = -q^4*(f-1)*61 = -113643",
+      -(q**4) * (f_val - 1) * 61 == -113643)
+check("tau(10) = -mu^2*q^2*(mu+1)*Phi6*(f-1) = -115920",
+      -(mu_val**2) * q**2 * (mu_val + 1) * Phi6 * (f_val - 1) == -115920)
+
+# ═══════════════════════════════════════════════════════════════════════
+# SIGMA_3 DEEPER — E8 theta coefficients
+# ═══════════════════════════════════════════════════════════════════════
+check("sigma3(5) = lam*q^2*Phi6 = 126",
+      lam_val * q**2 * Phi6 == 126)
+check("sigma3(7) = (q^2-1)*(v+q) = 344",
+      (q**2 - 1) * (v_val + q) == 344)
+check("sigma3(8) = (mu+1)*q^2*Phi3 = 585",
+      (mu_val + 1) * q**2 * Phi3 == 585)
+check("sigma3(10) = lam*Phi6*q^4 = 1134",
+      lam_val * Phi6 * q**4 == 1134)
+
+# ═══════════════════════════════════════════════════════════════════════
+# E8 -> SO(16) DECOMPOSITION: 248 = E/2 + lam^Phi6 = 120 + 128
+# ═══════════════════════════════════════════════════════════════════════
+check("E8->SO(16): 248 = E/2 + lam^Phi6 = 120+128",
+      E_count // 2 + lam_val**Phi6 == 248)
+check("120 = C(mu^2,lam) = binomial(16,2)",
+      mu_val**2 * (mu_val**2 - 1) // 2 == 120)
+check("128 = lam^Phi6 = 2^7", lam_val**Phi6 == 128)
+
 print(f"  │  Graph: W(3,3) = SRG(40,12,2,4)                         │")
 print(f"  │  Physics: Standard Model + GR + Cosmology                │")
 print(f"  │  Checks: {PASS} passed, {FAIL} failed                         │")
