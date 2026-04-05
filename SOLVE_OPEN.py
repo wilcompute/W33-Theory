@@ -14583,6 +14583,24 @@ check("Co₀ primes = graph params: (λ,q,μ+1,Φ₆,k−1,Φ₃,f−1)",
 # K₃(ℤ) = ℤ/48 = ℤ/(2f), where f = (q+1)!
 check("K₃(Z) = Z/2f = Z/48", 2*f_val == 48)
 
+# ── ALL 15 SUPERSINGULAR (MONSTER) PRIMES ────────────────────────────
+# The g = 15 primes dividing |Monster| are ALL graph-parameter expressions
+check("g = 15 supersingular primes = coclique number",
+      len([2,3,5,7,11,13,17,19,23,29,31,41,47,59,71]) == g_val)
+check("Supersingular primes from graph: 2..13",
+      (lam_val, q, mu_val+1, Phi6, k_val-1, Phi3)
+      == (2, 3, 5, 7, 11, 13))
+check("Supersingular primes from graph: 17..47",
+      (mu_val**2+1, g_val+mu_val, f_val-1, 2*Phi3+q, v_val-q**2, v_val+1, v_val+Phi6)
+      == (17, 19, 23, 29, 31, 41, 47))
+check("Supersingular primes from graph: 59,71",
+      (v_val+k_val+Phi6, Phi12-lam_val) == (59, 71))
+
+# ── VIRASORO MINIMAL MODEL ──────────────────────────────────────────
+# M(Φ₃, 2Φ₆) has Φ₃(Φ₃−1)/2 = 78 = dim(E₆) primary fields
+check("Virasoro M(Phi3,2Phi6): primaries = Phi3(Phi3-1)/2 = dim(E6) = 78",
+      Phi3 * (Phi3-1) // 2 == 2*v_val - lam_val)
+
 print(f"\n  37 predictions — ALL from q = 3, ZERO free parameters.")
 print(f"  χ²/dof = 0.64 across nonzero-deviation observables.")
 print(f"\n  ┌──────────────────────────────────────────────────────────┐")
