@@ -16030,7 +16030,131 @@ check("120 = C(mu^2,lam) = binomial(16,2)",
       mu_val**2 * (mu_val**2 - 1) // 2 == 120)
 check("128 = lam^Phi6 = 2^7", lam_val**Phi6 == 128)
 
-print(f"  │  Graph: W(3,3) = SRG(40,12,2,4)                         │")
+# ═══════════════════════════════════════════════════════════════════════
+# CATALAN CHAIN — C(lam)=lam, C(q)=mu+1, C(mu)=lam*Phi6, ...
+# ═══════════════════════════════════════════════════════════════════════
+_catalan_n = lambda n: _math_fc.comb(2*n, n) // (n + 1)
+check("C(lam) = lam = 2", _catalan_n(lam_val) == lam_val)
+check("C(q) = mu+1 = 5", _catalan_n(q) == mu_val + 1)
+check("C(mu) = lam*Phi6 = 14", _catalan_n(mu_val) == lam_val * Phi6)
+check("C(mu+1) = v+lam = 42", _catalan_n(mu_val + 1) == v_val + lam_val)
+check("C(Phi6) = q*(k-1)*Phi3 = 429",
+      _catalan_n(Phi6) == q * (k_val - 1) * Phi3)
+
+# ═══════════════════════════════════════════════════════════════════════
+# MOTZKIN CHAIN — M(q)=mu, M(mu)=q^2, M(Phi6)=lam^Phi6 - 1
+# ═══════════════════════════════════════════════════════════════════════
+def _motzkin(n):
+    if n <= 1:
+        return 1
+    M = [0] * (n + 1); M[0] = 1; M[1] = 1
+    for i in range(2, n + 1):
+        M[i] = ((2 * i + 1) * M[i - 1] + 3 * (i - 1) * M[i - 2]) // (i + 2)
+    return M[n]
+
+check("Motzkin M(q) = mu = 4", _motzkin(q) == mu_val)
+check("Motzkin M(mu) = q^2 = 9", _motzkin(mu_val) == q**2)
+check("Motzkin M(Phi6) = lam^Phi6 - 1 = 127 (Mersenne prime)",
+      _motzkin(Phi6) == lam_val**Phi6 - 1)
+
+# ═══════════════════════════════════════════════════════════════════════
+# DERANGEMENT CHAIN — D(q)=lam, D(mu)=q^2, D(mu+1)=v+mu
+# ═══════════════════════════════════════════════════════════════════════
+def _derangements(n):
+    if n == 0: return 1
+    if n == 1: return 0
+    d0, d1 = 1, 0
+    for i in range(2, n + 1):
+        d0, d1 = d1, (i - 1) * (d0 + d1)
+    return d1
+
+check("D(q) = lam = 2", _derangements(q) == lam_val)
+check("D(mu) = q^2 = 9", _derangements(mu_val) == q**2)
+check("D(mu+1) = v+mu = 44", _derangements(mu_val + 1) == v_val + mu_val)
+
+# ═══════════════════════════════════════════════════════════════════════
+# DOUBLE FACTORIAL CHAIN — q!!=q, (mu+1)!!=g, Phi6!!=q(mu+1)Phi6
+# ═══════════════════════════════════════════════════════════════════════
+def _double_fact(n):
+    r = 1
+    while n > 1:
+        r *= n; n -= 2
+    return r
+
+check("q!! = q = 3", _double_fact(q) == q)
+check("(mu+1)!! = g = 15", _double_fact(mu_val + 1) == g_val)
+check("Phi6!! = q*(mu+1)*Phi6 = 105", _double_fact(Phi6) == q * (mu_val + 1) * Phi6)
+check("9!! = q^3*(mu+1)*Phi6 = zeta(6) denom = 945",
+      _double_fact(q**2) == q**3 * (mu_val + 1) * Phi6)
+
+# ═══════════════════════════════════════════════════════════════════════
+# APERY NUMBERS — a_1=mu+1, a_2=Phi12, a_3=(mu+1)(mu^2+1)^2
+# The sequence that proves zeta(3) irrationality!
+# ═══════════════════════════════════════════════════════════════════════
+def _apery(n):
+    return sum(_math_fc.comb(n, kk)**2 * _math_fc.comb(n + kk, kk)**2
+               for kk in range(n + 1))
+
+check("Apery a(1) = mu+1 = 5", _apery(1) == mu_val + 1)
+check("Apery a(2) = Phi12 = 73", _apery(2) == Phi12)
+check("Apery a(3) = (mu+1)*(mu^2+1)^2 = 1445",
+      _apery(3) == (mu_val + 1) * (mu_val**2 + 1)**2)
+
+# ═══════════════════════════════════════════════════════════════════════
+# PARTITION FUNCTION — p(k)=Phi6(k-1), p(g)=mu^2(k-1)
+# ═══════════════════════════════════════════════════════════════════════
+check("p(k=12) = Phi6*(k-1) = 77", _partitions(k_val) == Phi6 * (k_val - 1))
+check("p(g=15) = mu^2*(k-1) = 176", _partitions(g_val) == mu_val**2 * (k_val - 1))
+
+# ═══════════════════════════════════════════════════════════════════════
+# dim(S_f) = lam: cusp forms of weight f=24 have dimension lam=2
+# ═══════════════════════════════════════════════════════════════════════
+check("dim(S_f) = lam = 2: cusp forms weight f",
+      (f_val // 12 + 1 - 1) == lam_val)  # dim(M_24) = 3, dim(S_24) = 2
+
+# ═══════════════════════════════════════════════════════════════════════
+# GENERALIZED PENTAGONAL NUMBERS — all through n=+-5 are graph params
+# Gen_pent(n) = n(3n-1)/2 for n>0, |n|(3|n|+1)/2 for n<0
+# ═══════════════════════════════════════════════════════════════════════
+_gp = lambda n: n * (3 * n - 1) // 2 if n > 0 else (-n) * (3 * (-n) + 1) // 2
+check("genpent(-1) = lam", _gp(-1) == lam_val)
+check("genpent(2) = mu+1", _gp(2) == mu_val + 1)
+check("genpent(-2) = Phi6", _gp(-2) == Phi6)
+check("genpent(-3) = g", _gp(-3) == g_val)
+check("genpent(3) = k", _gp(3) == k_val)
+check("genpent(-5) = v", _gp(-5) == v_val)
+
+# ═══════════════════════════════════════════════════════════════════════
+# TRIANGULAR T(k)=78=dim(E6), T(g)=E/2=120, T(f)=k(mu+1)^2=300
+# ═══════════════════════════════════════════════════════════════════════
+_tri = lambda n: n * (n + 1) // 2
+check("T(k) = 78 = dim(E6 adjoint)", _tri(k_val) == 78)
+check("T(g) = E/2 = 120", _tri(g_val) == E_count // 2)
+check("T(f) = k*(mu+1)^2 = 300", _tri(f_val) == k_val * (mu_val + 1)**2)
+
+# ═══════════════════════════════════════════════════════════════════════
+# f = mu! = (q+1)! = 24 and 691 = Phi12*q^2 + lam*(mu^2+1)
+# ═══════════════════════════════════════════════════════════════════════
+check("f = mu! = (q+1)! = 24", f_val == _math_fc.factorial(mu_val))
+check("691 (Ramanujan prime) = Phi12*q^2 + lam*(mu^2+1)",
+      Phi12 * q**2 + lam_val * (mu_val**2 + 1) == 691)
+
+# ═══════════════════════════════════════════════════════════════════════
+# STIRLING UNSIGNED 1ST KIND — |s(mu,lam)|=k-1
+# ═══════════════════════════════════════════════════════════════════════
+def _stirling1u(n, kk):
+    S = [[0] * (kk + 1) for _ in range(n + 1)]
+    S[0][0] = 1
+    for i in range(1, n + 1):
+        for j in range(1, min(i, kk) + 1):
+            S[i][j] = S[i - 1][j - 1] + (i - 1) * S[i - 1][j]
+    return S[n][kk]
+
+check("|s(mu,lam)| = k-1 = 11", _stirling1u(mu_val, lam_val) == k_val - 1)
+check("|s(mu+1,lam)| = v+Theta = 50",
+      _stirling1u(mu_val + 1, lam_val) == v_val + Theta)
+check("|s(mu+1,q)| = (mu+1)*Phi6 = 35",
+      _stirling1u(mu_val + 1, q) == (mu_val + 1) * Phi6)
 print(f"  │  Physics: Standard Model + GR + Cosmology                │")
 print(f"  │  Checks: {PASS} passed, {FAIL} failed                         │")
 print(f"  │  Free parameters: 0                                      │")
