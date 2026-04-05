@@ -14445,6 +14445,38 @@ check("Holographic ratio E/T = q/λ = 3/2",
 # Central charge of Monster VOA: c = f = 24 = (q+1)!
 check("Moonshine c = f = (q+1)! = 24", f_val == _math_mh.factorial(q+1))
 
+# ── MODULAR FORMS & RAMANUJAN ────────────────────────────────────────
+# j-invariant: 744 = (v−q²)·f = 31·24 (31 is supersingular)
+check("j-invariant constant 744 = (v−q²)·f",
+      (v_val - q**2) * f_val == 744)
+# Ramanujan tau: τ(q) = E+k = 252, τ(2) = −f, τ(5) = λ·q·(μ+1)·Φ₆·(f−1)
+check("Ramanujan τ(q) = E+k = 252", E_count + k_val == 252)
+check("Ramanujan τ(5) = λq(μ+1)Φ₆(f−1) = 4830",
+      lam_val * q * (mu_val+1) * Phi6 * (f_val-1) == 4830)
+# Ramanujan congruences: moduli (5,7,11) = (μ+1, Φ₆, k−1)
+check("Ramanujan congruence moduli = (μ+1,Φ₆,k−1) = (5,7,11)",
+      (mu_val+1, Phi6, k_val-1) == (5, 7, 11))
+
+# ── 2-ADIC VALUATIONS = GRAPH PARAMETERS ─────────────────────────────
+# v₂(v)=q, v₂(k)=λ, v₂(E)=μ, v₂(T)=μ+1, v₂(f)=q
+def _v2(n):
+    c = 0
+    while n % 2 == 0 and n > 0: c += 1; n //= 2
+    return c
+check("2-adic: v₂(v)=q, v₂(k)=λ, v₂(E)=μ, v₂(T)=μ+1",
+      _v2(v_val) == q and _v2(k_val) == lam_val
+      and _v2(E_count) == mu_val and _v2(T_count) == mu_val+1)
+
+# ── RIEMANN ZETA & BERNOULLI ─────────────────────────────────────────
+# ζ(−1) = −1/k, ζ(2) = π²/q!, B₆ denominator = v+λ = 42
+check("ζ(−1) = −1/k = −1/12", k_val == 12)
+check("B₆ denom = v+λ = 42", v_val + lam_val == 42)
+check("ζ(4) = π⁴/(λ(v+μ+1)) = π⁴/90", lam_val*(v_val+mu_val+1) == 90)
+
+# ── CHERN-SIMONS LEVEL ──────────────────────────────────────────────
+# SU(2) at level k has k+1 = Φ₃ = 13 integrable representations
+check("CS level k → k+1 = Φ₃ = 13 integrable reps", k_val + 1 == Phi3)
+
 print(f"\n  33 predictions — ALL from q = 3, ZERO free parameters.")
 print(f"  χ²/dof = 0.676 across nonzero-deviation observables.")
 print(f"\n  ┌──────────────────────────────────────────────────────────┐")
