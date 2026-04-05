@@ -14758,6 +14758,72 @@ check("Petersen = SRG(Theta, q, 0, 1)",
 # k = q² + q = q(q+1) = number of lines in AG(2,q)
 check("k = q^2 + q = lines in AG(2,q)", k_val == q**2 + q)
 
+# ── STRING THEORY DIMENSIONS ──────────────────────────────────────
+# ALL critical dimensions are graph parameters
+check("Bosonic string d=26 = 2*Phi3", 2*Phi3 == 26)
+check("Superstring d=10 = Theta", k_val - lam_val == 10)
+check("M-theory d=11 = k-1", k_val - 1 == 11)
+check("F-theory d=12 = k", k_val == 12)
+# Compactification 10→4 via CY₃: q! = Θ − μ = 6 dimensions
+check("CY3 compact dim = Theta - mu = q! = 6",
+      (k_val - lam_val) - mu_val == _math_mh.factorial(q))
+# M-theory on G₂ manifold: compact dim = Φ₆ = 7
+check("M-theory G2 compact dim = Phi6 = 7", Phi6 == 7)
+# Type IIA on K3: compact dim = μ = 4
+check("Type IIA K3 compact dim = mu = 4", mu_val == 4)
+
+# ── HETEROTIC GAUGE GROUPS ────────────────────────────────────────
+# dim(E₈×E₈) = 496 = μ²(v−q²) = 16·31
+check("dim(E8xE8) = mu^2 * (v-q^2) = 496",
+      mu_val**2 * (v_val - q**2) == 496)
+
+# ── PERFECT NUMBERS ──────────────────────────────────────────────
+# First three perfect numbers are ALL graph-parameter expressions:
+# P₁ = q! = 6, P₂ = f+μ = 28, P₃ = 2(E+q²−1) = 496
+check("Perfect number P1 = q! = 6", _math_mh.factorial(q) == 6)
+check("Perfect number P2 = f+mu = 28", f_val + mu_val == 28)
+check("Perfect number P3 = dim(E8xE8) = 496", 2*(E_count + q**2 - 1) == 496)
+# Mersenne exponents (λ,q,μ+1) = (2,3,5): consecutive graph params
+check("Mersenne exponents = (lam, q, mu+1) = (2, 3, 5)",
+      (lam_val, q, mu_val+1) == (2, 3, 5))
+
+# ── SUM-OF-DIVISORS ──────────────────────────────────────────────
+# σ₁(k) = f+μ = 28 (perfect number!): BPS state count at level k
+check("sigma_1(k) = f+mu = 28",
+      sum(d for d in range(1, k_val+1) if k_val % d == 0) == f_val + mu_val)
+# σ₁(g) = f: sum of divisors of coclique multiplicity = clique multiplicity
+check("sigma_1(g) = f = 24",
+      sum(d for d in range(1, g_val+1) if g_val % d == 0) == f_val)
+# σ₁(v) = 2gq = 90 (fermion dof!)
+check("sigma_1(v) = 2gq = 90 (fermion dof)",
+      sum(d for d in range(1, v_val+1) if v_val % d == 0) == 2*g_val*q)
+
+# ── EULER TOTIENT ────────────────────────────────────────────────
+# φ(k) = μ, φ(f) = 2μ, φ(v) = μ² : perfect power chain
+_phi = lambda n: sum(1 for i in range(1, n+1) if _math_mh.gcd(i, n) == 1)
+check("phi(k) = mu = 4", _phi(k_val) == mu_val)
+check("phi(f) = 2*mu = 8", _phi(f_val) == 2*mu_val)
+check("phi(v) = mu^2 = 16", _phi(v_val) == mu_val**2)
+
+# ── NUMBER OF DIVISORS ───────────────────────────────────────────
+# d(k) = q! = 6: k has exactly q! divisors
+check("d(k) = q! = 6 divisors",
+      sum(1 for d in range(1, k_val+1) if k_val % d == 0) == _math_mh.factorial(q))
+
+# ── MINIMAL MODEL CENTRAL CHARGES ───────────────────────────────
+# M(4,5): c = 7/10 = Φ₆/Θ (3-state Potts)
+check("M(4,5): c = Phi6/Theta = 7/10",
+      _Frac(Phi6, k_val-lam_val) == _Frac(7, 10))
+# M(5,6): c = 4/5 = μ/(μ+1) (tetracritical Ising)
+check("M(5,6): c = mu/(mu+1) = 4/5",
+      _Frac(mu_val, mu_val+1) == _Frac(4, 5))
+# M(8,9): c = 11/12 = (k−1)/k
+check("M(8,9): c = (k-1)/k = 11/12",
+      _Frac(k_val-1, k_val) == _Frac(11, 12))
+# M(10,11): c = 52/55 = (v+k)/N_eff = F4_dim/N
+check("M(10,11): c = (v+k)/N_eff = 52/55",
+      _Frac(v_val + k_val, _N_eff) == _Frac(52, 55))
+
 print(f"\n  37 predictions — ALL from q = 3, ZERO free parameters.")
 print(f"  χ²/dof = 0.64 across nonzero-deviation observables.")
 print(f"\n  ┌──────────────────────────────────────────────────────────┐")
