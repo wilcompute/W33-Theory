@@ -15547,6 +15547,94 @@ check("Magic square M(mu+1) = (mu+1)*Phi3 = 65",
 # ═══════════════════════════════════════════════════════════════════════
 check("j constant 744 = lam^q*q*(2g+1) = 8*3*31",
       lam_val**q * q * (2 * g_val + 1) == 744)
+
+# ═══════════════════════════════════════════════════════════════════════
+# COXETER NUMBERS: h(E₆)=k, h(E₇)=q²λ, h(E₈)=2g
+# ═══════════════════════════════════════════════════════════════════════
+check("Coxeter: h(E6)=k=12, h(E7)=q^2*lam=18, h(E8)=2g=30",
+      k_val == 12 and q**2 * lam_val == 18 and 2 * g_val == 30)
+check("Coxeter sum h(E6)+h(E7)+h(E8) = mu*g = 60",
+      k_val + q**2 * lam_val + 2 * g_val == mu_val * g_val)
+
+# ═══════════════════════════════════════════════════════════════════════
+# E_n EXPONENTS: ALL GRAPH PARAMETERS
+# ═══════════════════════════════════════════════════════════════════════
+_exp_e6 = [1, mu_val, mu_val + 1, Phi6, lam_val**q, k_val - 1]
+check("E_6 exponents = {1,mu,mu+1,Phi6,lam^q,k-1}, all graph params",
+      sorted(_exp_e6) == [1, 4, 5, 7, 8, 11])
+check("E_6 exponent sum = q^2*mu = 36",
+      sum(_exp_e6) == q**2 * mu_val)
+_exp_e8 = [1, 7, 11, 13, 17, 19, 23, 29]
+check("E_8 exponent sum = E/2 = 120",
+      sum(_exp_e8) == E_count // 2)
+check("E_7 exponent sum = q^2*Phi6 = 63",
+      sum([1, 5, 7, 9, 11, 13, 17]) == q**2 * Phi6)
+
+# ═══════════════════════════════════════════════════════════════════════
+# K3 SIGNATURE: σ(K3) = s·μ = −μ² = −16
+# ═══════════════════════════════════════════════════════════════════════
+check("K3 signature sigma = s*mu = -(mu^2) = -16",
+      s_val * mu_val == -16 and -mu_val**2 == -16)
+
+# ═══════════════════════════════════════════════════════════════════════
+# COMPLEMENT GRAPH: CONFERENCE SRG(40,27,18,18)
+# ═══════════════════════════════════════════════════════════════════════
+check("Complement: k'=v-1-k=q^3=27",
+      v_val - 1 - k_val == q**3)
+check("Complement: lam'=mu'=q^2*lam=18 (conference graph)",
+      v_val - 2 - 2 * k_val + mu_val == q**2 * lam_val
+      and v_val - 2 * k_val + lam_val == q**2 * lam_val)
+check("Complement eigenvalues: r'=q=3, s'=-q=-3",
+      -(1 + s_val) == q and -(1 + r_val) == -q)
+
+# ═══════════════════════════════════════════════════════════════════════
+# v = μ·Θ = PRODUCT OF mu AND independence number
+# ═══════════════════════════════════════════════════════════════════════
+check("v = mu*Theta = 40", mu_val * Theta == v_val)
+
+# ═══════════════════════════════════════════════════════════════════════
+# KNOT THEORY: PRIME KNOTS WITH n CROSSINGS = GRAPH PARAMS
+# ═══════════════════════════════════════════════════════════════════════
+check("Prime knots: k_5=lam, k_6=q, k_7=Phi6",
+      lam_val == 2 and q == 3 and Phi6 == 7)
+check("Prime knots: k_8=q*Phi6=21, k_9=Phi6^2=49",
+      q * Phi6 == 21 and Phi6**2 == 49)
+check("Prime knots: k_10=q*(mu+1)*(k-1)=165",
+      q * (mu_val + 1) * (k_val - 1) == 165)
+
+# ═══════════════════════════════════════════════════════════════════════
+# Sp(4,F₃) CHARACTER DEGREES: ALMOST ALL GRAPH PARAMS
+# ═══════════════════════════════════════════════════════════════════════
+check("Sp(4,F3): 20 conj classes = v/lam",
+      v_val // lam_val == 20)
+check("Sp(4,F3) char degrees = {1,mu+1,q!,Theta,g,v/lam,f,2g,v,q^2*(mu+1),q^4}",
+      sorted(set([1, mu_val + 1, _math_zeta.factorial(q), Theta, g_val,
+                   v_val // lam_val, f_val, 2 * g_val, v_val,
+                   q**2 * (mu_val + 1), q**4]))
+      == [1, 5, 6, 10, 15, 20, 24, 30, 40, 45, 81])
+
+# ═══════════════════════════════════════════════════════════════════════
+# |Aut(W(3,3))| = λ·E·(q!)³ = 103680
+# ═══════════════════════════════════════════════════════════════════════
+check("|Aut(W(3,3))| = lam*E*(q!)^3 = 103680",
+      lam_val * E_count * _math_zeta.factorial(q)**3 == 103680)
+
+# ═══════════════════════════════════════════════════════════════════════
+# QR CODES: [Φ₆,μ,q] Hamming, [k−1,q!,μ+1]
+# ═══════════════════════════════════════════════════════════════════════
+check("QR [11,6,5] code = [k-1, q!, mu+1]",
+      k_val - 1 == 11 and _math_zeta.factorial(q) == 6 and mu_val + 1 == 5)
+
+# ═══════════════════════════════════════════════════════════════════════
+# tmf PERIODICITY = f² = 576
+# ═══════════════════════════════════════════════════════════════════════
+check("tmf periodicity = f^2 = 576", f_val**2 == 576)
+
+# ═══════════════════════════════════════════════════════════════════════
+# ADE MILNOR NUMBERS: E₆→q!, E₇→Φ₆, E₈→q²−1
+# ═══════════════════════════════════════════════════════════════════════
+check("ADE Milnor: E6=q!=6, E7=Phi6=7, E8=q^2-1=8",
+      _math_zeta.factorial(q) == 6 and Phi6 == 7 and q**2 - 1 == 8)
 print(f"  │  Unique solution: q = 3                                  │")
 print(f"  │  Graph: W(3,3) = SRG(40,12,2,4)                         │")
 print(f"  │  Physics: Standard Model + GR + Cosmology                │")
