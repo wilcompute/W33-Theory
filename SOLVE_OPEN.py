@@ -16155,6 +16155,96 @@ check("|s(mu+1,lam)| = v+Theta = 50",
       _stirling1u(mu_val + 1, lam_val) == v_val + Theta)
 check("|s(mu+1,q)| = (mu+1)*Phi6 = 35",
       _stirling1u(mu_val + 1, q) == (mu_val + 1) * Phi6)
+
+# ═══════════════════════════════════════════════════════════════════════
+# SPECTRAL GAP, LOVÁSZ THETA, INDEPENDENCE
+# ═══════════════════════════════════════════════════════════════════════
+check("Spectral gap = k - |s| = q^2-1 = 8",
+      k_val - abs(s_val) == q**2 - 1)
+check("Spectral gap ratio = lam/q = 2/3",
+      _Frac(k_val - abs(s_val), k_val) == _Frac(lam_val, q))
+check("Independence number alpha = Theta = 10",
+      v_val * abs(s_val) // (k_val - s_val) == Theta)
+check("Fractional chromatic = v/alpha = mu = 4",
+      _Frac(v_val, Theta) == _Frac(mu_val, 1))
+_theta_lov = -v_val * s_val // (k_val - s_val)
+check("Lovasz theta(G) = Theta = 10", _theta_lov == Theta)
+_theta_comp = v_val * (1 + r_val) // (v_val - k_val + r_val)
+check("Lovasz theta(complement) = mu = 4", _theta_comp == mu_val)
+check("theta(G)*theta(complement) = v = 40",
+      _theta_lov * _theta_comp == v_val)
+
+# ═══════════════════════════════════════════════════════════════════════
+# RANDOM WALK RETURN PROBABILITIES — ALL graph-parametric rationals!
+# ═══════════════════════════════════════════════════════════════════════
+_r_ov_k = _Frac(r_val, k_val)
+_s_ov_k = _Frac(s_val, k_val)
+_pr = lambda t: _Frac(1, v_val) * (1 + f_val * _r_ov_k**t + g_val * _s_ov_k**t)
+check("Return prob p(2) = 1/k", _pr(2) == _Frac(1, k_val))
+check("Return prob p(3) = 1/(q*f)", _pr(3) == _Frac(1, q * f_val))
+check("Return prob p(4) = Phi3/(mu^2*q^3)",
+      _pr(4) == _Frac(Phi3, mu_val**2 * q**3))
+
+# ═══════════════════════════════════════════════════════════════════════
+# VON NEUMANN ENTROPY = 1 BIT EXACTLY
+# ═══════════════════════════════════════════════════════════════════════
+check("tr(L) = v*k = lam*E = 480",
+      v_val * k_val == lam_val * E_count)
+check("Laplacian shares: f*Theta = g*mu^2 = E (equipartition)",
+      f_val * Theta == g_val * mu_val**2 == E_count)
+# Two equal halves -> VN entropy = -2*(1/2)*log2(1/2) = 1 bit
+
+# ═══════════════════════════════════════════════════════════════════════
+# HEAT KERNEL TRACE DERIVATIVES
+# ═══════════════════════════════════════════════════════════════════════
+check("K''(0) = v*k*Phi3 = 6240",
+      f_val * Theta**2 + g_val * (mu_val**2)**2 == v_val * k_val * Phi3)
+check("|K'''(0)| = v*(q^2-1)*q*89 = 85440",
+      f_val * Theta**3 + g_val * mu_val**6 == v_val * (q**2 - 1) * q * 89)
+
+# ═══════════════════════════════════════════════════════════════════════
+# WIENER INDEX AND AVERAGE DISTANCE
+# ═══════════════════════════════════════════════════════════════════════
+check("Wiener index = f*N_eff = 1320",
+      E_count + 2 * (v_val * (v_val - 1) // 2 - E_count) == f_val * 55)
+check("Average distance = lam*(k-1)/Phi3 = 22/13",
+      _Frac(f_val * 55 * 2, v_val * (v_val - 1))
+      == _Frac(lam_val * (k_val - 1), Phi3))
+
+# ═══════════════════════════════════════════════════════════════════════
+# KIRCHHOFF INDEX — 89 appears again!
+# ═══════════════════════════════════════════════════════════════════════
+check("Kirchhoff index = q*89/lam = 267/2",
+      _Frac(v_val, 1) * (_Frac(f_val, Theta) + _Frac(g_val, mu_val**2))
+      == _Frac(q * 89, lam_val))
+
+# ═══════════════════════════════════════════════════════════════════════
+# COMPLEMENT GRAPH — eigenvalues +-q, energy = k^2 = F(k)
+# ═══════════════════════════════════════════════════════════════════════
+check("Complement k_c = q^3 = 27", v_val - k_val - 1 == q**3)
+check("Complement eigenvalues = +-q", -1 - r_val == -q and -1 - s_val == q)
+check("Complement edges = mu*(mu+1)*q^3 = 540",
+      v_val * (v_val - k_val - 1) // 2 == mu_val * (mu_val + 1) * q**3)
+check("Complement energy = k^2 = F(k) = 144",
+      abs(v_val - k_val - 1) + f_val * abs(1 + r_val) + g_val * abs(1 + s_val)
+      == k_val**2)
+check("Energy sum 120+144 = lam^q*q*(k-1) = 264",
+      E_count // 2 + k_val**2 == lam_val**q * q * (k_val - 1))
+check("Energy ratio complement/original = q!/(mu+1) = 6/5",
+      _Frac(k_val**2, E_count // 2) == _Frac(_math_fc.factorial(q), mu_val + 1))
+
+# ═══════════════════════════════════════════════════════════════════════
+# GRAPH ENERGY PER VERTEX = q EXACTLY
+# ═══════════════════════════════════════════════════════════════════════
+check("Graph energy per vertex = E/(2v) = q = 3",
+      _Frac(E_count, 2 * v_val) == _Frac(q, 1))
+
+# ═══════════════════════════════════════════════════════════════════════
+# SPANNING TREE EXPONENTS: 2-exp = q^mu, 5-exp = f-1
+# ═══════════════════════════════════════════════════════════════════════
+check("Spanning tree 2-exp = q^mu = 81", q**mu_val == 81)
+check("Spanning tree 5-exp = f-1 = 23", f_val - 1 == 23)
+
 print(f"  │  Physics: Standard Model + GR + Cosmology                │")
 print(f"  │  Checks: {PASS} passed, {FAIL} failed                         │")
 print(f"  │  Free parameters: 0                                      │")
