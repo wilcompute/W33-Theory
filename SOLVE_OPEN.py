@@ -14877,6 +14877,32 @@ check("zeta(6) denom 945 = (mu+1)*Phi6*q^3",
 check("Noether: chi(O_K3) = f/k = lam = 2",
       f_val == k_val * lam_val)
 
+# ── WZW CENTRAL CHARGES ────────────────────────────────────────
+# c(SU(q)_k) = k(q²−1)/(k+q) = λ^(μ+1)/(μ+1) = 32/5
+check("WZW c(SU(q)_k) = lam^(mu+1)/(mu+1) = 32/5",
+      _Frac(k_val*(q**2-1), k_val+q) == _Frac(lam_val**(mu_val+1), mu_val+1))
+# c(SU(2)_k) = 3k/(k+2) = 2q²/Φ₆ = 18/7
+check("WZW c(SU(2)_k) = 2q^2/Phi6 = 18/7",
+      _Frac(3*k_val, k_val+2) == _Frac(2*q**2, Phi6))
+
+# ── SU(q) SHIFTED LEVEL ────────────────────────────────────────
+# k+q = g = 15: the shifted level is the coclique number!
+check("SU(q)_k shifted level k+q = g = 15", k_val + q == g_val)
+# Integrable reps of SU(q)_k = C(k+q−1,q−1) = Φ₆·Φ₃ = 91
+check("SU(q)_k integrable reps = Phi6*Phi3 = 91",
+      _math_mh.comb(k_val+q-1, q-1) == Phi6 * Phi3)
+
+# ── LAPLACIAN IDENTITY ─────────────────────────────────────────
+# k + μ = μ²: Laplacian eigenvalue is μ-squared
+check("k + mu = mu^2 = 16", k_val + mu_val == mu_val**2)
+
+# ── DETERMINANT AND E₇ ─────────────────────────────────────────
+# det(−A) = −q·2^56 where 56 = (q²−1)·Φ₆ = dim(fund E₇)
+check("dim(fund E7) = (q^2-1)*Phi6 = 56",
+      (q**2 - 1) * Phi6 == 56)
+check("det(-A) = -q * 2^56",
+      (-k_val) * (-r_val)**f_val * (-s_val)**g_val == -q * 2**56)
+
 print(f"\n  37 predictions — ALL from q = 3, ZERO free parameters.")
 print(f"  χ²/dof = 0.64 across nonzero-deviation observables.")
 print(f"\n  ┌──────────────────────────────────────────────────────────┐")
