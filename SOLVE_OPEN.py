@@ -14559,6 +14559,30 @@ check("χ(clique complex) = −2v = −80",
 # Chern-Simons at level k: principal root of unity period = k+2 = 2Φ₆
 check("CS period k+2 = 2Φ₆ = 14", k_val + 2 == 2*Phi6)
 
+# ── RAMANUJAN GRAPH PROPERTY ────────────────────────────────────────
+# W(3,3) has optimal spectral gap: max|non-trivial eig| = μ ≤ 2√(k−1)
+import math as _math_ram
+check("Ramanujan: μ ≤ 2√(k−1)",
+      mu_val <= 2*_math_ram.sqrt(k_val - 1))
+# Ihara zeta: E−v = μ(μ+1)Θ = 200
+check("Ihara χ = E−v = μ(μ+1)Θ = 200",
+      E_count - v_val == mu_val*(mu_val+1)*(k_val-lam_val))
+
+# ── LEECH LATTICE ──────────────────────────────────────────────────
+# Vectors at norm 4 in Λ₂₄ (in R^f): 196560 = E·q²·Φ₆·Φ₃
+check("Leech norm-4 vectors = E·q²·Φ₆·Φ₃ = 196560",
+      E_count * q**2 * Phi6 * Phi3 == 196560)
+
+# ── CONWAY GROUP PRIME FACTORS ──────────────────────────────────────
+# |Co₀| has primes {2,3,5,7,11,13,23} = {λ,q,μ+1,Φ₆,k−1,Φ₃,f−1}
+check("Co₀ primes = graph params: (λ,q,μ+1,Φ₆,k−1,Φ₃,f−1)",
+      sorted([lam_val, q, mu_val+1, Phi6, k_val-1, Phi3, f_val-1])
+      == [2,3,5,7,11,13,23])
+
+# ── ALGEBRAIC K-THEORY ─────────────────────────────────────────────
+# K₃(ℤ) = ℤ/48 = ℤ/(2f), where f = (q+1)!
+check("K₃(Z) = Z/2f = Z/48", 2*f_val == 48)
+
 print(f"\n  37 predictions — ALL from q = 3, ZERO free parameters.")
 print(f"  χ²/dof = 0.64 across nonzero-deviation observables.")
 print(f"\n  ┌──────────────────────────────────────────────────────────┐")
