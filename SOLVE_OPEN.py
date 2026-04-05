@@ -15132,6 +15132,97 @@ check("|Co_2| = lam^18*q^6*(mu+1)^3*Phi6*(k-1)*(f-1)",
       lam_val**18 * q**6 * (mu_val + 1)**3 * Phi6 * (k_val - 1) * (f_val - 1)
       == 42305421312000)
 
+# ═══════════════════════════════════════════════════════════════════════
+# E_n DIMENSIONS — ALL GRAPH-PARAMETRIC
+# ═══════════════════════════════════════════════════════════════════════
+# ── rank(E_6)=q!=6, rank(E_7)=Φ₆=7, rank(E_8)=q²−1=8 ─────────
+check("rank(E_6)=q!=6, rank(E_7)=Phi6=7, rank(E_8)=q^2-1=8",
+      _math_zeta.factorial(q) == 6 and Phi6 == 7 and q**2 - 1 == 8)
+# ── dim(E₆) = q!·Φ₃ = 78 ─────────────────────────────────────
+check("dim(E_6) = q!*Phi3 = 78",
+      _math_zeta.factorial(q) * Phi3 == 78)
+# ── dim(E₇) = Φ₆·(g+μ) = Φ₆·b₂⁻(K3) = 133 ─────────────────
+check("dim(E_7) = Phi6*(g+mu) = 133",
+      Phi6 * (g_val + mu_val) == 133)
+# ── E_n ranks are consecutive: q!=6, Φ₆=7, q²−1=8 ───────────
+check("E_n ranks consecutive: q!, Phi6, q^2-1 = 6,7,8",
+      _math_zeta.factorial(q) + 1 == Phi6 and Phi6 + 1 == q**2 - 1)
+
+# ═══════════════════════════════════════════════════════════════════════
+# LATTICE KISSING NUMBERS — ALL GRAPH PARAMS
+# ═══════════════════════════════════════════════════════════════════════
+# ── D₄ kissing = f = 24 ───────────────────────────────────────
+check("D_4 kissing = f = 24", f_val == 24)
+# ── E₆ kissing = k·q! = 72 ───────────────────────────────────
+check("E_6 kissing = k*q! = 72",
+      k_val * _math_zeta.factorial(q) == 72)
+# ── E₇ kissing = 2q²Φ₆ = 126 ────────────────────────────────
+check("E_7 kissing = 2*q^2*Phi6 = 126",
+      2 * q**2 * Phi6 == 126)
+# ── D_k kissing = 2k(k−1) = 264 = im(J) in π₁₉ˢ ────────────
+check("D_k kissing = 2k(k-1) = 264 = im(J) pi_19",
+      2 * k_val * (k_val - 1) == 264
+      and lam_val**q * q * (k_val - 1) == 264)
+
+# ═══════════════════════════════════════════════════════════════════════
+# E₈ THETA SERIES: a_n = E·σ₃(n) — σ₃ VALUES ARE GRAPH PARAMS
+# ═══════════════════════════════════════════════════════════════════════
+def _sigma3(n):
+    return sum(d**3 for d in range(1, n+1) if n % d == 0)
+# ── σ₃(λ) = q² = 9 ───────────────────────────────────────────
+check("sigma_3(lam) = q^2 = 9", _sigma3(lam_val) == q**2)
+# ── σ₃(q) = f+μ = 28 = P₂ (2nd perfect number) ──────────────
+check("sigma_3(q) = f+mu = 28 = P_2", _sigma3(q) == f_val + mu_val)
+# ── σ₃(μ) = Φ₁₂ = 73 ────────────────────────────────────────
+check("sigma_3(mu) = Phi12 = 73", _sigma3(mu_val) == Phi12)
+# ── σ₃(q!) = E+k = τ(3) = 252 ───────────────────────────────
+check("sigma_3(q!) = E+k = tau(3) = 252",
+      _sigma3(_math_zeta.factorial(q)) == E_count + k_val)
+
+# ═══════════════════════════════════════════════════════════════════════
+# RAMANUJAN TAU — τ(4), τ(5), τ(8) ALL GRAPH-PARAMETRIC
+# ═══════════════════════════════════════════════════════════════════════
+# ── τ(4) = −λ^(q!)·(f−1) = −1472 ────────────────────────────
+check("tau(4) = -lam^(q!)*(f-1) = -1472",
+      -(lam_val**_math_zeta.factorial(q)) * (f_val - 1) == -1472)
+# ── τ(5) = λ·q·(μ+1)·Φ₆·(f−1) = 4830 ──────────────────────
+check("tau(5) = lam*q*(mu+1)*Phi6*(f-1) = 4830",
+      lam_val * q * (mu_val + 1) * Phi6 * (f_val - 1) == 4830)
+# ── τ(8) = λ⁷·μ·q·(μ+1)·(k−1) = ... wait let me recheck
+# Actually 84480 = 2^9 * 3 * 5 * 11 and lam^7 = 128, 
+# 128*660 = 84480 but lam^7 = 2^7 = 128 != 2^9 = 512
+# Let me recompute: 84480 / 128 = 660, 84480 / 512 = 165
+# Wait the terminal output said lam^7*mu*q*(mu+1)*(k-1)=84480
+# lam^7 = 128, mu*q*(mu+1)*(k-1) = 4*3*5*11 = 660, 128*660 = 84480
+# But 2^9 = 512? Let me re-factor: 84480 = 2^9*3*5*11? 2^9=512,
+# 512*165=84480, 165=3*5*11. Hmm, 128*660=84480, 128=2^7, 660=2^2*3*5*11
+# So 84480 = 2^7 * 2^2 * 3 * 5 * 11 = 2^9 * 3 * 5 * 11. Both work.
+# lam^7 * mu * q * (mu+1) * (k-1) = 2^7 * 4 * 3 * 5 * 11 = 2^7 * 2^2 * 165 = 2^9 * 165 = 84480 YES
+check("tau(8) = lam^7*mu*q*(mu+1)*(k-1) = 84480",
+      lam_val**7 * mu_val * q * (mu_val + 1) * (k_val - 1) == 84480)
+
+# ═══════════════════════════════════════════════════════════════════════
+# 171 MOONSHINE GENUS-0 GROUPS = q²·b₂⁻(K3)
+# ═══════════════════════════════════════════════════════════════════════
+check("171 moonshine genus-0 = q^2*(g+mu) = q^2*b_2^-(K3)",
+      q**2 * (g_val + mu_val) == 171)
+
+# ═══════════════════════════════════════════════════════════════════════
+# PRIMORIAL CHAIN: primorial(n) = product of first n primes
+# ═══════════════════════════════════════════════════════════════════════
+# p₁# = λ, p₂# = q!, p₃# = 2g = 30, p₄# = λ·q·(μ+1)·Φ₆ = 210
+check("primorial(1)=lam, primorial(2)=q!, primorial(3)=2g, primorial(4)=210",
+      lam_val == 2
+      and lam_val * q == _math_zeta.factorial(q)
+      and lam_val * q * (mu_val + 1) == 2 * g_val
+      and lam_val * q * (mu_val + 1) * Phi6 == 210)
+
+# ═══════════════════════════════════════════════════════════════════════
+# HARDY-RAMANUJAN TAXICAB NUMBER: 1729 = 1+k³ = q⁶+Θ³
+# ═══════════════════════════════════════════════════════════════════════
+check("Hardy-Ramanujan 1729 = 1+k^3 = q^6+Theta^3",
+      1 + k_val**3 == 1729 and q**6 + Theta**3 == 1729)
+
 print(f"\n  ┌──────────────────────────────────────────────────────────┐")
 print(f"  │                 THE MASTER EQUATION                      │")
 print(f"  │                                                          │")
