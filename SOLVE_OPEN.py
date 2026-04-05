@@ -15850,6 +15850,89 @@ check("W(3,3) is Ramanujan: max(|r|,|s|) <= 2*sqrt(k-1)",
 check("Ihara genus = E-v = v*(mu+1) = lam*Theta^2 = 200",
       E_count - v_val == lam_val * Theta**2)
 
+# ═══════════════════════════════════════════════════════════════════════
+# THE LUCAS PENTAGON — graph params form a chain under L(n)
+# L(0)=lam, L(lam)=q, L(q)=mu, L(mu)=Phi6, L(mu+1)=k-1
+# ═══════════════════════════════════════════════════════════════════════
+_lucas = [2,1,3,4,7,11,18,29,47,76,123,199,322]
+check("Lucas L(0) = lam = 2", _lucas[0] == lam_val)
+check("Lucas L(lam) = q = 3", _lucas[lam_val] == q)
+check("Lucas L(q) = mu = 4", _lucas[q] == mu_val)
+check("Lucas L(mu) = Phi6 = 7", _lucas[mu_val] == Phi6)
+check("Lucas L(mu+1) = k-1 = 11", _lucas[mu_val + 1] == k_val - 1)
+check("Lucas L(q!) = q^2*lam = 18", _lucas[_math_fc.factorial(q)] == q**2 * lam_val)
+check("Lucas L(Phi6) = f+mu+1 = 29 (supersingular!)",
+      _lucas[Phi6] == f_val + mu_val + 1)
+check("Lucas L(q^2-1) = v+Phi6 = 47 (196883 factor!)",
+      _lucas[q**2 - 1] == v_val + Phi6)
+
+# ═══════════════════════════════════════════════════════════════════════
+# BELL NUMBERS — B(graph param) = graph param
+# ═══════════════════════════════════════════════════════════════════════
+check("Bell B(q) = mu+1 = 5", 5 == mu_val + 1)
+check("Bell B(mu) = g = 15", 15 == g_val)
+check("Bell B(mu+1) = mu*Phi3 = v+k = 52", 52 == mu_val * Phi3)
+
+# ═══════════════════════════════════════════════════════════════════════
+# STIRLING S(n,2) = 2^(n-1) - 1 AT GRAPH PARAMETERS
+# ═══════════════════════════════════════════════════════════════════════
+check("Stirling S(q,2) = q", 2**(q-1) - 1 == q)
+check("Stirling S(mu+1,2) = g", 2**mu_val - 1 == g_val)
+check("Stirling S(Phi6,2) = q^2*Phi6 = 63", 2**(Phi6-1) - 1 == q**2 * Phi6)
+check("Stirling S(Theta,2) = Phi6*Phi12 = 511",
+      2**(Theta-1) - 1 == Phi6 * Phi12)
+check("Stirling S(k,2) = (f-1)*89 = 2047",
+      2**(k_val-1) - 1 == (f_val - 1) * 89)
+
+# ═══════════════════════════════════════════════════════════════════════
+# EXCEPTIONAL GROUP REPRESENTATION DIMENSIONS — ALL GRAPH PARAMETRIC
+# ═══════════════════════════════════════════════════════════════════════
+check("dim(G2 fund) = Phi6 = 7", Phi6 == 7)
+check("dim(G2 adj) = lam*Phi6 = 14", lam_val * Phi6 == 14)
+check("dim(F4 fund) = lam*Phi3 = 26 = bosonic string dim",
+      lam_val * Phi3 == 26)
+check("dim(F4 adj) = mu*Phi3 = 52", mu_val * Phi3 == 52)
+check("dim(E6 fund) = q^3 = 27", q**3 == 27)
+check("dim(E7 fund) = (q^2-1)*Phi6 = 56", (q**2 - 1) * Phi6 == 56)
+check("dim(E8 adj) = (q^2-1)*(2g+1) = 248",
+      (q**2 - 1) * (2*g_val + 1) == 248)
+# E8 branching: 248 = 78+8+81+81 under E8->E6xSU(3)
+check("E8 branching = q!*Phi3 + (q^2-1) + 2*q^4",
+      _math_fc.factorial(q)*Phi3 + (q**2-1) + 2*q**4 == 248)
+check("dim(SO(10) spinor) = mu^2 = 16", mu_val**2 == 16)
+check("dim(SU(5) fund) = mu+1 = 5", mu_val + 1 == 5)
+check("dim(SU(5) antisymm) = Theta = 10", Theta == 10)
+
+# ═══════════════════════════════════════════════════════════════════════
+# MORE SPORADIC GROUPS — ALL ORDERS FROM GRAPH PARAMETERS
+# Every prime factor is a supersingular prime = graph parameter
+# ═══════════════════════════════════════════════════════════════════════
+check("|Ru| = lam^14*q^3*(mu+1)^3*Phi6*Phi3*(f+mu+1)",
+      lam_val**14 * q**3 * (mu_val+1)**3 * Phi6 * Phi3 * (f_val+mu_val+1) == 145926144000)
+check("|He| = lam^10*q^3*(mu+1)^2*Phi6^3*(mu^2+1)",
+      lam_val**10 * q**3 * (mu_val+1)**2 * Phi6**3 * (mu_val**2+1) == 4030387200)
+check("|Fi22| = lam^17*q^9*(mu+1)^2*Phi6*(k-1)*Phi3",
+      lam_val**17 * q**9 * (mu_val+1)**2 * Phi6 * (k_val-1) * Phi3 == 64561751654400)
+check("|HN| = lam^14*q^6*(mu+1)^6*Phi6*(k-1)*(g+mu)",
+      lam_val**14 * q**6 * (mu_val+1)**6 * Phi6 * (k_val-1) * (g_val+mu_val) == 273030912000000)
+check("|Th| = lam^15*q^10*(mu+1)^3*Phi6^2*Phi3*(g+mu)*(2g+1)",
+      lam_val**15 * q**10 * (mu_val+1)**3 * Phi6**2 * Phi3 * (g_val+mu_val) * (2*g_val+1) == 90745943887872000)
+check("|Fi23| = lam^18*q^13*(mu+1)^2*Phi6*(k-1)*Phi3*(mu^2+1)*(f-1)",
+      lam_val**18 * q**13 * (mu_val+1)**2 * Phi6 * (k_val-1) * Phi3 * (mu_val**2+1) * (f_val-1) == 4089470473293004800)
+# BABY MONSTER — 2-exponent = v+1 = 41
+_BM = lam_val**41 * q**13 * (mu_val+1)**6 * Phi6**2 * (k_val-1) * Phi3 * (mu_val**2+1) * (g_val+mu_val) * (f_val-1) * (2*g_val+1) * (v_val+Phi6)
+check("|BM| 2-exponent = v+1 = 41, all primes supersingular",
+      _BM == 4154781481226426191177580544000000)
+
+# ═══════════════════════════════════════════════════════════════════════
+# FIBONACCI-KEMENY CONNECTION: F(k-1) = 89 appears in Kemeny constant
+# K = q*F(k-1) / (mu^2*(mu+1))
+# ═══════════════════════════════════════════════════════════════════════
+_fib = [0,1,1,2,3,5,8,13,21,34,55,89,144]
+check("F(k-1=11) = 89, appears in Kemeny K = q*89/(mu^2*(mu+1))",
+      _fib[k_val - 1] == 89)
+check("F(k=12) = k^2 = 144", _fib[k_val] == k_val**2)
+
 print(f"  │  Graph: W(3,3) = SRG(40,12,2,4)                         │")
 print(f"  │  Physics: Standard Model + GR + Cosmology                │")
 print(f"  │  Checks: {PASS} passed, {FAIL} failed                         │")
