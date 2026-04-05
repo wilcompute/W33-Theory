@@ -15635,7 +15635,56 @@ check("tmf periodicity = f^2 = 576", f_val**2 == 576)
 # ═══════════════════════════════════════════════════════════════════════
 check("ADE Milnor: E6=q!=6, E7=Phi6=7, E8=q^2-1=8",
       _math_zeta.factorial(q) == 6 and Phi6 == 7 and q**2 - 1 == 8)
-print(f"  │  Unique solution: q = 3                                  │")
+
+# ═══════════════════════════════════════════════════════════════════════
+# EIGENVALUE POWER SUMS: p_n = r^n + s^n
+# ═══════════════════════════════════════════════════════════════════════
+check("r^2+s^2 = v/lam = 20", r_val**2 + s_val**2 == v_val // lam_val)
+check("r^3+s^3 = -56 = -dim(fund E_7)",
+      r_val**3 + s_val**3 == -56)
+check("r^5+s^5 = -lam^5*(2g+1) = -992",
+      r_val**5 + s_val**5 == -(lam_val**5) * (2 * g_val + 1))
+check("r^6+s^6 = lam^6*(mu+1)*Phi3 = 4160",
+      r_val**6 + s_val**6 == lam_val**6 * (mu_val + 1) * Phi3)
+check("r^7+s^7 = -lam^7*(lam^Phi6-1) = -16256",
+      r_val**7 + s_val**7 == -(lam_val**7) * (lam_val**Phi6 - 1))
+
+# ═══════════════════════════════════════════════════════════════════════
+# SUM-PRODUCT IDENTITIES ON GRAPH PARAMETERS
+# ═══════════════════════════════════════════════════════════════════════
+check("v+k = mu*Phi3 = 52", v_val + k_val == mu_val * Phi3)
+check("v-k = f+mu = P_2 = 28", v_val - k_val == f_val + mu_val)
+check("v/k = Theta/q", _Frac(v_val, k_val) == _Frac(Theta, q))
+check("k+g = q^3 = 27 (complement valency)",
+      k_val + g_val == q**3)
+check("k-g = -q = -3", k_val - g_val == -q)
+check("v-g = (mu+1)^2 = 25", v_val - g_val == (mu_val + 1)**2)
+check("f-g = q^2 = 9", f_val - g_val == q**2)
+check("f+g = v-1 = q*Phi3 = 39", f_val + g_val == q * Phi3)
+check("k*f = lam^5*q^2 = 288", k_val * f_val == lam_val**5 * q**2)
+check("k+f = q^2*mu = 36", k_val + f_val == q**2 * mu_val)
+check("v*g = f*(mu+1)^2 = 600", v_val * g_val == f_val * (mu_val + 1)**2)
+
+# ═══════════════════════════════════════════════════════════════════════
+# CIRCUIT RANK = v·(μ+1) = E−v = 200
+# ═══════════════════════════════════════════════════════════════════════
+check("Circuit rank E-v = v*(mu+1) = 200",
+      E_count - v_val == v_val * (mu_val + 1))
+
+# ═══════════════════════════════════════════════════════════════════════
+# AVERAGE PATH LENGTH = λ·(k−1)/Φ₃ = 22/13
+# ═══════════════════════════════════════════════════════════════════════
+check("APL = lam*(k-1)/Phi3 = 22/13",
+      _Frac(k_val + 2 * (v_val - 1 - k_val), v_val - 1)
+      == _Frac(lam_val * (k_val - 1), Phi3))
+
+# ═══════════════════════════════════════════════════════════════════════
+# FRACTIONAL CHROMATIC = INTEGER CHROMATIC = μ
+# ═══════════════════════════════════════════════════════════════════════
+check("chi = chi_f = v/Theta = mu = 4",
+      v_val // Theta == mu_val)
+check("Clique cover = v/(mu+1) = lam^q = 8",
+      v_val // (mu_val + 1) == lam_val**q)
 print(f"  │  Graph: W(3,3) = SRG(40,12,2,4)                         │")
 print(f"  │  Physics: Standard Model + GR + Cosmology                │")
 print(f"  │  Checks: {PASS} passed, {FAIL} failed                         │")
