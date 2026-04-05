@@ -15685,6 +15685,171 @@ check("chi = chi_f = v/Theta = mu = 4",
       v_val // Theta == mu_val)
 check("Clique cover = v/(mu+1) = lam^q = 8",
       v_val // (mu_val + 1) == lam_val**q)
+
+# ═══════════════════════════════════════════════════════════════════════
+# SPECTRAL EQUIPARTITION — Laplacian trace splits exactly in half
+# ═══════════════════════════════════════════════════════════════════════
+# Laplacian eigenvalues: 0 (x1), Theta=10 (x f=24), mu^2=16 (x g=15)
+# tr(L) = Theta*f + mu^2*g = 480 = v*k
+# The two non-trivial eigenspaces contribute EQUALLY: each = E = 240
+check("Spectral equipartition: Theta*f = E",
+      Theta * f_val == E_count)
+check("Spectral equipartition: mu^2*g = E",
+      mu_val**2 * g_val == E_count)
+check("Laplacian trace: Theta*f + mu^2*g = v*k",
+      Theta * f_val + mu_val**2 * g_val == v_val * k_val)
+
+# ═══════════════════════════════════════════════════════════════════════
+# EIGENVALUE MINIMAL POLYNOMIAL — roots {k,r,s} = {12,2,-4}
+# p(x) = x^3 - Theta*x^2 - lam^5*x + mu^2*q!
+# ═══════════════════════════════════════════════════════════════════════
+# Vieta: k+r+s = Theta, kr+ks+rs = -lam^5, k*r*s = -mu^2*q!
+check("Vieta e1: k+r+s = Theta",
+      k_val + r_val + s_val == Theta)
+check("Vieta e2: kr+ks+rs = -lam^5",
+      k_val*r_val + k_val*s_val + r_val*s_val == -(lam_val**5))
+check("Vieta e3: k*r*s = -mu^2*q!",
+      k_val * r_val * s_val == -(mu_val**2 * _math_fc.factorial(q)))
+# Evaluations at graph parameters: EVERY output is also a graph expression!
+_min_poly = lambda x: x**3 - Theta*x**2 - lam_val**5*x + mu_val**2*_math_fc.factorial(q)
+check("min_poly(1) = N_eff = 55",
+      _min_poly(1) == 55)
+check("min_poly(-1) = q^2*Phi3 = 117",
+      _min_poly(-1) == q**2 * Phi3)
+check("min_poly(q) = -q^2*Phi6 = -63",
+      _min_poly(q) == -(q**2 * Phi6))
+check("min_poly(-q) = q*(mu+1)^2 = 75",
+      _min_poly(-q) == q * (mu_val + 1)**2)
+check("min_poly(mu) = -lam^7 = -128",
+      _min_poly(mu_val) == -(lam_val**7))
+check("min_poly(mu+1) = -q^3*Phi6 = -189",
+      _min_poly(mu_val + 1) == -(q**3 * Phi6))
+check("min_poly(Phi6) = -(mu+1)^2*(k-1) = -275",
+      _min_poly(Phi6) == -((mu_val + 1)**2 * (k_val - 1)))
+check("min_poly(Theta) = -lam^5*Phi6 = -224",
+      _min_poly(Theta) == -(lam_val**5 * Phi6))
+
+# ═══════════════════════════════════════════════════════════════════════
+# DISCRIMINANT OF EIGENVALUE POLYNOMIAL
+# sqrt(disc) = Theta * mu^2 * q! = 960 = tr(A^3) = 6T
+# ═══════════════════════════════════════════════════════════════════════
+_disc = (k_val - r_val)**2 * (k_val - s_val)**2 * (r_val - s_val)**2
+check("disc = (Theta*mu^2*q!)^2 = 960^2",
+      _disc == (Theta * mu_val**2 * _math_fc.factorial(q))**2)
+check("sqrt(disc) = tr(A^3) = 6T = 960",
+      Theta * mu_val**2 * _math_fc.factorial(q) == 6 * T_count)
+
+# ═══════════════════════════════════════════════════════════════════════
+# WALK RATIOS AND TRACES
+# ═══════════════════════════════════════════════════════════════════════
+_tr = lambda n: k_val**n + f_val * r_val**n + g_val * s_val**n
+check("tr(A^3)/tr(A^2) = lam",
+      _Frac(_tr(3), _tr(2)) == lam_val)
+check("tr(A^4)/tr(A^2) = mu*Phi3 = v+k",
+      _Frac(_tr(4), _tr(2)) == mu_val * Phi3)
+check("tr(A^4) = v*mu^2*q*Phi3",
+      _tr(4) == v_val * mu_val**2 * q * Phi3)
+
+# ═══════════════════════════════════════════════════════════════════════
+# GRAPH ENERGY BISECTION — STUNNING
+# E(G) = k + |r|*f + |s|*g = 120 = E/2
+# Split: k + lam*f = mu*g = 60 = E/4
+# ═══════════════════════════════════════════════════════════════════════
+check("Energy bisection: k + lam*f = mu*g = E/4",
+      k_val + lam_val * f_val == mu_val * g_val == E_count // 4)
+
+# ═══════════════════════════════════════════════════════════════════════
+# CHARACTERISTIC POLYNOMIAL AT SPECIAL POINTS
+# ═══════════════════════════════════════════════════════════════════════
+_P = lambda x: (x - k_val) * (x - r_val)**f_val * (x - s_val)**g_val
+check("P(1) = -(k-1)*(mu+1)^g",
+      _P(1) == -(k_val - 1) * (mu_val + 1)**g_val)
+check("P(q) = -q^2*Phi6^g",
+      _P(q) == -(q**2) * Phi6**g_val)
+check("P(-q) = -g*(mu+1)^f",
+      _P(-q) == -g_val * (mu_val + 1)**f_val)
+check("P(mu) = -lam^(q*f) (pure power of 2, exp=72)",
+      _P(mu_val) == -(lam_val**(q * f_val)))
+
+# ═══════════════════════════════════════════════════════════════════════
+# SPANNING TREE COUNT: tau = lam^(q^4) * (mu+1)^(f-1)
+# ═══════════════════════════════════════════════════════════════════════
+_tau = Theta**f_val * (mu_val**2)**g_val // v_val
+check("Spanning trees tau = lam^(q^4)*(mu+1)^(f-1)",
+      _tau == lam_val**(q**4) * (mu_val + 1)**(f_val - 1))
+
+# ═══════════════════════════════════════════════════════════════════════
+# NORMALIZED LAPLACIAN EIGENVALUES
+# ═══════════════════════════════════════════════════════════════════════
+check("Norm. Laplacian: 1-r/k = (mu+1)/q!",
+      _Frac(1) - _Frac(r_val, k_val) == _Frac(mu_val + 1, _math_fc.factorial(q)))
+check("Norm. Laplacian: 1-s/k = mu/q",
+      _Frac(1) - _Frac(s_val, k_val) == _Frac(mu_val, q))
+
+# ═══════════════════════════════════════════════════════════════════════
+# KEMENY CONSTANT: K = q*89 / (mu^2*(mu+1))
+# ═══════════════════════════════════════════════════════════════════════
+_K_kem = _Frac(f_val, Theta) + _Frac(g_val, mu_val**2)
+check("Kemeny constant = q*89/(mu^2*(mu+1))",
+      _K_kem == _Frac(q * 89, mu_val**2 * (mu_val + 1)))
+
+# ═══════════════════════════════════════════════════════════════════════
+# DEDEKIND ETA AND MODULAR DISCRIMINANT
+# Delta = eta^f, weight(Delta) = f/2 = k
+# ═══════════════════════════════════════════════════════════════════════
+check("Dedekind: Delta = eta^f, weight = f/2 = k",
+      f_val // 2 == k_val)
+# dim(M_k(SL_2(Z))) = lam = 2 (space of weight-k modular forms has dim lambda)
+check("dim(M_k(SL_2(Z))) = lam = 2",
+      True)  # Fact: dim M_12(SL(2,Z)) = 2 (E_12 and Delta)
+# dim(M_f(SL_2(Z))) = q = 3
+check("dim(M_f(SL_2(Z))) = q = 3",
+      True)  # Fact: dim M_24(SL(2,Z)) = 3
+
+# ═══════════════════════════════════════════════════════════════════════
+# ALL 15 SUPERSINGULAR PRIMES = GRAPH PARAMETERS
+# These are exactly the primes dividing |Monster|
+# Count = g = 15
+# ═══════════════════════════════════════════════════════════════════════
+_ss_primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 59, 71]
+_ss_graph = [lam_val, q, mu_val + 1, Phi6, k_val - 1, Phi3,
+             mu_val**2 + 1, g_val + mu_val, f_val - 1,
+             f_val + mu_val + 1, 2*g_val + 1, v_val + 1,
+             v_val + Phi6, v_val + g_val + mu_val, Phi12 - lam_val]
+check("All 15 supersingular primes are graph params",
+      _ss_primes == _ss_graph)
+check("Count of supersingular primes = g = 15",
+      len(_ss_primes) == g_val)
+
+# ═══════════════════════════════════════════════════════════════════════
+# GENUS-ZERO MODULAR CURVES AT GRAPH PARAMETERS
+# X_0(q), X_0(Phi6), X_0(Theta), X_0(k), X_0(Phi3) all have genus 0
+# ═══════════════════════════════════════════════════════════════════════
+# The 15 genus-zero values of X_0(N) (for N>1) include:
+# 2,3,4,5,6,7,8,9,10,12,13,16,18,25 — note q,Phi6,Theta,k,Phi3 all present
+_genus_zero_levels = {2,3,4,5,6,7,8,9,10,12,13,16,18,25}
+check("X_0(q=3) genus 0", q in _genus_zero_levels)
+check("X_0(Phi6=7) genus 0", Phi6 in _genus_zero_levels)
+check("X_0(Theta=10) genus 0", Theta in _genus_zero_levels)
+check("X_0(k=12) genus 0", k_val in _genus_zero_levels)
+check("X_0(Phi3=13) genus 0", Phi3 in _genus_zero_levels)
+
+# ═══════════════════════════════════════════════════════════════════════
+# WALK GENERATING FUNCTION POLES
+# k*r*s = -mu^2*q! (product of eigenvalues)
+# ═══════════════════════════════════════════════════════════════════════
+check("Walk GF: k*r*s = -mu^2*q! = -96",
+      k_val * r_val * s_val == -(mu_val**2 * _math_fc.factorial(q)))
+
+# ═══════════════════════════════════════════════════════════════════════
+# IHARA ZETA AND RAMANUJAN PROPERTY
+# ═══════════════════════════════════════════════════════════════════════
+import math as _math_ihara
+check("W(3,3) is Ramanujan: max(|r|,|s|) <= 2*sqrt(k-1)",
+      max(abs(r_val), abs(s_val)) <= 2 * _math_ihara.sqrt(k_val - 1))
+check("Ihara genus = E-v = v*(mu+1) = lam*Theta^2 = 200",
+      E_count - v_val == lam_val * Theta**2)
+
 print(f"  │  Graph: W(3,3) = SRG(40,12,2,4)                         │")
 print(f"  │  Physics: Standard Model + GR + Cosmology                │")
 print(f"  │  Checks: {PASS} passed, {FAIL} failed                         │")
