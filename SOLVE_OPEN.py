@@ -16548,6 +16548,82 @@ check("dim E7_56 = lam^3*Phi6", 56 == lam_val**3 * Phi6)
 check("dim E7_133 = Phi6*(g+mu)", 133 == Phi6 * (g_val + mu_val))
 check("dim E7_912 = mu^2*q*(g+mu)", 912 == mu_val**2 * q * (g_val + mu_val))
 
+# ═══════════════════════════════════════════════════════════════════════
+# SIGMA CHAIN — sigma(lam)->q->mu->Phi6->q^2-1->g->f->q!*Theta->PSL(2,7)
+# ═══════════════════════════════════════════════════════════════════════
+def _sigma1(n):
+    return sum(d for d in range(1, n + 1) if n % d == 0)
+
+check("sigma(lam) = q = 3", _sigma1(lam_val) == q)
+check("sigma(q) = mu = 4", _sigma1(q) == mu_val)
+check("sigma(mu) = Phi6 = 7", _sigma1(mu_val) == Phi6)
+check("sigma(Phi6) = q^2-1 = 8", _sigma1(Phi6) == q**2 - 1)
+check("sigma(q^2-1) = g = 15", _sigma1(q**2 - 1) == g_val)
+check("sigma(g) = f = 24", _sigma1(g_val) == f_val)
+check("sigma(f) = q!*Theta = 60", _sigma1(f_val) == _math_fc.factorial(q) * Theta)
+check("sigma(60) = |PSL(2,7)| = 168",
+      _sigma1(60) == (q**2 - 1) * q * Phi6)
+
+# ═══════════════════════════════════════════════════════════════════════
+# DIVISOR COUNT d(n) — number of divisors at graph params
+# ═══════════════════════════════════════════════════════════════════════
+def _d(n):
+    return sum(1 for d in range(1, n + 1) if n % d == 0)
+
+check("d(mu) = q", _d(mu_val) == q)
+check("d(k) = q! = 6", _d(k_val) == _math_fc.factorial(q))
+check("d(f) = d(v) = q^2-1 = 8", _d(f_val) == q**2 - 1 and _d(v_val) == q**2 - 1)
+
+# ═══════════════════════════════════════════════════════════════════════
+# p-ADIC VALUATIONS of f! — decreasing graph-param chain
+# v_3(f!)=Theta, v_5(f!)=mu, v_7(f!)=q, v_11(f!)=lam, v_13(f!)=1
+# ═══════════════════════════════════════════════════════════════════════
+def _vp_fact(n, p):
+    s, pk = 0, p
+    while pk <= n:
+        s += n // pk
+        pk *= p
+    return s
+
+check("v_3(f!) = Theta = 10", _vp_fact(f_val, 3) == Theta)
+check("v_5(f!) = mu = 4", _vp_fact(f_val, 5) == mu_val)
+check("v_7(f!) = q = 3", _vp_fact(f_val, 7) == q)
+check("v_11(f!) = lam = 2", _vp_fact(f_val, 11) == lam_val)
+check("v_13(f!) = 1", _vp_fact(f_val, 13) == 1)
+check("v_2(f) = v_2(v) = q", _v2(f_val) == q and _v2(v_val) == q)
+check("v_2(E) = mu = 4", _v2(E_count) == mu_val)
+check("v_2(T) = mu+1 = 5", _v2(T_count) == mu_val + 1)
+
+# ═══════════════════════════════════════════════════════════════════════
+# DISTINCT PARTITIONS Q(n) — Q(Theta)=Theta fixed point, Q(k)=g
+# ═══════════════════════════════════════════════════════════════════════
+def _dist_part(n):
+    p = [0] * (n + 1)
+    p[0] = 1
+    for kk in range(1, n + 1):
+        for j in range(n, kk - 1, -1):
+            p[j] += p[j - kk]
+    return p[n]
+
+check("Q(mu+1) = q: distinct partitions of 5", _dist_part(mu_val + 1) == q)
+check("Q(Phi6) = mu+1: distinct partitions of 7", _dist_part(Phi6) == mu_val + 1)
+check("Q(Theta) = Theta: FIXED POINT distinct partitions of 10",
+      _dist_part(Theta) == Theta)
+check("Q(k) = g: distinct partitions of 12", _dist_part(k_val) == g_val)
+
+# ═══════════════════════════════════════════════════════════════════════
+# sigma-PARTITION-phi UNIVERSALITY: p(Phi6)=g, p(Theta)=v+lam=42
+# ═══════════════════════════════════════════════════════════════════════
+check("p(Phi6) = g = 15", _partitions(Phi6) == g_val)
+check("p(Theta) = v+lam = 42", _partitions(Theta) == v_val + lam_val)
+check("p(mu) = mu+1 = 5", _partitions(mu_val) == mu_val + 1)
+
+# ═══════════════════════════════════════════════════════════════════════
+# |PSL(2,7)| = (q^2-1)*q*Phi6 = 168 = sigma^7(lam)
+# ═══════════════════════════════════════════════════════════════════════
+check("|PSL(2,7)| = (q^2-1)*q*Phi6 = 168",
+      168 == (q**2 - 1) * q * Phi6)
+
 print(f"  │  Physics: Standard Model + GR + Cosmology                │")
 print(f"  │  Checks: {PASS} passed, {FAIL} failed                         │")
 print(f"  │  Free parameters: 0                                      │")
