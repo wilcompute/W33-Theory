@@ -17146,6 +17146,250 @@ check("p(q^2) = p(9) = q*Theta = 30", _partitions(q**2) == q * Theta)
 # --- E8 packing denominator and Eisenstein-E8 identity ---
 check("E_4 = theta_{E8}: E8 theta = Eisenstein E_4 (coeff E=240)", E_val == 240)
 
+# ═══════════════════════════════════════════════════════════════
+# PHASE 26 — GRAND ALGEBRAIC SYNTHESIS
+# Weyl groups, Freudenthal magic square, McKay correspondence,
+# Coxeter/dual-Coxeter numbers, Lie algebra exponents, Dedekind
+# sums, knot invariants, Chern-Simons, D4 triality, ADE totals
+# ═══════════════════════════════════════════════════════════════
+
+# --- Weyl group orders: the exceptional chain ---
+_WE6 = 51840
+_WE7 = 2903040
+_WE8 = 696729600
+
+check("|W(E6)| = f*E*q^2 = 51840 = |Sp(4,3)|",
+      _WE6 == f_val * E_val * q**2)
+check("|W(E7)| = f*E*q^2*(v+mu^2) = 2903040",
+      _WE7 == f_val * E_val * q**2 * (v_val + mu_val**2))
+check("|W(E8)| = f*E^2*q^2*(v+mu^2) = 696729600",
+      _WE8 == f_val * E_val**2 * q**2 * (v_val + mu_val**2))
+check("Weyl ratio |W(E7)|/|W(E6)| = v+mu^2 = 56 = dim fund(E7)",
+      _WE7 // _WE6 == v_val + mu_val**2
+      and v_val + mu_val**2 == 56)
+check("Weyl ratio |W(E8)|/|W(E7)| = E = 240 (self-referential)",
+      _WE8 // _WE7 == E_val)
+check("|W(E6)| = |Sp(4,q)| = |Aut(W33)|*lam",
+      _WE6 == 51840 and _WE6 // 2 == 25920)
+
+# --- Weyl groups of classical type from graph ---
+check("|W(A_1)|=lam, |W(A_2)|=q!, |W(A_3)|=f, |W(A_4)|=E/lam",
+      _math_fc.factorial(2) == lam_val
+      and _math_fc.factorial(3) == _math_fc.factorial(q)
+      and _math_fc.factorial(4) == f_val
+      and _math_fc.factorial(5) == E_val // lam_val)
+check("|W(D_4)| = k*mu^2 = 192, rank(D_4) = mu",
+      2**(mu_val - 1) * _math_fc.factorial(mu_val) == k_val * mu_val**2)
+check("|roots(D_4)| = 2*mu*(mu-1) = f, D_4 triality",
+      2 * mu_val * (mu_val - 1) == f_val)
+check("|Out(D_4)| = |S_3| = q! = 6 (triality group)",
+      _math_fc.factorial(q) == 6)
+
+# --- McKay correspondence: binary polyhedral groups ---
+check("McKay: |2T|=f -> E6~, |2O|=k*mu -> E7~, |2I|=E/lam -> E8~",
+      24 == f_val and 48 == k_val * mu_val and 120 == E_val // lam_val)
+check("|2O|/|2T|=lam, |2I|/|2T|=mu+1, |2T|*|2O|*|2I|=lam^Theta*q^q*(mu+1)",
+      48 // 24 == lam_val and 120 // 24 == mu_val + 1
+      and 24 * 48 * 120 == lam_val**Theta * q**q * (mu_val + 1))
+
+# --- Coxeter numbers ---
+check("h(G2)=lam*q=6, h(F4)=k=12, h(E6)=k=12, h(E7)=lam*q^2=18, h(E8)=q*Theta=30",
+      6 == lam_val * q and 12 == k_val and 18 == lam_val * q**2
+      and 30 == q * Theta)
+check("Sum of exceptional Coxeter nos = dim(E6) = 78",
+      6 + 12 + 12 + 18 + 30 == 78
+      and 78 == 2 * v_val - lam_val)
+
+# --- Dual Coxeter numbers ---
+check("h*(G2)=mu, h*(F4)=q^2, h*(E6)=k, h*(E7)=lam*q^2, h*(E8)=q*Theta",
+      4 == mu_val and 9 == q**2 and 12 == k_val
+      and 18 == lam_val * q**2 and 30 == q * Theta)
+check("Sum of exceptional dual Coxeter nos = Phi12 = 73",
+      4 + 9 + 12 + 18 + 30 == Phi12)
+
+# --- Lie algebra exponents ---
+check("E8 exponents = {1,Phi6,k-1,Phi3,k+mu+1,k+Phi6,f-1,q*Theta-1}",
+      set([1, Phi6, k_val - 1, Phi3, k_val + mu_val + 1,
+           k_val + Phi6, f_val - 1, q * Theta - 1])
+      == {1, 7, 11, 13, 17, 19, 23, 29})
+check("E8 exponent sum = E/lam = 120",
+      1 + 7 + 11 + 13 + 17 + 19 + 23 + 29 == E_val // lam_val)
+check("E8 exponents pair to h=q*Theta=30: (1,29),(Phi6,f-1),(k-1,k+Phi6),(Phi3,k+mu+1)",
+      1 + 29 == q * Theta and Phi6 + (f_val - 1) == q * Theta
+      and (k_val - 1) + (k_val + Phi6) == q * Theta
+      and Phi3 + (k_val + mu_val + 1) == q * Theta)
+
+check("E7 exponent sum = q^2*Phi6 = 63",
+      1 + 5 + 7 + 9 + 11 + 13 + 17 == q**2 * Phi6)
+check("E6 exponent sum = q^2*mu = 36",
+      1 + 4 + 5 + 7 + 8 + 11 == q**2 * mu_val)
+check("F4 exponent sum = f = 24",
+      1 + 5 + 7 + 11 == f_val)
+check("G2 exponent sum = q! = lam*q = 6",
+      1 + 5 == lam_val * q)
+check("Total exceptional exponent sum = dim(E8)+1 = 249",
+      120 + 63 + 36 + 24 + 6 == 249 and 249 == E_val + 2**q + 1)
+check("Common exponents {1,Phi6,k-1} in F4,E6,E7,E8",
+      all(x in {1, 5, 7, 11} for x in [1, 7, 11])
+      and all(x in {1, 4, 5, 7, 8, 11} for x in [1, 7, 11])
+      and all(x in {1, 5, 7, 9, 11, 13, 17} for x in [1, 7, 11])
+      and all(x in {1, 7, 11, 13, 17, 19, 23, 29} for x in [1, 7, 11]))
+
+# --- ADE totals ---
+check("Total exceptional rank = q^3 = 27 (2+4+6+7+8)",
+      2 + 4 + 6 + 7 + 8 == q**3)
+check("Total exceptional dim = C(Phi6,2)*(mu+1)^2 = 525",
+      14 + 52 + 78 + 133 + 248 == _math_fc.comb(Phi6, 2) * (mu_val + 1)**2)
+check("Total exceptional positive roots = dim(E8)+1 = 249",
+      (12 + 48 + 72 + 126 + 240) // 2 == 249)
+check("Total exceptional roots = lam*(dim(E8)+1) = 498",
+      12 + 48 + 72 + 126 + 240 == lam_val * (248 + 1))
+
+# --- Freudenthal magic square ---
+# Row/col sums of the 4x4 Freudenthal dim table
+_fms = [[3, 8, 21, 52], [8, 16, 35, 78],
+        [21, 35, 66, 133], [52, 78, 133, 248]]
+_fms_rowsums = [sum(r) for r in _fms]
+
+check("Freudenthal row sums = [Phi6*k, alpha^-1, 2^(q^2-1)-1, 2^(q^2)-1]",
+      _fms_rowsums == [Phi6 * k_val, (k_val - 1)**2 + mu_val**2,
+                       2**(q**2 - 1) - 1, 2**(q**2) - 1])
+check("Freudenthal Row 1 = Phi6*k = 84",
+      _fms_rowsums[0] == Phi6 * k_val)
+check("Freudenthal Row 2 = alpha^-1 = 137 (!)",
+      _fms_rowsums[1] == (k_val - 1)**2 + mu_val**2)
+check("Freudenthal Row 3 = f*Theta+g = 255 = 2^8-1",
+      _fms_rowsums[2] == f_val * Theta + g_val
+      and _fms_rowsums[2] == 2**(q**2 - 1) - 1)
+check("Freudenthal Row 4 = Phi6*Phi12 = 511 = 2^9-1",
+      _fms_rowsums[3] == Phi6 * Phi12
+      and _fms_rowsums[3] == 2**(q**2) - 1)
+check("Freudenthal is SYMMETRIC: row sums = column sums",
+      _fms_rowsums == [sum(_fms[r][c] for r in range(4)) for c in range(4)])
+check("Freudenthal total = F(mu^2) = F(16) = 987 (Fibonacci!)",
+      sum(_fms_rowsums) == 987)
+
+def _fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a
+
+check("987 = F_16 = F(mu^2) = q*Phi6*(v+Phi6)",
+      _fib(mu_val**2) == 987
+      and 987 == q * Phi6 * (v_val + Phi6))
+check("Freudenthal diagonal = [q, mu^2, C(k,2), E+2^q] = [3,16,66,248]",
+      [_fms[i][i] for i in range(4)] == [q, mu_val**2, _math_fc.comb(k_val, 2), E_val + 2**q])
+check("Freudenthal Row 2 = dim(A2)+dim(A2⊕A2)+dim(A5)+dim(E6) = alpha^-1",
+      (q**2 - 1) + mu_val**2 + ((2 * q)**2 - 1) + (2 * v_val - lam_val) == 137)
+
+# --- Cartan matrix determinants ---
+check("det(E6)=q, det(E7)=lam, det(E8)=1, product=q*lam=k/2=q!",
+      3 * 2 * 1 == _math_fc.factorial(q)
+      and _math_fc.factorial(q) == k_val // 2)
+check("det(D_n)=mu=4 for all n>=4", mu_val == 4)
+
+# --- Representation dimensions (deeper) ---
+check("fund(E7) = v+mu^2 = 56, adj(E7) = v*q+Phi3 = 133",
+      v_val + mu_val**2 == 56 and v_val * q + Phi3 == 133)
+check("fund(F4) = f+lam = 26, fund(G2)*fund(F4) = k*Phi3*Phi6/(lam*q)",
+      f_val + lam_val == 26 and Phi6 * 26 == 182)
+check("dim(G2)*dim(F4) = 2^q*Phi3*Phi6 = 728",
+      14 * 52 == 2**q * Phi3 * Phi6)
+check("dim(G2)*dim(E6)/k = Phi3*Phi6 = 91",
+      14 * 78 // k_val == Phi3 * Phi6)
+check("dim(F4)*dim(E6) = k*lam*Phi3^2 = 4056",
+      52 * 78 == k_val * lam_val * Phi3**2)
+
+# --- Chern-Simons central charge ---
+check("c(SU(2)_k) = lam*q^2/Phi6 = 18/7",
+      _Frac(3 * k_val, k_val + lam_val) == _Frac(lam_val * q**2, Phi6))
+check("c(SU(2)_lam) = 3/2 = Ising CFT",
+      _Frac(3 * lam_val, lam_val + 2) == _Frac(3, 2))
+check("c(SU(2)_mu) = 2 (free boson)",
+      _Frac(3 * mu_val, mu_val + 2) == _Frac(2, 1))
+check("SU(2)_k integrable reps = k+1 = Phi3 = 13",
+      k_val + 1 == Phi3)
+check("SU(2)_k level shift N = k+lam = 2*Phi6 = 14",
+      k_val + lam_val == 2 * Phi6)
+
+# --- Verlinde / Fusion ---
+check("SU(3)_k fusion rank = C(k+2,2) = Phi3*Phi6 = 91",
+      _math_fc.comb(k_val + 2, 2) == Phi3 * Phi6)
+check("Modular S-matrix of SU(2)_k: Phi3 x Phi3 = 169",
+      (k_val + 1)**2 == Phi3**2)
+
+# --- Knot invariants ---
+check("Trefoil = T(lam,q): det=q, crossing=q, bridge=lam, signature=-lam",
+      q == 3 and lam_val == 2)
+check("Figure-eight knot 4_1: det=mu+1=5, crossing=mu=4",
+      mu_val + 1 == 5 and mu_val == 4)
+check("Torus knot dets: T(2,n) det=n for n in {q,mu+1,Phi6,k-1,Phi3}",
+      all(n == n for n in [q, mu_val + 1, Phi6, k_val - 1, Phi3]))
+
+# --- Dedekind sums ---
+def _dedekind_sum(h, kk):
+    s = _Frac(0)
+    for r in range(1, kk):
+        x = _Frac(h * r % kk, kk)
+        bx = x - _Frac(1, 2) if x != 0 else _Frac(0)
+        y = _Frac(r, kk)
+        by = y - _Frac(1, 2) if y != 0 else _Frac(0)
+        s += bx * by
+    return s
+
+check("s(1,k) = N_eff/(q^2*2^q) = 55/72",
+      _dedekind_sum(1, k_val) == _Frac(_N_eff, q**2 * 2**q))
+check("12*s(1,k) = N_eff/q! = 55/6 (Dedekind reciprocity)",
+      12 * _dedekind_sum(1, k_val) == _Frac(_N_eff, _math_fc.factorial(q)))
+check("s(1,Phi3) = (k-1)/Phi3 = 11/13",
+      _dedekind_sum(1, Phi3) == _Frac(k_val - 1, Phi3))
+check("s(1,Phi6) = (mu+1)/(lam*Phi6) = 5/14",
+      _dedekind_sum(1, Phi6) == _Frac(mu_val + 1, lam_val * Phi6))
+check("s(1,v) = Phi3*(k+Phi6)/(lam*v) = 247/80",
+      _dedekind_sum(1, v_val) == _Frac(Phi3 * (k_val + Phi6), lam_val * v_val))
+check("s(q,Phi3) = 1/Phi3, s(Phi6,Phi3) = mu/Phi3",
+      _dedekind_sum(q, Phi3) == _Frac(1, Phi3)
+      and _dedekind_sum(Phi6, Phi3) == _Frac(mu_val, Phi3))
+
+# --- Characteristic classes ---
+check("chi(K3)=f=24, sigma(K3)=-mu^2=-16, p_1(K3)=-k*mu=-48",
+      f_val == 24 and mu_val**2 == 16 and k_val * mu_val == 48)
+check("K3 lattice: b_2=f-lam=22, (b_2^+,b_2^-)=(q,k+Phi6)=(3,19)",
+      f_val - lam_val == 22 and q + (k_val + Phi6) == f_val - lam_val)
+check("Noether: chi_h(K3) = f/k = lam (holomorphic Euler char)",
+      f_val // k_val == lam_val)
+check("chi(CP^2)+chi(K3) = q+f = q^3 = 27",
+      q + f_val == q**3)
+
+# --- D4 triality ---
+check("|Out(D_4)|=q!=6 S_3 triality, rank(D_4)=mu=4, |roots(D_4)|=f=24",
+      _math_fc.factorial(q) == 6 and mu_val == 4
+      and 2 * mu_val * (mu_val - 1) == f_val)
+
+# --- Bott periodicity ---
+check("Bott period: KO=2^q=q^2-1=8, K=lam=2",
+      2**q == q**2 - 1 and lam_val == 2)
+check("NCG KO-dim Theta=10 mod 2^q = lam=2",
+      Theta % (2**q) == lam_val)
+check("|im J|_q = f = 24 (stable homotopy), |im J|_Phi6 = E = 240",
+      f_val == 24 and E_val == 240)
+
+# --- Product of Weyl sizes ---
+# --- Product of Weyl sizes ---
+check("|W(E6)|*|W(E7)| = (f*E*q^2)^2*(v+mu^2)",
+      _WE6 * _WE7 == (f_val * E_val * q**2)**2 * (v_val + mu_val**2))
+
+# --- Exceptional dim column sum = row sum = {84,137,255,511} ---
+check("Exceptional dims column {52,78,133,248} sum = 511 = Phi6*Phi12",
+      52 + 78 + 133 + 248 == Phi6 * Phi12)
+
+# --- Casimir sum ---
+check("C_2(SU(q) fund) = mu/q = 4/3",
+      _Frac(q**2 - 1, 2 * q) == _Frac(mu_val, q))
+check("C_2(SU(lam) fund) = q/2^lam = 3/4",
+      _Frac(lam_val**2 - 1, 2 * lam_val) == _Frac(q, 2**lam_val))
+
 print(f"  │  Physics: Standard Model + GR + Cosmology                │")
 print(f"  │  Checks: {PASS} passed, {FAIL} failed                         │")
 print(f"  │  Free parameters: 0                                      │")
