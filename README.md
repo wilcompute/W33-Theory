@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Pages](https://img.shields.io/badge/docs-GitHub%20Pages-blue)](https://wilcompute.github.io/W33-Theory/)
-[![Tests](https://img.shields.io/badge/SOLVE__OPEN-783%2F783%20pass-brightgreen)]()
+[![Tests](https://img.shields.io/badge/SOLVE__OPEN-3004%2F3004%20pass-brightgreen)]()
 
 > **One graph. One equation. Zero free parameters.**
 
@@ -87,7 +87,7 @@ where F is the finite noncommutative geometry built from W(3,3).
 
 ## Computational Verification
 
-**`SOLVE_OPEN.py`** — 783 checks, 0 failures — closes fifty-two open questions:
+**`SOLVE_OPEN.py`** — 3004 checks, 0 failures — closes fifty-two open questions:
 
 | Question | Topic | Status |
 |:---------|:------|:-------|
@@ -256,7 +256,7 @@ The graph parameters control classical mathematical objects with zero fitting:
 ### Core Scripts
 | File | Purpose |
 |:-----|:--------|
-| `SOLVE_OPEN.py` | Master verification — 783/783 checks, Q1–Q52 closed |
+| `SOLVE_OPEN.py` | Master verification — 3004/3004 checks, Q1–Q52 closed |
 | `SOLVE.py` | Core SRG computations and spectral analysis |
 | `PROOF.py` | Formal derivation chains |
 | `GRAND_SYNTHESIS.py` | Six-pillar unification |
