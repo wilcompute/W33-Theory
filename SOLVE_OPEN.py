@@ -16876,6 +16876,49 @@ check("C(q)*p(q) = g (Catalan * partition)", _catalan(q)*_partitions(q) == g_val
 check("C(Phi6)*p(Phi6) = q*(k-1)*Phi3*g",
       _catalan(Phi6)*_partitions(Phi6) == q*(k_val-1)*Phi3*g_val)
 
+# --- Partition function deeper (complete chain) ---
+check("p(q!) = k-1 = 11", _partitions(_math_fc.factorial(q)) == k_val-1)
+check("p(lam^3) = lam*(k-1) = 22", _partitions(lam_val**3) == lam_val*(k_val-1))
+check("p(q^2) = q*Theta = 30", _partitions(q**2) == q*Theta)
+check("p(Theta) = lam*q*Phi6 = C(mu+1) = 42",
+      _partitions(Theta) == lam_val*q*Phi6 and _partitions(Theta) == _catalan(mu_val+1))
+
+# --- Riemann zeta at negative odd integers ---
+def _bernoulli(n):
+    from fractions import Fraction as _Fr
+    A = [_Fr(0)] * (n+1)
+    for m in range(n+1):
+        A[m] = _Fr(1, m+1)
+        for j in range(m, 0, -1):
+            A[j-1] = j * (A[j-1] - A[j])
+    return A[0]
+
+check("zeta(-1) = -1/k (Ramanujan summation)",
+      _bernoulli(2) == _Frac(1, _math_fc.factorial(q)))
+check("zeta(-3) = 2/E = 1/(mu+1)!",
+      -_bernoulli(4)/4 == _Frac(1, E_val//2) and E_val//2 == _math_fc.factorial(mu_val+1))
+check("|zeta(-5)|^{-1} = tau(3) = lam^2*q^2*Phi6 = 252",
+      (-_bernoulli(6)/6).denominator == lam_val**2 * q**2 * Phi6)
+check("zeta(-7) = 1/E = 1/240",
+      -_bernoulli(8)/8 == _Frac(1, E_val))
+check("|zeta(-9)|^{-1} = mu*q*(k-1) = 132",
+      (-_bernoulli(10)/10).denominator == mu_val*q*(k_val-1))
+
+# --- Ramanujan tau deeper ---
+check("tau(4) = -lam^6*(f-1) = -1472", -1472 == -lam_val**6*(f_val-1))
+check("tau(5) = lam*q*(mu+1)*Phi6*(f-1) = 4830",
+      4830 == lam_val*q*(mu_val+1)*Phi6*(f_val-1))
+check("tau(7) = -lam^3*Phi6*Phi3*(f-1) = -16744",
+      -16744 == -lam_val**3*Phi6*Phi3*(f_val-1))
+check("tau(8) = lam^7*k*N_eff = 84480", 84480 == lam_val**7*k_val*_N_eff)
+
+# --- Spectral moment m_3 parametric forms ---
+check("m_3 = v*k*lam = lam^6*g = q!*T (spectral moment)",
+      k_val**3 + f_val*r_val**3 + g_val*s_val**3 == v_val*k_val*lam_val
+      and v_val*k_val*lam_val == lam_val**6*g_val
+      and v_val*k_val*lam_val == _math_fc.factorial(q)*T_val)
+check("m_3/v = f = 24", (k_val**3+f_val*r_val**3+g_val*s_val**3)//v_val == f_val)
+
 print(f"  │  Physics: Standard Model + GR + Cosmology                │")
 print(f"  │  Checks: {PASS} passed, {FAIL} failed                         │")
 print(f"  │  Free parameters: 0                                      │")
