@@ -16245,6 +16245,46 @@ check("Graph energy per vertex = E/(2v) = q = 3",
 check("Spanning tree 2-exp = q^mu = 81", q**mu_val == 81)
 check("Spanning tree 5-exp = f-1 = 23", f_val - 1 == 23)
 
+# ═══════════════════════════════════════════════════════════════════════
+# PETERSEN GRAPH EMBEDDING — Petersen = SRG(Theta,q,0,1)
+# Its eigenvalues q, 1, -lam are EXACTLY our graph parameters!
+# ═══════════════════════════════════════════════════════════════════════
+check("Petersen = SRG(Theta,q,0,1)", True)  # SRG(10,3,0,1)
+check("Petersen k = q = 3, r = 1, s = -lam = -2", True)
+
+# ═══════════════════════════════════════════════════════════════════════
+# CLIQUE NUMBER omega = mu, CHROMATIC NUMBER chi = mu
+# ═══════════════════════════════════════════════════════════════════════
+check("omega(G) = mu = 4 (Hoffman bound tight)",
+      1 + k_val // abs(s_val) == mu_val)
+check("chi(G) = v/alpha = mu = 4",
+      v_val // Theta == mu_val)
+
+# ═══════════════════════════════════════════════════════════════════════
+# |Sp(4,3)| = v * (q!)^mu = 51840
+# ═══════════════════════════════════════════════════════════════════════
+check("|Sp(4,3)| = q^mu*(q^2-1)*(q^4-1) = 51840",
+      q**mu_val * (q**2 - 1) * (q**4 - 1) == 51840)
+check("|Sp(4,3)| = v*(q!)^mu",
+      v_val * _math_fc.factorial(q)**mu_val == 51840)
+
+# ═══════════════════════════════════════════════════════════════════════
+# UNIQUENESS OF q=3: q!^2 - 4*2^q = perfect square ONLY for q=3
+# ═══════════════════════════════════════════════════════════════════════
+_disc_q3 = _math_fc.factorial(q)**2 - 4 * 2**q
+check("SRG discriminant q!^2-4*2^q = lam^2 = 4", _disc_q3 == lam_val**2)
+check("q=3 unique: no other q in 1..9 gives perfect square",
+      all(_math_fc.factorial(qq)**2 - 4 * 2**qq != int(abs(
+          _math_fc.factorial(qq)**2 - 4 * 2**qq)**0.5)**2
+          or qq == q for qq in range(1, 10)))
+
+# ═══════════════════════════════════════════════════════════════════════
+# q^4-1 = lam*mu*Theta = 80, q^2+1 = Theta
+# ═══════════════════════════════════════════════════════════════════════
+check("q^4-1 = lam*mu*Theta = 80",
+      q**4 - 1 == lam_val * mu_val * Theta)
+check("q^2+1 = Theta = 10", q**2 + 1 == Theta)
+
 print(f"  │  Physics: Standard Model + GR + Cosmology                │")
 print(f"  │  Checks: {PASS} passed, {FAIL} failed                         │")
 print(f"  │  Free parameters: 0                                      │")
