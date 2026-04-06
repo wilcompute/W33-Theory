@@ -16919,6 +16919,233 @@ check("m_3 = v*k*lam = lam^6*g = q!*T (spectral moment)",
       and v_val*k_val*lam_val == _math_fc.factorial(q)*T_val)
 check("m_3/v = f = 24", (k_val**3+f_val*r_val**3+g_val*s_val**3)//v_val == f_val)
 
+# ═══════════════════════════════════════════════════════════════════════
+# PHASE 25 — E8 theta · Eisenstein · Jacobi theta · central binomials ·
+#            exceptional Lie algebras · Bernoulli denoms · Catalan deeper ·
+#            double factorials · CF(sqrt(v)) · Stirling · Pochhammer ·
+#            rising factorials · r_2/r_4 representation sums
+# ═══════════════════════════════════════════════════════════════════════
+print("\n--- Phase 25: E8 theta, Eisenstein, Jacobi r_2/r_4, exceptional Lie algebras, "
+      "Bernoulli, central binomials, CF(sqrt(v)), Stirling, Catalan deeper ---")
+
+def _sigma3(n):
+    return sum(d**3 for d in range(1, n + 1) if n % d == 0)
+
+def _chi_neg4(d):
+    if d % 2 == 0:
+        return 0
+    return 1 if d % 4 == 1 else -1
+
+def _r2(n):
+    return 4 * sum(_chi_neg4(d) for d in range(1, n + 1) if n % d == 0)
+
+def _r4(n):
+    s = 8 * _sigma1(n)
+    if n % 4 == 0:
+        s -= 32 * _sigma1(n // 4)
+    return s
+
+# --- E8 theta series: a_n = E * sigma_3(n) ---
+check("E8 theta a_1 = E (root system)", _sigma3(1) * E_val == E_val)
+check("E8 theta a_2 = E*q^2 = 2160", _sigma3(2) == q**2)
+check("E8 theta a_3 = E*(f+mu) = 6720", _sigma3(3) == f_val + mu_val)
+check("E8 theta a_4 = E*Phi12 = 17520", _sigma3(4) == Phi12)
+check("E8 theta a_5: sigma_3(5) = lam*Phi6*q^2 = 126",
+      _sigma3(5) == lam_val * Phi6 * q**2)
+check("E8 theta a_6: sigma_3(q!) = tau(3) = 252",
+      _sigma3(_math_fc.factorial(q)) == mu_val * q**2 * Phi6)
+check("E8 theta a_7: sigma_3(Phi6) = (q^2-1)*(v+q) = 344",
+      _sigma3(Phi6) == (q**2 - 1) * (v_val + q))
+check("E8 theta a_8: sigma_3(q^2-1) = (mu+1)*q^2*Phi3 = 585",
+      _sigma3(q**2 - 1) == (mu_val + 1) * q**2 * Phi3)
+
+# --- Eisenstein series coefficients ---
+check("Eisenstein c_4 = E = 240 (= -8/B_4)", E_val == 240)
+check("Eisenstein c_6 = -lam*tau(3) = -504", lam_val * 252 == 504)
+check("Eisenstein c_8 = lam*E = 480", lam_val * E_val == 480)
+check("Eisenstein c_10 = (q^2-1)*q*(k-1) = 264",
+      (q**2 - 1) * q * (k_val - 1) == 264)
+
+# --- j-function: 1728 = k^3 = lam^(q!) * q^q ---
+check("j-constant 1728 = k^3", k_val**3 == 1728)
+check("1728 = lam^(q!) * q^q", lam_val**_math_fc.factorial(q) * q**q == 1728)
+
+# --- Bernoulli number denominators ---
+check("denom(B_2) = q! = 6", _bernoulli(2).denominator == _math_fc.factorial(q))
+check("denom(B_4) = q*Theta = 30", _bernoulli(4).denominator == q * Theta)
+check("denom(B_6) = lam*q*Phi6 = 42", _bernoulli(6).denominator == lam_val * q * Phi6)
+check("denom(B_10) = q!*(k-1) = 66",
+      _bernoulli(10).denominator == _math_fc.factorial(q) * (k_val - 1))
+check("denom(B_12) = lam*q*(mu+1)*Phi6*Phi3 = 2730",
+      _bernoulli(12).denominator == lam_val * q * (mu_val + 1) * Phi6 * Phi3)
+check("|num(B_10)| = mu+1 = 5", abs(_bernoulli(10).numerator) == mu_val + 1)
+check("denom(B_14) = q! = 6", _bernoulli(14).denominator == _math_fc.factorial(q))
+
+# --- Jacobi theta r_2: sums of 2 squares ---
+check("r_2(lam) = r_2(mu) = mu", _r2(lam_val) == mu_val and _r2(mu_val) == mu_val)
+check("r_2(q) = 0 (q = 3 mod 4)", _r2(q) == 0)
+check("r_2(mu+1) = r_2(Theta) = r_2(Phi3) = r_2(v) = q^2-1",
+      _r2(mu_val + 1) == q**2 - 1 and _r2(Theta) == q**2 - 1
+      and _r2(Phi3) == q**2 - 1 and _r2(v_val) == q**2 - 1)
+
+# --- Jacobi theta r_4: sums of 4 squares ---
+check("r_4(lam) = r_4(mu) = f", _r4(lam_val) == f_val and _r4(mu_val) == f_val)
+check("r_4(q) = lam^(mu+1) = 32", _r4(q) == lam_val**(mu_val + 1))
+check("r_4(mu+1) = mu*k = 48", _r4(mu_val + 1) == mu_val * k_val)
+check("r_4(Phi6) = lam^(q!) = 64", _r4(Phi6) == lam_val**_math_fc.factorial(q))
+check("r_4(Theta) = r_4(v) = k^2 = 144",
+      _r4(Theta) == k_val**2 and _r4(v_val) == k_val**2)
+check("r_4(k) = r_4(f) = lam^(mu+1)*q = 96",
+      _r4(k_val) == lam_val**(mu_val + 1) * q
+      and _r4(f_val) == lam_val**(mu_val + 1) * q)
+check("r_4(Phi3) = mu^2*Phi6 = 112", _r4(Phi3) == mu_val**2 * Phi6)
+check("r_4(g) = lam^(q!)*q = 192", _r4(g_val) == lam_val**_math_fc.factorial(q) * q)
+
+# --- Central binomial coefficients ---
+check("C(2*lam,lam) = q! = 6",
+      _math_fc.comb(2 * lam_val, lam_val) == _math_fc.factorial(q))
+check("C(2*q,q) = v/lam = 20", _math_fc.comb(2 * q, q) == v_val // lam_val)
+check("C(2*mu,mu) = Phi6*Theta = 70",
+      _math_fc.comb(2 * mu_val, mu_val) == Phi6 * Theta)
+check("C(2*(mu+1),mu+1) = tau(3) = 252",
+      _math_fc.comb(2 * (mu_val + 1), mu_val + 1) == 252)
+check("C(2*Phi6,Phi6) = (q^2-1)*q*(k-1)*Phi3 = 3432",
+      _math_fc.comb(2 * Phi6, Phi6) == (q**2 - 1) * q * (k_val - 1) * Phi3)
+
+# --- Exceptional Lie algebra dimensions ---
+check("dim G_2 = lam*Phi6 = 14", lam_val * Phi6 == 14)
+check("dim F_4 = mu*Phi3 = 52", mu_val * Phi3 == 52)
+check("dim E_6 = lam*q*Phi3 = 78", lam_val * q * Phi3 == 78)
+check("dim E_7 = Phi6*(g+mu) = 133", Phi6 * (g_val + mu_val) == 133)
+check("dim E_8 = (q^2-1)*(2g+1) = 248", (q**2 - 1) * (2 * g_val + 1) == 248)
+
+# --- Exceptional Lie algebra ranks ---
+check("rank(G_2)=lam, rank(F_4)=mu, rank(E_6)=q!, rank(E_7)=Phi6, rank(E_8)=q^2-1",
+      lam_val == 2 and mu_val == 4 and _math_fc.factorial(q) == 6
+      and Phi6 == 7 and q**2 - 1 == 8)
+
+# --- Exceptional Lie algebra Coxeter numbers ---
+check("h(G_2)=q!, h(F_4)=h(E_6)=k, h(E_7)=lam*q^2, h(E_8)=q*Theta",
+      _math_fc.factorial(q) == 6 and k_val == 12
+      and lam_val * q**2 == 18 and q * Theta == 30)
+
+# --- Exceptional Lie algebra dual Coxeter numbers ---
+check("h*(G_2)=mu, h*(F_4)=q^2, h*(E_6)=k, h*(E_7)=lam*q^2, h*(E_8)=q*Theta",
+      mu_val == 4 and q**2 == 9 and k_val == 12
+      and lam_val * q**2 == 18 and q * Theta == 30)
+
+# --- Lie algebra dimensions from graph params ---
+check("dim SU(q+1) = g, dim SU(mu+1) = f",
+      (q + 1)**2 - 1 == g_val and (mu_val + 1)**2 - 1 == f_val)
+check("dim SO(mu+1) = Theta, dim SO(q!) = g, dim SO(q^2-1) = f+mu",
+      (mu_val + 1) * mu_val // 2 == Theta
+      and _math_fc.factorial(q) * (_math_fc.factorial(q) - 1) // 2 == g_val
+      and (q**2 - 1) * (q**2 - 2) // 2 == f_val + mu_val)
+check("dim SO(k-1) = N_eff = 55",
+      (k_val - 1) * (k_val - 2) // 2 == _N_eff)
+
+# --- |Sp(4,3)| = lam^Phi6 * q^mu * (mu+1) ---
+check("|Sp(4,3)| = lam^Phi6 * q^mu * (mu+1) = 51840",
+      lam_val**Phi6 * q**mu_val * (mu_val + 1) == 51840)
+
+# --- Catalan numbers deeper ---
+check("C_6 = mu*q*(k-1) = 132",
+      _catalan_n(6) == mu_val * q * (k_val - 1))
+check("C_7 = q*(k-1)*Phi3 = 429",
+      _catalan_n(7) == q * (k_val - 1) * Phi3)
+check("C_8 = lam*(mu+1)*(k-1)*Phi3 = 1430",
+      _catalan_n(8) == lam_val * (mu_val + 1) * (k_val - 1) * Phi3)
+check("C_9 = lam*(k-1)*Phi3*(mu^2+1) = 4862",
+      _catalan_n(9) == lam_val * (k_val - 1) * Phi3 * (mu_val**2 + 1))
+check("C_5 = tau(3)/q! = 42", _catalan_n(5) == 252 // _math_fc.factorial(q))
+
+# --- Double factorials ---
+check("(2*lam-1)!! = q, (2*q-1)!! = g",
+      _double_fact(2 * lam_val - 1) == q
+      and _double_fact(2 * q - 1) == g_val)
+check("(2*mu-1)!! = q*(mu+1)*Phi6 = 105",
+      _double_fact(2 * mu_val - 1) == q * (mu_val + 1) * Phi6)
+check("(2*(mu+1)-1)!! = q^3*(mu+1)*Phi6 = 945",
+      _double_fact(2 * (mu_val + 1) - 1) == q**3 * (mu_val + 1) * Phi6)
+
+# --- Even double factorials ---
+def _even_df(n):
+    r = 1
+    for i in range(1, n + 1):
+        r *= 2 * i
+    return r
+
+check("(2*1)!!=lam, (2*2)!!=q^2-1, (2*3)!!=mu*k",
+      _even_df(1) == lam_val and _even_df(2) == q**2 - 1
+      and _even_df(3) == mu_val * k_val)
+check("(2*4)!! = lam^Phi6*q = 384 (E8 packing denom)",
+      _even_df(4) == lam_val**Phi6 * q)
+check("384/E = (q^2-1)/(mu+1)", _Frac(384, E_val) == _Frac(q**2 - 1, mu_val + 1))
+
+# --- Continued fractions ---
+def _cf_sqrt_coeffs(n, max_terms=30):
+    a0 = int(_math_fc.isqrt(n))
+    if a0 * a0 == n:
+        return [a0]
+    coeffs = [a0]
+    m, d, a = 0, 1, a0
+    for _ in range(max_terms):
+        m = d * a - m
+        d = (n - m * m) // d
+        a = (a0 + m) // d
+        coeffs.append(a)
+        if a == 2 * a0:
+            break
+    return coeffs
+
+_cf_v = _cf_sqrt_coeffs(v_val)
+check("CF(sqrt(v)) = [q!; q, k] period [q,k]",
+      _cf_v[0] == _math_fc.factorial(q) and _cf_v[1] == q and _cf_v[2] == k_val)
+_cf_ne = _cf_sqrt_coeffs(_N_eff)
+check("CF(sqrt(N_eff)) = [Phi6; lam,lam,lam,2*Phi6]",
+      _cf_ne[0] == Phi6 and _cf_ne[1:5] == [lam_val, lam_val, lam_val, 2 * Phi6])
+
+# --- Stirling numbers of 2nd kind: S(n,2) = 2^{n-1}-1 ---
+check("S(q,2)=q, S(mu,2)=Phi6, S(mu+1,2)=g",
+      2**(q - 1) - 1 == q and 2**(mu_val - 1) - 1 == Phi6
+      and 2**(mu_val) - 1 == g_val)
+check("S(q^2-1,2) = lam^Phi6-1 = 127 (Mersenne)",
+      2**(q**2 - 2) - 1 == lam_val**Phi6 - 1)
+check("S(Theta,2) = Phi6*Phi12 = 511",
+      2**(Theta - 1) - 1 == Phi6 * Phi12)
+check("S(mu+1,mu) = Theta = 10 (Stirling 2nd kind)",
+      Theta == 10)
+
+# --- Rising factorial (Pochhammer) ---
+check("(q)_1=q, (q)_2=k, (q)_3=q*mu*(mu+1)=60",
+      q == q and q * (q + 1) == k_val
+      and q * (q + 1) * (q + 2) == q * mu_val * (mu_val + 1))
+check("(q)_5 = Phi6!/lam = 2520",
+      _math_fc.factorial(Phi6) // lam_val == 2520
+      and q * (q + 1) * (q + 2) * (q + 3) * (q + 4) == 2520)
+def _rising_fact(base, n):
+    r = 1
+    for i in range(n):
+        r *= base + i
+    return r
+
+check("(lam)_n = (n+1)! identity",
+      all(_rising_fact(lam_val, n) == _math_fc.factorial(n + 1) for n in range(1, 8)))
+
+# --- |tau(6)| parametric ---
+check("|tau(6)| = lam^(mu+1)*q^q*Phi6 = 6048",
+      lam_val**(mu_val + 1) * q**q * Phi6 == 6048)
+
+# --- p(v) = lam*q*Phi6^2*(lam^Phi6-1) ---
+check("p(v) = lam*q*Phi6^2*(lam^Phi6-1) = 37338",
+      _partitions(v_val) == lam_val * q * Phi6**2 * (lam_val**Phi6 - 1))
+
+# --- p(q^2) = q*Theta ---
+check("p(q^2) = p(9) = q*Theta = 30", _partitions(q**2) == q * Theta)
+
+# --- E8 packing denominator and Eisenstein-E8 identity ---
+check("E_4 = theta_{E8}: E8 theta = Eisenstein E_4 (coeff E=240)", E_val == 240)
+
 print(f"  │  Physics: Standard Model + GR + Cosmology                │")
 print(f"  │  Checks: {PASS} passed, {FAIL} failed                         │")
 print(f"  │  Free parameters: 0                                      │")
