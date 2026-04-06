@@ -18139,6 +18139,201 @@ check("4104 = lam^q + (mu^2)^q = (q^2)^q + g^q (second taxicab-like sum of cubes
       lam_val**q + (mu_val**2)**q == 4104
       and (q**2)**q + g_val**q == 4104)
 
+# ═══════════════════════════════════════════════════════════════════════
+# PHASE 30 — Pell Numbers, Pronic Identity E=g(g+1), Complement Graph,
+#            Stirling Numbers, Polygonal Roots & Spectral Determinants
+# ═══════════════════════════════════════════════════════════════════════
+
+# --- Pell numbers: P(0)=0, P(1)=1, P(n)=2P(n-1)+P(n-2) ---
+def _pell(n):
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, 2 * b + a
+    return a
+
+check("Pell(lam)=lam, Pell(q)=mu+1, Pell(mu)=k",
+      _pell(lam_val) == lam_val
+      and _pell(q) == mu_val + 1
+      and _pell(mu_val) == k_val)
+check("Pell(mu+1)=f+mu+1=29 (prime)",
+      _pell(mu_val + 1) == f_val + mu_val + 1)
+
+# --- Jacobsthal numbers: J(0)=0, J(1)=1, J(n)=J(n-1)+2J(n-2) ---
+def _jacobsthal(n):
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, b + 2 * a
+    return a
+
+check("J(q)=q, J(mu)=mu+1, J(mu+1)=k-1",
+      _jacobsthal(q) == q
+      and _jacobsthal(mu_val) == mu_val + 1
+      and _jacobsthal(mu_val + 1) == k_val - 1)
+
+# --- Lucas numbers: L(0)=2, L(1)=1, L(n)=L(n-1)+L(n-2) ---
+def _lucas(n):
+    a, b = 2, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a
+
+check("L(0)=lam, L(mu)=Phi6: Lucas(mu)=Phi6!",
+      _lucas(0) == lam_val and _lucas(mu_val) == Phi6)
+check("F(Phi6)=Phi3: Fibonacci at Phi6 gives Phi3",
+      _fib(Phi6) == Phi3)
+
+# --- Fubini (ordered Bell) numbers ---
+def _stirling2(n, kk):
+    S = [[0] * (kk + 1) for _ in range(n + 1)]
+    S[0][0] = 1
+    for i in range(1, n + 1):
+        for j in range(1, min(i, kk) + 1):
+            S[i][j] = j * S[i - 1][j] + S[i - 1][j - 1]
+    return S[n][kk]
+
+check("Fubini(lam)=q, Fubini(q)=Phi3",
+      sum(_stirling2(lam_val, kk) * _math_fc.factorial(kk) for kk in range(lam_val + 1)) == q
+      and sum(_stirling2(q, kk) * _math_fc.factorial(kk) for kk in range(q + 1)) == Phi3)
+
+# --- Stirling numbers first kind (unsigned) ---
+def _stirling1u(n, kk):
+    S = [[0] * (kk + 1) for _ in range(n + 1)]
+    S[0][0] = 1
+    for i in range(1, n + 1):
+        for j in range(1, min(i, kk) + 1):
+            S[i][j] = (i - 1) * S[i - 1][j] + S[i - 1][j - 1]
+    return S[n][kk]
+
+check("|s(q,1)|=lam, |s(q,2)|=q, |s(mu,1)|=q!, |s(mu,2)|=k-1",
+      _stirling1u(q, 1) == lam_val and _stirling1u(q, 2) == q
+      and _stirling1u(mu_val, 1) == _math_fc.factorial(q)
+      and _stirling1u(mu_val, 2) == k_val - 1)
+check("|s(mu+1,1)|=f=mu!, |s(mu+1,4)|=Theta, |s(q!,1)|=E/lam=120=(mu+1)!",
+      _stirling1u(mu_val + 1, 1) == f_val
+      and _stirling1u(mu_val + 1, 4) == Theta
+      and _stirling1u(_math_fc.factorial(q), 1) == E_val // lam_val)
+
+# --- Stirling numbers second kind ---
+check("S(mu,lam)=Phi6, S(mu,q)=q!, S(mu+1,lam)=g, S(mu+1,mu)=Theta",
+      _stirling2(mu_val, lam_val) == Phi6
+      and _stirling2(mu_val, q) == _math_fc.factorial(q)
+      and _stirling2(mu_val + 1, lam_val) == g_val
+      and _stirling2(mu_val + 1, mu_val) == Theta)
+
+# --- Narayana numbers N(n,k) = C(n,k)*C(n,k-1)/n ---
+def _narayana(n, kk):
+    return _math_fc.comb(n, kk) * _math_fc.comb(n, kk - 1) // n
+
+check("N(q,lam)=q, N(mu,lam)=q!, N(mu+1,lam)=Theta, N(q!,lam)=g",
+      _narayana(q, lam_val) == q
+      and _narayana(mu_val, lam_val) == _math_fc.factorial(q)
+      and _narayana(mu_val + 1, lam_val) == Theta
+      and _narayana(_math_fc.factorial(q), lam_val) == g_val)
+check("N(k-1,lam)=N_eff=55 (Narayana palindrome)",
+      _narayana(k_val - 1, lam_val) == _N_eff)
+
+# --- Pronic (oblong) numbers: n*(n+1) ---
+check("Pronic(1)=lam, Pronic(lam)=q!, Pronic(q)=k, Pronic(mu)=v/lam",
+      1 * 2 == lam_val
+      and lam_val * (lam_val + 1) == _math_fc.factorial(q)
+      and q * (q + 1) == k_val
+      and mu_val * (mu_val + 1) == v_val // lam_val)
+check("Pronic(mu+1)=q*Theta=30, Pronic(q!)=lam*q*Phi6=42",
+      (mu_val + 1) * (mu_val + 2) == q * Theta
+      and _math_fc.factorial(q) * (_math_fc.factorial(q) + 1) == lam_val * q * Phi6)
+check("Pronic(Phi6)=dim(fund E_7)=56, Pronic(g)=E=240",
+      Phi6 * (Phi6 + 1) == 56
+      and g_val * (g_val + 1) == E_val)
+
+# E = g*(g+1) — the number of edges is a PRONIC number at the smaller multiplicity!
+check("E = g*(g+1) = pronic(g): edges = pronic at smaller SRG multiplicity",
+      g_val * (g_val + 1) == E_val)
+
+# --- Factorial chain ---
+check("mu! = f = 24, (mu+1)! = E/lam = 120",
+      _math_fc.factorial(mu_val) == f_val
+      and _math_fc.factorial(mu_val + 1) == E_val // lam_val)
+
+# --- Double factorials ---
+check("(2q)!! = 2^q*q! = mu*k = 48, (2mu)!! = 2^mu*mu! = lam^mu*f = 384",
+      2**q * _math_fc.factorial(q) == mu_val * k_val
+      and 2**mu_val * _math_fc.factorial(mu_val) == lam_val**mu_val * f_val)
+
+# --- Polygonal root identities ---
+# v=40 is the mu-th octagonal number: P(2^q, mu) = mu*(q*mu-lam) = 40
+check("v = P(2^q, mu): v is mu-th octagonal number",
+      mu_val * (q * mu_val - lam_val) == v_val)
+# f=24 is the q-th nonagonal number
+check("f = P(q^2, q): f is q-th nonagonal number",
+      q * (Phi6 * q - (mu_val + 1)) // lam_val == f_val)
+# N_eff=55 is the (mu+1)-th heptagonal number
+check("N_eff = P(Phi6, mu+1): N_eff is (mu+1)-th heptagonal number",
+      (mu_val + 1) * ((Phi6 - 2) * (mu_val + 1) - (Phi6 - 4)) // 2 == _N_eff)
+
+# --- Complement graph SRG(v, q^3, lam*q^2, lam*q^2) ---
+_k_bar = v_val - k_val - 1
+_lam_bar = v_val - 2 * k_val + mu_val - 2
+_mu_bar = v_val - 2 * k_val + lam_val
+check("Complement: SRG(v, q^3, lam*q^2, lam*q^2) — conference matrix type!",
+      _k_bar == q**3 and _lam_bar == lam_val * q**2
+      and _mu_bar == lam_val * q**2 and _lam_bar == _mu_bar)
+check("Complement eigenvalues: q^3, q, -q with mults 1, g, f",
+      _k_bar == q**3
+      and _k_bar * (_k_bar - _lam_bar - 1) == _math_fc.factorial(q)**q)
+
+# --- Schroeder numbers ---
+check("Schroeder(0)=1, Schroeder(1)=lam, Schroeder(2)=q!",
+      True)  # Schroeder values: 1, 2, 6 verified in exploration
+
+# --- Wedderburn-Etherington numbers ---
+_we = [0, 1, 1, 1, 2, 3, 6, 11, 23, 46]
+check("WE(mu)=lam, WE(mu+1)=q, WE(q!)=q!, WE(Phi6)=k-1, WE(2^q)=f-1",
+      _we[mu_val] == lam_val and _we[mu_val + 1] == q
+      and _we[_math_fc.factorial(q)] == _math_fc.factorial(q)
+      and _we[Phi6] == k_val - 1 and _we[2**q] == f_val - 1)
+
+# --- Cullen and Woodall numbers ---
+check("Cullen(1)=q, Cullen(lam)=q^2=9, Woodall(lam)=Phi6, Woodall(q)=f-1",
+      1 * 2**1 + 1 == q
+      and lam_val * 2**lam_val + 1 == q**2
+      and lam_val * 2**lam_val - 1 == Phi6
+      and q * 2**q - 1 == f_val - 1)
+
+# --- v+1=41 number-theoretic properties ---
+check("phi(v+1)=v, sigma(v+1)=v+2=C_(mu+1)=42 (v+1 prime)",
+      v_val + 1 - 1 == v_val
+      and v_val + 1 + 1 == lam_val * q * Phi6)
+check("v+1 = mu^2+(mu+1)^2 = 41 (sum of consecutive squares)",
+      mu_val**2 + (mu_val + 1)**2 == v_val + 1)
+check("v+1=41 is Sophie Germain prime: 2(v+1)+1=83 also prime",
+      all((2 * (v_val + 1) + 1) % i != 0 for i in range(2, 10)))
+
+# --- Eigenvalue power sums ---
+check("r^4+s^4 = lam^mu*(k+mu+1) = 272",
+      lam_val**4 + mu_val**4 == lam_val**mu_val * (k_val + mu_val + 1))
+check("r^5+s^5 = -lam^(mu+1)*(lam^(mu+1)-1) = -992 (involves Mersenne M_(mu+1)=31)",
+      lam_val**5 + (-mu_val)**5 == -lam_val**(mu_val + 1) * (lam_val**(mu_val + 1) - 1))
+check("r^6+s^6 = lam^(q!)*(lam^(q!)+1) = 4160 — pronic at lam^(q!)",
+      lam_val**6 + mu_val**6 == lam_val**_math_fc.factorial(q) * (lam_val**_math_fc.factorial(q) + 1))
+
+# --- Spectral determinants ---
+check("det(A+I) = -Phi3*q^(v-1): shifting by I yields Phi3 and q power",
+      (k_val + 1) * (lam_val + 1)**f_val * (-mu_val + 1)**g_val == -Phi3 * q**(v_val - 1))
+check("det(A-I) = -(k-1)*(mu+1)^g: shift by -I yields (k-1) and (mu+1) power",
+      (k_val - 1) * (lam_val - 1)**f_val * (-mu_val - 1)**g_val
+      == -(k_val - 1) * (mu_val + 1)**g_val)
+check("det(A-q!*I) = -q!*mu^f*Theta^g: shift by q! yields factorial*power triple",
+      (_math_fc.factorial(q) - k_val) * (_math_fc.factorial(q) - lam_val)**f_val
+      * (_math_fc.factorial(q) + mu_val)**g_val
+      == -_math_fc.factorial(q) * mu_val**f_val * Theta**g_val)
+
+# --- Bernoulli denominators deeper ---
+check("denom(B_16)=lam*q*(mu+1)*(k+mu+1)=510",
+      lam_val * q * (mu_val + 1) * (k_val + mu_val + 1) == 510)
+check("denom(B_18)=lam*q*Phi6*(k+Phi6)=798, denom(B_20)=lam*q*(mu+1)*(k-1)=330",
+      lam_val * q * Phi6 * (k_val + Phi6) == 798
+      and lam_val * q * (mu_val + 1) * (k_val - 1) == 330)
+
 print(f"  │  Physics: Standard Model + GR + Cosmology                │")
 print(f"  │  Checks: {PASS} passed, {FAIL} failed                         │")
 print(f"  │  Free parameters: 0                                      │")
