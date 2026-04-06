@@ -16336,6 +16336,129 @@ check("(q/Phi6) = -1: q is QNR mod Phi6", pow(q, (Phi6 - 1) // 2, Phi6) == Phi6 
 check("|Sp(4,q)| = v * (q!)^mu = 51840",
       v_val * _math_fc.factorial(q)**mu_val == 51840)
 
+# ═══════════════════════════════════════════════════════════════════════
+# FIBONACCI-LUCAS DUAL LADDER — graph params permute under F and L
+# F: {lam->1, q->lam, mu->q, mu+1->mu+1(FIXED!), Phi6->Phi3, Theta->N_eff, k->k^2}
+# L: {lam->q, q->mu, mu->Phi6, mu+1->k-1}
+# ═══════════════════════════════════════════════════════════════════════
+def _fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a
+
+def _lucas(n):
+    a, b = 2, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a
+
+check("F(q) = lam", _fib(q) == lam_val)
+check("F(mu) = q", _fib(mu_val) == q)
+check("F(mu+1) = mu+1 (Fibonacci fixed point)", _fib(mu_val + 1) == mu_val + 1)
+check("F(Phi6) = Phi3 = 13", _fib(Phi6) == Phi3)
+check("F(2*mu) = q*Phi6 = 21", _fib(2 * mu_val) == q * Phi6)
+check("L(lam) = q", _lucas(lam_val) == q)
+check("L(q) = mu", _lucas(q) == mu_val)
+check("L(mu) = Phi6", _lucas(mu_val) == Phi6)
+check("L(mu+1) = k-1 = 11", _lucas(mu_val + 1) == k_val - 1)
+check("L(mu)^2 - 5*F(mu)^2 = mu",
+      _lucas(mu_val)**2 - 5 * _fib(mu_val)**2 == mu_val)
+check("L(q)^2 - 5*F(q)^2 = s_val = -4",
+      _lucas(q)**2 - 5 * _fib(q)**2 == s_val)
+check("F(L(q)) = F(mu) = q (F o L fixed at q)",
+      _fib(_lucas(q)) == q)
+check("L(F(q)) = L(lam) = q (L o F fixed at q)",
+      _lucas(_fib(q)) == q)
+check("F(Phi6)^2 + F(Phi6+1)^2 = F(g)",
+      _fib(Phi6)**2 + _fib(Phi6 + 1)**2 == _fib(g_val))
+
+# ═══════════════════════════════════════════════════════════════════════
+# CYCLOTOMIC HIERARCHY — q^k-1 factors over ALL named cyclotomic params
+# q^12-1 = lam * mu * Phi3 * Theta * Phi6 * Phi12
+# ═══════════════════════════════════════════════════════════════════════
+check("q^6-1 = lam*mu*Phi3*Phi6 = 728",
+      q**6 - 1 == lam_val * mu_val * Phi3 * Phi6)
+check("q^k-1 = lam*mu*Phi3*Theta*Phi6*Phi12",
+      q**k_val - 1 == lam_val * mu_val * Phi3 * Theta * Phi6 * Phi12)
+
+# ═══════════════════════════════════════════════════════════════════════
+# EULER TOTIENT CHAIN — phi maps graph params TO graph params
+# ═══════════════════════════════════════════════════════════════════════
+check("phi(q) = lam", _phi(q) == lam_val)
+check("phi(mu+1) = mu", _phi(mu_val + 1) == mu_val)
+check("phi(Phi6) = q! = 6", _phi(Phi6) == _math_fc.factorial(q))
+check("phi(Phi3) = k = 12", _phi(Phi3) == k_val)
+check("phi(v) = mu^2 = 16", _phi(v_val) == mu_val**2)
+check("phi(N_eff) = v = 40", _phi(55) == v_val)
+check("phi(Phi12) = q!*k = 72", _phi(Phi12) == _math_fc.factorial(q) * k_val)
+
+# ═══════════════════════════════════════════════════════════════════════
+# MULTIPLICATIVE ORDERS — ord_n(q) gives graph params
+# ═══════════════════════════════════════════════════════════════════════
+def _mult_ord(base, mod):
+    if _math_fc.gcd(base, mod) > 1:
+        return None
+    for d in range(1, mod + 1):
+        if pow(base, d, mod) == 1:
+            return d
+    return None
+
+check("ord_{mu+1}(q) = mu", _mult_ord(q, mu_val + 1) == mu_val)
+check("ord_{Phi3}(q) = q = 3", _mult_ord(q, Phi3) == q)
+check("ord_{k-1}(q) = mu+1 = 5", _mult_ord(q, k_val - 1) == mu_val + 1)
+check("ord_{f-1}(q) = k-1 = 11", _mult_ord(q, f_val - 1) == k_val - 1)
+check("ord_{Phi12}(q) = k = 12", _mult_ord(q, Phi12) == k_val)
+
+# ═══════════════════════════════════════════════════════════════════════
+# CONTINUED FRACTION PERIODS — sqrt(param) period = graph param
+# ═══════════════════════════════════════════════════════════════════════
+def _cf_period(n):
+    a0 = int(_math_fc.isqrt(n))
+    if a0 * a0 == n:
+        return 0
+    m, d, a = 0, 1, a0
+    period = 0
+    while True:
+        m = d * a - m
+        d = (n - m * m) // d
+        a = (a0 + m) // d
+        period += 1
+        if a == 2 * a0:
+            break
+    return period
+
+check("CF period sqrt(q) = lam", _cf_period(q) == lam_val)
+check("CF period sqrt(Phi6) = mu = 4", _cf_period(Phi6) == mu_val)
+check("CF period sqrt(Phi3) = mu+1 = 5", _cf_period(Phi3) == mu_val + 1)
+check("CF period sqrt(v) = lam", _cf_period(v_val) == lam_val)
+check("CF period sqrt(N_eff) = mu = 4", _cf_period(55) == mu_val)
+
+# ═══════════════════════════════════════════════════════════════════════
+# WEDDERBURN-ETHERINGTON — binary tree enumeration
+# WE(4)=lam, WE(5)=q, WE(7)=k-1, WE(8)=f-1
+# ═══════════════════════════════════════════════════════════════════════
+_WE = [0, 1, 1, 1, 2, 3, 6, 11, 23, 46, 98, 207, 451]
+check("WE(mu) = lam = 2", _WE[mu_val] == lam_val)
+check("WE(mu+1) = q = 3", _WE[mu_val + 1] == q)
+check("WE(Phi6) = k-1 = 11", _WE[Phi6] == k_val - 1)
+check("WE(q^2-1) = f-1 = 23", _WE[q**2 - 1] == f_val - 1)
+
+# ═══════════════════════════════════════════════════════════════════════
+# NARAYANA NUMBERS N(n,k) = C(n,k)*C(n,k-1)/n
+# ═══════════════════════════════════════════════════════════════════════
+def _narayana(n, kk):
+    return _math_fc.comb(n, kk) * _math_fc.comb(n, kk - 1) // n
+
+check("N(mu,lam) = q! = 6", _narayana(mu_val, lam_val) == _math_fc.factorial(q))
+check("N(mu+1,q) = v/lam = 20", _narayana(mu_val + 1, q) == v_val // lam_val)
+
+# ═══════════════════════════════════════════════════════════════════════
+# CATALAN-FIBONACCI COMPOSITION — C(F(mu)) = F(C(q)) = mu+1
+# ═══════════════════════════════════════════════════════════════════════
+check("C(F(mu)) = C(q) = mu+1", _catalan_n(_fib(mu_val)) == mu_val + 1)
+check("F(C(q)) = F(mu+1) = mu+1", _fib(_catalan_n(q)) == mu_val + 1)
+
 print(f"  │  Physics: Standard Model + GR + Cosmology                │")
 print(f"  │  Checks: {PASS} passed, {FAIL} failed                         │")
 print(f"  │  Free parameters: 0                                      │")
