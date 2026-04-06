@@ -16459,6 +16459,95 @@ check("N(mu+1,q) = v/lam = 20", _narayana(mu_val + 1, q) == v_val // lam_val)
 check("C(F(mu)) = C(q) = mu+1", _catalan_n(_fib(mu_val)) == mu_val + 1)
 check("F(C(q)) = F(mu+1) = mu+1", _fib(_catalan_n(q)) == mu_val + 1)
 
+# ═══════════════════════════════════════════════════════════════════════
+# MODULAR GROUP — Gamma_0 indices psi(n)=[PSL(2,Z):Gamma_0(n)] are graph params
+# psi(n) = n * prod_{p|n}(1+1/p)
+# Chain: psi(lam)=q, psi(q)=mu, psi(mu)=q!, psi(Phi6)=q^2-1, psi(k)=f, psi(g)=f
+# ═══════════════════════════════════════════════════════════════════════
+def _psi(n):
+    from fractions import Fraction as _Fr
+    result = _Fr(n, 1)
+    temp = n
+    for p in range(2, temp + 1):
+        if p * p > temp:
+            break
+        if temp % p == 0:
+            result *= (1 + _Fr(1, p))
+            while temp % p == 0:
+                temp //= p
+    if temp > 1:
+        result *= (1 + _Fr(1, temp))
+    return int(result)
+
+check("psi(lam) = q: [PSL(2,Z):Gamma_0(2)] = 3", _psi(lam_val) == q)
+check("psi(q) = mu: [PSL(2,Z):Gamma_0(3)] = 4", _psi(q) == mu_val)
+check("psi(mu) = q!: [PSL(2,Z):Gamma_0(4)] = 6", _psi(mu_val) == _math_fc.factorial(q))
+check("psi(Phi6) = q^2-1: [PSL(2,Z):Gamma_0(7)] = 8", _psi(Phi6) == q**2 - 1)
+check("psi(k) = f: [PSL(2,Z):Gamma_0(12)] = 24", _psi(k_val) == f_val)
+check("psi(g) = f: [PSL(2,Z):Gamma_0(15)] = 24", _psi(g_val) == f_val)
+
+# ═══════════════════════════════════════════════════════════════════════
+# CUSP FORMS — dim S_w at graph param weights w are graph params
+# ═══════════════════════════════════════════════════════════════════════
+def _dim_S(w):
+    if w < 12 or w % 2 == 1:
+        return 0
+    if w % 12 == 2:
+        return w // 12 - 1 if w > 2 else 0
+    return w // 12
+
+check("dim S_f = lam = 2 (cusp forms weight f=24)", _dim_S(f_val) == lam_val)
+check("dim S_v = q = 3 (cusp forms weight v=40)", _dim_S(v_val) == q)
+
+# ═══════════════════════════════════════════════════════════════════════
+# j-INVARIANT — 744 = (q^2-1)*q*(2g+1), moonshine constant
+# ═══════════════════════════════════════════════════════════════════════
+check("j constant term 744 = (q^2-1)*q*(2g+1)", 744 == (q**2 - 1) * q * (2 * g_val + 1))
+
+# ═══════════════════════════════════════════════════════════════════════
+# RAMANUJAN TAU — deeper: tau(3), tau(5), tau(7) all graph-parametric
+# ═══════════════════════════════════════════════════════════════════════
+check("tau(3) = mu*q^2*Phi6 = 252", 252 == mu_val * q**2 * Phi6)
+check("tau(5) = lam*q*(mu+1)*Phi6*(f-1) = 4830",
+      4830 == lam_val * q * (mu_val + 1) * Phi6 * (f_val - 1))
+check("tau(7) = -(q^2-1)*Phi6*Phi3*(f-1) = -16744",
+      -16744 == -(q**2 - 1) * Phi6 * Phi3 * (f_val - 1))
+
+# ═══════════════════════════════════════════════════════════════════════
+# MATHIEU GROUPS — all five orders are graph-parametric
+# ═══════════════════════════════════════════════════════════════════════
+check("|M11| = mu^2*q^2*(mu+1)*(k-1) = 7920",
+      7920 == mu_val**2 * q**2 * (mu_val + 1) * (k_val - 1))
+check("|M12| = lam^(q!)*q^3*(mu+1)*(k-1) = 95040",
+      95040 == lam_val**(q * lam_val) * q**3 * (mu_val + 1) * (k_val - 1))
+check("|M22| = lam^Phi6*q^2*(mu+1)*Phi6*(k-1) = 443520",
+      443520 == lam_val**Phi6 * q**2 * (mu_val + 1) * Phi6 * (k_val - 1))
+check("|M23| = |M22|*(f-1) = 10200960",
+      10200960 == lam_val**Phi6 * q**2 * (mu_val + 1) * Phi6 * (k_val - 1) * (f_val - 1))
+check("|M24| = lam^Theta*q^3*(mu+1)*Phi6*(k-1)*(f-1) = 244823040",
+      244823040 == lam_val**Theta * q**3 * (mu_val + 1) * Phi6 * (k_val - 1) * (f_val - 1))
+
+# ═══════════════════════════════════════════════════════════════════════
+# JANKO GROUPS — J1, J2, J3 orders parametric
+# ═══════════════════════════════════════════════════════════════════════
+check("|J1| = (q^2-1)*q*(mu+1)*Phi6*(k-1)*(g+mu) = 175560",
+      175560 == (q**2 - 1) * q * (mu_val + 1) * Phi6 * (k_val - 1) * (g_val + mu_val))
+check("|J2| = lam^Phi6*q^3*(mu+1)^2*Phi6 = 604800",
+      604800 == lam_val**Phi6 * q**3 * (mu_val + 1)**2 * Phi6)
+check("|J3| = lam^Phi6*q^5*(mu+1)*(mu^2+1)*(g+mu) = 50232960",
+      50232960 == lam_val**Phi6 * q**5 * (mu_val + 1) * (mu_val**2 + 1) * (g_val + mu_val))
+
+# ═══════════════════════════════════════════════════════════════════════
+# EXCEPTIONAL WEYL GROUPS AND REPS
+# ═══════════════════════════════════════════════════════════════════════
+check("|W(E7)| = lam^Theta*q^4*(mu+1)*Phi6 = 2903040",
+      2903040 == lam_val**Theta * q**4 * (mu_val + 1) * Phi6)
+check("|W(E8)| = lam^(lam*Phi6)*q^5*(mu+1)^2*Phi6 = 696729600",
+      696729600 == lam_val**(lam_val * Phi6) * q**5 * (mu_val + 1)**2 * Phi6)
+check("dim E7_56 = lam^3*Phi6", 56 == lam_val**3 * Phi6)
+check("dim E7_133 = Phi6*(g+mu)", 133 == Phi6 * (g_val + mu_val))
+check("dim E7_912 = mu^2*q*(g+mu)", 912 == mu_val**2 * q * (g_val + mu_val))
+
 print(f"  │  Physics: Standard Model + GR + Cosmology                │")
 print(f"  │  Checks: {PASS} passed, {FAIL} failed                         │")
 print(f"  │  Free parameters: 0                                      │")
