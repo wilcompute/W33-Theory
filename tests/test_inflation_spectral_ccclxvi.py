@@ -30,12 +30,12 @@ class TestT1_Efolds:
 class TestT2_Spectrum:
     def test_n_s(self):
         N_e = 60
-        n_s = Fraction(N_e - 1, N_e)
-        assert n_s == Fraction(59, 60)
+        n_s = Fraction(N_e - 2, N_e)  # plateau slow-roll: 1 - 2/N
+        assert n_s == Fraction(29, 30)
         assert 0.96 < float(n_s) < 0.97
 
     def test_n_s_matches_planck(self):
-        n_s = 29 / 30
+        n_s = 29 / 30  # ≈ 0.9667
         planck_central, planck_sigma = 0.9649, 0.0042
         assert abs(n_s - planck_central) < 3 * planck_sigma
 
