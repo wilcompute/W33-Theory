@@ -16285,6 +16285,57 @@ check("q^4-1 = lam*mu*Theta = 80",
       q**4 - 1 == lam_val * mu_val * Theta)
 check("q^2+1 = Theta = 10", q**2 + 1 == Theta)
 
+# ═══════════════════════════════════════════════════════════════════════
+# CLASS NUMBERS h(-d) — imaginary quadratic fields at graph parameters
+# map graph parameters TO graph parameters!
+# ═══════════════════════════════════════════════════════════════════════
+_class_nums = {3:1,4:1,7:1,8:1,11:1,15:2,19:1,20:2,23:3,24:2,
+               31:3,35:2,39:4,40:2,43:1,47:5,51:2,52:2,55:4,
+               56:4,59:3,67:1,68:4,71:7}
+check("h(-g=15) = lam = 2", _class_nums[g_val] == lam_val)
+check("h(-f-1=23) = q = 3", _class_nums[f_val - 1] == q)
+check("h(-N_eff=55) = mu = 4", _class_nums[55] == mu_val)
+check("h(-(v+Phi6)=47) = mu+1 = 5", _class_nums[v_val + Phi6] == mu_val + 1)
+check("h(-(Phi12-lam)=71) = Phi6 = 7", _class_nums[Phi12 - lam_val] == Phi6)
+check("h(-v=40) = lam = 2", _class_nums[v_val] == lam_val)
+check("h(-(v+g+mu)=59) = q = 3", _class_nums[v_val + g_val + mu_val] == q)
+check("h(-(2g+1)=31) = q = 3", _class_nums[2 * g_val + 1] == q)
+
+# ═══════════════════════════════════════════════════════════════════════
+# FERMAT NUMBERS — F_0=q, F_1=mu+1, F_2=mu^2+1
+# ═══════════════════════════════════════════════════════════════════════
+check("Fermat F_0 = 2^1+1 = q = 3", 2**1 + 1 == q)
+check("Fermat F_1 = 2^2+1 = mu+1 = 5", 2**2 + 1 == mu_val + 1)
+check("Fermat F_2 = 2^4+1 = mu^2+1 = 17", 2**4 + 1 == mu_val**2 + 1)
+check("F_0*F_1*F_2 = E+g = 255", q * (mu_val+1) * (mu_val**2+1) == E_count + g_val)
+
+# ═══════════════════════════════════════════════════════════════════════
+# COLLATZ CHAIN — stopping times are graph params
+# ═══════════════════════════════════════════════════════════════════════
+def _collatz_steps(n):
+    c = 0
+    while n != 1:
+        n = n // 2 if n % 2 == 0 else 3 * n + 1
+        c += 1
+    return c
+
+check("Collatz(q=3) = Phi6 = 7", _collatz_steps(q) == Phi6)
+check("Collatz(mu=4) = lam = 2", _collatz_steps(mu_val) == lam_val)
+check("Collatz(k=12) = q^2 = 9", _collatz_steps(k_val) == q**2)
+check("Collatz(f=24) = Theta = 10", _collatz_steps(f_val) == Theta)
+
+# ═══════════════════════════════════════════════════════════════════════
+# QUADRATIC RECIPROCITY — q splits at Phi3 but not Phi6
+# ═══════════════════════════════════════════════════════════════════════
+check("(q/Phi3) = +1: q is QR mod Phi3", pow(q, (Phi3 - 1) // 2, Phi3) == 1)
+check("(q/Phi6) = -1: q is QNR mod Phi6", pow(q, (Phi6 - 1) // 2, Phi6) == Phi6 - 1)
+
+# ═══════════════════════════════════════════════════════════════════════
+# |Sp(4,q)| = q^mu * (q^2-1) * (q^4-1)
+# ═══════════════════════════════════════════════════════════════════════
+check("|Sp(4,q)| = v * (q!)^mu = 51840",
+      v_val * _math_fc.factorial(q)**mu_val == 51840)
+
 print(f"  │  Physics: Standard Model + GR + Cosmology                │")
 print(f"  │  Checks: {PASS} passed, {FAIL} failed                         │")
 print(f"  │  Free parameters: 0                                      │")
