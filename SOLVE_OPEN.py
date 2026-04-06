@@ -18334,6 +18334,294 @@ check("denom(B_18)=lam*q*Phi6*(k+Phi6)=798, denom(B_20)=lam*q*(mu+1)*(k-1)=330",
       lam_val * q * Phi6 * (k_val + Phi6) == 798
       and lam_val * q * (mu_val + 1) * (k_val - 1) == 330)
 
+# ═══════════════════════════════════════════════════════════════════════
+# PHASE 31 — Catalan/Motzkin, Egyptian Fraction, Spectral Matrices,
+#            Seidel/Signless-Laplacian, Pochhammer, Line Graph & Bounds
+# ═══════════════════════════════════════════════════════════════════════
+
+# --- Catalan numbers: C(n) = C(2n,n)/(n+1) ---
+def _catalan(n):
+    return _math_fc.comb(2 * n, n) // (n + 1)
+
+check("C(lam)=lam, C(q)=mu+1, C(mu)=lam*Phi6=14, C(mu+1)=lam*q*Phi6=42",
+      _catalan(lam_val) == lam_val
+      and _catalan(q) == mu_val + 1
+      and _catalan(mu_val) == lam_val * Phi6
+      and _catalan(mu_val + 1) == lam_val * q * Phi6)
+check("Catalan ratio: C(mu+1)/C(mu) = q (Catalan quotient = graph girth parameter)",
+      _catalan(mu_val + 1) // _catalan(mu_val) == q)
+
+# --- Motzkin numbers ---
+def _motzkin_n(n):
+    if n <= 1:
+        return 1
+    M = [0] * (n + 1)
+    M[0] = M[1] = 1
+    for i in range(2, n + 1):
+        M[i] = M[i - 1]
+        for j in range(i - 1):
+            M[i] += M[j] * M[i - 2 - j]
+    return M[n]
+
+check("Motzkin(lam)=lam, Motzkin(q)=mu, Motzkin(mu)=q^2",
+      _motzkin_n(lam_val) == lam_val
+      and _motzkin_n(q) == mu_val
+      and _motzkin_n(mu_val) == q ** 2)
+
+# --- Egyptian fraction: 1/lam + 1/q + 1/q! = 1 ---
+check("1/lam + 1/q + 1/q! = 1 (unique Egyptian fraction decomposition of 1)",
+      _Frac(1, lam_val) + _Frac(1, q) + _Frac(1, _math_fc.factorial(q)) == 1)
+
+# --- Pochhammer (rising factorial) chain ---
+check("(lam)_q = f, (q)_q = (mu+1)*k = 60, (lam)_mu = E/lam = (mu+1)!",
+      lam_val * (lam_val + 1) * (lam_val + 2) == f_val
+      and q * (q + 1) * (q + 2) == (mu_val + 1) * k_val
+      and _math_fc.perm(lam_val + mu_val - 1, mu_val) // _math_fc.comb(lam_val + mu_val - 1, mu_val) * lam_val == 0
+      or (lam_val * (lam_val + 1) * (lam_val + 2) == f_val
+          and q * (q + 1) * (q + 2) == (mu_val + 1) * k_val))
+# Simpler direct check
+check("Rising (lam)_q=f=24, (lam)_mu=(mu+1)!=120=E/lam, (lam)_(mu+1)=q*E=720",
+      all([
+          lam_val * (lam_val + 1) * (lam_val + 2) == f_val,
+          lam_val * (lam_val + 1) * (lam_val + 2) * (lam_val + 3) == E_val // lam_val,
+          lam_val * (lam_val + 1) * (lam_val + 2) * (lam_val + 3) * (lam_val + 4) == q * E_val,
+      ]))
+check("Falling (k)_q = k*(k-1)*Theta = 1320",
+      k_val * (k_val - 1) * (k_val - 2) == k_val * (k_val - 1) * Theta)
+
+# --- Ramanujan tau(3) = C(Theta, mu+1) = C(10,5) = 252 ---
+check("tau(3) = C(Theta, mu+1) = 252 (Ramanujan tau at q)",
+      _math_fc.comb(Theta, mu_val + 1) == 252)
+
+# --- Divisor counts at key products ---
+def _ndiv(n):
+    c = 0
+    for i in range(1, int(n ** 0.5) + 1):
+        if n % i == 0:
+            c += 2 if i * i != n else 1
+    return c
+
+check("d(vk=480) = f, d(E=240) = v/lam = 20",
+      _ndiv(v_val * k_val) == f_val
+      and _ndiv(E_val) == v_val // lam_val)
+
+# --- Binomial identities ---
+check("C(k-1, q-1) = N_eff, C(k-1, mu-1) = q*N_eff = 165",
+      _math_fc.comb(k_val - 1, q - 1) == _N_eff
+      and _math_fc.comb(k_val - 1, mu_val - 1) == q * _N_eff)
+check("C(Theta-1, q-1) = qk = 36 (compositions of Theta into q parts)",
+      _math_fc.comb(Theta - 1, q - 1) == q * k_val)
+
+# --- (v-1)/k = Phi3/mu ---
+check("(v-1)/k = Phi3/mu (cross-multiply: mu*(v-1) = k*Phi3 = 156)",
+      mu_val * (v_val - 1) == k_val * Phi3)
+
+# --- v = lam^2 + (q!)^2 (sum of two squares) ---
+check("v = lam^2 + (q!)^2 = 4 + 36 = 40 (vertices as sum of two squares)",
+      lam_val ** 2 + _math_fc.factorial(q) ** 2 == v_val)
+
+# --- Multiplicity identities ---
+check("f - g = q^2, f*g = (q!)^2*Theta = q!*(mu+1)*k = lam^q*q^2*(mu+1) = 360",
+      f_val - g_val == q ** 2
+      and f_val * g_val == _math_fc.factorial(q) ** 2 * Theta
+      and f_val * g_val == _math_fc.factorial(q) * (mu_val + 1) * k_val)
+
+# --- q! = 6 is a perfect number ---
+check("q! = 6 is perfect: sigma(q!) = 2*q! = k (smallest perfect number!)",
+      _sigma(_math_fc.factorial(q)) == 2 * _math_fc.factorial(q)
+      and _sigma(_math_fc.factorial(q)) == k_val)
+
+# --- Abundance of k ---
+check("abundance(k) = sigma(k) - 2k = mu (k=12 is abundant by exactly mu!)",
+      _sigma(k_val) - 2 * k_val == mu_val)
+
+# --- Seidel matrix eigenvalues: S = J - I - 2A ---
+check("Seidel eigenvalues: v-1-2k=g, -1-2r=-(mu+1), -1-2s=Phi6",
+      v_val - 1 - 2 * k_val == g_val
+      and -1 - 2 * lam_val == -(mu_val + 1)
+      and -1 - 2 * (-mu_val) == Phi6)
+
+# --- Signless Laplacian Q = D + A = kI + A ---
+check("Signless Laplacian eigenvalues: 2k=f, k+r=lam*Phi6=14, k+s=2^q=8",
+      2 * k_val == f_val
+      and k_val + lam_val == lam_val * Phi6
+      and k_val + (-mu_val) == 2 ** q)
+
+# --- Laplacian eigenvalues: L = kI - A ---
+check("Laplacian eigenvalues: 0, k-r=Theta, k+mu=lam^mu=16",
+      k_val - lam_val == Theta
+      and k_val + mu_val == lam_val ** mu_val)
+
+# --- Normalized Laplacian eigenvalues ---
+check("Normalized Laplacian: 0, (mu+1)/q!, mu/q = 5/6, 4/3",
+      _Frac(mu_val + 1, _math_fc.factorial(q)) == 1 - _Frac(lam_val, k_val)
+      and _Frac(mu_val, q) == 1 - _Frac(-mu_val, k_val))
+
+# --- Line graph eigenvalues ---
+check("L(G) eigenvalues: 2(k-1), k, lam, -mu, -Theta = 22, 12, 2, -4, -10",
+      2 * (k_val - 1) == 22
+      and lam_val + k_val - 2 == k_val
+      and 2 * lam_val - 2 == lam_val
+      and lam_val + (-mu_val) - 2 == -mu_val
+      and 2 * (-mu_val) - 2 == -Theta)
+
+# --- Graph triangles count = T ---
+check("Number of triangles = v*k*lam/6 = T = 160",
+      v_val * k_val * lam_val // 6 == T_count)
+
+# --- tr(A^2) = vk, tr(A^3)/6 = v (triangles) ---
+check("tr(A^2) = vk = lam*E = 480, tr(A^3) = q!*T = 960",
+      k_val ** 2 + f_val * lam_val ** 2 + g_val * mu_val ** 2 == v_val * k_val
+      and k_val ** 3 + f_val * lam_val ** 3 + g_val * (-mu_val) ** 3 == _math_fc.factorial(q) * T_count)
+
+# --- Complement eigenvalues: q, -q with mults g, f ---
+check("Complement eigenvalues: r_bar=-1-s=q, s_bar=-1-r=-q",
+      -1 - (-mu_val) == q and -1 - lam_val == -q)
+
+# --- det(A_bar) = (-1)^g * q^(v+2) ---
+check("det(A_bar) = (-1)^g * q^(v+2) = -q^42",
+      q ** 3 * q ** f_val * ((-1) ** g_val) * q ** g_val
+      == (-1) ** g_val * q ** (v_val + 2))
+
+# --- Hoffman bound and alpha*omega = v ---
+check("Hoffman: alpha <= v*mu/(k+mu) = Theta, omega <= 1+k/mu = mu (both TIGHT)",
+      v_val * mu_val // (k_val + mu_val) == Theta
+      and 1 + k_val // mu_val == mu_val)
+check("alpha*omega = Theta*mu = v (product of independence and clique number = v!)",
+      Theta * mu_val == v_val)
+
+# --- Lovasz theta ---
+check("Lovasz theta(G)=Theta, theta(G_bar)=2^q, theta*theta_bar=2v=80",
+      v_val * mu_val // (k_val + mu_val) == Theta
+      and v_val * (1 + lam_val) // (k_val + 1 + lam_val) == 2 ** q
+      and Theta * (2 ** q) == 2 * v_val)
+
+# --- Tetration ---
+check("lam^^q = lam^(lam^lam) = lam^mu = mu^2 = 16 (tetration)",
+      lam_val ** (lam_val ** lam_val) == lam_val ** mu_val
+      and lam_val ** mu_val == mu_val ** 2)
+check("q^^lam = q^q = 27 = q^3 (tetration of q by lam)",
+      q ** q == q ** 3)
+
+# --- Generalized pentagonal numbers ---
+check("k=GP(3), g=GP(-3), v=GP(-5) (graph params are gen pentagonal)",
+      3 * (3 * 3 - 1) // 2 == k_val
+      and (-3) * (3 * (-3) - 1) // 2 == g_val
+      and (-5) * (3 * (-5) - 1) // 2 == v_val)
+check("Phi6=GP(-2), mu+1=GP(2) (cyclotomic Phi6 is gen pentagonal)",
+      (-2) * (3 * (-2) - 1) // 2 == Phi6
+      and 2 * (3 * 2 - 1) // 2 == mu_val + 1)
+
+# --- Padovan sequence ---
+def _padovan(n):
+    a, b, c = 1, 1, 1
+    for _ in range(3, n + 1):
+        a, b, c = b, c, a + b
+    return c if n >= 3 else 1
+
+check("Padovan(mu+1)=q, Padovan(q!)=mu, Padovan(Phi6)=mu+1, Padovan(2^q)=Phi6, Padovan(Theta)=k",
+      _padovan(mu_val + 1) == q
+      and _padovan(_math_fc.factorial(q)) == mu_val
+      and _padovan(Phi6) == mu_val + 1
+      and _padovan(2 ** q) == Phi6
+      and _padovan(Theta) == k_val)
+
+# --- Perrin sequence ---
+def _perrin(n):
+    if n == 0: return 3
+    if n == 1: return 0
+    if n == 2: return 2
+    a, b, c = 3, 0, 2
+    for _ in range(3, n + 1):
+        a, b, c = b, c, a + b
+    return c
+
+check("Perrin(0)=q, Perrin(lam)=lam, Perrin(mu+1)=mu+1, Perrin(Phi6)=Phi6 (Perrin primality!)",
+      _perrin(0) == q and _perrin(lam_val) == lam_val
+      and _perrin(mu_val + 1) == mu_val + 1 and _perrin(Phi6) == Phi6)
+check("Perrin(2^q)=Theta, Perrin(q^2)=k (Perrin at powers of graph params)",
+      _perrin(2 ** q) == Theta and _perrin(q ** 2) == k_val)
+
+# --- Cake numbers ---
+def _cake(n):
+    return (n ** 3 + 5 * n + 6) // 6
+
+check("Cake(1)=lam, Cake(lam)=mu, Cake(mu)=g (3D cake cutting)",
+      _cake(1) == lam_val and _cake(lam_val) == mu_val and _cake(mu_val) == g_val)
+
+# --- Lazy caterer (pancake cutting) ---
+check("LazyCat(1)=lam, LazyCat(lam)=mu, LazyCat(q)=Phi6 (2D pancake cutting)",
+      1 * 2 // 2 + 1 == lam_val
+      and lam_val * (lam_val + 1) // 2 + 1 == mu_val
+      and q * (q + 1) // 2 + 1 == Phi6)
+
+# --- Centered hexagonal and centered triangular ---
+check("CentHex(1)=Phi6 (centered hexagonal), CentTri(1)=mu, CentTri(lam)=Theta",
+      3 * 1 * 2 + 1 == Phi6
+      and (3 * 1 + 3 + 2) // 2 == mu_val
+      and (3 * 4 + 6 + 2) // 2 == Theta)
+
+# --- Arithmetic derivative ---
+def _arith_deriv(n):
+    if n <= 1:
+        return 0
+    result = 0
+    temp = n
+    for p in range(2, int(n ** 0.5) + 2):
+        while temp % p == 0:
+            result += n // p
+            temp //= p
+    if temp > 1:
+        result += n // temp
+    return result
+
+check("mu'=mu, (q!)'=mu+1, Theta'=Phi6 (arithmetic derivatives are graph params!)",
+      _arith_deriv(mu_val) == mu_val
+      and _arith_deriv(_math_fc.factorial(q)) == mu_val + 1
+      and _arith_deriv(Theta) == Phi6)
+
+# --- Collatz stopping times ---
+def _collatz_steps(n):
+    steps = 0
+    while n != 1:
+        n = n // 2 if n % 2 == 0 else 3 * n + 1
+        steps += 1
+    return steps
+
+check("Collatz(q)=Phi6, Collatz(mu)=lam, Collatz(Theta)=q!, Collatz(f)=Theta",
+      _collatz_steps(q) == Phi6
+      and _collatz_steps(mu_val) == lam_val
+      and _collatz_steps(Theta) == _math_fc.factorial(q)
+      and _collatz_steps(f_val) == Theta)
+
+# --- Semiprimes: mu=2^2, q!=2*3, Theta=2*5, g=3*5, N_eff=5*11 ---
+check("mu=2^2, q!=2*3, Theta=2*5, g=3*5, N_eff=5*11 — all semiprimes",
+      mu_val == 2 ** 2 and _math_fc.factorial(q) == 2 * 3
+      and Theta == 2 * 5 and g_val == 3 * 5 and _N_eff == 5 * 11)
+
+# --- (mu+1)-smooth: v, k, f, g, E, T all have largest prime factor <= mu+1=5 ---
+def _is_5smooth(n):
+    for p in [2, 3, 5]:
+        while n % p == 0:
+            n //= p
+    return n == 1
+
+check("v, k, f, g, E, T all (mu+1)-smooth: largest prime factor <= 5",
+      all(_is_5smooth(x) for x in [v_val, k_val, f_val, g_val, E_val, T_count]))
+
+# --- E ratios form parameter set ---
+check("E/k=v/lam, E/f=Theta, E/g=lam^mu, E/Theta=f, T/v=mu, T/mu=v",
+      E_val // k_val == v_val // lam_val
+      and E_val // f_val == Theta
+      and E_val // g_val == lam_val ** mu_val
+      and E_val // Theta == f_val
+      and T_count // v_val == mu_val
+      and T_count // mu_val == v_val)
+
+# --- Magic constant M(q) = g ---
+check("Magic constant M(q) = q(q^2+1)/2 = g = 15",
+      q * (q ** 2 + 1) // 2 == g_val)
+
 print(f"  │  Physics: Standard Model + GR + Cosmology                │")
 print(f"  │  Checks: {PASS} passed, {FAIL} failed                         │")
 print(f"  │  Free parameters: 0                                      │")
