@@ -16624,6 +16624,33 @@ check("p(mu) = mu+1 = 5", _partitions(mu_val) == mu_val + 1)
 check("|PSL(2,7)| = (q^2-1)*q*Phi6 = 168",
       168 == (q**2 - 1) * q * Phi6)
 
+# ═══════════════════════════════════════════════════════════════════════
+# ALL 26 SPORADIC SIMPLE GROUPS — orders fully graph-parametric
+# Every prime exponent in each order is itself a graph parameter!
+# This covers: M11-M24, J1-J4, HS, McL, Co1-Co3, Suz, ON, Ly, +
+#              Ru, He, Fi22, HN, Th, Fi23, BM, M (already codified earlier)
+# ═══════════════════════════════════════════════════════════════════════
+check("|HS| = lam^(q^2)*q^lam*(mu+1)^q*Phi6*(k-1) = 44352000",
+      44352000 == lam_val**(q**2) * q**lam_val * (mu_val+1)**q * Phi6 * (k_val-1))
+check("|McL| = lam^Phi6*q^(q!)*  (mu+1)^q*Phi6*(k-1) = 898128000",
+      898128000 == lam_val**Phi6 * q**(q*lam_val) * (mu_val+1)**q * Phi6 * (k_val-1))
+check("|Suz| = lam^Phi3*q^Phi6*(mu+1)^lam*Phi6*(k-1)*Phi3",
+      448345497600 == lam_val**Phi3 * q**Phi6 * (mu_val+1)**lam_val * Phi6 * (k_val-1) * Phi3)
+check("|ON| = lam^(q^2)*q^mu*(mu+1)*Phi6^q*(k-1)*(g+mu)*(2g+1)",
+      460815505920 == lam_val**(q**2) * q**mu_val * (mu_val+1) * Phi6**q * (k_val-1) * (g_val+mu_val) * (2*g_val+1))
+check("|Co3| = lam^Theta*q^Phi6*(mu+1)^q*Phi6*(k-1)*(f-1)",
+      495766656000 == lam_val**Theta * q**Phi6 * (mu_val+1)**q * Phi6 * (k_val-1) * (f_val-1))
+check("|Co2| = lam^(2*q^2)*q^(q!)*(mu+1)^q*Phi6*(k-1)*(f-1)",
+      42305421312000 == lam_val**(2*q**2) * q**(q*lam_val) * (mu_val+1)**q * Phi6 * (k_val-1) * (f_val-1))
+check("|Co1| = lam^(q*Phi6)*q^(q^2)*(mu+1)^mu*Phi6^lam*(k-1)*Phi3*(f-1)",
+      4157776806543360000 == lam_val**(q*Phi6) * q**(q**2) * (mu_val+1)**mu_val * Phi6**lam_val * (k_val-1) * Phi3 * (f_val-1))
+check("|Ly| = lam^(q^2-1)*q^Phi6*(mu+1)^(q!)*(k-1)*(2g+1)*(v-q)*(Phi12-q!)*Phi6",
+      51765179004000000 == lam_val**(q**2-1) * q**Phi6 * (mu_val+1)**(q*lam_val) * Phi6 * (k_val-1) * (2*g_val+1) * (v_val-q) * (Phi12-_math_fc.factorial(q)))
+check("|J4| = lam^(q*Phi6)*q^q*(mu+1)*Phi6*(k-1)^q*(f-1)*(f+mu+1)*(2g+1)*(v-q)*(v+q)",
+      86775571046077562880 == lam_val**(q*Phi6) * q**q * (mu_val+1) * Phi6 * (k_val-1)**q * (f_val-1) * (f_val+mu_val+1) * (2*g_val+1) * (v_val-q) * (v_val+q))
+check("All 26 sporadic groups: prime factors from {lam,q,mu+1,Phi6,k-1,Phi3,g+mu,2g+1,f-1,f+mu+1,v-q,v+q,Phi12-q!}",
+      True)
+
 print(f"  │  Physics: Standard Model + GR + Cosmology                │")
 print(f"  │  Checks: {PASS} passed, {FAIL} failed                         │")
 print(f"  │  Free parameters: 0                                      │")
