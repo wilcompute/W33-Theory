@@ -16805,6 +16805,77 @@ check("f = q*(q^2-1) = complement Laplacian eigenvalue",
 check("v*(v-1)/2 = Phi3*sigma(f) = 780",
       v_val*(v_val-1)//2 == Phi3 * 60)
 
+# ═══════════════════════════════════════════════════════════════════
+# PHASE 24 — Characteristic Polynomial Evaluations, Partition Function
+#   Deeper, Pentagonal Number Theorem, Triangular Numbers, Spectral Moments
+# ═══════════════════════════════════════════════════════════════════
+
+# --- Characteristic polynomial of A: chi_A(t) = (t-k)(t-r)^f(t-s)^g ---
+check("chi_A(-1) = -Phi3 * q^(v-1)",
+      (-1-k_val) * (-1-r_val)**f_val * (-1-s_val)**g_val == -Phi3 * q**(v_val-1))
+check("chi_A(1) = -(k-1) * (mu+1)^g",
+      (1-k_val) * (1-r_val)**f_val * (1-s_val)**g_val == -(k_val-1) * (mu_val+1)**g_val)
+check("chi_A(q) = -q^2 * Phi6^g",
+      (q-k_val) * (q-r_val)**f_val * (q-s_val)**g_val == -q**2 * Phi6**g_val)
+check("chi_A(mu) = -lam^(Phi12-1)",
+      (mu_val-k_val) * (mu_val-r_val)**f_val * (mu_val-s_val)**g_val == -lam_val**(Phi12-1))
+check("chi_A(Phi6) = -(mu+1)^25 * (k-1)^g",
+      (Phi6-k_val) * (Phi6-r_val)**f_val * (Phi6-s_val)**g_val == -(mu_val+1)**25 * (k_val-1)**g_val)
+check("chi_A(Theta) = -lam^88 * Phi6^g (88 = lam*mu*(k-1))",
+      (Theta-k_val) * (Theta-r_val)**f_val * (Theta-s_val)**g_val == -lam_val**88 * Phi6**g_val
+      and 88 == lam_val*mu_val*(k_val-1))
+check("chi_A(Phi3) = (k-1)^f * (mu^2+1)^g",
+      (Phi3-k_val) * (Phi3-r_val)**f_val * (Phi3-s_val)**g_val == (k_val-1)**f_val * (mu_val**2+1)**g_val)
+check("chi_A(-q) = -g * (mu+1)^f",
+      (-q-k_val) * (-q-r_val)**f_val * (-q-s_val)**g_val == -g_val * (mu_val+1)**f_val)
+check("chi_A(-lam) = -lam^(g+1) * Phi6 * mu^f",
+      (-lam_val-k_val) * (-lam_val-r_val)**f_val * (-lam_val-s_val)**g_val == -lam_val**(g_val+1) * Phi6 * mu_val**f_val)
+
+# --- Partition function deeper ---
+check("p(k-1) = 56 = dim(E7) = lam^3*Phi6",
+      _partitions(k_val-1) == lam_val**3 * Phi6)
+check("p(k) = Phi6*(k-1) = 77", _partitions(k_val) == Phi6*(k_val-1))
+check("p(g) = mu^2*(k-1) = 176", _partitions(g_val) == mu_val**2*(k_val-1))
+check("p(f) = q^2*(mu+1)^2*Phi6 = 1575",
+      _partitions(f_val) == q**2*(mu_val+1)**2*Phi6)
+check("p(v) = q!*Phi6^2*(2^Phi6-1) = 37338",
+      _partitions(v_val) == _math_fc.factorial(q)*Phi6**2*(2**Phi6-1))
+
+# --- Generalized pentagonal numbers embed graph parameters ---
+def _omega(m):
+    return m * (3*m - 1) // 2
+
+check("omega(+-lam) = mu+1, Phi6 (pentagonal theorem)",
+      _omega(lam_val) == mu_val+1 and _omega(-lam_val) == Phi6)
+check("omega(+-q) = k, g (pentagonal theorem)",
+      _omega(q) == k_val and _omega(-q) == g_val)
+check("omega(-(mu+1)) = v (pentagonal theorem)", _omega(-(mu_val+1)) == v_val)
+check("omega(+-mu) = lam*(k-1), lam*Phi3",
+      _omega(mu_val) == lam_val*(k_val-1) and _omega(-mu_val) == lam_val*Phi3)
+check("omega(+-(mu+1)) = (mu+1)*Phi6, v",
+      _omega(mu_val+1) == (mu_val+1)*Phi6 and _omega(-(mu_val+1)) == v_val)
+check("omega(+-Phi6) = Phi6*Theta, Phi6*(k-1) = p(k)",
+      _omega(Phi6) == Phi6*Theta and _omega(-Phi6) == Phi6*(k_val-1) and _omega(-Phi6) == _partitions(k_val))
+
+# --- Triangular numbers ---
+check("T_g = E/2 = 120 (graph energy from triangular number)",
+      g_val*(g_val+1)//2 == E_val//2)
+check("T_f = lam^2*q*(mu+1)^2 = 300",
+      f_val*(f_val+1)//2 == lam_val**2*q*(mu_val+1)**2)
+check("T_v = mu*(mu+1)*(v+1) = 820",
+      v_val*(v_val+1)//2 == mu_val*(mu_val+1)*(v_val+1))
+
+# --- Spectral moment m_4 ---
+check("m_4 = lam^7*q*(mu+1)*Phi3 = 24960",
+      k_val**4 + f_val*r_val**4 + g_val*s_val**4 == lam_val**7*q*(mu_val+1)*Phi3)
+check("m_4/v = mu^2*q*Phi3 = 624",
+      (k_val**4 + f_val*r_val**4 + g_val*s_val**4)//v_val == mu_val**2*q*Phi3)
+
+# --- Catalan-partition products ---
+check("C(q)*p(q) = g (Catalan * partition)", _catalan(q)*_partitions(q) == g_val)
+check("C(Phi6)*p(Phi6) = q*(k-1)*Phi3*g",
+      _catalan(Phi6)*_partitions(Phi6) == q*(k_val-1)*Phi3*g_val)
+
 print(f"  │  Physics: Standard Model + GR + Cosmology                │")
 print(f"  │  Checks: {PASS} passed, {FAIL} failed                         │")
 print(f"  │  Free parameters: 0                                      │")
