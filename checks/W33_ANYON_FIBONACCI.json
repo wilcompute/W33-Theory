@@ -1,0 +1,36 @@
+{
+  "tribonacci_IS_W33": {
+    "T4": "2 = \u03bb",
+    "T5": "4 = \u03bc",
+    "T6": "7 = \u03a6\u2086",
+    "T7": "13 = \u03a6\u2083",
+    "T8": "24 = f",
+    "note": "Five consecutive tribonacci numbers = five W(3,3) parameters!"
+  },
+  "fibonacci_double_dictionary": {
+    "F(q)=\u03bb": "F(3)=2",
+    "F(\u03bc)=q": "F(4)=3",
+    "F(\u03a6\u2086)=\u03a6\u2083": "F(7)=13",
+    "F(q\u00b2)=1/\u03b1\u2081": "F(9)=34",
+    "F(\u0398)=N_eff": "F(10)=55",
+    "F(k)=k\u00b2": "F(12)=144",
+    "note": "Both values AND indices are W(3,3) parameters"
+  },
+  "SU2_level3_CS": {
+    "CS_level": "k_CS = q = 3",
+    "anyon_types": "q+1 = \u03bc = 4",
+    "denominator": "q+2 = \u03bc+1 = 5",
+    "braiding_phase": "4\u03c0/(\u03bc+1) = 4\u03c0/5",
+    "quantum_dims": "[1, \u03c6, \u03c6, 1]",
+    "D_squared": "5/sin\u00b2(\u03c0/5)"
+  },
+  "pentagon_hexagon": {
+    "pentagon": "5 sides = \u03bc+1 (fusion identity)",
+    "hexagon": "6 sides = q! = 2q (braiding identity = master equation!)"
+  },
+  "tribonacci_anyons": {
+    "concept": "3-step recurrence \u2192 SU(2)\u2083 native quasiparticles",
+    "3_generations": "3 nontrivial anyon types (\u03c3,\u03c4,\u03c8) = 3 fermion families",
+    "Sp43": "2-qutrit Clifford group = universal TQC with magic state"
+  }
+}
