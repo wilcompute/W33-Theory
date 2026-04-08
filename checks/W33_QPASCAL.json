@@ -1,0 +1,15 @@
+{
+  "q_integers": {
+    "[1]_3": 1,
+    "[2]_3": "4=\u03bc",
+    "[3]_3": "13=\u03a6\u2083",
+    "[4]_3": "40=v",
+    "[5]_3": "121=(k-1)\u00b2"
+  },
+  "q_factorial": "[3]\u2083! = 1\u00d74\u00d713 = 52 = dim(F\u2084)",
+  "gaussian_row4": "[4,k]\u2083 = [1, 40, 130, 40, 1] = [vacuum, v, \u03a6\u2083\u0398, v_dual, space]",
+  "PMNS_from_gaussian": "sin\u00b2\u03b8\u2081\u2082 = [4,1]\u2083/[4,2]\u2083 = 40/130 = \u03bc/\u03a6\u2083 = 4/13",
+  "spacetime_from_qgroup": "[2]\u2083 = q+1 = \u03bc = 4: 4D spacetime = q-deformation of 2D spin",
+  "classical_limit": "q\u21921: Gaussian binomial \u2192 ordinary binomial; W(3,3) \u2192 Clifford",
+  "quantum_group": "SU_q(2) at q=3: spin-j has dim [2j+1]\u2083, so j=1/2 \u2192 dim 4 = spacetime"
+}
