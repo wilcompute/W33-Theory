@@ -1,0 +1,11 @@
+{
+  "pi_from_W33": "\u03c0 = q + (\u03bb/q) \u00d7 \u03a3(\u00b11/C(2n,q)) = 3 + (2/3)\u00d7(Pascal series)",
+  "pi_coefficient": "The Koide ratio Q = \u03bb/q = 2/3 IS the coefficient of the \u03c0 series!",
+  "e_from_Pascal": "e = lim(1+1/n)^n; at n=q: (\u03bc/q)^q = (4/3)\u00b3 = 64/27",
+  "phi_from_Pascal": "Diagonal sums \u2192 Fibonacci \u2192 \u03c6; F(q)=\u03bb, F(\u03bc)=q, F(\u03a6\u2086)=\u03a6\u2083",
+  "tau3_x_phi": "\u03c4\u2083 \u00d7 \u03c6 \u2248 2.976 \u2248 q = 3 (tribonacci \u00d7 golden \u2248 field order)",
+  "tau3_q": "\u03c4\u2083^q = \u03a6\u2083(\u03c4\u2083): q-th power of tribonacci = q-th cyclotomic at \u03c4\u2083",
+  "clifford_row6": "Pascal row q!: [1,6,15,20,15,6,1]; C(q!,2) = 15 = g = fermion multiplicity",
+  "clifford_meaning": "g = C(q!,2) = bivector dim of Cl(0,q!) \u2192 fermions ARE bivectors of the KO-dim Clifford algebra",
+  "tribonacci_window": "T(4..8) = [2,4,7,13,24] = [\u03bb,\u03bc,\u03a6\u2086,\u03a6\u2083,f]"
+}
