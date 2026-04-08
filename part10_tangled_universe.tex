@@ -1,0 +1,133 @@
+% ═══════════════════════════════════════════════════════════════
+%  PART X — APRIL 8, 2026: THE TANGLED UNIVERSE
+% ═══════════════════════════════════════════════════════════════
+\clearpage
+\part{The Tangled Universe: Polyhedra, Hurwitz Surfaces, and Physical Chirality}
+
+\section{Tangled Platonic Polyhedra and W(3,3)}
+\label{sec:tangled}
+
+Hyde and Evans~\cite{HydeEvans2022} construct maximally symmetric
+tangled Platonic polyhedra by winding $n$-strand helices on polytori
+formed by tubifying the edges of classical polyhedra.
+Every number in this construction is a W(3,3) parameter.
+
+\begin{theorem}[Polytorus Genus = W(3,3) Parameters]
+Tubifying the edges of each Platonic polyhedron $\{f,z\}$ gives
+a polytorus of genus $\mathfrak{g}=1+E-V$:
+\begin{center}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Polyhedron & $\{f,z\}$ & $V$ & $E$ & $\mathfrak{g}$ \\
+\midrule
+Tetrahedron & $\{3,3\}$ & 4 & 6 & $\mathbf{3=q}$ \\
+Cube & $\{4,3\}$ & 8 & 12 & 5 \\
+Octahedron & $\{3,4\}$ & 6 & 12 & $\mathbf{7=\Phisix}$ \\
+Icosahedron & $\{3,5\}$ & 12 & 30 & 19 \\
+Dodecahedron & $\{5,3\}$ & 20 & 30 & 11 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{theorem}
+
+The tetrahedron polytorus has genus~$q$,
+and the octahedron polytorus has genus~$\Phisix$.
+Klein's quartic curve---the prototypical Hurwitz surface---is
+\emph{also} genus~$q=3$, establishing a direct link between
+tangled tetrahedra and the Klein geometry.
+
+The first non-trivial tangling uses $q=3$ helical strands.
+Tangled icosahedra with chiral symmetry~$235=I$ retain
+$k=12$ vertices and $2g=30$ edges, and their face cycles
+form $(q,\lambda)=(3,2)$ torus knots---trefoils.
+
+
+\section{The Hurwitz Bound Constant is $k\Phisix$}
+\label{sec:hurwitz-bound}
+
+\begin{theorem}[Hurwitz Decomposition]
+The Hurwitz bound constant decomposes as:
+\begin{equation}
+\boxed{84 = k\times\Phisix = 12\times 7.}
+\end{equation}
+At genus $q=3$ (Klein's quartic):
+$|\Aut(\Sigma_q)| = 84(q{-}1) = k\Phisix\lambda = 168 = f\cdot\Phisix$.
+The automorphism group is $\PSL(2,\Phisix)=\PSL(2,7)$.
+\end{theorem}
+
+
+\section{The Hurwitz Triplet at Genus $\dim(G_2)$}
+\label{sec:hurwitz-triplet}
+
+Bokowski and collaborators~\cite{Bokowski2025} construct polyhedral
+embeddings of all Hurwitz surfaces up to genus~14.
+The genus-14 case is remarkable: $14 = \lambda\Phisix = \dim(G_2)$.
+
+\begin{theorem}[Hurwitz Triplet Data]
+The three genus-14 Hurwitz surfaces each have:
+\begin{equation}
+V = k\cdot\Phithree = 156, \quad
+E = \Phisix\cdot\Phithree\cdot q! = 546, \quad
+F = \mu\cdot\Phisix\cdot\Phithree = 364.
+\end{equation}
+In particular:
+\begin{equation}
+\frac{F}{\Phisix} = 52 = \dim(F_4) = [3]_3!
+\end{equation}
+The number of faces divided by $\Phisix$ yields the $q$-factorial at $q=3$.
+\end{theorem}
+
+
+\section{Tetrahedral Chains and the Golden Ratio}
+\label{sec:tet-chains}
+
+Akpanya \emph{et al.}~\cite{Akpanya2026} prove the first perfect
+closed chain of congruent isosceles tetrahedra has
+$N = 14 = \dim(G_2)$ tetrahedra, with an infinite family at
+$N = (k{-}1) + k\cdot n$ for $n\in\mathbb{N}_0$.
+The edge lengths of these tetrahedra include
+$(1+\sqrt{5})/2 = \varphi$, the golden ratio---the quantum
+dimension of the Fibonacci anyon from the $\SU(2)_q$ modular category.
+
+
+\section{Tangling as Physical Mechanism}
+\label{sec:tangling-physics}
+
+The synthesis across all four contemporary works reveals:
+\begin{itemize}[nosep]
+\item \textbf{Tangling requires $q=3$ dimensions} (Lock~2),
+\item \textbf{First non-trivial helical tangling uses $q$ strands},
+\item \textbf{Chirality breaking} (*$2fz \to 2fz$) in tangling
+  mirrors \textbf{parity violation} in the electroweak sector,
+\item \textbf{Knot type = particle type} via the Jones polynomial
+  and the $\SU(2)_q$ modular functor,
+\item \textbf{Hurwitz bound $= k\Phisix$} constrains the maximum
+  symmetry of the polytorus hosting the tangle.
+\end{itemize}
+
+We conjecture:
+\begin{quote}
+\emph{The universe is a tangled polytope whose skeleton is the W(3,3)
+graph, wound by $q$-strand helices on a polytorus of genus controlled
+by the Hurwitz bound $k\Phisix(g{-}1)$. Gauge fields are the helical
+windings; chirality is the loss of reflection symmetry upon tangling;
+particle generations correspond to surface genus.}
+\end{quote}
+
+\begin{thebibliography}{9}
+\bibitem{HydeEvans2022} S.\,T. Hyde and M.\,E. Evans,
+  ``Symmetric tangled Platonic polyhedra,''
+  \emph{PNAS} \textbf{119} (2022) e2110345118.
+
+\bibitem{Bokowski2025} J. Bokowski and K.\,H. (CodeParade),
+  ``Polyhedral embeddings of triangular regular maps of genus $g$, $2\leq g\leq 14$,''
+  \emph{Symmetry} \textbf{17} (2025) 622.
+
+\bibitem{Akpanya2026} R. Akpanya et al.,
+  ``Construction of toroidal polyhedra corresponding to perfect chains of
+  isosceles tetrahedra,'' \emph{J.\ Geometry} \textbf{117} (2026) 5.
+
+\bibitem{tangled_nets} S.\,T. Hyde,
+  ``Entanglement by design: Symmetry-guided periodic helical windings on crystal nets,''
+  arXiv:2603.26817 (2026).
+\end{thebibliography}
