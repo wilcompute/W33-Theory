@@ -1,0 +1,22 @@
+{
+  "EWSB_shift": "dim(G2) = 14 = lambda*Phi6",
+  "pre_EWSB": {
+    "1/alpha_1": 34,
+    "1/alpha_2_bare": 34,
+    "1/alpha_3": 51
+  },
+  "post_EWSB": {
+    "1/alpha_1": 34,
+    "1/alpha_2": 48,
+    "1/alpha_3": 51
+  },
+  "sin2_thetaW_pre_EWSB": "3/8 = 0.375 (standard GUT)",
+  "color_EW_ratio": "51/34 = 3/2 = q/lambda = inverse Koide",
+  "Higgs_quartic": "lambda_H = Phi6/(2*q^3) = 7/54",
+  "Higgs_mass": "246 * sqrt(14/54) = 125.3 GeV (obs: 125.25, err 0.04%)",
+  "three_breaking_params": {
+    "alpha_GUT_inv": "f = 24",
+    "Delta_EW": "dim(G2) = 14",
+    "Delta_color": "q^3 - Theta = 17"
+  }
+}
