@@ -1,0 +1,11 @@
+{
+  "alpha_inv_137": "137 = Phi3 + mu*(f+Phi6) = 13 + 124",
+  "total_SM_DOF": "124 = 27 (gauge) + 1 (Higgs) + 96 (fermions)",
+  "gauge_DOF_after_EWSB": "27 = q^3 = 16(gluons) + 6(W) + 3(Z) + 2(gamma) = s^2 + q! + q + lambda",
+  "fermion_DOF": "96 = 2*q*s^2 = 6*16",
+  "bosonic_DOF": "28 = dim(SO(8)) = 27+1 = q^3+1",
+  "56_of_E7": "56 = k+v+mu = 12+40+4 = gauge+Hilbert+spacetime",
+  "27_decomposition": "27 = 16+10+1 = s^2+Theta+1 = fermion_gen+Higgs_sector+singlet",
+  "moonshine_connection": "2099 = 244 + g*124 - (q+2)",
+  "physical_meaning": "alpha^-1 = (local incidence) + (total physical DOF) = 13 + 124 = 137"
+}
