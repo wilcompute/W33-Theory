@@ -1,0 +1,21 @@
+{
+  "level_a_count": 7,
+  "level_b_count": 6,
+  "level_c_count": 5,
+  "genuine_fraction": 0.3888888888888889,
+  "integers_reachable_1_300": 144,
+  "coverage": 0.48,
+  "unreachable_count": 156,
+  "dynamics": {
+    "a0": 40,
+    "a2": 480.0,
+    "a4": 102720.0,
+    "TrD4": 24960.0,
+    "hierarchy_predicted": 36.841361487904734,
+    "hierarchy_observed": 36.830252985207906,
+    "hierarchy_error": 0.000301613532258108,
+    "zeta_m1": 480.0,
+    "zeta_0": 39.0,
+    "zeta_1": 3.3375
+  }
+}
