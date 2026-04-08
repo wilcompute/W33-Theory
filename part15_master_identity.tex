@@ -1,0 +1,73 @@
+% ═══════════════════════════════════════════════════════════════
+%  PART XV — APRIL 8, 2026: THE MASTER IDENTITY AND GRAPH RH
+% ═══════════════════════════════════════════════════════════════
+\clearpage
+\part{The Master Identity: Resolvent, Ihara Zeta, and the Graph Riemann Hypothesis}
+
+\section{The Resolvent Identity}
+
+The resolvent $R(x) = \Tr(xI-A)^{-1}$ of the W(3,3) adjacency
+matrix is $R(x) = \frac{1}{x-k} + \frac{f}{x-r} + \frac{g}{x-s}$.
+
+\begin{theorem}[The Spectral-Cyclotomic Bridge]
+\label{thm:resolvent}
+At $x=-1$, the eigenvalue denominators become cyclotomic values:
+\begin{equation}
+-1-k = -\Phithree, \qquad -1-r = -q, \qquad -1+|s| = q.
+\end{equation}
+Therefore:
+\begin{equation}
+\boxed{R(-1) = -\frac{1}{\Phithree} + \frac{g-f}{q} = -\frac{1}{\Phithree} - q = -\frac{v}{\Phithree},}
+\end{equation}
+which is equivalent to $1 + q\Phithree = v$---the vertex count formula
+$v = (q^4{-}1)/(q{-}1)$. The shift $x\mapsto -(x{+}1)$ bridges
+spectral graph theory and cyclotomic number theory.
+\end{theorem}
+
+
+\section{The Ihara Zeta Function and Graph Riemann Hypothesis}
+
+The Ihara zeta function of W(3,3) has non-trivial factors:
+\begin{align}
+\text{$r$-factor:}& \quad 1-2u+11u^2, \quad \Delta_r = 4-44 = -v = -40,\\
+\text{$s$-factor:}& \quad 1+4u+11u^2, \quad \Delta_s = 16-44 = -(v{-}k) = -28.
+\end{align}
+
+\begin{theorem}[Graph Riemann Hypothesis for W(3,3)]
+\label{thm:graph-rh}
+All non-trivial Ihara zeta zeros of W(3,3) satisfy
+\begin{equation}
+\boxed{|u| = \frac{1}{\sqrt{k-1}} = \frac{1}{\sqrt{11}}.}
+\end{equation}
+Both eigenvalues satisfy $|r|, |s| \leq 2\sqrt{k-1}$,
+so W(3,3) is a \textbf{Ramanujan graph}.
+Its Ihara zeta function satisfies the graph-theoretic Riemann Hypothesis:
+all non-trivial zeros lie on the ``critical circle'' $|u|=(k{-}1)^{-1/2}$,
+analogous to the classical RH assertion $\Re(s)=\tfrac{1}{2}$.
+\end{theorem}
+
+\begin{corollary}[Ihara Discriminants]
+The discriminant of the $r$-factor is $\Delta_r = -v$;
+the discriminant of the $s$-factor is $\Delta_s = -(v{-}k)$.
+The vertex count and the complement degree appear directly
+as Ihara discriminants.
+\end{corollary}
+
+\section{Trace Formulas}
+
+The moments $\Tr(A^n) = k^n + f\cdot r^n + g\cdot s^n$ encode:
+\begin{center}
+\begin{tabular}{@{}clll@{}}
+\toprule
+$n$ & $\Tr(A^n)$ & Identity & Meaning \\
+\midrule
+0 & 40 & $v$ & vertex count \\
+1 & 0 & $k+fr+gs$ & traceless (critical for physics) \\
+2 & 480 & $vk = 2E = a_0$ & spectral action coefficient \\
+3 & 960 & $6\mu v$ & number of triangles $= \mu v = 160$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+The tracelessness $\Tr(A)=0$ is equivalent to $g-f = -q^2$, which
+forces the multiplicities once the eigenvalues are known.
+\end{corollary}
