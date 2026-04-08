@@ -1,0 +1,193 @@
+{
+  "title": "W(3,3) Theory of Everything: brutal truth check",
+  "date": "2026-04-08",
+  "method": "Direct computational and algebraic verification of the four load-bearing structural claims of the W(3,3) cascade. No spin.",
+  "results": [
+    {
+      "claim": "A: equipartition f(k-r)=g(k-s)=E is unique to W(3,3)",
+      "verdict": "FALSE",
+      "explanation": "Equipartition holds for ALL symplectic GQ(q,q) by direct algebra (see closed forms below). It is NOT unique to q=3, so it cannot be the reason q=3 is special, and cannot uniquely 'solve the hierarchy problem' for the Standard Model.",
+      "algebraic_proof_general": "f(k-r) = q(q+1)^2/2 * (q^2+1) = q(q+1)^2(q^2+1)/2 = E. g(k-s) = q(q^2+1)/2 * (q+1)^2 = q(q+1)^2(q^2+1)/2 = E. Both equal E independent of q.",
+      "n_q_tested": 8,
+      "n_holding": 8,
+      "rows": [
+        {
+          "q": 2,
+          "f": "9",
+          "g": "5",
+          "k": 6,
+          "r": 1,
+          "s": -3,
+          "bosonic_f_kmr": "45",
+          "fermionic_g_kms": "45",
+          "E": "45",
+          "equipartition_holds": true
+        },
+        {
+          "q": 3,
+          "f": "24",
+          "g": "15",
+          "k": 12,
+          "r": 2,
+          "s": -4,
+          "bosonic_f_kmr": "240",
+          "fermionic_g_kms": "240",
+          "E": "240",
+          "equipartition_holds": true
+        },
+        {
+          "q": 4,
+          "f": "50",
+          "g": "34",
+          "k": 20,
+          "r": 3,
+          "s": -5,
+          "bosonic_f_kmr": "850",
+          "fermionic_g_kms": "850",
+          "E": "850",
+          "equipartition_holds": true
+        },
+        {
+          "q": 5,
+          "f": "90",
+          "g": "65",
+          "k": 30,
+          "r": 4,
+          "s": -6,
+          "bosonic_f_kmr": "2340",
+          "fermionic_g_kms": "2340",
+          "E": "2340",
+          "equipartition_holds": true
+        },
+        {
+          "q": 7,
+          "f": "224",
+          "g": "175",
+          "k": 56,
+          "r": 6,
+          "s": -8,
+          "bosonic_f_kmr": "11200",
+          "fermionic_g_kms": "11200",
+          "E": "11200",
+          "equipartition_holds": true
+        },
+        {
+          "q": 8,
+          "f": "324",
+          "g": "260",
+          "k": 72,
+          "r": 7,
+          "s": -9,
+          "bosonic_f_kmr": "21060",
+          "fermionic_g_kms": "21060",
+          "E": "21060",
+          "equipartition_holds": true
+        },
+        {
+          "q": 9,
+          "f": "450",
+          "g": "369",
+          "k": 90,
+          "r": 8,
+          "s": -10,
+          "bosonic_f_kmr": "36900",
+          "fermionic_g_kms": "36900",
+          "E": "36900",
+          "equipartition_holds": true
+        },
+        {
+          "q": 11,
+          "f": "792",
+          "g": "671",
+          "k": 132,
+          "r": 10,
+          "s": -12,
+          "bosonic_f_kmr": "96624",
+          "fermionic_g_kms": "96624",
+          "E": "96624",
+          "equipartition_holds": true
+        }
+      ]
+    },
+    {
+      "claim": "B: 40 = 1 + 24 + 15 spectral decomposition",
+      "verdict": "TRUE",
+      "explanation": "The W(3,3) graph IS strongly regular with the claimed parameters and the adjacency spectrum is exactly {12^1, 2^24, (-4)^15}. This is a textbook fact and is verified directly by construction.",
+      "srg_check": {
+        "n": 40,
+        "k": 12,
+        "lam": [
+          2
+        ],
+        "mu": [
+          4
+        ],
+        "is_srg": true,
+        "srg_params": [
+          40,
+          12,
+          2,
+          4
+        ]
+      },
+      "spectrum": [
+        [
+          12.0,
+          1
+        ],
+        [
+          2.0,
+          24
+        ],
+        [
+          -4.0,
+          15
+        ]
+      ],
+      "caveat": "The decomposition is REAL (rank-3 implies multiplicity-free as a PSp(4,3)-module). What is NOT proven by this fact alone is that the 15-dim irrep is the adjoint of su(4) or that the 24-dim irrep carries D_4 triality. Those are SEPARATE claims that go beyond rank-3 SRG theory and are NOT verified by the cascade scripts."
+    },
+    {
+      "claim": "C: alpha^-1 = k^2 - Phi_6 = 137 has structural meaning",
+      "verdict": "NUMEROLOGY",
+      "integer_value": 137,
+      "actual_value": 137.035999084,
+      "error_ppm": 262.6980081192388,
+      "explanation": "Integer 137 misses the true alpha^-1 = 137.036 by 263 ppm. More importantly, the form k^2 - Phi_6 has no derivation: it is a post-hoc identification of two W(3,3) integers whose subtraction happens to equal 137. There are MANY such combinations of small integers giving 137; choosing this one is curve-fitting, not physics. A real derivation would need to predict 137.036 (not 137) from the spectral action -- and no such derivation exists.",
+      "other_easy_137_decompositions": [
+        [
+          12,
+          -7,
+          137
+        ]
+      ]
+    },
+    {
+      "claim": "D: ln(M_Pl/v_EW) = s^2 * ln(Phi_4) is a derivation",
+      "verdict": "POST-HOC FIT",
+      "theory_36_84": 36.841361487904734,
+      "observed_36_83": 36.830252985207906,
+      "error_pct": 0.0301613532258108,
+      "explanation": "The numbers s^2=16 and Phi_4=10 are W(3,3) integers, and 16*ln(10) happens to land within 0.03% of the observed log-ratio. But the Coleman-Weinberg 'derivation' is not actually a derivation: it asserts that the radiative correction to mu^2_H equals exactly this combination, without computing the W(3,3) Yukawa and gauge couplings that would enter the CW formula. At q=2 (GQ(2,2)) the same construction would give 9*ln(5) ~= 14.48, so the framework predicts hierarchies of 5^9 ~ 2 million for q=2 universes. There is no falsifiable selection principle picking q=3.",
+      "q2_alternative": 14.484941211906902
+    }
+  ],
+  "summary": {
+    "A_equipartition_uniqueness": "FALSE",
+    "B_rank3_decomposition": "TRUE",
+    "C_alpha_137_structural": "NUMEROLOGY",
+    "D_hierarchy_derivation": "POST-HOC FIT"
+  },
+  "what_is_actually_true": [
+    "W(3,3) is the symplectic GQ(3,3) collinearity graph SRG(40,12,2,4).",
+    "Adjacency spectrum is {12^1, 2^24, (-4)^15} (rank-3 fact).",
+    "The 9 master integers and Phi_n(3) cyclotomic values match many exceptional Lie algebra dimensions exactly: 14, 52, 78, 133, 248. These are real polynomial identities; some are textbook formulas.",
+    "Several SM mixing-angle combinations (sin^2 theta_12 = 4/13 etc.) match observation to ~1% -- this is also real, but is a numerical coincidence with no derivation principle."
+  ],
+  "what_is_NOT_true_or_unproven": [
+    "EQUIPARTITION IS NOT UNIQUE TO W(3,3): f(k-r)=g(k-s)=E holds for ALL symplectic GQ(q,q). The cascade's central uniqueness pillar is FALSE. (See claim A.)",
+    "alpha^-1 = 137 misses CODATA by 26 ppm; the form k^2 - Phi_6 is post-hoc curve-fitting, not derivation.",
+    "The Coleman-Weinberg hierarchy 'derivation' does not actually compute the W(3,3) couplings; it asserts the result.",
+    "The 15-dim eigenspace being adj(SU(4)) and the 24-dim being D_4-triality are claims beyond rank-3 SRG theory and are NOT verified by construction in the cascade scripts."
+  ],
+  "honest_status": "W(3,3) is a beautiful finite geometry whose graph invariants DO encode several genuine polynomial identities for exceptional Lie algebra dimensions, and DO match a handful of SM observables to good accuracy. It is NOT a derivation of the Standard Model: key 'uniqueness' arguments fail (equipartition holds for all q), and the hierarchy / fine-structure 'proofs' are post-hoc fits rather than computations. The honest scientific status is 'striking pattern-match worth investigating', not 'solved theory of everything'."
+}
