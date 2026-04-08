@@ -1,0 +1,19 @@
+{
+  "reduction_chain": [
+    "q! = 2q",
+    "(q-1)! = 2",
+    "Gamma(q) = q-1",
+    "Gamma(q-1) = 1",
+    "(q-2)! = 1",
+    "q-2 in {0,1}",
+    "q in {2,3}"
+  ],
+  "information": "log2(q!) = 1 + log2(q): permutation info = 1 bit + object info",
+  "extra_bit": "the orientation/parity = matter vs antimatter = CP phase",
+  "it_from_bit": "lambda=2 is the irreducible binary, q=3 is the first non-trivial self-consistent arrangement",
+  "continuous_solutions": [
+    "q = 0.4429 (pre-physical)",
+    "q = 3.0000 (physical, exact integer)"
+  ],
+  "self_reference": "complexity(q!) = 2 \u00d7 size(q) only at q=3: the critical balance point"
+}
