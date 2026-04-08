@@ -1,0 +1,88 @@
+% ═══════════════════════════════════════════════════════════════
+%  PART XIII — APRIL 8, 2026: THE ARITHMETIC SYNTHESIS
+% ═══════════════════════════════════════════════════════════════
+\clearpage
+\part{The Arithmetic Synthesis: Everything Is W(3,3)}
+
+\section{The Bernoulli Bridge}
+
+The von~Staudt--Clausen theorem selects primes $p$ satisfying $(p{-}1)\mid k$
+at weight $k=12$. These are $\{2, 3, 5, 7, 13\}$---exactly the
+cyclotomic primes of $\GQ(q,q)$ at $q=3$:
+\begin{equation}
+\boxed{\den(B_k) = \Phi_1(q)\cdot q\cdot 5\cdot\Phisix\cdot\Phithree = 2730.}
+\end{equation}
+
+\begin{theorem}[The Leech Lattice Theta Constant]
+\label{thm:leech-theta}
+The Leech lattice theta function
+$\Theta_{\Lambda_{24}} = E_{12} - \frac{65520}{691}\Delta$
+has its constant expressed entirely in W(3,3) terms:
+\begin{equation}
+\boxed{65520 = f\cdot\den(B_k) = 24\times 2730.}
+\end{equation}
+\end{theorem}
+
+The Ramanujan discriminant $\Delta = \eta^f$ has exponent $f=24$,
+and the denominator $691$ is the irregular-prime numerator of~$B_k$.
+The entire formula for the Leech lattice theta function is
+\emph{written in W(3,3) parameters}.
+
+
+\section{The Fine-Structure Constant at $0.2\sigma$}
+
+From prior work in this program (see \texttt{docs/DEEP\_ANALYSIS\_MARCH2026.md}):
+\begin{equation}
+\alpha^{-1} = (k{-}1)^2 + \mu^2 + \frac{v}{(k{-}1)[(k{-}\lambda)^2{+}1] + \frac{q}{\lambda(k{-}1)}}
+= \frac{669969}{4889} = 137.035999182\ldots
+\end{equation}
+The tree-level value $(k{-}1)^2+\mu^2 = |11{+}4i|^2 = 137$ is the
+unique Gaussian integer norm (Fermat two-square theorem), and the
+one-loop correction $v/M_{\mathrm{eff}}$ uses the W(3,3) generation
+feedback. Agreement with CODATA~2022: $\mathbf{0.2\sigma}$.
+
+
+\section{The Mass Hierarchy at Exact Match}
+
+The charm-to-top mass ratio is (see \texttt{docs/LINF\_TOWER\_MASS\_DERIVATION.md}):
+\begin{equation}
+\frac{m_c}{m_t} = \frac{1}{k^2-2\mu} = \frac{1}{136},
+\end{equation}
+matching $m_c/m_t = 1.27/172.69 = 0.00735$ from PDG to $0.02\%$.
+The matrix $G^{136}$ of the $L_\infty$ tower on the W(3,3) chain
+complex gives all three quark generation masses.
+
+
+\section{The Complete Picture}
+
+\renewcommand{\arraystretch}{1.15}
+\begin{center}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Domain} & \textbf{Object} & \textbf{W(3,3) Formula} & \textbf{Value} \\
+\midrule
+Number theory & $(q{-}2)!$ & $1$ & $q=3$ \\
+Coding theory & Ternary Golay & $[k, q!, q!]_q$ & $[12,6,6]_3$ \\
+Coding theory & Binary Golay & $[f, k, 2^q]_2$ & $[24,12,8]_2$ \\
+Lattices & Leech kissing & $E q^2\Phisix\Phithree$ & $196560$ \\
+Lattices & $\Theta_{\Lambda_{24}}$ const & $f\cdot\den(B_k)/691$ & $65520/691$ \\
+Moonshine & $j$ constant & $(2^{q+\lambda}{-}1)f$ & $744$ \\
+Moonshine & $c_1(j)$ & $q^2(E\Phisix\Phithree+\mu q^2)$ & $196884$ \\
+Modular forms & $\tau(q)$ & $\binom{\Theta}{q+\lambda}$ & $252$ \\
+Modular forms & $\Delta$ exponent & $f$ & $24$ \\
+Homotopy & $\pi_q^s$ & $\mathbb{Z}/f$ & $\mathbb{Z}/24$ \\
+Periodicity & Bott period & $2^q$ & $8$ \\
+Algebra & Last NDA dim & $2^q$ & $8$ \\
+Topology & Knot dim & $q$ & $3$ \\
+Hurwitz & Bound constant & $k\Phisix$ & $84$ \\
+Physics & $\alpha^{-1}$ & $|z|^2+v/M_{\mathrm{eff}}$ & $137.036$ \\
+Physics & $m_c/m_t$ & $1/(k^2{-}2\mu)$ & $1/136$ \\
+Monster & $|M|$ at $3$ & $3^{2\Theta}$ & $3^{20}$ \\
+Monster & $|M|$ at $2$ & $2^{v+q!}$ & $2^{46}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\bigskip
+\noindent
+\emph{One prime.\ One geometry.\ Everything is arithmetic.}
