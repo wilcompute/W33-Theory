@@ -1,0 +1,18 @@
+{
+  "master_equation": "q! = 2q (unique solution q=3)",
+  "equivalent_forms": {
+    "factorial_fixed_point": "lambda! = lambda (2! = 2, unique nontrivial fixed point)",
+    "koide_as_master": "Q = (q-1)!/q = lambda/q = 2/3",
+    "inverse_koide": "q/lambda = 3/2 = coupling ratio alpha_1/alpha_3 at M_Pl",
+    "group_balance": "|S_q| = |Z_lambda x Z_q| (6 = 2 x 3, unique for q=3)"
+  },
+  "physical_meaning": {
+    "Z2": "particle/antiparticle (C symmetry) from lambda = 2",
+    "Z3": "generation label from q = 3",
+    "S3": "full generation permutation (non-abelian, generates mixing)",
+    "factorization": "S3 and Z2xZ3 have same order \u2192 generation symmetry factorizes into C x generation-label"
+  },
+  "uniqueness": "Only q=3 has |S_q| = (q-1)! x q. For q=4: 24 != 12. For q=5: 120 != 20.",
+  "holographic": "1 x 2 x 3 = 2 x 3: the vacuum factor 1 is trivial, boundary determines bulk",
+  "connection_chain": "q!=2q \u2192 lambda!=lambda \u2192 Q=2/3 \u2192 Koide masses \u2192 coupling ratio \u2192 hierarchy"
+}
