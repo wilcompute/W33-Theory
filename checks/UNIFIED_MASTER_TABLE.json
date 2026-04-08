@@ -307,11 +307,11 @@
       "name": "ln(M_Pl/v_EW) Planck-EW hierarchy",
       "formula": "s\u00b2\u00b7ln(\u03a6\u2084(q)) = 16\u00b7ln(10) \u2248 36.84",
       "predicted": 36.841361487904734,
-      "observed": 38.44174218041256,
-      "rel_err": 0.041631325786355165,
-      "status": "<5%",
+      "observed": 36.830252985207906,
+      "rel_err": 0.000301613532258108,
+      "status": "<0.1%",
       "unit": "",
-      "notes": "s\u00b2=16=(-4)\u00b2; \u03a6\u2084(3)=10; 16\u00b7ln10=36.84 vs ln(1.22e19/246)=39.5; <10%"
+      "notes": "Observed reference uses the reduced Planck mass 2.435e18 GeV, giving ln(M_Pl_red/v_EW)=36.83"
     },
     {
       "num": 25,
@@ -629,12 +629,12 @@
   "summary": {
     "total": 50,
     "by_status": {
-      "<0.1%": 6,
+      "<0.1%": 7,
       "<10%": 1,
       "EXACT": 24,
       "QUALITATIVE": 9,
       "<1%": 5,
-      "<5%": 5
+      "<5%": 4
     }
   }
 }

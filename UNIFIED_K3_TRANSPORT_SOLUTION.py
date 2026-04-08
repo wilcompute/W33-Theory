@@ -17,6 +17,14 @@ import os
 import itertools
 from collections import defaultdict
 
+from src.w33_geometry import (
+    adjacency_matrix as canonical_adjacency_matrix,
+    checks_dir,
+    checks_path,
+    projective_points_f3 as canonical_projective_points_f3,
+    symplectic_form as canonical_symplectic_form,
+)
+
 # ─────────────────────────────────────────────────────────────────────────────
 # SECTION 0: UTILITIES
 # ─────────────────────────────────────────────────────────────────────────────
@@ -164,7 +172,9 @@ def mat_mul_f3(A, B):
 
 def symplectic_form(u, v, q=3):
     """Alternating symplectic form on F_q^4: ⟨u,v⟩ = u₀v₂ + u₁v₃ - u₂v₀ - u₃v₁ mod q"""
-    return int(u[0]*v[2] + u[1]*v[3] - u[2]*v[0] - u[3]*v[1]) % q
+    if q != 3:
+        raise ValueError("This transport script is specialized to F₃.")
+    return canonical_symplectic_form(u, v)
 
 def gcd(a, b):
     while b:
@@ -197,21 +207,7 @@ q = 3
 
 def projective_points_f3():
     """Generate the 40 points of PG(3, F₃) as normalized representatives."""
-    points = []
-    seen = set()
-    for coords in itertools.product(range(3), repeat=4):
-        if all(c == 0 for c in coords):
-            continue
-        v = list(coords)
-        for c in v:
-            if c != 0:
-                inv = modular_inverse(c, 3)
-                norm = tuple(x * inv % 3 for x in v)
-                break
-        if norm not in seen:
-            seen.add(norm)
-            points.append(norm)
-    return points
+    return list(canonical_projective_points_f3())
 
 points = projective_points_f3()
 assert len(points) == 40, f"Expected 40 points, got {len(points)}"
@@ -229,14 +225,8 @@ print(f"  W(3,3): all 40 points of PG(3,F₃) are isotropic (alternating form)")
 print(f"  Adjacency: [u]⊥[v] iff ⟨u,v⟩ = u₀v₂ + u₁v₃ - u₂v₀ - u₃v₁ ≡ 0 mod 3")
 
 n = 40
-adj = np.zeros((n, n), dtype=np.int64)
-edges = []
-for i in range(n):
-    for j in range(i + 1, n):
-        if symplectic_form(points[i], points[j]) == 0:
-            adj[i, j] = 1
-            adj[j, i] = 1
-            edges.append((i, j))
+adj = canonical_adjacency_matrix().astype(np.int64)
+edges = [(i, j) for i in range(n) for j in range(i + 1, n) if adj[i, j]]
 
 degrees = adj.sum(axis=1)
 num_edges = len(edges)
@@ -1143,23 +1133,24 @@ results = {
     }
 }
 
-os.makedirs("/home/user/workspace/W33-Theory/checks", exist_ok=True)
-with open("/home/user/workspace/W33-Theory/checks/transport_results.json", "w") as f:
+output_dir = checks_dir()
+transport_path = checks_path("transport_results.json")
+with open(transport_path, "w") as f:
     json.dump(results, f, indent=2)
 
-print(f"\n  Saved: /home/user/workspace/W33-Theory/checks/transport_results.json")
+print(f"\n  Saved: {transport_path}")
 
 # Save numpy arrays
-np.save("/home/user/workspace/W33-Theory/checks/H1_basis.npy", H1_basis)
-np.save("/home/user/workspace/W33-Theory/checks/adj_matrix.npy", adj)
-np.save("/home/user/workspace/W33-Theory/checks/G_adj_Z.npy", G_adj_Z)
-np.save("/home/user/workspace/W33-Theory/checks/G_adj_mod3.npy", G_mod3)
-np.save("/home/user/workspace/W33-Theory/checks/N_fiber.npy", N_fiber)
-np.save("/home/user/workspace/W33-Theory/checks/d1.npy", d1)
-np.save("/home/user/workspace/W33-Theory/checks/d2.npy", d2)
-np.save("/home/user/workspace/W33-Theory/checks/Omega_tri_offdiag.npy", Omega_offdiag)
+np.save(checks_path("H1_basis.npy"), H1_basis)
+np.save(checks_path("adj_matrix.npy"), adj)
+np.save(checks_path("G_adj_Z.npy"), G_adj_Z)
+np.save(checks_path("G_adj_mod3.npy"), G_mod3)
+np.save(checks_path("N_fiber.npy"), N_fiber)
+np.save(checks_path("d1.npy"), d1)
+np.save(checks_path("d2.npy"), d2)
+np.save(checks_path("Omega_tri_offdiag.npy"), Omega_offdiag)
 
-print(f"  Saved numpy arrays to checks/")
+print(f"  Saved numpy arrays to {output_dir}")
 
 
 # ─────────────────────────────────────────────────────────────────────────────

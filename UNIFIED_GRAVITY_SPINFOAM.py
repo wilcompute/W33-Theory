@@ -23,72 +23,20 @@ from itertools import product, combinations
 from collections import defaultdict, Counter
 import json, os, math
 
+from src.w33_geometry import (
+    build_w33 as canonical_build_w33,
+    checks_path,
+    verify_srg as canonical_verify_srg,
+)
+
 # ═══════════════════════════════════════════════════════════════════════════════
 # §1  BUILD W(3,3) FROM THE SYMPLECTIC POLAR SPACE W(3,F₃)
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def build_w33():
-    """
-    Construct the symplectic polar space W(3,F₃).
-    Points are 1-d subspaces of F₃⁴ that are isotropic w.r.t. the symplectic
-    form  ω(x,y) = x₀y₂ - x₂y₀ + x₁y₃ - x₃y₁  (mod 3).
-    Two points are adjacent iff ω(x,y) = 0 (non-orthogonal in usual sense —
-    they are collinear in the polar space).
-
-    Returns
-    -------
-    adj    : (40,40) adjacency matrix
-    pts    : list of 40 representative vectors (as tuples)
-    """
-    F3 = [0, 1, 2]
-    raw = [v for v in product(F3, repeat=4) if any(x != 0 for x in v)]
-    points = []
-    seen = set()
-    for v in raw:
-        v = list(v)
-        # Normalise: first nonzero coordinate = 1
-        for i in range(4):
-            if v[i] != 0:
-                inv = pow(int(v[i]), -1, 3)   # mod-3 inverse
-                v = tuple((x * inv) % 3 for x in v)
-                break
-        if v not in seen:
-            seen.add(v)
-            points.append(v)
-    assert len(points) == 40, f"Expected 40 points, got {len(points)}"
-
-    n = 40
-    adj = np.zeros((n, n), dtype=np.int8)
-    for i in range(n):
-        for j in range(i + 1, n):
-            x, y = points[i], points[j]
-            omega = (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
-            if omega == 0:
-                adj[i, j] = adj[j, i] = 1
-
-    # Verify SRG(40,12,2,4) parameters
-    degrees = adj.sum(axis=1)
-    assert np.all(degrees == 12), "Not 12-regular"
-
-    # Check λ=2 (adjacent vertices have 2 common neighbours)
-    lam_vals = []
-    for i in range(n):
-        for j in range(i + 1, n):
-            if adj[i, j]:
-                common = int(adj[i].dot(adj[j]))
-                lam_vals.append(common)
-    assert all(v == 2 for v in lam_vals), f"λ ≠ 2 on some edge"
-
-    # Check μ=4 (non-adjacent vertices have 4 common neighbours)
-    mu_vals = []
-    for i in range(n):
-        for j in range(i + 1, n):
-            if not adj[i, j]:
-                common = int(adj[i].dot(adj[j]))
-                mu_vals.append(common)
-    assert all(v == 4 for v in mu_vals), f"μ ≠ 4 on some non-edge"
-
-    return adj, points, n
+    points, adj = canonical_build_w33()
+    canonical_verify_srg(adj)
+    return adj.astype(np.int8), list(points), len(points)
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -946,9 +894,7 @@ def main():
     }
 
     # Make Lam_data serialisable (remove non-serialisable floats if any)
-    out_dir = "/home/user/workspace/W33-Theory/checks"
-    os.makedirs(out_dir, exist_ok=True)
-    out_path = os.path.join(out_dir, "UNIFIED_GRAVITY_SPINFOAM.json")
+    out_path = checks_path("UNIFIED_GRAVITY_SPINFOAM.json")
     with open(out_path, "w") as fh:
         json.dump(results, fh, indent=2, default=str)
     print(f"\nResults saved to {out_path}")
