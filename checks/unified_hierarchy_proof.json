@@ -1,0 +1,126 @@
+{
+  "parameters": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "lam": 2,
+    "mu": 4,
+    "r": 2,
+    "s": -4,
+    "f": 24,
+    "g": 15,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "E": 240,
+    "a0": 480
+  },
+  "adjacency": {
+    "n": 40,
+    "edges": 240,
+    "lam_actual": 2,
+    "mu_actual": 4,
+    "spectrum": {
+      "-4": 15,
+      "2": 24,
+      "12": 1
+    }
+  },
+  "dirac": {
+    "is_selfadjoint": true,
+    "grading_plus": 25,
+    "grading_minus": 15,
+    "KO_dim": 6
+  },
+  "spectral_action_coefficients": {
+    "a0": 480,
+    "a2": 480,
+    "trD4": 24960,
+    "a4": 102720.0
+  },
+  "higgs_potential": {
+    "b4": 214.0,
+    "a4_over_2a2": 107.0,
+    "a4_over_a2_sq": 0.44583333333333336,
+    "a4_over_2a2_sq": 0.22291666666666668,
+    "target_14_55": 0.2545454545454545,
+    "pct_diff_14_55": 12.425595238095225
+  },
+  "spectral_zeta": {
+    "lambda1": 10,
+    "f_mult": 24,
+    "lambda2": 16,
+    "g_mult": 15,
+    "zeta_L_0": 39.0,
+    "zeta_L_1": 3.3375000000000004,
+    "zeta_L_2": 0.29859375,
+    "neg_zeta_prime_0": 96.85087306545381,
+    "ln_det_L": 96.85087306545381
+  },
+  "hierarchy": {
+    "mu_sq": 16,
+    "Phi4": 10,
+    "hierarchy_NCG": 36.841361487904734,
+    "hierarchy_observed": 36.830252985207906,
+    "pct_error": 0.0301613532258108,
+    "ln10": 2.302585092994046
+  },
+  "physical_scales": {
+    "v_EW_GeV": 246.22,
+    "M_Pl_r_GeV": 2.435e+18,
+    "implied_Lambda_GeV": 2.462200000000008e+18,
+    "Lambda_over_MPl_r": 1.0111704312115024
+  },
+  "gauge_unification": {
+    "sin2_tW": 0.23076923076923078,
+    "sin2_tW_obs": 0.23122,
+    "pct_diff_sin2": 0.19495252606574986,
+    "g2_GUT": 1.5707963267948966,
+    "alpha_GUT": 0.125,
+    "alpha1_inv_MZ": -30.69899962083379,
+    "alpha2_inv_MZ": 2.1365152089645774,
+    "alpha3_inv_MZ": 25.59045437310627
+  },
+  "heat_kernel": {
+    "expansion_convention": "Tr[exp(-D^2/L^2)] ~ v - TrD^2/L^2 + TrD^4/(2L^4) + ...",
+    "lambda_checks": [
+      {
+        "Lambda": 10.0,
+        "heat_trace": 36.07803113283105,
+        "expansion": 36.448
+      },
+      {
+        "Lambda": 20.0,
+        "heat_trace": 38.87071392333591,
+        "expansion": 38.878
+      },
+      {
+        "Lambda": 50.0,
+        "heat_trace": 39.80996473222763,
+        "expansion": 39.8099968
+      },
+      {
+        "Lambda": 100.0,
+        "heat_trace": 39.95212429363056,
+        "expansion": 39.9521248
+      },
+      {
+        "Lambda": 200.0,
+        "heat_trace": 39.98800779206701,
+        "expansion": 39.9880078
+      }
+    ],
+    "rel_diff_at_L100": 1.2674405873953079e-08
+  },
+  "E8_connection": {
+    "edges": 240,
+    "E8_roots": 240,
+    "a0": 480,
+    "vk": 480,
+    "coxeter_E8": 30
+  },
+  "assertion_summary": {
+    "passed": 50,
+    "failed": 0
+  }
+}

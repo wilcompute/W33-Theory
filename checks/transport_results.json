@@ -1,0 +1,173 @@
+{
+  "theory": "W(3,3) = SRG(40,12,2,4)",
+  "description": "K3 mixed-plane transport-twisted lift \u2014 last wall of W(3,3) Theory",
+  "phases": "CCCLXXVI\u2013CDXLIV (376\u2013444)",
+  "parameters": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "lambda": 2,
+    "mu": 4,
+    "r_eig": 2.0,
+    "s_eig": -4.0,
+    "mult_r": 24,
+    "mult_s": 15
+  },
+  "graph": {
+    "vertices": 40,
+    "edges": 240,
+    "triangles": 160,
+    "four_cliques": 40,
+    "srg_verified": true,
+    "k_verified": true,
+    "lambda_verified": true,
+    "mu_verified": true
+  },
+  "homology": {
+    "b0": 1,
+    "b1": 81,
+    "b2": 40,
+    "rank_d1": 39,
+    "rank_d2": 120,
+    "b1_verified": true,
+    "H1_basis_shape": [
+      81,
+      240
+    ],
+    "chain_complex_ok": true,
+    "H1_cocycle_condition": true
+  },
+  "transport": {
+    "shell": "81 -> 162 -> 81",
+    "host_dimension": 162,
+    "fiber_shift_N_rank": 81,
+    "N_square_zero": true,
+    "fiber_shift_gauge_options": 2,
+    "current_B_block_zero": true,
+    "current_state": "FAILURE (zero glue)",
+    "twisted_B_block_nonzero": true,
+    "section_F3_exists": true,
+    "Ext1_F3_vanishes": true,
+    "wall_over_F3": "ABSENT (trivial split)"
+  },
+  "fiber_shift": {
+    "type": "I_81 x [[0,1],[0,0]]",
+    "rank": 81,
+    "square_zero": true,
+    "normal_form": "J_2^81 (81 Jordan 2-blocks)",
+    "gauge_equivalence": "2 nonzero options over F_3 (coefficients 1 and 2)"
+  },
+  "curvature_block": {
+    "target_rank": 36,
+    "target_cols": 45,
+    "target_active": 36,
+    "target_inert": 9,
+    "fan_adjacent": 24,
+    "remote_K33_A": 6,
+    "remote_K33_B": 6,
+    "r_eigenspace_mult": 24,
+    "G_offdiag_rank": 81,
+    "G_offdiag_active_cols": 81,
+    "Omega_tri_rank": 51,
+    "Omega_tri_active_cols": 51,
+    "best_block_rank_found": 45,
+    "K33_found_in_sample": 0
+  },
+  "transport_scale": {
+    "A": 217,
+    "B": 12,
+    "scale": 18.083333333333332,
+    "gcd_AB": 1,
+    "B_mod_3": 0,
+    "A_mod_3": 1,
+    "A_mod_12": 1,
+    "B_zero_mod3": true,
+    "matter_scale": 1464.75,
+    "5859_eq_27_x_217": true,
+    "G_adj_gcd_entries": 1,
+    "G_adj_div12": false,
+    "integral_transport_exists": false
+  },
+  "primitive_generator": {
+    "components": [
+      780,
+      7944,
+      62600,
+      53979
+    ],
+    "gcd_all": 1,
+    "factorizations": {
+      "780": {
+        "2": 2,
+        "3": 1,
+        "5": 1,
+        "13": 1
+      },
+      "7944": {
+        "2": 3,
+        "3": 1,
+        "331": 1
+      },
+      "62600": {
+        "2": 3,
+        "5": 2,
+        "313": 1
+      },
+      "53979": {
+        "3": 1,
+        "19": 1,
+        "947": 1
+      }
+    },
+    "mod3": [
+      0,
+      0,
+      2,
+      0
+    ],
+    "mod12": [
+      0,
+      0,
+      8,
+      3
+    ]
+  },
+  "syzygies": {
+    "s1": "662C - 65L = 0",
+    "s2": "15650C - 195Q_seed = 0",
+    "s3": "17993C - 260Q_sd1 = 0",
+    "ratios": [
+      10.184615384615384,
+      80.25641025641026,
+      69.20384615384616
+    ],
+    "gcd_pairs": [
+      1,
+      5,
+      1
+    ],
+    "reduced_ratios": [
+      "662/65",
+      "3130/39",
+      "17993/260"
+    ]
+  },
+  "qutrit_lift": {
+    "H1_dim": 81,
+    "matter_sector_dim": 81,
+    "mixed_space_dim": 162,
+    "field": "F_3",
+    "description": "81 qutrits encoding the matter sector"
+  },
+  "wall_status": {
+    "over_F3": "TRIVIALLY SPLIT (all extensions over fields split, Ext\u00b9_{F\u2083}=0)",
+    "over_Q": "SPLIT (rational section \u03c4(\u03b1)=(G\u00b7\u03b1\u00b7217/12, \u03b1) exists)",
+    "over_Z": "CONDITIONAL (requires syzygies sub-lattice, mixed characteristic)",
+    "wall_broken_F3": true,
+    "wall_broken_Q": true,
+    "wall_broken_Z": false,
+    "obstruction": "Mixed characteristic: B=12\u22610 mod 3",
+    "resolution": "Primitive generator (780,7944,62600,53979) encodes integral transport class",
+    "conclusion": "Theory closes at F\u2083 and Q levels. Integral closure governed by 3-adic structure of transport denominator B=12."
+  }
+}
