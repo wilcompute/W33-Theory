@@ -1,0 +1,23 @@
+{
+  "eigenspace_decomposition": "40 = 1 + 24 + 15 = trivial + D4_roots + adjoint_SU4",
+  "PSp43_irreps": "40-dim permutation rep = 1 + 24 + 15 (all irreducible)",
+  "15_dim_space": {
+    "identification": "adjoint of SU(4) = so(6)",
+    "branching": "SU(4) > SU(3)xU(1): 15 = 8 + 3 + 3bar + 1",
+    "physics": "color gauge + Higgs sector"
+  },
+  "24_dim_space": {
+    "identification": "D4 root system / triality",
+    "branching": "24 = 3x8 = 8_v + 8_s + 8_c",
+    "physics": "3 fermion generations from triality"
+  },
+  "NCG_classification": {
+    "KO_dim": 6,
+    "g_factorization": "15 = 5 x 3 -> N_color = 3",
+    "f_factorization": "24 = 3 x 8 -> N_gen = 3",
+    "algebra": "A_F = C + H + M_3(C)",
+    "dim_AF": "1+4+9 = 14 = dim(G2) = EWSB shift"
+  },
+  "gauge_group": "U(1) x SU(2) x SU(3) = SM gauge group",
+  "gauge_dim": "1+3+8 = 12 = k"
+}
