@@ -1,0 +1,12 @@
+{
+  "equipartition": "f*(k-r) = g*(k-s) = E = 240 \u2192 \u03bc\u00b2_H(tree) = 0",
+  "CW_hierarchy": "ln(M_Pl/v_EW) = s\u00b2\u00b7ln(\u03a6\u2084) = 16\u00b7ln(10) = 36.84",
+  "observed": 36.83,
+  "error": "0.030%",
+  "mechanism": "Coleman-Weinberg: fermion loops generate Higgs VEV",
+  "s_squared": "16 = fermionic loop weight (|s|\u2074\u00b7g/E = 256\u00b715/240)",
+  "Phi4": "10 = bosonic mass scale (Laplacian eigenvalue k-r)",
+  "M_Pl_over_v_EW": "10^16 = Phi4^(s^2)",
+  "uniqueness": "Equipartition f\u00b7Theta = g\u00b7lambda^mu = E holds ONLY for W(3,3)",
+  "solves": "hierarchy problem \u2014 v_EW/M_Pl not fine-tuned but computed"
+}
