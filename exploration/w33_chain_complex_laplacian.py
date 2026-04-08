@@ -22,3 +22,10 @@ MASS SPECTRUM:
 
 87 = q^2 + dim(E_6) = 9 + 78
 """
+
+# ADDITIONAL DISCOVERY:
+# There are exactly 78 non-isomorphic SRG(45,12,3,3) graphs!
+# 78 = dim(E₆) = 2(v-1).
+# The one from the W(3,3) pair structure has Aut of order 51840 = |W(E₆)|.
+# It is the UNIQUE maximally symmetric SRG(45,12,3,3).
+# Source: Coolsaet, Degraer, Spence, Electronic J. Combinatorics 13(1), 2006.
