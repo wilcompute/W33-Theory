@@ -41,6 +41,11 @@ import sys
 import numpy as np
 from itertools import product
 
+from src.w33_geometry import (
+    adjacency_spectrum as canonical_adjacency_spectrum,
+    build_w33 as canonical_build_w33,
+)
+
 # ═══════════════════════════════════════════════════════════════════════════════
 #  UTILITIES
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -122,35 +127,8 @@ results["parameters"] = dict(q=q, v=v, k=k, lam=lam, mu=mu, r=r, s=s,
 # ═══════════════════════════════════════════════════════════════════════════════
 section("§1  FINITE SPECTRAL TRIPLE — ADJACENCY MATRIX")
 
-# Points of PG(3,F₃) are equivalence classes of nonzero vectors in F₃⁴
-# under scalar multiplication.  Normalise by making the first nonzero entry = 1.
-inv_mod3 = {1: 1, 2: 2}   # multiplicative inverse mod 3
-
-raw = [v4 for v4 in product(range(3), repeat=4) if any(x != 0 for x in v4)]
-points_set = set()
-points = []
-for vec in raw:
-    lst = list(vec)
-    for i in range(4):
-        if lst[i] != 0:
-            inv = inv_mod3[lst[i]]
-            normed = tuple((x * inv) % 3 for x in lst)
-            break
-    if normed not in points_set:
-        points_set.add(normed)
-        points.append(normed)
-
-n = len(points)   # should be 40
-
-def omega(x, y):
-    """Symplectic form on F₃⁴: ω(x,y) = x₀y₂−x₂y₀ + x₁y₃−x₃y₁  (mod 3)."""
-    return (x[0]*y[2] - x[2]*y[0] + x[1]*y[3] - x[3]*y[1]) % 3
-
-A = np.zeros((n, n), dtype=np.int32)
-for i in range(n):
-    for j in range(i + 1, n):
-        if omega(points[i], points[j]) == 0:
-            A[i, j] = A[j, i] = 1
+points, A = canonical_build_w33()
+n = len(points)
 
 degrees = A.sum(axis=1)
 edges_actual = int(A.sum()) // 2
@@ -172,9 +150,7 @@ check("λ = 2",                       lam_actual == 2)
 check("μ = 4",                       mu_actual == 4)
 
 # Eigenspectrum
-evals_A = np.sort(np.linalg.eigvalsh(A.astype(float)))[::-1]
-unique_evals, counts = np.unique(np.round(evals_A).astype(int), return_counts=True)
-eval_dict = dict(zip(unique_evals.tolist(), counts.tolist()))
+eval_dict = dict(canonical_adjacency_spectrum(A))
 print(f"\n  Adjacency spectrum: {eval_dict}")
 check("Eigenvalue 12 (mult 1)",   eval_dict.get(12, 0) == 1)
 check("Eigenvalue  2 (mult 24)",  eval_dict.get(2,  0) == 24)

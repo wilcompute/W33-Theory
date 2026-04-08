@@ -21,108 +21,28 @@ import os
 import math
 from itertools import combinations
 
+from src.w33_geometry import (
+    adjacency_spectrum as canonical_adjacency_spectrum,
+    build_w33 as canonical_build_w33,
+    checks_path,
+    verify_srg as canonical_verify_srg,
+)
+
 # ============================================================
 # SECTION 1: W(3,3) GRAPH CONSTRUCTION FROM SCRATCH
 # ============================================================
 
 def build_W33():
-    """
-    Build the collinearity graph of GQ(3,3) = W(3,F₃).
-
-    The symplectic polar space W(3,F₃) is defined by the alternating bilinear form
-    J on F₃⁴:  B(x,y) = x₀y₁ - x₁y₀ + x₂y₃ - x₃y₂
-
-    Points: projective points of PG(3,3), i.e., nonzero vectors in F₃⁴ mod scalar.
-    That gives (3⁴-1)/(3-1) = 40 points.
-
-    Lines: totally isotropic lines (all points on line are mutually isotropic).
-
-    Two points are COLLINEAR (adjacent in W(3,3)) if they lie on a common totally
-    isotropic line, equivalently if B(x,y) = 0 (they are perpendicular under B).
-    """
-    F3 = [0, 1, 2]
-
-    # Generate all projective points of PG(3,3)
-    # Representatives: nonzero vectors in F₃⁴, take canonical form (first nonzero = 1)
-    points = []
-    for a in range(3):
-        for b in range(3):
-            for c in range(3):
-                for d in range(3):
-                    v = (a, b, c, d)
-                    if v == (0, 0, 0, 0):
-                        continue
-                    # canonical: first nonzero coord is 1
-                    for i, x in enumerate(v):
-                        if x != 0:
-                            # normalize
-                            inv = {1: 1, 2: 2}[x]  # in F3: 1*1=1, 2*2=4=1, so inv(2)=2
-                            # actually: x * inv(x) = 1 mod 3
-                            # inv(1)=1, inv(2)=2
-                            scale = inv
-                            vn = tuple((coord * scale) % 3 for coord in v)
-                            break
-                    if vn not in points:
-                        points.append(vn)
-
-    assert len(points) == 40, f"Expected 40 points, got {len(points)}"
-
-    # Symplectic form B(x,y) = x₀y₁ - x₁y₀ + x₂y₃ - x₃y₂ mod 3
-    def B(x, y):
-        return (x[0]*y[1] - x[1]*y[0] + x[2]*y[3] - x[3]*y[2]) % 3
-
-    # Two points are collinear in W(3,3) iff B(x,y) = 0
-    # (They are both isotropic by construction, and perpendicular iff collinear)
-    n = len(points)
-    adj = np.zeros((n, n), dtype=int)
-
-    for i in range(n):
-        for j in range(i+1, n):
-            if B(points[i], points[j]) == 0:
-                adj[i][j] = 1
-                adj[j][i] = 1
-
-    return points, adj
+    return canonical_build_w33()
 
 def verify_SRG(adj, expected_params):
     """Verify that adj is SRG(v,k,λ,μ) with given parameters."""
-    n = adj.shape[0]
-    v, k, lam, mu = expected_params
-
-    assert n == v, f"Wrong number of vertices: {n} ≠ {v}"
-
-    # Check regularity
-    degrees = adj.sum(axis=1)
-    assert np.all(degrees == k), f"Not k-regular: degrees = {np.unique(degrees)}"
-
-    # Check λ: every adjacent pair has exactly λ common neighbors
-    lam_vals = []
-    for i in range(n):
-        for j in range(i+1, n):
-            if adj[i][j] == 1:
-                common = int(adj[i].dot(adj[j]))
-                lam_vals.append(common)
-    lam_vals = np.array(lam_vals)
-    assert np.all(lam_vals == lam), f"λ wrong: got {np.unique(lam_vals)}"
-
-    # Check μ: every non-adjacent pair has exactly μ common neighbors
-    mu_vals = []
-    for i in range(n):
-        for j in range(i+1, n):
-            if adj[i][j] == 0:
-                common = int(adj[i].dot(adj[j]))
-                mu_vals.append(common)
-    mu_vals = np.array(mu_vals)
-    assert np.all(mu_vals == mu), f"μ wrong: got {np.unique(mu_vals)}"
-
+    canonical_verify_srg(adj, expected_params)
     return True
 
 def compute_spectrum(adj):
     """Compute eigenvalues of adjacency matrix."""
-    eigenvalues = np.linalg.eigvalsh(adj.astype(float))
-    eigenvalues = np.round(eigenvalues).astype(int)
-    unique, counts = np.unique(eigenvalues, return_counts=True)
-    return list(zip(unique.tolist(), counts.tolist()))
+    return list(canonical_adjacency_spectrum(adj))
 
 # ============================================================
 # SECTION 2: CORE W(3,3) PARAMETERS
@@ -497,13 +417,13 @@ def compute_all_parameters(p):
 
     # 17. Hierarchy: ln(M_Pl / v_EW)
     # Theorem formula: s²·ln(Φ₄) = 16 × ln(10) = 36.84
-    M_Pl = 1.22e19  # GeV (Planck mass)
-    ln_ratio_obs  = math.log(M_Pl / v_EW)
+    M_Pl_reduced = 2.435e18  # GeV (reduced Planck mass)
+    ln_ratio_obs  = math.log(M_Pl_reduced / v_EW)
     ln_ratio_pred = s**2 * math.log(Phi4)   # 16 × ln(10) = 36.84
     add(24, "COSMO", "ln(M_Pl/v_EW) Planck-EW hierarchy",
         "s²·ln(Φ₄(q)) = 16·ln(10) ≈ 36.84",
         ln_ratio_pred, ln_ratio_obs,
-        notes="s²=16=(-4)²; Φ₄(3)=10; 16·ln10=36.84 vs ln(1.22e19/246)=39.5; <10%")
+        notes="Observed reference uses the reduced Planck mass 2.435e18 GeV, giving ln(M_Pl_red/v_EW)=36.83")
 
     # 18. Cosmological constant exponent
     # Observed: Λ_cosmo/M_Pl⁴ ~ 10⁻¹²²
@@ -927,8 +847,9 @@ def main():
 
     print_master_table(results, params)
 
-    os.makedirs("/home/user/workspace/W33-Theory/checks", exist_ok=True)
-    save_json(results, params, "/home/user/workspace/W33-Theory/checks/UNIFIED_MASTER_TABLE.json")
+    out_path = checks_path("UNIFIED_MASTER_TABLE.json")
+    save_json(results, params, str(out_path))
+    print(f"  Saved JSON summary to {out_path}")
 
     print()
     print("  COMPUTATION COMPLETE.")
