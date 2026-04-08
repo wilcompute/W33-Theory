@@ -1,0 +1,15 @@
+{
+  "wilsons_theorem_proof": {
+    "wilson": "(p-1)! \u2261 -1 mod p for prime p",
+    "master": "(q-1)! = 2",
+    "combined": "2 \u2261 -1 mod q \u2192 q | 3 \u2192 q = 3",
+    "result": "q=3 is the UNIQUE prime satisfying both"
+  },
+  "purest_form": "Gamma(q) = 2 (the continuous factorial equals the binary)",
+  "two_solutions": {
+    "pre_physical": "q\u2081 = 0.4429 (complex SRG params \u2192 quantum geometry)",
+    "physical": "q\u2082 = 3 (integer \u2192 finite field F\u2083 \u2192 classical geometry)"
+  },
+  "pre_physical_SRG": "discriminant < 0 \u2192 complex \u03bb,\u03bc \u2192 quantum superposition of geometries",
+  "integrality": "q must be prime for F_q to exist \u2192 selects q=3 from continuous solutions"
+}
