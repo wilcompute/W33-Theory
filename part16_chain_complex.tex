@@ -1,0 +1,153 @@
+% ═══════════════════════════════════════════════════════════════
+%  PART XVI — APRIL 8, 2026 EVENING: THE CHAIN COMPLEX
+% ═══════════════════════════════════════════════════════════════
+\clearpage
+\part{The Chain Complex: From E${}_6$ Geometry to Supersymmetry}
+
+\section{$\mathrm{Aut}(\mathrm{W}(3,3)) = W(E_6)$}
+
+The classical exceptional isomorphism $\PSp(4,3)\cong\PSU(4,2)$
+identifies the derived subgroup of $\mathrm{Aut}(\mathrm{W}(3,3))$
+with the unique simple group of order $25920$, which is the
+derived subgroup of the Weyl group $W(E_6)$
+(Hoffman~\cite{HoffmanSpreads}).
+Therefore
+\begin{equation}
+\boxed{\mathrm{Aut}(\mathrm{W}(3,3)) = \PSp(4,3){:}\,C_2 = W(E_6),}
+\end{equation}
+of order $|W(E_6)| = 51840$.
+
+\begin{theorem}[$E_6$ Exponents $=$ W(3,3) Parameters]
+The exponents of $W(E_6)$ are $\{1,\,\mu,\,q{+}\lambda,\,\Phisix,\,2^q,\,k{-}1\}
+= \{1,4,5,7,8,11\}$.
+\end{theorem}
+
+\section{The $27$ Spreads and the Cubic Surface}
+
+\begin{theorem}[Hoffman, Theorem~2.13]
+\label{thm:hoffman}
+There exist $G$-equivariant bijections:
+\begin{center}
+\begin{tabular}{@{}lcl@{}}
+27 nsp-spreads & $\longleftrightarrow$ & 27 lines on a cubic surface \\
+45 nonsingular pairs & $\longleftrightarrow$ & 45 tritangent planes \\
+36 double-sixes & $\longleftrightarrow$ & 36 root hyperplanes of $E_6$ \\
+\end{tabular}
+\end{center}
+The cardinalities are $q^3$, $qg$, $(q!)^2$ respectively,
+and $\dim(E_6) = 2(v{-}1) = 78$.
+\end{theorem}
+
+The 27 spreads carry the \textbf{Schl\"afli graph} $\mathrm{SRG}(27,10,1,5)$,
+the intersection graph of the 27~lines.
+Its eigenspaces give $27 = 1 + 20 + 6$, the $E_6$ fundamental decomposition.
+
+
+\section{The Chain Complex and Its Three SRGs}
+
+The incidence structure of W(3,3) defines a chain complex:
+\begin{equation}
+\underbrace{\text{Points}(40)}_{\mathrm{SRG}(40,12,2,4)}
+\;\xleftarrow{\;N\;}\;
+\underbrace{\text{Pairs}(45)}_{\mathrm{SRG}(45,12,3,3)}
+\;\xleftarrow{\;M^T\;}\;
+\underbrace{\text{Spreads}(27)}_{\mathrm{SRG}(27,10,1,5)}
+\end{equation}
+with Euler characteristic
+$\chi = 40 - 45 + 27 = 22 = \lambda(k{-}1)$.
+
+
+\section{Incidence Eigenvalues: Gauge Bosons Are Massless}
+
+\begin{theorem}[Point--Pair Incidence]
+$NN^T$ on the 40~points has eigenvalues:
+\begin{equation}
+\boxed{72\;(\dim 1),\quad k = 12\;(\dim 24),\quad 0\;(\dim 15).}
+\end{equation}
+The parameters $\beta=3,\,\gamma=1$ are the \textbf{unique}
+non-negative integer solution. The 15-dimensional gauge sector
+$($adjoint of $\SU(4))$ sits in $\ker(NN^T)$:
+gauge bosons are \textbf{massless from geometry}.
+\end{theorem}
+
+\begin{theorem}[Spread--Pair Incidence]
+$MM^T$ on the 27~spreads has eigenvalues:
+$g=15$ $(\dim 1)$, $q!=6$ $(\dim 20)$, $0$ $(\dim 6)$.
+\end{theorem}
+
+
+\section{The Laplacian Mass Spectrum}
+
+\begin{theorem}[Chain Complex Laplacian]
+The middle Laplacian $\Delta_1 = N^T N + M^T M$ on the 45~pairs equals
+$q^2 I + \lambda J - A_{45}$ and has eigenvalues:
+\begin{equation}
+\boxed{87 = q^2 + \dim(E_6)\;(\dim 1),\quad k = 12\;(\dim 24),\quad q! = 6\;(\dim 20).}
+\end{equation}
+The boson-to-fermion mass ratio is $k/q! = 2 = \lambda$.
+\end{theorem}
+
+
+\section{The $\mathfrak{so}(k)$ Decomposition}
+
+\begin{theorem}
+The five distinct $\PSp(4,3)$-irreps appearing in the chain complex
+are $\{1,\,6,\,15,\,20,\,24\}$, with total dimension
+$1+6+15+20+24 = \binom{k}{2} = 66 = \dim(\mathfrak{so}(k))$.
+\end{theorem}
+
+The chain complex decomposes $\mathfrak{so}(12)$ under $W(E_6)$:
+\begin{equation}
+\mathfrak{so}(k) \;=\; \mathbf{1} \oplus \mathbf{6} \oplus
+\underbrace{\mathbf{15}}_{\mathrm{gauge}} \oplus
+\underbrace{\mathbf{20}}_{\mathrm{fermion}} \oplus
+\underbrace{\mathbf{24}}_{\mathrm{boson}}.
+\end{equation}
+The Pati--Salam embedding $\SO(12)\supset\SU(4)\times\SU(2)\times\SU(2)$
+identifies these sectors with the Standard Model.
+
+
+\section{Supersymmetric Chain Complex}
+
+\begin{theorem}[Vanishing Supertrace]
+$\mathrm{Str}(\Delta) = \Tr(\Delta_0) - \Tr(\Delta_1) + \Tr(\Delta_2)
+= 360 - 495 + 135 = 0.$
+\end{theorem}
+
+The super-partition function
+$Z(t) = e^{-72t} - e^{-87t} + e^{-15t} + 21$
+has \textbf{exact cancellation} of the $e^{-12t}$ and $e^{-6t}$ terms
+between levels. Only the vacuum eigenvalues $\{72,87,15\}$ survive.
+$Z(0) = \chi = 22$ and $Z(\infty) = 21 = $ zero modes $(15+6)$,
+so $\chi - Z(\infty) = 1$: exactly one unpaired vacuum state.
+
+\begin{theorem}
+$|\mathrm{Str}(\Delta^2)| = 2160 = q^2 E$, the second Fourier coefficient
+of the $E_8$ theta function $\theta_{E_8} = 1 + 240q + 2160q^2 + \cdots$.
+\end{theorem}
+
+
+\section{$\alpha^{-1}$ from the Euler Characteristic}
+
+The Euler characteristic $\chi = \lambda(k{-}1) = 22$ enters the
+fine-structure constant through the effective mass:
+\begin{equation}
+M_{\mathrm{eff}} = \frac{\chi}{\lambda}\bigl[(k{-}\lambda)^2+1\bigr]
++ \frac{q}{\chi} = \frac{24445}{22}.
+\end{equation}
+
+\begin{theorem}
+\begin{equation}
+\boxed{
+\alpha^{-1} = (k{-}1)^2 + \mu^2 + \frac{v}{M_{\mathrm{eff}}}
+= 137 + \frac{880}{24445} = \frac{669969}{4889} = 137.035\,999\,182\ldots}
+\end{equation}
+agreeing with CODATA~2022 $(137.035\,999\,177\pm 21)$ to $0.2\sigma$.
+\end{theorem}
+
+\begin{thebibliography}{9}
+\bibitem{HoffmanSpreads} W.\,M. Kantor and S.\,E.\,Payne,
+  in: ``The Atlas of Finite Groups -- Ten Years On'' (eds.\ Curtis and Wilson),
+  Cambridge UP, 1998; see also Hoffman,
+  ``Four-dimensional symplectic geometry over $\mathbb{F}_3$,'' LSU preprint.
+\end{thebibliography}
