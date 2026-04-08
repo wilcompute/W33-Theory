@@ -1,0 +1,34 @@
+{
+  "chain": "E8(248) -> E7(133) -> E6(78) -> F4(52) -> G2(14) -> SM(0)",
+  "steps": [
+    115,
+    55,
+    26,
+    38,
+    14
+  ],
+  "step_formulas": [
+    "(mu+1)(Phi3+Phi4)=5*23",
+    "C(k-1,2)=N_eff",
+    "lambda*Phi3=bosonic_string",
+    "lambda*(k+Phi6)=2*19",
+    "lambda*Phi6=dim(G2)"
+  ],
+  "step_physics": [
+    "gravity separation",
+    "unified coupling",
+    "bosonic string",
+    "projective structure",
+    "EWSB"
+  ],
+  "sum_check": "115+55+26+38+14=248=dim(E8)",
+  "bottom_three": "26+38+14=78=dim(E6)=2(v-1)=lambda*(Phi3+19+Phi6)",
+  "top_two": "115+55=170=2*85=2*v(GQ(4,4))",
+  "roles": {
+    "E8": "total structure (E=240 edges)",
+    "E7": "gauge coupling sum (34+48+51=133)",
+    "E6": "flavor/generation structure (27=q^3)",
+    "F4": "projective structure (52=v+k)",
+    "G2": "EWSB shift (14=lambda*Phi6)"
+  }
+}
