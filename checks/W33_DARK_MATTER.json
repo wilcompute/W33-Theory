@@ -1,0 +1,13 @@
+{
+  "P13_dark_matter": {
+    "nature": "E6 singlet scalar from 27 = 16+10+1 decomposition",
+    "n_species": "q! = 6 (3 gen x particle/antiparticle)",
+    "mass": "(lambda^mu/q) * m_p = (16/3) * 938 MeV = 5.0 GeV",
+    "mechanism": "asymmetric DM (shared baryon-DM asymmetry)",
+    "Omega_ratio": "Omega_DM/Omega_b = lambda^mu/q = 16/3 = 5.333 (obs 5.36)",
+    "interaction": "Higgs portal, lambda_portal = Phi6/(2q^3) = 7/54",
+    "sigma_DD": "~10^-47 cm^2 (within reach of SuperCDMS, CRESST)",
+    "kill_condition": "DM mass != 5 GeV, or no Higgs-portal interaction",
+    "experiments": "SuperCDMS SNOLAB, CRESST-III, DarkSide-LowMass"
+  }
+}
