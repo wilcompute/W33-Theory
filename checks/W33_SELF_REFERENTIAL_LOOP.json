@@ -1,0 +1,19 @@
+{
+  "self_referential_loop": {
+    "Gamma_q_2": "Start: Gamma(q) = 2",
+    "Wilson": "Wilson + integrality \u2192 q = 3",
+    "quadratic": "SRG x\u00b2-6x+8=0 \u2192 \u03bb=2, \u03bc=4",
+    "self_reference": "\u03bb = (q!-\u03bb)/2 \u2192 3\u03bb = q! \u2192 q! = 6 \u2192 Gamma(q) = 2",
+    "loop": "Every parameter implies every other. No beginning. Fixed point."
+  },
+  "discriminant_meaning": {
+    "D_at_3": "4 = \u03bc = spacetime dimension",
+    "sqrt_D": "2 = \u03bb = adjacency parameter",
+    "self_reference": "roots contain themselves: \u03bb = (q!-\u03bb)/2"
+  },
+  "neutrino_connection": {
+    "first_order_width": "4/D_prime(3) = 0.0586 \u2248 0.058 eV = \u03a3m_\u03bd prediction",
+    "note": "The width of the classical phase in q-space equals the neutrino mass scale"
+  },
+  "spacetime_from_discriminant": "\u03bc = 4 spacetime dims BECAUSE D(3) = 4"
+}
