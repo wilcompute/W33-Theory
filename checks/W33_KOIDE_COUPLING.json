@@ -15,5 +15,9 @@
   "koide_lepton_Q": 0.666659,
   "koide_pred": 0.666667,
   "alpha3_2loop_pred": 8.63,
-  "alpha3_obs": 8.5
+  "alpha3_obs": 8.5,
+  "seventeen": "17 = Phi3+mu = Phi4+Phi6 = g+lambda = local gauge info",
+  "exact_MZ_U1": "1/alpha_1(M_Z) = q*(Phi3+mu) + lambda^q = 3*17 + 8 = 59 EXACT",
+  "coupling_chain_factors": "34 -> x(24/17) -> 48 -> x(17/16) -> 51",
+  "factor_product": "24/17 * 17/16 = 3/2 = q/lambda = inverse Koide"
 }
