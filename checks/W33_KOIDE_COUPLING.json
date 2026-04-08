@@ -1,0 +1,19 @@
+{
+  "koide_coupling_ratio": "34/51 = 2/3 = lambda/q",
+  "coupling_chain": {
+    "1/alpha_1": "34 = lambda*(Phi3+mu) = 2*17",
+    "1/alpha_2": "48 = 2*f = 2*24",
+    "1/alpha_3": "51 = q*(Phi3+mu) = 3*17"
+  },
+  "consecutive_ratios": {
+    "48/34": "f/(Phi3+mu) = 24/17",
+    "51/48": "(Phi3+mu)/s^2 = 17/16",
+    "product": "q/lambda = 3/2 (inverse Koide)"
+  },
+  "sum_133": "dim(E7) = Phi4*Phi3+q",
+  "E8_decomposition": "248 = (133,1) + (1,3) + (56,2) under E8 > E7 x SU(2)",
+  "koide_lepton_Q": 0.666659,
+  "koide_pred": 0.666667,
+  "alpha3_2loop_pred": 8.63,
+  "alpha3_obs": 8.5
+}
