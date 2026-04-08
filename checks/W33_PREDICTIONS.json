@@ -1,0 +1,179 @@
+{
+  "predictions": [
+    {
+      "id": "P1",
+      "name": "Neutrino mass sum",
+      "formula": "\u03a3m_\u03bd = \u03bb(v-k+1) = 2\u00d729 = 58 meV",
+      "value": 0.058,
+      "unit": "eV",
+      "current_bound": "DESI DR2+Planck: <0.064 eV (95% CL, \u039bCDM)",
+      "test": "DESI DR3+Euclid 2026-2027",
+      "kill_condition": "\u03a3m_\u03bd < 0.050 eV at 3\u03c3 under \u039bCDM",
+      "status": "ALIVE (6 meV margin)"
+    },
+    {
+      "id": "P2",
+      "name": "CP violation phase",
+      "formula": "\u03b4_CP = -10\u03c0/13 \u2248 -138.5\u00b0",
+      "value": -138.46153846153848,
+      "unit": "degrees",
+      "current_bound": "T2K: [-170\u00b0,-20\u00b0] at 90% CL; best fit ~-108\u00b0",
+      "test": "Hyper-Kamiokande 2028-2030 (\u00b16-15\u00b0 precision)",
+      "kill_condition": "\u03b4_CP outside all n\u03c0/13 at 5\u03c3",
+      "status": "ALIVE (mirror value in T2K interval)"
+    },
+    {
+      "id": "P3",
+      "name": "PMNS \u03b8\u2081\u2082 (solar)",
+      "formula": "sin\u00b2\u03b8\u2081\u2082 = \u03bc/\u03a6\u2083 = 4/13 = 0.30769",
+      "value": 0.3076923076923077,
+      "current_bound": "PDG: 0.307 \u00b1 0.013",
+      "test": "JUNO 2029 (sub-percent precision)",
+      "kill_condition": "sin\u00b2\u03b8\u2081\u2082 \u2260 4/13 at >3\u03c3",
+      "status": "ALIVE (0.05\u03c3 from central value)"
+    },
+    {
+      "id": "P4",
+      "name": "Higgs trilinear self-coupling",
+      "formula": "\u03bb\u2083 = m_H\u00b2/(2v\u00b2) with \u03bb_H = \u03a6\u2086/(2q\u00b3) = 7/54",
+      "value": 0.12962962962962962,
+      "current_bound": "LHC Run 2+3: \u03ba_\u03bb consistent with 1",
+      "test": "HL-LHC 2030-2035 (\u00b130% precision on \u03ba_\u03bb)",
+      "kill_condition": "\u03ba_\u03bb significantly \u2260 1",
+      "status": "ALIVE (SM-like prediction)"
+    },
+    {
+      "id": "P5",
+      "name": "No BSM Higgs below desert scale",
+      "formula": "Desert to v\u00b7v_EW = 40\u00d7246 = 9840 GeV",
+      "value": 9840,
+      "unit": "GeV",
+      "current_bound": "LHC: no BSM Higgs found up to ~1 TeV",
+      "test": "LHC Run 3 + HL-LHC 2025-2035",
+      "kill_condition": "New scalar found below 9840 GeV",
+      "status": "ALIVE"
+    },
+    {
+      "id": "P6",
+      "name": "Proton lifetime",
+      "formula": "log\u2081\u2080(\u03c4_p/yr) \u2248 v - \u03bc + \u03bb = 40 - 4 + 2 = 38",
+      "value": 1e+38,
+      "unit": "years",
+      "current_bound": "Super-K: \u03c4 > 1.6\u00d710\u00b3\u2074 yr (p\u2192e\u207a\u03c0\u2070)",
+      "test": "Hyper-K 2028+ (sensitivity to 6.3\u00d710\u00b3\u2074 yr after 10 yr)",
+      "kill_condition": "Proton decay observed at \u03c4 < 10\u00b3\u2075 yr",
+      "status": "ALIVE (prediction above current sensitivity)"
+    },
+    {
+      "id": "P7",
+      "name": "Neutron lifetime",
+      "formula": "\u03c4_n = \u03bc\u00b2 \u00d7 N_eff = 16 \u00d7 55 = 880 s",
+      "value": 880,
+      "unit": "seconds",
+      "current_bound": "Bottle: 878.4 \u00b1 0.5 s; Beam: 888 \u00b1 2 s; J-PARC: 877.2 \u00b1 4 s",
+      "test": "UCN\u03c4, J-PARC ongoing (resolving bottle/beam discrepancy)",
+      "kill_condition": "Resolved \u03c4_n significantly \u2260 880 s",
+      "status": "ALIVE (bottle: 878.4, prediction: 880, within 0.2%)"
+    },
+    {
+      "id": "P8",
+      "name": "Dark energy equation of state",
+      "formula": "w = -1 exactly (cosmological constant)",
+      "value": -1,
+      "current_bound": "DESI DR1: hints of w \u2260 -1 (mild tension)",
+      "test": "DESI DR2/DR3 + Euclid 2025-2027",
+      "kill_condition": "w \u2260 -1 at >5\u03c3",
+      "status": "UNDER MILD TENSION (DESI hints w\u2080w_a \u2260 \u039bCDM)"
+    },
+    {
+      "id": "P9",
+      "name": "Spectral index of primordial perturbations",
+      "formula": "n_s = 1 - 2/N_e = 1 - 2/60 = 29/30 = 0.96667",
+      "value": 0.9666666666666667,
+      "current_bound": "Planck 2018: 0.9649 \u00b1 0.0042",
+      "test": "CMB-S4 2028+ (precision \u00b10.001)",
+      "kill_condition": "n_s \u2260 29/30 at >3\u03c3 with CMB-S4 precision",
+      "status": "ALIVE (0.4\u03c3 from Planck central value)"
+    },
+    {
+      "id": "P10",
+      "name": "Gauge coupling sum at Planck scale",
+      "formula": "1/\u03b1\u2081 + 1/\u03b1\u2082 + 1/\u03b1\u2083 = 133 = dim(E\u2087)",
+      "value": 133,
+      "test": "Precision electroweak + QCD at HL-LHC \u2192 extrapolation to Planck",
+      "kill_condition": "Precision running excludes sum = 133",
+      "status": "ALIVE (1-loop gives 133.5, within 2-loop corrections)"
+    },
+    {
+      "id": "P11",
+      "name": "Electroweak coupling ratio at Planck scale",
+      "formula": "\u03b1\u2083(M_Pl)/\u03b1\u2081(M_Pl) = \u03bb/q = 2/3 = Koide Q",
+      "value": 0.6666666666666666,
+      "test": "Same precision extrapolation as P10",
+      "kill_condition": "Ratio inconsistent with 2/3",
+      "status": "ALIVE"
+    },
+    {
+      "id": "P12",
+      "name": "No fourth generation of fermions",
+      "formula": "N_gen = f/8 = 24/8 = 3 (from D\u2084 triality)",
+      "value": 3,
+      "test": "Any collider experiment",
+      "kill_condition": "Discovery of a 4th generation fermion",
+      "status": "ALIVE (no 4th gen found; precision EW excludes light 4th gen)"
+    }
+  ],
+  "n_predictions": 12,
+  "timeline": [
+    [
+      "2025",
+      "KATRIN final run (m_\u03bd < 0.3 eV target)"
+    ],
+    [
+      "2025-2026",
+      "LHC Run 3 ends; DESI DR3 data"
+    ],
+    [
+      "2026",
+      "DESI DR3 + Euclid first: \u03a3m_\u03bd bound sharpens \u2192 P1 decisive"
+    ],
+    [
+      "2027",
+      "Hyper-K tank construction; JUNO commissioning"
+    ],
+    [
+      "2028",
+      "Hyper-K first data \u2192 \u03b4_CP measurement begins \u2192 P2"
+    ],
+    [
+      "2028",
+      "CMB-S4 starts \u2192 n_s to \u00b10.001 \u2192 P9"
+    ],
+    [
+      "2029",
+      "JUNO full operation \u2192 sin\u00b2\u03b8\u2081\u2082 sub-percent \u2192 P3"
+    ],
+    [
+      "2030",
+      "Hyper-K 2yr: \u03b4_CP to \u00b115\u00b0 \u2192 P2 decisive"
+    ],
+    [
+      "2030",
+      "HL-LHC starts \u2192 di-Higgs, BSM searches \u2192 P4, P5"
+    ],
+    [
+      "2033",
+      "Hyper-K 5yr: 5\u03c3 CPV for 60% of \u03b4_CP values"
+    ],
+    [
+      "2035",
+      "HL-LHC 3 ab\u207b\u00b9: \u03ba_\u03bb to \u00b130% \u2192 P4 decisive"
+    ],
+    [
+      "2038",
+      "Hyper-K 10yr: proton decay to 6\u00d710\u00b3\u2074 yr \u2192 P6"
+    ]
+  ],
+  "most_dangerous_test": "DESI DR3 + Euclid (2026): \u03a3m_\u03bd < 55 meV \u2192 DEAD",
+  "next_decisive": "Hyper-K \u03b4_CP (2030): -138.5\u00b0 vs alternatives"
+}
