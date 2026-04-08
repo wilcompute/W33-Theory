@@ -1,0 +1,117 @@
+% ═══════════════════════════════════════════════════════════════
+%  PART XI — APRIL 8, 2026: THE EIGHTH LOCK — GOLAY CODES
+% ═══════════════════════════════════════════════════════════════
+\clearpage
+\part{Lock 8: The Universe as an Error-Correcting Code}
+
+\section{The Extended Ternary Golay Code IS W(3,3)}
+\label{sec:ternary-golay}
+
+The extended ternary Golay code is a $[12,\,6,\,6]_3$ linear code:
+length $n=k=12$, dimension $\dim = q! = 6$, minimum distance $d = q! = 6$,
+over the alphabet $\GF(q) = \GF(3)$.
+
+\begin{theorem}[Lock 8: The Ternary Golay Code]
+\label{thm:lock8}
+Every parameter of the extended ternary Golay code is a
+W(3,3) parameter:
+\begin{center}
+\begin{tabular}{@{}lcl@{}}
+\toprule
+Code parameter & Value & W(3,3) \\
+\midrule
+Alphabet & $\GF(3)$ & $\GF(q)$ \\
+Length & 12 & $k$ (valence) \\
+Dimension & 6 & $q!$ (KO-dim) \\
+Distance & 6 & $q!$ \\
+Codewords & 729 & $q^{q!} = 3^6$ \\
+Rate & 1/2 & self-dual \\
+$A_k = A_{12}$ & 24 & $f$ (lines) \\
+\bottomrule
+\end{tabular}
+\end{center}
+The weight-$q!$ codewords form the Steiner system $S(5,6,12)$
+with $132$ hexads, and the automorphism group is $2\cdot M_{12}$.
+\end{theorem}
+
+The number of maximum-weight codewords, $A_{12} = 24 = f$,
+equals the number of lines in the W(3,3) design.
+The Mathieu group $M_{12}$ has order
+$|M_{12}| = k!/(k{-}5)! = 12\cdot 11\cdot 10\cdot 9\cdot 8 = 95040$
+and is \textbf{sharply 5-transitive} on $k=12$ points.
+
+
+\section{The Binary Golay Code: The Bosonic Shadow}
+\label{sec:binary-golay}
+
+The extended binary Golay code is a $[24,\,12,\,8]_2$ code:
+\begin{equation}
+[f,\; k,\; 2^q]_2 = [24,\; 12,\; 8]_2.
+\end{equation}
+Its automorphism group is $M_{24}$, which leads to the
+Conway group, the Leech lattice $\Lambda_{24}$, and ultimately
+the Monster group.
+
+\begin{theorem}[Two Golay Codes $=$ Two Faces of W(3,3)]
+\begin{center}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+& Alphabet & Length & Dim & Distance \\
+\midrule
+Ternary Golay & $\GF(q)$ & $k=12$ & $q!=6$ & $q!=6$ \\
+Binary Golay & $\GF(\lambda)$ & $f=24$ & $k=12$ & $2^q=8$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+The ternary code encodes the fermionic sector
+(alphabet $=$ field order, length $=$ valence).
+The binary code encodes the bosonic sector
+(length $=$ lines, dimension $=$ valence).
+Together they generate the complete moonshine tower:
+$M_{12}\subset M_{24}\to\mathrm{Co}_1\to\Lambda_{24}\to\mathbb{M}$.
+\end{theorem}
+
+
+\section{The Division Algebra Connection}
+\label{sec:furey}
+
+Furey~\cite{Furey2022} demonstrates that one Standard Model generation
+is encoded in $\mathbb{R}\otimes\mathbb{C}\otimes\mathbb{H}\otimes\mathbb{O}$,
+whose complex dimension is
+\begin{equation}
+1\times 2\times 4\times 8 = 64 = 2^{q!} = \mu^q.
+\end{equation}
+This is simultaneously the dimension of $\Cl(q!)$, the number of
+irreducible representations of $\Cl_q(q,\lambda)$, and the total
+number of sub-faces of the $(q!{-}1)$-simplex (Pascal row~$q!$).
+One chiral generation has $32 = 2^{q+\lambda}$ Weyl fermions.
+
+
+\section{The Information-Theoretic Interpretation}
+\label{sec:info-theory}
+
+The complete dictionary now reads:
+\begin{quote}
+\emph{The universe is an error-correcting code over $\GF(q)=\GF(3)$.
+The code length is $k=12$ (the W(3,3) valence),
+the dimension is $q!=6$ (the KO-dimension of the SM),
+and the minimum distance is $q!=6$ (optimal error protection).
+The code is self-dual ($C=C^\perp$, mirroring matter--antimatter
+symmetry), unique (Golay), and perfect (optimal sphere-packing
+in Hamming space).}
+
+\emph{The symmetry group $M_{12}$ is a sporadic simple group,
+sharply 5-transitive on $k$ points, embedding into $M_{24}$
+and thence into the Monster via the Leech lattice.
+This is the eighth lock: the ternary Golay code,
+living over $\GF(q)$ with parameters $(k, q!, q!)$,
+is one more independent mathematical structure that
+uniquely requires $q=3$.}
+\end{quote}
+
+\begin{thebibliography}{9}
+\bibitem{Furey2022} N. Furey and M.\,J. Hughes,
+  ``One generation of Standard Model Weyl representations as a
+  single copy of $\mathbb{R}\otimes\mathbb{C}\otimes\mathbb{H}
+  \otimes\mathbb{O}$,'' \emph{Phys.\ Lett.\ B} \textbf{831} (2022) 136959.
+\end{thebibliography}
