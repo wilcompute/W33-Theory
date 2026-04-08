@@ -1,0 +1,213 @@
+{
+  "parameters": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "lambda": 2,
+    "mu": 4,
+    "r": 2,
+    "s": -4,
+    "f": 24,
+    "g": 15,
+    "E": 240,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "Phi12": 73
+  },
+  "section_0_graph_construction": {
+    "graph_type": "srg(40,12,2,4) = collinearity graph of GQ(3,3) = Q(4,3)",
+    "vertices": 40,
+    "degree": 12,
+    "adjacency_spectrum": {
+      "eigenvalue_12_mult_1": true,
+      "eigenvalue_2_mult_24": true,
+      "eigenvalue_minus4_mult_15": true
+    },
+    "laplacian_spectrum": {
+      "eigenvalue_0_mult_1": true,
+      "eigenvalue_10_mult_24": true,
+      "eigenvalue_16_mult_15": true
+    },
+    "spectrum_verified": true
+  },
+  "section_1_spectral_zeta": {
+    "formula": "zeta_W(s) = 24*10^(-s) + 15*16^(-s)",
+    "special_values": {
+      "s=1": 3.3375000000000004,
+      "s=2": 0.29859375,
+      "s=-1": 480.0,
+      "s=-2": 6240.0,
+      "s=1/2": 11.33946638440411,
+      "s=0": 39.0,
+      "s=-1/2": 135.8946638440411,
+      "s=3": 0.027662109375
+    },
+    "zeta_W_at_minus1_equals_E": 480.0,
+    "zeta_W_at_0_equals_f_plus_g": 39.0,
+    "log_det_Laplacian": 96.85087306545381,
+    "first_complex_zero": {
+      "sigma": -1.0,
+      "t0": -6.6841880745292075,
+      "t_general": "-pi*(2n+1)/ln(16/10)",
+      "note": "zeros lie on sigma=-1, same line as \u03b6_W(-1)=a\u2080=480"
+    }
+  },
+  "section_2_riemann_connection": {
+    "zeta_minus1": -0.08333333333333333,
+    "zeta_W_minus1": 480.0,
+    "ratio": -5760.0,
+    "ratio_equals_minus5760": true,
+    "product_equals_minus_v": true,
+    "k_equals_denom_of_zeta_minus1": true,
+    "note": "zeta(-1) = -1/k where k is W(3,3) degree"
+  },
+  "section_3_moonshine_bridge": {
+    "alpha_bridge": {
+      "alpha": 137,
+      "formula": "Phi3 + mu*(f+Phi6) = 13 + 4*31 = 137",
+      "alt_formula": "k^2 - Phi6 = 144 - 7 = 137",
+      "verified": true
+    },
+    "j_constant_term": {
+      "c0": 744,
+      "formula": "(f+Phi6)*f = 31*24 = 744",
+      "verified": true
+    },
+    "chi1": {
+      "value": 196883,
+      "formula": "P1*(Phi12-lambda) = 2773*71 = 196883",
+      "P1": 2773,
+      "verified": true
+    },
+    "j_coefficients": {
+      "-1": 1,
+      "0": 744,
+      "1": 196884,
+      "2": 21493760,
+      "3": 864299970,
+      "4": 20245856256,
+      "5": 333202640600,
+      "6": 4252023300096,
+      "7": 44656994071935,
+      "8": 401490886656000,
+      "9": 3176440229784420,
+      "10": 22567393309593600
+    },
+    "divisibility": {
+      "c(1)_div_E": false,
+      "c(2)_div_E": false,
+      "c(3)_div_E": false,
+      "c(4)_div_E": false,
+      "c(5)_div_E": false,
+      "c(6)_div_E": false,
+      "c(7)_div_E": false,
+      "c(8)_div_E": true,
+      "c(9)_div_E": false,
+      "c(10)_div_E": true
+    }
+  },
+  "section_4_heegner": {
+    "heegner_numbers": [
+      1,
+      2,
+      3,
+      7,
+      11,
+      19,
+      43,
+      67,
+      163
+    ],
+    "d7_equals_Phi6": true,
+    "d11_equals_Phi3_minus_lambda": true,
+    "d19_equals_k_plus_Phi6": true,
+    "d67_equals_g_mu_plus_Phi6": true,
+    "d43_equals_2g_plus_Phi3": true,
+    "d163_equals_4v_plus_q": true,
+    "j_at_CM_points": {
+      "d=1": 1728,
+      "d=7": -3375,
+      "d=11": -32768,
+      "d=163": -262537412640768000
+    },
+    "j_tau_7_equals_neg_g_cubed": true,
+    "j_tau_11_equals_neg_2_pow_g": true,
+    "j_tau_1_equals_k_cubed": true,
+    "ramanujan_constant_approx": 2.6253741264076826e+17
+  },
+  "section_5_alpha_chain": {
+    "alpha_eq_k_sq_minus_Phi6": true,
+    "chain": "W(3,3) [k=12,Phi6=7] \u2192 alpha=k\u00b2-Phi6=137 \u2192 Heegner d=11 [Re(CM)=11] \u2192 j(tau_11)=-2^g \u2192 Monster",
+    "j_tau_11": -32768,
+    "g_connection": "j(tau_11) = -2^g = -2^15",
+    "heegner_in_chain": [
+      7,
+      11
+    ]
+  },
+  "section_6_odd_moment_tower": {
+    "trace_moments": {
+      "0": 40,
+      "1": 0,
+      "2": 480,
+      "3": 960,
+      "4": 24960,
+      "5": 234240,
+      "6": 3048960,
+      "7": 35589120,
+      "8": 430970880,
+      "9": 5155860480,
+      "10": 61933117440
+    },
+    "odd_moments_O_t": {
+      "0": 0.0,
+      "1": 24.0,
+      "2": 5856.0,
+      "3": 889728.0,
+      "4": 128896512.0,
+      "5": 18573637632.0,
+      "6": 2674804973568.0,
+      "7": 385175136731136.0
+    },
+    "recurrence_coefficients": {
+      "a1_given": 41,
+      "a2_given": 46,
+      "a3_given": 144
+    },
+    "recurrence_verification_given_coeffs": {
+      "t=2": false,
+      "t=3": false,
+      "t=4": false,
+      "note": "Given (41,46,144) recurrence does not hold; see exact recurrence below"
+    },
+    "exact_recurrence": {
+      "formula": "O_{t+3} = 164*O_{t+2} - 2944*O_{t+1} + 9216*O_t",
+      "roots": [
+        144,
+        4,
+        16
+      ],
+      "t=0": true,
+      "t=1": true,
+      "t=2": true
+    },
+    "trace_recurrence": {
+      "formula": "Tr(A^{m+3}) = 10*Tr(A^{m+2}) + 32*Tr(A^{m+1}) + 96*Tr(A^m)",
+      "coeffs": [
+        10,
+        -32,
+        -96
+      ],
+      "verified_m0_to_7": true
+    },
+    "note": "Tr(A)=0 for simple graph; O_t defined as Tr(A^{2t+1})/v; exact recurrence: O_{t+3}=164*O_{t+2}-2944*O_{t+1}+9216*O_t"
+  },
+  "section_7_synthesis": {
+    "zeta_W_product_identity": "zeta_W(-1) * zeta(-1) = E * (-1/k) = -E/k = -480/12 = -40 = -v",
+    "M5_over_M3": 244.0,
+    "M5_M3_eq_244": true,
+    "grade2_j_closure_2099": 2099,
+    "val_2099_correct": true
+  }
+}

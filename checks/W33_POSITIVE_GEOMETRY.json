@@ -1,0 +1,125 @@
+{
+  "graph": {
+    "vertices": 40,
+    "edges": 240,
+    "degree": 12,
+    "srg_params": [
+      40,
+      12,
+      2,
+      4
+    ]
+  },
+  "simplicial_complex": {
+    "triangles": 160,
+    "tetrahedra": 40
+  },
+  "matroid": {
+    "ground_set_size": 40,
+    "graphic_matroid_rank": 39,
+    "cycle_rank": 201,
+    "realizable_over_F3": true,
+    "rank_over_F3": 39,
+    "ln_spanning_trees": 93.1619936113399,
+    "spanning_trees_approx": 2.8823037615171646e+40,
+    "chromatic_number_lower_bound": 4.0,
+    "chi_at_3": 0,
+    "hoffman_bound_confirms_not_3colorable": true,
+    "contains_K4": true
+  },
+  "positive_geometry": {
+    "positively_oriented_triangles": 39,
+    "negatively_oriented_triangles": 6,
+    "degenerate_triangles": 115,
+    "total_canonical_form_weight": 45000000000025.16,
+    "mean_canonical_weight": 281250000000.1572,
+    "std_canonical_weight": 3546427559883.2974,
+    "interior_edges": 240,
+    "boundary_edges": 0,
+    "euler_characteristic": -80
+  },
+  "scattering_amplitudes": {
+    "n_loops": 201,
+    "superficial_degree_D4": 324,
+    "superficial_degree_D6": 726,
+    "n_external_legs_from_boundary": 0,
+    "adjacency_spectrum": {
+      "-4": 15,
+      "2": 24,
+      "12": 1
+    },
+    "trace_propagator_m1": 3.07692307648915,
+    "trace_propagator_exact": 3.0769230769230766,
+    "phi3_vertices": 160,
+    "propagators": 240
+  },
+  "grassmannian": {
+    "Gr24_F3_size": 130,
+    "manual_formula": 130,
+    "Gr24_dimension": 4,
+    "W33_mu_parameter": 4,
+    "dimension_equals_mu": true,
+    "totally_isotropic_lines": 40,
+    "lines_through_vertex0": 4,
+    "ratio_W33_to_Gr24": 0.3076923076923077
+  },
+  "tropical_geometry": {
+    "mst_weight_unweighted": 39,
+    "mst_edges": 39,
+    "mst_weight_random": 68.48273609699675,
+    "graph_diameter": 2,
+    "avg_shortest_path": 1.65,
+    "tropical_plucker_violations_in_1000_samples": 158,
+    "tropical_plucker_condition_satisfied": false
+  },
+  "numerology": {
+    "W33_params": {
+      "q": 3,
+      "v": 40,
+      "k": 12,
+      "lam": 2,
+      "mu": 4,
+      "r": 2,
+      "s": -4,
+      "f": 24,
+      "g": 15,
+      "E": 240,
+      "Phi3": 160,
+      "Phi4": 40
+    },
+    "Gr24_dim_equals_mu": true,
+    "Gr24_dim": 4,
+    "mu_parameter": 4,
+    "f_vector": [
+      1,
+      40,
+      240,
+      160,
+      40
+    ],
+    "euler_characteristic_reduced": 81,
+    "alpha_inv_spectral_formula": 137,
+    "alpha_inv_equals_137": true,
+    "edges_equals_E8_roots": true,
+    "E8_roots": 240,
+    "ratio_neg_pos_eigenvalue": 2.0,
+    "r_plus_abs_s": 6,
+    "Gr24_real_dim": 4
+  },
+  "spectral_positivity": {
+    "positive_eigenspace_dim": 25,
+    "negative_eigenspace_dim": 15,
+    "canon_form_pos_triangles": 45000000000022.695,
+    "canon_form_neg_triangles": 2.454583333333299,
+    "total_canonical_form": 45000000000025.15,
+    "net_canonical_form_signed": 45000000000025.16,
+    "winding_number": 33
+  },
+  "metadata": {
+    "script": "W33_POSITIVE_GEOMETRY.py",
+    "reference_arxiv": "2509.25372",
+    "description": "W(3,3) as a positive geometry for scattering amplitudes",
+    "elapsed_seconds": 0.04,
+    "numpy_version": "2.4.4"
+  }
+}

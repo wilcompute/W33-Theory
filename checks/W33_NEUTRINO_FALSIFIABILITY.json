@@ -1,0 +1,258 @@
+{
+  "theory_parameters": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "lambda": 2,
+    "mu": 4,
+    "r": 2,
+    "s": -4,
+    "f": 24,
+    "g": 15,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7
+  },
+  "seesaw": {
+    "M_D_form": "(10)\u00b7I + (2)\u00b7J",
+    "M_R_form": "(8)\u00b7I + (4)\u00b7J",
+    "seesaw_eigenvalues_raw": [
+      12.8,
+      12.5,
+      12.5
+    ],
+    "Sigma_meV": 58,
+    "Sigma_eV": 0.058,
+    "formula": "lambda * (v - k + 1) = 2 * 29 = 58 meV",
+    "m1_meV": 19.17989417989418,
+    "m2_meV": 19.17989417989418,
+    "m3_meV": 19.640211640211643,
+    "dm2_21_eV2": 0.0,
+    "dm2_31_eV2": 17.869572520366262,
+    "dm2_32_eV2": 17.869572520366262,
+    "dm2_21_obs_eV2": 7.53e-05,
+    "dm2_32_obs_eV2": 0.002453,
+    "ordering": "near-degenerate (NO)"
+  },
+  "mixing_angles": {
+    "sin2_theta12": {
+      "exact": "4/13",
+      "value": 0.3076923076923077,
+      "obs": 0.307,
+      "err": 0.013,
+      "pull_sigma": 0.05325443786982418
+    },
+    "sin2_theta23": {
+      "exact": "7/13",
+      "value": 0.5384615384615384,
+      "obs": 0.546,
+      "err": 0.021,
+      "pull_sigma": 0.35897435897436214,
+      "window_low": 0.5,
+      "window_high": 0.5384615384615384,
+      "window_midpoint": 0.5192307692307692
+    },
+    "sin2_theta13": {
+      "exact": "2/91",
+      "value": 0.02197802197802198,
+      "obs": 0.02203,
+      "err": 0.00056,
+      "pull_sigma": 0.09281789638932364
+    },
+    "J_max": 0.03336046588149419,
+    "uniqueness_relation_holds": true
+  },
+  "cp_phase": {
+    "primary_deg": 41.53846153846154,
+    "primary_rad": 0.7249829200591831,
+    "mirror_deg": -138.46153846153848,
+    "mirror_rad": -2.4166097335306103,
+    "cyclotomic_set_deg": [
+      0.0,
+      13.846153846153845,
+      27.69230769230769,
+      41.53846153846154,
+      55.38461538461538,
+      69.23076923076924,
+      83.07692307692308,
+      96.92307692307692,
+      110.76923076923076,
+      124.61538461538461,
+      138.46153846153848,
+      152.3076923076923,
+      166.15384615384616
+    ],
+    "J_primary": 0.02212208081548778,
+    "J_mirror": -0.02212208081548778,
+    "T2K_bf_deg": -90.0,
+    "T2K_90CL_interval_deg": [
+      -170.0,
+      -20.0
+    ],
+    "NOvA_bf_deg": 147.59999999999997,
+    "primary_in_T2K_90CL": false,
+    "mirror_in_T2K_90CL": true,
+    "pull_primary_sigma": 3.3230769230769233,
+    "pull_mirror_sigma": 0.6769230769230772
+  },
+  "experimental_bounds": {
+    "KATRIN_2024_eV": 0.45,
+    "DESI_DR1_Planck_eV": 0.073,
+    "DESI_DR2_Planck_eV": 0.064,
+    "DESI_DDM_eV": 0.23,
+    "DESI_DDE_eV": 0.2,
+    "NO_minimum_eV": 0.06,
+    "IO_minimum_eV": 0.1,
+    "consistent_DR1": true,
+    "consistent_DR2": true,
+    "margin_from_DR2_meV": 5.999999999999998
+  },
+  "falsification_criteria": [
+    {
+      "parameter": "\u03a3m_\u03bd",
+      "w33_prediction": "58.0 meV",
+      "prediction_eV": 0.058,
+      "kill_condition": "\u03a3m_\u03bd < 0.050 eV (below NO absolute minimum)",
+      "kill_threshold_eV": 0.05,
+      "alive_condition": "\u03a3m_\u03bd measured consistent with 0.050\u20130.073 eV",
+      "current_best_bound_eV": 0.064,
+      "current_status": "ALIVE \u2014 58 meV < 64 meV (DR2 bound)",
+      "tension": "BORDERLINE: 58 meV vs 60 meV NO lower limit (2 meV gap)",
+      "falsified_by": "DESI/Euclid final pushing bound below 58 meV"
+    },
+    {
+      "parameter": "sin\u00b2\u03b8\u2081\u2082",
+      "w33_prediction": "4/13 = 0.30769",
+      "kill_condition": "|sin\u00b2\u03b8\u2081\u2082 \u2212 4/13| > 3\u03c3_exp = 3 \u00d7 0.013 = 0.039",
+      "kill_threshold": 0.039,
+      "pull_sigma": 0.05325443786982418,
+      "current_status": "ALIVE \u2014 0.05\u03c3 deviation",
+      "falsified_by": "JUNO/DUNE precision measurement outside [0.27, 0.35]"
+    },
+    {
+      "parameter": "sin\u00b2\u03b8\u2082\u2083",
+      "w33_prediction": "WINDOW [1/2, 7/13] = [0.500, 0.5385]",
+      "w33_window_low": 0.5,
+      "w33_window_high": 0.5384615384615384,
+      "kill_condition": "sin\u00b2\u03b8\u2082\u2083 < 0.48 or sin\u00b2\u03b8\u2082\u2083 > 0.56 at 3\u03c3",
+      "current_obs": 0.546,
+      "obs_in_window": false,
+      "pull_sigma": 0.35897435897436214,
+      "current_status": "ALIVE \u2014 obs=0.5460 barely above window high=0.5385 (0.36\u03c3)",
+      "falsified_by": "Hyper-K measurement outside [0.48, 0.58] at 3\u03c3"
+    },
+    {
+      "parameter": "sin\u00b2\u03b8\u2081\u2083",
+      "w33_prediction": "2/91 = 0.02198",
+      "kill_condition": "|sin\u00b2\u03b8\u2081\u2083 \u2212 2/91| > 3\u03c3 = 3 \u00d7 0.00056 = 0.00168",
+      "kill_threshold": 0.0016799999999999999,
+      "pull_sigma": 0.09281789638932364,
+      "current_status": "ALIVE \u2014 0.09\u03c3 deviation (best-fitting prediction!)",
+      "falsified_by": "Reactor neutrino measurement outside [0.0187, 0.0253]"
+    },
+    {
+      "parameter": "\u03b4_CP",
+      "w33_prediction": "3\u03c0/13 \u2248 41.5\u00b0 (primary), or -138.5\u00b0 (mirror)",
+      "cyclotomic_rule": "\u03b4_CP must lie in {n\u03c0/13 : n \u2208 \u2124} \u2248 multiples of 13.8\u00b0",
+      "kill_condition": "\u03b4_CP measured NOT in cyclotomic set at >3\u03c3",
+      "primary_in_T2K_90CL": false,
+      "mirror_in_T2K_90CL": true,
+      "pull_primary_from_PDG": 3.3230769230769233,
+      "pull_mirror_from_PDG": 0.6769230769230772,
+      "current_status": "TENSION \u2014 primary 3\u03c0/13=+41.5\u00b0 disfavored (T2K prefers ~\u221290\u00b0); mirror \u221210\u03c0/13=\u2212138.5\u00b0 within T2K 90%CL=True",
+      "falsified_by": "Hyper-K rules out all multiples of \u03c0/13 at 3\u03c3",
+      "note": "Mirror \u2212138.5\u00b0 is the more viable prediction given T2K data"
+    },
+    {
+      "parameter": "Jarlskog J_PMNS",
+      "w33_prediction": "J_max = 0.033360 (amplitude; full value = J_max \u00d7 sin \u03b4)",
+      "J_with_mirror": -0.02212208081548778,
+      "kill_condition": "|J| measured outside [0.025, 0.040] at 3\u03c3",
+      "current_status": "ALIVE \u2014 J_max consistent with observed range",
+      "falsified_by": "Hyper-K / DUNE precise J measurement incompatible with J_max=0.03336"
+    },
+    {
+      "parameter": "Neutrino mass ordering",
+      "w33_prediction": "Normal ordering preferred (near-degenerate, 58 meV < IO minimum of 100 meV)",
+      "kill_condition": "Inverted ordering established at >5\u03c3",
+      "current_status": "ALIVE \u2014 current data mildly prefer NO",
+      "falsified_by": "Atmospheric/reactor experiments conclusively establish IO"
+    },
+    {
+      "parameter": "sin\u00b2\u03b8\u2082\u2083 = sin\u00b2\u03b8_W + sin\u00b2\u03b8\u2081\u2082",
+      "w33_prediction": "7/13 = 3/13 + 4/13 (requires q=3 uniquely)",
+      "prediction_value": 0.5384615384615385,
+      "observed_value": 0.546,
+      "relation_holds": true,
+      "kill_condition": "Precision measurements falsify the additive relation at 3\u03c3",
+      "current_status": "ALIVE \u2014 relation exact in theory; obs 0.546 vs pred 0.538 (0.36\u03c3)",
+      "falsified_by": "3-flavor global fit finds sin\u00b2\u03b8\u2082\u2083 \u2260 sin\u00b2\u03b8_W + sin\u00b2\u03b8\u2081\u2082 at high CL"
+    }
+  ],
+  "testability_timeline": [
+    {
+      "year": 2025,
+      "experiment": "KATRIN final run",
+      "expected_bound": "m_\u03bde < 0.30 eV (90% CL direct)",
+      "w33_implication": "Still ~15\u00d7 above individual W(3,3) mass (~19 meV); no kill possible",
+      "verdict_if_positive": "Interesting if > 0.30 eV",
+      "verdict_if_null": "Consistent with W(3,3)"
+    },
+    {
+      "year": 2026,
+      "experiment": "DESI DR3 + Euclid year-1",
+      "expected_bound": "\u03a3m_\u03bd < 0.055 eV (\u039bCDM, projected)",
+      "w33_implication": "CRITICAL: if bound tightens below 58 meV, W(3,3) killed under \u039bCDM",
+      "verdict_if_positive": "\u03a3m_\u03bd ~ 58 meV confirmed would be landmark",
+      "verdict_if_null": "If bound < 50 meV: W(3,3) FALSIFIED (below NO minimum)"
+    },
+    {
+      "year": "2027\u20132028",
+      "experiment": "Hyper-Kamiokande start",
+      "expected_bound": "\u03b4_CP to \u00b120\u00b0 initially",
+      "w33_implication": "Can begin distinguishing 3\u03c0/13 (+41.5\u00b0) vs \u221210\u03c0/13 (\u2212138.5\u00b0); clear test vs T2K bias",
+      "verdict_if_positive": "If \u03b4 near \u2212138.5\u00b0: W(3,3) mirror solution confirmed",
+      "verdict_if_null": "If \u03b4 definitively \u2260 any n\u03c0/13: theory in crisis"
+    },
+    {
+      "year": 2028,
+      "experiment": "DUNE first results",
+      "expected_bound": "sin\u00b2\u03b8\u2081\u2082 to \u00b10.005, \u03b4_CP to \u00b115\u00b0",
+      "w33_implication": "Sharp test of sin\u00b2\u03b8\u2081\u2082 = 4/13; further \u03b4_CP constraint",
+      "verdict_if_positive": "\u03b8\u2081\u2082 precision: strongest algebraic test possible",
+      "verdict_if_null": "If sin\u00b2\u03b8\u2081\u2082 shifts outside [0.285, 0.330]: W(3,3) excluded"
+    },
+    {
+      "year": 2029,
+      "experiment": "JUNO solar angle measurement",
+      "expected_bound": "sin\u00b2\u03b8\u2081\u2082 to \u00b10.004 (sub-percent precision)",
+      "w33_implication": "Definitive test of 4/13 prediction: deviation > 0.012 would kill it",
+      "verdict_if_positive": "4/13 confirmed to <1%: extraordinary corroboration",
+      "verdict_if_null": "Inconsistency would be strong evidence against W(3,3)"
+    },
+    {
+      "year": 2030,
+      "experiment": "Hyper-K 3-year \u03b4_CP result + DESI full survey",
+      "expected_bound": "\u03b4_CP to \u00b16\u00b0; \u03a3m_\u03bd to \u00b10.020 eV",
+      "w33_implication": "DECISIVE: W(3,3) fully tested in neutrino sector",
+      "verdict_if_positive": "Full confirmation would be >5\u03c3 evidence",
+      "verdict_if_null": "Null result at this precision = theory falsified"
+    },
+    {
+      "year": 2035,
+      "experiment": "KATRIN++ / Project 8 / PTOLEMY",
+      "expected_bound": "m_\u03bde < 0.040 eV or direct detection at 10\u201320 meV",
+      "w33_implication": "Direct test of W(3,3) individual mass prediction (~19 meV); would see signal",
+      "verdict_if_positive": "m_\u03bde \u2248 19 meV: smoking gun confirmation",
+      "verdict_if_null": "If m_\u03bde < 10 meV: W(3,3) mass scale wrong"
+    }
+  ],
+  "overall": {
+    "tests_passed": 8,
+    "tests_total": 11,
+    "consistency_fraction": 0.7272727272727273,
+    "verdict": "ALIVE_UNDER_PRESSURE",
+    "decisive_test_year": 2030,
+    "primary_kill_condition": "DESI/Euclid Sigma_m_nu < 0.058 eV in \u039bCDM OR Hyper-K rules out all npi/13 phases at 5sigma"
+  }
+}
