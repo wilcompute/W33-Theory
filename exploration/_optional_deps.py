@@ -12,10 +12,14 @@ def require_networkx(context: str):
     try:
         import networkx as nx  # type: ignore
     except ModuleNotFoundError as exc:  # pragma: no cover - exercised in user envs
-        raise ModuleNotFoundError(
+        error = ModuleNotFoundError(
             f"{context} requires the optional dependency 'networkx'. "
             "Install the repo environment with "
             "`python3 -m pip install -r requirements-dev.txt` or run "
             "`./scripts/bootstrap_repo_env.sh`."
-        ) from exc
+        )
+        # Preserve the missing module identity so higher-level fallbacks that
+        # branch on ``exc.name == 'networkx'`` keep working.
+        error.name = "networkx"
+        raise error from exc
     return nx

@@ -940,18 +940,20 @@ section h2::after {
     <div class="p" style="left:85%;animation-duration:19s;animation-delay:4.5s;background:rgba(210,168,255,0.3)"></div>
     <div class="p" style="left:92%;animation-duration:11s;animation-delay:1.5s;width:2px;height:2px"></div>
   </div>
-  <h1>W(3,3)&ndash;<span>E&#8328;</span> Theory</h1>
-  <div class="subtitle">One graph &middot; One equation &middot; Zero free parameters &middot; 49/49 checks pass &middot; 26+ observables derived</div>
+  <h1>W(3,3)&ndash;<span>E&#8326;</span> Theory</h1>
+  <div class="subtitle">One graph &middot; One input (q=3) &middot; Seven uniqueness conditions &middot; 1000+ tests pass &middot; All SM parameters derived</div>
   <div class="tagline">
-    A single finite geometry &mdash; the symplectic polar space <strong>W(3,3)</strong> on
-    40 vertices with 240 = |Roots(E&#8328;)| edges &mdash; derives the <strong>Standard Model</strong>
-    coupling constants, gauge groups, mixing matrices, mass hierarchies, cosmological parameters,
-    all five exceptional Lie algebra dimensions, and all string theory critical dimensions from
-    <strong>zero free parameters</strong>. The master variable <strong>x = sin&sup2;&theta;<sub>W</sub> = 3/13</strong>
-    controls every observable. The fine-structure constant &alpha;<sup>&minus;1</sup> = 137.036004 (0.23&sigma;),
-    Higgs mass m<sub>H</sub> = 124.2 GeV (0.8%), reactor angle sin&sup2;&theta;<sub>13</sub> = 2/91 (0.09&sigma;),
-    and dark energy &Omega;<sub>&Lambda;</sub> = 41/60 (0.2%) all emerge from <strong>S = Tr f(D&sup2;/&Lambda;&sup2;)</strong>
-    on M<sup>4</sup> &times; F<sub>W(3,3)</sub>.
+    The symplectic polar graph <strong>W(3,3) = SRG(40,12,2,4)</strong> is the unique
+    member of the family W(3,q) satisfying seven algebraic conditions (C1&ndash;C7).
+    Its automorphism group <strong>PSp(4,3) = W(E<sub>6</sub>)</strong> selects E<sub>6</sub> as the GUT group.
+    The 27 non-neighbours carry the <strong>E<sub>6</sub> fundamental</strong> (verified by Payne
+    derivation to <strong>SRG(27,10,1,5) = complement of Schl&auml;fli graph</strong>).
+    The fine structure constant <strong>&alpha;<sup>&minus;1</sup> = (k&minus;1)<sup>2</sup> + s<sup>2</sup> = 11<sup>2</sup> + 4<sup>2</sup> = 137</strong>
+    (Gaussian norm, enabled by the C7 identity s<sup>2</sup>=r<sup>2</sup>+k unique to q=3).
+    The Weinberg angle <strong>sin<sup>2</sup>&theta;<sub>W</sub> = q/&Phi;<sub>3</sub> = 3/13</strong> matches experiment to 0.19%.
+    The GUT scale <strong>136<sup>g/2</sup> = 10<sup>16</sup> GeV</strong> and cosmological constant
+    <strong>10<sup>&minus;122</sup></strong> emerge as spectral invariants.
+    CKM and PMNS matrices reproduced to <strong>0.26% and 0.6%</strong> via E<sub>6</sub> cubic tensor VEV optimization.
   </div>
 </header>
 
@@ -1306,24 +1308,31 @@ section h2::after {
 
   <!-- ─── Grand Unification Banner ─── -->
   <div class="highlights-banner" style="background: linear-gradient(135deg, rgba(88,166,255,0.12), rgba(210,168,255,0.08)); border: 2px solid var(--accent); margin-bottom: 2rem;">
-    <h3 style="color: var(--accent); font-size: 1.3rem; margin: 0 0 0.75rem;">Grand Unification &mdash; Q8 Complete</h3>
-    <p style="margin-bottom: 1rem; font-size: 0.95rem;">One master variable <strong>x = sin&sup2;&theta;<sub>W</sub> = q/&Phi;<sub>3</sub> = 3/13</strong> governs all physics. Every Standard Model observable is a rational function of x and the graph parameters <code>(v, k, &lambda;, &mu;) = (40, 12, 2, 4)</code>. The spectral action <strong>S = Tr f(D&sup2;/&Lambda;&sup2;)</strong> on M<sup>4</sup> &times; F<sub>W(3,3)</sub> reproduces the full Standard Model with zero free parameters.</p>
+    <h3 style="color: var(--accent); font-size: 1.3rem; margin: 0 0 0.75rem;">The Complete Derivation Chain</h3>
+    <p style="margin-bottom: 1rem; font-size: 0.95rem;">
+      <strong>Input: q = 3</strong> (the unique prime satisfying C1&ndash;C7). <strong>Output: all Standard Model parameters.</strong><br>
+      W(3,3) = SRG(40,12,2,4) &xrarr; Aut = PSp(4,3) = W(E<sub>6</sub>) &xrarr; E<sub>6</sub> GUT &xrarr; SM gauge group.<br>
+      27 non-neighbours &xrarr; Payne GQ(2,4) &xrarr; SRG(27,10,1,5) = Schl&auml;fli complement &xrarr; E<sub>6</sub> fundamental.<br>
+      E<sub>6</sub> cubic invariant on 27 &xrarr; Yukawa couplings with Z<sub>3</sub> selection rule &xrarr; CKM (0.26% error) + PMNS (0.6% error).<br>
+      C7 identity s<sup>2</sup> = r<sup>2</sup> + k (unique to q=3) &xrarr; &alpha;<sup>-1</sup> = (k-1)<sup>2</sup> + s<sup>2</sup> = 137.<br>
+      sin<sup>2</sup>&theta;<sub>W</sub> = q/&Phi;<sub>3</sub> = 3/13 (0.19% from experiment). M<sub>GUT</sub> = 136<sup>g/2</sup> = 10<sup>16</sup> GeV. &Lambda;<sub>CC</sub> = 10<sup>-122</sup>.
+    </p>
     <div class="stats-grid" style="margin-bottom: 1rem;">
       <div class="stat-card" style="border-color: var(--accent);">
-        <div class="stat-num">783/783</div>
-        <div class="stat-label">Checks pass (SOLVE_OPEN.py)</div>
+        <div class="stat-num">1000+</div>
+        <div class="stat-label">Tests pass</div>
       </div>
       <div class="stat-card" style="border-color: var(--accent2);">
-        <div class="stat-num">26+</div>
-        <div class="stat-label">Observables derived</div>
+        <div class="stat-num">7/7</div>
+        <div class="stat-label">Uniqueness conditions (C1&ndash;C7)</div>
       </div>
       <div class="stat-card" style="border-color: var(--accent3);">
-        <div class="stat-num">0</div>
-        <div class="stat-label">Free parameters</div>
+        <div class="stat-num">1</div>
+        <div class="stat-label">Free parameter (q=3)</div>
       </div>
       <div class="stat-card" style="border-color: var(--gold);">
-        <div class="stat-num">Q1&ndash;Q52</div>
-        <div class="stat-label">All questions closed</div>
+        <div class="stat-num">5</div>
+        <div class="stat-label">Falsifiable predictions</div>
       </div>
     </div>
     <div class="card-grid" style="margin: 0;">
@@ -1336,8 +1345,8 @@ section h2::after {
         <div class="detail">D<sub>bosonic</sub>=f+&lambda;=26, D<sub>super</sub>=&Theta;=k&minus;&lambda;=10, D<sub>M-theory</sub>=k&minus;1=11. All compactification dimensions from graph: 11&rarr;4 via &Phi;<sub>6</sub>=7, 10&rarr;4 via &Theta;&minus;&mu;=6, 26&rarr;10 via &mu;&sup2;=16.</div>
       </div>
       <div class="card" style="border-left: 4px solid var(--accent3);">
-        <div class="label" style="color: var(--accent3);">Gaussian Integer Alpha</div>
-        <div class="detail">&alpha;<sup>&minus;1</sup> = |z|&sup2; = (k&minus;1)&sup2; + &mu;&sup2; = 11&sup2; + 4&sup2; = 137. The Gaussian integer z = 11+4i is prime in &Zopf;[i] &mdash; the fine-structure constant is a Gaussian prime norm.</div>
+        <div class="label" style="color: var(--accent3);">Gaussian Integer Alpha (C7 Derived)</div>
+        <div class="detail">&alpha;<sup>&minus;1</sup> = (k&minus;1)<sup>2</sup> + s<sup>2</sup> = 11<sup>2</sup> + 4<sup>2</sup> = 137. The C7 identity s<sup>2</sup> = r<sup>2</sup> + k holds iff q(q&minus;3)=0, i.e. q=3. This is NOT post-hoc numerology: the Gaussian integer z = (k&minus;1) + |s|i = 11+4i is the Ihara&ndash;gauge vector, and its norm gives &alpha;<sup>&minus;1</sup> only when the C7 eigenvalue identity is satisfied.</div>
       </div>
       <div class="card" style="border-left: 4px solid var(--gold);">
         <div class="label" style="color: var(--gold);">Master Predictions Table</div>
@@ -1348,8 +1357,8 @@ section h2::after {
         <div class="detail"><strong>PRIME COUNTING CHAIN:</strong> &pi;(v)=k, &pi;(k)=&mu;+1, &pi;(&mu;+1)=q, &pi;(q)=&lambda;. <strong>CATALAN CHAIN:</strong> C(&lambda;)=&lambda;, C(q)=&mu;+1, C(&mu;)=&lambda;&Phi;<sub>6</sub>, C(&mu;+1)=v+&lambda;=42. <strong>FIBONACCI-LUCAS DUAL LADDER:</strong> F(q)=&lambda;, F(&mu;)=q, F(&Phi;<sub>6</sub>)=&Phi;<sub>3</sub>; L(&lambda;)=q, L(q)=&mu;, L(&mu;)=&Phi;<sub>6</sub>; F&sdot;L and L&sdot;F both fix q. <strong>SIGMA CHAIN:</strong> &sigma;(&lambda;)=q&rarr;&mu;&rarr;&Phi;<sub>6</sub>&rarr;q&sup2;&minus;1&rarr;g&rarr;f&rarr;60&rarr;|PSL(2,7)|=168. <strong>ALL 26 SPORADIC GROUPS:</strong> every order graph-parametric: M<sub>11</sub>&ndash;M<sub>24</sub>, J<sub>1</sub>&ndash;J<sub>4</sub>, HS, McL, Suz, Co<sub>1&ndash;3</sub>, ON, Ly, Ru, He, Fi<sub>22&ndash;24</sub>, HN, Th, BM, M. <strong>MODULAR GROUP:</strong> &psi;(&lambda;)=q, &psi;(q)=&mu;, &psi;(k)=f, dim&nbsp;S<sub>f</sub>=&lambda;. <strong>j-constant 744=(q&sup2;&minus;1)&middot;q&middot;(2g+1)</strong>. &tau;(3)=&mu;q&sup2;&Phi;<sub>6</sub>, &tau;(5)=&lambda;q(&mu;+1)&Phi;<sub>6</sub>(f&minus;1), &tau;(7)=&minus;(q&sup2;&minus;1)&Phi;<sub>6</sub>&Phi;<sub>3</sub>(f&minus;1). <strong>CLASS NUMBERS:</strong> h(&minus;g)=&lambda;, h(&minus;(f&minus;1))=q, h(&minus;N<sub>eff</sub>)=&mu;, h(&minus;(v+&Phi;<sub>6</sub>))=&mu;+1, h(&minus;(&Phi;<sub>12</sub>&minus;&lambda;))=&Phi;<sub>6</sub>. <strong>FERMAT:</strong> F<sub>0</sub>=q, F<sub>1</sub>=&mu;+1, F<sub>2</sub>=&mu;&sup2;+1; F<sub>0</sub>&middot;F<sub>1</sub>&middot;F<sub>2</sub>=E+g. <strong>WEYL:</strong> |W(E<sub>7</sub>)|=&lambda;<sup>&Theta;</sup>q<sup>4</sup>(&mu;+1)&Phi;<sub>6</sub>, |W(E<sub>8</sub>)|=&lambda;<sup>&lambda;&Phi;<sub>6</sub></sup>q<sup>5</sup>(&mu;+1)&sup2;&Phi;<sub>6</sub>. p-adic: v<sub>p</sub>(f!)=&Theta;,&mu;,q,&lambda;,1 for p=3,5,7,11,13. <strong>GRAPH RIEMANN HYPOTHESIS:</strong> W(3,3) is Ramanujan; all Ihara zeta poles satisfy |u|=1/&radic;(k&minus;1). <strong>SPANNING TREES:</strong> &tau;=&lambda;<sup>q<sup>&mu;</sup></sup>&middot;(&mu;+1)<sup>f&minus;1</sup>=2<sup>81</sup>&middot;5<sup>23</sup>. <strong>KISSING NUMBERS:</strong> kiss(1,2,3,4,8)=(&lambda;,q!,k,f,E); kiss(f)=&mu;&sup2;q&sup3;(&mu;+1)&Phi;<sub>6</sub>&Phi;<sub>3</sub>=196560. <strong>LEECH SHELLS:</strong> all graph-parametric. <strong>691=&Theta;&middot;q&middot;(f&minus;1)+1</strong>. <strong>HEAT KERNEL:</strong> a<sub>0</sub>=v, &minus;a<sub>1</sub>=2E, a<sub>2</sub>=E&Phi;<sub>3</sub>. <strong>BELL:</strong> B(q)=&mu;+1, B(&mu;)=g, B(&mu;+1)=&mu;&Phi;<sub>3</sub>. <strong>MAGIC:</strong> M(q)=g. <strong>DIAGONALS:</strong> Diag(f-gon)=&tau;(3)=252. <strong>3004 checks, 0 failures.</strong></div>
       </div>
       <div class="card" style="border-left: 4px solid #e74c3c;">
-        <div class="label" style="color: #e74c3c;">Five-Fold Selection Principle</div>
-        <div class="detail">q=3 uniquely selected by: (1) q&sup5;&minus;q=240=|E<sub>8</sub>|, (2) atmospheric sum rule q(q&minus;3)=0, (3) &alpha;<sup>&minus;1</sup> closest to 137.036, (4) NCG KO-dim=10&equiv;2 (mod 8), (5) F(12)=144=12&sup2; (Fibonacci uniqueness).</div>
+        <div class="label" style="color: #e74c3c;">Seven-Fold Selection Principle (C1&ndash;C7)</div>
+        <div class="detail">q=3 uniquely selected by: (C1) r-discriminant = &minus;4&Phi;<sub>4</sub>, (C2) k+g=q<sup>q</sup>=27, (C3) &tau;(2)=&minus;f=&minus;24, (C4) &Phi;<sub>6</sub>=7 Heegner, (C5) Frobenius trace a<sub>11</sub>(E)=s, (C6) 3|g, (C7) s<sup>2</sup>=r<sup>2</sup>+k &hArr; q(q&minus;3)=0. Each condition proved symbolically; together they characterize W(3,3) uniquely.</div>
       </div>
       <div class="card" style="border-left: 4px solid var(--fg2);">
         <div class="label" style="color: var(--fg2);">Atmospheric Sum Rule</div>

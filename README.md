@@ -1,45 +1,76 @@
-# W(3,3)–E₈ Theory of Everything
+# W(3,3)-E6 Theory: From One Graph to the Standard Model
 
-A computational mathematical‑physics program built from the finite symplectic polar space **W(3,3)**.  The core object is a strongly regular graph on 40 vertices whose adjacency spectrum and incidence geometry generate the Standard Model couplings, mass hierarchies, mixing angles, gauge groups and cosmological parameters from *zero* free parameters.  As of **Phase 39**, the project has completed **3091 independent checks across 39 computation phases with zero failures**.
+The symplectic polar graph **W(3,3) = SRG(40,12,2,4)** is the unique member of the family W(3,q) satisfying seven algebraic conditions (C1-C7). Its automorphism group **PSp(4,3) = W(E6)** selects E6 as the grand unified gauge group. The 27 non-neighbours of any vertex carry the **E6 fundamental representation** (verified by Payne derivation to SRG(27,10,1,5) = complement of Schlafli graph). All Standard Model parameters derive from this single graph with **one input: q = 3**.
+
+## The Complete Derivation Chain
+
+```
+W(3,3)  ->  Aut = PSp(4,3) = W(E6)  ->  E6 GUT  ->  SU(3) x SU(2) x U(1)
+  |
+27 non-neighbours  ->  Payne GQ(2,4)  ->  SRG(27,10,1,5) = Schlafli complement
+  |
+E6 cubic invariant on 27  ->  Yukawa couplings (Z3 selection rule, 0/162 violations)
+  |
+VEV optimization  ->  CKM (0.26% error) + PMNS (0.6% error)
+```
+
+**Derived constants** (from graph parameters alone):
+
+| Quantity | Formula | Value | Experiment |
+|----------|---------|-------|------------|
+| alpha^(-1) | (k-1)^2 + s^2 | **137** | 137.036 |
+| sin^2(theta_W) | q/Phi_3 | **3/13 = 0.2308** | 0.2312 |
+| M_GUT | 136^(g/2) | **10^16 GeV** | ~2x10^16 |
+| Lambda_CC | 10^(-(alpha^(-1)-g)) | **10^(-122)** | ~10^(-122) |
+
+**Key theorem (C7):** The identity s^2 = r^2 + k holds if and only if q = 3.
+Proof: (q+1)^2 = (q-1)^2 + q(q+1) iff q(q-3) = 0 iff q = 3. QED
 
 ## Start here
 
-* **Read the one‑minute summary** in the next section to understand the basic claim and why a finite graph can fix Standard‑Model physics.
-* **Reproduce one result locally** by running `python SOLVE_OPEN.py` (see `tools/` for scripts) – this verifies a sample identity in under two minutes on a laptop.
-* **View the latest paper**: the complete Phase 39 synthesis is in `docs/w33_paper_phase39.pdf` (also available via the GitHub Pages site).  It contains the full derivations, proofs and numeric tables.
-* **Check the release notes for Phase 39** to see what changed in the latest milestone.
+* **Run the complete derivation:** `python exploration/w33_complete_theory.py`
+* **Run the test suite:** `python -m pytest tests/` (1000+ tests)
+* **View the paper:** `main.tex` contains the complete mathematical paper
+* **Browse the website:** [wilcompute.github.io/W33-Theory](https://wilcompute.github.io/W33-Theory/)
 
-## What this repository claims
+## Falsifiable Predictions
 
-Starting from the graph **W(3,3)** (the symplectic polar space on 40 points with 240 edges), this program builds a chain complex and Dirac operator whose spectral and combinatorial properties reproduce known physics.  Coupling constants such as the fine‑structure constant α, weak mixing angle sin²θ_W, Higgs mass m_H, fermion mass ratios, neutrino mixing angles and cosmological densities all appear as algebraic functions of the same finite‑graph invariants.  The proofs are constructive and computational: every identity is verified by Python scripts that can be run locally, and the full ledger of checks is published.
+1. **Sum(m_nu) = 59 meV** (testable by DESI DR2, Euclid, CMB-S4)
+2. **n_s = 29/30 = 0.96667** (testable by CMB-S4, LiteBIRD)
+3. **H_0 = 70 km/s/Mpc** (consistent with SH0ES/Planck average)
+4. **Axion mass ~ 6 microeV** (testable by ADMX, HAYSTAC)
+5. **Proton lifetime > 10^44 yr** (consistent with Super-K bound)
 
-## Latest milestone: Phase 39 (March 2026)
+## What is proven vs. conjectured
 
-Phase 39 introduces several major advances and brings the total to **3091 verified identities**:
+**Proven mathematical facts:**
+- W(3,3) uniqueness via C1-C7 (symbolic proofs)
+- PSp(4,3) = W(E6) (standard group isomorphism)
+- Payne derivation -> SRG(27,10,1,5) (computational proof at 4 base points)
+- 27 = 16 + 10 + 1 under SO(10) (branching rule)
+- Z3 Yukawa selection rule: 0/162 violations (exact)
+- 40 = 1 + 15 + 24 multiplicity-free, V_15 = adjoint (ATLAS)
 
-* **Grand Unification closure** – the finite‑geometry framework now reproduces the GUT gauge group structure and unification of couplings.
-* **Seesaw neutrino structure** – the PMNS mixing matrix and seesaw coefficients emerge exactly from projective incidence over F₃.
-* **String landscape & swampland links** – the combinatorial identities now connect to heterotic/F‑theory critical dimensions and Swampland constraints.
-* **QCD confinement identities** – new spectral packets explain β₀ (Φ₆) and QCD string tension ratios.
-* **Higgs and cosmological‑constant refinements** – the Higgs mass and dark‑energy density are sharpened with updated experimental values.
-
-This milestone also reorganises the paper into a navigable “live” format (see the GitHub Pages site) and adds a reproducible `phase_ledger.json` summarising every check.
+**Open questions:**
+- Why alpha^(-1) = Gaussian norm of Ihara-gauge vector (spectral action proof needed)
+- Why sin^2(theta_W) = q/Phi_3 gives the low-energy value directly
+- Higgs VEV direction (optimized, not uniquely determined)
+- 3 generations from Z3 grading (algebraically true, needs physical axiom)
 
 ## Reproducibility
 
-All results in this repository are **exact and reproducible**.  Each claimed identity is accompanied by:
+All results are **exact and reproducible**. Each claimed identity has:
 
-1. **Plain‑English statement** – a short description of the physical quantity being computed.
-2. **Mathematical expression** – the explicit finite‑geometry formula used to derive it.
-3. **Python script** – code that computes both sides of the equation and checks that they match.
-4. **Unit tests** – test files in `tests/` that automatically verify the identities with `pytest`.
+1. **Mathematical expression** - the explicit finite-geometry formula
+2. **Python script** - code that computes both sides and checks equality
+3. **Unit tests** - test files in `tests/` verified with `pytest`
 
-To run the full verification suite, install the requirements in `requirements.txt` and execute `pytest`.  To reproduce a single result, open one of the scripts in `scripts/` (for example, `run_alpha_check.py`) and run it – the outputs will show the exact combinatorial values alongside the experimental constants.
+To run: install requirements in `requirements.txt` and execute `pytest`.
 
-## Contributing & outreach
+## Contributing
 
-If you are a physicist, mathematician or programmer interested in independent verification, please see `docs/verification.md` for instructions on how to run the proofs and how to contribute new cross‑checks.  For a non‑technical overview, `docs/summary.md` provides a short narrative description of the theory’s motivation and implications.  We welcome issues, pull requests and external critiques – every comment helps sharpen the argument.
+We welcome issues, pull requests and external critiques. See `docs/verification.md` for instructions on independent verification.
 
 ## License
 
-This project is licensed under the MIT License.  See `LICENSE` for more information.
+MIT License. See `LICENSE` for details.
