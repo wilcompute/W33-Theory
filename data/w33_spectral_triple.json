@@ -1,0 +1,52 @@
+{
+  "spectrum": {
+    "12": 1,
+    "2": 24,
+    "-4": 15
+  },
+  "moments_adjacency": {
+    "0": 40.0,
+    "1": 0.0,
+    "2": 480.0,
+    "3": 960.0,
+    "4": 24960.0,
+    "5": 234240.0,
+    "6": 3048960.0
+  },
+  "moments_centered": {
+    "0": 40.0,
+    "1": 40.0,
+    "2": 520.0,
+    "3": 2440.0,
+    "4": 31720.0,
+    "5": 373480.0,
+    "6": 4855240.0
+  },
+  "moments_laplacian": {
+    "0": 40.0,
+    "1": 480.0,
+    "2": 6240.0,
+    "3": 85440.0,
+    "4": 1223040.0,
+    "5": 18128640.0,
+    "6": 275658240.0
+  },
+  "bose_mesner_dim": 3,
+  "connes_algebra_needed": "C + H + M_3(C)  (dim 14 over R)",
+  "w33_commutant": "C + C + C  (dim 3)",
+  "ko_dim_achievable": "KO-dim 0 with J=I, gamma=spectral sign",
+  "fundamental_obstacle": "Bose-Mesner algebra C+C+C != Connes A_F = C+H+M_3(C)",
+  "proven_facts": [
+    "40 = 1 + 24 + 15 multiplicity-free decomposition under PSp(4,3)",
+    "V_15 = adjoint of PSp(4,3)",
+    "Payne derivation -> SRG(27,10,1,5) = complement of Schlafli",
+    "ker(NN^T) = V_15 (gauge sector massless from geometry)",
+    "Tr(A^2) = vk = 480, Tr(A^3) = 6T = 960"
+  ],
+  "not_proven": [
+    "alpha^-1 = 137 (post-hoc Gaussian norm, not derived)",
+    "sin^2 theta_W = 3/13 (pattern match, not spectral action)",
+    "SM gauge group from W(3,3) algebra (wrong algebra type)",
+    "KO-dimension 6 (cannot achieve with natural choices)"
+  ]
+}

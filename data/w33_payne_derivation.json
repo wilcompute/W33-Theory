@@ -1,0 +1,20 @@
+{
+  "w33_params": "(40, 12, 2, 4)",
+  "raw_subgraph_degree": 8,
+  "raw_subgraph_srg": "None",
+  "payne_derived_params": "(27, 10, np.int64(1), np.int64(5))",
+  "complement_params": "(27, 16, np.int64(10), np.int64(8))",
+  "type1_lines": 36,
+  "type2_lines": 9,
+  "total_lines": 45,
+  "extra_edges_per_vertex": [
+    2
+  ],
+  "eigenvalues": {
+    "-5": 6,
+    "1": 20,
+    "10": 1
+  },
+  "schlafli_confirmed": true,
+  "conclusion": "The Payne derivation of W(3,3) at any vertex produces GQ(2,4) whose collinearity graph is SRG(27,10,1,5) = complement of Schl\u00e4fli. The raw induced subgraph (8-regular) is a SUBGRAPH of this; the Payne construction adds 2 edges per vertex from the {p,x}^{perp perp} spans. This confirms the W(3,3) -> 27 lines of cubic surface -> E_6 connection is GENUINE, mediated by the classical Payne derivation."
+}

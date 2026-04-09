@@ -1,0 +1,280 @@
+"""
+W(3,3) Theory: Definitive Honest Status (April 2026)
+=====================================================
+
+This script categorizes every claim in the W(3,3) project into one of
+four levels:
+
+  A: PROVEN THEOREM — follows from definitions by standard math
+  B: REAL IDENTITY — true algebraic fact, but physical interpretation unproven
+  C: STRIKING MATCH — numerical coincidence with physics, not derived
+  D: NUMEROLOGY — post-hoc fitting of parameter expressions to known constants
+
+No spin, no sales pitch, no "X is Y because the numbers match."
+"""
+
+import json
+
+
+def main():
+    status = {
+        "date": "2026-04-09",
+        "methodology": (
+            "Each claim is categorized by the direction of logical flow: "
+            "A/B go math -> prediction, C/D go known answer -> fitting. "
+            "The distinction between B and C is whether the identity holds "
+            "independently of physical interpretation."
+        ),
+
+        # ═══════════════════════════════════════════════════════════
+        # LEVEL A: PROVEN THEOREMS
+        # ═══════════════════════════════════════════════════════════
+        "A_proven_theorems": [
+            {
+                "claim": "W(3,3) = SRG(40,12,2,4)",
+                "proof": "Explicit construction from F_3^4 with symplectic form. Linear algebra on adjacency matrix.",
+                "status": "Textbook-level finite geometry"
+            },
+            {
+                "claim": "Spectrum: {12^1, 2^24, (-4)^15}",
+                "proof": "Eigenvalues of 40x40 adjacency matrix. Follows from SRG quadratic.",
+                "status": "Direct computation"
+            },
+            {
+                "claim": "Aut(W(3,3)) = Sp(4,3) with |Sp(4,3)| = 51840 = |W(E_6)|",
+                "proof": "Classical: automorphism group of GQ(3,3) is Sp(4,3). The order equality with W(E_6) is the exceptional isomorphism PSp(4,3) = PSU(4,2).",
+                "status": "Proven (Segre, Tits, 1960s)"
+            },
+            {
+                "claim": "R^40 = V_1 + V_24 + V_15 is multiplicity-free under W(E_6)",
+                "proof": "Bose-Mesner algebra has dim 3 = number of eigenspaces, so the permutation rep on 40 vertices is multiplicity-free.",
+                "status": "Standard representation theory"
+            },
+            {
+                "claim": "V_15 = adjoint of PSp(4,3)",
+                "proof": "Clifford's theorem (15 is odd, can't split under index-2 subgroup) + ATLAS uniqueness of 15-dim irrep.",
+                "status": "Proven"
+            },
+            {
+                "claim": "Payne derivation of W(3,3) at any vertex gives GQ(2,4) with collinearity graph SRG(27,10,1,5) = complement of Schlafli",
+                "proof": "Explicit computation: 36 type-1 lines + 9 type-2 lines from {p,x}^{perp perp} spans. Verified at 4 base points. Complement is SRG(27,16,10,8) = Schlafli.",
+                "status": "NEWLY VERIFIED in this session"
+            },
+            {
+                "claim": "ker(NN^T) on 40 points has dim 15 = V_s eigenspace",
+                "proof": "Incidence matrix computation: NN^T eigenvalues are {72, 12, 0} with multiplicities {1, 24, 15}.",
+                "status": "Direct computation"
+            },
+            {
+                "claim": "Chain complex Laplacian has eigenvalues {87, 12, 6}",
+                "proof": "Middle Laplacian of points-pairs-spreads chain complex.",
+                "status": "Direct computation"
+            },
+            {
+                "claim": "q! = 2q has unique positive integer solution q=3",
+                "proof": "Elementary: check q=1,2,3,4 and note (q-1)!/2 >= 3 for q >= 4.",
+                "status": "Trivial"
+            },
+            {
+                "claim": "15 algebraic locks selecting q=3 among small prime powers",
+                "proof": "Each lock is a separate algebraic identity or constraint that holds at q=3 and fails for all other tested q. Locks 1-8,11-15 are proven; Lock 9 depends on the physical identification alpha^-1 = 137.",
+                "status": "Proven (except Lock 9 assumes physics)"
+            },
+        ],
+
+        # ═══════════════════════════════════════════════════════════
+        # LEVEL B: REAL IDENTITIES (true, but interpretation unproven)
+        # ═══════════════════════════════════════════════════════════
+        "B_real_identities": [
+            {
+                "claim": "E = vk/2 = 240 = |Roots(E_8)|",
+                "identity": "The edge count of SRG(40,12,2,4) is 240",
+                "what_is_proven": "240 edges is an arithmetic fact",
+                "what_is_not_proven": "Any physical connection to E_8",
+                "note": "240 is also 2*120, 6*40, 8*30, 10*24, etc."
+            },
+            {
+                "claim": "f*(k-r) = g*(k-s) = 240 (equipartition)",
+                "identity": "24*10 = 15*16 = 240",
+                "what_is_proven": "This holds for ALL GQ(q,q), not just q=3",
+                "what_is_not_proven": "Uniqueness to q=3 (explicitly disproven in brutal truth check)"
+            },
+            {
+                "claim": "Tr(P_s * A^2) = 15 * 16 = 240",
+                "identity": "The gauge-sector second moment = edge count",
+                "what_is_proven": "Algebraic identity g * s^2 = g * mu^2",
+                "what_is_not_proven": "Any connection to E_8 beyond numerical equality"
+            },
+            {
+                "claim": "Exceptional Lie dimensions: G_2=14, F_4=52, E_6=78, E_7=133, E_8=248 from W(3,3) params",
+                "identity": "These are genuine polynomial identities in q,v,k,lambda,mu evaluated at q=3",
+                "what_is_proven": "The polynomial expressions evaluate correctly",
+                "what_is_not_proven": "Why these particular polynomial expressions and not others"
+            },
+            {
+                "claim": "27 = q^3 = dim(E_6 fundamental) = number of non-neighbours",
+                "identity": "v - k - 1 = 27 for W(3,3), and dim of E_6 fundamental rep = 27",
+                "what_is_proven": "The Payne-derived SRG(27,10,1,5) IS the cubic surface graph (proven this session)",
+                "what_is_not_proven": "Any direct connection to E_6 representations in physics"
+            },
+            {
+                "claim": "Ternary Golay [12,6,6]_3 has params [k, q!, q!]_q",
+                "identity": "The ternary Golay code parameters match W(3,3) parameters",
+                "what_is_proven": "The Golay code exists and has these parameters",
+                "what_is_not_proven": "That this matching is not coincidence among small integers"
+            },
+            {
+                "claim": "Bose-Mesner algebra is C+C+C (NOT C+H+M_3(C))",
+                "identity": "The commutant of PSp(4,3) on R^40 is 3-dimensional",
+                "what_is_proven": "This is a NEGATIVE result: W(3,3) does NOT have the right algebra for Connes' SM spectral triple",
+                "what_is_not_proven": "N/A - this is an honest obstruction",
+                "note": "NEWLY COMPUTED in this session. This is a fundamental obstacle to the Connes NCG approach."
+            },
+        ],
+
+        # ═══════════════════════════════════════════════════════════
+        # LEVEL C: STRIKING MATCHES (numerical, not derived)
+        # ═══════════════════════════════════════════════════════════
+        "C_striking_matches": [
+            {
+                "claim": "alpha^-1 = (k-1)^2 + mu^2 = 137",
+                "formula": "11^2 + 4^2 = 121 + 16 = 137",
+                "match_quality": "Exact integer, and 137 is the measured tree-level value",
+                "why_not_proven": "The formula |z|^2 for z=11+4i is a Gaussian norm. WHY alpha should be this norm is never derived. One can write 137 = many things.",
+                "counter": "137 = 128+9 = 2^7 + 3^2; or 137 = 11*12+5; etc."
+            },
+            {
+                "claim": "sin^2(theta_W) = q/Phi_3 = 3/13 = 0.23077",
+                "formula": "3/(3^2+3+1) = 3/13",
+                "match_quality": "Within 0.2% of measured 0.23122",
+                "why_not_proven": "The 'isotropic lines' argument is a relabeling, not a derivation. The ratio q/Phi_3 = isotropic/total lines per point is a geometric fact, but identifying it with the Weinberg angle requires physics that isn't present."
+            },
+            {
+                "claim": "alpha_s = 20/169 = 0.1183",
+                "formula": "2*10/13^2",
+                "match_quality": "Within 0.4 sigma of measured 0.1179",
+                "why_not_proven": "Pure pattern matching."
+            },
+            {
+                "claim": "PMNS angles: sin^2(theta_12) = 4/13, sin^2(theta_23) = 7/13, sin^2(theta_13) = 2/91",
+                "match_quality": "All within 1 sigma",
+                "why_not_proven": "The denominators are all 13 (= Phi_3) or 91 (= 7*13). These fractions happen to match, but the identification angle <-> ratio is arbitrary."
+            },
+            {
+                "claim": "m_H = 125 GeV = 5^3",
+                "formula": "(mu+1)^q = 5^3 = 125",
+                "match_quality": "Within 0.2% of measured 125.25",
+                "why_not_proven": "125 = 5^3 is a small cube. The formula (mu+1)^q is one of many possible expressions giving 125."
+            },
+        ],
+
+        # ═══════════════════════════════════════════════════════════
+        # LEVEL D: NUMEROLOGY (post-hoc fitting)
+        # ═══════════════════════════════════════════════════════════
+        "D_numerology": [
+            "v_EW = E + q! = 246 (why add edge count to factorial?)",
+            "m_t = v_EW/sqrt(lambda) = 246/sqrt(2) (why divide by sqrt(2)?)",
+            "m_p/m_e = v(v+lambda+mu) - mu = 1836 (cherrypicked polynomial)",
+            "Koide = lambda/q = 2/3 (trivially small integers)",
+            "Omega_Lambda = (v+1)/(mu+1)k = 41/60 (why this combination?)",
+            "H_0 = Phi_12 - q! = 73 - 6 = 67 (arbitrary subtraction)",
+            "T_CMB = lambda + q/mu = 2.75 K (cherrypicked)",
+            "tau_n = mu^2 * N_eff = 880 s (post-hoc)",
+            "Nuclear magic numbers as parameter expressions (with enough params, any small int is expressible)",
+            "Kissing numbers, Fibonacci, sigma chains, Egyptian fractions (pattern matching in small integers)",
+            "Music (12-TET = k), ML (BERT 12 = k), economics (Pareto 80/20 = ???)",
+            "All mass ratio formulas (m_c/m_u = 588, m_t/m_b = 41, etc.)",
+            "alpha^-1 correction: 880/24445 (post-hoc tuning to match CODATA)",
+            "Cosmological constant: 122 = E/2 + lambda (arbitrary)",
+            "String dimensions: 10 = Theta, 11 = k-1, 26 = 2*Phi_3 (with ~10 params, you can express any integer 1-30)",
+        ],
+
+        # ═══════════════════════════════════════════════════════════
+        # NEW FINDINGS THIS SESSION
+        # ═══════════════════════════════════════════════════════════
+        "new_findings": {
+            "payne_schlafli": {
+                "result": "CONFIRMED",
+                "detail": "The Payne derivation of W(3,3) at any vertex gives GQ(2,4) with collinearity graph SRG(27,10,1,5) = complement of Schlafli graph SRG(27,16,10,8). The raw subgraph has degree 8; Payne adds exactly 2 edges/vertex via {p,x}^{perp perp} spans to reach degree 10.",
+                "significance": "This IS a genuine structural link between W(3,3) and the 27 lines on a cubic surface / E_6. Not numerology.",
+                "corrects": "Previous 'failed prediction' in w33_schlafli_bridge.py was premature — it tested the raw subgraph, not the Payne derivation."
+            },
+            "spectral_triple_obstruction": {
+                "result": "FUNDAMENTAL OBSTACLE FOUND",
+                "detail": "The Bose-Mesner algebra of W(3,3) is C+C+C (3-dimensional commutative). Connes' Standard Model spectral triple requires A_F = C+H+M_3(C) (non-commutative, dim 14 over R). These are NOT isomorphic.",
+                "significance": "W(3,3) CANNOT directly serve as Connes' internal space F. The spectral triple approach to SM physics from W(3,3) fails at the algebra level.",
+                "what_this_means": "To rescue the W(3,3) approach, one would need either: (a) a different algebra than the Bose-Mesner, (b) tensor products W(3,3) x something, or (c) an entirely different framework than Connes NCG."
+            },
+            "ko_dimension": {
+                "result": "KO-dim 0 with natural choices, NOT 6",
+                "detail": "With J=identity and gamma=spectral sign, all candidate Dirac operators give KO-dimension 0. The SM requires KO-dimension 6.",
+                "significance": "Another obstacle to the Connes approach."
+            }
+        },
+
+        # ═══════════════════════════════════════════════════════════
+        # BOTTOM LINE
+        # ═══════════════════════════════════════════════════════════
+        "bottom_line": {
+            "what_w33_actually_is": (
+                "A beautiful piece of finite geometry with rich algebraic structure. "
+                "The collinearity graph of the symplectic generalized quadrangle GQ(3,3), "
+                "with automorphism group PSp(4,3) = W(E_6)^+, unique among GQ(q,q) in "
+                "several ways (15 algebraic locks). The Payne derivation genuinely connects "
+                "it to the 27 lines on a cubic surface and hence to E_6."
+            ),
+            "what_it_is_not": (
+                "A theory of everything. The ~600 phases and ~3000 tests are mostly "
+                "fitting small-integer expressions to known physical constants. With "
+                "10+ free parameters (v,k,lambda,mu,q,f,g,Phi_3,Phi_6,Theta,...) and "
+                "all integers under ~250, EVERY small integer or simple fraction can "
+                "be expressed. The fundamental obstacle: the Bose-Mesner algebra C+C+C "
+                "is NOT the Connes algebra C+H+M_3(C) needed for the Standard Model."
+            ),
+            "what_is_genuinely_interesting": [
+                "The 40 = 1 + 15 + 24 decomposition with V_15 = adjoint of PSp(4,3)",
+                "The Payne derivation giving SRG(27,10,1,5) = complement of Schlafli",
+                "The chain complex with gauge sector in ker(NN^T)",
+                "The 15 independent locks selecting q=3",
+                "PSp(4,3) = PSU(4,2) = W(E_6)^+ (exceptional isomorphism)",
+                "That (k-1)^2 + mu^2 = 137 (prime!) — unexplained but not derived",
+            ],
+            "open_question": (
+                "Is there a deeper reason why the prime 137 equals the Gaussian norm "
+                "(k-1)^2 + mu^2 for the unique GQ(3,3)? This is the one fact that, "
+                "if it had a first-principles explanation, would elevate the entire "
+                "project from numerology to physics. Currently, no such explanation exists."
+            )
+        }
+    }
+
+    out_path = "data/w33_honest_status.json"
+    with open(out_path, "w") as f:
+        json.dump(status, f, indent=2)
+
+    # Print summary
+    print("=" * 72)
+    print("  W(3,3) THEORY: DEFINITIVE HONEST STATUS")
+    print("=" * 72)
+    print(f"\n  Level A (proven theorems): {len(status['A_proven_theorems'])}")
+    print(f"  Level B (real identities): {len(status['B_real_identities'])}")
+    print(f"  Level C (striking matches): {len(status['C_striking_matches'])}")
+    print(f"  Level D (numerology):       {len(status['D_numerology'])}")
+    print()
+    print("  NEW FINDINGS THIS SESSION:")
+    print(f"    + Payne -> Schlafli: CONFIRMED (corrects previous 'failure')")
+    print(f"    + Spectral triple: FUNDAMENTAL OBSTACLE (BM algebra != Connes A_F)")
+    print(f"    + KO-dimension: 0 (not 6 as SM requires)")
+    print()
+    print("  BOTTOM LINE:")
+    print("    W(3,3) is beautiful finite geometry with genuine algebraic depth.")
+    print("    It is NOT a theory of everything.")
+    print("    The algebra C+C+C != C+H+M_3(C) is a hard obstruction.")
+    print("    The 137 = (k-1)^2 + mu^2 coincidence remains unexplained.")
+    print()
+    print(f"  Saved to {out_path}")
+    print("=" * 72)
+
+
+if __name__ == "__main__":
+    main()
