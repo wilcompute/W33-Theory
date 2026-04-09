@@ -1,0 +1,27 @@
+{
+  "date": "2026-04-09",
+  "source": "ATLAS of Finite Groups (brauer.maths.qmul.ac.uk/Atlas/clas/U42/)",
+  "group": "PSU(4,2) = PSp(4,3) = POmega(5,3) = POmega(-1,6,2)",
+  "order": 25920,
+  "factorization": "2^6 * 3^4 * 5",
+  "conjugacy_classes": 20,
+  "irreps_over_Z": [6, 15, 15, 20, 24, 60],
+  "irreps_over_Z_omega": [5, 5, 10, 10, 30, 45],
+  "permutation_rep_40": {
+    "decomposition": "1 + 15 + 24",
+    "multiplicity_free": true,
+    "proof": "adjacency algebra dim = 3 = number of SRG eigenvalues"
+  },
+  "maximal_subgroups": [
+    {"order": 960, "index": 27, "structure": "2^4:A_5", "w33_meaning": "spreads = q^3"},
+    {"order": 720, "index": 36, "structure": "S_6", "w33_meaning": "C(q^2,2)"},
+    {"order": 648, "index": 40, "structure": "3^{1+2}:2A_4", "w33_meaning": "points = v"},
+    {"order": 648, "index": 40, "structure": "3^3:S_4", "w33_meaning": "points = v (second orbit)"},
+    {"order": 576, "index": 45, "structure": "2.(A_4 x A_4).2", "w33_meaning": "lines = C(Phi_4,2)"}
+  ],
+  "critical_gap_status": "CLOSED",
+  "V15_irreducible": true,
+  "V15_is_adjoint": true,
+  "V24_irreducible": true,
+  "argument": "multiplicity-free decomposition 40=1+15+24 under PSU(4,2), both 15 and 24 confirmed as irrep dimensions by ATLAS"
+}
