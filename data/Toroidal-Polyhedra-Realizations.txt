@@ -1,0 +1,319 @@
+Csaszar Polyhedron (version 1)
+Vertices:  	7  (2[6] + 2[6] + 2[6] + 1[6])
+Faces:	14  (triangles: 2 isosceles + 2 * 3 acute + 2 * 3 obtuse)
+Edges:	21  (10 different lengths)
+Symmetry:  	2-fold Cyclic  (C2)
+Dual Toroid:  	Szilassi Polyhedron
+(values below based on the description from "On Three Classes of Regular Toroids", 2004, by Lajos Szilassi)
+Minimum Dihedral Angle:  	≈18.287093393 degrees
+Maximum Dihedral Angle:  	≈352.082984808 degrees
+Edge 1 (2):  	3
+Edge 2 (1):  	2*sqrt(5)    	≈4.4721359549995793928
+Edge 3 (2):  	sqrt(26)    	≈5.0990195135927848300
+Edge 4 (4):  	sqrt(37)    	≈6.0827625302982196890
+Edge 5 (2):  	sqrt(38)    	≈6.1644140029689764503
+Edge 6 (2):  	3*sqrt(5)    	≈6.7082039324993690892
+Edge 7 (2):  	6*sqrt(2)    	≈8.4852813742385702928
+Edge 8 (2):  	sqrt(149)    	≈12.206555615733702952
+Edge 9 (2):  	sqrt(214)    	≈14.628738838327793457
+Edge 10 (2):  	9*sqrt(3)    	≈15.588457268119895642
+Volume:	125  [EXACT]
+
+V0 = ( 3.0, -3.0, -7.5)
+V1 = (-3.0,  3.0, -7.5)
+V2 = ( 3.0,  3.0, -6.5)
+V3 = (-3.0, -3.0, -6.5)
+V4 = ( 1.0,  2.0, -4.5)
+V5 = (-1.0, -2.0, -4.5)
+V6 = ( 0.0,  0.0,  7.5)
+
+Faces:
+{ 0, 1, 2 }
+{ 0, 2, 5 }
+{ 0, 5, 4 }
+{ 0, 4, 6 }
+{ 0, 6, 3 }
+{ 0, 3, 1 }
+{ 1, 3, 4 }
+{ 1, 4, 5 }
+{ 1, 5, 6 }
+{ 1, 6, 2 }
+{ 2, 6, 4 }
+{ 2, 4, 3 }
+{ 2, 3, 5 }
+{ 5, 3, 6 }
+
+Csaszar Polyhedron (version 2)
+Vertices:  	7  (2[6] + 2[6] + 2[6] + 1[6])
+Faces:	14  (triangles: 2 isosceles right + 2 * 2 other isosceles + 2 acute + 2 * 3 obtuse)
+Edges:	21  (9 different lengths)
+Symmetry:  	2-fold Cyclic  (C2)
+Dual Toroid:  	Szilassi Polyhedron
+(values below based on the description from "On Three Classes of Regular Toroids", 2004, by Lajos Szilassi)
+Minimum Dihedral Angle:  	≈35.905157448 degrees
+Maximum Dihedral Angle:  	≈343.739795292 degrees
+Edge 1 (1):  	2*sqrt(5)    	≈4.4721359549995793928
+Edge 2 (4):  	sqrt(86)    	≈9.27361849549570375252
+Edge 3 (2):  	5*sqrt(6)    	≈12.247448713915890491
+Edge 4 (1):  	16
+Edge 5 (6):  	8*sqrt(5)    	≈17.888543819998317571
+Edge 6 (2):  	sqrt(2*(183−4*sqrt(15)))    	≈18.30344593868435105496
+Edge 7 (2):  	sqrt(2*(183+4*sqrt(15)))    	≈19.924453989247969730
+Edge 8 (2):  	8*sqrt(10)    	≈25.298221281347034656
+Edge 9 (1):  	8*sqrt(15)    	≈30.983866769659335081
+Volume:	16*(21*sqrt(15)−2)    	≈1269.3224043256920734
+
+C0 = 15.4919333848296675407170615991 = 4 * sqrt(15)
+
+V0 = (  C0,  0.0, -10.0)
+V1 = ( -C0,  0.0, -10.0)
+V2 = ( 0.0,  8.0,  -6.0)
+V3 = ( 0.0, -8.0,  -6.0)
+V4 = (-1.0,  2.0,   1.0)
+V5 = ( 1.0, -2.0,   1.0)
+V6 = ( 0.0,  0.0,  10.0)
+
+Faces:
+{ 0, 1, 2 }
+{ 0, 2, 5 }
+{ 0, 5, 4 }
+{ 0, 4, 6 }
+{ 0, 6, 3 }
+{ 0, 3, 1 }
+{ 1, 3, 4 }
+{ 1, 4, 5 }
+{ 1, 5, 6 }
+{ 1, 6, 2 }
+{ 2, 6, 4 }
+{ 2, 4, 3 }
+{ 2, 3, 5 }
+{ 5, 3, 6 }
+
+Csaszar Polyhedron (version 3)
+Vertices:  	7  (2[6] + 2[6] + 2[6] + 1[6])
+Faces:	14  (triangles: 2 isosceles right + 2 other isosceles + 2 right + 2 acute + 2 * 3 obtuse)
+Edges:	21  (9 different lengths)
+Symmetry:  	2-fold Cyclic  (C2)
+Dual Toroid:  	Szilassi Polyhedron
+(values below based on the description from "On Three Classes of Regular Toroids", 2004, by Lajos Szilassi)
+Minimum Dihedral Angle:  	≈15.43708483453 degrees
+Maximum Dihedral Angle:  	≈296.294203369 degrees
+Edge 1 (2):  	3*sqrt(11−4*sqrt(2))    	≈6.9345736534100334151
+Edge 2 (1):  	6*sqrt(2)    	≈8.4852813742385702928
+Edge 3 (2):  	3*sqrt(19−4*sqrt(2))    	≈10.958481270439283743
+Edge 4 (2):  	12
+Edge 5 (4):  	3*sqrt(11+4*sqrt(2))    	≈12.2438428708241523952
+Edge 6 (2):  	3*sqrt(35−4*sqrt(2))    	≈16.250794188425640702
+Edge 7 (5):  	12*sqrt(2)    	≈16.970562748477140586
+Edge 8 (2):  	12*sqrt(3)    	≈20.784609690826527522
+Edge 9 (1):  	24
+Volume:	72*(11−2*sqrt(2))    	≈588.35324701827431297
+
+V0 = ( 12.0,  0.0,  -C0)
+V1 = (-12.0,  0.0,  -C0)
+V2 = (  0.0,   C0,  0.0)
+V3 = (  0.0,  -C0,  0.0)
+V4 = (  3.0, -3.0, -3.0)
+V5 = ( -3.0,  3.0, -3.0)
+V6 = (  0.0,  0.0,   C0)
+
+Faces:
+{ 0, 1, 2 }
+{ 0, 2, 5 }
+{ 0, 5, 4 }
+{ 0, 4, 6 }
+{ 0, 6, 3 }
+{ 0, 3, 1 }
+{ 1, 3, 4 }
+{ 1, 4, 5 }
+{ 1, 5, 6 }
+{ 1, 6, 2 }
+{ 2, 6, 4 }
+{ 2, 4, 3 }
+{ 2, 3, 5 }
+{ 5, 3, 6 }
+
+Csaszar Polyhedron (version 4)
+Vertices:  	7  (2[6] + 2[6] + 2[6] + 1[6])
+Faces:	14  (triangles: 2 equilateral + 2 isosceles + 2 * 5 obtuse)
+Edges:	21  (8 different lengths)
+Symmetry:  	2-fold Cyclic  (C2)
+Dual Toroid:  	Szilassi Polyhedron
+(values below based on the description from "On Three Classes of Regular Toroids", 2004, by Lajos Szilassi)
+Minimum Dihedral Angle:  	≈41.659881811 degrees
+Maximum Dihedral Angle:  	≈340.139216868 degrees
+Edge 1 (2):  	sqrt(1238)/6    	≈5.8642040285863936582
+Edge 2 (1):  	10
+Edge 3 (4):  	3*sqrt(70)/2    	≈12.549900398011133220
+Edge 4 (2):  	2*sqrt(374)/3    	≈12.892719737209144120
+Edge 5 (2):  	2*sqrt(662)/3    	≈17.152907107024809578
+Edge 6 (2):  	3*sqrt(134)/2    	≈17.363755354185338210
+Edge 7 (2):  	sqrt(1398)/2    	≈18.694919095839917542
+Edge 8 (6):  	24
+Volume:	2644*sqrt(2)/3    	≈1246.3935529714877697
+
+C0 = 0.7071067811865475244008443621048 = sqrt(2) / 2
+C1 = 3.77123616632825346347116993123   = 8 * sqrt(2) / 3
+C2 = 8.48528137423857029281013234526   = 6 * sqrt(2)
+
+V0 = ( 12.0,   0.0, -C2)
+V1 = (-12.0,   0.0, -C2)
+V2 = (  0.0,  12.0,  C2)
+V3 = (  0.0, -12.0,  C2)
+V4 = ( -4.0,  -3.0,  C0)
+V5 = (  4.0,   3.0,  C0)
+V6 = (  0.0,   0.0,  C1)
+
+Faces:
+{ 0, 1, 2 }
+{ 0, 2, 5 }
+{ 0, 5, 4 }
+{ 0, 4, 6 }
+{ 0, 6, 3 }
+{ 0, 3, 1 }
+{ 1, 3, 4 }
+{ 1, 4, 5 }
+{ 1, 5, 6 }
+{ 1, 6, 2 }
+{ 2, 6, 4 }
+{ 2, 4, 3 }
+{ 2, 3, 5 }
+{ 5, 3, 6 }
+
+Csaszar Polyhedron (version 5)
+Vertices:  	7  (2[6] + 2[6] + 2[6] + 1[6])
+Faces:	14  (triangles: 2 equilateral + 2 * 6 obtuse)
+Edges:	21  (9 different lengths)
+Symmetry:  	2-fold Cyclic  (C2)
+Dual Toroid:  	Szilassi Polyhedron
+(values below based on the description from "On Three Classes of Regular Toroids", 2004, by Lajos Szilassi)
+Minimum Dihedral Angle:  	≈21.801409486 degrees
+Maximum Dihedral Angle:  	≈306.618274831 degrees
+Edge 1 (2):  	5*sqrt(2)    	≈7.0710678118654752440
+Edge 2 (1):  	6*sqrt(2)    	≈8.4852813742385702928
+Edge 3 (2):  	sqrt(122)    	≈11.045361017187260774
+Edge 4 (2):  	4*sqrt(11)    	≈13.266499161421599396
+Edge 5 (2):  	sqrt(218)    	≈14.764823060233400576
+Edge 6 (2):  	sqrt(266)    	≈16.309506430300090476
+Edge 7 (2):  	4*sqrt(17)    	≈16.492422502470642199
+Edge 8 (2):  	sqrt(362)    	≈19.0262975904404480646
+Edge 9 (6):  	24
+Volume:	816*sqrt(2)    	≈1153.9982668964455598
+
+C0 = 2.82842712474619009760337744842 = 2 * sqrt(2)
+C1 = 8.48528137423857029281013234526 = 6 * sqrt(2)
+
+V0 = ( 12.0,   0.0, -C1)
+V1 = (-12.0,   0.0, -C1)
+V2 = (  0.0,  12.0,  C1)
+V3 = (  0.0, -12.0,  C1)
+V4 = ( -3.0,   3.0,  C0)
+V5 = (  3.0,  -3.0,  C0)
+V6 = (  0.0,   0.0, -C0)
+
+Faces:
+{ 0, 1, 2 }
+{ 0, 2, 5 }
+{ 0, 5, 4 }
+{ 0, 4, 6 }
+{ 0, 6, 3 }
+{ 0, 3, 1 }
+{ 1, 3, 4 }
+{ 1, 4, 5 }
+{ 1, 5, 6 }
+{ 1, 6, 2 }
+{ 2, 6, 4 }
+{ 2, 4, 3 }
+{ 2, 3, 5 }
+{ 5, 3, 6 }
+
+Szilassi Polyhedron (version 1)
+Vertices:  	14  (2[3] + 2[3] + 2[3] + 2[3] + 2[3] + 2[3] + 2[3])
+Faces:	7  (1 convex hexagon + {2 * 3} nonconvex hexagons)
+Edges:	21  (12 different lengths)
+Symmetry:  	2-fold Cyclic  (C2)
+Dual Toroid:  	Császár Polyhedron
+(values below based on the description from "On Three Classes of Regular Toroids", 2004, by Lajos Szilassi)
+Edge 1 (2):  	5/2    	2.5
+Edge 2 (2):  	5*sqrt(2)/2    	≈3.5355339059327376220
+Edge 3 (2):  	3*sqrt(106)/4    	≈7.7217226057402502368
+Edge 4 (2):  	18*sqrt(6)/5    	≈8.81816307401944115351
+Edge 5 (2):  	sqrt(1514)/4    	≈9.7275382291718596977
+Edge 6 (1):  	15*sqrt(2)/2    	≈10.606601717798212866
+Edge 7 (2):  	5*sqrt(21)/2    	≈11.456439237389600016
+Edge 8 (2):  	23/2    	11.5
+Edge 9 (2):  	7*sqrt(206)/5    	≈20.093780132170253246
+Edge 10 (2):  	5*sqrt(21)    	≈22.912878474779200033
+Edge 11 (1):  	24
+Edge 12 (1):  	126/5    	25.2
+Volume:	5226/5    	1045.2
+
+V0  = ( 12.0,   0.0,  12.0)
+V1  = (-12.0,   0.0,  12.0)
+V2  = (  0.0,  12.6, -12.0)
+V3  = (  0.0, -12.6, -12.0)
+V4  = (  2.0,  -5.0,  -8.0)
+V5  = ( -2.0,   5.0,  -8.0)
+V6  = ( 3.75,  3.75,  -3.0)
+V7  = (-3.75, -3.75,  -3.0)
+V8  = (  4.5,  -2.5,   2.0)
+V9  = ( -4.5,   2.5,   2.0)
+V10 = (  7.0,   0.0,   2.0)
+V11 = ( -7.0,   0.0,   2.0)
+V12 = (  7.0,   2.5,   2.0)
+V13 = ( -7.0,  -2.5,   2.0)
+
+Faces:
+{  0,  1, 13,  8,  7,  4 }
+{  0,  4,  3,  2, 10, 12 }
+{  0, 12,  9,  6,  5,  1 }
+{ 11,  3,  4,  7,  6,  9 }
+{ 11,  9, 12, 10,  8, 13 }
+{ 11, 13,  1,  5,  2,  3 }
+{  2,  5,  6,  7,  8, 10 }
+
+Szilassi Polyhedron (version 2)
+Vertices:  	14  (2[3] + 2[3] + 2[3] + 2[3] + 2[3] + 2[3] + 2[3])
+Faces:	7  (1 convex hexagon + {2 * 3} nonconvex hexagons)
+Edges:	21  (11 different lengths)
+Symmetry:  	2-fold Cyclic  (C2)
+Dual Toroid:  	Császár Polyhedron
+Edge 1 (2):  	2
+Edge 2 (2):  	2*sqrt(13)/3    	≈2.4037008503093261954
+Edge 3 (2):  	5*sqrt(253)/12    	≈6.6274890502445276474
+Edge 4 (2):  	3*sqrt(101)/4    	≈7.5374067158406677027
+Edge 5 (2):  	2*sqrt(21)    	≈9.1651513899116800132
+Edge 6 (1):  	8*sqrt(13)/3    	≈9.6148034012373047817
+Edge 7 (2):  	2*sqrt(349)/3    	≈12.454361128179602899
+Edge 8 (2):  	44/3    	≈14.666666666666666667
+Edge 9 (2):  	4*sqrt(29)    	≈21.540659228538016125003
+Edge 10 (2):  	24
+Edge 11 (2):  	21*sqrt(21)/4    	≈24.0585223985181600346
+Volume:	7976/9    	≈886.22222222222222222
+
+C0 = 2.66666666666666666666666666667 = 8 / 3
+C1 = 6.66666666666666666666666666667 = 20 / 3
+
+V0  = ( 12.0,   0.0,  12.0)
+V1  = (-12.0,   0.0,  12.0)
+V2  = (  0.0,  12.0, -12.0)
+V3  = (  0.0, -12.0, -12.0)
+V4  = (  1.5, -5.25,  -9.0)
+V5  = ( -1.5,  5.25,  -9.0)
+V6  = (   C0,   4.0,  -4.0)
+V7  = (  -C0,  -4.0,  -4.0)
+V8  = (   C1,  -2.0,   4.0)
+V9  = (  -C1,   2.0,   4.0)
+V10 = (  8.0,   0.0,   4.0)
+V11 = ( -8.0,   0.0,   4.0)
+V12 = (  8.0,   2.0,   4.0)
+V13 = ( -8.0,  -2.0,   4.0)
+
+Faces:
+{  0,  1, 13,  8,  7,  4 }
+{  0,  4,  3,  2, 10, 12 }
+{  0, 12,  9,  6,  5,  1 }
+{ 11,  3,  4,  7,  6,  9 }
+{ 11,  9, 12, 10,  8, 13 }
+{ 11, 13,  1,  5,  2,  3 }
+{  2,  5,  6,  7,  8, 10 }
