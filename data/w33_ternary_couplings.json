@@ -1,0 +1,26 @@
+{
+  "A1_sector_fractions": {
+    "vacuum": "7/20",
+    "matter": "2/5",
+    "gauge": "1/4"
+  },
+  "compare_A0_fractions": {"vacuum":"q/Phi4=3/10", "matter":"lam/Phi4=1/5", "gauge":"(q+lam)/Phi4=1/2"},
+  "ternary_zeta": {
+    "gauge": "20/9",
+    "matter": "10/3",
+    "ratio": "zeta_gauge/zeta_matter = lam/q = 2/3",
+    "total_non_vac": "2(q+lam)^2/q^2 = 50/9"
+  },
+  "alpha_hint": {
+    "sum_EW_eigenvalue_magnitudes": 5.7426,
+    "sum_all_gauge_magnitudes": 41.7426,
+    "ratio": 0.1376,
+    "note": "= alpha_em = 1/7.27 ... suspiciously close to 1/Phi6 = 1/7 but actually closer to alpha!"
+  },
+  "mode_counting": {
+    "dominant_modes": "33 = 2*Phi3+Phi6 (all with |lambda|=q)",
+    "sub_dominant_modes": "7 = Phi6 (weak+Higgs sector)",
+    "product": "33*7 = 231 = C(chi,2) = C(22,2)",
+    "dominant_over_sub": "33/7"
+  }
+}
