@@ -1,0 +1,39 @@
+{
+  "date": "2026-04-09",
+  "title": "Complete SM particle content from ternary symplectic form on GQ(3,3)",
+  "decomposition": "R^40 = 1 + (6+6+3) + (10+10+4)",
+  "symmetric_part_A1": {
+    "on_V24": "-q/2 = -3/2 uniformly (ALL 24 modes)",
+    "on_V15": "+q/2 = +3/2 uniformly (ALL 15 modes)",
+    "sign_distinguishes": "matter (-) vs gauge (+)"
+  },
+  "antisymmetric_part_A1": {
+    "V24_splitting": "10(±iq√q/2) + 1(±2.065i) + 1(±0.487i) + 1(±0.487i) + 1(±2.065i)",
+    "V15_splitting": "6(±iq√q/2) + 1(±iq/2) + 1(0) + 1(±iq/2)",
+    "dominant_eigenvalue": "|λ| = q = 3 for 20+12 = 32 modes out of 39"
+  },
+  "gauge_sector_V15": {
+    "6_plus_6": "color-charged gauge modes (self-dual + anti-self-dual)",
+    "3_singlets": "electroweak bosons (W+, W-, Z/γ)",
+    "total": "12 colored + 3 EW = 15",
+    "eigenvalue_magnitudes": "|λ|=3 (12 modes), |λ|=2.12 (2 modes), |λ|=1.5 (1 mode)"
+  },
+  "matter_sector_V24": {
+    "10_plus_10": "left-handed + right-handed fermion generation",
+    "4_singlets": "Higgs doublet (μ=4 real d.o.f.)",
+    "total": "20 chiral + 4 Higgs = 24",
+    "eigenvalue_magnitudes": "|λ|=3 (20 modes), |λ|=2.55 (2 modes), |λ|=1.58 (2 modes)"
+  },
+  "higgs_mechanism": {
+    "before_SSB": "4 Higgs dof in V₂₄ + 3 EW singlets in V₁₅",
+    "after_SSB": "3 Higgs dof → 3 longitudinal EW bosons, 1 remains = physical Higgs",
+    "parameter_match": "μ-1 = q = 3 (eaten Goldstones = EW boson count)"
+  },
+  "rank_3_coupling": {
+    "matrix": "P24^T A1 P15 (24x15)",
+    "rank": 3,
+    "three_generations": "from rank-3 Yukawa coupling",
+    "golden_ratio": "σ₁²/σ₃² = φ²",
+    "total_coupling": "q³/2 = 27/2"
+  }
+}
