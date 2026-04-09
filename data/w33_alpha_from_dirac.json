@@ -1,0 +1,24 @@
+{
+  "title": "α⁻¹ = 137 derived from Dirac operator eigenvalues",
+  "operator": "D_H = A₀ + i(A₁-A₂)/√q",
+  "eigenvalues": {
+    "e1": {"value": 5, "equals": "q+λ", "multiplicity": 10, "mult_equals": "Φ₄"},
+    "e2": {"value": -1, "equals": "-1", "multiplicity": 16, "mult_equals": "2^(q+1) = k+μ"},
+    "e3": {"value": -7, "equals": "-Φ₆", "multiplicity": 6, "mult_equals": "q!"}
+  },
+  "spectral_gaps": {
+    "e1_minus_e3": {"value": 12, "equals": "k = valence of W(3,3)"},
+    "e1_minus_e2": {"value": 6, "equals": "q! = handle subtraction quantum"},
+    "e2_minus_e3": {"value": 6, "equals": "q! = handle subtraction quantum"}
+  },
+  "alpha_derivation": {
+    "formula": "α⁻¹ = (e₁-e₃-1)² + μ²",
+    "substitution": "(12-1)² + 4² = 11² + 4² = 121 + 16 = 137",
+    "gaussian_integer": "z = (e₁-e₃-1)+iμ = 11+4i, |z|² = 137"
+  },
+  "total_dominant_modes": {
+    "count": 32,
+    "equals": "2^(q+λ) = dim(Spin(10) spinor)",
+    "SO10_connection": "The 16-dim multiplet at e₂=-1 is one complete SM generation"
+  }
+}
