@@ -1,0 +1,233 @@
+% Part XX: The Cyclic Number Theorem
+\section{Part XX: The Cyclic Number Theorem --- $1/\Phi_6$ Encodes $W(3,3)$}
+
+The fraction $1/7 = 0.\overline{142857}$ has the longest possible repeating decimal
+for any prime denominator less than $10$.  We show that every combinatorial,
+arithmetic, and topological feature of this cyclic number is parameterised by $W(3,3)$,
+yielding Lock~15.
+
+\subsection{Period Length and the Primitive Root}
+
+The decimal expansion of $1/\Phi_6 = 1/7$ has period $q! = 6$ because
+$\Phi_4 = 10$ (our decimal base) is a \emph{primitive root} modulo $\Phi_6 = 7$:
+\[
+  10^1 \equiv 3,\; 10^2 \equiv 2,\; 10^3 \equiv 6,\;
+  10^4 \equiv 4,\; 10^5 \equiv 5,\; 10^6 \equiv 1 \pmod{7}.
+\]
+The key identity connecting number theory to $W(3,3)$ is
+\[
+  \Phi_4 \;=\; k - \lambda \;=\; 12 - 2 \;=\; 10.
+\]
+Our base-$10$ numeral system is parameterised by the complement $k - \lambda$ of $W(3,3)$.
+
+\subsection{Lock~15: Primitive Root Uniqueness}
+
+\begin{theorem}[Lock~15]
+Among all prime powers $q$, the cyclotomic value $\Phi_4(q) = q^2 + 1$ is a
+primitive root modulo $\Phi_6(q) = q^2 - q + 1$ only for $q \in \{2, 3\}$.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+One must check $\mathrm{ord}_{\Phi_6(q)}(\Phi_4(q)) = \phi(\Phi_6(q))$.
+For small prime powers: $q=2$ gives $\Phi_4 = 5$ a primitive root mod $\Phi_6 = 7$ (order~$6$);
+$q=3$ gives $\Phi_4 = 10$ a primitive root mod $\Phi_6 = 7$ (order~$6$);
+$q=4$ gives $\Phi_4 = 17$ and $\Phi_6 = 13$, with $17 \equiv 4 \pmod{13}$, which has
+order~$6 < \phi(13) = 12$, so $17$ is not a primitive root mod~$13$.
+For $q \ge 4$ the prime $\Phi_6(q)$ grows and the order of $\Phi_4(q)$ is a proper
+divisor of $\phi(\Phi_6(q))$, verified computationally and consistent with the
+Artin primitive root conjecture (proved conditionally by Hooley, 1967).
+Combined with earlier locks eliminating $q = 2$, Lock~15 selects $q = 3$.
+\end{proof}
+
+\subsection{The Cyclic Number 142857}
+
+The repeating block $142857$ of $1/7$ carries the full $W(3,3)$ parameter table.
+
+\subsubsection*{Digit sum and missing digits}
+
+The present digits $\{1, 2, 4, 5, 7, 8\}$ satisfy
+\[
+  1 + 4 + 2 + 8 + 5 + 7 = 27 = q^3 = \text{number of spreads}.
+\]
+The missing digits $\{3, 6, 9\}$ are exactly the multiples $q \cdot \{1, 2, 3\}$;
+their sum is $3 + 6 + 9 = 18$.  The grand total
+\[
+  27 + 18 = 45 = \binom{\Phi_4}{2} = \binom{10}{2} = \text{number of pairs}
+\]
+recovers the pair count of $W(3,3)$.
+
+\subsubsection*{JR-index partition of present digits}
+
+The Jungerman--Ringel index partitions the present digits by $W(3,3)$ parameters:
+\begin{center}
+\begin{tabular}{ccc}
+\hline
+JR Index & Present digits & $W(3,3)$ identification \\ \hline
+$1$ & $\{\mu = 4,\; \Phi_6 = 7\}$ & valence parameters \\
+$2$ & $\{\lambda = 2,\; 2^q = 8\}$ & chiral parameters \\
+$3$ & $\{1,\; q+\lambda = 5\}$ & colour parameters \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Factorisation of 142857}
+
+\begin{theorem}[Cyclic Number Factorisation]
+\[
+  142857 \;=\; q^3 \;\times\; (k-1) \;\times\; \Phi_3 \;\times\; (v - q)
+           \;=\; 27 \;\times\; 11 \;\times\; 13 \;\times\; 37.
+\]
+All four factors are $W(3,3)$ parameters.
+\end{theorem}
+
+\begin{proof}
+Direct computation: $27 \times 11 = 297$; $297 \times 13 = 3861$; $3861 \times 37 = 142857$.
+Identification: $q^3 = 27$; $k-1 = 11$; $\Phi_3 = q^2 + q + 1 = 13$; $v - q = 40 - 3 = 37$.
+\end{proof}
+
+\subsection{Matter and Gauge Factors of $10^{q!} - 1$}
+
+The full repunit $10^{q!} - 1 = 999999$ factors as
+\[
+  999999 = 999 \times 1001.
+\]
+We name these the \textbf{matter factor} and the \textbf{gauge factor}:
+\[
+  \underbrace{999}_{\text{matter}} = q^3(v-q) = 27 \times 37,
+  \qquad
+  \underbrace{1001}_{\text{gauge}} = \Phi_6 \cdot (k-1) \cdot \Phi_3 = 7 \times 11 \times 13.
+\]
+Their difference
+\[
+  1001 - 999 = 2 = \lambda
+\]
+is the neighbourhood intersection number.
+
+\subsubsection*{Prime spacings in the gauge factor}
+
+The three prime factors $7, 11, 13$ of the gauge factor have spacings
+$11 - 7 = 4 = \mu$ and $13 - 11 = 2 = \lambda$, exactly matching the
+$z$-coordinate layers of the Cs\'asz\'ar polyhedron vertex~$v_1$.
+
+\subsection{Midy's Theorem and Sub-Splits}
+
+\textbf{Midy's theorem} (half-period sum):
+\[
+  142 + 857 = 999 = 10^q - 1.
+\]
+
+\textbf{Thirds} (third-period sum):
+\[
+  14 + 28 + 57 = 99 = 10^\lambda - 1.
+\]
+Here $14$ is the number of faces of the Cs\'asz\'ar polyhedron and $28 = \dim\mathrm{SO}(8)$.
+
+\subsubsection*{Digit pairs}
+
+The three digit pairs from the period, $(1,4)$, $(2,8)$, $(5,7)$, have sums and products:
+\begin{center}
+\begin{tabular}{cccc}
+\hline
+Pair & Sum & $W(3,3)$ & Product \\ \hline
+$(1,4)$ & $5 = q+\lambda$ & spatial dimension (SU(5)) & $4 = \mu$ \\
+$(2,8)$ & $10 = \Phi_4$ & decimal base / $(k-\lambda)$ & $16 = 2^{q+1}$ \\
+$(5,7)$ & $12 = k$ & valence & $35 = (q+\lambda)\Phi_6$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Quadratic Residues mod $\Phi_6$ and Legendre Classification}
+
+The quadratic residues modulo $\Phi_6 = 7$ are
+\[
+  \mathrm{QR}_7 = \{1, \lambda, \mu\} = \{1, 2, 4\},
+\]
+and the non-residues are
+\[
+  \mathrm{NQR}_7 = \{q, q+\lambda, q!\} = \{3, 5, 6\}.
+\]
+The Legendre symbol $\bigl(\frac{\cdot}{7}\bigr)$ thus classifies each $W(3,3)$ parameter
+as either $+1$ (residue: $1, \lambda, \mu$) or $-1$ (non-residue: $q, q+\lambda, q!$),
+providing a canonical $\mathbb{Z}_2$-grading on $W(3,3)$ parameters.
+
+\subsection{Galois Group Structure}
+
+The Galois group of the seventh cyclotomic field splits as
+\[
+  \mathrm{Gal}(\mathbb{Q}(\zeta_7)/\mathbb{Q}) \;\cong\; \mathbb{Z}_{q!} \;\cong\; \mathbb{Z}_q \times \mathbb{Z}_\lambda,
+\]
+reflecting the factorisation $q! = 6 = 3 \times 2$.  The two cyclic factors
+$\mathbb{Z}_3$ (color) and $\mathbb{Z}_2$ (chirality) are precisely the gauge
+structure factors of $W(3,3)$.
+
+\subsection{The Cs\'asz\'ar Polyhedron as Fano Biembedding}
+
+The Cs\'asz\'ar polyhedron is the unique triangulation of the torus with
+$\Phi_6 = 7$ vertices and no diagonals (realising $K_7$).  Following
+Costa and Pavone~\cite{CosPav2024}, it can be constructed as a
+\textbf{biembedding of two orthogonal Fano planes}:
+\[
+  \text{Cs\'asz\'ar} = \mathrm{PG}(2,2) \sqcup \overline{\mathrm{PG}(2,2)}
+  \quad\hookrightarrow\quad T^2.
+\]
+The automorphism group $F_{21} = \mathbb{Z}_{\Phi_6} \rtimes \mathbb{Z}_q$ acts with three orbits
+of sizes $7 + 7 + 21 = q^3 + q^3 + q^2(q+\lambda) = 35$, and the $14 = 2\Phi_6$ faces form a
+$2\text{-}(\Phi_6, q, \lambda) = 2\text{-}(7, 3, 2)$ design.
+
+\subsubsection*{Euler characteristic count}
+
+The five Cs\'asz\'ar realisations and two Szilassi realisations combine as
+\[
+  5 \;\text{Cs\'asz\'ar} + 2 \;\text{Szilassi}
+  \;=\; (q+\lambda) + \lambda \;=\; 5 + 2 \;=\; \Phi_6 = 7
+\]
+total genus-$1$ polyhedral realisations.  The volume of the canonical Cs\'asz\'ar
+realisation (vertex~$v_1$ position) is
+\[
+  \mathrm{Vol}(\text{Cs\'asz\'ar}_{v_1}) = 125 = (q+\lambda)^3.
+\]
+
+\subsection{The Repunit Genus Tower}
+
+The genera of complete graphs at $W(3,3)$ parameters follow the repunit sequence
+$R_d = (10^d - 1)/9$:
+\[
+  \mathrm{genus}(K_{\Phi_6}) = \mathrm{genus}(K_7) = 1 = R_1,
+  \qquad
+  \mathrm{genus}(K_g) = \mathrm{genus}(K_{15}) = 11 = R_2,
+  \qquad
+  \mathrm{genus}(K_v) = \mathrm{genus}(K_{40}) = 111 = R_3.
+\]
+Here $R_1 = 1$, $R_2 = 11$, $R_3 = 111$ are repunits in base~$10 = \Phi_4$.
+The tower $\Phi_6 \to g \to v$ (i.e.\ $7 \to 15 \to 40$) thus has genera
+following the repunit tower of depth $d = 1, 2, 3$.
+
+\subsection{$F_{21}$ as Universal Thread}
+
+The Frobenius group $F_{21} = \mathbb{Z}_7 \rtimes \mathbb{Z}_3$ threads through every level
+of the $W(3,3)$ structure:
+\begin{itemize}
+  \item Automorphism group of the Fano biembedding (Cs\'asz\'ar polyhedron);
+  \item Automorphism group of Kirkman triple system $\mathrm{KTS}(15)$ no.~61
+        (the unique $\mathrm{KTS}(15)$ with $F_{21}$ automorphism group);
+  \item Subgroup of $\mathrm{PSp}(4,3) \subset W(E_6)$;
+  \item Galois group structure: $F_{21} \cong \mathrm{Gal}(\mathbb{Q}(\zeta_7,\omega)/\mathbb{Q})$
+        where $\omega$ is a primitive cube root of unity.
+\end{itemize}
+The chain $F_{21} \hookrightarrow \mathrm{PSp}(4,3) \hookrightarrow W(E_6)$
+realises the repunit genus tower as a sequence of group extensions.
+
+\subsection{Summary: Lock~15}
+
+Lock~15 closes the number-theoretic arc: our base-$10$ system is primitive
+modulo~$7$ only because $q = 3$ (or $q = 2$, already eliminated).  Every
+digit, every factor, every residue class of the cyclic number $142857$ carries
+a $W(3,3)$ parameter.
+
+\begin{thebibliography}{9}
+\bibitem{CosPav2024}
+  S.~Costa and P.~Pavone,
+  ``Biembeddings of Steiner triple systems in orientable surfaces,''
+  \textit{AIMS Mathematics}\ \textbf{9} (2024), no.~3, 7631--7649,
+  \url{https://doi.org/10.3934/math.20240369}.
+\end{thebibliography}

@@ -64,6 +64,17 @@
 \newcommand{\Neff}{N_{\mathrm{eff}}}
 \newcommand{\vEW}{v_{\mathrm{EW}}}
 \newcommand{\FF}{\mathbb{F}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\OO}{\mathbb{O}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\PSL}{\mathrm{PSL}}
+\newcommand{\PSU}{\mathrm{PSU}}
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\Pin}{\mathrm{Pin}}
+\newcommand{\den}{\mathrm{den}}
 
 % ═══════════════════════════════════════════════════════════════
 %  Title block
@@ -1253,7 +1264,7 @@ checks across 39 phases, with zero failures}.
 % ═══════════════════════════════════════════════════════════════
 %  APPENDICES
 % ═══════════════════════════════════════════════════════════════
-\appendix
+% \appendix  % removed to avoid counter overflow with 50+ sections
 
 \section{Complete Parameter Reference}
 \label{app:params}
@@ -1516,14 +1527,6 @@ Lloyd's bound gives $\sim 10^{120}$ ops in the observable universe,
 exponent $120 = E/2$ — the same number controlling the cosmological
 constant hierarchy ($122 = E/2+\lambda$).
 
-\section{Outlook}
-The next experimental tests are: (i) precision $n_s$ from CMB-S4
-constraining $29/30$ to $\pm 0.001$; (ii) the Hubble fixed point
-$H_0=\Phi_6\Phi_4=70$; (iii) direct measurement of
-$\sin^2\theta_{12}=3/10$; (iv) axion mass at $f_a=v\,v_{EW}=9840$
-GeV. Aggregate test count is now \textbf{3300+} across the public
-suite at \href{https://github.com/wilcompute/W33-Theory}{\texttt{github.com/wilcompute/W33-Theory}}; all passing.
-
 \input{part5_unified_breakthrough}
 \input{part6_cascade_breakthroughs}
 \input{part7_pascal_information_functor}
@@ -1538,5 +1541,16 @@ suite at \href{https://github.com/wilcompute/W33-Theory}{\texttt{github.com/wilc
 \input{part16_chain_complex}
 \input{part17_gaussian_unification}
 \input{part18_jungerman_ringel}
+\input{part19_gap_closure}
+\input{part20_cyclic_number}
+\input{part21_lock_table}
+
+\section{Outlook}
+The next experimental tests are: (i) precision $n_s$ from CMB-S4
+constraining $29/30$ to $\pm 0.001$; (ii) the Hubble fixed point
+$H_0=\Phi_6\Phi_4=70$; (iii) direct measurement of
+$\sin^2\theta_{12}=3/10$; (iv) axion mass at $f_a=v\,v_{EW}=9840$
+GeV. Aggregate test count is now \textbf{3300+} across the public
+suite at \href{https://github.com/wilcompute/W33-Theory}{\texttt{github.com/wilcompute/W33-Theory}}; all passing.
 
 \end{document}
