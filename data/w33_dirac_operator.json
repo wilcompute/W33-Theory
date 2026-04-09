@@ -1,0 +1,27 @@
+{
+  "casimir_identity": {
+    "formula": "C = A₀² + A₁A₁ᵀ + A₁ᵀA₁ = (v-1)I + (k-1)A₀ + Φ₃(A₁+A₂)",
+    "coefficients": {"I": "v-1 = 39", "A0": "k-1 = 11", "A1+A2": "Phi3 = 13"},
+    "ALL_W33_PARAMETERS": true
+  },
+  "cube_root_dirac": {
+    "formula": "D = A₀ + ωA₁ + ω²A₂ where ω = e^{2πi/3}",
+    "hermitian": true,
+    "dominant_eigenvalues": {"8": {"mult": 10, "equals": "2^q"}, "-1": {"mult": 16, "equals": "-1"}, "-10": {"mult": 6, "equals": "-Phi4"}},
+    "Tr_D2_over_v": "39 = v-1",
+    "Tr_D2": 1560
+  },
+  "hermitian_dirac": {
+    "formula": "D_H = A₀ + i(A₁-A₂)/√q",
+    "hermitian": true,
+    "dominant_eigenvalues": {"5": {"mult": 10, "equals": "q+lambda"}, "-1": {"mult": 16, "equals": "-1"}, "-7": {"mult": 6, "equals": "-Phi6"}},
+    "Tr_DH2": 840,
+    "Tr_DH2_over_v": "21 = C(Phi6,2)",
+    "Tr_DH4_over_Tr_DH2": "59.6 ≈ 60 = q! × Phi4"
+  },
+  "mixed_moments": {
+    "Tr_A0_A1_sq": 2160,
+    "equals": "q^2 * 2E = 9 × 240 = 2160 = q²E (also = θ_{E8} coeff!)",
+    "Tr_comm_sq": "||[A₀,A₁]||² = 3024"
+  }
+}
