@@ -1,0 +1,30 @@
+{
+  "date": "2026-04-09",
+  "title": "Ternary algebra splitting of V_24 and V_15",
+  "V24_splitting": {
+    "under_A1": "10 + 10 + 1 + 1 + 1 + 1",
+    "eigenvalue_real_part": -1.5,
+    "eigenvalue_imag_mult10": 2.598,
+    "note_2.598": "= 3*sqrt(3)/2 = q*sqrt(q)/2",
+    "interpretation": "Two copies of 10-dim rep (SU(5) antisymmetric?) + 4 singlets"
+  },
+  "V15_splitting": {
+    "under_A1": "6 + 6 + 1 + 1 + 1",
+    "eigenvalue_real_part": 1.5,
+    "eigenvalue_imag_mult6": 2.598,
+    "interpretation": "Two copies of 6-dim rep (SO(4) antisymmetric?) + 3 singlets"
+  },
+  "eigenvalue_structure": {
+    "all_A1_eigenvalues_have": "real part = ±3/2 = ±q/2",
+    "imaginary_parts": "0, ±q/2, ±q*sqrt(q)/2, ±...",
+    "note": "q/2 = 3/2 is the spin-1/2 × q structure"
+  },
+  "physics_interpretation": {
+    "V24_as_10+10+4x1": "Two 10-dim GUT reps (L and R?) + 4 gauge singlets",
+    "V15_as_6+6+3x1": "Two 6-dim color reps + 3 singlets (W+,W-,Z?)",
+    "three_singlets_in_V15": "Could be the 3 electroweak gauge bosons",
+    "four_singlets_in_V24": "Could be the 4 lepton doublets"
+  },
+  "commutant_dim": 273,
+  "commutant_factorization": "q * Phi6 * Phi3 = 3 * 7 * 13"
+}
