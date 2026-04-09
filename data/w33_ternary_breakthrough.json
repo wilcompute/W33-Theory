@@ -1,0 +1,35 @@
+{
+  "date": "2026-04-09",
+  "title": "Ternary symplectic form generates non-commutative algebra with golden ratio coupling",
+  "key_results": {
+    "gauge_matter_coupling": {
+      "matrix": "P_24^T A_1 P_15 (24x15)",
+      "rank": 3,
+      "singular_values_squared": {
+        "sigma_1_sq": "q^2(1+1/sqrt(q+lam))/2 = 9(sqrt(5)+1)/(2*sqrt(5))",
+        "sigma_2_sq": "q^2/2 = 9/2 = 4.5 EXACT",
+        "sigma_3_sq": "q^2(1-1/sqrt(q+lam))/2 = 9(sqrt(5)-1)/(2*sqrt(5))"
+      },
+      "identities": [
+        "sigma_1^2 + sigma_3^2 = q^2 = 9",
+        "sigma_1^2 * sigma_3^2 = q^4/(q+lam) = 81/5",
+        "sigma_1^2 + sigma_2^2 + sigma_3^2 = q^3/2 = 27/2",
+        "sigma_1^2/sigma_3^2 = phi^2 = (3+sqrt(5))/2 = golden ratio squared"
+      ]
+    },
+    "commutant": {
+      "dimension": 273,
+      "factorization": "q * Phi_6 * Phi_3 = 3 * 7 * 13",
+      "alternative": "(v-1) * Phi_6 = 39 * 7",
+      "contains_connes": "C+H+M_3(C) has dim 24 < 273, room exists"
+    },
+    "oriented_eigenvalue": {
+      "matrix": "A_1 - A_2 (antisymmetric)",
+      "eigenvalue_magnitude_squared": 27,
+      "uniform_on_all_40_dimensions": true,
+      "equals": "q^3"
+    },
+    "non_commutativity": "[A_0, A_1] != 0 with max entry 9"
+  },
+  "significance": "The ORIENTED symplectic form on GQ(3,3) provides: (1) non-commutative algebra breaking the BM wall, (2) rank-3 gauge-matter coupling = three generations, (3) golden ratio mass hierarchy from sqrt(q+lambda) = sqrt(5)"
+}
