@@ -1,0 +1,34 @@
+{
+  "h8_approx_minus_2pi": {
+    "h8": -6.283094059,
+    "minus_2pi": -6.283185307,
+    "relative_error": 1.45e-5,
+    "is_algebraic": true,
+    "note": "root of integer poly t^8-8t^7-108t^6+... approximates transcendental -2π to 5 digits"
+  },
+  "h8_squared_approx_v_minus_1": {
+    "h8_sq": 39.477,
+    "v_minus_1": 39,
+    "note": "h₈² ≈ f+g = non-vacuum mode count; also 4π² ≈ v-1"
+  },
+  "non_vac_sq_sum_approx_E": {
+    "sum_h1_to_h7_squared": 240.52,
+    "E": 240,
+    "note": "sum of non-vacuum sub-dominant eigenvalues squared ≈ total edges"
+  },
+  "logarithmic_structure": {
+    "h2_approx_2ln10": {"h2": 4.6186, "2ln10": 4.6052, "rel_err": 0.003},
+    "h4_approx_ln10": {"h4": 2.3145, "ln10": 2.3026, "rel_err": 0.005}
+  },
+  "mass_ratio_hint": {
+    "h2_over_h3": 1.350,
+    "MH_over_MZ": 1.373,
+    "match": "1.7% off"
+  },
+  "char_poly_coefficients": {
+    "c7": "-2^q = -8",
+    "c6": "-μq³ = -108",
+    "c5": "2^q × C(k-1,2) = 440",
+    "c0": "q(q³f + k-1) = q⁴f + 33 = 1977"
+  }
+}
