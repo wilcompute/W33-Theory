@@ -1,0 +1,29 @@
+{
+  "title": "THE MASTER POLYNOMIAL: degree k-1 = 11, 12 = k coefficients",
+  "polynomial": "p(t) = (t³+3t²-33t-35)(t⁸-8t⁷-108t⁶+440t⁵+2894t⁴-8472t³-21404t²+53608t+1977)",
+  "degree": 11,
+  "degree_equals": "k-1",
+  "num_coefficients": 12,
+  "coefficients_equals": "k (one per gauge boson)",
+  "factoring": "cubic(q=3) × octic(2^q=8) = couplings × masses",
+  "invariants": {
+    "sum_of_roots": "q+λ = 5 (the GUT number, SU(5) fundamental dim)",
+    "product_of_roots": "q(q+λ)Φ₆(q³f+k-1) = 69195",
+    "discriminant_cubic": "(q!)⁴k² = Δ_SRG² × k² = 186624",
+    "p_at_1": "-2^14 × 113 = -1851392",
+    "p_at_q": "2^Φ₆ × q² × Φ₃ × (v-q) = 552960",
+    "p_at_m1": "0 (root: the 16-dim massless sector)"
+  },
+  "cubic_factor": {
+    "roots": ["q+λ=5", "-1", "-Φ₆=-7"],
+    "multiplicities": ["Φ₄=10", "k+μ=16", "q!=6"],
+    "total_modes": "32 = 2^(q+λ) = Spin(10) spinor",
+    "physics": "gauge couplings: α⁻¹=137, sin²θ_W=3/8, α_s=20/169"
+  },
+  "octic_factor": {
+    "degree": "2^q = 8",
+    "coefficients_W33": ["c₇=-2^q", "c₆=-μq³", "c₅=2^q×C(k-1,2)", "c₀=q⁴f+33"],
+    "notable_roots": ["h₈≈-2π (vacuum)", "h₂≈2ln(Φ₄)", "h₄≈ln(Φ₄)"],
+    "physics": "masses, Higgs quartic, vacuum energy"
+  }
+}
