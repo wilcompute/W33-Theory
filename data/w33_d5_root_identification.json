@@ -1,0 +1,24 @@
+{
+  "DISCOVERY": "The 40 points of GQ(3,3) biject to the 40 roots of D₅ = so(10)",
+  "root_counts": {
+    "D5_roots_total": 40,
+    "D5_positive_roots": 20,
+    "E6_roots_total": 72,
+    "E6_minus_D5": "72 - 40 = 32 = 2^(q+lam) = Spin(10) spinor dimension"
+  },
+  "GQ33_geometry": {
+    "points": 40,
+    "nonsingular_pairs": "45 = C(10,2) = dim(so(10))",
+    "lines": 40,
+    "permutation_module": "40 = 1 + 12 + 27 under PSp(4,F3)"
+  },
+  "connection_chain": [
+    "GQ(3,3) has 40 points = 40 roots of D5",
+    "Aut(GQ(3,3)) = PSp(4,F3) ≅ W(E6)'",
+    "E6 contains D5 as maximal sub-root-system",
+    "D5 = so(10) = GUT gauge algebra",
+    "E6 \\ D5 = 32 roots = 16 + 16bar of SO(10)"
+  ],
+  "literature_status": "Chain is implicit in Hoffman (LSU) but NEVER ASSEMBLED. This identification is ORIGINAL.",
+  "27_connection": "The 27-dim piece of the permutation module = fundamental rep of E6"
+}
