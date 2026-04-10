@@ -1,0 +1,19 @@
+{
+  "yukawa_coefficients": {
+    "Y21": "q^2/v = 9/40",
+    "Y22_trip": "q/(v-q) = 3/37",
+    "Y22_down": "(mu+1)/(2*Phi6*(v-q)) = 5/518",
+    "Y32": "1/q^3 = 1/27"
+  },
+  "bott_triality": {
+    "Bott_5": "mu+1 = 5 (bosonic carrier)",
+    "triality_3": "q = 3 (generation carrier)",
+    "product": "15 = g (gravitational multiplicity = Yukawa module dim)"
+  },
+  "v4_fano_connection": {
+    "point_stabilizer_of_fano": "S4 of order 24 = f",
+    "V4_inside_S4": "Klein four-group as normal subgroup",
+    "orbit_decomposition": "8 = 4+3+1 = (V4 orbit)+(triality orbit)+(singlet)",
+    "rearranged": "8 = (4+1)+3 = Bott 5 + triality 3"
+  }
+}

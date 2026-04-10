@@ -1,0 +1,37 @@
+{
+  "THE_FANO_PLANE_IS_THE_ORIGIN_OF_EVERYTHING": true,
+  "spacetime_from_fano_line": {
+    "choose": "a Fano line (3 points from 7)",
+    "spacetime": "3 quaternionic + 1 real = 4 = μ dimensions",
+    "internal": "4 remaining points = μ internal dimensions",
+    "total": "8 = 1+7 = 2^q (octonion dimension)"
+  },
+  "gauge_group_from_internal_permutations": {
+    "S4_line_stabilizer": "order 24 = f = χ(K3)",
+    "A4_even_perms": "order 12 = k = dim(SU(3)×SU(2)×U(1))",
+    "V4_normal_subgroup": "order 4 = μ = Yukawa projectors",
+    "Z3_cyclic_subgroup": "order 3 = q = generations = center of SU(3)"
+  },
+  "A4_decomposition": {
+    "|A4|": "12 = q × μ = k",
+    "Z3_gives": "color SU(3) center",
+    "V4_gives": "SU(2)×U(1) electroweak structure",
+    "V4_orbits_on_8": "4+3+1 = Bott 5 + triality 3"
+  },
+  "internal_geometry": {
+    "SO4_on_4pts": "dim 6 = m₃ = broken sector",
+    "C42_pairs": "6 = C(4,2) = internal 2-forms"
+  },
+  "the_three_inputs": [
+    "The FANO PLANE PG(2,F₂) (unique)",
+    "A CHOICE OF LINE (selecting spacetime directions)",
+    "The FIELD F₃ with q=3 (from GQ(3,3))"
+  ],
+  "everything_follows": [
+    "spacetime 3+1 dimensions (line + real)",
+    "3 generations (line has 3 points)",
+    "SU(3)×SU(2)×U(1) dim 12 (|A₄| on internal points)",
+    "α⁻¹ = 137 = q⁴+2q³+2",
+    "all masses, mixings, couplings as f(q=3)"
+  ]
+}
