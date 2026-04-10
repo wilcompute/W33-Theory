@@ -1,0 +1,23 @@
+{
+  "gaussian_prime": {
+    "z": "11 + 4i = (k-1) + iμ",
+    "norm": "|z|² = 137 = α⁻¹ (prime)",
+    "z_squared": {
+      "real": "105 = q(q+λ)Φ₆ = 3×5×7",
+      "imag": "88 = 2³(k-1) = 8×11"
+    },
+    "phase": "arg(z) = arctan(4/11) ≈ π/q² = π/9 (0.08% match)"
+  },
+  "number_theory": {
+    "splits_in_Z_i": "137 = (11+4i)(11-4i) → electromagnetic U(1) structure",
+    "inert_in_Z_omega": "137 ≡ 2 mod 3 → generation Z₃ structure stays intact",
+    "physical_meaning": "EM has fine structure (splits), generations don't mix at tree level (inert)"
+  },
+  "hierarchy_formula": {
+    "formula": "v_EW ≈ M_Planck / ((q+λ)(α⁻¹-1)^(g/2))",
+    "value": "243.14 GeV",
+    "experimental": "246.22 GeV",
+    "error_pct": 1.3,
+    "interpretation": "hierarchy determined by q, no fine-tuning"
+  }
+}
