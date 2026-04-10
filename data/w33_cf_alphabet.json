@@ -1,0 +1,21 @@
+{
+  "CONTINUED_FRACTION_ALPHABET": {
+    "alphabet": "{1, λ, q, μ, q+λ, Φ₆, 2^q, μ(q+λ)} = {1, 2, 3, 4, 5, 7, 8, 20}",
+    "every_SM_coupling_uses_only_these_digits": true,
+    "examples": {
+      "mu_over_k_minus_1": {"fraction": "4/11", "CF": "[0; λ, 1, q] = [0; 2, 1, 3]"},
+      "sin2_theta_W": {"fraction": "3/13", "CF": "[0; μ, q] = [0; 4, 3]"},
+      "alpha_s": {"fraction": "20/169", "CF": "[0; 2^q, λ, μ, λ] = [0; 8, 2, 4, 2]"},
+      "theta_koide": {"fraction": "2/9", "CF": "[0; μ, λ] = [0; 4, 2]"},
+      "V_us_squared": {"fraction": "1/20", "CF": "[0; μ(q+λ)] = [0; 20]"},
+      "A_wolfenstein": {"fraction": "11/13", "CF": "[0; 1, q+λ, λ] = [0; 1, 5, 2]"},
+      "resolvent_ratio": {"fraction": "15/22", "CF": "[0; 1, λ, Φ₆] = [0; 1, 2, 7]"}
+    }
+  },
+  "gaussian_prime_powers": {
+    "z": "11 + 4i",
+    "z^2": {"real": "105 = gΦ₆ = q(q+λ)Φ₆", "imag": "88 = 2³(k-1)"},
+    "z^3": {"real": 803, "imag": 1388},
+    "z^4": {"real": 3281, "imag": 18480}
+  }
+}
