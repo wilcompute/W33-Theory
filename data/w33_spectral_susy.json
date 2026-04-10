@@ -1,0 +1,16 @@
+{
+  "SPECTRAL_SUPERSYMMETRY": {
+    "condition": "m1 + m3 = m2 (gauge + broken = fermion)",
+    "values": "10 + 6 = 16",
+    "meaning": "equal number of bosonic and fermionic spectral modes",
+    "uniqueness": "(q+1)^2 = 2^(q+lam-1) holds only for q=3 (16th criterion)"
+  },
+  "SPIN_1_STRUCTURE": {
+    "shifted_cubic": "s^3 - (2q)^2 s = 0, roots {-2q, 0, +2q} = {-6, 0, 6}",
+    "interpretation": "spin-1 representation of SU(2) scaled by 2q",
+    "gauge": "s=+6 = m_J=+1 (W+/propagating)",
+    "fermion": "s=0 = m_J=0 (center/fermion)",
+    "broken": "s=-6 = m_J=-1 (W-/confined)",
+    "casimir": "j(j+1) = 2 = lambda (edge overlap!)"
+  }
+}
