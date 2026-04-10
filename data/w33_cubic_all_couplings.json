@@ -1,0 +1,22 @@
+{
+  "title": "ONE CUBIC POLYNOMIAL ENCODES ALL GAUGE COUPLINGS",
+  "cubic": "t³ + qt² - 33t - 35 = (t-5)(t+1)(t+7)",
+  "coefficients": {
+    "trace": "e₁+e₂+e₃ = -q = -3",
+    "sum_products": "e₁e₂+e₁e₃+e₂e₃ = -33 = -(2Φ₃+Φ₆) = -(dominant mode count)",
+    "product": "e₁e₂e₃ = 35 = (q+λ)Φ₆ = C(Φ₆,3)",
+    "quadratic_discriminant": "4+4×35 = 144 = k²"
+  },
+  "couplings_from_eigenvalues": {
+    "alpha_inv": {"formula": "(e₁-e₃-1)²+μ² = (k-1)²+μ²", "value": 137, "exp": "137.036"},
+    "sin2_theta_W_GUT": {"formula": "m₃/(m₁+m₃) = q!/(Φ₄+q!)", "value": "3/8 = 0.375"},
+    "sin2_theta_W_MZ": {"formula": "3/8 - 2g/((m₁+m₃)Φ₃)", "value": "3/13 = 0.2308", "exp": "0.2312"},
+    "alpha_s": {"formula": "μe₁/Φ₃² = μ(q+λ)/Φ₃²", "value": "20/169 = 0.1183", "exp": "0.1180"}
+  },
+  "multiplicities": {
+    "m1": {"value": 10, "equals": "Φ₄", "eigenvalue": "e₁ = q+λ = 5"},
+    "m2": {"value": 16, "equals": "k+μ = 2^(q+1)", "eigenvalue": "e₂ = -1"},
+    "m3": {"value": 6, "equals": "q!", "eigenvalue": "e₃ = -Φ₆ = -7"},
+    "total": {"value": 32, "equals": "2^(q+λ) = Spin(10) spinor dim"}
+  }
+}
