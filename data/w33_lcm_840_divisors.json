@@ -1,0 +1,21 @@
+{
+  "LCM_IDENTITY": "LCM(CF alphabet) = Tr(D²) = 840",
+  "alphabet_size": "2^q = 8",
+  "alphabet_sum": "(q+2)(q²+1) = 50 = v+Φ₄",
+  "840_factorization": "2³ × 3 × 5 × 7 = μ × q × (q+λ) × Φ₆",
+  "divisor_counts": {
+    "total_divisors_tau_840": "32 = 2^(q+λ) = Spin(10) spinor dim",
+    "divisors_le_20": "13 = Φ₃",
+    "in_CF_alphabet": "8 = 2^q (dynamical)",
+    "structural_missing": "5 = q+λ (graph geometry)",
+    "sum_check": "8 + 5 = 13 = Φ₃"
+  },
+  "missing_divisors": {
+    "6": "q! = 2q",
+    "10": "Φ₄ = q²+1", 
+    "12": "k = q(q+1)",
+    "14": "2Φ₆",
+    "15": "g = q(q²+1)/2"
+  },
+  "interpretation": "The SM coupling constants are words in an 8-letter alphabet whose LCM = the spectral trace Tr(D²), with 32 = spinor-dim total divisors"
+}
