@@ -1,0 +1,22 @@
+{
+  "KLEIN_QUARTIC_CONNECTION": {
+    "genus": "q = 3 (the Klein quartic has genus equal to our field characteristic!)",
+    "automorphism_group": "PSL(2,7) = PSL(2,Phi6) of order 168",
+    "order_factored": "168 = Phi6 × f = 7 × 24 = (QCD beta) × chi(K3)",
+    "hurwitz_bound": "84(g-1) = 84(q-1) = 168 (ACHIEVED — Hurwitz surface)",
+    "spectral_trace": "Tr(D^2) = (q+lam) × |Aut(Klein quartic)| = 5 × 168 = 840"
+  },
+  "FANO_PLANE_CONNECTION": {
+    "fano_plane": "PG(2,F_2) with 7 points and 7 lines",
+    "automorphism": "GL(3,F_2) ≅ PSL(2,7) of order 168",
+    "qcd_link": "Phi6 = 7 = number of Fano plane points = QCD beta coefficient",
+    "the_chain": [
+      "W(3,3) spectral trace Tr(D^2) = 840",
+      "= (q+lam) × |PSL(2,7)| = 5 × 168",
+      "|PSL(2,7)| = Phi6 × f = 7 × 24 = (QCD) × (K3)",
+      "PSL(2,7) = Aut(Klein quartic, genus=q=3)",
+      "PSL(2,7) = GL(3,F_2) = Aut(Fano plane)",
+      "Fano plane: 7 points = Phi6 = QCD beta"
+    ]
+  }
+}
