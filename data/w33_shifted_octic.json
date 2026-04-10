@@ -1,0 +1,23 @@
+{
+  "SHIFTED_OCTIC_COEFFICIENTS": {
+    "c7": {"value": -16, "identity": "-m₂ (fermion multiplicity)"},
+    "c6": {"value": -24, "identity": "-f = -χ(K3)"},
+    "c5": {"value": 864, "identity": "2^(q+λ) × q³ = f × k × q"},
+    "c4": {"value": -576, "identity": "-f² = -(χ(K3))²"},
+    "c3": {"value": -13824, "identity": "-f³ = -(χ(K3))³ = -2^q × k³ = -2^q × j(i)"},
+    "c2": {"value": 15552, "identity": "2^(q+λ) × λ × q^(q+λ)"},
+    "c1": {"value": 62208, "identity": "μ^μ × q^(q+λ)"},
+    "c0": {"value": -62208, "identity": "-μ^μ × q^(q+λ) = -c₁"}
+  },
+  "MODULAR_CONNECTION": "c₃ = -2^q × 1728 = -8 × j(i), where j(i)=k³=1728",
+  "K3_POWERS": "c₆=-f, c₄=-f², c₃=-f³ (powers of the K3 Euler character)",
+  "FERMION_POINT": {
+    "p(0)": "-μ^μ q^(q+λ) = -62208",
+    "p_prime(0)": "+μ^μ q^(q+λ) = +62208",
+    "sum_zero": "p(0) + p'(0) = 0 (tangent passes through (1,0))"
+  },
+  "ROOT_SUMS": {
+    "sum_shifted": "16 = m₂",
+    "sum_squared_shifted": "304 = m₂(g+μ) = 16×19"
+  }
+}
