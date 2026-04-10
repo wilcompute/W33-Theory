@@ -1,0 +1,28 @@
+{
+  "sextic_coefficients_ALL_W33": {
+    "s5": "-μ = -4",
+    "s4": "-Φ₆(k+q+λ) = -7×17 = -119",
+    "s3": "-2^q × Φ₆ = -8×7 = -56",
+    "s2": "(q+λ)²(Φ₁₂+Φ₄) = 25×83 = 2075",
+    "s1": "-μ(v+Φ₁₂) = -4×113 = -452",
+    "s0": "-q(k-1)[μ²(q+λ)²-(k-1)] = -3×11×389 = -12837"
+  },
+  "octic_derivative_identity": {
+    "octic_m1": -62208,
+    "octic_prime_m1": 62208,
+    "ratio": "|octic(-1)/octic'(-1)| = 1 EXACTLY",
+    "meaning": "unit slope crossing at fermion root"
+  },
+  "strong_CP": {
+    "theta_QCD": 0,
+    "reason": "cubic discriminant (q!)⁴k² > 0 → all real roots → no CP phase in strong sector",
+    "weak_CP": "comes from octic irrational roots and generation matrix"
+  },
+  "neutrino_masses": {
+    "splitting_ratio": "Δm²₃₂/Δm²₂₁ = |Vieta₂| = 33 = 2Φ₃+Φ₆",
+    "predicted_dm32": "2.485e-3 eV²",
+    "experimental": "2.453e-3 eV²",
+    "match": "1.3%",
+    "sum_mnu": "58.5 meV (testable by CMB-S4)"
+  }
+}
