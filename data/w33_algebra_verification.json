@@ -1,0 +1,28 @@
+{
+  "commutation": {
+    "A0_A1": "NON-ZERO (non-commutative)",
+    "A0_A2": "NON-ZERO",
+    "A1_A2": "NON-ZERO",
+    "norms": {
+      "01": 54.99090833947008,
+      "02": 54.99090833947008,
+      "12": 108.0
+    }
+  },
+  "minimal_polynomial_verified": true,
+  "master_poly_from_explicit_D_H": true,
+  "srg_equation_verified": true,
+  "connes_distance": {
+    "d_isotropic": 1.0,
+    "d_omega1": 1.7320508075688772,
+    "ratio_d1_d0": 1.7320508075688772,
+    "interpretation": "sqrt(q) = generation spacing"
+  },
+  "spectral_triple_axioms": {
+    "self_adjoint": true,
+    "compact_resolvent": true,
+    "bounded_commutators": true,
+    "ko_dimension": 4,
+    "order_one": "satisfied for commutative subalgebra"
+  }
+}

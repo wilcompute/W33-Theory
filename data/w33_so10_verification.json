@@ -1,0 +1,20 @@
+{
+  "algebra_dimension": 45,
+  "candidate": "so(10)",
+  "evidence": {
+    "dimension_match": "n(n-1)/2 = 45 \u2192 n = 10",
+    "eigenspace_reps": {
+      "10_dim": "VECTOR 10 of SO(10) at e\u2081=5",
+      "16_dim": "SPINOR 16 of SO(10) at e\u2082=-1",
+      "6_dim": "part of 10 at e\u2083=-7"
+    },
+    "f_equals_dimSU5": "f = 24 = dim(su(5))",
+    "decomposition": "45 = 24 + 15 + 6 = f + g + m\u2083",
+    "killing_form": {
+      "positive": 23,
+      "negative": 20,
+      "zero": 2
+    },
+    "center_dimension": 1
+  }
+}
