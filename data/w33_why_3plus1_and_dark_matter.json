@@ -1,0 +1,16 @@
+{
+  "WHY_3_PLUS_1_DIMENSIONS": {
+    "from_spectral_democracy": "arithmetic Dirac spectrum has q=3 terms → 3 spatial + 1 time",
+    "from_division_algebras": "H (dim μ=4) is the UNIQUE viable spacetime algebra: R too small, C too small, O non-associative",
+    "from_fano_line": "Fano line has q=3 points → quaternionic subalgebra has dim q+1=4",
+    "chain": "q=3 → dim(H)=4=μ → spacetime=3+1 → Fano line matches → Φ₆=7 points for QCD"
+  },
+  "DARK_MATTER_RATIO_FORMULA": {
+    "cleanest_form": "Ω_DM/Ω_b = (q³+q²+2)/(q²-q+1) = (v-λ)/Φ₆ = 38/7",
+    "numerical_value": 5.4286,
+    "planck_2018": 5.364,
+    "match_pct": 1.2,
+    "physical_meaning": "(graph vertices - edge overlap) / (QCD β-function) = geometric distinctness / strong coupling",
+    "alternative": "(q+λ) + q/Φ₆ = 5 + 3/7 = 38/7"
+  }
+}
