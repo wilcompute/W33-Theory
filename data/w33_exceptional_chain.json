@@ -1,0 +1,27 @@
+{
+  "EXCEPTIONAL_DIMENSION_CHAIN": {
+    "chain": "SU(3) ⊂ G₂ ⊂ SO(7) ⊂ SO(10) ⊂ E₆ ⊂ E₇ ⊂ E₈",
+    "dimensions": [8, 14, 21, 45, 78, 133, 248],
+    "differences": {
+      "G2_minus_SU3": {"value": 6, "identity": "m₃ (broken sector multiplicity)"},
+      "SO7_minus_G2": {"value": 7, "identity": "Φ₆ (QCD β₀)"},
+      "SO10_minus_SO7": {"value": 24, "identity": "f = χ(K3)"},
+      "E6_minus_SO10": {"value": 33, "identity": "|Vieta₂| (neutrino mass ratio)"},
+      "E7_minus_E6": {"value": 55, "identity": "v+g"},
+      "E8_minus_E7": {"value": 115, "identity": "(q+λ)(Φ₃+Φ₄) = 5×23"}
+    },
+    "ALL_DIFFERENCES_ARE_W33": true
+  },
+  "OCTONION_CONNECTION": {
+    "dim_O": "8 = 2^q (octic degree!)",
+    "imaginary_units": "7 = Φ₆ = points of Fano plane",
+    "fano_multiplication": "octonion product defined by Fano incidences",
+    "J3_O": "dim 27 = q³ = non-neighbors in GQ(3,3)"
+  },
+  "CF_ALPHABET_SPLIT": {
+    "division_algebras": "{1, λ, μ, 2^q} = {1, 2, 4, 8} = {dim R, dim C, dim H, dim O}",
+    "gq_parameters": "{q, q+λ, Φ₆, μ(q+λ)} = {3, 5, 7, 20}"
+  },
+  "BROKEN_SECTOR": "dim(G₂/SU(3)) = 14-8 = 6 = m₃ = the e₃=-7 eigenspace",
+  "FULL_CHAIN": "Fano plane → Octonions → J₃(O) → E₆ → W(E₆) → GQ(3,3) → D₅ → SO(10) → SM"
+}
