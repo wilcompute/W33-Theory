@@ -1,0 +1,22 @@
+{
+  "octic_at_cubic_roots": {
+    "octic_5": "-μ^μ × q^(q+λ) = -4⁴×3⁵ = -62208",
+    "octic_m1": "-μ^μ × q^(q+λ) = -62208 (SAME AS octic(5)!)",
+    "octic_m7": "+μ^μ × q^(q+λ) × (k-1) = +62208×11 = +684288",
+    "ratio_m7_to_5": "-(k-1) = -11"
+  },
+  "key_identity": "octic(q+λ) = octic(-1) EXACTLY (the octic is constant on the matter roots!)",
+  "octic_factoring": {
+    "formula": "octic(t) = (t-(q+λ))(t+1) × sextic(t) - μ^μ × q^(q+λ)",
+    "degrees": "λ + q! = 2 + 6 = 8 = 2^q",
+    "sextic_at_m7": "2^Φ₆ × q^μ = 128×81 = 10368",
+    "topological_protection": "(t-(q+λ)) and (t+1) appear as DOUBLE roots of the full p(t), protecting the matter and fermion sectors"
+  },
+  "self_referential_arithmetic": {
+    "mu_to_mu": "μ^μ = 4⁴ = 256",
+    "q_to_GUT": "q^(q+λ) = 3⁵ = 243",
+    "product": "62208 = μ^μ × q^(q+λ)",
+    "torus_power": "2^Φ₆ = 128",
+    "q_to_mu": "q^μ = 3⁴ = 81"
+  }
+}
