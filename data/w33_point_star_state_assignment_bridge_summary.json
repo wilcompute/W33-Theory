@@ -1,0 +1,99 @@
+{
+  "physical_support_dictionary": {
+    "selected_packet": "Hbar_2 active point-star = d_c_1 + d_c_2 + d_c_3 + e_c",
+    "minusplus_support": [
+      "d_c_1"
+    ],
+    "plusminus_support": [
+      "d_c_2",
+      "d_c_3",
+      "e_c"
+    ],
+    "native_state_refinement": {
+      "down_singlet_line": [
+        "d_c_1"
+      ],
+      "down_color_doublet_plane": [
+        "d_c_2",
+        "d_c_3"
+      ],
+      "electron_scalar_line": [
+        "e_c"
+      ]
+    }
+  },
+  "exact_state_blocks": {
+    "d_c_1_scalar_block": [
+      [
+        323
+      ]
+    ],
+    "down_doublet_block": [
+      [
+        323,
+        275
+      ],
+      [
+        275,
+        659
+      ]
+    ],
+    "e_c_scalar_block": [
+      [
+        169
+      ]
+    ],
+    "shell_denominator": 57600
+  },
+  "state_channel_dictionary": {
+    "d_c_1_channel": {
+      "squared_value": "323/57600",
+      "global_form": "q^3 Phi_6^2 - Phi_4^3"
+    },
+    "e_c_channel": {
+      "squared_value": "169/57600",
+      "global_form": "Phi_3^2 = q^2(v+1) - lambda Phi_4^2"
+    },
+    "down_color_doublet": {
+      "block": [
+        [
+          323,
+          275
+        ],
+        [
+          275,
+          659
+        ]
+      ],
+      "centered_generator": [
+        [
+          -168,
+          275
+        ],
+        [
+          275,
+          168
+        ]
+      ],
+      "reduced_discriminant": 103849,
+      "quadratic_channels": [
+        "491/57600 - sqrt(103849)/57600",
+        "sqrt(103849)/57600 + 491/57600"
+      ]
+    }
+  },
+  "operator_context": {
+    "paper_triplet_channel_formula": "(3/37) P_trip \u2297 C_(+-)",
+    "paper_singlet_injector_formula": "-eps i (1/27) P_sing \u2297 C_(-+)",
+    "paper_down_complement_shift_formula": "-eps (5/518) P_down \u2297 C_(+-)"
+  },
+  "point_star_state_assignment_theorem": {
+    "the_hbar2_minusplus_singlet_is_exactly_the_d_c_1_line": true,
+    "the_hbar2_plusminus_triplet_refines_exactly_as_d_c_2_d_c_3_plus_e_c": true,
+    "the_e_c_line_carries_the_exact_phi3_scalar_channel_169_over_57600": true,
+    "the_d_c_2_d_c_3_plane_carries_the_irreducible_quadratic_doublet_sector": true,
+    "the_selected_physical_packet_is_exactly_state_resolved_as_d_c_1_plus_d_c_2_d_c_3_plus_e_c_before_quadratic_splitting": true,
+    "the_previous_semisimple_algebra_is_now_assigned_to_actual_yukawa_states": true
+  },
+  "interpretation": "The selected Fano point-star algebra is no longer abstract. In the native Hbar_2 support basis, d_c_1 already carries the 323 scalar line, e_c already carries the Phi_3 scalar line 169, and the only genuinely nontrivial sector is the down-color plane span{d_c_2,d_c_3}, which carries the irreducible quadratic doublet. So the physical slice is already state-resolved before the final quadratic splitting over Q(sqrt(103849))."
+}
