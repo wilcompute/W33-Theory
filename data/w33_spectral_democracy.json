@@ -1,0 +1,28 @@
+{
+  "SPECTRAL_DEMOCRACY": {
+    "eigenvalues": [-7, -1, 5],
+    "arithmetic_sequence": true,
+    "center": "e2 = -1 (FERMION, universal for all q)",
+    "spacing": "2q = 6 = dim(G2/SU(3)) = color coset",
+    "range": "4q = 12 = k = valency",
+    "unique_to_q3": "2q = q(q-1) iff q=3 (15th criterion)"
+  },
+  "MASTER_CUBIC_FROM_TWO_NUMBERS": {
+    "formula": "(t+1)[(t+1)^2 - (2q)^2] = (t+1)(t-5)(t+7)",
+    "determined_by": "e2=-1 and spacing=2q only",
+    "at_q3": "t^3 + 3t^2 - 33t - 35"
+  },
+  "EIGENSPACE_COSET_DICTIONARY": {
+    "m1_10": "G2/(SU(2)xU(1)) = gauge sector (e1=+5)",
+    "m2_16": "half of E6/(SO(10)xU(1)) = matter sector (e2=-1)",
+    "m3_6": "G2/SU(3) = broken sector (e3=-7)",
+    "octic_8": "O (octonions) = mass sector"
+  },
+  "MULTIPLICITIES": {
+    "m1": "Phi4 = q^2+1 = 10",
+    "m2": "2^(q+1) = 16",
+    "m3": "2q = 6",
+    "total_cubic": "32 = 2^(q+lam) = Spin(10) spinor dim",
+    "total_with_octic": "40 = v"
+  }
+}
