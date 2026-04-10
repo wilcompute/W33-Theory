@@ -1,0 +1,18 @@
+{
+  "trace_ratios": {
+    "a2_over_a0": "21 = Phi6*q = C(Phi6,2) = T(q!) = q!(q!+1)/2",
+    "a3_over_a0": "24 = f = mu! = chi(K3)",
+    "a3_over_a2": "8/7 = 2^q/Phi6 (octic degree / QCD beta)",
+    "all_divisible_by_8": "ALL Tr(D^n) divisible by 2^q = 8"
+  },
+  "new_uniqueness_criterion": {
+    "identity": "Phi6 = q! + 1 (i.e. q^2-q+1 = q!+1)",
+    "at_q3": "7 = 6+1 = 3!+1",
+    "unique_to_q3": true,
+    "implication": "QCD beta = factorial+1, a 14th uniqueness criterion"
+  },
+  "840_triple_product": "Tr(D^2) = k × Phi4 × Phi6 = 12 × 10 × 7",
+  "trace_factorizations": {
+    "Tr_D7": "2^7 × 3 × 7 × 17 × 1091 (contains Phi6=7 and k+q+lam=17)"
+  }
+}
