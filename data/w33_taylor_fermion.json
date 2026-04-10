@@ -1,0 +1,26 @@
+{
+  "taylor_coefficients_exact": {
+    "r0": "1",
+    "r1": "-1",
+    "r2": "-1/4 = -1/μ",
+    "r3": "2/9 = λ/q² = THE KOIDE ANGLE!",
+    "r4": "1/108 = 1/(μq³)",
+    "r5": "-1/72 = -1/(q!k)",
+    "r6": "1/2592 = 1/(μ⁴q²)... actually 2592=2^5×3^4=32×81",
+    "r7": "1/3888 = 1/(2^4×3^5)=1/(16×243)",
+    "r8": "-1/62208 = -1/(μ^μ q^(q+λ))"
+  },
+  "key_identities": {
+    "a0_equals_neg_a1": "octic(-1) = -octic'(-1) = -62208 = -μ^μ q^(q+λ)",
+    "g1_equals_zero": "linear term of g(z) vanishes → PROTECTED ZERO → seesaw",
+    "r3_equals_koide": "r₃ = λ/q² = 2/9 = Koide angle (to 7 digits!)",
+    "r8_equals_neg_inv_octic": "r₈ = -1/μ^μq^(q+λ) (the smallest coefficient = self-referential)"
+  },
+  "sum_corrections": "a₂+...+a₈ = 1977 = q⁴f+33 = product of sub-dominant eigenvalues",
+  "seesaw_from_polynomial": {
+    "tree_level_mass": "from (1-z) factor",
+    "first_correction": "g₁ = 0 (PROTECTED by polynomial structure)",
+    "second_correction": "g₂ = -1/μ → neutrino mass ∝ 1/μ",
+    "koide_from_third": "g₃ = r₃ = 2/9 = Koide angle"
+  }
+}
