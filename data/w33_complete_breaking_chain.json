@@ -1,0 +1,30 @@
+{
+  "COMPLETE_BREAKING_CHAIN_E8_TO_U1": {
+    "steps": [
+      {"from": "E8(248)", "to": "E7(133)", "coset": 115, "identity": "(q+λ)(Φ₃+Φ₄)"},
+      {"from": "E7(133)", "to": "E6(78)", "coset": 55, "identity": "v+g"},
+      {"from": "E6(78)", "to": "SO10(45)", "coset": 33, "identity": "|Vieta₂| (neutrino ratio)"},
+      {"from": "SO10(45)", "to": "SO7(21)", "coset": 24, "identity": "f = χ(K3)"},
+      {"from": "SO7(21)", "to": "G2(14)", "coset": 7, "identity": "Φ₆ (QCD β₀)"},
+      {"from": "G2(14)", "to": "SU3(8)", "coset": 6, "identity": "m₃ (broken sector)"},
+      {"from": "SU3(8)", "to": "SU2xU1(4)", "coset": 4, "identity": "μ (spacetime dim)"},
+      {"from": "SU2xU1(4)", "to": "U1(1)", "coset": 3, "identity": "q (Goldstones eaten)"}
+    ],
+    "total_coset": "247 = Φ₃ × (g+μ) = 13 × 19",
+    "SM_part": "G₂→U(1): 6+4+3 = 13 = Φ₃",
+    "GUT_part": "E₈→G₂: 115+55+33+24+7 = 234 = λq²Φ₃"
+  },
+  "WEINBERG_ANGLE_DERIVED": {
+    "formula": "sin²θ_W = q/Φ₃ = (Goldstones)/(total SM broken) = 3/13",
+    "goldstones": "q = 3 (W±, Z eat 3 Goldstones)",
+    "total_broken_SM": "Φ₃ = 13 (G₂ → U(1)_EM: 6+4+3 broken generators)"
+  },
+  "EIGENSPACE_COSET_MAP": {
+    "m1_10dim": "G₂/(SU(2)×U(1)) coset = 14-4 = 10 = Φ₄",
+    "m3_6dim": "G₂/SU(3) coset = 14-8 = 6"
+  },
+  "FANO_BREAKING": {
+    "point_stabilizer": "G₂ → SU(3) (color selection, coset = 6)",
+    "line_stabilizer": "G₂ → SO(4) ≅ SU(2)×SU(2) (weak subalgebra, coset = 8 = 2^q)"
+  }
+}
