@@ -1,0 +1,43 @@
+{
+  "p_at_q": {
+    "value": 552960,
+    "factorization": "2^k × q³(q+2) = 2^12 × 135",
+    "identity": "p(q) = 2^k × (α⁻¹ - λ)",
+    "meaning": "polynomial at t=q encodes the fine structure constant!"
+  },
+  "p_at_1": {
+    "value": -1851392,
+    "factorization": "-2^(k+λ) × (v+Φ₁₂) = -2^14 × 113",
+    "exact": true,
+    "meaning": "113 = v+Φ₁₂ connects vertex count to 12th cyclotomic"
+  },
+  "p_at_lambda": {
+    "value": -688905,
+    "factorization": "-3^9 × 5 × 7 = -q^9 × (q+λ) × Φ₆"
+  },
+  "derivative_ratios": {
+    "p_prime_5_over_p_prime_m1": {
+      "value": -2.0,
+      "equals": "-λ",
+      "EXACT": true,
+      "note": "matter/fermion coupling ratio = mass ratio parameter!"
+    },
+    "p_prime_5_over_p_prime_m7": {
+      "value": -0.090909,
+      "equals": "-1/(k-1) = -1/11",
+      "EXACT": true,
+      "note": "matter/gauge coupling ratio = 1/(k-1)"
+    },
+    "p_prime_m1_over_p_prime_m7": {
+      "value": 0.045455,
+      "equals": "1/(2(k-1)) = 1/22 = 1/χ",
+      "EXACT": true,
+      "note": "fermion/gauge ratio = 1/Euler_characteristic!"
+    }
+  },
+  "derivative_factorizations": {
+    "p_prime_5": "-2^11 × 3^7 = -2^(k-1) × 3^Φ₆ = -4478976",
+    "p_prime_m1": "+2^10 × 3^7 = +2^Φ₄ × 3^Φ₆ = +2239488",
+    "p_prime_m7": "+2^11 × 3^7 × 11 = +2^(k-1) × 3^Φ₆ × (k-1) = +49268736"
+  }
+}
