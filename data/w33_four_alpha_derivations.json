@@ -1,0 +1,33 @@
+{
+  "FOUR_DERIVATIONS_OF_ALPHA_INV": {
+    "all_give_137": true,
+    "all_unique_to_q3": true,
+    "derivation_1": {
+      "formula": "(k-1)^2 + mu^2",
+      "type": "Gaussian norm",
+      "value": "11^2 + 4^2 = 137"
+    },
+    "derivation_2": {
+      "formula": "1 + [2^g + Phi6*v] / q^(q+lam)",
+      "type": "generation structure (exponential + spectral)",
+      "value": "1 + [32768 + 280]/243 = 137",
+      "note": "correction 280 = Phi6*v = Tr(D^2)_octic"
+    },
+    "derivation_3": {
+      "formula": "Phi3 + mu*(2^(q+lam) - 1)",
+      "type": "Mersenne prime",
+      "value": "13 + 4*31 = 137",
+      "note": "2^5 - 1 = 31 = Mersenne prime M_5"
+    },
+    "derivation_4": {
+      "formula": "lam*q*(q+lam)^2 - Phi3",
+      "type": "algebraic polynomial",
+      "value": "2*3*25 - 13 = 150 - 13 = 137"
+    }
+  },
+  "bonus_heegner": {
+    "formula": "(2^Phi4 + Phi6*v) / (2*mu)",
+    "value": "(1024 + 280)/8 = 163",
+    "significance": "163 = largest Heegner number (class number 1)"
+  }
+}
