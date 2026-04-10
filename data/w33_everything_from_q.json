@@ -1,0 +1,18 @@
+{
+  "THE_THEORY_OF_EVERYTHING_IS_f(q)_AT_q=3": true,
+  "parameters_as_rational_functions_of_q": {
+    "alpha_inv": {"formula": "q^4 + 2q^3 + 2", "at_q3": 137},
+    "sin2_theta_W": {"formula": "q/(q^2+q+1)", "at_q3": "3/13"},
+    "alpha_s": {"formula": "(q+1)(2q-1)/(q^2+q+1)^2", "at_q3": "20/169"},
+    "b3_SU3": {"formula": "-(q^2-q+1)", "at_q3": -7},
+    "b2_SU2": {"formula": "-(q(q^2+1)/2+q+1)/(2q)", "at_q3": "-19/6"},
+    "b1_U1": {"formula": "(q^3+q^2+q+2)/(q^2+1)", "at_q3": "41/10"},
+    "mH_over_vEW": {"formula": "sqrt((q^2-q+1)/q^3)", "at_q3": 0.509175},
+    "theta_koide": {"formula": "(q-1)/q^2", "at_q3": "2/9"},
+    "V_us_squared": {"formula": "2/((q+1)(q^2+1))", "at_q3": "1/20"},
+    "A_wolfenstein": {"formula": "(q^2+q-1)/(q^2+q+1)", "at_q3": "11/13"},
+    "dm2_ratio": {"formula": "|2q^3-q^2-2q+2|", "at_q3": 33},
+    "det_M_gen": {"formula": "q^8", "at_q3": 6561},
+    "log10_Lambda_CC": {"formula": "-(q^4+2q^3+2-q(q^2+1)/2)", "at_q3": -122}
+  }
+}
