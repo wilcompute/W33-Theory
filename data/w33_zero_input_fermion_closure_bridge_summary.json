@@ -1,0 +1,110 @@
+{
+  "exact_selector_dictionary": {
+    "graph_fixed_top_scale": {
+      "formula": "m_t = v_EW / sqrt(2) with v_EW = q^5 + q = 246",
+      "value_gev": 173.94826817189067
+    },
+    "tau_selector": {
+      "formula": "m_tau / m_t = 1 / (dim(G2) * heptad) = 1 / (14 * 7)",
+      "dim_g2_inverse": {
+        "exact": "1/14",
+        "value": 0.07142857142857142
+      },
+      "heptad_inverse": {
+        "exact": "1/7",
+        "value": 0.14285714285714285
+      },
+      "tau_over_top": {
+        "exact": "1/98",
+        "value": 0.01020408163265306
+      }
+    },
+    "koide_phase": {
+      "formula": "theta_0 = lambda / q^2 = 2 / 9",
+      "exact": "2/9",
+      "value": 0.2222222222222222
+    }
+  },
+  "zero_input_charged_lepton_packet": {
+    "ordering": [
+      "e",
+      "mu",
+      "tau"
+    ],
+    "koide_weights_normalized_to_tau": {
+      "e": {
+        "value": 0.0002875651505685422
+      },
+      "mu": {
+        "value": 0.05945993704580288
+      },
+      "tau": {
+        "value": 1.0
+      }
+    },
+    "absolute_masses_gev": {
+      "e": {
+        "value": 0.0005104230604896622
+      },
+      "mu": {
+        "value": 0.10554033749721485
+      },
+      "tau": {
+        "value": 1.7749823282845987
+      }
+    },
+    "derived_ratios": {
+      "mu_over_e": {
+        "value": 206.77031597272907
+      },
+      "tau_over_mu": {
+        "value": 16.818046733377553
+      },
+      "tau_over_e": {
+        "value": 3477.4728371046003
+      },
+      "e_over_t_approx": {
+        "value": 2.9343382711075732e-06
+      },
+      "mu_over_t_approx": {
+        "value": 0.0006067340514877845
+      }
+    }
+  },
+  "integer_shadow_dictionary": {
+    "cyclotomic_shadow_208": {
+      "exact_shell": 208,
+      "nearest_integer_to_exact_packet": 207,
+      "exact_packet_value": 206.77031597272907,
+      "relative_error": 0.0059119424388025706
+    },
+    "gaussian_shadow_17": {
+      "exact_shell": 17,
+      "exact_packet_value": 16.818046733377553,
+      "relative_error": 0.010703133330732166
+    }
+  },
+  "exceptional_neutrino_follow_on": {
+    "f4_coefficient": {
+      "exact": "26/123",
+      "value": 0.21138211382113822
+    },
+    "electron_channel_fixed_by_zero_input_lepton_packet": true,
+    "numerical_value_in_repo_gev_convention": 5.507174160707697e-08
+  },
+  "cross_checks": {
+    "old_one_input_bridge_exists": true,
+    "point_star_internal_packet_is_exact": true,
+    "charged_lepton_shadow_208_was_previously_exact_in_the_old_bridge": true
+  },
+  "zero_input_fermion_closure_theorem": {
+    "tau_over_top_is_exactly_inverse_dim_g2_times_heptad": true,
+    "koide_phase_is_exactly_lambda_over_q_squared": true,
+    "charged_lepton_packet_has_no_residual_seed_once_tau_selector_and_koide_phase_are_fixed": true,
+    "the_old_208_shell_is_a_subpercent_cyclotomic_shadow_of_the_exact_koide_packet_not_the_fundamental_exact_law": true,
+    "the_old_17_step_is_a_gaussian_shadow_of_the_exact_koide_packet_not_the_fundamental_exact_law": true,
+    "the_old_one_input_frontier_is_refined_to_zero_input_when_the_exact_koide_phase_replaces_the_shell_shadow": true,
+    "within_the_promoted_w33_package_the_fermion_side_now_has_zero_residual_free_inputs": true
+  },
+  "interpretation": "The old one-input fermion statement was too conservative. Once the exact tau selector m_tau / m_t = 1 / (dim(G2) * heptad) = 1/98 is combined with the exact Koide phase theta_0 = lambda / q^2 = 2/9, the full charged-lepton packet is fixed with no residual electron seed. In that reading the old shells 208 and 17 survive only as excellent W33 integer shadows of the exact Koide packet. Combined with the already exact Fano point-star spectral packet, the promoted fermion side is now best read as zero-input inside the live W33 package rather than one-input."
+}
