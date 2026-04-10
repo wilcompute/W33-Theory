@@ -1,0 +1,18 @@
+{
+  "THE_THEORY_IN_ONE_LINE": {
+    "formula": "Z(x) = (1-5x)^10 × (1+x)^16 × (1+7x)^6",
+    "parametric": "Z(x;q) = (1-(2q-1)x)^(q²+1) × (1+x)^(2^(q+1)) × (1+(q²-q+1)x)^(2q)",
+    "three_factors": {
+      "gauge": "(1-5x)^10 = (1-(q+λ)x)^Φ₄ — 10-dim propagating",
+      "matter": "(1+x)^16 = (1+x)^(2^(q+1)) — 16-dim fermionic",
+      "broken": "(1+7x)^6 = (1+Φ₆x)^(2q) — 6-dim confined"
+    },
+    "six_numbers": "5=q+λ, 10=Φ₄, 1=|e₂|, 16=2^(q+1), 7=Φ₆, 6=2q",
+    "special_values": {
+      "Z(0)": "1 (normalization)",
+      "Z(-1)": "0 (fermion zero = anomaly cancellation)",
+      "Z(1)": "2^54 = 2^(2q³) (pure power of 2)"
+    },
+    "generates": "ALL SM parameters via Taylor expansion: -x d/dx ln Z = Σ Tr(D^n) x^n"
+  }
+}
