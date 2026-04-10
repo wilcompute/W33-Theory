@@ -1,0 +1,30 @@
+{
+  "COMPLETE_MASS_SPECTRUM": {
+    "up_type": {
+      "m_t": "v_EW/√2 = 174.1 GeV",
+      "m_c": "m_t/α⁻¹ = m_t/137 (0.07% match!)",
+      "m_u": "m_t/(μα⁻²) = 2.32 MeV (7%)"
+    },
+    "charged_leptons": {
+      "m_tau": "m_t/(λΦ₆²) = m_t/98 (0.02% match!!)",
+      "m_mu": "Koide(θ₀=2/9) (0.02%)",
+      "m_e": "Koide(θ₀=2/9) (0.02%)"
+    },
+    "down_type": {
+      "m_b": "m_τ×√φ×RG(12/23) = 4.18 GeV (exact)",
+      "m_s": "cascade from m_b (~93 MeV)",
+      "m_d": "cascade from m_s (~4.7 MeV)"
+    },
+    "key_formulas": {
+      "charm_top": "m_c/m_t = 1/α⁻¹ = 1/(q⁴+2q³+2) = 1/137",
+      "tau_top": "m_τ/m_t = 1/(λΦ₆²) = 1/(2×49) = 1/98",
+      "b_tau_unification": "m_b/m_τ(GUT) = √φ (golden ratio)",
+      "koide_angle": "θ₀ = λ/q² = 2/9",
+      "qcd_exponent": "γ_m = k/(|Vieta₂|-2(q+λ)) = 12/23"
+    },
+    "qcd_connection": {
+      "33": "|Vieta₂| of master cubic = 33-2(q+λ) = 23 = Φ₃+Φ₄",
+      "meaning": "the neutrino mass ratio and the QCD anomalous dimension share the number 33"
+    }
+  }
+}
