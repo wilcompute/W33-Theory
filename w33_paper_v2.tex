@@ -839,6 +839,28 @@ from a graph parameter).
   b_1 &= (v+1)/\Theta = 41/10.
 \end{align}
 
+\subsection{All three couplings at \texorpdfstring{$M_Z$}{MZ}}
+
+The electromagnetic coupling runs from its Thomson-limit value
+$\alpha^{-1}(0)=137$ to $M_Z$ by exactly $q^2$:
+\begin{equation}
+  \alpha^{-1}(M_Z) = \alpha^{-1}(0) - q^2 = 137-9 = 128.
+\end{equation}
+(Measured: $127.951$; error $0.04\%$.)
+All three $M_Z$ couplings then follow:
+\begin{align}
+  \alpha_1^{-1} &= \tfrac{3}{5}\,\tfrac{\Phithree-q}{\Phithree}\,(\alpha^{-1}{-}q^2)
+    = 59.08 &&(\text{exp: }59.0),\\
+  \alpha_2^{-1} &= \tfrac{q}{\Phithree}\,(\alpha^{-1}{-}q^2) = 29.54
+    &&(\text{exp: }29.6),\\
+  \alpha_3^{-1} &= \Phithree^2/(\lambda\Theta) = 8.45
+    &&(\text{exp: }8.5).
+\end{align}
+The unified coupling is $\alpha_{\text{GUT}}^{-1}=f=24=(q+1)!$.
+Frampton--Mohapatra (1999) showed that $\sin^2\theta_W=3/13$ is the
+trinification ratio $\SU(3)^3\to G_{\mathrm{SM}}$, confirming
+it is geometric rather than an artefact of running.
+
 \subsection{Mass spectrum}
 
 The electroweak VEV is $\vEW = E+q! = 240+6 = 246$~GeV (measured $246.22$~GeV).
@@ -925,6 +947,24 @@ Jarlskog invariant:
     \cdot\frac{15}{17} = \frac{27}{884000} \approx 3.054\times 10^{-5}.
 \end{equation}
 Measured: $(3.08\pm 0.13)\times 10^{-5}$ ($0.8\%$ deviation).
+The CKM CP-violating phase:
+\begin{equation}
+  \delta_{\mathrm{CKM}} = \arctan\!\biggl(\frac{v-\lambda}{g}\biggr)
+  = \arctan\!\frac{38}{15} = 68.5^\circ
+  \quad(\text{exp: }68.4^\circ\pm 2.0^\circ).
+\end{equation}
+\end{theorem}
+
+\subsection{Proton--electron mass ratio}
+
+\begin{theorem}
+\begin{equation}
+  \frac{m_p}{m_e} = \alpha^{-1}\Phithree + v + g
+  = 137\times 13 + 40 + 15 = 1781 + 55 = 1836.
+\end{equation}
+Note $v+g=55=F_{10}$ (10th Fibonacci number).
+Alternatively, $m_p/m_e = k\cdot T(q^2+2^q) = 12\cdot T(17) = 12\times 153 = 1836$.
+Experimental: $1836.153$; error $0.008\%$.
 \end{theorem}
 
 \subsection{PMNS matrix and neutrino sector}
@@ -1123,6 +1163,15 @@ On $M^4\times F_{W(3,3)}$, the Connes spectral action gives:
 Observed $\ln(M_{\mathrm{Pl,red}}/\vEW)=36.83$ ($0.03\%$ error).
 Both $\mu^2=16$ and $\Theta=10$ are forced by $W(3,3)$.
 
+The heat kernel of the $32{\times}32$ operator $M$,
+$K(t) = 10\,e^{-25t} + 16\,e^{-t} + 6\,e^{-49t}$,
+produces a sharp-cutoff spectral hierarchy:
+$32\to 26\to 16\to 0$ as $\Lambda$ decreases through
+$\Phisix$, $q{+}\lambda$, $1$---matching the chain
+full $\to$ $F_4$ fundamental $\to$ $\SO(10)$ spinor.
+The spectral zeta function satisfies
+$\zeta_M(1) = (\alpha^{-1}{-}(q{+}\lambda))/\Phisix = 132/7$.
+
 
 % ═══════════════════════════════════════════════════════════════
 \section{Number Theory}
@@ -1313,6 +1362,17 @@ Normal-ordering min & $\Sigma m_\nu\ge 60$ meV & 2 meV below & Under pressure \\
 \bottomrule
 \end{tabular}
 \end{center}
+
+\subsection{Inflation}
+
+The number of $e$-folds is $N=v+\Theta+\Phisix+q = 40+10+7+3 = 60$,
+also expressible as $k(q+\lambda)=|A_5|=60$.
+\begin{align}
+  n_s &= 1-2/N = 58/60 \approx 0.9667 &&(\text{exp: }0.965\pm 0.004),\\
+  r &= k/N^2 = 12/3600 = 1/300 \approx 0.0033 &&(\text{CMB-S4 target}).
+\end{align}
+The tensor-to-scalar ratio $r=1/300$ is within the reach of
+CMB-S4 ($\sigma_r\sim 0.001$).
 
 \subsection{Proton lifetime}
 
