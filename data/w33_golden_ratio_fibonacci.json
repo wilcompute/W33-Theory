@@ -1,0 +1,29 @@
+{
+  "GOLDEN_RATIO_FROM_q3": {
+    "formula": "φ = (1+√(q+λ))/2 = (1+√(2q-1))/2",
+    "at_q3": "(1+√5)/2 = 1.61803... = THE golden ratio",
+    "unique_to_q3": "φ = the classical golden ratio ONLY when q+λ=5 IFF q=3 (17th criterion)",
+    "role": "m_b/m_τ(GUT) = √φ = √((1+√(q+λ))/2)"
+  },
+  "FIBONACCI_THROUGH_W33": {
+    "F3": {"value": 2, "identity": "λ (edge overlap)"},
+    "F4": {"value": 3, "identity": "q (field characteristic)"},
+    "F5": {"value": 5, "identity": "q+λ (generation exponent)"},
+    "F6": {"value": 8, "identity": "2^q (octic degree = dim O)"},
+    "F7": {"value": 13, "identity": "Φ₃ (Weinberg denominator)"},
+    "F8": {"value": 21, "identity": "a₂/a₀ = Φ₆q (spectral ratio)"},
+    "note": "SIX CONSECUTIVE Fibonacci numbers = the W(3,3) parameter table"
+  },
+  "FIBONACCI_RATIOS_TO_PHI": {
+    "F5_over_F4": "5/3 = (q+λ)/q → φ in the limit",
+    "F8_over_F7": "21/13 = a₂/(a₀Φ₃) → φ in the limit"
+  },
+  "MASTER_MASS_FORMULA": {
+    "formula": "m(X,g) = v_EW/√2 × R(X) × α^(3-g) × μ^(1-min(g,2))",
+    "R_up": 1,
+    "R_lepton": "1/(λΦ₆²) = 1/98",
+    "R_down": "√φ × R_lepton × RG correction",
+    "alpha": "1/(q⁴+2q³+2) = 1/137",
+    "mu_penalty": "μ = q+1 = 4 (1st gen only)"
+  }
+}
