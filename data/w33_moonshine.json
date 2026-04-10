@@ -1,0 +1,30 @@
+{
+  "ramanujan_tau_is_w33": {
+    "tau_1": {"value": 1, "identity": "1"},
+    "tau_2": {"value": -24, "identity": "-f = -chi(K3)"},
+    "tau_3": {"value": 252, "identity": "E + k = 240 + 12"},
+    "tau_4": {"value": -1472, "identity": "-2^(2q) * (Phi3+Phi4) = -64*23"},
+    "tau_5": {"value": 4830, "identity": "lam*q*(q+lam)*Phi6*(Phi3+Phi4) = 2*3*5*7*23"}
+  },
+  "eisenstein_coefficients": {
+    "E4_coeff": {"value": 240, "identity": "E (edges = E8 roots)"},
+    "E6_coeff": {"value": -504, "identity": "-Phi6*|Roots(E6)| = -7*72"},
+    "E8_coeff": {"value": 480, "identity": "2E (directed edges)"},
+    "Delta_coeff_2": {"value": -24, "identity": "-f = -chi(K3)"},
+    "Delta_coeff_3": {"value": 252, "identity": "E+k"},
+    "j_constant": {"value": 744, "identity": "q*dim(E8) = 3*248"}
+  },
+  "monster_primes_are_w33": {
+    "7^6": "Phi6^(q!) = atmospheric^(generations!)",
+    "13^3": "Phi3^q = Weinberg^(generations)",
+    "11^2": "(k-1)^lam = spectral_gap^(edge_overlap)",
+    "17^1": "(k+q+lam)^1 = Tr(D4) factor",
+    "19^1": "(g+mu)^1 = SU(2) beta numerator",
+    "41^1": "(v+1)^1 = U(1) beta numerator"
+  },
+  "master_equation": {
+    "form": "(k-1)t^3 - qt^2 - (alpha_inv-q)t - 2*mu*g = 0",
+    "explicit": "11t^3 - 3t^2 - 134t - 120 = 0",
+    "interpretation": "minimal polynomial of the coupling operator on the gauge eigenspace"
+  }
+}
