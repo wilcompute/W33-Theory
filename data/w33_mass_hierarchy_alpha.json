@@ -1,0 +1,28 @@
+{
+  "MASS_HIERARCHY_FROM_ALPHA": {
+    "charm_top_ratio": {
+      "prediction": "m_c/m_t = 1/α⁻¹ = 1/137",
+      "numerical": 0.007299,
+      "experimental": "1.27/174.1 = 0.007295",
+      "match_pct": 0.07,
+      "formula": "m_c = v_EW/(√2 × (q⁴+2q³+2))"
+    },
+    "up_charm_ratio": {
+      "prediction": "m_u/m_c = 1/(μ×α⁻¹) = 1/548",
+      "formula": "m_u = m_t/(μ(α⁻¹)²)",
+      "value_MeV": 2.32,
+      "experimental_MeV": 2.16,
+      "match_pct": 7.3
+    },
+    "cascade": {
+      "3rd_to_2nd": "factor α = 1/(q⁴+2q³+2) = 1/137",
+      "2nd_to_1st": "factor α/μ = 1/(μ(q⁴+2q³+2)) = 1/548",
+      "total_3rd_to_1st": "α²/μ = 1/75076"
+    },
+    "up_type_masses": {
+      "m_t": "v_EW/√2 = 174.1 GeV",
+      "m_c": "v_EW/(√2 × α⁻¹) = 1.271 GeV (0.07%!)",
+      "m_u": "v_EW/(√2 × μ(α⁻¹)²) = 2.32 MeV (7%)"
+    }
+  }
+}
