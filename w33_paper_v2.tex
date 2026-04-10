@@ -161,16 +161,16 @@ it determines (Table~\ref{tab:params}).
 \subsection{Strategy and outline}
 
 The logical chain is:
-\begin{equation}
+\begin{multline}
   \label{eq:chain}
   q!=2q \;\Longrightarrow\; q=3
   \;\Longrightarrow\; W(3,3) = \SRG(40,12,2,4)
-  \;\Longrightarrow\; Z(x)
+  \;\Longrightarrow\; Z(x)\\
   \;\xrightarrow{\text{Taylor}}\; E_8
   \;\xrightarrow{\text{chain}}\; G_{\mathrm{SM}}
   \;\xrightarrow{\text{Fano}}\; 3{+}1\text{ spacetime}
   \;\xrightarrow{\text{spectrum}}\; m,\,\alpha,\,\theta_W,\ldots
-\end{equation}
+\end{multline}
 
 Section~\ref{sec:W33} constructs $W(3,3)$ and its automorphism group.
 Section~\ref{sec:dirac} builds the Dirac operator and derives
@@ -271,8 +271,9 @@ and $A_2 = J-I-A_1$ (non-adjacency matrix).  These satisfy the
   A^2 = (k-\mu)I + (\lambda-\mu)A + \mu J
       = 8I - 2A + 4J.
 \end{equation}
-The algebra $\langle A_0,A_1,A_2\rangle$ is three-dimensional and equals
-$\mathrm{End}_{W(E_6)}(\RR^{40})$, forcing a multiplicity-free decomposition
+The algebra $\langle A_0,A_1,A_2\rangle$ is three-dimensional,
+equalling $\mathrm{End}_{W(E_6)}(\RR^{40})$ and forcing the
+multiplicity-free decomposition
 $\RR^{40}=V_1\oplus V_{24}\oplus V_{15}$ (Section~\ref{ssec:irred}).
 
 \subsubsection{Eigenvalues and multiplicities}
@@ -1150,22 +1151,23 @@ $\Neff\cdot v/q+\mathrm{const}$.
 
 \subsection{The CF alphabet \texorpdfstring{$\{1,2,3,4,5,7,8,20\}$}{}}
 
-The continued-fraction digits that appear in $W(3,3)$ constants are
-exactly $\{1,2,3,4,5,7,8,20\}$.  These are the $W(3,3)$ parameters
-$\{1,\lambda,q,\mu,q+\lambda,\Phisix,2^q,v/\lambda\}$ with no other
-values.
+The continued-fraction digits appearing in $W(3,3)$
+constants are exactly
+$\{1,\allowbreak 2,\allowbreak 3,\allowbreak 4,\allowbreak 5,\allowbreak 7,\allowbreak 8,\allowbreak 20\}$,
+i.e.~$1,\lambda,q,\mu,q{+}\lambda,\Phisix,2^q,v/\lambda$;
+no others arise.
 
 \subsection{Fibonacci: \texorpdfstring{$F(3)\ldots F(8)$}{F(3)...F(8)} are all \texorpdfstring{$W(3,3)$}{W(3,3)} parameters}
 
-\begin{equation}
+\begin{gather}
   \label{eq:fibonacci}
   F(3)=2=\lambda,\quad
   F(4)=3=q,\quad
-  F(5)=5=q+\lambda,\quad
+  F(5)=5=q+\lambda,\nonumber\\
   F(6)=8=2^q,\quad
   F(7)=13=\Phithree,\quad
   F(8)=21=\Phithree+\lambda^3.
-\end{equation}
+\end{gather}
 Five consecutive Fibonacci numbers $\{2,3,5,8,13\}$ are simultaneously
 $W(3,3)$ parameters at $q=3$.  This chain terminates: $F(9)=34$ has no
 natural $W(3,3)$ interpretation, confirming $q=3$ sits precisely at
@@ -1393,7 +1395,7 @@ among prime powers.  No single argument presupposes another.
 
 \begin{center}
 \renewcommand{\arraystretch}{1.3}
-\begin{tabular}{clp{7.2cm}l}
+\begin{tabular}{clp{6.2cm}l}
 \hline
 \textbf{\#} & \textbf{Name} & \textbf{Statement} & \textbf{Status} \\
 \hline
@@ -1517,14 +1519,14 @@ to better than $2\%$ accuracy.
 
 \subsection{The logical chain, recalled}
 
-\begin{equation}
+\begin{multline}
   Z(x)
   \;\xrightarrow{\text{Taylor}}\; E_8
   \;\xrightarrow{\text{chain}}\; G_{\mathrm{SM}}
-  \;\xrightarrow{\text{Fano}}\; 3{+}1\text{ spacetime}
+  \;\xrightarrow{\text{Fano}}\; 3{+}1\text{ spacetime}\\
   \;\xrightarrow{\text{octonion}}\; \text{confinement}
   \;\xrightarrow{\text{spectrum}}\; m,\,\alpha,\,\theta_W,\,\ldots
-\end{equation}
+\end{multline}
 
 \begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,
   title=\textbf{The Final Theorem}]
@@ -1602,7 +1604,8 @@ $\varphi$ & $(1+\sqrt{q+\lambda})/2$ & $(1+\sqrt5)/2$
 \addcontentsline{toc}{section}{Appendix B: Verification Statistics}
 
 \begin{center}
-\begin{tabular}{@{}clr@{}}
+\small
+\begin{tabular}{@{}cp{5.8cm}r@{}}
 \toprule
 \textbf{Phase} & \textbf{Domain} & \textbf{Checks} \\
 \midrule
@@ -1610,16 +1613,16 @@ $\varphi$ & $(1+\sqrt{q+\lambda})/2$ & $(1+\sqrt5)/2$
 11--20 & Number theory, combinatorics, Lie algebras & 680 \\
 21--28 & Sporadic groups, modular forms, topology & 750 \\
 29--31 & Combinatorial sequences, Pell, Catalan & 479 \\
-32     & Physics ($E_8\times E_8$, gauge, nuclear) & 77 \\
+32     & Physics ($E_8\!\times\! E_8$, gauge, nuclear) & 77 \\
 33     & Modern physics ($\alpha$, masses, cosmology) & 73 \\
 34     & Symbolic derivations & 37 \\
 35     & Uniqueness, final theorem & 41 \\
 36     & Incidence geometry, $\GQ(3,3)$, $\Sp(4,3)$, triality & 56 \\
-37     & $W(3,3)$ construction, spreads, ovoids, Payne, elations & 80 \\
+37     & $W(3,3)$ construction, spreads, ovoids, Payne & 80 \\
 38     & Anyons, SUSY, inflation, BH entropy & 92 \\
-39     & GUT, seesaw, PMNS, string landscape, QCD, Higgs & 87 \\
-Post-39 & NCG spectral action, K3 closure, neutrino falsifiability,
-         positive geometry, zeta--moonshine bridge & $>400$ \\
+39     & GUT, seesaw, PMNS, string landscape, QCD & 87 \\
+Post-39 & NCG spectral action, K3 closure, Fano--Yukawa,
+          positive geometry, zeta--moonshine & $>400$ \\
 \midrule
 \textbf{Total} & & $\mathbf{>3091}$ \\
 \textbf{Failures} & & \textbf{0} \\
