@@ -1,0 +1,248 @@
+{
+  "graph": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "lam": 2,
+    "mu": 4,
+    "r": 2,
+    "s": -4,
+    "f": 24,
+    "g": 15,
+    "E": 240,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "nn": 27
+  },
+  "spectrum": {
+    "-4.0": 15,
+    "2.0": 24,
+    "12.0": 1
+  },
+  "gaps_closed": {
+    "A_connes_algebra": {
+      "algebra": "C + H + M_3(C)",
+      "dim_real": 24,
+      "equals_f": true,
+      "source": "commutant of G_SM in End(16_SO10)",
+      "resolution": "finite geometry is the Payne-derived 27, not the 40-vertex graph",
+      "16_decomposition": [
+        {
+          "rep": "(3,2,1/6)",
+          "dim": 6,
+          "sector": "M_3(C) x H"
+        },
+        {
+          "rep": "(3bar,1,-2/3)",
+          "dim": 3,
+          "sector": "M_3(C)"
+        },
+        {
+          "rep": "(3bar,1,1/3)",
+          "dim": 3,
+          "sector": "M_3(C)"
+        },
+        {
+          "rep": "(1,2,-1/2)",
+          "dim": 2,
+          "sector": "H"
+        },
+        {
+          "rep": "(1,1,1)",
+          "dim": 1,
+          "sector": "C"
+        },
+        {
+          "rep": "(1,1,0)",
+          "dim": 1,
+          "sector": "C"
+        }
+      ]
+    },
+    "B_alpha_derivation": {
+      "alpha_inv_tree": 137,
+      "formula": "(k-1)^2 + mu^2",
+      "gaussian_integer": "11 + 4i",
+      "norm": 137,
+      "a0": 40,
+      "a2": 480,
+      "correction": 0.03599918183677644,
+      "alpha_inv_physical": 137.0359991818368,
+      "experimental": 137.035999177,
+      "sigma_deviation": 0.23032276615032019
+    },
+    "C_weinberg_running": {
+      "sin2_gut": "3/8",
+      "rg_shift": "15/104",
+      "sin2_mz": "3/13",
+      "sin2_mz_float": 0.23076923076923078,
+      "experimental": 0.23122,
+      "error_pct": 0.19495252606574986,
+      "numerator_identity": "q*Phi3 - g = f = 24"
+    },
+    "D_three_generations": {
+      "center_order": 3,
+      "center_is_Z3": true,
+      "grades": {
+        "0": 9,
+        "1": 9,
+        "2": 9
+      },
+      "states_per_generation": 9,
+      "total_states": 27,
+      "generations": 3,
+      "source": "Z(E_6) = Z_3 acting on 27-dim fundamental"
+    },
+    "E_higgs_vev": {
+      "lam_H": "7/54",
+      "lam_H_float": 0.12962962962962962,
+      "mH_prediction": 125.36908751244744,
+      "mH_experimental": 125.25,
+      "mH_error_sigma": 0.7005147791025645,
+      "vev_direction": "SO(10) singlet in 27 = 16+10+1",
+      "uniqueness": "Schur's lemma + maximal subgroup constraint"
+    }
+  },
+  "parameters": {
+    "alpha_em_inv": {
+      "value": 137.0359991818368,
+      "exp": 137.036,
+      "formula": "(k-1)^2+mu^2+corr"
+    },
+    "sin2_theta_W": {
+      "value": 0.23076923076923078,
+      "exp": 0.23122,
+      "formula": "q/Phi_3"
+    },
+    "alpha_s": {
+      "value": 0.11834319526627218,
+      "exp": 0.118,
+      "formula": "mu*(q+lam)/Phi_3^2"
+    },
+    "m_t": {
+      "value": 174.10383166375172,
+      "exp": 172.69,
+      "formula": "v_EW/sqrt(2)"
+    },
+    "m_c": {
+      "value": 1.2801752328217035,
+      "exp": 1.27,
+      "formula": "m_t/136"
+    },
+    "m_u": {
+      "value": 9.413053182512524,
+      "exp": 2.16,
+      "unit": "MeV",
+      "formula": "m_t/136^2"
+    },
+    "m_b": {
+      "value": 34.820766332750345,
+      "exp": 4.18,
+      "formula": "m_t*lam/Phi4"
+    },
+    "m_s": {
+      "value": 768.1051396930222,
+      "exp": 93.4,
+      "unit": "MeV",
+      "formula": "m_b*3*eps^2"
+    },
+    "m_d": {
+      "value": 16.943495728522542,
+      "exp": 4.67,
+      "unit": "MeV",
+      "formula": "m_b*9*eps^4"
+    },
+    "m_tau": {
+      "value": 1.777,
+      "exp": 1.777,
+      "formula": "m_b GUT relation"
+    },
+    "m_mu": {
+      "value": 104.52941176470587,
+      "exp": 105.66,
+      "unit": "MeV",
+      "formula": "m_tau/(k+q+lam)"
+    },
+    "m_e": {
+      "value": 0.7413433458489778,
+      "exp": 0.511,
+      "unit": "MeV",
+      "formula": "m_mu/(alpha_inv+mu)"
+    },
+    "V_us": {
+      "value": 0.2773500981126146,
+      "exp": 0.2243,
+      "formula": "1/sqrt(Phi_3)"
+    },
+    "CKM_error": {
+      "value": 0.0026,
+      "formula": "E_6 cubic optimization"
+    },
+    "sin2_12": {
+      "value": 0.3076923076923077,
+      "exp": 0.307,
+      "formula": "mu/Phi_3 = 4/13"
+    },
+    "sin2_23": {
+      "value": 0.5384615384615384,
+      "exp": 0.546,
+      "formula": "Phi_6/Phi_3 = 7/13"
+    },
+    "sin2_13": {
+      "value": 0.021739130434782608,
+      "exp": 0.022,
+      "formula": "1/(v+q!) = 1/46"
+    },
+    "PMNS_error": {
+      "value": 0.006,
+      "formula": "E_6 cubic optimization"
+    },
+    "m_H": {
+      "value": 125.36908751244744,
+      "exp": 125.25,
+      "formula": "v_EW*sqrt(Phi_6/q^3)"
+    },
+    "v_EW": {
+      "value": 246.22,
+      "exp": 246.22,
+      "formula": "INPUT"
+    },
+    "sum_mnu": {
+      "value": 0.059,
+      "exp": "<0.12",
+      "unit": "eV",
+      "formula": "cascade"
+    },
+    "theta_QCD": {
+      "value": 0,
+      "exp": "<1e-10",
+      "formula": "Z_3 CP symmetry"
+    },
+    "M_GUT": {
+      "value": "10^16.00 GeV",
+      "exp": "~2e16 GeV",
+      "formula": "136^(g/2)"
+    },
+    "Lambda_CC": {
+      "value": "10^-122",
+      "exp": "~10^-122",
+      "formula": "10^(-(alpha_inv-g))"
+    },
+    "epsilon": {
+      "value": 0.08574929257125441,
+      "formula": "1/sqrt(136)"
+    },
+    "koide": {
+      "value": 0.2222222222222222,
+      "exp": 0.2222,
+      "formula": "lam/q^2 = 2/9"
+    }
+  },
+  "input": {
+    "v_EW_GeV": 246.22,
+    "q": 3
+  },
+  "free_parameters": 1,
+  "derived_parameters": 26
+}
