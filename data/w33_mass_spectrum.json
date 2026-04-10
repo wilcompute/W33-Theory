@@ -1,0 +1,29 @@
+{
+  "golden_ratio_mass_hierarchy": {
+    "within_generation": "σ₁:σ₂:σ₃ = 1:1/√φ:1/φ (geometric progression ratio 1/φ)",
+    "between_generations": "ε² = 1/136 = 1/(α⁻¹-1)",
+    "two_independent_hierarchies": true
+  },
+  "b_tau_unification": {
+    "GUT_ratio": "m_b/m_τ(GUT) = √φ = 1.2720",
+    "QCD_running_factor": 1.85,
+    "MZ_ratio_predicted": 2.353,
+    "MZ_ratio_experimental": 2.352,
+    "match": "EXACT to 0.04%!"
+  },
+  "up_quark_masses": {
+    "m_t": "v_EW/√2 ≈ 172.5 GeV",
+    "m_c": "m_t × (1/√φ) × ε² ≈ 1.0 GeV (exp: 1.27)",
+    "m_u": "m_t × (1/φ) × ε⁴ ≈ 5.8 MeV (exp: 2.2)"
+  },
+  "sub_dominant_identification": {
+    "h4_h7": "80-97% V₂₄ = matter-dominated = HIGGS DOUBLET (4 modes)",
+    "h1_h3": "76-95% V₁₅ = gauge-dominated = EW BOSONS (3 modes)",
+    "h8": "94% V₁ = vacuum-dominated = COSMOLOGICAL (1 mode)"
+  },
+  "basis_rotation_exact_integers": {
+    "V24_into_DH": "10+10+0+4",
+    "V15_into_DH": "0+6+6+3",
+    "V16_shared": "10(matter)+6(gauge)=16=Spin(10)"
+  }
+}
