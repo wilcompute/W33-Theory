@@ -1,0 +1,27 @@
+{
+  "master_cubic": "t³ + qt² - (2Φ₃+Φ₆)t - (q+λ)Φ₆ = t³+3t²-33t-35 = (t-5)(t+1)(t+7)",
+  "sub_dominant_8_modes": {
+    "sum": "8 = 2^q [EXACT]",
+    "sum_of_squares": "280 = Φ₆ × v [EXACT]",
+    "count": "8 = v - 32 = v - 2^(q+λ)"
+  },
+  "spectral_action": {
+    "Tr_DH_0": "v = 40",
+    "Tr_DH_1": "0 [TRACELESS!]",
+    "Tr_DH_2": "840 = v × C(Φ₆,2) = f × C(Φ₆,3) [EXACT]",
+    "Tr_DH_3": "960 = q! × μ × v [EXACT from dominant]"
+  },
+  "higgs_quartic": {
+    "from_yukawa_SVD": "Tr(Y⁴)/Tr(Y²)² = 17/45",
+    "17_equals": "k+q+λ (discriminant root, Klein 4-group generator mod 48)",
+    "45_equals": "C(Φ₄,2) (number of pairs in W(3,3))",
+    "m_H_with_N_equals_q": "123.45 GeV (1.5% from experiment)",
+    "experimental": "125.25 ± 0.17 GeV"
+  },
+  "all_couplings_from_cubic": {
+    "alpha_inv": "(e₁-e₃-1)²+μ² = (k-1)²+μ² = 137",
+    "sin2_theta_W_GUT": "m₃/(m₁+m₃) = q!/(Φ₄+q!) = 3/8",
+    "sin2_theta_W_MZ": "3/8 - 2g/((m₁+m₃)Φ₃) = 3/13",
+    "alpha_s": "μe₁/Φ₃² = 20/169"
+  }
+}
