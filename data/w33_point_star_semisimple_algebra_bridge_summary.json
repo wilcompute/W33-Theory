@@ -1,0 +1,470 @@
+{
+  "physical_point_star_packet": {
+    "slice": "1 + (1 + 2)",
+    "shell_denominator": 57600,
+    "scalar_channels": {
+      "singlet": "323/57600",
+      "triplet_scalar": "169/57600"
+    },
+    "quadratic_channels": [
+      "491/57600 - sqrt(103849)/57600",
+      "sqrt(103849)/57600 + 491/57600"
+    ]
+  },
+  "semisimple_basis": {
+    "full_operator_numerator": [
+      [
+        323,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        323,
+        275,
+        0
+      ],
+      [
+        0,
+        275,
+        659,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        169
+      ]
+    ],
+    "identity": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "singlet_idempotent": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "doublet_idempotent": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "phi3_idempotent": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "centered_doublet_generator": [
+      [
+        -168,
+        275
+      ],
+      [
+        275,
+        168
+      ]
+    ],
+    "full_centered_doublet_generator": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        -168,
+        275,
+        0
+      ],
+      [
+        0,
+        275,
+        168,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "doublet_center": 491,
+    "doublet_discriminant": 415396,
+    "doublet_reduced_discriminant": 103849,
+    "doublet_determinant": 137232
+  },
+  "multiplication_table": {
+    "e_sing^2": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "e_phi3^2": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "p_doublet^2": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "e_sing * e_phi3": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "e_sing * p_doublet": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "e_phi3 * p_doublet": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "x * e_sing": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "x * e_phi3": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "x * p_doublet": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        -168,
+        275,
+        0
+      ],
+      [
+        0,
+        275,
+        168,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "x^2": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        103849,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        103849,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "split_idempotent_formulas": {
+      "e_plus": "(p_doublet + x/sqrt(103849))/2",
+      "e_minus": "(p_doublet - x/sqrt(103849))/2"
+    }
+  },
+  "exact_algebra_law": {
+    "minimal_polynomial_of_full_operator": "(x-323)(x-169)(x^2-982x+137232)",
+    "doublet_minimal_polynomial": "x^2-982x+137232",
+    "centered_doublet_relation": "X^2 = 103849 I_2",
+    "abstract_algebra": "Q \u2295 Q \u2295 Q[x]/(x^2-103849)",
+    "split_form": "Q \u00d7 Q \u00d7 Q(sqrt(103849))"
+  },
+  "point_star_semisimple_algebra_theorem": {
+    "the_selected_point_star_operator_has_exact_minimal_polynomial_with_two_linear_and_one_quadratic_factor": true,
+    "the_doublet_block_center_is_exactly_491": true,
+    "the_centered_doublet_generator_squares_to_the_exact_reduced_discriminant_times_identity": true,
+    "the_three_rational_idempotents_are_exact_and_orthogonal": true,
+    "the_centered_generator_is_supported_only_on_the_doublet_sector": true,
+    "the_full_selected_algebra_is_four_dimensional_commutative_and_semisimple_over_q": true,
+    "the_algebra_decomposes_exactly_as_q_plus_q_plus_q_sqrt_103849": true,
+    "over_the_quadratic_splitting_field_the_doublet_sector_splits_into_the_two_exact_radical_channels": true
+  },
+  "interpretation": "The exact Fano point-star packet now has its algebra solved. The selected physical slice is not just a list of four eigenvalues; it is a genuine four-dimensional commutative semisimple algebra with two exact one-dimensional scalar characters and one irreducible doublet whose centered generator squares to 103849 and lives only on the doublet idempotent. Over Q it is Q \u2295 Q \u2295 Q(sqrt(103849)); over the quadratic splitting field it becomes the full four-channel packet seen in the exact spectrum."
+}
