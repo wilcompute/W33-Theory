@@ -1,0 +1,36 @@
+{
+  "title": "EXACT basis rotation between interaction (A₀) and mass (D_H) eigenstates",
+  "V24_matter_decomposition": {
+    "into_V10_massive": 10,
+    "into_V16_massless": 10,
+    "into_V6_gauge": 0,
+    "into_sub_dominant": 4,
+    "total": 24,
+    "fractions": "10:10:0:4 = half massive, half massless, 4 Higgs"
+  },
+  "V15_gauge_decomposition": {
+    "into_V10_massive": 0,
+    "into_V16_massless": 6,
+    "into_V6_gauge": 6,
+    "into_sub_dominant": 3,
+    "total": 15,
+    "fractions": "0:6:6:3 = half massless, half massive gauge, 3 EW"
+  },
+  "V16_shared": {
+    "from_V24_matter": 10,
+    "from_V15_gauge": 6,
+    "total": 16,
+    "interpretation": "= Spin(10) spinor containing both matter(10) and gauge(6) GUT-massless modes"
+  },
+  "key_identities": {
+    "V24_splits_10_10_4": "matter = half massive + half GUT-massless + Higgs",
+    "V15_splits_6_6_3": "gauge = half GUT-massless + half massive + EW bosons",
+    "V16_contains_10_plus_6": "one SO(10) generation = 10 matter + 6 gauge",
+    "sub_dominant_7": "4 Higgs + 3 EW = Φ₆ = 7 modes leave the dominant block"
+  },
+  "physical_meaning": {
+    "A0_basis": "interaction eigenstates (how particles couple)",
+    "DH_basis": "mass eigenstates (definite mass)",
+    "rotation": "the CKM/PMNS matrix IS the rotation between these two bases"
+  }
+}
