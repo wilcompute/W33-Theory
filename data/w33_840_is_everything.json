@@ -1,0 +1,24 @@
+{
+  "THE_NUMBER_840": {
+    "identities": [
+      "LCM(1, 2, ..., 2^q) = LCM(1..8)",
+      "μ × Φ₆# = 4 × 210 (spacetime × primorial)",
+      "P(Φ₆, μ) = 7!/(7-4)! (μ-permutations of Φ₆ objects)",
+      "Φ₆!/q! = 7!/3! (falling factorial)",
+      "μ × C(Φ₄, μ) = 4 × C(10,4) (spacetime × 4-forms in SO(10))",
+      "LCM(CF alphabet) (continued fraction alphabet structure)",
+      "Φ₆ × q × v (spectral trace formula)",
+      "Tr(D²) (gravity term in spectral action)"
+    ],
+    "prime_factorization": "2³ × 3 × 5 × 7 = μ × q × (q+λ) × Φ₆",
+    "primes_leq_2q": {
+      "2": "λ = q-1",
+      "3": "q",
+      "5": "q+λ = 2q-1",
+      "7": "Φ₆ = q²-q+1"
+    },
+    "all_primes_leq_2q_are_w33": true,
+    "primorial_connection": "Φ₆# = 7# = 210 = C(10,4) = C(Φ₄,μ) = dim(Λ⁴(R^10))",
+    "divisor_count": "τ(840) = 32 = 2^(q+λ) = Spin(10) spinor dimension"
+  }
+}
