@@ -1,0 +1,20 @@
+{
+  "MASTER_FORMULA": "alpha_inv = q^4 + 2q^3 + 2 (UNIVERSAL for all GQ(q,q))",
+  "at_q3": "3^4 + 2*3^3 + 2 = 81 + 54 + 2 = 137",
+  "equivalence": "(k-1)^2 + mu^2 = q^4 + 2q^3 + 2 (algebraic identity for GQ(q,q))",
+  "irreducible": "q^4 + 2q^3 + 2 is irreducible over Q",
+  "clean_form": {
+    "formula": "alpha_inv = q^3(q+lam) + lam",
+    "condition": "holds iff (q-3)(q^3+1) = 0",
+    "unique_positive_solution": "q = 3"
+  },
+  "primality": {
+    "q=0": "2 (prime)",
+    "q=1": "5 (prime)", 
+    "q=2": "34 (not prime)",
+    "q=3": "137 (PRIME — the fine structure constant!)",
+    "q=4": "386 (not prime)",
+    "q=5": "877 (prime)"
+  },
+  "selection": "q=3 is the ONLY q where alpha_inv is prime AND Phi6=7 AND E=240 AND sin2_W viable"
+}
