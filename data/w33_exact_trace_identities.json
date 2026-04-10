@@ -1,0 +1,23 @@
+{
+  "sub_dominant_vieta_sums": {
+    "e1": "Σλ = 2^q = 8 EXACT",
+    "e2": "Σλᵢλⱼ = -μq³ = -108 EXACT",
+    "power_sums": {
+      "p1": "2^q = 8",
+      "p2": "Φ₆v = 280"
+    }
+  },
+  "full_trace_identities": {
+    "Tr_D0": "v = 40",
+    "Tr_D1": "0 (TRACELESS)",
+    "Tr_D2": "v × C(Φ₆,2) = 840 = f × C(Φ₆,3)",
+    "Tr_D3": "q! × μ × v = 960",
+    "Tr_D4": "q!Φ₄ × Tr(D²) - fΦ₃ = 60×840 - 24×13 = 50088"
+  },
+  "key_identity": "Tr(D⁴) = q!Φ₄ Tr(D²) - fΦ₃",
+  "sub_dominant_char_poly": "t⁸ - 8t⁷ - 108t⁶ + 440t⁵ + 2894t⁴ - 8472t³ - 21404t² + 53608t + 1977",
+  "c7": "-2^q = -8",
+  "c6": "-μq³ = -108",
+  "c5": "440",
+  "c0": "1977 (product of all sub-dominant eigenvalues)"
+}
