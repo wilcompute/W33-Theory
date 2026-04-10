@@ -1,0 +1,24 @@
+{
+  "adjacency_split": {
+    "A0_isotropic": {"count": 12, "identity": "k = q(q+1)"},
+    "A1_omega1": {"count": 9, "identity": "q^2"},
+    "A2_omega2": {"count": 18, "identity": "2q^2"},
+    "total": 39
+  },
+  "weinberg_angle_low_energy": {
+    "formula": "sin2_W = A1/(v-1) = q^2/(q*Phi3) = q/Phi3",
+    "value": "3/13 = 0.23077",
+    "experimental": "0.23122",
+    "derivation": "fraction of omega=1 symplectic neighbors"
+  },
+  "weinberg_angle_gut": {
+    "value": "3/8 = 0.375",
+    "source": "SU(5) normalization"
+  },
+  "running": {
+    "shift": "g/(8*Phi3) = 15/104 = 0.14423",
+    "identity": "3*Phi3 - g = 8q (UNIQUE to q=3)",
+    "interpretation": "shift numerator g=15 is the gravitational multiplicity"
+  },
+  "uniqueness": "3*Phi3 - g = 8q holds ONLY for q=3 among all GQ(q,q)"
+}
