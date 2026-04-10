@@ -1,0 +1,62 @@
+{
+  "global_dictionary": {
+    "q": 3,
+    "lambda": 2,
+    "k": 12,
+    "v": 40,
+    "f": 24,
+    "Phi_3": 13,
+    "Phi_4": 10,
+    "Phi_6": 7,
+    "E": 240,
+    "shell_denominator": 57600
+  },
+  "exact_channel_packet": {
+    "singlet_scalar_numerator": 323,
+    "triplet_scalar_numerator": 169,
+    "triplet_quadratic_block": [
+      [
+        323,
+        275
+      ],
+      [
+        275,
+        659
+      ]
+    ],
+    "triplet_quadratic_trace": 982,
+    "triplet_quadratic_determinant": 137232,
+    "triplet_quadratic_discriminant": 415396
+  },
+  "channel_dictionary": {
+    "denominator": {
+      "exact": "E^2",
+      "value": 57600
+    },
+    "triplet_scalar": {
+      "exact": "Phi_3^2 = q^2(v+1) - lambda Phi_4^2",
+      "value": 169
+    },
+    "singlet_scalar": {
+      "exact": "q^3 Phi_6^2 - Phi_4^3",
+      "value": 323
+    },
+    "quadratic_half_trace": {
+      "exact": "2E + (k-1)",
+      "value": 491
+    },
+    "quadratic_determinant": {
+      "exact": "k^2 (v f - Phi_6)",
+      "value": 137232
+    }
+  },
+  "point_star_channel_dictionary_theorem": {
+    "the_physical_point_star_denominator_is_exactly_the_old_240_shell_squared": true,
+    "the_triplet_scalar_channel_is_exactly_phi_3_squared": true,
+    "the_singlet_scalar_channel_is_exactly_q_cubed_phi_6_squared_minus_phi_4_cubed": true,
+    "the_residual_triplet_quadratic_pair_is_centered_at_2e_plus_k_minus_1": true,
+    "the_residual_triplet_quadratic_determinant_is_exactly_k_squared_times_vf_minus_phi_6": true,
+    "the_exact_point_star_spectrum_is_fully_written_in_the_old_global_w33_dictionary": true
+  },
+  "interpretation": "The exact Fano point-star spectrum is not a detached late radical packet. Its denominator is the old 240-shell, its triplet scalar is the old Phi_3 packet, its singlet scalar is the q^3 Phi_6^2 packet after subtracting the Phi_4^3 bosonic cube, and its residual quadratic pair is centered on 2E+(k-1) with determinant k^2(vf-Phi_6). So the final internal spectral packet is now continuous with the same W33 count dictionary that already governed the global carrier, not numerically isolated from it."
+}
