@@ -1,0 +1,14 @@
+{
+  "EXACT_IDENTITY": "alpha_inv = 1 + [2^(q(q+lam)) + Phi6*v] / q^(q+lam) = 137",
+  "numerical": "1 + [2^15 + 280] / 243 = 1 + 33048/243 = 137",
+  "correction_term": "280 = Phi6*v = Tr(D^2)_octic = 7*40",
+  "cascade_part": "2^15 = (2^q)^(q+lam) = 32768",
+  "denominator": "q^(q+lam) = 3^5 = 243",
+  "numerator_factored": "33048 = 2^3 * 3^5 * 17 = mu * q^5 * (k+q+lam)",
+  "first_derivation": "(k-1)^2 + mu^2 = 11^2 + 4^2 = 137",
+  "second_derivation": "1 + [2^(q(q+lam)) + Phi6*v] / q^(q+lam) = 137",
+  "agreement": "EXACT — both give 137",
+  "unique_to_q3": true,
+  "q2_gives": 34,
+  "q4_gives": "overflow (not 386)"
+}
