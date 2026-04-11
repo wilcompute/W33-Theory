@@ -9,6 +9,15 @@ The latest remote commits promoted three count-side bridges:
 Only the latter two are structurally live on the current exact packet spine.
 This module makes that precise.
 
+Important correction:
+
+The remote ``40 = 4 * 10`` note should not be read as a partition of the
+explicit W(3,3) point graph into four ovoids of size 10. The actual graph does
+not admit 10-cocliques at q = 3. The exact surviving meaning of ``4 * 10`` is
+the line/spread factorization:
+
+    40 points = 10 lines in a spread * 4 points on each line.
+
 Existing exact operator packets already give:
 
     40 = 10 + 16 + 6 + 4 + 3 + 1,
@@ -26,8 +35,8 @@ So the new remote count surfaces compress to:
         = matter-dominant half
         = 10_ext + 10_core,
 
-    40  = mu Phi_4
-        = four ovoid quanta of size 10,
+    40  = 4 * 10
+        = line-size times spread-size,
 
     118 = 64 + 39 + 15
         = codon/raw-count packet + transport selector rank + Yukawa frontier.
@@ -132,7 +141,7 @@ def build_summary() -> dict[str, Any]:
             "the_new_remote_ovoid_curvature_half_20_is_exactly_the_existing_matter_dominant_half": (
                 matter_half == 20 and matter_ext == 10 and matter_core == 10
             ),
-            "the_existing_full_carrier_40_is_exactly_four_ovoid_quanta_of_size_10_at_the_count_level": (
+            "the_existing_full_carrier_40_is_exactly_the_line_size_times_the_spread_size_at_the_count_level": (
                 full_carrier == 4 * 10
             ),
             "the_new_remote_118_packet_is_exactly_codon_64_plus_transport_rank_39_plus_yukawa_frontier_15": (
@@ -148,11 +157,13 @@ def build_summary() -> dict[str, Any]:
         "interpretation": (
             "The newest GitHub count bridges compress cleanly onto the exact operator spine. "
             "The codon packet 64 is not a new sector; it is full carrier 40 plus the exact "
-            "noncore complement 24 = 10+6+4+3+1. The ovoid-curvature half 20 is not a vague "
+            "noncore complement 24 = 10+6+4+3+1. The curvature-side half 20 is not a vague "
             "continuum match; it is the exact matter-dominant half 10_ext + 10_core. And the "
             "new 118 surface is not isolated either: it is exactly 64 + 39 + 15, i.e. codon/raw "
-            "count plus the transport selector rank plus the ambient Yukawa frontier. So the "
-            "remote layer folds back into the same old W33 carrier rather than introducing a new one."
+            "count plus the transport selector rank plus the ambient Yukawa frontier. The remote "
+            "`4 x 10` count survives only as line-size times spread-size, not as a false point-ovoid "
+            "partition. So the remote layer folds back into the same old W33 carrier rather than "
+            "introducing a new one."
         ),
     }
 
