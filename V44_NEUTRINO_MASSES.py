@@ -17,16 +17,20 @@ Central W33 Neutrino Prediction:
   PDG measured ratio: 2.455×10⁻³ / 7.42×10⁻⁵ = 33.09
 
 Additional predictions (all zero free parameters):
-  Normal hierarchy (m1 < m2 < m3) required by null Levi topology
-  m1 ≤ 0.3 meV  (W33 upper bound from null-sector suppression)
-  Σm_ν = 51.6 meV (well below Planck 2018 bound of 120 meV)
-  No Majorana phases (null Levi has no complex structure to contribute)
+    - Normal hierarchy (m1 < m2 < m3) required by null Levi topology
+    - m1 ≤ 0.3 meV (W33 upper bound from null-sector suppression)
+    - Σm_ν ≈ 100 meV (model prediction; well below Planck 2018 bound of 120 meV)
+    - No Majorana phases (null Levi has no complex structure to contribute)
 """
 
 import json
 from fractions import Fraction
 from math import sqrt
 from pathlib import Path
+
+# Cosmology / Planck parameters (for derived neutrino density)
+# h = H0 / 100 km/s/Mpc (Planck 2018 best-fit h ≈ 0.674)
+H0_h = 0.674
 
 # ── W(3,3) graph invariants (the ONLY inputs) ──────────────────────────────
 v, k, lam, mu = 40, 12, 2, 4
@@ -166,6 +170,16 @@ def main():
         "Planck_OK": sum_nu < planck_bound,
         "Dm2_sol_pred_eV2": round(Dm2_sol_th, 8),
         "Dm2_sol_err_pct":  round(Dm2_sol_err, 1)
+    }
+
+    # cosmological neutrino density (Planck-style): Ω_ν h² ≃ Σm_ν / 93.14 eV
+    omega_nu_h2 = sum_nu / 93.14
+    omega_nu = omega_nu_h2 / (H0_h ** 2)
+    results["cosmology"] = {
+        "sum_eV": round(sum_nu, 6),
+        "omega_nu_h2": round(omega_nu_h2, 6),
+        "omega_nu": round(omega_nu, 6),
+        "H0_h_used": H0_h,
     }
 
     # ── 3. Mass ordering ─────────────────────────────────────────────
