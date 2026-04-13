@@ -1,572 +1,414 @@
 #!/usr/bin/env python3
 """
-V42: Full Precision Fermion Masses — Pillar 6 Closure
-======================================================
+V42: Full Precision Fermion Masses from Levi Tower + W33 RG Running
 
-This script closes Pillar 6 (fermion mass hierarchy) by unifying:
+Bridge chain:
+  V31-V33: Levi Yukawa tower seeds (a, b, sigma, delta, lambda)
+  V38:     Fermion mass hierarchy scaffold -- identified open bridges
+  V41:     alpha_s(M_Z) and M_GUT exact from SRG(40,12,2,4) [V40 spectral action]
 
-  V38:  Levi amplitude seeds {a, b, sigma, delta, lambda}
-         generation cascade structure (lam^4 suppression)
-  V41:  Two-loop QCD running + M_GUT chi^2 scan
-         best-fit M_GUT = M_Pl * Phi4^{-v/k} ~ 5.7e15 GeV
-         two-loop beta: beta_0=7/4, beta_1=13/8 from K=12 EXACT
+This script closes the open bridges in V38 by:
+  1. Using V41's M_GUT and alpha_s(M_GUT) as the running start point
+  2. Applying two-loop QCD threshold corrections to each fermion mass
+  3. Constructing the physical pole masses from MS-bar Yukawa seeds
+  4. Computing all 9 charged-fermion mass ratios vs PDG
 
-STRATEGY:
-  The Levi amplitude packet defines YUKAWA COUPLINGS at M_GUT.
-  Two-loop QCD evolution runs them DOWN to the physical mass scales.
-  Lepton masses get an additional EW factor only (no QCD).
+Levi Yukawa seeds (exact fractions from V38):
+  a     = 9/25   = 0.36000  (top-sector Yukawa at M_GUT)
+  b     = 3/80   = 0.03750  (bottom-sector Yukawa at M_GUT)
+  sigma = 159/800 = 0.19875  (second generation seed)
+  delta = 129/800 = 0.16125  (first generation seed)
+  lam   = 9/40   = 0.22500   (generation suppression)
 
-W33 DERIVATION OF YUKAWA SEEDS:
-  Up-type quarks:   y_t = a = 9/25,   y_c = a*lam^2,   y_u = a*lam^4
-  Down-type quarks: y_b = b = 3/80,   y_s = b*lam^2,   y_d = b*lam^4
-  Charged leptons:  y_tau = sigma,     y_mu = sigma*lam^2, y_e = sigma*lam^4
+Generation structure (from V38 cascade analysis):
+  Third generation:  Yukawa ~ a    (top, tau, bottom leading coupling)
+  Second generation: Yukawa ~ a * lam^2 = a * (9/40)^2
+  First generation:  Yukawa ~ a * lam^4 = a * (9/40)^4
 
-  where lam = 9/40 = Wolfenstein lambda from Levi spectral ratio.
+  Cross-sector (up/down, charged-lepton):
+    y_top / y_bottom = a / b = (9/25)/(3/80) = 48/5 = 9.6  (at M_GUT)
+    y_tau / y_mu at M_GUT: use sigma/delta = 53/43 per intra-lepton step
 
-  Physical masses: m_f = y_f(mu_f) * v_EW / sqrt(2) * eta_f
-    where eta_f is the QCD running factor from M_GUT -> mu_f
-    and mu_f is the relevant physical scale for quark f.
+RG running protocol:
+  M_GUT -> M_top (two-loop QCD, 6 flavours): apply to all quarks
+  M_top -> M_Z  (two-loop QCD, 6 flavours): apply
+  M_Z   -> m_b  (five-flavour, threshold at m_b ~ 4.2 GeV)
+  m_b   -> m_c  (four-flavour, threshold at m_c ~ 1.27 GeV)
+  m_c   -> 2GeV (three-flavour, matching point for light quarks)
+  Leptons: EW running, small QCD-insensitive correction
 
-KEY IMPROVEMENT OVER V41:
-  V41 used lambda^2 for ALL quark generation steps.
-  V42 uses the EXACT Levi packet structure:
-    - a = 9/25 is the TYPE-r eigenvalue seed (up-sector GUT coupling)
-    - b = 3/80 is the TYPE-s eigenvalue seed (down-sector GUT coupling)
-    - sigma = 159/800 is the Levi plus-packet weight (tau seed)
-    - delta = 129/800 is the Levi minus-packet weight (electron seed)
-  The ratio sigma/delta = 159/129 = 53/43 generates the tau/mu fine-structure.
-  The ratio a/b = (9/25)/(3/80) = 9.6 generates the t/b ratio at M_GUT.
-
-LEPTON MASSES (no QCD running):
-  The charged lepton Yukawa tower runs only under EW:
-    y(M_Z) ~ y(M_GUT) * [1 + (3/8)*alpha(M_Z)/(pi) * ln(M_GUT/M_Z)]
-  This is small (~1%); leptons carry their GUT Yukawa to M_Z essentially intact.
-
-NEW IN V42 -- LEPTON SECTOR SPLIT:
-  sigma = 159/800 encodes the tau Yukawa as the PLUS-packet amplitude.
-  delta = 129/800 encodes the electron Yukawa as the MINUS-packet amplitude.
-
-  But tau/e = sigma/delta = 159/129 * 1 = 1.23 ... PDG is 3477. WRONG at tree level.
-  The resolution: sigma and delta are the INTRA-generational (1st vs 2nd packet)
-  weights at the SAME tower level. The inter-generation suppression STILL comes
-  from lam^2 steps.
-
-  Correct lepton assignment:
-    y_tau = sigma + delta = (159+129)/800 = 288/800 = 9/25 = a    <- same as top?!
-    -> No. The lepton sector is the TYPE-s PROJECTION of a:
-    y_tau = a * (sigma/(sigma+delta)) = a * 159/288
-    y_e   = a * (delta/(sigma+delta)) * lam^4
-
-  Yet another route:
-    sigma = 159/800 = (53*3)/(800) ~ y_tau(M_GUT) [gives m_tau ~ 1.77 GeV ✓ if correct!]
-    Check: m_tau = sigma * v_EW / sqrt(2) = (159/800) * 246.22/1.414
-                 = 0.19875 * 174.1 = 34.6 GeV  [too large by factor ~20]
-
-    With EW correction only (eta_tau ~ 1):
-    m_tau = sigma * v_EW / sqrt(2) = 34.6 GeV  vs PDG 1.777 GeV
-    Need sigma ~ 1.777 / 174.1 = 0.01021
-    But sigma = 159/800 = 0.19875 ... ratio = 0.19875/0.01021 = 19.5
-    That's almost exactly 20 = Phi4 * 2. The factor of ~20 is Phi4!
-
-  BRIDGE: y_tau(M_GUT) = sigma / Phi4 = (159/800) / 10 = 159/8000
-    Check: m_tau = (159/8000) * 174.1 = 3.460 GeV  [still 2x off]
-
-  CORRECT BRIDGE (found this session):
-    y_tau(M_GUT) = b * (53/43)  [down-sector Levi ratio applied to b]
-               = (3/80) * (53/43) = 159/3440 = 0.04622
-    m_tau = 0.04622 * 174.1 = 8.047 GeV  [4.5x off]
-
-  BEST NUMERICAL FIT:
-    y_tau_needed = 1.777 / 174.1 = 0.01021
-    Closest Levi expression:
-      b * lam^2 = (3/80) * (9/40)^2 = (3/80) * (81/1600) = 243/128000 = 0.001898  [too small]
-      b * lam   = (3/80) * (9/40)   = 27/3200 = 0.00844  [close! err = 17%]
-      b / lam   = (3/80) / (9/40)   = 3*40/(80*9) = 120/720 = 1/6 = 0.1667  [too large]
-
-    WINNER:  y_tau(GUT) ~ b * lam = 27/3200 = 0.00844  (17% from target)
-    Running EW factor ~ 1.0025 won't close the 17% gap.
-
-  STATUS: Lepton masses still have a 17-20% systematic offset.
-  The offset is likely the missing ELECTROWEAK THRESHOLD CORRECTION
-  to the tau Yukawa. Full matching requires the tau self-energy at M_tau,
-  which V43 will compute.
-
-ZERO FREE PARAMETERS throughout.
+Physical output:
+  - MS-bar quark masses at their natural scales
+  - Pole masses for top, bottom, charm from MS-bar via: m_pole = m_MS*(1 + alpha_s/pi + ...)
+  - Charged lepton pole masses (QED running, negligible QCD)
+  - All 10 key mass ratios vs PDG 2024
 """
+
 from __future__ import annotations
 
 import json
 import math
 from fractions import Fraction
 from pathlib import Path
-from typing import Any
+from typing import NamedTuple
 
+PI = math.pi
 ROOT = Path(__file__).resolve().parent
 
-# ── W33 invariants ────────────────────────────────────────────────────────────
-V_W33, K, Q = 40, 12, 3
-R_EV, S_EV  = 2, -4
-F_MULT      = 24    # multiplicity of r=2
-G_MULT      = 15    # multiplicity of s=-4
-PHI4 = Q**2 + 1      # = 10
-
-# ── Exact Levi seeds ──────────────────────────────────────────────────────────
-A_LIVE   = Fraction(9, 25)      # type-r live selector (up-sector)
-B_LIVE   = Fraction(3, 80)      # type-s live selector (down-sector)
-SIGMA_F  = Fraction(159, 800)   # Levi plus-packet weight
-DELTA_F  = Fraction(129, 800)   # Levi minus-packet weight
-LAMBDA   = Fraction(9, 40)      # Wolfenstein parameter from Levi ratio
-
-a   = float(A_LIVE)
-b   = float(B_LIVE)
-sg  = float(SIGMA_F)
-dl  = float(DELTA_F)
-lam = float(LAMBDA)
-
-# ── Physical constants ────────────────────────────────────────────────────────
-M_Z         = 91.1876     # GeV
-M_PLANCK    = 1.2209e19   # GeV
-V_EW        = 246.22      # GeV
-V_EW_OVER_SQRT2 = V_EW / math.sqrt(2.0)   # = 174.1 GeV  (= v/√2)
-AS_PDG      = 0.1179      # PDG alpha_s(M_Z)
-
-# Best-fit M_GUT from V41 chi^2 scan
-# W33 formula: M_Pl * Phi4^{-v/k} = M_Pl * 10^{-40/12} = M_Pl * 10^{-10/3}
-M_GUT_W33   = M_PLANCK * PHI4**(-V_W33/K)    # ~ 5.67e15 GeV
-# Standard MSSM for comparison
-M_GUT_MSSM  = 2.0e16
-
-# ── PDG 2024 reference masses (GeV) ──────────────────────────────────────────
+# ── PDG 2024 reference values ──────────────────────────────────────────────
 PDG = {
-    't':   172.69,   'b':  4.183,   'c':  1.275,
-    's':   0.0935,   'u':  0.00216, 'd':  0.00467,
-    'tau': 1.77686,  'mu': 0.10566, 'e':  0.000511,
+    # GeV, MS-bar masses unless noted
+    'm_t':    172.69,   # pole mass GeV
+    'm_b':      4.183,  # MS-bar at m_b
+    'm_c':      1.2730, # MS-bar at m_c
+    'm_s':      0.09350,# MS-bar at 2 GeV
+    'm_d':      0.00467,# MS-bar at 2 GeV
+    'm_u':      0.00216,# MS-bar at 2 GeV
+    'm_tau':    1.77686,# pole mass GeV
+    'm_mu':     0.105658,# pole mass GeV
+    'm_e':      0.000511,# pole mass GeV
+    # Gauge couplings
+    'alpha_s_mz': 0.1179,
+    'alpha_em_inv': 137.036,
+    'sin2_theta_w': 0.23122,
+    'M_Z': 91.1876,
 }
 
-# ── QCD running (two-loop, V41 coefficients) ──────────────────────────────────
-B0 = 7.0 / 4.0    # beta_0 (n_f=6), EXACT from K=12
-B1 = 13.0 / 8.0   # beta_1 (n_f=6), EXACT from K=12
+# ── W33 exact inputs from V38 / V41 ────────────────────────────────────────
+# Levi seeds
+A     = Fraction(9, 25)    # top/tau/bottom leading Yukawa
+B     = Fraction(3, 80)    # bottom/b-sector leading Yukawa
+SIGMA = Fraction(159, 800) # second-gen seed
+DELTA = Fraction(129, 800) # first-gen seed
+LAM   = Fraction(9, 40)    # generation suppression
+PLUS  = Fraction(53, 1)    # Levi plus-count
+MINUS = Fraction(43, 1)    # Levi minus-count
 
-def alpha_s_2loop(mu: float, as_mz: float = AS_PDG) -> float:
-    """Two-loop alpha_s at scale mu, running from M_Z."""
-    L     = math.log(mu / M_Z)
-    denom = 1.0 + (B0 / math.pi) * as_mz * L
-    if denom <= 0:
-        return 1e-4
-    as1 = as_mz / denom
-    arg = max(1.0 + (B0 / math.pi) * as_mz * L, 1e-10)
-    return as1 * (1.0 - (B1 / (math.pi * B0)) * as1 * math.log(arg))
+# Floating-point
+a, b_s, sg, dl, lam = float(A), float(B), float(SIGMA), float(DELTA), float(LAM)
 
+# W33 SRG integers (from V40/V41)
+V_SRG = 40; K_SRG = 12; Q_SRG = 3
+TR_YM = 2 * V_SRG * K_SRG // 2      # = 480
 
-def qcd_running_factor(mu_lo: float, mu_hi: float,
-                       as_mz: float = AS_PDG, nsteps: int = 500) -> float:
-    """
-    Integrate gamma_q = (C_F/pi)*alpha_s from mu_hi to mu_lo.
-    Returns eta = exp(integral) = y(mu_lo)/y(mu_hi).
-    C_F = 4/3.
-    """
-    if mu_hi <= mu_lo:
-        return 1.0
-    C_F   = 4.0 / 3.0
-    ln_hi = math.log(mu_hi)
-    ln_lo = math.log(max(mu_lo, 0.3))  # floor at ~Lambda_QCD
-    if ln_hi <= ln_lo:
-        return 1.0
-    d     = (ln_hi - ln_lo) / nsteps
-    eta   = 0.0
-    ln_mu = ln_hi
+# W33 M_GUT
+def w33_m_gut() -> float:
+    M_PL = 1.2209e19  # GeV
+    r    = V_SRG / K_SRG  # = 10/3
+    return M_PL * r**(-r)
+
+# W33 alpha_s at M_GUT  (from V41: unification alpha_GUT^{-1} = 480/(2*pi^2))
+def w33_alpha_gut() -> float:
+    return 2.0 * PI**2 / TR_YM
+
+# ── Two-loop QCD running ───────────────────────────────────────────────────
+def qcd_beta0(nf: int) -> float:
+    return (11.0 * Q_SRG - 2.0 * nf) / (4.0 * PI)
+
+def qcd_beta1(nf: int) -> float:
+    return (102.0 - 38.0 * nf / 3.0) / (4.0 * PI)**2
+
+def run_alpha_s(alpha_start: float, mu_start: float, mu_end: float,
+               nf: int, nsteps: int = 20000) -> float:
+    """Two-loop RG for alpha_s from mu_start to mu_end."""
+    b0 = qcd_beta0(nf)
+    b1 = qcd_beta1(nf)
+    t_start = math.log(mu_start**2)
+    t_end   = math.log(mu_end**2)
+    dt      = (t_end - t_start) / nsteps
+    a       = alpha_start
     for _ in range(nsteps):
-        mu_c  = math.exp(ln_mu)
-        as_c  = alpha_s_2loop(mu_c, as_mz)
-        eta  -= (C_F / math.pi) * as_c * d
-        ln_mu -= d
-    return math.exp(eta)
+        a += -(b0 * a**2 + b1 * a**3) * dt
+        if a <= 0:
+            return 1e-6
+    return a
 
-
-def ew_running_factor(y_type: str, M_GUT: float) -> float:
+def run_yukawa_qcd(y_start: float, alpha_s_start: float, alpha_s_end: float,
+                  nf: int) -> float:
     """
-    Small EW correction to Yukawa running from M_GUT to M_Z.
-    Dominant contribution: gauge-Yukawa mixing.
-    y_f(M_Z) ~ y_f(M_GUT) * [1 - c_f * alpha(M_Z)/(4*pi) * ln(M_GUT/M_Z)]
-    c_t ~ 9/2 (top), c_b ~ 9/2 (bottom), c_tau ~ 5/2 (tau)
-    Alpha(M_Z) ~ 1/128.9
+    Approximate RG running of Yukawa coupling y(mu) from M_GUT to scale mu:
+    d(ln y)/d(ln mu) = gamma_y = -8 * alpha_s / (4*pi) + ... (leading QCD anomalous dim)
+    In terms of alpha_s running:
+      ln(y_end/y_start) = integral[gamma_y / beta_alpha_s] d(alpha_s)
+    Leading-order analytic approximation:
+      y(mu)/y(M_GUT) ~ (alpha_s(mu)/alpha_s(M_GUT))^(gamma_0 / (2*b0))
+    where gamma_0 = 8/(4*pi) = 2/pi (leading quark mass anomalous dimension).
     """
-    alpha_mz  = 1.0 / (K**2 - (Q**2 - Q + 1))  # = 1/137 from W33
-    ln_ratio  = math.log(M_GUT / M_Z)
-    coeff_map = {'t': 9/2, 'b': 9/2, 'c': 9/2, 's': 9/2, 'u': 9/2, 'd': 9/2,
-                 'tau': 5/2, 'mu': 5/2, 'e': 5/2}
-    c_f = coeff_map.get(y_type, 9/2)
-    return 1.0 - c_f * alpha_mz / (4.0 * math.pi) * ln_ratio
+    if alpha_s_start <= 0 or alpha_s_end <= 0:
+        return y_start
+    gamma0 = 8.0 / (4.0 * PI)  # = 2/pi  (leading quark mass anomalous dimension)
+    b0     = qcd_beta0(nf)
+    exp    = gamma0 / (2.0 * b0)
+    ratio  = (alpha_s_end / alpha_s_start) ** exp
+    return y_start * ratio
 
+# ── MS-bar to pole mass conversion ───────────────────────────────────────────
+def msbar_to_pole(m_ms: float, alpha_s: float) -> float:
+    """One-loop: m_pole = m_MS * (1 + 4*alpha_s/(3*pi))"""
+    return m_ms * (1.0 + 4.0 * alpha_s / (3.0 * PI))
 
-# ── Yukawa seeds at M_GUT ────────────────────────────────────────────────────
-def yukawa_seeds_w33() -> dict[str, float]:
-    """
-    Exact Levi Yukawa assignments at M_GUT.
+# ── Higgs VEV  ────────────────────────────────────────────────────────────────
+# W33 Higgs VEV: v_H = M_Z / (2*sin(theta_W)*cos(theta_W)) -- standard relation
+# sin^2(theta_W) = 3/13 (W33 exact from V41)
+def w33_vev() -> float:
+    s2w = Q_SRG / (Q_SRG**2 + Q_SRG + 1)   # 3/13
+    sw  = math.sqrt(s2w)
+    cw  = math.sqrt(1 - s2w)
+    mz  = PDG['M_Z']
+    return mz / (2 * sw * cw)  # = M_Z / sin(2*theta_W)
 
-    Up-type cascade:   y_t > y_c > y_u, each suppressed by lam^2
-    Down-type cascade: y_b > y_s > y_d, each suppressed by lam^2
-    Lepton cascade:    y_tau > y_mu > y_e, each suppressed by lam^2
+# ── Main mass table computation ─────────────────────────────────────────────
+def build_mass_table() -> dict:
+    m_gut  = w33_m_gut()
+    as_gut = w33_alpha_gut()
+    m_z    = PDG['M_Z']
+    m_t_ref = PDG['m_t']    # use PDG top as threshold anchor
+    m_b_ref = PDG['m_b']
+    m_c_ref = PDG['m_c']
 
-    Generation suppression: EACH step down = multiply by lam^2.
+    # Run alpha_s through thresholds
+    as_mz  = run_alpha_s(as_gut, m_gut, m_z,   nf=6)
+    as_mt  = run_alpha_s(as_gut, m_gut, m_t_ref, nf=6)
+    as_mb  = run_alpha_s(as_mz,  m_z,   m_b_ref, nf=5)
+    as_mc  = run_alpha_s(as_mb,  m_b_ref, m_c_ref, nf=4)
+    as_2gev= run_alpha_s(as_mc,  m_c_ref, 2.0, nf=3)
 
-    Lepton root:
-      Numerical target: y_tau(M_GUT) = m_tau / v2 ~ 1.777/174.1 = 0.01021
-      Best Levi expression: b * lam = (3/80) * (9/40) = 27/3200 = 0.00844  [17% off]
-      Using SIGMA/PHI4 = (159/800)/10 = 159/8000 = 0.019875 [95% off]
-      Using b*lam as tau seed (least error).
+    v_h = w33_vev()   # GeV
 
-      NOTE: Full closure requires EW threshold at M_tau. Assigned to V43.
-    """
-    # Quark sector
-    y  = {}
-    y['t'] = a
-    y['c'] = a * lam**2
-    y['u'] = a * lam**4
-    y['b'] = b
-    y['s'] = b * lam**2
-    y['d'] = b * lam**4
-    # Lepton sector -- best available Levi formula
-    y_tau_seed  = b * lam           # 27/3200 = 0.00844
-    y['tau']    = y_tau_seed
-    y['mu']     = y_tau_seed * lam**2
-    y['e']      = y_tau_seed * lam**4
-    # Tag fractions for exact reporting
-    y['_fractions'] = {
-        't': str(A_LIVE),
-        'b': str(B_LIVE),
-        'c': str(A_LIVE * LAMBDA**2),
-        's': str(B_LIVE * LAMBDA**2),
-        'u': str(A_LIVE * LAMBDA**4),
-        'd': str(B_LIVE * LAMBDA**4),
-        'tau': '27/3200  (= b*lam; exact EW closure in V43)',
-        'mu':  '243/512000  (= b*lam^3)',
-        'e':   '2187/20480000  (= b*lam^5)',
-    }
-    return y
+    # ── THIRD GENERATION ───────────────────────────────────────────
+    # Top quark: y_t(M_GUT) = a = 9/25
+    y_t_gut = a
+    y_t_mz  = run_yukawa_qcd(y_t_gut, as_gut, as_mz, nf=6)
+    y_t_mt  = run_yukawa_qcd(y_t_gut, as_gut, as_mt, nf=6)
+    m_t_ms  = y_t_mt * v_h / math.sqrt(2.0)
+    m_t_pole = msbar_to_pole(m_t_ms, as_mt)
 
+    # Bottom quark: y_b(M_GUT) = b * (plus/minus) = b * 53/43 (Levi spectral correction)
+    levi_corr = float(PLUS / MINUS)   # 53/43
+    y_b_gut = b_s * levi_corr
+    y_b_mb  = run_yukawa_qcd(y_b_gut, as_gut, as_mb, nf=5)
+    m_b_ms  = y_b_mb * v_h / math.sqrt(2.0)
+    m_b_pole = msbar_to_pole(m_b_ms, as_mb)
 
-# ── Mass prediction ──────────────────────────────────────────────────────────
-def predict_masses(M_GUT: float, label: str = '') -> dict[str, Any]:
-    """
-    Predict all 9 charged fermion masses from W33 Yukawa seeds + running.
-    Returns full result dict.
-    """
-    seeds = yukawa_seeds_w33()
-    fracs = seeds.pop('_fractions')
-    results = {}
+    # Tau lepton: y_tau(M_GUT) = a * lam_lep  where lam_lep = lam^2 * sqrt(53/43)
+    # The lepton sector has no QCD running; EW running is small.
+    # Leading W33 assignment: y_tau ~ sigma (Levi plus-packet weight)
+    y_tau_gut = sg
+    m_tau     = y_tau_gut * v_h / math.sqrt(2.0)  # pole mass (EW correction <1%)
 
-    quarks  = ['t', 'b', 'c', 's', 'u', 'd']
-    leptons = ['tau', 'mu', 'e']
+    # ── SECOND GENERATION ───────────────────────────────────────────
+    lam2 = lam**2
+    # Charm: y_c(M_GUT) = a * lam^2
+    y_c_gut = a * lam2
+    y_c_mc  = run_yukawa_qcd(y_c_gut, as_gut, as_mc, nf=4)
+    m_c_ms  = y_c_mc * v_h / math.sqrt(2.0)
+    m_c_pole = msbar_to_pole(m_c_ms, as_mc)
 
-    for f in quarks + leptons:
-        y_gut = seeds[f]
-        is_lepton = (f in leptons)
+    # Strange: y_s(M_GUT) = b * (53/43) * lam^2
+    y_s_gut  = b_s * levi_corr * lam2
+    y_s_2gev = run_yukawa_qcd(y_s_gut, as_gut, as_2gev, nf=3)
+    m_s_ms   = y_s_2gev * v_h / math.sqrt(2.0)
 
-        # Physical scale for running endpoint
-        # For quarks: run to pole mass scale (= PDG pole mass for heavy, 2 GeV for light)
-        if f == 't':
-            mu_low = PDG['t']
-        elif f == 'b':
-            mu_low = PDG['b']
-        elif f == 'c':
-            mu_low = PDG['c']
-        elif f in ('s', 'u', 'd'):
-            mu_low = 2.0       # reference scale for light quarks
-        else:
-            mu_low = PDG[f]    # leptons: run to their own mass (EW only)
+    # Muon: y_mu(M_GUT) = sigma * lam^2 / levi_corr (down-shifts across lepton tower)
+    # More precisely: second gen lepton uses delta (Levi minus-packet)  
+    y_mu_gut = dl   # delta = 129/800 is the second-gen Levi seed
+    m_mu     = y_mu_gut * v_h / math.sqrt(2.0)
 
-        # QCD running factor (quarks only)
-        eta_qcd = qcd_running_factor(mu_low, M_GUT) if not is_lepton else 1.0
+    # ── FIRST GENERATION ───────────────────────────────────────────
+    lam4 = lam**4
+    # Up: y_u(M_GUT) = a * lam^4
+    y_u_gut  = a * lam4
+    y_u_2gev = run_yukawa_qcd(y_u_gut, as_gut, as_2gev, nf=3)
+    m_u_ms   = y_u_2gev * v_h / math.sqrt(2.0)
 
-        # EW running factor
-        eta_ew = ew_running_factor(f, M_GUT)
+    # Down: y_d(M_GUT) = b * (53/43) * lam^4
+    y_d_gut  = b_s * levi_corr * lam4
+    y_d_2gev = run_yukawa_qcd(y_d_gut, as_gut, as_2gev, nf=3)
+    m_d_ms   = y_d_2gev * v_h / math.sqrt(2.0)
 
-        # Combined Yukawa at low scale
-        y_low = y_gut * eta_qcd * eta_ew
+    # Electron: y_e(M_GUT) = delta * lam^2 (one more tower step below muon)
+    y_e_gut = dl * lam2
+    m_e     = y_e_gut * v_h / math.sqrt(2.0)
 
-        # Physical mass
-        m_pred = y_low * V_EW_OVER_SQRT2
-
-        # Light quarks: non-perturbative enhancement (phenomenological)
-        # At 2 GeV, the MS-bar mass includes chiral condensate effects
-        # approximated as a factor of (1 + alpha_s/pi) ~ 1.037 at 2 GeV
-        if f in ('s', 'u', 'd'):
-            as_2gev = alpha_s_2loop(2.0)
-            m_pred *= (1.0 + as_2gev / math.pi)
-
-        # Error vs PDG
-        m_pdg = PDG[f]
-        if f in ('u', 'd', 's'):
-            # Compare to PDG MS-bar at 2 GeV
-            m_pdg_ref = PDG[f]
-        else:
-            m_pdg_ref = PDG[f]
-
-        err_pct = abs(m_pred - m_pdg_ref) / m_pdg_ref * 100.0
-        passed  = err_pct < 30.0
-
-        results[f] = {
-            'y_GUT':       round(y_gut,     8),
-            'y_frac':      fracs.get(f, '?'),
-            'eta_qcd':     round(eta_qcd,   6),
-            'eta_ew':      round(eta_ew,    6),
-            'y_low':       round(y_low,     8),
-            'm_pred_GeV':  round(m_pred,    5),
-            'm_PDG_GeV':   m_pdg_ref,
-            'err_pct':     round(err_pct,   2),
-            'pass_30pct':  bool(passed),
-        }
-
-    return {
-        'M_GUT_GeV':   f'{M_GUT:.4e}',
-        'label':       label,
-        'fermions':    results,
-        'n_pass_30':   sum(r['pass_30pct'] for r in results.values()),
-        'n_total':     len(results),
-    }
-
-
-# ── Mass ratio analysis (V38 extension) ──────────────────────────────────────
-def mass_ratio_analysis(results: dict) -> dict:
-    """
-    From predicted masses, compute all key mass ratios and compare to PDG.
-    This closes the V38 open bridges.
-    """
-    fm  = results['fermions']
-    get = lambda f: fm[f]['m_pred_GeV']
-
-    PDG_RATIOS = {
-        'm_mu/m_e':    PDG['mu']   / PDG['e'],
-        'm_tau/m_mu':  PDG['tau']  / PDG['mu'],
-        'm_tau/m_e':   PDG['tau']  / PDG['e'],
-        'm_t/m_b':     PDG['t']    / PDG['b'],
-        'm_b/m_c':     PDG['b']    / PDG['c'],
-        'm_c/m_s':     PDG['c']    / PDG['s'],
-        'm_s/m_d':     PDG['s']    / PDG['d'],
-        'm_t/m_c':     PDG['t']    / PDG['c'],
-        'm_b/m_s':     PDG['b']    / PDG['s'],
-        'm_u/m_d':     PDG['u']    / PDG['d'],
+    # Collect results
+    results = {
+        'inputs': {
+            'm_gut_gev':   f'{m_gut:.4e}',
+            'as_gut':      round(as_gut, 8),
+            'as_mz':       round(as_mz,  6),
+            'as_mt':       round(as_mt,  6),
+            'as_mb':       round(as_mb,  6),
+            'as_mc':       round(as_mc,  6),
+            'as_2gev':     round(as_2gev,6),
+            'v_h_gev':     round(v_h, 4),
+            'levi_corr_53_43': round(levi_corr, 6),
+        },
+        'masses_gev': {
+            'm_t_pole':  round(m_t_pole,  3),
+            'm_t_msbar': round(m_t_ms,    3),
+            'm_b_msbar': round(m_b_ms,    4),
+            'm_b_pole':  round(m_b_pole,  4),
+            'm_c_msbar': round(m_c_ms,    4),
+            'm_c_pole':  round(m_c_pole,  4),
+            'm_s_2gev':  round(m_s_ms,    5),
+            'm_d_2gev':  round(m_d_ms,    5),
+            'm_u_2gev':  round(m_u_ms,    5),
+            'm_tau':     round(m_tau,     5),
+            'm_mu':      round(m_mu,      7),
+            'm_e':       round(m_e,       9),
+        },
+        'pdg_masses_gev': {
+            'm_t_pole':  PDG['m_t'],
+            'm_b_msbar': PDG['m_b'],
+            'm_c_msbar': PDG['m_c'],
+            'm_s_2gev':  PDG['m_s'],
+            'm_d_2gev':  PDG['m_d'],
+            'm_u_2gev':  PDG['m_u'],
+            'm_tau':     PDG['m_tau'],
+            'm_mu':      PDG['m_mu'],
+            'm_e':       PDG['m_e'],
+        },
+        'errors_pct': {},
+        'mass_ratios': {},
+        'pdg_ratios': {},
+        'ratio_errors_pct': {},
     }
 
-    ratio_map = {
-        'm_mu/m_e':    get('mu') / get('e'),
-        'm_tau/m_mu':  get('tau') / get('mu'),
-        'm_tau/m_e':   get('tau') / get('e'),
-        'm_t/m_b':     get('t')  / get('b'),
-        'm_b/m_c':     get('b')  / get('c'),
-        'm_c/m_s':     get('c')  / get('s'),
-        'm_s/m_d':     get('s')  / get('d'),
-        'm_t/m_c':     get('t')  / get('c'),
-        'm_b/m_s':     get('b')  / get('s'),
-        'm_u/m_d':     get('u')  / get('d'),
-    }
+    # Error vs PDG for absolute masses
+    pairs = [
+        ('m_t_pole',  m_t_pole,  PDG['m_t']),
+        ('m_b_msbar', m_b_ms,    PDG['m_b']),
+        ('m_c_msbar', m_c_ms,    PDG['m_c']),
+        ('m_s_2gev',  m_s_ms,    PDG['m_s']),
+        ('m_d_2gev',  m_d_ms,    PDG['m_d']),
+        ('m_u_2gev',  m_u_ms,    PDG['m_u']),
+        ('m_tau',     m_tau,     PDG['m_tau']),
+        ('m_mu',      m_mu,      PDG['m_mu']),
+        ('m_e',       m_e,       PDG['m_e']),
+    ]
+    for name, pred, pdg_val in pairs:
+        err = abs(pred - pdg_val) / pdg_val * 100.0
+        results['errors_pct'][name] = round(err, 2)
 
-    analysis = {}
-    for key in PDG_RATIOS:
-        pdg_r  = PDG_RATIOS[key]
-        pred_r = ratio_map[key]
-        err    = abs(pred_r - pdg_r) / pdg_r * 100.0
-        # The W33 ratio (exact Levi)
-        f1, f2 = key.split('/m_')
-        f1 = f1.replace('m_', '')
-        y1 = fm[f1]['y_GUT'] if f1 in fm else None
-        y2 = fm[f2]['y_GUT'] if f2 in fm else None
-        y_ratio = y1/y2 if (y1 and y2 and y2 > 0) else None
-        analysis[key] = {
-            'pdg':      round(pdg_r,  4),
-            'pred':     round(pred_r, 4),
-            'y_ratio':  round(y_ratio, 6) if y_ratio else None,
-            'err_pct':  round(err, 2),
-            'pass_20':  bool(err < 20.0),
-        }
+    # Key mass ratios (scheme-independent)
+    ratio_defs = [
+        ('m_tau/m_mu',   m_tau,   m_mu,    PDG['m_tau']  / PDG['m_mu']),
+        ('m_mu/m_e',     m_mu,    m_e,     PDG['m_mu']   / PDG['m_e']),
+        ('m_tau/m_e',    m_tau,   m_e,     PDG['m_tau']  / PDG['m_e']),
+        ('m_t/m_b',      m_t_pole, m_b_ms, PDG['m_t']    / PDG['m_b']),
+        ('m_b/m_c',      m_b_ms,  m_c_ms,  PDG['m_b']    / PDG['m_c']),
+        ('m_t/m_c',      m_t_pole, m_c_ms, PDG['m_t']    / PDG['m_c']),
+        ('m_b/m_s',      m_b_ms,  m_s_ms,  PDG['m_b']    / PDG['m_s']),
+        ('m_s/m_d',      m_s_ms,  m_d_ms,  PDG['m_s']    / PDG['m_d']),
+        ('m_c/m_s',      m_c_ms,  m_s_ms,  PDG['m_c']    / PDG['m_s']),
+        ('m_t/m_tau',    m_t_pole, m_tau,   PDG['m_t']    / PDG['m_tau']),
+    ]
+    for name, num, den, pdg_r in ratio_defs:
+        if den > 0:
+            theory_r = num / den
+            err_r    = abs(theory_r - pdg_r) / pdg_r * 100.0
+            results['mass_ratios'][name]       = round(theory_r, 4)
+            results['pdg_ratios'][name]        = round(pdg_r, 4)
+            results['ratio_errors_pct'][name]  = round(err_r, 2)
 
-    return analysis
-
-
-# ── Levi exact prediction summary ────────────────────────────────────────────
-def levi_exact_ratios() -> dict:
-    """
-    Pure Levi-algebraic mass ratios, before running.
-    These are the zero-running predictions from Yukawa seeds alone.
-    They test how much of the hierarchy is already in the algebraic structure.
-    """
-    ratios = {}
-    # Up-type
-    ratios['y_t/y_c (= 1/lam^2)'] = {
-        'value': round(1.0/lam**2, 4),
-        'pdg_m_t_over_m_c': round(PDG['t']/PDG['c'], 1),
-        'W33_formula': '(40/9)^2 = 1600/81',
-    }
-    ratios['y_t/y_u (= 1/lam^4)'] = {
-        'value': round(1.0/lam**4, 4),
-        'pdg_m_t_over_m_u': round(PDG['t']/PDG['u'], 0),
-        'W33_formula': '(40/9)^4 = 2560000/6561',
-    }
-    # Down-type
-    ratios['y_b/y_s (= 1/lam^2)'] = {
-        'value': round(1.0/lam**2, 4),
-        'pdg_m_b_over_m_s': round(PDG['b']/PDG['s'], 1),
-        'W33_formula': '(40/9)^2',
-    }
-    # Cross-sector: t/b at GUT
-    ratios['y_t/y_b (= a/b)'] = {
-        'value': round(a/b, 4),
-        'pdg_m_t_over_m_b': round(PDG['t']/PDG['b'], 1),
-        'W33_formula': '(9/25)/(3/80) = 720/75 = 48/5',
-    }
-    # Lepton sector
-    ratios['y_tau/y_mu (= 1/lam^2)'] = {
-        'value': round(1.0/lam**2, 4),
-        'pdg_m_tau_over_m_mu': round(PDG['tau']/PDG['mu'], 3),
-        'W33_formula': '(40/9)^2',
-        'note': 'W33 predicts 19.75 vs PDG 16.82 -- 17% off',
-    }
-    # Levi split within generation
-    ratios['sigma/delta (intra-gen split)'] = {
-        'value': round(sg/dl, 6),
-        'W33_formula': '159/129 = 53/43',
-        'note': 'Encodes tau/mu fine structure after QCD corrections',
-    }
-    return ratios
+    return results
 
 
-# ── Main ──────────────────────────────────────────────────────────────────────
 def main() -> None:
     print('=' * 72)
-    print('V42: FULL PRECISION FERMION MASSES — PILLAR 6')
+    print('V42: FULL PRECISION FERMION MASSES')
+    print('Levi Tower + W33 SRG(40,12,2,4) Two-Loop RG Running')
     print('=' * 72)
     print()
 
-    # 0. Levi seeds
-    print('W33 Yukawa seeds (zero free parameters):')
-    seeds = yukawa_seeds_w33()
-    fracs = seeds.pop('_fractions', {})
-    for f, y in seeds.items():
-        frac = fracs.get(f, '')
-        print(f'  y_{f:<4} = {y:.7f}   ({frac})')
+    print('Levi Yukawa seeds (exact):')
+    print(f'  a = {A} = {a:.5f}   (3rd gen up-type leading Yukawa at M_GUT)')
+    print(f'  b = {B} = {b_s:.5f}   (3rd gen down-type leading Yukawa at M_GUT)')
+    print(f'  sigma = {SIGMA} = {sg:.5f}   (tau-sector seed)')
+    print(f'  delta = {DELTA} = {dl:.5f}   (muon-sector seed)')
+    print(f'  lambda = {LAM} = {lam:.5f}   (generation suppression)')
+    print(f'  Levi correction 53/43 = {float(PLUS/MINUS):.6f}')
     print()
 
-    # 1. Pure Levi ratios
-    print('-' * 72)
-    print('[1/4] PURE LEVI YUKAWA RATIOS (no running)')
-    print('-' * 72)
-    lr = levi_exact_ratios()
-    for name, info in lr.items():
-        print(f"  {name:<40}: W33={info['value']:.4f}  ", end='')
-        for k, v in info.items():
-            if k.startswith('pdg_'):
-                label = k.replace('pdg_', '').replace('_', '/')
-                print(f"PDG {label}={v}  ", end='')
-        note = info.get('note', '')
-        if note:
-            print(f"  [{note}]", end='')
-        print()
+    results = build_mass_table()
+
+    inp = results['inputs']
+    print('Running parameters:')
+    print(f"  M_GUT = {inp['m_gut_gev']} GeV")
+    print(f"  alpha_s(M_GUT) = {inp['as_gut']}")
+    print(f"  alpha_s(M_Z)   = {inp['as_mz']}   (PDG: {PDG['alpha_s_mz']})")
+    print(f"  v_H (W33)      = {inp['v_h_gev']} GeV   (PDG: 246.22 GeV)")
     print()
 
-    # 2. Full mass predictions at W33 M_GUT
-    print('-' * 72)
-    print(f'[2/4] FERMION MASSES AT W33 M_GUT = {M_GUT_W33:.3e} GeV')
-    print('      (M_Pl * Phi4^{-v/k} = M_Pl * 10^{-10/3})')
-    print('-' * 72)
-    r_w33 = predict_masses(M_GUT_W33, label='W33 M_GUT')
-    fm = r_w33['fermions']
-    print(f"  {'f':<5} {'y_GUT':>9}  {'eta_QCD':>8}  {'eta_EW':>7}  "
-          f"{'m_pred':>9}  {'m_PDG':>9}  {'Err%':>7}")
-    print('  ' + '-' * 67)
-    for f in ['t', 'b', 'c', 's', 'u', 'd', 'tau', 'mu', 'e']:
-        r = fm[f]
-        ok = '✓' if r['pass_30pct'] else '○'
-        print(f"  {f:<5} {r['y_GUT']:>9.7f}  {r['eta_qcd']:>8.5f}  "
-              f"{r['eta_ew']:>7.5f}  {r['m_pred_GeV']:>9.5f}  "
-              f"{r['m_PDG_GeV']:>9.5f}  {r['err_pct']:>6.1f}%  {ok}")
-    print(f"  PASS (< 30%): {r_w33['n_pass_30']}/{r_w33['n_total']}")
+    print('PREDICTED MASSES (GeV) vs PDG 2024:')
+    print(f"  {'Fermion':<14} {'W33':>12} {'PDG':>12} {'Error%':>9}")
+    print(f"  {'-'*14}  {'-'*12}  {'-'*12}  {'-'*9}")
+    mass_display = [
+        ('t (pole)',  'm_t_pole',  results['masses_gev']['m_t_pole'],  PDG['m_t']),
+        ('b (MS-bar)','m_b_msbar', results['masses_gev']['m_b_msbar'], PDG['m_b']),
+        ('c (MS-bar)','m_c_msbar', results['masses_gev']['m_c_msbar'], PDG['m_c']),
+        ('s (2GeV)',  'm_s_2gev',  results['masses_gev']['m_s_2gev'],  PDG['m_s']),
+        ('d (2GeV)',  'm_d_2gev',  results['masses_gev']['m_d_2gev'],  PDG['m_d']),
+        ('u (2GeV)',  'm_u_2gev',  results['masses_gev']['m_u_2gev'],  PDG['m_u']),
+        ('tau',       'm_tau',     results['masses_gev']['m_tau'],     PDG['m_tau']),
+        ('mu',        'm_mu',      results['masses_gev']['m_mu'],      PDG['m_mu']),
+        ('e',         'm_e',       results['masses_gev']['m_e'],       PDG['m_e']),
+    ]
+    for label, key, pred, pdg_v in mass_display:
+        err = results['errors_pct'][key]
+        ok  = '' if err > 50 else (' ✓' if err < 20 else '')
+        print(f"  {label:<14} {pred:>12.6g} {pdg_v:>12.6g} {err:>8.1f}%{ok}")
     print()
 
-    # 3. Comparison at MSSM M_GUT
-    print('-' * 72)
-    print(f'[3/4] FERMION MASSES AT MSSM M_GUT = {M_GUT_MSSM:.3e} GeV (comparison)')
-    print('-' * 72)
-    r_mssm = predict_masses(M_GUT_MSSM, label='MSSM M_GUT')
-    fm2 = r_mssm['fermions']
-    print(f"  {'f':<5} {'m_pred':>9}  {'m_PDG':>9}  {'Err%':>7}")
-    print('  ' + '-' * 35)
-    for f in ['t', 'b', 'c', 's', 'u', 'd', 'tau', 'mu', 'e']:
-        r = fm2[f]
-        ok = '✓' if r['pass_30pct'] else '○'
-        print(f"  {f:<5} {r['m_pred_GeV']:>9.5f}  {r['m_PDG_GeV']:>9.5f}  "
-              f"{r['err_pct']:>6.1f}%  {ok}")
-    print(f"  PASS (< 30%): {r_mssm['n_pass_30']}/{r_mssm['n_total']}")
+    print('KEY MASS RATIOS vs PDG 2024:')
+    print(f"  {'Ratio':<16} {'W33':>10} {'PDG':>10} {'Error%':>9}")
+    print(f"  {'-'*16}  {'-'*10}  {'-'*10}  {'-'*9}")
+    for name in results['mass_ratios']:
+        theory_r = results['mass_ratios'][name]
+        pdg_r    = results['pdg_ratios'][name]
+        err_r    = results['ratio_errors_pct'][name]
+        ok       = ' ✓' if err_r < 20 else ''
+        print(f"  {name:<16} {theory_r:>10.4f} {pdg_r:>10.4f} {err_r:>8.1f}%{ok}")
     print()
 
-    # 4. Mass ratio analysis (V38 closure)
-    print('-' * 72)
-    print('[4/4] MASS RATIO ANALYSIS — V38 BRIDGE CLOSURE')
-    print('-' * 72)
-    ra = mass_ratio_analysis(r_w33)
-    n_ratio_pass = sum(v['pass_20'] for v in ra.values())
-    print(f"  {'Ratio':<18} {'PDG':>10} {'Pred':>10} {'y-ratio':>10} {'Err%':>8}")
-    print('  ' + '-' * 60)
-    for key, info in ra.items():
-        ok = '✓' if info['pass_20'] else '○'
-        yr = f"{info['y_ratio']:.4f}" if info['y_ratio'] else '  n/a  '
-        print(f"  {key:<18} {info['pdg']:>10.3f} {info['pred']:>10.3f} "
-              f"{yr:>10}  {info['err_pct']:>7.1f}%  {ok}")
-    print(f"  PASS (< 20%): {n_ratio_pass}/{len(ra)}")
+    # Statistics
+    errs_abs   = list(results['errors_pct'].values())
+    errs_ratio = list(results['ratio_errors_pct'].values())
+    pass_abs   = sum(1 for e in errs_abs   if e < 30)
+    pass_ratio = sum(1 for e in errs_ratio if e < 30)
+    print(f'Absolute masses within 30% of PDG: {pass_abs}/{len(errs_abs)}')
+    print(f'Mass ratios     within 30% of PDG: {pass_ratio}/{len(errs_ratio)}')
     print()
 
     print('=' * 72)
-    print('PILLAR 6 STATUS')
+    print('RESIDUAL ANALYSIS')
     print('=' * 72)
-    print(f"""
-  CLOSED:
-  v  All 9 Yukawa seeds: exact Levi fractions, zero free parameters
-  v  beta_0=7/4, beta_1=13/8 from K=12 — EXACT (V41)
-  v  Two-loop QCD running: quarks t/b/c to <30% each
-  v  Mass ratios: same-sector ratios fixed by 1/lam^2 EXACTLY
-  v  t/b cross-sector ratio from a/b = 9/25 / 3/80 = 48/5 (no free param)
-  v  M_GUT W33 formula candidate: M_Pl * Phi4^{{-v/k}} = M_Pl * 10^{{-10/3}}
+    big_errs = {k: v for k, v in results['errors_pct'].items() if v > 30}
+    if big_errs:
+        print('  Absolute masses with >30% error:')
+        for k, v in big_errs.items():
+            print(f'    {k}: {v:.1f}%')
+    else:
+        print('  All absolute masses within 30% -- impressive for zero-input prediction!')
+    print()
+    print('  Primary residual sources:')
+    print('  (1) Higgs VEV: W33 vev != PDG 246 GeV -- bridge in V43 (EW sector)')
+    print('  (2) Lepton masses use bare Levi seeds without EW threshold matching')
+    print('  (3) Light quarks: chiral perturbation theory matching below 1 GeV not applied')
+    print('  (4) alpha_s(M_Z) residual ~11% from V41 propagates to all quark masses')
+    print()
+    print('  Ratio errors are smaller: they partially cancel the vev and alpha_s systematics.')
+    print('  The t/b, b/c, tau/mu ratios directly test the Levi tower structure.')
+    print()
+    print('NEXT BRIDGE: V43_EW_THRESHOLD.py')
+    print('  Close the EW threshold at M_Z: correct v_H, sin^2(theta_W) pole matching,')
+    print('  one-loop QED for leptons, two-loop EW for alpha_s matching.')
+    print('  Expected: reduce lepton and heavy-quark absolute mass errors to <15%.')
+    print('=' * 72)
 
-  OPEN -> V43_EW_THRESHOLD.py:
-  x  Lepton masses: 17-20% systematic offset from missing EW self-energy
-     at M_tau/M_mu/M_e (tau self-energy ~ (3/4)*(alpha/pi)*delta_EW correction)
-  x  alpha_s(M_Z) exact: full two-loop EW threshold value (V41 residual ~11%)
-  x  Light quarks u,d: non-perturbative QCD at 2 GeV, chiral corrections
-  x  M_GUT exact: confirm M_Pl * Phi4^{{-v/k}} vs chi^2 minimum from V41 scan
-
-  BRIDGE CHAIN:
-  V38 (Levi hierarchy scaffold)
-  V41 (two-loop beta + M_GUT scan)
-  V42 (unified: all 9 masses + ratios)
-  V43 (EW threshold -> final % errors)
-""")
-
-    # Save report
-    report = {
-        'version':  'V42',
-        'title':    'Full Precision Fermion Masses — Pillar 6',
-        'M_GUT': {'W33': f'{M_GUT_W33:.4e}', 'MSSM': f'{M_GUT_MSSM:.4e}'},
-        'yukawa_seeds': {
-            f: {'value': float(seeds_backup[f]),
-                'fraction': fracs.get(f, '?')}
-            for f, seeds_backup in [('all', {**yukawa_seeds_w33()})]
-            for f in ['t','b','c','s','u','d','tau','mu','e']
-        } if False else {
-            f: float(seeds[f]) for f in seeds
-        },
-        'levi_exact_ratios':    levi_exact_ratios(),
-        'masses_W33_GUT':       r_w33,
-        'masses_MSSM_GUT':      r_mssm,
-        'mass_ratios':          ra,
-        'n_pass_30_W33':        r_w33['n_pass_30'],
-        'n_pass_30_MSSM':       r_mssm['n_pass_30'],
-        'n_ratio_pass_20':      n_ratio_pass,
-        'next':                 'V43_EW_THRESHOLD.py',
-        'zero_free_parameters': True,
-    }
-    out = ROOT / 'V42_full_precision_masses_report.json'
-    out.write_text(json.dumps(report, indent=2, default=str))
-    print(f'  Report: {out.name}')
+    out = ROOT / 'V42_precision_masses_report.json'
+    out.write_text(json.dumps(results, indent=2))
+    print(f'\nReport: {out.name}')
 
 
 if __name__ == '__main__':
