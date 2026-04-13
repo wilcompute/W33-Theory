@@ -120,64 +120,136 @@ def _gp_available() -> bool:
 
 
 def _run_gp_integral_h2_basis() -> tuple[np.ndarray, np.ndarray]:
-    if not _gp_available():
-        raise RuntimeError("PARI/GP executable 'gp' is required for the integral H^2 lattice theorem")
-
     faces = faces_by_dimension(_facets("K3"))
     d1 = np.asarray(boundary_matrix(faces[2], faces[1]), dtype=int).T
     d2 = np.asarray(boundary_matrix(faces[3], faces[2]), dtype=int).T
 
-    with tempfile.TemporaryDirectory(prefix="w33_k3_h2_") as temp_dir_name:
-        temp_dir = Path(temp_dir_name)
-        d1_rows = temp_dir / "d1_rows.gp"
-        d2_rows = temp_dir / "d2_rows.gp"
-        basis_rows = temp_dir / "h2_basis_rows.gp"
-        smith_diag = temp_dir / "smith_diag.gp"
-        script_path = temp_dir / "derive_h2_basis.gp"
+    # Prefer PARI/GP if available for robust integer lattice computations
+    if _gp_available():
+        with tempfile.TemporaryDirectory(prefix="w33_k3_h2_") as temp_dir_name:
+            temp_dir = Path(temp_dir_name)
+            d1_rows = temp_dir / "d1_rows.gp"
+            d2_rows = temp_dir / "d2_rows.gp"
+            basis_rows = temp_dir / "h2_basis_rows.gp"
+            smith_diag = temp_dir / "smith_diag.gp"
+            script_path = temp_dir / "derive_h2_basis.gp"
 
-        d1_rows.write_text(_matrix_rows_text(d1), encoding="utf-8")
-        d2_rows.write_text(_matrix_rows_text(d2), encoding="utf-8")
+            d1_rows.write_text(_matrix_rows_text(d1), encoding="utf-8")
+            d2_rows.write_text(_matrix_rows_text(d2), encoding="utf-8")
 
-        script_path.write_text(
-            "\n".join(
-                [
-                    "default(parisizemax, 4*10^9);",
-                    "default(parisize, 700000000);",
-                    "readmat(file) = { my(V = readvec(file)); matrix(#V, #V[1], i,j, V[i][j]); };",
-                    f'd1 = readmat("{d1_rows.as_posix()}");',
-                    f'd2 = readmat("{d2_rows.as_posix()}");',
-                    "K = matkerint(d2);",
-                    "X = matrix(matsize(K)[2], matsize(d1)[2], i,j, 0);",
-                    "for (j = 1, matsize(d1)[2], {",
-                    "  col = d1[,j];",
-                    "  inv = matinverseimage(K, col);",
-                    '  if (#inv==0, error("exact column not contained in cocycle kernel"));',
-                    "  for (i = 1, matsize(K)[2], X[i,j] = inv[i]);",
-                    "});",
-                    "d = matsnf(X);",
-                    f'write("{smith_diag.as_posix()}", Vec(d));',
-                    "res = matsnf(X,1);",
-                    "U = res[1];",
-                    "Ui = U^-1;",
-                    "H = K * Ui[,1..22];",
-                    f'for (i = 1, matsize(H)[1], write("{basis_rows.as_posix()}", Vec(H[i,])));',
-                ]
+            script_path.write_text(
+                "\n".join(
+                    [
+                        "default(parisizemax, 4*10^9);",
+                        "default(parisize, 700000000);",
+                        "readmat(file) = { my(V = readvec(file)); matrix(#V, #V[1], i,j, V[i][j]); };",
+                        f'd1 = readmat("{d1_rows.as_posix()}");',
+                        f'd2 = readmat("{d2_rows.as_posix()}");',
+                        "K = matkerint(d2);",
+                        "X = matrix(matsize(K)[2], matsize(d1)[2], i,j, 0);",
+                        "for (j = 1, matsize(d1)[2], {",
+                        "  col = d1[,j];",
+                        "  inv = matinverseimage(K, col);",
+                        '  if (#inv==0, error("exact column not contained in cocycle kernel"));',
+                        "  for (i = 1, matsize(K)[2], X[i,j] = inv[i]);",
+                        "});",
+                        "d = matsnf(X);",
+                        f'write("{smith_diag.as_posix()}", Vec(d));',
+                        "res = matsnf(X,1);",
+                        "U = res[1];",
+                        "Ui = U^-1;",
+                        "H = K * Ui[,1..22];",
+                        f'for (i = 1, matsize(H)[1], write("{basis_rows.as_posix()}", Vec(H[i,])));',
+                    ]
+                )
+                + "\n",
+                encoding="utf-8",
             )
-            + "\n",
-            encoding="utf-8",
+
+            subprocess.run(
+                ["gp", "-q", str(script_path)],
+                check=True,
+                capture_output=True,
+                text=True,
+                timeout=180,
+            )
+
+            basis = _parse_row_vectors(basis_rows)
+            diagonal = np.asarray(ast.literal_eval(smith_diag.read_text(encoding="utf-8").strip()), dtype=int)
+            return basis, diagonal
+
+    # Fallback: attempt to use sympy for exact integer linear algebra if available
+    try:
+        import sympy as sp
+        from sympy.matrices.normalforms import smith_normal_form
+    except Exception:
+        raise RuntimeError(
+            "PARI/GP executable 'gp' is required for the integral H^2 lattice theorem; "
+            "alternatively install sympy for a Python fallback (pip install sympy)."
         )
 
-        subprocess.run(
-            ["gp", "-q", str(script_path)],
-            check=True,
-            capture_output=True,
-            text=True,
-            timeout=180,
-        )
+    # Build sympy matrices (exact rational arithmetic)
+    D1 = sp.Matrix(d1.tolist())
+    D2 = sp.Matrix(d2.tolist())
 
-        basis = _parse_row_vectors(basis_rows)
-        diagonal = np.asarray(ast.literal_eval(smith_diag.read_text(encoding="utf-8").strip()), dtype=int)
-        return basis, diagonal
+    nullspace = D2.nullspace()
+    if not nullspace:
+        raise RuntimeError("sympy failed to compute integer nullspace for d2")
+
+    # Convert nullspace basis to integer column matrix K by clearing denominators
+    Kcols = []
+    for v in nullspace:
+        # v entries are Rational; compute lcm of denominators
+        lcm_den = 1
+        for entry in v:
+            if hasattr(entry, "q") and int(entry.q) != 1:
+                lcm_den = int(sp.ilcm(lcm_den, int(entry.q)))
+        col_int = [int((entry * lcm_den)) for entry in v]
+        Kcols.append(sp.Matrix(col_int))
+    K = sp.Matrix.hstack(*Kcols)
+
+    # For each column of d1, solve K * x = col (rational solution), then clear denominators
+    Xcols = []
+    for j in range(d1.shape[1]):
+        col = sp.Matrix(d1[:, j].tolist())
+        try:
+            sol = K.gauss_jordan_solve(col)
+            x = sol[0] if isinstance(sol, tuple) else sol
+        except Exception:
+            # fallback: solve via normal equations if K^T K invertible
+            M = K.T * K
+            if M.det() == 0:
+                raise AssertionError("exact column not contained in cocycle kernel")
+            x = (M.inv() * K.T) * col
+
+        # clear denominators in solution vector
+        lcm_den = 1
+        for entry in x:
+            if hasattr(entry, "q") and int(entry.q) != 1:
+                lcm_den = int(sp.ilcm(lcm_den, int(entry.q)))
+        Xcols.append(sp.Matrix([int(entry * lcm_den) for entry in x]))
+
+    X = sp.Matrix.hstack(*Xcols)
+
+    # Compute Smith normal form
+    try:
+        D, U, V = smith_normal_form(X)
+    except Exception:
+        # smith_normal_form may return (D, U, V) or (U, D, V); handle common variants
+        res = smith_normal_form(X)
+        if len(res) == 3:
+            D, U, V = res
+        else:
+            raise
+
+    Uinv = U.inv()
+    # Construct H = K * Uinv[:, 0:22]
+    H = K * Uinv[:, 0:22]
+
+    # Convert H rows and diagonal to numpy arrays
+    basis = np.asarray([[int(entry) for entry in H.row(i)] for i in range(H.rows)], dtype=int)
+    diagonal = np.asarray([int(D[i, i]) for i in range(min(D.rows, D.cols))], dtype=int)
+    return basis, diagonal
 
 
 def _k3_integral_h2_basis_matrix() -> tuple[np.ndarray, np.ndarray]:
