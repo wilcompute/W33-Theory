@@ -1,7 +1,12 @@
 from collections import Counter, deque
 from pathlib import Path
 
-from scripts.w33_permrep_association import _point_bfs_coset_reps, parse_gap_permrep
+try:
+    # Prefer package-relative import when used as a module; fall back to
+    # absolute import for direct script execution.
+    from .w33_permrep_association import _point_bfs_coset_reps, parse_gap_permrep
+except Exception:  # pragma: no cover - fallback for direct script execution
+    from scripts.w33_permrep_association import _point_bfs_coset_reps, parse_gap_permrep
 
 
 def main():

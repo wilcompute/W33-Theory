@@ -10,7 +10,12 @@ import json
 from pathlib import Path
 import numpy as np
 
-from scripts.e8_embedding_group_theoretic import build_w33
+try:
+    # Prefer package-relative import when used as a module; fall back to
+    # absolute import for direct script execution.
+    from .e8_embedding_group_theoretic import build_w33
+except Exception:  # pragma: no cover - fallback for direct script execution
+    from scripts.e8_embedding_group_theoretic import build_w33
 
 
 def build_hashimoto(adj, edges):

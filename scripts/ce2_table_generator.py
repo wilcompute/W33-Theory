@@ -20,18 +20,34 @@ from __future__ import annotations
 from itertools import product
 from fractions import Fraction
 
-from scripts.ce2_global_cocycle import (
-    _SIMPLE_FAMILY_WEIL_E_COEFF,
-    _SIMPLE_FAMILY_WEIL_C0_COEFF,
-    _f3_dot,
-    _f3_omega,
-    _f3_chi,
-    _eval_f3_poly_sw,
-    all_symplectic_matrices,
-    compute_phase,
-    apply_matrix,
-    matinv,
-)
+try:
+    # Prefer package-relative import when used as a module; fall back to
+    # absolute import for direct script execution.
+    from .ce2_global_cocycle import (
+        _SIMPLE_FAMILY_WEIL_E_COEFF,
+        _SIMPLE_FAMILY_WEIL_C0_COEFF,
+        _f3_dot,
+        _f3_omega,
+        _f3_chi,
+        _eval_f3_poly_sw,
+        all_symplectic_matrices,
+        compute_phase,
+        apply_matrix,
+        matinv,
+    )
+except Exception:  # pragma: no cover - fallback for direct script execution
+    from scripts.ce2_global_cocycle import (
+        _SIMPLE_FAMILY_WEIL_E_COEFF,
+        _SIMPLE_FAMILY_WEIL_C0_COEFF,
+        _f3_dot,
+        _f3_omega,
+        _f3_chi,
+        _eval_f3_poly_sw,
+        all_symplectic_matrices,
+        compute_phase,
+        apply_matrix,
+        matinv,
+    )
 
 # finite-field helpers -------------------------------------------------------
 

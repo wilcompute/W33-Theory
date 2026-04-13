@@ -17,9 +17,19 @@ _ORIG_SUBPROCESS_RUN = subprocess.run
 def _rewrite_python_argv(args):
     if isinstance(args, (list, tuple)) and args:
         head = str(args[0])
+        # If the exact venv python path is used, replace with the current
+        # sys.executable so subprocesses run in the same interpreter pytest
+        # is using (the activated venv during tests).
         if head == WINDOWS_VENV_PYTHON:
             rewritten = list(args)
             rewritten[0] = sys.executable
+            return rewritten
+
+        # Many legacy scripts invoke the Windows launcher via `py -3 script`.
+        # Rewrite that to use the current test interpreter so required
+        # dependencies installed in the venv are available to the subprocess.
+        if head.lower() == "py" and len(args) >= 3 and str(args[1]).startswith("-3"):
+            rewritten = [sys.executable] + list(args[2:])
             return rewritten
     return args
 

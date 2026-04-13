@@ -31,6 +31,9 @@ LEGACY_FIXTURE_MAP = {
     Path("TOE_7pocket_derivations_v01_20260227_bundle"): Path(
         "archive/dirs/TOE_7pocket_derivations_v01_20260227_bundle"
     ),
+    Path("TOE_push_triangle_scheme_cohomology_v01_20260227_bundle"): Path(
+        "archive/dirs/TOE_push_triangle_scheme_cohomology_v01_20260227_bundle"
+    ),
     Path("TOE_pocket_transport_glue_orbit480_v01_20260227_bundle"): Path(
         "archive/dirs/TOE_pocket_transport_glue_orbit480_v01_20260227_bundle"
     ),
@@ -45,6 +48,9 @@ LEGACY_FIXTURE_MAP = {
     ),
     Path("pillars/TOE_270_TRANSPORT_v01_20260228_bundle.zip"): Path(
         "archive/zip/TOE_270_TRANSPORT_v01_20260228_bundle.zip"
+    ),
+    Path("pillars/TOE_BoseMesner_Algebra_Solution_bundle_v04_20260227.zip"): Path(
+        "archive/zip/TOE_BoseMesner_Algebra_Solution_bundle_v04_20260227.zip"
     ),
     Path("pillars/TOE_S3_SHEET_TRANSPORT_v01_20260228_bundle.zip"): Path(
         "archive/zip/TOE_S3_SHEET_TRANSPORT_v01_20260228_bundle.zip"
@@ -73,6 +79,9 @@ LEGACY_FIXTURE_MAP = {
         "archive/data/K54_54sheet_coords_refined.csv"
     ),
     Path("K54_node_labels_L.csv"): Path("archive/data/K54_node_labels_L.csv"),
+    Path("K54_edges_L_reconstruct.csv"): Path("archive/data/K54_edges_L_reconstruct.csv"),
+    Path("K27_stabilizer_C6.json"): Path("archive/json/K27_stabilizer_C6.json"),
+    Path("tomo_t4_cycle_structure.json"): Path("archive/json/tomo_t4_cycle_structure.json"),
     Path("pillars/N_subgroup.json"): Path("archive/json/N_subgroup.json"),
     Path("axis_bundle_content"): Path("archive/dirs/axis_bundle_content"),
     Path("pillar77_data"): Path("archive/dirs/pillar77_data"),
@@ -106,8 +115,36 @@ def _build_edge_orient_bundle(target: Path) -> None:
         )
 
 
+def _build_tomotope_axis_bundle(target: Path) -> None:
+    """Create the pillars ZIP bundle from the axis_bundle_content directory if present."""
+    source_dir = ROOT / "axis_bundle_content" / "TOE_tomotope_axis_block_twist_v02_20260228"
+    if not source_dir.exists():
+        return
+    target.parent.mkdir(parents=True, exist_ok=True)
+    with zipfile.ZipFile(target, "w", zipfile.ZIP_DEFLATED) as zf:
+        for p in sorted(source_dir.rglob("*")):
+            if p.is_file():
+                arcname = Path("TOE_tomotope_axis_block_twist_v02_20260228") / p.relative_to(source_dir)
+                zf.write(p, str(arcname))
+
+
+def _build_line_polarization_bundle(target: Path) -> None:
+    """Extract the TOE_line_polarization zip into the expected bundle directory."""
+    source_zip = ROOT / "archive" / "zip" / "TOE_line_polarization_A5_v01_20260227_bundle.zip"
+    if not source_zip.exists():
+        return
+    target.parent.mkdir(parents=True, exist_ok=True)
+    with zipfile.ZipFile(source_zip, "r") as zf:
+        # Extract all files into the target directory. If the zip contains a
+        # top-level folder like 'TOE_line_polarization_A5_v01_20260227', this
+        # will produce the expected nested structure under target.
+        zf.extractall(target)
+
+
 SPECIAL_BUILDERS = {
     Path("TOE_edge_orient_map_v01_20260227_bundle.zip"): _build_edge_orient_bundle,
+    Path("pillars/TOE_tomotope_axis_block_twist_v02_20260228_bundle.zip"): _build_tomotope_axis_bundle,
+    Path("TOE_line_polarization_A5_v01_20260227_bundle"): _build_line_polarization_bundle,
 }
 
 

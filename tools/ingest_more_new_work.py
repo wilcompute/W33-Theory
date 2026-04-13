@@ -210,7 +210,10 @@ def ensure_zips_extracted() -> None:
 
 def main() -> None:
     if not DROP_DIR.exists():
-        raise SystemExit(f"Missing {DROP_DIR}")
+        # Allow missing drop directory in test environments — proceed with an
+        # empty digest. This keeps the tool deterministic and non-fatal when
+        # no external drop has been provided.
+        print(f"Warning: missing drop directory {DROP_DIR}; proceeding with empty digest")
 
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
 

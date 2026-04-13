@@ -23,6 +23,16 @@ from __future__ import annotations
 from typing import Callable, Iterable, List, Optional
 
 import numpy as np
+import sys
+from pathlib import Path
+
+# Ensure repository root and scripts/ are on sys.path so absolute
+# `from scripts.*` imports succeed when this file is executed directly.
+ROOT = Path(__file__).resolve().parents[1]
+SCRIPTS_DIR = ROOT / "scripts"
+for _p in (ROOT, SCRIPTS_DIR):
+    if str(_p) not in sys.path:
+        sys.path.insert(0, str(_p))
 
 # avoid circular import issues by delaying heavy imports
 

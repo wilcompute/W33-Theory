@@ -23,12 +23,22 @@ from __future__ import annotations
 from collections import defaultdict
 from typing import Dict, List, Tuple
 
-from scripts.ce2_global_cocycle import (
-    _simple_family_sign_map,
-    _heisenberg_vec_maps,
-    _f3_dot,
-    _f3_omega,
-)
+try:
+    # Prefer package-relative import when used as a module; fall back to
+    # absolute import for direct script execution (e.g., `python scripts/...`).
+    from .ce2_global_cocycle import (
+        _simple_family_sign_map,
+        _heisenberg_vec_maps,
+        _f3_dot,
+        _f3_omega,
+    )
+except Exception:  # pragma: no cover - fallback for direct script execution
+    from scripts.ce2_global_cocycle import (
+        _simple_family_sign_map,
+        _heisenberg_vec_maps,
+        _f3_dot,
+        _f3_omega,
+    )
 
 Pattern = Tuple[int, int, int]  # sign(s) for s=0,1,2
 Tag = Tuple[int, int, int]  # (t, w, z_sum)

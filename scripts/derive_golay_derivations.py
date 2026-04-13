@@ -16,12 +16,22 @@ from pathlib import Path
 
 import numpy as np
 
-from scripts.w33_golay_lie_algebra import (
-    build_golay_lie_algebra,
-    _ad_matrices,
-    _derivation_dims,
-    _rank_mod_p,
-)
+try:
+    # Prefer package-relative import when used as a module; fall back to
+    # absolute import for direct script execution.
+    from .w33_golay_lie_algebra import (
+        build_golay_lie_algebra,
+        _ad_matrices,
+        _derivation_dims,
+        _rank_mod_p,
+    )
+except Exception:  # pragma: no cover - fallback for direct script execution
+    from scripts.w33_golay_lie_algebra import (
+        build_golay_lie_algebra,
+        _ad_matrices,
+        _derivation_dims,
+        _rank_mod_p,
+    )
 
 ROOT = Path(__file__).resolve().parents[1]
 

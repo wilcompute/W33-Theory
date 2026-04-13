@@ -21,11 +21,20 @@ from typing import List, Tuple
 import numpy as np
 
 # reuse candidate builder
-from scripts.check_triangle_coverage import (
-    build_w33_graph,
-    compute_embedding_matrix,
-    generate_scaled_e8_roots,
-)
+try:
+    # Prefer package-relative import when used as a module; fall back to
+    # absolute import for direct script execution.
+    from .check_triangle_coverage import (
+        build_w33_graph,
+        compute_embedding_matrix,
+        generate_scaled_e8_roots,
+    )
+except Exception:  # pragma: no cover - fallback for direct script execution
+    from scripts.check_triangle_coverage import (
+        build_w33_graph,
+        compute_embedding_matrix,
+        generate_scaled_e8_roots,
+    )
 
 
 def hopcroft_karp(adj, n_left, n_right):

@@ -17,11 +17,20 @@ from __future__ import annotations
 
 from typing import Tuple, List
 
-from scripts.ce2_kernel_action import (
-    build_kernel_tables,
-    pattern_list,
-    tag_list,
-)
+try:
+    # Prefer package-relative import when used as a module; fall back to
+    # absolute import when executed directly as a script.
+    from .ce2_kernel_action import (
+        build_kernel_tables,
+        pattern_list,
+        tag_list,
+    )
+except Exception:  # pragma: no cover - fallback for direct script execution
+    from scripts.ce2_kernel_action import (
+        build_kernel_tables,
+        pattern_list,
+        tag_list,
+    )
 
 # build once at import
 _PATTERN_INDEX, _TAG_INDEX, _ACTION1, _ACTION2 = build_kernel_tables()
