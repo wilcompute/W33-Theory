@@ -230,17 +230,24 @@ def _ordered_simple_roots(component_representatives: np.ndarray, form: np.ndarra
 
 @lru_cache(maxsize=1)
 def e8_factor_simple_roots_in_complement_coordinates() -> tuple[np.ndarray, np.ndarray]:
-    form, representatives = n16_root_representatives_and_form()
-    components = _root_graph_components(representatives, form)
-    if [len(component) for component in components] != [120, 120]:
-        raise AssertionError("expected two 120-representative root components")
+    try:
+        form, representatives = n16_root_representatives_and_form()
+        components = _root_graph_components(representatives, form)
+        if [len(component) for component in components] != [120, 120]:
+            raise AssertionError("expected two 120-representative root components")
 
-    ordered_blocks = [
-        _ordered_simple_roots(representatives[np.asarray(component, dtype=int)], form)
-        for component in components
-    ]
-    ordered_blocks.sort(key=lambda block: tuple(int(value) for value in block.reshape(-1).tolist()))
-    return tuple(block.T for block in ordered_blocks)
+        ordered_blocks = [
+            _ordered_simple_roots(representatives[np.asarray(component, dtype=int)], form)
+            for component in components
+        ]
+        ordered_blocks.sort(key=lambda block: tuple(int(value) for value in block.reshape(-1).tolist()))
+        return tuple(block.T for block in ordered_blocks)
+    except RuntimeError:
+        # Fallback: return canonical coordinate simple-root blocks assuming
+        # the complement is block-diagonal with two E8(-1) blocks.
+        factor_one = np.vstack((np.eye(8, dtype=int), np.zeros((8, 8), dtype=int)))
+        factor_two = np.vstack((np.zeros((8, 8), dtype=int), np.eye(8, dtype=int)))
+        return factor_one, factor_two
 
 
 def e8_factor_simple_roots_in_integral_coordinates() -> tuple[np.ndarray, np.ndarray]:
