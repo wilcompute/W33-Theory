@@ -320,6 +320,7 @@ def print_final_table():
         ]),
         ("CKM & QUARK MIXING", [
             ("sin(theta_C)", "0.2250", "0.2243", "0.3%", "q^2/v = 9/40"),
+            ("|V_cb|", "0.0400", "0.0408", "2.0%", "1/(q+lam)^2 = 1/25"),
         ]),
         ("PROTON/ELECTRON RATIO", [
             ("m_p/m_e", "1836", "1836.15", "0.008%", "v^2 + E - mu"),
@@ -378,12 +379,18 @@ def derive_lepton_sector_closure():
 
 def derive_ckm_cabibbo():
     sin_theta_C = Fraction(q ** 2, v)
+    V_cb = Fraction(1, (q + lam) ** 2)
     return {
         "sin_theta_C_fraction": str(sin_theta_C),
         "sin_theta_C_decimal": float(sin_theta_C),
         "pdg_V_us": 0.2243,
-        "err_pct": round(abs(float(sin_theta_C) - 0.2243) / 0.2243 * 100, 3),
-        "formula": "q^2 / v = 9/40",
+        "V_us_err_pct": round(abs(float(sin_theta_C) - 0.2243) / 0.2243 * 100, 3),
+        "sin_theta_C_formula": "q^2 / v = 9/40",
+        "V_cb_fraction": str(V_cb),
+        "V_cb_decimal": float(V_cb),
+        "pdg_V_cb": 0.0408,
+        "V_cb_err_pct": round(abs(float(V_cb) - 0.0408) / 0.0408 * 100, 3),
+        "V_cb_formula": "1 / (q + lam)^2 = 1/25",
     }
 
 

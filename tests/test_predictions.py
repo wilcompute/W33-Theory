@@ -269,7 +269,19 @@ class TestCabibboAndProtonElectron:
         result = preds.derive_ckm_cabibbo()
         capsys.readouterr()
         assert Fraction(result["sin_theta_C_fraction"]) == Fraction(9, 40)
-        assert result["err_pct"] < 0.5
+        assert result["V_us_err_pct"] < 0.5
+
+    def test_V_cb_exact(self, preds):
+        # |V_cb| = 1/(q + lam)^2 = 1/25 = 0.04.  PDG: 0.0408. Err 2.0%.
+        assert Fraction(1, (preds.q + preds.lam) ** 2) == Fraction(1, 25)
+        err = abs(1 / 25 - 0.0408) / 0.0408
+        assert err < 3e-2
+
+    def test_V_cb_from_closure(self, preds, capsys):
+        result = preds.derive_ckm_cabibbo()
+        capsys.readouterr()
+        assert Fraction(result["V_cb_fraction"]) == Fraction(1, 25)
+        assert result["V_cb_err_pct"] < 3.0
 
     def test_proton_electron_ratio_exact(self, preds):
         # m_p/m_e = v^2 + E - mu = 1600 + 240 - 4 = 1836

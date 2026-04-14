@@ -92,8 +92,13 @@
     "sin_theta_C_fraction": "9/40",
     "sin_theta_C_decimal": 0.225,
     "pdg_V_us": 0.2243,
-    "err_pct": 0.312,
-    "formula": "q^2 / v = 9/40"
+    "V_us_err_pct": 0.312,
+    "sin_theta_C_formula": "q^2 / v = 9/40",
+    "V_cb_fraction": "1/25",
+    "V_cb_decimal": 0.04,
+    "pdg_V_cb": 0.0408,
+    "V_cb_err_pct": 1.961,
+    "V_cb_formula": "1 / (q + lam)^2 = 1/25"
   },
   "proton_electron_ratio": {
     "mp_over_me": 1836,
