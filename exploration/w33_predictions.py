@@ -308,6 +308,7 @@ def print_final_table():
             ("n_s", "0.96667", "0.9649", "0.4sigma", "1-2/N, N=2(v-Phi_4)=60"),
             ("H_0 km/s/Mpc", "70", "67-73", "resolves!", "Phi_6*Phi_4"),
             ("r (tensor)", "0.00333", "<0.036", "passes!", "12/N^2, Starobinsky R^2"),
+            ("Omega_Lambda", "0.6833", "0.685", "0.25%", "(v+1)/N = 41/60"),
         ]),
         ("HIERARCHY", [
             ("M_GUT (GeV)", "~10^16", "~10^16", "match", "136^(g/2)"),
@@ -392,6 +393,21 @@ def derive_proton_electron_ratio():
     }
 
 
+def derive_dark_energy_fraction():
+    # N = 2(v - Phi_4) = 60 is the Starobinsky e-fold count.
+    # Omega_Lambda = (v + 1) / N = 41 / 60.
+    N_infl = 2 * (v - Phi4)
+    OmegaL = Fraction(v + 1, N_infl)
+    OmegaL_exp = 0.685
+    return {
+        "Omega_Lambda_fraction": str(OmegaL),
+        "Omega_Lambda_decimal": float(OmegaL),
+        "Omega_Lambda_experimental": OmegaL_exp,
+        "err_pct": round(abs(float(OmegaL) - OmegaL_exp) / OmegaL_exp * 100, 3),
+        "formula": "(v + 1) / (2 (v - Phi_4)) = 41/60",
+    }
+
+
 def derive_higgs_self_coupling():
     # m_H = v_EW * sqrt(Phi_6 / q^3)  =>  lambda_H = m_H^2 / (2 v_EW^2)
     #                                             = Phi_6 / (2 q^3) = 7/54
@@ -426,6 +442,7 @@ def main():
     results["ckm_cabibbo"] = derive_ckm_cabibbo()
     results["proton_electron_ratio"] = derive_proton_electron_ratio()
     results["higgs_self_coupling"] = derive_higgs_self_coupling()
+    results["dark_energy_fraction"] = derive_dark_energy_fraction()
 
     print_final_table()
 

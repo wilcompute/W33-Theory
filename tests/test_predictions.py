@@ -298,6 +298,21 @@ class TestCabibboAndProtonElectron:
         assert Fraction(result["lambda_H_fraction"]) == Fraction(7, 54)
         assert result["err_pct"] < 0.5
 
+    def test_omega_lambda_exact(self, preds):
+        # Omega_Lambda = (v + 1) / N with N = 2(v - Phi_4) = 60
+        N_infl = 2 * (preds.v - preds.Phi4)
+        assert N_infl == 60
+        assert Fraction(preds.v + 1, N_infl) == Fraction(41, 60)
+        # Planck 2018: Omega_Lambda = 0.685. Predict 41/60 = 0.6833. Err 0.25%.
+        err = abs(41 / 60 - 0.685) / 0.685
+        assert err < 5e-3
+
+    def test_omega_lambda_from_closure(self, preds, capsys):
+        result = preds.derive_dark_energy_fraction()
+        capsys.readouterr()
+        assert Fraction(result["Omega_Lambda_fraction"]) == Fraction(41, 60)
+        assert result["err_pct"] < 0.5
+
 
 # ─── VII. End-to-end smoke test ─────────────────────────────────────────────
 class TestIntegration:

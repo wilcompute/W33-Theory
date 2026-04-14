@@ -107,5 +107,12 @@
     "lambda_H_experimental": 0.129383,
     "err_pct": 0.19,
     "formula": "Phi_6 / (2 q^3) = 7/54"
+  },
+  "dark_energy_fraction": {
+    "Omega_Lambda_fraction": "41/60",
+    "Omega_Lambda_decimal": 0.6833333333333333,
+    "Omega_Lambda_experimental": 0.685,
+    "err_pct": 0.243,
+    "formula": "(v + 1) / (2 (v - Phi_4)) = 41/60"
   }
 }
