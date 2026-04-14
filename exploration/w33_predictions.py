@@ -319,6 +319,9 @@ def print_final_table():
         ("PROTON/ELECTRON RATIO", [
             ("m_p/m_e", "1836", "1836.15", "0.008%", "v^2 + E - mu"),
         ]),
+        ("HIGGS SELF-COUPLING", [
+            ("lambda_H", "0.1296", "0.1294", "0.18%", "Phi_6/(2q^3) = 7/54"),
+        ]),
     ]
 
     for section, entries in table:
@@ -389,6 +392,21 @@ def derive_proton_electron_ratio():
     }
 
 
+def derive_higgs_self_coupling():
+    # m_H = v_EW * sqrt(Phi_6 / q^3)  =>  lambda_H = m_H^2 / (2 v_EW^2)
+    #                                             = Phi_6 / (2 q^3) = 7/54
+    lam_H = Fraction(Phi6, 2 * q ** 3)
+    m_H_pdg = 125.25
+    lam_H_exp = m_H_pdg ** 2 / (2 * V_EW ** 2)
+    return {
+        "lambda_H_fraction": str(lam_H),
+        "lambda_H_decimal": float(lam_H),
+        "lambda_H_experimental": round(lam_H_exp, 6),
+        "err_pct": round(abs(float(lam_H) - lam_H_exp) / lam_H_exp * 100, 3),
+        "formula": "Phi_6 / (2 q^3) = 7/54",
+    }
+
+
 def main():
     print("=" * 72)
     print("  FALSIFIABLE PREDICTIONS FROM W(3,3)")
@@ -407,6 +425,7 @@ def main():
     results["lepton_closure"] = derive_lepton_sector_closure()
     results["ckm_cabibbo"] = derive_ckm_cabibbo()
     results["proton_electron_ratio"] = derive_proton_electron_ratio()
+    results["higgs_self_coupling"] = derive_higgs_self_coupling()
 
     print_final_table()
 

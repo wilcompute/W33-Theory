@@ -100,5 +100,12 @@
     "mp_over_me_pdg": 1836.15267344,
     "err_pct": 0.0083,
     "formula": "v^2 + E - mu = 1600 + 240 - 4 = 1836"
+  },
+  "higgs_self_coupling": {
+    "lambda_H_fraction": "7/54",
+    "lambda_H_decimal": 0.12962962962962962,
+    "lambda_H_experimental": 0.129383,
+    "err_pct": 0.19,
+    "formula": "Phi_6 / (2 q^3) = 7/54"
   }
 }

@@ -284,6 +284,20 @@ class TestCabibboAndProtonElectron:
         assert result["mp_over_me"] == 1836
         assert result["err_pct"] < 0.01
 
+    def test_higgs_self_coupling_exact(self, preds):
+        # lambda_H = Phi_6 / (2 q^3) = 7/54
+        assert Fraction(preds.Phi6, 2 * preds.q ** 3) == Fraction(7, 54)
+        # Derived from m_H = v_EW sqrt(Phi_6/q^3), experimental (125.25/246.22)^2/2.
+        lam_H_exp = (125.25 ** 2) / (2 * 246.22 ** 2)
+        err = abs(7 / 54 - lam_H_exp) / lam_H_exp
+        assert err < 3e-3
+
+    def test_higgs_self_coupling_from_closure(self, preds, capsys):
+        result = preds.derive_higgs_self_coupling()
+        capsys.readouterr()
+        assert Fraction(result["lambda_H_fraction"]) == Fraction(7, 54)
+        assert result["err_pct"] < 0.5
+
 
 # ─── VII. End-to-end smoke test ─────────────────────────────────────────────
 class TestIntegration:
