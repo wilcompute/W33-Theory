@@ -313,6 +313,55 @@ class TestCabibboAndProtonElectron:
         assert Fraction(result["Omega_Lambda_fraction"]) == Fraction(41, 60)
         assert result["err_pct"] < 0.5
 
+    def test_cosmology_density_budget_closes(self, preds, capsys):
+        # Omega_DM = mu / ((q+lam)q) = 4/15
+        # Omega_b  = 1  / ((q+lam)mu) = 1/20
+        # Omega_Lambda = (v+1)/N    = 41/60
+        # Sum must be exactly 1.
+        Omega_DM = Fraction(preds.mu, (preds.q + preds.lam) * preds.q)
+        Omega_b  = Fraction(1, (preds.q + preds.lam) * preds.mu)
+        Omega_L  = Fraction(preds.v + 1, 2 * (preds.v - preds.Phi4))
+        assert Omega_DM == Fraction(4, 15)
+        assert Omega_b == Fraction(1, 20)
+        assert Omega_DM + Omega_b + Omega_L == Fraction(1, 1)
+
+    def test_omega_dm_matches_planck(self, preds):
+        # Planck 2018: Omega_DM = 0.264. Predict 4/15 = 0.2667. Err 1.0%.
+        Omega_DM = Fraction(preds.mu, (preds.q + preds.lam) * preds.q)
+        err = abs(float(Omega_DM) - 0.264) / 0.264
+        assert err < 2e-2
+
+    def test_omega_dm_over_omega_b_exact(self, preds):
+        # Clean identity: Omega_DM / Omega_b = mu^2 / q = 16/3 = 5.333.
+        # PDG: 0.264/0.049 = 5.39. Err 1.0%.
+        ratio = Fraction(preds.mu, (preds.q + preds.lam) * preds.q) / Fraction(
+            1, (preds.q + preds.lam) * preds.mu
+        )
+        assert ratio == Fraction(16, 3)
+        err = abs(float(ratio) - 0.264 / 0.049) / (0.264 / 0.049)
+        assert err < 2e-2
+
+    def test_cosmology_budget_from_closure(self, preds, capsys):
+        result = preds.derive_cosmology_density_budget()
+        capsys.readouterr()
+        assert Fraction(result["Omega_DM_fraction"]) == Fraction(4, 15)
+        assert Fraction(result["Omega_b_fraction"]) == Fraction(1, 20)
+        assert Fraction(result["Omega_DM_over_Omega_b_fraction"]) == Fraction(16, 3)
+        assert Fraction(result["sanity_sum_Omega_m_plus_Omega_L"]) == Fraction(1, 1)
+
+    def test_T_CMB_exact(self, preds):
+        # T_CMB = lam + q/mu = 2 + 3/4 = 11/4 = 2.75 K. PDG 2.7255 K. Err 0.9%.
+        T = Fraction(preds.lam * preds.mu + preds.q, preds.mu)
+        assert T == Fraction(11, 4)
+        err = abs(float(T) - 2.7255) / 2.7255
+        assert err < 1e-2
+
+    def test_T_CMB_from_closure(self, preds, capsys):
+        result = preds.derive_cmb_temperature()
+        capsys.readouterr()
+        assert Fraction(result["T_CMB_fraction"]) == Fraction(11, 4)
+        assert result["err_pct"] < 1.0
+
 
 # ─── VII. End-to-end smoke test ─────────────────────────────────────────────
 class TestIntegration:

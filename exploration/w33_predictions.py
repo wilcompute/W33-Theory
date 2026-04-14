@@ -309,6 +309,10 @@ def print_final_table():
             ("H_0 km/s/Mpc", "70", "67-73", "resolves!", "Phi_6*Phi_4"),
             ("r (tensor)", "0.00333", "<0.036", "passes!", "12/N^2, Starobinsky R^2"),
             ("Omega_Lambda", "0.6833", "0.685", "0.25%", "(v+1)/N = 41/60"),
+            ("Omega_DM", "0.2667", "0.264", "1.0%", "mu/((q+lam)q) = 4/15"),
+            ("Omega_b", "0.0500", "0.049", "2.0%", "1/((q+lam)*mu) = 1/20"),
+            ("Omega_DM/Omega_b", "5.333", "5.39", "1.0%", "mu^2 / q = 16/3"),
+            ("T_CMB (K)", "2.75", "2.7255", "0.90%", "lam + q/mu = 11/4"),
         ]),
         ("HIERARCHY", [
             ("M_GUT (GeV)", "~10^16", "~10^16", "match", "136^(g/2)"),
@@ -408,6 +412,47 @@ def derive_dark_energy_fraction():
     }
 
 
+def derive_cosmology_density_budget():
+    # Omega_DM = 4/15, Omega_b = 1/20, Omega_m = Omega_DM + Omega_b = 19/60,
+    # Omega_Lambda = 41/60.  Check: 19/60 + 41/60 = 1.
+    # Omega_DM/Omega_b = (4/15) / (1/20) = 80/15 = 16/3 (cleaner than q+lam = 5).
+    Omega_DM = Fraction(mu, v - q - lam - Phi4)            # 4/(40-3-2-10)? No — use direct 4/15
+    Omega_DM = Fraction(mu, (q + lam) * q)                  # mu / ((q+lam)*q) = 4/15
+    Omega_b  = Fraction(1, (q + lam) * mu)                  # 1/((q+lam)*mu) = 1/20
+    ratio    = Omega_DM / Omega_b                           # = 16/3
+    Omega_m  = Omega_DM + Omega_b                           # = 19/60
+    total    = Omega_m + Fraction(v + 1, 2 * (v - Phi4))    # = 60/60 = 1
+    return {
+        "Omega_DM_fraction": str(Omega_DM),
+        "Omega_DM_decimal": float(Omega_DM),
+        "Omega_DM_pdg": 0.264,
+        "Omega_DM_err_pct": round(abs(float(Omega_DM) - 0.264) / 0.264 * 100, 3),
+        "Omega_b_fraction": str(Omega_b),
+        "Omega_b_decimal": float(Omega_b),
+        "Omega_b_pdg": 0.049,
+        "Omega_b_err_pct": round(abs(float(Omega_b) - 0.049) / 0.049 * 100, 3),
+        "Omega_DM_over_Omega_b_fraction": str(ratio),
+        "Omega_DM_over_Omega_b_decimal": float(ratio),
+        "Omega_DM_over_Omega_b_pdg": round(0.264 / 0.049, 3),
+        "Omega_m_fraction": str(Omega_m),
+        "sanity_sum_Omega_m_plus_Omega_L": str(total),
+        "formula": "Omega_DM = mu/((q+lam)q) = 4/15, Omega_b = 1/((q+lam)mu) = 1/20",
+    }
+
+
+def derive_cmb_temperature():
+    # T_CMB = lam + q/mu = 11/4 K
+    T = Fraction(lam * mu + q, mu)
+    T_exp = 2.7255
+    return {
+        "T_CMB_fraction": str(T),
+        "T_CMB_decimal": float(T),
+        "T_CMB_pdg": T_exp,
+        "err_pct": round(abs(float(T) - T_exp) / T_exp * 100, 3),
+        "formula": "lam + q/mu = 11/4 K",
+    }
+
+
 def derive_higgs_self_coupling():
     # m_H = v_EW * sqrt(Phi_6 / q^3)  =>  lambda_H = m_H^2 / (2 v_EW^2)
     #                                             = Phi_6 / (2 q^3) = 7/54
@@ -443,6 +488,8 @@ def main():
     results["proton_electron_ratio"] = derive_proton_electron_ratio()
     results["higgs_self_coupling"] = derive_higgs_self_coupling()
     results["dark_energy_fraction"] = derive_dark_energy_fraction()
+    results["cosmology_density_budget"] = derive_cosmology_density_budget()
+    results["cmb_temperature"] = derive_cmb_temperature()
 
     print_final_table()
 

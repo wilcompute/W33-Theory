@@ -114,5 +114,28 @@
     "Omega_Lambda_experimental": 0.685,
     "err_pct": 0.243,
     "formula": "(v + 1) / (2 (v - Phi_4)) = 41/60"
+  },
+  "cosmology_density_budget": {
+    "Omega_DM_fraction": "4/15",
+    "Omega_DM_decimal": 0.26666666666666666,
+    "Omega_DM_pdg": 0.264,
+    "Omega_DM_err_pct": 1.01,
+    "Omega_b_fraction": "1/20",
+    "Omega_b_decimal": 0.05,
+    "Omega_b_pdg": 0.049,
+    "Omega_b_err_pct": 2.041,
+    "Omega_DM_over_Omega_b_fraction": "16/3",
+    "Omega_DM_over_Omega_b_decimal": 5.333333333333333,
+    "Omega_DM_over_Omega_b_pdg": 5.388,
+    "Omega_m_fraction": "19/60",
+    "sanity_sum_Omega_m_plus_Omega_L": "1",
+    "formula": "Omega_DM = mu/((q+lam)q) = 4/15, Omega_b = 1/((q+lam)mu) = 1/20"
+  },
+  "cmb_temperature": {
+    "T_CMB_fraction": "11/4",
+    "T_CMB_decimal": 2.75,
+    "T_CMB_pdg": 2.7255,
+    "err_pct": 0.899,
+    "formula": "lam + q/mu = 11/4 K"
   }
 }
