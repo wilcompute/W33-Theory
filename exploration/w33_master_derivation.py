@@ -146,8 +146,16 @@ def derive_all_observables() -> dict:
         # --- Gauge ---
         "alpha_em_inv_0":    Fraction((k - 1) ** 2 + mu ** 2, 1),        # 137
         "sin2_theta_W":      Fraction(q, Phi3),                          # 3/13
+        "cos2_theta_W":      Fraction(Phi4, Phi3),                       # 10/13
+        "tan2_theta_W":      Fraction(q, Phi4),                          # 3/10
+        "M_W2_over_M_Z2":    Fraction(Phi4, Phi3),                       # 10/13 (rho=1)
         "alpha_s_M_Z":       Fraction(mu * (q + lam), Phi3 ** 2),        # 20/169
         "lambda_H":          Fraction(Phi6, 2 * q ** 3),                 # 7/54
+        # --- Standard-Model structural integers ---
+        "N_colors":          Fraction(q, 1),                             # 3
+        "N_generations":     Fraction(q, 1),                             # 3
+        "N_SM_gauge_bosons": Fraction(k, 1),                             # 12 = 8+3+1
+        "N_Higgs_scalar_dof": Fraction(mu, 1),                           # 4
         # --- CKM ---
         "sin_theta_C":       Fraction(q ** 2, v),                        # 9/40
         "V_cb":              Fraction(1, (q + lam) ** 2),                # 1/25
@@ -184,6 +192,9 @@ def derive_all_observables() -> dict:
     Omega_m = closures["Omega_DM"] + closures["Omega_b"]
     budget_sum = Omega_m + closures["Omega_Lambda"]
 
+    # Weinberg-angle identity: sin^2 + cos^2 = q/Phi_3 + Phi_4/Phi_3 = 1.
+    weinberg_sum = closures["sin2_theta_W"] + closures["cos2_theta_W"]
+
     return {
         "master_equation": "q! = 2 q",
         "q": q,
@@ -198,6 +209,10 @@ def derive_all_observables() -> dict:
             "Omega_m_fraction": str(Omega_m),
             "Omega_m_plus_Omega_Lambda": str(budget_sum),
             "is_unity": budget_sum == Fraction(1, 1),
+        },
+        "weinberg_sanity": {
+            "sin2_plus_cos2": str(weinberg_sum),
+            "is_unity": weinberg_sum == Fraction(1, 1),
         },
     }
 
@@ -226,8 +241,9 @@ def main() -> None:
         print(f"    {name:<26s} = {frac_str:>10s}  = {dec:.6g}")
     print()
     sanity = chain["cosmology_sanity"]
-    print(f"  SANITY:  Omega_m + Omega_Lambda = {sanity['Omega_m_plus_Omega_Lambda']}")
-    print(f"           unity?  {sanity['is_unity']}")
+    print(f"  SANITY:  Omega_m + Omega_Lambda       = {sanity['Omega_m_plus_Omega_Lambda']}  (unity? {sanity['is_unity']})")
+    weinberg = chain["weinberg_sanity"]
+    print(f"           sin^2(theta_W) + cos^2(theta_W) = {weinberg['sin2_plus_cos2']}  (unity? {weinberg['is_unity']})")
     print()
 
     out_path = Path(__file__).resolve().parent.parent / "data" / "w33_master_derivation.json"

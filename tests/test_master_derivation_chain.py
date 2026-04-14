@@ -115,8 +115,16 @@ EXPECTED_CLOSURES = {
     # --- Gauge ---
     "alpha_em_inv_0":        "137",
     "sin2_theta_W":          "3/13",
+    "cos2_theta_W":          "10/13",
+    "tan2_theta_W":          "3/10",
+    "M_W2_over_M_Z2":        "10/13",
     "alpha_s_M_Z":           "20/169",
     "lambda_H":              "7/54",
+    # --- Structural integers ---
+    "N_colors":              "3",
+    "N_generations":         "3",
+    "N_SM_gauge_bosons":     "12",
+    "N_Higgs_scalar_dof":    "4",
     # --- CKM ---
     "sin_theta_C":           "9/40",
     "V_cb":                  "1/25",
@@ -164,6 +172,25 @@ def test_cosmology_density_budget_sums_to_unity(chain):
     sanity = chain["cosmology_sanity"]
     assert sanity["Omega_m_plus_Omega_Lambda"] == "1"
     assert sanity["is_unity"] is True
+
+
+def test_weinberg_identity_sin2_plus_cos2_equals_one(chain):
+    # sin^2(theta_W) + cos^2(theta_W) = q/Phi_3 + Phi_4/Phi_3
+    #                                  = (q + q^2 + 1)/Phi_3 = Phi_3/Phi_3 = 1.
+    wsanity = chain["weinberg_sanity"]
+    assert wsanity["sin2_plus_cos2"] == "1"
+    assert wsanity["is_unity"] is True
+
+
+def test_M_W_over_M_Z_is_cos_theta_W(chain):
+    fr = chain["closures_as_fractions"]
+    assert fr["M_W2_over_M_Z2"] == fr["cos2_theta_W"]
+
+
+def test_tan2_equals_sin2_over_cos2(chain):
+    fr = chain["closures_as_fractions"]
+    from fractions import Fraction as F
+    assert F(fr["tan2_theta_W"]) == F(fr["sin2_theta_W"]) / F(fr["cos2_theta_W"])
 
 
 def test_omega_m_fraction_is_19_over_60(chain):

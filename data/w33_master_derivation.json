@@ -26,8 +26,15 @@
   "closures_as_fractions": {
     "alpha_em_inv_0": "137",
     "sin2_theta_W": "3/13",
+    "cos2_theta_W": "10/13",
+    "tan2_theta_W": "3/10",
+    "M_W2_over_M_Z2": "10/13",
     "alpha_s_M_Z": "20/169",
     "lambda_H": "7/54",
+    "N_colors": "3",
+    "N_generations": "3",
+    "N_SM_gauge_bosons": "12",
+    "N_Higgs_scalar_dof": "4",
     "sin_theta_C": "9/40",
     "V_cb": "1/25",
     "sin2_theta12_PMNS": "4/13",
@@ -56,8 +63,15 @@
   "closures_as_decimals": {
     "alpha_em_inv_0": 137.0,
     "sin2_theta_W": 0.23076923076923078,
+    "cos2_theta_W": 0.7692307692307693,
+    "tan2_theta_W": 0.3,
+    "M_W2_over_M_Z2": 0.7692307692307693,
     "alpha_s_M_Z": 0.11834319526627218,
     "lambda_H": 0.12962962962962962,
+    "N_colors": 3.0,
+    "N_generations": 3.0,
+    "N_SM_gauge_bosons": 12.0,
+    "N_Higgs_scalar_dof": 4.0,
     "sin_theta_C": 0.225,
     "V_cb": 0.04,
     "sin2_theta12_PMNS": 0.3076923076923077,
@@ -86,6 +100,10 @@
   "cosmology_sanity": {
     "Omega_m_fraction": "19/60",
     "Omega_m_plus_Omega_Lambda": "1",
+    "is_unity": true
+  },
+  "weinberg_sanity": {
+    "sin2_plus_cos2": "1",
     "is_unity": true
   }
 }
