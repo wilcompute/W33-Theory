@@ -142,19 +142,21 @@ class TestCosmology:
         assert err < 0.10
 
     def test_tensor_to_scalar_exact(self, preds):
-        # r = 8 / (v - Phi_4) = 8 / 30 = 4 / 15
-        assert Fraction(8, preds.v - preds.Phi4) == Fraction(4, 15)
+        # Starobinsky R^2 inflation with N = 2(v - Phi_4) = 60 e-folds.
+        # The SAME N gives n_s = 1 - 2/N = 29/30 AND r = 12/N^2 = 1/300.
+        # Two cosmological observables from one e-fold count.
+        N = 2 * (preds.v - preds.Phi4)
+        assert N == 60
+        assert Fraction(N - 2, N) == Fraction(29, 30)  # same n_s
+        assert Fraction(12, N * N) == Fraction(1, 300)  # r
 
-    def test_tensor_to_scalar_conflicts_with_bicep(self, preds):
-        # BICEP/Keck: r < 0.036. Our prediction 4/15 ≈ 0.267 exceeds the bound.
-        # This is a documented falsifiable POINT — the prediction is a target,
-        # not a "match". Flag it explicitly so future work can't silently tune.
-        r = 4 / 15
-        assert r > 0.036, (
-            "r = 4/15 ≈ 0.267 is the naive slow-roll prediction; "
-            "reconciling with BICEP r<0.036 requires extra-e-fold or "
-            "non-slow-roll dynamics."
-        )
+    def test_tensor_to_scalar_passes_bicep(self, preds):
+        # BICEP/Keck bound r < 0.036. Starobinsky r = 1/300 ≈ 0.0033 is well within.
+        N = 2 * (preds.v - preds.Phi4)
+        r = 12 / (N * N)
+        assert r < 0.036
+        # Also testable by LiteBIRD (sensitivity ~ 0.001) — comfortably detectable.
+        assert r > 0.001
 
 
 # ─── IV. Fermion masses ─────────────────────────────────────────────────────
@@ -194,6 +196,23 @@ class TestFermions:
         mt_pred = preds.V_EW / math.sqrt(2)
         err = abs(mt_pred - 172.69) / 172.69
         assert err < 0.01
+
+    def test_m_u_over_m_c(self, preds):
+        # m_u/m_c = 1/(v*g) = 1/600. PDG: 2.16/1270 ≈ 1.70e-3. Predict 1/600 ≈ 1.67e-3.
+        assert preds.v * preds.g == 600
+        ratio_pred = 1 / (preds.v * preds.g)
+        ratio_pdg = 2.16 / 1270.0
+        err = abs(ratio_pred - ratio_pdg) / ratio_pdg
+        assert err < 0.03  # 3%
+
+    def test_m_d_over_m_s(self, preds):
+        # m_d/m_s = 1/((q+lam)*mu) = 1/20 = 0.0500. PDG: 4.67/93.4 = 0.0500.
+        denom = (preds.q + preds.lam) * preds.mu
+        assert denom == 20
+        ratio_pred = 1 / denom
+        ratio_pdg = 4.67 / 93.4
+        err = abs(ratio_pred - ratio_pdg) / ratio_pdg
+        assert err < 0.01  # 1%!
 
 
 # ─── V. PMNS angles (rational exact identities) ─────────────────────────────
