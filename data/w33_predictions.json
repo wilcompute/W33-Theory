@@ -11,7 +11,6 @@
     "dm_ratio": 33,
     "dm32_sq_predicted": 0.0024849,
     "dm32_sq_experimental": 0.002453,
-    "agreement_pct": 1.300448430493284,
     "m1_meV": 0.0,
     "m2_meV": 8.677557259966655,
     "m3_meV": 49.848771298799335,
@@ -22,7 +21,6 @@
     "n_s": 0.9666666666666667,
     "n_s_fraction": "29/30",
     "n_s_exp": 0.9649,
-    "n_s_sigma": 0.4206349206349272,
     "H_0": 70,
     "H_0_planck": 67.4,
     "H_0_shoes": 73.0,
@@ -31,6 +29,25 @@
     "r_tensor_fraction": "1/300",
     "N_e_folds": 60,
     "inflation_model": "Starobinsky R^2, N=2(v-Phi_4)=60"
+  },
+  "inflation_closure": {
+    "N_edges": 60,
+    "N_modes": 60,
+    "bridge_identity": "240 = 2*4*(40-10)",
+    "n_s": 0.9666666666666667,
+    "n_s_fraction": "29/30",
+    "r": 0.0033333333333333335,
+    "r_fraction": "1/300",
+    "running": -0.0005555555555555556,
+    "running_fraction": "-1/1800",
+    "n_T": -0.0004166666666666667,
+    "n_T_fraction": "-1/2400",
+    "f_NL": -0.013888888888888888,
+    "f_NL_fraction": "-1/72",
+    "closure_r_from_ns_fraction": "1/300",
+    "closure_running_from_ns_fraction": "-1/1800",
+    "closure_running_from_r_fraction": "-1/1800",
+    "closure_nT_from_r_fraction": "-1/2400"
   },
   "particles": {
     "M_GUT": 2.4709567265974497e+18,
@@ -46,8 +63,29 @@
     "m_b": 4.145329325327422,
     "m_s_MeV": 91.44108805869311,
     "m_d_MeV": 4.572054402934655,
-    "m_tau": 1.777,
-    "m_mu_MeV": 104.52941176470587,
-    "m_e_MeV": 0.5074243289548829
+    "m_tau": 1.7765697108546095,
+    "m_mu_MeV": 104.50410063850644,
+    "m_e_MeV": 0.5073014594102255,
+    "koide_K": 0.6677131749062019
+  },
+  "mass_closure": {
+    "m_c_over_m_t_fraction": "1/136",
+    "m_u_over_m_c_fraction": "1/600",
+    "m_b_over_m_t_fraction": "1/42",
+    "m_s_over_m_b_fraction": "3/136",
+    "m_d_over_m_s_fraction": "1/20",
+    "m_s_over_m_c_fraction": "1/14",
+    "m_u_over_m_d_fraction": "7/15",
+    "bridge_strange_over_charm_fraction": "3",
+    "bridge_light_ud_fraction": "1/30",
+    "closure_product_fraction": "1/30"
+  },
+  "lepton_closure": {
+    "m_mu_over_m_tau_fraction": "1/17",
+    "m_e_over_m_mu_fraction": "1/206",
+    "m_e_over_m_tau_fraction": "1/3502",
+    "mu_denominator": 17,
+    "e_denominator": 206,
+    "geometry_remainder": 69
   }
 }

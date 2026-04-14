@@ -214,6 +214,25 @@ class TestFermions:
         err = abs(ratio_pred - ratio_pdg) / ratio_pdg
         assert err < 0.01  # 1%!
 
+    def test_m_tau_from_m_top(self, preds):
+        # m_tau = m_t / (lam * Phi_6^2) = m_t / 98
+        # PDG: 1.77686 GeV. Predict: (246.22/sqrt(2))/98 ≈ 1.7766 GeV. Err 0.02%!
+        assert preds.lam * preds.Phi6 ** 2 == 98
+        m_t = preds.V_EW / math.sqrt(2)
+        m_tau = m_t / (preds.lam * preds.Phi6 ** 2)
+        err = abs(m_tau - 1.77686) / 1.77686
+        assert err < 0.01  # 1% (actually 0.02%)
+
+    def test_koide_relation(self, preds):
+        # Koide K = sum(m_l) / (sum sqrt(m_l))^2 = 2/3 (Koide's mysterious conjecture).
+        # Using our derived lepton masses:
+        m_t = preds.V_EW / math.sqrt(2)
+        m_tau = m_t / (preds.lam * preds.Phi6 ** 2)
+        m_mu = m_tau / (preds.k + preds.q + preds.lam)
+        m_e = m_mu / (preds.alpha_inv + preds.v + preds.nn + preds.lam)
+        K = (m_tau + m_mu + m_e) / (math.sqrt(m_tau) + math.sqrt(m_mu) + math.sqrt(m_e)) ** 2
+        assert abs(K - 2.0 / 3.0) / (2.0 / 3.0) < 0.01  # 1%; actually 0.16%
+
 
 # ─── V. PMNS angles (rational exact identities) ─────────────────────────────
 class TestPMNS:
