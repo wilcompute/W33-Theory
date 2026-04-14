@@ -313,6 +313,12 @@ def print_final_table():
             ("M_GUT (GeV)", "~10^16", "~10^16", "match", "136^(g/2)"),
             ("Lambda_CC", "10^-122", "10^-122", "exact", "10^(-(alpha-g))"),
         ]),
+        ("CKM & QUARK MIXING", [
+            ("sin(theta_C)", "0.2250", "0.2243", "0.3%", "q^2/v = 9/40"),
+        ]),
+        ("PROTON/ELECTRON RATIO", [
+            ("m_p/m_e", "1836", "1836.15", "0.008%", "v^2 + E - mu"),
+        ]),
     ]
 
     for section, entries in table:
@@ -362,6 +368,27 @@ def derive_lepton_sector_closure():
     }
 
 
+def derive_ckm_cabibbo():
+    sin_theta_C = Fraction(q ** 2, v)
+    return {
+        "sin_theta_C_fraction": str(sin_theta_C),
+        "sin_theta_C_decimal": float(sin_theta_C),
+        "pdg_V_us": 0.2243,
+        "err_pct": round(abs(float(sin_theta_C) - 0.2243) / 0.2243 * 100, 3),
+        "formula": "q^2 / v = 9/40",
+    }
+
+
+def derive_proton_electron_ratio():
+    mp_me = v ** 2 + E - mu
+    return {
+        "mp_over_me": mp_me,
+        "mp_over_me_pdg": 1836.15267344,
+        "err_pct": round(abs(mp_me - 1836.15267344) / 1836.15267344 * 100, 4),
+        "formula": "v^2 + E - mu = 1600 + 240 - 4 = 1836",
+    }
+
+
 def main():
     print("=" * 72)
     print("  FALSIFIABLE PREDICTIONS FROM W(3,3)")
@@ -378,6 +405,8 @@ def main():
     results["fermions"] = derive_fermion_masses()
     results["mass_closure"] = derive_mass_sector_closure()
     results["lepton_closure"] = derive_lepton_sector_closure()
+    results["ckm_cabibbo"] = derive_ckm_cabibbo()
+    results["proton_electron_ratio"] = derive_proton_electron_ratio()
 
     print_final_table()
 

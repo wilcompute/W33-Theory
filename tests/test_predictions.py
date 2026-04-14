@@ -256,7 +256,36 @@ class TestPMNS:
         assert abs(1 / 46 - 0.0220) / 0.0220 < 0.02
 
 
-# ─── VI. End-to-end smoke test ──────────────────────────────────────────────
+# ─── VI. CKM Cabibbo & proton/electron ─────────────────────────────────────
+class TestCabibboAndProtonElectron:
+    def test_sin_theta_C_exact(self, preds):
+        # sin(theta_C) = q^2 / v = 9/40
+        assert Fraction(preds.q ** 2, preds.v) == Fraction(9, 40)
+        # PDG |V_us| = 0.2243. We predict 9/40 = 0.225. Err < 0.4%.
+        err = abs(9 / 40 - 0.2243) / 0.2243
+        assert err < 5e-3
+
+    def test_sin_theta_C_from_closure(self, preds, capsys):
+        result = preds.derive_ckm_cabibbo()
+        capsys.readouterr()
+        assert Fraction(result["sin_theta_C_fraction"]) == Fraction(9, 40)
+        assert result["err_pct"] < 0.5
+
+    def test_proton_electron_ratio_exact(self, preds):
+        # m_p/m_e = v^2 + E - mu = 1600 + 240 - 4 = 1836
+        assert preds.v ** 2 + preds.E - preds.mu == 1836
+        # PDG: 1836.15267344. Err < 0.01%.
+        err = abs(1836 - 1836.15267344) / 1836.15267344
+        assert err < 1e-4
+
+    def test_proton_electron_from_closure(self, preds, capsys):
+        result = preds.derive_proton_electron_ratio()
+        capsys.readouterr()
+        assert result["mp_over_me"] == 1836
+        assert result["err_pct"] < 0.01
+
+
+# ─── VII. End-to-end smoke test ─────────────────────────────────────────────
 class TestIntegration:
     def test_main_runs_without_exception(self, preds, capsys):
         # The main() function prints the complete prediction table and

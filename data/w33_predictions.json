@@ -87,5 +87,18 @@
     "mu_denominator": 17,
     "e_denominator": 206,
     "geometry_remainder": 69
+  },
+  "ckm_cabibbo": {
+    "sin_theta_C_fraction": "9/40",
+    "sin_theta_C_decimal": 0.225,
+    "pdg_V_us": 0.2243,
+    "err_pct": 0.312,
+    "formula": "q^2 / v = 9/40"
+  },
+  "proton_electron_ratio": {
+    "mp_over_me": 1836,
+    "mp_over_me_pdg": 1836.15267344,
+    "err_pct": 0.0083,
+    "formula": "v^2 + E - mu = 1600 + 240 - 4 = 1836"
   }
 }
