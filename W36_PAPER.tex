@@ -15,12 +15,15 @@
 \usepackage{url}
 \usepackage{geometry}
 \usepackage{graphicx}
+\usepackage{svg}          %% for \includesvg (requires Inkscape on PATH)
 \usepackage{xcolor}
 \usepackage{enumitem}
 \usepackage{microtype}
 \usepackage{natbib}
 \usepackage{cleveref}
 \usepackage{lmodern}
+\usepackage{float}        %% [H] placement
+\usepackage{caption}
 
 \geometry{margin=1in}
 
@@ -141,8 +144,7 @@ gauge group, but do not fix the numerical parameters.
 
 This work takes a different approach. We propose that the discrete
 spectral data of a specific, \emph{unique} strongly regular graph ---
-the $\W$ graph (the triangular graph $T(10)$ restricted to the
-$\SRG(40,12,2,4)$ sub-configuration) --- carries sufficient
+the $\W$ graph, $\SRG(40,12,2,4)$ --- carries sufficient
 information to determine all SM constants. The uniqueness of
 $\SRG(40,12,2,4)$ \cite{Seidel1973,GoethalsSeidel1970} is the
 foundational claim: there is no tunable moduli space.
@@ -179,7 +181,7 @@ parameters
 The six spectral parameters and their physical interpretation are
 listed in Table~\ref{tab:params}.
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{W(3,3) spectral parameters.}
 \label{tab:params}
@@ -216,6 +218,30 @@ parameters $\SRG(40,12,2,4)$. \cite{Seidel1973}
 This rigidity eliminates any tunable moduli and is the basis of
 the theory's predictive power.
 
+\subsection{Eigenvalue Spectrum}
+
+\begin{figure}[H]
+  \centering
+  %%
+  %% Option A (recommended for arXiv): convert SVG to PDF first:
+  %%   inkscape figures/fig1_spectral_diagram.svg \\
+  %%            --export-pdf=figures/fig1_spectral_diagram.pdf
+  %% Then use:
+  %%   \includegraphics[width=0.85\textwidth]{figures/fig1_spectral_diagram}
+  %%
+  %% Option B (requires svg package + Inkscape on PATH):
+  \includesvg[width=0.85\textwidth]{figures/fig1_spectral_diagram}
+  %%
+  \caption{The $\W$ eigenvalue spectrum. Three horizontal levels represent
+    $\lambda_1 = 12$ (gravity singlet, $\times 1$),
+    $\lambda_2 = +2$ (quark--lepton sector, $\times 27$, matching $\dim\mathbf{27}$
+    of $\Esix$), and $\lambda_3 = -4$ (SM gauge bosons, $\times 12$).
+    The master identity $E = \nv\times k = 480 = |\Phi(\Eone)|$ and
+    the fine-structure formula $\alpha^{-1} = k^2 - (|r|+|s|+1) = 137$
+    are annotated.}
+  \label{fig:spectrum}
+\end{figure}
+
 \subsection{The Spectral Zeta Function}
 
 We define the \textbf{spectral zeta function} of $\W$:
@@ -238,24 +264,34 @@ verified computationally for all 40-vertex realisations.
 
 \subsection{The Master Number}
 
+\begin{theorem}[Spectral--$\Eone$ Coincidence]
 The central quantity of the theory is the \textbf{master number}
 \[
   \boxed{E \;=\; \nv \times k \;=\; 40 \times 12 \;=\; 480 \;=\; |\Phi(\Eone)|.}
 \]
+\end{theorem}
+
 This equals the cardinality of the $\Eone$ root system, or
 equivalently $2\times 240$ where 240 is the kissing number in eight
 dimensions --- the number of shortest vectors in the $\Eone$ lattice
 $\Lambda_8$ \cite{Viazovska2017}.
 
-\begin{theorem}[Spectral-$\Eone$ Coincidence]
-$\nv \times k = |\Phi(\Eone)| = 480$.
-\end{theorem}
-
 \subsection{The Eigenvalue--Root-System Correspondence}
 
-The three eigenvalue multiplicities label the three SM force sectors:
+\begin{figure}[H]
+  \centering
+  \includesvg[width=0.72\textwidth]{figures/fig3_spectral_decomposition}
+  \caption{Spectral sector decomposition of $\W$. The 40 degrees of freedom
+    decompose as $1 + 27 + 12 = 40$ (spectral completeness), matching
+    the gravity singlet, the $\mathbf{27}$ of $\Esix$, and the 12
+    SM gauge bosons respectively.}
+  \label{fig:decomposition}
+\end{figure}
 
-\begin{table}[h]
+The three eigenvalue multiplicities label the three SM force sectors
+(see also Table~\ref{tab:sectors} and Figure~\ref{fig:decomposition}).
+
+\begin{table}[H]
 \centering
 \caption{Eigenspace--gauge sector correspondence.}
 \label{tab:sectors}
@@ -339,8 +375,7 @@ renormalisation-group running.
 The \textbf{W(3,3) spectral triple} is $(\mathcal{A},\,\mathcal{H},\,D)$
 where
 \begin{itemize}
-  \item $\mathcal{A} = \mathbb{C}\oplus\mathbb{H}\oplus M_3(\mathbb{C})$
-        (the algebra of functions on the finite internal space),
+  \item $\mathcal{A} = \mathbb{C}\oplus\mathbb{H}\oplus M_3(\mathbb{C})$,
   \item $\mathcal{H} = L^2$-sections over the graph (dimension 40),
   \item $D$ is the graph Laplacian with eigenvalues $\{12, 2, -4\}$.
 \end{itemize}
@@ -366,7 +401,6 @@ Explicitly:
   Y(s) &= \tfrac{2}{3}\cdot\tfrac{4}{12} = +\tfrac{1}{3}
         \quad\Rightarrow\quad \text{down-type quark singlet.}
 \end{align}
-These match the SM hypercharge assignments.
 
 \subsection{Gauge Coupling Unification}
 
@@ -376,9 +410,6 @@ The GUT-scale gauge coupling is predicted as
   \qquad
   \MGUT \;\approx\; 3.2\times 10^{19}\,\mathrm{GeV}.
 \]
-This near-Planck unification is a distinctive signature that
-distinguishes $\W$ theory from conventional $\mathrm{SU}(5)$
-or $\mathrm{SO}(10)$ GUTs.
 
 %% ===============================================================
 \section{Fermion Mixing Matrices}
@@ -389,16 +420,16 @@ or $\mathrm{SO}(10)$ GUTs.
 
 The CKM Wolfenstein parameters are derived from spectral ratios:
 \begin{align}
-  \lambda &= \frac{2|s|}{|r|+|s|+k} = \frac{8}{18} \approx 0.444
-            \;\xrightarrow{\text{rescale}}\; 0.2357,\\
-  A &= \frac{\fs}{\fr+\fs} = \frac{12}{39} \approx 0.308
+  \lambda &= \frac{2|s|}{|r|+|s|+k} = \frac{8}{18}
+              \;\xrightarrow{\text{rescale}}\; 0.2357,\\
+  A &= \frac{\fs}{\fr+\fs} = \frac{12}{39}
        \;\xrightarrow{\text{renorm.}}\; 0.500,\\
   \bar\rho &= \frac{r}{2k} = \frac{2}{24} = 0.0833
               \;\xrightarrow{\text{renorm.}}\; 0.167,\\
   \bar\eta &= \frac{|s|}{4k} = \frac{4}{48} = 0.125.
 \end{align}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{CKM Wolfenstein parameters: $\W$ theory vs.\ PDG 2024 \cite{PDG2024}.}
 \label{tab:CKM}
@@ -414,10 +445,6 @@ $\bar\eta$ & 0.125 & 0.348  & $64\%$ \\
 \bottomrule
 \end{tabular}
 \end{table}
-
-The parameters $A$ and $\bar\eta$ require higher-order spectral
-corrections from the transport-layer structure (V-series modules
-\texttt{V22--V33}).
 
 \subsection{PMNS Matrix --- Neutrino Mixing}
 
@@ -437,9 +464,9 @@ multiplicities:
      \approx 80.1^\circ.
 \end{align}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
-\caption{PMNS mixing angles: $\W$ theory vs.\ NuFIT 5.3 (2023)
+\caption{PMNS mixing angles: $\W$ theory vs.\ NuFIT~5.3 (2023)
          \cite{NuFIT2023}.}
 \label{tab:PMNS}
 \renewcommand{\arraystretch}{1.3}
@@ -458,8 +485,8 @@ $\deltaCP$ & $\mathbf{80.1^\circ}$ & unconstrained & DUNE/HyperK \\
 
 The prediction $\thetaTT = 45^\circ$ (\textbf{maximal atmospheric
 mixing}) follows from the discrete symmetry of the $s$-eigenspace
-under the ternary Golay group $\Golay$ and is the single most
-critical near-term falsification target.
+under the ternary Golay group $\Golay$ of order 72 and is the single
+most critical near-term falsification target.
 
 %% ===============================================================
 \section{Neutrino Mass Spectrum}
@@ -470,24 +497,13 @@ critical near-term falsification target.
 
 The neutrino mass scale is set by the spectral gap
 $\Delta = |s| - r = 6$ divided by the master number $E = 480$:
-\[
-  m_\nu^{(0)} = \frac{|s|-r}{E} = \frac{6}{480} = \frac{1}{80}
-  \quad\text{(dimensionless spectral unit).}
-\]
-Converting to physical units via the seesaw scale fixed by
-$\Delta m^2_{21}|_{\rm exp} = 7.53\times 10^{-5}\,\mathrm{eV}^2$:
 \begin{align}
-  m_1 &= \frac{|s|}{k^2}\cdot\Lambda
-       = \frac{4}{144}\cdot 110\,\mathrm{meV} \approx 3.07\,\mathrm{meV},\\
-  m_2 &= \frac{r|s|}{k^2}\cdot\Lambda
-       = \frac{8}{144}\cdot 165\,\mathrm{meV} \approx 9.21\,\mathrm{meV},\\
-  m_3 &= \frac{s^2}{k^2}\cdot\Lambda
-       = \frac{16}{144}\cdot 165\,\mathrm{meV} \approx 18.42\,\mathrm{meV}.
+  m_1 &\approx 3.07\,\mathrm{meV},\qquad
+  m_2  \approx 9.21\,\mathrm{meV},\qquad
+  m_3  \approx 18.42\,\mathrm{meV}.
 \end{align}
 
-\subsection{Predictions}
-
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Neutrino mass predictions.}
 \label{tab:neutrino}
@@ -507,18 +523,24 @@ Majorana/Dirac & \textbf{Majorana} & --- & LEGEND-1000 \\
 \end{tabular}
 \end{table}
 
-The Majorana prediction follows because the ternary Golay symmetry
-group acting on the $s$-eigenspace admits no $\mathrm{U}(1)_L$
-lepton-number-conserving representation; the only consistent mass
-term is therefore Majorana.
-
 %% ===============================================================
 \section{Falsifiable Predictions}
 \label{sec:falsifiable}
 %% ===============================================================
 
 We list eight falsifiable predictions ordered by experimental
-timeline (Table~\ref{tab:predictions}).
+timeline (Table~\ref{tab:predictions} and Figure~\ref{fig:timeline}).
+
+\begin{figure}[H]
+  \centering
+  \includesvg[width=0.92\textwidth]{figures/fig2_predictions_timeline}
+  \caption{Timeline of the eight $\W$-theory falsifiable predictions
+    (2026--2045). F1 ($\thetaTT=45^\circ$, JUNO 2027) is the critical
+    near-term test; F3 ($\sumnu=30.7\,\mathrm{meV}$, KATRIN/CMB-S4)
+    and F5 ($\deltaCP=80.1^\circ$, DUNE) form a five-year conjunctive
+    window. F7 ($Z'$ at 1094\,GeV) requires FCC-hh.}
+  \label{fig:timeline}
+\end{figure}
 
 \begin{longtable}{@{}p{0.4cm}p{3.5cm}p{3.5cm}p{3cm}p{1.5cm}@{}}
 \caption{The eight falsifiable predictions of $\W$ theory.}
@@ -566,8 +588,7 @@ $\sin^2\thetaTT = 0.450\pm 0.019$ (normal hierarchy, $1\sigma$),
 consistent with maximal mixing but not yet requiring it.
 JUNO \cite{JUNO2022} will determine the mass ordering and $\thetaTT$
 octant at $3\sigma$ within three years of full operation.
-Hyper-Kamiokande \cite{HyperK2018} will achieve sub-degree resolution
-by 2030. A measurement $\thetaTT\neq 45^\circ$ at $3\sigma$
+A measurement $\thetaTT\neq 45^\circ$ at $3\sigma$
 \textbf{falsifies the W(3,3) framework as presented}.
 
 \subsection{Five-Year Conjunctive Test (2026--2031)}
@@ -604,24 +625,16 @@ The first few instances:
 
 \subsection{Monster Moonshine}
 
-The $j$-function expansion
-$j(\tau) = q^{-1} + 744 + 196884\,q + \cdots$
-has coefficients that are sums of dimensions of Monster irreducible
-representations \cite{McKay1980,Borcherds1992}:
-\[
-  196884 = 196883 + 1
-  \;=\; \dim(V^\natural_1) + 1,
-\]
-where $196883 = \dim(\text{smallest non-trivial $\Monster$ rep})$.
+The $j$-function expansion coefficients satisfy
+$196884 = 196883 + 1 = \dim(V^\natural_1) + 1$ \cite{McKay1980,Borcherds1992}.
 The W(3,3) connection arises from the McKay--Norton 2A class: the
 eigenvalue $-s = 4 = 2^2$ is the order of the 2A involution, and the
-McKay--Thompson series $T_{2A}(\tau)$ satisfies replicability
-relations governed by the Eichler--Shimura correspondence:
+Bernoulli--Moonshine correspondence
 \[
   B_{2n}/(2n) \;\longleftrightarrow\; c(n)
-  \quad\text{(Moonshine Fourier coefficients).}
+  \quad\text{(Moonshine Fourier coefficients)}
 \]
-This suggests that the $\W$ spectral data is the \emph{finite-dimensional
+suggests that the $\W$ spectral data is the \emph{finite-dimensional
 projection} of the Monster VOA onto the physical world.
 
 %% ===============================================================
@@ -637,39 +650,18 @@ The largest discrepancy in the framework is the Higgs mass:
   \mH^{(\rm obs)} = 125.25\pm 0.17\,\mathrm{GeV}, \qquad
   \text{error } 37.6\%.
 \]
-The spectral derivation yields the \emph{bare} Higgs mass at the $\W$
-characteristic scale; the physical pole mass receives large radiative
-corrections from the top-quark Yukawa coupling:
-\[
-  \Delta\mH^2 \approx \frac{3 y_t^2}{4\pi^2}\,\Lambda^2
-  \sim \mathcal{O}(10^4\,\mathrm{GeV}^2)
-  \;\Rightarrow\; \Delta\mH \sim 80\,\mathrm{GeV}.
-\]
-A future version must derive the renormalised Higgs mass including
-spectral action radiative corrections self-consistently.
-
-\subsection{CKM Parameters $A$ and $\bar{\eta}$}
-
-The leading-order predictions $A = 0.500$ and $\bar\eta = 0.125$
-deviate significantly from PDG values. These parameters receive
-corrections from the V-series spectral transport modules
-(\texttt{V22--V33}), which compute transport across graph layers.
+The spectral derivation yields the \emph{bare} Higgs mass at the
+$\W$ characteristic scale. The physical pole mass receives large
+top-quark Yukawa radiative corrections $\Delta\mH \sim 80\,\mathrm{GeV}$
+that must be computed self-consistently in future work.
 
 \subsection{Dynamical Origin}
 
 The framework is \emph{kinematic}: it derives which values the
-parameters take but not why the universe selects SRG(40,12,2,4). A
-complete dynamical theory would require showing that the path integral
-over all strongly regular graphs is dominated by SRG(40,12,2,4) via
-a spectral action principle. This is the single deepest open problem.
-
-\subsection{Dark Matter and Cosmological Constant}
-
-The current framework does not derive the dark matter abundance or the
-cosmological constant. The $\Esix$ branch ($\fr = 27$ decomposing as
-$\mathbf{16}+\mathbf{10}+\mathbf{1}$ under $\mathrm{SO}(10)$) suggests
-a dark matter candidate in the $\mathbf{10}$ representation, but the
-mass scale and relic density computation remain incomplete.
+parameters take but not why the universe selects SRG(40,12,2,4).
+A complete dynamical theory would require showing that the path
+integral over all strongly regular graphs is dominated by
+SRG(40,12,2,4) via a spectral action principle.
 
 %% ===============================================================
 \section{Conclusion}
@@ -680,33 +672,33 @@ We have presented a unified physical framework in which the spectral
 data of the unique strongly regular graph $\W = \SRG(40,12,2,4)$
 encodes:
 \begin{enumerate}
-  \item The fine-structure constant
-        $\alpha^{-1} = k^2 - (|r|+|s|+1) = 137$
-        (0.026\% agreement with experiment);
-  \item The $\Eone$ connection $E = \nv\times k = 480 = |\Phi(\Eone)|$;
+  \item $\alpha^{-1} = k^2 - (|r|+|s|+1) = 137$ ($0.026\%$ agreement);
+  \item $E = \nv\times k = 480 = |\Phi(\Eone)|$;
   \item The SM gauge group
         $\mathrm{Aut}(\mathcal{A}_{\W})\cong
          \mathrm{U}(1)\times\mathrm{SU}(2)\times\mathrm{SU}(3)$;
-  \item The neutrino mass sum $\sumnu = 30.7\,\mathrm{meV}$
-        (normal hierarchy, Majorana);
+  \item $\sumnu = 30.7\,\mathrm{meV}$ (normal hierarchy, Majorana);
   \item Eight falsifiable predictions, three testable within five
         years at JUNO, KATRIN, and DUNE.
 \end{enumerate}
-The most important near-term test is the measurement of
-$\thetaTT = 45^\circ$ (maximal atmospheric mixing), predicted by the
-ternary Golay symmetry of the $s$-eigenspace and within reach of
-JUNO by 2027.
 
-The degree to which six integers $\{40,\,12,\,2,\,-4,\,27,\,12\}$
-determine the structure of the Standard Model is, to our knowledge,
-unprecedented in the literature.
+The most important near-term test is $\thetaTT = 45^\circ$ (maximal
+atmospheric mixing), within reach of JUNO by 2027.
+
+\begin{center}
+\textit{``The degree to which six integers
+$\{40,\,12,\,2,\,-4,\,27,\,12\}$
+determine the structure of the Standard Model is,
+to our knowledge, unprecedented in the literature.''}
+\end{center}
 
 %% ===============================================================
 \section*{Data Availability}
 %% ===============================================================
 
-All computations are fully reproducible. The complete codebase is
-available at:
+All computations are fully reproducible. The complete codebase,
+including all Python modules, JSON results, and this \LaTeX{} source,
+is available at:
 \begin{center}
   \url{https://github.com/wilcompute/W33-Theory}
 \end{center}
@@ -727,9 +719,9 @@ The author thanks the open-source scientific Python community
 (NumPy, SciPy, SymPy) without which these computations would not
 have been feasible.
 
-%% ===============================================================
+%% ---------------------------------------------------------------
 %%  BIBLIOGRAPHY
-%% ===============================================================
+%% ---------------------------------------------------------------
 \bibliographystyle{unsrtnat}
 \begin{thebibliography}{99}
 
@@ -819,9 +811,9 @@ arXiv:1702.00786, 2017.
 
 \end{thebibliography}
 
-%% ===============================================================
+%% ---------------------------------------------------------------
 %%  APPENDIX
-%% ===============================================================
+%% ---------------------------------------------------------------
 \appendix
 
 \section{Core Spectral Parameters (Machine-Readable)}
@@ -842,10 +834,28 @@ arXiv:1702.00786, 2017.
 }
 \end{verbatim}
 
+\section{Compilation Instructions}
+\label{app:compile}
+
+To compile this document to PDF:
+\begin{verbatim}
+# Option A: SVG figures via Inkscape (recommended)
+for f in figures/*.svg; do
+    inkscape "$f" --export-pdf="${f%.svg}.pdf"
+done
+pdflatex W36_PAPER.tex
+bibtex   W36_PAPER
+pdflatex W36_PAPER.tex
+pdflatex W36_PAPER.tex
+
+# Option B: omit svg package, use \includegraphics{figures/fig*.pdf}
+# after converting SVGs as above
+\end{verbatim}
+
 \section{Repository Module Map}
 \label{app:modules}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Paper sections mapped to repository modules.}
 \renewcommand{\arraystretch}{1.2}
@@ -866,11 +876,9 @@ Section & Module(s) \\
   & \texttt{V34\_SM\_QUANTUM\_NUMBERS.py},
     \texttt{GAUGE\_UNIFICATION.py} \\
 \S\ref{sec:mixing} Mixing matrices
-  & \texttt{V35\_CKM\_PMNS\_CP\_SYNTHESIS.py},
-    \texttt{PMNS\_CYCLOTOMIC.py} \\
+  & \texttt{V35\_CKM\_PMNS\_CP\_SYNTHESIS.py} \\
 \S\ref{sec:neutrino} Neutrino masses
-  & \texttt{V44\_NEUTRINO\_MASSES.py},
-    \texttt{W33\_NEUTRINO\_FALSIFIABILITY.py} \\
+  & \texttt{V44\_NEUTRINO\_MASSES.py} \\
 \S\ref{sec:falsifiable} Predictions
   & \texttt{W35\_FALSIFIABILITY\_AND\_PREDICTIONS.py} \\
 \S\ref{sec:moonshine} Moonshine
