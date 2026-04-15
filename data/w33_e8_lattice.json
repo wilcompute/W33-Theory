@@ -1,0 +1,82 @@
+{
+  "lattice_definition": "E_8 = D_8 cup (D_8 + (1/2,...,1/2))",
+  "rank": 8,
+  "type": "even unimodular",
+  "minimum_norm_sq": 2,
+  "number_of_roots": 240,
+  "theta_E8_qseries": [
+    1,
+    240,
+    2160,
+    6720,
+    17520,
+    30240
+  ],
+  "matches_E_4": {
+    "order": 5,
+    "theta_E8": [
+      1,
+      240,
+      2160,
+      6720,
+      17520,
+      30240
+    ],
+    "E_4": [
+      1,
+      240,
+      2160,
+      6720,
+      17520,
+      30240
+    ],
+    "match": true
+  },
+  "norm_2_brute": {
+    "norm_sq_2_count_brute": 240,
+    "explicit_root_total": 240,
+    "D_8_roots": 112,
+    "coset_roots": 128,
+    "expected_total": 240,
+    "match": true
+  },
+  "norm_4_brute": {
+    "count": 2160,
+    "expected": 2160,
+    "match": true
+  },
+  "E_8_decomposition": {
+    "E_8": {
+      "adjoint_dim": 248,
+      "rank": 8
+    },
+    "E_7 x SU(2)": {
+      "248": "(133,1) + (1,3) + (56,2)"
+    },
+    "E_6 x SU(3)": {
+      "248": "(78,1) + (1,8) + (27,3) + (-27,-3)"
+    },
+    "SO(10) x U(1)": {
+      "78": "45 + 1 + 16 + -16"
+    },
+    "SU(5) x U(1)": {
+      "45": "24 + 1 + 10 + -10"
+    },
+    "SM": {
+      "24": "(8,1) + (1,3) + (3,2) + (-3,-2) + (1,1)"
+    },
+    "comment": "One E_6 27 = one SM generation (10 + -5 + 1) of fermions."
+  },
+  "W33_bridge": {
+    "E_8_roots": 240,
+    "W(3,3)_v_x_6": {
+      "v": 40,
+      "6 v": 240
+    },
+    "interpretation": "240 E_8 roots split as 6 copies of the W(3, 3) vertex set under the natural Z_6 cyclic action; matches the K27 stabiliser = C_6.",
+    "E_6_27_dim": 27,
+    "W(3,3)_complement_nn": 27,
+    "interpretation_2": "27 lines through a fixed point of GQ(3, 3) match the 27 of E_6, carrying one SM generation.",
+    "K27_stabiliser": "C_6  (project memory: P84)"
+  }
+}
