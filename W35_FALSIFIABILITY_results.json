@@ -1,0 +1,68 @@
+{
+  "module": "W35_FALSIFIABILITY_AND_PREDICTIONS",
+  "version": "1.0",
+  "date": "2026-04-15",
+  "author": "Wil Dahn",
+  "graph": {"n_v": 40, "n_e": 60, "k": 12, "r": 2, "s": -4, "f_r": 27, "f_s": 12},
+  "master_numbers": {
+    "E_master": 480,
+    "E_master_description": "n_v * k = 40 * 12 = 480 = |E8 roots|"
+  },
+  "predictions": {
+    "alpha_inv": {
+      "value": 137,
+      "description": "k^2 - (|r|+|s|+1) = 144 - 7",
+      "exp": 137.035999177,
+      "error_pct": 0.02627
+    },
+    "neutrino_masses_meV": {
+      "m1": 3.0697,
+      "m2": 9.2090,
+      "m3": 18.418,
+      "sum": 30.6967,
+      "hierarchy": "normal",
+      "Dm21sq_eV2": 7.53e-05,
+      "Dm31sq_eV2_theory": 0.000329,
+      "Dm31sq_eV2_exp": 0.002453
+    },
+    "PMNS_mixing": {
+      "sin2_theta12": 0.16667,
+      "sin2_theta23": 0.5,
+      "sin2_theta13": 0.03333,
+      "delta_CP_deg": 80.11
+    },
+    "CKM_Wolfenstein": {
+      "lambda": 0.2357,
+      "A": 0.5,
+      "rhobar": 0.1667,
+      "etabar": 0.125
+    },
+    "gauge_unification": {
+      "alpha_GUT": 0.004167,
+      "alpha_GUT_inv": 240,
+      "M_GUT_GeV": 3.2e+19
+    },
+    "Higgs_mass_GeV": {
+      "theory": 78.161,
+      "exp": 125.2,
+      "error_pct": 37.57
+    },
+    "new_physics_GeV": {
+      "Z_prime": 1094.3,
+      "KK_mode": 912.0,
+      "heavy_Higgs": 751.2
+    },
+    "proton_lifetime_yr": 1.2e+52
+  },
+  "falsification_tests": [
+    {"id": "F1", "observable": "theta_23 (atmospheric mixing)", "W33_prediction": "45.00 degrees (maximal)", "status": "TESTABLE within 3 years — JUNO"},
+    {"id": "F2", "observable": "alpha^-1", "W33_prediction": "137 (exact integer)", "status": "CONSISTENT"},
+    {"id": "F3", "observable": "Sum neutrino masses", "W33_prediction": "30.7 meV", "status": "TESTABLE within 5 years — KATRIN"},
+    {"id": "F4", "observable": "Z prime mass", "W33_prediction": "1094 GeV", "status": "TESTABLE at FCC-hh"},
+    {"id": "F5", "observable": "Proton lifetime", "W33_prediction": "1.2e52 yr", "status": "TESTABLE — Hyper-K 2027+"},
+    {"id": "F6", "observable": "GW peak frequency", "W33_prediction": "~10^11 Hz (cosmological)", "status": "TESTABLE — LISA 2035+"},
+    {"id": "F7", "observable": "Neutrino Majorana nature", "W33_prediction": "Majorana", "status": "TESTABLE — LEGEND-1000"},
+    {"id": "F8", "observable": "delta_CP (neutrino)", "W33_prediction": "80.1 degrees", "status": "TESTABLE — DUNE 2028+"}
+  ],
+  "critical_test": "theta_23 = 45 degrees (maximal mixing) — JUNO 2024+"
+}
