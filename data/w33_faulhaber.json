@@ -1,0 +1,412 @@
+{
+  "faulhaber_polynomials": {
+    "S_0(N)": {
+      "coefficients_lowest_to_highest": [
+        "0",
+        "1"
+      ],
+      "pretty": "N",
+      "leading": "1"
+    },
+    "S_1(N)": {
+      "coefficients_lowest_to_highest": [
+        "0",
+        "1/2",
+        "1/2"
+      ],
+      "pretty": "1/2 N^2 + 1/2 N",
+      "leading": "1/2"
+    },
+    "S_2(N)": {
+      "coefficients_lowest_to_highest": [
+        "0",
+        "1/6",
+        "1/2",
+        "1/3"
+      ],
+      "pretty": "1/3 N^3 + 1/2 N^2 + 1/6 N",
+      "leading": "1/3"
+    },
+    "S_3(N)": {
+      "coefficients_lowest_to_highest": [
+        "0",
+        "0",
+        "1/4",
+        "1/2",
+        "1/4"
+      ],
+      "pretty": "1/4 N^4 + 1/2 N^3 + 1/4 N^2",
+      "leading": "1/4"
+    },
+    "S_4(N)": {
+      "coefficients_lowest_to_highest": [
+        "0",
+        "-1/30",
+        "0",
+        "1/3",
+        "1/2",
+        "1/5"
+      ],
+      "pretty": "1/5 N^5 + 1/2 N^4 + 1/3 N^3 - 1/30 N",
+      "leading": "1/5"
+    },
+    "S_5(N)": {
+      "coefficients_lowest_to_highest": [
+        "0",
+        "0",
+        "-1/12",
+        "0",
+        "5/12",
+        "1/2",
+        "1/6"
+      ],
+      "pretty": "1/6 N^6 + 1/2 N^5 + 5/12 N^4 - 1/12 N^2",
+      "leading": "1/6"
+    },
+    "S_6(N)": {
+      "coefficients_lowest_to_highest": [
+        "0",
+        "1/42",
+        "0",
+        "-1/6",
+        "0",
+        "1/2",
+        "1/2",
+        "1/7"
+      ],
+      "pretty": "1/7 N^7 + 1/2 N^6 + 1/2 N^5 - 1/6 N^3 + 1/42 N",
+      "leading": "1/7"
+    },
+    "S_7(N)": {
+      "coefficients_lowest_to_highest": [
+        "0",
+        "0",
+        "1/12",
+        "0",
+        "-7/24",
+        "0",
+        "7/12",
+        "1/2",
+        "1/8"
+      ],
+      "pretty": "1/8 N^8 + 1/2 N^7 + 7/12 N^6 - 7/24 N^4 + 1/12 N^2",
+      "leading": "1/8"
+    },
+    "S_8(N)": {
+      "coefficients_lowest_to_highest": [
+        "0",
+        "-1/30",
+        "0",
+        "2/9",
+        "0",
+        "-7/15",
+        "0",
+        "2/3",
+        "1/2",
+        "1/9"
+      ],
+      "pretty": "1/9 N^9 + 1/2 N^8 + 2/3 N^7 - 7/15 N^5 + 2/9 N^3 - 1/30 N",
+      "leading": "1/9"
+    },
+    "S_9(N)": {
+      "coefficients_lowest_to_highest": [
+        "0",
+        "0",
+        "-3/20",
+        "0",
+        "1/2",
+        "0",
+        "-7/10",
+        "0",
+        "3/4",
+        "1/2",
+        "1/10"
+      ],
+      "pretty": "1/10 N^10 + 1/2 N^9 + 3/4 N^8 - 7/10 N^6 + 1/2 N^4 - 3/20 N^2",
+      "leading": "1/10"
+    },
+    "S_10(N)": {
+      "coefficients_lowest_to_highest": [
+        "0",
+        "5/66",
+        "0",
+        "-1/2",
+        "0",
+        "1",
+        "0",
+        "-1",
+        "0",
+        "5/6",
+        "1/2",
+        "1/11"
+      ],
+      "pretty": "1/11 N^11 + 1/2 N^10 + 5/6 N^9 - N^7 + N^5 - 1/2 N^3 + 5/66 N",
+      "leading": "1/11"
+    }
+  },
+  "odd_faulhaber_in_u=N(N+1)": {
+    "S_1(N) as poly in u=N(N+1)": [
+      "0",
+      "1/2"
+    ],
+    "S_3(N) as poly in u=N(N+1)": [
+      "0",
+      "0",
+      "1/4"
+    ],
+    "S_5(N) as poly in u=N(N+1)": [
+      "0",
+      "0",
+      "-1/12",
+      "1/6"
+    ],
+    "S_7(N) as poly in u=N(N+1)": [
+      "0",
+      "0",
+      "1/12",
+      "-1/6",
+      "1/8"
+    ],
+    "S_9(N) as poly in u=N(N+1)": [
+      "0",
+      "0",
+      "-3/20",
+      "3/10",
+      "-1/4",
+      "1/10"
+    ]
+  },
+  "sum_of_cubes_equals_square_of_sum": true,
+  "euler_maclaurin_leading_terms": {
+    "S_1": {
+      "p": 1,
+      "leading_coef": "1/2",
+      "subleading_coef": "1/2",
+      "sub_subleading": "0",
+      "expected_leading": "1/2",
+      "expected_subleading": "1/2",
+      "leading_ok": true,
+      "subleading_ok": true
+    },
+    "S_2": {
+      "p": 2,
+      "leading_coef": "1/3",
+      "subleading_coef": "1/2",
+      "sub_subleading": "1/6",
+      "expected_leading": "1/3",
+      "expected_subleading": "1/2",
+      "leading_ok": true,
+      "subleading_ok": true
+    },
+    "S_3": {
+      "p": 3,
+      "leading_coef": "1/4",
+      "subleading_coef": "1/2",
+      "sub_subleading": "1/4",
+      "expected_leading": "1/4",
+      "expected_subleading": "1/2",
+      "leading_ok": true,
+      "subleading_ok": true
+    },
+    "S_4": {
+      "p": 4,
+      "leading_coef": "1/5",
+      "subleading_coef": "1/2",
+      "sub_subleading": "1/3",
+      "expected_leading": "1/5",
+      "expected_subleading": "1/2",
+      "leading_ok": true,
+      "subleading_ok": true
+    },
+    "S_5": {
+      "p": 5,
+      "leading_coef": "1/6",
+      "subleading_coef": "1/2",
+      "sub_subleading": "5/12",
+      "expected_leading": "1/6",
+      "expected_subleading": "1/2",
+      "leading_ok": true,
+      "subleading_ok": true
+    },
+    "S_6": {
+      "p": 6,
+      "leading_coef": "1/7",
+      "subleading_coef": "1/2",
+      "sub_subleading": "1/2",
+      "expected_leading": "1/7",
+      "expected_subleading": "1/2",
+      "leading_ok": true,
+      "subleading_ok": true
+    },
+    "S_7": {
+      "p": 7,
+      "leading_coef": "1/8",
+      "subleading_coef": "1/2",
+      "sub_subleading": "7/12",
+      "expected_leading": "1/8",
+      "expected_subleading": "1/2",
+      "leading_ok": true,
+      "subleading_ok": true
+    }
+  },
+  "srg_faulhaber_closures": {
+    "S_0": {
+      "S_p(v=40)": 40,
+      "S_p(k=12)": 12,
+      "S_p(mu=4)": 4,
+      "S_p(nn=27)": 27
+    },
+    "S_1": {
+      "S_p(v=40)": 820,
+      "S_p(k=12)": 78,
+      "S_p(mu=4)": 10,
+      "S_p(nn=27)": 378
+    },
+    "S_2": {
+      "S_p(v=40)": 22140,
+      "S_p(k=12)": 650,
+      "S_p(mu=4)": 30,
+      "S_p(nn=27)": 6930
+    },
+    "S_3": {
+      "S_p(v=40)": 672400,
+      "S_p(k=12)": 6084,
+      "S_p(mu=4)": 100,
+      "S_p(nn=27)": 142884
+    },
+    "S_4": {
+      "S_p(v=40)": 21781332,
+      "S_p(k=12)": 60710,
+      "S_p(mu=4)": 354,
+      "S_p(nn=27)": 3142062
+    }
+  },
+  "direct_verification": [
+    {
+      "p": 0,
+      "N": 10,
+      "formula": 10,
+      "direct": 10,
+      "ok": true
+    },
+    {
+      "p": 0,
+      "N": 50,
+      "formula": 50,
+      "direct": 50,
+      "ok": true
+    },
+    {
+      "p": 0,
+      "N": 100,
+      "formula": 100,
+      "direct": 100,
+      "ok": true
+    },
+    {
+      "p": 1,
+      "N": 10,
+      "formula": 55,
+      "direct": 55,
+      "ok": true
+    },
+    {
+      "p": 1,
+      "N": 50,
+      "formula": 1275,
+      "direct": 1275,
+      "ok": true
+    },
+    {
+      "p": 1,
+      "N": 100,
+      "formula": 5050,
+      "direct": 5050,
+      "ok": true
+    },
+    {
+      "p": 2,
+      "N": 10,
+      "formula": 385,
+      "direct": 385,
+      "ok": true
+    },
+    {
+      "p": 2,
+      "N": 50,
+      "formula": 42925,
+      "direct": 42925,
+      "ok": true
+    },
+    {
+      "p": 2,
+      "N": 100,
+      "formula": 338350,
+      "direct": 338350,
+      "ok": true
+    },
+    {
+      "p": 3,
+      "N": 10,
+      "formula": 3025,
+      "direct": 3025,
+      "ok": true
+    },
+    {
+      "p": 3,
+      "N": 50,
+      "formula": 1625625,
+      "direct": 1625625,
+      "ok": true
+    },
+    {
+      "p": 3,
+      "N": 100,
+      "formula": 25502500,
+      "direct": 25502500,
+      "ok": true
+    },
+    {
+      "p": 4,
+      "N": 10,
+      "formula": 25333,
+      "direct": 25333,
+      "ok": true
+    },
+    {
+      "p": 4,
+      "N": 50,
+      "formula": 65666665,
+      "direct": 65666665,
+      "ok": true
+    },
+    {
+      "p": 4,
+      "N": 100,
+      "formula": 2050333330,
+      "direct": 2050333330,
+      "ok": true
+    },
+    {
+      "p": 5,
+      "N": 10,
+      "formula": 220825,
+      "direct": 220825,
+      "ok": true
+    },
+    {
+      "p": 5,
+      "N": 50,
+      "formula": 2763020625,
+      "direct": 2763020625,
+      "ok": true
+    },
+    {
+      "p": 5,
+      "N": 100,
+      "formula": 171708332500,
+      "direct": 171708332500,
+      "ok": true
+    }
+  ]
+}
