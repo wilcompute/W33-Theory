@@ -83,7 +83,7 @@ def _load_v29_stiffness_observation() -> dict[str, Any]:
     if not V29_STIFFNESS_SUMMARY_PATH.exists():
         return {
             "status": "missing",
-            "source_file": str(V29_STIFFNESS_SUMMARY_PATH.relative_to(ROOT)),
+            "source_file": V29_STIFFNESS_SUMMARY_PATH.relative_to(ROOT).as_posix(),
         }
 
     payload = json.loads(V29_STIFFNESS_SUMMARY_PATH.read_text(encoding="utf-8"))
@@ -97,7 +97,7 @@ def _load_v29_stiffness_observation() -> dict[str, Any]:
 
     return {
         "status": "ok",
-        "source_file": str(V29_STIFFNESS_SUMMARY_PATH.relative_to(ROOT)),
+        "source_file": V29_STIFFNESS_SUMMARY_PATH.relative_to(ROOT).as_posix(),
         "diag_mean": diag_mean,
         "diag_cv": diag_std / abs(diag_mean),
         "offdiag_rms_ratio": offdiag_rms / abs(diag_mean),
