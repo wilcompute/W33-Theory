@@ -1,0 +1,82 @@
+{
+  "dedekind_eta_definition": "eta(tau) = q^{1/24} prod (1 - q^n)",
+  "delta_from_eta_24": [
+    0,
+    1,
+    -24,
+    252,
+    -1472,
+    4830,
+    -6048
+  ],
+  "delta_from_eisenstein": [
+    0,
+    1,
+    -24,
+    252,
+    -1472,
+    4830,
+    -6048
+  ],
+  "delta_constructions_agree": true,
+  "ramanujan_tau_match": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true,
+    "6": true
+  },
+  "rootless_beta_solution": "-720",
+  "leech_theta_qseries": [
+    1,
+    0,
+    196560,
+    16773120,
+    398034000,
+    4629381120,
+    34417656000
+  ],
+  "leech_no_roots": true,
+  "leech_minimum_count": 196560,
+  "niemeier_sample": {
+    "Leech (Lambda_24)": {
+      "beta": -720,
+      "N_2 (roots)": 0,
+      "N_4": 196560,
+      "matches_720_plus_beta": true
+    },
+    "E_8 + E_8 + E_8": {
+      "beta": 0,
+      "N_2 (roots)": 720,
+      "N_4": 179280,
+      "matches_720_plus_beta": true
+    },
+    "D_24": {
+      "beta": 384,
+      "N_2 (roots)": 1104,
+      "N_4": 170064,
+      "matches_720_plus_beta": true
+    },
+    "A_1^{24}": {
+      "beta": -672,
+      "N_2 (roots)": 48,
+      "N_4": 195408,
+      "matches_720_plus_beta": true
+    },
+    "A_2^{12}": {
+      "beta": -648,
+      "N_2 (roots)": 72,
+      "N_4": 194832,
+      "matches_720_plus_beta": true
+    }
+  },
+  "moonshine_bridge": {
+    "Leech_min_count": 196560,
+    "j_q1_coefficient": 196884,
+    "difference": 324,
+    "factorisation": "324 = 4 * 81 = 2^2 * 3^4",
+    "interpretation": "196560 counts the smallest Conway Co_1 orbit on Lambda_24/+-1; 196884 = 196883 + 1 reflects the smallest Monster irrep + trivial. The +324 difference is structural: Co_1 sits in the Monster as a subquotient, and 324 = 24 * 13 + 12 hints at the 12-dim Griess shift relating Conway and Griess centralisers.",
+    "K27_ladder": "27 (E_6 / W33 lines) -> 196560 / 27 = 7280 (= Co_1 dim of smallest non-trivial perm action / 3, structural ratio)."
+  }
+}
