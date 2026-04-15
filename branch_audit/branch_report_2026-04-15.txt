@@ -1,0 +1,121 @@
+Git branch + commit audit
+Generated: 2026-04-15
+
+Commands executed:
+ - git fetch --all --prune
+ - git remote -v
+ - git status --porcelain --branch
+ - git branch --show-current
+ - git branch -avv --sort=-committerdate
+ - git remote show origin
+ - git log --pretty=format:'%h %ad %an %d %s' --date=short -n 200 --all
+
+--- Fetch & branch output ---
+Fetching origin
+From github.com:wilcompute/W33-Theory
+   62a8089e..76a17020  master     -> origin/master
+ * [new branch]        paper/arxiv-v1-submission -> origin/paper/arxiv-v1-submission
+Fetching origin-https
+origin  git@github.com:wilcompute/W33-Theory.git (fetch)
+origin  git@github.com:wilcompute/W33-Theory.git (push)
+origin-https    https://github.com/wilcompute/W33-Theory.git (fetch)
+origin-https    https://github.com/wilcompute/W33-Theory.git (push)
+## review/remote-master...origin-https/master
+ M pillars/TOE_270_transport_analysis_v01_20260228_bundle.zip
+?? A5_orbit_decompositions.json
+?? K27_stabilizer_C6.json
+?? K54_edges_L_reconstruct.csv
+?? PILLAR_91.md
+?? V42_precision_masses_report.json
+?? V44_neutrino_report.json
+?? check_verify.py
+?? check_verify2.py
+?? exploration/w33_moonshine_decomposed.py
+?? pytest_run_output.txt
+?? reports/anchor_forbid_0-20-23.json
+?? scripts/find_fragile_imports.py
+?? scripts/fragile_imports_report.txt
+?? tail.txt
+?? tests/reports/
+?? tests/test_moonshine_decomposed.py
+?? tomo_t4_cycle_structure.json
+?? w33_lines_40_orbits_under_A5.csv
+review/remote-master
+* review/remote-master                                                               76a17020 [origin-https/master] Dedekind eta, Niemeier family, Leech: rank-24 closure of the modular ring
+  remotes/origin-https/HEAD                                                          -> origin-https/master
+  remotes/origin-https/master                                                        76a17020 Dedekind eta, Niemeier family, Leech: rank-24 closure of the modular ring
+  remotes/origin/HEAD                                                                -> origin/master
+  remotes/origin_master                                                              76a17020 Dedekind eta, Niemeier family, Leech: rank-24 closure of the modular ring
+  remotes/origin-https/paper/arxiv-v1-submission                                     58f6d59c Add W33_BERNOULLI_MOONSHINE_LINK.py + results JSON
+  remotes/origin/paper/arxiv-v1-submission                                           58f6d59c Add W33_BERNOULLI_MOONSHINE_LINK.py + results JSON
+  review/remote-main                                                                 299b0577 [origin-https/main: ahead 1] V42: add RK4 fallback integrator for alpha_s and increase steps
+  remotes/origin-https/main                                                          be1344fc Add V42: Full precision fermion masses from Levi tower + W33 two-loop RG running
+  remotes/origin_main                                                                be1344fc Add V42: Full precision fermion masses from Levi tower + W33 two-loop RG running
+  master                                                                             7633f705 [origin/master: behind 58] Close family phase operator bridge
+  codex/reconcile-unified-w33                                                        f6381be5 Unify W33 geometry and local artifact paths
+  backup/pre-reconcile-20260408                                                      6aa2049f Merge remote-tracking branch 'origin/master'
+  wip/dirty-worktree-snapshot-20260403                                               604af3bf WIP snapshot: preserve dirty worktree before master cleanup (2026-04-03)
++ codex-master-cleanup                                                               62e47e05 (/tmp/toe-master-cleanup) [origin/master: behind 436] Phase CCCXCVII: certify current K3 tail failure
++ codex-20260402-ccclxx-holographic-closure                                          c19009a9 (/mnt/c/Repos/Theory_of_Everything_clean) [origin/codex-20260402-ccclxx-holographic-closure] Phase CCCLXXV: localize the transport-twisted realization channel
+  remotes/origin-https/codex-20260402-ccclxx-holographic-closure                     c19009a9 Phase CCCLXXV: localize the transport-twisted realization channel
+  remotes/origin/codex-20260402-ccclxx-holographic-closure                           c19009a9 Phase CCCLXXV: localize the transport-twisted realization channel
++ codex-20260402-ccclxx-holographic-code                                             9042b2bb (/mnt/c/Repos/Theory_of_Everything_next) Phases CCCLXIV-CCCLXIX: topological anyons, SUSY breaking, inflation, categorical QG, QEC codes, swampland constraints (154 tests, 30432 total)
++ codex-20260401-cccxxxv-product-kernel                                              50e75085 (/tmp/toe-local-continue) [origin/codex-20260401-cccxxxv-product-kernel: ahead 1] Phase CCCXXXVII: product full packet closure
+  remotes/origin-https/codex-20260401-cccxxxv-product-kernel                         5e347fae Phase CCCXXXVI: massive complement family singlet gauge lift
+  remotes/origin/codex-20260401-cccxxxv-product-kernel                               5e347fae Phase CCCXXXVI: massive complement family singlet gauge lift
+  remotes/origin-https/ccxxviii-bivector-curvature-continuum                         a11cda8d test push
+  remotes/origin/ccxxviii-bivector-curvature-continuum                               a11cda8d test push
+  pr/k3-transport-obstruction                                                        f1dfc010 [origin/pr/k3-transport-obstruction] THE FINAL THEOREM: W(3,3) Uniqueness, modular form dictionary, σ₃ miracle
+  remotes/origin-https/pr/k3-transport-obstruction                                   f1dfc010 THE FINAL THEOREM: W(3,3) Uniqueness, modular form dictionary, σ₃ miracle
+  remotes/origin/pr/k3-transport-obstruction                                         f1dfc010 THE FINAL THEOREM: W(3,3) Uniqueness, modular form dictionary, σ₃ miracle
+  codex-20260329-role-lift                                                           475118e1 Promote carrier-preserving transport-twisted K3 lift
+  worktree-agent-a0cff194                                                            627843d1 Add dual Bose-Mesner bridge and site guide
+  worktree-agent-aa91e160                                                            627843d1 Add dual Bose-Mesner bridge and site guide
++ worktree-agent-ab922d7a                                                            627843d1 (C:/Repos/Theory of Everything/.claude/worktrees/agent-ab922d7a) [origin/master: behind 854] Add dual Bose-Mesner bridge and site guide
++ worktree-agent-af83c581                                                            627843d1 (C:/Repos/Theory of Everything/.claude/worktrees/agent-af83c581) [origin/master: behind 854] Add dual Bose-Mesner bridge and site guide
+  remotes/origin-https/claude/fix-repo-cleanup-HkWPI                                 f9a4192e feat: Part CLXXVIII - FINAL BREAKTHROUGH! Gauge couplings χ²=0.0085, unification 4.1% spread
+  remotes/origin/claude/fix-repo-cleanup-HkWPI                                       f9a4192e feat: Part CLXXVIII - FINAL BREAKTHROUGH! Gauge couplings χ²=0.0085, unification 4.1% spread
+  claude_fix_repo                                                                    4fe891d7 feat: add Part CLIX and Leech lattice verification script
+  docs/toe-use-numba                                                                 ce3b0154 docs: document TOE_USE_NUMBA (optional numba kernel for cubic_sym)
+  ci/webhook-inspect                                                                 92bc93e9 ci: add webhook-delivery-inspect workflow
+  ci/webhook-inspect-2                                                               92bc93e9 [origin/ci/webhook-inspect-2: gone] ci: add webhook-delivery-inspect workflow
+  remotes/origin-https/ci/webhook-inspect                                            a5b92682 chore: add manual Zenodo-deposit helpers + release-draft note
+  remotes/origin/ci/webhook-inspect                                                  a5b92682 chore: add manual Zenodo-deposit helpers + release-draft note
+  feat/triangle-irrep-gap-cli                                                        301c914d [origin/feat/triangle-irrep-gap-cli] docs: use COMPLETE_SUMMARY.md as canonical README landing
+  remotes/origin-https/feat/triangle-irrep-gap-cli                                   301c914d docs: use COMPLETE_SUMMARY.md as canonical README landing
+(Truncated)
+
+--- Recent commits log ---
+76a17020 2026-04-15 Wil  (HEAD -> review/remote-master, origin/master, origin/HEAD, origin-https/master, origin-https/HEAD) Dedekind eta, Niemeier family, Leech: rank-24 closure of the modular ring
+41c72d5e 2026-04-15 Wil  E8 root lattice theta = E_4: lattice geometry meets modular forms
+bbf9cb04 2026-04-15 Wil  Eisenstein/Delta/j-invariant: continue tower from Bernoulli to Moonshine
+eabb7af7 2026-04-15 Wil  Faulhaber's formula: finite power sums from Bernoulli numbers
+1be33bc9 2026-04-15 wilcompute  Wire figures into W36_PAPER.tex + add Makefile + compile.sh for arXiv
+784cbd3b 2026-04-15 wilcompute  Wire figures into W36_PAPER.tex with \includegraphics + SVG/PDF figure notes
+9cfd52a5 2026-04-15 wilcompute  Add figures (SVG) + arXiv submission metadata for W36 paper
+61ddb036 2026-04-15 wilcompute  Add W36_PAPER.tex — full LaTeX source for arXiv submission
+dd74be82 2026-04-15 wilcompute  Add W36_PAPER_DRAFT.md — ArXiv-ready preprint draft
+5f3edaf1 2026-04-15 wilcompute  Add W35_FALSIFIABILITY_AND_PREDICTIONS.py + results JSON + updated README index
+f471e26e 2026-04-15 wilcompute  Add W34_GRAND_UNIFIED_ZETA_MOONSHINE.py: Ihara zeta, L-functions, eta/theta, Ramanujan tau, Borcherds lift, NCG spectral action, and full results JSON
+15505beb 2026-04-15 wilcompute  Add W33_ZETA_TOWER.py + update W33_BERNOULLI_MOONSHINE_LINK_results.json with full computed data
+(Truncated)
+
+End of report
+\n--- Full pytest run (captured output) ---
+Captured: 2026-04-15
+
+I started a full `pytest` run to exercise the entire test-suite and capture results.
+The run produced immediate output and was captured to:
+
+  branch_audit/pytest_full_output_2026-04-15.txt
+
+Observations from the captured output:
+- The run reached ~23% before the capture cut shown here.
+- Several tests show failures (multiple `F` markers visible around ~20% progress).
+- The captured log above contains the stdout produced up to the capture point. Full failure traces and the pytest summary (x failed, y passed) may appear later in the run; next step is to re-run `pytest -x` to stop at the first failure and collect its trace for triage.
+
+Next actions planned (performed next):
+- Run `pytest -x` to stop at first failure and capture the failing test name and traceback.
+- Save that output and append a concise failure summary to this report.
+- Commit and push the updated audit files.
+
