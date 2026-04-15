@@ -62,7 +62,7 @@ def _load_v29_validation() -> dict[str, Any]:
     if not V29_VALIDATE_SUMMARY_PATH.exists():
         return {
             "status": "missing",
-            "source_file": str(V29_VALIDATE_SUMMARY_PATH.relative_to(ROOT)),
+            "source_file": V29_VALIDATE_SUMMARY_PATH.relative_to(ROOT).as_posix(),
         }
 
     payload = json.loads(V29_VALIDATE_SUMMARY_PATH.read_text(encoding="utf-8"))
@@ -72,7 +72,7 @@ def _load_v29_validation() -> dict[str, Any]:
 
     return {
         "status": "ok",
-        "source_file": str(V29_VALIDATE_SUMMARY_PATH.relative_to(ROOT)),
+        "source_file": V29_VALIDATE_SUMMARY_PATH.relative_to(ROOT).as_posix(),
         "diag_rel_std": float(q_data["diag_std"]) / abs(diag_mean),
         "offdiag_rel_rms": float(q_data["offdiag_rms"]) / abs(diag_mean),
         "offdiag_rel_max": float(q_data["offdiag_max_abs"]) / abs(diag_mean),
