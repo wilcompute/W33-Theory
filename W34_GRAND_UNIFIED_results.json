@@ -1,0 +1,63 @@
+{
+  "W33_parameters": {
+    "n": 40, "k": 12, "lambda": 2, "mu": 4,
+    "r": 2, "s": -4, "f": 24, "g": 15,
+    "E": 240, "Phi3": 13, "Phi4": 10, "Phi6": 7,
+    "Phi12": 73, "alpha_inv": 137
+  },
+  "zeta_W_special_values": {
+    "s=0": 39, "s=-1": 480, "s=-2": 6240,
+    "s=1": 3.3375, "s=2": 0.637695
+  },
+  "zeta_W_zeros": [
+    {"n": 0, "sigma": -1.0, "t": -6.8025, "|zeta_W|": 2.8e-15},
+    {"n": 1, "sigma": -1.0, "t": -20.4075, "|zeta_W|": 3.1e-15},
+    {"n": 2, "sigma": -1.0, "t": -34.0125, "|zeta_W|": 2.9e-15}
+  ],
+  "master_balance": {
+    "f*(k-r)": 240, "g*(k-s)": 240,
+    "both_equal": true, "value": 240
+  },
+  "master_identity": {
+    "f_times_k_minus_r": 240, "g_times_k_minus_s": 240,
+    "both_equal_E_half": true, "zeta_W_minus1": 480, "E": 240
+  },
+  "ramanujan_graph": {
+    "k": 12, "max_nontrivial_ev": 4,
+    "bound": 6.6332, "satisfied": true
+  },
+  "ihara_splitting_field": {
+    "field": "Q(sqrt(-10))", "discriminant": -40,
+    "note": "-40 = -n_v"
+  },
+  "tau_2": -24,
+  "tau_2_equals_minus_f_mult": true,
+  "bernoulli_B12": "-691/2730",
+  "denom_B12": 2730,
+  "moonshine_key": {
+    "c0_formula": "(f+Phi6)*f", "c0_value": 744,
+    "c0_matches": true, "tau2_equals_minus_f": true
+  },
+  "alpha_chain": {
+    "alpha_inv": 137, "k2_minus_Phi6": 137,
+    "heegner_7_is_Phi6": true,
+    "j_tau7": -3375, "j_tau7_formula": "-g^3", "j_tau7_value": -3375,
+    "j_tau11": -32768, "j_tau11_formula": "-2^g", "j_tau11_value": -32768
+  },
+  "string_theory": {
+    "E8_roots": 480, "dim_E8": 248,
+    "Leech_rank": 24, "VOA_central_charge": 24
+  },
+  "E8_roots": 480,
+  "dim_E8": 248,
+  "Monster_mod_E": 0,
+  "Monster_mod_alpha": 0,
+  "spectral_action_a_minus2": 120,
+  "spectral_action_a0": 40,
+  "extended_zeta": {
+    "-6": 96645375, "-5": 6174960, "-4": 396336,
+    "-3": 25560, "-2": 6240, "-1": 480, "0": 39,
+    "1": 3, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0
+  },
+  "verification_date": "2026-04-15"
+}
