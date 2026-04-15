@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Georgia, serif">
+  <rect width="900" height="560" fill="#fafaf8"/>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="bold" fill="#222">W(3,3) Theory — 8 Falsifiable Predictions Timeline</text>
+  <text x="450" y="56" text-anchor="middle" font-size="13" fill="#555">Experimental tests from 2026 to 2045+</text>
+
+  <!-- Axis line -->
+  <line x1="80" y1="490" x2="860" y2="490" stroke="#ccc" stroke-width="2"/>
+
+  <!-- Year ticks -->
+  <g font-size="11" fill="#888" text-anchor="middle">
+    <line x1="100" y1="488" x2="100" y2="496" stroke="#bbb"/><text x="100" y="508">2026</text>
+    <line x1="180" y1="488" x2="180" y2="496" stroke="#bbb"/><text x="180" y="508">2027</text>
+    <line x1="340" y1="488" x2="340" y2="496" stroke="#bbb"/><text x="340" y="508">2029</text>
+    <line x1="420" y1="488" x2="420" y2="496" stroke="#bbb"/><text x="420" y="508">2030</text>
+    <line x1="580" y1="488" x2="580" y2="496" stroke="#bbb"/><text x="580" y="508">2032</text>
+    <line x1="660" y1="488" x2="660" y2="496" stroke="#bbb"/><text x="660" y="508">2033</text>
+    <line x1="790" y1="488" x2="790" y2="496" stroke="#bbb"/><text x="790" y="508">2037</text>
+    <line x1="860" y1="488" x2="860" y2="496" stroke="#bbb"/><text x="860" y="508">2045</text>
+  </g>
+
+  <!-- NOW line -->
+  <line x1="100" y1="80" x2="100" y2="490" stroke="#bbb" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="104" y="92" font-size="11" fill="#999">NOW</text>
+
+  <!-- Predictions: x, y, color, id, label, experiment -->
+  <!-- F2: α⁻¹=137, 2026, teal -->
+  <line x1="100" y1="490" x2="100" y2="115" stroke="#01696f" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="100" cy="115" r="8" fill="#01696f"/>
+  <text x="112" y="111" font-size="12" font-weight="bold" fill="#01696f">F2: α⁻¹ = 137</text>
+  <text x="112" y="125" font-size="10" fill="#777">g−2 / spectroscopy</text>
+
+  <!-- F1: θ₂₃=45°, 2027, red -->
+  <line x1="180" y1="490" x2="180" y2="155" stroke="#a13544" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="180" cy="155" r="8" fill="#a13544"/>
+  <text x="192" y="151" font-size="12" font-weight="bold" fill="#a13544">F1: θ₂₃ = 45°</text>
+  <text x="192" y="165" font-size="10" fill="#777">JUNO / Hyper-K</text>
+
+  <!-- F3: Σmν=30.7 meV, 2029, green -->
+  <line x1="340" y1="490" x2="340" y2="205" stroke="#437a22" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="340" cy="205" r="8" fill="#437a22"/>
+  <text x="352" y="201" font-size="12" font-weight="bold" fill="#437a22">F3: Σmν = 30.7 meV</text>
+  <text x="352" y="215" font-size="10" fill="#777">KATRIN / CMB-S4</text>
+
+  <!-- F5: δ_CP=80.1°, 2030, green -->
+  <line x1="420" y1="490" x2="420" y2="255" stroke="#437a22" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="420" cy="255" r="8" fill="#437a22"/>
+  <text x="432" y="251" font-size="12" font-weight="bold" fill="#437a22">F5: δ_CP = 80.1°</text>
+  <text x="432" y="265" font-size="10" fill="#777">DUNE / Hyper-K</text>
+
+  <!-- F4: Majorana ν, 2032, green -->
+  <line x1="580" y1="490" x2="580" y2="305" stroke="#437a22" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="580" cy="305" r="8" fill="#437a22"/>
+  <text x="592" y="301" font-size="12" font-weight="bold" fill="#437a22">F4: Majorana ν</text>
+  <text x="592" y="315" font-size="10" fill="#777">LEGEND-1000</text>
+
+  <!-- F6: τ(p), 2033, orange -->
+  <line x1="660" y1="490" x2="660" y2="355" stroke="#da7101" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="660" cy="355" r="8" fill="#da7101"/>
+  <text x="672" y="351" font-size="12" font-weight="bold" fill="#da7101">F6: τ(p) ~ 10⁵² yr</text>
+  <text x="672" y="365" font-size="10" fill="#777">Hyper-K</text>
+
+  <!-- F8: GW background, 2037, orange -->
+  <line x1="790" y1="490" x2="790" y2="395" stroke="#da7101" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="790" cy="395" r="8" fill="#da7101"/>
+  <text x="802" y="391" font-size="11" font-weight="bold" fill="#da7101">F8: GW background</text>
+  <text x="802" y="405" font-size="10" fill="#777">LISA</text>
+
+  <!-- F7: Z' @ 1094 GeV, 2045, purple -->
+  <line x1="860" y1="490" x2="860" y2="435" stroke="#7a39bb" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="860" cy="435" r="8" fill="#7a39bb"/>
+  <text x="868" y="431" font-size="11" font-weight="bold" fill="#7a39bb">F7: Z′ @1094 GeV</text>
+  <text x="868" y="445" font-size="10" fill="#777">FCC-hh</text>
+
+  <!-- Legend -->
+  <g font-size="11">
+    <circle cx="85" cy="536" r="6" fill="#01696f"/><text x="95" y="540" fill="#555">Consistent now</text>
+    <circle cx="200" cy="536" r="6" fill="#a13544"/><text x="210" y="540" fill="#555">Critical (falsifies if wrong)</text>
+    <circle cx="380" cy="536" r="6" fill="#437a22"/><text x="390" y="540" fill="#555">High priority</text>
+    <circle cx="480" cy="536" r="6" fill="#da7101"/><text x="490" y="540" fill="#555">Medium priority</text>
+    <circle cx="590" cy="536" r="6" fill="#7a39bb"/><text x="600" y="540" fill="#555">Future collider</text>
+  </g>
+
+  <text x="450" y="555" text-anchor="middle" font-size="10" fill="#aaa">W(3,3) Theory — Dahn (2026)</text>
+</svg>
