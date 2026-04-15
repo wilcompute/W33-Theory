@@ -314,8 +314,8 @@ def main() -> None:
         "pair_summaries": pair_summaries,
         "failures": failures[:25],
         "sources": {
-            "meta": str(IN_META.relative_to(ROOT)),
-            "fusion": str(IN_FUSION.relative_to(ROOT)),
+            "meta": IN_META.relative_to(ROOT).as_posix(),
+            "fusion": IN_FUSION.relative_to(ROOT).as_posix(),
         },
     }
 
@@ -344,11 +344,11 @@ def main() -> None:
     md.append(f"- total: `{pattern_counts.get((2,2,2,2,2,2), 0)}`")
     md.append(f"- subset counts for out0: `{dict(all_diff_subset_counts)}`")
     md.append("")
-    md.append(f"- JSON: `{OUT_JSON.relative_to(ROOT)}`")
+    md.append(f"- JSON: `{OUT_JSON.relative_to(ROOT).as_posix()}`")
     _write_md(OUT_MD, md)
 
     print(
-        f"status={status}  failures={len(failures)}  wrote={OUT_JSON.relative_to(ROOT)}"
+        f"status={status}  failures={len(failures)}  wrote={OUT_JSON.relative_to(ROOT).as_posix()}"
     )
     if status != "ok":
         raise SystemExit(1)

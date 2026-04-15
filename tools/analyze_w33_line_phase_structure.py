@@ -303,8 +303,10 @@ def main() -> None:
         },
         "failures": failures[:20],
         "sources": {
-            "meta": str(IN_META.relative_to(ROOT)),
-            "fusion": str(IN_FUSION.relative_to(ROOT)) if IN_FUSION.exists() else None,
+            "meta": IN_META.relative_to(ROOT).as_posix(),
+            "fusion": (
+                IN_FUSION.relative_to(ROOT).as_posix() if IN_FUSION.exists() else None
+            ),
         },
     }
 
@@ -331,11 +333,11 @@ def main() -> None:
         "- Each K4 line has a unique vertex incident to odd phases `(1,3,5)`; this matches `w33_line_fusion_law.json` when present."
     )
     md.append("")
-    md.append(f"- JSON: `{OUT_JSON.relative_to(ROOT)}`")
+    md.append(f"- JSON: `{OUT_JSON.relative_to(ROOT).as_posix()}`")
     _write_md(OUT_MD, md)
 
     print(
-        f"status={status}  failures={len(failures)}  wrote={OUT_JSON.relative_to(ROOT)}"
+        f"status={status}  failures={len(failures)}  wrote={OUT_JSON.relative_to(ROOT).as_posix()}"
     )
     if status != "ok":
         raise SystemExit(1)

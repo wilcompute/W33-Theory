@@ -101,7 +101,7 @@ def _audit_one(path: Path) -> ScriptAudit:
     adhoc_hits = [name for name, pat in ADHOC_FACTOR_PATTERNS if pat.search(text)]
 
     return ScriptAudit(
-        path=str(path.relative_to(ROOT)),
+        path=path.relative_to(ROOT).as_posix(),
         reads_repo_data=reads_repo_data,
         reads_repo_artifacts=reads_repo_artifacts,
         mentions_experimental=mentions_experimental,

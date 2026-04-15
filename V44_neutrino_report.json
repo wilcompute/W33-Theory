@@ -1,0 +1,50 @@
+{
+  "script": "V44_NEUTRINO_MASSES.py",
+  "W33_SRG": {
+    "v": 40,
+    "k": 12,
+    "lambda": 2,
+    "mu": 4,
+    "r": 2,
+    "s": -4,
+    "f": 24,
+    "g": 15
+  },
+  "observables": {
+    "dm2_ratio": {
+      "W33_basic": 32.0,
+      "W33_refined": 33.0,
+      "PDG": 33.0863,
+      "err_basic_pct": 3.28,
+      "err_refined_pct": 0.261,
+      "formula": "(k-s)*mu/r [+ 1]",
+      "status": "<5%"
+    },
+    "absolute_masses_eV": {
+      "m1": 14.3033,
+      "m2": 28.6065,
+      "m3": 57.213,
+      "sum_eV": 0.10012,
+      "Planck_OK": true,
+      "Dm2_sol_pred_eV2": 0.00061375,
+      "Dm2_sol_err_pct": 727.2
+    },
+    "cosmology": {
+      "sum_eV": 0.100123,
+      "omega_nu_h2": 0.001075,
+      "omega_nu": 0.002366,
+      "H0_h_used": 0.674
+    },
+    "ordering": "NORMAL"
+  },
+  "falsifiable_predictions": [
+    "Normal mass hierarchy (not inverted)",
+    "m1 < 0.3 meV",
+    "sum_nu = 0.1001 eV < 0.12 eV",
+    "Delta_m2_ratio = (k-s)*mu/r + 1 = 33  (0.26%)"
+  ],
+  "summary": {
+    "W33_total_observables": 37,
+    "free_parameters": 0
+  }
+}

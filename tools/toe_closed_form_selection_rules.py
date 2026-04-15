@@ -483,9 +483,9 @@ def main() -> None:
         "w33_lines_and_fusion": lines,
         "firewall_clock": fw,
         "sources": {
-            "toe_sm_decomposition_27": str(IN_SM.relative_to(ROOT)),
-            "e8_root_metadata_table": str(IN_E8.relative_to(ROOT)),
-            "w33_line_fusion_law": str(IN_LINES.relative_to(ROOT)),
+            "toe_sm_decomposition_27": IN_SM.relative_to(ROOT).as_posix(),
+            "e8_root_metadata_table": IN_E8.relative_to(ROOT).as_posix(),
+            "w33_line_fusion_law": IN_LINES.relative_to(ROOT).as_posix(),
             "toe_dynamics": "tools/toe_dynamics.py",
         },
     }
@@ -526,10 +526,10 @@ def main() -> None:
         f"- k6 histogram on bad meet edges: `{fw['k6_histograms']['bad_meet_edges']}`"
     )
     md.append("")
-    md.append(f"- JSON: `{OUT_JSON.relative_to(ROOT)}`")
+    md.append(f"- JSON: `{OUT_JSON.relative_to(ROOT).as_posix()}`")
     _write_md(OUT_MD, md)
 
-    print(f"wrote {OUT_JSON.relative_to(ROOT)}")
+    print(f"wrote {OUT_JSON.relative_to(ROOT).as_posix()}")
 
 
 if __name__ == "__main__":

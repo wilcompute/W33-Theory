@@ -45,7 +45,7 @@ def _run(cmd: List[str], *, log_path: Path, env: Dict[str, str]) -> Dict[str, ob
         "cmd": cmd,
         "returncode": proc.returncode,
         "seconds": dt,
-        "log": str(log_path.relative_to(ROOT)),
+        "log": log_path.relative_to(ROOT).as_posix(),
     }
 
 
@@ -116,7 +116,7 @@ def main() -> None:
         md_lines.append(
             f"- {name}: `{run_meta['checks'][name]['status']}` (log: `{run_meta['runs'][name]['log']}`)"
         )
-    md_lines.append(f"\n- JSON: `{out_json}`")
+    md_lines.append(f"\n- JSON: `{out_json.relative_to(ROOT).as_posix()}`")
     out_md.write_text("\n".join(md_lines).rstrip() + "\n", encoding="utf-8")
 
     print(out_md.read_text(encoding="utf-8"))

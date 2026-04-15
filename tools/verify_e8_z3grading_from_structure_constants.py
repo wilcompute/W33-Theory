@@ -220,8 +220,8 @@ def main() -> None:
     out = {
         "status": "ok" if ok else "fail",
         "paths": {
-            "structure_constants": str(IN_SC.relative_to(ROOT)),
-            "root_metadata": str(IN_META.relative_to(ROOT)),
+            "structure_constants": IN_SC.relative_to(ROOT).as_posix(),
+            "root_metadata": IN_META.relative_to(ROOT).as_posix(),
         },
         "counts": {
             "n": n,
@@ -246,10 +246,12 @@ def main() -> None:
     md.append(f"- bracket terms checked: `{terms_checked}`")
     md.append(f"- grading violations: `{term_violations}`")
     md.append(f"- direct-sum violations: `{out['counts']['direct_sum_violations']}`\n")
-    md.append(f"- JSON: `{OUT_JSON}`")
+    md.append(f"- JSON: `{OUT_JSON.relative_to(ROOT).as_posix()}`")
     OUT_MD.write_text("\n".join(md).rstrip() + "\n", encoding="utf-8")
 
-    print(f"status={out['status']} terms_checked={terms_checked} wrote={OUT_JSON}")
+    print(
+        f"status={out['status']} terms_checked={terms_checked} wrote={OUT_JSON.relative_to(ROOT).as_posix()}"
+    )
     if not ok:
         raise SystemExit(1)
 

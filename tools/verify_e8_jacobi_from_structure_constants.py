@@ -235,7 +235,7 @@ def main() -> None:
     out = {
         "status": "ok" if ok else "fail",
         "mode": args.mode,
-        "in_json": str(args.in_json.relative_to(ROOT)),
+        "in_json": args.in_json.relative_to(ROOT).as_posix(),
         "basis": {"n": n, "cartan_dim": cartan_dim, "root_dim": len(roots)},
         "checked_triples": int(checked),
         "expected_triples": int(expected),
@@ -257,11 +257,11 @@ def main() -> None:
         md.append("## First counterexample\n")
         md.append(f"- triple: `{first_fail['triple']}`")
         md.append(f"- jacobi: `{first_fail['jacobi']}`\n")
-    md.append(f"- JSON: `{OUT_JSON}`")
+    md.append(f"- JSON: `{OUT_JSON.relative_to(ROOT).as_posix()}`")
     OUT_MD.write_text("\n".join(md).rstrip() + "\n", encoding="utf-8")
 
     print(
-        f"status={out['status']} checked={checked} elapsed={dt:.2f}s wrote={OUT_JSON}"
+        f"status={out['status']} checked={checked} elapsed={dt:.2f}s wrote={OUT_JSON.relative_to(ROOT).as_posix()}"
     )
     if not ok:
         raise SystemExit(1)
