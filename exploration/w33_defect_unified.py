@@ -83,13 +83,17 @@ class DefectPacket:
 
     @staticmethod
     def pi_from_Xi(Xi, r):
-        """pi = Xi * r  (product coupling)."""
-        return Xi * r
+        """pi_from_Xi as used by the unified chain solver:
+        pi = r * (Xi - 1) / (1 + r * (Xi - 1))
+        """
+        return r * (Xi - 1.0) / (1.0 + r * (Xi - 1.0))
 
     @staticmethod
     def beta_from_Xi(Xi, r):
-        """beta = (Xi - 1) / r   (relative deviation per unit r)."""
-        return (Xi - 1.0) / r
+        """beta from Xi using the unified-chain relation:
+        beta = sqrt(r / (1 + r*(Xi-1))) * (sqrt(Xi) - 1)
+        """
+        return math.sqrt(r / (1.0 + r * (Xi - 1.0))) * (math.sqrt(Xi) - 1.0)
 
     @staticmethod
     def tau3_from_beta(beta):
