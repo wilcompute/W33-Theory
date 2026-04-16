@@ -1,0 +1,736 @@
+{
+  "multiplicativity": [
+    {
+      "m": 2,
+      "n": 3,
+      "gcd": 1,
+      "tau(m)": -24,
+      "tau(n)": 252,
+      "tau(mn)": -6048,
+      "product": -6048,
+      "match": true,
+      "applicable": true
+    },
+    {
+      "m": 2,
+      "n": 5,
+      "gcd": 1,
+      "tau(m)": -24,
+      "tau(n)": 4830,
+      "tau(mn)": -115920,
+      "product": -115920,
+      "match": true,
+      "applicable": true
+    },
+    {
+      "m": 3,
+      "n": 5,
+      "gcd": 1,
+      "tau(m)": 252,
+      "tau(n)": 4830,
+      "tau(mn)": 1217160,
+      "product": 1217160,
+      "match": true,
+      "applicable": true
+    },
+    {
+      "m": 3,
+      "n": 7,
+      "gcd": 1,
+      "tau(m)": 252,
+      "tau(n)": -16744,
+      "tau(mn)": -4219488,
+      "product": -4219488,
+      "match": true,
+      "applicable": true
+    },
+    {
+      "m": 2,
+      "n": 7,
+      "gcd": 1,
+      "tau(m)": -24,
+      "tau(n)": -16744,
+      "tau(mn)": 401856,
+      "product": 401856,
+      "match": true,
+      "applicable": true
+    },
+    {
+      "m": 5,
+      "n": 7,
+      "gcd": 1,
+      "tau(m)": 4830,
+      "tau(n)": -16744,
+      "tau(mn)": -80873520,
+      "product": -80873520,
+      "match": true,
+      "applicable": true
+    },
+    {
+      "m": 2,
+      "n": 9,
+      "gcd": 1,
+      "tau(m)": -24,
+      "tau(n)": -113643,
+      "tau(mn)": 2727432,
+      "product": 2727432,
+      "match": true,
+      "applicable": true
+    },
+    {
+      "m": 3,
+      "n": 4,
+      "gcd": 1,
+      "tau(m)": 252,
+      "tau(n)": -1472,
+      "tau(mn)": -370944,
+      "product": -370944,
+      "match": true,
+      "applicable": true
+    },
+    {
+      "m": 4,
+      "n": 9,
+      "gcd": 1,
+      "tau(m)": -1472,
+      "tau(n)": -113643,
+      "tau(mn)": 167282496,
+      "product": 167282496,
+      "match": true,
+      "applicable": true
+    },
+    {
+      "m": 2,
+      "n": 15,
+      "gcd": 1,
+      "tau(m)": -24,
+      "tau(n)": 1217160,
+      "tau(mn)": -29211840,
+      "product": -29211840,
+      "match": true,
+      "applicable": true
+    },
+    {
+      "m": 3,
+      "n": 20,
+      "gcd": 1,
+      "tau(m)": 252,
+      "tau(n)": -7109760,
+      "tau(mn)": -1791659520,
+      "product": -1791659520,
+      "match": true,
+      "applicable": true
+    },
+    {
+      "m": 2,
+      "n": 4,
+      "gcd": 2,
+      "tau(m)": -24,
+      "tau(n)": -1472,
+      "tau(mn)": 84480,
+      "product": 35328,
+      "match": null,
+      "applicable": false
+    },
+    {
+      "m": 3,
+      "n": 9,
+      "gcd": 3,
+      "tau(m)": 252,
+      "tau(n)": -113643,
+      "tau(mn)": -73279080,
+      "product": -28638036,
+      "match": null,
+      "applicable": false
+    }
+  ],
+  "hecke_recursion": {
+    "2": [
+      {
+        "p": 2,
+        "r": 1,
+        "tau(p^{r+1})": -1472,
+        "predicted": -1472,
+        "match": true
+      },
+      {
+        "p": 2,
+        "r": 2,
+        "tau(p^{r+1})": 84480,
+        "predicted": 84480,
+        "match": true
+      },
+      {
+        "p": 2,
+        "r": 3,
+        "tau(p^{r+1})": 987136,
+        "predicted": 987136,
+        "match": true
+      },
+      {
+        "p": 2,
+        "r": 4,
+        "tau(p^{r+1})": -196706304,
+        "predicted": -196706304,
+        "match": true
+      },
+      {
+        "p": 2,
+        "r": 5,
+        "tau(p^{r+1})": 2699296768,
+        "predicted": 2699296768,
+        "match": true
+      },
+      {
+        "p": 2,
+        "r": 6,
+        "tau(p^{r+1})": 338071388160,
+        "predicted": 338071388160,
+        "match": true
+      },
+      {
+        "p": 2,
+        "r": 7,
+        "tau(p^{r+1})": -13641873096704,
+        "predicted": -13641873096704,
+        "match": true
+      }
+    ],
+    "3": [
+      {
+        "p": 3,
+        "r": 1,
+        "tau(p^{r+1})": -113643,
+        "predicted": -113643,
+        "match": true
+      },
+      {
+        "p": 3,
+        "r": 2,
+        "tau(p^{r+1})": -73279080,
+        "predicted": -73279080,
+        "match": true
+      },
+      {
+        "p": 3,
+        "r": 3,
+        "tau(p^{r+1})": 1665188361,
+        "predicted": 1665188361,
+        "match": true
+      },
+      {
+        "p": 3,
+        "r": 4,
+        "tau(p^{r+1})": 13400796651732,
+        "predicted": 13400796651732,
+        "match": true
+      }
+    ],
+    "5": [
+      {
+        "p": 5,
+        "r": 1,
+        "tau(p^{r+1})": -25499225,
+        "predicted": -25499225,
+        "match": true
+      },
+      {
+        "p": 5,
+        "r": 2,
+        "tau(p^{r+1})": -359001100500,
+        "predicted": -359001100500,
+        "match": true
+      }
+    ],
+    "7": [
+      {
+        "p": 7,
+        "r": 1,
+        "tau(p^{r+1})": -1696965207,
+        "predicted": -1696965207,
+        "match": true
+      },
+      {
+        "p": 7,
+        "r": 2,
+        "tau(p^{r+1})": 61522344410800,
+        "predicted": 61522344410800,
+        "match": true
+      }
+    ],
+    "11": [
+      {
+        "p": 11,
+        "r": 1,
+        "tau(p^{r+1})": 498319933,
+        "predicted": 498319933,
+        "match": true
+      }
+    ]
+  },
+  "deligne_bound": {
+    "2": {
+      "p": 2,
+      "tau(p)": -24,
+      "|tau(p)|": 24,
+      "2 p^{11/2}": 90.50966799187809,
+      "satisfies": true,
+      "ratio": 0.2651650429449553
+    },
+    "3": {
+      "p": 3,
+      "tau(p)": 252,
+      "|tau(p)|": 252,
+      "2 p^{11/2}": 841.7766924784744,
+      "satisfies": true,
+      "ratio": 0.2993668062464726
+    },
+    "5": {
+      "p": 5,
+      "tau(p)": 4830,
+      "|tau(p)|": 4830,
+      "2 p^{11/2}": 13975.424859373685,
+      "satisfies": true,
+      "ratio": 0.3456066666023675
+    },
+    "7": {
+      "p": 7,
+      "tau(p)": -16744,
+      "|tau(p)|": 16744,
+      "2 p^{11/2}": 88934.28457012515,
+      "satisfies": true,
+      "ratio": 0.1882738482794818
+    },
+    "11": {
+      "p": 11,
+      "tau(p)": 534612,
+      "|tau(p)|": 534612,
+      "2 p^{11/2}": 1068291.478223055,
+      "satisfies": true,
+      "ratio": 0.5004364547485187
+    },
+    "13": {
+      "p": 13,
+      "tau(p)": -577738,
+      "|tau(p)|": 577738,
+      "2 p^{11/2}": 2677431.899441702,
+      "satisfies": true,
+      "ratio": 0.21578065164625473
+    },
+    "17": {
+      "p": 17,
+      "tau(p)": -6905934,
+      "|tau(p)|": 6905934,
+      "2 p^{11/2}": 11708440.768545229,
+      "satisfies": true,
+      "ratio": 0.5898252497081267
+    },
+    "19": {
+      "p": 19,
+      "tau(p)": 10661420,
+      "|tau(p)|": 10661420,
+      "2 p^{11/2}": 21586130.630404238,
+      "satisfies": true,
+      "ratio": 0.49390139356348123
+    },
+    "23": {
+      "p": 23,
+      "tau(p)": 18643272,
+      "|tau(p)|": 18643272,
+      "2 p^{11/2}": 61735233.30850632,
+      "satisfies": true,
+      "ratio": 0.3019875523404104
+    },
+    "29": {
+      "p": 29,
+      "tau(p)": 128406630,
+      "|tau(p)|": 128406630,
+      "2 p^{11/2}": 220911835.49738416,
+      "satisfies": true,
+      "ratio": 0.5812573586693162
+    }
+  },
+  "reconstruction": [
+    {
+      "n": 1,
+      "factorization": {},
+      "predicted": 1,
+      "actual": 1,
+      "match": true
+    },
+    {
+      "n": 2,
+      "factorization": {
+        "2": 1
+      },
+      "predicted": -24,
+      "actual": -24,
+      "match": true
+    },
+    {
+      "n": 3,
+      "factorization": {
+        "3": 1
+      },
+      "predicted": 252,
+      "actual": 252,
+      "match": true
+    },
+    {
+      "n": 4,
+      "factorization": {
+        "2": 2
+      },
+      "predicted": -1472,
+      "actual": -1472,
+      "match": true
+    },
+    {
+      "n": 5,
+      "factorization": {
+        "5": 1
+      },
+      "predicted": 4830,
+      "actual": 4830,
+      "match": true
+    },
+    {
+      "n": 6,
+      "factorization": {
+        "2": 1,
+        "3": 1
+      },
+      "predicted": -6048,
+      "actual": -6048,
+      "match": true
+    },
+    {
+      "n": 7,
+      "factorization": {
+        "7": 1
+      },
+      "predicted": -16744,
+      "actual": -16744,
+      "match": true
+    },
+    {
+      "n": 8,
+      "factorization": {
+        "2": 3
+      },
+      "predicted": 84480,
+      "actual": 84480,
+      "match": true
+    },
+    {
+      "n": 9,
+      "factorization": {
+        "3": 2
+      },
+      "predicted": -113643,
+      "actual": -113643,
+      "match": true
+    },
+    {
+      "n": 10,
+      "factorization": {
+        "2": 1,
+        "5": 1
+      },
+      "predicted": -115920,
+      "actual": -115920,
+      "match": true
+    },
+    {
+      "n": 11,
+      "factorization": {
+        "11": 1
+      },
+      "predicted": 534612,
+      "actual": 534612,
+      "match": true
+    },
+    {
+      "n": 12,
+      "factorization": {
+        "2": 2,
+        "3": 1
+      },
+      "predicted": -370944,
+      "actual": -370944,
+      "match": true
+    },
+    {
+      "n": 13,
+      "factorization": {
+        "13": 1
+      },
+      "predicted": -577738,
+      "actual": -577738,
+      "match": true
+    },
+    {
+      "n": 14,
+      "factorization": {
+        "2": 1,
+        "7": 1
+      },
+      "predicted": 401856,
+      "actual": 401856,
+      "match": true
+    },
+    {
+      "n": 15,
+      "factorization": {
+        "3": 1,
+        "5": 1
+      },
+      "predicted": 1217160,
+      "actual": 1217160,
+      "match": true
+    },
+    {
+      "n": 16,
+      "factorization": {
+        "2": 4
+      },
+      "predicted": 987136,
+      "actual": 987136,
+      "match": true
+    },
+    {
+      "n": 17,
+      "factorization": {
+        "17": 1
+      },
+      "predicted": -6905934,
+      "actual": -6905934,
+      "match": true
+    },
+    {
+      "n": 18,
+      "factorization": {
+        "2": 1,
+        "3": 2
+      },
+      "predicted": 2727432,
+      "actual": 2727432,
+      "match": true
+    },
+    {
+      "n": 19,
+      "factorization": {
+        "19": 1
+      },
+      "predicted": 10661420,
+      "actual": 10661420,
+      "match": true
+    },
+    {
+      "n": 20,
+      "factorization": {
+        "2": 2,
+        "5": 1
+      },
+      "predicted": -7109760,
+      "actual": -7109760,
+      "match": true
+    },
+    {
+      "n": 21,
+      "factorization": {
+        "3": 1,
+        "7": 1
+      },
+      "predicted": -4219488,
+      "actual": -4219488,
+      "match": true
+    },
+    {
+      "n": 22,
+      "factorization": {
+        "2": 1,
+        "11": 1
+      },
+      "predicted": -12830688,
+      "actual": -12830688,
+      "match": true
+    },
+    {
+      "n": 23,
+      "factorization": {
+        "23": 1
+      },
+      "predicted": 18643272,
+      "actual": 18643272,
+      "match": true
+    },
+    {
+      "n": 24,
+      "factorization": {
+        "2": 3,
+        "3": 1
+      },
+      "predicted": 21288960,
+      "actual": 21288960,
+      "match": true
+    },
+    {
+      "n": 25,
+      "factorization": {
+        "5": 2
+      },
+      "predicted": -25499225,
+      "actual": -25499225,
+      "match": true
+    },
+    {
+      "n": 26,
+      "factorization": {
+        "2": 1,
+        "13": 1
+      },
+      "predicted": 13865712,
+      "actual": 13865712,
+      "match": true
+    },
+    {
+      "n": 27,
+      "factorization": {
+        "3": 3
+      },
+      "predicted": -73279080,
+      "actual": -73279080,
+      "match": true
+    },
+    {
+      "n": 28,
+      "factorization": {
+        "2": 2,
+        "7": 1
+      },
+      "predicted": 24647168,
+      "actual": 24647168,
+      "match": true
+    },
+    {
+      "n": 29,
+      "factorization": {
+        "29": 1
+      },
+      "predicted": 128406630,
+      "actual": 128406630,
+      "match": true
+    },
+    {
+      "n": 30,
+      "factorization": {
+        "2": 1,
+        "3": 1,
+        "5": 1
+      },
+      "predicted": -29211840,
+      "actual": -29211840,
+      "match": true
+    },
+    {
+      "n": 31,
+      "factorization": {
+        "31": 1
+      },
+      "predicted": -52843168,
+      "actual": -52843168,
+      "match": true
+    },
+    {
+      "n": 32,
+      "factorization": {
+        "2": 5
+      },
+      "predicted": -196706304,
+      "actual": -196706304,
+      "match": true
+    },
+    {
+      "n": 33,
+      "factorization": {
+        "3": 1,
+        "11": 1
+      },
+      "predicted": 134722224,
+      "actual": 134722224,
+      "match": true
+    },
+    {
+      "n": 34,
+      "factorization": {
+        "2": 1,
+        "17": 1
+      },
+      "predicted": 165742416,
+      "actual": 165742416,
+      "match": true
+    },
+    {
+      "n": 35,
+      "factorization": {
+        "5": 1,
+        "7": 1
+      },
+      "predicted": -80873520,
+      "actual": -80873520,
+      "match": true
+    },
+    {
+      "n": 36,
+      "factorization": {
+        "2": 2,
+        "3": 2
+      },
+      "predicted": 167282496,
+      "actual": 167282496,
+      "match": true
+    },
+    {
+      "n": 37,
+      "factorization": {
+        "37": 1
+      },
+      "predicted": -182213314,
+      "actual": -182213314,
+      "match": true
+    },
+    {
+      "n": 38,
+      "factorization": {
+        "2": 1,
+        "19": 1
+      },
+      "predicted": -255874080,
+      "actual": -255874080,
+      "match": true
+    },
+    {
+      "n": 39,
+      "factorization": {
+        "3": 1,
+        "13": 1
+      },
+      "predicted": -145589976,
+      "actual": -145589976,
+      "match": true
+    },
+    {
+      "n": 40,
+      "factorization": {
+        "2": 3,
+        "5": 1
+      },
+      "predicted": 408038400,
+      "actual": 408038400,
+      "match": true
+    }
+  ],
+  "reconstruction_all_match": true,
+  "multiplicativity_all_match": true
+}

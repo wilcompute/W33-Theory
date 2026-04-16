@@ -214,10 +214,15 @@ def derive_all_hecke(n_max: int = 40) -> dict:
                   (3, 9)]   # NOT coprime
     mult_results = verify_multiplicativity(mult_pairs)
 
-    # Hecke recursion at small primes.
+    # Hecke recursion at small primes.  r_max chosen so p^{r+1} <= 300:
+    #   p=2  -> r_max=7  (2^8  = 256)
+    #   p=3  -> r_max=4  (3^5  = 243)
+    #   p=5  -> r_max=2  (5^3  = 125)
+    #   p=7  -> r_max=2  (7^3  = 343)
+    #   p=11 -> r_max=1  (11^2 = 121)
     recursions = {}
-    for p in (2, 3, 5, 7, 11):
-        recursions[p] = verify_hecke_recursion(p, r_max=4)
+    for p, r_max in ((2, 7), (3, 4), (5, 2), (7, 2), (11, 1)):
+        recursions[p] = verify_hecke_recursion(p, r_max=r_max)
 
     # Deligne bounds at first 10 primes.
     deligne = {p: verify_deligne_bound(p) for p in first_primes_up_to(30)}
