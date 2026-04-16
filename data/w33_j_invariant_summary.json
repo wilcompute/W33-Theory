@@ -1,0 +1,74 @@
+{
+  "j_definition": {
+    "n_max": 20,
+    "mismatches": [],
+    "all_match": true
+  },
+  "affine_e8_cube": {
+    "n_max": 20,
+    "mismatches": [],
+    "all_match": true
+  },
+  "j_ode": {
+    "n_max": 20,
+    "mismatches": [],
+    "all_match": true
+  },
+  "j_inv_ode": {
+    "n_max": 20,
+    "mismatches": [],
+    "all_match": true
+  },
+  "monster_moonshine_seed": {
+    "q0_coefficient": 1,
+    "q1_coefficient": 744,
+    "q2_coefficient": 196884,
+    "q3_coefficient": 21493760,
+    "monster_Griess_dim_plus_1": 196884,
+    "q2_equals_196884": true,
+    "q2_equals_Griess_plus_1": true,
+    "q2_decomposition": "196884 = dim(Griess) + 1 = 196883 + 1"
+  },
+  "klein_constants": {
+    "k": 12,
+    "k_cubed": 1728,
+    "1728_equals_k_cubed": true,
+    "j_at_tau_i": 1728,
+    "discriminant_lhs_q1": 1728,
+    "discriminant_rhs_q1": 1728,
+    "discriminant_holds_up_to_q3": true,
+    "J_tilde_constant_term": 1
+  },
+  "j_times_j_inv_check": {
+    "n_max": 15,
+    "product": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "matches_q": true
+  },
+  "summary_chain": {
+    "j_times_g24_equals_E4_cubed": true,
+    "E4_f8_cubed_equals_q_times_j": true,
+    "E4_qdj_equals_j_times_E4_minus_E6": true,
+    "E4_qdjinv_equals_E6_times_jinv": true,
+    "q2_coefficient_is_196884": true,
+    "k_cubed_equals_1728_klein_point": true,
+    "ramanujan_discriminant_identity": true,
+    "j_times_j_inv_equals_q": true
+  }
+}
