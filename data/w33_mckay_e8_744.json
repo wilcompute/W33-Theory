@@ -1,0 +1,66 @@
+{
+  "k": 12,
+  "j_constant_744": {
+    "j[0]": 744,
+    "j[-1]": 1,
+    "is_744": true
+  },
+  "arithmetic_744": {
+    "E4_cubed_q0": 1,
+    "E4_cubed_q1": 720,
+    "Delta_q1": 1,
+    "inv_Delta_q0": 24,
+    "j_constant": 744,
+    "decomposition": "744 = 720 + 24",
+    "720_is_3_times_240": true,
+    "24_is_2k": true
+  },
+  "720_from_E4": {
+    "E4_eisenstein_constant": 240,
+    "3_times_constant": 720,
+    "is_720": true,
+    "240_is_E8_root_count": true
+  },
+  "mckay_e8": {
+    "E8_roots": 240,
+    "E8_rank": 8,
+    "E8_dim": 248,
+    "3_times_E8_dim": 744,
+    "is_744": true,
+    "triple_E8": "E_8 x E_8 x E_8 total dim = 744"
+  },
+  "leech_connection": {
+    "j_constant": 744,
+    "leech_beta": -720,
+    "chi_constant": 24,
+    "is_24": true,
+    "24_is_leech_rank": true,
+    "24_is_2k": true
+  },
+  "e8_affine_marks": {
+    "marks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      3,
+      4,
+      2
+    ],
+    "sum": 30,
+    "num_nodes": 9,
+    "is_9_nodes": true,
+    "sum_is_30": true
+  },
+  "summary_chain": {
+    "j[0]_is_744": true,
+    "744_equals_720_plus_24": true,
+    "720_is_3_times_240": true,
+    "240_is_E8_roots": true,
+    "24_is_2k": true,
+    "744_is_3_times_248": true,
+    "j_minus_720_const_24": true
+  }
+}
