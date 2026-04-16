@@ -1,0 +1,76 @@
+{
+  "e8_theta_check": {
+    "n_max": 3,
+    "e8_theta": [
+      1,
+      240,
+      2160,
+      6720
+    ],
+    "e4_series": [
+      1,
+      240,
+      2160,
+      6720
+    ],
+    "mismatches": [],
+    "all_match": true,
+    "q0_is_1": true,
+    "q1_is_240_roots": true,
+    "q2_is_2160": true,
+    "q3_is_6720": true
+  },
+  "leech_theta_check": {
+    "n_max": 4,
+    "leech_theta": [
+      1,
+      0,
+      196560,
+      16773120,
+      398034000
+    ],
+    "e4_cubed": [
+      1,
+      720,
+      179280,
+      16954560,
+      396974160
+    ],
+    "delta": [
+      0,
+      1,
+      -24,
+      252,
+      -1472
+    ],
+    "constant_term_is_1": true,
+    "q1_is_0_no_roots": true,
+    "kissing_number_196560": true,
+    "q3_is_16773120": true,
+    "matches_known_values": true
+  },
+  "bridge_720_3x240": {
+    "e8_roots": 240,
+    "3_times_e8_roots": 720,
+    "leech_correction": 720,
+    "match": true,
+    "also_equals": "3 * 240 = 720 = 6! = 3 * [q^1] E_4"
+  },
+  "moonshine_gap": {
+    "leech_kissing": 196560,
+    "c_j(1)": 196884,
+    "monster_smallest_irrep": 196883,
+    "moonshine": true,
+    "kissing_to_c_j_1_diff": 324,
+    "kissing_to_monster_diff": 323
+  },
+  "summary_chain": {
+    "Theta_E8_equals_E4": true,
+    "E8_q1_coef_is_240_roots": true,
+    "Theta_Leech_q0_is_1": true,
+    "Leech_has_no_roots": true,
+    "Leech_kissing_196560": true,
+    "720_equals_3_times_E8_roots": true,
+    "c_j_1_equals_196883_plus_1": true
+  }
+}
