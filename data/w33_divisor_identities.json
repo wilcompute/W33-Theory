@@ -1,0 +1,342 @@
+{
+  "sigma_7_identity": [
+    {
+      "n": 1,
+      "sigma_7": 1,
+      "rhs": 1,
+      "conv": 0,
+      "match": true
+    },
+    {
+      "n": 2,
+      "sigma_7": 129,
+      "rhs": 129,
+      "conv": 1,
+      "match": true
+    },
+    {
+      "n": 3,
+      "sigma_7": 2188,
+      "rhs": 2188,
+      "conv": 18,
+      "match": true
+    },
+    {
+      "n": 4,
+      "sigma_7": 16513,
+      "rhs": 16513,
+      "conv": 137,
+      "match": true
+    },
+    {
+      "n": 5,
+      "sigma_7": 78126,
+      "rhs": 78126,
+      "conv": 650,
+      "match": true
+    },
+    {
+      "n": 6,
+      "sigma_7": 282252,
+      "rhs": 282252,
+      "conv": 2350,
+      "match": true
+    },
+    {
+      "n": 7,
+      "sigma_7": 823544,
+      "rhs": 823544,
+      "conv": 6860,
+      "match": true
+    },
+    {
+      "n": 8,
+      "sigma_7": 2113665,
+      "rhs": 2113665,
+      "conv": 17609,
+      "match": true
+    },
+    {
+      "n": 9,
+      "sigma_7": 4785157,
+      "rhs": 4785157,
+      "conv": 39870,
+      "match": true
+    },
+    {
+      "n": 10,
+      "sigma_7": 10078254,
+      "rhs": 10078254,
+      "conv": 83976,
+      "match": true
+    },
+    {
+      "n": 11,
+      "sigma_7": 19487172,
+      "rhs": 19487172,
+      "conv": 162382,
+      "match": true
+    },
+    {
+      "n": 12,
+      "sigma_7": 36130444,
+      "rhs": 36130444,
+      "conv": 301070,
+      "match": true
+    },
+    {
+      "n": 13,
+      "sigma_7": 62748518,
+      "rhs": 62748518,
+      "conv": 522886,
+      "match": true
+    },
+    {
+      "n": 14,
+      "sigma_7": 106237176,
+      "rhs": 106237176,
+      "conv": 885284,
+      "match": true
+    },
+    {
+      "n": 15,
+      "sigma_7": 170939688,
+      "rhs": 170939688,
+      "conv": 1424468,
+      "match": true
+    }
+  ],
+  "sigma_7_all_match": true,
+  "sigma_9_identity": [
+    {
+      "n": 1,
+      "11*sigma_9": 11,
+      "rhs": 11,
+      "conv": 0,
+      "match": true
+    },
+    {
+      "n": 2,
+      "11*sigma_9": 5643,
+      "rhs": 5643,
+      "conv": 1,
+      "match": true
+    },
+    {
+      "n": 3,
+      "11*sigma_9": 216524,
+      "rhs": 216524,
+      "conv": 42,
+      "match": true
+    },
+    {
+      "n": 4,
+      "11*sigma_9": 2889227,
+      "rhs": 2889227,
+      "conv": 569,
+      "match": true
+    },
+    {
+      "n": 5,
+      "11*sigma_9": 21484386,
+      "rhs": 21484386,
+      "conv": 4250,
+      "match": true
+    },
+    {
+      "n": 6,
+      "11*sigma_9": 111076812,
+      "rhs": 111076812,
+      "conv": 22006,
+      "match": true
+    },
+    {
+      "n": 7,
+      "11*sigma_9": 443889688,
+      "rhs": 443889688,
+      "conv": 88004,
+      "match": true
+    },
+    {
+      "n": 8,
+      "11*sigma_9": 1479284235,
+      "rhs": 1479284235,
+      "conv": 293369,
+      "match": true
+    },
+    {
+      "n": 9,
+      "11*sigma_9": 4261841903,
+      "rhs": 4261841903,
+      "conv": 845358,
+      "match": true
+    },
+    {
+      "n": 10,
+      "11*sigma_9": 11021490018,
+      "rhs": 11021490018,
+      "conv": 2186376,
+      "match": true
+    },
+    {
+      "n": 11,
+      "11*sigma_9": 25937424612,
+      "rhs": 25937424612,
+      "conv": 5145646,
+      "match": true
+    },
+    {
+      "n": 12,
+      "11*sigma_9": 56871544268,
+      "rhs": 56871544268,
+      "conv": 11282966,
+      "match": true
+    },
+    {
+      "n": 13,
+      "11*sigma_9": 116649493114,
+      "rhs": 116649493114,
+      "conv": 23143198,
+      "match": true
+    },
+    {
+      "n": 14,
+      "11*sigma_9": 227715409944,
+      "rhs": 227715409944,
+      "conv": 45179324,
+      "match": true
+    },
+    {
+      "n": 15,
+      "11*sigma_9": 422898654024,
+      "rhs": 422898654024,
+      "conv": 83905292,
+      "match": true
+    }
+  ],
+  "sigma_9_all_match": true,
+  "E12_combination": {
+    "alpha": "441/691",
+    "beta": "250/691",
+    "sum": "1",
+    "q_coefficient_checks": [
+      {
+        "n": 0,
+        "predicted": "1",
+        "actual": "1",
+        "match": true
+      },
+      {
+        "n": 1,
+        "predicted": "65520/691",
+        "actual": "65520/691",
+        "match": true
+      },
+      {
+        "n": 2,
+        "predicted": "134250480/691",
+        "actual": "134250480/691",
+        "match": true
+      },
+      {
+        "n": 3,
+        "predicted": "11606736960/691",
+        "actual": "11606736960/691",
+        "match": true
+      },
+      {
+        "n": 4,
+        "predicted": "274945048560/691",
+        "actual": "274945048560/691",
+        "match": true
+      },
+      {
+        "n": 5,
+        "predicted": "3199218815520/691",
+        "actual": "3199218815520/691",
+        "match": true
+      }
+    ],
+    "all_match": true
+  },
+  "E12_all_match": true,
+  "tau_from_E4_E6": [
+    {
+      "n": 1,
+      "tau(n)": 1,
+      "1728*tau(n)": 1728,
+      "E4^3 - E6^2": 1728,
+      "match": true
+    },
+    {
+      "n": 2,
+      "tau(n)": -24,
+      "1728*tau(n)": -41472,
+      "E4^3 - E6^2": -41472,
+      "match": true
+    },
+    {
+      "n": 3,
+      "tau(n)": 252,
+      "1728*tau(n)": 435456,
+      "E4^3 - E6^2": 435456,
+      "match": true
+    },
+    {
+      "n": 4,
+      "tau(n)": -1472,
+      "1728*tau(n)": -2543616,
+      "E4^3 - E6^2": -2543616,
+      "match": true
+    },
+    {
+      "n": 5,
+      "tau(n)": 4830,
+      "1728*tau(n)": 8346240,
+      "E4^3 - E6^2": 8346240,
+      "match": true
+    },
+    {
+      "n": 6,
+      "tau(n)": -6048,
+      "1728*tau(n)": -10450944,
+      "E4^3 - E6^2": -10450944,
+      "match": true
+    },
+    {
+      "n": 7,
+      "tau(n)": -16744,
+      "1728*tau(n)": -28933632,
+      "E4^3 - E6^2": -28933632,
+      "match": true
+    },
+    {
+      "n": 8,
+      "tau(n)": 84480,
+      "1728*tau(n)": 145981440,
+      "E4^3 - E6^2": 145981440,
+      "match": true
+    },
+    {
+      "n": 9,
+      "tau(n)": -113643,
+      "1728*tau(n)": -196375104,
+      "E4^3 - E6^2": -196375104,
+      "match": true
+    },
+    {
+      "n": 10,
+      "tau(n)": -115920,
+      "1728*tau(n)": -200309760,
+      "E4^3 - E6^2": -200309760,
+      "match": true
+    }
+  ],
+  "tau_all_match": true,
+  "summary_chain": {
+    "sigma_7_eq_sigma_3_plus_120_conv": true,
+    "11_sigma_9_eq_21_sigma_5_minus_10_sigma_3_plus_5040_conv": true,
+    "E12_in_span_E4cubed_E6sq": true,
+    "1728_tau_eq_E4cubed_minus_E6sq": true
+  }
+}
