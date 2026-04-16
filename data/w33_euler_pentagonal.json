@@ -1,0 +1,226 @@
+{
+  "pentagonal_exponents": [
+    0,
+    1,
+    2,
+    5,
+    7,
+    12,
+    15,
+    22,
+    26,
+    35,
+    40,
+    51
+  ],
+  "euler_product_coefs": [
+    1,
+    -1,
+    -1,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    -1,
+    0,
+    0,
+    -1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0
+  ],
+  "partition_recurrence": [
+    {
+      "n": 0,
+      "computed": 1,
+      "oeis": 1,
+      "match": true
+    },
+    {
+      "n": 1,
+      "computed": 1,
+      "oeis": 1,
+      "match": true
+    },
+    {
+      "n": 2,
+      "computed": 2,
+      "oeis": 2,
+      "match": true
+    },
+    {
+      "n": 3,
+      "computed": 3,
+      "oeis": 3,
+      "match": true
+    },
+    {
+      "n": 4,
+      "computed": 5,
+      "oeis": 5,
+      "match": true
+    },
+    {
+      "n": 5,
+      "computed": 7,
+      "oeis": 7,
+      "match": true
+    },
+    {
+      "n": 6,
+      "computed": 11,
+      "oeis": 11,
+      "match": true
+    },
+    {
+      "n": 7,
+      "computed": 15,
+      "oeis": 15,
+      "match": true
+    },
+    {
+      "n": 8,
+      "computed": 22,
+      "oeis": 22,
+      "match": true
+    },
+    {
+      "n": 9,
+      "computed": 30,
+      "oeis": 30,
+      "match": true
+    },
+    {
+      "n": 10,
+      "computed": 42,
+      "oeis": 42,
+      "match": true
+    },
+    {
+      "n": 11,
+      "computed": 56,
+      "oeis": 56,
+      "match": true
+    },
+    {
+      "n": 12,
+      "computed": 77,
+      "oeis": 77,
+      "match": true
+    },
+    {
+      "n": 13,
+      "computed": 101,
+      "oeis": 101,
+      "match": true
+    },
+    {
+      "n": 14,
+      "computed": 135,
+      "oeis": 135,
+      "match": true
+    },
+    {
+      "n": 15,
+      "computed": 176,
+      "oeis": 176,
+      "match": true
+    },
+    {
+      "n": 16,
+      "computed": 231,
+      "oeis": 231,
+      "match": true
+    },
+    {
+      "n": 17,
+      "computed": 297,
+      "oeis": 297,
+      "match": true
+    },
+    {
+      "n": 18,
+      "computed": 385,
+      "oeis": 385,
+      "match": true
+    },
+    {
+      "n": 19,
+      "computed": 490,
+      "oeis": 490,
+      "match": true
+    },
+    {
+      "n": 20,
+      "computed": 627,
+      "oeis": 627,
+      "match": true
+    },
+    {
+      "n": 21,
+      "computed": 792,
+      "oeis": 792,
+      "match": true
+    },
+    {
+      "n": 22,
+      "computed": 1002,
+      "oeis": 1002,
+      "match": true
+    },
+    {
+      "n": 23,
+      "computed": 1255,
+      "oeis": 1255,
+      "match": true
+    },
+    {
+      "n": 24,
+      "computed": 1575,
+      "oeis": 1575,
+      "match": true
+    },
+    {
+      "n": 25,
+      "computed": 1958,
+      "oeis": 1958,
+      "match": true
+    }
+  ],
+  "recurrence_all_match": true,
+  "product_inverse_check": {
+    "constant": 1,
+    "higher_nonzero": [],
+    "constant_is_1": true,
+    "higher_all_zero": true,
+    "inverse_check": true
+  },
+  "zeta_neg_1_check": {
+    "B_2": "1/6",
+    "zeta(-1)": "-1/12",
+    "zeta(-1) = -1/12": true,
+    "vacuum_shift": "-c/24 = -1/24 for c = 1",
+    "eta_prefactor": "q^{1/24} = q^{-zeta(-1)/2}",
+    "zeta_neg_1_over_2": "1/24",
+    "is_1_over_24": true
+  },
+  "summary_chain": {
+    "partition_recurrence_matches_OEIS": true,
+    "euler_times_partitions_equals_1": true,
+    "zeta(-1)_equals_minus_1_over_12": true,
+    "eta_prefactor_q_to_1_over_24": true,
+    "pentagonal_exponents_begin_0_1_2_5_7": true
+  }
+}
