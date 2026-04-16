@@ -1,0 +1,50 @@
+{
+  "N_size": 192,
+  "T1_order_distribution": {
+    "1": 1,
+    "2": 43,
+    "3": 32,
+    "4": 84,
+    "6": 32
+  },
+  "T1_center_size": 1,
+  "T1_center_is_trivial": true,
+  "T2_num_blocks": 48,
+  "T2_block_size": 4,
+  "T2_N_hits_per_block": {
+    "4": 48
+  },
+  "T2_all_blocks_hit": true,
+  "T2_stab_block0_size": 4,
+  "T2_stab_block0_ord_dist": {
+    "1": 1,
+    "2": 2,
+    "4": 1
+  },
+  "T3_t4_grade_dist": {
+    "0": 128,
+    "1": 32,
+    "2": 32
+  },
+  "T4_ord3_count": 32,
+  "T4_ord3_grade_dist": {
+    "0": 32
+  },
+  "T4_ord3_subgroup_order": 48,
+  "T4_ord3_subgroup_ord_dist": {
+    "1": 1,
+    "2": 15,
+    "3": 32
+  },
+  "T4_27_divides_192": false,
+  "T5_grade12_order_dist": {
+    "2": 12,
+    "4": 30,
+    "6": 22
+  },
+  "T6_block_grade_counts": {
+    "grade_0_blocks": 25,
+    "grade_1_blocks": 13,
+    "grade_2_blocks": 10
+  }
+}

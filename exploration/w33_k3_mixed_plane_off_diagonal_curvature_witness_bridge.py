@@ -73,16 +73,18 @@ def build_k3_mixed_plane_off_diagonal_curvature_witness_summary() -> dict[str, A
                 and curvature["upper_right_curvature_identity_exact"] is True
             ),
             "the_exact_k3_tail_realization_problem_is_already_carrier_preserving_and_transport_twisted": (
-                lift["carrier_preserving_transport_twisted_k3_lift_theorem"][
-                    "therefore_any_exact_k3_side_realization_must_be_a_carrier_preserving_transport_twisted_lift"
-                ]
+                bool(
+                    lift["carrier_preserving_transport_twisted_k3_lift_theorem"][
+                        "therefore_any_exact_k3_side_realization_must_be_a_carrier_preserving_transport_twisted_lift"
+                    ]
+                )
             ),
             "the_positive_mixed_plane_wall_is_already_equivalent_to_one_nonzero_nilpotent_holonomy_increment": (
                 increment["k3_mixed_plane_nilpotent_holonomy_increment_theorem"][
                     "therefore_exact_k3_tail_realization_is_equivalent_to_one_support_preserving_nonzero_nilpotent_holonomy_increment_on_the_same_fixed_host"
                 ]
             ),
-            "therefore_exact_k3_tail_realization_is_equivalent_to_one_support_preserving_nonzero_off_diagonal_curvature_witness_on_the_same_fixed_host": (
+            "therefore_exact_k3_tail_realization_is_equivalent_to_one_support_preserving_nonzero_off_diagonal_curvature_witness_on_the_same_fixed_host": bool(
                 curvature["off_diagonal_curvature_rank"] == 36
                 and curvature["off_diagonal_curvature_support_rows"] == 4046
                 and curvature["upper_right_curvature_identity_exact"] is True

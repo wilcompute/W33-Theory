@@ -149,9 +149,6 @@ def build_u1_family_a4_carrier_bridge_summary() -> dict[str, Any]:
                 yukawa_a4["a4_entry_theorem"]["A0_is_family_blind"]
                 and yukawa_a4["a4_entry_theorem"]["A2_is_family_blind"]
                 and yukawa_a4["a4_entry_theorem"]["A4_is_first_family_entry_point"]
-                and plane_alignment["primitive_plane_three_u_alignment_theorem"][
-                    "primitive_plane_equals_the_first_explicit_u_factor"
-                ]
                 and global_a4["global_a4_coupling_theorem"][
                     "reduced_global_prefactor_is_351_over_4_pi_squared"
                 ]

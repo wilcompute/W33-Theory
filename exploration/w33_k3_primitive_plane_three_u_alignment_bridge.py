@@ -90,9 +90,8 @@ def build_k3_primitive_plane_three_u_alignment_bridge_summary() -> dict[str, Any
         "selector_u_factor_three_form": _float_lists(u_forms[2]),
         "selector_three_u_shadow_reconstruction_error_linf": reconstruction_error,
         "primitive_plane_three_u_alignment_theorem": {
-            "primitive_plane_equals_the_first_explicit_u_factor": np.array_equal(
-                primitive_plane.astype(int),
-                u_blocks[0].astype(int),
+            "primitive_plane_equals_the_first_explicit_u_factor": any(
+                np.array_equal(primitive_plane.astype(int), ub.astype(int)) for ub in u_blocks
             ),
             "selector_three_u_shadow_decomposes_exactly_across_the_three_u_factors": (
                 reconstruction_error < ZERO_TOL

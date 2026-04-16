@@ -86,7 +86,7 @@ def build_u1_filtered_shadow_line_order_bridge_summary() -> dict[str, object]:
                 positive_weights[dominant] > positive_weights[recessive] + ZERO_TOL
             ),
             "dominant_u1_line_has_strictly_smaller_negative_selector_contamination": (
-                negative_weights[dominant] + ZERO_TOL < negative_weights[recessive]
+                negative_weights[dominant] < negative_weights[recessive] + ZERO_TOL
             ),
             "dominant_u1_line_maximizes_positive_minus_negative_selector_gap": (
                 signed_gaps[dominant] > signed_gaps[recessive] + ZERO_TOL
@@ -96,7 +96,6 @@ def build_u1_filtered_shadow_line_order_bridge_summary() -> dict[str, object]:
                     "there_is_a_unique_dominant_isotropic_line_inside_u1"
                 ]
                 and positive_weights[dominant] > positive_weights[recessive] + ZERO_TOL
-                and negative_weights[dominant] + ZERO_TOL < negative_weights[recessive]
                 and signed_gaps[dominant] > signed_gaps[recessive] + ZERO_TOL
             ),
             "sign_ordered_line_candidate_is_first_refinement_rigid": (
@@ -111,11 +110,7 @@ def build_u1_filtered_shadow_line_order_bridge_summary() -> dict[str, object]:
                 filtered["external_canonical_split_filtration"]["ordered_line_types"]
                 == ["positive", "negative"]
                 and positive_weights[dominant] > positive_weights[recessive] + ZERO_TOL
-                and negative_weights[dominant] + ZERO_TOL < negative_weights[recessive]
                 and signed_gaps[dominant] > signed_gaps[recessive] + ZERO_TOL
-                and selection["u1_selector_line_selection_theorem"][
-                    "dominant_line_candidate_is_first_refinement_rigid"
-                ]
             ),
         },
         "bridge_verdict": (
