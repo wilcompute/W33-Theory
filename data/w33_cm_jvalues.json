@@ -1,0 +1,156 @@
+{
+  "heegner_j_cubes": {
+    "1": {
+      "d": 1,
+      "cube_root": 12,
+      "cube": 1728,
+      "j_value": 1728,
+      "match": true
+    },
+    "2": {
+      "d": 2,
+      "cube_root": 20,
+      "cube": 8000,
+      "j_value": 8000,
+      "match": true
+    },
+    "3": {
+      "d": 3,
+      "cube_root": 0,
+      "cube": 0,
+      "j_value": 0,
+      "match": true
+    },
+    "7": {
+      "d": 7,
+      "cube_root": -15,
+      "cube": -3375,
+      "j_value": -3375,
+      "match": true
+    },
+    "11": {
+      "d": 11,
+      "cube_root": -32,
+      "cube": -32768,
+      "j_value": -32768,
+      "match": true
+    },
+    "19": {
+      "d": 19,
+      "cube_root": -96,
+      "cube": -884736,
+      "j_value": -884736,
+      "match": true
+    },
+    "43": {
+      "d": 43,
+      "cube_root": -960,
+      "cube": -884736000,
+      "j_value": -884736000,
+      "match": true
+    },
+    "67": {
+      "d": 67,
+      "cube_root": -5280,
+      "cube": -147197952000,
+      "j_value": -147197952000,
+      "match": true
+    },
+    "163": {
+      "d": 163,
+      "cube_root": -640320,
+      "cube": -262537412640768000,
+      "j_value": -262537412640768000,
+      "match": true
+    }
+  },
+  "j_of_i_is_k_cubed": {
+    "j(i)": 1728,
+    "k": 12,
+    "k^3": 1728,
+    "match": true,
+    "meaning": "j(i) is the normalization constant for Delta",
+    "delta_norm": "Delta = (E_4^3 - E_6^2) / 1728"
+  },
+  "ramanujan_163": {
+    "d": 163,
+    "j(tau_d)": -262537412640768000,
+    "predicted_integer": 262537412640768744,
+    "e^{pi*sqrt(d)}": "262537412640768743.999999999999",
+    "difference": "-7.49927402792175e-13",
+    "first_order_correction": "-7.49927402801815e-13",
+    "|diff - correction|": "9.6398788344421e-24",
+    "_diff_float": -7.499274027921747e-13,
+    "_corr_match": true
+  },
+  "heegner_cube_roots": {
+    "cube_roots": {
+      "1": 12,
+      "2": 20,
+      "3": 0,
+      "7": -15,
+      "11": -32,
+      "19": -96,
+      "43": -960,
+      "67": -5280,
+      "163": -640320
+    },
+    "j(i)_root": 12,
+    "j(i)_is_k": true,
+    "j(sqrt(-2)*i)_root": 20,
+    "20 = k + 8": true,
+    "k + rank_E8": true
+  },
+  "almost_integers": {
+    "19": {
+      "d": 19,
+      "j(tau_d)": -884736,
+      "predicted_integer": 885480,
+      "e^{pi*sqrt(d)}": "885479.777680154319497537893482",
+      "difference": "-0.222319845680502",
+      "first_order_correction": "-0.222347257343145",
+      "|diff - correction|": "2.74116626424311e-5",
+      "_diff_float": -0.22231984568050248,
+      "_corr_match": false
+    },
+    "43": {
+      "d": 43,
+      "j(tau_d)": -884736000,
+      "predicted_integer": 884736744,
+      "e^{pi*sqrt(d)}": "884736743.999777466034906661937",
+      "difference": "-0.000222533965093338",
+      "first_order_correction": "-0.000222533992552308",
+      "|diff - correction|": "2.74589702672399e-11",
+      "_diff_float": -0.00022253396509333806,
+      "_corr_match": true
+    },
+    "67": {
+      "d": 67,
+      "j(tau_d)": -147197952000,
+      "predicted_integer": 147197952744,
+      "e^{pi*sqrt(d)}": "147197952743.999998662454224507",
+      "difference": "-1.33754577549317e-6",
+      "first_order_correction": "-1.33754577648516e-6",
+      "|diff - correction|": "9.91993566343537e-16",
+      "_diff_float": -1.3375457754931708e-06,
+      "_corr_match": true
+    },
+    "163": {
+      "d": 163,
+      "j(tau_d)": -262537412640768000,
+      "predicted_integer": 262537412640768744,
+      "e^{pi*sqrt(d)}": "262537412640768743.999999999999",
+      "difference": "-7.49927402792175e-13",
+      "first_order_correction": "-7.49927402801815e-13",
+      "|diff - correction|": "9.6398788344421e-24",
+      "_diff_float": -7.499274027921747e-13,
+      "_corr_match": true
+    }
+  },
+  "summary_chain": {
+    "all_heegner_j_are_cubes": true,
+    "j(i)_equals_12_cubed": true,
+    "1728_is_k_cubed": true,
+    "j(sqrt(-2)*i)_is_(k+8)^3": true
+  }
+}
