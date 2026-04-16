@@ -1,0 +1,427 @@
+{
+  "the_prime_691": {
+    "B_12": "-691/2730",
+    "numerator_abs": 691,
+    "denominator": 2730,
+    "2730_factorization": "2 * 3 * 5 * 7 * 13",
+    "691_is_prime": true
+  },
+  "E_12_constant": "65520/691",
+  "ramanujan_691_congruence": {
+    "all_match": true,
+    "first_n": [
+      {
+        "n": 1,
+        "tau": 1,
+        "sigma_11": 1,
+        "tau_mod_691": 1,
+        "sigma_mod_691": 1,
+        "match": true,
+        "quotient": 0
+      },
+      {
+        "n": 2,
+        "tau": -24,
+        "sigma_11": 2049,
+        "tau_mod_691": 667,
+        "sigma_mod_691": 667,
+        "match": true,
+        "quotient": 3
+      },
+      {
+        "n": 3,
+        "tau": 252,
+        "sigma_11": 177148,
+        "tau_mod_691": 252,
+        "sigma_mod_691": 252,
+        "match": true,
+        "quotient": 256
+      },
+      {
+        "n": 4,
+        "tau": -1472,
+        "sigma_11": 4196353,
+        "tau_mod_691": 601,
+        "sigma_mod_691": 601,
+        "match": true,
+        "quotient": 6075
+      },
+      {
+        "n": 5,
+        "tau": 4830,
+        "sigma_11": 48828126,
+        "tau_mod_691": 684,
+        "sigma_mod_691": 684,
+        "match": true,
+        "quotient": 70656
+      },
+      {
+        "n": 6,
+        "tau": -6048,
+        "sigma_11": 362976252,
+        "tau_mod_691": 171,
+        "sigma_mod_691": 171,
+        "match": true,
+        "quotient": 525300
+      },
+      {
+        "n": 7,
+        "tau": -16744,
+        "sigma_11": 1977326744,
+        "tau_mod_691": 531,
+        "sigma_mod_691": 531,
+        "match": true,
+        "quotient": 2861568
+      },
+      {
+        "n": 8,
+        "tau": 84480,
+        "sigma_11": 8594130945,
+        "tau_mod_691": 178,
+        "sigma_mod_691": 178,
+        "match": true,
+        "quotient": 12437115
+      },
+      {
+        "n": 9,
+        "tau": -113643,
+        "sigma_11": 31381236757,
+        "tau_mod_691": 372,
+        "sigma_mod_691": 372,
+        "match": true,
+        "quotient": 45414400
+      },
+      {
+        "n": 10,
+        "tau": -115920,
+        "sigma_11": 100048830174,
+        "tau_mod_691": 168,
+        "sigma_mod_691": 168,
+        "match": true,
+        "quotient": 144788634
+      },
+      {
+        "n": 11,
+        "tau": 534612,
+        "sigma_11": 285311670612,
+        "tau_mod_691": 469,
+        "sigma_mod_691": 469,
+        "match": true,
+        "quotient": 412896000
+      },
+      {
+        "n": 12,
+        "tau": -370944,
+        "sigma_11": 743375541244,
+        "tau_mod_691": 123,
+        "sigma_mod_691": 123,
+        "match": true,
+        "quotient": 1075797268
+      },
+      {
+        "n": 13,
+        "tau": -577738,
+        "sigma_11": 1792160394038,
+        "tau_mod_691": 629,
+        "sigma_mod_691": 629,
+        "match": true,
+        "quotient": 2593575936
+      },
+      {
+        "n": 14,
+        "tau": 401856,
+        "sigma_11": 4051542498456,
+        "tau_mod_691": 385,
+        "sigma_mod_691": 385,
+        "match": true,
+        "quotient": 5863302600
+      },
+      {
+        "n": 15,
+        "tau": 1217160,
+        "sigma_11": 8649804864648,
+        "tau_mod_691": 309,
+        "sigma_mod_691": 309,
+        "match": true,
+        "quotient": 12517805568
+      },
+      {
+        "n": 16,
+        "tau": 987136,
+        "sigma_11": 17600780175361,
+        "tau_mod_691": 388,
+        "sigma_mod_691": 388,
+        "match": true,
+        "quotient": 25471460475
+      },
+      {
+        "n": 17,
+        "tau": -6905934,
+        "sigma_11": 34271896307634,
+        "tau_mod_691": 611,
+        "sigma_mod_691": 611,
+        "match": true,
+        "quotient": 49597544448
+      },
+      {
+        "n": 18,
+        "tau": 2727432,
+        "sigma_11": 64300154115093,
+        "tau_mod_691": 55,
+        "sigma_mod_691": 55,
+        "match": true,
+        "quotient": 93053764671
+      },
+      {
+        "n": 19,
+        "tau": 10661420,
+        "sigma_11": 116490258898220,
+        "tau_mod_691": 672,
+        "sigma_mod_691": 672,
+        "match": true,
+        "quotient": 168582124800
+      },
+      {
+        "n": 20,
+        "tau": -7109760,
+        "sigma_11": 204900053024478,
+        "tau_mod_691": 630,
+        "sigma_mod_691": 630,
+        "match": true,
+        "quotient": 296526859818
+      },
+      {
+        "n": 21,
+        "tau": -4219488,
+        "sigma_11": 350279478046112,
+        "tau_mod_691": 449,
+        "sigma_mod_691": 449,
+        "match": true,
+        "quotient": 506916761600
+      },
+      {
+        "n": 22,
+        "tau": -12830688,
+        "sigma_11": 584603613083988,
+        "tau_mod_691": 491,
+        "sigma_mod_691": 491,
+        "match": true,
+        "quotient": 846025507836
+      },
+      {
+        "n": 23,
+        "tau": 18643272,
+        "sigma_11": 952809757913928,
+        "tau_mod_691": 92,
+        "sigma_mod_691": 92,
+        "match": true,
+        "quotient": 1378885295616
+      },
+      {
+        "n": 24,
+        "tau": 21288960,
+        "sigma_11": 1522433108644860,
+        "tau_mod_691": 632,
+        "sigma_mod_691": 632,
+        "match": true,
+        "quotient": 2203231674900
+      },
+      {
+        "n": 25,
+        "tau": -25499225,
+        "sigma_11": 2384185839843751,
+        "tau_mod_691": 57,
+        "sigma_mod_691": 57,
+        "match": true,
+        "quotient": 3450341339136
+      },
+      {
+        "n": 26,
+        "tau": 13865712,
+        "sigma_11": 3672136647383862,
+        "tau_mod_691": 106,
+        "sigma_mod_691": 106,
+        "match": true,
+        "quotient": 5314235359650
+      },
+      {
+        "n": 27,
+        "tau": -73279080,
+        "sigma_11": 5559091947792280,
+        "tau_mod_691": 88,
+        "sigma_mod_691": 88,
+        "match": true,
+        "quotient": 8044995688960
+      },
+      {
+        "n": 28,
+        "tau": 24647168,
+        "sigma_11": 8297561014164632,
+        "tau_mod_691": 580,
+        "sigma_mod_691": 580,
+        "match": true,
+        "quotient": 12008047741704
+      },
+      {
+        "n": 29,
+        "tau": 128406630,
+        "sigma_11": 12200509765705830,
+        "tau_mod_691": 173,
+        "sigma_mod_691": 173,
+        "match": true,
+        "quotient": 17656309171200
+      },
+      {
+        "n": 30,
+        "tau": -29211840,
+        "sigma_11": 17723450167663752,
+        "tau_mod_691": 185,
+        "sigma_mod_691": 185,
+        "match": true,
+        "quotient": 25648987260312
+      }
+    ]
+  },
+  "prime_congruence_tau_p_equiv_1_plus_p11": {
+    "all_match": true,
+    "primes_checked": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43,
+      47
+    ],
+    "details": [
+      {
+        "p": 2,
+        "tau(p)": -24,
+        "1 + p^11": 2049,
+        "tau mod 691": 667,
+        "pred mod 691": 667,
+        "match": true
+      },
+      {
+        "p": 3,
+        "tau(p)": 252,
+        "1 + p^11": 177148,
+        "tau mod 691": 252,
+        "pred mod 691": 252,
+        "match": true
+      },
+      {
+        "p": 5,
+        "tau(p)": 4830,
+        "1 + p^11": 48828126,
+        "tau mod 691": 684,
+        "pred mod 691": 684,
+        "match": true
+      },
+      {
+        "p": 7,
+        "tau(p)": -16744,
+        "1 + p^11": 1977326744,
+        "tau mod 691": 531,
+        "pred mod 691": 531,
+        "match": true
+      },
+      {
+        "p": 11,
+        "tau(p)": 534612,
+        "1 + p^11": 285311670612,
+        "tau mod 691": 469,
+        "pred mod 691": 469,
+        "match": true
+      },
+      {
+        "p": 13,
+        "tau(p)": -577738,
+        "1 + p^11": 1792160394038,
+        "tau mod 691": 629,
+        "pred mod 691": 629,
+        "match": true
+      },
+      {
+        "p": 17,
+        "tau(p)": -6905934,
+        "1 + p^11": 34271896307634,
+        "tau mod 691": 611,
+        "pred mod 691": 611,
+        "match": true
+      },
+      {
+        "p": 19,
+        "tau(p)": 10661420,
+        "1 + p^11": 116490258898220,
+        "tau mod 691": 672,
+        "pred mod 691": 672,
+        "match": true
+      },
+      {
+        "p": 23,
+        "tau(p)": 18643272,
+        "1 + p^11": 952809757913928,
+        "tau mod 691": 92,
+        "pred mod 691": 92,
+        "match": true
+      },
+      {
+        "p": 29,
+        "tau(p)": 128406630,
+        "1 + p^11": 12200509765705830,
+        "tau mod 691": 173,
+        "pred mod 691": 173,
+        "match": true
+      },
+      {
+        "p": 31,
+        "tau(p)": -52843168,
+        "1 + p^11": 25408476896404832,
+        "tau mod 691": 366,
+        "pred mod 691": 366,
+        "match": true
+      },
+      {
+        "p": 37,
+        "tau(p)": -182213314,
+        "1 + p^11": 177917621779460414,
+        "tau mod 691": 622,
+        "pred mod 691": 622,
+        "match": true
+      },
+      {
+        "p": 41,
+        "tau(p)": 308120442,
+        "1 + p^11": 550329031716248442,
+        "tau mod 691": 87,
+        "pred mod 691": 87,
+        "match": true
+      },
+      {
+        "p": 43,
+        "tau(p)": -17125708,
+        "1 + p^11": 929293739471222708,
+        "tau mod 691": 36,
+        "pred mod 691": 36,
+        "match": true
+      },
+      {
+        "p": 47,
+        "tau(p)": 2687348496,
+        "1 + p^11": 2472159215084012304,
+        "tau mod 691": 435,
+        "pred mod 691": 435,
+        "match": true
+      }
+    ]
+  }
+}
