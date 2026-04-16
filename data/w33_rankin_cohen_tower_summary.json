@@ -1,0 +1,63 @@
+{
+  "rc_E4_E4_2": {
+    "n_max": 20,
+    "coefficient": 4800,
+    "mismatches": [],
+    "all_match": true
+  },
+  "rc_E4_E4_2_explicit": {
+    "n_max": 20,
+    "all_match": true
+  },
+  "rc_E4_E6_1": {
+    "n_max": 20,
+    "coefficient": -3456,
+    "mismatches": [],
+    "all_match": true
+  },
+  "structural_interpretation": {
+    "k_w33_valency": 12,
+    "E8_root_count": 240,
+    "rc_1_coefficient": -3456,
+    "rc_1_formula": "-2 * k^3",
+    "rc_2_coefficient": 4800,
+    "rc_2_formula": "2 * C(k+1, 2) * |root(E_8)|  where k = 4 (weight of E_4)",
+    "rc_2_equals_4800": true,
+    "rc_1_equals_minus_3456": true,
+    "rc_1_over_rc_2": "-3456/4800 = -3456//4800",
+    "two_constructions_of_Delta": [
+      "[E_4, E_6]_1 = -3456 Delta",
+      "[E_4, E_4]_2 = 4800 Delta"
+    ]
+  },
+  "delta_first_five": {
+    "Delta_first_five": [
+      0,
+      1,
+      -24,
+      252,
+      -1472,
+      4830
+    ],
+    "Delta_q1": 1,
+    "Delta_q2": -24,
+    "Delta_q3": 252
+  },
+  "q1_q2_q3_calculations": {
+    "[E_4,E_6]_1 at q1": -3456,
+    "[E_4,E_6]_1 at q2": 82944,
+    "[E_4,E_4]_2 at q1": 4800,
+    "[E_4,E_4]_2 at q2": -115200,
+    "[E_4,E_4]_2 at q3": 1209600
+  },
+  "summary_chain": {
+    "rc_E4_E4_2_equals_4800_delta": true,
+    "rc_E4_E4_2_explicit_form_matches": true,
+    "rc_E4_E6_1_equals_minus_3456_delta": true,
+    "rc_2_coefficient_factors_as_2_C52_E8roots": true,
+    "rc_1_coefficient_factors_as_minus_2_k_cubed": true,
+    "q1_coefficient_of_E4_E4_2_is_4800": true,
+    "q1_coefficient_of_E4_E6_1_is_minus_3456": true,
+    "q2_coefficient_of_E4_E4_2_is_minus_115200": true
+  }
+}
