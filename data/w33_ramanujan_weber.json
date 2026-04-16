@@ -1,0 +1,13 @@
+{
+  "ramanujan_report": {
+    "D": 163,
+    "value": "262537412640768743.9999999999992500725972",
+    "nearest_int": ".0e+17",
+    "diff": "7.499274028018143111206461436626630091373e-13",
+    "is_near_integer": true,
+    "log10_diff": "-12.124981"
+  },
+  "summary_chain": {
+    "ramanujan_163_near_integer": true
+  }
+}
