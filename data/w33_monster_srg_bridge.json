@@ -1,0 +1,122 @@
+{
+  "w33_valency": 12,
+  "srg_factorization": {
+    "k": 12,
+    "4k-1": 47,
+    "5k-1": 59,
+    "6k-1": 71,
+    "product": 196883,
+    "is_196883": true,
+    "primes_AP": {
+      "terms": [
+        47,
+        59,
+        71
+      ],
+      "diffs": [
+        12,
+        12
+      ],
+      "common_difference": 12,
+      "is_AP": true
+    }
+  },
+  "primes_verified": {
+    "47": true,
+    "59": true,
+    "71": true,
+    "all_prime": true
+  },
+  "moonshine_identity": {
+    "c(1)": 196884,
+    "d_1": 1,
+    "d_2": 196883,
+    "d_1 + d_2": 196884,
+    "match": true,
+    "196883_from_k": {
+      "k": 12,
+      "4k-1": 47,
+      "5k-1": 59,
+      "6k-1": 71,
+      "product": 196883,
+      "is_196883": true,
+      "primes_AP": {
+        "terms": [
+          47,
+          59,
+          71
+        ],
+        "diffs": [
+          12,
+          12
+        ],
+        "common_difference": 12,
+        "is_AP": true
+      }
+    }
+  },
+  "j_irrep_decompositions": [
+    {
+      "n": -1,
+      "c(n)": 1,
+      "decomposition": {
+        "1": 1
+      },
+      "sum": 1,
+      "match": true
+    },
+    {
+      "n": 1,
+      "c(n)": 196884,
+      "decomposition": {
+        "1": 1,
+        "196883": 1
+      },
+      "sum": 196884,
+      "match": true
+    },
+    {
+      "n": 2,
+      "c(n)": 21493760,
+      "decomposition": {
+        "1": 1,
+        "196883": 1,
+        "21296876": 1
+      },
+      "sum": 21493760,
+      "match": true
+    },
+    {
+      "n": 3,
+      "c(n)": 864299970,
+      "decomposition": {
+        "1": 2,
+        "196883": 2,
+        "21296876": 1,
+        "842609326": 1
+      },
+      "sum": 864299970,
+      "match": true
+    }
+  ],
+  "all_j_decomps_match": true,
+  "critical_dimension": {
+    "k": 12,
+    "2k": 24,
+    "D_crit": 26,
+    "transverse_dims": 24,
+    "is_26": true,
+    "eta_exponent": 24,
+    "leech_rank": 24,
+    "delta_is_eta_2k": true
+  },
+  "summary_chain": {
+    "k_equals_12": true,
+    "196883_equals_prod_4k_5k_6k": true,
+    "47_59_71_are_prime": true,
+    "AP_common_diff_is_k": true,
+    "196884_equals_196883_plus_1": true,
+    "D_crit_equals_26": true,
+    "all_j_decomps_verified": true
+  }
+}
