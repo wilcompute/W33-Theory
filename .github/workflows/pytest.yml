@@ -2,6 +2,52 @@ name: pytest
 
 on:
   push:
+    branches:
+      - ci/add-github-actions
+      - review/remote-master
+      - master
+  pull_request:
+    branches:
+      - master
+      - review/remote-master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.11, 3.13]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements*.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
+
+      - name: Run tests
+        run: |
+          python -m pytest -q
+        env:
+          PYTHONWARNINGS: default
+name: pytest
+
+on:
+  push:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
