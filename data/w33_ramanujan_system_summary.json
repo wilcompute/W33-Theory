@@ -1,0 +1,221 @@
+{
+  "ramanujan_e2_ode": {
+    "n_max": 20,
+    "mismatches": [],
+    "all_match": true
+  },
+  "ramanujan_e4_ode": {
+    "n_max": 20,
+    "mismatches": [],
+    "all_match": true
+  },
+  "ramanujan_e6_ode": {
+    "n_max": 20,
+    "mismatches": [],
+    "all_match": true
+  },
+  "delta_ode": {
+    "n_max": 20,
+    "mismatches": [],
+    "all_match": true
+  },
+  "eta_family_odes": {
+    "1": {
+      "c": 1,
+      "n_max": 20,
+      "residuals": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "all_zero": true
+    },
+    "2": {
+      "c": 2,
+      "n_max": 20,
+      "residuals": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "all_zero": true
+    },
+    "4": {
+      "c": 4,
+      "n_max": 20,
+      "residuals": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "all_zero": true
+    },
+    "8": {
+      "c": 8,
+      "n_max": 20,
+      "residuals": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "all_zero": true
+    },
+    "12": {
+      "c": 12,
+      "n_max": 20,
+      "residuals": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "all_zero": true
+    },
+    "24": {
+      "c": 24,
+      "n_max": 20,
+      "residuals": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "all_zero": true
+    }
+  },
+  "denominator_pattern": {
+    "E_2_weight": 2,
+    "E_2_denom_actual": 12,
+    "E_2_denom_if_holomorphic": 6,
+    "E_2_anomaly_factor": 2,
+    "E_4_weight": 4,
+    "E_4_denom": 3,
+    "E_4_rule_matches": true,
+    "E_6_weight": 6,
+    "E_6_denom": 2,
+    "E_6_rule_matches": true,
+    "12_is_w33_valency": true
+  },
+  "affine_e8_corollary": {
+    "c": 8,
+    "family_ode_holds": true,
+    "divided_by_8": "24 q df_8 + 8 (E_2 - 1) f_8 = 0  =>  3 q df_8 + (E_2 - 1) f_8 = 0",
+    "previous_layer_match": true
+  },
+  "summary_chain": {
+    "ramanujan_E2_ODE_holds": true,
+    "ramanujan_E4_ODE_holds": true,
+    "ramanujan_E6_ODE_holds": true,
+    "delta_ODE_q_d_delta_equals_E2_delta": true,
+    "eta_minus_8_family_ode_holds": true,
+    "eta_minus_24_family_ode_holds": true,
+    "denominator_12_equals_W33_valency_k": true,
+    "affine_E8_is_c_equals_8_case": true
+  }
+}
