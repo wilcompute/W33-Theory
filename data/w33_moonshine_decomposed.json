@@ -1,0 +1,373 @@
+{
+  "inv_delta": {
+    "-1": 1,
+    "0": 24,
+    "1": 324,
+    "2": 3200,
+    "3": 25650,
+    "4": 176256
+  },
+  "p_24_partitions": [
+    1,
+    24,
+    324,
+    3200,
+    25650,
+    176256
+  ],
+  "inv_delta_equals_q_inv_p24": {
+    "order": 4,
+    "inv_delta": {
+      "-1": 1,
+      "0": 24,
+      "1": 324,
+      "2": 3200,
+      "3": 25650,
+      "4": 176256
+    },
+    "p_24": [
+      1,
+      24,
+      324,
+      3200,
+      25650,
+      176256
+    ],
+    "all_match": true,
+    "per_coeff": {
+      "-1": true,
+      "0": true,
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true
+    }
+  },
+  "the_324_solution": {
+    "j_q_coef": 196884,
+    "leech_minimum_count": 196560,
+    "oscillator_contribution": 324,
+    "p_24_of_2_combinatorial": {
+      "one_part_of_2_in_24_colors": 24,
+      "two_parts_of_1_with_reps": 300,
+      "total": 324
+    },
+    "p_24_of_2_value": 324,
+    "p_24_matches": true,
+    "convolution_explained": {
+      "n": 1,
+      "contributions": [
+        {
+          "k": 0,
+          "squared_norm": 0,
+          "N_{2k}": 1,
+          "p_24(n-k+1)": 324,
+          "n-k+1": 2,
+          "contribution": 324
+        },
+        {
+          "k": 1,
+          "squared_norm": 2,
+          "N_{2k}": 0,
+          "p_24(n-k+1)": 24,
+          "n-k+1": 1,
+          "contribution": 0
+        },
+        {
+          "k": 2,
+          "squared_norm": 4,
+          "N_{2k}": 196560,
+          "p_24(n-k+1)": 1,
+          "n-k+1": 0,
+          "contribution": 196560
+        }
+      ],
+      "lattice_sum": 196884,
+      "constant_720_at_n_eq_0": 0,
+      "j_via_decomposition": 196884,
+      "j_actual": 196884,
+      "match": true
+    },
+    "moonshine_relation": "196884 = 196883 + 1 (Monster)",
+    "lattice_relation": "196884 = 196560 + 324 (Leech CFT)",
+    "bridge": "Both are TRUE; they are different reductions of the same number."
+  },
+  "the_21493760_solution": {
+    "j_q2_coef": 21493760,
+    "monster_decomposition": "21493760 = 1 + 196883 + 21296876   (sum of three smallest Monster irreps)",
+    "leech_decomposition_via_CFT": {
+      "n": 2,
+      "contributions": [
+        {
+          "k": 0,
+          "squared_norm": 0,
+          "N_{2k}": 1,
+          "p_24(n-k+1)": 3200,
+          "n-k+1": 3,
+          "contribution": 3200
+        },
+        {
+          "k": 1,
+          "squared_norm": 2,
+          "N_{2k}": 0,
+          "p_24(n-k+1)": 324,
+          "n-k+1": 2,
+          "contribution": 0
+        },
+        {
+          "k": 2,
+          "squared_norm": 4,
+          "N_{2k}": 196560,
+          "p_24(n-k+1)": 24,
+          "n-k+1": 1,
+          "contribution": 4717440
+        },
+        {
+          "k": 3,
+          "squared_norm": 6,
+          "N_{2k}": 16773120,
+          "p_24(n-k+1)": 1,
+          "n-k+1": 0,
+          "contribution": 16773120
+        }
+      ],
+      "lattice_sum": 21493760,
+      "constant_720_at_n_eq_0": 0,
+      "j_via_decomposition": 21493760,
+      "j_actual": 21493760,
+      "match": true
+    }
+  },
+  "all_decompositions": {
+    "q^-1": {
+      "n": -1,
+      "contributions": [
+        {
+          "k": 0,
+          "squared_norm": 0,
+          "N_{2k}": 1,
+          "p_24(n-k+1)": 1,
+          "n-k+1": 0,
+          "contribution": 1
+        }
+      ],
+      "lattice_sum": 1,
+      "constant_720_at_n_eq_0": 0,
+      "j_via_decomposition": 1,
+      "j_actual": 1,
+      "match": true
+    },
+    "q^0": {
+      "n": 0,
+      "contributions": [
+        {
+          "k": 0,
+          "squared_norm": 0,
+          "N_{2k}": 1,
+          "p_24(n-k+1)": 24,
+          "n-k+1": 1,
+          "contribution": 24
+        },
+        {
+          "k": 1,
+          "squared_norm": 2,
+          "N_{2k}": 0,
+          "p_24(n-k+1)": 1,
+          "n-k+1": 0,
+          "contribution": 0
+        }
+      ],
+      "lattice_sum": 24,
+      "constant_720_at_n_eq_0": 720,
+      "j_via_decomposition": 744,
+      "j_actual": 744,
+      "match": true
+    },
+    "q^1": {
+      "n": 1,
+      "contributions": [
+        {
+          "k": 0,
+          "squared_norm": 0,
+          "N_{2k}": 1,
+          "p_24(n-k+1)": 324,
+          "n-k+1": 2,
+          "contribution": 324
+        },
+        {
+          "k": 1,
+          "squared_norm": 2,
+          "N_{2k}": 0,
+          "p_24(n-k+1)": 24,
+          "n-k+1": 1,
+          "contribution": 0
+        },
+        {
+          "k": 2,
+          "squared_norm": 4,
+          "N_{2k}": 196560,
+          "p_24(n-k+1)": 1,
+          "n-k+1": 0,
+          "contribution": 196560
+        }
+      ],
+      "lattice_sum": 196884,
+      "constant_720_at_n_eq_0": 0,
+      "j_via_decomposition": 196884,
+      "j_actual": 196884,
+      "match": true
+    },
+    "q^2": {
+      "n": 2,
+      "contributions": [
+        {
+          "k": 0,
+          "squared_norm": 0,
+          "N_{2k}": 1,
+          "p_24(n-k+1)": 3200,
+          "n-k+1": 3,
+          "contribution": 3200
+        },
+        {
+          "k": 1,
+          "squared_norm": 2,
+          "N_{2k}": 0,
+          "p_24(n-k+1)": 324,
+          "n-k+1": 2,
+          "contribution": 0
+        },
+        {
+          "k": 2,
+          "squared_norm": 4,
+          "N_{2k}": 196560,
+          "p_24(n-k+1)": 24,
+          "n-k+1": 1,
+          "contribution": 4717440
+        },
+        {
+          "k": 3,
+          "squared_norm": 6,
+          "N_{2k}": 16773120,
+          "p_24(n-k+1)": 1,
+          "n-k+1": 0,
+          "contribution": 16773120
+        }
+      ],
+      "lattice_sum": 21493760,
+      "constant_720_at_n_eq_0": 0,
+      "j_via_decomposition": 21493760,
+      "j_actual": 21493760,
+      "match": true
+    },
+    "q^3": {
+      "n": 3,
+      "contributions": [
+        {
+          "k": 0,
+          "squared_norm": 0,
+          "N_{2k}": 1,
+          "p_24(n-k+1)": 25650,
+          "n-k+1": 4,
+          "contribution": 25650
+        },
+        {
+          "k": 1,
+          "squared_norm": 2,
+          "N_{2k}": 0,
+          "p_24(n-k+1)": 3200,
+          "n-k+1": 3,
+          "contribution": 0
+        },
+        {
+          "k": 2,
+          "squared_norm": 4,
+          "N_{2k}": 196560,
+          "p_24(n-k+1)": 324,
+          "n-k+1": 2,
+          "contribution": 63685440
+        },
+        {
+          "k": 3,
+          "squared_norm": 6,
+          "N_{2k}": 16773120,
+          "p_24(n-k+1)": 24,
+          "n-k+1": 1,
+          "contribution": 402554880
+        },
+        {
+          "k": 4,
+          "squared_norm": 8,
+          "N_{2k}": 398034000,
+          "p_24(n-k+1)": 1,
+          "n-k+1": 0,
+          "contribution": 398034000
+        }
+      ],
+      "lattice_sum": 864299970,
+      "constant_720_at_n_eq_0": 0,
+      "j_via_decomposition": 864299970,
+      "j_actual": 864299970,
+      "match": true
+    },
+    "q^4": {
+      "n": 4,
+      "contributions": [
+        {
+          "k": 0,
+          "squared_norm": 0,
+          "N_{2k}": 1,
+          "p_24(n-k+1)": 176256,
+          "n-k+1": 5,
+          "contribution": 176256
+        },
+        {
+          "k": 1,
+          "squared_norm": 2,
+          "N_{2k}": 0,
+          "p_24(n-k+1)": 25650,
+          "n-k+1": 4,
+          "contribution": 0
+        },
+        {
+          "k": 2,
+          "squared_norm": 4,
+          "N_{2k}": 196560,
+          "p_24(n-k+1)": 3200,
+          "n-k+1": 3,
+          "contribution": 628992000
+        },
+        {
+          "k": 3,
+          "squared_norm": 6,
+          "N_{2k}": 16773120,
+          "p_24(n-k+1)": 324,
+          "n-k+1": 2,
+          "contribution": 5434490880
+        },
+        {
+          "k": 4,
+          "squared_norm": 8,
+          "N_{2k}": 398034000,
+          "p_24(n-k+1)": 24,
+          "n-k+1": 1,
+          "contribution": 9552816000
+        },
+        {
+          "k": 5,
+          "squared_norm": 10,
+          "N_{2k}": 4629381120,
+          "p_24(n-k+1)": 1,
+          "n-k+1": 0,
+          "contribution": 4629381120
+        }
+      ],
+      "lattice_sum": 20245856256,
+      "constant_720_at_n_eq_0": 0,
+      "j_via_decomposition": 20245856256,
+      "j_actual": 20245856256,
+      "match": true
+    }
+  },
+  "master_identity": "j(tau) - 720  =  theta_Lambda(tau) / Delta(tau)  =  chi_{V_Lambda}(tau)",
+  "consequence": "Every j-coefficient is a finite sum of Leech vector counts weighted by 24-color partition numbers; the Monster is the natural symmetry of this sum."
+}
