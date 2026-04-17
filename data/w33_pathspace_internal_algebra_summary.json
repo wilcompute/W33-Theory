@@ -1,0 +1,65 @@
+{
+  "srg": {
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "q": 3
+  },
+  "shell": {
+    "beta_r": {
+      "re": 1.0,
+      "im": 3.1622776601683795
+    },
+    "beta_s": {
+      "re": -2.0,
+      "im": 2.6457513110645907
+    },
+    "modulus_sq_r": 11.000000000000004,
+    "modulus_sq_s": 11.0,
+    "real_gap_sq": 3.0,
+    "imag_gap_sq": 3.000000000000001,
+    "D_shell_trace": {
+      "re": -1.0,
+      "im": 5.80802897123297
+    },
+    "D_shell_det": {
+      "re": -10.366600265340757,
+      "im": -3.6788040092721683
+    }
+  },
+  "quaternion_relations": {
+    "i2=-1": true,
+    "j2=-1": true,
+    "k2=-1": true,
+    "ij=k": true,
+    "jk=i": true,
+    "ki=j": true,
+    "ijk=-1": true
+  },
+  "heisenberg_relations": {
+    "XZ=omega ZX": true,
+    "X3=1": true,
+    "Z3=1": true,
+    "basis_rank": 9
+  },
+  "candidate_algebra_blocks": [
+    "C",
+    "H",
+    "M3(C)"
+  ],
+  "candidate_state_dim": 6,
+  "noncommutativity_checks": {
+    "[qi,qj]!=0": true,
+    "[X,Z]!=0": true,
+    "[qi,X]=0 (separate blocks)": true
+  },
+  "dirac_trace": {
+    "re": 0.0,
+    "im": 5.80802897123297
+  },
+  "dirac_det": {
+    "re": 0.0,
+    "im": 0.0
+  }
+}
