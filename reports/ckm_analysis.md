@@ -36,3 +36,18 @@ Files produced:
 - [data/ckm_from_grams.json](data/ckm_from_grams.json)
 - [data/ckm_comparison.json](data/ckm_comparison.json)
 - [data/ckm_sample_stats.json](data/ckm_sample_stats.json)
+
+**Global joint fit (new)**
+
+- Script: `scripts/ckm_global_fit.py` → wrote [data/ckm_global_fit.json](data/ckm_global_fit.json).
+- Summary of results (from `data/ckm_global_fit.json`):
+  - **left_scales**: [0.679168390033092, 0.6730599748106221, 0.3787474325042881]
+  - **right_scales**: [4.6119457294474016, 2.0270714291155154, 2.142943460642181]
+  - **final_loss**: 0.0050434454039873814
+  - **final_unitary_penalty**: 2.6000054249227684e-30
+  - **optimizer_success**: true — "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+  - Projected unitary (`unitary_real`, `unitary_imag`) and its `abs`/`abs2` are saved in the JSON.
+
+Notes: the global optimizer jointly varied a complex 3×3 matrix (18 real parameters) and the log of diagonal left/right scales (6 parameters) with a unitarity penalty; the result projects to a numerically unitary candidate whose squared magnitudes are in `abs2`.
+
+Next steps added: compute the Jarlskog invariant for the projected unitary and embed the results/plots in a reproducible notebook (`reports/ckm_analysis.ipynb`).
