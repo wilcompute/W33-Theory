@@ -20,4 +20,4 @@ def test_weight12_triad_condenses() -> None:
 
     assert w12["D_condensed"][:4] == [0, 1728, -41472, 435456]
     assert w12["L_condensed"][:4] == [12, 0, 2358720, 201277440]
-    assert w12["I_condensed"][:4] == [691, 65520, 1346400, 116067120]
+    assert w12["I_condensed"][:4] == [691, 65520, 134250480, 11606736960]
