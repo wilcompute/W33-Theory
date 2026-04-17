@@ -1,0 +1,130 @@
+{
+  "monster_order": {
+    "computed": 808017424794512875886459904961710757005754368000000000,
+    "classical": 808017424794512875886459904961710757005754368000000000,
+    "matches": true,
+    "log10_approx": 54
+  },
+  "monster_primes_eq_ogg": {
+    "monster_primes": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      41,
+      47,
+      59,
+      71
+    ],
+    "ogg_primes": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      41,
+      47,
+      59,
+      71
+    ],
+    "matches": true,
+    "count": 15
+  },
+  "moonshine_decomposition": {
+    "n_tested": 4,
+    "discrepancies": [],
+    "all_match": true
+  },
+  "mckay_observation": {
+    "j_q1_coefficient": 196884,
+    "trivial_rep_dim": 1,
+    "smallest_faithful_M_rep_dim": 196883,
+    "1_plus_196883_equals_196884": true
+  },
+  "heegner_compare": {
+    "heegner_abs_disc": [
+      3,
+      4,
+      7,
+      8,
+      11,
+      19,
+      43,
+      67,
+      163
+    ],
+    "primes_in_heegner_abs_disc": [
+      3,
+      7,
+      11,
+      19,
+      43,
+      67,
+      163
+    ],
+    "monster_primes": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      41,
+      47,
+      59,
+      71
+    ],
+    "intersection": [
+      3,
+      7,
+      11,
+      19
+    ],
+    "intersection_size": 4,
+    "ogg_gap_primes_up_to_71_in_heegner": [
+      43,
+      67
+    ]
+  },
+  "w33_k_signatures": {
+    "largest_monster_prime": 71,
+    "smallest_monster_prime": 2,
+    "monster_prime_count": 15,
+    "k_W33": 12,
+    "k_W33_squared": 144,
+    "k_W33_minus_1": 11,
+    "two_k_W33_minus_1": 23,
+    "k_W33_in_Monster_primes": false,
+    "11_in_Monster_primes": true,
+    "13_in_Monster_primes": true,
+    "23_in_Monster_primes": true,
+    "11_and_13_straddle_k_W33": true
+  },
+  "summary_chain": {
+    "monster_order_matches_classical": true,
+    "monster_primes_equal_ogg_primes": true,
+    "first_four_j_coefs_are_sums_of_M_irrep_dims": true,
+    "mckay_196884_equals_1_plus_196883": true,
+    "monster_prime_count_is_15": true,
+    "k_W33_minus_1_and_plus_1_both_Monster_primes": true,
+    "two_k_W33_minus_1_is_Monster_prime": true
+  }
+}
