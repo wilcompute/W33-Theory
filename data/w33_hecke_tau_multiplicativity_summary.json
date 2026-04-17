@@ -1,0 +1,260 @@
+{
+  "hecke_eigenform": {
+    "primes": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13
+    ],
+    "n_max": 20,
+    "per_prime": {
+      "2": {
+        "tau_p": -24,
+        "match": true,
+        "first_6": [
+          0,
+          -24,
+          576,
+          -6048,
+          35328,
+          -115920
+        ]
+      },
+      "3": {
+        "tau_p": 252,
+        "match": true,
+        "first_6": [
+          0,
+          252,
+          -6048,
+          63504,
+          -370944,
+          1217160
+        ]
+      },
+      "5": {
+        "tau_p": 4830,
+        "match": true,
+        "first_6": [
+          0,
+          4830,
+          -115920,
+          1217160,
+          -7109760,
+          23328900
+        ]
+      },
+      "7": {
+        "tau_p": -16744,
+        "match": true,
+        "first_6": [
+          0,
+          -16744,
+          401856,
+          -4219488,
+          24647168,
+          -80873520
+        ]
+      },
+      "11": {
+        "tau_p": 534612,
+        "match": true,
+        "first_6": [
+          0,
+          534612,
+          -12830688,
+          134722224,
+          -786948864,
+          2582175960
+        ]
+      },
+      "13": {
+        "tau_p": -577738,
+        "match": true,
+        "first_6": [
+          0,
+          -577738,
+          13865712,
+          -145589976,
+          850430336,
+          -2790474540
+        ]
+      }
+    },
+    "all_match": true
+  },
+  "tau_multiplicativity": {
+    "n_max": 20,
+    "n_tested": 255,
+    "discrepancies": [],
+    "all_match": true
+  },
+  "prime_power_recursion": {
+    "primes": [
+      2,
+      3,
+      5
+    ],
+    "max_k": 4,
+    "n_tested": 12,
+    "discrepancies": [],
+    "all_match": true
+  },
+  "ramanujan_petersson": {
+    "primes": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23
+    ],
+    "per_prime": {
+      "2": {
+        "tau_p": -24,
+        "tau_p_squared": 576,
+        "4_p_to_11": 8192,
+        "bound_holds": true,
+        "satake_abs_squared": 2048
+      },
+      "3": {
+        "tau_p": 252,
+        "tau_p_squared": 63504,
+        "4_p_to_11": 708588,
+        "bound_holds": true,
+        "satake_abs_squared": 177147
+      },
+      "5": {
+        "tau_p": 4830,
+        "tau_p_squared": 23328900,
+        "4_p_to_11": 195312500,
+        "bound_holds": true,
+        "satake_abs_squared": 48828125
+      },
+      "7": {
+        "tau_p": -16744,
+        "tau_p_squared": 280361536,
+        "4_p_to_11": 7909306972,
+        "bound_holds": true,
+        "satake_abs_squared": 1977326743
+      },
+      "11": {
+        "tau_p": 534612,
+        "tau_p_squared": 285809990544,
+        "4_p_to_11": 1141246682444,
+        "bound_holds": true,
+        "satake_abs_squared": 285311670611
+      },
+      "13": {
+        "tau_p": -577738,
+        "tau_p_squared": 333781196644,
+        "4_p_to_11": 7168641576148,
+        "bound_holds": true,
+        "satake_abs_squared": 1792160394037
+      },
+      "17": {
+        "tau_p": -6905934,
+        "tau_p_squared": 47691924412356,
+        "4_p_to_11": 137087585230532,
+        "bound_holds": true,
+        "satake_abs_squared": 34271896307633
+      },
+      "19": {
+        "tau_p": 10661420,
+        "tau_p_squared": 113665876416400,
+        "4_p_to_11": 465961035592876,
+        "bound_holds": true,
+        "satake_abs_squared": 116490258898219
+      },
+      "23": {
+        "tau_p": 18643272,
+        "tau_p_squared": 347571590865984,
+        "4_p_to_11": 3811239031655708,
+        "bound_holds": true,
+        "satake_abs_squared": 952809757913927
+      }
+    },
+    "all_bounded": true
+  },
+  "euler_factor_p2": {
+    "p": 2,
+    "tau_p": -24,
+    "euler_coeffs": [
+      1,
+      -24,
+      -1472,
+      84480,
+      987136,
+      -196706304
+    ],
+    "tau_p_powers": [
+      1,
+      -24,
+      -1472,
+      84480,
+      987136,
+      -196706304
+    ],
+    "match": true
+  },
+  "euler_factor_p3": {
+    "p": 3,
+    "tau_p": 252,
+    "euler_coeffs": [
+      1,
+      252,
+      -113643,
+      -73279080,
+      1665188361,
+      13400796651732
+    ],
+    "tau_p_powers": [
+      1,
+      252,
+      -113643,
+      -73279080,
+      1665188361,
+      13400796651732
+    ],
+    "match": true
+  },
+  "tau_catalogue": {
+    "primes": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29
+    ],
+    "tau_p": {
+      "2": -24,
+      "3": 252,
+      "5": 4830,
+      "7": -16744,
+      "11": 534612,
+      "13": -577738,
+      "17": -6905934,
+      "19": 10661420,
+      "23": 18643272,
+      "29": 128406630
+    }
+  },
+  "summary_chain": {
+    "T_p_Delta_equals_tau_p_Delta_for_small_primes": true,
+    "tau_mn_equals_tau_m_tau_n_for_coprime": true,
+    "tau_prime_power_recursion": true,
+    "ramanujan_petersson_bound_holds": true,
+    "euler_factor_p_equals_2_matches_tau": true,
+    "euler_factor_p_equals_3_matches_tau": true
+  }
+}
