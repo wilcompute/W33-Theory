@@ -1,0 +1,146 @@
+{
+  "heegner_table": {
+    "discriminants": [
+      -3,
+      -4,
+      -7,
+      -8,
+      -11,
+      -19,
+      -43,
+      -67,
+      -163
+    ],
+    "j_values": [
+      0,
+      1728,
+      -3375,
+      8000,
+      -32768,
+      -884736,
+      -884736000,
+      -147197952000,
+      -262537412640768000
+    ],
+    "cube_roots": [
+      0,
+      12,
+      -15,
+      20,
+      -32,
+      -96,
+      -960,
+      -5280,
+      -640320
+    ],
+    "count": 9
+  },
+  "j_values_are_cubes": {
+    "n_tested": 9,
+    "discrepancies": [],
+    "all_match": true
+  },
+  "numeric_j_matches": {
+    "threshold": 0.001,
+    "per_D": {
+      "-3": {
+        "j_int": 0,
+        "j_numeric_str": "-4.82650862855e-5",
+        "abs_diff_str": "4.82651e-5",
+        "relative_diff": 4.826508628548522e-05,
+        "match": true
+      },
+      "-4": {
+        "j_int": 1728,
+        "j_numeric_str": "1727.99999994",
+        "abs_diff_str": "6.0271e-8",
+        "relative_diff": 3.4879057371219703e-11,
+        "match": true
+      },
+      "-7": {
+        "j_int": -3375,
+        "j_numeric_str": "-3375.0",
+        "abs_diff_str": "5.30186e-15",
+        "relative_diff": 1.5709216783494296e-18,
+        "match": true
+      },
+      "-8": {
+        "j_int": 8000,
+        "j_numeric_str": "8000.0",
+        "abs_diff_str": "5.3931e-17",
+        "relative_diff": 6.741376112494393e-21,
+        "match": true
+      },
+      "-11": {
+        "j_int": -32768,
+        "j_numeric_str": "-32768.0",
+        "abs_diff_str": "2.52684e-22",
+        "relative_diff": 7.711301980174798e-27,
+        "match": true
+      },
+      "-19": {
+        "j_int": -884736,
+        "j_numeric_str": "-884736.0",
+        "abs_diff_str": "1.05926e-33",
+        "relative_diff": 1.1972627647264039e-39,
+        "match": true
+      },
+      "-43": {
+        "j_int": -884736000,
+        "j_numeric_str": "-884736000.0",
+        "abs_diff_str": "8.07148e-43",
+        "relative_diff": 9.123036877114694e-52,
+        "match": true
+      },
+      "-67": {
+        "j_int": -147197952000,
+        "j_numeric_str": "-147197952000.0",
+        "abs_diff_str": "1.04405e-52",
+        "relative_diff": 7.092820930550474e-64,
+        "match": true
+      },
+      "-163": {
+        "j_int": -262537412640768000,
+        "j_numeric_str": "-2.62537412641e+17",
+        "abs_diff_str": "8.38956e-94",
+        "relative_diff": 3.1955689450965702e-111,
+        "match": true
+      }
+    },
+    "all_close": true
+  },
+  "ramanujan_constant": {
+    "exp_pi_sqrt163_str": "262537412640768744.0",
+    "target_640320_cubed_p744": 262537412640768744,
+    "abs_diff_str": "7.49927402802e-13",
+    "diff_lt_1e_minus_9": true,
+    "diff_lt_1e_minus_11": true
+  },
+  "cube_structure_pins": {
+    "j_at_i_is_12_cubed": true,
+    "j_at_i_is_k_W33_cubed": true,
+    "j_at_-163_cube_root_640320": true,
+    "640320_factors": "2^6 * 3 * 5 * 23 * 29",
+    "640320_squared": 410009702400,
+    "640320_cubed": 262537412640768000,
+    "Heegner_count": 9,
+    "all_class_number_1_imag_quad": [
+      -3,
+      -4,
+      -7,
+      -8,
+      -11,
+      -19,
+      -43,
+      -67,
+      -163
+    ]
+  },
+  "summary_chain": {
+    "nine_Heegner_discriminants_listed": true,
+    "all_j_values_are_perfect_cubes": true,
+    "j_at_i_equals_12_cubed": true,
+    "numeric_j_matches_for_all_nine": true,
+    "ramanujan_e_pi_root163_near_640320_cubed": true
+  }
+}
