@@ -1,0 +1,286 @@
+{
+  "count": {
+    "count": 24,
+    "equals_24": true
+  },
+  "rank_check": {
+    "n_tested": 24,
+    "discrepancies": [],
+    "all_match": true
+  },
+  "root_table": {
+    "table": [
+      {
+        "label": "Leech",
+        "h": 0
+      },
+      {
+        "label": "A1^24",
+        "h": 48
+      },
+      {
+        "label": "A2^12",
+        "h": 72
+      },
+      {
+        "label": "A3^8",
+        "h": 96
+      },
+      {
+        "label": "A4^6",
+        "h": 120
+      },
+      {
+        "label": "D4^6",
+        "h": 144
+      },
+      {
+        "label": "A5^4 D4",
+        "h": 144
+      },
+      {
+        "label": "A6^4",
+        "h": 168
+      },
+      {
+        "label": "A7^2 D5^2",
+        "h": 192
+      },
+      {
+        "label": "A8^3",
+        "h": 216
+      },
+      {
+        "label": "A9^2 D6",
+        "h": 240
+      },
+      {
+        "label": "D6^4",
+        "h": 240
+      },
+      {
+        "label": "E6^4",
+        "h": 288
+      },
+      {
+        "label": "A11 D7 E6",
+        "h": 288
+      },
+      {
+        "label": "A12^2",
+        "h": 312
+      },
+      {
+        "label": "D8^3",
+        "h": 336
+      },
+      {
+        "label": "A15 D9",
+        "h": 384
+      },
+      {
+        "label": "A17 E7",
+        "h": 432
+      },
+      {
+        "label": "D10 E7^2",
+        "h": 432
+      },
+      {
+        "label": "D12^2",
+        "h": 528
+      },
+      {
+        "label": "A24",
+        "h": 600
+      },
+      {
+        "label": "E8^3",
+        "h": 720
+      },
+      {
+        "label": "D16 E8",
+        "h": 720
+      },
+      {
+        "label": "D24",
+        "h": 1104
+      }
+    ],
+    "distinct_root_counts": [
+      0,
+      48,
+      72,
+      96,
+      120,
+      144,
+      168,
+      192,
+      216,
+      240,
+      288,
+      312,
+      336,
+      384,
+      432,
+      528,
+      600,
+      720,
+      1104
+    ],
+    "extremes": {
+      "leech_h_0": 0,
+      "max_h_1104": 1104
+    }
+  },
+  "theta_root_count_pin": {
+    "n_max": 8,
+    "discrepancies": [],
+    "all_match": true
+  },
+  "theta_collisions": {
+    "by_root_count": {
+      "0": [
+        "Leech"
+      ],
+      "48": [
+        "A1^24"
+      ],
+      "72": [
+        "A2^12"
+      ],
+      "96": [
+        "A3^8"
+      ],
+      "120": [
+        "A4^6"
+      ],
+      "144": [
+        "D4^6",
+        "A5^4 D4"
+      ],
+      "168": [
+        "A6^4"
+      ],
+      "192": [
+        "A7^2 D5^2"
+      ],
+      "216": [
+        "A8^3"
+      ],
+      "240": [
+        "A9^2 D6",
+        "D6^4"
+      ],
+      "288": [
+        "E6^4",
+        "A11 D7 E6"
+      ],
+      "312": [
+        "A12^2"
+      ],
+      "336": [
+        "D8^3"
+      ],
+      "384": [
+        "A15 D9"
+      ],
+      "432": [
+        "A17 E7",
+        "D10 E7^2"
+      ],
+      "528": [
+        "D12^2"
+      ],
+      "600": [
+        "A24"
+      ],
+      "720": [
+        "E8^3",
+        "D16 E8"
+      ],
+      "1104": [
+        "D24"
+      ]
+    },
+    "collision_root_counts": [
+      144,
+      240,
+      288,
+      432,
+      720
+    ],
+    "collisions": {
+      "144": [
+        "D4^6",
+        "A5^4 D4"
+      ],
+      "240": [
+        "A9^2 D6",
+        "D6^4"
+      ],
+      "288": [
+        "E6^4",
+        "A11 D7 E6"
+      ],
+      "432": [
+        "A17 E7",
+        "D10 E7^2"
+      ],
+      "720": [
+        "E8^3",
+        "D16 E8"
+      ]
+    },
+    "n_distinct_thetas": 19,
+    "n_lattices": 24,
+    "collapse_24_to_19": true
+  },
+  "E8_cubed_theta": {
+    "n_max": 8,
+    "theta_E8_cubed": [
+      1,
+      720,
+      179280,
+      16954560,
+      396974160,
+      4632858720,
+      34413301440,
+      187477879680,
+      814940600400
+    ],
+    "E_4_cubed": [
+      1,
+      720,
+      179280,
+      16954560,
+      396974160,
+      4632858720,
+      34413301440,
+      187477879680,
+      814940600400
+    ],
+    "all_match": true
+  },
+  "leech_theta_pin": {
+    "n_max": 4,
+    "theta_Leech": [
+      1,
+      0,
+      196560,
+      16773120,
+      398034000
+    ],
+    "q1_is_0": true,
+    "q2_is_196560": true,
+    "matches_layer_37": true
+  },
+  "summary_chain": {
+    "exactly_24_Niemeier_lattices": true,
+    "every_Niemeier_has_rank_24_or_Leech": true,
+    "theta_q0_q1_match_root_count_pin": true,
+    "theta_collapse_24_to_19_distinct_thetas": true,
+    "E8_cubed_theta_equals_E4_cubed": true,
+    "leech_theta_matches_layer_37": true
+  }
+}
