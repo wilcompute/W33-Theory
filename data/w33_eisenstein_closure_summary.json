@@ -1,0 +1,79 @@
+{
+  "E8_closure": {
+    "n_max": 20,
+    "all_match": true
+  },
+  "E10_closure": {
+    "n_max": 20,
+    "all_match": true
+  },
+  "E14_closure": {
+    "n_max": 20,
+    "all_match": true
+  },
+  "E12_691_identity": {
+    "n_max": 20,
+    "all_match": true
+  },
+  "ramanujan_691_congruence": {
+    "n_max": 20,
+    "discrepancies": [],
+    "all_match": true,
+    "first_few_tau": [
+      1,
+      -24,
+      252,
+      -1472,
+      4830,
+      -6048,
+      -16744
+    ]
+  },
+  "bernoulli_signature": {
+    "B_12_numerator": -691,
+    "B_12_denominator": 2730,
+    "E_12_coefficient_numerator": 65520,
+    "E_12_coefficient_denominator": 691,
+    "k_plus_k_equals_2k_W33": "weight 12 = 2 * k = 2 * 12 ... wait, we've been using k=12 for W33 valency; here weight 2k = 12 means k=6 in Eisenstein notation, but the W33 valency is also 12 and equals the weight of Delta",
+    "delta_weight": 12,
+    "dim_M_12": 2,
+    "first_prime_of_ring_failure": 691
+  },
+  "closure_ladder": {
+    "weight_4_generator": {
+      "form": "E_4",
+      "dim_M": 1
+    },
+    "weight_6_generator": {
+      "form": "E_6",
+      "dim_M": 1
+    },
+    "weight_8_monomial": {
+      "E_8 = E_4^2": true,
+      "dim_M": 1
+    },
+    "weight_10_monomial": {
+      "E_10 = E_4 * E_6": true,
+      "dim_M": 1
+    },
+    "weight_12_two_dim": {
+      "dim_M": 2,
+      "ring_identity_with_691": "691 E_12 = 441 E_4^3 + 250 E_6^2"
+    },
+    "weight_14_monomial": {
+      "E_14 = E_4^2 * E_6": true,
+      "dim_M": 1
+    },
+    "first_failure_at": 12,
+    "first_failure_prime": 691
+  },
+  "summary_chain": {
+    "E_8_equals_E_4_squared": true,
+    "E_10_equals_E_4_E_6": true,
+    "E_14_equals_E_4_squared_E_6": true,
+    "691_E_12_equals_441_E4cubed_plus_250_E6sq": true,
+    "tau_n_congruent_sigma_11_n_mod_691": true,
+    "first_ring_failure_weight_is_12": true,
+    "first_ring_failure_prime_is_691": true
+  }
+}
