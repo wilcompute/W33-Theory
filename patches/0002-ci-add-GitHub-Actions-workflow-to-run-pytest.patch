@@ -1,0 +1,93 @@
+From 8506413de97cc764bab8e6dd6bbbcb0d682d4220 Mon Sep 17 00:00:00 2001
+From: Wil <wiljd4@gmail.com>
+Date: Wed, 15 Apr 2026 22:51:12 -0400
+Subject: [PATCH 02/10] ci: add GitHub Actions workflow to run pytest
+
+---
+ .github/workflows/pytest.yml | 64 +++++++++++++++++++++++++++++++-----
+ 1 file changed, 55 insertions(+), 9 deletions(-)
+
+diff --git a/.github/workflows/pytest.yml b/.github/workflows/pytest.yml
+index f55b17af..f2b67823 100644
+--- a/.github/workflows/pytest.yml
++++ b/.github/workflows/pytest.yml
+@@ -1,5 +1,51 @@
+ name: pytest
+ 
++on:
++  push:
++    branches:
++      - ci/add-github-actions
++      - review/remote-master
++      - master
++  pull_request:
++    branches:
++      - master
++      - review/remote-master
++
++jobs:
++  test:
++    runs-on: ubuntu-latest
++    strategy:
++      matrix:
++        python-version: [3.11, 3.13]
++    steps:
++      - uses: actions/checkout@v4
++
++      - name: Cache pip
++        uses: actions/cache@v4
++        with:
++          path: ~/.cache/pip
++          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements*.txt') }}
++          restore-keys: |
++            ${{ runner.os }}-pip-
++
++      - name: Set up Python
++        uses: actions/setup-python@v4
++        with:
++          python-version: ${{ matrix.python-version }}
++
++      - name: Install dependencies
++        run: |
++          python -m pip install --upgrade pip
++          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
++          if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
++
++      - name: Run tests
++        run: |
++          python -m pytest -q
++        env:
++          PYTHONWARNINGS: default
++name: pytest
++
+ on:
+   push:
+     branches: [ main, master ]
+@@ -42,15 +88,15 @@ jobs:
+         python tools/minimal_hitting_sets.py || true
+         python tools/generate_gf2_certificate.py || true
+ 
+-    - name: Generate SUMMARY_RESULTS.json (local)
+-      run: |
+-        python scripts/collect_results.py || true
+-        python scripts/make_numeric_comparisons_from_summary.py || true
+-        python scripts/prepare_legacy_test_fixtures.py || true
+-
+-    - name: Run pytest
+-      run: |
+-        pytest -q
++    - name: Generate SUMMARY_RESULTS.json (local)
++      run: |
++        python scripts/collect_results.py || true
++        python scripts/make_numeric_comparisons_from_summary.py || true
++        python scripts/prepare_legacy_test_fixtures.py || true
++
++    - name: Run pytest
++      run: |
++        pytest -q
+ 
+     - name: Collect PART_*.json results
+       run: |
+-- 
+2.53.0.windows.2
+

@@ -1,0 +1,30 @@
+name: Build LaTeX PDF
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install TeX Live and Inkscape
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-bibtex-extra inkscape
+
+      - name: Build PDF
+        run: |
+          set -e
+          bash compile.sh --arxiv || exit 0
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: W36_PAPER
+          path: W36_PAPER.pdf

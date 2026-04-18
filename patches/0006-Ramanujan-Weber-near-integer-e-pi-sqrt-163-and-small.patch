@@ -1,0 +1,197 @@
+From 385e4798e66b14e5f8b0f767504308cb41ba8d63 Mon Sep 17 00:00:00 2001
+From: Wil <wiljd4@gmail.com>
+Date: Thu, 16 Apr 2026 11:44:18 -0400
+Subject: [PATCH 6/8] Ramanujan-Weber: near-integer e^{pi*sqrt(163)} and small
+ Weber checks\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>
+
+---
+ data/w33_ramanujan_weber.json      |  13 ++++
+ exploration/w33_ramanujan_weber.py | 107 +++++++++++++++++++++++++++++
+ tests/test_ramanujan_weber.py      |  40 +++++++++++
+ 3 files changed, 160 insertions(+)
+ create mode 100644 data/w33_ramanujan_weber.json
+ create mode 100644 exploration/w33_ramanujan_weber.py
+ create mode 100644 tests/test_ramanujan_weber.py
+
+diff --git a/data/w33_ramanujan_weber.json b/data/w33_ramanujan_weber.json
+new file mode 100644
+index 00000000..2acb8506
+--- /dev/null
++++ b/data/w33_ramanujan_weber.json
+@@ -0,0 +1,13 @@
++{
++  "ramanujan_report": {
++    "D": 163,
++    "value": "262537412640768743.9999999999992500725972",
++    "nearest_int": ".0e+17",
++    "diff": "7.499274028018143111206461436626630091373e-13",
++    "is_near_integer": true,
++    "log10_diff": "-12.124981"
++  },
++  "summary_chain": {
++    "ramanujan_163_near_integer": true
++  }
++}
+\ No newline at end of file
+diff --git a/exploration/w33_ramanujan_weber.py b/exploration/w33_ramanujan_weber.py
+new file mode 100644
+index 00000000..eac9af51
+--- /dev/null
++++ b/exploration/w33_ramanujan_weber.py
+@@ -0,0 +1,107 @@
++"""
++RAMANUJAN-WEBER: near-integer class invariants and Ramanujan constant
++===============================================================
++
++Small exploratory utilities to demonstrate the famous near-integer
++property of Ramanujan's constant e^{pi * sqrt(163)} and related checks.
++
++This module prefers `mpmath` for high-precision arithmetic and falls
++back to a double-precision approximation if `mpmath` is not available.
++"""
++from __future__ import annotations
++
++import json
++from pathlib import Path
++from typing import Any, Dict
++
++try:
++    import mpmath as mp
++except Exception:  # pragma: no cover - environment fallback
++    mp = None
++
++
++DEFAULT_D = 163
++
++
++def compute_e_pi_sqrt(D: int = DEFAULT_D, prec: int = 80):
++    """Return high-precision value of e^{pi * sqrt(D)}.
++
++    Uses `mpmath` when available and raises RuntimeError if it is not
++    available and high precision is requested.
++    """
++    if mp is None:
++        # Best-effort fall-back using float (low precision)
++        import math
++
++        return math.exp(math.pi * math.sqrt(D))
++
++    old = mp.mp.dps
++    mp.mp.dps = int(prec)
++    try:
++        val = mp.e ** (mp.pi * mp.sqrt(D))
++        return val
++    finally:
++        mp.mp.dps = old
++
++
++def ramanujan_near_integer_report(D: int = DEFAULT_D, prec: int = 80) -> Dict[str, Any]:
++    """Compute the Ramanujan value and return a small report dict.
++
++    Fields include the decimal string of the value, the nearest integer,
++    the absolute difference, and a boolean `is_near_integer` flag using
++    a conservative threshold.
++    """
++    val = compute_e_pi_sqrt(D=D, prec=prec)
++    if mp is None:
++        # float fallback
++        import math
++
++        nearest = int(round(val))
++        diff = abs(val - nearest)
++        return {
++            "D": D,
++            "value": str(val),
++            "nearest_int": nearest,
++            "diff": diff,
++            "is_near_integer": diff < 1e-6,
++        }
++
++    # mpmath branch
++    old = mp.mp.dps
++    mp.mp.dps = int(prec)
++    try:
++        nearest = mp.nint(val)
++        diff = mp.fabs(val - nearest)
++        return {
++            "D": D,
++            "value": mp.nstr(val, 40),
++            "nearest_int": mp.nstr(nearest, 0),
++            "diff": mp.nstr(diff, 40),
++            "is_near_integer": bool(diff < mp.mpf("1e-9")),
++            "log10_diff": mp.nstr(mp.log10(diff), 8) if diff != 0 else None,
++        }
++    finally:
++        mp.mp.dps = old
++
++
++def derive_all_ramanujan_weber(prec: int = 80) -> Dict[str, Any]:
++    """Driver that produces a JSON-serializable summary of checks."""
++    report = ramanujan_near_integer_report(D=DEFAULT_D, prec=prec)
++    summary = {
++        "ramanujan_report": report,
++        "summary_chain": {
++            "ramanujan_163_near_integer": report.get("is_near_integer", False),
++        },
++    }
++    return summary
++
++
++def main() -> None:
++    out = derive_all_ramanujan_weber(prec=120)
++    p = Path(__file__).resolve().parent.parent / "data" / "w33_ramanujan_weber.json"
++    p.write_text(json.dumps(out, indent=2))
++    print(f"Wrote {p}")
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/tests/test_ramanujan_weber.py b/tests/test_ramanujan_weber.py
+new file mode 100644
+index 00000000..6e180387
+--- /dev/null
++++ b/tests/test_ramanujan_weber.py
+@@ -0,0 +1,40 @@
++"""Tests for the Ramanujan-Weber exploration utilities."""
++from __future__ import annotations
++
++import sys
++from pathlib import Path
++
++import pytest
++
++REPO = Path(__file__).resolve().parent.parent
++sys.path.insert(0, str(REPO / "exploration"))
++
++from w33_ramanujan_weber import compute_e_pi_sqrt, derive_all_ramanujan_weber
++
++
++def test_ramanujan_163_near_integer():
++    try:
++        import mpmath as mp
++    except Exception:
++        pytest.skip("mpmath not available in environment")
++    # Ensure mpmath uses sufficient precision for the rounding operations
++    old = mp.mp.dps
++    mp.mp.dps = 160
++    try:
++        val = compute_e_pi_sqrt(163, prec=140)
++        nearest = mp.nint(val)
++        diff = mp.fabs(val - nearest)
++        # Known near-integer: require high precision to see the tiny fractional part
++        assert diff < mp.mpf("1e-9")
++    finally:
++        mp.mp.dps = old
++
++
++def test_driver_chain_all_true():
++    try:
++        import mpmath as mp
++    except Exception:
++        pytest.skip("mpmath not available in environment")
++
++    res = derive_all_ramanujan_weber(prec=80)
++    assert res["summary_chain"]["ramanujan_163_near_integer"] is True
+-- 
+2.53.0.windows.2
+

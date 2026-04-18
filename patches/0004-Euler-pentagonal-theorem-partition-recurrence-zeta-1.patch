@@ -1,0 +1,693 @@
+From 51115c3710d9fc348c45e493fa2f2b61cdf7d31e Mon Sep 17 00:00:00 2001
+From: Wil <wiljd4@gmail.com>
+Date: Thu, 16 Apr 2026 11:08:05 -0400
+Subject: [PATCH 4/8] Euler pentagonal theorem, partition recurrence, zeta(-1)
+ = -1/12 = eta q^{1/24}
+
+Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>
+---
+ data/w33_euler_pentagonal.json      | 226 ++++++++++++++++++++++++
+ exploration/w33_euler_pentagonal.py | 256 ++++++++++++++++++++++++++++
+ tests/test_euler_pentagonal.py      | 173 +++++++++++++++++++
+ 3 files changed, 655 insertions(+)
+ create mode 100644 data/w33_euler_pentagonal.json
+ create mode 100644 exploration/w33_euler_pentagonal.py
+ create mode 100644 tests/test_euler_pentagonal.py
+
+diff --git a/data/w33_euler_pentagonal.json b/data/w33_euler_pentagonal.json
+new file mode 100644
+index 00000000..7064ba48
+--- /dev/null
++++ b/data/w33_euler_pentagonal.json
+@@ -0,0 +1,226 @@
++{
++  "pentagonal_exponents": [
++    0,
++    1,
++    2,
++    5,
++    7,
++    12,
++    15,
++    22,
++    26,
++    35,
++    40,
++    51
++  ],
++  "euler_product_coefs": [
++    1,
++    -1,
++    -1,
++    0,
++    0,
++    1,
++    0,
++    1,
++    0,
++    0,
++    0,
++    0,
++    -1,
++    0,
++    0,
++    -1,
++    0,
++    0,
++    0,
++    0,
++    0,
++    0,
++    1,
++    0,
++    0,
++    0
++  ],
++  "partition_recurrence": [
++    {
++      "n": 0,
++      "computed": 1,
++      "oeis": 1,
++      "match": true
++    },
++    {
++      "n": 1,
++      "computed": 1,
++      "oeis": 1,
++      "match": true
++    },
++    {
++      "n": 2,
++      "computed": 2,
++      "oeis": 2,
++      "match": true
++    },
++    {
++      "n": 3,
++      "computed": 3,
++      "oeis": 3,
++      "match": true
++    },
++    {
++      "n": 4,
++      "computed": 5,
++      "oeis": 5,
++      "match": true
++    },
++    {
++      "n": 5,
++      "computed": 7,
++      "oeis": 7,
++      "match": true
++    },
++    {
++      "n": 6,
++      "computed": 11,
++      "oeis": 11,
++      "match": true
++    },
++    {
++      "n": 7,
++      "computed": 15,
++      "oeis": 15,
++      "match": true
++    },
++    {
++      "n": 8,
++      "computed": 22,
++      "oeis": 22,
++      "match": true
++    },
++    {
++      "n": 9,
++      "computed": 30,
++      "oeis": 30,
++      "match": true
++    },
++    {
++      "n": 10,
++      "computed": 42,
++      "oeis": 42,
++      "match": true
++    },
++    {
++      "n": 11,
++      "computed": 56,
++      "oeis": 56,
++      "match": true
++    },
++    {
++      "n": 12,
++      "computed": 77,
++      "oeis": 77,
++      "match": true
++    },
++    {
++      "n": 13,
++      "computed": 101,
++      "oeis": 101,
++      "match": true
++    },
++    {
++      "n": 14,
++      "computed": 135,
++      "oeis": 135,
++      "match": true
++    },
++    {
++      "n": 15,
++      "computed": 176,
++      "oeis": 176,
++      "match": true
++    },
++    {
++      "n": 16,
++      "computed": 231,
++      "oeis": 231,
++      "match": true
++    },
++    {
++      "n": 17,
++      "computed": 297,
++      "oeis": 297,
++      "match": true
++    },
++    {
++      "n": 18,
++      "computed": 385,
++      "oeis": 385,
++      "match": true
++    },
++    {
++      "n": 19,
++      "computed": 490,
++      "oeis": 490,
++      "match": true
++    },
++    {
++      "n": 20,
++      "computed": 627,
++      "oeis": 627,
++      "match": true
++    },
++    {
++      "n": 21,
++      "computed": 792,
++      "oeis": 792,
++      "match": true
++    },
++    {
++      "n": 22,
++      "computed": 1002,
++      "oeis": 1002,
++      "match": true
++    },
++    {
++      "n": 23,
++      "computed": 1255,
++      "oeis": 1255,
++      "match": true
++    },
++    {
++      "n": 24,
++      "computed": 1575,
++      "oeis": 1575,
++      "match": true
++    },
++    {
++      "n": 25,
++      "computed": 1958,
++      "oeis": 1958,
++      "match": true
++    }
++  ],
++  "recurrence_all_match": true,
++  "product_inverse_check": {
++    "constant": 1,
++    "higher_nonzero": [],
++    "constant_is_1": true,
++    "higher_all_zero": true,
++    "inverse_check": true
++  },
++  "zeta_neg_1_check": {
++    "B_2": "1/6",
++    "zeta(-1)": "-1/12",
++    "zeta(-1) = -1/12": true,
++    "vacuum_shift": "-c/24 = -1/24 for c = 1",
++    "eta_prefactor": "q^{1/24} = q^{-zeta(-1)/2}",
++    "zeta_neg_1_over_2": "1/24",
++    "is_1_over_24": true
++  },
++  "summary_chain": {
++    "partition_recurrence_matches_OEIS": true,
++    "euler_times_partitions_equals_1": true,
++    "zeta(-1)_equals_minus_1_over_12": true,
++    "eta_prefactor_q_to_1_over_24": true,
++    "pentagonal_exponents_begin_0_1_2_5_7": true
++  }
++}
+\ No newline at end of file
+diff --git a/exploration/w33_euler_pentagonal.py b/exploration/w33_euler_pentagonal.py
+new file mode 100644
+index 00000000..418e921d
+--- /dev/null
++++ b/exploration/w33_euler_pentagonal.py
+@@ -0,0 +1,256 @@
++"""
++EULER'S PENTAGONAL THEOREM AND THE PARTITION RECURRENCE
++==========================================================
++
++EULER'S PENTAGONAL NUMBER THEOREM.
++
++    prod_{n>=1} (1 - q^n)  =  sum_{k in Z}  (-1)^k q^{k(3k-1)/2}
++                            =  1 - q - q^2 + q^5 + q^7 - q^{12} - q^{15} + q^{22}
++                               + q^{26} - q^{35} - q^{40} + ...
++
++The exponents are the generalized pentagonal numbers  k(3k-1)/2
++for  k = 0, 1, -1, 2, -2, 3, -3, ...  (giving 0, 1, 2, 5, 7, 12, 15, 22, 26, ...).
++
++PARTITION RECURRENCE.
++
++Multiplying  prod (1-q^n) * sum p(n) q^n  =  1  gives
++
++    p(n)  =  sum_{k>=1}  (-1)^{k-1}  [ p(n - k(3k-1)/2)  +  p(n - k(3k+1)/2) ]
++           =  p(n-1) + p(n-2) - p(n-5) - p(n-7) + p(n-12) + p(n-15) - ...
++
++with  p(0) = 1  and  p(m) = 0  for  m < 0.  This is Euler's recurrence,
++which computes p(n) in  O(n sqrt(n))  operations.
++
++24-COLOR PARTITION RECURRENCE.
++
++    1 / Delta(tau)  =  q^{-1} * sum p_24(n) q^n
++    Delta(tau) * (1/Delta)  =  1
++
++Setting  Delta  coefficients  d_n = tau(n)  and  p = p_24,  we get
++
++    p_24(n)  =  -  sum_{m=1}^{n}  tau(m+1) * p_24(n-m)  /  tau(1)
++             =  -  sum_{m=1}^{n}  tau(m+1) * p_24(n-m).
++
++(Since tau(1) = 1, this divides exactly.)
++
++CONNECTION TO  zeta(-1) = -1/12  AND  eta(tau).
++
++    eta(tau)  =  q^{1/24}  prod (1 - q^n).
++
++The  q^{1/24}  prefactor comes from the zeta-regularized sum
++
++    1 + 2 + 3 + ... =  zeta(-1)  =  -1/12,
++
++so the "Virasoro vacuum shift"  -c/24  for c=1 gives  -1/24.  The 24
++in the exponent is the SAME 2k = 24 from the W(3, 3) valency.
++
++BRIDGE TO W(3, 3).
++
++    k = 12 = W(3, 3) valency
++    2k = 24 = exponent in Delta = eta^24
++    -1/24 = zeta(-1) / 2 = vacuum energy of c = 1 CFT
++    Pentagonal exponents k(3k-1)/2 generate the expansion of prod(1-q^n).
++"""
++from __future__ import annotations
++
++import json
++from fractions import Fraction
++from pathlib import Path
++
++
++# ======================================================================
++#  Pentagonal exponents and Euler's theorem.
++# ======================================================================
++def generalized_pentagonal(k: int) -> int:
++    """k(3k - 1)/2  for  k in Z."""
++    return k * (3 * k - 1) // 2
++
++
++def euler_pentagonal_series(order: int) -> list:
++    """Coefficients of  prod (1 - q^n)  via Euler's theorem."""
++    coeffs = [0] * (order + 1)
++    coeffs[0] = 1
++    k = 1
++    while True:
++        e1 = generalized_pentagonal(k)
++        e2 = generalized_pentagonal(-k)
++        if e1 > order and e2 > order:
++            break
++        sign = 1 if (k % 2 == 1) else -1
++        # Wait: sign for k=1 is -1 (since (-1)^1 = -1).
++        # General: (-1)^k
++        sign = (-1) ** k
++        if e1 <= order:
++            coeffs[e1] += sign
++        if e2 <= order:
++            coeffs[e2] += sign
++        k += 1
++    return coeffs
++
++
++def first_pentagonal_exponents(n_terms: int = 10) -> list:
++    """Return the first n_terms pentagonal exponents  k(3k-1)/2  ordered, starting with k=0."""
++    exps = {0}   # k=0 gives 0
++    k = 1
++    while len(exps) < n_terms * 2:
++        exps.add(generalized_pentagonal(k))
++        exps.add(generalized_pentagonal(-k))
++        k += 1
++    return sorted(exps)[:n_terms]
++
++
++# ======================================================================
++#  Partition number p(n) via Euler's recurrence.
++# ======================================================================
++def partition_numbers(n_max: int) -> list:
++    """Compute p(0..n_max) via Euler's pentagonal recurrence."""
++    p = [0] * (n_max + 1)
++    p[0] = 1
++    for n in range(1, n_max + 1):
++        k = 1
++        while True:
++            e1 = generalized_pentagonal(k)
++            e2 = generalized_pentagonal(-k)
++            if e1 > n and e2 > n:
++                break
++            sign = (-1) ** (k - 1)
++            if e1 <= n:
++                p[n] += sign * p[n - e1]
++            if e2 <= n:
++                p[n] += sign * p[n - e2]
++            k += 1
++    return p
++
++
++# First 15 partition numbers (A000041): 1, 1, 2, 3, 5, 7, 11, 15, 22, 30, 42,
++# 56, 77, 101, 135.
++OEIS_A000041 = [1, 1, 2, 3, 5, 7, 11, 15, 22, 30, 42, 56, 77, 101, 135, 176,
++                231, 297, 385, 490, 627, 792, 1002, 1255, 1575, 1958]
++
++
++def verify_partition_recurrence(n_max: int = 25) -> list:
++    """Verify our computed p(n) matches OEIS A000041."""
++    p = partition_numbers(n_max)
++    results = []
++    for n in range(min(n_max + 1, len(OEIS_A000041))):
++        results.append({
++            "n":        n,
++            "computed": p[n],
++            "oeis":     OEIS_A000041[n],
++            "match":    p[n] == OEIS_A000041[n],
++        })
++    return results
++
++
++# ======================================================================
++#  Direct multiplication check:  prod(1-q^n) * sum p(n) q^n = 1.
++# ======================================================================
++def verify_product_inverse(order: int = 25) -> dict:
++    """Multiply euler series times partition series; expect 1 + 0q + 0q^2 + ..."""
++    euler = euler_pentagonal_series(order)
++    p = partition_numbers(order)
++    product = [0] * (order + 1)
++    for i in range(order + 1):
++        for j in range(order + 1 - i):
++            product[i + j] += euler[i] * p[j]
++
++    constant_is_1 = product[0] == 1
++    higher_all_zero = all(c == 0 for c in product[1:])
++    return {
++        "constant":       product[0],
++        "higher_nonzero": [(i, product[i]) for i in range(1, order + 1) if product[i] != 0],
++        "constant_is_1":  constant_is_1,
++        "higher_all_zero": higher_all_zero,
++        "inverse_check":   constant_is_1 and higher_all_zero,
++    }
++
++
++# ======================================================================
++#  zeta(-1) = -1/12  and the q^{1/24} prefactor of eta.
++# ======================================================================
++def zeta_neg_1_equals_minus_1_over_12() -> dict:
++    """zeta(-1) = -1/12 via zeta(s) = -B_{s+1}/(s+1) at s=-1, so zeta(-1) = -B_2/2.
++    B_2 = 1/6, so zeta(-1) = -1/12.  This gives the -c/24 = -1/24 shift in eta."""
++    from w33_bernoulli_zeta import bernoulli
++    B2 = bernoulli(2)
++    zeta_neg_1 = -B2 / 2
++    return {
++        "B_2":               str(B2),
++        "zeta(-1)":          str(zeta_neg_1),
++        "zeta(-1) = -1/12":  zeta_neg_1 == Fraction(-1, 12),
++        "vacuum_shift":      "-c/24 = -1/24 for c = 1",
++        "eta_prefactor":     "q^{1/24} = q^{-zeta(-1)/2}",
++        "zeta_neg_1_over_2": str(-zeta_neg_1 / 2),
++        "is_1_over_24":      -zeta_neg_1 / 2 == Fraction(1, 24),
++    }
++
++
++# ======================================================================
++#  Driver.
++# ======================================================================
++def derive_all_pentagonal(n_max: int = 25) -> dict:
++    euler_coef = euler_pentagonal_series(n_max)
++    part_check = verify_partition_recurrence(n_max)
++    prod_check = verify_product_inverse(n_max)
++    zeta_check = zeta_neg_1_equals_minus_1_over_12()
++    pent_exps = first_pentagonal_exponents(12)
++
++    return {
++        "pentagonal_exponents":   pent_exps,
++        "euler_product_coefs":    euler_coef,
++        "partition_recurrence":   part_check,
++        "recurrence_all_match":   all(r["match"] for r in part_check),
++        "product_inverse_check":  prod_check,
++        "zeta_neg_1_check":       zeta_check,
++        "summary_chain": {
++            "partition_recurrence_matches_OEIS":     all(r["match"] for r in part_check),
++            "euler_times_partitions_equals_1":       prod_check["inverse_check"],
++            "zeta(-1)_equals_minus_1_over_12":       zeta_check["zeta(-1) = -1/12"],
++            "eta_prefactor_q_to_1_over_24":          zeta_check["is_1_over_24"],
++            "pentagonal_exponents_begin_0_1_2_5_7":  pent_exps[:5] == [0, 1, 2, 5, 7],
++        },
++    }
++
++
++def main() -> None:
++    print("=" * 72)
++    print("  EULER'S PENTAGONAL THEOREM AND PARTITIONS")
++    print("=" * 72)
++    print()
++
++    pent_exps = first_pentagonal_exponents(10)
++    print(f"  First pentagonal exponents:  {pent_exps}")
++    print()
++
++    euler = euler_pentagonal_series(30)
++    print("  prod(1 - q^n) coefficients (first 30):")
++    print(f"    {euler[:30]}")
++    print()
++
++    p = partition_numbers(25)
++    print("  Partition numbers via Euler recurrence:")
++    for n in range(26):
++        print(f"    p({n:>2d}) = {p[n]:>5d}")
++    print()
++
++    prod = verify_product_inverse(25)
++    print(f"  prod * p = 1:  constant={prod['constant']},  higher zero={prod['higher_all_zero']}")
++    print()
++
++    zeta_c = zeta_neg_1_equals_minus_1_over_12()
++    print(f"  zeta(-1) = {zeta_c['zeta(-1)']}  (eta prefactor q^{{1/24}} from -zeta(-1)/2)")
++    print()
++
++    chain = derive_all_pentagonal(25)
++    print("  SUMMARY CHAIN:")
++    for key, val in chain["summary_chain"].items():
++        print(f"    {key}: {val}")
++    print()
++
++    out = Path(__file__).resolve().parent.parent / "data" / "w33_euler_pentagonal.json"
++    out.write_text(json.dumps(chain, indent=2, default=str))
++    print(f"  wrote {out}")
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/tests/test_euler_pentagonal.py b/tests/test_euler_pentagonal.py
+new file mode 100644
+index 00000000..99eb5008
+--- /dev/null
++++ b/tests/test_euler_pentagonal.py
+@@ -0,0 +1,173 @@
++"""Pin Euler's pentagonal theorem and the partition recurrence.
++
++    prod(1 - q^n) = sum_{k in Z} (-1)^k q^{k(3k-1)/2}
++
++gives the recurrence  p(n) = p(n-1) + p(n-2) - p(n-5) - p(n-7) + ...
++
++The q^{1/24} prefactor of eta comes from zeta(-1) = -1/12.
++"""
++from __future__ import annotations
++
++import sys
++from fractions import Fraction
++from pathlib import Path
++
++import pytest
++
++REPO = Path(__file__).resolve().parent.parent
++sys.path.insert(0, str(REPO / "exploration"))
++
++from w33_euler_pentagonal import (  # noqa: E402
++    OEIS_A000041,
++    derive_all_pentagonal,
++    euler_pentagonal_series,
++    first_pentagonal_exponents,
++    generalized_pentagonal,
++    partition_numbers,
++    verify_partition_recurrence,
++    verify_product_inverse,
++    zeta_neg_1_equals_minus_1_over_12,
++)
++
++
++# ----------------------------------------------------------------------
++# Pentagonal exponents.
++# ----------------------------------------------------------------------
++def test_generalized_pentagonal_k_0():
++    assert generalized_pentagonal(0) == 0
++
++
++def test_generalized_pentagonal_k_1():
++    assert generalized_pentagonal(1) == 1
++
++
++def test_generalized_pentagonal_k_neg_1():
++    assert generalized_pentagonal(-1) == 2
++
++
++def test_generalized_pentagonal_k_2():
++    assert generalized_pentagonal(2) == 5
++
++
++def test_generalized_pentagonal_k_neg_2():
++    assert generalized_pentagonal(-2) == 7
++
++
++def test_generalized_pentagonal_k_3():
++    assert generalized_pentagonal(3) == 12
++
++
++def test_first_pentagonal_exponents():
++    exps = first_pentagonal_exponents(8)
++    assert exps == [0, 1, 2, 5, 7, 12, 15, 22]
++
++
++# ----------------------------------------------------------------------
++# Euler's product formula coefficients.
++# ----------------------------------------------------------------------
++def test_euler_product_at_zero_is_1():
++    c = euler_pentagonal_series(30)
++    assert c[0] == 1
++
++
++def test_euler_product_at_1_is_minus_1():
++    c = euler_pentagonal_series(30)
++    assert c[1] == -1
++
++
++def test_euler_product_at_2_is_minus_1():
++    c = euler_pentagonal_series(30)
++    assert c[2] == -1
++
++
++def test_euler_product_at_5_is_plus_1():
++    c = euler_pentagonal_series(30)
++    assert c[5] == 1
++
++
++def test_euler_product_at_7_is_plus_1():
++    c = euler_pentagonal_series(30)
++    assert c[7] == 1
++
++
++def test_euler_product_at_12_is_minus_1():
++    c = euler_pentagonal_series(30)
++    assert c[12] == -1
++
++
++def test_euler_product_only_on_pentagonal_exponents():
++    """prod(1-q^n) coefficients are zero except at pentagonal exponents."""
++    order = 30
++    c = euler_pentagonal_series(order)
++    pent_set = set(first_pentagonal_exponents(20))
++    for n in range(order + 1):
++        if c[n] != 0:
++            assert n in pent_set, f"Nonzero at non-pentagonal n={n}"
++
++
++# ----------------------------------------------------------------------
++# Partition numbers via Euler recurrence.
++# ----------------------------------------------------------------------
++@pytest.mark.parametrize("n,val", list(enumerate(OEIS_A000041)))
++def test_partition_number_matches_oeis(n, val):
++    p = partition_numbers(n + 1)
++    assert p[n] == val
++
++
++def test_partition_recurrence_all_match():
++    for r in verify_partition_recurrence(25):
++        assert r["match"] is True
++
++
++def test_p_of_0_is_1():
++    assert partition_numbers(0) == [1]
++
++
++def test_p_of_5_is_7():
++    """Partitions of 5: 5, 4+1, 3+2, 3+1+1, 2+2+1, 2+1+1+1, 1+1+1+1+1 = 7."""
++    p = partition_numbers(5)
++    assert p[5] == 7
++
++
++def test_p_of_10_is_42():
++    p = partition_numbers(10)
++    assert p[10] == 42
++
++
++# ----------------------------------------------------------------------
++# Product inverse: Euler * partition = 1.
++# ----------------------------------------------------------------------
++def test_euler_times_partitions_is_1():
++    r = verify_product_inverse(25)
++    assert r["inverse_check"] is True
++    assert r["constant_is_1"] is True
++    assert r["higher_all_zero"] is True
++
++
++# ----------------------------------------------------------------------
++# zeta(-1) = -1/12 and the 1/24 in eta.
++# ----------------------------------------------------------------------
++def test_zeta_neg_1_is_minus_1_over_12():
++    r = zeta_neg_1_equals_minus_1_over_12()
++    assert r["zeta(-1) = -1/12"] is True
++    assert Fraction(r["zeta(-1)"]) == Fraction(-1, 12)
++
++
++def test_B2_is_1_over_6():
++    r = zeta_neg_1_equals_minus_1_over_12()
++    assert Fraction(r["B_2"]) == Fraction(1, 6)
++
++
++def test_eta_prefactor_exponent_is_1_over_24():
++    r = zeta_neg_1_equals_minus_1_over_12()
++    assert r["is_1_over_24"] is True
++    assert Fraction(r["zeta_neg_1_over_2"]) == Fraction(1, 24)
++
++
++# ----------------------------------------------------------------------
++# Driver chain.
++# ----------------------------------------------------------------------
++def test_driver_chain_all_true():
++    chain = derive_all_pentagonal(25)
++    for key, val in chain["summary_chain"].items():
++        assert val is True, f"{key} = {val}"
+-- 
+2.53.0.windows.2
+
