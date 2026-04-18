@@ -1,0 +1,426 @@
+{
+  "supported_seed_moonshine_transport_dictionary": {
+    "supported_classes": [
+      "1A",
+      "2A",
+      "2B",
+      "3A",
+      "3B",
+      "3C",
+      "4A",
+      "4B",
+      "4C",
+      "4D",
+      "5A",
+      "5B",
+      "6A",
+      "6B",
+      "6C",
+      "6D",
+      "6E",
+      "7A",
+      "7B",
+      "8A",
+      "8A'",
+      "8B",
+      "8E",
+      "9A",
+      "10A",
+      "10B",
+      "10C",
+      "10D",
+      "10E",
+      "11A",
+      "13A",
+      "13B"
+    ],
+    "supported_classes_by_order": {
+      "1": [
+        "1A"
+      ],
+      "2": [
+        "2A",
+        "2B"
+      ],
+      "3": [
+        "3A",
+        "3B",
+        "3C"
+      ],
+      "4": [
+        "4A",
+        "4B",
+        "4C",
+        "4D"
+      ],
+      "5": [
+        "5A",
+        "5B"
+      ],
+      "6": [
+        "6A",
+        "6B",
+        "6C",
+        "6D",
+        "6E"
+      ],
+      "7": [
+        "7A",
+        "7B"
+      ],
+      "8": [
+        "8A",
+        "8A'",
+        "8B",
+        "8E"
+      ],
+      "9": [
+        "9A"
+      ],
+      "10": [
+        "10A",
+        "10B",
+        "10C",
+        "10D",
+        "10E"
+      ],
+      "11": [
+        "11A"
+      ],
+      "13": [
+        "13A",
+        "13B"
+      ]
+    },
+    "power_maps": {
+      "square": {
+        "2A": "1A",
+        "2B": "1A",
+        "3A": "3A",
+        "3B": "3B",
+        "3C": "3C",
+        "4A": "2B",
+        "4B": "2A",
+        "4C": "2B",
+        "4D": "2B",
+        "5A": "5A",
+        "5B": "5B",
+        "6A": "3A",
+        "6B": "3B",
+        "6C": "3A",
+        "6D": "3B",
+        "6E": "3B",
+        "7A": "7A",
+        "7B": "7B",
+        "8A": "4C",
+        "8A'": "4A",
+        "8B": "4A",
+        "8E": "4C",
+        "9A": "9A",
+        "10A": "5A",
+        "10B": "5A",
+        "10C": "5B",
+        "10D": "5B",
+        "10E": "5B",
+        "11A": "11A",
+        "13A": "13A",
+        "13B": "13B"
+      },
+      "cube": {
+        "2A": "2A",
+        "2B": "2B",
+        "3A": "1A",
+        "3B": "1A",
+        "3C": "1A",
+        "4A": "4A",
+        "4B": "4B",
+        "4C": "4C",
+        "4D": "4D",
+        "5A": "5A",
+        "5B": "5B",
+        "6A": "2A",
+        "6B": "2B",
+        "6C": "2B",
+        "6D": "2A",
+        "6E": "2B",
+        "7A": "7A",
+        "7B": "7B",
+        "8A": "8A",
+        "8A'": "8A'",
+        "8B": "8B",
+        "8E": "8E",
+        "9A": "3B",
+        "10A": "10A",
+        "10B": "10B",
+        "10C": "10C",
+        "10D": "10D",
+        "10E": "10E",
+        "11A": "11A",
+        "13A": "13A",
+        "13B": "13B"
+      },
+      "fifth": {
+        "2A": "2A",
+        "2B": "2B",
+        "3A": "3A",
+        "3B": "3B",
+        "3C": "3C",
+        "4A": "4A",
+        "4B": "4B",
+        "4C": "4C",
+        "4D": "4D",
+        "5A": "1A",
+        "5B": "1A",
+        "6A": "6A",
+        "6B": "6B",
+        "6C": "6C",
+        "6D": "6D",
+        "6E": "6E",
+        "7A": "7A",
+        "7B": "7B",
+        "8A": "8A",
+        "8A'": "8A'",
+        "8B": "8B",
+        "8E": "8E",
+        "9A": "9A",
+        "10A": "2A",
+        "10B": "2B",
+        "10C": "2A",
+        "10D": "2B",
+        "10E": "2B",
+        "11A": "11A",
+        "13A": "13A",
+        "13B": "13B"
+      },
+      "fourth_from_square": {
+        "3A": "3A",
+        "3B": "3B",
+        "3C": "3C",
+        "4A": "1A",
+        "4B": "1A",
+        "4C": "1A",
+        "4D": "1A",
+        "5A": "5A",
+        "5B": "5B",
+        "6A": "3A",
+        "6B": "3B",
+        "6C": "3A",
+        "6D": "3B",
+        "6E": "3B",
+        "7A": "7A",
+        "7B": "7B",
+        "8A": "2B",
+        "8A'": "2B",
+        "8B": "2B",
+        "8E": "2B",
+        "9A": "9A",
+        "10A": "5A",
+        "10B": "5A",
+        "10C": "5B",
+        "10D": "5B",
+        "10E": "5B",
+        "11A": "11A",
+        "13A": "13A",
+        "13B": "13B"
+      }
+    },
+    "atlas_available_counts": {
+      "square": 19,
+      "cube": 9,
+      "fifth": 7
+    },
+    "atlas_match_counts": {
+      "square": 19,
+      "cube": 9,
+      "fifth": 7
+    },
+    "composite_rows": [
+      {
+        "class_name": "4A",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "2B",
+          "4": "1A"
+        }
+      },
+      {
+        "class_name": "4B",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "2A",
+          "4": "1A"
+        }
+      },
+      {
+        "class_name": "4C",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "2B",
+          "4": "1A"
+        }
+      },
+      {
+        "class_name": "4D",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "2B",
+          "4": "1A"
+        }
+      },
+      {
+        "class_name": "6A",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "3A",
+          "3": "2A",
+          "6": "1A"
+        }
+      },
+      {
+        "class_name": "6B",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "3B",
+          "3": "2B",
+          "6": "1A"
+        }
+      },
+      {
+        "class_name": "6C",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "3A",
+          "3": "2B",
+          "6": "1A"
+        }
+      },
+      {
+        "class_name": "6D",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "3B",
+          "3": "2A",
+          "6": "1A"
+        }
+      },
+      {
+        "class_name": "6E",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "3B",
+          "3": "2B",
+          "6": "1A"
+        }
+      },
+      {
+        "class_name": "8A",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "4C",
+          "4": "2B",
+          "8": "1A"
+        }
+      },
+      {
+        "class_name": "8B",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "4A",
+          "4": "2B",
+          "8": "1A"
+        }
+      },
+      {
+        "class_name": "8E",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "4C",
+          "4": "2B",
+          "8": "1A"
+        }
+      },
+      {
+        "class_name": "9A",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "3": "3B",
+          "9": "1A"
+        }
+      },
+      {
+        "class_name": "10A",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "5A",
+          "5": "2A",
+          "10": "1A"
+        }
+      },
+      {
+        "class_name": "10B",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "5A",
+          "5": "2B",
+          "10": "1A"
+        }
+      },
+      {
+        "class_name": "10C",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "5B",
+          "5": "2A",
+          "10": "1A"
+        }
+      },
+      {
+        "class_name": "10D",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "5B",
+          "5": "2B",
+          "10": "1A"
+        }
+      },
+      {
+        "class_name": "10E",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "5B",
+          "5": "2B",
+          "10": "1A"
+        }
+      }
+    ]
+  },
+  "supported_seed_moonshine_transport_theorem": {
+    "the_supported_seed_has_exactly_32_offline_classes": true,
+    "the_supported_seed_orders_are_exactly_1_2_3_4_5_6_7_8_9_10_11_13": true,
+    "all_atlas_available_square_edges_match_the_q_series_inference": true,
+    "all_atlas_available_cube_edges_match_the_q_series_inference": true,
+    "all_atlas_available_fifth_edges_match_the_q_series_inference": true,
+    "all_18_composite_transport_checks_are_exact_and_atlas_validated": true,
+    "the_supported_offline_seed_therefore_closes_as_one_finite_transport_graph": true,
+    "the_supported_seed_moonshine_transport_graph_is_fully_closed": true
+  },
+  "interpretation": "The full offline-supported moonshine seed already behaves like a finite transport graph. The q-series power maps close internally, every Atlas-available square/cube/fifth edge matches the inferred target, and the whole composite layer at orders 4, 6, 8, 9, 10 is validated. So the supported seed is an exact transport subsystem, not just a collection of isolated McKay-Thompson formulas."
+}
