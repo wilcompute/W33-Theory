@@ -57,7 +57,9 @@ A strongly regular graph SRG(n, k, λ, μ) has exactly **three** distinct eigenv
 • r (positive) — multiplicity f_r
 • s (negative) — multiplicity f_s
 
-For W(3,3): k=12, r=2, s=−4, f_r=27, f_s=12.
+For W(3,3): k=12, r=2, s=−4, **f_r=24, f_s=15**.
+(Neighborhood partition {1,12,27}: 12 adjacent ↔ SM gauge bosons, 27 non-adjacent ↔ dim E₆.
+These are distinct from the eigenvalue multiplicities.)
 
 The spectral invariant is:
 
