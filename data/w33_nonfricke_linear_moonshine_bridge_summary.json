@@ -1,0 +1,307 @@
+{
+  "nonfricke_linear_moonshine_dictionary": {
+    "nonfricke_prime_rows": [
+      {
+        "class_name": "2B",
+        "level": 2,
+        "k": 24,
+        "linear_eta_formula_q_minus_1_to_q12": {
+          "-1": 1,
+          "1": 276,
+          "2": -2048,
+          "3": 11202,
+          "4": -49152,
+          "5": 184024,
+          "6": -614400,
+          "7": 1881471,
+          "8": -5373952,
+          "9": 14478180,
+          "10": -37122048,
+          "11": 91231550,
+          "12": -216072192
+        },
+        "monster_series_q_minus_1_to_q12": {
+          "-1": 1,
+          "1": 276,
+          "2": -2048,
+          "3": 11202,
+          "4": -49152,
+          "5": 184024,
+          "6": -614400,
+          "7": 1881471,
+          "8": -5373952,
+          "9": 14478180,
+          "10": -37122048,
+          "11": 91231550,
+          "12": -216072192
+        },
+        "faber_coeffs": [
+          -552,
+          0
+        ],
+        "mismatches": [],
+        "theorems": {
+          "linear_eta_formula_holds": true,
+          "prime_replicability_holds": true
+        }
+      },
+      {
+        "class_name": "3B",
+        "level": 3,
+        "k": 12,
+        "linear_eta_formula_q_minus_1_to_q12": {
+          "-1": 1,
+          "1": 54,
+          "2": -76,
+          "3": -243,
+          "4": 1188,
+          "5": -1384,
+          "6": -2916,
+          "7": 11934,
+          "8": -11580,
+          "9": -21870,
+          "10": 79704,
+          "11": -71022,
+          "12": -123444
+        },
+        "monster_series_q_minus_1_to_q12": {
+          "-1": 1,
+          "1": 54,
+          "2": -76,
+          "3": -243,
+          "4": 1188,
+          "5": -1384,
+          "6": -2916,
+          "7": 11934,
+          "8": -11580,
+          "9": -21870,
+          "10": 79704,
+          "11": -71022,
+          "12": -123444
+        },
+        "faber_coeffs": [
+          228,
+          -162,
+          0
+        ],
+        "mismatches": [],
+        "theorems": {
+          "linear_eta_formula_holds": true,
+          "prime_replicability_holds": true
+        }
+      },
+      {
+        "class_name": "5B",
+        "level": 5,
+        "k": 6,
+        "linear_eta_formula_q_minus_1_to_q12": {
+          "-1": 1,
+          "1": 9,
+          "2": 10,
+          "3": -30,
+          "4": 6,
+          "5": -25,
+          "6": 96,
+          "7": 60,
+          "8": -250,
+          "9": 45,
+          "10": -150,
+          "11": 544,
+          "12": 360
+        },
+        "monster_series_q_minus_1_to_q12": {
+          "-1": 1,
+          "1": 9,
+          "2": 10,
+          "3": -30,
+          "4": 6,
+          "5": -25,
+          "6": 96,
+          "7": 60,
+          "8": -250,
+          "9": 45,
+          "10": -150,
+          "11": 544,
+          "12": 360
+        },
+        "faber_coeffs": [
+          420,
+          555,
+          -50,
+          -45,
+          0
+        ],
+        "mismatches": [],
+        "theorems": {
+          "linear_eta_formula_holds": true,
+          "prime_replicability_holds": true
+        }
+      },
+      {
+        "class_name": "7B",
+        "level": 7,
+        "k": 4,
+        "linear_eta_formula_q_minus_1_to_q12": {
+          "-1": 1,
+          "1": 2,
+          "2": 8,
+          "3": -5,
+          "4": -4,
+          "5": -10,
+          "6": 12,
+          "7": -7,
+          "8": 8,
+          "9": 46,
+          "10": -36,
+          "11": -26,
+          "12": -44
+        },
+        "monster_series_q_minus_1_to_q12": {
+          "-1": 1,
+          "1": 2,
+          "2": 8,
+          "3": -5,
+          "4": -4,
+          "5": -10,
+          "6": 12,
+          "7": -7,
+          "8": 8,
+          "9": 46,
+          "10": -36,
+          "11": -26,
+          "12": -44
+        },
+        "faber_coeffs": [
+          -644,
+          322,
+          364,
+          91,
+          -56,
+          -14,
+          0
+        ],
+        "mismatches": [],
+        "theorems": {
+          "linear_eta_formula_holds": true,
+          "prime_replicability_holds": true
+        }
+      },
+      {
+        "class_name": "13B",
+        "level": 13,
+        "k": 2,
+        "linear_eta_formula_q_minus_1_to_q12": {
+          "-1": 1,
+          "1": -1,
+          "2": 2,
+          "3": 1,
+          "4": 2,
+          "5": -2,
+          "7": -2,
+          "8": -2,
+          "9": 1,
+          "12": 4
+        },
+        "monster_series_q_minus_1_to_q12": {
+          "-1": 1,
+          "1": -1,
+          "2": 2,
+          "3": 1,
+          "4": 2,
+          "5": -2,
+          "7": -2,
+          "8": -2,
+          "9": 1,
+          "12": 4
+        },
+        "faber_coeffs": [
+          -832,
+          793,
+          -2236,
+          2392,
+          -1144,
+          1534,
+          -728,
+          286,
+          -260,
+          52,
+          -26,
+          13,
+          0
+        ],
+        "mismatches": [],
+        "theorems": {
+          "linear_eta_formula_holds": true,
+          "prime_replicability_holds": true
+        }
+      }
+    ],
+    "fourC_row": {
+      "class_name": "4C",
+      "level": 4,
+      "k": 8,
+      "linear_eta_formula_q_minus_1_to_q15": {
+        "-1": 1,
+        "1": 20,
+        "3": -62,
+        "5": 216,
+        "7": -641,
+        "9": 1636,
+        "11": -3778,
+        "13": 8248,
+        "15": -17277
+      },
+      "monster_series_q_minus_1_to_q15": {
+        "-1": 1,
+        "1": 20,
+        "3": -62,
+        "5": 216,
+        "7": -641,
+        "9": 1636,
+        "11": -3778,
+        "13": 8248,
+        "15": -17277
+      },
+      "mismatches": [],
+      "theorems": {
+        "linear_eta_formula_holds": true,
+        "support_is_on_odd_positive_exponents_only": true
+      }
+    },
+    "fiveB_rogers_ramanujan_identity": {
+      "max_q_exp": 24,
+      "verified": true,
+      "n_mismatches": 0,
+      "mismatches": [],
+      "r5_first_coeffs": [
+        0,
+        1,
+        -5,
+        15,
+        -30,
+        40,
+        -26,
+        -30
+      ]
+    },
+    "threeC_affine_bridge_theorem": {
+      "the_affine_e8_shift_is_exactly_minus_one_third": true,
+      "the_3C_series_matches_the_affine_E8_character_on_every_exp_3n_minus_1_slot_checked": true,
+      "the_3C_series_has_no_off_grid_nonzero_terms_in_the_checked_range": true,
+      "the_first_three_nontrivial_3C_coefficients_are_248_4124_34752": true,
+      "the_3C_class_therefore_equals_the_affine_E8_character_under_q_to_q_cubed": true,
+      "the_3C_class_satisfies_prime_replicability": true,
+      "the_3C_faber_polynomial_is_exactly_x_cubed_minus_744": true,
+      "the_affine_E8_lift_is_therefore_already_on_the_1A_sourced_moonshine_recursion": true
+    }
+  },
+  "nonfricke_linear_moonshine_theorem": {
+    "the_fricke_prime_A_side_is_still_quadratic": true,
+    "all_five_nonfricke_prime_B_classes_are_exact_linear_eta_branches": true,
+    "5B_has_the_exact_rogers_ramanujan_linear_rewrite": true,
+    "4C_is_the_first_composite_linear_eta_branch": true,
+    "3C_is_the_affine_E8_exceptional_linear_branch": true,
+    "the_nonfricke_and_exceptional_side_close_on_one_linear_affine_moonshine_spine": true
+  },
+  "interpretation": "The moonshine base splits into two different algebraic geometries. The Fricke A-side classes are quadratic trace/norm branches, while the non-Fricke side is linear: pure eta-unit branches for pB and 4C, plus the affine E8 exceptional branch 3C. So the low-level moonshine carrier is not uniform genus-zero data; it is a linear/quadratic split with 3C as the exceptional affine node."
+}
