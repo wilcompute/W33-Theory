@@ -1,0 +1,561 @@
+{
+  "hasse_generic": {
+    "all_match": true,
+    "rows": [
+      {
+        "p": 5,
+        "a_p": -2,
+        "2_sqrt_p_floor": 4,
+        "match": true
+      },
+      {
+        "p": 7,
+        "a_p": 0,
+        "2_sqrt_p_floor": 4,
+        "match": true
+      },
+      {
+        "p": 11,
+        "a_p": 0,
+        "2_sqrt_p_floor": 6,
+        "match": true
+      },
+      {
+        "p": 13,
+        "a_p": 6,
+        "2_sqrt_p_floor": 6,
+        "match": true
+      },
+      {
+        "p": 17,
+        "a_p": 2,
+        "2_sqrt_p_floor": 8,
+        "match": true
+      },
+      {
+        "p": 19,
+        "a_p": 0,
+        "2_sqrt_p_floor": 8,
+        "match": true
+      },
+      {
+        "p": 23,
+        "a_p": 0,
+        "2_sqrt_p_floor": 8,
+        "match": true
+      },
+      {
+        "p": 29,
+        "a_p": -10,
+        "2_sqrt_p_floor": 10,
+        "match": true
+      },
+      {
+        "p": 31,
+        "a_p": 0,
+        "2_sqrt_p_floor": 10,
+        "match": true
+      },
+      {
+        "p": 37,
+        "a_p": -2,
+        "2_sqrt_p_floor": 12,
+        "match": true
+      },
+      {
+        "p": 41,
+        "a_p": 10,
+        "2_sqrt_p_floor": 12,
+        "match": true
+      },
+      {
+        "p": 43,
+        "a_p": 0,
+        "2_sqrt_p_floor": 12,
+        "match": true
+      },
+      {
+        "p": 47,
+        "a_p": 0,
+        "2_sqrt_p_floor": 12,
+        "match": true
+      },
+      {
+        "p": 53,
+        "a_p": 14,
+        "2_sqrt_p_floor": 14,
+        "match": true
+      },
+      {
+        "p": 59,
+        "a_p": 0,
+        "2_sqrt_p_floor": 14,
+        "match": true
+      },
+      {
+        "p": 61,
+        "a_p": -10,
+        "2_sqrt_p_floor": 14,
+        "match": true
+      },
+      {
+        "p": 67,
+        "a_p": 0,
+        "2_sqrt_p_floor": 16,
+        "match": true
+      }
+    ],
+    "curve": [
+      -1,
+      0
+    ]
+  },
+  "hasse_E11": {
+    "all_match": true,
+    "rows": [
+      {
+        "p": 2,
+        "a_p": -2,
+        "2_sqrt_p_ceil": 3,
+        "match": true
+      },
+      {
+        "p": 3,
+        "a_p": -1,
+        "2_sqrt_p_ceil": 4,
+        "match": true
+      },
+      {
+        "p": 5,
+        "a_p": 1,
+        "2_sqrt_p_ceil": 5,
+        "match": true
+      },
+      {
+        "p": 7,
+        "a_p": -2,
+        "2_sqrt_p_ceil": 6,
+        "match": true
+      },
+      {
+        "p": 13,
+        "a_p": 4,
+        "2_sqrt_p_ceil": 8,
+        "match": true
+      },
+      {
+        "p": 17,
+        "a_p": -2,
+        "2_sqrt_p_ceil": 9,
+        "match": true
+      },
+      {
+        "p": 19,
+        "a_p": 0,
+        "2_sqrt_p_ceil": 9,
+        "match": true
+      },
+      {
+        "p": 23,
+        "a_p": -1,
+        "2_sqrt_p_ceil": 10,
+        "match": true
+      },
+      {
+        "p": 29,
+        "a_p": 0,
+        "2_sqrt_p_ceil": 11,
+        "match": true
+      },
+      {
+        "p": 31,
+        "a_p": 7,
+        "2_sqrt_p_ceil": 12,
+        "match": true
+      },
+      {
+        "p": 37,
+        "a_p": 3,
+        "2_sqrt_p_ceil": 13,
+        "match": true
+      },
+      {
+        "p": 41,
+        "a_p": -8,
+        "2_sqrt_p_ceil": 13,
+        "match": true
+      },
+      {
+        "p": 43,
+        "a_p": -6,
+        "2_sqrt_p_ceil": 14,
+        "match": true
+      },
+      {
+        "p": 47,
+        "a_p": 8,
+        "2_sqrt_p_ceil": 14,
+        "match": true
+      },
+      {
+        "p": 53,
+        "a_p": -6,
+        "2_sqrt_p_ceil": 15,
+        "match": true
+      },
+      {
+        "p": 59,
+        "a_p": 5,
+        "2_sqrt_p_ceil": 16,
+        "match": true
+      },
+      {
+        "p": 61,
+        "a_p": 12,
+        "2_sqrt_p_ceil": 16,
+        "match": true
+      }
+    ]
+  },
+  "eichler_shimura": {
+    "all_match": true,
+    "rows": [
+      {
+        "p": 2,
+        "a_p_E11": -2,
+        "a_p_f11": -2,
+        "match": true
+      },
+      {
+        "p": 3,
+        "a_p_E11": -1,
+        "a_p_f11": -1,
+        "match": true
+      },
+      {
+        "p": 5,
+        "a_p_E11": 1,
+        "a_p_f11": 1,
+        "match": true
+      },
+      {
+        "p": 7,
+        "a_p_E11": -2,
+        "a_p_f11": -2,
+        "match": true
+      },
+      {
+        "p": 13,
+        "a_p_E11": 4,
+        "a_p_f11": 4,
+        "match": true
+      },
+      {
+        "p": 17,
+        "a_p_E11": -2,
+        "a_p_f11": -2,
+        "match": true
+      },
+      {
+        "p": 19,
+        "a_p_E11": 0,
+        "a_p_f11": 0,
+        "match": true
+      },
+      {
+        "p": 23,
+        "a_p_E11": -1,
+        "a_p_f11": -1,
+        "match": true
+      },
+      {
+        "p": 29,
+        "a_p_E11": 0,
+        "a_p_f11": 0,
+        "match": true
+      },
+      {
+        "p": 31,
+        "a_p_E11": 7,
+        "a_p_f11": 7,
+        "match": true
+      },
+      {
+        "p": 37,
+        "a_p_E11": 3,
+        "a_p_f11": 3,
+        "match": true
+      },
+      {
+        "p": 41,
+        "a_p_E11": -8,
+        "a_p_f11": -8,
+        "match": true
+      },
+      {
+        "p": 43,
+        "a_p_E11": -6,
+        "a_p_f11": -6,
+        "match": true
+      },
+      {
+        "p": 47,
+        "a_p_E11": 8,
+        "a_p_f11": 8,
+        "match": true
+      },
+      {
+        "p": 53,
+        "a_p_E11": -6,
+        "a_p_f11": -6,
+        "match": true
+      },
+      {
+        "p": 59,
+        "a_p_E11": 5,
+        "a_p_f11": 5,
+        "match": true
+      },
+      {
+        "p": 61,
+        "a_p_E11": 12,
+        "a_p_f11": 12,
+        "match": true
+      }
+    ],
+    "f_first_15": [
+      0,
+      1,
+      -2,
+      -1,
+      2,
+      1,
+      2,
+      -2,
+      0,
+      -2,
+      -2,
+      1,
+      -2,
+      4,
+      4
+    ]
+  },
+  "f_11_leading": {
+    "all_match": true,
+    "rows": [
+      {
+        "n": 1,
+        "f[n]": 1,
+        "expected": 1,
+        "match": true
+      },
+      {
+        "n": 2,
+        "f[n]": -2,
+        "expected": -2,
+        "match": true
+      },
+      {
+        "n": 3,
+        "f[n]": -1,
+        "expected": -1,
+        "match": true
+      },
+      {
+        "n": 4,
+        "f[n]": 2,
+        "expected": 2,
+        "match": true
+      },
+      {
+        "n": 5,
+        "f[n]": 1,
+        "expected": 1,
+        "match": true
+      },
+      {
+        "n": 6,
+        "f[n]": 2,
+        "expected": 2,
+        "match": true
+      },
+      {
+        "n": 7,
+        "f[n]": -2,
+        "expected": -2,
+        "match": true
+      },
+      {
+        "n": 8,
+        "f[n]": 0,
+        "expected": 0,
+        "match": true
+      },
+      {
+        "n": 9,
+        "f[n]": -2,
+        "expected": -2,
+        "match": true
+      },
+      {
+        "n": 10,
+        "f[n]": -2,
+        "expected": -2,
+        "match": true
+      },
+      {
+        "n": 11,
+        "f[n]": 1,
+        "expected": 1,
+        "match": true
+      },
+      {
+        "n": 12,
+        "f[n]": -2,
+        "expected": -2,
+        "match": true
+      },
+      {
+        "n": 13,
+        "f[n]": 4,
+        "expected": 4,
+        "match": true
+      },
+      {
+        "n": 14,
+        "f[n]": 4,
+        "expected": 4,
+        "match": true
+      },
+      {
+        "n": 15,
+        "f[n]": -1,
+        "expected": -1,
+        "match": true
+      },
+      {
+        "n": 16,
+        "f[n]": -4,
+        "expected": -4,
+        "match": true
+      }
+    ]
+  },
+  "cm_curve": {
+    "all_match": true,
+    "rows": [
+      {
+        "p": 5,
+        "p_mod_4": 1,
+        "a_p": -2,
+        "supersingular_predicted": false,
+        "is_supersingular": false,
+        "ss_matches_prediction": true
+      },
+      {
+        "p": 7,
+        "p_mod_4": 3,
+        "a_p": 0,
+        "supersingular_predicted": true,
+        "is_supersingular": true,
+        "ss_matches_prediction": true
+      },
+      {
+        "p": 11,
+        "p_mod_4": 3,
+        "a_p": 0,
+        "supersingular_predicted": true,
+        "is_supersingular": true,
+        "ss_matches_prediction": true
+      },
+      {
+        "p": 13,
+        "p_mod_4": 1,
+        "a_p": 6,
+        "supersingular_predicted": false,
+        "is_supersingular": false,
+        "ss_matches_prediction": true
+      },
+      {
+        "p": 17,
+        "p_mod_4": 1,
+        "a_p": 2,
+        "supersingular_predicted": false,
+        "is_supersingular": false,
+        "ss_matches_prediction": true
+      },
+      {
+        "p": 19,
+        "p_mod_4": 3,
+        "a_p": 0,
+        "supersingular_predicted": true,
+        "is_supersingular": true,
+        "ss_matches_prediction": true
+      },
+      {
+        "p": 23,
+        "p_mod_4": 3,
+        "a_p": 0,
+        "supersingular_predicted": true,
+        "is_supersingular": true,
+        "ss_matches_prediction": true
+      },
+      {
+        "p": 29,
+        "p_mod_4": 1,
+        "a_p": -10,
+        "supersingular_predicted": false,
+        "is_supersingular": false,
+        "ss_matches_prediction": true
+      },
+      {
+        "p": 31,
+        "p_mod_4": 3,
+        "a_p": 0,
+        "supersingular_predicted": true,
+        "is_supersingular": true,
+        "ss_matches_prediction": true
+      },
+      {
+        "p": 37,
+        "p_mod_4": 1,
+        "a_p": -2,
+        "supersingular_predicted": false,
+        "is_supersingular": false,
+        "ss_matches_prediction": true
+      },
+      {
+        "p": 41,
+        "p_mod_4": 1,
+        "a_p": 10,
+        "supersingular_predicted": false,
+        "is_supersingular": false,
+        "ss_matches_prediction": true
+      },
+      {
+        "p": 43,
+        "p_mod_4": 3,
+        "a_p": 0,
+        "supersingular_predicted": true,
+        "is_supersingular": true,
+        "ss_matches_prediction": true
+      },
+      {
+        "p": 47,
+        "p_mod_4": 3,
+        "a_p": 0,
+        "supersingular_predicted": true,
+        "is_supersingular": true,
+        "ss_matches_prediction": true
+      }
+    ]
+  },
+  "summary_chain": {
+    "hasse_bound_holds_for_y2_equals_x3_minus_x": true,
+    "hasse_bound_holds_for_E11_over_primes_up_to_61": true,
+    "eichler_shimura_a_p_E11_equals_a_p_f_11": true,
+    "f_11_leading_coefficients_match_newform_table": true,
+    "y2_equals_x3_minus_x_CM_supersingular_at_p_equiv_3_mod_4": true
+  }
+}
