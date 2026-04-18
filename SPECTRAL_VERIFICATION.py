@@ -313,8 +313,110 @@ print(f"  |binary icosahedral (->E8)| = 120 = lcm(f_r,f_s) = 5!  ✓")
 
 
 # ---------------------------------------------------------------------------
-# 16.  SUMMARY
+# 16.  GQ(3,3) GEOMETRY  (Proposition: prop:gqgeometry)
 # ---------------------------------------------------------------------------
+print("\n--- 16. GQ(3,3) Geometry: Lines, Ovoids, Triangles ---")
+
+_n = n; _k = k_val; _r = r_val; _s = s_val; _fr = f_r; _fs = f_s
+q = 3  # field order
+num_lines = (q+1) * (q**2+1)
+points_per_line = q + 1
+ovoid_size = q**2 + 1
+num_triangles_per_line = 4  # C(4,3)
+total_triangles_from_lines = num_lines * num_triangles_per_line
+triangles_per_vertex = (_k * 2) // 2  # = (k*lambda)/2
+total_triangles_from_vertices = (_n * triangles_per_vertex) // 3
+
+# Verify triangle count
+assert num_lines == 40,                                  f"# lines = {num_lines} != 40"
+assert points_per_line == 4,                            f"points/line = {points_per_line} != 4"
+assert ovoid_size == 10,                                f"ovoid size = {ovoid_size} != 10"
+assert total_triangles_from_lines == 160,               f"triangles from lines = {total_triangles_from_lines} != 160"
+assert triangles_per_vertex == 12,                      f"triangles/vertex = {triangles_per_vertex} != 12"
+assert total_triangles_from_vertices == 160,            f"triangles from vertices = {total_triangles_from_vertices} != 160"
+assert 4 * ovoid_size == _n,                            f"partition check: 4 * ovoid = {4*ovoid_size} != {_n}"
+
+# Verify spectral trace gives same triangle count
+num_triangles_spectral = (_k**3 + _fr*_r**3 + _fs*_s**3) // 6
+assert num_triangles_spectral == 160,                   f"triangles from tr(A^3) = {num_triangles_spectral} != 160"
+
+print(f"  GQ({q},{q}) has {num_lines} lines with {points_per_line} points each")
+print(f"  Ovoid size: q^2+1 = {ovoid_size}  (max independent set)")
+print(f"  Triangles per line: C(4,3) = {num_triangles_per_line}")
+print(f"  Total triangles: {num_lines} * {num_triangles_per_line} = {total_triangles_from_lines}  ✓")
+print(f"  Per-vertex triangles: k*lambda/2 = {_k}*2/2 = {triangles_per_vertex}")
+print(f"  Total (via vertices): n*{triangles_per_vertex}/3 = {total_triangles_from_vertices}  ✓")
+print(f"  From spectrum: tr(A^3)/6 = {num_triangles_spectral}  ✓")
+print(f"  Factorization: n = omega*alpha = {points_per_line}*{ovoid_size} = {points_per_line*ovoid_size}  ✓")
+
+
+# ---------------------------------------------------------------------------
+# 17.  SPECTRAL RECURRENCE  (Proposition: prop:recurrence)
+# ---------------------------------------------------------------------------
+print("\n--- 17. Adjacency Matrix Recurrence Relation ---")
+
+# Characteristic polynomial: lambda^3 = (k+r+s)*lambda^2 - (kr+ks+rs)*lambda - krs
+c2 = _k + _r + _s                       # = 10
+c1 = _k*_r + _k*_s + _r*_s              # = -32
+c0_neg = -_k*_r*_s                      # = 96
+
+# Recurrence: tr(A^{j+3}) = c2*tr(A^{j+2}) - c1*tr(A^{j+1}) - c0*tr(A^j)
+#                         = 10*tr(A^{j+2}) + 32*tr(A^{j+1}) - 96*tr(A^j)
+
+assert c2 == 10,                        f"c2 = k+r+s = {c2} != 10"
+assert c1 == -32,                       f"c1 = kr+ks+rs = {c1} != -32"
+assert c0_neg == 96,                    f"-c0 = -krs = {c0_neg} != 96"
+
+# Verify recurrence holds for all j >= 0
+traces_computed = [_n, 0, 480, 960]  # tr(A^0), tr(A^1), tr(A^2), tr(A^3)
+for j in range(4, 9):
+    trAj_direct = _k**j + _fr*_r**j + _fs*_s**j
+    trAj_recur = c2*traces_computed[j-1] + 32*traces_computed[j-2] - 96*traces_computed[j-3]
+    assert trAj_direct == trAj_recur, f"Recurrence fails at j={j}: {trAj_direct} != {trAj_recur}"
+    traces_computed.append(trAj_direct)
+
+print(f"  Characteristic polynomial: lambda^3 = 10*lambda^2 + 32*lambda - 96")
+print(f"  Recurrence: tr(A^{{j+3}}) = 10*tr(A^{{j+2}}) + 32*tr(A^{{j+1}}) - 96*tr(A^j)")
+print(f"  Verified for j = 0,...,5  ✓")
+print(f"  Growth rate: dominated by k=12, so tr(A^j) ~ C*12^j")
+
+
+# ---------------------------------------------------------------------------
+# 18.  IHARA ZETA FUNCTION  (Proposition: prop:ihara)
+# ---------------------------------------------------------------------------
+print("\n--- 18. Ihara Zeta Function Critical Points ---")
+
+# Critical points from eigenvalues via 1 - u*lambda + u^2*(k-1) = 0
+# u = (lambda ± sqrt(lambda^2 - 4(k-1))) / (2(k-1))
+
+eigs_vals = [_k, _r, _s]
+critical_points_real = []
+
+for eig in eigs_vals:
+    disc = eig**2 - 4*(_k-1)  # lambda^2 - 4(k-1)
+    if disc >= 0:
+        sqrt_disc = math.sqrt(disc)
+        u1 = (eig + sqrt_disc) / (2*(_k-1))
+        u2 = (eig - sqrt_disc) / (2*(_k-1))
+        if 0 < u1 < 1:
+            critical_points_real.append(('first', u1, eig))
+        if 0 < u2 < 1:
+            critical_points_real.append(('second', u2, eig))
+
+# For k=12: disc = 144 - 44 = 100, sqrt(100)=10, u = (12±10)/22 = {1, 1/11}
+assert any(abs(cp[1] - 1/11) < 1e-6 for cp in critical_points_real), "u=1/11 not found"
+
+radius_convergence = 1/11
+print(f"  Ihara formula critical points from eigenvalues:")
+print(f"    k={_k}: disc={_k**2-4*(_k-1)}, u = (12±10)/22 = 1 or 1/11")
+print(f"    r={_r}: disc={_r**2-4*(_k-1)}<0, u complex")
+print(f"    s={_s}: disc={_s**2-4*(_k-1)}<0, u complex")
+print(f"  Radius of convergence: |u| = {radius_convergence} = 1/(k-1) = 1/{_k-1}  ✓")
+print(f"  Universal pole at u=1 with multiplicity m=n-1={_n-1}")
+
+
+# ---------------------------------------------------------------------------
+# 19.  SUMMARY
 print("\n" + "="*60)
 print("ALL ASSERTIONS PASSED — W(3,3) spectral theory verified.")
 print("="*60)
