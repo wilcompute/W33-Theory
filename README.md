@@ -33,18 +33,26 @@ The framework has four interlocking pillars:
 | `k` | 12 | Degree / largest eigenvalue |
 | `r` | 2 | Second eigenvalue |
 | `s` | −4 | Third eigenvalue |
-| `f_r` | 27 | Multiplicity of r (matter: E₆ fundamental) |
-| `f_s` | 12 | Multiplicity of s (gauge: dim G_SM) |
+| `f_r` | 24 | Multiplicity of r (Leech lattice dim; bosonic string) |
+| `f_s` | 15 | Multiplicity of s (dim SU(4) = C(6,2)) |
+| `k_adj` | 12 | Adjacent vertices per vertex (neighborhood; SM gauge bosons) |
+| `k_nonadj` | 27 | Non-adjacent vertices per vertex (neighborhood; dim E₆ fund.) |
 | `E` | **480** | Master number = n_v × k = \|Φ(E₈)\| |
 | `q` | **3** | Cyclotomic lock parameter, uniquely selected |
 
 ### Master Identity
 
 ```
-f_r · (k − r) = f_s · (k − |s|) = E/2 = 240
+n_v × k = 480 = |Φ(E₈)|              [master energy scale]
+
+Spectral trace:  k + r·f_r + s·f_s = 12 + 2·24 + (-4)·15 = 0
+
+f_r · (k − r) = 24 · 10 = 240 = |Φ⁺(E₈)|   [E₈ kissing number from spectrum!]
 ```
 
-Both eigenspaces carry equal spectral weight. 480 = |E₈ root system|, 240 = E₈ kissing number.
+The correct eigenvalue multiplicities are {1, 24, 15} (trace-zero condition).
+The neighborhood partition {1, 12, 27} carries the E₆ and gauge-boson physics;
+these are adjacent/non-adjacent vertex counts, distinct from spectral multiplicities.
 
 ### q-Cyclotomic Lock (NEW)
 
