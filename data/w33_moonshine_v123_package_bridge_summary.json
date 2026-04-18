@@ -1,0 +1,1533 @@
+{
+  "moonshine_v123_package_dictionary": {
+    "supported_classes": [
+      "1A",
+      "2A",
+      "2B",
+      "3A",
+      "3B",
+      "3C",
+      "4A",
+      "4B",
+      "4C",
+      "4D",
+      "5A",
+      "5B",
+      "6A",
+      "6B",
+      "6C",
+      "6D",
+      "6E",
+      "7A",
+      "7B",
+      "8A",
+      "8A'",
+      "8B",
+      "8E",
+      "9A",
+      "10A",
+      "10B",
+      "10C",
+      "10D",
+      "10E",
+      "11A",
+      "13A",
+      "13B"
+    ],
+    "rows": [
+      {
+        "class_name": "1A",
+        "package": {
+          "V1": 196884,
+          "V2": 21493760,
+          "V3": 864299970
+        },
+        "head_signature": {
+          "196883": 196883,
+          "21296876": 21296876,
+          "842609326": 842609326
+        }
+      },
+      {
+        "class_name": "2A",
+        "package": {
+          "V1": 4372,
+          "V2": 96256,
+          "V3": 1240002
+        },
+        "head_signature": {
+          "196883": 4371,
+          "21296876": 91884,
+          "842609326": 1139374
+        }
+      },
+      {
+        "class_name": "2B",
+        "package": {
+          "V1": 276,
+          "V2": -2048,
+          "V3": 11202
+        },
+        "head_signature": {
+          "196883": 275,
+          "21296876": -2324,
+          "842609326": 12974
+        }
+      },
+      {
+        "class_name": "3A",
+        "package": {
+          "V1": 783,
+          "V2": 8672,
+          "V3": 65367
+        },
+        "head_signature": {
+          "196883": 782,
+          "21296876": 7889,
+          "842609326": 55912
+        }
+      },
+      {
+        "class_name": "3B",
+        "package": {
+          "V1": 54,
+          "V2": -76,
+          "V3": -243
+        },
+        "head_signature": {
+          "196883": 53,
+          "21296876": -130,
+          "842609326": -221
+        }
+      },
+      {
+        "class_name": "3C",
+        "package": {
+          "V1": 0,
+          "V2": 248,
+          "V3": 0
+        },
+        "head_signature": {
+          "196883": -1,
+          "21296876": 248,
+          "842609326": -248
+        }
+      },
+      {
+        "class_name": "4A",
+        "package": {
+          "V1": 276,
+          "V2": 2048,
+          "V3": 11202
+        },
+        "head_signature": {
+          "196883": 275,
+          "21296876": 1772,
+          "842609326": 8878
+        }
+      },
+      {
+        "class_name": "4B",
+        "package": {
+          "V1": 52,
+          "V2": 0,
+          "V3": 834
+        },
+        "head_signature": {
+          "196883": 51,
+          "21296876": -52,
+          "842609326": 782
+        }
+      },
+      {
+        "class_name": "4C",
+        "package": {
+          "V1": 20,
+          "V2": 0,
+          "V3": -62
+        },
+        "head_signature": {
+          "196883": 19,
+          "21296876": -20,
+          "842609326": -82
+        }
+      },
+      {
+        "class_name": "4D",
+        "package": {
+          "V1": -12,
+          "V2": 0,
+          "V3": 66
+        },
+        "head_signature": {
+          "196883": -13,
+          "21296876": 12,
+          "842609326": 78
+        }
+      },
+      {
+        "class_name": "5A",
+        "package": {
+          "V1": 134,
+          "V2": 760,
+          "V3": 3345
+        },
+        "head_signature": {
+          "196883": 133,
+          "21296876": 626,
+          "842609326": 2451
+        }
+      },
+      {
+        "class_name": "5B",
+        "package": {
+          "V1": 9,
+          "V2": 10,
+          "V3": -30
+        },
+        "head_signature": {
+          "196883": 8,
+          "21296876": 1,
+          "842609326": -49
+        }
+      },
+      {
+        "class_name": "6A",
+        "package": {
+          "V1": 79,
+          "V2": 352,
+          "V3": 1431
+        },
+        "head_signature": {
+          "196883": 78,
+          "21296876": 273,
+          "842609326": 1000
+        }
+      },
+      {
+        "class_name": "6B",
+        "package": {
+          "V1": 78,
+          "V2": 364,
+          "V3": 1365
+        },
+        "head_signature": {
+          "196883": 77,
+          "21296876": 286,
+          "842609326": 923
+        }
+      },
+      {
+        "class_name": "6C",
+        "package": {
+          "V1": 15,
+          "V2": -32,
+          "V3": 87
+        },
+        "head_signature": {
+          "196883": 14,
+          "21296876": -47,
+          "842609326": 104
+        }
+      },
+      {
+        "class_name": "6D",
+        "package": {
+          "V1": -2,
+          "V2": 28,
+          "V3": -27
+        },
+        "head_signature": {
+          "196883": -3,
+          "21296876": 30,
+          "842609326": -53
+        }
+      },
+      {
+        "class_name": "6E",
+        "package": {
+          "V1": 6,
+          "V2": 4,
+          "V3": -3
+        },
+        "head_signature": {
+          "196883": 5,
+          "21296876": -2,
+          "842609326": -13
+        }
+      },
+      {
+        "class_name": "7A",
+        "package": {
+          "V1": 51,
+          "V2": 204,
+          "V3": 681
+        },
+        "head_signature": {
+          "196883": 50,
+          "21296876": 153,
+          "842609326": 426
+        }
+      },
+      {
+        "class_name": "7B",
+        "package": {
+          "V1": 2,
+          "V2": 8,
+          "V3": -5
+        },
+        "head_signature": {
+          "196883": 1,
+          "21296876": 6,
+          "842609326": -15
+        }
+      },
+      {
+        "class_name": "8A",
+        "package": {
+          "V1": 36,
+          "V2": 128,
+          "V3": 386
+        },
+        "head_signature": {
+          "196883": 35,
+          "21296876": 92,
+          "842609326": 222
+        }
+      },
+      {
+        "class_name": "8A'",
+        "package": {
+          "V1": 36,
+          "V2": -128,
+          "V3": 386
+        },
+        "head_signature": {
+          "196883": 35,
+          "21296876": -164,
+          "842609326": 478
+        }
+      },
+      {
+        "class_name": "8B",
+        "package": {
+          "V1": 12,
+          "V2": 0,
+          "V3": 66
+        },
+        "head_signature": {
+          "196883": 11,
+          "21296876": -12,
+          "842609326": 54
+        }
+      },
+      {
+        "class_name": "8E",
+        "package": {
+          "V1": 4,
+          "V2": 0,
+          "V3": 2
+        },
+        "head_signature": {
+          "196883": 3,
+          "21296876": -4,
+          "842609326": -2
+        }
+      },
+      {
+        "class_name": "9A",
+        "package": {
+          "V1": 27,
+          "V2": 86,
+          "V3": 243
+        },
+        "head_signature": {
+          "196883": 26,
+          "21296876": 59,
+          "842609326": 130
+        }
+      },
+      {
+        "class_name": "10A",
+        "package": {
+          "V1": 22,
+          "V2": 56,
+          "V3": 177
+        },
+        "head_signature": {
+          "196883": 21,
+          "21296876": 34,
+          "842609326": 99
+        }
+      },
+      {
+        "class_name": "10B",
+        "package": {
+          "V1": 6,
+          "V2": -8,
+          "V3": 17
+        },
+        "head_signature": {
+          "196883": 5,
+          "21296876": -14,
+          "842609326": 19
+        }
+      },
+      {
+        "class_name": "10C",
+        "package": {
+          "V1": -3,
+          "V2": 6,
+          "V3": 2
+        },
+        "head_signature": {
+          "196883": -4,
+          "21296876": 9,
+          "842609326": -1
+        }
+      },
+      {
+        "class_name": "10D",
+        "package": {
+          "V1": 21,
+          "V2": 62,
+          "V3": 162
+        },
+        "head_signature": {
+          "196883": 20,
+          "21296876": 41,
+          "842609326": 79
+        }
+      },
+      {
+        "class_name": "10E",
+        "package": {
+          "V1": 1,
+          "V2": 2,
+          "V3": 2
+        },
+        "head_signature": {
+          "196883": 0,
+          "21296876": 1,
+          "842609326": -1
+        }
+      },
+      {
+        "class_name": "11A",
+        "package": {
+          "V1": 17,
+          "V2": 46,
+          "V3": 116
+        },
+        "head_signature": {
+          "196883": 16,
+          "21296876": 29,
+          "842609326": 53
+        }
+      },
+      {
+        "class_name": "13A",
+        "package": {
+          "V1": 12,
+          "V2": 28,
+          "V3": 66
+        },
+        "head_signature": {
+          "196883": 11,
+          "21296876": 16,
+          "842609326": 26
+        }
+      },
+      {
+        "class_name": "13B",
+        "package": {
+          "V1": -1,
+          "V2": 2,
+          "V3": 1
+        },
+        "head_signature": {
+          "196883": -2,
+          "21296876": 3,
+          "842609326": 0
+        }
+      }
+    ],
+    "anchored_rows": [
+      {
+        "class_name": "1A",
+        "inferred_package": {
+          "V1": 196884,
+          "V2": 21493760,
+          "V3": 864299970
+        },
+        "actual_package": {
+          "V1": 196884,
+          "V2": 21493760,
+          "V3": 864299970
+        },
+        "matches": {
+          "V1": true,
+          "V2": true,
+          "V3": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "2A",
+        "inferred_package": {
+          "V1": 4372,
+          "V2": 96256,
+          "V3": 1240002
+        },
+        "actual_package": {
+          "V1": 4372,
+          "V2": 96256,
+          "V3": 1240002
+        },
+        "matches": {
+          "V1": true,
+          "V2": true,
+          "V3": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "2B",
+        "inferred_package": {
+          "V1": 276,
+          "V2": -2048,
+          "V3": 11202
+        },
+        "actual_package": {
+          "V1": 276,
+          "V2": -2048,
+          "V3": 11202
+        },
+        "matches": {
+          "V1": true,
+          "V2": true,
+          "V3": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "3A",
+        "inferred_package": {
+          "V1": 783,
+          "V2": 8672,
+          "V3": 65367
+        },
+        "actual_package": {
+          "V1": 783,
+          "V2": 8672,
+          "V3": 65367
+        },
+        "matches": {
+          "V1": true,
+          "V2": true,
+          "V3": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "3B",
+        "inferred_package": {
+          "V1": 54,
+          "V2": -76,
+          "V3": -243
+        },
+        "actual_package": {
+          "V1": 54,
+          "V2": -76,
+          "V3": -243
+        },
+        "matches": {
+          "V1": true,
+          "V2": true,
+          "V3": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "3C",
+        "inferred_package": {
+          "V1": 0,
+          "V2": 248,
+          "V3": 0
+        },
+        "actual_package": {
+          "V1": 0,
+          "V2": 248,
+          "V3": 0
+        },
+        "matches": {
+          "V1": true,
+          "V2": true,
+          "V3": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "5A",
+        "inferred_package": {
+          "V1": 134,
+          "V2": 760,
+          "V3": 3345
+        },
+        "actual_package": {
+          "V1": 134,
+          "V2": 760,
+          "V3": 3345
+        },
+        "matches": {
+          "V1": true,
+          "V2": true,
+          "V3": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "5B",
+        "inferred_package": {
+          "V1": 9,
+          "V2": 10,
+          "V3": -30
+        },
+        "actual_package": {
+          "V1": 9,
+          "V2": 10,
+          "V3": -30
+        },
+        "matches": {
+          "V1": true,
+          "V2": true,
+          "V3": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "7A",
+        "inferred_package": {
+          "V1": 51,
+          "V2": 204,
+          "V3": 681
+        },
+        "actual_package": {
+          "V1": 51,
+          "V2": 204,
+          "V3": 681
+        },
+        "matches": {
+          "V1": true,
+          "V2": true,
+          "V3": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "7B",
+        "inferred_package": {
+          "V1": 2,
+          "V2": 8,
+          "V3": -5
+        },
+        "actual_package": {
+          "V1": 2,
+          "V2": 8,
+          "V3": -5
+        },
+        "matches": {
+          "V1": true,
+          "V2": true,
+          "V3": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "11A",
+        "inferred_package": {
+          "V1": 17,
+          "V2": 46,
+          "V3": 116
+        },
+        "actual_package": {
+          "V1": 17,
+          "V2": 46,
+          "V3": 116
+        },
+        "matches": {
+          "V1": true,
+          "V2": true,
+          "V3": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "13A",
+        "inferred_package": {
+          "V1": 12,
+          "V2": 28,
+          "V3": 66
+        },
+        "actual_package": {
+          "V1": 12,
+          "V2": 28,
+          "V3": 66
+        },
+        "matches": {
+          "V1": true,
+          "V2": true,
+          "V3": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "13B",
+        "inferred_package": {
+          "V1": -1,
+          "V2": 2,
+          "V3": 1
+        },
+        "actual_package": {
+          "V1": -1,
+          "V2": 2,
+          "V3": 1
+        },
+        "matches": {
+          "V1": true,
+          "V2": true,
+          "V3": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "17A",
+        "inferred_package": {
+          "V1": 7,
+          "V2": 14,
+          "V3": 29
+        },
+        "actual_package": {
+          "V1": 7,
+          "V2": 14,
+          "V3": 29
+        },
+        "matches": {
+          "V1": true,
+          "V2": true,
+          "V3": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "19A",
+        "inferred_package": {
+          "V1": 6,
+          "V2": 10,
+          "V3": 21
+        },
+        "actual_package": {
+          "V1": 6,
+          "V2": 10,
+          "V3": 21
+        },
+        "matches": {
+          "V1": true,
+          "V2": true,
+          "V3": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "29A",
+        "inferred_package": {
+          "V1": 3,
+          "V2": 4,
+          "V3": 7
+        },
+        "actual_package": {
+          "V1": 3,
+          "V2": 4,
+          "V3": 7
+        },
+        "matches": {
+          "V1": true,
+          "V2": true,
+          "V3": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "41A",
+        "inferred_package": {
+          "V1": 2,
+          "V2": 2,
+          "V3": 3
+        },
+        "actual_package": {
+          "V1": 2,
+          "V2": 2,
+          "V3": 3
+        },
+        "matches": {
+          "V1": true,
+          "V2": true,
+          "V3": true
+        },
+        "all_match": true
+      }
+    ],
+    "distinct_package_count": 32,
+    "atlas_edge_rows": [
+      {
+        "source": "10A",
+        "exponent": 2,
+        "target": "5A",
+        "source_package": {
+          "V1": 22,
+          "V2": 56,
+          "V3": 177
+        },
+        "target_package": {
+          "V1": 134,
+          "V2": 760,
+          "V3": 3345
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "10B",
+        "exponent": 2,
+        "target": "5A",
+        "source_package": {
+          "V1": 6,
+          "V2": -8,
+          "V3": 17
+        },
+        "target_package": {
+          "V1": 134,
+          "V2": 760,
+          "V3": 3345
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "10C",
+        "exponent": 2,
+        "target": "5B",
+        "source_package": {
+          "V1": -3,
+          "V2": 6,
+          "V3": 2
+        },
+        "target_package": {
+          "V1": 9,
+          "V2": 10,
+          "V3": -30
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "10D",
+        "exponent": 2,
+        "target": "5B",
+        "source_package": {
+          "V1": 21,
+          "V2": 62,
+          "V3": 162
+        },
+        "target_package": {
+          "V1": 9,
+          "V2": 10,
+          "V3": -30
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "10E",
+        "exponent": 2,
+        "target": "5B",
+        "source_package": {
+          "V1": 1,
+          "V2": 2,
+          "V3": 2
+        },
+        "target_package": {
+          "V1": 9,
+          "V2": 10,
+          "V3": -30
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "2A",
+        "exponent": 2,
+        "target": "1A",
+        "source_package": {
+          "V1": 4372,
+          "V2": 96256,
+          "V3": 1240002
+        },
+        "target_package": {
+          "V1": 196884,
+          "V2": 21493760,
+          "V3": 864299970
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "2B",
+        "exponent": 2,
+        "target": "1A",
+        "source_package": {
+          "V1": 276,
+          "V2": -2048,
+          "V3": 11202
+        },
+        "target_package": {
+          "V1": 196884,
+          "V2": 21493760,
+          "V3": 864299970
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "4A",
+        "exponent": 2,
+        "target": "2B",
+        "source_package": {
+          "V1": 276,
+          "V2": 2048,
+          "V3": 11202
+        },
+        "target_package": {
+          "V1": 276,
+          "V2": -2048,
+          "V3": 11202
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "4B",
+        "exponent": 2,
+        "target": "2A",
+        "source_package": {
+          "V1": 52,
+          "V2": 0,
+          "V3": 834
+        },
+        "target_package": {
+          "V1": 4372,
+          "V2": 96256,
+          "V3": 1240002
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "4C",
+        "exponent": 2,
+        "target": "2B",
+        "source_package": {
+          "V1": 20,
+          "V2": 0,
+          "V3": -62
+        },
+        "target_package": {
+          "V1": 276,
+          "V2": -2048,
+          "V3": 11202
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "4D",
+        "exponent": 2,
+        "target": "2B",
+        "source_package": {
+          "V1": -12,
+          "V2": 0,
+          "V3": 66
+        },
+        "target_package": {
+          "V1": 276,
+          "V2": -2048,
+          "V3": 11202
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "6A",
+        "exponent": 2,
+        "target": "3A",
+        "source_package": {
+          "V1": 79,
+          "V2": 352,
+          "V3": 1431
+        },
+        "target_package": {
+          "V1": 783,
+          "V2": 8672,
+          "V3": 65367
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "6B",
+        "exponent": 2,
+        "target": "3B",
+        "source_package": {
+          "V1": 78,
+          "V2": 364,
+          "V3": 1365
+        },
+        "target_package": {
+          "V1": 54,
+          "V2": -76,
+          "V3": -243
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "6C",
+        "exponent": 2,
+        "target": "3A",
+        "source_package": {
+          "V1": 15,
+          "V2": -32,
+          "V3": 87
+        },
+        "target_package": {
+          "V1": 783,
+          "V2": 8672,
+          "V3": 65367
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "6D",
+        "exponent": 2,
+        "target": "3B",
+        "source_package": {
+          "V1": -2,
+          "V2": 28,
+          "V3": -27
+        },
+        "target_package": {
+          "V1": 54,
+          "V2": -76,
+          "V3": -243
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "6E",
+        "exponent": 2,
+        "target": "3B",
+        "source_package": {
+          "V1": 6,
+          "V2": 4,
+          "V3": -3
+        },
+        "target_package": {
+          "V1": 54,
+          "V2": -76,
+          "V3": -243
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "8A",
+        "exponent": 2,
+        "target": "4C",
+        "source_package": {
+          "V1": 36,
+          "V2": 128,
+          "V3": 386
+        },
+        "target_package": {
+          "V1": 20,
+          "V2": 0,
+          "V3": -62
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "8B",
+        "exponent": 2,
+        "target": "4A",
+        "source_package": {
+          "V1": 12,
+          "V2": 0,
+          "V3": 66
+        },
+        "target_package": {
+          "V1": 276,
+          "V2": 2048,
+          "V3": 11202
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "8E",
+        "exponent": 2,
+        "target": "4C",
+        "source_package": {
+          "V1": 4,
+          "V2": 0,
+          "V3": 2
+        },
+        "target_package": {
+          "V1": 20,
+          "V2": 0,
+          "V3": -62
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "3A",
+        "exponent": 3,
+        "target": "1A",
+        "source_package": {
+          "V1": 783,
+          "V2": 8672,
+          "V3": 65367
+        },
+        "target_package": {
+          "V1": 196884,
+          "V2": 21493760,
+          "V3": 864299970
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "3B",
+        "exponent": 3,
+        "target": "1A",
+        "source_package": {
+          "V1": 54,
+          "V2": -76,
+          "V3": -243
+        },
+        "target_package": {
+          "V1": 196884,
+          "V2": 21493760,
+          "V3": 864299970
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "3C",
+        "exponent": 3,
+        "target": "1A",
+        "source_package": {
+          "V1": 0,
+          "V2": 248,
+          "V3": 0
+        },
+        "target_package": {
+          "V1": 196884,
+          "V2": 21493760,
+          "V3": 864299970
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "6A",
+        "exponent": 3,
+        "target": "2A",
+        "source_package": {
+          "V1": 79,
+          "V2": 352,
+          "V3": 1431
+        },
+        "target_package": {
+          "V1": 4372,
+          "V2": 96256,
+          "V3": 1240002
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "6B",
+        "exponent": 3,
+        "target": "2B",
+        "source_package": {
+          "V1": 78,
+          "V2": 364,
+          "V3": 1365
+        },
+        "target_package": {
+          "V1": 276,
+          "V2": -2048,
+          "V3": 11202
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "6C",
+        "exponent": 3,
+        "target": "2B",
+        "source_package": {
+          "V1": 15,
+          "V2": -32,
+          "V3": 87
+        },
+        "target_package": {
+          "V1": 276,
+          "V2": -2048,
+          "V3": 11202
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "6D",
+        "exponent": 3,
+        "target": "2A",
+        "source_package": {
+          "V1": -2,
+          "V2": 28,
+          "V3": -27
+        },
+        "target_package": {
+          "V1": 4372,
+          "V2": 96256,
+          "V3": 1240002
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "6E",
+        "exponent": 3,
+        "target": "2B",
+        "source_package": {
+          "V1": 6,
+          "V2": 4,
+          "V3": -3
+        },
+        "target_package": {
+          "V1": 276,
+          "V2": -2048,
+          "V3": 11202
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "9A",
+        "exponent": 3,
+        "target": "3B",
+        "source_package": {
+          "V1": 27,
+          "V2": 86,
+          "V3": 243
+        },
+        "target_package": {
+          "V1": 54,
+          "V2": -76,
+          "V3": -243
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "10A",
+        "exponent": 5,
+        "target": "2A",
+        "source_package": {
+          "V1": 22,
+          "V2": 56,
+          "V3": 177
+        },
+        "target_package": {
+          "V1": 4372,
+          "V2": 96256,
+          "V3": 1240002
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "10B",
+        "exponent": 5,
+        "target": "2B",
+        "source_package": {
+          "V1": 6,
+          "V2": -8,
+          "V3": 17
+        },
+        "target_package": {
+          "V1": 276,
+          "V2": -2048,
+          "V3": 11202
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "10C",
+        "exponent": 5,
+        "target": "2A",
+        "source_package": {
+          "V1": -3,
+          "V2": 6,
+          "V3": 2
+        },
+        "target_package": {
+          "V1": 4372,
+          "V2": 96256,
+          "V3": 1240002
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "10D",
+        "exponent": 5,
+        "target": "2B",
+        "source_package": {
+          "V1": 21,
+          "V2": 62,
+          "V3": 162
+        },
+        "target_package": {
+          "V1": 276,
+          "V2": -2048,
+          "V3": 11202
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "10E",
+        "exponent": 5,
+        "target": "2B",
+        "source_package": {
+          "V1": 1,
+          "V2": 2,
+          "V3": 2
+        },
+        "target_package": {
+          "V1": 276,
+          "V2": -2048,
+          "V3": 11202
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "5A",
+        "exponent": 5,
+        "target": "1A",
+        "source_package": {
+          "V1": 134,
+          "V2": 760,
+          "V3": 3345
+        },
+        "target_package": {
+          "V1": 196884,
+          "V2": 21493760,
+          "V3": 864299970
+        },
+        "matches_atlas": true
+      },
+      {
+        "source": "5B",
+        "exponent": 5,
+        "target": "1A",
+        "source_package": {
+          "V1": 9,
+          "V2": 10,
+          "V3": -30
+        },
+        "target_package": {
+          "V1": 196884,
+          "V2": 21493760,
+          "V3": 864299970
+        },
+        "matches_atlas": true
+      }
+    ],
+    "composite_rows": [
+      {
+        "class_name": "4A",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "2B",
+          "4": "1A"
+        }
+      },
+      {
+        "class_name": "4B",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "2A",
+          "4": "1A"
+        }
+      },
+      {
+        "class_name": "4C",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "2B",
+          "4": "1A"
+        }
+      },
+      {
+        "class_name": "4D",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "2B",
+          "4": "1A"
+        }
+      },
+      {
+        "class_name": "6A",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "3A",
+          "3": "2A",
+          "6": "1A"
+        }
+      },
+      {
+        "class_name": "6B",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "3B",
+          "3": "2B",
+          "6": "1A"
+        }
+      },
+      {
+        "class_name": "6C",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "3A",
+          "3": "2B",
+          "6": "1A"
+        }
+      },
+      {
+        "class_name": "6D",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "3B",
+          "3": "2A",
+          "6": "1A"
+        }
+      },
+      {
+        "class_name": "6E",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "3B",
+          "3": "2B",
+          "6": "1A"
+        }
+      },
+      {
+        "class_name": "8A",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "4C",
+          "4": "2B",
+          "8": "1A"
+        }
+      },
+      {
+        "class_name": "8B",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "4A",
+          "4": "2B",
+          "8": "1A"
+        }
+      },
+      {
+        "class_name": "8E",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "4C",
+          "4": "2B",
+          "8": "1A"
+        }
+      },
+      {
+        "class_name": "9A",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "3": "3B",
+          "9": "1A"
+        }
+      },
+      {
+        "class_name": "10A",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "5A",
+          "5": "2A",
+          "10": "1A"
+        }
+      },
+      {
+        "class_name": "10B",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "5A",
+          "5": "2B",
+          "10": "1A"
+        }
+      },
+      {
+        "class_name": "10C",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "5B",
+          "5": "2A",
+          "10": "1A"
+        }
+      },
+      {
+        "class_name": "10D",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "5B",
+          "5": "2B",
+          "10": "1A"
+        }
+      },
+      {
+        "class_name": "10E",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "5B",
+          "5": "2B",
+          "10": "1A"
+        }
+      }
+    ]
+  },
+  "moonshine_v123_package_theorem": {
+    "the_v123_package_transform_has_unimodular_linear_part_with_determinant_1": true,
+    "all_17_ctbllib_anchored_classes_match_the_actual_monster_v1_v2_v3_traces": true,
+    "the_v1_v2_v3_package_separates_all_32_supported_seed_classes": true,
+    "all_35_atlas_available_prime_power_edges_land_inside_the_same_v1_v2_v3_package_dictionary": true,
+    "all_18_composite_transport_rows_land_inside_the_same_v1_v2_v3_package_dictionary": true,
+    "the_exceptional_affine_node_3c_has_sparse_package_0_248_0": true,
+    "the_pair_8a_8aprime_is_separated_only_by_the_sign_of_v2": true,
+    "the_supported_seed_transport_graph_therefore_closes_as_an_exact_v1_v2_v3_package_graph": true,
+    "the_moonshine_v123_package_bridge_is_fully_closed": true
+  },
+  "interpretation": "The supported moonshine seed now closes directly on the first exact graded Monster package V1\u2295V2\u2295V3. The head-signature basis and the graded-package basis are integrally equivalent, the anchored classes match the actual Monster traces, the full supported seed is separated by these package traces, and every verified transport edge remains inside the same finite package dictionary."
+}
