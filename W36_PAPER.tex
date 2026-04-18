@@ -833,6 +833,47 @@ inherit the structure of the adjacency spectrum, shifted and scaled by the diago
 degree matrix.
 \end{proof}
 
+\subsubsection{Symmetry, Transitivity, and Resilience}
+
+\begin{proposition}[Highly Symmetric and Vertex-Transitive Structure]\label{prop:symmetry}
+The graph $\W(3,3)$ exhibits maximal symmetry and transitivity:
+\begin{itemize}
+  \item \textbf{Vertex-transitive}: The automorphism group acts transitively on vertices.
+        All 40 vertices are equivalent under the action of $\mathrm{Aut}(\W) \cong \mathrm{PSp}(4,3)$,
+        with stabilizer order $|\mathrm{Stab}(v)| = |\mathrm{Aut}(\W)|/n = 25920/40 = 648$.
+  \item \textbf{Edge-transitive}: All edges are equivalent; the automorphism group
+        acts transitively on the edge set ($E = 240$ edges).
+  \item \textbf{Distance-transitive}: For each distance $d \in \{0,1,2\}$, pairs of vertices
+        at distance $d$ are equivalent under automorphisms.
+  \item \textbf{Maximal connectivity}: Vertex connectivity $\kappa(\W) = k = 12$ and
+        edge connectivity $\kappa'(\W) = k = 12$ (both maximal for a 12-regular graph).
+        Removal of fewer than 12 vertices or edges leaves the graph connected.
+  \item \textbf{Resilience}: At most $30\%$ of vertices (12 out of 40) must be removed
+        to disconnect the graph, indicating high robustness to failures.
+  \item \textbf{Non-bipartite with high cycle abundance}: The graph contains odd cycles
+        (e.g., triangles); it is not bipartite. However, even 4-cycles are abundant
+        ($C_4 = 3,240$), enabling multiple independent paths between vertices.
+\end{itemize}
+\end{proposition}
+
+\begin{proof}
+The vertex-transitivity is a direct consequence of $\mathrm{PSp}(4,3)$ being the stabilizer
+of the symplectic form used to define adjacency in $\W(3,3)$. Since all lines of the
+projective space $\mathrm{PG}(3,3)$ are equivalent under the action (by definition of
+the symplectic group), all vertices are equivalent.
+
+The vertex connectivity equals the regularity $k$ for a vertex-transitive graph, as the
+removal of any $k-1$ vertices leaves at least one neighbor of any remaining vertex.
+Similarly, edge connectivity equals $k$ for regular graphs.
+
+The distance-transitivity follows from the vertex-transitivity and the fact that
+distance is preserved under automorphisms: if $\mathrm{Aut}(\W)$ acts on vertices, it acts
+on pairs of vertices preserving distance.
+
+The cycle abundance (160 triangles, 3,240 four-cycles) ensures multiple alternate paths,
+contributing to the high resilience to edge and vertex failures.
+\end{proof}
+
 
 
 \begin{figure}[H]
