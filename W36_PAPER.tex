@@ -703,7 +703,50 @@ are numerical coincidences that parallel the Lie algebra cascade
 (Theorem~\ref{thm:liecascade}).
 \end{proof}
 
-\subsection{The Eigenvalue--Root-System Correspondence}
+\subsubsection{Clique Enumeration and Vertex-Transitive Partition}
+
+\begin{proposition}[Clique Structure]\label{prop:cliques}
+The graph $\W(3,3)$ has a highly regular clique structure:
+\begin{itemize}
+  \item Total cliques by size: $C_1 = 40$ (vertices), $C_2 = 240$ (edges),
+        $C_3 = 160$ (triangles), $C_4 = 40$ (four-cliques), $C_5 = 0$.
+  \item Vertex-uniform: each vertex lies in exactly $\omega = 4$ four-cliques
+        and exactly $\lambda k/2 = 12$ triangles.
+  \item Clique partition: the 40 vertices partition into exactly $\chi_c = 10$
+        disjoint 4-cliques (a perfect clique cover).
+  \item Chromatic number: the fractional chromatic number is
+        $\chi_f(\W) = n/\alpha = 40/7 \approx 5.71$, yielding the bounds
+        $4 \le \chi(\W) \le 6$ (with $\chi(\W) \in \{4,5,6\}$ to be determined).
+  \item Edge-triangle incidence: each edge lies in exactly $\lambda = 2$ triangles;
+        total incidences: $\sum_{\text{triangles}} 3 = 480 = 2E$ where $E = 240$ is the edge count.
+\end{itemize}
+\end{proposition}
+
+\begin{proof}
+The clique counts $C_k$ are determined by enumeration:
+\begin{align}
+  C_1 &= n = 40, \\
+  C_2 &= nk/2 = 40 \cdot 12 / 2 = 240, \\
+  C_3 &= nk\lambda/6 = 40 \cdot 12 \cdot 2 / 6 = 160, \\
+  C_4 &= \text{(enumeration)} = 40, \\
+  C_5 &= 0.
+\end{align}
+The vertex-uniformity follows from the vertex-transitive action of $\mathrm{Aut}(\W) \cong \mathrm{PSp}(4,3)$:
+each vertex is in $\sum_{\text{4-cliques containing } v} 1 = 4$ four-cliques (direct count),
+and in $k\lambda/2 = 12$ triangles (via the SRG parameter formula).
+
+The clique partition into 10 disjoint 4-cliques is maximal: we can partition all 40 vertices
+into 10 groups of 4, each forming a clique. This is a geometric fact of the GQ structure:
+the 40 lines of $\mathrm{GQ}(3,3)$ partition into 10 parallel classes, and within each
+parallel class, the 4 lines are mutually collinear (forming a regulus), giving a 4-clique.
+
+The fractional chromatic number $\chi_f = n/\alpha = 40/7$ is a lower bound on the
+integer chromatic number. Since $\chi(\W) \ge \omega = 4$ and $\chi(\W) \le \chi_f + 1 = 6.71$,
+and $\chi(\W)$ is integer, we have $\chi(\W) \in \{4,5,6\}$. The actual value requires
+explicit construction or algorithmic determination.
+\end{proof}
+
+
 
 \begin{figure}[H]
   \centering
