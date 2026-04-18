@@ -1,0 +1,126 @@
+{
+  "E8_theta_vs_E4": {
+    "all_match": true,
+    "rows": [
+      {
+        "k": 0,
+        "theta_E8": 1,
+        "E4": 1,
+        "match": true
+      },
+      {
+        "k": 1,
+        "theta_E8": 240,
+        "E4": 240,
+        "match": true
+      },
+      {
+        "k": 2,
+        "theta_E8": 2160,
+        "E4": 2160,
+        "match": true
+      },
+      {
+        "k": 3,
+        "theta_E8": 6720,
+        "E4": 6720,
+        "match": true
+      },
+      {
+        "k": 4,
+        "theta_E8": 17520,
+        "E4": 17520,
+        "match": true
+      }
+    ],
+    "kissing_number_E8": 240,
+    "kissing_number_E8_equals_240": true
+  },
+  "leech_theta_reference": {
+    "all_match": true,
+    "rows": [
+      {
+        "k": 0,
+        "theta_leech": 1,
+        "reference": 1,
+        "match": true
+      },
+      {
+        "k": 1,
+        "theta_leech": 0,
+        "reference": 0,
+        "match": true
+      },
+      {
+        "k": 2,
+        "theta_leech": 196560,
+        "reference": 196560,
+        "match": true
+      },
+      {
+        "k": 3,
+        "theta_leech": 16773120,
+        "reference": 16773120,
+        "match": true
+      },
+      {
+        "k": 4,
+        "theta_leech": 398034000,
+        "reference": 398034000,
+        "match": true
+      },
+      {
+        "k": 5,
+        "theta_leech": 4629381120,
+        "reference": 4629381120,
+        "match": true
+      }
+    ],
+    "kissing_number_Leech": 196560,
+    "kissing_number_Leech_equals_196560": true,
+    "no_norm_2_vectors_in_Leech": true
+  },
+  "leech_identity": {
+    "all_match": true,
+    "first_6_coefficients": [
+      1,
+      0,
+      196560,
+      16773120,
+      398034000,
+      4629381120
+    ],
+    "E4_cubed_first_6": [
+      1,
+      720,
+      179280,
+      16954560,
+      396974160,
+      4632858720
+    ],
+    "minus_720_Delta_first_6": [
+      0,
+      -720,
+      17280,
+      -181440,
+      1059840,
+      -3477600
+    ]
+  },
+  "e8_first_shell": {
+    "integer_coset": 112,
+    "half_integer_coset": 128,
+    "total": 240,
+    "matches_240": true,
+    "matches_direct_count": true
+  },
+  "summary_chain": {
+    "theta_E8_equals_E4_up_to_q4": true,
+    "kissing_number_E8_is_240": true,
+    "theta_leech_matches_reference_up_to_q5": true,
+    "kissing_number_Leech_is_196560": true,
+    "leech_has_no_norm_2_vectors": true,
+    "leech_equals_E8_cubed_minus_720_delta": true,
+    "e8_first_shell_is_112_plus_128": true
+  }
+}
