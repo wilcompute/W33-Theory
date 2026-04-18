@@ -1,0 +1,386 @@
+{
+  "moonshine_head_character_transport_dictionary": {
+    "integer_character_classes": [
+      "1A",
+      "2A",
+      "2B",
+      "3A",
+      "3B",
+      "3C",
+      "5A",
+      "5B",
+      "7A",
+      "7B",
+      "11A",
+      "13A",
+      "13B",
+      "17A",
+      "19A",
+      "29A",
+      "41A"
+    ],
+    "rows": [
+      {
+        "class_name": "1A",
+        "inferred_head_characters": {
+          "1": 1,
+          "196883": 196883,
+          "21296876": 21296876,
+          "842609326": 842609326
+        },
+        "ctbllib_head_characters": {
+          "196883": 196883,
+          "21296876": 21296876,
+          "842609326": 842609326
+        },
+        "matches": {
+          "196883": true,
+          "21296876": true,
+          "842609326": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "2A",
+        "inferred_head_characters": {
+          "1": 1,
+          "196883": 4371,
+          "21296876": 91884,
+          "842609326": 1139374
+        },
+        "ctbllib_head_characters": {
+          "196883": 4371,
+          "21296876": 91884,
+          "842609326": 1139374
+        },
+        "matches": {
+          "196883": true,
+          "21296876": true,
+          "842609326": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "2B",
+        "inferred_head_characters": {
+          "1": 1,
+          "196883": 275,
+          "21296876": -2324,
+          "842609326": 12974
+        },
+        "ctbllib_head_characters": {
+          "196883": 275,
+          "21296876": -2324,
+          "842609326": 12974
+        },
+        "matches": {
+          "196883": true,
+          "21296876": true,
+          "842609326": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "3A",
+        "inferred_head_characters": {
+          "1": 1,
+          "196883": 782,
+          "21296876": 7889,
+          "842609326": 55912
+        },
+        "ctbllib_head_characters": {
+          "196883": 782,
+          "21296876": 7889,
+          "842609326": 55912
+        },
+        "matches": {
+          "196883": true,
+          "21296876": true,
+          "842609326": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "3B",
+        "inferred_head_characters": {
+          "1": 1,
+          "196883": 53,
+          "21296876": -130,
+          "842609326": -221
+        },
+        "ctbllib_head_characters": {
+          "196883": 53,
+          "21296876": -130,
+          "842609326": -221
+        },
+        "matches": {
+          "196883": true,
+          "21296876": true,
+          "842609326": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "3C",
+        "inferred_head_characters": {
+          "1": 1,
+          "196883": -1,
+          "21296876": 248,
+          "842609326": -248
+        },
+        "ctbllib_head_characters": {
+          "196883": -1,
+          "21296876": 248,
+          "842609326": -248
+        },
+        "matches": {
+          "196883": true,
+          "21296876": true,
+          "842609326": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "5A",
+        "inferred_head_characters": {
+          "1": 1,
+          "196883": 133,
+          "21296876": 626,
+          "842609326": 2451
+        },
+        "ctbllib_head_characters": {
+          "196883": 133,
+          "21296876": 626,
+          "842609326": 2451
+        },
+        "matches": {
+          "196883": true,
+          "21296876": true,
+          "842609326": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "5B",
+        "inferred_head_characters": {
+          "1": 1,
+          "196883": 8,
+          "21296876": 1,
+          "842609326": -49
+        },
+        "ctbllib_head_characters": {
+          "196883": 8,
+          "21296876": 1,
+          "842609326": -49
+        },
+        "matches": {
+          "196883": true,
+          "21296876": true,
+          "842609326": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "7A",
+        "inferred_head_characters": {
+          "1": 1,
+          "196883": 50,
+          "21296876": 153,
+          "842609326": 426
+        },
+        "ctbllib_head_characters": {
+          "196883": 50,
+          "21296876": 153,
+          "842609326": 426
+        },
+        "matches": {
+          "196883": true,
+          "21296876": true,
+          "842609326": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "7B",
+        "inferred_head_characters": {
+          "1": 1,
+          "196883": 1,
+          "21296876": 6,
+          "842609326": -15
+        },
+        "ctbllib_head_characters": {
+          "196883": 1,
+          "21296876": 6,
+          "842609326": -15
+        },
+        "matches": {
+          "196883": true,
+          "21296876": true,
+          "842609326": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "11A",
+        "inferred_head_characters": {
+          "1": 1,
+          "196883": 16,
+          "21296876": 29,
+          "842609326": 53
+        },
+        "ctbllib_head_characters": {
+          "196883": 16,
+          "21296876": 29,
+          "842609326": 53
+        },
+        "matches": {
+          "196883": true,
+          "21296876": true,
+          "842609326": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "13A",
+        "inferred_head_characters": {
+          "1": 1,
+          "196883": 11,
+          "21296876": 16,
+          "842609326": 26
+        },
+        "ctbllib_head_characters": {
+          "196883": 11,
+          "21296876": 16,
+          "842609326": 26
+        },
+        "matches": {
+          "196883": true,
+          "21296876": true,
+          "842609326": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "13B",
+        "inferred_head_characters": {
+          "1": 1,
+          "196883": -2,
+          "21296876": 3,
+          "842609326": 0
+        },
+        "ctbllib_head_characters": {
+          "196883": -2,
+          "21296876": 3,
+          "842609326": 0
+        },
+        "matches": {
+          "196883": true,
+          "21296876": true,
+          "842609326": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "17A",
+        "inferred_head_characters": {
+          "1": 1,
+          "196883": 6,
+          "21296876": 7,
+          "842609326": 8
+        },
+        "ctbllib_head_characters": {
+          "196883": 6,
+          "21296876": 7,
+          "842609326": 8
+        },
+        "matches": {
+          "196883": true,
+          "21296876": true,
+          "842609326": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "19A",
+        "inferred_head_characters": {
+          "1": 1,
+          "196883": 5,
+          "21296876": 4,
+          "842609326": 5
+        },
+        "ctbllib_head_characters": {
+          "196883": 5,
+          "21296876": 4,
+          "842609326": 5
+        },
+        "matches": {
+          "196883": true,
+          "21296876": true,
+          "842609326": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "29A",
+        "inferred_head_characters": {
+          "1": 1,
+          "196883": 2,
+          "21296876": 1,
+          "842609326": 0
+        },
+        "ctbllib_head_characters": {
+          "196883": 2,
+          "21296876": 1,
+          "842609326": 0
+        },
+        "matches": {
+          "196883": true,
+          "21296876": true,
+          "842609326": true
+        },
+        "all_match": true
+      },
+      {
+        "class_name": "41A",
+        "inferred_head_characters": {
+          "1": 1,
+          "196883": 1,
+          "21296876": 0,
+          "842609326": -1
+        },
+        "ctbllib_head_characters": {
+          "196883": 1,
+          "21296876": 0,
+          "842609326": -1
+        },
+        "matches": {
+          "196883": true,
+          "21296876": true,
+          "842609326": true
+        },
+        "all_match": true
+      }
+    ],
+    "transport_theorem": {
+      "the_supported_seed_has_exactly_32_offline_classes": true,
+      "the_supported_seed_orders_are_exactly_1_2_3_4_5_6_7_8_9_10_11_13": true,
+      "all_atlas_available_square_edges_match_the_q_series_inference": true,
+      "all_atlas_available_cube_edges_match_the_q_series_inference": true,
+      "all_atlas_available_fifth_edges_match_the_q_series_inference": true,
+      "all_18_composite_transport_checks_are_exact_and_atlas_validated": true,
+      "the_supported_offline_seed_therefore_closes_as_one_finite_transport_graph": true,
+      "the_supported_seed_moonshine_transport_graph_is_fully_closed": true
+    }
+  },
+  "moonshine_head_character_transport_theorem": {
+    "the_bundled_ctbllib_subset_has_exactly_17_integer_classes": true,
+    "all_17_classes_match_on_chi_196883": true,
+    "all_17_classes_match_on_chi_21296876": true,
+    "all_17_classes_match_on_chi_842609326": true,
+    "the_exceptional_affine_node_3C_has_head_character_signature_minus1_248_minus248": true,
+    "the_higher_prime_endpoint_41A_has_head_character_signature_1_0_minus1": true,
+    "the_supported_seed_transport_graph_therefore_lifts_to_exact_monster_head_character_transport": true,
+    "the_moonshine_head_character_transport_bridge_is_fully_closed": true
+  },
+  "interpretation": "The q-series transport graph is now lifted to genuine Monster character data on the first three nontrivial irreducibles. For every class in the bundled integer CTblLib subset, the head characters inferred from the first three moonshine coefficients agree exactly with the actual Monster table values. So the finite transport graph already exists on the character side, not only on the modular-function side."
+}

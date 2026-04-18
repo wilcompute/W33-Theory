@@ -1,0 +1,1343 @@
+{
+  "supported_seed_head_signature_dictionary": {
+    "supported_classes": [
+      "1A",
+      "2A",
+      "2B",
+      "3A",
+      "3B",
+      "3C",
+      "4A",
+      "4B",
+      "4C",
+      "4D",
+      "5A",
+      "5B",
+      "6A",
+      "6B",
+      "6C",
+      "6D",
+      "6E",
+      "7A",
+      "7B",
+      "8A",
+      "8A'",
+      "8B",
+      "8E",
+      "9A",
+      "10A",
+      "10B",
+      "10C",
+      "10D",
+      "10E",
+      "11A",
+      "13A",
+      "13B"
+    ],
+    "rows": [
+      {
+        "class_name": "1A",
+        "signature": {
+          "196883": 196883,
+          "21296876": 21296876,
+          "842609326": 842609326
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 196883,
+          "21296876": 21296876,
+          "842609326": 842609326
+        }
+      },
+      {
+        "class_name": "2A",
+        "signature": {
+          "196883": 4371,
+          "21296876": 91884,
+          "842609326": 1139374
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 4371,
+          "21296876": 91884,
+          "842609326": 1139374
+        }
+      },
+      {
+        "class_name": "2B",
+        "signature": {
+          "196883": 275,
+          "21296876": -2324,
+          "842609326": 12974
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 275,
+          "21296876": -2324,
+          "842609326": 12974
+        }
+      },
+      {
+        "class_name": "3A",
+        "signature": {
+          "196883": 782,
+          "21296876": 7889,
+          "842609326": 55912
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 782,
+          "21296876": 7889,
+          "842609326": 55912
+        }
+      },
+      {
+        "class_name": "3B",
+        "signature": {
+          "196883": 53,
+          "21296876": -130,
+          "842609326": -221
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 53,
+          "21296876": -130,
+          "842609326": -221
+        }
+      },
+      {
+        "class_name": "3C",
+        "signature": {
+          "196883": -1,
+          "21296876": 248,
+          "842609326": -248
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": -1,
+          "21296876": 248,
+          "842609326": -248
+        }
+      },
+      {
+        "class_name": "4A",
+        "signature": {
+          "196883": 275,
+          "21296876": 1772,
+          "842609326": 8878
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 275,
+          "21296876": 1772,
+          "842609326": 8878
+        }
+      },
+      {
+        "class_name": "4B",
+        "signature": {
+          "196883": 51,
+          "21296876": -52,
+          "842609326": 782
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 51,
+          "21296876": -52,
+          "842609326": 782
+        }
+      },
+      {
+        "class_name": "4C",
+        "signature": {
+          "196883": 19,
+          "21296876": -20,
+          "842609326": -82
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 19,
+          "21296876": -20,
+          "842609326": -82
+        }
+      },
+      {
+        "class_name": "4D",
+        "signature": {
+          "196883": -13,
+          "21296876": 12,
+          "842609326": 78
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": -13,
+          "21296876": 12,
+          "842609326": 78
+        }
+      },
+      {
+        "class_name": "5A",
+        "signature": {
+          "196883": 133,
+          "21296876": 626,
+          "842609326": 2451
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 133,
+          "21296876": 626,
+          "842609326": 2451
+        }
+      },
+      {
+        "class_name": "5B",
+        "signature": {
+          "196883": 8,
+          "21296876": 1,
+          "842609326": -49
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 8,
+          "21296876": 1,
+          "842609326": -49
+        }
+      },
+      {
+        "class_name": "6A",
+        "signature": {
+          "196883": 78,
+          "21296876": 273,
+          "842609326": 1000
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 78,
+          "21296876": 273,
+          "842609326": 1000
+        }
+      },
+      {
+        "class_name": "6B",
+        "signature": {
+          "196883": 77,
+          "21296876": 286,
+          "842609326": 923
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 77,
+          "21296876": 286,
+          "842609326": 923
+        }
+      },
+      {
+        "class_name": "6C",
+        "signature": {
+          "196883": 14,
+          "21296876": -47,
+          "842609326": 104
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 14,
+          "21296876": -47,
+          "842609326": 104
+        }
+      },
+      {
+        "class_name": "6D",
+        "signature": {
+          "196883": -3,
+          "21296876": 30,
+          "842609326": -53
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": -3,
+          "21296876": 30,
+          "842609326": -53
+        }
+      },
+      {
+        "class_name": "6E",
+        "signature": {
+          "196883": 5,
+          "21296876": -2,
+          "842609326": -13
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 5,
+          "21296876": -2,
+          "842609326": -13
+        }
+      },
+      {
+        "class_name": "7A",
+        "signature": {
+          "196883": 50,
+          "21296876": 153,
+          "842609326": 426
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 50,
+          "21296876": 153,
+          "842609326": 426
+        }
+      },
+      {
+        "class_name": "7B",
+        "signature": {
+          "196883": 1,
+          "21296876": 6,
+          "842609326": -15
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 1,
+          "21296876": 6,
+          "842609326": -15
+        }
+      },
+      {
+        "class_name": "8A",
+        "signature": {
+          "196883": 35,
+          "21296876": 92,
+          "842609326": 222
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 35,
+          "21296876": 92,
+          "842609326": 222
+        }
+      },
+      {
+        "class_name": "8A'",
+        "signature": {
+          "196883": 35,
+          "21296876": -164,
+          "842609326": 478
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 35,
+          "21296876": -164,
+          "842609326": 478
+        }
+      },
+      {
+        "class_name": "8B",
+        "signature": {
+          "196883": 11,
+          "21296876": -12,
+          "842609326": 54
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 11,
+          "21296876": -12,
+          "842609326": 54
+        }
+      },
+      {
+        "class_name": "8E",
+        "signature": {
+          "196883": 3,
+          "21296876": -4,
+          "842609326": -2
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 3,
+          "21296876": -4,
+          "842609326": -2
+        }
+      },
+      {
+        "class_name": "9A",
+        "signature": {
+          "196883": 26,
+          "21296876": 59,
+          "842609326": 130
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 26,
+          "21296876": 59,
+          "842609326": 130
+        }
+      },
+      {
+        "class_name": "10A",
+        "signature": {
+          "196883": 21,
+          "21296876": 34,
+          "842609326": 99
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 21,
+          "21296876": 34,
+          "842609326": 99
+        }
+      },
+      {
+        "class_name": "10B",
+        "signature": {
+          "196883": 5,
+          "21296876": -14,
+          "842609326": 19
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 5,
+          "21296876": -14,
+          "842609326": 19
+        }
+      },
+      {
+        "class_name": "10C",
+        "signature": {
+          "196883": -4,
+          "21296876": 9,
+          "842609326": -1
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": -4,
+          "21296876": 9,
+          "842609326": -1
+        }
+      },
+      {
+        "class_name": "10D",
+        "signature": {
+          "196883": 20,
+          "21296876": 41,
+          "842609326": 79
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 20,
+          "21296876": 41,
+          "842609326": 79
+        }
+      },
+      {
+        "class_name": "10E",
+        "signature": {
+          "196883": 0,
+          "21296876": 1,
+          "842609326": -1
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 0,
+          "21296876": 1,
+          "842609326": -1
+        }
+      },
+      {
+        "class_name": "11A",
+        "signature": {
+          "196883": 16,
+          "21296876": 29,
+          "842609326": 53
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 16,
+          "21296876": 29,
+          "842609326": 53
+        }
+      },
+      {
+        "class_name": "13A",
+        "signature": {
+          "196883": 11,
+          "21296876": 16,
+          "842609326": 26
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": 11,
+          "21296876": 16,
+          "842609326": 26
+        }
+      },
+      {
+        "class_name": "13B",
+        "signature": {
+          "196883": -2,
+          "21296876": 3,
+          "842609326": 0
+        },
+        "with_trivial": {
+          "1": 1,
+          "196883": -2,
+          "21296876": 3,
+          "842609326": 0
+        }
+      }
+    ],
+    "distinct_signature_count": 32,
+    "atlas_edge_rows": [
+      {
+        "source": "10A",
+        "exponent": 2,
+        "target": "5A",
+        "source_signature": {
+          "196883": 21,
+          "21296876": 34,
+          "842609326": 99
+        },
+        "target_signature": {
+          "196883": 133,
+          "21296876": 626,
+          "842609326": 2451
+        },
+        "atlas_targets": [
+          "5A"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "10B",
+        "exponent": 2,
+        "target": "5A",
+        "source_signature": {
+          "196883": 5,
+          "21296876": -14,
+          "842609326": 19
+        },
+        "target_signature": {
+          "196883": 133,
+          "21296876": 626,
+          "842609326": 2451
+        },
+        "atlas_targets": [
+          "5A"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "10C",
+        "exponent": 2,
+        "target": "5B",
+        "source_signature": {
+          "196883": -4,
+          "21296876": 9,
+          "842609326": -1
+        },
+        "target_signature": {
+          "196883": 8,
+          "21296876": 1,
+          "842609326": -49
+        },
+        "atlas_targets": [
+          "5B"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "10D",
+        "exponent": 2,
+        "target": "5B",
+        "source_signature": {
+          "196883": 20,
+          "21296876": 41,
+          "842609326": 79
+        },
+        "target_signature": {
+          "196883": 8,
+          "21296876": 1,
+          "842609326": -49
+        },
+        "atlas_targets": [
+          "5B"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "10E",
+        "exponent": 2,
+        "target": "5B",
+        "source_signature": {
+          "196883": 0,
+          "21296876": 1,
+          "842609326": -1
+        },
+        "target_signature": {
+          "196883": 8,
+          "21296876": 1,
+          "842609326": -49
+        },
+        "atlas_targets": [
+          "5B"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "2A",
+        "exponent": 2,
+        "target": "1A",
+        "source_signature": {
+          "196883": 4371,
+          "21296876": 91884,
+          "842609326": 1139374
+        },
+        "target_signature": {
+          "196883": 196883,
+          "21296876": 21296876,
+          "842609326": 842609326
+        },
+        "atlas_targets": [
+          "1A"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "2B",
+        "exponent": 2,
+        "target": "1A",
+        "source_signature": {
+          "196883": 275,
+          "21296876": -2324,
+          "842609326": 12974
+        },
+        "target_signature": {
+          "196883": 196883,
+          "21296876": 21296876,
+          "842609326": 842609326
+        },
+        "atlas_targets": [
+          "1A"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "4A",
+        "exponent": 2,
+        "target": "2B",
+        "source_signature": {
+          "196883": 275,
+          "21296876": 1772,
+          "842609326": 8878
+        },
+        "target_signature": {
+          "196883": 275,
+          "21296876": -2324,
+          "842609326": 12974
+        },
+        "atlas_targets": [
+          "2B"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "4B",
+        "exponent": 2,
+        "target": "2A",
+        "source_signature": {
+          "196883": 51,
+          "21296876": -52,
+          "842609326": 782
+        },
+        "target_signature": {
+          "196883": 4371,
+          "21296876": 91884,
+          "842609326": 1139374
+        },
+        "atlas_targets": [
+          "2A"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "4C",
+        "exponent": 2,
+        "target": "2B",
+        "source_signature": {
+          "196883": 19,
+          "21296876": -20,
+          "842609326": -82
+        },
+        "target_signature": {
+          "196883": 275,
+          "21296876": -2324,
+          "842609326": 12974
+        },
+        "atlas_targets": [
+          "2B"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "4D",
+        "exponent": 2,
+        "target": "2B",
+        "source_signature": {
+          "196883": -13,
+          "21296876": 12,
+          "842609326": 78
+        },
+        "target_signature": {
+          "196883": 275,
+          "21296876": -2324,
+          "842609326": 12974
+        },
+        "atlas_targets": [
+          "2B"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "6A",
+        "exponent": 2,
+        "target": "3A",
+        "source_signature": {
+          "196883": 78,
+          "21296876": 273,
+          "842609326": 1000
+        },
+        "target_signature": {
+          "196883": 782,
+          "21296876": 7889,
+          "842609326": 55912
+        },
+        "atlas_targets": [
+          "3A"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "6B",
+        "exponent": 2,
+        "target": "3B",
+        "source_signature": {
+          "196883": 77,
+          "21296876": 286,
+          "842609326": 923
+        },
+        "target_signature": {
+          "196883": 53,
+          "21296876": -130,
+          "842609326": -221
+        },
+        "atlas_targets": [
+          "3B"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "6C",
+        "exponent": 2,
+        "target": "3A",
+        "source_signature": {
+          "196883": 14,
+          "21296876": -47,
+          "842609326": 104
+        },
+        "target_signature": {
+          "196883": 782,
+          "21296876": 7889,
+          "842609326": 55912
+        },
+        "atlas_targets": [
+          "3A"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "6D",
+        "exponent": 2,
+        "target": "3B",
+        "source_signature": {
+          "196883": -3,
+          "21296876": 30,
+          "842609326": -53
+        },
+        "target_signature": {
+          "196883": 53,
+          "21296876": -130,
+          "842609326": -221
+        },
+        "atlas_targets": [
+          "3B"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "6E",
+        "exponent": 2,
+        "target": "3B",
+        "source_signature": {
+          "196883": 5,
+          "21296876": -2,
+          "842609326": -13
+        },
+        "target_signature": {
+          "196883": 53,
+          "21296876": -130,
+          "842609326": -221
+        },
+        "atlas_targets": [
+          "3B"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "8A",
+        "exponent": 2,
+        "target": "4C",
+        "source_signature": {
+          "196883": 35,
+          "21296876": 92,
+          "842609326": 222
+        },
+        "target_signature": {
+          "196883": 19,
+          "21296876": -20,
+          "842609326": -82
+        },
+        "atlas_targets": [
+          "4C"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "8B",
+        "exponent": 2,
+        "target": "4A",
+        "source_signature": {
+          "196883": 11,
+          "21296876": -12,
+          "842609326": 54
+        },
+        "target_signature": {
+          "196883": 275,
+          "21296876": 1772,
+          "842609326": 8878
+        },
+        "atlas_targets": [
+          "4A"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "8E",
+        "exponent": 2,
+        "target": "4C",
+        "source_signature": {
+          "196883": 3,
+          "21296876": -4,
+          "842609326": -2
+        },
+        "target_signature": {
+          "196883": 19,
+          "21296876": -20,
+          "842609326": -82
+        },
+        "atlas_targets": [
+          "4C"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "3A",
+        "exponent": 3,
+        "target": "1A",
+        "source_signature": {
+          "196883": 782,
+          "21296876": 7889,
+          "842609326": 55912
+        },
+        "target_signature": {
+          "196883": 196883,
+          "21296876": 21296876,
+          "842609326": 842609326
+        },
+        "atlas_targets": [
+          "1A"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "3B",
+        "exponent": 3,
+        "target": "1A",
+        "source_signature": {
+          "196883": 53,
+          "21296876": -130,
+          "842609326": -221
+        },
+        "target_signature": {
+          "196883": 196883,
+          "21296876": 21296876,
+          "842609326": 842609326
+        },
+        "atlas_targets": [
+          "1A"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "3C",
+        "exponent": 3,
+        "target": "1A",
+        "source_signature": {
+          "196883": -1,
+          "21296876": 248,
+          "842609326": -248
+        },
+        "target_signature": {
+          "196883": 196883,
+          "21296876": 21296876,
+          "842609326": 842609326
+        },
+        "atlas_targets": [
+          "1A"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "6A",
+        "exponent": 3,
+        "target": "2A",
+        "source_signature": {
+          "196883": 78,
+          "21296876": 273,
+          "842609326": 1000
+        },
+        "target_signature": {
+          "196883": 4371,
+          "21296876": 91884,
+          "842609326": 1139374
+        },
+        "atlas_targets": [
+          "2A"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "6B",
+        "exponent": 3,
+        "target": "2B",
+        "source_signature": {
+          "196883": 77,
+          "21296876": 286,
+          "842609326": 923
+        },
+        "target_signature": {
+          "196883": 275,
+          "21296876": -2324,
+          "842609326": 12974
+        },
+        "atlas_targets": [
+          "2B"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "6C",
+        "exponent": 3,
+        "target": "2B",
+        "source_signature": {
+          "196883": 14,
+          "21296876": -47,
+          "842609326": 104
+        },
+        "target_signature": {
+          "196883": 275,
+          "21296876": -2324,
+          "842609326": 12974
+        },
+        "atlas_targets": [
+          "2B"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "6D",
+        "exponent": 3,
+        "target": "2A",
+        "source_signature": {
+          "196883": -3,
+          "21296876": 30,
+          "842609326": -53
+        },
+        "target_signature": {
+          "196883": 4371,
+          "21296876": 91884,
+          "842609326": 1139374
+        },
+        "atlas_targets": [
+          "2A"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "6E",
+        "exponent": 3,
+        "target": "2B",
+        "source_signature": {
+          "196883": 5,
+          "21296876": -2,
+          "842609326": -13
+        },
+        "target_signature": {
+          "196883": 275,
+          "21296876": -2324,
+          "842609326": 12974
+        },
+        "atlas_targets": [
+          "2B"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "9A",
+        "exponent": 3,
+        "target": "3B",
+        "source_signature": {
+          "196883": 26,
+          "21296876": 59,
+          "842609326": 130
+        },
+        "target_signature": {
+          "196883": 53,
+          "21296876": -130,
+          "842609326": -221
+        },
+        "atlas_targets": [
+          "3B"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "10A",
+        "exponent": 5,
+        "target": "2A",
+        "source_signature": {
+          "196883": 21,
+          "21296876": 34,
+          "842609326": 99
+        },
+        "target_signature": {
+          "196883": 4371,
+          "21296876": 91884,
+          "842609326": 1139374
+        },
+        "atlas_targets": [
+          "2A"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "10B",
+        "exponent": 5,
+        "target": "2B",
+        "source_signature": {
+          "196883": 5,
+          "21296876": -14,
+          "842609326": 19
+        },
+        "target_signature": {
+          "196883": 275,
+          "21296876": -2324,
+          "842609326": 12974
+        },
+        "atlas_targets": [
+          "2B"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "10C",
+        "exponent": 5,
+        "target": "2A",
+        "source_signature": {
+          "196883": -4,
+          "21296876": 9,
+          "842609326": -1
+        },
+        "target_signature": {
+          "196883": 4371,
+          "21296876": 91884,
+          "842609326": 1139374
+        },
+        "atlas_targets": [
+          "2A"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "10D",
+        "exponent": 5,
+        "target": "2B",
+        "source_signature": {
+          "196883": 20,
+          "21296876": 41,
+          "842609326": 79
+        },
+        "target_signature": {
+          "196883": 275,
+          "21296876": -2324,
+          "842609326": 12974
+        },
+        "atlas_targets": [
+          "2B"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "10E",
+        "exponent": 5,
+        "target": "2B",
+        "source_signature": {
+          "196883": 0,
+          "21296876": 1,
+          "842609326": -1
+        },
+        "target_signature": {
+          "196883": 275,
+          "21296876": -2324,
+          "842609326": 12974
+        },
+        "atlas_targets": [
+          "2B"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "5A",
+        "exponent": 5,
+        "target": "1A",
+        "source_signature": {
+          "196883": 133,
+          "21296876": 626,
+          "842609326": 2451
+        },
+        "target_signature": {
+          "196883": 196883,
+          "21296876": 21296876,
+          "842609326": 842609326
+        },
+        "atlas_targets": [
+          "1A"
+        ],
+        "matches_atlas": true
+      },
+      {
+        "source": "5B",
+        "exponent": 5,
+        "target": "1A",
+        "source_signature": {
+          "196883": 8,
+          "21296876": 1,
+          "842609326": -49
+        },
+        "target_signature": {
+          "196883": 196883,
+          "21296876": 21296876,
+          "842609326": 842609326
+        },
+        "atlas_targets": [
+          "1A"
+        ],
+        "matches_atlas": true
+      }
+    ],
+    "composite_rows": [
+      {
+        "class_name": "4A",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "2B",
+          "4": "1A"
+        }
+      },
+      {
+        "class_name": "4B",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "2A",
+          "4": "1A"
+        }
+      },
+      {
+        "class_name": "4C",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "2B",
+          "4": "1A"
+        }
+      },
+      {
+        "class_name": "4D",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "2B",
+          "4": "1A"
+        }
+      },
+      {
+        "class_name": "6A",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "3A",
+          "3": "2A",
+          "6": "1A"
+        }
+      },
+      {
+        "class_name": "6B",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "3B",
+          "3": "2B",
+          "6": "1A"
+        }
+      },
+      {
+        "class_name": "6C",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "3A",
+          "3": "2B",
+          "6": "1A"
+        }
+      },
+      {
+        "class_name": "6D",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "3B",
+          "3": "2A",
+          "6": "1A"
+        }
+      },
+      {
+        "class_name": "6E",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "3B",
+          "3": "2B",
+          "6": "1A"
+        }
+      },
+      {
+        "class_name": "8A",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "4C",
+          "4": "2B",
+          "8": "1A"
+        }
+      },
+      {
+        "class_name": "8B",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "4A",
+          "4": "2B",
+          "8": "1A"
+        }
+      },
+      {
+        "class_name": "8E",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "4C",
+          "4": "2B",
+          "8": "1A"
+        }
+      },
+      {
+        "class_name": "9A",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "3": "3B",
+          "9": "1A"
+        }
+      },
+      {
+        "class_name": "10A",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "5A",
+          "5": "2A",
+          "10": "1A"
+        }
+      },
+      {
+        "class_name": "10B",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "5A",
+          "5": "2B",
+          "10": "1A"
+        }
+      },
+      {
+        "class_name": "10C",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "5B",
+          "5": "2A",
+          "10": "1A"
+        }
+      },
+      {
+        "class_name": "10D",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "5B",
+          "5": "2B",
+          "10": "1A"
+        }
+      },
+      {
+        "class_name": "10E",
+        "verified": true,
+        "power_map_source": "atlas",
+        "power_map": {
+          "2": "5B",
+          "5": "2B",
+          "10": "1A"
+        }
+      }
+    ]
+  },
+  "supported_seed_head_signature_theorem": {
+    "all_32_supported_seed_classes_admit_exact_integral_head_signatures": true,
+    "the_17_ctbllib_anchored_classes_match_actual_monster_head_characters": true,
+    "the_first_three_nontrivial_head_irreps_separate_all_32_supported_seed_classes": true,
+    "all_35_atlas_available_prime_power_edges_land_inside_the_same_head_signature_dictionary": true,
+    "all_18_composite_transport_rows_land_inside_the_same_head_signature_dictionary": true,
+    "the_supported_seed_transport_graph_therefore_closes_as_a_32_node_head_signature_graph": true,
+    "the_supported_seed_head_signature_bridge_is_fully_closed": true
+  },
+  "interpretation": "The supported moonshine seed is now closed on the trace side. The 17 CTblLib-anchored classes validate the head-character inference, that inference extends to all 32 supported classes, the first three nontrivial traces separate every supported node, and every verified transport edge stays inside the same finite signature dictionary. So the q-series transport graph already lifts to a 32-node Monster head-signature graph."
+}
