@@ -1,0 +1,159 @@
+{
+  "at_tau_i": {
+    "tau": "i",
+    "j_tau": 1728.0,
+    "j_2tau": 287496.0,
+    "phi_2_value": "(5.4720185875932546498716972265738650738761902470238e-20 + 0.0j)",
+    "abs_phi_2": 5.472018587593254e-20,
+    "scale_tolerance": 5.159780352e-06,
+    "match": true
+  },
+  "at_heegner_pairs": {
+    "all_match": true,
+    "rows": [
+      {
+        "d": 3,
+        "j_tau_real": 1.7015788756687492e-26,
+        "j_2tau_real": 54000.0,
+        "abs_phi_2": "0.00000000000011144521900006953150626286939737428479979018797506131931171",
+        "tolerance": "0.000000000001",
+        "match": true
+      },
+      {
+        "d": 7,
+        "j_tau_real": -3375.0,
+        "j_2tau_real": 16581375.0,
+        "abs_phi_2": "2.5903316387295512154318978867273170616050102292542041677877e-34",
+        "tolerance": "0.0384433593749999999999999999999999999999999999999999999960927",
+        "match": true
+      },
+      {
+        "d": 11,
+        "j_tau_real": -32768.0,
+        "j_2tau_real": 1122662367.1321237,
+        "abs_phi_2": "2.9187901543437572080553660580330257838580965752159732414657e-34",
+        "tolerance": "35.1843720888319999999999999999999999999999999999999999999999",
+        "match": true
+      },
+      {
+        "d": 19,
+        "j_tau_real": -884736.0,
+        "j_2tau_real": 784074437424.4955,
+        "abs_phi_2": "2.75329031856984044993887798865567251925056344818756732322846e-26",
+        "tolerance": "692533.995824480256000000000000000000000000000000000000000001",
+        "match": true
+      }
+    ]
+  },
+  "symmetry": {
+    "all_match": true,
+    "rows": [
+      {
+        "X": 1728,
+        "Y": 287496,
+        "Phi_2(X,Y)": 0,
+        "Phi_2(Y,X)": 0,
+        "symmetric": true
+      },
+      {
+        "X": 0,
+        "Y": 54000,
+        "Phi_2(X,Y)": 0,
+        "Phi_2(Y,X)": 0,
+        "symmetric": true
+      },
+      {
+        "X": 1,
+        "Y": 2,
+        "Phi_2(X,Y)": -157437675254317,
+        "Phi_2(Y,X)": -157437675254317,
+        "symmetric": true
+      },
+      {
+        "X": 100,
+        "Y": 3,
+        "Phi_2(X,Y)": -156552298556273,
+        "Phi_2(Y,X)": -156552298556273,
+        "symmetric": true
+      },
+      {
+        "X": -5280,
+        "Y": 1728,
+        "Phi_2(X,Y)": -600710245521408,
+        "Phi_2(Y,X)": -600710245521408,
+        "symmetric": true
+      }
+    ]
+  },
+  "zero_1728_287496": {
+    "value": 0,
+    "equals_zero": true
+  },
+  "zero_0_54000": {
+    "value": 0,
+    "equals_zero": true
+  },
+  "factorizations": {
+    "all_match": true,
+    "rows": [
+      {
+        "coeff_name": "1488",
+        "value": 1488,
+        "factors": {
+          "2": 4,
+          "3": 1,
+          "31": 1
+        },
+        "check": true
+      },
+      {
+        "coeff_name": "162000",
+        "value": 162000,
+        "factors": {
+          "2": 4,
+          "3": 4,
+          "5": 3
+        },
+        "check": true
+      },
+      {
+        "coeff_name": "40773375",
+        "value": 40773375,
+        "factors": {
+          "3": 4,
+          "5": 3,
+          "4027": 1
+        },
+        "check": true
+      },
+      {
+        "coeff_name": "8748000000",
+        "value": 8748000000,
+        "factors": {
+          "2": 8,
+          "3": 7,
+          "5": 6
+        },
+        "check": true
+      },
+      {
+        "coeff_name": "157464000000000",
+        "value": 157464000000000,
+        "factors": {
+          "2": 12,
+          "3": 9,
+          "5": 9
+        },
+        "check": true
+      }
+    ]
+  },
+  "summary_chain": {
+    "phi_2_vanishes_at_j_i_and_j_2i_numerically": true,
+    "phi_2_vanishes_at_heegner_tau_d_for_d_3_7_11_19": true,
+    "phi_2_is_symmetric_in_its_two_arguments": true,
+    "phi_2_of_1728_and_287496_equals_0_in_Z": true,
+    "phi_2_of_0_and_54000_equals_0_in_Z": true,
+    "phi_2_coefficient_factorizations_pin": true
+  }
+}
