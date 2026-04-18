@@ -16,7 +16,7 @@
 
 The fine-structure constant has resisted theoretical derivation for over 100 years. Today I’m sharing a framework that produces it — and much more — from a single combinatorial object with no free parameters.
 
-**The W(3,3) Theory** starts with one structure: the W(3,3) strongly regular graph SRG(40,12,2,4). It has 40 vertices, valency 12, and exactly three eigenvalues: {12, 2, −4} with multiplicities {1, 27, 12}.
+**The W(3,3) Theory** starts with one structure: the W(3,3) strongly regular graph SRG(40,12,2,4). It has 40 vertices, valency 12, and exactly three eigenvalues: {12, 2, −4} with multiplicities {1, 24, 15}.
 
 From those six integers:
 
@@ -133,7 +133,7 @@ Thread 🧵↓
 **Tweet 2:**
 The object: W(3,3) strongly regular graph SRG(40,12,2,4).
 
-40 vertices. Valency 12. Eigenvalues {12, 2, −4}. Multiplicities {1, 27, 12}.
+40 vertices. Valency 12. Eigenvalues {12, 2, −4}. Multiplicities {1, 24, 15}.
 
 That’s it. That’s the entire input.
 

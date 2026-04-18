@@ -42,7 +42,7 @@ all fundamental constants, particle quantum numbers, and mixing parameters
 of the Standard Model (SM) are derived from the spectral data of a single
 combinatorial object: the W(3,3) strongly regular graph, SRG(40,12,2,4).
 The graph possesses exactly three eigenvalues {12, 2, -4} with
-multiplicities {1, 27, 12}. From these six integers alone we recover:
+multiplicities {1, 24, 15}. From these six distinct integers alone we recover:
 (i) the fine-structure constant alpha^{-1} = k^2-(|r|+|s|+1) = 137;
 (ii) the master energy scale E = n_v x k = 480 = |Phi(E_8)|, linking
 the graph spectrum to the E_8 root system; (iii) the SM gauge group

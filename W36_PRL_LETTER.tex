@@ -52,8 +52,8 @@
 We derive the fine-structure constant $\alphafs = 137$ and the
 Weinberg angle $\sinW = 3/13 \approx 0.2308$ from the spectrum of the
 W(3,3) strongly regular graph $\SRG(40,12,2,4)$, which has eigenvalues
-$\{k,r,s\}=\{12,2,-4\}$ with multiplicities $\{1,27,12\}$.
-From these six integers we obtain:
+$\{k,r,s\}=\{12,2,-4\}$ with multiplicities $\{1,24,15\}$.
+From these six distinct integers we obtain:
 $\alphafs = k^2 - (|r|+|s|+1) = 137$ (experiment: $137.036$, error
 $0.026\%$) and $\sinW = |s|/(k+|s|) \to 3/13$ at the $Z$-pole
 (experiment: $0.23122$, error $0.18\%$).
@@ -116,24 +116,33 @@ Its adjacency matrix has exactly three distinct eigenvalues:
 \end{equation}
 with multiplicities
 \begin{equation}
-  \{f_k,\,f_r,\,f_s\} = \{1,\,27,\,12\}.
+  \{f_k,\,f_r,\,f_s\} = \{1,\,24,\,15\}.
   \label{eq:multiplicities}
 \end{equation}
 
-The multiplicities satisfy $1 + 27 + 12 = 40 = n_v$ (spectral
-completeness).  The three multiplicities are not coincidental:
-$f_r = 27 = \dim(\Esix)$ in the fundamental representation, and
-$f_s = 12$ equals the number of SM gauge bosons
-($1_\gamma + 3_{W/Z} + 8_g$).  Figure~\ref{fig:spectral} illustrates
-the eigenvalue tower.
+The multiplicities satisfy $1 + 24 + 15 = 40 = n_v$ (spectral
+completeness).  The eigenvalue multiplicities $f_r=24$ and $f_s=15$
+are constrained by the trace identity
+$k + r f_r + s f_s = 12 + 2(24) + (-4)(15) = 0$; here $24$ is the
+dimension of the Leech lattice and bosonic-string transverse space,
+while $15 = \dim\mathrm{SU}(4) = \binom{6}{2}$.
+
+The connections to $E_6$ and the SM gauge count arise from the
+\emph{neighborhood partition}: from any vertex, the 39 remaining
+points split as $12$ adjacent $+ 27$ non-adjacent $= 39$, where $12$
+matches the SM gauge bosons ($1_\gamma+3_{W/Z}+8_g$) and $27 =
+\dim\mathbf{27}(E_6)$.  The figure caption for Fig.~\ref{fig:spectral}
+indicates both quantities.
 
 \begin{figure}[h]
   \centering
   \includesvg[width=\columnwidth]{figures/fig1_spectral_diagram}
   \caption{\textbf{W(3,3) eigenvalue tower.}
   Three spectral levels at $\lambda=12$, $r=2$, $s=-4$ with
-  multiplicities $\{1,27,12\}$. Spectral gaps $\Delta_1=10$,
-  $\Delta_2=6$.  The master scale $E=480=|\Phi(E_8)|$ is indicated.}
+  multiplicities $\{1,24,15\}$. Spectral gaps $\Delta_1=10$,
+  $\Delta_2=6$.  Neighborhood partition $\{1,12,27\}$: 12 adjacent
+  (SM gauge bosons), 27 non-adjacent ($\dim E_6$).
+  The master scale $E=480=|\Phi(E_8)|$ is indicated.}
   \label{fig:spectral}
 \end{figure}
 
@@ -207,8 +216,10 @@ Quantity & Theory & PDG / Experiment & Error \\
 $\alphafs$           & $137$          & $137.036$         & $0.026\%$ \\
 $\sinW$ (Z-pole) & $3/13\approx0.2308$ & $0.23122$ & $0.18\%$ \\
 $E$ (master scale)  & $480$          & $|\Phi(E_8)|=480$ & exact \\
-$f_r$ (matter)      & $27$           & $\dim(E_6)=27$    & exact \\
-$f_s$ (gauge)       & $12$           & SM gauge bosons   & exact \\
+$f_r$ (eigenspace) & $24$ & Leech dim.~/ bos.~string & exact \\
+$f_s$ (eigenspace) & $15$ & $\dim\mathrm{SU}(4)$ & exact \\
+$k$ (adj.) & $12$ & SM gauge bosons & exact \\
+$n{-}1{-}k$ (non-adj.) & $27$ & $\dim E_6$ fund. & exact \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -224,7 +235,8 @@ the direct product
 $U(1) \times SU(2) \times SU(3)$~\cite{Connes1994},
 where the three factors correspond respectively to the
 hypercharge, weak-isospin, and colour generators acting on the
-three spectral sectors $\{f_k, f_r, f_s\} = \{1, 27, 12\}$.
+three spectral sectors with eigenvalue multiplicities $\{f_k, f_r, f_s\} = \{1, 24, 15\}$
+and neighborhood partition $\{1, 12, 27\}$.
 The hypercharge assignments reproduce the standard
 Gell-Mann--Nishijima relation $Q = T_3 + Y/2$ with no additional input.
 

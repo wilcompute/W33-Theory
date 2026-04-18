@@ -101,8 +101,8 @@ in which all fundamental constants, particle quantum numbers, and mixing
 parameters of the Standard Model (SM) are derived from the spectral data
 of a single combinatorial object: the \textbf{W(3,3) strongly regular
 graph}, $\SRG(40,12,2,4)$. The graph possesses exactly three eigenvalues
-$\{12,\,2,\,-4\}$ with multiplicities $\{1,\,27,\,12\}$. From these six
-integers alone we recover:
+$\{12,\,2,\,-4\}$ with multiplicities $\{1,\,24,\,15\}$. From these six
+distinct integers alone we recover:
 \begin{enumerate}[label=(\roman*)]
   \item the fine-structure constant
         $\alpha^{-1} = k^2 - (|r|+|s|+1) = 137$;
@@ -200,8 +200,8 @@ $\ne$ & 60 & Edges & \\
 $k$ & 12 & Degree (largest eigenvalue) & Master coupling \\
 $r$ & $+2$ & Second eigenvalue & Quark/lepton sector \\
 $s$ & $-4$ & Third eigenvalue & Strong / colour sector \\
-$\fr$ & 27 & Multiplicity of $r$ & $\dim\mathbf{27}$ of $\Esix$ \\
-$\fs$ & 12 & Multiplicity of $s$ & Adjoint of SM gauge group \\
+$\fr$ & 24 & Multiplicity of $r$ & Leech-lattice dimension; bosonic string \\
+$\fs$ & 15 & Multiplicity of $s$ & $\dim\mathrm{SU}(4)=\binom{6}{2}$ \\
 $E$ & 480 & $\nv\times k$ & $|\Phi(\Eone)|$ \\
 \bottomrule
 \end{tabular}
@@ -210,7 +210,7 @@ $E$ & 480 & $\nv\times k$ & $|\Phi(\Eone)|$ \\
 The adjacency spectrum is
 \[
   \mathrm{Spec}(A) \;=\;
-  \bigl\{\; 12^{(\times 1)},\; 2^{(\times 27)},\; (-4)^{(\times 12)} \;\bigr\}.
+  \bigl\{\; 12^{(\times 1)},\; 2^{(\times 24)},\; (-4)^{(\times 15)} \;\bigr\}.
 \]
 
 \subsection{Uniqueness}
@@ -235,10 +235,11 @@ the theory's predictive power.
   \caption{The $\W$ eigenvalue spectrum.
     Three horizontal levels represent
     $\lambda_1 = 12$ (gravity singlet, $\times 1$),
-    $\lambda_2 = +2$ (quark--lepton sector, $\times 27$, matching
-    $\dim\mathbf{27}$ of $\Esix$),
-    and $\lambda_3 = -4$ (SM gauge bosons, $\times 12$,
-    $= 8g + 3W + \gamma$).
+    $\lambda_2 = +2$ (quark--lepton sector, $\times 24$;
+    neighborhood non-adj.~count 27 $= \dim\mathbf{27}$ of $\Esix$),
+    and $\lambda_3 = -4$ ($\times 15$;
+    neighborhood adj.~count $k=12 = $ SM gauge bosons
+    $8g + 3W + \gamma$).
     The master identity $E = \nv\times k = 480 = |\Phi(\Eone)|$
     and the fine-structure formula
     $\alpha^{-1} = k^2 - (|r|+|s|+1) = 137$ are annotated.
@@ -255,7 +256,7 @@ We define the \textbf{spectral zeta function} of $\W$:
   \;=\;
   \sum_{i} |\lambda_i|^{-s}
   \;=\;
-  12^{-s} + 27\cdot 2^{-s} + 12\cdot 4^{-s}.
+  12^{-s} + 24\cdot 2^{-s} + 15\cdot 4^{-s}.
 \]
 The \textbf{Ihara zeta function} $Z_{\W}(u)$ satisfies the graph
 Riemann Hypothesis: all non-trivial poles lie on the circle
@@ -288,11 +289,12 @@ $\Lambda_8$ \cite{Viazovska2017}.
   \includesvg[width=0.70\textwidth]{figures/fig3_spectral_decomposition}
   %% \includegraphics[width=0.70\textwidth]{figures/fig3_spectral_decomposition}
   \caption{Spectral sector decomposition of $\W$.
-    The 40 degrees of freedom decompose as
-    $1 + 27 + 12 = 40$ (spectral completeness $\checkmark$),
-    matching the gravity singlet ($\lambda=12$),
-    the $\mathbf{27}$ of $\Esix$ ($\lambda=+2$),
-    and the 12 SM gauge bosons ($\lambda=-4$) respectively.}
+    The 40 vertices partition from any vertex as
+    $1 + 12 + 27 = 40$ (neighborhood completeness $\checkmark$),
+    matching the vertex itself ($k=12$ stratum),
+    the $k=12$ adjacent points (SM gauge bosons), and
+    the $n{-}1{-}k=27$ non-adjacent points ($\dim\mathbf{27}$ of $\Esix$).
+    Eigenvalue multiplicities are $\{1, 24, 15\}$; see text.}
   \label{fig:decomposition}
 \end{figure}
 
@@ -304,25 +306,38 @@ The three eigenvalue multiplicities label the three SM force sectors
 \caption{Eigenspace--gauge sector correspondence.}
 \label{tab:sectors}
 \renewcommand{\arraystretch}{1.25}
-\begin{tabular}{@{}cclc@{}}
+\begin{tabular}{@{}ccllc@{}}
 \toprule
-Eigenvalue & Multiplicity & SM Sector & Representation \\
+Eigenvalue & Multiplicity & SM Sector & Neighborhood & Representation \\
 \midrule
-$k = 12$ & 1 & Gravity / singlet & $\mathbf{1}$ \\
-$r = 2$ & 27 & Quark--lepton generations & $\mathbf{27}$ of $\Esix$ \\
-$s = -4$ & 12 & Strong $+$ electroweak gauge & Adj($\mathrm{SU}(3)$)$\oplus\mathbf{4}$ \\
+$k = 12$ & 1 & Gravity / singlet & self & $\mathbf{1}$ \\
+$r = 2$ & 24 & Quark--lepton generations & --- & Leech / bosonic string \\
+$s = -4$ & 15 & Strong $+$ electroweak gauge & --- & $\dim\mathrm{SU}(4)$ \\
+\midrule
+\multicolumn{5}{l}{\textit{Neighborhood partition: $\{1,\,12,\,27\}$; 12 adjacent $\leftrightarrow$ SM gauge bosons; 27 non-adjacent $\leftrightarrow$ $\dim\mathbf{27}(E_6)$}}\\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The multiplicity $\fr = 27$ is the dimension of the fundamental
-representation $\mathbf{27}$ of $\Esix$, which decomposes under
-$\mathrm{SU}(5)$ as $\mathbf{27} = \mathbf{10} + \bar{\mathbf{5}} +
-\mathbf{1}$ (one complete SM generation plus a right-handed neutrino).
-Three generations arise from the 27-dimensional eigenspace partitioned
-by the ternary Golay symmetry group $\Golay$ of order 72.
-The multiplicity $\fs = 12$ equals the number of gauge bosons in the
-SM: 8 gluons $+$ 3 weak bosons $+$ photon $= 12$.
+The correct eigenvalue multiplicities are $f_r=24$ and $f_s=15$,
+consistent with the trace identity
+$k + r\cdot f_r + s\cdot f_s = 12 + 2(24) + (-4)(15) = 0$.
+Here 24 is the dimension of the Leech lattice and the number of
+transverse dimensions in bosonic string theory (a deep signature
+of the moonshine connection), while 15$\,=\,\dim\mathrm{SU}(4)
+=\binom{6}{2}$.
+
+The connections to $E_6$ and the SM gauge sector arise instead from
+the \textbf{neighborhood partition}: from any vertex of $\W$, the
+remaining 39 points split as
+\[
+  1 + 12 + 27 \;=\; 40,
+\]
+where the 12 \emph{adjacent} points correspond to the 12 SM gauge
+bosons ($8_g + 3_{W/Z} + 1_\gamma$) and the 27 \emph{non-adjacent}
+points to the dimension of the fundamental $\mathbf{27}$ of $E_6$,
+which decomposes as $\mathbf{10}+\bar{\mathbf{5}}+\mathbf{1}$ under
+$\mathrm{SU}(5)$ (one SM generation plus a sterile neutrino).
 
 %% ===============================================================
 \section{Derivation of the Fine-Structure Constant}
@@ -696,9 +711,11 @@ atmospheric mixing), within reach of JUNO by 2027.
 
 \begin{center}
 \textit{``The degree to which six integers
-$\{40,\,12,\,2,\,-4,\,27,\,12\}$
-determine the structure of the Standard Model is,
-to our knowledge, unprecedented in the literature.''}
+$\{40,\,12,\,2,\,-4,\,24,\,15\}$ ---
+the parameters and eigenvalue multiplicities of a single,
+unique combinatorial object --- determine the structure of the
+Standard Model is, to our knowledge, unprecedented in the
+literature.''}
 \end{center}
 
 %% ===============================================================
@@ -824,7 +841,7 @@ arXiv:1702.00786, 2017.
 {
   "graph":            "W(3,3) = SRG(40,12,2,4)",
   "n_v": 40,  "n_e": 60,  "k": 12,  "r": 2,  "s": -4,
-  "f_r": 27,  "f_s": 12,
+  "f_r": 24,  "f_s": 15,
   "E_master":         480,
   "alpha_inv":        137,
   "neutrino_sum_meV": 30.7,

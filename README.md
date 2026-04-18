@@ -17,7 +17,7 @@ This repository develops a **unified physical theory** grounded in the spectral 
 
 The framework has four interlocking pillars:
 
-1. **Spectral Graph Theory** — W(3,3) = SRG(40,12,2,4) with eigenvalues {12, 2, −4}, multiplicities {1, 27, 12}
+1. **Spectral Graph Theory** — W(3,3) = SRG(40,12,2,4) with eigenvalues {12, 2, −4}, multiplicities {1, 24, 15}
 2. **Modular Forms & Moonshine** — Dedekind η, Eisenstein series E₄/E₆/Δ, Niemeier lattices, McKay–Thompson Hauptmoduls, Monster replicability
 3. **NCG Spectral Action** — Connes finite spectral triple (𝒜, ℋ, D) reproducing the full SM Lagrangian
 4. **E₈ / Leech Geometry** — n_v × k = 480 = |Φ(E₈)|; Leech kissing number 196560 recovered; 24 Niemeier lattices classified

@@ -13,7 +13,7 @@ I am pleased to submit the enclosed manuscript for consideration as a **Letter**
 
 ## Why This Letter Is Significant
 
-The fine-structure constant α⁻¹ ≈ 137.036 has resisted theoretical derivation since Eddington's early attempts nearly a century ago. The present work offers the first derivation from a *unique*, parameter-free geometric object. Specifically, from the three eigenvalues {k, r, s} = {12, 2, −4} and their multiplicities {1, 27, 12} of SRG(40,12,2,4), we obtain:
+The fine-structure constant α⁻¹ ≈ 137.036 has resisted theoretical derivation since Eddington's early attempts nearly a century ago. The present work offers the first derivation from a *unique*, parameter-free geometric object. Specifically, from the three eigenvalues {k, r, s} = {12, 2, −4} and their multiplicities {1, 24, 15} of SRG(40,12,2,4), we obtain:
 
 - **α⁻¹ = k² − (|r| + |s| + 1) = 144 − 7 = 137** (0.026% from experiment)
 - **sin²θ_W = |s|/(k + |s|) = 4/16 = 1/4 → 3/13 ≈ 0.2308** at the Z-pole (0.18% from PDG)
