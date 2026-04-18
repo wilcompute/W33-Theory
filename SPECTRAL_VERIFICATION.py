@@ -242,7 +242,78 @@ print(f"  Equivalently: k² - (r-s) - 1 = {k_val**2} - {r_val-s_val} - 1 = {k_va
 
 
 # ---------------------------------------------------------------------------
-# 12.  SUMMARY
+# 13.  LIE ALGEBRA DIMENSION CASCADE  (Theorem: thm:liecascade)
+# ---------------------------------------------------------------------------
+print("\n--- 13. Exceptional Lie Algebra Dimension Cascade ---")
+
+_n = n; _k = k_val; _r = r_val; _s = s_val; _fr = f_r; _fs = f_s
+
+assert _fs == 15,                      "dim SU(4) = f_s = 15"
+assert _fr == 24,                      "dim SU(5) = f_r = 24"
+assert _k + _r == 14,                  "dim G2 = k+r = 14"
+assert (_k+1)*abs(_s) == 52,           "dim F4 = (k+1)|s| = 52"
+assert _r*(_n-1) == 78,               "dim E6 = r*(n-1) = 78"
+assert _k**2 - _k + 1 == 133,         "dim E7 = k^2-k+1 = 133"
+assert _fr*(_k-_r)+(  _k-abs(_s)) == 248, "dim E8 = f_r(k-r)+(k-|s|) = 248"
+
+print(f"  dim SU(4) = f_s          = {_fs}   (4^2-1)  ✓")
+print(f"  dim SU(5) = f_r          = {_fr}   (5^2-1)  ✓")
+print(f"  dim G2    = k+r          = {_k+_r}   ✓")
+print(f"  dim F4    = (k+1)|s|     = {(_k+1)*abs(_s)}   ✓")
+print(f"  dim E6    = r(n-1)       = {_r*(_n-1)}   ✓")
+print(f"  dim E7    = k^2-k+1      = {_k**2-_k+1}  ✓")
+print(f"  dim E8    = f_r(k-r)+rank(E8) = {_fr*(_k-_r)}+{_k-abs(_s)} = {_fr*(_k-_r)+(_k-abs(_s))}  ✓")
+
+# Rank cascade
+assert _r == 2,             "rank G2 = r = 2"
+assert abs(_s) == 4,        "rank F4 = |s| = 4"
+assert abs(_s)+_r == 6,     "rank E6 = |s|+r = 6"
+assert abs(_s)+_r+1 == 7,   "rank E7 = |s|+r+1 = 7"
+assert _k-abs(_s) == 8,     "rank E8 = k-|s| = 8"
+print(f"  rank (G2,F4,E6,E7,E8) = ({_r},{abs(_s)},{abs(_s)+_r},{abs(_s)+_r+1},{_k-abs(_s)})  ✓")
+
+
+# ---------------------------------------------------------------------------
+# 14.  E8 THETA SERIES SHELLS  (Proposition: prop:e8shells)
+# ---------------------------------------------------------------------------
+print("\n--- 14. E8 Theta Series Shell Decoding ---")
+
+def sigma3(m): return sum(d**3 for d in range(1, m+1) if m % d == 0)
+
+r_e8_2 = 240 * sigma3(1)
+r_e8_4 = 240 * sigma3(2)
+r_e8_6 = 240 * sigma3(3)
+
+assert r_e8_2 == _fr*(_k-_r),          f"Shell 1: {r_e8_2} != {_fr*(_k-_r)}"
+assert r_e8_4 == 2*_n*(_n-1-_k),       f"Shell 2: {r_e8_4} != {2*_n*(_n-1-_k)}"
+assert r_e8_6 == _n*_k*(_k+_r),        f"Shell 3: {r_e8_6} != {_n*_k*(_k+_r)}"
+assert sigma3(2) == 3**2,              f"sigma3(2)=q^2: {sigma3(2)} != 9"
+assert sigma3(3) == _n - _k,           f"sigma3(q)=n-k: {sigma3(3)} != {_n-_k}"
+
+print(f"  r_E8(2) = {r_e8_2} = f_r*(k-r)    ✓")
+print(f"  r_E8(4) = {r_e8_4} = 2*n*(n-1-k)  ✓")
+print(f"  r_E8(6) = {r_e8_6} = n*k*(k+r) = E*dim(G2)  ✓")
+print(f"  sigma3(2) = {sigma3(2)} = q^2   ✓")
+print(f"  sigma3(q) = {sigma3(3)} = n-k   ✓")
+
+
+# ---------------------------------------------------------------------------
+# 15.  McKAY CORRESPONDENCE  (Proposition: prop:mckay)
+# ---------------------------------------------------------------------------
+print("\n--- 15. McKay Correspondence Group Orders ---")
+import math as _math
+
+assert 24  == _fr,                        "binary tetrahedral = f_r"
+assert 48  == 2*_fr,                      "binary octahedral = 2*f_r"
+assert 120 == _math.lcm(_fr, _fs),        "binary icosahedral = lcm(f_r,f_s)"
+
+print(f"  |binary tetrahedral (->E6)| = 24  = f_r           ✓")
+print(f"  |binary octahedral  (->E7)| = 48  = 2*f_r         ✓")
+print(f"  |binary icosahedral (->E8)| = 120 = lcm(f_r,f_s) = 5!  ✓")
+
+
+# ---------------------------------------------------------------------------
+# 16.  SUMMARY
 # ---------------------------------------------------------------------------
 print("\n" + "="*60)
 print("ALL ASSERTIONS PASSED — W(3,3) spectral theory verified.")
@@ -250,10 +321,11 @@ print("="*60)
 print(f"\nGraph: SRG(40,12,2,4) = W(3) = GQ(3,3) collinearity graph")
 print(f"Constructed as symplectic polar graph over GF(3)")
 print(f"\nKey invariants:")
-print(f"  Spec(A) = {{12^(×1), 2^(×24), (-4)^(×15)}}")
-print(f"  E = n·k = 480 = |Φ(E₈)|")
-print(f"  f_r·(k-r) = 240 = |Φ⁺(E₈)|  [Kissing Number Identity]")
-print(f"  Z_W(-2) = 480 = |Φ(E₈)|,  Z_W(-1) = 120 = 5!,  Z_W(0) = 40")
-print(f"  k-r=10, r-s=6, k+|s|=16, k-|s|=8  [String theory encoding]")
-print(f"  α⁻¹ = 137  [Fine structure constant]")
-print(f"  n = ω·α = 4·10 = 40  [GQ factorization]")
+print(f"  Spec(A) = {{12^(x1), 2^(x24), (-4)^(x15)}}")
+print(f"  E = n*k = 480 = 2|Phi(E8)|")
+print(f"  f_r*(k-r) = 240 = |Phi(E8)|  [Kissing Number]")
+print(f"  Z_W(-2) = 480,  Z_W(-1) = 120 = 5!,  Z_W(0) = 40")
+print(f"  k-r=10, r-s=6, k+|s|=16, rank(E8)=k-|s|=8")
+print(f"  alpha^-1 = 137")
+print(f"  n = omega*alpha = 4*10 = 40  [GQ factorization]")
+print(f"  Lie cascade: dim(G2,F4,E6,E7,E8) = (k+r,(k+1)|s|,r(n-1),k^2-k+1,f_r(k-r)+k-|s|)")

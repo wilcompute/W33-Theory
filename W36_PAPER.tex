@@ -419,6 +419,130 @@ The Hoffman bounds give $\omega \le 1-k/s = 1+3 = 4$ and
 $\alpha \le \nv|s|/(k+|s|) = 40\cdot 4/16 = 10$; both are achieved,
 confirming that $\W$ is \emph{conference-graph optimal} in these senses.
 
+%% ---------------------------------------------------------------
+\subsection{Exceptional Lie Algebra Dimension Cascade}
+
+The four spectral parameters $(k,r,s,\nv)=(12,2,-4,40)$ of $\W$
+simultaneously encode the dimensions of every exceptional Lie algebra
+in the Cartan classification, together with $\mathrm{SU}(4)$ and
+$\mathrm{SU}(5)$:
+
+\begin{theorem}[Lie Algebra Dimension Cascade]
+\label{thm:liecascade}
+With spectral parameters $k=12$, $r=2$, $s=-4$, $\nv=40$,
+$\fr=24$, $\fs=15$ of\/ $\W$, one has
+\begin{align}
+  \dim\mathrm{SU}(4) &= \fs = 15, \label{eq:dimsu4}\\
+  \dim\mathrm{SU}(5) &= \fr = 24, \label{eq:dimsu5}\\
+  \dim G_2 &= k + r = 14, \label{eq:dimg2}\\
+  \dim F_4 &= (k+1)|s| = 52, \label{eq:dimf4}\\
+  \dim E_6 &= r(\nv - 1) = r(\fr+\fs) = 78, \label{eq:dime6}\\
+  \dim E_7 &= k^2 - k + 1 = 133, \label{eq:dime7}\\
+  \dim E_8 &= \fr(k-r) + (k-|s|) = 240 + 8 = 248. \label{eq:dime8}
+\end{align}
+Moreover, the ranks satisfy
+\begin{equation}
+  \mathrm{rank}(G_2,F_4,E_6,E_7,E_8) = (r,\,|s|,\,|s|+r,\,|s|+r+1,\,k-|s|)
+  = (2,4,6,7,8).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Each identity is a direct numerical verification using
+$k=12,r=2,|s|=4,\nv=40,\fr=24,\fs=15$.
+The formula for $\dim E_8$ uses $\fr(k-r)=240=|\Phi^+(E_8)|$
+(Theorem~\ref{thm:kissing}) and $k-|s|=8=\mathrm{rank}(E_8)$,
+so that $\dim E_8 = |\Phi^+(E_8)|+\mathrm{rank}(E_8)$.
+The formula $\dim E_6 = r(\nv-1)$ follows from $r=2$ and
+$\nv-1=\fr+\fs=39$, so that $2\times 39=78$.
+The formula $\dim E_7 = k^2-k+1 = \Phi_6(k)$ is the sixth
+cyclotomic polynomial evaluated at the degree $k=12$.
+\end{proof}
+
+\begin{remark}
+Table~\ref{tab:liecascade} displays all seven identities.
+The rank formula $\mathrm{rank}=r,|s|,|s|+r,|s|+r+1,k-|s|$
+steps through $2,4,6,7,8$ using only the two non-trivial eigenvalues
+and the degree of the graph.
+\end{remark}
+
+\begin{table}[H]
+\centering
+\caption{Exceptional Lie algebra dimensions encoded in $W(3,3)$.}
+\label{tab:liecascade}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}lrcl@{}}
+\toprule
+Algebra & $\dim$ & Rank & $W(3,3)$ spectral formula \\
+\midrule
+$\mathrm{SU}(4)$ & 15 & 3 & $\fs$ \\
+$\mathrm{SU}(5)$ & 24 & 4 & $\fr$ \\
+$G_2$            & 14 & 2 & $k+r$ \\
+$F_4$            & 52 & 4 & $(k+1)|s|$ \\
+$E_6$            & 78 & 6 & $r(\nv-1)=r(\fr+\fs)$ \\
+$E_7$            & 133 & 7 & $k^2-k+1$ \\
+$E_8$            & 248 & 8 & $\fr(k-r)+(k-|s|)$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%% ---------------------------------------------------------------
+\subsection{E\protect\textsubscript{8} Theta Series Shell Decoding}
+
+The kissing-number identity (Theorem~\ref{thm:kissing}) is the
+first in a series of identities linking the E$_8$ theta function
+shells to W$(3,3)$ graph-theoretic data.
+
+\begin{proposition}[$E_8$ Theta Series Shells]
+\label{prop:e8shells}
+Write the $E_8$ theta function as
+$\Theta_{E_8}(q)=1+\sum_{m\ge 1}r_{E_8}(2m)\,q^m$,
+where $r_{E_8}(2m)=240\,\sigma_3(m)$.  Then
+\begin{align}
+  r_{E_8}(2) &= 240 = \fr(k-r), \label{eq:shell1}\\
+  r_{E_8}(4) &= 2160 = 2\,\nv(\nv-1-k), \label{eq:shell2}\\
+  r_{E_8}(6) &= 6720 = \nv\cdot k\cdot(k+r) = E\cdot\dim G_2, \label{eq:shell3}
+\end{align}
+where $E=\nv k=480$ is the master number.
+\end{proposition}
+
+\begin{proof}
+Using $\sigma_3(1)=1$, $\sigma_3(2)=9=q^2$, $\sigma_3(3)=28=\nv-k$:
+\begin{itemize}
+  \item Shell 1: $240\cdot 1 = 240 = 24\cdot 10 = \fr(k-r)$ (\ref{eq:shell1}).
+  \item Shell 2: $240\cdot 9 = 2160 = 2\cdot 40\cdot 27 = 2\nv(\nv-1-k)$ (\ref{eq:shell2}).
+  \item Shell 3: $240\cdot 28 = 6720 = 40\cdot 12\cdot 14 = \nv k(k+r) = E\cdot\dim G_2$ (\ref{eq:shell3}).
+\end{itemize}
+Note the nested arithmetic:
+$\sigma_3(2)=9=q^2$ relates the second shell to the field order,
+and $\sigma_3(q)=1+q^3=\nv-k=28$ relates the third shell to the
+non-adjacency count of $\W$.
+\end{proof}
+
+%% ---------------------------------------------------------------
+\subsection{McKay Correspondence Fingerprint}
+
+The McKay correspondence associates each exceptional type $E_6,E_7,E_8$
+to a finite subgroup of $\mathrm{SU}(2)$: the binary tetrahedral,
+binary octahedral, and binary icosahedral groups, of orders 24, 48,
+and 120 respectively.
+
+\begin{proposition}[McKay Group Orders]
+\label{prop:mckay}
+The orders of the three McKay binary subgroups of $\mathrm{SU}(2)$
+are
+\begin{align}
+  |\Gamma_{E_6}| &= 24 = \fr, \label{eq:mckayE6}\\
+  |\Gamma_{E_7}| &= 48 = 2\fr, \label{eq:mckayE7}\\
+  |\Gamma_{E_8}| &= 120 = \mathrm{lcm}(\fr,\fs) = 5!, \label{eq:mckayE8}
+\end{align}
+where $\Gamma_{E_6},\Gamma_{E_7},\Gamma_{E_8}$ denote the binary
+tetrahedral, binary octahedral, and binary icosahedral groups.
+Moreover, $|\Gamma_{E_8}|=120=\mathrm{lcm}(\fr,\fs)=\mathrm{lcm}(24,15)$
+is the order that was identified in Proposition~\ref{prop:multarith}
+as $|\mathrm{Sym}(6)|/3=120=\fr\cdot\fs/\gcd(\fr,\fs)$.
+\end{proposition}
+
 \subsection{The Eigenvalue--Root-System Correspondence}
 
 \begin{figure}[H]
