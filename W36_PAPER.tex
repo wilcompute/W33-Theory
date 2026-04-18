@@ -397,27 +397,28 @@ two non-trivial eigenspaces.
 
 \subsection{Generalized Quadrangle Vertex Factorization}
 
-\begin{proposition}[GQ Vertex Factorization]
+\begin{proposition}[GQ Vertex Count and Hoffman Bounds]
 \label{prop:gqfactor}
 As the collinearity graph of the generalized quadrangle $\mathrm{GQ}(3,3)$,
 the graph $\W$ has
 \begin{itemize}
   \item clique number $\omega = q+1 = 4$ (a \emph{line} of $\mathrm{GQ}(3,3)$
         has $q+1=4$ points; the Hoffman clique bound is tight),
-  \item independence number $\alpha = q^2+1 = 10$ (an \emph{ovoid} of
-        $\mathrm{GQ}(3,3)$ meets every line in exactly one point;
-        the Hoffman independence bound is tight),
+  \item Hoffman independence bound $\alpha_H = \nv|s|/(k+|s|) = 40\cdot 4/16 = 10 = q^2+1$;
+        however, $\mathrm{GQ}(3,3)$ has \emph{no ovoids}
+        (Thas 1974), so the bound is \emph{not} achieved;
+        the actual independence number is $\alpha = 7$,
 \end{itemize}
-and the vertex count factors as
+and the vertex count satisfies
 \[
-  \nv \;=\; \omega\cdot\alpha \;=\; (q+1)(q^2+1) \;=\; 4\cdot 10 \;=\; 40.
+  \nv \;=\; (q+1)(q^2+1) \;=\; 4\cdot 10 \;=\; 40.
 \]
 \end{proposition}
 
 \noindent
-The Hoffman bounds give $\omega \le 1-k/s = 1+3 = 4$ and
-$\alpha \le \nv|s|/(k+|s|) = 40\cdot 4/16 = 10$; both are achieved,
-confirming that $\W$ is \emph{conference-graph optimal} in these senses.
+The Hoffman clique bound $\omega \le 1-k/s = 1+3 = 4$ is achieved, but the Hoffman
+independence bound $\alpha_H = 10$ is not: $\alpha(W(3,3)) = 7$, making $\W$
+a rare example where the Hoffman independence bound is strict.
 
 %% ---------------------------------------------------------------
 \subsection{Exceptional Lie Algebra Dimension Cascade}
@@ -543,49 +544,36 @@ is the order that was identified in Proposition~\ref{prop:multarith}
 as $|\mathrm{Sym}(6)|/3=120=\fr\cdot\fs/\gcd(\fr,\fs)$.
 \end{proposition}
 
-\subsection{Generalized Quadrangle Geometry: Lines, Ovoids, and Triangles}
+\subsection{Generalized Quadrangle Geometry: Lines and Triangles}
 
 As the collinearity graph of $\mathrm{GQ}(3,3)$, the graph $\W$ encodes
-a rich combinatorial geometry over $\GF(3)$. The structure reveals
-a deep symmetry between cliques and independent sets.
+a rich combinatorial geometry over $\GF(3)$.
 
-\begin{proposition}[GQ(3,3) Line--Ovoid Duality]
+\begin{proposition}[GQ(3,3) Line and Triangle Structure]
 \label{prop:gqgeometry}
 In the incidence structure of $\mathrm{GQ}(3,3)$:
 \begin{itemize}
   \item Lines have exactly $q+1=4$ points; there are $(q+1)(q^2+1)=40$ lines.
-  \item Ovoids (maximum independent sets) have exactly $q^2+1=10$ points.
-  \item The 40 vertices partition into 4 disjoint ovoids.
-  \item The collinearity graph contains exactly $40 \times \binom{q+1}{3} = 40 \times 4 = 160$
+  \item $\mathrm{GQ}(3,3)$ has \emph{no ovoids} (classical result; Thas 1974):
+        the independence number is $\alpha = 7$, strictly less than the
+        Hoffman bound $\alpha_H = q^2+1 = 10$.
+  \item The collinearity graph contains exactly $40 \times \binom{q+1}{3} = 160$
         triangles, with each line contributing exactly $\binom{4}{3}=4$ triangles.
   \item Per-vertex triangle count: $(k\lambda)/2 = (12 \times 2)/2 = 12$ triangles per vertex,
-        so total triangles $= (n \cdot 12)/3 = 160$ ✓ (verified: $\mathrm{tr}(A^3)/6 = 960/6 = 160$).
+        so total triangles $= (n \cdot 12)/3 = 160$ (\emph{verified}: $\mathrm{tr}(A^3)/6 = 960/6 = 160$).
 \end{itemize}
 \end{proposition}
 
 \begin{proof}
-The parameters of $\mathrm{GQ}(q,q)$ are well-known. The line count is $(q+1)(q^2+1)=4 \times 10=40$,
+The parameters of $\mathrm{GQ}(q,q)$ give line count $(q+1)(q^2+1)=40$,
 matching the vertex count (a property of square-type GQ). Each line has $q+1=4$ points.
-An ovoid is a set of $q^2+1$ points, no two collinear. For $q=3$, ovoids have $10$ points.
+The non-existence of ovoids in $\mathrm{GQ}(3,3)$ is due to Thas~(1974).
 
-The partition into 4 disjoint ovoids follows from the ovoid's property and counting:
-$4 \times 10 = 40 = \nv$. Each ovoid is an independent set in the collinearity graph.
-
-Triangle counting: Each line $\ell$ with 4 points contains exactly $\binom{4}{3}=4$ triangles
-(all triples are collinear, hence form triangles in the collinearity graph).
-With 40 lines, total count is $40 \times 4 = 160$.
-
-Alternatively, the SRG structure gives: any two adjacent vertices share $\lambda=2$ common neighbors.
-For a fixed vertex $v$, its neighborhood $N(v)$ (size $k=12$) contains $k\lambda/2 = 12$ edges,
-each forming a triangle with $v$. Summing over all $n=40$ vertices and dividing by 3
-(since each triangle is counted thrice), we get $160$ triangles. This matches $\mathrm{tr}(A^3)/6=160$.
+Triangle counting: each line $\ell$ with 4 mutually collinear points contains $\binom{4}{3}=4$
+triangles in the collinearity graph, giving $40\times 4 = 160$.
+The SRG formula $n k \lambda/6 = 40\cdot 12\cdot 2/6 = 160$ and the spectral
+identity $\mathrm{tr}(A^3)/6 = 960/6 = 160$ both confirm this.
 \end{proof}
-
-\remark{The factorization $n = \omega \cdot \alpha = 4 \times 10 = 40$ (where $\omega=4$ is the
-clique number and $\alpha=10$ is the independence number) shows that the graph is
-\emph{perfectly balanced}: every clique (line) and every independent set (ovoid) have
-complementary sizes. This is characteristic of the generalized quadrangle structure
-over a finite field.}
 
 \subsection{Spectral Recurrence and the Ihara Zeta Function}
 
@@ -632,32 +620,88 @@ $k$ and $k-1$, suggesting that much of the graph's geometry is determined
 by its regularity degree.
 \end{remark}
 
-\subsubsection{Proposition \ref{prop:clique}: Clique and Cycle Structure}
+\subsubsection{Distance Matrix Spectrum and Wiener Identity}
 
-The collinearity graph $\W(3,3)$ contains a rich and highly regular structure
-of cliques and cycles, determined entirely by its SRG parameters. The spectrum
-allows reconstruction of the full cycle enumeration via the spectral moment
-relationship $\text{tr}(A^m)$.
+\begin{proposition}[Distance Matrix]\label{prop:distancematrix}
+The distance matrix $D$ of $\W$, where $D_{ij}=d(i,j)$ is the graph distance,
+satisfies $D = 2J - 2I - A$ (since $\W$ has diameter 2), and has spectrum
+\[
+  \mathrm{Spec}(D) = \{66^1,\;(-4)^{24},\;2^{15}\}.
+\]
+The Wiener index (sum of all pairwise distances) is
+\[
+  W(\W) = \frac{n(2n-2-k)}{2} = \frac{40\cdot 66}{2} = 1320.
+\]
+The Frobenius norm satisfies the Wiener identity
+\[
+  \mathrm{tr}(D^2) = \alpha_H\cdot E = 10\cdot 480 = 4800,
+\]
+where $\alpha_H = q^2+1 = 10$ is the Hoffman independence bound and $E = nk = 480$
+is the master number.
 
-\begin{proposition}[Clique Enumeration]\label{prop:clique}
-The $\W(3,3) = \text{SRG}(40, 12, 2, 4)$ graph contains:
-\begin{equation}
-  \text{Triangles (C}_3\text{)} = 430,
-\end{equation}
-verified via the spectral identity
-\begin{equation}
-  \text{tr}(A^3) = 6 \cdot C_3 + \text{(walks with returns)},
-\end{equation}
-where the eigenvalue contribution is $\text{tr}(A^3) = 12^3 + 24 \cdot 2^3 + 15 \cdot (-4)^3 = 1728 + 192 - 3840 = -1920$.
-However, the actual trace $\text{tr}(A^3) = 2580 = 6 \cdot 430$ counts closed walks.
-The $\lambda = 2$ common neighbors condition ensures each edge $(i,j)$ participates
-in exactly 2 triangles, so the total edge-triangle count is $270 \cdot 2 / 3 = 180$
-triangles per counting method, or 430 via the graph walk method.
-
-In the GQ(3,3) geometry (point-line incidence), the count differs: the geometric
-triangle count via line decomposition yields $40 \text{ lines} \times C(4,3) = 160$ triangles.
-This is the count of geometric (collinear) triples.
+The complement $\bar{\W}$ is $\mathrm{SRG}(40,27,18,18)$ with spectrum
+$\{27^1,\; 3^{15},\; (-3)^{24}\}$; both non-trivial eigenvalues satisfy
+$|r_c| = |s_c| = 3 = q$.
 \end{proposition}
+
+\begin{proof}
+Since $\W$ has diameter 2, every non-adjacent pair is at distance 2, so
+$D = 2(J - I) - A = 2J - 2I - A$.  To compute the spectrum, note that
+$J$ has eigenvalue $n=40$ on the all-ones vector and eigenvalue $0$ on any
+vector orthogonal to it.  Hence the eigenvalue of $D = 2J - 2I - A$ on an
+eigenvector of $A$ with eigenvalue $\lambda_i$ and $J$-eigenvalue $j_i$ is
+$2j_i - 2 - \lambda_i$:
+\begin{itemize}
+  \item Degree eigenvector ($\lambda=12$, $j=40$): $2\cdot 40 - 2 - 12 = 66$.
+  \item $r=2$ eigenspace ($j=0$): $0 - 2 - 2 = -4$.
+  \item $s=-4$ eigenspace ($j=0$): $0 - 2 - (-4) = 2$.
+\end{itemize}
+Wiener index $W = \tfrac{1}{2}\mathrm{tr}(D\mathbf{1}\mathbf{1}^T) = \tfrac{n\cdot 66}{2} = 1320$
+(since the Perron eigenvector is constant and the distance-sum per vertex is $66$).
+The identity $\mathrm{tr}(D^2) = 66^2 + 24\cdot(-4)^2 + 15\cdot 2^2 = 4356 + 384 + 60 = 4800 = 10\cdot 480$
+links the Hoffman bound $\alpha_H = 10$ to the master number $E = 480$.
+For the complement $\bar{\W}$ with adjacency matrix $\bar{A} = J - I - A$, the eigenvalues
+are $(n-1-k,\,-1-r,\,-1-s) = (27,\,-3,\,3)$, and the SRG parameters are
+$\lambda_c = n-2-2k+\mu = 18$ and $\mu_c = n-2k+\lambda = 18$, confirming
+$\bar{\W} = \mathrm{SRG}(40,27,18,18)$.
+\end{proof}
+
+\subsubsection{Automorphism Group and E\protect\textsubscript{6} Weyl Group Coincidence}
+
+\begin{proposition}[Automorphism Group]\label{prop:automorphism}
+The automorphism group of $\W$ is
+\[
+  \mathrm{Aut}(\W) \cong \mathrm{PSp}(4,3),\qquad |\mathrm{Aut}(\W)| = 25920.
+\]
+This coincides with the order of $\mathrm{Sp}(4,3)$ divided by 2:
+\[
+  |\mathrm{Sp}(4,3)| = q^4(q^2-1)(q^4-1) = 81\cdot 8\cdot 80 = 51840 = |W(E_6)|,
+\]
+where $W(E_6)$ denotes the Weyl group of $E_6$.  Hence
+\[
+  |\mathrm{Aut}(\W)| = \tfrac{1}{2}|W(E_6)| = 25920.
+\]
+The vertex stabilizer has order $648$; $\mathrm{Aut}(\W)$ acts as a rank-3 permutation
+group on the 40 vertices.  Furthermore,
+\begin{align}
+  n - \omega &= 40 - 4 = 36 = \#\{\text{positive roots of }E_6\}, \\
+  n - 1 - k  &= 27 = \dim\mathbf{27}_{E_6}  \quad\text{(fundamental representation).}
+\end{align}
+\end{proposition}
+
+\begin{proof}
+The symplectic polar graph $W(3) = W(3,3)$ is the collinearity graph of $\mathrm{GQ}(3,3)$.
+Its full automorphism group is $\mathrm{P}\Gamma\mathrm{Sp}(4,3)$; since $\mathrm{GF}(3)$
+has trivial field automorphism group, $\mathrm{Aut}(\W) \cong \mathrm{PSp}(4,3)$.
+The order formula $|\mathrm{Sp}(2n,q)| = q^{n^2}\prod_{i=1}^n(q^{2i}-1)$ gives
+$|\mathrm{Sp}(4,3)| = 3^4(3^2-1)(3^4-1) = 81\cdot 8\cdot 80 = 51840$.
+The order of the Weyl group $W(E_6) = 51840 = 2^7\cdot 3^4\cdot 5$ is the same
+(a classical coincidence between symplectic and exceptional groups).
+The vertex stabilizer order follows from $|\mathrm{Aut}|/n = 25920/40 = 648$.
+The count $n - \omega = 36 = |\Phi^+(E_6)|$ and the representation dimension $27 = n-1-k$
+are numerical coincidences that parallel the Lie algebra cascade
+(Theorem~\ref{thm:liecascade}).
+\end{proof}
 
 \subsection{The Eigenvalue--Root-System Correspondence}
 

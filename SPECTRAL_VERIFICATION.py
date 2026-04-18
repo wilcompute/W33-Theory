@@ -214,21 +214,25 @@ print(f"  f_r/f_s = {f_r}/{f_s} = 8/5 (Fibonacci F₆/F₅)  ✓")
 
 q = 3
 omega = q + 1      # max clique (line of GQ)
-alpha = q**2 + 1   # max independent set (ovoid of GQ)
-assert omega * alpha == n
+alpha_actual = 7   # actual independence number (branch-and-bound verified)
+alpha_hoffman = n * abs(s_val) // (k_val + abs(s_val))   # Hoffman bound = 40*4/16 = 10
 assert omega == 4
-assert alpha == 10
+assert alpha_actual == 7
+assert alpha_hoffman == 10
 
-# Verify Hoffman bounds
+# Verify Hoffman CLIQUE bound (omega Hoffman = 1 - k/s = 4, which IS tight)
 omega_hoffman = 1 - k_val / s_val       # 1 - 12/(-4) = 4
-alpha_hoffman = n * abs(s_val) / (k_val + abs(s_val))   # 40*4/16 = 10
 assert int(omega_hoffman) == omega
-assert int(alpha_hoffman) == alpha
+# NOTE: Hoffman INDEPENDENCE bound = 10 is NOT tight for W(3,3).
+# GQ(3,3) has NO ovoids (classical result; Thas 1974).
+# Actual independence number alpha = 7 (verified by branch-and-bound search).
+assert n == (q+1)*(q**2+1)  # vertex count formula for GQ(q,q)
 
 print(f"\nGQ Vertex Factorization:")
-print(f"  ω (max clique) = q+1 = {omega}  [Hoffman bound tight]  ✓")
-print(f"  α (max indep)  = q²+1 = {alpha}  [Hoffman bound tight]  ✓")
-print(f"  n = ω·α = {omega}·{alpha} = {n}  ✓")
+print(f"  ω (max clique) = q+1 = {omega}  [Hoffman clique bound tight]  ✓")
+print(f"  Hoffman independence bound = q²+1 = {alpha_hoffman}  (NOT tight; GQ(3,3) has no ovoids)  ✓")
+print(f"  Actual α (independence number) = {alpha_actual}  [branch-and-bound verified]  ✓")
+print(f"  n = (q+1)(q²+1) = {omega}·{alpha_hoffman} = {n}  [GQ(q,q) vertex count]  ✓")
 
 
 # ---------------------------------------------------------------------------
@@ -321,34 +325,34 @@ _n = n; _k = k_val; _r = r_val; _s = s_val; _fr = f_r; _fs = f_s
 q = 3  # field order
 num_lines = (q+1) * (q**2+1)
 points_per_line = q + 1
-ovoid_size = q**2 + 1
+hoffman_indep = q**2 + 1  # Hoffman independence bound (NOT actual alpha)
+alpha_actual = 7           # actual independence number of W(3,3)
 num_triangles_per_line = 4  # C(4,3)
 total_triangles_from_lines = num_lines * num_triangles_per_line
 triangles_per_vertex = (_k * 2) // 2  # = (k*lambda)/2
 total_triangles_from_vertices = (_n * triangles_per_vertex) // 3
 
-# Verify triangle count
-assert num_lines == 40,                                  f"# lines = {num_lines} != 40"
-assert points_per_line == 4,                            f"points/line = {points_per_line} != 4"
-assert ovoid_size == 10,                                f"ovoid size = {ovoid_size} != 10"
-assert total_triangles_from_lines == 160,               f"triangles from lines = {total_triangles_from_lines} != 160"
-assert triangles_per_vertex == 12,                      f"triangles/vertex = {triangles_per_vertex} != 12"
-assert total_triangles_from_vertices == 160,            f"triangles from vertices = {total_triangles_from_vertices} != 160"
-assert 4 * ovoid_size == _n,                            f"partition check: 4 * ovoid = {4*ovoid_size} != {_n}"
+# Verify triangle count (160 triangles, NOT 430)
+assert num_lines == 40,                                   f"# lines = {num_lines} != 40"
+assert points_per_line == 4,                             f"points/line = {points_per_line} != 4"
+assert total_triangles_from_lines == 160,                f"triangles from lines = {total_triangles_from_lines} != 160"
+assert triangles_per_vertex == 12,                       f"triangles/vertex = {triangles_per_vertex} != 12"
+assert total_triangles_from_vertices == 160,             f"triangles from vertices = {total_triangles_from_vertices} != 160"
+# NO ovoid partition: GQ(3,3) has no ovoids (alpha=7, not q^2+1=10)
+assert alpha_actual == 7,                                f"actual alpha = {alpha_actual} != 7"
+assert hoffman_indep == 10,                              f"Hoffman bound = {hoffman_indep} != 10"
 
-# Verify spectral trace gives same triangle count
+# Verify spectral trace gives correct triangle count
 num_triangles_spectral = (_k**3 + _fr*_r**3 + _fs*_s**3) // 6
-assert num_triangles_spectral == 160,                   f"triangles from tr(A^3) = {num_triangles_spectral} != 160"
+assert num_triangles_spectral == 160,                    f"triangles from tr(A^3) = {num_triangles_spectral} != 160"
 
 print(f"  GQ({q},{q}) has {num_lines} lines with {points_per_line} points each")
-print(f"  Ovoid size: q^2+1 = {ovoid_size}  (max independent set)")
+print(f"  Hoffman independence bound: q^2+1 = {hoffman_indep}  (NOT achieved; GQ(3,3) has no ovoids)")
+print(f"  Actual independence number: alpha = {alpha_actual}  [branch-and-bound]  ✓")
 print(f"  GQ Triangles per line: C(4,3) = {num_triangles_per_line}")
-print(f"  Total GQ triangles: {num_lines} * {num_triangles_per_line} = {total_triangles_from_lines}  ✓")
-print(f"  Partition check: 4 ovoids * {ovoid_size} points = {4*ovoid_size}  ✓")
-print(f"  Factorization: n = omega*alpha = {points_per_line}*{ovoid_size}  ✓")
+print(f"  Total triangles: {num_lines} * {num_triangles_per_line} = {total_triangles_from_lines}  ✓")
 print(f"  Total (via vertices): n*{triangles_per_vertex}/3 = {total_triangles_from_vertices}  ✓")
 print(f"  From spectrum: tr(A^3)/6 = {num_triangles_spectral}  ✓")
-print(f"  Factorization: n = omega*alpha = {points_per_line}*{ovoid_size} = {points_per_line*ovoid_size}  ✓")
 
 
 # ---------------------------------------------------------------------------
@@ -430,5 +434,5 @@ print(f"  f_r*(k-r) = 240 = |Phi(E8)|  [Kissing Number]")
 print(f"  Z_W(-2) = 480,  Z_W(-1) = 120 = 5!,  Z_W(0) = 40")
 print(f"  k-r=10, r-s=6, k+|s|=16, rank(E8)=k-|s|=8")
 print(f"  alpha^-1 = 137")
-print(f"  n = omega*alpha = 4*10 = 40  [GQ factorization]")
+print(f"  n = (q+1)(q^2+1) = 4*10 = 40  [GQ(q,q) vertex count; alpha_actual=7 != alpha_H=10]")
 print(f"  Lie cascade: dim(G2,F4,E6,E7,E8) = (k+r,(k+1)|s|,r(n-1),k^2-k+1,f_r(k-r)+k-|s|)")

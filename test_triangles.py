@@ -1,49 +1,60 @@
 #!/usr/bin/env python3
-"""Simple triangle counting in W(3,3) to verify tr(A^3) = 6*C3."""
+"""Triangle counting in W(3,3) to verify tr(A^3) = 6*C3 = 960."""
 
+import itertools
 import numpy as np
 
-# Build the 40-vertex SRG using the working method from SPECTRAL_VERIFICATION
-n_full = 0
-vertices = []
-for c0 in range(3):
-    for c1 in range(3):
-        for c2 in range(3):
-            for c3 in range(3):
-                if (c0, c1, c2, c3) != (0, 0, 0, 0):
-                    vertices.append((c0, c1, c2, c3))
-                    n_full += 1
+# Build the correct 40-vertex projective symplectic graph W(3,3)
+# Points: PG(3,3) = vectors in GF(3)^4 with first nonzero coordinate == 1
+J = np.array([[0,1,0,0],[2,0,0,0],[0,0,0,1],[0,0,2,0]], dtype=int)
 
-def form(v, w):
-    return (v[0]*w[1] - v[1]*w[0] + v[2]*w[3] - v[3]*w[2]) % 3
+def symp_form(u, v):
+    return int(np.dot(u, np.dot(J, v))) % 3
 
-A_full = np.zeros((80, 80), dtype=int)
-for i in range(80):
-    for j in range(i+1, 80):
-        if form(vertices[i], vertices[j]) == 1:
-            A_full[i, j] = 1
-            A_full[j, i] = 1
+points = []
+for combo in itertools.product(range(3), repeat=4):
+    if any(x != 0 for x in combo):
+        v = list(combo)
+        for i in range(4):
+            if v[i] != 0:
+                if v[i] == 1:
+                    points.append(v)
+                break
 
-# Project to 40 vertices
-A = A_full[:40, :40]
+n = len(points)
+A = np.zeros((n, n), dtype=int)
+for i in range(n):
+    for j in range(i+1, n):
+        if symp_form(points[i], points[j]) == 0:
+            A[i,j] = A[j,i] = 1
 
-print("Graph: 40 vertices, {} edges".format(int(np.sum(A)//2)))
+degs = A.sum(axis=1)
+print(f"Graph: n={n}, degree={degs.min()},{degs.max()}, edges={A.sum()//2}")
 
 # Count triangles
 print("Counting triangles...")
 c3 = 0
-for i in range(40):
-    for j in range(i+1, 40):
+for i in range(n):
+    for j in range(i+1, n):
         if A[i, j]:
-            for k in range(j+1, 40):
+            for k in range(j+1, n):
                 if A[j, k] and A[k, i]:
                     c3 += 1
 
 print(f"C3 (triangles): {c3}")
 
 # Verify spectral trace
-A_float = A.astype(float)
-tr3 = int(np.trace(np.linalg.matrix_power(A_float, 3)))
+tr3 = int(np.trace(np.linalg.matrix_power(A.astype(float), 3)))
 print(f"tr(A^3) = {tr3}")
 print(f"6*C3 = {6*c3}")
 print(f"Match: {tr3 == 6*c3}")
+
+# Cross-check from eigenvalues
+k_val, f_r, r_val, f_s, s_val = 12, 24, 2, 15, -4
+tr3_eig = 1*k_val**3 + f_r*r_val**3 + f_s*s_val**3
+print(f"tr(A^3) from eigenvalues = {tr3_eig}")
+assert c3 == 160, f"Expected C3=160, got {c3}"
+assert tr3 == 960, f"Expected tr(A^3)=960, got {tr3}"
+assert tr3 == 6*c3
+print("All assertions passed: C3=160, tr(A^3)=960  ✓")
+
