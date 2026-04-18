@@ -1,0 +1,239 @@
+{
+  "weight12_delta_fourfold_dictionary": {
+    "dim_S_12": 1,
+    "delta_identity": {
+      "all_match": true,
+      "eisenstein_coeffs": [
+        0,
+        1,
+        -24,
+        252,
+        -1472,
+        4830,
+        -6048,
+        -16744,
+        84480,
+        -113643,
+        -115920,
+        534612,
+        -370944,
+        -577738,
+        401856,
+        1217160
+      ],
+      "eta24_coeffs": [
+        0,
+        1,
+        -24,
+        252,
+        -1472,
+        4830,
+        -6048,
+        -16744,
+        84480,
+        -113643,
+        -115920,
+        534612,
+        -370944,
+        -577738,
+        401856,
+        1217160
+      ]
+    },
+    "tau_first_twelve_cross_match": {
+      "1": {
+        "eisenstein_tau": 1,
+        "hecke_tau": 1,
+        "reference_tau": 1,
+        "match": true
+      },
+      "2": {
+        "eisenstein_tau": -24,
+        "hecke_tau": -24,
+        "reference_tau": -24,
+        "match": true
+      },
+      "3": {
+        "eisenstein_tau": 252,
+        "hecke_tau": 252,
+        "reference_tau": 252,
+        "match": true
+      },
+      "4": {
+        "eisenstein_tau": -1472,
+        "hecke_tau": -1472,
+        "reference_tau": -1472,
+        "match": true
+      },
+      "5": {
+        "eisenstein_tau": 4830,
+        "hecke_tau": 4830,
+        "reference_tau": 4830,
+        "match": true
+      },
+      "6": {
+        "eisenstein_tau": -6048,
+        "hecke_tau": -6048,
+        "reference_tau": -6048,
+        "match": true
+      },
+      "7": {
+        "eisenstein_tau": -16744,
+        "hecke_tau": -16744,
+        "reference_tau": -16744,
+        "match": true
+      },
+      "8": {
+        "eisenstein_tau": 84480,
+        "hecke_tau": 84480,
+        "reference_tau": 84480,
+        "match": true
+      },
+      "9": {
+        "eisenstein_tau": -113643,
+        "hecke_tau": -113643,
+        "reference_tau": -113643,
+        "match": true
+      },
+      "10": {
+        "eisenstein_tau": -115920,
+        "hecke_tau": -115920,
+        "reference_tau": -115920,
+        "match": true
+      },
+      "11": {
+        "eisenstein_tau": 534612,
+        "hecke_tau": 534612,
+        "reference_tau": 534612,
+        "match": true
+      },
+      "12": {
+        "eisenstein_tau": -370944,
+        "hecke_tau": -370944,
+        "reference_tau": -370944,
+        "match": true
+      }
+    },
+    "hecke_multiplicativity": {
+      "all_hold": true,
+      "failures": [],
+      "pairs_checked": 44
+    },
+    "ramanujan_691": {
+      "all_hold": true,
+      "failures": [],
+      "n_checked": 40
+    },
+    "functional_equation": {
+      "checks": [
+        {
+          "s": 2.0,
+          "twelve_minus_s": 10.0,
+          "Lambda_s": "(0.003707710464948065+0j)",
+          "Lambda_12_minus_s": "(0.003707710464948065+0j)",
+          "rel_error": 0.0,
+          "ok": true
+        },
+        {
+          "s": 3.0,
+          "twelve_minus_s": 9.0,
+          "Lambda_s": "(0.0025417560541966433+0j)",
+          "Lambda_12_minus_s": "(0.0025417560541966433+0j)",
+          "rel_error": 0.0,
+          "ok": true
+        },
+        {
+          "s": 4.0,
+          "twelve_minus_s": 8.0,
+          "Lambda_s": "(0.001931099200493784+0j)",
+          "Lambda_12_minus_s": "(0.001931099200493784+0j)",
+          "rel_error": 0.0,
+          "ok": true
+        },
+        {
+          "s": 5.0,
+          "twelve_minus_s": 7.0,
+          "Lambda_s": "(0.0016339860348406994+0j)",
+          "Lambda_12_minus_s": "(0.0016339860348406994+0j)",
+          "rel_error": 0.0,
+          "ok": true
+        },
+        {
+          "s": 7.0,
+          "twelve_minus_s": 5.0,
+          "Lambda_s": "(0.0016339860348406994+0j)",
+          "Lambda_12_minus_s": "(0.0016339860348406994+0j)",
+          "rel_error": 0.0,
+          "ok": true
+        },
+        {
+          "s": 8.0,
+          "twelve_minus_s": 4.0,
+          "Lambda_s": "(0.001931099200493784+0j)",
+          "Lambda_12_minus_s": "(0.001931099200493784+0j)",
+          "rel_error": 0.0,
+          "ok": true
+        },
+        {
+          "s": 10.0,
+          "twelve_minus_s": 2.0,
+          "Lambda_s": "(0.003707710464948065+0j)",
+          "Lambda_12_minus_s": "(0.003707710464948065+0j)",
+          "rel_error": 0.0,
+          "ok": true
+        }
+      ],
+      "all_ok": true
+    },
+    "central_value": {
+      "Lambda_at_6": "(0.0015448793603950273+0j)",
+      "real_part": 0.0015448793603950273,
+      "imag_part": 0.0,
+      "L_at_6": "(0.7921228386460306+0j)",
+      "Lambda_real_positive": true,
+      "Lambda_imag_negligible": true
+    },
+    "lfunction_summary_chain": {
+      "tau_first_twelve_match": true,
+      "euler_product_matches_dirichlet": true,
+      "functional_equation_holds": true,
+      "central_value_real_positive": true,
+      "central_value_imag_negligible": true
+    },
+    "line_triad_theorem": {
+      "weight_12_is_the_first_two_dimensional_collision_plane": true,
+      "the_cusp_line_is_1728_Delta_with_vector_1_minus_1": true,
+      "the_Leech_line_is_12_Theta_Leech_with_vector_7_5": true,
+      "the_Eisenstein_line_is_691_E12_with_vector_441_250": true,
+      "determinant_of_Leech_and_cusp_lines_is_exactly_minus_12": true,
+      "determinant_of_Eisenstein_and_cusp_lines_is_exactly_minus_691": true,
+      "determinant_of_Eisenstein_and_Leech_lines_is_exactly_455_equals_5_times_7_times_13": true,
+      "12_Theta_Leech_equals_7_E4cubed_plus_5_E6squared": true,
+      "the_integral_weight12_line_triad_satisfies_12I_equals_691L_plus_455D": true,
+      "the_weight12_collision_plane_now_has_the_exact_integer_triad_12_455_691": true
+    },
+    "moonshine_gap_theorem": {
+      "Theta_Leech_equals_E4_cubed_minus_720_Delta": true,
+      "q_times_j_equals_q_times_theta_leech_over_delta_plus_720q": true,
+      "j_equals_theta_leech_over_delta_plus_720": true,
+      "J_equals_theta_leech_over_delta_minus_24": true,
+      "744_splits_as_720_plus_24": true,
+      "196884_splits_as_196560_plus_324": true,
+      "the_monster_leech_gap_is_324_equals_4_times_81_equals_18_squared": true,
+      "21493760_splits_as_16773120_plus_24_times_196560_plus_3200": true
+    }
+  },
+  "weight12_delta_fourfold_theorem": {
+    "weight_12_has_the_unique_cusp_line_dim_S_12_equals_1": true,
+    "delta_is_the_cusp_line_in_the_12_455_691_weight_12_triad": true,
+    "delta_equals_eta_24_equals_the_eisenstein_difference": true,
+    "the_tau_packet_matches_the_lfunction_delta_coefficients_on_the_first_twelve_terms": true,
+    "the_tau_packet_is_hecke_multiplicative": true,
+    "the_tau_packet_satisfies_the_ramanujan_mod_691_congruence": true,
+    "the_completed_lfunction_satisfies_Lambda_s_equals_Lambda_12_minus_s": true,
+    "the_central_value_Lambda_6_is_real_and_positive": true,
+    "delta_is_the_denominator_of_the_leech_moonshine_quotient": true,
+    "the_weight_12_delta_line_closes_algebraic_arithmetic_analytic_and_moonshine_data": true
+  },
+  "interpretation": "The unique weight-12 cusp line Delta is the exact common carrier for the first modular collision, the Ramanujan tau packet, the analytic L-function Lambda(Delta, s), and the Leech-to-Monster quotient j = Theta_Leech / Delta + 720. The same line is therefore the modular, arithmetic, analytic, and moonshine spine at weight 12."
+}

@@ -1,0 +1,145 @@
+{
+  "ramanujan_tau_table": {
+    "all_match": true,
+    "failures": [],
+    "first_coeffs": [
+      0,
+      1,
+      -24,
+      252,
+      -1472,
+      4830,
+      -6048,
+      -16744,
+      84480,
+      -113643,
+      -115920
+    ]
+  },
+  "delta_identity": {
+    "all_match": true,
+    "eisenstein_coeffs": [
+      0,
+      1,
+      -24,
+      252,
+      -1472,
+      4830,
+      -6048,
+      -16744,
+      84480,
+      -113643,
+      -115920,
+      534612,
+      -370944,
+      -577738,
+      401856,
+      1217160
+    ],
+    "eta24_coeffs": [
+      0,
+      1,
+      -24,
+      252,
+      -1472,
+      4830,
+      -6048,
+      -16744,
+      84480,
+      -113643,
+      -115920,
+      534612,
+      -370944,
+      -577738,
+      401856,
+      1217160
+    ]
+  },
+  "hecke_multiplicativity": {
+    "all_hold": true,
+    "failures": [],
+    "pairs_checked": 44
+  },
+  "ramanujan_691_congruence": {
+    "all_hold": true,
+    "failures": [],
+    "n_checked": 40
+  },
+  "j_function": {
+    "all_match": true,
+    "failures": [],
+    "coefficients": {
+      "-1": 1,
+      "0": 744,
+      "1": 196884,
+      "2": 21493760,
+      "3": 864299970,
+      "4": 20245856256,
+      "5": 333202640600
+    }
+  },
+  "mckay_moonshine": {
+    "all_match": true,
+    "rows": [
+      {
+        "n": 1,
+        "j_coefficient": 196884,
+        "multiplicities": [
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "sum_predicted": 196884,
+        "match": true
+      },
+      {
+        "n": 2,
+        "j_coefficient": 21493760,
+        "multiplicities": [
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "sum_predicted": 21493760,
+        "match": true
+      },
+      {
+        "n": 3,
+        "j_coefficient": 864299970,
+        "multiplicities": [
+          2,
+          2,
+          1,
+          1,
+          0
+        ],
+        "sum_predicted": 864299970,
+        "match": true
+      }
+    ]
+  },
+  "deep_constants": {
+    "E4_q1_is_240_equals_E8_root_count": true,
+    "E6_q1_is_minus_504": true,
+    "Delta_q1_is_1": true,
+    "24_is_eta_exponent_and_Leech_rank": true,
+    "196884_minus_196883_is_1": true,
+    "744_is_3_times_248": true,
+    "1728_is_cube_of_12": true,
+    "691_is_prime": true,
+    "B12_absolute_numerator_is_691": true
+  },
+  "summary_chain": {
+    "ramanujan_tau_table_matches": true,
+    "delta_equals_eta_24_equals_eisenstein_combo": true,
+    "tau_is_hecke_multiplicative": true,
+    "ramanujan_691_congruence_holds": true,
+    "j_function_coefficients_match": true,
+    "mckay_moonshine_decomposition_holds": true,
+    "deep_constant_pins_hold": true
+  }
+}
