@@ -1,0 +1,208 @@
+{
+  "low_order_moonshine_quiver_dictionary": {
+    "nodes": [
+      {
+        "name": "1A",
+        "type": "quotient"
+      },
+      {
+        "name": "2A",
+        "type": "quadratic_fricke"
+      },
+      {
+        "name": "3A",
+        "type": "quadratic_fricke"
+      },
+      {
+        "name": "5A",
+        "type": "quadratic_fricke"
+      },
+      {
+        "name": "7A",
+        "type": "quadratic_fricke"
+      },
+      {
+        "name": "13A",
+        "type": "quadratic_fricke"
+      },
+      {
+        "name": "2B",
+        "type": "linear_eta"
+      },
+      {
+        "name": "3B",
+        "type": "linear_eta"
+      },
+      {
+        "name": "5B",
+        "type": "linear_eta"
+      },
+      {
+        "name": "7B",
+        "type": "linear_eta"
+      },
+      {
+        "name": "13B",
+        "type": "linear_eta"
+      },
+      {
+        "name": "4C",
+        "type": "linear_eta"
+      },
+      {
+        "name": "3C",
+        "type": "affine_exceptional"
+      },
+      {
+        "name": "4A",
+        "type": "composite_power"
+      },
+      {
+        "name": "6A",
+        "type": "composite_power"
+      },
+      {
+        "name": "8A",
+        "type": "composite_power"
+      },
+      {
+        "name": "10A",
+        "type": "composite_power"
+      }
+    ],
+    "node_counts": {
+      "quotient": 1,
+      "quadratic_fricke": 5,
+      "linear_eta": 6,
+      "affine_exceptional": 1,
+      "composite_power": 4
+    },
+    "edges": [
+      {
+        "src": "1A",
+        "dst": "2A",
+        "kind": "prime_faber_source"
+      },
+      {
+        "src": "1A",
+        "dst": "3A",
+        "kind": "prime_faber_source"
+      },
+      {
+        "src": "1A",
+        "dst": "5A",
+        "kind": "prime_faber_source"
+      },
+      {
+        "src": "1A",
+        "dst": "7A",
+        "kind": "prime_faber_source"
+      },
+      {
+        "src": "1A",
+        "dst": "13A",
+        "kind": "prime_faber_source"
+      },
+      {
+        "src": "1A",
+        "dst": "2B",
+        "kind": "prime_faber_source"
+      },
+      {
+        "src": "1A",
+        "dst": "3B",
+        "kind": "prime_faber_source"
+      },
+      {
+        "src": "1A",
+        "dst": "5B",
+        "kind": "prime_faber_source"
+      },
+      {
+        "src": "1A",
+        "dst": "7B",
+        "kind": "prime_faber_source"
+      },
+      {
+        "src": "1A",
+        "dst": "13B",
+        "kind": "prime_faber_source"
+      },
+      {
+        "src": "1A",
+        "dst": "3C",
+        "kind": "prime_faber_source"
+      },
+      {
+        "src": "4A",
+        "dst": "2B",
+        "kind": "square_map"
+      },
+      {
+        "src": "2B",
+        "dst": "1A",
+        "kind": "power_map"
+      },
+      {
+        "src": "6A",
+        "dst": "3A",
+        "kind": "square_map"
+      },
+      {
+        "src": "6A",
+        "dst": "2A",
+        "kind": "cube_map"
+      },
+      {
+        "src": "3A",
+        "dst": "1A",
+        "kind": "power_map"
+      },
+      {
+        "src": "2A",
+        "dst": "1A",
+        "kind": "power_map"
+      },
+      {
+        "src": "8A",
+        "dst": "4C",
+        "kind": "square_map"
+      },
+      {
+        "src": "4C",
+        "dst": "2B",
+        "kind": "square_map"
+      },
+      {
+        "src": "8A",
+        "dst": "1A",
+        "kind": "power_map"
+      },
+      {
+        "src": "10A",
+        "dst": "5A",
+        "kind": "square_map"
+      },
+      {
+        "src": "10A",
+        "dst": "2A",
+        "kind": "fifth_map"
+      },
+      {
+        "src": "5A",
+        "dst": "1A",
+        "kind": "power_map"
+      }
+    ]
+  },
+  "low_order_moonshine_quiver_theorem": {
+    "the_identity_node_1A_is_the_unique_weight12_quotient_source": true,
+    "the_five_fricke_prime_nodes_are_exactly_the_quadratic_trace_norm_nodes": true,
+    "the_nonfricke_side_is_exactly_the_linear_eta_branch_family_plus_4C": true,
+    "the_exceptional_affine_node_is_exactly_3C": true,
+    "the_first_composite_nodes_close_on_exact_power_spines": true,
+    "the_low_order_moonshine_base_is_generated_by_one_finite_quiver_from_1A": true,
+    "the_low_order_moonshine_quiver_is_fully_closed": true
+  },
+  "interpretation": "The low-order Monster moonshine classes now form a finite directed grammar. The unique weight-12 quotient node 1A sources the prime recursion, the Fricke A-side appears as quadratic nodes, the non-Fricke side appears as linear eta nodes, 3C is the affine E8 exceptional node, and the first composite classes are power-map descendants. So the low-order moonshine carrier is one explicit quiver rather than a bag of disconnected formulas."
+}
