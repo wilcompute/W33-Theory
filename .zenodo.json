@@ -1,70 +1,69 @@
 {
-  "title": "W(3,3)-E8 Correspondence Theorem: Standard Model from Finite Geometry",
-  "description": "A computational derivation of the Standard Model from the W(3,3) generalized quadrangle and the E8 Lie algebra correspondence. The project contains 207+ proved pillars (executable verification scripts) and 5500+ automated tests, plus a 225/225 master-check spine (THEORY_OF_EVERYTHING.py). Key derived constants include sin^2(theta_W)=3/13 at electroweak scale (running from 3/8 at SU(5) GUT) and alpha_GUT^{-1}=8pi, with three generations protected by H1=Z^81 and an operator-exact Hodge firewall/matter sector.",
+  "title": "A Strongly Regular Graph Derivation of Standard Model Parameters: The W(3,3) Geometric Framework",
+  "description": "<p>The W(3,3) theory derives all fundamental constants, particle quantum numbers, and mixing parameters of the Standard Model from the spectral data of the W(3,3) strongly regular graph SRG(40,12,2,4). From the three eigenvalues {12, 2, -4} with multiplicities {1, 27, 12} we recover:</p><ul><li>Fine-structure constant &alpha;<sup>&minus;1</sup> = 137 (experiment: 137.036, error 0.026%)</li><li>Weinberg angle sin&sup2;&theta;<sub>W</sub> = 3/13 &asymp; 0.2308 at the Z-pole (error 0.18%)</li><li>SM gauge group U(1) &times; SU(2) &times; SU(3) from the spectral triple automorphism</li><li>Master energy scale E = 480 = |&Phi;(E<sub>8</sub>)| linking graph spectrum to the E<sub>8</sub> root system</li><li>Neutrino mass sum &Sigma;m<sub>&nu;</sub> = 30.7 meV (normal hierarchy, Majorana)</li><li>Atmospheric mixing angle &theta;<sub>23</sub> = 45&deg; (maximal mixing)</li><li>CP phase &delta;<sub>CP</sub> = 80.1&deg;</li><li>Eight falsifiable experimental predictions testable at JUNO, KATRIN, DUNE, Hyper-Kamiokande, LEGEND-1000, and LISA</li></ul><p>The uniqueness of SRG(40,12,2,4) up to isomorphism eliminates all tunable moduli. This repository contains the full LaTeX paper, PRL letter, Python computation scripts, SVG figures, and arXiv submission bundle.</p>",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "publication_date": "2026-04-18",
+  "access_right": "open",
+  "license": "CC-BY-4.0",
+  "language": "eng",
   "creators": [
     {
       "name": "Dahn, Wil",
-      "affiliation": "Independent Researcher"
+      "affiliation": "Independent Researcher, Baltimore, Maryland, USA"
     }
   ],
   "keywords": [
-    "W(3,3) generalized quadrangle",
-    "finite geometry",
-    "E8 Lie algebra",
+    "strongly regular graph",
+    "spectral graph theory",
+    "theory of everything",
+    "fine-structure constant",
     "Standard Model",
-    "Hodge theory",
-    "spectral geometry",
-    "gauge theory",
-    "particle physics",
-    "quantum error correction",
-    "modular forms",
-    "monstrous moonshine",
-    "sporadic groups"
+    "spectral triple",
+    "E8 lattice",
+    "Moonshine",
+    "McKay-Thompson series",
+    "neutrino masses",
+    "PMNS matrix",
+    "CKM matrix",
+    "Bernoulli numbers",
+    "Weinberg angle",
+    "unified field theory"
   ],
-  "license": "MIT",
-  "upload_type": "software",
-  "access_right": "open",
+  "subjects": [
+    {
+      "term": "High Energy Physics - Theory",
+      "identifier": "hep-th",
+      "scheme": "arXiv"
+    },
+    {
+      "term": "Mathematical Physics",
+      "identifier": "math-ph",
+      "scheme": "arXiv"
+    },
+    {
+      "term": "General Relativity and Quantum Cosmology",
+      "identifier": "gr-qc",
+      "scheme": "arXiv"
+    }
+  ],
   "related_identifiers": [
-    {
-      "identifier": "https://github.com/wilcompute/W33-Theory/releases/tag/v2026-02-15-qec-mlut",
-      "relation": "isSupplementTo",
-      "scheme": "url"
-    },
-    {
-      "identifier": "https://github.com/wilcompute/W33-Theory/releases/tag/v2026-02-16-pillars-54-56",
-      "relation": "isSupplementTo",
-      "scheme": "url"
-    },
-    {
-      "identifier": "https://github.com/wilcompute/W33-Theory/releases/tag/v2026-02-16-pillars-58-60",
-      "relation": "isSupplementTo",
-      "scheme": "url"
-    },
-    {
-      "identifier": "https://github.com/wilcompute/W33-Theory/releases/tag/v2026-02-21-fieldtheory",
-      "relation": "isSupplementTo",
-      "scheme": "url"
-    },
     {
       "identifier": "https://github.com/wilcompute/W33-Theory",
       "relation": "isSupplementTo",
       "scheme": "url"
     }
   ],
-  "subjects": [
-    {
-      "term": "High Energy Physics - Theory",
-      "scheme": "arxiv"
-    },
-    {
-      "term": "Mathematical Physics",
-      "scheme": "arxiv"
-    },
-    {
-      "term": "Combinatorics",
-      "scheme": "arxiv"
-    }
-  ],
-  "notes": "207+ proved pillars, 5500+ automated tests, and 225/225 master checks. Highlights: 240 edges ↔ 240 E8 roots; Aut(W33)=Sp(4,3)≅W(E6) of order 51840; H1(W33;Z)=Z^81 = 27×3 generations (E6 fundamental × generations) protected by the Hodge projector; Moonshine bridge constants expressed in W(3,3) parameters; metaplectic/Weil phase law threads the CE2 corrections through the L∞ firewall."
+  "notes": "arXiv preprint number to be added after submission. All computations reproducible via Python scripts in repository. Figures generated as SVG with Inkscape-compatible markup. Full LaTeX source and compile script included. To reproduce: clone repository and run 'bash compile.sh --arxiv'. Licensed under CC BY 4.0: https://creativecommons.org/licenses/by/4.0/",
+  "version": "1.0.0",
+  "references": [
+    "A. E. Brouwer, A. M. Cohen, A. Neumaier, Distance-Regular Graphs, Springer, 1989",
+    "A. Connes, Noncommutative Geometry, Academic Press, 1994",
+    "A. Chamseddine and A. Connes, Commun. Math. Phys. 182, 155 (1996)",
+    "H. Georgi and S. L. Glashow, Phys. Rev. Lett. 32, 438 (1974)",
+    "J. H. Conway and S. P. Norton, Bull. London Math. Soc. 11, 308 (1979)",
+    "R. L. Workman et al. (Particle Data Group), Prog. Theor. Exp. Phys. 2022, 083C01 (2022)",
+    "M. Aker et al. (KATRIN Collaboration), Nat. Phys. 18, 160 (2022)",
+    "I. Esteban et al. (NuFIT 6.0), http://www.nu-fit.org (2024)"
+  ]
 }
-
