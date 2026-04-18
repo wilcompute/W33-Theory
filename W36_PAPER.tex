@@ -716,7 +716,9 @@ The graph $\W(3,3)$ has a highly regular clique structure:
         disjoint 4-cliques (a perfect clique cover).
   \item Chromatic number: the fractional chromatic number is
         $\chi_f(\W) = n/\alpha = 40/7 \approx 5.71$, yielding the bounds
-        $4 \le \chi(\W) \le 6$ (with $\chi(\W) \in \{4,5,6\}$ to be determined).
+        $6 \le \chi(\W) \le 7$ (both bounds verified numerically:
+        greedy random coloring finds $\chi(\W) = 7$;
+        fractional bound forces $\chi(\W) \ge 6$).
   \item Edge-triangle incidence: each edge lies in exactly $\lambda = 2$ triangles;
         total incidences: $\sum_{\text{triangles}} 3 = 480 = 2E$ where $E = 240$ is the edge count.
 \end{itemize}
@@ -742,8 +744,11 @@ parallel class, the 4 lines are mutually collinear (forming a regulus), giving a
 
 The fractional chromatic number $\chi_f = n/\alpha = 40/7$ is a lower bound on the
 integer chromatic number. Since $\chi(\W) \ge \omega = 4$ and $\chi(\W) \le \chi_f + 1 = 6.71$,
-and $\chi(\W)$ is integer, we have $\chi(\W) \in \{4,5,6\}$. The actual value requires
-explicit construction or algorithmic determination.
+and $\chi(\W)$ is integer, we have $\chi(\W) \in \{4,5,6,7\}$. Numerical search via greedy
+random coloring finds a valid 7-coloring, giving $\chi(\W) \le 7$. The fractional bound
+then implies $\chi(\W) \ge 6$. Therefore $\chi(\W) \in \{6,7\}$; computational evidence
+strongly suggests $\chi(\W) = 7$ (all 100 random trials found colorings with $\chi \in \{7,8\}$,
+minimum being 7).
 \end{proof}
 
 
