@@ -5,7 +5,7 @@
   "publication_type": "preprint",
   "publication_date": "2026-04-18",
   "access_right": "open",
-  "license": "MIT",
+  "license": "CC-BY-4.0",
   "language": "eng",
   "creators": [
     {
@@ -54,7 +54,7 @@
       "scheme": "url"
     }
   ],
-  "notes": "arXiv preprint number to be added after submission. All computations reproducible via Python scripts in repository. Figures generated as SVG with Inkscape-compatible markup. Full LaTeX source and compile script included. To reproduce: clone repository and run 'bash compile.sh --arxiv'.",
+  "notes": "arXiv preprint number to be added after submission. All computations reproducible via Python scripts in repository. Figures generated as SVG with Inkscape-compatible markup. Full LaTeX source and compile script included. To reproduce: clone repository and run 'bash compile.sh --arxiv'. Licensed under CC BY 4.0: https://creativecommons.org/licenses/by/4.0/",
   "version": "1.0.0",
   "references": [
     "A. E. Brouwer, A. M. Cohen, A. Neumaier, Distance-Regular Graphs, Springer, 1989",
