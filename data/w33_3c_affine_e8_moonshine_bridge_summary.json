@@ -1,0 +1,125 @@
+{
+  "threeC_affine_e8_dictionary": {
+    "affine_shift": "-1/3",
+    "affine_e8_coefficients": [
+      1,
+      248,
+      4124,
+      34752,
+      213126,
+      1057504,
+      4530744,
+      17333248,
+      60655377,
+      197230000
+    ],
+    "threeC_coefficients_on_exp_3n_minus_1": [
+      {
+        "n": 0,
+        "affine_exponent": 0,
+        "monster_exponent": -1,
+        "affine_coeff": 1,
+        "T_3C_coeff": 1,
+        "match": true
+      },
+      {
+        "n": 1,
+        "affine_exponent": 1,
+        "monster_exponent": 2,
+        "affine_coeff": 248,
+        "T_3C_coeff": 248,
+        "match": true
+      },
+      {
+        "n": 2,
+        "affine_exponent": 2,
+        "monster_exponent": 5,
+        "affine_coeff": 4124,
+        "T_3C_coeff": 4124,
+        "match": true
+      },
+      {
+        "n": 3,
+        "affine_exponent": 3,
+        "monster_exponent": 8,
+        "affine_coeff": 34752,
+        "T_3C_coeff": 34752,
+        "match": true
+      },
+      {
+        "n": 4,
+        "affine_exponent": 4,
+        "monster_exponent": 11,
+        "affine_coeff": 213126,
+        "T_3C_coeff": 213126,
+        "match": true
+      },
+      {
+        "n": 5,
+        "affine_exponent": 5,
+        "monster_exponent": 14,
+        "affine_coeff": 1057504,
+        "T_3C_coeff": 1057504,
+        "match": true
+      },
+      {
+        "n": 6,
+        "affine_exponent": 6,
+        "monster_exponent": 17,
+        "affine_coeff": 4530744,
+        "T_3C_coeff": 4530744,
+        "match": true
+      },
+      {
+        "n": 7,
+        "affine_exponent": 7,
+        "monster_exponent": 20,
+        "affine_coeff": 17333248,
+        "T_3C_coeff": 17333248,
+        "match": true
+      },
+      {
+        "n": 8,
+        "affine_exponent": 8,
+        "monster_exponent": 23,
+        "affine_coeff": 60655377,
+        "T_3C_coeff": 60655377,
+        "match": true
+      },
+      {
+        "n": 9,
+        "affine_exponent": 9,
+        "monster_exponent": 26,
+        "affine_coeff": 197230000,
+        "T_3C_coeff": 197230000,
+        "match": true
+      }
+    ],
+    "threeC_off_grid_nonzero_terms": {},
+    "threeC_replicability": {
+      "verified": true,
+      "faber_coeffs": [
+        -744,
+        0,
+        0
+      ],
+      "n_mismatches": 0
+    },
+    "first_affine_packet_hits": {
+      "248_at_q2": 248,
+      "4124_at_q5": 4124,
+      "34752_at_q8": 34752
+    }
+  },
+  "threeC_affine_e8_theorem": {
+    "the_affine_e8_shift_is_exactly_minus_one_third": true,
+    "the_3C_series_matches_the_affine_E8_character_on_every_exp_3n_minus_1_slot_checked": true,
+    "the_3C_series_has_no_off_grid_nonzero_terms_in_the_checked_range": true,
+    "the_first_three_nontrivial_3C_coefficients_are_248_4124_34752": true,
+    "the_3C_class_therefore_equals_the_affine_E8_character_under_q_to_q_cubed": true,
+    "the_3C_class_satisfies_prime_replicability": true,
+    "the_3C_faber_polynomial_is_exactly_x_cubed_minus_744": true,
+    "the_affine_E8_lift_is_therefore_already_on_the_1A_sourced_moonshine_recursion": true
+  },
+  "interpretation": "The Monster class 3C is not merely adjacent to the affine E8 modular layer. It is the exact q -> q^3 realization of the level-1 affine E8 character. The coefficients 248, 4124, 34752, 213126, ... are therefore simultaneously affine E8 excitation counts and moonshine coefficients, and the same class already satisfies the cubic 1A-sourced replicability law T_3C^3 - 744 = J(q^3) + 3 U_3(T_3C)."
+}
