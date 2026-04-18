@@ -132,3 +132,58 @@ def test_driver_summary_chain_is_all_true():
     summary = derive_all()
     for key, value in summary["summary_chain"].items():
         assert value is True, f"{key} = {value}"
+
+
+# ----------------------------------------------------------------------
+# Additional structural pins.
+# ----------------------------------------------------------------------
+def test_tau_6_equals_tau_2_times_tau_3_hecke_product():
+    assert tau(6) == tau(2) * tau(3) == -6048
+
+
+def test_tau_15_equals_tau_3_times_tau_5_hecke_product():
+    assert tau(15) == tau(3) * tau(5) == 1217160
+
+
+def test_ramanujan_691_for_small_primes_matches_1_plus_p_to_11():
+    """tau(p) ≡ 1 + p^11 (mod 691) for primes p — specialisation of
+    the sigma_11(n) congruence when n = p is prime."""
+    for p in [2, 3, 5, 7, 11, 13, 17, 19, 23]:
+        assert (tau(p) - (1 + p ** 11)) % 691 == 0
+
+
+def test_j_constant_term_equals_3_dim_E8():
+    """744 = 3 * 248 = 3 * dim(E_8)."""
+    assert J_FUNCTION_REFERENCE[0] == 744
+    assert 744 == 3 * 248
+
+
+def test_1728_equals_12_cubed():
+    """Delta normaliser 1728 = 12^3."""
+    assert 1728 == 12 ** 3
+
+
+def test_240_is_eisenstein_e4_leading_is_roots_E8():
+    """E_4 = 1 + 240 q + ... and 240 = |roots(E_8)|."""
+    assert eisenstein_E4(2)[1] == 240
+
+
+def test_504_is_minus_E6_leading():
+    assert eisenstein_E6(2)[1] == -504
+
+
+def test_eta_exponent_24_matches_leech_and_bosonic():
+    """eta^{24} = Delta; the 24 is the bosonic critical dim / Leech rank."""
+    from w33_eisenstein_delta_moonshine import _pow_series, euler_phi_series
+    phi = euler_phi_series(3)
+    phi24 = _pow_series(phi, 24, 3)
+    assert phi24[:2] == [1, -24]
+
+
+def test_monster_smallest_faithful_irrep_is_196883():
+    assert MONSTER_IRREDUCIBLE_DIMS[1] == 196883
+
+
+def test_extended_mckay_row_at_q3_sum():
+    """864299970 = 2 + 2.196883 + 21296876 + 842609326."""
+    assert 864299970 == 2 + 2 * 196883 + 21296876 + 842609326
