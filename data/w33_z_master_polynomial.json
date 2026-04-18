@@ -1,0 +1,137 @@
+{
+  "Z_special_values": {
+    "Z(0)": 1,
+    "Z(-1)": 0,
+    "Z(1)": 18014398509481984,
+    "Z(1) == 2^54": true,
+    "Z'(0)": 8,
+    "Z'(0) == 8 (dim O)": true,
+    "Z''(0)": -496,
+    "Z''(0)/2 == -248 (-dim E_8)": true,
+    "-Z''(0) == 496 (third perfect number)": true,
+    "496 == 16 * 31": true,
+    "degree": 32,
+    "degree == 32": true
+  },
+  "Z_modulus_at_i": {
+    "|Z(i)|^2": 144555105949057024000000000000,
+    "expected": 144555105949057024000000000000,
+    "match": true
+  },
+  "trace_tower": {
+    "rows": [
+      {
+        "n": 1,
+        "trace": -8,
+        "formula": "10*5^n + 16*(-1)^n + 6*(-7)^n",
+        "expected": -8,
+        "match": true
+      },
+      {
+        "n": 2,
+        "trace": 560,
+        "formula": "10*5^n + 16*(-1)^n + 6*(-7)^n",
+        "expected": 560,
+        "match": true
+      },
+      {
+        "n": 3,
+        "trace": -824,
+        "formula": "10*5^n + 16*(-1)^n + 6*(-7)^n",
+        "expected": -824,
+        "match": true
+      },
+      {
+        "n": 4,
+        "trace": 20672,
+        "formula": "10*5^n + 16*(-1)^n + 6*(-7)^n"
+      },
+      {
+        "n": 5,
+        "trace": -69608,
+        "formula": "10*5^n + 16*(-1)^n + 6*(-7)^n"
+      }
+    ],
+    "all_pins_hold": true
+  },
+  "q_cyclotomic_master_lock": {
+    "q": 3,
+    "v(q)": 40,
+    "c_EH(q)": 320,
+    "a_2(q) = Phi_6(q) c_EH": 2240,
+    "c_6(q) = q Phi_3(q) c_EH": 12480,
+    "c_EH(3) == 320": true,
+    "a_2(3) == 2240": true,
+    "c_6(3) == 12480": true,
+    "9 c_EH / c_6": [
+      3,
+      13
+    ],
+    "q / Phi_3": [
+      3,
+      13
+    ],
+    "weinberg_lock_holds": true,
+    "sin2_theta_W_at_q3": [
+      3,
+      13
+    ]
+  },
+  "atmospheric_sum_rule": {
+    "rows": [
+      {
+        "q": 1,
+        "gap_num": -2,
+        "gap_den": 3,
+        "holds": false
+      },
+      {
+        "q": 2,
+        "gap_num": -2,
+        "gap_den": 7,
+        "holds": false
+      },
+      {
+        "q": 3,
+        "gap_num": 0,
+        "gap_den": 1,
+        "holds": true
+      },
+      {
+        "q": 4,
+        "gap_num": 4,
+        "gap_den": 21,
+        "holds": false
+      },
+      {
+        "q": 5,
+        "gap_num": 10,
+        "gap_den": 31,
+        "holds": false
+      },
+      {
+        "q": 6,
+        "gap_num": 18,
+        "gap_den": 43,
+        "holds": false
+      },
+      {
+        "q": 7,
+        "gap_num": 28,
+        "gap_den": 57,
+        "holds": false
+      }
+    ],
+    "q_for_which_it_holds": [
+      3
+    ],
+    "selects_q_3_uniquely_positive": true
+  },
+  "summary_chain": {
+    "Z_master_identity_all_eight_pins": true,
+    "modulus_of_Z_at_i_matches_cyclotomic_lock": true,
+    "trace_tower_matches_part22_values": true,
+    "q_cyclotomic_master_lock_at_q3_holds": true,
+    "atmospheric_sum_rule_selects_q3_uniquely": true
+  }
+}
