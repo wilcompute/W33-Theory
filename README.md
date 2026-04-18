@@ -216,9 +216,9 @@ python V39_SPECTRAL_LAGRANGIAN.py
 
 ```
 SRG(40,12,2,4):          unique, self-complementary, conference graph
-Eigenvalues:             {12¹, 2²⁷, (−4)¹²}
+Eigenvalues:             {12¹, 2²⁴, (−4)¹⁵}
 Master number E:         480 = |Φ(E₈)| = n_v × k
-Spectral weight:         f_r(k−r) = f_s(k−|s|) = 240 ✓
+Kissing number:          f_r(k−r) = 24·10 = 240 = |Φ⁺(E₈)| ✓
 Fine structure:          α⁻¹ = k²−7 = 137 ✓
 Weinberg angle:          sin²θ_W = 3/13 ≈ 0.2308  (PDG: 0.2312) ✓
 Atmospheric mixing:      θ₂₃ = 45° (maximal) ✓
