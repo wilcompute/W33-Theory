@@ -1,0 +1,84 @@
+{
+  "hasse": {
+    "all_match": true,
+    "n_primes": 167,
+    "violations": []
+  },
+  "E11_second_moment": {
+    "sample_second_moment": 0.24234875838482545,
+    "semicircle_second_moment": 0.25,
+    "abs_diff": 0.007651241615174553,
+    "n_primes": 302,
+    "match": true
+  },
+  "E11_fourth_moment": {
+    "sample_fourth_moment": 0.11619005152619422,
+    "semicircle_fourth_moment": 0.125,
+    "cm_fourth_moment": 0.1875,
+    "abs_diff_to_semicircle": 0.008809948473805784,
+    "abs_diff_to_cm": 0.07130994847380578,
+    "match": true
+  },
+  "E11_odd_moments": {
+    "abs_m1": 0.00366042046354964,
+    "abs_m3": 0.008197147665070745,
+    "match": true
+  },
+  "CM_fraction_zero": {
+    "fraction_a_p_zero": 0.5132450331125827,
+    "target_density_half": 0.5,
+    "abs_diff": 0.013245033112582738,
+    "match": true
+  },
+  "CM_fourth_moment": {
+    "cm_fourth_moment_sample": 0.17319118496878472,
+    "cm_fourth_moment_theoretical": 0.1875,
+    "semicircle_fourth_moment": 0.125,
+    "abs_diff_to_cm": 0.014308815031215283,
+    "match": true
+  },
+  "semicircle_ladder": {
+    "all_match": true,
+    "rows": [
+      {
+        "k": 0,
+        "computed": 1.0,
+        "expected": 1.0,
+        "match": true
+      },
+      {
+        "k": 1,
+        "computed": 0.25,
+        "expected": 0.25,
+        "match": true
+      },
+      {
+        "k": 2,
+        "computed": 0.125,
+        "expected": 0.125,
+        "match": true
+      },
+      {
+        "k": 3,
+        "computed": 0.078125,
+        "expected": 0.078125,
+        "match": true
+      },
+      {
+        "k": 4,
+        "computed": 0.0546875,
+        "expected": 0.0546875,
+        "match": true
+      }
+    ]
+  },
+  "summary_chain": {
+    "E11_normalised_trace_x_p_in_minus_1_to_1": true,
+    "E11_sample_second_moment_matches_semicircle_quarter": true,
+    "E11_sample_fourth_moment_matches_semicircle_eighth": true,
+    "E11_sample_odd_moments_vanish_within_tolerance": true,
+    "CM_curve_y2_x3_minus_x_half_primes_have_a_p_zero": true,
+    "CM_curve_fourth_moment_matches_3_over_16_not_1_over_8": true,
+    "semicircle_moment_ladder_matches_catalan_over_4k": true
+  }
+}
