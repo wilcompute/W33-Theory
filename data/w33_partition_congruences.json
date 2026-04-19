@@ -1,0 +1,346 @@
+{
+  "small_values": {
+    "all_match": true,
+    "rows": [
+      {
+        "n": 0,
+        "p_n": 1,
+        "expected": 1,
+        "match": true
+      },
+      {
+        "n": 1,
+        "p_n": 1,
+        "expected": 1,
+        "match": true
+      },
+      {
+        "n": 2,
+        "p_n": 2,
+        "expected": 2,
+        "match": true
+      },
+      {
+        "n": 3,
+        "p_n": 3,
+        "expected": 3,
+        "match": true
+      },
+      {
+        "n": 4,
+        "p_n": 5,
+        "expected": 5,
+        "match": true
+      },
+      {
+        "n": 5,
+        "p_n": 7,
+        "expected": 7,
+        "match": true
+      },
+      {
+        "n": 6,
+        "p_n": 11,
+        "expected": 11,
+        "match": true
+      },
+      {
+        "n": 7,
+        "p_n": 15,
+        "expected": 15,
+        "match": true
+      },
+      {
+        "n": 8,
+        "p_n": 22,
+        "expected": 22,
+        "match": true
+      },
+      {
+        "n": 9,
+        "p_n": 30,
+        "expected": 30,
+        "match": true
+      }
+    ]
+  },
+  "recursion": {
+    "all_match": true,
+    "N": 200,
+    "rows": [
+      {
+        "n": 0,
+        "ours": 1,
+        "expected": 1,
+        "match": true
+      },
+      {
+        "n": 1,
+        "ours": 1,
+        "expected": 1,
+        "match": true
+      },
+      {
+        "n": 2,
+        "ours": 2,
+        "expected": 2,
+        "match": true
+      },
+      {
+        "n": 3,
+        "ours": 3,
+        "expected": 3,
+        "match": true
+      },
+      {
+        "n": 4,
+        "ours": 5,
+        "expected": 5,
+        "match": true
+      },
+      {
+        "n": 5,
+        "ours": 7,
+        "expected": 7,
+        "match": true
+      },
+      {
+        "n": 6,
+        "ours": 11,
+        "expected": 11,
+        "match": true
+      },
+      {
+        "n": 7,
+        "ours": 15,
+        "expected": 15,
+        "match": true
+      },
+      {
+        "n": 8,
+        "ours": 22,
+        "expected": 22,
+        "match": true
+      },
+      {
+        "n": 9,
+        "ours": 30,
+        "expected": 30,
+        "match": true
+      },
+      {
+        "n": 10,
+        "ours": 42,
+        "expected": 42,
+        "match": true
+      },
+      {
+        "n": 15,
+        "ours": 176,
+        "expected": 176,
+        "match": true
+      },
+      {
+        "n": 20,
+        "ours": 627,
+        "expected": 627,
+        "match": true
+      },
+      {
+        "n": 25,
+        "ours": 1958,
+        "expected": 1958,
+        "match": true
+      },
+      {
+        "n": 30,
+        "ours": 5604,
+        "expected": 5604,
+        "match": true
+      },
+      {
+        "n": 40,
+        "ours": 37338,
+        "expected": 37338,
+        "match": true
+      },
+      {
+        "n": 50,
+        "ours": 204226,
+        "expected": 204226,
+        "match": true
+      },
+      {
+        "n": 60,
+        "ours": 966467,
+        "expected": 966467,
+        "match": true
+      },
+      {
+        "n": 70,
+        "ours": 4087968,
+        "expected": 4087968,
+        "match": true
+      },
+      {
+        "n": 80,
+        "ours": 15796476,
+        "expected": 15796476,
+        "match": true
+      },
+      {
+        "n": 90,
+        "ours": 56634173,
+        "expected": 56634173,
+        "match": true
+      },
+      {
+        "n": 100,
+        "ours": 190569292,
+        "expected": 190569292,
+        "match": true
+      },
+      {
+        "n": 150,
+        "ours": 40853235313,
+        "expected": 40853235313,
+        "match": true
+      },
+      {
+        "n": 200,
+        "ours": 3972999029388,
+        "expected": 3972999029388,
+        "match": true
+      }
+    ]
+  },
+  "R5": {
+    "all_match": true,
+    "N_max": 500,
+    "failures": []
+  },
+  "R7": {
+    "all_match": true,
+    "N_max": 500,
+    "failures": []
+  },
+  "R11": {
+    "all_match": true,
+    "N_max": 200,
+    "failures": []
+  },
+  "spot": {
+    "all_match": true,
+    "rows": [
+      {
+        "n": 4,
+        "p_n": 5,
+        "divisible_by_5": true
+      },
+      {
+        "n": 9,
+        "p_n": 30,
+        "divisible_by_5": true
+      },
+      {
+        "n": 14,
+        "p_n": 135,
+        "divisible_by_5": true
+      },
+      {
+        "n": 19,
+        "p_n": 490,
+        "divisible_by_5": true
+      },
+      {
+        "n": 24,
+        "p_n": 1575,
+        "divisible_by_5": true
+      },
+      {
+        "n": 29,
+        "p_n": 4565,
+        "divisible_by_5": true
+      },
+      {
+        "n": 34,
+        "p_n": 12310,
+        "divisible_by_5": true
+      }
+    ]
+  },
+  "no_13_congruence": {
+    "all_match": true,
+    "rows": [
+      {
+        "b": 0,
+        "has_nonvanishing": true
+      },
+      {
+        "b": 1,
+        "has_nonvanishing": true
+      },
+      {
+        "b": 2,
+        "has_nonvanishing": true
+      },
+      {
+        "b": 3,
+        "has_nonvanishing": true
+      },
+      {
+        "b": 4,
+        "has_nonvanishing": true
+      },
+      {
+        "b": 5,
+        "has_nonvanishing": true
+      },
+      {
+        "b": 6,
+        "has_nonvanishing": true
+      },
+      {
+        "b": 7,
+        "has_nonvanishing": true
+      },
+      {
+        "b": 8,
+        "has_nonvanishing": true
+      },
+      {
+        "b": 9,
+        "has_nonvanishing": true
+      },
+      {
+        "b": 10,
+        "has_nonvanishing": true
+      },
+      {
+        "b": 11,
+        "has_nonvanishing": true
+      },
+      {
+        "b": 12,
+        "has_nonvanishing": true
+      }
+    ]
+  },
+  "hardy_ramanujan": {
+    "n": 1000,
+    "exact": "2.40614678640326e+31",
+    "asymptotic": "2.44019963168024e+31",
+    "relative_error": 0.014152438857598341,
+    "match": true
+  },
+  "summary_chain": {
+    "partition_numbers_1_1_2_3_5_7_11_15_22_30": true,
+    "pentagonal_recursion_matches_OEIS_A000041_up_to_N_200": true,
+    "ramanujan_R5_p_5n_plus_4_equiv_0_mod_5_up_to_n_500": true,
+    "ramanujan_R7_p_7n_plus_5_equiv_0_mod_7_up_to_n_500": true,
+    "ramanujan_R11_p_11n_plus_6_equiv_0_mod_11_up_to_n_200": true,
+    "small_R5_instances_4_9_14_19_24_29_34_divisible_by_5": true,
+    "no_mod_13_congruence_every_residue_class_has_nonvanishing": true,
+    "hardy_ramanujan_asymptotic_at_n_1000_relative_error_under_2_percent": true
+  }
+}
