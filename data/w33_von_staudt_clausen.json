@@ -1,0 +1,451 @@
+{
+  "denominator_formula": {
+    "all_match": true,
+    "rows": [
+      {
+        "n": 2,
+        "B_n": "1/6",
+        "actual_den": 6,
+        "predicted_den": 6,
+        "primes": [
+          2,
+          3
+        ],
+        "match": true
+      },
+      {
+        "n": 4,
+        "B_n": "-1/30",
+        "actual_den": 30,
+        "predicted_den": 30,
+        "primes": [
+          2,
+          3,
+          5
+        ],
+        "match": true
+      },
+      {
+        "n": 6,
+        "B_n": "1/42",
+        "actual_den": 42,
+        "predicted_den": 42,
+        "primes": [
+          2,
+          3,
+          7
+        ],
+        "match": true
+      },
+      {
+        "n": 8,
+        "B_n": "-1/30",
+        "actual_den": 30,
+        "predicted_den": 30,
+        "primes": [
+          2,
+          3,
+          5
+        ],
+        "match": true
+      },
+      {
+        "n": 10,
+        "B_n": "5/66",
+        "actual_den": 66,
+        "predicted_den": 66,
+        "primes": [
+          2,
+          3,
+          11
+        ],
+        "match": true
+      },
+      {
+        "n": 12,
+        "B_n": "-691/2730",
+        "actual_den": 2730,
+        "predicted_den": 2730,
+        "primes": [
+          2,
+          3,
+          5,
+          7,
+          13
+        ],
+        "match": true
+      },
+      {
+        "n": 14,
+        "B_n": "7/6",
+        "actual_den": 6,
+        "predicted_den": 6,
+        "primes": [
+          2,
+          3
+        ],
+        "match": true
+      },
+      {
+        "n": 16,
+        "B_n": "-3617/510",
+        "actual_den": 510,
+        "predicted_den": 510,
+        "primes": [
+          2,
+          3,
+          5,
+          17
+        ],
+        "match": true
+      },
+      {
+        "n": 18,
+        "B_n": "43867/798",
+        "actual_den": 798,
+        "predicted_den": 798,
+        "primes": [
+          2,
+          3,
+          7,
+          19
+        ],
+        "match": true
+      },
+      {
+        "n": 20,
+        "B_n": "-174611/330",
+        "actual_den": 330,
+        "predicted_den": 330,
+        "primes": [
+          2,
+          3,
+          5,
+          11
+        ],
+        "match": true
+      },
+      {
+        "n": 22,
+        "B_n": "854513/138",
+        "actual_den": 138,
+        "predicted_den": 138,
+        "primes": [
+          2,
+          3,
+          23
+        ],
+        "match": true
+      },
+      {
+        "n": 24,
+        "B_n": "-236364091/2730",
+        "actual_den": 2730,
+        "predicted_den": 2730,
+        "primes": [
+          2,
+          3,
+          5,
+          7,
+          13
+        ],
+        "match": true
+      },
+      {
+        "n": 26,
+        "B_n": "8553103/6",
+        "actual_den": 6,
+        "predicted_den": 6,
+        "primes": [
+          2,
+          3
+        ],
+        "match": true
+      },
+      {
+        "n": 28,
+        "B_n": "-23749461029/870",
+        "actual_den": 870,
+        "predicted_den": 870,
+        "primes": [
+          2,
+          3,
+          5,
+          29
+        ],
+        "match": true
+      },
+      {
+        "n": 30,
+        "B_n": "8615841276005/14322",
+        "actual_den": 14322,
+        "predicted_den": 14322,
+        "primes": [
+          2,
+          3,
+          7,
+          11,
+          31
+        ],
+        "match": true
+      }
+    ]
+  },
+  "integral_part": {
+    "all_match": true,
+    "rows": [
+      {
+        "n": 2,
+        "integer_value": 1,
+        "is_integer": true
+      },
+      {
+        "n": 4,
+        "integer_value": 1,
+        "is_integer": true
+      },
+      {
+        "n": 6,
+        "integer_value": 1,
+        "is_integer": true
+      },
+      {
+        "n": 8,
+        "integer_value": 1,
+        "is_integer": true
+      },
+      {
+        "n": 10,
+        "integer_value": 1,
+        "is_integer": true
+      },
+      {
+        "n": 12,
+        "integer_value": 1,
+        "is_integer": true
+      },
+      {
+        "n": 14,
+        "integer_value": 2,
+        "is_integer": true
+      },
+      {
+        "n": 16,
+        "integer_value": -6,
+        "is_integer": true
+      },
+      {
+        "n": 18,
+        "integer_value": 56,
+        "is_integer": true
+      },
+      {
+        "n": 20,
+        "integer_value": -528,
+        "is_integer": true
+      },
+      {
+        "n": 22,
+        "integer_value": 6193,
+        "is_integer": true
+      },
+      {
+        "n": 24,
+        "integer_value": -86579,
+        "is_integer": true
+      },
+      {
+        "n": 26,
+        "integer_value": 1425518,
+        "is_integer": true
+      },
+      {
+        "n": 28,
+        "integer_value": -27298230,
+        "is_integer": true
+      },
+      {
+        "n": 30,
+        "integer_value": 601580875,
+        "is_integer": true
+      }
+    ]
+  },
+  "irregular_primes": {
+    "expected": [
+      37,
+      59,
+      67,
+      101,
+      103,
+      131,
+      149,
+      157
+    ],
+    "found": [
+      37,
+      59,
+      67,
+      101,
+      103,
+      131,
+      149,
+      157
+    ],
+    "match": true
+  },
+  "b691": {
+    "B_12": "-691/2730",
+    "numerator_abs": 691,
+    "is_691": true,
+    "divides_by_691": true,
+    "irregular_index": true,
+    "match": true
+  },
+  "b37": {
+    "B_32_numerator_abs": 7709321041217,
+    "mod_37": 0,
+    "divides_by_37": true,
+    "irregular_index_32": true,
+    "match": true
+  },
+  "small_regular": {
+    "all_match": true,
+    "rows": [
+      {
+        "p": 5,
+        "regular": true
+      },
+      {
+        "p": 7,
+        "regular": true
+      },
+      {
+        "p": 11,
+        "regular": true
+      },
+      {
+        "p": 13,
+        "regular": true
+      },
+      {
+        "p": 17,
+        "regular": true
+      },
+      {
+        "p": 19,
+        "regular": true
+      },
+      {
+        "p": 23,
+        "regular": true
+      },
+      {
+        "p": 29,
+        "regular": true
+      },
+      {
+        "p": 31,
+        "regular": true
+      }
+    ]
+  },
+  "specific_dens": {
+    "all_match": true,
+    "rows": [
+      {
+        "n": 2,
+        "B_n": "1/6",
+        "actual_den": 6,
+        "expected_den": 6,
+        "match": true
+      },
+      {
+        "n": 4,
+        "B_n": "-1/30",
+        "actual_den": 30,
+        "expected_den": 30,
+        "match": true
+      },
+      {
+        "n": 6,
+        "B_n": "1/42",
+        "actual_den": 42,
+        "expected_den": 42,
+        "match": true
+      },
+      {
+        "n": 8,
+        "B_n": "-1/30",
+        "actual_den": 30,
+        "expected_den": 30,
+        "match": true
+      },
+      {
+        "n": 10,
+        "B_n": "5/66",
+        "actual_den": 66,
+        "expected_den": 66,
+        "match": true
+      },
+      {
+        "n": 12,
+        "B_n": "-691/2730",
+        "actual_den": 2730,
+        "expected_den": 2730,
+        "match": true
+      },
+      {
+        "n": 14,
+        "B_n": "7/6",
+        "actual_den": 6,
+        "expected_den": 6,
+        "match": true
+      },
+      {
+        "n": 16,
+        "B_n": "-3617/510",
+        "actual_den": 510,
+        "expected_den": 510,
+        "match": true
+      },
+      {
+        "n": 18,
+        "B_n": "43867/798",
+        "actual_den": 798,
+        "expected_den": 798,
+        "match": true
+      },
+      {
+        "n": 20,
+        "B_n": "-174611/330",
+        "actual_den": 330,
+        "expected_den": 330,
+        "match": true
+      },
+      {
+        "n": 22,
+        "B_n": "854513/138",
+        "actual_den": 138,
+        "expected_den": 138,
+        "match": true
+      },
+      {
+        "n": 24,
+        "B_n": "-236364091/2730",
+        "actual_den": 2730,
+        "expected_den": 2730,
+        "match": true
+      }
+    ]
+  },
+  "summary_chain": {
+    "von_staudt_clausen_denominator_formula_up_to_n_30": true,
+    "von_staudt_clausen_integral_part_up_to_n_30": true,
+    "first_eight_irregular_primes_are_37_59_67_101_103_131_149_157": true,
+    "691_is_irregular_via_B_12_numerator_equals_691": true,
+    "37_is_irregular_at_index_32_via_B_32": true,
+    "primes_5_through_31_all_regular": true,
+    "specific_denominators_B_2_through_B_24": true
+  }
+}
