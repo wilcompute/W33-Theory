@@ -1,0 +1,230 @@
+{
+  "E4_leading": {
+    "all_match": true,
+    "rows": [
+      {
+        "n": 0,
+        "got": "1",
+        "want": "1",
+        "match": true
+      },
+      {
+        "n": 1,
+        "got": "240",
+        "want": "240",
+        "match": true
+      },
+      {
+        "n": 2,
+        "got": "2160",
+        "want": "2160",
+        "match": true
+      },
+      {
+        "n": 3,
+        "got": "6720",
+        "want": "6720",
+        "match": true
+      },
+      {
+        "n": 4,
+        "got": "17520",
+        "want": "17520",
+        "match": true
+      },
+      {
+        "n": 5,
+        "got": "30240",
+        "want": "30240",
+        "match": true
+      }
+    ]
+  },
+  "E6_leading": {
+    "all_match": true,
+    "rows": [
+      {
+        "n": 0,
+        "got": "1",
+        "want": "1",
+        "match": true
+      },
+      {
+        "n": 1,
+        "got": "-504",
+        "want": "-504",
+        "match": true
+      },
+      {
+        "n": 2,
+        "got": "-16632",
+        "want": "-16632",
+        "match": true
+      },
+      {
+        "n": 3,
+        "got": "-122976",
+        "want": "-122976",
+        "match": true
+      },
+      {
+        "n": 4,
+        "got": "-532728",
+        "want": "-532728",
+        "match": true
+      },
+      {
+        "n": 5,
+        "got": "-1575504",
+        "want": "-1575504",
+        "match": true
+      }
+    ]
+  },
+  "E4_squared_equals_E8": {
+    "all_match": true,
+    "N": 20,
+    "first_diff_nonzero": null
+  },
+  "E4_E6_equals_E10": {
+    "all_match": true,
+    "N": 20,
+    "first_diff_nonzero": null
+  },
+  "cubic_identity": {
+    "all_match": true,
+    "N": 20,
+    "first_diff_nonzero": null
+  },
+  "delta_coefficients": {
+    "all_match": true,
+    "rows": [
+      {
+        "n": 0,
+        "got": "0",
+        "want": "0",
+        "match": true
+      },
+      {
+        "n": 1,
+        "got": "1",
+        "want": "1",
+        "match": true
+      },
+      {
+        "n": 2,
+        "got": "-24",
+        "want": "-24",
+        "match": true
+      },
+      {
+        "n": 3,
+        "got": "252",
+        "want": "252",
+        "match": true
+      },
+      {
+        "n": 4,
+        "got": "-1472",
+        "want": "-1472",
+        "match": true
+      },
+      {
+        "n": 5,
+        "got": "4830",
+        "want": "4830",
+        "match": true
+      },
+      {
+        "n": 6,
+        "got": "-6048",
+        "want": "-6048",
+        "match": true
+      },
+      {
+        "n": 7,
+        "got": "-16744",
+        "want": "-16744",
+        "match": true
+      },
+      {
+        "n": 8,
+        "got": "84480",
+        "want": "84480",
+        "match": true
+      },
+      {
+        "n": 9,
+        "got": "-113643",
+        "want": "-113643",
+        "match": true
+      },
+      {
+        "n": 10,
+        "got": "-115920",
+        "want": "-115920",
+        "match": true
+      }
+    ]
+  },
+  "E12_coefficient": {
+    "all_match": true,
+    "E12_q1": "65520/691",
+    "expected_q1": "65520/691",
+    "q1_match": true,
+    "E12_q2": "134250480/691",
+    "expected_q2": "134250480/691",
+    "q2_match": true
+  },
+  "coefficient_table": {
+    "all_match": true,
+    "rows": [
+      {
+        "weight": 4,
+        "C": "240",
+        "expected": "240",
+        "match": true
+      },
+      {
+        "weight": 6,
+        "C": "-504",
+        "expected": "-504",
+        "match": true
+      },
+      {
+        "weight": 8,
+        "C": "480",
+        "expected": "480",
+        "match": true
+      },
+      {
+        "weight": 10,
+        "C": "-264",
+        "expected": "-264",
+        "match": true
+      },
+      {
+        "weight": 12,
+        "C": "65520/691",
+        "expected": "65520/691",
+        "match": true
+      },
+      {
+        "weight": 14,
+        "C": "-24",
+        "expected": "-24",
+        "match": true
+      }
+    ]
+  },
+  "summary_chain": {
+    "E4_leading_q_coefficient_is_240_sigma_3": true,
+    "E6_leading_q_coefficient_is_negative_504_sigma_5": true,
+    "E4_squared_equals_E8_on_q_series": true,
+    "E4_times_E6_equals_E10_on_q_series": true,
+    "E4_cubed_minus_E6_squared_equals_1728_Delta": true,
+    "Delta_first_ten_tau_coefficients": true,
+    "E12_q_coefficient_is_65520_over_691": true,
+    "bernoulli_based_coefficient_table_for_E_4_through_E_14": true
+  }
+}
