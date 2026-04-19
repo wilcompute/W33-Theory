@@ -1,0 +1,166 @@
+{
+  "periodicity": {
+    "all_match": true,
+    "rows": [
+      {
+        "tau": "(0.0 + 1.0j)",
+        "abs_diff": 1.747608862913502e-52,
+        "match": true
+      },
+      {
+        "tau": "(0.1000000000000000055511151231257827021181583404541 + 0.5j)",
+        "abs_diff": 2.988241789814334e-51,
+        "match": true
+      },
+      {
+        "tau": "(0.69999999999999995559107901499373838305473327636719 + 2.0j)",
+        "abs_diff": 2.088097429759528e-53,
+        "match": true
+      },
+      {
+        "tau": "(-0.2999999999999999888977697537484345957636833190918 + 1.5j)",
+        "abs_diff": 6.264292289278584e-53,
+        "match": true
+      }
+    ]
+  },
+  "imaginary_inversion": {
+    "all_match": true,
+    "rows": [
+      {
+        "t": 0.3,
+        "lhs": 1.8258452649338945,
+        "rhs": 1.8258452649338945,
+        "abs_diff": 0.0,
+        "match": true
+      },
+      {
+        "t": 0.7,
+        "lhs": 1.222105097207609,
+        "rhs": 1.222105097207609,
+        "abs_diff": 2.6727647100921956e-51,
+        "match": true
+      },
+      {
+        "t": 1.0,
+        "lhs": 1.086434811213308,
+        "rhs": 1.086434811213308,
+        "abs_diff": 0.0,
+        "match": true
+      },
+      {
+        "t": 1.5,
+        "lhs": 1.017966595067083,
+        "rhs": 1.017966595067083,
+        "abs_diff": 5.345529420184391e-51,
+        "match": true
+      },
+      {
+        "t": 3.0,
+        "lhs": 1.0001613990351408,
+        "rhs": 1.0001613990351408,
+        "abs_diff": 2.6727647100921956e-51,
+        "match": true
+      },
+      {
+        "t": 7.0,
+        "lhs": 1.0000000005628538,
+        "rhs": 1.0000000005628538,
+        "abs_diff": 2.6727647100921956e-51,
+        "match": true
+      }
+    ]
+  },
+  "general_inversion": {
+    "all_match": true,
+    "rows": [
+      {
+        "tau": "(0.0 + 1.0j)",
+        "abs_diff": 0.0,
+        "match": true
+      },
+      {
+        "tau": "(0.0 + 2.0j)",
+        "abs_diff": 0.0,
+        "match": true
+      },
+      {
+        "tau": "(0.1 + 1.5j)",
+        "abs_diff": 1.6704779438076223e-52,
+        "match": true
+      },
+      {
+        "tau": "(-0.3 + 2.0j)",
+        "abs_diff": 2.6727647100921956e-51,
+        "match": true
+      }
+    ]
+  },
+  "self_dual_point": {
+    "theta3_at_i": "1.0864348112133080145753161215102234570702057072452",
+    "pi_to_1_4_over_Gamma_3_4": "1.0864348112133080145753161215102234570702057072452",
+    "abs_diff": 2.6727647100921956e-51,
+    "match": true
+  },
+  "poisson": {
+    "all_match": true,
+    "rows": [
+      {
+        "sigma": 0.3,
+        "lhs": 3.2360431875928657,
+        "rhs": 3.2360431875928657,
+        "abs_diff": 1.0691058840368783e-50,
+        "match": true
+      },
+      {
+        "sigma": 0.8,
+        "lhs": 1.9816810334760016,
+        "rhs": 1.9816810334760016,
+        "abs_diff": 0.0,
+        "match": true
+      },
+      {
+        "sigma": 1.0,
+        "lhs": 1.772637204826652,
+        "rhs": 1.772637204826652,
+        "abs_diff": 0.0,
+        "match": true
+      },
+      {
+        "sigma": 2.5,
+        "lhs": 1.1642607974457022,
+        "rhs": 1.1642607974457022,
+        "abs_diff": 2.6727647100921956e-51,
+        "match": true
+      },
+      {
+        "sigma": 5.0,
+        "lhs": 1.0134758981204781,
+        "rhs": 1.0134758981204781,
+        "abs_diff": 0.0,
+        "match": true
+      },
+      {
+        "sigma": 10.0,
+        "lhs": 1.000090799859525,
+        "rhs": 1.000090799859525,
+        "abs_diff": 0.0,
+        "match": true
+      }
+    ]
+  },
+  "reflection": {
+    "gamma_3_4_times_gamma_1_4": "4.4428829381583662470158809900606936986146216893757",
+    "pi_sqrt_2": "4.4428829381583662470158809900606936986146216893757",
+    "abs_diff": 0.0,
+    "match": true
+  },
+  "summary_chain": {
+    "theta3_period_2_invariance": true,
+    "jacobi_imaginary_inversion_theta3_i_t_equals_sqrt_t_inv_theta3_i_over_t": true,
+    "jacobi_general_inversion_theta3_minus_1_over_tau": true,
+    "theta3_at_i_equals_pi_quarter_over_gamma_3_4": true,
+    "poisson_summation_on_gaussians_lhs_equals_rhs": true,
+    "euler_reflection_gamma_3_4_times_gamma_1_4_equals_pi_sqrt_2": true
+  }
+}
