@@ -1,0 +1,250 @@
+{
+  "mod_691": {
+    "all_match": true,
+    "N": 500,
+    "failures": []
+  },
+  "mod_5": {
+    "all_match": true,
+    "N": 500,
+    "failures": []
+  },
+  "mod_7": {
+    "all_match": true,
+    "N": 500,
+    "failures": []
+  },
+  "mod_256": {
+    "all_match": true,
+    "N": 500,
+    "failures": []
+  },
+  "mod_27": {
+    "all_match": true,
+    "N": 500,
+    "failures": []
+  },
+  "prime_691": {
+    "all_match": true,
+    "rows": [
+      {
+        "p": 2,
+        "tau_p_mod_691": 667,
+        "one_plus_p11_mod_691": 667,
+        "match": true
+      },
+      {
+        "p": 3,
+        "tau_p_mod_691": 252,
+        "one_plus_p11_mod_691": 252,
+        "match": true
+      },
+      {
+        "p": 5,
+        "tau_p_mod_691": 684,
+        "one_plus_p11_mod_691": 684,
+        "match": true
+      },
+      {
+        "p": 7,
+        "tau_p_mod_691": 531,
+        "one_plus_p11_mod_691": 531,
+        "match": true
+      },
+      {
+        "p": 11,
+        "tau_p_mod_691": 469,
+        "one_plus_p11_mod_691": 469,
+        "match": true
+      },
+      {
+        "p": 13,
+        "tau_p_mod_691": 629,
+        "one_plus_p11_mod_691": 629,
+        "match": true
+      },
+      {
+        "p": 17,
+        "tau_p_mod_691": 611,
+        "one_plus_p11_mod_691": 611,
+        "match": true
+      },
+      {
+        "p": 19,
+        "tau_p_mod_691": 672,
+        "one_plus_p11_mod_691": 672,
+        "match": true
+      },
+      {
+        "p": 23,
+        "tau_p_mod_691": 92,
+        "one_plus_p11_mod_691": 92,
+        "match": true
+      },
+      {
+        "p": 29,
+        "tau_p_mod_691": 173,
+        "one_plus_p11_mod_691": 173,
+        "match": true
+      },
+      {
+        "p": 31,
+        "tau_p_mod_691": 366,
+        "one_plus_p11_mod_691": 366,
+        "match": true
+      },
+      {
+        "p": 37,
+        "tau_p_mod_691": 622,
+        "one_plus_p11_mod_691": 622,
+        "match": true
+      },
+      {
+        "p": 41,
+        "tau_p_mod_691": 87,
+        "one_plus_p11_mod_691": 87,
+        "match": true
+      },
+      {
+        "p": 43,
+        "tau_p_mod_691": 36,
+        "one_plus_p11_mod_691": 36,
+        "match": true
+      },
+      {
+        "p": 47,
+        "tau_p_mod_691": 435,
+        "one_plus_p11_mod_691": 435,
+        "match": true
+      },
+      {
+        "p": 53,
+        "tau_p_mod_691": 209,
+        "one_plus_p11_mod_691": 209,
+        "match": true
+      },
+      {
+        "p": 59,
+        "tau_p_mod_691": 342,
+        "one_plus_p11_mod_691": 342,
+        "match": true
+      },
+      {
+        "p": 61,
+        "tau_p_mod_691": 620,
+        "one_plus_p11_mod_691": 620,
+        "match": true
+      },
+      {
+        "p": 67,
+        "tau_p_mod_691": 476,
+        "one_plus_p11_mod_691": 476,
+        "match": true
+      },
+      {
+        "p": 71,
+        "tau_p_mod_691": 70,
+        "one_plus_p11_mod_691": 70,
+        "match": true
+      },
+      {
+        "p": 73,
+        "tau_p_mod_691": 416,
+        "one_plus_p11_mod_691": 416,
+        "match": true
+      },
+      {
+        "p": 79,
+        "tau_p_mod_691": 420,
+        "one_plus_p11_mod_691": 420,
+        "match": true
+      },
+      {
+        "p": 83,
+        "tau_p_mod_691": 33,
+        "one_plus_p11_mod_691": 33,
+        "match": true
+      },
+      {
+        "p": 89,
+        "tau_p_mod_691": 90,
+        "one_plus_p11_mod_691": 90,
+        "match": true
+      },
+      {
+        "p": 97,
+        "tau_p_mod_691": 220,
+        "one_plus_p11_mod_691": 220,
+        "match": true
+      }
+    ]
+  },
+  "bernoulli": {
+    "B_12_numerator_abs": 691,
+    "B_12_denominator": 2730,
+    "zeta_minus_11_numerator": 691,
+    "zeta_minus_11_denominator": 32760,
+    "identity_32760_equals_12_times_2730": true,
+    "match": true
+  },
+  "specific": {
+    "all_match": true,
+    "rows": [
+      {
+        "n": 1,
+        "tau": 1,
+        "expected_tau": 1,
+        "tau_mod_691": 1,
+        "sigma_11_mod_691": 1,
+        "tau_matches": true,
+        "congruence_matches": true
+      },
+      {
+        "n": 2,
+        "tau": -24,
+        "expected_tau": -24,
+        "tau_mod_691": 667,
+        "sigma_11_mod_691": 667,
+        "tau_matches": true,
+        "congruence_matches": true
+      },
+      {
+        "n": 3,
+        "tau": 252,
+        "expected_tau": 252,
+        "tau_mod_691": 252,
+        "sigma_11_mod_691": 252,
+        "tau_matches": true,
+        "congruence_matches": true
+      },
+      {
+        "n": 5,
+        "tau": 4830,
+        "expected_tau": 4830,
+        "tau_mod_691": 684,
+        "sigma_11_mod_691": 684,
+        "tau_matches": true,
+        "congruence_matches": true
+      },
+      {
+        "n": 7,
+        "tau": -16744,
+        "expected_tau": -16744,
+        "tau_mod_691": 531,
+        "sigma_11_mod_691": 531,
+        "tau_matches": true,
+        "congruence_matches": true
+      }
+    ]
+  },
+  "summary_chain": {
+    "tau_n_equiv_sigma_11_mod_691_up_to_500": true,
+    "tau_n_equiv_n_sigma_1_mod_5_up_to_500": true,
+    "tau_n_equiv_n_sigma_3_mod_7_up_to_500": true,
+    "tau_n_equiv_sigma_11_mod_256_for_odd_n_up_to_500": true,
+    "tau_n_equiv_n_squared_sigma_7_mod_27_for_gcd_n_3_eq_1": true,
+    "tau_p_equiv_1_plus_p_11_mod_691_for_p_up_to_100": true,
+    "bernoulli_691_connection_32760_equals_12_times_2730": true,
+    "specific_small_tau_values_match_and_satisfy_congruence": true
+  }
+}
