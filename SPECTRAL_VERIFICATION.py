@@ -918,6 +918,174 @@ print("  All subconstituent / connectivity assertions PASSED ✓")
 
 
 # ---------------------------------------------------------------------------
+# 19f.  BINARY CODE WEIGHT DISTRIBUTION (Prop 36)
+print("\n" + "-"*60)
+print("19f. Binary code C₂(W) weight distribution")
+print("-"*60)
+
+from fractions import Fraction as _Frac
+
+# Row-reduce A mod 2
+_A2 = A % 2
+def _rref_gf2(_M):
+    _m = _M.copy() % 2; _rr, _cc = _m.shape; _piv = []; _r = 0
+    for _c in range(_cc):
+        _p = None
+        for _ri in range(_r, _rr):
+            if _m[_ri, _c] == 1: _p = _ri; break
+        if _p is None: continue
+        _m[[_r, _p]] = _m[[_p, _r]]
+        for _ri in range(_rr):
+            if _ri != _r and _m[_ri, _c] == 1: _m[_ri] = (_m[_ri] + _m[_r]) % 2
+        _piv.append(_c); _r += 1
+    return _m[:_r], _piv, _r
+
+_basis, _pivots_c, _rk = _rref_gf2(_A2)
+assert _rk == 16 == _k + abs(_s)
+print(f"  dim C₂(W) = rank₂(A) = {_rk} = k+|s| = 16  ✓")
+
+# Enumerate all 2^16 codewords — weight distribution
+from collections import Counter as _Ctr2
+_wd = _Ctr2()
+for _bits in range(2**_rk):
+    _cw = np.zeros(n, dtype=int)
+    for _i in range(_rk):
+        if (_bits >> _i) & 1: _cw = (_cw + _basis[_i]) % 2
+    _wd[int(_cw.sum())] += 1
+
+assert sum(_wd.values()) == 2**16
+_dmin = min(w for w in _wd if w > 0)
+assert _dmin == 8 == _k - abs(_s)
+print(f"  d_min = {_dmin} = k - |s| = rank(E₈) = 8  ✓")
+print(f"  C₂(W) = [40, 16, 8]  ✓")
+
+# Verify exact weight enumerator
+_expected_wd = {0:1, 8:45, 12:1120, 16:15570, 20:32064,
+                24:15570, 28:1120, 32:45, 40:1}
+assert dict(_wd) == _expected_wd
+print(f"  Weight enumerator verified:  ✓")
+for _w in sorted(_expected_wd):
+    print(f"    A_{_w:2d} = {_expected_wd[_w]}")
+
+# Complement symmetry
+assert all(_wd.get(_w,0) == _wd.get(n-_w,0) for _w in range(n+1))
+print(f"  Complement symmetry A_w = A_{{n-w}}: True (𝟏 ∈ C)  ✓")
+
+# Doubly even
+assert all(_w % 4 == 0 for _w in _wd if _wd[_w] > 0 and _w > 0)
+print(f"  Doubly even (all wt ≡ 0 mod 4): True  ✓")
+
+# Self-orthogonal
+_gram = (_basis @ _basis.T) % 2
+assert np.all(_gram == 0)
+print(f"  Self-orthogonal (C ⊆ C⊥): True  ✓")
+
+# MacWilliams transform for dual weight distribution
+from math import comb as _comb
+def _krawtchouk(_j, _i, _nn):
+    return sum((-1)**_s * _comb(_i, _s) * _comb(_nn - _i, _j - _s)
+               for _s in range(_j+1) if _s <= _i and _j-_s <= _nn-_i)
+
+_card = 2**_rk
+_dual_wd = {}
+for _j in range(n+1):
+    _val = _Frac(0)
+    for _i in _wd:
+        _val += _Frac(_wd[_i]) * _Frac(_krawtchouk(_j, _i, n))
+    _val = _val / _Frac(_card)
+    if _val != 0:
+        _dual_wd[_j] = int(_val)
+
+_dual_dmin = min(w for w in _dual_wd if w > 0)
+assert _dual_dmin == 6
+assert _dual_wd[6] == 240  # = |Φ(E₈)|
+assert sum(_dual_wd.values()) == 2**(n - _rk)
+print(f"  Dual code C⊥ = [40, 24, 6]  ✓")
+print(f"  B₆ = 240 = |Φ(E₈)|  ✓")
+
+# Minimum weight codewords: all have K₄,₄ support
+_min_cws = []
+for _bits in range(2**_rk):
+    _cw = np.zeros(n, dtype=int)
+    for _i in range(_rk):
+        if (_bits >> _i) & 1: _cw = (_cw + _basis[_i]) % 2
+    if int(_cw.sum()) == 8:
+        _min_cws.append(tuple(int(x) for x in np.where(_cw == 1)[0]))
+
+assert len(_min_cws) == 45
+
+# Verify all supports are K₄,₄ (4-regular, bipartite on 8 vertices)
+_all_k44 = True
+for _supp in _min_cws:
+    _sub = np.zeros((8,8), dtype=int)
+    for _i, _u in enumerate(_supp):
+        for _j, _w in enumerate(_supp):
+            if A[_u, _w] == 1: _sub[_i, _j] = 1
+    # 4-regular
+    if not all(_sub.sum(axis=1)[_i]==4 for _i in range(8)):
+        _all_k44 = False; break
+    # 16 edges
+    if _sub.sum() != 32:
+        _all_k44 = False; break
+    # bipartite check
+    _col = [-1]*8; _col[0] = 0; _q = [0]; _bip = True
+    while _q:
+        _v = _q.pop(0)
+        for _w in range(8):
+            if _sub[_v,_w]==1:
+                if _col[_w]==-1: _col[_w]=1-_col[_v]; _q.append(_w)
+                elif _col[_w]==_col[_v]: _bip = False
+    if not _bip:
+        _all_k44 = False; break
+
+assert _all_k44
+print(f"  A₈ = 45 minimum weight codewords: all K₄,₄ supports  ✓")
+
+# Each meets every GQ line in 0 or 2 points
+_all_even = True
+for _supp in _min_cws:
+    _ss = frozenset(_supp)
+    for _i in range(n):
+        for _j in range(_i+1, n):
+            if A[_i,_j]==1:
+                for _c in range(_j+1, n):
+                    if A[_i,_c]==1 and A[_j,_c]==1:
+                        for _d in range(_c+1, n):
+                            if A[_i,_d]==1 and A[_j,_d]==1 and A[_c,_d]==1:
+                                _isct = len(_ss & {_i,_j,_c,_d})
+                                if _isct not in (0, 2):
+                                    _all_even = False
+    break  # expensive; verified exhaustively in exploration
+
+# Use a lighter check: verify for all 45 x 40 pairs
+_cliques4_v = []
+for _i in range(n):
+    for _j in range(_i+1, n):
+        if A[_i,_j]==1:
+            for _c in range(_j+1, n):
+                if A[_i,_c]==1 and A[_j,_c]==1:
+                    for _d in range(_c+1, n):
+                        if A[_i,_d]==1 and A[_j,_d]==1 and A[_c,_d]==1:
+                            _cliques4_v.append(frozenset([_i,_j,_c,_d]))
+
+_all_even = True
+for _supp in _min_cws:
+    _ss = frozenset(_supp)
+    for _cl in _cliques4_v:
+        _isct = len(_ss & _cl)
+        if _isct not in (0, 2):
+            _all_even = False
+            break
+    if not _all_even:
+        break
+
+assert _all_even
+print(f"  All 45 supports are even sets: |S ∩ ℓ| ∈ {{0, 2}} for all lines  ✓")
+
+print("  All binary code weight distribution assertions PASSED ✓")
+
+
+# ---------------------------------------------------------------------------
 # 19.  SUMMARY
 print("\n" + "="*60)
 print("ALL ASSERTIONS PASSED — W(3,3) spectral theory verified.")

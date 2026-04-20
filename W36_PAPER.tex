@@ -1690,6 +1690,58 @@ $t(\W) \ge k / (-s) = 12/4 = 3$.
 \end{proof}
 
 
+\begin{proposition}[Binary Code Weight Enumerator]\label{prop:binarycode}
+The binary code $C_2(\W) = \mathrm{row}(A / \mathbb{F}_2)$ is a
+$[40, 16, 8]$ doubly-even self-orthogonal code with weight enumerator
+\[
+  W_C(z) \;=\; 1 + 45\,z^{8} + 1120\,z^{12} + 15570\,z^{16}
+  + 32064\,z^{20} + 15570\,z^{24} + 1120\,z^{28} + 45\,z^{32}
+  + z^{40}.
+\]
+The code enjoys the following properties:
+\begin{enumerate}[(i)]
+  \item \textbf{Parameters}: $\dim = k + |s| = 16$,
+        $d_{\min} = k - |s| = 8 = \mathrm{rank}(E_8)$.
+  \item \textbf{Doubly even}: every codeword weight is divisible by~$4$.
+  \item \textbf{Self-orthogonal}: $C \subseteq C^\perp$, since
+        $A^2 \equiv 0 \pmod{2}$ forces $\mathrm{row}(A) \subseteq \ker(A)$.
+  \item \textbf{Complement symmetry}: $A_w = A_{n-w}$ for all $w$,
+        because $\mathbf{1} \in C$ (as $k$ is even).
+  \item \textbf{Minimum weight codewords}: the $A_8 = 45 = \binom{10}{2}$
+        codewords of weight~$8$ each have support isomorphic to $K_{4,4}$
+        (complete bipartite graph), and each support meets every GQ$(3,3)$
+        line in exactly $0$ or $2$ points (\emph{even set}).
+  \item \textbf{Dual code}: the MacWilliams transform gives
+        $C^\perp = [40, 24, 6]$ with $B_6 = 240 = |\Phi(E_8)|$.
+        The dual dimension~$24 = f_r$, the multiplicity of eigenvalue~$r = 2$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i)--(ii) Since $A^2 \equiv 0 \pmod{2}$ (Proposition~\ref{prop:parycodes}),
+$A$ is nilpotent over $\mathbb{F}_2$ with all eigenvalues $\equiv 0$,
+and $\mathrm{row}(A) \subseteq \ker(A)$ makes $C$ self-orthogonal.
+For any self-orthogonal binary code, the inner product $c \cdot c = 0$
+forces $\mathrm{wt}(c) \equiv 0 \pmod{2}$.  The stronger divisibility by~$4$
+follows from the GF$(2)$-form $c^T A c = 0$ and the structure of the
+adjacency matrix: each row has weight $k = 12 \equiv 0 \pmod{4}$, and the
+doubly-even property is preserved under GF$(2)$ addition.
+
+(iii) The dimension $16 = k + |s|$ is established in Proposition~\ref{prop:parycodes}.
+
+(iv) Since $A \mathbf{1} = k \mathbf{1}$ and $k = 12$ is even,
+$\mathbf{1} \in \ker(A / \mathbb{F}_2) \supseteq \mathrm{row}(A / \mathbb{F}_2) = C$.
+So adding $\mathbf{1}$ (complementation) preserves membership in $C$.
+
+(v) The weight distribution and support analysis are verified by exhaustive
+enumeration of all $2^{16} = 65{,}536$ codewords.  Each weight-$8$ support
+induces a $4$-regular bipartite graph on $8$ vertices ($= K_{4,4}$), meeting
+each of the $40$ GQ lines in $0$ or $2$ points.
+
+(vi) The dual weight distribution follows from the MacWilliams identity.
+\end{proof}
+
+
 
 \begin{figure}[H]
   \centering
