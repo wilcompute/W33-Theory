@@ -617,6 +617,116 @@ print("  All heat kernel / zeta / algebra assertions PASSED ✓")
 
 
 # ---------------------------------------------------------------------------
+# 19d.  SPREADS AND p-ARY CODES (Props 32-33)
+print("\n" + "-"*60)
+print("19d. Spreads, clique partitions, p-ary codes")
+print("-"*60)
+
+# Find all 4-cliques (lines of GQ(3,3))
+_cliques4 = []
+for _i in range(n):
+    for _j in range(_i+1, n):
+        if A[_i,_j] == 1:
+            for _c in range(_j+1, n):
+                if A[_i,_c] == 1 and A[_j,_c] == 1:
+                    for _d in range(_c+1, n):
+                        if A[_i,_d] == 1 and A[_j,_d] == 1 and A[_c,_d] == 1:
+                            _cliques4.append((_i,_j,_c,_d))
+assert len(_cliques4) == 40, f"Lines: {len(_cliques4)}"
+print(f"  GQ(3,3) lines: {len(_cliques4)} = (q+1)(q²+1) = 40  ✓")
+
+# Each point on exactly q+1 = 4 lines
+from collections import Counter as _Counter
+_pt_counts = _Counter()
+for _cl in _cliques4:
+    for _v in _cl:
+        _pt_counts[_v] += 1
+assert set(_pt_counts.values()) == {4}
+print(f"  Each point on 4 lines  ✓")
+
+# Find all spreads via backtracking
+_line_sets = [set(cl) for cl in _cliques4]
+_spreads = []
+def _find_spreads(_chosen, _covered, _start):
+    if len(_covered) == n:
+        _spreads.append(tuple(sorted(_chosen)))
+        return
+    _rem = 10 - len(_chosen)
+    if 40 - _start < _rem:
+        return
+    for _idx in range(_start, 40):
+        if _line_sets[_idx].isdisjoint(_covered):
+            _find_spreads(_chosen + [_idx], _covered | _line_sets[_idx], _idx + 1)
+_find_spreads([], set(), 0)
+
+assert len(_spreads) == 36
+print(f"  Spreads: {len(_spreads)} = 36  ✓")
+
+# Each line in exactly 9 spreads
+_spl = _Counter()
+for _sp in _spreads:
+    for _idx in _sp:
+        _spl[_idx] += 1
+assert set(_spl.values()) == {9}
+print(f"  Each line in 9 spreads  ✓")
+
+# Spread overlap: pairs share 1 or 4 lines
+_overlaps = _Counter()
+_sp_sets = [set(sp) for sp in _spreads]
+for _i in range(36):
+    for _j in range(_i+1, 36):
+        _overlaps[len(_sp_sets[_i] & _sp_sets[_j])] += 1
+assert set(_overlaps.keys()) == {1, 4}
+assert _overlaps[1] == 360
+assert _overlaps[4] == 270
+assert _overlaps[1] + _overlaps[4] == 36*35//2  # = 630
+print(f"  Spread overlaps: {{1: 360, 4: 270}} = 630 pairs  ✓")
+
+# p-rank verification
+def _gfp_rank(_M, _p):
+    _m = _M.copy() % _p
+    _rows, _cols = _m.shape
+    _rank = 0
+    for _col in range(_cols):
+        _pivot = None
+        for _row in range(_rank, _rows):
+            if _m[_row, _col] % _p != 0:
+                _pivot = _row
+                break
+        if _pivot is None:
+            continue
+        _m[[_rank, _pivot]] = _m[[_pivot, _rank]]
+        _inv = pow(int(_m[_rank, _col]), -1, _p)
+        _m[_rank] = (_m[_rank] * _inv) % _p
+        for _row in range(_rows):
+            if _row != _rank and _m[_row, _col] % _p != 0:
+                _m[_row] = (_m[_row] - _m[_row, _col] * _m[_rank]) % _p
+        _rank += 1
+    return _rank
+
+# Binary code: rank₂ = 16, A² ≡ 0 (mod 2)
+_r2 = _gfp_rank(A, 2)
+assert _r2 == 16
+_A2sq = (A @ A) % 2
+assert np.all(_A2sq == 0), "A² not zero mod 2"
+print(f"  rank₂(A) = {_r2} = 16 (A nilpotent over GF(2), A²≡0)  ✓")
+
+# Ternary code: rank₃ = 39 = n-1, null space = ⟨1⟩
+_r3 = _gfp_rank(A, 3)
+assert _r3 == 39 == n - 1
+_ones = np.ones(n, dtype=int)
+assert np.all((A @ _ones) % 3 == 0), "A·1 ≢ 0 mod 3"
+print(f"  rank₃(A) = {_r3} = n-1 = 39, null = ⟨𝟏⟩  ✓")
+
+# rank₅ = 40 = n (full rank)
+_r5 = _gfp_rank(A, 5)
+assert _r5 == 40 == n
+print(f"  rank₅(A) = {_r5} = n = 40  ✓")
+
+print("  All spread / code assertions PASSED ✓")
+
+
+# ---------------------------------------------------------------------------
 # 19.  SUMMARY
 print("\n" + "="*60)
 print("ALL ASSERTIONS PASSED — W(3,3) spectral theory verified.")

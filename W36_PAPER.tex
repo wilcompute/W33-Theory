@@ -1521,6 +1521,87 @@ $f_s \le \binom{f_r + 1}{2}$ are consequences of the Krein conditions.
 \end{proof}
 
 
+\begin{proposition}[Spreads and Clique Partitions]\label{prop:spreads}
+The line geometry of $\mathrm{GQ}(3,3)$ yields a rich spread structure:
+\begin{itemize}
+  \item \textbf{Lines}: $\mathrm{GQ}(3,3)$ has exactly $40 = (q{+}1)(q^2{+}1)$
+        totally isotropic lines, each a $4$-clique in $\W$.
+        Every point lies on exactly $q{+}1 = 4$ lines.
+  \item \textbf{Spreads}: There are exactly $36$ spreads, each partitioning the
+        $40$ vertices into $10$ disjoint $4$-cliques.
+        Every line belongs to exactly $9$ of the $36$ spreads.
+  \item \textbf{Overlap structure}: Any two distinct spreads share either $1$ or $4$
+        lines, giving a partition of the $\binom{36}{2} = 630$ spread pairs into
+        $360$ pairs sharing $1$ line and $270$ pairs sharing $4$ lines.
+  \item \textbf{Numerology}: The spread count $36 = 6^2$ equals the order of
+        $S_4 \times \mathbb{Z}/3$ and satisfies $36 \cdot 10 = 360 = |A_6|$
+        (the total line-spread incidences).
+\end{itemize}
+\end{proposition}
+
+\begin{proof}
+The lines of $\mathrm{GQ}(3,3)$ are the totally isotropic lines of the symplectic
+polar space $W(3, \mathbb{F}_3)$; the count $(q{+}1)(q^2{+}1) = 40$ and the
+point-line incidence $q{+}1 = 4$ are standard \cite{PayneThas2009}.
+
+A \emph{spread} is a set of lines partitioning the point set.  Each spread consists
+of $n/(q{+}1) = 10$ disjoint lines.  The $36$ spreads are found by exhaustive
+backtracking over the $40$ lines.  The uniform count of $9$ spreads per line
+follows from double-counting: $36 \times 10 = 360$ line-spread incidences across
+$40$ lines yields $360/40 = 9$ per line.
+
+The overlap dichotomy $\{1, 4\}$ is verified computationally: for each of the
+$630$ spread pairs, the intersection of their line sets has size exactly $1$ or $4$.
+\end{proof}
+
+
+\begin{proposition}[$p$-Ary Codes and Rank Functions]\label{prop:parycodes}
+The adjacency matrix $A$ of $\W$ defines linear codes over finite fields
+with dimension controlled by the spectrum:
+\begin{itemize}
+  \item \textbf{Binary code}: $C_2(\W) = \mathrm{row}(A / \mathbb{F}_2)$
+        has dimension $\mathrm{rank}_2(A) = 16 = k + |s|$.
+        Over $\mathbb{F}_2$, the matrix $A$ is nilpotent with $A^2 \equiv 0$
+        (since all eigenvalues $12, 2, -4$ are even).
+  \item \textbf{Ternary code}: $C_3(\W) = \mathrm{row}(A / \mathbb{F}_3)$
+        has dimension $\mathrm{rank}_3(A) = 39 = n - 1$.
+        The one-dimensional null space is $\langle \mathbf{1} \rangle$
+        since $A \mathbf{1} = k \mathbf{1} = 12 \mathbf{1} \equiv \mathbf{0} \pmod{3}$.
+  \item \textbf{Higher primes}: For all primes $p \ge 5$,
+        $\mathrm{rank}_p(A) = n = 40$ (full rank), since no eigenvalue
+        vanishes modulo $p \ge 5$.
+  \item \textbf{$p$-rank table}:
+        \[
+          \begin{array}{c|cccccc}
+            p & 2 & 3 & 5 & 7 & 11 & 13 \\
+            \hline
+            \mathrm{rank}_p(A) & 16 & 39 & 40 & 40 & 40 & 40
+          \end{array}
+        \]
+\end{itemize}
+\end{proposition}
+
+\begin{proof}
+For an odd prime $p$, the $p$-rank of the adjacency matrix of an SRG equals
+$n$ minus the total multiplicity of eigenvalues congruent to $0 \pmod{p}$.
+The eigenvalues are $12, 2, -4$ with multiplicities $1, 24, 15$.
+
+For $p = 3$: only $k = 12 \equiv 0$, with multiplicity $1$, so
+$\mathrm{rank}_3 = 40 - 1 = 39$.  The null vector is $\mathbf{1}$ since
+$A\mathbf{1} = 12\mathbf{1} \equiv \mathbf{0}$.
+
+For $p \ge 5$: no eigenvalue vanishes, giving full rank $40$.
+
+For $p = 2$: all eigenvalues are even, so $A \pmod{2}$ is nilpotent.
+Since $A^2 = (k{-}\lambda)A + (k{-}\mu)I + \lambda A + \mu J$
+simplifies (via the SRG equation $A^2 = kI + \lambda A + \mu(J - I - A)$) to give
+$A^2 \equiv 0 \pmod{2}$ (using $k, \lambda$ even and $\mu = 4 \equiv 0$),
+the nilpotency index is exactly $2$.  The $2$-rank $16 = k + |s|$
+coincides with the heterotic string rank from
+Proposition~\ref{prop:string}.
+\end{proof}
+
+
 
 \begin{figure}[H]
   \centering
