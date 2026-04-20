@@ -1005,6 +1005,58 @@ The non-bipartiteness (presence of odd cycles like triangles) is verified by the
 any graph with triangles is non-bipartite.
 \end{proof}
 
+\subsubsection{Distance-Regularity and Metric Properties}
+
+\begin{proposition}[Distance-Regularity and Metric Structure]\label{prop:distanceregular}
+The graph $\W(3,3)$ is \emph{distance-regular} and has highly uniform metric structure:
+\begin{itemize}
+  \item \textbf{All pairwise distances}: Exactly two distance classes: distance 1 (240 pairs, 30.8\%)
+        and distance 2 (540 pairs, 69.2\%). No vertices at distance $> 2$.
+  \item \textbf{Distance-uniform neighborhoods}: For each distance $d$, every vertex has
+        exactly the same number of vertices at distance $d$:
+        \begin{align}
+          &\#\{v \in V : d(u,v) = 1\} = k = 12 \quad\forall u \in V \\
+          &\#\{v \in V : d(u,v) = 2\} = n - 1 - k = 27 \quad\forall u \in V
+        \end{align}
+        This is the defining property of a \emph{distance-regular graph} (DRG) with diameter 2.
+  \item \textbf{Self-centered metric}: All vertices have eccentricity equal to the diameter:
+        $\mathrm{ecc}(v) = \mathrm{diam}(\W) = 2$ for all $v$. The center and periphery coincide
+        (all 40 vertices are central).
+  \item \textbf{Mean and median distance}: Mean distance $\mu = 1.69$; median distance $d_{\mathrm{med}} = 2$.
+        This indicates a graph with diameter 2 but skewed toward distance-2 pairs.
+  \item \textbf{Intersection array} (for DRG): The intersection multiplicities are
+        \begin{align}
+          c_0 = 1, \quad c_1 = 0, \quad c_2 = 0 \quad\text{(no pairs at distance 3+)} \\
+          b_0 = k = 12, \quad b_1 = 27, \quad b_2 = -1 \quad\text{(directed toward inner vertices)}
+        \end{align}
+  \item \textbf{Diameter-2 DRG classification}: SRGs with parameters $(n,k,\lambda,\mu)$ are
+        automatically distance-regular with diameter 2 when properly parameterized.
+        The uniform distance neighborhoods confirm this property.
+\end{itemize}
+\end{proposition}
+
+\begin{proof}
+Distance-regularity is established by computing all pairwise shortest paths via breadth-first search
+from each vertex. We enumerate the neighborhoods at each distance and verify uniformity: for every
+vertex $u$ and every distance $d$, the number of vertices $v$ with $d(u,v) = d$ is constant across all choices of $u$.
+
+For $W(3,3)$, this uniform distance property has immediate consequences:
+\begin{enumerate}
+  \item The \emph{eigenvalues} of the adjacency matrix can be expressed in terms of intersection
+        multiplicities, providing a spectral interpretation of the metric structure.
+  \item The \emph{spectrum} has exactly as many distinct eigenvalues as the diameter plus one
+        (diameter 2 gives 3 eigenvalues), which matches our spectrum $\{12, 2, -4\}$.
+  \item The \emph{automorphism group} acts transitively on each distance class, explaining the
+        vertex-transitivity and distance-transitivity properties.
+\end{enumerate}
+
+The mean distance $\mu = 1.69$ is computed as the average over all vertex pairs:
+\[
+  \mu = \frac{\sum_{u,v} d(u,v)}{n(n-1)/2} = \frac{240 \cdot 1 + 540 \cdot 2}{780} = \frac{1320}{780} = 1.69
+\]
+This value is consistent with a graph of moderate ``compactness'' for 40 vertices.
+\end{proof}
+
 
 
 \begin{figure}[H]
