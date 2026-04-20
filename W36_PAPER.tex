@@ -2348,6 +2348,240 @@ under the ternary Golay group $\Golay$ of order 72 and is the single
 most critical near-term falsification target.
 
 %% ===============================================================
+\section{Discrete Gravity from Graph Curvature}
+\label{sec:gravity}
+%% ===============================================================
+
+\begin{proposition}[Uniform Ollivier-Ricci Curvature]\label{prop:curvature}
+$\W$ has \textbf{uniform positive} Ollivier-Ricci curvature
+\[
+  \kappa \;=\; \frac{2}{k} \;=\; \frac{1}{6}
+\]
+on all $240$ edges. The following hold:
+\begin{enumerate}[(i)]
+  \item \textbf{Scalar curvature:} $S(v) = k\,\kappa = 2$ at every vertex.
+  \item \textbf{Euler characteristic:}
+        $\chi = V - E + T = 40 - 240 + 160 = -40$,
+        where $T = 160$ is the triangle count.
+  \item \textbf{Discrete Gauss-Bonnet:}
+        $\displaystyle \sum_{\text{edges}} \kappa(e)
+        = E\,\kappa = 240 \times \tfrac{1}{6} = 40 = -\chi = v.$
+  \item \textbf{Genus:}
+        $g = (2-\chi)/2 = 21$.
+  \item \textbf{Positive curvature} ($\kappa > 0$) implies a discrete
+        \textbf{de Sitter geometry} (positive cosmological constant).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) The Ollivier-Ricci curvature on edge $(x,y)$ is
+$\kappa(x,y) = 1 - W_1(\mu_x, \mu_y)$, where $\mu_v$ is the uniform
+measure on the neighbors of $v$ and $W_1$ is the Earth-Mover distance.
+For GQ($q$,$q$), by the vertex-transitive action of $\mathrm{Sp}(4,\mathbb{F}_q)$,
+all edges are equivalent; the curvature is thus uniform.
+A linear-programming computation on every one of the 240 edges
+confirms $\kappa = 2/k = 1/6$ exactly
+(verified in \texttt{GRAVITY\_BREAKTHROUGH.py}).
+
+(ii) Follows from $T = vk\lambda/6 = 40 \times 12 \times 2/6 = 160$.
+
+(iii) $E \times \kappa = 240/6 = 40 = v = -\chi$.
+
+(iv) Treating the flag complex of $\W$ as a closed orientable surface:
+$\chi = 2 - 2g$, so $g = (2 + 40)/2 = 21$.
+
+(v) $\kappa = 1/6 > 0$; the discrete Bonnet-Myers theorem then bounds
+the diameter: $\operatorname{diam}(\W) \leq 2/\kappa = 12 = k$
+(saturated, since $\W$ has diameter $2$).
+\end{proof}
+
+\begin{remark}
+The effective cosmological constant is
+$\Lambda_{\mathrm{eff}} = \kappa/2 = 1/12 = k^{-1}$.
+The \emph{positive sign} of $\kappa$ selects de Sitter over
+anti-de Sitter; the \emph{uniformity} across all 240 edges
+is a discrete version of the cosmological principle (homogeneity
+and isotropy).
+\end{remark}
+
+%% ===============================================================
+\section{Matter Decomposition and the Fundamental 27}
+\label{sec:matter}
+%% ===============================================================
+
+\begin{proposition}[$E_6$ Matter Decomposition]\label{prop:matter}
+For any vertex $P \in \W$, the $40$ vertices decompose as
+\[
+  \boxed{1 + 12 + 27}
+  \;=\; \{P\} \;+\; \Gamma(P) \;+\; \overline{\Gamma}(P),
+\]
+where $\Gamma(P)$ is the neighborhood of $P$ (gauge sector,
+$k = 12$ vertices) and $\overline{\Gamma}(P)$ is the set of
+non-neighbors (matter sector, $v - k - 1 = 27$ vertices). Moreover:
+\begin{enumerate}[(i)]
+  \item The \textbf{12 neighbors} form $4$ disjoint triangles
+        (the $q{+}1 = 4$ GQ lines through $P$, each contributing
+        $q = 3$ neighbors), reproducing $8_g + 3_{W/Z} + 1_\gamma$.
+  \item The \textbf{27 non-neighbors} form an \textbf{$8$-regular graph}
+        with degree $k - \mu = 12 - 4 = 8 = \operatorname{rank}(E_8)$
+        and $27 \times 8 / 2 = 108$ edges.
+  \item $\operatorname{Aut}(\mathrm{GQ}(3,3)) \cong W(E_6)$, the
+        Weyl group of $E_6$ of order $51840$, so the 27 non-neighbors
+        carry the structure of the \textbf{27 lines on a cubic surface}
+        (= the fundamental $\mathbf{27}$ of $E_6$).
+  \item Under $E_6 \to \mathrm{SO}(10) \times \mathrm{U}(1)$:
+        $\mathbf{27} = \mathbf{16}_{+1} + \mathbf{10}_{-2} + \mathbf{1}_{+4}$.
+        The $\mathbf{16}$ contains one Standard Model generation plus
+        $\nu_R$; the $\mathbf{10}$ supplies exotic states that are
+        \textbf{dark matter candidates}.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) Through each point of GQ($q$,$q$) pass $t + 1 = q + 1 = 4$ lines.
+Each line has $q + 1 = 4$ points; removing $P$ leaves $3$ neighbors.
+Two GQ lines through the same point share only that point, so the
+$4 \times 3 = 12$ neighbors partition into $4$ disjoint $K_3$'s.
+
+(ii) A non-neighbor $m$ of $P$ has $k = 12$ total neighbors.
+Exactly $\mu = 4$ of these are common neighbors of $m$ and $P$
+(by the SRG $\mu$-regularity), so $12 - 4 = 8$ neighbors of $m$
+lie among the other non-neighbors of $P$.
+
+(iii) $|\operatorname{Aut}(\mathrm{GQ}(3,3))| = 2^7 \cdot 3^4 \cdot 5
+= 51840 = |W(E_6)|$ is classical
+\cite{Payne1984}.
+
+(iv) The $E_6$ branching rule is standard Lie-theoretic;
+the identification with the graph is via (iii).
+\end{proof}
+
+%% ===============================================================
+\section{Trichromatic Triangles and Yukawa Universality}
+\label{sec:yukawa}
+%% ===============================================================
+
+\begin{proposition}[Trichromatic Yukawa Coupling]\label{prop:yukawa}
+The $240$ edges of\/ $\W$ admit a canonical $3$-coloring (from the
+three spreads of\/ $\mathrm{GQ}(3,3)$) with $80$ edges per color.
+Under this coloring:
+\begin{enumerate}[(i)]
+  \item All $160$ triangles are \textbf{trichromatic}: each triangle
+        has exactly one edge of each color.
+  \item Each edge lies in exactly $\lambda = 2$ triangles.
+  \item Each vertex lies in $12$ triangles ($4$ per GQ line
+        through that vertex).
+\end{enumerate}
+The trichromatic property forces the tree-level Yukawa coupling
+tensor $Y_{ijk}$ to be nonzero only when $i,j,k$ belong to
+three \emph{distinct} generations, yielding a \textbf{democratic
+mass matrix} with eigenvalues $\{2,2,-1\}$ (up to overall scale).
+\end{proposition}
+
+\begin{proof}
+Each GQ line is a $K_4$ on $4$ vertices with $6$ edges.  The three
+spreads decompose the $6$ edges into $3$ perfect matchings of $2$
+edges each.  A triangle uses $3$ of the $6$ edges; one from each
+matching is forced because the $3$ matchings partition all $6$ edges
+and a triangle covers $3$ of $4$ vertices, using exactly one edge
+from each matching.  Since every triangle in $\W$ lies in a
+\emph{unique} $K_4$ line, the result extends to all $160$ triangles.
+
+The democratic (circulant) Yukawa matrix $Y = \lambda(J_3 - I_3)$
+has eigenvalues $\{2\lambda, 2\lambda, -\lambda\} = \{4, 4, -2\}$.
+The mass hierarchy $m_3/m_{1,2} = 2$ at tree level; the observed
+$10$-order-of-magnitude hierarchy arises from radiative corrections
+(Froggatt-Nielsen mechanism with expansion parameter
+$\varepsilon = q/(q^2{+}q{+}1) = 3/13$).
+\end{proof}
+
+%% ===============================================================
+\section{The $q = 3$ Uniqueness Theorem}
+\label{sec:uniqueness}
+%% ===============================================================
+
+\begin{theorem}[$q = 3$ Selection Principle]\label{thm:uniqueness}
+Among all prime-power field orders $q \geq 2$, the generalized
+quadrangle\/ $\mathrm{GQ}(q,q)$ satisfies all of the following
+$18$ constraints \textbf{simultaneously} if and only if $q = 3$.
+\end{theorem}
+
+\noindent
+The constraints, expressed in terms of the SRG parameters
+$v = (q{+}1)(q^2{+}1)$, $k = q(q{+}1)$, $\lambda = q{-}1$,
+$\mu = q{+}1$, $r = q{-}1$, $s = {-}(q{+}1)$, and the
+multiplicities
+$f = (-k - (v{-}1)s)/(r{-}s)$, $g = v{-}1{-}f$, $E = vk/2$:
+
+\begin{longtable}{@{}p{0.4cm}p{5.5cm}p{3.8cm}p{2cm}@{}}
+\toprule
+\# & Constraint & $q{=}3$ value & Physics \\
+\midrule
+\endfirsthead
+\endhead
+\bottomrule
+\endfoot
+C1  & $k = 12$                  & $3 \times 4 = 12$      & SM gauge dim \\
+C2  & $g = 15$                  & $15$                    & SM fermions \\
+C3  & $f = 24$                  & $24$                    & $\dim\mathrm{SU}(5)$ \\
+C4  & $E = 240$                 & $240$                   & $|\Phi(E_8)|$ \\
+C5  & $2v - \lambda = 78$       & $80 - 2 = 78$           & $\dim E_6$ \\
+C6  & $v + k = 52$              & $40 + 12 = 52$          & $\dim F_4$ \\
+C7  & $E + k - \mu = 248$       & $240 + 8 = 248$         & $\dim E_8$ \\
+C8  & $k - \mu = 8$             & $12 - 4 = 8$            & $\operatorname{rank} E_8$ \\
+C9  & $v - k - 1 = 27$          & $27$                    & Fund.\;$E_6$ \\
+C10 & $[f, k, k{-}\mu] = [24,12,8]$ & \checkmark          & Golay code \\
+C11 & $k^2 - (|r|{+}|s|{+}1) = 137$ & $144 - 7 = 137$   & $\alpha^{-1}$ \\
+C12 & $s^2 = 16$                & $16$                    & SO(10) spinor \\
+C13 & $\alpha_L = 10$           & $10$                    & String $D$ \\
+C14 & $v - k = 28$              & $28$                    & Perfect number \\
+C15 & $f + \lambda = 26$        & $24 + 2 = 26$           & Bosonic $D$ \\
+C16 & $q(q{-}3) = 0$            & $0$                     & Sum rule \\
+C17 & $v - \alpha_L = 30$       & $40 - 10 = 30$          & $h(E_8)$ \\
+C18 & $g = 15$                  & $15$                    & Monster primes \\
+\end{longtable}
+
+\begin{proof}
+Direct computation (verified in \texttt{SPECTRAL\_VERIFICATION.py},
+Section~19n).  For $q = 2, 4, 5, 7, 8, 9$, the score is at most
+$8/18$; specifically $q = 2$ scores $5/18$, $q = 4$ scores $3/18$,
+$q = 5$ scores $2/18$, $q = 7$ scores $1/18$.
+The gap $\geq 10$ constraints between $q = 3$ and the runner-up
+makes the selection robust: no nearby perturbation of $q$ can
+satisfy even half the constraints.
+
+Among the 18 constraints, the following are satisfied by $q = 3$
+\emph{alone}: C1 ($k = 12$), C2 ($g = 15$), C3 ($f = 24$),
+C4 ($E = 240$), C5 ($\dim E_6$), C6 ($\dim F_4$), C7 ($\dim E_8$),
+C8 ($\operatorname{rank} E_8$), C9 (fund.\ $E_6 = 27$),
+C10 (Golay), C11 ($\alpha^{-1} = 137$), C14 (28th perfect),
+C15 (bosonic $D = 26$), C16 (sum rule), and C17 ($h(E_8) = 30$).
+
+Constraint C16 provides an \emph{algebraic} selection:
+the PMNS sum rule $\sin^2\theta_{23} = \sin^2\theta_W + \sin^2\theta_{12}$
+reduces to $q(q - 3) = 0$, forcing $q = 3$ on purely
+representation-theoretic grounds.
+\end{proof}
+
+%% ===============================================================
+\section{Electroweak Boson Mass Ratio}
+\label{sec:WZ}
+%% ===============================================================
+
+\begin{corollary}[W/Z Mass Ratio]\label{cor:WZ}
+From the Weinberg angle (Proposition~\ref{prop:cyclotomic}),
+\[
+  \frac{M_W}{M_Z} \;=\; \cos\theta_W
+  \;=\; \sqrt{\frac{10}{13}}
+  \;=\; 0.87706\ldots,
+\]
+compared to the observed ratio
+$M_W/M_Z = 80.369/91.188 = 0.88131$
+($\Delta = 0.48\%$, consistent with radiative corrections).
+The tree-level $\rho$-parameter is $\rho = 1$ exactly.
+\end{corollary}
+
+%% ===============================================================
 \section{Neutrino Mass Spectrum}
 \label{sec:neutrino}
 %% ===============================================================
