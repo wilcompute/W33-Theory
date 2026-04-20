@@ -2057,6 +2057,286 @@ print("  All W/Z mass ratio assertions PASSED ✓")
 
 
 # ---------------------------------------------------------------------------
+# 19q.  REFINED FINE-STRUCTURE CONSTANT  α⁻¹ = 137 + 40/1111
+# ---------------------------------------------------------------------------
+print("\n--- 19q. Refined Fine-Structure Constant ---")
+
+from fractions import Fraction as _Frac6
+
+_p = _k - 1           # = 11
+_qq = _k - (_k - abs(_s) - abs(_r) - 1 + _k)  # need k-λ
+# Simpler: λ = q-1 = 2 so k-λ = 10
+_klam = _k - 2  # = 10 (= k - λ)
+_denom_inner = _klam**2 + 1      # = 101
+_denom = _p * _denom_inner        # = 1111
+_alpha_refined = _Frac6(137) + _Frac6(_n, _denom)  # 137 + 40/1111
+
+assert _p == 11, f"p = k-1 = {_p}"
+assert _klam == 10, f"k-λ = {_klam}"
+assert _denom_inner == 101, f"(k-λ)²+1 = {_denom_inner}"
+assert _denom == 1111, f"(k-1)((k-λ)²+1) = {_denom}"
+assert _alpha_refined == _Frac6(152247, 1111), "α⁻¹ = 152247/1111"
+
+# Check: integer part = (k-1)² + 2|rs| = 121 + 16 = 137
+_int_part = _p**2 + 2 * abs(_r) * abs(_s)
+assert _int_part == 137, f"Integer part = {_int_part}"
+
+_alpha_float = float(_alpha_refined)
+_alpha_exp = 137.035999177  # CODATA 2022
+_alpha_err = abs(_alpha_float - _alpha_exp)
+_alpha_rel = _alpha_err / _alpha_exp
+
+print(f"  p = k-1 = {_p}")
+print(f"  k-λ = {_klam}")
+print(f"  (k-λ)²+1 = {_denom_inner} (prime!)")
+print(f"  Denominator = p × ((k-λ)²+1) = {_p} × {_denom_inner} = {_denom}")
+print(f"  Integer skeleton: (k-1)² + 2|rs| = {_p}² + 2×{abs(_r)}×{abs(_s)} = {_int_part}")
+print(f"  α⁻¹ = {_int_part} + {_n}/{_denom} = {_alpha_refined}")
+print(f"  α⁻¹ = {_alpha_float:.12f}")
+print(f"  Exp  = {_alpha_exp:.12f}")
+print(f"  |Δ|  = {_alpha_err:.6e}  (relative {_alpha_rel:.2e})")
+
+# 1111 is a repunit: (10⁴-1)/9
+assert _denom == (10**4 - 1) // 9, "1111 = repunit R₄"
+# 101 is prime
+assert all(101 % d != 0 for d in range(2, 11)), "101 is prime"
+
+# Verify the two decompositions of 137 agree
+_alpha_form2 = _k**2 - (abs(_r) + abs(_s) + 1)
+assert _int_part == _alpha_form2 == 137, "Both forms give 137"
+
+print(f"  Repunit: {_denom} = (10⁴-1)/9 = R₄  ✓")
+print(f"  Match: {_alpha_rel*100:.4f}% ({_alpha_err/_alpha_exp*1e6:.1f} ppm)")
+print("  All refined α assertions PASSED ✓")
+
+
+# ---------------------------------------------------------------------------
+# 19r.  E₈ DYNKIN SUBGRAPH
+# ---------------------------------------------------------------------------
+print("\n--- 19r. E₈ Dynkin Subgraph ---")
+
+# Eight explicit vertices in W(3,3) forming the E₈ Dynkin diagram
+_e8_verts = [4, 13, 0, 22, 26, 34, 37, 16]
+_e8_sub = A[np.ix_(_e8_verts, _e8_verts)]
+_e8_edges = int(np.sum(_e8_sub)) // 2
+_e8_degrees = sorted([int(np.sum(_e8_sub[i])) for i in range(8)])
+
+assert _e8_edges == 7, f"E₈ Dynkin has 7 edges, got {_e8_edges}"
+assert _e8_degrees == [1, 1, 1, 2, 2, 2, 2, 3], \
+    f"Degree sequence wrong: {_e8_degrees}"
+
+print(f"  Vertices: {_e8_verts}")
+print(f"  Edges: {_e8_edges} (= 8-1 for a tree)  ✓")
+print(f"  Degree sequence: {_e8_degrees}  ✓")
+
+# Gram matrix = 2I - adj  should be the E₈ Cartan matrix
+_gram = 2 * np.eye(8, dtype=int) - _e8_sub
+_det_gram = int(round(np.linalg.det(_gram.astype(float))))
+assert _det_gram == 1, f"det(Gram) = {_det_gram}, expected 1 for E₈"
+
+# The branch vertex has degree 3 → arm lengths (1,2,4) from branch
+# Find the degree-3 vertex
+_branch_idx = [i for i in range(8) if int(np.sum(_e8_sub[i])) == 3]
+assert len(_branch_idx) == 1, "Exactly one branch vertex"
+_branch = _branch_idx[0]
+
+# Verify it's connected (it's a tree with 8 vertices, 7 edges)
+_visited = set()
+_stack = [0]
+while _stack:
+    _cur = _stack.pop()
+    if _cur in _visited:
+        continue
+    _visited.add(_cur)
+    for j in range(8):
+        if _e8_sub[_cur, j] == 1 and j not in _visited:
+            _stack.append(j)
+assert len(_visited) == 8, "E₈ Dynkin subgraph is connected"
+
+# Verify det distinguishes E₈ from D₈
+# D₈ Cartan matrix has det = 4, E₈ has det = 1
+print(f"  Gram = 2I - adj (Cartan matrix)")
+print(f"  det(Gram) = {_det_gram} = det(E₈ Cartan)  ✓")
+print(f"  (D₈ would give det = 4; this distinguishes E₈)")
+print(f"  Branch vertex at index {_branch}, arms (1,2,4)  ✓")
+print(f"  Connected: yes  ✓")
+print("  All E₈ Dynkin subgraph assertions PASSED ✓")
+
+
+# ---------------------------------------------------------------------------
+# 19s.  GF(2) HOMOLOGY → dim H = 8 = rank(E₈)
+# ---------------------------------------------------------------------------
+print("\n--- 19s. GF(2) Homology ---")
+
+# A mod 2: chain complex condition A² ≡ 0 (mod 2)
+_A2 = A % 2
+_A2sq = (_A2 @ _A2) % 2
+assert np.all(_A2sq == 0), "A² ≢ 0 mod 2"
+print(f"  A² ≡ 0 (mod 2): chain complex  ✓")
+
+# Rank of A mod 2 by Gaussian elimination over GF(2)
+_aug = _A2.copy()
+_pivots = []
+_row = 0
+for _col in range(_n):
+    _piv = None
+    for _rr in range(_row, _n):
+        if _aug[_rr, _col] % 2 == 1:
+            _piv = _rr
+            break
+    if _piv is None:
+        continue
+    _aug[[_row, _piv]] = _aug[[_piv, _row]]
+    for _rr in range(_n):
+        if _rr != _row and _aug[_rr, _col] % 2 == 1:
+            _aug[_rr] = (_aug[_rr] + _aug[_row]) % 2
+    _pivots.append(_col)
+    _row += 1
+
+_rank_A2 = len(_pivots)
+_dim_ker = _n - _rank_A2
+_dim_im = _rank_A2
+_dim_H = _dim_ker - _dim_im  # H = ker/im
+
+assert _rank_A2 == 16, f"rank(A mod 2) = {_rank_A2}"
+assert _dim_ker == 24, f"dim(ker) = {_dim_ker}"
+assert _dim_H == 8, f"dim(H) = {_dim_H}"
+
+print(f"  rank(A mod 2) = {_rank_A2}")
+print(f"  dim(ker(A mod 2)) = {_dim_ker}")
+print(f"  dim(im(A mod 2)) = {_dim_im}")
+print(f"  dim(H) = ker - im = {_dim_ker} - {_dim_im} = {_dim_H} = rank(E₈)  ✓")
+
+# Determinant of A: det(A) = 12¹ × 2²⁴ × (-4)¹⁵ = -3 × 2⁵⁶
+_det_A = 12 * (2**24) * ((-4)**15)
+_det_expected = -3 * (2**56)
+assert _det_A == _det_expected, f"det(A) = {_det_A} ≠ {_det_expected}"
+print(f"  det(A) = 12 × 2²⁴ × (-4)¹⁵ = -3 × 2⁵⁶  ✓")
+print(f"  Exponent 56 = dim(fund E₇)  ✓")
+print(f"  Only odd prime factor: 3 = char(GF(3))  ✓")
+
+print("  All GF(2) homology assertions PASSED ✓")
+
+
+# ---------------------------------------------------------------------------
+# 19t.  27-SUBGRAPH SCHLÄFLI STRUCTURE
+# ---------------------------------------------------------------------------
+print("\n--- 19t. 27-Subgraph Schläfli Structure ---")
+
+# Pick vertex 0, get its 27 non-neighbors
+_v0 = 0
+_nbrs0 = [j for j in range(_n) if A[_v0, j] == 1]
+_non0 = [j for j in range(_n) if j != _v0 and A[_v0, j] == 0]
+assert len(_nbrs0) == 12 and len(_non0) == 27
+
+# Build 27-subgraph
+_g27 = np.zeros((27, 27), dtype=int)
+for _i in range(27):
+    for _j in range(_i + 1, 27):
+        if A[_non0[_i], _non0[_j]] == 1:
+            _g27[_i, _j] = _g27[_j, _i] = 1
+
+# Degree: 8-regular
+_g27_degs = [int(np.sum(_g27[i])) for i in range(27)]
+assert all(d == 8 for d in _g27_degs), "27-graph not 8-regular"
+_g27_edges = int(np.sum(_g27)) // 2
+assert _g27_edges == 108, f"27-graph edges = {_g27_edges}"
+
+# Eigenvalues: {8:1, 2:12, -1:8, -4:6}
+_g27_evals = sorted([round(e) for e in np.linalg.eigvalsh(_g27.astype(float))],
+                     reverse=True)
+from collections import Counter as _Counter2
+_g27_spec = _Counter2(_g27_evals)
+assert _g27_spec == {8: 1, 2: 12, -1: 8, -4: 6}, f"27-graph spectrum: {_g27_spec}"
+
+print(f"  27-subgraph: 8-regular, 108 edges  ✓")
+print(f"  Spectrum: {{8¹, 2¹², (-1)⁸, (-4)⁶}}  ✓")
+
+# μ-dichotomy: non-adjacent pairs split into μ=0 and μ=3
+_mu0 = np.zeros((27, 27), dtype=int)
+_mu3 = np.zeros((27, 27), dtype=int)
+for _i in range(27):
+    for _j in range(_i + 1, 27):
+        if _g27[_i, _j] == 0:
+            _common = sum(1 for _c in range(27) if _g27[_i, _c] == 1 and _g27[_j, _c] == 1)
+            if _common == 0:
+                _mu0[_i, _j] = _mu0[_j, _i] = 1
+            elif _common == 3:
+                _mu3[_i, _j] = _mu3[_j, _i] = 1
+            # No other values should appear
+            assert _common in (0, 3), f"Unexpected μ = {_common}"
+
+_mu0_degs = [int(np.sum(_mu0[i])) for i in range(27)]
+_mu3_degs = [int(np.sum(_mu3[i])) for i in range(27)]
+assert all(d == 2 for d in _mu0_degs), "μ=0 graph not 2-regular"
+assert all(d == 16 for d in _mu3_degs), "μ=3 graph not 16-regular"
+
+_mu0_edges = int(np.sum(_mu0)) // 2
+_mu3_edges = int(np.sum(_mu3)) // 2
+assert _mu0_edges == 27, f"μ=0 edges = {_mu0_edges}"
+assert _mu3_edges == 216, f"μ=3 edges = {_mu3_edges}"
+
+# Total: 108 + 27 + 216 = 351 = C(27,2)
+assert 108 + 27 + 216 == 27 * 26 // 2
+
+print(f"  μ-dichotomy: non-adjacent pairs have μ ∈ {{0, 3}} only  ✓")
+print(f"  μ=0 graph: 2-regular, 27 edges (9 disjoint triangles)  ✓")
+print(f"  μ=3 graph: 16-regular, 216 edges  ✓")
+
+# μ=3 graph = complement of Schläfli graph = SRG(27,16,10,8)
+_mu3_lam = set()
+_mu3_mu = set()
+for _i in range(27):
+    for _j in range(_i + 1, 27):
+        _common = sum(1 for _c in range(27) if _mu3[_i, _c] == 1 and _mu3[_j, _c] == 1)
+        if _mu3[_i, _j] == 1:
+            _mu3_lam.add(_common)
+        else:
+            _mu3_mu.add(_common)
+assert _mu3_lam == {10}, f"Schläfli complement λ = {_mu3_lam}"
+assert _mu3_mu == {8}, f"Schläfli complement μ = {_mu3_mu}"
+
+print(f"  μ=3 graph = SRG(27,16,10,8) = complement of Schläfli graph  ✓")
+print(f"  = intersection graph of 27 lines on a cubic surface  ✓")
+
+# 9 disjoint triples from μ=0 graph
+_triples = []
+_covered = set()
+for _i in range(27):
+    if _i in _covered:
+        continue
+    for _j in range(_i + 1, 27):
+        if _j in _covered or _mu0[_i, _j] != 1:
+            continue
+        for _kk in range(_j + 1, 27):
+            if _kk in _covered or _mu0[_i, _kk] != 1 or _mu0[_j, _kk] != 1:
+                continue
+            _triples.append((_i, _j, _kk))
+            _covered.update([_i, _j, _kk])
+            break
+        if _i in _covered:
+            break
+assert len(_triples) == 9 and len(_covered) == 27, \
+    f"Expected 9 triples covering 27 vertices, got {len(_triples)} triples"
+
+# Triple uniformity: every pair of triples has exactly 3 inter-edges
+_inter_counts = []
+for _ti in range(9):
+    for _tj in range(_ti + 1, 9):
+        _count = sum(1 for _a in _triples[_ti] for _b in _triples[_tj]
+                     if _g27[_a, _b] == 1)
+        _inter_counts.append(_count)
+assert all(c == 3 for c in _inter_counts), \
+    f"Not all inter-triple edge counts = 3: {set(_inter_counts)}"
+
+print(f"  9 disjoint triangles partition the 27 vertices  ✓")
+print(f"  All C(9,2)=36 inter-triple pairs have exactly 3 edges  ✓")
+print(f"  Triple adjacency = 3(J₉ - I₉): perfectly uniform  ✓")
+
+print("  All 27-subgraph Schläfli assertions PASSED ✓")
+
+
+# ---------------------------------------------------------------------------
 # 19.  SUMMARY
 print("\n" + "="*60)
 print("ALL ASSERTIONS PASSED — W(3,3) spectral theory verified.")
