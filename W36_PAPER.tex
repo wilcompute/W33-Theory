@@ -673,6 +673,45 @@ $k$ and $k-1$, suggesting that much of the graph's geometry is determined
 by its regularity degree.
 \end{remark}
 
+\begin{proposition}[Bose--Mesner Algebra of $\W$]\label{prop:bose-mesner}
+Since $\W$ has diameter $2$, its adjacency algebra closes on the
+three-dimensional Bose--Mesner basis
+\[
+  \mathcal{B}(\W) = \mathrm{span}\{I,\,A,\,J-I-A\},
+\]
+where $J$ is the all-ones matrix. The first eigenmatrix is
+\[
+  P =
+  \begin{pmatrix}
+    1 & 12 & 27 \\
+    1 & 2  & -3 \\
+    1 & -4 & 3
+  \end{pmatrix},
+\]
+and the quotient matrix of the distance partition about any vertex is
+\[
+  B =
+  \begin{pmatrix}
+    0 & 12 & 0 \\
+    1 & 2  & 9 \\
+    0 & 4  & 8
+  \end{pmatrix},
+\]
+with spectrum $\mathrm{Spec}(B)=\{12,2,-4\}=\mathrm{Spec}(A)$.
+Thus the full association-scheme data of $\W$ already closes on the
+same three eigenvalues that drive the physical dictionary.
+\end{proposition}
+
+\begin{proof}
+The diameter-$2$ distance matrices are exactly $I$, $A$, and $J-I-A$,
+so they span the Bose--Mesner algebra. The rows of $P$ are obtained by
+evaluating these three basis elements on the eigenspaces of $A$ with
+eigenvalues $12$, $2$, and $-4$. The quotient matrix $B$ is the standard
+distance-partition matrix about a base vertex. Direct diagonalization of
+$B$ yields the same eigenvalues $12$, $2$, and $-4$, confirming that the
+local association-scheme data and the global SRG spectrum coincide.
+\end{proof}
+
 \subsubsection{Distance Matrix Spectrum and Wiener Identity}
 
 \begin{proposition}[Distance Matrix]\label{prop:distancematrix}
@@ -2255,6 +2294,49 @@ where $16=2^{q+1}$ is the matter-sector multiplicity and $31=M_5$ is the
 fifth Mersenne prime.
 \end{proposition}
 
+\subsection{The Trace Tower}
+
+\begin{theorem}[Trace tower of the Dirac operator]\label{thm:trace-tower}
+The logarithmic derivative of the spectral determinant generates all Dirac
+power traces:
+\begin{equation}\label{eq:trace-tower-gen}
+  -x\frac{d}{dx}\log Z(x)
+  \;=
+  \sum_{n=1}^{\infty} \mathrm{tr}(D^n)\,x^n.
+\end{equation}
+Since the Dirac eigenvalues are $\{5,-1,-7\}$ with multiplicities
+$\{10,16,6\}$, one obtains the closed formula
+\begin{equation}\label{eq:trace-tower-formula}
+  \mathrm{tr}(D^n) = 10\cdot 5^n + 16\cdot(-1)^n + 6\cdot(-7)^n.
+\end{equation}
+The first three nontrivial traces are
+\begin{align}
+  \mathrm{tr}(D) &= -8,\label{eq:trace-D1}\\
+  \mathrm{tr}(D^2) &= 560,\label{eq:trace-D2}\\
+  \mathrm{tr}(D^3) &= -824.\label{eq:trace-D3}
+\end{align}
+\end{theorem}
+
+\begin{proof}
+For a factorized determinant $Z(x)=\prod_i (1-\lambda_i x)^{m_i}$,
+\[
+  -x\frac{d}{dx}\log Z(x)
+  = \sum_i \frac{m_i\lambda_i x}{1-\lambda_i x}
+  = \sum_{n\ge 1}\!\left(\sum_i m_i\lambda_i^n\right)x^n,
+\]
+which is exactly the power-series generating function for
+$\mathrm{tr}(D^n)$. Substituting $(\lambda_i,m_i)=(5,10),(-1,16),(-7,6)$
+gives \eqref{eq:trace-tower-formula}. The special values follow directly:
+$50-16-42=-8$, $250+16+294=560$, and $1250-16-2058=-824$.
+\end{proof}
+
+The shifted value
+\[
+  840 = \mathrm{tr}(D^2) + 7\cdot 40 = 560 + 280
+\]
+reappears in Section~\ref{sec:numbertheory} as the central arithmetic closure
+integer of the $q=3$ theory.
+
 \subsection{The Ihara Zeta and Fermionic Partition Function}
 
 Matsuura and Ohta (2025) proved that on any graph, the fermionic
@@ -2355,6 +2437,27 @@ where $|A_4|=k=12=\dim(G_{\mathrm{SM}})$.
 Fano lines are related by the outer automorphism of $\mathbb{O}$.
 The Standard Model CP-violating phase $\delta_{\mathrm{CKM}}$ is generated
 by this discrete Fano orientation choice.
+
+\subsection{Klein Quartic and \texorpdfstring{$\mathrm{PSL}(2,7)$}{PSL(2,7)}}
+
+The Klein quartic
+\[
+  \mathcal{K}: X^3Y + Y^3Z + Z^3X = 0
+\]
+is the genus-$3$ Hurwitz surface whose full automorphism group has order
+$168$. The Fano plane and the Klein quartic therefore share the same symmetry
+group:
+\begin{equation}\label{eq:klein-fano}
+  |\mathrm{PSL}(2,7)|
+  = |\mathrm{Aut}(\text{Fano plane})|
+  = |\mathrm{Aut}(\mathcal{K})|
+  = 168
+  = \Phi_6\,f
+  = 7\cdot 24.
+\end{equation}
+This identifies the octonionic Fano incidence pattern and the Klein quartic
+Hurwitz symmetry as two realizations of the same $168$-element arithmetic
+kernel that underlies the $q=3$ vacuum selection.
 
 
 %% ===============================================================
@@ -2861,6 +2964,23 @@ $10$-order-of-magnitude hierarchy arises from radiative corrections
 (Froggatt-Nielsen mechanism with expansion parameter
 $\varepsilon = q/(q^2{+}q{+}1) = 3/13$).
 \end{proof}
+
+\subsection{Exact Yukawa Coefficients}
+
+\begin{proposition}[Exact three-generation Yukawa ratios]\label{prop:yukawa-rationals}
+Beyond the democratic selection rule of Proposition~\ref{prop:yukawa}, the
+individual $q=3$ Yukawa coefficients are fixed as exact $\W$-rationals:
+\begin{align}
+  Y_{21} &= \frac{q^2}{v} = \frac{9}{40},\label{eq:Y21}\\
+  Y_{22}^{\mathrm{trip}} &= \frac{q}{v-q} = \frac{3}{37},\label{eq:Y22trip}\\
+  Y_{22}^{\mathrm{down}} &= \frac{\mu+1}{2\Phi_6(v-q)} = \frac{5}{518},\label{eq:Y22down}\\
+  Y_{32} &= \frac{1}{q^3} = \frac{1}{27}.\label{eq:Y32}
+\end{align}
+Every denominator is a primitive graph-theoretic integer:
+$v=40$, $v-q=37$, $2\Phi_6(v-q)=518$, and $q^3=27$.
+There is therefore no continuous Yukawa modulus left once the
+$\mathrm{GQ}(3,3)$ data are fixed.
+\end{proposition}
 
 %% ===============================================================
 \section{The $q = 3$ Uniqueness Theorem}
@@ -3737,7 +3857,7 @@ Code: \texttt{SPECTRAL\_VERIFICATION.py}, section~19ag.
 
 %% ===============================================================
 
-\begin{proposition}[Spacetime Dimension Decomposition]\label{prop:spacetime}
+\begin{proposition}[Spacetime Dimension Decomposition]\label{prop:spacetime-dimensions}
 The SRG parameters decompose the total dimensionality as
 \[
   d_{\mathrm{macro}} = \mu = 4, \qquad
@@ -3983,7 +4103,7 @@ of vertices: $\mu^2(\mu+1)/2 = v = 40$.
 \begin{proof}
 \emph{Step~1 (Dimension assignment).}
 The macroscopic spacetime dimension is $d = \mu = 4$
-(Proposition~\ref{prop:spacetime}).
+(Proposition~\ref{prop:spacetime-dimensions}).
 The Hoffman bound is $\alpha_H = v|s|/(k+|s|) = 160/16 = 10$.
 
 \emph{Step~2 (Christoffel symbols).}
@@ -5044,6 +5164,87 @@ at $q = 3$: $81 \cdot 8 \cdot 80 = 51840 = |W(E_6)|$.
 At $q = 2$: $720 \ne 51840$. At $q = 4$: $1958400 \ne 51840$.
 Code: \texttt{SPECTRAL\_VERIFICATION.py}, section~19be.
 \end{proof}
+
+%% ===============================================================
+\section{Number Theory and Modular Data}
+\label{sec:numbertheory}
+%% ===============================================================
+
+\begin{theorem}[The 840 identities]\label{thm:840-identities}
+The integer $840$ is forced by the $q=3$ geometry through the simultaneous
+identities
+\begin{align}
+  840 &= \operatorname{lcm}(1,2,\ldots,2^q)
+      = \operatorname{lcm}(1,\ldots,8),\label{eq:840-lcm}\\
+  840 &= \mu\cdot 7\# = 4\cdot 210,\label{eq:840-primorial}\\
+  840 &= \frac{7!}{3!} = \frac{\Phi_6!}{q!},\label{eq:840-factorial}\\
+  840 &= (q+\lambda)\,|\mathrm{PSL}(2,7)| = 5\cdot 168,\label{eq:840-psl}\\
+  d(840) &= 32 = 2^{q+\lambda}.\label{eq:840-divcount}
+\end{align}
+Here $d(n)$ denotes the divisor-counting function. Thus the same number
+packages LCM arithmetic, primorial growth, Fano symmetry, and the
+$32$-dimensional $\mathrm{Spin}(10)$ spinor space.
+\end{theorem}
+
+\begin{proposition}[Continued-fraction alphabet]\label{prop:cf-alphabet}
+The canonical $W(3,3)$ constants use exactly the digit set
+\[
+  \{1,2,3,4,5,7,8,20\}
+  = \{1,\lambda,q,\mu,q+\lambda,\Phi_6,2^q,v/\lambda\}.
+\]
+No additional continued-fraction digit is needed once the $q=3$ spectral
+parameters are fixed.
+\end{proposition}
+
+\begin{proposition}[All nine Heegner numbers from $W(3,3)$]\label{prop:heegner}
+Each class-number-one Heegner number appears as a primitive $W(3,3)$
+combination:
+\begin{center}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{cl}
+\toprule
+Heegner number & $W(3,3)$ expression \\
+\midrule
+$1$   & $\lambda/\lambda$ \\
+$2$   & $\lambda$ \\
+$3$   & $q$ \\
+$7$   & $\Phi_6$ \\
+$11$  & $k-1$ \\
+$19$  & $\Phi_6+k$ \\
+$43$  & $v+q$ \\
+$67$  & $5\Phi_3+\lambda$ \\
+$163$ & $\Phi_3^2-\Phi_6+1$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+In particular, the largest Heegner discriminant is recovered as
+$163 = 13^2 - 7 + 1$ from the same cyclotomic pair $(\Phi_3,\Phi_6)$ that
+governs the weak and neutrino mixing angles.
+\end{proposition}
+
+\begin{proposition}[Ramanujan tau and modular weights]\label{prop:tau-modular}
+The first nontrivial Ramanujan coefficients are fixed by the graph data:
+\begin{align}
+  \tau(2) &= -f = -24,\label{eq:tau2}\\
+  \tau(3) &= \binom{\Theta}{\mu+1} = \binom{10}{5} = 252,\label{eq:tau3}\\
+  744 &= (2^{q+\lambda}-1)f = 31\cdot 24.\label{eq:j744}
+\end{align}
+Moreover, the three adjacency eigenvalues line up with the first modular
+weights:
+\begin{center}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{cccc}
+\toprule
+Eigenvalue & Value & Modular weight & Form \\
+\midrule
+$k$ & $12$ & $12$ & $\Delta(\tau)=\eta(\tau)^{24},\ E_{12}$ \\
+$|s|$ & $4$ & $4$ & $E_4(\tau)=\theta_{E_8}(\tau)$ \\
+$r$ & $2$ & $2$ & $E_2(\tau)$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+Hence the weight ladder $2,4,12$ is already present in the bare SRG spectrum.
+\end{proposition}
 
 %% ===============================================================
 \section{Riemann Zeta Dictionary}

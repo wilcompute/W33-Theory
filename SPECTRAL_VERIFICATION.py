@@ -4334,6 +4334,107 @@ print("  Q₈ loop assertions PASSED ✓")
 
 
 # ---------------------------------------------------------------------------
+# 19bk.  DIRAC TRACE TOWER
+# ---------------------------------------------------------------------------
+print("\n--- 19bk. Dirac Trace Tower ---")
+
+_dirac_eigs = [5, -1, -7]
+_dirac_mults = [10, 16, 6]
+
+_trD1 = sum(m * lam for m, lam in zip(_dirac_mults, _dirac_eigs))
+_trD2 = sum(m * (lam**2) for m, lam in zip(_dirac_mults, _dirac_eigs))
+_trD3 = sum(m * (lam**3) for m, lam in zip(_dirac_mults, _dirac_eigs))
+
+assert _trD1 == -8
+assert _trD2 == 560
+assert _trD3 == -824
+print(f"  tr(D) = 10·5 + 16·(−1) + 6·(−7) = {_trD1}  ✓")
+print(f"  tr(D²) = 10·25 + 16·1 + 6·49 = {_trD2}  ✓")
+print(f"  tr(D³) = 10·125 + 16·(−1) + 6·(−343) = {_trD3}  ✓")
+
+_trace_840 = _trD2 + _Phi6 * n
+assert _trace_840 == 840
+print(f"  840 = tr(D²) + Φ₆·v = {_trD2} + {_Phi6}·{n} = {_trace_840}  ✓")
+print("  Dirac trace tower assertions PASSED ✓")
+
+
+# ---------------------------------------------------------------------------
+# 19bl.  840 IDENTITIES AND HEEGNER NUMBERS
+# ---------------------------------------------------------------------------
+print("\n--- 19bl. 840 Identities and Heegner Numbers ---")
+
+import math as _math_bl
+
+_lcm_840 = _math_bl.lcm(*range(1, 2**_q + 1))
+assert _lcm_840 == 840
+print(f"  lcm(1,…,2^q) = lcm(1,…,{2**_q}) = {_lcm_840}  ✓")
+
+_primorial_7 = 2 * 3 * 5 * 7
+assert _mu_u * _primorial_7 == 840
+print(f"  μ·7# = {_mu_u}·{_primorial_7} = {_mu_u * _primorial_7}  ✓")
+
+_factorial_840 = _math_bl.factorial(_Phi6) // _math_bl.factorial(_q)
+assert _factorial_840 == 840
+print(f"  Φ₆!/q! = {_Phi6}!/{_q}! = {_factorial_840}  ✓")
+
+_psl_840 = (_q + _lam_u) * 168
+assert _psl_840 == 840
+print(f"  (q+λ)|PSL(2,7)| = ({_q}+{_lam_u})·168 = {_psl_840}  ✓")
+
+_d_840 = sum(1 for d in range(1, 841) if 840 % d == 0)
+assert _d_840 == 32 == 2**(_q + _lam_u)
+print(f"  d(840) = {_d_840} = 2^(q+λ) = 2^({_q + _lam_u})  ✓")
+
+_heegner_values = {
+    1: _lam_u / _lam_u,
+    2: _lam_u,
+    3: _q,
+    7: _Phi6,
+    11: _k - 1,
+    19: _Phi6 + _k,
+    43: n + _q,
+    67: 5 * _Phi3 + _lam_u,
+    163: _Phi3**2 - _Phi6 + 1,
+}
+for _target, _value in _heegner_values.items():
+    assert _target == _value
+print(f"  Heegner table verified: {sorted(_heegner_values.keys())}  ✓")
+
+_tau2 = -_fr
+_tau3 = _math_bl.comb(10, _mu_u + 1)
+_j744 = (2**(_q + _lam_u) - 1) * _fr
+assert _tau2 == -24
+assert _tau3 == 252
+assert _j744 == 744
+print(f"  τ(2) = −f = {_tau2}, τ(3) = C(10,5) = {_tau3}, j₀ = {_j744}  ✓")
+print("  Arithmetic closure assertions PASSED ✓")
+
+
+# ---------------------------------------------------------------------------
+# 19bm.  KLEIN QUARTIC AND EXACT YUKAWA RATIOS
+# ---------------------------------------------------------------------------
+print("\n--- 19bm. Klein Quartic and Exact Yukawa Ratios ---")
+
+from fractions import Fraction as _Frac_bm
+
+_hurwitz_3 = 84 * (_q - 1)
+assert _hurwitz_3 == 168 == _Phi6 * _fr
+print(f"  Hurwitz order at genus 3: 84·({_q}−1) = {_hurwitz_3} = Φ₆·f = {_Phi6}·{_fr}  ✓")
+
+_Y21 = _Frac_bm(_q**2, n)
+_Y22_trip = _Frac_bm(_q, n - _q)
+_Y22_down = _Frac_bm(_mu_u + 1, 2 * _Phi6 * (n - _q))
+_Y32 = _Frac_bm(1, _q**3)
+
+assert _Y21 == _Frac_bm(9, 40)
+assert _Y22_trip == _Frac_bm(3, 37)
+assert _Y22_down == _Frac_bm(5, 518)
+assert _Y32 == _Frac_bm(1, 27)
+print(f"  Y21 = {_Y21}, Y22^trip = {_Y22_trip}, Y22^down = {_Y22_down}, Y32 = {_Y32}  ✓")
+print("  Klein quartic / Yukawa assertions PASSED ✓")
+
+
+# ---------------------------------------------------------------------------
 # 19.  SUMMARY
 print("\n" + "="*60)
 print("ALL ASSERTIONS PASSED — W(3,3) spectral theory verified.")
