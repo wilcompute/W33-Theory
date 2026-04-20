@@ -2337,6 +2337,171 @@ print("  All 27-subgraph Schläfli assertions PASSED ✓")
 
 
 # ---------------------------------------------------------------------------
+# 19u.  PROTON-ELECTRON MASS RATIO  (Proposition: prop:mp-me)
+# ---------------------------------------------------------------------------
+print("\n--- 19u. Proton-Electron Mass Ratio ---")
+
+# Formula: m_p/m_e ≈ v(v + λ + μ) − μ = 40 × 46 − 4 = 1836
+_lam_u = _q - 1          # λ = 2
+_mu_u = _q + 1            # μ = 4
+_mp_me_pred = n * (n + _lam_u + _mu_u) - _mu_u
+assert _mp_me_pred == 1836, f"Expected 1836, got {_mp_me_pred}"
+
+# Decomposition: v² + vλ + vμ − μ = 1600 + 80 + 160 − 4
+assert n**2 + n * _lam_u + n * _mu_u - _mu_u == 1836
+print(f"  v(v+λ+μ)−μ = {n}×{n+_lam_u+_mu_u}−{_mu_u} = {_mp_me_pred}  ✓")
+
+# Compare with CODATA 2022
+_mp_me_obs = 1836.15267343
+_mp_me_pct = abs(_mp_me_pred - _mp_me_obs) / _mp_me_obs * 100
+assert _mp_me_pct < 0.01, f"Residual {_mp_me_pct:.4f}% > 0.01%"
+print(f"  Observed: {_mp_me_obs:.5f}, residual = {_mp_me_pct:.4f}%  ✓")
+
+# Express in q
+# v(v+λ+μ)−μ = (q³+q²+q+1)(q³+q²+2q+1) − (q+1)
+# For q=3: 40 × 46 − 4 = 1840 − 4 = 1836
+_v_q = _q**3 + _q**2 + _q + 1
+_sum_q = _v_q + _q - 1 + _q + 1  # v + λ + μ
+assert _v_q == 40 and _sum_q == 46
+_val_q = _v_q * _sum_q - (_q + 1)
+assert _val_q == 1836
+print(f"  In q: (q³+q²+q+1)(q³+q²+2q+1)−(q+1) = {_val_q} for q={_q}  ✓")
+
+print("  All proton-electron mass ratio assertions PASSED ✓")
+
+
+# ---------------------------------------------------------------------------
+# 19v.  KOIDE FORMULA  (Proposition: prop:koide)
+# ---------------------------------------------------------------------------
+print("\n--- 19v. Koide Formula ---")
+
+# Koide parameter: Q = (m_e + m_μ + m_τ) / (√m_e + √m_μ + √m_τ)² = 2/3
+# Graph prediction: Q = (q-1)/q = 2/3
+
+_Q_pred = _Frac5(_q - 1, _q)
+assert _Q_pred == _Frac5(2, 3)
+
+# Observed lepton masses (pole masses in GeV)
+_m_e = 0.000510999
+_m_mu = 0.105658
+_m_tau = 1.77686
+
+_Q_obs = (_m_e + _m_mu + _m_tau) / (
+    np.sqrt(_m_e) + np.sqrt(_m_mu) + np.sqrt(_m_tau)
+) ** 2
+_Q_pct = abs(_Q_obs - float(_Q_pred)) / float(_Q_pred) * 100
+assert _Q_pct < 0.05, f"Koide residual {_Q_pct:.4f}% > 0.05%"
+print(f"  Q_pred = (q−1)/q = {_Q_pred} = {float(_Q_pred):.6f}  ✓")
+print(f"  Q_obs  = {_Q_obs:.6f}, residual = {_Q_pct:.4f}%  ✓")
+
+# Alternative graph expressions for 2/3
+assert _Frac5(2, 3) == _Frac5(_lam_u, _lam_u + 1)  # λ/(λ+1)
+# Also: 2/3 = r/(r+1) since r = 2
+assert _Frac5(2, 3) == _Frac5(_r, _r + 1)
+print(f"  = λ/(λ+1) = r/(r+1) = {_Q_pred}  ✓")
+
+print("  All Koide formula assertions PASSED ✓")
+
+
+# ---------------------------------------------------------------------------
+# 19w.  GUT COUPLING  (Proposition: prop:gut)
+# ---------------------------------------------------------------------------
+print("\n--- 19w. GUT Coupling ---")
+
+# αGUT⁻¹ = v − k − λ = 40 − 12 − 2 = 26
+_alpha_GUT_inv = n - _k - _lam_u
+assert _alpha_GUT_inv == 26
+
+# Express as 2Φ₃(q) = 2 × 13 = 26
+assert _alpha_GUT_inv == 2 * _Phi3
+print(f"  αGUT⁻¹ = v−k−λ = {n}−{_k}−{_lam_u} = {_alpha_GUT_inv} = 2Φ₃(q)  ✓")
+
+# Also: = v − 1 − k − (λ − 1) = 27 − 1 = 26 (matter sector minus 1)
+assert n - 1 - _k - (_lam_u - 1) == 26
+# = 2(q² + q + 1) where q² + q + 1 is the number of lines of PG(2,q)
+print(f"  = 2(q²+q+1) = 2×{_Phi3} = {2*_Phi3}  ✓")
+
+# MSSM one-loop running comparison
+# β-coefficients: (b₁, b₂, b₃) = (33/5, 1, -3)
+_b1_val = 33.0 / 5
+_b2_val = 1.0
+_b3_val = -3.0
+
+# At M_Z: α₁⁻¹ = (3/5)α⁻¹cos²θ_W, α₂⁻¹ = α⁻¹sin²θ_W
+# Using integer α⁻¹ = 137 and sin²θ_W = 3/13
+_alpha_inv_int = 137
+_cos2W_val = float(_Phi3 - _q) / float(_Phi3)  # 10/13
+_a1_MZ_val = (3.0 / 5) * _alpha_inv_int * _cos2W_val
+_a2_MZ_val = _alpha_inv_int * float(_q) / float(_Phi3)
+_a3_MZ_val = 76.0 / 9
+
+# Unification scale: t = 2π(α₁⁻¹ - α₂⁻¹)/(b₁ - b₂)
+_t_unif = 2 * np.pi * (_a1_MZ_val - _a2_MZ_val) / (_b1_val - _b2_val)
+
+# Run each coupling to GUT scale
+_a1_GUT = _a1_MZ_val - _b1_val / (2 * np.pi) * _t_unif
+_a3_GUT = _a3_MZ_val - _b3_val / (2 * np.pi) * _t_unif
+_a_GUT_avg = (_a1_GUT + _a3_GUT) / 2
+
+# Check that MSSM running gives αGUT⁻¹ ≈ 26 (within 3%)
+_gut_pct = abs(_a_GUT_avg - 26) / 26 * 100
+assert _gut_pct < 3.0, f"MSSM running gives {_a_GUT_avg:.2f}, {_gut_pct:.1f}% from 26"
+print(f"  MSSM running: αGUT⁻¹ ≈ {_a_GUT_avg:.2f} ({_gut_pct:.1f}% from 26)  ✓")
+
+# Gap at unification (measure of quality)
+_gap = abs(_a1_GUT - _a3_GUT) / _a_GUT_avg * 100
+assert _gap < 5.0, f"Unification gap {_gap:.1f}% > 5%"
+print(f"  Unification gap: {_gap:.1f}%  ✓")
+
+# Proton lifetime rough estimate
+_M_Z = 91.1876  # GeV
+_M_GUT_simple = _M_Z * np.exp(_t_unif)
+_m_p_val = 0.938  # GeV
+_alpha_GUT_fl = 1.0 / _a_GUT_avg
+# τ_p ~ M_GUT⁴ / (αGUT² m_p⁵) in natural units → convert to years
+# Reference: τ_p ~ 10³⁵ yr for M_GUT = 2×10¹⁶ GeV, αGUT = 1/24
+_tau_ref = 1e35  # years
+_M_ref = 2e16   # GeV
+_a_ref = 1.0 / 24
+_tau_ratio = (_M_GUT_simple / _M_ref)**4 * (_a_ref / _alpha_GUT_fl)**2
+_tau_pred_yr = _tau_ratio * _tau_ref
+assert _tau_pred_yr > 1.6e34, "Must exceed Super-K bound"
+print(f"  M_GUT ≈ {_M_GUT_simple:.2e} GeV  ✓")
+print(f"  τ(p→e⁺π⁰) ~ {_tau_pred_yr:.1e} yr > 1.6×10³⁴ (Super-K bound)  ✓")
+
+print("  All GUT coupling assertions PASSED ✓")
+
+
+# ---------------------------------------------------------------------------
+# 19x.  NEUTRINO MASS-SQUARED RATIO  (Proposition: prop:Rnu)
+# ---------------------------------------------------------------------------
+print("\n--- 19x. Neutrino Mass-Squared Ratio ---")
+
+# R_ν = Δm²_atm / Δm²_sol ≈ 2Φ₃ + Φ₆ = 2×13 + 7 = 33
+_R_pred = 2 * _Phi3 + _Phi6
+assert _R_pred == 33
+print(f"  R_pred = 2Φ₃+Φ₆ = 2×{_Phi3}+{_Phi6} = {_R_pred}  ✓")
+
+# Also: = αGUT⁻¹ + Φ₆ = 26 + 7 = 33
+assert _R_pred == _alpha_GUT_inv + _Phi6
+# Also: = vertex cover number τ = v − α = 40 − 7 = 33
+_tau_cover = n - 7  # α(W) = 7
+assert _R_pred == _tau_cover
+print(f"  = αGUT⁻¹+Φ₆ = {_alpha_GUT_inv}+{_Phi6} = {_R_pred}  ✓")
+print(f"  = τ(W) = v−α = {n}−7 = {_tau_cover}  ✓")
+
+# Observed values (NuFIT 5.3, 2024, normal ordering)
+_dm2_sol = 7.53e-5   # eV²
+_dm2_atm = 2.453e-3  # eV²
+_R_obs = _dm2_atm / _dm2_sol
+_R_pct = abs(_R_pred - _R_obs) / _R_obs * 100
+assert _R_pct < 2.0, f"R residual {_R_pct:.1f}% > 2%"
+print(f"  R_obs = Δm²_atm/Δm²_sol = {_R_obs:.1f}, residual = {_R_pct:.1f}%  ✓")
+
+print("  All neutrino mass-squared ratio assertions PASSED ✓")
+
+
+# ---------------------------------------------------------------------------
 # 19.  SUMMARY
 print("\n" + "="*60)
 print("ALL ASSERTIONS PASSED — W(3,3) spectral theory verified.")
