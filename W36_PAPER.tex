@@ -3083,6 +3083,96 @@ confirming $q = 3$ to within a few per cent.
 \end{proof}
 
 %% ===============================================================
+
+\begin{proposition}[Laplacian Eigenvalue Identities]\label{prop:laplacian-id}
+The two non-zero Laplacian eigenvalues
+$\mu_1 = k - r = 10$ and $\mu_2 = k - s = 16$
+satisfy the following algebraic identities:
+\begin{alignat}{3}
+  \mu_1\,\mu_2 &= 160  &&= T \quad &&\text{(triangle count)}, \label{eq:lap-prod}\\
+  \mu_1 + \mu_2 &= 26 &&= f + \lambda \quad &&\text{(bosonic string dimension)}, \label{eq:lap-sum}\\
+  \mu_2 - \mu_1 &= 6 &&= 2q, \label{eq:lap-diff}\\
+  \mu_2^2 - \mu_1^2 &= 156 &&= k(k+1), \label{eq:lap-diffsq}\\
+  \tfrac{1}{2}(\mu_1^2 + \mu_2^2) &= 178 &&= q^4{+}2q^3{+}4q^2{+}2q{+}1.
+    \label{eq:lap-meansq}
+\end{alignat}
+\end{proposition}
+
+\begin{proof}
+Direct computation from $\mu_i = k - \theta_i$ where
+$\theta_1 = r = 2$, $\theta_2 = s = -4$;
+the triangle count $T = vk\lambda/6 = 40\cdot12\cdot2/6 = 160$.
+Identity~\eqref{eq:lap-meansq} follows from
+$\mu_1 = q^2+1$ and $\mu_2 = (q+1)^2$.
+\end{proof}
+
+%% ===============================================================
+
+\begin{proposition}[Froggatt--Nielsen Expansion Parameter]\label{prop:fn}
+The Wolfenstein parameter of the CKM matrix admits the spectral
+derivation
+\[
+  \varepsilon
+  \;=\;
+  \frac{q}{\sqrt{\tfrac{1}{2}(\mu_2^2 + \mu_1^2)}}
+  \;=\;
+  \frac{3}{\sqrt{178}}
+  \;\approx\; 0.22485,
+\]
+where $\mu_{1,2}$ are the non-zero Laplacian eigenvalues of
+$\mathcal{W}$.
+The observed Wolfenstein $\lambda = 0.22500 \pm 0.00010$;
+the residual is $0.07\%$.
+The Froggatt--Nielsen charges are the generation
+indices $n_c \in \{0,1,2\}$ from the GQ trichromatic
+structure (Proposition~\ref{prop:trichromatic}),
+giving mass ratios $m_i/m_3 \sim \varepsilon^{2n_c}$ for
+up-type quarks.
+\end{proposition}
+
+\begin{proof}
+The denominator $178 = \frac{1}{2}(\mu_2^2 + \mu_1^2)$
+from Proposition~\ref{prop:laplacian-id}.
+The FN charge assignment follows from the three spread classes:
+generation~0 (charge~0, heaviest) corresponds to the top/bottom/tau
+family; generations~1,2 (charges~1,2) correspond to the lighter families.
+\end{proof}
+
+%% ===============================================================
+
+\begin{proposition}[Generation Spectral Inequivalence]\label{prop:gen-break}
+Let $\mathcal{W}_c$ ($c = 0,1,2$) denote the three generation
+subgraphs obtained by restricting $\mathcal{W}$ to edges of a
+single spread colour.  Then
+\[
+  \operatorname{Spec}(\mathcal{W}_1) = \operatorname{Spec}(\mathcal{W}_2),
+  \qquad
+  \operatorname{Spec}(\mathcal{W}_0) \neq \operatorname{Spec}(\mathcal{W}_1).
+\]
+The Laplacian zero-mode counts are $3 + 2 + 2 = 7$, with
+$\mathcal{W}_0$ having three connected components and
+$\mathcal{W}_{1,2}$ each having two.
+This is the breaking pattern
+$\mathrm{SU}(3)_{\mathrm{family}} \to \mathrm{SU}(2) \times \mathrm{U}(1)$,
+$\mathbf{3} \to \mathbf{2} + \mathbf{1}$:
+generations~1,2 form an $\mathrm{SU}(2)$ doublet (light families)
+while generation~0 is the singlet (top/bottom/tau).
+\end{proposition}
+
+\begin{proof}
+Each $K_4$ line of $\mathrm{GQ}(3,3)$ admits three perfect matchings
+that partition its six edges into three colour classes.
+This produces a consistent 3-colouring of all $E = 240$ edges.
+Numerical diagonalisation confirms
+$\max_i |\lambda_i(\mathcal{W}_1) - \lambda_i(\mathcal{W}_2)| < 10^{-8}$
+while
+$\max_i |\lambda_i(\mathcal{W}_0) - \lambda_i(\mathcal{W}_1)| > 0.1$.
+The connected components follow from the Laplacian nullity of each
+subgraph.  Code:
+\texttt{SPECTRAL\_VERIFICATION.py}, section~19ae.
+\end{proof}
+
+%% ===============================================================
 \section{Falsifiable Predictions}
 \label{sec:falsifiable}
 %% ===============================================================

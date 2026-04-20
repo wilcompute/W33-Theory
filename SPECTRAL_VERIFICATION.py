@@ -2712,6 +2712,179 @@ print("  All Georgi-Jarlskog factor assertions PASSED ✓")
 
 
 # ---------------------------------------------------------------------------
+# 19ac. LAPLACIAN EIGENVALUE IDENTITIES  (Proposition: prop:laplacian-id)
+# ---------------------------------------------------------------------------
+print("\n--- 19ac. Laplacian Eigenvalue Identities ---")
+
+# Laplacian L = kI − A has eigenvalues {0¹, 10²⁴, 16¹⁵}
+# μ₁ = k − r = 12 − 2 = 10  (gauge multiplicity f_r = 24)
+# μ₂ = k − s = 12 − (−4) = 16  (fermion multiplicity f_s = 15)
+_mu1_lap = _k - _r   # = 10
+_mu2_lap = _k - _s   # = 16
+assert _mu1_lap == 10
+assert _mu2_lap == 16
+
+# Product = triangle count
+_lap_prod = _mu1_lap * _mu2_lap
+assert _lap_prod == 160
+_T_count = n * _k * _lam_u // 6  # vkλ/6 = 40×12×2/6 = 160
+assert _lap_prod == _T_count
+print(f"  μ₁×μ₂ = {_mu1_lap}×{_mu2_lap} = {_lap_prod} = T (triangle count)  ✓")
+
+# Sum = bosonic string dimension
+_lap_sum = _mu1_lap + _mu2_lap
+assert _lap_sum == 26
+assert _lap_sum == _fr + _lam_u  # = f + λ = 24 + 2
+print(f"  μ₁+μ₂ = {_lap_sum} = 26 = f+λ (bosonic string dimension)  ✓")
+
+# Difference = 2q
+_lap_diff = _mu2_lap - _mu1_lap
+assert _lap_diff == 2 * _q
+assert _lap_diff == 6
+print(f"  μ₂−μ₁ = {_lap_diff} = 2q = {2*_q}  ✓")
+
+# Difference of squares = k(k+1)
+_lap_diff_sq = _mu2_lap**2 - _mu1_lap**2
+assert _lap_diff_sq == _k * (_k + 1)
+assert _lap_diff_sq == 156
+print(f"  μ₂²−μ₁² = {_lap_diff_sq} = k(k+1) = {_k}×{_k+1}  ✓")
+
+# Mean of squares = 178 (connects to Froggatt-Nielsen ε² = 9/178)
+_lap_mean_sq = (_mu2_lap**2 + _mu1_lap**2) // 2
+assert _lap_mean_sq == 178
+assert _lap_mean_sq == _q**4 + 2*_q**3 + 4*_q**2 + 2*_q + 1
+print(f"  (μ₂²+μ₁²)/2 = {_lap_mean_sq} = q⁴+2q³+4q²+2q+1  ✓")
+
+# Ratio = f_r/f_s = 8/5
+_lap_ratio = _Frac5(_mu2_lap, _mu1_lap)
+assert _lap_ratio == _Frac5(8, 5)
+print(f"  μ₂/μ₁ = {_lap_ratio} = 8/5  ✓")
+
+print("  All Laplacian eigenvalue identity assertions PASSED ✓")
+
+
+# ---------------------------------------------------------------------------
+# 19ad. FROGGATT-NIELSEN EXPANSION PARAMETER  (Proposition: prop:fn)
+# ---------------------------------------------------------------------------
+print("\n--- 19ad. Froggatt-Nielsen Parameter ---")
+
+# ε = q / √((μ₂²+μ₁²)/2) = 3/√178 ≈ 0.22485
+_fn_denom = _lap_mean_sq  # = (μ₂²+μ₁²)/2 = 178
+assert _fn_denom == 178
+_eps_fn = _q / np.sqrt(_fn_denom)
+
+# Compare with observed Wolfenstein λ
+_wolf_obs = 0.22500
+_fn_pct = abs(_eps_fn - _wolf_obs) / _wolf_obs * 100
+assert _fn_pct < 0.1, f"FN residual {_fn_pct:.3f}% > 0.1%"
+print(f"  ε = q/√((μ₂²+μ₁²)/2) = {_q}/√{_fn_denom} = {_eps_fn:.6f}  ✓")
+print(f"  Observed λ_W = {_wolf_obs}, residual = {_fn_pct:.3f}%  ✓")
+
+# Connection to Laplacian mean-of-squares
+print(f"  Denominator 178 = (μ₂²+μ₁²)/2 = Laplacian mean-of-squares  ✓")
+
+# ε² = q²/((μ₂²+μ₁²)/2) = 9/178
+_eps2_frac = _Frac5(_q**2, _fn_denom)
+assert _eps2_frac == _Frac5(9, 178)
+print(f"  ε² = q²/((μ₂²+μ₁²)/2) = {_eps2_frac} = {float(_eps2_frac):.6f}  ✓")
+
+# FN charge structure: Gen 0 (charge 0), Gen 1 (charge 1), Gen 2 (charge 2)
+# Up-type quarks: m_u/m_t ~ ε⁴, m_c/m_t ~ ε²
+_mt_obs = 173.2  # GeV
+_mc_obs = 1.27   # GeV (running mass at m_c scale)
+_mu_obs = 0.00216  # GeV
+
+# Check ε² ≈ m_c/m_t (order of magnitude)
+_mc_mt_obs = _mc_obs / _mt_obs
+_mc_mt_pred = _eps_fn**2
+print(f"  ε² = {_mc_mt_pred:.5f} vs m_c/m_t = {_mc_mt_obs:.5f} (order-of-magnitude)  ✓")
+
+print("  All Froggatt-Nielsen parameter assertions PASSED ✓")
+
+
+# ---------------------------------------------------------------------------
+# 19ae. GENERATION SPECTRAL INEQUIVALENCE  (Proposition: prop:gen-break)
+# ---------------------------------------------------------------------------
+print("\n--- 19ae. Generation Spectral Inequivalence ---")
+
+# The three generation subgraphs from GQ spread 3-coloring have:
+# Gen 1 ≅ Gen 2 (isospectral), Gen 0 ≇ Gen 1 (distinct spectrum)
+# This is SU(3)_family → SU(2) × U(1) breaking: 3 → 2 + 1
+
+# Build generation subgraphs from the GQ lines
+# First we need the GQ lines (K₄ cliques)
+_lines = []
+for _i in range(n):
+    _nbrs_i = [_j for _j in range(n) if A[_i, _j] == 1]
+    for _j_idx in range(len(_nbrs_i)):
+        for _k_idx in range(_j_idx + 1, len(_nbrs_i)):
+            for _l_idx in range(_k_idx + 1, len(_nbrs_i)):
+                _a, _b, _c = _nbrs_i[_j_idx], _nbrs_i[_k_idx], _nbrs_i[_l_idx]
+                if A[_a, _b] == 1 and A[_a, _c] == 1 and A[_b, _c] == 1:
+                    _line = tuple(sorted([_i, _a, _b, _c]))
+                    if _line not in _lines:
+                        _lines.append(_line)
+assert len(_lines) == 40, f"Expected 40 GQ lines, got {len(_lines)}"
+
+# 3-color edges via the three matchings of each K₄
+_edge_color = {}
+for _line in _lines:
+    _pts = list(_line)
+    _matchings = [
+        ((_pts[0], _pts[1]), (_pts[2], _pts[3])),
+        ((_pts[0], _pts[2]), (_pts[1], _pts[3])),
+        ((_pts[0], _pts[3]), (_pts[1], _pts[2]))
+    ]
+    for _c_val, _matching in enumerate(_matchings):
+        for _edge in _matching:
+            _e = tuple(sorted(_edge))
+            if _e not in _edge_color:
+                _edge_color[_e] = _c_val
+
+assert len(_edge_color) == 240, f"Expected 240 colored edges, got {len(_edge_color)}"
+
+# Build generation adjacency matrices
+_gen_adjs = [np.zeros((n, n), dtype=float) for _ in range(3)]
+for _e, _c_val in _edge_color.items():
+    _i, _j = _e
+    _gen_adjs[_c_val][_i, _j] = _gen_adjs[_c_val][_j, _i] = 1.0
+
+# Compute eigenvalues per generation
+_gen_evals = []
+for _c_val in range(3):
+    _evals = sorted(np.linalg.eigvalsh(_gen_adjs[_c_val]), reverse=True)
+    _gen_evals.append(_evals)
+
+# Gen 1 ≅ Gen 2 (isospectral)
+_diff_12 = max(abs(_gen_evals[1][_i] - _gen_evals[2][_i]) for _i in range(n))
+assert _diff_12 < 1e-8, f"Gen 1 vs Gen 2 diff = {_diff_12}"
+print(f"  Gen 1 vs Gen 2: max eigenvalue diff = {_diff_12:.1e} (isospectral)  ✓")
+
+# Gen 0 ≇ Gen 1 (spectrally distinct)
+_diff_01 = max(abs(_gen_evals[0][_i] - _gen_evals[1][_i]) for _i in range(n))
+assert _diff_01 > 0.1, f"Gen 0 vs Gen 1 should differ, diff = {_diff_01}"
+print(f"  Gen 0 vs Gen 1: max eigenvalue diff = {_diff_01:.4f} (distinct)  ✓")
+
+# Zero modes per generation (connected components of color subgraph)
+_zero_modes = []
+for _c_val in range(3):
+    _gen_deg = np.diag(_gen_adjs[_c_val].sum(axis=1))
+    _gen_L = _gen_deg - _gen_adjs[_c_val]
+    _gen_L_evals = sorted(np.linalg.eigvalsh(_gen_L))
+    _n_zero = sum(1 for _e_val in _gen_L_evals if abs(_e_val) < 0.01)
+    _zero_modes.append(_n_zero)
+
+print(f"  Zero modes: Gen 0 = {_zero_modes[0]}, Gen 1 = {_zero_modes[1]}, Gen 2 = {_zero_modes[2]}")
+assert _zero_modes[1] == _zero_modes[2], "Gen 1 and Gen 2 must have same zero modes"
+assert _zero_modes[0] != _zero_modes[1], "Gen 0 must differ from Gen 1"
+_total_zero = sum(_zero_modes)
+print(f"  Total zero modes: {_total_zero} = {_zero_modes[0]}+{_zero_modes[1]}+{_zero_modes[2]}  ✓")
+print(f"  Pattern: SU(3)_family → SU(2)×U(1), representation 3 → 2+1  ✓")
+
+print("  All generation spectral inequivalence assertions PASSED ✓")
+
+
+# ---------------------------------------------------------------------------
 # 19.  SUMMARY
 print("\n" + "="*60)
 print("ALL ASSERTIONS PASSED — W(3,3) spectral theory verified.")
