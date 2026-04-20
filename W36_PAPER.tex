@@ -1602,6 +1602,94 @@ Proposition~\ref{prop:string}.
 \end{proof}
 
 
+\begin{proposition}[Subconstituent Structure]\label{prop:subconstituents}
+For every vertex $v$ of $\W$:
+\begin{enumerate}[(i)]
+  \item The \emph{first subconstituent} $\Delta_1(v)$
+        (the subgraph induced on the $12$ neighbours of $v$)
+        is isomorphic to $4 C_3$, four disjoint triangles,
+        with spectrum $\{2^4,\,(-1)^8\}$.
+        Each triangle corresponds to one of the four GQ$(3,3)$ lines
+        through~$v$.
+  \item Every \emph{$\lambda$-graph}
+        (induced on the $\lambda = 2$ common neighbours of an adjacent pair)
+        is $K_2$: the two common neighbours are themselves adjacent,
+        forming a $4$-clique (line) with the original pair.
+  \item Every \emph{$\mu$-graph}
+        (induced on the $\mu = 4$ common neighbours of a non-adjacent pair)
+        is $4 K_1$: the four common neighbours are pairwise non-adjacent.
+        This is the graph-theoretic incarnation of the GQ axiom:
+        two non-collinear points have exactly $\mu$ pairwise non-collinear
+        common neighbours.
+  \item The \emph{second subconstituent} $\Delta_2(v)$
+        (induced on the $27$ non-neighbours) is an $8$-regular
+        distance-regular graph of diameter~$3$ with
+        intersection array $\iota(\Delta_2) = \{8,6,1;\;1,3,8\}$
+        and spectrum $\{8^1,\,2^{12},\,(-1)^8,\,(-4)^6\}$.
+  \item $\Delta_2(v)$ is \emph{antipodal}: the $27$ vertices partition
+        into $9$ classes of~$3$, each class an independent set
+        at mutual distance~$3$.  The antipodal quotient is $K_9$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) Each vertex lies on $q{+}1 = 4$ lines of GQ$(q,q)$, each a $4$-clique.
+Within the neighbourhood $\Delta_1(v)$, the $12$ neighbours are partitioned
+by these $4$ lines into groups of $3$.  Two neighbours on the same line
+are adjacent (the line is a clique); two on different lines share
+$\lambda = 2$ common neighbours via $v$'s neighbourhood, but the GQ axiom
+forces no additional adjacency between lines, so $\Delta_1(v)$ is the
+disjoint union of four triangles.  Spectrum: each $C_3$ contributes
+$\{2, -1, -1\}$, giving $\{2^4, (-1)^8\}$.
+
+(ii) An adjacent pair $\{u,w\}$ lies on a unique GQ line (a $4$-clique).
+The two common neighbours are the remaining points on that line,
+hence mutually adjacent.
+
+(iii) A non-adjacent pair $\{u,w\}$ has $\mu = 4$ common neighbours.
+If any two of these were adjacent, they would lie on a common line $\ell$.
+Since $u,w \notin \ell$ are both adjacent to two points of $\ell$, the
+GQ axiom (each point off a line is collinear with exactly one point on it)
+is violated.  Hence $\mu$-graphs are independent.
+
+(iv)--(v) The second subconstituent has $n - k - 1 = 27$ vertices and is
+$(k - \mu)$-regular $= 8$-regular (each non-neighbour of $v$ has $k = 12$
+neighbours total, of which $\mu = 4$ are neighbours of $v$, leaving $8$
+within $\Delta_2$).  Exhaustive computation verifies the intersection
+numbers $b_0 = 8, b_1 = 6, b_2 = 1$;
+$c_1 = 1, c_2 = 3, c_3 = 8$;
+$a_1 = 1, a_2 = 4, a_3 = 0$, establishing distance-regularity.
+The distance partition from any vertex is $1, 8, 16, 2$, with the $2$
+vertices at distance $3$ forming an independent set together with the
+source.  These $27/3 = 9$ classes of $3$ are the fibres of an
+antipodal $3$-cover of $K_9$.
+\end{proof}
+
+
+\begin{proposition}[Connectivity and Toughness]\label{prop:connectivity}
+The graph $\W$ satisfies:
+\begin{enumerate}[(i)]
+  \item Vertex connectivity $\kappa(\W) = k = 12$.
+  \item Edge connectivity $\lambda_e(\W) = k = 12$.
+  \item Toughness $t(\W) \ge k / |s| = 3$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) Since $\W$ is strongly regular with $\lambda \ge 1$,
+the Brouwer--Mesner theorem gives $\kappa = k$.
+Concretely, removing $N(v)$ (the $12$ neighbours of any vertex~$v$)
+isolates $v$, showing $\kappa \le 12$, and no set of $11$ or fewer
+vertices can disconnect a $12$-regular graph with $\lambda \ge 1$.
+
+(ii) Whitney's inequality $\kappa \le \lambda_e \le \delta = k$
+combines with (i) to give $\lambda_e = 12$.
+
+(iii) By Brouwer's bound for strongly regular graphs,
+$t(\W) \ge k / (-s) = 12/4 = 3$.
+\end{proof}
+
+
 
 \begin{figure}[H]
   \centering
