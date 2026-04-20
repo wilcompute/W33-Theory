@@ -1415,6 +1415,112 @@ The closed walk counts follow from $W_k = \mathrm{tr}(A^k) = 12^k + 24 \cdot 2^k
 \end{proof}
 
 
+\begin{proposition}[Heat Kernel and Spectral Zeta Function]\label{prop:heatkernel}
+The Laplacian $L = kI - A$ of $\W$ has spectrum $\{0^1, 10^{24}, 16^{15}\}$, yielding
+closed-form spectral functions:
+\begin{itemize}
+  \item \textbf{Heat trace}:
+        \[
+          Z(t) \;=\; \mathrm{tr}\!\bigl(e^{-tL}\bigr) \;=\; 1 + 24\,e^{-10t} + 15\,e^{-16t},
+        \]
+        with $Z(0) = 40 = n$ and $Z(t) \to 1$ as $t \to \infty$ (connected).
+  \item \textbf{Heat content}: $Z'(0) = -\mathrm{tr}(L) = -480 = -2|E|$ and
+        $Z''(0) = \mathrm{tr}(L^2) = 6240$.
+  \item \textbf{Spectral zeta of the Laplacian}:
+        \[
+          \zeta_L(s) \;=\; \sum_{\mu_i > 0} \mu_i^{-s} \;=\; 24 \cdot 10^{-s} + 15 \cdot 16^{-s}.
+        \]
+        Special values: $\zeta_L(1) = \tfrac{267}{80} = \mathrm{Kf}(\W)/n$,\;
+        $\zeta_L(-1) = 480 = 2|E|$,\; $\zeta_L(-2) = 6240 = \mathrm{tr}(L^2)$.
+  \item \textbf{Zeta-regularised determinant}:
+        $\det'(L) = e^{-\zeta_L'(0)} = 10^{24} \cdot 16^{15}$,
+        consistent with $n \cdot \tau(\W) = 40 \cdot 2^{81} \cdot 5^{23}$.
+  \item \textbf{Walk generating function}:
+        \[
+          W(x) \;=\; \sum_{k \ge 0} \mathrm{tr}(A^k)\,x^k
+               \;=\; \frac{1}{1-12x} + \frac{24}{1-2x} + \frac{15}{1+4x},
+        \]
+        with radius of convergence $1/12$ and poles at $x = 1/12,\, 1/2,\, -1/4$.
+\end{itemize}
+\end{proposition}
+
+\begin{proof}
+The Laplacian eigenvalues are $\mu_i = k - \lambda_i$: the trivial eigenvalue
+$k = 12$ maps to $0$, the eigenvalue $r = 2$ maps to $10$ with multiplicity $24$,
+and $s = -4$ maps to $16$ with multiplicity $15$.  The heat trace follows from
+$\mathrm{tr}(e^{-tL}) = \sum_i e^{-\mu_i t}$.  The derivatives at $t = 0$ give
+spectral moments: $|Z'(0)| = \mathrm{tr}(L) = 0 + 10 \cdot 24 + 16 \cdot 15 = 480 = 2|E|$,
+and $Z''(0) = 0 + 100 \cdot 24 + 256 \cdot 15 = 6240$.
+
+The spectral zeta $\zeta_L(s) = \sum_{\mu_i > 0} \mu_i^{-s}$ at $s = 1$ reproduces the
+Kirchhoff index via $\mathrm{Kf} = n \cdot \zeta_L(1) = 40 \cdot 267/80 = 267/2$
+(Proposition~\ref{prop:kirchhoffindex}).  The zeta-regularised determinant satisfies
+$\det'(L) = \prod_{\mu_i > 0} \mu_i = 10^{24} \cdot 16^{15}$, which equals
+$n \cdot \tau(\W) = 40 \cdot 2^{81} \cdot 5^{23}$ by the matrix-tree theorem.
+
+The walk generating function is $W(x) = \mathrm{tr}((I - xA)^{-1}) = \sum_i (1 - \lambda_i x)^{-1}$,
+giving the stated partial-fraction form with poles at the reciprocal eigenvalues.
+\end{proof}
+
+
+\begin{proposition}[Bose--Mesner Algebra and Krein Conditions]\label{prop:bosemesner}
+The adjacency algebra of $\W$ is the $3$-dimensional Bose--Mesner algebra of
+$\mathrm{SRG}(40,12,2,4)$ with the following structure:
+\begin{itemize}
+  \item \textbf{First eigenmatrix}:
+        \[
+          P \;=\;
+          \begin{pmatrix}
+            1 & 12 & 27 \\
+            1 & 2 & -3 \\
+            1 & -4 & 3
+          \end{pmatrix},
+          \qquad
+          PQ = 40\,I,
+        \]
+        where $Q = nP^{-1}$ is the second eigenmatrix with
+        rows indexed by multiplicities $(1, 24, 15)$.
+  \item \textbf{Distance partition}: From any vertex $v$, the equitable partition
+        $\{v\} \cup N(v) \cup \overline{N}(v)$ with sizes $1 + 12 + 27$ has
+        quotient matrix
+        \[
+          B \;=\;
+          \begin{pmatrix}
+            0 & 12 & 0 \\
+            1 & 2 & 9 \\
+            0 & 4 & 8
+          \end{pmatrix},
+          \qquad \mathrm{Spec}(B) = \{12,\, 2,\, -4\} = \mathrm{Spec}(A).
+        \]
+  \item \textbf{Krein conditions}: Both Krein inequalities are strict:
+        $(r{+}1)(k{+}r{+}2rs) = -6 < 126 = (k{+}r)(s{+}1)^2$ and
+        $(s{+}1)(k{+}s{+}2rs) = 24 < 72 = (k{+}s)(r{+}1)^2$.
+  \item \textbf{Absolute bounds}: $f_r = 24 \le 120 = \binom{f_s+1}{2}$ and
+        $f_s = 15 \le 300 = \binom{f_r+1}{2}$, both far from tight.
+\end{itemize}
+\end{proposition}
+
+\begin{proof}
+The first eigenmatrix $P$ of an SRG has rows indexed by eigenvalues $\{k, r, s\}$
+and columns by the association-scheme relations $\{A_0 = I,\, A_1 = A,\, A_2 = J - I - A\}$,
+with entries $P_{ij}$ equal to the $j$-th eigenvalue of relation~$i$.  For
+$\mathrm{SRG}(40,12,2,4)$: the complement eigenvalues are $n{-}1{-}k = 27$,
+$-(1{+}r) = -3$, $-(1{+}s) = 3$.
+
+The distance partition from any vertex $v$ gives cells of sizes $1, k, n{-}1{-}k = 1, 12, 27$.
+Each non-neighbor $w$ of $v$ has exactly $\mu = 4$ neighbors in $N(v)$ (SRG parameter) and
+$k - \mu = 8$ neighbors among the other non-neighbors.  Each neighbor $u$ of $v$ has $1$
+edge to $v$, $\lambda = 2$ edges within $N(v)$, and $k - 1 - \lambda = 9$ edges to non-neighbors.
+The resulting quotient matrix $B$ has row sums $12 = k$, and its characteristic polynomial
+factors as $(x - 12)(x - 2)(x + 4)$, recovering the SRG spectrum.
+
+The Krein conditions $(r{+}1)(k{+}r{+}2rs) \le (k{+}r)(s{+}1)^2$ and its dual follow from
+the requirement that the entrywise (Hadamard) squares of the idempotent matrices remain
+positive semidefinite.  The absolute bounds $f_r \le \binom{f_s + 1}{2}$ and
+$f_s \le \binom{f_r + 1}{2}$ are consequences of the Krein conditions.
+\end{proof}
+
+
 
 \begin{figure}[H]
   \centering

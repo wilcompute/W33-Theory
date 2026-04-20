@@ -523,6 +523,100 @@ print("  All line graph / theta / independence assertions PASSED ✓")
 
 
 # ---------------------------------------------------------------------------
+# 19c.  HEAT KERNEL, SPECTRAL ZETA, BOSE-MESNER ALGEBRA (Props 30-31)
+print("\n" + "-"*60)
+print("19c. Heat kernel, spectral zeta, Bose-Mesner algebra")
+print("-"*60)
+
+import math as _math
+
+# Laplacian spectrum: {0^1, (k-r)^f_r, (k-s)^f_s} = {0^1, 10^24, 16^15}
+_mu0, _mu1, _mu2 = 0, _k - _r, _k - _s
+assert (_mu0, _mu1, _mu2) == (0, 10, 16)
+
+# Heat trace: Z(t) = 1 + 24*exp(-10t) + 15*exp(-16t)
+_Z0 = 1 + _fr + _fs
+assert _Z0 == _n, f"Z(0) = {_Z0} != n"
+print(f"  Heat trace Z(0) = {_Z0} = n  ✓")
+
+# Z'(0) = -tr(L) = -(mu0*1 + mu1*f_r + mu2*f_s)
+_trL = _mu0 * 1 + _mu1 * _fr + _mu2 * _fs
+assert _trL == 480, f"tr(L) = {_trL}"
+assert _trL == 2 * _nL, "tr(L) = 2|E|"
+print(f"  tr(L) = {_trL} = 2|E| = 480  ✓")
+
+# Z''(0) = tr(L^2)
+_trL2 = _mu0**2 * 1 + _mu1**2 * _fr + _mu2**2 * _fs
+assert _trL2 == 6240
+print(f"  tr(L²) = {_trL2} = 6240  ✓")
+
+# Spectral zeta ζ_L(1) = Kf/n
+_zeta1 = Fraction(_fr, _mu1) + Fraction(_fs, _mu2)
+assert _zeta1 == Fraction(267, 80)
+assert _n * _zeta1 == Fraction(267, 2), "n·ζ_L(1) = Kf"
+print(f"  ζ_L(1) = {_zeta1} = Kf/n  ✓")
+
+# ζ_L(-1) = tr(L) = 480
+_zeta_neg1 = _fr * _mu1 + _fs * _mu2
+assert _zeta_neg1 == 480
+print(f"  ζ_L(-1) = {_zeta_neg1} = tr(L)  ✓")
+
+# ζ_L(-2) = tr(L^2) = 6240
+_zeta_neg2 = _fr * _mu1**2 + _fs * _mu2**2
+assert _zeta_neg2 == 6240
+print(f"  ζ_L(-2) = {_zeta_neg2} = tr(L²)  ✓")
+
+# Zeta-regularised determinant: det'(L) = 10^24 · 16^15
+# ζ_L'(0) = -f_r·ln(mu1) - f_s·ln(mu2)
+_zeta_prime_0 = -_fr * _math.log(_mu1) - _fs * _math.log(_mu2)
+_det_zeta = _math.exp(-_zeta_prime_0)
+_prod_nonzero = float(_mu1**_fr * _mu2**_fs)
+assert abs(_det_zeta - _prod_nonzero) / _prod_nonzero < 1e-6
+print(f"  det'(L) = 10²⁴·16¹⁵ = {_det_zeta:.6e}  ✓")
+
+# Bose-Mesner first eigenmatrix
+_P = [[1, _k, _n - 1 - _k],
+      [1, _r, -(1 + _r)],
+      [1, _s, -(1 + _s)]]
+assert _P == [[1, 12, 27], [1, 2, -3], [1, -4, 3]]
+print(f"  First eigenmatrix P verified  ✓")
+
+# Distance partition quotient matrix
+_B = [[0, 12, 0], [1, 2, 9], [0, 4, 8]]
+for row in _B:
+    assert sum(row) == _k
+_B_np = np.array(_B, dtype=float)
+_eigs_B = sorted(np.linalg.eigvals(_B_np).real, reverse=True)
+assert all(abs(a - b) < 1e-8 for a, b in zip(_eigs_B, [12, 2, -4]))
+print(f"  Quotient matrix eigenvalues = {{12, 2, -4}}  ✓")
+
+# Krein conditions
+_kr1_lhs = (_r + 1) * (_k + _r + 2 * _r * _s)
+_kr1_rhs = (_k + _r) * (_s + 1)**2
+assert _kr1_lhs <= _kr1_rhs, "Krein 1 violated"
+_kr2_lhs = (_s + 1) * (_k + _s + 2 * _r * _s)
+_kr2_rhs = (_k + _s) * (_r + 1)**2
+assert _kr2_lhs <= _kr2_rhs, "Krein 2 violated"
+print(f"  Krein conditions: ({_kr1_lhs} ≤ {_kr1_rhs}) ∧ ({_kr2_lhs} ≤ {_kr2_rhs})  ✓")
+
+# Walk generating function: W_k = 12^k + 24·2^k + 15·(-4)^k
+_walks = [_k**p + _fr * _r**p + _fs * _s**p for p in range(11)]
+assert _walks[0] == 40   # tr(I) = n
+assert _walks[1] == 0    # tr(A) = 0 (traceless)
+assert _walks[2] == 480  # tr(A²) = 2|E|
+assert _walks[3] == 960  # triangles: 960/6 = 160
+assert _walks[4] == 24960
+print(f"  Walk counts W_0..W_4 = {_walks[:5]}  ✓")
+
+# Absolute bounds: f_r ≤ f_s(f_s+1)/2 and f_s ≤ f_r(f_r+1)/2
+assert _fr <= _fs * (_fs + 1) // 2
+assert _fs <= _fr * (_fr + 1) // 2
+print(f"  Absolute bounds: {_fr} ≤ {_fs * (_fs + 1) // 2}, {_fs} ≤ {_fr * (_fr + 1) // 2}  ✓")
+
+print("  All heat kernel / zeta / algebra assertions PASSED ✓")
+
+
+# ---------------------------------------------------------------------------
 # 19.  SUMMARY
 print("\n" + "="*60)
 print("ALL ASSERTIONS PASSED — W(3,3) spectral theory verified.")
