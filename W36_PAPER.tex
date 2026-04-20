@@ -18,11 +18,11 @@
 %% svg package: requires Inkscape on PATH (\includesvg).
 %% For arXiv: convert SVGs to PDF first (see Appendix~\ref{app:compile})
 %% then replace \includesvg with \includegraphics.
-\usepackage{svg}
+%% \usepackage{svg}  %% disabled: using pre-converted PDFs instead
 \usepackage{xcolor}
-\usepackage{enumitem}
+\usepackage[shortlabels]{enumitem}
 \usepackage{microtype}
-\usepackage{natbib}
+\usepackage[numbers]{natbib}
 \usepackage{cleveref}
 \usepackage{lmodern}
 \usepackage{float}        %% [H] placement
@@ -48,7 +48,7 @@
 \newcommand{\Eone}{E_8}
 \newcommand{\Esix}{E_6}
 \newcommand{\nv}{n_{\!v}}
-\newcommand{\ne}{n_{\!e}}
+\renewcommand{\ne}{n_{\!e}}
 \newcommand{\fr}{f_{\!r}}
 \newcommand{\fs}{f_{\!s}}
 \newcommand{\zetaW}{\zeta_{\!W}}
@@ -243,8 +243,8 @@ the theory's predictive power.
   %% --- Figure 1: W(3,3) eigenvalue spectrum ---
   %% arXiv compile: run compile.sh first to convert SVG -> PDF,
   %% then replace \includesvg with \includegraphics below.
-  \includesvg[width=0.85\textwidth]{figures/fig1_spectral_diagram}
-  %% \includegraphics[width=0.85\textwidth]{figures/fig1_spectral_diagram}
+  %% \includesvg[width=0.85\textwidth]{figures/fig1_spectral_diagram}
+  \includegraphics[width=0.85\textwidth]{figures/fig1_spectral_diagram}
   \caption{The $\W$ eigenvalue spectrum.
     Three horizontal levels represent
     $\lambda_1 = 12$ (gravity singlet, $\times 1$),
@@ -1059,7 +1059,7 @@ This value is consistent with a graph of moderate ``compactness'' for 40 vertice
 
 \subsubsection{Complement Graph Structure}
 
-\begin{proposition}[The Complement Graph W̄ is Also Strongly Regular]\label{prop:complement}
+\begin{proposition}[The Complement Graph $\bar{W}$ is Also Strongly Regular]\label{prop:complement}
 The complement graph $\bar{\W}$ (formed by taking non-edges of $\W$ as edges)
 is itself strongly regular with complementary parameters:
 \begin{itemize}
@@ -1598,7 +1598,7 @@ simplifies (via the SRG equation $A^2 = kI + \lambda A + \mu(J - I - A)$) to giv
 $A^2 \equiv 0 \pmod{2}$ (using $k, \lambda$ even and $\mu = 4 \equiv 0$),
 the nilpotency index is exactly $2$.  The $2$-rank $16 = k + |s|$
 coincides with the heterotic string rank from
-Proposition~\ref{prop:string}.
+Proposition~\ref{prop:stringgap}.
 \end{proof}
 
 
@@ -1666,7 +1666,7 @@ antipodal $3$-cover of $K_9$.
 \end{proof}
 
 
-\begin{proposition}[Connectivity and Toughness]\label{prop:connectivity}
+\begin{proposition}[Connectivity and Toughness]\label{prop:connectivity-tough}
 The graph $\W$ satisfies:
 \begin{enumerate}[(i)]
   \item Vertex connectivity $\kappa(\W) = k = 12$.
@@ -1742,7 +1742,7 @@ each of the $40$ GQ lines in $0$ or $2$ points.
 \end{proof}
 
 
-\begin{proposition}[GQ Geometry, Complement Graph, and Seidel Spectrum]\label{prop:gqgeometry}
+\begin{proposition}[GQ Geometry, Complement Graph, and Seidel Spectrum]\label{prop:gqgeometry-extended}
 The graph $\W$ carries the full structure of the generalized quadrangle
 $\mathrm{GQ}(3,3)$.
 \begin{enumerate}[(i)]
@@ -2071,8 +2071,8 @@ $h(G) \ge (k - r)/2$ for a $k$-regular graph with second eigenvalue~$r$.
 \begin{figure}[H]
   \centering
   %% --- Figure 3: Spectral sector decomposition ---
-  \includesvg[width=0.70\textwidth]{figures/fig3_spectral_decomposition}
-  %% \includegraphics[width=0.70\textwidth]{figures/fig3_spectral_decomposition}
+  %% \includesvg[width=0.70\textwidth]{figures/fig3_spectral_decomposition}
+  \includegraphics[width=0.70\textwidth]{figures/fig3_spectral_decomposition}
   \caption{Spectral sector decomposition of $\W$.
     The 40 vertices partition from any vertex as
     $1 + 12 + 27 = 40$ (neighborhood completeness $\checkmark$),
@@ -3143,7 +3143,7 @@ The observed Wolfenstein $\lambda = 0.22500 \pm 0.00010$;
 the residual is $0.07\%$.
 The Froggatt--Nielsen charges are the generation
 indices $n_c \in \{0,1,2\}$ from the GQ trichromatic
-structure (Proposition~\ref{prop:trichromatic}),
+structure (Proposition~\ref{prop:yukawa}),
 giving mass ratios $m_i/m_3 \sim \varepsilon^{2n_c}$ for
 up-type quarks.
 \end{proposition}
@@ -3302,7 +3302,7 @@ since $12/23 = 2\gamma_m \cdot 3/(2(33 - 2n_f))$.
   = (117/38)^{12/23}.
 \]
 Numerically: $\alpha_s(M_Z) = q^2/(\Phi_3\mu + \Phi_6 k) = 9/76$
-(Proposition~\ref{prop:cyclotomic-gauge});
+(Proposition~\ref{prop:cyclotomic});
 $\alpha_s(M_{\mathrm{GUT}}) = 1/\alphaGUT = 1/26$.
 Evaluating: $(117/38)^{12/23} = 3.079^{0.5217} \approx 1.51$.
 The observed ratio $m_b/m_\tau|_{M_Z} = 4.18/1.777 \approx 2.35$;
@@ -4138,8 +4138,8 @@ timeline (Table~\ref{tab:predictions} and Figure~\ref{fig:timeline}).
 \begin{figure}[H]
   \centering
   %% --- Figure 2: Falsifiable predictions timeline ---
-  \includesvg[width=0.94\textwidth]{figures/fig2_predictions_timeline}
-  %% \includegraphics[width=0.94\textwidth]{figures/fig2_predictions_timeline}
+  %% \includesvg[width=0.94\textwidth]{figures/fig2_predictions_timeline}
+  \includegraphics[width=0.94\textwidth]{figures/fig2_predictions_timeline}
   \caption{Timeline of the eight $\W$-theory falsifiable predictions
     (2026--2045+). The vertical dashed line marks the present (2026).
     F1 ($\thetaTT=45^\circ$, JUNO 2027) is the critical near-term test.
@@ -4421,6 +4421,17 @@ arXiv:hep-th/0610241.
 E.~Spence,
 \textit{The strongly regular $(40,12,2,4)$ graphs},
 Electron.\ J.\ Combin.\ \textbf{7} (2000) R22.
+
+\bibitem{PayneThas2009}
+S.~E.~Payne and J.~A.~Thas,
+\textit{Finite Generalized Quadrangles},
+2nd ed., EMS Series of Lectures in Mathematics,
+European Mathematical Society, 2009.
+
+\bibitem{Payne1984}
+S.~E.~Payne,
+\textit{Generalized quadrangles of order $(s,t)$ with symmetry},
+Geom.\ Dedicata \textbf{16} (1984), 49--62.
 
 \end{thebibliography}
 
