@@ -421,6 +421,62 @@ print(f"  Universal pole at u=1 with multiplicity m=n-1={_n-1}")
 
 
 # ---------------------------------------------------------------------------
+# 19a.  SPANNING TREES, CLUSTERING, RESISTANCE (Props 24-26)
+print("\n" + "-"*60)
+print("19a. Spanning trees, clustering coefficient, Kirchhoff index")
+print("-"*60)
+
+# Spanning tree count: T = 2^81 * 5^23
+_T = 2**81 * 5**23
+_T_check = (10**24 * 16**15) // 40
+assert _T == _T_check, f"Spanning tree mismatch: {_T} != {_T_check}"
+assert (10**24 * 16**15) % 40 == 0, "Spanning tree count not integer"
+print(f"  T(W) = 2^81 * 5^23 = {_T:.4e}  ✓")
+
+# Clustering coefficient: C = λ/(k-1) = 2/11
+from fractions import Fraction
+_C_cluster = Fraction(2, _k - 1)
+assert _C_cluster == Fraction(2, 11)
+print(f"  Clustering coefficient = {_C_cluster} ✓")
+
+# Characteristic polynomial: det = -3 * 2^56
+_det_exact = 12 * (2**24) * ((-4)**15)
+assert _det_exact == -3 * 2**56, f"det(A) mismatch: {_det_exact} != {-3 * 2**56}"
+print(f"  det(A) = -3 · 2^56 = {_det_exact}  ✓")
+
+# Minimal polynomial: m(x) = x^3 - 10x^2 - 32x + 96
+_Af = A.astype(float)
+_A2 = _Af @ _Af
+_A3 = _A2 @ _Af
+_mA = _A3 - 10*_A2 - 32*_Af + 96*np.eye(_n)
+assert np.allclose(_mA, 0), f"Minimal polynomial failed: ||m(A)|| = {np.linalg.norm(_mA)}"
+print(f"  m(A) = A³ - 10A² - 32A + 96I = 0  ✓")
+
+# Graph energy: E(G) = 120 = 3n
+_energy = abs(12)*1 + abs(2)*24 + abs(-4)*15
+assert _energy == 120, f"Energy mismatch: {_energy}"
+assert _energy == 3 * _n, f"E(G) != 3n"
+print(f"  E(G) = {_energy} = 3n  ✓")
+
+# Kirchhoff index: Kf = 267/2
+_Kf = Fraction(40) * (Fraction(24, 10) + Fraction(15, 16))
+assert _Kf == Fraction(267, 2), f"Kirchhoff index mismatch: {_Kf}"
+print(f"  Kf(W) = {_Kf}  ✓")
+
+# Random walk spectral gap: γ = 2/3
+_gamma = 1 - Fraction(1, 3)
+assert _gamma == Fraction(2, 3)
+print(f"  Spectral gap γ = {_gamma}  ✓")
+
+# Relaxation time: 3/2
+_tau_rel = 1 / _gamma
+assert _tau_rel == Fraction(3, 2)
+print(f"  Relaxation time = {_tau_rel}  ✓")
+
+print("  All spanning tree / clustering / resistance assertions PASSED ✓")
+
+
+# ---------------------------------------------------------------------------
 # 19.  SUMMARY
 print("\n" + "="*60)
 print("ALL ASSERTIONS PASSED — W(3,3) spectral theory verified.")

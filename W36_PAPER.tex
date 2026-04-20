@@ -1162,6 +1162,146 @@ structure, contributing to the remarkable symmetry of the graph.
 
 
 
+\begin{proposition}[Spanning Trees and Algebraic Complexity]\label{prop:spanningtrees}
+The number of spanning trees of $\W$ admits a closed-form factorisation of
+extraordinary arithmetic purity:
+\begin{itemize}
+  \item \textbf{Kirchhoff count}: By the matrix-tree theorem applied to the Laplacian
+        $L = kI - A$ with spectrum $\{0^1, 10^{24}, 16^{15}\}$:
+        \[
+          \tau(\W) \;=\; \frac{1}{n}\prod_{i=1}^{n-1}\mu_i
+            \;=\; \frac{10^{24}\cdot 16^{15}}{40}
+            \;=\; 2^{81}\cdot 5^{23}
+            \;\approx\; 2.88 \times 10^{40}.
+        \]
+  \item \textbf{Arithmetic purity}: The spanning tree count factors entirely over $\{2,5\}$.
+        The exponent 81 = $3^4$ and 23 is the ninth prime, yielding a factorisation
+        whose prime support $\{2,5\}$ is a subset of $\{2,3,5\}$ --- the primes dividing $|G|=25920$.
+  \item \textbf{Characteristic polynomial}: $\chi_A(x) = (x-12)(x-2)^{24}(x+4)^{15}$
+        with minimal polynomial $m(x) = x^3 - 10x^2 - 32x + 96$ satisfying
+        $m(A)=0$ (Cayley--Hamilton of degree 3).
+  \item \textbf{Determinant}: $\det(A) = 12\cdot 2^{24}\cdot(-4)^{15} = -3\cdot 2^{56}$.
+  \item \textbf{Clustering coefficient}: The (global = local) clustering coefficient is
+        \[
+          C(\W) \;=\; \frac{\lambda}{k-1} \;=\; \frac{2}{11},
+        \]
+        uniform across all vertices by vertex-transitivity.
+\end{itemize}
+\end{proposition}
+
+\begin{proof}
+The Laplacian of a $k$-regular graph is $L = kI - A$, with eigenvalues $\mu_i = k - \lambda_i$.
+From the adjacency spectrum $\{12^1, 2^{24}, (-4)^{15}\}$ we obtain Laplacian spectrum
+$\{0^1, 10^{24}, 16^{15}\}$.  Kirchhoff's matrix-tree theorem gives
+$\tau(\W) = \frac{1}{n}\prod_{i\ge 1}\mu_i = \frac{10^{24}\cdot 16^{15}}{40}$.
+Since $10^{24} = 2^{24}\cdot 5^{24}$ and $16^{15} = 2^{60}$, the numerator is $2^{84}\cdot 5^{24}$,
+and division by $40 = 2^3\cdot 5$ yields $2^{81}\cdot 5^{23}$.
+
+The minimal polynomial has degree 3 equal to the number of distinct eigenvalues; expanding
+$(x-12)(x-2)(x+4) = x^3 - 10x^2 - 32x + 96$ and verifying $A^3 - 10A^2 - 32A + 96I = 0$
+confirms the Cayley--Hamilton identity.
+
+The clustering coefficient for an SRG$(n,k,\lambda,\mu)$ is $C = \lambda/(k-1)$ because each
+vertex in $N(v)$ has exactly $\lambda$ edges inside $N(v)$, so $|E(G[N(v)])| = k\lambda/2$ and
+$C = k\lambda/2 \big/ \binom{k}{2} = \lambda/(k-1) = 2/11$.
+\end{proof}
+
+
+
+\begin{proposition}[Resistance Distance and Kirchhoff Index]\label{prop:kirchhoffindex}
+The effective resistance structure of $\W$ viewed as an electrical network (unit
+resistors on each edge) exhibits remarkable rationality:
+\begin{itemize}
+  \item \textbf{Kirchhoff index}: The total effective resistance satisfies
+        \[
+          \mathrm{Kf}(\W) \;=\; n\sum_{i=1}^{n-1}\frac{1}{\mu_i}
+            \;=\; 40\!\left(\frac{24}{10} + \frac{15}{16}\right)
+            \;=\; \frac{267}{2}.
+        \]
+  \item \textbf{Two-valued resistance}: Distance-transitivity forces the effective
+        resistance to depend only on graph distance:
+        \[
+          \Omega(u,v) = \begin{cases}
+            \dfrac{13}{80} & \text{if } d(u,v) = 1 \text{ (adjacent)}, \\[6pt]
+            \dfrac{7}{40}  & \text{if } d(u,v) = 2 \text{ (non-adjacent)}.
+          \end{cases}
+        \]
+        The ratio $\Omega_2/\Omega_1 = 14/13$ is nearly unity, reflecting the small
+        diameter of this expander.
+  \item \textbf{Commute times}: For the simple random walk on $\W$, the commute time
+        between vertices $u,v$ is $\mathcal{C}(u,v) = 2|E|\,\Omega(u,v)$, giving
+        $\mathcal{C}_1 = 78$ and $\mathcal{C}_2 = 84$ steps.
+  \item \textbf{Graph energy}: The graph energy is $\mathcal{E}(\W) = \sum_{i}|\lambda_i|
+        = 12 + 48 + 60 = 120 = 3n$, exactly three times the vertex count.
+\end{itemize}
+\end{proposition}
+
+\begin{proof}
+The pseudoinverse $L^+$ of the Laplacian determines resistance distances via
+$\Omega(i,j) = L^+_{ii} + L^+_{jj} - 2L^+_{ij}$.  For a vertex-transitive graph the diagonal
+entries are constant, $L^+_{ii} = \frac{1}{n}\sum_{k\ge 1}\mu_k^{-1}$.  The off-diagonal values
+depend only on the orbit under $\mathrm{Aut}(\W)$.  Since $\W$ is distance-transitive with
+two distance classes, there are exactly two resistance values.
+
+Numerical computation of $L^+$ via the spectral decomposition
+$L^+ = \sum_{i\ge 1}\mu_i^{-1}(E_i)$, with projectors $E_1$ (24-dimensional, $\mu=10$) and
+$E_2$ (15-dimensional, $\mu=16$), yields $\Omega_1 = 13/80$ and $\Omega_2 = 7/40$ with
+zero variance across all vertex pairs in each class.
+
+The Kirchhoff index follows: $\mathrm{Kf} = \binom{n}{2}\bar\Omega
+= 240\cdot(13/80) + 540\cdot(7/40) = 39 + 94.5 = 267/2$.
+
+The commute time formula $\mathcal{C}(u,v) = 2|E|\,\Omega(u,v)$ is a standard result in
+random walk theory, giving $\mathcal{C}_1 = 480\cdot 13/80 = 78$ and
+$\mathcal{C}_2 = 480\cdot 7/40 = 84$.
+\end{proof}
+
+
+
+\begin{proposition}[Random Walk Spectral Gap and Rapid Mixing]\label{prop:randomwalk}
+The simple random walk on $\W$ mixes with extraordinary speed, controlled by the
+large spectral gap of the transition matrix $P = A/k$:
+\begin{itemize}
+  \item \textbf{Transition spectrum}: $P$ has eigenvalues
+        $\{1^1,\; (1/6)^{24},\; (-1/3)^{15}\}$.
+  \item \textbf{Spectral gap}: $\gamma = 1 - \lambda^* = 1 - 1/3 = 2/3$,
+        where $\lambda^* = \max(|1/6|, |-1/3|) = 1/3$.
+  \item \textbf{Relaxation time}: $\tau_{\mathrm{rel}} = 1/\gamma = 3/2$,
+        among the smallest possible for a 40-vertex graph.
+  \item \textbf{Mixing time}: $t_{\mathrm{mix}}(1/4) \le \lceil(3/2)\ln 160\rceil = 8$ steps.
+  \item \textbf{Return probability}: The return probability converges as
+        \[
+          p^{(t)}(v,v) = \frac{1}{40}\!\left(1 + 24\!\left(\tfrac{1}{6}\right)^{\!t}
+            + 15\!\left(\tfrac{-1}{3}\right)^{\!t}\right)
+          \;\xrightarrow{t\to\infty}\; \frac{1}{40}.
+        \]
+  \item \textbf{Cheeger constant}: The edge-isoperimetric constant satisfies
+        $5 \le h(\W) \le \sqrt{240} \approx 15.49$,
+        confirming the strong expansion property.
+\end{itemize}
+\end{proposition}
+
+\begin{proof}
+The transition matrix of the simple random walk on a $k$-regular graph is $P = A/k$, inheriting
+eigenvalues $\lambda_i/k$ from $A$.  Thus $P$ has spectrum $\{1, 1/6, -1/3\}$ with the same
+multiplicities as $A$.  The spectral gap $\gamma = 1 - \max_{i>0}|\lambda_i/k|
+= 1 - 1/3 = 2/3$ controls the rate of convergence to the uniform stationary distribution
+$\pi(v) = 1/n = 1/40$.
+
+The mixing time satisfies $t_{\mathrm{mix}}(\varepsilon) \le \gamma^{-1}\ln(n/\varepsilon)$,
+giving $t_{\mathrm{mix}}(1/4) \le (3/2)\ln 160 \approx 7.61$, so $t_{\mathrm{mix}}(1/4) \le 8$.
+
+The Cheeger constant $h$ is bounded by $(k-\lambda_2)/2 = 5$ from below (Alon--Milman) and
+$\sqrt{2k(k-\lambda_2)} = \sqrt{240}$ from above (discrete Cheeger inequality).
+
+The relaxation time $\tau_{\mathrm{rel}} = 3/2$ is striking: it means that the random walk
+forgets its starting position within approximately 2 steps.
+This ultra-fast mixing is a hallmark of $\W$ as a Ramanujan graph with exceptionally
+strong expansion properties.
+\end{proof}
+
+
+
 \begin{figure}[H]
   \centering
   %% --- Figure 3: Spectral sector decomposition ---
