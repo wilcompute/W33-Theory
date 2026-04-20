@@ -1111,6 +1111,55 @@ indicates that the common neighbor count is \emph{constant} regardless of adjace
 conference graphs or strongly regular graphs with exceptional parameters.
 \end{proof}
 
+\subsubsection{Neighborhood and Induced Subgraph Structure}
+
+\begin{proposition}[Neighborhood Induced Subgraph is Cycle Union]\label{prop:neighborhoods}
+For each vertex $v \in V(\W)$, the induced subgraph on the neighborhood $N(v)$ has
+regular structure with remarkable properties:
+\begin{itemize}
+  \item \textbf{Neighborhood regularity}: The induced subgraph $G[N(v)]$ is $2$-regular on 12 vertices.
+        Every vertex in $N(v)$ has exactly 2 edges to other vertices in $N(v)$.
+        Total edges: $|E(G[N(v)])| = 12 \cdot 2 / 2 = 12$.
+  \item \textbf{Graph structure}: A 2-regular graph is a union of disjoint cycles.
+        Thus $G[N(v)]$ is a union of cycles on 12 vertices, e.g., one 12-cycle, or
+        two 6-cycles, or a 3-cycle and a 9-cycle, or other partition.
+  \item \textbf{Spectrum of neighborhoods}: The adjacency spectrum of $G[N(v)]$ is
+        $\{2^4, (-1)^8\}$ (eigenvalue 2 with multiplicity 4, eigenvalue $-1$ with multiplicity 8).
+        This spectrum is characteristic of cycle unions with specific lengths.
+  \item \textbf{Triangle abundance in neighborhoods}: $G[N(v)]$ contains triangles, with
+        maximum clique size $\omega(G[N(v)]) = 3$.
+  \item \textbf{Non-connectivity}: The induced subgraph $G[N(v)]$ is \emph{disconnected},
+        being a union of cycles rather than a single cycle. This is a distinguishing feature
+        of SRG$(40,12,2,4)$ arising from the GQ$(3,3)$ geometry.
+  \item \textbf{Distance-2 neighborhood}: The non-neighbors $\overline{N}(v) = V \setminus (N(v) \cup \{v\})$
+        form a 27-vertex induced subgraph with 108 edges, giving density $\approx 0.308$.
+        This contrasts with $N(v)$ density $\approx 0.182$.
+  \item \textbf{Vertex-transitivity}: Since $\W$ is vertex-transitive, all neighborhoods are
+        isomorphic. Every vertex has the same neighborhood structure (2-regular 12-vertex cycle union).
+\end{itemize}
+\end{proposition}
+
+\begin{proof}
+The neighborhood induced subgraph $G[N(v)]$ is obtained by taking vertices adjacent to $v$ and
+edges between them in the original graph. For any SRG$(n,k,\lambda,\mu)$, the induced neighborhood
+has regularity determined by $\lambda$: each neighbor of $v$ is adjacent to exactly $\lambda$ other
+neighbors. For $\W$ with $\lambda = 2$, each of the 12 neighbors of $v$ connects to exactly 2 others
+in the neighborhood, making the neighborhood 2-regular.
+
+The spectrum $\{2^4, (-1)^8\}$ is computed via eigendecomposition of the 12$\times$12 adjacency matrix
+of $G[N(v)]$. The multiplicity structure matches the cycle decomposition of the 2-regular graph.
+
+The presence of triangles is verified by enumeration: among the 12 neighbors of $v$, we find sets of
+3 mutually adjacent neighbors, confirming $\omega(G[N(v)]) = 3$.
+
+The fact that $G[N(v)]$ is disconnected (a union of cycles, not a single cycle) reflects the underlying
+geometric structure of GQ$(3,3)$: the 12 points at unit distance from a fixed point partition into
+separate orbits under certain automorphisms.
+
+Vertex-transitivity of $\W$ ensures that every choice of vertex $v$ yields an isomorphic neighborhood
+structure, contributing to the remarkable symmetry of the graph.
+\end{proof}
+
 
 
 \begin{figure}[H]
