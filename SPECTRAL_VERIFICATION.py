@@ -1235,6 +1235,111 @@ print("  All GQ geometry / complement / Seidel assertions PASSED ✓")
 
 
 # ---------------------------------------------------------------------------
+# 19h.  HOFFMAN POLYNOMIAL, DELSARTE OPTIMALITY, CYCLE ENUMERATION (Prop 38)
+print("\n" + "-"*60)
+print("19h. Hoffman polynomial, Delsarte optimality, cycle enumeration")
+print("-"*60)
+
+from fractions import Fraction as _Frac3
+
+# --- Hoffman polynomial h(A) = J ---
+_A2h = A @ A
+_hA = _A2h + 2*A - 8*np.eye(n, dtype=int)
+assert np.array_equal(_hA, 4 * np.ones((n, n), dtype=int))
+print(f"  Hoffman polynomial: h(x) = (x - 2)(x + 4)/4")
+print(f"  h(A) = J: (A² + 2A - 8I)/4 = J  ✓")
+
+# --- Minimal polynomial ---
+_mA = (A - 12*np.eye(n, dtype=int)) @ (A - 2*np.eye(n, dtype=int)) @ (A + 4*np.eye(n, dtype=int))
+assert np.all(_mA == 0)
+print(f"  m(x) = (x - 12)(x - 2)(x + 4) = x³ - 10x² - 32x + 96")
+print(f"  m(A) = 0, deg(m) = 3 = diam + 1  ✓")
+
+# --- Adjacency recurrence A² = (λ-μ)A + μJ + (k-μ)I ---
+_A2_rec = -2*A + 4*np.ones((n, n), dtype=int) + 8*np.eye(n, dtype=int)
+assert np.array_equal(_A2h, _A2_rec)
+print(f"  A² = -2A + 4J + 8I  ✓")
+
+# --- Primitive idempotents ---
+_E0 = np.ones((n, n)) / n
+_Er = ((A.astype(float) + 4*np.eye(n)) @ (A.astype(float) - 12*np.eye(n))) / ((2-(-4))*(2-12))
+_Es = ((A.astype(float) - 2*np.eye(n)) @ (A.astype(float) - 12*np.eye(n))) / ((-4-2)*(-4-12))
+assert np.allclose(_E0 @ _E0, _E0)
+assert np.allclose(_Er @ _Er, _Er)
+assert np.allclose(_Es @ _Es, _Es)
+assert np.allclose(_E0 @ _Er, 0)
+assert np.allclose(_E0 @ _Es, 0)
+assert np.allclose(_Er @ _Es, 0)
+assert np.allclose(_E0 + _Er + _Es, np.eye(n))
+assert int(round(np.trace(_Er))) == 24
+assert int(round(np.trace(_Es))) == 15
+print(f"  E₀ + E_r + E_s = I, idempotent, orthogonal  ✓")
+print(f"  E₀ = J/40, rank(E_r) = 24, rank(E_s) = 15  ✓")
+
+# Diagonal entries
+assert abs(_Er[0,0] - 24/40) < 1e-10
+assert abs(_Es[0,0] - 15/40) < 1e-10
+print(f"  (E_r)_{{ii}} = f_r/n = 3/5, (E_s)_{{ii}} = f_s/n = 3/8  ✓")
+
+# --- Delsarte clique bound ---
+_delsarte_clique = 1 - _Frac3(_k, _s)
+assert _delsarte_clique == 4
+print(f"  Delsarte clique bound: ω ≤ 1 - k/s = 4, ω = 4: TIGHT  ✓")
+
+# --- Delsarte coclique bound ---
+_delsarte_coclique = _Frac3(n * (-_s), _k - _s)
+assert _delsarte_coclique == 10
+print(f"  Delsarte coclique bound: α ≤ n(-s)/(k-s) = 10, α = 7: gap 3  ✓")
+
+# --- Cycle counts ---
+# Triangles
+_c3 = 0
+for _i in range(n):
+    for _j in range(_i+1, n):
+        if A[_i,_j] == 1:
+            for _c in range(_j+1, n):
+                if A[_i,_c] == 1 and A[_j,_c] == 1:
+                    _c3 += 1
+assert _c3 == 160
+print(f"  C₃ (triangles) = {_c3} = nkλ/6  ✓")
+
+# Four-cycles
+_c4 = 0
+for _i in range(n):
+    for _j in range(_i+1, n):
+        _cn = [_v for _v in range(n) if A[_i,_v]==1 and A[_j,_v]==1]
+        for _a in range(len(_cn)):
+            for _b in range(_a+1, len(_cn)):
+                if A[_cn[_a], _cn[_b]] == 0:
+                    _c4 += 1
+_c4 //= 2  # each C₄ has 2 pairs of opposite vertices
+assert _c4 == 1620
+print(f"  C₄ (4-cycles) = {_c4}  ✓")
+
+# 4-cycles per edge (edge-transitive => constant)
+_c4_per_edge = _Frac3(4 * _c4, n * _k // 2)
+assert _c4_per_edge == 27
+print(f"  C₄ per edge = 4·C₄/|E| = {_c4_per_edge} = k̄ = n - 1 - k  ✓")
+
+# --- Spectral walk counts ---
+for _ell in range(2, 7):
+    _tr = _k**_ell + 24 * _r**_ell + 15 * _s**_ell
+    _tr_actual = int(round(np.trace(np.linalg.matrix_power(A.astype(float), _ell))))
+    assert _tr == _tr_actual
+
+# Return probability p₂ = Tr(A²)/(n·k²) = (k²+f_r·r²+f_s·s²)/(n·k²)
+_p2 = _Frac3(_k**2 + 24*_r**2 + 15*_s**2, n * _k**2)
+assert _p2 == _Frac3(1, 12)
+print(f"  Return prob p₂ = {_p2}  ✓")
+
+_p3 = _Frac3(_k**3 + 24*_r**3 + 15*_s**3, n * _k**3)
+assert _p3 == _Frac3(1, 72)
+print(f"  Return prob p₃ = {_p3}  ✓")
+
+print("  All Hoffman / Delsarte / cycle assertions PASSED ✓")
+
+
+# ---------------------------------------------------------------------------
 # 19.  SUMMARY
 print("\n" + "="*60)
 print("ALL ASSERTIONS PASSED — W(3,3) spectral theory verified.")
