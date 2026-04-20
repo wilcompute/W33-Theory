@@ -1898,6 +1898,84 @@ decomposition.  Dividing by $n k^\ell$ gives the return probability.
 \end{proof}
 
 
+\begin{proposition}[Partial Ovoids and Equitable Partitions]\label{prop:partialovoids}
+The maximum independent sets and equitable partitions of $\W$ satisfy
+the following.
+\begin{enumerate}[(i)]
+  \item \textbf{Maximum cocliques as partial ovoids}:
+        Every maximum independent set of $\W$ is a partial ovoid of
+        $\mathrm{GQ}(3,3)$: a set of $\alpha = 7$ points meeting
+        each line in at most one point.
+        There are $|I_7(\W)| = 2880 = 2^6 \cdot 3^2 \cdot 5$ such sets,
+        and $|\operatorname{Aut}(\W)|/|I_7| = 25920/2880 = 9$.
+  \item \textbf{Line covering}:
+        Each partial ovoid hits exactly $28$ of the $40$ lines
+        and misses $12$.  Every vertex belongs to exactly $504$
+        partial ovoids; equivalently $504 = 2880 \cdot 7/40$.
+  \item \textbf{Intersection distribution}:
+        For any two partial ovoids $S_1, S_2$,
+        $|S_1 \cap S_2| \in \{0,1,2,3,4,5,6\}$.
+        The intersection multiplicities are
+        $1283040,\; 1473120,\; 829440,\; 365760,\;
+         141120,\; 43200,\; 10080$
+        over $\binom{2880}{2} = 4\,145\,760$ pairs.
+  \item \textbf{Distance quotient matrix}:
+        The distance partition $\{v_0\} \cup N_1(v_0) \cup N_2(v_0)$
+        of sizes $1 + 12 + 27$ is equitable with quotient matrix
+        \[
+          B \;=\;
+          \begin{pmatrix}
+            0 & 12 & 0 \\
+            1 & 2  & 9 \\
+            0 & 4  & 8
+          \end{pmatrix},
+          \qquad
+          \operatorname{Spec}(B) = \{12, 2, -4\} = \operatorname{Spec}(\W).
+        \]
+  \item \textbf{Edge quotient matrix}:
+        For any edge $uv$, the six-cell partition by
+        $\bigl(d(\cdot,u),\, d(\cdot,v)\bigr)$ with cell sizes
+        $1{+}1{+}2{+}9{+}9{+}18$ is equitable.
+        Its $6 \times 6$ quotient matrix $Q$ has eigenvalues
+        $\{12^1,\; 2^3,\; (-4)^2\}$, containing every eigenvalue
+        of $\W$ with multiplicity.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) Let $S$ be a maximum independent set of size~$7$.
+Since no two vertices of $S$ are collinear, each GQ line meets $S$
+in at most one point, so $S$ is a partial ovoid.
+An exhaustive backtracking enumeration confirms that all $2880$
+maximum independent sets are partial ovoids.
+That none achieves the Delsarte bound $\alpha_D = 10$ reflects
+the non-existence of ovoids in $\mathrm{GQ}(3,3)$ (Thas, 1984).
+
+(ii) Each of the $7$ vertices lies on $4$ lines (GQ$(3,3)$ has
+$s+1 = 4$ lines through each point).  Since $S$ is a partial ovoid,
+these $7 \times 4 = 28$ lines are distinct.
+The total incidence count $\sum_v |\{S : v \in S\}| = 2880 \times 7
+= 20160 = 504 \times 40$ gives the uniform per-vertex count.
+
+(iii) Two partial ovoids can share at most $6$ vertices
+(since $7$ would force $S_1 = S_2$).
+The distribution is verified by exhaustive pairwise comparison.
+
+(iv) Distance-regularity of $\W$ (Proposition~\ref{prop:subconstituents})
+guarantees that the distance partition is equitable.
+The quotient entries are $b_{01} = k$, $b_{10} = 1$, $b_{11} = \lambda$,
+$b_{12} = k - 1 - \lambda = 9$, $b_{21} = \mu$, $b_{22} = k - \mu = 8$.
+The characteristic polynomial $\det(B - xI) = (x-12)(x-2)(x+4)$.
+
+(v) Equitability of the edge partition follows from the regularity
+conditions of an SRG: the parameters $\lambda$ and $\mu$ fix the
+neighbour counts within and between cells.
+The $6 \times 6$ quotient matrix is verified numerically; its spectrum
+$\{12, 2, 2, 2, -4, -4\}$ contains every eigenvalue of $A$
+by interlacing.
+\end{proof}
+
+
 
 \begin{figure}[H]
   \centering

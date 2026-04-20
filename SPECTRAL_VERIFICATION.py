@@ -1340,6 +1340,113 @@ print("  All Hoffman / Delsarte / cycle assertions PASSED ✓")
 
 
 # ---------------------------------------------------------------------------
+# 19i.  PARTIAL OVOIDS, EQUITABLE PARTITIONS  (Proposition: prop:partialovoids)
+# ---------------------------------------------------------------------------
+print("\n--- 19i. Partial Ovoids and Equitable Partitions ---")
+
+# 1. Enumerate all maximum independent sets (α = 7) via backtracking
+_max_indep = []
+
+def _find_max_indep(current, candidates, target):
+    if len(current) == target:
+        _max_indep.append(frozenset(current))
+        return
+    if len(current) + len(candidates) < target:
+        return
+    for idx, v in enumerate(candidates):
+        new_cands = [w for w in candidates[idx + 1:] if A[v, w] == 0]
+        _find_max_indep(current + [v], new_cands, target)
+
+_find_max_indep([], list(range(n)), 7)
+assert len(_max_indep) == 2880, f"|I_7| = {len(_max_indep)}"
+print(f"  |I₇(W)| = {len(_max_indep)} = 2⁶·3²·5  ✓")
+
+# 2. Every max independent set is a partial ovoid
+# First: collect all 4-cliques (GQ lines)
+_cliques4 = []
+for i in range(n):
+    for j in range(i + 1, n):
+        if A[i, j] == 1:
+            for c in range(j + 1, n):
+                if A[i, c] == 1 and A[j, c] == 1:
+                    for d in range(c + 1, n):
+                        if A[i, d] == 1 and A[j, d] == 1 and A[c, d] == 1:
+                            cl = frozenset([i, j, c, d])
+                            if cl not in _cliques4:
+                                _cliques4.append(cl)
+assert len(_cliques4) == 40, f"lines = {len(_cliques4)}"
+
+for _s_set in _max_indep:
+    assert all(len(_s_set & cl) <= 1 for cl in _cliques4), "not a partial ovoid"
+print("  All 2880 are partial ovoids  ✓")
+
+# 3. Each hits exactly 28 lines
+for _s_set in _max_indep:
+    _hits = sum(1 for cl in _cliques4 if len(_s_set & cl) == 1)
+    assert _hits == 28, f"lines hit = {_hits}"
+print("  Each hits 28 lines, misses 12  ✓")
+
+# 4. Vertex-transitive action: 504 per vertex
+from collections import Counter as _Ctr
+_per_v = _Ctr()
+for v in range(n):
+    _per_v[v] = sum(1 for s in _max_indep if v in s)
+assert all(c == 504 for c in _per_v.values()), f"per-vertex counts: {set(_per_v.values())}"
+print("  504 partial ovoids per vertex  ✓")
+
+# 5. |Aut|/|I₇| = 9
+assert 25920 // len(_max_indep) == 9
+print("  |Aut(W)|/|I₇| = 9  ✓")
+
+# 6. Distance quotient matrix
+_B = np.array([[0, 12, 0], [1, 2, 9], [0, 4, 8]])
+_eig_B = sorted(np.linalg.eigvals(_B.astype(float)).real, reverse=True)
+assert [int(round(e)) for e in _eig_B] == [12, 2, -4]
+print(f"  Distance quotient B eigenvalues = {{12, 2, −4}}  ✓")
+
+# 7. Edge quotient matrix (6×6)
+from collections import defaultdict as _ddict
+_v0 = 0
+_N1 = [w for w in range(n) if A[_v0, w] == 1]
+_u, _v = _v0, _N1[0]
+_cells = _ddict(list)
+for w in range(n):
+    du = 0 if w == _u else (1 if A[_u, w] == 1 else 2)
+    dv = 0 if w == _v else (1 if A[_v, w] == 1 else 2)
+    _cells[(du, dv)].append(w)
+_cell_keys = sorted(_cells.keys())
+assert [len(_cells[k]) for k in _cell_keys] == [1, 1, 2, 9, 9, 18]
+
+# Verify equitability
+_nc = len(_cell_keys)
+_Q = np.zeros((_nc, _nc), dtype=int)
+for ci, ck in enumerate(_cell_keys):
+    for cj, dk in enumerate(_cell_keys):
+        counts = set(sum(1 for x in _cells[dk] if A[w, x] == 1) for w in _cells[ck])
+        assert len(counts) == 1, f"not equitable: {ck}->{dk}: {counts}"
+        _Q[ci, cj] = counts.pop()
+
+_eig_Q = sorted(np.linalg.eigvals(_Q.astype(float)).real, reverse=True)
+_eig_Q_r = [int(round(e)) for e in _eig_Q]
+assert _eig_Q_r == [12, 2, 2, 2, -4, -4]
+print(f"  Edge quotient Q (6×6) eigenvalues = {{12¹, 2³, (−4)²}}  ✓")
+
+# 8. Intersection size distribution
+_isct = _Ctr()
+for i, s1 in enumerate(_max_indep):
+    for s2 in _max_indep[i + 1:]:
+        _isct[len(s1 & s2)] += 1
+assert sum(_isct.values()) == 2880 * 2879 // 2
+assert _isct[0] == 1283040
+assert _isct[1] == 1473120
+assert _isct[6] == 10080
+assert 7 not in _isct  # no two partial ovoids share all 7 points
+print(f"  Pairwise intersections ∈ {{0,…,6}}, |∩|=0 occurs 1283040 times  ✓")
+
+print("  All partial-ovoid / equitable-partition assertions PASSED ✓")
+
+
+# ---------------------------------------------------------------------------
 # 19.  SUMMARY
 print("\n" + "="*60)
 print("ALL ASSERTIONS PASSED — W(3,3) spectral theory verified.")
