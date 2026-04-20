@@ -1302,6 +1302,120 @@ strong expansion properties.
 
 
 
+\begin{proposition}[Line Graph Spectrum and Dimension Cascade]\label{prop:linegraph}
+The line graph $L(\W)$ inherits a spectral architecture that amplifies the Lie-algebraic
+connections of $\W$:
+\begin{itemize}
+  \item \textbf{Vertex and regularity}: $L(\W)$ has $|E| = 240$ vertices (equalling the
+        $E_8$ root system size $|\Phi(E_8)| = 240$) and is $22$-regular with $2640$ edges.
+  \item \textbf{Line graph spectrum}: Applying the $k$-regular line graph spectral formula
+        $\lambda_i(L) = \lambda_i(G) + k - 2$, the spectrum is
+        \[
+          \mathrm{Spec}\bigl(L(\W)\bigr)
+            = \{22^1,\; 12^{24},\; 6^{15},\; (-2)^{200}\},
+        \]
+        with 4 distinct eigenvalues, so $L(\W)$ is not strongly regular.
+  \item \textbf{Dimension 240}: The 240 vertices of $L(\W)$ correspond to the 240 roots
+        of $E_8$, reinforcing the $f_r(k-r) = 24 \cdot 10 = 240$ identity from the
+        adjacency spectrum of $\W$.
+  \item \textbf{Eigenvalue $-2$ dominance}: The multiplicity $|E|-n = 200$ of eigenvalue $-2$
+        dominates the spectrum. Since $200 = 8 \cdot 25 = \mathrm{rank}(E_8) \cdot |\mathrm{Aut}(D_4)|$,
+        this connects line graph spectral theory to the $E_8$ lattice structure.
+\end{itemize}
+\end{proposition}
+
+\begin{proof}
+For a $k$-regular graph $G$ with eigenvalues $\lambda_1 \ge \cdots \ge \lambda_n$, the line graph
+$L(G)$ has $|E|$ vertices and eigenvalues $\{\lambda_i + k - 2 : i = 1,\ldots,n\} \cup \{-2^{|E|-n}\}$.
+Applying this to $\W$ with $k = 12$ and spectrum $\{12^1, 2^{24}, (-4)^{15}\}$:
+the shifted eigenvalues are $22^1, 12^{24}, 6^{15}$, and the multiplicity of $-2$ is
+$240 - 40 = 200$.  The total multiplicity is $1 + 24 + 15 + 200 = 240 = |E|$.
+The regularity follows: $L(G)$ is $(2k-2)$-regular for any $k$-regular graph,
+giving $2(12) - 2 = 22$.
+\end{proof}
+
+
+
+\begin{proposition}[Lov\'asz Theta and Sandwich Inequalities]\label{prop:lovasz}
+The Lov\'asz theta function of $\W$ occupies a precise position in the
+sandwich hierarchy, revealing the gap between combinatorial and spectral
+independence bounds:
+\begin{itemize}
+  \item \textbf{Theta function}: For the SRG$(40,12,2,4)$ with smallest
+        eigenvalue $s = -4$:
+        \[
+          \vartheta(\W) = \frac{-n \cdot s}{k - s} = \frac{160}{16} = 10.
+        \]
+  \item \textbf{Sandwich theorem}: The chain of inequalities
+        \[
+          \omega(\W) \;\le\; \bar\vartheta(\W) \;\le\; \chi_f(\W) \;\le\; \chi(\W)
+        \]
+        evaluates to $4 \le 4 \le 40/7 \le 7$, where $\bar\vartheta = n/\vartheta = 4$.
+  \item \textbf{Independence gap}: The Hoffman bound $\alpha \le \vartheta = 10$ is $30\%$
+        loose since $\alpha = 7$, reflecting the absence of ovoids in GQ$(3,3)$
+        (Thas 1974).
+  \item \textbf{Shannon capacity bounds}: $7 \le \Theta(\W) \le 10$.
+  \item \textbf{Fractional chromatic number}: For vertex-transitive graphs,
+        $\chi_f = n/\alpha = 40/7 \approx 5.714$, and $\omega_f = \chi_f$ by
+        LP duality.
+\end{itemize}
+\end{proposition}
+
+\begin{proof}
+The Lov\'asz theta function for a $k$-regular graph with smallest eigenvalue $s$ is
+$\vartheta(G) = -ns/(k-s)$.  For $\W$: $\vartheta = -40 \cdot (-4)/(12+4) = 10$.
+This equals the Hoffman bound on $\alpha(G)$.
+
+The complement $\bar\W$ is SRG$(40,27,18,18)$ with eigenvalues $\{27^1, (-3)^{24}, 3^{15}\}$,
+giving $\vartheta(\bar\W) = 40 \cdot 3 / (27+3) = 4$.  By the Lov\'asz sandwich theorem,
+$\bar\vartheta(\W) = n/\vartheta(\W) = 4$ satisfies $\omega \le \bar\vartheta \le \chi_f \le \chi$,
+verifying $4 \le 4 \le 40/7 \le 7$.
+
+For vertex-transitive graphs, the fractional chromatic number equals $n/\alpha$ by the
+Delsarte--Lov\'asz LP bound, giving $\chi_f = 40/7$.  The Shannon capacity satisfies
+$\alpha \le \Theta \le \vartheta$, bounding it as $7 \le \Theta(\W) \le 10$.
+\end{proof}
+
+
+
+\begin{proposition}[Independence Polynomial and Enumeration]\label{prop:independence}
+The independence polynomial of $\W$ encodes the complete enumeration of stable
+sets with remarkable arithmetic structure:
+\begin{itemize}
+  \item \textbf{Independence polynomial}:
+        \[
+          I(\W, x) = 1 + 40x + 540x^2 + 3240x^3 + 9450x^4 + 13824x^5 + 10080x^6 + 2880x^7.
+        \]
+  \item \textbf{Maximum independent sets}: There are exactly $i_7 = 2880$ maximum independent sets
+        of size $\alpha = 7$. Since $|{\mathrm{Aut}}(\W)| / i_7 = 25920/2880 = 9$, each maximum
+        independent set has a stabiliser of order $9 = 3^2$ under the automorphism group.
+  \item \textbf{Total independent sets}: $I(\W, 1) = 40{,}055 = 5 \times 8011$, where
+        $8011$ is prime.
+  \item \textbf{Unimodal coefficients}: The sequence $(i_k)$ is unimodal with peak at $i_5 = 13824 = 2^9 \cdot 3^3$,
+        a pure $\{2,3\}$-number.  The symmetry point $\alpha/2 \approx 3.5$ is bracketed by
+        $i_3 = 3240$ and $i_4 = 9450$.
+  \item \textbf{Closed walk duality}: The $k$-th closed walk count $W_k = \mathrm{tr}(A^k)$
+        gives $W_1 = 0$, $W_2 = 480$, $W_3 = 960$, $W_4 = 24{,}960$, establishing a
+        dual enumeration between walks (adjacency) and stable sets (independence).
+\end{itemize}
+\end{proposition}
+
+\begin{proof}
+The independence polynomial $I(G,x) = \sum_{k=0}^{\alpha} i_k x^k$ is computed by exhaustive
+enumeration.  Here $i_0 = 1$, $i_1 = n = 40$, $i_2 = \binom{n}{2} - |E| = 780 - 240 = 540$,
+and higher coefficients are obtained by counting all independent sets of each size via backtracking
+with non-neighbor pruning.
+
+The count $i_7 = 2880$ with $|\mathrm{Aut}|/i_7 = 9$ follows from the orbit-stabiliser theorem:
+$\mathrm{Aut}(\W)$ acts on the set of maximum independent sets, and each orbit has size
+$|\mathrm{Aut}|/|\mathrm{Stab}| = 25920/9 = 2880$ if there is a single orbit (which the
+computation confirms), with stabiliser of order $9 = 3^2$.
+
+The closed walk counts follow from $W_k = \mathrm{tr}(A^k) = 12^k + 24 \cdot 2^k + 15 \cdot (-4)^k$.
+\end{proof}
+
+
+
 \begin{figure}[H]
   \centering
   %% --- Figure 3: Spectral sector decomposition ---

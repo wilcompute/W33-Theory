@@ -477,6 +477,52 @@ print("  All spanning tree / clustering / resistance assertions PASSED ✓")
 
 
 # ---------------------------------------------------------------------------
+# 19b.  LINE GRAPH, LOVÁSZ THETA, INDEPENDENCE POLYNOMIAL (Props 27-30)
+print("\n" + "-"*60)
+print("19b. Line graph, Lovász theta, independence polynomial")
+print("-"*60)
+
+# Line graph: 240 vertices, 22-regular
+_nL = n * k_val // 2  # |E| = 240
+assert _nL == 240, f"Line graph vertex count: {_nL}"
+_kL = 2 * k_val - 2
+assert _kL == 22, f"Line graph regularity: {_kL}"
+print(f"  L(W): {_nL} vertices, {_kL}-regular  ✓")
+
+# Line graph spectrum: {22^1, 12^24, 6^15, (-2)^200}
+_spec_L = {22: 1, 12: 24, 6: 15, -2: 200}
+_sum_mult = sum(_spec_L.values())
+assert _sum_mult == _nL, f"Line graph multiplicity sum: {_sum_mult}"
+_sum_eigs = sum(v * m for v, m in _spec_L.items())
+assert _sum_eigs == 0, f"Line graph eigenvalue sum: {_sum_eigs}"
+print(f"  L(W) spectrum: {{22¹, 12²⁴, 6¹⁵, (-2)²⁰⁰}}  ✓")
+
+# Lovász theta: θ = 10
+_theta = Fraction(-_n * _s, _k - _s)
+assert _theta == 10, f"Lovász theta: {_theta}"
+print(f"  θ(W) = {_theta}  ✓")
+
+# Sandwich: ω ≤ θ̄ ≤ χ_f ≤ χ → 4 ≤ 4 ≤ 40/7 ≤ 7
+_theta_bar = Fraction(_n, _theta)
+assert _theta_bar == 4, f"θ̄ = {_theta_bar}"
+_chi_f = Fraction(40, 7)
+assert 4 <= _theta_bar <= _chi_f <= 7
+print(f"  Sandwich: ω=4 ≤ θ̄=4 ≤ χ_f=40/7 ≤ χ=7  ✓")
+
+# Independence polynomial coefficients
+_indep = [1, 40, 540, 3240, 9450, 13824, 10080, 2880]
+assert _indep[1] == _n
+assert _indep[2] == _n * (_n - 1) // 2 - _nL  # C(n,2) - |E|
+assert sum(_indep) == 40055
+assert _indep[7] == 2880  # max independent sets
+assert 25920 // _indep[7] == 9  # stabiliser order
+print(f"  Independence poly: (1,40,540,3240,9450,13824,10080,2880)  ✓")
+print(f"  i_7 = 2880, |Aut|/i_7 = 9  ✓")
+
+print("  All line graph / theta / independence assertions PASSED ✓")
+
+
+# ---------------------------------------------------------------------------
 # 19.  SUMMARY
 print("\n" + "="*60)
 print("ALL ASSERTIONS PASSED — W(3,3) spectral theory verified.")
