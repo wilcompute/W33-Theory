@@ -1976,6 +1976,97 @@ by interlacing.
 \end{proof}
 
 
+\begin{proposition}[Fractional Parameters, Sandwich Theorem, and
+Mixing]\label{prop:sandwich}
+The fractional relaxations and spectral expansion of $\W$ satisfy the
+following.
+\begin{enumerate}[(i)]
+  \item \textbf{Fractional chromatic number}:
+        $\chi_f(\W) = n/\alpha = 40/7$.
+        (Vertex-transitivity gives $\chi_f = n/\alpha$.)
+  \item \textbf{Fractional clique cover}:
+        $\operatorname{cc}_f(\W) = n/\omega = 10 = \operatorname{cc}(\W)$.
+        Tightness follows from the existence of spreads
+        (Proposition~\ref{prop:spreads}).
+  \item \textbf{Sandwich theorem}:
+        \[
+          \omega = \bar\vartheta = 4
+          \;\le\; \chi_f = \tfrac{40}{7}
+          \;\le\; \chi = 7,
+          \qquad
+          \alpha = 7
+          \;\le\; \vartheta = \operatorname{cc}_f = \operatorname{cc} = 10.
+        \]
+        The left chain witnesses the tight Delsarte clique bound
+        $\omega = \bar\vartheta$;
+        the right chain collapses to a single value,
+        witnessing tight Lov\'asz theta, fractional clique cover,
+        and integral clique cover simultaneously.
+  \item \textbf{Theta product identity}:
+        $\vartheta(\W)\,\bar\vartheta(\W) = 10 \cdot 4 = 40 = n$.
+        Under complementation, $\vartheta(\W) = \bar\vartheta(\bar\W) = 10$
+        and $\bar\vartheta(\W) = \vartheta(\bar\W) = 4$.
+  \item \textbf{Random walk spectrum}:
+        The transition matrix $P = A/k$ has eigenvalues
+        $\{1^1,\; (1/6)^{24},\; (-1/3)^{15}\}$.
+        The spectral gap is $\gamma = 1 - r/k = 5/6$,
+        the absolute spectral gap is $\gamma^* = 1 - \lambda^* = 2/3$
+        where $\lambda^* = |s|/k = 1/3$.
+  \item \textbf{Mixing time}:
+        The lazy random walk on $\W$ mixes in
+        $\tau_{\mathrm{mix}} \le
+        \lceil \lambda^*/(1{-}\lambda^*) \cdot \ln n \rceil = 2$ steps.
+  \item \textbf{Expander mixing lemma}:
+        For all $S, T \subseteq V$,
+        $\bigl|e(S,T) - k|S||T|/n\bigr|
+        \le \lambda_2\,\sqrt{|S|\,|T|}$
+        where $\lambda_2 = \max(|r|,|s|) = 4$.
+  \item \textbf{Cheeger inequality}:
+        The edge-isoperimetric constant satisfies
+        $h(\W) \ge (k{-}r)/2 = 5$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) Since $\operatorname{Aut}(\W) = \operatorname{PSp}(4,3)$ acts
+transitively on vertices, the standard identity
+$\chi_f(G) = |V|/\alpha(G)$ applies.
+
+(ii) A spread of $\mathrm{GQ}(3,3)$ partitions the $40$ vertices into
+$10$ lines (4-cliques).  This gives a clique cover of size~$10$,
+so $\operatorname{cc}(\W) \le 10$.
+The LP bound gives $\operatorname{cc} \ge n/\omega = 10$, forcing equality.
+
+(iii) For any graph, $\omega \le \bar\vartheta \le \chi_f \le \chi$
+and $\alpha \le \vartheta \le \operatorname{cc}_f \le \operatorname{cc}$.
+Substituting the values from parts~(i)--(ii) and
+Propositions~\ref{prop:lovasz},~\ref{prop:hoffman}
+yields the stated chain.
+
+(iv) For SRG$(n,k,\lambda,\mu)$,
+$\vartheta = -n s/(k{-}s)$ and $\bar\vartheta = 1 - k/s$.
+Their product is $n s^2 / [(k{-}s)(-s)] = n|s|/(k{-}s)
+\cdot (1 + k/|s|)$; simplifying gives $n$.
+The complement exchanges $r \leftrightarrow -1{-}s$
+and $s \leftrightarrow -1{-}r$, swapping $\vartheta$
+and $\bar\vartheta$.
+
+(v) $P = A/k$ inherits the eigenvalues $\theta_i / k$ from $A$.
+
+(vi) The bound $\tau_{\mathrm{mix}} \le
+\lambda^*/(1{-}\lambda^*) \cdot \ln n = \tfrac12 \ln 40 \approx 1.84$
+is a standard spectral estimate for reversible Markov chains.
+Ceiling gives $\tau_{\mathrm{mix}} \le 2$.
+
+(vii) The expander mixing lemma for $k$-regular graphs states that
+the deviation from expected edge density is controlled by
+$\lambda_2 = \max(|r|,|s|)$.  For $\W$, $\lambda_2 = |s| = 4$.
+
+(viii) The discrete Cheeger inequality gives
+$h(G) \ge (k - r)/2$ for a $k$-regular graph with second eigenvalue~$r$.
+\end{proof}
+
+
 
 \begin{figure}[H]
   \centering

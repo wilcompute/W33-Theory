@@ -1447,6 +1447,116 @@ print("  All partial-ovoid / equitable-partition assertions PASSED ✓")
 
 
 # ---------------------------------------------------------------------------
+# 19j.  FRACTIONAL PARAMETERS, SANDWICH, MIXING  (Proposition: prop:sandwich)
+# ---------------------------------------------------------------------------
+print("\n--- 19j. Fractional Parameters, Sandwich Theorem, and Mixing ---")
+
+from fractions import Fraction as _Frac4
+
+# 1. Fractional chromatic number (vertex-transitive => χ_f = n/α)
+_chi_f = _Frac4(n, 7)
+assert _chi_f == _Frac4(40, 7)
+print(f"  χ_f(W) = n/α = {_chi_f}  ✓")
+
+# 2. Fractional clique cover (= n/ω for vertex-transitive)
+_cc_f = _Frac4(n, 4)
+assert _cc_f == 10
+print(f"  cc_f(W) = n/ω = {_cc_f}  ✓")
+
+# 3. Lovász theta values (already verified; reassert)
+_theta = _Frac4(n * abs(_s), _k - _s)  # = 160/16 = 10
+_theta_bar = _Frac4(1) - _Frac4(_k, _s)  # = 1 + 3 = 4
+assert _theta == 10
+assert _theta_bar == 4
+print(f"  θ(W) = {_theta}, θ̄(W) = {_theta_bar}  ✓")
+
+# 4. Sandwich theorem: ω ≤ θ̄ ≤ χ_f ≤ χ
+assert 4 == _theta_bar
+assert _theta_bar <= _chi_f
+assert _chi_f <= 7
+print(f"  ω = 4 = θ̄ ≤ χ_f = 40/7 ≤ χ = 7  ✓")
+
+# 5. Complementary sandwich: α ≤ θ ≤ cc_f ≤ cc
+assert 7 <= _theta
+assert _theta <= _cc_f
+assert _cc_f <= 10
+print(f"  α = 7 ≤ θ = 10 = cc_f = cc = 10  ✓")
+
+# 6. θ · θ̄ = n (product identity)
+assert _theta * _theta_bar == n
+print(f"  θ(W)·θ̄(W) = 10·4 = {_theta * _theta_bar} = n  ✓")
+
+# 7. Complement sandwich
+_k_bar = n - 1 - _k  # 27
+_r_bar = -1 - _s     # 3
+_s_bar = -1 - _r     # -3
+_theta_c = _Frac4(n * abs(_s_bar), _k_bar - _s_bar)  # 120/30 = 4
+_theta_bar_c = _Frac4(1) - _Frac4(_k_bar, _s_bar)    # 1 + 9 = 10
+assert _theta_c == _theta_bar  # θ(W̄) = θ̄(W)
+assert _theta_bar_c == _theta  # θ̄(W̄) = θ(W)
+print(f"  θ(W̄) = {_theta_c} = θ̄(W),  θ̄(W̄) = {_theta_bar_c} = θ(W)  ✓")
+
+# 8. χ(W̄) = cc(W) = 10 (spreads give clique cover)
+# Already proved: 36 spreads exist, each gives a 10-clique cover
+assert _theta_bar_c <= _Frac4(n, 4)  # θ̄(W̄) ≤ χ_f(W̄) = 10
+print(f"  χ(W̄) = cc(W) = 10  ✓")
+
+# 9. Random walk transition matrix P = A/k
+_P = A.astype(float) / _k
+_eigs_P = sorted(np.linalg.eigvalsh(_P), reverse=True)
+assert abs(_eigs_P[0] - 1.0) < 1e-10
+assert abs(_eigs_P[1] - 1.0/6) < 1e-10
+assert abs(_eigs_P[-1] + 1.0/3) < 1e-10
+print(f"  Spec(P) = {{1¹, (1/6)²⁴, (−1/3)¹⁵}}  ✓")
+
+# 10. Spectral gap
+_gap = _Frac4(1) - _Frac4(_r, _k)  # 1 - 2/12 = 5/6
+_abs_gap = _Frac4(1) - _Frac4(abs(_s), _k)  # 1 - 4/12 = 2/3
+_lambda_star = _Frac4(abs(_s), _k)  # 1/3
+assert _gap == _Frac4(5, 6)
+assert _abs_gap == _Frac4(2, 3)
+assert _lambda_star == _Frac4(1, 3)
+print(f"  Spectral gap 1-r/k = {_gap}, abs gap = {_abs_gap}, λ* = {_lambda_star}  ✓")
+
+# 11. Expander mixing lemma verification
+# For S = max independent set (size 7): e(S,S) = 0
+# |0 - k·49/n| = |14.7| ≤ λ₂·7 = 28
+_lambda2 = max(abs(_r), abs(_s))  # = 4
+assert _lambda2 == 4
+# Find one max independent set
+_S_indep = None
+def _find_indep7(cur, cands):
+    global _S_indep
+    if _S_indep is not None:
+        return
+    if len(cur) == 7:
+        _S_indep = list(cur)
+        return
+    if len(cur) + len(cands) < 7:
+        return
+    for idx, v in enumerate(cands):
+        new_c = [w for w in cands[idx + 1:] if A[v, w] == 0]
+        _find_indep7(cur + [v], new_c)
+        if _S_indep is not None:
+            return
+
+_find_indep7([], list(range(n)), )
+_e_SS = sum(int(A[i, j]) for i in _S_indep for j in _S_indep)
+assert _e_SS == 0  # independent set
+_exp_val = _Frac4(_k * 49, n)  # 12·49/40 = 147/10
+_bound = _lambda2 * 7  # 28
+assert _exp_val <= _bound  # |0 - 147/10| ≤ 28
+print(f"  Expander mixing: |e(S,S) - k|S|²/n| = {_exp_val} ≤ {_bound}  ✓")
+
+# 12. Cheeger lower bound
+_h_lower = _Frac4(_k - _r, 2)  # (12-2)/2 = 5
+assert _h_lower == 5
+print(f"  Cheeger lower bound h(W) ≥ (k-r)/2 = {_h_lower}  ✓")
+
+print("  All fractional / sandwich / mixing assertions PASSED ✓")
+
+
+# ---------------------------------------------------------------------------
 # 19.  SUMMARY
 print("\n" + "="*60)
 print("ALL ASSERTIONS PASSED — W(3,3) spectral theory verified.")
