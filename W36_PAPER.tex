@@ -1742,6 +1742,78 @@ each of the $40$ GQ lines in $0$ or $2$ points.
 \end{proof}
 
 
+\begin{proposition}[GQ Geometry, Complement Graph, and Seidel Spectrum]\label{prop:gqgeometry}
+The graph $\W$ carries the full structure of the generalized quadrangle
+$\mathrm{GQ}(3,3)$.
+\begin{enumerate}[(i)]
+  \item \textbf{Clique geometry}:  The $40$ maximal cliques of $\W$ are
+        exactly the $40$ lines of $\mathrm{GQ}(3,3)$, each of size~$4 = s{+}1$.
+        Every vertex lies on exactly $4$ lines, and $\omega(\W) = 4$.
+        The $160 = \binom{4}{3}\!\cdot\!40$ triangles each extend to a
+        unique line.
+  \item \textbf{GQ axiom}:  For every non-incident point--line pair
+        $(v, \ell)$, there is a unique point on~$\ell$ collinear with~$v$.
+  \item \textbf{$\mu$-graphs}:  For every non-adjacent pair $\{u,v\}$,
+        the four common neighbours form an independent set
+        ($\mu$-graph $\cong 4K_1$).  Equivalently, the trace
+        $\{u,v\}^{\!\perp}$ is a coclique of size~$4$.
+  \item \textbf{Line incidence}:  Each line meets exactly $12$ others
+        (concurrent pairs $= 240$) and is parallel to $27$
+        (disjoint pairs $= 540$).
+  \item \textbf{Complement graph}:
+        $\overline{\W} = \mathrm{SRG}(40, 27, 18, 18)$ with
+        $\bar\lambda = \bar\mu = 18$ and balanced spectrum
+        $\{27^1,\; 3^{15},\; (-3)^{24}\}$, so $|\bar r| = |\bar s| = 3$.
+  \item \textbf{Seidel spectrum}:
+        The Seidel matrix $S = J - I - 2A$ has spectrum
+        $\{15^1,\; 7^{15},\; (-5)^{24}\}$ and Seidel energy
+        $E_S(\W) = 15 + 5 \cdot 24 + 7 \cdot 15 = 240 = |\Phi(E_8)|$.
+  \item \textbf{Ovoid obstruction}:
+        Since $\alpha = 7 < st + 1 = 10$, the generalized quadrangle
+        $\mathrm{GQ}(3,3)$ admits no ovoid.
+        The maximum partial ovoid has size~$7$.
+  \item \textbf{Fractional chromatic number}:
+        $\chi_f(\W) = n / \alpha = 40/7$, so
+        $\omega = 4 \le \chi_f = 40/7 \le \chi = 7$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) Every $4$-clique is verified by exhaustive search; no $5$-clique exists
+(confirming $\omega = 4$).  Each of the $160$ triangles extends to a unique
+$4$-clique, accounting for all $\binom{4}{3} \cdot 40 = 160$ triangles.
+
+(ii) Verified for all $40 \cdot 36 = 1{,}440$ non-incident (point, line) pairs.
+
+(iii) Suppose $p, q \in \{u,v\}^{\!\perp}$ with $p \sim q$.
+Then $\{p,q,u\}$ are mutually adjacent, forming a triangle that extends to a
+unique line~$\ell$.  But $v \sim p$ and $v \sim q$ with $v \notin \ell$ and
+$v \not\sim u$: the GQ axiom forces a unique point on~$\ell$ collinear
+with~$v$, yet both $p$ and $q$ qualify---a contradiction.
+
+(iv) Each of $4$ points on a line lies on $3$ other lines, giving
+$4 \cdot 3 = 12$ concurrent lines.
+The $\binom{40}{2} = 780$ line pairs split as $240 + 540$.
+
+(v) The complement parameters follow from
+$\bar k = n{-}1{-}k = 27$,
+$\bar\lambda = n{-}2{-}2k{+}\mu = 18$,
+$\bar\mu = n{-}2k{+}\lambda = 18$.
+The eigenvalues of $\bar A = J{-}I{-}A$ are
+$n{-}1{-}k = 27$, $-(1{+}r) = -3$, $-(1{+}s) = 3$.
+
+(vi) The Seidel eigenvalues of $\mathrm{SRG}(n,k,\lambda,\mu)$ are
+$n{-}1{-}2k = 15$, $-(1{+}2r) = -5$, $-(1{+}2s) = 7$.
+
+(vii) An ovoid of $\mathrm{GQ}(s,t)$ is an independent set of size
+$st + 1 = 10$ meeting every line.
+Since $\alpha(\W) = 7 < 10$, no such set exists.
+
+(viii) $\W$ is vertex-transitive, so
+$\chi_f = n / \alpha = 40/7$ by the Lov\'asz--Schrijver formula.
+\end{proof}
+
+
 
 \begin{figure}[H]
   \centering
