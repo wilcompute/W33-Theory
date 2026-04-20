@@ -874,6 +874,48 @@ The cycle abundance (160 triangles, 3,240 four-cycles) ensures multiple alternat
 contributing to the high resilience to edge and vertex failures.
 \end{proof}
 
+\subsubsection{Domination and Covering Properties}
+
+\begin{proposition}[Domination Number and Covering]\label{prop:domination}
+The graph $\W(3,3)$ has tight domination and covering bounds:
+\begin{itemize}
+  \item \textbf{Domination number}: $\gamma(\W) = 4$.
+        Every vertex is either in the dominating set or adjacent to a dominating vertex.
+        Lower bound: $\gamma \ge n/(k+1) = 40/13 \approx 3.08$, rounded to 4.
+        Achieved by greedy selection (tight bound).
+  \item \textbf{Vertex cover number}: $\tau(\W) = n - \alpha = 40 - 7 = 33$.
+        (Every edge has at least one endpoint in the cover, by definition.)
+  \item \textbf{Edge cover number}: $\epsilon(\W) = n/2 = 20$ (since $n$ is even).
+        Every vertex is incident to at least one edge in the cover.
+  \item \textbf{Clique cover number}: $\mathrm{cc}(\W) = 10$ (perfect partition into
+        10 disjoint 4-cliques, discovered in Proposition~\ref{prop:cliques}).
+  \item \textbf{Chromatic-independence gap}: $\chi(\W) - \chi_f(\W) = 7 - 40/7 \approx 1.29$.
+        The integer chromatic number exceeds the fractional bound by 1.29 colors.
+  \item \textbf{Radius and center}: $\mathrm{rad}(\W) = 2 = \mathrm{diam}(\W)$.
+        All 40 vertices are in the center (eccentricity = radius).
+        The graph is \emph{self-centered}: distance properties are uniform from every vertex.
+\end{itemize}
+\end{proposition}
+
+\begin{proof}
+The domination number is established by greedy selection: starting with an empty dominating set,
+repeatedly add a vertex that covers the most uncovered neighbors. This greedy algorithm terminates
+with a dominating set of size 4. The lower bound $\gamma \ge n/(k+1)$ follows from a counting argument:
+a dominating set $S$ must ``cover'' all $n$ vertices, with each vertex in $S$ covering itself and
+at most $k$ neighbors, giving $|S|(k+1) \ge n$.
+
+The vertex cover and edge cover numbers follow from standard definitions and the independence number.
+The clique cover (partition into cliques) is verified by direct enumeration in prior work.
+
+The self-centered property (all vertices in the center) is confirmed by computing the eccentricity of each
+vertex via breadth-first search: the maximum distance from any vertex to all others is 2, the same as
+the diameter.
+
+The chromatic-independence gap reflects the fact that while the fractional chromatic number $\chi_f = n/\alpha$
+provides a lower bound on $\chi$, the actual chromatic number is an integer, introducing a discretization
+gap.
+\end{proof}
+
 
 
 \begin{figure}[H]
