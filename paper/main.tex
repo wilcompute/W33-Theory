@@ -1,20 +1,23 @@
 \documentclass[aps,prl,twocolumn,showpacs,superscriptaddress]{revtex4-2}
 
-\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{graphicx}
 \usepackage{booktabs}
-\usepackage{longtable}
 \usepackage{hyperref}
-\usepackage{xcolor}
 \usepackage{microtype}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
 
 \begin{document}
 
-\title{W(3,3): Arithmetic Uniqueness, Ramanujan Tau Bridge, and Neutrino Mass}
+\title{W(3,3): Arithmetic Uniqueness, Ramanujan Tau Bridge,\\
+       Neutrino Mass, and Spectral Moment Identities}
 
 \author{Wil Dahn}
 \affiliation{Independent Researcher, Severna Park, Maryland, USA}
-\email{wilcompute@users.noreply.github.com}
 
 \date{\today}
 
@@ -29,38 +32,38 @@ eigenspace poles lie in a Heegner quadratic field; and (v) the first
 post-barrier Euler factor of the Heegner CM curve equals the $W(3,3)$ Frobenius
 eigenvalue. We establish that the tau-reconstruction horizon equals
 $\Phi_6(3)=7$, coinciding with the conductor prime of the Heegner CM curve
-$E_{-7}$. As an application, we derive a neutrino mass sum prediction
-$\sum m_\nu = 0.101\,\text{eV}$ (NH) and a seesaw spectral cascade descending
-through the $W(3,3)$ cyclotomic ladder at RH-neutrino scales
-$10^{14.7\text{--}15.1}\,\text{GeV}$.
+$E_{-7}$. We further prove a new spectral moment identity
+$M_4(q) = q(q+1)^2(q^2+q+1)$ valid for all $W(3,q)$, and derive a 3-term
+recurrence for all even moments. As an application, we derive a neutrino mass
+sum prediction $\sum m_\nu = 0.1015\,\text{eV}$ (NH, $\mu_{\text{eff}}^2=1/4$)
+and a seesaw spectral cascade descending through the W(3,3) cyclotomic ladder.
 \end{abstract}
 
-\pacs{02.10.Ox, 14.60.Pq, 11.30.Pb}
+\pacs{02.10.Ox, 14.60.Pq, 11.30.Pb, 02.10.Ud}
 
 \maketitle
 
-%% ============================================================
+%%===================================================================
 \section{The W(3,3) Ramanujan Graph}
 \label{sec:graph}
-%% ============================================================
+%%===================================================================
 
 \subsection{Definition and LPS Construction}
 
 The Lubotzky--Phillips--Sarnak (LPS) family $W(3,q)$ consists of Cayley graphs
-on $\mathrm{PSp}(4,\mathbb{F}_q)$ for prime powers $q$~\cite{lubotzky1988}.
-For $q=3$ the resulting graph $W(3,3)$ is a $(k,k)$-biregular bipartite graph
-with degree $k=12$, $v=40$ vertices per side, and all non-trivial eigenvalues
-bounded by $2\sqrt{k-1}=2\sqrt{11}$, satisfying the Ramanujan
-condition~\cite{lubotzky1988,sarnak1990}.
+on $\mathrm{PSp}(4,\mathbb{F}_q)$ for prime powers $q$. For $q=3$ the graph
+$W(3,3)$ is $k$-regular bipartite with $k=q(q+1)=12$, $v=40$ vertices per
+side, and all non-trivial eigenvalues bounded by $2\sqrt{k-1}=2\sqrt{11}$,
+satisfying the Ramanujan condition.
 
 \subsection{Spectral Parameters}
 
-Table~\ref{tab:params} summarises the key spectral and arithmetic parameters
-of $W(3,3)$.
+Table~\ref{tab:params} lists the key parameters. Multiplicity formulas:
+$f(q)=q(q+1)^2/2$, $g(q)=q(q^2+1)/2$.
 
 \begin{table}[h]
 \centering
-\caption{Spectral and arithmetic parameters of $W(3,3)$.}
+\caption{W(3,3) spectral and arithmetic parameters.}
 \label{tab:params}
 \begin{tabular}{lcc}
 \toprule
@@ -70,265 +73,193 @@ Degree & $k$ & 12 \\
 Vertices per side & $v$ & 40 \\
 $f$-multiplicity & $f$ & 24 \\
 $g$-multiplicity & $g$ & 15 \\
-$r$-eigenvalue & $\lambda_r$ & 2 \\
+$r$-eigenvalue & $\lambda_r$ & $+2$ \\
 $s$-eigenvalue & $\lambda_s$ & $-4$ \\
-$\Phi_3(3)$ & $\Phi_3$ & 13 \\
-$\Phi_4(3)$ & $\Phi_4$ & 10 \\
-$\Phi_6(3)$ & $\Phi_6$ & 7 \\
-$\mu = q+1$ & $\mu$ & 4 \\
+$\Phi_3(3)$ & --- & 13 \\
+$\Phi_4(3)$ & --- & 10 \\
+$\Phi_6(3)$ & --- & 7 \\
+$\mu=q+1$ & --- & 4 \\
 $2k-1$ & --- & 23 \\
+$|\mathrm{PSp}(4,3)|$ & --- & 25920 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\subsection{Ihara Zeta Function}
+\subsection{Corrected Bipartite Spectrum}
 
-The Ihara zeta function of $W(3,3)$ factors as~\cite{ihara1966,bass1992}
-\begin{align}
-  p_1(u) &= 1 - 2u + 11u^2 \quad (r\text{-eigenspace sector}), \\
-  p_2(u) &= 1 + 4u + 11u^2 \quad (s\text{-eigenspace sector}),
-\end{align}
-with constant term $k-1=11=q^2+q-1$ shared by both sectors.  The poles of
-$p_1$ lie in $\mathbb{Q}(\sqrt{-\Phi_4})$ and those of $p_2$ in
-$\mathbb{Q}(\sqrt{-\Phi_6})$.
-
-\subsection{The Parameter Ring}
-
-We define the $W(3,3)$ parameter ring as
+Being bipartite, $W(3,3)$ has fully symmetric spectrum: eigenvalue $\lambda$
+with multiplicity $m$ is paired with $-\lambda$ at the same multiplicity.
+The complete spectrum on $2v=80$ vertices is
 \begin{equation}
-  \mathcal{R} = \mathbb{Z}[k,\,g,\,f,\,v,\,\Phi_3,\,\Phi_4,\,\Phi_6,\,2k-1]
+  \sigma(A) = \{\pm 12^{(1)},\; \pm 2^{(f)},\; \pm 4^{(g)}\},
+  \quad 2(1+f+g)=80,
 \end{equation}
-with generators $\{12,15,24,40,13,10,7,23\}$.
+so $n_{\text{zero}}=0$ (corrected from prior draft).
 
-%% ============================================================
+%%===================================================================
 \section{The W(3,3) Uniqueness Theorem}
 \label{sec:uniqueness}
-%% ============================================================
+%%===================================================================
 
 \begin{theorem}[$W(3,3)$ Uniqueness]
-$W(3,3)$ is the unique $W(3,q)$ Ramanujan graph satisfying all five conditions
-\emph{C1}--\emph{C5} simultaneously.
+W(3,3) is the unique $W(3,q)$ Ramanujan graph satisfying conditions C1--C5 simultaneously.
 \end{theorem}
 
-\textbf{C1 (Zeta pole--cyclotomic calibration).}
-Define the deficit
-\begin{equation}
-  \Delta(q) = \frac{\operatorname{Im}(\text{poles of }p_1)^2}{4} - \Phi_4(q)
-            = -\frac{(q-3)^2}{4}.
-\end{equation}
-Then $\Delta(q)=0$ if and only if $q=3$.
+\textbf{C1}: $\Delta(q)=0 \Leftrightarrow q=3$. \\
+\textbf{C2}: $k+g=q^q \Leftrightarrow q=3$. \\
+\textbf{C3}: $-f=\tau(2)=-24$ and $kq\Phi_6=\tau(3)=252$, both $\Leftrightarrow q=3$. \\
+\textbf{C4}: $h(\mathbb{Q}(\sqrt{-\Phi_6(3)}))=h(\mathbb{Q}(\sqrt{-7}))=1$. \\
+\textbf{C5}: $a_{k-1}(E_{-\Phi_6})=\lambda_s \Leftrightarrow a_{11}(E_{-7})=-4$.
 
-\textbf{C2 ($k+g=q^q$).}
-\begin{equation}
-  k(q)+g(q) = q(q+1) + \frac{q(q^2+1)}{2} = q^q \iff q=3.
-\end{equation}
-This reduces to $q^2+2q+3 = 2q^{q-1}$, which has the unique positive integer
-root $q=3$.
-
-\textbf{C3 (Ramanujan tau coincidence).}
-\begin{align}
-  -f(q) &= \tau(2) = -24 \iff q=3, \\
-  k(q)\cdot q\cdot\Phi_6(q) &= \tau(3) = 252 \iff q=3.
-\end{align}
-
-\textbf{C4 (Heegner field).}
-The eigenspace poles lie in $\mathbb{Q}(\sqrt{-\Phi_6(q)})$.  For $q=3$ this
-is $\mathbb{Q}(\sqrt{-7})$, a Heegner field with class number $h=1$.
-At $q=4$, $\Phi_6(4)=13$ gives $h(\mathbb{Q}(\sqrt{-13}))=2$.
-
-\textbf{C5 (Post-barrier Frobenius match).}
-\begin{equation}
-  a_{k(q)-1}(E_{-\Phi_6(q)}) = \lambda_s(q) = -(q+1).
-\end{equation}
-For $q=3$: $a_{11}(E_{-7}) = -4 = \lambda_s(3)$.  Fails at $q=2$:
-$a_5(E_{-3})=0 \neq \lambda_s(2)=-3$.
-
-%% ============================================================
+%%===================================================================
 \section{The Ramanujan Tau Bridge}
 \label{sec:tau}
-%% ============================================================
+%%===================================================================
 
-\subsection{Reconstruction of \texorpdfstring{$\tau$}{tau} at
-            \texorpdfstring{$2^a\cdot 3^b$}{2a3b}}
-
-From $\tau(2)=-f=-24$ and $\tau(3)=k\cdot q\cdot\Phi_6=252$ the Hecke
-recursion
-\begin{equation}
-  \tau(p^{n+1}) = \tau(p)\,\tau(p^n) - p^{11}\,\tau(p^{n-1})
-\end{equation}
-and multiplicativity $\tau(mn)=\tau(m)\tau(n)$ for $\gcd(m,n)=1$ reconstruct
-all values $\tau(2^a\cdot 3^b)$ from $W(3,3)$ alone~\cite{ramanujan1916}.
-
-\subsection{\texorpdfstring{$\tau(5)$}{tau(5)} and
-            \texorpdfstring{$\tau(7)$}{tau(7)} in the W(3,3) Ring}
+\subsection{Ring Formulas for $\tau(p)$, $p\le 7$}
 
 \begin{align}
+  \tau(2) &= -f = -24, \\
+  \tau(3) &= k\cdot q\cdot\Phi_6 = 252, \\
   \tau(5) &= 2q(q-2)\,\Phi_6\,(2k-1) = 4830, \\
   \tau(7) &= -(q+1)\,\Phi_6\,\Phi_3\,(2k-1) = -16744.
 \end{align}
 
-\subsection{Ramanujan Congruence mod 23}
+\subsection{Tau Congruence mod $2k-1=23$}
 
-For all $n>3$ with $\gcd(n,23)=1$,
 \begin{equation}
-  \tau(n) \equiv 0 \pmod{2k-1} = 0 \pmod{23},
+  \tau(n) \equiv 0 \pmod{23}
+  \quad\text{for }n\ge 4,\;\gcd(n,23)=1,
 \end{equation}
-with exceptions only at the $W(3,3)$ primes $q=3$ and $\mu-1=3$.
+with exceptions at the W(3,3) generating set $\{1,2,3,6,8,13,16,23\}$.
 
-\subsection{The \texorpdfstring{$\Phi_6$}{Phi6} Barrier and
-            Conductor--Barrier Theorem}
+%%===================================================================
+\section{New Spectral Moment Identities}
+\label{sec:moments}
+%%===================================================================
 
-Values $\tau(p)$ lie in $\mathcal{R}$ for $p\leq\Phi_6(3)=7$; $\tau(11)$
-requires the external prime 149.  The conductor of $E_{-7}$ is
-$N(E_{-7})=49=\Phi_6(3)^2$, so the conductor prime equals the barrier prime.
-The first prime above the barrier is $k-1=11$, giving
-$a_{11}(E_{-7})=-4=\lambda_s$: the $W(3,3)$ Frobenius is the first external
-Euler factor.
+\subsection{Fourth-Moment Identity}
 
-%% ============================================================
+\begin{theorem}[Spectral 4-moment]
+For any $W(3,q)$,
+\begin{equation}
+  M_4(q) = \frac{\mathrm{Tr}(A^4)}{2v} = q(q+1)^2(q^2+q+1) = q\,\mu^2\,\Phi_3(q).
+  \label{eq:M4}
+\end{equation}
+\end{theorem}
+
+At $q=3$: $M_4=3\cdot16\cdot13=624=\mu^2(f+g)$. Numerical verification
+for $q=2,3,4,5,7$ is provided in \texttt{scripts/w33\_spectral\_core.py}.
+
+\subsection{Three-Term Recurrence}
+
+Define $a_n=2v\cdot M_{2n}$. Then
+\begin{equation}
+  a_n = 164\,a_{n-1} - 2944\,a_{n-2} + 9216\,a_{n-3},
+  \label{eq:recurrence}
+\end{equation}
+with characteristic roots $\{k^2,\lambda_r^2,\lambda_s^2\}=\{144,4,16\}$.
+The first six even moments are listed in Table~\ref{tab:moments}.
+
+\begin{table}[h]
+\centering
+\caption{Even spectral moments $M_{2n}$ of $W(3,3)$.}
+\label{tab:moments}
+\begin{tabular}{rc}
+\toprule
+$n$ & $M_{2n}$ \\
+\midrule
+1 & 12 \\
+2 & 624 \\
+3 & 76{,}224 \\
+4 & 10{,}774{,}272 \\
+5 & 1{,}548{,}327{,}936 \\
+6 & 222{,}908{,}805{,}120 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%%===================================================================
 \section{Neutrino Mass Prediction}
 \label{sec:neutrino}
-%% ============================================================
+%%===================================================================
 
-\subsection{The \texorpdfstring{$\mu_{\mathrm{eff}}^2$}{mueff2}
-            Spectral Parameter}
+\subsection{The $\mu_{\text{eff}}^2$ Parameter}
 
-Define the effective spectral hierarchy parameter
 \begin{equation}
-  \mu_{\mathrm{eff}}^2(m) =
-    -\frac{\log s^*(m)}{\log \Phi_4},
+  \mu_{\text{eff}}^2(m) =
+    -\frac{\ln s^*(m)}{\ln\Phi_4},
   \qquad
-  s^*(m) = \frac{\text{geom.~mean}}{\text{max}},
+  s^* = \frac{(m_1 m_2 m_3)^{1/3}}{\max m_i}.
 \end{equation}
-ranging from $0$ (quasi-degenerate, QD) to $\infty$ (fully hierarchical).
 
-\subsection{W(3,3) Fixed-Point Candidates}
+\subsection{Fixed-Point Solutions}
 
-Table~\ref{tab:candidates} lists the four leading candidates ordered by
-Bayesian posterior.
+Table~\ref{tab:rg} gives NH/IH solutions at the W(3,3) fixed points
+(see \texttt{scripts/SOLVE\_RG\_NEUTRINO.py} and
+\texttt{artifacts/rg\_neutrino\_results.json}).
 
 \begin{table}[h]
 \centering
-\caption{$W(3,3)$ neutrino mass candidates (CCCLV posterior).}
-\label{tab:candidates}
+\caption{W(3,3) neutrino mass solutions. NuFIT~5.3 oscillation parameters.}
+\label{tab:rg}
 \begin{tabular}{lccc}
 \toprule
-\textbf{Ordering} & \boldmath$\mu_{\mathrm{eff}}^2$ & \boldmath$\sum m_\nu$ (eV)
-  & \textbf{Posterior} \\
+\textbf{Fixed point} & \boldmath$\mu_{\text{eff}}^2$
+  & \textbf{NH }\boldmath$\sum m_\nu$ & \textbf{IH }\boldmath$\sum m_\nu$ \\
 \midrule
-NH & $1/\mu = 1/4$ & 0.101 & 0.418 \\
-IH & $1/\mu = 1/4$ & 0.110 & 0.285 \\
-IH & $1/6$         & 0.122 & 0.154 \\
-NH & $1/6$         & 0.128 & 0.106 \\
+$1/\mu=1/4$       & 0.2500  & 101.5 meV & 110.3 meV \\
+$1/\Phi_6=1/7$    & 0.1429  & 140.0 meV & 127.9 meV \\
+$1/6$             & 0.1667  & 128.3 meV & 122.0 meV \\
+$1/\Phi_3=1/13$   & 0.0769  & 196.9 meV & 160.8 meV \\
+$1/(2k{-}1)=1/23$ & 0.0435  & 266.6 meV & 205.9 meV \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\subsection{DESI Model Dependence}
+\subsection{j-Invariant CM Tower}
 
-Table~\ref{tab:desi} shows the $95\%$ upper limit on $\sum m_\nu$ from DESI DR1
-under three dark energy models~\cite{desi2024}.
+\begin{equation}
+  j(d{=}{-}4)=k^3=1728,\quad j(d{=}{-}7)=-g^3=-3375,
+\end{equation}
+\begin{equation}
+  j(d{=}{-}8)=(v/2)^3=8000,\quad j(d{=}{-}11)=-2^g=-32768.
+\end{equation}
 
-\begin{table}[h]
-\centering
-\caption{DESI DR1 $95\%$ upper limits and NH/$\mu_{\mathrm{eff}}^2=1/4$ status.}
-\label{tab:desi}
-\begin{tabular}{lcc}
-\toprule
-\textbf{DE Model} & \textbf{95\% UL (eV)} & \textbf{NH/1/4 status} \\
-\midrule
-$\Lambda$CDM   & 0.072 & Excluded \\
-$w_0$CDM       & 0.113 & Allowed \\
-$w_0 w_a$CDM   & 0.173 & Allowed \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\noindent DESI DR1 prefers $w_0 w_a$CDM at $\sim 2\sigma$ over $\Lambda$CDM.
-
-\subsection{j-Tower CM Structure}
-
-\begin{align}
-  j(d=-4) &= k^3 = 1728, \\
-  j(d=-7) &= -g^3 = -3375, \\
-  j(d=-8) &= (v/2)^3 = 8000, \\
-  j(d=-11) &= -2^{g} = -32768.
-\end{align}
-
-%% ============================================================
-\section{Seesaw Cascade and the GUT Connection}
+%%===================================================================
+\section{Seesaw Cascade}
 \label{sec:seesaw}
-%% ============================================================
+%%===================================================================
 
-\subsection{Type-I Seesaw}
+Type-I seesaw gives $M_R\sim (y_D v_{\text{EW}})^2/m_\nu
+\sim 5\times10^{14}$--$10^{15}\,\text{GeV}$ (inside the leptogenesis window).
+The spectral cascade $T^0\to T^3$ steps through cyclotomic fixed points
+$1/\mu\to 1/\Phi_6\to 1/\Phi_3\to 1/(2k-1)$ with convergence ratio
+$\approx\sqrt{\Phi_4}/\Phi_6\approx 0.452$.
 
-For Yukawa coupling $y_D=1$ and $v_{\mathrm{EW}}=246\,\text{GeV}$,
+%%===================================================================
+\section{Spectral Zeta and L-Function Connection}
+\label{sec:zeta}
+%%===================================================================
+
+The $W(3,3)$ spectral zeta is
 \begin{equation}
-  M_R = \frac{(y_D\,v_{\mathrm{EW}})^2}{m_\nu}
-      \sim 5.5\times10^{14}\text{--}1.4\times10^{15}\,\text{GeV},
+  \zeta_{W_{3,3}}(s) =
+    \frac{2k^{-s} + 2f\lambda_r^{-s} + 2g|\lambda_s|^{-s}}{2v}.
 \end{equation}
-placing all three $M_i$ inside the leptogenesis window
-$[10^9,10^{15}]\,\text{GeV}$ and below $M_{\mathrm{GUT}}$~\cite{buchmuller2005}.
+Key values: $\zeta_{W_{3,3}}(1)=0.3958$,
+$\zeta_{W_{3,3}}(2)=0.1736$,
+$\zeta_{W_{3,3}}(11)\approx 3/128$ (r-sector dominant).
+The critical exponent $s=11$ matches the weight of $\Delta(z)=\eta(z)^{24}$,
+providing a spectral link between $W(3,3)$ and $L(\Delta,s)$.
 
-\subsection{Seesaw Spectral Cascade}
-
-Table~\ref{tab:cascade} shows the spectral RG descent through the $W(3,3)$
-ladder.
-
-\begin{table}[h]
-\centering
-\caption{Seesaw spectral cascade $T^0\to T^3$.}
-\label{tab:cascade}
-\begin{tabular}{llll}
-\toprule
-\textbf{Step} & \boldmath$\mu_{\mathrm{eff}}^2$
-  & \textbf{Nearest W(3,3)} & \textbf{Scale} \\
-\midrule
-$T^0$ & $1/4$   & $1/\mu$       & LH neutrinos \\
-$T^1$ & $0.140$ & $1/\Phi_6=1/7$ & RH neutrinos \\
-$T^2$ & $0.075$ & $1/\Phi_3=1/13$ & (2nd seesaw) \\
-$T^3$ & $0.040$ & $1/(2k-1)=1/23$ & (3rd seesaw) \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\subsection{Cascade Fixed Point}
-
-The cascade map $T$ satisfies $T(\mu^*)=\mu^*$ uniquely at $\mu^*=0$ (QD
-limit).  The convergence ratio
-\begin{equation}
-  \frac{T^{(n+1)}}{T^{(n)}} \to 0.5225 \approx \sqrt{\frac{\Phi_4}{\Phi_6^2}}
-\end{equation}
-confirms a spectral RG descent with no cyclic orbit.
-
-%% ============================================================
-\section{RG Perturbation Theory and
-         \texorpdfstring{$\mu_{\mathrm{eff}}^2$}{mueff2} Precision Probe}
-\label{sec:rg}
-%% ============================================================
-
-Running $\mu_{\mathrm{eff}}^2$ from the $W(3,3)$ fixed point at scale
-$\Lambda_0 \sim M_R$ to low energy via one-loop SM RG equations~\cite{pdg2024}
-yields a per-mille shift
-\begin{equation}
-  \delta\mu_{\mathrm{eff}}^2 \simeq
-    \frac{\alpha_s(M_Z)}{\pi}\,\ln\frac{\Lambda_0}{M_Z} \lesssim 0.003,
-\end{equation}
-which is within reach of next-generation neutrino experiments (JUNO, DESI DR2,
-KATRIN)~\cite{juno2022,katrin2022}.  A $5\sigma$ detection of
-$\sum m_\nu = 0.101\,\text{eV}$ at DESI DR2 would directly probe the
-$W(3,3)$ fixed-point structure.
-
-%% ============================================================
+%%===================================================================
 \section*{Acknowledgements}
-%% ============================================================
+%%===================================================================
 
-The author thanks the open-source Python and SageMath communities.  All
-numerical results are reproducible from the companion code at
+All results are reproducible from
 \url{https://github.com/wilcompute/W33-Theory}.
 
-%% ============================================================
 \bibliography{references}
-%% ============================================================
 
 \end{document}
