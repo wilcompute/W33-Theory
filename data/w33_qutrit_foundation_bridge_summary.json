@@ -1,0 +1,1075 @@
+{
+  "qutrit_foundation_dictionary": {
+    "n_vertices": 40,
+    "n_edges": 240,
+    "pauli_commutation_checks": 780,
+    "local_shell_rows": [
+      {
+        "base_vertex": 0,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 1,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 2,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 3,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 4,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 5,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 6,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 7,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 8,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 9,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 10,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 11,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 12,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 13,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 14,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 15,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 16,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 17,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 18,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 19,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 20,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 21,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 22,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 23,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 24,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 25,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 26,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 27,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 28,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 29,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 30,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 31,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 32,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 33,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 34,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 35,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 36,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 37,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 38,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      },
+      {
+        "base_vertex": 39,
+        "N12_size": 12,
+        "H27_size": 27,
+        "triangle_sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "fiber_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "inter_fiber_counts": [
+          3
+        ],
+        "h27_triangle_count": 36
+      }
+    ],
+    "incidence": {
+      "line_count": 40,
+      "line_sizes": [
+        4
+      ],
+      "rank_B": 25,
+      "bbt_equals_a_plus_4i": true,
+      "h_can_equals_16i_minus_bbt": true,
+      "h_can_spectrum": {
+        "0": 1,
+        "10": 24,
+        "16": 15
+      }
+    }
+  },
+  "qutrit_foundation_theorem": {
+    "the_40_projective_two_qutrit_pauli_observables_realise_w33_exactly": true,
+    "every_vertex_has_the_exact_local_qutrit_shell_12_27_4triangles_9fibers": true,
+    "every_pair_of_distinct_fibers_has_exactly_3_edges_between_them": true,
+    "every_h27_shell_contains_exactly_36_internal_triangles": true,
+    "w33_has_exactly_40_totally_isotropic_lines_of_size_4": true,
+    "the_point_line_incidence_operator_satisfies_bbt_equals_a_plus_4i": true,
+    "the_canonical_quadratic_operator_is_hcan_equals_12i_minus_a_equals_16i_minus_bbt": true,
+    "the_canonical_quadratic_operator_has_spectrum_0_1_10_24_16_15": true,
+    "the_qutrit_foundation_bridge_is_fully_closed": true
+  },
+  "interpretation": "The latest paper's qutrit foundation is now closed computationally in one place: W(3,3) is exactly the two-qutrit Pauli commutation geometry, every local shell is the 12+27 Heisenberg/MUB package, and the point-line incidence operator produces the canonical quadratic Hamiltonian with spectrum 0,10,16."
+}
