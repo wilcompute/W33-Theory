@@ -16,6 +16,7 @@ Navigator for the repository's paper sections, reproducibility paths, and formal
 | Beginner concept navigation | [docs/LAYPERSON_CONCEPT_MAP.md](./LAYPERSON_CONCEPT_MAP.md) | Visual/structural map from objects to evidence paths |
 | First-time reader (short) | [README.md](../README.md) | Short repo overview with a live-status note pointing back to the audited entrypoints |
 | Live repo audit | [docs/repo_frontier_audit.html](./repo_frontier_audit.html) | Current repo-wide map: active folders, exactness tiers, and citation corrections |
+| Projective/affine shell split | [`scripts/w33_projective_affine_shell_audit.py`](../scripts/w33_projective_affine_shell_audit.py) | Consolidated executable `PG(2,3) + AG(3,3)` audit showing that the local `13 + 27` qutrit shell is the tangent-hyperplane / affine-complement split of `PG(3,3)` |
 | Local determinant-support boundary | [`scripts/w33_local_albert_shadow_audit.py`](../scripts/w33_local_albert_shadow_audit.py) | Consolidated executable local `H27/E6` cubic audit: `45 = 9 + 36`, five-tritangent incidence, and the cocycle-gauge boundary |
 | Exact finite ladder | [`scripts/w33_qutrit_ladder_audit.py`](../scripts/w33_qutrit_ladder_audit.py) | Consolidated executable `1q -> 2q -> 3q -> 6q` ladder with the exact kernel/non-kernel boundary |
 | Exact `q=3` master lock | [`scripts/w33_q3_master_lock_audit.py`](../scripts/w33_q3_master_lock_audit.py) | Consolidated executable `q=3` overdetermination audit across the local kernel, corrected spectral/Ihara layer, and continuum coefficient seed |
