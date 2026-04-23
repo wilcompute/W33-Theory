@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Temporal-Spectral Toroidal Computer - W(3,3)</title>
+<meta name="description" content="Conservative physical architecture for the exact W(3,3) qutrit kernel: one photon, two qutrit degrees of freedom, one discrete torus, and a localized quartic non-Clifford frontier.">
+<style>
+:root {
+  --bg: #0d1117;
+  --bg2: #161b22;
+  --bg3: #21262d;
+  --fg: #e6edf3;
+  --fg2: #8b949e;
+  --accent: #58a6ff;
+  --accent2: #3fb950;
+  --gold: #e3b341;
+  --border: #30363d;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: linear-gradient(180deg, #0d1117 0%, #101725 100%);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.72;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.92em;
+  padding: 0.08rem 0.32rem;
+  border-radius: 6px;
+  border: 1px solid rgba(110,118,129,0.28);
+  background: rgba(110,118,129,0.18);
+}
+.page {
+  width: min(1080px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.back { color: var(--fg2); font-size: 0.95rem; }
+.badge {
+  display: inline-block;
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(88,166,255,0.4);
+  color: var(--accent);
+  background: rgba(88,166,255,0.08);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.hero {
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(88,166,255,0.14), rgba(63,185,80,0.08));
+  margin-bottom: 1.5rem;
+}
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.08;
+  margin-bottom: 0.8rem;
+}
+.hero p { max-width: 860px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 1.5rem;
+}
+.card, .section {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+.card { padding: 1rem 1.1rem; }
+.card h3, .section h2 {
+  margin-bottom: 0.6rem;
+}
+.card p, .card li, .section p, .section li, table { color: var(--fg2); }
+.card ul, .section ul { margin-left: 1.15rem; }
+.section {
+  margin-top: 1rem;
+  padding: 1.2rem 1.25rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.8rem;
+}
+th, td {
+  text-align: left;
+  padding: 0.75rem 0.8rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+th { color: var(--fg); }
+tr:last-child td { border-bottom: none; }
+.callout {
+  margin-top: 1rem;
+  border-left: 3px solid var(--accent);
+  padding: 0.9rem 1rem;
+  background: rgba(88,166,255,0.08);
+  border-radius: 12px;
+}
+@media (max-width: 720px) {
+  .hero, .section, .card { padding: 1rem; }
+  th, td { padding: 0.7rem; }
+}
+</style>
+</head>
+<body>
+<main class="page">
+  <div class="topbar">
+    <a class="back" href="index.html">&#8592; Back to the live paper</a>
+    <span class="badge">Conservative Architecture 2026-04-23</span>
+  </div>
+
+  <section class="hero">
+    <h1>Temporal-Spectral Toroidal Computer</h1>
+    <p>This page develops one concrete physical system for the exact W(3,3) kernel without pretending the device theorem is already finished. The conservative hardware read is: one photon, two commuting qutrit degrees of freedom, one discrete <code>3 x 3</code> torus, exact Clifford and measurement layers from the finite geometry, and one sharply localized quartic nonlinear frontier for universality.</p>
+    <p>The executable source for this page is <a href="../scripts/w33_temporal_spectral_toroidal_computer_audit.py"><code>scripts/w33_temporal_spectral_toroidal_computer_audit.py</code></a>.</p>
+  </section>
+
+  <div class="grid">
+    <article class="card">
+      <h3>Exact Processor</h3>
+      <ul>
+        <li><code>W(3,3)</code> is already the projective two-qutrit Pauli geometry.</li>
+        <li>The processor Hilbert space is exactly <code>3 x 3 = 9</code>.</li>
+        <li>The projective Pauli class count is <code>40</code>, with Weyl basis size <code>81</code>.</li>
+      </ul>
+    </article>
+    <article class="card">
+      <h3>Exact Screen / Bulk</h3>
+      <ul>
+        <li>Every point-perp is a <code>13</code>-point <code>PG(2,3)</code> memory screen.</li>
+        <li>Its complement is a <code>27</code>-point <code>AG(3,3)</code> compute bulk.</li>
+        <li>The familiar <code>9 x 3</code> fiber packet is one affine direction class.</li>
+      </ul>
+    </article>
+    <article class="card">
+      <h3>Exact Measurement Layer</h3>
+      <ul>
+        <li>The <code>40</code> isotropic lines admit exactly <code>36</code> spreads.</li>
+        <li>Each spread is a full <code>10</code>-basis two-qutrit stabilizer frame.</li>
+        <li>Relative to an anchor, each frame is one memory line plus <code>9</code> affine measurement lines.</li>
+      </ul>
+    </article>
+    <article class="card">
+      <h3>Open Non-Clifford Layer</h3>
+      <ul>
+        <li>The remaining signed Yukawa frontier is exactly two quartic atoms.</li>
+        <li>That is the right place to inject the non-Clifford resource.</li>
+        <li>What remains open is synthesis, not localization of the frontier.</li>
+      </ul>
+    </article>
+  </div>
+
+  <section class="section">
+    <h2>Hardware Dictionary</h2>
+    <table>
+      <tr><th>Finite layer</th><th>Physical read</th></tr>
+      <tr><td>Two-qutrit processor</td><td>One photon with two commuting qutrit degrees of freedom.</td></tr>
+      <tr><td>Temporal qutrit</td><td>Three orthogonal temporal modes around one clock event: <code>past</code>, <code>now</code>, <code>future</code>.</td></tr>
+      <tr><td>Spectral qutrit</td><td>Three ring-resonator sidebands: <code>lower</code>, <code>carrier</code>, <code>upper</code>.</td></tr>
+      <tr><td>Projective screen</td><td>Stored or prepared memory basis at infinity.</td></tr>
+      <tr><td>Affine bulk</td><td>Active compute region where the measurement directions live.</td></tr>
+      <tr><td>36 spreads</td><td>36 complete measurement programs for the same 9-dimensional processor.</td></tr>
+      <tr><td>Tetra-qutrit packet</td><td>4-slot control chart coupled to one 3-state transport axis.</td></tr>
+      <tr><td>Quartic frontier</td><td>Two nonlinear injection channels, naturally read as a <code>chi^(3)</code> or four-wave-mixing layer.</td></tr>
+    </table>
+  </section>
+
+  <section class="section">
+    <h2>Why A Torus</h2>
+    <p>The toroidal side already gives the exact seed data needed for a harmonic architecture. The first closed toroidal seed has one selector line plus six identical nontrivial modes at <code>Phi_6 = 7</code>, and the genus numerator at that seed is exactly the tetrahedral packet <code>4 x 3 = 12</code>. On the physical side that suggests a ring-style synthetic dimension with a privileged center and a symmetric harmonic shell rather than a generic large graph.</p>
+    <div class="callout">The user intuition about a “harmonic now” fits best as a temporal-mode statement: the central clock mode is not isolated from the side modes, but sits inside a balanced three-mode packet. This page keeps that as a temporal-mode realization hypothesis, not a proof that the finite geometry has already derived retrocausality.</div>
+  </section>
+
+  <section class="section">
+    <h2>Universality Read</h2>
+    <p>The exact repo already fixes the Clifford side of the machine. The new point is that this is no longer just an abstract algebraic statement: it now has a coherent photonic realization class.</p>
+    <ul>
+      <li>Linear electro-optic time and frequency control implements the qutrit Weyl shifts and phases.</li>
+      <li>The two-qutrit measurement layer is already exact via the <code>36</code> spread/MUB frames.</li>
+      <li>The remaining universality resource is localized to two quartic nonlinear atoms, so the right engineering target is a minimal nonlinear injection layer rather than a new symmetry search.</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Primary Sources</h2>
+    <ul>
+      <li><a href="https://arxiv.org/abs/1805.04410">Imany et al. (2018), high-dimensional optical quantum logic in time and frequency on a single photon</a></li>
+      <li><a href="https://arxiv.org/abs/1909.04828">Dutt et al. (2019), a single photonic cavity with two independent physical synthetic dimensions</a></li>
+      <li><a href="https://arxiv.org/abs/2105.04069">Yuan, Dutt, Fan (2021), synthetic frequency dimensions in dynamically modulated ring resonators</a></li>
+      <li><a href="https://arxiv.org/abs/1909.12466">Yuan et al. (2019), local interactions in the synthetic frequency dimension via <code>chi^(3)</code> nonlinearity</a></li>
+      <li><a href="https://arxiv.org/abs/1911.06771">Raymer, Walmsley (2019), temporal modes in quantum optics</a></li>
+      <li><a href="https://arxiv.org/abs/2302.03045">Bouchard et al. (2023), measuring ultrafast time-bin qudits</a></li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>
