@@ -2,6 +2,12 @@
 
 Continuation of `EXTENSIONS.md`. New results §17–§24.
 
+Normalization note:
+the symbolic q-family formulas in §17–§22 use the corrected 80-mode lift
+normalization from `scripts/w33_ihara_analysis.py`. They are not the same
+family normalization as the per-vertex adjacency moments in `EXTENSIONS.md`
+and `scripts/w33_spectral_core.py`.
+
 ---
 
 ## §17: n_zero(q) Uniqueness — New Characterization of C2
@@ -34,8 +40,9 @@ the result holds for odd prime powers.
 
 ## §18: M₂(q) = k(q) Uniqueness — New Characterization
 
-For a k-regular graph, the second spectral moment always satisfies M₂ = k.
-For W(3,q), the formula gives:
+For a k-regular graph, the per-vertex adjacency second moment always satisfies
+M₂ = k. In the corrected 80-mode lift normalization used in this section, the
+symbolic family formula gives:
 
 ```
 M₂(q) = 2q(q+1)/(q−1)

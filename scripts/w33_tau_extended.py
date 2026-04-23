@@ -8,6 +8,18 @@ Key results:
   - tau(p) mod 23 table for all known p
   - Congruence verification
 """
+from pathlib import Path
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+except Exception:
+    pass
+
 from scripts.w33_spectral_core import W33
 
 # Known tau values (LMFDB-verified)
@@ -44,8 +56,8 @@ TAU = {
 TAU_RING_FORMULAS = {
     2: "-f = -24",
     3: "k*q*Phi6 = 12*3*7 = 252",
-    5: "2*q*(q-2)*Phi6*(2k-1) = 2*3*1*7*23 = 4830",
-    7: "-(q+1)*Phi6*Phi3*(2k-1) = -4*7*13*23 = -16744",
+    5: "lam*q*(lam+q)*Phi6*(2k-1) = 2*3*5*7*23 = 4830",
+    7: "-lam^3*Phi6*Phi3*(2k-1) = -8*7*13*23 = -16744",
 }
 
 
@@ -53,12 +65,13 @@ def verify_ring_formulas() -> bool:
     k, q, f = W33.k, W33.q, W33.f
     Phi3, Phi6 = W33.Phi3, W33.Phi6
     two_k_1 = W33.two_k_minus_1
+    lam = q - 1
 
     checks = [
         ("tau(2) = -f",                       TAU[2], -f),
         ("tau(3) = k*q*Phi6",                 TAU[3], k*q*Phi6),
-        ("tau(5) = 2*q*(q-2)*Phi6*(2k-1)",   TAU[5], 2*q*(q-2)*Phi6*two_k_1),
-        ("tau(7) = -(q+1)*Phi6*Phi3*(2k-1)", TAU[7], -(q+1)*Phi6*Phi3*two_k_1),
+        ("tau(5) = lam*q*(lam+q)*Phi6*(2k-1)", TAU[5], lam*q*(lam+q)*Phi6*two_k_1),
+        ("tau(7) = -lam^3*Phi6*Phi3*(2k-1)",   TAU[7], -(lam**3)*Phi6*Phi3*two_k_1),
     ]
     all_pass = True
     for desc, actual, predicted in checks:
@@ -78,12 +91,12 @@ def tau_mod23_table() -> None:
 
 
 if __name__ == "__main__":
-    print("── W(3,3) tau ring formulas ──")
+    print("-- W(3,3) tau ring formulas --")
     verify_ring_formulas()
     print()
-    print("── tau(n) mod 23 table ──")
+    print("-- tau(n) mod 23 table --")
     tau_mod23_table()
     print()
-    print("── Phi6 barrier prime formulas ──")
+    print("-- Phi6 barrier prime formulas --")
     for p, formula in TAU_RING_FORMULAS.items():
         print(f"  tau({p}) = {formula}")

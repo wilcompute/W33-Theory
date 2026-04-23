@@ -10,11 +10,28 @@ Ihara zeta function analysis for W(3,3), including:
 
 All results verified April 2026 — see paper/EXTENSIONS_2.md.
 
+This script uses the corrected 80-mode lift normalization for the symbolic
+q-family formulas. That is a different family normalization from the
+per-vertex adjacency moments surfaced in scripts/w33_spectral_core.py.
+
 Usage:
     python scripts/w33_ihara_analysis.py
 """
+from pathlib import Path
+import sys
+
 import numpy as np
 import sympy as sp
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+except Exception:
+    pass
+
 from scripts.w33_spectral_core import W33
 
 
@@ -56,8 +73,8 @@ def ihara_discriminant_theorem():
     disc_pr = (q_sym - 1)**2 - 4 * (k_q - 1)
     disc_ps = (q_sym + 1)**2 - 4 * (k_q - 1)
 
-    gap_r = sp.factor(-disc_pr - 4 * Phi4)
-    gap_s = sp.factor(-disc_ps - 4 * Phi6)
+    gap_r = sp.factor(disc_pr + 4 * Phi4)
+    gap_s = sp.factor(disc_ps + 4 * Phi6)
 
     print("── Ihara Discriminant Theorem ──")
     print(f"  disc(p_r)(q) = {sp.expand(disc_pr)}")

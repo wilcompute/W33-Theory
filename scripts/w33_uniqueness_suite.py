@@ -1,7 +1,12 @@
 """w33_uniqueness_suite.py
 
 Full suite of W(3,3) uniqueness characterizations — all five original
-conditions C1–C5 plus four new ones derived April 2026.
+conditions C1-C5 plus four new ones derived April 2026.
+
+This suite follows the same corrected 80-mode lift normalization as
+`scripts/w33_ihara_analysis.py` and `paper/EXTENSIONS_2.md`. It is not the
+same normalization as the per-vertex adjacency-moment family surfaced in
+`scripts/w33_spectral_core.py`.
 
 Conditions:
   C1  (original) : Ihara zeta pole = cyclotomic calibration
@@ -20,7 +25,20 @@ The gap between each condition and q=3 is proportional to (q-3)^2.
 Usage:
     python scripts/w33_uniqueness_suite.py
 """
+from pathlib import Path
+import sys
+
 import sympy as sp
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+except Exception:
+    pass
+
 from scripts.w33_spectral_core import W33
 
 q = sp.Symbol('q', positive=True)

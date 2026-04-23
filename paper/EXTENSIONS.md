@@ -63,21 +63,25 @@ The 4th spectral moment M_4 = (1/2v) Tr(A⁴) satisfies:
 
 **THEOREM**: For any W(3,q) Ramanujan graph,
 ```
-M_4(q) = q(q+1)²(q²+q+1) = q · μ² · Φ_3(q)
+M_4(q) = q(q+1)(q³ + 3q² − q + 1)
 ```
 
-At q=3: M_4 = 3·16·13 = 624 ✓
+At q=3 this specializes to
+```
+M_4(3) = 3·4²·13 = 624 = q · μ² · Φ_3(q)
+```
 
 This is a new closed-form identity connecting the 4th moment of the
 W(3,q) spectral measure to the cyclotomic polynomial Φ_3(q).
 
 Verification for W(3,q):
-| q | k=q(q+1) | f=q(q+1)²/2 | g=q(q²+1)/2 | M_4=q·μ²·Φ_3 |
-|---|----------|-------------|-------------|---------------|
-| 2 | 6        | 9           | 5           | 126           |
+| q | k=q(q+1) | f=q(q+1)²/2 | g=q(q²+1)/2 | M_4=q(q+1)(q³+3q²−q+1) |
+|---|----------|-------------|-------------|-------------------------|
+| 2 | 6        | 9           | 5           | 114           |
 | 3 | 12       | 24          | 15          | 624           ✓ |
-| 4 | 20       | 50          | 34          | 2100          |
-| 5 | 30       | 90          | 65          | 5580          |
+| 4 | 20       | 50          | 34          | 2180          |
+| 5 | 30       | 90          | 65          | 5880          |
+| 7 | 56       | 224         | 175         | 27104         |
 
 ---
 
@@ -117,6 +121,10 @@ j(d=−11) = −2^g = −2^15 = −32768
 ## §14: SOLVE_RG_NEUTRINO.py — Full Results
 
 See `artifacts/rg_neutrino_results.json` for full precision solutions.
+Those numbers are the preserved NuFIT 5.3 legacy baseline used in the April
+2026 derivation. The live solver now also supports the current official NuFIT
+6.0 presets; under the default IC24-with-SK table the ordering of fixed points
+is unchanged and the `1/\mu` NH sum shifts slightly to 101.206 meV.
 
 Key result (highest-posterior candidate, NH, μ_eff² = 1/μ = 1/4):
 ```
@@ -156,7 +164,7 @@ This connects W(3,3) to quantum error correction (see PR #80, Pillar-45).
 
 ζ_{W33}(1)  = 0.39583
 ζ_{W33}(2)  = 0.17361
-ζ_{W33}(11) = 2.931 × 10⁻⁴  ≈ 3/128  (r-sector dominant)
+ζ_{W33}(11) = 2.931 × 10⁻⁴  (r-sector dominant)
 ζ_{W33}(12) = 1.465 × 10⁻⁴
 ```
 
