@@ -8,6 +8,15 @@ normalization from `scripts/w33_ihara_analysis.py`. They are not the same
 family normalization as the per-vertex adjacency moments in `EXTENSIONS.md`
 and `scripts/w33_spectral_core.py`.
 
+Exact bridge note:
+letting `V(q) = (q+1)(q^2+1)` denote the point-graph vertex count, the lift
+mode count is `N_lift(q) = q^4 - 1 = (q-1)V(q)`, the nonzero lift sector is
+`N_nonzero(q) = 2V(q)`, and the zero sector is
+`N_zero(q) = (q-3)V(q)`. Hence the lift-normalized even moments satisfy
+`M_{2n}^{lift}(q) = (2/(q-1)) M_{2n}^{adj}(q)`, so the apparent `M_2`
+uniqueness at `q=3` is exactly the statement that the zero-mode sector
+vanishes only there. See `scripts/w33_normalization_bridge_audit.py`.
+
 ---
 
 ## §17: n_zero(q) Uniqueness — New Characterization of C2
