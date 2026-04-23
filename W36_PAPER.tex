@@ -155,13 +155,135 @@ $\mathrm{PG}(3,\mathbb{F}_3)$ with respect to a non-degenerate alternating
 bilinear form---encodes the complete structure of fundamental physics.
 The collinearity graph of $\W$ is the unique strongly regular graph
 $\SRG(40,12,2,4)$ \cite{Seidel1973,GoethalsSeidel1970}.
-Starting from the single Diophantine equation $q!=2q$ (uniquely solved by $q=3$),
-we derive all four fundamental forces, coupling constants, masses, mixing angles,
-and cosmological parameters with \emph{zero} free parameters.
+More concretely, $\W$ is simultaneously the projective commutation geometry of
+the $40$ non-identity two-qutrit Pauli observables, and each local shell around
+a vertex carries a finite Heisenberg/MUB structure. These exact qutrit
+statements are the rigid kernel of the paper. Starting from the single
+Diophantine equation $q!=2q$ (uniquely solved by $q=3$), the later sections
+develop a spectral programme that connects this kernel to coupling, mass,
+mixing, and cosmological data with \emph{zero} tunable moduli.
+
+\subsection{Exact Qutrit Foundation}
+
+The exact global identification with two-qutrit Pauli commutation geometry is
+standard in finite quantum information \cite{PlanatSaniga2007}. The local
+Heisenberg shell below is the corresponding finite-phase-space refinement used
+throughout the paper.
+
+\begin{proposition}[Two-qutrit Pauli Realisation of $\W$]
+\label{prop:two-qutrit-pauli-foundation}
+The $40$ vertices of $\W$ are the $40$ projective non-identity two-qutrit
+Pauli operators
+\[
+  X^a Z^b \otimes X^c Z^d,
+  \qquad (a,b,c,d) \in \mathbb{F}_3^4 \setminus \{0\} / \mathbb{F}_3^\times.
+\]
+Two vertices are adjacent if and only if the corresponding operators commute.
+Equivalently, $\W$ is the projective symplectic polar space $W(3,3)$ of
+two-qutrit commutation.
+\end{proposition}
+
+\begin{proof}
+A nonzero vector of $\mathbb{F}_3^4$ determines a two-qutrit Pauli observable
+up to nonzero scalar, so the number of projective classes is
+\[
+  \frac{3^4 - 1}{3 - 1} = 40.
+\]
+For $u = (a,b,c,d)$ and $v = (a',b',c',d')$, the commutator phase is governed by
+\[
+  \Omega(u,v) = ab' - ba' + cd' - dc' \pmod 3.
+\]
+The operators commute exactly when $\Omega(u,v) = 0$, which is precisely the
+collinearity relation in $W(3,3)$. Thus the Pauli commutation graph is
+$\SRG(40,12,2,4)$, i.e. the graph of $\W$.
+\end{proof}
+
+\begin{proposition}[Local Heisenberg/MUB Shell]
+\label{prop:local-heisenberg-mub-shell}
+Fix a vertex $v_0 \in \W$. The $12$ neighbors of $v_0$ split into $4$
+disjoint triangles, defining $4$ qutrit MUB classes. The $27$ non-neighbors
+admit coordinates
+\[
+  H_{27}(v_0) \cong \{(x,y,t) : x,y,t \in \mathbb{F}_3\},
+\]
+organized as $9$ fibers of size $3$. In these coordinates the local shell
+carries the finite Heisenberg law
+\[
+  (x,y,t) \cdot (x',y',t') = (x+x', y+y', t+t'+xy')
+\]
+over $\mathbb{F}_3$, and the derived $27$-vertex graph is the Schlafli graph
+$\SRG(27,16,10,8)$.
+\end{proposition}
+
+\begin{proof}
+For each base vertex $v_0$, a direct computation shows that the neighbor
+subgraph is four disjoint triangles. Intersecting two triangle classes yields a
+$3 \times 3$ array of fibers, each of size $3$, on the $27$ non-neighbors.
+This produces coordinates $(x,y,t) \in \mathbb{F}_3^3$, with the fiber
+coordinate $t$ central and the resulting incidence pattern matching the
+Heisenberg multiplication law above. The graph induced by the $27$-point shell
+then has parameters $\SRG(27,16,10,8)$, i.e. the Schlafli graph. In
+particular, the local shell is a finite qutrit phase space with $4$ MUB
+classes and a distinguished $\mathbb{Z}_3$ fiber.
+\end{proof}
+
+\begin{proposition}[Canonical Quadratic Operator]
+\label{prop:canonical-qutrit-operator}
+Let $A$ be the adjacency matrix of $\W$ and let $B$ be the $40 \times 40$
+point-line incidence matrix between the $40$ points and the $40$ lines of
+$\W$. Then
+\[
+  B B^\top = A + 4 I_{40},
+  \qquad
+  H_{\mathrm{can}} := 12 I_{40} - A = 16 I_{40} - B B^\top.
+\]
+Hence $H_{\mathrm{can}}$ is positive semidefinite with spectrum
+\[
+  \mathrm{Spec}(H_{\mathrm{can}}) = \{0^1,\,10^{24},\,16^{15}\}.
+\]
+\end{proposition}
+
+\begin{proof}
+Each point of $\W$ lies on $4$ lines, so the diagonal entries of
+$B B^\top$ are $4$. Two distinct points lie on a unique line exactly when they
+are adjacent in $\W$, so the off-diagonal entries of $B B^\top$ reproduce the
+adjacency matrix $A$. Therefore $B B^\top = A + 4 I_{40}$, and the displayed
+formula for $H_{\mathrm{can}}$ follows. Since $A$ has spectrum
+$\{12^1,2^{24},(-4)^{15}\}$, the spectrum of $12 I_{40} - A$ is
+$\{0^1,10^{24},16^{15}\}$, so $H_{\mathrm{can}}$ is positive semidefinite.
+\end{proof}
+
+\begin{remark}[Scaling Family]
+\label{rem:w3q-scaling-family}
+The qutrit case sits in the symplectic family
+\[
+  W(3,q) = \SRG\bigl((q+1)(q^2+1),\, q(q+1),\, q-1,\, q+1\bigr).
+\]
+For this whole family the local shell sizes are
+\[
+  |N(v)| = q(q+1),
+  \qquad
+  |V \setminus (N(v) \cup \{v\})| = q^3,
+\]
+and the corresponding graph-Laplacian candidate is
+\[
+  H_q = q(q+1) I - A_q = (q+1)^2 I - B_q B_q^\top,
+\]
+with nonzero eigenvalues $q^2+1$ and $(q+1)^2$. At $q=3$ these formulas reduce
+to
+\[
+  (v,k,\lambda,\mu) = (40,12,2,4),
+  \qquad
+  |E| = 240,
+  \qquad
+  |N(v)| + |H_{27}(v)| = 12 + 27.
+\]
+\end{remark}
 
 \subsection{The One-Line Theory}
 
-The entire theory is encapsulated in one formula:
+The broader spectral closure studied in this paper is encapsulated in one
+formula:
 \begin{equation}\label{eq:oneline}
   \boxed{Z(x) \;=\; (1-5x)^{10}\,(1+x)^{16}\,(1+7x)^{6}.}
 \end{equation}
@@ -183,13 +305,19 @@ $Z(1)=2^{54}$ counts spinor degeneracies.
 
 \subsection{Strategy and the Logical Chain}
 
-The derivation chain is:
+After the exact qutrit foundation above, the derivation chain used in the rest
+of the paper is:
 \begin{equation}\label{eq:chain}
-  q!=2q \implies q=3 \implies \W = \SRG(40,12,2,4) \implies Z(x)
-  \xrightarrow{\mathrm{Taylor}} E_8
-  \xrightarrow{\mathrm{chain}} G_{\mathrm{SM}}
-  \xrightarrow{\mathrm{Fano}} 3\!+\!1\;\text{spacetime}
-  \xrightarrow{\mathrm{spectrum}} m,\,\alpha,\,\theta_W,\,\ldots
+\begin{aligned}
+  q!=2q &\implies q=3 \implies \W = \SRG(40,12,2,4) \\
+        &\xrightarrow{\mathrm{Pauli}} \text{2-qutrit commutation geometry}
+         \xrightarrow{\mathrm{local}} H_{27}\text{ Heisenberg/MUB shell} \\
+        &\xrightarrow{\mathrm{spectral}} Z(x)
+         \xrightarrow{\mathrm{Taylor}} E_8
+         \xrightarrow{\mathrm{chain}} G_{\mathrm{SM}}
+         \xrightarrow{\mathrm{Fano}} 3\!+\!1\;\text{spacetime}
+         \xrightarrow{\mathrm{spectrum}} m,\,\alpha,\,\theta_W,\,\ldots
+\end{aligned}
 \end{equation}
 
 The paper is organised as follows. Section~\ref{sec:graph} defines
@@ -760,21 +888,24 @@ $\bar{\W} = \mathrm{SRG}(40,27,18,18)$.
 
 \subsubsection{Automorphism Group and E\protect\textsubscript{6} Weyl Group Coincidence}
 
-\begin{proposition}[Automorphism Group]\label{prop:automorphism}
-The automorphism group of $\W$ is
+\begin{proposition}[Projective and Full Graph Automorphisms]\label{prop:automorphism}
+The graph automorphism group of $\W$ contains a projective symplectic subgroup
 \[
-  \mathrm{Aut}(\W) \cong \mathrm{PSp}(4,3),\qquad |\mathrm{Aut}(\W)| = 25920.
+  \mathrm{PSp}(4,3),\qquad |\mathrm{PSp}(4,3)| = 25920.
 \]
-This coincides with the order of $\mathrm{Sp}(4,3)$ divided by 2:
+Adjoining an anti-symplectic similitude doubles this to the full collinearity-graph
+automorphism group of order $51840$. Equivalently,
 \[
   |\mathrm{Sp}(4,3)| = q^4(q^2-1)(q^4-1) = 81\cdot 8\cdot 80 = 51840 = |W(E_6)|,
 \]
 where $W(E_6)$ denotes the Weyl group of $E_6$.  Hence
 \[
-  |\mathrm{Aut}(\W)| = \tfrac{1}{2}|W(E_6)| = 25920.
+  |\mathrm{PSp}(4,3)| = \tfrac{1}{2}|W(E_6)| = 25920,
+  \qquad
+  |\mathrm{Aut}_{\mathrm{graph}}(\W)| = |W(E_6)| = 51840.
 \]
-The vertex stabilizer has order $648$; $\mathrm{Aut}(\W)$ acts as a rank-3 permutation
-group on the 40 vertices.  Furthermore,
+The projective vertex stabilizer has order $648$, while the full graph stabilizer
+has order $1296$; both actions are rank-$3$ on the $40$ vertices.  Furthermore,
 \begin{align}
   n - \omega &= 40 - 4 = 36 = \#\{\text{positive roots of }E_6\}, \\
   n - 1 - k  &= 27 = \dim\mathbf{27}_{E_6}  \quad\text{(fundamental representation).}
@@ -783,13 +914,15 @@ group on the 40 vertices.  Furthermore,
 
 \begin{proof}
 The symplectic polar graph $W(3) = W(3,3)$ is the collinearity graph of $\mathrm{GQ}(3,3)$.
-Its full automorphism group is $\mathrm{P}\Gamma\mathrm{Sp}(4,3)$; since $\mathrm{GF}(3)$
-has trivial field automorphism group, $\mathrm{Aut}(\W) \cong \mathrm{PSp}(4,3)$.
+The incidence-preserving projective symplectic subgroup is $\mathrm{PSp}(4,3)$.
+At the level of the collinearity graph one may also adjoin an anti-symplectic
+similitude, yielding the full graph automorphism group of order $51840$.
 The order formula $|\mathrm{Sp}(2n,q)| = q^{n^2}\prod_{i=1}^n(q^{2i}-1)$ gives
 $|\mathrm{Sp}(4,3)| = 3^4(3^2-1)(3^4-1) = 81\cdot 8\cdot 80 = 51840$.
-The order of the Weyl group $W(E_6) = 51840 = 2^7\cdot 3^4\cdot 5$ is the same
-(a classical coincidence between symplectic and exceptional groups).
-The vertex stabilizer order follows from $|\mathrm{Aut}|/n = 25920/40 = 648$.
+The order of the Weyl group $W(E_6) = 51840 = 2^7\cdot 3^4\cdot 5$ is the same.
+Thus the projective subgroup has order $25920$, while the full graph action has
+order $51840$. The corresponding vertex stabilizers are $25920/40 = 648$ and
+$51840/40 = 1296$.
 The count $n - \omega = 36 = |\Phi^+(E_6)|$ and the representation dimension $27 = n-1-k$
 are numerical coincidences that parallel the Lie algebra cascade
 (Theorem~\ref{thm:liecascade}).
@@ -931,8 +1064,9 @@ degree matrix.
 The graph $\W(3,3)$ exhibits maximal symmetry and transitivity:
 \begin{itemize}
   \item \textbf{Vertex-transitive}: The automorphism group acts transitively on vertices.
-        All 40 vertices are equivalent under the action of $\mathrm{Aut}(\W) \cong \mathrm{PSp}(4,3)$,
-        with stabilizer order $|\mathrm{Stab}(v)| = |\mathrm{Aut}(\W)|/n = 25920/40 = 648$.
+      All 40 vertices are equivalent under the action of the full graph automorphism group,
+      with stabilizer order $|\mathrm{Stab}(v)| = 51840/40 = 1296$; the projective symplectic
+      subgroup already acts transitively, with stabilizer order $25920/40 = 648$.
   \item \textbf{Edge-transitive}: All edges are equivalent; the automorphism group
         acts transitively on the edge set ($E = 240$ edges).
   \item \textbf{Distance-transitive}: For each distance $d \in \{0,1,2\}$, pairs of vertices
@@ -949,10 +1083,11 @@ The graph $\W(3,3)$ exhibits maximal symmetry and transitivity:
 \end{proposition}
 
 \begin{proof}
-The vertex-transitivity is a direct consequence of $\mathrm{PSp}(4,3)$ being the stabilizer
-of the symplectic form used to define adjacency in $\W(3,3)$. Since all lines of the
-projective space $\mathrm{PG}(3,3)$ are equivalent under the action (by definition of
-the symplectic group), all vertices are equivalent.
+The vertex-transitivity is already a direct consequence of the projective symplectic
+subgroup preserving the symplectic form used to define adjacency in $\W(3,3)$. Since all
+lines of the projective space $\mathrm{PG}(3,3)$ are equivalent under this action, all
+vertices are equivalent. Adjoining the anti-symplectic similitude doubles the local
+stabilizer to order $1296$ without changing transitivity.
 
 The vertex connectivity equals the regularity $k$ for a vertex-transitive graph, as the
 removal of any $k-1$ vertices leaves at least one neighbor of any remaining vertex.
@@ -1479,8 +1614,10 @@ sets with remarkable arithmetic structure:
           I(\W, x) = 1 + 40x + 540x^2 + 3240x^3 + 9450x^4 + 13824x^5 + 10080x^6 + 2880x^7.
         \]
   \item \textbf{Maximum independent sets}: There are exactly $i_7 = 2880$ maximum independent sets
-        of size $\alpha = 7$. Since $|{\mathrm{Aut}}(\W)| / i_7 = 25920/2880 = 9$, each maximum
-        independent set has a stabiliser of order $9 = 3^2$ under the automorphism group.
+      of size $\alpha = 7$. Since the projective symplectic subgroup already acts transitively on
+      this family, $25920/2880 = 9$, each maximum independent set has a stabiliser of order
+      $9 = 3^2$ under that subgroup; equivalently the full graph-automorphism stabiliser has
+      order $18$.
   \item \textbf{Total independent sets}: $I(\W, 1) = 40{,}055 = 5 \times 8011$, where
         $8011$ is prime.
   \item \textbf{Unimodal coefficients}: The sequence $(i_k)$ is unimodal with peak at $i_5 = 13824 = 2^9 \cdot 3^3$,
@@ -1498,10 +1635,11 @@ enumeration.  Here $i_0 = 1$, $i_1 = n = 40$, $i_2 = \binom{n}{2} - |E| = 780 - 
 and higher coefficients are obtained by counting all independent sets of each size via backtracking
 with non-neighbor pruning.
 
-The count $i_7 = 2880$ with $|\mathrm{Aut}|/i_7 = 9$ follows from the orbit-stabiliser theorem:
-$\mathrm{Aut}(\W)$ acts on the set of maximum independent sets, and each orbit has size
-$|\mathrm{Aut}|/|\mathrm{Stab}| = 25920/9 = 2880$ if there is a single orbit (which the
-computation confirms), with stabiliser of order $9 = 3^2$.
+The count $i_7 = 2880$ with $25920/2880 = 9$ follows from the orbit-stabiliser theorem for the
+projective symplectic subgroup: this subgroup acts on the set of maximum independent sets, the
+computation confirms a single orbit, and the corresponding stabiliser has order $9 = 3^2$.
+Since the full graph automorphism group contains this subgroup with index $2$, the same orbit is
+also a single full-group orbit, with stabiliser order $18$.
 
 The closed walk counts follow from $W_k = \mathrm{tr}(A^k) = 12^k + 24 \cdot 2^k + 15 \cdot (-4)^k$.
 \end{proof}
@@ -1999,7 +2137,8 @@ the following.
         $\mathrm{GQ}(3,3)$: a set of $\alpha = 7$ points meeting
         each line in at most one point.
         There are $|I_7(\W)| = 2880 = 2^6 \cdot 3^2 \cdot 5$ such sets,
-        and $|\operatorname{Aut}(\W)|/|I_7| = 25920/2880 = 9$.
+      and the projective symplectic subgroup has orbit-stabiliser ratio
+      $25920/2880 = 9$ on this family.
   \item \textbf{Line covering}:
         Each partial ovoid hits exactly $28$ of the $40$ lines
         and misses $12$.  Every vertex belongs to exactly $504$
@@ -3304,6 +3443,60 @@ $\mu = 0$ ($27$, the $9$ disjoint triangles), and
 $\mu = 3$ ($216$, the Schl\"afli complement) pairs.
 The $9$ triples with their $3(J_9 - I_9)$ adjacency form a
 $(9,3,3)$-design, a perfectly uniform partition of the matter sector.
+\end{remark}
+
+\begin{proposition}[Exact Local $E_6$ Bridge]
+\label{prop:local-e6-bridge}
+Fix a base vertex $P$. Combining
+Propositions~\ref{prop:local-heisenberg-mub-shell}
+and~\ref{prop:schlafli}, the $27$-point shell around $P$ carries two
+simultaneous exact structures:
+\begin{enumerate}[(i)]
+  \item a qutrit Heisenberg coordinatization
+        $H_{27}(P) \cong \mathbb{F}_3^3$ with $9$ fibers of size $3$ and a
+        distinguished central $\mathbb{Z}_3$ direction;
+  \item a Schl\"afli graph structure $\mathrm{SRG}(27,16,10,8)$,
+        equivalently the classical geometry of the $27$ lines on a smooth
+        cubic surface.
+\end{enumerate}
+Moreover, the classical tritangent count splits as
+\[
+  45 = 36 + 9,
+\]
+where the $9$ exceptional directions are exactly the Heisenberg center cosets
+coming from the fiber decomposition. Thus the Lie-theoretic consequence forced
+directly by the qutrit kernel is local and $E_6$-side: the shell functorially
+meets the cubic-surface/$W(E_6)$ geometry before any later global $E_8$
+closure is imposed.
+At the level of exact local symmetry, the full graph stabilizer of $P$ has order
+$1296$ and restricts faithfully to this $27$-point shell, while the projective
+symplectic-visible part is the index-$2$ subgroup of order $648$.
+\end{proposition}
+
+\begin{proof}
+Proposition~\ref{prop:local-heisenberg-mub-shell} identifies the non-neighbor
+shell of $P$ with a finite Heisenberg phase space on $\mathbb{F}_3^3$, split
+into $9$ fibers of size $3$ with a central $\mathbb{Z}_3$ direction.
+Proposition~\ref{prop:schlafli} identifies the same $27$-vertex shell with the
+Schl\"afli graph, hence with the classical $27$-line cubic-surface geometry.
+Inside this shell, the $\mu=0$ structure gives $9$ disjoint triples; under the
+Heisenberg coordinatization these are exactly the center-coset directions, so
+the classical tritangent count separates into $36$ internal shell incidences
+plus these $9$ distinguished central directions. Direct enumeration of the local
+graph stabilizer shows that the full order-$1296$ shell symmetry preserves the
+entire $45$-triad package and its $36+9$ split, while the projective symplectic
+part contributes the order-$648$ index-$2$ subgroup. The automorphism group of the
+Schl\"afli configuration is the Weyl group $W(E_6)$, so this shell is an exact
+local $E_6$ bridge extracted from the qutrit kernel itself.
+\end{proof}
+
+\begin{remark}[Boundary with the $E_8$ Layer]
+\label{rem:e8-boundary}
+The equalities $|E(\W)| = 240 = |\Phi(E_8)|$ and $\dim(E_8)=248$ remain
+important constraints in the later spectral programme, but unlike
+Proposition~\ref{prop:local-e6-bridge} they are not yet canonical consequences
+of the qutrit kernel alone. In the present paper they therefore belong to the
+global spectral closure layer, not to the exact local shell theorem.
 \end{remark}
 
 %% ===============================================================
@@ -5654,23 +5847,49 @@ suggests that the $\W$ spectral data is the \emph{finite-dimensional
 projection} of the Monster VOA onto the physical world.
 
 %% ===============================================================
-\section{Open Questions and Known Tensions}
+\section{Open Questions and Exact Boundaries}
 \label{sec:open}
 %% ===============================================================
 
-\subsection{Higgs Mass Tension}
-\label{sec:higgs-tension}
+\subsection{Integral $E_8$ Lift}
+\label{sec:e8-lift-open}
 
-The largest discrepancy in the framework is the Higgs mass:
+The mod-$2$ homology of Proposition~\ref{prop:gf2homology},
 \[
-  \mH^{(\W)} = 78.2\,\mathrm{GeV}, \qquad
-  \mH^{(\rm obs)} = 125.25\pm 0.17\,\mathrm{GeV}, \qquad
-  \text{error } 37.6\%.
+  H \cong \mathbb{F}_2^{\,8},
 \]
-The spectral derivation yields the \emph{bare} Higgs mass at the
-$\W$ characteristic scale. The physical pole mass receives large
-top-quark Yukawa radiative corrections $\Delta\mH \sim 80\,\mathrm{GeV}$
-that must be computed self-consistently in future work.
+already fixes the correct \emph{rank} for $E_8$, but not yet the
+integral Cartan pairing.  What remains open is an explicit lift from
+the clique-complex chain data over $\mathbb{F}_2$ to an integral
+lattice carrying the $E_8$ bilinear form.  In other words, the finite
+geometry already provides the correct mod-$2$ shadow, but the
+integral $E_8$ root lattice has not yet been reconstructed directly
+from the chain complex.
+
+\subsection{Moonshine Module Boundary}
+\label{sec:moonshine-boundary}
+
+The low-order moonshine transport closes exactly through the quartic
+graded piece.  On the supported $32$-class seed, the first four
+McKay--Thompson coefficients determine the exact package
+\[
+  V_1 \oplus V_2 \oplus V_3 \oplus V_4,
+\]
+and on the $17$ bundled CTblLib-anchored classes the quartic character
+formula
+\[
+  \chi_{19360062527}(g)
+  = \operatorname{Tr}(g|V_4)
+    - \operatorname{Tr}(g|V_3)
+    - \operatorname{Tr}(g|V_2) + 1
+\]
+matches the bundled Monster data exactly.
+
+The first honest boundary is the quintic layer: the naive $V_5$ lift
+from the current degree-only decomposition already fails on the
+anchored classes $2A$ and $2B$.  So the next step is not more
+coefficient fitting, but genuine character-theoretic input for the
+fifth graded Monster piece and beyond.
 
 \subsection{Dynamical Origin}
 
@@ -5765,6 +5984,12 @@ pp.~481--511.
 J.~M.~Goethals and J.~J.~Seidel,
 \textit{Strongly regular graphs derived from combinatorial designs},
 Canadian Journal of Mathematics \textbf{22} (1970), 597--614.
+
+\bibitem{PlanatSaniga2007}
+M.~Planat and M.~Saniga,
+\textit{On the Pauli graphs of $N$-qudits},
+Quantum Information and Computation \textbf{8} (2008), 127--146,
+arXiv:quant-ph/0701211.
 
 \bibitem{Connes1994}
 A.~Connes,

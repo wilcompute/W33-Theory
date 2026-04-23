@@ -46,7 +46,7 @@ CHI = C0 - C1 + C2 - C3            # -80
 b0, b1, b2, b3 = 1, 81, 0, 0
 
 ALPHA_GUT_INV = K + PHI3            # 25
-AUT_ORDER = 103680
+AUT_ORDER = 51840
 
 
 # ═══════════════════════════════════════════════════════════════════
@@ -98,32 +98,28 @@ class TestT1612_ZeroFormSymmetry:
     """0-form (ordinary) symmetry from graph automorphisms."""
 
     def test_aut_group(self):
-        """|Aut(W(3,3))| = |Sp(4,3):2| = 103680.
-        This is the 0-form symmetry group of the theory.
+        """The full graph automorphism group has order 51840.
+        This is the 0-form symmetry layer of the theory.
         Acts on particles (vertices): orbit is all of V = 40."""
-        assert AUT_ORDER == 103680
+        assert AUT_ORDER == 51840
         assert AUT_ORDER % V == 0
 
     def test_gauging_0form(self):
         """Gauging the 0-form symmetry:
         orbifold by subgroup G ⊆ Aut(W(3,3)).
         Number of subgroups: large, but Sylow structure:
-        |Aut| = 2^5 × 3^4 × 5 × ... = 103680.
-        2^5 = 32, 3^4 = 81 = B1, 5 = N.
-        103680 = 2^5 × 3^4 × 5 × 8 → actually 103680 = 2^6 × 3^4 × 5 × 4..."""
-        # 103680 = 2^7 × 3^4 × 10 = ... let's just factor it
-        n = 103680
-        assert n == 2**7 * 3**4 * 10
-        # Actually: 2^7 * 810 = 128*810 = 103680. 810 = 2 * 405 = 2 * 5 * 81
-        # So: 103680 = 2^8 × 3^4 × 5
-        assert n == 2**8 * 3**4 * 5
+        |Aut| = 2^7 × 3^4 × 5 = 51840.
+        Here 3^4 = B1 and 5 = N."""
+        n = AUT_ORDER
+        assert n == 2**7 * 3**4 * 5
+        assert n == 51840
 
     def test_vertex_stabilizer(self):
-        """Vertex stabilizer: |Aut|/V = 103680/40 = 2592.
+        """Vertex stabilizer: |Aut|/V = 51840/40 = 1296.
         This is the 'little group' of a particle.
-        2592 = 2^5 × 3^4 = 32 × 81."""
+        1296 = 2^4 × 3^4 = 16 × 81."""
         stab = AUT_ORDER // V
-        assert stab == 2592
+        assert stab == 1296
 
 
 # ═══════════════════════════════════════════════════════════════════
@@ -486,9 +482,9 @@ class TestT1623_HigherCategories:
         """Higher Tannaka duality: 
         symmetry ↔ fiber functor on higher category.
         Number of fiber functors = automorphisms of forget functor.
-        For W(3,3): |Aut| = 103680 fiber functors."""
+        For W(3,3): this toy count gives |Aut| = 51840 fiber functors."""
         fiber_functors = AUT_ORDER
-        assert fiber_functors == 103680
+        assert fiber_functors == 51840
 
 
 # ═══════════════════════════════════════════════════════════════════
@@ -535,13 +531,13 @@ class TestT1625_CompleteGenSym:
 
     def test_symmetry_catalog(self):
         """Complete catalog of symmetries in W(3,3):
-        ✓ 0-form: Aut(W(3,3)) = Sp(4,3):2, |Aut| = 103680
+        ✓ 0-form: full graph automorphism group, |Aut| = 51840
         ✓ 1-form: Z₃ center symmetry (confinement)
         ✓ 2-form: Z₃ magnetic symmetry
         ✓ Non-invertible: 3 duality defects
         ✓ Higher category: 3-category (chain complex)"""
         checks = [
-            AUT_ORDER == 103680,
+            AUT_ORDER == 51840,
             Q == 3,        # center
             Q == 3,        # magnetic
             Q == 3,        # non-invertible

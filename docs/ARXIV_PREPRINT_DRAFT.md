@@ -1,4 +1,5 @@
 # The Symplectic Polar Space W(3,3) as the Finite Geometry
+
 of the Standard Model and Gravity
 
 **Draft for arXiv submission — March 30, 2026**
@@ -68,8 +69,9 @@ The central observation is that the E₈ root system — the most
 dense sphere packing in 8 dimensions and the exceptional Lie algebra
 underlying heterotic string theory — has exactly 240 roots, matching
 the 240 edges of W(3,3). This is not a numerical coincidence: the
-automorphism group Aut(W(3,3)) = PSp(4,3) ≅ W(E₆)/Z₂ connects the
-graph directly to the E₆ Lie algebra that governs the matter sector
+full collinearity-graph automorphism group has order 51840 = |W(E₆)|,
+while its projective symplectic subgroup is PSp(4,3) of order 25920; this
+symmetry package connects the graph directly to the E₆ Lie algebra that governs the matter sector
 in grand unified theories.
 
 In this paper we systematically develop the connection between W(3,3)
@@ -129,6 +131,7 @@ isotropic subspaces of (F⁴, ω), and as lines the totally isotropic
 2-dimensional subspaces.
 
 The collinearity graph G = W(3,3) has:
+
 - v = (q²+1)(q+1) = 40 vertices
 - k = q(q+1) = 12 neighbours per vertex
 - λ = q−1 = 2 common neighbours between adjacent vertices
@@ -247,6 +250,7 @@ of W(3,3) and N_n(Λ) the Dirac eigenvalue counting function. Then:
 $$\frac{N_n(n^2\Lambda)}{n^4} = 480 \quad \text{for all } \Lambda \geq 4, \; n \geq 2$$
 
 This is the discrete Weyl law for a compact 4-manifold with:
+
 - Weyl constant × volume = 30 = 2E/λ²_max = 480/256
 - Implied 4-volume: **V₄ = 30π² l_P⁴ ≈ 296 l_P⁴**
 - Spectral dimension: **d = 4** (from N ∝ n⁴ scaling)
@@ -284,6 +288,7 @@ form the **matter sector**, with 27 = dim(fundamental E₆ representation).
 
 The matter sector decomposes as 27 = 16 + 10 + 1 under
 E₆ → SO(10), where:
+
 - 16 = one complete SM generation (SO(10) spinor)
 - 10 = vector representation
 - 1 = singlet

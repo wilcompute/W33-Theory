@@ -14,7 +14,12 @@ Navigator for the repository's paper sections, reproducibility paths, and formal
 | Beginner practice | [docs/LAYPERSON_WORKBOOK.md](./LAYPERSON_WORKBOOK.md) | Step-by-step learning tasks with evidence collection |
 | Beginner claim audit | [docs/LAYPERSON_EVIDENCE_AUDIT_TEMPLATE.md](./LAYPERSON_EVIDENCE_AUDIT_TEMPLATE.md) | Reproducibility-first template for scoring claim strength |
 | Beginner concept navigation | [docs/LAYPERSON_CONCEPT_MAP.md](./LAYPERSON_CONCEPT_MAP.md) | Visual/structural map from objects to evidence paths |
-| First-time reader (short) | [README.md](../README.md) | Browser-first overview and quick reproducibility path |
+| First-time reader (short) | [README.md](../README.md) | Short repo overview with a live-status note pointing back to the audited entrypoints |
+| Live repo audit | [docs/repo_frontier_audit.html](./repo_frontier_audit.html) | Current repo-wide map: active folders, exactness tiers, and citation corrections |
+| Local determinant-support boundary | [`scripts/w33_local_albert_shadow_audit.py`](../scripts/w33_local_albert_shadow_audit.py) | Consolidated executable local `H27/E6` cubic audit: `45 = 9 + 36`, five-tritangent incidence, and the cocycle-gauge boundary |
+| Exact finite ladder | [`scripts/w33_qutrit_ladder_audit.py`](../scripts/w33_qutrit_ladder_audit.py) | Consolidated executable `1q -> 2q -> 3q -> 6q` ladder with the exact kernel/non-kernel boundary |
+| Exact continuum coefficient seed | [`scripts/w33_toroidal_continuum_seed_audit.py`](../scripts/w33_toroidal_continuum_seed_audit.py) | Consolidated executable toroidal/decimal audit for the exact `8 / 56 / 320 / 2240 / 12480` packet behind the current continuum surface |
+| W33-E8 boundary | [`scripts/w33_e8_correspondence_boundary_audit.py`](../scripts/w33_e8_correspondence_boundary_audit.py) | Conservative split between exact finite `W33 <-> E8` content and promoted phenomenology on the old correspondence theorem surface |
 | Full manuscript reader | [docs/README_LIVING_PAPER_2026_02_11.md](./README_LIVING_PAPER_2026_02_11.md) | Preserved long-form narrative and theorem flow |
 | Contributor | [CONTRIBUTING.md](../CONTRIBUTING.md) | Local workflow, tests, and contribution standards |
 | Formalization contributor | [docs/index.html#hard-computation](./index.html#hard-computation) | Live proof-entry map; formal Lean path is not yet wired as a stable public entry point |
@@ -42,7 +47,7 @@ Navigator for the repository's paper sections, reproducibility paths, and formal
 ## High-Signal Status and Standards
 
 - Canonical naming and counts: [STANDARDIZATION.md](../STANDARDIZATION.md)
-- Current status and open gaps: [docs/index.html#current-synthesis](./index.html#current-synthesis), [docs/march_2026_frontier_note.md](./march_2026_frontier_note.md), [docs/STATUS_AND_GAPS.md](./STATUS_AND_GAPS.md) (conservative baseline)
+- Current status and open gaps: [docs/index.html#current-synthesis](./index.html#current-synthesis), [docs/repo_frontier_audit.html](./repo_frontier_audit.html), [docs/march_2026_frontier_note.md](./march_2026_frontier_note.md), [docs/STATUS_AND_GAPS.md](./STATUS_AND_GAPS.md) (conservative baseline)
 - Online-source separation log: [docs/README_EXTENSION_ONLINE_FINDINGS_2026_02_10.md](./README_EXTENSION_ONLINE_FINDINGS_2026_02_10.md)
 - CI workflows: [`.github/workflows/`](../.github/workflows/)
 

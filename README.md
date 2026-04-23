@@ -1,4 +1,4 @@
-# W(3,3) Spectral Theory — A Mathematical Theory of Everything
+# W(3,3) Finite-Geometry Program
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.placeholder.svg)](https://doi.org/10.5281/zenodo.placeholder)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -9,18 +9,22 @@
 **Status:** Active Development — April 2026  
 **Paper:** [`W36_PAPER.tex`](W36_PAPER.tex) · [`W36_PAPER_DRAFT.md`](W36_PAPER_DRAFT.md)
 
+> Live status note (April 22, 2026): the strongest reproducible core is the exact two-qutrit Pauli geometry of `W(3,3)`, the local Heisenberg/Schlafli shell, the exact local `E6` bridge, and the canonical operator layer. The broader `E8` / moonshine / continuum stack is active and partly exact, but it should be read as a promoted global-closure program rather than the same exactness tier. Start with [`docs/index.html`](docs/index.html), [`docs/qutrit_foundation.html`](docs/qutrit_foundation.html), [`docs/repo_frontier_audit.html`](docs/repo_frontier_audit.html), and [`docs/march_2026_frontier_note.md`](docs/march_2026_frontier_note.md).
+
 ---
 
 ## Overview
 
-This repository develops a **unified physical theory** grounded in the spectral properties of the **W(3,3) strongly regular graph** — the unique SRG(40, 12, 2, 4). The central claim is that the discrete spectral data of this graph, combined with the modular tower it generates, encodes the fundamental constants, symmetry groups, mixing angles, particle masses, and experimental predictions of a complete Theory of Everything.
+This repository studies a finite-geometry program centered on the **W(3,3) strongly regular graph** — the unique `SRG(40,12,2,4)` and the two-qutrit Pauli commutation geometry. The repo is no longer at a blank-slate stage, but the honest current state is an evidence-tiered stack rather than a finished continuum Theory of Everything.
 
-The framework has four interlocking pillars:
+The current audited split is:
 
-1. **Spectral Graph Theory** — W(3,3) = SRG(40,12,2,4) with eigenvalues {12, 2, −4}, multiplicities {1, 24, 15}
-2. **Modular Forms & Moonshine** — Dedekind η, Eisenstein series E₄/E₆/Δ, Niemeier lattices, McKay–Thompson Hauptmoduls, Monster replicability
-3. **NCG Spectral Action** — Connes finite spectral triple (𝒜, ℋ, D) reproducing the full SM Lagrangian
-4. **E₈ / Leech Geometry** — n_v × k = 480 = |Φ(E₈)|; Leech kissing number 196560 recovered; 24 Niemeier lattices classified
+1. **Exact qutrit kernel** — `W(3,3)` is exactly the graph of the 40 projective non-identity two-qutrit Pauli observables.
+2. **Exact local `E6` bridge** — around each vertex, the `12 + 27` shell is an exact Heisenberg/MUB package and the 27-point shell is the Schlafli graph / cubic-surface line geometry.
+3. **Promoted global closure** — the repo builds a larger `E8`, moonshine, arithmetic, and phenomenology program on top of that exact kernel.
+4. **True remaining frontier** — the narrowed open wall is the continuum/dynamical lift together with the last Yukawa spectral packet, not the existence of any finite structure at all.
+
+> Historical note: the longer module inventory below preserves the broader promoted program and research directions. When this README disagrees with the live docs, use the four entrypoints above and the audit page as the exactness boundary.
 
 ---
 
@@ -29,7 +33,7 @@ The framework has four interlocking pillars:
 | Symbol | Value | Physical meaning |
 |--------|-------|-----------------|
 | `n_v` | 40 | Vertices = degrees of freedom |
-| `n_e` | 60 | Edges |
+| `n_e` | 240 | Edges |
 | `k` | 12 | Degree / largest eigenvalue |
 | `r` | 2 | Second eigenvalue |
 | `s` | −4 | Third eigenvalue |
@@ -88,11 +92,21 @@ Z''(0)/2 = −248 = −dim(E₈)
 | F7 | Neutrino type | **Majorana** | LEGEND-1000 | 10 yr |
 | F8 | GW background | GUT-scale PT signal | LISA | 15 yr |
 
+This table is a promoted dashboard, not a uniform theorem ledger. It mixes exact
+finite identities, dressed electroweak closures, and higher-layer phenomenology.
+For the current evidence split, use [`docs/index.html`](docs/index.html),
+[`docs/qutrit_foundation.html`](docs/qutrit_foundation.html), and
+[`docs/repo_frontier_audit.html`](docs/repo_frontier_audit.html).
+
 ---
 
-## Mathematical Tower — Layer by Layer
+## Promoted Program Snapshot — Layer by Layer
 
-The theory is built as a verified, test-driven tower. Each layer depends only on previously pinned results.
+This section preserves the broader program picture that accumulated in the
+repo. It is useful as a map of what has been attempted and implemented, but it
+should not be read as saying every line below sits at the same exactness tier.
+The exact kernel and the audited frontier boundary are narrower than this full
+promoted tower.
 
 ### Layer 0–10: Graph Foundation
 | Module | Content | Tests |

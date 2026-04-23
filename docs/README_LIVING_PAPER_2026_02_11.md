@@ -296,6 +296,7 @@ This README is the main manuscript, and the repository is the executable appendi
 4. Historical progress and open questions are tracked in repo docs such as `memory.md` and `docs/NOVEL_CONNECTIONS_2026_02_10.md`.
 
 ---
+
 ## The W33-E8 Correspondence Theorem
 
 **The central result of this theory.** A chain of exact correspondences between the W33 generalized quadrangle and the E8 Lie algebra, proved computationally with 120 tests and verified by Smith Normal Form.
@@ -305,7 +306,7 @@ This README is the main manuscript, and the repository is the executable appendi
 | # | Pillar | Statement | Status |
 |---|--------|-----------|--------|
 | 1 | Numerical equality | \|E(W33)\| = \|Roots(E8)\| = **240** | Verified |
-| 2 | Group isomorphism | Aut(W33) = **Sp(4,3) = W(E6)**, order 51,840 | Verified |
+| 2 | Group isomorphism | Full graph automorphism group of W33 has order **51,840 = W(E6) Weyl-group order** and contains projective subgroup **PSp(4,3)** of order **25,920** | Verified |
 | 3 | Z3-grading | E8 = g\_0(78) + g\_1(81) + g\_2(81) = 240 roots; algebra = **86+81+81 = 248** | Verified |
 | 4 | **Homology theorem** | **H\_1(W33; Z) = Z^81 = dim(g\_1) = 27 x 3** | **Proved (SNF)** |
 | 5 | Impossibility | Direct metric embedding impossible (max 13/40) | Proved |
@@ -319,12 +320,15 @@ This README is the main manuscript, and the repository is the executable appendi
 | 13 | Topological protection | 3 generations are topologically protected: b\_0(link(v)) - 1 = 3 for every vertex | **Proved** |
 | 14 | H27 inclusion | H\_1(H27) embeds into H\_1(W33) with rank 46 | **Proved** |
 | 15 | **Three generations** | **81 = 27+27+27: all 800 order-3 elements of PSp(4,3) decompose H1** | **Proved** |
-| 16 | **Universal mixing** | **Mixing matrix M = (1/81)[[25,28,28],[28,25,28],[28,28,25]], eigenvalues 1 and -1/27** | **Proved** |
-| 17 | **Weinberg angle** | **sin^2(theta\_W) = (r-s)/(k-s) = 6/16 = 3/8, UNIQUE to W(3,3) among GQ(q,q)** | **Proved** |
+| 16 | **Universal mixing** | **Mixing matrix M = [1/81]([25,28,28),[28,25,28],[28,28,25]], eigenvalues 1 and -1/27** | **Proved** |
+| 17 | **Weinberg package** | **bare/SRG-GUT normalization: (r-s)/(k-s) = 6/16 = 3/8; dressed/projective value: q/Phi\_3 = 3/13** | **Clarified** |
 | 18 | **Spectral democracy** | **lambda\_i n\_i = 240 for both exact sectors; Tr(L1\|exact) = Tr(L1\|co-exact) = 480** | **Proved** |
 | 19 | **Dirac operator** | **D on R^480: spectrum 0^82 + (+-2)^160 + (+-sqrt10)^24 + (+-4)^15; ind=-80** | **Proved** |
 | 20 | **Self-dual chains** | **C\_0 and C\_3 both decompose as 1+24+15 under PSp(4,3); L\_2 = L\_3 = 4I** | **Proved** |
 | 21 | **Qutrit phase space identification** | **H27 ≅ F3^3; N12 = 12 affine lines = 4 qutrit MUBs; 9 missing tritangent planes = 9 AG(2,3) points; v0-stabilizer action lifts to AGL(2,3) with Z3 central kernel** | **Verified** |
+
+Note: the live repo now uses a three-shell reading for weak-mixing formulas. Bare/internal SRG identities such as `3/8` are kept distinct from dressed/projective formulas such as `3/13`; they should not be presented as a single undifferentiated prediction.
+
 ### The Homology Breakthrough
 
 The clique complex of W33 has simplicial homology computed with exact integer arithmetic and confirmed torsion-free by Smith Normal Form (SymPy):
@@ -357,6 +361,7 @@ The Mayer-Vietoris exact sequence gives:
 ```
 
 The 81-dimensional matter sector decomposes as:
+
 - **78 = dim(E6)**: cycles intrinsic to the deleted graph (gauge algebra structure)
 - **3 = generations**: linking cycles from the 4-component vertex link (3 fermion families)
 
@@ -379,6 +384,7 @@ Multiplicity:   81     120    24     15
 - Multiplicities: 81 + 120 + 24 + 15 = 240 = |Roots(E8)|
 
 **Derivation & proof sketch (computationally verified):**
+
 - For a k-regular strongly regular graph with adjacency spectrum {k, r, s} the vertex Laplacian L\_0 = k I - A has eigenvalues k - r and k - s (with the same multiplicities as r and s). The image of d1^T is isomorphic to the orthogonal complement of constants in C\_0, hence the eigenvalues on im(d1^T) are exactly k - r and k - s (here 10 with mult=24 and 16 with mult=15). This is a parameter-free consequence of the SRG parameters (v,k,\lambda,\mu).
 - For triangle-regular graphs (every edge in exactly \lambda common triangles) the operator B2 B2^T acts as a scalar on im(d2); for W33 (\lambda=2) the nonzero eigenvalue equals 4 on the 120-dimensional co-exact subspace. Thus the co-exact spectrum is determined by triangle regularity.
 - The harmonic space is the simplicial H\_1 (b\_1 = 81) computed by exact Smith Normal Form, so the full L\_1 spectrum is fixed by SRG data + triangle regularity.
@@ -423,6 +429,7 @@ Frobenius-Schur indicators:
 **All 800 order-3 elements** of PSp(4,3) have character chi = 0 on the 81-dim harmonic space. Each decomposes it as **27 + 27 + 27** — three generations of 27-dimensional E6 matter representations.
 
 This is verified from both sides:
+
 - **E8 side:** The 81 roots in g\_1 split as 27 x 3 under E6 x SU(3), with the three 27s distinguished by the SU(3) quantum number n\_8 mod 3.
 - **W33 side:** Using exact projectors P\_k = (I + omega^{-k} R + omega^{-2k} R^2)/3, the 81-dim harmonic space splits into three orthogonal 27-dim subspaces.
 - **Topological protection:** b\_0(link(v)) = 4 for all 40 vertices, so the three-generation structure is a topological invariant.
@@ -458,7 +465,7 @@ Every triangle belongs to exactly 1 tetrahedron. The 40 tetrahedra ARE the 40 li
 |------------|-----------|-------|-------------|
 | Fermion generations | 81/27 = 3 (four independent routes) | **3** | 3 |
 | Dark matter ratio | \|H27\|/5 = 27/5 | **5.4** | 5.36 (0.7% err) |
-| Weinberg angle | 3/8 at GUT scale (E6) | **0.375** | 0.231 (after RG) |
+| Weinberg angle (dressed/projective) | q/Phi\_3 | **3/13 = 0.23077** | 0.23122 |
 | Gauge group | g\_0 sector | **E6 x SU(3)** | E6 GUT |
 | Total dimension | 86 + 81 + 81 | **248 = dim(E8)** | -- |
 | Mass gap | Hodge spectral gap | **4** | -- |
@@ -470,7 +477,7 @@ Every triangle belongs to exactly 1 tetrahedron. The 40 tetrahedra ARE the 40 li
 | Three generations | 81 = 27+27+27 via Z3 eigenspaces | **3 x 27** | 3 families |
 | GUT-scale mixing | Universal M with eigenvalues 1, -1/27 | **near-democratic** | CKM/PMNS |
 | Generation dimension | Controls mixing: deviation = 1/27 | **27** | 27 of E6 |
-| Weinberg from SRG | sin²θ\_W = (r-s)/(k-s) = 6/16 | **3/8** | GUT prediction |
+| Weinberg from SRG (bare/GUT) | sin²θ\_W = (r-s)/(k-s) = 6/16 | **3/8** | GUT normalization |
 | Spectral democracy | λ₂n₂ = λ₃n₃ = \|Roots(E8)\| | **240** | -- |
 | Dirac index | χ = b₀ - b₁ + b₂ - b₃ = 1-81+0-0 | **-80** | -- |
 | Higher Laplacian scalar | L₂ = L₃ = (spectral gap)·I | **4I** | -- |
@@ -559,7 +566,7 @@ There is currently no official Work‑with‑Apps integration on Windows that au
 | **TestFrobeniusSchur** | **5** | **FS indicators (real/complex type), J^2=-I complex structure** |
 | **TestThreeGenerations** | **5** | **800 order-3 elements, chi=0, 27+27+27, projectors, topological protection** |
 | **TestUniversalMixing** | **3** | **Doubly stochastic, circulant structure, eigenvalue -1/27** |
-| **TestWeinbergAngle** | **4** | **sin²θ\_W = 3/8, Hodge derivation, unique among GQ(q,q), λᵢnᵢ = 240** |
+| **TestWeinbergAngle** | **4** | **bare/GUT sin²θ\_W = 3/8, Hodge derivation, unique among GQ(q,q), λᵢnᵢ = 240** |
 | **TestDiracOperator** | **8** | **480-dim, d²=0, D symmetric, D²=Laplacian, ker=82, paired spectrum, {D,γ}=0, ind=-80** |
 | **TestSpectralDemocracy** | **4** | **Tr equality, exact sector products, C₀≅C₃ decomposition, L₂=L₃=4I** |
 
@@ -589,12 +596,14 @@ Conservative joint probability: < 10^-21. This is a genuine mathematical structu
 ## The Golay Jordan-Lie Algebra s12
 
 A 728-dimensional algebraic structure that bridges:
+
 - The **Ternary Golay Code** (error correction)
 - The **Monster Group** (moonshine)
 - The **Leech Lattice** (sphere packing)
 - The **Standard Model** (particle physics)
 
 **The Master Equation:**
+
 ```
 196,560 = 728 × 270 = dim(s₁₂) × dim(Albert) × dim(SO(10) spinor)
 ```
@@ -658,14 +667,17 @@ MONSTER FORMULAS:
 ### Vertex Algebra Central Charge
 
 At level k = 3 with dual Coxeter h* = 88:
+
 ```
 c = k × dim(s₁₂) / (k + h*) = 3 × 728 / 91 = 24 = c(V♮)
 ```
+
 **The affine vertex algebra of s₁₂ has the same central charge as the Monster VOA!**
 
 ### Classification Result
 
 The 486-dimensional quotient s₁₂/Z is:
+
 - **NOT classical**: 486 ≠ dim(sl_n), dim(so_n), dim(sp_n) for any n
 - **NOT exceptional**: 486 ∉ {14, 52, 78, 133, 248}
 - **NOT Cartan-type**: 486 ≠ dim(W_n), dim(S_n), dim(H_n), dim(K_n)
@@ -688,7 +700,8 @@ How does the finite geometry W(3,3) connect to the 728-dimensional algebra?
 ```
 W(3,3) [SRG(40,12,2,4)]
    │
-   ├── Aut(W33) = Sp(4, F₃) ≅ W(E₆)   [51,840 elements]
+  ├── Full graph automorphism group order 51,840 = |W(E₆)|
+  │   with projective symplectic subgroup PSp(4,3) of order 25,920
    │
    ├── Points: 40 isotropic lines in F₃⁴
    │
@@ -722,11 +735,13 @@ GOLAY JORDAN-LIE ALGEBRA s₁₂
 ## The Witting Polytope Connection
 
 The **Witting polytope** (3₂₁) is a complex polytope in C⁴ with:
+
 - **240 vertices** = E₈ roots = W(3,3) edges
 - **40 diameters** (vertex pairs) = W(3,3) points
 - Automorphisms related to W(E₆)
 
 This provides an alternative construction path:
+
 ```
 Witting Polytope (240 vertices)
         │
@@ -750,7 +765,7 @@ PG(3,3)                       (40 projective points)
        |
 W(3,3) = SRG(40, 12, 2, 4)    (collinearity graph: symplectic GQ)
        |
-Aut(W33) = W(E6)              (automorphism group = Weyl group of E6)
+Full graph automorphism group of W33 = W(E6)   (order 51,840)
        |
 E6 subset E8                  (E8 -> E6 x SU(3) branching)
        |
@@ -785,6 +800,7 @@ Standard Model                 (gauge group, 3 generations, Yukawa textures)
 | -4 | 15 | Second band |
 
 **Key invariants:**
+
 - |Aut(W33)| = 51840 = |W(E6)| (Weyl group of E6)
 - |Edges| = 240 = |Roots of E8|
 - Spectral gap = 10 (Fiedler value of Laplacian)
@@ -930,7 +946,7 @@ The unified derivation (`tools/toe_unified_derivation.py`) proves these theorems
 
 This framework differs from textbook E6 grand unification in several ways:
 
-1. **E6 is derived, not postulated.** The gauge group emerges from Aut(W33) = W(E6).
+1. **E6 is derived, not postulated.** The exact symmetry package of W33 leads to the W(E6) bridge rather than introducing E6 by hand.
 2. **Three generations are forced.** E8 -> E6 x SU(3) requires exactly 3 copies of 27.
 3. **N\_c = 3 is derived.** The double-six geometry admits only 3 colors.
 4. **Firewall selection rules are new.** 9 of 45 cubic triads are forbidden --- this has
@@ -1135,8 +1151,8 @@ parameters (40, 12, 2, 4).
 ### The E8 Connection
 
 The 240 edges of the W(3,3) collinearity graph correspond to the 240 roots of the
-E8 root system. The automorphism group Aut(W33) = Sp(4,3) is isomorphic to the
-Weyl group W(E6), which is a subgroup of W(E8). This connection is
+E8 root system. The full graph automorphism group of W33 has order 51840 = |W(E6)|,
+while its projective symplectic subgroup PSp(4,3) has order 25920. This connection is
 algebraic-topological: H\_1(W33; Z) = Z^81 = dim(g\_1) of E8's Z3-grading.
 Direct metric embedding is impossible (proved), but the group isomorphism and
 topological invariants encode the complete physical content.

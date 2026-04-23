@@ -6,7 +6,8 @@ Theorems T1900 - T1979  (8 theorem-classes, 80 tests)
 W(3,3) = SRG(40, 12, 2, 4) with adjacency eigenvalues:
     12 (mult 1),  2 (mult 24),  -4 (mult 15)
 
-|Aut(W(3,3))| = |PSp(4,3)| = 25920.
+This file studies the projective symplectic subgroup PSp(4,3)
+of order 25920, rather than the full 51840-element graph automorphism group.
 Vertex-transitive and edge-transitive.
 
 Topics: Weisfeiler-Leman refinement, orbit structure, local symmetry,
@@ -340,7 +341,7 @@ def points(w33_data):
 
 @pytest.fixture(scope="module")
 def aut_generators(w33_data):
-    """Generators for Aut(W(3,3)) = PSp(4,3)."""
+    """Generators for the projective symplectic subgroup PSp(4,3)."""
     A, pts = w33_data
     return _get_symplectic_auts(pts, A)
 
@@ -467,7 +468,7 @@ class TestT1900WLRefinement:
 # ===================================================================
 
 class TestT1910OrbitStructure:
-    """Orbit structure of Aut(W(3,3)) on vertices, edges, non-edges, arcs."""
+    """Orbit structure of the chosen PSp(4,3) action on basic combinatorial sets."""
 
     def test_vertex_transitivity_via_A2_profiles(self, adj):
         """Vertex-transitivity: all A^2 row profiles identical."""
@@ -486,7 +487,7 @@ class TestT1910OrbitStructure:
         assert len(profiles) == 1
 
     def test_single_vertex_orbit(self, adj):
-        """There is exactly 1 vertex orbit under Aut(W(3,3))."""
+        """There is exactly 1 vertex orbit under the PSp(4,3) action."""
         # Verified via identical local invariants at all vertices
         nbr_degree_profiles = []
         for v in range(40):
@@ -842,10 +843,10 @@ class TestT1940CayleyGraph:
 # ===================================================================
 
 class TestT1950PermGroupProps:
-    """Properties of Aut(W(3,3)) = PSp(4,3) as a permutation group on 40 points."""
+    """Properties of the projective symplectic subgroup PSp(4,3) on 40 points."""
 
     def test_aut_order_is_25920(self):
-        """The automorphism group has order 25920."""
+        """The projective symplectic subgroup has order 25920."""
         # PSp(4,3) order = (1/2) * |Sp(4,3)| = (1/2) * 2 * 3^4 * (3^2-1) * (3^4-1)
         # = 3^4 * 8 * 80 / 2 = 81 * 320 = 25920
         order = (3**4) * (3**2 - 1) * (3**4 - 1) // 2
@@ -884,7 +885,7 @@ class TestT1950PermGroupProps:
         assert pair_types == {0, 1}
 
     def test_rank_3_action(self, adj):
-        """Aut(W(3,3)) is a rank-3 permutation group.
+        """The PSp(4,3) action is a rank-3 permutation group.
         Orbitals from vertex 0: {0}, N(0) size 12, non-N(0) size 27."""
         nbrs = np.sum(adj[0])
         non_nbrs = 40 - 1 - nbrs

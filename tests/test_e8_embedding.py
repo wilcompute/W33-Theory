@@ -2742,7 +2742,7 @@ class TestUniversalMixing:
 
 
 class TestWeinbergAngle:
-    """Test Pillar 17: sin^2(theta_W) = 3/8 from SRG eigenvalues."""
+    """Test the bare/GUT Weinberg normalization sin^2(theta_W) = 3/8 from SRG eigenvalues."""
 
     def test_sin2_theta_w_equals_three_eighths(self):
         """sin^2(theta_W) = (r-s)/(k-s) = 6/16 = 3/8."""

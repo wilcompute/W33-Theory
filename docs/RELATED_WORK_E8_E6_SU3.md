@@ -2,14 +2,14 @@
 
 This repo’s computations lean on standard, well-established structural facts about exceptional Lie algebras and classical line configurations, plus a few less-common finite-geometry correspondences.
 
+> Boundary note: this page collects structural background and related literature. It should not be read as a proof that the repo’s exact qutrit kernel already functorially yields the full global `E8`/physics closure. The strongest exact bridge currently audited in-repo is local and `E6`-side.
+
 ## E8 → E6 × SU(3) branching
 
 - Standard maximal subalgebra statement: `E8 ⊃ E6 × SU(3)` with adjoint branching
   \[
     248 = (78,1) \oplus (1,8) \oplus (27,3) \oplus (\overline{27},\overline{3}).
   \]
-  - Wikipedia: https://en.wikipedia.org/wiki/E8_(mathematics)#Maximal_subgroups
-
 - Explicit constructions of the same decomposition via division algebras:
   - Dray–Manogue–Wilson (JMP 2024): https://pubs.aip.org/aip/jmp/article-abstract/65/3/031702/3278070/
 
@@ -25,19 +25,21 @@ This repo’s computations lean on standard, well-established structural facts a
   and further `SU(5)`-based decompositions are the usual E6-GUT dictionary.
   - Example lecture notes (CERN): https://indico.cern.ch/event/353377/contributions/832064/attachments/693593/952152/hurmuz_e6.pdf
 
-## Spreads/double-sixes over 𝔽₃ (symplectic geometry)
+## Finite-qutrit / symplectic geometry
 
-- Symplectic geometry over `GF(3)` and the appearance of:
-  - 36 “double-sixes” (and stabilizers isomorphic to `S6`),
-  - spread-like configurations with the same stabilizer size patterns.
-- Hoffman (LSU): https://www.math.lsu.edu/~hoffman/papers/spreads4.pdf
+- Two-qutrit Pauli commutation geometry and its finite-geometric shell:
+  - Planat–Saniga, “On the Pauli graphs of N-qudits” (2007): https://arxiv.org/abs/quant-ph/0701211
+- Computational geometry software documenting the classical symplectic quadrangle as `W(3,q)` with collineation group `PGammaSp(4,q)` and isometry group `PSp(4,q)`:
+  - FinInG manual: https://docs.gap-system.org/pkg/fining/doc/manual.pdf
+
+For `q = 3`, the projective symplectic subgroup therefore has order `25920` by the standard symplectic group formula, and adjoining the graph/duality extension gives the order-`51840` full collinearity-graph symmetry package used throughout the repo.
 
 ## 27 lines, Schläfli graph, and 45 tritangent planes
 
 - The 27 lines on a smooth cubic surface form a classical configuration.  Two lines are either skew or meet.
 - The Schläfli graph is the graph on the 27 lines where adjacency can be taken as “skew”; the complement graph is then the “intersection graph”.  Triangles in the intersection graph correspond to tritangent planes (a plane section splitting as three lines).
-  - Schläfli graph overview: https://en.wikipedia.org/wiki/Schl%C3%A4fli_graph
-  - Cubic surface / 27 lines overview (incl. tritangent planes count context): https://en.wikipedia.org/wiki/Cubic_surface
+- Manivel, “Configurations of lines and models of Lie algebras” (2005): https://arxiv.org/abs/math/0507118
+- Green, “Full heaps and representations of affine Weyl groups” (2006): https://arxiv.org/abs/math/0608123
 - A concise notes-style reference that enumerates the 45 tritangent trios and states W(E6) transitivity:
   - https://dept.math.lsa.umich.edu/~idolga/CAG-2.pdf
 - A modern reference explicitly notes: tritangent planes correspond to the 45 triangles in the Schläfli intersection graph.

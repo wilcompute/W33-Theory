@@ -2,14 +2,18 @@
 
 **Last updated:** March 30, 2026
 
+> Snapshot note: this file preserves a March 30, 2026 promoted-closure ledger. It is **not** the current authoritative exactness boundary. For the live audited status surface, use [docs/index.html#current-synthesis](./index.html#current-synthesis), [docs/repo_frontier_audit.html](./repo_frontier_audit.html), and [docs/march_2026_frontier_note.md](./march_2026_frontier_note.md). Several items below are best read as internal promoted milestones rather than as the present repo-wide proof boundary.
+
 ---
 
 ## Overview
 
-As of March 30, 2026, both major open problems identified in the
-march_2026_frontier_note.md have been substantially closed through
-computational verification and algebraic derivation. Precise locations
-of remaining proof gaps are documented below.
+As of March 30, 2026, this document recorded a strong promoted status view of
+the program. Later repo audits refined that picture: the exact two-qutrit
+kernel, the local Heisenberg/Schlafli shell, and the local `E6` bridge are the
+cleanest closed finite layers, while the continuum/dynamical lift and the final
+Yukawa packet remain the real live frontier. The sections below are retained as
+historical milestone claims, with their original local derivation status.
 
 ---
 
@@ -155,4 +159,6 @@ with the **degree of the l₂ bracket map** in the chain complex.
 1. Write explicit l₁,l₂,l₃ bracket equations for mass ratios
 2. Apply GH convergence theorem machinery to K_n tower
 3. Identify electron mass formula (shifted Gaussian norm)
-4. Prepare arXiv preprint — core theory is now complete
+4. Prepare a conservative preprint centered on the exact qutrit/E6 spine and
+   state the promoted global-closure layers as such, rather than presenting the
+   whole stack as already complete

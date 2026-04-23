@@ -47,7 +47,7 @@ b0, b1, b2, b3 = 1, 81, 0, 0
 
 ALPHA_GUT_INV = K + PHI3            # 25
 SIN2_THETA_W = Fraction(Q, PHI3)    # 3/13
-AUT_ORDER = 103680
+AUT_ORDER = 51840
 
 DIM_E8, DIM_E7, DIM_E6 = 248, 133, 78
 DIM_F4, DIM_G2 = 52, 14
@@ -81,12 +81,11 @@ class TestT1656_MathUniqueness:
         assert F_mult + G_mult == V - 1
 
     def test_automorphism_group(self):
-        """Aut(W(3,3)) ≅ PSp(4,3):2 = Sp(4,F₃).2
-        |Aut| = 103680 = 2^8 × 3^4 × 5.
-        This is the MAXIMAL automorphism group for any SRG 
+        """The full graph automorphism group has order 51840 = 2^7 × 3^4 × 5.
+        This is the maximal verified graph symmetry order for any SRG 
         with these parameters (since there's only one SRG)."""
-        assert AUT_ORDER == 2**8 * 3**4 * 5
-        assert AUT_ORDER == 103680
+        assert AUT_ORDER == 2**7 * 3**4 * 5
+        assert AUT_ORDER == 51840
 
 
 # ═══════════════════════════════════════════════════════════════════
@@ -631,9 +630,9 @@ class TestT1670_QED_TheoryComplete:
         q = 2: wrong sin²θ_W.
         q = 4: wrong sin²θ_W.
         q = 3: unique, perfect match.
-        |Aut| = 103680. One vacuum. Zero free parameters."""
+        |Aut| = 51840. One vacuum. Zero free parameters."""
         assert Q == 3
-        assert AUT_ORDER == 103680
+        assert AUT_ORDER == 51840
 
     def test_zero_free_parameters(self):
         """FREE PARAMETERS: ZERO ✓

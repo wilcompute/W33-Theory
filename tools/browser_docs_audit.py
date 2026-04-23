@@ -33,12 +33,15 @@ ROOT = Path(__file__).resolve().parents[1]
 DOCS_DIR = ROOT / "docs"
 DEFAULT_PAGES = [
     "index.html",
+    "qutrit_foundation.html",
+    "repo_frontier_audit.html",
     "w33_busted_wide_open.html",
     "w33_complete_theory.html",
     "w33_monster_landauer.html",
     "w33_monster_landauer_final.html",
     "w33_q_integers_complete.html",
     "w33_the_apex.html",
+    "w33_website.html",
 ]
 
 

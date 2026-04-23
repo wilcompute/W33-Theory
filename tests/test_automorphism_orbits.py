@@ -2,8 +2,9 @@
 Phase XLI: Automorphism & Orbit Counting on W(3,3) (T576-T590)
 ===============================================================
 
-Fifteen theorems on the symmetry group Aut(W(3,3)) ≅ Sp(4,3) and
-its action on vertices, edges, arcs, flags, and non-edges.
+Fifteen theorems on the full graph automorphism group of W(3,3)
+of order 51840 = |W(E6)| and its action on vertices, edges, arcs,
+flags, and non-edges.
 
 Key discoveries:
   - |Aut| = V·(V−μ)² = 40·36² = 51840 — this factorization is
@@ -30,7 +31,7 @@ PHI6 = Q**2 - Q + 1      # 7
 ALBERT = V - PHI3        # 27
 DIM_O = K - MU           # 8
 THETA = 10               # Lovász theta
-AUT = 51840              # |Aut(W(3,3))| = |W(E6)|
+AUT = 51840              # Full graph automorphism group order = |W(E6)|
 
 # ── Derived orbit/stabilizer quantities ──
 STAB_V = AUT // V                    # 1296 = 6^4
@@ -46,7 +47,7 @@ STAB_NE = AUT // NONEDGES            # 96
 # T576: Group Order Factorization
 # ═══════════════════════════════════════════════════════════════════
 class TestGroupOrder:
-    """|Aut(W(3,3))| = 51840 = 2⁷·3⁴·5 = |W(E6)| = |Sp(4,3)|.
+    """The full graph automorphism group has order 51840 = 2⁷·3⁴·5 = |W(E6)|.
     Exactly q = 3 distinct prime factors.
     """
 
@@ -83,7 +84,7 @@ class TestGroupOrder:
 # T577: Vertex Transitivity
 # ═══════════════════════════════════════════════════════════════════
 class TestVertexTransitivity:
-    """Aut(W(3,3)) acts transitively on V = 40 vertices.
+    """The full graph automorphism group acts transitively on V = 40 vertices.
     Vertex stabilizer |Stab(v)| = (V−μ)² = 6⁴ = 1296.
     """
 
@@ -114,7 +115,7 @@ class TestVertexTransitivity:
 # T578: Edge Transitivity
 # ═══════════════════════════════════════════════════════════════════
 class TestEdgeTransitivity:
-    """Aut(W(3,3)) acts transitively on E = 240 edges.
+    """The full graph automorphism group acts transitively on E = 240 edges.
     Edge stabilizer |Stab(e)| = 6³ = 216 = 2(V−μ)²/K.
     """
 
@@ -145,7 +146,7 @@ class TestEdgeTransitivity:
 # T579: Arc Transitivity
 # ═══════════════════════════════════════════════════════════════════
 class TestArcTransitivity:
-    """Aut(W(3,3)) acts transitively on V·K = 480 arcs.
+    """The full graph automorphism group acts transitively on V·K = 480 arcs.
     Arc stabilizer = μ·ALBERT = 108 = (V−μ)²/K.
     """
 
@@ -242,7 +243,7 @@ class TestNonEdgeStabilizer:
 # T582: Rank-3 Association Scheme
 # ═══════════════════════════════════════════════════════════════════
 class TestRankThree:
-    """Aut(W(3,3)) has exactly 3 orbits on V×V:
+    """The full graph automorphism group has exactly 3 orbits on V×V:
     diagonal (V pairs), edges (2E ordered), non-edges (2·540 ordered).
     This is the rank-3 property of the association scheme.
     """

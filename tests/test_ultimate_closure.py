@@ -54,7 +54,7 @@ DIM_G2 = 14
 
 ALPHA_GUT_INV = K + PHI3            # 25
 SIN2_W = Fraction(Q, PHI3)         # 3/13
-AUT_ORDER = 103680                  # |Aut(W(3,3))| = |Sp(4,3):2|
+AUT_ORDER = 51840                   # Full graph automorphism group order
 
 
 # ═══════════════════════════════════════════════════════════════════
@@ -136,7 +136,7 @@ class TestT1552_SelfConsistency:
         applying the theory to itself yields the same theory.
         This is because W(3,3) is vertex-transitive:
         every vertex 'sees' the same local structure (K,λ,μ)."""
-        # Vertex-transitivity: |Aut| / V = 103680/40 = 2592 
+        # Vertex-transitivity: |Aut| / V = 51840/40 = 1296
         # (transitive action)
         assert AUT_ORDER % V == 0
 
@@ -182,10 +182,10 @@ class TestT1553_Bootstrap:
     def test_bootstrap_loop(self):
         """Bootstrap loop:
         Physics → SRG parameters → group theory → physics
-        SM gauge group → K = 12 → Sp(4,3) → SM gauge group
+        SM gauge group → K = 12 → full graph symmetry layer → SM gauge group
         The loop is self-consistent with no external input."""
         assert K == 12  # entry point
-        assert AUT_ORDER == 103680  # Sp(4,3):2
+        assert AUT_ORDER == 51840   # full graph symmetry order
         assert K == 12  # returns to same K
 
 
@@ -308,9 +308,9 @@ class TestT1557_BackgroundIndependence:
 
     def test_diffeomorphism_analog(self):
         """Diffeomorphism invariance ↔ graph automorphism invariance.
-        |Aut(W(3,3))| = 103680.
+        The full graph automorphism group has order 51840.
         All observables are Aut-invariant → background independent."""
-        assert AUT_ORDER == 103680
+        assert AUT_ORDER == 51840
 
     def test_relational_observables(self):
         """All physical observables are relational:
@@ -332,20 +332,20 @@ class TestT1558_ObserverIndependence:
         for any two vertices u, v, there exists g ∈ Aut with g(u) = v.
         Therefore: every observer sees the SAME physics.
         This is the microscopic origin of the cosmological principle."""
-        assert AUT_ORDER / V == 2592  # transitive
+        assert AUT_ORDER // V == 1296  # transitive
 
     def test_edge_transitivity(self):
         """W(3,3) is also edge-transitive:
-        |Aut|/E = 103680/240 = 432.
+        |Aut|/E = 51840/240 = 216.
         Every interaction is equivalent → gauge invariance."""
         edge_orbit = AUT_ORDER // E
-        assert edge_orbit == 432
+        assert edge_orbit == 216
 
     def test_cosmological_principle(self):
         """Homogeneity + isotropy of spacetime:
         Vertex-transitivity → homogeneity (all points equivalent).
         Edge-transitivity → isotropy (all directions equivalent).
-        Both emerge from Aut(W(3,3))."""
+        Both emerge from the full graph automorphism group."""
         homogeneous = (AUT_ORDER % V == 0)  # transitive on vertices
         isotropic = (AUT_ORDER % E == 0)    # transitive on edges
         assert homogeneous
@@ -564,10 +564,10 @@ class TestT1564_NoExtension:
         assert V == 40  # cannot be extended
 
     def test_maximal_symmetry(self):
-        """|Aut(W(3,3))| = 103680 is the maximal automorphism group
-        for any graph on 40 vertices with these parameters.
+        """The full graph automorphism group order 51840 is the maximal
+        verified graph symmetry order for any graph on 40 vertices with these parameters.
         No larger group is possible."""
-        assert AUT_ORDER == 103680
+        assert AUT_ORDER == 51840
 
     def test_no_hidden_sectors(self):
         """No hidden sector: DIM_TOTAL = 480 is fully accounted for.
@@ -614,7 +614,7 @@ class TestT1565_TheoryComplete:
     Information: B₁ = 81 independent cycles
     Entropy: E = 240 Bekenstein area
     Topology: χ = -80, genus = 21
-    Symmetry: |Aut| = 103680 = |Sp(4,3):2|
+    Symmetry: full graph automorphism group order = 51840
     Uniqueness: ONE SRG, ONE vacuum, ONE theory
 
     Q.E.D.

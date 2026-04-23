@@ -2,23 +2,24 @@ name: pytest
 
 on:
   push:
-    branches:
-      - ci/add-github-actions
-      - review/remote-master
-      - master
+    branches: [main, master]
   pull_request:
-    branches:
-      - master
-      - review/remote-master
+    branches: [main, master]
+  workflow_dispatch: {}
+  schedule:
+    - cron: "0 4 * * 1"
 
 jobs:
   test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.11, 3.13]
+
     steps:
       - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
 
       - name: Cache pip
         uses: actions/cache@v4
@@ -28,93 +29,37 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: ${{ matrix.python-version }}
-
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
+          pip install -e . || true
 
-      - name: Run tests
+      - name: Generate local fixtures
         run: |
-          python -m pytest -q
+          python scripts/collect_results.py || true
+          python scripts/make_numeric_comparisons_from_summary.py || true
+          python scripts/prepare_legacy_test_fixtures.py
+
+      - name: Run pytest
         env:
           PYTHONWARNINGS: default
-name: pytest
+        run: |
+          python -m pytest -q
 
-on:
-  push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
-  workflow_dispatch: {}
-  schedule:
-    - cron: '0 4 * * 1'  # weekly on Monday at 04:00 UTC
+      - name: Upload SUMMARY_RESULTS.json
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: summary-results
+          path: SUMMARY_RESULTS.json
+          if-no-files-found: ignore
 
-jobs:
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v4
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements-dev.txt
-
-    - name: Generate required artifacts
-      run: |
-        set -e
-        echo "Generating canonical SU(3) gauge and cubic (may be heavy)"
-        python tools/solve_canonical_su3_gauge_and_cubic.py || true
-        echo "Exporting W(E6) signed action"
-        python tools/export_we6_signed_action_on_27.py || true
-        echo "Build E6 27-rep basis (optional)"
-        python tools/build_e6_27rep_minuscule.py --export-basis78 || true
-        echo "Generate TOE three-generation atlas and tensors"
-        python tools/toe_three_generation_coupling_atlas.py || true
-        python tools/toe_generation_coupling_tensors.py || true
-        echo "Build E6 cubic Heisenberg model and other E6 artifacts"
-        python tools/verify_e6_cubic_affine_heisenberg_model.py || true
-        echo "GF(2) helpers: minimal hitting sets and certificate generation (best-effort)"
-        python tools/minimal_hitting_sets.py || true
-        python tools/generate_gf2_certificate.py || true
-
-    - name: Generate SUMMARY_RESULTS.json (local)
-      run: |
-        python scripts/collect_results.py || true
-        python scripts/make_numeric_comparisons_from_summary.py || true
-        python scripts/prepare_legacy_test_fixtures.py || true
-
-    - name: Run pytest
-      run: |
-        pytest -q
-
-    - name: Collect PART_*.json results
-      run: |
-        python scripts/collect_results.py
-
-    - name: Extract numeric comparisons
-      run: |
-        python scripts/make_numeric_comparisons_from_summary.py || true
-
-    - name: Upload SUMMARY_RESULTS.json
-      uses: actions/upload-artifact@v4
-      with:
-        name: summary-results
-        path: SUMMARY_RESULTS.json
-
-    - name: Upload NUMERIC_COMPARISONS.json (if present)
-      uses: actions/upload-artifact@v4
-      with:
-        name: numeric-comparisons
-        path: NUMERIC_COMPARISONS.json
-        if-no-files-found: ignore
+      - name: Upload NUMERIC_COMPARISONS.json
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: numeric-comparisons
+          path: NUMERIC_COMPARISONS.json
+          if-no-files-found: ignore

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Exact Qutrit Foundation - W(3,3)</title>
+<meta name="description" content="Exact theorem spine for the W(3,3) program: two-qutrit Pauli geometry, local Heisenberg shell, exact local E6 bridge, and the remaining frontier.">
+<style>
+:root {
+  --bg: #0d1117;
+  --bg2: #161b22;
+  --bg3: #21262d;
+  --fg: #e6edf3;
+  --fg2: #8b949e;
+  --accent: #58a6ff;
+  --accent2: #3fb950;
+  --accent3: #d2a8ff;
+  --gold: #e3b341;
+  --border: #30363d;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: linear-gradient(180deg, #0d1117 0%, #101725 100%);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.7;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.92em;
+  padding: 0.08rem 0.32rem;
+  border-radius: 6px;
+  border: 1px solid rgba(110,118,129,0.28);
+  background: rgba(110,118,129,0.18);
+}
+.page {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.back {
+  color: var(--fg2);
+  font-size: 0.95rem;
+}
+.badge {
+  display: inline-block;
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(63,185,80,0.45);
+  color: var(--accent2);
+  background: rgba(63,185,80,0.08);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.hero {
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(88,166,255,0.14), rgba(210,168,255,0.08));
+  margin-bottom: 1.5rem;
+}
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  margin-bottom: 0.8rem;
+}
+.hero p {
+  max-width: 820px;
+  color: var(--fg);
+}
+.hero-note {
+  margin-top: 1rem;
+  color: var(--fg2);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 1.5rem;
+}
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem 1.1rem;
+}
+.card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+.card p, .card li, .section p, .section li, table {
+  color: var(--fg2);
+}
+.card ul, .section ul {
+  margin-left: 1.15rem;
+}
+.section {
+  margin-top: 1.8rem;
+}
+.section h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  color: var(--gold);
+}
+.callout {
+  background: rgba(88,166,255,0.08);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  margin: 1rem 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.7rem;
+}
+th, td {
+  text-align: left;
+  padding: 0.75rem 0.7rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+th {
+  color: var(--fg);
+  font-size: 0.92rem;
+}
+.ok { color: var(--accent2); }
+.warn { color: var(--gold); }
+.foot {
+  margin-top: 2rem;
+  color: var(--fg2);
+  font-size: 0.95rem;
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="topbar">
+    <a class="back" href="index.html">← Back to Live Paper</a>
+    <span class="badge">Exact Kernel Map</span>
+  </div>
+
+  <header class="hero">
+    <h1>Exact Qutrit Foundation</h1>
+    <p>
+      This page isolates the strongest exact theorem spine currently present in the repository.
+      It separates the exact two-qutrit operator geometry from the later promoted spectral-closure
+      layer, so the public story starts from what is already rigid rather than from the most
+      ambitious downstream interpretation.
+    </p>
+    <p class="hero-note">
+      Read this page together with <a href="index.html#current-synthesis">Current Synthesis</a> and
+      <a href="index.html#open">Open Problems and Exact Boundaries</a>. Use
+      <a href="w33_complete_theory.html">Complete Theory</a> only as a compact dashboard snapshot.
+    </p>
+  </header>
+
+  <section class="section">
+    <h2>Closed Core</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Global Two-Qutrit Pauli Geometry</h3>
+        <p>The 40 vertices of <code>W(3,3)</code> are the 40 projective non-identity two-qutrit Pauli observables <code>X^a Z^b ⊗ X^c Z^d</code>. Two vertices are adjacent if and only if the operators commute. The commutator phase is exactly the standard symplectic form on <code>F_3^4</code>.</p>
+      </div>
+      <div class="card">
+        <h3>Local Heisenberg/MUB Shell</h3>
+        <p>For each base point, the 12 neighbours split into four disjoint triangles and the 27 non-neighbours admit an <code>F_3^3</code> coordinatization with 9 fibres of size 3. That shell is a finite Heisenberg phase space and its derived graph is the Schl&auml;fli graph <code>SRG(27,16,10,8)</code>.</p>
+      </div>
+      <div class="card">
+        <h3>Canonical Operator Layer</h3>
+        <p>The canonical quadratic operator is <code>H_can = 12I - A = 16I - BB^T</code>, where <code>A</code> is the W(3,3) adjacency matrix and <code>B</code> is point-line incidence. Its spectrum is exactly <code>{0^1, 10^24, 16^15}</code>, so the operator layer is finite, exact, and positive semidefinite before any continuum interpretation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Exact Lie Bridge</h2>
+    <div class="callout">
+      The strongest Lie-theoretic bridge currently supported by exact repo data is local and
+      <code>E6</code>-side, not global and <code>E8</code>-side.
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h3>Local Schläfli / Cubic-Surface Bridge</h3>
+        <ul>
+          <li>The 27-point shell is the Schläfli graph.</li>
+          <li>Classically this is the 27-line geometry of a smooth cubic surface.</li>
+          <li>The tritangent split is exact: <code>45 = 36 + 9</code>, with the extra 9 directions carried by the Heisenberg centre cosets.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Exact Symmetry Orders</h3>
+        <ul>
+          <li>Projective symplectic subgroup: <code>|PSp(4,3)| = 25920</code>.</li>
+          <li>Full graph automorphism group: <code>51840</code>.</li>
+          <li>Local point stabilizer: <code>1296</code> full, <code>648</code> projective.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Scaling Family</h3>
+        <p>The same canonical formulas extend along the symplectic family <code>W(3,q)</code>. At <code>q = 3</code> they reduce to the live kernel data <code>(40,12,2,4)</code>, shell sizes <code>12 + 27</code>, and canonical Hamiltonian spectrum <code>(0,10,16)</code>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Boundary Map</h2>
+    <table>
+      <tr><th>Layer</th><th>Status</th><th>What It Means</th></tr>
+      <tr><td>Two-qutrit Pauli geometry</td><td class="ok">Exact</td><td><code>W(3,3)</code> is already a concrete finite quantum-information object, not a numerology shell.</td></tr>
+      <tr><td>Local Heisenberg shell</td><td class="ok">Exact</td><td>The <code>12 + 27</code> shell structure, MUB split, and Schläfli derivation are explicit and test-backed.</td></tr>
+      <tr><td>Local E6 bridge</td><td class="ok">Exact</td><td>The cubic-surface / <code>W(E6)</code> seam is an exact local consequence of the qutrit kernel.</td></tr>
+      <tr><td>Global E8 closure</td><td class="warn">Promoted spectral layer</td><td><code>240 = |Φ(E8)|</code> and <code>248</code> remain strong constraints, but they are not yet functorial consequences of the qutrit kernel alone.</td></tr>
+      <tr><td>Moonshine closure</td><td class="warn">Boundary reached</td><td>The low-order package closes exactly through the quartic layer; the quintic lift needs real character-theoretic input.</td></tr>
+      <tr><td>Continuum dynamics</td><td class="warn">Open</td><td>A path-integral, scaling, or action-principle derivation that selects <code>W(3,3)</code> is still missing.</td></tr>
+    </table>
+  </section>
+
+  <section class="section">
+    <h2>Repository Evidence</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Operator/Core Scripts</h3>
+        <ul>
+          <li><code>scripts/w33_two_qutrit_pauli.py</code></li>
+          <li><code>scripts/w33_heisenberg_qutrit.py</code></li>
+          <li><code>scripts/w33_qutrit_operator_algebra.py</code></li>
+          <li><code>scripts/w33_exact_lie_bridge_audit.py</code></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Exact Tests</h3>
+        <ul>
+          <li><code>tests/test_w33_qutrit_operator_algebra.py</code></li>
+          <li><code>tests/test_w33_exact_lie_bridge_audit.py</code></li>
+          <li><code>tests/test_w3q_scaling_family.py</code></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Paper Alignment</h3>
+        <p>The live <code>W36_PAPER.tex</code> edits now front-load the exact qutrit foundation, the local Heisenberg shell, the canonical operator, the local <code>E6</code> bridge, and an explicit boundary between that exact shell theorem and the later <code>E8</code> / moonshine closure layer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Next Steps</h2>
+    <div class="callout">
+      The credible finishing route is narrow: keep pushing the operator algebra, the scaling family,
+      and the invariant bridge data. The next gap is structural, not cosmetic.
+    </div>
+    <ul>
+      <li>Promote the qutrit kernel and local shell to the front of every public presentation.</li>
+      <li>Derive observables from invariant operator data before adding new phenomenology claims.</li>
+      <li>Build the scaling family and track which invariants survive away from <code>q = 3</code>.</li>
+      <li>Prove which later <code>E6/E8</code> bridges are functorial and which remain numerical alignments.</li>
+      <li>Finish the integral <code>E8</code> lift and the dynamical/continuum bridge.</li>
+    </ul>
+  </section>
+
+  <p class="foot">
+    Exact kernel first. Promoted closure second. That is the cleanest way to show how much is
+    already here without pretending the final missing bridge is already proved.
+  </p>
+</div>
+</body>
+</html>

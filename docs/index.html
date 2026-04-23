@@ -4,18 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>W(3,3)-E8 Live Paper -- Exact Closure and Finite-Geometry Program</title>
-<meta name="description" content="Evidence-tiered live paper for the W(3,3)-E8 research program: verified geometry, full Dirac/Hodge spectral closure, exact PMNS cyclotomic formulas, and the remaining CE2/L-infinity residual gap.">
+<meta name="description" content="Evidence-tiered live paper for the W(3,3) program: exact two-qutrit Pauli geometry, the local Heisenberg/E6 shell, promoted spectral closure, and the remaining integral E8 and dynamical frontier.">
 <meta name="theme-color" content="#0d1117">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="canonical" href="https://wilcompute.github.io/W33-Theory/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="W(3,3)-E8 Live Paper">
-<meta property="og:description" content="Evidence-tiered live paper for the W(3,3)-E8 research program and its promoted theorem frontier.">
+<meta property="og:description" content="Evidence-tiered live paper for the W(3,3) program: exact qutrit kernel first, promoted spectral closure after that.">
 <meta property="og:url" content="https://wilcompute.github.io/W33-Theory/">
 <meta property="og:image" content="https://wilcompute.github.io/W33-Theory/assets/w33-social-preview.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="W(3,3)-E8 Live Paper">
-<meta name="twitter:description" content="Evidence-tiered live paper for the W(3,3)-E8 research program and its promoted theorem frontier.">
+<meta name="twitter:description" content="Evidence-tiered live paper for the W(3,3) program: exact qutrit kernel first, promoted spectral closure after that.">
 <meta name="twitter:image" content="https://wilcompute.github.io/W33-Theory/assets/w33-social-preview.png">
 <link rel="icon" href="assets/w33-social-preview.png">
 <style>
@@ -941,19 +941,23 @@ section h2::after {
     <div class="p" style="left:92%;animation-duration:11s;animation-delay:1.5s;width:2px;height:2px"></div>
   </div>
   <h1>W(3,3)&ndash;<span>E&#8326;</span> Theory</h1>
-  <div class="subtitle">One graph &middot; One input (q=3) &middot; Seven uniqueness conditions &middot; 1000+ tests pass &middot; All SM parameters derived</div>
+  <div class="subtitle">Exact qutrit kernel first &middot; Local E<sub>6</sub> bridge exact &middot; Promoted spectral closure after that &middot; 1000+ tests pass</div>
   <div class="tagline">
-    The symplectic polar graph <strong>W(3,3) = SRG(40,12,2,4)</strong> is the unique
-    member of the family W(3,q) satisfying seven algebraic conditions (C1&ndash;C7).
-    Its automorphism group <strong>PSp(4,3) = W(E<sub>6</sub>)</strong> selects E<sub>6</sub> as the GUT group.
-    The 27 non-neighbours carry the <strong>E<sub>6</sub> fundamental</strong> (verified by Payne
-    derivation to <strong>SRG(27,10,1,5) = complement of Schl&auml;fli graph</strong>).
-    The fine structure constant <strong>&alpha;<sup>&minus;1</sup> = (k&minus;1)<sup>2</sup> + s<sup>2</sup> = 11<sup>2</sup> + 4<sup>2</sup> = 137</strong>
-    (Gaussian norm, enabled by the C7 identity s<sup>2</sup>=r<sup>2</sup>+k unique to q=3).
-    The Weinberg angle <strong>sin<sup>2</sup>&theta;<sub>W</sub> = q/&Phi;<sub>3</sub> = 3/13</strong> matches experiment to 0.19%.
-    The GUT scale <strong>136<sup>g/2</sup> = 10<sup>16</sup> GeV</strong> and cosmological constant
-    <strong>10<sup>&minus;122</sup></strong> emerge as spectral invariants.
-    CKM and PMNS matrices reproduced to <strong>0.26% and 0.6%</strong> via E<sub>6</sub> cubic tensor VEV optimization.
+    The public theorem spine now starts with the exact statement that
+    <strong>W(3,3) = SRG(40,12,2,4)</strong> is the projective commutation geometry of the
+    <strong>40 non-identity two-qutrit Pauli observables</strong>. Around each vertex, the
+    <strong>12 neighbours split into four qutrit MUB triangles</strong> and the
+    <strong>27 non-neighbours form an F<sub>3</sub><sup>3</sup> Heisenberg shell</strong> whose
+    derived graph is the Schl&auml;fli graph, giving an exact local
+    <strong>E<sub>6</sub></strong> bridge. The promoted spectral-closure layer then builds on
+    that kernel to connect to electroweak, flavour, curvature, and moonshine data.
+Use <a href="qutrit_foundation.html">Exact Qutrit Foundation</a> for the theorem boundary,
+<a href="repo_frontier_audit.html">Repo Frontier Audit</a> for the repo-wide evidence map and citation corrections,
+<a href="../scripts/w33_local_albert_shadow_audit.py">Local Albert Shadow Audit</a> for the exact 45-tritangent signed-cubic package and its cocycle-gauge boundary,
+<a href="../scripts/w33_qutrit_ladder_audit.py">Exact Qutrit Ladder Audit</a> for the finite <code>1q -&gt; 2q -&gt; 3q -&gt; 6q</code> spine,
+<a href="../scripts/w33_toroidal_continuum_seed_audit.py">Toroidal Continuum Seed Audit</a> for the exact <code>8 / 56 / 320 / 2240 / 12480</code> coefficient packet behind the current continuum surface,
+<a href="../scripts/w33_e8_correspondence_boundary_audit.py">W33-E8 Boundary Audit</a> for the exact-versus-promoted split on the old correspondence theorem surface,
+and <a href="#current-synthesis">Current Synthesis</a> for the promoted closure stack.
   </div>
 </header>
 
@@ -1306,11 +1310,16 @@ section h2::after {
 <section id="current-synthesis">
   <h2><span class="icon">◎</span> Current Synthesis <span class="section-badge">April 2026</span></h2>
 
+  <div class="spotlight" style="border-left-color: var(--accent2);">
+    <p><strong>The repo is no longer at a blank-slate stage.</strong> The exact core is already rigid: <code>W(3,3)</code> as the two-qutrit Pauli commutation geometry, the local <code>H27</code> Heisenberg/MUB shell, and the canonical quadratic operator <code>H_can = 12I - A = 16I - BB^T</code> with spectrum <code>{0^1, 10^24, 16^15}</code>.</p>
+<p><strong>The cleanest reading is now a three-layer reading.</strong> The <strong>exact qutrit kernel</strong> is public and operator-level. The <strong>exact local E<sub>6</sub> bridge</strong> lives on the 27-point Schl&auml;fli shell with the local <code>1296 / 648</code> symmetry split, together with the exact 45-tritangent signed-cubic support that closes only in the canonical cocycle gauge. The <strong>continuum-side exact seed</strong> is now narrower too: the toroidal/decimal packet already fixes the live coefficient base <code>8, 56, 320, 2240, 12480</code>, so the open wall is the smooth realization theorem rather than finite normalization. The <strong>promoted global closure</strong> is the later spectral layer that carries the current <code>E8</code>, flavour, curvature, and moonshine package. A compact statement of that theorem boundary is collected on <a href="qutrit_foundation.html">Exact Qutrit Foundation</a>, the local determinant-support boundary is separated by <a href="../scripts/w33_local_albert_shadow_audit.py">Local Albert Shadow Audit</a>, the finite <code>1q -&gt; 2q -&gt; 3q -&gt; 6q</code> ladder is collected in <a href="../scripts/w33_qutrit_ladder_audit.py">Exact Qutrit Ladder Audit</a>, the exact continuum coefficient seed is packaged in <a href="../scripts/w33_toroidal_continuum_seed_audit.py">Toroidal Continuum Seed Audit</a>, the old promoted <code>W33 &lt;-&gt; E8</code> surface is separated by <a href="../scripts/w33_e8_correspondence_boundary_audit.py">W33-E8 Boundary Audit</a>, and the broader repo/doc/script audit is collected on <a href="repo_frontier_audit.html">Repo Frontier Audit</a>.</p>
+  </div>
+
   <!-- ─── Grand Unification Banner ─── -->
   <div class="highlights-banner" style="background: linear-gradient(135deg, rgba(88,166,255,0.12), rgba(210,168,255,0.08)); border: 2px solid var(--accent); margin-bottom: 2rem;">
     <h3 style="color: var(--accent); font-size: 1.3rem; margin: 0 0 0.75rem;">The Complete Derivation Chain</h3>
     <p style="margin-bottom: 1rem; font-size: 0.95rem;">
-      <strong>Input: q = 3</strong> (the unique prime satisfying C1&ndash;C7). <strong>Output: all Standard Model parameters.</strong><br>
+      <strong>Input: q = 3</strong> (the unique prime satisfying C1&ndash;C7). <strong>Promoted output: the current spectral-closure package.</strong><br>
       W(3,3) = SRG(40,12,2,4) &xrarr; Aut = PSp(4,3) = W(E<sub>6</sub>) &xrarr; E<sub>6</sub> GUT &xrarr; SM gauge group.<br>
       27 non-neighbours &xrarr; Payne GQ(2,4) &xrarr; SRG(27,10,1,5) = Schl&auml;fli complement &xrarr; E<sub>6</sub> fundamental.<br>
       E<sub>6</sub> cubic invariant on 27 &xrarr; Yukawa couplings with Z<sub>3</sub> selection rule &xrarr; CKM (0.26% error) + PMNS (0.6% error).<br>
@@ -5750,7 +5759,7 @@ section h2::after {
     <p>A <a href="https://arxiv.org/pdf/2603.12323">2026 paper on SymTFTs for finite non-abelian symmetries</a> explicitly treats <strong>&Delta;<sub>27</sub></strong> (the extraspecial 3-group of order 27) arising from the C&sup3;/&Zopf;<sub>3</sub> string theory orbifold. This is precisely the unique nonabelian representation group of W(3,3) (Kantor&ndash;Sahoo&ndash;Sastry theorem). The QCA index 27 = |&Delta;<sub>27</sub>| = dim(E<sub>6</sub> fundamental) unifies three independent structures: the representation theory of the polar space, the topological protection of matter content, and the exceptional Jordan algebra J<sub>3</sub>(&Oopf;).</p>
 
     <h3>Ternary Codes and E<sub>8</sub></h3>
-    <p><a href="https://arxiv.org/abs/2410.12488">Mizoguchi &amp; Oikawa (2024)</a> showed that the E<sub>8</sub> lattice can be constructed from a <strong>ternary code (the tetracode) over &Fopf;<sub>3</sub></strong> via Eisenstein integers &mdash; the same field &Fopf;<sub>3</sub> as W(3,3). This provides a code-theoretic bridge: the ternary tetracode &rarr; E<sub>8</sub> lattice &rarr; &Theta;<sub>E8</sub> = E<sub>4</sub>(τ) = 1 + 240q + &hellip; &rarr; 240 = edges of W(3,3).</p>
+    <p><a href="https://arxiv.org/abs/2410.12488">Mizoguchi &amp; Oikawa (2024)</a> is relevant here, but more narrowly than some older repo language suggested: that paper unifies code/Narain-CFT correspondences over cyclotomic fields and explicitly excludes a direct <code>E8</code> quotient-ring construction in its main ADE step. Their later <a href="https://arxiv.org/abs/2603.08102">2026 follow-up</a> gives a separate direct <code>E8</code> construction from codes over Mordell-Weil groups of extremal rational elliptic surfaces. So the honest bridge today is that ternary/cyclotomic code technology aligns naturally with the repo's <code>F<sub>3</sub></code> setting, not yet that the exact qutrit kernel already functorially constructs the <code>E8</code> lattice.</p>
   </div>
 </section>
 
@@ -6673,21 +6682,17 @@ section h2::after {
 </section>
 
 <section id="open">
-  <h2><span class="icon">?</span> Open Problems</h2>
-  <p>The strongest closed statement at present is a finite spectral-exceptional skeleton with a sharpened curved bridge program, not yet a finished continuum-dynamical theory. The list below tracks what is still open or only partially closed.</p>
+  <h2><span class="icon">?</span> Open Problems and Exact Boundaries</h2>
+  <p>The strongest current statement is not “nothing works yet”; it is that a large exact finite kernel is already closed, a local E<sub>6</sub> bridge is exact, and the remaining uncertainty lives in a narrower global-lift frontier. The table below separates what is already exact from what is still genuinely open.</p>
   <table>
-    <tr><th>#</th><th>Problem</th><th>Current State</th></tr>
-    <tr><td>1</td><td><del>Gauge coupling derivation</del></td><td>✅ <strong>SOLVED</strong> — α⁻¹ = k²−2μ+1+v/[(k−1)((k−λ)²+1)] = 137.036004; rigorous QFT derivation of WHY this formula holds remains open</td></tr>
-    <tr><td>2</td><td><strong>Exact fermion masses</strong></td><td>Gram eigenvalue ratios give qualitative hierarchy; reproducing the full 10-order-of-magnitude spread requires Yukawa boundary conditions from the cubic intersection tensor</td></tr>
-    <tr><td>3</td><td><del>Small Cabibbo angle</del></td><td>✅ <strong>SOLVED</strong> — θ<sub>C</sub> = arctan(q/(q²+q+1)) = arctan(3/13) = 13.0° (observed: 13.04° ± 0.05°); sin θ<sub>C</sub> = 3/√178 = 0.2249 (observed: 0.2250 ± 0.0007). Full CKM now derived: θ₂₃ = arcsin(A·λ²) with A=(q+1)/(q+2)=4/5 gives 2.32° (obs 2.38°); sin(θ₁₃) = A·λ⁴·√q = 0.00354 (obs 0.00351, within exp. error!); δ<sub>CP</sub> = arctan(q−1) = 63.4° (obs 65.5°); η̄ = 2λ√(q/5) = 0.3484 (obs 0.348, exact!).</td></tr>
-    <tr><td>4</td><td><del>Gravity from graph curvature</del></td><td>✅ <strong>PARTIALLY SOLVED</strong> — κ = 2/k = 1/6 uniform Ollivier-Ricci curvature on all 240 edges; R = 1/vertex; discrete Gauss–Bonnet verified; W(3,3) is discrete de Sitter; full dynamical 4D GR emergence remains open</td></tr>
-    <tr><td>5</td><td><del>Weinberg angle</del></td><td>✅ <strong>SOLVED</strong> — sin²θ<sub>W</sub> = q/(q²+q+1) = 3/13 = 0.23077 (observed: 0.23127 ± 0.00003, diff 0.19%). Running from tree-level 1/4 to low-energy 3/13 via correction −1/(μ·(q²+q+1)) = −1/52. Same algebraic number q²+q+1 = 13 = |PG(2,q)| controls both Weinberg and Cabibbo angles.</td></tr>
-    <tr><td>6</td><td><del>Uniqueness</del></td><td>✅ <strong>SOLVED IN CURRENT LANDSCAPE</strong> — Phase LXIV (<code>test_uniqueness_srg_landscape.py</code>, 64 tests) proves W(3,3) is the unique SRG with parameters (40,12,2,4) that yields the repo's promoted structure across the searched landscape. Broader uniqueness beyond comparable finite geometries remains a live caution.</td></tr>
-    <tr><td>7</td><td><strong>Rigorous α formula derivation</strong></td><td>The formula k²−2μ+1+v/L<sub>eff</sub> gives 137.036004 but WHY? <strong style="color:#00ff88;">✅ SOLVED AT THE FINITE LEVEL</strong> — α is the spectral identity from vertex propagator <code>M = (k−1)((A−λI)²+I)</code>. The continuum-QFT interpretation of that identity remains open.</td></tr>
-    <tr><td>8</td><td><strong>Mass spectrum from spectral theory</strong></td><td>Laplacian eigenvalues 0(1)/10(24)/16(15); 10×16=160=triangles; 10+16=26; mass ratio √(8/5); full spectrum prediction in progress</td></tr>
-    <tr><td>9</td><td><strong>Explicit 240 bijection construction</strong></td><td>No Sp(4,3)-equivariant bijection possible (1 vs. multiple orbits); representation-theoretic map needed</td></tr>
-    <tr><td>10</td><td><strong>Hubble tension mechanism</strong></td><td>H₀ = 67 and 73 both derived; physical mechanism for the two values needs clarification</td></tr>
-    <tr><td>11</td><td><strong>Curved 4D refinement/scaling theorem</strong></td><td><strong style="color:#00ff88;">NARROWED</strong> — the tomotope gives an infinite cover family, the exact almost-commutative product gives the quartic external scale, and minimal triangulations of <code>CP2</code>/<code>K3</code> give curved 4D seed geometries. The remaining open part is the rigorous small-time or cutoff theorem that turns that package into the Einstein-Hilbert term.</td></tr>
+    <tr><th>#</th><th>Layer</th><th>Current State</th></tr>
+    <tr><td>1</td><td><strong>Exact two-qutrit kernel</strong></td><td>✅ <strong>CLOSED</strong> — the 40 vertices are the 40 projective non-identity two-qutrit Pauli observables; adjacency is exactly commutation; the commutator phase is the symplectic form on <code>F<sub>3</sub><sup>4</sup></code>.</td></tr>
+    <tr><td>2</td><td><strong>Exact Heisenberg/MUB shell</strong></td><td>✅ <strong>CLOSED</strong> — for each base point, the 12 neighbours split into four triangles and the 27 non-neighbours form an <code>F<sub>3</sub><sup>3</sup></code> shell with 9 fibres of size 3; the derived 27-vertex graph is the Schl&auml;fli graph.</td></tr>
+    <tr><td>3</td><td><strong>Exact local E<sub>6</sub> bridge</strong></td><td>✅ <strong>CLOSED</strong> — the 27-point shell is the cubic-surface 27-line geometry with Weyl group <code>W(E<sub>6</sub>)</code>; the full local stabilizer has order <code>1296</code> and the projective symplectic-visible subgroup has order <code>648</code>.</td></tr>
+    <tr><td>4</td><td><strong>Canonical operator layer</strong></td><td>✅ <strong>CLOSED</strong> — <code>H_can = 12I - A = 16I - BB<sup>T</sup></code> is positive semidefinite with spectrum <code>0<sup>1</sup>, 10<sup>24</sup>, 16<sup>15</sup></code>; the same formulas extend along the <code>W(3,q)</code> scaling family.</td></tr>
+    <tr><td>5</td><td><strong>Integral E<sub>8</sub> lift</strong></td><td>🟡 <strong>OPEN</strong> — the mod-2 homology already gives the correct rank-8 shadow, but the integral Cartan pairing and a canonical root-lattice lift have not yet been reconstructed directly from the chain complex.</td></tr>
+    <tr><td>6</td><td><strong>Moonshine module boundary</strong></td><td>🟡 <strong>OPEN</strong> — the low-order transport is exact through the quartic package, but the naive quintic <code>V<sub>5</sub></code> lift already fails on anchored classes such as <code>2A</code> and <code>2B</code>; the next step needs genuine character-theoretic input.</td></tr>
+    <tr><td>7</td><td><strong>Dynamical / continuum origin</strong></td><td>🟡 <strong>OPEN</strong> — the repo has a strong finite kernel and a narrowed curved bridge program, but it still needs an action principle, scaling limit, or continuum theorem that explains why the universe selects <code>W(3,3)</code> and turns the finite package into QFT/GR dynamics.</td></tr>
   </table>
 </section>
 
@@ -6695,6 +6700,12 @@ section h2::after {
   <h2><span class="icon">🔗</span> Other links</h2>
   <p>These supplementary pages provide alternative “book-style” presentations and deeper dives. The live site (this page) remains the single authoritative view.</p>
   <ul>
+    <li><a href="qutrit_foundation.html">Exact Qutrit Foundation</a></li>
+    <li><a href="repo_frontier_audit.html">Repo Frontier Audit</a></li>
+    <li><a href="../scripts/w33_local_albert_shadow_audit.py">Local Albert Shadow Audit</a></li>
+    <li><a href="../scripts/w33_qutrit_ladder_audit.py">Exact Qutrit Ladder Audit</a></li>
+    <li><a href="../scripts/w33_toroidal_continuum_seed_audit.py">Toroidal Continuum Seed Audit</a></li>
+    <li><a href="../scripts/w33_e8_correspondence_boundary_audit.py">W33-E8 Boundary Audit</a></li>
     <li><a href="w33_complete_theory.html">Complete Theory</a></li>
     <li><a href="w33_the_apex.html">The Apex</a></li>
     <li><a href="w33_busted_wide_open.html">Busted Wide Open</a></li>

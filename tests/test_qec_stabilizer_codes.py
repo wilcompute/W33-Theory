@@ -273,23 +273,22 @@ class TestT1361_LogicalOperators:
 # T1362: Transversal gates
 # ═══════════════════════════════════════════════════════════════════
 class TestT1362_TransversalGates:
-    """Transversal gates from the automorphism group of W(3,3).
-    Aut(W(3,3)) acts on the code while preserving the stabilizers,
+    """Transversal gates from the full graph automorphism group of W(3,3).
+    The graph symmetry acts on the code while preserving the stabilizers,
     implementing logical gates transversally."""
 
     def test_automorphism_order(self):
-        """Aut(W(3,3)) = Sp(4,3):2 with order 51840 × 2 = 103680.
-        Each automorphism gives a transversal logical gate."""
-        sp4_3 = 51840
-        aut_order = 2 * sp4_3
-        assert aut_order == 103680
+        """The full graph automorphism group has order 51840.
+        Each graph automorphism gives a transversal logical gate."""
+        aut_order = 51840
+        assert aut_order == 51840
 
     def test_transversal_clifford(self):
         """The Clifford group on k qubits has order ~ 2^(k²).
         For k=81 this is vast. But the SRG automorphisms give
         a tractable subgroup of transversal Cliffords.
-        |Aut| = 103680 < 2^81 ≪ |Clifford(81)|."""
-        assert 103680 < 2**81
+        |Aut| = 51840 < 2^81 ≪ |Clifford(81)|."""
+        assert 51840 < 2**81
 
     def test_code_symmetry(self):
         """The code inherits the SRG symmetry:

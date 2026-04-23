@@ -443,7 +443,9 @@ def build_algebraic_spine() -> AlgebraicSpine:
     route = (
         "Use the exact local H27 Heisenberg/MUB shell (1 qutrit) to organize "
         "phase transport, embed it into the exact W33 two-qutrit Pauli geometry, "
-        "and only then lift through the s12/Golay Heisenberg closure to the "
+        "pass first through the canonical projective operator layer with "
+        "Hamiltonian H_can = 12I - A = 16I - BB^T, and only then lift through "
+        "the s12/Golay Heisenberg closure and the W(3,q) scaling family to the "
         "three-qutrit sl(27) layer. The same W(3,3) parameter package "
         "(40,12,2,4; q=3) already generates G2=14, F4=52, E6=78, E7=133, "
         "E8=248 and the octonionic magic-square row, so the Lie tower should "

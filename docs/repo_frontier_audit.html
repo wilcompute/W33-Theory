@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Repo Frontier Audit - W(3,3)</title>
+<meta name="description" content="April 2026 audit of the W(3,3) repo: exact qutrit core, promoted global closure, active folders, script families, and corrected literature boundaries.">
+<style>
+:root {
+  --bg: #0d1117;
+  --bg2: #161b22;
+  --bg3: #21262d;
+  --fg: #e6edf3;
+  --fg2: #8b949e;
+  --accent: #58a6ff;
+  --accent2: #3fb950;
+  --accent3: #d2a8ff;
+  --gold: #e3b341;
+  --border: #30363d;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: linear-gradient(180deg, #0d1117 0%, #101725 100%);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.72;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.92em;
+  padding: 0.08rem 0.32rem;
+  border-radius: 6px;
+  border: 1px solid rgba(110,118,129,0.28);
+  background: rgba(110,118,129,0.18);
+}
+.page {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.back {
+  color: var(--fg2);
+  font-size: 0.95rem;
+}
+.badge {
+  display: inline-block;
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(227,179,65,0.45);
+  color: var(--gold);
+  background: rgba(227,179,65,0.08);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.hero {
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(88,166,255,0.14), rgba(227,179,65,0.09));
+  margin-bottom: 1.5rem;
+}
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.08;
+  margin-bottom: 0.8rem;
+}
+.hero p {
+  max-width: 860px;
+}
+.hero-note {
+  margin-top: 1rem;
+  color: var(--fg2);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 1.5rem;
+}
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem 1.1rem;
+}
+.card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.55rem;
+}
+.card p, .card li, .section p, .section li, table {
+  color: var(--fg2);
+}
+.card ul, .section ul {
+  margin-left: 1.15rem;
+}
+.section {
+  margin-top: 1.8rem;
+}
+.section h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  color: var(--gold);
+}
+.callout {
+  background: rgba(88,166,255,0.08);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  margin-top: 1rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.9rem;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+th, td {
+  text-align: left;
+  padding: 0.8rem 0.9rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+th {
+  color: var(--fg);
+  background: rgba(88,166,255,0.06);
+}
+tr:last-child td {
+  border-bottom: none;
+}
+.status-exact { color: var(--accent2); font-weight: 700; }
+.status-promoted { color: var(--accent3); font-weight: 700; }
+.status-open { color: var(--gold); font-weight: 700; }
+@media (max-width: 720px) {
+  .hero, .card { padding: 1rem; }
+  th, td { padding: 0.7rem; }
+}
+</style>
+</head>
+<body>
+<main class="page">
+  <div class="topbar">
+    <a class="back" href="index.html">&#8592; Back to the live paper</a>
+    <span class="badge">Audit 2026-04-22</span>
+  </div>
+
+  <section class="hero">
+    <h1>Repo Frontier Audit</h1>
+    <p>This page audits the repo itself rather than adding a new theorem layer. It reconciles the live HTML, the current <code>W36_PAPER.tex</code>, the active script/test families, the Qiskit search layer, and the recent literature boundary that the older site language had started to overstate.</p>
+    <p>The new finite-ladder consolidation is now executable too: <code>scripts/w33_qutrit_ladder_audit.py</code> packages the exact <code>1q -&gt; 2q -&gt; 3q -&gt; 6q</code> spine and marks where the separate exact <code>E8</code>-side decomposition begins. The companion <code>scripts/w33_e8_correspondence_boundary_audit.py</code> then separates the exact finite <code>W33 &lt;-&gt; E8</code> content from the older promoted physics inheritance layer. The local cubic side is now separated too: <code>scripts/w33_local_albert_shadow_audit.py</code> packages the exact 45-tritangent signed-cubic support and the cocycle-gauge boundary between naive bare <code>W(E6)</code> transport and the canonical local invariant. The continuum seed is separated as well: <code>scripts/w33_toroidal_continuum_seed_audit.py</code> packages the exact toroidal/decimal coefficient packet <code>8, 56, 320, 2240, 12480</code>, so the remaining wall is smooth realization rather than finite normalization.</p>
+    <p class="hero-note">Bottom line: this repo already has an exact finite qutrit spine, an exact local <code>E6</code> bridge, and a large promoted global-closure stack. The honest remaining wall is the continuum/dynamical lift together with the last Yukawa spectral packet.</p>
+  </section>
+
+  <div class="grid">
+    <article class="card">
+      <h3>Exact Now</h3>
+      <ul>
+        <li><code>W(3,3)</code> as the 40 projective non-identity two-qutrit Pauli observables.</li>
+        <li>The local <code>12 + 27</code> Heisenberg/MUB shell with four triangles and nine size-3 fibers.</li>
+        <li>The local 27-point Schl&auml;fli / cubic-surface line shell and exact local <code>E6</code> bridge.</li>
+        <li>The local 45-tritangent signed-cubic package, with the exact cocycle-gauge boundary exposed.</li>
+        <li>The toroidal/decimal continuum seed already fixes the exact coefficient packet <code>8, 56, 320, 2240, 12480</code>.</li>
+        <li>The canonical operator <code>H_can = 12I - A = 16I - BB^T</code> with spectrum <code>0^1, 10^24, 16^15</code>.</li>
+      </ul>
+    </article>
+    <article class="card">
+      <h3>Promoted Now</h3>
+      <ul>
+        <li>The global <code>E8</code>, moonshine, arithmetic, and phenomenology stack is large and active.</li>
+        <li>Parts of that stack are exact internally, but not all of it sits at the same functorial level as the qutrit kernel.</li>
+        <li>The Qiskit files encode the current bridge wall as local search oracles; they do not replace the missing continuum theorem.</li>
+      </ul>
+    </article>
+    <article class="card">
+      <h3>Open Wall</h3>
+      <ul>
+        <li>Direct integral <code>E8</code> lift from the chain-complex side remains open.</li>
+        <li>The continuum/dynamical lift remains the real bottleneck.</li>
+        <li>The Yukawa frontier has been reduced to a very small nonlinear spectral packet, not a missing symmetry skeleton.</li>
+      </ul>
+    </article>
+  </div>
+
+  <section class="section">
+    <h2>Repo Map</h2>
+    <p>The repo is large, but the live research surfaces are now fairly clear. <code>docs/build_site.py</code> explicitly treats <code>docs/index.html</code> as the sole site source, <code>docs/REPO_STRUCTURE.md</code> points new readers toward <code>docs/index.html</code> and <code>docs/march_2026_frontier_note.md</code>, and the active source surfaces are concentrated in <code>docs/</code>, <code>exploration/</code>, <code>tests/</code>, <code>tools/</code>, <code>tools/qiskit/</code>, and <code>scripts/</code>.</p>
+    <table>
+      <tr><th>Surface</th><th>What it is doing now</th></tr>
+      <tr><td><code>docs/index.html</code></td><td>The live public surface. It now correctly centers the exact qutrit kernel first and the promoted global closure after that.</td></tr>
+      <tr><td><code>W36_PAPER.tex</code></td><td>The live manuscript. It already contains the exact qutrit foundation, the local <code>E6</code> bridge, the spectral determinant layer, the mass-spectrum package, and an explicit open-boundary section.</td></tr>
+      <tr><td><code>exploration/</code></td><td>The exact theorem-builder layer. This is where many of the bridge summaries and conservative closure notes live.</td></tr>
+      <tr><td><code>scripts/</code></td><td>As of this audit the repo has <strong>513</strong> Python scripts. Some are conservative audits; others are much broader synthesis drivers. Script presence alone is not an evidence tier.</td></tr>
+      <tr><td><code>tests/</code></td><td>As of this audit the repo has <strong>1703</strong> pytest files. The exact qutrit/kernel and bridge reductions are heavily covered, but the sheer test count should not be read as a uniform theorem ledger.</td></tr>
+      <tr><td><code>tools/qiskit/</code></td><td>There are <strong>30</strong> top-level files here. This is a local oracle/diagnostic stack over the current bridge-support constraints, not a separate physical derivation layer.</td></tr>
+      <tr><td><code>archive/</code>, root drop bundles, older snapshots</td><td>Historical weight is intentionally preserved. These directories are useful context, but they are not the place to infer the current exactness boundary.</td></tr>
+    </table>
+  </section>
+
+  <section class="section">
+    <h2>Exact Spine</h2>
+    <p>The strongest exact package in the repo is now compact enough to state cleanly.</p>
+    <table>
+      <tr><th>Layer</th><th>Backed by</th><th>Status</th></tr>
+      <tr><td>Two-qutrit Pauli realization of <code>W(3,3)</code></td><td><code>scripts/w33_two_qutrit_pauli.py</code>, <code>exploration/w33_qutrit_foundation_bridge.py</code>, <code>tests/test_w33_qutrit_foundation_bridge.py</code></td><td><span class="status-exact">Exact</span></td></tr>
+      <tr><td>Local Heisenberg/MUB shell and Schl&auml;fli geometry</td><td><code>scripts/w33_heisenberg_qutrit.py</code>, <code>scripts/w33_exact_lie_bridge_audit.py</code>, <code>tests/test_w33_exact_lie_bridge_audit.py</code></td><td><span class="status-exact">Exact</span></td></tr>
+      <tr><td>Local Albert-shadow / signed-cubic boundary audit</td><td><code>scripts/w33_local_albert_shadow_audit.py</code>, <code>tests/test_w33_local_albert_shadow_audit.py</code></td><td><span class="status-exact">Exact local determinant-support boundary</span></td></tr>
+      <tr><td>Canonical quadratic operator</td><td><code>scripts/w33_qutrit_operator_algebra.py</code>, <code>tests/test_w33_qutrit_operator_algebra.py</code></td><td><span class="status-exact">Exact</span></td></tr>
+      <tr><td>Finite qutrit ladder audit</td><td><code>scripts/w33_qutrit_ladder_audit.py</code>, <code>tests/test_w33_qutrit_ladder_audit.py</code></td><td><span class="status-exact">Exact finite ladder boundary</span></td></tr>
+      <tr><td>Toroidal continuum seed audit</td><td><code>scripts/w33_toroidal_continuum_seed_audit.py</code>, <code>tests/test_w33_toroidal_continuum_seed_audit.py</code></td><td><span class="status-exact">Exact continuum coefficient seed</span></td></tr>
+      <tr><td>W33-E8 correspondence boundary audit</td><td><code>scripts/w33_e8_correspondence_boundary_audit.py</code>, <code>tests/test_w33_e8_correspondence_boundary_audit.py</code></td><td><span class="status-exact">Exact-versus-promoted separation</span></td></tr>
+      <tr><td><code>W(3,q)</code> scaling-family identities</td><td><code>scripts/w3q_scaling_family.py</code>, <code>tests/test_w3q_scaling_family.py</code></td><td><span class="status-exact">Exact family scaffold</span></td></tr>
+      <tr><td>Finite Yukawa support reduction</td><td><code>scripts/w33_yukawa_frontier_audit.py</code>, <code>scripts/w33_yukawa_quartic_lift_audit.py</code></td><td><span class="status-exact">Exact reduction, not final closure</span></td></tr>
+    </table>
+    <div class="callout">The strongest single computational summary remains: the finite qutrit foundation is closed; the local <code>E6</code> bridge is exact; the continuum coefficient seed is now exact too; the remaining uncertainty lives at the global lift and smooth realization end, not at the level of basic finite geometry or finite normalization.</div>
+  </section>
+
+  <section class="section">
+    <h2>Promoted Layers</h2>
+    <p>The repo also contains a much larger promoted closure layer. That layer is real work, but it is mixed in strength.</p>
+    <table>
+      <tr><th>Promoted family</th><th>Audit reading</th></tr>
+      <tr><td><code>scripts/w33_e8_correspondence_theorem.py</code></td><td>Ambitious global synthesis. Useful as a program statement, but broader than the newer conservative exactness audits.</td></tr>
+      <tr><td>Moonshine / modular / transport stack</td><td>Large and active. Many local identities are exact, but the repo itself now distinguishes this from the exact qutrit kernel.</td></tr>
+      <tr><td>Curved/K3/continuum bridge files</td><td>This is where the live bottleneck has been localized. The current frontier note reads the remaining wall as a tightly constrained realization problem, not as freeform guesswork.</td></tr>
+      <tr><td>Qiskit bridge oracles</td><td>The Qiskit layer searches exact theorem-backed support shells such as <code>head_line &lt; U1 &lt; transport_avatar</code>. It packages the current bridge wall as a search problem; it does not itself solve the continuum lift.</td></tr>
+    </table>
+  </section>
+
+  <section class="section">
+    <h2>Concrete Corrections</h2>
+    <table>
+      <tr><th>Issue</th><th>Audit correction</th></tr>
+      <tr><td><code>2410.12488</code> literature claim</td><td>The older site language overstated this source. <a href="https://arxiv.org/abs/2410.12488">Mizoguchi &amp; Oikawa (2024)</a> explicitly exclude a direct <code>E8</code> quotient-ring construction in their main ADE code/Narain framework. Their later <a href="https://arxiv.org/abs/2603.08102">2026 follow-up</a> gives a separate direct <code>E8</code> construction from codes over Mordell-Weil groups of extremal rational elliptic surfaces.</td></tr>
+      <tr><td>README entrypoint</td><td>The short README had drifted toward a broader promoted snapshot. It should now be read through the live status note and the audited entrypoints, not as the exactness boundary by itself.</td></tr>
+      <tr><td>Paper/script GUT-coupling mismatch</td><td><code>PHYSICS_INVENTORY.md</code> flags a live disagreement: some scripts derive <code>alpha_GUT^-1 = 26</code>, while the paper also carries a different <code>240</code>-scale claim. That disagreement is real and should not be smoothed over.</td></tr>
+      <tr><td>What “finishing” means now</td><td>The actionable finish route is not “invent more numerology”. It is the narrower path recorded in <code>exploration/ALGEBRA_REVIEW_AND_VOGEL_ROUTE_2026_03_09.md</code>: <code>H27 -&gt; W33 -&gt; s12/Golay Heisenberg lift -&gt; sl(27)</code>, then the remaining Yukawa and continuum closure.</td></tr>
+    </table>
+  </section>
+
+  <section class="section">
+    <h2>Finish Route</h2>
+    <p>The repo already identifies the algebraic ladder worth pushing:</p>
+    <div class="callout"><code>H27 (1 qutrit shell) -&gt; W33 (2 qutrits) -&gt; s12/Golay Heisenberg lift -&gt; sl(27) (3 qutrits)</code></div>
+    <p>That is the finite route. The honest remaining work is then twofold: finish the nonlinear Yukawa packet on top of the already-fixed family carrier, and prove the continuum/dynamical lift that explains why the finite package should govern a physical QFT/GR limit.</p>
+  </section>
+
+  <section class="section">
+    <h2>Literature Anchors</h2>
+    <ul>
+      <li><a href="https://arxiv.org/abs/quant-ph/0701211">Planat &amp; Saniga (2007)</a>: two-qutrit Pauli graphs and the finite-geometric relation to the dual of <code>W(3)</code>.</li>
+      <li><a href="https://arxiv.org/abs/math/0507118">Manivel (2005)</a>: the 27 lines on the cubic surface and the classical <code>W(E6)</code> configuration picture.</li>
+      <li><a href="https://arxiv.org/abs/0911.2253">Manogue &amp; Dray (2009)</a>: <code>E6</code> as determinant-preserving symmetry of the exceptional Jordan algebra, useful as a literature anchor for the repo's local determinant-support reading.</li>
+      <li><a href="https://arxiv.org/abs/2410.12488">Mizoguchi &amp; Oikawa (2024)</a>: code/Narain correspondences over cyclotomic fields, with direct <code>E8</code> excluded in the main ADE quotient-ring step.</li>
+      <li><a href="https://arxiv.org/abs/2603.08102">Mizoguchi &amp; Oikawa (2026)</a>: later direct <code>E8</code> construction from codes over Mordell-Weil groups of extremal rational elliptic surfaces.</li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>

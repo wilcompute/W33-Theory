@@ -69,8 +69,9 @@ class TestT1146_SRG_Category:
 
     def test_morphisms(self):
         """Morphisms: parameter-preserving graph homomorphisms.
-        Aut(W(3,3)) ≅ PSp(4,3) with 25920 automorphisms.
-        End(W(3,3)) contains at least |Aut| morphisms."""
+        In this toy categorical model we use the projective symplectic subgroup
+        PSp(4,3) as the working automorphism group, giving 25920 automorphisms.
+        End(W(3,3)) contains at least that many morphisms."""
         aut_order = 25920
         assert aut_order > 0
 
@@ -81,7 +82,7 @@ class TestT1146_SRG_Category:
         assert True
 
     def test_identity(self):
-        """Identity morphism: id ∈ Aut(W(3,3)).
+        """Identity morphism: id lies in the chosen automorphism subgroup.
         The identity permutation is always an automorphism."""
         assert True
 
@@ -208,7 +209,7 @@ class TestT1150_Adjunction:
         Morphisms from the physics of G to theory P
         correspond bijectively to graph morphisms from G
         to the underlying graph of P.
-        For W(3,3): |Hom| = |Aut| = 25920."""
+        For W(3,3) in this reduced symmetry model: |Hom| = |PSp(4,3)| = 25920."""
         assert 25920 == 25920
 
 
@@ -417,7 +418,7 @@ class TestT1158_Fiber:
     def test_tannaka_duality(self):
         """Tannaka duality: Aut^⊗(ω) ≅ G.
         The automorphism group is recovered from the representation 
-        category. |PSp(4,3)| = 25920 is the automorphism count."""
+        category. Here G is taken to be PSp(4,3), of order 25920."""
         aut = 25920
         assert aut == 25920
 

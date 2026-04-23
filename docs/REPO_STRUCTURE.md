@@ -8,6 +8,8 @@ preserved alongside them.
 
 - [README.md](../README.md): top-level project summary and reading route
 - [docs/index.html](./index.html): live public paper / promoted theorem surface
+- [docs/qutrit_foundation.html](./qutrit_foundation.html): exact qutrit/Heisenberg/local-E6 theorem boundary
+- [docs/repo_frontier_audit.html](./repo_frontier_audit.html): repo-wide evidence map, folder audit, and literature-boundary corrections
 - [docs/march_2026_frontier_note.md](./march_2026_frontier_note.md): current frontier and open wall
 
 ## Active Research Surfaces

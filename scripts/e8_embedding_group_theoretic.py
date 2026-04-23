@@ -15,7 +15,8 @@ for every edge (i,j) in W33, p(i) - p(j) is an E8 root (up to sign).
 Key mathematical facts:
 - W33 has 40 vertices, 240 edges, SRG(40,12,2,4)
 - E8 has 240 roots, all norm^2 = 2
-- Aut(W33) = Sp(4,3) = W(E6), order 51840
+- The projective symplectic subgroup PSp(4,3) has order 25920
+- The full collinearity-graph automorphism group has order 51840 = |W(E6)|
 - Under W(E6), E8 roots split as 72 + 6 + 81 + 81
 
 NOVEL STRATEGY: "Informational Rotations"

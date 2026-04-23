@@ -94,7 +94,7 @@ This means **W(3,3) provides the combinatorial realization** of the degree-1 Fou
 
 Key developments in [modular conformal bootstrap](https://www.emergentmind.com/topics/modular-conformal-bootstrap-analysis):
 
-- **Code CFTs and Narain lattices**: Mizoguchi & Oikawa (2024) [arXiv:2410.12488](https://arxiv.org/abs/2410.12488) unified error-correcting code / Narain CFT correspondences via lattices over cyclotomic fields Q(ζ_p). Crucially: **the E8 lattice can be constructed from a ternary code (the "tetracode") over F₃** via Construction A_C using Eisenstein integers. The ternary code lives over **the same field F₃ as W(3,3)**.
+- **Code CFTs and Narain lattices**: Mizoguchi & Oikawa (2024) [arXiv:2410.12488](https://arxiv.org/abs/2410.12488) unified error-correcting code / Narain CFT correspondences via lattices over cyclotomic fields Q(ζ_p). The important boundary is that their main ADE quotient-ring construction explicitly excludes a direct `E8` realization there; what the paper gives the repo is a strong cyclotomic/code-lattice alignment over the same field `F3` as `W(3,3)`. Their later 2026 follow-up constructs `E8` by a different code route over Mordell-Weil groups of extremal rational elliptic surfaces.
 
 - **Formal verification of Viazovska's theorem** (2025): [Math, Inc.](https://www.math.inc/sphere-packing) formally verified the sphere packing optimality of E8 in dimension 8 using the Gauss proof assistant, certifying π⁴/384 ≈ 25.37% as the density.
 
@@ -110,7 +110,7 @@ Key developments in [modular conformal bootstrap](https://www.emergentmind.com/t
 |----------------------|-------------------------------|
 | 240 edges = 240 roots of E8 | First q-coefficient of E₄ = ΘE8(τ); modular bootstrap fixes this uniquely |
 | E₄ = M₄(Γ) = 1-dim space | Uniqueness: only rank-8 even unimodular lattice consistent with bootstrap |
-| F₃ arithmetic | Ternary code tetracode → E8 via Construction A_C over Eisenstein integers |
+| F₃ arithmetic | Cyclotomic / ternary-code technology aligns with the `F₃` setting of W(3,3), but the direct `E8` step needs a later extension beyond `2410.12488` |
 | v = 40 | 40 = |PG(3,3)| = points of underlying projective space; |PG(3,q)| = (q⁴-1)/(q-1) |
 | H₁ = 81 = 3⁴ | 3⁴ = q^{dim(PG)} = number of affine points, = volume of F₃⁴ |
 | 128 bits | = 2·64 = 2·|E8 root system|/dim(E8) ??? |

@@ -47,7 +47,7 @@ from collections import Counter, deque
 from pathlib import Path
 from typing import Dict, List, Tuple
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 ARTIFACT = ROOT / "artifacts" / "explicit_bijection_decomposition.json"
 EDGEPAIR_GENS = ROOT / "artifacts" / "sp43_edgepair_generators.json"
 LINE_GENS = ROOT / "SP43_TO_WE6_TRUE_FIXED_BUNDLE_v01_2026-02-25" / "sp43_line_perms_fixed.json"
