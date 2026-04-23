@@ -103,16 +103,21 @@ Both are specific well-posed problems in metric geometry.
 
 ## 🔲 OPEN: Electron Mass Formula
 
-The up/charm/top quark masses are derived. The electron mass formula
-is partially identified:
+This gap is now narrower than the older wording suggests. The residual
+charged-fermion denominator is already packaged by
+`scripts/w33_electron_seed_packet_audit.py` as the exact packet
 
-m_e/m_t ≈ 1/346,528  where 346,528 = λΦ₆²(μ²+1)μ²Φ₃
+m_e/m_t ?= 1/346,528  where 346,528 = λΦ₆²(μ²+1)μ²Φ₃ = 98 × 17 × 208
 
-The factor (μ²+1) = 17 = |μ+i|² = Gaussian norm of (μ,1) suggests
-the electron mass involves a **shifted Gaussian norm** vs. the charm
-mass which uses the unshifted norm (k-1,μ).
+with
 
-This is the one genuinely open fermion mass problem.
+- `98 = λΦ₆²` the barrier shell,
+- `17 = μ²+1 = |μ+i|²` the shifted Gaussian norm,
+- `208 = μ²Φ₃ = μ dim(F₄)` the exact charged-lepton shell.
+
+So the open problem is no longer missing factor arithmetic. The open
+problem is whether this exact packet is the final physical electron
+denominator or a nearby normalization shadow.
 
 ---
 
