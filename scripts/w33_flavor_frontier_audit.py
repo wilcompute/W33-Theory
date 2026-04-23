@@ -55,7 +55,7 @@ except ModuleNotFoundError:
     from w33_levi_wolfenstein_bridge import build_summary as build_levi_wolfenstein_summary  # noqa: E402
 
 try:
-    from scripts.w33_standard_model_action_backbone_bridge import (  # noqa: E402
+    from exploration.w33_standard_model_action_backbone_bridge import (  # noqa: E402
         build_standard_model_action_backbone_summary,
     )
 except ModuleNotFoundError:
