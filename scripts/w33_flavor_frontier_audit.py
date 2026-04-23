@@ -14,9 +14,9 @@ Current benchmark inputs:
       * alpha^(5)(M_Z)^(-1) = 127.930
       * sin^2(theta_eff)    = 0.23154
       * |V_us|              = 0.22501
-  - NuFIT 6.0 (2024), IC24 with SK atmospheric data, normal ordering:
-      * sin^2(theta_12) = 0.308
-      * sin^2(theta_13) = 0.02215
+  - NuFIT 6.1 (2025), IC24 with SK atmospheric data, normal ordering:
+      * sin^2(theta_12) = 0.3088
+      * sin^2(theta_13) = 0.02248
       * sin^2(theta_23) = 0.470
       * delta_CP        = 212 deg
 
@@ -69,10 +69,10 @@ PDG_2025 = {
     "alpha5_mz_inverse": 127.930,
 }
 
-NUFIT_6_0_IC24_NO = {
-    "source_url": "https://www.nu-fit.org/sites/default/files/v60.tbl-parameters.pdf",
-    "sin2_theta12": 0.308,
-    "sin2_theta13": 0.02215,
+NUFIT_6_1_IC24_NO = {
+    "source_url": "https://www.nu-fit.org/sites/default/files/v61.tbl-parameters.pdf",
+    "sin2_theta12": 0.3088,
+    "sin2_theta13": 0.02248,
     "sin2_theta23": 0.470,
     "delta_cp_deg": 212.0,
 }
@@ -237,7 +237,7 @@ def classify_flavor_frontier() -> Tuple[Dict[str, object], ...]:
     cabibbo_obs = PDG_2025["cabibbo_vus"]
     alpha_mz_obs = PDG_2025["alpha5_mz_inverse"]
     theta_w_obs = PDG_2025["sin2_theta_eff"]
-    nu = NUFIT_6_0_IC24_NO
+    nu = NUFIT_6_1_IC24_NO
 
     exact_cab_sin = exact["standard_model_action_backbone"]["sin_theta_c_from_exact_tangent"]["float"]
     raw_cab_sin = float(paper["section84"]["lambda_as_sine"])
@@ -330,9 +330,9 @@ def classify_flavor_frontier() -> Tuple[Dict[str, object], ...]:
                 "the paper's Z-pole value 135 remains far from the current PDG running coupling."
             ),
             "evidence": {
-                "paper_gut_alpha_inverse": paper["alpha_inverse"],
-                "paper_z_pole_alpha_inverse": 135.0,
-                "pdg_alpha5_mz_inverse": alpha_mz_obs,
+            "paper_gut_alpha_inverse": paper["alpha_inverse"],
+            "paper_z_pole_alpha_inverse": 135.0,
+            "pdg_alpha5_mz_inverse": alpha_mz_obs,
                 "pdg_sin2_theta_eff": theta_w_obs,
                 "z_pole_absolute_gap": abs(135.0 - alpha_mz_obs),
             },
@@ -370,7 +370,7 @@ def analyze() -> Dict[str, object]:
         "status": "ok",
         "reference_data": {
             "pdg_2025": PDG_2025,
-            "nufit_6_0_ic24_no": NUFIT_6_0_IC24_NO,
+            "nufit_6_1_ic24_no": NUFIT_6_1_IC24_NO,
         },
         "paper_packet": paper,
         "exact_repo_packet": exact,
