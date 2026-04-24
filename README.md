@@ -1,12 +1,13 @@
 # W(3,3) Finite-Geometry Program
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.placeholder.svg)](https://doi.org/10.5281/zenodo.placeholder)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18652825.svg)](https://doi.org/10.5281/zenodo.18652825)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen)](#test-suite)
 
 **Author:** Wil Dahn  
 **Institution:** Independent Researcher, Baltimore MD  
 **Status:** Active Development — April 2026  
+**Release scale:** 207+ pillar verification scripts, 5500+ automated tests, through Pillar 207
 **Paper:** [`W36_PAPER.tex`](W36_PAPER.tex) · [`W36_PAPER_DRAFT.md`](W36_PAPER_DRAFT.md)
 
 > Live status note (April 22, 2026): the strongest reproducible core is the exact two-qutrit Pauli geometry of `W(3,3)`, the local Heisenberg/Schlafli shell, the exact local `E6` bridge, and the canonical operator layer. The broader `E8` / moonshine / continuum stack is active and partly exact, but it should be read as a promoted global-closure program rather than the same exactness tier. Start with [`docs/index.html`](docs/index.html), [`docs/qutrit_foundation.html`](docs/qutrit_foundation.html), [`docs/repo_frontier_audit.html`](docs/repo_frontier_audit.html), and [`docs/march_2026_frontier_note.md`](docs/march_2026_frontier_note.md).
