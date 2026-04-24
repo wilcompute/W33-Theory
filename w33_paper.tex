@@ -2211,4 +2211,97 @@ with the explicit zero count above.
 
 \hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
 
+% ═══════════════════════════════════════════════════════════════
+%  SUPPLEMENT H — CONSTRUCTIVE VERIFICATION OF W(3,3)
+% ═══════════════════════════════════════════════════════════════
+\clearpage
+\part*{Supplement H --- Constructive Verification of $W_{3,3}$}
+\addcontentsline{toc}{part}{Supplement H --- Constructive Verification}
+
+\section*{From First Principles to the 40-Vertex Graph}
+
+This Supplement builds $W_{3,3}$ explicitly and verifies every
+combinatorial claim on the resulting $40\times 40$ adjacency matrix.
+
+\paragraph{Vertex set.}
+Take the symplectic form on $\FF_3^4$
+\[
+\omega(x,y) \;=\; x_0 y_2 - x_2 y_0 + x_1 y_3 - x_3 y_1 \pmod 3.
+\]
+The points of $\PG(3,\FF_3)$ are $(\FF_3^4\setminus\{0\})/\FF_3^{\ast}$.
+There are
+\[
+\frac{|\FF_3^4|-1}{|\FF_3^{\ast}|} = \frac{81-1}{2} = 40 = v
+\]
+such points. This is $\boxed{\;v=(q+1)(q^2+1)=4\cdot 10=40\;}$ at $q=3$.
+
+\paragraph{Edges.}
+Two projective points $[x], [y]$ are collinear in the symplectic polar
+space iff $\omega(x,y)=0$ and $[x]\ne[y]$.
+
+\section*{The Seven Combinatorial Identities Confirmed by Direct Computation}
+
+The file \texttt{tests/test\_explicit\_w33\_construction.py} builds the
+40 projective points and the $40\times 40$ adjacency, then runs 12
+pytest assertions. All pass (reproducibly; $\sim$30 seconds on CPython).
+
+\begin{longtable}{rlc}
+\toprule
+\# & Quantity verified on the explicit graph & Value \\
+\midrule \endhead
+H1 & Vertex count $|V|$ & $40$ \\
+H2a & Every vertex has degree $k$ & $12$ \\
+H2b & Directed edge count $2|E|$ & $2\cdot 240$ \\
+H3a & Common neighbours of any edge ($\lambda$) & $2$ \\
+H3b & Common neighbours of any non-edge ($\mu$) & $4$ \\
+H3c & Edge count $|E|$ & $240$ \\
+H4 & Triangle count $T=vk\lambda/6$ & $160$ \\
+H5 & $A^2 \;=\; kI + \lambda A + \mu(J-I-A)$ & (pointwise) \\
+H6a & $\tr A = k+rf+sg$ & $0$ \\
+H6b & $\tr A^2 = k^2+r^2f+s^2g$ & $480$ \\
+H6c & $\tr A^2 = 2|E|$ & $2\cdot 240$ \\
+H7 & SRG axiom $k(k-\lambda-1)=(v-k-1)\mu$ & $108=108$ \\
+\bottomrule
+\end{longtable}
+
+\section*{Why this Matters}
+
+Supplements A--G are arithmetic. Supplement H is
+\emph{constructive}: we \emph{build} the graph and \emph{compute} every
+single claim on the actual matrix. This turns the theory from a
+catalogue of rational identities into a falsifiable
+40$\times$40 object. Anyone with Python 3 and 30 seconds can
+\texttt{pytest tests/test\_explicit\_w33\_construction.py -q} and
+confirm the structure.
+
+The entire graph is encoded in
+\[
+40 \cdot 40 \text{ bits} \;/\;8 \;=\; 200 \text{ bytes},
+\]
+of which the non-redundant upper triangle is $v(v-1)/2 \cdot \tfrac{1}{8}
+= 780/8 \approx 98$ bytes. With isomorphism classes removed
+(Spence gives 28) a $\log_2 28 \approx 5$-bit index plus the shared
+$(v,k,\lambda,\mu)=(40,12,2,4)$ header ($\le 20$ bits) selects the
+canonical $W_{3,3}$. Total description
+$\le 98 + 20 + 5 \approx 123$ bytes of raw incidence, or
+$\le 37$ bits of algebraic declaration. Either way, this graph is
+\emph{radically small}.
+
+\section*{The Canonical Adjacency Polynomial}
+
+From H5,
+\[
+A^2 \;=\; 12\,I \;+\; 2\,A \;+\; 4\,(J-I-A) \;=\; 8\,I \;-\; 2\,A \;+\; 4\,J.
+\]
+Equivalently $(A-2I)(A+4I) = 4(J-I)$, so the minimal polynomial of
+$A$ on the non-trivial eigenspaces is
+\[
+(x-2)(x+4) \;=\; x^2 + 2x - 8.
+\]
+The roots $2,-4$ are the SRG eigenvalues $r,s$. Their discriminant
+is $4+32=36=6^2$, a perfect square — the standard-form integrality
+condition for an SRG.
+
+\hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
+
 \end{document}
