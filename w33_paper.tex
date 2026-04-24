@@ -2099,4 +2099,116 @@ Assembled, the paper's structure is:
 
 \hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
 
+% ═══════════════════════════════════════════════════════════════
+%  SUPPLEMENT G — EXPLICIT IHARA ZETA & GRH FOR W(3,3)  (Phase zeta)
+% ═══════════════════════════════════════════════════════════════
+\clearpage
+\part*{Supplement G --- Explicit Ihara Zeta and the Graph Riemann Hypothesis for $W_{3,3}$}
+\addcontentsline{toc}{part}{Supplement G --- Ihara Zeta \& GRH for $W_{3,3}$}
+
+\section*{The Zeta Function Computed}
+
+For a $k$-regular graph $G$ with adjacency $A$, vertex count $v$, edge
+count $|E|=vk/2$, and cycle rank $r = |E|-v+1$, the Ihara zeta is
+\[
+\frac{1}{\zeta_G(u)} \;=\; (1-u^2)^{r-1}\,\det\!\bigl(I - Au + (k-1)u^2 I\bigr).
+\]
+For $W_{3,3}$ with $v=40$, $k=12$, $r=|E|-v+1=201$, the determinant
+factors over the three adjacency eigenvalues
+$\{k, r, s\}=\{12, 2, -4\}$ with multiplicities $\{1, 24, 15\}$:
+\[
+\det\!\bigl(I - Au + 11 u^2 I\bigr)
+\;=\; (1 - 12u + 11u^2)\,(1 - 2u + 11u^2)^{24}\,(1 + 4u + 11u^2)^{15}.
+\]
+
+\section*{The Six Elementary Zero-Pairs}
+
+Each factor $1 - \lambda u + 11 u^2$ has zeros
+\[
+u \;=\; \frac{\lambda \pm \sqrt{\lambda^2 - 44}}{22}.
+\]
+Computed explicitly:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{c|ccc|l}
+$\lambda$ & Discriminant $\lambda^2-44$ & $u_+$ & $u_-$ & Location \\
+\midrule
+$12$ & $+100$ & $1$ & $1/11$ & \textbf{Trivial} (real, $u=1$ and $u=1/11$) \\
+$2$  & $-40$  & $\dfrac{1+i\sqrt{10}}{11}$ & $\dfrac{1-i\sqrt{10}}{11}$ & On $|u|=1/\sqrt{11}$ \\
+$-4$ & $-28$  & $\dfrac{-2+i\sqrt{7}}{11}$ & $\dfrac{-2-i\sqrt{7}}{11}$ & On $|u|=1/\sqrt{11}$ \\
+\end{tabular}
+\end{center}
+
+\section*{The Magnitude Check}
+
+For the $\lambda=2$ pair:
+\[
+|u|^2 = \Big(\tfrac{1}{11}\Big)^2 + \Big(\tfrac{\sqrt{10}}{11}\Big)^2
+= \tfrac{1+10}{121} = \tfrac{11}{121} = \tfrac{1}{11}.
+\]
+For the $\lambda=-4$ pair:
+\[
+|u|^2 = \Big(\tfrac{-2}{11}\Big)^2 + \Big(\tfrac{\sqrt{7}}{11}\Big)^2
+= \tfrac{4+7}{121} = \tfrac{11}{121} = \tfrac{1}{11}.
+\]
+In every non-trivial case $|u| = 1/\sqrt{11} = 1/\sqrt{k-1}$. Exact.
+
+\begin{theorem}[Graph Riemann Hypothesis for $W_{3,3}$]
+\label{thm:GRH}
+Every non-trivial zero of the Ihara zeta function of $W_{3,3}$ lies on
+the critical circle
+\[
+|u| = \frac{1}{\sqrt{k-1}} = \frac{1}{\sqrt{11}}.
+\]
+\end{theorem}
+\begin{proof}
+Non-trivial zeros come from factors
+$1 - \lambda u + 11 u^2$ with $\lambda\in\{r,s\}=\{2,-4\}$. In both cases
+the discriminant $\lambda^2 - 44$ is negative, so the roots form a
+complex-conjugate pair whose product equals the constant term divided
+by the leading coefficient, namely $1/11$. Hence $|u_+|\cdot|u_-| = 1/11$,
+and since the roots are complex conjugates, $|u_+|=|u_-|=1/\sqrt{11}$.
+\end{proof}
+
+\section*{Non-Trivial Zero Count}
+
+There are $f + g = 24 + 15 = 39$ complex-conjugate \emph{pairs} of
+non-trivial zeros, i.e.\ \textbf{78 non-trivial zeros} in total, all
+on the critical circle. Two trivial zeros at $u=1$ and $u=1/(k-1)=1/11$.
+The $(1-u^2)^{r-1}$ factor contributes $2(r-1)=400$ zeros at
+$u=\pm 1$ from the cycle-rank prefactor (functorial, not spectral).
+
+\section*{What This Proves}
+
+This is the Graph Riemann Hypothesis \emph{for one specific graph}.
+It is not a proof of the classical Riemann Hypothesis, but it is the
+exact analogue of RH for the Ihara zeta of $W_{3,3}$ and it holds
+unconditionally. The construction uses only the SRG eigenvalue triple
+$\{12,2,-4\}$ and the discriminant condition
+\[
+\boxed{\;\lambda^2 < 4(k-1)\ \text{for}\ \lambda\in\{r,s\}\;}
+\quad\Longleftrightarrow\quad
+\text{graph is Ramanujan},
+\]
+which is satisfied by $W_{3,3}$ with a comfortable gap:
+$\max(|r|,|s|)=4 < 2\sqrt{11}\approx 6.633$.
+
+\section*{The Prime-Geodesic Expansion}
+
+The Ihara zeta admits an Euler product over prime cycles:
+\[
+\frac{1}{\zeta_G(u)} = \prod_{\text{prime } P} (1 - u^{\ell(P)}).
+\]
+For $W_{3,3}$ the first non-trivial prime-cycle length is $\ell=3$,
+matching the graph's girth, and the count of length-3 primes (directed
+triangles) is
+\[
+\pi_G(3) = \tfrac{v\,k\,\lambda}{6} = \tfrac{40\cdot 12\cdot 2}{6} = 160,
+\]
+independently computable from the SRG parameters. This is consistent
+with the explicit zero count above.
+
+\hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
+
 \end{document}
