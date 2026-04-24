@@ -3147,6 +3147,24 @@ completion problem rather than a metaphor: the golden/icosahedral law
 must choose one branch of these $S_3$ completion fibres compatibly over
 the global quadrangle holonomy network.
 
+But this carrier still refuses to choose for us.  The incidence count is
+\[
+4320\cdot 3 \;=\; 1620\cdot 8 \;=\; 12960,
+\]
+because each ordered nonlocal two-path has three quadrangle completions
+and each nonlocal quadrangle contains eight ordered two-paths.  A
+$\PSp(4,3)$-equivariant section of this completion bundle would have to
+choose a completion fixed by the stabilizer of a single seed path.  The
+seed stabilizer is the full $S_3$ on the three completions, with fixed
+point profile
+\[
+3^1,\quad 1^3,\quad 0^2
+\]
+for the identity, the three transpositions, and the two $3$-cycles.
+There is no completion fixed by all six stabilizer elements.  Thus the
+ordered-path $S_3$ carrier is not the selector; it is the first exact
+place where the selector is forced to break full symplectic symmetry.
+
 This is the cleanest finite analogue yet of the Cycle Clock /
 quasicrystal story.  Each isotropic line is a three-state clock; each
 $W_{3,3}$ point is a four-line synchronization hub; and the missing
@@ -3216,6 +3234,8 @@ $1620$ global quadrangle carrier, and verifies:
 \#\text{ordered path stabilizer} &=& 6,\\
 \#\text{quadrangle completions per path} &=& 3,\\
 \text{completion action} &=& S_3,\\
+\#\text{path-completion incidences} &=& 12960,\\
+\#\text{equivariant completion sections} &=& 0,\\
 12\notin\text{subset-sums of orbital degrees}. &&
 \end{array}
 \]

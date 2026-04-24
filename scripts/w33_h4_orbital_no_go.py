@@ -2234,6 +2234,131 @@ def compute_quadrangle_ordered_path_s3_carrier() -> dict[str, Any]:
     }
 
 
+def compute_ordered_path_completion_section_obstruction() -> dict[str, Any]:
+    """Show the S3 completion bundle has no PSp(4,3)-equivariant section.
+
+    For a transitive group action on base paths, an equivariant section of the
+    completion bundle exists only if the stabilizer of one base path fixes at
+    least one completion.  The previous computation shows that the seed path
+    stabilizer is the full S3 on its three completions; the common fixed set is
+    empty.  Thus even the first exact S3 carrier does not provide a canonical
+    branch choice.  The golden/icosahedral selector must break this S3 symmetry.
+    """
+    lines, line_adjacency = _line_intersection_graph()
+    cycle_summary = compute_cycle_holonomy_carrier()
+    seed_quadrangle = tuple(
+        next(record for record in cycle_summary["quadrangle_cycles"]["orbit_records"] if record["orbit_size"] == 1_620)["seed_cycle"]
+    )
+    seed_path = tuple(seed_quadrangle[:3])
+    line_group = _full_line_permutation_group()
+
+    ordered_nonlocal_paths: list[tuple[int, int, int]] = []
+    for middle in range(len(lines)):
+        for left in sorted(line_adjacency[middle]):
+            for right in sorted(line_adjacency[middle]):
+                if left == right:
+                    continue
+                if set(lines[left]) & set(lines[right]):
+                    continue
+                left_anchor = next(iter(set(lines[left]) & set(lines[middle])))
+                right_anchor = next(iter(set(lines[middle]) & set(lines[right])))
+                if left_anchor != right_anchor:
+                    ordered_nonlocal_paths.append((left, middle, right))
+    ordered_nonlocal_paths = sorted(set(ordered_nonlocal_paths))
+
+    path_to_completions: dict[tuple[int, int, int], set[tuple[int, int, int, int]]] = {
+        path: set() for path in ordered_nonlocal_paths
+    }
+    nonlocal_quadrangles: set[tuple[int, int, int, int]] = set()
+    for cycle in _simple_line_graph_cycles(4):
+        edge_anchors = [
+            next(iter(set(lines[cycle[index]]) & set(lines[cycle[(index + 1) % 4]])))
+            for index in range(4)
+        ]
+        if len(set(edge_anchors)) != 4:
+            continue
+        if set(lines[cycle[0]]) & set(lines[cycle[1]]) & set(lines[cycle[2]]) & set(lines[cycle[3]]):
+            continue
+        if any((set(lines[cycle[index]]) & set(lines[cycle[(index + 2) % 4]])) for index in range(2)):
+            continue
+        canonical_cycle = _canonical_cycle(cycle)
+        nonlocal_quadrangles.add(canonical_cycle)
+        for index in range(4):
+            path_to_completions[(canonical_cycle[index], canonical_cycle[(index + 1) % 4], canonical_cycle[(index + 2) % 4])].add(canonical_cycle)
+            path_to_completions[(canonical_cycle[index], canonical_cycle[(index - 1) % 4], canonical_cycle[(index - 2) % 4])].add(canonical_cycle)
+
+    seed_path_stabilizer = [line_perm for line_perm in line_group if tuple(line_perm[line_id] for line_id in seed_path) == seed_path]
+    seed_completions = sorted(path_to_completions[seed_path])
+    completion_index = {cycle: index for index, cycle in enumerate(seed_completions)}
+    seed_completion_action = sorted(
+        {
+            tuple(completion_index[_canonical_cycle(tuple(line_perm[line_id] for line_id in cycle))] for cycle in seed_completions)
+            for line_perm in seed_path_stabilizer
+        }
+    )
+    fixed_by_all = [
+        completion_id
+        for completion_id in range(len(seed_completions))
+        if all(action[completion_id] == completion_id for action in seed_completion_action)
+    ]
+    fixed_count_distribution = Counter(
+        sum(1 for index, image in enumerate(action) if image == index)
+        for action in seed_completion_action
+    )
+    completion_incidence_count = sum(len(completions) for completions in path_to_completions.values())
+    quadrangle_to_path_count = Counter()
+    for completions in path_to_completions.values():
+        for quadrangle in completions:
+            quadrangle_to_path_count[quadrangle] += 1
+
+    checks = {
+        "ordered_path_completion_bundle_has_4320_base_points": len(ordered_nonlocal_paths) == 4_320,
+        "completion_fibre_has_size_3": set(len(completions) for completions in path_to_completions.values()) == {3},
+        "nonlocal_quadrangle_count_is_1620": len(nonlocal_quadrangles) == 1_620,
+        "each_nonlocal_quadrangle_contains_eight_ordered_2_paths": set(quadrangle_to_path_count.values()) == {8},
+        "incidence_count_matches_both_sides": completion_incidence_count == 4_320 * 3 == 1_620 * 8,
+        "seed_stabilizer_completion_action_is_s3": (
+            len(seed_completion_action) == 6
+            and fixed_count_distribution == {0: 2, 1: 3, 3: 1}
+        ),
+        "no_completion_is_fixed_by_the_seed_path_stabilizer": fixed_by_all == [],
+    }
+
+    theorem = {
+        "the_ordered_path_completion_bundle_has_no_psp43_equivariant_section": (
+            checks["ordered_path_completion_bundle_has_4320_base_points"]
+            and checks["completion_fibre_has_size_3"]
+            and checks["incidence_count_matches_both_sides"]
+            and checks["seed_stabilizer_completion_action_is_s3"]
+            and checks["no_completion_is_fixed_by_the_seed_path_stabilizer"]
+        ),
+        "interpretation": (
+            "The first exact S3 completion carrier is a genuine obstruction, not a selector. "
+            "A PSp(4,3)-equivariant branch choice would require one of the three completions "
+            "to be fixed by the path stabilizer, but the stabilizer acts as full S3. The "
+            "golden/icosahedral step must therefore break this completion symmetry."
+        ),
+    }
+
+    return {
+        "completion_bundle": {
+            "ordered_path_count": len(ordered_nonlocal_paths),
+            "completion_fibre_size": len(seed_completions),
+            "nonlocal_quadrangle_count": len(nonlocal_quadrangles),
+            "quadrangle_ordered_path_count": sorted(set(quadrangle_to_path_count.values())),
+            "path_completion_incidence_count": completion_incidence_count,
+        },
+        "seed_stabilizer_action": {
+            "stabilizer_order": len(seed_path_stabilizer),
+            "completion_action_order": len(seed_completion_action),
+            "fixed_count_distribution": dict(sorted(fixed_count_distribution.items())),
+            "common_fixed_completions": fixed_by_all,
+        },
+        "checks": checks,
+        "theorem": theorem,
+    }
+
+
 def write_summary(path: Path = DEFAULT_OUTPUT) -> dict[str, Any]:
     summary = compute_pair_orbitals()
     summary["local_selector_reduction"] = compute_local_selector_reduction()
@@ -2249,6 +2374,7 @@ def write_summary(path: Path = DEFAULT_OUTPUT) -> dict[str, Any]:
     summary["quadrangle_adjacent_transport_heisenberg_packet"] = compute_quadrangle_adjacent_transport_heisenberg_packet()
     summary["quadrangle_adjacent_transport_section_obstruction"] = compute_quadrangle_adjacent_transport_section_obstruction()
     summary["quadrangle_ordered_path_s3_carrier"] = compute_quadrangle_ordered_path_s3_carrier()
+    summary["ordered_path_completion_section_obstruction"] = compute_ordered_path_completion_section_obstruction()
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(summary, indent=2), encoding="utf-8")
     return summary

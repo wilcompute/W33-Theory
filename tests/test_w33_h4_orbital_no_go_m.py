@@ -7,6 +7,7 @@ from scripts.w33_h4_orbital_no_go import (
     compute_quadrangle_adjacent_transport_section_obstruction,
     compute_quadrangle_cover_group_structure,
     compute_quadrangle_ordered_path_s3_carrier,
+    compute_ordered_path_completion_section_obstruction,
     compute_local_selector_reduction,
     compute_pair_orbitals,
     compute_point_residue_transport_reduction,
@@ -628,6 +629,40 @@ class TestM16QuadrangleOrderedPathS3Carrier:
             "ordered_nonlocal_2_paths_are_the_first_exact_s3_completion_carrier"
         ]
         assert "first exact S3 object" in theorem["interpretation"]
+
+    def test_all_checks_pass(self):
+        assert all(self.summary["checks"].values())
+
+
+class TestM17OrderedPathCompletionSectionObstruction:
+    @classmethod
+    def setup_class(cls):
+        cls.summary = compute_ordered_path_completion_section_obstruction()
+
+    def test_completion_bundle_counts(self):
+        assert self.summary["completion_bundle"] == {
+            "ordered_path_count": 4320,
+            "completion_fibre_size": 3,
+            "nonlocal_quadrangle_count": 1620,
+            "quadrangle_ordered_path_count": [8],
+            "path_completion_incidence_count": 12960,
+        }
+
+    def test_seed_stabilizer_has_no_common_fixed_completion(self):
+        action = self.summary["seed_stabilizer_action"]
+        assert action == {
+            "stabilizer_order": 6,
+            "completion_action_order": 6,
+            "fixed_count_distribution": {0: 2, 1: 3, 3: 1},
+            "common_fixed_completions": [],
+        }
+
+    def test_no_equivariant_completion_section_theorem_holds(self):
+        theorem = self.summary["theorem"]
+        assert theorem[
+            "the_ordered_path_completion_bundle_has_no_psp43_equivariant_section"
+        ]
+        assert "golden/icosahedral step" in theorem["interpretation"]
 
     def test_all_checks_pass(self):
         assert all(self.summary["checks"].values())
