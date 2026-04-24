@@ -48,6 +48,7 @@ from w33_eh_continuum_lock_bridge import build_eh_continuum_lock_summary  # noqa
 from w33_exceptional_channel_continuum_bridge import (  # noqa: E402
     build_exceptional_channel_continuum_bridge_summary,
 )
+from scripts.w33_spectral_core import get_w33_spectral_core  # noqa: E402
 
 Q = 3
 
@@ -166,9 +167,55 @@ def toroidal_continuum_seed_summary() -> Dict[str, object]:
 
 
 @lru_cache(maxsize=1)
+def spectral_continuum_bridge_summary() -> Dict[str, object]:
+    core = get_w33_spectral_core()
+    seed = toroidal_seed_packet_summary()
+    continuum = toroidal_continuum_seed_summary()
+
+    nontrivial_multiplicity_sum = (
+        core.adjacency_positive_multiplicity + core.adjacency_negative_multiplicity
+    )
+    spectral_negative_weight = abs(core.adjacency_negative_eigenvalue)
+    total_mode_count = core.bipartite_lift_mode_count
+
+    return {
+        "nontrivial_multiplicity_packet": (
+            core.adjacency_positive_multiplicity,
+            core.adjacency_negative_multiplicity,
+        ),
+        "nontrivial_multiplicity_sum": nontrivial_multiplicity_sum,
+        "spectral_negative_weight": spectral_negative_weight,
+        "total_mode_count": total_mode_count,
+        "phi6": int(seed["phi6"]),
+        "rank39": int(continuum["rank39"]),
+        "continuum_eh_coefficient": int(continuum["continuum_eh_coefficient"]),
+        "topological_coefficient": int(continuum["topological_coefficient"]),
+        "discrete_eh_coefficient": int(continuum["discrete_eh_coefficient"]),
+        "exact_factorizations": {
+            "rank39_equals_nontrivial_multiplicity_sum": (
+                int(continuum["rank39"]) == nontrivial_multiplicity_sum
+            ),
+            "continuum_equals_abs_negative_eigenvalue_times_total_mode_count": (
+                int(continuum["continuum_eh_coefficient"])
+                == spectral_negative_weight * total_mode_count
+            ),
+            "topological_equals_phi6_times_abs_negative_eigenvalue_times_total_mode_count": (
+                int(continuum["topological_coefficient"])
+                == int(seed["phi6"]) * spectral_negative_weight * total_mode_count
+            ),
+            "discrete_equals_nontrivial_multiplicity_sum_times_abs_negative_eigenvalue_times_total_mode_count": (
+                int(continuum["discrete_eh_coefficient"])
+                == nontrivial_multiplicity_sum * spectral_negative_weight * total_mode_count
+            ),
+        },
+    }
+
+
+@lru_cache(maxsize=1)
 def classify_toroidal_continuum_seed() -> Tuple[Dict[str, object], ...]:
     seed = toroidal_seed_packet_summary()
     continuum = toroidal_continuum_seed_summary()
+    spectral_bridge = spectral_continuum_bridge_summary()
 
     return (
         {
@@ -242,6 +289,24 @@ def classify_toroidal_continuum_seed() -> Tuple[Dict[str, object], ...]:
                 "discrete_eh_coefficient": continuum["discrete_eh_coefficient"],
             },
         },
+        {
+            "name": "spectral_toroidal_continuum_splice",
+            "support_level": "repo-exact spectral/continuum splice",
+            "statement": (
+                "The corrected spectral core now splices directly into the toroidal continuum "
+                "packet: 39 = 24 + 15, 320 = 4 * 80, 2240 = 7 * 4 * 80, and "
+                "12480 = 39 * 4 * 80."
+            ),
+            "evidence": {
+                "nontrivial_multiplicity_packet": spectral_bridge["nontrivial_multiplicity_packet"],
+                "spectral_negative_weight": spectral_bridge["spectral_negative_weight"],
+                "total_mode_count": spectral_bridge["total_mode_count"],
+                "rank39": spectral_bridge["rank39"],
+                "continuum_eh_coefficient": spectral_bridge["continuum_eh_coefficient"],
+                "topological_coefficient": spectral_bridge["topological_coefficient"],
+                "discrete_eh_coefficient": spectral_bridge["discrete_eh_coefficient"],
+            },
+        },
     )
 
 
@@ -249,12 +314,14 @@ def classify_toroidal_continuum_seed() -> Tuple[Dict[str, object], ...]:
 def analyze() -> Dict[str, object]:
     seed = toroidal_seed_packet_summary()
     continuum = toroidal_continuum_seed_summary()
+    spectral_bridge = spectral_continuum_bridge_summary()
     records = classify_toroidal_continuum_seed()
 
     return {
         "status": "ok",
         "toroidal_seed_packet": seed,
         "toroidal_continuum_seed": continuum,
+        "spectral_continuum_bridge": spectral_bridge,
         "records": records,
         "record_names": tuple(record["name"] for record in records),
         "toroidal_continuum_theorem": {
@@ -286,9 +353,21 @@ def analyze() -> Dict[str, object]:
             "toroidal_seed_fixes_exact_topological_coefficient_2240": continuum[
                 "exact_factorizations"
             ]["topological_equals_vertices_times_topological_packet"],
+            "spectral_core_fixes_exact_rank39_bridge_factor": spectral_bridge["exact_factorizations"][
+                "rank39_equals_nontrivial_multiplicity_sum"
+            ],
+            "spectral_core_fixes_exact_continuum_eh_coefficient_320": spectral_bridge[
+                "exact_factorizations"
+            ]["continuum_equals_abs_negative_eigenvalue_times_total_mode_count"],
+            "spectral_core_fixes_exact_topological_coefficient_2240": spectral_bridge[
+                "exact_factorizations"
+            ]["topological_equals_phi6_times_abs_negative_eigenvalue_times_total_mode_count"],
             "rank39_dresses_toroidal_continuum_base_to_discrete_6_mode_12480": continuum[
                 "exact_factorizations"
             ]["discrete_eh_equals_rank39_times_vertices_times_cartan_packet"],
+            "spectral_core_fixes_exact_discrete_6_mode_12480": spectral_bridge[
+                "exact_factorizations"
+            ]["discrete_equals_nontrivial_multiplicity_sum_times_abs_negative_eigenvalue_times_total_mode_count"],
             "remaining_continuum_wall_is_smooth_realization_not_discrete_normalization": True,
         },
         "bridge_verdict": (
@@ -296,9 +375,11 @@ def analyze() -> Dict[str, object]:
             "current continuum coefficient packet. The toroidal K7 shell gives one selector line, "
             "six shared modes, Phi_6 = 7, Phi_3 = 13, the trace packet 42, and the surface flag "
             "packet 84. From that same shell the live continuum coefficients already follow as "
-            "8 = 1 + 7, 56 = 7 * 8, 320 = 40 * 8, 2240 = 40 * 56, and 12480 = 39 * 40 * 8. So the "
-            "remaining continuum problem is no longer finite normalization; it is the smooth 4D "
-            "realization theorem for a coefficient package whose exact toroidal seed is already visible."
+            "8 = 1 + 7, 56 = 7 * 8, 320 = 40 * 8, 2240 = 40 * 56, and 12480 = 39 * 40 * 8. The "
+            "corrected spectral core now splices into the same packet as 39 = 24 + 15, 320 = 4 * 80, "
+            "and 12480 = 39 * 4 * 80. So the remaining continuum problem is no longer finite "
+            "normalization; it is the smooth 4D realization theorem for a coefficient package whose "
+            "exact toroidal seed is already visible."
         ),
     }
 

@@ -26,9 +26,13 @@ except Exception:
 from exploration.w33_electron_seed_packet_bridge import (  # noqa: E402
     build_electron_seed_packet_summary,
 )
+from exploration.w33_curved_rosetta_reconstruction_bridge import (  # noqa: E402
+    build_curved_rosetta_reconstruction_summary,
+)
 from exploration.w33_one_input_fermion_spectrum_bridge import (  # noqa: E402
     build_one_input_fermion_spectrum_summary,
 )
+from scripts.w33_toroidal_continuum_seed_audit import toroidal_seed_packet_summary  # noqa: E402
 
 
 @lru_cache(maxsize=1)
@@ -42,12 +46,28 @@ def one_input_fermion_summary() -> Dict[str, object]:
 
 
 @lru_cache(maxsize=1)
+def curved_rosetta_summary() -> Dict[str, object]:
+    return build_curved_rosetta_reconstruction_summary()
+
+
+@lru_cache(maxsize=1)
 def classify_electron_seed_boundary() -> Tuple[Dict[str, object], ...]:
     one_input = one_input_fermion_summary()
     packet = electron_seed_packet_summary()
+    toroidal = toroidal_seed_packet_summary()
+    rosetta = curved_rosetta_summary()
     exact_packet = packet["exact_packet_dictionary"]
     ratios = packet["candidate_ratio_dictionary"]
     mass_shadow = packet["graph_fixed_candidate_mass_shadow"]
+    phi6 = int(toroidal["phi6"])
+    g2_dimension = 2 * phi6
+    cartan_packet = int(toroidal["cartan_packet"])
+    barrier_shell = int(exact_packet["barrier_shell_lambda_phi6_squared"]["exact"])
+    discrete_6_mode_over_a0 = int(
+        rosetta["promoted_observables_from_reconstructed_graph_data"]["discrete_6_mode_over_a0"]["exact"][
+            "exact"
+        ]
+    )
 
     return (
         {
@@ -82,6 +102,37 @@ def classify_electron_seed_boundary() -> Tuple[Dict[str, object], ...]:
             },
         },
         {
+            "name": "same_gaussian_norm_splices_into_charm_suppressor_packet",
+            "support_level": "repo-exact splice",
+            "statement": (
+                "The middle factor 17 is the exact Gaussian norm mu^2+1, and the same q=3 "
+                "Cartan packet 8 dresses it into the first up-sector suppressor 136 = 8*17."
+            ),
+            "evidence": {
+                "shifted_gaussian_norm_mu_squared_plus_one": exact_packet[
+                    "shifted_gaussian_norm_mu_squared_plus_one"
+                ],
+                "cartan_packet": cartan_packet,
+                "up_sector_suppressor": ratios["up_sector_suppressor"],
+                "cartan_times_shifted_gaussian_norm": cartan_packet
+                * int(exact_packet["shifted_gaussian_norm_mu_squared_plus_one"]["exact"]),
+            },
+        },
+        {
+            "name": "same_barrier_shell_splices_into_toroidal_g2_packet",
+            "support_level": "repo-exact splice",
+            "statement": (
+                "The barrier shell 98 is also Phi6*dim(G2) = 7*14, so the front factor of the "
+                "electron packet already lands on the pure toroidal G2 packet."
+            ),
+            "evidence": {
+                "barrier_shell_lambda_phi6_squared": exact_packet["barrier_shell_lambda_phi6_squared"],
+                "phi6": phi6,
+                "g2_dimension": g2_dimension,
+                "phi6_times_g2_dimension": phi6 * g2_dimension,
+            },
+        },
+        {
             "name": "same_seed_touches_exceptional_f4_scale",
             "support_level": "repo-exact splice",
             "statement": (
@@ -92,6 +143,21 @@ def classify_electron_seed_boundary() -> Tuple[Dict[str, object], ...]:
                 "charged_lepton_shell_mu_squared_phi3": exact_packet["charged_lepton_shell_mu_squared_phi3"],
                 "f4_dimension": exact_packet["f4_dimension"],
                 "mu_shell_over_f4_dimension": ratios["mu_shell_over_f4_dimension"],
+            },
+        },
+        {
+            "name": "same_seed_splices_into_q3_continuum_normalization",
+            "support_level": "repo-exact splice",
+            "statement": (
+                "The charged-lepton shell 208 is also the q=3 continuum normalization packet "
+                "Cartan*(c6/a0) = 8*26, so the residual electron seed already touches the "
+                "same discrete six-mode normalization behind the 320/12480 bridge."
+            ),
+            "evidence": {
+                "charged_lepton_shell_mu_squared_phi3": exact_packet["charged_lepton_shell_mu_squared_phi3"],
+                "cartan_packet": cartan_packet,
+                "discrete_6_mode_over_a0": discrete_6_mode_over_a0,
+                "cartan_times_discrete_6_mode_over_a0": cartan_packet * discrete_6_mode_over_a0,
             },
         },
         {
@@ -115,6 +181,7 @@ def classify_electron_seed_boundary() -> Tuple[Dict[str, object], ...]:
 def analyze() -> Dict[str, object]:
     records = classify_electron_seed_boundary()
     packet = electron_seed_packet_summary()
+    barrier_shell = int(packet["exact_packet_dictionary"]["barrier_shell_lambda_phi6_squared"]["exact"])
 
     return {
         "status": "ok",
@@ -127,10 +194,22 @@ def analyze() -> Dict[str, object]:
                 "evidence"
             ]["factor_packet"]
             == [98, 17, 208],
-            "the_same_packet_splices_into_the_exact_f4_scale": records[2]["evidence"][
+            "the_middle_factor_splices_into_the_charm_suppressor_packet": records[2]["evidence"][
+                "cartan_times_shifted_gaussian_norm"
+            ]
+            == int(records[2]["evidence"]["up_sector_suppressor"]["exact"]),
+            "the_barrier_shell_splices_into_the_toroidal_g2_packet": records[3]["evidence"][
+                "phi6_times_g2_dimension"
+            ]
+            == barrier_shell,
+            "the_same_packet_splices_into_the_exact_f4_scale": records[4]["evidence"][
                 "mu_shell_over_f4_dimension"
             ]["exact"]
             == "4",
+            "the_same_packet_splices_into_the_q3_continuum_normalization": records[5]["evidence"][
+                "cartan_times_discrete_6_mode_over_a0"
+            ]
+            == 208,
             "the_remaining_wall_is_physical_identification_not_missing_factor_arithmetic": packet[
                 "electron_seed_packet_theorem"
             ]["physical_electron_identification_remains_open"],
@@ -138,7 +217,10 @@ def analyze() -> Dict[str, object]:
         "boundary_note": (
             "The honest electron-side frontier is now narrower than the old open-gap language. "
             "The exact arithmetic packet is already visible: 346528 = 98 x 17 x 208, with "
-            "208 = mu*dim(F4). What remains open is whether this exact packet is the final "
+            "17 = mu^2+1 with charm suppressor 136 = 8*17, 98 = Phi6*dim(G2) = 7*14, and "
+            "208 = mu*dim(F4) = 8*26, where 8 is the Cartan packet and 26 is the exact discrete "
+            "six-mode normalization. What remains open is whether this "
+            "exact packet is the final "
             "physical electron denominator or a nearby normalization shadow."
         ),
         "records": records,

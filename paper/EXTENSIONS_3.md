@@ -223,20 +223,24 @@ subgroup of E8 — another face of the SU-ladder phenomenon.
 
 ## §34: Frontier Assessment and Remaining Wall
 
-Based on the q=3 master lock audit (commit 4e3b681):
+Based on the q=3 master lock audit (now also absorbing the residual electron packet splice):
 
 **CLOSED (exact, q=3 overdetermined)**:
 - Local qutrit kernel: {1, 3, 9, 27, 40, 240} packet ✓
 - Spectral/Ihara uniqueness (§17–§22, §25) ✓
 - Continuum seed: {8, 56, 320, 2240, 12480} ✓
+- Residual electron arithmetic packet: {98, 17, 208} with 17 = μ²+1 and charm suppressor 136 = Cartan·17 = 8·17, 98 = Φ₆·dim(G2) = 7·14, and 208 = μ·dim(F4) = Cartan·(c₆/a₀) = 8·26 ✓
+- Transport algebra reduction: the 45-point quotient triangle parity is exactly the sign of a local S3 holonomy, the ternary transport extension is a non-split twisted cocycle over F3, and the current mixed-plane host fails for one reason only: it still lacks a non-identity unipotent sign-trivial holonomy witness ✓
 - Exceptional algebra dictionary (§32, new) ✓
 - SU-ladder and E8 branching (§29–§31, new) ✓
 
 **OPEN (smooth realization theorem)**:
 The remaining problem is NOT "why q=3?" (that is solved and overdetermined).
-The remaining wall is:
-> *How does the already-selected finite package acquire its smooth continuum
-> and dynamical realization?*
+The remaining wall is now algebraically sharper:
+> *How does the already-selected finite package produce the first genuine
+> non-identity unipotent sign-trivial transport witness on the canonical
+> mixed-plane host, thereby acquiring its smooth continuum and dynamical
+> realization?*
 
 **Candidate paths to the smooth realization theorem**:
 
@@ -254,8 +258,16 @@ The remaining wall is:
 - Einstein-Hilbert coefficient 320 = v·(q²−1)
 - Cosmological constant seed 56 = Φ₆·(q²−1)
 - RG running controlled by 12480 = rank39·v·(q²−1)
+- Same packet in corrected spectral form: 39 = 24 + 15, 320 = 4·80, 2240 = 7·4·80, 12480 = 39·4·80
+- The residual charged-lepton shell already lands on that backbone: 208 = 8·26 with 8 = Cartan and 26 = c₆/a₀
 
-**PATH D** — Three-generation structure:
+**PATH D** — Local coefficients / transported holonomy:
+- The archival local-coefficient language is now backed by a live q=3 owner: triangle parity on the 45-point quotient is exactly the sign character of a genuine local S3 holonomy.
+- In adapted basis the reduced transport extension is the non-split cocycle `[[1,c(g)],[0,s(g)]]`, with fiber shift `N = [[0,1],[0,0]]` square-zero and already forced by a nonzero sign-trivial cocycle value.
+- Up to gauge there is one nontrivial sign-trivial unipotent class, represented by `[[1,1],[0,1]]`.
+- Therefore the smooth-realization wall has been reduced from a vague continuum problem to one explicit transport witness problem on the canonical mixed-plane host.
+
+**PATH E** — Three-generation structure:
 - SU-ladder: SU(3)⊂SU(4)⊂SU(5) at q=3 → three gauge generations
 - f=24=dim(SU(5)), g=15=dim(SU(4)), Cartan=8=dim(SU(3))
 - Three generations ↔ three levels of the SU ladder

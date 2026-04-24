@@ -4,8 +4,10 @@ from scripts.w33_q3_master_lock_audit import (
     analyze,
     classify_q3_master_lock,
     q3_continuum_seed_summary,
+    q3_fermion_seed_summary,
     q3_local_kernel_summary,
     q3_spectral_uniqueness_summary,
+    q3_transport_algebra_summary,
     symbolic_q3_lock_summary,
 )
 
@@ -80,6 +82,41 @@ def test_q3_continuum_seed_summary_matches_exact_coefficient_seed() -> None:
     assert summary["topological_coefficient"] == 2240
     assert summary["discrete_eh_coefficient"] == 12480
     assert summary["rank39"] == 39
+    assert summary["spectral_negative_weight"] == 4
+    assert summary["total_mode_count"] == 80
+    assert all(summary["exact_factorizations"].values())
+
+
+def test_q3_fermion_seed_summary_matches_exact_backbone_splice() -> None:
+    summary = q3_fermion_seed_summary()
+
+    assert summary["q"] == 3
+    assert summary["mu"] == 4
+    assert summary["phi6"] == 7
+    assert summary["cartan_packet"] == 8
+    assert summary["shifted_gaussian_norm"] == 17
+    assert summary["up_sector_suppressor"] == 136
+    assert summary["barrier_shell"] == 98
+    assert summary["g2_dimension"] == 14
+    assert summary["charged_lepton_shell"] == 208
+    assert summary["f4_dimension"] == 52
+    assert summary["discrete_6_mode_over_a0"] == 26
+    assert all(summary["exact_factorizations"].values())
+
+
+def test_q3_transport_algebra_summary_reduces_the_live_wall_to_one_witness() -> None:
+    summary = q3_transport_algebra_summary()
+
+    assert summary["triangle_count"] == 5280
+    assert summary["parity0_triangles"] == 3120
+    assert summary["parity1_triangles"] == 2160
+    assert summary["identity_triangle_holonomies"] == 240
+    assert summary["three_cycle_triangle_holonomies"] == 2880
+    assert summary["transposition_triangle_holonomies"] == 2160
+    assert summary["fiber_shift_matrix"] == [[0, 1], [0, 0]]
+    assert summary["canonical_nontrivial_holonomy"] == [[1, 1], [0, 1]]
+    assert summary["gauge_related_nontrivial_holonomy"] == [[1, 2], [0, 1]]
+    assert summary["current_sign_trivial_holonomies"] == [[[1, 0], [0, 1]]]
     assert all(summary["exact_factorizations"].values())
 
 
@@ -91,6 +128,8 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
     assert records["q3_local_qutrit_kernel_lock"]["support_level"] == "repo-exact finite kernel"
     assert records["q3_spectral_ihara_uniqueness_lock"]["support_level"] == "repo-exact spectral uniqueness"
     assert records["q3_toroidal_continuum_seed_lock"]["support_level"] == "repo-exact continuum seed"
+    assert records["q3_electron_seed_backbone_lock"]["support_level"] == "repo-exact fermion seed"
+    assert records["q3_transport_holonomy_reduction_lock"]["support_level"] == "repo-exact transport algebra reduction"
     assert records["q3_full_physical_realization_theorem"]["support_level"] == "not-yet-exact smooth realization theorem"
 
     assert summary["status"] == "ok"
@@ -98,11 +137,17 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
         "q3_local_qutrit_kernel_lock",
         "q3_spectral_ihara_uniqueness_lock",
         "q3_toroidal_continuum_seed_lock",
+        "q3_electron_seed_backbone_lock",
+        "q3_transport_holonomy_reduction_lock",
     )
     assert summary["record_names_open"] == ("q3_full_physical_realization_theorem",)
     assert theorem["the_local_kernel_exactly_realizes_the_q3_packet_1_3_9_27_40_240"] is True
     assert theorem["the_corrected_spectral_core_exactly_realizes_the_q3_lock"] is True
     assert theorem["the_continuum_seed_exactly_realizes_the_q3_packet_8_56_320_2240_12480"] is True
+    assert theorem["the_electron_seed_packet_exactly_splices_into_the_same_q3_backbone"] is True
     assert theorem["the_q3_lock_is_now_overdetermined_across_local_spectral_and_continuum_seed_layers"] is True
+    assert theorem["the_q3_lock_is_now_overdetermined_across_local_spectral_continuum_and_electron_seed_layers"] is True
+    assert theorem["the_transport_algebra_exactly_reduces_the_smooth_realization_wall_to_one_unipotent_sign_trivial_witness"] is True
+    assert theorem["the_remaining_wall_refines_to_the_first_sign_trivial_unipotent_transport_witness"] is True
     assert theorem["the_remaining_wall_is_not_finite_q_selection_but_smooth_realization"] is True
-    assert "smooth continuum and dynamical realization" in summary["boundary_note"]
+    assert "non-identity unipotent sign-trivial transport witness" in summary["boundary_note"]

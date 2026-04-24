@@ -1664,6 +1664,37 @@ It verifies the exact finite statements behind the table:
 12\notin\langle 2,27,36,54\rangle_{\{0,1\}}.
 \;}
 \]
+Supplements~L and~M sharpen that bridge one step further.  The $120$
+matching states are not an unstructured cloud; they form a $3$-state
+bundle over the $40$ isotropic lines.  Those $40$ lines themselves form
+the self-dual line graph of $W_{3,3}$, again with parameters
+$\SRG(40,12,2,4)$.  Hence a local $12$-neighbor $H_4$ selector would
+have to choose, for each of the $12$ adjacent lines, exactly one of the
+three states above it.  Equivalently, the missing finite datum is an
+$S_3$ transport law on a self-dual $40$-vertex possibility graph.  In
+Cycle Clock Theory language: the quasicrystal projection is not merely a
+count collapse $240\to 120$, but a synchronization rule for three-state
+line clocks.
+
+Supplement~M sharpens this once more.  Every adjacent pair of isotropic
+lines meets in a unique $W_{3,3}$ point, and each point lies on exactly
+four isotropic lines.  So the transport does not live on an abstract
+edge cloud: it is anchored on $40$ local tetrahedral residues.  At a
+fixed point, the four incident lines form a $K_4$ of possible outgoing
+line choices, while the three matching states on any incident line are
+exactly the three ways to pair that point with one of the other three
+points on the line.  The missing selector is therefore a point-anchored
+ternary connection, not just a bare permutation assignment.  More
+sharply, Supplement~M now shows that the $3\times 3$ block over any
+adjacent line pair is completely uniform under first-order $W_{3,3}$
+data: every one of its nine entries has the same local signature.  So
+the selector cannot be read off from bare local incidence; it is genuine
+holonomy data.  In fact the symmetry obstruction is even stronger: once
+one fixes a point and an ordered transport edge between two of its
+incident lines, the local $3\times 3$ state block is still a single
+orbit under the residual symmetry.  So the missing datum is not merely
+non-point-local; it is non-edge-local as well.
+
 The last clause is the crucial CCT/QGR lesson from Supplement~M: a
 full $\PSp(4,3)$-symmetric $120$-state object exists, but the actual
 $600$-cell adjacency cannot be produced without choosing additional
@@ -2010,7 +2041,9 @@ the 15-dim spectral block of $W_{3,3}$), each a closed-form rational
 number in $(v,k,\lambda,\mu)=(40,12,2,4)$. Any experimental value
 outside the stated precision window falsifies the corresponding cluster.
 
-\begin{longtable}{llccc}
+{\small
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.05\linewidth}>{\raggedright\arraybackslash}p{0.23\linewidth}>{\raggedright\arraybackslash}p{0.21\linewidth}>{\raggedright\arraybackslash}p{0.31\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}@{}}
 \toprule
 \# & Observable & W$_{3,3}$ prediction & Current value & Falsifier \\
 \midrule \endhead
@@ -2038,6 +2071,7 @@ D1 & $\Omega_{DM}/\Omega_b$ & $\lambda^\mu/q=16/3=5.33$ & $5.36$ & (met) \\
 D2 & $f_a$ (GeV) & $v\cdot v_{EW}=9840$ & $10^8$--$10^{12}$ & ADMX tension \\
 \bottomrule
 \end{longtable}
+}
 
 \section*{Reading the Table}
 \begin{itemize}[leftmargin=2em]
@@ -2967,6 +3001,158 @@ quasicrystal picture: it selects an $H_4$-symmetric $4$-plane inside an
 $E_8$-symmetric $8$-dimensional lattice.  Supplement~M proves that the
 same symmetry-breaking step is unavoidable on the finite $W_{3,3}$ side.
 
+\section*{The Missing Datum is a Three-State Transport Law}
+
+The obstruction theorem can be sharpened.  The $40$ isotropic lines of
+$W_{3,3}$ are themselves a self-dual copy of the same point graph: the
+line-intersection graph has
+\[
+|V|=40,\qquad k=12,\qquad \lambda=2,\qquad \mu=4,\qquad |E|=240.
+\]
+Above each line sit exactly three matching states.  Therefore the
+intersecting-line orbital of degree $36$ is not amorphous; it splits as
+\[
+36 \;=\; 12\times 3,
+\]
+meaning: for a fixed matching state, there are $12$ adjacent base lines,
+and above each adjacent line there are $3$ possible matching states.
+
+So if one insists on a local $12$-regular $H_4$ selector supported on
+the intersecting-line orbital, the rule cannot be arbitrary.  It must
+pick exactly \emph{one} matching state above each adjacent line.  On any
+adjacent pair of lines this produces a $3\times 3$ bipartite block in
+which every state has degree one, hence a perfect matching, hence a
+permutation in $S_3$.  The finite $H_4$ problem is thus equivalent to:
+\[
+\boxed{\;
+\begin{aligned}
+&\text{find the }S_3\text{-valued transport law on the self-dual 40-line graph}\\
+&\text{whose lift on }120\text{ states reproduces the }600\text{-cell local combinatorics.}
+\end{aligned}
+\;}
+\]
+This can be sharpened once more without changing the finite data.  If
+two lines are adjacent, they meet in a unique point $p$ of $W_{3,3}$.
+Through $p$ pass exactly four isotropic lines, so the local residue at
+$p$ is a tetrahedral $K_4$ of line choices.  On any incident line, the
+three matching states are exactly the three choices of which other point
+on that line is paired with $p$.  Therefore
+\[
+40\cdot \binom{4}{2}=240,
+\qquad
+40\cdot 4\cdot 3=480,
+\qquad
+40\cdot \binom{4}{3}=160,
+\]
+which are respectively the counts of undirected transport edges,
+directed transport edges, and minimal residue triangles.  So the missing
+golden selector is more precisely a point-anchored $S_3$ connection on
+$40$ tetrahedral residues, and the first holonomy obstructions live on
+their $160$ local triangles.  Even more rigidly, every one of the nine
+cells in the local $3\times 3$ block has the same first-order signature:
+each pair has $4$ common neighbors, none on the other two residue lines,
+and $3$ common neighbors outside the residue.  Thus no immediate local
+invariant singles out a preferred bijection; the missing selector is
+genuinely second-order transport data.  More sharply still, the full
+$\PSp(4,3)$ action is transitive on the $480$ ordered anchored transport
+slots $(p,L_1,L_2)$, so a fixed slot has stabilizer size
+$25920/480=54$.  That stabilizer acts transitively on the full
+$3\times 3$ choice block above $(L_1,L_2)$.  Hence even after fixing the
+anchor point and transport direction, all nine local candidates remain
+symmetry equivalent.
+
+The first genuine split appears one layer later, on cycles of the
+self-dual 40-line graph.  The $160$ triangles still form a single
+$\PSp(4,3)$ orbit, so they carry no new canonical distinction.  But the
+$1740$ simple $4$-cycles split into exactly two orbits:
+\[
+1740 \,=\, 120 + 1620.
+\]
+The $120$-orbit is purely local: these are the Hamiltonian $4$-cycles in
+the tetrahedral $K_4$ residue at a point, so all four cycle edges are
+anchored at the same point.  The $1620$-orbit is the first global
+quadrangle carrier: its four transport edges have four distinct anchor
+points, and opposite lines are disjoint.  So the first possible finite
+holonomy law is not on triangles, nor on anchored local choices, but on
+these nonlocal quadrangles.  Better still, this carrier is canonically
+self-dual.  Sending each edge of a nonlocal line quadrangle to its
+anchor point produces a unique nonlocal point quadrangle, and every
+nonlocal point quadrangle reconstructs the unique nonlocal line
+quadrangle obtained by joining adjacent points with their unique
+isotropic lines.  Thus the first global holonomy carrier is a
+self-dual $1620$-element quadrangle correspondence between the point and
+line sides of $W_{3,3}$.  Moreover this carrier already has an exact
+internal symmetry type.  Orbit-stabilizer gives a stabilizer of size
+$25920/1620=16$ for a nonlocal quadrangle.  Its visible action on the
+four line positions is the full dihedral square group $D_4$ of order
+$8$, and the same visible $D_4$ acts on the four anchor points.  The
+remaining factor is a $2$-element kernel invisible on both squares.  So
+the first global holonomy carrier is not an amorphous orbit; it is a
+self-dual square with visible dihedral symmetry and a hidden twofold
+lift.  Better still, that hidden kernel acts in a completely rigid way
+on the four ternary line fibres of the quadrangle.  On each line, the
+two anchor points and the two non-anchor points determine a unique
+matching state that pairs anchor-to-anchor and non-anchor-to-non-anchor;
+the hidden involution fixes exactly that state and swaps the other two
+mixed anchor/non-anchor matchings.  So the hidden ambiguity is fibrewise
+not a vague sign, but an exact $1{+}2$ splitting on each of the four
+line clocks.  Equivalently, the eight mixed states form a genuine
+two-sheeted cover of the visible square formed by the four quadrangle
+lines.  The visible $D_4$ symmetry acts on the four 2-state blocks, one
+block per line, and every visible square symmetry has exactly two lifts
+to the mixed orbit.  The hidden kernel is precisely the global deck
+involution that flips the two sheets simultaneously on all four blocks.
+Most importantly, this deck involution does not split off.  There is
+no $D_4$-equivariant global choice of sheet on the mixed cover: the
+first global carrier already contains an irreducible twofold ambiguity.
+More rigidly still, the full mixed-cover symmetry is an exact
+$16$-element group with center $V_4$.  Besides the deck involution there
+is a distinguished central lift of the visible square half-turn, namely
+the unique nontrivial central square.  A lift of a visible reflection
+squares to the deck involution, a lift of a visible quarter-turn squares
+to that distinguished half-turn, and conjugation twists by the deck.
+So the obstruction is not merely a missing section; the self-dual
+quadrangle carrier already supports a deck-twisted order-$4$ law.
+Better still, once one fixes an ordered adjacent pair of lines, the
+global carrier collapses to a single exact qutrit packet.  There are
+exactly $27$ nonlocal quadrangles through that ordered pair, and their
+visible shadow on the two fixed line clocks is the full local $3\times 3$
+transport block, with exactly $3$ global quadrangles above each local
+state pair.  But those $27$ quadrangles are not an affine cube.  The
+order-$3$ part of the ordered-pair stabilizer is a nonabelian exponent-$3$
+group of order $27$, with center and commutator both of order $3$; and
+that center is precisely the $3$-point fibre over each visible cell.
+So the visible $3\times 3$ block is the central quotient of an exact
+Heisenberg packet.  The full ordered-pair symmetry has order $54$: it
+is generated by that Heisenberg packet together with a reflection
+involution that preserves the center and inverts the visible $9$-cell
+shadow.  Most importantly, this local Heisenberg lift still does not
+split.  There is no packet-equivariant section of the visible $9$-cell
+transport block, either inside the Heisenberg packet itself or inside
+the full order-$54$ ordered-pair symmetry.  So the missing
+golden/icosahedral selector is no longer just a hidden symmetry break:
+it cannot be made locally at all, and must appear as genuinely nonlocal
+holonomy through a qutrit Heisenberg extension.
+
+The first exact $S_3$ carrier now appears one step farther out.  An
+ordered nonlocal two-path is a triple of lines $(L_0,L_1,L_2)$ with
+$L_0$ meeting $L_1$, $L_1$ meeting $L_2$, but $L_0$ disjoint from
+$L_2$, and with distinct anchor points on the two transport edges.
+There are exactly $4320$ such paths, forming one $\PSp(4,3)$ orbit.
+The stabilizer of a path has order $6$, and every path extends to
+exactly three nonlocal quadrangles.  On those three completions the
+path stabilizer acts as the full symmetric group $S_3$.  This is the
+first place where the sought selector becomes a literal three-way
+completion problem rather than a metaphor: the golden/icosahedral law
+must choose one branch of these $S_3$ completion fibres compatibly over
+the global quadrangle holonomy network.
+
+This is the cleanest finite analogue yet of the Cycle Clock /
+quasicrystal story.  Each isotropic line is a three-state clock; each
+$W_{3,3}$ point is a four-line synchronization hub; and the missing
+golden selector is the compatibility law that synchronizes those clocks
+across the hub network.
+
 \section*{Executable Certificate}
 
 The verification is encoded in
@@ -2979,20 +3165,68 @@ The script
 \]
 builds the $120$ matching states, constructs the $\PSp(4,3)$
 transvection generators from the same symplectic form used to build
-$W_{3,3}$, computes the four unordered pair orbitals, and verifies:
+$W_{3,3}$, computes the four unordered pair orbitals, proves that the
+40-line intersection graph is another $\SRG(40,12,2,4)$, refines the
+transport problem to the $40$ point residues and then to the self-dual
+$1620$ global quadrangle carrier, and verifies:
 \[
 \begin{array}{rcl}
 \#\text{states} &=& 120,\\
 \#\text{pair orbitals} &=& 4,\\
 \text{orbital degrees} &=& (2,27,36,54),\\
 \sum\text{orbital sizes} &=& \binom{120}{2},\\
+36 &=& 12\cdot 3,\\
+\text{local selector blocks} &=& S_3,\\
+\#\text{point residues} &=& 40,\\
+\#\text{residue triangles} &=& 160,\\
+\#\text{first-order block signatures} &=& 1,\\
+\#\text{ordered anchored slots} &=& 480,\\
+\#\text{anchored-slot stabilizer} &=& 54,\\
+\#\text{anchored local-choice orbits} &=& 1,\\
+\#\text{triangle-cycle orbits} &=& 1,\\
+\#\text{4-cycle orbits} &=& 2,\\
+\#\text{global quadrangle carrier} &=& 1620,\\
+\#\text{point 4-cycles} &=& 1740,\\
+\#\text{point-side global quadrangles} &=& 1620,\\
+\#\text{self-dual quadrangle carrier} &=& 1620,\\
+\#\text{global-quadrangle stabilizer} &=& 16,\\
+\#\text{visible square symmetry} &=& 8,\\
+\#\text{hidden square kernel} &=& 2,\\
+\#\text{kernel-fixed quadrangle states} &=& 4,\\
+\#\text{kernel-swapped state pairs} &=& 4,\\
+\text{quadrangle fibre split} &=& 1+2,\\
+\#\text{mixed quadrangle states} &=& 8,\\
+\#\text{mixed-state blocks} &=& 4\times 2,\\
+\#\text{lifts per visible }D_4\text{ symmetry} &=& 2,\\
+\#\text{deck-compatible }D_4\text{ sections} &=& 0,\\
+\#\text{mixed-cover group center} &=& 4,\\
+\#\text{mixed-cover commutator subgroup} &=& 2,\\
+\#\text{mixed-cover square set} &=& 3,\\
+\#\text{quadrangles over an ordered adjacent pair} &=& 27,\\
+\#\text{local adjacent-state cells} &=& 9,\\
+\#\text{quadrangles per local cell} &=& 3,\\
+\#\text{Heisenberg packet order} &=& 27,\\
+\#\text{Heisenberg packet center} &=& 3,\\
+\#\text{Heisenberg packet commutator} &=& 3,\\
+\#\text{Heisenberg packet central quotient} &=& 9,\\
+\#\text{Heisenberg packet shadow symmetry} &=& 18,\\
+\#\text{Heisenberg packet complements to centre} &=& 0,\\
+\#\text{full ordered-pair complements to centre} &=& 0,\\
+\#\text{ordered nonlocal }2\text{-paths} &=& 4320,\\
+\#\text{ordered path stabilizer} &=& 6,\\
+\#\text{quadrangle completions per path} &=& 3,\\
+\text{completion action} &=& S_3,\\
 12\notin\text{subset-sums of orbital degrees}. &&
 \end{array}
 \]
 
 Thus the next correct target is no longer vague: find the canonical
-golden/icosahedral selector that reduces the full $120$-state orbital
-geometry to a $12$-regular $H_4$ skeleton.
+golden/icosahedral selector, equivalently the correct $S_3$ transport
+law whose first nontrivial holonomy lives on the self-dual $1620$
+global quadrangle carrier and chooses a canonical lift through its
+non-split deck-twisted Heisenberg transport packet,
+thereby reducing the full $120$-state orbital geometry to a
+$12$-regular $H_4$ skeleton.
 
 \hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
 

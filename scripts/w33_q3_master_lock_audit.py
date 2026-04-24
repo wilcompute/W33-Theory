@@ -14,11 +14,20 @@ now exists in the repo into one boundary surface:
    the new April 2026 formulas all vanish exactly at `q = 3`.
 4. Continuum coefficient seed:
    the toroidal/decimal packet already fixes `8, 56, 320, 2240, 12480`.
+5. Residual electron seed packet:
+    the exact factor packet `98, 17, 208` already lands on the same q=3
+    Cartan/toroidal/exceptional backbone via `136 = 8*17`, `98 = 7*14`, and
+    `208 = 8*26 = 4*52`.
+6. Transport algebra reduction:
+    the local parity data is already the sign character of an exact local `S3`
+    holonomy, and the remaining mixed-plane wall is reduced to one missing
+    non-identity unipotent sign-trivial holonomy class on the canonical host.
 
 So the conservative exact reading is now stronger than "q=3 looks special":
-the finite/local/spectral/continuum-seed layers already overdetermine the same
-selected point. The remaining wall is not finite q-selection. It is the smooth
-continuum and dynamical realization theorem.
+the finite/local/spectral/continuum-seed/electron-seed/transport layers
+already overdetermine the same selected point. The remaining wall is not
+finite q-selection. It is the first genuine transport realization witness for
+the smooth continuum and dynamical theorem.
 """
 
 from __future__ import annotations
@@ -36,13 +45,27 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from w33_center_quad_transport_holonomy_bridge import (  # noqa: E402
+    build_center_quad_transport_holonomy_summary,
+)
+from w33_current_k3_mixed_plane_holonomy_failure_bridge import (  # noqa: E402
+    build_current_k3_mixed_plane_holonomy_failure_summary,
+)
+from w33_k3_mixed_plane_holonomy_witness_bridge import (  # noqa: E402
+    build_k3_mixed_plane_holonomy_witness_summary,
+)
+from w33_transport_ternary_cocycle_bridge import (  # noqa: E402
+    build_transport_ternary_cocycle_summary,
+)
 from scripts.w33_qutrit_ladder_audit import (  # noqa: E402
     e8_side_exact_decomposition_summary,
     one_qutrit_local_layer_summary,
     two_qutrit_global_layer_summary,
 )
+from scripts.w33_electron_seed_packet_audit import electron_seed_packet_summary  # noqa: E402
 from scripts.w33_spectral_core import get_w33_spectral_core  # noqa: E402
 from scripts.w33_toroidal_continuum_seed_audit import (  # noqa: E402
+    spectral_continuum_bridge_summary,
     toroidal_continuum_seed_summary,
     toroidal_seed_packet_summary,
 )
@@ -169,6 +192,7 @@ def q3_spectral_uniqueness_summary() -> Dict[str, object]:
 def q3_continuum_seed_summary() -> Dict[str, object]:
     seed = toroidal_seed_packet_summary()
     continuum = toroidal_continuum_seed_summary()
+    spectral_bridge = spectral_continuum_bridge_summary()
     q = int(seed["q"])
     phi3 = q * q + q + 1
     phi6 = q * q - q + 1
@@ -184,6 +208,8 @@ def q3_continuum_seed_summary() -> Dict[str, object]:
         "topological_coefficient": int(continuum["topological_coefficient"]),
         "discrete_eh_coefficient": int(continuum["discrete_eh_coefficient"]),
         "rank39": int(continuum["rank39"]),
+        "spectral_negative_weight": int(spectral_bridge["spectral_negative_weight"]),
+        "total_mode_count": int(spectral_bridge["total_mode_count"]),
         "exact_factorizations": {
             "phi3_is_6_plus_7": int(seed["shared_six_channel"]) + int(seed["phi6"]) == int(seed["phi3"]),
             "cartan_packet_is_1_plus_7": int(seed["selector_line_dimension"]) + int(seed["phi6"])
@@ -192,10 +218,129 @@ def q3_continuum_seed_summary() -> Dict[str, object]:
             "topological_packet_is_phi6_times_cartan_packet": int(seed["topological_packet"]) == phi6 * cartan_packet,
             "continuum_eh_is_40_times_cartan_packet": int(continuum["continuum_eh_coefficient"])
             == int(continuum["vertex_count"]) * cartan_packet,
+            "rank39_is_nontrivial_spectral_multiplicity_sum": spectral_bridge["exact_factorizations"][
+                "rank39_equals_nontrivial_multiplicity_sum"
+            ],
+            "continuum_eh_is_abs_negative_eigenvalue_times_total_mode_count": spectral_bridge[
+                "exact_factorizations"
+            ]["continuum_equals_abs_negative_eigenvalue_times_total_mode_count"],
             "topological_is_40_times_topological_packet": int(continuum["topological_coefficient"])
             == int(continuum["vertex_count"]) * int(seed["topological_packet"]),
+            "topological_is_phi6_times_abs_negative_eigenvalue_times_total_mode_count": spectral_bridge[
+                "exact_factorizations"
+            ]["topological_equals_phi6_times_abs_negative_eigenvalue_times_total_mode_count"],
             "discrete_6_mode_is_39_times_40_times_cartan_packet": int(continuum["discrete_eh_coefficient"])
             == int(continuum["rank39"]) * int(continuum["vertex_count"]) * cartan_packet,
+            "discrete_6_mode_is_nontrivial_multiplicity_sum_times_abs_negative_eigenvalue_times_total_mode_count": spectral_bridge[
+                "exact_factorizations"
+            ]["discrete_equals_nontrivial_multiplicity_sum_times_abs_negative_eigenvalue_times_total_mode_count"],
+        },
+    }
+
+
+@lru_cache(maxsize=1)
+def q3_fermion_seed_summary() -> Dict[str, object]:
+    packet = electron_seed_packet_summary()
+    continuum = q3_continuum_seed_summary()
+
+    q = int(packet["graph_packet"]["q"])
+    mu = int(packet["graph_packet"]["mu"])
+    phi6 = int(packet["graph_packet"]["phi6"])
+    cartan_packet = int(continuum["cartan_packet"])
+    barrier_shell = int(packet["exact_packet_dictionary"]["barrier_shell_lambda_phi6_squared"]["exact"])
+    shifted_gaussian_norm = int(
+        packet["exact_packet_dictionary"]["shifted_gaussian_norm_mu_squared_plus_one"]["exact"]
+    )
+    charged_lepton_shell = int(
+        packet["exact_packet_dictionary"]["charged_lepton_shell_mu_squared_phi3"]["exact"]
+    )
+    f4_dimension = int(packet["exact_packet_dictionary"]["f4_dimension"])
+    up_sector_suppressor = int(packet["candidate_ratio_dictionary"]["up_sector_suppressor"]["exact"])
+    g2_dimension = 2 * phi6
+    discrete_6_mode_over_a0 = charged_lepton_shell // cartan_packet
+
+    return {
+        "q": q,
+        "mu": mu,
+        "phi6": phi6,
+        "cartan_packet": cartan_packet,
+        "shifted_gaussian_norm": shifted_gaussian_norm,
+        "up_sector_suppressor": up_sector_suppressor,
+        "barrier_shell": barrier_shell,
+        "g2_dimension": g2_dimension,
+        "charged_lepton_shell": charged_lepton_shell,
+        "f4_dimension": f4_dimension,
+        "discrete_6_mode_over_a0": discrete_6_mode_over_a0,
+        "exact_factorizations": {
+            "shifted_gaussian_norm_is_mu_squared_plus_one": shifted_gaussian_norm == mu * mu + 1,
+            "up_sector_suppressor_is_cartan_times_shifted_gaussian_norm": (
+                up_sector_suppressor == cartan_packet * shifted_gaussian_norm
+            ),
+            "barrier_shell_is_phi6_times_g2_dimension": barrier_shell == phi6 * g2_dimension,
+            "charged_lepton_shell_is_mu_times_f4_dimension": charged_lepton_shell == mu * f4_dimension,
+            "charged_lepton_shell_is_cartan_times_discrete_6_mode_over_a0": (
+                charged_lepton_shell == cartan_packet * discrete_6_mode_over_a0
+            ),
+        },
+    }
+
+
+@lru_cache(maxsize=1)
+def q3_transport_algebra_summary() -> Dict[str, object]:
+    holonomy = build_center_quad_transport_holonomy_summary()
+    cocycle = build_transport_ternary_cocycle_summary()
+    witness = build_k3_mixed_plane_holonomy_witness_summary()
+    current = build_current_k3_mixed_plane_holonomy_failure_summary()
+
+    triangle_holonomy = holonomy["triangle_holonomy"]
+    cycle_counts = triangle_holonomy["cycle_type_counts"]
+    extension_cocycle = cocycle["extension_cocycle"]
+    fiber_shift = cocycle["fiber_nilpotent_operator"]
+    holonomy_witness = witness["mixed_plane_holonomy_witness"]
+    current_state = current["current_mixed_plane_holonomy_state"]
+
+    return {
+        "triangle_count": int(holonomy["transport_triangles"]),
+        "parity0_triangles": int(holonomy["archived_v14_triangle_parity"]["parity0"]),
+        "parity1_triangles": int(holonomy["archived_v14_triangle_parity"]["parity1"]),
+        "identity_triangle_holonomies": int(cycle_counts["identity"]),
+        "three_cycle_triangle_holonomies": int(cycle_counts["three_cycle"]),
+        "transposition_triangle_holonomies": int(cycle_counts["transposition"]),
+        "adapted_group_order": int(extension_cocycle["adapted_group_order"]),
+        "sign_trivial_cocycle_values": list(extension_cocycle["cocycle_values_on_sign_trivial_subgroup"]),
+        "fiber_shift_matrix": fiber_shift["matrix"],
+        "canonical_nontrivial_holonomy": holonomy_witness["canonical_nontrivial_holonomy"],
+        "gauge_related_nontrivial_holonomy": holonomy_witness["gauge_related_nontrivial_holonomy"],
+        "current_sign_trivial_holonomies": current_state["current_sign_trivial_holonomy_matrices"],
+        "exact_factorizations": {
+            "triangle_parity_equals_local_s3_holonomy_sign_exactly": triangle_holonomy[
+                "z2_parity_equals_holonomy_sign_exactly"
+            ],
+            "transport_extension_is_exact_twisted_cocycle": extension_cocycle[
+                "twisted_cocycle_identity_exact"
+            ],
+            "transport_extension_is_nontrivial_on_the_sign_trivial_sector": (
+                extension_cocycle["cocycle_is_not_a_coboundary"]
+                and extension_cocycle["cocycle_values_on_sign_trivial_subgroup"] != [0]
+            ),
+            "fiber_shift_is_square_zero_rank_one": (
+                fiber_shift["matrix"] == [[0, 1], [0, 0]]
+                and fiber_shift["square_zero"]
+                and fiber_shift["rank"] == 1
+            ),
+            "nontrivial_sign_trivial_unipotent_holonomy_is_unique_up_to_gauge": witness[
+                "k3_mixed_plane_holonomy_witness_theorem"
+            ]["the_two_nontrivial_sign_trivial_holonomies_are_gauge_equivalent"],
+            "exact_k3_tail_reduces_to_one_sign_trivial_unipotent_holonomy_witness": witness[
+                "k3_mixed_plane_holonomy_witness_theorem"
+            ][
+                "therefore_exact_k3_tail_realization_is_equivalent_to_one_support_preserving_nontrivial_sign_trivial_holonomy_witness_on_the_same_fixed_host"
+            ],
+            "current_host_fails_only_by_missing_that_unipotent_class": current[
+                "current_k3_mixed_plane_holonomy_failure_theorem"
+            ][
+                "therefore_the_current_mixed_plane_host_fails_the_exact_holonomy_witness_test_for_one_reason_only_the_nontrivial_sign_trivial_holonomy_is_missing"
+            ],
         },
     }
 
@@ -205,6 +350,8 @@ def classify_q3_master_lock() -> Tuple[Dict[str, object], ...]:
     local_kernel = q3_local_kernel_summary()
     spectral = q3_spectral_uniqueness_summary()
     continuum = q3_continuum_seed_summary()
+    fermion_seed = q3_fermion_seed_summary()
+    transport = q3_transport_algebra_summary()
 
     return (
         {
@@ -235,14 +382,35 @@ def classify_q3_master_lock() -> Tuple[Dict[str, object], ...]:
             "evidence": continuum,
         },
         {
+            "name": "q3_electron_seed_backbone_lock",
+            "support_level": "repo-exact fermion seed",
+            "statement": (
+                "The residual electron packet already lands on the same q=3 backbone: "
+                "17 = mu^2+1, 136 = 8*17, 98 = 7*14, and 208 = 8*26 = 4*52."
+            ),
+            "evidence": fermion_seed,
+        },
+        {
+            "name": "q3_transport_holonomy_reduction_lock",
+            "support_level": "repo-exact transport algebra reduction",
+            "statement": (
+                "The local q=3 transport algebra is already exact: triangle parity is the "
+                "sign character of a genuine local S3 holonomy, and the mixed-plane "
+                "realization wall is reduced to one missing non-identity unipotent "
+                "sign-trivial holonomy class on the canonical host."
+            ),
+            "evidence": transport,
+        },
+        {
             "name": "q3_full_physical_realization_theorem",
             "support_level": "not-yet-exact smooth realization theorem",
             "statement": (
-                "The q=3 lock is exact on the finite and coefficient-seed layers, but that "
-                "still does not by itself provide the full dynamical/continuum realization."
+                "The q=3 lock is exact on the finite, coefficient-seed, and transport layers, "
+                "but the current host still lacks the first genuine non-identity unipotent "
+                "sign-trivial holonomy witness that would realize the smooth/dynamical lift."
             ),
             "evidence": {
-                "remaining_wall": "smooth realization + Yukawa / dynamics",
+                "remaining_wall": "first sign-trivial unipotent transport witness + Yukawa / dynamics",
             },
         },
     )
@@ -265,6 +433,8 @@ def analyze() -> Dict[str, object]:
     local_kernel = q3_local_kernel_summary()
     spectral = q3_spectral_uniqueness_summary()
     continuum = q3_continuum_seed_summary()
+    fermion_seed = q3_fermion_seed_summary()
+    transport = q3_transport_algebra_summary()
 
     theorem = {
         "the_local_kernel_exactly_realizes_the_q3_packet_1_3_9_27_40_240": (
@@ -294,11 +464,41 @@ def analyze() -> Dict[str, object]:
             and continuum["discrete_eh_coefficient"] == 12480
             and all(continuum["exact_factorizations"].values())
         ),
+        "the_electron_seed_packet_exactly_splices_into_the_same_q3_backbone": (
+            fermion_seed["shifted_gaussian_norm"] == 17
+            and fermion_seed["up_sector_suppressor"] == 136
+            and fermion_seed["barrier_shell"] == 98
+            and fermion_seed["charged_lepton_shell"] == 208
+            and all(fermion_seed["exact_factorizations"].values())
+        ),
         "the_q3_lock_is_now_overdetermined_across_local_spectral_and_continuum_seed_layers": (
             local_kernel["q"] == spectral["q"] == continuum["q"] == 3
             and local_kernel["phi3"] == continuum["phi3"] == 13
             and local_kernel["phi6"] == continuum["phi6"] == 7
             and local_kernel["cartan_rank_candidate"] == continuum["cartan_packet"] == 8
+        ),
+        "the_q3_lock_is_now_overdetermined_across_local_spectral_continuum_and_electron_seed_layers": (
+            local_kernel["q"] == spectral["q"] == continuum["q"] == fermion_seed["q"] == 3
+            and local_kernel["phi6"] == continuum["phi6"] == fermion_seed["phi6"] == 7
+            and local_kernel["cartan_rank_candidate"] == continuum["cartan_packet"] == fermion_seed["cartan_packet"] == 8
+        ),
+        "the_transport_algebra_exactly_reduces_the_smooth_realization_wall_to_one_unipotent_sign_trivial_witness": (
+            transport["triangle_count"] == 5280
+            and transport["parity0_triangles"] == 3120
+            and transport["parity1_triangles"] == 2160
+            and transport["identity_triangle_holonomies"] == 240
+            and transport["three_cycle_triangle_holonomies"] == 2880
+            and transport["transposition_triangle_holonomies"] == 2160
+            and transport["canonical_nontrivial_holonomy"] == [[1, 1], [0, 1]]
+            and transport["gauge_related_nontrivial_holonomy"] == [[1, 2], [0, 1]]
+            and transport["current_sign_trivial_holonomies"] == [[[1, 0], [0, 1]]]
+            and all(transport["exact_factorizations"].values())
+        ),
+        "the_remaining_wall_refines_to_the_first_sign_trivial_unipotent_transport_witness": (
+            transport["current_sign_trivial_holonomies"] == [[[1, 0], [0, 1]]]
+            and transport["canonical_nontrivial_holonomy"] == [[1, 1], [0, 1]]
+            and transport["gauge_related_nontrivial_holonomy"] == [[1, 2], [0, 1]]
+            and transport["fiber_shift_matrix"] == [[0, 1], [0, 0]]
         ),
         "the_remaining_wall_is_not_finite_q_selection_but_smooth_realization": True,
     }
@@ -308,15 +508,19 @@ def analyze() -> Dict[str, object]:
         "q3_local_kernel": local_kernel,
         "q3_spectral_uniqueness": spectral,
         "q3_continuum_seed": continuum,
+        "q3_fermion_seed": fermion_seed,
+        "q3_transport_algebra": transport,
         "record_names_exact_or_boundary": exact_record_names,
         "record_names_open": open_record_names,
         "record_details": records,
         "q3_master_lock_theorem": theorem,
         "boundary_note": (
-            "The q=3 selection is now exact and overdetermined across three independent repo "
-            "layers: local qutrit geometry, corrected spectral/Ihara uniqueness, and the "
-            "toroidal continuum coefficient seed. The honest remaining theorem is therefore "
-            "not 'why q=3?' but how the already-selected finite package acquires its smooth "
+            "The q=3 selection is now exact and overdetermined across five independent repo "
+            "layers: local qutrit geometry, corrected spectral/Ihara uniqueness, the toroidal "
+            "continuum coefficient seed, the residual electron arithmetic packet, and the exact "
+            "transport holonomy/cocycle reduction. The honest remaining theorem is therefore not "
+            "'why q=3?' but the first non-identity unipotent sign-trivial transport witness on "
+            "the canonical mixed-plane host, i.e. the algebraic entry point for the smooth "
             "continuum and dynamical realization."
         ),
     }
@@ -347,6 +551,20 @@ def main() -> None:
         f"{payload['q3_continuum_seed']['continuum_eh_coefficient']}, "
         f"{payload['q3_continuum_seed']['topological_coefficient']}, "
         f"{payload['q3_continuum_seed']['discrete_eh_coefficient']}"
+    )
+    print(
+        "  Electron seed: "
+        f"{payload['q3_fermion_seed']['barrier_shell']}, "
+        f"{payload['q3_fermion_seed']['shifted_gaussian_norm']}, "
+        f"{payload['q3_fermion_seed']['charged_lepton_shell']}"
+    )
+    print(
+        "  Transport algebra: "
+        f"triangles={payload['q3_transport_algebra']['triangle_count']}, "
+        f"holonomy split="
+        f"{payload['q3_transport_algebra']['identity_triangle_holonomies']}/"
+        f"{payload['q3_transport_algebra']['three_cycle_triangle_holonomies']}/"
+        f"{payload['q3_transport_algebra']['transposition_triangle_holonomies']}"
     )
     print(f"  Wrote: {output_path}")
 

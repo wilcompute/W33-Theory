@@ -53,7 +53,28 @@ def test_electron_seed_audit_keeps_the_boundary_honest() -> None:
 
     assert records["one_input_fermion_reduction"]["support_level"] == "repo-exact reduction"
     assert records["exact_residual_electron_seed_packet"]["support_level"] == "repo-exact packet"
+    assert records["same_gaussian_norm_splices_into_charm_suppressor_packet"]["support_level"] == "repo-exact splice"
+    assert records["same_gaussian_norm_splices_into_charm_suppressor_packet"]["evidence"] == {
+        "shifted_gaussian_norm_mu_squared_plus_one": {"exact": "17", "float": 17.0},
+        "cartan_packet": 8,
+        "up_sector_suppressor": {"exact": "136", "float": 136.0},
+        "cartan_times_shifted_gaussian_norm": 136,
+    }
+    assert records["same_barrier_shell_splices_into_toroidal_g2_packet"]["support_level"] == "repo-exact splice"
+    assert records["same_barrier_shell_splices_into_toroidal_g2_packet"]["evidence"] == {
+        "barrier_shell_lambda_phi6_squared": {"exact": "98", "float": 98.0},
+        "phi6": 7,
+        "g2_dimension": 14,
+        "phi6_times_g2_dimension": 98,
+    }
     assert records["same_seed_touches_exceptional_f4_scale"]["support_level"] == "repo-exact splice"
+    assert records["same_seed_splices_into_q3_continuum_normalization"]["support_level"] == "repo-exact splice"
+    assert records["same_seed_splices_into_q3_continuum_normalization"]["evidence"] == {
+        "charged_lepton_shell_mu_squared_phi3": {"exact": "208", "float": 208.0},
+        "cartan_packet": 8,
+        "discrete_6_mode_over_a0": 26,
+        "cartan_times_discrete_6_mode_over_a0": 208,
+    }
     assert (
         records["graph_fixed_candidate_mass_shadow"]["support_level"]
         == "exact packet, not final physical identification"
@@ -63,11 +84,20 @@ def test_electron_seed_audit_keeps_the_boundary_honest() -> None:
     assert payload["record_names_exact_or_boundary"] == (
         "one_input_fermion_reduction",
         "exact_residual_electron_seed_packet",
+        "same_gaussian_norm_splices_into_charm_suppressor_packet",
+        "same_barrier_shell_splices_into_toroidal_g2_packet",
         "same_seed_touches_exceptional_f4_scale",
+        "same_seed_splices_into_q3_continuum_normalization",
         "graph_fixed_candidate_mass_shadow",
     )
     assert theorem["the_dimensionless_fermion_ladder_is_already_reduced_to_one_seed"] is True
     assert theorem["the_residual_seed_is_now_packaged_as_the_exact_factor_packet_98_17_208"] is True
+    assert theorem["the_middle_factor_splices_into_the_charm_suppressor_packet"] is True
+    assert theorem["the_barrier_shell_splices_into_the_toroidal_g2_packet"] is True
     assert theorem["the_same_packet_splices_into_the_exact_f4_scale"] is True
+    assert theorem["the_same_packet_splices_into_the_q3_continuum_normalization"] is True
     assert theorem["the_remaining_wall_is_physical_identification_not_missing_factor_arithmetic"] is True
     assert "98 x 17 x 208" in payload["boundary_note"]
+    assert "8*17" in payload["boundary_note"]
+    assert "7*14" in payload["boundary_note"]
+    assert "8*26" in payload["boundary_note"]
