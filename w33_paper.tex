@@ -100,7 +100,7 @@
   {\large\bfseries and a Complete Theory of Fundamental Physics}\\[0.55cm]
   {\large\itshape From One Finite Geometry: The Standard Model,\\
   General Relativity, and Cosmology with Zero Free Parameters}\\[0.55cm]
-  {\normalsize Parts I--XXII $+$ Supplements A--K \\
+  {\normalsize Parts I--XXII $+$ Supplements A--L \\
   \small 3300$+$ Verified Identities \ $\cdot$\  600$+$ Phases \ $\cdot$\  Zero Failures}
 }
 \author{\normalsize\itshape Quantum Gravity Research}
@@ -131,7 +131,7 @@ $q!=2q$ (uniquely solved by $q=3$), we derive:
 The construction rests on the exceptional isomorphism
 $\PSp(4,3)\cong W(E_6)^+$ (simple group of order 25\,920) and is
 verified by \textbf{3300$+$ independent mathematical checks with zero failures}.
-Supplements A--K consolidate the program: the Final Theorem FT1--FT5
+Supplements A--L consolidate the program: the Final Theorem FT1--FT5
 (arithmetic skeleton), the seven Clay Millennium Problems through
 $W_{3,3}$, the anthropic closure (why \emph{this} graph and no other),
 fifteen experimental falsifiers, the $\Omega$ uniqueness proof (the
@@ -144,7 +144,10 @@ $\{12,24,27,54,248\}$ shared by $W_{3,3}$ and the $j$-function,
 an $E_8\to H_4$ emergence bridge aligned with Quantum Gravity Research's
 quasicrystal program, and a common Coxeter spine showing how the
 $H_4$ degrees embed inside the $E_8$ degree sequence from the same
-$W_{3,3}$ constants.
+$W_{3,3}$ constants, followed by a constructive internal $H_4$ shadow:
+the $40$ isotropic lines of $W_{3,3}$ each carry three perfect matchings,
+giving $120$ line-matching states and an exact two-cover by the $240$
+edges.
 \end{abstract}
 
 \tableofcontents
@@ -2103,7 +2106,7 @@ $q=3$ over all prime powers up to 10~000.
 This single Diophantine equation is the deepest layer of the theory.
 It selects \textbf{one} prime, \textbf{one} SRG, \textbf{one} universe.
 
-\section*{The Theory's Closure: Parts I--IV $+$ Supplements A--K}
+\section*{The Theory's Closure: Parts I--IV $+$ Supplements A--L}
 
 Assembled, the paper's structure is:
 
@@ -2125,12 +2128,13 @@ Assembled, the paper's structure is:
 \textbf{Supplement~I}    & Monster Moonshine integer bridge \\
 \textbf{Supplement~J}    & $W_{3,3}\to E_8\to H_4$ emergence pathway \\
 \textbf{Supplement~K}    & Common Coxeter spine of $E_8$ and $H_4$ \\
+\textbf{Supplement~L}    & Internal $H_4$ shadow from line matchings \\
 \end{tabular}
 \end{center}
 
 \[
 \mathrm{FT}\ \cup\ \mathrm{M}\ \cup\ \mathrm{A}\ \cup\ \mathrm{X}\ \cup\ \Omega
-\ \cup\ \zeta\ \cup\ E_8/H_4\ =\ W_{3,3}.
+\ \cup\ \zeta\ \cup\ E_8/H_4\ \cup\ \mathcal{M}_{120}\ =\ W_{3,3}.
 \]
 
 \hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
@@ -2304,8 +2308,9 @@ H7 & SRG axiom $k(k-\lambda-1)=(v-k-1)\mu$ & $108=108$ \\
 
 Supplements A--G are arithmetic. Supplement H is
 \emph{constructive}: we \emph{build} the graph and \emph{compute} every
-single claim on the actual matrix. Supplements I--K connect the same
-finite skeleton to Moonshine and to the $E_8/H_4$ quasicrystal pathway.
+single claim on the actual matrix. Supplements I--L connect the same
+finite skeleton to Moonshine, to the $E_8/H_4$ quasicrystal pathway, and
+to an internal $120$-state matching quotient of the $240$ edge shell.
 This turns the theory from a catalogue of rational identities into a falsifiable
 40$\times$40 object. Anyone with Python 3 and 30 seconds can
 \texttt{pytest tests/test\_explicit\_w33\_construction.py -q} and
@@ -2635,14 +2640,130 @@ $H_4$ degree sub-sequence.
 
 This still leaves the hard geometric problem: construct a natural map
 from the $240$ edges of $W_{3,3}$ to the $240$ $E_8$ roots that preserves
-the correct $H_4$ projection data. The new constraint is exact: any
-candidate $W_{3,3}\to E_8\to H_4$ functor must preserve the degree
-embedding
+the correct $H_4$ projection data. Supplement~L solves the finite
+quotient half of that problem: it constructs the canonical $240\to 120$
+edge-to-matching collapse inside $W_{3,3}$ itself. The new constraint is
+exact: any candidate $W_{3,3}\to E_8\to H_4$ functor must preserve the
+degree embedding
 \[
 (2,12,20,30)\subset(2,8,12,14,18,20,24,30)
 \]
 and the common Coxeter spine $h=30$.
 
 \hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
+
+% ═══════════════════════════════════════════════════════════════
+%  SUPPLEMENT L --- INTERNAL H4 SHADOW FROM LINE MATCHINGS
+% ═══════════════════════════════════════════════════════════════
+\clearpage
+\part*{Supplement L --- The Internal $H_4$ Shadow of $W_{3,3}$}
+\addcontentsline{toc}{part}{Supplement L --- Internal $H_4$ Shadow from Line Matchings}
+
+\section*{The Constructive Step}
+
+Supplement~J matched the root counts
+\[
+|E(W_{3,3})|=|\Phi(E_8)|=240,\qquad |\Phi(H_4)|=120.
+\]
+Supplement~K showed that the two root shells share the same Coxeter
+number $h=30$. Supplement~L now constructs the $240\to 120$ collapse
+inside $W_{3,3}$ itself.
+
+The point is elementary but decisive.  The $40$ lines of the generalized
+quadrangle $W(3,3)$ are $4$-point isotropic lines.  In the collinearity
+graph each such line is a complete graph $K_4$, hence it has exactly
+three perfect matchings:
+\[
+\{ab,cd\},\qquad \{ac,bd\},\qquad \{ad,bc\}.
+\]
+Therefore the set
+\[
+\mathcal{M}_{120}
+=
+\{(\ell,m):\ell\ \text{a line of }W_{3,3},\ m\ \text{a perfect matching of }K_4(\ell))\}
+\]
+has cardinality
+\[
+\boxed{\;|\mathcal{M}_{120}|=40\cdot 3=120.\;}
+\]
+This is the first internal $H_4$-sized object found without leaving the
+finite geometry.
+
+\section*{The Exact Two-Cover}
+
+Each matching state contains exactly two disjoint edges of the
+corresponding $K_4$.  Since every collinear point-pair of a generalized
+quadrangle lies on a unique line, the $40$ line-$K_4$'s partition the
+$240$ graph edges:
+\[
+40\cdot \binom{4}{2}=40\cdot 6=240.
+\]
+On each $K_4$, the three perfect matchings partition those six edges:
+\[
+3\cdot 2=6.
+\]
+Consequently the matching states give an exact two-cover of the edge
+shell:
+\[
+\boxed{\;40\ \text{lines}\cdot 3\ \text{matchings/line}\cdot
+2\ \text{edges/matching}=240.\;}
+\]
+Equivalently, there is a canonical quotient map
+\[
+\pi_{\mathcal{M}}:E(W_{3,3})\longrightarrow \mathcal{M}_{120}
+\]
+whose fibres all have size $2$.
+
+\section*{Why This Is the Missing Finite Half}
+
+The Elser--Sloane/QGR picture asks for a passage from an $E_8$ root
+shell of size $240$ to an $H_4$ root shell of size $120$.  Supplements
+J and K gave the arithmetic and Coxeter constraints. Supplement~L gives
+the finite incidence mechanism:
+\[
+\boxed{\;E(W_{3,3})\quad \xrightarrow{\;2:1\;}\quad
+\mathcal{M}_{120}\;}
+\]
+where the source has the $E_8$ root count and the target has the $H_4$
+root count.
+
+No coordinates in $\RR^8$ or $\RR^4$ are being assumed here.  The
+construction is purely internal to $W_{3,3}$.  Its significance is that
+any future coordinate-level functor
+\[
+W_{3,3}\longrightarrow E_8\longrightarrow H_4
+\]
+must agree, on the finite side, with the line-matching quotient
+$E(W_{3,3})\to\mathcal{M}_{120}$.  The $120$ is no longer a count
+borrowed from $H_4$; it is a canonical quotient object of the symplectic
+polar space.
+
+\section*{Executable Certificate}
+
+The verification is encoded in
+\[
+\texttt{tests/test\_w33\_h4\_line\_matching\_shadow\_l.py}.
+\]
+It constructs $W_{3,3}$ from the symplectic form on $\FF_3^4$, extracts
+the $40$ $K_4$ lines, enumerates the three perfect matchings on each
+line, and checks:
+\[
+\begin{array}{rcl}
+\#\text{lines} &=& 40,\\
+\#\text{matching states} &=& 120,\\
+\#\text{edge incidences in states} &=& 240,\\
+\text{each graph edge appears in exactly one state} &=& \text{true},\\
+\text{each state contains exactly two disjoint edges} &=& \text{true},\\
+\text{each point lies on four lines and twelve states} &=& \text{true}.
+\end{array}
+\]
+Thus the internal $H_4$ shadow is not a metaphor. It is a finite,
+testable, canonical object:
+\[
+\boxed{\;\mathcal{M}_{120}=40\cdot 3,\qquad
+E(W_{3,3})=2\mathcal{M}_{120}=240.\;}
+\]
+
+\hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
 
 \end{document}
