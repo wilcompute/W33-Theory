@@ -100,7 +100,7 @@
   {\large\bfseries and a Complete Theory of Fundamental Physics}\\[0.55cm]
   {\large\itshape From One Finite Geometry: The Standard Model,\\
   General Relativity, and Cosmology with Zero Free Parameters}\\[0.55cm]
-  {\normalsize Parts I--XXII $+$ Supplements A--L \\
+  {\normalsize Parts I--XXII $+$ Supplements A--M \\
   \small 3300$+$ Verified Identities \ $\cdot$\  600$+$ Phases \ $\cdot$\  Zero Failures}
 }
 \author{\normalsize\itshape Quantum Gravity Research}
@@ -131,7 +131,7 @@ $q!=2q$ (uniquely solved by $q=3$), we derive:
 The construction rests on the exceptional isomorphism
 $\PSp(4,3)\cong W(E_6)^+$ (simple group of order 25\,920) and is
 verified by \textbf{3300$+$ independent mathematical checks with zero failures}.
-Supplements A--L consolidate the program: the Final Theorem FT1--FT5
+Supplements A--M consolidate the program: the Final Theorem FT1--FT5
 (arithmetic skeleton), the seven Clay Millennium Problems through
 $W_{3,3}$, the anthropic closure (why \emph{this} graph and no other),
 fifteen experimental falsifiers, the $\Omega$ uniqueness proof (the
@@ -147,7 +147,9 @@ $H_4$ degrees embed inside the $E_8$ degree sequence from the same
 $W_{3,3}$ constants, followed by a constructive internal $H_4$ shadow:
 the $40$ isotropic lines of $W_{3,3}$ each carry three perfect matchings,
 giving $120$ line-matching states and an exact two-cover by the $240$
-edges.
+edges, and a full-symmetry no-go theorem proving that a $12$-regular
+600-cell skeleton on these $120$ states cannot be invariant under the
+whole $\PSp(4,3)$ action.
 \end{abstract}
 
 \tableofcontents
@@ -2106,7 +2108,7 @@ $q=3$ over all prime powers up to 10~000.
 This single Diophantine equation is the deepest layer of the theory.
 It selects \textbf{one} prime, \textbf{one} SRG, \textbf{one} universe.
 
-\section*{The Theory's Closure: Parts I--IV $+$ Supplements A--L}
+\section*{The Theory's Closure: Parts I--IV $+$ Supplements A--M}
 
 Assembled, the paper's structure is:
 
@@ -2129,12 +2131,13 @@ Assembled, the paper's structure is:
 \textbf{Supplement~J}    & $W_{3,3}\to E_8\to H_4$ emergence pathway \\
 \textbf{Supplement~K}    & Common Coxeter spine of $E_8$ and $H_4$ \\
 \textbf{Supplement~L}    & Internal $H_4$ shadow from line matchings \\
+\textbf{Supplement~M}    & Full-symmetry obstruction to a $600$-cell skeleton \\
 \end{tabular}
 \end{center}
 
 \[
 \mathrm{FT}\ \cup\ \mathrm{M}\ \cup\ \mathrm{A}\ \cup\ \mathrm{X}\ \cup\ \Omega
-\ \cup\ \zeta\ \cup\ E_8/H_4\ \cup\ \mathcal{M}_{120}\ =\ W_{3,3}.
+\ \cup\ \zeta\ \cup\ E_8/H_4\ \cup\ \mathcal{M}_{120}\ \cup\ \mathcal{O}\ =\ W_{3,3}.
 \]
 
 \hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
@@ -2308,9 +2311,11 @@ H7 & SRG axiom $k(k-\lambda-1)=(v-k-1)\mu$ & $108=108$ \\
 
 Supplements A--G are arithmetic. Supplement H is
 \emph{constructive}: we \emph{build} the graph and \emph{compute} every
-single claim on the actual matrix. Supplements I--L connect the same
+single claim on the actual matrix. Supplements I--M connect the same
 finite skeleton to Moonshine, to the $E_8/H_4$ quasicrystal pathway, and
-to an internal $120$-state matching quotient of the $240$ edge shell.
+to an internal $120$-state matching quotient of the $240$ edge shell,
+then identify the precise symmetry breaking still required for a
+$600$-cell adjacency.
 This turns the theory from a catalogue of rational identities into a falsifiable
 40$\times$40 object. Anyone with Python 3 and 30 seconds can
 \texttt{pytest tests/test\_explicit\_w33\_construction.py -q} and
@@ -2765,5 +2770,112 @@ E(W_{3,3})=2\mathcal{M}_{120}=240.\;}
 \]
 
 \hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
+
+% ═══════════════════════════════════════════════════════════════
+%  SUPPLEMENT M --- ORBITAL NO-GO FOR A FULL-SYMMETRY 600-CELL GRAPH
+% ═══════════════════════════════════════════════════════════════
+\clearpage
+\part*{Supplement M --- Why the $600$-Cell Requires Symmetry Breaking}
+\addcontentsline{toc}{part}{Supplement M --- Full-Symmetry Obstruction to a $600$-Cell Skeleton}
+
+\section*{The Temptation}
+
+Supplement~L constructs a canonical $120$-state object
+$\mathcal{M}_{120}$ inside $W_{3,3}$. Since the $600$-cell has $120$
+vertices and $H_4$ roots have cardinality $120$, the next temptation is
+to put the $600$-cell skeleton directly on $\mathcal{M}_{120}$.
+
+The $600$-cell graph is $12$-regular.  Therefore a fully canonical
+$W_{3,3}$ construction would require a $\PSp(4,3)$-invariant
+$12$-regular relation on $\mathcal{M}_{120}$.
+
+\section*{The Orbital Computation}
+
+The full automorphism group $\PSp(4,3)$ acts on the $120$ matching
+states.  Computing the unordered pair orbitals gives exactly four
+relations:
+\[
+\boxed{\;2,\quad 27,\quad 36,\quad 54\;}
+\]
+where each number is the degree of the corresponding invariant relation
+on $\mathcal{M}_{120}$.
+
+Geometrically:
+\[
+\begin{array}{rcl}
+2  &:& \text{the other two matching states on the same line},\\
+36 &:& \text{matching states on lines meeting the given line},\\
+27,54 &:& \text{the two disjoint-line orbitals}.
+\end{array}
+\]
+The sizes of these orbitals are
+\[
+120,\qquad 2160,\qquad 1620,\qquad 3240,
+\]
+and they sum to
+\[
+\binom{120}{2}=7140.
+\]
+
+\section*{No Full-Symmetry $12$-Regular Graph}
+
+Any $\PSp(4,3)$-invariant graph on $\mathcal{M}_{120}$ must be a union
+of these four orbitals.  Hence its degree must lie in the subset-sum set
+\[
+\{0,2,27,29,36,38,54,56,63,65,81,83,90,92,117,119\}.
+\]
+The number $12$ is absent:
+\[
+\boxed{\;12\notin
+\{0,2,27,29,36,38,54,56,63,65,81,83,90,92,117,119\}\;}
+\]
+Therefore:
+\[
+\boxed{\;\text{There is no full-}\PSp(4,3)\text{-invariant }600\text{-cell skeleton on }\mathcal{M}_{120}.\;}
+\]
+
+\section*{Meaning}
+
+This is not a failure of the $H_4$ bridge; it is a localization of the
+missing ingredient.  The $120$-state object exists canonically, but the
+$12$-regular $600$-cell adjacency cannot preserve all of $W_{3,3}$'s
+symmetry.  To get the actual $H_4$ graph, the construction must choose
+extra structure and break
+\[
+\PSp(4,3)\quad\longrightarrow\quad \text{an icosahedral/golden subgroup}.
+\]
+This is precisely what the $E_8\to H_4$ projection does in the
+quasicrystal picture: it selects an $H_4$-symmetric $4$-plane inside an
+$E_8$-symmetric $8$-dimensional lattice.  Supplement~M proves that the
+same symmetry-breaking step is unavoidable on the finite $W_{3,3}$ side.
+
+\section*{Executable Certificate}
+
+The verification is encoded in
+\[
+\texttt{tests/test\_w33\_h4\_orbital\_no\_go\_m.py}.
+\]
+The script
+\[
+\texttt{scripts/w33\_h4\_orbital\_no\_go.py}
+\]
+builds the $120$ matching states, constructs the $\PSp(4,3)$
+transvection generators from the same symplectic form used to build
+$W_{3,3}$, computes the four unordered pair orbitals, and verifies:
+\[
+\begin{array}{rcl}
+\#\text{states} &=& 120,\\
+\#\text{pair orbitals} &=& 4,\\
+\text{orbital degrees} &=& (2,27,36,54),\\
+\sum\text{orbital sizes} &=& \binom{120}{2},\\
+12\notin\text{subset-sums of orbital degrees}. &&
+\end{array}
+\]
+
+Thus the next correct target is no longer vague: find the canonical
+golden/icosahedral selector that reduces the full $120$-state orbital
+geometry to a $12$-regular $H_4$ skeleton.
+
+\hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
 
 \end{document}
