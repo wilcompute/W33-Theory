@@ -2327,6 +2327,42 @@ def compute_ordered_path_completion_section_obstruction() -> dict[str, Any]:
     completion_orbit_from_seed_branch = {
         action[0] for action in seed_completion_action
     }
+    seed_branch_stabilizer = branch_stabilizers[0]
+    residual_completions = [1, 2]
+    residual_index = {completion_id: index for index, completion_id in enumerate(residual_completions)}
+    residual_flip_action = sorted(
+        {
+            tuple(residual_index[action[completion_id]] for completion_id in residual_completions)
+            for action in seed_branch_stabilizer
+        }
+    )
+    residual_fixed_after_branch = [
+        completion_id
+        for completion_id in residual_completions
+        if all(action[completion_id] == completion_id for action in seed_branch_stabilizer)
+    ]
+    ordered_completion_frames = [
+        (first, second, third)
+        for first in range(len(seed_completions))
+        for second in range(len(seed_completions))
+        for third in range(len(seed_completions))
+        if len({first, second, third}) == len(seed_completions)
+    ]
+    seed_frame = ordered_completion_frames[0]
+    frame_orbit = {
+        tuple(action[completion_id] for completion_id in seed_frame)
+        for action in seed_completion_action
+    }
+    frame_stabilizer_orders = [
+        len(
+            [
+                action
+                for action in seed_completion_action
+                if tuple(action[completion_id] for completion_id in frame) == frame
+            ]
+        )
+        for frame in ordered_completion_frames
+    ]
     completion_incidence_count = sum(len(completions) for completions in path_to_completions.values())
     quadrangle_to_path_count = Counter()
     for completions in path_to_completions.values():
@@ -2349,6 +2385,14 @@ def compute_ordered_path_completion_section_obstruction() -> dict[str, Any]:
         "each_branch_stabilizer_fixes_exactly_its_branch": branch_fixed_completion_sets == [[0], [1], [2]],
         "three_branch_stabilizers_have_trivial_common_core": branch_stabilizer_common_core == {(0, 1, 2)},
         "branch_choice_has_index_three": len(seed_completion_action) == 3 * len(branch_stabilizers[0]),
+        "branch_stabilizer_residual_action_is_c2": residual_flip_action == [(0, 1), (1, 0)],
+        "residual_branch_flip_has_no_fixed_remaining_completion": residual_fixed_after_branch == [],
+        "ordered_completion_frames_have_size_six": len(ordered_completion_frames) == 6,
+        "s3_acts_regularly_on_ordered_completion_frames": (
+            frame_orbit == set(ordered_completion_frames)
+            and sorted(frame_stabilizer_orders) == [1, 1, 1, 1, 1, 1]
+        ),
+        "ordered_frame_choice_breaks_s3_to_identity": len(seed_completion_action) == 6 * frame_stabilizer_orders[0],
     }
 
     theorem = {
@@ -2366,13 +2410,21 @@ def compute_ordered_path_completion_section_obstruction() -> dict[str, Any]:
             and checks["three_branch_stabilizers_have_trivial_common_core"]
             and checks["branch_choice_has_index_three"]
         ),
+        "an_ordered_completion_frame_is_an_s3_to_identity_gauge_fixing": (
+            checks["branch_stabilizer_residual_action_is_c2"]
+            and checks["residual_branch_flip_has_no_fixed_remaining_completion"]
+            and checks["ordered_completion_frames_have_size_six"]
+            and checks["s3_acts_regularly_on_ordered_completion_frames"]
+            and checks["ordered_frame_choice_breaks_s3_to_identity"]
+        ),
         "interpretation": (
             "The first exact S3 completion carrier is a genuine obstruction, not a selector. "
             "A PSp(4,3)-equivariant branch choice would require one of the three completions "
             "to be fixed by the path stabilizer, but the stabilizer acts as full S3. The "
             "golden/icosahedral step must therefore break this completion symmetry. Choosing "
             "one branch is precisely an S3-to-C2 reduction with trivial common core across "
-            "the three branches."
+            "the three branches; ordering the completion frame removes the remaining C2 flip "
+            "and is an S3-to-identity gauge fixing."
         ),
     }
 
@@ -2397,6 +2449,15 @@ def compute_ordered_path_completion_section_obstruction() -> dict[str, Any]:
             "branch_fixed_completion_sets": branch_fixed_completion_sets,
             "symmetry_break_index": len(seed_completion_action) // len(branch_stabilizers[0]),
             "branch_stabilizer_common_core_order": len(branch_stabilizer_common_core),
+        },
+        "clock_frame_symmetry_breaking": {
+            "residual_flip_order_after_branch": len(residual_flip_action),
+            "residual_fixed_completions_after_branch": residual_fixed_after_branch,
+            "ordered_completion_frame_count": len(ordered_completion_frames),
+            "frame_orbit_size": len(frame_orbit),
+            "chosen_frame_stabilizer_order": frame_stabilizer_orders[0],
+            "frame_stabilizer_orders": sorted(frame_stabilizer_orders),
+            "symmetry_break_index": len(seed_completion_action) // frame_stabilizer_orders[0],
         },
         "checks": checks,
         "theorem": theorem,

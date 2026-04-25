@@ -667,6 +667,17 @@ class TestM17OrderedPathCompletionSectionObstruction:
             "branch_stabilizer_common_core_order": 1,
         }
 
+    def test_ordered_completion_frame_breaks_s3_to_identity(self):
+        assert self.summary["clock_frame_symmetry_breaking"] == {
+            "residual_flip_order_after_branch": 2,
+            "residual_fixed_completions_after_branch": [],
+            "ordered_completion_frame_count": 6,
+            "frame_orbit_size": 6,
+            "chosen_frame_stabilizer_order": 1,
+            "frame_stabilizer_orders": [1, 1, 1, 1, 1, 1],
+            "symmetry_break_index": 6,
+        }
+
     def test_no_equivariant_completion_section_theorem_holds(self):
         theorem = self.summary["theorem"]
         assert theorem[
@@ -674,6 +685,9 @@ class TestM17OrderedPathCompletionSectionObstruction:
         ]
         assert theorem[
             "a_completion_branch_choice_is_exactly_an_s3_to_c2_symmetry_break"
+        ]
+        assert theorem[
+            "an_ordered_completion_frame_is_an_s3_to_identity_gauge_fixing"
         ]
         assert "golden/icosahedral step" in theorem["interpretation"]
 
