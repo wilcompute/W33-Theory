@@ -8,7 +8,10 @@ if not _bundle_path.exists():
     pytest.skip("Bundle directory not available (archived)", allow_module_level=True)
 spec = importlib.util.spec_from_file_location("recompute_line", _bundle_path)
 mod = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(mod)
+try:
+    spec.loader.exec_module(mod)
+except ModuleNotFoundError as _e:
+    pytest.skip(f"Bundle dependency unavailable ({_e})", allow_module_level=True)
 
 
 def test_find_a5_candidate_small_sample():
