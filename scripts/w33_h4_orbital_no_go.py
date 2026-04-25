@@ -2305,6 +2305,28 @@ def compute_ordered_path_completion_section_obstruction() -> dict[str, Any]:
         sum(1 for index, image in enumerate(action) if image == index)
         for action in seed_completion_action
     )
+    branch_stabilizers = {
+        completion_id: [
+            action
+            for action in seed_completion_action
+            if action[completion_id] == completion_id
+        ]
+        for completion_id in range(len(seed_completions))
+    }
+    branch_fixed_completion_sets = [
+        [
+            completion_id
+            for completion_id in range(len(seed_completions))
+            if all(action[completion_id] == completion_id for action in stabilizer)
+        ]
+        for stabilizer in branch_stabilizers.values()
+    ]
+    branch_stabilizer_common_core = set(seed_completion_action)
+    for stabilizer in branch_stabilizers.values():
+        branch_stabilizer_common_core &= set(stabilizer)
+    completion_orbit_from_seed_branch = {
+        action[0] for action in seed_completion_action
+    }
     completion_incidence_count = sum(len(completions) for completions in path_to_completions.values())
     quadrangle_to_path_count = Counter()
     for completions in path_to_completions.values():
@@ -2322,6 +2344,11 @@ def compute_ordered_path_completion_section_obstruction() -> dict[str, Any]:
             and fixed_count_distribution == {0: 2, 1: 3, 3: 1}
         ),
         "no_completion_is_fixed_by_the_seed_path_stabilizer": fixed_by_all == [],
+        "completion_action_is_transitive_on_three_branches": completion_orbit_from_seed_branch == {0, 1, 2},
+        "choosing_one_branch_breaks_s3_to_c2": sorted(len(stabilizer) for stabilizer in branch_stabilizers.values()) == [2, 2, 2],
+        "each_branch_stabilizer_fixes_exactly_its_branch": branch_fixed_completion_sets == [[0], [1], [2]],
+        "three_branch_stabilizers_have_trivial_common_core": branch_stabilizer_common_core == {(0, 1, 2)},
+        "branch_choice_has_index_three": len(seed_completion_action) == 3 * len(branch_stabilizers[0]),
     }
 
     theorem = {
@@ -2332,11 +2359,20 @@ def compute_ordered_path_completion_section_obstruction() -> dict[str, Any]:
             and checks["seed_stabilizer_completion_action_is_s3"]
             and checks["no_completion_is_fixed_by_the_seed_path_stabilizer"]
         ),
+        "a_completion_branch_choice_is_exactly_an_s3_to_c2_symmetry_break": (
+            checks["completion_action_is_transitive_on_three_branches"]
+            and checks["choosing_one_branch_breaks_s3_to_c2"]
+            and checks["each_branch_stabilizer_fixes_exactly_its_branch"]
+            and checks["three_branch_stabilizers_have_trivial_common_core"]
+            and checks["branch_choice_has_index_three"]
+        ),
         "interpretation": (
             "The first exact S3 completion carrier is a genuine obstruction, not a selector. "
             "A PSp(4,3)-equivariant branch choice would require one of the three completions "
             "to be fixed by the path stabilizer, but the stabilizer acts as full S3. The "
-            "golden/icosahedral step must therefore break this completion symmetry."
+            "golden/icosahedral step must therefore break this completion symmetry. Choosing "
+            "one branch is precisely an S3-to-C2 reduction with trivial common core across "
+            "the three branches."
         ),
     }
 
@@ -2353,6 +2389,14 @@ def compute_ordered_path_completion_section_obstruction() -> dict[str, Any]:
             "completion_action_order": len(seed_completion_action),
             "fixed_count_distribution": dict(sorted(fixed_count_distribution.items())),
             "common_fixed_completions": fixed_by_all,
+        },
+        "branch_symmetry_breaking": {
+            "full_completion_symmetry_order": len(seed_completion_action),
+            "completion_orbit_size": len(completion_orbit_from_seed_branch),
+            "chosen_branch_stabilizer_orders": sorted(len(stabilizer) for stabilizer in branch_stabilizers.values()),
+            "branch_fixed_completion_sets": branch_fixed_completion_sets,
+            "symmetry_break_index": len(seed_completion_action) // len(branch_stabilizers[0]),
+            "branch_stabilizer_common_core_order": len(branch_stabilizer_common_core),
         },
         "checks": checks,
         "theorem": theorem,

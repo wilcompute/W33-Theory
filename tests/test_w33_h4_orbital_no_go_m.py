@@ -657,10 +657,23 @@ class TestM17OrderedPathCompletionSectionObstruction:
             "common_fixed_completions": [],
         }
 
+    def test_branch_choice_breaks_s3_to_c2(self):
+        assert self.summary["branch_symmetry_breaking"] == {
+            "full_completion_symmetry_order": 6,
+            "completion_orbit_size": 3,
+            "chosen_branch_stabilizer_orders": [2, 2, 2],
+            "branch_fixed_completion_sets": [[0], [1], [2]],
+            "symmetry_break_index": 3,
+            "branch_stabilizer_common_core_order": 1,
+        }
+
     def test_no_equivariant_completion_section_theorem_holds(self):
         theorem = self.summary["theorem"]
         assert theorem[
             "the_ordered_path_completion_bundle_has_no_psp43_equivariant_section"
+        ]
+        assert theorem[
+            "a_completion_branch_choice_is_exactly_an_s3_to_c2_symmetry_break"
         ]
         assert "golden/icosahedral step" in theorem["interpretation"]
 
