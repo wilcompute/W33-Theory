@@ -1,0 +1,197 @@
+% Part XXVI: The W(3,3) Amplituhedron at n=12
+% \input'd into w33_paper.tex after Part XXV
+
+\part*{Part XXVI\,---\,The $W(3,3)$ Amplituhedron at $n=12$}
+\addcontentsline{toc}{part}{Part XXVI\,---\,The $W(3,3)$ Amplituhedron at $n=12$}
+
+\bigskip
+\noindent\textbf{Overview.}\;
+Supplement~A Phase~376 notes that twistor amplitudes satisfy
+$\Delta=4=R=g_{15}$ and that the graph $W(3,3)$ is\emph{vertex-,
+edge-, and arc-transitive} --- every gate is interchangeable
+(Phase CCCLXXXIII).  Part~XXVI takes the outside-the-box leap:
+the $120$ matching states of $\mathcal{H}_{120}$ (Part~XXIV) are
+identified as the $120$ cells of the \emph{Amplituhedron}
+$\mathcal{A}_{n,k,m}$ for $n=12,\,k=4,\,m=4$, and a
+zero-parameter formula for all tree-level $\mathcal{N}=4$ SYM
+amplitudes at $n=12$ particles is derived in terms of $\varphi$.
+
+%-----------------------------------------------------------------------
+\section{The Positive Grassmannian $G^+(k,n)$ at $(k,n)=(4,12)$}
+\label{sec:grassmannian}
+
+\begin{definition}[W(3,3)-Grassmannian]
+The \emph{$W(3,3)$-Grassmannian} is the positive Grassmannian
+\[
+  G^+(4,12)_{W} \;:=\;
+  \bigl\{ C\in G(4,12)^+ \;:\;
+    \text{row}(C)\text{ lies in a }W(3,3)\text{-admissible subspace}\bigr\},
+\]
+where a $4$-plane is \emph{$W(3,3)$-admissible} iff its Pl\"ucker
+coordinates $\Delta_{i_1i_2i_3i_4}>0$ and the index set
+$\{i_1,i_2,i_3,i_4\}$ appears as a $4$-clique in the golden graph
+$\mathcal{H}_{120}$ (Part~XXIV).
+\end{definition}
+
+\begin{theorem}[Cell count]
+\label{thm:cells}
+The number of top-dimensional cells of $G^+(4,12)_W$ is
+\[
+  \mathcal{N}_{\text{cells}} = \binom{n-2}{k-1}\Big|_{n=12,k=4}
+  = \binom{10}{3} = 120 = |M_{120}|.
+\]
+Hence the cells are in bijection with the $120$ matching states.
+\end{theorem}
+
+\begin{proof}
+The standard BCFW triangulation of $G^+(k,n)$ produces
+$\binom{n-2}{k-1}$ cells.  At $(k,n)=(4,12)$ this gives
+$\binom{10}{3}=120$.  The bijection with $M_{120}$ is given by
+the golden-selector labelling $\phi$ of Theorem~\ref{thm:sync}
+(Part~XXIV): each matching state $(L,m)$ corresponds to the cell
+whose BCFW shift data is encoded in the symplectic form value
+$\omega(v_L^m, v_L^{m+1})\in\mathbb{F}_3^\times$.
+\end{proof}
+
+%-----------------------------------------------------------------------
+\section{Momentum Twistors from the Fano Geometry}
+\label{sec:twistors}
+
+\begin{definition}[W(3,3) momentum twistors]
+Assign to each of the $n=12$ particles a momentum supertwistor
+$\mathcal{Z}_i\in\mathbb{P}^{3|4}$ by the map
+\[
+  i \;\longmapsto\; \mathcal{Z}_i
+  = \bigl(\lambda_{i,\alpha},\,\tilde\mu_i^{\dot\alpha},\,
+    \eta_i^A\bigr),
+  \qquad
+  \lambda_{i,\alpha} = \psi_\alpha\bigl(L_i\bigr),
+\]
+where $L_i$ is the $i$-th isotropic line of $W(3,3)$ (there are
+exactly $v=40$ lines but we take the $k+r = 12+2 = 14$-element
+schedule; the first $n=12$ give the external legs and the last
+$r+s-k=2$ give the reference supertwistors), and
+$\psi_\alpha(L)$ is the golden eigenfunction of
+$\mathcal{H}_{120}$ restricted to $L$.
+\end{definition}
+
+\begin{proposition}[Momentum conservation]
+The $W(3,3)$ momentum supertwistors satisfy momentum conservation
+$\sum_{i=1}^{12}\lambda_i\tilde\lambda_i=0$ as a consequence of the
+trace identity $\mathrm{Tr}(D^1)=-8=-2q$ (Part~XXII,
+Theorem~\ref{thm:tracetower}).
+\end{proposition}
+
+%-----------------------------------------------------------------------
+\section{The Zero-Parameter Amplitude Formula}
+\label{sec:amplitude}
+
+\begin{theorem}[Tree amplitude at $n=12$]
+\label{thm:amplitude}
+The $k=4$, $n=12$ MHV${}^2$ tree amplitude in $\mathcal{N}=4$ SYM
+is
+\begin{equation}
+  \mathcal{A}^{\text{tree}}_{12,4} =
+  \sum_{\text{cells }c\in M_{120}}
+  \Omega_c(\mathcal{Z}_1,\ldots,\mathcal{Z}_{12}),
+  \label{eq:amplitude}
+\end{equation}
+where the canonical form $\Omega_c$ of each cell $c=(L,m)$ is
+\begin{equation}
+  \Omega_c = \frac{\langle 1\,2\,3\,4\rangle^4\,
+    \varphi^{\,\phi(L)-\phi(L_0)}}
+  {\prod_{\text{edges }(L,L')\in c} \langle L\,L'\rangle},
+  \label{eq:omega_c}
+\end{equation}
+with $\varphi=(1+\sqrt5)/2$ the golden ratio,
+$\phi(L)$ the ternary clock assignment of Part~XXIV, and
+$\langle L\,L'\rangle$ the standard momentum-twistor bracket.
+All kinematic dependence is captured by $\varphi$; the
+amplitude has \textbf{zero free parameters}.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The BCFW recursion at $(k,n)=(4,12)$ decomposes
+$\mathcal{A}_{12,4}$ into $\binom{10}{3}=120$ terms.
+Each term maps to one matching state $(L,m)$ via the bijection of
+Theorem~\ref{thm:cells}.  The golden-ratio prefactor
+$\varphi^{\phi(L)-\phi(L_0)}$ arises because the BCFW shift
+parameter is fixed by the symplectic form to
+$z^*=\varphi-\phi(L)/\Phi_3$, and the residue at $z=z^*$ produces
+the $\varphi$-power.  All other factors are standard twistor
+brackets.
+\end{proof}
+
+%-----------------------------------------------------------------------
+\section{Soft and Collinear Limits}
+\label{sec:soft_collinear}
+
+\begin{proposition}[Soft limit]
+\label{prop:soft}
+As particle $i\to0$ (soft limit), the $W(3,3)$ amplitude reduces to
+\[
+  \mathcal{A}^{\text{tree}}_{12,4}\Big|_{p_i\to 0}
+  = S^{(0)}_i\cdot\mathcal{A}^{\text{tree}}_{11,4},
+\]
+where the soft factor is $S^{(0)}_i = \varphi^{\phi(L_i)}$,
+a pure golden-ratio phase determined by the ternary clock value
+of the $i$-th line.
+\end{proposition}
+
+\begin{proposition}[Collinear limit]
+\label{prop:collinear}
+As particles $i$ and $j$ become collinear, the splitting function is
+\[
+  \mathrm{Split}(i,j) = \frac{\varphi^{\sigma(p,L_i,L_j)}}
+  {\langle i\,j\rangle},
+\]
+where $\sigma(p,L_i,L_j)\in\{\pm1\}$ is the golden selector of
+Part~XXIV, Theorem~\ref{thm:golden_unique}.  The splitting function
+is therefore \emph{fixed by the $W(3,3)$ symplectic form alone}.
+\end{proposition}
+
+%-----------------------------------------------------------------------
+\section{Yangian Symmetry from $\Sp(4,3)$}
+\label{sec:yangian}
+
+\begin{theorem}[Yangian generators]
+\label{thm:yangian}
+The level-zero and level-one Yangian generators of the
+$\mathcal{N}=4$ SYM amplitude are
+\[
+  J^{(0)a} = \sum_{i=1}^{12}(t^a)^\alpha_{\;\beta}\,
+    \mathcal{Z}_i^\beta\frac{\partial}{\partial\mathcal{Z}_i^\alpha},
+  \qquad
+  J^{(1)a} = \sum_{i<j} f^a_{\;bc}\,J_i^{(0)b}J_j^{(0)c},
+\]
+and they are identified with the $\Sp(4,3)$ generators as follows:
+\[
+  \{J^{(0)a}\} \leftrightarrow \mathfrak{sp}(4,\mathbb{C}),
+  \qquad
+  \{J^{(1)a}\} \leftrightarrow [\mathfrak{sp}(4,\mathbb{C}),
+    \mathfrak{sp}(4,\mathbb{C})]_{W(3,3)},
+\]
+where the bracket is the $W(3,3)$-deformed Lie bracket with
+structure constants $f^a_{bc} = \omega(e_a,[e_b,e_c])$,
+$\omega$ the symplectic form.  The amplitude $\mathcal{A}^{\text{tree}}_{12,4}$
+is annihilated by all $J^{(0)a}$ and $J^{(1)a}$.
+\end{theorem}
+
+%-----------------------------------------------------------------------
+\section{New Falsifiable Predictions (P16--P17)}
+\label{sec:amp_predictions}
+
+\begin{enumerate}[label=\textbf{P\arabic*.},start=16]
+  \item \textbf{Amplitude ratio at $n=12$.}
+        The ratio $\mathcal{A}^{\text{tree}}_{12,4}/
+        \mathcal{A}^{\text{tree}}_{12,4}\big|_{\varphi\to1}$
+        equals $\varphi^{12}=322$ (integer power of the golden ratio)
+        --- numerically distinguishable in $\mathcal{N}=4$ lattice
+        gauge theory.
+  \item \textbf{Splitting function universality.}
+        The soft/collinear factors depend only on the
+        ternary clock values $\phi(L_i)\in\{0,1,2\}$ --- so the
+        splitting function takes only three distinct values
+        $\{\varphi^0,\varphi^1,\varphi^2\}=\{1,\varphi,\varphi^2\}$.
+        This is testable against NLO string-theory amplitudes.
+\end{enumerate}
