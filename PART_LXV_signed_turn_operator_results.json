@@ -1,0 +1,49 @@
+{
+  "q": 3,
+  "directed_edge_carrier_size": 480,
+  "undirected_edges": 240,
+  "hashimoto_row_sum": [11],
+  "triangle_turn_row_sum": [2],
+  "open_turn_row_sum": [9],
+  "signed_turn_row_sum": [-7],
+  "operator_definitions": {
+    "B": "Hashimoto non-backtracking operator on directed W(3,3) edges",
+    "T": "triangle-turn part: next edge closes a W(3,3) triangle with previous tail",
+    "O": "open-turn part: next edge does not close a triangle",
+    "C": "signed turn operator C = T - O = 2T - B"
+  },
+  "signed_turn_spectrum_clustered": {
+    "+1.000000+0.000000i": 120,
+    "+1.594828+3.666166i": 24,
+    "+1.594828-3.666166i": 24,
+    "+3.828427+0.000000i": 15,
+    "+5.000000+0.000000i": 15,
+    "-1.000000+0.000000i": 80,
+    "-1.000000+2.000000i": 81,
+    "-1.000000-2.000000i": 81,
+    "-1.828427+0.000000i": 15,
+    "-2.189656+0.000000i": 24,
+    "-7.000000+0.000000i": 1
+  },
+  "expected_spectrum_clustered": {
+    "-7.000000+0.000000i": 1,
+    "-2.189656+0.000000i": 24,
+    "-1.828427+0.000000i": 15,
+    "-1.000000-2.000000i": 81,
+    "-1.000000+0.000000i": 80,
+    "-1.000000+2.000000i": 81,
+    "+1.000000+0.000000i": 120,
+    "+1.594828-3.666166i": 24,
+    "+1.594828+3.666166i": 24,
+    "+3.828427+0.000000i": 15,
+    "+5.000000+0.000000i": 15
+  },
+  "spectrum_matches_expected": true,
+  "minimal_support_polynomial": "(x+7)(x-5)(x^2-2x-7)(x^3-x^2+9x+35)(x^2+2x+5)(x+1)(x-1)",
+  "minimal_support_polynomial_coefficients": [1, 1, -35, 57, -102, -1174, 474, 11266, 37637, 32725, -37975, -42875],
+  "polynomial_residual_max_abs": 0,
+  "characteristic_factorization_with_multiplicities": "(x+7)^1 (x-5)^15 (x^2-2x-7)^15 (x^3-x^2+9x+35)^24 (x^2+2x+5)^81 (x+1)^80 (x-1)^120",
+  "dimension_check": "1 + 15 + 2*15 + 3*24 + 2*81 + 80 + 120 = 480",
+  "new_81_observation": "The signed turn operator has eigenvalues -1±2i, each with multiplicity 81. Their Gaussian norm is 5 = q+lambda.",
+  "interpretation": "The 81=27+27+27 generation carrier appears naturally on the 480 directed-edge Hashimoto space after signing triangle turns against open turns."
+}
