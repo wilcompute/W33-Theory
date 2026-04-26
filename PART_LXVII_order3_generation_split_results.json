@@ -1,0 +1,14 @@
+{
+  "projective_transvections_checked": 40,
+  "all_pass": true,
+  "bad_cases": [],
+  "H1_dimension": 81,
+  "boundary_ranks": {"rank_d1": 39, "rank_d2": 120},
+  "harmonic_definition": "H1 = ker(d1) cap ker(d2^T)",
+  "max_H1_invariance_residual": 2.8476544445548576e-14,
+  "expected_generation_character": {"1": 27, "omega": 27, "omega2": 27, "other": 0},
+  "verified_for_every_projective_transvection": true,
+  "charpoly_H1": "(x - 1)^27 (x^2 + x + 1)^27",
+  "generation_split": "H1_C = H1^(0) + H1^(1) + H1^(2), each dimension 27",
+  "main_theorem": "Every order-3 symplectic transvection acts on canonical H1 with eigenvalue multiplicities 1^27, omega^27, omega2^27."
+}
