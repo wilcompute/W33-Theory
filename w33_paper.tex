@@ -101,7 +101,7 @@
   {\large\itshape From One Diophantine Equation $q^q = q^3$\\
   to the Standard Model, General Relativity,\\
   and Cosmology with Zero Free Parameters}\\[0.55cm]
-  {\normalsize Parts I--XXII $+$ Supplements A--Z, $\alpha$--$\gamma$ \\
+  {\normalsize Parts I--XXII $+$ Supplements A--Z, $\alpha$--$\delta$ \\
   \small 3300$+$ Verified Identities \ $\cdot$\  600$+$ Phases \ $\cdot$\  Zero Failures}
 }
 \author{\normalsize\itshape Quantum Gravity Research}
@@ -132,7 +132,7 @@ $q!=2q$ (uniquely solved by $q=3$), we derive:
 The construction rests on the exceptional isomorphism
 $\PSp(4,3)\cong W(E_6)^+$ (simple group of order 25\,920) and is
 verified by \textbf{3300$+$ independent mathematical checks with zero failures}.
-Supplements A--Z, $\alpha$--$\gamma$ consolidate the program: the Final Theorem FT1--FT5
+Supplements A--Z, $\alpha$--$\delta$ consolidate the program: the Final Theorem FT1--FT5
 (arithmetic skeleton), the seven Clay Millennium Problems through
 $W_{3,3}$, the anthropic closure (why \emph{this} graph and no other),
 fifteen experimental falsifiers, the $\Omega$ uniqueness proof (the
@@ -2251,7 +2251,7 @@ $q=3$ over all prime powers up to 10~000.
 This single Diophantine equation is the deepest layer of the theory.
 It selects \textbf{one} prime, \textbf{one} SRG, \textbf{one} universe.
 
-\section*{The Theory's Closure: Parts I--IV $+$ Supplements A--Z, $\alpha$--$\gamma$}
+\section*{The Theory's Closure: Parts I--IV $+$ Supplements A--Z, $\alpha$--$\delta$}
 
 Assembled, the paper's structure is:
 
@@ -4924,5 +4924,124 @@ The integer 30 is the second-deepest invariant of the program after
 $(27,24,h=30)$.
 
 \hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
+
+% ═══════════════════════════════════════════════════════════════
+%  SUPPLEMENT delta --- REPRESENTATION DECOMPOSITION OF W(3,3)
+% ═══════════════════════════════════════════════════════════════
+\clearpage
+\part*{Supplement $\delta$ --- Representation Decomposition of $W_{3,3}$}
+\addcontentsline{toc}{part}{Supplement $\delta$ --- Representation Decomposition}
+
+\section*{The Permutation Module $\CC[V(W_{3,3})]$}
+
+Sp$(4, \FF_3)$ acts on the 40 vertices of $W_{3,3}$, giving a
+40-dimensional permutation representation. As a complex
+representation, this decomposes into three irreducible blocks:
+\[
+\boxed{\;\CC[V(W_{3,3})] \;=\; \mathbf{1} \;\oplus\; \Pi_{24} \;\oplus\; \Pi_{15}.\;}
+\]
+Each block is one of the eigenspaces of the adjacency operator
+$A$:
+\begin{itemize}[leftmargin=2em,nosep]
+\item $\mathbf{1}$ = constant functions, dim 1, eigenvalue $k = 12$.
+\item $\Pi_{24}$ = self-dual eigenspace, dim $f = 24$, eigenvalue $r = +2$.
+\item $\Pi_{15}$ = anti-self-dual eigenspace, dim $g = 15$, eigenvalue $s = -4$.
+\end{itemize}
+The decomposition $1 + 24 + 15 = 40$ is the Bose-Mesner trace
+identity in disguise. The integers $24$ and $15$ have direct physical
+meaning: $24 = \dim\SU(5)$ adjoint and $15 = \dim\SU(4)_R$.
+
+\section*{The Eight Key Irreducible Representations}
+
+$\Sp(4, \FF_3)$ has 30 irreducible representations. Eight of them
+have specific physical significance:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{cll}
+\toprule
+$\dim$ & Representation & Physical role \\
+\midrule
+$1$ & Trivial & Constant functions \\
+$6 = k/2$ & Vector rep over $\FF_3$ & Smallest non-trivial irrep \\
+$15 = g$ & Anti-self-dual eigenspace & $\SU(4)_R$ R-symmetry of $\mathcal{N}=4$ SYM \\
+$24 = f$ & Self-dual eigenspace & $\SU(5)$ adjoint (GUT) \\
+$27 = q^q$ & $E_6$ fundamental & Three-generation matter content \\
+$45 = q^2(q^2{+}1)/2$ & $\Theta_{10}$ cuspidal & Steinberg companion \\
+$64 = \lambda^{\Phi_6 - 1}$ & Smallest unipotent & $2$-Sylow component \\
+$81 = q^4$ & Steinberg & Top-dim regular rep \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{$\delta$.1 \quad The Bose-Mesner trace identity}
+\[
+\tr(I) = v = 40,\qquad \tr(A) = 0,\qquad \tr(A^2) = vk = 480.
+\]
+Combining: $\sum \lambda_i = k\cdot 1 + r\cdot f + s\cdot g = 0$,
+$\sum \lambda_i^2 = k^2 + r^2 f + s^2 g = vk$. Solving for
+$(f, g)$ given $\{k, r, s\} = \{12, 2, -4\}$ and $f + g + 1 = v$
+gives $(f, g) = (24, 15)$ as the unique solution. This is
+the algebraic origin of the multiplicities.
+
+\section*{$\delta$.2 \quad The Hecke algebra}
+The Hecke algebra $\mathcal{H}(G, B)$ of $\Sp(4, \FF_3)$ relative to a
+Borel $B$ has dimension equal to the order of the Weyl group of the
+$C_2$ root system:
+\[
+\dim\mathcal{H}(\Sp(4,\FF_3), B) \;=\; |W(C_2)| \;=\; 8 \;=\; \lambda^q.
+\]
+Cherednik parameter $t = q = 3$.
+
+\section*{$\delta$.3 \quad Bruhat decomposition}
+\[
+\Sp(4, \FF_3) \;=\; \bigsqcup_{w \in W(C_2)} BwB,
+\]
+with 8 = $\lambda^q$ double cosets. Each Schubert cell $BwB$ has
+$\FF_3$-rational point count
+\[
+|BwB(\FF_3)| \;=\; q^{\ell(w)}\cdot|B|.
+\]
+
+\section*{$\delta$.4 \quad Tensor product decompositions}
+The $E_6$ tensor product
+\[
+\mathbf{27}\otimes\overline{\mathbf{27}} \;=\; \mathbf{1}\oplus\mathbf{78}\oplus\mathbf{650}
+\]
+involves the $E_6$ adjoint $\mathbf{78} = \lambda q\Phi_3$ and the
+$\mathbf{650}$ tensor block (with $1 + 78 + 650 = 729 = 27^2$). The
+$\mathbf{650}$ contains the symmetric trace-free part of $\mathbf{27}\otimes\overline{\mathbf{27}}$.
+
+For the $W_{3,3}$ blocks: $\mathbf{24}\otimes\mathbf{15} = 360$
+splits as $\Pi_{24}\otimes\Pi_{15}$, decomposing into smaller
+irreducibles whose dimensions sum to $360 = vk\cdot\Phi_4/k = f\cdot g$.
+
+\section*{The Decisive Identity}
+
+\[
+\boxed{\;\CC[V(W_{3,3})] \;=\; \mathbf{1}\oplus\mathbf{24}\oplus\mathbf{15} \;=\; (1, f, g),\quad 1+f+g=v=40.\;}
+\]
+
+The 40-dimensional permutation representation of Sp$(4, \FF_3)$ on
+$W_{3,3}$ splits in only three pieces, with multiplicities that match
+the SRG eigenvalue multiplicities. This is the simplest possible
+non-trivial representation-theoretic structure consistent with a
+3-class association scheme.
+
+\section*{Connection to Standard Model Group Theory}
+
+The block dimensions (1, 24, 15) are the smallest building blocks of
+GUT representation theory:
+\[
+24 = \dim\SU(5)\quad\text{(SM gauge fits inside)},
+\qquad
+15 = \dim\SU(4)_R\quad\text{($\mathcal{N}{=}4$ SYM R-symmetry)}.
+\]
+$\mathbf{24}\to (8,1,0)\oplus(1,3,0)\oplus(1,1,0)\oplus(3,2,5/6)\oplus(\overline{3},2,-5/6)$
+under $\SU(3)\times\SU(2)\times\mathrm{U}(1)$ — the SM gauge group plus
+leptoquarks. The W$_{3,3}$ permutation rep is therefore intrinsically
+GUT-shaped.
+
+\hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
 
 \end{document}
