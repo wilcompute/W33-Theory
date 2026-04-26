@@ -1,0 +1,37 @@
+{
+  "part": "XXVI",
+  "title": "Higher-Order Orbit Mixing and Full CKM Matrix from W(3,3)",
+  "lambda": 0.22252,
+  "orbit_mixing_epsilon": 0.04952,
+  "A5_CG_coefficient": 0.4330,
+  "CKM_predictions": {
+    "Vud": 0.97524,
+    "Vus": 0.22252,
+    "Vcb": 0.04016,
+    "Vcs": 0.97524,
+    "Vtb": 0.99919,
+    "J_CKM": 3.185e-5
+  },
+  "CKM_PDG": {
+    "Vud": 0.97373,
+    "Vus": 0.22430,
+    "Vcb": 0.04080,
+    "Vcs": 0.97500,
+    "Vtb": 0.99910,
+    "J_CKM": 3.08e-5
+  },
+  "elements_within_5pct": 8,
+  "J_error_pct": 3.4,
+  "eta_bar_W33": 0.2218,
+  "open_problems": {
+    "rho_bar": "Derive from W(3,3) orbit geometry in Part XXVII",
+    "delta_CP": "Requires rho_bar; gap 60->71 deg to be closed in Part XXVII",
+    "A_parameter": "Derive A=|Vcb|/lambda^2 from first principles in Part XXVII"
+  },
+  "predictions": {
+    "P21": "Orbit mixing epsilon=sin^2(pi/14)=0.0495 governs 30<->10 transition",
+    "P22": "A5 Clebsch-Gordan C_{30,10}=sqrt(3)/4 appears in B-meson mixing",
+    "P23": "|Vtd|/|Vts|=sqrt((1-rho_bar)^2+eta_bar^2)/lambda fixes rho_bar",
+    "P24": "arg(Vub) = -2pi/3 at leading order from omega3 holonomy"
+  }
+}
