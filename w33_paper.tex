@@ -101,7 +101,7 @@
   {\large\itshape From One Diophantine Equation $q^q = q^3$\\
   to the Standard Model, General Relativity,\\
   and Cosmology with Zero Free Parameters}\\[0.55cm]
-  {\normalsize Parts I--XXII $+$ Supplements A--Z, $\alpha$--$\zeta$, $\Omega$ \\
+  {\normalsize Parts I--XXII $+$ Supplements A--Z, $\alpha$--$\eta$, $\Omega$ \\
   \small 3300$+$ Verified Identities \ $\cdot$\  600$+$ Phases \ $\cdot$\  Zero Failures}
 }
 \author{\normalsize\itshape Quantum Gravity Research}
@@ -132,7 +132,7 @@ $q!=2q$ (uniquely solved by $q=3$), we derive:
 The construction rests on the exceptional isomorphism
 $\PSp(4,3)\cong W(E_6)^+$ (simple group of order 25\,920) and is
 verified by \textbf{3300$+$ independent mathematical checks with zero failures}.
-Supplements A--Z, $\alpha$--$\zeta$, $\Omega$ consolidate the program: the Final Theorem FT1--FT5
+Supplements A--Z, $\alpha$--$\eta$, $\Omega$ consolidate the program: the Final Theorem FT1--FT5
 (arithmetic skeleton), the seven Clay Millennium Problems through
 $W_{3,3}$, the anthropic closure (why \emph{this} graph and no other),
 fifteen experimental falsifiers, the $\Omega$ uniqueness proof (the
@@ -2251,7 +2251,7 @@ $q=3$ over all prime powers up to 10~000.
 This single Diophantine equation is the deepest layer of the theory.
 It selects \textbf{one} prime, \textbf{one} SRG, \textbf{one} universe.
 
-\section*{The Theory's Closure: Parts I--IV $+$ Supplements A--Z, $\alpha$--$\zeta$, $\Omega$}
+\section*{The Theory's Closure: Parts I--IV $+$ Supplements A--Z, $\alpha$--$\eta$, $\Omega$}
 
 Assembled, the paper's structure is:
 
@@ -5348,5 +5348,97 @@ the cleanest possible discrete realisation of fermion mass.
 \hfill$\varepsilon \quad\zeta \quad\Omega$
 
 \hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
+
+% ═══════════════════════════════════════════════════════════════
+%  SUPPLEMENT eta --- WALK GENERATING FUNCTION
+% ═══════════════════════════════════════════════════════════════
+\clearpage
+\part*{Supplement $\eta$ --- Closed-Walk Generating Function}
+\addcontentsline{toc}{part}{Supplement $\eta$ --- Walk Generating Function}
+
+\section*{The Closed-Walk Spectrum}
+
+The number of closed walks of length $n$ from any fixed vertex of
+$W_{3,3}$ to itself is
+\[
+W_n \;=\; \frac{1}{v}\tr(A^n) \;=\; \frac{1}{40}\bigl(k^n + f\cdot r^n + g\cdot s^n\bigr)
+\;=\; \frac{1}{40}\bigl(12^n + 24\cdot 2^n + 15\cdot(-4)^n\bigr).
+\]
+
+\subsection*{$\eta$.1 \quad The generating function}
+\[
+\boxed{\;Z(t) \;=\; \sum_{n\ge 0} W_n\,t^n
+\;=\; \frac{1}{v}\Bigl[\frac{1}{1-kt} + \frac{f}{1-rt} + \frac{g}{1-st}\Bigr]
+\;=\; \frac{1}{40}\Bigl[\frac{1}{1-12t} + \frac{24}{1-2t} + \frac{15}{1+4t}\Bigr].\;}
+\]
+A rational function with three simple poles at $t = 1/k = 1/12$,
+$t = 1/r = 1/2$, $t = 1/s = -1/4$. Three poles, one per eigenvalue:
+the spectral content of $W_{3,3}$ encoded as the singularity structure
+of one analytic function.
+
+\subsection*{$\eta$.2 \quad Small-length walk counts}
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+$n$ & $\tr(A^n)$ & $W_n$ & Identity \\
+\midrule
+0 & $40$ & $1$ & $\tr(I) = v$ \\
+1 & $0$ & $0$ & no self-loops \\
+2 & $480$ & $12$ & $2|E| = vk$ \\
+3 & $960$ & $24$ & $6\cdot\#\Delta = 6\cdot 160$ \\
+4 & $24\,960$ & $624$ & $k^4 + f r^4 + g s^4$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{$\eta$.3 \quad Spectral gap and mixing}
+The spectral gap $k - r = 12 - 2 = 10 = \Phi_4$ governs the mixing
+time of the random walk:
+\[
+\tau_{\rm mix} \;\sim\; \frac{\log v}{k - r} \;=\; \frac{\log 40}{\Phi_4} \;\approx\; 0.37,
+\]
+i.e.\ the walk mixes in $\sim 1/3$ of a step on average — the graph is
+extraordinarily well-mixed (consistent with its Ramanujan property).
+
+\subsection*{$\eta$.4 \quad Three poles, three time scales}
+\begin{center}
+\begin{tabular}{cll}
+\toprule
+Pole & Position & Physical role \\
+\midrule
+Stable & $t = 1/12$ & macroscopic mode (constant function, eigenvalue $k$) \\
+Light & $t = 1/2$ & light tower ($\Pi_{24}$, eigenvalue $r=+2$) \\
+Heavy & $t = -1/4$ & heavy tower ($\Pi_{15}$, eigenvalue $s=-4$) \\
+\bottomrule
+\end{tabular}
+\end{center}
+The negative pole at $-1/4$ generates oscillating behaviour (Floquet
+mode); the two positive poles drive exponential growth at distinct
+rates.
+
+\subsection*{$\eta$.5 \quad Connection to Ihara zeta}
+The Ihara zeta function (Supp.~G) is the prime-cycle generating
+function; the walk generating function $Z(t)$ here is the closed-walk
+generating function. They are related by the Ihara--Bass formula
+\[
+\frac{1}{\zeta_G(u)} \;=\; (1-u^2)^{r-1}\det(I - Au + (k-1)u^2 I).
+\]
+The poles of $Z$ at $1/k, 1/r, 1/s$ correspond to zeros of
+$\det(I - Au + 11 u^2 I)$ via $1 - \lambda u + 11u^2 = 0$. This
+unifies the closed-walk and prime-cycle pictures.
+
+\section*{The Decisive Identity}
+
+\[
+\boxed{\;Z(t) \;=\; \frac{1}{v}\sum_{\lambda\in\mathrm{spec}(A)} \frac{m_\lambda}{1 - \lambda t}\;}
+\]
+The closed-walk generating function on $W_{3,3}$ is the sum of three
+simple poles in $1:f:g$ ratios at $t = 1/k, 1/r, 1/s$. Every walk
+count, every mixing time, every Ihara-zeta zero, every Bose-Mesner
+projection follows from this single rational function.
+
+\hfill$\varepsilon\quad\zeta\quad\eta\quad\Omega$
+
+\hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
 
 \end{document}
