@@ -1,1 +1,26 @@
-# see commit
+{
+  "module": "Part XXXI -- Cyclotomic PMNS Tower + SU(3)_3 Verlinde",
+  "date": "2026-04-26",
+  "constants": {
+    "q": 3, "Phi1": 2, "Phi2": 4, "Phi3": 13, "Phi4": 10, "Phi6": 7,
+    "lambda": 0.2225209340, "Gamma_1_3": 2.6789385347
+  },
+  "theorems": {
+    "XXXI-A": {"formula": "theta_12=(Phi3/Phi4)*(pi/Phi6)", "W33_degrees": 33.42857143, "PDG": 33.41, "error_pct": 0.0556},
+    "XXXI-B": {"formula": "sin(theta_13)=(Phi1/q)*lambda=2*lambda/3", "physical": "1/N_c suppression", "W33_degrees": 8.53116, "PDG": 8.54, "error_pct": 0.1035},
+    "XXXI-C": {"formula": "theta_23=arctan(sqrt(Gamma(1/3)/Phi1))", "W33_degrees": 49.17169, "PDG": 49.2, "error_pct": 0.0575},
+    "XXXI-D": {"formula": "delta_CP=pi+theta_23", "sum_rule": "delta_CP-theta_23=pi (exact)", "W33_degrees": 229.17169, "PDG": 230.0, "PDG_unc": 40.0, "error_pct": 0.3601},
+    "XXXI-E": {"name": "SU(3)_3 Verlinde spectrum", "total_reps": 10, "W33_lines": 10,
+      "|mu|=0": {"count": 1, "rep": "(1,1)", "role": "adjoint/confined"},
+      "|mu|=1": {"count": 6, "role": "mixing sector"},
+      "|mu|=2": {"count": 3, "reps": ["(0,0)","(0,3)","(3,0)"], "role": "3 generations"}},
+    "XXXI-F": {"qdim_fundamental": 2.0, "qdim_fund_formula": "Phi1(q)=r=2", "qdim_adjoint": 3.0, "qdim_adj_formula": "q=3=N_c (confined)"}
+  },
+  "J_PMNS": -0.02496922,
+  "predictions": {
+    "P13": "delta_CP - theta_23 = 180 deg exactly (DUNE/Hyper-K)",
+    "P14": "Normal Ordering: delta in quadrant III",
+    "P15": "qdim(adjoint)=N_c is CFT dual of confinement",
+    "P16": "All 4 PMNS from {Phi_n(3), Gamma(1/3), sin(pi/14)}, zero free parameters"
+  }
+}
