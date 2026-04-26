@@ -13,7 +13,10 @@ from THEORY_PART_CCII_E6_ARCHITECTURE import architecture_analysis
 
 @pytest.fixture(scope="module")
 def arch():
-    return architecture_analysis()
+    try:
+        return architecture_analysis()
+    except FileNotFoundError as exc:
+        pytest.skip(f"E6 architecture data unavailable: {exc}", allow_module_level=True)
 
 
 class TestDegree:
