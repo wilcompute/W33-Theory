@@ -101,7 +101,7 @@
   {\large\itshape From One Diophantine Equation $q^q = q^3$\\
   to the Standard Model, General Relativity,\\
   and Cosmology with Zero Free Parameters}\\[0.55cm]
-  {\normalsize Parts I--XXII $+$ Supplements A--Z, $\alpha$--$\delta$, $\Omega$ \\
+  {\normalsize Parts I--XXII $+$ Supplements A--Z, $\alpha$--$\varepsilon$, $\Omega$ \\
   \small 3300$+$ Verified Identities \ $\cdot$\  600$+$ Phases \ $\cdot$\  Zero Failures}
 }
 \author{\normalsize\itshape Quantum Gravity Research}
@@ -132,7 +132,7 @@ $q!=2q$ (uniquely solved by $q=3$), we derive:
 The construction rests on the exceptional isomorphism
 $\PSp(4,3)\cong W(E_6)^+$ (simple group of order 25\,920) and is
 verified by \textbf{3300$+$ independent mathematical checks with zero failures}.
-Supplements A--Z, $\alpha$--$\delta$, $\Omega$ consolidate the program: the Final Theorem FT1--FT5
+Supplements A--Z, $\alpha$--$\varepsilon$, $\Omega$ consolidate the program: the Final Theorem FT1--FT5
 (arithmetic skeleton), the seven Clay Millennium Problems through
 $W_{3,3}$, the anthropic closure (why \emph{this} graph and no other),
 fifteen experimental falsifiers, the $\Omega$ uniqueness proof (the
@@ -2251,7 +2251,7 @@ $q=3$ over all prime powers up to 10~000.
 This single Diophantine equation is the deepest layer of the theory.
 It selects \textbf{one} prime, \textbf{one} SRG, \textbf{one} universe.
 
-\section*{The Theory's Closure: Parts I--IV $+$ Supplements A--Z, $\alpha$--$\delta$, $\Omega$}
+\section*{The Theory's Closure: Parts I--IV $+$ Supplements A--Z, $\alpha$--$\varepsilon$, $\Omega$}
 
 Assembled, the paper's structure is:
 
@@ -5132,5 +5132,112 @@ What remains is observation.
 \hfill\(\Omega\)
 
 \hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
+
+% ═══════════════════════════════════════════════════════════════
+%  SUPPLEMENT epsilon --- BEYOND THE SEAL: FIVE OPEN FRONTIERS
+% ═══════════════════════════════════════════════════════════════
+\clearpage
+\part*{Supplement $\varepsilon$ --- Beyond the Seal: Five Open Frontiers}
+\addcontentsline{toc}{part}{Supplement $\varepsilon$ --- Five Open Frontiers}
+
+\section*{Five Frontiers After $\Omega$}
+
+Supplement $\Omega$ closed the W$_{3,3}$-E$_8$ programme at the level
+of arithmetic identities and algebraic structure. Five concrete
+frontiers remain open, each of which would extend the program rather
+than alter its closure.
+
+\subsection*{$\varepsilon$.1 \quad Formal verification (Lean / Coq)}
+Formalise the master equation $q^q = q^3 \Rightarrow q=3$ and the
+Closure Theorem (Supp.~Z) in a proof assistant. The proof is
+genuinely one-line algebra (sum-of-cubes factorisation), and the
+seven equivalences are finite case analyses. A complete machine-checked
+proof of the W$_{3,3}$-E$_8$ closure should fit in well under 1000
+lines of Lean 4.
+
+\subsection*{$\varepsilon$.2 \quad Explicit Calabi-Yau threefold}
+Construct an explicit $X_3$ (Calabi-Yau threefold) with:
+\begin{itemize}[leftmargin=2em,nosep]
+\item $\SU(3)$ holonomy;
+\item Hodge $h^{1,1} = q^q = 27$ and $h^{2,1}$ giving $\chi = -2q = -6$;
+\item $E_6$ structure group at the heterotic level;
+\item discrete symmetry $\Sp(4,\FF_3)$ acting on the cohomology.
+\end{itemize}
+Candidates exist (Bertin--Lemonnier, Yau quintic with discrete
+symmetries) but a canonical $W_{3,3}$-derived construction has not
+been written down.
+
+\subsection*{$\varepsilon$.3 \quad Cellular-automaton simulation}
+Implement the $\Sp(4,\FF_3)$-equivariant local rule on $W_{3,3}$ and
+simulate. The 40 cells, 12-degree neighbourhood, and binary state
+space yield a finite-state CA whose orbit count is bounded above by
+$2^k/|\Aut|$. Observe the emergence of macroscopic spacetime and the
+SM gauge structure as coarse-grained limits.
+
+\subsection*{$\varepsilon$.4 \quad Higher-rank generalisation}
+The master equation $q^q = q^3$ has the unique prime solution $q=3$.
+For other exponents $n$:
+\[
+q^q = q^n \;\Longleftrightarrow\; q = n,
+\]
+and only $q = n$ being prime gives a clean SRG analogue. The next
+prime values $n=2, 5, 7, \ldots$ give different kinds of incidence
+geometries (bipartite, generalised hexagons, etc.) — none of which
+reproduce the Standard Model. Are there structurally similar
+``mini-theories'' at other primes worth exploring?
+
+\subsection*{$\varepsilon$.5 \quad Wheeler-DeWitt wave function}
+Construct the wave function of the universe explicitly as a vector
+in $\CC[V(W_{3,3})] \cong \CC^{40}$, decomposed via the Bose-Mesner
+algebra into trivial (1), self-dual (24), and anti-self-dual (15)
+blocks. Match measured matrix elements via PMNS (lepton sector,
+$\Pi_{15}$) and CKM (quark sector, $\Pi_{24}$). The $\mathbb{CP}^{39}$
+projective space (39 = $q\Phi_3$ real parameters) is the observer's
+phase manifold.
+
+\section*{Summary of Frontiers}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{cl}
+\toprule
+\# & Frontier \\
+\midrule
+$\varepsilon$.1 & Formal verification of master equation in Lean / Coq \\
+$\varepsilon$.2 & Explicit $W_{3,3}$-derived Calabi-Yau threefold \\
+$\varepsilon$.3 & $\Sp(4,\FF_3)$-equivariant cellular automaton simulation \\
+$\varepsilon$.4 & Higher-rank cousins of $q^q = q^3$ \\
+$\varepsilon$.5 & Wheeler-DeWitt vector in $\CC[V(W_{3,3})]$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The number of frontiers is $\mu+1 = 5 = q+\lambda$ — itself a
+$W_{3,3}$ constant.
+
+\section*{What is \emph{Not} a Frontier}
+
+The following are \emph{closed}, not open:
+\begin{itemize}[leftmargin=2em,nosep]
+\item The 19 free parameters of the SM (Supp.~T).
+\item The Higgs mass, $\alpha_{\rm em}^{-1}$, $\sin^2\theta_W$,
+inflation observables, Hubble fixed point (Supp.~B FT).
+\item The multiverse cardinality (Supp.~S, $|$Spence$|=28$).
+\item The Anthropic Closure (Supp.~D, A1--A6).
+\item The Graph Riemann Hypothesis on $W_{3,3}$ (Supp.~G).
+\end{itemize}
+These do not require further work; they are arithmetically
+established.
+
+\section*{Closing}
+
+The W$_{3,3}$-E$_8$ programme is mathematically closed. The
+remaining work is observational (Supp.~E, 15 falsifiers) and
+formal (Supp.~$\varepsilon$, five frontiers). Both are accessible
+within current technology and current physics.
+
+\hfill$\varepsilon \quad\Omega$
+
+\hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
 
 \end{document}
