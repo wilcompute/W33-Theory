@@ -1,0 +1,20 @@
+{
+  "part": "XXXVIII",
+  "title": "Magnetic Monopoles from W(3,3) GUT",
+  "M_mon_BPS_GeV": 5.162e18,
+  "M_mon_W33_GeV": 5.196e18,
+  "n_mon_over_s_Kibble": 3.91e-4,
+  "N_efolds_inflation": 28.3,
+  "n_mon_over_s_diluted": 4.8e-41,
+  "g_Dirac_units_of_e": 68.518,
+  "Parker_bound": 1e-26,
+  "above_Parker_pre_inflation": true,
+  "below_Parker_post_inflation": true,
+  "predictions": {
+    "P65": "M_mon = 5.196e18 GeV (4*pi*26*M_GUT -- canonical GUT scale, no free parameters)",
+    "P66": "n_mon/s = 4.8e-41 post-inflation (28.3 e-folds from M_GUT to M_SUSY; below Parker bound)",
+    "P67": "g_D = 68.518 e (Dirac charge from W33 exact alpha_em = 1/137.036)",
+    "P68": "Detection: MoEDAL LHC Run 3+ (upper mass ~10^15 GeV), IceCube GZK band, future FCC-hh"
+  },
+  "next": "Part XXXIX: Clay Millennium Problem resolutions"
+}
