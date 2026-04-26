@@ -1,0 +1,29 @@
+{
+  "parameters": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "lam": 2,
+    "mu": 4,
+    "r": 2
+  },
+  "predictions": {
+    "q": 3,
+    "n_generations": 5,
+    "alpha_gut_inv": 26,
+    "tree_weinberg_angle": 0.2857142857142857,
+    "corrected_weinberg_angle": 0.23122,
+    "cft_gap": 5.0,
+    "ym_mass_gap": 10,
+    "topological_chern_number": 5.0,
+    "baryogenesis_eta_b": 6.12e-10,
+    "dark_energy_w0": -0.9847,
+    "page_time_solar_mass_years": 6.1e67,
+    "kk_scale_over_mgut": 2.98
+  },
+  "notes": [
+    "This JSON snapshot is the committed machine-readable target for the lightweight generator.",
+    "Values depending on running or sector-specific corrections are stored as current repository targets.",
+    "Update this file in lockstep with generator changes."
+  ]
+}
