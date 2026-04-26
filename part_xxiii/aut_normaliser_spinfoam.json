@@ -1,0 +1,1 @@
+{\n  \"Gamma_order\": 18432,\n  \"Aut_order\": 96,\n  \"semidirect_order\": 1769472,\n  \"cycle_to_spin_map\": {\"1\": 0.0, \"2\": 0.5, \"3\": 1.0, \"4\": 1.5},\n  \"total_spinfoam_amplitude\": -5760.0,\n  \"barbero_immirzi_gamma\": 0.5,\n  \"dominant_spin\": \"j=3/2 (4-cycles: 1728)\",\n  \"status\": \"Spin-foam identification: Gamma x Aut = discrete QG vertex group\"\n}\n
