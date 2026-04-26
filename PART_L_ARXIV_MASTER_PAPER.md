@@ -33,7 +33,9 @@ probability is p < 10^{-73}.
 ### II. The W(3,3) Graph
 - Definition and construction from GF(q^2) with q=3
 - Automorphism group Aut(W33) = U_4(2):2, order 480
-- Spectral properties: eigenvalues {12, 2^{15}, -4^{24}}
+- Spectral properties: eigenvalues {12^(1), 2^(24), (-4)^(15)}
+  [Corrected per Part LXI errata: multiplicity of +2 is 24, of -4 is 15;
+   trace check: 12 + 24×2 + 15×(-4) = 0 ✓]
 - Embedding in E6 root system
 - Connection to the Schoen Calabi-Yau manifold
 
@@ -85,7 +87,7 @@ probability is p < 10^{-73}.
 - CMB-S4: Omega_DM h^2 = 0.1200, r < 0.006
 - DARWIN: sigma_SI = 4.3 x 10^{-48} cm^2
 - LISA+SKA: two-peak GW with f1/f2 = 188,235
-- nEXO: m_eff(0nbb) = 3.2 meV (2032)
+- nEXO: m_eff(0nbb) = 1.4 meV (2032)  [P113: updated from 3.2 meV per Part LVIII]
 
 ### X. Conclusion
 - W(3,3) as the unique TOE selected by the SRG constraint
@@ -120,6 +122,17 @@ Cosmological constant (Equation 5):
 
   Lambda_cc / M_Pl^2 = exp(-log det A / v) = **1.34 x 10^{-43}
 
+Higgs quartic coupling (Equation 6, Part LIX):
+
+  lambda_H = Phi_6(q) / (6q^2) = 7/54 = 0.12963   [exact, no free parameters]
+  m_H = sqrt(2 * lambda_H) * v_EW = 125.37 GeV   [PDG: 125.20 GeV, err 0.13%]
+
+Neutrino mass (Equation 7, Part LVIII):
+
+  m_nu3 = lambda_CKM^2 * (M_W/M_Z) * sqrt(Phi_3(q)/Phi_4(q))
+        = (0.225)^2 * (80.37/91.19) * sqrt(13/10)
+        = 50.87 meV   [PDG: 50.1 meV, err 1.54%]
+
 ---
 
 ## Submission Targets
@@ -131,10 +144,12 @@ Cosmological constant (Equation 5):
 
 ## Current Repository State
 
-- Parts I-L committed to master
-- P1-P95 predictions filed
+- Parts I-LXI committed to master
+- P1-P115 predictions filed
 - All computational scripts: THEORY_OF_EVERYTHING.py, SOLVE_OPEN.py,
   SPECTRAL_VERIFICATION.py, and 60+ supporting Python modules
+- Parts LVIII-LIX: neutrino masses and Higgs quartic solved (April 26, 2026)
+- Errata LXI: eigenvalue multiplicities corrected throughout
 - Full LaTeX paper in preparation
 - DOI: pending Zenodo release
 
@@ -142,4 +157,4 @@ Cosmological constant (Equation 5):
 *Repository: https://github.com/wilcompute/W33-Theory*
 *License: MIT*
 *Author: Wil Dahn, Severna Park MD*
-*Version: 1.0-L (Parts I-L, April 2026)*
+*Version: 1.0-LXI (Parts I-LXI, April 2026)*
