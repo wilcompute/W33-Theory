@@ -21,7 +21,8 @@ now exists in the repo into one boundary surface:
 6. Transport algebra reduction:
     the local parity data is already the sign character of an exact local `S3`
     holonomy, and the remaining mixed-plane wall is reduced to one missing
-    non-identity unipotent sign-trivial holonomy class on the canonical host.
+    non-identity unipotent sign-trivial holonomy class on the canonical host,
+    equivalently one missing nonzero nilpotent holonomy increment.
 
 So the conservative exact reading is now stronger than "q=3 looks special":
 the finite/local/spectral/continuum-seed/electron-seed/transport layers
@@ -51,8 +52,14 @@ from w33_center_quad_transport_holonomy_bridge import (  # noqa: E402
 from w33_current_k3_mixed_plane_holonomy_failure_bridge import (  # noqa: E402
     build_current_k3_mixed_plane_holonomy_failure_summary,
 )
+from w33_current_k3_mixed_plane_nilpotent_holonomy_increment_failure_bridge import (  # noqa: E402
+    build_current_k3_mixed_plane_nilpotent_holonomy_increment_failure_summary,
+)
 from w33_k3_mixed_plane_holonomy_witness_bridge import (  # noqa: E402
     build_k3_mixed_plane_holonomy_witness_summary,
+)
+from w33_k3_mixed_plane_nilpotent_holonomy_increment_bridge import (  # noqa: E402
+    build_k3_mixed_plane_nilpotent_holonomy_increment_summary,
 )
 from w33_transport_ternary_cocycle_bridge import (  # noqa: E402
     build_transport_ternary_cocycle_summary,
@@ -291,6 +298,8 @@ def q3_transport_algebra_summary() -> Dict[str, object]:
     cocycle = build_transport_ternary_cocycle_summary()
     witness = build_k3_mixed_plane_holonomy_witness_summary()
     current = build_current_k3_mixed_plane_holonomy_failure_summary()
+    nilpotent = build_k3_mixed_plane_nilpotent_holonomy_increment_summary()
+    current_nilpotent = build_current_k3_mixed_plane_nilpotent_holonomy_increment_failure_summary()
 
     triangle_holonomy = holonomy["triangle_holonomy"]
     cycle_counts = triangle_holonomy["cycle_type_counts"]
@@ -298,6 +307,10 @@ def q3_transport_algebra_summary() -> Dict[str, object]:
     fiber_shift = cocycle["fiber_nilpotent_operator"]
     holonomy_witness = witness["mixed_plane_holonomy_witness"]
     current_state = current["current_mixed_plane_holonomy_state"]
+    nilpotent_witness = nilpotent["mixed_plane_nilpotent_holonomy_increment"]
+    current_nilpotent_state = current_nilpotent[
+        "current_mixed_plane_nilpotent_holonomy_increment_state"
+    ]
 
     return {
         "triangle_count": int(holonomy["transport_triangles"]),
@@ -312,6 +325,12 @@ def q3_transport_algebra_summary() -> Dict[str, object]:
         "canonical_nontrivial_holonomy": holonomy_witness["canonical_nontrivial_holonomy"],
         "gauge_related_nontrivial_holonomy": holonomy_witness["gauge_related_nontrivial_holonomy"],
         "current_sign_trivial_holonomies": current_state["current_sign_trivial_holonomy_matrices"],
+        "canonical_nonzero_increment": nilpotent_witness["canonical_nonzero_increment"],
+        "gauge_related_nonzero_increment": nilpotent_witness["gauge_related_nonzero_increment"],
+        "current_nilpotent_increment": current_nilpotent_state["current_nilpotent_increment"],
+        "current_nonzero_nilpotent_increments": current_nilpotent_state[
+            "current_nonzero_nilpotent_increments"
+        ],
         "exact_factorizations": {
             "triangle_parity_equals_local_s3_holonomy_sign_exactly": triangle_holonomy[
                 "z2_parity_equals_holonomy_sign_exactly"
@@ -340,6 +359,19 @@ def q3_transport_algebra_summary() -> Dict[str, object]:
                 "current_k3_mixed_plane_holonomy_failure_theorem"
             ][
                 "therefore_the_current_mixed_plane_host_fails_the_exact_holonomy_witness_test_for_one_reason_only_the_nontrivial_sign_trivial_holonomy_is_missing"
+            ],
+            "nonzero_nilpotent_increment_is_unique_up_to_gauge": nilpotent[
+                "k3_mixed_plane_nilpotent_holonomy_increment_theorem"
+            ]["the_two_nonzero_sign_trivial_increments_are_gauge_equivalent"],
+            "exact_k3_tail_reduces_to_one_nonzero_nilpotent_increment": nilpotent[
+                "k3_mixed_plane_nilpotent_holonomy_increment_theorem"
+            ][
+                "therefore_exact_k3_tail_realization_is_equivalent_to_one_support_preserving_nonzero_nilpotent_holonomy_increment_on_the_same_fixed_host"
+            ],
+            "current_host_fails_only_by_missing_that_nonzero_increment": current_nilpotent[
+                "current_k3_mixed_plane_nilpotent_holonomy_increment_failure_theorem"
+            ][
+                "therefore_the_current_mixed_plane_host_fails_the_exact_nilpotent_increment_test_for_one_reason_only_the_nonzero_increment_is_missing"
             ],
         },
     }
@@ -397,7 +429,8 @@ def classify_q3_master_lock() -> Tuple[Dict[str, object], ...]:
                 "The local q=3 transport algebra is already exact: triangle parity is the "
                 "sign character of a genuine local S3 holonomy, and the mixed-plane "
                 "realization wall is reduced to one missing non-identity unipotent "
-                "sign-trivial holonomy class on the canonical host."
+                "sign-trivial holonomy class on the canonical host, equivalently one "
+                "missing nonzero nilpotent holonomy increment."
             ),
             "evidence": transport,
         },
@@ -494,11 +527,30 @@ def analyze() -> Dict[str, object]:
             and transport["current_sign_trivial_holonomies"] == [[[1, 0], [0, 1]]]
             and all(transport["exact_factorizations"].values())
         ),
+        "the_transport_algebra_exactly_refines_the_same_wall_to_one_nonzero_nilpotent_increment": (
+            transport["fiber_shift_matrix"] == [[0, 1], [0, 0]]
+            and transport["canonical_nonzero_increment"] == [[0, 1], [0, 0]]
+            and transport["gauge_related_nonzero_increment"] == [[0, 2], [0, 0]]
+            and transport["current_nilpotent_increment"] == [[0, 0], [0, 0]]
+            and transport["current_nonzero_nilpotent_increments"] == []
+            and transport["exact_factorizations"][
+                "exact_k3_tail_reduces_to_one_nonzero_nilpotent_increment"
+            ]
+            and transport["exact_factorizations"][
+                "current_host_fails_only_by_missing_that_nonzero_increment"
+            ]
+        ),
         "the_remaining_wall_refines_to_the_first_sign_trivial_unipotent_transport_witness": (
             transport["current_sign_trivial_holonomies"] == [[[1, 0], [0, 1]]]
             and transport["canonical_nontrivial_holonomy"] == [[1, 1], [0, 1]]
             and transport["gauge_related_nontrivial_holonomy"] == [[1, 2], [0, 1]]
             and transport["fiber_shift_matrix"] == [[0, 1], [0, 0]]
+        ),
+        "the_remaining_wall_refines_equivalently_to_the_first_nonzero_nilpotent_holonomy_increment": (
+            transport["current_nilpotent_increment"] == [[0, 0], [0, 0]]
+            and transport["canonical_nonzero_increment"] == [[0, 1], [0, 0]]
+            and transport["gauge_related_nonzero_increment"] == [[0, 2], [0, 0]]
+            and transport["current_nonzero_nilpotent_increments"] == []
         ),
         "the_remaining_wall_is_not_finite_q_selection_but_smooth_realization": True,
     }
@@ -520,8 +572,9 @@ def analyze() -> Dict[str, object]:
             "continuum coefficient seed, the residual electron arithmetic packet, and the exact "
             "transport holonomy/cocycle reduction. The honest remaining theorem is therefore not "
             "'why q=3?' but the first non-identity unipotent sign-trivial transport witness on "
-            "the canonical mixed-plane host, i.e. the algebraic entry point for the smooth "
-            "continuum and dynamical realization."
+            "the canonical mixed-plane host, equivalently the first genuine nonzero nilpotent "
+            "holonomy increment there, i.e. the algebraic entry point for the smooth continuum "
+            "and dynamical realization."
         ),
     }
 

@@ -117,6 +117,10 @@ def test_q3_transport_algebra_summary_reduces_the_live_wall_to_one_witness() -> 
     assert summary["canonical_nontrivial_holonomy"] == [[1, 1], [0, 1]]
     assert summary["gauge_related_nontrivial_holonomy"] == [[1, 2], [0, 1]]
     assert summary["current_sign_trivial_holonomies"] == [[[1, 0], [0, 1]]]
+    assert summary["canonical_nonzero_increment"] == [[0, 1], [0, 0]]
+    assert summary["gauge_related_nonzero_increment"] == [[0, 2], [0, 0]]
+    assert summary["current_nilpotent_increment"] == [[0, 0], [0, 0]]
+    assert summary["current_nonzero_nilpotent_increments"] == []
     assert all(summary["exact_factorizations"].values())
 
 
@@ -148,6 +152,9 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
     assert theorem["the_q3_lock_is_now_overdetermined_across_local_spectral_and_continuum_seed_layers"] is True
     assert theorem["the_q3_lock_is_now_overdetermined_across_local_spectral_continuum_and_electron_seed_layers"] is True
     assert theorem["the_transport_algebra_exactly_reduces_the_smooth_realization_wall_to_one_unipotent_sign_trivial_witness"] is True
+    assert theorem["the_transport_algebra_exactly_refines_the_same_wall_to_one_nonzero_nilpotent_increment"] is True
     assert theorem["the_remaining_wall_refines_to_the_first_sign_trivial_unipotent_transport_witness"] is True
+    assert theorem["the_remaining_wall_refines_equivalently_to_the_first_nonzero_nilpotent_holonomy_increment"] is True
     assert theorem["the_remaining_wall_is_not_finite_q_selection_but_smooth_realization"] is True
     assert "non-identity unipotent sign-trivial transport witness" in summary["boundary_note"]
+    assert "nonzero nilpotent holonomy increment" in summary["boundary_note"]
