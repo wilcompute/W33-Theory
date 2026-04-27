@@ -59,6 +59,59 @@ def test_q3_local_kernel_summary_matches_finite_qutrit_packet() -> None:
         "centered_spread_probe_spectrum": {0: 25, 18: 15},
         "centered_anti_line_probe_spectrum": {0: 16, 36: 24},
     }
+    assert summary["parseval_target_geometry"] == {
+        "spread_target": {
+            "frame_type": "ETF(36,15)",
+            "sector_dimension": 15,
+            "normalized_coherence": "1/5",
+            "positive_sign_graph": {
+                "vertices": 36,
+                "degree": 15,
+                "lambda": 6,
+                "mu": 6,
+                "edge_count": 270,
+                "spectrum": {"-3": 20, "3": 15, "15": 1},
+            },
+            "negative_sign_graph": {
+                "vertices": 36,
+                "degree": 20,
+                "lambda": 10,
+                "mu": 12,
+                "edge_count": 360,
+                "spectrum": {"-4": 15, "2": 20, "20": 1},
+            },
+        },
+        "anti_line_target": {
+            "frame_type": "doubled two-distance tight frame(45,24)",
+            "duplicate_class_count": 45,
+            "sector_dimension": 24,
+            "positive_sign_graph": {
+                "vertices": 45,
+                "degree": 32,
+                "lambda": 22,
+                "mu": 24,
+                "edge_count": 720,
+                "spectrum": {"-4": 20, "2": 24, "32": 1},
+            },
+            "negative_sign_graph": {
+                "vertices": 45,
+                "degree": 12,
+                "lambda": 3,
+                "mu": 3,
+                "edge_count": 270,
+                "spectrum": {"-3": 24, "3": 20, "12": 1},
+            },
+            "positive_sign_isomorphic_to_transport_graph": True,
+        },
+        "common_naimark_shadow": {
+            "shared_shadow_dimension": 21,
+            "shared_shadow_split": "1 + 20",
+            "spread_shadow_frame_type": "ETF(36,21)",
+            "spread_shadow_coherence": "1/7",
+            "anti_line_shadow_normalized_off_diagonal": ["-1/14", "2/7"],
+            "naimark_complement_swaps_sign_graphs": True,
+        },
+    }
     assert all(summary["exact_factorizations"].values())
 
 
@@ -227,6 +280,8 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
     theorem = summary["q3_master_lock_theorem"]
 
     assert records["q3_local_qutrit_kernel_lock"]["support_level"] == "repo-exact finite kernel"
+    assert "ETF(36,15)" in records["q3_local_qutrit_kernel_lock"]["statement"]
+    assert "21 = 1 + 20" in records["q3_local_qutrit_kernel_lock"]["statement"]
     assert records["q3_spectral_ihara_uniqueness_lock"]["support_level"] == "repo-exact spectral uniqueness"
     assert records["q3_toroidal_continuum_seed_lock"]["support_level"] == "repo-exact continuum seed"
     assert records["q3_electron_seed_backbone_lock"]["support_level"] == "repo-exact fermion seed"
@@ -244,6 +299,9 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
     assert summary["record_names_open"] == ("q3_full_physical_realization_theorem",)
     assert theorem["the_local_kernel_exactly_realizes_the_q3_packet_1_3_9_27_40_240"] is True
     assert theorem["the_local_kernel_already_contains_the_exact_line_module_parseval_frame"] is True
+    assert theorem[
+        "the_local_kernel_already_contains_the_exact_target_side_parseval_geometry_and_naimark_shadow"
+    ] is True
     assert theorem["the_corrected_spectral_core_exactly_realizes_the_q3_lock"] is True
     assert theorem["the_continuum_seed_exactly_realizes_the_q3_packet_8_56_320_2240_12480"] is True
     assert theorem["the_electron_seed_packet_exactly_splices_into_the_same_q3_backbone"] is True

@@ -89,6 +89,9 @@ from scripts.w33_h4_branch_selection_search import (  # noqa: E402
 from scripts.w33_parseval_measurement_frame_audit import (  # noqa: E402
     build_parseval_measurement_frame_summary,
 )
+from scripts.w33_parseval_target_geometry_audit import (  # noqa: E402
+    build_parseval_target_geometry_summary,
+)
 from scripts.w33_qutrit_ladder_audit import (  # noqa: E402
     e8_side_exact_decomposition_summary,
     one_qutrit_local_layer_summary,
@@ -149,6 +152,7 @@ def q3_local_kernel_summary() -> Dict[str, object]:
     e8_side = e8_side_exact_decomposition_summary()
     core = get_w33_spectral_core()
     measurement_frame = build_parseval_measurement_frame_summary()
+    target_geometry = build_parseval_target_geometry_summary()
 
     q = int(core.q)
     phi3 = q * q + q + 1
@@ -182,6 +186,31 @@ def q3_local_kernel_summary() -> Dict[str, object]:
                 "centered_anti_line_probe_spectrum"
             ],
         },
+        "parseval_target_geometry": {
+            "spread_target": {
+                "frame_type": target_geometry["target_side_frame_geometry"]["spread_etf"]["frame_type"],
+                "sector_dimension": target_geometry["target_side_frame_geometry"]["spread_etf"]["sector_dimension"],
+                "normalized_coherence": target_geometry["target_side_frame_geometry"]["spread_etf"]["normalized_coherence"],
+                "positive_sign_graph": target_geometry["target_side_frame_geometry"]["spread_etf"]["positive_sign_graph"],
+                "negative_sign_graph": target_geometry["target_side_frame_geometry"]["spread_etf"]["negative_sign_graph"],
+            },
+            "anti_line_target": {
+                "frame_type": target_geometry["target_side_frame_geometry"]["anti_line_quotient"]["frame_type"],
+                "duplicate_class_count": target_geometry["target_side_frame_geometry"]["anti_line_quotient"]["duplicate_class_count"],
+                "sector_dimension": target_geometry["target_side_frame_geometry"]["anti_line_quotient"]["sector_dimension"],
+                "positive_sign_graph": target_geometry["target_side_frame_geometry"]["anti_line_quotient"]["positive_sign_graph"],
+                "negative_sign_graph": target_geometry["target_side_frame_geometry"]["anti_line_quotient"]["negative_sign_graph"],
+                "positive_sign_isomorphic_to_transport_graph": target_geometry["target_side_frame_geometry"]["anti_line_quotient"]["positive_sign_isomorphic_to_transport_graph"],
+            },
+            "common_naimark_shadow": {
+                "shared_shadow_dimension": target_geometry["common_naimark_shadow"]["shared_shadow_dimension"],
+                "shared_shadow_split": target_geometry["common_naimark_shadow"]["shared_shadow_split"],
+                "spread_shadow_frame_type": target_geometry["common_naimark_shadow"]["spread_shadow"]["frame_type"],
+                "spread_shadow_coherence": target_geometry["common_naimark_shadow"]["spread_shadow"]["normalized_coherence"],
+                "anti_line_shadow_normalized_off_diagonal": target_geometry["common_naimark_shadow"]["anti_line_shadow"]["normalized_off_diagonal"],
+                "naimark_complement_swaps_sign_graphs": all(target_geometry["naimark_sign_duality"].values()),
+            },
+        },
         "exact_factorizations": {
             "visible_shell_is_q_cubed": int(one_qutrit["visible_shell_size"]) == q**3,
             "fiber_count_is_q_squared": int(one_qutrit["fiber_count"]) == q * q,
@@ -194,6 +223,7 @@ def q3_local_kernel_summary() -> Dict[str, object]:
             "edge_count_is_half_vk": int(two_qutrit["edge_count"])
             == (int(two_qutrit["projective_point_count"]) * int(core.k)) // 2,
             "line_module_parseval_frame_is_exact": all(measurement_frame["theorem"].values()),
+            "line_module_parseval_target_geometry_is_exact": all(target_geometry["theorem"].values()),
         },
     }
 
@@ -515,7 +545,10 @@ def classify_q3_master_lock() -> Tuple[Dict[str, object], ...]:
             "support_level": "repo-exact finite kernel",
             "statement": (
                 "The local qutrit kernel already carries the exact q=3 packet "
-                "1/3/9/27/40/240 via fibers, lines, projective points, and edges."
+                "1/3/9/27/40/240 via fibers, lines, projective points, and edges; "
+                "the same 40 = 1 + 15 + 24 Parseval split already closes on the target side "
+                "as ETF(36,15), the 45-point transport quotient frame, and the common "
+                "Naimark shadow 21 = 1 + 20."
             ),
             "evidence": local_kernel,
         },
@@ -622,6 +655,63 @@ def analyze() -> Dict[str, object]:
                 "centered_anti_line_probe_spectrum": {0: 16, 36: 24},
             }
             and local_kernel["exact_factorizations"]["line_module_parseval_frame_is_exact"]
+        ),
+        "the_local_kernel_already_contains_the_exact_target_side_parseval_geometry_and_naimark_shadow": (
+            local_kernel["parseval_target_geometry"]
+            == {
+                "spread_target": {
+                    "frame_type": "ETF(36,15)",
+                    "sector_dimension": 15,
+                    "normalized_coherence": "1/5",
+                    "positive_sign_graph": {
+                        "vertices": 36,
+                        "degree": 15,
+                        "lambda": 6,
+                        "mu": 6,
+                        "edge_count": 270,
+                        "spectrum": {"-3": 20, "3": 15, "15": 1},
+                    },
+                    "negative_sign_graph": {
+                        "vertices": 36,
+                        "degree": 20,
+                        "lambda": 10,
+                        "mu": 12,
+                        "edge_count": 360,
+                        "spectrum": {"-4": 15, "2": 20, "20": 1},
+                    },
+                },
+                "anti_line_target": {
+                    "frame_type": "doubled two-distance tight frame(45,24)",
+                    "duplicate_class_count": 45,
+                    "sector_dimension": 24,
+                    "positive_sign_graph": {
+                        "vertices": 45,
+                        "degree": 32,
+                        "lambda": 22,
+                        "mu": 24,
+                        "edge_count": 720,
+                        "spectrum": {"-4": 20, "2": 24, "32": 1},
+                    },
+                    "negative_sign_graph": {
+                        "vertices": 45,
+                        "degree": 12,
+                        "lambda": 3,
+                        "mu": 3,
+                        "edge_count": 270,
+                        "spectrum": {"-3": 24, "3": 20, "12": 1},
+                    },
+                    "positive_sign_isomorphic_to_transport_graph": True,
+                },
+                "common_naimark_shadow": {
+                    "shared_shadow_dimension": 21,
+                    "shared_shadow_split": "1 + 20",
+                    "spread_shadow_frame_type": "ETF(36,21)",
+                    "spread_shadow_coherence": "1/7",
+                    "anti_line_shadow_normalized_off_diagonal": ["-1/14", "2/7"],
+                    "naimark_complement_swaps_sign_graphs": True,
+                },
+            }
+            and local_kernel["exact_factorizations"]["line_module_parseval_target_geometry_is_exact"]
         ),
         "the_corrected_spectral_core_exactly_realizes_the_q3_lock": (
             spectral["srg_parameters"] == (40, 12, 2, 4)
