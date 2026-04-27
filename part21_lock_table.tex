@@ -8,11 +8,14 @@ presupposes another.
 
 \subsection{Complete Lock Table}
 
-\begin{center}
 \renewcommand{\arraystretch}{1.35}
-\begin{tabular}{clp{6.8cm}l}
+\small
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{@{}>{\raggedleft\arraybackslash}p{0.06\linewidth}@{\hspace{0.4em}}>{\raggedright\arraybackslash}p{0.16\linewidth}@{\hspace{0.4em}}>{\raggedright\arraybackslash}p{0.51\linewidth}@{\hspace{0.4em}}>{\raggedright\arraybackslash}p{0.13\linewidth}@{}}
 \hline
 \textbf{Lock} & \textbf{Name} & \textbf{Statement} & \textbf{Status} \\ \hline
+\endhead
 
 1 & Factorial selection &
   $(q-2)! = 1$ gives $q \in \{2, 3\}$ as the only prime powers for which $\mathrm{GQ}(q,q)$
@@ -97,8 +100,10 @@ presupposes another.
   Proven (computational + Artin) \\[2pt]
 
 \hline
-\end{tabular}
-\end{center}
+\end{longtable}
+\setlength{\LTleft}{\fill}
+\setlength{\LTright}{\fill}
+\normalsize
 
 \subsection{The Critical Gap: Representation-Theoretic Closure}
 

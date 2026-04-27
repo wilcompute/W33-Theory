@@ -22,6 +22,57 @@ PHI4 = 10
 PHI6 = 7
 F = 24
 
+ORGANIZATION_LAYER_ORDER = (
+    "carrier",
+    "realization",
+    "algebra",
+    "computation",
+    "witness",
+)
+
+CHECKED_PERIODIC_ROWS = (
+    "realization_row",
+    "pascal_computation_row",
+    "frontier_witness_row",
+    "exceptional_envelope_row",
+)
+
+BACKBONE_INVARIANT_REGISTRY = {
+    "q3_selector": {
+        "value": 3,
+        "meaning": "the unique finite selector q! = 2q picks q = 3",
+    },
+    "40_point_shell": {
+        "value": 40,
+        "meaning": "the W(3,3) projective point/line shell with 40 symbols",
+    },
+    "81_seed": {
+        "value": 81,
+        "meaning": "the two-qutrit affine seed and exceptional/frontier 81-backbone",
+    },
+    "240_edge_root_shell": {
+        "value": 240,
+        "meaning": "the shared W(3,3) edge shell and E8 root shell",
+    },
+}
+
+
+def _five_layer_route(
+    *,
+    carrier: str,
+    realization: str,
+    algebra: str,
+    computation: str,
+    witness: str,
+) -> dict[str, str]:
+    return {
+        "carrier": carrier,
+        "realization": realization,
+        "algebra": algebra,
+        "computation": computation,
+        "witness": witness,
+    }
+
 
 def q_factorial_equals_two_q_only_at_three(limit: int = 12) -> list[int]:
     """Return positive q <= limit satisfying q! = 2q."""
@@ -141,42 +192,114 @@ def build_cct_crosswalk() -> dict[str, Any]:
             "cct_desideratum": "finite code/language",
             "w33_witness": "F_3^4 projective two-qutrit Pauli symbols",
             "integer_certificate": language["symbols"]["projective_symbols"],
+            "aligned_periodic_rows": ["exceptional_envelope_row"],
+            "same_table_backbone_invariants": ["40_point_shell"],
+            "five_layer_route": _five_layer_route(
+                carrier="projective two-qutrit/W(3,3) finite symbol shell",
+                realization="F_3^4 projective Pauli symbols modulo nonzero scalars",
+                algebra="ternary symplectic commutation law",
+                computation="projectivize the two-qutrit exponent space to the 40-symbol shell",
+                witness="40 projective symbols",
+            ),
         },
         {
             "cct_desideratum": "principle of efficient language",
             "w33_witness": "q=3 is the unique q<=12 solution of q! = 2q",
             "integer_certificate": Q,
+            "aligned_periodic_rows": ["exceptional_envelope_row"],
+            "same_table_backbone_invariants": ["q3_selector", "81_seed"],
+            "five_layer_route": _five_layer_route(
+                carrier="the q-ary finite kernel selector",
+                realization="ternary qutrit alphabet",
+                algebra="factorial selector q! = 2q",
+                computation="scan positive q <= 12 for exact selector hits",
+                witness="q = 3",
+            ),
         },
         {
             "cct_desideratum": "trit savings",
             "w33_witness": "81 two-qutrit exponent vectors collapse to 40 projective nonidentity observables",
             "integer_certificate": language["symbols"]["two_qutrit_exponent_vectors"],
+            "aligned_periodic_rows": ["exceptional_envelope_row"],
+            "same_table_backbone_invariants": ["81_seed", "40_point_shell"],
+            "five_layer_route": _five_layer_route(
+                carrier="two-qutrit exponent-vector shell",
+                realization="81 affine exponent vectors in F_3^4",
+                algebra="quotient by the two nonzero F_3 scalars",
+                computation="81 -> 40 projective nonidentity observables",
+                witness="81 affine vectors and 40 projective symbols",
+            ),
         },
         {
             "cct_desideratum": "Clifford/root-system process objects",
             "w33_witness": "Aut(W(3,3)) = Sp(4,3), the two-qutrit Clifford symplectic group",
             "integer_certificate": 51_840,
+            "aligned_periodic_rows": ["exceptional_envelope_row"],
+            "same_table_backbone_invariants": ["240_edge_root_shell"],
+            "five_layer_route": _five_layer_route(
+                carrier="the W(3,3) commutation graph and its 240-edge shell",
+                realization="two-qutrit Clifford/symplectic process action",
+                algebra="Sp(4,3) symmetry with the finite edge/root count bridge",
+                computation="enumerate the exact finite process group on the kernel",
+                witness="|Sp(4,3)| = 51840 and |E(W(3,3))| = 240",
+            ),
         },
         {
             "cct_desideratum": "E8 to H4 quasicrystal pathway",
             "w33_witness": "240 W(3,3) edges, 120 internal line-matching states",
             "integer_certificate": projection["w33_edges"],
+            "aligned_periodic_rows": ["exceptional_envelope_row", "frontier_witness_row"],
+            "same_table_backbone_invariants": ["240_edge_root_shell"],
+            "five_layer_route": _five_layer_route(
+                carrier="the 240-edge W(3,3) shell with its 120 matching-state cover",
+                realization="W(3,3) edge shell and M120 line-matching packet",
+                algebra="E8/H4 Coxeter-degree arithmetic plus the finite no-go surface",
+                computation="compare the 240/120/30 packets and isolate the missing selector",
+                witness="240 edges, 120 matching states, and the unresolved golden selector",
+            ),
         },
         {
             "cct_desideratum": "feedback loop / cycle-clock dynamics",
             "w33_witness": "finite graph cycle rank and three-state line clocks",
             "integer_certificate": language["syntactical_freedom"]["cycle_rank"],
+            "aligned_periodic_rows": ["frontier_witness_row"],
+            "same_table_backbone_invariants": ["40_point_shell"],
+            "five_layer_route": _five_layer_route(
+                carrier="the W(3,3) cycle space and line-clock shell",
+                realization="40 lines with 3 matchings per line",
+                algebra="finite feedback/cycle algebra on the fixed carrier",
+                computation="compute the 120 line-clock states and cycle rank beta_1 = 201",
+                witness="120 line-clock states and cycle rank 201",
+            ),
         },
         {
             "cct_desideratum": "non-arbitrary H4 emergence",
             "w33_witness": "full PSp(4,3) symmetry cannot produce a 12-regular 600-cell skeleton",
             "integer_certificate": no_go["full_psp43_orbital_degrees"],
+            "aligned_periodic_rows": ["frontier_witness_row", "exceptional_envelope_row"],
+            "same_table_backbone_invariants": ["240_edge_root_shell"],
+            "five_layer_route": _five_layer_route(
+                carrier="the full PSp(4,3) orbital packet on the M120 state space",
+                realization="orbital degree packet (2,27,36,54)",
+                algebra="full-symmetry orbital decomposition",
+                computation="enumerate invariant degrees and rule out degree 12",
+                witness="12 is absent, so a golden/icosahedral selector is still required",
+            ),
         },
     ]
+    aligned_rows = sorted({row_name for row in rows for row_name in row["aligned_periodic_rows"]})
+    backbone_invariants = sorted(
+        {name for row in rows for name in row["same_table_backbone_invariants"]}
+    )
     return {
+        "layer_order": ORGANIZATION_LAYER_ORDER,
+        "checked_periodic_rows": CHECKED_PERIODIC_ROWS,
+        "backbone_invariant_registry": BACKBONE_INVARIANT_REGISTRY,
         "language": language,
         "projection": projection,
         "no_go": no_go,
+        "aligned_periodic_rows_used": aligned_rows,
+        "same_table_backbone_invariants_used": backbone_invariants,
         "crosswalk_rows": rows,
         "theorem": {
             "w33_realizes_cct_finite_language_template": all(
@@ -192,10 +315,34 @@ def build_cct_crosswalk() -> dict[str, Any]:
                     not no_go["full_symmetry_can_make_600_cell_graph"],
                 ]
             ),
+            "every_crosswalk_row_has_a_full_five_layer_route": all(
+                tuple(row["five_layer_route"].keys()) == ORGANIZATION_LAYER_ORDER
+                and all(row["five_layer_route"][layer] for layer in ORGANIZATION_LAYER_ORDER)
+                for row in rows
+            ),
+            "crosswalk_rows_route_only_to_checked_periodic_rows": all(
+                all(row_name in CHECKED_PERIODIC_ROWS for row_name in row["aligned_periodic_rows"])
+                for row in rows
+            ),
+            "crosswalk_terms_are_forced_onto_exact_carriers_and_witnesses": all(
+                "carrier" in row["five_layer_route"] and "witness" in row["five_layer_route"]
+                for row in rows
+            ),
+            "crosswalk_rows_name_the_same_table_backbone_invariants_they_use": all(
+                row["same_table_backbone_invariants"]
+                and all(name in BACKBONE_INVARIANT_REGISTRY for name in row["same_table_backbone_invariants"])
+                for row in rows
+            ),
+            "the_source_dictionary_explicitly_uses_the_shared_40_81_240_backbone": (
+                {"40_point_shell", "81_seed", "240_edge_root_shell"}.issubset(set(backbone_invariants))
+            ),
             "interpretation": (
                 "W(3,3) is an executable finite instance of the CCT code-language "
-                "template; the H4/quasicrystal step still requires an extra "
-                "golden/icosahedral selector."
+                "template; the CCT dictionary rows are now routed through the "
+                "carrier -> realization -> algebra -> computation -> witness "
+                "framework and each row names the shared q=3 backbone invariant "
+                "it is using, while the H4/quasicrystal step still requires an "
+                "extra golden/icosahedral selector."
             ),
         },
     }

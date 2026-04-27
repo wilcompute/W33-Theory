@@ -77,7 +77,8 @@ def poly_resid(M, roots):
         P = P @ (A-r*I)
     return max(abs(int(x)) for x in P.reshape(-1))
 
-def main():
+
+def build_summary():
     P=points(); idx={p:i for i,p in enumerate(P)}
     L=all_lines(P); Li=[x for x in L if is_iso(x)]; Ln=[x for x in L if not is_iso(x)]
     Ei=line_pairs(Li,idx); En=line_pairs(Ln,idx)
@@ -134,6 +135,10 @@ def main():
     assert results["complement_spectrum"]=={"-3":24,"3":15,"27":1}
     assert results["seidel_spectrum"]=={"-15":1,"-7":15,"5":24}
     assert results["seidel_polynomial_residual"]==0
+    return results
+
+def main():
+    results = build_summary()
     Path("PART_LXIV_pascal_line_split_results.json").write_text(json.dumps(results, indent=2))
     print("="*78)
     print("PART LXIV — PASCAL LINE-SPLIT THEOREM VERIFIED")

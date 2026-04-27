@@ -1,9 +1,14 @@
 """Checked crosswalk between Cycle Clock Theory terms and W(3,3)."""
 
+from pathlib import Path
+
 from scripts.w33_cct_crosswalk import (
+    BACKBONE_INVARIANT_REGISTRY,
+    CHECKED_PERIODIC_ROWS,
     E,
     K,
     MU,
+    ORGANIZATION_LAYER_ORDER,
     Q,
     build_cct_crosswalk,
     e8_h4_projection_summary,
@@ -12,6 +17,10 @@ from scripts.w33_cct_crosswalk import (
     q_factorial_equals_two_q_only_at_three,
     w33_clock_language_summary,
 )
+
+
+DOC_NOTE = Path("docs/W33_PERIODIC_TABLE_ORGANIZATION.md")
+PAPER_TEX = Path("w33_paper.tex")
 
 
 class TestCCT1FiniteCodeLanguage:
@@ -90,7 +99,85 @@ class TestCCT4H4Selector:
             "non-arbitrary H4 emergence",
         }
 
+    def test_crosswalk_rows_now_carry_five_layer_routes_and_checked_row_tags(self):
+        crosswalk = build_cct_crosswalk()
+
+        assert crosswalk["layer_order"] == ORGANIZATION_LAYER_ORDER
+        assert crosswalk["checked_periodic_rows"] == CHECKED_PERIODIC_ROWS
+        assert crosswalk["backbone_invariant_registry"] == BACKBONE_INVARIANT_REGISTRY
+        assert crosswalk["aligned_periodic_rows_used"] == [
+            "exceptional_envelope_row",
+            "frontier_witness_row",
+        ]
+        assert crosswalk["same_table_backbone_invariants_used"] == [
+            "240_edge_root_shell",
+            "40_point_shell",
+            "81_seed",
+            "q3_selector",
+        ]
+
+        for row in crosswalk["crosswalk_rows"]:
+            route = row["five_layer_route"]
+            assert tuple(route) == ORGANIZATION_LAYER_ORDER
+            assert all(route[layer] for layer in ORGANIZATION_LAYER_ORDER)
+            assert row["aligned_periodic_rows"]
+            assert all(name in CHECKED_PERIODIC_ROWS for name in row["aligned_periodic_rows"])
+            assert row["same_table_backbone_invariants"]
+            assert all(
+                name in BACKBONE_INVARIANT_REGISTRY for name in row["same_table_backbone_invariants"]
+            )
+
+        language_row = next(
+            row for row in crosswalk["crosswalk_rows"] if row["cct_desideratum"] == "finite code/language"
+        )
+        assert language_row["aligned_periodic_rows"] == ["exceptional_envelope_row"]
+        assert language_row["same_table_backbone_invariants"] == ["40_point_shell"]
+        assert language_row["five_layer_route"] == {
+            "carrier": "projective two-qutrit/W(3,3) finite symbol shell",
+            "realization": "F_3^4 projective Pauli symbols modulo nonzero scalars",
+            "algebra": "ternary symplectic commutation law",
+            "computation": "projectivize the two-qutrit exponent space to the 40-symbol shell",
+            "witness": "40 projective symbols",
+        }
+
+        trit_row = next(
+            row for row in crosswalk["crosswalk_rows"] if row["cct_desideratum"] == "trit savings"
+        )
+        assert trit_row["same_table_backbone_invariants"] == ["81_seed", "40_point_shell"]
+
+        no_go_row = next(
+            row for row in crosswalk["crosswalk_rows"] if row["cct_desideratum"] == "non-arbitrary H4 emergence"
+        )
+        assert no_go_row["aligned_periodic_rows"] == [
+            "frontier_witness_row",
+            "exceptional_envelope_row",
+        ]
+        assert no_go_row["same_table_backbone_invariants"] == ["240_edge_root_shell"]
+        assert "12 is absent" in no_go_row["five_layer_route"]["witness"]
+
     def test_crosswalk_theorem(self):
         crosswalk = build_cct_crosswalk()
         assert crosswalk["theorem"]["w33_realizes_cct_finite_language_template"]
+        assert crosswalk["theorem"]["every_crosswalk_row_has_a_full_five_layer_route"]
+        assert crosswalk["theorem"]["crosswalk_rows_route_only_to_checked_periodic_rows"]
+        assert crosswalk["theorem"]["crosswalk_terms_are_forced_onto_exact_carriers_and_witnesses"]
+        assert crosswalk["theorem"]["crosswalk_rows_name_the_same_table_backbone_invariants_they_use"]
+        assert crosswalk["theorem"]["the_source_dictionary_explicitly_uses_the_shared_40_81_240_backbone"]
+        assert "carrier -> realization -> algebra -> computation -> witness" in crosswalk["theorem"]["interpretation"]
+        assert "shared q=3 backbone invariant" in crosswalk["theorem"]["interpretation"]
         assert "H4/quasicrystal step" in crosswalk["theorem"]["interpretation"]
+
+    def test_docs_and_paper_mention_the_cct_backbone_invariants_explicitly(self):
+        doc_text = DOC_NOTE.read_text(encoding="utf-8")
+        paper_text = PAPER_TEX.read_text(encoding="utf-8")
+
+        assert "scripts/w33_cct_crosswalk.py" in doc_text
+        assert "tests/test_w33_cct_crosswalk.py" in doc_text
+        assert "the `40` shell, the `81` seed, or the `240`" in doc_text
+        assert "edge/root shell" in doc_text
+
+        assert "The executable crosswalk now enforces that rule row by row." in paper_text
+        assert r"\texttt{scripts/w33\_cct\_crosswalk.py}" in paper_text
+        assert r"\texttt{tests/test\_w33\_cct\_crosswalk.py}" in paper_text
+        assert "the $40$ shell, the" in paper_text
+        assert "the $240$ edge/root shell" in paper_text

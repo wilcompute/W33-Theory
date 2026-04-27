@@ -98,10 +98,11 @@
   \vspace{-1.2cm}
   {\LARGE\bfseries The Symplectic Polar Space $W(3,3)$}\\[0.3cm]
   {\large\bfseries and a Complete Theory of Fundamental Physics}\\[0.55cm]
-  {\large\itshape From One Diophantine Equation $q^q = q^3$\\
+  {\large\itshape From the Diophantine Seed $q!=2q$\\
   to the Standard Model, General Relativity,\\
   and Cosmology with Zero Free Parameters}\\[0.55cm]
-  {\normalsize Parts I--XXII $+$ Supplements A--Z, $\alpha$--$\omega$ (skipping $\mu, \pi, \phi$), $\aleph$, $\beth$, $\gimel$, $\daleth$, $\Omega$ \\
+  {\normalsize Parts I--XXII $+$ Supplements A--Z, $\alpha$--$\omega$\\
+  (skipping $\mu, \pi, \phi$), $\aleph$, $\beth$, $\gimel$, $\daleth$, $\Omega$ \\
   \small 3300$+$ Verified Identities \ $\cdot$\  600$+$ Phases \ $\cdot$\  Zero Failures}
 }
 \author{\normalsize\itshape Quantum Gravity Research}
@@ -129,6 +130,10 @@ $q!=2q$ (uniquely solved by $q=3$), we derive:
 \item cosmological parameters $\Omega_\Lambda=41/60$,
   $\Omega_{\mathrm{DM}}/\Omega_b = 16/3$, $H_0=67$~km/s/Mpc.
 \end{itemize}
+The live theorem spine uses $q!=2q$ as the master seed; the prime-only
+corollary $q^q=q^3$ (Supplement~X) and the auxiliary uniqueness identity
+$q^q=q^3+q-1$ (Supplement~$\Omega$) are tracked as derived surfaces rather
+than as competing axioms.
 The construction rests on the exceptional isomorphism
 $\PSp(4,3)\cong W(E_6)^+$ (simple group of order 25\,920) and is
 verified by \textbf{3300$+$ independent mathematical checks with zero failures}.
@@ -136,7 +141,7 @@ Supplements A--Z, $\alpha$--$\omega$ (skipping $\mu, \pi, \phi$), $\aleph$, $\be
 (arithmetic skeleton), the seven Clay Millennium Problems through
 $W_{3,3}$, the anthropic closure (why \emph{this} graph and no other),
 fifteen experimental falsifiers, the $\Omega$ uniqueness proof (the
-Diophantine identity $q^q = q^3+q-1$ has a unique solution $q=3$),
+derived Diophantine identity $q^q = q^3+q-1$ again singles out $q=3$),
 the explicit Graph Riemann Hypothesis for $W_{3,3}$ (all non-trivial
 Ihara-zeta zeros on $|u|=1/\sqrt{11}$), and a constructive verification
 of the $40\times 40$ adjacency matrix from the symplectic form on
@@ -153,7 +158,12 @@ edges, and a full-symmetry no-go theorem proving that a $12$-regular
 whole $\PSp(4,3)$ action.
 \end{abstract}
 
+\begingroup
+\setcounter{tocdepth}{1}
+\scriptsize
+\sloppy
 \tableofcontents
+\endgroup
 \newpage
 
 % ═══════════════════════════════════════════════════════════════
@@ -1351,11 +1361,129 @@ $z$ & $(k-1)+\mu\,i$ & $11+4i$
 \end{center}
 
 
+\subsection{Organizing Layers: Carrier, Realization, Algebra, Computation, Witness}
+
+To keep the living paper readable, five different notions should be kept
+separate.
+\begin{enumerate}[leftmargin=2em]
+\item A \textbf{carrier} is the exact object on which data lives: for
+example $W(3,3)$, the Schl\"afli $27$-configuration, the Burkhardt
+$40$-shell, a toroidal Csaszar/Szilassi model, or the fixed
+$81\to 162\to 81$ tail package.
+\item A \textbf{realization} is a concrete presentation of a carrier.
+Different realizations may encode the same carrier-level theorem.
+\item An \textbf{algebra} is the law acting on that carrier: symplectic
+Pauli commutation, Pascal-sector splitting, transport holonomy, or an
+exceptional/Jordan envelope.
+\item A \textbf{computation} is an exact controlled move on a fixed
+carrier: quotient, duality, sector split, transport lift, or witness
+activation.
+\item A \textbf{witness} is the smallest exact datum certifying the
+remaining frontier on that fixed carrier: for the present wall, this is
+the rigid $\Delta C=14105$ target together with the exact affine witness
+point on the fixed tail package.
+\end{enumerate}
+
+{\small
+\begin{center}
+\begin{tabular}{@{}p{0.16\linewidth}p{0.27\linewidth}p{0.20\linewidth}p{0.27\linewidth}@{}}
+\toprule
+\textbf{Layer} & \textbf{Exact anchor} & \textbf{Invariant package} & \textbf{Canonical move} \\
+\midrule
+Carrier
+&
+$W(3,3)$, Schl\"afli $27$, Burkhardt $40$, fixed $81\to 162\to 81$ package
+&
+$q,v,k,\lambda,\mu$ and shell counts
+&
+incidence, complement, quotient \\
+
+Realization
+&
+cataloged $5$ Csaszar and $2$ Szilassi toroidal models
+&
+common half-turn symmetry and dual orbit counts $(4,7)\leftrightarrow(7,4)$
+&
+duality and orbit comparison \\
+
+Sector algebra
+&
+Gaussian Pascal row $[1,40,130,40,1]$
+&
+$130=40+90$ and local $13=4+9$
+&
+signed split $S=A-A_N$ \\
+
+Transport algebra
+&
+sign-trivial unipotent holonomy $H=I+N$ on the fixed host
+&
+$(\mathrm{lcm},\mathrm{gcd})=(12,217)$
+&
+witness activation on the existing channel \\
+
+Frontier witness
+&
+$\Delta C=14105$ and the exact affine witness point
+&
+one rigid affine target
+&
+realization on the already-fixed package \\
+
+Exceptional envelope
+&
+exact qutrit ladder up to the $E_8$-side $E_6+A_2$ boundary
+&
+$27\leftrightarrow 27$, $240\leftrightarrow 240$, $729\leftrightarrow 729$, and $72+6+162$
+&
+finite ladder closure up to the $E_8$ boundary \\
+\bottomrule
+\end{tabular}
+\end{center}
+}
+
+In this sense the paper has a useful ``periodic table'': the rows are
+carrier/realization regimes and the columns are the exact operations
+allowed on them.  For the algebra side, however, the better analogy is
+closer to a magic square than to a flat list, because different inputs
+produce different symmetry envelopes.  The main practical rule is that
+the present frontier should be stated as a computation on a fixed
+carrier, not as a search for a vague new object.  That is exactly why
+the live wall has sharpened to one witness activation on the existing
+tail package.  Likewise, the exceptional row should now be read as an
+exact finite ladder up to the $E_8$ boundary, not as a completed
+functorial lift from the qutrit kernel.
+
+The same-table bridge theorem is now short enough to state cleanly: the
+rows belong together because they are distinct exact layers of one
+$q=3$ backbone.  The Pascal row and exceptional row share the same
+$40$-point/$240$-edge shell; the frontier row and exceptional row share
+the same $81$ seed; and the realization row supplies the exact dual
+packet that occupies the realization slot of that same framework.  So
+the table is not a juxtaposition of analogies but one finite backbone
+read at four verified layers.
+
+The organization table is now also executable.  The summary surface
+\texttt{scripts/w33\_periodic\_table\_organization.py} packages the
+toroidal realization row, the Pascal computation row, the current
+frontier witness row, and the exceptional-envelope row into one checked
+object.  Focused validation lives in:
+{\small\par\noindent\texttt{tests/test\_w33\_periodic\_table\_organization.py}\par}
+The
+exceptional row is sourced from
+\texttt{scripts/w33\_qutrit\_ladder\_audit.py} and the boundary
+separation in \texttt{scripts/w33\_e8\_correspondence\_boundary\_audit.py}.
+The tracked artifact
+\texttt{artifacts/w33\_periodic\_table\_organization\_summary.json}
+freezes that same table as data.
+
+
 \section{Verification Statistics}
 \label{app:verification}
 
 \begin{center}
-\begin{tabular}{@{}clr@{}}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.58\linewidth}>{\raggedleft\arraybackslash}p{0.10\linewidth}@{}}
 \toprule
 \textbf{Phase} & \textbf{Domain} & \textbf{Checks} \\
 \midrule
@@ -1440,8 +1568,11 @@ v=40,\ k=12,\ \lambda=2,\ \mu=4,\ q=3,\ f=24,\ g=15,\ r=2,\ s=-4,\ E=240.
 130 \;=\; v+k+\lambda+\mu+q+f+g+\Phi_3+\Phi_4+\Phi_6 \;=\; \Phi_4\,\Phi_3.
 \]
 
-\section{Companion Phase Catalogue (CCCLXIV--CCCXCIX)}
-\begin{longtable}{rlc}
+\section[Companion Phase Catalogue (CCCLXIV--CCCXCIX)]{Companion Phase Catalogue\\(CCCLXIV--CCCXCIX)}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\footnotesize
+\begin{longtable}{@{}>{\raggedleft\arraybackslash}p{0.05\linewidth}@{\hspace{0.4em}}>{\raggedright\arraybackslash}p{0.60\linewidth}@{\hspace{0.4em}}>{\centering\arraybackslash}p{0.08\linewidth}@{}}
 \toprule
 \# & Phase & Checks \\
 \midrule \endhead
@@ -1483,9 +1614,12 @@ v=40,\ k=12,\ \lambda=2,\ \mu=4,\ q=3,\ f=24,\ g=15,\ r=2,\ s=-4,\ E=240.
 399 & Division algebras: $(\RR,\CC,\HH,\OO)=(1,\lambda,\mu,\lambda^q)$, $D_4$ triality & 22 \\
 400 & Milestone CD: $400=v\Phi_4=(E/k)^2$, full closure & 19 \\
 \midrule
-\textbf{Total Companion} & & \textbf{725} \\
+\multicolumn{2}{r}{\textbf{Total Companion}} & \textbf{725} \\
 \bottomrule
 \end{longtable}
+\setlength{\LTleft}{\fill}
+\setlength{\LTright}{\fill}
+\normalsize
 
 \section{Six Headline Identities}
 
@@ -1591,6 +1725,34 @@ cited at point of use; the $W_{3,3}$ column is the new finite certificate.
 [I2] \href{https://www.quantumgravityresearch.org/wp-content/uploads/2019/07/The-Code-Theoretic-Axiom-20190318.pdf}{Irwin, \emph{The Code-Theoretic Axiom}};
 [Q1] \href{https://quantumgravityresearch.org/cycle-clock-theory-overview/}{QGR Cycle Clock Theory overview};
 [K1] \href{https://kleeirwin.com/research/}{Klee Irwin research list}.
+
+Before reading the dictionary, it helps to keep one translation rule
+fixed.  Each imported source term should be read in the order
+\[
+\boxed{\text{carrier} \;\to\; \text{realization} \;\to\; \text{algebra} \;\to\; \text{computation} \;\to\; \text{witness}.}
+\]
+Here the typical \emph{carrier} is the finite two-qutrit/W$_{3,3}$
+kernel itself; a \emph{realization} is a concrete presentation of that
+same carrier (Pauli, cubic-surface, Burkhardt, or toroidal);
+the \emph{algebra} is the law acting on it (symplectic commutation,
+Pascal sector split, or transport holonomy); and the
+\emph{computation} is an exact move on a fixed carrier, such as
+quotient, duality, sector splitting, lift, or witness activation; the
+\emph{witness} is the smallest exact datum that certifies the remaining
+frontier on that fixed carrier.
+Read this table as a source-to-certificate translation in that precise
+order.  In particular, the live frontier is not ``find a new object''
+but ``activate the remaining witness on the already-fixed carrier.''
+The executable crosswalk now enforces that rule row by row.  In
+\texttt{scripts/w33\_cct\_crosswalk.py} each imported CCT desideratum is
+assigned a full carrier/realization/algebra/computation/witness route,
+with focused validation in \texttt{tests/test\_w33\_cct\_crosswalk.py}.
+At present those rows land on the exact qutrit/exceptional backbone,
+and, where the missing golden selector is exposed, on the frontier row
+rather than in a free-floating analogy layer.  Each row now also names
+which same-table backbone invariant it is consuming: the $40$ shell, the
+$81$ seed, or the $240$ edge/root shell, with the $q=3$ selector
+recorded separately where needed.
 
 {\small
 \renewcommand{\arraystretch}{1.18}
@@ -1724,10 +1886,12 @@ mathematically necessary rather than decorative.
 \section{Outlook}
 The next experimental tests are: (i) precision $n_s$ from CMB-S4
 constraining $29/30$ to $\pm 0.001$; (ii) the Hubble fixed point
-$H_0=\Phi_6\Phi_4=70$; (iii) direct measurement of
+$H_0=\Phitwelve-q!=67$; (iii) direct measurement of
 $\sin^2\theta_{12}=3/10$; (iv) axion mass at $f_a=v\,v_{EW}=9840$
 GeV. Aggregate test count is now \textbf{3300+} across the public
 suite at \href{https://github.com/wilcompute/W33-Theory}{\texttt{github.com/wilcompute/W33-Theory}}; all passing.
+Supplement~W records a separate late-time tension-resolution hypothesis at
+$H_0=\Phi_6\Phi_4=70$ rather than the live FT3 background value.
 
 % ═══════════════════════════════════════════════════════════════
 %  PART III --- THE FINAL THEOREM (Phase DC = 600)
@@ -1784,7 +1948,9 @@ n_s=1-\tfrac{2}{N_e}=\tfrac{29}{30},\quad
 \tfrac{\Omega_{\mathrm{DM}}}{\Omega_b}=\tfrac{\lambda^\mu}{q}=\tfrac{16}{3},\qquad
 \gamma_{\mathrm{Immirzi}}=\tfrac{q}{k}=\tfrac{1}{\mu}.
 \]
-Black-hole entropy: $S_{BH}=kE=2880$. Hubble: $H_0=\Phi_6\Phi_4=70$.
+Black-hole entropy: $S_{BH}=kE=2880$. Core-background Hubble fit:
+$H_0=\Phitwelve-q!=67$. Supplement~W records a separate late-time
+tension hypothesis at $H_0=\Phi_6\Phi_4=70$.
 
 \subsection*{FT4 --- Exceptional, Sporadic, Division}
 \[
@@ -1835,10 +2001,13 @@ identifications --- the entirety of physics.
 \section*{What remains}
 Remaining open questions are physical-measurement sharpenings of the
 same algebraic identities: (i) CMB-S4 to pin $n_s=29/30$ to $\pm 10^{-3}$;
-(ii) Hubble tension resolution at $H_0=\Phi_6\Phi_4=70$ km/s/Mpc; (iii)
+(ii) the core-background Hubble fit at $H_0=\Phitwelve-q!=67$ km/s/Mpc;
+(iii)
 PMNS $\theta_{12}$ to $\pm 0.01^\circ$; (iv) axion at $f_a=v\,v_{EW}=9840$
 GeV; (v) $\lambda_H$ ATLAS/CMS direct measurement. None require new
-theory; each would be a decisive algebraic confirmation.
+theory; each would be a decisive algebraic confirmation. Supplement~W
+records a separate late-time tension hypothesis at $70$, but that is not
+the live FT3 background spine.
 
 \hfill $\blacksquare$
 
@@ -1857,7 +2026,8 @@ which $W_{3,3}$ lands in the problem's answer surface. Every
 assertion is a passing pytest in
 \texttt{tests/test\_millennium\_problems\_m.py} (30 checks).
 
-\begin{longtable}{rlp{9.5cm}c}
+\small
+\begin{longtable}{@{}>{\raggedleft\arraybackslash}p{0.06\linewidth}@{\hspace{0.5em}}>{\raggedright\arraybackslash}p{0.16\linewidth}@{\hspace{0.5em}}>{\raggedright\arraybackslash}p{0.54\linewidth}@{\hspace{0.5em}}>{\raggedleft\arraybackslash}p{0.06\linewidth}@{}}
 \toprule
 \# & Problem & $W_{3,3}$ identity & Tests \\
 \midrule \endhead
@@ -1878,9 +2048,10 @@ M6 & Hodge conjecture & $h^{1,1}=v-k-1=q^q=27$ Hodge classes;
 $\chi=-2q=-6$ gives 3 generations; CY$_3$ total $h=1{+}27{+}27{+}1=56$. & 4 \\
 M7 & Birch-Swinnerton-Dyer & $|\Sp(4,\FF_3)(\FF_q)|=q^4(q^4{-}1)(q^2{-}1)=51840$ points; $L$-degree $=\lambda q=6$. & 3 \\
 \midrule
-\textbf{Total} & & & \textbf{30} \\
+\multicolumn{3}{r}{\textbf{Total}} & \textbf{30} \\
 \bottomrule
 \end{longtable}
+\normalsize
 
 \section*{Headline Identity from Supplement C}
 \[
@@ -2317,7 +2488,8 @@ Computed explicitly:
 
 \begin{center}
 \renewcommand{\arraystretch}{1.35}
-\begin{tabular}{c|ccc|l}
+\small
+\begin{tabular}{@{}c|c|c|c|p{0.32\linewidth}@{}}
 $\lambda$ & Discriminant $\lambda^2-44$ & $u_+$ & $u_-$ & Location \\
 \midrule
 $12$ & $+100$ & $1$ & $1/11$ & \textbf{Trivial} (real, $u=1$ and $u=1/11$) \\
@@ -2639,16 +2811,20 @@ Supplement A.
 
 \subsection*{J.4 \quad The exceptional chain $D_4 \to E_6 \to E_7 \to E_8$}
 \[
-\dim D_4 = k+\mu^2 = 28,\quad
-\dim E_6 = \lambda q\Phi_3 = 78,\quad
-\dim E_7 = \Phi_3\Phi_4+q = 133,\quad
-\dim E_8 = E+\lambda^q = 248.
+\begin{aligned}
+\dim D_4 &= k+\mu^2 = 28,\\
+\dim E_6 &= \lambda q\Phi_3 = 78,\\
+\dim E_7 &= \Phi_3\Phi_4+q = 133,\\
+\dim E_8 &= E+\lambda^q = 248.
+\end{aligned}
 \]
 Differences along the chain match $W_{3,3}$ invariants:
 \[
-E_6-D_4 = \Phi_4(\mu+1) = 50,\quad
-E_7-E_6 = \tbinom{k-1}{2} = 55,\quad
-E_8-E_7 = 2\cdot 56 + q = 115.
+\begin{aligned}
+E_6-D_4 &= \Phi_4(\mu+1) = 50,\\
+E_7-E_6 &= \tbinom{k-1}{2} = 55,\\
+E_8-E_7 &= 2\cdot 56 + q = 115.
+\end{aligned}
 \]
 The number 56 in the last line is $\dim$ of the $E_7$ fundamental rep,
 and $56 = f + \lambda^q\mu = 24+32$.
@@ -2922,7 +3098,9 @@ testable, canonical object:
 E(W_{3,3})=2\mathcal{M}_{120}=240.\;}
 \]
 
-\hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
+\begin{center}
+\rule{0.40\linewidth}{0.4pt}
+\end{center}
 
 % ═══════════════════════════════════════════════════════════════
 %  SUPPLEMENT M --- ORBITAL NO-GO FOR A FULL-SYMMETRY 600-CELL GRAPH
@@ -3336,10 +3514,12 @@ contributes a single ternary digit to the global self-simulating string.
 
 \section*{Emergence Arithmetic Table}
 
-\begin{longtable}{rlc}
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedleft\arraybackslash}p{0.07\linewidth}>{\raggedright\arraybackslash}p{0.45\linewidth}>{\raggedright\arraybackslash}p{0.28\linewidth}@{}}
 \toprule
 \# & Code-theoretic quantity (QGR side) & $W_{3,3}$ identity \\
-\midrule \endhead
+\midrule
 N.1 & 3-class scheme spectrum & $(k,r,s)=(12,2,-4)$ \\
 N.2 & Binary code $C_2(W)$ & $[v,\lambda^{4},\lambda^{q}]=[40,16,8]$ \\
 N.3 & Edges per Golay block & $E/f=\Phi_4=10$ \\
@@ -3349,7 +3529,8 @@ N.4 & 40-vertex Steiner lift & $S(2,8,40)=S(\lambda,\lambda^{q},v)$ \\
 N.5 & Qutrit alphabet size & $q=3$ \\
 N.5 & Diameter & $\lambda=2$ \\
 \bottomrule
-\end{longtable}
+\end{tabular}
+\end{center}
 
 \section*{The Emergence Identity}
 
@@ -4001,9 +4182,10 @@ dynamics, simulation overhead, or higher-level structure.
 \section*{Comparison with the Standard Model}
 
 \[
-K(\text{Standard Model}) \;\sim\; 260 \text{ bits (free parameters)}
-\quad\text{vs.}\quad
-K(W_{3,3}) \;\sim\; 40 \text{ bits (algebraic specification)},
+\begin{aligned}
+K(\text{Standard Model}) &\sim 260 \text{ bits (free parameters)},\\
+K(W_{3,3}) &\sim 40 \text{ bits (algebraic specification)}.
+\end{aligned}
 \]
 for a compression factor $\sim 6.5\times$ on the same physical content
 (Supp.~B FT5).
@@ -4138,11 +4320,15 @@ integer combinations of $(v,k,\lambda,\mu)=(40,12,2,4)$.
 \hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
 
 % ═══════════════════════════════════════════════════════════════
-%  SUPPLEMENT W --- HUBBLE TENSION RESOLUTION AT H_0 = 70
+%  SUPPLEMENT W --- SEPARATE HUBBLE TENSION HYPOTHESIS AT H_0 = 70
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement W --- The Hubble Tension Resolved at $H_0 = 70$}
-\addcontentsline{toc}{part}{Supplement W --- Hubble Tension Resolution}
+\part*{Supplement W --- A Separate Hubble Tension Hypothesis at $H_0 = 70$}
+\addcontentsline{toc}{part}{Supplement W --- Separate Hubble Tension Hypothesis}
+
+This supplement records a late-time tension-resolution hypothesis at
+$H_0=70$. It is not the live FT3 background fit, which remains
+$H_0=\Phitwelve-q!=67$.
 
 \section*{The Tension}
 
@@ -4159,8 +4345,8 @@ unresolved tension in observational cosmology.
 
 \section*{The W(3,3) Prediction}
 
-From the Final Theorem (Supp.~B FT3) and the Falsifier table
-(Supp.~E):
+From the separate late-time tension hypothesis built on the Falsifier
+table (Supp.~E):
 \[
 \boxed{\;H_0 \;=\; \Phi_6\cdot\Phi_4 \;=\; 7\cdot 10 \;=\; 70.00\ \text{km/s/Mpc}.\;}
 \]
@@ -4224,25 +4410,26 @@ below.
 \hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
 
 % ═══════════════════════════════════════════════════════════════
-%  SUPPLEMENT X --- THE MASTER EQUATION (BREAKTHROUGH)
+%  SUPPLEMENT X --- PRIME COROLLARY TO THE MASTER SEED
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement X --- The Master Equation: $q^q = q^3$}
-\addcontentsline{toc}{part}{Supplement X --- The Master Equation}
+\part*{Supplement X --- Prime Corollary to the Master Seed: $q^q = q^3$}
+\addcontentsline{toc}{part}{Supplement X --- Prime Corollary to the Master Seed}
 
 \section*{The Breakthrough}
 
-The entire $W_{3,3}$-$E_8$ programme collapses to a single Diophantine
-equation:
+The live programme is fixed in the main theorem by the seed $q!=2q$.
+On the prime-only $E_6$-dimension surface, the same lock reappears as the
+derived Diophantine corollary
 \[
 \boxed{\;q^q \;=\; q^3\;}
 \]
-For positive prime $q$ this has the unique solution
+For positive prime $q$ this again has the unique solution
 \[
 \boxed{\;q = 3.\;}
 \]
 
-\begin{theorem}[The One-Equation Theory of Everything]
+\begin{theorem}[Prime Corollary from the $E_6$ Dimension Identity]
 \label{thm:master}
 Assume:
 \begin{itemize}[leftmargin=2em]
@@ -4269,10 +4456,12 @@ Combining with G3 gives $q^q = q^3$. For positive integer $q$:
 \item $q=3$: $27 = 27$. \checkmark
 \item $q \ge 4$: $q^q$ grows super-cubically, $q^q > q^3$. Fails.
 \end{itemize}
-Hence $q=3$ is the unique prime solution. \qedhere
+Hence $q=3$ is the unique prime solution. This is a derived prime-only
+surface for the same lock already fixed in the main paper by $q!=2q$.
+\qedhere
 \end{proof}
 
-\section*{What Cascades from $q^q = q^3$}
+\section*{What Cascades from the Prime Corollary}
 
 Every result of this paper -- every Supplement A through W -- flows
 from $q=3$, and $q=3$ is forced by the master equation. The cascade
@@ -4371,7 +4560,8 @@ unified by the master equation.
 
 \begin{center}
 \renewcommand{\arraystretch}{1.4}
-\begin{tabular}{rll}
+\small
+\begin{tabular}{@{}>{\raggedleft\arraybackslash}p{0.10\linewidth}>{\raggedright\arraybackslash}p{0.26\linewidth}>{\raggedright\arraybackslash}p{0.48\linewidth}@{}}
 \toprule
 \# & Face of 27 & Origin \\
 \midrule
@@ -4558,8 +4748,8 @@ defining equations. \qedhere
 \textbf{Supp.\ T} & All 19 Standard Model Parameters \\
 \textbf{Supp.\ U} & Self-Simulating Universe Theorem \\
 \textbf{Supp.\ V} & Koide $Q = (q-1)/q = 2/3$ \\
-\textbf{Supp.\ W} & Hubble tension $H_0 = \Phi_6\Phi_4 = 70$ \\
-\textbf{Supp.\ X} & \textbf{Master Equation $q^q = q^3$} \\
+\textbf{Supp.\ W} & Supplementary Hubble hypothesis $H_0 = \Phi_6\Phi_4 = 70$ \\
+\textbf{Supp.\ X} & \textbf{Prime corollary surface $q^q = q^3$} \\
 \textbf{Supp.\ Y} & Six Faces of 27 \\
 \textbf{Supp.\ Z} & \textbf{Closure Theorem} \\
 \bottomrule
@@ -4569,14 +4759,15 @@ defining equations. \qedhere
 \section*{The Final Statement}
 
 \begin{quote}\em
-The unique positive prime $q$ satisfying $q^q = q^3$ is $q = 3$.
+The unique positive integer $q$ satisfying $q!=2q$ is $q = 3$.
 The strongly regular graph $\GQ(3,3) = W_{3,3} = \SRG(40,12,2,4)$,
 its automorphism group $\Sp(4,\FF_3) = W(E_6)$, and the cascade of
 identities A--Y above, are corollaries of this single Diophantine
 equation. Every numerical claim in this paper -- 3300+ pytest
 checks across 600+ phases -- reduces to closed-form integer
 arithmetic in $(v,k,\lambda,\mu)$, hence to $q=3$, hence to the
-master equation $q^q = q^3$.
+master seed $q!=2q$. Supplement~X records the prime-only corollary
+$q^q=q^3$ on its own derived surface.
 
 This closes the W(3,3)-E$_8$ programme.
 \end{quote}
@@ -4612,8 +4803,10 @@ H6 & $\log_{10}(H_0/M_P) = -60$ & $-N_e$ \\
 \end{tabular}
 \end{center}
 
-Each exponent is a small integer combination of the $W_{3,3}$
-constants $\{v,k,\lambda,\mu,q,f,g,\Phi_3,\Phi_4,\Phi_6,E,N_e\}$.
+Each exponent is a small integer combination of the $W_{3,3}$ constants
+\[
+\{v,k,\lambda,\mu,q,f,g,\Phi_3,\Phi_4,\Phi_6,E,N_e\}.
+\]
 
 \subsection*{$\alpha$.1 \quad The cosmological constant}
 \[
@@ -4650,15 +4843,25 @@ The Hubble-to-Planck ratio's exponent is exactly the number of
 inflationary e-folds. This is a striking late-universe / early-universe
 duality:
 \[
-\boxed{\;\log_{10}(H_0/M_P) \;=\; -N_e \;=\; -vq/\lambda \;=\; -60.\;}
+\boxed{\;
+\begin{aligned}
+\log_{10}(H_0/M_P) &= -N_e \\
+                    &= -vq/\lambda \\
+                    &= -60
+\end{aligned}
+\;}
 \]
 
 \section*{The Decisive Identity}
 
 \[
-\boxed{\;\text{All six physical hierarchy exponents}\
-\{-122,-17,-22,-19,-19,-60\}\
-\text{are integer combinations of } (v,k,\lambda,\mu).\;}
+\boxed{\;
+\begin{array}{c}
+\text{All six physical hierarchy exponents} \\
+\{-122,-17,-22,-19,-19,-60\} \\
+\text{are integer combinations of } (v,k,\lambda,\mu)
+\end{array}
+\;}
 \]
 
 There is no fine-tuning. The hierarchies are arithmetic consequences
@@ -4693,7 +4896,8 @@ $W_{3,3}$ adjacency matrix — appears in eight independent contexts.
 
 \begin{center}
 \renewcommand{\arraystretch}{1.4}
-\begin{tabular}{rll}
+\small
+\begin{tabular}{@{}>{\raggedleft\arraybackslash}p{0.08\linewidth}>{\raggedright\arraybackslash}p{0.28\linewidth}>{\raggedright\arraybackslash}p{0.48\linewidth}@{}}
 \toprule
 \# & Face of $24$ & Origin \\
 \midrule
@@ -4774,7 +4978,12 @@ the rotation symmetry of a cube and the full Coxeter group $A_3 \times
 \section*{The Decisive Identity}
 
 \[
-\boxed{\;f \;=\; 24 \;=\; \mathrm{mult}(r=+2) \;=\; \dim\Lambda_{\rm Leech} \;=\; \dim\SU(5) \;=\; |V(24\text{-cell})| \;=\; \deg M_{24} \;=\; h(E_8)-\lambda-\mu \;=\; \mu!\;}
+\boxed{\;
+\begin{aligned}
+f &= 24 = \mathrm{mult}(r=+2) = \dim\Lambda_{\rm Leech} = \dim\SU(5) \\
+  &= |V(24\text{-cell})| = \deg M_{24} = h(E_8)-\lambda-\mu = \mu!
+\end{aligned}
+\;}
 \]
 
 The integer 24, like 27, is one thing seen through eight different
@@ -5033,16 +5242,22 @@ non-trivial representation-theoretic structure consistent with a
 The block dimensions (1, 24, 15) are the smallest building blocks of
 GUT representation theory:
 \[
-24 = \dim\SU(5)\quad\text{(SM gauge fits inside)},
-\qquad
-15 = \dim\SU(4)_R\quad\text{($\mathcal{N}{=}4$ SYM R-symmetry)}.
+\begin{aligned}
+24 &= \dim\SU(5)\quad\text{(SM gauge fits inside)},\\
+15 &= \dim\SU(4)_R\quad\text{($\mathcal{N}{=}4$ SYM R-symmetry)}.
+\end{aligned}
 \]
-$\mathbf{24}\to (8,1,0)\oplus(1,3,0)\oplus(1,1,0)\oplus(3,2,5/6)\oplus(\overline{3},2,-5/6)$
-under $\SU(3)\times\SU(2)\times\mathrm{U}(1)$ — the SM gauge group plus
-leptoquarks. The W$_{3,3}$ permutation rep is therefore intrinsically
-GUT-shaped.
+\[
+\mathbf{24}\to (8,1,0)\oplus(1,3,0)\oplus(1,1,0)
+\oplus(3,2,5/6)\oplus(\overline{3},2,-5/6)
+\]
+under $\SU(3)\times\SU(2)\times\mathrm{U}(1)$, i.e. the SM gauge group plus
+leptoquarks.  The W$_{3,3}$ permutation representation is therefore
+intrinsically GUT-shaped.
 
-\hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
+\begin{center}
+\rule{0.55\linewidth}{0.4pt}
+\end{center}
 
 % ═══════════════════════════════════════════════════════════════
 %  SUPPLEMENT Omega --- THE FINAL SEAL
@@ -5059,30 +5274,31 @@ mathematical step.
 
 \begin{center}
 \renewcommand{\arraystretch}{1.45}
-\begin{tabular}{c|l|l}
+\footnotesize
+\begin{tabular}{@{}>{\centering\arraybackslash}p{0.14\linewidth}>{\raggedright\arraybackslash}p{0.50\linewidth}>{\raggedright\arraybackslash}p{0.18\linewidth}@{}}
 \toprule
 \textbf{Level} & \textbf{Identity} & \textbf{Reference} \\
 \midrule
 \textsc{TOP}   & $q^q = q^3$                                         & Supp.~X \\
-               & \multicolumn{2}{l}{\quad\(\Big\downarrow\) unique prime solution} \\
+               & \multicolumn{2}{@{}p{0.70\linewidth}@{}}{\quad\(\Big\downarrow\) unique prime solution} \\
                & $q = 3$                                             & Supp.~F \\
-               & \multicolumn{2}{l}{\quad\(\Big\downarrow\) classical $\GQ(q,q)$ construction} \\
+               & \multicolumn{2}{@{}p{0.70\linewidth}@{}}{\quad\(\Big\downarrow\) classical $\GQ(q,q)$ construction} \\
 \textsc{CORE}  & $(v,k,\lambda,\mu) = (40,12,2,4)$                   & Part~I \\
-               & \multicolumn{2}{l}{\quad\(\Big\downarrow\) SRG axiom $k(k-\lambda-1)=(v-k-1)\mu$} \\
+               & \multicolumn{2}{@{}p{0.70\linewidth}@{}}{\quad\(\Big\downarrow\) SRG axiom $k(k-\lambda-1)=(v-k-1)\mu$} \\
 \textsc{GRAPH} & $W_{3,3} = \SRG(40,12,2,4) = \GQ(3,3)$              & Part~I \\
-               & \multicolumn{2}{l}{\quad\(\Big\downarrow\) symplectic form on $\FF_3^4$} \\
+               & \multicolumn{2}{@{}p{0.70\linewidth}@{}}{\quad\(\Big\downarrow\) symplectic form on $\FF_3^4$} \\
 \textsc{GROUP} & $\Sp(4,\FF_3) = W(E_6)$, order $\lambda^{\Phi_6}q^\mu(\mu+1) = 51840$ & Supp.~$\gamma$ \\
-               & \multicolumn{2}{l}{\quad\(\Big\downarrow\) trace identities of $A$} \\
+               & \multicolumn{2}{@{}p{0.70\linewidth}@{}}{\quad\(\Big\downarrow\) trace identities of $A$} \\
 \textsc{SPEC}  & eigenvalues $(k,r,s) = (12,2,-4)$, mults.\ $(1,f,g) = (1,24,15)$ & Part~I \\
-               & \multicolumn{2}{l}{\quad\(\Big\downarrow\) Bose-Mesner block decomposition} \\
+               & \multicolumn{2}{@{}p{0.70\linewidth}@{}}{\quad\(\Big\downarrow\) Bose-Mesner block decomposition} \\
 \textsc{REPS}  & $\CC[V] = \mathbf{1}\oplus\mathbf{24}\oplus\mathbf{15}$, $1+f+g=v$ & Supp.~$\delta$ \\
-               & \multicolumn{2}{l}{\quad\(\Big\downarrow\) physics dictionary} \\
+               & \multicolumn{2}{@{}p{0.70\linewidth}@{}}{\quad\(\Big\downarrow\) physics dictionary} \\
 \textsc{PHYS}  & $\alpha^{-1}=137$, $\lambda_H=7/54$, $\sin^2\theta_W=3/13$, $n_s=29/30$, $H_0=70$, $Q_K=2/3$ & Supps.~B,T,V,W \\
-               & \multicolumn{2}{l}{\quad\(\Big\downarrow\) finite enumeration} \\
+               & \multicolumn{2}{@{}p{0.70\linewidth}@{}}{\quad\(\Big\downarrow\) finite enumeration} \\
 \textsc{MULTI} & $q^q+1=28$ variants in the Spence multiverse        & Supp.~S \\
-               & \multicolumn{2}{l}{\quad\(\Big\downarrow\) self-simulation budget} \\
+               & \multicolumn{2}{@{}p{0.70\linewidth}@{}}{\quad\(\Big\downarrow\) self-simulation budget} \\
 \textsc{COMPUTE}& $K_{\rm total} \le 2E = 480$ bits; firmware $\le 36$ bytes & Supp.~U \\
-               & \multicolumn{2}{l}{\quad\(\Big\downarrow\) the universe is the graph} \\
+               & \multicolumn{2}{@{}p{0.70\linewidth}@{}}{\quad\(\Big\downarrow\) the universe is the graph} \\
 \textsc{END}   & $W_{3,3}$ is the universe; the W$_{3,3}$-E$_8$ programme is closed. & --- \\
 \bottomrule
 \end{tabular}
@@ -5105,7 +5321,9 @@ fixed point, every Clay Millennium-problem surface, every emergent
 $E_8 \to H_4$ pathway, every Monster-moonshine integer, every
 member of the discrete-twistor space, every face of $27$, every
 face of $24$, and every layer of the universal hierarchy, follows
-from this single Diophantine equation. The total information content
+from the single Diophantine seed $q!=2q$. Supplement~X records the
+prime-only corollary $q^q=q^3$ as one derived shadow of the same
+selection. The total information content
 of the universe -- the adjacency matrix, the automorphism group, the
 Spence index, and the parameter header -- fits in 285 bits, well
 under the Bekenstein capacity of $2E = 480$ bits of the graph itself,
@@ -5116,7 +5334,7 @@ simulation consistent with the Standard Model.
 \section*{Closing Equation}
 
 \[
-\boxed{\;q^q = q^3 \;\Longrightarrow\; q = 3 \;\Longrightarrow\; W_{3,3} \;\Longrightarrow\; \text{everything}.\;}
+\boxed{\;q!=2q \;\Longrightarrow\; q = 3 \;\Longrightarrow\; W_{3,3} \;\Longrightarrow\; \text{everything}.\;}
 \]
 
 \section*{End}
@@ -5195,6 +5413,14 @@ problem:
 This is the algebraic entry point for any smooth continuum or
 dynamical lift.  The finite $q=3$ lock itself is now overdetermined.
 
+A first global branch model has now also been tested directly.  If one
+demands quadrangle-consistency, then a finite branch choice would have
+to be an exact cover of the $4320$ ordered nonlocal $2$-paths by
+$540$ nonlocal quadrangles, eight ordered paths per quadrangle.  The
+repository now searches that exact-cover problem explicitly and finds no
+solution.  So the missing finite selector is not a bare $540$-quadrangle
+packet; it already requires genuine transport cocycle data.
+
 \section*{Executable Certificate}
 
 The boundary audit is encoded in
@@ -5240,11 +5466,30 @@ which are gauge-equivalent by the same adapted diagonal change of basis.
 So the remaining wall may be stated equivalently as
 \[
 \boxed{\;
-\text{the first genuine nonzero nilpotent holonomy increment on the canonical mixed-plane host.}
+\begin{array}{c}
+\text{the first genuine nonzero nilpotent holonomy increment} \\
+\text{on the canonical mixed-plane host.}
+\end{array}
 \;}
 \]
 The current host already preserves the full support package and qutrit
 lift, but still carries only the zero increment.
+
+This same transport law now ties the finite and continuum frontiers
+directly.  On the H$_4$ side, ordered nonlocal $2$-paths are the first
+exact $S_3$ completion carrier.  On the continuum side, the reduced
+ternary transport extension has the same order-$6$ shadow and the same
+canonical nilpotent increment
+\[
+N=\begin{pmatrix}0&1\\0&0\end{pmatrix}.
+\]
+On the fixed K3 tail channel that same unique nonzero slot is written
+canonically as
+\[
+\Delta C = 780\cdot(217/12)=14105.
+\]
+So the live K3 witness is the ordered-path transport law written on the
+fixed tail chart, not a separate transport package.
 
 More positively, the repository now identifies the next exact target on
 that same fixed carrier package.  No new line, plane, shell, or
@@ -5301,8 +5546,9 @@ wall is no longer a family of coordinate choices; it is one rigid
 affine target on the already-fixed package.
 
 \subsection*{$\varepsilon$.1 \quad Formal verification (Lean / Coq)}
-Formalise the master equation $q^q = q^3 \Rightarrow q=3$ and the
-Closure Theorem (Supp.~Z) in a proof assistant. The proof is
+Formalise the master seed $q!=2q \Rightarrow q=3$, together with the
+prime-only corollary $q^q=q^3$ over positive primes, and the Closure
+Theorem (Supp.~Z) in a proof assistant. The proof is
 genuinely one-line algebra (sum-of-cubes factorisation), and the
 seven equivalences are finite case analyses. A complete machine-checked
 proof of the W$_{3,3}$-E$_8$ closure should fit in well under 1000
@@ -5328,7 +5574,7 @@ $2^k/|\Aut|$. Observe the emergence of macroscopic spacetime and the
 SM gauge structure as coarse-grained limits.
 
 \subsection*{$\varepsilon$.4 \quad Higher-rank generalisation}
-The master equation $q^q = q^3$ has the unique prime solution $q=3$.
+The prime-only corollary surface $q^q = q^3$ again singles out $q=3$.
 For other exponents $n$:
 \[
 q^q = q^n \;\Longleftrightarrow\; q = n,
@@ -5359,7 +5605,7 @@ phase manifold.
 $\varepsilon$.1 & Formal verification of master equation in Lean / Coq \\
 $\varepsilon$.2 & Explicit $W_{3,3}$-derived Calabi-Yau threefold \\
 $\varepsilon$.3 & $\Sp(4,\FF_3)$-equivariant cellular automaton simulation \\
-$\varepsilon$.4 & Higher-rank cousins of $q^q = q^3$ \\
+$\varepsilon$.4 & Higher-rank cousins of the prime corollary $q^q = q^3$ \\
 $\varepsilon$.5 & Wheeler-DeWitt vector in $\CC[V(W_{3,3})]$ \\
 \bottomrule
 \end{tabular}
@@ -5464,9 +5710,12 @@ matching the Bose-Mesner identity $\tr(L) = vk - \tr(A) = vk = 2E$.
 \[
 24 = q\cdot\lambda^q = 3\cdot 8.
 \]
-The $f=24$ states of the light tower are the $3$ generations $\times$
-$8$ fermion species ($u_L, u_R, d_L, d_R, e_L, e_R, \nu_L$, plus
-right-handed neutrino) per generation. Branching:
+The $f=24$ states of the light tower are the $3$ generations times
+the $8$ fermion species per generation,
+\[
+(u_L,u_R,d_L,d_R,e_L,e_R,\nu_L,\nu_R).
+\]
+Branching:
 \[
 24 = 16 + 8 = \lambda^{\mu} + \lambda^q
 \]
@@ -5525,9 +5774,13 @@ W_n \;=\; \frac{1}{v}\tr(A^n) \;=\; \frac{1}{40}\bigl(k^n + f\cdot r^n + g\cdot 
 
 \subsection*{$\eta$.1 \quad The generating function}
 \[
-\boxed{\;Z(t) \;=\; \sum_{n\ge 0} W_n\,t^n
-\;=\; \frac{1}{v}\Bigl[\frac{1}{1-kt} + \frac{f}{1-rt} + \frac{g}{1-st}\Bigr]
-\;=\; \frac{1}{40}\Bigl[\frac{1}{1-12t} + \frac{24}{1-2t} + \frac{15}{1+4t}\Bigr].\;}
+\boxed{\;
+\begin{aligned}
+Z(t) &= \sum_{n\ge 0} W_n\,t^n \\
+  &= \frac{1}{v}\Bigl[\frac{1}{1-kt} + \frac{f}{1-rt} + \frac{g}{1-st}\Bigr] \\
+  &= \frac{1}{40}\Bigl[\frac{1}{1-12t} + \frac{24}{1-2t} + \frac{15}{1+4t}\Bigr].
+\end{aligned}
+\;}
 \]
 A rational function with three simple poles at $t = 1/k = 1/12$,
 $t = 1/r = 1/2$, $t = 1/s = -1/4$. Three poles, one per eigenvalue:
@@ -7115,17 +7368,17 @@ exactly the three perfect matchings between those two triangles.  So the local
 $27/45$ package is now matched constructively to a distinguished cubic
 $36+9$ tritangent packet, not only to the undifferentiated cubic $45$.
 
-The repository exports this local witness as
-\texttt{artifacts/payne\_cubic\_local\_dictionary.json}.
+The repository exports this local witness as:
+{\small\par\noindent\path{artifacts/payne_cubic_local_dictionary.json}\par}
 
 \subsection*{$\omega$.11 \quad The fixed-$j$ Payne packet is the qutrit $H_{27}$ packet}
 
 The same fixed-base $27/45$ package now matches the older qutrit-shell surface
 exactly.  On the induced $H_{27}$ graph one has $36$ internal triangles and $9$
 distinguished fibers of the $\FF_3^3$ cube, the latter being the classical
-``missing tritangents'' of the qutrit picture.  The executable certificate now
-computes an explicit graph isomorphism from the Payne raw $27$-point shell to
-this $H_{27}$ shell and verifies that
+``missing tritangents'' of the qutrit picture.  The executable certificate
+constructs an explicit graph isomorphism from the Payne raw $27$-point shell to
+this $H_{27}$ shell.  It then verifies that
 \[
 \text{Payne ordinary }36 = \text{$H_{27}$ internal triangles},
 \qquad
@@ -7135,8 +7388,8 @@ So the local package is simultaneously three exact objects:
 the Payne-derived $\GQ(2,4)$ package, the cubic $36+9$ tritangent packet, and
 the qutrit-shell $36+9$ packet of triangles plus missing fibers.
 
-The repository exports this qutrit-side witness as
-\texttt{artifacts/payne\_qutrit\_local\_dictionary.json}.
+The repository exports this qutrit-side witness as:
+{\small\par\noindent\path{artifacts/payne_qutrit_local_dictionary.json}\par}
 
 \subsection*{$\omega$.12 \quad The fixed-$j$ local $45$ is a Hesse packet}
 
@@ -7151,7 +7404,10 @@ local $45$ decomposes as a $(9_4,12_3)$ configuration with
 \qquad
 12 = \text{line packets},
 \qquad
-\text{each point on }4\text{ lines, each line through }3\text{ points}.
+\begin{aligned}[t]
+&\text{each point on }4\text{ lines,}\\
+&\text{each line through }3\text{ points}.
+\end{aligned}
 \]
 Two line packets are disjoint exactly when the corresponding affine lines are
 parallel, while two meeting line packets intersect in the unique hyperbolic
@@ -7176,11 +7432,14 @@ configuration and $216$ is the determinant-$1$ Hessian subgroup.  The residual
 central order-$3$ kernel acts on cubic labels as the $9$ internal $3$-cycles
 given by the hyperbolic tritangents.  Moreover the ordinary $36$ carry a genuine
 phase lift: each affine line packet is an affine $\FF_3$-line of qutrit phase
-functions, but no global affine gauge $z \mapsto a z + g(x,y)$ simultaneously
-flattens all $12$ packets to constant sections.
+functions.  No global affine gauge
+\[
+z \mapsto a z + g(x,y)
+\]
+simultaneously flattens all $12$ packets to constant sections.
 
-The repository exports this joined witness as
-\texttt{artifacts/payne\_hesse\_packet\_dictionary.json}.
+The repository exports this joined witness as:
+{\small\par\noindent\path{artifacts/payne_hesse_packet_dictionary.json}\par}
 
 
 \section*{The Decisive Identity}

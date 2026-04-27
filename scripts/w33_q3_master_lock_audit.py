@@ -43,8 +43,9 @@ from typing import Dict, Tuple
 import sympy as sp
 
 ROOT = Path(__file__).resolve().parents[1]
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
+for extra in (ROOT, ROOT / "exploration"):
+    if str(extra) not in sys.path:
+        sys.path.insert(0, str(extra))
 
 from w33_center_quad_transport_holonomy_bridge import (  # noqa: E402
     build_center_quad_transport_holonomy_summary,
@@ -73,11 +74,17 @@ from w33_k3_tail_canonical_chart_slot_equivalence_bridge import (  # noqa: E402
 from w33_k3_tail_single_coordinate_witness_bridge import (  # noqa: E402
     build_k3_tail_single_coordinate_witness_summary,
 )
+from w33_h4_ordered_path_k3_witness_bridge import (  # noqa: E402
+    build_h4_ordered_path_k3_witness_bridge_summary,
+)
 from w33_minimal_k3_tail_enhancement_datum_bridge import (  # noqa: E402
     build_minimal_k3_tail_enhancement_datum_summary,
 )
 from w33_transport_ternary_cocycle_bridge import (  # noqa: E402
     build_transport_ternary_cocycle_summary,
+)
+from scripts.w33_h4_branch_selection_search import (  # noqa: E402
+    build_branch_selection_search_summary,
 )
 from scripts.w33_qutrit_ladder_audit import (  # noqa: E402
     e8_side_exact_decomposition_summary,
@@ -311,6 +318,7 @@ def q3_fermion_seed_summary() -> Dict[str, object]:
 def q3_transport_algebra_summary() -> Dict[str, object]:
     holonomy = build_center_quad_transport_holonomy_summary()
     cocycle = build_transport_ternary_cocycle_summary()
+    branch_selection = build_branch_selection_search_summary()
     witness = build_k3_mixed_plane_holonomy_witness_summary()
     current = build_current_k3_mixed_plane_holonomy_failure_summary()
     nilpotent = build_k3_mixed_plane_nilpotent_holonomy_increment_summary()
@@ -320,6 +328,7 @@ def q3_transport_algebra_summary() -> Dict[str, object]:
     current_coordinate_witness = build_current_k3_tail_coordinate_witness_failure_summary()
     canonical_chart = build_k3_tail_canonical_chart_slot_equivalence_summary()
     affine_witness = build_k3_tail_affine_witness_target_summary()
+    finite_to_continuum_bridge = build_h4_ordered_path_k3_witness_bridge_summary()
 
     triangle_holonomy = holonomy["triangle_holonomy"]
     cycle_counts = triangle_holonomy["cycle_type_counts"]
@@ -344,6 +353,8 @@ def q3_transport_algebra_summary() -> Dict[str, object]:
     affine_displacement_recovered_scales = affine_witness[
         "displacement_recovered_scales"
     ]
+    branch_model = branch_selection["branch_model"]
+    branch_search = branch_selection["search"]
 
     return {
         "triangle_count": int(holonomy["transport_triangles"]),
@@ -374,10 +385,29 @@ def q3_transport_algebra_summary() -> Dict[str, object]:
         "exact_witness_point": exact_witness_point,
         "affine_witness_displacement": affine_witness_displacement,
         "affine_displacement_recovered_scales": affine_displacement_recovered_scales,
+        "finite_ordered_path_carrier": finite_to_continuum_bridge["finite_ordered_path_carrier"],
+        "quadrangle_exact_cover_model": {
+            "ordered_path_count": branch_model["ordered_path_count"],
+            "nonlocal_quadrangle_count": branch_model["nonlocal_quadrangle_count"],
+            "target_cover_size": branch_model["target_cover_size"],
+            "found_exact_cover": branch_search["found_exact_cover"],
+            "visited_search_nodes": branch_search["visited_search_nodes"],
+        },
+        "shared_finite_to_continuum_transport_shadow": finite_to_continuum_bridge[
+            "shared_transport_shadow"
+        ],
         "exact_factorizations": {
             "triangle_parity_equals_local_s3_holonomy_sign_exactly": triangle_holonomy[
                 "z2_parity_equals_holonomy_sign_exactly"
             ],
+            "the_first_exact_finite_transport_carrier_is_the_ordered_nonlocal_2_path_s3_packet": (
+                finite_to_continuum_bridge["theorem"][
+                    "the_finite_h4_frontier_already_exhibits_an_exact_s3_completion_carrier"
+                ]
+            ),
+            "the_strongest_quadrangle_consistent_branch_packet_model_has_no_exact_cover": (
+                branch_selection["theorem"]["that_exact_cover_model_has_no_solution"]
+            ),
             "transport_extension_is_exact_twisted_cocycle": extension_cocycle[
                 "twisted_cocycle_identity_exact"
             ],
@@ -436,6 +466,14 @@ def q3_transport_algebra_summary() -> Dict[str, object]:
             ][
                 "therefore_solving_deltaC_equals_14105_on_the_fixed_package_is_equivalent_to_activating_the_unique_nonzero_tail_slot"
             ],
+            "the_live_k3_witness_is_the_same_transport_law_as_the_finite_ordered_path_carrier": (
+                finite_to_continuum_bridge["theorem"][
+                    "therefore_the_live_k3_witness_is_the_ordered_path_transport_law_written_on_the_fixed_tail_chart"
+                ]
+                and finite_to_continuum_bridge["theorem"][
+                    "this_bridge_identifies_the_transport_datum_but_does_not_remove_the_existing_k3_existence_wall"
+                ]
+            ),
             "the_live_positive_target_is_one_exact_affine_witness_displacement": affine_witness[
                 "k3_tail_affine_witness_target_theorem"
             ][
@@ -495,10 +533,12 @@ def classify_q3_master_lock() -> Tuple[Dict[str, object], ...]:
             "support_level": "repo-exact transport algebra reduction",
             "statement": (
                 "The local q=3 transport algebra is already exact: triangle parity is the "
-                "sign character of a genuine local S3 holonomy, and the mixed-plane "
-                "realization wall is reduced to one missing non-identity unipotent "
-                "sign-trivial holonomy class on the canonical host, equivalently one "
-                "missing nonzero nilpotent holonomy increment."
+                "sign character of a genuine local S3 holonomy; the first exact finite "
+                "carrier is the 4320 ordered nonlocal 2-path packet; the strongest "
+                "quadrangle-consistent 540-packet model already has no exact cover; and "
+                "the mixed-plane realization wall is reduced to one missing non-identity "
+                "unipotent sign-trivial holonomy class on the canonical host, equivalently "
+                "one missing nonzero nilpotent holonomy increment."
             ),
             "evidence": transport,
         },
@@ -600,6 +640,38 @@ def analyze() -> Dict[str, object]:
             and transport["current_sign_trivial_holonomies"] == [[[1, 0], [0, 1]]]
             and all(transport["exact_factorizations"].values())
         ),
+        "the_finite_h4_frontier_already_exhibits_the_same_transport_shadow_as_the_k3_witness": (
+            transport["finite_ordered_path_carrier"]
+            == {
+                "path_count": 4320,
+                "seed_stabilizer_size": 6,
+                "completion_fibre_size": 3,
+                "seed_completion_action_size": 6,
+            }
+            and transport["shared_finite_to_continuum_transport_shadow"]
+            == {
+                "reduced_group_order": 6,
+                "unique_invariant_projective_line": [1, 2],
+                "invariant_complement_count": 0,
+                "is_nonsplit_extension_of_sign_by_trivial": True,
+                "fiber_nilpotent_increment": [[0, 1], [0, 0]],
+                "matter_extension_dimensions": [81, 162, 81],
+                "matter_extension_rank": 81,
+            }
+        ),
+        "the_missing_finite_selector_is_not_a_bare_540_quadrangle_exact_cover": (
+            transport["quadrangle_exact_cover_model"]
+            == {
+                "ordered_path_count": 4320,
+                "nonlocal_quadrangle_count": 1620,
+                "target_cover_size": 540,
+                "found_exact_cover": False,
+                "visited_search_nodes": 1106,
+            }
+            and transport["exact_factorizations"][
+                "the_strongest_quadrangle_consistent_branch_packet_model_has_no_exact_cover"
+            ]
+        ),
         "the_transport_algebra_exactly_refines_the_same_wall_to_one_nonzero_nilpotent_increment": (
             transport["fiber_shift_matrix"] == [[0, 1], [0, 0]]
             and transport["canonical_nonzero_increment"] == [[0, 1], [0, 0]]
@@ -699,6 +771,19 @@ def analyze() -> Dict[str, object]:
                 "the_live_positive_target_is_one_exact_affine_witness_displacement"
             ]
         ),
+        "the_live_positive_target_is_the_same_ordered_path_transport_law_written_on_the_fixed_k3_chart": (
+            transport["canonical_chart_target"]
+            == {
+                "coordinate": "dC",
+                "required_value": "14105",
+                "primitive_c_direction": "780",
+                "transport_scale": "217/12",
+                "factorization": "780 * (217/12)",
+            }
+            and transport["exact_factorizations"][
+                "the_live_k3_witness_is_the_same_transport_law_as_the_finite_ordered_path_carrier"
+            ]
+        ),
         "the_remaining_wall_is_not_finite_q_selection_but_smooth_realization": True,
     }
 
@@ -717,15 +802,20 @@ def analyze() -> Dict[str, object]:
             "The q=3 selection is now exact and overdetermined across five independent repo "
             "layers: local qutrit geometry, corrected spectral/Ihara uniqueness, the toroidal "
             "continuum coefficient seed, the residual electron arithmetic packet, and the exact "
-            "transport holonomy/cocycle reduction. The honest remaining theorem is therefore not "
-            "'why q=3?' but the first non-identity unipotent sign-trivial transport witness on "
-            "the canonical mixed-plane host, equivalently the first genuine nonzero nilpotent "
-            "holonomy increment there. More positively, the next exact target is already rigid: "
-            "the unique minimal tail datum in the existing slot with primitive direction "
+            "transport holonomy/cocycle reduction. On the finite H4 side the first exact "
+            "transport carrier is already the ordered nonlocal 2-path S3 packet, and the "
+            "strongest quadrangle-consistent 540-packet model has no exact cover. So the honest "
+            "remaining theorem is not 'why q=3?' and not a bare finite branch subset, but the "
+            "first non-identity unipotent sign-trivial transport witness on the canonical mixed-"
+            "plane host, equivalently the first genuine nonzero nilpotent holonomy increment "
+            "there. More positively, the next exact target is already rigid: the unique minimal "
+            "tail datum in the existing slot with primitive direction "
             "(780,7944,62600,53979) and transport scale 217/12. On the fixed tail line this is "
-            "equivalent to any one promoted coordinate witness, canonically dC = 14105, i.e. "
-            "the algebraic entry point for the smooth continuum and dynamical realization. In "
-            "promoted witness coordinates the current candidate is simply the origin, and the "
+            "equivalent to any one promoted coordinate witness, canonically dC = 14105. The "
+            "ordered-path transport law and that K3 chart are therefore the same datum on two "
+            "carriers, i.e. the algebraic entry point for the smooth continuum and dynamical "
+            "realization. In promoted witness coordinates the current candidate is simply the "
+            "origin, and the "
             "exact target is the single affine point (14105,143654,3396050/3,3904481/4)."
         ),
     }

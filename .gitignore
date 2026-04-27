@@ -132,6 +132,7 @@ data/*
 artifacts/*
 !artifacts/e6_cubic_affine_heisenberg_model.json
 !artifacts/firewall_filtered_trinification_section_sectors.json
+!artifacts/w33_periodic_table_organization_summary.json
 
 # Legacy root-level fixture copies materialized from archive for tests
 H27_OUTER_TWIST_ACTION_BUNDLE_v01/

@@ -168,6 +168,28 @@ def test_q3_transport_algebra_summary_reduces_the_live_wall_to_one_witness() -> 
         "transport_scale": "217/12",
         "factorization": "780 * (217/12)",
     }
+    assert summary["finite_ordered_path_carrier"] == {
+        "path_count": 4320,
+        "seed_stabilizer_size": 6,
+        "completion_fibre_size": 3,
+        "seed_completion_action_size": 6,
+    }
+    assert summary["quadrangle_exact_cover_model"] == {
+        "ordered_path_count": 4320,
+        "nonlocal_quadrangle_count": 1620,
+        "target_cover_size": 540,
+        "found_exact_cover": False,
+        "visited_search_nodes": 1106,
+    }
+    assert summary["shared_finite_to_continuum_transport_shadow"] == {
+        "reduced_group_order": 6,
+        "unique_invariant_projective_line": [1, 2],
+        "invariant_complement_count": 0,
+        "is_nonsplit_extension_of_sign_by_trivial": True,
+        "fiber_nilpotent_increment": [[0, 1], [0, 0]],
+        "matter_extension_dimensions": [81, 162, 81],
+        "matter_extension_rank": 81,
+    }
     assert summary["current_zero_witness_point"] == {
         "C": "0",
         "L": "0",
@@ -218,13 +240,18 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
     assert theorem["the_q3_lock_is_now_overdetermined_across_local_spectral_and_continuum_seed_layers"] is True
     assert theorem["the_q3_lock_is_now_overdetermined_across_local_spectral_continuum_and_electron_seed_layers"] is True
     assert theorem["the_transport_algebra_exactly_reduces_the_smooth_realization_wall_to_one_unipotent_sign_trivial_witness"] is True
+    assert theorem["the_finite_h4_frontier_already_exhibits_the_same_transport_shadow_as_the_k3_witness"] is True
+    assert theorem["the_missing_finite_selector_is_not_a_bare_540_quadrangle_exact_cover"] is True
     assert theorem["the_transport_algebra_exactly_refines_the_same_wall_to_one_nonzero_nilpotent_increment"] is True
     assert theorem["the_remaining_wall_refines_to_the_first_sign_trivial_unipotent_transport_witness"] is True
     assert theorem["the_remaining_wall_refines_equivalently_to_the_first_nonzero_nilpotent_holonomy_increment"] is True
     assert theorem["the_next_exact_positive_target_is_the_unique_minimal_tail_datum_in_the_existing_slot"] is True
     assert theorem["the_remaining_wall_refines_further_to_any_one_promoted_coordinate_witness_equivalently_dC_equals_14105"] is True
     assert theorem["the_live_positive_target_can_be_stated_as_one_exact_affine_witness_displacement_from_the_current_zero_candidate"] is True
+    assert theorem["the_live_positive_target_is_the_same_ordered_path_transport_law_written_on_the_fixed_k3_chart"] is True
     assert theorem["the_remaining_wall_is_not_finite_q_selection_but_smooth_realization"] is True
+    assert "ordered nonlocal 2-path S3 packet" in summary["boundary_note"]
+    assert "540-packet model has no exact cover" in summary["boundary_note"]
     assert "non-identity unipotent sign-trivial transport witness" in summary["boundary_note"]
     assert "nonzero nilpotent holonomy increment" in summary["boundary_note"]
     assert "217/12" in summary["boundary_note"]

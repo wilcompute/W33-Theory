@@ -1,0 +1,206 @@
+{
+  "kind": "w33_periodic_table_organization_summary",
+  "layer_order": [
+    "carrier",
+    "realization",
+    "algebra",
+    "computation",
+    "witness"
+  ],
+  "rows": {
+    "realization_row": {
+      "carrier": "cataloged toroidal Csaszar/Szilassi realization packet",
+      "catalog_total": 7,
+      "csaszar_realizations": 5,
+      "szilassi_realizations": 2,
+      "common_symmetry_group": "Z2",
+      "common_half_turn_map": "(x, y, z) -> (-x, -y, z)",
+      "csaszar_vertex_orbits": 4,
+      "csaszar_face_orbits": 7,
+      "szilassi_vertex_orbits": 7,
+      "szilassi_face_orbits": 4,
+      "orbit_package_is_dual": true,
+      "scope_note": "This is a realization-level symmetry statement. It does not yet classify the catalog entries up to affine, projective, or isotopic equivalence, and it does not prove that the catalog count 7 itself is canonical."
+    },
+    "pascal_computation_row": {
+      "carrier": "projective line Grassmannian Gr(2,4)(F_3) on the W(3,3) ambient shell",
+      "projective_points": 40,
+      "projective_lines_total": 130,
+      "isotropic_lines": 40,
+      "nonisotropic_lines": 90,
+      "edge_partition": {
+        "w33_edges": 240,
+        "complement_edges": 540
+      },
+      "local_line_split": {
+        "total": 13,
+        "isotropic": 4,
+        "nonisotropic": 9
+      },
+      "signed_sector_operator": "S = A_iso - A_non = 2A + I - J",
+      "seidel_spectrum": {
+        "-15": 1,
+        "-7": 15,
+        "5": 24
+      },
+      "line_split_identity": "[4 choose 2]_3 = 130 = 40 isotropic + 90 non-isotropic",
+      "pair_split_identity": "C(40,2)=780 = 40*C(4,2) + 90*C(4,2) = 240 + 540"
+    },
+    "frontier_witness_row": {
+      "carrier": "fixed 81 -> 162 -> 81 tail package on the existing transport channel",
+      "tail_package_sizes": [
+        81,
+        162,
+        81
+      ],
+      "finite_ordered_path_carrier": {
+        "path_count": 4320,
+        "seed_stabilizer_size": 6,
+        "completion_fibre_size": 3,
+        "seed_completion_action_size": 6
+      },
+      "quadrangle_branch_packet_no_go": {
+        "ordered_path_count": 4320,
+        "nonlocal_quadrangle_count": 1620,
+        "target_cover_size": 540,
+        "found_exact_cover": false,
+        "visited_search_nodes": 1106
+      },
+      "shared_transport_shadow": {
+        "reduced_group_order": 6,
+        "unique_invariant_projective_line": [
+          1,
+          2
+        ],
+        "invariant_complement_count": 0,
+        "is_nonsplit_extension_of_sign_by_trivial": true,
+        "fiber_nilpotent_increment": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "matter_extension_dimensions": [
+          81,
+          162,
+          81
+        ],
+        "matter_extension_rank": 81
+      },
+      "minimal_tail_transport_pair": {
+        "denominator_lcm": 12,
+        "cleared_coordinate_gcd": 217,
+        "recovered_scale": "217/12"
+      },
+      "promoted_coordinate_witnesses": {
+        "C": {
+          "primitive_coordinate": "780",
+          "exact_coordinate": "14105",
+          "recovered_scale": "217/12"
+        },
+        "L": {
+          "primitive_coordinate": "7944",
+          "exact_coordinate": "143654",
+          "recovered_scale": "217/12"
+        },
+        "Q_seed": {
+          "primitive_coordinate": "62600",
+          "exact_coordinate": "3396050/3",
+          "recovered_scale": "217/12"
+        },
+        "Q_sd1": {
+          "primitive_coordinate": "53979",
+          "exact_coordinate": "3904481/4",
+          "recovered_scale": "217/12"
+        }
+      },
+      "canonical_chart_target": {
+        "coordinate": "dC",
+        "required_value": "14105",
+        "primitive_c_direction": "780",
+        "transport_scale": "217/12",
+        "factorization": "780 * (217/12)"
+      },
+      "current_zero_witness_point": {
+        "C": "0",
+        "L": "0",
+        "Q_seed": "0",
+        "Q_sd1": "0"
+      },
+      "exact_witness_point": {
+        "C": "14105",
+        "L": "143654",
+        "Q_seed": "3396050/3",
+        "Q_sd1": "3904481/4"
+      },
+      "affine_witness_displacement": {
+        "C": "14105",
+        "L": "143654",
+        "Q_seed": "3396050/3",
+        "Q_sd1": "3904481/4"
+      },
+      "all_exact_factorizations_hold": true
+    },
+    "exceptional_envelope_row": {
+      "carrier": "exact qutrit ladder up to the E8-side E6 + A2 decomposition boundary",
+      "one_qutrit_local_shell_size": 27,
+      "two_qutrit_projective_point_count": 40,
+      "two_qutrit_weyl_basis_size": 81,
+      "two_qutrit_edge_count": 240,
+      "three_qutrit_operator_basis_dim": 729,
+      "six_qutrit_heisenberg_irrep_dim": 729,
+      "e8_root_count": 240,
+      "e6_a2_mixed_root_split": {
+        "e6_roots": 72,
+        "a2_roots": 6,
+        "mixed_roots": 162
+      },
+      "e8_line_orbit_sizes": [
+        36,
+        27,
+        27,
+        27,
+        1,
+        1,
+        1
+      ],
+      "matter_lines_per_generation": 27,
+      "generation_count": 3,
+      "kernel_record_names": [
+        "local_one_qutrit_heisenberg_e6_shell",
+        "global_two_qutrit_pauli_clifford_kernel"
+      ],
+      "finite_extension_record_names": [
+        "three_qutrit_sl27_closure",
+        "six_qutrit_sp12_clifford_backbone",
+        "e8_side_e6_a2_decomposition"
+      ],
+      "kernel_stops_before_e8_boundary": true,
+      "later_rungs_require_additional_finite_input": true,
+      "bridge_equalities": {
+        "local_shell_equals_generation_orbit": true,
+        "two_qutrit_edges_equal_e8_roots": true,
+        "three_qutrit_basis_equals_six_qutrit_irrep": true
+      },
+      "row_boundary_note": "The first two rungs are exact consequences of the qutrit kernel itself. The later finite rungs are exact but require extra finite input beyond the kernel. The remaining open wall is still the continuum/dynamical lift and the last nonlinear Yukawa spectral packet."
+    }
+  },
+  "periodic_table_theorem": {
+    "realization_row_is_controlled_by_one_common_half_turn": true,
+    "pascal_row_is_an_exact_sector_split_not_a_numerical_coincidence": true,
+    "frontier_row_is_one_witness_problem_on_a_fixed_carrier": true,
+    "exceptional_row_is_an_exact_finite_ladder_up_to_the_e8_boundary": true
+  },
+  "same_table_bridge_theorem": {
+    "realization_row_supplies_one_exact_dual_realization_packet": true,
+    "pascal_and_exceptional_rows_share_the_same_40_point_240_edge_backbone": true,
+    "frontier_and_exceptional_rows_share_the_same_81_seed": true,
+    "the_exceptional_boundary_and_frontier_witness_form_one_controlled_open_wall": true,
+    "the_four_rows_belong_to_one_table_as_distinct_layers_of_one_q3_backbone": true
+  },
+  "bridge_verdict": "These rows belong to one table because they are distinct exact layers of the same q=3 backbone: one dual realization packet, one 40-point/240-edge Pascal shell, one frontier transport row that already contains both the finite ordered-path no-go and the fixed K3 witness chart on the same law, and one exceptional ladder that extends the same backbone only up to the E8-side E6 + A2 boundary."
+}
