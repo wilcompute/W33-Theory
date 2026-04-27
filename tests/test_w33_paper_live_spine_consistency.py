@@ -61,3 +61,14 @@ def test_organization_section_records_parseval_target_side_continuation() -> Non
     assert "Naimark shadow split $21 = 1 + 20$" in text
     assert "scripts/w33\\_parseval\\_target\\_geometry\\_audit.py" in text
     assert "tests/test\\_w33\\_parseval\\_target\\_geometry\\_audit.py" in text
+
+
+def test_organization_section_records_q3_master_lock_closure() -> None:
+    text = _normalized_paper_text()
+
+    assert "The same closure now sharpens the exact $q=3$ master lock as well." in text
+    assert "Parseval target geometry and shared Naimark shadow" in text
+    assert "the toroidal and electron seed packets" in text
+    assert "not finite $q$-selection but smooth realization" in text
+    assert "scripts/w33\\_q3\\_master\\_lock\\_audit.py" in text
+    assert "tests/test\\_w33\\_q3\\_master\\_lock\\_audit.py" in text
