@@ -52,6 +52,77 @@
           "36": 24
         }
       },
+      "target_side_geometry": {
+        "spread_etf": {
+          "frame_type": "ETF(36,15)",
+          "sector_dimension": 15,
+          "normalized_coherence": "1/5",
+          "positive_sign_graph": {
+            "vertices": 36,
+            "degree": 15,
+            "lambda": 6,
+            "mu": 6,
+            "edge_count": 270,
+            "spectrum": {
+              "-3": 20,
+              "3": 15,
+              "15": 1
+            }
+          },
+          "negative_sign_graph": {
+            "vertices": 36,
+            "degree": 20,
+            "lambda": 10,
+            "mu": 12,
+            "edge_count": 360,
+            "spectrum": {
+              "-4": 15,
+              "2": 20,
+              "20": 1
+            }
+          }
+        },
+        "anti_line_quotient": {
+          "frame_type": "doubled two-distance tight frame(45,24)",
+          "sector_dimension": 24,
+          "positive_sign_graph": {
+            "vertices": 45,
+            "degree": 32,
+            "lambda": 22,
+            "mu": 24,
+            "edge_count": 720,
+            "spectrum": {
+              "-4": 20,
+              "2": 24,
+              "32": 1
+            }
+          },
+          "negative_sign_graph": {
+            "vertices": 45,
+            "degree": 12,
+            "lambda": 3,
+            "mu": 3,
+            "edge_count": 270,
+            "spectrum": {
+              "-3": 24,
+              "3": 20,
+              "12": 1
+            }
+          },
+          "positive_sign_isomorphic_to_transport_graph": true
+        },
+        "shared_naimark_shadow": {
+          "shared_shadow_dimension": 21,
+          "shared_shadow_split": "1 + 20",
+          "spread_shadow_frame_type": "ETF(36,21)",
+          "spread_shadow_coherence": "1/7",
+          "anti_line_shadow_normalized_off_diagonal": [
+            "-1/14",
+            "2/7"
+          ],
+          "naimark_complement_swaps_sign_graphs": true
+        }
+      },
       "signed_sector_operator": "S = A_iso - A_non = 2A + I - J",
       "seidel_spectrum": {
         "-15": 1,

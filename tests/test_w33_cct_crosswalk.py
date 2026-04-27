@@ -96,6 +96,7 @@ class TestCCT4H4Selector:
             "Clifford/root-system process objects",
             "E8 to H4 quasicrystal pathway",
             "feedback loop / cycle-clock dynamics",
+            "measurement / shadow duality",
             "non-arbitrary H4 emergence",
         }
 
@@ -108,6 +109,7 @@ class TestCCT4H4Selector:
         assert crosswalk["aligned_periodic_rows_used"] == [
             "exceptional_envelope_row",
             "frontier_witness_row",
+            "pascal_computation_row",
         ]
         assert crosswalk["same_table_backbone_invariants_used"] == [
             "240_edge_root_shell",
@@ -145,6 +147,24 @@ class TestCCT4H4Selector:
         )
         assert trit_row["same_table_backbone_invariants"] == ["81_seed", "40_point_shell"]
 
+        measurement_row = next(
+            row
+            for row in crosswalk["crosswalk_rows"]
+            if row["cct_desideratum"] == "measurement / shadow duality"
+        )
+        assert measurement_row["aligned_periodic_rows"] == ["pascal_computation_row"]
+        assert measurement_row["same_table_backbone_invariants"] == [
+            "40_point_shell",
+            "240_edge_root_shell",
+        ]
+        assert measurement_row["five_layer_route"] == {
+            "carrier": "the centered 40-point line module and its Pascal target channels",
+            "realization": "36 spread features and 90 anti-line features collapsing to 45 transport targets",
+            "algebra": "Parseval/Naimark target-side sign algebra",
+            "computation": "center the spread and anti-line probes, quotient duplicate anti-lines, and pass to the Naimark complement",
+            "witness": "ETF(36,15), SRG(45,32,22,24), and the shared shadow 21 = 1 + 20",
+        }
+
         no_go_row = next(
             row for row in crosswalk["crosswalk_rows"] if row["cct_desideratum"] == "non-arbitrary H4 emergence"
         )
@@ -161,10 +181,12 @@ class TestCCT4H4Selector:
         assert crosswalk["theorem"]["every_crosswalk_row_has_a_full_five_layer_route"]
         assert crosswalk["theorem"]["crosswalk_rows_route_only_to_checked_periodic_rows"]
         assert crosswalk["theorem"]["crosswalk_terms_are_forced_onto_exact_carriers_and_witnesses"]
+        assert crosswalk["theorem"]["the_pascal_row_now_routes_the_target_side_measurement_shadow_dictionary"]
         assert crosswalk["theorem"]["crosswalk_rows_name_the_same_table_backbone_invariants_they_use"]
         assert crosswalk["theorem"]["the_source_dictionary_explicitly_uses_the_shared_40_81_240_backbone"]
         assert "carrier -> realization -> algebra -> computation -> witness" in crosswalk["theorem"]["interpretation"]
         assert "shared q=3 backbone invariant" in crosswalk["theorem"]["interpretation"]
+        assert "45-point transport graph" in crosswalk["theorem"]["interpretation"]
         assert "H4/quasicrystal step" in crosswalk["theorem"]["interpretation"]
 
     def test_docs_and_paper_mention_the_cct_backbone_invariants_explicitly(self):

@@ -10,6 +10,8 @@ from __future__ import annotations
 
 from typing import Any
 
+from scripts.w33_parseval_target_geometry_audit import build_parseval_target_geometry_summary
+
 
 Q = 3
 LAMBDA = 2
@@ -187,6 +189,7 @@ def build_cct_crosswalk() -> dict[str, Any]:
     language = w33_clock_language_summary()
     projection = e8_h4_projection_summary()
     no_go = full_symmetry_no_go_summary()
+    target_geometry = build_parseval_target_geometry_summary()
     rows = [
         {
             "cct_desideratum": "finite code/language",
@@ -273,6 +276,20 @@ def build_cct_crosswalk() -> dict[str, Any]:
             ),
         },
         {
+            "cct_desideratum": "measurement / shadow duality",
+            "w33_witness": "the Pascal target side closes as ETF(36,15), the 45-point transport graph, and a shared 21 = 1 + 20 Naimark shadow",
+            "integer_certificate": target_geometry["common_naimark_shadow"]["shared_shadow_dimension"],
+            "aligned_periodic_rows": ["pascal_computation_row"],
+            "same_table_backbone_invariants": ["40_point_shell", "240_edge_root_shell"],
+            "five_layer_route": _five_layer_route(
+                carrier="the centered 40-point line module and its Pascal target channels",
+                realization="36 spread features and 90 anti-line features collapsing to 45 transport targets",
+                algebra="Parseval/Naimark target-side sign algebra",
+                computation="center the spread and anti-line probes, quotient duplicate anti-lines, and pass to the Naimark complement",
+                witness="ETF(36,15), SRG(45,32,22,24), and the shared shadow 21 = 1 + 20",
+            ),
+        },
+        {
             "cct_desideratum": "non-arbitrary H4 emergence",
             "w33_witness": "full PSp(4,3) symmetry cannot produce a 12-regular 600-cell skeleton",
             "integer_certificate": no_go["full_psp43_orbital_degrees"],
@@ -328,6 +345,20 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 "carrier" in row["five_layer_route"] and "witness" in row["five_layer_route"]
                 for row in rows
             ),
+            "the_pascal_row_now_routes_the_target_side_measurement_shadow_dictionary": (
+                target_geometry["theorem"]["the_centered_spread_features_form_the_exact_etf_36_15"]
+                and target_geometry["theorem"][
+                    "the_anti_line_channel_collapses_to_a_doubled_45_vector_transport_frame_in_the_24_sector"
+                ]
+                and target_geometry["theorem"][
+                    "both_target_systems_share_the_same_hidden_naimark_shadow_split_21_equals_1_plus_20"
+                ]
+                and any(
+                    row["cct_desideratum"] == "measurement / shadow duality"
+                    and row["aligned_periodic_rows"] == ["pascal_computation_row"]
+                    for row in rows
+                )
+            ),
             "crosswalk_rows_name_the_same_table_backbone_invariants_they_use": all(
                 row["same_table_backbone_invariants"]
                 and all(name in BACKBONE_INVARIANT_REGISTRY for name in row["same_table_backbone_invariants"])
@@ -341,8 +372,10 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 "template; the CCT dictionary rows are now routed through the "
                 "carrier -> realization -> algebra -> computation -> witness "
                 "framework and each row names the shared q=3 backbone invariant "
-                "it is using, while the H4/quasicrystal step still requires an "
-                "extra golden/icosahedral selector."
+                "it is using, the Pascal row now contributes an exact target-side "
+                "measurement/shadow dictionary culminating in the 45-point transport "
+                "graph, while the H4/quasicrystal step still requires an extra "
+                "golden/icosahedral selector."
             ),
         },
     }

@@ -49,3 +49,15 @@ def test_frontier_section_records_branch_search_and_transport_law_bridge() -> No
         "the live K3 witness is the ordered-path transport law written on the fixed tail chart"
         in text
     )
+
+
+def test_organization_section_records_parseval_target_side_continuation() -> None:
+    text = _normalized_paper_text()
+
+    assert "The Pascal row has now sharpened on the target side as well." in text
+    assert "resolve the line module as $40 = 1 + 15 + 24$" in text
+    assert "\\mathrm{ETF}(36,15)" in text
+    assert "$\\mathrm{SRG}(45,32,22,24)$" in text
+    assert "Naimark shadow split $21 = 1 + 20$" in text
+    assert "scripts/w33\\_parseval\\_target\\_geometry\\_audit.py" in text
+    assert "tests/test\\_w33\\_parseval\\_target\\_geometry\\_audit.py" in text

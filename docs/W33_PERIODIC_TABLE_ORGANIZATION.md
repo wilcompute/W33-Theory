@@ -117,6 +117,17 @@ The exact line-level facts are:
 - through each projective point, `13 = 4 + 9`
 - the signed sector operator is `S = A - A_N`
 
+The Pascal row now sharpens further on the target side. Centering the spread
+and anti-line probes resolves the line module as `40 = 1 + 15 + 24`. The spread
+channel becomes an exact `ETF(36,15)`, the anti-line channel collapses to a
+doubled `45`-vector transport frame in the `24`-sector, and both channels
+share a Naimark shadow `21 = 1 + 20` whose sign graphs are swapped by
+complement. The executable surfaces are
+`scripts/w33_parseval_measurement_frame_audit.py`,
+`scripts/w33_parseval_target_geometry_audit.py`,
+`tests/test_w33_parseval_measurement_frame_audit.py`, and
+`tests/test_w33_parseval_target_geometry_audit.py`.
+
 This gives the right internal meaning of computation.
 
 In this program, computation should usually mean one of five exact actions:
@@ -205,6 +216,10 @@ This is the cleanest way to make the paper read like a genuine framework instead
 - `part7_pascal_information_functor.tex`
 - `scripts/w33_q3_master_lock_audit.py`
 - `tests/test_w33_q3_master_lock_audit.py`
+- `scripts/w33_parseval_measurement_frame_audit.py`
+- `tests/test_w33_parseval_measurement_frame_audit.py`
+- `scripts/w33_parseval_target_geometry_audit.py`
+- `tests/test_w33_parseval_target_geometry_audit.py`
 - `scripts/w33_qutrit_ladder_audit.py`
 - `tests/test_w33_qutrit_ladder_audit.py`
 - `scripts/w33_e8_correspondence_boundary_audit.py`

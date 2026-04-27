@@ -33,6 +33,9 @@ from scripts.w33_h4_branch_selection_search import (  # noqa: E402
 from scripts.w33_parseval_measurement_frame_audit import (  # noqa: E402
     build_parseval_measurement_frame_summary,
 )
+from scripts.w33_parseval_target_geometry_audit import (  # noqa: E402
+    build_parseval_target_geometry_summary,
+)
 from scripts.w33_qutrit_ladder_audit import analyze as analyze_qutrit_ladder  # noqa: E402
 from scripts.w33_q3_master_lock_audit import q3_transport_algebra_summary  # noqa: E402
 from w33_h4_ordered_path_k3_witness_bridge import (  # noqa: E402
@@ -48,6 +51,7 @@ def build_periodic_table_organization_summary() -> dict[str, Any]:
     realization = build_realization_orbit_summary()
     pascal = build_pascal_line_split_summary()
     parseval = build_parseval_measurement_frame_summary()
+    target_geometry = build_parseval_target_geometry_summary()
     witness = q3_transport_algebra_summary()
     branch_selection = build_branch_selection_search_summary()
     finite_to_continuum_bridge = build_h4_ordered_path_k3_witness_bridge_summary()
@@ -111,6 +115,32 @@ def build_periodic_table_organization_summary() -> dict[str, Any]:
                         for key, value in parseval["spectral_data"][
                             "centered_anti_line_probe_spectrum"
                         ].items()
+                    },
+                },
+                "target_side_geometry": {
+                    "spread_etf": {
+                        "frame_type": target_geometry["target_side_frame_geometry"]["spread_etf"]["frame_type"],
+                        "sector_dimension": target_geometry["target_side_frame_geometry"]["spread_etf"]["sector_dimension"],
+                        "normalized_coherence": target_geometry["target_side_frame_geometry"]["spread_etf"]["normalized_coherence"],
+                        "positive_sign_graph": target_geometry["target_side_frame_geometry"]["spread_etf"]["positive_sign_graph"],
+                        "negative_sign_graph": target_geometry["target_side_frame_geometry"]["spread_etf"]["negative_sign_graph"],
+                    },
+                    "anti_line_quotient": {
+                        "frame_type": target_geometry["target_side_frame_geometry"]["anti_line_quotient"]["frame_type"],
+                        "sector_dimension": target_geometry["target_side_frame_geometry"]["anti_line_quotient"]["sector_dimension"],
+                        "positive_sign_graph": target_geometry["target_side_frame_geometry"]["anti_line_quotient"]["positive_sign_graph"],
+                        "negative_sign_graph": target_geometry["target_side_frame_geometry"]["anti_line_quotient"]["negative_sign_graph"],
+                        "positive_sign_isomorphic_to_transport_graph": target_geometry["target_side_frame_geometry"]["anti_line_quotient"]["positive_sign_isomorphic_to_transport_graph"],
+                    },
+                    "shared_naimark_shadow": {
+                        "shared_shadow_dimension": target_geometry["common_naimark_shadow"]["shared_shadow_dimension"],
+                        "shared_shadow_split": target_geometry["common_naimark_shadow"]["shared_shadow_split"],
+                        "spread_shadow_frame_type": target_geometry["common_naimark_shadow"]["spread_shadow"]["frame_type"],
+                        "spread_shadow_coherence": target_geometry["common_naimark_shadow"]["spread_shadow"]["normalized_coherence"],
+                        "anti_line_shadow_normalized_off_diagonal": target_geometry["common_naimark_shadow"]["anti_line_shadow"]["normalized_off_diagonal"],
+                        "naimark_complement_swaps_sign_graphs": all(
+                            target_geometry["naimark_sign_duality"].values()
+                        ),
                     },
                 },
                 "signed_sector_operator": pascal["seidel_formula"],
@@ -209,6 +239,59 @@ def build_periodic_table_organization_summary() -> dict[str, Any]:
                 "anti_line_density": "2/5",
                 "centered_spread_probe_spectrum": {"0": 25, "18": 15},
                 "centered_anti_line_probe_spectrum": {"0": 16, "36": 24},
+            }
+            and summary["rows"]["pascal_computation_row"]["target_side_geometry"]
+            == {
+                "spread_etf": {
+                    "frame_type": "ETF(36,15)",
+                    "sector_dimension": 15,
+                    "normalized_coherence": "1/5",
+                    "positive_sign_graph": {
+                        "vertices": 36,
+                        "degree": 15,
+                        "lambda": 6,
+                        "mu": 6,
+                        "edge_count": 270,
+                        "spectrum": {"-3": 20, "3": 15, "15": 1},
+                    },
+                    "negative_sign_graph": {
+                        "vertices": 36,
+                        "degree": 20,
+                        "lambda": 10,
+                        "mu": 12,
+                        "edge_count": 360,
+                        "spectrum": {"-4": 15, "2": 20, "20": 1},
+                    },
+                },
+                "anti_line_quotient": {
+                    "frame_type": "doubled two-distance tight frame(45,24)",
+                    "sector_dimension": 24,
+                    "positive_sign_graph": {
+                        "vertices": 45,
+                        "degree": 32,
+                        "lambda": 22,
+                        "mu": 24,
+                        "edge_count": 720,
+                        "spectrum": {"-4": 20, "2": 24, "32": 1},
+                    },
+                    "negative_sign_graph": {
+                        "vertices": 45,
+                        "degree": 12,
+                        "lambda": 3,
+                        "mu": 3,
+                        "edge_count": 270,
+                        "spectrum": {"-3": 24, "3": 20, "12": 1},
+                    },
+                    "positive_sign_isomorphic_to_transport_graph": True,
+                },
+                "shared_naimark_shadow": {
+                    "shared_shadow_dimension": 21,
+                    "shared_shadow_split": "1 + 20",
+                    "spread_shadow_frame_type": "ETF(36,21)",
+                    "spread_shadow_coherence": "1/7",
+                    "anti_line_shadow_normalized_off_diagonal": ["-1/14", "2/7"],
+                    "naimark_complement_swaps_sign_graphs": True,
+                },
             }
         ),
         "frontier_row_is_one_witness_problem_on_a_fixed_carrier": (

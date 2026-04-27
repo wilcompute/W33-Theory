@@ -55,6 +55,58 @@ def test_periodic_table_organization_summary_tracks_four_exact_rows() -> None:
         "centered_spread_probe_spectrum": {"0": 25, "18": 15},
         "centered_anti_line_probe_spectrum": {"0": 16, "36": 24},
     }
+    assert pascal["target_side_geometry"] == {
+        "spread_etf": {
+            "frame_type": "ETF(36,15)",
+            "sector_dimension": 15,
+            "normalized_coherence": "1/5",
+            "positive_sign_graph": {
+                "vertices": 36,
+                "degree": 15,
+                "lambda": 6,
+                "mu": 6,
+                "edge_count": 270,
+                "spectrum": {"-3": 20, "3": 15, "15": 1},
+            },
+            "negative_sign_graph": {
+                "vertices": 36,
+                "degree": 20,
+                "lambda": 10,
+                "mu": 12,
+                "edge_count": 360,
+                "spectrum": {"-4": 15, "2": 20, "20": 1},
+            },
+        },
+        "anti_line_quotient": {
+            "frame_type": "doubled two-distance tight frame(45,24)",
+            "sector_dimension": 24,
+            "positive_sign_graph": {
+                "vertices": 45,
+                "degree": 32,
+                "lambda": 22,
+                "mu": 24,
+                "edge_count": 720,
+                "spectrum": {"-4": 20, "2": 24, "32": 1},
+            },
+            "negative_sign_graph": {
+                "vertices": 45,
+                "degree": 12,
+                "lambda": 3,
+                "mu": 3,
+                "edge_count": 270,
+                "spectrum": {"-3": 24, "3": 20, "12": 1},
+            },
+            "positive_sign_isomorphic_to_transport_graph": True,
+        },
+        "shared_naimark_shadow": {
+            "shared_shadow_dimension": 21,
+            "shared_shadow_split": "1 + 20",
+            "spread_shadow_frame_type": "ETF(36,21)",
+            "spread_shadow_coherence": "1/7",
+            "anti_line_shadow_normalized_off_diagonal": ["-1/14", "2/7"],
+            "naimark_complement_swaps_sign_graphs": True,
+        },
+    }
     assert pascal["signed_sector_operator"] == "S = A_iso - A_non = 2A + I - J"
     assert pascal["seidel_spectrum"] == {"-15": 1, "-7": 15, "5": 24}
 
@@ -201,6 +253,58 @@ def test_export_payload_freezes_the_same_checked_rows() -> None:
         "centered_spread_probe_spectrum": {"0": 25, "18": 15},
         "centered_anti_line_probe_spectrum": {"0": 16, "36": 24},
     }
+    assert payload["rows"]["pascal_computation_row"]["target_side_geometry"] == {
+        "spread_etf": {
+            "frame_type": "ETF(36,15)",
+            "sector_dimension": 15,
+            "normalized_coherence": "1/5",
+            "positive_sign_graph": {
+                "vertices": 36,
+                "degree": 15,
+                "lambda": 6,
+                "mu": 6,
+                "edge_count": 270,
+                "spectrum": {"-3": 20, "3": 15, "15": 1},
+            },
+            "negative_sign_graph": {
+                "vertices": 36,
+                "degree": 20,
+                "lambda": 10,
+                "mu": 12,
+                "edge_count": 360,
+                "spectrum": {"-4": 15, "2": 20, "20": 1},
+            },
+        },
+        "anti_line_quotient": {
+            "frame_type": "doubled two-distance tight frame(45,24)",
+            "sector_dimension": 24,
+            "positive_sign_graph": {
+                "vertices": 45,
+                "degree": 32,
+                "lambda": 22,
+                "mu": 24,
+                "edge_count": 720,
+                "spectrum": {"-4": 20, "2": 24, "32": 1},
+            },
+            "negative_sign_graph": {
+                "vertices": 45,
+                "degree": 12,
+                "lambda": 3,
+                "mu": 3,
+                "edge_count": 270,
+                "spectrum": {"-3": 24, "3": 20, "12": 1},
+            },
+            "positive_sign_isomorphic_to_transport_graph": True,
+        },
+        "shared_naimark_shadow": {
+            "shared_shadow_dimension": 21,
+            "shared_shadow_split": "1 + 20",
+            "spread_shadow_frame_type": "ETF(36,21)",
+            "spread_shadow_coherence": "1/7",
+            "anti_line_shadow_normalized_off_diagonal": ["-1/14", "2/7"],
+            "naimark_complement_swaps_sign_graphs": True,
+        },
+    }
     assert payload["rows"]["frontier_witness_row"]["canonical_chart_target"]["required_value"] == "14105"
     assert payload["rows"]["frontier_witness_row"]["tail_package_sizes"] == [81, 162, 81]
     assert payload["rows"]["frontier_witness_row"]["quadrangle_branch_packet_no_go"][
@@ -248,16 +352,23 @@ def test_docs_and_paper_keep_the_five_layer_executable_language() -> None:
     assert "4. computation" in doc_text
     assert "5. witness" in doc_text
     assert "scripts/w33_periodic_table_organization.py" in doc_text
+    assert "scripts/w33_parseval_target_geometry_audit.py" in doc_text
     assert "scripts/w33_qutrit_ladder_audit.py" in doc_text
     assert "scripts/w33_e8_correspondence_boundary_audit.py" in doc_text
     assert "tests/test_w33_periodic_table_organization.py" in doc_text
+    assert "tests/test_w33_parseval_target_geometry_audit.py" in doc_text
     assert "tests/test_w33_qutrit_ladder_audit.py" in doc_text
     assert "tests/test_w33_e8_correspondence_boundary_audit.py" in doc_text
     assert "artifacts/w33_periodic_table_organization_summary.json" in doc_text
     assert "checks it directly against" in doc_text
     assert "build_payload()" in doc_text
     assert "exact qutrit ladder with E8-side `E6 + A2` boundary" in doc_text
+    assert "ETF(36,15)" in doc_text
+    assert "21 = 1 + 20" in doc_text
     assert "Same-table bridge theorem." in doc_text
+    assert "\\mathrm{ETF}(36,15)" in paper_text
+    assert "SRG}(45,32,22,24)" in paper_text
+    assert "$21 = 1 + 20$" in paper_text
     assert "same `40`-point / `240`-edge shell" in doc_text
     assert "share the same `81` seed" in doc_text
     assert "one exact finite backbone read at" in doc_text
