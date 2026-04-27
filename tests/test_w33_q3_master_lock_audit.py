@@ -133,6 +133,41 @@ def test_q3_transport_algebra_summary_reduces_the_live_wall_to_one_witness() -> 
         "cleared_coordinate_gcd": 217,
         "recovered_scale": "217/12",
     }
+    assert summary["promoted_coordinate_witnesses"] == {
+        "C": {
+            "primitive_coordinate": "780",
+            "exact_coordinate": "14105",
+            "recovered_scale": "217/12",
+        },
+        "L": {
+            "primitive_coordinate": "7944",
+            "exact_coordinate": "143654",
+            "recovered_scale": "217/12",
+        },
+        "Q_seed": {
+            "primitive_coordinate": "62600",
+            "exact_coordinate": "3396050/3",
+            "recovered_scale": "217/12",
+        },
+        "Q_sd1": {
+            "primitive_coordinate": "53979",
+            "exact_coordinate": "3904481/4",
+            "recovered_scale": "217/12",
+        },
+    }
+    assert summary["current_coordinate_witness_matches"] == {
+        "C": False,
+        "L": False,
+        "Q_seed": False,
+        "Q_sd1": False,
+    }
+    assert summary["canonical_chart_target"] == {
+        "coordinate": "dC",
+        "required_value": "14105",
+        "primitive_c_direction": "780",
+        "transport_scale": "217/12",
+        "factorization": "780 * (217/12)",
+    }
     assert all(summary["exact_factorizations"].values())
 
 
@@ -168,7 +203,9 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
     assert theorem["the_remaining_wall_refines_to_the_first_sign_trivial_unipotent_transport_witness"] is True
     assert theorem["the_remaining_wall_refines_equivalently_to_the_first_nonzero_nilpotent_holonomy_increment"] is True
     assert theorem["the_next_exact_positive_target_is_the_unique_minimal_tail_datum_in_the_existing_slot"] is True
+    assert theorem["the_remaining_wall_refines_further_to_any_one_promoted_coordinate_witness_equivalently_dC_equals_14105"] is True
     assert theorem["the_remaining_wall_is_not_finite_q_selection_but_smooth_realization"] is True
     assert "non-identity unipotent sign-trivial transport witness" in summary["boundary_note"]
     assert "nonzero nilpotent holonomy increment" in summary["boundary_note"]
     assert "217/12" in summary["boundary_note"]
+    assert "dC = 14105" in summary["boundary_note"]

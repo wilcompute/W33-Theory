@@ -55,11 +55,20 @@ from w33_current_k3_mixed_plane_holonomy_failure_bridge import (  # noqa: E402
 from w33_current_k3_mixed_plane_nilpotent_holonomy_increment_failure_bridge import (  # noqa: E402
     build_current_k3_mixed_plane_nilpotent_holonomy_increment_failure_summary,
 )
+from w33_current_k3_tail_coordinate_witness_failure_bridge import (  # noqa: E402
+    build_current_k3_tail_coordinate_witness_failure_summary,
+)
 from w33_k3_mixed_plane_holonomy_witness_bridge import (  # noqa: E402
     build_k3_mixed_plane_holonomy_witness_summary,
 )
 from w33_k3_mixed_plane_nilpotent_holonomy_increment_bridge import (  # noqa: E402
     build_k3_mixed_plane_nilpotent_holonomy_increment_summary,
+)
+from w33_k3_tail_canonical_chart_slot_equivalence_bridge import (  # noqa: E402
+    build_k3_tail_canonical_chart_slot_equivalence_summary,
+)
+from w33_k3_tail_single_coordinate_witness_bridge import (  # noqa: E402
+    build_k3_tail_single_coordinate_witness_summary,
 )
 from w33_minimal_k3_tail_enhancement_datum_bridge import (  # noqa: E402
     build_minimal_k3_tail_enhancement_datum_summary,
@@ -304,6 +313,9 @@ def q3_transport_algebra_summary() -> Dict[str, object]:
     nilpotent = build_k3_mixed_plane_nilpotent_holonomy_increment_summary()
     current_nilpotent = build_current_k3_mixed_plane_nilpotent_holonomy_increment_failure_summary()
     minimal_tail = build_minimal_k3_tail_enhancement_datum_summary()
+    coordinate_witness = build_k3_tail_single_coordinate_witness_summary()
+    current_coordinate_witness = build_current_k3_tail_coordinate_witness_failure_summary()
+    canonical_chart = build_k3_tail_canonical_chart_slot_equivalence_summary()
 
     triangle_holonomy = holonomy["triangle_holonomy"]
     cycle_counts = triangle_holonomy["cycle_type_counts"]
@@ -316,6 +328,12 @@ def q3_transport_algebra_summary() -> Dict[str, object]:
         "current_mixed_plane_nilpotent_holonomy_increment_state"
     ]
     minimal_tail_datum = minimal_tail["minimal_k3_tail_enhancement_datum"]
+    coordinate_witnesses = coordinate_witness["exact_coordinate_witnesses"]
+    current_coordinate_matches = {
+        name: value["matches_promoted_witness"]
+        for name, value in current_coordinate_witness["witness_comparison"].items()
+    }
+    canonical_chart_target = canonical_chart["canonical_chart_target"]
 
     return {
         "triangle_count": int(holonomy["transport_triangles"]),
@@ -339,6 +357,9 @@ def q3_transport_algebra_summary() -> Dict[str, object]:
         "minimal_tail_slot_state": minimal_tail_datum["slot_state"],
         "minimal_tail_primitive_generator": minimal_tail_datum["primitive_integral_generator"],
         "minimal_tail_transport_pair": minimal_tail_datum["transport_arithmetic_pair"],
+        "promoted_coordinate_witnesses": coordinate_witnesses,
+        "current_coordinate_witness_matches": current_coordinate_matches,
+        "canonical_chart_target": canonical_chart_target,
         "exact_factorizations": {
             "triangle_parity_equals_local_s3_holonomy_sign_exactly": triangle_holonomy[
                 "z2_parity_equals_holonomy_sign_exactly"
@@ -385,6 +406,21 @@ def q3_transport_algebra_summary() -> Dict[str, object]:
                 "minimal_k3_tail_enhancement_datum_theorem"
             ][
                 "therefore_the_live_positive_target_is_one_unique_minimal_k3_tail_enhancement_datum_on_the_same_fixed_package"
+            ],
+            "any_one_promoted_coordinate_witness_recovers_the_same_exact_scale": coordinate_witness[
+                "k3_tail_single_coordinate_witness_theorem"
+            ][
+                "each_promoted_coordinate_witness_recovers_the_same_exact_scale_217_over_12"
+            ],
+            "current_host_fails_exactly_by_lacking_any_promoted_coordinate_witness": current_coordinate_witness[
+                "current_k3_tail_coordinate_witness_failure_theorem"
+            ][
+                "therefore_the_present_refined_k3_object_fails_exact_tail_realization_exactly_by_lacking_any_promoted_coordinate_witness"
+            ],
+            "delta_c_equals_14105_is_equivalent_to_activating_the_unique_nonzero_tail_slot": canonical_chart[
+                "k3_tail_canonical_chart_slot_equivalence_theorem"
+            ][
+                "therefore_solving_deltaC_equals_14105_on_the_fixed_package_is_equivalent_to_activating_the_unique_nonzero_tail_slot"
             ],
         },
     }
@@ -455,10 +491,11 @@ def classify_q3_master_lock() -> Tuple[Dict[str, object], ...]:
                 "but the current host still lacks the first genuine non-identity unipotent "
                 "sign-trivial holonomy witness that would realize the smooth/dynamical lift; "
                 "the next exact positive target is the unique minimal tail datum in the existing "
-                "slot with transport scale 217/12."
+                "slot with transport scale 217/12, equivalently any one promoted coordinate "
+                "witness and canonically dC = 14105 on the fixed tail channel."
             ),
             "evidence": {
-                "remaining_wall": "first sign-trivial unipotent transport witness + unique minimal tail datum + Yukawa / dynamics",
+                "remaining_wall": "first sign-trivial unipotent transport witness + unique minimal tail datum + any one promoted coordinate witness / dC = 14105 + Yukawa / dynamics",
             },
         },
     )
@@ -575,6 +612,50 @@ def analyze() -> Dict[str, object]:
             == {"denominator_lcm": 12, "cleared_coordinate_gcd": 217, "recovered_scale": "217/12"}
             and transport["exact_factorizations"]["the_next_positive_target_is_the_unique_minimal_tail_datum"]
         ),
+        "the_remaining_wall_refines_further_to_any_one_promoted_coordinate_witness_equivalently_dC_equals_14105": (
+            transport["promoted_coordinate_witnesses"]
+            == {
+                "C": {
+                    "primitive_coordinate": "780",
+                    "exact_coordinate": "14105",
+                    "recovered_scale": "217/12",
+                },
+                "L": {
+                    "primitive_coordinate": "7944",
+                    "exact_coordinate": "143654",
+                    "recovered_scale": "217/12",
+                },
+                "Q_seed": {
+                    "primitive_coordinate": "62600",
+                    "exact_coordinate": "3396050/3",
+                    "recovered_scale": "217/12",
+                },
+                "Q_sd1": {
+                    "primitive_coordinate": "53979",
+                    "exact_coordinate": "3904481/4",
+                    "recovered_scale": "217/12",
+                },
+            }
+            and transport["current_coordinate_witness_matches"]
+            == {"C": False, "L": False, "Q_seed": False, "Q_sd1": False}
+            and transport["canonical_chart_target"]
+            == {
+                "coordinate": "dC",
+                "required_value": "14105",
+                "primitive_c_direction": "780",
+                "transport_scale": "217/12",
+                "factorization": "780 * (217/12)",
+            }
+            and transport["exact_factorizations"][
+                "any_one_promoted_coordinate_witness_recovers_the_same_exact_scale"
+            ]
+            and transport["exact_factorizations"][
+                "current_host_fails_exactly_by_lacking_any_promoted_coordinate_witness"
+            ]
+            and transport["exact_factorizations"][
+                "delta_c_equals_14105_is_equivalent_to_activating_the_unique_nonzero_tail_slot"
+            ]
+        ),
         "the_remaining_wall_is_not_finite_q_selection_but_smooth_realization": True,
     }
 
@@ -598,8 +679,9 @@ def analyze() -> Dict[str, object]:
             "the canonical mixed-plane host, equivalently the first genuine nonzero nilpotent "
             "holonomy increment there. More positively, the next exact target is already rigid: "
             "the unique minimal tail datum in the existing slot with primitive direction "
-            "(780,7944,62600,53979) and transport scale 217/12, i.e. the algebraic entry point "
-            "for the smooth continuum and dynamical realization."
+            "(780,7944,62600,53979) and transport scale 217/12. On the fixed tail line this is "
+            "equivalent to any one promoted coordinate witness, canonically dC = 14105, i.e. "
+            "the algebraic entry point for the smooth continuum and dynamical realization."
         ),
     }
 
