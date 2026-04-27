@@ -168,6 +168,25 @@ def test_q3_transport_algebra_summary_reduces_the_live_wall_to_one_witness() -> 
         "transport_scale": "217/12",
         "factorization": "780 * (217/12)",
     }
+    assert summary["current_zero_witness_point"] == {
+        "C": "0",
+        "L": "0",
+        "Q_seed": "0",
+        "Q_sd1": "0",
+    }
+    assert summary["exact_witness_point"] == {
+        "C": "14105",
+        "L": "143654",
+        "Q_seed": "3396050/3",
+        "Q_sd1": "3904481/4",
+    }
+    assert summary["affine_witness_displacement"] == summary["exact_witness_point"]
+    assert summary["affine_displacement_recovered_scales"] == {
+        "C": "217/12",
+        "L": "217/12",
+        "Q_seed": "217/12",
+        "Q_sd1": "217/12",
+    }
     assert all(summary["exact_factorizations"].values())
 
 
@@ -204,8 +223,10 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
     assert theorem["the_remaining_wall_refines_equivalently_to_the_first_nonzero_nilpotent_holonomy_increment"] is True
     assert theorem["the_next_exact_positive_target_is_the_unique_minimal_tail_datum_in_the_existing_slot"] is True
     assert theorem["the_remaining_wall_refines_further_to_any_one_promoted_coordinate_witness_equivalently_dC_equals_14105"] is True
+    assert theorem["the_live_positive_target_can_be_stated_as_one_exact_affine_witness_displacement_from_the_current_zero_candidate"] is True
     assert theorem["the_remaining_wall_is_not_finite_q_selection_but_smooth_realization"] is True
     assert "non-identity unipotent sign-trivial transport witness" in summary["boundary_note"]
     assert "nonzero nilpotent holonomy increment" in summary["boundary_note"]
     assert "217/12" in summary["boundary_note"]
     assert "dC = 14105" in summary["boundary_note"]
+    assert "(14105,143654,3396050/3,3904481/4)" in summary["boundary_note"]

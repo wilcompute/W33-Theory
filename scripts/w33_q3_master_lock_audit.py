@@ -64,6 +64,9 @@ from w33_k3_mixed_plane_holonomy_witness_bridge import (  # noqa: E402
 from w33_k3_mixed_plane_nilpotent_holonomy_increment_bridge import (  # noqa: E402
     build_k3_mixed_plane_nilpotent_holonomy_increment_summary,
 )
+from w33_k3_tail_affine_witness_target_bridge import (  # noqa: E402
+    build_k3_tail_affine_witness_target_summary,
+)
 from w33_k3_tail_canonical_chart_slot_equivalence_bridge import (  # noqa: E402
     build_k3_tail_canonical_chart_slot_equivalence_summary,
 )
@@ -316,6 +319,7 @@ def q3_transport_algebra_summary() -> Dict[str, object]:
     coordinate_witness = build_k3_tail_single_coordinate_witness_summary()
     current_coordinate_witness = build_current_k3_tail_coordinate_witness_failure_summary()
     canonical_chart = build_k3_tail_canonical_chart_slot_equivalence_summary()
+    affine_witness = build_k3_tail_affine_witness_target_summary()
 
     triangle_holonomy = holonomy["triangle_holonomy"]
     cycle_counts = triangle_holonomy["cycle_type_counts"]
@@ -334,6 +338,12 @@ def q3_transport_algebra_summary() -> Dict[str, object]:
         for name, value in current_coordinate_witness["witness_comparison"].items()
     }
     canonical_chart_target = canonical_chart["canonical_chart_target"]
+    current_zero_witness_point = affine_witness["current_zero_witness_point"]
+    exact_witness_point = affine_witness["exact_witness_point"]
+    affine_witness_displacement = affine_witness["affine_witness_displacement"]
+    affine_displacement_recovered_scales = affine_witness[
+        "displacement_recovered_scales"
+    ]
 
     return {
         "triangle_count": int(holonomy["transport_triangles"]),
@@ -360,6 +370,10 @@ def q3_transport_algebra_summary() -> Dict[str, object]:
         "promoted_coordinate_witnesses": coordinate_witnesses,
         "current_coordinate_witness_matches": current_coordinate_matches,
         "canonical_chart_target": canonical_chart_target,
+        "current_zero_witness_point": current_zero_witness_point,
+        "exact_witness_point": exact_witness_point,
+        "affine_witness_displacement": affine_witness_displacement,
+        "affine_displacement_recovered_scales": affine_displacement_recovered_scales,
         "exact_factorizations": {
             "triangle_parity_equals_local_s3_holonomy_sign_exactly": triangle_holonomy[
                 "z2_parity_equals_holonomy_sign_exactly"
@@ -421,6 +435,11 @@ def q3_transport_algebra_summary() -> Dict[str, object]:
                 "k3_tail_canonical_chart_slot_equivalence_theorem"
             ][
                 "therefore_solving_deltaC_equals_14105_on_the_fixed_package_is_equivalent_to_activating_the_unique_nonzero_tail_slot"
+            ],
+            "the_live_positive_target_is_one_exact_affine_witness_displacement": affine_witness[
+                "k3_tail_affine_witness_target_theorem"
+            ][
+                "therefore_the_live_external_wall_is_one_exact_affine_witness_target_on_the_same_fixed_package"
             ],
         },
     }
@@ -492,10 +511,12 @@ def classify_q3_master_lock() -> Tuple[Dict[str, object], ...]:
                 "sign-trivial holonomy witness that would realize the smooth/dynamical lift; "
                 "the next exact positive target is the unique minimal tail datum in the existing "
                 "slot with transport scale 217/12, equivalently any one promoted coordinate "
-                "witness and canonically dC = 14105 on the fixed tail channel."
+                "witness, canonically dC = 14105 on the fixed tail channel, and as an affine "
+                "problem one exact witness displacement from the zero candidate to the unique "
+                "target point."
             ),
             "evidence": {
-                "remaining_wall": "first sign-trivial unipotent transport witness + unique minimal tail datum + any one promoted coordinate witness / dC = 14105 + Yukawa / dynamics",
+                "remaining_wall": "first sign-trivial unipotent transport witness + unique minimal tail datum + any one promoted coordinate witness / dC = 14105 + exact affine witness displacement + Yukawa / dynamics",
             },
         },
     )
@@ -656,6 +677,28 @@ def analyze() -> Dict[str, object]:
                 "delta_c_equals_14105_is_equivalent_to_activating_the_unique_nonzero_tail_slot"
             ]
         ),
+        "the_live_positive_target_can_be_stated_as_one_exact_affine_witness_displacement_from_the_current_zero_candidate": (
+            transport["current_zero_witness_point"]
+            == {"C": "0", "L": "0", "Q_seed": "0", "Q_sd1": "0"}
+            and transport["exact_witness_point"]
+            == {
+                "C": "14105",
+                "L": "143654",
+                "Q_seed": "3396050/3",
+                "Q_sd1": "3904481/4",
+            }
+            and transport["affine_witness_displacement"] == transport["exact_witness_point"]
+            and transport["affine_displacement_recovered_scales"]
+            == {
+                "C": "217/12",
+                "L": "217/12",
+                "Q_seed": "217/12",
+                "Q_sd1": "217/12",
+            }
+            and transport["exact_factorizations"][
+                "the_live_positive_target_is_one_exact_affine_witness_displacement"
+            ]
+        ),
         "the_remaining_wall_is_not_finite_q_selection_but_smooth_realization": True,
     }
 
@@ -681,7 +724,9 @@ def analyze() -> Dict[str, object]:
             "the unique minimal tail datum in the existing slot with primitive direction "
             "(780,7944,62600,53979) and transport scale 217/12. On the fixed tail line this is "
             "equivalent to any one promoted coordinate witness, canonically dC = 14105, i.e. "
-            "the algebraic entry point for the smooth continuum and dynamical realization."
+            "the algebraic entry point for the smooth continuum and dynamical realization. In "
+            "promoted witness coordinates the current candidate is simply the origin, and the "
+            "exact target is the single affine point (14105,143654,3396050/3,3904481/4)."
         ),
     }
 
