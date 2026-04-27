@@ -46,6 +46,15 @@ def test_periodic_table_organization_summary_tracks_four_exact_rows() -> None:
     assert pascal["nonisotropic_lines"] == 90
     assert pascal["edge_partition"] == {"w33_edges": 240, "complement_edges": 540}
     assert pascal["local_line_split"] == {"total": 13, "isotropic": 4, "nonisotropic": 9}
+    assert pascal["parseval_measurement_frame"] == {
+        "line_module_resolution": "40 = 1 + 15 + 24",
+        "spread_count": 36,
+        "anti_line_count": 90,
+        "spread_density": "1/4",
+        "anti_line_density": "2/5",
+        "centered_spread_probe_spectrum": {"0": 25, "18": 15},
+        "centered_anti_line_probe_spectrum": {"0": 16, "36": 24},
+    }
     assert pascal["signed_sector_operator"] == "S = A_iso - A_non = 2A + I - J"
     assert pascal["seidel_spectrum"] == {"-15": 1, "-7": 15, "5": 24}
 
@@ -183,6 +192,15 @@ def test_export_payload_freezes_the_same_checked_rows() -> None:
     ]
     assert payload["rows"]["realization_row"]["catalog_total"] == 7
     assert payload["rows"]["pascal_computation_row"]["projective_lines_total"] == 130
+    assert payload["rows"]["pascal_computation_row"]["parseval_measurement_frame"] == {
+        "line_module_resolution": "40 = 1 + 15 + 24",
+        "spread_count": 36,
+        "anti_line_count": 90,
+        "spread_density": "1/4",
+        "anti_line_density": "2/5",
+        "centered_spread_probe_spectrum": {"0": 25, "18": 15},
+        "centered_anti_line_probe_spectrum": {"0": 16, "36": 24},
+    }
     assert payload["rows"]["frontier_witness_row"]["canonical_chart_target"]["required_value"] == "14105"
     assert payload["rows"]["frontier_witness_row"]["tail_package_sizes"] == [81, 162, 81]
     assert payload["rows"]["frontier_witness_row"]["quadrangle_branch_packet_no_go"][

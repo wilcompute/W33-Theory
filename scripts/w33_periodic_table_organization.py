@@ -30,6 +30,9 @@ from PART_LXIV_pascal_line_split import build_summary as build_pascal_line_split
 from scripts.w33_h4_branch_selection_search import (  # noqa: E402
     build_branch_selection_search_summary,
 )
+from scripts.w33_parseval_measurement_frame_audit import (  # noqa: E402
+    build_parseval_measurement_frame_summary,
+)
 from scripts.w33_qutrit_ladder_audit import analyze as analyze_qutrit_ladder  # noqa: E402
 from scripts.w33_q3_master_lock_audit import q3_transport_algebra_summary  # noqa: E402
 from w33_h4_ordered_path_k3_witness_bridge import (  # noqa: E402
@@ -44,6 +47,7 @@ DEFAULT_OUTPUT_PATH = ROOT / "data" / "w33_periodic_table_organization_summary.j
 def build_periodic_table_organization_summary() -> dict[str, Any]:
     realization = build_realization_orbit_summary()
     pascal = build_pascal_line_split_summary()
+    parseval = build_parseval_measurement_frame_summary()
     witness = q3_transport_algebra_summary()
     branch_selection = build_branch_selection_search_summary()
     finite_to_continuum_bridge = build_h4_ordered_path_k3_witness_bridge_summary()
@@ -89,6 +93,25 @@ def build_periodic_table_organization_summary() -> dict[str, Any]:
                     "total": pascal["lines_through_point_unique"][0],
                     "isotropic": pascal["isotropic_lines_through_point_unique"][0],
                     "nonisotropic": pascal["nonisotropic_lines_through_point_unique"][0],
+                },
+                "parseval_measurement_frame": {
+                    "line_module_resolution": parseval["carrier_dictionary"]["line_side"],
+                    "spread_count": parseval["carrier_dictionary"]["spread_probe"]["shape"][1],
+                    "anti_line_count": parseval["carrier_dictionary"]["anti_line_probe"]["shape"][1],
+                    "spread_density": parseval["carrier_dictionary"]["spread_probe"]["density"],
+                    "anti_line_density": parseval["carrier_dictionary"]["anti_line_probe"]["density"],
+                    "centered_spread_probe_spectrum": {
+                        str(key): value
+                        for key, value in parseval["spectral_data"][
+                            "centered_spread_probe_spectrum"
+                        ].items()
+                    },
+                    "centered_anti_line_probe_spectrum": {
+                        str(key): value
+                        for key, value in parseval["spectral_data"][
+                            "centered_anti_line_probe_spectrum"
+                        ].items()
+                    },
                 },
                 "signed_sector_operator": pascal["seidel_formula"],
                 "seidel_spectrum": pascal["seidel_spectrum"],
@@ -177,6 +200,16 @@ def build_periodic_table_organization_summary() -> dict[str, Any]:
             and summary["rows"]["pascal_computation_row"]["nonisotropic_lines"] == 90
             and summary["rows"]["pascal_computation_row"]["edge_partition"]["w33_edges"] == 240
             and summary["rows"]["pascal_computation_row"]["edge_partition"]["complement_edges"] == 540
+            and summary["rows"]["pascal_computation_row"]["parseval_measurement_frame"]
+            == {
+                "line_module_resolution": "40 = 1 + 15 + 24",
+                "spread_count": 36,
+                "anti_line_count": 90,
+                "spread_density": "1/4",
+                "anti_line_density": "2/5",
+                "centered_spread_probe_spectrum": {"0": 25, "18": 15},
+                "centered_anti_line_probe_spectrum": {"0": 16, "36": 24},
+            }
         ),
         "frontier_row_is_one_witness_problem_on_a_fixed_carrier": (
             summary["rows"]["frontier_witness_row"]["finite_ordered_path_carrier"]

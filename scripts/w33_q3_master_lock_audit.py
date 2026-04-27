@@ -86,6 +86,9 @@ from w33_transport_ternary_cocycle_bridge import (  # noqa: E402
 from scripts.w33_h4_branch_selection_search import (  # noqa: E402
     build_branch_selection_search_summary,
 )
+from scripts.w33_parseval_measurement_frame_audit import (  # noqa: E402
+    build_parseval_measurement_frame_summary,
+)
 from scripts.w33_qutrit_ladder_audit import (  # noqa: E402
     e8_side_exact_decomposition_summary,
     one_qutrit_local_layer_summary,
@@ -145,6 +148,7 @@ def q3_local_kernel_summary() -> Dict[str, object]:
     two_qutrit = two_qutrit_global_layer_summary()
     e8_side = e8_side_exact_decomposition_summary()
     core = get_w33_spectral_core()
+    measurement_frame = build_parseval_measurement_frame_summary()
 
     q = int(core.q)
     phi3 = q * q + q + 1
@@ -165,6 +169,19 @@ def q3_local_kernel_summary() -> Dict[str, object]:
         "edge_count": int(two_qutrit["edge_count"]),
         "e8_root_count": int(e8_side["total_root_count"]),
         "cartan_rank_candidate": q * q - 1,
+        "parseval_measurement_frame": {
+            "line_module_resolution": measurement_frame["carrier_dictionary"]["line_side"],
+            "spread_count": measurement_frame["carrier_dictionary"]["spread_probe"]["shape"][1],
+            "anti_line_count": measurement_frame["carrier_dictionary"]["anti_line_probe"]["shape"][1],
+            "spread_density": measurement_frame["carrier_dictionary"]["spread_probe"]["density"],
+            "anti_line_density": measurement_frame["carrier_dictionary"]["anti_line_probe"]["density"],
+            "centered_spread_probe_spectrum": measurement_frame["spectral_data"][
+                "centered_spread_probe_spectrum"
+            ],
+            "centered_anti_line_probe_spectrum": measurement_frame["spectral_data"][
+                "centered_anti_line_probe_spectrum"
+            ],
+        },
         "exact_factorizations": {
             "visible_shell_is_q_cubed": int(one_qutrit["visible_shell_size"]) == q**3,
             "fiber_count_is_q_squared": int(one_qutrit["fiber_count"]) == q * q,
@@ -176,6 +193,7 @@ def q3_local_kernel_summary() -> Dict[str, object]:
             "edge_count_matches_e8_root_count": int(two_qutrit["edge_count"]) == int(e8_side["total_root_count"]),
             "edge_count_is_half_vk": int(two_qutrit["edge_count"])
             == (int(two_qutrit["projective_point_count"]) * int(core.k)) // 2,
+            "line_module_parseval_frame_is_exact": all(measurement_frame["theorem"].values()),
         },
     }
 
@@ -591,6 +609,19 @@ def analyze() -> Dict[str, object]:
             and local_kernel["exact_factorizations"]["lines_per_point_is_q_plus_1"]
             and local_kernel["exact_factorizations"]["projective_point_count_is_q3_plus_q2_plus_q_plus_1"]
             and local_kernel["exact_factorizations"]["edge_count_matches_e8_root_count"]
+        ),
+        "the_local_kernel_already_contains_the_exact_line_module_parseval_frame": (
+            local_kernel["parseval_measurement_frame"]
+            == {
+                "line_module_resolution": "40 = 1 + 15 + 24",
+                "spread_count": 36,
+                "anti_line_count": 90,
+                "spread_density": "1/4",
+                "anti_line_density": "2/5",
+                "centered_spread_probe_spectrum": {0: 25, 18: 15},
+                "centered_anti_line_probe_spectrum": {0: 16, 36: 24},
+            }
+            and local_kernel["exact_factorizations"]["line_module_parseval_frame_is_exact"]
         ),
         "the_corrected_spectral_core_exactly_realizes_the_q3_lock": (
             spectral["srg_parameters"] == (40, 12, 2, 4)

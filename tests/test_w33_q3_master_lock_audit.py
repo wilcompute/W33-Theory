@@ -50,6 +50,15 @@ def test_q3_local_kernel_summary_matches_finite_qutrit_packet() -> None:
     assert summary["edge_count"] == 240
     assert summary["e8_root_count"] == 240
     assert summary["cartan_rank_candidate"] == 8
+    assert summary["parseval_measurement_frame"] == {
+        "line_module_resolution": "40 = 1 + 15 + 24",
+        "spread_count": 36,
+        "anti_line_count": 90,
+        "spread_density": "1/4",
+        "anti_line_density": "2/5",
+        "centered_spread_probe_spectrum": {0: 25, 18: 15},
+        "centered_anti_line_probe_spectrum": {0: 16, 36: 24},
+    }
     assert all(summary["exact_factorizations"].values())
 
 
@@ -234,6 +243,7 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
     )
     assert summary["record_names_open"] == ("q3_full_physical_realization_theorem",)
     assert theorem["the_local_kernel_exactly_realizes_the_q3_packet_1_3_9_27_40_240"] is True
+    assert theorem["the_local_kernel_already_contains_the_exact_line_module_parseval_frame"] is True
     assert theorem["the_corrected_spectral_core_exactly_realizes_the_q3_lock"] is True
     assert theorem["the_continuum_seed_exactly_realizes_the_q3_packet_8_56_320_2240_12480"] is True
     assert theorem["the_electron_seed_packet_exactly_splices_into_the_same_q3_backbone"] is True

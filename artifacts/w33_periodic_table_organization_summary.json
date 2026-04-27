@@ -37,6 +37,21 @@
         "isotropic": 4,
         "nonisotropic": 9
       },
+      "parseval_measurement_frame": {
+        "line_module_resolution": "40 = 1 + 15 + 24",
+        "spread_count": 36,
+        "anti_line_count": 90,
+        "spread_density": "1/4",
+        "anti_line_density": "2/5",
+        "centered_spread_probe_spectrum": {
+          "0": 25,
+          "18": 15
+        },
+        "centered_anti_line_probe_spectrum": {
+          "0": 16,
+          "36": 24
+        }
+      },
       "signed_sector_operator": "S = A_iso - A_non = 2A + I - J",
       "seidel_spectrum": {
         "-15": 1,
