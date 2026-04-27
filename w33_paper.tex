@@ -5223,6 +5223,29 @@ So the audit has exactly five closed records and one open one: the only
 remaining theorem-level gap is the smooth realization witness, not the
 finite $q$-selection itself.
 
+In the smallest adapted matrix language this gap sharpens once more.
+Every sign-trivial unipotent holonomy has the form
+\[
+H = I + N,
+\qquad
+N^2 = 0,
+\]
+and over $\FF_3$ the two nonzero possibilities are exactly
+\[
+\begin{pmatrix}0&1\\0&0\end{pmatrix},
+\qquad
+\begin{pmatrix}0&2\\0&0\end{pmatrix},
+\]
+which are gauge-equivalent by the same adapted diagonal change of basis.
+So the remaining wall may be stated equivalently as
+\[
+\boxed{\;
+\text{the first genuine nonzero nilpotent holonomy increment on the canonical mixed-plane host.}
+\;}
+\]
+The current host already preserves the full support package and qutrit
+lift, but still carries only the zero increment.
+
 \subsection*{$\varepsilon$.1 \quad Formal verification (Lean / Coq)}
 Formalise the master equation $q^q = q^3 \Rightarrow q=3$ and the
 Closure Theorem (Supp.~Z) in a proof assistant. The proof is
