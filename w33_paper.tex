@@ -5147,6 +5147,54 @@ of arithmetic identities and algebraic structure. Five concrete
 frontiers remain open, each of which would extend the program rather
 than alter its closure.
 
+\section*{The Sharpened $q=3$ Boundary}
+
+The strongest executable audit now shows that the existing finite
+$q=3$ lock is exact across five independent layers already present in
+the repository:
+\begin{itemize}[leftmargin=2em,nosep]
+\item the local qutrit packet
+\[
+1,\ 3,\ 9,\ 27,\ 40,\ 240,
+\]
+realized simultaneously by fibers, lines, projective points, and the
+$E_8$ root-side edge count;
+\item the corrected spectral/Ihara core
+\[
+\SRG(40,12,2,4),\qquad (12,1),(2,24),(-4,15),
+\]
+with vanishing bipartite zero mode and exact nontrivial Ihara
+discriminants $-4\Phi_4=-40$ and $-4\Phi_6=-28$;
+\item the continuum-seed packet
+\[
+8,\ 56,\ 320,\ 2240,\ 12480;
+\]
+\item the residual electron packet
+\[
+17,\ 136,\ 98,\ 208,
+\]
+with exact splices $136=8\cdot 17$, $98=7\cdot 14$, and
+$208=8\cdot 26 = 4\cdot 52$;
+\item the exact transport-algebra reduction, where the canonical
+nontrivial local holonomy is the unipotent matrix
+\[
+\begin{pmatrix}1&1\\0&1\end{pmatrix},
+\]
+while the currently realized sign-trivial class is still only the
+identity.
+\end{itemize}
+
+So the honest remaining wall is no longer ``why $q=3$?'' inside the
+finite carrier.  It has sharpened to a single transport-realization
+problem:
+\[
+\boxed{\;
+\text{the first non-identity sign-trivial unipotent holonomy witness on the canonical host.}
+\;}
+\]
+This is the algebraic entry point for any smooth continuum or
+dynamical lift.  The finite $q=3$ lock itself is now overdetermined.
+
 \subsection*{$\varepsilon$.1 \quad Formal verification (Lean / Coq)}
 Formalise the master equation $q^q = q^3 \Rightarrow q=3$ and the
 Closure Theorem (Supp.~Z) in a proof assistant. The proof is
@@ -5225,16 +5273,21 @@ inflation observables, Hubble fixed point (Supp.~B FT).
 \item The multiverse cardinality (Supp.~S, $|$Spence$|=28$).
 \item The Anthropic Closure (Supp.~D, A1--A6).
 \item The Graph Riemann Hypothesis on $W_{3,3}$ (Supp.~G).
+\item Finite $q$-selection inside the existing W$_{3,3}$ carrier: the
+local qutrit, spectral/Ihara, continuum-seed, electron-seed, and
+transport-algebra layers already overdetermine $q=3$ exactly.
 \end{itemize}
 These do not require further work; they are arithmetically
 established.
 
 \section*{Closing}
 
-The W$_{3,3}$-E$_8$ programme is mathematically closed. The
-remaining work is observational (Supp.~E, 15 falsifiers) and
-formal (Supp.~$\varepsilon$, five frontiers). Both are accessible
-within current technology and current physics.
+The W$_{3,3}$-E$_8$ programme is mathematically closed at the finite
+selection level. The remaining work is observational (Supp.~E, 15
+falsifiers), formal (Supp.~$\varepsilon$, five frontiers), and smooth:
+realize or rule out the first non-identity sign-trivial unipotent
+transport witness on the canonical mixed-plane host. All three are
+accessible within current technology and current mathematics.
 
 \hfill$\varepsilon \quad\Omega$
 
