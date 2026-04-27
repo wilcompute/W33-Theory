@@ -61,6 +61,9 @@ from w33_k3_mixed_plane_holonomy_witness_bridge import (  # noqa: E402
 from w33_k3_mixed_plane_nilpotent_holonomy_increment_bridge import (  # noqa: E402
     build_k3_mixed_plane_nilpotent_holonomy_increment_summary,
 )
+from w33_minimal_k3_tail_enhancement_datum_bridge import (  # noqa: E402
+    build_minimal_k3_tail_enhancement_datum_summary,
+)
 from w33_transport_ternary_cocycle_bridge import (  # noqa: E402
     build_transport_ternary_cocycle_summary,
 )
@@ -300,6 +303,7 @@ def q3_transport_algebra_summary() -> Dict[str, object]:
     current = build_current_k3_mixed_plane_holonomy_failure_summary()
     nilpotent = build_k3_mixed_plane_nilpotent_holonomy_increment_summary()
     current_nilpotent = build_current_k3_mixed_plane_nilpotent_holonomy_increment_failure_summary()
+    minimal_tail = build_minimal_k3_tail_enhancement_datum_summary()
 
     triangle_holonomy = holonomy["triangle_holonomy"]
     cycle_counts = triangle_holonomy["cycle_type_counts"]
@@ -311,6 +315,7 @@ def q3_transport_algebra_summary() -> Dict[str, object]:
     current_nilpotent_state = current_nilpotent[
         "current_mixed_plane_nilpotent_holonomy_increment_state"
     ]
+    minimal_tail_datum = minimal_tail["minimal_k3_tail_enhancement_datum"]
 
     return {
         "triangle_count": int(holonomy["transport_triangles"]),
@@ -331,6 +336,9 @@ def q3_transport_algebra_summary() -> Dict[str, object]:
         "current_nonzero_nilpotent_increments": current_nilpotent_state[
             "current_nonzero_nilpotent_increments"
         ],
+        "minimal_tail_slot_state": minimal_tail_datum["slot_state"],
+        "minimal_tail_primitive_generator": minimal_tail_datum["primitive_integral_generator"],
+        "minimal_tail_transport_pair": minimal_tail_datum["transport_arithmetic_pair"],
         "exact_factorizations": {
             "triangle_parity_equals_local_s3_holonomy_sign_exactly": triangle_holonomy[
                 "z2_parity_equals_holonomy_sign_exactly"
@@ -372,6 +380,11 @@ def q3_transport_algebra_summary() -> Dict[str, object]:
                 "current_k3_mixed_plane_nilpotent_holonomy_increment_failure_theorem"
             ][
                 "therefore_the_current_mixed_plane_host_fails_the_exact_nilpotent_increment_test_for_one_reason_only_the_nonzero_increment_is_missing"
+            ],
+            "the_next_positive_target_is_the_unique_minimal_tail_datum": minimal_tail[
+                "minimal_k3_tail_enhancement_datum_theorem"
+            ][
+                "therefore_the_live_positive_target_is_one_unique_minimal_k3_tail_enhancement_datum_on_the_same_fixed_package"
             ],
         },
     }
@@ -440,10 +453,12 @@ def classify_q3_master_lock() -> Tuple[Dict[str, object], ...]:
             "statement": (
                 "The q=3 lock is exact on the finite, coefficient-seed, and transport layers, "
                 "but the current host still lacks the first genuine non-identity unipotent "
-                "sign-trivial holonomy witness that would realize the smooth/dynamical lift."
+                "sign-trivial holonomy witness that would realize the smooth/dynamical lift; "
+                "the next exact positive target is the unique minimal tail datum in the existing "
+                "slot with transport scale 217/12."
             ),
             "evidence": {
-                "remaining_wall": "first sign-trivial unipotent transport witness + Yukawa / dynamics",
+                "remaining_wall": "first sign-trivial unipotent transport witness + unique minimal tail datum + Yukawa / dynamics",
             },
         },
     )
@@ -552,6 +567,14 @@ def analyze() -> Dict[str, object]:
             and transport["gauge_related_nonzero_increment"] == [[0, 2], [0, 0]]
             and transport["current_nonzero_nilpotent_increments"] == []
         ),
+        "the_next_exact_positive_target_is_the_unique_minimal_tail_datum_in_the_existing_slot": (
+            transport["minimal_tail_slot_state"] == "unique_nonzero_orbit_in_existing_glue_slot"
+            and transport["minimal_tail_primitive_generator"]
+            == {"C": "780", "L": "7944", "Q_seed": "62600", "Q_sd1": "53979"}
+            and transport["minimal_tail_transport_pair"]
+            == {"denominator_lcm": 12, "cleared_coordinate_gcd": 217, "recovered_scale": "217/12"}
+            and transport["exact_factorizations"]["the_next_positive_target_is_the_unique_minimal_tail_datum"]
+        ),
         "the_remaining_wall_is_not_finite_q_selection_but_smooth_realization": True,
     }
 
@@ -573,8 +596,10 @@ def analyze() -> Dict[str, object]:
             "transport holonomy/cocycle reduction. The honest remaining theorem is therefore not "
             "'why q=3?' but the first non-identity unipotent sign-trivial transport witness on "
             "the canonical mixed-plane host, equivalently the first genuine nonzero nilpotent "
-            "holonomy increment there, i.e. the algebraic entry point for the smooth continuum "
-            "and dynamical realization."
+            "holonomy increment there. More positively, the next exact target is already rigid: "
+            "the unique minimal tail datum in the existing slot with primitive direction "
+            "(780,7944,62600,53979) and transport scale 217/12, i.e. the algebraic entry point "
+            "for the smooth continuum and dynamical realization."
         ),
     }
 

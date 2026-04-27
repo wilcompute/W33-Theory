@@ -121,6 +121,18 @@ def test_q3_transport_algebra_summary_reduces_the_live_wall_to_one_witness() -> 
     assert summary["gauge_related_nonzero_increment"] == [[0, 2], [0, 0]]
     assert summary["current_nilpotent_increment"] == [[0, 0], [0, 0]]
     assert summary["current_nonzero_nilpotent_increments"] == []
+    assert summary["minimal_tail_slot_state"] == "unique_nonzero_orbit_in_existing_glue_slot"
+    assert summary["minimal_tail_primitive_generator"] == {
+        "C": "780",
+        "L": "7944",
+        "Q_seed": "62600",
+        "Q_sd1": "53979",
+    }
+    assert summary["minimal_tail_transport_pair"] == {
+        "denominator_lcm": 12,
+        "cleared_coordinate_gcd": 217,
+        "recovered_scale": "217/12",
+    }
     assert all(summary["exact_factorizations"].values())
 
 
@@ -155,6 +167,8 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
     assert theorem["the_transport_algebra_exactly_refines_the_same_wall_to_one_nonzero_nilpotent_increment"] is True
     assert theorem["the_remaining_wall_refines_to_the_first_sign_trivial_unipotent_transport_witness"] is True
     assert theorem["the_remaining_wall_refines_equivalently_to_the_first_nonzero_nilpotent_holonomy_increment"] is True
+    assert theorem["the_next_exact_positive_target_is_the_unique_minimal_tail_datum_in_the_existing_slot"] is True
     assert theorem["the_remaining_wall_is_not_finite_q_selection_but_smooth_realization"] is True
     assert "non-identity unipotent sign-trivial transport witness" in summary["boundary_note"]
     assert "nonzero nilpotent holonomy increment" in summary["boundary_note"]
+    assert "217/12" in summary["boundary_note"]
