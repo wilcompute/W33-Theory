@@ -5195,6 +5195,34 @@ problem:
 This is the algebraic entry point for any smooth continuum or
 dynamical lift.  The finite $q=3$ lock itself is now overdetermined.
 
+\section*{Executable Certificate}
+
+The boundary audit is encoded in
+\[
+\texttt{tests/test\_w33\_q3\_master\_lock\_audit.py},
+\]
+using the summary surface
+\[
+\texttt{scripts/w33\_q3\_master\_lock\_audit.py}.
+\]
+It verifies, in one exact package,
+\[
+\begin{array}{rcl}
+q &=& 3,\\
+(1,3,9,27,40,240) &=& \text{local qutrit/kernel packet},\\
+\SRG(40,12,2,4) &:& (12,1),(2,24),(-4,15),\\
+\text{Ihara discriminants} &=& (-40,-28)=(-4\Phi_4,-4\Phi_6),\\
+(8,56,320,2240,12480) &=& \text{continuum-seed packet},\\
+(17,136,98,208) &=& \text{electron-seed packet},\\
+5280 &=& 3120 + 2160 \quad \text{transport triangles by parity},\\
+\begin{pmatrix}1&1\\0&1\end{pmatrix} &:& \text{canonical nontrivial sign-trivial holonomy},\\
+\begin{pmatrix}1&0\\0&1\end{pmatrix} &:& \text{current realized sign-trivial class}.\\
+\end{array}
+\]
+So the audit has exactly five closed records and one open one: the only
+remaining theorem-level gap is the smooth realization witness, not the
+finite $q$-selection itself.
+
 \subsection*{$\varepsilon$.1 \quad Formal verification (Lean / Coq)}
 Formalise the master equation $q^q = q^3 \Rightarrow q=3$ and the
 Closure Theorem (Supp.~Z) in a proof assistant. The proof is
