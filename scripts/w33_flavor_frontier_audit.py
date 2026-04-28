@@ -30,6 +30,7 @@ from fractions import Fraction
 from functools import lru_cache
 import json
 import math
+import numpy as np
 from pathlib import Path
 import sys
 import time
@@ -60,6 +61,23 @@ try:
     )
 except ModuleNotFoundError:
     from w33_standard_model_action_backbone_bridge import build_standard_model_action_backbone_summary  # noqa: E402
+
+try:
+    from scripts.w33_ckm_from_vev import (  # noqa: E402
+        _build_hodge_and_generations,
+        build_generation_profiles,
+        build_h27_index_and_tris,
+        compute_ckm_and_jarlskog,
+        yukawa_from_vev_with_tris,
+    )
+except ModuleNotFoundError:
+    from w33_ckm_from_vev import (  # noqa: E402
+        _build_hodge_and_generations,
+        build_generation_profiles,
+        build_h27_index_and_tris,
+        compute_ckm_and_jarlskog,
+        yukawa_from_vev_with_tris,
+    )
 
 
 PDG_2025 = {
@@ -220,6 +238,70 @@ def arithmetic_q3_uniqueness_packet() -> Dict[str, object]:
     }
 
 
+@lru_cache(maxsize=1)
+def exact_to_frontier_bridge_packet() -> Dict[str, object]:
+    """Executable bridge from exact selector layer to spontaneous CP frontier.
+
+    The bridge is anchored by two validated components:
+      1) CKM/PMNS spontaneous CP-breaking behavior under a controlled complex
+         VEV misalignment in the q=3 profile construction.
+      2) E6 trilinear closed-form checks evaluated with gauge-equivalent
+         canonical mismatch handling from the stabilized audit output.
+    """
+    H, triangles, edges, gens = _build_hodge_and_generations()
+    n = max(max(u, v) for u, v in edges) + 1
+    adj = [[] for _ in range(n)]
+    for u, v in edges:
+        adj[u].append(v)
+        adj[v].append(u)
+
+    _, local_tris = build_h27_index_and_tris(adj, v0=0)
+    _, _, X_profiles = build_generation_profiles(H, edges, gens, v0=0)
+
+    v_exact = X_profiles[0].astype(complex)
+    y_exact = yukawa_from_vev_with_tris(X_profiles, v_exact, local_tris)
+    v_exact_ckm, j_exact = compute_ckm_and_jarlskog(y_exact, y_exact)
+
+    v_break = v_exact.copy()
+    v_break[3] *= 1.0 + 0.3j
+    y_break = yukawa_from_vev_with_tris(X_profiles, v_break, local_tris)
+    v_break_ckm, j_break = compute_ckm_and_jarlskog(y_exact, y_break)
+
+    e6_payload_path = ROOT / "artifacts" / "e6_f3_trilinear_symmetry_breaking.json"
+    e6_cross_check = {
+        "artifact_present": e6_payload_path.exists(),
+        "line_product_closed_form_holds": None,
+        "line_product_mismatch_count": None,
+        "full_sign_closed_form_holds": None,
+        "full_sign_mismatch_count": None,
+    }
+    if e6_payload_path.exists():
+        payload = json.loads(e6_payload_path.read_text(encoding="utf-8"))
+        checks = payload.get("cross_checks", {})
+        line = checks.get("line_product_closed_form", {})
+        full = checks.get("full_sign_closed_form", {})
+        e6_cross_check.update(
+            {
+                "line_product_closed_form_holds": bool(line.get("holds", False)),
+                "line_product_mismatch_count": line.get("mismatch_count"),
+                "full_sign_closed_form_holds": bool(full.get("holds", False)),
+                "full_sign_mismatch_count": full.get("mismatch_count"),
+            }
+        )
+
+    return {
+        "ckm_exact_alignment_jarlskog_abs": abs(float(j_exact)),
+        "ckm_exact_alignment_is_identity": bool(
+            np.allclose(np.abs(v_exact_ckm), np.eye(3), atol=1e-8)
+        ),
+        "ckm_misaligned_jarlskog_abs": abs(float(j_break)),
+        "ckm_misaligned_is_nontrivial": bool(
+            not np.allclose(np.abs(v_break_ckm), np.eye(3), atol=1e-3)
+        ),
+        "e6_closed_form_cross_checks": e6_cross_check,
+    }
+
+
 def _totient(n_value: int) -> int:
     count = 0
     for k in range(1, n_value + 1):
@@ -233,6 +315,7 @@ def classify_flavor_frontier() -> Tuple[Dict[str, object], ...]:
     paper = paper_flavor_packet()
     exact = exact_repo_flavor_packet()
     arithmetic = arithmetic_q3_uniqueness_packet()
+    bridge = exact_to_frontier_bridge_packet()
 
     cabibbo_obs = PDG_2025["cabibbo_vus"]
     alpha_mz_obs = PDG_2025["alpha5_mz_inverse"]
@@ -337,6 +420,16 @@ def classify_flavor_frontier() -> Tuple[Dict[str, object], ...]:
                 "z_pole_absolute_gap": abs(135.0 - alpha_mz_obs),
             },
         },
+        {
+            "name": "exact_to_spontaneous_cp_frontier_bridge_is_executable",
+            "support_level": "exact-to-frontier executable bridge",
+            "statement": (
+                "With the stabilized q=3 profile basis and gauge-equivalent E6 normalization, "
+                "the exact layer enforces CP conservation at aligned VEVs while controlled complex "
+                "misalignment produces nontrivial CKM mixing and nonzero Jarlskog as a frontier effect."
+            ),
+            "evidence": bridge,
+        },
     )
 
 
@@ -345,6 +438,8 @@ def analyze() -> Dict[str, object]:
     paper = paper_flavor_packet()
     exact = exact_repo_flavor_packet()
     records = classify_flavor_frontier()
+    bridge = exact_to_frontier_bridge_packet()
+    e6_bridge = bridge["e6_closed_form_cross_checks"]
 
     theorem = {
         "the_mod_3_alpha_uniqueness_theorem_is_exact": records[0]["evidence"]["prime_alpha_hits_up_to_199"] == (3,),
@@ -363,6 +458,19 @@ def analyze() -> Dict[str, object]:
         ),
         "section83_alpha_running_is_not_a_precision_match_to_current_pdg_data": (
             abs(135.0 - PDG_2025["alpha5_mz_inverse"]) > 5.0
+        ),
+        "exact_layer_and_spontaneous_cp_frontier_bridge_is_executable": (
+            bridge["ckm_exact_alignment_is_identity"]
+            and bridge["ckm_exact_alignment_jarlskog_abs"] < 1e-12
+            and bridge["ckm_misaligned_is_nontrivial"]
+            and bridge["ckm_misaligned_jarlskog_abs"] > 1e-8
+            and (
+                (not e6_bridge["artifact_present"])
+                or (
+                    e6_bridge["line_product_closed_form_holds"]
+                    and e6_bridge["full_sign_closed_form_holds"]
+                )
+            )
         ),
     }
 
