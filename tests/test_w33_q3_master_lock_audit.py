@@ -176,6 +176,14 @@ def test_q3_local_kernel_summary_matches_finite_qutrit_packet() -> None:
         "shell_hierarchy_inside_differential": True,
         "massive_hodge_laplacian_spectrum": True,
     }
+    assert summary["exact_to_frontier_bridge"] == {
+        "aligned_vev_ckm_identity": True,
+        "aligned_vev_cp_conserving": True,
+        "misaligned_vev_ckm_nontrivial": True,
+        "misaligned_vev_cp_breaking": True,
+        "e6_closed_form_gauge_equivalence_consistent": True,
+        "bridge_is_executable": True,
+    }
     assert all(summary["exact_factorizations"].values())
 
 
@@ -360,6 +368,7 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
     assert records["q3_toroidal_continuum_seed_lock"]["support_level"] == "repo-exact continuum seed"
     assert records["q3_electron_seed_backbone_lock"]["support_level"] == "repo-exact fermion seed"
     assert records["q3_transport_holonomy_reduction_lock"]["support_level"] == "repo-exact transport algebra reduction"
+    assert records["q3_exact_to_spontaneous_cp_frontier_bridge_lock"]["support_level"] == "repo-exact finite-to-frontier bridge"
     assert records["q3_full_physical_realization_theorem"]["support_level"] == "not-yet-exact smooth realization theorem"
 
     assert summary["status"] == "ok"
@@ -369,6 +378,7 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
         "q3_toroidal_continuum_seed_lock",
         "q3_electron_seed_backbone_lock",
         "q3_transport_holonomy_reduction_lock",
+        "q3_exact_to_spontaneous_cp_frontier_bridge_lock",
     )
     assert summary["record_names_open"] == ("q3_full_physical_realization_theorem",)
     assert theorem["the_local_kernel_exactly_realizes_the_q3_packet_1_3_9_27_40_240"] is True
@@ -394,6 +404,7 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
     assert theorem["the_live_positive_target_can_be_stated_as_one_exact_affine_witness_displacement_from_the_current_zero_candidate"] is True
     assert theorem["the_live_positive_target_is_the_same_ordered_path_transport_law_written_on_the_fixed_k3_chart"] is True
     assert theorem["the_remaining_wall_is_not_finite_q_selection_but_smooth_realization"] is True
+    assert theorem["the_exact_layer_now_has_an_executable_bridge_to_spontaneous_cp_frontier"] is True
     assert "ordered nonlocal 2-path S3 packet" in summary["boundary_note"]
     assert "540-packet model has no exact cover" in summary["boundary_note"]
     assert "non-identity unipotent sign-trivial transport witness" in summary["boundary_note"]
@@ -401,3 +412,4 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
     assert "217/12" in summary["boundary_note"]
     assert "dC = 14105" in summary["boundary_note"]
     assert "(14105,143654,3396050/3,3904481/4)" in summary["boundary_note"]
+    assert "spontaneous-CP frontier" in summary["boundary_note"]

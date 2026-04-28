@@ -110,6 +110,7 @@ from scripts.w33_qutrit_ladder_audit import (  # noqa: E402
     two_qutrit_global_layer_summary,
 )
 from scripts.w33_electron_seed_packet_audit import electron_seed_packet_summary  # noqa: E402
+from scripts.w33_flavor_frontier_audit import analyze as analyze_flavor_frontier  # noqa: E402
 from scripts.w33_spectral_core import get_w33_spectral_core  # noqa: E402
 from scripts.w33_toroidal_continuum_seed_audit import (  # noqa: E402
     spectral_continuum_bridge_summary,
@@ -176,6 +177,23 @@ def q3_local_kernel_summary() -> Dict[str, object]:
     target_geometry = build_parseval_target_geometry_summary()
     two_spectral_shells = build_two_spectral_shells_summary()
     hodge_factorization = build_mass_weighted_hodge_summary()
+    flavor_frontier = analyze_flavor_frontier()
+    flavor_bridge_theorem = flavor_frontier["flavor_frontier_theorem"][
+        "exact_layer_and_spontaneous_cp_frontier_bridge_is_executable"
+    ]
+    flavor_bridge_evidence = next(
+        record["evidence"]
+        for record in flavor_frontier["records"]
+        if record["name"] == "exact_to_spontaneous_cp_frontier_bridge_is_executable"
+    )
+    e6_bridge = flavor_bridge_evidence["e6_closed_form_cross_checks"]
+    e6_gauge_equivalence_consistent = (
+        (not e6_bridge["artifact_present"])
+        or (
+            e6_bridge["line_product_closed_form_holds"]
+            and e6_bridge["full_sign_closed_form_holds"]
+        )
+    )
 
     q = int(core.q)
     phi3 = q * q + q + 1
@@ -305,6 +323,24 @@ def q3_local_kernel_summary() -> Dict[str, object]:
             "shell_hierarchy_inside_differential": hodge_factorization["theorem"]["shell_hierarchy_inside_differential"],
             "massive_hodge_laplacian_spectrum": hodge_factorization["theorem"]["massive_hodge_laplacian_spectrum"],
         },
+        "exact_to_frontier_bridge": {
+            "aligned_vev_ckm_identity": flavor_bridge_evidence[
+                "ckm_exact_alignment_is_identity"
+            ],
+            "aligned_vev_cp_conserving": flavor_bridge_evidence[
+                "ckm_exact_alignment_jarlskog_abs"
+            ]
+            < 1e-12,
+            "misaligned_vev_ckm_nontrivial": flavor_bridge_evidence[
+                "ckm_misaligned_is_nontrivial"
+            ],
+            "misaligned_vev_cp_breaking": flavor_bridge_evidence[
+                "ckm_misaligned_jarlskog_abs"
+            ]
+            > 1e-8,
+            "e6_closed_form_gauge_equivalence_consistent": e6_gauge_equivalence_consistent,
+            "bridge_is_executable": flavor_bridge_theorem,
+        },
         "exact_factorizations": {
             "visible_shell_is_q_cubed": int(one_qutrit["visible_shell_size"]) == q**3,
             "fiber_count_is_q_squared": int(one_qutrit["fiber_count"]) == q * q,
@@ -322,6 +358,7 @@ def q3_local_kernel_summary() -> Dict[str, object]:
                 representation_triangle["theorem"].values()
             ),
             "line_module_parseval_target_geometry_is_exact": all(target_geometry["theorem"].values()),
+            "exact_to_frontier_bridge_is_executable": flavor_bridge_theorem,
             "raw_two_shell_spectrum_is_exact": all(two_spectral_shells["theorem"].values()),
             "raw_two_shell_operator_is_massive_hodge_complex": all(hodge_factorization["theorem"].values()),
         },
@@ -697,6 +734,17 @@ def classify_q3_master_lock() -> Tuple[Dict[str, object], ...]:
             "evidence": transport,
         },
         {
+            "name": "q3_exact_to_spontaneous_cp_frontier_bridge_lock",
+            "support_level": "repo-exact finite-to-frontier bridge",
+            "statement": (
+                "The exact q=3 layer now has an executable bridge to the promoted flavor frontier: "
+                "aligned VEVs keep CKM identity and vanishing Jarlskog, while controlled complex "
+                "misalignment activates nontrivial CKM with nonzero Jarlskog, consistently with the "
+                "stabilized E6 gauge-equivalent closed-form checks."
+            ),
+            "evidence": local_kernel["exact_to_frontier_bridge"],
+        },
+        {
             "name": "q3_full_physical_realization_theorem",
             "support_level": "not-yet-exact smooth realization theorem",
             "statement": (
@@ -1061,6 +1109,14 @@ def analyze() -> Dict[str, object]:
             ]
         ),
         "the_remaining_wall_is_not_finite_q_selection_but_smooth_realization": True,
+        "the_exact_layer_now_has_an_executable_bridge_to_spontaneous_cp_frontier": (
+            local_kernel["exact_to_frontier_bridge"]["bridge_is_executable"]
+            and local_kernel["exact_to_frontier_bridge"]["aligned_vev_ckm_identity"]
+            and local_kernel["exact_to_frontier_bridge"]["aligned_vev_cp_conserving"]
+            and local_kernel["exact_to_frontier_bridge"]["misaligned_vev_ckm_nontrivial"]
+            and local_kernel["exact_to_frontier_bridge"]["misaligned_vev_cp_breaking"]
+            and local_kernel["exact_to_frontier_bridge"]["e6_closed_form_gauge_equivalence_consistent"]
+        ),
     }
 
     return {
@@ -1090,7 +1146,10 @@ def analyze() -> Dict[str, object]:
             "equivalent to any one promoted coordinate witness, canonically dC = 14105. The "
             "ordered-path transport law and that K3 chart are therefore the same datum on two "
             "carriers, i.e. the algebraic entry point for the smooth continuum and dynamical "
-            "realization. In promoted witness coordinates the current candidate is simply the "
+            "realization. In parallel, the exact layer now has an executable CKM/E6 bridge to "
+            "the spontaneous-CP frontier (aligned VEV identity, misaligned VEV activation) "
+            "without weakening the conservative exactness boundary. In promoted witness "
+            "coordinates the current candidate is simply the "
             "origin, and the "
             "exact target is the single affine point (14105,143654,3396050/3,3904481/4)."
         ),
