@@ -302,6 +302,85 @@ def exact_to_frontier_bridge_packet() -> Dict[str, object]:
     }
 
 
+@lru_cache(maxsize=1)
+def spontaneous_cp_response_law_packet() -> Dict[str, object]:
+    """Derive the near-exact spontaneous-CP response law for CKM Jarlskog.
+
+    We perturb one selected VEV entry by conjugate factors (1 +/- i*epsilon)
+    and measure the induced Jarlskog invariant relative to the aligned exact
+    baseline. This exposes both CP-odd sign behavior and the low-order onset
+    exponent in epsilon.
+    """
+    H, triangles, edges, gens = _build_hodge_and_generations()
+    n = max(max(u, v) for u, v in edges) + 1
+    adj = [[] for _ in range(n)]
+    for u, v in edges:
+        adj[u].append(v)
+        adj[v].append(u)
+
+    _, local_tris = build_h27_index_and_tris(adj, v0=0)
+    _, _, X_profiles = build_generation_profiles(H, edges, gens, v0=0)
+
+    v_exact = X_profiles[0].astype(complex)
+    y_exact = yukawa_from_vev_with_tris(X_profiles, v_exact, local_tris)
+
+    epsilons = [0.05, 0.10, 0.15, 0.20, 0.25, 0.30]
+    sweep = []
+    cubic_coeffs = []
+    odd_residuals = []
+    abs_j_plus = []
+
+    for eps in epsilons:
+        v_plus = v_exact.copy()
+        v_plus[3] *= 1.0 + 1.0j * eps
+        y_plus = yukawa_from_vev_with_tris(X_profiles, v_plus, local_tris)
+        _, j_plus = compute_ckm_and_jarlskog(y_exact, y_plus)
+
+        v_minus = v_exact.copy()
+        v_minus[3] *= 1.0 - 1.0j * eps
+        y_minus = yukawa_from_vev_with_tris(X_profiles, v_minus, local_tris)
+        _, j_minus = compute_ckm_and_jarlskog(y_exact, y_minus)
+
+        odd_residual = abs(float(j_plus) + float(j_minus))
+        cubic_coeff = abs(float(j_plus)) / (eps**3)
+
+        sweep.append(
+            {
+                "epsilon": eps,
+                "jarlskog_plus": float(j_plus),
+                "jarlskog_minus": float(j_minus),
+                "odd_residual_abs": odd_residual,
+                "abs_j_plus": abs(float(j_plus)),
+                "abs_j_plus_over_epsilon_cubed": cubic_coeff,
+            }
+        )
+        cubic_coeffs.append(cubic_coeff)
+        odd_residuals.append(odd_residual)
+        abs_j_plus.append(abs(float(j_plus)))
+
+    cubic_window = cubic_coeffs[1:]
+    cubic_min = min(cubic_window)
+    cubic_max = max(cubic_window)
+    cubic_ratio = cubic_max / cubic_min if cubic_min > 0 else float("inf")
+
+    return {
+        "misalignment_component": 3,
+        "epsilon_sweep": sweep,
+        "cp_odd_sign_flip_exact": all(
+            row["jarlskog_plus"] * row["jarlskog_minus"] < 0 for row in sweep
+        ),
+        "max_odd_residual_abs": max(odd_residuals),
+        "abs_jarlskog_is_strictly_increasing_with_epsilon": all(
+            abs_j_plus[i] < abs_j_plus[i + 1] for i in range(len(abs_j_plus) - 1)
+        ),
+        "cubic_coefficient_estimate": sum(cubic_window) / len(cubic_window),
+        "cubic_coefficient_min": cubic_min,
+        "cubic_coefficient_max": cubic_max,
+        "cubic_coefficient_ratio_max_over_min": cubic_ratio,
+        "derived_law": "|J| ~ C * epsilon^3 near aligned exact point",
+    }
+
+
 def _totient(n_value: int) -> int:
     count = 0
     for k in range(1, n_value + 1):
@@ -316,6 +395,7 @@ def classify_flavor_frontier() -> Tuple[Dict[str, object], ...]:
     exact = exact_repo_flavor_packet()
     arithmetic = arithmetic_q3_uniqueness_packet()
     bridge = exact_to_frontier_bridge_packet()
+    cp_response = spontaneous_cp_response_law_packet()
 
     cabibbo_obs = PDG_2025["cabibbo_vus"]
     alpha_mz_obs = PDG_2025["alpha5_mz_inverse"]
@@ -430,6 +510,17 @@ def classify_flavor_frontier() -> Tuple[Dict[str, object], ...]:
             ),
             "evidence": bridge,
         },
+        {
+            "name": "spontaneous_cp_frontier_has_cp_odd_cubic_onset_law",
+            "support_level": "exact-to-frontier quantitative response law",
+            "statement": (
+                "Around the aligned exact point, conjugate complex VEV perturbations "
+                "induce equal-and-opposite CKM Jarlskog signs with an odd residual at "
+                "machine zero and a stable cubic onset |J| ~ C epsilon^3 over the "
+                "audited small-epsilon window."
+            ),
+            "evidence": cp_response,
+        },
     )
 
 
@@ -439,6 +530,7 @@ def analyze() -> Dict[str, object]:
     exact = exact_repo_flavor_packet()
     records = classify_flavor_frontier()
     bridge = exact_to_frontier_bridge_packet()
+    cp_response = spontaneous_cp_response_law_packet()
     e6_bridge = bridge["e6_closed_form_cross_checks"]
 
     theorem = {
@@ -471,6 +563,12 @@ def analyze() -> Dict[str, object]:
                     and e6_bridge["full_sign_closed_form_holds"]
                 )
             )
+        ),
+        "spontaneous_cp_frontier_exhibits_cp_odd_cubic_onset_near_the_exact_point": (
+            cp_response["cp_odd_sign_flip_exact"]
+            and cp_response["max_odd_residual_abs"] < 1e-15
+            and cp_response["abs_jarlskog_is_strictly_increasing_with_epsilon"]
+            and cp_response["cubic_coefficient_ratio_max_over_min"] < 1.25
         ),
     }
 
