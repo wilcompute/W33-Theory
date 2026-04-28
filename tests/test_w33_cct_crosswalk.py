@@ -98,6 +98,7 @@ class TestCCT4H4Selector:
             "feedback loop / cycle-clock dynamics",
             "measurement / shadow duality",
             "finite propagator / operator calculus",
+            "mass-weighted Hodge factorization",
             "non-arbitrary H4 emergence",
         }
 

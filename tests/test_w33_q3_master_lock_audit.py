@@ -157,6 +157,17 @@ def test_q3_local_kernel_summary_matches_finite_qutrit_packet() -> None:
             "naimark_complement_swaps_sign_graphs": True,
         },
     }
+    assert summary["mass_weighted_hodge_factorization"] == {
+        "rank_d": 59,
+        "nullity_d": 62,
+        "harmonic_part": 3,
+        "forward_block_count": 3,
+        "forward_blocks": ["S_15 -> L_15", "Q_24 -> L_24", "Q_20 -> S_20"],
+        "shell_values": [18, 18, 72],
+        "three_exact_two_term_complexes_plus_three_harmonic": True,
+        "shell_hierarchy_inside_differential": True,
+        "massive_hodge_laplacian_spectrum": True,
+    }
     assert all(summary["exact_factorizations"].values())
 
 

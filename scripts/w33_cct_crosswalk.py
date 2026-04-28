@@ -320,6 +320,26 @@ def build_cct_crosswalk() -> dict[str, Any]:
             ),
         },
         {
+            "cct_desideratum": "mass-weighted Hodge factorization",
+            "w33_witness": (
+                "the raw two-shell operator is itself a massive Hodge complex with differential d and d* = d^T; "
+                f"d has rank {mass_weighted_hodge['chiral_complex_structure']['rank_d']} and nullity {mass_weighted_hodge['chiral_complex_structure']['nullity_d']}, "
+                f"leaving {mass_weighted_hodge['chiral_complex_structure']['harmonic_part']} harmonic modes; "
+                "the three forward blocks are S_15 -> L_15 (shell 18), Q_24 -> L_24 (shell 18), Q_20 -> S_20 (shell 72); "
+                "the Laplacian Delta_H = d d* + d* d = 18 P_light + 72 P_heavy has exact spectrum 0^3, 18^78, 72^40"
+            ),
+            "integer_certificate": mass_weighted_hodge["chiral_complex_structure"]["rank_d"],
+            "aligned_periodic_rows": ["pascal_computation_row"],
+            "same_table_backbone_invariants": ["40_point_shell", "240_edge_root_shell"],
+            "five_layer_route": _five_layer_route(
+                carrier="the 121 = (k-1)^2 representation triangle with two-shell spectrum",
+                realization="mass-weighted supercharge d = (H + K)/2 and d* = (H - K)/2 where K = Gamma H",
+                algebra="graded differential algebra with d^2 = 0, (d*)^2 = 0, and d d* + d* d = H^2",
+                computation="compute forward block structure, verify exactness, measure rank and nullity of d, confirm shell hierarchy",
+                witness=f"three exact forward blocks with ranks (15, 24, 20) in shells (18, 18, 72), rank(d)={mass_weighted_hodge['chiral_complex_structure']['rank_d']}, nullity(d)={mass_weighted_hodge['chiral_complex_structure']['nullity_d']}, harmonic={mass_weighted_hodge['chiral_complex_structure']['harmonic_part']}",
+            ),
+        },
+        {
             "cct_desideratum": "non-arbitrary H4 emergence",
             "w33_witness": "full PSp(4,3) symmetry cannot produce a 12-regular 600-cell skeleton",
             "integer_certificate": no_go["full_psp43_orbital_degrees"],

@@ -95,6 +95,9 @@ from scripts.w33_chiral_exact_sequence_audit import (  # noqa: E402
 from scripts.w33_representation_triangle_121_audit import (  # noqa: E402
     build_representation_triangle_121_summary,
 )
+from scripts.w33_mass_weighted_hodge_audit import (  # noqa: E402
+    build_mass_weighted_hodge_summary,
+)
 from scripts.w33_parseval_target_geometry_audit import (  # noqa: E402
     build_parseval_target_geometry_summary,
 )
@@ -168,6 +171,7 @@ def q3_local_kernel_summary() -> Dict[str, object]:
     chiral_exact_sequence = build_chiral_exact_sequence_summary()
     representation_triangle = build_representation_triangle_121_summary()
     target_geometry = build_parseval_target_geometry_summary()
+    hodge_factorization = build_mass_weighted_hodge_summary()
 
     q = int(core.q)
     phi3 = q * q + q + 1
@@ -273,6 +277,20 @@ def q3_local_kernel_summary() -> Dict[str, object]:
                 "naimark_complement_swaps_sign_graphs": all(target_geometry["naimark_sign_duality"].values()),
             },
         },
+        "mass_weighted_hodge_factorization": {
+            "rank_d": hodge_factorization["chiral_complex_structure"]["rank_d"],
+            "nullity_d": hodge_factorization["chiral_complex_structure"]["nullity_d"],
+            "harmonic_part": hodge_factorization["chiral_complex_structure"]["harmonic_part"],
+            "forward_block_count": len(hodge_factorization["forward_blocks"]),
+            "forward_blocks": [
+                block["source"] + " -> " + block["target"]
+                for block in hodge_factorization["forward_blocks"]
+            ],
+            "shell_values": [block["shell_value"] for block in hodge_factorization["forward_blocks"]],
+            "three_exact_two_term_complexes_plus_three_harmonic": hodge_factorization["theorem"]["three_exact_two_term_complexes_plus_three_harmonic"],
+            "shell_hierarchy_inside_differential": hodge_factorization["theorem"]["shell_hierarchy_inside_differential"],
+            "massive_hodge_laplacian_spectrum": hodge_factorization["theorem"]["massive_hodge_laplacian_spectrum"],
+        },
         "exact_factorizations": {
             "visible_shell_is_q_cubed": int(one_qutrit["visible_shell_size"]) == q**3,
             "fiber_count_is_q_squared": int(one_qutrit["fiber_count"]) == q * q,
@@ -290,6 +308,7 @@ def q3_local_kernel_summary() -> Dict[str, object]:
                 representation_triangle["theorem"].values()
             ),
             "line_module_parseval_target_geometry_is_exact": all(target_geometry["theorem"].values()),
+            "raw_two_shell_operator_is_massive_hodge_complex": all(hodge_factorization["theorem"].values()),
         },
     }
 

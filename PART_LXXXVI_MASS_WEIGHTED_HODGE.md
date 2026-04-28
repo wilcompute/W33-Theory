@@ -152,3 +152,7 @@ The raw completed W(3,3) triangle is not merely a two-shell operator. It is a tw
 ```
 
 The shell hierarchy is inside the differential itself, not just inside the squared operator.
+
+## Audit Implementation
+
+See `scripts/w33_mass_weighted_hodge_audit.py` and `tests/test_w33_mass_weighted_hodge_audit.py` for the detailed audit of mass-weighted Hodge factorization and shell spectrum verification.
