@@ -97,6 +97,7 @@ class TestCCT4H4Selector:
             "E8 to H4 quasicrystal pathway",
             "feedback loop / cycle-clock dynamics",
             "measurement / shadow duality",
+            "finite propagator / operator calculus",
             "non-arbitrary H4 emergence",
         }
 
@@ -158,12 +159,22 @@ class TestCCT4H4Selector:
             "240_edge_root_shell",
         ]
         assert measurement_row["five_layer_route"] == {
-            "carrier": "the centered 40-point line module and its Pascal target channels",
-            "realization": "36 spread features and 90 anti-line features collapsing to 45 transport targets",
-            "algebra": "Parseval/Naimark target-side sign algebra",
-            "computation": "center the spread and anti-line probes, quotient duplicate anti-lines, and pass to the Naimark complement",
-            "witness": "ETF(36,15), SRG(45,32,22,24), and the shared shadow 21 = 1 + 20",
+            "carrier": "the centered 40-point line module, its Pascal target channels, the induced 59 + 59 + 3 chiral split, and the raw 18/72 two-shell triangle operator",
+            "realization": "the 121 = (k-1)^2 representation triangle with 36 spread features, a 45-point anti-line quotient carrier whose 27 lines are the five-cliques of the negative sign graph, the chiral identity 121 = 59_+ + 59_- + 3_harm, and the raw shell split 0^3, 18^78, 72^40",
+            "algebra": "Parseval/Naimark target-side sign algebra, the sector-sharing 40/36/45 triangle, the exact chiral block sum S_15 -> L_15, Q_24 -> L_24, Q_20 -> S_20, and the massive Laplacian relation Delta_H = d d* + d* d = 18 P_light + 72 P_heavy",
+            "computation": "center the spread and anti-line probes, isolate the 15-, 24-, and shared 20-sectors, identify duplicate anti-lines with the center-quad quotient carrier, recover the 27 negative-sign five-cliques, pass to the Naimark complement, expose the three exact forward blocks, and verify shell ratio sqrt(72)/sqrt(18)=2 with rank(d)=59 and nullity(d)=62",
+            "witness": "ETF(36,15), the 121 = (k-1)^2 representation triangle, the 59_+ + 59_- + 3_harm chiral exact sequence, the canonical 45-point transport carrier with 27 negative-sign five-cliques, the shared shadow 21 = 1 + 20, and the two-shell/mass-weighted Hodge spectrum 0^3, 18^78, 72^40",
         }
+
+        propagator_row = next(
+            row for row in crosswalk["crosswalk_rows"] if row["cct_desideratum"] == "finite propagator / operator calculus"
+        )
+        assert propagator_row["integer_certificate"] == 78
+        assert propagator_row["aligned_periodic_rows"] == ["pascal_computation_row"]
+        assert "40_point_shell" in propagator_row["same_table_backbone_invariants"]
+        assert "P0, P_light, P_heavy" in propagator_row["w33_witness"]
+        assert "ranks 3" in propagator_row["w33_witness"]
+        assert "Green kernel" in propagator_row["w33_witness"]
 
         no_go_row = next(
             row for row in crosswalk["crosswalk_rows"] if row["cct_desideratum"] == "non-arbitrary H4 emergence"
@@ -186,7 +197,12 @@ class TestCCT4H4Selector:
         assert crosswalk["theorem"]["the_source_dictionary_explicitly_uses_the_shared_40_81_240_backbone"]
         assert "carrier -> realization -> algebra -> computation -> witness" in crosswalk["theorem"]["interpretation"]
         assert "shared q=3 backbone invariant" in crosswalk["theorem"]["interpretation"]
-        assert "45-point transport graph" in crosswalk["theorem"]["interpretation"]
+        assert "121 = (k-1)^2 representation triangle" in crosswalk["theorem"]["interpretation"]
+        assert "59_+ + 59_- + 3_harm chiral exact sequence" in crosswalk["theorem"]["interpretation"]
+        assert "45-point transport carrier" in crosswalk["theorem"]["interpretation"]
+        assert "negative-sign five-cliques" in crosswalk["theorem"]["interpretation"]
+        assert "two-shell and mass-weighted-Hodge package 0^3, 18^78, 72^40" in crosswalk["theorem"]["interpretation"]
+        assert "projector calculus" in crosswalk["theorem"]["interpretation"]
         assert "H4/quasicrystal step" in crosswalk["theorem"]["interpretation"]
 
     def test_docs_and_paper_mention_the_cct_backbone_invariants_explicitly(self):
@@ -203,3 +219,4 @@ class TestCCT4H4Selector:
         assert r"\texttt{tests/test\_w33\_cct\_crosswalk.py}" in paper_text
         assert "the $40$ shell, the" in paper_text
         assert "the $240$ edge/root shell" in paper_text
+        assert "$121$-dimensional representation triangle" in paper_text

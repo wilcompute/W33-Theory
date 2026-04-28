@@ -33,6 +33,21 @@ from scripts.w33_h4_branch_selection_search import (  # noqa: E402
 from scripts.w33_parseval_measurement_frame_audit import (  # noqa: E402
     build_parseval_measurement_frame_summary,
 )
+from scripts.w33_chiral_exact_sequence_audit import (  # noqa: E402
+    build_chiral_exact_sequence_summary,
+)
+from scripts.w33_two_spectral_shells_audit import (  # noqa: E402
+    build_two_spectral_shells_summary,
+)
+from scripts.w33_mass_weighted_hodge_audit import (  # noqa: E402
+    build_mass_weighted_hodge_summary,
+)
+from scripts.w33_projector_calculus_audit import (  # noqa: E402
+    build_projector_calculus_summary,
+)
+from scripts.w33_representation_triangle_121_audit import (  # noqa: E402
+    build_representation_triangle_121_summary,
+)
 from scripts.w33_parseval_target_geometry_audit import (  # noqa: E402
     build_parseval_target_geometry_summary,
 )
@@ -51,6 +66,11 @@ def build_periodic_table_organization_summary() -> dict[str, Any]:
     realization = build_realization_orbit_summary()
     pascal = build_pascal_line_split_summary()
     parseval = build_parseval_measurement_frame_summary()
+    chiral_exact_sequence = build_chiral_exact_sequence_summary()
+    two_spectral_shells = build_two_spectral_shells_summary()
+    mass_weighted_hodge = build_mass_weighted_hodge_summary()
+    projector_calculus = build_projector_calculus_summary()
+    representation_triangle = build_representation_triangle_121_summary()
     target_geometry = build_parseval_target_geometry_summary()
     witness = q3_transport_algebra_summary()
     branch_selection = build_branch_selection_search_summary()
@@ -117,6 +137,44 @@ def build_periodic_table_organization_summary() -> dict[str, Any]:
                         ].items()
                     },
                 },
+                "representation_triangle_121": {
+                    "line_module": representation_triangle["carrier_dictionary"]["line_module"],
+                    "spread_module": representation_triangle["carrier_dictionary"]["spread_module"],
+                    "anti_line_quotient_module": representation_triangle["carrier_dictionary"][
+                        "anti_line_quotient_module"
+                    ],
+                    "total_dimension_identity": representation_triangle["carrier_dictionary"][
+                        "total_dimension_identity"
+                    ],
+                    "sector_double_count_identity": representation_triangle["carrier_dictionary"][
+                        "sector_double_count_identity"
+                    ],
+                    "nonbacktracking_outdegree": representation_triangle["carrier_dictionary"][
+                        "nonbacktracking_outdegree"
+                    ],
+                    "common_singular_constant": representation_triangle["exact_identities"][
+                        "common_singular_constant"
+                    ],
+                    "sector_sharing_triangle": representation_triangle["sector_sharing_triangle"],
+                },
+                "chiral_exact_sequence": {
+                    "positive_chirality": chiral_exact_sequence["carrier_dictionary"]["positive_chirality"],
+                    "negative_chirality": chiral_exact_sequence["carrier_dictionary"]["negative_chirality"],
+                    "harmonic_sector": chiral_exact_sequence["carrier_dictionary"]["harmonic_sector"],
+                    "nonzero_forward_blocks": [
+                        block["source"] + " -> " + block["target"]
+                        for block in chiral_exact_sequence["block_support"]["nonzero_forward_blocks"]
+                    ],
+                    "exact_dimension_identity": chiral_exact_sequence["carrier_dictionary"][
+                        "exact_dimension_identity"
+                    ],
+                    "total_dimension_identity": chiral_exact_sequence["carrier_dictionary"][
+                        "total_dimension_identity"
+                    ],
+                    "cohomology_statement": chiral_exact_sequence["block_support"]["cohomology_statement"],
+                    "rank_Q": chiral_exact_sequence["derived_invariants"]["rank_Q"],
+                    "nullity_Q": chiral_exact_sequence["derived_invariants"]["nullity_Q"],
+                },
                 "target_side_geometry": {
                     "spread_etf": {
                         "frame_type": target_geometry["target_side_frame_geometry"]["spread_etf"]["frame_type"],
@@ -131,6 +189,28 @@ def build_periodic_table_organization_summary() -> dict[str, Any]:
                         "positive_sign_graph": target_geometry["target_side_frame_geometry"]["anti_line_quotient"]["positive_sign_graph"],
                         "negative_sign_graph": target_geometry["target_side_frame_geometry"]["anti_line_quotient"]["negative_sign_graph"],
                         "positive_sign_isomorphic_to_transport_graph": target_geometry["target_side_frame_geometry"]["anti_line_quotient"]["positive_sign_isomorphic_to_transport_graph"],
+                        "canonical_transport_carrier": target_geometry["target_side_frame_geometry"]["anti_line_quotient"][
+                            "canonical_transport_carrier"
+                        ]
+                        | {
+                            "line_size_distribution": {
+                                str(key): value
+                                for key, value in target_geometry["target_side_frame_geometry"][
+                                    "anti_line_quotient"
+                                ]["canonical_transport_carrier"]["line_size_distribution"].items()
+                            },
+                            "point_line_incidence_distribution": {
+                                str(key): value
+                                for key, value in target_geometry["target_side_frame_geometry"][
+                                    "anti_line_quotient"
+                                ]["canonical_transport_carrier"]["point_line_incidence_distribution"].items()
+                            },
+                            "negative_sign_graph_five_cliques_equal_quotient_lines": target_geometry[
+                                "target_side_frame_geometry"
+                            ]["anti_line_quotient"]["canonical_transport_carrier"][
+                                "negative_sign_graph_five_cliques_equal_quotient_lines"
+                            ],
+                        },
                     },
                     "shared_naimark_shadow": {
                         "shared_shadow_dimension": target_geometry["common_naimark_shadow"]["shared_shadow_dimension"],
@@ -142,6 +222,32 @@ def build_periodic_table_organization_summary() -> dict[str, Any]:
                             target_geometry["naimark_sign_duality"].values()
                         ),
                     },
+                },
+                "two_spectral_shells": {
+                    "light_shell_rank": two_spectral_shells["carrier_structure"]["light_shell_rank"],
+                    "heavy_shell_rank": two_spectral_shells["carrier_structure"]["heavy_shell_rank"],
+                    "harmonic_dimension": two_spectral_shells["carrier_structure"]["harmonic_dimension"],
+                    "total_dimension": two_spectral_shells["carrier_structure"]["total_dimension"],
+                    "shell_scale_ratio": two_spectral_shells["shell_scaling_relations"]["shell_scale_ratio"]["ratio"],
+                    "parseval_identity_holds": two_spectral_shells["spectrum_algebraic_identities"]["parseval_identity_25_B4Bt_plus_8_R5Rt"]["holds"],
+                },
+                "mass_weighted_hodge": {
+                    "rank_d": mass_weighted_hodge["chiral_complex_structure"]["rank_d"],
+                    "nullity_d": mass_weighted_hodge["chiral_complex_structure"]["nullity_d"],
+                    "forward_blocks_count": len(mass_weighted_hodge["forward_blocks"]),
+                    "shell_light_eigenvalue": mass_weighted_hodge["raw_triangle_operator_structure"]["shell_light_eigenvalue"],
+                    "shell_heavy_eigenvalue": mass_weighted_hodge["raw_triangle_operator_structure"]["shell_heavy_eigenvalue"],
+                    "laplacian_spectrum_harmonic_multiplicity": mass_weighted_hodge["laplacian_spectrum"]["harmonic_multiplicity"],
+                    "laplacian_spectrum_light_shell_multiplicity": mass_weighted_hodge["laplacian_spectrum"]["light_shell_multiplicity"],
+                    "laplacian_spectrum_heavy_shell_multiplicity": mass_weighted_hodge["laplacian_spectrum"]["heavy_shell_multiplicity"],
+                },
+                "projector_calculus_propagator": {
+                    "rank_P0": projector_calculus["projector_ranks"]["rank_P0_full"],
+                    "rank_P_light": projector_calculus["projector_ranks"]["rank_P_light_full"],
+                    "rank_P_heavy": projector_calculus["projector_ranks"]["rank_P_heavy_full"],
+                    "projector_calculus_is_closed": projector_calculus["theorem"]["projector_calculus_is_closed"],
+                    "finite_propagator_system_complete": projector_calculus["theorem"]["finite_propagator_system_complete"],
+                    "H_determines_all_propagators": projector_calculus["theorem"]["H_determines_all_propagators"],
                 },
                 "signed_sector_operator": pascal["seidel_formula"],
                 "seidel_spectrum": pascal["seidel_spectrum"],
@@ -240,6 +346,18 @@ def build_periodic_table_organization_summary() -> dict[str, Any]:
                 "centered_spread_probe_spectrum": {"0": 25, "18": 15},
                 "centered_anti_line_probe_spectrum": {"0": 16, "36": 24},
             }
+            and summary["rows"]["pascal_computation_row"]["chiral_exact_sequence"]
+            == {
+                "positive_chirality": "P_+ = L_15 + L_24 + S_20",
+                "negative_chirality": "P_- = S_15 + Q_24 + Q_20",
+                "harmonic_sector": "H = 1_L + 1_S + 1_Q",
+                "nonzero_forward_blocks": ["S_15 -> L_15", "Q_24 -> L_24", "Q_20 -> S_20"],
+                "exact_dimension_identity": "2(15 + 24 + 20) = 118",
+                "total_dimension_identity": "121 = 59_+ + 59_- + 3_harm",
+                "cohomology_statement": "the only cohomology is the three module means",
+                "rank_Q": 59,
+                "nullity_Q": 62,
+            }
             and summary["rows"]["pascal_computation_row"]["target_side_geometry"]
             == {
                 "spread_etf": {
@@ -283,6 +401,20 @@ def build_periodic_table_organization_summary() -> dict[str, Any]:
                         "spectrum": {"-3": 24, "3": 20, "12": 1},
                     },
                     "positive_sign_isomorphic_to_transport_graph": True,
+                    "canonical_transport_carrier": {
+                        "coordinate_conversion": "(x0,x1,x2,x3) -> (x0,x2,x1,x3)",
+                        "anti_lines_equal_center_quads_after_coordinate_conversion": True,
+                        "duplicate_pairing_equals_center_quad_antipodes": True,
+                        "duplicate_classes_equal_quotient_point_quad_pairs": True,
+                        "paired_supports_equal_quotient_point_supports": True,
+                        "quotient_line_count": 27,
+                        "support_partitions_equal_quotient_lines": True,
+                        "line_size_distribution": {"5": 27},
+                        "point_line_incidence_distribution": {"3": 45},
+                        "negative_sign_graph_five_cliques_equal_quotient_lines": True,
+                        "positive_sign_equals_transport_graph_without_relabeling": True,
+                        "negative_sign_equals_quotient_point_graph_without_relabeling": True,
+                    },
                 },
                 "shared_naimark_shadow": {
                     "shared_shadow_dimension": 21,
@@ -293,6 +425,15 @@ def build_periodic_table_organization_summary() -> dict[str, Any]:
                     "naimark_complement_swaps_sign_graphs": True,
                 },
             }
+            and summary["rows"]["pascal_computation_row"]["two_spectral_shells"]["shell_scale_ratio"] == 2.0
+            and summary["rows"]["pascal_computation_row"]["two_spectral_shells"]["parseval_identity_holds"] is True
+            and summary["rows"]["pascal_computation_row"]["mass_weighted_hodge"]["rank_d"] == 59
+            and summary["rows"]["pascal_computation_row"]["mass_weighted_hodge"]["nullity_d"] == 62
+            and summary["rows"]["pascal_computation_row"]["mass_weighted_hodge"]["forward_blocks_count"] == 3
+            and summary["rows"]["pascal_computation_row"]["projector_calculus_propagator"]["rank_P0"] == 3
+            and summary["rows"]["pascal_computation_row"]["projector_calculus_propagator"]["rank_P_light"] == 78
+            and summary["rows"]["pascal_computation_row"]["projector_calculus_propagator"]["rank_P_heavy"] == 40
+            and all(v is True for v in summary["rows"]["pascal_computation_row"]["projector_calculus_propagator"].values() if isinstance(v, bool))
         ),
         "frontier_row_is_one_witness_problem_on_a_fixed_carrier": (
             summary["rows"]["frontier_witness_row"]["finite_ordered_path_carrier"]

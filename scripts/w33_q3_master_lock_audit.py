@@ -89,6 +89,12 @@ from scripts.w33_h4_branch_selection_search import (  # noqa: E402
 from scripts.w33_parseval_measurement_frame_audit import (  # noqa: E402
     build_parseval_measurement_frame_summary,
 )
+from scripts.w33_chiral_exact_sequence_audit import (  # noqa: E402
+    build_chiral_exact_sequence_summary,
+)
+from scripts.w33_representation_triangle_121_audit import (  # noqa: E402
+    build_representation_triangle_121_summary,
+)
 from scripts.w33_parseval_target_geometry_audit import (  # noqa: E402
     build_parseval_target_geometry_summary,
 )
@@ -121,25 +127,32 @@ def symbolic_q3_lock_summary() -> Dict[str, object]:
     m2_gap = sp.factor((2 * k_q * k_q + 2 * f_q * (q - 1) ** 2 + 2 * g_q * (q + 1) ** 2) / (2 * v_q) - k_q)
     disc_r_gap = sp.factor((q - 1) ** 2 - 4 * (k_q - 1) + 4 * phi4_q)
     disc_s_gap = sp.factor((q + 1) ** 2 - 4 * (k_q - 1) + 4 * phi6_q)
+    # (k-1)^2 - v - q^4 = q(q-3)(q+1): the 121-triangle size equals v+q^4 iff q=3
+    v_gq = q**3 + q**2 + q + 1  # GQ(q,q) point count (q^4-1)/(q-1)
+    representation_triangle_gap = sp.factor((k_q - 1) ** 2 - v_gq - q**4)
 
     return {
         "n_zero_gap": str(n_zero_gap),
         "m2_minus_k_gap": str(m2_gap),
         "disc_r_plus_4phi4_gap": str(disc_r_gap),
         "disc_s_plus_4phi6_gap": str(disc_s_gap),
+        "representation_triangle_gap": str(representation_triangle_gap),
         "q3_evaluations": {
             "n_zero_gap_at_3": int(n_zero_gap.subs(q, 3)),
             "m2_minus_k_gap_at_3": int(m2_gap.subs(q, 3)),
             "disc_r_gap_at_3": int(disc_r_gap.subs(q, 3)),
             "disc_s_gap_at_3": int(disc_s_gap.subs(q, 3)),
+            "representation_triangle_gap_at_3": int(representation_triangle_gap.subs(q, 3)),
         },
         "exact_factors": {
             "n_zero_gap_factor_is_exact": n_zero_gap == (q - 3) * (q + 1) * (q**2 + 1),
             "m2_minus_k_gap_factor_is_exact": m2_gap == -q * (q - 3) * (q + 1) / (q - 1),
             "disc_r_gap_factor_is_exact": disc_r_gap == (q - 3) ** 2,
             "disc_s_gap_factor_is_exact": disc_s_gap == (q - 3) ** 2,
+            "representation_triangle_gap_factor_is_exact": representation_triangle_gap == q * (q - 3) * (q + 1),
             "all_symbolic_gaps_vanish_at_q3": all(
-                int(expr.subs(q, 3)) == 0 for expr in (n_zero_gap, m2_gap, disc_r_gap, disc_s_gap)
+                int(expr.subs(q, 3)) == 0
+                for expr in (n_zero_gap, m2_gap, disc_r_gap, disc_s_gap, representation_triangle_gap)
             ),
         },
     }
@@ -152,6 +165,8 @@ def q3_local_kernel_summary() -> Dict[str, object]:
     e8_side = e8_side_exact_decomposition_summary()
     core = get_w33_spectral_core()
     measurement_frame = build_parseval_measurement_frame_summary()
+    chiral_exact_sequence = build_chiral_exact_sequence_summary()
+    representation_triangle = build_representation_triangle_121_summary()
     target_geometry = build_parseval_target_geometry_summary()
 
     q = int(core.q)
@@ -186,6 +201,50 @@ def q3_local_kernel_summary() -> Dict[str, object]:
                 "centered_anti_line_probe_spectrum"
             ],
         },
+        "parseval_representation_triangle": {
+            "line_module": representation_triangle["carrier_dictionary"]["line_module"],
+            "spread_module": representation_triangle["carrier_dictionary"]["spread_module"],
+            "anti_line_quotient_module": representation_triangle["carrier_dictionary"][
+                "anti_line_quotient_module"
+            ],
+            "total_dimension_identity": representation_triangle["carrier_dictionary"][
+                "total_dimension_identity"
+            ],
+            "sector_double_count_identity": representation_triangle["carrier_dictionary"][
+                "sector_double_count_identity"
+            ],
+            "nonbacktracking_outdegree": representation_triangle["carrier_dictionary"][
+                "nonbacktracking_outdegree"
+            ],
+            "qutrit_hilbert_dimension_identity": representation_triangle["carrier_dictionary"][
+                "qutrit_hilbert_dimension_identity"
+            ],
+            "representation_triangle_uniqueness": representation_triangle["carrier_dictionary"][
+                "representation_triangle_uniqueness"
+            ],
+            "common_singular_constant": representation_triangle["exact_identities"][
+                "common_singular_constant"
+            ],
+            "sector_sharing_triangle": representation_triangle["sector_sharing_triangle"],
+        },
+        "parseval_chiral_exact_sequence": {
+            "positive_chirality": chiral_exact_sequence["carrier_dictionary"]["positive_chirality"],
+            "negative_chirality": chiral_exact_sequence["carrier_dictionary"]["negative_chirality"],
+            "harmonic_sector": chiral_exact_sequence["carrier_dictionary"]["harmonic_sector"],
+            "nonzero_forward_blocks": [
+                block["source"] + " -> " + block["target"]
+                for block in chiral_exact_sequence["block_support"]["nonzero_forward_blocks"]
+            ],
+            "exact_dimension_identity": chiral_exact_sequence["carrier_dictionary"][
+                "exact_dimension_identity"
+            ],
+            "total_dimension_identity": chiral_exact_sequence["carrier_dictionary"][
+                "total_dimension_identity"
+            ],
+            "cohomology_statement": chiral_exact_sequence["block_support"]["cohomology_statement"],
+            "rank_Q": chiral_exact_sequence["derived_invariants"]["rank_Q"],
+            "nullity_Q": chiral_exact_sequence["derived_invariants"]["nullity_Q"],
+        },
         "parseval_target_geometry": {
             "spread_target": {
                 "frame_type": target_geometry["target_side_frame_geometry"]["spread_etf"]["frame_type"],
@@ -201,6 +260,9 @@ def q3_local_kernel_summary() -> Dict[str, object]:
                 "positive_sign_graph": target_geometry["target_side_frame_geometry"]["anti_line_quotient"]["positive_sign_graph"],
                 "negative_sign_graph": target_geometry["target_side_frame_geometry"]["anti_line_quotient"]["negative_sign_graph"],
                 "positive_sign_isomorphic_to_transport_graph": target_geometry["target_side_frame_geometry"]["anti_line_quotient"]["positive_sign_isomorphic_to_transport_graph"],
+                "canonical_transport_carrier": target_geometry["target_side_frame_geometry"]["anti_line_quotient"][
+                    "canonical_transport_carrier"
+                ],
             },
             "common_naimark_shadow": {
                 "shared_shadow_dimension": target_geometry["common_naimark_shadow"]["shared_shadow_dimension"],
@@ -223,6 +285,10 @@ def q3_local_kernel_summary() -> Dict[str, object]:
             "edge_count_is_half_vk": int(two_qutrit["edge_count"])
             == (int(two_qutrit["projective_point_count"]) * int(core.k)) // 2,
             "line_module_parseval_frame_is_exact": all(measurement_frame["theorem"].values()),
+            "line_module_chiral_exact_sequence_is_exact": all(chiral_exact_sequence["theorem"].values()),
+            "line_spread_quotient_representation_triangle_is_exact": all(
+                representation_triangle["theorem"].values()
+            ),
             "line_module_parseval_target_geometry_is_exact": all(target_geometry["theorem"].values()),
         },
     }
@@ -546,9 +612,12 @@ def classify_q3_master_lock() -> Tuple[Dict[str, object], ...]:
             "statement": (
                 "The local qutrit kernel already carries the exact q=3 packet "
                 "1/3/9/27/40/240 via fibers, lines, projective points, and edges; "
-                "the same 40 = 1 + 15 + 24 Parseval split already closes on the target side "
-                "as ETF(36,15), the 45-point transport quotient frame, and the common "
-                "Naimark shadow 21 = 1 + 20."
+                "the same 40 = 1 + 15 + 24 Parseval split already closes as the 121 = (k-1)^2 "
+                "representation triangle with 36 = 1 + 15 + 20 and 45 = 1 + 24 + 20, on the target side "
+                "as ETF(36,15), the same canonical 45-point transport carrier with its full 27-line dual "
+                "GQ(4,2) incidence already visible as the 27 five-cliques of the negative sign graph, with the common "
+                "Naimark shadow 21 = 1 + 20 further sharpening to the chiral exact sequence 121 = 59_+ + 59_- + 3_harm "
+                "and the three exact forward blocks S_15 -> L_15, Q_24 -> L_24, and Q_20 -> S_20."
             ),
             "evidence": local_kernel,
         },
@@ -656,6 +725,44 @@ def analyze() -> Dict[str, object]:
             }
             and local_kernel["exact_factorizations"]["line_module_parseval_frame_is_exact"]
         ),
+        "the_local_kernel_already_contains_the_exact_121_representation_triangle": (
+            local_kernel["parseval_representation_triangle"]
+            == {
+                "line_module": "40 = 1 + 15 + 24",
+                "spread_module": "36 = 1 + 15 + 20",
+                "anti_line_quotient_module": "45 = 1 + 24 + 20",
+                "total_dimension_identity": "40 + 36 + 45 = 121 = (k - 1)^2",
+                "sector_double_count_identity": "3 + 2(15 + 20 + 24) = 121",
+                "nonbacktracking_outdegree": "k - 1 = 11",
+                "qutrit_hilbert_dimension_identity": "q^4 = C(q^2,2) + C(q^2+1,2) = 36 + 45 = 81",
+                "representation_triangle_uniqueness": "(k-1)^2 = v + q^4 iff q = 3: gap = q(q-3)(q+1)",
+                "common_singular_constant": "sqrt(18) = 3sqrt(2)",
+                "sector_sharing_triangle": {
+                    "L_intersect_S": "1 + 15",
+                    "L_intersect_Q": "1 + 24",
+                    "S_intersect_Q": "1 + 20",
+                    "hidden_target_sector": 20,
+                },
+            }
+            and local_kernel["exact_factorizations"][
+                "line_spread_quotient_representation_triangle_is_exact"
+            ]
+        ),
+        "the_local_kernel_already_contains_the_exact_chiral_exact_sequence": (
+            local_kernel["parseval_chiral_exact_sequence"]
+            == {
+                "positive_chirality": "P_+ = L_15 + L_24 + S_20",
+                "negative_chirality": "P_- = S_15 + Q_24 + Q_20",
+                "harmonic_sector": "H = 1_L + 1_S + 1_Q",
+                "nonzero_forward_blocks": ["S_15 -> L_15", "Q_24 -> L_24", "Q_20 -> S_20"],
+                "exact_dimension_identity": "2(15 + 24 + 20) = 118",
+                "total_dimension_identity": "121 = 59_+ + 59_- + 3_harm",
+                "cohomology_statement": "the only cohomology is the three module means",
+                "rank_Q": 59,
+                "nullity_Q": 62,
+            }
+            and local_kernel["exact_factorizations"]["line_module_chiral_exact_sequence_is_exact"]
+        ),
         "the_local_kernel_already_contains_the_exact_target_side_parseval_geometry_and_naimark_shadow": (
             local_kernel["parseval_target_geometry"]
             == {
@@ -701,6 +808,20 @@ def analyze() -> Dict[str, object]:
                         "spectrum": {"-3": 24, "3": 20, "12": 1},
                     },
                     "positive_sign_isomorphic_to_transport_graph": True,
+                    "canonical_transport_carrier": {
+                        "coordinate_conversion": "(x0,x1,x2,x3) -> (x0,x2,x1,x3)",
+                        "anti_lines_equal_center_quads_after_coordinate_conversion": True,
+                        "duplicate_pairing_equals_center_quad_antipodes": True,
+                        "duplicate_classes_equal_quotient_point_quad_pairs": True,
+                        "paired_supports_equal_quotient_point_supports": True,
+                        "quotient_line_count": 27,
+                        "support_partitions_equal_quotient_lines": True,
+                        "line_size_distribution": {5: 27},
+                        "point_line_incidence_distribution": {3: 45},
+                        "negative_sign_graph_five_cliques_equal_quotient_lines": True,
+                        "positive_sign_equals_transport_graph_without_relabeling": True,
+                        "negative_sign_equals_quotient_point_graph_without_relabeling": True,
+                    },
                 },
                 "common_naimark_shadow": {
                     "shared_shadow_dimension": 21,

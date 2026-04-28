@@ -10,7 +10,11 @@ from __future__ import annotations
 
 from typing import Any
 
+from scripts.w33_chiral_exact_sequence_audit import build_chiral_exact_sequence_summary
+from scripts.w33_mass_weighted_hodge_audit import build_mass_weighted_hodge_summary
 from scripts.w33_parseval_target_geometry_audit import build_parseval_target_geometry_summary
+from scripts.w33_projector_calculus_audit import build_projector_calculus_summary
+from scripts.w33_two_spectral_shells_audit import build_two_spectral_shells_summary
 
 
 Q = 3
@@ -189,7 +193,11 @@ def build_cct_crosswalk() -> dict[str, Any]:
     language = w33_clock_language_summary()
     projection = e8_h4_projection_summary()
     no_go = full_symmetry_no_go_summary()
+    chiral_sequence = build_chiral_exact_sequence_summary()
     target_geometry = build_parseval_target_geometry_summary()
+    two_shells = build_two_spectral_shells_summary()
+    mass_weighted_hodge = build_mass_weighted_hodge_summary()
+    projector_calculus = build_projector_calculus_summary()
     rows = [
         {
             "cct_desideratum": "finite code/language",
@@ -277,16 +285,38 @@ def build_cct_crosswalk() -> dict[str, Any]:
         },
         {
             "cct_desideratum": "measurement / shadow duality",
-            "w33_witness": "the Pascal target side closes as ETF(36,15), the 45-point transport graph, and a shared 21 = 1 + 20 Naimark shadow",
+            "w33_witness": "the Pascal target side closes as the 121 = (k-1)^2 representation triangle 40 = 1 + 15 + 24, 36 = 1 + 15 + 20, 45 = 1 + 24 + 20, with ETF(36,15), the same canonical 45-point transport carrier whose 27 lines are already the 27 five-cliques of the negative sign graph, the shared 21 = 1 + 20 Naimark shadow, the explicit chiral exact sequence 121 = 59_+ + 59_- + 3_harm with forward blocks S_15 -> L_15, Q_24 -> L_24, Q_20 -> S_20, and the raw two-shell/mass-weighted Hodge package 0^3,18^78,72^40 with shell ratio 2",
             "integer_certificate": target_geometry["common_naimark_shadow"]["shared_shadow_dimension"],
             "aligned_periodic_rows": ["pascal_computation_row"],
             "same_table_backbone_invariants": ["40_point_shell", "240_edge_root_shell"],
             "five_layer_route": _five_layer_route(
-                carrier="the centered 40-point line module and its Pascal target channels",
-                realization="36 spread features and 90 anti-line features collapsing to 45 transport targets",
-                algebra="Parseval/Naimark target-side sign algebra",
-                computation="center the spread and anti-line probes, quotient duplicate anti-lines, and pass to the Naimark complement",
-                witness="ETF(36,15), SRG(45,32,22,24), and the shared shadow 21 = 1 + 20",
+                carrier="the centered 40-point line module, its Pascal target channels, the induced 59 + 59 + 3 chiral split, and the raw 18/72 two-shell triangle operator",
+                realization="the 121 = (k-1)^2 representation triangle with 36 spread features, a 45-point anti-line quotient carrier whose 27 lines are the five-cliques of the negative sign graph, the chiral identity 121 = 59_+ + 59_- + 3_harm, and the raw shell split 0^3, 18^78, 72^40",
+                algebra="Parseval/Naimark target-side sign algebra, the sector-sharing 40/36/45 triangle, the exact chiral block sum S_15 -> L_15, Q_24 -> L_24, Q_20 -> S_20, and the massive Laplacian relation Delta_H = d d* + d* d = 18 P_light + 72 P_heavy",
+                computation="center the spread and anti-line probes, isolate the 15-, 24-, and shared 20-sectors, identify duplicate anti-lines with the center-quad quotient carrier, recover the 27 negative-sign five-cliques, pass to the Naimark complement, expose the three exact forward blocks, and verify shell ratio sqrt(72)/sqrt(18)=2 with rank(d)=59 and nullity(d)=62",
+                witness="ETF(36,15), the 121 = (k-1)^2 representation triangle, the 59_+ + 59_- + 3_harm chiral exact sequence, the canonical 45-point transport carrier with 27 negative-sign five-cliques, the shared shadow 21 = 1 + 20, and the two-shell/mass-weighted Hodge spectrum 0^3, 18^78, 72^40",
+            ),
+        },
+        {
+            "cct_desideratum": "finite propagator / operator calculus",
+            "w33_witness": (
+                "the three shell projectors P0, P_light, P_heavy are polynomials in H^2 with "
+                f"ranks {projector_calculus['projector_ranks']['rank_P0_full']}, "
+                f"{projector_calculus['projector_ranks']['rank_P_light_full']}, "
+                f"{projector_calculus['projector_ranks']['rank_P_heavy_full']}; "
+                "they satisfy idempotence, completeness, and mutual orthogonality; "
+                "the functional calculus f(H^2) = f(0)P0 + f(18)P_light + f(72)P_heavy yields "
+                "the exact Green kernel, heat kernel, and Dirac resolvent"
+            ),
+            "integer_certificate": projector_calculus["projector_ranks"]["rank_P_light_full"],
+            "aligned_periodic_rows": ["pascal_computation_row"],
+            "same_table_backbone_invariants": ["40_point_shell", "240_edge_root_shell"],
+            "five_layer_route": _five_layer_route(
+                carrier="the 121 = (k-1)^2 representation triangle with spectrum {0^3, 18^78, 72^40}",
+                realization="three shell projectors P0, P_light, P_heavy as polynomials in H^2",
+                algebra="functional calculus f(H^2) = f(0)P0 + f(18)P_light + f(72)P_heavy",
+                computation="verify idempotence P_i^2=P_i, completeness sum=I, orthogonality P_i P_j=0, and propagator traces",
+                witness=f"projector ranks ({projector_calculus['projector_ranks']['rank_P0_full']}, {projector_calculus['projector_ranks']['rank_P_light_full']}, {projector_calculus['projector_ranks']['rank_P_heavy_full']}), heat kernel symmetric positive, Green kernel trace-consistent",
             ),
         },
         {
@@ -351,8 +381,17 @@ def build_cct_crosswalk() -> dict[str, Any]:
                     "the_anti_line_channel_collapses_to_a_doubled_45_vector_transport_frame_in_the_24_sector"
                 ]
                 and target_geometry["theorem"][
+                    "the_anti_line_transport_target_is_the_existing_center_quad_quotient_carrier"
+                ]
+                and target_geometry["theorem"][
+                    "the_full_dual_gq_4_2_incidence_is_already_recoverable_from_the_negative_sign_graph_five_cliques"
+                ]
+                and target_geometry["theorem"][
                     "both_target_systems_share_the_same_hidden_naimark_shadow_split_21_equals_1_plus_20"
                 ]
+                and all(chiral_sequence["theorem"].values())
+                and all(two_shells["theorem"].values())
+                and all(mass_weighted_hodge["theorem"].values())
                 and any(
                     row["cct_desideratum"] == "measurement / shadow duality"
                     and row["aligned_periodic_rows"] == ["pascal_computation_row"]
@@ -373,8 +412,8 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 "carrier -> realization -> algebra -> computation -> witness "
                 "framework and each row names the shared q=3 backbone invariant "
                 "it is using, the Pascal row now contributes an exact target-side "
-                "measurement/shadow dictionary culminating in the 45-point transport "
-                "graph, while the H4/quasicrystal step still requires an extra "
+                "measurement/shadow dictionary through the 121 = (k-1)^2 representation triangle, the 59_+ + 59_- + 3_harm chiral exact sequence, and the same canonical "
+                "45-point transport carrier whose 27 lines are already the negative-sign five-cliques, together with the raw two-shell and mass-weighted-Hodge package 0^3, 18^78, 72^40 and shell ratio 2, the projector calculus upgrades this into a closed polynomial operator system with finite Green/heat/resolvent propagators (ranks 3/78/40), while the H4/quasicrystal step still requires an extra "
                 "golden/icosahedral selector."
             ),
         },

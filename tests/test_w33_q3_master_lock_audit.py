@@ -19,17 +19,20 @@ def test_symbolic_q3_lock_summary_has_exact_gap_factors() -> None:
     assert summary["m2_minus_k_gap"] == "-q*(q - 3)*(q + 1)/(q - 1)"
     assert summary["disc_r_plus_4phi4_gap"] == "(q - 3)**2"
     assert summary["disc_s_plus_4phi6_gap"] == "(q - 3)**2"
+    assert summary["representation_triangle_gap"] == "q*(q - 3)*(q + 1)"
     assert summary["q3_evaluations"] == {
         "n_zero_gap_at_3": 0,
         "m2_minus_k_gap_at_3": 0,
         "disc_r_gap_at_3": 0,
         "disc_s_gap_at_3": 0,
+        "representation_triangle_gap_at_3": 0,
     }
     assert summary["exact_factors"] == {
         "n_zero_gap_factor_is_exact": True,
         "m2_minus_k_gap_factor_is_exact": True,
         "disc_r_gap_factor_is_exact": True,
         "disc_s_gap_factor_is_exact": True,
+        "representation_triangle_gap_factor_is_exact": True,
         "all_symbolic_gaps_vanish_at_q3": True,
     }
 
@@ -58,6 +61,34 @@ def test_q3_local_kernel_summary_matches_finite_qutrit_packet() -> None:
         "anti_line_density": "2/5",
         "centered_spread_probe_spectrum": {0: 25, 18: 15},
         "centered_anti_line_probe_spectrum": {0: 16, 36: 24},
+    }
+    assert summary["parseval_representation_triangle"] == {
+        "line_module": "40 = 1 + 15 + 24",
+        "spread_module": "36 = 1 + 15 + 20",
+        "anti_line_quotient_module": "45 = 1 + 24 + 20",
+        "total_dimension_identity": "40 + 36 + 45 = 121 = (k - 1)^2",
+        "sector_double_count_identity": "3 + 2(15 + 20 + 24) = 121",
+        "nonbacktracking_outdegree": "k - 1 = 11",
+        "qutrit_hilbert_dimension_identity": "q^4 = C(q^2,2) + C(q^2+1,2) = 36 + 45 = 81",
+        "representation_triangle_uniqueness": "(k-1)^2 = v + q^4 iff q = 3: gap = q(q-3)(q+1)",
+        "common_singular_constant": "sqrt(18) = 3sqrt(2)",
+        "sector_sharing_triangle": {
+            "L_intersect_S": "1 + 15",
+            "L_intersect_Q": "1 + 24",
+            "S_intersect_Q": "1 + 20",
+            "hidden_target_sector": 20,
+        },
+    }
+    assert summary["parseval_chiral_exact_sequence"] == {
+        "positive_chirality": "P_+ = L_15 + L_24 + S_20",
+        "negative_chirality": "P_- = S_15 + Q_24 + Q_20",
+        "harmonic_sector": "H = 1_L + 1_S + 1_Q",
+        "nonzero_forward_blocks": ["S_15 -> L_15", "Q_24 -> L_24", "Q_20 -> S_20"],
+        "exact_dimension_identity": "2(15 + 24 + 20) = 118",
+        "total_dimension_identity": "121 = 59_+ + 59_- + 3_harm",
+        "cohomology_statement": "the only cohomology is the three module means",
+        "rank_Q": 59,
+        "nullity_Q": 62,
     }
     assert summary["parseval_target_geometry"] == {
         "spread_target": {
@@ -102,6 +133,20 @@ def test_q3_local_kernel_summary_matches_finite_qutrit_packet() -> None:
                 "spectrum": {"-3": 24, "3": 20, "12": 1},
             },
             "positive_sign_isomorphic_to_transport_graph": True,
+            "canonical_transport_carrier": {
+                "coordinate_conversion": "(x0,x1,x2,x3) -> (x0,x2,x1,x3)",
+                "anti_lines_equal_center_quads_after_coordinate_conversion": True,
+                "duplicate_pairing_equals_center_quad_antipodes": True,
+                "duplicate_classes_equal_quotient_point_quad_pairs": True,
+                "paired_supports_equal_quotient_point_supports": True,
+                "quotient_line_count": 27,
+                "support_partitions_equal_quotient_lines": True,
+                "line_size_distribution": {5: 27},
+                "point_line_incidence_distribution": {3: 45},
+                "negative_sign_graph_five_cliques_equal_quotient_lines": True,
+                "positive_sign_equals_transport_graph_without_relabeling": True,
+                "negative_sign_equals_quotient_point_graph_without_relabeling": True,
+            },
         },
         "common_naimark_shadow": {
             "shared_shadow_dimension": 21,
@@ -281,7 +326,17 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
 
     assert records["q3_local_qutrit_kernel_lock"]["support_level"] == "repo-exact finite kernel"
     assert "ETF(36,15)" in records["q3_local_qutrit_kernel_lock"]["statement"]
+    assert "121 = (k-1)^2" in records["q3_local_qutrit_kernel_lock"]["statement"]
+    assert "36 = 1 + 15 + 20" in records["q3_local_qutrit_kernel_lock"]["statement"]
+    assert "45 = 1 + 24 + 20" in records["q3_local_qutrit_kernel_lock"]["statement"]
+    assert "same canonical 45-point transport carrier" in records["q3_local_qutrit_kernel_lock"]["statement"]
+    assert "full 27-line dual GQ(4,2) incidence" in records["q3_local_qutrit_kernel_lock"]["statement"]
+    assert "27 five-cliques of the negative sign graph" in records["q3_local_qutrit_kernel_lock"]["statement"]
     assert "21 = 1 + 20" in records["q3_local_qutrit_kernel_lock"]["statement"]
+    assert "121 = 59_+ + 59_- + 3_harm" in records["q3_local_qutrit_kernel_lock"]["statement"]
+    assert "S_15 -> L_15" in records["q3_local_qutrit_kernel_lock"]["statement"]
+    assert "Q_24 -> L_24" in records["q3_local_qutrit_kernel_lock"]["statement"]
+    assert "Q_20 -> S_20" in records["q3_local_qutrit_kernel_lock"]["statement"]
     assert records["q3_spectral_ihara_uniqueness_lock"]["support_level"] == "repo-exact spectral uniqueness"
     assert records["q3_toroidal_continuum_seed_lock"]["support_level"] == "repo-exact continuum seed"
     assert records["q3_electron_seed_backbone_lock"]["support_level"] == "repo-exact fermion seed"
@@ -299,6 +354,8 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
     assert summary["record_names_open"] == ("q3_full_physical_realization_theorem",)
     assert theorem["the_local_kernel_exactly_realizes_the_q3_packet_1_3_9_27_40_240"] is True
     assert theorem["the_local_kernel_already_contains_the_exact_line_module_parseval_frame"] is True
+    assert theorem["the_local_kernel_already_contains_the_exact_121_representation_triangle"] is True
+    assert theorem["the_local_kernel_already_contains_the_exact_chiral_exact_sequence"] is True
     assert theorem[
         "the_local_kernel_already_contains_the_exact_target_side_parseval_geometry_and_naimark_shadow"
     ] is True
