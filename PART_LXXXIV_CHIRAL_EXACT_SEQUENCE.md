@@ -140,3 +140,10 @@ and the harmonic/cohomology part has dimension
 \[
 \boxed{3.}
 \]
+
+## Audit Implementation
+
+Executable surface:
+
+- scripts/w33_chiral_exact_sequence_audit.py
+- tests/test_w33_chiral_exact_sequence_audit.py
