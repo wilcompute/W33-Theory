@@ -37,6 +37,9 @@ from exploration.w33_center_quad_transport_bridge import (  # noqa: E402
 from scripts.w33_parseval_measurement_frame_audit import (  # noqa: E402
     _build_parseval_probe_data,
 )
+from scripts.w33_parseval_transport_carrier_audit import (  # noqa: E402
+    build_parseval_transport_carrier_summary,
+)
 
 
 nx = require_networkx("scripts/w33_parseval_target_geometry_audit.py")
@@ -132,6 +135,7 @@ def build_parseval_target_geometry_summary() -> dict[str, Any]:
     B4 = built["B4"]
     R5 = built["R5"]
     anti_lines = built["anti_projective_lines"]
+    transport_carrier = build_parseval_transport_carrier_summary()
 
     spread_integer_gram = B4.T @ B4
     spread_gram = spread_integer_gram / 16.0
@@ -209,6 +213,42 @@ def build_parseval_target_geometry_summary() -> dict[str, Any]:
                 "positive_sign_graph": _graph_parameters(anti_positive_graph),
                 "negative_sign_graph": _graph_parameters(anti_negative_graph),
                 "positive_sign_isomorphic_to_transport_graph": anti_positive_graph_is_transport,
+                "canonical_transport_carrier": {
+                    "coordinate_conversion": transport_carrier["coordinate_conversion"][
+                        "line_carrier_to_center_quad"
+                    ],
+                    "anti_lines_equal_center_quads_after_coordinate_conversion": transport_carrier[
+                        "anti_line_center_quad_bridge"
+                    ]["mapped_anti_lines_equal_center_quads"],
+                    "duplicate_pairing_equals_center_quad_antipodes": transport_carrier[
+                        "anti_line_center_quad_bridge"
+                    ]["duplicate_pairing_equals_center_quad_antipodes"],
+                    "duplicate_classes_equal_quotient_point_quad_pairs": transport_carrier[
+                        "quotient_point_bridge"
+                    ]["duplicate_pairs_equal_quotient_point_quad_pairs"],
+                    "paired_supports_equal_quotient_point_supports": transport_carrier[
+                        "quotient_point_bridge"
+                    ]["duplicate_pair_supports_equal_quotient_point_supports"],
+                    "quotient_line_count": transport_carrier["quotient_line_bridge"]["quotient_line_count"],
+                    "support_partitions_equal_quotient_lines": transport_carrier["quotient_line_bridge"][
+                        "recovered_support_partitions_equal_quotient_lines"
+                    ],
+                    "line_size_distribution": transport_carrier["quotient_line_bridge"][
+                        "recovered_line_size_distribution"
+                    ],
+                    "point_line_incidence_distribution": transport_carrier["quotient_line_bridge"][
+                        "recovered_point_line_incidence_distribution"
+                    ],
+                    "negative_sign_graph_five_cliques_equal_quotient_lines": transport_carrier[
+                        "quotient_line_bridge"
+                    ]["negative_sign_graph_five_cliques_equal_quotient_lines"],
+                    "positive_sign_equals_transport_graph_without_relabeling": transport_carrier[
+                        "canonical_graph_identification"
+                    ]["positive_sign_graph_equals_transport_graph"],
+                    "negative_sign_equals_quotient_point_graph_without_relabeling": transport_carrier[
+                        "canonical_graph_identification"
+                    ]["negative_sign_graph_equals_quotient_point_graph"],
+                },
             },
         },
         "common_naimark_shadow": {
@@ -315,6 +355,71 @@ def build_parseval_target_geometry_summary() -> dict[str, Any]:
                     "spectrum": {"-3": 24, "3": 20, "12": 1},
                 },
                 "positive_sign_isomorphic_to_transport_graph": True,
+                "canonical_transport_carrier": {
+                    "coordinate_conversion": "(x0,x1,x2,x3) -> (x0,x2,x1,x3)",
+                    "anti_lines_equal_center_quads_after_coordinate_conversion": True,
+                    "duplicate_pairing_equals_center_quad_antipodes": True,
+                    "duplicate_classes_equal_quotient_point_quad_pairs": True,
+                    "paired_supports_equal_quotient_point_supports": True,
+                    "quotient_line_count": 27,
+                    "support_partitions_equal_quotient_lines": True,
+                    "line_size_distribution": {5: 27},
+                    "point_line_incidence_distribution": {3: 45},
+                    "negative_sign_graph_five_cliques_equal_quotient_lines": True,
+                    "positive_sign_equals_transport_graph_without_relabeling": True,
+                    "negative_sign_equals_quotient_point_graph_without_relabeling": True,
+                },
+            }
+        ),
+        "the_anti_line_transport_target_is_the_existing_center_quad_quotient_carrier": (
+            summary["target_side_frame_geometry"]["anti_line_quotient"]["canonical_transport_carrier"]
+            == {
+                "coordinate_conversion": "(x0,x1,x2,x3) -> (x0,x2,x1,x3)",
+                "anti_lines_equal_center_quads_after_coordinate_conversion": True,
+                "duplicate_pairing_equals_center_quad_antipodes": True,
+                "duplicate_classes_equal_quotient_point_quad_pairs": True,
+                "paired_supports_equal_quotient_point_supports": True,
+                "quotient_line_count": 27,
+                "support_partitions_equal_quotient_lines": True,
+                "line_size_distribution": {5: 27},
+                "point_line_incidence_distribution": {3: 45},
+                "negative_sign_graph_five_cliques_equal_quotient_lines": True,
+                "positive_sign_equals_transport_graph_without_relabeling": True,
+                "negative_sign_equals_quotient_point_graph_without_relabeling": True,
+            }
+        ),
+        "the_anti_line_transport_target_recovers_the_full_27_line_dual_gq_4_2_incidence": (
+            summary["target_side_frame_geometry"]["anti_line_quotient"]["canonical_transport_carrier"]
+            == {
+                "coordinate_conversion": "(x0,x1,x2,x3) -> (x0,x2,x1,x3)",
+                "anti_lines_equal_center_quads_after_coordinate_conversion": True,
+                "duplicate_pairing_equals_center_quad_antipodes": True,
+                "duplicate_classes_equal_quotient_point_quad_pairs": True,
+                "paired_supports_equal_quotient_point_supports": True,
+                "quotient_line_count": 27,
+                "support_partitions_equal_quotient_lines": True,
+                "line_size_distribution": {5: 27},
+                "point_line_incidence_distribution": {3: 45},
+                "negative_sign_graph_five_cliques_equal_quotient_lines": True,
+                "positive_sign_equals_transport_graph_without_relabeling": True,
+                "negative_sign_equals_quotient_point_graph_without_relabeling": True,
+            }
+        ),
+        "the_full_dual_gq_4_2_incidence_is_already_recoverable_from_the_negative_sign_graph_five_cliques": (
+            summary["target_side_frame_geometry"]["anti_line_quotient"]["canonical_transport_carrier"]
+            == {
+                "coordinate_conversion": "(x0,x1,x2,x3) -> (x0,x2,x1,x3)",
+                "anti_lines_equal_center_quads_after_coordinate_conversion": True,
+                "duplicate_pairing_equals_center_quad_antipodes": True,
+                "duplicate_classes_equal_quotient_point_quad_pairs": True,
+                "paired_supports_equal_quotient_point_supports": True,
+                "quotient_line_count": 27,
+                "support_partitions_equal_quotient_lines": True,
+                "line_size_distribution": {5: 27},
+                "point_line_incidence_distribution": {3: 45},
+                "negative_sign_graph_five_cliques_equal_quotient_lines": True,
+                "positive_sign_equals_transport_graph_without_relabeling": True,
+                "negative_sign_equals_quotient_point_graph_without_relabeling": True,
             }
         ),
         "both_target_systems_share_the_same_hidden_naimark_shadow_split_21_equals_1_plus_20": (
@@ -381,10 +486,12 @@ def build_parseval_target_geometry_summary() -> dict[str, Any]:
     summary["interpretation"] = (
         "The Parseval measurement machine has a fully rigid target-side geometry. The spread channel is an "
         "exact ETF(36,15), the anti-line channel collapses to a doubled 45-vector two-distance tight frame "
-        "whose positive sign graph is the canonical 45-point transport graph, and both targets expose the "
-        "same hidden Naimark shadow 21 = 1 + 20. Passing to the Naimark complement flips the sign graphs "
-        "exactly, so the visible target geometries and their shadows are related by a finite sign-complement "
-        "duality rather than by unrelated frame completions."
+        "on the same canonical center-quad / quotient-point carrier whose 27 support partitions recover the full "
+        "dual GQ(4,2) incidence and are already visible as the 27 five-cliques of the negative sign graph, and "
+        "whose positive sign graph is the 45-point transport graph. Both targets expose the same hidden Naimark "
+        "shadow 21 = 1 + 20. Passing to the "
+        "Naimark complement flips the sign graphs exactly, so the visible target geometries and their shadows "
+        "are related by a finite sign-complement duality rather than by unrelated frame completions."
     )
     return summary
 
