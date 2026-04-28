@@ -102,3 +102,8 @@ H(H^2 - 18I)(H^2 - 72I)=0.
 The completed W(3,3) triangle has an exact two-shell spectrum before normalization:
 (15+24)_light + 20_heavy + 3_zero.
 ```
+
+## Audit Implementation
+
+See scripts/w33_two_spectral_shells_audit.py and
+tests/test_w33_two_spectral_shells_audit.py for the executable audit surface.

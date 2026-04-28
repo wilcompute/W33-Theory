@@ -157,6 +157,14 @@ def test_q3_local_kernel_summary_matches_finite_qutrit_packet() -> None:
             "naimark_complement_swaps_sign_graphs": True,
         },
     }
+    assert summary["two_spectral_shells"] == {
+        "light_shell_rank": 78,
+        "heavy_shell_rank": 40,
+        "harmonic_dimension": 3,
+        "total_dimension": 121,
+        "shell_scale_ratio": 2.0,
+        "parseval_identity_holds": True,
+    }
     assert summary["mass_weighted_hodge_factorization"] == {
         "rank_d": 59,
         "nullity_d": 62,

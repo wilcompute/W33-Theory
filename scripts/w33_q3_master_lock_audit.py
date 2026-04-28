@@ -95,6 +95,9 @@ from scripts.w33_chiral_exact_sequence_audit import (  # noqa: E402
 from scripts.w33_representation_triangle_121_audit import (  # noqa: E402
     build_representation_triangle_121_summary,
 )
+from scripts.w33_two_spectral_shells_audit import (  # noqa: E402
+    build_two_spectral_shells_summary,
+)
 from scripts.w33_mass_weighted_hodge_audit import (  # noqa: E402
     build_mass_weighted_hodge_summary,
 )
@@ -171,6 +174,7 @@ def q3_local_kernel_summary() -> Dict[str, object]:
     chiral_exact_sequence = build_chiral_exact_sequence_summary()
     representation_triangle = build_representation_triangle_121_summary()
     target_geometry = build_parseval_target_geometry_summary()
+    two_spectral_shells = build_two_spectral_shells_summary()
     hodge_factorization = build_mass_weighted_hodge_summary()
 
     q = int(core.q)
@@ -277,6 +281,16 @@ def q3_local_kernel_summary() -> Dict[str, object]:
                 "naimark_complement_swaps_sign_graphs": all(target_geometry["naimark_sign_duality"].values()),
             },
         },
+        "two_spectral_shells": {
+            "light_shell_rank": two_spectral_shells["carrier_structure"]["light_shell_rank"],
+            "heavy_shell_rank": two_spectral_shells["carrier_structure"]["heavy_shell_rank"],
+            "harmonic_dimension": two_spectral_shells["carrier_structure"]["harmonic_dimension"],
+            "total_dimension": two_spectral_shells["carrier_structure"]["total_dimension"],
+            "shell_scale_ratio": two_spectral_shells["shell_scaling_relations"]["shell_scale_ratio"]["ratio"],
+            "parseval_identity_holds": two_spectral_shells["spectrum_algebraic_identities"][
+                "parseval_identity_25_B4Bt_plus_8_R5Rt"
+            ]["holds"],
+        },
         "mass_weighted_hodge_factorization": {
             "rank_d": hodge_factorization["chiral_complex_structure"]["rank_d"],
             "nullity_d": hodge_factorization["chiral_complex_structure"]["nullity_d"],
@@ -308,6 +322,7 @@ def q3_local_kernel_summary() -> Dict[str, object]:
                 representation_triangle["theorem"].values()
             ),
             "line_module_parseval_target_geometry_is_exact": all(target_geometry["theorem"].values()),
+            "raw_two_shell_spectrum_is_exact": all(two_spectral_shells["theorem"].values()),
             "raw_two_shell_operator_is_massive_hodge_complex": all(hodge_factorization["theorem"].values()),
         },
     }
