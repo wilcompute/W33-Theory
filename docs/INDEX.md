@@ -4,7 +4,6 @@ Navigator for the repository's paper sections, reproducibility paths, and formal
 
 > Live status note: the current public-facing source of truth is [docs/index.html](./index.html), especially `#current-synthesis`, `#verified`, and `#open`, together with [docs/march_2026_frontier_note.md](./march_2026_frontier_note.md). Older summaries in this repo should be treated as preserved snapshots unless they explicitly say they are the live view.
 
-
 ## Primary Entry Points
 
 | Audience | Start Here | Why |

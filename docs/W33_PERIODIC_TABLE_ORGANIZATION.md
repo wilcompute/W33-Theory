@@ -124,9 +124,18 @@ doubled `45`-vector transport frame in the `24`-sector, and both channels
 share a Naimark shadow `21 = 1 + 20` whose sign graphs are swapped by
 complement. The executable surfaces are
 `scripts/w33_parseval_measurement_frame_audit.py`,
+`scripts/w33_representation_triangle_121_audit.py`,
 `scripts/w33_parseval_target_geometry_audit.py`,
 `tests/test_w33_parseval_measurement_frame_audit.py`, and
 `tests/test_w33_parseval_target_geometry_audit.py`.
+
+That same Pascal target package is now organized by a representation-level
+compression as well: the three natural modules
+`40 = 1 + 15 + 24`, `36 = 1 + 15 + 20`, and `45 = 1 + 24 + 20` form the exact
+triangle `40 + 36 + 45 = 121 = (k-1)^2`, with common singular constant
+`sqrt(18) = 3sqrt(2)` and pairwise overlaps `1 + 15`, `1 + 24`, and `1 + 20`.
+So the Pascal row is not only a `130 = 40 + 90` split. It is also the checked
+representation triangle behind the measurement/shadow dictionary.
 
 This gives the right internal meaning of computation.
 
@@ -217,7 +226,9 @@ This is the cleanest way to make the paper read like a genuine framework instead
 - `scripts/w33_q3_master_lock_audit.py`
 - `tests/test_w33_q3_master_lock_audit.py`
 - `scripts/w33_parseval_measurement_frame_audit.py`
+- `scripts/w33_representation_triangle_121_audit.py`
 - `tests/test_w33_parseval_measurement_frame_audit.py`
+- `tests/test_w33_representation_triangle_121_audit.py`
 - `scripts/w33_parseval_target_geometry_audit.py`
 - `tests/test_w33_parseval_target_geometry_audit.py`
 - `scripts/w33_qutrit_ladder_audit.py`
