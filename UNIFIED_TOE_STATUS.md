@@ -1,7 +1,7 @@
 # W(3,3) Theory of Everything — Unified Status Report
 
 **Date:** April 26, 2026 (Parts I–LXIII complete)
-**Status:** ALL SECTORS CLOSED. **57 confirmed observables. Zero free parameters. G_release = 1.**
+**Status:** EXACT FINITE SPINE + FRONTIER RESPONSE. **57 tracked observables. One selected integer parameter q = 3. G_release = 1.**
 
 ---
 
@@ -37,8 +37,12 @@ symplectic polar space W(3,𝔽₃). Then:
    Σmν = 59.5 meV  (< Planck 120 meV ✓)
    ```
 
-6. All 13 CKM+PMNS mixing observables derive from the Levi decomposition
-   **16 = 10_visible + 6_null** on the spin-16 family carrier, with zero free parameters.
+6. The repo now supports an exact-to-frontier flavor bridge: the aligned exact
+   layer, the Levi decomposition **16 = 10_visible + 6_null** on the spin-16
+   family carrier, the exact local 27-line / 45-triangle cubic carrier, and an
+   audited CKM/E6/CP response law. That promoted flavor response is executable,
+   but it is not currently claimed here as a finished exact phenomenology closure
+   theorem.
 
 7. Gravity and cosmology emerge from the spectral action:
    ```
@@ -57,7 +61,7 @@ symplectic polar space W(3,𝔽₃). Then:
 | 🔮 Falsifiable within 10 years | **28** |
 | 📋 Mathematical exact results | **31** |
 | **Total predictions P1–P116** | **116** |
-| Free parameters | **0** |
+| Selected integer parameter | **q = 3** |
 | G_release gate | **1** |
 
 ### Error Distribution (57 confirmed)
@@ -69,9 +73,13 @@ Exact (error = 0):         31 observables
 < 10% error:                3 observables
 ─────────────────────────────────────────
 TOTAL confirmed:           57 observables
-Free parameters:            0
+Selected parameter:         q = 3
 G_release:                  1
 ```
+
+Boundary note: the finite kernel, spectral, transport, and continuum-seed
+records are exact repo certificates; the promoted CKM/E6/CP layer is tracked as
+an executable frontier bridge and response law on that exact carrier spine.
 
 ---
 
