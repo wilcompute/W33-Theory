@@ -327,6 +327,8 @@ def spontaneous_cp_response_law_packet() -> Dict[str, object]:
     epsilons = [0.05, 0.10, 0.15, 0.20, 0.25, 0.30]
     sweep = []
     cubic_coeffs = []
+    odd_cubic_coeffs = []
+    even_cubic_leaks = []
     quadratic_coeffs = []
     linear_coeffs = []
     odd_residuals = []
@@ -347,6 +349,8 @@ def spontaneous_cp_response_law_packet() -> Dict[str, object]:
         linear_coeff = abs(float(j_plus)) / eps
         quadratic_coeff = abs(float(j_plus)) / (eps**2)
         cubic_coeff = abs(float(j_plus)) / (eps**3)
+        odd_cubic_coeff = (float(j_plus) - float(j_minus)) / (2 * (eps**3))
+        even_cubic_leak = abs(float(j_plus) + float(j_minus)) / (eps**3)
 
         sweep.append(
             {
@@ -358,18 +362,29 @@ def spontaneous_cp_response_law_packet() -> Dict[str, object]:
                 "abs_j_plus_over_epsilon": linear_coeff,
                 "abs_j_plus_over_epsilon_squared": quadratic_coeff,
                 "abs_j_plus_over_epsilon_cubed": cubic_coeff,
+                "odd_cubic_coefficient": odd_cubic_coeff,
+                "even_cubic_leak_abs": even_cubic_leak,
             }
         )
         linear_coeffs.append(linear_coeff)
         quadratic_coeffs.append(quadratic_coeff)
         cubic_coeffs.append(cubic_coeff)
+        odd_cubic_coeffs.append(odd_cubic_coeff)
+        even_cubic_leaks.append(even_cubic_leak)
         odd_residuals.append(odd_residual)
         abs_j_plus.append(abs(float(j_plus)))
 
     cubic_window = cubic_coeffs[1:]
+    odd_cubic_window = odd_cubic_coeffs[1:]
+    odd_cubic_abs_window = [abs(value) for value in odd_cubic_window]
     cubic_min = min(cubic_window)
     cubic_max = max(cubic_window)
     cubic_ratio = cubic_max / cubic_min if cubic_min > 0 else float("inf")
+    odd_cubic_abs_min = min(odd_cubic_abs_window)
+    odd_cubic_abs_max = max(odd_cubic_abs_window)
+    odd_cubic_abs_ratio = (
+        odd_cubic_abs_max / odd_cubic_abs_min if odd_cubic_abs_min > 0 else float("inf")
+    )
     onset_log_slopes = [
         math.log(abs_j_plus[i + 1] / abs_j_plus[i])
         / math.log(epsilons[i + 1] / epsilons[i])
@@ -389,6 +404,8 @@ def spontaneous_cp_response_law_packet() -> Dict[str, object]:
         "linear_coefficient_window": linear_coeffs,
         "quadratic_coefficient_window": quadratic_coeffs,
         "cubic_coefficient_window": cubic_coeffs,
+        "odd_cubic_coefficient_window": odd_cubic_coeffs,
+        "even_cubic_leak_window": even_cubic_leaks,
         "onset_log_slope_window": onset_log_slopes,
         "minimum_onset_log_slope": min(onset_log_slopes),
         "maximum_onset_log_slope": max(onset_log_slopes),
@@ -399,6 +416,16 @@ def spontaneous_cp_response_law_packet() -> Dict[str, object]:
         "cubic_coefficient_band_statement": (
             "The audited cubic coefficient stays in a narrow band "
             f"[{cubic_min:.6e}, {cubic_max:.6e}] with ratio {cubic_ratio:.6f}"
+        ),
+        "odd_cubic_coefficient_estimate": sum(odd_cubic_window) / len(odd_cubic_window),
+        "odd_cubic_coefficient_min_abs": odd_cubic_abs_min,
+        "odd_cubic_coefficient_max_abs": odd_cubic_abs_max,
+        "odd_cubic_coefficient_abs_ratio_max_over_min": odd_cubic_abs_ratio,
+        "max_even_cubic_leak_abs": max(even_cubic_leaks),
+        "odd_cubic_coefficient_statement": (
+            "The conjugation-odd cubic coefficient C_odd(epsilon) = "
+            "(J(+epsilon) - J(-epsilon)) / (2 epsilon^3) stays nonzero and stable "
+            f"with |C_odd| in [{odd_cubic_abs_min:.6e}, {odd_cubic_abs_max:.6e}]"
         ),
         "derived_order_statement": "The first nonzero CP-odd invariant is odd in epsilon and numerically enters at order >= 3 on the audited window",
         "derived_law": "|J| ~ C * epsilon^3 near aligned exact point",
@@ -602,6 +629,12 @@ def analyze() -> Dict[str, object]:
             and cp_response["cubic_coefficient_ratio_max_over_min"] < 1.12
             and cp_response["minimum_onset_log_slope"] > 2.95
             and cp_response["maximum_onset_log_slope"] < 3.25
+        ),
+        "spontaneous_cp_frontier_has_a_stable_conjugation_odd_cubic_coefficient": (
+            cp_response["odd_cubic_coefficient_min_abs"] > 3.3e-6
+            and cp_response["odd_cubic_coefficient_max_abs"] < 3.8e-6
+            and cp_response["odd_cubic_coefficient_abs_ratio_max_over_min"] < 1.12
+            and cp_response["max_even_cubic_leak_abs"] < 1e-18
         ),
     }
 

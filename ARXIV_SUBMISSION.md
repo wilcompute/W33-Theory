@@ -98,7 +98,9 @@ If any check fails, do **not** submit. Fix the failing theorem first.
 
 ## Key Talking Points for Reviewers
 
-- **Zero free parameters:** All 26+ SM parameters are rational functions of (q,v,k,λ,μ)
+- **Exact finite spine:** The repo-exact backbone is fixed by (q,v,k,λ,μ), while the
+   promoted CKM/E6/CP response is currently treated as an executable frontier bridge
+   and response law rather than a stronger exact phenomenology closure theorem
 - **Unique graph:** SRG(40,12,2,4) is the unique such graph; q=3 is forced by the
   self-complementary GQ condition
 - **Falsifiable:** 7 specific near-term experiments listed in §5 of the paper
