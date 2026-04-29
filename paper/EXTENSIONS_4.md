@@ -179,18 +179,26 @@ with q! = 6 independent coupling constants governing the fermion mass hierarchy.
 
 ## §51: Candidate Smooth Realization Theorem
 
-Based on §§43–50, the smooth 4D realization of W(3,3) is:
+Based on §§43–50, the repo now supports an exact finite spine together with a
+controlled exact-to-frontier bridge, not a fully closed smooth-realization theorem.
 
-**CANDIDATE THEOREM**: There exists a unique N=1 supersymmetric
-trinification theory with gauge group SU(3)_C×SU(3)_L×SU(3)_R,
-embedded in E8 via the chain E8 ⊃ SU(9) ⊃ SU(3)³, whose
-tree-level action coefficients are the W(3,3) spectral seed packet:
+**CURRENT BOUNDARY SUMMARY**: The exact q=3 program has a verified finite spine
+through the executable exact-to-frontier bridge. Finite kernel, spectral
+uniqueness, continuum seed, fermion seed, transport algebra, affine closure,
+holonomy witness construction, and Yukawa-side consistency checks are exact repo
+records. The promoted flavor response is carried by an executable CKM/E6 bridge,
+the exact local 27-line / 45-triangle cubic carrier, and a controlled CP-odd
+cubic-onset law, not by a newly claimed exact phenomenology theorem.
+
+The tree-level action ansatz remains a candidate realization package:
 
 ```
 S = (1/320)·Tr(F∧*F) + (1/56)·|DH|² + Y·ψψH + (1/12480)·[RG]
 ```
 
-with low-energy predictions:
+The low-energy numerics below should therefore be read as promoted frontier
+outputs of that candidate package, not as a finished exact closure theorem:
+
 ```
 sin²θ_W = q/Φ₃ = 3/13 ≈ 0.2308     [PDG: 0.2312, δ = 0.2%]
 1/α    = Φ₃·Φ₄+Φ₆ = 137           [PDG: 137.036, δ = 0.026%]
@@ -198,10 +206,15 @@ sin²θ_W = q/Φ₃ = 3/13 ≈ 0.2308     [PDG: 0.2312, δ = 0.2%]
 m_W/m_Z = √(Φ₄/Φ₃) = 0.877         [PDG: 0.881, δ = 0.5%]
 ```
 
-All four predictions have sub-percent accuracy from a theory with
-**zero free parameters** (all coupling constants fixed by the W(3,3)
-spectral data and the E8 embedding). The single free parameter is
-the overall Planck/GUT mass scale.
+What is exact here is narrower:
+
+- the q=3 finite carrier spine and its audited transport/Yukawa closure records
+- the executable CKM/E6 bridge from aligned exact data to promoted flavor response
+- the exact local E6 carrier as the dual 27-line graph with 45 cubic-support triangles
+- the CP-odd onset law near the aligned point, including a stable audited cubic coefficient band
+
+What remains open is the full smooth continuum realization and the stronger claim
+that all phenomenological couplings are already fixed as an exact theorem.
 
 ---
 
