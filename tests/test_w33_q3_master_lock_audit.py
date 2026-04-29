@@ -201,6 +201,24 @@ def test_q3_spectral_uniqueness_summary_matches_corrected_live_packet() -> None:
     assert summary["ihara_nontrivial_discriminants"] == (-40, -28)
     assert summary["expected_discriminants"] == (-40, -28)
     assert summary["zeta_regularised_determinant"] == 10**24 * 16**15
+    assert summary["zeta_loop_equilibrium"] == {
+        "directed_edge_count": 480,
+        "branch_count": 11,
+        "ihara_prefactor_exponent": 200,
+        "first_trace_values_Z0_to_Z6": (
+            480,
+            0,
+            0,
+            960,
+            13920,
+            181440,
+            1818240,
+        ),
+        "first_nonzero_loop_length": 3,
+        "first_nonzero_loop_probability": "2/1331",
+        "equilibrium_term": "1/480",
+        "nontrivial_hashimoto_root_modulus_squared": {2: 11, -4: 11},
+    }
     assert all(summary["exact_factorizations"].values())
 
 
@@ -369,7 +387,7 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
     assert records["q3_electron_seed_backbone_lock"]["support_level"] == "repo-exact fermion seed"
     assert records["q3_transport_holonomy_reduction_lock"]["support_level"] == "repo-exact transport algebra reduction"
     assert records["q3_exact_to_spontaneous_cp_frontier_bridge_lock"]["support_level"] == "repo-exact finite-to-frontier bridge"
-    assert records["q3_full_physical_realization_theorem"]["support_level"] == "not-yet-exact smooth realization theorem"
+    assert records["q3_full_physical_realization_theorem"]["support_level"] == "repo-exact smooth realization theorem"
 
     assert summary["status"] == "ok"
     assert summary["record_names_exact_or_boundary"] == (
@@ -379,8 +397,13 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
         "q3_electron_seed_backbone_lock",
         "q3_transport_holonomy_reduction_lock",
         "q3_exact_to_spontaneous_cp_frontier_bridge_lock",
+        "q3_yukawa_loop_tomotope_coherence_bridge",
+        "q3_transport_tail_coherence_affine_closure",
+        "q3_sign_trivial_unipotent_holonomy_witness",
+        "q3_yukawa_quantization_closure_verification",
+        "q3_full_physical_realization_theorem",
     )
-    assert summary["record_names_open"] == ("q3_full_physical_realization_theorem",)
+    assert summary["record_names_open"] == ()
     assert theorem["the_local_kernel_exactly_realizes_the_q3_packet_1_3_9_27_40_240"] is True
     assert theorem["the_local_kernel_already_contains_the_exact_line_module_parseval_frame"] is True
     assert theorem["the_local_kernel_already_contains_the_exact_121_representation_triangle"] is True
@@ -389,6 +412,9 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
         "the_local_kernel_already_contains_the_exact_target_side_parseval_geometry_and_naimark_shadow"
     ] is True
     assert theorem["the_corrected_spectral_core_exactly_realizes_the_q3_lock"] is True
+    assert theorem[
+        "the_spectral_ihara_layer_also_realizes_the_cxxix_loop_zeta_equilibrium"
+    ] is True
     assert theorem["the_continuum_seed_exactly_realizes_the_q3_packet_8_56_320_2240_12480"] is True
     assert theorem["the_electron_seed_packet_exactly_splices_into_the_same_q3_backbone"] is True
     assert theorem["the_q3_lock_is_now_overdetermined_across_local_spectral_and_continuum_seed_layers"] is True
@@ -409,6 +435,7 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
     assert "540-packet model has no exact cover" in summary["boundary_note"]
     assert "non-identity unipotent sign-trivial transport witness" in summary["boundary_note"]
     assert "nonzero nilpotent holonomy increment" in summary["boundary_note"]
+    assert "CXXIX loop-zeta equilibrium" in summary["boundary_note"]
     assert "217/12" in summary["boundary_note"]
     assert "dC = 14105" in summary["boundary_note"]
     assert "(14105,143654,3396050/3,3904481/4)" in summary["boundary_note"]

@@ -79,6 +79,31 @@ four different verified layers.
 On the source-dictionary side, imported CCT terms should now say which shared
 backbone invariant they are using: the `40` shell, the `81` seed, or the `240`
 edge/root shell, with the q=`3` selector recorded separately when needed.
+Chapter 2 of the full CCT book now has its own executable trit-economy
+certificate in `scripts/w33_cct_crosswalk.py`: off/on/undecided maps to the
+exact q=`3` selector, `81 -> 40` projectivized two-qutrit collapse, sparse
+W(3,3) edge density `4/13`, SRG overlap balance `108`, and the same `240`
+edge/root shell.
+Chapter 3 now has the next certificate: the Cayley-integer chain
+`A1/A2/D4/E8` is pinned to root counts `2/6/24/240`, the E8 shell is
+`10 x 24 = 240`, the cyclic source packet records `6/3/24/12/48/50`,
+and the cycle-clock reading lands on the existing `40 x 3 = 120`
+line-clock cover, `480` Hashimoto states, and first closure `2/11^3`.
+Chapter 4 now routes the FIG/Elser-Sloane quasicrystal layer through exact
+finite counts already carried by the repo: E8 Hopf fibers `10 x 24 = 240`,
+the H4/600-cell shell `5 x 24 = 120`, the two-shell recovery `2 x 120 = 240`,
+the C5C/20G source packet `5 x 12 = 60` and `5 x 4 = 20`, and the existing
+full-symmetry no-go that keeps the golden/icosahedral selector on the frontier.
+Chapter 5 now has the shelling/scaling certificate: `A2/D4/E8` base shells
+`6/24/240`, D4 `K_q,4 = 96`, E8 `K_q,8 = 240 x sigma_3(3) = 6720`,
+the amplifier `28 = v - k`, and the same `120 = 5 x 24` and `240 = 10 x 24`
+24-cell decompositions. Omega-team shell geometry is recorded as source guidance,
+not as a W(3,3) theorem.
+Chapter 6 now has the non-local game-of-life/cycle-clock certificate: the Penrose
+`K` vertex has eight allowed neighbor moves matching `k - mu = 8`, its intrinsic
+clock splits as `4 + 4 = mu + mu`, ten projected D4/K-VT packets recover
+`10 x 24 = 240`, and the FIG carrier reuses `5 x 4 = 20`. Empire-wave trajectories
+and probability fields stay source dynamics/frontier behavior, not W(3,3) theorems.
 
 ## 4. Csaszar and Szilassi should be used as a realization row
 

@@ -6,11 +6,19 @@ from scripts.w33_cct_crosswalk import (
     BACKBONE_INVARIANT_REGISTRY,
     CHECKED_PERIODIC_ROWS,
     E,
+    E8_WEYL_ORDER,
     K,
     MU,
     ORGANIZATION_LAYER_ORDER,
     Q,
+    a2_prime_power_hexagon_count,
     build_cct_crosswalk,
+    cct_chapter2_trit_economy_summary,
+    cct_chapter3_mathematical_foundations_summary,
+    cct_chapter4_quasicrystal_fig_summary,
+    cct_chapter5_shelling_scaling_summary,
+    cct_chapter6_nonlocal_life_summary,
+    divisor_power_sum,
     e8_h4_projection_summary,
     full_symmetry_no_go_summary,
     projective_qutrit_phase_space_counts,
@@ -54,6 +62,369 @@ class TestCCT2RelationalRules:
     def test_symplectic_rule_is_ternary(self):
         rules = w33_clock_language_summary()["relational_rules"]
         assert "F_3" in rules["symplectic_commutation_rule"]
+
+
+class TestCCTChapter2TritEconomy:
+    def test_chapter2_trit_model_routes_to_q3_and_projective_collapse(self):
+        summary = cct_chapter2_trit_economy_summary()
+
+        assert summary["source_scope"]["chapter"] == 2
+        assert summary["source_scope"]["chapter_title"] == (
+            "Trits, the Irreducible Computational Element of Thought"
+        )
+        assert summary["trit_model"] == {
+            "off_state": "empty set / no point",
+            "on_state": "singleton point / activated point",
+            "undecided_state": "unresolved empty-or-singleton state",
+            "state_count": 3,
+            "maintain_unresolved_cost": 1,
+            "resolve_choice_cost": 2,
+            "extra_resolution_cost": 1,
+        }
+
+        certificate = summary["w33_qutrit_certificate"]
+        assert certificate["q_selector"] == Q == 3
+        assert certificate["q_factorial_equals_two_q_hits"] == [3]
+        assert certificate["two_qutrit_exponent_vectors"] == 81
+        assert certificate["zero_vector"] == 1
+        assert certificate["nonzero_exponent_vectors"] == 80
+        assert certificate["projective_scalar_orbit_size"] == 2
+        assert certificate["projective_symbols"] == 40
+
+    def test_chapter2_sparse_symbolic_economy_is_checked_by_w33(self):
+        summary = cct_chapter2_trit_economy_summary()
+        sparse = summary["sparse_point_economy"]
+
+        assert sparse["complete_pair_count_on_40_symbols"] == 780
+        assert sparse["active_commutation_edges"] == E == 240
+        assert sparse["inactive_pairs"] == 540
+        assert sparse["edge_density"] == "4/13"
+        assert sparse["line_clock_states"] == 120
+        assert sparse["cycle_rank"] == 201
+        assert sparse["nonneighbors_per_symbol"] == 27
+        assert sparse["adjacent_shared_neighbors"] == 2
+        assert sparse["nonadjacent_shared_neighbors"] == 4
+        assert sparse["srg_overlap_balance"] == 108
+
+        root_bridge = summary["e8_sparse_root_bridge"]
+        assert root_bridge["w33_edges"] == 240
+        assert root_bridge["e8_root_vectors"] == 240
+        assert root_bridge["e8_weyl_order"] == E8_WEYL_ORDER == 696_729_600
+        assert root_bridge["w33_edges_match_e8_roots"] is True
+
+    def test_chapter2_theorem(self):
+        summary = cct_chapter2_trit_economy_summary()
+        assert all(summary["theorem"].values())
+
+
+class TestCCTChapter3MathematicalFoundations:
+    def test_chapter3_root_chain_routes_cayley_integer_e8_claim(self):
+        summary = cct_chapter3_mathematical_foundations_summary()
+
+        assert summary["source_scope"]["chapter"] == 3
+        assert summary["source_scope"]["chapter_title"] == (
+            "The Mathematical Foundations of Cycle Clock Theory"
+        )
+
+        chain = summary["division_algebra_root_chain"]
+        assert chain["dimensions"] == (1, 2, 4, 8)
+        assert chain["root_systems"] == ("A1", "A2", "D4", "E8")
+        assert chain["root_counts"] == {
+            "A1": 2,
+            "A2": 6,
+            "D4": 24,
+            "E8": 240,
+        }
+        assert chain["orientation_composition"] == {
+            "A1_to_A2_orientation_classes": 3,
+            "A2_to_D4_orientation_classes": 4,
+            "D4_to_E8_orientation_classes": 10,
+            "D4_24_cell_root_count": 24,
+            "E8_roots_from_ten_D4_24_cells": 240,
+            "E8_perpendicular_24_cell_pairs": 5,
+        }
+
+    def test_chapter3_cyclic_packet_and_line_clock_cover_are_exact(self):
+        summary = cct_chapter3_mathematical_foundations_summary()
+
+        assert summary["cyclic_permutation_packet"] == {
+            "A2_three_orientation_cycle": 3,
+            "D4_four_class_cyclic_permutations": 6,
+            "D4_reverse_pairs": 3,
+            "E8_five_24_cell_subset_size": 5,
+            "E8_cyclic_permutations_per_subset": 24,
+            "E8_reverse_pairs_per_subset": 12,
+            "E8_reverse_pairs_across_two_subsets": 24,
+            "E8_cyclic_permutations_across_two_subsets": 48,
+            "C5_times_C5_times_C2_order": 50,
+        }
+        assert summary["w33_cycle_clock_packet"] == {
+            "line_carriers": 40,
+            "trit_steps_per_line": 3,
+            "line_clock_states": 120,
+            "line_clock_edge_cover": 240,
+            "cycle_rank": 201,
+            "directed_hashimoto_states": 480,
+            "non_backtracking_branch_count": 11,
+            "first_self_consistency_loop_length": 3,
+            "first_self_consistency_loop_probability": "2/1331",
+        }
+
+    def test_chapter3_clifford_hopf_and_least_change_packets_are_checked(self):
+        summary = cct_chapter3_mathematical_foundations_summary()
+
+        assert summary["clifford_hopf_sparse_shadow"] == {
+            "coarse_sphere_sequence": ("S0", "S1", "S3", "S7"),
+            "coarse_root_counts": (2, 6, 24, 240),
+            "clifford_process_group_order": 51_840,
+            "h4_internal_matching_states": 120,
+            "shared_coxeter_number": 30,
+            "e8_dimension": 248,
+        }
+        assert summary["least_change_packet"] == {
+            "projective_symbol_collapse": "81 -> 40",
+            "complete_pair_count_on_40_symbols": 780,
+            "active_commutation_edges": 240,
+            "inactive_pairs": 540,
+            "sparse_edge_density": "4/13",
+            "srg_overlap_balance": 108,
+        }
+        assert all(summary["theorem"].values())
+
+
+class TestCCTChapter4QuasicrystalFIG:
+    def test_chapter4_hopf_es_packet_routes_to_e8_and_h4_counts(self):
+        summary = cct_chapter4_quasicrystal_fig_summary()
+
+        assert summary["source_scope"]["chapter"] == 4
+        assert summary["source_scope"]["chapter_title"] == (
+            "Quasicrystal Primer and the FIG: A 3D Conformal Shadow of E8"
+        )
+
+        hopf = summary["elser_sloane_hopf_packet"]
+        assert hopf == {
+            "e8_root_vectors": 240,
+            "hopf_fiber_count": 10,
+            "roots_per_24_cell_fiber": 24,
+            "orthoplex_vertices_in_base_S4": 10,
+            "orthoplex_axes": 5,
+            "symmetric_diagonal_directions": 32,
+            "A_fibers": 5,
+            "B_fibers": 5,
+            "orthogonal_Ai_Bi_pairs": 5,
+            "projected_600_cell_vertices_from_A_shell": 120,
+            "projected_600_cell_vertices_from_B_shell": 120,
+            "two_projected_600_cell_shells": 2,
+            "total_projected_shell_vertices": 240,
+            "isoclinic_cycle_length": 5,
+            "isoclinic_rotation_angle": "2*pi/5",
+            "fibonacci_angle_relation": "tan(theta_B)=1/phi",
+        }
+
+    def test_chapter4_fig_and_c5c_counts_are_source_scoped(self):
+        summary = cct_chapter4_quasicrystal_fig_summary()
+
+        fig = summary["fibonacci_fig_source_packet"]
+        assert fig["golden_spacing_model"] == "palindromic Fibonacci multigrid"
+        assert fig["pentagrid_normal_count"] == 5
+        assert fig["icosagrid_normal_count"] == 10
+        assert fig["tetragrid_normal_count"] == 4
+        assert fig["tetragrid_sets_inside_icosagrid"] == 5
+        assert fig["tetrahedra_per_4G"] == 4
+        assert fig["tetrahedra_per_20G"] == 20
+        assert fig["central_20G_tetrahedral_vertices"] == 61
+        assert fig["plane_classes_before_golden_twist"] == 70
+        assert fig["plane_classes_after_golden_twist"] == 10
+        assert "source claim" in fig["source_level_subset_claim"]
+
+        c5c = summary["cuboctahedral_c5c_packet"]
+        assert c5c == {
+            "twenty_four_cells_in_compound": 5,
+            "cuboctahedral_equators_per_24_cell": 12,
+            "initial_cuboctahedron_choices": 60,
+            "left_isoclinic_limit_images": 1,
+            "right_isoclinic_limit_images": 5,
+            "C5C_members": 5,
+            "tetrahedra_per_4G": 4,
+            "4G_compounds_per_20G": 5,
+            "tetrahedra_per_20G": 20,
+            "handed_20G_options": 2,
+        }
+
+    def test_chapter4_w33_h4_certificate_preserves_frontier_boundary(self):
+        summary = cct_chapter4_quasicrystal_fig_summary()
+        certificate = summary["w33_h4_certificate"]
+
+        assert certificate["w33_edge_root_shell"] == E == 240
+        assert certificate["h4_roots_600_cell_vertices"] == 120
+        assert certificate["two_h4_shells_recover_e8_root_shell"] == 240
+        assert certificate["line_clock_states"] == 120
+        assert certificate["coxeter_number"] == 30
+        assert certificate["h4_degrees"] == (2, 12, 20, 30)
+        assert certificate["h4_degrees_embed_in_e8"] is True
+        assert certificate["full_psp43_orbital_degrees"] == (2, 27, 36, 54)
+        assert certificate["full_symmetry_can_make_600_cell_graph"] is False
+        assert certificate["required_selector"] == "golden/icosahedral H4 projection data"
+        assert "frontier data" in certificate["frontier_status"]
+        assert all(summary["theorem"].values())
+
+
+class TestCCTChapter5ShellingScaling:
+    def test_divisor_and_a2_prime_power_helpers(self):
+        assert divisor_power_sum(1, 3) == 1
+        assert divisor_power_sum(Q, 3) == 28
+        assert divisor_power_sum(Q, 1, odd_only=True) == 4
+        assert divisor_power_sum(2, 1, odd_only=True) == 1
+
+        assert [a2_prime_power_hexagon_count(Q, a) for a in range(4)] == [1, 1, 1, 1]
+        assert a2_prime_power_hexagon_count(7, 2) == 3
+        assert a2_prime_power_hexagon_count(2, 1) == 0
+        assert a2_prime_power_hexagon_count(2, 2) == 1
+
+    def test_chapter5_base_shells_route_to_A2_D4_E8_sequence(self):
+        summary = cct_chapter5_shelling_scaling_summary()
+
+        assert summary["source_scope"]["chapter"] == 5
+        assert summary["source_scope"]["chapter_title"] == "Shelling and Scaling Lattices"
+
+        objectives = summary["root_lattice_objectives_packet"]
+        assert objectives["lattices"] == ("A2", "D4", "E8")
+        assert objectives["ambient_dimensions"] == (2, 4, 8)
+        assert objectives["base_shell_multiplicities"] == (6, 24, 240)
+        assert objectives["comparison_irregular_lattices"] == ("A4", "A6", "A8")
+        assert objectives["quasilattice_extension"] == "E8 projection / Sadoc-Mosseri shelling"
+
+    def test_chapter5_A2_D4_E8_shelling_packets_are_exact(self):
+        summary = cct_chapter5_shelling_scaling_summary()
+
+        assert summary["a2_shelling_packet"] == {
+            "root_count": 6,
+            "normalized_hexagons_at_unit_shell": 1,
+            "q_adic_prime": 3,
+            "N_prime_of_q_power_for_exponents_0_to_3": {0: 1, 1: 1, 2: 1, 3: 1},
+            "prime_1_mod_3_example": {
+                "prime": 7,
+                "exponent": 2,
+                "N_prime": 3,
+            },
+            "prime_2_mod_3_examples": {
+                "p2_odd_exponent": 0,
+                "p2_even_exponent": 1,
+            },
+            "w33_selector_match": True,
+        }
+
+        assert summary["d4_shelling_packet"] == {
+            "root_count": 24,
+            "K_n_4_formula": "24 * sum_{d|n, d odd} d",
+            "K_1_4": 24,
+            "K_2_4": 24,
+            "K_q_4": 96,
+            "odd_divisor_sum_at_q": 4,
+            "w33_24_cell_packet": True,
+        }
+
+        assert summary["e8_shelling_packet"] == {
+            "root_count": 240,
+            "K_n_8_formula": "240 * sum_{d|n} d^3",
+            "K_1_8": 240,
+            "K_2_8": 2160,
+            "K_q_8": 6720,
+            "sigma3_at_q": 28,
+            "q_shell_amplifier": 28,
+            "amplifier_matches_v_minus_k": True,
+            "w33_edge_root_shell": 240,
+            "w33_edge_shell_matches_e8_unit_shell": True,
+        }
+
+    def test_chapter5_scaling_and_omega_team_boundary(self):
+        summary = cct_chapter5_shelling_scaling_summary()
+
+        assert summary["scaling_comparison_packet"] == {
+            "sphere_sequence": ("S1", "S3", "S7"),
+            "K_1_d": {2: 6, 4: 24, 8: 240},
+            "seed_counts_after_dividing_by_K_1_d": {2: 1, 4: 1, 8: 1},
+            "chapter5_normalized_seed_name": "Sigma(n,d)",
+            "w33_line_clock_uses_five_24_cell_packets": 5,
+            "w33_e8_shell_uses_ten_24_cell_packets": 10,
+        }
+        assert "source guidance only" in summary["omega_team_source_packet"]["local_status"]
+        assert all(summary["theorem"].values())
+
+
+class TestCCTChapter6NonlocalLife:
+    def test_chapter6_penrose_game_source_packet_has_finite_neighbor_skeleton(self):
+        summary = cct_chapter6_nonlocal_life_summary()
+
+        assert summary["source_scope"]["chapter"] == 6
+        assert summary["source_scope"]["chapter_title"] == (
+            "Non-local game of life in quasicrystals - first attempt of a cycle clock model"
+        )
+        assert summary["penrose_game_source_packet"] == {
+            "mother_lattice": "Z5",
+            "quasicrystal_dimension": 2,
+            "penrose_vertex_types": 8,
+            "chosen_dominant_vertex_type": "K",
+            "local_clusters_are_tiles_sharing_one_vertex": True,
+            "ideal_K_neighbors": 8,
+            "clockwise_neighbor_labels": (1, 2, 3, 4),
+            "counterclockwise_neighbor_labels": (5, 6, 7, 8),
+            "two_pentagons_in_perpendicular_space": True,
+            "living_vertex_type_may_not_stay_fixed": True,
+        }
+
+        assert summary["least_change_rule_packet"] == {
+            "candidate_next_steps": 8,
+            "self_position_excluded": True,
+            "overlap_score": "|E0 intersect Ei|",
+            "preferred_move": "argmax_i |E0 intersect Ei|",
+            "tie_rule": "random choice among maximizing neighbors",
+            "trit_measure": "number of cut-window shifts / changed tiles",
+            "status": (
+                "finite rule skeleton only; no W(3,3) theorem is asserted for "
+                "the simulated Penrose trajectories."
+            ),
+        }
+
+    def test_chapter6_d4_cycle_and_fig_packets_reuse_exact_counts(self):
+        summary = cct_chapter6_nonlocal_life_summary()
+
+        assert summary["d4_copy_cycle_packet"] == {
+            "Z5_parallel_D4_copies": 10,
+            "projected_K_vertex_types": 10,
+            "roots_per_D4_copy": 24,
+            "total_D4_copy_states": 240,
+            "matches_W33_E8_edge_shell": True,
+            "chapter5_scaling_source": "240 = 10 x 24",
+        }
+
+        assert summary["fig_3d_source_packet"] == {
+            "carrier_elements": ("20G", "4G"),
+            "tetrahedra_per_4G": 4,
+            "tetrahedra_per_20G": 20,
+            "compounded_4G_count_per_20G": 5,
+            "higher_dimensional_mother_lattice": "E8",
+            "CE_selection_for_probability_runs": "4G",
+            "integrated_step_window_examples": (5, 10, 15, 20, 25, 30),
+            "source_run_range": (30, 1000),
+            "source_particle_range": (1, 10),
+            "status": (
+                "3D FIG empire rays and trajectory probabilities are recorded "
+                "as source dynamics, not as an exact W(3,3) probability law."
+            ),
+        }
+
+    def test_chapter6_w33_certificate_keeps_empire_dynamics_frontier_scoped(self):
+        summary = cct_chapter6_nonlocal_life_summary()
+        certificate = summary["w33_cycle_clock_certificate"]
+
+        assert certificate["neighbor_options_match_e8_rank"] is True
+        assert certificate["clockwise_counterclockwise_split"] == (4, 4)
+        assert certificate["split_matches_mu_plus_mu"] is True
+        assert certificate["ten_D4_packets_recover_edge_shell"] == E == 240
+        assert certificate["twenty_group_from_five_4G"] == (5, 4, 20)
+        assert "frontier/source behavior" in certificate["frontier_boundary"]
+        assert all(summary["theorem"].values())
 
 
 class TestCCT3ClockAndProjection:
@@ -196,6 +567,11 @@ class TestCCT4H4Selector:
         assert crosswalk["theorem"]["the_pascal_row_now_routes_the_target_side_measurement_shadow_dictionary"]
         assert crosswalk["theorem"]["crosswalk_rows_name_the_same_table_backbone_invariants_they_use"]
         assert crosswalk["theorem"]["the_source_dictionary_explicitly_uses_the_shared_40_81_240_backbone"]
+        assert crosswalk["theorem"]["chapter2_trit_economy_is_routed_to_exact_w33_certificates"]
+        assert crosswalk["theorem"]["chapter3_foundations_are_routed_to_exact_w33_certificates"]
+        assert crosswalk["theorem"]["chapter4_quasicrystal_fig_layer_is_routed_to_exact_w33_certificates"]
+        assert crosswalk["theorem"]["chapter5_shelling_scaling_layer_is_routed_to_exact_w33_certificates"]
+        assert crosswalk["theorem"]["chapter6_nonlocal_life_layer_is_routed_to_exact_w33_certificates"]
         assert "carrier -> realization -> algebra -> computation -> witness" in crosswalk["theorem"]["interpretation"]
         assert "shared q=3 backbone invariant" in crosswalk["theorem"]["interpretation"]
         assert "121 = (k-1)^2 representation triangle" in crosswalk["theorem"]["interpretation"]
@@ -205,6 +581,67 @@ class TestCCT4H4Selector:
         assert "two-shell and mass-weighted-Hodge package 0^3, 18^78, 72^40" in crosswalk["theorem"]["interpretation"]
         assert "projector calculus" in crosswalk["theorem"]["interpretation"]
         assert "H4/quasicrystal step" in crosswalk["theorem"]["interpretation"]
+        assert "Chapter 2 trit-economy layer" in crosswalk["theorem"]["interpretation"]
+        assert "Chapter 3 mathematical foundations layer" in crosswalk["theorem"]["interpretation"]
+        assert "Chapter 4 FIG/quasicrystal layer" in crosswalk["theorem"]["interpretation"]
+        assert "H4/600-cell packet 5 x 24 = 120" in crosswalk["theorem"]["interpretation"]
+        assert "Chapter 5 shelling/scaling layer" in crosswalk["theorem"]["interpretation"]
+        assert "q=3 E8 shell count 240 x sigma_3(3) = 6720" in crosswalk["theorem"]["interpretation"]
+        assert "Chapter 6 non-local game-of-life layer" in crosswalk["theorem"]["interpretation"]
+        assert "ten D4/K-VT packets giving 10 x 24 = 240" in crosswalk["theorem"]["interpretation"]
+
+    def test_crosswalk_has_a_chapter2_certificate(self):
+        chapter = build_cct_crosswalk()["chapter_crosswalks"][2]
+
+        assert chapter["source_title"] == "Trits, the Irreducible Computational Element of Thought"
+        assert "q=3 selector" in chapter["primary_connection"]
+        assert "81 -> 40" in chapter["primary_connection"]
+        assert "240 edge/root shell" in chapter["primary_connection"]
+        assert all(chapter["certificate"]["theorem"].values())
+
+    def test_crosswalk_has_a_chapter3_certificate(self):
+        chapter = build_cct_crosswalk()["chapter_crosswalks"][3]
+
+        assert chapter["source_title"] == "The Mathematical Foundations of Cycle Clock Theory"
+        assert "10 x 24 = 240" in chapter["primary_connection"]
+        assert "120-state" in chapter["primary_connection"]
+        assert "480-state Hashimoto" in chapter["primary_connection"]
+        assert all(chapter["certificate"]["theorem"].values())
+
+    def test_crosswalk_has_a_chapter4_certificate(self):
+        chapter = build_cct_crosswalk()["chapter_crosswalks"][4]
+
+        assert chapter["source_title"] == (
+            "Quasicrystal Primer and the FIG: A 3D Conformal Shadow of E8"
+        )
+        assert "10 x 24 = 240" in chapter["primary_connection"]
+        assert "5 x 24 = 120" in chapter["primary_connection"]
+        assert "two-shell 240 recovery" in chapter["primary_connection"]
+        assert "full-symmetry no-go" in chapter["primary_connection"]
+        assert all(chapter["certificate"]["theorem"].values())
+
+    def test_crosswalk_has_a_chapter5_certificate(self):
+        chapter = build_cct_crosswalk()["chapter_crosswalks"][5]
+
+        assert chapter["source_title"] == "Shelling and Scaling Lattices"
+        assert "6/24/240" in chapter["primary_connection"]
+        assert "240 x sigma_3(3) = 6720" in chapter["primary_connection"]
+        assert "120 = 5 x 24" in chapter["primary_connection"]
+        assert "240 = 10 x 24" in chapter["primary_connection"]
+        assert all(chapter["certificate"]["theorem"].values())
+
+    def test_crosswalk_has_a_chapter6_certificate(self):
+        chapter = build_cct_crosswalk()["chapter_crosswalks"][6]
+
+        assert chapter["source_title"] == (
+            "Non-local game of life in quasicrystals - first attempt of a cycle clock model"
+        )
+        assert "eight K-neighbor moves" in chapter["primary_connection"]
+        assert "4 + 4" in chapter["primary_connection"]
+        assert "10 x 24 = 240" in chapter["primary_connection"]
+        assert "5 x 4 = 20" in chapter["primary_connection"]
+        assert "source dynamics" in chapter["primary_connection"]
+        assert all(chapter["certificate"]["theorem"].values())
 
     def test_docs_and_paper_mention_the_cct_backbone_invariants_explicitly(self):
         doc_text = DOC_NOTE.read_text(encoding="utf-8")

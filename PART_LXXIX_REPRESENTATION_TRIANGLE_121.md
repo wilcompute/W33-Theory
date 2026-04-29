@@ -123,6 +123,7 @@ Together,
 \boxed{
 \frac{B_cB_c^T+U_cU_c^T}{18}
 =
+
 I-\frac{J}{40}.
 }
 \]

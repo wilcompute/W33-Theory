@@ -91,6 +91,7 @@ Equivalently,
 \boxed{
 Q
 =
+
 Q_{S15\to L15}
 \oplus
 Q_{Q24\to L24}
