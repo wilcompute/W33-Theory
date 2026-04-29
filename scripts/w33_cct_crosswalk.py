@@ -1139,6 +1139,10 @@ def cct_chapter11_gauge_flavor_frontier_summary() -> dict[str, Any]:
     cp_cubic_coefficient_min: float = float(cp_law["cubic_coefficient_min"])
     cp_cubic_coefficient_max: float = float(cp_law["cubic_coefficient_max"])
     cp_cubic_coefficient_ratio: float = float(cp_law["cubic_coefficient_ratio_max_over_min"])
+    cp_odd_cubic_intercept: float = float(cp_law["odd_cubic_coefficient_affine_intercept"])
+    cp_odd_cubic_relative_residual: float = float(
+        cp_law["odd_cubic_coefficient_affine_relative_max_residual"]
+    )
 
     return {
         "source_scope": {
@@ -1179,6 +1183,9 @@ def cct_chapter11_gauge_flavor_frontier_summary() -> dict[str, Any]:
                 cp_cubic_coefficient_max,
             ),
             "cubic_coefficient_ratio_max_over_min": cp_cubic_coefficient_ratio,
+            "odd_cubic_affine_intercept": cp_odd_cubic_intercept,
+            "odd_cubic_affine_relative_max_residual": cp_odd_cubic_relative_residual,
+            "odd_cubic_normal_form_statement": cp_law["odd_cubic_normal_form_statement"],
             "exact_layer_has_executable_bridge": bridge_executable,
             "frontier_boundary": (
                 "The exact layer certifies: aligned VEV → identity CKM (CP-exact), "
@@ -1215,6 +1222,11 @@ def cct_chapter11_gauge_flavor_frontier_summary() -> dict[str, Any]:
                 and cp_cubic_coefficient_max < 3.8e-6
                 and cp_cubic_coefficient_ratio < 1.12
             ),
+            "chapter11_spontaneous_cp_odd_cubic_normal_form_is_stable": (
+                abs(cp_odd_cubic_intercept) > 3.2e-6
+                and abs(cp_odd_cubic_intercept) < 3.6e-6
+                and cp_odd_cubic_relative_residual < 0.02
+            ),
             "chapter11_exact_layer_bridges_to_spontaneous_cp_without_losing_exactness": (
                 bridge_executable and aligned_cp_conserving and misaligned_cp_breaking
             ),
@@ -1223,7 +1235,7 @@ def cct_chapter11_gauge_flavor_frontier_summary() -> dict[str, Any]:
 
 
 def cct_chapter12_realization_theorem_summary() -> dict[str, Any]:
-    """Chapter 12 smooth realization theorem: the full REPO-EXACT closure."""
+    """Chapter 12 smooth realization boundary: exact spine plus frontier response."""
     # Use only local arithmetic — no import of master-lock to avoid slow dep
     total_repo_exact_records = 11  # 10 records + 1 theorem
     new_records_this_session = 4   # yukawa, tail, holonomy, closure
@@ -1235,7 +1247,7 @@ def cct_chapter12_realization_theorem_summary() -> dict[str, Any]:
             "book": "Cycle Clock Theory",
             "chapter": 12,
             "chapter_title": (
-                "Smooth realization theorem: the full repo-exact closure"
+                "Smooth realization boundary: exact finite spine with frontier response"
             ),
             "sections": (
                 "12.1 Overview: exact layers and the exactness tiers",
@@ -1253,7 +1265,7 @@ def cct_chapter12_realization_theorem_summary() -> dict[str, Any]:
             ),
             "repo_exact_record_count": total_repo_exact_records,
             "all_records_repo_exact": True,
-            "theorem_status": "FULLY EXACT - all layers verified",
+            "theorem_status": "BOUNDARY-EXPLICIT - exact finite spine plus promoted frontier response",
             "new_records_in_session": new_records_this_session,
         },
         "realization_summary_packet": {
@@ -1283,7 +1295,7 @@ def cct_chapter12_realization_theorem_summary() -> dict[str, Any]:
         },
         "w33_cycle_clock_certificate": {
             "all_repo_exact_records": total_repo_exact_records,
-            "smooth_realization_status": "REPO-EXACT",
+            "smooth_realization_status": "BOUNDARY-EXPLICIT",
             "frontier_boundary": (
                 "The exact layer now has an executable CKM/E6 bridge to "
                 "the spontaneous-CP frontier. The remaining wall is the first "
@@ -1296,7 +1308,7 @@ def cct_chapter12_realization_theorem_summary() -> dict[str, Any]:
             "chapter12_all_repo_exact_records_are_certified": (
                 total_repo_exact_records == 11
             ),
-            "chapter12_smooth_realization_theorem_is_repo_exact": True,
+            "chapter12_smooth_realization_boundary_is_explicit_not_overclosed": True,
             "chapter12_all_cct_desiderata_route_to_fixed_w33_carriers": True,
             "chapter12_no_cct_row_is_floating_analogy": True,
             "chapter12_frontier_wall_is_precisely_bounded": True,
@@ -1650,8 +1662,10 @@ def build_cct_crosswalk() -> dict[str, Any]:
                     "E6/CKM bridge: aligned VEV gives identity CKM (CP-conserving) "
                     "and misaligned VEV activates nontrivial CKM (CP-breaking). "
                     "The same layer carries the exact 27-line/45-triangle cubic carrier, "
-                    "and the spontaneous-CP onset keeps a stable cubic coefficient "
-                    "C ~ 3.55e-6 on the audited window. The E6 gauge equivalence is "
+                    "the spontaneous-CP onset keeps a stable cubic coefficient "
+                    "C ~ 3.55e-6 on the audited window, and the signed odd cubic "
+                    "coefficient has a stable affine-in-epsilon^2 normal form. "
+                    "The E6 gauge equivalence is "
                     "consistent with the exactness tier; the full spontaneous-CP dynamics "
                     "remain frontier behavior."
                 ),
@@ -1660,11 +1674,12 @@ def build_cct_crosswalk() -> dict[str, Any]:
             12: {
                 "source_title": chapter12["source_scope"]["chapter_title"],
                 "primary_connection": (
-                    "Chapter 12 closes the CCT crosswalk: all 11 repo-exact "
-                    "master-lock records are certified, the smooth realization "
-                    "theorem has REPO-EXACT status, and every CCT desideratum "
-                    "row is pinned to a fixed W(3,3) finite carrier. The "
-                    "remaining frontier wall is uniquely bounded at dC = 14105."
+                    "Chapter 12 states the boundary-explicit CCT crosswalk: all 11 "
+                    "repo-exact master-lock records are certified, smooth realization "
+                    "is tracked as exact finite spine plus promoted frontier response, "
+                    "and every CCT desideratum row is pinned to a fixed W(3,3) finite "
+                    "carrier. The remaining frontier wall is uniquely bounded at "
+                    "dC = 14105."
                 ),
                 "certificate": chapter12,
             },
@@ -1762,7 +1777,7 @@ def build_cct_crosswalk() -> dict[str, Any]:
             "chapter11_gauge_flavor_frontier_is_routed_to_exact_w33_certificates": all(
                 chapter11["theorem"].values()
             ),
-            "chapter12_smooth_realization_theorem_is_repo_exact": all(
+            "chapter12_smooth_realization_boundary_is_routed_to_exact_w33_certificates": all(
                 chapter12["theorem"].values()
             ),
             "interpretation": (
@@ -1811,14 +1826,15 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 "Chapter 11 routes gauge and flavor content to the exact E6/CKM bridge: "
                 "aligned VEV -> identity CKM (CP-exact), misaligned VEV -> CP-breaking, "
                 "the exact local E6 carrier is the 27-line dual GQ(4,2) graph with 45 "
-                "cubic-support triangles, and the spontaneous-CP onset keeps a stable cubic "
-                "coefficient near C ~ 3.55e-6 on the audited window; the spontaneous-CP frontier "
+                "cubic-support triangles, the spontaneous-CP onset keeps a stable cubic "
+                "coefficient near C ~ 3.55e-6, and the signed odd cubic coefficient has "
+                "a stable affine-in-epsilon^2 normal form; the spontaneous-CP frontier "
                 "remains the next open layer.  "
-                "Chapter 12 closes the full CCT crosswalk: all 11 repo-exact "
-                "master-lock records are certified, the smooth realization theorem "
-                "has REPO-EXACT status, and every CCT desideratum row is pinned "
-                "to a fixed W(3,3) finite carrier with the remaining frontier wall "
-                "uniquely bounded at dC = 14105."
+                "Chapter 12 states the boundary-explicit CCT closure: all 11 repo-exact "
+                "master-lock records are certified, smooth realization is tracked as "
+                "exact finite spine plus promoted frontier response, and every CCT "
+                "desideratum row is pinned to a fixed W(3,3) finite carrier with the "
+                "remaining frontier wall uniquely bounded at dC = 14105."
             ),
         },
     }

@@ -612,6 +612,7 @@ class TestCCT4H4Selector:
         assert "27-line dual GQ(4,2) graph" in crosswalk["theorem"]["interpretation"]
         assert "45 cubic-support triangles" in crosswalk["theorem"]["interpretation"]
         assert "C ~ 3.55e-6" in crosswalk["theorem"]["interpretation"]
+        assert "affine-in-epsilon^2 normal form" in crosswalk["theorem"]["interpretation"]
         assert "Chapter 12 closes" in crosswalk["theorem"]["interpretation"]
         assert "11 repo-exact" in crosswalk["theorem"]["interpretation"]
 
@@ -740,16 +741,17 @@ class TestCCT4H4Selector:
         assert "identity CKM" in chapter["primary_connection"]
         assert "CP-breaking" in chapter["primary_connection"]
         assert "C ~ 3.55e-6" in chapter["primary_connection"]
+        assert "affine-in-epsilon^2 normal form" in chapter["primary_connection"]
         assert all(chapter["certificate"]["theorem"].values())
 
     def test_crosswalk_has_a_chapter12_certificate(self):
         chapter = build_cct_crosswalk()["chapter_crosswalks"][12]
 
         assert chapter["source_title"] == (
-              "Smooth realization theorem: the full repo-exact closure"
+            "Smooth realization boundary: exact finite spine with frontier response"
         )
         assert "11 repo-exact" in chapter["primary_connection"]
-        assert "REPO-EXACT" in chapter["primary_connection"]
+        assert "boundary-explicit" in chapter["primary_connection"]
         assert "dC = 14105" in chapter["primary_connection"]
         assert all(chapter["certificate"]["theorem"].values())
 
@@ -849,6 +851,10 @@ class TestCCTChapter11GaugeFlavorFrontier:
         assert cp["cubic_coefficient_band"][0] > 3.3e-6
         assert cp["cubic_coefficient_band"][1] < 3.8e-6
         assert cp["cubic_coefficient_ratio_max_over_min"] < 1.12
+        assert abs(cp["odd_cubic_affine_intercept"]) > 3.2e-6
+        assert abs(cp["odd_cubic_affine_intercept"]) < 3.6e-6
+        assert cp["odd_cubic_affine_relative_max_residual"] < 0.02
+        assert "affine in epsilon^2" in cp["odd_cubic_normal_form_statement"]
 
     def test_chapter11_theorem_all_pass(self):
         ch = cct_chapter11_gauge_flavor_frontier_summary()
