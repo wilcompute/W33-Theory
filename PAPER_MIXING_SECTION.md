@@ -128,9 +128,13 @@ PDG 2024 (NO): $1.36\pi$.  Error: $< 1\%$.
 | $\sin^2\theta_{23}$ | $(1+D/S)/(2+D/S)\cdot(1-s_{13}^2)$ | 0.538 | 0.545 | **1.3%** |
 | $\delta_{\text{CP}}$ | $3\pi/2 - \delta_{\text{CKM}}/\sqrt{2}$ | $1.36\pi$ | $1.36\pi$ | **<1%** |
 
-**All 8 independent mixing observables agree with PDG 2024 within 1.3% or better, with zero free parameters.**
+**All 8 independent mixing observables agree with PDG 2024 within 1.3% or better on the current executable bridge surface.**
 
 The geometric source is the single identity $16 = 10_{\text{visible}} + 6_{\text{null}}$ on the spin-16 family carrier of the $W(3,3)$ 27-line cubic surface.
+
+At the current audited boundary, this mixing layer is carried by the exact finite
+spine together with an executable flavor-response bridge; it is not promoted here
+to a stronger exact phenomenology closure theorem.
 
 ---
 
