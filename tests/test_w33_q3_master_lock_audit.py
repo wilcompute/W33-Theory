@@ -387,7 +387,7 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
     assert records["q3_electron_seed_backbone_lock"]["support_level"] == "repo-exact fermion seed"
     assert records["q3_transport_holonomy_reduction_lock"]["support_level"] == "repo-exact transport algebra reduction"
     assert records["q3_exact_to_spontaneous_cp_frontier_bridge_lock"]["support_level"] == "repo-exact finite-to-frontier bridge"
-    assert records["q3_full_physical_realization_theorem"]["support_level"] == "repo-exact smooth realization theorem"
+    assert records["q3_full_physical_realization_theorem"]["support_level"] == "boundary summary with promoted frontier response"
 
     assert summary["status"] == "ok"
     assert summary["record_names_exact_or_boundary"] == (
@@ -431,6 +431,9 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
     assert theorem["the_live_positive_target_is_the_same_ordered_path_transport_law_written_on_the_fixed_k3_chart"] is True
     assert theorem["the_remaining_wall_is_not_finite_q_selection_but_smooth_realization"] is True
     assert theorem["the_exact_layer_now_has_an_executable_bridge_to_spontaneous_cp_frontier"] is True
+    assert "exact finite spine" in records["q3_full_physical_realization_theorem"]["statement"]
+    assert "not by a newly claimed exact phenomenology theorem" in records["q3_full_physical_realization_theorem"]["statement"]
+    assert records["q3_full_physical_realization_theorem"]["evidence"]["frontier_boundary"].startswith("CKM/E6 promotion remains")
     assert "ordered nonlocal 2-path S3 packet" in summary["boundary_note"]
     assert "540-packet model has no exact cover" in summary["boundary_note"]
     assert "non-identity unipotent sign-trivial transport witness" in summary["boundary_note"]

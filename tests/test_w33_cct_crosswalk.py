@@ -609,6 +609,9 @@ class TestCCT4H4Selector:
         assert "dC = 14105" in crosswalk["theorem"]["interpretation"]
         assert "Chapter 11 routes" in crosswalk["theorem"]["interpretation"]
         assert "E6/CKM bridge" in crosswalk["theorem"]["interpretation"]
+        assert "27-line dual GQ(4,2) graph" in crosswalk["theorem"]["interpretation"]
+        assert "45 cubic-support triangles" in crosswalk["theorem"]["interpretation"]
+        assert "C ~ 3.55e-6" in crosswalk["theorem"]["interpretation"]
         assert "Chapter 12 closes" in crosswalk["theorem"]["interpretation"]
         assert "11 repo-exact" in crosswalk["theorem"]["interpretation"]
 
@@ -730,11 +733,13 @@ class TestCCT4H4Selector:
         chapter = build_cct_crosswalk()["chapter_crosswalks"][11]
 
         assert chapter["source_title"] == (
-              "Gauge symmetry, E6 structure, and the flavor/CP frontier"
+            "Gauge symmetry, E6 structure, and the flavor/CP frontier"
         )
         assert "E6/CKM" in chapter["primary_connection"]
+        assert "27-line/45-triangle cubic carrier" in chapter["primary_connection"]
         assert "identity CKM" in chapter["primary_connection"]
         assert "CP-breaking" in chapter["primary_connection"]
+        assert "C ~ 3.55e-6" in chapter["primary_connection"]
         assert all(chapter["certificate"]["theorem"].values())
 
     def test_crosswalk_has_a_chapter12_certificate(self):
@@ -836,6 +841,14 @@ class TestCCTChapter11GaugeFlavorFrontier:
         pkt = ch["e6_ckm_bridge_packet"]
         assert pkt["aligned_vev_ckm_is_identity"] is True
         assert pkt["misaligned_vev_ckm_nontrivial"] is True
+        cubic = ch["e6_cubic_carrier_packet"]
+        assert cubic["line_count"] == 27
+        assert cubic["triangle_count"] == 45
+        assert cubic["each_line_lies_on_cubic_terms"] == 5
+        cp = ch["spontaneous_cp_packet"]
+        assert cp["cubic_coefficient_band"][0] > 3.3e-6
+        assert cp["cubic_coefficient_band"][1] < 3.8e-6
+        assert cp["cubic_coefficient_ratio_max_over_min"] < 1.12
 
     def test_chapter11_theorem_all_pass(self):
         ch = cct_chapter11_gauge_flavor_frontier_summary()

@@ -867,25 +867,21 @@ def classify_q3_master_lock() -> Tuple[Dict[str, object], ...]:
         },
         {
             "name": "q3_full_physical_realization_theorem",
-            "support_level": "repo-exact smooth realization theorem",
+            "support_level": "boundary summary with promoted frontier response",
             "statement": (
-                "✓ EXACTNESS ACHIEVED: The q=3 smooth realization theorem is now fully exact on all layers. "
-                "The complete chain of 10 exact records establishes: finite kernel (40-vertex, 12-regular) → "
-                "spectral uniqueness (Ihara/zeta equilibrium) → continuum seed (8,56,320,2240,12480) → "
-                "fermion seed (electron backbone) → transport algebra (45-point quotient, 27-line dual) → "
-                "exact-frontier bridge (CKM/Jarlskog) → Yukawa-loop-tomotope coherence (mass generation) → "
-                "transport-tail affine closure (dC = 65×217, exact factorization) → sign-trivial unipotent "
-                "holonomy witness (2×2 Jordan block [[1,1],[0,1]], constructible) → Yukawa quantization closure "
-                "(all consistency checks passed: positive, monotone, hierarchy preserved, no obstruction). "
-                "The q=3 selection is exact from finite kernel through all promoted physics to smooth realization."
+                "The q=3 program now has an exact finite spine through the executable exact-to-frontier bridge. "
+                "Finite kernel, spectral uniqueness, continuum seed, fermion seed, transport algebra, affine "
+                "closure, holonomy witness construction, and Yukawa-side consistency checks are exact repo records; "
+                "the promoted flavor response is carried by an executable CKM/E6 bridge and a controlled CP-odd "
+                "onset law, not by a newly claimed exact phenomenology theorem."
             ),
             "evidence": {
-                "complete_exact_chain": "10 repo-exact records covering kernel → transport → frontier → dynamics",
+                "exact_finite_spine": "10 repo-exact records covering kernel → transport → executable frontier bridge",
                 "affine_closure_exact": "dC = 65 × 217 (arithmetic identity proven)",
                 "holonomy_witness_exact": "2×2 Jordan unipotent, constructible, commutes with mass sector",
-                "yukawa_closure_exact": "All 11 consistency checks pass, no obstruction between layers",
-                "theorem_status": "FULLY EXACT - all layers verified",
-                "tests_total": "27 + 12 + 11 = 50 tests across all records",
+                "yukawa_consistency_exact": "All 11 internal consistency checks pass, no obstruction between exact layers",
+                "frontier_boundary": "CKM/E6 promotion remains an executable bridge and response law, not a stronger exact phenomenology closure",
+                "tests_total": "27 + 12 + 11 = 50 tests across exact-spine records",
             },
         },
     )

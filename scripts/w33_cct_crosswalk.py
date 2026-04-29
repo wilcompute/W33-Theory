@@ -12,6 +12,11 @@ from fractions import Fraction
 from typing import Any
 
 from scripts.w33_chiral_exact_sequence_audit import build_chiral_exact_sequence_summary
+from scripts.w33_e6_27line_cubic_carrier_audit import (
+    downstream_e6_trilinear_witness_summary,
+    dual_27line_carrier_summary,
+    signed_cubic_on_27line_carrier_summary,
+)
 from scripts.w33_flavor_frontier_audit import (
     exact_to_frontier_bridge_packet,
     spontaneous_cp_response_law_packet,
@@ -1103,6 +1108,9 @@ def cct_chapter11_gauge_flavor_frontier_summary() -> dict[str, Any]:
     """Chapter 11 gauge symmetry, E6 bridge, and the flavor/CP frontier."""
     bridge = exact_to_frontier_bridge_packet()
     cp_law = spontaneous_cp_response_law_packet()
+    e6_carrier = dual_27line_carrier_summary()
+    e6_cubic = signed_cubic_on_27line_carrier_summary()
+    e6_witness = downstream_e6_trilinear_witness_summary()
 
     aligned_ckm_is_identity: bool = bool(bridge["ckm_exact_alignment_is_identity"])
     aligned_jarlskog_abs: float = float(bridge["ckm_exact_alignment_jarlskog_abs"])
@@ -1127,6 +1135,10 @@ def cct_chapter11_gauge_flavor_frontier_summary() -> dict[str, Any]:
 
     cp_odd_onset: bool = bool(cp_law.get("cp_odd_sign_flip_exact", True))
     cp_onset_law: str = str(cp_law.get("derived_law", "|J| ~ C * epsilon^3"))
+    cp_cubic_coefficient_estimate: float = float(cp_law["cubic_coefficient_estimate"])
+    cp_cubic_coefficient_min: float = float(cp_law["cubic_coefficient_min"])
+    cp_cubic_coefficient_max: float = float(cp_law["cubic_coefficient_max"])
+    cp_cubic_coefficient_ratio: float = float(cp_law["cubic_coefficient_ratio_max_over_min"])
 
     return {
         "source_scope": {
@@ -1151,9 +1163,22 @@ def cct_chapter11_gauge_flavor_frontier_summary() -> dict[str, Any]:
             "misaligned_vev_activates_cp_breaking": misaligned_cp_breaking,
             "e6_gauge_equivalence_consistent": gauge_equivalence_consistent,
         },
+        "e6_cubic_carrier_packet": {
+            "line_count": e6_carrier["dual_gq42_incidence"]["lines"],
+            "triangle_count": e6_carrier["line_graph_triangle_count"],
+            "carrier_graph_parameters": e6_carrier["line_graph_srg"],
+            "each_line_lies_on_cubic_terms": e6_cubic["point_tritangent_incidence"],
+            "downstream_witness_present": e6_witness["artifact_present"],
+        },
         "spontaneous_cp_packet": {
             "cp_breaking_onset_law": cp_onset_law,
             "onset_is_cp_odd": cp_odd_onset,
+            "cubic_coefficient_estimate": cp_cubic_coefficient_estimate,
+            "cubic_coefficient_band": (
+                cp_cubic_coefficient_min,
+                cp_cubic_coefficient_max,
+            ),
+            "cubic_coefficient_ratio_max_over_min": cp_cubic_coefficient_ratio,
             "exact_layer_has_executable_bridge": bridge_executable,
             "frontier_boundary": (
                 "The exact layer certifies: aligned VEV → identity CKM (CP-exact), "
@@ -1176,8 +1201,19 @@ def cct_chapter11_gauge_flavor_frontier_summary() -> dict[str, Any]:
             "chapter11_misaligned_vev_activates_nontrivial_ckm_and_cp_breaking": (
                 misaligned_ckm_nontrivial and misaligned_cp_breaking
             ),
+            "chapter11_exact_e6_cubic_carrier_is_the_27line_45triangle_support": (
+                e6_carrier["dual_gq42_incidence"]["lines"] == 27
+                and e6_carrier["line_graph_triangle_count"] == 45
+                and e6_cubic["point_tritangent_incidence"] == 5
+                and e6_witness["artifact_present"]
+            ),
             "chapter11_e6_gauge_equivalence_does_not_conflict_with_exactness": (
                 gauge_equivalence_consistent
+            ),
+            "chapter11_spontaneous_cp_cubic_coefficient_is_stable_on_the_audited_window": (
+                cp_cubic_coefficient_min > 3.3e-6
+                and cp_cubic_coefficient_max < 3.8e-6
+                and cp_cubic_coefficient_ratio < 1.12
             ),
             "chapter11_exact_layer_bridges_to_spontaneous_cp_without_losing_exactness": (
                 bridge_executable and aligned_cp_conserving and misaligned_cp_breaking
@@ -1613,8 +1649,11 @@ def build_cct_crosswalk() -> dict[str, Any]:
                     "Chapter 11's gauge/flavor content is routed to the exact "
                     "E6/CKM bridge: aligned VEV gives identity CKM (CP-conserving) "
                     "and misaligned VEV activates nontrivial CKM (CP-breaking). "
-                    "The E6 gauge equivalence is consistent with the exactness "
-                    "tier; the full spontaneous-CP dynamics remain frontier behavior."
+                    "The same layer carries the exact 27-line/45-triangle cubic carrier, "
+                    "and the spontaneous-CP onset keeps a stable cubic coefficient "
+                    "C ~ 3.55e-6 on the audited window. The E6 gauge equivalence is "
+                    "consistent with the exactness tier; the full spontaneous-CP dynamics "
+                    "remain frontier behavior."
                 ),
                 "certificate": chapter11,
             },
@@ -1770,8 +1809,11 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 "Chapter 10 routes transport holonomy to the exact 2x2 Jordan block, "
                 "transport scale 217/12, and the affine closure target dC = 14105.  "
                 "Chapter 11 routes gauge and flavor content to the exact E6/CKM bridge: "
-                "aligned VEV -> identity CKM (CP-exact), misaligned VEV -> CP-breaking; "
-                "the spontaneous-CP frontier remains the next open layer.  "
+                "aligned VEV -> identity CKM (CP-exact), misaligned VEV -> CP-breaking, "
+                "the exact local E6 carrier is the 27-line dual GQ(4,2) graph with 45 "
+                "cubic-support triangles, and the spontaneous-CP onset keeps a stable cubic "
+                "coefficient near C ~ 3.55e-6 on the audited window; the spontaneous-CP frontier "
+                "remains the next open layer.  "
                 "Chapter 12 closes the full CCT crosswalk: all 11 repo-exact "
                 "master-lock records are certified, the smooth realization theorem "
                 "has REPO-EXACT status, and every CCT desideratum row is pinned "

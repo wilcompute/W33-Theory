@@ -327,6 +327,8 @@ def spontaneous_cp_response_law_packet() -> Dict[str, object]:
     epsilons = [0.05, 0.10, 0.15, 0.20, 0.25, 0.30]
     sweep = []
     cubic_coeffs = []
+    quadratic_coeffs = []
+    linear_coeffs = []
     odd_residuals = []
     abs_j_plus = []
 
@@ -342,6 +344,8 @@ def spontaneous_cp_response_law_packet() -> Dict[str, object]:
         _, j_minus = compute_ckm_and_jarlskog(y_exact, y_minus)
 
         odd_residual = abs(float(j_plus) + float(j_minus))
+        linear_coeff = abs(float(j_plus)) / eps
+        quadratic_coeff = abs(float(j_plus)) / (eps**2)
         cubic_coeff = abs(float(j_plus)) / (eps**3)
 
         sweep.append(
@@ -351,9 +355,13 @@ def spontaneous_cp_response_law_packet() -> Dict[str, object]:
                 "jarlskog_minus": float(j_minus),
                 "odd_residual_abs": odd_residual,
                 "abs_j_plus": abs(float(j_plus)),
+                "abs_j_plus_over_epsilon": linear_coeff,
+                "abs_j_plus_over_epsilon_squared": quadratic_coeff,
                 "abs_j_plus_over_epsilon_cubed": cubic_coeff,
             }
         )
+        linear_coeffs.append(linear_coeff)
+        quadratic_coeffs.append(quadratic_coeff)
         cubic_coeffs.append(cubic_coeff)
         odd_residuals.append(odd_residual)
         abs_j_plus.append(abs(float(j_plus)))
@@ -362,6 +370,11 @@ def spontaneous_cp_response_law_packet() -> Dict[str, object]:
     cubic_min = min(cubic_window)
     cubic_max = max(cubic_window)
     cubic_ratio = cubic_max / cubic_min if cubic_min > 0 else float("inf")
+    onset_log_slopes = [
+        math.log(abs_j_plus[i + 1] / abs_j_plus[i])
+        / math.log(epsilons[i + 1] / epsilons[i])
+        for i in range(len(epsilons) - 1)
+    ]
 
     return {
         "misalignment_component": 3,
@@ -373,10 +386,21 @@ def spontaneous_cp_response_law_packet() -> Dict[str, object]:
         "abs_jarlskog_is_strictly_increasing_with_epsilon": all(
             abs_j_plus[i] < abs_j_plus[i + 1] for i in range(len(abs_j_plus) - 1)
         ),
+        "linear_coefficient_window": linear_coeffs,
+        "quadratic_coefficient_window": quadratic_coeffs,
+        "cubic_coefficient_window": cubic_coeffs,
+        "onset_log_slope_window": onset_log_slopes,
+        "minimum_onset_log_slope": min(onset_log_slopes),
+        "maximum_onset_log_slope": max(onset_log_slopes),
         "cubic_coefficient_estimate": sum(cubic_window) / len(cubic_window),
         "cubic_coefficient_min": cubic_min,
         "cubic_coefficient_max": cubic_max,
         "cubic_coefficient_ratio_max_over_min": cubic_ratio,
+        "cubic_coefficient_band_statement": (
+            "The audited cubic coefficient stays in a narrow band "
+            f"[{cubic_min:.6e}, {cubic_max:.6e}] with ratio {cubic_ratio:.6f}"
+        ),
+        "derived_order_statement": "The first nonzero CP-odd invariant is odd in epsilon and numerically enters at order >= 3 on the audited window",
         "derived_law": "|J| ~ C * epsilon^3 near aligned exact point",
     }
 
@@ -516,8 +540,9 @@ def classify_flavor_frontier() -> Tuple[Dict[str, object], ...]:
             "statement": (
                 "Around the aligned exact point, conjugate complex VEV perturbations "
                 "induce equal-and-opposite CKM Jarlskog signs with an odd residual at "
-                "machine zero and a stable cubic onset |J| ~ C epsilon^3 over the "
-                "audited small-epsilon window."
+                "machine zero, and the first nonzero CP-odd invariant enters at least "
+                "cubically with a stable onset law |J| ~ C epsilon^3 over the audited "
+                "small-epsilon window."
             ),
             "evidence": cp_response,
         },
@@ -564,11 +589,19 @@ def analyze() -> Dict[str, object]:
                 )
             )
         ),
-        "spontaneous_cp_frontier_exhibits_cp_odd_cubic_onset_near_the_exact_point": (
+        "spontaneous_cp_frontier_exhibits_cp_odd_at_least_cubic_onset_near_the_exact_point": (
             cp_response["cp_odd_sign_flip_exact"]
             and cp_response["max_odd_residual_abs"] < 1e-15
             and cp_response["abs_jarlskog_is_strictly_increasing_with_epsilon"]
+            and cp_response["minimum_onset_log_slope"] > 2.5
             and cp_response["cubic_coefficient_ratio_max_over_min"] < 1.25
+        ),
+        "spontaneous_cp_frontier_has_a_stable_audited_cubic_coefficient": (
+            cp_response["cubic_coefficient_min"] > 3.3e-6
+            and cp_response["cubic_coefficient_max"] < 3.8e-6
+            and cp_response["cubic_coefficient_ratio_max_over_min"] < 1.12
+            and cp_response["minimum_onset_log_slope"] > 2.95
+            and cp_response["maximum_onset_log_slope"] < 3.25
         ),
     }
 

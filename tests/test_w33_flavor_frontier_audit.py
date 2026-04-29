@@ -30,7 +30,8 @@ def test_flavor_frontier_audit_keeps_exact_and_promoted_layers_separate() -> Non
     assert theorem["section90_pmns_is_not_the_repo_exact_pmns_theorem"] is True
     assert theorem["section83_alpha_running_is_not_a_precision_match_to_current_pdg_data"] is True
     assert theorem["exact_layer_and_spontaneous_cp_frontier_bridge_is_executable"] is True
-    assert theorem["spontaneous_cp_frontier_exhibits_cp_odd_cubic_onset_near_the_exact_point"] is True
+    assert theorem["spontaneous_cp_frontier_exhibits_cp_odd_at_least_cubic_onset_near_the_exact_point"] is True
+    assert theorem["spontaneous_cp_frontier_has_a_stable_audited_cubic_coefficient"] is True
 
     conflict = records["section84_section86_internal_ckm_conflict"]["evidence"]
     assert round(conflict["section84_A"], 6) == 0.877058
@@ -64,7 +65,13 @@ def test_flavor_frontier_audit_keeps_exact_and_promoted_layers_separate() -> Non
 
     cp = records["spontaneous_cp_frontier_has_cp_odd_cubic_onset_law"]["evidence"]
     assert cp["derived_law"] == "|J| ~ C * epsilon^3 near aligned exact point"
+    assert cp["derived_order_statement"].startswith("The first nonzero CP-odd invariant")
+    assert cp["cubic_coefficient_band_statement"].startswith("The audited cubic coefficient stays in a narrow band")
     assert cp["cp_odd_sign_flip_exact"] is True
     assert cp["max_odd_residual_abs"] < 1e-15
     assert cp["abs_jarlskog_is_strictly_increasing_with_epsilon"] is True
+    assert cp["minimum_onset_log_slope"] > 2.5
+    assert cp["cubic_coefficient_min"] > 3.3e-6
+    assert cp["cubic_coefficient_max"] < 3.8e-6
+    assert cp["cubic_coefficient_ratio_max_over_min"] < 1.12
     assert cp["cubic_coefficient_ratio_max_over_min"] < 1.25
