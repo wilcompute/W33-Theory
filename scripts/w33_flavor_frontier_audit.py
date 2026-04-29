@@ -385,6 +385,27 @@ def spontaneous_cp_response_law_packet() -> Dict[str, object]:
     odd_cubic_abs_ratio = (
         odd_cubic_abs_max / odd_cubic_abs_min if odd_cubic_abs_min > 0 else float("inf")
     )
+    eps_sq = [eps * eps for eps in epsilons]
+    mean_x = sum(eps_sq) / len(eps_sq)
+    mean_y = sum(odd_cubic_coeffs) / len(odd_cubic_coeffs)
+    var_x = sum((value - mean_x) ** 2 for value in eps_sq)
+    cov_xy = sum(
+        (eps_sq[idx] - mean_x) * (odd_cubic_coeffs[idx] - mean_y)
+        for idx in range(len(eps_sq))
+    )
+    odd_cubic_affine_slope = cov_xy / var_x if var_x > 0 else 0.0
+    odd_cubic_affine_intercept = mean_y - odd_cubic_affine_slope * mean_x
+    odd_cubic_affine_residuals = [
+        abs(
+            odd_cubic_coeffs[idx]
+            - (odd_cubic_affine_slope * eps_sq[idx] + odd_cubic_affine_intercept)
+        )
+        for idx in range(len(eps_sq))
+    ]
+    odd_cubic_coeff_span = max(odd_cubic_coeffs) - min(odd_cubic_coeffs)
+    odd_cubic_affine_relative_max_residual = (
+        max(odd_cubic_affine_residuals) / max(abs(odd_cubic_coeff_span), 1e-30)
+    )
     onset_log_slopes = [
         math.log(abs_j_plus[i + 1] / abs_j_plus[i])
         / math.log(epsilons[i + 1] / epsilons[i])
@@ -422,10 +443,23 @@ def spontaneous_cp_response_law_packet() -> Dict[str, object]:
         "odd_cubic_coefficient_max_abs": odd_cubic_abs_max,
         "odd_cubic_coefficient_abs_ratio_max_over_min": odd_cubic_abs_ratio,
         "max_even_cubic_leak_abs": max(even_cubic_leaks),
+        "odd_cubic_coefficient_affine_slope_in_epsilon_squared": odd_cubic_affine_slope,
+        "odd_cubic_coefficient_affine_intercept": odd_cubic_affine_intercept,
+        "odd_cubic_coefficient_affine_max_abs_residual": max(odd_cubic_affine_residuals),
+        "odd_cubic_coefficient_affine_mean_abs_residual": (
+            sum(odd_cubic_affine_residuals) / len(odd_cubic_affine_residuals)
+        ),
+        "odd_cubic_coefficient_affine_relative_max_residual": (
+            odd_cubic_affine_relative_max_residual
+        ),
         "odd_cubic_coefficient_statement": (
             "The conjugation-odd cubic coefficient C_odd(epsilon) = "
             "(J(+epsilon) - J(-epsilon)) / (2 epsilon^3) stays nonzero and stable "
             f"with |C_odd| in [{odd_cubic_abs_min:.6e}, {odd_cubic_abs_max:.6e}]"
+        ),
+        "odd_cubic_normal_form_statement": (
+            "C_odd(epsilon) is numerically affine in epsilon^2 over the audited window "
+            f"with max relative residual {odd_cubic_affine_relative_max_residual:.6e}"
         ),
         "derived_order_statement": "The first nonzero CP-odd invariant is odd in epsilon and numerically enters at order >= 3 on the audited window",
         "derived_law": "|J| ~ C * epsilon^3 near aligned exact point",
@@ -635,6 +669,12 @@ def analyze() -> Dict[str, object]:
             and cp_response["odd_cubic_coefficient_max_abs"] < 3.8e-6
             and cp_response["odd_cubic_coefficient_abs_ratio_max_over_min"] < 1.12
             and cp_response["max_even_cubic_leak_abs"] < 1e-18
+        ),
+        "spontaneous_cp_frontier_odd_cubic_coefficient_has_epsilon_squared_normal_form": (
+            abs(cp_response["odd_cubic_coefficient_affine_intercept"]) > 3.2e-6
+            and abs(cp_response["odd_cubic_coefficient_affine_intercept"]) < 3.6e-6
+            and cp_response["odd_cubic_coefficient_affine_relative_max_residual"] < 0.02
+            and cp_response["odd_cubic_coefficient_affine_max_abs_residual"] < 6e-9
         ),
     }
 

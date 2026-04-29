@@ -33,6 +33,7 @@ def test_flavor_frontier_audit_keeps_exact_and_promoted_layers_separate() -> Non
     assert theorem["spontaneous_cp_frontier_exhibits_cp_odd_at_least_cubic_onset_near_the_exact_point"] is True
     assert theorem["spontaneous_cp_frontier_has_a_stable_audited_cubic_coefficient"] is True
     assert theorem["spontaneous_cp_frontier_has_a_stable_conjugation_odd_cubic_coefficient"] is True
+    assert theorem["spontaneous_cp_frontier_odd_cubic_coefficient_has_epsilon_squared_normal_form"] is True
 
     conflict = records["section84_section86_internal_ckm_conflict"]["evidence"]
     assert round(conflict["section84_A"], 6) == 0.877058
@@ -69,6 +70,7 @@ def test_flavor_frontier_audit_keeps_exact_and_promoted_layers_separate() -> Non
     assert cp["derived_order_statement"].startswith("The first nonzero CP-odd invariant")
     assert cp["cubic_coefficient_band_statement"].startswith("The audited cubic coefficient stays in a narrow band")
     assert cp["odd_cubic_coefficient_statement"].startswith("The conjugation-odd cubic coefficient")
+    assert cp["odd_cubic_normal_form_statement"].startswith("C_odd(epsilon) is numerically affine in epsilon^2")
     assert cp["cp_odd_sign_flip_exact"] is True
     assert cp["max_odd_residual_abs"] < 1e-15
     assert cp["abs_jarlskog_is_strictly_increasing_with_epsilon"] is True
@@ -80,4 +82,8 @@ def test_flavor_frontier_audit_keeps_exact_and_promoted_layers_separate() -> Non
     assert cp["odd_cubic_coefficient_max_abs"] < 3.8e-6
     assert cp["odd_cubic_coefficient_abs_ratio_max_over_min"] < 1.12
     assert cp["max_even_cubic_leak_abs"] < 1e-18
+    assert abs(cp["odd_cubic_coefficient_affine_intercept"]) > 3.2e-6
+    assert abs(cp["odd_cubic_coefficient_affine_intercept"]) < 3.6e-6
+    assert cp["odd_cubic_coefficient_affine_relative_max_residual"] < 0.02
+    assert cp["odd_cubic_coefficient_affine_max_abs_residual"] < 6e-9
     assert cp["cubic_coefficient_ratio_max_over_min"] < 1.25
