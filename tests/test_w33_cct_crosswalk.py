@@ -597,7 +597,9 @@ class TestCCT4H4Selector:
         assert "Chapter 6 non-local game-of-life layer" in crosswalk["theorem"]["interpretation"]
         assert "ten D4/K-VT packets giving 10 x 24 = 240" in crosswalk["theorem"]["interpretation"]
 
-    def test_crosswalk_has_a_chapter2_certificate(self):
+    def test_crosswalk_interpretation_covers_chapters_7_through_12(self):
+        crosswalk = build_cct_crosswalk()
+
         assert "Chapter 7 routes" in crosswalk["theorem"]["interpretation"]
         assert "480 directed edges" in crosswalk["theorem"]["interpretation"]
         assert "Ramanujan" in crosswalk["theorem"]["interpretation"]
@@ -613,7 +615,7 @@ class TestCCT4H4Selector:
         assert "45 cubic-support triangles" in crosswalk["theorem"]["interpretation"]
         assert "C ~ 3.55e-6" in crosswalk["theorem"]["interpretation"]
         assert "affine-in-epsilon^2 normal form" in crosswalk["theorem"]["interpretation"]
-        assert "Chapter 12 closes" in crosswalk["theorem"]["interpretation"]
+        assert "Chapter 12 states the boundary-explicit CCT closure" in crosswalk["theorem"]["interpretation"]
         assert "11 repo-exact" in crosswalk["theorem"]["interpretation"]
 
     def test_crosswalk_has_a_chapter2_certificate(self):
