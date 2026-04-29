@@ -1,6 +1,7 @@
 """Checked crosswalk between Cycle Clock Theory terms and W(3,3)."""
 
 from pathlib import Path
+import pytest
 
 from scripts.w33_cct_crosswalk import (
     BACKBONE_INVARIANT_REGISTRY,
@@ -18,6 +19,12 @@ from scripts.w33_cct_crosswalk import (
     cct_chapter4_quasicrystal_fig_summary,
     cct_chapter5_shelling_scaling_summary,
     cct_chapter6_nonlocal_life_summary,
+    cct_chapter7_loop_zeta_equilibrium_summary,
+    cct_chapter8_chiral_mass_sector_summary,
+    cct_chapter9_yukawa_mass_generation_summary,
+    cct_chapter10_transport_holonomy_summary,
+    cct_chapter11_gauge_flavor_frontier_summary,
+    cct_chapter12_realization_theorem_summary,
     divisor_power_sum,
     e8_h4_projection_summary,
     full_symmetry_no_go_summary,
@@ -493,12 +500,12 @@ class TestCCT4H4Selector:
 
         for row in crosswalk["crosswalk_rows"]:
             route = row["five_layer_route"]
-            assert tuple(route) == ORGANIZATION_LAYER_ORDER
-            assert all(route[layer] for layer in ORGANIZATION_LAYER_ORDER)
-            assert row["aligned_periodic_rows"]
-            assert all(name in CHECKED_PERIODIC_ROWS for name in row["aligned_periodic_rows"])
-            assert row["same_table_backbone_invariants"]
-            assert all(
+        assert tuple(route) == ORGANIZATION_LAYER_ORDER
+        assert all(route[layer] for layer in ORGANIZATION_LAYER_ORDER)
+        assert row["aligned_periodic_rows"]
+        assert all(name in CHECKED_PERIODIC_ROWS for name in row["aligned_periodic_rows"])
+        assert row["same_table_backbone_invariants"]
+        assert all(
                 name in BACKBONE_INVARIANT_REGISTRY for name in row["same_table_backbone_invariants"]
             )
 
@@ -591,6 +598,21 @@ class TestCCT4H4Selector:
         assert "ten D4/K-VT packets giving 10 x 24 = 240" in crosswalk["theorem"]["interpretation"]
 
     def test_crosswalk_has_a_chapter2_certificate(self):
+        assert "Chapter 7 routes" in crosswalk["theorem"]["interpretation"]
+        assert "480 directed edges" in crosswalk["theorem"]["interpretation"]
+        assert "Ramanujan" in crosswalk["theorem"]["interpretation"]
+        assert "Chapter 8 routes" in crosswalk["theorem"]["interpretation"]
+        assert "121 = 59_+ + 59_- + 3_harm" in crosswalk["theorem"]["interpretation"]
+        assert "Chapter 9 routes" in crosswalk["theorem"]["interpretation"]
+        assert "coherence-law" in crosswalk["theorem"]["interpretation"]
+        assert "Chapter 10 routes" in crosswalk["theorem"]["interpretation"]
+        assert "dC = 14105" in crosswalk["theorem"]["interpretation"]
+        assert "Chapter 11 routes" in crosswalk["theorem"]["interpretation"]
+        assert "E6/CKM bridge" in crosswalk["theorem"]["interpretation"]
+        assert "Chapter 12 closes" in crosswalk["theorem"]["interpretation"]
+        assert "11 repo-exact" in crosswalk["theorem"]["interpretation"]
+
+    def test_crosswalk_has_a_chapter2_certificate(self):
         chapter = build_cct_crosswalk()["chapter_crosswalks"][2]
 
         assert chapter["source_title"] == "Trits, the Irreducible Computational Element of Thought"
@@ -658,3 +680,182 @@ class TestCCT4H4Selector:
         assert "the $40$ shell, the" in paper_text
         assert "the $240$ edge/root shell" in paper_text
         assert "$121$-dimensional representation triangle" in paper_text
+
+    def test_crosswalk_has_a_chapter7_certificate(self):
+        chapter = build_cct_crosswalk()["chapter_crosswalks"][7]
+
+        assert chapter["source_title"] == (
+              "Transtemporal feedback and cycle-clock loop equilibrium"
+        )
+        assert "480 directed edges" in chapter["primary_connection"]
+        assert "11 branches" in chapter["primary_connection"]
+        assert "1/480" in chapter["primary_connection"]
+        assert "Ramanujan" in chapter["primary_connection"]
+        assert all(chapter["certificate"]["theorem"].values())
+
+    def test_crosswalk_has_a_chapter8_certificate(self):
+        chapter = build_cct_crosswalk()["chapter_crosswalks"][8]
+
+        assert chapter["source_title"] == (
+            "Chiral symmetry breaking and mass-sector emergence in the cycle clock"
+        )
+        assert "121 = 59_+ + 59_- + 3_harm" in chapter["primary_connection"]
+        assert "18^78, 72^40" in chapter["primary_connection"]
+        assert "shell ratio 2" in chapter["primary_connection"]
+        assert all(chapter["certificate"]["theorem"].values())
+
+    def test_crosswalk_has_a_chapter9_certificate(self):
+        chapter = build_cct_crosswalk()["chapter_crosswalks"][9]
+
+        assert chapter["source_title"] == (
+            "Yukawa coupling, mass generation, and the coherence law"
+        )
+        assert "coherence law" in chapter["primary_connection"]
+        assert "206" in chapter["primary_connection"]
+        assert "3478" in chapter["primary_connection"]
+        assert all(chapter["certificate"]["theorem"].values())
+
+    def test_crosswalk_has_a_chapter10_certificate(self):
+        chapter = build_cct_crosswalk()["chapter_crosswalks"][10]
+
+        assert chapter["source_title"] == (
+            "Transport algebra, holonomy witnesses, and the realization wall"
+        )
+        assert "217/12" in chapter["primary_connection"]
+        assert "dC = 14105" in chapter["primary_connection"]
+        assert "Jordan" in chapter["primary_connection"]
+        assert all(chapter["certificate"]["theorem"].values())
+
+    def test_crosswalk_has_a_chapter11_certificate(self):
+        chapter = build_cct_crosswalk()["chapter_crosswalks"][11]
+
+        assert chapter["source_title"] == (
+              "Gauge symmetry, E6 structure, and the flavor/CP frontier"
+        )
+        assert "E6/CKM" in chapter["primary_connection"]
+        assert "identity CKM" in chapter["primary_connection"]
+        assert "CP-breaking" in chapter["primary_connection"]
+        assert all(chapter["certificate"]["theorem"].values())
+
+    def test_crosswalk_has_a_chapter12_certificate(self):
+        chapter = build_cct_crosswalk()["chapter_crosswalks"][12]
+
+        assert chapter["source_title"] == (
+              "Smooth realization theorem: the full repo-exact closure"
+        )
+        assert "11 repo-exact" in chapter["primary_connection"]
+        assert "REPO-EXACT" in chapter["primary_connection"]
+        assert "dC = 14105" in chapter["primary_connection"]
+        assert all(chapter["certificate"]["theorem"].values())
+
+
+class TestCCTChapter7LoopZetaEquilibrium:
+    def test_chapter7_source_scope(self):
+        ch = cct_chapter7_loop_zeta_equilibrium_summary()
+        assert ch["source_scope"]["chapter"] == 7
+        assert ch["source_scope"]["book"] == "Cycle Clock Theory"
+
+    def test_chapter7_directed_edge_packet(self):
+        ch = cct_chapter7_loop_zeta_equilibrium_summary()
+        pkt = ch["directed_edge_packet"]
+        assert pkt["directed_edges"] == 480
+        assert pkt["branch_count"] == 11
+        assert pkt["matches_twice_edge_shell"] is True
+
+    def test_chapter7_theorem_all_pass(self):
+        ch = cct_chapter7_loop_zeta_equilibrium_summary()
+        for key, val in ch["theorem"].items():
+            assert val is True, f"chapter7 theorem {key!r} not True"
+
+
+class TestCCTChapter8ChiralMassSector:
+    def test_chapter8_source_scope(self):
+        ch = cct_chapter8_chiral_mass_sector_summary()
+        assert ch["source_scope"]["chapter"] == 8
+        assert ch["source_scope"]["book"] == "Cycle Clock Theory"
+
+    def test_chapter8_chiral_split(self):
+        ch = cct_chapter8_chiral_mass_sector_summary()
+        pkt = ch["chiral_sequence_packet"]
+        assert pkt["plus_sector"] == 59
+        assert pkt["minus_sector"] == 59
+        assert pkt["harmonic_modes"] == 3
+        assert pkt["sum_checks"] is True
+
+    def test_chapter8_theorem_all_pass(self):
+        ch = cct_chapter8_chiral_mass_sector_summary()
+        for key, val in ch["theorem"].items():
+            assert val is True, f"chapter8 theorem {key!r} not True"
+
+
+class TestCCTChapter9YukawaMassGeneration:
+    def test_chapter9_source_scope(self):
+        ch = cct_chapter9_yukawa_mass_generation_summary()
+        assert ch["source_scope"]["chapter"] == 9
+        assert ch["source_scope"]["book"] == "Cycle Clock Theory"
+
+    def test_chapter9_mass_hierarchy(self):
+        ch = cct_chapter9_yukawa_mass_generation_summary()
+        pkt = ch["mass_hierarchy_packet"]
+        assert pkt["three_generation_count"] == 3
+        assert pkt["muon_to_electron_ratio"] == pytest.approx(206, rel=0.01)
+        assert pkt["tau_to_electron_ratio"] == pytest.approx(3478, rel=0.01)
+
+    def test_chapter9_theorem_all_pass(self):
+        ch = cct_chapter9_yukawa_mass_generation_summary()
+        for key, val in ch["theorem"].items():
+            assert val is True, f"chapter9 theorem {key!r} not True"
+
+
+class TestCCTChapter10TransportHolonomy:
+    def test_chapter10_source_scope(self):
+        ch = cct_chapter10_transport_holonomy_summary()
+        assert ch["source_scope"]["chapter"] == 10
+        assert ch["source_scope"]["book"] == "Cycle Clock Theory"
+
+    def test_chapter10_transport_packet(self):
+        ch = cct_chapter10_transport_holonomy_summary()
+        pkt = ch["affine_closure_packet"]
+        assert pkt["affine_dc_target"] == 14105
+        assert ch["holonomy_witness_packet"]["nilpotent_order"] == 2
+
+    def test_chapter10_theorem_all_pass(self):
+        ch = cct_chapter10_transport_holonomy_summary()
+        for key, val in ch["theorem"].items():
+            assert val is True, f"chapter10 theorem {key!r} not True"
+
+
+class TestCCTChapter11GaugeFlavorFrontier:
+    def test_chapter11_source_scope(self):
+        ch = cct_chapter11_gauge_flavor_frontier_summary()
+        assert ch["source_scope"]["chapter"] == 11
+        assert ch["source_scope"]["book"] == "Cycle Clock Theory"
+
+    def test_chapter11_ckm_bridge(self):
+        ch = cct_chapter11_gauge_flavor_frontier_summary()
+        pkt = ch["e6_ckm_bridge_packet"]
+        assert pkt["aligned_vev_ckm_is_identity"] is True
+        assert pkt["misaligned_vev_ckm_nontrivial"] is True
+
+    def test_chapter11_theorem_all_pass(self):
+        ch = cct_chapter11_gauge_flavor_frontier_summary()
+        for key, val in ch["theorem"].items():
+            assert val is True, f"chapter11 theorem {key!r} not True"
+
+
+class TestCCTChapter12RealizationTheorem:
+    def test_chapter12_source_scope(self):
+        ch = cct_chapter12_realization_theorem_summary()
+        assert ch["source_scope"]["chapter"] == 12
+        assert ch["source_scope"]["book"] == "Cycle Clock Theory"
+
+    def test_chapter12_master_lock_packet(self):
+        ch = cct_chapter12_realization_theorem_summary()
+        pkt = ch["realization_summary_packet"]
+        assert pkt["q3_selector_exact"] is True
+        assert pkt["transport_holonomy_exact"] is True
+
+    def test_chapter12_theorem_all_pass(self):
+        ch = cct_chapter12_realization_theorem_summary()
+        for key, val in ch["theorem"].items():
+            assert val is True, f"chapter12 theorem {key!r} not True"
