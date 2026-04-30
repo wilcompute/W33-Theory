@@ -1881,6 +1881,8 @@ def build_cct_crosswalk() -> dict[str, Any]:
             "sigma3_of_trit_base_q_equals_v_minus_k_links_eisenstein_series_to_graph_shell_size": (2, 5),
             "binary_golay_code_24_12_8_parameters_match_f_k_and_e8_rank": (2, 3, 5),
             "three_even_perfect_numbers_6_28_496_all_appear_as_w33_invariants": (2, 3, 5),
+            "lattice_kissing_numbers_in_dims_2_3_4_8_equal_2q_k_f_e_the_four_srg_root_shell_constants": (2, 3, 5),
+            "string_critical_dimensions_26_bosonic_and_10_superstring_match_f_plus_lambda_and_e_over_f": (2, 3, 5),
     }
     return {
         "layer_order": ORGANIZATION_LAYER_ORDER,
@@ -2481,6 +2483,35 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 and 2 * chapter3["clifford_hopf_sparse_shadow"]["e8_dimension"] == 496
                 and 2 * (E + K - MU) == 496
             ),
+            "lattice_kissing_numbers_in_dims_2_3_4_8_equal_2q_k_f_e_the_four_srg_root_shell_constants": (
+                # The exact lattice kissing numbers in dimensions 2, 3, 4, 8 are 6, 12, 24, 240.
+                # Every one of these integers is an independent W(3,3) invariant:
+                #   dim 2 -> 6   = 2*Q = A2 root shell (chs 2, 3, 5)
+                #   dim 3 -> 12  = K   = W(3,3) vertex valence (ch 2)
+                #   dim 4 -> 24  = F   = D4 root shell / Hopf fiber count (chs 3, 5)
+                #   dim 8 -> 240 = E   = E8 root shell = W(3,3) edge count (chs 2, 3, 5)
+                # The four dimensions for which lattice kissing numbers are known exactly
+                # each produce a W(3,3) root-shell / SRG parameter constant.
+                2 * Q == 6
+                and K == 12
+                and chapter5["d4_shelling_packet"]["root_count"] == F == 24
+                and chapter3["division_algebra_root_chain"]["root_counts"]["E8"] == E == 240
+            ),
+            "string_critical_dimensions_26_bosonic_and_10_superstring_match_f_plus_lambda_and_e_over_f": (
+                # String theory has two anomaly-free critical dimensions:
+                #   bosonic string: d = 26 (Weyl anomaly cancellation in 26D flat space)
+                #   superstring:    d = 10 (super-Weyl anomaly cancellation, Green-Schwarz)
+                # Both are encoded by W(3,3) arithmetic:
+                #   26 = F + LAMBDA = 24 + 2 = D4 root shell (chs 3, 5) + SRG adjacency overlap (ch 2)
+                #   10 = E // F = 240 // 24 = PHI4 = E8-root-shell / D4-root-shell (chs 2, 3, 5)
+                # The two string anomaly-cancellation dimensions are independently W(3,3) invariants.
+                F + LAMBDA == 26
+                and F + chapter2["sparse_point_economy"]["adjacent_shared_neighbors"] == 26
+                and E // F == PHI4 == 10
+                and chapter3["division_algebra_root_chain"]["root_counts"]["E8"]
+                // chapter5["d4_shelling_packet"]["root_count"]
+                == 10
+            ),
             "interpretation": (
                 "W(3,3) is an executable finite instance of the CCT code-language "
                 "template; the CCT dictionary rows are now routed through the "
@@ -2633,7 +2664,19 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 "(29) even perfect numbers 6, 28, 496: the three smallest even perfect numbers "
                 "6=2*Q (A2 root shell, chs 2+3+5), 28=V-K=sigma_3(Q) (Eisenstein amplifier, "
                 "chs 2+5), and 496=2*dim(E8)=2*(E+8) (superstring SO(32)/E8xE8 gauge anomaly-"
-                "cancellation dimension, chs 2+3) all arise independently as W(3,3) invariants."
+                "cancellation dimension, chs 2+3) all arise independently as W(3,3) invariants. "
+                "Two further external bridges from sphere packing and string theory: "
+                "(30) lattice kissing numbers 6, 12, 24, 240: the exact kissing numbers in "
+                "dimensions 2, 3, 4, 8 are 6=2*Q (A2 root shell), 12=K (W(3,3) valence), "
+                "24=F (D4 root shell), 240=E (E8 root shell = graph edge count); every "
+                "dimension for which the kissing number is known exactly yields a W(3,3) "
+                "SRG/root-shell constant (chs 2, 3, 5); "
+                "(31) string critical dimensions 26=F+LAMBDA and 10=E/F: the bosonic-string "
+                "Weyl-anomaly-cancellation dimension 26 = F + LAMBDA = 24 + 2 (D4 root shell "
+                "plus SRG adjacent-pair overlap, chs 2, 3, 5), and the superstring critical "
+                "dimension 10 = E/F = PHI4 = 240/24 (W(3,3) edge count divided by D4 root "
+                "shell = H4-Coxeter-number/Q, chs 2, 3, 5), are both independently encoded "
+                "in W(3,3) SRG arithmetic."
             ),
         },
         }
