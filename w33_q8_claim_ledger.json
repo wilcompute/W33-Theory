@@ -1,0 +1,104 @@
+{
+  "source": "scripts/w33_q8_spectral_action_master_audit.py",
+  "version": 1,
+  "exact_finite_theorem": [
+    {
+      "id": "alpha_integer_part_gaussian_norm",
+      "claim": "alpha^-1 integer part is fixed by Gaussian norm |(k-1)+i*mu|^2",
+      "value": 137,
+      "formula": "(k-1)^2 + mu^2",
+      "tier_note": "exact finite arithmetic identity"
+    },
+    {
+      "id": "pmns_projective_incidence_packet",
+      "claim": "PMNS packet is the promoted incidence-geometry closure",
+      "sin2_theta12": "4/13",
+      "sin2_theta23": "7/13",
+      "sin2_theta13": "2/91",
+      "tier_note": "exact finite theorem surface"
+    },
+    {
+      "id": "qcd_beta0_cyclotomic",
+      "claim": "QCD one-loop beta coefficient equals Phi6 at q=3",
+      "value": "7",
+      "formula": "(11*Nc-2*Nf)/3 with Nc=3,Nf=6",
+      "tier_note": "exact finite arithmetic identity"
+    },
+    {
+      "id": "monster_leech_gap",
+      "claim": "Monster-Leech arithmetic gap equals mu*q^4",
+      "value": 324,
+      "formula": "196884-196560 = mu*q^4",
+      "tier_note": "exact finite arithmetic identity"
+    }
+  ],
+  "near_exact_phenomenology": [
+    {
+      "id": "alpha_table_fraction",
+      "claim": "high-precision alpha^-1 table fraction",
+      "value_fraction": "669969/4889",
+      "value_decimal_12": "137.035999181837",
+      "tier_note": "phenomenology layer; do not promote to exact theorem"
+    }
+  ],
+  "frontier_conjecture": [
+    {
+      "id": "global_selector_lift",
+      "claim": "global selector/lift law on the fixed W(3,3) carrier remains open",
+      "tier_note": "frontier program, not exact closure"
+    },
+    {
+      "id": "late_flavor_atmospheric_corrections",
+      "claim": "late flavor atmospheric-angle correction packet remains frontier",
+      "tier_note": "bridge-level phenomenology/frontier"
+    }
+  ],
+  "conflict": [
+    {
+      "id": "omega_lambda_generator_vs_cosmo_table",
+      "details": {
+        "generator_formula": "Omega_Lambda = 3x",
+        "generator_value": "9/13",
+        "cosmo_table_formula": "(v+1)/60",
+        "cosmo_table_value": "41/60",
+        "equal": false
+      }
+    },
+    {
+      "id": "cabibbo_sin_vs_tan_shorthand",
+      "details": {
+        "exact_generator_statement": "tan(theta_C) = x",
+        "sin2_if_theta_C_is_arctan_x": "9/178",
+        "x_squared": "9/169",
+        "sin_theta_C_equals_x_is_exact": false
+      }
+    },
+    {
+      "id": "legacy_pmns_theta12_formula",
+      "details": {
+        "promoted_value_mu_over_Phi3": "4/13",
+        "legacy_value_q_over_k_minus_lambda": "3/10",
+        "equal": false
+      }
+    },
+    {
+      "id": "so32_label_misprint",
+      "details": {
+        "exact_2E_plus_16": 496,
+        "exact_2_dim_E8": 496,
+        "literal_2E_plus_2_dim_E8": 976,
+        "literal_equals_496": false
+      }
+    },
+    {
+      "id": "alpha_table_rounding_or_formula_conflict",
+      "details": {
+        "paper_exact_fraction": "669969/4889",
+        "paper_exact_decimal_12": "137.035999181837",
+        "index_q8_table_value": "137.036004",
+        "same_as_index_q8_table_to_6_decimals": false
+      }
+    }
+  ],
+  "conflict_count": 5
+}
