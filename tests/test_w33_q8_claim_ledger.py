@@ -45,3 +45,15 @@ def test_paper_and_docs_use_normalized_claim_surface() -> None:
     assert "669969/4889 ≈ 137.035999182" in docs
     assert "sin&sup2;&theta;<sub>12</sub>=4/13 (exact finite theorem)" in docs
     assert "Legacy sin&sup2;&theta;<sub>12</sub>=3/10 remains a boundary conflict in the Q8 claim ledger" in docs
+
+
+def test_legacy_formula_mentions_are_explicitly_boundary_tagged() -> None:
+    paper = Path("w33_paper.tex").read_text(encoding="utf-8")
+    docs = Path("docs/index.html").read_text(encoding="utf-8")
+
+    # Paper must not present 3/10 PMNS as unqualified primary theorem text.
+    assert "\\sin^2\\theta_{12}^{\\rm PMNS} & $q/(k-\\lambda)$ & $3/10$" not in paper
+    assert "legacy $q/(k-\\lambda)=3/10$ boundary packet" in paper
+
+    # Docs high-visibility prediction cards must boundary-tag legacy alpha shorthand.
+    assert "legacy/boundary\n                &alpha;<sup>&minus;1</sup>&asymp;137.036" in docs
