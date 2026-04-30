@@ -1547,6 +1547,24 @@ def build_cct_crosswalk() -> dict[str, Any]:
     backbone_invariants = sorted(
         {name for row in rows for name in row["same_table_backbone_invariants"]}
     )
+    deep_connection_motifs = {
+        "q3_selector_reappears_across_language_scaling_mass_and_boundary": (2, 5, 8, 9, 12),
+        "edge_root_shell_240_reappears_across_foundation_quasicrystal_shelling_and_loop_layers": (
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+        ),
+        "representation_triangle_121_bridges_measurement_chiral_mass_and_operator_layers": (
+            8,
+            12,
+        ),
+        "transport_wall_target_dC_14105_links_transport_and_global_boundary_layers": (10, 12),
+        "exact_to_frontier_flavor_bridge_links_chapter11_to_boundary_chapter12": (11, 12),
+        "signed_odd_cubic_normal_form_is_the_chapter11_frontier_precision_lock": (11,),
+    }
     return {
         "layer_order": ORGANIZATION_LAYER_ORDER,
         "checked_periodic_rows": CHECKED_PERIODIC_ROWS,
@@ -1684,6 +1702,7 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 "certificate": chapter12,
             },
         },
+        "deep_connection_motifs": deep_connection_motifs,
         "projection": projection,
         "no_go": no_go,
         "aligned_periodic_rows_used": aligned_rows,
@@ -1779,6 +1798,15 @@ def build_cct_crosswalk() -> dict[str, Any]:
             ),
             "chapter12_smooth_realization_boundary_is_routed_to_exact_w33_certificates": all(
                 chapter12["theorem"].values()
+            ),
+            "deep_connection_motifs_are_chapter_sorted_and_nontrivial": all(
+                tuple(sorted(chapters)) == chapters and len(chapters) >= 1
+                for chapters in deep_connection_motifs.values()
+            ),
+            "deep_connection_motifs_cover_chapters_2_through_12": (
+                set(range(2, 13)).issubset(
+                    set(ch for chapters in deep_connection_motifs.values() for ch in chapters)
+                )
             ),
             "interpretation": (
                 "W(3,3) is an executable finite instance of the CCT code-language "

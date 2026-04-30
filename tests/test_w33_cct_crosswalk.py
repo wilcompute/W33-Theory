@@ -579,6 +579,8 @@ class TestCCT4H4Selector:
         assert crosswalk["theorem"]["chapter4_quasicrystal_fig_layer_is_routed_to_exact_w33_certificates"]
         assert crosswalk["theorem"]["chapter5_shelling_scaling_layer_is_routed_to_exact_w33_certificates"]
         assert crosswalk["theorem"]["chapter6_nonlocal_life_layer_is_routed_to_exact_w33_certificates"]
+        assert crosswalk["theorem"]["deep_connection_motifs_are_chapter_sorted_and_nontrivial"]
+        assert crosswalk["theorem"]["deep_connection_motifs_cover_chapters_2_through_12"]
         assert "carrier -> realization -> algebra -> computation -> witness" in crosswalk["theorem"]["interpretation"]
         assert "shared q=3 backbone invariant" in crosswalk["theorem"]["interpretation"]
         assert "121 = (k-1)^2 representation triangle" in crosswalk["theorem"]["interpretation"]
@@ -596,6 +598,31 @@ class TestCCT4H4Selector:
         assert "q=3 E8 shell count 240 x sigma_3(3) = 6720" in crosswalk["theorem"]["interpretation"]
         assert "Chapter 6 non-local game-of-life layer" in crosswalk["theorem"]["interpretation"]
         assert "ten D4/K-VT packets giving 10 x 24 = 240" in crosswalk["theorem"]["interpretation"]
+
+    def test_crosswalk_deep_connection_motifs(self):
+        crosswalk = build_cct_crosswalk()
+        motifs = crosswalk["deep_connection_motifs"]
+
+        assert motifs["q3_selector_reappears_across_language_scaling_mass_and_boundary"] == (
+            2,
+            5,
+            8,
+            9,
+            12,
+        )
+        assert motifs[
+            "edge_root_shell_240_reappears_across_foundation_quasicrystal_shelling_and_loop_layers"
+        ] == (2, 3, 4, 5, 6, 7)
+        assert motifs["representation_triangle_121_bridges_measurement_chiral_mass_and_operator_layers"] == (
+            8,
+            12,
+        )
+        assert motifs["transport_wall_target_dC_14105_links_transport_and_global_boundary_layers"] == (
+            10,
+            12,
+        )
+        assert motifs["exact_to_frontier_flavor_bridge_links_chapter11_to_boundary_chapter12"] == (11, 12)
+        assert motifs["signed_odd_cubic_normal_form_is_the_chapter11_frontier_precision_lock"] == (11,)
 
     def test_crosswalk_interpretation_covers_chapters_7_through_12(self):
         crosswalk = build_cct_crosswalk()
