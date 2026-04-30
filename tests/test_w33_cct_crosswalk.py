@@ -740,6 +740,8 @@ class TestCCT4H4Selector:
         assert crosswalk["theorem"]["mub_frames_36_equals_q_times_k_equals_psp43_orbital_degree_bridge"]
         assert crosswalk["theorem"]["one_twenty_line_clock_states_reappear_across_axiom_trit_cycle_and_h4_layers"]
         assert crosswalk["theorem"]["four_eighty_directed_edge_shell_reappears_across_axiom_clock_and_loop_layers"]
+        assert crosswalk["theorem"]["seven_forty_four_moonshine_constant_equals_q_times_e8_dim_bridges_trit_and_clifford"]
+        assert crosswalk["theorem"]["sigma3_of_trit_base_q_equals_v_minus_k_links_eisenstein_series_to_graph_shell_size"]
         assert "carrier -> realization -> algebra -> computation -> witness" in crosswalk["theorem"]["interpretation"]
         assert "shared q=3 backbone invariant" in crosswalk["theorem"]["interpretation"]
         assert "121 = (k-1)^2 representation triangle" in crosswalk["theorem"]["interpretation"]
@@ -810,6 +812,8 @@ class TestCCT4H4Selector:
         assert motifs["e8_lie_algebra_248_equals_root_shell_plus_ambient_dim_bridges_clifford_and_shelling"] == (3, 5)
         assert motifs["clifford_group_order_51840_equals_e8_second_shell_times_d4_shell_order_bridges_layers"] == (3, 5)
         assert motifs["mub_frames_36_equals_q_times_k_equals_psp43_orbital_degree_bridge"] == (2, 4)
+        assert motifs["seven_forty_four_moonshine_constant_equals_q_times_e8_dim_bridges_trit_and_clifford"] == (2, 3, 5)
+        assert motifs["sigma3_of_trit_base_q_equals_v_minus_k_links_eisenstein_series_to_graph_shell_size"] == (2, 5)
 
     def test_crosswalk_interpretation_covers_chapters_7_through_12(self):
         crosswalk = build_cct_crosswalk()
@@ -858,6 +862,8 @@ class TestCCT4H4Selector:
         assert "36 = Q * K = 3 * 12" in crosswalk["theorem"]["interpretation"]
         assert "120 = V * Q = 40 * 3" in crosswalk["theorem"]["interpretation"]
         assert "480 = 2 * E = 2 * 240" in crosswalk["theorem"]["interpretation"]
+        assert "744 = Q * 248" in crosswalk["theorem"]["interpretation"]
+        assert "sigma_3(Q) = sigma_3(3)" in crosswalk["theorem"]["interpretation"]
 
     def test_crosswalk_has_a_chapter1_certificate(self):
         chapter = build_cct_crosswalk()["chapter_crosswalks"][1]

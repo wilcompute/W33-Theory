@@ -1877,6 +1877,8 @@ def build_cct_crosswalk() -> dict[str, Any]:
             "e8_lie_algebra_248_equals_root_shell_plus_ambient_dim_bridges_clifford_and_shelling": (3, 5),
             "clifford_group_order_51840_equals_e8_second_shell_times_d4_shell_order_bridges_layers": (3, 5),
             "mub_frames_36_equals_q_times_k_equals_psp43_orbital_degree_bridge": (2, 4),
+            "seven_forty_four_moonshine_constant_equals_q_times_e8_dim_bridges_trit_and_clifford": (2, 3, 5),
+            "sigma3_of_trit_base_q_equals_v_minus_k_links_eisenstein_series_to_graph_shell_size": (2, 5),
     }
     return {
         "layer_order": ORGANIZATION_LAYER_ORDER,
@@ -2427,6 +2429,29 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 and chapter4["w33_h4_certificate"]["full_psp43_orbital_degrees"][2] == Q * K
                 and Q * K == 36
             ),
+            "seven_forty_four_moonshine_constant_equals_q_times_e8_dim_bridges_trit_and_clifford": (
+                # The Monstrous Moonshine j-function expansion is j(tau) = q^{-1} + 744 + 196884*q + ...
+                # The constant 744 = 3 * 248 = Q * (E8 Lie algebra dimension).
+                # 248 = 240 + 8 = E + E8_ambient_dim bridges the W(3,3) edge shell (ch 2)
+                # and the E8 ambient 8-dimensional space (ch 5) via the Clifford layer (ch 3).
+                # This links the trit selector Q=3 and the root-shell arithmetic to an external
+                # constant from Moonshine theory that is independent of the W(3,3) construction.
+                Q * chapter3["clifford_hopf_sparse_shadow"]["e8_dimension"]
+                == Q * (E + chapter5["root_lattice_objectives_packet"]["ambient_dimensions"][2])
+                and chapter3["clifford_hopf_sparse_shadow"]["e8_dimension"] == 248
+                and Q * 248 == 744
+            ),
+            "sigma3_of_trit_base_q_equals_v_minus_k_links_eisenstein_series_to_graph_shell_size": (
+                # The E8 theta function is the Eisenstein series E_4(tau) = 1 + 240*sum sigma_3(n)*q^n.
+                # The sigma_3 amplifier at the trit base q=3 is sigma_3(3) = 1^3 + 3^3 = 28.
+                # The W(3,3) graph complement shell size is V - K = 40 - 12 = 28.
+                # So the divisor-cube-sum of the trit base equals the graph complement shell count,
+                # linking number-theoretic Eisenstein-series arithmetic (ch 5) to the W(3,3) SRG
+                # parameters V and K (ch 2).
+                chapter5["e8_shelling_packet"]["sigma3_at_q"] == V - K
+                and chapter5["e8_shelling_packet"]["amplifier_matches_v_minus_k"]
+                and V - K == 28
+            ),
             "interpretation": (
                 "W(3,3) is an executable finite instance of the CCT code-language "
                 "template; the CCT dictionary rows are now routed through the "
@@ -2559,7 +2584,18 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 "(25) 480 = 2 * E = 2 * 240 is simultaneously the Chapter 1 directed-edge shell, the "
                 "Chapter 1 transtemporal Hashimoto state count, the Chapter 3 cycle-clock Hashimoto "
                 "state space, and the Chapter 7 directed-edge packet, so the axiomatic causal shell and "
-                "the executable loop operator act on the same 480 directed transitions."
+                "the executable loop operator act on the same 480 directed transitions. "
+                "Two external mathematical bridges from Moonshine and Eisenstein series: "
+                "(26) 744 = Q * 248 = Q * (E + 8) = 3 * 248 is the constant term of the j-function "
+                "expansion j(tau) = q^{-1} + 744 + 196884*q + ... in Monstrous Moonshine; the same "
+                "integer is the product of the trit base Q=3 (ch 2) with the E8 Lie algebra "
+                "dimension 248 = E + E8_ambient_dim = 240 + 8 (chs 3 and 5), so an external "
+                "Moonshine constant is pinned to the W(3,3) trit selector and root-shell arithmetic; "
+                "(27) sigma_3(Q) = sigma_3(3) = 1^3 + 3^3 = 28 = V - K = 40 - 12 is the E8 Eisenstein "
+                "theta-series amplifier (K_q_8 = E * sigma_3(Q) = 6720, ch 5), which equals the W(3,3) "
+                "graph complement shell size V - K (ch 2), so the number-theoretic divisor-cube-sum at "
+                "the trit base equals the graph-theoretic complement shell, linking Eisenstein series "
+                "arithmetic directly to the SRG parameters."
             ),
         },
         }
