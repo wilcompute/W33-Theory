@@ -742,6 +742,8 @@ class TestCCT4H4Selector:
         assert crosswalk["theorem"]["four_eighty_directed_edge_shell_reappears_across_axiom_clock_and_loop_layers"]
         assert crosswalk["theorem"]["seven_forty_four_moonshine_constant_equals_q_times_e8_dim_bridges_trit_and_clifford"]
         assert crosswalk["theorem"]["sigma3_of_trit_base_q_equals_v_minus_k_links_eisenstein_series_to_graph_shell_size"]
+        assert crosswalk["theorem"]["binary_golay_code_24_12_8_parameters_match_f_k_and_e8_rank"]
+        assert crosswalk["theorem"]["three_even_perfect_numbers_6_28_496_all_appear_as_w33_invariants"]
         assert "carrier -> realization -> algebra -> computation -> witness" in crosswalk["theorem"]["interpretation"]
         assert "shared q=3 backbone invariant" in crosswalk["theorem"]["interpretation"]
         assert "121 = (k-1)^2 representation triangle" in crosswalk["theorem"]["interpretation"]
@@ -814,6 +816,8 @@ class TestCCT4H4Selector:
         assert motifs["mub_frames_36_equals_q_times_k_equals_psp43_orbital_degree_bridge"] == (2, 4)
         assert motifs["seven_forty_four_moonshine_constant_equals_q_times_e8_dim_bridges_trit_and_clifford"] == (2, 3, 5)
         assert motifs["sigma3_of_trit_base_q_equals_v_minus_k_links_eisenstein_series_to_graph_shell_size"] == (2, 5)
+        assert motifs["binary_golay_code_24_12_8_parameters_match_f_k_and_e8_rank"] == (2, 3, 5)
+        assert motifs["three_even_perfect_numbers_6_28_496_all_appear_as_w33_invariants"] == (2, 3, 5)
 
     def test_crosswalk_interpretation_covers_chapters_7_through_12(self):
         crosswalk = build_cct_crosswalk()
@@ -864,6 +868,8 @@ class TestCCT4H4Selector:
         assert "480 = 2 * E = 2 * 240" in crosswalk["theorem"]["interpretation"]
         assert "744 = Q * 248" in crosswalk["theorem"]["interpretation"]
         assert "sigma_3(Q) = sigma_3(3)" in crosswalk["theorem"]["interpretation"]
+        assert "binary Golay [n=24, k=12, d=8]" in crosswalk["theorem"]["interpretation"]
+        assert "even perfect numbers 6, 28, 496" in crosswalk["theorem"]["interpretation"]
 
     def test_crosswalk_has_a_chapter1_certificate(self):
         chapter = build_cct_crosswalk()["chapter_crosswalks"][1]

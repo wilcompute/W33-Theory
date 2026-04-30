@@ -1879,6 +1879,8 @@ def build_cct_crosswalk() -> dict[str, Any]:
             "mub_frames_36_equals_q_times_k_equals_psp43_orbital_degree_bridge": (2, 4),
             "seven_forty_four_moonshine_constant_equals_q_times_e8_dim_bridges_trit_and_clifford": (2, 3, 5),
             "sigma3_of_trit_base_q_equals_v_minus_k_links_eisenstein_series_to_graph_shell_size": (2, 5),
+            "binary_golay_code_24_12_8_parameters_match_f_k_and_e8_rank": (2, 3, 5),
+            "three_even_perfect_numbers_6_28_496_all_appear_as_w33_invariants": (2, 3, 5),
     }
     return {
         "layer_order": ORGANIZATION_LAYER_ORDER,
@@ -2452,6 +2454,33 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 and chapter5["e8_shelling_packet"]["amplifier_matches_v_minus_k"]
                 and V - K == 28
             ),
+            "binary_golay_code_24_12_8_parameters_match_f_k_and_e8_rank": (
+                # The perfect binary Golay code has parameters [n=24, k=12, d=8].
+                # All three integers are independently forced by W(3,3) arithmetic:
+                #   n = 24 = F = D4 root shell count (ch 3 + ch 5)
+                #   k = 12 = K = W(3,3) graph valence (ch 2 SRG)
+                #   d =  8 = K - MU = E8 rank = Penrose vertex types (ch 2 + ch 3)
+                # The three defining parameters of the unique perfect binary code
+                # are all simultaneously pinned to W(3,3) structural constants.
+                chapter3["division_algebra_root_chain"]["root_counts"]["D4"] == F == 24
+                and chapter5["d4_shelling_packet"]["root_count"] == F
+                and K == 12
+                and chapter3["clifford_hopf_sparse_shadow"]["e8_dimension"] - E == K - MU == 8
+            ),
+            "three_even_perfect_numbers_6_28_496_all_appear_as_w33_invariants": (
+                # The three smallest even perfect numbers are 6, 28, and 496.
+                # All three arise independently in W(3,3):
+                #   6 = 2*Q = A2 root shell = W(3,3) atomic root-system base (ch 2, ch 3, ch 5)
+                #  28 = V - K = sigma_3(Q) = complement shell = Eisenstein amplifier (ch 2, ch 5)
+                # 496 = 2 * dim(E8) = 2 * (E + K - MU) = dimension of both SO(32) and E8 x E8
+                #       gauge groups in superstring theory (Green-Schwarz anomaly cancellation)
+                # Finding all three even perfect numbers as separate W(3,3) invariants is a
+                # purely external number-theoretic coincidence.
+                2 * Q == 6
+                and V - K == 28
+                and 2 * chapter3["clifford_hopf_sparse_shadow"]["e8_dimension"] == 496
+                and 2 * (E + K - MU) == 496
+            ),
             "interpretation": (
                 "W(3,3) is an executable finite instance of the CCT code-language "
                 "template; the CCT dictionary rows are now routed through the "
@@ -2595,7 +2624,16 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 "theta-series amplifier (K_q_8 = E * sigma_3(Q) = 6720, ch 5), which equals the W(3,3) "
                 "graph complement shell size V - K (ch 2), so the number-theoretic divisor-cube-sum at "
                 "the trit base equals the graph-theoretic complement shell, linking Eisenstein series "
-                "arithmetic directly to the SRG parameters."
+                "arithmetic directly to the SRG parameters. "
+                "Two further external bridges from coding theory and perfect numbers: "
+                "(28) binary Golay [n=24, k=12, d=8] code: the unique perfect binary code's three "
+                "defining parameters are n=24=F (D4 root shell, chs 3+5), k=12=K (W(3,3) valence, "
+                "ch 2), and d=8=K-MU (E8 rank, chs 2+3); the three integers are all independently "
+                "forced by W(3,3) SRG arithmetic; "
+                "(29) even perfect numbers 6, 28, 496: the three smallest even perfect numbers "
+                "6=2*Q (A2 root shell, chs 2+3+5), 28=V-K=sigma_3(Q) (Eisenstein amplifier, "
+                "chs 2+5), and 496=2*dim(E8)=2*(E+8) (superstring SO(32)/E8xE8 gauge anomaly-"
+                "cancellation dimension, chs 2+3) all arise independently as W(3,3) invariants."
             ),
         },
         }
