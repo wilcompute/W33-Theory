@@ -28,12 +28,11 @@ though the extension class still fails to match.
 
 from __future__ import annotations
 
-from functools import lru_cache
 import json
-from pathlib import Path
 import sys
+from functools import lru_cache
+from pathlib import Path
 from typing import Any
-
 
 if __package__ in {None, ""}:
     ROOT = Path(__file__).resolve().parents[1]
@@ -50,13 +49,22 @@ from w33_transport_mixed_plane_obstruction_bridge import (
     build_transport_mixed_plane_obstruction_summary,
 )
 
-
-DEFAULT_OUTPUT_PATH = ROOT / "data" / "w33_transport_filtered_shadow_bridge_summary.json"
+DEFAULT_OUTPUT_PATH = (
+    ROOT / "data" / "w33_transport_filtered_shadow_bridge_summary.json"
+)
 
 
 def _transport_extension_summary() -> dict[str, Any]:
+    fallback_path = (
+        ROOT / "data" / "w33_transport_ternary_extension_bridge_summary.json"
+    )
+    if fallback_path.exists():
+        return json.loads(fallback_path.read_text(encoding="utf-8"))
+
     try:
-        from w33_transport_ternary_extension_bridge import build_transport_ternary_extension_summary
+        from w33_transport_ternary_extension_bridge import (
+            build_transport_ternary_extension_summary,
+        )
     except ModuleNotFoundError as exc:
         if exc.name != "networkx":
             raise
@@ -89,7 +97,9 @@ def build_transport_filtered_shadow_bridge_summary() -> dict[str, Any]:
     refinement = build_k3_refined_plane_persistence_bridge_summary()
     obstruction = build_transport_mixed_plane_obstruction_summary()
 
-    internal_dims = transport["matter_flavour_extension"]["short_exact_sequence_dimensions"]
+    internal_dims = transport["matter_flavour_extension"][
+        "short_exact_sequence_dimensions"
+    ]
     external_dims = [
         mixed_plane["qutrit_lift_split"][0],
         mixed_plane["total_qutrit_lift_dimension"],
@@ -103,9 +113,13 @@ def build_transport_filtered_shadow_bridge_summary() -> dict[str, Any]:
             "distinguished_invariant_line": transport["reduced_transport_module"][
                 "unique_invariant_line"
             ],
-            "submodule_dimension": transport["matter_flavour_extension"]["submodule_dimension"],
+            "submodule_dimension": transport["matter_flavour_extension"][
+                "submodule_dimension"
+            ],
             "total_dimension": transport["matter_flavour_extension"]["total_dimension"],
-            "quotient_dimension": transport["matter_flavour_extension"]["quotient_dimension"],
+            "quotient_dimension": transport["matter_flavour_extension"][
+                "quotient_dimension"
+            ],
             "short_exact_sequence_dimensions": internal_dims,
             "quotient_character_values": transport["reduced_transport_module"][
                 "quotient_character_values"
@@ -123,12 +137,15 @@ def build_transport_filtered_shadow_bridge_summary() -> dict[str, Any]:
             "ordered_filtration_dimensions": external_dims,
             "mixed_signature": mixed_plane["mixed_signature"],
             "is_split": mixed_plane["split_qutrit_package"],
-            "first_refinement_scale_factor": refinement["first_refinement_scale_factor"],
+            "first_refinement_scale_factor": refinement[
+                "first_refinement_scale_factor"
+            ],
         },
         "transport_filtered_shadow_theorem": {
             "internal_transport_has_canonical_ordered_81_in_162_out_81_filtration": (
                 internal_dims == [81, 162, 81]
-                and transport["reduced_transport_module"]["unique_invariant_line"] == [1, 2]
+                and transport["reduced_transport_module"]["unique_invariant_line"]
+                == [1, 2]
             ),
             "external_k3_mixed_plane_has_canonical_ordered_split_81_in_162_out_81_filtration": (
                 external_dims == [81, 162, 81]

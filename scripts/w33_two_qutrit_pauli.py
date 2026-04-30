@@ -24,6 +24,7 @@ PHYSICAL INTERPRETATION:
 Usage:
   python3 scripts/w33_two_qutrit_pauli.py
 """
+
 from __future__ import annotations
 
 import json
@@ -47,7 +48,7 @@ def build_pauli_operators():
       Z|j> = w^j |j>        (clock)
       w = exp(2*pi*i/3)     (cube root of unity)
 
-    The label (a,b,c,d) in F3^4 \ {0}, with projective equivalence
+    The label (a,b,c,d) in F3^4 \\ {0}, with projective equivalence
     (a,b,c,d) ~ lambda*(a,b,c,d) for lambda in F3*.
 
     Returns: list of 40 canonical representatives + their 9x9 matrices.
@@ -380,8 +381,7 @@ def main():
     print("  PART 6: PHYSICAL INTERPRETATION")
     print("=" * 72)
 
-    print(
-        f"""
+    print(f"""
   THEOREM (W33 = 2-Qutrit Pauli Geometry):
     The 40 vertices of W(3,3) ARE the 40 non-identity traceless
     2-qutrit Pauli operators. Adjacency = commutation.
@@ -410,8 +410,7 @@ def main():
     40 tetrahedra = 40 maximal commuting sets (lines)
     81 = dim H1 = 3^4 = full Pauli group minus identity
     51840 = |PSp(4,3)| = |Clifford(2 qutrits)| / center
-"""
-    )
+""")
 
     elapsed = time.time() - t0
     print(f"  Elapsed: {elapsed:.1f}s")

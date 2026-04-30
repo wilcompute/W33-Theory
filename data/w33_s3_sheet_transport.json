@@ -1,0 +1,72 @@
+{
+  "T1_L_distribution": {
+    "0": 17,
+    "1": 11,
+    "2": 26
+  },
+  "T1_num_pockets": 54,
+  "T2_edge_check_ok": 270,
+  "T2_edge_check_fail": 0,
+  "T2_transport_law_exact": true,
+  "T3_generator_shifts": {
+    "g2": 0,
+    "g3": 2,
+    "g5": 0,
+    "g8": 0,
+    "g9": 0
+  },
+  "T3_nonzero_generators": [
+    "g3"
+  ],
+  "T4_num_sheets": 6,
+  "T4_pockets_per_sheet": 9,
+  "T4_sheet_L_distributions": {
+    "0": {
+      "0": 6,
+      "2": 3
+    },
+    "1": {
+      "0": 6,
+      "1": 1,
+      "2": 2
+    },
+    "2": {
+      "0": 2,
+      "1": 2,
+      "2": 5
+    },
+    "3": {
+      "0": 1,
+      "1": 1,
+      "2": 7
+    },
+    "4": {
+      "0": 1,
+      "1": 3,
+      "2": 5
+    },
+    "5": {
+      "0": 1,
+      "1": 4,
+      "2": 4
+    }
+  },
+  "T5_qid_same_L": 9,
+  "T5_qid_diff_L": 18,
+  "T5_L_pair_distribution": {
+    "(0, 2)": 8,
+    "(1, 0)": 3,
+    "(2, 2)": 8,
+    "(0, 1)": 5,
+    "(1, 1)": 1,
+    "(2, 1)": 1,
+    "(2, 0)": 1
+  },
+  "T6_cocycle_recovered_exact": true,
+  "T6_cocycle_dist": {
+    "0": 201,
+    "1": 33,
+    "2": 36
+  },
+  "T6_nontrivial_edges": 69
+}
