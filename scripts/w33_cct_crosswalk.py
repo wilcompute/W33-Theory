@@ -1869,6 +1869,9 @@ def build_cct_crosswalk() -> dict[str, Any]:
             "h4_coxeter_number_30_bridges_clifford_hopf_to_quasicrystal_shell": (3, 4),
             "spread_morita_rank_16_links_trit_economy_to_chiral_mass_sector": (2, 8),
             "srg_balance_108_equals_k_times_k_minus_1_minus_lambda_equals_mu_times_nonneighbors": (2, 3),
+            "octonion_dimension_8_links_division_algebra_to_e8_ambient_and_penrose_vertex_types": (3, 5, 6),
+            "cycle_rank_201_equals_e_minus_v_plus_one_in_trit_economy_and_clock": (2, 3),
+            "inactive_pairs_540_equals_complete_pairs_minus_edge_shell_in_both_layers": (2, 3),
     }
     return {
         "layer_order": ORGANIZATION_LAYER_ORDER,
@@ -2340,6 +2343,35 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 and K * (K - 1 - LAMBDA) == MU * (V - K - 1)
                 and K * (K - 1 - LAMBDA) == 108
             ),
+            "octonion_dimension_8_links_division_algebra_to_e8_ambient_and_penrose_vertex_types": (
+                # The division algebra root chain ends at octonion dimension 8 (ch 3).
+                # The E8 root lattice lives in ambient dimension 8 (ch 5).
+                # The Penrose quasicrystal game has 8 vertex types (ch 6).
+                # 8 = K - MU links the degree-valence gap to the octonion dimension.
+                chapter3["division_algebra_root_chain"]["dimensions"][3] == 8
+                and chapter5["root_lattice_objectives_packet"]["ambient_dimensions"][2] == 8
+                and chapter6["penrose_game_source_packet"]["penrose_vertex_types"] == 8
+                and 8 == K - MU
+            ),
+            "cycle_rank_201_equals_e_minus_v_plus_one_in_trit_economy_and_clock": (
+                # The trit-economy cycle rank is 201 (ch 2).
+                # The cycle-clock cycle rank is 201 (ch 3).
+                # 201 = E - V + 1 = 240 - 40 + 1 is the first Betti number of the
+                # W(3,3) graph — the count of independent feedback cycles.
+                chapter2["sparse_point_economy"]["cycle_rank"] == E - V + 1
+                and chapter3["w33_cycle_clock_packet"]["cycle_rank"] == E - V + 1
+                and E - V + 1 == 201
+            ),
+            "inactive_pairs_540_equals_complete_pairs_minus_edge_shell_in_both_layers": (
+                # The trit-economy inactive pair count is 540 (ch 2).
+                # The cycle-clock inactive pair count is 540 (ch 3).
+                # 540 = C(V,2) - E = 780 - 240 is the non-edge count of W(3,3);
+                # three times the edge count is the non-edge count (540 = 3 * 180... wait:
+                # 540 = C(40,2) - 240 = 780 - 240 = the number of absent connections).
+                chapter2["sparse_point_economy"]["inactive_pairs"] == V * (V - 1) // 2 - E
+                and chapter3["least_change_packet"]["inactive_pairs"] == V * (V - 1) // 2 - E
+                and V * (V - 1) // 2 - E == 540
+            ),
             "interpretation": (
                 "W(3,3) is an executable finite instance of the CCT code-language "
                 "template; the CCT dictionary rows are now routed through the "
@@ -2440,7 +2472,16 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 "(17) 108 = K*(K-1-Lambda) = mu*(V-K-1) is the SRG parameter consistency identity, "
                 "simultaneously the srg_overlap_balance in the trit economy (ch 2) and the cycle "
                 "clock (ch 3), confirming that adjacent degree K = 12 and non-adjacent overlap "
-                "mu = 4 are mutually determined by the single count V - K - 1 = 27."
+                "mu = 4 are mutually determined by the single count V - K - 1 = 27. "
+                "Three more exact count bridges: (18) 8 = K - MU is simultaneously the octonion "
+                "dimension at the top of the division-algebra chain (ch 3), the E8 ambient "
+                "dimension (ch 5), and the number of Penrose vertex types in the quasicrystal "
+                "game (ch 6); (19) 201 = E - V + 1 = 240 - 40 + 1 is the first Betti number "
+                "(independent feedback cycles) of W(3,3), named cycle_rank in both the trit "
+                "economy (ch 2) and the cycle-clock packet (ch 3); "
+                "(20) 540 = C(V,2) - E = 780 - 240 is the non-edge / inactive-pair count of "
+                "W(3,3), recorded as inactive_pairs in both the trit economy (ch 2) and the "
+                "least-change packet (ch 3)."
             ),
         },
     }

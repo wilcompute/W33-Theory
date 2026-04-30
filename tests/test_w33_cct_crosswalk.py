@@ -732,6 +732,9 @@ class TestCCT4H4Selector:
         assert crosswalk["theorem"]["h4_coxeter_number_30_bridges_clifford_hopf_to_quasicrystal_shell"]
         assert crosswalk["theorem"]["spread_morita_rank_16_links_trit_economy_to_chiral_mass_sector"]
         assert crosswalk["theorem"]["srg_balance_108_equals_k_times_k_minus_1_minus_lambda_equals_mu_times_nonneighbors"]
+        assert crosswalk["theorem"]["octonion_dimension_8_links_division_algebra_to_e8_ambient_and_penrose_vertex_types"]
+        assert crosswalk["theorem"]["cycle_rank_201_equals_e_minus_v_plus_one_in_trit_economy_and_clock"]
+        assert crosswalk["theorem"]["inactive_pairs_540_equals_complete_pairs_minus_edge_shell_in_both_layers"]
         assert "carrier -> realization -> algebra -> computation -> witness" in crosswalk["theorem"]["interpretation"]
         assert "shared q=3 backbone invariant" in crosswalk["theorem"]["interpretation"]
         assert "121 = (k-1)^2 representation triangle" in crosswalk["theorem"]["interpretation"]
@@ -794,6 +797,9 @@ class TestCCT4H4Selector:
         assert motifs["h4_coxeter_number_30_bridges_clifford_hopf_to_quasicrystal_shell"] == (3, 4)
         assert motifs["spread_morita_rank_16_links_trit_economy_to_chiral_mass_sector"] == (2, 8)
         assert motifs["srg_balance_108_equals_k_times_k_minus_1_minus_lambda_equals_mu_times_nonneighbors"] == (2, 3)
+        assert motifs["octonion_dimension_8_links_division_algebra_to_e8_ambient_and_penrose_vertex_types"] == (3, 5, 6)
+        assert motifs["cycle_rank_201_equals_e_minus_v_plus_one_in_trit_economy_and_clock"] == (2, 3)
+        assert motifs["inactive_pairs_540_equals_complete_pairs_minus_edge_shell_in_both_layers"] == (2, 3)
 
     def test_crosswalk_interpretation_covers_chapters_7_through_12(self):
         crosswalk = build_cct_crosswalk()
@@ -834,6 +840,9 @@ class TestCCT4H4Selector:
         assert "H4 Coxeter number 30" in crosswalk["theorem"]["interpretation"]
         assert "16 = (Q+1)^2" in crosswalk["theorem"]["interpretation"]
         assert "108 = K*(K-1-Lambda)" in crosswalk["theorem"]["interpretation"]
+        assert "8 = K - MU" in crosswalk["theorem"]["interpretation"]
+        assert "201 = E - V + 1" in crosswalk["theorem"]["interpretation"]
+        assert "540 = C(V,2) - E" in crosswalk["theorem"]["interpretation"]
 
     def test_crosswalk_has_a_chapter1_certificate(self):
         chapter = build_cct_crosswalk()["chapter_crosswalks"][1]
