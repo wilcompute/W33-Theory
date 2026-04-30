@@ -582,6 +582,8 @@ class TestCCT4H4Selector:
         assert crosswalk["theorem"]["deep_connection_motifs_are_chapter_sorted_and_nontrivial"]
         assert crosswalk["theorem"]["deep_connection_motifs_cover_chapters_2_through_12"]
         assert crosswalk["theorem"]["yukawa_5x3_fifteen_packet_is_the_same_15_sector_as_representation_triangle"]
+        assert crosswalk["theorem"]["k_minus_1_eleven_links_ramanujan_circle_radius_and_representation_triangle_121"]
+        assert crosswalk["theorem"]["harmonic_modes_3_equals_q_equals_three_lepton_generations"]
         assert "carrier -> realization -> algebra -> computation -> witness" in crosswalk["theorem"]["interpretation"]
         assert "shared q=3 backbone invariant" in crosswalk["theorem"]["interpretation"]
         assert "121 = (k-1)^2 representation triangle" in crosswalk["theorem"]["interpretation"]
@@ -625,6 +627,8 @@ class TestCCT4H4Selector:
         assert motifs["exact_to_frontier_flavor_bridge_links_chapter11_to_boundary_chapter12"] == (11, 12)
         assert motifs["signed_odd_cubic_normal_form_is_the_chapter11_frontier_precision_lock"] == (11,)
         assert motifs["yukawa_5x3_15_packet_matches_chiral_forward_block_15_sector"] == (8, 9)
+        assert motifs["k_minus_1_eleven_links_ramanujan_radius_and_representation_triangle_121"] == (7, 8)
+        assert motifs["harmonic_modes_3_equals_q_equals_three_lepton_generations"] == (2, 8, 9)
 
     def test_crosswalk_interpretation_covers_chapters_7_through_12(self):
         crosswalk = build_cct_crosswalk()

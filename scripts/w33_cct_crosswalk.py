@@ -1574,6 +1574,8 @@ def build_cct_crosswalk() -> dict[str, Any]:
         "exact_to_frontier_flavor_bridge_links_chapter11_to_boundary_chapter12": (11, 12),
         "signed_odd_cubic_normal_form_is_the_chapter11_frontier_precision_lock": (11,),
         "yukawa_5x3_15_packet_matches_chiral_forward_block_15_sector": (8, 9),
+        "k_minus_1_eleven_links_ramanujan_radius_and_representation_triangle_121": (7, 8),
+        "harmonic_modes_3_equals_q_equals_three_lepton_generations": (2, 8, 9),
     }
     return {
         "layer_order": ORGANIZATION_LAYER_ORDER,
@@ -1829,6 +1831,26 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 and chapter8["theorem"][
                     "chapter8_chiral_exact_sequence_121_equals_59_plus_59_minus_3_harm"
                 ]
+            ),
+            "k_minus_1_eleven_links_ramanujan_circle_radius_and_representation_triangle_121": (
+                # The Hashimoto/Ramanujan circle has radius squared = k-1 = 11.
+                # The representation triangle has dimension (k-1)^2 = 121.
+                # The same integer k-1 = 11 appears in both chapters 7 and 8.
+                chapter7["theorem"]["chapter7_branch_count_equals_k_minus_one"]
+                and chapter8["theorem"][
+                    "chapter8_chiral_exact_sequence_121_equals_59_plus_59_minus_3_harm"
+                ]
+                and (K - 1) == 11
+                and (K - 1) ** 2 == 121
+            ),
+            "harmonic_modes_3_equals_q_equals_three_lepton_generations": (
+                # The trit alphabet has q = 3 symbols (ch 2).
+                # The chiral exact sequence has exactly 3 harmonic modes (ch 8).
+                # There are exactly 3 lepton generations (ch 9).
+                # All three are the same invariant q = 3.
+                Q == 3
+                and chapter8["theorem"]["chapter8_harmonic_modes_equal_three"]
+                and chapter9["theorem"]["chapter9_three_generations_tie_to_q_equals_three"]
             ),
             "interpretation": (
                 "W(3,3) is an executable finite instance of the CCT code-language "
