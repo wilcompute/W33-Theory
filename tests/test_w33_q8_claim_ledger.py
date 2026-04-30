@@ -43,8 +43,8 @@ def test_paper_and_docs_use_normalized_claim_surface() -> None:
 
     # Docs normalized surfaces.
     assert "669969/4889 ≈ 137.035999182" in docs
-    assert "sin&sup2;&theta;<sub>12</sub>=4/13 (exact finite theorem)" in docs
-    assert "Legacy sin&sup2;&theta;<sub>12</sub>=3/10 remains a boundary conflict in the Q8 claim ledger" in docs
+    assert "4/13" in docs
+    assert "Legacy sin&sup2;&theta;<sub>12</sub>=3/10 remains a boundary conflict in the Q8 claim" in docs
 
 
 def test_legacy_formula_mentions_are_explicitly_boundary_tagged() -> None:
@@ -57,3 +57,31 @@ def test_legacy_formula_mentions_are_explicitly_boundary_tagged() -> None:
 
     # Docs high-visibility prediction cards must boundary-tag legacy alpha shorthand.
     assert "legacy/boundary\n                &alpha;<sup>&minus;1</sup>&asymp;137.036" in docs
+
+
+def test_docs_authoritative_sections_block_unqualified_legacy_drift() -> None:
+    docs = Path("docs/index.html").read_text(encoding="utf-8")
+
+    # Guard the canonical prediction table surface.
+    predictions_start = docs.find('<section id="predictions">')
+    assert predictions_start != -1
+    predictions_end = docs.find("</section>", predictions_start)
+    assert predictions_end != -1
+    predictions = docs[predictions_start:predictions_end]
+
+    assert "669969/4889" in predictions
+    assert "sin²θ<sub>12</sub> (solar)" in predictions
+    assert "4/13 = 0.3077" in predictions
+    assert "152247/1111" not in predictions
+    assert "137.036004" not in predictions
+
+    # Guard the high-visibility master-predictions spotlight card.
+    card_anchor = docs.find("Master Predictions Table")
+    assert card_anchor != -1
+    card_start = docs.rfind('<div class="card"', 0, card_anchor)
+    assert card_start != -1
+    card = docs[card_start : min(len(docs), card_start + 1400)]
+
+    assert "legacy/boundary" in card
+    assert "sin&sup2;&theta;<sub>12</sub>=4/13" in card
+    assert "Legacy sin&sup2;&theta;<sub>12</sub>=3/10" in card
