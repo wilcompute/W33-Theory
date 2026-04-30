@@ -1861,6 +1861,9 @@ def build_cct_crosswalk() -> dict[str, Any]:
             "forty_point_shell_equals_line_carrier_count_equals_heavy_shell_multiplicity": (2, 3, 8),
             "one_twenty_equals_5F_equals_line_clock_cover_equals_H4_shell": (3, 4, 5),
             "mu_four_reappears_as_sparse_overlap_A2_to_D4_lift_and_half_clock_split": (2, 3, 6),
+            "k_twelve_reappears_as_E8_reverse_pairs_cuboctahedral_equators_transport_denominator": (3, 4, 10),
+            "eleven_non_backtracking_branch_count_bridges_clock_to_ramanujan_loop": (3, 7),
+            "twenty_seven_nonneighbors_per_symbol_matches_e6_27line_carrier": (2, 11),
     }
     return {
         "layer_order": ORGANIZATION_LAYER_ORDER,
@@ -2250,6 +2253,37 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 and chapter6["w33_cycle_clock_certificate"]["clockwise_counterclockwise_split"] == (MU, MU)
                 and MU == 4
             ),
+            "k_twelve_reappears_as_E8_reverse_pairs_cuboctahedral_equators_transport_denominator": (
+                # E8 reverse pairs per 24-cell subset is K = 12 (ch 3).
+                # The cuboctahedral equator count per 24-cell fiber is K = 12 (ch 4).
+                # The affine-closure transport scale has denominator K = 12 (ch 10).
+                # The same degree constant reappears as an orientation-pair count,
+                # a geometric equator count, and a transport denominator.
+                chapter3["cyclic_permutation_packet"]["E8_reverse_pairs_per_subset"] == K
+                and chapter4["cuboctahedral_c5c_packet"]["cuboctahedral_equators_per_24_cell"] == K
+                and chapter10["affine_closure_packet"]["transport_scale_denominator"] == K
+                and K == 12
+            ),
+            "eleven_non_backtracking_branch_count_bridges_clock_to_ramanujan_loop": (
+                # The cycle-clock packet has 11 non-backtracking branches per directed edge (ch 3).
+                # The Hashimoto directed-edge packet counts 11 branches (ch 7).
+                # The Ramanujan circle radius squared is also 11 (ch 7).
+                # K - 1 = 11 simultaneously governs the clock branching factor and
+                # the Ramanujan spectral radius bound.
+                chapter3["w33_cycle_clock_packet"]["non_backtracking_branch_count"] == K - 1
+                and chapter7["directed_edge_packet"]["branch_count"] == K - 1
+                and chapter7["hashimoto_ramanujan_packet"]["ramanujan_circle_radius_squared"] == K - 1
+                and K - 1 == 11
+            ),
+            "twenty_seven_nonneighbors_per_symbol_matches_e6_27line_carrier": (
+                # Each W(3,3) vertex has exactly 27 non-neighbours in the SRG (ch 2).
+                # The E6/27-line dual GQ(4,2) carrier has exactly 27 lines (ch 11).
+                # The same integer 27 = V - 1 - K = 40 - 1 - 12 labels both the
+                # SRG complement shell and the algebraic-geometry line count.
+                chapter2["sparse_point_economy"]["nonneighbors_per_symbol"] == V - 1 - K
+                and chapter11["e6_cubic_carrier_packet"]["line_count"] == V - 1 - K
+                and V - 1 - K == 27
+            ),
             "interpretation": (
                 "W(3,3) is an executable finite instance of the CCT code-language "
                 "template; the CCT dictionary rows are now routed through the "
@@ -2325,7 +2359,15 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 "(8) 120 = 5F = 5 x 24 is at once the line-clock state cover (ch 3), the H4/600-cell shell size "
                 "(ch 4), and the five-24-cell shelling decomposition (ch 5); (9) mu = 4 is simultaneously the "
                 "nonadjacent shared-neighbor overlap (ch 2), the A2->D4 orientation-lift count (ch 3), and each half "
-                "of the intrinsic 4 + 4 clock split (ch 6)."
+                "of the intrinsic 4 + 4 clock split (ch 6). "
+                "Three further exact-count bridges: (10) K = 12 reappears as the E8 reverse-pair "
+                "count per 24-cell subset (ch 3), the cuboctahedral equator count per 24-cell fiber "
+                "(ch 4), and the affine-closure transport-scale denominator (ch 10); "
+                "(11) K - 1 = 11 is simultaneously the non-backtracking branch count in the "
+                "cycle-clock packet (ch 3), the Hashimoto directed-edge branch count (ch 7), "
+                "and the Ramanujan circle radius squared (ch 7); "
+                "(12) V - 1 - K = 27 is the per-vertex non-neighbour count in the SRG (ch 2) "
+                "and equals the E6/27-line dual GQ(4,2) carrier line count (ch 11)."
             ),
         },
     }

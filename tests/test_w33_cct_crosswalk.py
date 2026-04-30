@@ -724,6 +724,9 @@ class TestCCT4H4Selector:
         assert crosswalk["theorem"]["forty_point_shell_equals_line_carrier_count_equals_heavy_shell_multiplicity"]
         assert crosswalk["theorem"]["one_twenty_equals_5F_equals_line_clock_cover_equals_H4_shell"]
         assert crosswalk["theorem"]["mu_four_reappears_as_sparse_overlap_A2_to_D4_lift_and_half_clock_split"]
+        assert crosswalk["theorem"]["k_twelve_reappears_as_E8_reverse_pairs_cuboctahedral_equators_transport_denominator"]
+        assert crosswalk["theorem"]["eleven_non_backtracking_branch_count_bridges_clock_to_ramanujan_loop"]
+        assert crosswalk["theorem"]["twenty_seven_nonneighbors_per_symbol_matches_e6_27line_carrier"]
         assert "carrier -> realization -> algebra -> computation -> witness" in crosswalk["theorem"]["interpretation"]
         assert "shared q=3 backbone invariant" in crosswalk["theorem"]["interpretation"]
         assert "121 = (k-1)^2 representation triangle" in crosswalk["theorem"]["interpretation"]
@@ -778,6 +781,9 @@ class TestCCT4H4Selector:
         assert motifs["forty_point_shell_equals_line_carrier_count_equals_heavy_shell_multiplicity"] == (2, 3, 8)
         assert motifs["one_twenty_equals_5F_equals_line_clock_cover_equals_H4_shell"] == (3, 4, 5)
         assert motifs["mu_four_reappears_as_sparse_overlap_A2_to_D4_lift_and_half_clock_split"] == (2, 3, 6)
+        assert motifs["k_twelve_reappears_as_E8_reverse_pairs_cuboctahedral_equators_transport_denominator"] == (3, 4, 10)
+        assert motifs["eleven_non_backtracking_branch_count_bridges_clock_to_ramanujan_loop"] == (3, 7)
+        assert motifs["twenty_seven_nonneighbors_per_symbol_matches_e6_27line_carrier"] == (2, 11)
 
     def test_crosswalk_interpretation_covers_chapters_7_through_12(self):
         crosswalk = build_cct_crosswalk()
@@ -810,6 +816,9 @@ class TestCCT4H4Selector:
         assert "V = 40 is simultaneously" in crosswalk["theorem"]["interpretation"]
         assert "120 = 5F = 5 x 24" in crosswalk["theorem"]["interpretation"]
         assert "mu = 4 is simultaneously" in crosswalk["theorem"]["interpretation"]
+        assert "K = 12 reappears" in crosswalk["theorem"]["interpretation"]
+        assert "K - 1 = 11 is simultaneously" in crosswalk["theorem"]["interpretation"]
+        assert "V - 1 - K = 27" in crosswalk["theorem"]["interpretation"]
 
     def test_crosswalk_has_a_chapter1_certificate(self):
         chapter = build_cct_crosswalk()["chapter_crosswalks"][1]
