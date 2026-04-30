@@ -746,6 +746,10 @@ class TestCCT4H4Selector:
         assert crosswalk["theorem"]["three_even_perfect_numbers_6_28_496_all_appear_as_w33_invariants"]
         assert crosswalk["theorem"]["lattice_kissing_numbers_in_dims_2_3_4_8_equal_2q_k_f_e_the_four_srg_root_shell_constants"]
         assert crosswalk["theorem"]["string_critical_dimensions_26_bosonic_and_10_superstring_match_f_plus_lambda_and_e_over_f"]
+        assert crosswalk["theorem"]["gaussian_integer_alpha_inverse_137_equals_k_minus_1_squared_plus_mu_squared"]
+        assert crosswalk["theorem"]["twenty_six_sporadic_simple_groups_count_equals_f_plus_lambda_the_bosonic_string_dimension"]
+        assert crosswalk["theorem"]["qcd_one_loop_beta_function_coefficient_7_equals_phi6_cyclotomic_at_trit_base_q"]
+        assert crosswalk["theorem"]["monster_leech_gap_324_equals_mu_times_first_betti_number_spacetime_times_matter"]
         assert "carrier -> realization -> algebra -> computation -> witness" in crosswalk["theorem"]["interpretation"]
         assert "shared q=3 backbone invariant" in crosswalk["theorem"]["interpretation"]
         assert "121 = (k-1)^2 representation triangle" in crosswalk["theorem"]["interpretation"]
@@ -822,6 +826,10 @@ class TestCCT4H4Selector:
         assert motifs["three_even_perfect_numbers_6_28_496_all_appear_as_w33_invariants"] == (2, 3, 5)
         assert motifs["lattice_kissing_numbers_in_dims_2_3_4_8_equal_2q_k_f_e_the_four_srg_root_shell_constants"] == (2, 3, 5)
         assert motifs["string_critical_dimensions_26_bosonic_and_10_superstring_match_f_plus_lambda_and_e_over_f"] == (2, 3, 5)
+        assert motifs["gaussian_integer_alpha_inverse_137_equals_k_minus_1_squared_plus_mu_squared"] == (2, 3)
+        assert motifs["twenty_six_sporadic_simple_groups_count_equals_f_plus_lambda_the_bosonic_string_dimension"] == (2, 3, 5)
+        assert motifs["qcd_one_loop_beta_function_coefficient_7_equals_phi6_cyclotomic_at_trit_base_q"] == (2, 3, 5)
+        assert motifs["monster_leech_gap_324_equals_mu_times_first_betti_number_spacetime_times_matter"] == (2, 3, 5)
 
     def test_crosswalk_interpretation_covers_chapters_7_through_12(self):
         crosswalk = build_cct_crosswalk()
@@ -876,6 +884,10 @@ class TestCCT4H4Selector:
         assert "even perfect numbers 6, 28, 496" in crosswalk["theorem"]["interpretation"]
         assert "lattice kissing numbers 6, 12, 24, 240" in crosswalk["theorem"]["interpretation"]
         assert "string critical dimensions 26=F+LAMBDA" in crosswalk["theorem"]["interpretation"]
+        assert "Gaussian integer" in crosswalk["theorem"]["interpretation"]
+        assert "26 sporadic simple groups" in crosswalk["theorem"]["interpretation"]
+        assert "QCD 1-loop beta coefficient" in crosswalk["theorem"]["interpretation"]
+        assert "Monster-Leech gap" in crosswalk["theorem"]["interpretation"]
 
     def test_crosswalk_has_a_chapter1_certificate(self):
         chapter = build_cct_crosswalk()["chapter_crosswalks"][1]
