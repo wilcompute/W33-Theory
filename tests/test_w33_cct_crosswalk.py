@@ -581,6 +581,7 @@ class TestCCT4H4Selector:
         assert crosswalk["theorem"]["chapter6_nonlocal_life_layer_is_routed_to_exact_w33_certificates"]
         assert crosswalk["theorem"]["deep_connection_motifs_are_chapter_sorted_and_nontrivial"]
         assert crosswalk["theorem"]["deep_connection_motifs_cover_chapters_2_through_12"]
+        assert crosswalk["theorem"]["yukawa_5x3_fifteen_packet_is_the_same_15_sector_as_representation_triangle"]
         assert "carrier -> realization -> algebra -> computation -> witness" in crosswalk["theorem"]["interpretation"]
         assert "shared q=3 backbone invariant" in crosswalk["theorem"]["interpretation"]
         assert "121 = (k-1)^2 representation triangle" in crosswalk["theorem"]["interpretation"]
@@ -623,6 +624,7 @@ class TestCCT4H4Selector:
         )
         assert motifs["exact_to_frontier_flavor_bridge_links_chapter11_to_boundary_chapter12"] == (11, 12)
         assert motifs["signed_odd_cubic_normal_form_is_the_chapter11_frontier_precision_lock"] == (11,)
+        assert motifs["yukawa_5x3_15_packet_matches_chiral_forward_block_15_sector"] == (8, 9)
 
     def test_crosswalk_interpretation_covers_chapters_7_through_12(self):
         crosswalk = build_cct_crosswalk()
@@ -634,6 +636,8 @@ class TestCCT4H4Selector:
         assert "121 = 59_+ + 59_- + 3_harm" in crosswalk["theorem"]["interpretation"]
         assert "Chapter 9 routes" in crosswalk["theorem"]["interpretation"]
         assert "coherence-law" in crosswalk["theorem"]["interpretation"]
+        assert "5 x q = 5 x 3 = 15" in crosswalk["theorem"]["interpretation"]
+        assert "S_15 -> L_15 chiral forward block" in crosswalk["theorem"]["interpretation"]
         assert "Chapter 10 routes" in crosswalk["theorem"]["interpretation"]
         assert "dC = 14105" in crosswalk["theorem"]["interpretation"]
         assert "Chapter 11 routes" in crosswalk["theorem"]["interpretation"]

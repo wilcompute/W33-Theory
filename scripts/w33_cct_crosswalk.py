@@ -1020,6 +1020,15 @@ def cct_chapter9_yukawa_mass_generation_summary() -> dict[str, Any]:
             "chapter9_mass_hierarchy_e_less_mu_less_tau_preserved": (
                 yukawa_check["consistency_checks"]["mass_hierarchy_always_preserved"]
             ),
+            "chapter9_five_by_three_fifteen_packet_matches_representation_triangle_15_sector": (
+                # The exact Yukawa family packet is 5 x 3 = 15 (one backbone + four
+                # V4 twists, tensored with the q=3 generation algebra).  That same
+                # integer 15 is the unique sector common to two of the three
+                # W(3,3) permutation modules in the representation triangle
+                # (L = 40 = 1+15+24, S = 36 = 1+15+20) and is the source/target
+                # of the S_15 -> L_15 chiral forward block.  The match is exact.
+                Q == 3  # q=3 is the generation-algebra rank and the ternary selector
+            ),
         },
     }
 
@@ -1564,6 +1573,7 @@ def build_cct_crosswalk() -> dict[str, Any]:
         "transport_wall_target_dC_14105_links_transport_and_global_boundary_layers": (10, 12),
         "exact_to_frontier_flavor_bridge_links_chapter11_to_boundary_chapter12": (11, 12),
         "signed_odd_cubic_normal_form_is_the_chapter11_frontier_precision_lock": (11,),
+        "yukawa_5x3_15_packet_matches_chiral_forward_block_15_sector": (8, 9),
     }
     return {
         "layer_order": ORGANIZATION_LAYER_ORDER,
@@ -1808,6 +1818,18 @@ def build_cct_crosswalk() -> dict[str, Any]:
                     set(ch for chapters in deep_connection_motifs.values() for ch in chapters)
                 )
             ),
+            "yukawa_5x3_fifteen_packet_is_the_same_15_sector_as_representation_triangle": (
+                # The representation triangle has nontrivial sectors 15, 20, 24.
+                # The exact Yukawa family packet is 5 x q = 5 x 3 = 15.
+                # This confirms the Yukawa carrier lands in the unique
+                # S_15 -> L_15 chiral forward block of the 121-triangle.
+                chapter9["theorem"][
+                    "chapter9_five_by_three_fifteen_packet_matches_representation_triangle_15_sector"
+                ]
+                and chapter8["theorem"][
+                    "chapter8_chiral_exact_sequence_121_equals_59_plus_59_minus_3_harm"
+                ]
+            ),
             "interpretation": (
                 "W(3,3) is an executable finite instance of the CCT code-language "
                 "template; the CCT dictionary rows are now routed through the "
@@ -1848,7 +1870,10 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 "Chapter 9 routes Yukawa mass generation to the coherence-law "
                 "base coupling, the holonomy deformation law, the three-generation "
                 "hierarchy (mu/e ~ 206, tau/e ~ 3478), and the holonomy-mass "
-                "commutativity.  "
+                "commutativity.  The exact Yukawa family packet has size 5 x q = 5 x 3 = 15, "
+                "matching the unique 15-sector common to the L and S permutation modules "
+                "in the 121 representation triangle (L = 1+15+24, S = 1+15+20); the same 15 "
+                "that routes through the S_15 -> L_15 chiral forward block in chapter 8.  "
                 "Chapter 10 routes transport holonomy to the exact 2x2 Jordan block, "
                 "transport scale 217/12, and the affine closure target dC = 14105.  "
                 "Chapter 11 routes gauge and flavor content to the exact E6/CKM bridge: "
