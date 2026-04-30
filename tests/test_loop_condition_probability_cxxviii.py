@@ -28,7 +28,9 @@ def S(lam: int, n: int) -> int:
 
 def Z(n: int) -> int:
     """Trace(B^n) from Ihara-Bass for the 12-regular W33 graph."""
-    return M_MINUS_N * (1 + (-1) ** n) + sum(mult * S(lam, n) for lam, mult in ADJ_EIGS.items())
+    return M_MINUS_N * (1 + (-1) ** n) + sum(
+        mult * S(lam, n) for lam, mult in ADJ_EIGS.items()
+    )
 
 
 def closed_histories_per_directed_edge(n: int) -> int:
@@ -48,7 +50,7 @@ class TestCXXVIIIHashimotoTrace:
 
     def test_triangle_loop_probability(self):
         numerator = closed_histories_per_directed_edge(3)
-        denominator = BRANCH ** 3
+        denominator = BRANCH**3
         assert numerator == 2
         assert denominator == 1331
 
@@ -72,10 +74,10 @@ class TestCXXVIIIStructure:
 
     def test_unconditioned_branch_space(self):
         # Without a closure condition, all local non-backtracking histories survive.
-        assert BRANCH ** 0 == 1
-        assert BRANCH ** 1 == 11
-        assert BRANCH ** 2 == 121
-        assert BRANCH ** 3 == 1331
+        assert BRANCH**0 == 1
+        assert BRANCH**1 == 11
+        assert BRANCH**2 == 121
+        assert BRANCH**3 == 1331
 
     def test_loop_condition_selects_triangle_branches_from_11_way_space(self):
         # At the first loop, the two lambda=2 triangle branches close;
