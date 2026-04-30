@@ -584,6 +584,9 @@ class TestCCT4H4Selector:
         assert crosswalk["theorem"]["yukawa_5x3_fifteen_packet_is_the_same_15_sector_as_representation_triangle"]
         assert crosswalk["theorem"]["k_minus_1_eleven_links_ramanujan_circle_radius_and_representation_triangle_121"]
         assert crosswalk["theorem"]["harmonic_modes_3_equals_q_equals_three_lepton_generations"]
+        assert crosswalk["theorem"]["girth_3_equals_trit_base_q_minimum_cycle_tick"]
+        assert crosswalk["theorem"]["hodge_eigenvalue_ladder_is_trit_squared_light_18_equals_2q2_heavy_72_equals_8q2"]
+        assert crosswalk["theorem"]["ten_D4_24cell_blocks_tile_E8_240_shell_across_clifford_hopf_shelling_loop_layers"]
         assert "carrier -> realization -> algebra -> computation -> witness" in crosswalk["theorem"]["interpretation"]
         assert "shared q=3 backbone invariant" in crosswalk["theorem"]["interpretation"]
         assert "121 = (k-1)^2 representation triangle" in crosswalk["theorem"]["interpretation"]
@@ -629,6 +632,9 @@ class TestCCT4H4Selector:
         assert motifs["yukawa_5x3_15_packet_matches_chiral_forward_block_15_sector"] == (8, 9)
         assert motifs["k_minus_1_eleven_links_ramanujan_radius_and_representation_triangle_121"] == (7, 8)
         assert motifs["harmonic_modes_3_equals_q_equals_three_lepton_generations"] == (2, 8, 9)
+        assert motifs["girth_3_equals_trit_base_q_minimum_cycle_tick"] == (2, 3, 7)
+        assert motifs["hodge_eigenvalue_ladder_is_trit_squared_18_equals_2q2_72_equals_8q2"] == (2, 8)
+        assert motifs["ten_D4_24cell_blocks_tile_E8_240_shell_across_clifford_hopf_shelling_loop_layers"] == (3, 4, 5, 6)
 
     def test_crosswalk_interpretation_covers_chapters_7_through_12(self):
         crosswalk = build_cct_crosswalk()
@@ -652,6 +658,9 @@ class TestCCT4H4Selector:
         assert "affine-in-epsilon^2 normal form" in crosswalk["theorem"]["interpretation"]
         assert "Chapter 12 states the boundary-explicit CCT closure" in crosswalk["theorem"]["interpretation"]
         assert "11 repo-exact" in crosswalk["theorem"]["interpretation"]
+        assert "girth(W(3,3)) = 3 = q" in crosswalk["theorem"]["interpretation"]
+        assert "2q^2 = 18" in crosswalk["theorem"]["interpretation"]
+        assert "10 x 24 = 240 = E" in crosswalk["theorem"]["interpretation"]
 
     def test_crosswalk_has_a_chapter2_certificate(self):
         chapter = build_cct_crosswalk()["chapter_crosswalks"][2]

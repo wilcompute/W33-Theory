@@ -1576,6 +1576,14 @@ def build_cct_crosswalk() -> dict[str, Any]:
         "yukawa_5x3_15_packet_matches_chiral_forward_block_15_sector": (8, 9),
         "k_minus_1_eleven_links_ramanujan_radius_and_representation_triangle_121": (7, 8),
         "harmonic_modes_3_equals_q_equals_three_lepton_generations": (2, 8, 9),
+        "girth_3_equals_trit_base_q_minimum_cycle_tick": (2, 3, 7),
+        "hodge_eigenvalue_ladder_is_trit_squared_18_equals_2q2_72_equals_8q2": (2, 8),
+        "ten_D4_24cell_blocks_tile_E8_240_shell_across_clifford_hopf_shelling_loop_layers": (
+            3,
+            4,
+            5,
+            6,
+        ),
     }
     return {
         "layer_order": ORGANIZATION_LAYER_ORDER,
@@ -1852,6 +1860,36 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 and chapter8["theorem"]["chapter8_harmonic_modes_equal_three"]
                 and chapter9["theorem"]["chapter9_three_generations_tie_to_q_equals_three"]
             ),
+            "girth_3_equals_trit_base_q_minimum_cycle_tick": (
+                # W(3,3) has girth 3 (shortest cycle = triangle), ch 7.
+                # The trit alphabet base is q = 3, ch 2.
+                # The first self-consistency loop in ch 3 also has length 3.
+                # The minimum feedback tick equals the trit base: girth = q.
+                Q == 3
+                and chapter7["theorem"]["chapter7_girth_equals_three_so_first_loop_is_triangle"]
+                and chapter3["theorem"]["hashimoto_loop_layer_supplies_first_cycle_closure"]
+            ),
+            "hodge_eigenvalue_ladder_is_trit_squared_light_18_equals_2q2_heavy_72_equals_8q2": (
+                # The Hodge light shell eigenvalue is 18 = 2 x q^2 = 2 x 9.
+                # The Hodge heavy shell eigenvalue is 72 = 8 x q^2 = 8 x 9.
+                # The mass eigenvalue ladder is calibrated by the trit base squared.
+                Q == 3
+                and 2 * Q**2 == 18
+                and 8 * Q**2 == 72
+                and chapter8["theorem"]["chapter8_two_shell_spectrum_is_0_3_18_78_72_40"]
+            ),
+            "ten_D4_24cell_blocks_tile_E8_240_shell_across_clifford_hopf_shelling_loop_layers": (
+                # Chapter 3: ten D4 24-cell orientation classes x 24 roots = 240 = E8 shell.
+                # Chapter 4: ten Hopf fibers x 24 roots per fiber = 240 = W(3,3) edge shell.
+                # Chapter 5: 240 E8 unit shell = 10 x D4 24-cell packets.
+                # Chapter 6: ten Z5-parallel D4 KVT packets x 24 = 240 = edge shell.
+                # The single identity 10 x 24 = 240 = E is exact across four chapters.
+                chapter3["theorem"]["ten_D4_24_cell_shells_give_the_W33_E8_240_shell"]
+                and chapter4["theorem"]["chapter4_hopf_fibration_matches_w33_edge_shell"]
+                and chapter5["theorem"]["chapter5_E8_unit_shell_is_the_W33_edge_root_shell"]
+                and chapter6["theorem"]["chapter6_ten_D4_KVT_packet_recovers_W33_E8_shell"]
+                and 10 * F == E
+            ),
             "interpretation": (
                 "W(3,3) is an executable finite instance of the CCT code-language "
                 "template; the CCT dictionary rows are now routed through the "
@@ -1909,7 +1947,14 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 "master-lock records are certified, smooth realization is tracked as "
                 "exact finite spine plus promoted frontier response, and every CCT "
                 "desideratum row is pinned to a fixed W(3,3) finite carrier with the "
-                "remaining frontier wall uniquely bounded at dC = 14105."
+                "remaining frontier wall uniquely bounded at dC = 14105.  "
+                "Three additional cross-chapter structural identities: (1) girth(W(3,3)) = 3 = q, "
+                "so the minimum feedback cycle has exactly q ticks (chs 2, 3, 7); "
+                "(2) the Hodge eigenvalue ladder is calibrated by q^2 = 9: "
+                "light shell = 2q^2 = 18, heavy shell = 8q^2 = 72 (chs 2, 8); "
+                "(3) the single arithmetic identity 10 x 24 = 240 = E appears "
+                "independently as D4 orientation classes x 24 (ch 3), Hopf fibers x 24 (ch 4), "
+                "E8 shell decomposition (ch 5), and D4 KVT packets (ch 6)."
             ),
         },
     }
