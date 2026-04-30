@@ -735,6 +735,9 @@ class TestCCT4H4Selector:
         assert crosswalk["theorem"]["octonion_dimension_8_links_division_algebra_to_e8_ambient_and_penrose_vertex_types"]
         assert crosswalk["theorem"]["cycle_rank_201_equals_e_minus_v_plus_one_in_trit_economy_and_clock"]
         assert crosswalk["theorem"]["inactive_pairs_540_equals_complete_pairs_minus_edge_shell_in_both_layers"]
+        assert crosswalk["theorem"]["e8_lie_algebra_248_equals_root_shell_plus_ambient_dim_bridges_clifford_and_shelling"]
+        assert crosswalk["theorem"]["clifford_group_order_51840_equals_e8_second_shell_times_d4_shell_order_bridges_layers"]
+        assert crosswalk["theorem"]["mub_frames_36_equals_q_times_k_equals_psp43_orbital_degree_bridge"]
         assert "carrier -> realization -> algebra -> computation -> witness" in crosswalk["theorem"]["interpretation"]
         assert "shared q=3 backbone invariant" in crosswalk["theorem"]["interpretation"]
         assert "121 = (k-1)^2 representation triangle" in crosswalk["theorem"]["interpretation"]
@@ -800,6 +803,9 @@ class TestCCT4H4Selector:
         assert motifs["octonion_dimension_8_links_division_algebra_to_e8_ambient_and_penrose_vertex_types"] == (3, 5, 6)
         assert motifs["cycle_rank_201_equals_e_minus_v_plus_one_in_trit_economy_and_clock"] == (2, 3)
         assert motifs["inactive_pairs_540_equals_complete_pairs_minus_edge_shell_in_both_layers"] == (2, 3)
+        assert motifs["e8_lie_algebra_248_equals_root_shell_plus_ambient_dim_bridges_clifford_and_shelling"] == (3, 5)
+        assert motifs["clifford_group_order_51840_equals_e8_second_shell_times_d4_shell_order_bridges_layers"] == (3, 5)
+        assert motifs["mub_frames_36_equals_q_times_k_equals_psp43_orbital_degree_bridge"] == (2, 4)
 
     def test_crosswalk_interpretation_covers_chapters_7_through_12(self):
         crosswalk = build_cct_crosswalk()
@@ -843,6 +849,9 @@ class TestCCT4H4Selector:
         assert "8 = K - MU" in crosswalk["theorem"]["interpretation"]
         assert "201 = E - V + 1" in crosswalk["theorem"]["interpretation"]
         assert "540 = C(V,2) - E" in crosswalk["theorem"]["interpretation"]
+        assert "248 = E + 8" in crosswalk["theorem"]["interpretation"]
+        assert "51840 = E * Q^2 * F" in crosswalk["theorem"]["interpretation"]
+        assert "36 = Q * K = 3 * 12" in crosswalk["theorem"]["interpretation"]
 
     def test_crosswalk_has_a_chapter1_certificate(self):
         chapter = build_cct_crosswalk()["chapter_crosswalks"][1]

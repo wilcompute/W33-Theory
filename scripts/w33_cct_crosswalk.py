@@ -1872,6 +1872,9 @@ def build_cct_crosswalk() -> dict[str, Any]:
             "octonion_dimension_8_links_division_algebra_to_e8_ambient_and_penrose_vertex_types": (3, 5, 6),
             "cycle_rank_201_equals_e_minus_v_plus_one_in_trit_economy_and_clock": (2, 3),
             "inactive_pairs_540_equals_complete_pairs_minus_edge_shell_in_both_layers": (2, 3),
+            "e8_lie_algebra_248_equals_root_shell_plus_ambient_dim_bridges_clifford_and_shelling": (3, 5),
+            "clifford_group_order_51840_equals_e8_second_shell_times_d4_shell_order_bridges_layers": (3, 5),
+            "mub_frames_36_equals_q_times_k_equals_psp43_orbital_degree_bridge": (2, 4),
     }
     return {
         "layer_order": ORGANIZATION_LAYER_ORDER,
@@ -2372,6 +2375,35 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 and chapter3["least_change_packet"]["inactive_pairs"] == V * (V - 1) // 2 - E
                 and V * (V - 1) // 2 - E == 540
             ),
+            "e8_lie_algebra_248_equals_root_shell_plus_ambient_dim_bridges_clifford_and_shelling": (
+                # The E8 Lie algebra has dimension 248 (ch 3, clifford_hopf).
+                # 248 = 240 + 8 = E8 root count (= E) + E8 ambient dimension (ch 5).
+                # This is the famous formula: rank(E8) + |root system| = 8 + 240 = 248,
+                # here surfacing as a bridge between the Clifford layer and the shelling layer.
+                chapter3["clifford_hopf_sparse_shadow"]["e8_dimension"] == E + chapter5["root_lattice_objectives_packet"]["ambient_dimensions"][2]
+                and chapter5["root_lattice_objectives_packet"]["ambient_dimensions"][2] == 8
+                and E + 8 == 248
+            ),
+            "clifford_group_order_51840_equals_e8_second_shell_times_d4_shell_order_bridges_layers": (
+                # The Clifford process group order is 51840 (ch 3).
+                # The E8 second shell has 2160 vectors (ch 5).
+                # 51840 = 2160 * 24 = K_2_8 * F, and also 51840 = E * Q^2 * F = 240 * 9 * 24.
+                # This equals |Sp(4,3)| = |W(E6)|: the Clifford process group and the E6 Weyl
+                # group share the same order, bridging Clifford algebra (ch 3) and E8 shelling (ch 5).
+                chapter3["clifford_hopf_sparse_shadow"]["clifford_process_group_order"] == chapter5["e8_shelling_packet"]["K_2_8"] * F
+                and chapter5["e8_shelling_packet"]["K_2_8"] == E * Q ** 2
+                and E * Q ** 2 * F == 51840
+            ),
+            "mub_frames_36_equals_q_times_k_equals_psp43_orbital_degree_bridge": (
+                # The two-qutrit complete MUB frame count is 36 (ch 2).
+                # The 3rd PSp(4,3) orbital degree is 36 (ch 4).
+                # 36 = Q * K = 3 * 12: the trit base times the graph valence.
+                # Quantum measurement (MUB frames, ch 2) and symmetry group structure
+                # (PSp(4,3) acting on W(3,3), ch 4) are both pinned to the same product Q*K.
+                chapter2["two_qutrit_pauli_core_packet"]["complete_mub_frames"] == Q * K
+                and chapter4["w33_h4_certificate"]["full_psp43_orbital_degrees"][2] == Q * K
+                and Q * K == 36
+            ),
             "interpretation": (
                 "W(3,3) is an executable finite instance of the CCT code-language "
                 "template; the CCT dictionary rows are now routed through the "
@@ -2482,9 +2514,24 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 "(20) 540 = C(V,2) - E = 780 - 240 is the non-edge / inactive-pair count of "
                 "W(3,3), recorded as inactive_pairs in both the trit economy (ch 2) and the "
                 "least-change packet (ch 3)."
+                " "
+                "Three outside-the-box Lie-algebra and symmetry bridges: "
+                "(21) 248 = E + 8 = 240 + 8 is the dimension of the E8 Lie algebra, "
+                "surfacing as a bridge between the Clifford layer (ch 3, e8_dimension = 248) "
+                "and the E8 shelling layer (ch 5, ambient_dimensions[2] = 8), confirming "
+                "that the graph edge count E and the E8 ambient dimension 8 together account "
+                "for the full Lie algebra dimension; "
+                "(22) 51840 = E * Q^2 * F = 240 * 9 * 24 is simultaneously the Clifford "
+                "process group order (ch 3) and the product of the E8 second shell 2160 = E*Q^2 "
+                "with the D4/Hopf shell F = 24 (ch 5); this equals |Sp(4,3)| = |W(E6)|, "
+                "the Weyl group order of E6, bridging the Clifford algebra and the E8 shelling "
+                "layers through the E6 symmetry group; "
+                "(23) 36 = Q * K = 3 * 12 is simultaneously the two-qutrit complete MUB frame "
+                "count (ch 2) and the 3rd PSp(4,3) orbital degree for its action on W(3,3) (ch 4), "
+                "linking quantum measurement theory (MUBs) to the symmetry group geometry of the graph."
             ),
         },
-    }
+        }
 
 
 if __name__ == "__main__":
