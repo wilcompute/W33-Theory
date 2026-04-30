@@ -1864,6 +1864,8 @@ def build_cct_crosswalk() -> dict[str, Any]:
             "k_twelve_reappears_as_E8_reverse_pairs_cuboctahedral_equators_transport_denominator": (3, 4, 10),
             "eleven_non_backtracking_branch_count_bridges_clock_to_ramanujan_loop": (3, 7),
             "twenty_seven_nonneighbors_per_symbol_matches_e6_27line_carrier": (2, 11),
+            "a2_root_shell_6_equals_bivector_dimension_equals_a2_shelling_base": (3, 4, 5),
+            "four_eighty_directed_hashimoto_states_equal_directed_edge_count": (3, 7),
     }
     return {
         "layer_order": ORGANIZATION_LAYER_ORDER,
@@ -2284,6 +2286,27 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 and chapter11["e6_cubic_carrier_packet"]["line_count"] == V - 1 - K
                 and V - 1 - K == 27
             ),
+            "a2_root_shell_6_equals_bivector_dimension_equals_a2_shelling_base": (
+                # The A2 root shell has 6 roots (ch 3).
+                # The W(3,3) bivector / curvature dimension is 6 (ch 4).
+                # The A2 shelling base count is 6 roots (ch 5).
+                # 6 = 2Q is the smallest non-trivial root shell and
+                # reappears as a geometric dimension and shelling seed.
+                chapter3["division_algebra_root_chain"]["root_counts"]["A2"] == 2 * Q
+                and chapter4["geometric_frustration_curvature_packet"]["w33_bivector_dimension"] == 2 * Q
+                and chapter5["a2_shelling_packet"]["root_count"] == 2 * Q
+                and 2 * Q == 6
+            ),
+            "four_eighty_directed_hashimoto_states_equal_directed_edge_count": (
+                # The cycle-clock directed Hashimoto state count is 2E = 480 (ch 3).
+                # The Hashimoto directed-edge count is 2E = 480 (ch 7).
+                # 480 = 2 * 240 is both the closed-loop state space and the
+                # directed-graph edge count, confirming the Hashimoto
+                # non-backtracking operator acts on the same 480-state space.
+                chapter3["w33_cycle_clock_packet"]["directed_hashimoto_states"] == 2 * E
+                and chapter7["directed_edge_packet"]["directed_edges"] == 2 * E
+                and 2 * E == 480
+            ),
             "interpretation": (
                 "W(3,3) is an executable finite instance of the CCT code-language "
                 "template; the CCT dictionary rows are now routed through the "
@@ -2367,7 +2390,13 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 "cycle-clock packet (ch 3), the Hashimoto directed-edge branch count (ch 7), "
                 "and the Ramanujan circle radius squared (ch 7); "
                 "(12) V - 1 - K = 27 is the per-vertex non-neighbour count in the SRG (ch 2) "
-                "and equals the E6/27-line dual GQ(4,2) carrier line count (ch 11)."
+                "and equals the E6/27-line dual GQ(4,2) carrier line count (ch 11). "
+                "Two more exact count locks: (13) 2Q = 6 is simultaneously the A2 root shell "
+                "count (ch 3), the W(3,3) bivector/curvature dimension (ch 4), and the A2 "
+                "shelling base count (ch 5); "
+                "(14) 2E = 480 is both the directed Hashimoto state count in the cycle-clock "
+                "packet (ch 3) and the total directed-edge count (ch 7), confirming the "
+                "Hashimoto operator acts on the same 480-state space."
             ),
         },
     }

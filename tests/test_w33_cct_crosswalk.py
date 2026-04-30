@@ -727,6 +727,8 @@ class TestCCT4H4Selector:
         assert crosswalk["theorem"]["k_twelve_reappears_as_E8_reverse_pairs_cuboctahedral_equators_transport_denominator"]
         assert crosswalk["theorem"]["eleven_non_backtracking_branch_count_bridges_clock_to_ramanujan_loop"]
         assert crosswalk["theorem"]["twenty_seven_nonneighbors_per_symbol_matches_e6_27line_carrier"]
+        assert crosswalk["theorem"]["a2_root_shell_6_equals_bivector_dimension_equals_a2_shelling_base"]
+        assert crosswalk["theorem"]["four_eighty_directed_hashimoto_states_equal_directed_edge_count"]
         assert "carrier -> realization -> algebra -> computation -> witness" in crosswalk["theorem"]["interpretation"]
         assert "shared q=3 backbone invariant" in crosswalk["theorem"]["interpretation"]
         assert "121 = (k-1)^2 representation triangle" in crosswalk["theorem"]["interpretation"]
@@ -784,6 +786,8 @@ class TestCCT4H4Selector:
         assert motifs["k_twelve_reappears_as_E8_reverse_pairs_cuboctahedral_equators_transport_denominator"] == (3, 4, 10)
         assert motifs["eleven_non_backtracking_branch_count_bridges_clock_to_ramanujan_loop"] == (3, 7)
         assert motifs["twenty_seven_nonneighbors_per_symbol_matches_e6_27line_carrier"] == (2, 11)
+        assert motifs["a2_root_shell_6_equals_bivector_dimension_equals_a2_shelling_base"] == (3, 4, 5)
+        assert motifs["four_eighty_directed_hashimoto_states_equal_directed_edge_count"] == (3, 7)
 
     def test_crosswalk_interpretation_covers_chapters_7_through_12(self):
         crosswalk = build_cct_crosswalk()
@@ -819,6 +823,8 @@ class TestCCT4H4Selector:
         assert "K = 12 reappears" in crosswalk["theorem"]["interpretation"]
         assert "K - 1 = 11 is simultaneously" in crosswalk["theorem"]["interpretation"]
         assert "V - 1 - K = 27" in crosswalk["theorem"]["interpretation"]
+        assert "2Q = 6 is simultaneously" in crosswalk["theorem"]["interpretation"]
+        assert "2E = 480 is both" in crosswalk["theorem"]["interpretation"]
 
     def test_crosswalk_has_a_chapter1_certificate(self):
         chapter = build_cct_crosswalk()["chapter_crosswalks"][1]
